@@ -1,1041 +1,868 @@
 .class public final Ll/۬ۨۤ;
-.super Ll/ܳۨۤ;
-.source "R7DK"
-
-# interfaces
-.implements Ll/۫ۨۤ;
+.super Ljava/lang/Object;
+.source "Z6QT"
 
 
 # instance fields
-.field public ֨ܰ:I
+.field public final ۙ:C
 
-.field public ۘܰ:I
+.field public final ۤ:I
 
-.field public ۬ܰ:I
+.field public final ᩷:Z
+
+.field public final ᩸:Ll/ۖ᩵ۤ;
 
 
-# virtual methods
-.method public final ۖ()I
-    .locals 3
-
-    .line 193
-    iget-boolean v0, p0, Ll/ۜۨۤ;->ۙۙ:Z
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Ll/ۜۨۤ;->ܶۙ:Z
-
-    if-nez v0, :cond_2
-
-    .line 194
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll/ܳۨۤ;->ܽۙ:I
-
-    sget-object v2, Ll/֡ܿۡ;->ۛ:Ll/֡ܿۡ;
-
-    invoke-static {v1, v2}, Ll/᩻ܿۡ;->ۙ(ILl/֡ܿۡ;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 196
-    invoke-virtual {p0}, Ll/ܳۨۤ;->ܺ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 198
-    sget-object v1, Ll/᩷ܳۡ;->ۚۨ:Ll/᩷ܳۡ;
-
-    invoke-virtual {v1}, Ll/᩷ܳۡ;->ۘ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " #"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 199
-    iget v1, p0, Ll/۬ۨۤ;->֨ܰ:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ":#"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Ll/۬ۨۤ;->۬ܰ:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 200
-    iget-object v2, p0, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
-
-    if-eqz v2, :cond_0
-
-    .line 68
-    iget-boolean v2, v2, Ll/ۜۨۤ;->ܿ:Z
-
-    if-eqz v2, :cond_0
-
-    .line 201
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
-
-    invoke-virtual {v1}, Ll/۬ۚۤ;->ܽ()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 203
-    :cond_0
-    iget v1, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_1
-
-    const-string v1, " = #"
-
-    .line 204
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    :cond_1
-    const/16 v1, 0x3b
-
-    .line 206
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 207
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, ""
-
-    .line 220
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ۖ(II)V
+# direct methods
+.method public constructor <init>(CI)V
     .locals 0
 
-    .line 189
-    invoke-virtual {p0, p1, p2}, Ll/۬ۨۤ;->ܰ(II)V
+    .line 1010
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1011
+    iput p2, p0, Ll/۬ۨۤ;->ۤ:I
+
+    const/4 p2, 0x1
+
+    .line 1012
+    iput-boolean p2, p0, Ll/۬ۨۤ;->᩷:Z
+
+    .line 1013
+    iput-char p1, p0, Ll/۬ۨۤ;->ۙ:C
+
+    const/4 p1, 0x0
+
+    .line 1014
+    iput-object p1, p0, Ll/۬ۨۤ;->᩸:Ll/ۖ᩵ۤ;
 
     return-void
 .end method
 
-.method public final ۙ(I)V
+.method public constructor <init>(ILl/ۖ᩵ۤ;)V
     .locals 0
 
-    .line 225
-    iput p1, p0, Ll/ۜۨۤ;->֫:I
+    .line 1017
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1018
+    iput p1, p0, Ll/۬ۨۤ;->ۤ:I
+
+    const/4 p1, 0x0
+
+    .line 1019
+    iput-boolean p1, p0, Ll/۬ۨۤ;->᩷:Z
+
+    .line 1020
+    iput-char p1, p0, Ll/۬ۨۤ;->ۙ:C
+
+    .line 1021
+    iput-object p2, p0, Ll/۬ۨۤ;->᩸:Ll/ۖ᩵ۤ;
 
     return-void
 .end method
 
-.method public final ۙ(Ljava/io/DataInputStream;Ll/ܽܿۡ;I)Z
-    .locals 7
+.method public static bridge synthetic ۙ(Ll/۬ۨۤ;)C
+    .locals 0
 
-    .line 61
-    sget-object v0, Ll/֨ۨۤ;->ۙ:[I
+    .line 0
+    iget-char p0, p0, Ll/۬ۨۤ;->ۙ:C
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p2
-
-    aget p2, v0, p2
-
-    const/4 v0, 0x0
-
-    const-string v1, "There is more than one \"{0}\" attribute in the attributes table of a \"{1}\" structure. The last one is used."
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eq p2, v3, :cond_9
-
-    if-eq p2, v2, :cond_0
-
-    return v0
-
-    :cond_0
-    if-eq p3, v2, :cond_2
-
-    .line 71
-    iget-boolean p2, p0, Ll/ۜۨۤ;->᩶:Z
-
-    const-string v4, "{0}: Invalid attribute length #{1}"
-
-    if-eqz p2, :cond_1
-
-    .line 72
-    iget-object p2, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    sget-object v5, Ll/ܽܿۡ;->᩻:Ll/ܽܿۡ;
-
-    invoke-virtual {v5}, Ll/ܽܿۡ;->ۚ()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    new-array v6, v2, [Ljava/lang/Object;
-
-    aput-object v5, v6, v0
-
-    aput-object p3, v6, v3
-
-    invoke-virtual {p2, v4, v6}, Ll/֡۫ۡ;->ۙ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 74
-    :cond_1
-    new-instance p1, Ll/ܽ۫ۡ;
-
-    iget-object p2, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    invoke-virtual {p2}, Ll/֡۫ۡ;->ܰ()Ll/ۢ۫ۡ;
-
-    move-result-object p2
-
-    sget-object v1, Ll/ܽܿۡ;->᩻:Ll/ܽܿۡ;
-
-    .line 75
-    invoke-virtual {v1}, Ll/ܽܿۡ;->ۚ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v1, v2, v0
-
-    aput-object p3, v2, v3
-
-    invoke-direct {p1, p2, v4, v2}, Ll/ܽ۫ۡ;-><init>(Ll/ۢ۫ۡ;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    throw p1
-
-    .line 78
-    :cond_2
-    :goto_0
-    sget-object p2, Ll/ܽܿۡ;->᩻:Ll/ܽܿۡ;
-
-    invoke-virtual {p0, p2}, Ll/ܳۨۤ;->ۙ(Ll/ܽܿۡ;)Ljava/util/List;
-
-    move-result-object p3
-
-    invoke-interface {p3}, Ljava/util/List;->size()I
-
-    move-result p3
-
-    if-le p3, v3, :cond_3
-
-    .line 79
-    iget-object p3, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    .line 80
-    invoke-virtual {p2}, Ll/ܽܿۡ;->ۚ()Ljava/lang/String;
-
-    move-result-object p2
-
-    sget-object v4, Ll/۫ܿۡ;->۫:Ll/۫ܿۡ;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-array v5, v2, [Ljava/lang/Object;
-
-    aput-object p2, v5, v0
-
-    aput-object v4, v5, v3
-
-    .line 79
-    invoke-virtual {p3, v1, v5}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 82
-    :cond_3
-    invoke-virtual {p1}, Ljava/io/DataInputStream;->readUnsignedShort()I
-
-    move-result p1
-
-    iput p1, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    .line 83
-    iget-object p2, p0, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    invoke-virtual {p2, p1}, Ll/ۧܰۤ;->֡(I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    .line 84
-    iget-object p1, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    iget p2, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    new-array p3, v3, [Ljava/lang/Object;
-
-    aput-object p2, p3, v0
-
-    const-string p2, "The constantvalue_index \"{0}\" is not a valid index into the constant_pool table."
-
-    invoke-virtual {p1, p2, p3}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return v3
-
-    .line 86
-    :cond_4
-    iget-object p1, p0, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    iget p2, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    const/4 p3, 0x5
-
-    new-array p3, p3, [Ll/ۛܰۤ;
-
-    sget-object v1, Ll/ۛܰۤ;->ۢ:Ll/ۛܰۤ;
-
-    aput-object v1, p3, v0
-
-    sget-object v1, Ll/ۛܰۤ;->֫:Ll/ۛܰۤ;
-
-    aput-object v1, p3, v3
-
-    sget-object v1, Ll/ۛܰۤ;->ۧ:Ll/ۛܰۤ;
-
-    aput-object v1, p3, v2
-
-    sget-object v1, Ll/ۛܰۤ;->ܰۙ:Ll/ۛܰۤ;
-
-    const/4 v2, 0x3
-
-    aput-object v1, p3, v2
-
-    sget-object v1, Ll/ۛܰۤ;->ۜۙ:Ll/ۛܰۤ;
-
-    const/4 v2, 0x4
-
-    aput-object v1, p3, v2
-
-    .line 552
-    invoke-virtual {p1, p2}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    .line 554
-    iget-object p1, p1, Ll/۫ܰۤ;->ۨ:Ll/ۛܰۤ;
-
-    invoke-virtual {p1, p3}, Ll/ۛܰۤ;->ۙ([Ll/ۛܰۤ;)Z
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_5
-    const/4 p1, 0x0
-
-    :goto_1
-    if-nez p1, :cond_8
-
-    .line 87
-    iget-object p1, p0, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    iget p2, p0, Ll/۬ۨۤ;->ۘܰ:I
-
-    .line 560
-    invoke-virtual {p1, p2}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    .line 562
-    iget-object p1, p1, Ll/۫ܰۤ;->ۨ:Ll/ۛܰۤ;
-
-    goto :goto_2
-
-    :cond_6
-    const/4 p1, 0x0
-
-    :goto_2
-    if-nez p1, :cond_7
-
-    const-string p1, "unknown"
-
-    goto :goto_3
-
-    .line 88
-    :cond_7
-    invoke-virtual {p1}, Ll/ۛܰۤ;->ۙ()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 89
-    :goto_3
-    iget-object p2, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    new-array p3, v3, [Ljava/lang/Object;
-
-    aput-object p1, p3, v0
-
-    const-string p1, "The constant_pool entry \"{0}\" is not of an appropriate type for the field."
-
-    invoke-virtual {p2, p1, p3}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_8
-    return v3
-
-    .line 63
-    :cond_9
-    iget-object p2, p0, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
-
-    if-eqz p2, :cond_a
-
-    .line 64
-    iget-object p2, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    sget-object v4, Ll/ܽܿۡ;->۟ۙ:Ll/ܽܿۡ;
-
-    .line 65
-    invoke-virtual {v4}, Ll/ܽܿۡ;->ۚ()Ljava/lang/String;
-
-    move-result-object v4
-
-    sget-object v5, Ll/۫ܿۡ;->۫:Ll/۫ܿۡ;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v4, v2, v0
-
-    aput-object v5, v2, v3
-
-    .line 64
-    invoke-virtual {p2, v1, v2}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 67
-    :cond_a
-    new-instance p2, Ll/۬ۚۤ;
-
-    iget-object v0, p0, Ll/ܳۨۤ;->ۧۙ:Ll/ܳۨۤ;
-
-    check-cast v0, Ll/ۘܰۤ;
-
-    invoke-direct {p2, v0}, Ll/۬ۚۤ;-><init>(Ll/ۘܰۤ;)V
-
-    invoke-virtual {p2, p3, p1}, Ll/۬ۚۤ;->ۙ(ILjava/io/DataInputStream;)V
-
-    iput-object p2, p0, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
-
-    return v3
+    return p0
 .end method
 
-.method public final ۚ()I
+.method public static bridge synthetic ۙ(Ll/ۖ᩵ۤ;)I
+    .locals 0
+
+    .line 0
+    invoke-static {p0}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ۙ(Ll/ۛ᩵ۤ;)I
+    .locals 0
+
+    .line 1252
+    iget-object p0, p0, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {p0}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ۙ(ILl/ۖ᩵ۤ;)Ll/۬ۨۤ;
     .locals 3
 
-    .line 394
-    iget v0, p0, Ll/ۜۨۤ;->֡:I
-
-    .line 214
-    iget v1, p0, Ll/ۜۨۤ;->֫:I
-
-    invoke-virtual {p0}, Ll/ۜۨۤ;->᩹()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+    .line 1241
+    invoke-static {p1}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
 
     move-result v0
 
-    return v0
-.end method
+    if-ltz v0, :cond_0
 
-.method public final ۬(I)V
-    .locals 3
+    .line 1243
+    new-instance p1, Ll/۬ۨۤ;
 
-    .line 100
-    iget-object v0, p0, Ll/ܳۨۤ;->ۧۙ:Ll/ܳۨۤ;
+    int-to-char v0, v0
 
-    check-cast v0, Ll/ۘܰۤ;
+    invoke-direct {p1, v0, p0}, Ll/۬ۨۤ;-><init>(CI)V
 
-    iget-object v0, v0, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    invoke-virtual {v0, p1}, Ll/ۧܰۤ;->֡(I)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-nez v0, :cond_0
-
-    .line 101
-    iget-object v0, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object p1, v2, v1
-
-    const-string p1, "The value of the attribute_name_index #{0} item is not a valid index into the constant_pool table. The attribute is ignored."
-
-    invoke-virtual {v0, p1, v2}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 103
-    :cond_0
-    iget-object v0, p0, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object p1, v2, v1
-
-    const-string p1, "The attribute_name_index #{0} refers to an unknown attribute name. The attribute is ignored."
-
-    invoke-virtual {v0, p1, v2}, Ll/֡۫ۡ;->ۚ(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public final ܰ(II)V
-    .locals 15
-
-    move-object v7, p0
-
-    .line 132
-    iget-object v0, v7, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
-
-    const/4 v1, 0x0
-
-    const/4 v8, 0x1
-
-    if-eqz v0, :cond_0
-
-    .line 68
-    iget-boolean v0, v0, Ll/ۜۨۤ;->ܿ:Z
-
-    if-nez v0, :cond_0
-
-    .line 132
-    iget-boolean v0, v7, Ll/ۜۨۤ;->ᩴۙ:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    const/4 v9, 0x1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
     const/4 v0, 0x0
 
-    const/4 v9, 0x0
+    const/4 v1, 0x0
 
-    .line 134
     :goto_0
-    iget-object v0, v7, Ll/ܳۨۤ;->ۚܰ:Ljava/util/ArrayList;
+    const/16 v2, 0x80
 
-    iget-object v2, v7, Ll/ܳۨۤ;->ܳۙ:Ljava/util/ArrayList;
+    if-ge v0, v2, :cond_2
 
-    const/4 v3, 0x2
-
-    new-array v4, v3, [Ljava/util/List;
-
-    aput-object v0, v4, v1
-
-    aput-object v2, v4, v8
-
-    invoke-virtual {p0, v4}, Ll/ܳۨۤ;->ۙ([Ljava/util/List;)V
-
-    .line 135
-    iget-object v0, v7, Ll/ܳۨۤ;->᩹ܰ:Ljava/util/ArrayList;
-
-    iget-object v2, v7, Ll/ܳۨۤ;->֫ۙ:Ljava/util/ArrayList;
-
-    new-array v4, v3, [Ljava/util/List;
-
-    aput-object v0, v4, v1
-
-    aput-object v2, v4, v8
-
-    invoke-virtual {p0, v4}, Ll/ܳۨۤ;->ۙ([Ljava/util/List;)V
-
-    .line 136
-    sget-object v0, Ll/ܽܿۡ;->ܿۙ:Ll/ܽܿۡ;
-
-    invoke-virtual {p0, v0}, Ll/ܳۨۤ;->ۙ(Ll/ܽܿۡ;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    const/4 v4, 0x3
-
-    if-lez v2, :cond_1
-
-    .line 137
-    invoke-virtual {p0, v0}, Ll/ܳۨۤ;->ۙ(Ll/ܽܿۡ;)Ljava/util/List;
-
-    move-result-object v0
-
-    .line 138
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    .line 1285
+    invoke-interface {p1, v0}, Ll/ۖ᩵ۤ;->ۙ(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    add-int/lit8 v1, v1, 0x1
 
-    move-result-object v2
+    const/16 v2, 0x10
 
-    check-cast v2, Ll/ܺۙۤ;
-
-    .line 141
-    invoke-virtual {v2}, Ll/ܺۙۤ;->ۖ()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v2}, Ll/ܺۙۤ;->ۨ()I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v2}, Ll/ܺۙۤ;->ۙ()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v10, v4, [Ljava/lang/Object;
-
-    aput-object v5, v10, v1
-
-    aput-object v6, v10, v8
-
-    aput-object v2, v10, v3
-
-    const-string v2, "// Ignored unrecognized attribute: { u2 #%d; u4 %d; u1[ %s ]; }"
-
-    .line 19
-    invoke-static {v2, v10}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 139
-    invoke-virtual {p0, v2}, Ll/ۜۨۤ;->ۖ(Ljava/lang/String;)V
+    if-le v1, v2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 v0, 0x4
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 v2, 0x5
+    goto :goto_0
 
-    const/4 v5, 0x0
+    :cond_2
+    if-nez v1, :cond_3
 
-    .line 145
-    iget-boolean v6, v7, Ll/ۜۨۤ;->ۙۙ:Z
+    :goto_1
+    const/4 p0, 0x0
 
-    const/4 v10, -0x1
+    return-object p0
 
-    if-nez v6, :cond_5
+    .line 1289
+    :cond_3
+    new-instance v0, Ll/۬ۨۤ;
 
-    iget v11, v7, Ll/۬ۨۤ;->ۘܰ:I
+    invoke-direct {v0, p0, p1}, Ll/۬ۨۤ;-><init>(ILl/ۖ᩵ۤ;)V
 
-    if-eq v11, v10, :cond_5
+    return-object v0
+.end method
 
-    iget-object v12, v7, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
+.method public static ۙ(Ll/֡ۨۤ;)Ll/۬ۨۤ;
+    .locals 15
 
-    new-array v13, v2, [Ll/ۛܰۤ;
+    const/4 v0, 0x0
 
-    sget-object v14, Ll/ۛܰۤ;->ۢ:Ll/ۛܰۤ;
+    const/4 v1, 0x0
 
-    aput-object v14, v13, v1
+    const/4 v2, 0x0
 
-    sget-object v14, Ll/ۛܰۤ;->֫:Ll/ۛܰۤ;
+    const/4 v3, 0x0
 
-    aput-object v14, v13, v8
+    :goto_0
+    if-eqz p0, :cond_12
 
-    sget-object v14, Ll/ۛܰۤ;->ۧ:Ll/ۛܰۤ;
+    .line 1118
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    aput-object v14, v13, v3
+    move-result-object v4
 
-    sget-object v14, Ll/ۛܰۤ;->ܰۙ:Ll/ۛܰۤ;
+    const v5, 0xffff
 
-    aput-object v14, v13, v4
+    const-class v6, Ll/ᩴۛۤ;
 
-    sget-object v14, Ll/ۛܰۤ;->ۜۙ:Ll/ۛܰۤ;
+    if-ne v4, v6, :cond_3
 
-    aput-object v14, v13, v0
+    .line 1119
+    check-cast p0, Ll/ᩴۛۤ;
 
-    .line 552
-    invoke-virtual {v12, v11}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
+    .line 1120
+    iget-object v4, p0, Ll/ۚۛۤ;->᩷:[I
 
-    move-result-object v0
+    const/4 v6, 0x0
 
-    if-eqz v0, :cond_2
+    .line 1121
+    :goto_1
+    array-length v7, v4
 
-    .line 554
-    iget-object v0, v0, Ll/۫ܰۤ;->ۨ:Ll/ۛܰۤ;
+    if-ge v6, v7, :cond_2
 
-    invoke-virtual {v0, v13}, Ll/ۛܰۤ;->ۙ([Ll/ۛܰۤ;)Z
+    .line 1122
+    aget v7, v4, v6
 
-    move-result v0
+    if-le v7, v5, :cond_0
+
+    return-object v0
+
+    :cond_0
+    if-eqz v3, :cond_1
+
+    .line 1127
+    new-instance v0, Ll/۬ۨۤ;
+
+    add-int v8, v2, v6
+
+    int-to-char v7, v7
+
+    invoke-direct {v0, v7, v8}, Ll/۬ۨۤ;-><init>(CI)V
+
+    :cond_1
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    .line 1130
+    :cond_2
+    array-length v4, v4
+
+    add-int/2addr v2, v4
+
+    .line 1131
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    .line 1134
+    :cond_3
+    instance-of v4, p0, Ll/ۛ᩵ۤ;
+
+    if-eqz v4, :cond_5
+
+    check-cast p0, Ll/ۛ᩵ۤ;
+
+    .line 1234
+    iget-object v4, p0, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {v2, v4}, Ll/۬ۨۤ;->ۙ(ILl/ۖ᩵ۤ;)Ll/۬ۨۤ;
+
+    move-result-object v4
+
+    if-eqz v3, :cond_4
+
+    if-eqz v4, :cond_4
+
+    move-object v0, v4
+
+    :cond_4
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1141
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    .line 1144
+    :cond_5
+    instance-of v4, p0, Ll/᩸ۨۤ;
+
+    if-eqz v4, :cond_11
+
+    move-object v4, p0
+
+    check-cast v4, Ll/᩸ۨۤ;
+
+    iget v5, v4, Ll/᩸ۨۤ;->᩸:I
+
+    iget-object v7, v4, Ll/᩸ۨۤ;->᩷:Ll/֡ۨۤ;
+
+    if-lez v5, :cond_11
+
+    iget v8, v4, Ll/᩸ۨۤ;->ۤ:I
+
+    if-ne v5, v8, :cond_11
+
+    .line 1221
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    const/4 v8, 0x1
+
+    if-ne p0, v6, :cond_6
+
+    .line 1222
+    move-object p0, v7
+
+    check-cast p0, Ll/ᩴۛۤ;
+
+    iget-object p0, p0, Ll/ۚۛۤ;->᩷:[I
+
+    array-length p0, p0
 
     goto :goto_2
 
-    :cond_2
-    const/4 v0, 0x0
+    .line 1224
+    :cond_6
+    instance-of p0, v7, Ll/ۛ᩵ۤ;
+
+    if-eqz p0, :cond_7
+
+    const/4 p0, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    const/4 p0, -0x1
 
     :goto_2
-    if-nez v0, :cond_5
+    if-gez p0, :cond_8
 
-    .line 147
-    iget-object v0, v7, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
+    goto/16 :goto_7
 
-    iget v11, v7, Ll/۬ۨۤ;->ۘܰ:I
+    :cond_8
+    int-to-long v9, v2
 
-    .line 560
-    invoke-virtual {v0, v11}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
+    int-to-long v11, p0
 
-    move-result-object v0
+    int-to-long v13, v5
 
-    if-eqz v0, :cond_3
+    mul-long v11, v11, v13
 
-    .line 562
-    iget-object v0, v0, Ll/۫ܰۤ;->ۨ:Ll/ۛܰۤ;
+    add-long/2addr v11, v9
+
+    const-wide/32 v9, 0x7fffffff
+
+    cmp-long v2, v11, v9
+
+    if-lez v2, :cond_9
+
+    const/4 v2, -0x1
 
     goto :goto_3
 
-    :cond_3
-    move-object v0, v5
+    :cond_9
+    long-to-int v2, v11
 
     :goto_3
-    if-nez v0, :cond_4
+    if-gez v2, :cond_a
 
-    const-string v0, "unknown"
+    goto/16 :goto_7
+
+    :cond_a
+    if-nez v3, :cond_c
+
+    .line 1189
+    instance-of v9, v7, Ll/ۛ᩵ۤ;
+
+    if-eqz v9, :cond_b
+
+    move-object v9, v7
+
+    check-cast v9, Ll/ۛ᩵ۤ;
+
+    if-le v5, v8, :cond_b
+
+    .line 1234
+    iget-object v5, v9, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {v1, v5}, Ll/۬ۨۤ;->ۙ(ILl/ۖ᩵ۤ;)Ll/۬ۨۤ;
+
+    move-result-object v5
+
+    if-nez v5, :cond_b
 
     goto :goto_4
 
-    .line 148
-    :cond_4
-    invoke-virtual {v0}, Ll/ۛܰۤ;->ۙ()Ljava/lang/String;
+    :cond_b
+    const/4 v8, 0x0
 
-    move-result-object v0
-
-    .line 149
+    :cond_c
     :goto_4
-    iget-object v11, v7, Ll/ܳۨۤ;->᩻ۙ:Ll/֡۫ۡ;
+    if-eqz v8, :cond_10
 
-    iget v12, v7, Ll/۬ۨۤ;->ۘܰ:I
+    sub-int p0, v2, p0
 
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 1199
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v12
+    move-result-object v5
 
-    new-array v13, v3, [Ljava/lang/Object;
+    if-ne v5, v6, :cond_e
 
-    aput-object v12, v13, v1
+    .line 1200
+    check-cast v7, Ll/ᩴۛۤ;
 
-    aput-object v0, v13, v8
+    iget-object v5, v7, Ll/ۚۛۤ;->᩷:[I
 
-    const-string v0, "Unrecognized constantvalue_index: #{0} [ {1} ]"
+    const/4 v6, 0x0
 
-    invoke-virtual {v11, v0, v13}, Ll/֡۫ۡ;->ܰ(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v11, "// "
-
-    invoke-virtual {v11, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ll/ۜۨۤ;->ۖ(Ljava/lang/String;)V
-
-    :cond_5
-    const/4 v0, 0x4
-
-    .line 152
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۜۨۤ;->۬()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v12, v7, Ll/ܳۨۤ;->ܽۙ:I
-
-    sget-object v13, Ll/֡ܿۡ;->ۛ:Ll/֡ܿۡ;
-
-    .line 153
-    invoke-static {v12, v13}, Ll/᩻ܿۡ;->ۙ(ILl/֡ܿۡ;)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 155
-    invoke-virtual {p0}, Ll/ܳۨۤ;->ܺ()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 157
-    sget-object v12, Ll/᩷ܳۡ;->ۚۨ:Ll/᩷ܳۡ;
-
-    invoke-virtual {v12}, Ll/᩷ܳۡ;->ۘ()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v12, 0x20
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 158
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v12
-
-    invoke-virtual {p0}, Ll/ۜۨۤ;->᩹()I
-
-    move-result v13
-
-    mul-int/lit8 v13, v13, 0x2
-
-    sub-int/2addr v12, v13
-
-    sget-object v13, Ll/ۤۗۡ;->۬ۙ:Ll/ۤۗۡ;
-
-    invoke-virtual {v13}, Ll/ۤۗۡ;->֨()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Ljava/lang/String;->length()I
-
-    move-result v13
-
-    invoke-virtual {p0}, Ll/ۜۨۤ;->᩹()I
-
-    move-result v14
-
-    add-int/2addr v14, v13
-
-    invoke-static {v12, v14}, Ljava/lang/Math;->max(II)I
-
-    move-result v12
-
-    .line 160
-    iget v13, v7, Ll/۬ۨۤ;->ۘܰ:I
-
-    if-eq v13, v10, :cond_8
-
-    if-nez v6, :cond_7
-
-    if-eq v13, v10, :cond_7
-
-    .line 173
-    iget-object v5, v7, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    new-array v2, v2, [Ll/ۛܰۤ;
-
-    sget-object v6, Ll/ۛܰۤ;->ۢ:Ll/ۛܰۤ;
-
-    aput-object v6, v2, v1
-
-    sget-object v6, Ll/ۛܰۤ;->֫:Ll/ۛܰۤ;
-
-    aput-object v6, v2, v8
-
-    sget-object v6, Ll/ۛܰۤ;->ۧ:Ll/ۛܰۤ;
-
-    aput-object v6, v2, v3
-
-    sget-object v3, Ll/ۛܰۤ;->ܰۙ:Ll/ۛܰۤ;
-
-    aput-object v3, v2, v4
-
-    sget-object v3, Ll/ۛܰۤ;->ۜۙ:Ll/ۛܰۤ;
-
-    aput-object v3, v2, v0
-
-    .line 552
-    invoke-virtual {v5, v13}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    .line 554
-    iget-object v0, v0, Ll/۫ܰۤ;->ۨ:Ll/ۛܰۤ;
-
-    invoke-virtual {v0, v2}, Ll/ۛܰۤ;->ۙ([Ll/ۛܰۤ;)Z
-
-    move-result v1
-
-    :cond_6
-    if-nez v1, :cond_7
-
-    const-string v0, ""
-
-    goto :goto_5
-
-    .line 178
-    :cond_7
-    iget-object v0, v7, Ll/ܳۨۤ;->ۧۙ:Ll/ܳۨۤ;
-
-    check-cast v0, Ll/ۘܰۤ;
-
-    iget-object v0, v0, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    iget v1, v7, Ll/۬ۨۤ;->ۘܰ:I
-
-    invoke-virtual {v0, v1}, Ll/ۧܰۤ;->۬(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, " = "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 1201
     :goto_5
-    move-object v2, v0
+    array-length v7, v5
+
+    if-ge v6, v7, :cond_10
+
+    .line 1202
+    aget v7, v5, v6
+
+    const v9, 0xffff
+
+    if-le v7, v9, :cond_d
 
     goto :goto_6
 
-    :cond_8
-    move-object v2, v5
+    .line 1206
+    :cond_d
+    new-instance v0, Ll/۬ۨۤ;
 
-    :goto_6
-    if-eqz v9, :cond_9
+    add-int v9, p0, v6
 
-    const-string v0, ":"
+    int-to-char v7, v7
 
-    goto :goto_7
+    invoke-direct {v0, v7, v9}, Ll/۬ۨۤ;-><init>(CI)V
 
-    :cond_9
-    const-string v0, ";"
+    add-int/lit8 v6, v6, 0x1
 
-    :goto_7
-    move-object v3, v0
+    goto :goto_5
 
-    .line 161
-    iget v4, v7, Ll/۬ۨۤ;->֨ܰ:I
+    .line 1210
+    :cond_e
+    instance-of v5, v7, Ll/ۛ᩵ۤ;
 
-    iget v5, v7, Ll/۬ۨۤ;->۬ܰ:I
+    if-eqz v5, :cond_10
 
-    iget v6, v7, Ll/۬ۨۤ;->ۘܰ:I
+    check-cast v7, Ll/ۛ᩵ۤ;
 
+    .line 1234
+    iget-object v5, v7, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {p0, v5}, Ll/۬ۨۤ;->ۙ(ILl/ۖ᩵ۤ;)Ll/۬ۨۤ;
+
+    move-result-object p0
+
+    if-nez p0, :cond_f
+
+    goto :goto_6
+
+    :cond_f
     move-object v0, p0
 
-    move-object v1, v11
+    :cond_10
+    :goto_6
+    or-int/2addr v3, v8
 
-    .line 159
-    invoke-virtual/range {v0 .. v6}, Ll/ܳۨۤ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;III)V
+    .line 1162
+    iget-object p0, v4, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
 
-    if-eqz v9, :cond_a
+    goto/16 :goto_0
 
-    .line 165
-    iget-object v0, v7, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
+    .line 1165
+    :cond_11
+    instance-of v1, p0, Ll/᩺᩵ۤ;
 
-    invoke-virtual {v0, v12}, Ll/۬ۚۤ;->᩺(I)V
+    if-eqz v1, :cond_12
 
-    .line 260
-    invoke-virtual {v0, v8}, Ll/ۜۨۤ;->ۖ(I)V
+    check-cast p0, Ll/᩺᩵ۤ;
 
-    .line 167
-    invoke-virtual {p0}, Ll/۬ۨۤ;->ۚ()I
+    iget v1, p0, Ll/ۤۨۤ;->᩷:I
 
-    move-result v1
+    if-lez v1, :cond_12
 
-    invoke-virtual {p0}, Ll/ۜۨۤ;->֨()I
+    .line 1166
+    iget-object p0, p0, Ll/ۤۨۤ;->ۤ:Ll/ۖ᩵ۤ;
+
+    invoke-static {v2, p0}, Ll/۬ۨۤ;->ۙ(ILl/ۖ᩵ۤ;)Ll/۬ۨۤ;
+
+    move-result-object p0
+
+    if-eqz v3, :cond_12
+
+    if-eqz p0, :cond_12
+
+    return-object p0
+
+    :cond_12
+    :goto_7
+    return-object v0
+.end method
+
+.method public static ۙ(Ll/֡ۨۤ;Ll/ۖ᩵ۤ;I)Ll/۬ۨۤ;
+    .locals 5
+
+    :goto_0
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_b
+
+    .line 1029
+    instance-of v1, p0, Ll/ᩴۛۤ;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_3
+
+    check-cast p0, Ll/ᩴۛۤ;
+
+    .line 1030
+    iget-object v1, p0, Ll/ۚۛۤ;->᩷:[I
+
+    .line 1031
+    :goto_1
+    array-length v3, v1
+
+    if-ge v2, v3, :cond_2
+
+    .line 1032
+    aget v3, v1, v2
+
+    const v4, 0xffff
+
+    if-le v3, v4, :cond_0
+
+    return-object v0
+
+    .line 1036
+    :cond_0
+    invoke-interface {p1, v3}, Ll/ۖ᩵ۤ;->ۙ(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    .line 1037
+    new-instance p0, Ll/۬ۨۤ;
+
+    add-int/2addr p2, v2
+
+    int-to-char p1, v3
+
+    invoke-direct {p0, p1, p2}, Ll/۬ۨۤ;-><init>(CI)V
+
+    return-object p0
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    .line 1040
+    :cond_2
+    array-length v0, v1
+
+    add-int/2addr p2, v0
+
+    .line 1041
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    .line 1044
+    :cond_3
+    instance-of v1, p0, Ll/ۛ᩵ۤ;
+
+    if-eqz v1, :cond_b
+
+    check-cast p0, Ll/ۛ᩵ۤ;
+
+    iget-object v1, p0, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    .line 1252
+    invoke-static {v1}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
+
+    move-result v3
+
+    if-ltz v3, :cond_4
+
+    .line 1046
+    invoke-interface {p1, v3}, Ll/ۖ᩵ۤ;->ۙ(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    .line 1047
+    new-instance p0, Ll/۬ۨۤ;
+
+    int-to-char p1, v3
+
+    invoke-direct {p0, p1, p2}, Ll/۬ۨۤ;-><init>(CI)V
+
+    return-object p0
+
+    :cond_4
+    const/4 v3, 0x0
+
+    :goto_2
+    const/16 v4, 0x80
+
+    if-ge v2, v4, :cond_8
+
+    .line 1266
+    invoke-interface {v1, v2}, Ll/ۖ᩵ۤ;->ۙ(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_5
+
+    goto :goto_3
+
+    .line 1269
+    :cond_5
+    invoke-interface {p1, v2}, Ll/ۖ᩵ۤ;->ۙ(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    add-int/lit8 v3, v3, 0x1
+
+    const/16 v4, 0x10
+
+    if-le v3, v4, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_8
+    if-nez v3, :cond_9
+
+    goto :goto_4
+
+    .line 1276
+    :cond_9
+    new-instance v0, Ll/۬ۨۤ;
+
+    invoke-direct {v0, p2, v1}, Ll/۬ۨۤ;-><init>(ILl/ۖ᩵ۤ;)V
+
+    :goto_4
+    if-eqz v0, :cond_a
+
+    return-object v0
+
+    :cond_a
+    add-int/lit8 p2, p2, 0x1
+
+    .line 1055
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    :cond_b
+    return-object v0
+.end method
+
+.method public static bridge synthetic ۤ(Ll/۬ۨۤ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/۬ۨۤ;->ۤ:I
+
+    return p0
+.end method
+
+.method public static ᩷(Ll/ۖ᩵ۤ;)I
+    .locals 1
+
+    .line 1256
+    instance-of v0, p0, Ll/᩸ۛۤ;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Ll/᩸ۛۤ;
+
+    invoke-static {p0}, Ll/᩸ۛۤ;->ۙ(Ll/᩸ۛۤ;)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public static ᩷(Ll/֡ۨۤ;)Ll/۬ۨۤ;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz p0, :cond_6
+
+    .line 1070
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    const-class v3, Ll/ᩴۛۤ;
+
+    if-ne v2, v3, :cond_2
+
+    .line 1071
+    check-cast p0, Ll/ᩴۛۤ;
+
+    .line 1072
+    iget-object v2, p0, Ll/ۚۛۤ;->᩷:[I
+
+    const/4 v3, 0x0
+
+    .line 1073
+    :goto_1
+    array-length v4, v2
+
+    if-ge v3, v4, :cond_1
+
+    .line 1074
+    aget v4, v2, v3
+
+    const v5, 0xffff
+
+    if-le v4, v5, :cond_0
+
+    return-object v0
+
+    .line 1078
+    :cond_0
+    new-instance v0, Ll/۬ۨۤ;
+
+    add-int v5, v1, v3
+
+    int-to-char v4, v4
+
+    invoke-direct {v0, v4, v5}, Ll/۬ۨۤ;-><init>(CI)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    .line 1080
+    :cond_1
+    array-length v2, v2
+
+    add-int/2addr v1, v2
+
+    .line 1081
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    .line 1084
+    :cond_2
+    instance-of v2, p0, Ll/ۛ᩵ۤ;
+
+    if-eqz v2, :cond_4
+
+    check-cast p0, Ll/ۛ᩵ۤ;
+
+    .line 1252
+    iget-object v2, p0, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {v2}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
 
     move-result v2
 
-    mul-int/lit8 v2, v2, 0x2
+    if-ltz v2, :cond_3
 
-    sub-int/2addr v1, v2
+    .line 1087
+    new-instance v0, Ll/۬ۨۤ;
 
-    .line 398
-    iput v1, v0, Ll/ۜۨۤ;->֡:I
+    int-to-char v2, v2
 
-    .line 168
-    iget-object v0, v7, Ll/ܳۨۤ;->ۖܰ:Ll/۬ۚۤ;
+    invoke-direct {v0, v2, v1}, Ll/۬ۨۤ;-><init>(CI)V
 
-    invoke-virtual {v0}, Ll/ۜۨۤ;->ܰ()V
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
-    :cond_a
-    return-void
+    .line 1090
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    .line 1093
+    :cond_4
+    instance-of v2, p0, Ll/᩸ۨۤ;
+
+    if-eqz v2, :cond_6
+
+    check-cast p0, Ll/᩸ۨۤ;
+
+    iget v2, p0, Ll/᩸ۨۤ;->᩸:I
+
+    if-lez v2, :cond_6
+
+    iget v3, p0, Ll/᩸ۨۤ;->ۤ:I
+
+    if-ne v2, v3, :cond_6
+
+    .line 1096
+    iget-object v3, p0, Ll/᩸ۨۤ;->᩷:Ll/֡ۨۤ;
+
+    instance-of v4, v3, Ll/ۛ᩵ۤ;
+
+    if-eqz v4, :cond_6
+
+    check-cast v3, Ll/ۛ᩵ۤ;
+
+    .line 1252
+    iget-object v3, v3, Ll/᩷ۨۤ;->᩷:Ll/ۖ᩵ۤ;
+
+    invoke-static {v3}, Ll/۬ۨۤ;->᩷(Ll/ۖ᩵ۤ;)I
+
+    move-result v3
+
+    if-ltz v3, :cond_5
+
+    .line 1099
+    new-instance v0, Ll/۬ۨۤ;
+
+    add-int v4, v1, v2
+
+    add-int/lit8 v4, v4, -0x1
+
+    int-to-char v3, v3
+
+    invoke-direct {v0, v3, v4}, Ll/۬ۨۤ;-><init>(CI)V
+
+    :cond_5
+    add-int/2addr v1, v2
+
+    .line 1102
+    iget-object p0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
+
+    goto :goto_0
+
+    :cond_6
+    return-object v0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/۬ۨۤ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/۬ۨۤ;->᩷:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩸(Ll/۬ۨۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/۬ۨۤ;->᩸:Ll/ۖ᩵ۤ;
+
+    return-object p0
 .end method

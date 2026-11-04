@@ -1,45 +1,57 @@
 package l;
 
-import android.content.ContentResolver;
-import android.database.ContentObserver;
-import android.net.Uri;
-import android.os.Handler;
+import java.util.Comparator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.֨ۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O8SZ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0925 extends ContentObserver {
+/* JADX INFO: renamed from: l.֨ۘ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1N0 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0925 extends AbstractC10924 implements InterfaceC2546 {
 
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15399 f3445;
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ Comparator getComparator() {
+        return C18105.$default$getComparator(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.AbstractC10924
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ContentResolver f3710;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3747 f3711;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Uri f3712;
+    public final void mo3733(int i, Object obj) {
+        ((Consumer) obj).accept(new C13602(this.f3445, i));
+    }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C0925(C3747 c3747, Handler handler, ContentResolver contentResolver, Uri uri) {
-        super(handler);
-        this.f3711 = c3747;
-        this.f3710 = contentResolver;
-        this.f3712 = uri;
+    public C0925(C15399 c15399) {
+        super(c15399);
+        this.f3445 = c15399;
     }
 
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C0925(C15399 c15399, int i, int i2, boolean z) {
+        super(c15399, i, i2, z);
+        this.f3445 = c15399;
+    }
+
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return this.f34584 ? 1 : 65;
+    }
+
+    @Override // l.AbstractC10924
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m3674() {
-        this.f3710.registerContentObserver(this.f3712, false, this);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m3675() {
-        this.f3710.unregisterContentObserver(this);
-    }
-
-    @Override // android.database.ContentObserver
-    public final void onChange(boolean z) {
-        C3747 c3747 = this.f3711;
-        c3747.m10972(C2336.m7089(c3747.f13581, c3747.f13583, c3747.f13585));
+    public final AbstractC10924 mo3732(int i, int i2, boolean z) {
+        return new C0925(this.f3445, i, i2, z);
     }
 }

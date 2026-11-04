@@ -1,508 +1,319 @@
 package l;
 
-import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.util.Collections;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.res.ColorStateList;
+import android.os.Build;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.TextView;
+import bin.mt.plus.R;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.᩸۟֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: C9PC */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21425 extends AbstractC18245 implements InterfaceC18603 {
-    public static final int APEX_INFO_FIELD_NUMBER = 17;
-    public static final int BLOCK_SIZE_FIELD_NUMBER = 3;
-    public static final C21425 DEFAULT_INSTANCE;
-    public static final int DYNAMIC_PARTITION_METADATA_FIELD_NUMBER = 15;
-    public static final int MAX_TIMESTAMP_FIELD_NUMBER = 14;
-    public static final int MINOR_VERSION_FIELD_NUMBER = 12;
-    public static final InterfaceC6271 PARSER;
-    public static final int PARTIAL_UPDATE_FIELD_NUMBER = 16;
-    public static final int PARTITIONS_FIELD_NUMBER = 13;
-    public static final int SECURITY_PATCH_LEVEL_FIELD_NUMBER = 18;
-    public static final int SIGNATURES_OFFSET_FIELD_NUMBER = 4;
-    public static final int SIGNATURES_SIZE_FIELD_NUMBER = 5;
-    public static final long serialVersionUID = 0;
-    public List apexInfo_;
-    public int bitField0_;
-    public int blockSize_;
-    public C20015 dynamicPartitionMetadata_;
-    public long maxTimestamp_;
-    public byte memoizedIsInitialized;
-    public int minorVersion_;
-    public boolean partialUpdate_;
-    public List partitions_;
-    public volatile Object securityPatchLevel_;
-    public long signaturesOffset_;
-    public long signaturesSize_;
+/* JADX INFO: renamed from: l.᩶ܺܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G6IL */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C21425 {
 
-    public /* synthetic */ C21425(C15076 c15076) {
-        this((AbstractC0584) c15076);
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public C2056 f68244;
 
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C21425.class.getName());
-        DEFAULT_INSTANCE = new C21425();
-        PARSER = new C22837();
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public View f68245;
 
-    public C21425(AbstractC0584 abstractC0584) {
-        super(abstractC0584);
-        this.blockSize_ = 4096;
-        this.signaturesOffset_ = 0L;
-        this.signaturesSize_ = 0L;
-        this.minorVersion_ = 0;
-        this.maxTimestamp_ = 0L;
-        this.partialUpdate_ = false;
-        this.securityPatchLevel_ = "";
-        this.memoizedIsInitialized = (byte) -1;
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public View f68246;
 
-    public C21425() {
-        this.blockSize_ = 4096;
-        this.signaturesOffset_ = 0L;
-        this.signaturesSize_ = 0L;
-        this.minorVersion_ = 0;
-        this.maxTimestamp_ = 0L;
-        this.partialUpdate_ = false;
-        this.securityPatchLevel_ = "";
-        this.memoizedIsInitialized = (byte) -1;
-        this.blockSize_ = 4096;
-        List list = Collections.EMPTY_LIST;
-        this.partitions_ = list;
-        this.apexInfo_ = list;
-        this.securityPatchLevel_ = "";
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public ArrayList f68247;
 
-    public static final C2806 getDescriptor() {
-        return C0651.internal_static_bin_mt_manager_visitor_payload_DeltaArchiveManifest_descriptor;
-    }
-
-    @Override // l.AbstractC18245
-    public C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C0651.internal_static_bin_mt_manager_visitor_payload_DeltaArchiveManifest_fieldAccessorTable;
-        c6956.m18696(C21425.class, C15076.class);
-        return c6956;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasBlockSize() {
-        return (this.bitField0_ & 1) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public int getBlockSize() {
-        return this.blockSize_;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasSignaturesOffset() {
-        return (this.bitField0_ & 2) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public long getSignaturesOffset() {
-        return this.signaturesOffset_;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasSignaturesSize() {
-        return (this.bitField0_ & 4) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public long getSignaturesSize() {
-        return this.signaturesSize_;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasMinorVersion() {
-        return (this.bitField0_ & 8) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public int getMinorVersion() {
-        return this.minorVersion_;
-    }
-
-    @Override // l.InterfaceC18603
-    public List getPartitionsList() {
-        return this.partitions_;
-    }
-
-    @Override // l.InterfaceC18603
-    public List getPartitionsOrBuilderList() {
-        return this.partitions_;
-    }
-
-    @Override // l.InterfaceC18603
-    public int getPartitionsCount() {
-        return this.partitions_.size();
-    }
-
-    @Override // l.InterfaceC18603
-    public C23231 getPartitions(int i) {
-        return (C23231) this.partitions_.get(i);
-    }
-
-    @Override // l.InterfaceC18603
-    public InterfaceC21819 getPartitionsOrBuilder(int i) {
-        return (InterfaceC21819) this.partitions_.get(i);
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasMaxTimestamp() {
-        return (this.bitField0_ & 16) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public long getMaxTimestamp() {
-        return this.maxTimestamp_;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasDynamicPartitionMetadata() {
-        return (this.bitField0_ & 32) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public C20015 getDynamicPartitionMetadata() {
-        C20015 c20015 = this.dynamicPartitionMetadata_;
-        return c20015 == null ? C20015.getDefaultInstance() : c20015;
-    }
-
-    @Override // l.InterfaceC18603
-    public InterfaceC16487 getDynamicPartitionMetadataOrBuilder() {
-        C20015 c20015 = this.dynamicPartitionMetadata_;
-        return c20015 == null ? C20015.getDefaultInstance() : c20015;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasPartialUpdate() {
-        return (this.bitField0_ & 64) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean getPartialUpdate() {
-        return this.partialUpdate_;
-    }
-
-    @Override // l.InterfaceC18603
-    public List getApexInfoList() {
-        return this.apexInfo_;
-    }
-
-    @Override // l.InterfaceC18603
-    public List getApexInfoOrBuilderList() {
-        return this.apexInfo_;
-    }
-
-    @Override // l.InterfaceC18603
-    public int getApexInfoCount() {
-        return this.apexInfo_.size();
-    }
-
-    @Override // l.InterfaceC18603
-    public C4491 getApexInfo(int i) {
-        return (C4491) this.apexInfo_.get(i);
-    }
-
-    @Override // l.InterfaceC18603
-    public InterfaceC11548 getApexInfoOrBuilder(int i) {
-        return (InterfaceC11548) this.apexInfo_.get(i);
-    }
-
-    @Override // l.InterfaceC18603
-    public boolean hasSecurityPatchLevel() {
-        return (this.bitField0_ & 128) != 0;
-    }
-
-    @Override // l.InterfaceC18603
-    public String getSecurityPatchLevel() {
-        Object obj = this.securityPatchLevel_;
-        if (obj instanceof String) {
-            return (String) obj;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C6509 f68248 = new InterfaceC16438() { // from class: l.ۛܺܳ
+        @Override // l.InterfaceC16438
+        /* JADX INFO: renamed from: ۙ */
+        public final void mo1486(Object obj) {
+            this.f21853.m48745();
         }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.securityPatchLevel_ = strM52260;
-        }
-        return strM52260;
-    }
+    };
 
-    @Override // l.InterfaceC18603
-    public AbstractC23725 getSecurityPatchLevelBytes() {
-        Object obj = this.securityPatchLevel_;
-        if (obj instanceof String) {
-            AbstractC23725 abstractC23725M52256 = AbstractC23725.m52256((String) obj);
-            this.securityPatchLevel_ = abstractC23725M52256;
-            return abstractC23725M52256;
-        }
-        return (AbstractC23725) obj;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C21680 f68249 = new C21680(1, this);
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.memoizedIsInitialized;
-        if (b == 1) {
-            return true;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public DialogInterfaceC8327 f68250;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public boolean f68251;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public DialogInterfaceC8327 f68252;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractActivityC17204 f68253;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public BaseAdapter f68254;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public boolean f68255;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static void m48740(C21425 c21425) {
+        AbstractActivityC17204 abstractActivityC17204 = c21425.f68253;
+        if (C17695.m41415().m41448()) {
+            c21425.f68251 = false;
+            c21425.f68255 = false;
+            C17695.m41415().m41434();
+            c21425.m48745();
+            return;
         }
-        if (b == 0) {
-            return false;
+        if (C17695.m41415().m41440() == null) {
+            c21425.f68244.m7102(true);
+            return;
         }
-        for (int i = 0; i < getPartitionsCount(); i++) {
-            if (!getPartitions(i).isInitialized()) {
-                this.memoizedIsInitialized = (byte) 0;
-                return false;
+        if (C7543.m20616(abstractActivityC17204)) {
+            c21425.m48737();
+        } else {
+            if (C7543.m20616(abstractActivityC17204)) {
+                return;
+            }
+            try {
+                C7543.m20612(abstractActivityC17204, null);
+            } catch (Exception e) {
+                abstractActivityC17204.m40401(e, (DialogInterface.OnDismissListener) null);
             }
         }
-        if (hasDynamicPartitionMetadata() && !getDynamicPartitionMetadata().isInitialized()) {
-            this.memoizedIsInitialized = (byte) 0;
-            return false;
-        }
-        this.memoizedIsInitialized = (byte) 1;
-        return true;
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public void writeTo(AbstractC22044 abstractC22044) {
-        if ((this.bitField0_ & 1) != 0) {
-            abstractC22044.mo14231(3, this.blockSize_);
-        }
-        if ((this.bitField0_ & 2) != 0) {
-            abstractC22044.mo14253(4, this.signaturesOffset_);
-        }
-        if ((this.bitField0_ & 4) != 0) {
-            abstractC22044.mo14253(5, this.signaturesSize_);
-        }
-        if ((this.bitField0_ & 8) != 0) {
-            abstractC22044.mo14231(12, this.minorVersion_);
-        }
-        for (int i = 0; i < this.partitions_.size(); i++) {
-            abstractC22044.mo14254(13, (InterfaceC23206) this.partitions_.get(i));
-        }
-        if ((this.bitField0_ & 16) != 0) {
-            abstractC22044.mo14253(14, this.maxTimestamp_);
-        }
-        if ((this.bitField0_ & 32) != 0) {
-            abstractC22044.mo14254(15, getDynamicPartitionMetadata());
-        }
-        if ((this.bitField0_ & 64) != 0) {
-            abstractC22044.mo14240(16, this.partialUpdate_);
-        }
-        for (int i2 = 0; i2 < this.apexInfo_.size(); i2++) {
-            abstractC22044.mo14254(17, (InterfaceC23206) this.apexInfo_.get(i2));
-        }
-        if ((this.bitField0_ & 128) != 0) {
-            AbstractC18245.m42405(abstractC22044, 18, this.securityPatchLevel_);
-        }
-        getUnknownFields().writeTo(abstractC22044);
+    /* JADX WARN: Type inference failed for: r0v0, types: [l.ۛܺܳ] */
+    public C21425(AbstractActivityC17204 abstractActivityC17204) {
+        this.f68253 = abstractActivityC17204;
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM48960 = (this.bitField0_ & 1) != 0 ? AbstractC22044.m48960(3, this.blockSize_) : 0;
-        if ((this.bitField0_ & 2) != 0) {
-            iM48960 += AbstractC22044.m48962(4, this.signaturesOffset_);
-        }
-        if ((this.bitField0_ & 4) != 0) {
-            iM48960 += AbstractC22044.m48962(5, this.signaturesSize_);
-        }
-        if ((this.bitField0_ & 8) != 0) {
-            iM48960 += AbstractC22044.m48960(12, this.minorVersion_);
-        }
-        for (int i2 = 0; i2 < this.partitions_.size(); i2++) {
-            iM48960 += AbstractC22044.m48963(13, (InterfaceC23206) this.partitions_.get(i2));
-        }
-        if ((this.bitField0_ & 16) != 0) {
-            iM48960 += AbstractC22044.m48967(14, this.maxTimestamp_);
-        }
-        if ((this.bitField0_ & 32) != 0) {
-            iM48960 += AbstractC22044.m48963(15, getDynamicPartitionMetadata());
-        }
-        if ((this.bitField0_ & 64) != 0) {
-            iM48960 += AbstractC22044.m48961(16);
-        }
-        for (int i3 = 0; i3 < this.apexInfo_.size(); i3++) {
-            iM48960 += AbstractC22044.m48963(17, (InterfaceC23206) this.apexInfo_.get(i3));
-        }
-        if ((this.bitField0_ & 128) != 0) {
-            iM48960 += AbstractC18245.m42390(18, this.securityPatchLevel_);
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM48960;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m48749() {
+        this.f68247 = C17695.m41415().m41435();
+        this.f68254 = new C4271(this);
+        AbstractActivityC17204 abstractActivityC17204 = this.f68253;
+        View viewM40395 = abstractActivityC17204.m40395(R.layout.MT_Protector);
+        this.f68245 = viewM40395.findViewById(R.id.MT_Protector);
+        this.f68246 = viewM40395.findViewById(R.id.MT_Protector);
+        C14803 c14803 = (C14803) viewM40395.findViewById(R.id.MT_Protector);
+        c14803.m35644(Math.round(abstractActivityC17204.getResources().getDisplayMetrics().density * 240.0f));
+        this.f68245.setOnClickListener(new ViewOnClickListenerC7876(3, this));
+        this.f68246.setOnClickListener(new ViewOnClickListenerC23663(0, this));
+        c14803.setAdapter((ListAdapter) this.f68254);
+        c14803.setEmptyView(viewM40395.findViewById(R.id.MT_Protector));
+        c14803.setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: l.ۗܺܳ
+            @Override // android.widget.AdapterView.OnItemClickListener
+            public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
+                C21576.m49067((CharSequence) ((C18463) this.f12110.f68247.get(i)).f60090);
+            }
+        });
+        C2361 c2361BuildDialog = abstractActivityC17204.buildDialog();
+        c2361BuildDialog.m8021(R.string.MT_Protector);
+        c2361BuildDialog.m8005(viewM40395);
+        c2361BuildDialog.m8026(R.string.MT_Protector, null);
+        DialogInterfaceC8327 dialogInterfaceC8327M23911 = C8947.m23911(c2361BuildDialog, R.string.MT_Protector, (DialogInterface.OnClickListener) null, R.string.MT_Protector, (DialogInterface.OnClickListener) null);
+        this.f68252 = dialogInterfaceC8327M23911;
+        this.f68244 = new C2056(abstractActivityC17204, dialogInterfaceC8327M23911, new RunnableC6915(2, this));
+        C5416.m16144(this.f68252);
+        this.f68252.m22426(new DialogInterface.OnDismissListener() { // from class: l.᩵ܺܳ
+            @Override // android.content.DialogInterface.OnDismissListener
+            public final void onDismiss(DialogInterface dialogInterface) {
+                C21425.m48741(this.f66298);
+            }
+        });
+        this.f68252.m22436().setOnClickListener(new ViewOnClickListenerC1342(2, this));
+        this.f68252.m22440().setOnClickListener(new ViewOnClickListenerC12474());
+        abstractActivityC17204.getLifecycle().mo23077(new C14711(this));
+        C17695.m41415().m41443().m40350(abstractActivityC17204, this.f68248);
+        C17695.m41415().m41417().m40350(abstractActivityC17204, this.f68249);
+        m48745();
     }
 
-    @Override // l.AbstractC23019
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m48741(C21425 c21425) {
+        c21425.f68251 = false;
+        c21425.f68255 = false;
+        c21425.f68244.m7104();
+        DialogInterfaceC8327 dialogInterfaceC8327 = c21425.f68250;
+        if (dialogInterfaceC8327 != null) {
+            dialogInterfaceC8327.dismiss();
         }
-        if (!(obj instanceof C21425)) {
-            return super.equals(obj);
+        C17695.m41415().m41443().m40354((InterfaceC16438) c21425.f68248);
+        C17695.m41415().m41417().m40354((InterfaceC16438) c21425.f68249);
+        AbstractActivityC17204 abstractActivityC17204 = c21425.f68253;
+        if (abstractActivityC17204 instanceof ActivityC13220) {
+            abstractActivityC17204.finish();
         }
-        C21425 c21425 = (C21425) obj;
-        if (hasBlockSize() != c21425.hasBlockSize()) {
-            return false;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public void m48745() {
+        int i;
+        DialogInterfaceC8327 dialogInterfaceC8327 = this.f68252;
+        if (dialogInterfaceC8327 == null || !dialogInterfaceC8327.m22434()) {
+            return;
         }
-        if ((hasBlockSize() && getBlockSize() != c21425.getBlockSize()) || hasSignaturesOffset() != c21425.hasSignaturesOffset()) {
-            return false;
+        boolean z = C17695.m41415().m41440() != null;
+        AbstractActivityC17204 abstractActivityC17204 = this.f68253;
+        boolean zM20616 = C7543.m20616(abstractActivityC17204);
+        if (this.f68255) {
+            if (!zM20616) {
+                this.f68255 = false;
+            } else if (z && abstractActivityC17204.getLifecycle().mo23076() == EnumC2619.RESUMED) {
+                this.f68255 = false;
+                if (!C17695.m41415().m41448()) {
+                    m48737();
+                    return;
+                }
+            }
         }
-        if ((hasSignaturesOffset() && getSignaturesOffset() != c21425.getSignaturesOffset()) || hasSignaturesSize() != c21425.hasSignaturesSize()) {
-            return false;
+        m48731(this.f68245, z);
+        m48731(this.f68246, zM20616);
+        if (C17695.m41415().m41448() && (!z || !zM20616)) {
+            C17695.m41415().m41442();
         }
-        if ((hasSignaturesSize() && getSignaturesSize() != c21425.getSignaturesSize()) || hasMinorVersion() != c21425.hasMinorVersion()) {
-            return false;
+        boolean zM41448 = C17695.m41415().m41448();
+        Button buttonM22436 = this.f68252.m22436();
+        if (!this.f68251 || zM41448) {
+            i = zM41448 ? R.string.MT_Protector : R.string.MT_Protector;
+        } else {
+            i = R.string.MT_Protector;
         }
-        if ((hasMinorVersion() && getMinorVersion() != c21425.getMinorVersion()) || !getPartitionsList().equals(c21425.getPartitionsList()) || hasMaxTimestamp() != c21425.hasMaxTimestamp()) {
-            return false;
+        buttonM22436.setText(i);
+        this.f68252.m22436().setEnabled((!this.f68251 || zM41448) && !C17695.m41415().m41433());
+        ArrayList arrayListM41435 = C17695.m41415().m41435();
+        this.f68247 = arrayListM41435;
+        this.f68252.m22440().setVisibility(arrayListM41435.size() == 0 ? 8 : 0);
+        this.f68254.notifyDataSetChanged();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m48731(View view, boolean z) {
+        int i;
+        TextView textView = (TextView) view.findViewById(R.id.MT_Protector);
+        if (z) {
+            i = view == this.f68245 ? R.string.MT_Protector : R.string.MT_Protector;
+        } else {
+            i = R.string.MT_Protector;
         }
-        if ((hasMaxTimestamp() && getMaxTimestamp() != c21425.getMaxTimestamp()) || hasDynamicPartitionMetadata() != c21425.hasDynamicPartitionMetadata()) {
-            return false;
+        textView.setText(i);
+        ImageView imageView = (ImageView) view.findViewById(R.id.MT_Protector);
+        imageView.setImageResource(z ? R.drawable.MT_Protector : R.drawable.MT_Protector);
+        C12864.m31899(imageView, ColorStateList.valueOf(C7508.m20558(this.f68253, z ? R.color.MT_Protector : R.color.MT_Protector)));
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static void m48747(final C21425 c21425) {
+        final C17695 c17695M41415 = C17695.m41415();
+        if (c17695M41415.m41433()) {
+            return;
         }
-        if ((hasDynamicPartitionMetadata() && !getDynamicPartitionMetadata().equals(c21425.getDynamicPartitionMetadata())) || hasPartialUpdate() != c21425.hasPartialUpdate()) {
-            return false;
+        final C11750 c11750M41440 = c17695M41415.m41440();
+        if (c11750M41440 == null) {
+            c21425.f68244.m7102(false);
+            return;
         }
-        if ((!hasPartialUpdate() || getPartialUpdate() == c21425.getPartialUpdate()) && getApexInfoList().equals(c21425.getApexInfoList()) && hasSecurityPatchLevel() == c21425.hasSecurityPatchLevel()) {
-            return (!hasSecurityPatchLevel() || getSecurityPatchLevel().equals(c21425.getSecurityPatchLevel())) && getUnknownFields().equals(c21425.getUnknownFields());
+        if (c21425.f68250 != null) {
+            return;
         }
-        return false;
+        C2361 c2361BuildDialog = c21425.f68253.buildDialog();
+        c2361BuildDialog.m8021(R.string.MT_Protector);
+        c2361BuildDialog.m8000(R.string.MT_Protector);
+        c2361BuildDialog.m8022(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
+        c2361BuildDialog.m8026(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.᩺ܺܳ
+            @Override // android.content.DialogInterface.OnClickListener
+            public final void onClick(DialogInterface dialogInterface, int i) {
+                C21425.m48735(this.f79206, c17695M41415, c11750M41440);
+            }
+        });
+        DialogInterfaceC8327 dialogInterfaceC8327M8016 = c2361BuildDialog.m8016();
+        c21425.f68250 = dialogInterfaceC8327M8016;
+        dialogInterfaceC8327M8016.m22426(new DialogInterface.OnDismissListener() { // from class: l.ܶܺܳ
+            @Override // android.content.DialogInterface.OnDismissListener
+            public final void onDismiss(DialogInterface dialogInterface) {
+                this.f52593.f68250 = null;
+            }
+        });
     }
 
-    @Override // l.AbstractC23019
-    public int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m48735(C21425 c21425, C17695 c17695, C11750 c11750) {
+        AbstractActivityC17204 abstractActivityC17204 = c21425.f68253;
+        if (c21425.f68252.m22434() && abstractActivityC17204.getLifecycle().mo23076() == EnumC2619.RESUMED && c17695.m41440() == c11750) {
+            c21425.f68251 = false;
+            c21425.f68255 = false;
+            if (Build.VERSION.SDK_INT < 24 && !C22171.m50137(abstractActivityC17204, C7756.m21117())) {
+                C2056.m7091();
+                c17695.m41442();
+                if (!c21425.f68244.m7103()) {
+                    C22673.m51152(R.string.MT_Protector);
+                }
+            } else {
+                c17695.m41445();
+            }
+            c21425.m48745();
         }
-        int iHashCode = getDescriptor().hashCode() + 779;
-        if (hasBlockSize()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + getBlockSize();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m48734(C21425 c21425, Integer num) {
+        DialogInterfaceC8327 dialogInterfaceC8327 = c21425.f68252;
+        if (dialogInterfaceC8327 == null || !dialogInterfaceC8327.m22434()) {
+            return;
         }
-        if (hasSignaturesOffset()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 4, 53) + C9779.m24887(getSignaturesOffset());
+        if (c21425.f68251 && num != null && num.intValue() == 2) {
+            c21425.f68251 = false;
         }
-        if (hasSignaturesSize()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 5, 53) + C9779.m24887(getSignaturesSize());
+        if (num != null && (num.intValue() == 3 || num.intValue() == 0)) {
+            if (c21425.f68251 && num.intValue() == 3) {
+                C22673.m51152(R.string.MT_Protector);
+            }
+            c21425.f68251 = false;
+            c21425.f68255 = false;
         }
-        if (hasMinorVersion()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 12, 53) + getMinorVersion();
+        c21425.m48745();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static void m48744(C21425 c21425) {
+        AbstractActivityC17204 abstractActivityC17204 = c21425.f68253;
+        if (C7543.m20616(abstractActivityC17204)) {
+            return;
         }
-        if (getPartitionsCount() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 13, 53) + getPartitionsList().hashCode();
+        try {
+            C7543.m20612(abstractActivityC17204, null);
+        } catch (Exception e) {
+            abstractActivityC17204.m40401(e, (DialogInterface.OnDismissListener) null);
         }
-        if (hasMaxTimestamp()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 14, 53) + C9779.m24887(getMaxTimestamp());
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m48738(C21425 c21425) {
+        DialogInterfaceC8327 dialogInterfaceC8327 = c21425.f68252;
+        if (dialogInterfaceC8327 != null && dialogInterfaceC8327.m22434() && c21425.f68253.getLifecycle().mo23076() == EnumC2619.RESUMED) {
+            c21425.f68255 = true;
+            c21425.m48745();
         }
-        if (hasDynamicPartitionMetadata()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 15, 53) + getDynamicPartitionMetadata().hashCode();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private void m48737() {
+        this.f68255 = false;
+        try {
+            this.f68251 = true;
+            m48745();
+            C17695.m41415().m41447();
+        } catch (Exception e) {
+            this.f68251 = false;
+            m48745();
+            this.f68253.m40401(e, (DialogInterface.OnDismissListener) null);
         }
-        if (hasPartialUpdate()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 16, 53) + C9779.m24888(getPartialUpdate());
-        }
-        if (getApexInfoCount() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 17, 53) + getApexInfoList().hashCode();
-        }
-        if (hasSecurityPatchLevel()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 18, 53) + getSecurityPatchLevel().hashCode();
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C21425 parseFrom(ByteBuffer byteBuffer) {
-        return (C21425) PARSER.parseFrom(byteBuffer);
-    }
-
-    public static C21425 parseFrom(ByteBuffer byteBuffer, C2701 c2701) {
-        return (C21425) PARSER.parseFrom(byteBuffer, c2701);
-    }
-
-    public static C21425 parseFrom(AbstractC23725 abstractC23725) {
-        return (C21425) PARSER.parseFrom(abstractC23725);
-    }
-
-    public static C21425 parseFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return (C21425) PARSER.parseFrom(abstractC23725, c2701);
-    }
-
-    public static C21425 parseFrom(byte[] bArr) {
-        return (C21425) PARSER.parseFrom(bArr);
-    }
-
-    public static C21425 parseFrom(byte[] bArr, C2701 c2701) {
-        return (C21425) PARSER.parseFrom(bArr, c2701);
-    }
-
-    public static C21425 parseFrom(InputStream inputStream) {
-        return (C21425) AbstractC18245.m42418(PARSER, inputStream);
-    }
-
-    public static C21425 parseFrom(InputStream inputStream, C2701 c2701) {
-        return (C21425) AbstractC18245.m42419(PARSER, inputStream, c2701);
-    }
-
-    public static C21425 parseDelimitedFrom(InputStream inputStream) {
-        return (C21425) AbstractC18245.m42395(PARSER, inputStream);
-    }
-
-    public static C21425 parseDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return (C21425) AbstractC18245.m42396(PARSER, inputStream, c2701);
-    }
-
-    public static C21425 parseFrom(AbstractC3262 abstractC3262) {
-        return (C21425) AbstractC18245.m42397(PARSER, abstractC3262);
-    }
-
-    public static C21425 parseFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        return (C21425) AbstractC18245.m42398(PARSER, abstractC3262, c2701);
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public C15076 newBuilderForType() {
-        return newBuilder();
-    }
-
-    public static C15076 newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-    }
-
-    public static C15076 newBuilder(C21425 c21425) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(c21425);
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public C15076 toBuilder() {
-        int i = 0;
-        return this == DEFAULT_INSTANCE ? new C15076(i) : new C15076(i).mergeFrom(this);
-    }
-
-    @Override // l.AbstractC23019
-    public C15076 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C15076(interfaceC6790, 0);
-    }
-
-    public static C21425 getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-    }
-
-    public static InterfaceC6271 parser() {
-        return PARSER;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public InterfaceC6271 getParserForType() {
-        return PARSER;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public C21425 getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
     }
 }

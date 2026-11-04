@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.engines.RSABlindedEngine;
 import org.bouncycastle.crypto.signers.ISO9796d2Signer;
 import org.bouncycastle.crypto.util.DigestFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISOSignatureSpi extends SignatureSpi {
     public ISO9796d2Signer signer;
 

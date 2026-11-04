@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto.mldsa;
 
 import java.io.IOException;
 import java.security.SecureRandom;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Digest;
@@ -126,7 +126,7 @@ public class HashMLDSASigner implements Signer {
         try {
             this.digestOIDEncoding = DigestUtils.getDigestOid(digestCreateDigest.getAlgorithmName()).getEncoded(ASN1Encoding.DER);
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("oid encoding failed: ")));
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("oid encoding failed: ")));
         }
     }
 }

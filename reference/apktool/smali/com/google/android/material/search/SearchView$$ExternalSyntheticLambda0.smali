@@ -3,7 +3,7 @@
 .source "SearchView"
 
 # interfaces
-.implements Ll/ۨܳ;
+.implements Ll/᩸ۖ;
 
 
 # instance fields
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
+.method public final onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;)Ll/ۘۜ;
     .locals 3
 
     .line 0
@@ -42,7 +42,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/search/SearchView$$ExternalSyntheticLambda0;->f$0:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-static {v2, v0, v1, p1, p2}, Lcom/google/android/material/search/SearchView;->$r8$lambda$TmMG7_lw4sF4o7J33Ph3cDNw2tw(Landroid/view/ViewGroup$MarginLayoutParams;IILandroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
+    invoke-static {v2, v0, v1, p1, p2}, Lcom/google/android/material/search/SearchView;->$r8$lambda$TmMG7_lw4sF4o7J33Ph3cDNw2tw(Landroid/view/ViewGroup$MarginLayoutParams;IILandroid/view/View;Ll/ۘۜ;)Ll/ۘۜ;
 
     move-result-object p1
 

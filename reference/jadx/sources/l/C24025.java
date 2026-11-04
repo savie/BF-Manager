@@ -1,53 +1,37 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.os.Build;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.᩻᩻ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 66ND */
+/* JADX INFO: renamed from: l.᩺ۗ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: D4TB */
 /* JADX INFO: loaded from: classes.dex */
-public final class C24025 extends AbstractC17535 {
-
+public final /* synthetic */ class C24025 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C23289 f77839;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f77840;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f77841;
-
-    public C24025(C23289 c23289, int i, boolean z) {
-        this.f77839 = c23289;
-        this.f77840 = i;
-        this.f77841 = z;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C24025)) {
-            return false;
-        }
-        C24025 c24025 = (C24025) obj;
-        return this.f77841 == c24025.f77841 && this.f77840 == c24025.f77840 && C13638.equals(this.f77839, c24025.f77839);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f77839) + C17922.m41614(this.f77841 ? 1231 : 1237, 31, this.f77840, 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f77839, Integer.valueOf(this.f77840), Boolean.valueOf(this.f77841)};
-        String[] strArrSplit = "context;depth;continuation".length() == 0 ? new String[0] : "context;depth;continuation".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C24025.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public static /* synthetic */ void m53582(ExecutorService executorService) {
+        ThreadPoolExecutor threadPoolExecutor;
+        boolean zIsTerminated;
+        if ((Build.VERSION.SDK_INT <= 23 || executorService != ForkJoinPool.commonPool()) && !(zIsTerminated = (threadPoolExecutor = (ThreadPoolExecutor) executorService).isTerminated())) {
+            ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = (ScheduledThreadPoolExecutor) executorService;
+            scheduledThreadPoolExecutor.shutdown();
+            boolean z = false;
+            while (!zIsTerminated) {
+                try {
+                    zIsTerminated = threadPoolExecutor.awaitTermination(1L, TimeUnit.DAYS);
+                } catch (InterruptedException unused) {
+                    if (!z) {
+                        scheduledThreadPoolExecutor.shutdownNow();
+                        z = true;
+                    }
+                }
+            }
+            if (z) {
+                Thread.currentThread().interrupt();
             }
         }
-        sb.append("]");
-        return sb.toString();
     }
 }

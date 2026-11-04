@@ -1,222 +1,176 @@
 .class public final Ll/ᩴᩳܶ;
 .super Ljava/lang/Object;
-.source "9BH0"
+.source "I7W7"
 
 # interfaces
-.implements Ll/ۚᩳܶ;
+.implements Ll/᩶ܰܶ;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/᩷ᩳܶ;
+.field public ۙ:Ljavax/crypto/Cipher;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩷ᩳܶ;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 726
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ᩴᩳܶ;->ۙ:Ll/᩷ᩳܶ;
-
-    return-void
-.end method
-
-.method private ۙ(Ll/᩹ᩳܶ;)V
-    .locals 6
-
-    .line 760
-    invoke-virtual {p1}, Ll/᩹ᩳܶ;->᩹()Ll/ܺ᩺ܶ;
-
-    move-result-object v0
-
-    .line 762
-    iget-object v1, p0, Ll/ᩴᩳܶ;->ۙ:Ll/᩷ᩳܶ;
-
-    if-eqz v0, :cond_1
-
-    .line 763
-    invoke-virtual {v0}, Ll/ܺ᩺ܶ;->֨()Ll/ᩴ᩺ܶ;
-
-    move-result-object v2
-
-    .line 765
-    invoke-static {v1}, Ll/᩷ᩳܶ;->ܰ(Ll/᩷ᩳܶ;)Ljava/util/TreeMap;
-
-    move-result-object v3
-
-    .line 766
-    invoke-virtual {v3, v2}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/ArrayList;
-
-    if-nez v3, :cond_0
-
-    .line 769
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    .line 770
-    invoke-static {v1}, Ll/᩷ᩳܶ;->ܰ(Ll/᩷ᩳܶ;)Ljava/util/TreeMap;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 773
-    :cond_0
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 776
-    :cond_1
-    instance-of v0, p1, Ll/ۛ᩸ܶ;
-
-    if-eqz v0, :cond_4
-
-    .line 777
-    invoke-virtual {p1}, Ll/᩹ᩳܶ;->۬()Ll/۫᩺ܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/۫᩺ܶ;->ۖ()I
-
-    move-result v0
-
-    const/16 v2, 0x38
-
-    if-ne v0, v2, :cond_2
-
-    .line 779
-    invoke-static {v1}, Ll/᩷ᩳܶ;->ۨ(Ll/᩷ᩳܶ;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    check-cast p1, Ll/ۛ᩸ܶ;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    .line 780
-    :cond_2
-    invoke-static {}, Ll/᩻᩸ܶ;->ۙ()Ll/֨᩺ܶ;
-
-    move-result-object v0
-
-    .line 781
-    invoke-virtual {p1}, Ll/᩹ᩳܶ;->ܶ()Ll/ܶ᩺ܶ;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ll/ܶ᩺ܶ;->֨()Ll/۫᩺ܶ;
-
-    move-result-object v2
-
-    .line 782
-    invoke-virtual {p1}, Ll/᩹ᩳܶ;->ᩳ()Ll/֡᩺ܶ;
-
-    move-result-object v3
-
-    .line 780
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 117
-    invoke-virtual {v2}, Ll/۫᩺ܶ;->֨()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    .line 128
-    invoke-virtual {v3}, Ll/ۚᩴܶ;->size()I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_3
-
-    .line 132
-    invoke-virtual {v3, v2}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ll/ܺ᩺ܶ;->ܰ()I
-
-    move-result v5
-
-    add-int/2addr v4, v5
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v0, 0x6
-
-    if-lt v4, v0, :cond_5
-
-    .line 783
-    invoke-static {v1}, Ll/᩷ᩳܶ;->ۙ(Ll/᩷ᩳܶ;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    check-cast p1, Ll/ۛ᩸ܶ;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    .line 785
-    :cond_4
-    instance-of v0, p1, Ll/ۢ᩸ܶ;
-
-    if-eqz v0, :cond_5
-
-    .line 786
-    invoke-static {v1}, Ll/᩷ᩳܶ;->ۖ(Ll/᩷ᩳܶ;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    check-cast p1, Ll/ۢ᩸ܶ;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_5
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۛ᩸ܶ;)V
-    .locals 0
+.method public final getBlockSize()I
+    .locals 1
 
-    .line 730
-    invoke-direct {p0, p1}, Ll/ᩴᩳܶ;->ۙ(Ll/᩹ᩳܶ;)V
+    const/16 v0, 0x10
+
+    return v0
+.end method
+
+.method public final synthetic ۙ(I)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final ۙ(Ll/ۢ᩸ܶ;)V
-    .locals 0
+.method public final ۙ(I[BI[BI)V
+    .locals 6
 
-    .line 736
-    invoke-direct {p0, p1}, Ll/ᩴᩳܶ;->ۙ(Ll/᩹ᩳܶ;)V
+    .line 70
+    iget-object v0, p0, Ll/ᩴᩳܶ;->ۙ:Ljavax/crypto/Cipher;
+
+    move-object v1, p2
+
+    move v2, p1
+
+    move v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Ljavax/crypto/Cipher;->update([BII[BI)I
 
     return-void
 .end method
 
-.method public final ܰ(Ll/ۛ᩸ܶ;)V
-    .locals 0
+.method public final ۙ(I[B[B)V
+    .locals 3
 
-    .line 742
-    invoke-direct {p0, p1}, Ll/ᩴᩳܶ;->ۙ(Ll/᩹ᩳܶ;)V
+    const-string p3, "RC4"
+
+    .line 50
+    array-length v0, p2
+
+    const/16 v1, 0x10
+
+    if-le v0, v1, :cond_0
+
+    new-array v0, v1, [B
+
+    const/4 v2, 0x0
+
+    .line 52
+    invoke-static {p2, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move-object p2, v0
+
+    .line 57
+    :cond_0
+    :try_start_0
+    invoke-static {p3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ᩴᩳܶ;->ۙ:Ljavax/crypto/Cipher;
+
+    .line 58
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    invoke-direct {v0, p2, p3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    .line 59
+    iget-object p2, p0, Ll/ᩴᩳܶ;->ۙ:Ljavax/crypto/Cipher;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x2
+
+    :goto_0
+    invoke-virtual {p2, p1, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    const/4 p2, 0x0
+
+    .line 63
+    iput-object p2, p0, Ll/ᩴᩳܶ;->ۙ:Ljavax/crypto/Cipher;
+
+    .line 64
+    throw p1
+.end method
+
+.method public final synthetic ۙ([B)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ۙ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ۤ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩴ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩷()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩷(I[BI[BI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ᩸()I
+    .locals 1
+
+    const/16 v0, 0x8
+
+    return v0
 .end method

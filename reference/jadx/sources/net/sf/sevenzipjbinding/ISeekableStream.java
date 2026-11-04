@@ -1,6 +1,6 @@
 package net.sf.sevenzipjbinding;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ISeekableStream {
     public static final int SEEK_CUR = 1;
     public static final int SEEK_END = 2;

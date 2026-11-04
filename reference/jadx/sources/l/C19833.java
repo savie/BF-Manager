@@ -1,39 +1,40 @@
 package l;
 
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩶֨ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7IB */
+/* JADX INFO: renamed from: l.ᩴ۫᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: A7FF */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19833 extends AbstractC10661 {
+public final class C19833 extends AbstractC3425 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public TextView f63653;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f63755;
 
-    public C19833(ActivityC23361 activityC23361, ViewGroup viewGroup) {
-        super(LayoutInflater.from(activityC23361).inflate(R.layout.MT_Protector, viewGroup, false));
-        this.itemView.findViewById(R.id.MT_Protector).setVisibility(8);
-        ((ImageView) this.itemView.findViewById(R.id.drag)).setImageResource(R.drawable.MT_Protector);
-        this.itemView.setFocusable(false);
-        this.itemView.setClickable(false);
-        TextView textView = (TextView) this.itemView.findViewById(R.id.MT_Protector);
-        this.f63653 = textView;
-        textView.setPadding(0, 0, 0, 0);
-        textView.setTextSize(18.0f);
-        textView.setTypeface(null, 1);
-        this.itemView.findViewById(R.id.MT_Protector).setVisibility(8);
+    @Override // l.InterfaceC3359
+    public final int getLength() {
+        return 2;
     }
 
-    @Override // l.AbstractC10661
+    public C19833(EnumC24309 enumC24309, int i) {
+        super(enumC24309);
+        this.f63755 = i;
+    }
+
+    @Override // l.InterfaceC3359
     /* JADX INFO: renamed from: ۙ */
-    public final void mo15777(AbstractC0076 abstractC0076) {
-        abstractC0076.getClass();
-        if (abstractC0076 instanceof C15600) {
-            this.f63653.setText(abstractC0076.mo1009().f50731);
-        }
+    public final void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        ((C11388) interfaceC9397).m28740(this.f63755);
+    }
+
+    @Override // l.AbstractC3425
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo6635() {
+        return String.format("{ exception_table_index: %d; }", Integer.valueOf(this.f63755));
+    }
+
+    @Override // l.AbstractC3425
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo6633() {
+        return String.valueOf(this.f63755);
     }
 }

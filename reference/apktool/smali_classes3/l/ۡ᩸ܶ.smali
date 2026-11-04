@@ -1,163 +1,72 @@
-.class public final enum Ll/ۡ᩸ܶ;
-.super Ljava/lang/Enum;
-.source "HBGE"
+.class public final synthetic Ll/ۡ᩸ܶ;
+.super Ljava/lang/Object;
+.source "962J"
 
 
 # static fields
-.field public static final enum ֡:Ll/ۡ᩸ܶ;
-
-.field public static final enum ۫:Ll/ۡ᩸ܶ;
-
-.field public static final synthetic ܺ:[Ll/ۡ᩸ܶ;
-
-.field public static final enum ܽ:Ll/ۡ᩸ܶ;
-
-.field public static final enum ܿ:Ll/ۡ᩸ܶ;
-
-.field public static final enum ᩶:Ll/ۡ᩸ܶ;
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 107
-    new-instance v0, Ll/ۡ᩸ܶ;
-
-    const-string v1, "TOP"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ll/ۡ᩸ܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۡ᩸ܶ;->ܿ:Ll/ۡ᩸ܶ;
-
-    new-instance v0, Ll/ۡ᩸ܶ;
-
-    const-string v1, "NONE"
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ll/ۡ᩸ܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۡ᩸ܶ;->۫:Ll/ۡ᩸ܶ;
-
-    new-instance v0, Ll/ۡ᩸ܶ;
-
-    const-string v1, "METHOD"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ll/ۡ᩸ܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۡ᩸ܶ;->ܽ:Ll/ۡ᩸ܶ;
-
-    new-instance v0, Ll/ۡ᩸ܶ;
-
-    const-string v1, "INTER"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ll/ۡ᩸ܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۡ᩸ܶ;->֡:Ll/ۡ᩸ܶ;
-
-    new-instance v0, Ll/ۡ᩸ܶ;
-
-    const-string v1, "GLOBAL"
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, v2}, Ll/ۡ᩸ܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۡ᩸ܶ;->᩶:Ll/ۡ᩸ܶ;
-
-    .line 106
-    invoke-static {}, Ll/ۡ᩸ܶ;->ۙ()[Ll/ۡ᩸ܶ;
+    .line 61
+    invoke-static {}, Ll/᩷ᩴܶ;->values()[Ll/᩷ᩴܶ;
 
     move-result-object v0
 
-    sput-object v0, Ll/ۡ᩸ܶ;->ܺ:[Ll/ۡ᩸ܶ;
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    sput-object v0, Ll/ۡ᩸ܶ;->ۙ:[I
 
-    .line 106
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_0
+    sget-object v1, Ll/᩷ᩴܶ;->ۘۙ:Ll/᩷ᩴܶ;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-.method public static valueOf(Ljava/lang/String;)Ll/ۡ᩸ܶ;
-    .locals 1
-
-    .line 106
-    const-class v0, Ll/ۡ᩸ܶ;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/ۡ᩸ܶ;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/ۡ᩸ܶ;
-    .locals 1
-
-    .line 106
-    sget-object v0, Ll/ۡ᩸ܶ;->ܺ:[Ll/ۡ᩸ܶ;
-
-    invoke-virtual {v0}, [Ll/ۡ᩸ܶ;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/ۡ᩸ܶ;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/ۡ᩸ܶ;
-    .locals 3
-
-    const/4 v0, 0x5
-
-    new-array v0, v0, [Ll/ۡ᩸ܶ;
-
-    .line 106
-    sget-object v1, Ll/ۡ᩸ܶ;->ܿ:Ll/ۡ᩸ܶ;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/ۡ᩸ܶ;->۫:Ll/ۡ᩸ܶ;
+    move-result v1
 
     const/4 v2, 0x1
 
-    aput-object v1, v0, v2
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object v1, Ll/ۡ᩸ܶ;->ܽ:Ll/ۡ᩸ܶ;
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۡ᩸ܶ;->ۙ:[I
+
+    sget-object v1, Ll/᩷ᩴܶ;->۟ۙ:Ll/᩷ᩴܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
 
     const/4 v2, 0x2
 
-    aput-object v1, v0, v2
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v1, Ll/ۡ᩸ܶ;->֡:Ll/ۡ᩸ܶ;
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۡ᩸ܶ;->ۙ:[I
+
+    sget-object v1, Ll/᩷ᩴܶ;->ۡۙ:Ll/᩷ᩴܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
 
     const/4 v2, 0x3
 
-    aput-object v1, v0, v2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    sget-object v1, Ll/ۡ᩸ܶ;->᩶:Ll/ۡ᩸ܶ;
-
-    const/4 v2, 0x4
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    :catch_2
+    return-void
 .end method

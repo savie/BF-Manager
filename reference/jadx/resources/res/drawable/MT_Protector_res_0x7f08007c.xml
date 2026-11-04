@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/MT_Protector_res_0x7f0802a4"
+        android:drawable="@drawable/MT_Protector_res_0x7f0802c1"
         android:left="6dp"
         android:top="7dp"
         android:right="6dp"
@@ -15,7 +15,7 @@
             <corners android:radius="2dp"/>
             <stroke
                 android:width="2dp"
-                android:color="@color/MT_Protector_res_0x7f060059"/>
+                android:color="@color/MT_Protector_res_0x7f06005b"/>
         </shape>
     </item>
 </layer-list>

@@ -1,18 +1,20 @@
 package l;
 
-import android.widget.TextView;
+import com.google.android.material.motion.MotionUtils;
 
-/* JADX INFO: renamed from: l.ۘۜۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U8VQ */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3765 implements InterfaceC10597 {
+/* JADX INFO: renamed from: l.ۗ᩻ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y5S4 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3765 extends C4511 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ TextView f13626;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public int f12886;
 
-    @Override // l.InterfaceC10597
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1473(Object obj) {
-        this.f13626.setTextColor(((Integer) obj).intValue());
+    @Override // java.lang.Throwable
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("MismatchedTreeNodeException(");
+        sb.append(m14235());
+        sb.append("!=");
+        return C12669.m31437(this.f12886, MotionUtils.EASING_TYPE_FORMAT_END, sb);
     }
 }

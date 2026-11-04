@@ -12,12 +12,11 @@ import org.bouncycastle.pqc.crypto.slhdsa.SLHDSAPrivateKeyParameters;
 import org.bouncycastle.pqc.crypto.slhdsa.SLHDSAPublicKeyParameters;
 import org.bouncycastle.pqc.crypto.slhdsa.SLHDSASigner;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureSpi extends BaseDeterministicOrRandomSignature {
     public final ByteArrayOutputStream bOut;
     public final SLHDSASigner signer;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Direct extends SignatureSpi {
         public Direct() {
             super(new SLHDSASigner());

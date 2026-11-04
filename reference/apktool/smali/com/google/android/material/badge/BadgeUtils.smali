@@ -54,7 +54,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p1}, Ll/ۚ֫;->ᩳ(Landroid/view/View;)Z
+    invoke-static {p1}, Ll/᩸۠;->ܶ(Landroid/view/View;)Z
 
     move-result v0
 
@@ -71,7 +71,7 @@
     invoke-direct {v0, v1, p0}, Lcom/google/android/material/badge/BadgeUtils$2;-><init>(Landroid/view/View$AccessibilityDelegate;Lcom/google/android/material/badge/BadgeDrawable;)V
 
     .line 151
-    invoke-static {p1, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p1, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     return-void
 
@@ -81,7 +81,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/badge/BadgeUtils$3;-><init>(Lcom/google/android/material/badge/BadgeDrawable;)V
 
-    invoke-static {p1, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p1, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     return-void
 .end method
@@ -145,24 +145,24 @@
     throw p0
 .end method
 
-.method public static attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ۜᩴ;I)V
+.method public static attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ܶ᩹;I)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 114
-    invoke-static {p0, p1, p2, v0}, Lcom/google/android/material/badge/BadgeUtils;->attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ۜᩴ;ILandroid/widget/FrameLayout;)V
+    invoke-static {p0, p1, p2, v0}, Lcom/google/android/material/badge/BadgeUtils;->attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ܶ᩹;ILandroid/widget/FrameLayout;)V
 
     return-void
 .end method
 
-.method public static attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ۜᩴ;ILandroid/widget/FrameLayout;)V
+.method public static attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ܶ᩹;ILandroid/widget/FrameLayout;)V
     .locals 1
 
     .line 133
     new-instance v0, Lcom/google/android/material/badge/BadgeUtils$1;
 
-    invoke-direct {v0, p1, p2, p0, p3}, Lcom/google/android/material/badge/BadgeUtils$1;-><init>(Ll/ۜᩴ;ILcom/google/android/material/badge/BadgeDrawable;Landroid/widget/FrameLayout;)V
+    invoke-direct {v0, p1, p2, p0, p3}, Lcom/google/android/material/badge/BadgeUtils$1;-><init>(Ll/ܶ᩹;ILcom/google/android/material/badge/BadgeDrawable;Landroid/widget/FrameLayout;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -290,7 +290,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0}, Ll/ۚ֫;->ᩳ(Landroid/view/View;)Z
+    invoke-static {p0}, Ll/᩸۠;->ܶ(Landroid/view/View;)Z
 
     move-result v0
 
@@ -307,7 +307,7 @@
     invoke-direct {v0, v1}, Lcom/google/android/material/badge/BadgeUtils$4;-><init>(Landroid/view/View$AccessibilityDelegate;)V
 
     .line 214
-    invoke-static {p0, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p0, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     return-void
 
@@ -315,7 +315,7 @@
     const/4 v0, 0x0
 
     .line 225
-    invoke-static {p0, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p0, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     return-void
 .end method
@@ -365,7 +365,7 @@
     return-void
 .end method
 
-.method public static detachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ۜᩴ;I)V
+.method public static detachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Ll/ܶ᩹;I)V
     .locals 0
 
     if-nez p0, :cond_0
@@ -374,7 +374,7 @@
 
     .line 202
     :cond_0
-    invoke-static {p1, p2}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuItemView(Ll/ۜᩴ;I)Ll/ۜ۬;
+    invoke-static {p1, p2}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuItemView(Ll/ܶ᩹;I)Ll/ܺۚ;
 
     move-result-object p1
 
@@ -431,7 +431,7 @@
     .locals 1
 
     .line 231
-    sget v0, Ll/֨۟ܶ;->ᩴ᩵:I
+    sget v0, Ll/ܽ۬ܺ;->᩹᩵:I
 
     .line 232
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -442,7 +442,7 @@
     invoke-virtual {p0, v0}, Lcom/google/android/material/badge/BadgeDrawable;->setAdditionalHorizontalOffset(I)V
 
     .line 234
-    sget v0, Ll/֨۟ܶ;->۠᩵:I
+    sget v0, Ll/ܽ۬ܺ;->ۗ᩵:I
 
     .line 235
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

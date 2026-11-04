@@ -1,121 +1,183 @@
 package l;
 
-import com.google.android.material.color.ColorResourcesTableCreator;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.List;
-import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
-import org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi;
+import com.umeng.analytics.pro.d;
 
-/* JADX INFO: renamed from: l.۫ۧۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 48KN */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12361 {
+/* JADX INFO: renamed from: l.ۨ۫ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 54WU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12361 extends AbstractC22343 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final byte[] f41332 = {79, 103, 103, 83, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, -43, -59, -9, 1, 19, 79, KeyFactorySpi.Ed25519_type, 117, 115, 72, 101, 97, 100, 1, 2, 56, 1, GCMSIVBlockCipher.MASK, -69, 0, 0, 0, 0, 0};
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final Object f39704;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public C15399 f39705;
 
     /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final byte[] f41331 = {79, 103, 103, 83, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 11, -103, 87, 83, 1, 16, 79, KeyFactorySpi.Ed25519_type, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0};
+    public boolean f39706;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ByteBuffer f41335 = InterfaceC19664.f63118;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f39707;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f41333 = 0;
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public boolean f39708;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f41334 = 2;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public C1516 f39709;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30765(C16033 c16033, List list) {
-        int i;
-        c16033.f51912.getClass();
-        if (c16033.f51912.limit() - c16033.f51912.position() == 0) {
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final AbstractC21094 f39710;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public int f39711;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C12361(C1175 c1175, C16618 c16618, C9311 c9311) {
+        super(c1175);
+        int i = c9311.f30251;
+        this.f39705 = new C15399();
+        this.f39709 = new C1516();
+        this.f39704 = new Object();
+        this.f39710 = c16618.f53739;
+        int iM39312 = c16618.m39312();
+        c16618.m39317(2);
+        int i2 = 0;
+        boolean z = (iM39312 & 1) != 0;
+        this.f39706 = z;
+        boolean z2 = (iM39312 & 2) != 0;
+        this.f39708 = z2;
+        int iM39316 = c16618.m39316();
+        this.f39707 = c16618.m39316() + i;
+        this.f72322 = C20500.m47001(c16618, ((C1175) super.getType()).mo4332().mo27606());
+        c16618.m39310(i + c9311.f30252);
+        int i3 = -1;
+        if (z) {
+            while (i2 < iM39316) {
+                int iM39311 = c16618.m39311();
+                this.f39705.mo20978(iM39311, c16618.m39311() * 4);
+                if (iM39311 > i3) {
+                    i3 = iM39311;
+                }
+                i2++;
+            }
+            this.f39711 = i3;
             return;
         }
-        byte[] bArr = (this.f41334 == 2 && (list.size() == 1 || list.size() == 3)) ? (byte[]) list.get(0) : null;
-        ByteBuffer byteBuffer = c16033.f51912;
-        int iPosition = byteBuffer.position();
-        int iLimit = byteBuffer.limit();
-        int i2 = iLimit - iPosition;
-        int i3 = (i2 + 255) / 255;
-        int i4 = i3 + 27 + i2;
-        if (this.f41334 == 2) {
-            int length = bArr != null ? bArr.length + 28 : 47;
-            i4 += length + 44;
-            i = length;
-        } else {
-            i = 0;
-        }
-        if (this.f41335.capacity() < i4) {
-            this.f41335 = ByteBuffer.allocate(i4).order(ByteOrder.LITTLE_ENDIAN);
-        } else {
-            this.f41335.clear();
-        }
-        ByteBuffer byteBuffer2 = this.f41335;
-        if (this.f41334 == 2) {
-            if (bArr == null) {
-                byteBuffer2.put(f41332);
-            } else {
-                m30763(byteBuffer2, 0L, 0, 1, true);
-                byteBuffer2.put(C14218.m34325(bArr.length));
-                byteBuffer2.put(bArr);
-                byteBuffer2.putInt(22, C17983.m41818(byteBuffer2.arrayOffset(), byteBuffer2.array(), bArr.length + 28, 0));
-                byteBuffer2.position(bArr.length + 28);
+        if (z2) {
+            while (i2 < iM39316) {
+                int iM39313 = c16618.m39311();
+                if (iM39313 != 65535) {
+                    this.f39705.mo20978(i2, iM39313 * 4);
+                }
+                i2++;
             }
-            byteBuffer2.put(f41331);
+            this.f39711 = iM39316 - 1;
+            return;
         }
-        int iM41465 = this.f41333 + C17874.m41465(byteBuffer);
-        this.f41333 = iM41465;
-        m30763(byteBuffer2, iM41465, this.f41334, i3, false);
-        for (int i5 = 0; i5 < i3; i5++) {
-            if (i2 >= 255) {
-                byteBuffer2.put((byte) -1);
-                i2 -= 255;
-            } else {
-                byteBuffer2.put((byte) i2);
-                i2 = 0;
+        while (i2 < iM39316) {
+            int iM39317 = c16618.m39316();
+            if (iM39317 != -1) {
+                this.f39705.mo20978(i2, iM39317);
             }
+            i2++;
         }
-        while (iPosition < iLimit) {
-            byteBuffer2.put(byteBuffer.get(iPosition));
-            iPosition++;
-        }
-        byteBuffer.position(byteBuffer.limit());
-        byteBuffer2.flip();
-        if (this.f41334 == 2) {
-            byteBuffer2.putInt(i + 66, C17983.m41818(byteBuffer2.arrayOffset() + i + 44, byteBuffer2.array(), byteBuffer2.limit() - byteBuffer2.position(), 0));
-        } else {
-            byteBuffer2.putInt(22, C17983.m41818(byteBuffer2.arrayOffset(), byteBuffer2.array(), byteBuffer2.limit() - byteBuffer2.position(), 0));
-        }
-        this.f41334++;
-        this.f41335 = byteBuffer2;
-        c16033.mo7();
-        c16033.m38027(this.f41335.remaining());
-        c16033.f51912.put(this.f41335);
-        c16033.m38025();
+        this.f39711 = iM39316 - 1;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30764() {
-        this.f41335 = InterfaceC19664.f63118;
-        this.f41333 = 0;
-        this.f41334 = 2;
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۛ */
+    public final int mo9069() {
+        return this.f39711;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m30763(ByteBuffer byteBuffer, long j, int i, int i2, boolean z) {
-        byteBuffer.put((byte) 79);
-        byteBuffer.put((byte) 103);
-        byteBuffer.put((byte) 103);
-        byteBuffer.put((byte) 83);
-        byteBuffer.put((byte) 0);
-        byteBuffer.put(z ? (byte) 2 : (byte) 0);
-        byteBuffer.putLong(j);
-        byteBuffer.putInt(0);
-        byteBuffer.putInt(i);
-        byteBuffer.putInt(0);
-        byteBuffer.put(C14218.m34325(i2));
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo9070(int i) {
+        int iMo10513;
+        int iM36868 = this.f39705.m36868(i, -1);
+        if (iM36868 == -1) {
+            return null;
+        }
+        int i2 = this.f39707 + iM36868;
+        AbstractC21094 abstractC21094 = this.f39710;
+        if ((abstractC21094.mo10518(i2 + 2) & 8) != 0) {
+            iMo10513 = abstractC21094.mo10514(i2);
+        } else {
+            iMo10513 = abstractC21094.mo10513(i2 + 4);
+        }
+        try {
+            return (String) ((C7887) super.mo9071()).m21426().get(iMo10513);
+        } catch (IndexOutOfBoundsException unused) {
+            return d.O;
+        }
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ܺ */
+    public final boolean mo9075(int i) {
+        int i2;
+        boolean z;
+        int iM36868 = this.f39705.m36868(i, -1);
+        if (iM36868 == -1 || (i2 = this.f39707 + iM36868) < 0 || this.f39710.m48154(i2) < 8) {
+            return false;
+        }
+        synchronized (this.f39704) {
+            byte bM5393 = this.f39709.m5393(i);
+            if (bM5393 == 0) {
+                C16618 c16618M48157 = this.f39710.m48157(i2);
+                bM5393 = C6396.m18149(c16618M48157, (C7887) super.mo9071()) ? (byte) 1 : (byte) 2;
+                this.f39710.m48156(c16618M48157);
+                this.f39709.mo5390(bM5393, i);
+            }
+            z = bM5393 == 1;
+        }
+        return z;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ᩷ */
+    public final InterfaceC8697 mo9076(int i) {
+        int i2;
+        int iM36868 = this.f39705.m36868(i, -1);
+        if (iM36868 == -1 || (i2 = iM36868 + this.f39707) < 0) {
+            return null;
+        }
+        AbstractC21094 abstractC21094 = this.f39710;
+        if (abstractC21094.m48154(i2) < 8) {
+            return null;
+        }
+        C16618 c16618M48157 = abstractC21094.m48157(i2);
+        C6396 c6396 = new C6396(this, i, c16618M48157);
+        abstractC21094.m48156(c16618M48157);
+        return c6396;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۨۙ */
+    public final boolean mo9072() {
+        return this.f39706;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ֫᩷ */
+    public final boolean mo9067() {
+        return this.f39708;
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC7206 mo9068() {
+        return (C24296) super.mo9068();
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC10869 mo9071() {
+        return (C7887) super.mo9071();
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    public final InterfaceC15344 getType() {
+        return (C1175) super.getType();
     }
 }

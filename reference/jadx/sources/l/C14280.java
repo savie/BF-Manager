@@ -1,30 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳۘܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
+import java.io.EOFException;
+
+/* JADX INFO: renamed from: l.ܰ֫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8UL */
 /* JADX INFO: loaded from: classes4.dex */
-public final enum C14280 extends EnumC7306 {
-    public /* synthetic */ C14280() {
-        this("FORMAT_31I", 21);
-    }
+public final class C14280 {
 
-    public C14280(String str, int i) {
-        super(str, i, 0);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C21287 f45110 = new C21287(10);
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        return new C20007(this, EnumC7306.m19496(i), 0, 0, interfaceC14985.readInt(), EnumC7306.m19493(i));
-    }
-
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        int iM41384 = abstractC17806.m41384();
-        EnumC7306.m19460(abstractC17806.m41390(), abstractC17806.mo16133());
-        EnumC7306.m19494(iM41384);
-        EnumC7306.m19457(iM41384);
-        interfaceC21334.m47863();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19378 m34693(InterfaceC19502 interfaceC19502, InterfaceC18689 interfaceC18689) {
+        C21287 c21287 = this.f45110;
+        C19378 c19378M22215 = null;
+        int i = 0;
+        while (true) {
+            try {
+                interfaceC19502.mo10069(0, 10, c21287.m48497());
+                c21287.m48510(0);
+                if (c21287.m48501() != 4801587) {
+                    break;
+                }
+                c21287.m48503(3);
+                int iM48499 = c21287.m48499();
+                int i2 = iM48499 + 10;
+                if (c19378M22215 == null) {
+                    byte[] bArr = new byte[i2];
+                    System.arraycopy(c21287.m48497(), 0, bArr, 0, 10);
+                    interfaceC19502.mo10069(10, iM48499, bArr);
+                    c19378M22215 = new C8248(interfaceC18689).m22215(i2, bArr);
+                } else {
+                    interfaceC19502.mo10068(iM48499);
+                }
+                i += i2;
+            } catch (EOFException unused) {
+            }
+        }
+        interfaceC19502.mo10076();
+        interfaceC19502.mo10068(i);
+        return c19378M22215;
     }
 }

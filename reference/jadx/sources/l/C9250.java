@@ -1,18 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ֨ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 46Z2 */
+/* JADX INFO: renamed from: l.ۡ۠ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D88X */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9250 {
+public final /* synthetic */ class C9250 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f31462;
+    public static final /* synthetic */ int[] f30108;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f31463;
-
-    public C9250(String str, String str2) {
-        this.f31462 = str;
-        this.f31463 = str2;
+    static {
+        int[] iArr = new int[EnumC4031.values().length];
+        f30108 = iArr;
+        try {
+            iArr[EnumC4031.BIND_ACK.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f30108[EnumC4031.BIND_NAK.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
     }
 }

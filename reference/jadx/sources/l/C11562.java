@@ -1,39 +1,62 @@
 package l;
 
-import android.view.View;
-import android.widget.ImageView;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۨ۟ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27KL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11562 extends AbstractC20847 {
+/* JADX INFO: renamed from: l.ۧۤ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: I7EP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11562 implements Iterable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ArrayList f36349;
+
+    public C11562(int i) {
+        this.f36349 = new ArrayList(i);
+    }
+
+    public C11562() {
+        this(12);
+    }
+
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return this.f36349.iterator();
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2388 f38895;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C11562(C2388 c2388) {
-        super("DotsWidth");
-        this.f38895 = c2388;
+    public final void m29081(InterfaceC3359 interfaceC3359) {
+        this.f36349.add(interfaceC3359);
     }
 
-    @Override // l.AbstractC20847
-    public final float getValue(Object obj) {
-        C13465.m32966((View) obj, "object");
-        ImageView imageView = this.f38895.f9584;
-        C13465.m32962((Object) imageView);
-        return imageView.getLayoutParams().width;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C15867 m29080(C6169 c6169) {
+        return C1170.stream(this.f36349).filter(c6169).findFirst();
     }
 
-    @Override // l.AbstractC20847
-    public final void setValue(Object obj, float f) {
-        C13465.m32966((View) obj, "object");
-        C2388 c2388 = this.f38895;
-        ImageView imageView = c2388.f9584;
-        C13465.m32962((Object) imageView);
-        imageView.getLayoutParams().width = (int) f;
-        ImageView imageView2 = c2388.f9584;
-        C13465.m32962((Object) imageView2);
-        imageView2.requestLayout();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m29083() {
+        Iterator it = this.f36349.iterator();
+        int length = 0;
+        while (it.hasNext()) {
+            length += ((InterfaceC3359) it.next()).getLength();
+        }
+        return length + 2;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29082(InterfaceC9397 interfaceC9397) throws IOException {
+        C11388 c11388 = (C11388) interfaceC9397;
+        c11388.m28740(this.f36349.size());
+        m29084(c11388);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m29084(InterfaceC9397 interfaceC9397) {
+        Iterator it = this.f36349.iterator();
+        while (it.hasNext()) {
+            ((InterfaceC3359) it.next()).mo1599(interfaceC9397);
+        }
     }
 }

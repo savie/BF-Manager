@@ -24,12 +24,12 @@
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/S3Object;-><init>()V
 
     .line 41
-    invoke-static {p1}, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->ܰ(Lcom/amazonaws/http/HttpResponse;)Lcom/amazonaws/AmazonWebServiceResponse;
+    invoke-static {p1}, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->᩷(Lcom/amazonaws/http/HttpResponse;)Lcom/amazonaws/AmazonWebServiceResponse;
 
     move-result-object v1
 
     .line 42
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -42,7 +42,7 @@
     if-eqz v2, :cond_0
 
     .line 43
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -54,7 +54,7 @@
 
     .line 47
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -63,7 +63,7 @@
     invoke-interface {v2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -76,7 +76,7 @@
     if-eqz v2, :cond_1
 
     .line 52
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     .line 55
     :cond_1
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3Object;->ۨ()Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3Object;->᩷()Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     move-result-object v2
 

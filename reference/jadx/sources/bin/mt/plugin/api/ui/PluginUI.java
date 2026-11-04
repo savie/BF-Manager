@@ -24,11 +24,11 @@ import bin.mt.plugin.api.ui.builder.PluginTextViewBuilder;
 import bin.mt.plugin.api.ui.builder.PluginViewBuilder;
 import bin.mt.plugin.api.ui.dialog.PluginDialog;
 import bin.mt.plugin.api.ui.menu.PluginPopupMenu;
-import l.C14808;
+import l.C6194;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface PluginUI {
-    public static final Style DEFAULT_STYLE = new C14808();
+    public static final Style DEFAULT_STYLE = new C6194();
 
     PluginDialog.Builder buildDialog();
 

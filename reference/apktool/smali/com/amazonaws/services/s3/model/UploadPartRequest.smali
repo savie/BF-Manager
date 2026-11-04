@@ -11,23 +11,23 @@
 
 
 # instance fields
-.field public ֡:Ljava/lang/String;
+.field public ֡:Ljava/io/File;
 
-.field public ֫:Ljava/lang/String;
+.field public ֨:Ljava/lang/String;
 
-.field public transient ۛ:Ljava/io/InputStream;
+.field public ۖ:J
 
-.field public ۧ:Ljava/lang/String;
+.field public ۟:J
 
-.field public ۫:J
+.field public ۠:Ljava/lang/String;
 
-.field public ܳ:J
+.field public ۡ:I
 
-.field public ܽ:Ljava/io/File;
+.field public transient ۢ:Ljava/io/InputStream;
 
-.field public ܿ:I
+.field public ܿ:Ljava/lang/String;
 
-.field public ᩻:I
+.field public ᩳ:I
 
 
 # direct methods
@@ -42,20 +42,20 @@
 
 
 # virtual methods
-.method public final ۖ()Ljava/lang/String;
+.method public final ֫()Ljava/lang/String;
     .locals 1
 
-    .line 216
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֡:Ljava/lang/String;
+    .line 252
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֨:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۘ()Ljava/lang/String;
+.method public final ۘ᩷()Ljava/io/File;
     .locals 1
 
-    .line 252
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۧ:Ljava/lang/String;
+    .line 442
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֡:Ljava/io/File;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
     .locals 0
 
     .line 146
-    iput p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܿ:I
+    iput p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ᩳ:I
 
     return-void
 .end method
@@ -73,7 +73,7 @@
     .locals 0
 
     .line 497
-    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۫:J
+    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۟:J
 
     return-void
 .end method
@@ -82,7 +82,7 @@
     .locals 0
 
     .line 454
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܽ:Ljava/io/File;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֡:Ljava/io/File;
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     .locals 0
 
     .line 181
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۛ:Ljava/io/InputStream;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۢ:Ljava/io/InputStream;
 
     return-void
 .end method
@@ -100,106 +100,106 @@
     .locals 0
 
     .line 242
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܿ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ۚ()J
+.method public final ۚ()Ljava/io/InputStream;
+    .locals 1
+
+    .line 191
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۢ:Ljava/io/InputStream;
+
+    return-object v0
+.end method
+
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
+
+    .line 216
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܿ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ۤ(I)V
+    .locals 0
+
+    .line 352
+    iput p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۡ:I
+
+    return-void
+.end method
+
+.method public final ۤ(Ljava/lang/String;)V
+    .locals 0
+
+    .line 308
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۠:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final ۧ()I
+    .locals 1
+
+    .line 322
+    iget v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۡ:I
+
+    return v0
+.end method
+
+.method public final ܳ()I
+    .locals 1
+
+    .line 138
+    iget v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ᩳ:I
+
+    return v0
+.end method
+
+.method public final ܺ()Ljava/lang/String;
+    .locals 1
+
+    .line 284
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۠:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩴ()J
     .locals 2
 
     .line 484
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۫:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۟:J
 
     return-wide v0
 .end method
 
-.method public final ۜ()I
-    .locals 1
-
-    .line 322
-    iget v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩻:I
-
-    return v0
-.end method
-
-.method public final ۨ(I)V
-    .locals 0
-
-    .line 352
-    iput p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩻:I
-
-    return-void
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 308
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֫:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final ۬()Ljava/io/InputStream;
-    .locals 1
-
-    .line 191
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۛ:Ljava/io/InputStream;
-
-    return-object v0
-.end method
-
-.method public final ܰ(J)V
+.method public final ᩷(J)V
     .locals 0
 
     .line 383
-    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ:J
+    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۖ:J
 
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     .line 272
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۧ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֨:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ܶ()Ljava/lang/String;
-    .locals 1
-
-    .line 284
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֫:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ᩷ܰ()Ljava/io/File;
-    .locals 1
-
-    .line 442
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܽ:Ljava/io/File;
-
-    return-object v0
-.end method
-
-.method public final ᩹()I
-    .locals 1
-
-    .line 138
-    iget v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܿ:I
-
-    return v0
-.end method
-
-.method public final ᩺()J
+.method public final ᩻()J
     .locals 2
 
     .line 362
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۖ:J
 
     return-wide v0
 .end method

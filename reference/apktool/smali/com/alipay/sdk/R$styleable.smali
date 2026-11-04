@@ -92,7 +92,7 @@
 
     const v0, 0x7f040034
 
-    const v1, 0x7f0402a7
+    const v1, 0x7f0402a9
 
     const v2, 0x10101a5
 
@@ -165,7 +165,7 @@
         0x7f04022a
         0x7f04022b
         0x7f04022c
-        0x7f040538
+        0x7f04053a
     .end array-data
 
     :array_2

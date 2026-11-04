@@ -1,11 +1,19 @@
-.class public interface abstract Ll/ۨۨᩴ;
+.class public final synthetic Ll/ۨۨᩴ;
 .super Ljava/lang/Object;
-.source "ZAO9"
+.source "D18B"
 
 # interfaces
-.implements Ll/ۤۛᩴ;
+.implements Ll/۟֡֫;
 
 
 # virtual methods
-.method public abstract getComparator()Ll/ۙܰᩴ;
+.method public final ۫()Z
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/ۛۨᩴ;->۫:Ll/᩷ۨᩴ;
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

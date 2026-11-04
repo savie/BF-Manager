@@ -7,7 +7,7 @@ import java.security.GeneralSecurityException;
 import javax.crypto.Cipher;
 import org.bouncycastle.crypto.io.InvalidCipherTextIOException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherOutputStream extends FilterOutputStream {
     public final Cipher cipher;
     public final byte[] oneByte;

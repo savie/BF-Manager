@@ -38,25 +38,25 @@
     invoke-virtual {v0, v1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setUpdateSuspended(Z)V
 
     .line 509
-    invoke-virtual {p1}, Lcom/google/android/material/internal/NavigationMenuItemView;->getItemData()Ll/᩻۬;
+    invoke-virtual {p1}, Lcom/google/android/material/internal/NavigationMenuItemView;->getItemData()Ll/۠ۚ;
 
     move-result-object p1
 
     .line 510
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$1;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    iget-object v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->menu:Ll/۫۬;
+    iget-object v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->menu:Ll/ۢۚ;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, p1, v0, v3}, Ll/۫۬;->performItemAction(Landroid/view/MenuItem;Ll/᩹ۘ;I)Z
+    invoke-virtual {v2, p1, v0, v3}, Ll/ۢۚ;->performItemAction(Landroid/view/MenuItem;Ll/ۚ֫;I)Z
 
     move-result v0
 
     if-eqz p1, :cond_0
 
     .line 512
-    invoke-virtual {p1}, Ll/᩻۬;->isCheckable()Z
+    invoke-virtual {p1}, Ll/۠ۚ;->isCheckable()Z
 
     move-result v2
 
@@ -69,7 +69,7 @@
 
     iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->setCheckedItem(Ll/᩻۬;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->setCheckedItem(Ll/۠ۚ;)V
 
     goto :goto_0
 

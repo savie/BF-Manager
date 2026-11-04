@@ -10,11 +10,11 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$Q0EfB5Np2_kRW5ayeCHnYQx1LkA(Ll/ܿܰۙ;Landroid/animation/ValueAnimator;)V
+.method public static synthetic $r8$lambda$Q0EfB5Np2_kRW5ayeCHnYQx1LkA(Ll/۟᩷ۙ;Landroid/animation/ValueAnimator;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Lcom/google/android/material/navigation/DrawerLayoutUtils;->lambda$getScrimCloseAnimatorUpdateListener$0(Ll/ܿܰۙ;Landroid/animation/ValueAnimator;)V
+    invoke-static {p0, p1}, Lcom/google/android/material/navigation/DrawerLayoutUtils;->lambda$getScrimCloseAnimatorUpdateListener$0(Ll/۟᩷ۙ;Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method
@@ -43,29 +43,29 @@
     return-void
 .end method
 
-.method public static getScrimCloseAnimatorListener(Ll/ܿܰۙ;Landroid/view/View;)Landroid/animation/Animator$AnimatorListener;
+.method public static getScrimCloseAnimatorListener(Ll/۟᩷ۙ;Landroid/view/View;)Landroid/animation/Animator$AnimatorListener;
     .locals 1
 
     .line 65
     new-instance v0, Lcom/google/android/material/navigation/DrawerLayoutUtils$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/navigation/DrawerLayoutUtils$1;-><init>(Ll/ܿܰۙ;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/navigation/DrawerLayoutUtils$1;-><init>(Ll/۟᩷ۙ;Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public static getScrimCloseAnimatorUpdateListener(Ll/ܿܰۙ;)Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.method public static getScrimCloseAnimatorUpdateListener(Ll/۟᩷ۙ;)Landroid/animation/ValueAnimator$AnimatorUpdateListener;
     .locals 1
 
     .line 51
     new-instance v0, Lcom/google/android/material/navigation/DrawerLayoutUtils$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/navigation/DrawerLayoutUtils$$ExternalSyntheticLambda0;-><init>(Ll/ܿܰۙ;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/navigation/DrawerLayoutUtils$$ExternalSyntheticLambda0;-><init>(Ll/۟᩷ۙ;)V
 
     return-object v0
 .end method
 
-.method public static synthetic lambda$getScrimCloseAnimatorUpdateListener$0(Ll/ܿܰۙ;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$getScrimCloseAnimatorUpdateListener$0(Ll/۟᩷ۙ;Landroid/animation/ValueAnimator;)V
     .locals 2
 
     .line 52
@@ -85,11 +85,11 @@
     const/high16 v0, -0x67000000
 
     .line 54
-    invoke-static {v0, p1}, Ll/ۗ۫;->ۨ(II)I
+    invoke-static {v0, p1}, Ll/ᩴᩳ;->ۤ(II)I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Ll/ܿܰۙ;->᩹(I)V
+    invoke-virtual {p0, p1}, Ll/۟᩷ۙ;->ۚ(I)V
 
     return-void
 .end method

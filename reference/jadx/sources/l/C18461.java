@@ -1,27 +1,44 @@
 package l;
 
-import android.content.Context;
-import java.util.Collections;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.ᩴۖۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: EB24 */
+/* JADX INFO: renamed from: l.ܿܽۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TAS9 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C18461 implements InterfaceC3900 {
-    @Override // l.InterfaceC3900
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo10668(Context context) {
-        C6466 c6466 = new C6466(new C21283(context));
-        c6466.f11995 = 1;
-        C12817.m31809(c6466);
-        AbstractC3062 lifecycle = ((InterfaceC1423) C1078.m4057(context).m4058()).getLifecycle();
-        lifecycle.mo9171(new C3643(this, lifecycle));
-        return Boolean.TRUE;
+public final class C18461 extends C5213 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C18461 f60086 = new C18461(null, Integer.MAX_VALUE);
+
+    @Override // l.C5213, l.AbstractC12450
+    public final boolean equals(Object obj) {
+        return this == obj;
     }
 
-    @Override // l.InterfaceC3900
+    @Override // l.C5213
+    public final String toString() {
+        return "$";
+    }
+
+    @Override // l.C5213, l.AbstractC12450
     /* JADX INFO: renamed from: ۙ */
-    public final List mo10669() {
-        return Collections.singletonList(C21179.class);
+    public final AbstractC12450 mo15678(int i) {
+        return null;
+    }
+
+    @Override // l.C5213, l.AbstractC12450
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo15679() {
+        return 1;
+    }
+
+    @Override // l.AbstractC12450
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo30922() {
+        return true;
+    }
+
+    @Override // l.C5213, l.AbstractC12450
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo15680(int i) {
+        return this.f18393;
     }
 }

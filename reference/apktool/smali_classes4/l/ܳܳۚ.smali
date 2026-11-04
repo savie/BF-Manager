@@ -1,434 +1,285 @@
 .class public final Ll/ܳܳۚ;
-.super Ll/ۗ᩷᩺;
-.source "964V"
+.super Ljava/lang/Object;
+.source "9IQO"
 
 
-# instance fields
-.field public ֨:Ljava/lang/String;
+# static fields
+.field public static ۙ:Ljava/lang/ref/SoftReference;
 
-.field public final synthetic ۘ:Landroid/content/Context;
-
-.field public final synthetic ۜ:Ll/۬ۢۚ;
-
-.field public final synthetic ۬:Ll/۫ܶۘ;
-
-.field public final synthetic ܶ:Ll/ۖ֫ۚ;
-
-.field public ᩳ:Ll/ۨۨ᩹;
-
-.field public final synthetic ᩸:I
-
-.field public ᩹:Ll/ۜۨ᩹;
-
-.field public final synthetic ᩺:Ll/᩹ۢۚ;
+.field public static ᩷:Ljava/lang/ref/SoftReference;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۖ֫ۚ;Ll/۫ܶۘ;Ll/᩹ۢۚ;Ll/۬ۢۚ;ILandroid/content/Context;)V
-    .locals 0
+.method public static ۙ(Ll/ܿܶۤ;Ljava/lang/CharSequence;)Ll/ۘܶۤ;
+    .locals 1
 
-    .line 71
-    iput-object p1, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
+    .line 15
+    invoke-virtual {p0, p1}, Ll/ܿܶۤ;->matcher(Ljava/lang/CharSequence;)Ll/ۘܶۤ;
 
-    iput-object p2, p0, Ll/ܳܳۚ;->۬:Ll/۫ܶۘ;
+    move-result-object p1
 
-    iput-object p3, p0, Ll/ܳܳۚ;->᩺:Ll/᩹ۢۚ;
+    const/16 v0, 0x1388
 
-    iput-object p4, p0, Ll/ܳܳۚ;->ۜ:Ll/۬ۢۚ;
+    invoke-virtual {p1, v0}, Ll/ۘܶۤ;->setTimeoutMillis(I)V
 
-    iput p5, p0, Ll/ܳܳۚ;->᩸:I
-
-    iput-object p6, p0, Ll/ܳܳۚ;->ۘ:Landroid/content/Context;
-
-    invoke-direct {p0}, Ll/ۗ᩷᩺;-><init>()V
-
-    return-void
-.end method
-
-.method public static synthetic ۙ(Ll/ܳܳۚ;)Z
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ll/ܳܳۚ;->۬()Z
+    .line 16
+    invoke-virtual {p0}, Ll/ܿܶۤ;->flags()I
 
     move-result p0
 
-    return p0
-.end method
+    and-int/lit8 p0, p0, 0x10
 
-.method private ۬()Z
-    .locals 2
+    if-nez p0, :cond_0
 
-    .line 89
-    iget-object v0, p0, Ll/ܳܳۚ;->᩺:Ll/᩹ۢۚ;
-
-    invoke-virtual {v0}, Ll/᩹ۢۚ;->ۨ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Ll/ۗ᩷᩺;->ܰ:Ll/ܿܿۚ;
-
-    if-eqz v0, :cond_0
-
-    .line 90
-    invoke-virtual {v0}, Ll/ܿܿۚ;->ۖ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    :cond_0
-    iget-object v0, p0, Ll/ܳܳۚ;->۬:Ll/۫ܶۘ;
-
-    if-eqz v0, :cond_1
-
-    .line 91
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    :cond_1
-    iget-object v0, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
-
-    iget-object v1, p0, Ll/ܳܳۚ;->ۜ:Ll/۬ۢۚ;
-
-    .line 92
-    invoke-virtual {v0, v1}, Ll/ۖ֫ۚ;->ۙ(Ll/۬ۢۚ;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    const/4 p0, 0x1
 
     goto :goto_0
 
-    :cond_2
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_3
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public static ܰ(Ll/ܳܳۚ;)V
-    .locals 1
-
-    .line 82
-    iget-object p0, p0, Ll/ۗ᩷᩺;->ܰ:Ll/ܿܿۚ;
-
-    const/4 v0, 0x0
-
-    .line 43
-    invoke-virtual {p0, v0}, Ll/ܿܿۚ;->ۙ(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۖ()V
-    .locals 1
-
-    .line 143
-    iget-object v0, p0, Ll/ܳܳۚ;->ᩳ:Ll/ۨۨ᩹;
-
-    if-eqz v0, :cond_0
-
-    .line 161
-    invoke-virtual {v0}, Ll/ۨۨ᩹;->close()V
-
-    .line 144
     :cond_0
-    iget-object v0, p0, Ll/ܳܳۚ;->᩹:Ll/ۜۨ᩹;
+    const/4 p0, 0x0
 
-    if-eqz v0, :cond_1
+    :goto_0
+    invoke-virtual {p1, p0}, Ll/ۘܶۤ;->᩷(Z)V
 
-    .line 146
-    :try_start_0
-    invoke-virtual {v0}, Ll/ۜۨ᩹;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 152
-    :catch_0
-    :cond_1
-    iget-object v0, p0, Ll/ܳܳۚ;->᩺:Ll/᩹ۢۚ;
-
-    invoke-virtual {v0}, Ll/᩹ۢۚ;->close()V
-
-    .line 153
-    invoke-virtual {p0}, Ll/ۗ᩷᩺;->ۨ()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final ۙ()V
+.method public static declared-synchronized ۙ()Ll/᩺۫ۤ;
     .locals 3
 
-    .line 111
-    invoke-direct {p0}, Ll/ܳܳۚ;->۬()Z
+    .line 2
+    const-class v0, Ll/ܳܳۚ;
+
+    .line 3
+    monitor-enter v0
+
+    .line 21
+    :try_start_0
+    sget-object v1, Ll/ܳܳۚ;->ۙ:Ljava/lang/ref/SoftReference;
+
+    if-eqz v1, :cond_0
+
+    .line 22
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩺۫ۤ;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    .line 24
+    monitor-exit v0
+
+    return-object v1
+
+    .line 27
+    :cond_0
+    :try_start_1
+    new-instance v1, Ll/᩺۫ۤ;
+
+    const-string v2, "/assets/1"
+
+    invoke-static {v2}, Ll/ۨۚܺ;->ۙ(Ljava/lang/String;)[B
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ll/᩺۫ۤ;-><init>([B)V
+
+    .line 28
+    new-instance v2, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v2, v1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v2, Ll/ܳܳۚ;->ۙ:Ljava/lang/ref/SoftReference;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 29
+    monitor-exit v0
+
+    return-object v1
+
+    :catch_0
+    move-exception v1
+
+    .line 31
+    :try_start_2
+    new-instance v2, Ljava/lang/Error;
+
+    invoke-direct {v2, v1}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+.end method
+
+.method public static ۙ(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "POST"
+
+    .line 20
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
+    const-string v0, "PATCH"
 
-    iget-object v1, p0, Ll/ܳܳۚ;->۬:Ll/۫ܶۘ;
+    .line 21
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Ll/ܳܳۚ;->ۜ:Ll/۬ۢۚ;
+    move-result v0
 
-    invoke-static {v2, v0, v1}, Ll/ۜ֫ۚ;->ۙ(Ll/۬ۢۚ;Ll/ۖ֫ۚ;Ll/۫ܶۘ;)Z
+    if-nez v0, :cond_1
+
+    const-string v0, "PUT"
+
+    .line 22
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "DELETE"
+
+    .line 23
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "MOVE"
+
+    .line 24
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static declared-synchronized ᩷()Ll/ۜۤۤ;
+    .locals 3
+
+    .line 2
+    const-class v0, Ll/ܳܳۚ;
+
+    .line 3
+    monitor-enter v0
+
+    .line 37
+    :try_start_0
+    sget-object v1, Ll/ܳܳۚ;->᩷:Ljava/lang/ref/SoftReference;
+
+    if-eqz v1, :cond_0
+
+    .line 38
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/ۜۤۤ;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    .line 40
+    monitor-exit v0
+
+    return-object v1
+
+    .line 43
+    :cond_0
+    :try_start_1
+    invoke-static {}, Ll/ܳܳۚ;->ۙ()Ll/᩺۫ۤ;
+
+    move-result-object v1
+
+    .line 44
+    new-instance v2, Ll/ۜۤۤ;
+
+    invoke-direct {v2, v1}, Ll/ۜۤۤ;-><init>(Ll/ۜܳۤ;)V
+
+    .line 45
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, v2}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v1, Ll/ܳܳۚ;->᩷:Ljava/lang/ref/SoftReference;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 46
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+.end method
+
+.method public static ᩷(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "GET"
+
+    .line 36
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    const-string v0, "HEAD"
 
-    .line 114
-    :cond_0
-    iget-object v0, p0, Ll/ܳܳۚ;->ۘ:Landroid/content/Context;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v1, "clipboard"
+    move-result p0
 
-    .line 115
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    if-nez p0, :cond_0
 
-    move-result-object v0
+    const/4 p0, 0x1
 
-    check-cast v0, Landroid/content/ClipboardManager;
-
-    .line 117
-    iget-object v1, p0, Ll/ܳܳۚ;->֨:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f120a61
-
-    .line 118
-    invoke-static {v0}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final ۙ(Ljava/lang/Exception;)V
-    .locals 5
-
-    .line 123
-    invoke-direct {p0}, Ll/ܳܳۚ;->۬()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    instance-of v0, p1, Ll/ۨ֫ۚ;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 126
-    :cond_0
-    instance-of v0, p1, Ll/ۚ֫ۚ;
-
-    const v1, 0x7f1201ff
-
-    iget-object v2, p0, Ll/ܳܳۚ;->۬:Ll/۫ܶۘ;
-
-    iget-object v3, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
-
-    iget-object v4, p0, Ll/ܳܳۚ;->ۜ:Ll/۬ۢۚ;
-
-    if-eqz v0, :cond_1
-
-    .line 127
-    invoke-static {v4, v3, v2}, Ll/ۜ֫ۚ;->ۙ(Ll/۬ۢۚ;Ll/ۖ֫ۚ;Ll/۫ܶۘ;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    .line 128
-    invoke-static {v1}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
-
-    return-void
-
-    .line 130
-    :cond_1
-    instance-of v0, p1, Ljava/io/IOException;
-
-    if-eqz v0, :cond_2
-
-    .line 131
-    invoke-static {v4, v3, v2}, Ll/ۜ֫ۚ;->ۙ(Ll/۬ۢۚ;Ll/ۖ֫ۚ;Ll/۫ܶۘ;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 132
-    check-cast p1, Ljava/io/IOException;
-
-    invoke-virtual {v4, p1}, Ll/۬ۢۚ;->ۙ(Ljava/io/IOException;)V
-
-    return-void
-
-    .line 135
-    :cond_2
-    invoke-static {v4, v3, v2}, Ll/ۜ֫ۚ;->ۙ(Ll/۬ۢۚ;Ll/ۖ֫ۚ;Ll/۫ܶۘ;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    .line 136
-    invoke-static {v1}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
-
-    :cond_3
-    :goto_0
-    return-void
-.end method
-
-.method public final ۚ()V
-    .locals 6
-
-    .line 98
-    iget v0, p0, Ll/ܳܳۚ;->᩸:I
-
-    iget-object v1, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
-
-    :try_start_0
-    iget-object v2, p0, Ll/ܳܳۚ;->ᩳ:Ll/ۨۨ᩹;
-
-    iget v3, v1, Ll/ۖ֫ۚ;->᩹:I
-
-    iget v4, v1, Ll/ۖ֫ۚ;->ۚ:I
-
-    new-instance v5, Ll/ۧܳۚ;
-
-    invoke-direct {v5, p0}, Ll/ۧܳۚ;-><init>(Ll/ܳܳۚ;)V
-
-    invoke-virtual {v2, v3, v4, v5}, Ll/ۨۨ᩹;->ۙ(IILl/ۧܳۚ;)Ll/ۜۨ᩹;
-
-    move-result-object v2
-
-    iput-object v2, p0, Ll/ܳܳۚ;->᩹:Ll/ۜۨ᩹;
-
-    .line 100
-    iget v1, v1, Ll/ۖ֫ۚ;->ۙ:I
-
-    new-instance v3, Ll/ۧܳۚ;
-
-    invoke-direct {v3, p0}, Ll/ۧܳۚ;-><init>(Ll/ܳܳۚ;)V
-
-    invoke-static {v2, v1, v0, v3}, Ll/ۜ֫ۚ;->ۙ(Ll/ۜۨ᩹;IILl/ۧܳۚ;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ll/ܳܳۚ;->֨:Ljava/lang/String;
-
-    .line 101
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const/high16 v2, 0x80000
-
-    if-le v1, v2, :cond_1
-
-    const/4 v1, 0x5
-
-    if-lt v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 102
-    :cond_0
-    new-instance v0, Ll/ۚ֫ۚ;
-
-    .line 505
-    invoke-direct {v0}, Ljava/io/IOException;-><init>()V
-
-    .line 102
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 105
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Ll/ܳܳۚ;->ᩳ:Ll/ۨۨ᩹;
-
-    if-eqz v0, :cond_2
-
-    .line 161
-    invoke-virtual {v0}, Ll/ۨۨ᩹;->close()V
-
-    :cond_2
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    .line 105
-    iget-object v1, p0, Ll/ܳܳۚ;->ᩳ:Ll/ۨۨ᩹;
-
-    if-eqz v1, :cond_3
-
-    .line 161
-    invoke-virtual {v1}, Ll/ۨۨ᩹;->close()V
-
-    .line 106
-    :cond_3
-    throw v0
-.end method
-
-.method public final ܰ()V
-    .locals 4
-
-    .line 79
-    iget-object v0, p0, Ll/ܳܳۚ;->ܶ:Ll/ۖ֫ۚ;
-
-    iget-object v0, v0, Ll/ۖ֫ۚ;->ܰ:Ll/ۖۨ᩹;
-
-    invoke-virtual {v0}, Ll/ۖۨ᩹;->᩶()Ll/ۨۨ᩹;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/ܳܳۚ;->ᩳ:Ll/ۨۨ᩹;
-
-    .line 80
-    iget-object v0, p0, Ll/ܳܳۚ;->۬:Ll/۫ܶۘ;
-
-    if-eqz v0, :cond_0
-
-    .line 81
-    new-instance v1, Ll/᩻ܳۚ;
-
-    invoke-direct {v1, p0}, Ll/᩻ܳۚ;-><init>(Ll/ܳܳۚ;)V
-
-    const v2, 0x7f120200
-
-    const/16 v3, 0xc8
-
-    invoke-virtual {p0, v0, v2, v3, v1}, Ll/ۗ᩷᩺;->ۙ(Ll/۫ܶۘ;IILjava/lang/Runnable;)V
+    return p0
 
     :cond_0
-    return-void
+    const/4 p0, 0x0
+
+    return p0
 .end method

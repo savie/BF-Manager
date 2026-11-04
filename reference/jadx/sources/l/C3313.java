@@ -1,20 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗܶ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H7RN */
-/* JADX INFO: loaded from: classes2.dex */
-public final enum C3313 extends EnumC19730 {
-    public /* synthetic */ C3313(EnumC19024 enumC19024, EnumC18318 enumC18318) {
-        this("DEPRECATION", 10, "-deprecation", "opt.deprecation", enumC19024, enumC18318);
+/* JADX INFO: renamed from: l.ۗۡ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8VP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3313 implements InterfaceC7960 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C4059 f10816;
+
+    public C3313(C4059 c4059) {
+        this.f10816 = c4059;
     }
 
-    public C3313(String str, int i, String str2, String str3, EnumC19024 enumC19024, EnumC18318 enumC18318) {
-        super(str, i, str2, str3, enumC19024, enumC18318, 0);
+    @Override // l.InterfaceC7960
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C24132 mo10928() {
+        return this.f10816.f13831.m55666();
     }
 
-    @Override // l.EnumC19730
-    /* JADX INFO: renamed from: ۙ */
-    public void mo2367(AbstractC10558 abstractC10558, String str) {
-        abstractC10558.mo12006("-Xlint:deprecation", str);
+    @Override // l.InterfaceC7960
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC20598 mo10930() {
+        return this.f10816;
+    }
+
+    @Override // l.InterfaceC7960
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo10929() {
+        this.f10816.m13074(ActivityC25140.class);
     }
 }

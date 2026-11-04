@@ -1,77 +1,45 @@
-.class public final synthetic Ll/ᩳᩳۨ;
-.super Ljava/lang/Object;
-.source "81EW"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.class public final Ll/ᩳᩳۨ;
+.super Ll/ۢᩳۨ;
+.source "R69D"
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/lang/String;
+.field public final ۙ:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ll/ᩳᩳۨ;->ܺ:Ljava/lang/String;
+    .line 134
+    invoke-direct {p0, v0}, Ll/ۢᩳۨ;-><init>(I)V
+
+    .line 135
+    iput p1, p0, Ll/ᩳᩳۨ;->ۙ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final ۙ(Ll/֫᩶ۛ;)V
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 139
+    iget v0, p0, Ll/ᩳᩳۨ;->ۙ:I
 
-    move-result-object p1
+    if-ltz v0, :cond_0
 
-    return-object p1
-.end method
+    const/16 v1, 0x2b
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    .line 140
+    invoke-virtual {p1, v1}, Ll/֫᩶ۛ;->write(I)V
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 142
+    :cond_0
+    invoke-virtual {p1, v0}, Ll/֫᩶ۛ;->᩷(I)V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 2
-    check-cast p1, Ll/۠ᩳۨ;
-
-    .line 222
-    iget-object p1, p1, Ll/۠ᩳۨ;->֨:Ljava/lang/String;
-
-    .line 244
-    iget-object v0, p0, Ll/ᩳᩳۨ;->ܺ:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

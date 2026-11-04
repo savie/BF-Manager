@@ -1,54 +1,152 @@
 .class public final Ll/ۗۘۤ;
-.super Ll/᩻ۜۤ;
-.source "P5QW"
+.super Ljava/lang/Object;
+.source "21YS"
 
 
 # instance fields
-.field public final synthetic ֡:I
+.field public ۙ:Z
 
-.field public final synthetic ᩶:Ll/ۙۜۤ;
+.field public ۤ:Z
+
+.field public ᩷:Z
 
 
 # direct methods
-.method public constructor <init>(Ll/ۙۜۤ;Ll/ۙۜۤ;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 533
-    iput-object p1, p0, Ll/ۗۘۤ;->᩶:Ll/ۙۜۤ;
+    .line 141
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ll/ۗۘۤ;->֡:I
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Ll/᩻ۜۤ;-><init>(Ll/ۙۜۤ;)V
+    .line 142
+    iput-boolean v0, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 143
+    iput-boolean v0, p0, Ll/ۗۘۤ;->᩷:Z
+
+    const/4 v0, 0x1
+
+    .line 144
+    iput-boolean v0, p0, Ll/ۗۘۤ;->ۙ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()V
-    .locals 4
+.method public final ۙ(Ll/᩸ܽܺ;)V
+    .locals 7
 
-    .line 536
-    iget-object v0, p0, Ll/ۗۘۤ;->᩶:Ll/ۙۜۤ;
+    const-string v0, "AndroidManifest.xml"
 
-    iget-object v1, v0, Ll/ۙۜۤ;->ۧ:Lpl/droidsonroids/gif/GifInfoHandle;
+    .line 150
+    invoke-virtual {p1, v0}, Ll/᩸ܽܺ;->getEntry(Ljava/lang/String;)Ll/۟ܺܺ;
 
-    iget v2, p0, Ll/ۗۘۤ;->֡:I
+    move-result-object v0
 
-    iget-object v0, v0, Ll/ۙۜۤ;->ܺ:Landroid/graphics/Bitmap;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v2, v0}, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ(ILandroid/graphics/Bitmap;)V
+    if-eqz v0, :cond_1
 
-    .line 537
-    iget-object v0, p0, Ll/᩻ۜۤ;->ܺ:Ll/ۙۜۤ;
+    .line 151
+    invoke-virtual {v0}, Ll/۟ܺܺ;->getSize()J
 
-    iget-object v0, v0, Ll/ۙۜۤ;->ܽ:Ll/۫ۜۤ;
+    move-result-wide v2
 
-    const/4 v1, -0x1
+    const-wide/32 v4, 0x500000
 
-    const-wide/16 v2, 0x0
+    cmp-long v6, v2, v4
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
+    if-lez v6, :cond_0
+
+    goto :goto_0
+
+    .line 157
+    :cond_0
+    :try_start_0
+    invoke-virtual {p1, v0}, Ll/᩸ܽܺ;->ۙ(Ll/۟ܺܺ;)Ljava/io/InputStream;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ܰ᩻ܺ;->ۙ(Ljava/io/InputStream;)Ll/ܰ᩻ܺ;
+
+    move-result-object p1
+
+    .line 158
+    invoke-static {p1}, Ll/ܿ᩻ܺ;->ܳ(Ll/ܰ᩻ܺ;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 159
+    invoke-static {p1}, Ll/ܿ᩻ܺ;->ᩴ(Ll/ܰ᩻ܺ;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Ll/ۗۘۤ;->᩷:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    .line 161
+    :catchall_0
+    iput-boolean v1, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 162
+    iput-boolean v1, p0, Ll/ۗۘۤ;->᩷:Z
+
+    return-void
+
+    .line 152
+    :cond_1
+    :goto_0
+    iput-boolean v1, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 153
+    iput-boolean v1, p0, Ll/ۗۘۤ;->᩷:Z
+
+    return-void
+.end method
+
+.method public final ۙ([B)V
+    .locals 1
+
+    .line 172
+    :try_start_0
+    invoke-static {p1}, Ll/ܰ᩻ܺ;->᩷([B)Ll/ܰ᩻ܺ;
+
+    move-result-object p1
+
+    .line 173
+    invoke-static {p1}, Ll/ܿ᩻ܺ;->ܳ(Ll/ܰ᩻ܺ;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 174
+    invoke-static {p1}, Ll/ܿ᩻ܺ;->ᩴ(Ll/ܰ᩻ܺ;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Ll/ۗۘۤ;->᩷:Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    .line 176
+    iput-boolean p1, p0, Ll/ۗۘۤ;->ۤ:Z
+
+    .line 177
+    iput-boolean p1, p0, Ll/ۗۘۤ;->᩷:Z
 
     return-void
 .end method

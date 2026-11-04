@@ -1,25 +1,48 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Map;
+import com.alipay.sdk.m.m.b;
+import java.util.HashMap;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ᩳ۬ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L5VZ */
+/* JADX INFO: renamed from: l.ܿۘܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAJ1 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18070 implements Comparator {
+public final class C18070 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8485 f57784;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final HashMap f59151;
 
-    public C18070(C8485 c8485) {
-        this.f57784 = c8485;
+    static {
+        HashMap map = new HashMap();
+        f59151 = map;
+        map.put("local", new C0652(1));
+        map.put("zip", new C8110(1));
+        map.put("tar", new C19297(1));
+        map.put("compress", new C10346(1));
+        map.put("archive", new C24057(2));
+        map.put(b.k, new C6376(1));
+        map.put("payload", new C17205(1));
+        map.put("trash", new C14359(1));
     }
 
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        C8485 c8485 = this.f57784;
-        C12158 c12158 = c8485.f51679;
-        C21329 c21329 = c8485.f51687;
-        return Integer.compare(c12158.mo3477(c21329.m47837((InterfaceC18029) ((Map.Entry) obj).getKey())), c12158.mo3477(c21329.m47837((InterfaceC18029) ((Map.Entry) obj2).getKey())));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m42102(String str) {
+        if (!f59151.containsKey(str)) {
+            throw new RuntimeException("Type has not been registered in StatelessVisitor.Generator: ".concat(str));
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static AbstractC7629 m42101(byte[] bArr, boolean z) {
+        C20348 c20348 = new C20348(bArr);
+        Function function = (Function) f59151.get(c20348.m46758());
+        if (function == null) {
+            throw new RuntimeException();
+        }
+        AbstractC7629 abstractC7629 = (AbstractC7629) function.apply(c20348);
+        if (z) {
+            abstractC7629.f25172 = true;
+        }
+        return abstractC7629;
     }
 }

@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final ܺ:Ljava/util/HashMap;
+.field public final ܰ:Ljava/util/HashMap;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܺ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܰ:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     const-string v0, "-->onCreate, getIntent() return null"
 
     .line 82
-    invoke-static {v2, v0}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
@@ -67,7 +67,7 @@
     move-exception v3
 
     .line 92
-    invoke-static {v2, v0, v3}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v0, v3}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v3, 0x0
 
@@ -85,7 +85,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Ll/᩺ܺᩳ;->ۖ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Ll/᩶᩷᩹;->᩸(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
     :try_start_1
@@ -99,7 +99,7 @@
     move-exception v1
 
     .line 101
-    invoke-static {v2, v0, v1}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v0, v1}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 102
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
@@ -118,7 +118,7 @@
     const-string v2, "openSDK_LOG.AuthActivity"
 
     .line 124
-    invoke-static {v2, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_11
 
@@ -165,7 +165,7 @@
     move-result-object p2
 
     .line 133
-    invoke-static {p2}, Ll/ۖ᩶ᩳ;->ۙ(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p2}, Ll/᩵ۤ᩹;->ۙ(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p2
 
@@ -174,7 +174,7 @@
     const-string p1, "-->handleActionUri, bundle is null"
 
     .line 135
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
@@ -202,7 +202,7 @@
 
     move-result-object v5
 
-    invoke-static {v2, v5}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v1, :cond_2
 
@@ -281,24 +281,24 @@
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 177
-    invoke-static {}, Ll/᩺᩷ᩳ;->ۙ()Ll/᩺᩷ᩳ;
+    invoke-static {}, Ll/᩶ۙ᩹;->ۙ()Ll/᩶ۙ᩹;
 
     move-result-object p2
 
-    invoke-virtual {p2, v1}, Ll/᩺᩷ᩳ;->ۙ(Ljava/lang/String;)Ll/ᩳ᩶ᩳ;
+    invoke-virtual {p2, v1}, Ll/᩶ۙ᩹;->ۙ(Ljava/lang/String;)Ll/ᩳۤ᩹;
 
     move-result-object p2
 
     if-eqz p2, :cond_4
 
     .line 179
-    invoke-static {}, Ll/᩺᩷ᩳ;->ۙ()Ll/᩺᩷ᩳ;
+    invoke-static {}, Ll/᩶ۙ᩹;->ۙ()Ll/᩶ۙ᩹;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, p2}, Ll/᩺᩷ᩳ;->ۙ(Landroid/content/Intent;Ll/ᩳ᩶ᩳ;)V
+    invoke-static {p1, p2}, Ll/᩶ۙ᩹;->ۙ(Landroid/content/Intent;Ll/ᩳۤ᩹;)V
 
     .line 181
     :cond_4
@@ -338,7 +338,7 @@
 
     .line 189
     :try_start_0
-    invoke-static {p2}, Ll/ۖ᩶ᩳ;->ۖ(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {p2}, Ll/᩵ۤ᩹;->᩸(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p2
 
@@ -357,7 +357,7 @@
     const-string v1, "sharePrize parseJson has exception."
 
     .line 192
-    invoke-static {v2, v1, p2}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1, p2}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 195
     :goto_0
@@ -548,7 +548,7 @@
     const-string p1, "-->handleActionUri--bind group callback."
 
     .line 235
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 236
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -600,7 +600,7 @@
     const-string p1, "-->handleActionUri--join group callback. "
 
     .line 246
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 247
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -675,13 +675,13 @@
 
     .line 265
     :cond_d
-    iget-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܺ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܰ:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll/᩵᩶ᩳ;
+    check-cast v0, Ll/ۡۤ᩹;
 
     .line 266
     new-instance v1, Ljava/lang/StringBuilder;
@@ -696,12 +696,12 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Ll/᩺ܺᩳ;->ۖ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Ll/᩶᩷᩹;->᩸(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_e
 
     .line 268
-    invoke-interface {v0, p1, p2}, Ll/᩵᩶ᩳ;->ۙ(Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-interface {v0, p1, p2}, Ll/ۡۤ᩹;->ۙ(Landroid/content/Intent;Landroid/os/Bundle;)V
 
     .line 270
     :cond_e
@@ -721,7 +721,7 @@
     const-string p1, "com.tencent.mobileqq"
 
     .line 154
-    invoke-static {p0, p1}, Ll/ۗܺᩳ;->ۙ(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Ll/ܽۤ᩹;->ۙ(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -730,12 +730,12 @@
     const-string v0, "5.2.0"
 
     .line 491
-    invoke-static {p0, p1}, Ll/ۗܺᩳ;->ۙ(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Ll/ܽۤ᩹;->ۙ(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 492
-    invoke-static {p1, v0}, Ll/ۗܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Ll/ܽۤ᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
@@ -764,7 +764,7 @@
     const-string p1, "-->handleActionUri, most share action, start assistactivity"
 
     .line 165
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 167
     new-instance p1, Landroid/content/Intent;
@@ -790,7 +790,7 @@
     const-string p1, "-->handleActionUri, uri invalid"
 
     .line 126
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 127
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
@@ -819,7 +819,7 @@
     const-string v2, "activity finish exception: "
 
     .line 280
-    invoke-static {v1, v2, v0}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -835,21 +835,21 @@
     const-string v0, "->onCreate"
 
     .line 66
-    invoke-static {p1, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
-    new-instance p1, Ll/ܶ᩶ᩳ;
+    new-instance p1, Ll/֡ۤ᩹;
 
-    invoke-direct {p1, p0}, Ll/ܶ᩶ᩳ;-><init>(Lcom/tencent/tauth/AuthActivity;)V
+    invoke-direct {p1, p0}, Ll/֡ۤ᩹;-><init>(Lcom/tencent/tauth/AuthActivity;)V
 
-    iget-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܺ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/tauth/AuthActivity;->ܰ:Ljava/util/HashMap;
 
     const-string v1, "action_common_channel"
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 120
-    new-instance p1, Ll/ۡ᩶ᩳ;
+    new-instance p1, Ll/ۖۤ᩹;
 
     .line 0
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -876,7 +876,7 @@
     const-string v0, "->onNewIntent"
 
     .line 75
-    invoke-static {p1, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 76
     invoke-direct {p0}, Lcom/tencent/tauth/AuthActivity;->ۙ()V

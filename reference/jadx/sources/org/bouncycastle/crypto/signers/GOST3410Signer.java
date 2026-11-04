@@ -13,7 +13,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410Signer implements DSAExt {
     public GOST3410KeyParameters key;
     public SecureRandom random;

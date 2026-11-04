@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.prng;
 
 import org.bouncycastle.crypto.BlockCipher;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X931RNG {
     public static final int BLOCK128_MAX_BITS_REQUEST = 262144;
     public static final long BLOCK128_RESEED_MAX = 8388608;

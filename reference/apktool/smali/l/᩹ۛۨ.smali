@@ -1,38 +1,25 @@
-.class public final synthetic Ll/᩹ۛۨ;
+.class public abstract Ll/᩹ۛۨ;
 .super Ljava/lang/Object;
-.source "819S"
+.source "H63B"
 
 # interfaces
-.implements Ll/᩻᩷ܶ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ܽܰۖ;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ܽܰۖ;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩹ۛۨ;->ܺ:Ll/ܽܰۖ;
-
-    return-void
-.end method
+.implements Ll/ܶۛۨ;
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public ۙ(Ljava/io/BufferedReader;)Ljava/lang/String;
+    .locals 0
 
-    .line 0
-    iget-object v0, p0, Ll/᩹ۛۨ;->ܺ:Ll/ܽܰۖ;
+    .line 60
+    invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ll/ܽܰۖ;->֨()[B
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public ۙ(Ljava/util/LinkedList;)Ljava/util/List;
+    .locals 0
+
+    return-object p1
 .end method

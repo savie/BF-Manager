@@ -1,105 +1,68 @@
 package l;
 
-import android.net.Uri;
-import android.util.Base64;
-import com.alipay.sdk.m.t.e;
-import java.nio.charset.StandardCharsets;
+import android.util.SparseArray;
 
-/* JADX INFO: renamed from: l.ۡ۟ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B8HD */
+/* JADX INFO: renamed from: l.۠ܶ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: K8JQ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8729 extends AbstractC21428 {
+public final class C8729 implements InterfaceC12789 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C12257 f29995;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final SparseArray f28405 = new SparseArray();
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f29996;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC12789 f28406;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f29997;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC1272 f28407;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public byte[] f29998;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f28408;
 
-    @Override // l.InterfaceC15785
+    public C8729(InterfaceC12789 interfaceC12789, InterfaceC1272 interfaceC1272) {
+        this.f28406 = interfaceC12789;
+        this.f28407 = interfaceC1272;
+    }
+
+    @Override // l.InterfaceC12789
     /* JADX INFO: renamed from: ۙ */
-    public final long mo9272(C12257 c12257) throws C20018, C22861 {
-        m48019(c12257);
-        this.f29995 = c12257;
-        Uri uri = c12257.f41015;
-        long j = c12257.f41017;
-        Uri uriNormalizeScheme = uri.normalizeScheme();
-        String scheme = uriNormalizeScheme.getScheme();
-        C2023.m6506("Unsupported scheme: " + scheme, e.m.equals(scheme));
-        String schemeSpecificPart = uriNormalizeScheme.getSchemeSpecificPart();
-        String str = C17983.f57504;
-        String[] strArrSplit = schemeSpecificPart.split(",", -1);
-        if (strArrSplit.length != 2) {
-            throw C22861.m50609("Unexpected URI format: " + uriNormalizeScheme, (IllegalArgumentException) null);
+    public final InterfaceC22024 mo16658(int i, int i2) {
+        InterfaceC12789 interfaceC12789 = this.f28406;
+        if (i2 != 3) {
+            this.f28408 = true;
+            return interfaceC12789.mo16658(i, i2);
         }
-        String str2 = strArrSplit[1];
-        if (strArrSplit[0].contains(";base64")) {
-            try {
-                this.f29998 = Base64.decode(str2, 0);
-            } catch (IllegalArgumentException e) {
-                throw C22861.m50609("Error while parsing Base64 encoded string: " + str2, e);
+        SparseArray sparseArray = this.f28405;
+        C13949 c13949 = (C13949) sparseArray.get(i);
+        if (c13949 != null) {
+            return c13949;
+        }
+        C13949 c139410 = new C13949(interfaceC12789.mo16658(i, i2), this.f28407);
+        sparseArray.put(i, c139410);
+        return c139410;
+    }
+
+    @Override // l.InterfaceC12789
+    /* JADX INFO: renamed from: ܳ */
+    public final void mo16661() {
+        this.f28406.mo16661();
+        if (!this.f28408) {
+            return;
+        }
+        int i = 0;
+        while (true) {
+            SparseArray sparseArray = this.f28405;
+            if (i >= sparseArray.size()) {
+                return;
             }
-        } else {
-            this.f29998 = C12352.decode(str2, StandardCharsets.US_ASCII.name()).getBytes(StandardCharsets.UTF_8);
+            ((C13949) sparseArray.valueAt(i)).m33995();
+            i++;
         }
-        long j2 = c12257.f41009;
-        byte[] bArr = this.f29998;
-        if (j2 > bArr.length) {
-            this.f29998 = null;
-            throw new C20018(2008);
-        }
-        int i = (int) j2;
-        this.f29997 = i;
-        int length = bArr.length - i;
-        this.f29996 = length;
-        if (j != -1) {
-            this.f29996 = (int) Math.min(length, j);
-        }
-        m48018(c12257);
-        return j != -1 ? j : this.f29996;
     }
 
-    @Override // l.InterfaceC6942
-    public final int read(byte[] bArr, int i, int i2) {
-        if (i2 == 0) {
-            return 0;
-        }
-        int i3 = this.f29996;
-        if (i3 == 0) {
-            return -1;
-        }
-        int iMin = Math.min(i2, i3);
-        byte[] bArr2 = this.f29998;
-        String str = C17983.f57504;
-        System.arraycopy(bArr2, this.f29997, bArr, i, iMin);
-        this.f29997 += iMin;
-        this.f29996 -= iMin;
-        m48017(iMin);
-        return iMin;
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۚ */
-    public final Uri mo9274() {
-        C12257 c12257 = this.f29995;
-        if (c12257 != null) {
-            return c12257.f41015;
-        }
-        return null;
-    }
-
-    @Override // l.InterfaceC15785
-    public final void close() {
-        if (this.f29998 != null) {
-            this.f29998 = null;
-            m48020();
-        }
-        this.f29995 = null;
+    @Override // l.InterfaceC12789
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo16659(InterfaceC9060 interfaceC9060) {
+        this.f28406.mo16659(interfaceC9060);
     }
 }

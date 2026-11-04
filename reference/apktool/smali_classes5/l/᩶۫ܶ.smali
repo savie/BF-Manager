@@ -1,253 +1,88 @@
-.class public abstract Ll/᩶۫ܶ;
-.super Ll/ܽ۫ܶ;
-.source "Z4Q9"
-
-# interfaces
-.implements Ljava/util/Collection;
+.class public final synthetic Ll/᩶۫ܶ;
+.super Ljava/lang/Object;
+.source "A4XC"
 
 
-# virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+# static fields
+.field public static final synthetic ۙ:[I
 
-    .line 88
-    move-object v0, p0
 
-    check-cast v0, Ll/ᩴܳܶ;
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
+    .line 357
+    invoke-static {}, Ll/ۜۤܶ;->values()[Ll/ۜۤܶ;
 
-    .line 88
-    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
+    array-length v0, v0
 
-    return p1
-.end method
+    new-array v0, v0, [I
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
+    sput-object v0, Ll/᩶۫ܶ;->ۙ:[I
 
-    .line 105
-    move-object v0, p0
+    :try_start_0
+    sget-object v1, Ll/ۜۤܶ;->᩶:Ll/ۜۤܶ;
 
-    check-cast v0, Ll/ᩴܳܶ;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
+    move-result v1
 
-    .line 105
-    invoke-interface {v0, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
+    const/4 v2, 0x1
 
-    move-result p1
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
-.end method
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/᩶۫ܶ;->ۙ:[I
 
-.method public final clear()V
-    .locals 1
+    sget-object v1, Ll/ۜۤܶ;->ܿ:Ll/ۜۤܶ;
 
-    .line 116
-    move-object v0, p0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    check-cast v0, Ll/ᩴܳܶ;
+    move-result v1
 
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
+    const/4 v2, 0x2
 
-    .line 116
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/᩶۫ܶ;->ۙ:[I
+
+    sget-object v1, Ll/ۜۤܶ;->֡:Ll/ۜۤܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/᩶۫ܶ;->ۙ:[I
+
+    sget-object v1, Ll/ۜۤܶ;->۟:Ll/ۜۤܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 82
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 82
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 99
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 99
-    invoke-interface {v0, p1}, Ljava/util/Collection;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    .line 77
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 77
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 61
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 61
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 94
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 94
-    invoke-interface {v0, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 72
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 72
-    invoke-interface {v0, p1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 111
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 111
-    invoke-interface {v0, p1}, Ljava/util/Collection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 66
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 66
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 121
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 121
-    invoke-interface {v0}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 1
-
-    .line 128
-    move-object v0, p0
-
-    check-cast v0, Ll/ᩴܳܶ;
-
-    .line 107
-    iget-object v0, v0, Ll/ᩴܳܶ;->ܺ:Ljava/util/Collection;
-
-    .line 128
-    invoke-interface {v0, p1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

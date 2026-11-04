@@ -1,60 +1,29 @@
 package l;
 
-import android.util.SparseArray;
-import android.view.View;
-import java.lang.reflect.Array;
-
-/* JADX INFO: renamed from: l.ܰۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1CY */
+/* JADX INFO: renamed from: l.۬ۡܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E8DU */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13747 extends AbstractC8102 {
+public final class C13747 implements InterfaceC6971 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public float[] f45314;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C21757 f43619;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public SparseArray f45315;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f43620;
 
-    public C13747() {
-        throw null;
+    public C13747(C21757 c21757, int i) {
+        this.f43619 = c21757;
+        this.f43620 = i;
     }
 
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo21318(int i) {
-        SparseArray sparseArray = this.f45315;
-        int size = sparseArray.size();
-        int iM24931 = ((C9824) sparseArray.valueAt(0)).m24931();
-        double[] dArr = new double[size];
-        this.f45314 = new float[iM24931];
-        double[][] dArr2 = (double[][]) Array.newInstance((Class<?>) Double.TYPE, size, iM24931);
-        for (int i2 = 0; i2 < size; i2++) {
-            int iKeyAt = sparseArray.keyAt(i2);
-            C9824 c9824 = (C9824) sparseArray.valueAt(i2);
-            dArr[i2] = ((double) iKeyAt) * 0.01d;
-            c9824.m24930(this.f45314);
-            int i3 = 0;
-            while (true) {
-                float[] fArr = this.f45314;
-                if (i3 < fArr.length) {
-                    dArr2[i2][i3] = fArr[i3];
-                    i3++;
-                }
-            }
+    @Override // l.InterfaceC6971
+    public final void run() {
+        C21757 c21757 = this.f43619;
+        int i = this.f43620;
+        C4603 c4603M49312 = c21757.m49312(i);
+        if (c4603M49312 != null) {
+            c4603M49312.f16333.mo44243(((C15745) c21757.m49314()).m37654());
+            c21757.m49315(i);
         }
-        this.f28377 = AbstractC4136.m11763(i, dArr, dArr2);
-    }
-
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo21317(float f, int i) {
-        throw new RuntimeException("don't call for custom attribute call setPoint(pos, ConstraintAttribute)");
-    }
-
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3906(float f, View view) {
-        this.f28377.mo4690(f, this.f45314);
-        ((C9824) this.f45315.valueAt(0)).m24928(view, this.f45314);
     }
 }

@@ -1,18 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ֨ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z1O1 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14905 {
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Integer m35651(InterfaceC18432 interfaceC18432, Integer num, Integer num2) {
-        int iIntValue = num.intValue();
-        boolean zMo26879 = interfaceC18432.mo26879(iIntValue);
-        int iMo26878 = interfaceC18432.mo26878(iIntValue, num2.intValue());
-        if (zMo26879) {
-            return Integer.valueOf(iMo26878);
-        }
-        return null;
+/* JADX INFO: renamed from: l.ܰ᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C14905 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        return Character.isUnicodeIdentifierPart(i);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DERFactory {
     public static final DERSequence EMPTY_SEQUENCE = new DERSequence();
     public static final DERSet EMPTY_SET = new DERSet();

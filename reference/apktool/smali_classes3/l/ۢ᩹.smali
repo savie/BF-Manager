@@ -1,9 +1,8 @@
-.class public final Ll/ۢ᩹;
+.class public interface abstract Ll/ۢ᩹;
 .super Ljava/lang/Object;
-.source "G5FQ"
+.source "2685"
 
 
-# instance fields
-.field public ۙ:Z
-
-.field public ܰ:J
+# virtual methods
+.method public abstract getHint()Ljava/lang/CharSequence;
+.end method

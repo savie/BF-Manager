@@ -1,72 +1,110 @@
 package l;
 
-import java.util.List;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.᩻ۖᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P1MC */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23412 {
+/* JADX INFO: renamed from: l.᩹۠, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6ALU */
+/* JADX INFO: loaded from: classes2.dex */
+@InterfaceC4079(c = "androidx.core.view.ViewKt$allViews$1", f = "View.kt", l = {409, 411}, m = "invokeSuspend")
+public final class C23412 extends AbstractC0350 implements InterfaceC23955 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15070 f75810;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public /* synthetic */ Object f75790;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ List f75811;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f75791;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f75812 = 0;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ View f75792;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ List f75813;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int[] f75814;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15070 f75815;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int[] f75816;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f75817;
-
-    public C23412(C15070 c15070, int i, int[] iArr, C15070 c15071, List list, List list2, int[] iArr2) {
-        this.f75815 = c15070;
-        this.f75817 = i;
-        this.f75814 = iArr;
-        this.f75810 = c15071;
-        this.f75811 = list;
-        this.f75813 = list2;
-        this.f75816 = iArr2;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23412(View view, InterfaceC4825 interfaceC4825) {
+        super(interfaceC4825);
+        this.f75792 = view;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m51547() {
-        m51546(0, this.f75815.size() - 1, 0);
+    @Override // l.AbstractC20487
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC4825 mo23811(Object obj, InterfaceC4825 interfaceC4825) {
+        C23412 c23412 = new C23412(this.f75792, interfaceC4825);
+        c23412.f75790 = obj;
+        return c23412;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m51546(int i, int i2, int i3) {
-        int[] iArr = this.f75814;
-        int i4 = this.f75817;
-        if (i3 != i4) {
-            while (i <= i2) {
-                iArr[i3] = i;
-                i++;
-                m51546(i, i2, i3 + 1);
-            }
-            return;
-        }
-        int i5 = 0;
-        for (int i6 = 0; i6 < i4; i6++) {
-            if (((C1538) this.f75811.get(this.f75810.getInt(i6))).equals(this.f75813.get(this.f75815.getInt(iArr[i6])))) {
-                i5++;
-            }
-        }
-        if (i5 > this.f75812) {
-            this.f75812 = i5;
-            System.arraycopy(iArr, 0, this.f75816, 0, iArr.length);
-        }
+    @Override // l.InterfaceC23955
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3124(Object obj, Object obj2) {
+        return ((C23412) mo23811(obj, (InterfaceC4825) obj2)).mo10983(C11471.f36082);
+    }
+
+    /* JADX WARN: Code restructure failed: missing block: B:19:0x0056, code lost:
+    
+        if (r6 == r0) goto L20;
+     */
+    @Override // l.AbstractC20487
+    /* JADX INFO: renamed from: ᩷ */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object mo10983(java.lang.Object r6) throws java.lang.Throwable {
+        /*
+            r5 = this;
+            l.ܺۢ᩵ r0 = l.EnumC16757.COROUTINE_SUSPENDED
+            int r1 = r5.f75791
+            android.view.View r2 = r5.f75792
+            r3 = 2
+            r4 = 1
+            if (r1 == 0) goto L22
+            if (r1 == r4) goto L1a
+            if (r1 != r3) goto L12
+            l.C19676.m45348(r6)
+            goto L59
+        L12:
+            java.lang.IllegalStateException r6 = new java.lang.IllegalStateException
+            java.lang.String r0 = "call to 'resume' before 'invoke' with coroutine"
+            r6.<init>(r0)
+            throw r6
+        L1a:
+            java.lang.Object r1 = r5.f75790
+            l.᩻ۖ᩵ r1 = (l.AbstractC24745) r1
+            l.C19676.m45348(r6)
+            goto L35
+        L22:
+            l.C19676.m45348(r6)
+            java.lang.Object r6 = r5.f75790
+            r1 = r6
+            l.᩻ۖ᩵ r1 = (l.AbstractC24745) r1
+            r5.f75790 = r1
+            r5.f75791 = r4
+            l.ܺۢ᩵ r6 = r1.mo28601(r2, r5)
+            if (r6 != r0) goto L35
+            goto L58
+        L35:
+            boolean r6 = r2 instanceof android.view.ViewGroup
+            if (r6 == 0) goto L59
+            android.view.ViewGroup r2 = (android.view.ViewGroup) r2
+            r6 = 0
+            r5.f75790 = r6
+            r5.f75791 = r3
+            r1.getClass()
+            l.᩹ۖ r6 = new l.᩹ۖ
+            l.ܽ۠ r3 = new l.ܽ۠
+            r3.<init>(r2)
+            r6.<init>(r3)
+            java.lang.Object r6 = r1.mo28600(r6, r5)
+            if (r6 != r0) goto L54
+            goto L56
+        L54:
+            l.ۧ۟᩵ r6 = l.C11471.f36082
+        L56:
+            if (r6 != r0) goto L59
+        L58:
+            return r0
+        L59:
+            l.ۧ۟᩵ r6 = l.C11471.f36082
+            return r6
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C23412.mo10983(java.lang.Object):java.lang.Object");
     }
 }

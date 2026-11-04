@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field public ֡:Lcom/amazonaws/services/s3/model/Owner;
+.field public ܰ:Ljava/util/Date;
 
-.field public ܺ:Ljava/util/Date;
+.field public ܿ:Lcom/amazonaws/services/s3/model/Owner;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -31,10 +31,10 @@
     iput-object v0, p0, Lcom/amazonaws/services/s3/model/Bucket;->᩶:Ljava/lang/String;
 
     .line 66
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/Bucket;->֡:Lcom/amazonaws/services/s3/model/Owner;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܿ:Lcom/amazonaws/services/s3/model/Owner;
 
     .line 69
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܺ:Ljava/util/Date;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܰ:Ljava/util/Date;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 130
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܺ:Ljava/util/Date;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܰ:Ljava/util/Date;
 
     .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -72,7 +72,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 108
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Bucket;->֡:Lcom/amazonaws/services/s3/model/Owner;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܿ:Lcom/amazonaws/services/s3/model/Owner;
 
     .line 97
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -92,7 +92,7 @@
     .locals 0
 
     .line 120
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Bucket;->֡:Lcom/amazonaws/services/s3/model/Owner;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܿ:Lcom/amazonaws/services/s3/model/Owner;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
     .locals 0
 
     .line 141
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܺ:Ljava/util/Date;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Bucket;->ܰ:Ljava/util/Date;
 
     return-void
 .end method

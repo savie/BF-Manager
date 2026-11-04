@@ -1,62 +1,50 @@
-.class public final synthetic Ll/ۛۢۤ;
+.class public final Ll/ۛۢۤ;
 .super Ljava/lang/Object;
-.source "57L9"
+.source "06A0"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/᩻ۧܺ;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۧۗۤ;
+.field public final synthetic ܰ:Ll/ܿۢۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۧۗۤ;)V
+.method public constructor <init>(Ll/ܿۢۤ;)V
     .locals 0
 
-    .line 0
+    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۛۢۤ;->ܺ:Ll/ۧۗۤ;
+    iput-object p1, p0, Ll/ۛۢۤ;->ܰ:Ll/ܿۢۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final ۙ(I)V
     .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/ۛۢۤ;->ܺ:Ll/ۧۗۤ;
+    .line 235
+    iget-object v0, p0, Ll/ۛۢۤ;->ܰ:Ll/ܿۢۤ;
 
-    check-cast p1, Ll/᩷ۗۤ;
+    invoke-virtual {v0, p1}, Ll/ᩳۜۧ;->ۧ(I)V
 
-    invoke-static {v0, p1}, Ll/ۧۗۤ;->ۙ(Ll/ۧۗۤ;Ll/᩷ۗۤ;)Ll/ܽۤۤ;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final ۫()Z
+    .locals 1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 230
+    iget-object v0, p0, Ll/ۛۢۤ;->ܰ:Ll/ܿۢۤ;
 
-    move-result-object p1
+    .line 301
+    invoke-static {v0}, Ll/ۖۗ;->ۖ۫ܰ(Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result v0
+
+    return v0
 .end method

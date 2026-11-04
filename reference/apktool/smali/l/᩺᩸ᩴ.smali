@@ -1,48 +1,37 @@
 .class public final synthetic Ll/᩺᩸ᩴ;
 .super Ljava/lang/Object;
-.source "AC8P"
+.source "35OM"
+
+# interfaces
+.implements Ljava/util/function/BooleanSupplier;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۡ᩸ᩴ;
 
 
 # direct methods
-.method public static ۙ(Ll/᩷ܶᩴ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public synthetic constructor <init>(Ll/ۡ᩸ᩴ;)V
+    .locals 0
 
-    if-nez p1, :cond_0
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    iput-object p1, p0, Ll/᩺᩸ᩴ;->ܰ:Ll/ۡ᩸ᩴ;
 
-    .line 137
-    :cond_0
-    check-cast p1, Ljava/lang/Long;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+# virtual methods
+.method public final getAsBoolean()Z
+    .locals 1
 
-    .line 139
-    invoke-interface {p0, v0, v1}, Ll/ܶ᩸ᩴ;->ܰ(J)Ljava/lang/Object;
+    .line 2
+    iget-object v0, p0, Ll/᩺᩸ᩴ;->ܰ:Ll/ۡ᩸ᩴ;
 
-    move-result-object p1
+    .line 1266
+    iget-boolean v0, v0, Ll/۬ۡ᩸;->᩸:Z
 
-    if-nez p1, :cond_2
-
-    invoke-interface {p0, v0, v1}, Ll/ܶ᩸ᩴ;->ۙ(J)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_2
-    :goto_1
-    return-object p1
+    return v0
 .end method

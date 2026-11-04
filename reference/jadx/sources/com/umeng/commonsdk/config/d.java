@@ -15,7 +15,7 @@ public class d {
     public static final int g = 64;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static Map f77941l = new HashMap();
+    public static Map f82057l = new HashMap();
     public static String[] h = new String[a.values().length];
     public static String[] i = new String[b.values().length];
     public static String[] j = new String[c.values().length];
@@ -146,7 +146,7 @@ public class d {
             for (int i2 = 0; i2 < a.values().length; i2++) {
                 h[i2] = a.values()[i2].toString();
             }
-            Map map = f77941l;
+            Map map = f82057l;
             if (map != null) {
                 map.put(a.class.getName(), h);
             }
@@ -156,7 +156,7 @@ public class d {
             for (int i3 = 0; i3 < b.values().length; i3++) {
                 i[i3] = b.values()[i3].toString();
             }
-            Map map2 = f77941l;
+            Map map2 = f82057l;
             if (map2 != null) {
                 map2.put(b.class.getName(), i);
             }
@@ -166,7 +166,7 @@ public class d {
             for (int i4 = 0; i4 < c.values().length; i4++) {
                 j[i4] = c.values()[i4].toString();
             }
-            Map map3 = f77941l;
+            Map map3 = f82057l;
             if (map3 != null) {
                 map3.put(c.class.getName(), j);
             }
@@ -178,7 +178,7 @@ public class d {
         for (int i5 = 0; i5 < EnumC0038d.values().length; i5++) {
             k[i5] = EnumC0038d.values()[i5].toString();
         }
-        Map map4 = f77941l;
+        Map map4 = f82057l;
         if (map4 != null) {
             map4.put(EnumC0038d.class.getName(), k);
         }
@@ -189,9 +189,9 @@ public class d {
     }
 
     public static String[] b(String str) {
-        if (str == null || str.length() <= 0 || !f77941l.containsKey(str)) {
+        if (str == null || str.length() <= 0 || !f82057l.containsKey(str)) {
             return null;
         }
-        return (String[]) f77941l.get(str);
+        return (String[]) f82057l.get(str);
     }
 }

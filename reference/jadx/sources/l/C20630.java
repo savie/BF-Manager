@@ -1,69 +1,54 @@
 package l;
 
-import bin.mt.plus.R;
-import java.io.File;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
-
-/* JADX INFO: renamed from: l.᩷ۘᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27Y0 */
+/* JADX INFO: renamed from: l.᩵ܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5Z9 */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C20630 implements InterfaceC7359, InterfaceC0738, InterfaceC3485, InterfaceC3740, InterfaceC19782 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m46499(Class cls, Hashtable hashtable, String str, Class cls2, String str2) {
-        hashtable.put(str, cls.getName());
-        hashtable.put(str2, cls2.getName());
+public final class C20630 implements InterfaceC3476 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f66157;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12425 f66158;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f66159;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f66160 = 0;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f66161;
+
+    public C20630(C12425 c12425, int i, int i2) {
+        this.f66158 = c12425;
+        this.f66159 = i;
+        this.f66161 = i2;
+        this.f66157 = c12425.f39952.m55818().mo8719(i);
     }
 
-    @Override // l.InterfaceC19782
-    public void accept(Object obj) {
-        C15071.m36107((File) obj);
-    }
-
-    @Override // l.InterfaceC0738
-    /* JADX INFO: renamed from: ۙ */
-    public void mo3203() {
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m46498(int i, int i2, String str) {
-        return str.substring(i2, str.length() - i);
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        ((InterfaceC10430) obj).getClass();
-    }
-
-    @Override // l.InterfaceC3485
-    /* JADX INFO: renamed from: ۙ */
-    public CharSequence mo4815(C4751 c4751) {
-        C8291 c8291 = (C8291) c4751;
-        int i = c8291.m42292().getInt(c8291.m13157(), 0);
-        boolean[] zArr = {(i & 1) != 0, (i & 2) != 0};
-        String[] strArrSplit = c8291.m13133().getString(R.string.MT_Protector).split("\\|");
-        if (strArrSplit.length != 4) {
-            throw new IllegalArgumentException(Arrays.toString(strArrSplit));
+    @Override // l.InterfaceC3476
+    public final int seekTo(int i) {
+        int i2;
+        int i3;
+        C12425 c12425;
+        while (true) {
+            i2 = this.f66157;
+            i3 = this.f66159;
+            c12425 = this.f66158;
+            if (i2 >= i) {
+                break;
+            }
+            int i4 = this.f66160;
+            if (i4 + 1 >= this.f66161) {
+                break;
+            }
+            this.f66160 = i4 + 1;
+            this.f66157 = c12425.f39952.m55818().mo8719((this.f66160 * 8) + i3);
         }
-        StringBuilder sb = new StringBuilder();
-        if (zArr[0]) {
-            sb.append(strArrSplit[1]);
-        } else {
-            sb.append(strArrSplit[0]);
+        if (i2 == i) {
+            return c12425.f39952.m55818().mo8719((this.f66160 * 8) + i3 + 4);
         }
-        sb.append(", ");
-        if (zArr[1]) {
-            sb.append(strArrSplit[3]);
-        } else {
-            sb.append(strArrSplit[2]);
-        }
-        return sb.toString();
-    }
-
-    @Override // l.InterfaceC3740
-    /* JADX INFO: renamed from: ܰ */
-    public Object mo1620() {
-        return new LinkedHashMap();
+        return 0;
     }
 }

@@ -1,21 +1,23 @@
 .class public final synthetic Ll/ᩴܰۤ;
 .super Ljava/lang/Object;
-.source "K3OA"
+.source "G1PO"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Lbin/mt/plugin/api/util/Consumer;
+.implements Ll/ܿ֫ܺ;
+.implements Lcom/google/android/material/canvas/CanvasCompat$CanvasOperation;
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final synthetic ܰ:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
-    iput p1, p0, Ll/ᩴܰۤ;->ܺ:I
+    iput-object p1, p0, Ll/ᩴܰۤ;->ܰ:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,97 +26,45 @@
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic negate()Ljava/util/function/Predicate;
+.method public accept(Ljava/lang/Object;)V
     .locals 1
 
     .line 0
-    iget v0, p0, Ll/ᩴܰۤ;->ܺ:I
+    iget-object v0, p0, Ll/ᩴܰۤ;->ܰ:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lbin/mt/plugin/api/ui/dialog/LoadingDialog;
 
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    check-cast p1, Ljava/lang/CharSequence;
 
-    move-result-object v0
+    invoke-static {v0, p1}, Lbin/mt/plugin/api/ui/dialog/LoadingDialog;->$r8$lambda$QWmsr9SOaqSJq5dogzEk6LuF6sM(Lbin/mt/plugin/api/ui/dialog/LoadingDialog;Ljava/lang/CharSequence;)V
 
-    return-object v0
-
-    :pswitch_0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
+.method public run(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .line 2
-    iget v0, p0, Ll/ᩴܰۤ;->ܺ:I
+    .line 0
+    iget-object v0, p0, Ll/ᩴܰۤ;->ܰ:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lcom/google/android/material/navigation/NavigationView;
 
-    .line 7
-    check-cast p1, Ll/᩻᩵ۤ;
+    invoke-static {v0, p1}, Lcom/google/android/material/navigation/NavigationView;->$r8$lambda$AHFKJHmjzrzMxPjc--xxWf1dl_U(Lcom/google/android/material/navigation/NavigationView;Landroid/graphics/Canvas;)V
 
-    .line 1082
-    iget-object p1, p1, Ll/᩻᩵ۤ;->ܽ:Ll/ۤᩴۤ;
+    return-void
+.end method
 
-    sget-object v0, Ll/ۤᩴۤ;->֨ۙ:Ll/ۤᩴۤ;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
+.method public ۙ(Ljava/lang/Object;)V
+    .locals 1
 
     .line 0
-    :pswitch_0
-    check-cast p1, Ll/۫ܰۤ;
+    iget-object v0, p0, Ll/ᩴܰۤ;->ܰ:Ljava/lang/Object;
 
-    invoke-static {p1}, Ll/ܰۛᩴ;->nonNull(Ljava/lang/Object;)Z
+    check-cast v0, Ll/᩵ܽۧ;
 
-    move-result p1
+    check-cast p1, Ljava/lang/String;
 
-    return p1
+    invoke-virtual {v0, p1}, Ll/᩵ܽۧ;->᩷(Ljava/lang/String;)V
 
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

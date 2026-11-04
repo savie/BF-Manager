@@ -1,7 +1,7 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.ThreefishEngine;
 import org.bouncycastle.crypto.macs.CMac;
@@ -12,10 +12,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Threefish {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams_1024 extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -23,7 +22,6 @@ public final class Threefish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams_256 extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -31,7 +29,6 @@ public final class Threefish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams_512 extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -39,42 +36,36 @@ public final class Threefish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC_1024 extends BaseMac {
         public CMAC_1024() {
             super(new CMac(new ThreefishEngine(1024)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC_256 extends BaseMac {
         public CMAC_256() {
             super(new CMac(new ThreefishEngine(256)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC_512 extends BaseMac {
         public CMAC_512() {
             super(new CMac(new ThreefishEngine(512)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB_1024 extends BaseBlockCipher {
         public ECB_1024() {
             super(new ThreefishEngine(1024));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB_256 extends BaseBlockCipher {
         public ECB_256() {
             super(new ThreefishEngine(256));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB_512 extends BaseBlockCipher {
         public ECB_512() {
             super(new ThreefishEngine(512));
@@ -106,7 +97,7 @@ public final class Threefish {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams_1024", "AlgorithmParameters.Threefish-1024", C9023.m23357(str, "$AlgParams_512", "AlgorithmParameters.Threefish-512", C9023.m23357(str, "$AlgParams_256", "AlgorithmParameters.Threefish-256", C9023.m23357(str, "$KeyGen_1024", "KeyGenerator.Threefish-1024", C9023.m23357(str, "$KeyGen_512", "KeyGenerator.Threefish-512", C9023.m23357(str, "$KeyGen_256", "KeyGenerator.Threefish-256", C9023.m23357(str, "$ECB_1024", "Cipher.Threefish-1024", C9023.m23357(str, "$ECB_512", "Cipher.Threefish-512", C9023.m23357(str, "$ECB_256", "Cipher.Threefish-256", C9023.m23357(str, "$CMAC_1024", "Mac.Threefish-1024CMAC", C9023.m23357(str, "$CMAC_512", "Mac.Threefish-512CMAC", C9023.m23357(str, "$CMAC_256", "Mac.Threefish-256CMAC", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams_1024", "AlgorithmParameters.Threefish-1024", C18063.m42089(str, "$AlgParams_512", "AlgorithmParameters.Threefish-512", C18063.m42089(str, "$AlgParams_256", "AlgorithmParameters.Threefish-256", C18063.m42089(str, "$KeyGen_1024", "KeyGenerator.Threefish-1024", C18063.m42089(str, "$KeyGen_512", "KeyGenerator.Threefish-512", C18063.m42089(str, "$KeyGen_256", "KeyGenerator.Threefish-256", C18063.m42089(str, "$ECB_1024", "Cipher.Threefish-1024", C18063.m42089(str, "$ECB_512", "Cipher.Threefish-512", C18063.m42089(str, "$ECB_256", "Cipher.Threefish-256", C18063.m42089(str, "$CMAC_1024", "Mac.Threefish-1024CMAC", C18063.m42089(str, "$CMAC_512", "Mac.Threefish-512CMAC", C18063.m42089(str, "$CMAC_256", "Mac.Threefish-256CMAC", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
         }
     }
 }

@@ -1,42 +1,63 @@
-.class public final Ll/ܳۡ;
+.class public abstract Ll/ܳۡ;
 .super Ljava/lang/Object;
-.source "11CW"
-
-# interfaces
-.implements Landroid/view/animation/Interpolator;
+.source "N5D3"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/᩺᩵;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩺᩵;)V
+# virtual methods
+.method public ۙ(Ll/۠ۚ;)Landroid/view/View;
     .locals 0
 
-    .line 1398
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 170
+    invoke-virtual {p0}, Ll/ܳۡ;->ۤ()Landroid/view/View;
 
-    iput-object p1, p0, Ll/ܳۡ;->ۙ:Ll/᩺᩵;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public ۙ(Ll/ۨ֫;)V
+    .locals 0
 
     return-void
 .end method
 
+.method public ۙ(Ll/ᩴۡ;)V
+    .locals 0
 
-# virtual methods
-.method public final getInterpolation(F)F
-    .locals 3
+    return-void
+.end method
 
-    .line 1401
-    iget-object v0, p0, Ll/ܳۡ;->ۙ:Ll/᩺᩵;
+.method public ۙ()Z
+    .locals 1
 
-    float-to-double v1, p1
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ll/᩺᩵;->ۙ(D)D
+    return v0
+.end method
 
-    move-result-wide v0
+.method public abstract ۤ()Landroid/view/View;
+.end method
 
-    double-to-float p1, v0
+.method public ᩴ()Z
+    .locals 1
 
-    return p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public ᩷()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public ᩸()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

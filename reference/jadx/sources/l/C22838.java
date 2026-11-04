@@ -1,31 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺۟ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3B3L */
+import java.util.HashMap;
+
+/* JADX INFO: renamed from: l.᩸۬᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z7QW */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22838 implements InterfaceC1692, InterfaceC0380 {
+public final class C22838 extends HashMap {
+    public static final long serialVersionUID = 1812267524140424433L;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f74298;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public static final C13477 f74017 = new C13477();
 
-    public /* synthetic */ C22838(Object obj) {
-        this.f74298 = obj;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C22838 m51542(C4747 c4747) {
+        C13477 c13477 = f74017;
+        C22838 c22838 = (C22838) c4747.m14643(c13477);
+        if (c22838 != null) {
+            return c22838;
+        }
+        C22838 c22839 = new C22838();
+        c4747.m14646(c13477, c22839);
+        return c22839;
     }
 
-    @Override // l.InterfaceC1692
-    public /* synthetic */ void onCanceled() {
-    }
-
-    @Override // l.InterfaceC0380
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1825(Object obj) {
-        ((C6111) this.f74298).m17023(((Integer) obj).intValue());
-    }
-
-    @Override // l.InterfaceC1692
-    /* JADX INFO: renamed from: ۙ */
-    public void mo3908(String str) {
-        C20409 c20409 = (C20409) this.f74298;
-        new C17193(c20409, (ActivityC11632) c20409.requireActivity(), new C16881(C5553.m15313(str, new String[0]))).m10243();
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m51543(C3168 c3168, EnumC10903 enumC10903) {
+        EnumC10903 enumC10904 = (EnumC10903) get(c3168);
+        return (enumC10904 == null || enumC10903.m27669(enumC10904)) ? false : true;
     }
 }

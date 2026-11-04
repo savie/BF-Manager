@@ -2,13 +2,13 @@ package org.bouncycastle.jcajce.provider.asymmetric.x509;
 
 import java.io.IOException;
 import java.io.InputStream;
-import l.C0252;
-import l.C16523;
+import l.C14442;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.util.encoders.Base64;
 import org.bouncycastle.util.io.pem.PemReader;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PEMUtil {
     public final Boundaries[] _supportedBoundaries;
 
@@ -17,8 +17,8 @@ public class PEMUtil {
         public final String _header;
 
         public Boundaries(String str) {
-            this._header = C16523.m38890(PemReader.BEGIN, str, "-----");
-            this._footer = C16523.m38890(PemReader.END, str, "-----");
+            this._header = C14442.m34865(PemReader.BEGIN, str, "-----");
+            this._footer = C14442.m34865(PemReader.END, str, "-----");
         }
 
         public boolean isTheExpectedFooter(String str) {
@@ -121,6 +121,6 @@ public class PEMUtil {
     }
 
     public PEMUtil(String str) {
-        this._supportedBoundaries = new Boundaries[]{new Boundaries(str), new Boundaries(C0252.m1693("X509 ", str)), new Boundaries("PKCS7")};
+        this._supportedBoundaries = new Boundaries[]{new Boundaries(str), new Boundaries(C25272.m56409("X509 ", str)), new Boundaries("PKCS7")};
     }
 }

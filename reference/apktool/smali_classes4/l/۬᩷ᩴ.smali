@@ -1,177 +1,51 @@
 .class public final synthetic Ll/۬᩷ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "SIRR"
 
 # interfaces
-.implements Ll/᩷۟ᩴ;
-
-
-# instance fields
-.field public final synthetic a:Ljava/nio/file/attribute/DosFileAttributes;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/nio/file/attribute/DosFileAttributes;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    return-void
-.end method
+.implements Landroid/text/InputFilter;
 
 
 # virtual methods
-.method public final synthetic creationTime()Ll/ܽ۟ᩴ;
-    .locals 1
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 4
 
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/֫ۡᩴ;->m(Ljava/nio/file/attribute/FileTime;)Ll/ܽ۟ᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    instance-of v1, p1, Ll/۬᩷ᩴ;
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, Ll/۬᩷ᩴ;
-
-    iget-object p1, p1, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 23
+    invoke-interface {p4}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
-    return p1
-.end method
+    int-to-long v0, p1
 
-.method public final synthetic fileKey()Ljava/lang/Object;
-    .locals 1
+    sub-int p1, p6, p5
 
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
+    int-to-long v2, p1
 
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->fileKey()Ljava/lang/Object;
+    sub-long/2addr v0, v2
 
-    move-result-object v0
+    int-to-long v2, p3
 
-    return-object v0
-.end method
+    add-long/2addr v0, v2
 
-.method public final synthetic hashCode()I
-    .locals 1
+    int-to-long p1, p2
 
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
+    sub-long/2addr v0, p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const-wide/32 p1, 0xc350
 
-    move-result v0
+    cmp-long p3, v0, p1
 
-    return v0
-.end method
+    if-gtz p3, :cond_0
 
-.method public final synthetic isDirectory()Z
-    .locals 1
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
+    return-object p1
 
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->isDirectory()Z
+    .line 24
+    :cond_0
+    invoke-interface {p4, p5, p6}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    move-result v0
+    move-result-object p1
 
-    return v0
-.end method
-
-.method public final synthetic isOther()Z
-    .locals 1
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->isOther()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic isRegularFile()Z
-    .locals 1
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->isRegularFile()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic isSymbolicLink()Z
-    .locals 1
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->isSymbolicLink()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic lastAccessTime()Ll/ܽ۟ᩴ;
-    .locals 1
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->lastAccessTime()Ljava/nio/file/attribute/FileTime;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/֫ۡᩴ;->m(Ljava/nio/file/attribute/FileTime;)Ll/ܽ۟ᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic lastModifiedTime()Ll/ܽ۟ᩴ;
-    .locals 1
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->lastModifiedTime()Ljava/nio/file/attribute/FileTime;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/֫ۡᩴ;->m(Ljava/nio/file/attribute/FileTime;)Ll/ܽ۟ᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic size()J
-    .locals 2
-
-    iget-object v0, p0, Ll/۬᩷ᩴ;->a:Ljava/nio/file/attribute/DosFileAttributes;
-
-    invoke-interface {v0}, Ljava/nio/file/attribute/BasicFileAttributes;->size()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-object p1
 .end method

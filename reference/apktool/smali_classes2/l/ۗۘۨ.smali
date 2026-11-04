@@ -1,107 +1,183 @@
-.class public final Ll/ۗۘۨ;
+.class public abstract Ll/ۗۘۨ;
 .super Ljava/lang/Object;
-.source "86A1"
+.source "52DI"
 
-# interfaces
-.implements Ll/᩸ۜۨ;
+
+# static fields
+.field public static final ۙ:[C
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    const/16 v0, 0x10
+
+    new-array v0, v0, [C
+
+    .line 39
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ll/ۗۘۨ;->ۙ:[C
+
+    return-void
+
+    :array_0
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x41s
+        0x42s
+        0x43s
+        0x44s
+        0x45s
+        0x46s
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
+.method public abstract ۙ(Ljava/lang/CharSequence;ILjava/io/StringWriter;)I
+.end method
+
+.method public final ۙ(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 6
 
-    .line 222
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    check-cast v0, Ll/ܳۘۨ;
+    return-object p1
 
-    invoke-virtual {v0}, Ll/ܳۘۨ;->۬()I
+    .line 70
+    :cond_0
+    :try_start_0
+    new-instance v0, Ljava/io/StringWriter;
 
-    move-result v0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    .line 223
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v1
+    mul-int/lit8 v1, v1, 0x2
 
-    check-cast v1, Ll/ܳۘۨ;
+    invoke-direct {v0, v1}, Ljava/io/StringWriter;-><init>(I)V
 
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
+    .line 107
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    move-result-object v1
+    move-result v1
 
-    check-cast v1, [B
+    const/4 v2, 0x0
 
-    .line 224
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll/ܳۘۨ;
-
-    invoke-virtual {p1}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [I
-
-    mul-int/lit8 v2, v0, 0x4
-
-    .line 225
+    :cond_1
     :goto_0
-    array-length v3, p1
+    if-ge v2, v1, :cond_4
 
-    if-ge v0, v3, :cond_0
+    .line 109
+    invoke-virtual {p0, p1, v2, v0}, Ll/ۗۘۨ;->ۙ(Ljava/lang/CharSequence;ILjava/io/StringWriter;)I
 
-    add-int/lit8 v3, v2, 0x1
+    move-result v3
 
-    .line 226
-    aget-byte v4, v1, v2
+    if-nez v3, :cond_3
 
-    not-int v4, v4
+    .line 113
+    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
-    and-int/lit16 v4, v4, 0xff
+    move-result v3
 
-    add-int/lit8 v5, v2, 0x2
+    .line 114
+    invoke-virtual {v0, v3}, Ljava/io/Writer;->write(I)V
 
-    aget-byte v3, v1, v3
+    add-int/lit8 v4, v2, 0x1
 
-    and-int/lit16 v3, v3, 0xff
+    .line 116
+    invoke-static {v3}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
-    shl-int/lit8 v3, v3, 0x8
+    move-result v3
 
-    or-int/2addr v3, v4
+    if-eqz v3, :cond_2
 
-    add-int/lit8 v4, v2, 0x3
+    if-ge v4, v1, :cond_2
 
-    aget-byte v5, v1, v5
+    .line 117
+    invoke-interface {p1, v4}, Ljava/lang/CharSequence;->charAt(I)C
 
-    not-int v5, v5
+    move-result v3
 
-    and-int/lit16 v5, v5, 0xff
+    .line 118
+    invoke-static {v3}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
-    shl-int/lit8 v5, v5, 0x10
+    move-result v5
 
-    or-int/2addr v3, v5
+    if-eqz v5, :cond_2
 
-    add-int/lit8 v2, v2, 0x4
+    .line 119
+    invoke-virtual {v0, v3}, Ljava/io/Writer;->write(I)V
 
-    aget-byte v4, v1, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x18
-
-    or-int/2addr v3, v4
-
-    aput v3, p1, v0
-
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v2, v2, 0x2
 
     goto :goto_0
 
-    :cond_0
-    return-void
+    :cond_2
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v4, 0x0
+
+    :goto_1
+    if-ge v4, v3, :cond_1
+
+    .line 128
+    invoke-static {p1, v2}, Ljava/lang/Character;->codePointAt(Ljava/lang/CharSequence;I)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Character;->charCount(I)I
+
+    move-result v5
+
+    add-int/2addr v2, v5
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    .line 72
+    :cond_4
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    .line 75
+    new-instance v0, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v0, p1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v0
 .end method

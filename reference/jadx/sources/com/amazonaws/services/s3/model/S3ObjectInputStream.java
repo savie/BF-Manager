@@ -15,21 +15,21 @@ public class S3ObjectInputStream extends SdkFilterInputStream {
     /* JADX WARN: Multi-variable type inference failed */
     public S3ObjectInputStream(InputStream inputStream) {
         boolean z;
-        if (AwsSdkMetrics.m335()) {
-            z = inputStream instanceof MetricAware ? !((MetricAware) inputStream).mo279() : true;
+        if (AwsSdkMetrics.m298()) {
+            z = inputStream instanceof MetricAware ? !((MetricAware) inputStream).mo273() : true;
         } else {
             z = false;
         }
-        super(z ? new MetricFilterInputStream(S3ServiceMetric.f517, inputStream) : inputStream);
+        super(z ? new MetricFilterInputStream(S3ServiceMetric.f507, inputStream) : inputStream);
     }
 
     @Override // com.amazonaws.internal.SdkFilterInputStream
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo281() {
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo275() {
         try {
             close();
         } catch (IOException e) {
-            LogFactory.m302(getClass()).mo293("FYI", e);
+            LogFactory.m296(getClass()).mo286("FYI", e);
         }
     }
 

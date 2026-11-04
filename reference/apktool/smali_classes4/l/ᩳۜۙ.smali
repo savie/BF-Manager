@@ -1,30 +1,64 @@
-.class public abstract Ll/ᩳۜۙ;
-.super Landroid/content/BroadcastReceiver;
-.source "E653"
+.class public final Ll/ᩳۜۙ;
+.super Ljava/lang/Object;
+.source "I8QN"
 
 
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+# static fields
+.field public static ۙ:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static ۙ(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)I
+    .locals 2
 
-    .line 76
-    new-instance v0, Landroid/util/SparseArray;
+    .line 88
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    const/16 v1, 0x1d
 
-    return-void
+    if-lt v0, v1, :cond_1
+
+    sget-object v0, Ll/ᩳۜۙ;->ۙ:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 92
+    :cond_0
+    invoke-static {p0, p1, p2, p3, p4}, Ll/۟ۜۙ;->ۙ(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)I
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public constructor <init>()V
+.method public static bridge synthetic ۙ()Ljava/lang/Boolean;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/ᩳۜۙ;->ۙ:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic ۙ(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 73
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    .line 0
+    sput-object p0, Ll/ᩳۜۙ;->ۙ:Ljava/lang/Boolean;
 
     return-void
 .end method

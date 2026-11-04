@@ -1,34 +1,37 @@
 package l;
 
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.util.Iterator;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.ArrayList;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ܺ᩸᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: K4X2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16212 implements Serializable, Iterable {
-    public static final long serialVersionUID = -1934227607974228213L;
+/* JADX INFO: renamed from: l.ܶܺ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 34PY */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16212 extends AbstractC4280 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final CopyOnWriteArrayList f52323 = new CopyOnWriteArrayList();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4280 f52693;
 
-    public final boolean isEmpty() {
-        return this.f52323.size() == 0;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final List f52694;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f52695;
+
+    public C16212(ArrayList arrayList, AbstractC4280 abstractC4280, ArrayList arrayList2) {
+        this.f52694 = arrayList;
+        this.f52693 = abstractC4280;
+        this.f52695 = arrayList2;
     }
 
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        return this.f52323.iterator();
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) {
-        throw new UnsupportedOperationException("Serialization is not supported");
-    }
-
-    private void writeObject(ObjectOutputStream objectOutputStream) {
-        throw new UnsupportedOperationException("Serialization is not supported");
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        AbstractC4280.m13642(sb, "<", this.f52694, ">");
+        AbstractC4280 abstractC4280 = this.f52693;
+        if (abstractC4280 != null) {
+            sb.append(" extends ");
+            sb.append(abstractC4280);
+        }
+        AbstractC4280.m13642(sb, " implements ", this.f52695, "");
+        return sb.toString();
     }
 }

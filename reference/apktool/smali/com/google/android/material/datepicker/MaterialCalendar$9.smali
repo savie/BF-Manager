@@ -34,11 +34,11 @@
     .line 473
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$9;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Ll/۬۫ܰ;
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Ll/֡֡᩷;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll/۬۫ܰ;->findFirstVisibleItemPosition()I
+    invoke-virtual {p1}, Ll/֡֡᩷;->findFirstVisibleItemPosition()I
 
     move-result p1
 
@@ -47,15 +47,15 @@
     .line 474
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$9;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    invoke-static {v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Ll/ܿܿܰ;
+    invoke-static {v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Ll/᩻ᩳ᩷;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/ܿܿܰ;->getAdapter()Ll/֡۫ܰ;
+    invoke-virtual {v0}, Ll/᩻ᩳ᩷;->getAdapter()Ll/۫۟᩷;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/֡۫ܰ;->getItemCount()I
+    invoke-virtual {v0}, Ll/۫۟᩷;->getItemCount()I
 
     move-result v0
 

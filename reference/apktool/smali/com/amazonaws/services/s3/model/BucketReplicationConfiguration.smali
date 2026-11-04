@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/HashMap;
+.field public ܰ:Ljava/util/HashMap;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;->ܺ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;->ܰ:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     if-eqz p2, :cond_0
 
     .line 127
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;->ܺ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;->ܰ:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

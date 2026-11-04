@@ -5,9 +5,9 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
-import l.C15489;
-import l.C22697;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
@@ -27,7 +27,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RC6 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -53,7 +53,6 @@ public final class RC6 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -61,21 +60,18 @@ public final class RC6 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new RC6Engine()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB extends BaseBlockCipher {
         public CFB() {
             super(new BufferedBlockCipher(new CFBBlockCipher(new RC6Engine(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.RC6.ECB.1
@@ -87,7 +83,6 @@ public final class RC6 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GMAC extends BaseMac {
         public GMAC() {
             super(new GMac(GCMBlockCipher.newInstance(new RC6Engine())));
@@ -100,7 +95,6 @@ public final class RC6 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = RC6.class.getName();
 
@@ -108,19 +102,17 @@ public final class RC6 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addGMacAlgorithm(configurableProvider, "RC6", C22697.m50267(C9023.m23357(str, "$AlgParams", "AlgorithmParameters.RC6", C9023.m23357(str, "$KeyGen", "KeyGenerator.RC6", C9023.m23357(str, "$ECB", "Cipher.RC6", sb, configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C15489.m37076(str, "$KeyGen"));
-            addPoly1305Algorithm(configurableProvider, "RC6", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            addGMacAlgorithm(configurableProvider, "RC6", C8947.m23910(C18063.m42089(str, "$AlgParams", "AlgorithmParameters.RC6", C18063.m42089(str, "$KeyGen", "KeyGenerator.RC6", C18063.m42089(str, "$ECB", "Cipher.RC6", sb, configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C14483.m34972(str, "$KeyGen"));
+            addPoly1305Algorithm(configurableProvider, "RC6", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class OFB extends BaseBlockCipher {
         public OFB() {
             super(new BufferedBlockCipher(new OFBBlockCipher(new RC6Engine(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Poly1305 extends BaseMac {
         public Poly1305() {
             super(new org.bouncycastle.crypto.macs.Poly1305(new RC6Engine()));

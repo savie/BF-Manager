@@ -1,62 +1,63 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ܳ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z76C */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20927 {
+import java.util.Arrays;
+
+/* JADX INFO: renamed from: l.᩵᩻᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: L8LA */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20927 implements InterfaceC8191 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C14795 f67982;
+    public final byte[] f66959;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f67983;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f66960;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m47042(C14795 c14795) {
-        this.f67982 = c14795;
-        this.f67983 = false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f66961;
+
+    @Override // l.InterfaceC8191
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ C15648 mo12245() {
+        return null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m47040(char c) {
-        C14795 c14795 = this.f67982;
-        if (c14795 == null) {
-            throw new IllegalStateException("Output builder is not set");
-        }
-        if (this.f67983) {
-            c14795.append('\n');
-            this.f67983 = false;
-            if (c == '\n') {
-                return;
-            }
-        }
-        if (c == '\r') {
-            this.f67983 = true;
-        } else {
-            this.f67982.append(c);
-        }
+    @Override // l.InterfaceC8191
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ byte[] mo12247() {
+        return null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m47041(CharSequence charSequence, int i, int i2) {
-        if (charSequence == null) {
-            charSequence = "null";
-        }
-        while (i < i2) {
-            m47040(charSequence.charAt(i));
-            i++;
+    public C20927(String str, byte[] bArr, String str2) {
+        this.f66959 = bArr;
+        this.f66961 = str;
+        this.f66960 = str2;
+    }
+
+    @Override // l.InterfaceC8191
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo12246(C18632 c18632) {
+        String str = this.f66961;
+        if (str != null) {
+            c18632.m43367(str);
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m47039() {
-        C14795 c14795 = this.f67982;
-        if (c14795 == null) {
-            throw new IllegalStateException("Output builder is not set");
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        if (this.f67983) {
-            c14795.append('\n');
-            this.f67983 = false;
+        if (obj == null || C20927.class != obj.getClass()) {
+            return false;
         }
+        return Arrays.equals(this.f66959, ((C20927) obj).f66959);
+    }
+
+    public final int hashCode() {
+        return Arrays.hashCode(this.f66959);
+    }
+
+    public final String toString() {
+        return C12669.m31437(this.f66959.length, "\"", C3188.m10406("ICY: title=\"", this.f66961, "\", url=\"", this.f66960, "\", rawMetadata.length=\""));
     }
 }

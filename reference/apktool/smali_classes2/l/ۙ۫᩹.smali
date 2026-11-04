@@ -1,47 +1,56 @@
-.class public abstract Ll/ۙ۫᩹;
+.class public final synthetic Ll/ۙ۫᩹;
 .super Ljava/lang/Object;
-.source "1B34"
+.source "690O"
 
 
-# virtual methods
-.method public abstract ۙ(Ljava/lang/String;Z)V
-.end method
+# static fields
+.field public static final synthetic ۙ:[I
 
-.method public final declared-synchronized ۙ(Ll/ۛܽ᩹;)V
-    .locals 2
 
-    move-object v0, p0
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    monitor-enter v0
+    .line 227
+    invoke-static {}, Ll/۫ܰۨ;->values()[Ll/۫ܰۨ;
 
-    .line 538
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/ۙ۫᩹;->ۙ:[I
+
     :try_start_0
-    move-object v1, p0
+    sget-object v1, Ll/۫ܰۨ;->᩶:Ll/۫ܰۨ;
 
-    check-cast v1, Ll/ۢ֡᩹;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 589
-    iget-object v1, v1, Ll/ۢ֡᩹;->ۨ:Ll/ۗ֡᩹;
+    move-result v1
 
-    iget-object v1, v1, Ll/ۗ֡᩹;->۬:Ll/ۨܽ᩹;
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, p1}, Ll/ۨܽ᩹;->ۙ(Ll/ۛܽ᩹;)V
+    aput v2, v0, v1
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 539
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
+    :catch_0
     :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    sget-object v0, Ll/ۙ۫᩹;->ۙ:[I
 
-    throw p1
+    sget-object v1, Ll/۫ܰۨ;->֡:Ll/۫ܰۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    return-void
 .end method

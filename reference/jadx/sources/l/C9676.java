@@ -1,224 +1,71 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C9676 extends AbstractC0584 implements InterfaceC18266 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Object f32619;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f32620;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f32621;
-
-    public /* synthetic */ C9676(int i) {
-        this();
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC0584 mo2777clear() {
-        m24611();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC3967 mo2777clear() {
-        m24611();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mo2777clear() {
-        m24611();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mo2777clear() {
-        m24611();
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC3967 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        m24612(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        m24612(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC21607 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        m24612(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        m24612(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC0584
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46296;
-        c6956.m18696(C3324.class, C9676.class);
-        return c6956;
-    }
-
-    public C9676() {
-        this.f32619 = "";
-    }
-
-    public C9676(InterfaceC6790 interfaceC6790, int i) {
-        super(interfaceC6790);
-        this.f32619 = "";
-    }
-
+/* JADX INFO: renamed from: l.ۡ᩸᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: K6OY */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C9676 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m24611() {
-        super.mo2777clear();
-        this.f32620 = 0;
-        this.f32619 = "";
-        this.f32621 = false;
-    }
-
-    @Override // l.AbstractC0584, l.InterfaceC22500, l.InterfaceC18266
-    public final C2806 getDescriptorForType() {
-        return C14097.f46307;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return C3324.getDefaultInstance();
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return C3324.getDefaultInstance();
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC1332 build() {
-        C3324 c3324BuildPartial = buildPartial();
-        if (c3324BuildPartial.isInitialized()) {
-            return c3324BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c3324BuildPartial);
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC23206 build() {
-        C3324 c3324BuildPartial = buildPartial();
-        if (c3324BuildPartial.isInitialized()) {
-            return c3324BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c3324BuildPartial);
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final C3324 buildPartial() {
-        int i = 0;
-        C3324 c3324 = new C3324(this, 0);
-        int i2 = this.f32620;
-        if (i2 != 0) {
-            if ((i2 & 1) != 0) {
-                c3324.f12311 = this.f32619;
-                i = 1;
+    public static void m25249(CharSequence charSequence, C13406 c13406, C11914 c11914, EnumC2220 enumC2220, boolean z, C11228 c11228) {
+        C7998 c7998M44812;
+        try {
+            C18870.m43769();
+            C23849 c23849 = new C23849(new C18870(charSequence));
+            c23849.m24869();
+            C9919 c9919 = c13406.m33048() ? new C9919(charSequence) : null;
+            if (c9919 != null) {
+                c23849.m24868(c9919);
             }
-            if ((i2 & 2) != 0) {
-                c3324.f12312 = this.f32621;
-                i |= 2;
-            }
-            c3324.f12310 = i | c3324.f12310;
-        }
-        onBuilt();
-        return c3324;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final AbstractC3967 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C3324) {
-            m24613((C3324) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final InterfaceC22500 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C3324) {
-            m24613((C3324) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m24613(C3324 c3324) {
-        if (c3324 == C3324.getDefaultInstance()) {
-            return;
-        }
-        if (c3324.m9855()) {
-            this.f32619 = c3324.f12311;
-            this.f32620 |= 1;
-            onChanged();
-        }
-        if (c3324.m9853()) {
-            this.f32621 = c3324.m9854();
-            this.f32620 |= 2;
-            onChanged();
-        }
-        mo2781mergeUnknownFields(c3324.getUnknownFields());
-        onChanged();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m24612(AbstractC3262 abstractC3262, C2701 c2701) {
-        c2701.getClass();
-        boolean z = false;
-        while (!z) {
-            try {
-                try {
-                    int iMo6048 = abstractC3262.mo6048();
-                    if (iMo6048 != 0) {
-                        if (iMo6048 == 10) {
-                            this.f32619 = abstractC3262.mo6050();
-                            this.f32620 |= 1;
-                        } else if (iMo6048 == 16) {
-                            this.f32621 = abstractC3262.mo6028();
-                            this.f32620 |= 2;
-                        } else if (!super.parseUnknownField(abstractC3262, c2701, iMo6048)) {
-                        }
+            C1474 c1474 = new C1474(c23849);
+            c1474.m11532();
+            int iMax = 0;
+            for (InterfaceC8743 interfaceC8743 : c1474.m11539()) {
+                C18870.m43769();
+                int type = interfaceC8743.getType();
+                if (c9919 != null) {
+                    int iMo23442 = interfaceC8743.mo23442();
+                    int iMo23440 = interfaceC8743.mo23440();
+                    if (type == 6 && !C9919.m25741(iMo23442, iMo23440, charSequence)) {
+                        c9919.m25743(iMo23442, "Unterminated CSS string");
+                    } else if (type == 2 && (iMo23440 - iMo23442 < 3 || charSequence.charAt(iMo23440 - 1) != '*' || charSequence.charAt(iMo23440) != '/')) {
+                        c9919.m25743(iMo23442, "Unterminated CSS comment");
                     }
-                    z = true;
-                } catch (C4529 e) {
-                    throw e.m12650();
                 }
-            } catch (Throwable th) {
-                onChanged();
-                throw th;
+                if (type == 15 || type == 19 || type == 8 || type == 17) {
+                    iMax++;
+                    if (iMax > 128) {
+                        throw new IllegalArgumentException("Source nesting exceeds formatter limit");
+                    }
+                } else if (type == 16 || type == 20 || type == 18) {
+                    iMax = Math.max(0, iMax - 1);
+                }
             }
+            C19373 c19373 = new C19373(c1474);
+            c19373.m24869();
+            if (c9919 != null) {
+                c19373.m24868(c9919);
+            }
+            int i = C10422.f33133[enumC2220.ordinal()];
+            if (i == 1) {
+                c7998M44812 = c19373.m44812();
+            } else if (i == 2) {
+                c7998M44812 = c19373.m44811();
+            } else {
+                if (i != 3) {
+                    throw new IncompatibleClassChangeError();
+                }
+                c7998M44812 = c19373.m44808();
+            }
+            C7998 c7998 = c7998M44812;
+            if (c9919 != null) {
+                c9919.m25744();
+            }
+            C16389 c16389 = new C16389(charSequence, c1474, c7998, c13406, c11914, z, c11228);
+            c16389.m38893(enumC2220);
+            c16389.m38892();
+        } catch (StackOverflowError e) {
+            throw new IllegalArgumentException("Source nesting exceeds formatter limit", e);
+        } catch (C7683 unused) {
+            throw new InterruptedException("Code transformation cancelled");
         }
-        onChanged();
-    }
-
-    @Override // l.AbstractC0584, l.InterfaceC15445
-    public final boolean isInitialized() {
-        int i = this.f32620;
-        return ((i & 1) == 0 || (i & 2) == 0) ? false : true;
     }
 }

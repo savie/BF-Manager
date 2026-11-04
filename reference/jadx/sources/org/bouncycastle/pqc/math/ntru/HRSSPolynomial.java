@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.math.ntru;
 
-import l.C0252;
+import l.C12669;
 import org.bouncycastle.crypto.hpke.HPKE;
 import org.bouncycastle.pqc.math.ntru.parameters.NTRUHRSSParameterSet;
 
@@ -49,7 +49,7 @@ public class HRSSPolynomial extends Polynomial {
             short[] sArr7 = polynomialCreatePolynomial.coeffs;
             short s9 = sArr7[i7 - 3];
             short[] sArr8 = polynomial.coeffs;
-            sArr7[i7] = (short) C0252.m1692(sArr8[i7] + sArr8[i7 - 1], sArr8[i7 - 2], 2, s9);
+            sArr7[i7] = (short) C12669.m31441(sArr8[i7] + sArr8[i7 - 1], sArr8[i7 - 2], 2, s9);
         }
         polynomialCreatePolynomial.mod3PhiN();
         polynomialCreatePolynomial.z3ToZq();

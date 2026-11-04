@@ -1,68 +1,55 @@
 package l;
 
-import java.util.Arrays;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.۬ܿܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 866M */
-/* JADX INFO: loaded from: classes3.dex */
-public class C13261 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Object[] f44035;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f44036;
+/* JADX INFO: renamed from: l.۫ܿۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: EB82 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C13261 implements Consumer {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C1265 f44037;
+    public final /* synthetic */ int f42367;
 
-    public C13261() {
-        this(4);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f42368;
+
+    public /* synthetic */ C13261(int i, Object obj) {
+        this.f42367 = i;
+        this.f42368 = obj;
     }
 
-    public C13261(int i) {
-        this.f44035 = new Object[i * 2];
-        this.f44036 = 0;
+    public /* synthetic */ C13261(AbstractC1379 abstractC1379, Consumer consumer) {
+        this.f42367 = 1;
+        this.f42368 = consumer;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C13261 mo32741(Object obj, Object obj2) {
-        int i = (this.f44036 + 1) * 2;
-        Object[] objArr = this.f44035;
-        if (i > objArr.length) {
-            this.f44035 = Arrays.copyOf(objArr, AbstractC14528.m34968(objArr.length, i));
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        switch (this.f42367) {
+            case 0:
+                StringBuilder sb = (StringBuilder) this.f42368;
+                Map.Entry entry = (Map.Entry) obj;
+                sb.append((String) entry.getValue());
+                sb.append(" -> ");
+                sb.append((String) entry.getKey());
+                sb.append(":\n");
+                break;
+            case 1:
+                Consumer consumer = (Consumer) this.f42368;
+                InterfaceC8409 interfaceC8409 = (InterfaceC8409) obj;
+                if (interfaceC8409 != null) {
+                    interfaceC8409.forEachRemaining(consumer);
+                }
+                break;
+            default:
+                ((Set) this.f42368).add((C21943) obj);
+                break;
         }
-        C20296.m45807(obj, obj2);
-        Object[] objArr2 = this.f44035;
-        int i2 = this.f44036;
-        int i3 = i2 * 2;
-        objArr2[i3] = obj;
-        objArr2[i3 + 1] = obj2;
-        this.f44036 = i2 + 1;
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private AbstractC6910 m32739(boolean z) {
-        C1265 c1265;
-        C1265 c1266;
-        if (z && (c1266 = this.f44037) != null) {
-            throw c1266.m4589();
-        }
-        C13449 c13449M32935 = C13449.m32935(this.f44036, this.f44035, this);
-        if (!z || (c1265 = this.f44037) == null) {
-            return c13449M32935;
-        }
-        throw c1265.m4589();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC6910 mo32740() {
-        return m32739(true);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractC6910 mo32742() {
-        return m32739(true);
     }
 }

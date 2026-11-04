@@ -71,7 +71,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/slider/BaseSlider$1;->this$0:Lcom/google/android/material/slider/BaseSlider;
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V

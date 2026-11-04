@@ -1,29 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۗ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: K17Q */
+import android.media.browse.MediaBrowser;
+import android.os.Parcel;
+import android.service.media.MediaBrowserService;
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ᩳܽۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6AW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19202 extends AbstractC4674 {
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        boolean z;
-        c21422.m47963("local");
-        String[] strArr = (String[]) C9030.stream(c21422.m47979()).map(new C4686(1)).toArray(new C7913());
-        int length = strArr.length;
-        int i = 0;
-        while (true) {
-            if (i >= length) {
-                z = true;
-                break;
-            } else {
-                if (!strArr[i].toLowerCase().endsWith(".apk")) {
-                    z = false;
-                    break;
-                }
-                i++;
+public final class C19202 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public MediaBrowserService.Result f62082;
+
+    public C19202(MediaBrowserService.Result result) {
+        this.f62082 = result;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m44473(Object obj) {
+        boolean z = obj instanceof List;
+        MediaBrowserService.Result result = this.f62082;
+        if (z) {
+            List<Parcel> list = (List) obj;
+            ArrayList arrayList = new ArrayList(list.size());
+            for (Parcel parcel : list) {
+                parcel.setDataPosition(0);
+                arrayList.add((MediaBrowser.MediaItem) MediaBrowser.MediaItem.CREATOR.createFromParcel(parcel));
+                parcel.recycle();
             }
+            result.sendResult(arrayList);
+            return;
         }
-        C20874.m46911(c21422.m47965(), strArr, strArr.length == 1 ? C20240.m45747(C5553.m15313(strArr[0], new String[0])) : null, z, false);
+        if (obj instanceof Parcel) {
+            Parcel parcel2 = (Parcel) obj;
+            parcel2.setDataPosition(0);
+            result.sendResult(MediaBrowser.MediaItem.CREATOR.createFromParcel(parcel2));
+            parcel2.recycle();
+            return;
+        }
+        result.sendResult(null);
     }
 }

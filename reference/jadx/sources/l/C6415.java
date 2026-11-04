@@ -1,30 +1,46 @@
 package l;
 
-import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.text.TextUtils;
-import android.view.View;
-import com.alipay.sdk.m.n.b;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۜ֡ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S8XW */
+/* JADX INFO: renamed from: l.ۛ۬ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H74N */
 /* JADX INFO: loaded from: classes3.dex */
-public class C6415 implements InterfaceC3592 {
-    @Override // l.InterfaceC3592
-    /* JADX INFO: renamed from: ۙ */
-    public void mo10671(View view, String str) {
-        Uri uriBuild = Uri.parse(str);
-        if (TextUtils.isEmpty(uriBuild.getScheme())) {
-            uriBuild = uriBuild.buildUpon().scheme(b.a).build();
-        }
-        Context context = view.getContext();
-        Intent intent = new Intent("android.intent.action.VIEW", uriBuild);
-        intent.putExtra("com.android.browser.application_id", context.getPackageName());
+public final class C6415 implements InterfaceC1278 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC1278 f21634;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C20585 f21635;
+
+    public C6415(InterfaceC1278 interfaceC1278, C20585 c20585) {
+        this.f21634 = interfaceC1278;
+        this.f21635 = c20585;
+    }
+
+    @Override // l.InterfaceC1278
+    public final long length() throws C12380 {
         try {
-            context.startActivity(intent);
-        } catch (ActivityNotFoundException unused) {
+            return this.f21634.length();
+        } catch (IOException e) {
+            C20585.m47177(this.f21635);
+            throw new C12380(e);
         }
+    }
+
+    @Override // l.InterfaceC1278
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo4667(long j, byte[] bArr, int i, int i2) throws C12380 {
+        try {
+            this.f21634.mo4667(j, bArr, i, i2);
+        } catch (IOException e) {
+            C20585.m47177(this.f21635);
+            throw new C12380(e);
+        }
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        this.f21634.close();
     }
 }

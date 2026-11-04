@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.PublicKey;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.asn1.bc.ExternalValue;
@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.jcajce.util.MessageDigestUtils;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExternalPublicKey implements PublicKey {
     public final byte[] digest;
     public final AlgorithmIdentifier digestAlg;
@@ -48,7 +48,7 @@ public class ExternalPublicKey implements PublicKey {
         try {
             return new SubjectPublicKeyInfo(new AlgorithmIdentifier(BCObjectIdentifiers.external_value), new ExternalValue(this.location, this.digestAlg, this.digest)).getEncoded(ASN1Encoding.DER);
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("unable to encode composite key: ")));
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("unable to encode composite key: ")));
         }
     }
 }

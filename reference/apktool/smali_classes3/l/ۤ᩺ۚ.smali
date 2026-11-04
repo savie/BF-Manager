@@ -1,42 +1,36 @@
-.class public final synthetic Ll/ۤ᩺ۚ;
+.class public final Ll/ۤ᩺ۚ;
 .super Ljava/lang/Object;
-.source "R704"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "87AO"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۨܶۚ;
+.field public final ۙ:Z
 
-.field public final synthetic ᩶:J
+.field public final ۤ:Z
+
+.field public final ᩷:Z
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۨܶۚ;J)V
+.method public constructor <init>(Ljava/lang/String;ZZZ)V
     .locals 0
 
-    .line 0
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۤ᩺ۚ;->ܺ:Ll/ۨܶۚ;
+    .line 127
+    iput-object p1, p0, Ll/ۤ᩺ۚ;->᩸:Ljava/lang/String;
 
-    iput-wide p2, p0, Ll/ۤ᩺ۚ;->᩶:J
+    .line 128
+    iput-boolean p2, p0, Ll/ۤ᩺ۚ;->ۙ:Z
 
-    return-void
-.end method
+    .line 129
+    iput-boolean p3, p0, Ll/ۤ᩺ۚ;->᩷:Z
 
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, Ll/ۤ᩺ۚ;->ܺ:Ll/ۨܶۚ;
-
-    iget-wide v1, p0, Ll/ۤ᩺ۚ;->᩶:J
-
-    invoke-static {v0, v1, v2}, Ll/ۨܶۚ;->ۙ(Ll/ۨܶۚ;J)V
+    .line 130
+    iput-boolean p4, p0, Ll/ۤ᩺ۚ;->ۤ:Z
 
     return-void
 .end method

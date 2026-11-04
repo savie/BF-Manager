@@ -1,34 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧ᩵۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+/* JADX INFO: renamed from: l.ۤ᩺ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 131S */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11200 extends AbstractC14728 implements InterfaceC7550 {
+public final class C11200 extends FilterInputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f37914;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Socket f35339;
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3294(this);
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.RETURN;
+    public C11200(Socket socket, InputStream inputStream) {
+        super(inputStream);
+        this.f35339 = socket;
     }
 
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1884(this, obj);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60528;
+    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        super.close();
+        this.f35339.close();
     }
 }

@@ -1,42 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟۟᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: M45G */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7331 {
+/* JADX INFO: renamed from: l.ۜᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 422Y */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7331 extends C5596 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10154[] f24366;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ RunnableC14042 f24149;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f24367;
-
-    public C7331(int i, C10154... c10154Arr) {
-        this.f24367 = i;
-        this.f24366 = c10154Arr;
+    public C7331(RunnableC14042 runnableC14042) {
+        this.f24149 = runnableC14042;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m19601() {
-        return this.f24367;
+    @Override // l.C5596, l.InterfaceC4020
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo12073() {
+        this.f24149.f44491.f78980.setVisibility(0);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m19600() {
-        int iM25797 = 0;
-        for (C10154 c10154 : this.f24366) {
-            iM25797 += c10154.m25797();
-        }
-        return iM25797;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m19598() {
-        return m19600() * this.f24367;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10154[] m19599() {
-        return this.f24366;
+    @Override // l.InterfaceC4020
+    public final void onAnimationEnd() {
+        LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354 = this.f24149.f44491;
+        layoutInflaterFactory2C24354.f78980.setAlpha(1.0f);
+        layoutInflaterFactory2C24354.f78984.m54123((InterfaceC4020) null);
+        layoutInflaterFactory2C24354.f78984 = null;
     }
 }

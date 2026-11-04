@@ -1,45 +1,53 @@
 package l;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.ۨۛ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: R9DK */
+/* JADX INFO: renamed from: l.ۧۢۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O3Z6 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11523 extends AbstractC18909 {
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo10037(AbstractC9032 abstractC9032) throws IOException {
-        C2349 c2349 = (C2349) abstractC9032;
-        if (c2349.f8290 == null) {
-            m28700(c2349);
-        }
-        return c2349.f8290.length;
-    }
+public class C11523 implements InterfaceC1829 {
 
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10038(AbstractC9032 abstractC9032, C15382 c15382) throws IOException {
-        C2349 c2349 = (C2349) abstractC9032;
-        if (c2349.f8290 != null) {
-            c15382.write(c2349.f8290);
-            return;
-        }
-        Iterator it = c2349.iterator();
-        while (it.hasNext()) {
-            c15382.m36819((AbstractC9032) it.next());
-        }
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int[] f36268;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f36269 = 0;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m28700(C2349 c2349) throws IOException {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        C15382 c15382 = new C15382(this.f61194, byteArrayOutputStream);
-        Iterator it = c2349.iterator();
-        while (it.hasNext()) {
-            c15382.m36819((AbstractC9032) it.next());
+    public int f36267 = 1;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public void mo29015(int i) {
+    }
+
+    @Override // l.InterfaceC1829
+    /* JADX INFO: renamed from: ۙ */
+    public int mo6321(int i) {
+        if (i == this.f36269) {
+            return this.f36267;
         }
-        c2349.f8290 = byteArrayOutputStream.toByteArray();
+        this.f36269 = i;
+        int length = this.f36268.length - 1;
+        int i2 = 0;
+        while (i2 <= length) {
+            int i3 = (i2 + length) >> 1;
+            int i4 = this.f36268[i3];
+            if (i4 < i) {
+                i2 = i3 + 1;
+            } else {
+                if (i4 <= i) {
+                    int i5 = i3 + 1;
+                    this.f36267 = i5;
+                    return i5;
+                }
+                length = i3 - 1;
+            }
+        }
+        this.f36267 = i2;
+        return i2;
+    }
+
+    @Override // l.InterfaceC1829
+    /* JADX INFO: renamed from: ᩷ */
+    public int mo6322(int i) {
+        return (i - this.f36268[mo6321(i) - 1]) + 1;
     }
 }

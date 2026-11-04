@@ -8,7 +8,7 @@ import java.security.PublicKey;
 import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.security.spec.KeySpec;
-import l.C17114;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
@@ -21,7 +21,7 @@ import org.bouncycastle.jce.spec.ECParameterSpec;
 import org.bouncycastle.jce.spec.ECPrivateKeySpec;
 import org.bouncycastle.jce.spec.ECPublicKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyFactorySpi extends BaseKeyFactorySpi {
     private boolean isValid(ASN1ObjectIdentifier aSN1ObjectIdentifier) {
         return aSN1ObjectIdentifier.equals((ASN1Primitive) RosstandartObjectIdentifiers.id_tc26_gost_3410_12_256) || aSN1ObjectIdentifier.equals((ASN1Primitive) RosstandartObjectIdentifiers.id_tc26_gost_3410_12_512) || aSN1ObjectIdentifier.equals((ASN1Primitive) RosstandartObjectIdentifiers.id_tc26_agreement_gost_3410_12_256) || aSN1ObjectIdentifier.equals((ASN1Primitive) RosstandartObjectIdentifiers.id_tc26_agreement_gost_3410_12_512);
@@ -89,7 +89,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (isValid(algorithm)) {
             return new BCECGOST3410_2012PrivateKey(privateKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 
     @Override // org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter
@@ -98,6 +98,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (isValid(algorithm)) {
             return new BCECGOST3410_2012PublicKey(subjectPublicKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 }

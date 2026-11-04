@@ -1,45 +1,22 @@
 package l;
 
-import java.util.Arrays;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.text.style.ReplacementSpan;
 
-/* JADX INFO: renamed from: l.ᩴۜܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I8K8 */
+/* JADX INFO: renamed from: l.ܿ᩷۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: N7AP */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18594 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final byte[] f59156;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f59157;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f59158;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f59159;
-
-    public C18594(int i, byte[] bArr, int i2, int i3) {
-        this.f59159 = i;
-        this.f59156 = bArr;
-        this.f59158 = i2;
-        this.f59157 = i3;
+public final class C18594 extends ReplacementSpan {
+    @Override // android.text.style.ReplacementSpan
+    public final int getSize(Paint paint, CharSequence charSequence, int i, int i2, Paint.FontMetricsInt fontMetricsInt) {
+        return Math.max(1, Math.round(paint.getTextSize() * 0.8f));
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C18594.class == obj.getClass()) {
-            C18594 c18594 = (C18594) obj;
-            if (this.f59159 == c18594.f59159 && this.f59158 == c18594.f59158 && this.f59157 == c18594.f59157 && Arrays.equals(this.f59156, c18594.f59156)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        return ((((Arrays.hashCode(this.f59156) + (this.f59159 * 31)) * 31) + this.f59158) * 31) + this.f59157;
+    @Override // android.text.style.ReplacementSpan
+    public final void draw(Canvas canvas, CharSequence charSequence, int i, int i2, float f, int i3, int i4, int i5, Paint paint) {
+        float fMax = Math.max(1.0f, paint.getTextSize() * 0.8f);
+        Paint.FontMetrics fontMetrics = paint.getFontMetrics();
+        canvas.drawCircle((fMax / 2.0f) + f, ((fontMetrics.ascent + fontMetrics.descent) / 2.0f) + i4, Math.max(1.0f, paint.getTextSize() * 0.06f), paint);
     }
 }

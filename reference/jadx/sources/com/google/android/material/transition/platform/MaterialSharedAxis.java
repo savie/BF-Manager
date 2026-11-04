@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import l.C2387;
-import l.C8479;
+import l.C11642;
+import l.C13645;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class MaterialSharedAxis extends MaterialVisibility {
-    public static final int DEFAULT_THEMED_DURATION_ATTR = C2387.f9163;
-    public static final int DEFAULT_THEMED_EASING_ATTR = C2387.f8957;
+    public static final int DEFAULT_THEMED_DURATION_ATTR = C11642.f37276;
+    public static final int DEFAULT_THEMED_EASING_ATTR = C11642.f36560;
     public static final int X = 0;
     public static final int Y = 1;
     public static final int Z = 2;
@@ -87,7 +87,7 @@ public final class MaterialSharedAxis extends MaterialVisibility {
         if (i == 2) {
             return new ScaleProvider(z);
         }
-        throw new IllegalArgumentException(C8479.m22141(i, "Invalid axis: "));
+        throw new IllegalArgumentException(C13645.m33382(i, "Invalid axis: "));
     }
 
     public static VisibilityAnimatorProvider createSecondaryAnimatorProvider() {

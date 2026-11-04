@@ -1,50 +1,31 @@
 .class public final Ll/ۨۧܶ;
-.super Ll/۬ۧܶ;
-.source "067E"
+.super Ljava/lang/Object;
+.source "19KT"
 
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۖۧܶ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۖۧܶ;)V
-    .locals 0
-
-    .line 4201
-    iput-object p1, p0, Ll/ۨۧܶ;->ܺ:Ll/ۖۧܶ;
-
-    .line 82
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/ۜ֫ܶ;
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public final ۙ()Ll/ۛ֫ܶ;
     .locals 1
 
-    .line 4209
-    iget-object v0, p0, Ll/ۨۧܶ;->ܺ:Ll/ۖۧܶ;
-
-    check-cast v0, Ll/֨ܽܶ;
-
-    .line 168
-    iget-object v0, v0, Ll/֨ܽܶ;->ܽ:Ll/۬ܽܶ;
-
-    invoke-virtual {v0}, Ll/۬ܽܶ;->ܰ()Ljava/util/Iterator;
-
-    move-result-object v0
+    .line 127
+    sget-object v0, Ll/ۛ֫ܶ;->ۙۙ:Ll/ۛ֫ܶ;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/util/Map;
-    .locals 1
+.method public final ۙ(Ll/ۢۧܶ;Ll/ۜ᩹ܶ;)V
+    .locals 0
 
-    .line 4204
-    iget-object v0, p0, Ll/ۨۧܶ;->ܺ:Ll/ۖۧܶ;
+    .line 124
+    check-cast p1, Ll/ᩳ֫ܶ;
 
-    return-object v0
+    const/4 p1, 0x1
+
+    .line 246
+    invoke-virtual {p2, p1}, Ll/᩻ܶܶ;->ۙ(B)V
+
+    return-void
 .end method

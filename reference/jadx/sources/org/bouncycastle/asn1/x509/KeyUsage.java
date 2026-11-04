@@ -1,12 +1,12 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C9576;
+import l.C4791;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.DERBitString;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyUsage extends ASN1Object {
     public static final int cRLSign = 2;
     public static final int dataEncipherment = 16;
@@ -69,6 +69,6 @@ public class KeyUsage extends ASN1Object {
             sb = new StringBuilder("KeyUsage: 0x");
             i = (bytes[0] & 255) | ((bytes[1] & 255) << 8);
         }
-        return C9576.m24440(sb, i);
+        return C4791.m14766(sb, i);
     }
 }

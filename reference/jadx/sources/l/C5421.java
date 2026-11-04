@@ -1,39 +1,29 @@
 package l;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import net.sf.sevenzipjbinding.NativeXZOutputStream;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۚܳ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8CE */
+/* JADX INFO: renamed from: l.ۚۙ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9R5 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5421 implements InterfaceC6832 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int[] f18721 = {0, 3, 6, 7, 8};
-
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo4353(byte[] bArr, int i) {
-        return C6603.m17906(i, bArr);
+public final /* synthetic */ class C5421 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo4350(InterfaceC7739 interfaceC7739) {
-        return C6603.m17905(interfaceC7739);
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo4351(InputStream inputStream) {
-        return C10362.m26260(inputStream);
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final OutputStream mo4352(OutputStream outputStream, int i, long j) {
-        OutputStream outputStreamM26261 = C10362.m26261(outputStream, f18721[i]);
-        return (j <= 0 || !(outputStreamM26261 instanceof NativeXZOutputStream)) ? outputStreamM26261 : new C23061((NativeXZOutputStream) outputStreamM26261, j);
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        int i = ActivityC6167.f21005;
+        return ((C12132) obj).f39018 != null;
     }
 }

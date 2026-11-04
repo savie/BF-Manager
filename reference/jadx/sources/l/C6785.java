@@ -1,109 +1,68 @@
 package l;
 
-import java.nio.ByteBuffer;
-
-/* JADX INFO: renamed from: l.ۜ۬ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W8IZ */
+/* JADX INFO: renamed from: l.ۜ֨, reason: contains not printable characters */
+/* JADX INFO: compiled from: R5O3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6785 extends AbstractC16862 {
+public class C6785 implements InterfaceC8276 {
 
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public long f22909;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object[] f22613;
 
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public final C2460 f22910;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f22614;
 
-    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC3962 f22911;
-
-    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public final C16033 f22912;
-
-    @Override // l.InterfaceC4784, l.InterfaceC2667
-    public final String getName() {
-        return "CameraMotionRenderer";
-    }
-
-    @Override // l.InterfaceC4784
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo13264() {
+    @Override // l.InterfaceC8276
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean mo18920(Object obj) {
+        Object[] objArr;
+        boolean z;
+        C15243.m36590(obj, AbstractC0329.MATCH_INSTANCE_STR);
+        int i = this.f22614;
+        int i2 = 0;
+        while (true) {
+            objArr = this.f22613;
+            if (i2 >= i) {
+                z = false;
+                break;
+            }
+            if (objArr[i2] == obj) {
+                z = true;
+                break;
+            }
+            i2++;
+        }
+        if (z) {
+            throw new IllegalStateException("Already in the pool!");
+        }
+        int i3 = this.f22614;
+        if (i3 >= objArr.length) {
+            return false;
+        }
+        objArr[i3] = obj;
+        this.f22614 = i3 + 1;
         return true;
     }
 
-    public C6785() {
-        super(6);
-        this.f22912 = new C16033(1, 0);
-        this.f22910 = new C2460();
-    }
-
-    @Override // l.InterfaceC2667
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo8212(C7648 c7648) {
-        return "application/x-camera-motion".equals(c7648.f25265) ? C13958.m33811(4, 0, 0, 0) : C13958.m33811(0, 0, 0, 0);
-    }
-
-    @Override // l.AbstractC16862, l.InterfaceC23691
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo13941(int i, Object obj) {
-        if (i == 8) {
-            this.f22911 = (InterfaceC3962) obj;
+    public C6785(int i) {
+        if (i <= 0) {
+            throw new IllegalArgumentException("The max pool size must be > 0");
         }
+        this.f22613 = new Object[i];
     }
 
-    @Override // l.AbstractC16862
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo13942(long j, boolean z) {
-        this.f22909 = Long.MIN_VALUE;
-        InterfaceC3962 interfaceC3962 = this.f22911;
-        if (interfaceC3962 != null) {
-            interfaceC3962.mo11448();
+    @Override // l.InterfaceC8276
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Object mo18919() {
+        int i = this.f22614;
+        if (i <= 0) {
+            return null;
         }
-    }
-
-    @Override // l.InterfaceC4784
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo13260(long j, long j2) {
-        float[] fArr;
-        while (!mo13253() && this.f22909 < 100000 + j) {
-            C16033 c16033 = this.f22912;
-            c16033.mo7();
-            if (m39515(m39525(), c16033, 0) != -4 || c16033.m42264()) {
-                return;
-            }
-            long j3 = c16033.f51910;
-            this.f22909 = j3;
-            boolean z = j3 < m39528();
-            if (this.f22911 != null && !z) {
-                c16033.m38025();
-                ByteBuffer byteBuffer = c16033.f51912;
-                String str = C17983.f57504;
-                if (byteBuffer.remaining() != 16) {
-                    fArr = null;
-                } else {
-                    byte[] bArrArray = byteBuffer.array();
-                    int iLimit = byteBuffer.limit();
-                    C2460 c2460 = this.f22910;
-                    c2460.m7508(iLimit, bArrArray);
-                    c2460.m7510(byteBuffer.arrayOffset() + 4);
-                    float[] fArr2 = new float[3];
-                    for (int i = 0; i < 3; i++) {
-                        fArr2[i] = Float.intBitsToFloat(c2460.m7502());
-                    }
-                    fArr = fArr2;
-                }
-                if (fArr != null) {
-                    this.f22911.mo11447(this.f22909 - m39522(), fArr);
-                }
-            }
-        }
-    }
-
-    @Override // l.AbstractC16862
-    /* JADX INFO: renamed from: ۧ */
-    public final void mo13958() {
-        InterfaceC3962 interfaceC3962 = this.f22911;
-        if (interfaceC3962 != null) {
-            interfaceC3962.mo11448();
-        }
+        int i2 = i - 1;
+        Object[] objArr = this.f22613;
+        Object obj = objArr[i2];
+        C15243.m36587(obj, "null cannot be cast to non-null type T of androidx.core.util.Pools.SimplePool");
+        objArr[i2] = null;
+        this.f22614--;
+        return obj;
     }
 }

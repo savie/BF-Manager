@@ -16,7 +16,7 @@
     .locals 1
 
     .line 63
-    sget v0, Ll/ۖ۟ܶ;->ܽۚ:I
+    sget v0, Ll/ۧ۬ܺ;->֡ᩴ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/֨۟ܶ;->ۡ᩷:I
+    sget v1, Ll/ܽ۬ܺ;->ۨۘ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -56,14 +56,14 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->᩸᩷:I
+    sget v2, Ll/ܽ۬ܺ;->ܽۘ:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     .line 82
-    sget-object v4, Ll/۠۟ܶ;->۠ܶ:[I
+    sget-object v4, Ll/ܰ۬ܺ;->ۗܺ:[I
 
     const/4 v8, 0x0
 
@@ -83,7 +83,7 @@
     move-result-object p2
 
     .line 85
-    sget p3, Ll/۠۟ܶ;->ۤܶ:I
+    sget p3, Ll/ܰ۬ܺ;->ۛܺ:I
 
     .line 87
     invoke-static {p1, p2, p3, v0}, Lcom/google/android/material/resources/MaterialResources;->getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
@@ -102,7 +102,7 @@
     iput p3, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
 
     .line 93
-    sget p3, Ll/۠۟ܶ;->ۡܶ:I
+    sget p3, Ll/ܰ۬ܺ;->ۨܺ:I
 
     .line 94
     invoke-static {p1, p2, p3, v1}, Lcom/google/android/material/resources/MaterialResources;->getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
@@ -112,7 +112,7 @@
     iput p1, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorInset:I
 
     .line 99
-    sget p1, Ll/۠۟ܶ;->᩵ܶ:I
+    sget p1, Ll/ܰ۬ܺ;->᩵ܺ:I
 
     .line 100
     invoke-virtual {p2, p1, v8}, Landroid/content/res/TypedArray;->getInt(II)I

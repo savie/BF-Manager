@@ -1,22 +1,22 @@
 package l;
 
-import android.graphics.Path;
-import android.view.animation.Interpolator;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 
-/* JADX INFO: renamed from: l.֫ܶ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: K582 */
+/* JADX INFO: renamed from: l.֫۫֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1915 {
+public final class C1915 extends AnimatorListenerAdapter {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Interpolator f7261;
+    public final /* synthetic */ ActivityC7135 f6441;
 
-    static {
-        Path path = new Path();
-        path.moveTo(0.0f, 0.0f);
-        path.cubicTo(0.06834272f, 0.019925667f, 0.19220331f, 0.15855429f, 0.33333334f, 0.3492616f);
-        path.cubicTo(0.38410434f, 0.41477913f, 0.5494579f, 0.6813603f, 0.6666667f, 0.68279964f);
-        path.cubicTo(0.75258625f, 0.6817962f, 0.73725396f, 0.8788962f, 1.0f, 1.0f);
-        f7261 = C7189.m19122(path);
+    public C1915(ActivityC7135 activityC7135) {
+        this.f6441 = activityC7135;
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator) {
+        this.f6441.f23595.setVisibility(4);
     }
 }

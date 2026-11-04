@@ -234,13 +234,11 @@
     invoke-direct {v2}, Lbin/mt/plugin/api/util/UIUpdaterGroup;-><init>()V
 
     .line 53
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Ll/֨᩷ۘ;
+    new-instance v3, Ll/ܽۚۧ;
 
-    const/4 v4, 0x5
-
-    invoke-direct {v3, v4, p1}, Ll/֨᩷ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, p1}, Ll/ܽۚۧ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v2, v3}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -249,9 +247,11 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/DualProgressDialog;->titleUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 54
-    new-instance p1, Ll/֨ܳ᩺;
+    new-instance p1, Ll/ۜܺܺ;
 
-    invoke-direct {p1, p0}, Ll/֨ܳ᩺;-><init>(Ljava/lang/Object;)V
+    const/4 v3, 0x5
+
+    invoke-direct {p1, v3, p0}, Ll/ۜܺܺ;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v2, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -260,13 +260,11 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/DualProgressDialog;->messageUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 68
-    invoke-static {v1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Ll/᩸᩵ۖ;
+    new-instance p1, Ll/ܿۛܳ;
 
-    const/4 v3, 0x6
-
-    invoke-direct {p1, v3, v1}, Ll/᩸᩵ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1}, Ll/ܿۛܳ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v2, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -275,13 +273,11 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/DualProgressDialog;->subProgressUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 69
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Ll/᩸᩵ۖ;
+    new-instance p1, Ll/ܿۛܳ;
 
-    const/4 v1, 0x6
-
-    invoke-direct {p1, v1, v0}, Ll/᩸᩵ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ll/ܿۛܳ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v2, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -403,11 +399,11 @@
     .locals 2
 
     .line 197
-    new-instance v0, Ll/ᩴۘ᩹;
+    new-instance v0, Ll/ۜۙ᩻;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, v1, p0}, Ll/ᩴۘ᩹;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/ۜۙ᩻;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -464,14 +460,12 @@
 .end method
 
 .method public setMaxSubProgress(I)Lbin/mt/plugin/api/ui/dialog/DualProgressDialog;
-    .locals 2
+    .locals 1
 
     .line 123
-    new-instance v0, Ll/ۙۡۚ;
+    new-instance v0, Lbin/mt/plugin/api/ui/dialog/DualProgressDialog$$ExternalSyntheticLambda4;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1, p0}, Ll/ۙۡۚ;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, Lbin/mt/plugin/api/ui/dialog/DualProgressDialog$$ExternalSyntheticLambda4;-><init>(Lbin/mt/plugin/api/ui/dialog/DualProgressDialog;I)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->runOnUiThread(Ljava/lang/Runnable;)V
 

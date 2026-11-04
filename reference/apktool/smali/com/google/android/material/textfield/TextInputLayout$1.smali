@@ -95,7 +95,7 @@
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->val$editText:Landroid/widget/EditText;
 
     .line 1586
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2393
     invoke-virtual {v0}, Landroid/view/View;->getMinimumHeight()I

@@ -1,82 +1,104 @@
-.class public final synthetic Ll/۟ᩴۨ;
+.class public final Ll/۟ᩴۨ;
 .super Ljava/lang/Object;
-.source "G7I1"
+.source "54FG"
 
 # interfaces
-.implements Ll/ܰۡۨ;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ᩳᩴۨ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ᩳᩴۨ;)V
+    .locals 0
+
+    .line 57
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۟ᩴۨ;->ܰ:Ll/ᩳᩴۨ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 60
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Ll/۟ᩴۨ;->ܰ:Ll/ᩳᩴۨ;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-object v0
+    move-result-wide v1
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1, v2}, Ll/ᩳᩴۨ;->ۙ(J)J
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+    move-result-wide v0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    const-wide/16 v2, -0x1
 
-    move-result-object p1
+    cmp-long v4, v0, v2
 
-    return-object p1
-.end method
+    if-nez v4, :cond_1
 
-.method public final ۙ(I)Z
-    .locals 1
+    return-void
 
-    .line 400
-    invoke-static {p1}, Ljava/lang/Character;->isLowerCase(I)Z
+    :cond_1
+    const-wide/16 v2, 0x0
 
-    move-result v0
+    cmp-long v4, v0, v2
 
-    if-nez v0, :cond_1
+    if-lez v4, :cond_0
 
-    .line 401
-    invoke-static {p1}, Ljava/lang/Character;->isUpperCase(I)Z
+    const-wide/32 v2, 0xf4240
 
-    move-result v0
+    .line 63
+    div-long v4, v0, v2
 
-    if-nez v0, :cond_1
+    mul-long v2, v2, v4
 
-    .line 402
-    invoke-static {p1}, Ljava/lang/Character;->isTitleCase(I)Z
+    sub-long v1, v0, v2
 
-    move-result p1
+    .line 65
+    iget-object v0, p0, Ll/۟ᩴۨ;->ܰ:Ll/ᩳᩴۨ;
 
-    if-eqz p1, :cond_0
+    monitor-enter v0
+
+    .line 67
+    :try_start_0
+    iget-object v3, p0, Ll/۟ᩴۨ;->ܰ:Ll/ᩳᩴۨ;
+
+    long-to-int v2, v1
+
+    invoke-virtual {v3, v4, v5, v2}, Ljava/lang/Object;->wait(JI)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    .line 70
+    :catch_0
+    :goto_1
+    :try_start_1
+    monitor-exit v0
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
+    :goto_2
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
-
-    move-result-object p1
-
-    return-object p1
+    throw v1
 .end method

@@ -3,14 +3,14 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.crypto.engines.GOST28147Engine;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST28147ParameterSpec implements AlgorithmParameterSpec {
     public static Map oidMappings;
     public byte[] iv;
@@ -76,6 +76,6 @@ public class GOST28147ParameterSpec implements AlgorithmParameterSpec {
         if (str != null) {
             return str;
         }
-        throw new IllegalArgumentException(C22979.m50820("unknown OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unknown OID: ", aSN1ObjectIdentifier));
     }
 }

@@ -1,54 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ܳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q6MT */
-/* JADX INFO: loaded from: classes4.dex */
+import java.util.ArrayDeque;
+
+/* JADX INFO: renamed from: l.᩶֡ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H74H */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C20937 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C14588 f68245;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f66985 = new ArrayDeque();
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f68246;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f66986 = new ArrayDeque();
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C14223 m47870() {
+        C14223 c14223 = (C14223) this.f66986.removeFirst();
+        this.f66985.push(c14223);
+        return c14223;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C14223 m47871() {
+        return (C14223) this.f66986.peekFirst();
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f68247;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f68248;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f68249;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int f68250;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f68251;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C11338 f68252;
-
-    public /* synthetic */ C20937(String str, int i, int i2, C14588 c14588, C11338 c11338) {
-        this(str, i, i2, 1, "image/x-tga", c14588, -1L, c11338);
+    public final boolean m47869() {
+        return this.f66986.isEmpty();
     }
 
-    public C20937(String str, int i, int i2, int i3, String str2, C14588 c14588) {
-        this(str, i, i2, i3, str2, c14588, -1L, null);
-    }
-
-    public C20937(String str, int i, int i2, int i3, String str2, C14588 c14588, long j) {
-        this(str, i, i2, i3, str2, c14588, j, null);
-    }
-
-    public C20937(String str, int i, int i2, int i3, String str2, C14588 c14588, long j, C11338 c11338) {
-        this.f68252 = c11338;
-        this.f68248 = str;
-        this.f68250 = i;
-        this.f68251 = i2;
-        this.f68246 = i3;
-        this.f68249 = str2;
-        this.f68245 = c14588;
-        this.f68247 = j;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m47868(int i, int i2, long j) {
+        C14223 c14223;
+        ArrayDeque arrayDeque = this.f66985;
+        if (!arrayDeque.isEmpty()) {
+            c14223 = (C14223) arrayDeque.pop();
+        } else {
+            c14223 = new C14223();
+            c14223.f44944 = j;
+            c14223.f44942 = i;
+            c14223.f44943 = i2;
+        }
+        c14223.f44944 = j;
+        c14223.f44942 = i;
+        c14223.f44943 = i2;
+        this.f66986.addLast(c14223);
     }
 }

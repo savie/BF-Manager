@@ -1,118 +1,283 @@
 package l;
 
-import java.io.File;
-import java.text.ParseException;
-import java.util.Locale;
+import android.view.View;
+import android.view.ViewGroup;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܶ᩸᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B5PU */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15507 extends AbstractC11979 {
-    public C15507(C12497 c12497) {
-        super("(\\S+)\\s+(?:(\\d+)\\s+)?(?:(\\S+)\\s+(\\S+)\\s+)?(\\*STMF|\\*DIR|\\*FILE|\\*MEM)\\s+((\\S+\\s*)+)?");
-        mo15525(c12497);
+/* JADX INFO: renamed from: l.ܳܿ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 152K */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15507 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public View f50474;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C22661 f50475;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f50476 = 0;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19983 f50472 = new C19983();
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f50473 = new ArrayList();
+
+    public C15507(C22661 c22661) {
+        this.f50475 = c22661;
     }
 
-    @Override // l.AbstractC11979
-    /* JADX INFO: renamed from: ۙ */
-    public final C12497 mo4882() {
-        return new C12497("OS/400", "yy/MM/dd HH:mm:ss", null);
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static boolean m37111(String str) {
-        return str == null || str.isEmpty();
-    }
-
-    /* JADX WARN: Code duplicated, block: B:56:0x00ea  */
-    /* JADX WARN: Code duplicated, block: B:58:0x00f0  */
-    @Override // l.InterfaceC23786
-    /* JADX INFO: renamed from: ۙ */
-    public final C11086 mo4881(String str) {
-        String str2;
-        boolean z;
-        int iLastIndexOf;
-        C11086 c11086 = new C11086();
-        c11086.m27944(str);
-        if (!m29790(str)) {
-            return null;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    private void m37148(View view) {
+        this.f50473.add(view);
+        AbstractC11800 abstractC11800M56274 = C25227.m56274(view);
+        if (abstractC11800M56274 != null) {
+            abstractC11800M56274.onEnteredHiddenState(this.f50475.f73581);
         }
-        String strM29788 = m29788(1);
-        String strM29789 = m29788(2);
-        int i = 3;
-        if (m37111(m29788(3)) && m37111(m29788(4))) {
-            str2 = "";
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    private void m37147(View view) {
+        AbstractC11800 abstractC11800M56274;
+        if (!this.f50473.remove(view) || (abstractC11800M56274 = C25227.m56274(view)) == null) {
+            return;
+        }
+        abstractC11800M56274.onLeftHiddenState(this.f50475.f73581);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m37154(View view, int i, boolean z) {
+        int iM37149;
+        C25227 c25227 = this.f50475.f73581;
+        if (i >= 0) {
+            iM37149 = m37149(i);
         } else {
-            str2 = m29788(3) + " " + m29788(4);
+            iM37149 = c25227.getChildCount();
         }
-        String strM297810 = m29788(5);
-        String strM297811 = m29788(6);
-        try {
-            c11086.m27951(m29789(str2));
-        } catch (ParseException unused) {
-        }
-        try {
-            if (strM297810.equalsIgnoreCase("*STMF")) {
-                if (m37111(strM29789) || m37111(strM297811)) {
-                    return null;
-                }
-                i = 0;
-            } else {
-                if (!strM297810.equalsIgnoreCase("*DIR")) {
-                    if (!strM297810.equalsIgnoreCase("*FILE")) {
-                        if (strM297810.equalsIgnoreCase("*MEM")) {
-                            if (m37111(strM297811) || !m37111(strM29789) || !m37111(str2)) {
-                                return null;
-                            }
-                            strM297811 = strM297811.replace('/', File.separatorChar);
-                        }
-                        c11086.m27947(i);
-                        c11086.m27954(strM29788);
-                        c11086.m27949(Long.parseLong(strM29789));
-                        if (strM297811.endsWith("/")) {
-                            strM297811 = C20630.m46498(1, 0, strM297811);
-                        }
-                        if (z && (iLastIndexOf = strM297811.lastIndexOf(47)) > -1) {
-                            strM297811 = strM297811.substring(iLastIndexOf + 1);
-                        }
-                        c11086.m27957(strM297811);
-                        return c11086;
-                    }
-                    if (strM297811 == null || !strM297811.toUpperCase(Locale.ROOT).endsWith(".SAVF")) {
-                        return null;
-                    }
-                    i = 0;
-                    z = false;
-                    c11086.m27947(i);
-                    c11086.m27954(strM29788);
-                    c11086.m27949(Long.parseLong(strM29789));
-                    if (strM297811.endsWith("/")) {
-                        strM297811 = C20630.m46498(1, 0, strM297811);
-                    }
-                    if (z) {
-                        strM297811 = strM297811.substring(iLastIndexOf + 1);
-                    }
-                    c11086.m27957(strM297811);
-                    return c11086;
-                }
-                if (m37111(strM29789) || m37111(strM297811)) {
-                    return null;
-                }
-                i = 1;
-            }
-            c11086.m27949(Long.parseLong(strM29789));
-        } catch (NumberFormatException unused2) {
-        }
-        z = true;
-        c11086.m27947(i);
-        c11086.m27954(strM29788);
-        if (strM297811.endsWith("/")) {
-            strM297811 = C20630.m46498(1, 0, strM297811);
-        }
+        this.f50472.m45921(iM37149, z);
         if (z) {
-            strM297811 = strM297811.substring(iLastIndexOf + 1);
+            m37148(view);
         }
-        c11086.m27957(strM297811);
-        return c11086;
+        c25227.addView(view, iM37149);
+        c25227.dispatchChildAttached(view);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private int m37149(int i) {
+        if (i < 0) {
+            return -1;
+        }
+        int childCount = this.f50475.f73581.getChildCount();
+        int i2 = i;
+        while (i2 < childCount) {
+            C19983 c19983 = this.f50472;
+            int iM45924 = i - (i2 - c19983.m45924(i2));
+            if (iM45924 == 0) {
+                while (c19983.m45922(i2)) {
+                    i2++;
+                }
+                return i2;
+            }
+            i2 += iM45924;
+        }
+        return -1;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m37156(View view) {
+        C22661 c22661 = this.f50475;
+        int i = this.f50476;
+        if (i == 1) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeView(At)");
+        }
+        if (i == 2) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeViewIfHidden");
+        }
+        try {
+            this.f50476 = 1;
+            this.f50474 = view;
+            int iIndexOfChild = c22661.f73581.indexOfChild(view);
+            if (iIndexOfChild >= 0) {
+                if (this.f50472.m45925(iIndexOfChild)) {
+                    m37147(view);
+                }
+                c22661.m51056(iIndexOfChild);
+            }
+        } finally {
+            this.f50476 = 0;
+            this.f50474 = null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m37161(int i) {
+        C22661 c22661 = this.f50475;
+        int i2 = this.f50476;
+        if (i2 == 1) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeView(At)");
+        }
+        if (i2 == 2) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeViewIfHidden");
+        }
+        try {
+            int iM37149 = m37149(i);
+            View childAt = c22661.f73581.getChildAt(iM37149);
+            if (childAt != null) {
+                this.f50476 = 1;
+                this.f50474 = childAt;
+                if (this.f50472.m45925(iM37149)) {
+                    m37147(childAt);
+                }
+                c22661.m51056(iM37149);
+            }
+        } finally {
+            this.f50476 = 0;
+            this.f50474 = null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View m37160(int i) {
+        return this.f50475.f73581.getChildAt(m37149(i));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m37153(View view, int i, ViewGroup.LayoutParams layoutParams, boolean z) {
+        int iM37149;
+        C25227 c25227 = this.f50475.f73581;
+        if (i >= 0) {
+            iM37149 = m37149(i);
+        } else {
+            iM37149 = c25227.getChildCount();
+        }
+        this.f50472.m45921(iM37149, z);
+        if (z) {
+            m37148(view);
+        }
+        AbstractC11800 abstractC11800M56274 = C25227.m56274(view);
+        if (abstractC11800M56274 != null) {
+            if (!abstractC11800M56274.isTmpDetached() && !abstractC11800M56274.shouldIgnore()) {
+                throw new IllegalArgumentException("Called attach on a child which is not detached: " + abstractC11800M56274 + c25227.exceptionLabel());
+            }
+            if (C25227.sVerboseLoggingEnabled) {
+                abstractC11800M56274.toString();
+            }
+            abstractC11800M56274.clearTmpDetachFlag();
+        } else if (C25227.sDebugAssertionsEnabled) {
+            throw new IllegalArgumentException("No ViewHolder found for child: " + view + ", index: " + iM37149 + c25227.exceptionLabel());
+        }
+        c25227.attachViewToParent(view, iM37149, layoutParams);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m37150() {
+        return this.f50475.f73581.getChildCount() - this.f50473.size();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m37158() {
+        return this.f50475.f73581.getChildCount();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final View m37155(int i) {
+        return this.f50475.f73581.getChildAt(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m37151(int i) {
+        int iM37149 = m37149(i);
+        this.f50472.m45925(iM37149);
+        C25227 c25227 = this.f50475.f73581;
+        View childAt = c25227.getChildAt(iM37149);
+        if (childAt != null) {
+            AbstractC11800 abstractC11800M56274 = C25227.m56274(childAt);
+            if (abstractC11800M56274 != null) {
+                if (abstractC11800M56274.isTmpDetached() && !abstractC11800M56274.shouldIgnore()) {
+                    throw new IllegalArgumentException("called detach on an already detached child " + abstractC11800M56274 + c25227.exceptionLabel());
+                }
+                if (C25227.sVerboseLoggingEnabled) {
+                    abstractC11800M56274.toString();
+                }
+                abstractC11800M56274.addFlags(256);
+            }
+        } else if (C25227.sDebugAssertionsEnabled) {
+            throw new IllegalArgumentException("No view at offset " + iM37149 + c25227.exceptionLabel());
+        }
+        c25227.detachViewFromParent(iM37149);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m37159(View view) {
+        int iIndexOfChild = this.f50475.f73581.indexOfChild(view);
+        if (iIndexOfChild != -1) {
+            C19983 c19983 = this.f50472;
+            if (!c19983.m45922(iIndexOfChild)) {
+                return iIndexOfChild - c19983.m45924(iIndexOfChild);
+            }
+        }
+        return -1;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m37152(View view) {
+        int iIndexOfChild = this.f50475.f73581.indexOfChild(view);
+        if (iIndexOfChild < 0) {
+            throw new IllegalArgumentException("view is not a child, cannot hide " + view);
+        }
+        this.f50472.m45923(iIndexOfChild);
+        m37148(view);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m37157(View view) {
+        int iIndexOfChild = this.f50475.f73581.indexOfChild(view);
+        if (iIndexOfChild < 0) {
+            throw new IllegalArgumentException("view is not a child, cannot hide " + view);
+        }
+        C19983 c19983 = this.f50472;
+        if (!c19983.m45922(iIndexOfChild)) {
+            throw new RuntimeException("trying to unhide a view that was not hidden" + view);
+        }
+        c19983.m45920(iIndexOfChild);
+        m37147(view);
+    }
+
+    public final String toString() {
+        return this.f50472.toString() + ", hidden list:" + this.f50473.size();
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m37162(View view) {
+        C19983 c19983 = this.f50472;
+        C22661 c22661 = this.f50475;
+        int i = this.f50476;
+        if (i == 1) {
+            if (this.f50474 == view) {
+                return false;
+            }
+            throw new IllegalStateException("Cannot call removeViewIfHidden within removeView(At) for a different view");
+        }
+        if (i == 2) {
+            throw new IllegalStateException("Cannot call removeViewIfHidden within removeViewIfHidden");
+        }
+        try {
+            this.f50476 = 2;
+            int iIndexOfChild = c22661.f73581.indexOfChild(view);
+            if (iIndexOfChild == -1) {
+                m37147(view);
+                return true;
+            }
+            if (!c19983.m45922(iIndexOfChild)) {
+                return false;
+            }
+            c19983.m45925(iIndexOfChild);
+            m37147(view);
+            c22661.m51056(iIndexOfChild);
+            return true;
+        } finally {
+            this.f50476 = 0;
+        }
     }
 }

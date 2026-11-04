@@ -1,41 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙܽۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 09BJ */
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
+
+/* JADX INFO: renamed from: l.ۙ۠ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26C0 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4768 extends AbstractC17698 {
+public final class C4768 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22408 f16783;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19684 f16723;
 
-    public C4768(int i, AbstractC17698 abstractC17698, AbstractC22408 abstractC22408) {
-        super(i, abstractC17698);
-        this.f16783 = abstractC22408;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C1345 f16724;
+
+    public C4768(C1345 c1345, C19684 c19684) {
+        this.f16724 = c1345;
+        this.f16723 = c19684;
     }
 
-    @Override // l.AbstractC17698
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9812 mo13234(String str, boolean z) {
-        AbstractC22408 abstractC22408 = this.f16783;
-        abstractC22408.getClass();
-        AbstractC9812 abstractC9812Mo13234 = super.mo13234(AbstractC22408.m49687(str), z);
-        if (abstractC9812Mo13234 == null) {
-            return null;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C4768)) {
+            return false;
         }
-        int i = this.f56194;
-        return new C9233(i, str, abstractC9812Mo13234, abstractC22408).m23752(new C9233(i, null, abstractC9812Mo13234, abstractC22408));
+        C4768 c4768 = (C4768) obj;
+        return C17359.equals(this.f16724, c4768.f16724) && C17359.equals(this.f16723, c4768.f16723);
     }
 
-    @Override // l.AbstractC17698
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9812 mo13233(int i, C1470 c1470, String str, boolean z) {
-        AbstractC22408 abstractC22408 = this.f16783;
-        abstractC22408.getClass();
-        AbstractC9812 abstractC9812Mo13233 = super.mo13233(i, c1470, AbstractC22408.m49687(str), z);
-        if (abstractC9812Mo13233 == null) {
-            return null;
+    public final int hashCode() {
+        return C17359.hashCode(this.f16723) + (C17359.hashCode(this.f16724) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f16724, this.f16723};
+        String[] strArrSplit = "type;handler".length() == 0 ? new String[0] : "type;handler".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C4768.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
         }
-        int i2 = this.f56194;
-        return new C9233(i2, str, abstractC9812Mo13233, abstractC22408).m23752(new C9233(i2, null, abstractC9812Mo13233, abstractC22408));
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19684 m14718() {
+        return this.f16723;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C1345 m14719() {
+        return this.f16724;
     }
 }

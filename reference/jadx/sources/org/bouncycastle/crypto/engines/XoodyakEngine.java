@@ -7,7 +7,7 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class XoodyakEngine extends AEADBaseEngine {
     public static final int ModeHash = 1;
     public static final int ModeKeyed = 0;

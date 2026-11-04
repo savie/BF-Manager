@@ -1,33 +1,40 @@
-.class public final Ll/֡ۧۘ;
-.super Ll/ۜܿܰ;
-.source "31K1"
+.class public final synthetic Ll/֡ۧۘ;
+.super Ljava/lang/Object;
+.source "B7KX"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/ۚ᩻ۘ;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۚ᩻ۘ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 756
-    iput-object p1, p0, Ll/֡ۧۘ;->ۙ:Ll/ۚ᩻ۘ;
+    .line 801
+    invoke-static {}, Ll/᩶ܿۘ;->values()[Ll/᩶ܿۘ;
 
-    invoke-direct {p0}, Ll/ۜܿܰ;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final onScrolled(Ll/ܿܿܰ;II)V
-    .locals 0
+    sput-object v0, Ll/֡ۧۘ;->ۙ:[I
 
-    .line 759
-    iget-object p1, p0, Ll/֡ۧۘ;->ۙ:Ll/ۚ᩻ۘ;
+    :try_start_0
+    sget-object v1, Ll/᩶ܿۘ;->ۧۤ:Ll/᩶ܿۘ;
 
-    invoke-static {p1}, Ll/ۚ᩻ۘ;->ۢ(Ll/ۚ᩻ۘ;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
     return-void
 .end method

@@ -1,109 +1,65 @@
 .class public final Ll/ۛܳ᩸;
-.super Ll/ۨܳ᩸;
-.source "B9H2"
+.super Ll/᩺ܳ᩸;
+.source "4B3Z"
+
+# interfaces
+.implements Lnet/sf/sevenzipjbinding/ICryptoGetTextPassword;
 
 
 # instance fields
-.field public ۚ:[B
+.field public final synthetic ᩳ:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/᩶ܳ᩸;Ljava/lang/String;)V
     .locals 0
 
-    .line 28
-    invoke-direct {p0}, Ll/ۨܳ᩸;-><init>()V
+    .line 76
+    iput-object p2, p0, Ll/ۛܳ᩸;->ᩳ:Ljava/lang/String;
+
+    .line 77
+    invoke-direct {p0, p1}, Ll/᩺ܳ᩸;-><init>(Ll/᩶ܳ᩸;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۬()[B
+.method public final cryptoGetTextPassword()Ljava/lang/String;
     .locals 1
 
-    .line 63
-    iget-object v0, p0, Ll/ۛܳ᩸;->ۚ:[B
+    .line 82
+    iget-object v0, p0, Ll/ۛܳ᩸;->ᩳ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܰ(Ll/᩵ۙᩳ;)V
-    .locals 5
+.method public final getItemInformation(ILnet/sf/sevenzipjbinding/impl/OutItemFactory;)Lnet/sf/sevenzipjbinding/IOutItemBase;
+    .locals 2
 
-    const/4 v0, 0x2
+    .line 96
+    iget-object v0, p0, Ll/᩺ܳ᩸;->ܰ:Ll/᩶ܳ᩸;
 
-    .line 38
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ۚ(I)V
-
-    .line 39
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ۚ(I)V
-
-    .line 40
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
-
-    const/16 v0, 0x8
-
-    new-array v1, v0, [B
-
-    .line 293
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    new-array v1, v0, [B
-
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    .line 43
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
-
-    move-result v0
-
-    .line 44
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
 
     move-result v1
 
-    .line 45
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
+    if-nez v1, :cond_0
 
-    move-result v2
+    .line 99
+    invoke-interface {v0, p1, p2}, Ll/᩶ܳ᩸;->getItemInformation(ILnet/sf/sevenzipjbinding/impl/OutItemFactory;)Lnet/sf/sevenzipjbinding/impl/OutItem;
 
-    .line 46
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
+    move-result-object p1
 
-    move-result v3
+    return-object p1
 
-    const/4 v4, 0x4
-
-    .line 47
-    invoke-virtual {p1, v4}, Ll/ۧۢ᩸;->ۚ(I)V
-
-    .line 48
-    invoke-virtual {p1, v4}, Ll/ۧۢ᩸;->ۚ(I)V
-
-    if-lez v1, :cond_0
-
-    .line 51
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ۖ(I)V
-
-    .line 52
-    invoke-virtual {p1, v1}, Ll/ۧۢ᩸;->ۨ(I)[B
-
+    .line 97
     :cond_0
-    if-lez v3, :cond_1
+    new-instance p1, Lnet/sf/sevenzipjbinding/SevenZipException;
 
-    .line 56
-    invoke-virtual {p1, v2}, Ll/ۧۢ᩸;->ۖ(I)V
+    const-string p2, "Canceled"
 
-    .line 280
-    new-array v0, v3, [B
+    invoke-direct {p1, p2}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/String;)V
 
-    .line 293
-    invoke-virtual {p1, v3, v0}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    .line 57
-    iput-object v0, p0, Ll/ۛܳ᩸;->ۚ:[B
-
-    :cond_1
-    return-void
+    throw p1
 .end method

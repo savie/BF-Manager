@@ -1,63 +1,66 @@
 .class public final Ll/ۗ۠ᩴ;
-.super Ll/᩹᩵ᩴ;
-.source "DD2"
-
-# interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
-
-
-# instance fields
-.field public final ۛ:Ll/ۖ᩵ᩴ;
+.super Ljava/lang/Object;
+.source "Q7Z8"
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ᩵ᩴ;)V
+.method public static ۙ(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
     .locals 1
 
-    .line 784
-    invoke-direct {p0, p1}, Ll/᩹᩵ᩴ;-><init>(Ll/ۜ᩵ᩴ;)V
+    .line 224
+    new-instance v0, Ll/᩹۠ᩴ;
 
-    .line 785
-    new-instance v0, Ll/ۖ᩵ᩴ;
+    invoke-direct {v0, p0, p1}, Ll/᩹۠ᩴ;-><init>(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
 
-    invoke-direct {v0, p1}, Ll/ۖ᩵ᩴ;-><init>(Ll/ۜ᩵ᩴ;)V
-
-    iput-object v0, p0, Ll/ۗ۠ᩴ;->ۛ:Ll/ۖ᩵ᩴ;
+    .line 309
+    invoke-virtual {v0}, Ll/ۖۙܺ;->۫()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final next()Ljava/lang/Object;
+.method public static ۤ(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
     .locals 2
 
-    .line 789
-    invoke-virtual {p0}, Ll/᩹᩵ᩴ;->ۙ()I
+    .line 82
+    invoke-virtual {p0}, Ll/۠ۨܳ;->᩹()Lbin/mt/plus/Main;
 
-    move-result v0
+    move-result-object v0
 
-    iget-object v1, p0, Ll/ۗ۠ᩴ;->ۛ:Ll/ۖ᩵ᩴ;
+    .line 83
+    new-instance v1, Ll/᩻۠ᩴ;
 
-    iput v0, v1, Ll/ۖ᩵ᩴ;->ܺ:I
+    invoke-direct {v1, v0, p1, p0}, Ll/᩻۠ᩴ;-><init>(Lbin/mt/plus/Main;Ll/᩷ۨᩴ;Ll/۠ۨܳ;)V
 
-    return-object v1
+    .line 166
+    invoke-virtual {v1}, Ll/ۖۙܺ;->۫()V
+
+    return-void
 .end method
 
-.method public final ۙ(ILjava/lang/Object;)V
+.method public static ᩷(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
     .locals 1
 
-    .line 784
-    check-cast p2, Ljava/util/function/Consumer;
+    .line 170
+    new-instance v0, Ll/ܺ۠ᩴ;
 
-    .line 796
-    iget-object v0, p0, Ll/ۗ۠ᩴ;->ۛ:Ll/ۖ᩵ᩴ;
+    invoke-direct {v0, p0, p1}, Ll/ܺ۠ᩴ;-><init>(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
 
-    iput p1, v0, Ll/ۖ᩵ᩴ;->ܺ:I
+    .line 220
+    invoke-virtual {v0}, Ll/ۖۙܺ;->۫()V
 
-    .line 797
-    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    return-void
+.end method
+
+.method public static ᩸(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
+    .locals 1
+
+    .line 35
+    new-instance v0, Ll/ۚ۠ᩴ;
+
+    invoke-direct {v0, p0, p1}, Ll/ۚ۠ᩴ;-><init>(Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
+
+    .line 78
+    invoke-virtual {v0}, Ll/ۖۙܺ;->۫()V
 
     return-void
 .end method

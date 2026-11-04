@@ -1,37 +1,62 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۧ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: C7AH */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6007 {
+import com.umeng.commonsdk.listener.OnGetOaidListener;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.util.function.Consumer;
+import net.sf.sevenzipjbinding.ISequentialOutStream;
+import net.sf.sevenzipjbinding.SevenZipException;
+
+/* JADX INFO: renamed from: l.ۚ᩻ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BMC */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C6007 implements InterfaceC19795, InterfaceC5392, ISequentialOutStream, OnGetOaidListener {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C6007 f20407 = new C6007(null);
+    public final /* synthetic */ int f20558;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7768 f20408;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f20559;
 
-    public C6007(C7768 c7768) {
-        this.f20408 = c7768;
+    public /* synthetic */ C6007(int i, Object obj) {
+        this.f20558 = i;
+        this.f20559 = obj;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6007 m16307() {
-        return f20407;
+    public /* synthetic */ C6007(C11041 c11041, Object obj, long j) {
+        this.f20558 = 2;
+        this.f20559 = obj;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6007 m16308(C7768 c7768) {
-        return new C6007(c7768);
+    @Override // com.umeng.commonsdk.listener.OnGetOaidListener
+    public void onGetOaid(String str) {
+        ((Consumer) this.f20559).n(str);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m16310(C6007 c6007) {
-        return c6007.f20408 == null;
+    @Override // l.InterfaceC19795
+    public void invoke(Object obj) {
+        switch (this.f20558) {
+            case 1:
+                ((InterfaceC10582) obj).mo7233((C18787) this.f20559);
+                break;
+            default:
+                ((InterfaceC19992) obj).getClass();
+                break;
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C7768 m16309(C6007 c6007) {
-        return c6007.f20408;
+    @Override // net.sf.sevenzipjbinding.ISequentialOutStream
+    public int write(ByteBuffer byteBuffer) throws SevenZipException {
+        try {
+            return ((InterfaceC11573) this.f20559).write(byteBuffer);
+        } catch (IOException e) {
+            throw new SevenZipException(e);
+        }
+    }
+
+    @Override // l.InterfaceC5392
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1772(AbstractC22044 abstractC22044) {
+        new DialogInterfaceOnClickListenerC14300((C8614) this.f20559, abstractC22044.mo4294());
     }
 }

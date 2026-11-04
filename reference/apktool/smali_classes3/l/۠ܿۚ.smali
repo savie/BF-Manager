@@ -1,43 +1,36 @@
 .class public final Ll/۠ܿۚ;
 .super Ljava/lang/Object;
-.source "6AK0"
+.source "T6XI"
 
 
 # instance fields
-.field public ۙ:Ljava/util/ArrayList;
+.field public final ۙ:Ll/ۡܿۚ;
 
-.field public ܰ:Ljava/util/ArrayList;
+.field public final ۤ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 315
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 316
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/۠ܿۚ;->ۙ:Ljava/util/ArrayList;
-
-    .line 317
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/۠ܿۚ;->ܰ:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(ILl/ۡܿۚ;II)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ll/۠ܿۚ;-><init>()V
+    .line 155
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 156
+    iput p1, p0, Ll/۠ܿۚ;->᩷:I
+
+    .line 157
+    iput-object p2, p0, Ll/۠ܿۚ;->ۙ:Ll/ۡܿۚ;
+
+    .line 158
+    iput p3, p0, Ll/۠ܿۚ;->᩸:I
+
+    .line 159
+    iput p4, p0, Ll/۠ܿۚ;->ۤ:I
 
     return-void
 .end method

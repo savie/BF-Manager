@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Logger;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.params.DHParameters;
@@ -20,7 +20,7 @@ import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 import org.bouncycastle.util.Properties;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CryptoServicesRegistrar {
     public static final AtomicReference defaultSecureRandomProvider;
     public static final CryptoServicesConstraints noConstraintsImpl;
@@ -32,7 +32,7 @@ public final class CryptoServicesRegistrar {
     public static final Permission CanSetDefaultRandom = new CryptoServicesPermission(CryptoServicesPermission.DEFAULT_RANDOM);
     public static final Permission CanSetConstraints = new CryptoServicesPermission(CryptoServicesPermission.CONSTRAINTS);
     public static final ThreadLocal threadProperties = new ThreadLocal();
-    public static final Map globalProperties = C0561.synchronizedMap(new HashMap());
+    public static final Map globalProperties = C4681.synchronizedMap(new HashMap());
     public static final SecureRandomProvider defaultRandomProviderImpl = new ThreadLocalSecureRandomProvider();
 
     public final class Property {

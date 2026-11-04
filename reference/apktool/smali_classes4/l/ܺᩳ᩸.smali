@@ -1,56 +1,109 @@
-.class public final synthetic Ll/ܺᩳ᩸;
+.class public final Ll/ܺᩳ᩸;
 .super Ljava/lang/Object;
-.source "X93U"
+.source "86UT"
 
 
-# static fields
-.field public static final synthetic ۙ:[I
+# instance fields
+.field public final ֫:J
+
+.field public final ۙ:J
+
+.field public final ۚ:J
+
+.field public final ۤ:J
+
+.field public final ۧ:J
+
+.field public final ۫:J
+
+.field public final ܳ:J
+
+.field public final ܺ:J
+
+.field public final ܽ:J
+
+.field public final ᩴ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:I
+
+.field public final ᩻:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(JJJJJJJJJJIII)V
     .locals 3
 
-    .line 1798
-    invoke-static {}, Ll/ᩴ᩸᩸;->values()[Ll/ᩴ᩸᩸;
+    move-object v0, p0
 
-    move-result-object v0
+    .line 371
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    move-wide v1, p1
 
-    new-array v0, v0, [I
+    .line 372
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ۚ:J
 
-    sput-object v0, Ll/ܺᩳ᩸;->ۙ:[I
+    move-wide v1, p3
 
-    :try_start_0
-    sget-object v1, Ll/ᩴ᩸᩸;->ܳ:Ll/ᩴ᩸᩸;
+    .line 373
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ۙ:J
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-wide v1, p5
 
-    move-result v1
+    .line 374
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ۧ:J
 
-    const/4 v2, 0x1
+    move-wide v1, p7
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 375
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ܽ:J
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ܺᩳ᩸;->ۙ:[I
+    move-wide v1, p9
 
-    sget-object v1, Ll/ᩴ᩸᩸;->ܿ:Ll/ᩴ᩸᩸;
+    .line 376
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->᩻:J
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-wide v1, p11
 
-    move-result v1
+    .line 377
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ܺ:J
 
-    const/4 v2, 0x2
+    move-wide/from16 v1, p13
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    .line 378
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ۤ:J
 
-    :catch_1
+    move-wide/from16 v1, p15
+
+    .line 379
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->ܳ:J
+
+    move-wide/from16 v1, p17
+
+    .line 380
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->֫:J
+
+    move-wide/from16 v1, p19
+
+    .line 381
+    iput-wide v1, v0, Ll/ܺᩳ᩸;->۫:J
+
+    move/from16 v1, p21
+
+    .line 382
+    iput v1, v0, Ll/ܺᩳ᩸;->᩸:I
+
+    move/from16 v1, p22
+
+    .line 383
+    iput v1, v0, Ll/ܺᩳ᩸;->ᩴ:I
+
+    move/from16 v1, p23
+
+    .line 384
+    iput v1, v0, Ll/ܺᩳ᩸;->᩷:I
+
     return-void
 .end method

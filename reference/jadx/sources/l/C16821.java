@@ -1,48 +1,40 @@
 package l;
 
-import android.view.View;
-import android.widget.AdapterView;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ܽᩴۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 014Z */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16821 implements AdapterView.OnItemSelectedListener {
+/* JADX INFO: renamed from: l.ܺۨܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: GAZW */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16821 extends AbstractC17567 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0733 f53848;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC17567 f54278;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12588 f53849;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f53850;
-
-    public C16821(C12588 c12588, C0733 c0733, View view) {
-        this.f53849 = c12588;
-        this.f53848 = c0733;
-        this.f53850 = view;
+    public C16821(AbstractC17567 abstractC17567) {
+        this.f54278 = abstractC17567;
     }
 
-    @Override // android.widget.AdapterView.OnItemSelectedListener
-    public final void onItemSelected(AdapterView adapterView, View view, int i, long j) {
-        InterfaceC17526 interfaceC17526M31326;
-        C12588 c12588 = this.f53849;
-        if (c12588.f42072 != null && !c12588.f42072.mo13410().isEmpty()) {
-            C12588.m31310(c12588.f42072 instanceof C9745).m33845((String) this.f53848.getItem(i));
-            c12588.f42071 = true;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) {
+        if (obj == null) {
+            c21362.m48598();
         } else {
-            c12588.f42071 = false;
+            this.f54278.mo3723(c21362, obj);
         }
-        if (System.currentTimeMillis() - c12588.f42065 > 300 && (interfaceC17526M31326 = c12588.m31326()) != null) {
-            c12588.mo21878(interfaceC17526M31326);
-        }
-        C12588.m31315(c12588, this.f53850);
     }
 
-    @Override // android.widget.AdapterView.OnItemSelectedListener
-    public final void onNothingSelected(AdapterView adapterView) {
-        C12588 c12588 = this.f53849;
-        c12588.f42071 = false;
-        C12588.m31315(c12588, this.f53850);
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        if (c4208.m13438() == EnumC14648.NULL) {
+            c4208.m13444();
+            return null;
+        }
+        return this.f54278.mo3722(c4208);
+    }
+
+    public final String toString() {
+        return "NullSafeTypeAdapter[" + this.f54278 + "]";
     }
 }

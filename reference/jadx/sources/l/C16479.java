@@ -1,31 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DBFN */
+import android.content.Context;
+import android.graphics.Typeface;
+import android.os.Handler;
+
+/* JADX INFO: renamed from: l.ܺ֨, reason: contains not printable characters */
+/* JADX INFO: compiled from: M5X0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16479 extends AbstractC17806 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f52953;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f52954;
-
-    public C16479(EnumC7306 enumC7306, int i, int i2, int i3, int i4) {
-        super(enumC7306, i, i2, 0, 0L);
-        this.f52953 = i3;
-        this.f52954 = i4;
+public final class C16479 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C1564 m39107(Context context, C21701 c21701) {
+        return C4547.m14288(context, c21701);
     }
 
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ᩴ */
-    public final int mo1687() {
-        return this.f52954;
-    }
-
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo16133() {
-        return this.f52953;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Typeface m39106(Context context, C21701 c21701, int i, boolean z, int i2, Handler handler, C17004 c17004) {
+        C7792 c7792 = new C7792(c17004, handler);
+        if (z) {
+            return C5293.m15888(context, c21701, c7792, i, i2);
+        }
+        return C5293.m15887(context, c21701, i, c7792);
     }
 }

@@ -1,74 +1,67 @@
 package l;
 
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
-import java.util.ArrayList;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.ۘ᩷ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 998H */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4184 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public ArrayList f15235 = new ArrayList();
+/* JADX INFO: renamed from: l.ۘ۬ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 27JF */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4184 implements InterfaceC22084 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Main f15236;
+    public final /* synthetic */ C15179 f14181;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final TextView f15237;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C24322 f14182;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C0263 f15238;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13364(AbstractC11641 abstractC11641) {
+        C15243.m36590(abstractC11641, "onPageChangeListenerHelper");
+        C24322 c24322 = new C24322(abstractC11641);
+        this.f14182 = c24322;
+        this.f14181.m36513(c24322);
+    }
 
-    public C4184(Main main, C17492 c17492) {
-        this.f15236 = main;
-        TextView textView = (TextView) ((View) c17492.getParent()).findViewById(R.id.MT_Protector);
-        C13638.requireNonNull(textView);
-        this.f15237 = textView;
-        textView.setText(R.string.MT_Protector);
-        c17492.setLayoutManager(new C13115(main));
-        AbstractC1825 itemAnimator = c17492.getItemAnimator();
-        if (itemAnimator != null) {
-            itemAnimator.m5954(200L);
-            itemAnimator.m5952(200L);
-            itemAnimator.m5961(200L);
-            itemAnimator.m5964(200L);
-        }
-        new C4647(new C15787(this)).m12825(c17492);
-        C0263 c0263 = new C0263(this);
-        this.f15238 = c0263;
-        c17492.setAdapter(c0263);
-        C20725.m46654().m44959(main, new C6992(1, this));
-        main.m131(new RunnableC4493(2, this, c17492));
+    public C4184(C15179 c15179) {
+        this.f14181 = c15179;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m13368() {
+        C15179 c15179 = this.f14181;
+        C15243.m36590(c15179, "<this>");
+        AbstractC6274 abstractC6274M36524 = c15179.m36524();
+        return (abstractC6274M36524 != null ? abstractC6274M36524.mo3000() : 0) > 0;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m13367() {
+        return this.f14181.m36517();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m13365() {
+        AbstractC6274 abstractC6274M36524;
+        C15179 c15179 = this.f14181;
+        return (c15179 == null || (abstractC6274M36524 = c15179.m36524()) == null || abstractC6274M36524.mo3000() != 0) ? false : true;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m11832(C4184 c4184, Iterable iterable) {
-        TextView textView = c4184.f15237;
-        ArrayList arrayList = new ArrayList(c4184.f15235.size() + 1);
-        ArrayList arrayList2 = c4184.f15235;
-        Iterator it = iterable.iterator();
-        while (it.hasNext()) {
-            arrayList.add((AbstractC17902) it.next());
+    public final int m13362() {
+        AbstractC6274 abstractC6274M36524 = this.f14181.m36524();
+        if (abstractC6274M36524 != null) {
+            return abstractC6274M36524.mo3000();
         }
-        c4184.f15235 = arrayList;
-        C4066.m11593(new C20020(arrayList2, arrayList)).m15146(c4184.f15238);
-        if (c4184.f15238.getItemCount() == 0) {
-            textView.setVisibility(0);
-        } else {
-            textView.setVisibility(8);
-        }
+        return 0;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m11833(C4184 c4184, C17492 c17492) {
-        c4184.f15237.setTextColor(C20368.f66009);
-        C0263 c0263 = new C0263(c4184);
-        c4184.f15238 = c0263;
-        c17492.setAdapter(c0263);
+    public final void m13363(int i) {
+        this.f14181.m36512(i, true);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m13366() {
+        C24322 c24322 = this.f14182;
+        if (c24322 != null) {
+            this.f14181.m36525(c24322);
+        }
     }
 }

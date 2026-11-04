@@ -1,12 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙܽۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6QF */
+/* JADX INFO: renamed from: l.ۙ۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: G696 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4765 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 5;
+public final class C4765 implements InterfaceC1782 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10730 f16720;
+
+    public C4765(C10730 c10730) {
+        this.f16720 = c10730;
     }
 }

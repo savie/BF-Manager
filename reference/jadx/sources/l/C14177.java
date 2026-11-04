@@ -1,71 +1,45 @@
 package l;
 
-import java.util.Comparator;
-import java.util.SortedMap;
-import java.util.SortedSet;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ܳ֡ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O3K3 */
+/* JADX INFO: renamed from: l.۬᩺ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 37RB */
 /* JADX INFO: loaded from: classes4.dex */
-public class C14177 extends C0064 implements SortedMap {
+public final class C14177 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public SortedSet f46530;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public HashMap f44828 = new HashMap();
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC11830 f46531;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C15252 f44829;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C14177(AbstractC11830 abstractC11830, SortedMap sortedMap) {
-        super(abstractC11830, sortedMap);
-        this.f46531 = abstractC11830;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C13477 f44827 = new C13477();
 
-    /* JADX INFO: renamed from: ܰ */
-    public SortedMap mo15745() {
-        return (SortedMap) this.f963;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C8957 f44826 = new C8957(EnumC7466.f24604, 0, 0, null);
 
-    @Override // java.util.SortedMap
-    public final Comparator comparator() {
-        return mo15745().comparator();
-    }
-
-    @Override // java.util.SortedMap
-    public final Object firstKey() {
-        return mo15745().firstKey();
-    }
-
-    @Override // java.util.SortedMap
-    public final Object lastKey() {
-        return mo15745().lastKey();
-    }
-
-    public SortedMap headMap(Object obj) {
-        return new C14177(this.f46531, mo15745().headMap(obj));
-    }
-
-    public SortedMap subMap(Object obj, Object obj2) {
-        return new C14177(this.f46531, mo15745().subMap(obj, obj2));
-    }
-
-    public SortedMap tailMap(Object obj) {
-        return new C14177(this.f46531, mo15745().tailMap(obj));
-    }
-
-    @Override // l.C0064, java.util.AbstractMap, java.util.Map
-    public SortedSet keySet() {
-        SortedSet sortedSet = this.f46530;
-        if (sortedSet != null) {
-            return sortedSet;
+    public C14177(C4747 c4747) {
+        c4747.m14646(f44827, this);
+        this.f44829 = C15252.m36599(c4747);
+        for (EnumC7466 enumC7466 : EnumC7466.values()) {
+            String str = enumC7466.f24714;
+            if (str != null) {
+                this.f44829.f49864.m51194(str);
+                this.f44828.put(enumC7466.f24714, enumC7466);
+            }
         }
-        SortedSet sortedSetMo15744 = mo15744();
-        this.f46530 = sortedSetMo15744;
-        return sortedSetMo15744;
     }
 
-    /* JADX INFO: renamed from: ۙ */
-    public SortedSet mo15744() {
-        return new C1475(this.f46531, mo15745());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC7466 m34466(AbstractC19728 abstractC19728) {
+        EnumC7466 enumC7466 = (EnumC7466) this.f44828.get(abstractC19728.toString());
+        return enumC7466 != null ? enumC7466 : EnumC7466.f24655;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC7466 m34465(String str) {
+        EnumC7466 enumC7466 = (EnumC7466) this.f44828.get(str);
+        return enumC7466 != null ? enumC7466 : EnumC7466.f24655;
     }
 }

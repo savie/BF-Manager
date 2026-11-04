@@ -1,59 +1,125 @@
 .class public final synthetic Ll/۠֨᩺;
 .super Ljava/lang/Object;
-.source "A924"
+.source "440F"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic ܺ:Landroid/widget/TextView;
+.field public final synthetic ܰ:I
 
-.field public final synthetic ᩶:Landroid/text/method/MovementMethod;
+.field public final synthetic ܿ:Ljava/lang/Object;
+
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/TextView;Landroid/text/method/MovementMethod;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .line 0
+    iput p1, p0, Ll/۠֨᩺;->ܰ:I
+
+    iput-object p2, p0, Ll/۠֨᩺;->᩶:Ljava/lang/Object;
+
+    iput-object p3, p0, Ll/۠֨᩺;->ܿ:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/۠֨᩺;->ܺ:Landroid/widget/TextView;
-
-    iput-object p2, p0, Ll/۠֨᩺;->᩶:Landroid/text/method/MovementMethod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    .line 140
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+    .line 2
+    iget v0, p0, Ll/۠֨᩺;->ܰ:I
 
-    move-result p1
+    .line 4
+    iget-object v1, p0, Ll/۠֨᩺;->ܿ:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    .line 6
+    iget-object v2, p0, Ll/۠֨᩺;->᩶:Ljava/lang/Object;
 
-    .line 141
-    iget-object p1, p0, Ll/۠֨᩺;->ܺ:Landroid/widget/TextView;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->getMovementMethod()Landroid/text/method/MovementMethod;
+    .line 11
+    check-cast v2, Ll/ۘܶ۫;
 
-    move-result-object p2
+    .line 13
+    check-cast v1, Ll/᩷ۨᩴ;
 
-    iget-object v0, p0, Ll/۠֨᩺;->᩶:Landroid/text/method/MovementMethod;
+    .line 15
+    sget v0, Ll/ۘܶ۫;->֨ۙ:I
 
-    if-eq p2, v0, :cond_0
+    const v0, 0x7f120d53
 
-    .line 142
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+    .line 341
+    invoke-virtual {v2, v0}, Ll/ᩳۜۧ;->᩻(I)V
+
+    .line 342
+    invoke-virtual {v1}, Ll/᩷ۨᩴ;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ll/ᩳۜۧ;->ۙ(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    .line 0
+    :pswitch_0
+    check-cast v2, Ll/᩹ᩳۙ;
+
+    check-cast v1, Landroid/media/metrics/PlaybackStateEvent;
+
+    invoke-static {v2, v1}, Ll/᩹ᩳۙ;->ۙ(Ll/᩹ᩳۙ;Landroid/media/metrics/PlaybackStateEvent;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v2, Ll/ۧۡ᩺;
+
+    check-cast v1, Ll/ܰᩳۘ;
+
+    .line 1065
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Ll/ۧۡ᩺;->ۙ(Ll/ܰᩳۘ;)Ll/ܰᩳۘ;
+
+    move-result-object v0
+
+    .line 218
+    invoke-virtual {v1}, Ll/ܰᩳۘ;->᩷()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ll/ܰᩳۘ;->᩷()I
+
+    move-result v0
+
+    if-ne v1, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return p1
+    .line 1066
+    :goto_0
+    invoke-static {v0}, Ll/ۧ᩻ܺ;->ۙ(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

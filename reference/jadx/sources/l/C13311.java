@@ -1,68 +1,37 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.AbstractCollection;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۬᩵֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 67G0 */
+/* JADX INFO: renamed from: l.۫ᩴܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M3XQ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13311 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Throwable f44185;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final EnumC15428 f44186;
+public final class C13311 extends AbstractCollection {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f44187;
+    public final /* synthetic */ AbstractC20024 f42483;
 
-    public C13311(EnumC15428 enumC15428, Throwable th, boolean z) {
-        this.f44186 = enumC15428;
-        this.f44185 = th;
-        this.f44187 = z;
+    public C13311(AbstractC20024 abstractC20024) {
+        this.f42483 = abstractC20024;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C13311)) {
-            return false;
-        }
-        C13311 c13311 = (C13311) obj;
-        return this.f44187 == c13311.f44187 && C13638.equals(this.f44186, c13311.f44186) && C13638.equals(this.f44185, c13311.f44185);
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f42483.m46067();
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f44185) + ((C13638.hashCode(this.f44186) + ((this.f44187 ? 1231 : 1237) * 31)) * 31);
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final boolean contains(Object obj) {
+        return this.f42483.mo17039(obj);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f44186, this.f44185, Boolean.valueOf(this.f44187)};
-        String[] strArrSplit = "state;error;signingDisabledCandidate".length() == 0 ? new String[0] : "state;error;signingDisabledCandidate".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C13311.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final void clear() {
+        this.f42483.clear();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final EnumC15428 m32816() {
-        return this.f44186;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Throwable m32817() {
-        return this.f44185;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m32818() {
-        return this.f44187;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
+    public final Iterator iterator() {
+        return new C21604(this.f42483);
     }
 }

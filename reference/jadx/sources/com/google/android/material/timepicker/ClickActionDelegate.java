@@ -2,21 +2,21 @@ package com.google.android.material.timepicker;
 
 import android.content.Context;
 import android.view.View;
-import l.C12025;
-import l.C22006;
-import l.C9494;
+import l.C19835;
+import l.C22687;
+import l.C8451;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ClickActionDelegate extends C12025 {
-    public final C9494 clickAction;
+public class ClickActionDelegate extends C22687 {
+    public final C8451 clickAction;
 
     public ClickActionDelegate(Context context, int i) {
-        this.clickAction = new C9494(16, context.getString(i));
+        this.clickAction = new C8451(16, context.getString(i));
     }
 
-    @Override // l.C12025
-    public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
-        super.onInitializeAccessibilityNodeInfo(view, c22006);
-        c22006.m48848(this.clickAction);
+    @Override // l.C22687
+    public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
+        super.onInitializeAccessibilityNodeInfo(view, c19835);
+        c19835.m45641(this.clickAction);
     }
 }

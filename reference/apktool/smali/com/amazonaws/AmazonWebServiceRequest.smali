@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Lcom/amazonaws/event/ProgressListener;
+.field public ܰ:Lcom/amazonaws/event/ProgressListener;
 
 .field public final ᩶:Lcom/amazonaws/RequestClientOptions;
 
@@ -77,7 +77,7 @@
     .locals 1
 
     .line 143
-    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܺ:Lcom/amazonaws/event/ProgressListener;
+    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܰ:Lcom/amazonaws/event/ProgressListener;
 
     return-object v0
 .end method
@@ -86,7 +86,7 @@
     .locals 0
 
     .line 132
-    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܺ:Lcom/amazonaws/event/ProgressListener;
+    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܰ:Lcom/amazonaws/event/ProgressListener;
 
     return-void
 .end method
@@ -95,15 +95,15 @@
     .locals 1
 
     .line 170
-    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܺ:Lcom/amazonaws/event/ProgressListener;
+    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceRequest;->ܰ:Lcom/amazonaws/event/ProgressListener;
 
     .line 132
-    iput-object v0, p1, Lcom/amazonaws/AmazonWebServiceRequest;->ܺ:Lcom/amazonaws/event/ProgressListener;
+    iput-object v0, p1, Lcom/amazonaws/AmazonWebServiceRequest;->ܰ:Lcom/amazonaws/event/ProgressListener;
 
     return-void
 .end method
 
-.method public final ۨ()Lcom/amazonaws/RequestClientOptions;
+.method public final ᩷()Lcom/amazonaws/RequestClientOptions;
     .locals 1
 
     .line 82

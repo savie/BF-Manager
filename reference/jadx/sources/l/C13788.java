@@ -1,25 +1,37 @@
 package l;
 
-import android.os.Build;
-
-/* JADX INFO: renamed from: l.ܰۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V22O */
+/* JADX INFO: renamed from: l.۬ۤۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A8DI */
 /* JADX INFO: loaded from: classes4.dex */
-public class C13788 implements InterfaceC5657 {
+public final class C13788 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC1086 f45517;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC5191 f43740;
 
-    public C13788(ActivityC1086 activityC1086) {
-        this.f45517 = activityC1086;
+    public /* synthetic */ C13788(EnumC5191 enumC5191, int i) {
+        this(enumC5191);
     }
 
-    @Override // l.InterfaceC5657
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4164(InterfaceC1423 interfaceC1423, EnumC1651 enumC1651) {
-        if (enumC1651 != EnumC1651.ON_CREATE || Build.VERSION.SDK_INT < 33) {
-            return;
+    public C13788(EnumC5191 enumC5191) {
+        this.f43740 = enumC5191;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C13788 m33687(byte b) {
+        int i = (b >>> 4) & 7;
+        if ((b & 143) > 0) {
+            throw new RuntimeException("Reserved fields must be 0");
         }
-        this.f45517.f4952.m34907(C11671.m29118((ActivityC1086) interfaceC1423));
+        return new C13788(EnumC5191.m15610(i));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m33688() {
+        return 1 << ((this.f43740.m15612() * 2) + 8);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte m33689() {
+        return (byte) ((this.f43740.m15612() & 7) << 4);
     }
 }

@@ -16,7 +16,7 @@ public final class d extends AsyncTask {
     public OAuthListener k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public f f77921l;
+    public f f82037l;
     public String scope;
     public String signature;
 
@@ -99,7 +99,7 @@ public final class d extends AsyncTask {
 
     public final boolean a() {
         Log.i("MicroMsg.SDK.GetQRCodeTask", "cancelTask");
-        f fVar = this.f77921l;
+        f fVar = this.f82037l;
         return fVar == null ? cancel(true) : fVar.cancel(true);
     }
 
@@ -126,7 +126,7 @@ public final class d extends AsyncTask {
         Log.d("MicroMsg.SDK.GetQRCodeTask", "onPostExecute, get qrcode success imgBufSize = " + aVar.s.length);
         this.k.onAuthGotQrcode(aVar.p, aVar.s);
         f fVar = new f(aVar.n, this.k);
-        this.f77921l = fVar;
+        this.f82037l = fVar;
         fVar.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
     }
 }

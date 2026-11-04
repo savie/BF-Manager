@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.asymmetric.x509;
 
 import java.io.IOException;
 import java.security.cert.CRLException;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.IssuingDistributionPoint;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509CRLObject extends X509CRLImpl {
     public final Object cacheLock;
     public volatile int hashValue;
@@ -136,7 +136,7 @@ public class X509CRLObject extends X509CRLImpl {
         try {
             return X509SignatureUtil.getSignatureName(certificateList.getSignatureAlgorithm());
         } catch (Exception e) {
-            throw new X509CRLException(C8479.m22142(e, new StringBuilder("CRL contents invalid: ")), e);
+            throw new X509CRLException(C16076.m38224(e, new StringBuilder("CRL contents invalid: ")), e);
         }
     }
 }

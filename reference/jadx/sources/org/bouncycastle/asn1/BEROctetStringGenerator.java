@@ -3,7 +3,7 @@ package org.bouncycastle.asn1;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BEROctetStringGenerator extends BERGenerator {
 
     public class BufferedBEROctetStream extends OutputStream {

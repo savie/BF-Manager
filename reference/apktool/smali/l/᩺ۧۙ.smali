@@ -1,142 +1,127 @@
 .class public final Ll/᩺ۧۙ;
 .super Ljava/lang/Object;
-.source "68UW"
+.source "Q9M2"
 
 # interfaces
-.implements Ll/ۡ᩵ۙ;
+.implements Ll/ۙ᩻ۙ;
 
 
 # instance fields
-.field public final ۙ:[Ll/᩵᩵ۙ;
+.field public final ܰ:Ll/ۨۧۙ;
 
-.field public final ۨ:Ll/᩷᩵ۙ;
-
-.field public final ܰ:Ll/ܿۧۙ;
+.field public final ᩶:Ll/ۙ᩻ۙ;
 
 
 # direct methods
-.method public varargs constructor <init>([Ll/᩵᩵ۙ;)V
-    .locals 5
+.method public constructor <init>(Ll/ۨۧۙ;Ll/ۙ᩻ۙ;)V
+    .locals 1
 
-    .line 183
-    new-instance v0, Ll/ܿۧۙ;
+    const-string v0, "defaultLifecycleObserver"
 
-    invoke-direct {v0}, Ll/ܿۧۙ;-><init>()V
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v1, Ll/᩷᩵ۙ;
-
-    invoke-direct {v1}, Ll/᩷᩵ۙ;-><init>()V
-
-    .line 193
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 196
-    array-length v2, p1
+    .line 19
+    iput-object p1, p0, Ll/᩺ۧۙ;->ܰ:Ll/ۨۧۙ;
 
-    add-int/lit8 v2, v2, 0x2
-
-    new-array v2, v2, [Ll/᩵᩵ۙ;
-
-    iput-object v2, p0, Ll/᩺ۧۙ;->ۙ:[Ll/᩵᩵ۙ;
-
-    const/4 v3, 0x0
-
-    .line 197
-    array-length v4, p1
-
-    invoke-static {p1, v3, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 203
-    iput-object v0, p0, Ll/᩺ۧۙ;->ܰ:Ll/ܿۧۙ;
-
-    .line 204
-    iput-object v1, p0, Ll/᩺ۧۙ;->ۨ:Ll/᩷᩵ۙ;
-
-    .line 205
-    array-length v3, p1
-
-    aput-object v0, v2, v3
-
-    .line 206
-    array-length p1, p1
-
-    add-int/lit8 p1, p1, 0x1
-
-    aput-object v1, v2, p1
+    .line 20
+    iput-object p2, p0, Ll/᩺ۧۙ;->᩶:Ll/ۙ᩻ۙ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(J)J
+.method public final ۙ(Ll/ۤ᩻ۙ;Ll/ۡۧۙ;)V
     .locals 2
 
-    .line 229
-    iget-object v0, p0, Ll/᩺ۧۙ;->ۨ:Ll/᩷᩵ۙ;
+    .line 23
+    sget-object v0, Ll/ۛۧۙ;->ۙ:[I
 
-    invoke-virtual {v0}, Ll/᩷᩵ۙ;->ۨ()Z
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    aget v0, v0, v1
 
-    .line 230
-    invoke-virtual {v0, p1, p2}, Ll/᩷᩵ۙ;->ۙ(J)J
+    iget-object v1, p0, Ll/᩺ۧۙ;->ܰ:Ll/ۨۧۙ;
 
-    move-result-wide p1
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ll/ۙ۟᩵;
+
+    .line 9
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    .line 23
+    throw p1
+
+    .line 31
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "ON_ANY must not been send by anybody"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 29
+    :pswitch_1
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->ᩴ(Ll/ۤ᩻ۙ;)V
+
+    goto :goto_0
+
+    .line 28
+    :pswitch_2
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->᩸(Ll/ۤ᩻ۙ;)V
+
+    goto :goto_0
+
+    .line 27
+    :pswitch_3
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->ۤ(Ll/ۤ᩻ۙ;)V
+
+    goto :goto_0
+
+    .line 26
+    :pswitch_4
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->᩷(Ll/ۤ᩻ۙ;)V
+
+    goto :goto_0
+
+    .line 25
+    :pswitch_5
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->ܳ(Ll/ۤ᩻ۙ;)V
+
+    goto :goto_0
+
+    .line 24
+    :pswitch_6
+    invoke-interface {v1, p1}, Ll/ۨۧۙ;->ۙ(Ll/ۤ᩻ۙ;)V
+
+    .line 33
+    :goto_0
+    iget-object v0, p0, Ll/᩺ۧۙ;->᩶:Ll/ۙ᩻ۙ;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2}, Ll/ۙ᩻ۙ;->ۙ(Ll/ۤ᩻ۙ;Ll/ۡۧۙ;)V
 
     :cond_0
-    return-wide p1
-.end method
+    return-void
 
-.method public final ۙ(Ll/᩸۠ۙ;)Ll/᩸۠ۙ;
-    .locals 2
-
-    .line 216
-    iget v0, p1, Ll/᩸۠ۙ;->ۨ:F
-
-    iget-object v1, p0, Ll/᩺ۧۙ;->ۨ:Ll/᩷᩵ۙ;
-
-    invoke-virtual {v1, v0}, Ll/᩷᩵ۙ;->ܰ(F)V
-
-    .line 217
-    iget v0, p1, Ll/᩸۠ۙ;->ۙ:F
-
-    invoke-virtual {v1, v0}, Ll/᩷᩵ۙ;->ۙ(F)V
-
-    return-object p1
-.end method
-
-.method public final ۙ(Z)Z
-    .locals 1
-
-    .line 223
-    iget-object v0, p0, Ll/᩺ۧۙ;->ܰ:Ll/ܿۧۙ;
-
-    invoke-virtual {v0, p1}, Ll/ܿۧۙ;->ۙ(Z)V
-
-    return p1
-.end method
-
-.method public final ۙ()[Ll/᩵᩵ۙ;
-    .locals 1
-
-    .line 211
-    iget-object v0, p0, Ll/᩺ۧۙ;->ۙ:[Ll/᩵᩵ۙ;
-
-    return-object v0
-.end method
-
-.method public final ܰ()J
-    .locals 2
-
-    .line 236
-    iget-object v0, p0, Ll/᩺ۧۙ;->ܰ:Ll/ܿۧۙ;
-
-    invoke-virtual {v0}, Ll/ܿۧۙ;->ۘ()J
-
-    move-result-wide v0
-
-    return-wide v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

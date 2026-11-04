@@ -1,40 +1,32 @@
 package l;
 
-import org.chromium.support_lib_boundary.DropDataContentProviderBoundaryInterface;
-import org.chromium.support_lib_boundary.StaticsBoundaryInterface;
-import org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface;
-import org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface;
-
-/* JADX INFO: renamed from: l.ᩴۙۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G71Z */
+/* JADX INFO: renamed from: l.ܿᩴܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 05TK */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18530 implements InterfaceC17824 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final WebViewProviderFactoryBoundaryInterface f58989;
-
-    public C18530(WebViewProviderFactoryBoundaryInterface webViewProviderFactoryBoundaryInterface) {
-        this.f58989 = webViewProviderFactoryBoundaryInterface;
-    }
-
-    @Override // l.InterfaceC17824
-    public final WebkitToCompatConverterBoundaryInterface getWebkitToCompatConverter() {
-        return (WebkitToCompatConverterBoundaryInterface) C15423.m36894(WebkitToCompatConverterBoundaryInterface.class, this.f58989.getWebkitToCompatConverter());
-    }
-
-    @Override // l.InterfaceC17824
-    public final StaticsBoundaryInterface getStatics() {
-        return (StaticsBoundaryInterface) C15423.m36894(StaticsBoundaryInterface.class, this.f58989.getStatics());
-    }
-
-    @Override // l.InterfaceC17824
+public final class C18530 extends AbstractC23752 {
+    @Override // l.AbstractC12563
     /* JADX INFO: renamed from: ۙ */
-    public final String[] mo12345() {
-        return this.f58989.getSupportedFeatures();
+    public final AbstractC12563 mo2797(C5194 c5194) {
+        return new C18530(this.f40344, this.f76980.mo5237(c5194));
     }
 
-    @Override // l.InterfaceC17824
-    public final DropDataContentProviderBoundaryInterface getDropDataProvider() {
-        return (DropDataContentProviderBoundaryInterface) C15423.m36894(DropDataContentProviderBoundaryInterface.class, this.f58989.getDropDataProvider());
+    public final String toString() {
+        int i = C21514.f68750[this.f40344.ordinal()];
+        if (i == 1) {
+            return "lock " + this.f76980;
+        }
+        if (i == 2) {
+            return "unlock " + this.f76980;
+        }
+        if (i == 3) {
+            return "throw " + this.f76980;
+        }
+        if (i == 4) {
+            return "return " + this.f76980;
+        }
+        if (i == 5) {
+            return this.f76980 + " ::END";
+        }
+        return super.toString();
     }
 }

@@ -43,7 +43,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Exceptions;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureSpi extends java.security.SignatureSpi {
     public static final String ML_DSA_44 = "ML-DSA-44";
     public static final String ML_DSA_65 = "ML-DSA-65";

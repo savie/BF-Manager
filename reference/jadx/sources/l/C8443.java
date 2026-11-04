@@ -1,15 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩸ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6B2 */
+/* JADX INFO: renamed from: l.۠ۛܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26GL */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8443 extends C5151 {
+public final class C8443 extends AbstractC10919 {
+    @Override // l.AbstractC10919
+    /* JADX INFO: renamed from: ۙ */
+    public final long[] mo15749(Object obj) {
+        C18257 c18257 = (C18257) obj;
+        return new long[]{c18257.getSeconds(), c18257.getNano()};
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C18557 f29299;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m22103() {
-        return this.f29299;
+    @Override // l.AbstractC10919
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo15748(long[] jArr) {
+        return C18257.ofSeconds(jArr[0], jArr[1]);
     }
 }

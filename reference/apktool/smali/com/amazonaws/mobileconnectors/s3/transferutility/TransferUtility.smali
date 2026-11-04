@@ -6,9 +6,9 @@
 # static fields
 .field public static final ۙ:Ljava/lang/Object;
 
-.field public static ۨ:Ljava/lang/String;
+.field public static ۤ:Ljava/lang/String;
 
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->᩷:Lcom/amazonaws/logging/Log;
 
     .line 126
     new-instance v0, Ljava/lang/Object;
@@ -34,7 +34,7 @@
     const-string v0, ""
 
     .line 149
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->ۨ:Ljava/lang/String;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->ۤ:Ljava/lang/String;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     .line 159
     :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->ۨ:Ljava/lang/String;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtility;->ۤ:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
@@ -113,7 +113,7 @@
     .locals 2
 
     .line 1006
-    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceRequest;->ۨ()Lcom/amazonaws/RequestClientOptions;
+    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceRequest;->᩷()Lcom/amazonaws/RequestClientOptions;
 
     move-result-object p0
 
@@ -146,11 +146,11 @@
     return-void
 .end method
 
-.method public static ܰ(Lcom/amazonaws/AmazonWebServiceRequest;)V
+.method public static ᩷(Lcom/amazonaws/AmazonWebServiceRequest;)V
     .locals 2
 
     .line 1000
-    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceRequest;->ۨ()Lcom/amazonaws/RequestClientOptions;
+    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceRequest;->᩷()Lcom/amazonaws/RequestClientOptions;
 
     move-result-object p0
 

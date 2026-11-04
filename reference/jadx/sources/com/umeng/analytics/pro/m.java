@@ -8,13 +8,13 @@ import android.os.Handler;
 import android.os.Looper;
 import com.umeng.commonsdk.debug.UMRTLog;
 import java.util.ArrayList;
-import l.EnumC21522;
+import l.EnumC7717;
 
 /* JADX INFO: compiled from: UBMB */
 /* JADX INFO: loaded from: classes.dex */
 public class m implements Application.ActivityLifecycleCallbacks {
     public static m a = new m();
-    public final int b = EnumC21522.f69929;
+    public final int b = EnumC7717.f25434;
     public boolean c = false;
     public boolean d = true;
     public Handler e = new Handler(Looper.getMainLooper());

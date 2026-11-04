@@ -4,8 +4,8 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.crypto.digests.SHA384Digest;
@@ -20,7 +20,7 @@ import org.bouncycastle.jcajce.spec.TLSKeyMaterialSpec;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TLSKDF {
 
     public class Mappings extends AlgorithmProvider {
@@ -30,11 +30,10 @@ public class TLSKDF {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$TLS12withSHA512", "SecretKeyFactory.TLS12WITHSHA512KDF", C9023.m23357(str, "$TLS12withSHA384", "SecretKeyFactory.TLS12WITHSHA384KDF", C9023.m23357(str, "$TLS12withSHA256", "SecretKeyFactory.TLS12WITHSHA256KDF", C9023.m23357(str, "$TLS11", "SecretKeyFactory.TLS11KDF", C9023.m23357(str, "$TLS10", "SecretKeyFactory.TLS10KDF", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$TLS12withSHA512", "SecretKeyFactory.TLS12WITHSHA512KDF", C18063.m42089(str, "$TLS12withSHA384", "SecretKeyFactory.TLS12WITHSHA384KDF", C18063.m42089(str, "$TLS12withSHA256", "SecretKeyFactory.TLS12WITHSHA256KDF", C18063.m42089(str, "$TLS11", "SecretKeyFactory.TLS11KDF", C18063.m42089(str, "$TLS10", "SecretKeyFactory.TLS10KDF", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class TLS10 extends TLSKeyMaterialFactory {
         public TLS10() {
             super("TLS10KDF");
@@ -49,7 +48,6 @@ public class TLSKDF {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class TLS11 extends TLSKeyMaterialFactory {
         public TLS11() {
             super("TLS11KDF");
@@ -64,7 +62,6 @@ public class TLSKDF {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class TLS12 extends TLSKeyMaterialFactory {
         public final Mac prf;
 
@@ -90,28 +87,24 @@ public class TLSKDF {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class TLS12withSHA256 extends TLS12 {
         public TLS12withSHA256() {
             super("TLS12withSHA256KDF", new HMac(SHA256Digest.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class TLS12withSHA384 extends TLS12 {
         public TLS12withSHA384() {
             super("TLS12withSHA384KDF", new HMac(new SHA384Digest()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class TLS12withSHA512 extends TLS12 {
         public TLS12withSHA512() {
             super("TLS12withSHA512KDF", new HMac(new SHA512Digest()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class TLSKeyMaterialFactory extends BaseSecretKeyFactory {
         public TLSKeyMaterialFactory(String str) {
             super(str, null);

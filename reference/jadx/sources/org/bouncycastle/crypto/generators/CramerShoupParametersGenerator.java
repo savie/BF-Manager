@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.params.CramerShoupParameters;
 import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CramerShoupParametersGenerator {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public int certainty;

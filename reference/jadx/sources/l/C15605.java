@@ -1,18 +1,12 @@
 package l;
 
-import java.io.FilterInputStream;
-import java.io.OutputStream;
-
-/* JADX INFO: renamed from: l.ܺ֨ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X1S4 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C15605 extends FilterInputStream implements InterfaceC20818 {
-    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-    }
-
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+/* JADX INFO: renamed from: l.ܳ᩷ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6VM */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15605 extends AbstractC11810 {
+    @Override // l.AbstractC11810
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo29657(String str) {
+        return C20327.m46701().m46703(str, "");
     }
 }

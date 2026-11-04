@@ -1,69 +1,44 @@
 package l;
 
-import android.net.Uri;
-
-/* JADX INFO: renamed from: l.ۗᩴۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 78PS */
+/* JADX INFO: renamed from: l.ۗ۫ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S1JV */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3413 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public Uri f12600;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public String f12601;
+public class C3413 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f12602;
+    public final C9378 f11080;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f12603;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f12604;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f12605;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f12606;
-
-    public C3413(Uri uri) {
-        this.f12600 = uri;
+    public C3413(C9378 c9378) {
+        this.f11080 = c9378;
     }
 
-    public C3413(C4515 c4515) {
-        this.f12600 = c4515.f16065;
-        this.f12601 = c4515.f16066;
-        this.f12604 = c4515.f16069;
-        this.f12606 = c4515.f16071;
-        this.f12603 = c4515.f16068;
-        this.f12605 = c4515.f16070;
-        this.f12602 = c4515.f16067;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m10123(String str) {
-        this.f12601 = C6632.m17989(str);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m10124() {
-        this.f12606 = 1;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m10125(String str) {
-        this.f12605 = str;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C9378 m11160() {
+        return this.f11080;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10122(String str) {
-        this.f12602 = str;
+    public final C9378 m11158() {
+        return new C9378(this.f11080, "cache");
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C9378 m11163() {
+        return new C9378(this.f11080, "state");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9378 m11162() {
+        return new C9378(this.f11080, "out");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4515 m10121() {
-        return new C4515(this);
+    public final void m11159(ActivityC0848 activityC0848) {
+        new C1176(activityC0848, new C12362(this.f11080)).m4347();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean m11161() {
+        return this.f11080.m24699().m49851(C6382.f21563);
     }
 }

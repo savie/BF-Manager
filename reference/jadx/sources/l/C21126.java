@@ -1,28 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩷ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O3OZ */
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+
+/* JADX INFO: renamed from: l.᩶ۛ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8GQ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21126 extends AbstractC0664 {
+public final class C21126 extends AnimatorListenerAdapter {
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC14384 f68795;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9191 f67497;
 
-    @Override // l.AbstractC0664
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2988(int i) {
-        return i + 1;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12921 f67498;
+
+    public C21126(C9191 c9191, C12921 c12921) {
+        this.f67497 = c9191;
+        this.f67498 = c12921;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C21126(C12660 c12660, CharSequence charSequence, AbstractC14384 abstractC14384) {
-        super(c12660, charSequence);
-        this.f68795 = abstractC14384;
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationStart(Animator animator) {
+        this.f67497.m24317(3);
     }
 
-    @Override // l.AbstractC0664
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2987(int i) {
-        return this.f68795.mo27207(i, this.f2804);
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator) {
+        C9191 c9191 = this.f67497;
+        c9191.m24317(1);
+        if (c9191.f29996) {
+            this.f67498.post(c9191.f29993);
+            c9191.f29996 = false;
+        }
     }
 }

@@ -3,11 +3,11 @@ package org.bouncycastle.util.io;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import l.C10235;
-import l.InterfaceC20818;
+import l.C9214;
+import l.InterfaceC8469;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class TeeInputStream extends InputStream implements InterfaceC20818 {
+public class TeeInputStream extends InputStream implements InterfaceC8469 {
     public final InputStream input;
     public final OutputStream output;
 
@@ -54,8 +54,8 @@ public class TeeInputStream extends InputStream implements InterfaceC20818 {
         return i3;
     }
 
-    @Override // java.io.InputStream, l.InterfaceC20818
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 }

@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECFieldElement;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X9IntegerConverter {
     public int getByteLength(ECCurve eCCurve) {
         return eCCurve.getFieldElementEncodingLength();

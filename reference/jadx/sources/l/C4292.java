@@ -1,69 +1,62 @@
 package l;
 
-import java.lang.reflect.Field;
-
-/* JADX INFO: renamed from: l.ۙ֡ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4HM */
+/* JADX INFO: renamed from: l.ۘܽ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 195F */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4292 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AbstractC20521 m12092(AbstractC20521 abstractC20521) {
-        while (abstractC20521 != null && !(abstractC20521 instanceof C15583)) {
-            abstractC20521 = abstractC20521.f66498;
+    public int f15562;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f15563;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f15564;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f15565;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13668(String str) {
+        if (this.f15563 == null) {
+            this.f15563 = str;
         }
-        return abstractC20521;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m12095(AbstractC20521 abstractC20521) {
-        ((C15583) abstractC20521).m37231();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m12093(C15583 c15583) {
-        try {
-            Field declaredField = C15583.class.getDeclaredField("۠ۙ");
-            declaredField.setAccessible(true);
-            C12760 c12760 = ((C23344) declaredField.get(c15583)).f75628;
-            Field declaredField2 = C12760.class.getDeclaredField("ۜ");
-            declaredField2.setAccessible(true);
-            C15583 c15584 = (C15583) declaredField2.get(c12760);
-            Field declaredField3 = C12760.class.getDeclaredField("۠");
-            declaredField3.setAccessible(true);
-            C15583 c15585 = (C15583) declaredField3.get(c12760);
-            if (c15584 == c15583) {
-                declaredField2.set(c12760, null);
-                if (c15585 == c15583) {
-                    declaredField3.set(c12760, null);
-                    return;
-                }
-                return;
-            }
-            while (c15584 != null) {
-                AbstractC20521 abstractC20521 = c15584.f66498;
-                if (abstractC20521 == c15583) {
-                    c15584.f66498 = c15583.f66498;
-                    if (c15585 == c15583) {
-                        declaredField3.set(c12760, c15584);
-                        return;
-                    }
-                    return;
-                }
-                c15584 = (C15583) abstractC20521;
-            }
-        } catch (IllegalAccessException | NoSuchFieldException unused) {
+        if ("\r\n".equals(str)) {
+            this.f15564++;
+        } else if ("\r".equals(str)) {
+            this.f15562++;
+        } else {
+            this.f15565++;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m12094(AbstractC20521 abstractC20521, C14647 c14647) {
-        C15583 c15583 = (C15583) abstractC20521;
-        try {
-            Field declaredField = C15583.class.getDeclaredField("۠ۙ");
-            declaredField.setAccessible(true);
-            c14647.m35167(((C23344) declaredField.get(c15583)).f75628);
-            m12093(c15583);
-        } catch (IllegalAccessException | NoSuchFieldException unused) {
+    public final String m13667() {
+        int i;
+        String str = this.f15563;
+        if (str == null) {
+            return "\n";
         }
+        String str2 = "\r\n";
+        if ("\r\n".equals(str)) {
+            i = this.f15564;
+        } else if ("\r".equals(str)) {
+            i = this.f15562;
+        } else {
+            i = this.f15565;
+        }
+        int i2 = this.f15565;
+        if (i2 > i) {
+            str = "\n";
+            i = i2;
+        }
+        int i3 = this.f15564;
+        if (i3 > i) {
+            i = i3;
+        } else {
+            str2 = str;
+        }
+        return this.f15562 > i ? "\r" : str2;
     }
 }

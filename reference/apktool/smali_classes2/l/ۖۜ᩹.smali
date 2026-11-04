@@ -1,27 +1,28 @@
-.class public final Ll/ۖۜ᩹;
+.class public final synthetic Ll/ۖۜ᩹;
 .super Ljava/lang/Object;
-.source "Z8UU"
+.source "N673"
 
 
-# instance fields
-.field public ֨:Z
+# direct methods
+.method public static toPath(Ljava/io/File;)Ll/᩺۬᩹;
+    .locals 2
 
-.field public ۖ:Ljava/util/List;
+    .line 2301
+    invoke-static {}, Ll/ܺ۬᩹;->getDefault()Ll/᩻۬᩹;
 
-.field public ۘ:Ljava/lang/String;
+    move-result-object v0
 
-.field public ۙ:Ljava/util/HashSet;
+    invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-.field public ۚ:Ll/ۙ۬᩹;
+    move-result-object p0
 
-.field public ۜ:I
+    const/4 v1, 0x0
 
-.field public ۨ:Z
+    new-array v1, v1, [Ljava/lang/String;
 
-.field public ۬:Ljava/lang/String;
+    invoke-virtual {v0, p0, v1}, Ll/᩻۬᩹;->getPath(Ljava/lang/String;[Ljava/lang/String;)Ll/᩺۬᩹;
 
-.field public ܰ:Ljava/lang/String;
+    move-result-object p0
 
-.field public ᩹:Ljava/util/List;
-
-.field public ᩺:Ll/ۨۘ᩹;
+    return-object p0
+.end method

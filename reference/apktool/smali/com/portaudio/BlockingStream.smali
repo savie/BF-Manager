@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method private native getInfo(Ll/ۨۡᩳ;)V
+.method private native getInfo(Ll/ۗ۠ܶ;)V
 .end method
 
 .method private native readFloats([FI)Z

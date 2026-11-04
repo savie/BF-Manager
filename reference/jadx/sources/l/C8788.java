@@ -1,40 +1,25 @@
 package l;
 
-import android.view.View;
-import android.view.WindowInsets;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۡۢ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4Z7 */
+/* JADX INFO: renamed from: l.۠ܿ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: R8AK */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8788 extends C19371 {
+public final /* synthetic */ class C8788 implements InterfaceC24673 {
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public static final C15844 f30210 = C15844.m37669(null, WindowInsets.CONSUMED);
-
-    @Override // l.C17959, l.C10199
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo22859(View view) {
+    public final /* synthetic */ C0060 f28641;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1552 f28642;
+
+    public /* synthetic */ C8788(C0060 c0060, C1552 c1552) {
+        this.f28641 = c0060;
+        this.f28642 = c1552;
     }
 
-    public C8788(C15844 c15844, WindowInsets windowInsets) {
-        super(c15844, windowInsets);
-    }
-
-    @Override // l.C17959, l.C10199
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C13954 mo22858(int i) {
-        return C13954.m33794(this.f57445.getInsets(C20782.m46772(i)));
-    }
-
-    @Override // l.C17959, l.C10199
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C13954 mo22861(int i) {
-        return C13954.m33794(this.f57445.getInsetsIgnoringVisibility(C20782.m46772(i)));
-    }
-
-    @Override // l.C17959, l.C10199
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean mo22860(int i) {
-        return this.f57445.isVisible(C20782.m46772(i));
+    @Override // l.InterfaceC24673
+    public final void run() throws IOException {
+        C0060.m996(this.f28641, this.f28642);
     }
 }

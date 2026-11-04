@@ -1,7 +1,7 @@
 package com.thegrizzlylabs.sardineandroid.model;
 
 import javax.xml.namespace.QName;
-import l.C21938;
+import l.C6693;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.convert.Converter;
@@ -29,9 +29,9 @@ public class Property {
             Property property = new Property();
             InputNode next = inputNode.getNext();
             if (next != null) {
-                Element elementM48766 = C21938.m48766(new QName(next.getReference(), next.getName(), next.getPrefix()));
-                elementM48766.setTextContent(next.getValue());
-                property.setProperty(elementM48766);
+                Element elementM18716 = C6693.m18716(new QName(next.getReference(), next.getName(), next.getPrefix()));
+                elementM18716.setTextContent(next.getValue());
+                property.setProperty(elementM18716);
             }
             return property;
         }

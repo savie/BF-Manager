@@ -23,19 +23,19 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import l.C15089;
-import l.C17910;
-import l.C18616;
-import l.C2387;
-import l.C3798;
-import l.C5031;
-import l.C8033;
-import l.C8479;
-import l.DialogInterfaceOnCancelListenerC11281;
-import l.RunnableC11767;
+import l.C11642;
+import l.C12388;
+import l.C13645;
+import l.C14625;
+import l.C22666;
+import l.C23577;
+import l.C24323;
+import l.C4185;
+import l.DialogInterfaceOnCancelListenerC19136;
+import l.RunnableC8143;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11281 implements TimePickerView.OnDoubleTapListener {
+public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC19136 implements TimePickerView.OnDoubleTapListener {
     public static final int INPUT_MODE_CLOCK = 0;
     public static final String INPUT_MODE_EXTRA = "TIME_PICKER_INPUT_MODE";
     public static final int INPUT_MODE_KEYBOARD = 1;
@@ -122,15 +122,15 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         return this.inputMode;
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281
+    @Override // l.DialogInterfaceOnCancelListenerC19136
     public final Dialog onCreateDialog(Bundle bundle) {
         Dialog dialog = new Dialog(requireContext(), getThemeResId());
         Context context = dialog.getContext();
-        MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context, null, C2387.f9476, C18616.f60180);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, C8033.f26734, C2387.f9476, C18616.f60180);
-        this.clockIcon = typedArrayObtainStyledAttributes.getResourceId(C8033.f26413, 0);
-        this.keyboardIcon = typedArrayObtainStyledAttributes.getResourceId(C8033.f27318, 0);
-        int color = typedArrayObtainStyledAttributes.getColor(C8033.f28009, 0);
+        MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context, null, C11642.f37297, C4185.f15120);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, C14625.f47492, C11642.f37297, C4185.f15120);
+        this.clockIcon = typedArrayObtainStyledAttributes.getResourceId(C14625.f47013, 0);
+        this.keyboardIcon = typedArrayObtainStyledAttributes.getResourceId(C14625.f46482, 0);
+        int color = typedArrayObtainStyledAttributes.getColor(C14625.f47173, 0);
         typedArrayObtainStyledAttributes.recycle();
         materialShapeDrawable.initializeElevationOverlay(context);
         materialShapeDrawable.setFillColor(ColorStateList.valueOf(color));
@@ -138,11 +138,11 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         window.setBackgroundDrawable(materialShapeDrawable);
         window.requestFeature(1);
         window.setLayout(-2, -2);
-        materialShapeDrawable.setElevation(C5031.m14006(window.getDecorView()));
+        materialShapeDrawable.setElevation(C22666.m51105(window.getDecorView()));
         return dialog;
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281, l.ComponentCallbacksC22654
+    @Override // l.DialogInterfaceOnCancelListenerC19136, l.ComponentCallbacksC11612
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         if (bundle == null) {
@@ -151,7 +151,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         restoreState(bundle);
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281, l.ComponentCallbacksC22654
+    @Override // l.DialogInterfaceOnCancelListenerC19136, l.ComponentCallbacksC11612
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
         bundle.putParcelable(TIME_MODEL_EXTRA, this.time);
@@ -184,15 +184,15 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         this.overrideThemeResId = bundle.getInt(OVERRIDE_THEME_RES_ID, 0);
     }
 
-    @Override // l.ComponentCallbacksC22654
+    @Override // l.ComponentCallbacksC11612
     public final View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(C15089.f49280, viewGroup);
-        TimePickerView timePickerView = (TimePickerView) viewGroup2.findViewById(C3798.f13736);
+        ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(C12388.f39801, viewGroup);
+        TimePickerView timePickerView = (TimePickerView) viewGroup2.findViewById(C23577.f76282);
         this.timePickerView = timePickerView;
         timePickerView.setOnDoubleTapListener(this);
-        this.textInputStub = (ViewStub) viewGroup2.findViewById(C3798.f13994);
-        this.modeButton = (MaterialButton) viewGroup2.findViewById(C3798.f14101);
-        TextView textView = (TextView) viewGroup2.findViewById(C3798.f14026);
+        this.textInputStub = (ViewStub) viewGroup2.findViewById(C23577.f76446);
+        this.modeButton = (MaterialButton) viewGroup2.findViewById(C23577.f76293);
+        TextView textView = (TextView) viewGroup2.findViewById(C23577.f76471);
         int i = this.titleResId;
         if (i != 0) {
             textView.setText(i);
@@ -200,7 +200,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
             textView.setText(this.titleText);
         }
         updateInputMode(this.modeButton);
-        Button button = (Button) viewGroup2.findViewById(C3798.f13947);
+        Button button = (Button) viewGroup2.findViewById(C23577.f76188);
         button.setOnClickListener(new View.OnClickListener() { // from class: com.google.android.material.timepicker.MaterialTimePicker.1
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
@@ -217,7 +217,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         } else if (!TextUtils.isEmpty(this.positiveButtonText)) {
             button.setText(this.positiveButtonText);
         }
-        Button button2 = (Button) viewGroup2.findViewById(C3798.f13806);
+        Button button2 = (Button) viewGroup2.findViewById(C23577.f76304);
         this.cancelButton = button2;
         button2.setOnClickListener(new View.OnClickListener() { // from class: com.google.android.material.timepicker.MaterialTimePicker.2
             @Override // android.view.View.OnClickListener
@@ -248,11 +248,11 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         return viewGroup2;
     }
 
-    @Override // l.ComponentCallbacksC22654
+    @Override // l.ComponentCallbacksC11612
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         if (this.activePresenter instanceof TimePickerTextInputPresenter) {
-            view.postDelayed(new RunnableC11767(4, this), 100L);
+            view.postDelayed(new RunnableC8143(3, this), 100L);
         }
     }
 
@@ -264,7 +264,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         }
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281, l.ComponentCallbacksC22654
+    @Override // l.DialogInterfaceOnCancelListenerC19136, l.ComponentCallbacksC11612
     public void onDestroyView() {
         super.onDestroyView();
         this.activePresenter = null;
@@ -277,7 +277,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         }
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281, android.content.DialogInterface.OnCancelListener
+    @Override // l.DialogInterfaceOnCancelListenerC19136, android.content.DialogInterface.OnCancelListener
     public final void onCancel(DialogInterface dialogInterface) {
         Iterator it = this.cancelListeners.iterator();
         while (it.hasNext()) {
@@ -286,7 +286,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         super.onCancel(dialogInterface);
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281, android.content.DialogInterface.OnDismissListener
+    @Override // l.DialogInterfaceOnCancelListenerC19136, android.content.DialogInterface.OnDismissListener
     public final void onDismiss(DialogInterface dialogInterface) {
         Iterator it = this.dismissListeners.iterator();
         while (it.hasNext()) {
@@ -295,7 +295,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         super.onDismiss(dialogInterface);
     }
 
-    @Override // l.DialogInterfaceOnCancelListenerC11281
+    @Override // l.DialogInterfaceOnCancelListenerC19136
     public void setCancelable(boolean z) {
         super.setCancelable(z);
         updateCancelButtonVisibility();
@@ -352,12 +352,12 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
 
     private Pair dataForMode(int i) {
         if (i == 0) {
-            return new Pair(Integer.valueOf(this.keyboardIcon), Integer.valueOf(C17910.f56868));
+            return new Pair(Integer.valueOf(this.keyboardIcon), Integer.valueOf(C24323.f78874));
         }
         if (i == 1) {
-            return new Pair(Integer.valueOf(this.clockIcon), Integer.valueOf(C17910.f56790));
+            return new Pair(Integer.valueOf(this.clockIcon), Integer.valueOf(C24323.f78815));
         }
-        throw new IllegalArgumentException(C8479.m22141(i, "no icon for mode: "));
+        throw new IllegalArgumentException(C13645.m33382(i, "no icon for mode: "));
     }
 
     public TimePickerClockPresenter getTimePickerClockPresenter() {
@@ -421,7 +421,7 @@ public final class MaterialTimePicker extends DialogInterfaceOnCancelListenerC11
         if (i != 0) {
             return i;
         }
-        TypedValue typedValueResolve = MaterialAttributes.resolve(requireContext(), C2387.f9306);
+        TypedValue typedValueResolve = MaterialAttributes.resolve(requireContext(), C11642.f37229);
         if (typedValueResolve == null) {
             return 0;
         }

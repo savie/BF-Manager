@@ -39,11 +39,11 @@
 
     iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll/ܶܰۙ;->ۖ()Z
+    invoke-virtual {v0}, Ll/᩻᩷ۙ;->᩸()Z
 
     move-result v0
 

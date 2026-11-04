@@ -1,34 +1,51 @@
 package l;
 
-import java.util.function.Consumer;
+import android.os.Build;
+import android.widget.EdgeEffect;
+import java.lang.reflect.Field;
 
-/* JADX INFO: renamed from: l.ܰۚᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: JAPX */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C13618 {
-    @Deprecated
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m33300(InterfaceC11501 interfaceC11501, Consumer consumer) {
-        InterfaceC17767 c18473;
-        if (consumer instanceof InterfaceC17767) {
-            c18473 = (InterfaceC17767) consumer;
-        } else {
-            C13638.requireNonNull(consumer);
-            c18473 = new C18473(consumer);
+/* JADX INFO: renamed from: l.۬ۙܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 88WU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13618 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final boolean f43262;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Field f43263;
+
+    static {
+        boolean z = Build.VERSION.SDK_INT >= 31;
+        f43262 = z;
+        Field field = null;
+        if (z) {
+            try {
+                C19577.class.getDeclaredField("ۙ").setAccessible(true);
+                try {
+                    Field declaredField = EdgeEffect.class.getDeclaredField("mEdgeEffectType");
+                    declaredField.setAccessible(true);
+                    field = declaredField;
+                } catch (Exception unused) {
+                }
+                f43263 = field;
+                return;
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
-        return interfaceC11501.tryAdvance((Object) c18473);
+        f43263 = null;
     }
 
-    @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m33299(InterfaceC11501 interfaceC11501, Consumer consumer) {
-        InterfaceC17767 c18473;
-        if (consumer instanceof InterfaceC17767) {
-            c18473 = (InterfaceC17767) consumer;
-        } else {
-            C13638.requireNonNull(consumer);
-            c18473 = new C18473(consumer);
+    public static void m33370(EdgeEffect edgeEffect) {
+        Field field;
+        if (!f43262 || (field = f43263) == null) {
+            return;
         }
-        interfaceC11501.forEachRemaining((Object) c18473);
+        try {
+            field.setInt(edgeEffect, 0);
+        } catch (Exception unused) {
+        }
     }
 }

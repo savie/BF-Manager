@@ -167,11 +167,11 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             }
             String strImprintProperty = UMEnvelopeBuild.imprintProperty(this.mContext, "pr_ve", null);
             SharedPreferences sharedPreferences = PreferenceWrapper.getDefault(this.mContext);
-            jSONObject.put(d.f77932l, UMEnvelopeBuild.imprintProperty(this.mContext, "pr_ve", null));
+            jSONObject.put(d.f82048l, UMEnvelopeBuild.imprintProperty(this.mContext, "pr_ve", null));
             jSONObject.put(d.m, UMEnvelopeBuild.imprintProperty(this.mContext, "ud_da", null));
             jSONObject.put(d.ah, "1.0.0");
             if (TextUtils.isEmpty(strImprintProperty)) {
-                jSONObject.put(d.f77932l, sharedPreferences.getString("vers_pre_version", "0"));
+                jSONObject.put(d.f82048l, sharedPreferences.getString("vers_pre_version", "0"));
                 jSONObject.put(d.m, sharedPreferences.getString("vers_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()))));
             }
         } catch (Throwable unused) {

@@ -1,5 +1,6 @@
 package org.simpleframework.xml.core;
 
+import l.C24966;
 import org.simpleframework.xml.Version;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -67,6 +68,6 @@ public class ClassSchema implements Schema {
     }
 
     public String toString() {
-        return "schema for " + this.type;
+        return C24966.m55772(this.type, "schema for ");
     }
 }

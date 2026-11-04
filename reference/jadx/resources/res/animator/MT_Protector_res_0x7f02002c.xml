@@ -16,7 +16,7 @@
     <item android:state_enabled="true">
         <set>
             <objectAnimator
-                android:interpolator="@anim/MT_Protector_res_0x7f010035"
+                android:interpolator="@anim/MT_Protector_res_0x7f010037"
                 android:duration="@integer/MT_Protector_res_0x7f0b0037"
                 android:valueTo="0dp"
                 android:valueType="floatType"

@@ -1,37 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۙۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E6AF */
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.᩶۬᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21345 implements InterfaceC8497 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19229 f69462;
-
-    public C21345(C19229 c19229) {
-        this.f69462 = c19229;
+public class C21345 implements InterfaceC23583 {
+    @Override // l.InterfaceC23583
+    public EnumC16123 preVisitDirectory(Object obj, InterfaceC8665 interfaceC8665) {
+        C17359.requireNonNull(obj);
+        C17359.requireNonNull(interfaceC8665);
+        return EnumC16123.CONTINUE;
     }
 
-    @Override // l.InterfaceC8497
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo22204(float f) {
-        if (f == 0.0f) {
-            return false;
+    @Override // l.InterfaceC23583
+    public EnumC16123 visitFile(Object obj, InterfaceC8665 interfaceC8665) {
+        C17359.requireNonNull(obj);
+        C17359.requireNonNull(interfaceC8665);
+        return EnumC16123.CONTINUE;
+    }
+
+    @Override // l.InterfaceC23583
+    public EnumC16123 visitFileFailed(Object obj, IOException iOException) throws IOException {
+        C17359.requireNonNull(obj);
+        throw iOException;
+    }
+
+    @Override // l.InterfaceC23583
+    public EnumC16123 postVisitDirectory(Object obj, IOException iOException) throws IOException {
+        C17359.requireNonNull(obj);
+        if (iOException != null) {
+            throw iOException;
         }
-        mo22205();
-        this.f69462.m44186((int) f);
-        return true;
-    }
-
-    @Override // l.InterfaceC8497
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo22205() {
-        this.f69462.f62136.abortAnimation();
-    }
-
-    @Override // l.InterfaceC8497
-    /* JADX INFO: renamed from: ۙ */
-    public final float mo22203() {
-        return -this.f69462.m44185();
+        return EnumC16123.CONTINUE;
     }
 }

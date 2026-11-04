@@ -1,19 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0351 extends C19402 {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C6701 f1778;
+/* JADX INFO: renamed from: l.֡ۢ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6BG */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C0351 implements Parcelable.ClassLoaderCreator {
+    @Override // android.os.Parcelable.ClassLoaderCreator
+    public final Object createFromParcel(Parcel parcel, ClassLoader classLoader) {
+        return new C7809(parcel);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int[] f1779;
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C7809(parcel);
+    }
 
-    public C0351(C6701 c6701) {
-        super(c6701);
-        this.f1778 = c6701;
-        this.f1779 = c6701.f69912;
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C7809[i];
     }
 }

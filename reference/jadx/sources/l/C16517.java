@@ -1,34 +1,50 @@
 package l;
 
-import java.util.Iterator;
-import java.util.function.Predicate;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܽ۠ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R450 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16517 implements Iterable {
+/* JADX INFO: renamed from: l.ܺ֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6GT */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C16517 implements Consumer {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Predicate f53055;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10873 f53056;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ EnumC10167 f53057;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f53485;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC11242 f53058;
+    public final /* synthetic */ Object f53486;
 
-    public /* synthetic */ C16517(C10873 c10873, AbstractC11242 abstractC11242, Predicate predicate, EnumC10167 enumC10167) {
-        this.f53056 = c10873;
-        this.f53058 = abstractC11242;
-        this.f53055 = predicate;
-        this.f53057 = enumC10167;
+    public /* synthetic */ C16517(int i, Object obj) {
+        this.f53485 = i;
+        this.f53486 = obj;
     }
 
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        return new C5933(this.f53056, this.f53058, this.f53055, this.f53057);
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f53485) {
+            case 0:
+                ((BitSet) this.f53486).and(((C21943) obj).m49651());
+                break;
+            case 1:
+                ((ArrayList) this.f53486).add((C22919) obj);
+                break;
+            case 2:
+                C11260 c11260 = (C11260) this.f53486;
+                C17973 c17973 = (C17973) obj;
+                if (c17973.m41928()) {
+                    c11260.m28510(c17973.m41945());
+                }
+                c17973.m41934(c11260);
+                break;
+            default:
+                ((AbstractC11781) this.f53486).m29580((C14769) obj);
+                break;
+        }
     }
 }

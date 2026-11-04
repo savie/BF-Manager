@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.generators;
 
-import l.C12441;
+import l.C12669;
 import org.bouncycastle.crypto.DataLengthException;
 import org.bouncycastle.crypto.DerivationParameters;
 import org.bouncycastle.crypto.Mac;
@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.KDFCounterParameters;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KDFCounterBytesGenerator implements MacDerivationFunction {
     public byte[] fixedInputDataCtrPrefix;
     public byte[] fixedInputData_afterCtr;
@@ -81,7 +81,7 @@ public class KDFCounterBytesGenerator implements MacDerivationFunction {
         int i3 = this.generatedBytes;
         int i4 = i3 + i2;
         if (i4 < 0 || i4 >= this.maxSizeExcl) {
-            throw new DataLengthException(C12441.m30911(this.maxSizeExcl, " bytes", new StringBuilder("Current KDFCTR may only be used for ")));
+            throw new DataLengthException(C12669.m31437(this.maxSizeExcl, " bytes", new StringBuilder("Current KDFCTR may only be used for ")));
         }
         if (i3 % this.h == 0) {
             generateNext();

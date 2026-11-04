@@ -1,75 +1,94 @@
-.class public final Ll/ۗۢ᩺;
-.super Ll/ۜ۟᩵;
-.source "T9P6"
+.class public final synthetic Ll/ۗۢ᩺;
+.super Ljava/lang/Object;
+.source "X43L"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final ۛ:Ll/۫֫᩺;
+.field public final synthetic ܰ:Ljava/util/function/Predicate;
 
 
 # direct methods
-.method public constructor <init>(Ll/۫֫᩺;Ljava/io/InputStream;)V
+.method public synthetic constructor <init>(Ljava/util/function/Predicate;)V
     .locals 0
 
-    .line 39
-    invoke-direct {p0, p2}, Ll/ۜ۟᩵;-><init>(Ljava/io/InputStream;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
-    iput-object p1, p0, Ll/ۗۢ᩺;->ۛ:Ll/۫֫᩺;
+    iput-object p1, p0, Ll/ۗۢ᩺;->ܰ:Ljava/util/function/Predicate;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final read()I
-    .locals 2
-
-    .line 46
-    :try_start_0
-    invoke-super {p0}, Ll/ۜ۟᩵;->read()I
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    .line 48
-    iget-object v1, p0, Ll/ۗۢ᩺;->ۛ:Ll/۫֫᩺;
-
-    invoke-static {v0, v1}, Ll/᩸ۢ᩺;->ۙ(Ljava/io/IOException;Ll/۫֫᩺;)V
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final read([BII)I
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 0
 
-    .line 55
-    :try_start_0
-    invoke-super {p0, p1, p2, p3}, Ll/ۜ۟᩵;->read([BII)I
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    check-cast p1, Ll/ۧܿ᩺;
+
+    .line 3025
+    iget-object v0, p1, Ll/ۧܿ᩺;->ۢ:Ll/ۧܿ᩺;
+
+    invoke-virtual {v0}, Ll/ۧܿ᩺;->ܶۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ll/ۗۢ᩺;->ܰ:Ljava/util/function/Predicate;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz p1, :cond_1
+
+    :cond_0
+    const/4 p1, 0x1
 
     return p1
 
-    :catch_0
-    move-exception p1
-
-    .line 57
-    iget-object p2, p0, Ll/ۗۢ᩺;->ۛ:Ll/۫֫᩺;
-
-    invoke-static {p1, p2}, Ll/᩸ۢ᩺;->ۙ(Ljava/io/IOException;Ll/۫֫᩺;)V
-
+    :cond_1
     const/4 p1, 0x0
 
-    throw p1
+    return p1
 .end method

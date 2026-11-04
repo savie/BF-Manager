@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-import l.HandlerC4307;
+import l.HandlerC21110;
 
 /* JADX INFO: loaded from: classes.dex */
 public class UIUpdaterGroup {
@@ -14,7 +14,7 @@ public class UIUpdaterGroup {
     public final WeakReference myRef = new WeakReference(this);
     public final List updaters = new ArrayList();
     public static final AtomicInteger ID_COUNTER = new AtomicInteger();
-    public static final Handler HANDLER = new HandlerC4307(Looper.getMainLooper());
+    public static final Handler HANDLER = new HandlerC21110(Looper.getMainLooper());
 
     public UIUpdater registerUpdater(Consumer consumer) {
         UIUpdater uIUpdater = new UIUpdater(this, consumer);

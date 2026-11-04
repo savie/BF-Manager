@@ -1,8 +1,7 @@
 package org.bouncycastle.asn1.x509;
 
 import java.io.IOException;
-import l.C15489;
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1GeneralizedTime;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -13,7 +12,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class V2TBSCertListGenerator {
     public static final ASN1Sequence[] reasons = {createReasonExtension(0), createReasonExtension(1), createReasonExtension(2), createReasonExtension(3), createReasonExtension(4), createReasonExtension(5), createReasonExtension(6), createReasonExtension(7), createReasonExtension(8), createReasonExtension(9), createReasonExtension(10)};
     public X500Name issuer;
@@ -81,7 +80,7 @@ public class V2TBSCertListGenerator {
             aSN1EncodableVector.add(createReasonExtension(i));
         } else {
             if (i < 0) {
-                throw new IllegalArgumentException(C8479.m22141(i, "invalid reason value: "));
+                throw new IllegalArgumentException(C13645.m33382(i, "invalid reason value: "));
             }
             aSN1EncodableVector.add(aSN1SequenceArr[i]);
         }
@@ -163,7 +162,7 @@ public class V2TBSCertListGenerator {
         try {
             return new DERSequence(Extension.invalidityDate, new DEROctetString(aSN1GeneralizedTime.getEncoded()));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("error encoding reason: ", e));
+            throw new IllegalArgumentException(C13645.m33383("error encoding reason: ", e));
         }
     }
 
@@ -171,7 +170,7 @@ public class V2TBSCertListGenerator {
         try {
             return new DERSequence(Extension.reasonCode, new DEROctetString(CRLReason.lookup(i).getEncoded()));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("error encoding reason: ", e));
+            throw new IllegalArgumentException(C13645.m33383("error encoding reason: ", e));
         }
     }
 }

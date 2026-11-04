@@ -1,36 +1,75 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ܿۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W7SR */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23840 extends C10394 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5870 f77089;
-
-    @Override // l.C4748, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ Object mo1767(Object obj, AbstractC16579 abstractC16579) {
-        return m52561(abstractC16579);
+/* JADX INFO: renamed from: l.᩹᩸ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W5BJ */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23840 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C16380 m53165(int i) {
+        return new C16380(Integer.valueOf(i));
     }
 
-    @Override // l.C4748, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ AbstractC16579 mo1767(Object obj, AbstractC16579 abstractC16579) {
-        return m52561(abstractC16579);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C17126 m53166(C4448 c4448, AbstractC8922 abstractC8922, String str) {
+        return new C17126(EnumC22260.ADD, c4448, abstractC8922, str);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16579 m52561(AbstractC16579 abstractC16579) {
-        if (!abstractC16579.m39001(EnumC6617.DEFERRED)) {
-            return abstractC16579;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C17126 m53169(C4448 c4448, AbstractC8922 abstractC8922, String str) {
+        byte b = -1;
+        switch (str.hashCode()) {
+            case 68:
+                if (str.equals("D")) {
+                    b = 0;
+                }
+                break;
+            case 70:
+                if (str.equals("F")) {
+                    b = 1;
+                }
+                break;
+            case 73:
+                if (str.equals("I")) {
+                    b = 2;
+                }
+                break;
+            case 74:
+                if (str.equals("J")) {
+                    b = 3;
+                }
+                break;
         }
-        C10104 c10104 = (C10104) abstractC16579;
-        C5870 c5870 = this.f77089;
-        return new C10104(c5870, (AbstractC5930) c5870.f20047.mo1921(c10104.f34494, (Object) null), c10104.f34496);
+        switch (b) {
+            case 0:
+                return new C17126(EnumC22260.DDIV, c4448, abstractC8922, str);
+            case 1:
+                return new C17126(EnumC22260.FDIV, c4448, abstractC8922, str);
+            case 2:
+                return new C17126(EnumC22260.IDIV, c4448, abstractC8922, str);
+            case 3:
+                return new C17126(EnumC22260.LDIV, c4448, abstractC8922, str);
+            default:
+                throw new RuntimeException("type must set to one of I/J/F/D");
+        }
     }
 
-    public C23840(C5870 c5870) {
-        this.f77089 = c5870;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C6686 m53164(AbstractC11071[] abstractC11071Arr, String[] strArr, String str) {
+        return new C6686(EnumC22260.INVOKE_NEW, abstractC11071Arr, str, "<init>", strArr, str);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C17126 m53167(C4448 c4448, AbstractC8922 abstractC8922, String str) {
+        return new C17126(EnumC22260.MUL, c4448, abstractC8922, str);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static C17126 m53170(C4448 c4448, AbstractC8922 abstractC8922, String str) {
+        return new C17126(EnumC22260.REM, c4448, abstractC8922, str);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static C17126 m53168(C4448 c4448, AbstractC8922 abstractC8922, String str) {
+        return new C17126(EnumC22260.SUB, abstractC8922, c4448, str);
     }
 }

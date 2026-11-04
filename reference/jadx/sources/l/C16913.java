@@ -1,22 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ᩸ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K8QR */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16913 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f54090;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f54091;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f54092;
-
-    public C16913(long j, int i, boolean z) {
-        this.f54092 = j;
-        this.f54090 = z;
-        this.f54091 = i;
+/* JADX INFO: renamed from: l.ܺܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 88X7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16913 implements InterfaceC16299 {
+    @Override // l.InterfaceC16299
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo6845(C10420 c10420, InterfaceC17045 interfaceC17045) {
+        return new C14675(c10420.m26734(), ((Integer) AbstractC22881.f74341.m29675(interfaceC17045)).intValue());
     }
 }

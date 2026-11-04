@@ -2,11 +2,11 @@ package com.google.android.material.transition;
 
 import android.graphics.Path;
 import android.graphics.PointF;
-import l.AbstractC19798;
+import l.AbstractC19720;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class MaterialArcMotion extends AbstractC19798 {
-    @Override // l.AbstractC19798
+public final class MaterialArcMotion extends AbstractC19720 {
+    @Override // l.AbstractC19720
     public Path getPath(float f, float f2, float f3, float f4) {
         Path path = new Path();
         path.moveTo(f, f2);

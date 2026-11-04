@@ -1,66 +1,98 @@
 package l;
 
-import android.text.TextUtils;
-import java.io.IOException;
+import java.util.IllegalFormatPrecisionException;
+import java.util.UnknownFormatConversionException;
 
-/* JADX INFO: renamed from: l.ۛ۠֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R9JP */
+/* JADX INFO: renamed from: l.ۚ᩷᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: T5CS */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5924 extends AbstractC12684 {
-    @Override // l.AbstractC12684
+public final class C5924 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo16189(Object obj) throws Exception {
-        C23564 c23564 = (C23564) obj;
-        C6254 c6254M51964 = c23564.m51964();
-        C19946 c19946 = new C19946(C4843.m13438(false, c23564.m51962(), c23564.m51963()));
-        try {
-            String str = c6254M51964.f21214;
-            String str2 = c6254M51964.f21215;
-            C1163 c1163M45243 = c19946.m45243(c6254M51964.f21212, str);
-            if ((c23564.m51962() == EnumC3101.SMB2_UNSIGNED) && c1163M45243.m4281().m32543()) {
-                throw new IOException("SMB server requires signing");
+    public int f20267;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f20268;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f20269;
+
+    public C5924(String str, int i) {
+        String strM17240;
+        this.f20269 = str;
+        this.f20267 = i;
+        if (m17239()) {
+            strM17240 = m17240();
+            if (m17238() == '$') {
+                m17237();
+            } else if (strM17240.charAt(0) == '0') {
+                this.f20267 -= strM17240.length();
             }
-            C12185 c12185M13445 = C4843.m13445(c6254M51964);
-            String str3 = c6254M51964.f21210;
-            if ((!TextUtils.isEmpty(str2) || !TextUtils.isEmpty(str3)) && str2.equals("guest")) {
-                TextUtils.isEmpty(str3);
-            }
-            return new C10864(c23564, c19946, c1163M45243, c1163M45243.m4285(c12185M13445));
-        } catch (Exception e) {
-            C19431.m44468(c19946);
-            throw e;
+            strM17240 = null;
+        } else {
+            strM17240 = null;
         }
+        if (strM17240 == null) {
+            while (",-(+# 0<".indexOf(m17238()) >= 0) {
+                m17237();
+            }
+        }
+        if (strM17240 == null && m17239()) {
+            m17240();
+        }
+        if (m17238() == '.') {
+            m17237();
+            if (!m17239()) {
+                throw new IllegalFormatPrecisionException(m17238());
+            }
+            m17240();
+        }
+        if (m17238() == 't' || m17238() == 'T') {
+            m17237();
+        }
+        m17237();
+        this.f20268 = str.substring(i - 1, this.f20267);
     }
 
-    @Override // l.AbstractC12684
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private String m17240() {
+        int i = this.f20267;
+        while (m17239()) {
+            m17237();
+        }
+        return this.f20269.substring(i, this.f20267);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private void m17237() {
+        if (this.f20267 == this.f20269.length()) {
+            throw new UnknownFormatConversionException("End of String");
+        }
+        this.f20267++;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    private char m17238() {
+        int i = this.f20267;
+        String str = this.f20269;
+        if (i == str.length()) {
+            throw new UnknownFormatConversionException("End of String");
+        }
+        return str.charAt(this.f20267);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private boolean m17239() {
+        return this.f20267 != this.f20269.length() && Character.isDigit(m17238());
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo16190(Object obj, InterfaceC11273 interfaceC11273) {
-        C19431.m44468(((C10864) interfaceC11273.mo28254()).f36942);
+    public final int m17241() {
+        return this.f20267;
     }
 
-    @Override // l.AbstractC12684
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC11273 mo16191(Object obj) {
-        return new C1690((C10864) obj);
-    }
-
-    @Override // l.AbstractC12684
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo16192(Object obj, InterfaceC11273 interfaceC11273) {
-        if (!((C10864) interfaceC11273.mo28254()).f36944.m4289()) {
-            return false;
-        }
-        long jCurrentTimeMillis = System.currentTimeMillis() - interfaceC11273.mo28258().toEpochMilli();
-        if (jCurrentTimeMillis < 0 || jCurrentTimeMillis > 2000) {
-            try {
-                C1690 c1690 = (C1690) interfaceC11273;
-                if (c1690.m5611()) {
-                    c1690.m5612();
-                }
-            } catch (Exception unused) {
-                return false;
-            }
-        }
-        return true;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m17242() {
+        return this.f20268;
     }
 }

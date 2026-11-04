@@ -1,65 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶֫ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7MS */
-/* JADX INFO: loaded from: classes4.dex */
-public class C19853 implements Comparable {
+import java.nio.channels.FileChannel;
+import java.util.Collections;
+import java.util.HashSet;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C8354 f63673;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public final String f63674;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final boolean f63675;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final C15620 f63676;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final String f63677;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final long f63678;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final long f63679;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final long f63680;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final String f63681;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final long f63682;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final int f63683;
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        Long l2 = (Long) obj;
-        long jLongValue = l2.longValue();
-        long j = this.f63678;
-        if (j > jLongValue) {
-            return 1;
+/* JADX INFO: renamed from: l.ᩴ۬᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C19853 {
+    public static FileChannel convertMaybeLegacyFileChannelFromLibrary(FileChannel fileChannel) {
+        if (fileChannel == null) {
+            return null;
         }
-        return j < l2.longValue() ? -1 : 0;
+        if (AbstractC12944.a) {
+            return fileChannel;
+        }
+        int i = C15927.e;
+        if (fileChannel instanceof C15927) {
+            return (C15927) fileChannel;
+        }
+        return new C15927(fileChannel, false, false, null);
     }
 
-    public C19853(String str, C15620 c15620, long j, int i, long j2, C8354 c8354, String str2, String str3, long j3, long j4, boolean z) {
-        this.f63674 = str;
-        this.f63676 = c15620;
-        this.f63680 = j;
-        this.f63683 = i;
-        this.f63678 = j2;
-        this.f63673 = c8354;
-        this.f63681 = str2;
-        this.f63677 = str3;
-        this.f63682 = j3;
-        this.f63679 = j4;
-        this.f63675 = z;
+    public static FileChannel open(InterfaceC24329 interfaceC24329, InterfaceC12394... interfaceC12394Arr) {
+        HashSet hashSet = new HashSet();
+        Collections.addAll(hashSet, interfaceC12394Arr);
+        return AbstractC12944.b ? FileChannel.open(C24971.i(interfaceC24329), AbstractC1758.u(hashSet), AbstractC1758.N(new InterfaceC13885[0])) : AbstractC1758.T(interfaceC24329, hashSet);
     }
 }

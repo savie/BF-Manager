@@ -1,36 +1,46 @@
 .class public final synthetic Ll/ۡ۟᩺;
 .super Ljava/lang/Object;
-.source "Z6VB"
+.source "X43L"
 
 # interfaces
-.implements Ll/ۚ᩺ۙ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/᩶۟᩺;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/᩶۟᩺;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۡ۟᩺;->ܺ:Ll/᩶۟᩺;
-
-    return-void
-.end method
+.implements Ljava/util/function/BinaryOperator;
 
 
 # virtual methods
-.method public final ۙ(Ll/֨᩺ۙ;Ll/֫ۜۙ;)V
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/BiFunction;
     .locals 0
 
     .line 0
-    iget-object p1, p0, Ll/ۡ۟᩺;->ܺ:Ll/᩶۟᩺;
+    invoke-static {p0, p1}, Ll/ۗۧۗ;->$default$andThen(Ljava/util/function/BiFunction;Ljava/util/function/Function;)Ljava/util/function/BiFunction;
 
-    invoke-static {p1}, Ll/᩶۟᩺;->ܰ(Ll/᩶۟᩺;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
+.end method
+
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    .line 2
+    check-cast p1, Ll/۠ᩳ᩺;
+
+    .line 4
+    check-cast p2, Ll/۠ᩳ᩺;
+
+    .line 3758
+    iget-object v0, p1, Ll/۠ᩳ᩺;->᩸:Ll/᩻֨᩺;
+
+    iget-object v1, p1, Ll/۠ᩳ᩺;->ۙ:Ll/ܰᩳۘ;
+
+    iget-object p2, p2, Ll/۠ᩳ᩺;->ۙ:Ll/ܰᩳۘ;
+
+    iget-object v2, p1, Ll/۠ᩳ᩺;->ۤ:Ll/ܰ᩷ۘ;
+
+    invoke-virtual {v0, v1, p2, v2}, Ll/᩻֨᩺;->ۙ(Ll/ܰᩳۘ;Ll/ܰᩳۘ;Ljava/util/function/BiPredicate;)Ll/ܰᩳۘ;
+
+    move-result-object p2
+
+    iput-object p2, p1, Ll/۠ᩳ᩺;->ۙ:Ll/ܰᩳۘ;
+
+    return-object p1
 .end method

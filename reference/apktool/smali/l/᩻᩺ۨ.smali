@@ -1,79 +1,51 @@
-.class public final Ll/᩻᩺ۨ;
+.class public abstract Ll/᩻᩺ۨ;
 .super Ljava/lang/Object;
-.source "T5YJ"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.source "SAI1"
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 77
-    new-instance v0, Ll/ܳۘۨ;
+    .line 28
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 78
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ܳۘۨ;
-
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
+    .line 29
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/16 v2, 0x9
-
-    const/16 v3, 0x20
-
-    .line 79
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
 
-    const/16 v2, 0xa
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    const-string v1, " ["
 
-    move-result-object v1
+    .line 30
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v2, 0xd
+    .line 31
+    invoke-virtual {p0, v0}, Ll/᩻᩺ۨ;->ۙ(Ljava/lang/StringBuilder;)V
 
-    .line 80
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    const-string v1, "]"
 
-    move-result-object v1
+    .line 32
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x8
+    .line 33
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    const/16 v2, 0xc
-
-    .line 81
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    const-string v3, ""
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 78
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(Ljava/lang/String;)V
-
-    .line 82
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+.method public ۙ(Ljava/lang/StringBuilder;)V
+    .locals 0
 
     return-void
 .end method

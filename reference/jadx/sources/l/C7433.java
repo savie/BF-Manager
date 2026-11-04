@@ -1,122 +1,74 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۧ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4SU */
+import java.util.Comparator;
+import java.util.SortedMap;
+import java.util.SortedSet;
+
+/* JADX INFO: renamed from: l.ۜ᩸ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O3K3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7433 extends AbstractC3384 implements InterfaceC11680 {
+public class C7433 extends C8179 implements SortedMap {
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final EnumC18057 f24797 = EnumC18057.Format35mi;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public SortedSet f24469;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f24798;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC20024 f24470;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final int f24799;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final int f24800;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final int f24801;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final int f24802;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final int f24803;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final int f24804;
-
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۤ */
-    public final String mo1142() {
-        return mo5435().f35326 + " " + C3335.m9930(this) + ", " + mo14567();
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C7433(AbstractC20024 abstractC20024, SortedMap sortedMap) {
+        super(abstractC20024, sortedMap);
+        this.f24470 = abstractC20024;
     }
 
-    public C7433(EnumC10297 enumC10297, int i, int i2, int i3, int i4, int i5, int i6, int i7) {
-        super(enumC10297);
-        C13530.m33063(i);
-        this.f24801 = i;
-        if (i > 0) {
-            C13530.m33071(i2);
-        } else {
-            i2 = 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public SortedMap mo20369() {
+        return (SortedMap) this.f26975;
+    }
+
+    @Override // java.util.SortedMap
+    public final Comparator comparator() {
+        return mo20369().comparator();
+    }
+
+    @Override // java.util.SortedMap
+    public final Object firstKey() {
+        return mo20369().firstKey();
+    }
+
+    @Override // java.util.SortedMap
+    public final Object lastKey() {
+        return mo20369().lastKey();
+    }
+
+    @Override // java.util.SortedMap
+    public SortedMap headMap(Object obj) {
+        return new C7433(this.f24470, mo20369().headMap(obj));
+    }
+
+    @Override // java.util.SortedMap
+    public SortedMap subMap(Object obj, Object obj2) {
+        return new C7433(this.f24470, mo20369().subMap(obj, obj2));
+    }
+
+    @Override // java.util.SortedMap
+    public SortedMap tailMap(Object obj) {
+        return new C7433(this.f24470, mo20369().tailMap(obj));
+    }
+
+    @Override // l.C8179, java.util.AbstractMap, java.util.Map, java.util.SortedMap
+    public SortedSet keySet() {
+        SortedSet sortedSet = this.f24469;
+        if (sortedSet != null) {
+            return sortedSet;
         }
-        this.f24802 = i2;
-        if (i > 1) {
-            C13530.m33071(i3);
-        } else {
-            i3 = 0;
-        }
-        this.f24803 = i3;
-        if (i > 2) {
-            C13530.m33071(i4);
-        } else {
-            i4 = 0;
-        }
-        this.f24799 = i4;
-        if (i > 3) {
-            C13530.m33071(i5);
-        } else {
-            i5 = 0;
-        }
-        this.f24800 = i5;
-        if (i > 4) {
-            C13530.m33071(i6);
-        } else {
-            i6 = 0;
-        }
-        this.f24804 = i6;
-        this.f24798 = i7;
+        SortedSet sortedSetMo20368 = mo20368();
+        this.f24469 = sortedSetMo20368;
+        return sortedSetMo20368;
     }
 
-    @Override // l.InterfaceC13153
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2107() {
-        return this.f24801;
-    }
-
-    @Override // l.InterfaceC10768
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo3085() {
-        return this.f24802;
-    }
-
-    @Override // l.InterfaceC10768
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo3087() {
-        return this.f24803;
-    }
-
-    @Override // l.InterfaceC10768
-    /* JADX INFO: renamed from: ᩹ */
-    public final int mo3089() {
-        return this.f24799;
-    }
-
-    @Override // l.InterfaceC10768
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo3086() {
-        return this.f24800;
-    }
-
-    @Override // l.InterfaceC10768
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo3088() {
-        return this.f24804;
-    }
-
-    @Override // l.InterfaceC14296
-    /* JADX INFO: renamed from: ᩳ */
-    public final int mo14567() {
-        return this.f24798;
-    }
-
-    @Override // l.AbstractC3384
-    /* JADX INFO: renamed from: ۛ */
-    public final EnumC18057 mo2108() {
-        return f24797;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public SortedSet mo20368() {
+        return new C14144(this.f24470, mo20369());
     }
 }

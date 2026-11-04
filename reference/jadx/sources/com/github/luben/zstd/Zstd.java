@@ -4,10 +4,14 @@ import com.github.luben.zstd.util.Native;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-import l.C2271;
+import l.C14442;
+import l.C17359;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Zstd {
+    public static final long MAX_DECOMPRESS_SIZE;
+    public static final String maxDecompressSizeOverride = "ZstdMaxDecompressSize";
+
     public static native int blockSizeMax();
 
     public static native int chainLogMax();
@@ -181,6 +185,15 @@ public class Zstd {
 
     static {
         Native.load();
+        long j = 536870912;
+        try {
+            String property = System.getProperty(maxDecompressSizeOverride);
+            if (property != null) {
+                j = Long.parseLong(property);
+            }
+        } catch (NumberFormatException unused) {
+        }
+        MAX_DECOMPRESS_SIZE = j;
     }
 
     public enum ParamSwitch {
@@ -402,12 +415,11 @@ public class Zstd {
     }
 
     public static long findFrameCompressedSize(byte[] bArr, int i, int i2) {
-        if (i >= bArr.length) {
+        if (i < 0 || i >= bArr.length) {
             throw new ArrayIndexOutOfBoundsException(i);
         }
-        int i3 = i + i2;
-        if (i3 > bArr.length) {
-            throw new ArrayIndexOutOfBoundsException(i3);
+        if (i2 < 0 || i2 > bArr.length - i) {
+            throw new ArrayIndexOutOfBoundsException(i + i2);
         }
         long jFindFrameCompressedSize0 = findFrameCompressedSize0(bArr, i, i2);
         if (isError(jFindFrameCompressedSize0)) {
@@ -492,6 +504,11 @@ public class Zstd {
     }
 
     public static long trainFromBuffer(byte[][] bArr, byte[] bArr2, boolean z, int i) {
+        C17359.requireNonNull(bArr, "samples");
+        C17359.requireNonNull(bArr2, "dictBuffer");
+        for (byte[] bArr3 : bArr) {
+            C17359.requireNonNull(bArr3, "sample");
+        }
         if (bArr.length <= 10) {
             throw new ZstdException(errGeneric(), "nb of samples too low");
         }
@@ -503,6 +520,9 @@ public class Zstd {
     }
 
     public static long trainFromBufferDirect(ByteBuffer byteBuffer, int[] iArr, ByteBuffer byteBuffer2, boolean z, int i) {
+        C17359.requireNonNull(byteBuffer, "samples");
+        C17359.requireNonNull(iArr, "sampleSizes");
+        C17359.requireNonNull(byteBuffer2, "dictBuffer");
         if (iArr.length <= 10) {
             throw new ZstdException(errGeneric(), "nb of samples too low");
         }
@@ -677,15 +697,27 @@ public class Zstd {
     }
 
     public static int calculateContentSizeAndFrames(byte[] bArr, List list) {
+        long j = 0;
         int i = 0;
-        int i2 = 0;
         while (i < bArr.length) {
             FrameData frameData = new FrameData(bArr, i);
             list.add(frameData);
-            i += (int) frameData.compressedSize;
-            i2 += (int) frameData.contentSize;
+            long j2 = frameData.compressedSize;
+            if (j2 > bArr.length - i) {
+                throw new RuntimeException("Invalid compressed size");
+            }
+            long j3 = frameData.contentSize;
+            long j4 = MAX_DECOMPRESS_SIZE;
+            if (j3 > j4) {
+                throw new RuntimeException("Frame content size is too large");
+            }
+            i += (int) j2;
+            j += j3;
+            if (j > j4) {
+                throw new RuntimeException("Content size too large");
+            }
         }
-        return i2;
+        return (int) j;
     }
 
     public static byte[] decompressFrame(byte[] bArr, int i, int i2, int i3) {
@@ -700,13 +732,16 @@ public class Zstd {
     public static byte[] decompressFrame(byte[] bArr, int i) {
         int iFindFrameCompressedSize = (int) findFrameCompressedSize(bArr, i);
         long frameContentSize = getFrameContentSize(bArr, i, iFindFrameCompressedSize);
-        if (!isError(frameContentSize)) {
-            return decompressFrame(bArr, i, iFindFrameCompressedSize, (int) frameContentSize);
+        if (isError(frameContentSize)) {
+            if (frameContentSize == -1) {
+                throw new ZstdException(frameContentSize, "Content size is unknown");
+            }
+            throw new ZstdException(frameContentSize);
         }
-        if (frameContentSize == -1) {
-            throw new ZstdException(frameContentSize, "Content size is unknown");
+        if (frameContentSize > MAX_DECOMPRESS_SIZE) {
+            throw new RuntimeException("Frame content size is too large");
         }
-        throw new ZstdException(frameContentSize);
+        return decompressFrame(bArr, i, iFindFrameCompressedSize, (int) frameContentSize);
     }
 
     public static byte[] decompressFrame(byte[] bArr) {
@@ -821,7 +856,7 @@ public class Zstd {
     public static ByteBuffer getArrayBackedBuffer(BufferPool bufferPool, int i) throws ZstdIOException {
         ByteBuffer byteBuffer = bufferPool.get(i);
         if (byteBuffer == null) {
-            throw new ZstdIOException(errMemoryAllocation(), C2271.m6966(i, "Cannot get ByteBuffer of size ", " from the BufferPool"));
+            throw new ZstdIOException(errMemoryAllocation(), C14442.m34864(i, "Cannot get ByteBuffer of size ", " from the BufferPool"));
         }
         if (byteBuffer.hasArray() && byteBuffer.arrayOffset() == 0) {
             return byteBuffer;

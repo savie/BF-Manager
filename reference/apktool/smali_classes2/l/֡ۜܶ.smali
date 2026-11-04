@@ -1,52 +1,40 @@
-.class public final Ll/֡ۜܶ;
-.super Ll/ᩳۘܶ;
-.source "2B8Q"
+.class public final synthetic Ll/֡ۜܶ;
+.super Ljava/lang/Object;
+.source "Y89J"
 
 
-# instance fields
-.field public final ۚ:[I
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/۟ۜܶ;II[I)V
-    .locals 7
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v4, 0x0
+    .line 78
+    invoke-static {}, Ll/᩵֫ܶ;->values()[Ll/᩵֫ܶ;
 
-    const-wide/16 v5, 0x0
+    move-result-object v0
 
-    const/4 v3, 0x0
+    array-length v0, v0
 
-    move-object v0, p0
+    new-array v0, v0, [I
 
-    move-object v1, p1
+    sput-object v0, Ll/֡ۜܶ;->ۙ:[I
 
-    move v2, p2
+    :try_start_0
+    sget-object v1, Ll/᩵֫ܶ;->ۗ᩷:Ll/᩵֫ܶ;
 
-    .line 41
-    invoke-direct/range {v0 .. v6}, Ll/ᩳۘܶ;-><init>(Ll/۟ۜܶ;IIIJ)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 44
-    iput-object p4, p0, Ll/֡ۜܶ;->ۚ:[I
+    move-result v1
 
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
     return-void
-.end method
-
-
-# virtual methods
-.method public final ۠()[I
-    .locals 1
-
-    .line 60
-    iget-object v0, p0, Ll/֡ۜܶ;->ۚ:[I
-
-    return-object v0
-.end method
-
-.method public final ᩴ()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

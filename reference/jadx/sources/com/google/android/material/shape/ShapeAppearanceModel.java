@@ -6,7 +6,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
-import l.C8033;
+import l.C14625;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ShapeAppearanceModel {
@@ -260,9 +260,9 @@ public class ShapeAppearanceModel {
     }
 
     public static Builder builder(Context context, AttributeSet attributeSet, int i, int i2, CornerSize cornerSize) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8033.f26873, i, i2);
-        int resourceId = typedArrayObtainStyledAttributes.getResourceId(C8033.f27882, 0);
-        int resourceId2 = typedArrayObtainStyledAttributes.getResourceId(C8033.f27511, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C14625.f47777, i, i2);
+        int resourceId = typedArrayObtainStyledAttributes.getResourceId(C14625.f46340, 0);
+        int resourceId2 = typedArrayObtainStyledAttributes.getResourceId(C14625.f47084, 0);
         typedArrayObtainStyledAttributes.recycle();
         return builder(context, resourceId, resourceId2, cornerSize);
     }
@@ -280,18 +280,18 @@ public class ShapeAppearanceModel {
         if (i2 != 0) {
             contextThemeWrapper = new ContextThemeWrapper(contextThemeWrapper, i2);
         }
-        TypedArray typedArrayObtainStyledAttributes = contextThemeWrapper.obtainStyledAttributes(C8033.f27721);
+        TypedArray typedArrayObtainStyledAttributes = contextThemeWrapper.obtainStyledAttributes(C14625.f47718);
         try {
-            int i3 = typedArrayObtainStyledAttributes.getInt(C8033.f26924, 0);
-            int i4 = typedArrayObtainStyledAttributes.getInt(C8033.f27083, i3);
-            int i5 = typedArrayObtainStyledAttributes.getInt(C8033.f26871, i3);
-            int i6 = typedArrayObtainStyledAttributes.getInt(C8033.f26977, i3);
-            int i7 = typedArrayObtainStyledAttributes.getInt(C8033.f27774, i3);
-            CornerSize cornerSize2 = getCornerSize(typedArrayObtainStyledAttributes, C8033.f27880, cornerSize);
-            CornerSize cornerSize3 = getCornerSize(typedArrayObtainStyledAttributes, C8033.f26338, cornerSize2);
-            CornerSize cornerSize4 = getCornerSize(typedArrayObtainStyledAttributes, C8033.f27562, cornerSize2);
-            CornerSize cornerSize5 = getCornerSize(typedArrayObtainStyledAttributes, C8033.f27827, cornerSize2);
-            return new Builder().setTopLeftCorner(i4, cornerSize3).setTopRightCorner(i5, cornerSize4).setBottomRightCorner(i6, cornerSize5).setBottomLeftCorner(i7, getCornerSize(typedArrayObtainStyledAttributes, C8033.f27509, cornerSize2));
+            int i3 = typedArrayObtainStyledAttributes.getInt(C14625.f46281, 0);
+            int i4 = typedArrayObtainStyledAttributes.getInt(C14625.f46494, i3);
+            int i5 = typedArrayObtainStyledAttributes.getInt(C14625.f47771, i3);
+            int i6 = typedArrayObtainStyledAttributes.getInt(C14625.f46919, i3);
+            int i7 = typedArrayObtainStyledAttributes.getInt(C14625.f47504, i3);
+            CornerSize cornerSize2 = getCornerSize(typedArrayObtainStyledAttributes, C14625.f46334, cornerSize);
+            CornerSize cornerSize3 = getCornerSize(typedArrayObtainStyledAttributes, C14625.f47344, cornerSize2);
+            CornerSize cornerSize4 = getCornerSize(typedArrayObtainStyledAttributes, C14625.f46069, cornerSize2);
+            CornerSize cornerSize5 = getCornerSize(typedArrayObtainStyledAttributes, C14625.f47557, cornerSize2);
+            return new Builder().setTopLeftCorner(i4, cornerSize3).setTopRightCorner(i5, cornerSize4).setBottomRightCorner(i6, cornerSize5).setBottomLeftCorner(i7, getCornerSize(typedArrayObtainStyledAttributes, C14625.f47078, cornerSize2));
         } finally {
             typedArrayObtainStyledAttributes.recycle();
         }

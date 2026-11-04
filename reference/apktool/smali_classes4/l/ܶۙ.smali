@@ -1,52 +1,185 @@
 .class public final Ll/ܶۙ;
-.super Ljava/lang/Object;
-.source "04ZB"
+.super Landroid/media/session/MediaController$Callback;
+.source "N5R1"
+
+
+# instance fields
+.field public final ۙ:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public static ۙ(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+.method public constructor <init>(Ll/ۗۙ;)V
     .locals 1
 
-    .line 1587
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+    .line 834
+    invoke-direct {p0}, Landroid/media/session/MediaController$Callback;-><init>()V
 
-    move-result v0
+    .line 835
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAudioInfoChanged(Landroid/media/session/MediaController$PlaybackInfo;)V
+    .locals 1
+
+    .line 908
+    iget-object v0, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
 
     if-eqz v0, :cond_0
 
-    .line 1588
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .line 911
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
 
-    move-result-object p0
+    .line 912
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getAudioAttributes()Landroid/media/AudioAttributes;
 
-    return-object p0
+    sget v0, Ll/۬ܺۙ;->᩷:I
+
+    .line 913
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getVolumeControl()I
+
+    .line 914
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getMaxVolume()I
+
+    .line 915
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getCurrentVolume()I
 
     :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static ۙ(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
-    .locals 1
+.method public final onExtrasChanged(Landroid/os/Bundle;)V
+    .locals 0
 
-    if-eqz p1, :cond_0
+    .line 899
+    invoke-static {p1}, Ll/۫᩷;->ۙ(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x1
+    .line 900
+    iget-object p1, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
 
-    .line 1596
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    .line 1597
-    invoke-interface {p1, p0, p2}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    move-result-object p1
+
+    check-cast p1, Ll/ۗۙ;
 
     return-void
+.end method
+
+.method public final onMetadataChanged(Landroid/media/MediaMetadata;)V
+    .locals 1
+
+    .line 875
+    iget-object v0, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
+
+    if-eqz v0, :cond_0
+
+    .line 877
+    invoke-static {p1}, Ll/᩷ۙ;->ۙ(Landroid/media/MediaMetadata;)V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    .line 1599
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
+.method public final onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V
+    .locals 0
+
+    .line 862
+    iget-object p1, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۗۙ;
+
+    return-void
+.end method
+
+.method public final onQueueChanged(Ljava/util/List;)V
+    .locals 1
+
+    .line 883
+    iget-object v0, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
+
+    if-eqz v0, :cond_0
+
+    .line 885
+    invoke-static {p1}, Ll/᩷᩷;->ۙ(Ljava/util/List;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onQueueTitleChanged(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 891
+    iget-object p1, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۗۙ;
+
+    return-void
+.end method
+
+.method public final onSessionDestroyed()V
+    .locals 1
+
+    .line 840
+    iget-object v0, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
+
+    return-void
+.end method
+
+.method public final onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 848
+    invoke-static {p2}, Ll/۫᩷;->ۙ(Landroid/os/Bundle;)V
+
+    .line 849
+    iget-object p1, p0, Ll/ܶۙ;->ۙ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۗۙ;
 
     return-void
 .end method

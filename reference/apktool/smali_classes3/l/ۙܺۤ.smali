@@ -1,51 +1,29 @@
-.class public Ll/ۙܺۤ;
-.super Ll/۟᩷ۤ;
-.source "X43L"
+.class public final Ll/ۙܺۤ;
+.super Ljava/lang/Object;
+.source "N53S"
+
+# interfaces
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 2
 
-    .line 5003
-    check-cast p1, Ll/ܽۤۤ;
+    .line 97
+    new-instance v0, Ll/ܰ֫ۤ;
 
-    .line 5005
-    invoke-virtual {p0, p1}, Ll/ۙܺۤ;->ۙ(Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    invoke-direct {v0}, Ll/ܰ֫ۤ;-><init>()V
 
-    move-result-object p1
+    .line 98
+    invoke-static {}, Ll/ᩳۡ᩻;->ܺ()Z
 
-    return-object p1
-.end method
+    move-result v1
 
-.method public bridge synthetic ۙ(Ljava/lang/Object;Ll/ܽۤۤ;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {v0, v1}, Ll/ܰ֫ۤ;->ۙ(Z)V
 
-    .line 4993
-    invoke-virtual {p0, p1, p2}, Ll/ۙܺۤ;->ۙ(Ljava/lang/Object;Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    .line 99
+    invoke-virtual {p1, v0}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public ۙ(Ljava/lang/Object;Ll/ܽۤۤ;)Ll/ܽۤۤ;
-    .locals 0
-
-    return-object p2
-.end method
-
-.method public final ۙ(Ll/ܽۤۤ;)Ll/ܽۤۤ;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 4994
-    invoke-virtual {p1, p0, v0}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll/ܽۤۤ;
-
-    return-object p1
+    return-void
 .end method

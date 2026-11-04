@@ -597,7 +597,7 @@
 
     .line 0
     :goto_1
-    invoke-static {v2, v6, v3}, Ll/֨ۖᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
+    invoke-static {v2, v6, v3}, Ll/֨᩵ᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
 
     move-result-object v6
 

@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IESKEMParameterSpec implements AlgorithmParameterSpec {
     public final byte[] recipientInfo;
     public final boolean usePointCompression;

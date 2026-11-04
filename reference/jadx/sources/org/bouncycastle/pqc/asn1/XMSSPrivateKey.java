@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -59,10 +59,10 @@ public class XMSSPrivateKey extends ASN1Object {
         }
         ASN1Sequence aSN1Sequence2 = ASN1Sequence.getInstance(aSN1Sequence.getObjectAt(1));
         this.index = ASN1Integer.getInstance(aSN1Sequence2.getObjectAt(0)).intValueExact();
-        this.secretKeySeed = C15489.m37078(aSN1Sequence2, 1);
-        this.secretKeyPRF = C15489.m37078(aSN1Sequence2, 2);
-        this.publicSeed = C15489.m37078(aSN1Sequence2, 3);
-        this.root = C15489.m37078(aSN1Sequence2, 4);
+        this.secretKeySeed = C20551.m47118(aSN1Sequence2, 1);
+        this.secretKeyPRF = C20551.m47118(aSN1Sequence2, 2);
+        this.publicSeed = C20551.m47118(aSN1Sequence2, 3);
+        this.root = C20551.m47118(aSN1Sequence2, 4);
         if (aSN1Sequence2.size() == 6) {
             ASN1TaggedObject aSN1TaggedObject = ASN1TaggedObject.getInstance(aSN1Sequence2.getObjectAt(5));
             if (aSN1TaggedObject.getTagNo() != 0) {

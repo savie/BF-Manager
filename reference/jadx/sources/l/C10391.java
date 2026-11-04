@@ -1,60 +1,70 @@
 package l;
 
-import java.util.EnumSet;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۤܺ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 143X */
-/* JADX INFO: loaded from: classes3.dex */
-public class C10391 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public EnumSet f35568;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public EnumSet f35569;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC12260 f35570;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC12260 m26292() {
-        return this.f35570;
-    }
-
-    /* JADX INFO: renamed from: ۖ */
-    public void mo21748(EnumC0597 enumC0597) {
-        this.f35568.add(enumC0597);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m26291(EnumC0597 enumC0597) {
-        this.f35569.add(enumC0597);
-    }
-
-    public C10391(InterfaceC12260 interfaceC12260) {
-        this.f35570 = null;
-        this.f35568 = EnumSet.noneOf(EnumC0597.class);
-        this.f35569 = EnumSet.noneOf(EnumC0597.class);
-        this.f35570 = interfaceC12260;
-    }
+/* JADX INFO: renamed from: l.ۢ᩷ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5II */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10391 extends C6118 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m26290(EnumC0597 enumC0597) {
-        return this.f35569.contains(enumC0597) || this.f35568.contains(enumC0597);
-    }
+    public ArrayList f33037;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m26293(EnumC0597 enumC0597) {
-        return this.f35568.contains(enumC0597);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f33038;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26289() {
-        this.f35568.clear();
-        this.f35569.clear();
+    public final void m26701(AbstractC19342 abstractC19342) {
+        this.f33037.add(abstractC19342);
     }
 
-    public C10391() {
-        this(null);
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo17660(int i, C17347 c17347) {
+        m26701(new C0697(c17347));
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17656(int i, String str) {
+        if (this.f33038 == null) {
+            this.f33038 = new ArrayList();
+        }
+        while (this.f33038.size() <= i) {
+            this.f33038.add(null);
+        }
+        this.f33038.set(i, str);
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo17661(int i, C17347 c17347) {
+        C21580 c21580 = new C21580(c17347);
+        c21580.f68940 = i;
+        m26701(c21580);
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17658(int i, C17347 c17347, String str, String str2, String str3) {
+        m26701(new C8155(c17347));
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17657(int i, C17347 c17347) {
+        m26701(new C4426(c17347));
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo17662(C17347 c17347) {
+        m26701(new C18596(c17347));
+    }
+
+    @Override // l.C6118
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17659(C17347 c17347) {
+        m26701(new C14866(c17347));
     }
 }

@@ -1,76 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۚۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: IO5 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C13604 {
+import android.content.Intent;
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f44879;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f44880;
-
-    static {
-        int[] iArr = new int[EnumC9288.values().length];
-        f44879 = iArr;
-        try {
-            iArr[EnumC9288.APPLICATION.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f44879[EnumC9288.CONTEXT_SPECIFIC.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f44879[EnumC9288.PRIVATE.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f44879[EnumC9288.UNIVERSAL.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        int[] iArr2 = new int[EnumC4430.values().length];
-        f44880 = iArr2;
-        try {
-            iArr2[EnumC4430.INTEGER.ordinal()] = 1;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f44880[EnumC4430.OBJECT_IDENTIFIER.ordinal()] = 2;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f44880[EnumC4430.OCTET_STRING.ordinal()] = 3;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f44880[EnumC4430.BIT_STRING.ordinal()] = 4;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f44880[EnumC4430.SET_OF.ordinal()] = 5;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f44880[EnumC4430.SEQUENCE.ordinal()] = 6;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f44880[EnumC4430.SEQUENCE_OF.ordinal()] = 7;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f44880[EnumC4430.UTC_TIME.ordinal()] = 8;
-        } catch (NoSuchFieldError unused12) {
-        }
-        try {
-            f44880[EnumC4430.GENERALIZED_TIME.ordinal()] = 9;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f44880[EnumC4430.BOOLEAN.ordinal()] = 10;
-        } catch (NoSuchFieldError unused14) {
+/* JADX INFO: renamed from: l.۬ۘ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 98W2 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13604 extends AbstractC10926 {
+    @Override // l.AbstractC10926
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1477(AbstractActivityC17204 abstractActivityC17204) {
+        if (!C18978.m44079()) {
+            C22673.m51152(R.string.MT_Protector);
+            new ViewOnClickListenerC16544(abstractActivityC17204);
+        } else {
+            abstractActivityC17204.startActivity(new Intent(abstractActivityC17204, (Class<?>) ActivityC3910.class));
         }
     }
 }

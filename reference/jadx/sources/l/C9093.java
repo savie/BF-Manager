@@ -1,104 +1,93 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
+import java.util.BitSet;
+import java.util.HashMap;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۡ᩵ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21EP */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C9093 implements InterfaceC7371 {
+/* JADX INFO: renamed from: l.ۡۗۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 66PI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C9093 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f31004;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public volatile C20149 f29534;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f29535;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final Map f29536;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f29537;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C10210 f29538;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C0407 f29539;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final BitSet f29540;
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f31005;
+    public final C19161 f29541;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10504 f31006;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f29542;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f31007;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f29543;
 
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return 16465;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f29544;
 
-    @Override // l.InterfaceC20693
-    public /* synthetic */ Comparator getComparator() {
-        return C21398.$default$getComparator(this);
-    }
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final C0407 f29545;
 
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    public C9093(C10504 c10504) {
-        this(c10504, 0, c10504.f35993, false);
-    }
-
-    public C9093(C10504 c10504, int i, int i2, boolean z) {
-        this.f31006 = c10504;
-        this.f31004 = i;
-        this.f31007 = i2;
-        this.f31005 = z;
-    }
-
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return (this.f31005 ? this.f31007 : this.f31006.f35993) - this.f31004;
-    }
-
-    @Override // l.InterfaceC20693
-    public final InterfaceC20693 trySplit() {
-        boolean z = this.f31005;
-        C10504 c10504 = this.f31006;
-        int i = z ? this.f31007 : c10504.f35993;
-        int i2 = this.f31004;
-        int i3 = (i - i2) >> 1;
-        if (i3 <= 1) {
-            return null;
+    public C9093(C0407 c0407, C0407 c0408, int i, int i2, int i3, int i4, C19161 c19161, boolean z, BitSet bitSet, Map map, C10210 c10210) {
+        this.f29545 = c0407;
+        this.f29539 = c0408;
+        this.f29543 = i;
+        this.f29535 = i2;
+        this.f29544 = i3;
+        this.f29542 = i4;
+        this.f29541 = c19161;
+        this.f29537 = z;
+        this.f29540 = bitSet == null ? null : (BitSet) bitSet.clone();
+        HashMap map2 = new HashMap(map.size());
+        for (Map.Entry entry : map.entrySet()) {
+            Object key = entry.getKey();
+            C17359.requireNonNull(key);
+            Object value = entry.getValue();
+            C17359.requireNonNull(value);
+            map2.put(key, value);
         }
-        this.f31007 = i;
-        int i4 = i3 + i2;
-        this.f31004 = i4;
-        this.f31005 = true;
-        return new C9093(c10504, i2, i4, true);
+        this.f29536 = C4681.unmodifiableMap(map2);
+        this.f29538 = c10210;
     }
 
-    @Override // l.InterfaceC20693
-    public final boolean tryAdvance(Consumer consumer) {
-        int i = this.f31004;
-        boolean z = this.f31005;
-        C10504 c10504 = this.f31006;
-        if (i >= (z ? this.f31007 : c10504.f35993)) {
-            return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C20149 m24235() {
+        C20149 c20149M33056;
+        C20149 c20149 = this.f29534;
+        if (c20149 != null) {
+            return c20149;
         }
-        Object[] objArr = c10504.f35992;
-        this.f31004 = i + 1;
-        consumer.accept(objArr[i]);
-        return true;
-    }
-
-    @Override // l.InterfaceC20693
-    public final void forEachRemaining(Consumer consumer) {
-        C10504 c10504 = this.f31006;
-        Object[] objArr = c10504.f35992;
-        int i = this.f31005 ? this.f31007 : c10504.f35993;
-        while (true) {
-            int i2 = this.f31004;
-            if (i2 >= i) {
-                return;
+        synchronized (this) {
+            c20149M33056 = this.f29534;
+            if (c20149M33056 == null) {
+                this.f29538.getClass();
+                c20149M33056 = C13414.m33056(this);
+                this.f29534 = c20149M33056;
             }
-            consumer.accept(objArr[i2]);
-            this.f31004++;
         }
+        return c20149M33056;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m24236(int i) {
+        BitSet bitSet = this.f29540;
+        return bitSet != null && bitSet.get(i);
     }
 }

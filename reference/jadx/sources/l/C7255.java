@@ -1,44 +1,56 @@
 package l;
 
-import android.text.Editable;
-import android.text.method.KeyListener;
-import android.view.KeyEvent;
-import android.view.View;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۟ۚۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9B11 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7255 implements KeyListener {
+/* JADX INFO: renamed from: l.ۜܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 69DQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7255 extends AbstractC22194 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final KeyListener f24160;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f23911;
 
-    public C7255(KeyListener keyListener) {
-        this.f24160 = keyListener;
+    public C7255() {
+        super(EnumC11005.SMB2_COMPRESSION_CAPABILITIES);
+        this.f23911 = new ArrayList();
     }
 
-    @Override // android.text.method.KeyListener
-    public final int getInputType() {
-        return this.f24160.getInputType();
+    @Override // l.AbstractC22194
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int mo19897(C7453 c7453) {
+        ArrayList arrayList = this.f23911;
+        if (arrayList == null) {
+            throw new IllegalStateException("Cannot write a null compressionAlgorithms array");
+        }
+        c7453.m56023(arrayList.size());
+        c7453.m20461();
+        c7453.m20460();
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            c7453.m56023((int) ((EnumC3022) it.next()).getValue());
+        }
+        return (arrayList.size() * 2) + 8;
     }
 
-    @Override // android.text.method.KeyListener
-    public final boolean onKeyUp(View view, Editable editable, int i, KeyEvent keyEvent) {
-        return this.f24160.onKeyUp(view, editable, i, keyEvent);
+    @Override // l.AbstractC22194
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo19896(C7453 c7453) throws C2013 {
+        int iM56017 = c7453.m56017();
+        c7453.m56021(2);
+        c7453.m56021(4);
+        for (int i = 0; i < iM56017; i++) {
+            int iM56018 = c7453.m56017();
+            EnumC3022 enumC3022 = (EnumC3022) C10961.m27793(iM56018, EnumC3022.class, null);
+            if (enumC3022 == null) {
+                throw new IllegalStateException(String.format("Unknown SMB3CompressionAlgorithm with value '%d'", Integer.valueOf(iM56018)));
+            }
+            this.f23911.add(enumC3022);
+        }
     }
 
-    @Override // android.text.method.KeyListener
-    public final boolean onKeyOther(View view, Editable editable, KeyEvent keyEvent) {
-        return this.f24160.onKeyOther(view, editable, keyEvent);
-    }
-
-    @Override // android.text.method.KeyListener
-    public final void clearMetaKeyState(View view, Editable editable, int i) {
-        this.f24160.clearMetaKeyState(view, editable, i);
-    }
-
-    @Override // android.text.method.KeyListener
-    public final boolean onKeyDown(View view, Editable editable, int i, KeyEvent keyEvent) {
-        return C12817.m31810(editable, i, keyEvent) || this.f24160.onKeyDown(view, editable, i, keyEvent);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList m19895() {
+        return this.f23911;
     }
 }

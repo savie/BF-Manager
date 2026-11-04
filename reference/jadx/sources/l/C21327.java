@@ -1,10 +1,69 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۘ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 24FJ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21327 {
+import android.content.ClipDescription;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.ResultReceiver;
+import android.text.TextUtils;
+import android.view.inputmethod.InputConnection;
+import android.view.inputmethod.InputConnectionWrapper;
+
+/* JADX INFO: renamed from: l.᩶۬, reason: contains not printable characters */
+/* JADX INFO: compiled from: 33S4 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21327 extends InputConnectionWrapper {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final String[] f69414 = {"nop", "aconst_null", "iconst_m1", "iconst_0", "iconst_1", "iconst_2", "iconst_3", "iconst_4", "iconst_5", "lconst_0", "lconst_1", "fconst_0", "fconst_1", "fconst_2", "dconst_0", "dconst_1", "bipush", "sipush", "ldc1", "ldc2", "ldc2w", "iload", "lload", "fload", "dload", "aload", "iload_0", "iload_1", "iload_2", "iload_3", "lload_0", "lload_1", "lload_2", "lload_3", "fload_0", "fload_1", "fload_2", "fload_3", "dload_0", "dload_1", "dload_2", "dload_3", "aload_0", "aload_1", "aload_2", "aload_3", "iaload", "laload", "faload", "daload", "aaload", "baload", "caload", "saload", "istore", "lstore", "fstore", "dstore", "astore", "istore_0", "istore_1", "istore_2", "istore_3", "lstore_0", "lstore_1", "lstore_2", "lstore_3", "fstore_0", "fstore_1", "fstore_2", "fstore_3", "dstore_0", "dstore_1", "dstore_2", "dstore_3", "astore_0", "astore_1", "astore_2", "astore_3", "iastore", "lastore", "fastore", "dastore", "aastore", "bastore", "castore", "sastore", "pop", "pop2", "dup", "dup_x1", "dup_x2", "dup2", "dup2_x1", "dup2_x2", "swap", "iadd", "ladd", "fadd", "dadd", "isub", "lsub", "fsub", "dsub", "imul", "lmul", "fmul", "dmul", "idiv", "ldiv", "fdiv", "ddiv", "imod", "lmod", "fmod", "dmod", "ineg", "lneg", "fneg", "dneg", "ishl", "lshl", "ishr", "lshr", "iushr", "lushr", "iand", "land", "ior", "lor", "ixor", "lxor", "iinc", "i2l", "i2f", "i2d", "l2i", "l2f", "l2d", "f2i", "f2l", "f2d", "d2i", "d2l", "d2f", "int2byte", "int2char", "int2short", "lcmp", "fcmpl", "fcmpg", "dcmpl", "dcmpg", "ifeq", "ifne", "iflt", "ifge", "ifgt", "ifle", "if_icmpeq", "if_icmpne", "if_icmplt", "if_icmpge", "if_icmpgt", "if_icmple", "if_acmpeq", "if_acmpne", "goto_", "jsr", "ret", "tableswitch", "lookupswitch", "ireturn", "lreturn", "freturn", "dreturn", "areturn", "return_", "getstatic", "putstatic", "getfield", "putfield", "invokevirtual", "invokespecial", "invokestatic", "invokeinterface", "invokedynamic", "new_", "newarray", "anewarray", "arraylength", "athrow", "checkcast", "instanceof_", "monitorenter", "monitorexit", "wide", "multianewarray", "if_acmp_null", "if_acmp_nonnull", "goto_w", "jsr_w", "breakpoint"};
+    public final /* synthetic */ C5087 f67947;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C21327(InputConnection inputConnection, C5087 c5087) {
+        super(inputConnection, false);
+        this.f67947 = c5087;
+    }
+
+    @Override // android.view.inputmethod.InputConnectionWrapper, android.view.inputmethod.InputConnection
+    public final boolean performPrivateCommand(String str, Bundle bundle) throws Throwable {
+        boolean z;
+        ResultReceiver resultReceiver;
+        C5087 c5087 = this.f67947;
+        boolean zM15385 = false;
+        zM15385 = false;
+        zM15385 = false;
+        zM15385 = false;
+        if (bundle != null) {
+            if (!TextUtils.equals("androidx.core.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT", str)) {
+                z = TextUtils.equals("android.support.v13.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT", str);
+            }
+            try {
+                resultReceiver = (ResultReceiver) bundle.getParcelable(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER");
+                try {
+                    Uri uri = (Uri) bundle.getParcelable(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_URI" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_URI");
+                    ClipDescription clipDescription = (ClipDescription) bundle.getParcelable(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION");
+                    Uri uri2 = (Uri) bundle.getParcelable(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI");
+                    int i = bundle.getInt(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS");
+                    Bundle bundle2 = (Bundle) bundle.getParcelable(z ? "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_OPTS" : "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_OPTS");
+                    if (uri != null && clipDescription != null) {
+                        zM15385 = c5087.m15385(new C10138(uri, clipDescription, uri2), i, bundle2);
+                    }
+                    if (resultReceiver != null) {
+                        resultReceiver.send(zM15385 ? 1 : 0, null);
+                    }
+                } catch (Throwable th) {
+                    th = th;
+                    if (resultReceiver != null) {
+                        resultReceiver.send(0, null);
+                    }
+                    throw th;
+                }
+            } catch (Throwable th2) {
+                th = th2;
+                resultReceiver = null;
+            }
+        }
+        if (zM15385) {
+            return true;
+        }
+        return super.performPrivateCommand(str, bundle);
+    }
 }

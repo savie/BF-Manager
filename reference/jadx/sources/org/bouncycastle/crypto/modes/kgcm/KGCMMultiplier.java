@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes.kgcm;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface KGCMMultiplier {
     void init(long[] jArr);
 

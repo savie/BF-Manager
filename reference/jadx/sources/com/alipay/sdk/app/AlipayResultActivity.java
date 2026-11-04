@@ -10,13 +10,13 @@ import com.alipay.sdk.m.m.b;
 import com.alipay.sdk.m.y.o;
 import com.umeng.analytics.pro.d;
 import java.util.Iterator;
-import l.ConcurrentMapC13783;
+import l.ConcurrentMapC17249;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
 public class AlipayResultActivity extends Activity {
-    public static final ConcurrentMapC13783 a = new ConcurrentMapC13783();
+    public static final ConcurrentMapC17249 a = new ConcurrentMapC17249();
 
     /* JADX INFO: compiled from: N673 */
     public interface a {
@@ -51,7 +51,7 @@ public class AlipayResultActivity extends Activity {
                     finish();
                     return;
                 }
-                com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, "BSPSession", stringExtra + "|" + SystemClock.elapsedRealtime());
+                com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, "BSPSession", stringExtra + "|" + SystemClock.elapsedRealtime());
                 if (TextUtils.equals("mqpSchemePay", stringExtra2)) {
                     a(stringExtra, bundleExtra);
                     return;
@@ -61,7 +61,7 @@ public class AlipayResultActivity extends Activity {
                         JSONObject jSONObject = new JSONObject(new String(Base64.decode(intent.getData().getQuery(), 2), com.alipay.sdk.m.w.a.D));
                         JSONObject jSONObject2 = jSONObject.getJSONObject(o.c);
                         stringExtra = jSONObject.getString(d.aw);
-                        com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, "BSPUriSession", stringExtra);
+                        com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, "BSPUriSession", stringExtra);
                         Bundle bundle2 = new Bundle();
                         try {
                             Iterator<String> itKeys = jSONObject2.keys();
@@ -73,8 +73,8 @@ public class AlipayResultActivity extends Activity {
                         } catch (Throwable th2) {
                             th = th2;
                             bundleExtra = bundle2;
-                            com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, "BSPResEx", th);
-                            com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, b.s0, th);
+                            com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, "BSPResEx", th);
+                            com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, b.s0, th);
                         }
                     } catch (Throwable th3) {
                         th = th3;
@@ -86,16 +86,16 @@ public class AlipayResultActivity extends Activity {
                     return;
                 }
                 try {
-                    com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, b.V, "" + SystemClock.elapsedRealtime());
-                    com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, b.W, bundleExtra.getInt("endCode", -1) + "|" + bundleExtra.getString(o.b, "-"));
+                    com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, b.V, "" + SystemClock.elapsedRealtime());
+                    com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, b.W, bundleExtra.getInt("endCode", -1) + "|" + bundleExtra.getString(o.b, "-"));
                     OpenAuthTask.a(stringExtra, OpenAuthTask.OK, "OK", bundleExtra);
                 } finally {
                     com.alipay.sdk.m.m.a.b(this, aVarA, "", aVarA.d);
                     finish();
                 }
             } catch (Throwable th4) {
-                com.alipay.sdk.m.m.a.a((com.alipay.sdk.m.w.a) null, b.f77909l, "BSPSerError", th4);
-                com.alipay.sdk.m.m.a.a((com.alipay.sdk.m.w.a) null, b.f77909l, b.r0, th4);
+                com.alipay.sdk.m.m.a.a((com.alipay.sdk.m.w.a) null, b.f82025l, "BSPSerError", th4);
+                com.alipay.sdk.m.m.a.a((com.alipay.sdk.m.w.a) null, b.f82025l, b.r0, th4);
                 finish();
             }
         } catch (Throwable unused) {

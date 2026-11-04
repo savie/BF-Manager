@@ -1,18 +1,18 @@
 .class public final Ll/ᩴۤ;
-.super Ll/۠ۤ;
-.source "H1CY"
+.super Ljava/lang/Object;
+.source "V22O"
 
 
-# virtual methods
-.method public final ۙ(FLandroid/view/View;)V
+# instance fields
+.field public ۙ:Ll/᩹ܺۙ;
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 0
 
-    .line 249
-    invoke-virtual {p0, p1}, Ll/۠ۤ;->ۙ(F)F
-
-    move-result p1
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationZ(F)V
+    .line 136
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

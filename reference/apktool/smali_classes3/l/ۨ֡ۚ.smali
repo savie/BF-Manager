@@ -1,44 +1,34 @@
-.class public final synthetic Ll/ۨ֡ۚ;
+.class public final Ll/ۨ֡ۚ;
 .super Ljava/lang/Object;
-.source "N17O"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+.source "S6V6"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/۠֡ۚ;
+.field public final ۙ:J
 
-.field public final synthetic ܰ:I
+.field public final ۤ:Ljava/lang/StringBuilder;
+
+.field public final ᩷:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۠֡ۚ;I)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 1
 
-    .line 0
+    .line 275
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۨ֡ۚ;->ۙ:Ll/۠֡ۚ;
+    .line 274
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput p2, p0, Ll/ۨ֡ۚ;->ܰ:I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object v0, p0, Ll/ۨ֡ۚ;->ۤ:Ljava/lang/StringBuilder;
+
+    .line 275
+    iput-wide p1, p0, Ll/ۨ֡ۚ;->᩷:J
+
+    iput-wide p3, p0, Ll/ۨ֡ۚ;->ۙ:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Ll/ۨ֡ۚ;->ۙ:Ll/۠֡ۚ;
-
-    iget v1, p0, Ll/ۨ֡ۚ;->ܰ:I
-
-    invoke-static {v0, v1}, Ll/۠֡ۚ;->ۨ(Ll/۠֡ۚ;I)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
 .end method

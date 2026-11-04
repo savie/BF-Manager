@@ -1,191 +1,111 @@
 .class public final Ll/ܶܶ᩵;
-.super Ljava/lang/Number;
-.source "JJ7"
-
-# interfaces
-.implements Ljava/lang/Comparable;
+.super Ljava/lang/Object;
+.source "S9Y7"
 
 
 # static fields
-.field public static final serialVersionUID:J = 0xeaa4a2677L
+.field public static final ۙ:Ljava/util/concurrent/atomic/AtomicReference;
 
-
-# instance fields
-.field public ܺ:J
+.field public static volatile ᩷:Ll/᩹ܶ᩵;
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 74
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    sput-object v0, Ll/ܶܶ᩵;->ۙ:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
-    .line 45
-    invoke-direct {p0}, Ljava/lang/Number;-><init>()V
+    .line 77
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
-
-    .line 29
-    check-cast p1, Ll/ܶܶ᩵;
-
-    .line 368
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    iget-wide v2, p1, Ll/ܶܶ᩵;->ܺ:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    if-gez p1, :cond_1
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final doubleValue()D
+.method public static ۙ()Ll/᩹ܶ᩵;
     .locals 2
 
-    .line 319
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
+    .line 122
+    sget-object v0, Ll/ܶܶ᩵;->᩷:Ll/᩹ܶ᩵;
 
-    long-to-double v0, v0
+    if-nez v0, :cond_3
 
-    return-wide v0
-.end method
+    .line 123
+    const-class v0, Ll/ܶܶ᩵;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+    monitor-enter v0
 
-    .line 343
-    instance-of v0, p1, Ll/ܶܶ᩵;
+    .line 124
+    :try_start_0
+    sget-object v1, Ll/ܶܶ᩵;->᩷:Ll/᩹ܶ᩵;
 
+    if-nez v1, :cond_2
+
+    .line 109
+    sget-object v1, Ll/ܶܶ᩵;->ۙ:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/ܽܶ᩵;
+
+    if-eqz v1, :cond_0
+
+    .line 111
+    invoke-interface {v1}, Ll/ܽܶ᩵;->ۙ()Ll/᩹ܶ᩵;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    :goto_0
+    if-eqz v1, :cond_1
 
-    .line 344
-    iget-wide v2, p0, Ll/ܶܶ᩵;->ܺ:J
+    goto :goto_1
 
-    check-cast p1, Ll/ܶܶ᩵;
+    .line 113
+    :cond_1
+    new-instance v1, Ll/֫ۗ᩵;
 
-    .line 299
-    iget-wide v4, p1, Ll/ܶܶ᩵;->ܺ:J
+    invoke-direct {v1}, Ll/֫ۗ᩵;-><init>()V
 
-    cmp-long p1, v2, v4
+    .line 125
+    :goto_1
+    sput-object v1, Ll/ܶܶ᩵;->᩷:Ll/᩹ܶ᩵;
 
-    if-nez p1, :cond_0
+    .line 127
+    :cond_2
+    monitor-exit v0
 
-    const/4 p1, 0x1
+    goto :goto_2
 
-    return p1
+    :catchall_0
+    move-exception v1
 
-    :cond_0
-    return v1
-.end method
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final floatValue()F
-    .locals 2
+    throw v1
 
-    .line 309
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    long-to-float v0, v0
-
-    return v0
-.end method
-
-.method public final getValue()Ljava/lang/Long;
-    .locals 2
-
-    .line 89
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
+    .line 129
+    :cond_3
+    :goto_2
+    sget-object v0, Ll/ܶܶ᩵;->᩷:Ll/᩹ܶ᩵;
 
     return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    .line 356
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    const/16 v2, 0x20
-
-    ushr-long v2, v0, v2
-
-    xor-long/2addr v0, v2
-
-    long-to-int v1, v0
-
-    return v1
-.end method
-
-.method public final intValue()I
-    .locals 2
-
-    .line 289
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    long-to-int v1, v0
-
-    return v1
-.end method
-
-.method public final longValue()J
-    .locals 2
-
-    .line 299
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    .line 379
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ljava/lang/Long;)V
-    .locals 4
-
-    .line 200
-    iget-wide v0, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    add-long/2addr v2, v0
-
-    iput-wide v2, p0, Ll/ܶܶ᩵;->ܺ:J
-
-    return-void
 .end method

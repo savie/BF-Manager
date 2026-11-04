@@ -32,7 +32,7 @@ public class b {
     public static Object e = new Object();
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static LinkedList f77950l = new LinkedList();
+    public static LinkedList f82066l = new LinkedList();
 
     public static void q() {
     }
@@ -150,23 +150,23 @@ public class b {
     public static void i() {
         File[] fileArrC = d.c(b);
         if (fileArrC != null) {
-            if (f77950l.size() > 0) {
-                f77950l.clear();
+            if (f82066l.size() > 0) {
+                f82066l.clear();
             }
             for (File file : fileArrC) {
-                f77950l.add(file.getAbsolutePath());
+                f82066l.add(file.getAbsolutePath());
             }
         }
     }
 
     public static String j() {
         try {
-            String str = (String) f77950l.peek();
+            String str = (String) f82066l.peek();
             if (str == null) {
                 return str;
             }
             try {
-                f77950l.removeFirst();
+                f82066l.removeFirst();
                 return str;
             } catch (Throwable unused) {
                 return str;
@@ -179,12 +179,12 @@ public class b {
     public static void k() {
         String str;
         byte[] bArrA;
-        if (f77950l.size() <= 0) {
+        if (f82066l.size() <= 0) {
             UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> todoList无内容，无需处理。");
             return;
         }
         do {
-            str = (String) f77950l.pollFirst();
+            str = (String) f82066l.pollFirst();
             if (!TextUtils.isEmpty(str)) {
                 File file = new File(str);
                 if (!file.exists()) {
@@ -205,7 +205,7 @@ public class b {
                 }
             }
         } while (str != null);
-        f77950l.clear();
+        f82066l.clear();
     }
 
     public static void l() {

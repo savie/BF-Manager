@@ -11,13 +11,13 @@
 # instance fields
 .field public ֡:Ljava/lang/String;
 
-.field public final ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+.field public ۟:Ljava/lang/String;
 
-.field public ۫:Ljava/lang/String;
-
-.field public ܽ:Ljava/lang/String;
+.field public final ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
 .field public ܿ:Ljava/lang/String;
+
+.field public ᩳ:Ljava/lang/String;
 
 
 # direct methods
@@ -32,54 +32,54 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     const/4 v0, 0x0
 
     .line 1226
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
-
-    .line 1227
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۫:Ljava/lang/String;
-
-    .line 1228
     iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܿ:Ljava/lang/String;
 
+    .line 1227
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۟:Ljava/lang/String;
+
+    .line 1228
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ᩳ:Ljava/lang/String;
+
     .line 1229
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܽ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()Ljava/lang/String;
+.method public final ֫()Ljava/lang/String;
     .locals 1
 
-    .line 1272
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۖ()Ljava/lang/String;
-
-    move-result-object v0
+    .line 1280
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۘ()Ljava/lang/String;
+.method public final ۗ()Z
     .locals 1
 
-    .line 1280
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܽ:Ljava/lang/String;
+    .line 1297
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
-    return-object v0
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֫()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final ۙ(Ljava/lang/String;)V
     .locals 1
 
     .line 1248
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۙ(Ljava/lang/String;)V
 
@@ -130,7 +130,7 @@
     .locals 1
 
     .line 1258
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۙ(Ljava/util/Date;)V
 
@@ -141,117 +141,65 @@
     .locals 1
 
     .line 1302
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۙ(Z)V
 
     return-void
 .end method
 
-.method public final ۜ()Ljava/lang/String;
+.method public final ۚ()Ljava/lang/String;
     .locals 1
 
-    .line 1284
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۫:Ljava/lang/String;
+    .line 1276
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܿ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۠()Z
-    .locals 1
-
-    .line 1297
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۘ()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 1
 
     .line 1268
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
-    invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۨ(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۤ(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final ۬()Ljava/lang/String;
+.method public final ۧ()Ljava/lang/String;
     .locals 1
 
-    .line 1276
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
+    .line 1284
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۟:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܶ()Ljava/util/Date;
+.method public final ۫()Ljava/lang/String;
     .locals 1
 
-    .line 1253
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    .line 1272
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۚ()Ljava/util/Date;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩸()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ᩳ()Ljava/util/Date;
-    .locals 1
-
-    .line 1238
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֨()Ljava/util/Date;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ᩴ()Ljava/lang/String;
-    .locals 1
-
-    .line 1243
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۬()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ᩸()Ljava/lang/String;
-    .locals 1
-
-    .line 1263
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩹()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ᩹()Lcom/amazonaws/services/s3/internal/ServerSideEncryptionResult;
+.method public final ܳ()Lcom/amazonaws/services/s3/internal/ServerSideEncryptionResult;
     .locals 1
 
     .line 1234
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     return-object v0
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 2
 
     const-string v0, "CopyObjectResult"
@@ -305,11 +253,11 @@
     if-eqz v0, :cond_1
 
     .line 1333
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܿ:Ljava/lang/String;
 
     return-void
 
@@ -324,11 +272,11 @@
     if-eqz v0, :cond_2
 
     .line 1335
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۫:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۟:Ljava/lang/String;
 
     return-void
 
@@ -343,11 +291,11 @@
     if-eqz v0, :cond_3
 
     .line 1337
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܿ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ᩳ:Ljava/lang/String;
 
     return-void
 
@@ -362,11 +310,11 @@
     if-eqz p1, :cond_6
 
     .line 1339
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܽ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֡:Ljava/lang/String;
 
     return-void
 
@@ -379,24 +327,24 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۛ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
 
     if-eqz v0, :cond_5
 
     .line 1325
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
     sget v0, Lcom/amazonaws/services/s3/internal/ServiceUtils;->ۙ:I
 
     .line 79
-    invoke-static {p1}, Lcom/amazonaws/util/DateUtils;->ܰ(Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {p1}, Lcom/amazonaws/util/DateUtils;->᩷(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object p1
 
     .line 1325
-    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܰ(Ljava/util/Date;)V
+    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩷(Ljava/util/Date;)V
 
     return-void
 
@@ -411,7 +359,7 @@
     if-eqz p1, :cond_6
 
     .line 1327
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
@@ -419,17 +367,69 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩹(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܳ(Ljava/lang/String;)V
 
     :cond_6
     return-void
 .end method
 
-.method public final ᩺()Ljava/lang/String;
+.method public final ܶ()Ljava/util/Date;
+    .locals 1
+
+    .line 1238
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۫()Ljava/util/Date;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ܺ()Ljava/util/Date;
+    .locals 1
+
+    .line 1253
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ᩴ()Ljava/util/Date;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ܽ()Ljava/lang/String;
+    .locals 1
+
+    .line 1263
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܳ()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ᩹()Ljava/lang/String;
+    .locals 1
+
+    .line 1243
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۢ:Lcom/amazonaws/services/s3/model/CopyObjectResult;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۚ()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ᩻()Ljava/lang/String;
     .locals 1
 
     .line 1288
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܿ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ᩳ:Ljava/lang/String;
 
     return-object v0
 .end method

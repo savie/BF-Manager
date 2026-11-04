@@ -1,99 +1,98 @@
-.class public final Ll/᩵ܽۘ;
-.super Ll/ܰܽܰ;
-.source "657B"
-
-
-# instance fields
-.field public final synthetic ۙ:[I
+.class public Ll/᩵ܽۘ;
+.super Ljava/lang/Object;
+.source "643C"
 
 
 # direct methods
-.method public constructor <init>([I)V
-    .locals 0
+.method public static ۙ(II[B)[B
+    .locals 4
 
-    .line 332
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 149
+    new-array v0, p1, [B
 
-    .line 101
-    iput-object p1, p0, Ll/᩵ܽۘ;->ۙ:[I
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    :goto_0
+    if-ge v1, p1, :cond_1
 
+    add-int v2, p0, v1
 
-# virtual methods
-.method public final ۙ()I
-    .locals 1
+    .line 151
+    aget-byte v2, p2, v2
 
-    .line 109
-    invoke-static {}, Ll/᩷ܽۘ;->ۜۙ()[I
+    const/16 v3, 0x2f
 
-    move-result-object v0
+    if-ne v2, v3, :cond_0
 
-    array-length v0, v0
+    const/16 v2, 0x2e
 
-    return v0
-.end method
+    .line 152
+    aput-byte v2, v0, v1
 
-.method public final ۙ(II)Z
-    .locals 1
+    goto :goto_1
 
-    .line 119
-    iget-object v0, p0, Ll/᩵ܽۘ;->ۙ:[I
-
-    aget p1, v0, p1
-
-    invoke-static {}, Ll/᩷ܽۘ;->ۜۙ()[I
-
-    move-result-object v0
-
-    aget p2, v0, p2
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
+    .line 153
     :cond_0
-    const/4 p1, 0x0
+    aput-byte v2, v0, v1
 
-    return p1
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
 .end method
 
-.method public final ܰ()I
-    .locals 1
+.method public static ۙ(Ll/ᩴۢۘ;)[B
+    .locals 6
 
-    .line 104
-    iget-object v0, p0, Ll/᩵ܽۘ;->ۙ:[I
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public final ܰ(II)Z
-    .locals 1
-
-    .line 114
-    iget-object v0, p0, Ll/᩵ܽۘ;->ۙ:[I
-
-    aget p1, v0, p1
-
-    invoke-static {}, Ll/᩷ܽۘ;->ۜۙ()[I
+    .line 191
+    invoke-virtual {p0}, Ll/ᩴۢۘ;->ۙ()[B
 
     move-result-object v0
 
-    aget p2, v0, p2
+    invoke-virtual {p0}, Ll/ᩴۢۘ;->᩸()I
 
-    if-ne p1, p2, :cond_0
+    move-result v1
 
-    const/4 p1, 0x1
+    invoke-virtual {p0}, Ll/ᩴۢۘ;->ۤ()I
 
-    return p1
+    move-result p0
 
+    .line 175
+    new-array v2, p0, [B
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, p0, :cond_1
+
+    add-int v4, v1, v3
+
+    .line 177
+    aget-byte v4, v0, v4
+
+    const/16 v5, 0x2e
+
+    if-ne v4, v5, :cond_0
+
+    const/16 v4, 0x2f
+
+    .line 178
+    aput-byte v4, v2, v3
+
+    goto :goto_1
+
+    .line 179
     :cond_0
-    const/4 p1, 0x0
+    aput-byte v4, v2, v3
 
-    return p1
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v2
 .end method

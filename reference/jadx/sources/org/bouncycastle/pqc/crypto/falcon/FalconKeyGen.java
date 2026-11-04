@@ -1,10 +1,10 @@
 package org.bouncycastle.pqc.crypto.falcon;
 
 import com.google.android.material.color.ColorResourcesTableCreator;
-import l.C16236;
-import l.C17492;
-import l.C17922;
-import l.C7309;
+import l.C11958;
+import l.C18176;
+import l.C24966;
+import l.C25227;
 import moe.shizuku.server.IShizukuService;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.util.Pack;
@@ -276,8 +276,8 @@ public class FalconKeyGen {
         for (int i4 = 0; i4 < i2; i4++) {
             long j = get_rng_u64(sHAKEDigest);
             int i5 = (int) (j >>> 63);
-            int i6 = (int) (((j & C17492.FOREVER_NS) - gauss_1024_12289[0]) >>> 63);
-            long j2 = C17492.FOREVER_NS & get_rng_u64(sHAKEDigest);
+            int i6 = (int) (((j & C25227.FOREVER_NS) - gauss_1024_12289[0]) >>> 63);
+            long j2 = C25227.FOREVER_NS & get_rng_u64(sHAKEDigest);
             int i7 = 1;
             int i8 = 0;
             while (true) {
@@ -458,10 +458,10 @@ public class FalconKeyGen {
 
     public static int modp_ninv31(int i) {
         int i2 = 2 - i;
-        int iM38346 = C16236.m38346(i, i2, 2, i2);
-        int iM38347 = C16236.m38346(i, iM38346, 2, iM38346);
-        int iM38348 = C16236.m38346(i, iM38347, 2, iM38347);
-        return (-C16236.m38346(i, iM38348, 2, iM38348)) & Integer.MAX_VALUE;
+        int iM55770 = C24966.m55770(i, i2, 2, i2);
+        int iM55771 = C24966.m55770(i, iM55770, 2, iM55770);
+        int iM55772 = C24966.m55770(i, iM55771, 2, iM55771);
+        return (-C24966.m55770(i, iM55772, 2, iM55772)) & Integer.MAX_VALUE;
     }
 
     public static int modp_norm(int i, int i2) {
@@ -1618,15 +1618,15 @@ public class FalconKeyGen {
             int i6 = i2 + i4;
             long j7 = iArr[i5];
             long j8 = iArr2[i6];
-            long jM19505 = C7309.m19505(j8, j2, j7 * j, j5);
+            long jM29929 = C11958.m29929(j8, j2, j7 * j, j5);
             int i7 = i4;
-            long jM19506 = C7309.m19505(j8, j4, j7 * j3, j6);
+            long jM299210 = C11958.m29929(j8, j4, j7 * j3, j6);
             if (i7 > 0) {
-                iArr[i5 - 1] = ((int) jM19505) & Integer.MAX_VALUE;
-                iArr2[i6 - 1] = ((int) jM19506) & Integer.MAX_VALUE;
+                iArr[i5 - 1] = ((int) jM29929) & Integer.MAX_VALUE;
+                iArr2[i6 - 1] = ((int) jM299210) & Integer.MAX_VALUE;
             }
-            j5 = jM19505 >> 31;
-            j6 = jM19506 >> 31;
+            j5 = jM29929 >> 31;
+            j6 = jM299210 >> 31;
             i4 = i7 + 1;
         }
         iArr[(i + i3) - 1] = (int) j5;
@@ -1642,8 +1642,8 @@ public class FalconKeyGen {
         long j5 = j;
         int i6 = iArr[i];
         int i7 = iArr2[i2];
-        int iM41614 = C17922.m41614(i7, (int) j2, ((int) j5) * i6, i5) & Integer.MAX_VALUE;
-        int iM41615 = C17922.m41614(i7, (int) j4, i6 * ((int) j3), i5) & Integer.MAX_VALUE;
+        int iM42345 = C18176.m42345(i7, (int) j2, ((int) j5) * i6, i5) & Integer.MAX_VALUE;
+        int iM42346 = C18176.m42345(i7, (int) j4, i6 * ((int) j3), i5) & Integer.MAX_VALUE;
         long j6 = 0;
         int i8 = 0;
         long j7 = 0;
@@ -1651,20 +1651,20 @@ public class FalconKeyGen {
             int i9 = i + i8;
             long j8 = j6;
             int i10 = i2 + i8;
-            int i11 = iM41615;
+            int i11 = iM42346;
             long j9 = iArr[i9];
             long j10 = iArr2[i10];
             int i12 = i3 + i8;
-            long jM19505 = C7309.m19505(iArr3[i12], toUnsignedLong(iM41614), (j10 * j2) + (j9 * j5), j7);
-            long jM19506 = C7309.m19505(iArr3[i12], toUnsignedLong(i11), (j9 * j3) + (j10 * j4), j8);
+            long jM29929 = C11958.m29929(iArr3[i12], toUnsignedLong(iM42345), (j10 * j2) + (j9 * j5), j7);
+            long jM299210 = C11958.m29929(iArr3[i12], toUnsignedLong(i11), (j9 * j3) + (j10 * j4), j8);
             if (i8 > 0) {
-                iArr[i9 - 1] = ((int) jM19505) & Integer.MAX_VALUE;
-                iArr2[i10 - 1] = ((int) jM19506) & Integer.MAX_VALUE;
+                iArr[i9 - 1] = ((int) jM29929) & Integer.MAX_VALUE;
+                iArr2[i10 - 1] = ((int) jM299210) & Integer.MAX_VALUE;
             }
-            j7 = jM19505 >> 31;
-            j6 = jM19506 >> 31;
+            j7 = jM29929 >> 31;
+            j6 = jM299210 >> 31;
             i8++;
-            iM41615 = i11;
+            iM42346 = i11;
             j5 = j;
         }
         long j11 = j7;

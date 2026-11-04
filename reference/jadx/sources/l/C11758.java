@@ -1,25 +1,44 @@
 package l;
 
-import android.media.MediaDrm;
-import android.media.metrics.LogSessionId;
+import java.util.function.IntPredicate;
 
-/* JADX INFO: renamed from: l.ۨܳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J8KC */
+/* JADX INFO: renamed from: l.ۧܽ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: RAPC */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C11758 {
+public final /* synthetic */ class C11758 {
+    @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m29363(MediaDrm mediaDrm, String str, int i) {
-        return mediaDrm.requiresSecureDecoder(str, i);
+    public static boolean m29526(InterfaceC25185 interfaceC25185, int i) {
+        return interfaceC25185.mo7133(C8485.m22799(i));
+    }
+
+    @Deprecated
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m29527(InterfaceC25185 interfaceC25185, Byte b) {
+        return interfaceC25185.mo7133(b.byteValue());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m29362(MediaDrm mediaDrm, byte[] bArr, C9724 c9724) {
-        LogSessionId logSessionIdM24676 = c9724.m24676();
-        if (logSessionIdM24676.equals(LogSessionId.LOG_SESSION_ID_NONE)) {
-            return;
+    public static InterfaceC25185 m29525(InterfaceC25185 interfaceC25185, IntPredicate intPredicate) {
+        InterfaceC25185 c13250;
+        if (intPredicate instanceof InterfaceC25185) {
+            c13250 = (InterfaceC25185) intPredicate;
+        } else {
+            C17359.requireNonNull(intPredicate);
+            c13250 = new C13250(intPredicate);
         }
-        MediaDrm.PlaybackComponent playbackComponent = mediaDrm.getPlaybackComponent(bArr);
-        playbackComponent.getClass();
-        playbackComponent.setLogSessionId(logSessionIdM24676);
+        return interfaceC25185.mo7131(c13250);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InterfaceC25185 m29528(InterfaceC25185 interfaceC25185, IntPredicate intPredicate) {
+        InterfaceC25185 c13250;
+        if (intPredicate instanceof InterfaceC25185) {
+            c13250 = (InterfaceC25185) intPredicate;
+        } else {
+            C17359.requireNonNull(intPredicate);
+            c13250 = new C13250(intPredicate);
+        }
+        return interfaceC25185.mo7132(c13250);
     }
 }

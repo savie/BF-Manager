@@ -5,10 +5,10 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class AnalyticsNAryOperator extends AnalyticsFilterPredicate {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final List f683;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final List f673;
 
     public AnalyticsNAryOperator(List list) {
-        this.f683 = list;
+        this.f673 = list;
     }
 }

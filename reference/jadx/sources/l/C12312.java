@@ -1,12 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۡ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 490D */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12312 extends AbstractC19367 {
-    @Override // l.AbstractC19367
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3851(InterfaceC10901 interfaceC10901) {
-        interfaceC10901.mo27316(this);
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ۨۧۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C12312 {
+    public static Consumer $default$andThen(Consumer consumer, Consumer consumer2) {
+        C17359.requireNonNull(consumer2);
+        return new C15602(4, consumer, consumer2);
     }
 }

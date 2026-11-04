@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -22,7 +22,7 @@
     const/4 v0, 0x0
 
     .line 51
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܺ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ:Ljava/lang/String;
 
     .line 52
     iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->᩶:Ljava/lang/String;
@@ -43,7 +43,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 88
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -67,7 +67,7 @@
     move-result-object v0
 
     .line 88
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
@@ -78,12 +78,12 @@
     const-string v1, ", destinationBucketName="
 
     .line 0
-    invoke-static {v0, v1}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     .line 121
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ:Ljava/lang/String;
 
     .line 138
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -110,12 +110,12 @@
     .locals 0
 
     .line 131
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܺ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     if-nez p1, :cond_0

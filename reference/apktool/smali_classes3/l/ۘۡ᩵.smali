@@ -1,47 +1,20 @@
 .class public final Ll/ۘۡ᩵;
-.super Ll/ܳ᩵᩵;
-.source "D8XS"
-
-
-# instance fields
-.field public ֨:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 8
-    invoke-direct {p0}, Ll/ܳ᩵᩵;-><init>()V
-
-    return-void
-.end method
+.super Ll/᩹ۡ᩵;
+.source "NAWH"
 
 
 # virtual methods
-.method public final ۘ()Ljava/lang/String;
-    .locals 1
+.method public final ۤ()Ljava/util/Random;
+    .locals 2
 
-    .line 18
-    iget-object v0, p0, Ll/ۘۡ᩵;->֨:Ljava/lang/String;
+    .line 13
+    invoke-static {}, Ll/᩵֫ۗ;->current()Ll/᩵֫ۗ;
+
+    move-result-object v0
+
+    const-string v1, "current(...)"
+
+    invoke-static {v0, v1}, Ll/ܳۡ᩵;->᩷(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
-.end method
-
-.method public final ۙ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 22
-    iput-object p1, p0, Ll/ۘۡ᩵;->֨:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/ۧۡ᩵;)V
-    .locals 0
-
-    .line 14
-    invoke-interface {p1, p0}, Ll/ۧۡ᩵;->ۙ(Ll/ۘۡ᩵;)V
-
-    return-void
 .end method

@@ -1,163 +1,118 @@
 package l;
 
-import android.content.DialogInterface;
-import android.webkit.GeolocationPermissions;
-import android.webkit.JsPromptResult;
-import android.webkit.JsResult;
-import android.webkit.PermissionRequest;
-import android.webkit.ValueCallback;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.widget.EditText;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ᩳۡۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E72G */
+/* JADX INFO: renamed from: l.ܽ᩻ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 17T0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C17941 extends WebChromeClient {
+public final class C17941 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC10181 f57395;
+    public final C19327 f58781 = new C19327();
 
-    public C17941(ActivityC10181 activityC10181) {
-        this.f57395 = activityC10181;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final C2329 f58777 = new C2329();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C22311 f58778 = new C22311();
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final int f58776 = m41877("default");
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final int f58779 = m41877("comment");
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final int f58780 = m41877("number");
+
+    static {
+        m41877("string");
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final void onReceivedTitle(WebView webView, String str) {
-        String url = webView.getUrl();
-        ActivityC10181 activityC10181 = this.f57395;
-        if (activityC10181.m25915(url)) {
-            activityC10181.setTitle(activityC10181.f34773.f30172);
-        } else {
-            if (str == null || str.trim().isEmpty()) {
-                return;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static int m41877(String str) {
+        int iMo13099;
+        if (str == null) {
+            return 0;
+        }
+        boolean zStartsWith = str.startsWith("!!");
+        if (zStartsWith) {
+            str = str.substring(2);
+        }
+        C2329 c2329 = f58777;
+        synchronized (c2329) {
+            iMo13099 = c2329.mo13099(-1, str);
+            if (iMo13099 == -1) {
+                iMo13099 = c2329.size() + 1;
+                c2329.mo7845(iMo13099, (Object) str);
+                f58778.mo13466(iMo13099, str);
             }
-            activityC10181.setTitle(str);
+            if (zStartsWith) {
+                iMo13099 = -iMo13099;
+            }
+        }
+        return iMo13099;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m41876(String str) {
+        int iMo13099;
+        if (str == null) {
+            return f58776;
+        }
+        C2329 c2329 = f58777;
+        synchronized (c2329) {
+            iMo13099 = c2329.mo13099(f58776, str);
+        }
+        return iMo13099;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m41878(int i) {
+        if (i == 0) {
+            return null;
+        }
+        synchronized (f58777) {
+            try {
+                if (i < 0) {
+                    String str = (String) f58778.get(-i);
+                    C17359.requireNonNull(str);
+                    return "!!".concat(str);
+                }
+                String str2 = (String) f58778.get(i);
+                C17359.requireNonNull(str2);
+                return str2;
+            } catch (Throwable th) {
+                throw th;
+            }
         }
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final void onProgressChanged(WebView webView, int i) {
-        this.f57395.m25922(i, i < 100);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41882(String str, C11974 c11974) {
+        this.f58781.mo13466(m41877(str), c11974);
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final boolean onJsAlert(WebView webView, String str, String str2, final JsResult jsResult) {
-        ActivityC10181 activityC10181 = this.f57395;
-        String strM25949 = ActivityC10181.m25949(activityC10181, str);
-        if (strM25949 == null || activityC10181.isFinishing() || activityC10181.isDestroyed()) {
-            jsResult.cancel();
-            return true;
-        }
-        C8067 c8067BuildDialog = activityC10181.buildDialog();
-        c8067BuildDialog.m21277(strM25949);
-        c8067BuildDialog.m21261(str2);
-        c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterfaceOnClickListenerC20100(1, jsResult));
-        c8067BuildDialog.m21256(new DialogInterface.OnCancelListener() { // from class: l.֨ۡۘ
-            @Override // android.content.DialogInterface.OnCancelListener
-            public final void onCancel(DialogInterface dialogInterface) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsResult.cancel();
-            }
-        });
-        c8067BuildDialog.m21269();
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41881(int i, C11974 c11974) {
+        this.f58781.mo13466(i, c11974);
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final boolean onJsConfirm(WebView webView, String str, String str2, final JsResult jsResult) {
-        ActivityC10181 activityC10181 = this.f57395;
-        String strM25949 = ActivityC10181.m25949(activityC10181, str);
-        if (strM25949 == null || activityC10181.isFinishing() || activityC10181.isDestroyed()) {
-            jsResult.cancel();
-            return true;
-        }
-        C8067 c8067BuildDialog = activityC10181.buildDialog();
-        c8067BuildDialog.m21277(strM25949);
-        c8067BuildDialog.m21261(str2);
-        c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۨۡۘ
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsResult.confirm();
-            }
-        });
-        c8067BuildDialog.m21275(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۖۡۘ
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsResult.cancel();
-            }
-        });
-        c8067BuildDialog.m21256(new DialogInterface.OnCancelListener() { // from class: l.ۚۡۘ
-            @Override // android.content.DialogInterface.OnCancelListener
-            public final void onCancel(DialogInterface dialogInterface) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsResult.cancel();
-            }
-        });
-        c8067BuildDialog.m21269();
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C11974 m41879(int i) {
+        return (C11974) this.f58781.get(i);
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final boolean onJsPrompt(WebView webView, String str, String str2, String str3, final JsPromptResult jsPromptResult) {
-        ActivityC10181 activityC10181 = this.f57395;
-        String strM25949 = ActivityC10181.m25949(activityC10181, str);
-        if (strM25949 == null || activityC10181.isFinishing() || activityC10181.isDestroyed()) {
-            jsPromptResult.cancel();
-            return true;
-        }
-        final EditText editText = new EditText(activityC10181);
-        editText.setSingleLine(true);
-        if (str3 == null) {
-            str3 = "";
-        }
-        editText.setText(str3);
-        editText.selectAll();
-        C8067 c8067BuildDialog = activityC10181.buildDialog();
-        c8067BuildDialog.m21277(strM25949);
-        c8067BuildDialog.m21261(str2);
-        c8067BuildDialog.m21258(editText);
-        c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۗ᩵ۘ
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsPromptResult.confirm(editText.getText().toString());
-            }
-        });
-        c8067BuildDialog.m21275(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۙۡۘ
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsPromptResult.cancel();
-            }
-        });
-        c8067BuildDialog.m21256(new DialogInterface.OnCancelListener() { // from class: l.ܰۡۘ
-            @Override // android.content.DialogInterface.OnCancelListener
-            public final void onCancel(DialogInterface dialogInterface) {
-                C8064 c8064 = ActivityC10181.f34767;
-                jsPromptResult.cancel();
-            }
-        });
-        c8067BuildDialog.m21269();
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41880() {
+        this.f58781.clear();
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final boolean onShowFileChooser(WebView webView, ValueCallback valueCallback, WebChromeClient.FileChooserParams fileChooserParams) {
-        valueCallback.onReceiveValue(null);
-        return true;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m41883() {
+        return this.f58781.size();
     }
 
-    @Override // android.webkit.WebChromeClient
-    public final void onPermissionRequest(PermissionRequest permissionRequest) {
-        permissionRequest.deny();
-    }
-
-    @Override // android.webkit.WebChromeClient
-    public final void onGeolocationPermissionsShowPrompt(String str, GeolocationPermissions.Callback callback) {
-        callback.invoke(str, false, false);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC7767 m41884() {
+        return this.f58781.mo13468();
     }
 }

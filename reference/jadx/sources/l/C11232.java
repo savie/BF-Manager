@@ -1,39 +1,28 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import java.util.Collection;
+import java.util.Collections;
 
-/* JADX INFO: renamed from: l.ۧ᩶᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 451O */
+/* JADX INFO: renamed from: l.ۤ᩻᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: W8YJ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11232 extends AbstractC19119 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public String f38006;
-
-    public C11232(EnumC9947 enumC9947, AbstractC7124 abstractC7124, AbstractC7124 abstractC7125, String str) {
-        super(enumC9947, abstractC7124, abstractC7125);
-        this.f38006 = str;
-    }
-
-    @Override // l.AbstractC19119, l.AbstractC7124
-    public final AbstractC7124 clone() {
-        AbstractC7124 abstractC7124 = this.f61770;
-        abstractC7124.getClass();
-        AbstractC7124 abstractC7124Clone = abstractC7124.clone();
-        AbstractC7124 abstractC7125 = this.f61771;
-        abstractC7125.getClass();
-        return new C11232(this.f23823, abstractC7124Clone, abstractC7125.clone(), this.f38006);
-    }
-
-    @Override // l.AbstractC7124
+public final class C11232 extends AbstractC17376 {
+    @Override // l.AbstractC17376
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7124 mo3325(C10527 c10527) {
-        return new C11232(this.f23823, this.f61770.mo3325(c10527), this.f61771.mo3325(c10527), this.f38006);
+    public final void mo12252(InterfaceC20029 interfaceC20029, AbstractC11528 abstractC11528, InterfaceC13864 interfaceC13864) {
+        if (interfaceC13864.mo14577()) {
+            AbstractC17376.m40819(interfaceC20029, abstractC11528, interfaceC13864.mo14574());
+        }
+        C10420 c10420Mo7360 = interfaceC20029.mo7360();
+        InterfaceC16299 interfaceC16299Mo15471 = c10420Mo7360.m26736().mo15471(C3567.class);
+        if (interfaceC16299Mo15471 != null) {
+            C20775.m47526(interfaceC20029.builder(), interfaceC16299Mo15471.mo6845(c10420Mo7360, interfaceC20029.mo7334()), interfaceC13864.start(), interfaceC13864.end());
+        }
     }
 
-    @Override // l.AbstractC7124
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo3326() {
-        return MotionUtils.EASING_TYPE_FORMAT_START + this.f61770 + " " + this.f23823 + " " + this.f61771 + MotionUtils.EASING_TYPE_FORMAT_END;
+    @Override // l.AbstractC17376
+    /* JADX INFO: renamed from: ۙ */
+    public final Collection mo12251() {
+        return Collections.singleton("blockquote");
     }
 }

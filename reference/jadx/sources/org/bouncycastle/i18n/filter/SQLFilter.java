@@ -1,6 +1,6 @@
 package org.bouncycastle.i18n.filter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SQLFilter implements Filter {
     @Override // org.bouncycastle.i18n.filter.Filter
     public String doFilter(String str) {

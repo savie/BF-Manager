@@ -1105,7 +1105,7 @@
     const-string p2, "Invalid value for MAC size: "
 
     .line 0
-    invoke-static {v5, p2}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, p2}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

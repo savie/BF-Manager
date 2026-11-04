@@ -1,28 +1,34 @@
-.class public final Ll/ۗۙ;
+.class public abstract Ll/ۗۙ;
 .super Ljava/lang/Object;
-.source "U6BF"
+.source "N5R1"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/os/IBinder$DeathRecipient;
+
+
+# instance fields
+.field public ۙ:Ll/֫ۙ;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 671
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 673
+    new-instance v0, Ll/ܶۙ;
+
+    invoke-direct {v0, p0}, Ll/ܶۙ;-><init>(Ll/ۗۙ;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2271
-    new-instance v0, Ll/ܰܰ;
-
-    invoke-direct {v0, p1}, Ll/ܰܰ;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
+.method public final binderDied()V
     .locals 0
 
-    .line 2276
-    new-array p1, p1, [Ll/ܰܰ;
-
-    return-object p1
+    return-void
 .end method

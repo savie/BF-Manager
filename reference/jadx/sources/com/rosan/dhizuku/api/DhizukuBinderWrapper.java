@@ -5,7 +5,7 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 import java.io.FileDescriptor;
-import l.C13638;
+import l.C17359;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DhizukuBinderWrapper implements IBinder {
@@ -17,7 +17,7 @@ public class DhizukuBinderWrapper implements IBinder {
     }
 
     public DhizukuBinderWrapper(IBinder iBinder) {
-        C13638.requireNonNull(iBinder);
+        C17359.requireNonNull(iBinder);
         this.target = iBinder;
     }
 

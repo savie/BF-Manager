@@ -1,55 +1,77 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۘ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8FX */
+import java.util.Arrays;
+
+/* JADX INFO: renamed from: l.ܶ᩹ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UAS0 */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C16399 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f52759;
+    public C5783 f53210;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f52760;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f53211;
 
-    public C16399(long j, long j2) {
-        if (j < 0) {
-            throw new IllegalArgumentException("offset must not be negative");
-        }
-        if (j2 < 0) {
-            throw new IllegalArgumentException("numbytes must not be negative");
-        }
-        this.f52760 = j;
-        this.f52759 = j2;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f53212;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f53213;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f53214;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C17891[] f53215;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C16399[] f53216;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C2799 f53217;
+
+    public C16399() {
+        this.f53211 = -1;
+        this.f53210 = new C5783();
+        this.f53212 = false;
+    }
+
+    public C16399(C5783 c5783) {
+        this.f53211 = -1;
+        new C5783();
+        this.f53212 = false;
+        this.f53210 = c5783;
+    }
+
+    public final int hashCode() {
+        return C7103.m19444(C7103.m19447(7, this.f53210.hashCode()), 1);
     }
 
     public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-        if (obj != null && C16399.class == obj.getClass()) {
-            C16399 c16399 = (C16399) obj;
-            if (this.f52760 == c16399.f52760 && this.f52759 == c16399.f52759) {
-                return true;
-            }
+        if (obj instanceof C16399) {
+            return this.f53210.equals(((C16399) obj).f53210);
         }
         return false;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m38604() {
-        return this.f52759;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m38605() {
-        return this.f52760;
-    }
-
-    public final int hashCode() {
-        return C13638.hash(Long.valueOf(this.f52760), Long.valueOf(this.f52759));
-    }
-
     public final String toString() {
-        return "TarArchiveStructSparse{offset=" + this.f52760 + ", numbytes=" + this.f52759 + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.f53211);
+        sb.append(":");
+        sb.append(this.f53210);
+        if (this.f53212) {
+            sb.append("=>");
+            C17891[] c17891Arr = this.f53215;
+            if (c17891Arr != null) {
+                sb.append(Arrays.toString(c17891Arr));
+            } else {
+                sb.append(this.f53214);
+            }
+        }
+        return sb.toString();
     }
 }

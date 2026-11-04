@@ -1,28 +1,49 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.᩶ۜۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5RH */
+/* JADX INFO: renamed from: l.ᩴᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAWY */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20004 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) throws InterruptedException, IOException {
-        C17181.f54767 = true;
-        C0247 c0247 = new C0247(c15313);
-        new C15771(c0247).start();
-        long jCurrentTimeMillis = System.currentTimeMillis();
-        while (c0247.f1474) {
-            Thread.sleep(200L);
-            if (System.currentTimeMillis() - jCurrentTimeMillis > 15000) {
-                c0247.m1682();
-                throw new IOException("Connection timed out");
-            }
-            if (!C17181.f54767) {
-                c0247.m1682();
-                return;
-            }
+public final class C20004 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f64280;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object f64281;
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
+        if (!(obj instanceof C20004)) {
+            return false;
+        }
+        C20004 c20004 = (C20004) obj;
+        return this.f64280 == c20004.f64280 && C15243.m36589(this.f64281, c20004.f64281);
+    }
+
+    public final int hashCode() {
+        int i = this.f64280 * 31;
+        Object obj = this.f64281;
+        return i + (obj == null ? 0 : obj.hashCode());
+    }
+
+    public final String toString() {
+        return "IndexedValue(index=" + this.f64280 + ", value=" + this.f64281 + ')';
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m46013() {
+        return this.f64281;
+    }
+
+    public C20004(int i, Object obj) {
+        this.f64280 = i;
+        this.f64281 = obj;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m46014() {
+        return this.f64280;
     }
 }

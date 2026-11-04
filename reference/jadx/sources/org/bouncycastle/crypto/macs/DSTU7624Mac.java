@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.engines.DSTU7624Engine;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU7624Mac implements Mac {
     public static final int BITS_IN_BYTE = 8;
     public int blockSize;

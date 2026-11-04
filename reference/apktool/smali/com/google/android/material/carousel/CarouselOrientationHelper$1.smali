@@ -113,12 +113,12 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/᩹ܿܰ;
+    check-cast v0, Ll/ܿ۟᩷;
 
     .line 199
     iget-object v1, p0, Lcom/google/android/material/carousel/CarouselOrientationHelper$1;->val$carouselLayoutManager:Lcom/google/android/material/carousel/CarouselLayoutManager;
 
-    invoke-virtual {v1, p1}, Ll/ۚܿܰ;->getDecoratedMeasuredWidth(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Ll/᩶۟᩷;->getDecoratedMeasuredWidth(Landroid/view/View;)I
 
     move-result p1
 
@@ -133,7 +133,7 @@
     return p1
 .end method
 
-.method public getMaskMargins(Ll/᩹ܿܰ;)F
+.method public getMaskMargins(Ll/ܿ۟᩷;)F
     .locals 1
 
     .line 217
@@ -169,7 +169,7 @@
     .line 192
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselOrientationHelper$1;->val$carouselLayoutManager:Lcom/google/android/material/carousel/CarouselLayoutManager;
 
-    invoke-virtual {v0}, Ll/ۚܿܰ;->getHeight()I
+    invoke-virtual {v0}, Ll/᩶۟᩷;->getHeight()I
 
     move-result v0
 
@@ -193,7 +193,7 @@
     .line 166
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselOrientationHelper$1;->val$carouselLayoutManager:Lcom/google/android/material/carousel/CarouselLayoutManager;
 
-    invoke-virtual {v0}, Ll/ۚܿܰ;->getPaddingLeft()I
+    invoke-virtual {v0}, Ll/᩶۟᩷;->getPaddingLeft()I
 
     move-result v0
 
@@ -206,13 +206,13 @@
     .line 177
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselOrientationHelper$1;->val$carouselLayoutManager:Lcom/google/android/material/carousel/CarouselLayoutManager;
 
-    invoke-virtual {v0}, Ll/ۚܿܰ;->getWidth()I
+    invoke-virtual {v0}, Ll/᩶۟᩷;->getWidth()I
 
     move-result v0
 
     iget-object v1, p0, Lcom/google/android/material/carousel/CarouselOrientationHelper$1;->val$carouselLayoutManager:Lcom/google/android/material/carousel/CarouselLayoutManager;
 
-    invoke-virtual {v1}, Ll/ۚܿܰ;->getPaddingRight()I
+    invoke-virtual {v1}, Ll/᩶۟᩷;->getPaddingRight()I
 
     move-result v1
 
@@ -264,7 +264,7 @@
 
     move v5, p3
 
-    invoke-virtual/range {v0 .. v5}, Ll/ۚܿܰ;->layoutDecoratedWithMargins(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Ll/᩶۟᩷;->layoutDecoratedWithMargins(Landroid/view/View;IIII)V
 
     return-void
 .end method

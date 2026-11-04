@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static ۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+.field public static final ֡:Lcom/amazonaws/logging/Log;
 
-.field public static final ܽ:Lcom/amazonaws/logging/Log;
+.field public static ۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
 
 # instance fields
-.field public ֡:Z
+.field public ܰ:Z
 
-.field public ܺ:Z
+.field public ܿ:Z
 
 .field public ᩶:I
 
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     const/4 v0, 0x1
 
     .line 55
-    iput-boolean v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
 
     const/16 v1, 0xd86
 
@@ -50,7 +50,7 @@
     iput v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->᩶:I
 
     .line 66
-    iput-boolean v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Z
+    iput-boolean v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܿ:Z
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     .line 233
     :cond_0
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     invoke-virtual {p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۙ()Z
 
@@ -150,18 +150,18 @@
     .line 237
     iget-object v3, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۙ:Ljava/lang/String;
 
-    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۡ:Ljava/lang/String;
+    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:Ljava/lang/String;
 
-    iget-object v5, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iget-object v5, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-    iget-wide v6, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iget-wide v6, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     .line 238
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
-    iget-wide v7, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ:J
+    iget-wide v7, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷:J
 
     .line 239
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -220,11 +220,11 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 108
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v0, "Starting Transfer Service to listen for network connectivity changes."
 
-    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 110
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -235,7 +235,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     move-object v0, p0
 
@@ -244,7 +244,7 @@
 
     .line 113
     :try_start_0
-    iget-boolean v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iget-boolean v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -254,10 +254,10 @@
     const-string v2, "Registering the network receiver"
 
     .line 115
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 116
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -270,7 +270,7 @@
     const/4 v1, 0x0
 
     .line 118
-    iput-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
@@ -281,21 +281,21 @@
     .line 122
     :catch_0
     :try_start_2
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v2, "Ignoring the leak in registering the receiver."
 
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 120
     :catch_1
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v2, "Ignoring the exception trying to register the receiver for connectivity change."
 
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     .line 125
     :cond_0
@@ -326,11 +326,11 @@
     if-lt v0, v1, :cond_0
 
     .line 197
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v1, "Moving the service out of the Foreground state."
 
-    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     move-object v0, p0
 
@@ -341,7 +341,7 @@
 
     .line 199
     :try_start_1
-    iget-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Z
+    iget-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܿ:Z
 
     invoke-virtual {p0, v1}, Landroid/app/Service;->stopForeground(Z)V
 
@@ -366,7 +366,7 @@
     move-exception v0
 
     .line 203
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -386,11 +386,11 @@
     :cond_0
     :goto_0
     :try_start_3
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v1, "De-registering the network receiver."
 
-    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     move-object v0, p0
 
@@ -401,24 +401,24 @@
 
     .line 209
     :try_start_4
-    iget-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
 
     if-nez v1, :cond_1
 
     .line 210
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 v1, 0x1
 
     .line 211
-    iput-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
 
     const/4 v1, 0x0
 
     .line 212
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     .line 214
     :cond_1
@@ -440,11 +440,11 @@
 
     .line 220
     :catch_1
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v1, "Exception trying to de-register the network receiver"
 
-    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     .line 223
     :goto_1
@@ -499,20 +499,20 @@
     const-string v2, "remove-notification"
 
     .line 150
-    iget-boolean v3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Z
+    iget-boolean v3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܿ:Z
 
     invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    iput-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Z
+    iput-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܿ:Z
 
     .line 153
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string v2, "Putting the service in Foreground state."
 
-    invoke-interface {p1, v2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {p1, v2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     const/16 p1, 0x22
 
@@ -535,7 +535,7 @@
 
     .line 161
     :cond_1
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string p2, "No notification is passed in the intent. Unable to transition to foreground."
 
@@ -563,7 +563,7 @@
     move-exception p1
 
     .line 166
-    sget-object p2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -588,7 +588,7 @@
 
     .line 171
     :try_start_3
-    iget-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iget-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -596,14 +596,14 @@
 
     .line 173
     :try_start_4
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string p2, "Registering the network receiver"
 
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 174
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     new-instance p2, Landroid/content/IntentFilter;
 
@@ -616,7 +616,7 @@
     const/4 p1, 0x0
 
     .line 176
-    iput-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܺ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܰ:Z
     :try_end_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_1
@@ -627,21 +627,21 @@
     .line 180
     :catch_1
     :try_start_5
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string p2, "Ignoring the leak in registering the receiver."
 
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 178
     :catch_2
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->ܽ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferService;->֡:Lcom/amazonaws/logging/Log;
 
     const-string p2, "Ignoring the exception trying to register the receiver for connectivity change."
 
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     .line 183
     :cond_3

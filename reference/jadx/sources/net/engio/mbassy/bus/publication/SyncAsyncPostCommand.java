@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import net.engio.mbassy.bus.IMessagePublication;
 import net.engio.mbassy.bus.MBassador;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SyncAsyncPostCommand implements ISyncAsyncPublicationCommand {
     public MBassador mBassador;
     public Object message;

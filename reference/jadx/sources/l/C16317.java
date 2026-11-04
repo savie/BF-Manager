@@ -1,36 +1,37 @@
 package l;
 
-import com.google.android.material.timepicker.RadialViewGroup;
+/* JADX INFO: renamed from: l.ܶ᩵ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W142 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16317 implements InterfaceC24457 {
 
-/* JADX INFO: renamed from: l.ܽ֨᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: VARX */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16317 implements InterfaceC18433 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC3573 f52970;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C16317 f52549 = new C16317();
-
-    public final boolean equals(Object obj) {
-        return obj == this;
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ */
+    public final /* synthetic */ void mo3465() {
     }
 
-    public final String toString() {
-        return RadialViewGroup.SKIP_TAG;
+    @Override // l.InterfaceC24457
+    /* JADX INFO: renamed from: ܺۙ */
+    public final C12919 mo12171() {
+        return null;
     }
 
-    @Override // l.InterfaceC18433
+    public C16317(InterfaceC3573 interfaceC3573) {
+        this.f52970 = interfaceC3573;
+    }
+
+    @Override // l.InterfaceC24457
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1029() {
-        return false;
+    public final void mo12170(long j, long j2, long j3, long j4) {
+        this.f52970.mo3466(j, j2, j3);
     }
 
-    public final int hashCode() {
-        return C4758.m13213(C4758.m13217(0, EnumC19139.SKIP.ordinal()), 1);
-    }
-
-    @Override // l.InterfaceC18433
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1028(AbstractC1415 abstractC1415) {
-        abstractC1415.f5850 = -3;
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f52970.mo924();
     }
 }

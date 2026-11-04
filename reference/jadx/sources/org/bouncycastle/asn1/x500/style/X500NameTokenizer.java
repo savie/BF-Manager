@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x500.style;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X500NameTokenizer {
     public int index;
     public final char separator;

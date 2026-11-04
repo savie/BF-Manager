@@ -18,8 +18,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import javax.security.auth.x500.X500Principal;
-import l.C0561;
-import l.C15489;
+import l.C13645;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
@@ -38,7 +38,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemWriter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCertPath extends CertPath {
     public static final List certPathEncodings;
     public List certificates;
@@ -49,7 +49,7 @@ public class PKIXCertPath extends CertPath {
         arrayList.add("PkiPath");
         arrayList.add("PEM");
         arrayList.add("PKCS7");
-        certPathEncodings = C0561.unmodifiableList(arrayList);
+        certPathEncodings = C4681.unmodifiableList(arrayList);
     }
 
     public PKIXCertPath(InputStream inputStream, String str) throws CertificateException {
@@ -147,7 +147,7 @@ public class PKIXCertPath extends CertPath {
 
     @Override // java.security.cert.CertPath
     public List getCertificates() {
-        return C0561.unmodifiableList(new ArrayList(this.certificates));
+        return C4681.unmodifiableList(new ArrayList(this.certificates));
     }
 
     @Override // java.security.cert.CertPath
@@ -218,7 +218,7 @@ public class PKIXCertPath extends CertPath {
         try {
             return aSN1Encodable.toASN1Primitive().getEncoded(ASN1Encoding.DER);
         } catch (IOException e) {
-            throw new CertificateEncodingException(C15489.m37075("Exception thrown: ", e));
+            throw new CertificateEncodingException(C13645.m33383("Exception thrown: ", e));
         }
     }
 }

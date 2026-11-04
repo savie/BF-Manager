@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/carousel/CarouselLayoutManager;
-.super Ll/ۚܿܰ;
+.super Ll/᩶۟᩷;
 .source "CarouselLayoutManager.java"
 
 # interfaces
 .implements Lcom/google/android/material/carousel/Carousel;
-.implements Ll/۟ܿܰ;
+.implements Ll/᩸ᩳ᩷;
 
 
 # static fields
@@ -87,7 +87,7 @@
     .locals 1
 
     .line 199
-    invoke-direct {p0}, Ll/ۚܿܰ;-><init>()V
+    invoke-direct {p0}, Ll/᩶۟᩷;-><init>()V
 
     const/4 p3, 0x0
 
@@ -105,11 +105,11 @@
     iput p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->currentFillStartPosition:I
 
     .line 121
-    new-instance p4, Ll/ᩴ۠ۘ;
+    new-instance p4, Ll/ۜ۫ۧ;
 
     const/4 v0, 0x1
 
-    invoke-direct {p4, v0, p0}, Ll/ᩴ۠ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p4, v0, p0}, Ll/ۜ۫ۧ;-><init>(ILjava/lang/Object;)V
 
     iput-object p4, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->recyclerViewSizeChangeListener:Landroid/view/View$OnLayoutChangeListener;
 
@@ -149,7 +149,7 @@
     .locals 3
 
     .line 192
-    invoke-direct {p0}, Ll/ۚܿܰ;-><init>()V
+    invoke-direct {p0}, Ll/᩶۟᩷;-><init>()V
 
     const/4 v0, 0x0
 
@@ -167,11 +167,11 @@
     iput v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->currentFillStartPosition:I
 
     .line 121
-    new-instance v1, Ll/ᩴ۠ۘ;
+    new-instance v1, Ll/ۜ۫ۧ;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2, p0}, Ll/ᩴ۠ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ll/ۜ۫ۧ;-><init>(ILjava/lang/Object;)V
 
     iput-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->recyclerViewSizeChangeListener:Landroid/view/View$OnLayoutChangeListener;
 
@@ -260,7 +260,7 @@
     div-float/2addr v0, v1
 
     .line 580
-    invoke-virtual {p0, p1, p2}, Ll/ۚܿܰ;->addView(Landroid/view/View;I)V
+    invoke-virtual {p0, p1, p2}, Ll/᩶۟᩷;->addView(Landroid/view/View;I)V
 
     .line 581
     iget p2, p3, Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;->offsetCenter:F
@@ -328,13 +328,13 @@
     return p1
 .end method
 
-.method private addViewAtPosition(Ll/᩸ܿܰ;II)V
+.method private addViewAtPosition(Ll/ۖ۟᩷;II)V
     .locals 1
 
     if-ltz p2, :cond_1
 
     .line 459
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -349,7 +349,7 @@
     move-result v0
 
     .line 463
-    invoke-direct {p0, p1, v0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/᩸ܿܰ;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
+    invoke-direct {p0, p1, v0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/ۖ۟᩷;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
 
     move-result-object p1
 
@@ -363,7 +363,7 @@
     return-void
 .end method
 
-.method private addViewsEnd(Ll/᩸ܿܰ;Ll/ܺܿܰ;I)V
+.method private addViewsEnd(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;I)V
     .locals 4
 
     .line 477
@@ -373,14 +373,14 @@
 
     .line 478
     :goto_0
-    invoke-virtual {p2}, Ll/ܺܿܰ;->ۙ()I
+    invoke-virtual {p2}, Ll/ܳᩳ᩷;->ۙ()I
 
     move-result v1
 
     if-ge p3, v1, :cond_2
 
     .line 479
-    invoke-direct {p0, p1, v0, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/᩸ܿܰ;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
+    invoke-direct {p0, p1, v0, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/ۖ۟᩷;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
 
     move-result-object v1
 
@@ -440,7 +440,7 @@
     return-void
 .end method
 
-.method private addViewsStart(Ll/᩸ܿܰ;I)V
+.method private addViewsStart(Ll/ۖ۟᩷;I)V
     .locals 4
 
     .line 432
@@ -452,7 +452,7 @@
     if-ltz p2, :cond_2
 
     .line 434
-    invoke-direct {p0, p1, v0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/᩸ܿܰ;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
+    invoke-direct {p0, p1, v0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->makeChildCalculations(Ll/ۖ۟᩷;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
 
     move-result-object v1
 
@@ -567,12 +567,12 @@
 
     move-result-object p1
 
-    check-cast p1, Ll/᩹ܿܰ;
+    check-cast p1, Ll/ܿ۟᩷;
 
     .line 923
     iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->orientationHelper:Lcom/google/android/material/carousel/CarouselOrientationHelper;
 
-    invoke-virtual {v1, p1}, Lcom/google/android/material/carousel/CarouselOrientationHelper;->getMaskMargins(Ll/᩹ܿܰ;)F
+    invoke-virtual {v1, p1}, Lcom/google/android/material/carousel/CarouselOrientationHelper;->getMaskMargins(Ll/ܿ۟᩷;)F
 
     move-result p1
 
@@ -639,7 +639,7 @@
     return p1
 .end method
 
-.method private calculateEndScroll(Ll/ܺܿܰ;Lcom/google/android/material/carousel/KeylineStateList;)I
+.method private calculateEndScroll(Ll/ܳᩳ᩷;Lcom/google/android/material/carousel/KeylineStateList;)I
     .locals 4
 
     .line 848
@@ -678,7 +678,7 @@
 
     .line 854
     :goto_1
-    invoke-virtual {p1}, Ll/ܺܿܰ;->ۙ()I
+    invoke-virtual {p1}, Ll/ܳᩳ᩷;->ۙ()I
 
     move-result p1
 
@@ -952,14 +952,14 @@
     return v1
 .end method
 
-.method private fill(Ll/᩸ܿܰ;Ll/ܺܿܰ;)V
+.method private fill(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;)V
     .locals 2
 
     .line 395
-    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->removeAndRecycleOutOfBoundsViews(Ll/᩸ܿܰ;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->removeAndRecycleOutOfBoundsViews(Ll/ۖ۟᩷;)V
 
     .line 397
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -970,12 +970,12 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsStart(Ll/᩸ܿܰ;I)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsStart(Ll/ۖ۟᩷;I)V
 
     .line 400
     iget v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->currentFillStartPosition:I
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsEnd(Ll/᩸ܿܰ;Ll/ܺܿܰ;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsEnd(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;I)V
 
     goto :goto_0
 
@@ -983,38 +983,38 @@
     const/4 v0, 0x0
 
     .line 403
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v0
 
     .line 404
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v1
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v1
 
     add-int/lit8 v0, v0, -0x1
 
     .line 405
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsStart(Ll/᩸ܿܰ;I)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsStart(Ll/ۖ۟᩷;I)V
 
     add-int/lit8 v1, v1, 0x1
 
     .line 406
-    invoke-direct {p0, p1, p2, v1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsEnd(Ll/᩸ܿܰ;Ll/ܺܿܰ;I)V
+    invoke-direct {p0, p1, p2, v1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewsEnd(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;I)V
 
     .line 409
     :goto_0
@@ -1038,14 +1038,14 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1062,7 +1062,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -1074,7 +1074,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1116,7 +1116,7 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 664
-    invoke-super {p0, p1, v0}, Ll/ۚܿܰ;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-super {p0, p1, v0}, Ll/᩶۟᩷;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 665
     invoke-virtual {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->isHorizontal()Z
@@ -1148,7 +1148,7 @@
     .locals 2
 
     .line 355
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -1157,7 +1157,7 @@
     if-lez v0, :cond_1
 
     .line 356
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1165,7 +1165,7 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/᩹ܿܰ;
+    check-cast v0, Ll/ܿ۟᩷;
 
     .line 357
     iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->orientationHelper:Lcom/google/android/material/carousel/CarouselOrientationHelper;
@@ -1203,7 +1203,7 @@
     if-eqz v0, :cond_0
 
     .line 1225
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v1
 
@@ -1215,7 +1215,7 @@
 
     move-result v1
 
-    invoke-static {p1, v2, v1}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {p1, v2, v1}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result p1
 
@@ -1249,7 +1249,7 @@
     .locals 2
 
     .line 231
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getClipToPadding()Z
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getClipToPadding()Z
 
     move-result v0
 
@@ -1276,7 +1276,7 @@
     if-ne v0, v1, :cond_1
 
     .line 235
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingTop()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingTop()I
 
     move-result v0
 
@@ -1284,7 +1284,7 @@
 
     .line 237
     :cond_1
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingLeft()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingLeft()I
 
     move-result v0
 
@@ -1402,7 +1402,7 @@
     .locals 2
 
     .line 244
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getClipToPadding()Z
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getClipToPadding()Z
 
     move-result v0
 
@@ -1429,7 +1429,7 @@
     if-ne v0, v1, :cond_1
 
     .line 248
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingBottom()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingBottom()I
 
     move-result v0
 
@@ -1437,7 +1437,7 @@
 
     .line 250
     :cond_1
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingRight()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingRight()I
 
     move-result v0
 
@@ -1906,11 +1906,11 @@
     .line 125
     :cond_1
     :goto_0
-    new-instance p2, Ll/ᩳۘۖ;
+    new-instance p2, Ll/֨ۤۚ;
 
-    const/4 p3, 0x7
+    const/4 p3, 0x2
 
-    invoke-direct {p2, p3, p0}, Ll/ᩳۘۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Ll/֨ۤۚ;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -1943,14 +1943,14 @@
 
     .line 503
     :goto_0
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
     .line 504
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1958,7 +1958,7 @@
     invoke-direct {p0, v1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->getDecoratedCenterWithMargins(Landroid/view/View;)F
 
     .line 508
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1969,11 +1969,11 @@
     return-void
 .end method
 
-.method private makeChildCalculations(Ll/᩸ܿܰ;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
+.method private makeChildCalculations(Ll/ۖ۟᩷;FI)Lcom/google/android/material/carousel/CarouselLayoutManager$ChildCalculations;
     .locals 2
 
     .line 558
-    invoke-virtual {p1, p3}, Ll/᩸ܿܰ;->ܰ(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Ll/ۖ۟᩷;->᩷(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -2050,7 +2050,7 @@
     move-result v1
 
     .line 1516
-    invoke-super {p0, p1, p4}, Ll/ۚܿܰ;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-super {p0, p1, p4}, Ll/᩶۟᩷;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 1517
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->updateChildMaskForLocation(Landroid/view/View;FLcom/google/android/material/carousel/CarouselLayoutManager$KeylineRange;)V
@@ -2063,13 +2063,13 @@
     return v1
 .end method
 
-.method private recalculateKeylineStateList(Ll/᩸ܿܰ;)V
+.method private recalculateKeylineStateList(Ll/ۖ۟᩷;)V
     .locals 3
 
     const/4 v0, 0x0
 
     .line 342
-    invoke-virtual {p1, v0}, Ll/᩸ܿܰ;->ܰ(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Ll/ۖ۟᩷;->᩷(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -2141,17 +2141,17 @@
     iput-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->keylineStateList:Lcom/google/android/material/carousel/KeylineStateList;
 
     .line 370
-    invoke-virtual {p0}, Ll/ۚܿܰ;->requestLayout()V
+    invoke-virtual {p0}, Ll/᩶۟᩷;->requestLayout()V
 
     return-void
 .end method
 
-.method private removeAndRecycleOutOfBoundsViews(Ll/᩸ܿܰ;)V
+.method private removeAndRecycleOutOfBoundsViews(Ll/ۖ۟᩷;)V
     .locals 4
 
     .line 682
     :goto_0
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -2162,7 +2162,7 @@
     const/4 v0, 0x0
 
     .line 683
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2191,14 +2191,14 @@
     if-eqz v2, :cond_0
 
     .line 688
-    invoke-virtual {p0, v0, p1}, Ll/ۚܿܰ;->removeAndRecycleView(Landroid/view/View;Ll/᩸ܿܰ;)V
+    invoke-virtual {p0, v0, p1}, Ll/᩶۟᩷;->removeAndRecycleView(Landroid/view/View;Ll/ۖ۟᩷;)V
 
     goto :goto_0
 
     .line 695
     :cond_0
     :goto_1
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -2207,13 +2207,13 @@
     if-ltz v0, :cond_1
 
     .line 696
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
     sub-int/2addr v0, v1
 
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2242,7 +2242,7 @@
     if-eqz v2, :cond_1
 
     .line 701
-    invoke-virtual {p0, v0, p1}, Ll/ۚܿܰ;->removeAndRecycleView(Landroid/view/View;Ll/᩸ܿܰ;)V
+    invoke-virtual {p0, v0, p1}, Ll/᩶۟᩷;->removeAndRecycleView(Landroid/view/View;Ll/ۖ۟᩷;)V
 
     goto :goto_1
 
@@ -2250,11 +2250,11 @@
     return-void
 .end method
 
-.method private scrollBy(ILl/᩸ܿܰ;Ll/ܺܿܰ;)I
+.method private scrollBy(ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)I
     .locals 9
 
     .line 1459
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -2273,7 +2273,7 @@
     if-nez v0, :cond_1
 
     .line 1464
-    invoke-direct {p0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->recalculateKeylineStateList(Ll/᩸ܿܰ;)V
+    invoke-direct {p0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->recalculateKeylineStateList(Ll/ۖ۟᩷;)V
 
     .line 1468
     :cond_1
@@ -2311,11 +2311,11 @@
     div-float/2addr v0, v2
 
     .line 1473
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v2
 
@@ -2362,14 +2362,14 @@
 
     .line 1481
     :goto_1
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v6
 
     if-ge v1, v6, :cond_4
 
     .line 1482
-    invoke-virtual {p0, v1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
@@ -2392,7 +2392,7 @@
     if-gez v8, :cond_3
 
     .line 1487
-    invoke-virtual {p0, v6}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v6}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v5
 
@@ -2418,7 +2418,7 @@
 
     .line 1493
     :cond_4
-    invoke-direct {p0, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->fill(Ll/᩸ܿܰ;Ll/ܺܿܰ;)V
+    invoke-direct {p0, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->fill(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;)V
 
     return p1
 
@@ -2427,7 +2427,7 @@
     return v1
 .end method
 
-.method private scrollBy(Ll/ܿܿܰ;I)V
+.method private scrollBy(Ll/᩻ᩳ᩷;I)V
     .locals 2
 
     .line 1440
@@ -2440,13 +2440,13 @@
     if-eqz v0, :cond_0
 
     .line 1441
-    invoke-virtual {p1, p2, v1}, Ll/ܿܿܰ;->scrollBy(II)V
+    invoke-virtual {p1, p2, v1}, Ll/᩻ᩳ᩷;->scrollBy(II)V
 
     return-void
 
     .line 1443
     :cond_0
-    invoke-virtual {p1, v1, p2}, Ll/ܿܿܰ;->scrollBy(II)V
+    invoke-virtual {p1, v1, p2}, Ll/᩻ᩳ᩷;->scrollBy(II)V
 
     return-void
 .end method
@@ -2457,14 +2457,14 @@
     if-eqz p2, :cond_0
 
     .line 207
-    sget-object v0, Ll/۠۟ܶ;->۫ۜ:[I
+    sget-object v0, Ll/ܰ۬ܺ;->۟ۧ:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 208
-    sget p2, Ll/۠۟ܶ;->ܿۜ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩳۧ:I
 
     const/4 v0, 0x0
 
@@ -2475,7 +2475,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->setCarouselAlignment(I)V
 
     .line 209
-    sget p2, Ll/۠۟ܶ;->ܽ֨ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֡۫ۙ:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -2733,7 +2733,7 @@
     .locals 3
 
     .line 1628
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -2778,7 +2778,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -2793,7 +2793,7 @@
 
     .line 526
     :goto_0
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v2
 
@@ -2802,22 +2802,22 @@
     if-ge v0, v2, :cond_2
 
     .line 527
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v2
 
     add-int/lit8 v3, v0, 0x1
 
     .line 528
-    invoke-virtual {p0, v3}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v4}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v4
 
@@ -2841,7 +2841,7 @@
     const-string v7, "] had adapter position ["
 
     .line 0
-    invoke-static {v5, v0, v7, v6, v2}, Ll/֡ᩴۖ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v7, v6, v2}, Ll/֨᩵ᩴ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2922,11 +2922,11 @@
     return v0
 .end method
 
-.method public computeHorizontalScrollExtent(Ll/ܺܿܰ;)I
+.method public computeHorizontalScrollExtent(Ll/ܳᩳ᩷;)I
     .locals 2
 
     .line 1546
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -2936,7 +2936,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -2959,7 +2959,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->computeHorizontalScrollRange(Ll/ܺܿܰ;)I
+    invoke-virtual {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->computeHorizontalScrollRange(Ll/ܳᩳ᩷;)I
 
     move-result p1
 
@@ -2968,7 +2968,7 @@
     div-float/2addr v0, p1
 
     .line 1551
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getWidth()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getWidth()I
 
     move-result p1
 
@@ -2987,7 +2987,7 @@
     return p1
 .end method
 
-.method public computeHorizontalScrollOffset(Ll/ܺܿܰ;)I
+.method public computeHorizontalScrollOffset(Ll/ܳᩳ᩷;)I
     .locals 0
 
     .line 1534
@@ -2996,7 +2996,7 @@
     return p1
 .end method
 
-.method public computeHorizontalScrollRange(Ll/ܺܿܰ;)I
+.method public computeHorizontalScrollRange(Ll/ܳᩳ᩷;)I
     .locals 1
 
     .line 1563
@@ -3061,11 +3061,11 @@
     return-object v0
 .end method
 
-.method public computeVerticalScrollExtent(Ll/ܺܿܰ;)I
+.method public computeVerticalScrollExtent(Ll/ܳᩳ᩷;)I
     .locals 2
 
     .line 1573
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -3075,7 +3075,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -3098,7 +3098,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->computeVerticalScrollRange(Ll/ܺܿܰ;)I
+    invoke-virtual {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->computeVerticalScrollRange(Ll/ܳᩳ᩷;)I
 
     move-result p1
 
@@ -3107,7 +3107,7 @@
     div-float/2addr v0, p1
 
     .line 1578
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getHeight()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getHeight()I
 
     move-result p1
 
@@ -3126,7 +3126,7 @@
     return p1
 .end method
 
-.method public computeVerticalScrollOffset(Ll/ܺܿܰ;)I
+.method public computeVerticalScrollOffset(Ll/ܳᩳ᩷;)I
     .locals 0
 
     .line 1568
@@ -3135,7 +3135,7 @@
     return p1
 .end method
 
-.method public computeVerticalScrollRange(Ll/ܺܿܰ;)I
+.method public computeVerticalScrollRange(Ll/ܳᩳ᩷;)I
     .locals 1
 
     .line 1583
@@ -3148,15 +3148,15 @@
     return p1
 .end method
 
-.method public generateDefaultLayoutParams()Ll/᩹ܿܰ;
+.method public generateDefaultLayoutParams()Ll/ܿ۟᩷;
     .locals 2
 
     .line 255
-    new-instance v0, Ll/᩹ܿܰ;
+    new-instance v0, Ll/ܿ۟᩷;
 
     const/4 v1, -0x2
 
-    invoke-direct {v0, v1, v1}, Ll/᩹ܿܰ;-><init>(II)V
+    invoke-direct {v0, v1, v1}, Ll/ܿ۟᩷;-><init>(II)V
 
     return-object v0
 .end method
@@ -3174,7 +3174,7 @@
     .locals 1
 
     .line 1082
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getHeight()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getHeight()I
 
     move-result v0
 
@@ -3185,7 +3185,7 @@
     .locals 1
 
     .line 1077
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getWidth()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getWidth()I
 
     move-result v0
 
@@ -3196,7 +3196,7 @@
     .locals 4
 
     .line 644
-    invoke-super {p0, p1, p2}, Ll/ۚܿܰ;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-super {p0, p1, p2}, Ll/᩶۟᩷;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 645
     invoke-virtual {p2}, Landroid/graphics/Rect;->centerY()I
@@ -3459,7 +3459,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getLayoutDirection()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getLayoutDirection()I
 
     move-result v0
 
@@ -3488,7 +3488,7 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/᩹ܿܰ;
+    check-cast v0, Ll/ܿ۟᩷;
 
     .line 1017
     new-instance v1, Landroid/graphics/Rect;
@@ -3496,7 +3496,7 @@
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     .line 1018
-    invoke-virtual {p0, p1, v1}, Ll/ۚܿܰ;->calculateItemDecorationsForChild(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1, v1}, Ll/᩶۟᩷;->calculateItemDecorationsForChild(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 1019
     iget v2, v1, Landroid/graphics/Rect;->left:I
@@ -3577,21 +3577,21 @@
 
     .line 1035
     :goto_1
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getWidth()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getWidth()I
 
     move-result v3
 
     .line 1036
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getWidthMode()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getWidthMode()I
 
     move-result v4
 
     .line 1037
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingLeft()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingLeft()I
 
     move-result v5
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingRight()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingRight()I
 
     move-result v6
 
@@ -3615,26 +3615,26 @@
     move-result v2
 
     .line 1034
-    invoke-static {v3, v4, v6, p3, v2}, Ll/ۚܿܰ;->ۙ(IIIIZ)I
+    invoke-static {v3, v4, v6, p3, v2}, Ll/᩶۟᩷;->ۙ(IIIIZ)I
 
     move-result p3
 
     .line 1043
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getHeight()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getHeight()I
 
     move-result v2
 
     .line 1044
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getHeightMode()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getHeightMode()I
 
     move-result v3
 
     .line 1045
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingTop()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingTop()I
 
     move-result v4
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getPaddingBottom()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getPaddingBottom()I
 
     move-result v5
 
@@ -3658,7 +3658,7 @@
     move-result v0
 
     .line 1042
-    invoke-static {v2, v3, v5, p2, v0}, Ll/ۚܿܰ;->ۙ(IIIIZ)I
+    invoke-static {v2, v3, v5, p2, v0}, Ll/᩶۟᩷;->ۙ(IIIIZ)I
 
     move-result p2
 
@@ -3678,11 +3678,11 @@
     throw p1
 .end method
 
-.method public onAttachedToWindow(Ll/ܿܿܰ;)V
+.method public onAttachedToWindow(Ll/᩻ᩳ᩷;)V
     .locals 2
 
     .line 270
-    invoke-super {p0, p1}, Ll/ۚܿܰ;->onAttachedToWindow(Ll/ܿܿܰ;)V
+    invoke-super {p0, p1}, Ll/᩶۟᩷;->onAttachedToWindow(Ll/᩻ᩳ᩷;)V
 
     .line 271
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->carouselStrategy:Lcom/google/android/material/carousel/CarouselStrategy;
@@ -3704,11 +3704,11 @@
     return-void
 .end method
 
-.method public onDetachedFromWindow(Ll/ܿܿܰ;Ll/᩸ܿܰ;)V
+.method public onDetachedFromWindow(Ll/᩻ᩳ᩷;Ll/ۖ۟᩷;)V
     .locals 0
 
     .line 278
-    invoke-super {p0, p1, p2}, Ll/ۚܿܰ;->onDetachedFromWindow(Ll/ܿܿܰ;Ll/᩸ܿܰ;)V
+    invoke-super {p0, p1, p2}, Ll/᩶۟᩷;->onDetachedFromWindow(Ll/᩻ᩳ᩷;Ll/ۖ۟᩷;)V
 
     .line 279
     iget-object p2, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->recyclerViewSizeChangeListener:Landroid/view/View$OnLayoutChangeListener;
@@ -3718,11 +3718,11 @@
     return-void
 .end method
 
-.method public onFocusSearchFailed(Landroid/view/View;ILl/᩸ܿܰ;Ll/ܺܿܰ;)Landroid/view/View;
+.method public onFocusSearchFailed(Landroid/view/View;ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)Landroid/view/View;
     .locals 1
 
     .line 1362
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result p4
 
@@ -3750,7 +3750,7 @@
     if-ne p2, p4, :cond_3
 
     .line 1373
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
@@ -3762,18 +3762,18 @@
     const/4 p1, 0x0
 
     .line 1376
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p2
 
     add-int/lit8 p2, p2, -0x1
 
     .line 1377
-    invoke-direct {p0, p3, p2, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewAtPosition(Ll/᩸ܿܰ;II)V
+    invoke-direct {p0, p3, p2, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewAtPosition(Ll/ۖ۟᩷;II)V
 
     .line 1378
     invoke-direct {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->getChildClosestToStart()Landroid/view/View;
@@ -3784,11 +3784,11 @@
 
     .line 1380
     :cond_3
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result p2
 
@@ -3800,24 +3800,24 @@
 
     .line 1383
     :cond_4
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result p1
 
     add-int/lit8 p1, p1, -0x1
 
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
     add-int/lit8 p1, p1, 0x1
 
     .line 1384
-    invoke-direct {p0, p3, p1, p4}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewAtPosition(Ll/᩸ܿܰ;II)V
+    invoke-direct {p0, p3, p1, p4}, Lcom/google/android/material/carousel/CarouselLayoutManager;->addViewAtPosition(Ll/ۖ۟᩷;II)V
 
     .line 1385
     invoke-direct {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->getChildClosestToEnd()Landroid/view/View;
@@ -3831,10 +3831,10 @@
     .locals 1
 
     .line 1112
-    invoke-super {p0, p1}, Ll/ۚܿܰ;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1}, Ll/᩶۟᩷;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 1113
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -3843,28 +3843,28 @@
     const/4 v0, 0x0
 
     .line 1114
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setFromIndex(I)V
 
     .line 1115
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v0
 
@@ -3874,11 +3874,11 @@
     return-void
 .end method
 
-.method public onItemsAdded(Ll/ܿܿܰ;II)V
+.method public onItemsAdded(Ll/᩻ᩳ᩷;II)V
     .locals 0
 
     .line 1617
-    invoke-super {p0, p1, p2, p3}, Ll/ۚܿܰ;->onItemsAdded(Ll/ܿܿܰ;II)V
+    invoke-super {p0, p1, p2, p3}, Ll/᩶۟᩷;->onItemsAdded(Ll/᩻ᩳ᩷;II)V
 
     .line 1618
     invoke-direct {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->updateItemCount()V
@@ -3886,11 +3886,11 @@
     return-void
 .end method
 
-.method public onItemsRemoved(Ll/ܿܿܰ;II)V
+.method public onItemsRemoved(Ll/᩻ᩳ᩷;II)V
     .locals 0
 
     .line 1623
-    invoke-super {p0, p1, p2, p3}, Ll/ۚܿܰ;->onItemsRemoved(Ll/ܿܿܰ;II)V
+    invoke-super {p0, p1, p2, p3}, Ll/᩶۟᩷;->onItemsRemoved(Ll/᩻ᩳ᩷;II)V
 
     .line 1624
     invoke-direct {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->updateItemCount()V
@@ -3898,11 +3898,11 @@
     return-void
 .end method
 
-.method public onLayoutChildren(Ll/᩸ܿܰ;Ll/ܺܿܰ;)V
+.method public onLayoutChildren(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;)V
     .locals 6
 
     .line 284
-    invoke-virtual {p2}, Ll/ܺܿܰ;->ۙ()I
+    invoke-virtual {p2}, Ll/ܳᩳ᩷;->ۙ()I
 
     move-result v0
 
@@ -3946,7 +3946,7 @@
     if-eqz v2, :cond_2
 
     .line 296
-    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->recalculateKeylineStateList(Ll/᩸ܿܰ;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->recalculateKeylineStateList(Ll/ۖ۟᩷;)V
 
     .line 300
     :cond_2
@@ -3959,7 +3959,7 @@
     .line 301
     iget-object v4, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->keylineStateList:Lcom/google/android/material/carousel/KeylineStateList;
 
-    invoke-direct {p0, p2, v4}, Lcom/google/android/material/carousel/CarouselLayoutManager;->calculateEndScroll(Ll/ܺܿܰ;Lcom/google/android/material/carousel/KeylineStateList;)I
+    invoke-direct {p0, p2, v4}, Lcom/google/android/material/carousel/CarouselLayoutManager;->calculateEndScroll(Ll/ܳᩳ᩷;Lcom/google/android/material/carousel/KeylineStateList;)I
 
     move-result v4
 
@@ -3993,7 +3993,7 @@
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->keylineStateList:Lcom/google/android/material/carousel/KeylineStateList;
 
     .line 314
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v2
 
@@ -4050,11 +4050,11 @@
     .line 327
     iget v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->currentFillStartPosition:I
 
-    invoke-virtual {p2}, Ll/ܺܿܰ;->ۙ()I
+    invoke-virtual {p2}, Ll/ܳᩳ᩷;->ۙ()I
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {v0, v1, v2}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result v0
 
@@ -4066,13 +4066,13 @@
     invoke-direct {p0, v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->updateCurrentKeylineStateForScrollOffset(Lcom/google/android/material/carousel/KeylineStateList;)V
 
     .line 331
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->detachAndScrapAttachedViews(Ll/᩸ܿܰ;)V
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->detachAndScrapAttachedViews(Ll/ۖ۟᩷;)V
 
     .line 332
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->fill(Ll/᩸ܿܰ;Ll/ܺܿܰ;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->fill(Ll/ۖ۟᩷;Ll/ܳᩳ᩷;)V
 
     .line 333
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result p1
 
@@ -4083,7 +4083,7 @@
     .line 285
     :cond_6
     :goto_2
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->removeAndRecycleAllViews(Ll/᩸ܿܰ;)V
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->removeAndRecycleAllViews(Ll/ۖ۟᩷;)V
 
     .line 286
     iput v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->currentFillStartPosition:I
@@ -4091,14 +4091,14 @@
     return-void
 .end method
 
-.method public onLayoutCompleted(Ll/ܺܿܰ;)V
+.method public onLayoutCompleted(Ll/ܳᩳ᩷;)V
     .locals 1
 
     .line 414
-    invoke-super {p0, p1}, Ll/ۚܿܰ;->onLayoutCompleted(Ll/ܺܿܰ;)V
+    invoke-super {p0, p1}, Ll/᩶۟᩷;->onLayoutCompleted(Ll/ܳᩳ᩷;)V
 
     .line 415
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result p1
 
@@ -4113,11 +4113,11 @@
 
     .line 418
     :cond_0
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
@@ -4130,7 +4130,7 @@
     return-void
 .end method
 
-.method public requestChildRectangleOnScreen(Ll/ܿܿܰ;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z
+.method public requestChildRectangleOnScreen(Ll/᩻ᩳ᩷;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z
     .locals 1
 
     .line 1419
@@ -4144,11 +4144,11 @@
 
     .line 1424
     :cond_0
-    invoke-virtual {p0, p2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p3
 
-    invoke-virtual {p0, p2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p5
 
@@ -4200,7 +4200,7 @@
     move-result-object p3
 
     .line 1434
-    invoke-virtual {p0, p2}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, p2}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p2
 
@@ -4209,14 +4209,14 @@
     move-result p2
 
     .line 1435
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(Ll/ܿܿܰ;I)V
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(Ll/᩻ᩳ᩷;I)V
 
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public scrollHorizontallyBy(ILl/᩸ܿܰ;Ll/ܺܿܰ;)I
+.method public scrollHorizontallyBy(ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)I
     .locals 1
 
     .line 1293
@@ -4226,7 +4226,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(ILl/᩸ܿܰ;Ll/ܺܿܰ;)I
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)I
 
     move-result p1
 
@@ -4264,7 +4264,7 @@
     iput v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollOffset:I
 
     .line 1240
-    invoke-virtual {p0}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p0}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -4276,7 +4276,7 @@
 
     move-result v0
 
-    invoke-static {p1, v1, v0}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {p1, v1, v0}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result p1
 
@@ -4288,12 +4288,12 @@
     invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->updateCurrentKeylineStateForScrollOffset(Lcom/google/android/material/carousel/KeylineStateList;)V
 
     .line 1242
-    invoke-virtual {p0}, Ll/ۚܿܰ;->requestLayout()V
+    invoke-virtual {p0}, Ll/᩶۟᩷;->requestLayout()V
 
     return-void
 .end method
 
-.method public scrollVerticallyBy(ILl/᩸ܿܰ;Ll/ܺܿܰ;)I
+.method public scrollVerticallyBy(ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)I
     .locals 1
 
     .line 1303
@@ -4303,7 +4303,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(ILl/᩸ܿܰ;Ll/ܺܿܰ;)I
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselLayoutManager;->scrollBy(ILl/ۖ۟᩷;Ll/ܳᩳ᩷;)I
 
     move-result p1
 
@@ -4339,7 +4339,7 @@
     return-void
 .end method
 
-.method public setDebuggingEnabled(Ll/ܿܿܰ;Z)V
+.method public setDebuggingEnabled(Ll/᩻ᩳ᩷;Z)V
     .locals 1
 
     .line 1653
@@ -4348,18 +4348,18 @@
     .line 1654
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->debugItemDecoration:Lcom/google/android/material/carousel/CarouselLayoutManager$DebugItemDecoration;
 
-    invoke-virtual {p1, v0}, Ll/ܿܿܰ;->removeItemDecoration(Ll/ۗ۫ܰ;)V
+    invoke-virtual {p1, v0}, Ll/᩻ᩳ᩷;->removeItemDecoration(Ll/ۨ۟᩷;)V
 
     if-eqz p2, :cond_0
 
     .line 1656
     iget-object p2, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->debugItemDecoration:Lcom/google/android/material/carousel/CarouselLayoutManager$DebugItemDecoration;
 
-    invoke-virtual {p1, p2}, Ll/ܿܿܰ;->addItemDecoration(Ll/ۗ۫ܰ;)V
+    invoke-virtual {p1, p2}, Ll/᩻ᩳ᩷;->addItemDecoration(Ll/ۨ۟᩷;)V
 
     .line 1658
     :cond_0
-    invoke-virtual {p1}, Ll/ܿܿܰ;->invalidateItemDecorations()V
+    invoke-virtual {p1}, Ll/᩻ᩳ᩷;->invalidateItemDecorations()V
 
     return-void
 .end method
@@ -4382,7 +4382,7 @@
     const-string v1, "invalid orientation:"
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -4396,7 +4396,7 @@
     const/4 v0, 0x0
 
     .line 1607
-    invoke-virtual {p0, v0}, Ll/ۚܿܰ;->assertNotInLayoutOrScroll(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ll/᩶۟᩷;->assertNotInLayoutOrScroll(Ljava/lang/String;)V
 
     .line 1609
     iget-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->orientationHelper:Lcom/google/android/material/carousel/CarouselOrientationHelper;
@@ -4427,7 +4427,7 @@
     return-void
 .end method
 
-.method public smoothScrollToPosition(Ll/ܿܿܰ;Ll/ܺܿܰ;I)V
+.method public smoothScrollToPosition(Ll/᩻ᩳ᩷;Ll/ܳᩳ᩷;I)V
     .locals 0
 
     .line 1247
@@ -4441,10 +4441,10 @@
     invoke-direct {p2, p0, p1}, Lcom/google/android/material/carousel/CarouselLayoutManager$1;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
 
     .line 1275
-    invoke-virtual {p2, p3}, Ll/᩷ܿܰ;->setTargetPosition(I)V
+    invoke-virtual {p2, p3}, Ll/ᩴᩳ᩷;->setTargetPosition(I)V
 
     .line 1276
-    invoke-virtual {p0, p2}, Ll/ۚܿܰ;->startSmoothScroll(Ll/᩷ܿܰ;)V
+    invoke-virtual {p0, p2}, Ll/᩶۟᩷;->startSmoothScroll(Ll/ᩴᩳ᩷;)V
 
     return-void
 .end method

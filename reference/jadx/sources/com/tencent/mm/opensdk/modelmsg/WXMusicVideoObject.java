@@ -3,8 +3,8 @@ package com.tencent.mm.opensdk.modelmsg;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
-import l.C12441;
-import l.C23234;
+import l.C18011;
+import l.C22783;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WXMusicVideoObject implements WXMediaMessage.IMediaObject {
@@ -106,7 +106,7 @@ public class WXMusicVideoObject implements WXMediaMessage.IMediaObject {
                 this.musicVipInfo = wXMusicVipInfo;
                 wXMusicVipInfo.unserialize(bundle);
             } catch (Exception e) {
-                C23234.m51271(e, C12441.m30914("get WXSceneDataObject from bundle failed: unknown vipInfoObjectStr ", string, ", ex = "), TAG);
+                C18011.m41991(e, C22783.m51387("get WXSceneDataObject from bundle failed: unknown vipInfoObjectStr ", string, ", ex = "), TAG);
             }
         }
         this.hdAlbumThumbFileHash = bundle.getString("_wxmusicvideoobject_hdAlbumThumbFileHash");

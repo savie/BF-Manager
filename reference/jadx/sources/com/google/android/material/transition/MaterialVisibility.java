@@ -11,11 +11,11 @@ import com.google.android.material.animation.AnimatorSetCompat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.AbstractC4337;
-import l.C8238;
+import l.AbstractC21016;
+import l.C22508;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class MaterialVisibility extends AbstractC4337 {
+public abstract class MaterialVisibility extends AbstractC21016 {
     public final List additionalAnimatorProviders = new ArrayList();
     public final VisibilityAnimatorProvider primaryAnimatorProvider;
     public VisibilityAnimatorProvider secondaryAnimatorProvider;
@@ -28,7 +28,7 @@ public abstract class MaterialVisibility extends AbstractC4337 {
         return 0;
     }
 
-    @Override // l.AbstractC11766
+    @Override // l.AbstractC0329
     public boolean isSeekingSupported() {
         return true;
     }
@@ -62,13 +62,13 @@ public abstract class MaterialVisibility extends AbstractC4337 {
         this.additionalAnimatorProviders.clear();
     }
 
-    @Override // l.AbstractC4337
-    public Animator onAppear(ViewGroup viewGroup, View view, C8238 c8238, C8238 c8239) {
+    @Override // l.AbstractC21016
+    public Animator onAppear(ViewGroup viewGroup, View view, C22508 c22508, C22508 c22509) {
         return createAnimator(viewGroup, view, true);
     }
 
-    @Override // l.AbstractC4337
-    public Animator onDisappear(ViewGroup viewGroup, View view, C8238 c8238, C8238 c8239) {
+    @Override // l.AbstractC21016
+    public Animator onDisappear(ViewGroup viewGroup, View view, C22508 c22508, C22508 c22509) {
         return createAnimator(viewGroup, view, false);
     }
 

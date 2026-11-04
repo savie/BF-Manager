@@ -2,7 +2,7 @@ package com.alipay.sdk.m.y;
 
 import android.content.Context;
 import android.text.TextUtils;
-import l.C20630;
+import l.C1402;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -24,7 +24,7 @@ public class l {
             }
             m.b(aVar, context, a, strA);
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.I, th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.I, th);
             g.a(th);
         }
     }
@@ -41,7 +41,7 @@ public class l {
                 String[] strArrSplit2 = str2.substring(8, str2.length() - 1).split(com.alipay.sdk.m.w.a.p);
                 for (int i2 = 0; i2 < strArrSplit2.length; i2++) {
                     if (strArrSplit2[i2].startsWith(e) && strArrSplit2[i2].endsWith("\"")) {
-                        strSubstring = C20630.m46498(1, 13, strArrSplit2[i2]);
+                        strSubstring = C1402.m5124(1, 13, strArrSplit2[i2]);
                         break;
                     }
                     if (strArrSplit2[i2].startsWith(g)) {

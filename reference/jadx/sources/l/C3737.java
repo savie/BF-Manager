@@ -1,115 +1,64 @@
 package l;
 
-import java.util.ArrayList;
+import java.util.regex.Pattern;
 
-/* JADX INFO: renamed from: l.ۘۚᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1ME */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3737 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12703 m10946(CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, C16936 c16936) {
-        InterfaceC13409 interfaceC13409M15898 = C5772.m15898(charSequence, new C21959(charSequence2, charSequence3), c16936);
-        int length = charSequence2.length();
-        ArrayList arrayList = new ArrayList();
-        ArrayList arrayList2 = new ArrayList();
-        for (C20464 c20464 : interfaceC13409M15898.mo11889()) {
-            int i = c20464.f66402;
-            int i2 = c20464.f66399;
-            int i3 = c20464.f66400;
-            int i4 = c20464.f66401;
-            if (i <= length) {
-                arrayList.add(new C20464(i4, i3, i2, i));
-            } else if (i2 >= length) {
-                arrayList2.add(new C20464(i4, i3, i2 - length, i - length));
-            } else {
-                int i5 = (length - i2) + i4;
-                arrayList.add(new C20464(i4, i5, i2, length));
-                arrayList2.add(new C20464(i5, i3, 0, c20464.f66402 - length));
-            }
-        }
-        return new C12703(C1413.m4944(C1413.m4940(charSequence.length(), charSequence2.length(), arrayList)), C1413.m4944(C1413.m4940(charSequence.length(), charSequence3.length(), arrayList2)));
+/* JADX INFO: renamed from: l.ۗ᩺ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E7PU */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3737 extends C6941 {
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public static final Pattern f12820 = Pattern.compile("(?sm).*^\\s*@deprecated( |$).*");
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public C20891 f12821;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f12822;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public String f12823;
+
+    public C3737(EnumC8212 enumC8212, C21637 c21637, char[] cArr, int i) {
+        super(enumC8212, c21637, cArr, i);
+        this.f12823 = null;
+        this.f12821 = new C20891();
+        this.f12822 = new StringBuilder();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m10947(int i, CharSequence charSequence) {
-        char cCharAt;
-        if (i >= 0 && i != charSequence.length() && C13571.m33170(charSequence.charAt(i))) {
-            for (int i2 = i - 1; i2 >= 0; i2--) {
-                char cCharAt2 = charSequence.charAt(i2);
-                if (cCharAt2 == '\n') {
-                    return true;
-                }
-                if (C13571.m33170(cCharAt2)) {
-                }
-            }
-            return true;
+    @Override // l.C6941, l.InterfaceC19399
+    public final String getText() throws Throwable {
+        if (!this.f22949 && this.f22950 == EnumC8212.JAVADOC) {
+            mo12157();
         }
-        if (i < 0 || i == charSequence.length() || !C13571.m33170(charSequence.charAt(i))) {
-            return false;
-        }
-        while (i < charSequence.length() && (cCharAt = charSequence.charAt(i)) != '\n') {
-            if (!C13571.m33170(cCharAt)) {
-                return false;
-            }
-            i++;
-        }
-        return true;
+        return this.f12823;
     }
 
-    /* JADX WARN: Code duplicated, block: B:36:0x0067 A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:37:0x0069  */
-    /* JADX WARN: Code duplicated, block: B:39:0x0074  */
-    /* JADX WARN: Code duplicated, block: B:40:0x007f  */
-    /* JADX WARN: Code duplicated, block: B:42:0x0083  */
-    /* JADX WARN: Code duplicated, block: B:51:0x008b A[SYNTHETIC] */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m10945(CharSequence charSequence) {
-        EnumC3522 enumC3522M10384;
-        ArrayList arrayList = new ArrayList();
-        int length = charSequence.length();
-        int i = 0;
-        int i2 = -1;
-        int i3 = 0;
-        while (i < length) {
-            int iCodePointAt = Character.codePointAt(charSequence, i);
-            int iCharCount = Character.charCount(iCodePointAt);
-            boolean z = (iCodePointAt >= 128 || !C13571.m33170((char) iCodePointAt)) ? !C12206.m30311(iCodePointAt) : false;
-            if (z) {
-                if (iCodePointAt >= 128 && !Character.isDigit(iCodePointAt)) {
-                    int i4 = C4312.f15487;
-                    if ((iCodePointAt >>> 16) != 0 || Character.isIdeographic(iCodePointAt) || !Character.isAlphabetic(iCodePointAt) || (enumC3522M10384 = EnumC3522.m10384(iCodePointAt)) == EnumC3522.HIRAGANA || enumC3522M10384 == EnumC3522.KATAKANA || enumC3522M10384 == EnumC3522.THAI || enumC3522M10384 == EnumC3522.JAVANESE) {
-                        if (i2 != -1) {
-                            arrayList.add(new C12911(i2, i, i3, charSequence));
-                            i2 = -1;
-                        }
-                        if (z) {
-                            arrayList.add(new C12911(i, i + iCharCount, iCodePointAt, charSequence));
-                        } else if (iCodePointAt == 10) {
-                            arrayList.add(new C22083(i));
-                        }
-                    }
-                }
-                if (i2 == -1) {
-                    i3 = 0;
-                    i2 = i;
-                }
-                i3 = (i3 * 31) + iCodePointAt;
-            } else {
-                if (i2 != -1) {
-                    arrayList.add(new C12911(i2, i, i3, charSequence));
-                    i2 = -1;
-                }
-                if (z) {
-                    arrayList.add(new C12911(i, i + iCharCount, iCodePointAt, charSequence));
-                } else if (iCodePointAt == 10) {
-                    arrayList.add(new C22083(i));
-                }
-            }
-            i += iCharCount;
-        }
-        if (i2 != -1) {
-            arrayList.add(new C12911(i2, length, i3, charSequence));
-        }
-        return arrayList;
+    /* JADX WARN: Code duplicated, block: B:36:0x0070 A[Catch: all -> 0x010b, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:39:0x0079 A[Catch: all -> 0x010b, TRY_LEAVE, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:43:0x0096 A[Catch: all -> 0x010b, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:46:0x00a2 A[Catch: all -> 0x010b, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:48:0x00a8 A[Catch: all -> 0x010b, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:49:0x00bb A[Catch: all -> 0x010b, TryCatch #0 {all -> 0x010b, blocks: (B:21:0x0041, B:24:0x0049, B:26:0x0056, B:29:0x005d, B:34:0x006a, B:36:0x0070, B:39:0x0079, B:42:0x0081, B:43:0x0096, B:45:0x009e, B:46:0x00a2, B:48:0x00a8, B:50:0x00cd, B:49:0x00bb, B:33:0x0067, B:52:0x00d4, B:54:0x00da, B:57:0x00e2, B:59:0x00e8, B:60:0x00eb, B:61:0x00f6), top: B:78:0x0041 }] */
+    /* JADX WARN: Code duplicated, block: B:82:0x00d1 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:83:0x0078 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:85:0x009e A[SYNTHETIC] */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:35:0x006e -> B:51:0x00d1). Please report as a decompilation issue!!! */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:42:0x0081 -> B:51:0x00d1). Please report as a decompilation issue!!! */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:45:0x009e -> B:51:0x00d1). Please report as a decompilation issue!!! */
+    /*  JADX ERROR: JadxOverflowException in pass: RegionMakerVisitor
+        jadx.core.utils.exceptions.JadxOverflowException: Regions stack size limit reached
+        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
+        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
+        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
+        */
+    @Override // l.C6941
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final void mo12157() throws java.lang.Throwable {
+        /*
+            Method dump skipped, instruction units count: 290
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C3737.mo12157():void");
     }
 }

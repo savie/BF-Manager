@@ -1,180 +1,256 @@
 package l;
 
-import com.thegrizzlylabs.sardineandroid.model.Propstat;
-import com.thegrizzlylabs.sardineandroid.model.Resourcetype;
-import com.thegrizzlylabs.sardineandroid.model.Response;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import javax.xml.namespace.QName;
-import org.w3c.dom.Element;
+import com.google.android.material.color.ColorResourcesTableCreator;
+import com.umeng.analytics.pro.cb;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import org.bouncycastle.asn1.BERTags;
+import org.bouncycastle.crypto.params.DHParameters;
+import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 
-/* JADX INFO: renamed from: l.ۤ᩶ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SA89 */
+/* JADX INFO: renamed from: l.ۤ֨ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 76BA */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C10524 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List f36023;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Long f36024;
+    public short[] f33468;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Date f36025;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C21713 f33469;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f36026;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f33470;
 
-    public C10524(C7701 c7701, Response response) {
-        String creationdate;
-        String getlastmodified;
-        List list;
-        Resourcetype resourcetype;
-        List propstat = response.getPropstat();
-        String getcontenttype = null;
-        if (propstat.isEmpty()) {
-            creationdate = null;
-            break;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public static final int[] f33467 = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0};
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public static final int[] f33462 = {0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13};
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final int[] f33460 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7};
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f33461 = {16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, cb.k, 2, cb.f82047l, 1, 15};
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final byte[] f33466 = {0, 1, 2, 3, 4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.k, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 0, 0, 16, 17, 18, 18, 19, 19, 20, 20, 20, 20, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29};
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f33465 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 12, 12, cb.k, cb.k, cb.k, cb.k, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB};
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final int[] f33463 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 48, 56, 64, 80, 96, UMErrorCode.E_UM_BE_DEFLATE_FAILED, 128, DHParameters.DEFAULT_MINIMUM_LENGTH, 192, BERTags.FLAGS, 0};
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final int[] f33464 = {0, 1, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192, 256, MLKEMEngine.KyberPolyBytes, 512, 768, 1024, 1536, 2048, 3072, 4096, 6144, 8192, 12288, 16384, 24576};
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r5v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r5v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r5v21, types: [short] */
+    /* JADX WARN: Type inference failed for: r5v22, types: [int] */
+    /* JADX WARN: Type inference failed for: r5v23 */
+    /* JADX WARN: Type inference failed for: r5v24, types: [int] */
+    /* JADX WARN: Type inference failed for: r6v2, types: [int, short] */
+    /* JADX WARN: Type inference failed for: r6v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r6v4, types: [int] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m26976(C7804 c7804) {
+        int i;
+        short[] sArr;
+        short s;
+        int i2;
+        int i3;
+        int i4;
+        short[] sArr2 = this.f33468;
+        C21713 c21713 = this.f33469;
+        short[] sArr3 = c21713.f69294;
+        int i5 = c21713.f69292;
+        c7804.f25979 = 0;
+        int i6 = 573;
+        c7804.f25962 = 573;
+        int i7 = -1;
+        for (int i8 = 0; i8 < i5; i8++) {
+            int i9 = i8 * 2;
+            if (sArr2[i9] != 0) {
+                int[] iArr = c7804.f25985;
+                int i10 = c7804.f25979 + 1;
+                c7804.f25979 = i10;
+                iArr[i10] = i8;
+                c7804.f25956[i8] = 0;
+                i7 = i8;
+            } else {
+                sArr2[i9 + 1] = 0;
+            }
         }
-        Iterator it = propstat.iterator();
         while (true) {
-            if (!it.hasNext()) {
-                creationdate = null;
+            i = c7804.f25979;
+            if (i >= 2) {
                 break;
             }
-            Propstat propstat2 = (Propstat) it.next();
-            if (propstat2.getProp() != null) {
-                creationdate = propstat2.getProp().getCreationdate();
-                break;
+            int[] iArr2 = c7804.f25985;
+            int i11 = i + 1;
+            c7804.f25979 = i11;
+            if (i7 < 2) {
+                i4 = i7 + 1;
+                i3 = i4;
+            } else {
+                i3 = i7;
+                i4 = 0;
             }
+            iArr2[i11] = i4;
+            int i12 = i4 * 2;
+            sArr2[i12] = 1;
+            c7804.f25956[i4] = 0;
+            c7804.f25968--;
+            if (sArr3 != null) {
+                c7804.f25982 -= sArr3[i12 + 1];
+            }
+            i7 = i3;
         }
-        C21938.m48763(creationdate);
-        List propstat3 = response.getPropstat();
-        if (propstat3.isEmpty()) {
-            getlastmodified = null;
-            break;
+        this.f33470 = i7;
+        for (int i13 = i / 2; i13 >= 1; i13--) {
+            c7804.m21266(sArr2, i13);
         }
-        Iterator it2 = propstat3.iterator();
         while (true) {
-            if (!it2.hasNext()) {
-                getlastmodified = null;
+            int[] iArr3 = c7804.f25985;
+            int i14 = iArr3[1];
+            int i15 = c7804.f25979;
+            c7804.f25979 = i15 - 1;
+            iArr3[1] = iArr3[i15];
+            c7804.m21266(sArr2, 1);
+            int[] iArr4 = c7804.f25985;
+            int i16 = iArr4[1];
+            int i17 = c7804.f25962;
+            int i18 = i17 - 1;
+            c7804.f25962 = i18;
+            iArr4[i18] = i14;
+            int i19 = i17 - 2;
+            c7804.f25962 = i19;
+            iArr4[i19] = i16;
+            int i20 = i14 * 2;
+            int i21 = i16 * 2;
+            sArr2[i5 * 2] = (short) (sArr2[i20] + sArr2[i21]);
+            byte[] bArr = c7804.f25956;
+            bArr[i5] = (byte) (Math.max((int) bArr[i14], (int) bArr[i16]) + 1);
+            short s2 = (short) i5;
+            sArr2[i21 + 1] = s2;
+            sArr2[i20 + 1] = s2;
+            int i22 = i5 + 1;
+            c7804.f25985[1] = i5;
+            c7804.m21266(sArr2, 1);
+            if (c7804.f25979 < 2) {
                 break;
-            }
-            Propstat propstat4 = (Propstat) it2.next();
-            if (propstat4.getProp() != null) {
-                getlastmodified = propstat4.getProp().getGetlastmodified();
-                break;
+            } else {
+                i5 = i22;
             }
         }
-        this.f36025 = C21938.m48763(getlastmodified);
-        List propstat5 = response.getPropstat();
-        if (!propstat5.isEmpty()) {
-            Iterator it3 = propstat5.iterator();
-            while (true) {
-                if (!it3.hasNext()) {
-                    getcontenttype = "application/octet-stream";
-                    break;
+        int[] iArr5 = c7804.f25985;
+        int i23 = c7804.f25962 - 1;
+        c7804.f25962 = i23;
+        iArr5[i23] = iArr5[1];
+        short[] sArr4 = this.f33468;
+        C21713 c21714 = this.f33469;
+        short[] sArr5 = c21714.f69294;
+        int[] iArr6 = c21714.f69293;
+        int i24 = c21714.f69295;
+        int i25 = c21714.f69296;
+        for (int i26 = 0; i26 <= 15; i26++) {
+            c7804.f25990[i26] = 0;
+        }
+        int[] iArr7 = c7804.f25985;
+        int i27 = c7804.f25962;
+        sArr4[(iArr7[i27] * 2) + 1] = 0;
+        int i28 = i27 + 1;
+        int i29 = 0;
+        while (i28 < i6) {
+            int i30 = c7804.f25985[i28];
+            int i31 = i30 * 2;
+            int i32 = i31 + 1;
+            int i33 = sArr4[(sArr4[i32] * 2) + 1] + 1;
+            if (i33 > i25) {
+                i29++;
+                i33 = i25;
+            }
+            sArr4[i32] = (short) i33;
+            if (i30 > this.f33470) {
+                i2 = i29;
+            } else {
+                short[] sArr6 = c7804.f25990;
+                i2 = i29;
+                sArr6[i33] = (short) (sArr6[i33] + 1);
+                int i34 = i30 >= i24 ? iArr6[i30 - i24] : 0;
+                short s3 = sArr4[i31];
+                c7804.f25968 = C12669.m31441(i33, i34, s3, c7804.f25968);
+                if (sArr5 != null) {
+                    c7804.f25982 = C12669.m31441(sArr5[i32], i34, s3, c7804.f25982);
                 }
-                Propstat propstat6 = (Propstat) it3.next();
-                if (propstat6.getProp() != null) {
-                    Resourcetype resourcetype2 = propstat6.getProp().getResourcetype();
-                    if (resourcetype2 != null && resourcetype2.getCollection() != null) {
-                        getcontenttype = "httpd/unix-directory";
+            }
+            i28++;
+            i6 = 573;
+            i29 = i2;
+        }
+        if (i29 != 0) {
+            do {
+                int i35 = i25 - 1;
+                while (true) {
+                    sArr = c7804.f25990;
+                    s = sArr[i35];
+                    if (s != 0) {
                         break;
-                    } else if (propstat6.getProp().getGetcontenttype() != null) {
-                        getcontenttype = propstat6.getProp().getGetcontenttype();
-                        break;
+                    } else {
+                        i35--;
                     }
                 }
-            }
-        }
-        this.f36026 = getcontenttype;
-        this.f36024 = Long.valueOf(C7701.m20331(c7701, response));
-        List<Propstat> propstat7 = response.getPropstat();
-        if (!propstat7.isEmpty()) {
-            for (Propstat propstat8 : propstat7) {
-                if (propstat8.getProp() != null) {
-                    propstat8.getProp().getGetetag();
-                    break;
-                }
-            }
-        }
-        List<Propstat> propstat9 = response.getPropstat();
-        if (!propstat9.isEmpty()) {
-            for (Propstat propstat10 : propstat9) {
-                if (propstat10.getProp() != null) {
-                    propstat10.getProp().getDisplayname();
-                    break;
-                }
-            }
-        }
-        List<Propstat> propstat11 = response.getPropstat();
-        if (propstat11.isEmpty()) {
-            list = Collections.EMPTY_LIST;
-        } else {
-            ArrayList arrayList = new ArrayList();
-            for (Propstat propstat12 : propstat11) {
-                if (propstat12.getProp() != null && (resourcetype = propstat12.getProp().getResourcetype()) != null) {
-                    if (resourcetype.getCollection() != null) {
-                        arrayList.add(new QName("DAV:", "collection", "D"));
-                    }
-                    if (resourcetype.getPrincipal() != null) {
-                        arrayList.add(new QName("DAV:", "principal", "D"));
-                    }
-                    Iterator it4 = resourcetype.getAny().iterator();
-                    while (it4.hasNext()) {
-                        arrayList.add(C21938.m48764((Element) it4.next()));
+                sArr[i35] = (short) (s - 1);
+                int i36 = i35 + 1;
+                sArr[i36] = (short) (sArr[i36] + 2);
+                sArr[i25] = (short) (sArr[i25] - 1);
+                i29 -= 2;
+            } while (i29 > 0);
+            while (i25 != 0) {
+                short s4 = c7804.f25990[i25];
+                while (s4 != 0) {
+                    i28--;
+                    int i37 = c7804.f25985[i28];
+                    if (i37 <= this.f33470) {
+                        int i38 = i37 * 2;
+                        int i39 = i38 + 1;
+                        short s5 = sArr4[i39];
+                        if (s5 != i25) {
+                            c7804.f25968 += (int) ((((long) i25) - ((long) s5)) * ((long) sArr4[i38]));
+                            sArr4[i39] = (short) i25;
+                        }
+                        s4--;
+                        i28 = i28;
                     }
                 }
-            }
-            list = arrayList;
-        }
-        this.f36023 = list;
-        List<Propstat> propstat13 = response.getPropstat();
-        if (!propstat13.isEmpty()) {
-            for (Propstat propstat14 : propstat13) {
-                if (propstat14.getProp() != null) {
-                    Resourcetype resourcetype3 = propstat14.getProp().getResourcetype();
-                    if (resourcetype3 != null && resourcetype3.getCollection() != null) {
-                        break;
-                    }
-                    propstat14.getProp().getGetcontentlanguage();
-                    break;
-                }
+                i25--;
             }
         }
-        List<Propstat> propstat15 = response.getPropstat();
-        if (!propstat15.isEmpty()) {
-            HashMap map = new HashMap();
-            for (Propstat propstat16 : propstat15) {
-                if (propstat16.getProp() != null) {
-                    for (Element element : propstat16.getProp().getAny()) {
-                        map.put(C21938.m48764(element), element.getTextContent());
-                    }
-                }
-            }
+        short[] sArr7 = c7804.f25990;
+        short[] sArr8 = c7804.f25991;
+        sArr8[0] = 0;
+        short s6 = 0;
+        for (int i40 = 1; i40 <= 15; i40++) {
+            s6 = (short) ((s6 + sArr7[i40 - 1]) << 1);
+            sArr8[i40] = s6;
         }
-        List<Propstat> propstat17 = response.getPropstat();
-        if (!propstat17.isEmpty()) {
-            for (Propstat propstat18 : propstat17) {
-                if (propstat18.getProp() != null) {
-                    propstat18.getProp().getLockdiscovery();
-                    break;
-                }
-            }
-        }
-        List<Propstat> propstat19 = response.getPropstat();
-        if (propstat19.isEmpty()) {
-            return;
-        }
-        for (Propstat propstat20 : propstat19) {
-            if (propstat20.getProp() != null) {
-                propstat20.getProp().getSupportedlock();
-                return;
+        for (int i41 = 0; i41 <= i7; i41++) {
+            int i42 = i41 * 2;
+            short s7 = sArr2[i42 + 1];
+            if (s7 != 0) {
+                short s8 = sArr8[s7];
+                sArr8[s7] = (short) (s8 + 1);
+                int i43 = 0;
+                do {
+                    int i44 = i43 | (s8 & 1);
+                    s8 >>>= 1;
+                    i43 = i44 << 1;
+                    s7--;
+                } while (s7 > 0);
+                sArr2[i42] = (short) (i43 >>> 1);
             }
         }
     }

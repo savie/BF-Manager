@@ -127,7 +127,7 @@
 
     .line 273
     :cond_1
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -137,7 +137,7 @@
 .end method
 
 .method private getHctsByTemp()Ljava/util/List;
-    .locals 3
+    .locals 4
 
     .line 289
     iget-object v0, p0, Lcom/google/android/material/color/utilities/TemperatureCache;->precomputedHctsByTemp:Ljava/util/List;
@@ -162,18 +162,20 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 295
-    new-instance v1, Ll/ܽۙ᩸;
+    new-instance v1, Ll/֨ᩴ᩺;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, p0}, Ll/ܽۙ᩸;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ll/֨ᩴ᩺;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Lcom/google/android/material/color/utilities/TemperatureCache$$ExternalSyntheticLambda1;
+    new-instance v2, Ll/᩺ᩴۤ;
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Ll/᩺ᩴۤ;-><init>(I)V
 
     .line 296
-    invoke-static {v1, v2}, Ll/۟ܿᩴ;->comparing(Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
+    invoke-static {v1, v2}, Ll/ۖ۫ۗ;->comparing(Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
 
     move-result-object v1
 

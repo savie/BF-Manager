@@ -32,7 +32,7 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->setSoftInputMode(I)V
 
     .line 104
-    new-instance p1, Ll/֨ܺᩳ;
+    new-instance p1, Ll/ۛ᩷᩹;
 
     const/4 p1, 0x0
 
@@ -47,15 +47,15 @@
     const-string v1, "--onConsoleMessage--"
 
     .line 523
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 525
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/open/c;->ܺ:Ll/ۚܺᩳ;
+    iget-object v0, p0, Lcom/tencent/open/c;->ܰ:Ll/᩵᩷᩹;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Ll/ۚܺᩳ;->ۙ(Landroid/webkit/WebView;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, p1}, Ll/᩵᩷᩹;->ۙ(Landroid/webkit/WebView;Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

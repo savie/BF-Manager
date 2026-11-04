@@ -1,73 +1,80 @@
 package l;
 
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
+import bin.mt.json.JSONValue;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ᩴ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S24 */
+/* JADX INFO: renamed from: l.ܿ᩹ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S7O6 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18639 implements InterfaceC6269, InterfaceC6206 {
+public class C18639 extends JSONValue {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f60433 = 0;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final String f60604;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final boolean f60605;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final boolean f60606;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19345 f60434;
+    public final boolean f60607;
 
-    public C18639(C19345 c19345) {
-        this.f60434 = c19345;
+    public C18639(String str) {
+        this.f60604 = str;
+        this.f60607 = "null".equals(str);
+        this.f60606 = "true".equals(str);
+        this.f60605 = "false".equals(str);
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f60433 < this.f60434.f62382.f51193;
+    @Override // bin.mt.json.JSONValue
+    public void write(C1486 c1486) throws IOException {
+        c1486.m5306(this.f60604);
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+    @Override // bin.mt.json.JSONValue
+    public String toString() {
+        return this.f60604;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public int hashCode() {
+        return this.f60604.hashCode();
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean isNull() {
+        return this.f60607;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean isTrue() {
+        return this.f60606;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean isFalse() {
+        return this.f60605;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean isBoolean() {
+        return this.f60606 || this.f60605;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean asBoolean() {
+        return this.f60607 ? super.asBoolean() : this.f60606;
+    }
+
+    @Override // bin.mt.json.JSONValue
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        Object[] objArr = this.f60434.f62382.f51195;
-        int i = this.f60433;
-        this.f60433 = i + 1;
-        return objArr[i];
-    }
-
-    @Override // java.util.Iterator
-    public final void remove() {
-        int i = this.f60433;
-        if (i == 0) {
-            throw new IllegalStateException();
+        if (obj != null && getClass() == obj.getClass()) {
+            return this.f60604.equals(((C18639) obj).f60604);
         }
-        C19345 c19345 = this.f60434;
-        C15818 c15818 = c19345.f62382;
-        int i2 = c15818.f51193 - i;
-        Object[] objArr = c15818.f51195;
-        System.arraycopy(objArr, i, objArr, i - 1, i2);
-        Object[] objArr2 = c19345.f62382.f51191;
-        int i3 = this.f60433;
-        System.arraycopy(objArr2, i3, objArr2, i3 - 1, i2);
-        C15818 c15819 = c19345.f62382;
-        int i4 = c15819.f51193 - 1;
-        c15819.f51193 = i4;
-        this.f60433--;
-        c15819.f51195[i4] = null;
-        c15819.f51191[i4] = null;
-    }
-
-    @Override // java.util.Iterator, l.InterfaceC6206
-    public final void forEachRemaining(Consumer consumer) {
-        C15818 c15818 = this.f60434.f62382;
-        Object[] objArr = c15818.f51195;
-        int i = c15818.f51193;
-        while (true) {
-            int i2 = this.f60433;
-            if (i2 >= i) {
-                return;
-            }
-            this.f60433 = i2 + 1;
-            consumer.accept(objArr[i2]);
-        }
+        return false;
     }
 }

@@ -1,13 +1,11 @@
-.class public final Ll/ۜ۬᩵;
-.super Ll/֫᩹᩵;
-.source "FAQU"
+.class public interface abstract Ll/ۜ۬᩵;
+.super Ljava/lang/Object;
+.source "2BMB"
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
+.method public abstract next()Ljava/lang/Object;
+.end method
 
-    const/4 v0, 0x7
-
-    return v0
+.method public abstract ۙ(Ll/ۙۢ᩵;)Ljava/lang/Object;
 .end method

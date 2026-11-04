@@ -1,14 +1,24 @@
-.class public abstract Ll/ۗۜۙ;
+.class public interface abstract Ll/ۗۜۙ;
 .super Ljava/lang/Object;
-.source "Y5SN"
+.source "D8SC"
 
 
-# virtual methods
-.method public abstract ۙ()Ll/ۢۜۙ;
-.end method
+# static fields
+.field public static final ۤ:Ll/ۨ᩹ۧ;
 
-.method public abstract ۙ(Ll/᩹᩺ۙ;)V
-.end method
 
-.method public abstract ܰ(Ll/᩹᩺ۙ;)V
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 39
+    new-instance v0, Ll/ۨ᩹ۧ;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Ll/ۨ᩹ۧ;-><init>(I)V
+
+    sput-object v0, Ll/ۗۜۙ;->ۤ:Ll/ۨ᩹ۧ;
+
+    return-void
 .end method

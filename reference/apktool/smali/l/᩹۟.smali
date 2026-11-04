@@ -1,3 +1,3 @@
-.class public final Ll/᩹۟;
+.class public interface abstract Ll/᩹۟;
 .super Ljava/lang/Object;
-.source "IRC"
+.source "X63W"

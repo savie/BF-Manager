@@ -59,11 +59,11 @@
 
     move-result-object p0
 
-    sget p1, Ll/۬۟ܶ;->᩺ۨ:I
+    sget p1, Ll/ܶ۬ܺ;->᩻ۤ:I
 
     const/4 p2, 0x0
 
-    invoke-static {p0, p1, p2}, Ll/᩶֫ܰ;->ۙ(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Ll/᩶֫ܰ;
+    invoke-static {p0, p1, p2}, Ll/᩻۠᩷;->ۙ(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Ll/᩻۠᩷;
 
     move-result-object p0
 
@@ -229,7 +229,7 @@
 
     aget v1, v2, v1
 
-    invoke-static {v0, v1}, Ll/۟ܿ;->ܰ(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, v1}, Ll/֡ᩳ;->᩷(Landroid/graphics/drawable/Drawable;I)V
 
     .line 193
     iget-object v0, p0, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->staticDummyDrawable:Landroid/graphics/drawable/Drawable;
@@ -322,7 +322,7 @@
     const/4 v4, 0x1
 
     .line 0
-    invoke-static {v4, v3}, Ll/ۗۙᩴ;->ۙ(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v4, v3}, Ll/۟۠֫;->ۙ(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -621,11 +621,11 @@
     return v0
 .end method
 
-.method public bridge synthetic registerAnimationCallback(Ll/ۖ֫ܰ;)V
+.method public bridge synthetic registerAnimationCallback(Ll/۟ۖ᩷;)V
     .locals 0
 
     .line 39
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Ll/ۖ֫ܰ;)V
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Ll/۟ۖ᩷;)V
 
     return-void
 .end method
@@ -786,11 +786,11 @@
     return-void
 .end method
 
-.method public bridge synthetic unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+.method public bridge synthetic unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
     .locals 0
 
     .line 39
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
 
     move-result p1
 

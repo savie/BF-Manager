@@ -1,278 +1,262 @@
 .class public final Ll/ۙۖۨ;
 .super Ljava/lang/Object;
-.source "T19G"
-
-
-# instance fields
-.field public final ۖ:S
-
-.field public final ۙ:I
-
-.field public final ۨ:I
-
-.field public final ܰ:I
+.source "G5PX"
 
 
 # direct methods
-.method public constructor <init>(SIII)V
-    .locals 0
+.method public static ۙ(Ll/ۘ۠ۨ;Ll/۬ۡۨ;)V
+    .locals 8
 
-    .line 15
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 16
-    iput-short p1, p0, Ll/ۙۖۨ;->ۖ:S
-
-    .line 17
-    iput p2, p0, Ll/ۙۖۨ;->ܰ:I
-
-    .line 18
-    iput p3, p0, Ll/ۙۖۨ;->ۙ:I
-
-    .line 19
-    iput p4, p0, Ll/ۙۖۨ;->ۨ:I
-
-    return-void
-.end method
-
-.method public static ۙ(Ll/֨᩸ۨ;)Ll/ۙۖۨ;
-    .locals 6
-
-    .line 62
-    invoke-virtual {p0}, Ll/֨᩸ۨ;->ۙ()I
+    .line 51
+    :goto_0
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ۙ()I
 
     move-result v0
-
-    .line 63
-    invoke-virtual {p0}, Ll/֨᩸ۨ;->length()J
-
-    move-result-wide v1
-
-    int-to-long v3, v0
-
-    sub-long/2addr v1, v3
-
-    const-wide/16 v3, 0x8
-
-    cmp-long v5, v1, v3
-
-    if-gez v5, :cond_0
-
-    .line 64
-    new-instance p0, Ll/ۙۖۨ;
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, v1, v2, v2, v0}, Ll/ۙۖۨ;-><init>(SIII)V
-
-    return-object p0
-
-    .line 129
-    :cond_0
-    invoke-virtual {p0}, Ll/֨᩸ۨ;->᩻ܰ()I
-
-    move-result v1
-
-    int-to-short v1, v1
-
-    .line 66
-    invoke-virtual {p0}, Ll/֨᩸ۨ;->᩻ܰ()I
-
-    move-result v2
-
-    .line 67
-    invoke-virtual {p0}, Ll/֨᩸ۨ;->readInt()I
-
-    move-result p0
-
-    .line 68
-    new-instance v3, Ll/ۙۖۨ;
-
-    invoke-direct {v3, v1, v2, p0, v0}, Ll/ۙۖۨ;-><init>(SIII)V
-
-    return-object v3
-.end method
-
-.method public static ۙ(Ll/᩻۬ۨ;)Ll/ۙۖۨ;
-    .locals 4
-
-    .line 42
-    invoke-virtual {p0}, Ll/᩻۬ۨ;->ܰ()I
-
-    move-result v0
-
-    .line 43
-    invoke-virtual {p0}, Ll/᩻۬ۨ;->ۙ()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-ge v1, v2, :cond_0
-
-    .line 44
-    new-instance p0, Ll/ۙۖۨ;
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, v1, v2, v2, v0}, Ll/ۙۖۨ;-><init>(SIII)V
-
-    return-object p0
-
-    .line 45
-    :cond_0
-    invoke-virtual {p0}, Ll/᩻۬ۨ;->ۚ()S
-
-    move-result v1
-
-    .line 46
-    invoke-virtual {p0}, Ll/᩻۬ۨ;->֨()I
-
-    move-result v2
-
-    .line 47
-    invoke-virtual {p0}, Ll/᩻۬ۨ;->ۖ()I
-
-    move-result p0
-
-    .line 48
-    new-instance v3, Ll/ۙۖۨ;
-
-    invoke-direct {v3, v1, v2, p0, v0}, Ll/ۙۖۨ;-><init>(SIII)V
-
-    return-object v3
-.end method
-
-.method public static ܰ(Ll/ܿ۬ۨ;)Ll/ۙۖۨ;
-    .locals 6
 
     .line 52
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->ۙ()I
-
-    move-result v0
-
-    .line 53
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->available()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x8
-
-    cmp-long v5, v1, v3
-
-    if-gez v5, :cond_0
-
-    .line 54
-    new-instance p0, Ll/ۙۖۨ;
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, v1, v2, v2, v0}, Ll/ۙۖۨ;-><init>(SIII)V
-
-    return-object p0
-
-    .line 55
-    :cond_0
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->readShort()S
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->᩷()B
 
     move-result v1
 
-    .line 56
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->᩻ܰ()I
+    const/4 v2, 0x0
 
-    move-result v2
+    const/4 v3, 0x1
 
-    .line 57
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->readInt()I
+    packed-switch v1, :pswitch_data_0
 
-    move-result p0
+    .line 137
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 58
-    new-instance v3, Ll/ۙۖۨ;
+    .line 290
+    sget-object v1, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
 
-    invoke-direct {v3, v1, v2, p0, v0}, Ll/ۙۖۨ;-><init>(SIII)V
+    invoke-virtual {p1, v0, v3}, Ll/۬ۡۨ;->ۙ(II)V
 
-    return-object v3
-.end method
+    goto :goto_0
 
+    .line 130
+    :pswitch_0
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-# virtual methods
-.method public final ۙ(I)V
-    .locals 5
+    move-result v0
 
-    .line 31
-    iget-short v0, p0, Ll/ۙۖۨ;->ۖ:S
+    .line 131
+    invoke-virtual {p1, v0}, Ll/۬ۡۨ;->ۙ(I)V
 
-    if-ne v0, p1, :cond_0
+    goto :goto_0
 
-    return-void
+    .line 126
+    :pswitch_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 32
+    .line 283
+    sget-object v1, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v3}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto :goto_0
+
+    .line 122
+    :pswitch_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 279
+    sget-object v1, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v3}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto :goto_0
+
+    .line 111
+    :pswitch_3
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->۫()I
+
+    .line 117
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ۙ()I
+
+    move-result v1
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 275
+    sget-object v2, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v1}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto :goto_0
+
+    .line 100
+    :pswitch_4
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->۫()I
+
+    .line 106
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ۙ()I
+
+    move-result v1
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 271
+    sget-object v2, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v1}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto :goto_0
+
+    .line 85
+    :pswitch_5
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->۫()I
+
+    move-result v0
+
+    if-gez v0, :cond_0
+
+    not-int v0, v0
+
+    const/4 v1, 0x1
+
+    move v3, v0
+
+    const/4 v7, 0x1
+
+    goto :goto_1
+
     :cond_0
-    new-instance v1, Ljava/io/IOException;
+    const/4 v1, 0x0
 
-    .line 33
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move v3, v0
 
-    move-result-object p1
+    const/4 v7, 0x0
 
-    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+    .line 91
+    :goto_1
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-    move-result-object v0
+    move-result v0
 
-    iget v2, p0, Ll/ۙۖۨ;->ۨ:I
+    add-int/lit8 v4, v0, -0x1
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 92
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-    move-result-object v2
+    move-result v0
 
-    const/4 v3, 0x3
+    add-int/lit8 v5, v0, -0x1
 
-    new-array v3, v3, [Ljava/lang/Object;
+    .line 93
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-    const/4 v4, 0x0
+    move-result v0
 
-    aput-object p1, v3, v4
+    add-int/lit8 v6, v0, -0x1
 
-    const/4 p1, 0x1
+    move-object v2, p1
 
-    aput-object v0, v3, p1
+    .line 94
+    invoke-virtual/range {v2 .. v7}, Ll/۬ۡۨ;->ۙ(IIIIZ)V
 
-    const/4 p1, 0x2
+    goto :goto_0
 
-    aput-object v2, v3, p1
+    .line 72
+    :pswitch_6
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->۫()I
 
-    const-string p1, "Invalid chunk type: expected=0x%04x, got=0x%04x, offset=0x%04x"
+    move-result v0
 
-    .line 32
-    invoke-static {p1, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    if-gez v0, :cond_1
 
-    move-result-object p1
+    not-int v0, v0
 
-    invoke-direct {v1, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    throw v1
-.end method
+    .line 78
+    :cond_1
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-.method public final ۙ(Ll/ܿ۬ۨ;)V
-    .locals 2
+    move-result v1
 
-    .line 76
-    iget v0, p0, Ll/ۙۖۨ;->ۨ:I
+    sub-int/2addr v1, v3
 
-    iget v1, p0, Ll/ۙۖۨ;->ۙ:I
+    .line 79
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
 
-    add-int/2addr v0, v1
+    move-result v4
 
-    int-to-long v0, v0
+    sub-int/2addr v4, v3
 
-    invoke-virtual {p1, v0, v1}, Ll/ܿ۬ۨ;->seek(J)V
+    .line 80
+    invoke-virtual {p1, v0, v1, v4, v2}, Ll/۬ۡۨ;->ۙ(IIIZ)V
+
+    goto/16 :goto_0
+
+    .line 66
+    :pswitch_7
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ᩴ()I
+
+    .line 67
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ۙ()I
+
+    move-result v1
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 259
+    sget-object v2, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v1}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto/16 :goto_0
+
+    .line 60
+    :pswitch_8
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ܳ()I
+
+    .line 61
+    invoke-virtual {p0}, Ll/ۘ۠ۨ;->ۙ()I
+
+    move-result v1
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 255
+    sget-object v2, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v1}, Ll/۬ۡۨ;->ۙ(II)V
+
+    goto/16 :goto_0
+
+    .line 56
+    :pswitch_9
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 251
+    sget-object p0, Ll/᩷ۖۨ;->ᩳ:Ll/᩷ۖۨ;
+
+    invoke-virtual {p1, v0, v3}, Ll/۬ۡۨ;->ۙ(II)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

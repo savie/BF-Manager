@@ -1,10 +1,10 @@
 package org.bouncycastle.asn1.x9;
 
-import l.C23482;
+import l.C0637;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface X9ObjectIdentifiers {
     public static final ASN1ObjectIdentifier ansi_X9_42;
     public static final ASN1ObjectIdentifier ansi_X9_62;
@@ -130,7 +130,7 @@ public interface X9ObjectIdentifiers {
         prime239v2 = aSN1ObjectIdentifierBranch8.branch("5");
         prime239v3 = aSN1ObjectIdentifierBranch8.branch("6");
         prime256v1 = aSN1ObjectIdentifierBranch8.branch("7");
-        id_dsa = new ASN1ObjectIdentifier(C23482.f76027);
+        id_dsa = new ASN1ObjectIdentifier(C0637.f2489);
         id_dsa_with_sha1 = new ASN1ObjectIdentifier("1.2.840.10040.4.3");
         ASN1ObjectIdentifier aSN1ObjectIdentifier2 = new ASN1ObjectIdentifier("1.3.133.16.840.63.0");
         x9_63_scheme = aSN1ObjectIdentifier2;

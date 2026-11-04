@@ -1,81 +1,71 @@
 .class public final Ll/۠ۙۙ;
-.super Landroid/view/View$BaseSavedState;
-.source "E6AF"
+.super Ljava/lang/Object;
+.source "H6B6"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-
-
-# instance fields
-.field public ܺ:I
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 2477
-    new-instance v0, Ll/ᩴۙۙ;
-
-    .line 2478
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 2477
-    sput-object v0, Ll/۠ۙۙ;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/os/Parcelable$ClassLoaderCreator;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2472
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "HorizontalScrollView.SavedState{"
+    .line 93
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    .line 2473
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    if-nez p1, :cond_0
 
-    move-result v1
+    .line 97
+    sget-object p1, Ll/ۜۙۙ;->EMPTY_STATE:Ll/ۜۙۙ;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    return-object p1
 
-    move-result-object v1
+    .line 95
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "superState must be null"
 
-    const-string v1, " scrollPosition="
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll/۠ۙۙ;->ܺ:I
-
-    const-string v2, "}"
-
-    .line 0
-    invoke-static {v1, v2, v0}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
-    .line 2465
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    .line 93
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    .line 2466
-    iget p2, p0, Ll/۠ۙۙ;->ܺ:I
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-nez p1, :cond_0
 
-    return-void
+    .line 97
+    sget-object p1, Ll/ۜۙۙ;->EMPTY_STATE:Ll/ۜۙۙ;
+
+    return-object p1
+
+    .line 95
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "superState must be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    .line 107
+    new-array p1, p1, [Ll/ۜۙۙ;
+
+    return-object p1
 .end method

@@ -1,15 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫᩺ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5YJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2135 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) {
-        C14277 c14277 = new C14277();
-        int iM34486 = ((C14277) c15313.m36673()).m34486();
-        c14277.m34466(((C14277) c15313.m36673()).m34493().substring(((C14277) c15313.m36673()).m34486(), iM34486));
-        c15313.m36672(c14277);
+import java.util.Arrays;
+import java.util.function.IntFunction;
+
+/* JADX INFO: renamed from: l.֫᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2135 extends AbstractC5776 {
+    @Override // l.AbstractC15470
+    public final InterfaceC15143 q0(int i, InterfaceC15143 interfaceC15143) {
+        C17359.requireNonNull(interfaceC15143);
+        if (EnumC21614.SORTED.p(i)) {
+            return interfaceC15143;
+        }
+        return EnumC21614.SIZED.p(i) ? new C9350(interfaceC15143) : new C11326(interfaceC15143);
+    }
+
+    @Override // l.AbstractC15470
+    public final InterfaceC13409 n0(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409, IntFunction intFunction) {
+        if (EnumC21614.SORTED.p(((AbstractC15470) abstractC13956).m)) {
+            return abstractC13956.Q(interfaceC8409, false, intFunction);
+        }
+        int[] iArr = (int[]) ((InterfaceC2792) abstractC13956.Q(interfaceC8409, true, intFunction)).b();
+        Arrays.sort(iArr);
+        return new C4284(iArr);
     }
 }

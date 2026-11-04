@@ -1,79 +1,110 @@
 package l;
 
-import android.app.Application;
-import java.lang.reflect.InvocationTargetException;
+/* JADX INFO: renamed from: l.۟֨ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X93U */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7544 {
 
-/* JADX INFO: renamed from: l.۟ܶۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V627 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7544 extends C20245 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public String[] f24881;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC9662 f25042 = C10367.f35527;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC16493[] f24882;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static C7544 f25043;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15747[] f24883;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Application f25044;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C24478 f24884;
 
-    public C7544(Application application, int i) {
-        this.f25044 = application;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public volatile boolean f24885 = false;
 
-    public C7544() {
-        this(null, 0);
-    }
-
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
-    public C7544(Application application) {
-        this(application, 0);
-        C13465.m32966(application, "application");
-    }
-
-    @Override // l.C20245, l.InterfaceC20950
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC8956 mo4843(Class cls, C11966 c11966) {
-        if (this.f25044 != null) {
-            return mo4842(cls);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC15747 m20618(C7544 c7544, C10788 c10788) {
+        c7544.getClass();
+        if (c10788.m27500() != c7544.f24884) {
+            throw new IllegalArgumentException("OneofDescriptor does not match message type.");
         }
-        Application application = (Application) c11966.m9814().get(C10367.f35527);
-        if (application != null) {
-            return m20062(cls, application);
-        }
-        if (C18585.class.isAssignableFrom(cls)) {
-            throw new IllegalArgumentException("CreationExtras must have an application by `APPLICATION_KEY`");
-        }
-        return super.mo4842(cls);
-    }
-
-    @Override // l.C20245, l.InterfaceC20950
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC8956 mo4842(Class cls) {
-        Application application = this.f25044;
-        if (application == null) {
-            throw new UnsupportedOperationException("AndroidViewModelFactory constructed with empty constructor works only with create(modelClass: Class<T>, extras: CreationExtras).");
-        }
-        return m20062(cls, application);
+        return c7544.f24883[c10788.m27501()];
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private final AbstractC8956 m20062(Class cls, Application application) {
-        if (C18585.class.isAssignableFrom(cls)) {
-            try {
-                AbstractC8956 abstractC8956 = (AbstractC8956) cls.getConstructor(Application.class).newInstance(application);
-                C13465.m32967(abstractC8956, "{\n                try {\n…          }\n            }");
-                return abstractC8956;
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException("Cannot create an instance of " + cls, e);
-            } catch (InstantiationException e2) {
-                throw new RuntimeException("Cannot create an instance of " + cls, e2);
-            } catch (NoSuchMethodException e3) {
-                throw new RuntimeException("Cannot create an instance of " + cls, e3);
-            } catch (InvocationTargetException e4) {
-                throw new RuntimeException("Cannot create an instance of " + cls, e4);
-            }
+    public static InterfaceC16493 m20619(C7544 c7544, C7323 c7323) {
+        c7544.getClass();
+        if (c7323.m20099() != c7544.f24884) {
+            throw new IllegalArgumentException("FieldDescriptor does not match message type.");
         }
-        return super.mo4842(cls);
+        if (c7323.m20083()) {
+            throw new IllegalArgumentException("This type does not have extensions.");
+        }
+        return c7544.f24882[c7323.m20100()];
+    }
+
+    public C7544(C24478 c24478, String[] strArr) {
+        this.f24884 = c24478;
+        this.f24881 = strArr;
+        this.f24882 = new InterfaceC16493[c24478.getFields().size()];
+        this.f24883 = new InterfaceC15747[c24478.m54737().size()];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20621(Class cls, Class cls2) {
+        if (this.f24885) {
+            return;
+        }
+        synchronized (this) {
+            if (this.f24885) {
+                return;
+            }
+            int length = this.f24882.length;
+            int i = 0;
+            while (true) {
+                String str = null;
+                if (i >= length) {
+                    break;
+                }
+                C7323 c7323 = (C7323) this.f24884.getFields().get(i);
+                if (c7323.m20094() != null) {
+                    int iM27501 = c7323.m20094().m27501() + length;
+                    String[] strArr = this.f24881;
+                    if (iM27501 < strArr.length) {
+                        str = strArr[iM27501];
+                    }
+                }
+                String str2 = str;
+                if (c7323.mo8649()) {
+                    if (c7323.m20086() == EnumC2848.MESSAGE) {
+                        if (c7323.m20096()) {
+                            this.f24882[i] = new C17239(c7323, cls);
+                        } else {
+                            this.f24882[i] = new C6053(cls, cls2, this.f24881[i]);
+                        }
+                    } else if (c7323.m20086() == EnumC2848.ENUM) {
+                        this.f24882[i] = new C3069(c7323, this.f24881[i], cls, cls2);
+                    } else {
+                        this.f24882[i] = new C12018(cls, cls2, this.f24881[i]);
+                    }
+                } else if (c7323.m20086() == EnumC2848.MESSAGE) {
+                    this.f24882[i] = new C20969(c7323, this.f24881[i], cls, cls2, str2);
+                } else if (c7323.m20086() == EnumC2848.ENUM) {
+                    this.f24882[i] = new C23953(c7323, this.f24881[i], cls, cls2, str2);
+                } else if (c7323.m20086() == EnumC2848.STRING) {
+                    this.f24882[i] = new C17985(c7323, this.f24881[i], cls, cls2, str2);
+                } else {
+                    this.f24882[i] = new C14255(c7323, this.f24881[i], cls, cls2, str2);
+                }
+                i++;
+            }
+            for (int i2 = 0; i2 < this.f24884.m54737().size(); i2++) {
+                if (i2 < this.f24884.m54734().size()) {
+                    this.f24883[i2] = new C23207(this.f24884, this.f24881[i2 + length], cls, cls2);
+                } else {
+                    this.f24883[i2] = new C0086(this.f24884, i2);
+                }
+            }
+            this.f24885 = true;
+            this.f24881 = null;
+        }
     }
 }

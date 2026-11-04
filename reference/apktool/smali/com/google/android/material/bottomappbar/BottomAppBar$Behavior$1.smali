@@ -128,7 +128,7 @@
 
     move-result-object p4
 
-    check-cast p4, Ll/ۢܺ;
+    check-cast p4, Ll/ܳ᩶;
 
     .line 1375
     iget-object p5, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior$1;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior;
@@ -162,7 +162,7 @@
 
     move-result-object p3
 
-    sget p6, Ll/֨۟ܶ;->ۤ᩵:I
+    sget p6, Ll/ܽ۬ܺ;->ۛ᩵:I
 
     .line 1383
     invoke-virtual {p3, p6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

@@ -387,7 +387,7 @@
     const-string v1, "can\'t process principal: "
 
     .line 0
-    invoke-static {v1, p1}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/io/IOException;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ll/۬ۚ᩸;->ۙ(Ljava/lang/String;Ljava/io/IOException;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -582,7 +582,7 @@
     const-string v1, "can\'t process principal: "
 
     .line 0
-    invoke-static {v1, p1}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/io/IOException;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ll/۬ۚ᩸;->ۙ(Ljava/lang/String;Ljava/io/IOException;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,121 +1,27 @@
 package l;
 
-import java.util.Arrays;
-
-/* JADX INFO: renamed from: l.ۢۨᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8G0 */
+/* JADX INFO: renamed from: l.ۡᩴۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 057Y */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C9571 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final float[] f32283 = new float[0];
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final float[] f32282 = new float[0];
+    public final long f30969;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m24437(float[] fArr, int i, int i2, InterfaceC12829 interfaceC12829, float[] fArr2) {
-        int i3 = i2 - i;
-        if (i3 >= 16) {
-            if (fArr2 == null) {
-                fArr2 = Arrays.copyOf(fArr, i2);
-            }
-            int i4 = (i + i2) >>> 1;
-            m24437(fArr2, i, i4, interfaceC12829, fArr);
-            m24437(fArr2, i4, i2, interfaceC12829, fArr);
-            if (interfaceC12829.mo10769(fArr2[i4 - 1], fArr2[i4]) <= 0) {
-                System.arraycopy(fArr2, i, fArr, i, i3);
-                return;
-            }
-            int i5 = i;
-            int i6 = i4;
-            while (i < i2) {
-                if (i6 >= i2 || (i5 < i4 && interfaceC12829.mo10769(fArr2[i5], fArr2[i6]) <= 0)) {
-                    fArr[i] = fArr2[i5];
-                    i5++;
-                } else {
-                    fArr[i] = fArr2[i6];
-                    i6++;
-                }
-                i++;
-            }
-            return;
-        }
-        int i7 = i;
-        while (true) {
-            int i8 = i7 + 1;
-            if (i8 >= i2) {
-                return;
-            }
-            float f = fArr[i8];
-            float f2 = fArr[i7];
-            int i9 = i8;
-            while (interfaceC12829.mo10769(f, f2) < 0) {
-                fArr[i9] = f2;
-                if (i == i9 - 1) {
-                    i9--;
-                    break;
-                }
-                int i10 = i9 - 1;
-                float f3 = fArr[i9 - 2];
-                i9 = i10;
-                f2 = f3;
-            }
-            fArr[i9] = f;
-            i7 = i8;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f30970;
+
+    public C9571(long j, long j2) {
+        if (j2 == 0) {
+            this.f30970 = 0L;
+            this.f30969 = 1L;
+        } else {
+            this.f30970 = j;
+            this.f30969 = j2;
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m24436(int i, int i2, float[] fArr, float[] fArr2) {
-        int i3 = i2 - i;
-        if (i3 >= 16) {
-            if (fArr2 == null) {
-                fArr2 = Arrays.copyOf(fArr, i2);
-            }
-            int i4 = (i + i2) >>> 1;
-            m24436(i, i4, fArr2, fArr);
-            m24436(i4, i2, fArr2, fArr);
-            if (Float.compare(fArr2[i4 - 1], fArr2[i4]) <= 0) {
-                System.arraycopy(fArr2, i, fArr, i, i3);
-                return;
-            }
-            int i5 = i;
-            int i6 = i4;
-            while (i < i2) {
-                if (i6 >= i2 || (i5 < i4 && Float.compare(fArr2[i5], fArr2[i6]) <= 0)) {
-                    fArr[i] = fArr2[i5];
-                    i5++;
-                } else {
-                    fArr[i] = fArr2[i6];
-                    i6++;
-                }
-                i++;
-            }
-            return;
-        }
-        int i7 = i;
-        while (true) {
-            int i8 = i7 + 1;
-            if (i8 >= i2) {
-                return;
-            }
-            float f = fArr[i8];
-            float f2 = fArr[i7];
-            int i9 = i8;
-            while (Float.compare(f, f2) < 0) {
-                fArr[i9] = f2;
-                if (i == i9 - 1) {
-                    i9--;
-                    break;
-                }
-                int i10 = i9 - 1;
-                float f3 = fArr[i9 - 2];
-                i9 = i10;
-                f2 = f3;
-            }
-            fArr[i9] = f;
-            i7 = i8;
-        }
+    public final String toString() {
+        return this.f30970 + "/" + this.f30969;
     }
 }

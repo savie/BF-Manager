@@ -1,155 +1,211 @@
-.class public final Ll/᩵ܳᩴ;
+.class public final synthetic Ll/᩵ܳᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "J7R3"
 
 # interfaces
-.implements Ljava/util/ListIterator;
-.implements Ll/ۛܿᩴ;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Ljava/util/ListIterator;
+.field public final synthetic ֡:Ll/ۚۚᩴ;
+
+.field public final synthetic ۟:Landroid/widget/Button;
+
+.field public final synthetic ܰ:Ll/ۛܳᩴ;
+
+.field public final synthetic ܿ:Landroid/widget/FrameLayout;
+
+.field public final synthetic ᩳ:Ll/۠ۖۧ;
+
+.field public final synthetic ᩶:Landroid/widget/Spinner;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۤܳᩴ;I)V
+.method public synthetic constructor <init>(Ll/ۛܳᩴ;Landroid/widget/Spinner;Landroid/widget/FrameLayout;Ll/ۚۚᩴ;Landroid/widget/Button;Ll/۠ۖۧ;)V
     .locals 0
 
-    .line 402
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 403
-    iget-object p1, p1, Ll/ۤܳᩴ;->b:Ljava/util/List;
+    iput-object p1, p0, Ll/᩵ܳᩴ;->ܰ:Ll/ۛܳᩴ;
 
-    invoke-interface {p1, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    iput-object p2, p0, Ll/᩵ܳᩴ;->᩶:Landroid/widget/Spinner;
 
-    move-result-object p1
+    iput-object p3, p0, Ll/᩵ܳᩴ;->ܿ:Landroid/widget/FrameLayout;
 
-    iput-object p1, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    iput-object p4, p0, Ll/᩵ܳᩴ;->֡:Ll/ۚۚᩴ;
+
+    iput-object p5, p0, Ll/᩵ܳᩴ;->۟:Landroid/widget/Button;
+
+    iput-object p6, p0, Ll/᩵ܳᩴ;->ᩳ:Ll/۠ۖۧ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    .line 438
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 348
+    iget-object p1, p0, Ll/᩵ܳᩴ;->᩶:Landroid/widget/Spinner;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
-    throw p1
-.end method
+    move-result p1
 
-.method public final forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 1
+    .line 349
+    iget-object v0, p0, Ll/᩵ܳᩴ;->ܰ:Ll/ۛܳᩴ;
 
-    .line 443
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    iget-object v0, v0, Ll/ۛܳᩴ;->ܳ:Ljava/util/ArrayList;
 
-    invoke-static {v0, p1}, Ll/ܿܿᩴ;->forEachRemaining(Ljava/util/Iterator;Ljava/util/function/Consumer;)V
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۘܳᩴ;
+
+    .line 350
+    new-instance v0, Lbin/mt/json/JSONObject;
+
+    invoke-direct {v0}, Lbin/mt/json/JSONObject;-><init>()V
+
+    const-string v1, "a"
+
+    .line 351
+    invoke-static {p1}, Ll/ۘܳᩴ;->ۤ(Ll/ۘܳᩴ;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    const-string v1, "b"
+
+    .line 352
+    invoke-static {p1}, Ll/ۘܳᩴ;->ۙ(Ll/ۘܳᩴ;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    const v1, 0x7f0a0487
+
+    .line 353
+    iget-object v2, p0, Ll/᩵ܳᩴ;->ܿ:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v2, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lbin/mt/plugin/api/ui/PluginView;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lbin/mt/plugin/api/ui/PluginView;
+
+    .line 356
+    :try_start_0
+    invoke-virtual {p1}, Ll/ۘܳᩴ;->᩷()Ll/ۖ֨;
+
+    move-result-object v2
+
+    iget-object v2, v2, Ll/ۖ֨;->᩷:Ljava/lang/Object;
+
+    check-cast v2, Lbin/mt/plugin/api/editor/TextEditorFunction;
+
+    invoke-interface {v1}, Lbin/mt/plugin/api/ui/PluginView;->getPluginUI()Lbin/mt/plugin/api/ui/PluginUI;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3, v1}, Lbin/mt/plugin/api/editor/TextEditorFunction;->getOptionsData(Lbin/mt/plugin/api/ui/PluginUI;Lbin/mt/plugin/api/ui/PluginView;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 362
+    sget-object v2, Lbin/mt/plugin/api/editor/TextEditorFunction;->VALIDATION_FAILED:Lbin/mt/json/JSONObject;
+
+    if-ne v1, v2, :cond_0
 
     return-void
-.end method
 
-.method public final hasNext()Z
-    .locals 1
+    :cond_0
+    if-eqz v1, :cond_1
 
-    .line 406
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    const-string v2, "c"
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
+    .line 366
+    invoke-virtual {v0, v2, v1}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
 
-    move-result v0
+    goto :goto_0
 
-    return v0
-.end method
+    :catchall_0
+    move-exception v0
 
-.method public final hasPrevious()Z
-    .locals 1
+    .line 358
+    invoke-virtual {p1}, Ll/ۘܳᩴ;->᩷()Ll/ۖ֨;
 
-    .line 414
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    move-result-object p1
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+    iget-object p1, p1, Ll/ۖ֨;->ۙ:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Ll/ܿۨ֫;
 
-    return v0
-.end method
+    invoke-virtual {p1, v0}, Ll/ܿۨ֫;->ۙ(Ljava/lang/Throwable;)V
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    const/4 p1, 0x0
 
-    .line 410
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    .line 546
+    iget-object v1, p0, Ll/᩵ܳᩴ;->֡:Ll/ۚۚᩴ;
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v0, p1}, Ll/ܽ֡֫;->ۙ(Ljava/lang/Throwable;Landroid/content/DialogInterface$OnDismissListener;)V
+
+    return-void
+
+    .line 369
+    :cond_1
+    :goto_0
+    new-instance v1, Ll/ܰܳᩴ;
+
+    invoke-static {p1}, Ll/ۘܳᩴ;->᩷(Ll/ۘܳᩴ;)Ll/ۖ֨;
+
+    move-result-object p1
+
+    invoke-direct {v1, v0, p1}, Ll/ܰܳᩴ;-><init>(Lbin/mt/json/JSONObject;Ll/ۖ֨;)V
+
+    const p1, 0x7f0a061d
+
+    .line 370
+    iget-object v0, p0, Ll/᩵ܳᩴ;->۟:Landroid/widget/Button;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    const p1, 0x7f0a03d9
+
+    .line 371
+    invoke-virtual {v0, p1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    const/4 v0, 0x0
+
+    .line 372
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 373
+    invoke-virtual {v1}, Ll/ܰܳᩴ;->ۚ()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-.method public final nextIndex()I
-    .locals 1
+    .line 374
+    iget-object p1, p0, Ll/᩵ܳᩴ;->ᩳ:Ll/۠ۖۧ;
 
-    .line 422
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
+    invoke-virtual {p1}, Ll/۠ۖۧ;->dismiss()V
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    .line 418
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    .line 426
-    iget-object v0, p0, Ll/᩵ܳᩴ;->a:Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    .line 430
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 434
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-void
 .end method

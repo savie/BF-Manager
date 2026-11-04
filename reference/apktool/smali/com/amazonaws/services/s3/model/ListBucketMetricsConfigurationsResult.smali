@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/ArrayList;
+.field public ܰ:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     .locals 1
 
     .line 57
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ListBucketMetricsConfigurationsResult;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ListBucketMetricsConfigurationsResult;->ܰ:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -35,7 +35,7 @@
     .locals 0
 
     .line 64
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ListBucketMetricsConfigurationsResult;->ܺ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ListBucketMetricsConfigurationsResult;->ܰ:Ljava/util/ArrayList;
 
     return-void
 .end method

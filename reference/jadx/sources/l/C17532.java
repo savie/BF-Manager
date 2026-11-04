@@ -1,30 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿᩴۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: renamed from: l.ܽۧ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: V6MU */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C17532 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+public final /* synthetic */ class C17532 implements InterfaceC7509 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22403 f56994;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9327 f56995;
+
+    public /* synthetic */ C17532(C22403 c22403, C9327 c9327) {
+        this.f56994 = c22403;
+        this.f56995 = c9327;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return Character.isUnicodeIdentifierPart(i);
-    }
-
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
-    }
-
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f56994.m50495(this.f56995);
     }
 }

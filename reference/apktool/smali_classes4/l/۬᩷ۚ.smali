@@ -1,189 +1,227 @@
 .class public final Ll/۬᩷ۚ;
-.super Ll/᩺ܺۚ;
-.source "116O"
+.super Ljava/lang/Object;
+.source "56BZ"
+
+
+# instance fields
+.field public final ֫:I
+
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۚ:Ljava/lang/String;
+
+.field public final ۤ:J
+
+.field public final ۧ:Ljava/lang/String;
+
+.field public final ۫:Ll/ۙۤۚ;
+
+.field public final ܳ:J
+
+.field public final ܺ:J
+
+.field public final ܽ:J
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public final ᩷:Ljava/lang/String;
+
+.field public final ᩸:J
+
+.field public final ᩻:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Landroid/net/Uri;)V
+.method public constructor <init>(Ll/ۜ᩷ۚ;)V
     .locals 2
 
-    .line 16
-    invoke-direct {p0, p1, p2}, Ll/᩺ܺۚ;-><init>(Ljava/io/File;Landroid/net/Uri;)V
+    .line 346
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "com.android.externalstorage.documents"
+    .line 347
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->۫:J
 
-    .line 17
-    invoke-virtual {p2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+    iput-wide v0, p0, Ll/۬᩷ۚ;->᩸:J
+
+    .line 348
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->ۛ:J
+
+    iput-wide v0, p0, Ll/۬᩷ۚ;->ܽ:J
+
+    .line 349
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->᩻:J
+
+    iput-wide v0, p0, Ll/۬᩷ۚ;->ܳ:J
+
+    .line 350
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->ܳ:J
+
+    iput-wide v0, p0, Ll/۬᩷ۚ;->ۤ:J
+
+    .line 351
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->᩵:J
+
+    iput-wide v0, p0, Ll/۬᩷ۚ;->᩻:J
+
+    .line 352
+    iget-wide v0, p1, Ll/ۜ᩷ۚ;->ۨ:J
+
+    iput-wide v0, p0, Ll/۬᩷ۚ;->ܺ:J
+
+    .line 353
+    iget-object v0, p1, Ll/ۜ᩷ۚ;->᩹:Ljava/lang/String;
+
+    iput-object v0, p0, Ll/۬᩷ۚ;->ۧ:Ljava/lang/String;
+
+    .line 354
+    iget v0, p1, Ll/ۜ᩷ۚ;->ܶ:I
+
+    iput v0, p0, Ll/۬᩷ۚ;->֫:I
+
+    .line 355
+    iget-object v0, p1, Ll/ۜ᩷ۚ;->ۙ:Ljava/lang/String;
+
+    iput-object v0, p0, Ll/۬᩷ۚ;->ۙ:Ljava/lang/String;
+
+    .line 356
+    iget-object v0, p1, Ll/ۜ᩷ۚ;->ܽ:Ljava/lang/String;
+
+    iget v1, p1, Ll/ۜ᩷ۚ;->ۤ:I
+
+    invoke-static {v1, v0}, Ll/ۜᩴۚ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Ll/۬᩷ۚ;->ۚ:Ljava/lang/String;
 
-    move-result p1
+    .line 357
+    iget-object v0, p1, Ll/ۜ᩷ۚ;->᩷:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    iput-object v0, p0, Ll/۬᩷ۚ;->᩷:Ljava/lang/String;
+
+    .line 358
+    iget-object v0, p1, Ll/ۜ᩷ۚ;->ۧ:Ljava/lang/String;
+
+    iput-object v0, p0, Ll/۬᩷ۚ;->ᩴ:Ljava/lang/String;
+
+    .line 359
+    iget-object p1, p1, Ll/ۜ᩷ۚ;->ܺ:Ll/ۙۤۚ;
+
+    iput-object p1, p0, Ll/۬᩷ۚ;->۫:Ll/ۙۤۚ;
 
     return-void
+.end method
 
-    .line 18
+.method public static ۙ(Ll/۬᩷ۚ;)I
+    .locals 2
+
+    .line 379
+    iget-object v0, p0, Ll/۬᩷ۚ;->ۧ:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    iget-object v1, p0, Ll/۬᩷ۚ;->ۙ:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v1, "Unsupported uri authority: "
+    :goto_0
+    add-int/2addr v0, v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Ll/۬᩷ۚ;->ۚ:Ljava/lang/String;
 
-    invoke-virtual {p2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result-object p2
+    move-result v1
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Ll/۬᩷ۚ;->᩷:Ljava/lang/String;
 
-    move-result-object p2
+    .line 380
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p1
+    add-int/2addr v0, v1
+
+    iget-object p0, p0, Ll/۬᩷ۚ;->ᩴ:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    mul-int/lit8 p0, p0, 0x2
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/io/File;Landroid/net/Uri;)Ll/᩺ܺۚ;
-    .locals 1
-
-    .line 24
-    new-instance v0, Ll/۬᩷ۚ;
-
-    invoke-direct {v0, p1, p2}, Ll/۬᩷ۚ;-><init>(Ljava/io/File;Landroid/net/Uri;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(J)Z
+.method public final ۙ(J)J
     .locals 4
 
-    const-wide/16 v0, 0x0
+    .line 371
+    iget-object v0, p0, Ll/۬᩷ۚ;->۫:Ll/ۙۤۚ;
 
-    const/4 v2, 0x0
+    sget-object v1, Ll/ۙۤۚ;->۟:Ll/ۙۤۚ;
 
-    cmp-long v3, p1, v0
+    const-wide/16 v2, 0x0
 
-    if-gez v3, :cond_0
+    if-ne v0, v1, :cond_0
 
-    return v2
+    iget-wide v0, p0, Ll/۬᩷ۚ;->ܺ:J
 
-    .line 66
+    sub-long/2addr p1, v0
+
+    invoke-static {v2, v3, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v2
+
     :cond_0
-    iget-object v0, p0, Ll/᩺ܺۚ;->ۧ:Ljava/io/File;
+    iget-wide p1, p0, Ll/۬᩷ۚ;->᩻:J
 
-    invoke-virtual {v0, p1, p2}, Ljava/io/File;->setLastModified(J)Z
+    add-long/2addr p1, v2
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 67
-    iget-object v0, p0, Ll/᩺ܺۚ;->ۛ:Ll/ۜܺۚ;
-
-    if-eqz v0, :cond_1
-
-    .line 68
-    iput-wide p1, v0, Ll/ۜܺۚ;->᩶:J
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    return v2
+    return-wide p1
 .end method
 
-.method public final ۤ()Z
-    .locals 1
+.method public final ۙ()Z
+    .locals 2
 
-    .line 43
-    invoke-static {}, Ll/᩶֡ۚ;->ۖ()Ll/᩵֡ۚ;
+    .line 363
+    sget-object v0, Ll/ۙۤۚ;->ܿ:Ll/ۙۤۚ;
 
-    move-result-object v0
+    iget-object v1, p0, Ll/۬᩷ۚ;->۫:Ll/ۙۤۚ;
 
-    invoke-interface {v0}, Ll/᩵֡ۚ;->ۙ()Z
+    if-eq v1, v0, :cond_1
 
-    move-result v0
+    sget-object v0, Ll/ۙۤۚ;->۟:Ll/ۙۤۚ;
 
-    return v0
-.end method
-
-.method public final ۫ܰ()Ll/᩺ܺۚ;
-    .locals 3
-
-    .line 33
-    iget-object v0, p0, Ll/᩺ܺۚ;->ۧ:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 34
-    invoke-virtual {p0}, Ll/᩹ܺۚ;->ۨۙ()Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ll/᩹᩷ۚ;->ۖ(Landroid/net/Uri;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_1
-
-    if-nez v1, :cond_0
+    if-ne v1, v0, :cond_0
 
     goto :goto_0
 
-    .line 38
     :cond_0
-    new-instance v2, Ll/۬᩷ۚ;
+    const/4 v0, 0x0
 
-    invoke-direct {v2, v0, v1}, Ll/۬᩷ۚ;-><init>(Ljava/io/File;Landroid/net/Uri;)V
-
-    return-object v2
+    return v0
 
     :cond_1
     :goto_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final ᩷()Z
-    .locals 1
-
-    .line 48
-    invoke-static {}, Ll/᩶֡ۚ;->ۖ()Ll/᩵֡ۚ;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ll/᩵֡ۚ;->ۙ()Z
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
-.end method
-
-.method public final ᩻ܰ()Ljava/lang/String;
-    .locals 1
-
-    .line 77
-    invoke-virtual {p0}, Ll/᩹ܺۚ;->ۨۙ()Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/᩹᩷ۚ;->ۚ(Landroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

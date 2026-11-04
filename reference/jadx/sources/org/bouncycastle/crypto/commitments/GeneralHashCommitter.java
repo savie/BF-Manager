@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.ExtendedDigest;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GeneralHashCommitter implements Committer {
     public final int byteLength;
     public final Digest digest;

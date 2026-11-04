@@ -1,10 +1,10 @@
 package org.bouncycastle.asn1.pkcs;
 
-import l.C1679;
+import l.C20138;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface PKCSObjectIdentifiers {
     public static final ASN1ObjectIdentifier RC2_CBC;
     public static final ASN1ObjectIdentifier bagtypes;
@@ -233,13 +233,13 @@ public interface PKCSObjectIdentifiers {
         id_hmacWithSHA512 = aSN1ObjectIdentifier5.branch("11").intern();
         id_hmacWithSHA512_224 = aSN1ObjectIdentifier5.branch("12").intern();
         id_hmacWithSHA512_256 = aSN1ObjectIdentifier5.branch(SRP6StandardGroups.rfc5054_8192_g).intern();
-        pkcs_7 = C1679.m5596("1.2.840.113549.1.7");
-        data = C1679.m5596("1.2.840.113549.1.7.1");
-        signedData = C1679.m5596("1.2.840.113549.1.7.2");
-        envelopedData = C1679.m5596("1.2.840.113549.1.7.3");
-        signedAndEnvelopedData = C1679.m5596("1.2.840.113549.1.7.4");
-        digestedData = C1679.m5596("1.2.840.113549.1.7.5");
-        encryptedData = C1679.m5596("1.2.840.113549.1.7.6");
+        pkcs_7 = C20138.m46365("1.2.840.113549.1.7");
+        data = C20138.m46365("1.2.840.113549.1.7.1");
+        signedData = C20138.m46365("1.2.840.113549.1.7.2");
+        envelopedData = C20138.m46365("1.2.840.113549.1.7.3");
+        signedAndEnvelopedData = C20138.m46365("1.2.840.113549.1.7.4");
+        digestedData = C20138.m46365("1.2.840.113549.1.7.5");
+        encryptedData = C20138.m46365("1.2.840.113549.1.7.6");
         ASN1ObjectIdentifier aSN1ObjectIdentifier6 = new ASN1ObjectIdentifier("1.2.840.113549.1.9");
         pkcs_9 = aSN1ObjectIdentifier6;
         pkcs_9_at_emailAddress = aSN1ObjectIdentifier6.branch("1").intern();

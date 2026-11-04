@@ -1,52 +1,49 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.MaterialDynamicColors;
-import java.util.ArrayList;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ۧۨۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L19N */
+/* JADX INFO: renamed from: l.ۤܶ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: YCK3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C10968 implements Function {
+public final class C10968 extends AbstractC12592 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f37383;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22903 f34651;
 
-    public /* synthetic */ C10968(int i) {
-        this.f37383 = i;
+    @Override // l.AbstractC23781, l.InterfaceC8409
+    public final int characteristics() {
+        return 16721;
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C10968(C22903 c22903, int i, int i2) {
+        super(i, i2);
+        this.f34651 = c22903;
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    @Override // l.AbstractC23781
+    /* JADX INFO: renamed from: ۙ */
+    public final char mo23935(int i) {
+        return this.f34651.f74391.f6736[i];
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f37383) {
-            case 0:
-                C4616 c4616 = (C4616) obj;
-                return c4616.m12762() + ": " + c4616.m12763();
-            case 1:
-                int i = AbstractActivityC5788.f19654;
-                return ((C22722) obj).f74022;
-            case 2:
-                return ((InterfaceC3800) obj).toString();
-            case 3:
-                return new ArrayList(((Integer) obj).intValue());
-            case 4:
-                return MaterialDynamicColors.lambda$onSecondaryFixedVariant$128((DynamicScheme) obj);
-            case 5:
-                return ((DynamicScheme) obj).neutralPalette;
-            default:
-                return MaterialDynamicColors.lambda$primaryFixedDim$107((DynamicScheme) obj);
+    @Override // l.AbstractC23781
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC16321 mo23936(int i, int i2) {
+        return new C10968(this.f34651, i, i2);
+    }
+
+    @Override // l.AbstractC23781, l.AbstractC2809, l.InterfaceC9154
+    /* JADX INFO: renamed from: ۙ */
+    public final void forEachRemaining(InterfaceC12089 interfaceC12089) {
+        C2020 c2020 = this.f34651.f74391;
+        char[] cArr = c2020.f6736;
+        int i = c2020.f6731;
+        while (true) {
+            int i2 = this.f77037;
+            if (i2 >= i) {
+                return;
+            }
+            this.f77037 = i2 + 1;
+            interfaceC12089.mo10258(cArr[i2]);
         }
     }
 }

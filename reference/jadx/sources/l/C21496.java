@@ -1,46 +1,87 @@
 package l;
 
-import java.util.function.Predicate;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩸ۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7LF */
-/* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C21496 implements Predicate {
+/* JADX INFO: renamed from: l.᩶ᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6IE */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21496 extends AbstractC16274 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f69851;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C14782 f68716;
 
-    public /* synthetic */ C21496(int i) {
-        this.f69851 = i;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean addAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        throw new UnsupportedOperationException();
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean containsAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        return this.f68716.m35604(collection);
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f69851) {
-            case 0:
-                break;
-        }
-        return C8512.$default$negate(this);
+    @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean removeAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        this.f68716.m35607();
+        return super.removeAll(collection);
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean retainAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        this.f68716.m35607();
+        return super.retainAll(collection);
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f69851) {
-            case 0:
-                return ((C5537) obj).f18987 == null;
-            default:
-                C11948 c11948 = (C11948) obj;
-                return (c11948.mo29759() == EnumC23921.ERROR && c11948.m29760(EnumC0264.RECOVERABLE) && !c11948.m29760(EnumC0264.API)) ? false : true;
-        }
+    @Override // l.AbstractC16274
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo38606(Map.Entry entry) {
+        C15243.m36590(entry, "element");
+        return this.f68716.m35605(entry);
+    }
+
+    @Override // l.AbstractC16274
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo38607(Map.Entry entry) {
+        C15243.m36590(entry, "element");
+        return this.f68716.m35609(entry);
+    }
+
+    public C21496(C14782 c14782) {
+        this.f68716 = c14782;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean add(Object obj) {
+        C15243.m36590((Map.Entry) obj, "element");
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.AbstractC4014
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo12987() {
+        return this.f68716.size();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean isEmpty() {
+        return this.f68716.isEmpty();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f68716.clear();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        C14782 c14782 = this.f68716;
+        c14782.getClass();
+        return new C20750(c14782);
     }
 }

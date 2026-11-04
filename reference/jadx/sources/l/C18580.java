@@ -1,45 +1,43 @@
 package l;
 
-import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ᩴۛ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: X6N1 */
+/* JADX INFO: renamed from: l.ܿ᩶᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 9B2H */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18580 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f59078;
+public final class C18580 extends FilterOutputStream {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final LinkedHashMap f59079 = new LinkedHashMap(16, 0.75f, true);
+    public C9982 f60359;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized Float m42977(String str) {
-        return str.length() <= 128 ? (Float) this.f59079.get(str) : null;
+    public C18580(OutputStream outputStream) {
+        super(outputStream);
+        this.f60359 = new C9982(32768);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m42978() {
-        this.f59079.clear();
-        this.f59078 = 0;
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public final void write(int i) throws IOException {
+        ((FilterOutputStream) this).out.write(i);
+        C9982 c9982 = this.f60359;
+        if (c9982.f32081 < 32768) {
+            c9982.write(i);
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m42979(String str, Float f) {
-        if (str.length() > 128) {
-            return;
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public final void write(byte[] bArr, int i, int i2) throws IOException {
+        ((FilterOutputStream) this).out.write(bArr, i, i2);
+        C9982 c9982 = this.f60359;
+        int iMin = Math.min(32768 - c9982.f32081, i2);
+        if (iMin > 0) {
+            c9982.write(bArr, i, iMin);
         }
-        if (this.f59079.put(str, f) == null) {
-            this.f59078 += str.length();
-        }
-        Iterator it = this.f59079.keySet().iterator();
-        while (true) {
-            if (this.f59079.size() <= 1024 && this.f59078 <= 32768) {
-                return;
-            }
-            this.f59078 -= ((String) it.next()).length();
-            it.remove();
-        }
+    }
+
+    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        ((FilterOutputStream) this).out.close();
     }
 }

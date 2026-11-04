@@ -1,18 +1,16 @@
-.class public final synthetic Ll/ۨ۬ۚ;
-.super Ljava/lang/Object;
-.source "4BIJ"
-
-
-# static fields
-.field public static final synthetic ۙ:I
+.class public final Ll/ۨ۬ۚ;
+.super Ljava/io/IOException;
+.source "H74N"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/io/IOException;)V
     .locals 1
 
-    .line 0
-    sget-object v0, Ll/ۚ۬ۚ;->۬:Ll/ۚ۬ۚ;
+    const-string v0, "MPEG-TS thumbnail source read failed"
+
+    .line 439
+    invoke-direct {p0, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

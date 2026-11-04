@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.crypto.slhdsa;
 
 import java.security.SecureRandom;
-import l.C0252;
+import l.C12669;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.params.ParametersWithContext;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
@@ -58,11 +58,11 @@ public class SLHDSASigner implements MessageSigner {
         ADRS adrs = new ADRS();
         int i = engine.K;
         int i2 = engine.A;
-        int iM1692 = C0252.m1692(i2, 1, i, 1) + engine.H;
+        int iM31441 = C12669.m31441(i2, 1, i, 1) + engine.H;
         int i3 = engine.D;
         int i4 = engine.WOTS_LEN;
         int i5 = engine.N;
-        if (((i3 * i4) + iM1692) * i5 != bArr3.length) {
+        if (((i3 * i4) + iM31441) * i5 != bArr3.length) {
             return false;
         }
         SIG sig = new SIG(i5, i, i2, i3, engine.H_PRIME, i4, bArr3);

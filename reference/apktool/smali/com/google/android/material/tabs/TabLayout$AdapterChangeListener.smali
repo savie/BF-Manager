@@ -3,7 +3,7 @@
 .source "TabLayout.java"
 
 # interfaces
-.implements Ll/ܶۢܰ;
+.implements Ll/۬۠᩷;
 
 
 # instance fields
@@ -26,20 +26,20 @@
 
 
 # virtual methods
-.method public onAdapterChanged(Ll/᩵ۢܰ;Ll/ܳ֫ܰ;Ll/ܳ֫ܰ;)V
+.method public onAdapterChanged(Ll/ܳۜ᩷;Ll/ۛ۠᩷;Ll/ۛ۠᩷;)V
     .locals 1
 
     .line 3664
     iget-object p2, p0, Lcom/google/android/material/tabs/TabLayout$AdapterChangeListener;->this$0:Lcom/google/android/material/tabs/TabLayout;
 
-    iget-object v0, p2, Lcom/google/android/material/tabs/TabLayout;->viewPager:Ll/᩵ۢܰ;
+    iget-object v0, p2, Lcom/google/android/material/tabs/TabLayout;->viewPager:Ll/ܳۜ᩷;
 
     if-ne v0, p1, :cond_0
 
     .line 3665
     iget-boolean p1, p0, Lcom/google/android/material/tabs/TabLayout$AdapterChangeListener;->autoRefresh:Z
 
-    invoke-virtual {p2, p3, p1}, Lcom/google/android/material/tabs/TabLayout;->setPagerAdapter(Ll/ܳ֫ܰ;Z)V
+    invoke-virtual {p2, p3, p1}, Lcom/google/android/material/tabs/TabLayout;->setPagerAdapter(Ll/ۛ۠᩷;Z)V
 
     :cond_0
     return-void

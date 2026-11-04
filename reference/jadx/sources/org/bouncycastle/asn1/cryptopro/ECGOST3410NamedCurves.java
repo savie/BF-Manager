@@ -14,7 +14,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECGOST3410NamedCurves {
     public static X9ECParametersHolder gostR3410_2001_CryptoPro_A = new X9ECParametersHolder() { // from class: org.bouncycastle.asn1.cryptopro.ECGOST3410NamedCurves.1
         @Override // org.bouncycastle.asn1.x9.X9ECParametersHolder

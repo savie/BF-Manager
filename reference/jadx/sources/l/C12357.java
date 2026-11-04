@@ -1,25 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۧ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5I3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12357 {
+/* JADX INFO: renamed from: l.ۨ۫ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12357 extends C10377 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20823 f41277;
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC11781 f39687;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20823 f41279;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C12357(long j, AbstractC19728 abstractC19728, AbstractC22664 abstractC22664, AbstractC11781 abstractC11781, AbstractC11781 abstractC11782) {
+        super(j, abstractC19728, abstractC22664, abstractC11781);
+        this.f39687 = abstractC11782;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20823 f41278 = new C16590(null, false);
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20823 f41276 = new C16590(null, true);
-
-    static {
-        C15885 c15885 = C15885.f51465;
-        f41277 = new C16590(c15885, false);
-        f41279 = new C16590(c15885, true);
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ᩶ */
+    public final AbstractC11781 mo10410() {
+        return this.f39687;
     }
 }

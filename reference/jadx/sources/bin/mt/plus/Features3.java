@@ -5,8 +5,8 @@ import com.umeng.commonsdk.internal.c;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import l.C3012;
-import l.C9013;
+import l.C11958;
+import l.C3188;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Features3 {
@@ -46,8 +46,8 @@ public class Features3 {
         System.loadLibrary("mt3");
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m59(String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m48(String str) {
         Charset charset = StandardCharsets.UTF_8;
         byte[] bArr = readlink0(str.getBytes(charset));
         if (bArr == null) {
@@ -57,16 +57,16 @@ public class Features3 {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m57(String str) throws IOException {
+    public static long m46(String str) throws IOException {
         try {
             return lastModified0(str.getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
-            throw new IOException(C9013.m23329(e, C3012.m8976(str, ": ")), e);
+            throw new IOException(C11958.m29932(e, C3188.m10405(str, ": ")), e);
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static long[] m58(String str) throws ErrnoException {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static long[] m47(String str) throws ErrnoException {
         long[] jArr = new long[3];
         int iStat0 = stat0(str.getBytes(StandardCharsets.UTF_8), jArr);
         if (iStat0 == 0) {

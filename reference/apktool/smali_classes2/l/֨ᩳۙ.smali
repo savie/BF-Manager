@@ -1,125 +1,109 @@
 .class public final Ll/֨ᩳۙ;
 .super Ljava/lang/Object;
-.source "X6AW"
+.source "X8TF"
 
 
 # instance fields
-.field public ۙ:Landroid/service/media/MediaBrowserService$Result;
+.field public ۙ:Z
+
+.field public ۤ:Z
+
+.field public ᩷:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/service/media/MediaBrowserService$Result;)V
+.method public static bridge synthetic ۙ(Ll/֨ᩳۙ;)Z
     .locals 0
 
-    .line 1203
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    iget-boolean p0, p0, Ll/֨ᩳۙ;->ۙ:Z
 
-    .line 1204
-    iput-object p1, p0, Ll/֨ᩳۙ;->ۙ:Landroid/service/media/MediaBrowserService$Result;
+    return p0
+.end method
 
-    return-void
+.method public static bridge synthetic ۤ(Ll/֨ᩳۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/֨ᩳۙ;->ۤ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/֨ᩳۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/֨ᩳۙ;->᩷:Z
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 5
+.method public final ۙ()Ll/ۡᩳۙ;
+    .locals 2
 
-    .line 1208
-    instance-of v0, p1, Ljava/util/List;
+    .line 89
+    iget-boolean v0, p0, Ll/֨ᩳۙ;->ۙ:Z
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_1
 
-    iget-object v2, p0, Ll/֨ᩳۙ;->ۙ:Landroid/service/media/MediaBrowserService$Result;
+    iget-boolean v0, p0, Ll/֨ᩳۙ;->᩷:Z
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 1209
-    check-cast p1, Ljava/util/List;
+    iget-boolean v0, p0, Ll/֨ᩳۙ;->ۤ:Z
 
-    .line 1229
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 1230
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/os/Parcel;
-
-    .line 1231
-    invoke-virtual {v3, v1}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    .line 1232
-    sget-object v4, Landroid/media/browse/MediaBrowser$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v4, v3}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/media/browse/MediaBrowser$MediaItem;
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1233
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 1209
+    .line 90
     :cond_0
-    invoke-virtual {v2, v0}, Landroid/service/media/MediaBrowserService$Result;->sendResult(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v1, "Secondary offload attribute fields are true but primary isFormatSupported is false"
 
-    .line 1210
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 93
     :cond_1
-    instance-of v0, p1, Landroid/os/Parcel;
+    :goto_0
+    new-instance v0, Ll/ۡᩳۙ;
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, p0}, Ll/ۡᩳۙ;-><init>(Ll/֨ᩳۙ;)V
 
-    .line 1211
-    check-cast p1, Landroid/os/Parcel;
+    return-object v0
+.end method
 
-    .line 1212
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->setDataPosition(I)V
+.method public final ۙ(Z)V
+    .locals 0
 
-    .line 1213
-    sget-object v0, Landroid/media/browse/MediaBrowser$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Landroid/service/media/MediaBrowserService$Result;->sendResult(Ljava/lang/Object;)V
-
-    .line 1214
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    .line 67
+    iput-boolean p1, p0, Ll/֨ᩳۙ;->᩷:Z
 
     return-void
+.end method
 
-    :cond_2
-    const/4 p1, 0x0
+.method public final ᩷()V
+    .locals 1
 
-    .line 1217
-    invoke-virtual {v2, p1}, Landroid/service/media/MediaBrowserService$Result;->sendResult(Ljava/lang/Object;)V
+    const/4 v0, 0x1
+
+    .line 56
+    iput-boolean v0, p0, Ll/֨ᩳۙ;->ۙ:Z
+
+    return-void
+.end method
+
+.method public final ᩷(Z)V
+    .locals 0
+
+    .line 78
+    iput-boolean p1, p0, Ll/֨ᩳۙ;->ۤ:Z
 
     return-void
 .end method

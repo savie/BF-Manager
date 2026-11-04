@@ -121,7 +121,7 @@
     .line 191
     check-cast p0, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object v1
 
@@ -143,7 +143,7 @@
 
     .line 197
     :try_start_0
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
@@ -177,7 +177,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    invoke-static {v4, v0}, Ll/ܿۤᩴ;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v0}, Ll/᩸۬᩹;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -196,7 +196,7 @@
 
     .line 200
     :cond_1
-    invoke-static {v3, v0}, Ll/ܿۤᩴ;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Ll/᩸۬᩹;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -279,7 +279,7 @@
     const/4 v0, 0x0
 
     .line 0
-    invoke-static {v2, v0, p0}, Ll/᩷ۘᩳ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, p0}, Ll/֨᩵ᩴ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -318,7 +318,7 @@
 
     .line 0
     :cond_2
-    invoke-static {p0, p1}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -355,7 +355,7 @@
     const-string v0, "UTF-8"
 
     .line 97
-    invoke-static {p0, v0}, Ll/ܿۤᩴ;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/᩸۬᩹;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -537,15 +537,15 @@
     return p0
 .end method
 
-.method public static ܰ(Lcom/amazonaws/Request;)Z
+.method public static ᩷(Lcom/amazonaws/Request;)Z
     .locals 3
 
     .line 176
-    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     check-cast p0, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۖ()Lcom/amazonaws/http/HttpMethodName;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩸()Lcom/amazonaws/http/HttpMethodName;
 
     move-result-object v1
 

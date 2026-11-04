@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU7624WrapEngine implements Wrapper {
     public static final int BYTES_IN_INTEGER = 4;
     public byte[] B;

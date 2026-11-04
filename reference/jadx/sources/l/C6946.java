@@ -1,70 +1,78 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜᩴ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 69T4 */
+import android.os.PowerManager;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.ۜۛۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5HP */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6946 extends AbstractC2712 {
+public final class C6946 implements InterfaceC23507 {
 
-    /* JADX INFO: renamed from: ۘܰ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC4314 f23364 = C13488.m32997(C6946.class);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ViewOnClickListenerC13657 f22953;
 
-    /* JADX INFO: renamed from: ֨ܰ, reason: not valid java name and contains not printable characters */
-    public int f23365;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ PowerManager.WakeLock f22954;
 
-    /* JADX INFO: renamed from: ۚܰ, reason: not valid java name and contains not printable characters */
-    public byte[] f23366;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10745 f22955;
 
-    /* JADX INFO: renamed from: ۬ܰ, reason: not valid java name and contains not printable characters */
-    public int f23367;
-
-    /* JADX INFO: renamed from: ᩹ܰ, reason: not valid java name and contains not printable characters */
-    public int f23368;
-
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo6398(byte[] bArr) {
-        return 0;
+    public C6946(ViewOnClickListenerC13657 viewOnClickListenerC13657, C10745 c10745, PowerManager.WakeLock wakeLock) {
+        this.f22953 = viewOnClickListenerC13657;
+        this.f22955 = c10745;
+        this.f22954 = wakeLock;
     }
 
-    public C6946(InterfaceC10601 interfaceC10601, int i, byte[] bArr, int i2, int i3) {
-        super(interfaceC10601, (byte) 37, (byte) 38);
-        this.f23367 = i;
-        this.f23366 = bArr;
-        this.f23365 = i2;
-        this.f23368 = i3;
-        this.f10440 = 0;
-        this.f10424 = 65535;
-        this.f10432 = 2;
-        this.f10436 = "\\PIPE\\";
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo19226() {
+        return this.f22955.m27399();
     }
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۘ */
-    public final int mo6397(int i, byte[] bArr) {
-        bArr[i] = m8267();
-        bArr[i + 1] = 0;
-        C4850.m13546(this.f23367, i + 2, bArr);
-        return 4;
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ActivityC0848 mo19227() {
+        return this.f22953.f43376;
     }
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۬ */
-    public final int mo6399(int i, byte[] bArr) {
-        int length = bArr.length - i;
-        int i2 = this.f23368;
-        if (length < i2) {
-            f23364.mo12135("TransTransactNamedPipe data too long for buffer");
-            return 0;
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo19230(int i) {
+        this.f22955.m27403(i);
+    }
+
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo19224(int i) {
+        this.f22955.m27393(C21576.m49059(R.string.MT_Protector, Integer.valueOf(i)));
+    }
+
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo19225(C1878 c1878) {
+        ViewOnClickListenerC13657 viewOnClickListenerC13657 = this.f22953;
+        viewOnClickListenerC13657.f43377.m51328(c1878, viewOnClickListenerC13657.f43368);
+    }
+
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo19229() {
+        this.f22955.m27405();
+        PowerManager.WakeLock wakeLock = this.f22954;
+        if (wakeLock.isHeld()) {
+            wakeLock.release();
         }
-        System.arraycopy(this.f23366, this.f23365, bArr, i, i2);
-        return i2;
     }
 
-    @Override // l.AbstractC2712, l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("TransTransactNamedPipe[");
-        sb.append(super.toString());
-        sb.append(",pipeFid=");
-        return new String(C12441.m30911(this.f23367, "]", sb));
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean mo19228() {
+        return new C24253(this.f22953.f43376).m54266();
+    }
+
+    @Override // l.InterfaceC23507
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void mo19231() {
+        C22673.m51159(R.string.MT_Protector);
     }
 }

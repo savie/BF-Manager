@@ -1,15 +1,31 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺܳۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1EH */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15991 extends ThreadLocal {
+/* JADX INFO: renamed from: l.ܶۡ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8VP */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C15991 implements InterfaceC11886 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7523 f51771;
+    public final /* synthetic */ int f51910;
 
-    @Override // java.lang.ThreadLocal
-    public final /* synthetic */ Object initialValue() {
-        return this.f51771.get();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f51911;
+
+    public /* synthetic */ C15991(int i, Object obj) {
+        this.f51910 = i;
+        this.f51911 = obj;
+    }
+
+    @Override // l.InterfaceC11886
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1160(int i, int i2) {
+        switch (this.f51910) {
+            case 0:
+                ((C4059) this.f51911).m13092();
+                break;
+            default:
+                ((C25350) this.f51911).m56666();
+                break;
+        }
     }
 }

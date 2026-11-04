@@ -1,87 +1,46 @@
-.class public final Ll/ܳܽ᩺;
-.super Ll/ۜ᩹ۡ;
-.source "51V0"
+.class public abstract Ll/ܳܽ᩺;
+.super Landroid/os/Binder;
+.source "OAQ1"
 
-
-# instance fields
-.field public final synthetic ܰ:Ll/ۜ۫᩺;
+# interfaces
+.implements Ll/۫ܽ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۫᩺;Ll/ۨ᩹ۡ;)V
-    .locals 0
+.method public static ۙ(Landroid/os/IBinder;)Ll/۫ܽ᩺;
+    .locals 2
 
-    .line 151
-    iput-object p1, p0, Ll/ܳܽ᩺;->ܰ:Ll/ۜ۫᩺;
+    if-nez p0, :cond_0
 
-    invoke-direct {p0, p2}, Ll/ۜ᩹ۡ;-><init>(Ll/ۨ᩹ۡ;)V
+    const/4 p0, 0x0
 
-    return-void
-.end method
+    return-object p0
 
-
-# virtual methods
-.method public final bridge synthetic ۙ(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 151
-    check-cast p1, Ll/ۧۨۡ;
-
-    invoke-virtual {p0, p1}, Ll/ܳܽ᩺;->ۙ(Ll/ۧۨۡ;)Ll/ۧۨۡ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ۧۨۡ;)Ll/ۧۨۡ;
-    .locals 4
-
-    .line 155
-    invoke-interface {p1}, Ll/ۧۨۡ;->᩸()I
-
-    move-result v0
-
-    const/16 v1, 0x1d
-
-    if-ne v0, v1, :cond_0
-
-    .line 156
-    move-object v0, p1
-
-    check-cast v0, Ll/᩶ۨۡ;
-
-    .line 157
-    iget-object v1, p0, Ll/ܳܽ᩺;->ܰ:Ll/ۜ۫᩺;
-
-    invoke-static {v1}, Ll/ۜ۫᩺;->ܰ(Ll/ۜ۫᩺;)Ll/ᩳ۫᩺;
-
-    move-result-object v2
-
-    invoke-interface {v0}, Ll/᩶ۨۡ;->getType()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ll/ᩳ۫᩺;->ۙ(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 158
-    new-instance p1, Ll/ۙ۫᩺;
-
-    iget-object v2, p0, Ll/ۜ᩹ۡ;->ۙ:Ll/ۨ᩹ۡ;
-
-    invoke-direct {p1, v1, v2, v0}, Ll/ۙ۫᩺;-><init>(Ll/ۜ۫᩺;Ll/ۨ᩹ۡ;Ll/᩶ۨۡ;)V
-
-    return-object p1
-
-    .line 160
     :cond_0
-    invoke-super {p0, p1}, Ll/ۜ᩹ۡ;->ۙ(Ll/ۧۨۡ;)Ll/ۧۨۡ;
+    const-string v0, "org.repackage.com.zui.deviceidservice.IDeviceidInterface"
 
-    move-result-object p1
+    .line 26
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    return-object p1
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 27
+    instance-of v1, v0, Ll/۫ܽ᩺;
+
+    if-eqz v1, :cond_1
+
+    .line 28
+    check-cast v0, Ll/۫ܽ᩺;
+
+    return-object v0
+
+    .line 30
+    :cond_1
+    new-instance v0, Ll/ᩴܽ᩺;
+
+    invoke-direct {v0, p0}, Ll/ᩴܽ᩺;-><init>(Landroid/os/IBinder;)V
+
+    return-object v0
 .end method

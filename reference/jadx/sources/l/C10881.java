@@ -1,48 +1,20 @@
 package l;
 
-import java.util.Iterator;
+/* JADX INFO: renamed from: l.ۤ۫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 690O */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10881 implements InterfaceC23013 {
 
-/* JADX INFO: renamed from: l.ۧ۠᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 89PP */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10881 implements Iterator {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13119 f34431;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Iterator f36992;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C9470 f36993;
-
-    public C10881(C9470 c9470, Iterator it) {
-        this.f36993 = c9470;
-        this.f36992 = it;
+    public C10881(C13119 c13119) {
+        this.f34431 = c13119;
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f36992.hasNext();
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        return this.f36992.next();
-    }
-
-    @Override // java.util.Iterator
-    public final void remove() {
-        this.f36993.m24246();
-        this.f36992.remove();
-    }
-
-    public final boolean equals(Object obj) {
-        return this.f36992.equals(obj);
-    }
-
-    public final int hashCode() {
-        return this.f36992.hashCode();
-    }
-
-    public final String toString() {
-        return this.f36992.toString();
+    @Override // l.InterfaceC23013
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2807(InterfaceC20029 interfaceC20029, AbstractC4534 abstractC4534) {
+        C13119.m32594(this.f34431, interfaceC20029, (C1966) abstractC4534);
     }
 }

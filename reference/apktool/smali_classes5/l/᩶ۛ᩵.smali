@@ -1,43 +1,39 @@
 .class public final Ll/᩶ۛ᩵;
-.super Ll/᩻ܿ᩵;
-.source "A4Y0"
-
-# interfaces
-.implements Ll/ܺۙۡ;
+.super Ljava/lang/Object;
+.source "DA1H"
 
 
 # instance fields
-.field public final ᩶:I
+.field public ֫:I
 
+.field public ۗ:Z
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.field public ۙ:Z
 
-    .line 41
-    invoke-direct {p0}, Ll/᩻ܿ᩵;-><init>()V
+.field public ۚ:Ljava/lang/String;
 
-    .line 42
-    iput p1, p0, Ll/᩶ۛ᩵;->᩶:I
+.field public ۤ:I
 
-    return-void
-.end method
+.field public ۧ:I
 
+.field public ۫:I
 
-# virtual methods
-.method public final getLineNumber()I
-    .locals 1
+.field public ܳ:I
 
-    .line 47
-    iget v0, p0, Ll/᩶ۛ᩵;->᩶:I
+.field public ܶ:I
 
-    return v0
-.end method
+.field public ܺ:J
 
-.method public final ۨ()I
-    .locals 1
+.field public ܽ:I
 
-    const/16 v0, 0xa
+.field public ᩴ:I
 
-    return v0
-.end method
+.field public ᩵:I
+
+.field public ᩷:[B
+
+.field public ᩸:[B
+
+.field public ᩹:Z
+
+.field public ᩻:I

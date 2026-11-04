@@ -1,44 +1,71 @@
-.class public final synthetic Ll/ۡܺ᩹;
+.class public final Ll/ۡܺ᩹;
 .super Ljava/lang/Object;
-.source "Y4ZV"
-
-# interfaces
-.implements Ll/ۤ᩺ۙ;
+.source "81Q9"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ܽܺ᩹;
-
-.field public final synthetic ᩶:Ll/۫᩷᩹;
+# static fields
+.field public static final ۙ:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܽܺ᩹;Ll/۫᩷᩹;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ll/ۡܺ᩹;->ܺ:Ll/ܽܺ᩹;
+    new-array v0, v0, [B
 
-    iput-object p2, p0, Ll/ۡܺ᩹;->᩶:Ll/۫᩷᩹;
+    .line 105
+    sput-object v0, Ll/ۡܺ᩹;->ۙ:[B
 
     return-void
 .end method
 
+.method public static ۙ(II[B)[B
+    .locals 4
 
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 1
+    .line 200
+    array-length v0, p2
 
-    .line 0
-    check-cast p1, Ljava/util/List;
+    if-le p0, v0, :cond_0
 
-    iget-object p1, p0, Ll/ۡܺ᩹;->ܺ:Ll/ܽܺ᩹;
+    .line 201
+    array-length v0, p2
 
-    iget-object v0, p0, Ll/ۡܺ᩹;->᩶:Ll/۫᩷᩹;
+    int-to-long v0, v0
 
-    invoke-static {p1, v0}, Ll/ܽܺ᩹;->ܰ(Ll/ܽܺ᩹;Ll/۫᩷᩹;)V
+    array-length v2, p2
 
-    return-void
+    shr-int/lit8 v2, v2, 0x1
+
+    int-to-long v2, v2
+
+    add-long/2addr v0, v2
+
+    const-wide/32 v2, 0x7ffffff7
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    int-to-long v2, p0
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    long-to-int p0, v0
+
+    .line 202
+    new-array p0, p0, [B
+
+    const/4 v0, 0x0
+
+    .line 203
+    invoke-static {p2, v0, p0, v0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object p0
+
+    :cond_0
+    return-object p2
 .end method

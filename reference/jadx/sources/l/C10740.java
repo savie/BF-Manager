@@ -1,16 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۘۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 61L9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10740 implements InterfaceC5614 {
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14268 f36618;
-
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f36618.m34418();
+/* JADX INFO: renamed from: l.ۤ۠۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8985 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C10740 implements InterfaceC22524 {
+    @Override // l.InterfaceC22524
+    public final AbstractC9843 create() {
+        C20263 c20263 = new C20263(R.string.MT_Protector, R.drawable.MT_Protector);
+        c20263.m25621();
+        return c20263;
     }
 }

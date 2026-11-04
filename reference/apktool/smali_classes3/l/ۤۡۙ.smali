@@ -1,69 +1,29 @@
-.class public final synthetic Ll/ۤۡۙ;
+.class public interface abstract Ll/ۤۡۙ;
 .super Ljava/lang/Object;
-.source "L8SE"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic ֡:Ll/۟ۡۙ;
-
-.field public final synthetic ܺ:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final synthetic ᩶:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/CopyOnWriteArraySet;ILl/۟ۡۙ;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۤۡۙ;->ܺ:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    iput p2, p0, Ll/ۤۡۙ;->᩶:I
-
-    iput-object p3, p0, Ll/ۤۡۙ;->֡:Ll/۟ۡۙ;
-
-    return-void
-.end method
+.source "H8OV"
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public abstract getError()Ll/᩷ۡۙ;
+.end method
 
-    .line 225
-    iget-object v0, p0, Ll/ۤۡۙ;->ܺ:Ljava/util/concurrent/CopyOnWriteArraySet;
+.method public abstract getState()I
+.end method
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+.method public abstract ۙ()Ljava/util/UUID;
+.end method
 
-    move-result-object v0
+.method public abstract ۙ(Ll/۫ۡۙ;)V
+.end method
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+.method public abstract ۙ(Ljava/lang/String;)Z
+.end method
 
-    move-result v1
+.method public abstract ۤ()Ll/ۙܰۙ;
+.end method
 
-    if-eqz v1, :cond_0
+.method public abstract ᩷(Ll/۫ۡۙ;)V
+.end method
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ܺۡۙ;
-
-    .line 226
-    iget v2, p0, Ll/ۤۡۙ;->᩶:I
-
-    iget-object v3, p0, Ll/ۤۡۙ;->֡:Ll/۟ۡۙ;
-
-    invoke-virtual {v1, v2, v3}, Ll/ܺۡۙ;->ۙ(ILl/۟ۡۙ;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+.method public abstract ᩷()Z
 .end method

@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.agreement.ecjpake;
 import java.math.BigInteger;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECSchnorrZKP {
     public final ECPoint V;
     public final BigInteger r;

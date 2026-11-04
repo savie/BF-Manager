@@ -1,6 +1,5 @@
 package org.bouncycastle.internal.asn1.cms;
 
-import l.C18828;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -8,15 +7,16 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CCMParameters extends ASN1Object {
     public int icvLen;
     public byte[] nonce;
 
     public CCMParameters(ASN1Sequence aSN1Sequence) {
-        this.nonce = C18828.m43458(aSN1Sequence, 0);
+        this.nonce = ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 0);
         this.icvLen = aSN1Sequence.size() == 2 ? ASN1Integer.getInstance(aSN1Sequence.getObjectAt(1)).intValueExact() : 12;
     }
 

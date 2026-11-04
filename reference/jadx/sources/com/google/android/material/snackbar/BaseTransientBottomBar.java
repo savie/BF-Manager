@@ -45,19 +45,19 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import l.C0976;
-import l.C12025;
-import l.C15089;
-import l.C15844;
-import l.C22006;
-import l.C2387;
-import l.C2746;
-import l.C5031;
-import l.C7603;
-import l.C8033;
-import l.C8479;
-import l.C9679;
-import l.InterfaceC11754;
+import l.C0597;
+import l.C11642;
+import l.C12388;
+import l.C13645;
+import l.C14625;
+import l.C15578;
+import l.C17609;
+import l.C19835;
+import l.C22666;
+import l.C22687;
+import l.C25276;
+import l.C3977;
+import l.InterfaceC22491;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseTransientBottomBar {
@@ -103,7 +103,7 @@ public abstract class BaseTransientBottomBar {
     public static final TimeInterpolator DEFAULT_ANIMATION_FADE_INTERPOLATOR = AnimationUtils.LINEAR_INTERPOLATOR;
     public static final TimeInterpolator DEFAULT_ANIMATION_SCALE_INTERPOLATOR = AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR;
     public static final boolean USE_OFFSET_API = false;
-    public static final int[] SNACKBAR_STYLE_ATTR = {C2387.f9097};
+    public static final int[] SNACKBAR_STYLE_ATTR = {C11642.f37522};
     public static final String TAG = "BaseTransientBottomBar";
     public static final Handler handler = new Handler(Looper.getMainLooper(), new Handler.Callback() { // from class: com.google.android.material.snackbar.BaseTransientBottomBar.1
         @Override // android.os.Handler.Callback
@@ -217,29 +217,29 @@ public abstract class BaseTransientBottomBar {
             snackbarContentLayout.setMaxInlineActionWidth(snackbarBaseLayout.getMaxInlineActionWidth());
         }
         snackbarBaseLayout.addView(view);
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         snackbarBaseLayout.setAccessibilityLiveRegion(1);
         snackbarBaseLayout.setImportantForAccessibility(1);
         snackbarBaseLayout.setFitsSystemWindows(true);
-        C5031.m13989(snackbarBaseLayout, new InterfaceC11754() { // from class: com.google.android.material.snackbar.BaseTransientBottomBar.3
-            @Override // l.InterfaceC11754
-            public C15844 onApplyWindowInsets(View view2, C15844 c15844) {
-                BaseTransientBottomBar.this.extraBottomMarginWindowInset = c15844.m37670();
-                BaseTransientBottomBar.this.extraLeftMarginWindowInset = c15844.m37683();
-                BaseTransientBottomBar.this.extraRightMarginWindowInset = c15844.m37672();
+        C22666.m51097(snackbarBaseLayout, new InterfaceC22491() { // from class: com.google.android.material.snackbar.BaseTransientBottomBar.3
+            @Override // l.InterfaceC22491
+            public C3977 onApplyWindowInsets(View view2, C3977 c3977) {
+                BaseTransientBottomBar.this.extraBottomMarginWindowInset = c3977.m12825();
+                BaseTransientBottomBar.this.extraLeftMarginWindowInset = c3977.m12822();
+                BaseTransientBottomBar.this.extraRightMarginWindowInset = c3977.m12814();
                 BaseTransientBottomBar.this.updateMargins();
-                return c15844;
+                return c3977;
             }
         });
-        C5031.m13990(snackbarBaseLayout, new C12025() { // from class: com.google.android.material.snackbar.BaseTransientBottomBar.4
-            @Override // l.C12025
-            public void onInitializeAccessibilityNodeInfo(View view2, C22006 c22006) {
-                super.onInitializeAccessibilityNodeInfo(view2, c22006);
-                c22006.m48838(1048576);
-                c22006.m48854(true);
+        C22666.m51098(snackbarBaseLayout, new C22687() { // from class: com.google.android.material.snackbar.BaseTransientBottomBar.4
+            @Override // l.C22687
+            public void onInitializeAccessibilityNodeInfo(View view2, C19835 c19835) {
+                super.onInitializeAccessibilityNodeInfo(view2, c19835);
+                c19835.m45633(1048576);
+                c19835.m45665(true);
             }
 
-            @Override // l.C12025
+            @Override // l.C22687
             public boolean performAccessibilityAction(View view2, int i2, Bundle bundle) {
                 if (i2 == 1048576) {
                     BaseTransientBottomBar.this.dismiss();
@@ -249,12 +249,12 @@ public abstract class BaseTransientBottomBar {
             }
         });
         this.accessibilityManager = (AccessibilityManager) context.getSystemService("accessibility");
-        this.animationSlideDuration = MotionUtils.resolveThemeDuration(context, C2387.f9469, 250);
-        this.animationFadeInDuration = MotionUtils.resolveThemeDuration(context, C2387.f9469, 150);
-        this.animationFadeOutDuration = MotionUtils.resolveThemeDuration(context, C2387.f8821, 75);
-        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8957, DEFAULT_ANIMATION_FADE_INTERPOLATOR);
-        this.animationScaleInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8957, DEFAULT_ANIMATION_SCALE_INTERPOLATOR);
-        this.animationSlideInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8957, DEFAULT_ANIMATION_SLIDE_INTERPOLATOR);
+        this.animationSlideDuration = MotionUtils.resolveThemeDuration(context, C11642.f37310, 250);
+        this.animationFadeInDuration = MotionUtils.resolveThemeDuration(context, C11642.f37310, 150);
+        this.animationFadeOutDuration = MotionUtils.resolveThemeDuration(context, C11642.f36662, 75);
+        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36560, DEFAULT_ANIMATION_FADE_INTERPOLATOR);
+        this.animationScaleInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36560, DEFAULT_ANIMATION_SCALE_INTERPOLATOR);
+        this.animationSlideInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36560, DEFAULT_ANIMATION_SLIDE_INTERPOLATOR);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -288,11 +288,11 @@ public abstract class BaseTransientBottomBar {
 
     private boolean isSwipeDismissable() {
         ViewGroup.LayoutParams layoutParams = this.view.getLayoutParams();
-        return (layoutParams instanceof C9679) && (((C9679) layoutParams).m24630() instanceof SwipeDismissBehavior);
+        return (layoutParams instanceof C15578) && (((C15578) layoutParams).m37307() instanceof SwipeDismissBehavior);
     }
 
     public int getSnackbarBaseLayoutResId() {
-        return hasSnackbarStyleAttr() ? C15089.f49260 : C15089.f49181;
+        return hasSnackbarStyleAttr() ? C12388.f39863 : C12388.f39797;
     }
 
     public boolean hasSnackbarStyleAttr() {
@@ -351,7 +351,7 @@ public abstract class BaseTransientBottomBar {
         if (viewFindViewById != null) {
             return setAnchorView(viewFindViewById);
         }
-        throw new IllegalArgumentException(C8479.m22141(i, "Unable to find anchor view with id: "));
+        throw new IllegalArgumentException(C13645.m33382(i, "Unable to find anchor view with id: "));
     }
 
     public boolean isAnchorViewLayoutListenerEnabled() {
@@ -426,15 +426,15 @@ public abstract class BaseTransientBottomBar {
     public final void showView() {
         if (this.view.getParent() == null) {
             ViewGroup.LayoutParams layoutParams = this.view.getLayoutParams();
-            if (layoutParams instanceof C9679) {
-                setUpBehavior((C9679) layoutParams);
+            if (layoutParams instanceof C15578) {
+                setUpBehavior((C15578) layoutParams);
             }
             this.view.addToTargetParent(this.targetParent);
             recalculateAndUpdateMargins();
             this.view.setVisibility(4);
         }
         SnackbarBaseLayout snackbarBaseLayout = this.view;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         if (snackbarBaseLayout.isLaidOut()) {
             showViewImpl();
         } else {
@@ -487,7 +487,7 @@ public abstract class BaseTransientBottomBar {
         return this.view.getHeight() + iArr[1];
     }
 
-    private void setUpBehavior(C9679 c9679) {
+    private void setUpBehavior(C15578 c15578) {
         SwipeDismissBehavior newBehavior = this.behavior;
         if (newBehavior == null) {
             newBehavior = getNewBehavior();
@@ -513,9 +513,9 @@ public abstract class BaseTransientBottomBar {
                 }
             }
         });
-        c9679.m24624(newBehavior);
+        c15578.m37302(newBehavior);
         if (getAnchorView() == null) {
-            c9679.f32625 = 80;
+            c15578.f50672 = 80;
         }
     }
 
@@ -623,7 +623,7 @@ public abstract class BaseTransientBottomBar {
     public void startSlideInAnimation() {
         int translationYBottom = getTranslationYBottom();
         if (USE_OFFSET_API) {
-            C5031.m14004(translationYBottom, this.view);
+            C22666.m51107(translationYBottom, this.view);
         } else {
             this.view.setTranslationY(translationYBottom);
         }
@@ -655,7 +655,7 @@ public abstract class BaseTransientBottomBar {
             public void onAnimationUpdate(ValueAnimator valueAnimator2) {
                 int iIntValue = ((Integer) valueAnimator2.getAnimatedValue()).intValue();
                 if (BaseTransientBottomBar.USE_OFFSET_API) {
-                    C5031.m14004(iIntValue - this.previousAnimatedIntValue, BaseTransientBottomBar.this.view);
+                    C22666.m51107(iIntValue - this.previousAnimatedIntValue, BaseTransientBottomBar.this.view);
                 } else {
                     BaseTransientBottomBar.this.view.setTranslationY(iIntValue);
                 }
@@ -688,7 +688,7 @@ public abstract class BaseTransientBottomBar {
             public void onAnimationUpdate(ValueAnimator valueAnimator2) {
                 int iIntValue = ((Integer) valueAnimator2.getAnimatedValue()).intValue();
                 if (BaseTransientBottomBar.USE_OFFSET_API) {
-                    C5031.m14004(iIntValue - this.previousAnimatedIntValue, BaseTransientBottomBar.this.view);
+                    C22666.m51107(iIntValue - this.previousAnimatedIntValue, BaseTransientBottomBar.this.view);
                 } else {
                     BaseTransientBottomBar.this.view.setTranslationY(iIntValue);
                 }
@@ -784,26 +784,26 @@ public abstract class BaseTransientBottomBar {
         public SnackbarBaseLayout(Context context, AttributeSet attributeSet) {
             super(MaterialThemeOverlay.wrap(context, attributeSet, 0, 0), attributeSet);
             Context context2 = getContext();
-            TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, C8033.f28082);
-            if (typedArrayObtainStyledAttributes.hasValue(C8033.f27019)) {
-                C5031.m13982(this, typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27019, 0));
+            TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, C14625.f47872);
+            if (typedArrayObtainStyledAttributes.hasValue(C14625.f46967)) {
+                C22666.m51087(this, typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46967, 0));
             }
-            this.animationMode = typedArrayObtainStyledAttributes.getInt(C8033.f27710, 0);
-            if (typedArrayObtainStyledAttributes.hasValue(C8033.f26913) || typedArrayObtainStyledAttributes.hasValue(C8033.f27922)) {
+            this.animationMode = typedArrayObtainStyledAttributes.getInt(C14625.f47233, 0);
+            if (typedArrayObtainStyledAttributes.hasValue(C14625.f47819) || typedArrayObtainStyledAttributes.hasValue(C14625.f46382)) {
                 this.shapeAppearanceModel = ShapeAppearanceModel.builder(context2, attributeSet, 0, 0).build();
             }
-            this.backgroundOverlayColorAlpha = typedArrayObtainStyledAttributes.getFloat(C8033.f27763, 1.0f);
-            setBackgroundTintList(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f26966));
-            setBackgroundTintMode(ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C8033.f27816, -1), PorterDuff.Mode.SRC_IN));
-            this.actionTextColorAlpha = typedArrayObtainStyledAttributes.getFloat(C8033.f27498, 1.0f);
-            this.maxWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27975, -1);
-            this.maxInlineActionWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27125, -1);
+            this.backgroundOverlayColorAlpha = typedArrayObtainStyledAttributes.getFloat(C14625.f47766, 1.0f);
+            setBackgroundTintList(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f46329));
+            setBackgroundTintMode(ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C14625.f47552, -1), PorterDuff.Mode.SRC_IN));
+            this.actionTextColorAlpha = typedArrayObtainStyledAttributes.getFloat(C14625.f47286, 1.0f);
+            this.maxWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f47339, -1);
+            this.maxInlineActionWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46542, -1);
             typedArrayObtainStyledAttributes.recycle();
             setOnTouchListener(consumeAllTouchListener);
             setFocusable(true);
             if (getBackground() == null) {
                 Drawable drawableCreateThemedBackground = createThemedBackground();
-                int i = C5031.f17539;
+                int i = C22666.f73603;
                 setBackground(drawableCreateThemedBackground);
             }
         }
@@ -816,9 +816,9 @@ public abstract class BaseTransientBottomBar {
         @Override // android.view.View
         public void setBackgroundDrawable(Drawable drawable) {
             if (drawable != null && this.backgroundTint != null) {
-                drawable = C7603.m20139(drawable.mutate());
-                C7603.m20129(drawable, this.backgroundTint);
-                C7603.m20132(drawable, this.backgroundTintMode);
+                drawable = C0597.m2697(drawable.mutate());
+                C0597.m2690(drawable, this.backgroundTint);
+                C0597.m2693(drawable, this.backgroundTintMode);
             }
             super.setBackgroundDrawable(drawable);
         }
@@ -827,11 +827,11 @@ public abstract class BaseTransientBottomBar {
         public void setBackgroundTintList(ColorStateList colorStateList) {
             this.backgroundTint = colorStateList;
             if (getBackground() != null) {
-                Drawable drawableM20139 = C7603.m20139(getBackground().mutate());
-                C7603.m20129(drawableM20139, colorStateList);
-                C7603.m20132(drawableM20139, this.backgroundTintMode);
-                if (drawableM20139 != getBackground()) {
-                    super.setBackgroundDrawable(drawableM20139);
+                Drawable drawableM2697 = C0597.m2697(getBackground().mutate());
+                C0597.m2690(drawableM2697, colorStateList);
+                C0597.m2693(drawableM2697, this.backgroundTintMode);
+                if (drawableM2697 != getBackground()) {
+                    super.setBackgroundDrawable(drawableM2697);
                 }
             }
         }
@@ -840,10 +840,10 @@ public abstract class BaseTransientBottomBar {
         public void setBackgroundTintMode(PorterDuff.Mode mode) {
             this.backgroundTintMode = mode;
             if (getBackground() != null) {
-                Drawable drawableM20139 = C7603.m20139(getBackground().mutate());
-                C7603.m20132(drawableM20139, mode);
-                if (drawableM20139 != getBackground()) {
-                    super.setBackgroundDrawable(drawableM20139);
+                Drawable drawableM2697 = C0597.m2697(getBackground().mutate());
+                C0597.m2693(drawableM2697, mode);
+                if (drawableM2697 != getBackground()) {
+                    super.setBackgroundDrawable(drawableM2697);
                 }
             }
         }
@@ -882,7 +882,7 @@ public abstract class BaseTransientBottomBar {
             if (baseTransientBottomBar != null) {
                 baseTransientBottomBar.onAttachedToWindow();
             }
-            C5031.m14002(this);
+            C22666.m51079(this);
         }
 
         @Override // android.view.ViewGroup, android.view.View
@@ -947,15 +947,15 @@ public abstract class BaseTransientBottomBar {
         }
 
         private Drawable createThemedBackground() {
-            int iLayer = MaterialColors.layer(this, C2387.f8699, C2387.f9483, getBackgroundOverlayColorAlpha());
+            int iLayer = MaterialColors.layer(this, C11642.f36968, C11642.f37207, getBackgroundOverlayColorAlpha());
             ShapeAppearanceModel shapeAppearanceModel = this.shapeAppearanceModel;
             Drawable drawableCreateMaterialShapeDrawableBackground = shapeAppearanceModel != null ? BaseTransientBottomBar.createMaterialShapeDrawableBackground(iLayer, shapeAppearanceModel) : BaseTransientBottomBar.createGradientDrawableBackground(iLayer, getResources());
             if (this.backgroundTint != null) {
-                Drawable drawableM20139 = C7603.m20139(drawableCreateMaterialShapeDrawableBackground);
-                C7603.m20129(drawableM20139, this.backgroundTint);
-                return drawableM20139;
+                Drawable drawableM2697 = C0597.m2697(drawableCreateMaterialShapeDrawableBackground);
+                C0597.m2690(drawableM2697, this.backgroundTint);
+                return drawableM2697;
             }
-            return C7603.m20139(drawableCreateMaterialShapeDrawableBackground);
+            return C0597.m2697(drawableCreateMaterialShapeDrawableBackground);
         }
     }
 
@@ -966,7 +966,7 @@ public abstract class BaseTransientBottomBar {
     }
 
     public static GradientDrawable createGradientDrawableBackground(int i, Resources resources) {
-        float dimension = resources.getDimension(C0976.f4558);
+        float dimension = resources.getDimension(C17609.f57629);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setShape(0);
         gradientDrawable.setCornerRadius(dimension);
@@ -987,10 +987,10 @@ public abstract class BaseTransientBottomBar {
             return this.delegate.canSwipeDismissView(view);
         }
 
-        @Override // com.google.android.material.behavior.SwipeDismissBehavior, l.AbstractC23790
-        public boolean onInterceptTouchEvent(C2746 c2746, View view, MotionEvent motionEvent) {
-            this.delegate.onInterceptTouchEvent(c2746, view, motionEvent);
-            return super.onInterceptTouchEvent(c2746, view, motionEvent);
+        @Override // com.google.android.material.behavior.SwipeDismissBehavior, l.AbstractC11103
+        public boolean onInterceptTouchEvent(C25276 c25276, View view, MotionEvent motionEvent) {
+            this.delegate.onInterceptTouchEvent(c25276, view, motionEvent);
+            return super.onInterceptTouchEvent(c25276, view, motionEvent);
         }
     }
 
@@ -1011,10 +1011,10 @@ public abstract class BaseTransientBottomBar {
             return view instanceof SnackbarBaseLayout;
         }
 
-        public void onInterceptTouchEvent(C2746 c2746, View view, MotionEvent motionEvent) {
+        public void onInterceptTouchEvent(C25276 c25276, View view, MotionEvent motionEvent) {
             int actionMasked = motionEvent.getActionMasked();
             if (actionMasked == 0) {
-                if (c2746.isPointInChildBounds(view, (int) motionEvent.getX(), (int) motionEvent.getY())) {
+                if (c25276.isPointInChildBounds(view, (int) motionEvent.getX(), (int) motionEvent.getY())) {
                     SnackbarManager.getInstance().pauseTimeout(this.managerCallback);
                 }
             } else if (actionMasked == 1 || actionMasked == 3) {
@@ -1029,7 +1029,7 @@ public abstract class BaseTransientBottomBar {
 
         public static Anchor anchor(BaseTransientBottomBar baseTransientBottomBar, View view) {
             Anchor anchor = new Anchor(baseTransientBottomBar, view);
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             if (view.isAttachedToWindow()) {
                 ViewUtils.addOnGlobalLayoutListener(view, anchor);
             }

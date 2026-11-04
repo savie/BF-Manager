@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import net.engio.mbassy.bus.MessagePublication;
 import net.engio.mbassy.dispatch.IMessageDispatcher;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Subscription {
     public static final Comparator SubscriptionByPriorityDesc = new Comparator() { // from class: net.engio.mbassy.subscription.Subscription.1
         @Override // java.util.Comparator

@@ -1,26 +1,22 @@
 .class public final Ll/ۚ᩵ۤ;
-.super Ll/ۛ᩵ۤ;
-.source "643O"
+.super Ll/᩷ۨۤ;
+.source "Z6QT"
 
 
 # direct methods
-.method public constructor <init>(JLl/ۧ᩷۟;Ll/ܽۤۤ;Ll/᩻᩵ۤ;)V
-    .locals 8
+.method public constructor <init>()V
+    .locals 1
 
-    const-wide v0, 0x800000000040000L    # 3.78576699595404E-270
+    .line 1718
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
 
-    or-long v3, p1, v0
+    .line 2442
+    new-instance v0, Ll/ۙ᩵ۤ;
 
-    move-object v2, p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-object v5, p3
-
-    move-object v6, p4
-
-    move-object v7, p5
-
-    .line 1877
-    invoke-direct/range {v2 .. v7}, Ll/ۛ᩵ۤ;-><init>(JLl/ۧ᩷۟;Ll/ܽۤۤ;Ll/᩻᩵ۤ;)V
+    .line 1718
+    invoke-direct {p0, v0}, Ll/᩷ۨۤ;-><init>(Ll/ۖ᩵ۤ;)V
 
     return-void
 .end method

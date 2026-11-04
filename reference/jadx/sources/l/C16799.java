@@ -1,48 +1,41 @@
 package l;
 
-import android.text.TextUtils;
+import java.util.Iterator;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ܽᩳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2216 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C16799 {
+/* JADX INFO: renamed from: l.ܺۧܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T5OR */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16799 extends AbstractC4450 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f53786;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Set f54192;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f53787;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Set f54193;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f53788;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final Iterator f54194;
 
-    public C16799(String str, int i, int i2) {
-        this.f53786 = str;
-        this.f53788 = i;
-        this.f53787 = i2;
+    public C16799(Set set, Set set2) {
+        this.f54192 = set;
+        this.f54193 = set2;
+        this.f54194 = set.iterator();
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof C16799)) {
-            return false;
-        }
-        C16799 c16799 = (C16799) obj;
-        int i = c16799.f53787;
-        String str = c16799.f53786;
-        int i2 = c16799.f53788;
-        int i3 = this.f53787;
-        String str2 = this.f53786;
-        int i4 = this.f53788;
-        if (i4 < 0 || i2 < 0) {
-            return TextUtils.equals(str2, str) && i3 == i;
-        }
-        return TextUtils.equals(str2, str) && i4 == i2 && i3 == i;
-    }
-
-    public final int hashCode() {
-        return C13638.hash(this.f53786, Integer.valueOf(this.f53787));
+    @Override // l.AbstractC4450
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo14147() {
+        Object next;
+        do {
+            Iterator it = this.f54194;
+            if (it.hasNext()) {
+                next = it.next();
+            } else {
+                m14148();
+                return null;
+            }
+        } while (!this.f54193.contains(next));
+        return next;
     }
 }

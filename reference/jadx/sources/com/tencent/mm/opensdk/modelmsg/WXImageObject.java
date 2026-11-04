@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
 import java.io.ByteArrayOutputStream;
-import l.C23234;
+import l.C18011;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WXImageObject implements WXMediaMessage.IMediaObject {
@@ -28,7 +28,7 @@ public class WXImageObject implements WXMediaMessage.IMediaObject {
             this.imageData = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("WXImageObject <init>, exception:"), TAG);
+            C18011.m41991(e, new StringBuilder("WXImageObject <init>, exception:"), TAG);
         }
     }
 

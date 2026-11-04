@@ -1,56 +1,72 @@
-.class public final Ll/᩹ۛܶ;
+.class public final synthetic Ll/᩹ۛܶ;
 .super Ljava/lang/Object;
-.source "95IB"
-
-# interfaces
-.implements Ljava/io/Serializable;
+.source "M1ME"
 
 
 # static fields
-.field public static final serialVersionUID:J
-
-
-# instance fields
-.field public final ܺ:Ljava/util/Comparator;
-
-.field public final ᩶:[Ljava/lang/Object;
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Comparator;[Ljava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 782
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 783
-    iput-object p1, p0, Ll/᩹ۛܶ;->ܺ:Ljava/util/Comparator;
-
-    .line 784
-    iput-object p2, p0, Ll/᩹ۛܶ;->᩶:[Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public readResolve()Ljava/lang/Object;
-    .locals 2
-
-    .line 789
-    new-instance v0, Ll/ۚۛܶ;
-
-    iget-object v1, p0, Ll/᩹ۛܶ;->ܺ:Ljava/util/Comparator;
-
-    invoke-direct {v0, v1}, Ll/ۚۛܶ;-><init>(Ljava/util/Comparator;)V
-
-    iget-object v1, p0, Ll/᩹ۛܶ;->᩶:[Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ll/ۚۛܶ;->ܰ([Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Ll/ۚۛܶ;->ۙ()Ll/֨ۛܶ;
+    .line 166
+    invoke-static {}, Ll/ۜۛܶ;->values()[Ll/ۜۛܶ;
 
     move-result-object v0
 
-    return-object v0
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/᩹ۛܶ;->ۙ:[I
+
+    :try_start_0
+    sget-object v1, Ll/ۜۛܶ;->᩶:Ll/ۜۛܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/᩹ۛܶ;->ۙ:[I
+
+    sget-object v1, Ll/ۜۛܶ;->֡:Ll/ۜۛܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/᩹ۛܶ;->ۙ:[I
+
+    sget-object v1, Ll/ۜۛܶ;->ܿ:Ll/ۜۛܶ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    return-void
 .end method

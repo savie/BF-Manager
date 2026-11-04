@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    check-cast v1, Ll/᩹ܿܰ;
+    check-cast v1, Ll/ܿ۟᩷;
 
     .line 64
     iget v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
@@ -165,7 +165,7 @@
     add-float v5, v13, v2
 
     .line 83
-    invoke-static {v3, v4, v5}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v3, v4, v5}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v3
 

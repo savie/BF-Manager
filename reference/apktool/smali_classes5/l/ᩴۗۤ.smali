@@ -1,41 +1,53 @@
 .class public final synthetic Ll/ᩴۗۤ;
 .super Ljava/lang/Object;
-.source "57L9"
+.source "G7I1"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/ۖ᩵ۤ;
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public final negate()Ll/֨ۗۤ;
+    .locals 1
+
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
+
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->ۙ(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final ۙ(I)Z
     .locals 0
 
     .line 0
-    check-cast p1, Ll/ۘۡۤ;
+    invoke-static {p1}, Ljava/lang/Character;->isEmojiModifierBase(I)Z
 
-    invoke-static {p1}, Ll/᩷ۗۤ;->֨(Ll/ۘۡۤ;)Ll/ܽۤۤ;
+    move-result p1
 
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->᩷(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 

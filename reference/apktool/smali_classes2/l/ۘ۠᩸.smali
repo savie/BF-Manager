@@ -1,125 +1,254 @@
 .class public final Ll/ۘ۠᩸;
 .super Ljava/lang/Object;
-.source "19QT"
+.source "X68P"
 
 # interfaces
-.implements Ljava/util/Map$Entry;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public ܺ:Ljava/util/Map$Entry;
+.field public final synthetic ֡:Ll/᩹ܽ᩵;
+
+.field public final synthetic ۟:Ll/ۗۤᩴ;
+
+.field public ۢ:I
+
+.field public ܰ:Ll/᩹ܽ᩵;
+
+.field public final synthetic ܿ:Ll/᩺ۜ᩸;
+
+.field public final synthetic ᩳ:Ll/ܶۜ᩸;
+
+.field public ᩶:Ll/۬ۡ᩸;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public constructor <init>(Ljava/util/Map$Entry;)V
+.method public constructor <init>(Ll/᩺ۜ᩸;Ll/᩹ܽ᩵;Ll/ܶۜ᩸;Ll/ۗۤᩴ;)V
     .locals 0
 
-    .line 71
+    .line 4193
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
-    iput-object p1, p0, Ll/ۘ۠᩸;->ܺ:Ljava/util/Map$Entry;
+    iput-object p1, p0, Ll/ۘ۠᩸;->ܿ:Ll/᩺ۜ᩸;
+
+    iput-object p2, p0, Ll/ۘ۠᩸;->֡:Ll/᩹ܽ᩵;
+
+    iput-object p3, p0, Ll/ۘ۠᩸;->ᩳ:Ll/ܶۜ᩸;
+
+    iput-object p4, p0, Ll/ۘ۠᩸;->۟:Ll/ۗۤᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 7
 
-    .line 77
-    iget-object v0, p0, Ll/ۘ۠᩸;->ܺ:Ljava/util/Map$Entry;
+    .line 4204
+    iget-object v0, p0, Ll/ۘ۠᩸;->ܿ:Ll/᩺ۜ᩸;
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget-object v1, p0, Ll/ۘ۠᩸;->֡:Ll/᩹ܽ᩵;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ll/᩹ܽ᩵;->isDone()Z
 
-    return-object v0
-.end method
+    move-result v2
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+    const/4 v3, 0x0
 
-    .line 82
-    iget-object v0, p0, Ll/ۘ۠᩸;->ܺ:Ljava/util/Map$Entry;
+    const/4 v4, 0x0
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-eqz v2, :cond_1
 
-    move-result-object v0
-
-    check-cast v0, Ll/᩺۠᩸;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 86
-    :cond_0
-    invoke-virtual {v0}, Ll/᩺۠᩸;->ۨ()Ll/᩺᩵᩸;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 95
-    instance-of v0, p1, Ll/᩺᩵᩸;
+    .line 4199
+    iget-object v0, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
 
     if-eqz v0, :cond_0
 
-    .line 100
-    iget-object v0, p0, Ll/ۘ۠᩸;->ܺ:Ljava/util/Map$Entry;
+    invoke-virtual {v0, v3}, Ll/᩹ܽ᩵;->cancel(Z)Z
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll/᩺۠᩸;
-
-    check-cast p1, Ll/᩺᩵᩸;
-
-    invoke-virtual {v0, p1}, Ll/ܶ۠᩸;->ܰ(Ll/᩺᩵᩸;)Ll/᩺᩵᩸;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 96
+    .line 4200
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iput-object v4, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
 
-    const-string v0, "LazyField now only used for MessageSet, and the value of MessageSet must be an instance of MessageLite"
+    return-void
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 4206
+    :cond_1
+    iget-object v2, p0, Ll/ۘ۠᩸;->ᩳ:Ll/ܶۜ᩸;
 
-    throw p1
-.end method
+    if-eqz v2, :cond_8
 
-.method public final ܰ()Ll/᩺۠᩸;
-    .locals 1
+    :try_start_0
+    invoke-static {v0}, Ll/᩺ۜ᩸;->ۧۙ(Ll/᩺ۜ᩸;)Ll/ܶۜ᩸;
 
-    .line 90
-    iget-object v0, p0, Ll/ۘ۠᩸;->ܺ:Ljava/util/Map$Entry;
+    move-result-object v5
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-ne v5, v2, :cond_8
+
+    invoke-static {v0}, Ll/᩺ۜ᩸;->۟(Ll/᩺ۜ᩸;)Ll/ᩳ۬᩸;
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v5, p0, Ll/ۘ۠᩸;->۟:Ll/ۗۤᩴ;
+
+    if-ne v2, v5, :cond_8
+
+    :try_start_1
+    invoke-static {v0}, Ll/᩺ۜ᩸;->ܺ(Ll/᩺ۜ᩸;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 4208
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۜۙ()Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    if-nez v2, :cond_7
+
+    .line 4210
+    iget-object v2, p0, Ll/ۘ۠᩸;->᩶:Ll/۬ۡ᩸;
+
+    iget-object v6, v0, Ll/᩺ۜ᩸;->ۜ᩷:Ll/۬ۡ᩸;
+
+    if-ne v2, v6, :cond_2
+
+    iget v2, p0, Ll/ۘ۠᩸;->ۢ:I
+
+    invoke-virtual {v5}, Ll/ۙܿ᩸;->ۛ᩷()I
+
+    move-result v6
+
+    if-ne v2, v6, :cond_2
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳۤ()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    .line 4199
+    :cond_2
+    iget-object v2, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v3}, Ll/᩹ܽ᩵;->cancel(Z)Z
+
+    .line 4200
+    :cond_3
+    iput-object v4, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    .line 4211
+    :cond_4
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳۤ()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    iget-object v2, v0, Ll/᩺ۜ᩸;->ۜ᩷:Ll/۬ۡ᩸;
+
+    invoke-virtual {v2}, Ll/۬ۡ᩸;->᩵()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    .line 4212
+    iget-object v2, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    if-nez v2, :cond_5
+
+    .line 4213
+    iget-object v2, v0, Ll/᩺ۜ᩸;->ۜ᩷:Ll/۬ۡ᩸;
+
+    iput-object v2, p0, Ll/ۘ۠᩸;->᩶:Ll/۬ۡ᩸;
+
+    .line 4214
+    invoke-virtual {v5}, Ll/ۙܿ᩸;->ۛ᩷()I
+
+    move-result v2
+
+    iput v2, p0, Ll/ۘ۠᩸;->ۢ:I
+
+    .line 4215
+    invoke-virtual {v0, v5}, Ll/᩺ۜ᩸;->ۤ(Ll/ᩳ۬᩸;)Ll/᩹ܽ᩵;
 
     move-result-object v0
 
-    check-cast v0, Ll/᩺۠᩸;
+    iput-object v0, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
 
-    return-object v0
+    .line 4217
+    :cond_5
+    iget-object v0, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    invoke-virtual {v0}, Ll/᩹ܽ᩵;->isDone()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 4218
+    iget-object v0, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    invoke-virtual {v0}, Ll/᩹ܽ᩵;->ᩴ()Ljava/lang/Object;
+
+    .line 4219
+    invoke-virtual {v1, v4}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_6
+    const-wide/16 v5, 0xa
+
+    .line 4223
+    invoke-static {p0, v5, v6}, Ll/᩶᩷ۧ;->ۙ(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    .line 4209
+    :cond_7
+    new-instance v0, Ll/ۗܽ᩵;
+
+    .line 66
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 4209
+    throw v0
+
+    .line 4207
+    :cond_8
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    const-string v2, "Session preparation is no longer active"
+
+    invoke-direct {v0, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    .line 4199
+    iget-object v2, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2, v3}, Ll/᩹ܽ᩵;->cancel(Z)Z
+
+    .line 4200
+    :cond_9
+    iput-object v4, p0, Ll/ۘ۠᩸;->ܰ:Ll/᩹ܽ᩵;
+
+    .line 4226
+    invoke-virtual {v1, v0}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

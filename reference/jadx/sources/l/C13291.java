@@ -1,37 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ᩴۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P6SA */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13291 implements InterfaceC7486 {
+import java.util.Iterator;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f44132;
+/* JADX INFO: renamed from: l.۫ᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5ZF */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13291 implements Iterator {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f42444;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f44133;
+    public final Iterator f42445;
 
-    public /* synthetic */ C13291(int i, Object obj) {
-        this.f44132 = i;
-        this.f44133 = obj;
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    @Override // l.InterfaceC7486
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2142(Object obj, Throwable th) {
-        switch (this.f44132) {
-            case 0:
-                C8352 c8352 = (C8352) this.f44133;
-                c8352.f28945.post(new Runnable() { // from class: l.ۘᩴۖ
-                    @Override // java.lang.Runnable
-                    public final void run() {
-                        C8352.m21863(this.f15078, th);
-                    }
-                });
-                break;
-            default:
-                ((C18292) this.f44133).m42501();
-                break;
+    public C13291(Iterator it) {
+        C15243.m36590(it, "iterator");
+        this.f42445 = it;
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f42445.hasNext();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        int i = this.f42444;
+        this.f42444 = i + 1;
+        if (i >= 0) {
+            return new C20004(i, this.f42445.next());
         }
+        throw new ArithmeticException("Index overflow has happened.");
     }
 }

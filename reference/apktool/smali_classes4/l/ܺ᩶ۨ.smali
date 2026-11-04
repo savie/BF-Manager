@@ -1,35 +1,31 @@
 .class public final Ll/ܺ᩶ۨ;
-.super Ll/᩵ۨ;
-.source "P676"
+.super Ljava/lang/Object;
+.source "18YS"
 
 
 # instance fields
-.field public final synthetic ۖ:Ll/ۘ֡ۨ;
+.field public final ۙ:Z
+
+.field public final ۤ:Ljava/util/ArrayList;
+
+.field public final ᩷:Z
 
 
 # direct methods
-.method public constructor <init>(Ll/ۘ֡ۨ;)V
+.method public constructor <init>(Ljava/util/ArrayList;ZZ)V
     .locals 0
 
-    .line 142
-    iput-object p1, p0, Ll/ܺ᩶ۨ;->ۖ:Ll/ۘ֡ۨ;
+    .line 1093
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
+    .line 1094
+    iput-object p1, p0, Ll/ܺ᩶ۨ;->ۤ:Ljava/util/ArrayList;
 
-    invoke-direct {p0, p1}, Ll/᩵ۨ;-><init>(Z)V
+    .line 1095
+    iput-boolean p2, p0, Ll/ܺ᩶ۨ;->᩷:Z
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ܰ()V
-    .locals 1
-
-    .line 145
-    iget-object v0, p0, Ll/ܺ᩶ۨ;->ۖ:Ll/ۘ֡ۨ;
-
-    invoke-static {v0}, Ll/ۘ֡ۨ;->֨(Ll/ۘ֡ۨ;)V
+    .line 1096
+    iput-boolean p3, p0, Ll/ܺ᩶ۨ;->ۙ:Z
 
     return-void
 .end method

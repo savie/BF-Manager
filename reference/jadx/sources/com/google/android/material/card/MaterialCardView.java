@@ -19,15 +19,15 @@ import com.google.android.material.shape.Shapeable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import l.C10405;
-import l.C15945;
-import l.C18616;
-import l.C22151;
-import l.C2387;
-import l.C8033;
+import l.C0385;
+import l.C11324;
+import l.C11642;
+import l.C14625;
+import l.C4185;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialCardView extends C22151 implements Checkable, Shapeable {
+public class MaterialCardView extends C11324 implements Checkable, Shapeable {
     public static final String ACCESSIBILITY_CLASS_NAME = "androidx.cardview.widget.CardView";
     public static final int CHECKED_ICON_GRAVITY_BOTTOM_END = 8388693;
     public static final int CHECKED_ICON_GRAVITY_BOTTOM_START = 8388691;
@@ -41,8 +41,8 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
     public OnCheckedChangeListener onCheckedChangeListener;
     public static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
     public static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
-    public static final int[] DRAGGED_STATE_SET = {C2387.f9199};
-    public static final int DEF_STYLE_RES = C18616.f60275;
+    public static final int[] DRAGGED_STATE_SET = {C11642.f37180};
+    public static final int DEF_STYLE_RES = C4185.f14956;
 
     @Retention(RetentionPolicy.SOURCE)
     public @interface CheckedIconGravity {
@@ -57,7 +57,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
     }
 
     public MaterialCardView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9559);
+        this(context, attributeSet, C11642.f36948);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -67,7 +67,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         this.checked = false;
         this.dragged = false;
         this.isParentCardViewDoneInitializing = true;
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(getContext(), attributeSet, C8033.f26922, i, i2, new int[0]);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(getContext(), attributeSet, C14625.f46304, i, i2, new int[0]);
         MaterialCardViewHelper materialCardViewHelper = new MaterialCardViewHelper(this, attributeSet, i, i2);
         this.cardViewHelper = materialCardViewHelper;
         materialCardViewHelper.setCardBackgroundColor(super.getCardBackgroundColor());
@@ -92,7 +92,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         accessibilityEvent.setChecked(isChecked());
     }
 
-    @Override // l.C22151, android.widget.FrameLayout, android.view.View
+    @Override // l.C11324, android.widget.FrameLayout, android.view.View
     public void onMeasure(int i, int i2) {
         super.onMeasure(i, i2);
         this.cardViewHelper.recalculateCheckedIconPosition(getMeasuredWidth(), getMeasuredHeight());
@@ -125,13 +125,13 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         return this.cardViewHelper.getStrokeWidth();
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setRadius(float f) {
         super.setRadius(f);
         this.cardViewHelper.setCornerRadius(f);
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public float getRadius() {
         return this.cardViewHelper.getCornerRadius();
     }
@@ -148,7 +148,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         return this.cardViewHelper.getProgress();
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setContentPadding(int i, int i2, int i3, int i4) {
         this.cardViewHelper.setUserContentPadding(i, i2, i3, i4);
     }
@@ -157,37 +157,37 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         super.setContentPadding(i, i2, i3, i4);
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public int getContentPaddingLeft() {
         return this.cardViewHelper.getUserContentPadding().left;
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public int getContentPaddingTop() {
         return this.cardViewHelper.getUserContentPadding().top;
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public int getContentPaddingRight() {
         return this.cardViewHelper.getUserContentPadding().right;
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public int getContentPaddingBottom() {
         return this.cardViewHelper.getUserContentPadding().bottom;
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setCardBackgroundColor(int i) {
         this.cardViewHelper.setCardBackgroundColor(ColorStateList.valueOf(i));
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setCardBackgroundColor(ColorStateList colorStateList) {
         this.cardViewHelper.setCardBackgroundColor(colorStateList);
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public ColorStateList getCardBackgroundColor() {
         return this.cardViewHelper.getCardBackgroundColor();
     }
@@ -216,26 +216,26 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
         MaterialShapeUtils.setParentAbsoluteElevation(this, this.cardViewHelper.getBackground());
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setCardElevation(float f) {
         super.setCardElevation(f);
         this.cardViewHelper.updateElevation();
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setMaxCardElevation(float f) {
         super.setMaxCardElevation(f);
         this.cardViewHelper.updateInsets();
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setUseCompatPadding(boolean z) {
         super.setUseCompatPadding(z);
         this.cardViewHelper.updateInsets();
         this.cardViewHelper.updateContentPadding();
     }
 
-    @Override // l.C22151
+    @Override // l.C11324
     public void setPreventCornerOverlap(boolean z) {
         super.setPreventCornerOverlap(z);
         this.cardViewHelper.updateInsets();
@@ -333,7 +333,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
     }
 
     public void setRippleColorResource(int i) {
-        this.cardViewHelper.setRippleColor(C10405.m26305(getContext(), i));
+        this.cardViewHelper.setRippleColor(C7508.m20564(getContext(), i));
     }
 
     public ColorStateList getRippleColor() {
@@ -345,7 +345,7 @@ public class MaterialCardView extends C22151 implements Checkable, Shapeable {
     }
 
     public void setCheckedIconResource(int i) {
-        this.cardViewHelper.setCheckedIcon(C15945.m37904(getContext(), i));
+        this.cardViewHelper.setCheckedIcon(C0385.m2186(getContext(), i));
     }
 
     public void setCheckedIcon(Drawable drawable) {

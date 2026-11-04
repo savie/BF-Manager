@@ -1,36 +1,52 @@
-.class public final Ll/ۘᩴ᩺;
-.super Ll/۬ᩴ᩺;
-.source "D20P"
+.class public final synthetic Ll/ۘᩴ᩺;
+.super Ljava/lang/Object;
+.source "T7ET"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
 
 
 # instance fields
-.field public final synthetic ۛ:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic ۫:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic ܽ:Ll/ۜᩴ᩺;
-
-.field public final synthetic ܿ:[Ll/ۖ᩷᩺;
+.field public final synthetic ܰ:Ll/ܰᩴ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜᩴ᩺;Ll/ۖ᩷᩺;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicInteger;[Ll/ۖ᩷᩺;)V
+.method public synthetic constructor <init>(Ll/ܰᩴ᩺;)V
     .locals 0
 
-    .line 217
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
-    iput-object p1, p0, Ll/ۘᩴ᩺;->ܽ:Ll/ۜᩴ᩺;
-
-    iput-object p3, p0, Ll/ۘᩴ᩺;->ۛ:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-object p4, p0, Ll/ۘᩴ᩺;->۫:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-object p5, p0, Ll/ۘᩴ᩺;->ܿ:[Ll/ۖ᩷᩺;
-
-    .line 218
-    iput-object p2, p0, Ll/۬ᩴ᩺;->֡:Ll/ۖ᩷᩺;
+    iput-object p1, p0, Ll/ۘᩴ᩺;->ܰ:Ll/ܰᩴ᩺;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    .line 655
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "token="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll/ۘᩴ᩺;->ܰ:Ll/ܰᩴ᩺;
+
+    iget-object v1, v1, Ll/ܰᩴ᩺;->᩷:Ll/᩶ᩴ᩺;
+
+    iget-object v1, v1, Ll/ۗᩴ᩺;->ۤ:Ll/۟ܳ᩺;
+
+    iget-object v1, v1, Ll/۟ܳ᩺;->᩺:Ll/ۙ᩸᩺;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

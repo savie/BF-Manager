@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BERFactory {
     public static final BERSequence EMPTY_SEQUENCE = new BERSequence();
     public static final BERSet EMPTY_SET = new BERSet();

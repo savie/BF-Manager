@@ -1,13 +1,20 @@
 package l;
 
-import java.util.Arrays;
-import java.util.HashSet;
+import bin.mt.json.JSONArray;
 
-/* JADX INFO: renamed from: l.᩷ۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C6YQ */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.᩵ܰۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6XG */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C20607 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final HashSet f67142 = new HashSet(Arrays.asList(C15003.f48930.mo12345()));
+    public final String f66032;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final JSONArray f66033;
+
+    public C20607(JSONArray jSONArray, String str) {
+        this.f66032 = str;
+        this.f66033 = jSONArray;
+    }
 }

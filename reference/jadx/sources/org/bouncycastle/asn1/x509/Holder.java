@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Holder extends ASN1Object {
     public static final int V1_CERTIFICATE_HOLDER = 0;
     public static final int V2_CERTIFICATE_HOLDER = 1;
@@ -22,7 +22,7 @@ public class Holder extends ASN1Object {
     public Holder(ASN1Sequence aSN1Sequence) {
         this.version = 1;
         if (aSN1Sequence.size() > 3) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         for (int i = 0; i != aSN1Sequence.size(); i++) {
             ASN1TaggedObject aSN1TaggedObject = ASN1TaggedObject.getInstance(aSN1Sequence.getObjectAt(i));

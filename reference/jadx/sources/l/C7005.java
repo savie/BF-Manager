@@ -1,75 +1,46 @@
 package l;
 
-import android.text.TextUtils;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۜ᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 84GP */
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: renamed from: l.ۜ۠ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: HIWU */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C7005 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f23569 = 0;
+    public static void m19327(final InterfaceC13673 interfaceC13673, C24927 c24927) {
+        try {
+            if (interfaceC13673.mo22644(c24927)) {
+                C4937.forEach(c24927.m55534(), new Consumer() { // from class: l.۠۠ۗ
+                    public /* synthetic */ Consumer andThen(Consumer consumer) {
+                        return C12312.$default$andThen(this, consumer);
+                    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f23570 = Pattern.compile("bytes (\\d+)-(\\d+)/(?:\\d+|\\*)");
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f23571 = Pattern.compile("bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)");
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m18810(String str) {
-        if (TextUtils.isEmpty(str)) {
-            return -1L;
+                    @Override // java.util.function.Consumer
+                    /* JADX INFO: renamed from: accept */
+                    public final void n(Object obj) {
+                        C7005.m19327(interfaceC13673, (C24927) obj);
+                    }
+                });
+                C4937.forEach(c24927.getMethods(), new C15713(2, interfaceC13673));
+            }
+        } catch (BootstrapMethodError | Exception | StackOverflowError e) {
+            String str = e.getClass().getSimpleName() + " in pass: " + interfaceC13673.getClass().getSimpleName();
+            c24927.getClass();
+            C23977.m53506(c24927, str, e);
         }
-        Matcher matcher = f23571.matcher(str);
-        if (!matcher.matches()) {
-            return -1L;
-        }
-        String strGroup = matcher.group(1);
-        strGroup.getClass();
-        return Long.parseLong(strGroup);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m18811(String str, String str2) {
-        long j;
-        if (TextUtils.isEmpty(str)) {
-            j = -1;
-        } else {
-            try {
-                j = Long.parseLong(str);
-            } catch (NumberFormatException unused) {
-                C0303.m1853("Unexpected Content-Length [" + str + "]");
-                j = -1;
-            }
-        }
-        if (TextUtils.isEmpty(str2)) {
-            return j;
-        }
-        Matcher matcher = f23570.matcher(str2);
-        if (!matcher.matches()) {
-            return j;
-        }
+    public static void m19326(InterfaceC13673 interfaceC13673, C2551 c2551) {
         try {
-            String strGroup = matcher.group(2);
-            strGroup.getClass();
-            long j2 = Long.parseLong(strGroup);
-            String strGroup2 = matcher.group(1);
-            strGroup2.getClass();
-            long j3 = (j2 - Long.parseLong(strGroup2)) + 1;
-            if (j < 0) {
-                return j3;
+            if (c2551.mo17867(C11457.f36007)) {
+                return;
             }
-            if (j == j3) {
-                return j;
-            }
-            C0303.m1848("Inconsistent headers [" + str + "] [" + str2 + "]");
-            return Math.max(j, j3);
-        } catch (NumberFormatException unused2) {
-            C0303.m1853("Unexpected Content-Range [" + str2 + "]");
-            return j;
+            interfaceC13673.mo1737(c2551);
+        } catch (BootstrapMethodError | Exception | StackOverflowError e) {
+            String str = e.getClass().getSimpleName() + " in pass: " + interfaceC13673.getClass().getSimpleName();
+            c2551.getClass();
+            C23977.m53506(c2551, str, e);
         }
     }
 }

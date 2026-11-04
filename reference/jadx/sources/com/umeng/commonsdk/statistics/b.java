@@ -39,7 +39,7 @@ public class b {
     public static Map j;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static boolean f77951l;
+    public static boolean f82067l;
     public int k = 0;
 
     static {
@@ -105,7 +105,7 @@ public class b {
         j.put(d.i, "#vt");
         j.put("secret", "#sec");
         j.put(d.ah, "#prv");
-        j.put(d.f77932l, "#$prv");
+        j.put(d.f82048l, "#$prv");
         j.put(d.m, "#uda");
         j.put(am.a, "#tok");
         j.put(am.aN, "#iv");
@@ -484,7 +484,7 @@ public class b {
         if (iIntValue == 1) {
             return Envelope.genEncryptEnvelope(context, UMUtils.getAppkey(context), bArr);
         }
-        if (f77951l) {
+        if (f82067l) {
             return Envelope.genEncryptEnvelope(context, UMUtils.getAppkey(context), bArr);
         }
         return Envelope.genEnvelope(context, UMUtils.getAppkey(context), bArr);
@@ -524,6 +524,6 @@ public class b {
     }
 
     public static void a(boolean z) {
-        f77951l = z;
+        f82067l = z;
     }
 }

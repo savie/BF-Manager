@@ -8,7 +8,7 @@ import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 import net.engio.mbassy.bus.error.PublicationError;
 import net.engio.mbassy.listener.MessageHandler;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SubscriptionContext implements RuntimeProvider {
     public final Collection errorHandlers;
     public final MessageHandler handler;

@@ -24,13 +24,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ܺۢ;
+.method public onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ۘۜ;
     .locals 3
 
     const/4 v0, 0x7
 
     .line 207
-    invoke-virtual {p2, v0}, Ll/ܺۢ;->ۙ(I)Ll/ܰܿ;
+    invoke-virtual {p2, v0}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
     .line 209
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->top:I
 
-    iget v2, v0, Ll/ܰܿ;->ۖ:I
+    iget v2, v0, Ll/۫ᩳ;->᩸:I
 
     add-int/2addr v1, v2
 
@@ -73,7 +73,7 @@
     .line 212
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    iget v2, v0, Ll/ܰܿ;->ۙ:I
+    iget v2, v0, Ll/۫ᩳ;->ۙ:I
 
     add-int/2addr v1, v2
 
@@ -103,12 +103,12 @@
 
     if-eqz v2, :cond_2
 
-    iget v0, v0, Ll/ܰܿ;->ۨ:I
+    iget v0, v0, Ll/۫ᩳ;->ۤ:I
 
     goto :goto_0
 
     :cond_2
-    iget v0, v0, Ll/ܰܿ;->ܰ:I
+    iget v0, v0, Ll/۫ᩳ;->᩷:I
 
     :goto_0
     add-int/2addr v1, v0

@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.paddings;
 
 import java.security.SecureRandom;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TBCPadding implements BlockCipherPadding {
     @Override // org.bouncycastle.crypto.paddings.BlockCipherPadding
     public int addPadding(byte[] bArr, int i) {

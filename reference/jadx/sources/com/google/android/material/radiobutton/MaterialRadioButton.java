@@ -9,15 +9,15 @@ import com.google.android.material.color.MaterialColors;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import l.C11468;
-import l.C18616;
-import l.C2387;
-import l.C4241;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C25386;
+import l.C4185;
+import l.C4661;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialRadioButton extends C4241 {
-    public static final int DEF_STYLE_RES = C18616.f59845;
+public class MaterialRadioButton extends C25386 {
+    public static final int DEF_STYLE_RES = C4185.f14526;
     public static final int[][] ENABLED_CHECKED_STATES = {new int[]{R.attr.state_enabled, R.attr.state_checked}, new int[]{R.attr.state_enabled, -16842912}, new int[]{-16842910, R.attr.state_checked}, new int[]{-16842910, -16842912}};
     public ColorStateList materialThemeColorsTintList;
     public boolean useMaterialThemeColors;
@@ -27,7 +27,7 @@ public class MaterialRadioButton extends C4241 {
     }
 
     public MaterialRadioButton(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8479);
+        this(context, attributeSet, C11642.f37088);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -35,18 +35,18 @@ public class MaterialRadioButton extends C4241 {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         Context context2 = getContext();
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f27776, i, i2, new int[0]);
-        if (typedArrayObtainStyledAttributes.hasValue(C8033.f26979)) {
-            C11468.m28656(this, MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f26979));
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f47510, i, i2, new int[0]);
+        if (typedArrayObtainStyledAttributes.hasValue(C14625.f46925)) {
+            C4661.m14519(this, MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f46925));
         }
-        this.useMaterialThemeColors = typedArrayObtainStyledAttributes.getBoolean(C8033.f27085, false);
+        this.useMaterialThemeColors = typedArrayObtainStyledAttributes.getBoolean(C14625.f46500, false);
         typedArrayObtainStyledAttributes.recycle();
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.useMaterialThemeColors && C11468.m28653(this) == null) {
+        if (this.useMaterialThemeColors && C4661.m14516(this) == null) {
             setUseMaterialThemeColors(true);
         }
     }
@@ -54,9 +54,9 @@ public class MaterialRadioButton extends C4241 {
     public void setUseMaterialThemeColors(boolean z) {
         this.useMaterialThemeColors = z;
         if (z) {
-            C11468.m28656(this, getMaterialThemeColorsTintList());
+            C4661.m14519(this, getMaterialThemeColorsTintList());
         } else {
-            C11468.m28656(this, (ColorStateList) null);
+            C4661.m14519(this, (ColorStateList) null);
         }
     }
 
@@ -66,9 +66,9 @@ public class MaterialRadioButton extends C4241 {
 
     private ColorStateList getMaterialThemeColorsTintList() {
         if (this.materialThemeColorsTintList == null) {
-            int color = MaterialColors.getColor(this, C2387.f9444);
-            int color2 = MaterialColors.getColor(this, C2387.f9483);
-            int color3 = MaterialColors.getColor(this, C2387.f8699);
+            int color = MaterialColors.getColor(this, C11642.f36697);
+            int color2 = MaterialColors.getColor(this, C11642.f37207);
+            int color3 = MaterialColors.getColor(this, C11642.f36968);
             int[][] iArr = ENABLED_CHECKED_STATES;
             int[] iArr2 = new int[iArr.length];
             iArr2[0] = MaterialColors.layer(color3, color, 1.0f);

@@ -1,133 +1,223 @@
 package l;
 
-import java.nio.ByteBuffer;
-import org.bouncycastle.crypto.digests.Blake2xsDigest;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۛۤ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y3NK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6003 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC0358 f20400;
+/* JADX INFO: renamed from: l.ۚ᩻ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44P2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6003 implements InterfaceC18681 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m16286(int i) {
-        if (i > -12) {
-            return -1;
+    public int f20536;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C9354 f20540;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public ArrayList f20538 = new ArrayList(100);
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f20539 = -1;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f20537 = -1;
+
+    @Override // l.InterfaceC17189
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo17444() {
+        if (this.f20539 == -1) {
+            m17438();
         }
+        int i = this.f20539 + 1;
+        this.f20539 = i;
+        m17443(i);
+        while (((InterfaceC21665) this.f20538.get(this.f20539)).mo33103() != 0) {
+            int i2 = this.f20539 + 1;
+            this.f20539 = i2;
+            m17443(i2);
+        }
+    }
+
+    public C6003(C9354 c9354) {
+        this.f20540 = c9354;
+    }
+
+    @Override // l.InterfaceC17189
+    public final int index() {
+        return this.f20539;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int m17440() {
+        if (this.f20539 == -1) {
+            m17438();
+        }
+        int i = this.f20539;
+        this.f20536 = i;
         return i;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m16295(int i, int i2) {
-        if (i > -12 || i2 > -65) {
-            return -1;
+    @Override // l.InterfaceC18681
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC21665 mo17439(int i) {
+        if (this.f20539 == -1) {
+            m17438();
         }
-        return i ^ (i2 << 8);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m16296(int i, int i2, int i3) {
-        if (i > -12 || i2 > -65 || i3 > -65) {
-            return -1;
+        if (i == 0) {
+            return null;
         }
-        return (i ^ (i2 << 8)) ^ (i3 << 16);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m16293(byte[] bArr) {
-        return f20400.mo2071(0, bArr, 0, bArr.length) == 0;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m16290(int i, int i2, byte[] bArr) {
-        byte b = bArr[i - 1];
-        int i3 = i2 - i;
-        if (i3 == 0) {
-            if (b > -12) {
-                return -1;
+        ArrayList arrayList = this.f20538;
+        int i2 = 1;
+        if (i >= 0) {
+            int i3 = this.f20539;
+            while (i2 < i) {
+                i3++;
+                m17443(i3);
+                while (((InterfaceC21665) arrayList.get(i3)).mo33103() != 0) {
+                    i3++;
+                    m17443(i3);
+                }
+                i2++;
             }
-            return b;
+            if (i3 > this.f20537) {
+                this.f20537 = i3;
+            }
+            return (InterfaceC21665) arrayList.get(i3);
         }
-        if (i3 == 1) {
-            return m16295(b, bArr[i]);
+        int i4 = -i;
+        if (i4 == 0) {
+            return null;
         }
-        if (i3 == 2) {
-            return m16296(b, bArr[i], bArr[i + 1]);
+        int i5 = this.f20539;
+        if (i5 - i4 < 0) {
+            return null;
         }
-        throw new AssertionError();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m16291(String str) {
-        int length = str.length();
-        int i = 0;
-        int i2 = 0;
-        while (i2 < length && str.charAt(i2) < 128) {
+        while (i2 <= i4) {
+            do {
+                i5--;
+                if (i5 < 0) {
+                    break;
+                }
+            } while (((InterfaceC21665) arrayList.get(i5)).mo33103() != 0);
             i2++;
         }
-        int i3 = length;
-        while (i2 < length) {
-            char cCharAt = str.charAt(i2);
-            if (cCharAt >= 2048) {
-                int length2 = str.length();
-                while (i2 < length2) {
-                    char cCharAt2 = str.charAt(i2);
-                    if (cCharAt2 < 2048) {
-                        i += (127 - cCharAt2) >>> 31;
-                    } else {
-                        i += 2;
-                        if (55296 <= cCharAt2 && cCharAt2 <= 57343) {
-                            if (Character.codePointAt(str, i2) < 65536) {
-                                throw new C12354(i2, length2);
-                            }
-                            i2++;
-                        }
-                    }
-                    i2++;
+        if (i5 < 0) {
+            return null;
+        }
+        return (InterfaceC21665) arrayList.get(i5);
+    }
+
+    @Override // l.InterfaceC17189
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final void mo17441() {
+        this.f20539 = this.f20536;
+    }
+
+    @Override // l.InterfaceC17189
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo17437(int i) {
+        this.f20539 = i;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m17445(int i) {
+        this.f20539 = i;
+    }
+
+    @Override // l.InterfaceC17189
+    public final int size() {
+        return this.f20538.size();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m17443(int i) {
+        ArrayList arrayList = this.f20538;
+        int size = (i - arrayList.size()) + 1;
+        if (size > 0) {
+            for (int i2 = 1; i2 <= size; i2++) {
+                C13460 c13460M24669 = this.f20540.m24669();
+                c13460M24669.f42851 = arrayList.size();
+                arrayList.add(c13460M24669);
+                if (c13460M24669.f42848 == -1) {
+                    return;
                 }
-                i3 += i;
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void m17438() {
+        int i = 0;
+        this.f20539 = 0;
+        m17443(0);
+        while (((InterfaceC21665) this.f20538.get(i)).mo33103() != 0) {
+            i++;
+            m17443(i);
+        }
+        this.f20539 = i;
+    }
+
+    @Override // l.InterfaceC17189
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo9833(int i) {
+        return mo17439(i).getType();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String m17442() {
+        return this.f20540.m24664();
+    }
+
+    public final String toString() {
+        if (this.f20539 == -1) {
+            m17438();
+        }
+        if (this.f20539 == -1) {
+            m17438();
+        }
+        int i = this.f20539;
+        ArrayList arrayList = this.f20538;
+        if (((InterfaceC21665) arrayList.get(i)).getType() != -1) {
+            int i2 = this.f20539 + 1;
+            m17443(i2);
+            while (((InterfaceC21665) arrayList.get(i2)).getType() != -1) {
+                i2++;
+                m17443(i2);
+            }
+        }
+        return mo17435(0, arrayList.size() - 1);
+    }
+
+    @Override // l.InterfaceC18681
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String mo17435(int i, int i2) {
+        if (i < 0 || i2 < 0) {
+            return null;
+        }
+        if (this.f20539 == -1) {
+            m17438();
+        }
+        ArrayList arrayList = this.f20538;
+        if (i2 >= arrayList.size()) {
+            i2 = arrayList.size() - 1;
+        }
+        StringBuilder sb = new StringBuilder();
+        while (i <= i2) {
+            InterfaceC21665 interfaceC21665 = (InterfaceC21665) arrayList.get(i);
+            if (interfaceC21665.getType() == -1) {
                 break;
             }
-            i3 += (127 - cCharAt) >>> 31;
-            i2++;
+            sb.append(interfaceC21665.getText());
+            i++;
         }
-        if (i3 >= length) {
-            return i3;
-        }
-        throw new IllegalArgumentException("UTF-8 length does not fit in int: " + (((long) i3) + Blake2xsDigest.MAX_NUMBER_BLOCKS));
+        return sb.toString();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m16289(int i, int i2, String str, byte[] bArr) {
-        return f20400.mo2070(i, i2, str, bArr);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m16292(ByteBuffer byteBuffer, int i, int i2) {
-        AbstractC0358 abstractC0358 = f20400;
-        abstractC0358.getClass();
-        if (byteBuffer.hasArray()) {
-            return abstractC0358.mo2072(byteBuffer.arrayOffset() + i, i2, byteBuffer.array());
+    public final String m17436(InterfaceC21665 interfaceC21665, InterfaceC21665 interfaceC21666) {
+        if (interfaceC21665 == null || interfaceC21666 == null) {
+            return null;
         }
-        if (byteBuffer.isDirect()) {
-            return abstractC0358.mo2073(byteBuffer, i, i2);
-        }
-        return AbstractC0358.m2069(byteBuffer, i, i2);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m16297(int i, int i2, byte[] bArr) {
-        return f20400.mo2072(i, i2, bArr);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m16294(int i, int i2, byte[] bArr) {
-        return f20400.mo2071(0, bArr, i, i2) == 0;
-    }
-
-    static {
-        f20400 = (C15882.m37762() && C15882.m37783() && !C19491.m44546()) ? new C17292() : new C16587();
+        return mo17435(interfaceC21665.mo33100(), interfaceC21666.mo33100());
     }
 }

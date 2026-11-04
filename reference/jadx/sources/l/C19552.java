@@ -1,48 +1,115 @@
 package l;
 
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.ColorFilter;
+import android.graphics.Matrix;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+import bin.mt.plugin.api.ui.PluginImageView;
 
-/* JADX INFO: renamed from: l.᩵ܶ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: J540 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19552 implements Serializable {
-    public static final long serialVersionUID = -8017692739988399978L;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C16212 f62831 = new C16212();
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C20963 f62832;
-
-    public C19552(C20963 c20963) {
-        this.f62832 = c20963;
+/* JADX INFO: renamed from: l.ᩴۘ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7IB */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19552 extends C6128 implements PluginImageView {
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final Drawable getImageDrawable() {
+        return ((ImageView) this.f20900).getDrawable();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44642() {
-        C16212 c16212 = this.f62831;
-        if (c16212.isEmpty()) {
-            return;
-        }
-        C0356.forEach(c16212, new C8263(0, new C18140(this.f62832)));
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImage(Drawable drawable) {
+        ((ImageView) this.f20900).setImageDrawable(drawable);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m44643() {
-        C16212 c16212 = this.f62831;
-        if (c16212.isEmpty()) {
-            return;
-        }
-        C0356.forEach(c16212, new C5735(1, new C18140(this.f62832)));
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImage(Bitmap bitmap) {
+        ((ImageView) this.f20900).setImageBitmap(bitmap);
     }
 
-    private void readObject(ObjectInputStream objectInputStream) {
-        throw new UnsupportedOperationException("Serialization is not supported");
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final ColorStateList getImageTintList() {
+        return ((ImageView) this.f20900).getImageTintList();
     }
 
-    private void writeObject(ObjectOutputStream objectOutputStream) {
-        throw new UnsupportedOperationException("Serialization is not supported");
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImageTintList(ColorStateList colorStateList) {
+        ((ImageView) this.f20900).setImageTintList(colorStateList);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final PorterDuff.Mode getImageTintMode() {
+        return ((ImageView) this.f20900).getImageTintMode();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImageTintMode(PorterDuff.Mode mode) {
+        ((ImageView) this.f20900).setImageTintMode(mode);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final ImageView.ScaleType getScaleType() {
+        return ((ImageView) this.f20900).getScaleType();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setScaleType(ImageView.ScaleType scaleType) {
+        ((ImageView) this.f20900).setScaleType(scaleType);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final Matrix getImageMatrix() {
+        return ((ImageView) this.f20900).getImageMatrix();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImageMatrix(Matrix matrix) {
+        ((ImageView) this.f20900).setImageMatrix(matrix);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final boolean getCropToPadding() {
+        return ((ImageView) this.f20900).getCropToPadding();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setCropToPadding(boolean z) {
+        ((ImageView) this.f20900).setCropToPadding(z);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final ColorFilter getColorFilter() {
+        return ((ImageView) this.f20900).getColorFilter();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setColorFilter(int i, PorterDuff.Mode mode) {
+        ((ImageView) this.f20900).setColorFilter(i, mode);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setColorFilter(int i) {
+        ((ImageView) this.f20900).setColorFilter(i);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setColorFilter(ColorFilter colorFilter) {
+        ((ImageView) this.f20900).setColorFilter(colorFilter);
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void clearColorFilter() {
+        ((ImageView) this.f20900).clearColorFilter();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final int getImageAlpha() {
+        return ((ImageView) this.f20900).getImageAlpha();
+    }
+
+    @Override // bin.mt.plugin.api.ui.PluginImageView
+    public final void setImageAlpha(int i) {
+        ((ImageView) this.f20900).setImageAlpha(i);
     }
 }

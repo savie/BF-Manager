@@ -1,34 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: L6Y6 */
+import java.io.File;
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.᩷᩹ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6F5 */
 /* JADX INFO: loaded from: classes.dex */
 public final class C22369 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Long f73043;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f73044;
+    public final File f72419;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f73045;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f72420;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f73046;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f72421;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f73047;
+    public C22369(String str) throws IOException {
+        if (str == null) {
+            throw new IOException("Missing APK path");
+        }
+        File file = new File(str);
+        this.f72419 = file;
+        if (!file.isFile()) {
+            throw new IOException("APK is unavailable: ".concat(str));
+        }
+        this.f72421 = file.length();
+        this.f72420 = file.lastModified();
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f73048;
+    public final boolean equals(Object obj) {
+        if (obj instanceof C22369) {
+            C22369 c22369 = (C22369) obj;
+            if (this.f72419.equals(c22369.f72419) && this.f72421 == c22369.f72421 && this.f72420 == c22369.f72420) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    public C22369(String str, String str2, Long l2, String str3, String str4, String str5) {
-        this.f73046 = str;
-        this.f73048 = str2;
-        this.f73043 = l2;
-        this.f73047 = str3;
-        this.f73044 = str4;
-        this.f73045 = str5;
+    public final int hashCode() {
+        return C17359.hash(this.f72419, Long.valueOf(this.f72421), Long.valueOf(this.f72420));
     }
 }

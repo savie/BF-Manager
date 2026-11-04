@@ -1,32 +1,66 @@
 .class public final Ll/֡۫;
 .super Ljava/lang/Object;
-.source "Z4TG"
+.source "C4UM"
+
+# interfaces
+.implements Landroid/text/method/TransformationMethod;
+
+
+# instance fields
+.field public ܰ:Ljava/util/Locale;
 
 
 # direct methods
-.method public static ۙ(Landroid/content/res/Resources$Theme;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    .line 739
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 36
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1d
+    .line 37
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-lt v0, v1, :cond_0
+    move-result-object p1
 
-    .line 740
-    invoke-static {p0}, Ll/᩶۫;->ۙ(Landroid/content/res/Resources$Theme;)V
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    iput-object p1, p0, Ll/֡۫;->ܰ:Ljava/util/Locale;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 42
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Ll/֡۫;->ܰ:Ljava/util/Locale;
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    const/16 v1, 0x17
+    const/4 p1, 0x0
 
-    if-lt v0, v1, :cond_1
+    return-object p1
+.end method
 
-    .line 742
-    invoke-static {p0}, Ll/ܺ۫;->ۙ(Landroid/content/res/Resources$Theme;)V
+.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    .locals 0
 
-    :cond_1
     return-void
 .end method

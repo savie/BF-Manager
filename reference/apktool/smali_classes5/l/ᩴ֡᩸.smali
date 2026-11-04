@@ -1,29 +1,30 @@
-.class public abstract Ll/ᩴ֡᩸;
-.super Ll/۟֡᩸;
-.source "N65V"
+.class public interface abstract Ll/ᩴ֡᩸;
+.super Ljava/lang/Object;
+.source "RB2O"
+
+
+# static fields
+.field public static final ۙ:Ll/ᩴ֡᩸;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۤ֡᩸;)V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 48
-    sget-object v0, Ll/᩵᩶᩸;->᩶:Ll/᩵᩶᩸;
+    .line 10
+    new-instance v0, Ll/᩸֡᩸;
 
-    invoke-direct {p0, p1, v0}, Ll/۟֡᩸;-><init>(Ll/ۤ֡᩸;Ll/᩵᩶᩸;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ll/ᩴ֡᩸;->ۙ:Ll/ᩴ֡᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+.method public abstract ۙ(Ll/᩷ۨᩴ;)Ljava/lang/String;
+.end method
 
-    .line 45
-    invoke-super {p0}, Ll/۟֡᩸;->clone()Ll/۟֡᩸;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract ۙ(Ljava/lang/String;)Ll/᩷ۨᩴ;
 .end method

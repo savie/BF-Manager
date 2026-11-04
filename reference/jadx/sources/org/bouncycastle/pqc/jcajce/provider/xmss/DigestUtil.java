@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.jcajce.provider.xmss;
 
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -86,7 +86,7 @@ public class DigestUtil {
         if (aSN1ObjectIdentifier.equals((ASN1Primitive) NISTObjectIdentifiers.id_shake256)) {
             return new SHAKEDigest(256);
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest OID: ", aSN1ObjectIdentifier));
     }
 
     public static String getXMSSDigestName(ASN1ObjectIdentifier aSN1ObjectIdentifier) {
@@ -102,6 +102,6 @@ public class DigestUtil {
         if (aSN1ObjectIdentifier.equals((ASN1Primitive) NISTObjectIdentifiers.id_shake256)) {
             return "SHAKE256";
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest OID: ", aSN1ObjectIdentifier));
     }
 }

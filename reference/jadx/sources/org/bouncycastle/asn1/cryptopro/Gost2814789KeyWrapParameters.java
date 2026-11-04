@@ -1,7 +1,6 @@
 package org.bouncycastle.asn1.cryptopro;
 
-import l.C18828;
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -9,9 +8,10 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Gost2814789KeyWrapParameters extends ASN1Object {
     public final ASN1ObjectIdentifier encryptionParamSet;
     public final byte[] ukm;
@@ -28,10 +28,10 @@ public class Gost2814789KeyWrapParameters extends ASN1Object {
     public Gost2814789KeyWrapParameters(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() == 2) {
             this.encryptionParamSet = ASN1ObjectIdentifier.getInstance(aSN1Sequence.getObjectAt(0));
-            this.ukm = C18828.m43458(aSN1Sequence, 1);
+            this.ukm = ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 1);
         } else {
             if (aSN1Sequence.size() != 1) {
-                throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("unknown sequence length: ")));
+                throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("unknown sequence length: ")));
             }
             this.encryptionParamSet = ASN1ObjectIdentifier.getInstance(aSN1Sequence.getObjectAt(0));
             this.ukm = null;

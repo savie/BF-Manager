@@ -1,83 +1,58 @@
-.class public final synthetic Ll/᩶ܳۤ;
+.class public final Ll/᩶ܳۤ;
 .super Ljava/lang/Object;
-.source "Y7SB"
+.source "Q1EU"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
-
-
-# instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, Ll/᩶ܳۤ;->ܺ:I
-
-    iput-object p2, p0, Ll/᩶ܳۤ;->᩶:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ll/ۛܳۤ;
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final ۙ(Ll/۫ᩴۤ;Ll/ۨܳۤ;Ll/֫ܶۤ;)V
+    .locals 2
 
-    .line 2
-    iget v0, p0, Ll/᩶ܳۤ;->ܺ:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 7
-    iget-object v0, p0, Ll/᩶ܳۤ;->᩶:Ljava/lang/Object;
-
-    .line 9
-    check-cast v0, Ll/֡ۢۤ;
+    const/4 p2, 0x0
 
     .line 11
-    check-cast p1, Ll/᩶۠۟;
+    invoke-virtual {p1, p2}, Ll/۫ᩴۤ;->᩷(Z)V
 
-    .line 14
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "explicit"
 
-    .line 784
-    invoke-virtual {p1, v0}, Ll/ۡۡ۟;->ۙ(Ll/᩵ۡ۟;)V
+    .line 12
+    invoke-virtual {p3, v0}, Ll/֫ܶۤ;->ۙ(Ljava/lang/String;)Ll/ۚܶۤ;
+
+    move-result-object p3
+
+    const/4 v0, -0x1
+
+    if-eqz p3, :cond_0
+
+    .line 13
+    invoke-virtual {p3}, Ll/ۚܶۤ;->᩷()Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string v1, "true"
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    const-string p2, ""
+
+    const/4 p3, 0x0
+
+    .line 108
+    invoke-virtual {p1, p2, p3, v0}, Ll/۫ᩴۤ;->ۙ(Ljava/lang/String;[Ll/᩻۫ۤ;I)Ll/ۗᩴۤ;
 
     return-void
 
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/᩶ܳۤ;->᩶:Ljava/lang/Object;
+    :cond_0
+    const/16 p3, 0x12
 
-    check-cast v0, Ll/᩻᩵ۤ;
-
-    check-cast p1, Ll/᩸᩷۟;
-
-    invoke-virtual {v0, p1}, Ll/᩻᩵ۤ;->֨(Ll/᩸᩷۟;)V
+    .line 98
+    invoke-virtual {p1, p2, p3, v0}, Ll/۫ᩴۤ;->ۙ(III)Ll/ۗᩴۤ;
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
 .end method

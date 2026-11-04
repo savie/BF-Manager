@@ -1,47 +1,28 @@
 package l;
 
-import android.view.View;
-import android.view.ViewGroup;
-
-/* JADX INFO: renamed from: l.ۙܿܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6A7 */
+/* JADX INFO: renamed from: l.ۙۡۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L73O */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4792 implements InterfaceC15046 {
+public final class C4792 implements InterfaceC15670 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC5498 f16848;
-
-    public C4792(AbstractC5498 abstractC5498) {
-        this.f16848 = abstractC5498;
-    }
-
-    @Override // l.InterfaceC15046
-    public final View getChildAt(int i) {
-        return this.f16848.getChildAt(i);
-    }
-
-    @Override // l.InterfaceC15046
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo13304() {
-        return this.f16848.getPaddingLeft();
-    }
-
-    @Override // l.InterfaceC15046
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo13306() {
-        AbstractC5498 abstractC5498 = this.f16848;
-        return abstractC5498.getWidth() - abstractC5498.getPaddingRight();
+    public final C20845 f16789;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C24734 f16790;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15670 f16791;
+
+    public C4792(C24734 c24734, C20845 c20845, InterfaceC15670 interfaceC15670) {
+        this.f16790 = c24734;
+        this.f16789 = c20845;
+        this.f16791 = interfaceC15670;
     }
 
-    @Override // l.InterfaceC15046
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo13305(View view) {
-        return this.f16848.getDecoratedLeft(view) - ((ViewGroup.MarginLayoutParams) ((C22432) view.getLayoutParams())).leftMargin;
-    }
-
-    @Override // l.InterfaceC15046
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo13307(View view) {
-        return this.f16848.getDecoratedRight(view) + ((ViewGroup.MarginLayoutParams) ((C22432) view.getLayoutParams())).rightMargin;
+    @Override // l.InterfaceC15670
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC13433 mo3996() {
+        return new C13501(this);
     }
 }

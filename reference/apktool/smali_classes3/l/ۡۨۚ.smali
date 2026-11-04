@@ -1,38 +1,36 @@
-.class public final synthetic Ll/ۡۨۚ;
+.class public final Ll/ۡۨۚ;
 .super Ljava/lang/Object;
-.source "K7TM"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.source "079R"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܺۨۚ;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/util/ArrayList;
+
+.field public final ᩷:Ljava/lang/String;
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܺۨۚ;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
+    .line 508
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۡۨۚ;->ܺ:Ll/ܺۨۚ;
+    .line 509
+    iput-object p1, p0, Ll/ۡۨۚ;->᩸:Ljava/lang/String;
+
+    .line 510
+    iput-object p2, p0, Ll/ۡۨۚ;->ۙ:Ljava/lang/String;
+
+    .line 511
+    iput-object p3, p0, Ll/ۡۨۚ;->᩷:Ljava/lang/String;
+
+    .line 512
+    iput-object p4, p0, Ll/ۡۨۚ;->ۤ:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 0
-
-    .line 0
-    iget-object p1, p0, Ll/ۡۨۚ;->ܺ:Ll/ܺۨۚ;
-
-    invoke-static {p1, p3}, Ll/ܺۨۚ;->ܰ(Ll/ܺۨۚ;I)Z
-
-    move-result p1
-
-    return p1
 .end method

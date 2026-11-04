@@ -1,47 +1,57 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
-import java.io.IOException;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ۢ֫ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G16V */
+/* JADX INFO: renamed from: l.ۡۡ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: CAXH */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9276 extends AbstractDialogInterfaceOnClickListenerC17341 {
+public final class C9276 implements Iterator {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC11620 f31534;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final long f30170;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C9276(ActivityC11620 activityC11620, ActivityC11620 activityC11621) {
-        super(activityC11621, -1);
-        this.f31534 = activityC11620;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final long f30171;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public long f30172;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f30173;
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        ActivityC11620 activityC11620 = this.f31534;
-        String strM40352 = m40352();
-        if (strM40352.isEmpty()) {
-            m40364();
-            return;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f30173;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        long j = this.f30172;
+        if (j == this.f30171) {
+            if (!this.f30173) {
+                throw new NoSuchElementException();
+            }
+            this.f30173 = false;
+        } else {
+            this.f30172 = this.f30170 + j;
         }
-        if (strM40352.contains("/") || strM40352.contains("\\")) {
-            m40365(R.string.MT_Protector);
-            return;
+        return Long.valueOf(j);
+    }
+
+    public C9276(long j, long j2) {
+        this.f30170 = j2;
+        this.f30171 = j;
+        boolean z = false;
+        if (j2 <= 0 ? 1 >= j : 1 <= j) {
+            z = true;
         }
-        if (C14920.m35667(strM40352)) {
-            m40365(R.string.MT_Protector);
-            return;
-        }
-        try {
-            C14920.m35664(new C22681(strM40352));
-            m40364();
-            activityC11620.f39034 = C14920.m35666();
-            activityC11620.f39033.notifyDataSetChanged();
-        } catch (IOException e) {
-            activityC11620.m31002(e, (DialogInterface.OnDismissListener) null);
-        }
+        this.f30173 = z;
+        this.f30172 = z ? 1L : j;
     }
 }

@@ -1,19 +1,32 @@
-.class public final Ll/ᩳܺ᩵;
+.class public final synthetic Ll/ᩳܺ᩵;
 .super Ljava/lang/Object;
-.source "B5L5"
-
-# interfaces
-.implements Ll/ۗ᩶᩵;
+.source "I6PU"
 
 
-# virtual methods
-.method public final ۙ(Ll/۫֡᩵;Ll/֨֡᩵;[BI)Ll/ۙ֡᩵;
-    .locals 0
+# direct methods
+.method public static synthetic ۙ(Lsun/misc/Unsafe;Ll/᩹ܽ᩵;JLjava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 73
-    new-instance p1, Ll/ᩴܺ᩵;
+    .line 0
+    :cond_0
+    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {p1, p2, p3, p4}, Ll/ᩴܺ᩵;-><init>(Ll/֨֡᩵;[BI)V
+    move-result v0
 
-    return-object p1
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p4, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
 .end method

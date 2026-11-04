@@ -1,132 +1,59 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۤ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: S9O2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15176 extends AbstractC5297 {
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo14683(InterfaceC13724 interfaceC13724) {
-        return false;
+/* JADX INFO: renamed from: l.ܳۜܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 69OZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15176 implements InterfaceC18029 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f49495;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C10042[] f49496;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final EnumC16711 f49497;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC18775 f49498;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f49499;
+
+    public C15176(EnumC16711 enumC16711, boolean z, int[] iArr, C10042[] c10042Arr, Object obj) {
+        this.f49497 = enumC16711;
+        this.f49499 = z;
+        this.f49495 = iArr;
+        this.f49496 = c10042Arr;
+        C23447.m52662(obj, "defaultInstance");
+        this.f49498 = (InterfaceC18775) obj;
     }
 
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo14673(Object obj) {
-        return ((C22937) obj).m50776();
+    @Override // l.InterfaceC18029
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final EnumC16711 mo36491() {
+        return this.f49497;
     }
 
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo14676(Object obj, Object obj2) {
-        C22937 c22937 = (C22937) obj;
-        C22937 c22938 = (C22937) obj2;
-        if (C22937.m50766().equals(c22938)) {
-            return c22937;
-        }
-        if (C22937.m50766().equals(c22937)) {
-            return C22937.m50767(c22937, c22938);
-        }
-        c22937.m50774(c22938);
-        return c22937;
+    @Override // l.InterfaceC18029
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo36490() {
+        return this.f49499;
     }
 
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo14677(int i, int i2, Object obj) {
-        ((C22937) obj).m50771((i << 3) | 5, Integer.valueOf(i2));
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int[] m36494() {
+        return this.f49495;
     }
 
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo14678(int i, long j, Object obj) {
-        ((C22937) obj).m50771((i << 3) | 1, Long.valueOf(j));
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C10042[] m36492() {
+        return this.f49496;
     }
 
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo14679(int i, Object obj, Object obj2) {
-        ((C22937) obj).m50771((i << 3) | 3, (C22937) obj2);
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo14680(Object obj, int i, AbstractC23725 abstractC23725) {
-        ((C22937) obj).m50771((i << 3) | 2, abstractC23725);
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo14681(Object obj, InterfaceC12976 interfaceC12976) {
-        ((C22937) obj).m50773(interfaceC12976);
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo14685(Object obj) {
-        return ((C22937) obj).m50770();
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo14686(Object obj, Object obj2) {
-        ((AbstractC16129) obj).f52121 = (C22937) obj2;
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo14688(int i, long j, Object obj) {
-        ((C22937) obj).m50771(i << 3, Long.valueOf(j));
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo14689(Object obj, Object obj2) {
-        ((AbstractC16129) obj).f52121 = (C22937) obj2;
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo14690(Object obj, InterfaceC12976 interfaceC12976) {
-        ((C22937) obj).m50777(interfaceC12976);
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ᩹ */
-    public final Object mo14691(Object obj) {
-        C22937 c22937 = (C22937) obj;
-        c22937.m50775();
-        return c22937;
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo14674() {
-        return C22937.m50769();
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo14675(Object obj) {
-        AbstractC16129 abstractC16129 = (AbstractC16129) obj;
-        C22937 c22937 = abstractC16129.f52121;
-        if (c22937 != C22937.m50766()) {
-            return c22937;
-        }
-        C22937 c22937M50769 = C22937.m50769();
-        abstractC16129.f52121 = c22937M50769;
-        return c22937M50769;
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo14684(Object obj) {
-        ((AbstractC16129) obj).f52121.m50775();
-    }
-
-    @Override // l.AbstractC5297
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo14687(Object obj) {
-        return ((AbstractC16129) obj).f52121;
+    @Override // l.InterfaceC18029
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC18775 mo36493() {
+        return this.f49498;
     }
 }

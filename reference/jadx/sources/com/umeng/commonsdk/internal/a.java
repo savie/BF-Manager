@@ -28,7 +28,7 @@ public class a {
     public static final int k = 32774;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77947l = 32775;
+    public static final int f82063l = 32775;
     public static final int m = 32776;
     public static final int n = 32777;
     public static final int o = 32779;

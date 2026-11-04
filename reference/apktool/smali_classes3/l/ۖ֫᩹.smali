@@ -1,77 +1,150 @@
-.class public final Ll/ۖ֫᩹;
-.super Ljava/lang/Object;
-.source "E29Y"
-
-# interfaces
-.implements Ll/ۤܺۚ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۚ֫᩹;
-
-.field public final synthetic ᩶:Ll/ۙۧ᩹;
+.class public final enum Ll/ۖ֫᩹;
+.super Ll/۬ۧ᩹;
+.source "XBIX"
 
 
 # direct methods
-.method public constructor <init>(Ll/ۚ֫᩹;Ll/ۙۧ᩹;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    .line 471
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "AttributeValue_doubleQuoted"
 
-    iput-object p1, p0, Ll/ۖ֫᩹;->ܺ:Ll/ۚ֫᩹;
+    const/16 v1, 0x25
 
-    iput-object p2, p0, Ll/ۖ֫᩹;->᩶:Ll/ۙۧ᩹;
+    .line 0
+    invoke-direct {p0, v0, v1}, Ll/ۖ֫᩹;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 730
+    invoke-direct {p0, p1, p2, v0}, Ll/۬ۧ᩹;-><init>(Ljava/lang/String;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()Z
-    .locals 1
+.method public ۙ(Ll/۬ۚ᩹;Ll/ۘۚ᩹;)V
+    .locals 2
 
-    .line 480
-    iget-object v0, p0, Ll/ۖ֫᩹;->ܺ:Ll/ۚ֫᩹;
+    .line 732
+    sget-object v0, Ll/۬ۧ᩹;->ܰ᩷:[C
 
-    .line 301
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->֨()Z
+    invoke-virtual {p2, v0}, Ll/ۘۚ᩹;->ۙ([C)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
-.end method
+    .line 733
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-.method public final synthetic ۘۙ()V
-    .locals 1
+    move-result v1
 
-    const/4 v0, 0x0
+    if-lez v1, :cond_0
 
-    throw v0
-.end method
+    .line 734
+    iget-object v1, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
 
-.method public final ۙ(JJJ)V
-    .locals 0
+    invoke-virtual {v1, v0}, Ll/ۖۚ᩹;->᩷(Ljava/lang/String;)V
 
-    .line 474
-    iget-object p1, p0, Ll/ۖ֫᩹;->ܺ:Ll/ۚ֫᩹;
+    goto :goto_0
 
-    invoke-virtual {p1, p3, p4, p5, p6}, Ll/᩶᩷ۜ;->ۨ(JJ)V
+    .line 736
+    :cond_0
+    iget-object v0, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
 
-    .line 475
-    iget-object p2, p0, Ll/ۖ֫᩹;->᩶:Ll/ۙۧ᩹;
+    invoke-virtual {v0}, Ll/ۖۚ᩹;->ᩴ()V
 
-    invoke-virtual {p2}, Ll/ۙۧ᩹;->ܰ()J
+    .line 738
+    :goto_0
+    invoke-virtual {p2}, Ll/ۘۚ᩹;->᩷()C
 
-    move-result-wide p5
+    move-result p2
 
-    add-long/2addr p5, p3
+    if-eqz p2, :cond_5
 
-    invoke-virtual {p2}, Ll/ۙۧ᩹;->ۖ()J
+    const/16 v0, 0x22
 
-    move-result-wide p2
+    if-eq p2, v0, :cond_4
 
-    invoke-virtual {p1, p5, p6, p2, p3}, Ll/ᩳ۟ۜ;->ܰ(JJ)V
+    const/16 v1, 0x26
+
+    if-eq p2, v1, :cond_2
+
+    const v0, 0xffff
+
+    if-eq p2, v0, :cond_1
+
+    .line 759
+    iget-object p1, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
+
+    invoke-virtual {p1, p2}, Ll/ۖۚ᩹;->᩷(C)V
+
+    return-void
+
+    .line 755
+    :cond_1
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->᩷(Ll/۬ۧ᩹;)V
+
+    .line 756
+    sget-object p2, Ll/۬ۧ᩹;->᩵ۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 744
+    :cond_2
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, p2, v0}, Ll/۬ۚ᩹;->ۙ(Ljava/lang/Character;Z)[I
+
+    move-result-object p2
+
+    if-eqz p2, :cond_3
+
+    .line 746
+    iget-object p1, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
+
+    invoke-virtual {p1, p2}, Ll/ۖۚ᩹;->ۙ([I)V
+
+    return-void
+
+    .line 748
+    :cond_3
+    iget-object p1, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
+
+    invoke-virtual {p1, v1}, Ll/ۖۚ᩹;->᩷(C)V
+
+    return-void
+
+    .line 741
+    :cond_4
+    sget-object p2, Ll/۬ۧ᩹;->ܿ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 751
+    :cond_5
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->ۤ(Ll/۬ۧ᩹;)V
+
+    .line 752
+    iget-object p1, p1, Ll/۬ۚ᩹;->᩵:Ll/ۖۚ᩹;
+
+    const p2, 0xfffd
+
+    invoke-virtual {p1, p2}, Ll/ۖۚ᩹;->᩷(C)V
 
     return-void
 .end method

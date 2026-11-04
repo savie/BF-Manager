@@ -1,14 +1,19 @@
 .class public final Ll/ۙ֨ۨ;
-.super Ll/ۨ֨ۨ;
-.source "D1EQ"
+.super Ljava/lang/Object;
+.source "55LT"
+
+# interfaces
+.implements Ll/ۛۡۨ;
 
 
 # virtual methods
-.method public final ܰ(Ll/ᩴۚۨ;Ll/ۧ᩹ۨ;Ll/۠ᩳۨ;)V
+.method public final ۙ(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)Ll/᩺ۡۨ;
     .locals 0
 
-    .line 13
-    invoke-static {p1, p2, p3}, Ll/ܳ᩹ۨ;->֨(Ll/ᩴۚۨ;Ll/ۧ᩹ۨ;Ll/۠ᩳۨ;)Ll/ܽۚۨ;
+    .line 80
+    new-instance p1, Ll/᩷֨ۨ;
 
-    return-void
+    invoke-direct {p1, p2, p3, p4}, Ll/᩷֨ۨ;-><init>(Ll/۟ۡۨ;[BI)V
+
+    return-object p1
 .end method

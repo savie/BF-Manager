@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.crypto.mldsa;
 
-import l.C15489;
-import l.C9023;
+import l.C10732;
+import l.C14483;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class PolyVecMatrix {
@@ -38,15 +38,15 @@ public class PolyVecMatrix {
     }
 
     private String addString() {
-        String strM37076 = "[";
+        String strM34972 = "[";
         int i = 0;
         while (i < this.matrix.length) {
-            StringBuilder sbM23356 = C9023.m23356(strM37076 + "Outer Matrix " + i + " [");
-            sbM23356.append(this.matrix[i].toString());
-            String string = sbM23356.toString();
-            strM37076 = i == this.matrix.length + (-1) ? C15489.m37076(string, "]\n") : C15489.m37076(string, "],\n");
+            StringBuilder sbM27333 = C10732.m27333(strM34972 + "Outer Matrix " + i + " [");
+            sbM27333.append(this.matrix[i].toString());
+            String string = sbM27333.toString();
+            strM34972 = i == this.matrix.length + (-1) ? C14483.m34972(string, "]\n") : C14483.m34972(string, "],\n");
             i++;
         }
-        return C15489.m37076(strM37076, "]\n");
+        return C14483.m34972(strM34972, "]\n");
     }
 }

@@ -1,13 +1,11 @@
-.class public final Ll/ܺ۬᩵;
-.super Ll/֨֨᩵;
-.source "6AS3"
+.class public interface abstract Ll/ܺ۬᩵;
+.super Ljava/lang/Object;
+.source "TAWY"
+
+# interfaces
+.implements Ll/ۡۜ᩵;
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
-
-    const/4 v0, 0x5
-
-    return v0
+.method public abstract ۚ()Ljava/util/concurrent/CancellationException;
 .end method

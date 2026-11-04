@@ -11,18 +11,18 @@ import java.util.ArrayList;
 
 /* JADX INFO: loaded from: classes.dex */
 public class HandlerChainFactory {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList m237() {
-        return m235(RequestHandler.class, "/com/amazonaws/services/s3/request.handlers");
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList m231() {
+        return m229(RequestHandler.class, "/com/amazonaws/services/s3/request.handlers");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList m236() {
-        return m235(RequestHandler2.class, "/com/amazonaws/services/s3/request.handler2s");
+    public final ArrayList m230() {
+        return m229(RequestHandler2.class, "/com/amazonaws/services/s3/request.handler2s");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private ArrayList m235(Class cls, String str) throws Throwable {
+    private ArrayList m229(Class cls, String str) throws Throwable {
         BufferedReader bufferedReader;
         ArrayList arrayList = new ArrayList();
         BufferedReader bufferedReader2 = null;
@@ -32,14 +32,14 @@ public class HandlerChainFactory {
                 if (resourceAsStream == null) {
                     return arrayList;
                 }
-                bufferedReader = new BufferedReader(new InputStreamReader(resourceAsStream, StringUtils.f844));
+                bufferedReader = new BufferedReader(new InputStreamReader(resourceAsStream, StringUtils.f834));
                 while (true) {
                     try {
                         String line = bufferedReader.readLine();
                         if (line != null) {
                             String strTrim = line.trim();
                             if (!"".equals(strTrim)) {
-                                Object objNewInstance = ClassLoaderHelper.m751(strTrim, cls, getClass()).newInstance();
+                                Object objNewInstance = ClassLoaderHelper.m754(strTrim, cls, getClass()).newInstance();
                                 if (cls.isInstance(objNewInstance)) {
                                     if (cls == RequestHandler2.class) {
                                         arrayList.add((RequestHandler2) objNewInstance);

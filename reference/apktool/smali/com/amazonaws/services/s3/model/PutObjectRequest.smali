@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ۗ:Z
+.field public ۬:Z
 
 
 # direct methods
@@ -33,7 +33,7 @@
     check-cast v0, Lcom/amazonaws/services/s3/model/PutObjectRequest;
 
     .line 175
-    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
 
     return-object v0
 .end method
@@ -49,7 +49,7 @@
     check-cast v0, Lcom/amazonaws/services/s3/model/PutObjectRequest;
 
     .line 175
-    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
 
     return-object v0
 .end method
@@ -65,18 +65,9 @@
     check-cast v0, Lcom/amazonaws/services/s3/model/PutObjectRequest;
 
     .line 175
-    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    invoke-virtual {p0, v0}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/PutObjectRequest;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
 
     return-object v0
-.end method
-
-.method public final ۖ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-    .locals 0
-
-    .line 194
-    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۖ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-
-    return-object p0
 .end method
 
 .method public final ۙ(Ljava/io/InputStream;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
@@ -92,52 +83,61 @@
     .locals 0
 
     .line 311
-    iput-boolean p1, p0, Lcom/amazonaws/services/s3/model/PutObjectRequest;->ۗ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/services/s3/model/PutObjectRequest;->۬:Z
 
     return-void
 .end method
 
-.method public final ۨ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+.method public final ۤ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
     .locals 0
 
     .line 237
-    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۨ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۤ(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
 
     return-object p0
 .end method
 
-.method public final ܰ(Lcom/amazonaws/services/s3/model/CannedAccessControlList;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-    .locals 0
-
-    .line 218
-    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/CannedAccessControlList;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-
-    return-object p0
-.end method
-
-.method public final ܰ(Lcom/amazonaws/services/s3/model/ObjectMetadata;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-    .locals 0
-
-    .line 212
-    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/ObjectMetadata;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-
-    return-object p0
-.end method
-
-.method public final ܰ(Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-    .locals 0
-
-    .line 264
-    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܰ(Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
-
-    return-object p0
-.end method
-
-.method public final ᩳ()Z
+.method public final ܶ()Z
     .locals 1
 
     .line 291
-    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/PutObjectRequest;->ۗ:Z
+    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/PutObjectRequest;->۬:Z
 
     return v0
+.end method
+
+.method public final ᩷(Lcom/amazonaws/services/s3/model/CannedAccessControlList;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    .locals 0
+
+    .line 218
+    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/CannedAccessControlList;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+
+    return-object p0
+.end method
+
+.method public final ᩷(Lcom/amazonaws/services/s3/model/ObjectMetadata;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    .locals 0
+
+    .line 212
+    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/ObjectMetadata;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+
+    return-object p0
+.end method
+
+.method public final ᩷(Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    .locals 0
+
+    .line 264
+    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷(Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+
+    return-object p0
+.end method
+
+.method public final ᩸(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+    .locals 0
+
+    .line 194
+    invoke-super {p0, p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩸(Ljava/lang/String;)Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;
+
+    return-object p0
 .end method

@@ -10,7 +10,7 @@ import java.security.PublicKey;
 import java.security.Security;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
@@ -25,7 +25,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.ECUtil;
 import org.bouncycastle.jcajce.provider.config.ProviderConfiguration;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECKeyUtil {
 
     public class UnexpectedException extends RuntimeException {
@@ -47,7 +47,7 @@ public class ECKeyUtil {
         if (provider != null) {
             return privateToExplicitParameters(privateKey, provider);
         }
-        throw new NoSuchProviderException(C0252.m1693("cannot find provider: ", str));
+        throw new NoSuchProviderException(C25272.m56409("cannot find provider: ", str));
     }
 
     public static PrivateKey privateToExplicitParameters(PrivateKey privateKey, Provider provider) throws NoSuchAlgorithmException {
@@ -85,7 +85,7 @@ public class ECKeyUtil {
         if (provider != null) {
             return publicToExplicitParameters(publicKey, provider);
         }
-        throw new NoSuchProviderException(C0252.m1693("cannot find provider: ", str));
+        throw new NoSuchProviderException(C25272.m56409("cannot find provider: ", str));
     }
 
     public static PublicKey publicToExplicitParameters(PublicKey publicKey, Provider provider) throws NoSuchAlgorithmException {

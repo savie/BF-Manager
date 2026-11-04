@@ -1,50 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6XM */
+/* JADX INFO: renamed from: l.֫ۨᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 66XX */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C1907 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean f7188;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 f6414;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f7189;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f6415;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int f7190;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final EnumC13093 f6416;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f6417;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f6418;
+
+    public C1907(AbstractC22044 abstractC22044, EnumC13093 enumC13093, long j, long j2, String str) {
+        this.f6414 = abstractC22044;
+        this.f6416 = enumC13093;
+        this.f6415 = j;
+        this.f6417 = j2;
+        this.f6418 = str;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f7191;
+    public static C1907 m6564(AbstractC22044 abstractC22044) {
+        return new C1907(abstractC22044, EnumC13093.MISSING, -1L, -1L, null);
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f7192;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 m6565() {
+        return this.f6414;
+    }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String f7193;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final EnumC13093 m6567() {
+        return this.f6416;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f7194;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long m6566() {
+        return this.f6415;
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int f7195;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m6568() {
+        return this.f6417;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f7196;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long f7197;
-
-    public C1907(C14609 c14609, String str) {
-        this.f7193 = c14609.f47807;
-        this.f7191 = str;
-        this.f7197 = c14609.f47809;
-        this.f7192 = c14609.f47806;
-        this.f7190 = c14609.f47811;
-        this.f7195 = c14609.f47805;
-        this.f7189 = c14609.f47810;
-        this.f7188 = c14609.f47813;
-        this.f7194 = c14609.f47812;
-        this.f7196 = c14609.f47808;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String m6569() {
+        return this.f6418;
     }
 }

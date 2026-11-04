@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.io;
 import java.io.OutputStream;
 import org.bouncycastle.crypto.Digest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DigestOutputStream extends OutputStream {
     public Digest digest;
 

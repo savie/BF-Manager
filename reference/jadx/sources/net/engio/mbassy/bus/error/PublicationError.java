@@ -1,11 +1,11 @@
 package net.engio.mbassy.bus.error;
 
 import java.lang.reflect.Method;
-import l.C12441;
+import l.C22783;
 import net.engio.mbassy.bus.IMessagePublication;
 import net.engio.mbassy.subscription.SubscriptionContext;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PublicationError {
     public Throwable cause;
     public String errorMsg;
@@ -94,22 +94,22 @@ public class PublicationError {
 
     public String toString() {
         String property = System.getProperty("line.separator");
-        StringBuilder sbM30914 = C12441.m30914("PublicationError{", property, "\tcause=");
-        sbM30914.append(this.cause);
-        sbM30914.append(property);
-        sbM30914.append("\tmessage='");
-        sbM30914.append(this.errorMsg);
-        sbM30914.append('\'');
-        sbM30914.append(property);
-        sbM30914.append("\thandler=");
-        sbM30914.append(this.handler);
-        sbM30914.append(property);
-        sbM30914.append("\tlistener=");
-        sbM30914.append(this.listener);
-        sbM30914.append(property);
-        sbM30914.append("\tpublishedMessage=");
-        sbM30914.append(getPublishedMessage());
-        sbM30914.append('}');
-        return sbM30914.toString();
+        StringBuilder sbM51387 = C22783.m51387("PublicationError{", property, "\tcause=");
+        sbM51387.append(this.cause);
+        sbM51387.append(property);
+        sbM51387.append("\tmessage='");
+        sbM51387.append(this.errorMsg);
+        sbM51387.append('\'');
+        sbM51387.append(property);
+        sbM51387.append("\thandler=");
+        sbM51387.append(this.handler);
+        sbM51387.append(property);
+        sbM51387.append("\tlistener=");
+        sbM51387.append(this.listener);
+        sbM51387.append(property);
+        sbM51387.append("\tpublishedMessage=");
+        sbM51387.append(getPublishedMessage());
+        sbM51387.append('}');
+        return sbM51387.toString();
     }
 }

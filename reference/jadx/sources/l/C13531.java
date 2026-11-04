@@ -1,92 +1,51 @@
 package l;
 
-import java.util.ArrayList;
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Build;
+import android.provider.Settings;
 
-/* JADX INFO: renamed from: l.ܰۖ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7AI */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۬֫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q159 */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13531 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String f44670;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f44671;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean f44672;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int f42995 = -1;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f44673;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean f44674;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String f44675;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final String f44676;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final boolean f44677;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final String f44678;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f44679;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C9567 f44680;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f44681;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int f44682;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final String f44683;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final String f44684;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final Integer f44685;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean f44686;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f44687;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final String f44688;
-
-    public C13531(String str, String str2, String str3, String str4, boolean z, boolean z2, String str5, String str6, String str7, String str8, C9567 c9567, ArrayList arrayList, boolean z3, int i, C0124 c0124) {
-        this.f44687 = str;
-        this.f44670 = str2;
-        this.f44678 = str3;
-        this.f44684 = str4;
-        this.f44672 = z;
-        this.f44686 = z2;
-        this.f44683 = str5;
-        this.f44676 = c0124 != null ? c0124.f1109 : str6;
-        this.f44679 = str7;
-        this.f44675 = str8;
-        this.f44680 = c9567;
-        this.f44671 = arrayList;
-        this.f44674 = z3;
-        this.f44682 = i;
-        this.f44688 = c0124 == null ? null : c0124.f1112;
-        this.f44685 = c0124 == null ? null : c0124.f1111;
-        boolean z4 = false;
-        this.f44677 = c0124 != null && c0124.f1114;
-        if (c0124 != null && c0124.f1110) {
-            z4 = true;
+    public static boolean m33236(Context context) {
+        int i = Build.VERSION.SDK_INT;
+        if (i >= 24) {
+            if (i >= 29) {
+                try {
+                    Resources resources = context.getResources();
+                    if (f42995 == -1) {
+                        f42995 = resources.getIdentifier("config_navBarInteractionMode", "integer", "android");
+                    }
+                    int i2 = f42995;
+                    if (i2 != 0) {
+                        if (resources.getInteger(i2) == 2) {
+                            return true;
+                        }
+                    }
+                } catch (Exception unused) {
+                }
+            }
+            if (C9034.m24095()) {
+                return Settings.Global.getInt(context.getContentResolver(), "force_fsg_nav_bar", 0) != 0;
+            }
+            if (C9034.m24093() || C9034.m24091()) {
+                return Settings.Secure.getInt(context.getContentResolver(), "navigation_gesture_on", 0) != 0;
+            }
+            if (C9034.m24092()) {
+                return (Settings.System.getInt(context.getContentResolver(), "navigationbar_hide_bar_enabled", 0) == 0 && Settings.Global.getInt(context.getContentResolver(), "navigationbar_hide_bar_enabled", 0) == 0) ? false : true;
+            }
+            if (C9034.m24094()) {
+                return (Settings.System.getInt(context.getContentResolver(), "navigationbar_is_min", 0) == 0 && Settings.Global.getInt(context.getContentResolver(), "navigationbar_is_min", 0) == 0) ? false : true;
+            }
+            return (Settings.Global.getInt(context.getContentResolver(), "navigationbar_is_min", 0) == 0 && Settings.Global.getInt(context.getContentResolver(), "navigation_gesture_on", 0) == 0) ? false : true;
         }
-        this.f44673 = z4;
-        this.f44681 = c0124 != null ? c0124.f1113 : null;
+        return false;
     }
 }

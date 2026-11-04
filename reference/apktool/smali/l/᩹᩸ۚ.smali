@@ -1,209 +1,122 @@
 .class public final Ll/᩹᩸ۚ;
-.super Ll/ܿᩴܶ;
-.source "M701"
+.super Ljava/lang/Object;
+.source "Y6Y9"
+
+# interfaces
+.implements Ll/֡֨ܺ;
 
 
 # instance fields
-.field public final ۙ:I
+.field public final synthetic ۙ:Ll/ܽ֡֫;
 
-.field public final ܰ:I
+.field public final synthetic ۤ:Ll/֨ܶ;
+
+.field public final synthetic ᩴ:[Z
+
+.field public final synthetic ᩷:Ll/۠ۖۧ;
+
+.field public final synthetic ᩸:Ll/᩵᩸ۧ;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Ll/֨ܶ;Ll/ܽ֡֫;Ll/᩵᩸ۧ;Ll/۠ۖۧ;[Z)V
     .locals 0
 
-    .line 173
+    .line 619
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ltz p1, :cond_0
+    iput-object p5, p0, Ll/᩹᩸ۚ;->ᩴ:[Z
 
-    if-le p2, p1, :cond_0
+    iput-object p3, p0, Ll/᩹᩸ۚ;->᩸:Ll/᩵᩸ۧ;
 
-    iput p1, p0, Ll/᩹᩸ۚ;->ܰ:I
+    iput-object p2, p0, Ll/᩹᩸ۚ;->ۙ:Ll/ܽ֡֫;
 
-    iput p2, p0, Ll/᩹᩸ۚ;->ۙ:I
+    iput-object p4, p0, Ll/᩹᩸ۚ;->᩷:Ll/۠ۖۧ;
+
+    iput-object p1, p0, Ll/᩹᩸ۚ;->ۤ:Ll/֨ܶ;
 
     return-void
-
-    .line 174
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Invalid syntax difference range"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final ۙ()V
+    .locals 3
 
-    .line 171
-    instance-of v0, p1, Ll/᩹᩸ۚ;
+    .line 639
+    iget-object v0, p0, Ll/᩹᩸ۚ;->ᩴ:[Z
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    check-cast p1, Ll/᩹᩸ۚ;
+    aget-boolean v2, v0, v1
 
-    iget v0, p0, Ll/᩹᩸ۚ;->ܰ:I
-
-    iget v1, p1, Ll/᩹᩸ۚ;->ܰ:I
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Ll/᩹᩸ۚ;->ۙ:I
-
-    iget p1, p1, Ll/᩹᩸ۚ;->ۙ:I
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    .line 171
-    iget v0, p0, Ll/᩹᩸ۚ;->ܰ:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ll/᩹᩸ۚ;->ۙ:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    .line 171
-    iget v0, p0, Ll/᩹᩸ۚ;->ܰ:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget v1, p0, Ll/᩹᩸ۚ;->ۙ:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    const-string v1, "start;end"
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    new-array v1, v3, [Ljava/lang/String;
+    if-nez v2, :cond_0
 
     goto :goto_0
 
+    .line 642
     :cond_0
-    const-string v4, ";"
+    aput-boolean v1, v0, v1
 
-    invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    .line 643
+    iget-object v0, p0, Ll/᩹᩸ۚ;->ۙ:Ll/ܽ֡֫;
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    :goto_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ll/ܽ֡֫;->ۙ(Ljava/lang/Runnable;)V
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    .line 644
+    iget-object v0, p0, Ll/᩹᩸ۚ;->᩸:Ll/᩵᩸ۧ;
 
-    const-string v5, "["
+    if-eqz v0, :cond_1
 
-    .line 0
-    const-class v6, Ll/᩹᩸ۚ;
-
-    invoke-static {v6, v4, v5}, Ll/ᩳ֫ᩳ;->ۙ(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 171
-    :goto_1
-    array-length v5, v1
-
-    if-ge v3, v5, :cond_2
-
-    aget-object v5, v1, v3
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v5, v2, v3
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    array-length v5, v1
-
-    sub-int/2addr v5, v0
-
-    if-eq v3, v5, :cond_1
-
-    const-string v5, ", "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 645
+    invoke-virtual {v0, v1}, Ll/᩵᩸ۧ;->ۤ(Z)V
 
     :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "]"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return-void
 .end method
 
-.method public final ۙ()I
-    .locals 1
+.method public final ᩷()V
+    .locals 8
 
-    .line 171
-    iget v0, p0, Ll/᩹᩸ۚ;->ۙ:I
+    .line 622
+    iget-object v5, p0, Ll/᩹᩸ۚ;->ᩴ:[Z
 
-    return v0
-.end method
+    const/4 v0, 0x0
 
-.method public final ۨ()I
-    .locals 1
+    const/4 v1, 0x1
 
-    .line 171
-    iget v0, p0, Ll/᩹᩸ۚ;->ܰ:I
+    aput-boolean v1, v5, v0
 
-    return v0
+    .line 623
+    iget-object v0, p0, Ll/᩹᩸ۚ;->᩸:Ll/᩵᩸ۧ;
+
+    if-eqz v0, :cond_0
+
+    .line 624
+    invoke-virtual {v0, v1}, Ll/᩵᩸ۧ;->ۤ(Z)V
+
+    .line 626
+    :cond_0
+    new-instance v6, Ll/ܶ᩸ۚ;
+
+    iget-object v1, p0, Ll/᩹᩸ۚ;->ۤ:Ll/֨ܶ;
+
+    iget-object v7, p0, Ll/᩹᩸ۚ;->ۙ:Ll/ܽ֡֫;
+
+    iget-object v3, p0, Ll/᩹᩸ۚ;->᩸:Ll/᩵᩸ۧ;
+
+    iget-object v4, p0, Ll/᩹᩸ۚ;->᩷:Ll/۠ۖۧ;
+
+    move-object v0, v6
+
+    move-object v2, v7
+
+    invoke-direct/range {v0 .. v5}, Ll/ܶ᩸ۚ;-><init>(Ll/֨ܶ;Ll/ܽ֡֫;Ll/᩵᩸ۧ;Ll/۠ۖۧ;[Z)V
+
+    invoke-virtual {v7, v6}, Ll/ܽ֡֫;->ۙ(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

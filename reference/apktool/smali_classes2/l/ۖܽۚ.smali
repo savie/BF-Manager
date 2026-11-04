@@ -1,42 +1,39 @@
-.class public final synthetic Ll/ۖܽۚ;
+.class public final Ll/ۖܽۚ;
 .super Ljava/lang/Object;
-.source "L9CC"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.source "G7AI"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۫ܽۚ;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ᩶:Ll/֡ܽۚ;
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۫ܽۚ;Ll/֡ܽۚ;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
+    .line 1750
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۖܽۚ;->ܺ:Ll/۫ܽۚ;
+    .line 1751
+    iput-object p1, p0, Ll/ۖܽۚ;->ۙ:Ljava/lang/String;
 
-    iput-object p2, p0, Ll/ۖܽۚ;->᩶:Ll/֡ܽۚ;
+    if-nez p2, :cond_0
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
+    goto :goto_0
 
-# virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+    .line 788
+    :cond_0
+    invoke-static {p2}, Ll/۟ܶۚ;->ۙ(I)Ljava/lang/String;
 
-    .line 0
-    iget-object p1, p0, Ll/ۖܽۚ;->ܺ:Ll/۫ܽۚ;
+    move-result-object p1
 
-    iget-object p2, p0, Ll/ۖܽۚ;->᩶:Ll/֡ܽۚ;
-
-    invoke-static {p1, p2, p3}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;Ll/֡ܽۚ;I)V
+    .line 1752
+    :goto_0
+    iput-object p1, p0, Ll/ۖܽۚ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

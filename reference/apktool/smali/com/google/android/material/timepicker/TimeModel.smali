@@ -299,12 +299,12 @@
 
     if-ne v0, v1, :cond_0
 
-    sget v0, Ll/ᩳ۟ܶ;->ۖܰ:I
+    sget v0, Ll/᩺۬ܺ;->᩸᩷:I
 
     return v0
 
     :cond_0
-    sget v0, Ll/ᩳ۟ܶ;->᩹ܰ:I
+    sget v0, Ll/᩺۬ܺ;->ܳ᩷:I
 
     return v0
 .end method

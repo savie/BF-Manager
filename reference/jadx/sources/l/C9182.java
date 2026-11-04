@@ -1,135 +1,38 @@
 package l;
 
-import android.content.res.Resources;
-import android.database.DataSetObserver;
-import android.os.Build;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListAdapter;
-import android.widget.SpinnerAdapter;
-import android.widget.ThemedSpinnerAdapter;
 
-/* JADX INFO: renamed from: l.ۡ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5WL */
+/* JADX INFO: renamed from: l.ۡۛۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5HP */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9182 implements ListAdapter, SpinnerAdapter {
+public final class C9182 implements TextWatcher {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public SpinnerAdapter f31247;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ViewOnClickListenerC13657 f29784;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public ListAdapter f31248;
-
-    @Override // android.widget.Adapter
-    public final int getItemViewType(int i) {
-        return 0;
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // android.widget.Adapter
-    public final int getViewTypeCount() {
-        return 1;
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    public C9182(SpinnerAdapter spinnerAdapter, Resources.Theme theme) {
-        this.f31247 = spinnerAdapter;
-        if (spinnerAdapter instanceof ListAdapter) {
-            this.f31248 = (ListAdapter) spinnerAdapter;
+    public C9182(ViewOnClickListenerC13657 viewOnClickListenerC13657) {
+        this.f29784 = viewOnClickListenerC13657;
+    }
+
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        ViewOnClickListenerC13657 viewOnClickListenerC13657 = this.f29784;
+        View view = viewOnClickListenerC13657.f43373;
+        boolean z = true;
+        if (editable.length() != 0 && (editable.length() != 1 || editable.charAt(0) != '/')) {
+            z = false;
         }
-        if (theme != null) {
-            if (Build.VERSION.SDK_INT >= 23 && (spinnerAdapter instanceof ThemedSpinnerAdapter)) {
-                C8476.m22139((ThemedSpinnerAdapter) spinnerAdapter, theme);
-            } else if (spinnerAdapter instanceof InterfaceC6211) {
-                InterfaceC6211 interfaceC6211 = (InterfaceC6211) spinnerAdapter;
-                if (interfaceC6211.getDropDownViewTheme() == null) {
-                    interfaceC6211.setDropDownViewTheme(theme);
-                }
-            }
-        }
-    }
-
-    @Override // android.widget.Adapter
-    public final int getCount() {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter == null) {
-            return 0;
-        }
-        return spinnerAdapter.getCount();
-    }
-
-    @Override // android.widget.Adapter
-    public final Object getItem(int i) {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter == null) {
-            return null;
-        }
-        return spinnerAdapter.getItem(i);
-    }
-
-    @Override // android.widget.Adapter
-    public final long getItemId(int i) {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter == null) {
-            return -1L;
-        }
-        return spinnerAdapter.getItemId(i);
-    }
-
-    @Override // android.widget.Adapter
-    public final View getView(int i, View view, ViewGroup viewGroup) {
-        return getDropDownView(i, view, viewGroup);
-    }
-
-    @Override // android.widget.SpinnerAdapter
-    public final View getDropDownView(int i, View view, ViewGroup viewGroup) {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter == null) {
-            return null;
-        }
-        return spinnerAdapter.getDropDownView(i, view, viewGroup);
-    }
-
-    @Override // android.widget.Adapter
-    public final boolean hasStableIds() {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        return spinnerAdapter != null && spinnerAdapter.hasStableIds();
-    }
-
-    @Override // android.widget.Adapter
-    public final void registerDataSetObserver(DataSetObserver dataSetObserver) {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter != null) {
-            spinnerAdapter.registerDataSetObserver(dataSetObserver);
-        }
-    }
-
-    @Override // android.widget.Adapter
-    public final void unregisterDataSetObserver(DataSetObserver dataSetObserver) {
-        SpinnerAdapter spinnerAdapter = this.f31247;
-        if (spinnerAdapter != null) {
-            spinnerAdapter.unregisterDataSetObserver(dataSetObserver);
-        }
-    }
-
-    @Override // android.widget.ListAdapter
-    public final boolean areAllItemsEnabled() {
-        ListAdapter listAdapter = this.f31248;
-        if (listAdapter != null) {
-            return listAdapter.areAllItemsEnabled();
-        }
-        return true;
-    }
-
-    @Override // android.widget.ListAdapter
-    public final boolean isEnabled(int i) {
-        ListAdapter listAdapter = this.f31248;
-        if (listAdapter != null) {
-            return listAdapter.isEnabled(i);
-        }
-        return true;
-    }
-
-    @Override // android.widget.Adapter
-    public final boolean isEmpty() {
-        return getCount() == 0;
+        view.setEnabled(z);
+        viewOnClickListenerC13657.f43379.setEnabled(viewOnClickListenerC13657.f43373.isEnabled());
     }
 }

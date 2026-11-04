@@ -1,45 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ᩹ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: OB9P */
+/* JADX INFO: renamed from: l.ۚ۫ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57L9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5646 extends AbstractC10586 {
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo8568() {
-        return null;
+public final class C5646 extends AbstractC15340 {
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1917 f19508;
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((AbstractC22664) obj).mo9331();
     }
 
-    public C5646(C11312 c11312) {
-        super(c11312, C0727.f3015);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C5646(C1917 c1917, EnumC21461 enumC21461) {
+        super(c1917, enumC21461);
+        this.f19508 = c1917;
     }
 
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo15536() {
-        return m38698() & 1;
-    }
-
-    @Override // l.AbstractC16438
+    @Override // l.AbstractC15340
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo15535(C2718 c2718) {
-        if (mo15536() != 0) {
-            c2718.m8297(AbstractC14322.m34563(0, 0));
-        }
-    }
-
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16438 mo8569(C0727 c0727) {
-        return new C5646(m38701());
-    }
-
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final String mo15537() {
-        if (mo15536() == 0) {
-            return null;
-        }
-        return "nop // spacer";
+    public final C7395 mo16631(AbstractC22664 abstractC22664) {
+        return m44271(new C19816(this, this.f19508.f6447.f48286));
     }
 }

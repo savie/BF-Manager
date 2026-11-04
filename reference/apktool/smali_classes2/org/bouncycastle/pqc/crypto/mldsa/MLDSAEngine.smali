@@ -169,7 +169,7 @@
     const-string v1, "is not supported by Crystals Dilithium!"
 
     .line 0
-    invoke-static {p1, v0, v1}, Ll/ۖۘۖ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -280,7 +280,7 @@
 
     iget v3, p0, Lorg/bouncycastle/pqc/crypto/mldsa/MLDSAEngine;->DilithiumPolyZPackedBytes:I
 
-    invoke-static {v2, v3, v0, p2}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {v2, v3, v0, p2}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result p2
 

@@ -3,7 +3,7 @@
 .source "MaterialIconsImpl.java"
 
 # interfaces
-.implements Ll/۫᩹ۘ;
+.implements Ll/ܶۛ֫;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     invoke-direct {v0}, Lbin/mt/plugin/api/drawable/MaterialIconsImpl;-><init>()V
 
-    const-class v1, Ll/۫᩹ۘ;
+    const-class v1, Ll/ܶۛ֫;
 
     invoke-static {v1, v0}, Lbin/mt/plugin/api/util/ServiceLoader;->register(Ljava/lang/Class;Ljava/lang/Object;)V
 
@@ -39,7 +39,7 @@
     const/4 v0, 0x1
 
     .line 18
-    invoke-static {p1, v0}, Ll/֡᩶᩺;->ۙ(Ljava/lang/String;Z)Ll/᩷᩶᩺;
+    invoke-static {p1, v0}, Ll/ܰۤܺ;->ۙ(Ljava/lang/String;Z)Ll/᩺ۤܺ;
 
     move-result-object v0
 
@@ -54,7 +54,7 @@
     const-string v1, "Filled material icon not found: "
 
     .line 0
-    invoke-static {v1, p1}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -70,7 +70,7 @@
     const/4 v0, 0x0
 
     .line 28
-    invoke-static {p1, v0}, Ll/֡᩶᩺;->ۙ(Ljava/lang/String;Z)Ll/᩷᩶᩺;
+    invoke-static {p1, v0}, Ll/ܰۤܺ;->ۙ(Ljava/lang/String;Z)Ll/᩺ۤܺ;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
     const-string v1, "Outlined material icon not found: "
 
     .line 0
-    invoke-static {v1, p1}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

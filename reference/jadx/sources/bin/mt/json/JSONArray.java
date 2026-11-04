@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C0561;
-import l.C11296;
-import l.C4323;
-import l.C6356;
+import l.C1486;
+import l.C14909;
+import l.C21623;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class JSONArray extends JSONValue implements Iterable {
@@ -36,7 +36,7 @@ public class JSONArray extends JSONValue implements Iterable {
         if (str == null) {
             throw new NullPointerException("source is null");
         }
-        new JSONParser(new C6356()).parseArray(this, str);
+        new JSONParser(new C14909()).parseArray(this, str);
     }
 
     public JSONArray(JSONArray jSONArray) {
@@ -48,7 +48,7 @@ public class JSONArray extends JSONValue implements Iterable {
             throw new NullPointerException("array is null");
         }
         if (z) {
-            this.values = C0561.unmodifiableList(jSONArray.values);
+            this.values = C4681.unmodifiableList(jSONArray.values);
         } else {
             this.values = new ArrayList(jSONArray.values);
         }
@@ -228,26 +228,26 @@ public class JSONArray extends JSONValue implements Iterable {
     }
 
     public List values() {
-        return C0561.unmodifiableList(this.values);
+        return C4681.unmodifiableList(this.values);
     }
 
     @Override // java.lang.Iterable
     public Iterator iterator() {
-        return new C11296(this, this.values.iterator());
+        return new C21623(this, this.values.iterator());
     }
 
     @Override // bin.mt.json.JSONValue
-    public void write(C4323 c4323) throws IOException {
-        c4323.mo12158();
+    public void write(C1486 c1486) throws IOException {
+        c1486.mo5305();
         Iterator it = iterator();
         if (it.hasNext()) {
-            ((JSONValue) it.next()).write(c4323);
+            ((JSONValue) it.next()).write(c1486);
             while (it.hasNext()) {
-                c4323.mo12156();
-                ((JSONValue) it.next()).write(c4323);
+                c1486.mo5299();
+                ((JSONValue) it.next()).write(c1486);
             }
         }
-        c4323.mo12152();
+        c1486.mo5297();
     }
 
     @Override // bin.mt.json.JSONValue

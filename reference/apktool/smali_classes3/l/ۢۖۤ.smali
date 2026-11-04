@@ -1,30 +1,17 @@
-.class public final synthetic Ll/ۢۖۤ;
+.class public final Ll/ۢۖۤ;
 .super Ljava/lang/Object;
-.source "Q3ZI"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
+.source "71K9"
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
+# instance fields
+.field public ۙ:I
 
-    .line 0
-    check-cast p1, Ll/ۙۚۤ;
+.field public ۤ:I
 
-    invoke-static {p1}, Ll/ۙۚۤ;->ۙ(Ll/ۙۚۤ;)V
+.field public ܳ:Ll/ᩴۜۨ;
 
-    return-void
-.end method
+.field public ᩴ:[Ljava/util/List;
 
-.method public synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
+.field public ᩷:[Ll/ۜۖۤ;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.field public ᩸:[Ll/ۘ۫ۛ;

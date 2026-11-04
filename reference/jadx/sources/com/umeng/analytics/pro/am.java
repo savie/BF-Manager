@@ -110,7 +110,7 @@ public class am {
     public static final String k = "appkey";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77923l = "channel";
+    public static final String f82039l = "channel";
     public static final String m = "secret";
     public static final String n = "app_version";
     public static final String o = "package_name";

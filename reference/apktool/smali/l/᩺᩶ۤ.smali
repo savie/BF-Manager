@@ -1,41 +1,48 @@
-.class public abstract Ll/᩺᩶ۤ;
+.class public final Ll/᩺᩶ۤ;
 .super Ljava/lang/Object;
-.source "T57T"
+.source "P676"
+
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # instance fields
-.field public ۙ:Ll/ܰ᩶ۤ;
-
-.field public final synthetic ۨ:Ll/ᩳ᩶ۤ;
-
-.field public ܰ:Ll/ᩴۡ۟;
+.field public final synthetic ۙ:Ll/᩸ܿۤ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳ᩶ۤ;Ll/ܰ᩶ۤ;Ll/ᩴۡ۟;)V
+.method public constructor <init>(Ll/᩸ܿۤ;)V
     .locals 0
 
-    .line 192
+    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩺᩶ۤ;->ۨ:Ll/ᩳ᩶ۤ;
-
-    .line 193
-    iput-object p2, p0, Ll/᩺᩶ۤ;->ۙ:Ll/ܰ᩶ۤ;
-
-    .line 194
-    iput-object p3, p0, Ll/᩺᩶ۤ;->ܰ:Ll/ᩴۡ۟;
+    iput-object p1, p0, Ll/᩺᩶ۤ;->ۙ:Ll/᩸ܿۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract ۙ(Ll/ۡۡ۟;Ll/ۡۡ۟;Z)V
+.method public final onScroll(Landroid/widget/AbsListView;III)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract ۙ(Ll/ۡۡ۟;)Z
-.end method
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 0
 
-.method public abstract ܰ(Ll/ۡۡ۟;)Ll/᩸᩷۟;
+    .line 236
+    iget-object p1, p0, Ll/᩺᩶ۤ;->ۙ:Ll/᩸ܿۤ;
+
+    invoke-static {p1}, Ll/᩸ܿۤ;->᩷(Ll/᩸ܿۤ;)Ll/ۚۖܶ;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Ll/ܳۖܶ;->ۙ(Z)V
+
+    return-void
 .end method

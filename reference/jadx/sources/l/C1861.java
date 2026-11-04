@@ -1,22 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ܰ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A451 */
+import android.graphics.Rect;
+import android.view.View;
+import android.view.ViewGroup;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.֫ۤܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C8F7 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1861 implements InterfaceC9624 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f7086;
-
-    public C1861(int i) {
-        this.f7086 = i;
+public final class C1861 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m6391(View view) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+            view.setTag(R.id.MT_Protector, new Rect(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin, marginLayoutParams.bottomMargin));
+            return;
+        }
+        throw new IllegalArgumentException();
     }
 
-    @Override // l.InterfaceC9624
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11948 mo6061(C23549 c23549, InterfaceC12260 interfaceC12260, C22137 c22137, EnumC17198 enumC17198, C11948 c11948) {
-        C11948 c11949 = (C11948) c11948.m29763()[this.f7086];
-        InterfaceC12260 interfaceC12260M29756 = c11948.m29756();
-        return c23549.m51912(enumC17198, c22137, interfaceC12260M29756 == null ? interfaceC12260 : interfaceC12260M29756, "prob.found.req", c11949);
+    public static void m6390(View view) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+            Object tag = view.getTag(R.id.MT_Protector);
+            C17359.requireNonNull(tag);
+            Rect rect = (Rect) tag;
+            marginLayoutParams.leftMargin = rect.left;
+            marginLayoutParams.topMargin = rect.top;
+            marginLayoutParams.rightMargin = rect.right;
+            marginLayoutParams.bottomMargin = rect.bottom;
+            view.setLayoutParams(marginLayoutParams);
+            return;
+        }
+        throw new IllegalArgumentException();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m6389(int i, int i2, int i3, View view) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+            if (i != -1) {
+                marginLayoutParams.leftMargin = i;
+            }
+            if (i2 != -1) {
+                marginLayoutParams.topMargin = i2;
+            }
+            if (i3 != -1) {
+                marginLayoutParams.rightMargin = i3;
+            }
+            view.setLayoutParams(marginLayoutParams);
+            return;
+        }
+        throw new IllegalArgumentException();
     }
 }

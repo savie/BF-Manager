@@ -45,16 +45,16 @@
     move-result-object v0
 
     .line 92
-    instance-of v1, v0, Ll/ۖ᩶;
+    instance-of v1, v0, Ll/᩻᩶;
 
     if-eqz v1, :cond_0
 
     .line 93
-    check-cast v0, Ll/ۖ᩶;
+    check-cast v0, Ll/᩻᩶;
 
     iget-object v1, p0, Lcom/google/android/material/expandable/ExpandableWidgetHelper;->widget:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ll/ۖ᩶;->dispatchDependentViewsChanged(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Ll/᩻᩶;->dispatchDependentViewsChanged(Landroid/view/View;)V
 
     :cond_0
     return-void

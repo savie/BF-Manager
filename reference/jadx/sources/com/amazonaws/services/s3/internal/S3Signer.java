@@ -16,43 +16,43 @@ import java.util.Set;
 /* JADX INFO: loaded from: classes.dex */
 public class S3Signer extends AbstractAWSSigner {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Log f502 = LogFactory.m302(S3Signer.class);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Log f492 = LogFactory.m296(S3Signer.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Set f503;
+    public final Set f493;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f504;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f494;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f505;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f495;
 
     public S3Signer() {
-        this.f505 = null;
-        this.f504 = null;
-        this.f503 = null;
+        this.f495 = null;
+        this.f494 = null;
+        this.f493 = null;
     }
 
     public S3Signer(String str, String str2) {
         if (str2 == null) {
             throw new IllegalArgumentException("Parameter resourcePath is empty");
         }
-        this.f505 = str;
-        this.f504 = str2;
-        this.f503 = null;
+        this.f495 = str;
+        this.f494 = str2;
+        this.f493 = null;
     }
 
     @Override // com.amazonaws.auth.Signer
     public final void sign(Request request, AWSCredentials aWSCredentials) {
-        String str = this.f504;
+        String str = this.f494;
         if (str == null) {
             throw new UnsupportedOperationException("Cannot sign a request using a dummy S3Signer instance with no resource path");
         }
-        String strMo207 = aWSCredentials.mo207();
-        Log log = f502;
-        if (strMo207 == null) {
-            log.mo298("Canonical string will not be signed, as no AWS Secret Key was provided");
+        String strMo201 = aWSCredentials.mo201();
+        Log log = f492;
+        if (strMo201 == null) {
+            log.mo291("Canonical string will not be signed, as no AWS Secret Key was provided");
             return;
         }
         AWSCredentials aWSCredentialsSanitizeCredentials = sanitizeCredentials(aWSCredentials);
@@ -60,17 +60,17 @@ public class S3Signer extends AbstractAWSSigner {
             addSessionCredentials(request, (AWSSessionCredentials) aWSCredentialsSanitizeCredentials);
         }
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        String strM774 = HttpUtils.m774(defaultRequest.m193().getPath(), str, true);
+        String strM768 = HttpUtils.m768(defaultRequest.m187().getPath(), str, true);
         Date signatureDate = getSignatureDate(getTimeOffset(defaultRequest));
-        int i = ServiceUtils.f512;
-        defaultRequest.m185("Date", DateUtils.m767("EEE, dd MMM yyyy HH:mm:ss z", signatureDate));
-        String strM473 = RestUtils.m473(this.f505, strM774, defaultRequest, this.f503);
-        log.mo298("Calculated string to sign:\n\"" + strM473 + "\"");
-        defaultRequest.m185("Authorization", "AWS " + aWSCredentialsSanitizeCredentials.mo206() + ":" + super.signAndBase64Encode(strM473, aWSCredentialsSanitizeCredentials.mo207(), SigningAlgorithm.HmacSHA1));
+        int i = ServiceUtils.f502;
+        defaultRequest.m177("Date", DateUtils.m761("EEE, dd MMM yyyy HH:mm:ss z", signatureDate));
+        String strM467 = RestUtils.m467(this.f495, strM768, defaultRequest, this.f493);
+        log.mo291("Calculated string to sign:\n\"" + strM467 + "\"");
+        defaultRequest.m177("Authorization", "AWS " + aWSCredentialsSanitizeCredentials.mo200() + ":" + super.signAndBase64Encode(strM467, aWSCredentialsSanitizeCredentials.mo201(), SigningAlgorithm.HmacSHA1));
     }
 
     @Override // com.amazonaws.auth.AbstractAWSSigner
     public final void addSessionCredentials(Request request, AWSSessionCredentials aWSSessionCredentials) {
-        ((DefaultRequest) request).m185("x-amz-security-token", aWSSessionCredentials.mo209());
+        ((DefaultRequest) request).m177("x-amz-security-token", aWSSessionCredentials.mo203());
     }
 }

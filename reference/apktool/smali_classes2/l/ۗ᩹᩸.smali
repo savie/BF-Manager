@@ -1,72 +1,60 @@
-.class public Ll/ۗ᩹᩸;
-.super Ll/۟ۖ᩸;
-.source "0B0D"
+.class public final Ll/ۗ᩹᩸;
+.super Ljava/lang/Object;
+.source "P6SA"
+
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۨ᩹᩸;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/ۨ᩹᩸;)V
     .locals 0
 
-    .line 559
-    invoke-direct {p0}, Ll/۟ۖ᩸;-><init>()V
+    .line 136
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۗ᩹᩸;->ܰ:Ll/ۨ᩹᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-    .locals 2
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    .line 562
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 3
+
+    .line 139
+    iget-object p1, p0, Ll/ۗ᩹᩸;->ܰ:Ll/ۨ᩹᩸;
+
+    iget-object v0, p1, Ll/ۨ᩹᩸;->ۘ:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    .line 140
+    invoke-static {p1}, Ll/ۨ᩹᩸;->ᩴ(Ll/ۨ᩹᩸;)V
+
+    .line 142
+    invoke-static {p1}, Ll/ۨ᩹᩸;->᩸(Ll/ۨ᩹᩸;)Landroid/os/Handler;
 
     move-result-object v0
 
-    sget-object v1, Ll/᩹۬᩸;->᩻:Ll/᩹۬᩸;
+    new-instance v1, Ll/ܽ᩶᩸;
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x1
 
-    .line 563
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->۫()V
+    invoke-direct {v1, v2, p1}, Ll/ܽ᩶᩸;-><init>(ILjava/lang/Object;)V
 
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 566
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuffer;
-
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ܿ()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 559
-    check-cast p2, Ljava/lang/StringBuffer;
-
-    if-nez p2, :cond_0
-
-    const/4 p2, 0x0
-
-    goto :goto_0
-
-    .line 571
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p1, p2}, Ll/֨۬᩸;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

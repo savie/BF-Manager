@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.prng;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EntropyUtil {
     public static byte[] generateSeed(EntropySource entropySource, int i) {
         byte[] bArr = new byte[i];

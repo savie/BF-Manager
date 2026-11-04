@@ -1,49 +1,64 @@
-.class public final enum Ll/ᩴ۫᩸;
-.super Ll/۟۫᩸;
-.source "K608"
+.class public final Ll/ᩴ۫᩸;
+.super Ll/ܶܳ᩸;
+.source "SB38"
+
+
+# instance fields
+.field public final synthetic ۜ:Ljava/util/function/Consumer;
+
+.field public final synthetic ۬:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/util/function/Consumer;)V
+    .locals 0
 
-    const-string v0, "R_gArrayValues"
+    .line 49
+    iput-object p1, p0, Ll/ᩴ۫᩸;->۬:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iput-object p2, p0, Ll/ᩴ۫᩸;->ۜ:Ljava/util/function/Consumer;
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ᩴ۫᩸;-><init>(Ljava/lang/String;I)V
+    const/4 p1, 0x0
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 133
-    invoke-direct {p0, p1, p2, v0}, Ll/۟۫᩸;-><init>(Ljava/lang/String;II)V
+    invoke-direct {p0, p1}, Ll/ܶܳ᩸;-><init>(Ll/ܽ֡֫;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ll/ܺ۫᩸;)Ljava/util/Set;
-    .locals 0
+.method public final cryptoGetTextPassword()Ljava/lang/String;
+    .locals 1
 
-    .line 136
-    iget-object p1, p1, Ll/ܺ۫᩸;->ۖ:Ljava/util/Set;
+    .line 57
+    iget-object v0, p0, Ll/ᩴ۫᩸;->۬:Ljava/lang/String;
 
-    return-object p1
+    return-object v0
 .end method
 
-.method public ۙ(Ll/ܺ۫᩸;Ljava/util/Set;)V
-    .locals 0
+.method public final ۫()Z
+    .locals 1
 
-    .line 141
-    iput-object p2, p1, Ll/ܺ۫᩸;->ۖ:Ljava/util/Set;
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ܽ(Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    .line 63
+    invoke-static {p1, v0}, Ll/ܰۨᩴ;->ۙ(Ljava/lang/String;[Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ll/ᩴ۫᩸;->ۜ:Ljava/util/function/Consumer;
+
+    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

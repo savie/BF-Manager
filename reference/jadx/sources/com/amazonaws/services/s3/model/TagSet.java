@@ -7,17 +7,17 @@ import java.util.HashMap;
 public class TagSet {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public HashMap f671;
+    public HashMap f661;
 
     public TagSet(HashMap map) {
         HashMap map2 = new HashMap(1);
-        this.f671 = map2;
+        this.f661 = map2;
         map2.putAll(map);
     }
 
     public final String toString() {
         StringBuffer stringBuffer = new StringBuffer("{");
-        stringBuffer.append("Tags: " + this.f671);
+        stringBuffer.append("Tags: " + this.f661);
         stringBuffer.append(l.d);
         return stringBuffer.toString();
     }

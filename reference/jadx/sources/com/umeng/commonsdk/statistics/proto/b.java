@@ -26,9 +26,9 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C12441;
-import l.C2271;
+import l.C12669;
+import l.C14442;
+import l.C4681;
 
 /* JADX INFO: compiled from: T5ZW */
 /* JADX INFO: loaded from: classes.dex */
@@ -43,7 +43,7 @@ public class b implements av, Serializable, Cloneable {
     public static final int k = 0;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77955l = 1;
+    public static final int f82071l = 1;
     public String a;
     public long b;
     public int c;
@@ -58,7 +58,7 @@ public class b implements av, Serializable, Cloneable {
         enumMap.put(e.IDENTITY, new bh("identity", (byte) 1, new bi((byte) 11)));
         enumMap.put(e.TS, new bh("ts", (byte) 1, new bi((byte) 10)));
         enumMap.put(e.VERSION, new bh("version", (byte) 1, new bi((byte) 8)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         d = mapUnmodifiableMap;
         bh.a(b.class, mapUnmodifiableMap);
     }
@@ -97,7 +97,7 @@ public class b implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {
@@ -255,7 +255,7 @@ public class b implements av, Serializable, Cloneable {
         sb.append(this.b);
         sb.append(", ");
         sb.append("version:");
-        return C12441.m30911(this.c, MotionUtils.EASING_TYPE_FORMAT_END, sb);
+        return C12669.m31437(this.c, MotionUtils.EASING_TYPE_FORMAT_END, sb);
     }
 
     public void k() throws bv {

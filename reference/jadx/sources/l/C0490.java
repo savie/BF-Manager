@@ -1,57 +1,43 @@
 package l;
 
-import bin.mt.json.JSONObject;
+import java.util.HashSet;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
-/* JADX INFO: renamed from: l.֡ܶۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V75H */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0490 implements InterfaceC7546 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final long f2169;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f2170;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final long f2171;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f2172;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f2173;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final long f2174;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f2175;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final long f2176;
+/* JADX INFO: renamed from: l.֡ܳۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57L9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C0490 implements Function {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f2177;
+    public final /* synthetic */ int f2133 = 0;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f2178;
-
-    public C0490(JSONObject jSONObject) {
-        this.f2178 = jSONObject.getString("name", "");
-        this.f2175 = jSONObject.getString("demangledName", "");
-        this.f2173 = jSONObject.getString("library", "");
-        this.f2171 = C1383.m4844(jSONObject, "type", 0L);
-        this.f2169 = C1383.m4844(jSONObject, "numericType", 0L);
-        this.f2174 = C1383.m4844(jSONObject, "vaddr", 0L);
-        this.f2176 = C1383.m4844(jSONObject, "paddr", 0L);
-        this.f2172 = C1383.m4844(jSONObject, "addend", 0L);
-        this.f2177 = jSONObject.getBoolean("additive", false);
-        this.f2170 = jSONObject.getBoolean("ifunc", false);
+    public /* synthetic */ C0490() {
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C0490 m2366(JSONObject jSONObject) {
-        return new C0490(jSONObject);
+    public /* synthetic */ C0490(C4192 c4192) {
+    }
+
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f2133) {
+            case 0:
+                return (C7395) ((Supplier) obj).get();
+            default:
+                C24330 c24330 = new C24330((C10157) obj);
+                c24330.f78906 = new HashSet();
+                return c24330;
+        }
     }
 }

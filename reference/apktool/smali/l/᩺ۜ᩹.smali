@@ -1,221 +1,167 @@
 .class public final Ll/᩺ۜ᩹;
-.super Ll/ܿᩴܶ;
-.source "W261"
+.super Ljava/lang/Object;
+.source "N673"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public final ۙ:J
+.field public final a:Ljava/nio/file/DirectoryStream$Filter;
 
-.field public final ܰ:J
+.field public final b:[Ljava/io/File;
+
+.field public c:I
+
+.field public final synthetic d:Ll/ۘۜ᩹;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Ll/ۘۜ᩹;Ll/᩺۬᩹;Ljava/nio/file/DirectoryStream$Filter;)V
     .locals 0
 
-    .line 442
+    .line 413
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ll/᩺ۜ᩹;->ܰ:J
+    iput-object p1, p0, Ll/᩺ۜ᩹;->d:Ll/ۘۜ᩹;
 
-    iput-wide p3, p0, Ll/᩺ۜ᩹;->ۙ:J
+    const/4 p1, 0x0
+
+    .line 411
+    iput p1, p0, Ll/᩺ۜ᩹;->c:I
+
+    .line 416
+    invoke-interface {p2}, Ll/᩺۬᩹;->toFile()Ljava/io/File;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    new-array p2, p1, [Ljava/io/File;
+
+    .line 417
+    :cond_0
+    iput-object p2, p0, Ll/᩺ۜ᩹;->b:[Ljava/io/File;
+
+    .line 418
+    iput-object p3, p0, Ll/᩺ۜ᩹;->a:Ljava/nio/file/DirectoryStream$Filter;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Ll/᩶ۜ᩹;
     .locals 5
 
-    .line 442
-    instance-of v0, p1, Ll/᩺ۜ᩹;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ll/᩺ۜ᩹;
-
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ܰ:J
-
-    iget-wide v2, p1, Ll/᩺ۜ᩹;->ܰ:J
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ۙ:J
-
-    iget-wide v2, p1, Ll/᩺ۜ᩹;->ۙ:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
+    .line 434
     :cond_0
-    const/4 p1, 0x0
+    iget v0, p0, Ll/᩺ۜ᩹;->c:I
 
-    return p1
-.end method
+    iget-object v1, p0, Ll/᩺ۜ᩹;->b:[Ljava/io/File;
 
-.method public final hashCode()I
-    .locals 7
+    array-length v2, v1
 
-    .line 0
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ܰ:J
+    if-lt v0, v2, :cond_1
 
-    const/16 v2, 0x20
+    const/4 v0, 0x0
 
-    ushr-long v3, v0, v2
+    return-object v0
 
-    xor-long/2addr v0, v3
+    :cond_1
+    add-int/lit8 v2, v0, 0x1
 
-    long-to-int v1, v0
+    .line 437
+    iput v2, p0, Ll/᩺ۜ᩹;->c:I
 
-    mul-int/lit8 v1, v1, 0x1f
+    aget-object v0, v1, v0
 
-    iget-wide v3, p0, Ll/᩺ۜ᩹;->ۙ:J
+    .line 438
+    new-instance v1, Ll/᩶ۜ᩹;
 
-    ushr-long v5, v3, v2
+    iget-object v2, p0, Ll/᩺ۜ᩹;->d:Ll/ۘۜ᩹;
 
-    xor-long v2, v3, v5
+    .line 60
+    iget-object v2, v2, Ll/ۘۜ᩹;->g:Ll/᩵ۜ᩹;
 
-    long-to-int v0, v2
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    .line 442
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ܰ:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 438
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-wide v1, p0, Ll/᩺ۜ᩹;->ۙ:J
+    iget-object v3, p0, Ll/᩺ۜ᩹;->d:Ll/ۘۜ᩹;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 60
+    iget-object v4, v3, Ll/ۘۜ᩹;->e:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v3, v3, Ll/ۘۜ᩹;->f:Ljava/lang/String;
 
-    const/4 v2, 0x2
+    .line 438
+    invoke-direct {v1, v2, v0, v4, v3}, Ll/᩶ۜ᩹;-><init>(Ll/᩻۬᩹;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-array v2, v2, [Ljava/lang/Object;
+    .line 441
+    :try_start_0
+    iget-object v0, p0, Ll/᩺ۜ᩹;->a:Ljava/nio/file/DirectoryStream$Filter;
 
-    const/4 v3, 0x0
+    invoke-interface {v0, v1}, Ljava/nio/file/DirectoryStream$Filter;->accept(Ljava/lang/Object;)Z
 
-    aput-object v0, v2, v3
+    move-result v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
-    aput-object v1, v2, v0
+    return-object v1
 
-    const-string v1, "minTime;maxTime"
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    .line 443
+    new-instance v1, Ljava/nio/file/DirectoryIteratorException;
 
-    move-result v4
+    invoke-direct {v1, v0}, Ljava/nio/file/DirectoryIteratorException;-><init>(Ljava/io/IOException;)V
 
-    if-nez v4, :cond_0
+    throw v1
+.end method
 
-    new-array v1, v3, [Ljava/lang/String;
+.method public final hasNext()Z
+    .locals 2
 
-    goto :goto_0
+    .line 423
+    invoke-virtual {p0}, Ll/᩺ۜ᩹;->a()Ll/᩶ۜ᩹;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 424
+    iget v0, p0, Ll/᩺ۜ᩹;->c:I
+
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, Ll/᩺ۜ᩹;->c:I
+
+    return v1
 
     :cond_0
-    const-string v4, ";"
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 1
 
-    :goto_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "["
-
-    .line 0
-    const-class v6, Ll/᩺ۜ᩹;
-
-    invoke-static {v6, v4, v5}, Ll/ᩳ֫ᩳ;->ۙ(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 442
-    :goto_1
-    array-length v5, v1
-
-    if-ge v3, v5, :cond_2
-
-    aget-object v5, v1, v3
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v5, v2, v3
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    array-length v5, v1
-
-    sub-int/2addr v5, v0
-
-    if-eq v3, v5, :cond_1
-
-    const-string v5, ", "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "]"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 407
+    invoke-virtual {p0}, Ll/᩺ۜ᩹;->a()Ll/᩶ۜ᩹;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final ܰ(J)Z
-    .locals 3
-
-    .line 444
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ܰ:J
-
-    cmp-long v2, v0, p1
-
-    if-gtz v2, :cond_0
-
-    iget-wide v0, p0, Ll/᩺ۜ᩹;->ۙ:J
-
-    cmp-long v2, p1, v0
-
-    if-gez v2, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
 .end method

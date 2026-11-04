@@ -1,7 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫᩹᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0AST */
+import android.content.res.Resources;
+import android.widget.ThemedSpinnerAdapter;
+
+/* JADX INFO: renamed from: l.ۨ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5WL */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12705 extends AbstractC0709 {
+public final class C12705 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m31495(ThemedSpinnerAdapter themedSpinnerAdapter, Resources.Theme theme) {
+        if (C17359.equals(themedSpinnerAdapter.getDropDownViewTheme(), theme)) {
+            return;
+        }
+        themedSpinnerAdapter.setDropDownViewTheme(theme);
+    }
 }

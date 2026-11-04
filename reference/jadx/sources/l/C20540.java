@@ -1,24 +1,22 @@
 package l;
 
-import java.util.EnumSet;
-
-/* JADX INFO: renamed from: l.᩷֨۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: renamed from: l.᩵ۨۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H7RN */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20540 extends AbstractC3956 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0429 f66527;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C20540(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
-        super(c0429, abstractC11242, enumC11368, enumSet);
-        this.f66527 = c0429;
+public final enum C20540 extends EnumC7687 {
+    public /* synthetic */ C20540(EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        this("FULLVERSION", 42, "--full-version -fullversion", null, enumC18128, enumC21112);
     }
 
-    @Override // l.AbstractC3956
+    public C20540(String str, int i, String str2, String str3, EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        super(str, i, str2, str3, enumC18128, enumC21112, 0);
+    }
+
+    @Override // l.EnumC7687
     /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        this.f66527.m2246(abstractC23903);
+    public void mo2207(AbstractC9923 abstractC9923, String str) {
+        C7312 c7312Mo25754 = abstractC9923.mo25754();
+        C7312.m20024(c7312Mo25754.m20031(EnumC8803.STDOUT), c7312Mo25754.m20032(EnumC2837.JAVAC, "fullVersion", abstractC9923.mo25758(), C4878.m14933()));
+        super.mo2207(abstractC9923, str);
     }
 }

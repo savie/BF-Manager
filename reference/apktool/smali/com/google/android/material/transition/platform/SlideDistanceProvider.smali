@@ -104,7 +104,7 @@
     const-string p1, "Invalid slide direction: "
 
     .line 0
-    invoke-static {p2, p1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -259,7 +259,7 @@
     const-string p1, "Invalid slide direction: "
 
     .line 0
-    invoke-static {p2, p1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -446,7 +446,7 @@
 
     move-result-object p1
 
-    sget v0, Ll/֨۟ܶ;->֫ܺ:I
+    sget v0, Ll/ܽ۬ܺ;->۠ܰ:I
 
     .line 129
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -460,7 +460,7 @@
     .locals 1
 
     .line 231
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I

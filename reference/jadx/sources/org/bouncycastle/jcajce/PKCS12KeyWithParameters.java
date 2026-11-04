@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce;
 import javax.crypto.interfaces.PBEKey;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12KeyWithParameters extends PKCS12Key implements PBEKey {
     public final int iterationCount;
     public final byte[] salt;

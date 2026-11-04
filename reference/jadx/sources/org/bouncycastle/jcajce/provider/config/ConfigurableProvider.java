@@ -4,7 +4,7 @@ import java.util.Map;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ConfigurableProvider {
     public static final String ACCEPTABLE_EC_CURVES = "acceptableEcCurves";
     public static final String ADDITIONAL_EC_PARAMETERS = "additionalEcParameters";

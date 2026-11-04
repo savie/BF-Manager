@@ -1,47 +1,74 @@
 package l;
 
-import java.io.IOException;
+import android.util.Base64;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import org.bouncycastle.crypto.params.DHParameters;
+import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
 
-/* JADX INFO: renamed from: l.ܶܰ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: I4F9 */
+/* JADX INFO: renamed from: l.ܳۤۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: DAO9 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15278 extends AbstractRunnableC20602 {
+public final class C15278 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6043 f49802;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public String f49929;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public String f49930;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte[] f49931;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f49803;
+    public long f49932;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f49804;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f49933;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20217 f49805;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public float f49934;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C15278(C20217 c20217, Object[] objArr, int i, C6043 c6043, int i2, boolean z) {
-        super("OkHttp %s Push Data[%s]", objArr);
-        this.f49805 = c20217;
-        this.f49803 = i;
-        this.f49802 = c6043;
-        this.f49804 = i2;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f49935;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public double f49936;
+
+    public /* synthetic */ C15278(int i) {
+        this();
     }
 
-    @Override // l.AbstractRunnableC20602
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4299() {
-        try {
-            InterfaceC3282 interfaceC3282 = this.f49805.f65605;
-            C6043 c6043 = this.f49802;
-            int i = this.f49804;
-            ((C9634) interfaceC3282).getClass();
-            c6043.skip(i);
-            this.f49805.f65611.m52277(this.f49803, EnumC9365.CANCEL);
-            synchronized (this.f49805) {
-                this.f49805.f65620.remove(Integer.valueOf(this.f49803));
-            }
-        } catch (IOException unused) {
+    public C15278() {
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m36639() {
+        switch (this.f49935) {
+            case 32:
+            case 48:
+                return this.f49930;
+            case 64:
+                return C13041.m32460(this.f49931);
+            case 80:
+                return Base64.encodeToString(this.f49931, 2);
+            case 96:
+                return Integer.toString(this.f49933);
+            case UMErrorCode.E_UM_BE_DEFLATE_FAILED /* 112 */:
+                return Integer.toString(this.f49933, 16);
+            case 128:
+                return Long.toString(this.f49932);
+            case 144:
+                return Long.toString(this.f49932, 16);
+            case DHParameters.DEFAULT_MINIMUM_LENGTH /* 160 */:
+                return Float.toString(this.f49934);
+            case PicnicEngine.MAX_AUX_BYTES /* 176 */:
+                return Double.toString(this.f49936);
+            case 192:
+                return "true";
+            case 208:
+                return "false";
+            default:
+                return null;
         }
     }
 }

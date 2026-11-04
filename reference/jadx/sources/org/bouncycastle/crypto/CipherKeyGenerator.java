@@ -3,7 +3,7 @@ package org.bouncycastle.crypto;
 import java.security.SecureRandom;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherKeyGenerator {
     public SecureRandom random;
     public int strength;

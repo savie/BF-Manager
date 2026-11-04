@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1BMPString;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1IA5String;
@@ -15,7 +15,7 @@ import org.bouncycastle.asn1.DERIA5String;
 import org.bouncycastle.asn1.DERUTF8String;
 import org.bouncycastle.asn1.DERVisibleString;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DisplayText extends ASN1Object implements ASN1Choice {
     public static final int CONTENT_TYPE_BMPSTRING = 1;
     public static final int CONTENT_TYPE_IA5STRING = 0;
@@ -63,7 +63,7 @@ public class DisplayText extends ASN1Object implements ASN1Choice {
         if (obj == null || (obj instanceof DisplayText)) {
             return (DisplayText) obj;
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 
     public static DisplayText getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

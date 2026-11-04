@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import org.bouncycastle.crypto.params.ElGamalParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalParametersGenerator {
     public int certainty;
     public SecureRandom random;

@@ -20,8 +20,8 @@
         <item name="MT_Protector_res_0x7f04000f">?android:attr/actionMenuTextColor</item>
         <item name="MT_Protector_res_0x7f04001f">?android:attr/actionOverflowButtonStyle</item>
         <item name="MT_Protector_res_0x7f040151">@drawable/MT_Protector_res_0x7f08003a</item>
-        <item name="MT_Protector_res_0x7f0403eb">?android:attr/ratingBarStyleIndicator</item>
-        <item name="MT_Protector_res_0x7f0403ec">?android:attr/ratingBarStyleSmall</item>
+        <item name="MT_Protector_res_0x7f0403ed">?android:attr/ratingBarStyleIndicator</item>
+        <item name="MT_Protector_res_0x7f0403ee">?android:attr/ratingBarStyleSmall</item>
     </style>
     <style name="MT_Protector_res_0x7f1300cf" parent="@style/MT_Protector_res_0x7f1300cd">
         <item name="MT_Protector_res_0x7f040001">?android:attr/actionBarItemBackground</item>
@@ -29,15 +29,15 @@
         <item name="MT_Protector_res_0x7f04000f">?android:attr/actionMenuTextColor</item>
         <item name="MT_Protector_res_0x7f04001f">?android:attr/actionOverflowButtonStyle</item>
         <item name="MT_Protector_res_0x7f040151">@drawable/MT_Protector_res_0x7f08003a</item>
-        <item name="MT_Protector_res_0x7f0403eb">?android:attr/ratingBarStyleIndicator</item>
-        <item name="MT_Protector_res_0x7f0403ec">?android:attr/ratingBarStyleSmall</item>
+        <item name="MT_Protector_res_0x7f0403ed">?android:attr/ratingBarStyleIndicator</item>
+        <item name="MT_Protector_res_0x7f0403ee">?android:attr/ratingBarStyleSmall</item>
     </style>
     <style name="MT_Protector_res_0x7f1300e8" parent="@android:style/Widget.Material.ActionButton.Overflow">
     </style>
     <style name="MT_Protector_res_0x7f1300ee" parent="@android:style/Widget.Material.Button.Borderless.Colored">
     </style>
     <style name="MT_Protector_res_0x7f1300f0" parent="@android:style/Widget.Material.Button.Colored">
-        <item name="android:textAppearance">@style/MT_Protector_res_0x7f13022f</item>
+        <item name="android:textAppearance">@style/MT_Protector_res_0x7f130233</item>
     </style>
     <style name="MT_Protector_res_0x7f1300fa" parent="@android:style/Widget.Material.EditText">
         <item name="android:breakStrategy">0</item>
@@ -56,36 +56,36 @@
     <style name="MT_Protector_res_0x7f130146" parent="@style/MT_Protector_res_0x7f13002c">
         <item name="MT_Protector_res_0x7f0400a7">?android:attr/colorBackgroundFloating</item>
     </style>
-    <style name="MT_Protector_res_0x7f1302fc" parent="@style/MT_Protector_res_0x7f13009e">
-        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f060266</item>
+    <style name="MT_Protector_res_0x7f130301" parent="@style/MT_Protector_res_0x7f13009e">
+        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f060268</item>
     </style>
-    <style name="MT_Protector_res_0x7f13030d" parent="">
-        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f0600d6</item>
+    <style name="MT_Protector_res_0x7f130312" parent="">
+        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f0600d8</item>
     </style>
-    <style name="MT_Protector_res_0x7f13030e" parent="">
-        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f0600c3</item>
+    <style name="MT_Protector_res_0x7f130313" parent="">
+        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f0600c5</item>
     </style>
-    <style name="MT_Protector_res_0x7f130333" parent="@style/MT_Protector_res_0x7f1300a2">
-        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f060266</item>
+    <style name="MT_Protector_res_0x7f130338" parent="@style/MT_Protector_res_0x7f1300a2">
+        <item name="MT_Protector_res_0x7f0400fe">@color/MT_Protector_res_0x7f060268</item>
     </style>
-    <style name="MT_Protector_res_0x7f1303f8" parent="@style/MT_Protector_res_0x7f130122">
-        <item name="android:background">@drawable/MT_Protector_res_0x7f080191</item>
+    <style name="MT_Protector_res_0x7f1303fd" parent="@style/MT_Protector_res_0x7f130122">
+        <item name="android:background">@drawable/MT_Protector_res_0x7f0801a7</item>
     </style>
-    <style name="MT_Protector_res_0x7f1303fa" parent="@style/MT_Protector_res_0x7f130123">
-        <item name="android:background">@drawable/MT_Protector_res_0x7f080190</item>
+    <style name="MT_Protector_res_0x7f1303ff" parent="@style/MT_Protector_res_0x7f130123">
+        <item name="android:background">@drawable/MT_Protector_res_0x7f0801a6</item>
     </style>
-    <style name="MT_Protector_res_0x7f1303fb" parent="@style/MT_Protector_res_0x7f130124">
-        <item name="android:background">@drawable/MT_Protector_res_0x7f080191</item>
+    <style name="MT_Protector_res_0x7f130400" parent="@style/MT_Protector_res_0x7f130124">
+        <item name="android:background">@drawable/MT_Protector_res_0x7f0801a7</item>
     </style>
-    <style name="MT_Protector_res_0x7f130452" parent="@style/MT_Protector_res_0x7f13012e">
-        <item name="android:background">@drawable/MT_Protector_res_0x7f080195</item>
+    <style name="MT_Protector_res_0x7f130457" parent="@style/MT_Protector_res_0x7f13012e">
+        <item name="android:background">@drawable/MT_Protector_res_0x7f0801ab</item>
     </style>
-    <style name="MT_Protector_res_0x7f1304ba" parent="@style/MT_Protector_res_0x7f130136">
-        <item name="android:popupBackground">?attr/MT_Protector_res_0x7f0403bc</item>
+    <style name="MT_Protector_res_0x7f1304bf" parent="@style/MT_Protector_res_0x7f130136">
+        <item name="android:popupBackground">?attr/MT_Protector_res_0x7f0403be</item>
         <item name="android:popupElevation">8dp</item>
     </style>
-    <style name="MT_Protector_res_0x7f1304bb" parent="@style/MT_Protector_res_0x7f130137">
-        <item name="android:popupBackground">?attr/MT_Protector_res_0x7f0403bc</item>
+    <style name="MT_Protector_res_0x7f1304c0" parent="@style/MT_Protector_res_0x7f130137">
+        <item name="android:popupBackground">?attr/MT_Protector_res_0x7f0403be</item>
         <item name="android:popupElevation">8dp</item>
     </style>
 </resources>

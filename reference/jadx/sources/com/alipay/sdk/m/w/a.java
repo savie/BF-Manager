@@ -15,10 +15,10 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.UUID;
-import l.C16523;
-import l.C1679;
-import l.C20630;
-import l.C9023;
+import l.C10732;
+import l.C1402;
+import l.C14442;
+import l.C20196;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -58,7 +58,7 @@ public class a {
     public boolean k = false;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f77918l = false;
+    public boolean f82034l = false;
     public final ActivityInfo m;
     public final com.alipay.sdk.m.m.b n;
 
@@ -79,16 +79,16 @@ public class a {
         this.m = activityInfoA;
         this.g = str2;
         if (!zIsEmpty) {
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "eptyp", C1679.m5594(str2, "|", strB));
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "eptyp", C20196.m46451(str2, "|", strB));
             if (activityInfoA != null) {
                 str3 = activityInfoA.name + "|" + activityInfoA.launchMode;
             } else {
                 str3 = "null";
             }
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "actInfo", str3);
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "sys", q.a(this));
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "sdkv", "478258c-clean");
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "registerApp", AlipayApi.e + "");
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "actInfo", str3);
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "sys", q.a(this));
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "sdkv", "478258c-clean");
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "registerApp", AlipayApi.e + "");
         }
         try {
             this.c = context.getApplicationContext();
@@ -99,8 +99,8 @@ public class a {
             g.a(e);
         }
         if (!zIsEmpty) {
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, am.aH + q.g());
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.Q, "" + SystemClock.elapsedRealtime());
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, am.aH + q.g());
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.Q, "" + SystemClock.elapsedRealtime());
             com.alipay.sdk.m.m.a.a(context, this, str, this.d);
         }
         if (!zIsEmpty && com.alipay.sdk.m.o.b.i().t()) {
@@ -151,7 +151,7 @@ public class a {
             int iIndexOf = str.indexOf(strA);
             return str.substring(0, iIndexOf) + b(strA, q, "\"") + str.substring(iIndexOf + strA.length());
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "fmt2", th, str);
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "fmt2", th, str);
             return str;
         }
     }
@@ -173,7 +173,7 @@ public class a {
     }
 
     public boolean j() {
-        return this.f77918l;
+        return this.f82034l;
     }
 
     public final String b(String str, String str2, String str3) {
@@ -183,15 +183,15 @@ public class a {
         String strSubstring2 = strSubstring.substring(0, strSubstring.length() - str3.length());
         if (strSubstring2.length() >= 2 && strSubstring2.startsWith("\"") && strSubstring2.endsWith("\"")) {
             z2 = true;
-            jSONObject = new JSONObject(C20630.m46498(1, 1, strSubstring2));
+            jSONObject = new JSONObject(C1402.m5124(1, 1, strSubstring2));
         } else {
             jSONObject = new JSONObject(strSubstring2);
         }
         String strA = a(jSONObject);
         if (z2) {
-            strA = C16523.m38890("\"", strA, "\"");
+            strA = C14442.m34865("\"", strA, "\"");
         }
-        return C1679.m5594(str2, strA, str3);
+        return C20196.m46451(str2, strA, str3);
     }
 
     public final String c(String str) {
@@ -203,7 +203,7 @@ public class a {
             int iIndexOf = str.indexOf(strA);
             return str.substring(0, iIndexOf) + b(strA, r, "") + str.substring(iIndexOf + strA.length());
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "fmt1", th, str);
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "fmt1", th, str);
             return str;
         }
     }
@@ -305,10 +305,10 @@ public class a {
     }
 
     public final String a(String str, String str2) {
-        StringBuilder sbM23356 = C9023.m23356(str);
-        sbM23356.append(a(new JSONObject()));
-        sbM23356.append(str2);
-        return sbM23356.toString();
+        StringBuilder sbM27333 = C10732.m27333(str);
+        sbM27333.append(a(new JSONObject()));
+        sbM27333.append(str2);
+        return sbM27333.toString();
     }
 
     public String a(JSONObject jSONObject) {
@@ -345,7 +345,7 @@ public class a {
             }
             return jSONObject.toString();
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f77909l, "fmt3", th, String.valueOf(jSONObject));
+            com.alipay.sdk.m.m.a.a(this, com.alipay.sdk.m.m.b.f82025l, "fmt3", th, String.valueOf(jSONObject));
             g.a(th);
             return jSONObject != null ? jSONObject.toString() : "{}";
         }
@@ -371,7 +371,7 @@ public class a {
     }
 
     public void c(boolean z2) {
-        this.f77918l = z2;
+        this.f82034l = z2;
     }
 
     public static HashMap a(a aVar) {

@@ -3,7 +3,7 @@ package org.bouncycastle.jce.spec;
 import java.math.BigInteger;
 import java.security.spec.KeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410PrivateKeySpec implements KeySpec {
     public BigInteger a;
     public BigInteger p;

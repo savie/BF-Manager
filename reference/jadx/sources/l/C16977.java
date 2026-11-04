@@ -1,26 +1,22 @@
 package l;
 
-import com.umeng.analytics.pro.am;
-import java.util.Arrays;
-import java.util.Collection;
+/* JADX INFO: renamed from: l.ܺܽ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: K8QR */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16977 {
 
-/* JADX INFO: renamed from: l.ܽ᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q8ZT */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16977 extends AbstractC2159 {
-    @Override // l.AbstractC2159
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6724(C18410 c18410, InterfaceC9239 interfaceC9239, InterfaceC21022 interfaceC21022) {
-        InterfaceC4774 interfaceC4774Mo19014 = c18410.m42695().mo19014(C5255.class);
-        if (interfaceC4774Mo19014 == null) {
-            return null;
-        }
-        return interfaceC4774Mo19014.mo6311(c18410, interfaceC9239);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f55501;
 
-    @Override // l.AbstractC3382
-    /* JADX INFO: renamed from: ۙ */
-    public final Collection mo3243() {
-        return Arrays.asList(am.aC, "em", "cite", "dfn");
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f55502;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f55503;
+
+    public C16977(long j, int i, boolean z) {
+        this.f55503 = j;
+        this.f55501 = z;
+        this.f55502 = i;
     }
 }

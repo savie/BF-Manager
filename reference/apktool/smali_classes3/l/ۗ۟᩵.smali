@@ -1,181 +1,154 @@
 .class public final Ll/ۗ۟᩵;
-.super Ll/ܰ᩷᩵;
-.source "I67E"
+.super Ll/᩹۟᩵;
+.source "79A7"
+
+# interfaces
+.implements Ljava/util/ListIterator;
+
+
+# instance fields
+.field public final synthetic ܿ:Ll/ۨ۟᩵;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۨ۟᩵;I)V
+    .locals 3
+
+    .line 96
+    iput-object p1, p0, Ll/ۗ۟᩵;->ܿ:Ll/ۨ۟᩵;
+
+    invoke-direct {p0, p1}, Ll/᩹۟᩵;-><init>(Ll/ۨ۟᩵;)V
+
+    .line 14
+    invoke-virtual {p1}, Ll/ܽ۟᩵;->᩷()I
+
+    move-result p1
+
+    if-ltz p2, :cond_0
+
+    if-gt p2, p1, :cond_0
+
+    .line 100
+    invoke-virtual {p0, p2}, Ll/᩹۟᩵;->᩷(I)V
+
+    return-void
+
+    .line 124
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "index: "
+
+    const-string v2, ", size: "
+
+    .line 0
+    invoke-static {v1, p2, p1, v2}, Ll/ۜۚ᩸;->ۙ(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 124
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۫۠ۡ;)Z
-    .locals 9
+.method public final add(Ljava/lang/Object;)V
+    .locals 1
 
-    .line 45
-    iget-object v0, p0, Ll/ܰ᩷᩵;->᩶:Ll/֫ۙۡ;
+    .line 0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    check-cast v0, Ll/᩺ܰۡ;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-interface {v0}, Ll/᩺ܰۡ;->ۘ()I
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    .line 103
+    invoke-virtual {p0}, Ll/᩹۟᩵;->ۙ()I
 
     move-result v0
 
-    .line 47
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-lez v0, :cond_0
 
-    const/16 v1, 0xc
+    const/4 v0, 0x1
 
-    const-string v2, ".array-data "
-
-    const/4 v3, 0x0
-
-    .line 116
-    invoke-virtual {p1, v2, v3, v1}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
-
-    .line 48
-    iget-object v1, p0, Ll/ܰ᩷᩵;->᩶:Ll/֫ۙۡ;
-
-    check-cast v1, Ll/᩺ܰۡ;
-
-    invoke-interface {v1}, Ll/᩺ܰۡ;->ۘ()I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Ll/۫۠ۡ;->ܰ(I)V
-
-    const/16 v1, 0xa
-
-    .line 49
-    invoke-virtual {p1, v1}, Ll/۫۠ۡ;->write(I)V
-
-    .line 51
-    invoke-virtual {p1}, Ll/۫۠ۡ;->ۨ()V
-
-    .line 53
-    iget-object v1, p0, Ll/ܰ᩷᩵;->᩶:Ll/֫ۙۡ;
-
-    check-cast v1, Ll/᩺ܰۡ;
-
-    invoke-interface {v1}, Ll/᩺ܰۡ;->ܿ()Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v4, 0x2
-
-    if-eq v0, v4, :cond_0
-
-    const-string v4, ""
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const-string v4, "s"
+    const/4 v0, 0x0
 
-    goto :goto_0
-
-    :cond_1
-    const-string v4, "t"
-
-    .line 65
-    :goto_0
-    iget-object v5, p0, Ll/ܰ᩷᩵;->֡:Ll/ۤ᩷᩵;
-
-    iget-object v5, v5, Ll/ۤ᩷᩵;->۬:Ll/᩶᩷᩵;
-
-    iget-boolean v5, v5, Ll/᩶᩷᩵;->᩹:Z
-
-    .line 67
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Number;
-
-    .line 68
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v7
-
-    invoke-static {p1, v7, v8}, Ll/ܽ᩷᩵;->ۙ(Ll/۫۠ۡ;J)V
-
-    .line 116
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    invoke-virtual {p1, v4, v3, v7}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
-
-    if-eqz v5, :cond_3
-
-    const/16 v7, 0x8
-
-    if-ne v0, v7, :cond_2
-
-    .line 72
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    invoke-static {p1, v6, v7}, Ll/ܰ᩷᩵;->ۙ(Ll/۫۠ۡ;J)V
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v7, 0x4
-
-    if-ne v0, v7, :cond_3
-
-    .line 74
-    invoke-virtual {v6}, Ljava/lang/Number;->intValue()I
-
-    move-result v6
-
-    .line 75
-    invoke-virtual {p0, p1, v6}, Ll/ܰ᩷᩵;->ۙ(Ll/۫۠ۡ;I)Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    .line 76
-    invoke-static {p1, v6}, Ll/ܰ᩷᩵;->ۨ(Ll/۫۠ۡ;I)V
-
-    :cond_3
-    :goto_2
-    const-string v6, "\n"
-
-    .line 116
-    invoke-virtual {p1, v6, v3, v2}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
-
-    goto :goto_1
-
-    .line 81
-    :cond_4
-    invoke-virtual {p1}, Ll/۫۠ۡ;->ۙ()V
-
-    const-string v0, ".end array-data"
-
-    const/16 v1, 0xf
-
-    .line 116
-    invoke-virtual {p1, v0, v3, v1}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
-
-    return v2
+    return v0
 .end method
 
-.method public final ۚ()V
-    .locals 0
+.method public final previous()Ljava/lang/Object;
+    .locals 2
 
-    return-void
+    .line 108
+    invoke-virtual {p0}, Ll/ۗ۟᩵;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 109
+    invoke-virtual {p0}, Ll/᩹۟᩵;->ۙ()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {p0, v0}, Ll/᩹۟᩵;->᩷(I)V
+
+    invoke-virtual {p0}, Ll/᩹۟᩵;->ۙ()I
+
+    move-result v0
+
+    iget-object v1, p0, Ll/ۗ۟᩵;->ܿ:Ll/ۨ۟᩵;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 108
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    .line 112
+    invoke-virtual {p0}, Ll/᩹۟᩵;->ۙ()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

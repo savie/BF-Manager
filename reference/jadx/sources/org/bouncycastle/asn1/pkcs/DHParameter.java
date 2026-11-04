@@ -9,25 +9,25 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHParameter extends ASN1Object {
     public ASN1Integer g;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public ASN1Integer f77967l;
+    public ASN1Integer f82083l;
     public ASN1Integer p;
 
     public DHParameter(BigInteger bigInteger, BigInteger bigInteger2, int i) {
         this.p = new ASN1Integer(bigInteger);
         this.g = new ASN1Integer(bigInteger2);
-        this.f77967l = i != 0 ? new ASN1Integer(i) : null;
+        this.f82083l = i != 0 ? new ASN1Integer(i) : null;
     }
 
     public DHParameter(ASN1Sequence aSN1Sequence) {
         Enumeration objects = aSN1Sequence.getObjects();
         this.p = ASN1Integer.getInstance(objects.nextElement());
         this.g = ASN1Integer.getInstance(objects.nextElement());
-        this.f77967l = objects.hasMoreElements() ? (ASN1Integer) objects.nextElement() : null;
+        this.f82083l = objects.hasMoreElements() ? (ASN1Integer) objects.nextElement() : null;
     }
 
     public static DHParameter getInstance(Object obj) {
@@ -45,7 +45,7 @@ public class DHParameter extends ASN1Object {
     }
 
     public BigInteger getL() {
-        ASN1Integer aSN1Integer = this.f77967l;
+        ASN1Integer aSN1Integer = this.f82083l;
         if (aSN1Integer == null) {
             return null;
         }
@@ -62,7 +62,7 @@ public class DHParameter extends ASN1Object {
         aSN1EncodableVector.add(this.p);
         aSN1EncodableVector.add(this.g);
         if (getL() != null) {
-            aSN1EncodableVector.add(this.f77967l);
+            aSN1EncodableVector.add(this.f82083l);
         }
         return new DERSequence(aSN1EncodableVector);
     }

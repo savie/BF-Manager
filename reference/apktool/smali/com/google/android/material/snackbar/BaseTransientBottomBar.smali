@@ -122,7 +122,7 @@
     sput-boolean v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->USE_OFFSET_API:Z
 
     .line 249
-    sget v0, Ll/ۖ۟ܶ;->ܰܿ:I
+    sget v0, Ll/ۧ۬ܺ;->᩷ᩳ:I
 
     filled-new-array {v0}, [I
 
@@ -247,7 +247,7 @@
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 391
-    sget p3, Ll/ۚ֫;->ۙ:I
+    sget p3, Ll/᩸۠;->ۙ:I
 
     const/4 p3, 0x1
 
@@ -265,14 +265,14 @@
 
     invoke-direct {p3, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$3;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p2, p3}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨܳ;)V
+    invoke-static {p2, p3}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۖ;)V
 
     .line 413
     new-instance p3, Lcom/google/android/material/snackbar/BaseTransientBottomBar$4;
 
     invoke-direct {p3, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$4;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p2, p3}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p2, p3}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     const-string p2, "accessibility"
 
@@ -286,7 +286,7 @@
     iput-object p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     .line 437
-    sget p2, Ll/ۖ۟ܶ;->᩸ܺ:I
+    sget p2, Ll/ۧ۬ܺ;->ܽܰ:I
 
     const/16 p3, 0xfa
 
@@ -297,7 +297,7 @@
     iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->animationSlideDuration:I
 
     .line 439
-    sget p2, Ll/ۖ۟ܶ;->᩸ܺ:I
+    sget p2, Ll/ۧ۬ܺ;->ܽܰ:I
 
     const/16 p3, 0x96
 
@@ -308,7 +308,7 @@
     iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->animationFadeInDuration:I
 
     .line 441
-    sget p2, Ll/ۖ۟ܶ;->۠ܺ:I
+    sget p2, Ll/ۧ۬ܺ;->ۗܰ:I
 
     const/16 p3, 0x4b
 
@@ -320,7 +320,7 @@
     iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->animationFadeOutDuration:I
 
     .line 444
-    sget p2, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget p2, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sget-object p3, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->DEFAULT_ANIMATION_FADE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -332,7 +332,7 @@
     iput-object p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->animationFadeInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 449
-    sget p2, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget p2, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sget-object p3, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->DEFAULT_ANIMATION_SCALE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -344,7 +344,7 @@
     iput-object p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->animationScaleInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 454
-    sget p2, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget p2, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sget-object p3, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->DEFAULT_ANIMATION_SLIDE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -671,7 +671,7 @@
     .locals 2
 
     .line 1389
-    sget v0, Ll/֨۟ܶ;->᩹ܺ:I
+    sget v0, Ll/ܽ۬ܺ;->ܳܰ:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -832,14 +832,14 @@
     move-result-object v0
 
     .line 516
-    instance-of v1, v0, Ll/ۢܺ;
+    instance-of v1, v0, Ll/ܳ᩶;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Ll/ۢܺ;
+    check-cast v0, Ll/ܳ᩶;
 
     .line 517
-    invoke-virtual {v0}, Ll/ۢܺ;->ۨ()Ll/᩻ܺ;
+    invoke-virtual {v0}, Ll/ܳ᩶;->ۤ()Ll/ۤ᩶;
 
     move-result-object v0
 
@@ -873,7 +873,7 @@
     return-void
 .end method
 
-.method private setUpBehavior(Ll/ۢܺ;)V
+.method private setUpBehavior(Ll/ܳ᩶;)V
     .locals 2
 
     .line 857
@@ -907,7 +907,7 @@
     invoke-virtual {v0, v1}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->setListener(Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;)V
 
     .line 890
-    invoke-virtual {p1, v0}, Ll/ۢܺ;->ۙ(Ll/᩻ܺ;)V
+    invoke-virtual {p1, v0}, Ll/ܳ᩶;->ۙ(Ll/ۤ᩶;)V
 
     .line 893
     invoke-virtual {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->getAnchorView()Landroid/view/View;
@@ -919,7 +919,7 @@
     const/16 v0, 0x50
 
     .line 894
-    iput v0, p1, Ll/ۢܺ;->ۖ:I
+    iput v0, p1, Ll/ܳ᩶;->᩸:I
 
     :cond_2
     return-void
@@ -1123,7 +1123,7 @@
     .line 1010
     iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    invoke-static {v0, v1}, Ll/ۚ֫;->ۨ(ILandroid/view/View;)V
+    invoke-static {v0, v1}, Ll/᩸۠;->ۤ(ILandroid/view/View;)V
 
     goto :goto_0
 
@@ -1585,12 +1585,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Ll/ܶ۟ܶ;->ᩴܰ:I
+    sget v0, Ll/ۨ۬ܺ;->᩹᩷:I
 
     return v0
 
     :cond_0
-    sget v0, Ll/ܶ۟ܶ;->֫:I
+    sget v0, Ll/ۨ۬ܺ;->۠:I
 
     return v0
 .end method
@@ -1744,7 +1744,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ll/ܶۛۘ;->ۙ(Landroid/graphics/Insets;)I
+    invoke-static {v0}, Ll/᩻ۗ᩹;->ۙ(Landroid/graphics/Insets;)I
 
     move-result v0
 
@@ -1957,7 +1957,7 @@
     const-string v1, "Unable to find anchor view with id: "
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2118,14 +2118,14 @@
     move-result-object v0
 
     .line 779
-    instance-of v1, v0, Ll/ۢܺ;
+    instance-of v1, v0, Ll/ܳ᩶;
 
     if-eqz v1, :cond_0
 
     .line 780
-    check-cast v0, Ll/ۢܺ;
+    check-cast v0, Ll/ܳ᩶;
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->setUpBehavior(Ll/ۢܺ;)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->setUpBehavior(Ll/ܳ᩶;)V
 
     .line 783
     :cond_0
@@ -2149,7 +2149,7 @@
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z

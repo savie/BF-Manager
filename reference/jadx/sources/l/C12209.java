@@ -1,21 +1,33 @@
 package l;
 
-import java.util.Date;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.۫ۚ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: G851 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C12209 implements InterfaceC20592 {
-    public final String toString() {
-        return "DefaultDateTypeAdapter#DEFAULT_STYLE_FACTORY";
+/* JADX INFO: renamed from: l.ۨ۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q75G */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12209 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f39238;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f39239;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f39240;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f39241;
+
+    public C12209(JSONObject jSONObject) {
+        this.f39239 = C21160.m48263(jSONObject, "sourceVirtualAddress", -1L);
+        this.f39238 = jSONObject.getString("flowKind", "");
+        this.f39241 = C21160.m48263(jSONObject, "targetVirtualAddress", -1L);
+        this.f39240 = jSONObject.getString("reason", "");
     }
 
-    @Override // l.InterfaceC20592
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7186 mo5183(C6044 c6044, C11730 c11730) {
-        if (c11730.m29316() == Date.class) {
-            return new C10798(0);
-        }
-        return null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C12209 m30482(JSONObject jSONObject) {
+        return new C12209(jSONObject);
     }
 }

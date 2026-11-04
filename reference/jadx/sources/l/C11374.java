@@ -1,22 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ֨ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z8VY */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11374 {
+/* JADX INFO: renamed from: l.ۧۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G5OY */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11374 extends AbstractC16113 implements InterfaceC5431, InterfaceC21839 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f38356;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public InterfaceC22759 f35801;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f38357;
+    @Override // l.InterfaceC10650
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo4171() {
+        return 9;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f38358;
+    public C11374(InterfaceC22759 interfaceC22759) {
+        this.f35801 = interfaceC22759;
+    }
 
-    public C11374(int i, int i2, int i3) {
-        this.f38357 = i;
-        this.f38356 = i2;
-        this.f38358 = i3;
+    @Override // l.InterfaceC5431
+    /* JADX INFO: renamed from: ۚ */
+    public final String mo16161() {
+        InterfaceC22759 interfaceC22759 = this.f35801;
+        if (interfaceC22759 == null) {
+            return null;
+        }
+        return interfaceC22759.getString();
+    }
+
+    @Override // l.InterfaceC5431
+    /* JADX INFO: renamed from: ᩷ */
+    public final InterfaceC22759 mo16162() {
+        return this.f35801;
+    }
+
+    @Override // l.InterfaceC21839
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2770(C8850 c8850) {
+        InterfaceC22759 interfaceC22759 = this.f35801;
+        if (interfaceC22759 != null) {
+            this.f35801 = c8850.m23719(interfaceC22759.getString());
+        }
     }
 }

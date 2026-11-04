@@ -1,41 +1,43 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.ۛ᩹۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 577G */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6349 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m17455() {
-        return C4969.m13777(JSON.object(), "No tool-specific diagnostics.");
-    }
+/* JADX INFO: renamed from: l.ۛۧۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q9M2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C6349 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONArray m17454(JSONArray jSONArray) {
-        JSONArray jSONArrayArray = JSON.array();
-        if (jSONArray != null) {
-            Iterator it = jSONArray.iterator();
-            while (it.hasNext()) {
-                JSONObject jSONObjectAsObject = ((JSONValue) it.next()).asObject();
-                JSONValue jSONValue = jSONObjectAsObject.get("line");
-                JSONValue jSONValue2 = jSONObjectAsObject.get("column");
-                jSONArrayArray.add(JSON.object().add("locator", m17456(jSONObjectAsObject)).add("className", jSONObjectAsObject.getString("className", null)).add("errorCode", jSONObjectAsObject.getString("errorCode", null)).add("message", jSONObjectAsObject.getString("message", null)).add("line", (jSONValue == null || jSONValue.isNull()) ? JSON.NULL : JSON.value(jSONObjectAsObject.getInt("line", -1))).add("column", (jSONValue2 == null || jSONValue2.isNull()) ? JSON.NULL : JSON.value(jSONObjectAsObject.getInt("column", -1))));
-            }
+    public static final /* synthetic */ int[] f21476;
+
+    static {
+        int[] iArr = new int[EnumC9330.values().length];
+        try {
+            iArr[EnumC9330.ON_CREATE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        return jSONArrayArray;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONValue m17456(JSONObject jSONObject) {
-        JSONValue jSONValue = jSONObject.get("locator");
-        if (jSONValue != null && !jSONValue.isNull()) {
-            return C10413.m26320(jSONValue);
+        try {
+            iArr[EnumC9330.ON_START.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        return C17638.m41088(jSONObject.getString("targetType", null), jSONObject.getString("target", null));
+        try {
+            iArr[EnumC9330.ON_RESUME.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            iArr[EnumC9330.ON_PAUSE.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            iArr[EnumC9330.ON_STOP.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            iArr[EnumC9330.ON_DESTROY.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            iArr[EnumC9330.ON_ANY.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        f21476 = iArr;
     }
 }

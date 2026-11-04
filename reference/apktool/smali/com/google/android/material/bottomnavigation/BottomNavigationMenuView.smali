@@ -52,7 +52,7 @@
     move-result-object p1
 
     .line 59
-    sget v0, Ll/֨۟ܶ;->ۗܰ:I
+    sget v0, Ll/ܽ۬ܺ;->۬᩷:I
 
     .line 60
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -62,7 +62,7 @@
     iput v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMaxWidth:I
 
     .line 61
-    sget v0, Ll/֨۟ܶ;->ۙۨ:I
+    sget v0, Ll/ܽ۬ܺ;->ۙۤ:I
 
     .line 62
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -72,7 +72,7 @@
     iput v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMinWidth:I
 
     .line 63
-    sget v0, Ll/֨۟ܶ;->ۛܰ:I
+    sget v0, Ll/ܽ۬ܺ;->ۢ᩷:I
 
     .line 64
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -82,7 +82,7 @@
     iput v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->activeItemMaxWidth:I
 
     .line 65
-    sget v0, Ll/֨۟ܶ;->ۧܰ:I
+    sget v0, Ll/ܽ۬ܺ;->֨᩷:I
 
     .line 66
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -155,7 +155,7 @@
 
     .line 161
     :cond_0
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
@@ -210,7 +210,7 @@
     .locals 11
 
     .line 72
-    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getMenu()Ll/۫۬;
+    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getMenu()Ll/ۢۚ;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
     move-result p1
 
     .line 75
-    invoke-virtual {v0}, Ll/۫۬;->getVisibleItems()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ll/ۢۚ;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v0
 

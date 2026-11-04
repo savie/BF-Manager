@@ -1,30 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ֨۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4798 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5022 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f17469;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Integer f17470;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f17471;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f17472;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f17473;
-
-    public C5022(String str, String str2, boolean z, String str3, Integer num) {
-        this.f17472 = str;
-        this.f17473 = str2;
-        this.f17469 = z;
-        this.f17471 = str3;
-        this.f17470 = num;
+/* JADX INFO: renamed from: l.ۙܺ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6HM */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5022 extends AbstractC15462 {
+    @Override // l.AbstractC15462
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3186(C11975 c11975, int i, C12479 c12479) {
+        c11975.m30061()[0] = AbstractC15462.m37018(i);
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ASN1TaggedObjectParser extends ASN1Encodable, InMemoryRepresentable {
     int getTagClass();
 

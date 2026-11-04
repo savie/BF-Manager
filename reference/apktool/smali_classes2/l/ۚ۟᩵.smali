@@ -1,36 +1,24 @@
 .class public final Ll/ۚ۟᩵;
 .super Ljava/lang/Object;
-.source "M7S7"
+.source "NAYZ"
 
 
-# instance fields
-.field public final ۖ:I
-
-.field public final ۙ:I
-
-.field public final ۨ:I
-
-.field public final ܰ:I
+# static fields
+.field public static final ۙ:Ll/ۚ۟᩵;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 488
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    new-instance v0, Ll/ۚ۟᩵;
 
-    .line 490
-    iput p1, p0, Ll/ۚ۟᩵;->ۙ:I
+    .line 90
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 491
-    iput p2, p0, Ll/ۚ۟᩵;->ܰ:I
-
-    .line 492
-    iput p3, p0, Ll/ۚ۟᩵;->ۨ:I
-
-    .line 493
-    iput p4, p0, Ll/ۚ۟᩵;->ۖ:I
+    .line 0
+    sput-object v0, Ll/ۚ۟᩵;->ۙ:Ll/ۚ۟᩵;
 
     return-void
 .end method

@@ -1,74 +1,78 @@
-.class public final Ll/ܰۗ᩹;
+.class public final synthetic Ll/ܰۗ᩹;
 .super Ljava/lang/Object;
-.source "E2B3"
-
-# interfaces
-.implements Ll/۠ܿ᩹;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۨۗ᩹;
+.source "C6L"
 
 
 # direct methods
-.method public constructor <init>(Ll/ۨۗ᩹;)V
+.method public static ۙ(Ll/۠ۗ᩹;)Ljava/lang/Character;
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 130
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 46
+    invoke-interface {p0}, Ll/᩶ۗ᩹;->᩵᩷()C
 
-    iput-object p1, p0, Ll/ܰۗ᩹;->ܺ:Ll/ۨۗ᩹;
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۙ(Ll/᩶ۗ᩹;Ljava/util/function/Consumer;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 94
+    instance-of v0, p1, Ll/ۨۗ᩹;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/ۨۗ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ll/ۛۗ᩹;
+
+    invoke-direct {v0, p1}, Ll/ۛۗ᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/᩶ۗ᩹;->᩷(Ll/ۨۗ᩹;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ֨()Z
+.method public static ۙ(Ll/᩶ۗ᩹;Ll/ۨۗ᩹;)V
     .locals 1
 
-    .line 138
-    iget-object v0, p0, Ll/ܰۗ᩹;->ܺ:Ll/ۨۗ᩹;
+    .line 62
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 301
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->֨()Z
+    .line 63
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final ۗ()V
-    .locals 2
+    .line 64
+    invoke-interface {p0}, Ll/᩶ۗ᩹;->᩵᩷()C
 
-    .line 133
-    iget-object v0, p0, Ll/ܰۗ᩹;->ܺ:Ll/ۨۗ᩹;
+    move-result v0
 
-    iget-object v1, v0, Ll/ۨۗ᩹;->ۛۙ:Ll/᩷ܿ᩹;
+    invoke-interface {p1, v0}, Ll/ۨۗ᩹;->ۤ(C)V
 
-    invoke-virtual {v0, v1}, Ll/֡᩷ۜ;->ܰ(Ll/ۘۛ᩹;)V
+    goto :goto_0
 
-    return-void
-.end method
-
-.method public final ۙ()V
-    .locals 1
-
-    .line 143
-    iget-object v0, p0, Ll/ܰۗ᩹;->ܺ:Ll/ۨۗ᩹;
-
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->cancel()V
-
-    return-void
-.end method
-
-.method public final ܰ(Ljava/lang/String;)V
-    .locals 1
-
-    .line 148
-    iget-object v0, p0, Ll/ܰۗ᩹;->ܺ:Ll/ۨۗ᩹;
-
-    invoke-virtual {v0, p1}, Ll/֡᩷ۜ;->ܰ(Ljava/lang/CharSequence;)V
-
+    :cond_0
     return-void
 .end method

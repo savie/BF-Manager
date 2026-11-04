@@ -1,41 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۖۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97F2 */
+import android.widget.CompoundButton;
+
+/* JADX INFO: renamed from: l.ᩴܳ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
 /* JADX INFO: loaded from: classes5.dex */
-public class C19879 extends C9979 implements Comparable {
-    /* JADX INFO: renamed from: ۚ */
-    public boolean mo25268() {
-        return false;
+public final /* synthetic */ class C19879 implements CompoundButton.OnCheckedChangeListener {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f63950;
+
+    public /* synthetic */ C19879(int i) {
+        this.f63950 = i;
     }
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return ((String) this.f43680).compareTo((String) ((C19879) obj).f43680);
-    }
-
-    public C19879(int i, String str) {
-        super(Integer.valueOf(i), str);
-    }
-
-    @Override // l.C13111
-    public int hashCode() {
-        return (((String) this.f43680).hashCode() * 11) + m25242();
-    }
-
-    @Override // l.C13111
-    public boolean equals(Object obj) {
-        if (obj instanceof C19879) {
-            return ((String) this.f43680).equals((String) ((C19879) obj).f43680);
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        switch (this.f63950) {
+            case 0:
+                int i = ActivityC7135.f23493;
+                C6421.m18184(ApplicationC17729.f58258, "vpapn", z);
+                break;
+            default:
+                int i2 = ServiceC10702.f33975;
+                C22637.m51034(z);
+                break;
         }
-        return false;
-    }
-
-    @Override // l.C13111
-    public String toString() {
-        if (!C13612.m33285(EnumC4438.CP_INDEX)) {
-            return (String) this.f43680;
-        }
-        return String.format("#%-4d /* %s */", Integer.valueOf(m25242()), (String) this.f43680);
     }
 }

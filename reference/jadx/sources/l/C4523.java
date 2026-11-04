@@ -1,13 +1,12 @@
 package l;
 
-import java.util.function.ToIntFunction;
-
-/* JADX INFO: renamed from: l.ۙ۠۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: W6LP */
+/* JADX INFO: renamed from: l.ۘ᩻᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZAV2 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C4523 implements ToIntFunction {
-    @Override // java.util.function.ToIntFunction
-    public final int applyAsInt(Object obj) {
-        return ((C5229) obj).f18131.length();
+public final class C4523 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 25;
     }
 }

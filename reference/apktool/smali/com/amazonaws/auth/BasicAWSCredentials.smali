@@ -9,7 +9,7 @@
 # instance fields
 .field public final ۙ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/lang/String;
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     iput-object p1, p0, Lcom/amazonaws/auth/BasicAWSCredentials;->ۙ:Ljava/lang/String;
 
     .line 47
-    iput-object p2, p0, Lcom/amazonaws/auth/BasicAWSCredentials;->ܰ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/amazonaws/auth/BasicAWSCredentials;->᩷:Ljava/lang/String;
 
     return-void
 
@@ -63,11 +63,11 @@
     return-object v0
 .end method
 
-.method public final ۨ()Ljava/lang/String;
+.method public final ۤ()Ljava/lang/String;
     .locals 1
 
     .line 65
-    iget-object v0, p0, Lcom/amazonaws/auth/BasicAWSCredentials;->ܰ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/auth/BasicAWSCredentials;->᩷:Ljava/lang/String;
 
     return-object v0
 .end method

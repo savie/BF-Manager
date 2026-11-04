@@ -4,7 +4,7 @@ import java.security.cert.CertStoreParameters;
 import java.security.cert.LDAPCertStoreParameters;
 import org.bouncycastle.x509.X509StoreParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509LDAPCertStoreParameters implements X509StoreParameters, CertStoreParameters {
     public String aACertificateAttribute;
     public String aACertificateSubjectAttributeName;

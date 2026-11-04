@@ -27,9 +27,9 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import l.C12557;
-import l.C3012;
-import l.C9013;
+import l.C10646;
+import l.C11958;
+import l.C3188;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -65,7 +65,7 @@ import org.bouncycastle.jce.exception.ExtCertPathValidatorException;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RFC3280CertPathUtilities {
     public static final String ANY_POLICY = "2.5.29.32.0";
     public static final int CRL_SIGN = 6;
@@ -1125,10 +1125,10 @@ public class RFC3280CertPathUtilities {
                 }
                 CertStatus certStatus5 = certStatus;
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
-                simpleDateFormat.setTimeZone(C12557.getTimeZone(UtcDates.UTC));
-                StringBuilder sbM8976 = C3012.m8976("Certificate revocation after " + simpleDateFormat.format(certStatus5.getRevocationDate()), ", reason: ");
-                sbM8976.append(crlReasons[certStatus5.getCertStatus()]);
-                throw new AnnotatedException(sbM8976.toString());
+                simpleDateFormat.setTimeZone(C10646.getTimeZone(UtcDates.UTC));
+                StringBuilder sbM10405 = C3188.m10405("Certificate revocation after " + simpleDateFormat.format(certStatus5.getRevocationDate()), ", reason: ");
+                sbM10405.append(crlReasons[certStatus5.getCertStatus()]);
+                throw new AnnotatedException(sbM10405.toString());
             } catch (AnnotatedException e8) {
                 throw new AnnotatedException("No additional CRL locations could be decoded from CRL distribution point extension.", e8);
             }
@@ -1170,7 +1170,7 @@ public class RFC3280CertPathUtilities {
                 throw new AnnotatedException("Cannot find matching CRL issuer for certificate.");
             }
         } catch (IOException e2) {
-            throw new AnnotatedException(C9013.m23329(e2, new StringBuilder("Exception encoding CRL issuer: ")), e2);
+            throw new AnnotatedException(C11958.m29932(e2, new StringBuilder("Exception encoding CRL issuer: ")), e2);
         }
     }
 }

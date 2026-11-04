@@ -1,47 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.᩵᩶ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1BEY */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20813 extends C19402 {
+public final class C20813 extends AbstractC3659 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C3837 f67649;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f66648;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f67650;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Object f66649;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC13717 f67651;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C5290 f67652;
-
-    public C20813(C3837 c3837, C0619 c0619, C5290 c5290) {
-        super(c3837);
-        this.f67649 = c3837;
-        this.f67651 = c0619.f4704;
-        this.f67652 = c5290;
-        this.f67650 = c3837.f14305;
-        int unused = c5290.f18302;
+    @Override // l.AbstractC3659
+    /* JADX INFO: renamed from: ᩹ */
+    public final int mo2678() {
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C20813 m46803(C23595 c23595) {
-        C3837 c3837;
-        int i;
-        if (!(c23595 instanceof C3837) || (i = (c3837 = (C3837) c23595).f14305) <= 0 || i != c3837.f14307) {
-            return null;
-        }
-        C23595 c23596 = c3837.f14308;
-        if (!(c23596 instanceof C0619)) {
-            return null;
-        }
-        C0619 c0619 = (C0619) c23596;
-        C5290 c5290M14661 = C5290.m14661(c3837.f76439, c0619.f4704, i);
-        if (c5290M14661 == null) {
-            return null;
-        }
-        return new C20813(c3837, c0619, c5290M14661);
+    public C20813(EnumC14757 enumC14757, int i, Object obj, int i2, int i3) {
+        super(enumC14757, i, 0, 0, 0L);
+        this.f66649 = obj;
+        this.f66648 = i3;
+    }
+
+    public C20813(EnumC14757 enumC14757, int i, byte[] bArr) {
+        this(enumC14757, i, bArr, bArr.length, 1);
+    }
+
+    public C20813(EnumC14757 enumC14757, int i, short[] sArr) {
+        this(enumC14757, i, sArr, sArr.length, 2);
+    }
+
+    public C20813(EnumC14757 enumC14757, int i, int[] iArr) {
+        this(enumC14757, i, iArr, iArr.length, 4);
+    }
+
+    public C20813(EnumC14757 enumC14757, int i, long[] jArr) {
+        this(enumC14757, i, jArr, jArr.length, 8);
+    }
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final short m47606() {
+        return (short) this.f66648;
+    }
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final Object m47605() {
+        return this.f66649;
     }
 }

@@ -1,28 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ᩹۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 777Z */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9878 {
+import java.nio.file.attribute.FileStoreAttributeView;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f33725;
+/* JADX INFO: renamed from: l.ۢۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C9878 implements InterfaceC1676 {
+    public final /* synthetic */ FileStoreAttributeView a;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Long f33726;
-
-    public C9878(String str, Long l2) {
-        this.f33725 = str;
-        this.f33726 = l2;
+    public final /* synthetic */ boolean equals(Object obj) {
+        FileStoreAttributeView fileStoreAttributeView = this.a;
+        if (obj instanceof C9878) {
+            obj = ((C9878) obj).a;
+        }
+        return fileStoreAttributeView.equals(obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C9878 m24972(C12107 c12107) {
-        return new C9878(c12107.getName(), Long.valueOf(c12107.getSize()));
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C9878 m24971(String str, Long l2) {
-        return new C9878(str, l2);
+    @Override // l.InterfaceC1676
+    public final /* synthetic */ String name() {
+        throw null;
     }
 }

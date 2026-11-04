@@ -1,150 +1,385 @@
 package l;
 
-import com.alipay.sdk.m.o.b;
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.SystemClock;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.ImageView;
 
-/* JADX INFO: renamed from: l.ۘۗ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: G4FN */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3667 implements InterfaceC11617 {
+/* JADX INFO: renamed from: l.ۗ᩶᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: E5ZZ */
+/* JADX INFO: loaded from: classes3.dex */
+public class C3667 extends C15688 {
+
+    /* JADX INFO: renamed from: ܳۙ, reason: not valid java name and contains not printable characters */
+    public static final ImageView.ScaleType f12584 = ImageView.ScaleType.CENTER_CROP;
+
+    /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
+    public static final Bitmap.Config f12585 = Bitmap.Config.ARGB_8888;
+
+    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f12586 = 0;
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f13416;
+    public float f12587;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C15715 f13417;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public float f12588;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C5079 f13418;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public int f12589;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C22719 f13419;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public long f12590;
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public boolean f12591;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final RectF f12592;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public boolean f12593;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final RectF f12594;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public boolean f12595;
+
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public float f12596;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final Matrix f12597;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Bitmap f12598;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C16627 f13420;
+    public final Paint f12599;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public ColorFilter f12600;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public AbstractC0327 f13421;
+    public Canvas f12601;
 
-    public C3667(C5079 c5079, C22719 c22719) {
-        this.f13418 = c5079;
-        this.f13419 = c22719;
-        this.f13417 = new C15715(c5079);
-        C0845 c0845 = new C0845(this);
-        this.f13420 = c0845;
-        long j = c5079.f17695;
-        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
-        c0845.mo9654(j);
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12602;
+
+    public C3667(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C3667 m10826(C5079 c5079, C22719 c22719) {
-        C3667 c3667 = new C3667(c5079, c22719);
-        ((C15851) c5079.f17705).getClass();
-        c3667.f13421 = AbstractC0327.f1723;
-        return c3667;
+    public C3667(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f12594 = new RectF();
+        this.f12592 = new RectF();
+        this.f12597 = new Matrix();
+        Paint paint = new Paint();
+        this.f12599 = paint;
+        Paint paint2 = new Paint();
+        Paint paint3 = new Paint();
+        this.f12589 = 255;
+        this.f12602 = false;
+        this.f12596 = 0.0f;
+        this.f12593 = true;
+        super.setScaleType(f12584);
+        paint.setAntiAlias(true);
+        paint.setDither(true);
+        paint.setFilterBitmap(true);
+        paint.setAlpha(this.f12589);
+        paint.setColorFilter(this.f12600);
+        paint2.setStyle(Paint.Style.STROKE);
+        paint2.setAntiAlias(true);
+        paint2.setColor(-16777216);
+        paint2.setStrokeWidth(0);
+        paint3.setStyle(Paint.Style.FILL);
+        paint3.setAntiAlias(true);
+        paint3.setColor(0);
+        setOutlineProvider(new C23805(this));
     }
 
-    @Override // l.InterfaceC11617
-    public final C18485 execute() {
-        synchronized (this) {
-            if (this.f13416) {
-                throw new IllegalStateException("Already Executed");
-            }
-            this.f13416 = true;
+    @Override // android.widget.ImageView
+    public final void setScaleType(ImageView.ScaleType scaleType) {
+        if (scaleType == f12584) {
+            return;
         }
-        this.f13417.m37423(C18743.m43294().mo11395());
-        this.f13420.m39092();
-        this.f13421.getClass();
-        try {
-            try {
-                this.f13418.f17711.m22916(this);
-                C18485 c18485M10829 = m10829();
-                if (c18485M10829 == null) {
-                    throw new IOException("Canceled");
+        throw new IllegalArgumentException("ScaleType " + scaleType + " not supported.");
+    }
+
+    @Override // android.widget.ImageView
+    public final void setAdjustViewBounds(boolean z) {
+        if (z) {
+            throw new IllegalArgumentException("adjustViewBounds not supported.");
+        }
+    }
+
+    @Override // android.widget.ImageView, android.view.View
+    public final void onDraw(Canvas canvas) {
+        Drawable drawable = getDrawable();
+        C21331 c21331 = drawable instanceof C21331 ? (C21331) drawable : null;
+        float f = this.f12596;
+        if (this.f12602) {
+            long jUptimeMillis = SystemClock.uptimeMillis();
+            long j = this.f12590;
+            if (jUptimeMillis >= j) {
+                f += c21331 == null ? 0.5f : 1.25f;
+                if (f >= 360.0f) {
+                    f -= 360.0f;
                 }
-                this.f13418.f17711.m22919(this);
-                return c18485M10829;
-            } catch (IOException e) {
-                IOException iOExceptionM10828 = m10828(e);
-                this.f13421.getClass();
-                throw iOExceptionM10828;
+                this.f12596 = f;
+                this.f12590 = jUptimeMillis + 15;
+                postInvalidateDelayed(15L);
+            } else {
+                postInvalidateDelayed(j - jUptimeMillis);
             }
-        } catch (Throwable th) {
-            this.f13418.f17711.m22919(this);
-            throw th;
         }
-        this.f13418.f17711.m22919(this);
-        throw th;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final IOException m10828(IOException iOException) {
-        if (!this.f13420.m39094()) {
-            return iOException;
+        float f2 = f;
+        if (c21331 != null) {
+            c21331.m48558(canvas, getWidth(), getHeight(), f2, true, C3296.m10878());
+            return;
         }
-        InterruptedIOException interruptedIOException = new InterruptedIOException(b.n0);
-        if (iOException != null) {
-            interruptedIOException.initCause(iOException);
+        if (f2 != 0.0f) {
+            canvas.rotate(f2, getWidth() / 2.0f, getHeight() / 2.0f);
         }
-        return interruptedIOException;
-    }
-
-    @Override // l.InterfaceC11617
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo10830(InterfaceC2443 interfaceC2443) {
-        synchronized (this) {
-            if (this.f13416) {
-                throw new IllegalStateException("Already Executed");
+        if (this.f12598 != null) {
+            if (this.f12595 && this.f12601 != null) {
+                this.f12595 = false;
+                Drawable drawable2 = getDrawable();
+                drawable2.setBounds(0, 0, this.f12601.getWidth(), this.f12601.getHeight());
+                drawable2.draw(this.f12601);
             }
-            this.f13416 = true;
+            boolean z = this.f12591;
+            Paint paint = this.f12599;
+            if (z) {
+                this.f12591 = false;
+                Bitmap bitmap = this.f12598;
+                Shader.TileMode tileMode = Shader.TileMode.CLAMP;
+                BitmapShader bitmapShader = new BitmapShader(bitmap, tileMode, tileMode);
+                bitmapShader.setLocalMatrix(this.f12597);
+                paint.setShader(bitmapShader);
+            }
+            RectF rectF = this.f12594;
+            canvas.drawCircle(rectF.centerX(), rectF.centerY(), this.f12588, paint);
         }
-        this.f13417.m37423(C18743.m43294().mo11395());
-        this.f13421.getClass();
-        this.f13418.f17711.m22917(new C12841(this, interfaceC2443));
     }
 
-    @Override // l.InterfaceC11617
-    public final void cancel() {
-        this.f13417.m37422();
+    @Override // android.widget.ImageView, android.view.View, android.graphics.drawable.Drawable.Callback
+    public final void invalidateDrawable(Drawable drawable) {
+        this.f12595 = true;
+        invalidate();
     }
 
-    @Override // l.InterfaceC11617
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean mo10827() {
-        return this.f13417.m37424();
+    @Override // android.view.View
+    public final void onSizeChanged(int i, int i2, int i3, int i4) {
+        super.onSizeChanged(i, i2, i3, i4);
+        m11920();
+        invalidate();
     }
 
-    public final Object clone() {
-        return m10826(this.f13418, this.f13419);
+    @Override // android.view.View
+    public final void setPadding(int i, int i2, int i3, int i4) {
+        super.setPadding(i, i2, i3, i4);
+        m11920();
+        invalidate();
+    }
+
+    @Override // android.view.View
+    public final void setPaddingRelative(int i, int i2, int i3, int i4) {
+        super.setPaddingRelative(i, i2, i3, i4);
+        m11920();
+        invalidate();
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageBitmap(Bitmap bitmap) {
+        super.setImageBitmap(bitmap);
+        m11921();
+        invalidate();
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageDrawable(Drawable drawable) {
+        super.setImageDrawable(drawable);
+        m11921();
+        invalidate();
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageResource(int i) {
+        super.setImageResource(i);
+        m11921();
+        invalidate();
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageURI(Uri uri) {
+        super.setImageURI(uri);
+        m11921();
+        invalidate();
+    }
+
+    @Override // android.widget.ImageView
+    public final void setImageAlpha(int i) {
+        int i2 = i & 255;
+        if (i2 == this.f12589) {
+            return;
+        }
+        this.f12589 = i2;
+        if (this.f12593) {
+            this.f12599.setAlpha(i2);
+            invalidate();
+        }
+    }
+
+    @Override // android.widget.ImageView
+    public final int getImageAlpha() {
+        return this.f12589;
+    }
+
+    @Override // android.widget.ImageView
+    public final void setColorFilter(ColorFilter colorFilter) {
+        if (colorFilter == this.f12600) {
+            return;
+        }
+        this.f12600 = colorFilter;
+        if (this.f12593) {
+            this.f12599.setColorFilter(colorFilter);
+            invalidate();
+        }
+    }
+
+    @Override // android.widget.ImageView
+    public final ColorFilter getColorFilter() {
+        return this.f12600;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private void m11921() {
+        Bitmap bitmap;
+        Bitmap bitmapCreateBitmap;
+        Drawable drawable = getDrawable();
+        if (drawable == null) {
+            bitmap = null;
+        } else if (drawable instanceof BitmapDrawable) {
+            bitmap = ((BitmapDrawable) drawable).getBitmap();
+        } else {
+            try {
+                boolean z = drawable instanceof ColorDrawable;
+                Bitmap.Config config = f12585;
+                if (z) {
+                    bitmapCreateBitmap = Bitmap.createBitmap(2, 2, config);
+                } else {
+                    bitmapCreateBitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), config);
+                }
+                Canvas canvas = new Canvas(bitmapCreateBitmap);
+                drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+                drawable.draw(canvas);
+                bitmap = bitmapCreateBitmap;
+            } catch (Exception unused) {
+                bitmap = null;
+            }
+        }
+        this.f12598 = bitmap;
+        if (bitmap != null && bitmap.isMutable()) {
+            this.f12601 = new Canvas(this.f12598);
+        } else {
+            this.f12601 = null;
+        }
+        if (this.f12593) {
+            if (this.f12598 != null) {
+                m11919();
+            } else {
+                this.f12599.setShader(null);
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private void m11920() {
+        int width = (getWidth() - getPaddingLeft()) - getPaddingRight();
+        int height = (getHeight() - getPaddingTop()) - getPaddingBottom();
+        int iMin = Math.min(width, height);
+        float paddingLeft = ((width - iMin) / 2.0f) + getPaddingLeft();
+        float paddingTop = ((height - iMin) / 2.0f) + getPaddingTop();
+        float f = iMin;
+        RectF rectF = new RectF(paddingLeft, paddingTop, paddingLeft + f, f + paddingTop);
+        RectF rectF2 = this.f12592;
+        rectF2.set(rectF);
+        float f2 = 0;
+        this.f12587 = Math.min((rectF2.height() - f2) / 2.0f, (rectF2.width() - f2) / 2.0f);
+        RectF rectF3 = this.f12594;
+        rectF3.set(rectF2);
+        this.f12588 = Math.min(rectF3.height() / 2.0f, rectF3.width() / 2.0f);
+        m11919();
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    private void m11919() {
+        float fWidth;
+        float fHeight;
+        if (this.f12598 == null) {
+            return;
+        }
+        Matrix matrix = this.f12597;
+        matrix.set(null);
+        int height = this.f12598.getHeight();
+        float width = this.f12598.getWidth();
+        RectF rectF = this.f12594;
+        float f = height;
+        float fWidth2 = 0.0f;
+        if (rectF.height() * width > rectF.width() * f) {
+            fWidth = rectF.height() / f;
+            fWidth2 = (rectF.width() - (width * fWidth)) * 0.5f;
+            fHeight = 0.0f;
+        } else {
+            fWidth = rectF.width() / width;
+            fHeight = (rectF.height() - (f * fWidth)) * 0.5f;
+        }
+        matrix.setScale(fWidth, fWidth);
+        matrix.postTranslate(((int) (fWidth2 + 0.5f)) + rectF.left, ((int) (fHeight + 0.5f)) + rectF.top);
+        this.f12591 = true;
+    }
+
+    @Override // android.view.View
+    public final boolean onTouchEvent(MotionEvent motionEvent) {
+        float x = motionEvent.getX();
+        float y = motionEvent.getY();
+        RectF rectF = this.f12592;
+        if (!rectF.isEmpty()) {
+            if (Math.pow(y - rectF.centerY(), 2.0d) + Math.pow(x - rectF.centerX(), 2.0d) > Math.pow(this.f12587, 2.0d)) {
+                return false;
+            }
+        }
+        return super.onTouchEvent(motionEvent);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m11923() {
+        this.f12596 = 0.0f;
+        this.f12590 = SystemClock.uptimeMillis() + 200;
+        invalidate();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18485 m10829() throws IOException {
-        ArrayList arrayList = new ArrayList();
-        C5079 c5079 = this.f13418;
-        arrayList.addAll(c5079.f17707);
-        C15715 c15715 = this.f13417;
-        arrayList.add(c15715);
-        arrayList.add(new C21358(c5079.f17719));
-        C2921 c2921 = c5079.f17716;
-        arrayList.add(new C12136(c2921 != null ? c2921.f10982 : null));
-        arrayList.add(new C5130(c5079));
-        arrayList.addAll(c5079.f17698);
-        arrayList.add(new C18536());
-        AbstractC0327 abstractC0327 = this.f13421;
-        int i = c5079.f17715;
-        int i2 = c5079.f17709;
-        int i3 = c5079.f17712;
-        C22719 c22719 = this.f13419;
-        C18485 c18485M19370 = new C7247(arrayList, null, null, null, 0, c22719, this, abstractC0327, i, i2, i3).m19370(c22719);
-        if (!c15715.m37424()) {
-            return c18485M19370;
+    public final void m11922(boolean z) {
+        this.f12602 = z;
+        if (z) {
+            invalidate();
         }
-        C0140.m1231(c18485M19370);
-        throw new IOException("Canceled");
     }
 }

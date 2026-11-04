@@ -1,172 +1,135 @@
 .class public final Ll/ۘ۟ۨ;
 .super Ljava/lang/Object;
-.source "06VH"
+.source "X7RR"
 
 
 # instance fields
-.field public final ۙ:Ll/۬۟ۨ;
+.field public ۙ:I
 
-.field public final ܰ:I
+.field public final ۤ:Ljava/io/OutputStream;
+
+.field public ᩷:I
 
 
 # direct methods
-.method public constructor <init>(ILl/۬۟ۨ;)V
+.method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 287
+    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 288
-    iput p1, p0, Ll/ۘ۟ۨ;->ܰ:I
-
-    .line 289
-    iput-object p2, p0, Ll/ۘ۟ۨ;->ۙ:Ll/۬۟ۨ;
+    .line 144
+    iput-object p1, p0, Ll/ۘ۟ۨ;->ۤ:Ljava/io/OutputStream;
 
     return-void
 .end method
 
-.method public static ۙ([I[Ljava/lang/Object;IILl/᩻ۡۨ;Ll/᩻ۡۨ;Z)Ll/ۘ۟ۨ;
+
+# virtual methods
+.method public final ۙ()V
     .locals 2
 
-    if-nez p6, :cond_5
+    .line 132
+    iget v0, p0, Ll/ۘ۟ۨ;->᩷:I
 
-    if-eqz p4, :cond_5
+    if-lez v0, :cond_0
 
-    .line 294
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    rsub-int/lit8 v0, v0, 0x8
 
-    move-result-object p6
+    const/4 v1, 0x0
 
-    const-class v0, Ll/᩵ۤۨ;
-
-    if-ne p6, v0, :cond_5
-
-    iget-object p6, p4, Ll/᩻ۡۨ;->ۙ:Ll/᩻ۡۨ;
-
-    if-ne p6, p5, :cond_5
-
-    check-cast p4, Ll/᩵ۤۨ;
-
-    iget p4, p4, Ll/᩵ۤۨ;->ܰ:I
-
-    if-lez p4, :cond_5
-
-    if-ne p2, p3, :cond_5
-
-    aget p3, p0, p2
-
-    const/4 p4, 0x6
-
-    if-eq p3, p4, :cond_0
-
-    goto :goto_2
+    .line 133
+    invoke-virtual {p0, v0, v1}, Ll/ۘ۟ۨ;->ۙ(II)V
 
     :cond_0
-    add-int/lit8 p3, p2, 0x2
+    return-void
+.end method
 
-    .line 297
-    aget p3, p0, p3
+.method public final ۙ(II)V
+    .locals 3
 
-    aget-object p1, p1, p3
+    .line 97
+    iget v0, p0, Ll/ۘ۟ۨ;->᩷:I
 
-    check-cast p1, Ll/۬۟ۨ;
+    .line 98
+    iget v1, p0, Ll/ۘ۟ۨ;->ۙ:I
 
-    .line 298
-    iget-object p3, p1, Ll/۬۟ۨ;->ۙ:[I
+    rsub-int/lit8 v2, p1, 0x20
 
-    if-eqz p3, :cond_5
+    shl-int/2addr p2, v2
 
-    iget-object p4, p1, Ll/۬۟ۨ;->ܰ:[I
+    ushr-int/2addr p2, v0
 
-    if-nez p4, :cond_5
+    or-int/2addr p2, v1
 
-    iget-object p4, p1, Ll/۬۟ۨ;->ۨ:[I
-
-    array-length p4, p4
-
-    const/4 p5, 0x2
-
-    if-ge p4, p5, :cond_1
-
-    goto :goto_2
-
-    .line 299
-    :cond_1
-    array-length p4, p3
-
-    const/4 p5, 0x0
-
-    const/4 p6, 0x0
+    add-int/2addr v0, p1
 
     :goto_0
-    if-ge p6, p4, :cond_3
+    const/16 p1, 0x8
 
-    aget v0, p3, p6
+    if-lt v0, p1, :cond_0
 
-    add-int/lit8 v1, v0, -0x1
+    ushr-int/lit8 p1, p2, 0x18
 
-    and-int/2addr v0, v1
+    .line 102
+    iget-object v1, p0, Ll/ۘ۟ۨ;->ۤ:Ljava/io/OutputStream;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
 
-    goto :goto_2
+    shl-int/lit8 p2, p2, 0x8
 
-    :cond_2
-    add-int/lit8 p6, p6, 0x1
+    add-int/lit8 v0, v0, -0x8
 
     goto :goto_0
 
-    .line 303
-    :cond_3
-    :goto_1
-    array-length p3, p0
+    .line 107
+    :cond_0
+    iput p2, p0, Ll/ۘ۟ۨ;->ۙ:I
 
-    if-ge p5, p3, :cond_4
+    .line 108
+    iput v0, p0, Ll/ۘ۟ۨ;->᩷:I
 
-    .line 304
-    aget p3, p0, p5
+    return-void
+.end method
 
-    packed-switch p3, :pswitch_data_0
+.method public final ۙ(Z)V
+    .locals 3
 
-    :pswitch_0
-    goto :goto_2
+    .line 59
+    iget v0, p0, Ll/ۘ۟ۨ;->᩷:I
 
-    :pswitch_1
-    add-int/lit8 p5, p5, 0x8
+    add-int/lit8 v0, v0, 0x1
 
-    goto :goto_1
+    .line 60
+    iget v1, p0, Ll/ۘ۟ۨ;->ۙ:I
 
-    .line 310
-    :cond_4
-    new-instance p0, Ll/ۘ۟ۨ;
+    rsub-int/lit8 v2, v0, 0x20
 
-    invoke-direct {p0, p2, p1}, Ll/ۘ۟ۨ;-><init>(ILl/۬۟ۨ;)V
+    shl-int/2addr p1, v2
 
-    return-object p0
+    or-int/2addr p1, v1
 
-    :cond_5
-    :goto_2
-    const/4 p0, 0x0
+    const/16 v1, 0x8
 
-    return-object p0
+    if-ne v0, v1, :cond_0
 
-    nop
+    ushr-int/lit8 p1, p1, 0x18
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
+    .line 63
+    iget-object v0, p0, Ll/ۘ۟ۨ;->ۤ:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+
+    const/4 v0, 0x0
+
+    const/4 p1, 0x0
+
+    .line 68
+    :cond_0
+    iput p1, p0, Ll/ۘ۟ۨ;->ۙ:I
+
+    .line 69
+    iput v0, p0, Ll/ۘ۟ۨ;->᩷:I
+
+    return-void
 .end method

@@ -1,105 +1,47 @@
 package l;
 
-import java.util.NoSuchElementException;
+import android.os.Bundle;
+import android.os.Message;
+import android.os.Messenger;
+import android.os.RemoteException;
+import java.util.ArrayList;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩶ۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5SO */
-/* JADX INFO: loaded from: classes4.dex */
-public class C19904 {
+/* JADX INFO: renamed from: l.ᩴܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6AW */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19904 implements InterfaceC22888 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public C22726 f63803;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Messenger f64055;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16376 f63804;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C22726 f63805;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C22726 f63806;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f63807 = 0;
-
-    public C19904(C16376 c16376) {
-        this.f63804 = c16376;
-        this.f63803 = c16376.f52701;
-    }
-
-    public final boolean hasNext() {
-        return this.f63803 != null;
-    }
-
-    public final boolean hasPrevious() {
-        return this.f63806 != null;
-    }
-
-    /* JADX INFO: renamed from: ۨ */
-    public void mo25305() {
-        this.f63803 = this.f63803.m50381();
+    public C19904(Messenger messenger) {
+        this.f64055 = messenger;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22726 m45175() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+    public final void m45831() throws RemoteException {
+        m45830(2, null);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m45832(String str, List list, Bundle bundle) throws RemoteException {
+        Bundle bundle2 = new Bundle();
+        bundle2.putString("data_media_item_id", str);
+        bundle2.putBundle("data_options", bundle);
+        bundle2.putBundle("data_notify_children_changed_options", null);
+        if (list != null) {
+            bundle2.putParcelableArrayList("data_media_item_list", list instanceof ArrayList ? (ArrayList) list : new ArrayList<>(list));
         }
-        C22726 c22726 = this.f63803;
-        this.f63806 = c22726;
-        this.f63805 = c22726;
-        this.f63807++;
-        mo25305();
-        return this.f63805;
+        m45830(3, bundle2);
     }
 
-    /* JADX INFO: renamed from: ۖ */
-    public void mo25304() {
-        this.f63806 = this.f63806.m50387();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22726 m45176() {
-        if (!hasPrevious()) {
-            throw new NoSuchElementException();
-        }
-        C22726 c22726 = this.f63806;
-        this.f63803 = c22726;
-        this.f63805 = c22726;
-        this.f63807--;
-        mo25304();
-        return this.f63805;
-    }
-
-    public final int nextIndex() {
-        return this.f63807;
-    }
-
-    public final int previousIndex() {
-        return this.f63807 - 1;
-    }
-
-    public final void remove() {
-        C22726 c22726 = this.f63805;
-        if (c22726 == null) {
-            throw new IllegalStateException();
-        }
-        if (c22726 == this.f63806) {
-            this.f63807--;
-        }
-        this.f63806 = c22726;
-        this.f63803 = c22726;
-        mo25304();
-        mo25305();
-        this.f63804.mo7436(this.f63805.f18265);
-        this.f63805 = null;
-    }
-
-    public Object next() {
-        return m45175();
-    }
-
-    public Object previous() {
-        return m45176();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m45830(int i, Bundle bundle) throws RemoteException {
+        Message messageObtain = Message.obtain();
+        messageObtain.what = i;
+        messageObtain.arg1 = 2;
+        messageObtain.setData(bundle);
+        this.f64055.send(messageObtain);
     }
 }

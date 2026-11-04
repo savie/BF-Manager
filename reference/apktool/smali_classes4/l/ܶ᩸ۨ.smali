@@ -1,45 +1,22 @@
-.class public final synthetic Ll/ܶ᩸ۨ;
+.class public final Ll/ܶ᩸ۨ;
 .super Ljava/lang/Object;
-.source "W4H2"
+.source "DACT"
+
+
+# static fields
+.field public static final ۙ:Ljava/nio/ByteOrder;
 
 
 # direct methods
-.method public static ۙ(Ll/᩸᩸ۨ;JJ)Ll/᩸᩸ۨ;
-    .locals 7
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 51
-    new-instance v6, Ll/ۘ᩸ۨ;
+    .line 22
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
-    move-object v0, v6
+    move-result-object v0
 
-    move-object v1, p0
+    sput-object v0, Ll/ܶ᩸ۨ;->ۙ:Ljava/nio/ByteOrder;
 
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    invoke-direct/range {v0 .. v5}, Ll/ۘ᩸ۨ;-><init>(Ll/᩸᩸ۨ;JJ)V
-
-    return-object v6
-.end method
-
-.method public static ܰ(Ll/᩸᩸ۨ;JJ)Ll/᩸᩸ۨ;
-    .locals 7
-
-    .line 47
-    new-instance v6, Ll/ۘ᩸ۨ;
-
-    invoke-interface {p0}, Ll/᩸᩸ۨ;->᩺()Ll/᩸᩸ۨ;
-
-    move-result-object v1
-
-    move-object v0, v6
-
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    invoke-direct/range {v0 .. v5}, Ll/ۘ᩸ۨ;-><init>(Ll/᩸᩸ۨ;JJ)V
-
-    return-object v6
+    return-void
 .end method

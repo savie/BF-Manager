@@ -1,46 +1,54 @@
 package l;
 
-import java.lang.invoke.MethodHandle;
-import java.util.ArrayList;
-import java.util.List;
-import org.bouncycastle.asn1.ASN1ObjectIdentifier;
-import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
+/* JADX INFO: renamed from: l.ᩳۧۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E762 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C19028 {
 
-/* JADX INFO: renamed from: l.ᩴ᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4GW */
-/* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C19028 implements InterfaceC7359, InterfaceC21304, InterfaceC3232 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* bridge */ /* synthetic */ Class m43759() {
-        return MethodHandle.class;
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int f61640;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static StringBuilder m43760(String str, String str2, StringBuilder sb, ASN1ObjectIdentifier aSN1ObjectIdentifier, ConfigurableProvider configurableProvider) {
-        sb.append(aSN1ObjectIdentifier);
-        configurableProvider.addAlgorithm(sb.toString(), str);
-        return new StringBuilder(str2);
-    }
+    public final long f61641;
 
-    @Override // l.InterfaceC3232
-    /* JADX INFO: renamed from: ۙ */
-    public String mo9687(EnumC15934 enumC15934, String str, String str2) {
-        return EnumC14523.m34961(enumC15934, str, str2);
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f61642;
 
-    @Override // l.InterfaceC21304
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public List mo43763(String str, boolean z, boolean z2) {
-        return C19894.m45161(str, z, z2);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f61643;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m43762(ArrayList arrayList, int i) {
-        arrayList.remove(arrayList.size() - i);
-    }
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final boolean f61644;
 
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        ((InterfaceC10430) obj).getClass();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f61645;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f61646;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f61647;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f61648;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f61649;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final String f61650;
+
+    public C19028(String str, String str2, String str3, String str4, String str5, long j, String str6, String str7, boolean z, int i, int i2) {
+        this.f61650 = str;
+        this.f61649 = str2;
+        this.f61645 = str3;
+        this.f61647 = str4;
+        this.f61643 = str5;
+        this.f61641 = j;
+        this.f61648 = str6;
+        this.f61646 = str7;
+        this.f61644 = z;
+        this.f61642 = i;
+        this.f61640 = i2;
     }
 }

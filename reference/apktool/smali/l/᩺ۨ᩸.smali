@@ -1,92 +1,71 @@
 .class public final Ll/᩺ۨ᩸;
 .super Ljava/lang/Object;
-.source "U4HR"
+.source "97J6"
 
 
 # instance fields
-.field public final ۙ:Ll/ۜۨ᩸;
+.field public final ۙ:I
 
-.field public final ܰ:Ljava/lang/String;
+.field public ۤ:I
+
+.field public final synthetic ܳ:Ll/ۘۨ᩸;
+
+.field public final ᩴ:Ll/᩹ۨ᩸;
+
+.field public ᩷:I
+
+.field public ᩸:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜۨ᩸;Ljava/lang/String;)V
-    .locals 0
-
-    .line 128
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 129
-    iput-object p1, p0, Ll/᩺ۨ᩸;->ۙ:Ll/ۜۨ᩸;
-
-    .line 130
-    iput-object p2, p0, Ll/᩺ۨ᩸;->ܰ:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Ll/ۘۨ᩸;I)V
     .locals 2
 
-    .line 147
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 249
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "\n"
+    iput-object p1, p0, Ll/᩺ۨ᩸;->ܳ:Ll/ۘۨ᩸;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 250
+    iput p2, p0, Ll/᩺ۨ᩸;->ۙ:I
 
-    .line 134
-    iget-object v1, p0, Ll/᩺ۨ᩸;->ۙ:Ll/ۜۨ᩸;
+    .line 251
+    new-instance p2, Ll/᩹ۨ᩸;
 
-    .line 147
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const-string v1, ": "
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    .line 138
-    iget-object v1, p0, Ll/᩺ۨ᩸;->ܰ:Ljava/lang/String;
+    .line 30
+    invoke-direct {p2, p1, v0}, Ll/᩹ۨ᩸;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 147
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 251
+    iput-object p2, p0, Ll/᩺ۨ᩸;->ᩴ:Ll/᩹ۨ᩸;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 252
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v0
+    const/4 v0, -0x1
 
-    return-object v0
-.end method
+    const/4 v1, -0x2
 
-.method public final ۙ()Ll/ۜۨ᩸;
-    .locals 1
+    invoke-direct {p1, v0, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 134
-    iget-object v0, p0, Ll/᩺ۨ᩸;->ۙ:Ll/ۜۨ᩸;
+    invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    return-object v0
-.end method
+    const/high16 p1, 0x40000000    # 2.0f
 
-.method public final ۨ()I
-    .locals 1
+    .line 253
+    invoke-static {p1}, Ll/ۜۙܺ;->ۙ(F)I
 
-    .line 142
-    iget-object v0, p0, Ll/᩺ۨ᩸;->ܰ:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const/4 v0, 0x0
 
-    move-result v0
+    .line 254
+    invoke-virtual {p2, p1, v0, p1, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    return v0
-.end method
-
-.method public final ܰ()Ljava/lang/String;
-    .locals 1
-
-    .line 138
-    iget-object v0, p0, Ll/᩺ۨ᩸;->ܰ:Ljava/lang/String;
-
-    return-object v0
+    return-void
 .end method

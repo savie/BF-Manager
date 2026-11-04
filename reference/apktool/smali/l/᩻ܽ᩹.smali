@@ -1,19 +1,23 @@
-.class public final synthetic Ll/᩻ܽ᩹;
+.class public interface abstract Ll/᩻ܽ᩹;
 .super Ljava/lang/Object;
-.source "1B34"
+.source "RAPC"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Predicate;
+.implements Ljava/util/function/IntPredicate;
+
+
+# annotations
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract ۙ(Ll/᩻ܽ᩹;)Ll/֫ܽ᩹;
+.end method
 
-    const v0, 0x7f120903
+.method public abstract ᩷(Ll/᩻ܽ᩹;)Ll/ۚܽ᩹;
+.end method
 
-    .line 90
-    invoke-static {v0}, Ll/ܺۡۜ;->ܰ(I)V
-
-    return-void
+.method public abstract ᩷(B)Z
 .end method

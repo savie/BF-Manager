@@ -28,7 +28,7 @@
     iput-boolean v0, p0, Lbin/mt/plugin/api/ui/dialog/BaseCancelableDialog;->needSetKeyListener:Z
 
     .line 13
-    new-instance v0, Ll/ۢ۫;
+    new-instance v0, Ll/ۖۘۚ;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -129,9 +129,9 @@
 
     move-result-object p1
 
-    new-instance v0, Ll/֫᩹ۘ;
+    new-instance v0, Ll/᩺ۛ֫;
 
-    invoke-direct {v0, p0}, Ll/֫᩹ۘ;-><init>(Lbin/mt/plugin/api/ui/dialog/BaseCancelableDialog;)V
+    invoke-direct {v0, p0}, Ll/᩺ۛ֫;-><init>(Lbin/mt/plugin/api/ui/dialog/BaseCancelableDialog;)V
 
     invoke-interface {p1, v0}, Lbin/mt/plugin/api/ui/dialog/PluginDialog;->setOnKeyListener(Lbin/mt/plugin/api/ui/dialog/PluginDialog$OnKeyListener;)V
 

@@ -1,10 +1,7 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.֨۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7SF */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0979 extends IOException {
-    public static final long serialVersionUID = -8931219115669559570L;
+/* JADX INFO: renamed from: l.֨ۛۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0979 extends C0407 {
 }

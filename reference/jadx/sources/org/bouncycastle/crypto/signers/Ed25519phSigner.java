@@ -10,7 +10,7 @@ import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 import org.bouncycastle.math.ec.rfc8032.Ed25519;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Ed25519phSigner implements Signer {
     public final byte[] context;
     public boolean forSigning;

@@ -1,39 +1,52 @@
 package l;
 
-import java.io.InputStream;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۚ᩸۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6X3 */
+/* JADX INFO: renamed from: l.ۚۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5623 implements InterfaceC20765, InterfaceC11974, InterfaceC1483 {
+public final class C5623 extends AbstractC14900 {
+    public ArrayList d;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f19251;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f19252;
-
-    public /* synthetic */ C5623(Object obj, Object obj2) {
-        this.f19251 = obj;
-        this.f19252 = obj2;
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final void c(long j) {
+        if (j >= 2147483639) {
+            throw new IllegalArgumentException("Stream size exceeds max array size");
+        }
+        this.d = j >= 0 ? new ArrayList((int) j) : new ArrayList();
     }
 
-    @Override // l.InterfaceC11974
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C12731 mo15512(String str, String str2, String str3) {
-        return C17617.m40954((String) this.f19251, (String) this.f19252, str, str2, str3);
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final void end() {
+        C12884.sort(this.d, this.b);
+        long size = this.d.size();
+        InterfaceC15143 interfaceC15143 = this.a;
+        interfaceC15143.c(size);
+        if (!this.c) {
+            ArrayList arrayList = this.d;
+            C17359.requireNonNull(interfaceC15143);
+            C1170.a(arrayList, new C3249(14, interfaceC15143));
+        } else {
+            ArrayList arrayList2 = this.d;
+            int size2 = arrayList2.size();
+            int i = 0;
+            while (i < size2) {
+                Object obj = arrayList2.get(i);
+                i++;
+                if (interfaceC15143.f()) {
+                    break;
+                } else {
+                    interfaceC15143.n(obj);
+                }
+            }
+        }
+        interfaceC15143.end();
+        this.d = null;
     }
 
-    @Override // l.InterfaceC20765
-    /* JADX INFO: renamed from: ۙ */
-    public void mo8979(Object obj, C9060 c9060) {
-        InterfaceC10430 interfaceC10430 = (InterfaceC10430) obj;
-        interfaceC10430.mo26344((InterfaceC10161) this.f19252, new C9019(c9060, ((C0550) this.f19251).f2309));
-    }
-
-    @Override // l.InterfaceC1483
-    /* JADX INFO: renamed from: ۙ */
-    public InputStream mo5129(long j) {
-        return ((AbstractC12233) this.f19251).mo10262(j, ((InterfaceC2557) this.f19252).getPath());
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        this.d.add(obj);
     }
 }

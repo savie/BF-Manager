@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.params.ECCSIPublicKeyParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECCSIKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public ECPoint G;
     public Digest digest;

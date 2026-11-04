@@ -6,9 +6,9 @@ import java.security.Provider;
 import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
-import l.C0561;
-import l.C12441;
-import l.C9013;
+import l.C11958;
+import l.C12669;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -29,7 +29,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.compositesignatures.KeyFactor
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Exceptions;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CompositePrivateKey implements PrivateKey {
     public AlgorithmIdentifier algorithmIdentifier;
     public final List keys;
@@ -60,7 +60,7 @@ public class CompositePrivateKey implements PrivateKey {
             int i = this.count;
             PrivateKey[] privateKeyArr = this.keys;
             if (i == privateKeyArr.length) {
-                throw new IllegalStateException(C12441.m30911(this.keys.length, " allowed in composite", new StringBuilder("only ")));
+                throw new IllegalStateException(C12669.m31437(this.keys.length, " allowed in composite", new StringBuilder("only ")));
             }
             privateKeyArr[i] = privateKey;
             Provider[] providerArr = this.providers;
@@ -106,7 +106,7 @@ public class CompositePrivateKey implements PrivateKey {
         for (PrivateKey privateKey : privateKeyArr) {
             arrayList.add(processKey(privateKey));
         }
-        this.keys = C0561.unmodifiableList(arrayList);
+        this.keys = C4681.unmodifiableList(arrayList);
         this.providers = null;
     }
 
@@ -131,10 +131,10 @@ public class CompositePrivateKey implements PrivateKey {
                 arrayList.add(processKey(privateKeyArr[i]));
                 i++;
             }
-            listUnmodifiableList = C0561.unmodifiableList(arrayList2);
+            listUnmodifiableList = C4681.unmodifiableList(arrayList2);
         }
         this.providers = listUnmodifiableList;
-        this.keys = C0561.unmodifiableList(arrayList);
+        this.keys = C4681.unmodifiableList(arrayList);
     }
 
     public CompositePrivateKey(PrivateKey... privateKeyArr) {
@@ -214,7 +214,7 @@ public class CompositePrivateKey implements PrivateKey {
                 }
                 return new PrivateKeyInfo(this.algorithmIdentifier, Arrays.concatenate(seed, octets)).getEncoded();
             } catch (IOException e) {
-                throw new IllegalStateException(C9013.m23329(e, new StringBuilder("unable to encode composite public key: ")));
+                throw new IllegalStateException(C11958.m29932(e, new StringBuilder("unable to encode composite public key: ")));
             }
         }
         ASN1EncodableVector aSN1EncodableVector = new ASN1EncodableVector();
@@ -226,7 +226,7 @@ public class CompositePrivateKey implements PrivateKey {
             try {
                 return new PrivateKeyInfo(this.algorithmIdentifier, new DERSequence(aSN1EncodableVector)).getEncoded(ASN1Encoding.DER);
             } catch (IOException e2) {
-                throw new IllegalStateException(C9013.m23329(e2, new StringBuilder("unable to encode composite private key: ")));
+                throw new IllegalStateException(C11958.m29932(e2, new StringBuilder("unable to encode composite private key: ")));
             }
         }
         byte[] bArrConcatenate = null;
@@ -237,7 +237,7 @@ public class CompositePrivateKey implements PrivateKey {
         try {
             return new PrivateKeyInfo(this.algorithmIdentifier, bArrConcatenate).getEncoded(ASN1Encoding.DER);
         } catch (IOException e3) {
-            throw new IllegalStateException(C9013.m23329(e3, new StringBuilder("unable to encode composite private key: ")));
+            throw new IllegalStateException(C11958.m29932(e3, new StringBuilder("unable to encode composite private key: ")));
         }
     }
 }

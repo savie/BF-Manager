@@ -1,146 +1,97 @@
 package l;
 
-import com.alipay.sdk.m.p.a;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.۬ܽۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H6BE */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۫ܽۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26KG */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13236 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f43989;
+    public final int f42305;
 
-    public C13236(String str) {
-        this.f43989 = str;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC10869 f42306;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f42308;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f42307 = new HashMap();
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f42309 = new HashMap();
+
+    public C13236(InterfaceC10869 interfaceC10869) throws C10186 {
+        this.f42306 = interfaceC10869;
+        this.f42305 = interfaceC10869.mo27607();
+        this.f42308 = interfaceC10869.mo19818().size() + 1;
+        for (InterfaceC15344 interfaceC15344 : interfaceC10869.mo19822()) {
+            if (this.f42309.put(Integer.valueOf(interfaceC15344.mo35833()), interfaceC15344) != null) {
+                throw C25171.m56091("RESOURCE_TARGET_AMBIGUOUS", "Duplicate type IDs prevent adding resources safely.");
+            }
+            this.f42308 = Math.max(this.f42308, interfaceC15344.mo35833() + 1);
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32717(AbstractC4062 abstractC4062) {
-        char cCharAt;
-        String str = this.f43989;
-        int length = str.length();
-        int i = 0;
-        if (str.charAt(0) == '<') {
-            i = 2;
-            do {
-                int iIndexOf = str.indexOf(58, i);
-                abstractC4062.mo4457(str.substring(i - 1, iIndexOf));
-                int iM32716 = iIndexOf + 1;
-                char cCharAt2 = str.charAt(iM32716);
-                if (cCharAt2 == 'L' || cCharAt2 == '[' || cCharAt2 == 'T') {
-                    iM32716 = m32716(str, iM32716, abstractC4062.mo4455());
-                }
-                while (true) {
-                    i = iM32716 + 1;
-                    cCharAt = str.charAt(iM32716);
-                    if (cCharAt != ':') {
-                        break;
-                    } else {
-                        iM32716 = m32716(str, i, abstractC4062.mo4458());
+    public final C11744 m32791(int i) {
+        InterfaceC15344 interfaceC15344;
+        Integer numValueOf = Integer.valueOf(i);
+        HashMap map = this.f42307;
+        C11744 c11744 = (C11744) map.get(numValueOf);
+        if (c11744 == null && (interfaceC15344 = (InterfaceC15344) this.f42309.get(Integer.valueOf(i))) != null) {
+            c11744 = new C11744(interfaceC15344.mo35833(), interfaceC15344.getTypeName());
+            c11744.f37976 = interfaceC15344;
+            c11744.f37980 = interfaceC15344.mo4328();
+            for (InterfaceC2731 interfaceC2731 : interfaceC15344.mo33925()) {
+                c11744.f37980 = Math.max(c11744.f37980, interfaceC2731.mo9069() + 1);
+                String strM26337 = C10208.m26337(interfaceC2731);
+                for (InterfaceC8697 interfaceC8697 : interfaceC2731.mo9078()) {
+                    int iMo23383 = interfaceC8697.mo23383();
+                    String strMo18156 = interfaceC8697.mo18156();
+                    String str = (String) c11744.f37975.put(Integer.valueOf(iMo23383), strMo18156);
+                    if (str != null && !str.equals(strMo18156)) {
+                        throw C25171.m56091("RESOURCE_TARGET_AMBIGUOUS", "Resource variants disagree about the entry name.");
+                    }
+                    c11744.f37982.put(strMo18156, Integer.valueOf(iMo23383));
+                    if (!c11744.f37974.add(iMo23383 + "\n" + strM26337)) {
+                        throw C25171.m56091("RESOURCE_TARGET_AMBIGUOUS", "Duplicate resource variants prevent adding resources safely.");
                     }
                 }
-            } while (cCharAt != '>');
-        }
-        if (str.charAt(i) == '(') {
-            int iM32717 = i + 1;
-            while (str.charAt(iM32717) != ')') {
-                iM32717 = m32716(str, iM32717, abstractC4062.mo4443());
             }
-            int iM32718 = m32716(str, iM32717 + 1, abstractC4062.mo4454());
-            while (iM32718 < length) {
-                iM32718 = m32716(str, iM32718 + 1, abstractC4062.mo4444());
-            }
-            return;
+            map.put(Integer.valueOf(i), c11744);
         }
-        int iM32719 = m32716(str, i, abstractC4062.mo4446());
-        while (iM32719 < length) {
-            iM32719 = m32716(str, iM32719, abstractC4062.mo4450());
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m32718(AbstractC4062 abstractC4062) {
-        m32716(this.f43989, 0, abstractC4062);
+        return c11744;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m32716(String str, int i, AbstractC4062 abstractC4062) {
-        int iM32716 = i + 1;
-        char cCharAt = str.charAt(i);
-        if (cCharAt != 'F') {
-            if (cCharAt == 'L') {
-                boolean z = false;
-                int i2 = iM32716;
-                boolean z2 = false;
-                while (true) {
-                    int i3 = iM32716 + 1;
-                    char cCharAt2 = str.charAt(iM32716);
-                    if (cCharAt2 == '.' || cCharAt2 == ';') {
-                        if (!z) {
-                            String strSubstring = str.substring(i2, iM32716);
-                            if (z2) {
-                                abstractC4062.mo4453(strSubstring);
-                            } else {
-                                abstractC4062.mo4449(strSubstring);
-                            }
-                        }
-                        if (cCharAt2 == ';') {
-                            abstractC4062.mo4452();
-                            return i3;
-                        }
-                        z = false;
-                        z2 = true;
-                        iM32716 = i3;
-                        i2 = iM32716;
-                    } else if (cCharAt2 == '<') {
-                        String strSubstring2 = str.substring(i2, iM32716);
-                        if (z2) {
-                            abstractC4062.mo4453(strSubstring2);
-                        } else {
-                            abstractC4062.mo4449(strSubstring2);
-                        }
-                        iM32716 = i3;
-                        while (true) {
-                            char cCharAt3 = str.charAt(iM32716);
-                            if (cCharAt3 == '>') {
-                                break;
-                            }
-                            if (cCharAt3 == '*') {
-                                iM32716++;
-                                abstractC4062.mo4451();
-                            } else if (cCharAt3 == '+' || cCharAt3 == '-') {
-                                iM32716 = m32716(str, iM32716 + 1, abstractC4062.mo4456(cCharAt3));
-                            } else {
-                                iM32716 = m32716(str, iM32716, abstractC4062.mo4456(a.h));
-                            }
-                        }
-                        z = true;
-                    } else {
-                        iM32716 = i3;
-                    }
+    public final C11744 m32792(String str) {
+        int iMo35833 = -1;
+        for (InterfaceC15344 interfaceC15344 : this.f42309.values()) {
+            if (C10208.m26336(interfaceC15344.getTypeName()).equals(str)) {
+                if (iMo35833 != -1) {
+                    throw C25171.m56091("RESOURCE_TARGET_AMBIGUOUS", "Multiple types have the requested resource type name.");
                 }
-            } else if (cCharAt != 'V' && cCharAt != 'I' && cCharAt != 'J' && cCharAt != 'S') {
-                if (cCharAt == 'T') {
-                    int iIndexOf = str.indexOf(59, iM32716);
-                    abstractC4062.mo4445(str.substring(iM32716, iIndexOf));
-                    return iIndexOf + 1;
-                }
-                if (cCharAt != 'Z') {
-                    if (cCharAt == '[') {
-                        return m32716(str, iM32716, abstractC4062.mo4447());
-                    }
-                    switch (cCharAt) {
-                        case 'B':
-                        case 'C':
-                        case 'D':
-                            break;
-                        default:
-                            throw new IllegalArgumentException();
-                    }
-                }
+                iMo35833 = interfaceC15344.mo35833();
             }
         }
-        abstractC4062.mo4448(cCharAt);
-        return iM32716;
+        if (iMo35833 != -1) {
+            return m32791(iMo35833);
+        }
+        HashMap map = this.f42307;
+        for (C11744 c11744 : map.values()) {
+            if (C10208.m26336(c11744.f37977).equals(str)) {
+                return c11744;
+            }
+        }
+        int i = this.f42308;
+        if (i > 255) {
+            throw C25171.m56091("RESOURCE_ID_EXHAUSTED", "No unused type ID remains in this package.");
+        }
+        this.f42308 = i + 1;
+        C11744 c11745 = new C11744(i, str);
+        map.put(Integer.valueOf(c11745.f37981), c11745);
+        return c11745;
     }
 }

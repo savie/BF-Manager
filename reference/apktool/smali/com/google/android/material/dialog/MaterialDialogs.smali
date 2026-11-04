@@ -17,7 +17,7 @@
     .locals 7
 
     .line 59
-    sget-object v2, Ll/۠۟ܶ;->ܶ֫:[I
+    sget-object v2, Ll/ܰ۬ܺ;->ܺ۠:[I
 
     const/4 v0, 0x0
 
@@ -37,14 +37,14 @@
     move-result-object p1
 
     .line 67
-    sget p2, Ll/۠۟ܶ;->ܺ֫:I
+    sget p2, Ll/ܰ۬ܺ;->ܰ۠:I
 
     .line 71
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Ll/֨۟ܶ;->֨᩵:I
+    sget v1, Ll/ܽ۬ܺ;->۫᩵:I
 
     .line 72
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -57,14 +57,14 @@
     move-result p2
 
     .line 73
-    sget v0, Ll/۠۟ܶ;->᩶֫:I
+    sget v0, Ll/ܰ۬ܺ;->᩶۠:I
 
     .line 77
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->۬᩵:I
+    sget v2, Ll/ܽ۬ܺ;->ۚ᩵:I
 
     .line 78
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -77,14 +77,14 @@
     move-result v0
 
     .line 80
-    sget v1, Ll/۠۟ܶ;->᩷֫:I
+    sget v1, Ll/ܰ۬ܺ;->ۘ۠:I
 
     .line 84
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Ll/֨۟ܶ;->᩹᩵:I
+    sget v3, Ll/ܽ۬ܺ;->ܳ᩵:I
 
     .line 85
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -97,14 +97,14 @@
     move-result v1
 
     .line 86
-    sget v2, Ll/۠۟ܶ;->۟֫:I
+    sget v2, Ll/ܰ۬ܺ;->᩺۠:I
 
     .line 90
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sget v4, Ll/֨۟ܶ;->ۚ᩵:I
+    sget v4, Ll/ܽ۬ܺ;->ᩴ᩵:I
 
     .line 91
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

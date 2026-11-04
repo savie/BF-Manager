@@ -1,134 +1,120 @@
 .class public final synthetic Ll/֡᩷ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ll/ܳ۟ᩴ;
+.source "S4H6"
 
 
-# instance fields
-.field public final synthetic a:Ljava/nio/file/attribute/UserPrincipal;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/nio/file/attribute/UserPrincipal;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 60
+    invoke-static {}, Ll/ۡ᩷ᩴ;->values()[Ll/ۡ᩷ᩴ;
 
-    iput-object p1, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    :try_start_0
+    sget-object v1, Ll/ۡ᩷ᩴ;->֡:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۡ᩷ᩴ;->֨:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۡ᩷ᩴ;->ۡ:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۡ᩷ᩴ;->ۢ:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۡ᩷ᩴ;->ܿ:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Ll/֡᩷ᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۡ᩷ᩴ;->۟:Ll/ۡ᩷ᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
     return-void
-.end method
-
-.method public static synthetic a(Ljava/nio/file/attribute/UserPrincipal;)Ll/ܳ۟ᩴ;
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ll/ۧ۟ᩴ;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ll/ۧ۟ᩴ;
-
-    iget-object p0, p0, Ll/ۧ۟ᩴ;->a:Ll/ܳ۟ᩴ;
-
-    return-object p0
-
-    :cond_1
-    instance-of v0, p0, Ljava/nio/file/attribute/GroupPrincipal;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Ljava/nio/file/attribute/GroupPrincipal;
-
-    invoke-static {p0}, Ll/ۤ᩷ᩴ;->a(Ljava/nio/file/attribute/GroupPrincipal;)Ll/ۤ᩷ᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ll/֡᩷ᩴ;
-
-    invoke-direct {v0, p0}, Ll/֡᩷ᩴ;-><init>(Ljava/nio/file/attribute/UserPrincipal;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final synthetic equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    iget-object v0, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    instance-of v1, p1, Ll/֡᩷ᩴ;
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, Ll/֡᩷ᩴ;
-
-    iget-object p1, p1, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    invoke-interface {v0}, Ljava/security/Principal;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic implies(Ljavax/security/auth/Subject;)Z
-    .locals 1
-
-    iget-object v0, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    invoke-interface {v0, p1}, Ljava/security/Principal;->implies(Ljavax/security/auth/Subject;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ll/֡᩷ᩴ;->a:Ljava/nio/file/attribute/UserPrincipal;
-
-    invoke-interface {v0}, Ljava/security/Principal;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

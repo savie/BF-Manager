@@ -1,17 +1,19 @@
-.class public final synthetic Ll/ᩳ۫ۘ;
-.super Ljava/lang/Object;
-.source "Z3WS"
-
-# interfaces
-.implements Ljava/util/function/IntFunction;
+.class public final Ll/ᩳ۫ۘ;
+.super Ll/ۚۚۘ;
+.source "A451"
 
 
 # virtual methods
-.method public final apply(I)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "arityMethodCheck"
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ll/ۙᩳۘ;ZLl/᩸۟᩺;Ll/᩸۟᩺;Ll/ۘ۬᩺;Ll/֨ۢۘ;)V
     .locals 0
 
-    .line 147
-    new-array p1, p1, [Ll/᩶۫ۘ;
-
-    return-object p1
+    return-void
 .end method

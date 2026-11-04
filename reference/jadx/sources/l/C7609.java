@@ -1,12 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ܿۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6QA */
+/* JADX INFO: renamed from: l.۟ۗܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: HBBR */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7609 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 59;
+public final class C7609 extends AbstractC5875 {
+    @Override // l.InterfaceC1159
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1345() {
+        return 6;
     }
 }

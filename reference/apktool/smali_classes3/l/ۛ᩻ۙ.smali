@@ -1,141 +1,124 @@
 .class public final Ll/ۛ᩻ۙ;
-.super Ljava/lang/Object;
-.source "68KD"
+.super Ll/ۘۧۙ;
+.source "P1KP"
 
-# interfaces
-.implements Ll/ۗ᩻ۙ;
+
+# instance fields
+.field public final synthetic ۙ:Ll/ۘ᩻ۙ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۘ᩻ۙ;)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Ll/ۛ᩻ۙ;->ۙ:Ll/ۘ᩻ۙ;
+
+    .line 141
+    invoke-direct {p0}, Ll/ۘۧۙ;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۖ()I
+.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 1
 
-    const/4 v0, 0x1
+    const-string p2, "activity"
 
-    return v0
-.end method
+    .line 5
+    invoke-static {p1, p2}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public final ۖ([B)V
-    .locals 0
+    .line 170
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v0, 0x1d
+
+    if-ge p2, v0, :cond_0
+
+    .line 171
+    sget p2, Ll/ᩳ᩻ۙ;->᩶:I
+
+    .line 190
+    invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object p1
+
+    const-string p2, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
+
+    invoke-virtual {p1, p2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object p1
+
+    const-string p2, "null cannot be cast to non-null type androidx.lifecycle.ReportFragment"
+
+    invoke-static {p1, p2}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Ll/ᩳ᩻ۙ;
+
+    .line 171
+    iget-object p2, p0, Ll/ۛ᩻ۙ;->ۙ:Ll/ۘ᩻ۙ;
+
+    invoke-static {p2}, Ll/ۘ᩻ۙ;->᩷(Ll/ۘ᩻ۙ;)Ll/᩺᩻ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ll/ᩳ᩻ۙ;->ۙ(Ll/᩺᩻ۙ;)V
+
+    :cond_0
     return-void
 .end method
 
-.method public final ۙ([B)Ljava/util/Map;
-    .locals 0
-
-    .line 96
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ([BLjava/util/List;ILjava/util/HashMap;)Ll/᩻᩻ۙ;
-    .locals 0
-
-    .line 71
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/ܳ᩻ۙ;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final synthetic ۙ([BLl/ۢܿۙ;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ۙ([B[B)V
-    .locals 0
-
-    .line 118
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ(Ljava/lang/String;[B)Z
-    .locals 0
-
-    .line 102
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۨ([B)Ll/ᩴܺۙ;
-    .locals 0
-
-    .line 150
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۨ()[B
-    .locals 2
-
-    .line 56
-    new-instance v0, Landroid/media/MediaDrmException;
-
-    const-string v1, "Attempting to open a session using a dummy ExoMediaDrm."
-
-    invoke-direct {v0, v1}, Landroid/media/MediaDrmException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final ܰ()Ll/ۢ᩻ۙ;
+.method public onActivityPaused(Landroid/app/Activity;)V
     .locals 1
 
-    .line 84
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const-string v0, "activity"
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    throw v0
+    .line 176
+    iget-object p1, p0, Ll/ۛ᩻ۙ;->ۙ:Ll/ۘ᩻ۙ;
+
+    invoke-virtual {p1}, Ll/ۘ᩻ۙ;->ۙ()V
+
+    return-void
 .end method
 
-.method public final ܰ([B)V
-    .locals 0
+.method public onActivityPreCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 1
 
-    .line 90
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-string p2, "activity"
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    .line 5
+    invoke-static {p1, p2}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    throw p1
+    .line 154
+    new-instance p2, Ll/ۨ᩻ۙ;
+
+    iget-object v0, p0, Ll/ۛ᩻ۙ;->ۙ:Ll/ۘ᩻ۙ;
+
+    invoke-direct {p2, v0}, Ll/ۨ᩻ۙ;-><init>(Ll/ۘ᩻ۙ;)V
+
+    .line 152
+    invoke-static {p1, p2}, Ll/᩵᩻ۙ;->ۙ(Landroid/app/Activity;Ll/ۨ᩻ۙ;)V
+
+    return-void
 .end method
 
-.method public final ܰ([B[B)[B
-    .locals 0
+.method public onActivityStopped(Landroid/app/Activity;)V
+    .locals 1
 
-    .line 78
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-string v0, "activity"
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    throw p1
+    .line 180
+    iget-object p1, p0, Ll/ۛ᩻ۙ;->ۙ:Ll/ۘ᩻ۙ;
+
+    invoke-virtual {p1}, Ll/ۘ᩻ۙ;->᩸()V
+
+    return-void
 .end method

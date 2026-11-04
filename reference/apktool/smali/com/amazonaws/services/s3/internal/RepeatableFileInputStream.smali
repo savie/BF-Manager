@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final ۫:Lcom/amazonaws/logging/Log;
+.field public static final ۟:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public ֡:Ljava/io/FileInputStream;
+.field public ֡:J
 
-.field public ܺ:J
+.field public ܰ:J
 
-.field public ܽ:J
+.field public ܿ:Ljava/io/FileInputStream;
 
 .field public final ᩶:Ljava/io/File;
 
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۫:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۟:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -42,15 +42,15 @@
     const/4 v0, 0x0
 
     .line 40
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     const-wide/16 v0, 0x0
 
     .line 41
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     .line 42
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
     if-eqz p1, :cond_0
 
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     .line 56
     iput-object p1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->᩶:Ljava/io/File;
@@ -83,10 +83,10 @@
     .locals 1
 
     .line 112
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 113
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0}, Ljava/io/FileInputStream;->available()I
 
@@ -99,12 +99,12 @@
     .locals 1
 
     .line 118
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     .line 119
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     return-void
 .end method
@@ -113,24 +113,24 @@
     .locals 4
 
     .line 102
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 103
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
-    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
     const-wide/16 v0, 0x0
 
     .line 104
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     .line 105
-    sget-object p1, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۫:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۟:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p1}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -145,7 +145,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -175,10 +175,10 @@
     .locals 5
 
     .line 124
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 125
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0}, Ljava/io/FileInputStream;->read()I
 
@@ -189,13 +189,13 @@
     if-eq v0, v1, :cond_0
 
     .line 127
-    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     const-wide/16 v3, 0x1
 
     add-long/2addr v1, v3
 
-    iput-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide v1, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     return v0
 
@@ -207,23 +207,23 @@
     .locals 2
 
     .line 144
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 145
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/FileInputStream;->read([BII)I
 
     move-result p1
 
     .line 146
-    iget-wide p2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iget-wide p2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     int-to-long v0, p1
 
     add-long/2addr p2, v0
 
-    iput-wide p2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide p2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     return p1
 .end method
@@ -232,12 +232,12 @@
     .locals 6
 
     .line 77
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     .line 78
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 79
     new-instance v0, Ljava/io/FileInputStream;
@@ -246,10 +246,10 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     .line 82
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
     :goto_0
     const-wide/16 v2, 0x0
@@ -259,7 +259,7 @@
     if-lez v4, :cond_0
 
     .line 84
-    iget-object v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v2, v0, v1}, Ljava/io/FileInputStream;->skip(J)J
 
@@ -271,7 +271,7 @@
 
     .line 88
     :cond_0
-    sget-object v0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۫:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->۟:Lcom/amazonaws/logging/Log;
 
     invoke-interface {v0}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -286,7 +286,7 @@
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܽ:J
+    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:J
 
     invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -294,7 +294,7 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -306,11 +306,11 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 92
     :cond_1
-    iput-wide v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide v2, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     return-void
 .end method
@@ -319,30 +319,30 @@
     .locals 2
 
     .line 136
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 137
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/FileInputStream;->skip(J)J
 
     move-result-wide p1
 
     .line 138
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     add-long/2addr v0, p1
 
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܺ:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܰ:J
 
     return-wide p1
 .end method
 
-.method public final ۖ()Ljava/io/InputStream;
+.method public final ۤ()Ljava/io/InputStream;
     .locals 1
 
     .line 152
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->֡:Ljava/io/FileInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;->ܿ:Ljava/io/FileInputStream;
 
     return-object v0
 .end method

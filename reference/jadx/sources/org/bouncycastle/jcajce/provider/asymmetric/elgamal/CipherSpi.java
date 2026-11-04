@@ -20,9 +20,9 @@ import javax.crypto.interfaces.DHPrivateKey;
 import javax.crypto.interfaces.DHPublicKey;
 import javax.crypto.spec.OAEPParameterSpec;
 import javax.crypto.spec.PSource;
-import l.C0252;
-import l.C15489;
-import l.C2271;
+import l.C14442;
+import l.C14483;
+import l.C25272;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.crypto.AsymmetricBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -40,21 +40,19 @@ import org.bouncycastle.jce.interfaces.ElGamalKey;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherSpi extends BaseCipherSpi {
     public BaseCipherSpi.ErasableOutputStream bOut = new BaseCipherSpi.ErasableOutputStream();
     public AsymmetricBlockCipher cipher;
     public AlgorithmParameters engineParams;
     public AlgorithmParameterSpec paramSpec;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class NoPadding extends CipherSpi {
         public NoPadding() {
             super(new ElGamalEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PKCS1v1_5Padding extends CipherSpi {
         public PKCS1v1_5Padding() {
             super(new PKCS1Encoding(new ElGamalEngine()));
@@ -230,7 +228,7 @@ public class CipherSpi extends BaseCipherSpi {
                 if (i == 3) {
                     asymmetricBlockCipher = this.cipher;
                 } else if (i != 4) {
-                    throw new InvalidParameterException(C2271.m6966(i, "unknown opmode ", " passed to ElGamal"));
+                    throw new InvalidParameterException(C14442.m34864(i, "unknown opmode ", " passed to ElGamal"));
                 }
             }
             asymmetricBlockCipher = this.cipher;
@@ -255,7 +253,7 @@ public class CipherSpi extends BaseCipherSpi {
     public void engineSetMode(String str) throws NoSuchAlgorithmException {
         String upperCase = Strings.toUpperCase(str);
         if (!upperCase.equals("NONE") && !upperCase.equals("ECB")) {
-            throw new NoSuchAlgorithmException(C0252.m1693("can't support mode ", str));
+            throw new NoSuchAlgorithmException(C25272.m56409("can't support mode ", str));
         }
     }
 
@@ -312,7 +310,7 @@ public class CipherSpi extends BaseCipherSpi {
             initFromSpec(new OAEPParameterSpec("SHA3-384", "MGF1", new MGF1ParameterSpec("SHA3-384"), PSource.PSpecified.DEFAULT));
         } else {
             if (!upperCase.equals("OAEPWITHSHA3-512ANDMGF1PADDING")) {
-                throw new NoSuchPaddingException(C15489.m37076(str, " unavailable with ElGamal."));
+                throw new NoSuchPaddingException(C14483.m34972(str, " unavailable with ElGamal."));
             }
             initFromSpec(new OAEPParameterSpec("SHA3-512", "MGF1", new MGF1ParameterSpec("SHA3-512"), PSource.PSpecified.DEFAULT));
         }

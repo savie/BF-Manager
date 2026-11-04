@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.BERSequence;
 import org.bouncycastle.asn1.BERTaggedObject;
 import org.bouncycastle.asn1.DLSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ContentInfo extends ASN1Object implements PKCSObjectIdentifiers {
     public ASN1Encodable content;
     public ASN1ObjectIdentifier contentType;

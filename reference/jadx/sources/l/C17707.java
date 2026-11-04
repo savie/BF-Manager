@@ -1,46 +1,60 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+/* JADX INFO: renamed from: l.ܽܽ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: O73P */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17707 {
 
-/* JADX INFO: renamed from: l.ᩳ֡᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 962J */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17707 extends AbstractC7830 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long[] f58188;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public String f56229;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long[] f58189;
 
-    public C17707(EnumC9947 enumC9947, AbstractC7124 abstractC7124, String str) {
-        super(enumC9947, abstractC7124);
-        this.f56229 = str;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int[] f58190;
+
+    public C17707(long[] jArr, long[] jArr2, int[] iArr) {
+        this.f58189 = jArr;
+        this.f58188 = jArr2;
+        this.f58190 = iArr;
     }
 
-    @Override // l.AbstractC7830, l.AbstractC7124
-    public final AbstractC7124 clone() {
-        AbstractC7124 abstractC7124 = this.f25764;
-        abstractC7124.getClass();
-        return new C17707(this.f23823, abstractC7124.clone(), this.f56229);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m41464() {
+        return this.f58189.length;
     }
 
-    @Override // l.AbstractC7124
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7124 mo3325(C10527 c10527) {
-        return new C17707(this.f23823, this.f25764.mo3325(c10527), this.f56229);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m41468() {
+        return this.f58189[0];
     }
 
-    @Override // l.AbstractC7124
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo3326() {
-        int i = C21235.f69165[this.f23823.ordinal()];
-        if (i == 1) {
-            return this.f25764 + ".length";
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m41466(int i) {
+        return this.f58188[i];
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m41467(int i) {
+        return this.f58190[i];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m41465(long j) {
+        long[] jArr = this.f58189;
+        int length = jArr.length - 1;
+        int i = 0;
+        int i2 = 0;
+        while (i <= length) {
+            int i3 = (i + length) >>> 1;
+            if (jArr[i3] <= j) {
+                i = i3 + 1;
+                i2 = i3;
+            } else {
+                length = i3 - 1;
+            }
         }
-        if (i == 2) {
-            return "(-" + this.f25764 + MotionUtils.EASING_TYPE_FORMAT_END;
-        }
-        if (i == 3) {
-            return "(!" + this.f25764 + MotionUtils.EASING_TYPE_FORMAT_END;
-        }
-        return toString();
+        return i2;
     }
 }

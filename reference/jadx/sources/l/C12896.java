@@ -1,34 +1,28 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.AdapterView;
+import java.io.Serializable;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.۬ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I67T */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12896 implements AdapterView.OnItemClickListener {
+/* JADX INFO: renamed from: l.۫ۚܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95IB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12896 implements Serializable {
+    public static final long serialVersionUID = 0;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6545 f42872;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Comparator f41245;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17834 f42873;
+    public final Object[] f41246;
 
-    public C12896(C6545 c6545, C17834 c17834) {
-        this.f42872 = c6545;
-        this.f42873 = c17834;
+    public C12896(Comparator comparator, Object[] objArr) {
+        this.f41245 = comparator;
+        this.f41246 = objArr;
     }
 
-    @Override // android.widget.AdapterView.OnItemClickListener
-    public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
-        C6545 c6545 = this.f42872;
-        DialogInterface.OnClickListener onClickListener = c6545.f22071;
-        C17834 c17834 = this.f42873;
-        onClickListener.onClick(c17834.f56483, i);
-        if (c6545.f22078) {
-            return;
-        }
-        c17834.f56483.dismiss();
+    public Object readResolve() {
+        C15133 c15133 = new C15133(this.f41245);
+        c15133.m36412(this.f41246);
+        return c15133.mo24709();
     }
 }

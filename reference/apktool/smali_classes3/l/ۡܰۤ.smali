@@ -1,83 +1,139 @@
-.class public final synthetic Ll/ۡܰۤ;
+.class public final Ll/ۡܰۤ;
 .super Ljava/lang/Object;
-.source "K3OA"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "F77E"
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final ۙ:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final ۤ:Ll/ۢܰۤ;
+
+.field public final ᩷:Ljava/util/concurrent/ExecutorService;
+
+.field public final ᩸:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicReference;Ll/֡ܰۤ;)V
     .locals 0
 
-    .line 0
+    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ll/ۡܰۤ;->ܺ:I
+    .line 226
+    iput-object p1, p0, Ll/ۡܰۤ;->᩷:Ljava/util/concurrent/ExecutorService;
 
+    .line 227
+    iput-object p2, p0, Ll/ۡܰۤ;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 228
+    iput-object p3, p0, Ll/ۡܰۤ;->ۙ:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 229
+    iput-object p4, p0, Ll/ۡܰۤ;->ۤ:Ll/ۢܰۤ;
+
+    return-void
+.end method
+
+.method public static synthetic ۙ(Ll/ۡܰۤ;Ll/֨ܰۤ;)V
+    .locals 1
+
+    .line 243
+    iget-object v0, p0, Ll/ۡܰۤ;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 245
+    :try_start_0
+    invoke-interface {p1}, Ll/֨ܰۤ;->run()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 247
+    iget-object p0, p0, Ll/ۡܰۤ;->ۙ:Ljava/util/concurrent/atomic/AtomicReference;
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 0
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final ۙ(Ll/֨ܰۤ;)V
+    .locals 3
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 236
+    :goto_0
+    iget-object v0, p0, Ll/ۡܰۤ;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    return-object p1
-.end method
+    move-result v1
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    const/16 v2, 0x1f4
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    if-le v1, v2, :cond_0
 
-    move-result-object v0
+    .line 237
+    iget-object v0, p0, Ll/ۡܰۤ;->ۤ:Ll/ۢܰۤ;
 
-    return-object v0
-.end method
+    check-cast v0, Ll/֡ܰۤ;
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    const-wide/16 v0, 0x32
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    return-object p1
-.end method
+    goto :goto_0
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 2
-    check-cast p1, Ll/۫ܰۤ;
-
-    .line 298
-    check-cast p1, Ll/ۤܰۤ;
-
-    iget p1, p1, Ll/ۤܰۤ;->۬:I
-
-    iget v0, p0, Ll/ۡܰۤ;->ܺ:I
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
+    .line 239
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    return p1
+    .line 242
+    :try_start_0
+    iget-object v1, p0, Ll/ۡܰۤ;->᩷:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Ll/ᩳܰۤ;
+
+    invoke-direct {v2, p0, p1}, Ll/ᩳܰۤ;-><init>(Ll/ۡܰۤ;Ll/֨ܰۤ;)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 253
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 255
+    throw p1
 .end method

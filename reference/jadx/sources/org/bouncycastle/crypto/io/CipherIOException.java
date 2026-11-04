@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.io;
 
 import java.io.IOException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherIOException extends IOException {
     public static final long serialVersionUID = 1;
     public final Throwable cause;

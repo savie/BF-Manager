@@ -1,40 +1,64 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import android.graphics.Bitmap;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.۬۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1MW */
+/* JADX INFO: renamed from: l.۫ۡۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B75R */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12995 extends AbstractC22167 implements InterfaceC13431, InterfaceC6206 {
+public final class C12995 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6644 f43333;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C12995 f41646 = new C12995(null, null);
 
-    @Override // l.AbstractC22167, l.InterfaceC13431, l.InterfaceC22104, java.util.Iterator, l.InterfaceC6206
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C1435.m5012(this, consumer);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13298 f41647;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Bitmap f41648;
+
+    public C12995(Bitmap bitmap, C13298 c13298) {
+        this.f41648 = bitmap;
+        this.f41647 = c13298;
     }
 
-    @Override // java.util.Iterator
-    public final Integer next() {
-        return Integer.valueOf(nextInt());
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C12995)) {
+            return false;
+        }
+        C12995 c12995 = (C12995) obj;
+        return C17359.equals(this.f41648, c12995.f41648) && C17359.equals(this.f41647, c12995.f41647);
     }
 
-    @Override // l.AbstractC22167
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6482(int i, Object obj) {
-        ((IntConsumer) obj).accept(this.f43333.f22435[i]);
+    public final int hashCode() {
+        return C17359.hashCode(this.f41647) + (C17359.hashCode(this.f41648) * 31);
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C12995(C6644 c6644) {
-        super(c6644);
-        this.f43333 = c6644;
+    public final String toString() {
+        Object[] objArr = {this.f41648, this.f41647};
+        String[] strArrSplit = "bitmap;aspectRatio".length() == 0 ? new String[0] : "bitmap;aspectRatio".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C12995.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
-    @Override // l.InterfaceC22104
-    public final int nextInt() {
-        return this.f43333.f22435[m49177()];
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13298 m32415() {
+        return this.f41647;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Bitmap m32416() {
+        return this.f41648;
     }
 }

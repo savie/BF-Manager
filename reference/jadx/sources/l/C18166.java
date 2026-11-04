@@ -1,77 +1,27 @@
 package l;
 
-import java.io.BufferedInputStream;
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-
-/* JADX INFO: renamed from: l.ᩳܽ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9AHU */
+/* JADX INFO: renamed from: l.ܿۜ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 542M */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18166 extends FilterInputStream implements InterfaceC20818 {
+public final class C18166 extends AbstractC0578 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f58055;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f59387;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8289 f58056;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public boolean f58057;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f58058;
-
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1949(AbstractC8036 abstractC8036) {
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C18166(C8289 c8289, BufferedInputStream bufferedInputStream, String str, boolean z) {
-        super(bufferedInputStream);
-        this.f58056 = c8289;
-        this.f58058 = str;
-        this.f58055 = z;
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream
-    public final int read() throws IOException {
-        String str = this.f58058;
-        C8289 c8289 = this.f58056;
-        try {
-            int i = super.read();
-            if (i == -1 && !this.f58057) {
-                this.f58057 = true;
-                C11088.m27973(c8289.f28786.mo33986(), str);
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1513(C12510 c12510) {
+        if ((c12510.f40170.f15825 & 16384) != 0) {
+            AbstractC22295 abstractC22295 = c12510.f40171;
+            if (!(abstractC22295 instanceof C18565) || ((C18565) abstractC22295).f60319 == null) {
+                return;
             }
-            return i;
-        } catch (C17978 e) {
-            C11088.m27969(c8289.f28786.mo33986(), str);
-            if (this.f58055) {
-                C19808.m45036();
-            }
-            throw e;
-        }
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) throws IOException {
-        String str = this.f58058;
-        C8289 c8289 = this.f58056;
-        try {
-            int i3 = super.read(bArr, i, i2);
-            if (i3 == -1 && !this.f58057) {
-                this.f58057 = true;
-                C11088.m27973(c8289.f28786.mo33986(), str);
-            }
-            return i3;
-        } catch (C17978 e) {
-            C11088.m27969(c8289.f28786.mo33986(), str);
-            if (this.f58055) {
-                C19808.m45036();
-            }
-            throw e;
+            this.f59387 = true;
         }
     }
 }

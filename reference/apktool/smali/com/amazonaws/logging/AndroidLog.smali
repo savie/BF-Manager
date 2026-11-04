@@ -25,18 +25,6 @@
 
 
 # virtual methods
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 1
-
-    .line 154
-    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
-
-    .line 116
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
 .method public final ۙ(Ljava/lang/String;)V
     .locals 1
 
@@ -88,16 +76,7 @@
     return v0
 .end method
 
-.method public final ۚ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 154
-    sget p1, Lcom/amazonaws/logging/LogFactory;->ۙ:I
-
-    return-void
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 1
 
     .line 154
@@ -109,7 +88,7 @@
     return-void
 .end method
 
-.method public final ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public final ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 0
 
     .line 154
@@ -121,7 +100,16 @@
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩴ(Ljava/lang/String;)V
+    .locals 0
+
+    .line 154
+    sget p1, Lcom/amazonaws/logging/LogFactory;->ۙ:I
+
+    return-void
+.end method
+
+.method public final ᩷(Ljava/lang/String;)V
     .locals 1
 
     .line 154
@@ -133,7 +121,7 @@
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public final ᩷(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 0
 
     .line 154
@@ -145,7 +133,7 @@
     return-void
 .end method
 
-.method public final ܰ()Z
+.method public final ᩷()Z
     .locals 2
 
     .line 49
@@ -170,4 +158,16 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 1
+
+    .line 154
+    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
+
+    .line 116
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
 .end method

@@ -1,205 +1,123 @@
 package l;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
+import com.google.android.material.color.ColorResourcesTableCreator;
+import com.google.android.material.slider.BaseSlider;
+import com.umeng.analytics.pro.cb;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import java.io.ByteArrayOutputStream;
+import moe.shizuku.server.IShizukuService;
+import org.bouncycastle.pqc.crypto.falcon.FalconVrfy;
 
-/* JADX INFO: renamed from: l.ܿۢۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E6SN */
+/* JADX INFO: renamed from: l.ܽ֫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44EI */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C17256 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final Integer f54970;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f54971;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean f54972;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f54973;
+    public final C16510 f56216 = new C16510();
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean f54974;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final float f54975;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final Integer f54976;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final boolean f54977;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final int[] f56214 = {8184, 8388568, 268435426, 268435427, 268435428, 268435429, 268435430, 268435431, 268435432, 16777194, 1073741820, 268435433, 268435434, 1073741821, 268435435, 268435436, 268435437, 268435438, 268435439, 268435440, 268435441, 268435442, 1073741822, 268435443, 268435444, 268435445, 268435446, 268435447, 268435448, 268435449, 268435450, 268435451, 20, 1016, 1017, 4090, 8185, 21, 248, 2042, 1018, 1019, 249, 2043, 250, 22, 23, 24, 0, 1, 2, 25, 26, 27, 28, 29, 30, 31, 92, 251, 32764, 32, FalconVrfy.R, 1020, 8186, 33, 93, 94, 95, 96, 97, 98, 99, 100, 101, IShizukuService.Stub.TRANSACTION_attachUserService, IShizukuService.Stub.TRANSACTION_dispatchPackageChanged, IShizukuService.Stub.TRANSACTION_isHidden, IShizukuService.Stub.TRANSACTION_dispatchPermissionConfirmationResult, IShizukuService.Stub.TRANSACTION_getFlagsForUid, IShizukuService.Stub.TRANSACTION_updateFlagsForUid, 108, 109, UMErrorCode.E_UM_BE_JSON_FAILED, UMErrorCode.E_UM_BE_CREATE_FAILED, UMErrorCode.E_UM_BE_DEFLATE_FAILED, UMErrorCode.E_UM_BE_RAW_OVERSIZE, 114, 252, 115, 253, 8187, 524272, 8188, 16380, 34, 32765, 3, 35, 4, 36, 5, 37, 38, 39, 6, 116, BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION, 40, 41, 42, 7, 43, 118, 44, 8, 9, 45, 119, UMErrorCode.E_UM_BE_NOT_MAINPROCESS, UMErrorCode.E_UM_BE_EMPTY_URL_PATH, 122, 123, 32766, 2044, 16381, 8189, 268435452, 1048550, 4194258, 1048551, 1048552, 4194259, 4194260, 4194261, 8388569, 4194262, 8388570, 8388571, 8388572, 8388573, 8388574, 16777195, 8388575, 16777196, 16777197, 4194263, 8388576, 16777198, 8388577, 8388578, 8388579, 8388580, 2097116, 4194264, 8388581, 4194265, 8388582, 8388583, 16777199, 4194266, 2097117, 1048553, 4194267, 4194268, 8388584, 8388585, 2097118, 8388586, 4194269, 4194270, 16777200, 2097119, 4194271, 8388587, 8388588, 2097120, 2097121, 4194272, 2097122, 8388589, 4194273, 8388590, 8388591, 1048554, 4194274, 4194275, 4194276, 8388592, 4194277, 4194278, 8388593, 67108832, 67108833, 1048555, 524273, 4194279, 8388594, 4194280, 33554412, 67108834, 67108835, 67108836, 134217694, 134217695, 67108837, 16777201, 33554413, 524274, 2097123, 67108838, 134217696, 134217697, 67108839, 134217698, 16777202, 2097124, 2097125, 67108840, 67108841, 268435453, 134217699, 134217700, 134217701, 1048556, 16777203, 1048557, 2097126, 4194281, 2097127, 2097128, 8388595, 4194282, 4194283, 33554414, 33554415, 16777204, 16777205, 67108842, 8388596, 67108843, 134217702, 67108844, 67108845, 134217703, 134217704, 134217705, 134217706, 134217707, 268435454, 134217708, 134217709, 134217710, 134217711, 134217712, 67108846};
 
     /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final int f54978;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f54979;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String f54980;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f54981;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean f54982;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final String f54983;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final int f54984;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final float f54985;
+    public static final byte[] f56213 = {cb.k, 23, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 24, 30, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 30, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 30, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 6, 10, 10, 12, cb.k, 6, 8, 11, 10, 10, 8, 11, 8, 6, 6, 6, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 15, 6, 12, 10, cb.k, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 7, 8, cb.k, 19, cb.k, cb.f82047l, 6, 15, 5, 6, 5, 6, 5, 6, 6, 6, 5, 7, 7, 6, 6, 6, 5, 6, 7, 6, 5, 5, 6, 7, 7, 7, 7, 7, 15, 11, cb.f82047l, cb.k, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 20, 22, 20, 20, 22, 22, 22, 23, 22, 23, 23, 23, 23, 23, 24, 23, 24, 24, 22, 23, 24, 23, 23, 23, 23, 21, 22, 23, 22, 23, 23, 24, 22, 21, 20, 22, 22, 23, 23, 21, 23, 22, 22, 24, 21, 22, 23, 23, 21, 21, 22, 21, 23, 22, 23, 23, 20, 22, 22, 22, 23, 22, 22, 23, 26, 26, 20, 19, 22, 23, 22, 25, 26, 26, 26, 27, 27, 26, 24, 25, 19, 21, 26, 27, 27, 26, 27, 24, 21, 21, 26, 26, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 27, 27, 27, 20, 24, 20, 21, 22, 21, 21, 23, 22, 22, 25, 25, 24, 24, 26, 23, 26, 27, 26, 26, 27, 27, 27, 27, 27, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 27, 27, 27, 27, 27, 26};
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final float f54986;
+    public static final C17256 f56215 = new C17256();
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean f54987;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C17256 m40515() {
+        return f56215;
+    }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean f54988;
-
-    public C17256(String str, String str2, int i, int i2, int i3, float f, float f2, float f3, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, Integer num, Integer num2) {
-        this.f54980 = str;
-        this.f54983 = str2;
-        this.f54971 = i;
-        this.f54984 = i2;
-        this.f54978 = i3;
-        this.f54985 = f;
-        this.f54972 = z;
-        this.f54975 = f2;
-        this.f54986 = f3;
-        this.f54979 = z2;
-        this.f54974 = z3;
-        this.f54988 = z4;
-        this.f54982 = z5;
-        this.f54987 = z6;
-        this.f54981 = z7;
-        this.f54977 = z8;
-        this.f54973 = z9;
-        this.f54976 = num;
-        this.f54970 = num2;
+    public C17256() {
+        for (int i = 0; i < 256; i++) {
+            int i2 = f56214[i];
+            byte b = f56213[i];
+            C16510 c16510 = new C16510(i, b);
+            C16510 c16511 = this.f56216;
+            while (b > 8) {
+                b = (byte) (b - 8);
+                int i3 = (i2 >>> b) & 255;
+                C16510[] c16510Arr = c16511.f53475;
+                if (c16510Arr == null) {
+                    throw new IllegalStateException("invalid dictionary: prefix not unique");
+                }
+                if (c16510Arr[i3] == null) {
+                    c16510Arr[i3] = new C16510();
+                }
+                c16511 = c16510Arr[i3];
+            }
+            int i4 = 8 - b;
+            int i5 = (i2 << i4) & 255;
+            int i6 = 1 << i4;
+            for (int i7 = i5; i7 < i5 + i6; i7++) {
+                c16511.f53475[i7] = c16510;
+            }
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17256 m40217(ByteArrayInputStream byteArrayInputStream, long j, int i) throws IOException {
-        Integer num;
-        Integer num2;
-        float f;
-        float f2;
-        boolean z;
-        boolean z2;
-        boolean z3;
-        C0757 c0757M3260 = C0757.m3260(j, byteArrayInputStream);
-        try {
-            if (i < 0 || j > i) {
-                throw new IOException("Legacy text config exceeds app state limit");
+    public static void m40516(C16794 c16794, C1879 c1879) {
+        long j = 0;
+        int i = 0;
+        for (int i2 = 0; i2 < c16794.mo23081(); i2++) {
+            int iMo23082 = c16794.mo23082(i2) & 255;
+            int i3 = f56214[iMo23082];
+            byte b = f56213[iMo23082];
+            j = (j << b) | ((long) i3);
+            i += b;
+            while (i >= 8) {
+                i -= 8;
+                c1879.m6455writeByte((int) (j >> i));
             }
-            String strM3269 = c0757M3260.m3269(i);
-            boolean zM3267 = c0757M3260.m3267();
-            byte b = (byte) c0757M3260.readByte();
-            float fIntBitsToFloat = Float.intBitsToFloat(c0757M3260.readInt());
-            int iM3272 = c0757M3260.m3272();
-            boolean zM3268 = c0757M3260.m3267();
-            boolean zM3269 = c0757M3260.m3267();
-            boolean zM32610 = c0757M3260.m3267();
-            boolean zM32611 = c0757M3260.m3267();
-            boolean zM32612 = c0757M3260.m3267();
-            Integer numValueOf = null;
-            String strM32610 = zM32612 ? c0757M3260.m3269(i) : null;
-            int i2 = c0757M3260.m3268() == 0 ? 0 : c0757M3260.readInt();
-            if (i2 < 591749667) {
-                c0757M3260.m3271();
-                num = null;
-                num2 = null;
-                f = 1.0f;
-                f2 = 0.0f;
-                z = false;
-                z2 = false;
-                z3 = false;
-            } else {
-                if (i2 > 591749672) {
-                    throw new IOException("Unsupported legacy text config version");
-                }
-                boolean zM32613 = c0757M3260.m3267();
-                boolean zM32614 = i2 >= 591749669 ? c0757M3260.m3267() : false;
-                boolean zM32615 = i2 >= 591749668 ? c0757M3260.m3267() : false;
-                Integer numValueOf2 = (i2 < 591749670 || !c0757M3260.m3267()) ? null : Integer.valueOf(c0757M3260.readInt());
-                if (i2 >= 591749671 && c0757M3260.m3267()) {
-                    numValueOf = Integer.valueOf(c0757M3260.readInt());
-                }
-                if (i2 >= 591749672) {
-                    float fIntBitsToFloat2 = Float.intBitsToFloat(c0757M3260.readInt());
-                    float fIntBitsToFloat3 = Float.intBitsToFloat(c0757M3260.readInt());
-                    if (fIntBitsToFloat2 < 0.8f || fIntBitsToFloat2 > 2.0f || fIntBitsToFloat3 < 0.0f || fIntBitsToFloat3 >= Float.POSITIVE_INFINITY) {
-                        throw new IOException("Invalid line metrics");
-                    }
-                    num2 = numValueOf;
-                    z3 = zM32615;
-                    z = zM32613;
-                    z2 = zM32614;
-                    num = numValueOf2;
-                    f2 = fIntBitsToFloat3;
-                    f = fIntBitsToFloat2;
+        }
+        if (i > 0) {
+            c1879.m6455writeByte((int) ((j << (8 - i)) | ((long) (255 >>> i))));
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m40514(C16794 c16794) {
+        long j = 0;
+        for (int i = 0; i < c16794.mo23081(); i++) {
+            j += (long) f56213[c16794.mo23082(i) & 255];
+        }
+        return (int) ((j + 7) >> 3);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m40517(byte[] bArr) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        C16510 c16510 = this.f56216;
+        int i = 0;
+        int i2 = 0;
+        C16510 c16511 = c16510;
+        for (byte b : bArr) {
+            i = (i << 8) | (b & 255);
+            i2 += 8;
+            while (i2 >= 8) {
+                c16511 = c16511.f53475[(i >>> (i2 - 8)) & 255];
+                if (c16511.f53475 == null) {
+                    byteArrayOutputStream.write(c16511.f53477);
+                    i2 -= c16511.f53476;
+                    c16511 = c16510;
                 } else {
-                    num2 = numValueOf;
-                    z3 = zM32615;
-                    z = zM32613;
-                    z2 = zM32614;
-                    num = numValueOf2;
-                    f = 1.0f;
-                    f2 = 0.0f;
+                    i2 -= 8;
                 }
             }
-            c0757M3260.m3263();
-            C17256 c17256 = new C17256(strM3269, strM32610, b, iM3272, i2, fIntBitsToFloat, f, f2, zM3267, zM3268, zM3269, zM32610, zM32611, zM32612, z, z2, z3, num, num2);
-            c0757M3260.close();
-            return c17256;
-        } catch (Throwable th) {
-            try {
-                c0757M3260.close();
-                throw th;
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-                throw th;
+        }
+        while (i2 > 0) {
+            C16510 c16512 = c16511.f53475[(i << (8 - i2)) & 255];
+            C16510[] c16510Arr = c16512.f53475;
+            int i3 = c16512.f53476;
+            if (c16510Arr != null || i3 > i2) {
+                break;
             }
+            byteArrayOutputStream.write(c16512.f53477);
+            i2 -= i3;
+            c16511 = c16510;
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40218(C1590 c1590) {
-        c1590.f6419 = this.f54980;
-        c1590.f6388 = this.f54972;
-        c1590.m5424(this.f54985, this.f54971);
-        c1590.m17861(this.f54984);
-        c1590.mo5423(this.f54975);
-        c1590.m17862(this.f54979);
-        c1590.m17874(this.f54974);
-        c1590.f6429 = this.f54988;
-        c1590.f6433 = this.f54982;
-        boolean z = this.f54987;
-        c1590.f6398 = z;
-        if (z) {
-            c1590.f6374 = this.f54983;
-        }
-        int i = this.f54978;
-        if (i < 591749667) {
-            return;
-        }
-        c1590.m17869(this.f54981);
-        if (i >= 591749669) {
-            c1590.m17853(this.f54977);
-        }
-        if (i >= 591749668) {
-            c1590.f6415 = this.f54973;
-        }
-        c1590.m5430(this.f54976);
-        c1590.m5425(this.f54970);
+        return byteArrayOutputStream.toByteArray();
     }
 }

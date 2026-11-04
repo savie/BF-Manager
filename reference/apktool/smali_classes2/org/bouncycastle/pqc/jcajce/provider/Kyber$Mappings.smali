@@ -207,7 +207,7 @@
     const-string v9, "Cipher.KYBER"
 
     .line 0
-    invoke-static {p1, v9, v6, v7}, Ll/ᩴᩳۚ;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v9, v6, v7}, Ll/᩷ܳۚ;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
@@ -215,7 +215,7 @@
 
     const-string v9, "KYBER"
 
-    invoke-static {v6, v7, p1, v9}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v6, v7, p1, v9}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     const-string v6, "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Kyber512"
 

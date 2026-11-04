@@ -1,37 +1,80 @@
 package l;
 
-import android.os.Build;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Locale;
+/* JADX INFO: renamed from: l.ᩳ᩺᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 09W2 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C19412 implements InterfaceC9627 {
 
-/* JADX INFO: renamed from: l.᩵ۧ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O529 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19412 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public String f62745;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Method f62567;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f62746;
 
-    static {
-        if (Build.VERSION.SDK_INT < 24) {
-            try {
-                f62567 = Class.forName("libcore.icu.ICU").getMethod("addLikelySubtags", Locale.class);
-            } catch (Exception e) {
-                throw new IllegalStateException(e);
-            }
-        }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public String f62747;
+
+    @Override // l.InterfaceC9627
+    public final int getAttributes() {
+        return 17;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m44462(Locale locale) {
-        if (Build.VERSION.SDK_INT >= 24) {
-            return C8123.m21389(C8123.m21387(C8123.m21388(locale)));
+    @Override // l.InterfaceC9627
+    public final long length() {
+        return 0L;
+    }
+
+    @Override // l.InterfaceC9627
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo6139() {
+        return 0;
+    }
+
+    @Override // l.InterfaceC9627
+    /* JADX INFO: renamed from: ۨ */
+    public final long mo6140() {
+        return 0L;
+    }
+
+    public C19412() {
+    }
+
+    public C19412(String str) {
+        this.f62745 = str;
+        this.f62746 = 0;
+        this.f62747 = null;
+    }
+
+    @Override // l.InterfaceC9627
+    public final String getName() {
+        return this.f62745;
+    }
+
+    @Override // l.InterfaceC9627
+    public final int getType() {
+        int i = this.f62746 & 65535;
+        if (i != 1) {
+            return i != 3 ? 8 : 16;
         }
-        try {
-            return C18706.m43240((Locale) f62567.invoke(null, locale));
-        } catch (IllegalAccessException | InvocationTargetException unused) {
-            return C18706.m43240(locale);
+        return 32;
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof C19412) {
+            return C17359.equals(this.f62745, ((C19412) obj).f62745);
         }
+        return false;
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f62745);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbShareInfo[netName=");
+        sb.append(this.f62745);
+        sb.append(",type=0x");
+        C8008.m21876(this.f62746, 8, ",remark=", sb);
+        return new String(C8947.m23910(sb, this.f62747, "]"));
     }
 }

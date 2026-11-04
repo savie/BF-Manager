@@ -12,7 +12,7 @@ import org.bouncycastle.crypto.params.DSAPublicKeyParameters;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSASigner implements DSAExt {
     public final DSAKCalculator kCalculator;
     public DSAKeyParameters key;

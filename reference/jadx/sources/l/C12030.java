@@ -1,74 +1,48 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
-import org.xmlpull.v1.XmlPullParserException;
+/* JADX INFO: renamed from: l.ۨ֫ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VB94 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C12030 {
 
-/* JADX INFO: renamed from: l.ۨ᩻ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7Z8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12030 extends AbstractC3492 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f38766;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f40290;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f38767;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11545 f40291;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f40292;
-
-    public C12030(C11545 c11545, AbstractC20745 abstractC20745) {
-        this.f40291 = c11545;
-        this.f40290 = abstractC20745;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f40291.m28824(), R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws XmlPullParserException {
-        C6037 c6037;
-        AbstractC20745 abstractC20745 = this.f40290;
-        AbstractC20745 abstractC20745M46706 = abstractC20745.m46706("resources.arsc");
-        if (abstractC20745M46706.mo33975()) {
-            try {
-                c6037 = new C6037(abstractC20745M46706);
-            } catch (Exception unused) {
-                c6037 = null;
-            }
-        } else {
-            c6037 = null;
+    static {
+        int[] iArr = new int[EnumC3827.values().length];
+        f38766 = iArr;
+        try {
+            iArr[EnumC3827.ADDING.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (c6037 == null) {
-            c6037 = new C6037();
+        try {
+            f38766[EnumC3827.REMOVING.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        C21111 c21111M47538 = C21111.m47538(C20945.m47103(abstractC20745.m46727()).m47106(), c6037, true);
-        AbstractC20745 abstractC20745M46693 = this.f40291.m28771(abstractC20745.m46718() + ".svg", false).m46693(true);
-        this.f40292 = abstractC20745M46693;
-        abstractC20745M46693.m46735(c21111M47538.m47540());
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        this.f40291.m28787(this.f40292);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f40291.m28824().m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
-        C21094.m47530();
+        try {
+            f38766[EnumC3827.NONE.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        int[] iArr2 = new int[EnumC14267.values().length];
+        f38767 = iArr2;
+        try {
+            iArr2[EnumC14267.REMOVED.ordinal()] = 1;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f38767[EnumC14267.VISIBLE.ordinal()] = 2;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f38767[EnumC14267.GONE.ordinal()] = 3;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f38767[EnumC14267.INVISIBLE.ordinal()] = 4;
+        } catch (NoSuchFieldError unused7) {
+        }
     }
 }

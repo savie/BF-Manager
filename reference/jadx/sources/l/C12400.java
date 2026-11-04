@@ -1,30 +1,37 @@
 package l;
 
-import java.util.function.Supplier;
-
-/* JADX INFO: renamed from: l.۫۫ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I6U1 */
+/* JADX INFO: renamed from: l.ۨܰۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12400 implements Supplier {
+public final class C12400 extends AbstractC19311 implements InterfaceC0661 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f41423;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f39895;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f41424;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f39896;
 
-    public /* synthetic */ C12400(int i, Object obj) {
-        this.f41423 = i;
-        this.f41424 = obj;
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return C11239.m28355(this.f62401);
     }
 
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        switch (this.f41423) {
-            case 0:
-                return ((C8872[]) this.f41424)[0];
-            default:
-                return ((AbstractC23903) this.f41424).toString();
-        }
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1512(this);
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5865(this, obj);
+    }
+
+    @Override // l.AbstractC19311
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC22295 mo11610(EnumC8124 enumC8124) {
+        return enumC8124 == EnumC8124.LEFT ? this.f39896 : this.f39895;
     }
 }

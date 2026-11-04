@@ -6,10 +6,10 @@ import com.amazonaws.http.HttpResponse;
 public class ServerSideEncryptionHeaderHandler implements HeaderHandler {
     @Override // com.amazonaws.services.s3.internal.HeaderHandler
     /* JADX INFO: renamed from: ۙ */
-    public final void mo463(Object obj, HttpResponse httpResponse) {
+    public final void mo457(Object obj, HttpResponse httpResponse) {
         ServerSideEncryptionResult serverSideEncryptionResult = (ServerSideEncryptionResult) obj;
-        serverSideEncryptionResult.mo480((String) httpResponse.m270().get("x-amz-server-side-encryption"));
-        serverSideEncryptionResult.mo485((String) httpResponse.m270().get("x-amz-server-side-encryption-customer-algorithm"));
-        serverSideEncryptionResult.mo482((String) httpResponse.m270().get("x-amz-server-side-encryption-customer-key-MD5"));
+        serverSideEncryptionResult.mo479((String) httpResponse.m263().get("x-amz-server-side-encryption"));
+        serverSideEncryptionResult.mo478((String) httpResponse.m263().get("x-amz-server-side-encryption-customer-algorithm"));
+        serverSideEncryptionResult.mo476((String) httpResponse.m263().get("x-amz-server-side-encryption-customer-key-MD5"));
     }
 }

@@ -1,13 +1,13 @@
 name: BF Manager CI Build
 
 on:
-  push:
-    branches: [master]
-    paths:
-      - "bf_manager/**"
-      - "tools/**"
-      - "app/**"
-      - ".github/workflows/bf-manager-ci.yml"
+  # push:
+  #   branches: [master]
+  #   paths:
+  #     - "bf_manager/**"
+  #     - "tools/**"
+  #     - "app/**"
+  #     - ".github/workflows/bf-manager-ci.yml"
   workflow_dispatch:
 
 permissions:

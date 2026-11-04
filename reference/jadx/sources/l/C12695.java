@@ -1,60 +1,59 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Collection;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۫᩹۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7M7 */
+/* JADX INFO: renamed from: l.ۨ᩺ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 01M8 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12695 extends AbstractC6344 {
+public final class C12695 implements Iterator {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3800 f42373;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final Iterator f40660;
 
-    public C12695(AbstractC3729 abstractC3729, InterfaceC3800 interfaceC3800, InterfaceC3800 interfaceC3801) {
-        super(abstractC3729, interfaceC3800);
-        this.f42373 = interfaceC3801;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC21646 f40661;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public C22547 f40662;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final Iterator f40663;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public C22547 f40664;
+
+    public C12695(InterfaceC21646 interfaceC21646) {
+        this.f40661 = interfaceC21646;
+        Iterator itMo3129 = interfaceC21646.mo3129();
+        this.f40663 = itMo3129;
+        Iterator itMo3128 = interfaceC21646.mo3128();
+        this.f40660 = itMo3128;
+        this.f40662 = itMo3129.hasNext() ? (C22547) itMo3129.next() : null;
+        this.f40664 = itMo3128.hasNext() ? (C22547) itMo3128.next() : null;
     }
 
-    public C12695(AbstractC3729 abstractC3729, InterfaceC3800 interfaceC3800, InterfaceC3800 interfaceC3801, int i) {
-        super(abstractC3729, interfaceC3800);
-        this.f42373 = interfaceC3801;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return (this.f40662 == null && this.f40664 == null) ? false : true;
     }
 
-    @Override // l.InterfaceC3458
-    public final String getName() {
-        return this.f42373 + MotionUtils.EASING_TYPE_FORMAT_START + this.f21404 + MotionUtils.EASING_TYPE_FORMAT_END;
-    }
-
-    @Override // l.AbstractC6344
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo17449(Collection collection) {
-        InterfaceC3800 interfaceC3800 = this.f21404;
-        return AbstractC6344.m17447(((InterfaceC3800) interfaceC3800.getFileSystem().getRootDirectories().iterator().next()).relativize(interfaceC3800));
-    }
-
-    @Override // l.AbstractC6344, l.InterfaceC3458
-    public final URI toUri() {
-        String string = this.f21404.toString();
-        URI uriNormalize = this.f42373.toUri().normalize();
-        String str = string.startsWith("/") ? "!" : "!/";
-        try {
-            return new URI("jar:" + uriNormalize + str + string);
-        } catch (URISyntaxException e) {
-            throw new C0699(uriNormalize + str + string, e);
+    @Override // java.util.Iterator
+    public final Object next() {
+        C22547 c22547;
+        C22547 c22548 = this.f40662;
+        if (c22548 == null || ((c22547 = this.f40664) != null && (c22547.f72892 < c22548.f72892 || c22547.f72894 < c22548.f72894))) {
+            C22547 c22549 = this.f40664;
+            Iterator it = this.f40660;
+            this.f40664 = it.hasNext() ? (C22547) it.next() : null;
+            return new C5393(c22549, Boolean.TRUE);
         }
+        Iterator it2 = this.f40663;
+        this.f40662 = it2.hasNext() ? (C22547) it2.next() : null;
+        return new C5393(c22548, Boolean.FALSE);
     }
 
-    @Override // l.AbstractC6344
-    public final String toString() {
-        return "JarFileObject[" + this.f42373 + ":" + this.f21404 + "]";
-    }
-
-    @Override // l.AbstractC6344
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC6344 mo17450(String str) {
-        return new C12695(this.f21403, this.f21404.resolveSibling(str), this.f42373);
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
     }
 }

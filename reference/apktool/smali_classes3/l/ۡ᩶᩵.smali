@@ -1,19 +1,23 @@
-.class public final Ll/ۡ᩶᩵;
+.class public interface abstract Ll/ۡ᩶᩵;
 .super Ljava/lang/Object;
-.source "L58X"
-
-# interfaces
-.implements Ll/ۗ᩶᩵;
+.source "H2GE"
 
 
 # virtual methods
-.method public final ۙ(Ll/۫֡᩵;Ll/֨֡᩵;[BI)Ll/ۙ֡᩵;
-    .locals 1
+.method public abstract getAttributes()I
+.end method
 
-    .line 153
-    new-instance v0, Ll/ۤ᩶᩵;
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    invoke-direct {v0, p1, p2, p3, p4}, Ll/ۤ᩶᩵;-><init>(Ll/۫֡᩵;Ll/֨֡᩵;[BI)V
+.method public abstract getType()I
+.end method
 
-    return-object v0
+.method public abstract length()J
+.end method
+
+.method public abstract ۤ()I
+.end method
+
+.method public abstract ۨ()J
 .end method

@@ -1,23 +1,33 @@
 package l;
 
-import java.util.zip.ZipOutputStream;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.᩶᩷᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: S50A */
+/* JADX INFO: renamed from: l.᩵۟᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: AAP5 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20425 implements InterfaceC15487 {
+public final class C20425 extends C3271 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ZipOutputStream f66204;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC4544 f65429;
 
-    public C20425(ZipOutputStream zipOutputStream) {
-        this.f66204 = zipOutputStream;
+    public C20425(int[] iArr, int i, int i2, int i3, InterfaceC4544 interfaceC4544) {
+        super(i, i2, i3 | 20, iArr);
+        this.f65429 = interfaceC4544;
     }
 
-    @Override // l.InterfaceC15487
-    public final AbstractC0764 create() {
-        C12760 c12760 = new C12760(1);
-        C14781 c14781 = new C14781(c12760);
-        return new C16192(this, c14781, c14781, c12760);
+    @Override // l.C3271
+    /* JADX INFO: renamed from: ۙ */
+    public final C3271 mo10770(int i, int i2) {
+        return new C20425(this.f10652, i, i2, this.f10654, this.f65429);
+    }
+
+    @Override // l.C3271, l.InterfaceC8409
+    public final Comparator getComparator() {
+        return this.f65429;
+    }
+
+    @Override // l.C3271, l.InterfaceC15949, l.InterfaceC8409
+    public final InterfaceC4544 getComparator() {
+        return this.f65429;
     }
 }

@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.asn1.x509.AuthorityInformationAccess;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ServiceLocator extends ASN1Object {
     public final X500Name issuer;
     public final AuthorityInformationAccess locator;

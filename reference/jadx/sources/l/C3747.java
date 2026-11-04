@@ -1,141 +1,196 @@
 package l;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.IntentFilter;
-import android.media.AudioDeviceInfo;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-import android.provider.Settings;
-import com.alipay.sdk.app.H5PayActivity$$ExternalSyntheticLambda0;
-
-/* JADX INFO: renamed from: l.ۘۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O8SZ */
+/* JADX INFO: renamed from: l.ۗ᩺ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBEJ */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C3747 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final BroadcastReceiver f13580;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Context f13581;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public boolean f13582;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final C23885 f12845;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C2708 f13583;
+    public final C12171 f12846;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C0925 f13584;
+    public final int f12847;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C6570 f13585;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C9757 f12848;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C22093 f13586;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean f12849;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final H5PayActivity$$ExternalSyntheticLambda0 f13587;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f12850;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C2336 f13588;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C5985 f12851;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Handler f13589;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C11995 f12852;
 
-    public C3747(Context context, H5PayActivity$$ExternalSyntheticLambda0 h5PayActivity$$ExternalSyntheticLambda0, C2708 c2708, C6570 c6570) {
-        Context applicationContext = context.getApplicationContext();
-        this.f13581 = applicationContext;
-        this.f13587 = h5PayActivity$$ExternalSyntheticLambda0;
-        this.f13583 = c2708;
-        this.f13585 = c6570;
-        String str = C17983.f57504;
-        Looper looperMyLooper = Looper.myLooper();
-        Handler handler = new Handler(looperMyLooper == null ? Looper.getMainLooper() : looperMyLooper, null);
-        this.f13589 = handler;
-        this.f13586 = Build.VERSION.SDK_INT >= 23 ? new C22093(this) : null;
-        this.f13580 = new C12921(this);
-        C2336 c2336 = C2336.f8268;
-        String str2 = Build.MANUFACTURER;
-        Uri uriFor = (str2.equals("Amazon") || str2.equals("Xiaomi")) ? Settings.Global.getUriFor("external_surround_sound_enabled") : null;
-        this.f13584 = uriFor != null ? new C0925(this, handler, applicationContext.getContentResolver(), uriFor) : null;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int[] f12853 = null;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10975(C2336 c2336) {
-        m10972(c2336);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10976(C2708 c2708) {
-        this.f13583 = c2708;
-        m10972(C2336.m7089(this.f13581, c2708, this.f13585));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10974(AudioDeviceInfo audioDeviceInfo) {
-        C6570 c6570 = this.f13585;
-        if (C13638.equals(audioDeviceInfo, c6570 == null ? null : c6570.f22122)) {
-            return;
+    public static C7697 m12175(C9757 c9757, C11995 c11995, int i, C16646 c16646) {
+        C22438 c22438M36044;
+        int i2;
+        C3747 c3747 = new C3747(c9757, c11995, i, c16646);
+        C14978 c14978M25432 = c9757.m25432();
+        int size = c14978M25432.size();
+        int iM37668 = c14978M25432.m37668();
+        int[] iArrM14321 = C4560.m14321(iM37668);
+        int[] iArrM14322 = C4560.m14321(iM37668);
+        int i3 = 0;
+        for (int i4 = 0; i4 < size; i4++) {
+            C4560.m14326(c14978M25432.m31620get(i4).mo31292(), iArrM14321);
         }
-        C6570 c6571 = audioDeviceInfo != null ? new C6570(audioDeviceInfo) : null;
-        this.f13585 = c6571;
-        m10972(C2336.m7089(this.f13581, this.f13583, c6571));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2336 m10973() {
-        C22093 c22093;
-        if (this.f13582) {
-            C2336 c2336 = this.f13588;
-            c2336.getClass();
-            return c2336;
-        }
-        this.f13582 = true;
-        C0925 c0925 = this.f13584;
-        if (c0925 != null) {
-            c0925.m3674();
-        }
-        int i = Build.VERSION.SDK_INT;
-        Handler handler = this.f13589;
-        Context context = this.f13581;
-        if (i >= 23 && (c22093 = this.f13586) != null) {
-            C5159.m14306(context, c22093, handler);
-        }
-        C2336 c2336M7088 = C2336.m7088(context, context.registerReceiver(this.f13580, new IntentFilter("android.media.action.HDMI_AUDIO_PLUG"), null, handler), this.f13583, this.f13585);
-        this.f13588 = c2336M7088;
-        return c2336M7088;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m10977() {
-        C22093 c22093;
-        if (this.f13582) {
-            this.f13588 = null;
-            int i = Build.VERSION.SDK_INT;
-            Context context = this.f13581;
-            if (i >= 23 && (c22093 = this.f13586) != null) {
-                C5159.m14305(context, c22093);
+        int[] iArr = new int[size];
+        int iM25434 = c9757.m25434();
+        int i5 = 0;
+        while (iM25434 != -1) {
+            while (true) {
+                C24698 c24698M25433 = c9757.m25433(iM25434);
+                int size2 = c24698M25433.size();
+                int i6 = 0;
+                while (true) {
+                    if (i6 >= size2) {
+                        break;
+                    }
+                    i2 = c24698M25433.get(i6);
+                    if (C4560.m14322(i2, iArrM14322)) {
+                        break;
+                    }
+                    if (C4560.m14322(i2, iArrM14321) && c14978M25432.m36044(i2).m50593() == iM25434) {
+                        break;
+                    }
+                    i6++;
+                }
+                C4560.m14326(i2, iArrM14322);
+                iM25434 = i2;
             }
-            context.unregisterReceiver(this.f13580);
-            C0925 c0925 = this.f13584;
-            if (c0925 != null) {
-                c0925.m3675();
+            while (iM25434 != -1) {
+                C4560.m14320(iM25434, iArrM14321);
+                C4560.m14320(iM25434, iArrM14322);
+                iArr[i5] = iM25434;
+                i5++;
+                C22438 c22438M36045 = c14978M25432.m36044(iM25434);
+                int iM50593 = c22438M36045.m50593();
+                C24698 c24698M50590 = c22438M36045.m50590();
+                int size3 = c24698M50590.size();
+                if (size3 == 0) {
+                    c22438M36044 = null;
+                } else if (size3 != 1 && iM50593 != -1) {
+                    c22438M36044 = c14978M25432.m36044(iM50593);
+                } else {
+                    c22438M36044 = c14978M25432.m36044(c24698M50590.get(0));
+                }
+                if (c22438M36044 == null) {
+                    break;
+                }
+                int iMo31292 = c22438M36044.mo31292();
+                int iM50594 = c22438M36045.m50593();
+                if (C4560.m14322(iMo31292, iArrM14321)) {
+                    iM25434 = iMo31292;
+                } else if (iM50594 == iMo31292 || iM50594 < 0 || !C4560.m14322(iM50594, iArrM14321)) {
+                    C24698 c24698M50591 = c22438M36045.m50590();
+                    int size4 = c24698M50591.size();
+                    int i7 = 0;
+                    while (true) {
+                        if (i7 >= size4) {
+                            iM25434 = -1;
+                            break;
+                        }
+                        int i8 = c24698M50591.get(i7);
+                        if (C4560.m14322(i8, iArrM14321)) {
+                            iM25434 = i8;
+                            break;
+                        }
+                        i7++;
+                    }
+                } else {
+                    iM25434 = iM50594;
+                }
             }
-            this.f13582 = false;
+            iM25434 = C4560.m14323(0, iArrM14321);
+        }
+        if (i5 != size) {
+            throw new RuntimeException("shouldn't happen");
+        }
+        c3747.f12853 = iArr;
+        C14978 c14978M25433 = c9757.m25432();
+        int[] iArr2 = c3747.f12853;
+        int length = iArr2.length;
+        while (true) {
+            C5985 c5985 = c3747.f12851;
+            C12171 c12171 = c3747.f12846;
+            if (i3 >= length) {
+                return new C7697(c5985.m17412(), new C12696(c9757, c3747.f12853, c12171));
+            }
+            int i9 = i3 + 1;
+            int i10 = i9 == iArr2.length ? -1 : iArr2[i9];
+            C22438 c22438M36046 = c14978M25433.m36044(iArr2[i3]);
+            C21122 c21122M30438 = c12171.m30438(c22438M36046);
+            c5985.m17414((AbstractC18884) c21122M30438);
+            C11995 c11996 = c3747.f12852;
+            if (c11996 != null) {
+                c5985.m17414(new C23139(c21122M30438.m43799(), c11996.m30149(c22438M36046)));
+            }
+            C21122 c21122M30439 = c12171.m30439(c22438M36046);
+            C23885 c23885 = c3747.f12845;
+            c23885.m53386(c22438M36046, c21122M30439);
+            c22438M36046.m50596().m37630(c23885);
+            c5985.m17414((AbstractC18884) c12171.m30437(c22438M36046));
+            int iM50595 = c22438M36046.m50593();
+            AbstractC17216 abstractC17216M50594 = c22438M36046.m50594();
+            if (iM50595 >= 0 && iM50595 != i10) {
+                if (abstractC17216M50594.m40434().m43508() == 4 && c22438M36046.m50592() == i10) {
+                    c5985.m17415(c12171.m30436(iM50595));
+                } else {
+                    c5985.m17414(new C24631(C9187.f29815, abstractC17216M50594.m40433(), C0063.f947, c12171.m30436(iM50595)));
+                }
+            }
+            i3 = i9;
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void m10972(C2336 c2336) {
-        if (!this.f13582 || c2336.equals(this.f13588)) {
-            return;
+    public C3747(C9757 c9757, C11995 c11995, int i, C16646 c16646) {
+        this.f12848 = c9757;
+        this.f12852 = c11995;
+        this.f12846 = new C12171(c9757);
+        this.f12850 = i;
+        boolean[] zArr = {true};
+        c9757.m25432().m36042(new C17917(zArr, c9757.m25432().m36043(), i));
+        boolean z = zArr[0];
+        this.f12849 = z;
+        C14978 c14978M25432 = c9757.m25432();
+        int size = c14978M25432.size();
+        int i2 = size * 3;
+        int iM36045 = c14978M25432.m36045() + i2;
+        int iM30153 = c11995 != null ? iM36045 + c11995.m30153() + size : iM36045;
+        int iM36043 = c14978M25432.m36043() + (z ? 0 : i);
+        this.f12847 = iM36043;
+        C5985 c5985 = new C5985(c16646, iM30153, i2, iM36043, i);
+        this.f12851 = c5985;
+        if (c11995 != null) {
+            this.f12845 = new C16425(this, c5985, c11995);
+        } else {
+            this.f12845 = new C23885(this, c5985);
         }
-        this.f13588 = c2336;
-        ((C7421) this.f13587.f$0).m19882(c2336);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C0063 m12173(AbstractC17216 abstractC17216) {
+        return m12179(abstractC17216, abstractC17216.m40437());
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C0063 m12179(AbstractC17216 abstractC17216, C20946 c20946) {
+        C0063 c0063M40438 = abstractC17216.m40438();
+        if (abstractC17216.m40434().m43503() && c0063M40438.size() == 2 && c20946.m47903() == c0063M40438.m31619get(1).m47903()) {
+            c0063M40438 = C0063.m1031(c0063M40438.m31619get(1), c0063M40438.m31619get(0));
+        }
+        return c20946 == null ? c0063M40438 : c0063M40438.m1036(c20946);
     }
 }

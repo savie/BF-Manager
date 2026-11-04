@@ -1,89 +1,73 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.io.IOException;
-import java.util.Iterator;
+import android.text.GetChars;
 
-/* JADX INFO: renamed from: l.֨᩺۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: U9V0 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1427 extends AbstractC4249 {
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String mo4992() {
-        return "announcing";
-    }
+/* JADX INFO: renamed from: l.֨᩶᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: EB2A */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C1427 implements CharSequence, GetChars {
 
-    public C1427(C22823 c22823) {
-        super(c22823, AbstractC4249.m12011());
-        EnumC3066 enumC3066 = EnumC3066.f11550;
-        m12016(enumC3066);
-        m12013(enumC3066);
-    }
-
-    @Override // l.AbstractC4955
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String mo4999() {
-        return C22697.m50267(new StringBuilder("Announcer("), m13745() != null ? m13745().getName() : "", MotionUtils.EASING_TYPE_FORMAT_END);
+    public final char[] f5020;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f5021;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f5022;
+
+    public C1427(char[] cArr, int i, int i2) {
+        this.f5020 = cArr;
+        this.f5021 = i;
+        this.f5022 = i2 - i;
     }
 
-    @Override // l.AbstractC4955
+    @Override // java.lang.CharSequence
+    public final int length() {
+        return this.f5022;
+    }
+
+    @Override // java.lang.CharSequence
+    public final char charAt(int i) {
+        int i2 = this.f5022;
+        if (i < 0 || i >= i2) {
+            throw new IndexOutOfBoundsException(C6934.m19217("index = ", i, i2, ", length = "));
+        }
+        return this.f5020[this.f5021 + i];
+    }
+
+    @Override // java.lang.CharSequence
+    public final CharSequence subSequence(int i, int i2) {
+        int i3 = this.f5022;
+        if (i == 0 && i2 == i3) {
+            return this;
+        }
+        int i4 = i2 - i;
+        if (i4 < 0 || i < 0 || i2 > i3) {
+            StringBuilder sbM5126 = C1402.m5126("start = ", i, ", end = ", ", length = ", i2);
+            sbM5126.append(i3);
+            throw new IndexOutOfBoundsException(sbM5126.toString());
+        }
+        if (i4 == 0) {
+            return "";
+        }
+        int i5 = this.f5021;
+        return new C1427(this.f5020, i + i5, i5 + i2);
+    }
+
+    @Override // java.lang.CharSequence
     public final String toString() {
-        return mo4999() + " state: " + m12015();
+        return new String(this.f5020, this.f5021, this.f5022);
     }
 
-    @Override // java.util.TimerTask
-    public final boolean cancel() {
-        m12014();
-        return super.cancel();
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean mo4993() {
-        return (m13745().m50560() || m13745().m50533()) ? false : true;
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C22034 mo4997() {
-        return new C22034(33792);
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22034 mo4996(C22034 c22034) throws IOException {
-        Iterator it = m13745().m50562().m8884(EnumC23529.CLASS_ANY, true, m12017()).iterator();
-        while (it.hasNext()) {
-            c22034 = m13741(c22034, (C13568) null, (AbstractC19918) it.next());
+    @Override // android.text.GetChars
+    public final void getChars(int i, int i2, char[] cArr, int i3) {
+        int i4 = this.f5022;
+        if (i < 0 || i2 > i4 || i > i2) {
+            StringBuilder sbM5126 = C1402.m5126("start = ", i, ", end = ", ", length = ", i2);
+            sbM5126.append(i4);
+            throw new IndexOutOfBoundsException(sbM5126.toString());
         }
-        return c22034;
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22034 mo4995(C0244 c0244, C22034 c22034) throws IOException {
-        Iterator it = c0244.m1641(EnumC23529.CLASS_ANY, m12017(), m13745().m50562()).iterator();
-        while (it.hasNext()) {
-            c22034 = m13741(c22034, (C13568) null, (AbstractC19918) it.next());
-        }
-        return c22034;
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final void mo4994() {
-        m13745().m50567();
-    }
-
-    @Override // l.AbstractC4249
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo4998() {
-        m12016(m12015().m9199());
-        if (m12015().m9200()) {
-            return;
-        }
-        cancel();
-        m13745().mo15987();
+        System.arraycopy(this.f5020, this.f5021 + i, cArr, i3, i2 - i);
     }
 }

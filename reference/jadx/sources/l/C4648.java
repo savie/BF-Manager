@@ -1,73 +1,67 @@
 package l;
 
-import java.util.Map;
+import java.util.BitSet;
 
-/* JADX INFO: renamed from: l.ۙ۫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O2OZ */
+/* JADX INFO: renamed from: l.ۙۘܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2BCT */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4648 extends AbstractC2656 {
+public final class C4648 extends AbstractC6951 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11705 f16438;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C4648 f16449 = new C4648();
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Object f16439;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f16440;
-
-    public C4648(C11705 c11705, int i) {
-        this.f16438 = c11705;
-        this.f16439 = C11705.m29227(c11705, i);
-        this.f16440 = i;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3133() {
+        return 2;
     }
 
-    @Override // java.util.Map.Entry
-    public final Object getKey() {
-        return this.f16439;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo3134(AbstractC2476 abstractC2476) {
+        C0063 c0063M43795 = abstractC2476.m43795();
+        return c0063M43795.m31619get(0).m47904() + ", " + c0063M43795.m31619get(1).m47904() + ", " + AbstractC6951.m19235((AbstractC24149) ((C18138) abstractC2476).m42255());
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m12831() {
-        int i = this.f16440;
-        Object obj = this.f16439;
-        C11705 c11705 = this.f16438;
-        if (i == -1 || i >= c11705.size() || !C13638.equals(obj, C11705.m29227(c11705, this.f16440))) {
-            this.f16440 = c11705.m29225(obj);
-        }
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo3137(AbstractC2476 abstractC2476) {
+        return AbstractC6951.m19236((AbstractC24149) ((C18138) abstractC2476).m42255(), 16);
     }
 
-    @Override // java.util.Map.Entry
-    public final Object getValue() {
-        C11705 c11705 = this.f16438;
-        Map mapM29242 = c11705.m29242();
-        if (mapM29242 != null) {
-            return mapM29242.get(this.f16439);
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo3138(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        if ((abstractC18884 instanceof C18138) && c0063M43795.size() == 2 && AbstractC6951.m19249(c0063M43795.m31619get(0).m47903()) && AbstractC6951.m19249(c0063M43795.m31619get(1).m47903())) {
+            AbstractC13487 abstractC13487M42255 = ((C18138) abstractC18884).m42255();
+            if (abstractC13487M42255 instanceof AbstractC24149) {
+                AbstractC24149 abstractC24149 = (AbstractC24149) abstractC13487M42255;
+                if (abstractC24149.mo17875()) {
+                    int iMo17877 = abstractC24149.mo17877();
+                    if (((short) iMo17877) == iMo17877) {
+                        return true;
+                    }
+                }
+            }
         }
-        m12831();
-        int i = this.f16440;
-        if (i == -1) {
-            return null;
-        }
-        return C11705.m29238(c11705, i);
+        return false;
     }
 
-    @Override // java.util.Map.Entry
-    public final Object setValue(Object obj) {
-        C11705 c11705 = this.f16438;
-        Map mapM29242 = c11705.m29242();
-        Object obj2 = this.f16439;
-        if (mapM29242 != null) {
-            return mapM29242.put(obj2, obj);
-        }
-        m12831();
-        int i = this.f16440;
-        if (i == -1) {
-            c11705.put(obj2, obj);
-            return null;
-        }
-        Object objM29238 = C11705.m29238(c11705, i);
-        C11705.m29229(c11705, this.f16440, obj);
-        return objM29238;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final BitSet mo3135(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        BitSet bitSet = new BitSet(2);
+        bitSet.set(0, AbstractC6951.m19249(c0063M43795.m31619get(0).m47903()));
+        bitSet.set(1, AbstractC6951.m19249(c0063M43795.m31619get(1).m47903()));
+        return bitSet;
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3136(C15000 c15000, AbstractC2476 abstractC2476) {
+        C0063 c0063M43795 = abstractC2476.m43795();
+        AbstractC6951.m19240((InterfaceC8550) c15000, AbstractC6951.m19239(abstractC2476, AbstractC6951.m19247(c0063M43795.m31619get(0).m47903(), c0063M43795.m31619get(1).m47903())), (short) ((AbstractC24149) ((C18138) abstractC2476).m42255()).mo17877());
     }
 }

@@ -11,62 +11,62 @@ import java.util.ArrayList;
 public class RegionUtils {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Log f409 = LogFactory.m303("com.amazonaws.request");
+    public static final Log f399 = LogFactory.m297("com.amazonaws.request");
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static ArrayList f410;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static ArrayList f400;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized void m424() {
+    public static synchronized void m418() {
         if (System.getProperty("com.amazonaws.regions.RegionUtils.fileOverride") != null) {
             try {
-                m425();
+                m419();
             } catch (FileNotFoundException e) {
                 throw new RuntimeException("Couldn't find regions override file specified", e);
             }
         }
-        if (f410 == null) {
-            Log log = f409;
-            if (log.mo294()) {
-                log.mo298("Initializing the regions with default regions");
+        if (f400 == null) {
+            Log log = f399;
+            if (log.mo287()) {
+                log.mo291("Initializing the regions with default regions");
             }
-            f410 = RegionDefaults.m419();
+            f400 = RegionDefaults.m413();
         }
-        if (f410 == null) {
+        if (f400 == null) {
             throw new RuntimeException("Failed to initialize the regions.");
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Region m423(String str) {
+    public static Region m417(String str) {
         ArrayList<Region> arrayList;
         synchronized (RegionUtils.class) {
-            if (f410 == null) {
-                m424();
+            if (f400 == null) {
+                m418();
             }
-            arrayList = f410;
+            arrayList = f400;
         }
         for (Region region : arrayList) {
-            if (region.m417().equals(str)) {
+            if (region.m409().equals(str)) {
                 return region;
             }
         }
         return null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m425() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m419() {
         String property = System.getProperty("com.amazonaws.regions.RegionUtils.fileOverride");
-        Log log = f409;
-        if (log.mo294()) {
-            log.mo298("Using local override of the regions file (" + property + ") to initiate regions data...");
+        Log log = f399;
+        if (log.mo287()) {
+            log.mo291("Using local override of the regions file (" + property + ") to initiate regions data...");
         }
         FileInputStream fileInputStream = new FileInputStream(new File(property));
         try {
             new RegionMetadataParser();
-            f410 = RegionMetadataParser.m422(fileInputStream);
+            f400 = RegionMetadataParser.m416(fileInputStream);
         } catch (Exception e) {
-            log.mo297("Failed to parse regional endpoints", e);
+            log.mo289("Failed to parse regional endpoints", e);
         }
     }
 }

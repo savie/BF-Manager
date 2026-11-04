@@ -1,106 +1,52 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.R;
-import java.util.List;
+/* JADX INFO: renamed from: l.ۖ᩵ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2BF0 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2891 extends C12763 {
 
-/* JADX INFO: renamed from: l.ۗ֡᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X5LN */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2891 extends AbstractC3492 {
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C2891 f9479 = new C2891(0);
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public TextView f10910;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public DialogInterfaceC19356 f10911;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22418 f10912;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C11835 f10913;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public TextView f10914;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5359 f10915;
-
-    public C2891(C22418 c22418, C5359 c5359) {
-        this.f10912 = c22418;
-        this.f10915 = c5359;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        C22418 c22418 = this.f10912;
-        View viewM30995 = c22418.f73168.m28824().m30995(R.layout.MT_Protector);
-        this.f10914 = (TextView) viewM30995.findViewById(R.id.textView1);
-        this.f10910 = (TextView) viewM30995.findViewById(R.id.textView2);
-        int i = 1;
-        this.f10914.setText(C16737.m39264(R.string.MT_Protector, 0));
-        C11835 c11835 = new C11835(c22418.f73174.mo13039(), c22418.f73168.m28799());
-        this.f10913 = c11835;
-        if (c11835.f39732.equals("/")) {
-            this.f10910.setText("/");
-        } else {
-            this.f10910.setText("./");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C2891 m9514(C2891 c2891, C2891 c2892) {
+        if (c2891 == f9479) {
+            return c2892;
         }
-        viewM30995.findViewById(R.id.MT_Protector).setOnClickListener(new ViewOnClickListenerC6378(i, this.f10915));
-        C8067 c8067BuildDialog = c22418.f73168.m28824().buildDialog();
-        c8067BuildDialog.m21265(false);
-        c8067BuildDialog.m21258(viewM30995);
-        this.f10911 = c8067BuildDialog.m21269();
-        c22418.f73168.m28824().m123(true);
+        int size = c2891.size();
+        int size2 = c2892.size();
+        C2891 c2893 = new C2891(size + size2);
+        for (int i = 0; i < size; i++) {
+            c2893.m31596(i, (C9602) c2891.m31593(i));
+        }
+        for (int i2 = 0; i2 < size2; i2++) {
+            c2893.m31596(size + i2, (C9602) c2892.m31593(i2));
+        }
+        return c2893;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        C22418 c22418 = this.f10912;
-        C9243 c9243 = new C9243(this);
-        try {
-            List list = c22418.f73158;
-            C5359 c5359 = this.f10915;
-            if (list != null) {
-                c5359.m14866(c22418.f73174.mo13029(), c22418.f73158, c9243);
-            } else {
-                c5359.m14865(c22418.f73174.mo13029(), this.f10913.f39732, c9243, c22418.f73175);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m9515(int i, int i2, int i3) {
+        m31596(i, new C9602(i2, i3));
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m9516(int i) {
+        int size = size();
+        int i2 = -1;
+        int i3 = -1;
+        for (int i4 = 0; i4 < size; i4++) {
+            C9602 c9602 = (C9602) m31593(i4);
+            int iM25076 = c9602.m25076();
+            if (iM25076 <= i && iM25076 > i2) {
+                int iM25075 = c9602.m25075();
+                if (iM25076 == i) {
+                    return iM25075;
+                }
+                i3 = iM25075;
+                i2 = iM25076;
             }
-        } finally {
-            this.f10913.m29527();
         }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        boolean zIsEmpty = this.f10913.f39735.isEmpty();
-        C22418 c22418 = this.f10912;
-        if (!zIsEmpty) {
-            C22418.m49706(c22418.f73168, c22418.f73154, this.f10913);
-        } else {
-            C15829.m37611(R.string.MT_Protector);
-        }
-        if (!this.f10913.f39735.isEmpty() || c22418.f73158 == null) {
-            c22418.f73154.mo2553(this.f10913);
-        }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f10912.f73168.m28824().m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f10911.dismiss();
-        this.f10912.f73168.m28824().m123(false);
+        return i3;
     }
 }

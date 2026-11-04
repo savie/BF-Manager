@@ -1,100 +1,54 @@
 .class public final synthetic Ll/ᩴۖᩴ;
 .super Ljava/lang/Object;
-.source "SBW1"
+.source "964K"
 
 # interfaces
-.implements Ll/ᩳۖᩴ;
+.implements Ll/ܶ۟᩻;
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/util/function/Consumer;
+.field public final synthetic ۙ:Ljava/lang/String;
+
+.field public final synthetic ۤ:Ll/۠ۨܳ;
+
+.field public final synthetic ᩷:Ljava/lang/Runnable;
+
+.field public final synthetic ᩸:Ll/᩷ۨᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/Consumer;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;Ll/۠ۨܳ;Ll/᩷ۨᩴ;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ᩴۖᩴ;->ܺ:Ljava/util/function/Consumer;
+    iput-object p1, p0, Ll/ᩴۖᩴ;->ۙ:Ljava/lang/String;
+
+    iput-object p2, p0, Ll/ᩴۖᩴ;->᩷:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Ll/ᩴۖᩴ;->ۤ:Ll/۠ۨܳ;
+
+    iput-object p4, p0, Ll/ᩴۖᩴ;->᩸:Ll/᩷ۨᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic accept(D)V
-    .locals 0
+.method public final ۙ(I)V
+    .locals 4
 
     .line 0
-    invoke-static {p0, p1, p2}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;D)V
+    iget-object v0, p0, Ll/ᩴۖᩴ;->ۤ:Ll/۠ۨܳ;
 
-    return-void
-.end method
+    iget-object v1, p0, Ll/ᩴۖᩴ;->᩸:Ll/᩷ۨᩴ;
 
-.method public final bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
+    iget-object v2, p0, Ll/ᩴۖᩴ;->ۙ:Ljava/lang/String;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/lang/Object;)V
+    iget-object v3, p0, Ll/ᩴۖᩴ;->᩷:Ljava/lang/Runnable;
 
-    return-void
-.end method
-
-.method public final andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
-
-    .line 105
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/DoubleConsumer;)Ljava/util/function/DoubleConsumer;
-    .locals 0
-
-    .line 35
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/util/function/DoubleConsumer;)Ll/ᩳۖᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ᩳۖᩴ;)Ll/ܶۖᩴ;
-    .locals 1
-
-    .line 80
-    new-instance v0, Ll/ܶۖᩴ;
-
-    invoke-direct {v0, p0, p1}, Ll/ܶۖᩴ;-><init>(Ll/ᩳۖᩴ;Ll/ᩳۖᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(F)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Ll/ᩴۖᩴ;->ܺ:Ljava/util/function/Consumer;
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final synthetic ۙ(Ljava/lang/Float;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/lang/Float;)V
+    invoke-static {v2, v3, v0, v1, p1}, Ll/ܰۖᩴ;->ۙ(Ljava/lang/String;Ljava/lang/Runnable;Ll/۠ۨܳ;Ll/᩷ۨᩴ;I)V
 
     return-void
 .end method

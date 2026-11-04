@@ -54,11 +54,11 @@
     const-string v9, "Alg.Alias.Signature.OID."
 
     .line 0
-    invoke-static {v8, v9, v0, v7, p1}, Ll/ᩴ᩸ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v9, v0, v7, p1}, Ll/ۖۚ᩷;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0, v7, p1, v8}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v0, v7, p1, v8}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     const-string v0, "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSSignatureSpi$withSha256"
 
@@ -218,11 +218,11 @@
 
     const-string v10, "XMSSMT"
 
-    invoke-static {v10, v9, v0, v6, p1}, Ll/ᩴ᩸ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v10, v9, v0, v6, p1}, Ll/ۖۚ᩷;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0, v6, p1, v10}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v0, v6, p1, v10}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     const-string v0, "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withSha256"
 

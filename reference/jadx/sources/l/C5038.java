@@ -1,80 +1,43 @@
 package l;
 
-import android.content.pm.ShortcutManager;
-import java.io.InputStream;
-import net.sf.sevenzipjbinding.NativeXZInputStream;
+/* JADX INFO: renamed from: l.ۙܽ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y96B */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5038 {
 
-/* JADX INFO: renamed from: l.ۚ֫۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: QB6R */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5038 implements InterfaceC7359, InterfaceC11955, InterfaceC3740, InterfaceC19534 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f17448 = false;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f17603;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f17446 = false;
 
-    public /* synthetic */ C5038(int i) {
-        this.f17603 = i;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f17447 = false;
 
-    public /* synthetic */ C5038(C19602 c19602, int i) {
-        this.f17603 = 3;
-    }
-
-    public /* synthetic */ C5038(C19602 c19602, C18627 c18627) {
-        this.f17603 = 4;
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1 */
+    /* JADX WARN: Type inference failed for: r1v8 */
+    /* JADX WARN: Type inference failed for: r1v9 */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m15262() {
+        InterfaceC18752 interfaceC18752Edit = ApplicationC17729.f58258.edit();
+        boolean z = this.f17448;
+        ?? r1 = z;
+        if (this.f17446) {
+            r1 = (z ? 1 : 0) | 2;
+        }
+        int i = r1;
+        if (this.f17447) {
+            i = (r1 == true ? 1 : 0) | 4;
+        }
+        interfaceC18752Edit.mo3485((byte) i, "edfa");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* bridge */ /* synthetic */ Class m14057() {
-        return ShortcutManager.class;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ String m14058(long j) {
-        if (j == 0) {
-            return "0";
-        }
-        if (j > 0) {
-            return Long.toString(j, 16);
-        }
-        int i = 64;
-        char[] cArr = new char[64];
-        int iNumberOfTrailingZeros = Integer.numberOfTrailingZeros(16);
-        do {
-            i--;
-            cArr[i] = Character.forDigit(((int) j) & 15, 16);
-            j >>>= iNumberOfTrailingZeros;
-        } while (j != 0);
-        return new String(cArr, i, 64 - i);
-    }
-
-    @Override // l.InterfaceC19534
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InputStream mo14059(InputStream inputStream) {
-        return new NativeXZInputStream(inputStream);
-    }
-
-    @Override // l.InterfaceC11955
-    public Object apply(Object obj) {
-        return ((InterfaceC6806) obj).mo7675().m52137();
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        InterfaceC10430 interfaceC10430 = (InterfaceC10430) obj;
-        switch (this.f17603) {
-            case 3:
-                interfaceC10430.getClass();
-                break;
-            default:
-                interfaceC10430.getClass();
-                break;
-        }
-    }
-
-    @Override // l.InterfaceC3740
-    /* JADX INFO: renamed from: ܰ */
-    public Object mo1620() {
-        return new ConcurrentMapC13783();
+    public final void m15261() {
+        byte bMo7901 = ApplicationC17729.f58258.mo7901((byte) 0, "edfa");
+        this.f17448 = (bMo7901 & 1) != 0;
+        this.f17446 = (bMo7901 & 2) != 0;
+        this.f17447 = (bMo7901 & 4) != 0;
     }
 }

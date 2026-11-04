@@ -1,258 +1,415 @@
 package l;
 
-import android.content.DialogInterface;
-import android.text.InputFilter;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.TextView;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
-import java.nio.charset.Charset;
-import java.nio.charset.IllegalCharsetNameException;
-import java.nio.charset.UnsupportedCharsetException;
+import com.umeng.commonsdk.statistics.UMErrorCode;
 import java.util.Arrays;
+import java.util.Collections;
 
-/* JADX INFO: renamed from: l.֨ۚ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 195F */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0901 extends AbstractC4674 {
+/* JADX INFO: renamed from: l.֨ۗ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: T8UY */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0901 implements InterfaceC6867 {
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f3341 = {73, 68, 51};
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final String f3343;
+
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public int f3344;
+
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public final int f3347;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f3348;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public String f3349;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public InterfaceC22024 f3350;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final byte[] f3627 = {-17, -69, -65};
+    public final boolean f3351;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public long f3353;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public boolean f3355;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public boolean f3356;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public InterfaceC22024 f3357;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f3361;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public InterfaceC22024 f3362;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public boolean f3364;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C14573 f3345 = new C14573(new byte[7], 7);
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final C21287 f3354 = new C21287(Arrays.copyOf(f3341, 10));
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f3342 = -1;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f3346 = -1;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public long f3363 = -9223372036854775807L;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public long f3359 = -9223372036854775807L;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m3595(int i) {
-        if (i == 0 || i == 1 || i == 2) {
-            return i;
-        }
-        return 0;
+    public int f3352 = 0;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f3360 = 0;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public int f3358 = 256;
+
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1353(boolean z) {
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        return c21422.m47974("local") && !c21422.m47977() && c21422.m47975() == 1 && c21422.m47981().mo7985();
+    public C0901(String str, int i, String str2, boolean z) {
+        this.f3351 = z;
+        this.f3343 = str;
+        this.f3347 = i;
+        this.f3348 = str2;
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(final C21422 c21422) {
-        Main mainM47980 = c21422.m47980();
-        final InterfaceC2557 interfaceC2557M47981 = c21422.m47981();
-        View viewM30995 = mainM47980.m30995(R.layout.MT_Protector);
-        TextView textView = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-        TextView textView2 = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-        Spinner spinner = (Spinner) viewM30995.findViewById(R.id.spinner1);
-        TextView textView3 = (TextView) viewM30995.findViewById(R.id.text1);
-        final C10948 c10948 = (C10948) viewM30995.findViewById(R.id.MT_Protector);
-        final Spinner spinner2 = (Spinner) viewM30995.findViewById(R.id.spinner2);
-        TextView textView4 = (TextView) viewM30995.findViewById(R.id.textCharset);
-        final EditText editText = (EditText) viewM30995.findViewById(R.id.MT_Protector);
-        View viewFindViewById = viewM30995.findViewById(R.id.MT_Protector);
-        final C10948 c10949 = (C10948) viewM30995.findViewById(R.id.editText2);
-        final CheckBox checkBox = (CheckBox) viewM30995.findViewById(R.id.checkBoxText1);
-        TextView textView5 = (TextView) viewM30995.findViewById(R.id.textSeparatorPolicy);
-        final Spinner spinner3 = (Spinner) viewM30995.findViewById(R.id.MT_Protector);
-        final CheckBox checkBox2 = (CheckBox) viewM30995.findViewById(R.id.MT_Protector);
-        TextView textView6 = (TextView) viewM30995.findViewById(R.id.text2);
-        final CheckBox checkBox3 = (CheckBox) viewM30995.findViewById(R.id.MT_Protector);
-        checkBox3.setText(mainM47980.getResources().getQuantityString(R.plurals.MT_Protector, 1));
-        textView.setText(interfaceC2557M47981.getName());
-        textView2.setText(C1791.m5873(interfaceC2557M47981.getSize()));
-        c10949.m16930(2);
-        c10949.mo16989((CharSequence) (interfaceC2557M47981.getName() + ".{D}"));
-        spinner2.setAdapter((SpinnerAdapter) new C0733(mainM47980, Arrays.asList("B", "KB", "MB", "GB")));
-        viewFindViewById.setOnClickListener(new ViewOnClickListenerC21591(1, mainM47980, editText));
-        final C0113 c0113 = new C0113();
-        c0113.m1155();
-        checkBox3.setChecked(c0113.f1090);
-        spinner.setSelection(c0113.f1088);
-        m3596(c0113, textView3, c10948, spinner2, textView4, editText, viewFindViewById, checkBox, textView5, spinner3, checkBox2);
-        RunnableC8581 runnableC8581 = new RunnableC8581(mainM47980, interfaceC2557M47981.getSize(), spinner, c10948, spinner2, textView6);
-        runnableC8581.run();
-        spinner.setOnItemSelectedListener(new C20575(c0113, c10948, spinner2, editText, checkBox, spinner3, checkBox2, mainM47980, textView3, textView4, viewFindViewById, textView5, runnableC8581));
-        c10948.m16853(new C15637(runnableC8581));
-        spinner2.setOnItemSelectedListener(new C19870(runnableC8581));
-        C8067 c8067BuildDialog = mainM47980.buildDialog();
-        c8067BuildDialog.m21258(viewM30995);
-        final DialogInterfaceC19356 dialogInterfaceC19356M10334 = C3509.m10334(c8067BuildDialog, R.string.MT_Protector, (DialogInterface.OnClickListener) null, R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        dialogInterfaceC19356M10334.m44373().setOnClickListener(new View.OnClickListener() { // from class: l.ۤۖ֨
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                C0901.m3594(c10949, c0113, c10948, spinner2, editText, checkBox, spinner3, checkBox2, checkBox3, dialogInterfaceC19356M10334, c21422, interfaceC2557M47981);
-            }
-        });
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1349() {
+        this.f3359 = -9223372036854775807L;
+        this.f3364 = false;
+        this.f3352 = 0;
+        this.f3360 = 0;
+        this.f3358 = 256;
     }
 
-    /* JADX WARN: Code duplicated, block: B:33:0x0055 A[Catch: Exception -> 0x00d3, PHI: r4
-      0x0055: PHI (r4v8 java.lang.String) = (r4v7 java.lang.String), (r4v12 java.lang.String) binds: [B:45:0x008e, B:31:0x0052] A[DONT_GENERATE, DONT_INLINE], TryCatch #0 {Exception -> 0x00d3, blocks: (B:8:0x0010, B:10:0x0014, B:13:0x001a, B:14:0x001f, B:17:0x0023, B:20:0x0028, B:21:0x002d, B:24:0x0033, B:28:0x003c, B:30:0x004e, B:33:0x0055, B:34:0x0059, B:35:0x005e, B:38:0x0062, B:40:0x006e, B:42:0x0078, B:44:0x008a), top: B:70:0x0010 }] */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m3594(C10948 c10948, C0113 c0113, C10948 c10949, Spinner spinner, EditText editText, CheckBox checkBox, Spinner spinner2, CheckBox checkBox2, CheckBox checkBox3, DialogInterfaceC19356 dialogInterfaceC19356, C21422 c21422, InterfaceC2557 interfaceC2557) {
-        String strTrim;
-        if (c10948.m16842() == 0) {
-            c10948.requestFocus();
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1351(InterfaceC12789 interfaceC12789, C10857 c10857) {
+        c10857.m27594();
+        this.f3349 = c10857.m27596();
+        InterfaceC22024 interfaceC22024Mo16658 = interfaceC12789.mo16658(c10857.m27595(), 1);
+        this.f3350 = interfaceC22024Mo16658;
+        this.f3357 = interfaceC22024Mo16658;
+        if (this.f3351) {
+            c10857.m27594();
+            InterfaceC22024 interfaceC22024Mo16659 = interfaceC12789.mo16658(c10857.m27595(), 5);
+            this.f3362 = interfaceC22024Mo16659;
+            C20124 c20124 = new C20124();
+            c20124.m46309(c10857.m27596());
+            c20124.m46327(this.f3348);
+            c20124.m46315("application/id3");
+            interfaceC22024Mo16659.mo14384(c20124.m46295());
             return;
         }
-        try {
-            m3597(c0113, c10949, spinner, editText, checkBox, spinner2, checkBox2);
-            try {
-                int i = c0113.f1088;
-                if (i == 0) {
-                    if (c0113.f1091 <= 0) {
-                        throw new NumberFormatException();
-                    }
-                } else if (i == 1) {
-                    if (c0113.f1094 <= 0) {
-                        throw new NumberFormatException();
-                    }
-                } else if (i == 2) {
-                    int i2 = c0113.f1097;
-                    if (i2 < 1 || i2 > 999999999) {
-                        throw new NumberFormatException();
-                    }
-                    strTrim = editText.getText().toString().trim();
-                    if (!strTrim.isEmpty() && !"UTF-8-BOM".equalsIgnoreCase(strTrim)) {
-                        Charset.forName(strTrim);
-                    }
-                } else if (i == 3) {
-                    if (C22069.m49004(c0113.f1086).isEmpty()) {
-                        C15829.m37611(R.string.MT_Protector);
-                        c10949.requestFocus();
-                        return;
-                    } else {
-                        strTrim = editText.getText().toString().trim();
-                        if (!strTrim.isEmpty() && !"UTF-8-BOM".equalsIgnoreCase(strTrim)) {
-                            Charset.forName(strTrim);
+        this.f3362 = new C4586();
+    }
+
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1350(int i, long j) {
+        this.f3359 = j;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m3639() {
+        return this.f3363;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:123:0x02d0  */
+    /* JADX WARN: Code duplicated, block: B:125:0x02d4  */
+    /* JADX WARN: Code duplicated, block: B:127:0x02d8  */
+    /* JADX WARN: Code duplicated, block: B:129:0x02dc  */
+    /* JADX WARN: Code duplicated, block: B:131:0x02e0  */
+    /* JADX WARN: Code duplicated, block: B:132:0x02e4  */
+    /* JADX WARN: Code duplicated, block: B:134:0x02f7  */
+    /* JADX WARN: Code duplicated, block: B:135:0x02fd  */
+    /* JADX WARN: Code duplicated, block: B:136:0x0303  */
+    /* JADX WARN: Code duplicated, block: B:157:0x02e6 A[SYNTHETIC] */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference fix 'apply assigned field type' failed
+    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$PrimitiveArg
+    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
+    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
+    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
+     */
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1352(C21287 c21287) throws C2970 {
+        int iM48499;
+        long j;
+        int i;
+        int i2;
+        int i3;
+        int i4;
+        int i5;
+        this.f3350.getClass();
+        String str = C7116.f23455;
+        while (c21287.m48486() > 0) {
+            int i6 = this.f3352;
+            C21287 c21288 = this.f3354;
+            C14573 c14573 = this.f3345;
+            int i7 = 0;
+            int i8 = 4;
+            int i9 = 1;
+            if (i6 == 0) {
+                byte[] bArrM48497 = c21287.m48497();
+                int iM48516 = c21287.m48516();
+                int iM48509 = c21287.m48509();
+                while (true) {
+                    if (iM48516 < iM48509) {
+                        int i10 = iM48516 + 1;
+                        byte b = bArrM48497[iM48516];
+                        int i11 = b & 255;
+                        if (this.f3358 == 512 && (((((byte) i11) & 255 ? 1 : 0) | 65280 ? 1 : 0) & 65526) == 65520) {
+                            if (!this.f3364) {
+                                int i12 = iM48516 - 1;
+                                c21287.m48510(iM48516);
+                                byte[] bArr = c14573.f45926;
+                                if (c21287.m48486() >= i9) {
+                                    c21287.m48490(i7, i9, bArr);
+                                    c14573.m35167(i8);
+                                    int iM35163 = c14573.m35163(i9);
+                                    int i13 = this.f3342;
+                                    if (i13 == -1 || iM35163 == i13) {
+                                        if (this.f3346 != -1) {
+                                            byte[] bArr2 = c14573.f45926;
+                                            if (c21287.m48486() >= i9) {
+                                                c21287.m48490(i7, i9, bArr2);
+                                                c14573.m35167(2);
+                                                i3 = 4;
+                                                if (c14573.m35163(4) == this.f3346) {
+                                                    c21287.m48510(i10);
+                                                }
+                                            }
+                                        } else {
+                                            i3 = 4;
+                                        }
+                                        byte[] bArr3 = c14573.f45926;
+                                        if (c21287.m48486() >= i3) {
+                                            c21287.m48490(i7, i3, bArr3);
+                                            c14573.m35167(14);
+                                            int iM35164 = c14573.m35163(13);
+                                            if (iM35164 >= 7) {
+                                                byte[] bArrM48498 = c21287.m48497();
+                                                int iM485010 = c21287.m48509();
+                                                int i14 = i12 + iM35164;
+                                                if (i14 < iM485010) {
+                                                    byte b2 = bArrM48498[i14];
+                                                    if (b2 == -1) {
+                                                        int i15 = i14 + 1;
+                                                        if (i15 != iM485010) {
+                                                            byte b3 = bArrM48498[i15];
+                                                            if ((((b3 & 255 ? 1 : 0) | 65280 ? 1 : 0) & 65526) != 65520 || ((b3 & 8) >> 3) != iM35163) {
+                                                            }
+                                                        }
+                                                    } else if (b2 == 73 && ((i4 = i14 + 1) == iM485010 || (bArrM48498[i4] == 68 && ((i5 = i14 + 2) == iM485010 || bArrM48498[i5] == 51)))) {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                i = this.f3358;
+                                i2 = i11 | i;
+                                if (i2 != 329) {
+                                    this.f3358 = 768;
+                                } else if (i2 != 511) {
+                                    this.f3358 = 512;
+                                } else if (i2 != 836) {
+                                    this.f3358 = 1024;
+                                } else if (i2 != 1075) {
+                                    if (i != 256) {
+                                        this.f3358 = 256;
+                                    }
+                                    i8 = 4;
+                                    i9 = 1;
+                                    i7 = 0;
+                                } else {
+                                    this.f3352 = 2;
+                                    this.f3360 = 3;
+                                    this.f3344 = 0;
+                                    c21288.m48510(0);
+                                    c21287.m48510(i10);
+                                }
+                                iM48516 = i10;
+                                i8 = 4;
+                                i9 = 1;
+                                i7 = 0;
+                            }
+                            this.f3361 = (b & 8) >> 3;
+                            this.f3355 = (b & 1) == 0;
+                            if (this.f3364) {
+                                this.f3352 = 3;
+                                this.f3360 = 0;
+                            } else {
+                                this.f3352 = 1;
+                                this.f3360 = 0;
+                            }
+                            c21287.m48510(i10);
+                        } else {
+                            i = this.f3358;
+                            i2 = i11 | i;
+                            if (i2 != 329) {
+                                this.f3358 = 768;
+                            } else if (i2 != 511) {
+                                this.f3358 = 512;
+                            } else if (i2 != 836) {
+                                this.f3358 = 1024;
+                            } else if (i2 != 1075) {
+                                if (i != 256) {
+                                    this.f3358 = 256;
+                                }
+                                i8 = 4;
+                                i9 = 1;
+                                i7 = 0;
+                            } else {
+                                this.f3352 = 2;
+                                this.f3360 = 3;
+                                this.f3344 = 0;
+                                c21288.m48510(0);
+                                c21287.m48510(i10);
+                            }
+                            iM48516 = i10;
+                            i8 = 4;
+                            i9 = 1;
+                            i7 = 0;
                         }
+                    } else {
+                        c21287.m48510(iM48516);
                     }
                 }
-                c0113.f1090 = checkBox3.isChecked();
-                c0113.m1154();
-                dialogInterfaceC19356.dismiss();
-                String string = c10948.m17000().toString();
-                if (!string.contains("{D}")) {
-                    string = string.concat("{D}");
-                }
-                int i3 = C20725.f67443;
-                C10142 c10142 = new C10142(C2935.class);
-                c10142.m25777(c21422);
-                c10142.m25768("file", interfaceC2557.getPath());
-                c10142.m25767("arguments", c0113);
-                c10142.m25768("pattern", string);
-                c10142.m25763();
-            } catch (Exception e) {
-                if (e instanceof NumberFormatException) {
-                    C15829.m37611(R.string.MT_Protector);
+            } else if (i6 != 1) {
+                if (i6 == 2) {
+                    byte[] bArrM48499 = c21288.m48497();
+                    int iMin = Math.min(c21287.m48486(), 10 - this.f3360);
+                    c21287.m48490(this.f3360, iMin, bArrM48499);
+                    int i16 = this.f3360 + iMin;
+                    this.f3360 = i16;
+                    if (i16 == 10) {
+                        this.f3362.mo14381(10, c21288);
+                        c21288.m48510(6);
+                        InterfaceC22024 interfaceC22024 = this.f3362;
+                        iM48499 = c21288.m48499() + 10;
+                        this.f3352 = 4;
+                        this.f3360 = 10;
+                        this.f3357 = interfaceC22024;
+                        j = 0;
+                        this.f3353 = j;
+                        this.f3344 = iM48499;
+                    }
+                } else if (i6 == 3) {
+                    int i17 = this.f3355 ? 7 : 5;
+                    byte[] bArr4 = c14573.f45926;
+                    int iMin2 = Math.min(c21287.m48486(), i17 - this.f3360);
+                    c21287.m48490(this.f3360, iMin2, bArr4);
+                    int i18 = this.f3360 + iMin2;
+                    this.f3360 = i18;
+                    if (i18 == i17) {
+                        c14573.m35167(0);
+                        if (!this.f3356) {
+                            int iM35165 = c14573.m35163(2) + 1;
+                            if (iM35165 != 2) {
+                                C1896.m6517("Detected audio object type: " + iM35165 + ", but assuming AAC LC.");
+                                iM35165 = 2;
+                            }
+                            c14573.m35161(5);
+                            int iM35166 = c14573.m35163(3);
+                            int i19 = this.f3346;
+                            byte[] bArr5 = {(byte) (((iM35165 << 3) & 248) | ((i19 >> 1) & 7)), (byte) (((iM35166 << 3) & UMErrorCode.E_UM_BE_NOT_MAINPROCESS) | ((i19 << 7) & 128))};
+                            C24834 c24834M39348 = C16628.m39348(new C14573(bArr5, 2), false);
+                            C20124 c20124 = new C20124();
+                            c20124.m46309(this.f3349);
+                            c20124.m46327(this.f3348);
+                            c20124.m46315("audio/mp4a-latm");
+                            c20124.m46300(c24834M39348.f80327);
+                            c20124.m46329(c24834M39348.f80325);
+                            c20124.m46332(c24834M39348.f80326);
+                            c20124.m46301(Collections.singletonList(bArr5));
+                            c20124.m46321(this.f3343);
+                            c20124.m46311(this.f3347);
+                            C15648 c15648M46295 = c20124.m46295();
+                            this.f3363 = 1024000000 / ((long) c15648M46295.f50829);
+                            this.f3350.mo14384(c15648M46295);
+                            this.f3356 = true;
+                        } else {
+                            c14573.m35161(10);
+                        }
+                        c14573.m35161(4);
+                        int iM35167 = c14573.m35163(13);
+                        iM48499 = iM35167 - 7;
+                        if (this.f3355) {
+                            iM48499 = iM35167 - 9;
+                        }
+                        InterfaceC22024 interfaceC22025 = this.f3350;
+                        j = this.f3363;
+                        this.f3352 = 4;
+                        this.f3360 = 0;
+                        this.f3357 = interfaceC22025;
+                        this.f3353 = j;
+                        this.f3344 = iM48499;
+                    }
                 } else {
-                    if ((e instanceof IllegalCharsetNameException) || (e instanceof UnsupportedCharsetException)) {
-                        C15829.m37613((CharSequence) e.toString());
-                        editText.selectAll();
-                        editText.requestFocus();
-                        return;
+                    if (i6 != 4) {
+                        throw new IllegalStateException();
                     }
-                    C15829.m37613((CharSequence) e.toString());
+                    int iMin3 = Math.min(c21287.m48486(), this.f3344 - this.f3360);
+                    this.f3357.mo14381(iMin3, c21287);
+                    int i20 = this.f3360 + iMin3;
+                    this.f3360 = i20;
+                    if (i20 == this.f3344) {
+                        C20782.m47568(this.f3359 != -9223372036854775807L);
+                        this.f3357.mo14383(this.f3359, 1, this.f3344, 0, null);
+                        this.f3359 += this.f3353;
+                        this.f3352 = 0;
+                        this.f3360 = 0;
+                        this.f3358 = 256;
+                    }
                 }
-                c10949.m27486();
-                c10949.requestFocus();
+            } else if (c21287.m48486() != 0) {
+                c14573.f45926[0] = c21287.m48497()[c21287.m48516()];
+                c14573.m35167(2);
+                int iM35168 = c14573.m35163(4);
+                int i21 = this.f3346;
+                if (i21 != -1 && iM35168 != i21) {
+                    this.f3364 = false;
+                    this.f3352 = 0;
+                    this.f3360 = 0;
+                    this.f3358 = 256;
+                } else {
+                    if (!this.f3364) {
+                        this.f3364 = true;
+                        this.f3342 = this.f3361;
+                        this.f3346 = iM35168;
+                    }
+                    this.f3352 = 3;
+                    this.f3360 = 0;
+                }
             }
-        } catch (Exception e2) {
-            if (e2 instanceof NumberFormatException) {
-                C15829.m37611(R.string.MT_Protector);
-            } else {
-                C15829.m37613((CharSequence) e2.toString());
-            }
-            c10949.m27486();
-            c10949.requestFocus();
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m3596(C0113 c0113, TextView textView, C10948 c10948, Spinner spinner, TextView textView2, EditText editText, View view, CheckBox checkBox, TextView textView3, Spinner spinner2, CheckBox checkBox2) {
-        int i = c0113.f1088;
-        spinner.setVisibility(i == 0 ? 0 : 8);
-        textView2.setVisibility(c0113.m1153() ? 0 : 8);
-        editText.setVisibility(c0113.m1153() ? 0 : 8);
-        view.setVisibility(c0113.m1153() ? 0 : 8);
-        checkBox.setVisibility(i == 2 ? 0 : 8);
-        textView3.setVisibility(i == 3 ? 0 : 8);
-        spinner2.setVisibility(i == 3 ? 0 : 8);
-        checkBox2.setVisibility(i == 3 ? 0 : 8);
-        editText.setText(c0113.f1093);
-        if (i == 0) {
-            m3593(c10948);
-            textView.setText(R.string.MT_Protector);
-            c10948.mo16989((CharSequence) String.valueOf(c0113.f1091));
-            spinner.setSelection(c0113.f1095);
-        } else if (i == 1) {
-            m3593(c10948);
-            textView.setText(R.string.MT_Protector);
-            c10948.mo16989((CharSequence) String.valueOf(c0113.f1094));
-        } else if (i == 2) {
-            m3593(c10948);
-            textView.setText(R.string.MT_Protector);
-            c10948.mo16989((CharSequence) String.valueOf(c0113.f1097));
-            checkBox.setText(R.string.MT_Protector);
-            checkBox.setChecked(c0113.f1092);
-        } else {
-            c10948.m27484(524289);
-            c10948.m27473(new InputFilter[0]);
-            c10948.m27476(true);
-            textView.setText(R.string.MT_Protector);
-            c10948.mo16989((CharSequence) c0113.f1086);
-            int i2 = c0113.f1089;
-            spinner2.setSelection((i2 == 0 || i2 == 1 || i2 == 2) ? i2 : 0);
-            checkBox2.setText(R.string.MT_Protector);
-            checkBox2.setChecked(c0113.f1087);
-            c10948.mo17029(c10948.m16842());
-        }
-        if (i != 3) {
-            checkBox2.setChecked(c0113.f1087);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m3593(C10948 c10948) {
-        c10948.m27484(2);
-        c10948.m27473(new InputFilter[]{new InputFilter.LengthFilter(9)});
-        c10948.m27476(true);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m3592(C0113 c0113, C10948 c10948, Spinner spinner, EditText editText, CheckBox checkBox, Spinner spinner2, CheckBox checkBox2) {
-        try {
-            m3597(c0113, c10948, spinner, editText, checkBox, spinner2, checkBox2);
-        } catch (Exception unused) {
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m3597(C0113 c0113, C10948 c10948, Spinner spinner, EditText editText, CheckBox checkBox, Spinner spinner2, CheckBox checkBox2) {
-        int i = c0113.f1088;
-        if (i == 0) {
-            c0113.f1091 = Integer.parseInt(c10948.m17000().toString());
-            c0113.f1095 = spinner.getSelectedItemPosition();
-            return;
-        }
-        if (i == 1) {
-            c0113.f1094 = Integer.parseInt(c10948.m17000().toString());
-            return;
-        }
-        if (i == 2) {
-            c0113.f1097 = Integer.parseInt(c10948.m17000().toString());
-            c0113.f1092 = checkBox.isChecked();
-            c0113.f1093 = editText.getText().toString();
-        } else if (i == 3) {
-            c0113.f1086 = c10948.m17000().toString();
-            int selectedItemPosition = spinner2.getSelectedItemPosition();
-            if (selectedItemPosition != 0 && selectedItemPosition != 1 && selectedItemPosition != 2) {
-                selectedItemPosition = 0;
-            }
-            c0113.f1089 = selectedItemPosition;
-            c0113.f1087 = checkBox2.isChecked();
-            c0113.f1093 = editText.getText().toString();
         }
     }
 }

@@ -76,7 +76,7 @@
     .locals 1
 
     .line 104
-    sget v0, Ll/ۖ۟ܶ;->֫۟:I
+    sget v0, Ll/ۧ۬ܺ;->۠᩺:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/timepicker/ClockHandView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -123,9 +123,9 @@
     iput v1, p0, Lcom/google/android/material/timepicker/ClockHandView;->currentLevel:I
 
     .line 109
-    sget-object v2, Ll/۠۟ܶ;->᩶ܶ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->᩶ܺ:[I
 
-    sget v3, Ll/ᩴ۟ܶ;->ܽ֫:I
+    sget v3, Ll/ۘ۬ܺ;->֡۠:I
 
     .line 110
     invoke-virtual {p1, p2, v2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -133,7 +133,7 @@
     move-result-object p2
 
     .line 116
-    sget p3, Ll/ۖ۟ܶ;->᩸ܺ:I
+    sget p3, Ll/ۧ۬ܺ;->ܽܰ:I
 
     const/16 v2, 0xc8
 
@@ -145,7 +145,7 @@
     iput p3, p0, Lcom/google/android/material/timepicker/ClockHandView;->animationDuration:I
 
     .line 119
-    sget p3, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget p3, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sget-object v2, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -157,7 +157,7 @@
     iput-object p3, p0, Lcom/google/android/material/timepicker/ClockHandView;->animationInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 124
-    sget p3, Ll/۠۟ܶ;->ܽܶ:I
+    sget p3, Ll/ܰ۬ܺ;->֡ܺ:I
 
     const/4 v2, 0x0
 
@@ -168,7 +168,7 @@
     iput p3, p0, Lcom/google/android/material/timepicker/ClockHandView;->circleRadius:I
 
     .line 125
-    sget p3, Ll/۠۟ܶ;->۫ܶ:I
+    sget p3, Ll/ܰ۬ܺ;->۟ܺ:I
 
     invoke-virtual {p2, p3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -182,7 +182,7 @@
     move-result-object p3
 
     .line 127
-    sget v3, Ll/֨۟ܶ;->ۜ۠:I
+    sget v3, Ll/ܽ۬ܺ;->ۧۗ:I
 
     invoke-virtual {p3, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -191,7 +191,7 @@
     iput v3, p0, Lcom/google/android/material/timepicker/ClockHandView;->selectorStrokeWidth:I
 
     .line 128
-    sget v3, Ll/֨۟ܶ;->۬۠:I
+    sget v3, Ll/ܽ۬ܺ;->ۚۗ:I
 
     invoke-virtual {p3, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -202,7 +202,7 @@
     iput p3, p0, Lcom/google/android/material/timepicker/ClockHandView;->centerDotRadius:F
 
     .line 129
-    sget p3, Ll/۠۟ܶ;->֡ܶ:I
+    sget p3, Ll/ܰ۬ܺ;->ܿܺ:I
 
     invoke-virtual {p2, p3, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -231,7 +231,7 @@
     iput p1, p0, Lcom/google/android/material/timepicker/ClockHandView;->scaledTouchSlop:I
 
     .line 135
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     const/4 p1, 0x2
 

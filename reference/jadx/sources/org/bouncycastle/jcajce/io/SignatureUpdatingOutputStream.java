@@ -6,7 +6,7 @@ import java.security.Signature;
 import java.security.SignatureException;
 import org.bouncycastle.util.Exceptions;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureUpdatingOutputStream extends OutputStream {
     public Signature sig;
 

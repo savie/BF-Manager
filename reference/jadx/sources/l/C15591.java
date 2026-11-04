@@ -1,119 +1,95 @@
 package l;
 
-import java.util.ArrayList;
+/* JADX INFO: renamed from: l.ܳ᩶ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4P7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15591 extends AbstractC10172 {
 
-/* JADX INFO: renamed from: l.ܺ֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5QL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15591 extends AbstractC9011 {
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11050 f50693;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C17706 f50705;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public AbstractC9011[] f50706;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f50707;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public byte[] f50708;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C14655[] f50709;
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        C15591 c15591 = (C15591) obj;
-        C17706 c17706 = this.f50705;
-        if (c17706 == null) {
-            return c15591.f50705 == null ? 0 : -1;
-        }
-        C17706 c17707 = c15591.f50705;
-        if (c17707 == null) {
-            return 1;
-        }
-        return c17706.compareTo(c17707);
+    public C15591(InterfaceC11050 interfaceC11050) {
+        super(4, (interfaceC11050.size() * 2) + 4);
+        this.f50693 = interfaceC11050;
     }
 
-    public C15591(C12063 c12063) {
-        super(c12063);
-        this.f50705 = null;
+    public final int hashCode() {
+        C13705 c13705 = C13705.f43487;
+        InterfaceC11050 interfaceC11050 = this.f50693;
+        int size = interfaceC11050.size();
+        int iHashCode = 0;
+        for (int i = 0; i < size; i++) {
+            iHashCode = (iHashCode * 31) + interfaceC11050.getType(i).hashCode();
+        }
+        return iHashCode;
     }
 
-    @Override // l.AbstractC9011
+    @Override // l.AbstractC23599
     /* JADX INFO: renamed from: ۙ */
-    public final void mo6320(C13825 c13825, C6187 c6187) {
-        AbstractC9011 abstractC9011M44688;
-        this.f50707 = c13825.m33647();
-        this.f50709 = new C14655[c13825.m33647()];
-        C19594 c19594 = this.f30808.f40354;
-        int i = 0;
-        while (true) {
-            C14655[] c14655Arr = this.f50709;
-            if (i < c14655Arr.length) {
-                int iM33647 = c13825.m33647() - 1;
-                if (iM33647 == -1) {
-                    c19594.getClass();
-                    abstractC9011M44688 = null;
-                } else {
-                    abstractC9011M44688 = c19594.m44688(iM33647);
-                }
-                c14655Arr[i] = (C14655) abstractC9011M44688;
-                i++;
-            } else {
-                int iM33639 = c13825.m33639();
-                ArrayList arrayList = new ArrayList(50);
-                C7829.m20654(c13825, new C8535(this, arrayList));
-                AbstractC9011[] abstractC9011Arr = new AbstractC9011[arrayList.size()];
-                this.f50706 = abstractC9011Arr;
-                arrayList.toArray(abstractC9011Arr);
-                int iM336310 = c13825.m33639() - iM33639;
-                c13825.m33643(iM33639);
-                this.f50708 = c13825.m33646(iM336310);
-                return;
+    public final EnumC3461 mo1454() {
+        return EnumC3461.TYPE_TYPE_LIST;
+    }
+
+    @Override // l.AbstractC23599
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1455(C10918 c10918) {
+        C20067 c20067M27694 = c10918.m27694();
+        InterfaceC11050 interfaceC11050 = this.f50693;
+        int size = interfaceC11050.size();
+        for (int i = 0; i < size; i++) {
+            c20067M27694.m46188(interfaceC11050.getType(i));
+        }
+    }
+
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ۧ */
+    public final String mo1456() {
+        throw new RuntimeException("unsupported");
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11050 m37323() {
+        return this.f50693;
+    }
+
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1457(C10918 c10918, C15000 c15000) {
+        C20067 c20067M27694 = c10918.m27694();
+        InterfaceC11050 interfaceC11050 = this.f50693;
+        int size = interfaceC11050.size();
+        if (c15000.m36116()) {
+            c15000.m36111(0, m26281() + " type_list");
+            c15000.m36111(4, "  size: ".concat(C5306.m15938(size)));
+            for (int i = 0; i < size; i++) {
+                C5085 type = interfaceC11050.getType(i);
+                c15000.m36111(2, EnumC7687.f25319 + C5306.m15934(c20067M27694.m46184(type)) + " // " + type.mo1843());
             }
         }
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo6315(int i) {
-        int iM33072 = C13530.m33072(this.f50709.length) + C13530.m33072(this.f50707) + i;
-        C14655[] c14655Arr = this.f50709;
-        int length = c14655Arr.length;
-        for (int i2 = 0; i2 < length; i2++) {
-            C14655 c14655 = c14655Arr[i2];
-            iM33072 += C13530.m33072(c14655 == null ? 0 : c14655.f30809 + 1);
+        c15000.m36124(size);
+        for (int i2 = 0; i2 < size; i2++) {
+            c15000.m36123(c20067M27694.m46184(interfaceC11050.getType(i2)));
         }
-        C13825 c13825 = new C13825(this.f50708);
-        C7123 c7123 = new C7123(this);
-        C7829.m20654(c13825, c7123);
-        return iM33072 + c7123.f33954;
     }
 
-    @Override // l.AbstractC9011
+    @Override // l.AbstractC10172
     /* JADX INFO: renamed from: ۙ */
-    public final void mo6319(C4651 c4651) {
-        c4651.m12842(this.f50707);
-        c4651.m12842(this.f50709.length);
-        C14655[] c14655Arr = this.f50709;
-        int length = c14655Arr.length;
-        for (int i = 0; i < length; i++) {
-            C14655 c14655 = c14655Arr[i];
-            c4651.m12842(c14655 == null ? 0 : c14655.f30809 + 1);
+    public final int mo15563(AbstractC10172 abstractC10172) {
+        InterfaceC11050 interfaceC11050 = ((C15591) abstractC10172).f50693;
+        C13705 c13705 = C13705.f43487;
+        InterfaceC11050 interfaceC11051 = this.f50693;
+        int size = interfaceC11051.size();
+        int size2 = interfaceC11050.size();
+        int iMin = Math.min(size, size2);
+        for (int i = 0; i < iMin; i++) {
+            int iCompareTo = interfaceC11051.getType(i).compareTo(interfaceC11050.getType(i));
+            if (iCompareTo != 0) {
+                return iCompareTo;
+            }
         }
-        C7829.m20654(new C13825(this.f50708), new C20529(this, c4651));
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo6317() {
-        return C9576.m24440(new StringBuilder("debug_info_item @0x"), this.f30807);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m37255(C17706 c17706) {
-        this.f50705 = c17706;
+        if (size == size2) {
+            return 0;
+        }
+        return size < size2 ? -1 : 1;
     }
 }

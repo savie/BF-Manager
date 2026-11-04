@@ -3,7 +3,7 @@ package com.umeng.analytics.pro;
 import com.google.android.material.color.ColorResourcesTableCreator;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 
 /* JADX INFO: compiled from: N62X */
@@ -18,7 +18,7 @@ public class bo extends bu {
     public static final byte k = -32;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77929l = 5;
+    public static final int f82045l = 5;
     public byte[] a;
     public byte[] b;
     public byte[] c;
@@ -44,7 +44,7 @@ public class bo extends bu {
         public static final byte k = 11;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final byte f77930l = 12;
+        public static final byte f82046l = 12;
     }
 
     private int c(int i2) {
@@ -340,7 +340,7 @@ public class bo extends bu {
         byte bU2 = u();
         byte b2 = (byte) (bU2 & j);
         if (b2 != 1) {
-            throw new bv(C8479.m22141(b2, "Expected version 1 but got "));
+            throw new bv(C13645.m33382(b2, "Expected version 1 but got "));
         }
         return new bs(z(), (byte) ((bU2 >> 5) & 3), E());
     }
@@ -487,11 +487,11 @@ public class bo extends bu {
 
     private void f(int i2) throws bv {
         if (i2 < 0) {
-            throw new bv(C8479.m22141(i2, "Negative length: "));
+            throw new bv(C13645.m33382(i2, "Negative length: "));
         }
         long j2 = this.q;
         if (j2 != -1 && i2 > j2) {
-            throw new bv(C8479.m22141(i2, "Length exceeded max allowed: "));
+            throw new bv(C13645.m33382(i2, "Length exceeded max allowed: "));
         }
     }
 
@@ -581,13 +581,13 @@ public class bo extends bu {
             case 9:
                 return (byte) 15;
             case 10:
-                return cb.f77931l;
+                return cb.f82047l;
             case 11:
                 return cb.k;
             case 12:
                 return (byte) 12;
             default:
-                throw new bv(C8479.m22141(b3, "don't know what type: "));
+                throw new bv(C13645.m33382(b3, "don't know what type: "));
         }
     }
 

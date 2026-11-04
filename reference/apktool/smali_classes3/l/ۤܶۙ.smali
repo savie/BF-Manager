@@ -1,27 +1,20 @@
 .class public final Ll/ۤܶۙ;
 .super Ljava/lang/Object;
-.source "V627"
-
-# interfaces
-.implements Ll/ۢܶۙ;
+.source "X6AW"
 
 
-# static fields
-.field public static final ۙ:Ll/ۤܶۙ;
+# instance fields
+.field public final synthetic ۙ:Ll/۫ܶۙ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ll/۫ܶۙ;)V
+    .locals 0
 
-    .line 2
-    new-instance v0, Ll/ۤܶۙ;
+    .line 902
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 350
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 0
-    sput-object v0, Ll/ۤܶۙ;->ۙ:Ll/ۤܶۙ;
+    iput-object p1, p0, Ll/ۤܶۙ;->ۙ:Ll/۫ܶۙ;
 
     return-void
 .end method

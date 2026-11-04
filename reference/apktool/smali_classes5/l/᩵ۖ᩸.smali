@@ -1,165 +1,62 @@
-.class public abstract enum Ll/᩵ۖ᩸;
-.super Ljava/lang/Enum;
-.source "Q86R"
+.class public final synthetic Ll/᩵ۖ᩸;
+.super Ljava/lang/Object;
+.source "X68P"
 
 # interfaces
-.implements Ll/ۡۖ᩸;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final enum ֡:Ll/᩵ۖ᩸;
+# instance fields
+.field public final synthetic ܰ:I
 
-.field public static final enum ۫:Ll/᩵ۖ᩸;
-
-.field public static final synthetic ܺ:[Ll/᩵ۖ᩸;
-
-.field public static final enum ܽ:Ll/᩵ۖ᩸;
-
-.field public static final enum ᩶:Ll/᩵ۖ᩸;
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 40
-    new-instance v0, Ll/᩸ۖ᩸;
-
-    const-string v1, "DOUBLE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ll/᩸ۖ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩵ۖ᩸;->֡:Ll/᩵ۖ᩸;
-
-    .line 51
-    new-instance v0, Ll/ᩳۖ᩸;
-
-    const-string v1, "LAZILY_PARSED_NUMBER"
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ll/ᩳۖ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩵ۖ᩸;->ܽ:Ll/᩵ۖ᩸;
-
-    .line 67
-    new-instance v0, Ll/ᩴۖ᩸;
-
-    const-string v1, "LONG_OR_DOUBLE"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ll/ᩴۖ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩵ۖ᩸;->۫:Ll/᩵ۖ᩸;
-
-    .line 101
-    new-instance v0, Ll/۠ۖ᩸;
-
-    const-string v1, "BIG_DECIMAL"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ll/۠ۖ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩵ۖ᩸;->᩶:Ll/᩵ۖ᩸;
-
-    .line 34
-    invoke-static {}, Ll/᩵ۖ᩸;->ۙ()[Ll/᩵ۖ᩸;
-
-    move-result-object v0
-
-    sput-object v0, Ll/᩵ۖ᩸;->ܺ:[Ll/᩵ۖ᩸;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 34
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 0
+    iput p1, p0, Ll/᩵ۖ᩸;->ܰ:I
+
+    iput-object p2, p0, Ll/᩵ۖ᩸;->᩶:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;ILl/᩸ۖ᩸;)V
-    .locals 0
-
-    .line 34
-    invoke-direct {p0, p1, p2}, Ll/᩵ۖ᩸;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll/᩵ۖ᩸;
-    .locals 1
-
-    .line 34
-    const-class v0, Ll/᩵ۖ᩸;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/᩵ۖ᩸;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/᩵ۖ᩸;
-    .locals 1
-
-    .line 34
-    sget-object v0, Ll/᩵ۖ᩸;->ܺ:[Ll/᩵ۖ᩸;
-
-    invoke-virtual {v0}, [Ll/᩵ۖ᩸;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/᩵ۖ᩸;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/᩵ۖ᩸;
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ll/᩵ۖ᩸;
-
-    .line 34
-    sget-object v1, Ll/᩵ۖ᩸;->֡:Ll/᩵ۖ᩸;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ۖ᩸;->ܽ:Ll/᩵ۖ᩸;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ۖ᩸;->۫:Ll/᩵ۖ᩸;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ۖ᩸;->᩶:Ll/᩵ۖ᩸;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract synthetic ۙ(Ll/ۚ۬᩸;)Ljava/lang/Number;
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget v0, p0, Ll/᩵ۖ᩸;->ܰ:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ll/᩵ۖ᩸;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/ᩴۜ᩸;
+
+    invoke-static {v0}, Ll/ᩴۜ᩸;->ۙ(Ll/ᩴۜ᩸;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll/᩵ۖ᩸;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۟ۤ()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

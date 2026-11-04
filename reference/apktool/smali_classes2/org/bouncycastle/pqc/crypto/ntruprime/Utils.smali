@@ -1019,7 +1019,7 @@
 
     const/4 v6, 0x1
 
-    invoke-static {p3, v6, v5, v4}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p3, v6, v5, v4}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result v4
 
@@ -2653,7 +2653,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {p4, v2, v1, v3}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {p4, v2, v1, v3}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result v1
 
@@ -2867,7 +2867,7 @@
 
     const/16 v2, 0x4000
 
-    invoke-static {v1, p4, p5, v2}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v1, p4, p5, v2}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v1
 

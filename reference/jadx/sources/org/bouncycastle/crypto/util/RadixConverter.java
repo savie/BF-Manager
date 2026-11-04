@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.crypto.hpke.HPKE;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RadixConverter {
     public static final int DEFAULT_POWERS_TO_CACHE = 10;
     public static final double LOG_LONG_MAX_VALUE = Math.log(9.223372036854776E18d);

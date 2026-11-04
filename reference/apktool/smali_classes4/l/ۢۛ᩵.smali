@@ -1,120 +1,103 @@
 .class public final Ll/ۢۛ᩵;
-.super Ll/ۗܿ᩵;
-.source "84PD"
-
-# interfaces
-.implements Ll/۠ܰۡ;
-
-
-# static fields
-.field public static final ۫:Ll/ᩳ۫᩵;
-
-
-# instance fields
-.field public final ֡:I
-
-.field public final ܽ:I
+.super Ll/ۘۛ᩵;
+.source "F9T1"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;Ll/ۚ᩵᩵;)V
     .locals 1
 
-    .line 43
-    sget-object v0, Ll/ᩳ۫᩵;->᩻:Ll/ᩳ۫᩵;
+    const/4 v0, 0x1
 
-    sput-object v0, Ll/ۢۛ᩵;->۫:Ll/ᩳ۫᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۤ۫᩵;II)V
-    .locals 0
-
-    .line 51
-    invoke-direct {p0, p1}, Ll/ۗܿ᩵;-><init>(Ll/ۤ۫᩵;)V
-
-    .line 52
-    invoke-static {p2}, Ll/ܰۖۨ;->ۨ(I)V
-
-    iput p2, p0, Ll/ۢۛ᩵;->֡:I
-
-    .line 53
-    invoke-static {p3}, Ll/ܰۖۨ;->ۨ(I)V
-
-    iput p3, p0, Ll/ۢۛ᩵;->ܽ:I
+    .line 36
+    invoke-direct {p0, p2, v0, p1}, Ll/ۘۛ᩵;-><init>(Ll/ۚ᩵᩵;BLjava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    .line 58
-    iget v0, p0, Ll/ۢۛ᩵;->֡:I
+    .line 71
+    new-instance v0, Ljava/lang/String;
 
-    return v0
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public final ۛ()Ll/ᩳ۫᩵;
-    .locals 1
+    const-string v2, "SmbComDeleteDirectory["
 
-    .line 68
-    sget-object v0, Ll/ۢۛ᩵;->۫:Ll/ᩳ۫᩵;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    invoke-super {p0}, Ll/ۘۛ᩵;->toString()Ljava/lang/String;
 
-.method public final ۤ()Ljava/lang/String;
-    .locals 2
+    move-result-object v2
 
-    .line 42
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, ",directoryName="
 
-    invoke-virtual {p0}, Ll/ۗܿ᩵;->ۜ()Ll/ۤ۫᩵;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ll/ۘۛ᩵;->᩸ۙ:Ljava/lang/String;
+
+    const-string v3, "]"
+
+    .line 0
+    invoke-static {v1, v2, v3}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v1, v1, Ll/ۤ۫᩵;->۫:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۢۛ᩵;->ۙ()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۢۛ᩵;->᩷()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 71
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public final ᩷()I
-    .locals 1
+.method public final ۤ(I[B)I
+    .locals 0
 
-    .line 63
-    iget v0, p0, Ll/ۢۛ᩵;->ܽ:I
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final ۫(I[B)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final ᩴ(I[B)I
+    .locals 2
+
+    add-int/lit8 v0, p1, 0x1
+
+    const/4 v1, 0x4
+
+    .line 50
+    aput-byte v1, p2, p1
+
+    .line 51
+    iget-object v1, p0, Ll/ۘۛ᩵;->᩸ۙ:Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v0, p2}, Ll/ۘۛ᩵;->ۙ(Ljava/lang/String;I[B)I
+
+    move-result p2
+
+    add-int/2addr v0, p2
+
+    sub-int/2addr v0, p1
 
     return v0
+.end method
+
+.method public final ᩷(I[B)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

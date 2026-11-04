@@ -1,65 +1,22 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ᩳۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P71B */
+/* JADX INFO: renamed from: l.ܽᩳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17770 extends AbstractC17535 {
+public final class C17770 extends C5291 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C17770 f56360 = new C17770(0, 0);
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5291 f58341;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f56361;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f56362;
-
-    public final int hashCode() {
-        long j = this.f56361;
-        int i = ((int) (j ^ (j >>> 32))) * 31;
-        long j2 = this.f56362;
-        return i + ((int) (j2 ^ (j2 >>> 32)));
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C17770(C14769 c14769, AbstractC22664 abstractC22664, C5291 c5291) {
+        super(abstractC22664, c14769);
+        this.f58341 = c5291;
     }
 
-    public C17770(long j, long j2) {
-        this.f56361 = j;
-        this.f56362 = j2;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C17770)) {
-            return false;
-        }
-        C17770 c17770 = (C17770) obj;
-        return this.f56361 == c17770.f56361 && this.f56362 == c17770.f56362;
-    }
-
-    public final String toString() {
-        Object[] objArr = {Long.valueOf(this.f56361), Long.valueOf(this.f56362)};
-        String[] strArrSplit = "deltaSourceBytes;historySourceBytes".length() == 0 ? new String[0] : "deltaSourceBytes;historySourceBytes".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C17770.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m41336() {
-        return this.f56361;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m41337() {
-        return this.f56362;
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ܿ */
+    public final AbstractC22664 mo4935() {
+        return this.f58341;
     }
 }

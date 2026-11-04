@@ -1,19 +1,11 @@
-.class public final synthetic Ll/ۨ֨ۘ;
+.class public interface abstract Ll/ۨ֨ۘ;
 .super Ljava/lang/Object;
-.source "K2SQ"
+.source "I42L"
 
 # interfaces
-.implements Ll/ۤ᩺ۙ;
+.implements Ll/۫֨ۘ;
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    check-cast p1, Ll/ۢۡ᩺;
-
-    invoke-static {p1}, Ll/ۖ֨ۘ;->ۙ(Ll/ۢۡ᩺;)V
-
-    return-void
+.method public abstract ᩸()Ll/ܰᩳۘ;
 .end method

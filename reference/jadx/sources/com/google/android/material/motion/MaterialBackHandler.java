@@ -1,6 +1,6 @@
 package com.google.android.material.motion;
 
-import l.C0443;
+import l.C18584;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface MaterialBackHandler {
@@ -8,7 +8,7 @@ public interface MaterialBackHandler {
 
     void handleBackInvoked();
 
-    void startBackProgress(C0443 c0443);
+    void startBackProgress(C18584 c18584);
 
-    void updateBackProgress(C0443 c0443);
+    void updateBackProgress(C18584 c18584);
 }

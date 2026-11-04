@@ -1,57 +1,73 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.lang.reflect.Array;
 
-/* JADX INFO: renamed from: l.ۤۤۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X8SG */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10223 extends AbstractC20806 {
+/* JADX INFO: renamed from: l.ۢܶ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 11SF */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10223 extends AbstractC1275 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f34897;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final long[][] f32666 = (long[][]) Array.newInstance((Class<?>) Long.TYPE, 4, 256);
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f34898;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f32667 = -1;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f34899;
-
-    public C10223(int i, long j) {
-        super(i);
-        this.f34898 = j;
-        this.f34897 = new ArrayList();
-        this.f34899 = new ArrayList();
+    public C10223() {
+        this.f4589 = 8;
+        this.f4588 = "CRC64";
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C7400 m26005(int i) {
-        ArrayList arrayList = this.f34897;
-        int size = arrayList.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            C7400 c7400 = (C7400) arrayList.get(i2);
-            if (c7400.f67638 == i) {
-                return c7400;
+    static {
+        int i = 0;
+        while (i < 4) {
+            for (int i2 = 0; i2 < 256; i2++) {
+                long j = i == 0 ? i2 : f32666[i - 1][i2];
+                for (int i3 = 0; i3 < 8; i3++) {
+                    long j2 = j & 1;
+                    j >>>= 1;
+                    if (j2 == 1) {
+                        j ^= -3932672073523589310L;
+                    }
+                }
+                f32666[i][i2] = j;
             }
+            i++;
         }
-        return null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C10223 m26006(int i) {
-        ArrayList arrayList = this.f34899;
-        int size = arrayList.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            C10223 c10223 = (C10223) arrayList.get(i2);
-            if (c10223.f67638 == i) {
-                return c10223;
+    @Override // l.AbstractC1275
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo4663(byte[] bArr, int i, int i2) {
+        long[][] jArr;
+        int i3 = i2 + i;
+        int i4 = i3 - 3;
+        while (true) {
+            jArr = f32666;
+            if (i >= i4) {
+                break;
             }
+            long j = this.f32667;
+            int i5 = (int) j;
+            this.f32667 = (((j >>> 32) ^ (jArr[3][(i5 & 255) ^ (bArr[i] & 255)] ^ jArr[2][((i5 >>> 8) & 255) ^ (bArr[i + 1] & 255)])) ^ jArr[1][((i5 >>> 16) & 255) ^ (bArr[i + 2] & 255)]) ^ jArr[0][((i5 >>> 24) & 255) ^ (bArr[i + 3] & 255)];
+            i += 4;
         }
-        return null;
+        while (i < i3) {
+            long[] jArr2 = jArr[0];
+            int i6 = i + 1;
+            int i7 = bArr[i] & 255;
+            long j2 = this.f32667;
+            this.f32667 = (j2 >>> 8) ^ jArr2[i7 ^ (((int) j2) & 255)];
+            i = i6;
+        }
     }
 
-    @Override // l.AbstractC20806
-    public final String toString() {
-        return AbstractC20806.m46786(this.f67638) + " leaves: " + Arrays.toString(this.f34897.toArray()) + " containers: " + Arrays.toString(this.f34899.toArray());
+    @Override // l.AbstractC1275
+    /* JADX INFO: renamed from: ۙ */
+    public final byte[] mo4664() {
+        long j = ~this.f32667;
+        byte[] bArr = {(byte) j, (byte) (j >>> 8), (byte) (j >>> 16), (byte) (j >>> 24), (byte) (j >>> 32), (byte) (j >>> 40), (byte) (j >>> 48), (byte) (j >>> 56)};
+        this.f32667 = -1L;
+        return bArr;
     }
 }

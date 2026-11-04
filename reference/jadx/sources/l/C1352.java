@@ -1,67 +1,92 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨᩶᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 455Z */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1352 extends AbstractC4300 implements InterfaceC3594 {
+import java.io.IOException;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC3468 f5684 = new C22520();
+/* JADX INFO: renamed from: l.֨ᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R69D */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1352 extends C4335 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f5685;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public boolean f4828;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte f5686;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f4829;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public byte f5687;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final int f4830;
 
-    public C1352(EnumC0772 enumC0772, short s, short s2, short s3) {
-        super(enumC0772);
-        if (s >= 256 || s2 >= 256 || s3 >= 256) {
-            throw new RuntimeException("The register number must be less than v256");
+    @Override // l.C4335, l.AbstractC19734
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo2720() {
+    }
+
+    public C1352(C22718 c22718, int i, InterfaceC9794 interfaceC9794) {
+        int key;
+        super(c22718, i, interfaceC9794);
+        int iM51244 = c22718.m51244(i);
+        this.f4829 = new ArrayList();
+        boolean z = true;
+        if (iM51244 >= 0) {
+            key = 0;
+            boolean z2 = true;
+            for (InterfaceC3939 interfaceC3939 : interfaceC9794.mo20143()) {
+                if (z2) {
+                    key = interfaceC3939.getKey();
+                    z2 = false;
+                }
+                C4818 c4818M27487 = c22718.m51246().m27487(new C4818(c22718.f73734, interfaceC3939.getOffset() + iM51244, "pswitch_"));
+                if (c4818M27487.m14848()) {
+                    c4818M27487.m14844(String.format("%s, 0x%x", c4818M27487.m14846(), Integer.valueOf(interfaceC3939.getKey())));
+                } else {
+                    c4818M27487.m14844(String.format("0x%x", Integer.valueOf(interfaceC3939.getKey())));
+                }
+                this.f4829.add(new C8064(c4818M27487));
+            }
+        } else {
+            this.f4828 = true;
+            key = 0;
+            for (InterfaceC3939 interfaceC39310 : interfaceC9794.mo20143()) {
+                if (z) {
+                    key = interfaceC39310.getKey();
+                    z = false;
+                }
+                this.f4829.add(new C19251(interfaceC39310.getOffset()));
+            }
         }
-        this.f5687 = (byte) s;
-        this.f5686 = (byte) s2;
-        this.f5685 = (byte) s3;
+        this.f4830 = key;
     }
 
-    public C1352(EnumC0772 enumC0772, byte[] bArr, int i) {
-        super(enumC0772);
-        this.f5687 = bArr[i + 1];
-        this.f5686 = bArr[i + 2];
-        this.f5685 = bArr[i + 3];
-    }
-
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo4759(C4651 c4651, int i) {
-        c4651.m12841(this.f15468.f3346);
-        c4651.m12841(this.f5687);
-        c4651.m12841(this.f5686);
-        c4651.m12841(this.f5685);
-    }
-
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final EnumC1227 mo4758() {
-        return EnumC1227.Format23x;
-    }
-
-    @Override // l.InterfaceC3594
+    @Override // l.C4335, l.AbstractC19734
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo4757() {
-        return this.f5687 & 255;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final int m4761() {
-        return this.f5686 & 255;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int m4760() {
-        return this.f5685 & 255;
+    public final boolean mo4982(C2161 c2161) throws IOException {
+        if (this.f4828) {
+            c2161 = new C19997(c2161);
+        }
+        c2161.getClass();
+        c2161.write(".packed-switch ", 0, 15);
+        int i = this.f4830;
+        C1835.m6335(c2161, i);
+        c2161.m7439();
+        c2161.write(10);
+        boolean z = this.f15699.f73734.f19336;
+        for (AbstractC10300 abstractC10300 : this.f4829) {
+            if (abstractC10300 instanceof C8064) {
+                ((C8064) abstractC10300).f26690.m14847(c2161);
+            } else {
+                abstractC10300.mo21959(c2161);
+            }
+            String str = String.format("  #%08x", Integer.valueOf(i));
+            c2161.write(str, 0, str.length());
+            if (z) {
+                m13831(c2161, i);
+            }
+            c2161.write(10);
+            i++;
+        }
+        c2161.m7435();
+        c2161.write(".end packed-switch", 0, 18);
+        return true;
     }
 }

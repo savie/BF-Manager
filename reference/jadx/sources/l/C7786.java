@@ -1,28 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟᩺ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0C5X */
+/* JADX INFO: renamed from: l.۟ۡ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAXP */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7786 {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m20459() {
-        throw new UnsupportedOperationException();
+public final class C7786 {
+    public final int hashCode() {
+        return Float.floatToIntBits(0.0f) + (Float.floatToIntBits(0.0f) * 31);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m20456() {
-        throw new UnsupportedOperationException();
+    public final String toString() {
+        return "0.0..0.0";
     }
 
-    @Deprecated
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m20460(InterfaceC21191 interfaceC21191, Integer num) {
-        interfaceC21191.mo3716(num.intValue());
-    }
-
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m20457(InterfaceC21191 interfaceC21191, Integer num) {
-        interfaceC21191.add(num.intValue());
+    public final boolean equals(Object obj) {
+        return obj instanceof C7786;
     }
 }

@@ -1,73 +1,137 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۜܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J8H8 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8717 {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final byte[] f29969;
+/* JADX INFO: renamed from: l.۠ܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W6LU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8717 extends AbstractC22343 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f29970;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2731 f28382;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f29971;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final HashMap f28383;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f29972;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final boolean f28384;
 
-    public C8717(byte[] bArr) {
-        this.f29969 = bArr;
-        this.f29972 = bArr.length;
-    }
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public int f28385;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m22564() {
-        boolean z = (((this.f29969[this.f29971] & 255) >> this.f29970) & 1) == 1;
-        m22563(1);
-        return z;
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final HashMap f28386;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m22562(int i) {
-        int i2 = this.f29971;
-        int iMin = Math.min(i, 8 - this.f29970);
-        int i3 = i2 + 1;
-        byte[] bArr = this.f29969;
-        int i4 = ((bArr[i2] & 255) >> this.f29970) & (255 >> (8 - iMin));
-        while (iMin < i) {
-            i4 |= (bArr[i3] & 255) << iMin;
-            iMin += 8;
-            i3++;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final HashSet f28387;
+
+    public C8717(InterfaceC15344 interfaceC15344, InterfaceC2731 interfaceC2731, String str, ArrayList arrayList) throws C10186 {
+        C20500 c20500Mo9073;
+        super((AbstractC14883) interfaceC15344);
+        this.f28386 = new HashMap();
+        this.f28383 = new HashMap();
+        this.f28387 = new HashSet();
+        this.f28382 = interfaceC2731;
+        try {
+            if (interfaceC2731 == null) {
+                c20500Mo9073 = C20500.m47000("default".equals(str) ? "" : str, ((AbstractC16375) ((AbstractC14883) interfaceC15344).mo4332()).mo27606());
+            } else {
+                c20500Mo9073 = interfaceC2731.mo9073();
+            }
+            this.f72322 = c20500Mo9073;
+            if (!C10208.m26337(this).equals(str)) {
+                throw C10186.m26305("RESOURCE_PATCH_CORRUPT", "Resource patch variant is not canonical.");
+            }
+            Iterator it = arrayList.iterator();
+            boolean z = false;
+            while (it.hasNext()) {
+                C1260 c1260 = (C1260) it.next();
+                if (c1260.m4579()) {
+                    z = true;
+                } else if (c1260.m4580()) {
+                    this.f28387.add(Integer.valueOf(c1260.f4547 & 65535));
+                }
+            }
+            this.f28384 = z;
+            this.f28385 = interfaceC2731 == null ? -1 : interfaceC2731.mo9069();
+            Iterator it2 = arrayList.iterator();
+            while (it2.hasNext()) {
+                C1260 c1261 = (C1260) it2.next();
+                if (!c1261.m4579()) {
+                    int i = c1261.f4547 & 65535;
+                    this.f28385 = Math.max(this.f28385, i);
+                    if (c1261.m4580()) {
+                        continue;
+                    } else {
+                        this.f28383.put(Integer.valueOf(i), c1261.f4551);
+                        if ((!this.f28384 && !this.f28387.contains(Integer.valueOf(i)) && interfaceC2731 != null && interfaceC2731.mo9075(i)) || this.f28386.containsKey(Integer.valueOf(i))) {
+                            throw C10186.m26305("RESOURCE_PATCH_CORRUPT", "Added resource variant already exists.");
+                        }
+                        this.f28386.put(Integer.valueOf(i), C4287.m13664(this, i, c1261.f4545));
+                    }
+                }
+            }
+        } catch (Exception unused) {
+            throw C10186.m26305("RESOURCE_PATCH_CORRUPT", "Resource patch variant is invalid.");
         }
-        int i5 = i4 & ((-1) >>> (32 - i));
-        m22563(i);
-        return i5;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m22563(int i) {
-        int i2;
-        int i3 = i / 8;
-        int i4 = this.f29971 + i3;
-        this.f29971 = i4;
-        int i5 = (i - (i3 * 8)) + this.f29970;
-        this.f29970 = i5;
-        boolean z = true;
-        if (i5 > 7) {
-            this.f29971 = i4 + 1;
-            this.f29970 = i5 - 8;
-        }
-        int i6 = this.f29971;
-        if (i6 < 0 || (i6 >= (i2 = this.f29972) && (i6 != i2 || this.f29970 != 0))) {
-            z = false;
-        }
-        C2023.m6510(z);
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۛ */
+    public final int mo9069() {
+        return this.f28385;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m22561() {
-        return (this.f29971 * 8) + this.f29970;
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ܺ */
+    public final boolean mo9075(int i) {
+        InterfaceC2731 interfaceC2731;
+        if (this.f28386.containsKey(Integer.valueOf(i))) {
+            return true;
+        }
+        return (this.f28384 || this.f28387.contains(Integer.valueOf(i)) || (interfaceC2731 = this.f28382) == null || !interfaceC2731.mo9075(i)) ? false : true;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۨۙ */
+    public final boolean mo9072() {
+        InterfaceC2731 interfaceC2731 = this.f28382;
+        return interfaceC2731 != null && interfaceC2731.mo9072();
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ֫᩷ */
+    public final boolean mo9067() {
+        InterfaceC2731 interfaceC2731 = this.f28382;
+        return interfaceC2731 != null && interfaceC2731.mo9067();
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo9070(int i) {
+        Integer numValueOf = Integer.valueOf(i);
+        HashMap map = this.f28383;
+        if (map.containsKey(numValueOf)) {
+            return (String) map.get(Integer.valueOf(i));
+        }
+        InterfaceC2731 interfaceC2731 = this.f28382;
+        if (interfaceC2731 == null) {
+            return null;
+        }
+        return interfaceC2731.mo9070(i);
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ᩷ */
+    public final InterfaceC8697 mo9076(int i) {
+        if (!mo9075(i)) {
+            return null;
+        }
+        Integer numValueOf = Integer.valueOf(i);
+        HashMap map = this.f28386;
+        return map.containsKey(numValueOf) ? (InterfaceC8697) map.get(Integer.valueOf(i)) : this.f28382.mo9076(i);
     }
 }

@@ -1,69 +1,64 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import android.os.SystemClock;
+import bin.mt.plugin.api.translation.BaseTranslationEngine;
+import bin.mt.plugin.api.translation.TranslationEngine;
+import com.alipay.sdk.m.o.b;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩹ܰᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SATH */
+/* JADX INFO: renamed from: l.᩷᩷᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: P3YK */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22332 {
-    @Deprecated
+public final class C22332 extends BaseTranslationEngine {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49498(InterfaceC1164 interfaceC1164, int i) {
-        interfaceC1164.mo4297(C21273.m47738(i));
+    public final List f72302;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final List f72303;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f72304;
+
+    @Override // bin.mt.plugin.api.translation.TranslationEngine
+    public final String name() {
+        return "Youdao Translator";
     }
 
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49499(InterfaceC1164 interfaceC1164, Character ch) {
-        interfaceC1164.mo4297(ch.charValue());
+    public C22332() {
+        List listAsList = Arrays.asList("zh", "en", "ja", "fr", "de", "ru", "es", "pt", "it", "vi", "id", "ar", "nl", "th");
+        this.f72302 = listAsList;
+        this.f72304 = listAsList.subList(1, listAsList.size());
+        this.f72303 = Collections.singletonList("zh");
+        init(new C17905());
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC1164 m49497(InterfaceC1164 interfaceC1164, final IntConsumer intConsumer) {
-        InterfaceC1164 interfaceC1165;
-        if (intConsumer instanceof InterfaceC1164) {
-            interfaceC1165 = (InterfaceC1164) intConsumer;
-        } else {
-            C13638.requireNonNull(intConsumer);
-            interfaceC1165 = new InterfaceC1164() { // from class: l.ۖܰᩴ
-                @Override // java.util.function.IntConsumer
-                public final /* synthetic */ void accept(int i) {
-                    C22332.m49498(this, i);
-                }
+    @Override // bin.mt.plugin.api.translation.BaseTranslationEngine
+    public final void onBuildConfiguration(TranslationEngine.ConfigurationBuilder configurationBuilder) {
+        super.onBuildConfiguration(configurationBuilder);
+        configurationBuilder.setAllowBatchTranslationBySeparator(true);
+        configurationBuilder.setMaxTranslationTextLength(b.j0);
+        configurationBuilder.setTargetLanguageMutable(true);
+    }
 
-                @Override // java.util.function.Consumer
-                public final /* bridge */ /* synthetic */ void accept(Object obj) {
-                    mo4298((Character) obj);
-                }
+    @Override // bin.mt.plugin.api.translation.TranslationEngine
+    public final List loadSourceLanguages() {
+        return this.f72302;
+    }
 
-                @Override // l.InterfaceC1164
-                /* JADX INFO: renamed from: ۨ */
-                public final void mo4297(char c) {
-                    intConsumer.accept(c);
-                }
-
-                @Override // l.InterfaceC1164
-                /* JADX INFO: renamed from: ܰ */
-                public final /* synthetic */ void mo4298(Character ch) {
-                    C22332.m49499((InterfaceC1164) this, ch);
-                }
-
-                public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer2) {
-                    return C22332.m49497((InterfaceC1164) this, intConsumer2);
-                }
-
-                @Override // l.InterfaceC1164
-                /* JADX INFO: renamed from: ۨ */
-                public final C5398 mo4296(InterfaceC1164 interfaceC1166) {
-                    return new C5398(this, interfaceC1166);
-                }
-
-                public final Consumer andThen(Consumer consumer) {
-                    return C1455.$default$andThen(this, consumer);
-                }
-            };
+    @Override // bin.mt.plugin.api.translation.TranslationEngine
+    public final List loadTargetLanguages(String str) {
+        if (str.equals("zh")) {
+            return this.f72304;
         }
-        return interfaceC1164.mo4296(interfaceC1165);
+        return this.f72303;
+    }
+
+    @Override // bin.mt.plugin.api.translation.TranslationEngine, bin.mt.plugin.api.translation.BatchTranslationEngine
+    public final String translate(String str, String str2, String str3) {
+        SystemClock.sleep(300L);
+        return C5178.m15607(str, C11143.m28098(str, str2, str3));
     }
 }

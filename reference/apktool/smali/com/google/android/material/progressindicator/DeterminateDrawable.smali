@@ -6,7 +6,7 @@
 # static fields
 .field public static final GAP_RAMP_DOWN_THRESHOLD:F = 0.01f
 
-.field public static final INDICATOR_LENGTH_IN_LEVEL:Ll/᩷ۨۙ;
+.field public static final INDICATOR_LENGTH_IN_LEVEL:Ll/᩺ۤۙ;
 
 .field public static final MAX_DRAWABLE_LEVEL:I = 0x2710
 
@@ -20,9 +20,9 @@
 
 .field public skipAnimationOnLevelChange:Z
 
-.field public final springAnimation:Ll/ܺۨۙ;
+.field public final springAnimation:Ll/ۘۤۙ;
 
-.field public final springForce:Ll/᩶ۨۙ;
+.field public final springForce:Ll/ܰۤۙ;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable$1;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->INDICATOR_LENGTH_IN_LEVEL:Ll/᩷ۨۙ;
+    sput-object v0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->INDICATOR_LENGTH_IN_LEVEL:Ll/᩺ۤۙ;
 
     return-void
 .end method
@@ -63,33 +63,33 @@
     iput-object p1, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->activeIndicator:Lcom/google/android/material/progressindicator/DrawingDelegate$ActiveIndicator;
 
     .line 63
-    new-instance p1, Ll/᩶ۨۙ;
+    new-instance p1, Ll/ܰۤۙ;
 
-    invoke-direct {p1}, Ll/᩶ۨۙ;-><init>()V
+    invoke-direct {p1}, Ll/ܰۤۙ;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springForce:Ll/᩶ۨۙ;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springForce:Ll/ܰۤۙ;
 
     const/high16 p2, 0x3f800000    # 1.0f
 
     .line 65
-    invoke-virtual {p1, p2}, Ll/᩶ۨۙ;->ۙ(F)V
+    invoke-virtual {p1, p2}, Ll/ܰۤۙ;->ۙ(F)V
 
     const/high16 p3, 0x42480000    # 50.0f
 
     .line 66
-    invoke-virtual {p1, p3}, Ll/᩶ۨۙ;->ۨ(F)V
+    invoke-virtual {p1, p3}, Ll/ܰۤۙ;->ۤ(F)V
 
     .line 68
-    new-instance p3, Ll/ܺۨۙ;
+    new-instance p3, Ll/ۘۤۙ;
 
-    sget-object v0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->INDICATOR_LENGTH_IN_LEVEL:Ll/᩷ۨۙ;
+    sget-object v0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->INDICATOR_LENGTH_IN_LEVEL:Ll/᩺ۤۙ;
 
-    invoke-direct {p3, p0, v0}, Ll/ܺۨۙ;-><init>(Ljava/lang/Object;Ll/᩷ۨۙ;)V
+    invoke-direct {p3, p0, v0}, Ll/ۘۤۙ;-><init>(Ljava/lang/Object;Ll/᩺ۤۙ;)V
 
-    iput-object p3, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iput-object p3, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
     .line 69
-    invoke-virtual {p3, p1}, Ll/ܺۨۙ;->ۙ(Ll/᩶ۨۙ;)V
+    invoke-virtual {p3, p1}, Ll/ۘۤۙ;->ۙ(Ll/ܰۤۙ;)V
 
     .line 71
     invoke-virtual {p0, p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->setGrowFraction(F)V
@@ -196,13 +196,13 @@
 
 
 # virtual methods
-.method public addSpringAnimationEndListener(Ll/۠ۨۙ;)V
+.method public addSpringAnimationEndListener(Ll/᩹ۤۙ;)V
     .locals 1
 
     .line 134
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
-    invoke-virtual {v0, p1}, Ll/ۤۨۙ;->ۙ(Ll/۠ۨۙ;)V
+    invoke-virtual {v0, p1}, Ll/ۨۤۙ;->ۙ(Ll/᩹ۤۙ;)V
 
     return-void
 .end method
@@ -334,7 +334,7 @@
 
     const v3, 0x3c23d70a    # 0.01f
 
-    invoke-static {v1, v2, v3}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v1, v2, v3}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v1
 
@@ -543,9 +543,9 @@
     .locals 2
 
     .line 181
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
-    invoke-virtual {v0}, Ll/ܺۨۙ;->ܰ()V
+    invoke-virtual {v0}, Ll/ۘۤۙ;->᩷()V
 
     .line 182
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
@@ -574,9 +574,9 @@
     if-eqz v0, :cond_0
 
     .line 194
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
-    invoke-virtual {v0}, Ll/ܺۨۙ;->ܰ()V
+    invoke-virtual {v0}, Ll/ۘۤۙ;->᩷()V
 
     int-to-float p1, p1
 
@@ -589,7 +589,7 @@
 
     .line 197
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
     invoke-direct {p0}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->getIndicatorFraction()F
 
@@ -597,14 +597,14 @@
 
     mul-float v2, v2, v1
 
-    invoke-virtual {v0, v2}, Ll/ۤۨۙ;->ܰ(F)V
+    invoke-virtual {v0, v2}, Ll/ۨۤۙ;->᩷(F)V
 
     .line 198
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
     int-to-float p1, p1
 
-    invoke-virtual {v0, p1}, Ll/ܺۨۙ;->ۨ(F)V
+    invoke-virtual {v0, p1}, Ll/ۘۤۙ;->ۤ(F)V
 
     :goto_0
     const/4 p1, 0x1
@@ -612,22 +612,22 @@
     return p1
 .end method
 
-.method public bridge synthetic registerAnimationCallback(Ll/ۖ֫ܰ;)V
+.method public bridge synthetic registerAnimationCallback(Ll/۟ۖ᩷;)V
     .locals 0
 
     .line 33
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Ll/ۖ֫ܰ;)V
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Ll/۟ۖ᩷;)V
 
     return-void
 .end method
 
-.method public removeSpringAnimationEndListener(Ll/۠ۨۙ;)V
+.method public removeSpringAnimationEndListener(Ll/᩹ۤۙ;)V
     .locals 1
 
     .line 139
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ܺۨۙ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springAnimation:Ll/ۘۤۙ;
 
-    invoke-virtual {v0, p1}, Ll/ۤۨۙ;->ܰ(Ll/۠ۨۙ;)V
+    invoke-virtual {v0, p1}, Ll/ۨۤۙ;->᩷(Ll/᩹ۤۙ;)V
 
     return-void
 .end method
@@ -738,13 +738,13 @@
     iput-boolean p3, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->skipAnimationOnLevelChange:Z
 
     .line 170
-    iget-object p3, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springForce:Ll/᩶ۨۙ;
+    iget-object p3, p0, Lcom/google/android/material/progressindicator/DeterminateDrawable;->springForce:Ll/ܰۤۙ;
 
     const/high16 v0, 0x42480000    # 50.0f
 
     div-float/2addr v0, p2
 
-    invoke-virtual {p3, v0}, Ll/᩶ۨۙ;->ۨ(F)V
+    invoke-virtual {p3, v0}, Ll/ܰۤۙ;->ۤ(F)V
 
     return p1
 .end method
@@ -767,11 +767,11 @@
     return-void
 .end method
 
-.method public bridge synthetic unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+.method public bridge synthetic unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
     .locals 0
 
     .line 33
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
 
     move-result p1
 

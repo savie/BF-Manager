@@ -1,103 +1,54 @@
 .class public final Ll/ܶۧ;
-.super Ljava/lang/Object;
-.source "S2ZO"
+.super Landroid/database/DataSetObserver;
+.source "S696"
 
 
 # instance fields
-.field public ۙ:I
-
-.field public ۨ:Ll/᩷ۧ;
-
-.field public ܰ:Z
+.field public final synthetic ۙ:Ll/ܰۧ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ll/ܰۧ;)V
+    .locals 0
 
-    .line 139
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 134
+    iput-object p1, p0, Ll/ܶۧ;->ۙ:Ll/ܰۧ;
 
-    .line 140
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    .line 52
-    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 167
-    :goto_0
-    iput-boolean v1, p0, Ll/ܶۧ;->ܰ:Z
-
-    .line 168
-    sget-object v0, Ll/ᩳۧ;->֨:Ll/᩷ۧ;
-
-    iput-object v0, p0, Ll/ܶۧ;->ۨ:Ll/᩷ۧ;
-
-    const/4 v0, 0x2
-
-    .line 169
-    iput v0, p0, Ll/ܶۧ;->ۙ:I
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ᩳۧ;
-    .locals 4
+.method public final onChanged()V
+    .locals 1
 
-    .line 205
-    iget v0, p0, Ll/ܶۧ;->ۙ:I
+    .line 138
+    invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    const/4 v1, 0x2
+    .line 139
+    iget-object v0, p0, Ll/ܶۧ;->ۙ:Ll/ܰۧ;
 
-    if-ne v0, v1, :cond_1
+    iget-object v0, v0, Ll/ܰۧ;->ܿ:Ll/ۛۧ;
 
-    iget-object v0, p0, Ll/ܶۧ;->ۨ:Ll/᩷ۧ;
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    sget-object v1, Ll/ᩳۧ;->֨:Ll/᩷ۧ;
+    return-void
+.end method
 
-    if-ne v0, v1, :cond_1
+.method public final onInvalidated()V
+    .locals 1
 
-    .line 207
-    iget-boolean v0, p0, Ll/ܶۧ;->ܰ:Z
+    .line 143
+    invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
 
-    if-eqz v0, :cond_0
+    .line 144
+    iget-object v0, p0, Ll/ܶۧ;->ۙ:Ll/ܰۧ;
 
-    .line 198
-    sget-object v0, Ll/ᩳۧ;->᩹:Ll/ᩳۧ;
+    iget-object v0, v0, Ll/ܰۧ;->ܿ:Ll/ۛۧ;
 
-    return-object v0
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
 
-    :cond_0
-    sget-object v0, Ll/ᩳۧ;->ۚ:Ll/ᩳۧ;
-
-    return-object v0
-
-    .line 209
-    :cond_1
-    new-instance v0, Ll/ᩳۧ;
-
-    iget v1, p0, Ll/ܶۧ;->ۙ:I
-
-    iget-object v2, p0, Ll/ܶۧ;->ۨ:Ll/᩷ۧ;
-
-    iget-boolean v3, p0, Ll/ܶۧ;->ܰ:Z
-
-    invoke-direct {v0, v3, v1, v2}, Ll/ᩳۧ;-><init>(ZILl/᩷ۧ;)V
-
-    return-object v0
+    return-void
 .end method

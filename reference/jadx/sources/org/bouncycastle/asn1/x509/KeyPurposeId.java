@@ -5,7 +5,7 @@ import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPurposeId extends ASN1Object {
     public static final KeyPurposeId anyExtendedKeyUsage;
     public static final ASN1ObjectIdentifier id_kp;

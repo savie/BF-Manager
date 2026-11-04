@@ -1,105 +1,80 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
+import android.text.TextWatcher;
+import android.view.View;
+import android.view.ViewTreeObserver;
+import android.widget.TextView;
+import java.lang.ref.WeakReference;
 
-/* JADX INFO: renamed from: l.᩷ᩳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DAOW */
+/* JADX INFO: renamed from: l.᩶ۘ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: P7RC */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21044 implements InterfaceC10462 {
+public final class C21044 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f68555;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f67252;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final int f68556;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ViewTreeObserverOnGlobalLayoutListenerC14330 f67253;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final long[] f68557;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final WeakReference f67254;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f68558;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ViewTreeObserver f67255;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f68559;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final TextWatcher f67256;
 
-    @Override // l.InterfaceC19282, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C9051.m23382(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.InterfaceC19282, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C9051.m23383(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public final Comparator getComparator() {
-        throw new IllegalStateException();
-    }
-
-    public C21044(long[] jArr, int i, int i2, int i3) {
-        this.f68557 = jArr;
-        this.f68556 = i;
-        this.f68558 = i2;
-        this.f68559 = i3 | 16720;
-    }
-
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(LongConsumer longConsumer) {
-        if (this.f68555 >= this.f68558) {
-            return false;
-        }
-        C13638.requireNonNull(longConsumer);
-        int i = this.f68555;
-        this.f68555 = i + 1;
-        longConsumer.accept(this.f68557[this.f68556 + i]);
-        return true;
-    }
-
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.f68558 - this.f68555;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.f68559;
-    }
-
-    @Override // l.InterfaceC20693
-    public final InterfaceC10462 trySplit() {
-        int i = this.f68555;
-        int i2 = (this.f68558 - i) >> 1;
-        if (i2 <= 1) {
-            return null;
-        }
-        int i3 = this.f68556 + i;
-        this.f68555 = i + i2;
-        return new C21044(this.f68557, i3, i2, this.f68559);
-    }
-
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(LongConsumer longConsumer) {
-        C13638.requireNonNull(longConsumer);
-        while (true) {
-            int i = this.f68555;
-            if (i >= this.f68558) {
-                return;
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r4v1, types: [android.view.ViewTreeObserver$OnGlobalLayoutListener, l.ܰۘ֫] */
+    public C21044(View view, final RunnableC8501 runnableC8501) {
+        this.f67252 = false;
+        WeakReference weakReference = new WeakReference(view);
+        this.f67254 = weakReference;
+        ?? r4 = new ViewTreeObserver.OnGlobalLayoutListener() { // from class: l.ܰۘ֫
+            @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
+            public final void onGlobalLayout() {
+                runnableC8501.run();
             }
-            longConsumer.accept(this.f68557[this.f68556 + i]);
-            this.f68555++;
+        };
+        this.f67253 = r4;
+        C24028 c24028 = new C24028(runnableC8501);
+        this.f67256 = c24028;
+        View view2 = (View) weakReference.get();
+        if (view2 == null) {
+            return;
+        }
+        ViewTreeObserver viewTreeObserver = view2.getViewTreeObserver();
+        if (viewTreeObserver.isAlive()) {
+            viewTreeObserver.addOnGlobalLayoutListener(r4);
+            this.f67255 = viewTreeObserver;
+        }
+        if (view2 instanceof TextView) {
+            ((TextView) view2).addTextChangedListener(c24028);
+            this.f67252 = true;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View m48095() {
+        return (View) this.f67254.get();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m48094() {
+        return this.f67254.get() != null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m48093() {
+        View view = (View) this.f67254.get();
+        ViewTreeObserver viewTreeObserver = this.f67255;
+        if (viewTreeObserver != null && viewTreeObserver.isAlive()) {
+            this.f67255.removeOnGlobalLayoutListener(this.f67253);
+        }
+        if (this.f67252 && (view instanceof TextView)) {
+            ((TextView) view).removeTextChangedListener(this.f67256);
         }
     }
 }

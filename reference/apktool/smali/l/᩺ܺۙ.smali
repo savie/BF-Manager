@@ -1,71 +1,104 @@
-.class public final Ll/᩺ܺۙ;
-.super Ljava/lang/Thread;
-.source "M74O"
+.class public abstract Ll/᩺ܺۙ;
+.super Ljava/lang/Object;
+.source "MANG"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܶܺۙ;
-
-.field public final synthetic ᩶:Landroid/os/ConditionVariable;
+.field public final ۙ:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܶܺۙ;Landroid/os/ConditionVariable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 230
-    iput-object p1, p0, Ll/᩺ܺۙ;->ܺ:Ll/ܶܺۙ;
+    .line 34
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ll/᩺ܺۙ;->᩶:Landroid/os/ConditionVariable;
+    .line 35
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const-string p1, "ExoPlayer:SimpleCacheInit"
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 50
+    instance-of v0, p1, Ll/᩺ܺۙ;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/᩺ܺۙ;
+
+    iget-object p1, p1, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
+
+    iget-object v0, p0, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
+
+    invoke-static {v0, p1}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 53
+    iget-object v0, p0, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 233
-    iget-object v0, p0, Ll/᩺ܺۙ;->ܺ:Ll/ܶܺۙ;
+    .line 59
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    monitor-enter v0
+    const-string v1, "CreationExtras(extras="
 
-    .line 234
-    :try_start_0
-    iget-object v1, p0, Ll/᩺ܺۙ;->᩶:Landroid/os/ConditionVariable;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
+    iget-object v1, p0, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
 
-    .line 235
-    iget-object v1, p0, Ll/᩺ܺۙ;->ܺ:Ll/ܶܺۙ;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Ll/ܶܺۙ;->ܰ(Ll/ܶܺۙ;)V
+    const/16 v1, 0x29
 
-    .line 236
-    iget-object v1, p0, Ll/᩺ܺۙ;->ܺ:Ll/ܶܺۙ;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Ll/ܶܺۙ;->ۙ(Ll/ܶܺۙ;)Ll/ۛ᩷ۙ;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    .line 237
-    monitor-exit v0
+.method public final ۙ()Ljava/util/LinkedHashMap;
+    .locals 1
 
-    return-void
+    .line 35
+    iget-object v0, p0, Ll/᩺ܺۙ;->ۙ:Ljava/util/LinkedHashMap;
 
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-object v0
 .end method

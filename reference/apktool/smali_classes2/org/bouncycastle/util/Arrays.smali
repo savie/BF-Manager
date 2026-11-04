@@ -3066,11 +3066,11 @@
 .end method
 
 .method public static validateRange([BII)V
-    .locals 4
+    .locals 3
 
     if-eqz p0, :cond_1
 
-    .line 3
+    .line 0
     array-length v0, p0
 
     sub-int/2addr v0, p1
@@ -3081,7 +3081,6 @@
 
     or-int/2addr v0, v1
 
-    .line 9
     array-length v1, p0
 
     sub-int/2addr v1, p2
@@ -3092,27 +3091,28 @@
 
     return-void
 
-    .line 16
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    .line 18
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "buf.length: "
 
-    .line 23
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 24
     array-length p0, p0
 
-    const-string v2, ", from: "
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v3, ", to: "
+    const-string p0, ", from: "
 
-    .line 0
-    invoke-static {v1, p0, v2, p1, v3}, Ll/᩻ܽۨ;->ۙ(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ", to: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3135,11 +3135,11 @@
 .end method
 
 .method public static validateSegment([BII)V
-    .locals 4
+    .locals 3
 
     if-eqz p0, :cond_1
 
-    .line 3
+    .line 0
     array-length v0, p0
 
     sub-int/2addr v0, p1
@@ -3156,27 +3156,28 @@
 
     return-void
 
-    .line 15
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    .line 17
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "buf.length: "
 
-    .line 22
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 23
     array-length p0, p0
 
-    const-string v2, ", off: "
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v3, ", len: "
+    const-string p0, ", off: "
 
-    .line 0
-    invoke-static {v1, p0, v2, p1, v3}, Ll/᩻ܽۨ;->ۙ(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ", len: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

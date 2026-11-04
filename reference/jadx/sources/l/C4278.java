@@ -1,59 +1,58 @@
 package l;
 
-import java.util.Iterator;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۘ᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M605 */
+/* JADX INFO: renamed from: l.ۘܺ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z1YZ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4278 extends AbstractC19906 {
+public final class C4278 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7101 f15416;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f15542;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC9510 f15417;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC12384 f15543;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f15418;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f15544;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f15419;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C8007 f15545;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public int f15420;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C4278(C7101 c7101, C17684 c17684, int i, InterfaceC9510 interfaceC9510) {
-        super(c17684, i);
-        this.f15416 = c7101;
-        this.f15417 = interfaceC9510;
-        this.f15418 = -1;
+    public C4278(AbstractC12384 abstractC12384, int i, int i2, C8007 c8007) {
+        this.f15543 = abstractC12384;
+        this.f15544 = i;
+        this.f15542 = i2;
+        this.f15545 = c8007;
     }
 
-    @Override // l.AbstractC19906
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo5043(C18825 c18825) {
-        C11335 c11335;
-        int i;
-        do {
-            int i2 = this.f15419 + 1;
-            this.f15419 = i2;
-            C7101 c7101 = this.f15416;
-            C7807 c7807 = c7101.f23789;
-            if (i2 > c7807.f25685) {
-                c7807.f25688 = c18825.m43447();
-                m25170();
-                return null;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C4278)) {
+            return false;
+        }
+        C4278 c4278 = (C4278) obj;
+        return this.f15544 == c4278.f15544 && this.f15542 == c4278.f15542 && C17359.equals(this.f15543, c4278.f15543) && C17359.equals(this.f15545, c4278.f15545);
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f15545) + ((C17359.hashCode(this.f15543) + C18176.m42345(this.f15544, 31, this.f15542, 31)) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f15543, Integer.valueOf(this.f15544), Integer.valueOf(this.f15542), this.f15545};
+        String[] strArrSplit = "instruction;index;data;intMatcher".length() == 0 ? new String[0] : "instruction;index;data;intMatcher".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C4278.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
             }
-            Iterator it = c7101.f23790;
-            c11335 = new C11335(c7807.f25683, c18825, c7807, this.f15420, this.f15417, it != null ? ((Integer) it.next()).intValue() : 7);
-            i = c11335.f38244;
-            this.f15420 = i;
-            if (!c7101.f23788) {
-                break;
-            }
-        } while (this.f15418 == i);
-        this.f15418 = i;
-        return c11335;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

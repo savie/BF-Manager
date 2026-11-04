@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.DERNull;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertID extends ASN1Object {
     public AlgorithmIdentifier hashAlgorithm;
     public ASN1OctetString issuerKeyHash;

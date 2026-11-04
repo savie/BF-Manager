@@ -1,54 +1,30 @@
 package l;
 
-import com.amazonaws.services.s3.model.S3ObjectSummary;
+/* JADX INFO: renamed from: l.ۢۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 17QY */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C9846 extends EnumC0898 {
+    public /* synthetic */ C9846() {
+        this("AMBIGUOUS", 4, false);
+    }
 
-/* JADX INFO: renamed from: l.ۢ᩸֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q87M */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9846 {
+    public C9846(String str, int i, boolean z) {
+        super(str, i, 0, z);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f33629;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final S3ObjectSummary f33630;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f33631;
-
-    public C9846(String str) {
-        this.f33629 = str;
-        this.f33630 = null;
-        if (str.endsWith("/")) {
-            this.f33631 = C20630.m46498(1, str.lastIndexOf(47, str.length() - 2) + 1, str);
-        } else {
-            this.f33631 = str.substring(str.lastIndexOf(47) + 1);
+    @Override // l.EnumC0898
+    /* JADX INFO: renamed from: ۙ */
+    public EnumC0898 mo1347(EnumC21035 enumC21035) {
+        int i = C14321.f45190[enumC21035.ordinal()];
+        if (i == 1) {
+            return EnumC0898.f3333;
         }
-    }
-
-    public C9846(S3ObjectSummary s3ObjectSummary) {
-        this.f33629 = null;
-        this.f33630 = s3ObjectSummary;
-        String strM660 = s3ObjectSummary.m660();
-        this.f33631 = strM660.substring(strM660.lastIndexOf(47) + 1);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7729 m24949() {
-        String str = this.f33629;
-        if (str == null) {
-            return C7729.m20376(this.f33630);
+        if (i == 2 || i == 3) {
+            return EnumC0898.f3331;
         }
-        return C7729.m20377(str);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m24950() {
-        return this.f33629 != null;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m24951() {
-        return this.f33631;
+        if (i == 4) {
+            return EnumC0898.f3332;
+        }
+        throw new AssertionError();
     }
 }

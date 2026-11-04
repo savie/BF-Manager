@@ -3,7 +3,7 @@ package org.bouncycastle.asn1;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ASN1Primitive extends ASN1Object {
     public static ASN1Primitive fromByteArray(byte[] bArr) throws IOException {
         ASN1InputStream aSN1InputStream = new ASN1InputStream(bArr);

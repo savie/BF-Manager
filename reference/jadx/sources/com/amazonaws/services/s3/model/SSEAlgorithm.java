@@ -6,24 +6,24 @@ public enum SSEAlgorithm {
     KMS("aws:kms");
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f667;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f657;
 
     public String getAlgorithm() {
-        return this.f667;
+        return this.f657;
     }
 
     SSEAlgorithm(String str) {
-        this.f667 = str;
+        this.f657 = str;
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return this.f667;
+        return this.f657;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static SSEAlgorithm m670(String str) {
+    public static SSEAlgorithm m664(String str) {
         if (str == null) {
             return null;
         }
@@ -36,7 +36,7 @@ public enum SSEAlgorithm {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static SSEAlgorithm m669() {
+    public static SSEAlgorithm m663() {
         return AES256;
     }
 }

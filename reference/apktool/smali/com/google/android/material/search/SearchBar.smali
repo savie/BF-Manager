@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/search/SearchBar;
-.super Ll/ۜᩴ;
+.super Ll/ܶ᩹;
 .source "SearchBar.java"
 
 
@@ -40,7 +40,7 @@
 
 .field public final tintNavigationIcon:Z
 
-.field public final touchExplorationStateChangeListener:Ll/᩻ۢ;
+.field public final touchExplorationStateChangeListener:Ll/֨ۜ;
 
 
 # direct methods
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 131
-    sget v0, Ll/ᩴ۟ܶ;->᩺ۛ:I
+    sget v0, Ll/ۘ۬ܺ;->᩻ۢ:I
 
     sput v0, Lcom/google/android/material/search/SearchBar;->DEF_STYLE_RES:I
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 163
-    sget v0, Ll/ۖ۟ܶ;->᩹᩷:I
+    sget v0, Ll/ۧ۬ܺ;->ܳۘ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/search/SearchBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Ll/ۜᩴ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ll/ܶ᩹;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, -0x1
 
@@ -113,11 +113,11 @@
     iput p1, p0, Lcom/google/android/material/search/SearchBar;->menuResId:I
 
     .line 155
-    new-instance v0, Ll/ۢ֫᩺;
+    new-instance v0, Ll/ۛۤᩴ;
 
-    invoke-direct {v0, p0}, Ll/ۢ֫᩺;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Ll/ۛۤᩴ;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/google/android/material/search/SearchBar;->touchExplorationStateChangeListener:Ll/᩻ۢ;
+    iput-object v0, p0, Lcom/google/android/material/search/SearchBar;->touchExplorationStateChangeListener:Ll/֨ۜ;
 
     .line 169
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -132,7 +132,7 @@
 
     move-result v0
 
-    invoke-static {v7, v0}, Ll/ܺ۫᩺;->ۙ(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v7, v0}, Ll/֡ۧۤ;->ۙ(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -146,7 +146,7 @@
     iput-object v0, p0, Lcom/google/android/material/search/SearchBar;->searchBarAnimationHelper:Lcom/google/android/material/search/SearchBarAnimationHelper;
 
     .line 176
-    sget-object v2, Ll/۠۟ܶ;->ۚ۬ۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->ᩴۚۙ:[I
 
     const/4 v8, 0x0
 
@@ -175,14 +175,14 @@
     move-result-object v2
 
     .line 182
-    sget p2, Ll/۠۟ܶ;->ۘ۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֫ۚۙ:I
 
     invoke-virtual {v0, p2, v8}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v3
 
     .line 183
-    sget p2, Ll/۠۟ܶ;->ܶ۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ܺۚۙ:I
 
     const/4 p3, 0x0
 
@@ -191,7 +191,7 @@
     move-result v4
 
     .line 184
-    sget p2, Ll/۠۟ܶ;->ۜ۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۧۚۙ:I
 
     const/4 p3, 0x1
 
@@ -202,7 +202,7 @@
     iput-boolean p2, p0, Lcom/google/android/material/search/SearchBar;->defaultMarginsEnabled:Z
 
     .line 185
-    sget p2, Ll/۠۟ܶ;->᩺۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩻ۚۙ:I
 
     invoke-virtual {v0, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -211,14 +211,14 @@
     iput-boolean p2, p0, Lcom/google/android/material/search/SearchBar;->defaultScrollFlagsEnabled:Z
 
     .line 186
-    sget p2, Ll/۠۟ܶ;->ᩳ۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ܶۚۙ:I
 
     invoke-virtual {v0, p2, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
     .line 187
-    sget v1, Ll/۠۟ܶ;->᩸۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->ܽۚۙ:I
 
     .line 188
     invoke-virtual {v0, v1, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -228,7 +228,7 @@
     iput-boolean v1, p0, Lcom/google/android/material/search/SearchBar;->forceDefaultNavigationOnClickListener:Z
 
     .line 189
-    sget v1, Ll/۠۟ܶ;->ۡ۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->ۨۚۙ:I
 
     invoke-virtual {v0, v1, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -237,7 +237,7 @@
     iput-boolean v1, p0, Lcom/google/android/material/search/SearchBar;->tintNavigationIcon:Z
 
     .line 190
-    sget v1, Ll/۠۟ܶ;->ᩴ۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->᩹ۚۙ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -246,7 +246,7 @@
     if-eqz v1, :cond_0
 
     .line 191
-    sget v1, Ll/۠۟ܶ;->ᩴ۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->᩹ۚۙ:I
 
     invoke-virtual {v0, v1, p1}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -260,28 +260,28 @@
 
     .line 193
     :cond_0
-    sget v1, Ll/۠۟ܶ;->۬۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->ۚۚۙ:I
 
     invoke-virtual {v0, v1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p1
 
     .line 194
-    sget v1, Ll/۠۟ܶ;->֨۬ۙ:I
+    sget v1, Ll/ܰ۬ܺ;->۫ۚۙ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 195
-    sget v5, Ll/۠۟ܶ;->᩹۬ۙ:I
+    sget v5, Ll/ܰ۬ܺ;->ܳۚۙ:I
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     .line 196
-    sget v6, Ll/۠۟ܶ;->᩵۬ۙ:I
+    sget v6, Ll/ܰ۬ܺ;->᩵ۚۙ:I
 
     const/high16 v9, -0x40800000    # -1.0f
 
@@ -290,7 +290,7 @@
     move-result v6
 
     .line 197
-    sget v9, Ll/۠۟ܶ;->۠۬ۙ:I
+    sget v9, Ll/ܰ۬ܺ;->ۗۚۙ:I
 
     invoke-virtual {v0, v9, v8}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -316,7 +316,7 @@
 
     move-result-object p2
 
-    sget v0, Ll/ܶ۟ܶ;->ۛܰ:I
+    sget v0, Ll/ۨ۬ܺ;->ۢ᩷:I
 
     invoke-virtual {p2, v0, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -324,7 +324,7 @@
     iput-boolean p3, p0, Lcom/google/android/material/search/SearchBar;->layoutInflated:Z
 
     .line 210
-    sget p2, Ll/ۘ۟ܶ;->ᩴ֨:I
+    sget p2, Ll/᩹۬ܺ;->᩹۫:I
 
     invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -335,7 +335,7 @@
     iput-object p2, p0, Lcom/google/android/material/search/SearchBar;->textView:Landroid/widget/TextView;
 
     .line 212
-    invoke-static {p0, v4}, Ll/ۚ֫;->ۙ(Landroid/view/View;F)V
+    invoke-static {p0, v4}, Ll/᩸۠;->ۙ(Landroid/view/View;F)V
 
     .line 213
     invoke-direct {p0, p1, v1, v5}, Lcom/google/android/material/search/SearchBar;->initTextView(ILjava/lang/String;Ljava/lang/String;)V
@@ -379,11 +379,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/search/SearchBar;)Ll/᩻ۢ;
+.method public static synthetic access$100(Lcom/google/android/material/search/SearchBar;)Ll/֨ۜ;
     .locals 0
 
     .line 129
-    iget-object p0, p0, Lcom/google/android/material/search/SearchBar;->touchExplorationStateChangeListener:Ll/᩻ۢ;
+    iget-object p0, p0, Lcom/google/android/material/search/SearchBar;->touchExplorationStateChangeListener:Ll/֨ۜ;
 
     return-object p0
 .end method
@@ -486,7 +486,7 @@
 
     .line 297
     :cond_0
-    sget p1, Ll/ۖ۟ܶ;->ܺ᩹:I
+    sget p1, Ll/ۧ۬ܺ;->ܰܳ:I
 
     invoke-static {p0, p1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
@@ -514,7 +514,7 @@
     invoke-direct {p2, p1, p3, p3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     .line 308
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     .line 3370
     invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -526,7 +526,7 @@
     .locals 1
 
     .line 262
-    invoke-virtual {p0}, Ll/ۜᩴ;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -537,7 +537,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ll/ۜᩴ;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -562,7 +562,7 @@
     .line 272
     iget-object v0, p0, Lcom/google/android/material/search/SearchBar;->textView:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Ll/ܽۙۙ;->ۖ(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Ll/ܿۙۙ;->ᩴ(Landroid/widget/TextView;I)V
 
     .line 274
     :cond_0
@@ -572,7 +572,7 @@
     invoke-virtual {p0, p3}, Lcom/google/android/material/search/SearchBar;->setHint(Ljava/lang/CharSequence;)V
 
     .line 276
-    invoke-virtual {p0}, Ll/ۜᩴ;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -593,7 +593,7 @@
 
     move-result-object p2
 
-    sget p3, Ll/֨۟ܶ;->ۚᩳ:I
+    sget p3, Ll/ܽ۬ܺ;->ᩴܶ:I
 
     .line 280
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -690,7 +690,7 @@
     .locals 2
 
     .line 558
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
@@ -757,13 +757,13 @@
     if-ne p1, v0, :cond_2
 
     .line 394
-    sget v0, Ll/ۖ۟ܶ;->۬֨:I
+    sget v0, Ll/ۧ۬ܺ;->ۚ۫:I
 
     goto :goto_0
 
     .line 395
     :cond_2
-    sget v0, Ll/ۖ۟ܶ;->᩹֨:I
+    sget v0, Ll/ۧ۬ܺ;->ܳ۫:I
 
     .line 396
     :goto_0
@@ -777,12 +777,12 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ll/۟ܿ;->᩹(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Ll/֡ᩳ;->ܳ(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     .line 400
-    invoke-static {p1, v0}, Ll/۟ܿ;->ܰ(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Ll/֡ᩳ;->᩷(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_3
     :goto_2
@@ -826,7 +826,7 @@
     move-result-object v0
 
     .line 491
-    sget v1, Ll/֨۟ܶ;->ۙᩳ:I
+    sget v1, Ll/ܽ۬ܺ;->ۙܶ:I
 
     .line 492
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -920,7 +920,7 @@
 
     .line 574
     :goto_0
-    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ۜᩴ;)Landroid/widget/ImageButton;
+    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ܶ᩹;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -960,7 +960,7 @@
 
     .line 582
     :goto_1
-    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object v0
 
@@ -1026,7 +1026,7 @@
     .locals 2
 
     .line 405
-    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ۜᩴ;)Landroid/widget/ImageButton;
+    invoke-static {p0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ܶ᩹;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -1270,7 +1270,7 @@
 
     if-nez v0, :cond_0
 
-    instance-of v0, p1, Ll/᩺ۜ;
+    instance-of v0, p1, Ll/ܽۧ;
 
     if-nez v0, :cond_0
 
@@ -1456,7 +1456,7 @@
     return v0
 
     :cond_0
-    invoke-static {p0}, Ll/ۚ֫;->۬(Landroid/view/View;)F
+    invoke-static {p0}, Ll/᩸۠;->ۚ(Landroid/view/View;)F
 
     move-result v0
 
@@ -1480,7 +1480,7 @@
     .locals 1
 
     .line 506
-    sget v0, Ll/֨۟ܶ;->ܰᩳ:I
+    sget v0, Ll/ܽ۬ܺ;->᩷ܶ:I
 
     return v0
 .end method
@@ -1489,7 +1489,7 @@
     .locals 1
 
     .line 513
-    sget v0, Ll/۬۟ܶ;->ۜۨ:I
+    sget v0, Ll/ܶ۬ܺ;->ۧۤ:I
 
     return v0
 .end method
@@ -1572,25 +1572,25 @@
     .locals 3
 
     .line 430
-    invoke-virtual {p0}, Ll/ۜᩴ;->getMenu()Landroid/view/Menu;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
     .line 431
-    instance-of v1, v0, Ll/۫۬;
+    instance-of v1, v0, Ll/ۢۚ;
 
     if-eqz v1, :cond_0
 
     .line 432
     move-object v2, v0
 
-    check-cast v2, Ll/۫۬;
+    check-cast v2, Ll/ۢۚ;
 
-    invoke-virtual {v2}, Ll/۫۬;->stopDispatchingItemsChanged()V
+    invoke-virtual {v2}, Ll/ۢۚ;->stopDispatchingItemsChanged()V
 
     .line 434
     :cond_0
-    invoke-super {p0, p1}, Ll/ۜᩴ;->inflateMenu(I)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->inflateMenu(I)V
 
     .line 435
     iput p1, p0, Lcom/google/android/material/search/SearchBar;->menuResId:I
@@ -1598,9 +1598,9 @@
     if-eqz v1, :cond_1
 
     .line 437
-    check-cast v0, Ll/۫۬;
+    check-cast v0, Ll/ۢۚ;
 
-    invoke-virtual {v0}, Ll/۫۬;->startDispatchingItemsChanged()V
+    invoke-virtual {v0}, Ll/ۢۚ;->startDispatchingItemsChanged()V
 
     :cond_1
     return-void
@@ -1658,7 +1658,7 @@
     .locals 1
 
     .line 458
-    invoke-super {p0}, Ll/ۜᩴ;->onAttachedToWindow()V
+    invoke-super {p0}, Ll/ܶ᩹;->onAttachedToWindow()V
 
     .line 460
     iget-object v0, p0, Lcom/google/android/material/search/SearchBar;->backgroundShape:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -1742,7 +1742,7 @@
     .locals 0
 
     .line 450
-    invoke-super/range {p0 .. p5}, Ll/ۜᩴ;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Ll/ܶ᩹;->onLayout(ZIIII)V
 
     .line 452
     invoke-direct {p0}, Lcom/google/android/material/search/SearchBar;->layoutCenterView()V
@@ -1757,7 +1757,7 @@
     .locals 0
 
     .line 443
-    invoke-super {p0, p1, p2}, Ll/ۜᩴ;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Ll/ܶ᩹;->onMeasure(II)V
 
     .line 445
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/search/SearchBar;->measureCenterView(II)V
@@ -1774,7 +1774,7 @@
     if-nez v0, :cond_0
 
     .line 933
-    invoke-super {p0, p1}, Ll/ۜᩴ;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
@@ -1783,11 +1783,11 @@
     check-cast p1, Lcom/google/android/material/search/SearchBar$SavedState;
 
     .line 937
-    invoke-virtual {p1}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Ll/ۜᩴ;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v0}, Ll/ܶ᩹;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 938
     iget-object p1, p1, Lcom/google/android/material/search/SearchBar$SavedState;->text:Ljava/lang/String;
@@ -1803,7 +1803,7 @@
     .line 924
     new-instance v0, Lcom/google/android/material/search/SearchBar$SavedState;
 
-    invoke-super {p0}, Ll/ۜᩴ;->onSaveInstanceState()Landroid/os/Parcelable;
+    invoke-super {p0}, Ll/ܶ᩹;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -1957,7 +1957,7 @@
 
     move-result-object p1
 
-    invoke-super {p0, p1}, Ll/ۜᩴ;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1974,7 +1974,7 @@
 
     .line 370
     :cond_0
-    invoke-super {p0, p1}, Ll/ۜᩴ;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     if-nez p1, :cond_1
 
@@ -2085,11 +2085,11 @@
     .locals 2
 
     .line 706
-    new-instance v0, Ll/ܺ᩻ۖ;
+    new-instance v0, Ll/᩹ۤۤ;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v1, p0}, Ll/ܺ᩻ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/᩹ۤۤ;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

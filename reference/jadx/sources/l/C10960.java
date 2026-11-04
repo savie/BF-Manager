@@ -1,42 +1,53 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۧᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C10960 extends EnumC21210 {
-    public /* synthetic */ C10960() {
-        this("CommentEndDash", 47);
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import java.util.Map;
+import org.bouncycastle.i18n.TextBundle;
+import org.simpleframework.xml.strategy.Name;
+
+/* JADX INFO: renamed from: l.ۤܶܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W6DR */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10960 extends BaseAdapter {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2012 f34629;
+
+    public C10960(C2012 c2012) {
+        this.f34629 = c2012;
     }
 
-    public C10960(String str, int i) {
-        super(str, i, 0);
+    @Override // android.widget.Adapter
+    public final int getCount() {
+        return this.f34629.f6699.f77249.size();
     }
 
-    @Override // l.EnumC21210
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        char cM32033 = c12931.m32033();
-        if (cM32033 == 0) {
-            c20692.m46542(this);
-            StringBuilder sb = c20692.f67298.f69573;
-            sb.append('-');
-            sb.append((char) 65533);
-            c20692.m46532(EnumC21210.f69088);
-            return;
+    @Override // android.widget.Adapter
+    public final Object getItem(int i) {
+        return this.f34629.f6699.f77249.get(i);
+    }
+
+    @Override // android.widget.Adapter
+    public final long getItemId(int i) {
+        return ((Integer) this.f34629.f6699.f77249.get(i)).intValue();
+    }
+
+    @Override // android.widget.Adapter
+    public final View getView(int i, View view, ViewGroup viewGroup) {
+        C2012 c2012 = this.f34629;
+        int iIntValue = ((Integer) c2012.f6699.f77249.get(i)).intValue();
+        C16401 c16401 = view instanceof C16401 ? (C16401) view : new C16401(c2012.getContext());
+        Map map = ((C20131) c2012.f6713.f50877.get(iIntValue)).f64695;
+        String str = (String) map.get(TextBundle.TEXT_ENTRY);
+        if (str == null || str.isEmpty()) {
+            str = (String) map.get("hint-text");
         }
-        if (cM32033 == '-') {
-            c20692.m46532(EnumC21210.f69062);
-            return;
+        if (str == null || str.isEmpty()) {
+            str = (String) map.get("content-desc");
         }
-        if (cM32033 == 65535) {
-            c20692.m46544(this);
-            c20692.m46541();
-            c20692.m46532(EnumC21210.f69077);
-        } else {
-            StringBuilder sb2 = c20692.f67298.f69573;
-            sb2.append('-');
-            sb2.append(cM32033);
-            c20692.m46532(EnumC21210.f69088);
-        }
+        c16401.m38961(iIntValue, C2012.m6896((String) map.get(Name.LABEL)), str, c2012.f6699, c2012.f6715.m48699() != null && c2012.f6715.m48699().m4786() == iIntValue, new RunnableC4995(this, iIntValue), new RunnableC22149(this, iIntValue));
+        return c16401;
     }
 }

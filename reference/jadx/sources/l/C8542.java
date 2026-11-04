@@ -1,342 +1,313 @@
 package l;
 
-import com.alipay.sdk.m.y.q;
-import com.google.android.material.color.utilities.DynamicColor;
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.Hct;
-import com.umeng.commonsdk.statistics.UMErrorCode;
-import java.util.function.Function;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaDataSource;
+import android.media.MediaMetadataRetriever;
+import android.os.Build;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۡ֨ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K3YT */
+/* JADX INFO: renamed from: l.۠ۢۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26KB */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8542 implements Function {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f29566;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f29567;
-
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C8542 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9287 m22859(AbstractC22044 abstractC22044) {
+        C9287 c9287M22863;
+        if (m22862(abstractC22044.getName())) {
+            try {
+                C9287 c9287M22864 = m22863(abstractC22044);
+                if (c9287M22864 != null) {
+                    return c9287M22864;
+                }
+            } catch (IOException | OutOfMemoryError | RuntimeException unused) {
+                return new C9287(EnumC2576.RETRYABLE, null);
+            }
+        }
+        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+        try {
+            try {
+                if (abstractC22044.m49870()) {
+                    mediaMetadataRetriever.setDataSource(abstractC22044.mo4278());
+                } else {
+                    if (!abstractC22044.mo42886()) {
+                        if (Build.VERSION.SDK_INT >= 23) {
+                            C9287 c9287M22860 = m22860(abstractC22044, mediaMetadataRetriever);
+                            try {
+                                mediaMetadataRetriever.release();
+                            } catch (Exception unused2) {
+                            }
+                            return c9287M22860;
+                        }
+                        C9287 c9287 = new C9287(EnumC2576.RETRYABLE, null);
+                        try {
+                            mediaMetadataRetriever.release();
+                        } catch (Exception unused3) {
+                        }
+                        return c9287;
+                    }
+                    mediaMetadataRetriever.setDataSource(C21576.m49084(), abstractC22044.mo42888());
+                }
+                byte[] embeddedPicture = mediaMetadataRetriever.getEmbeddedPicture();
+                if (embeddedPicture == null) {
+                    String name = abstractC22044.getName();
+                    if (name.regionMatches(true, name.length() - 4, ".wav", 0, 4)) {
+                        final C13961 c13961M49855 = abstractC22044.m49855("r");
+                        try {
+                            C9287 c9287M22856 = m22856(c13961M49855.length(), new InterfaceC12227() { // from class: l.᩶ۢۚ
+                                @Override // l.InterfaceC12227
+                                /* JADX INFO: renamed from: ۙ */
+                                public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                                    C13961 c13961 = c13961M49855;
+                                    c13961.seek(j);
+                                    return c13961.read(bArr, i, i2);
+                                }
+                            });
+                            c13961M49855.close();
+                            try {
+                                mediaMetadataRetriever.release();
+                            } catch (Exception unused4) {
+                            }
+                            return c9287M22856;
+                        } catch (Throwable th) {
+                            try {
+                                c13961M49855.close();
+                            } catch (Throwable th2) {
+                                th.addSuppressed(th2);
+                            }
+                            throw th;
+                        }
+                    }
+                }
+                C9287 c9287M22865 = m22864(embeddedPicture);
+                if (c9287M22865.m24500() == EnumC2576.SUCCESS || !m22865(abstractC22044.getName()) || (c9287M22863 = m22863(abstractC22044)) == null) {
+                    try {
+                        mediaMetadataRetriever.release();
+                    } catch (Exception unused5) {
+                    }
+                    return c9287M22865;
+                }
+                try {
+                    mediaMetadataRetriever.release();
+                } catch (Exception unused6) {
+                }
+                return c9287M22863;
+            } catch (IOException | OutOfMemoryError | RuntimeException unused7) {
+                C9287 c9288 = new C9287(EnumC2576.RETRYABLE, null);
+                try {
+                    mediaMetadataRetriever.release();
+                } catch (Exception unused8) {
+                }
+                return c9288;
+            }
+        } catch (Throwable th3) {
+            try {
+                mediaMetadataRetriever.release();
+            } catch (Exception unused9) {
+            }
+            throw th3;
+        }
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    /* JADX WARN: Code duplicated, block: B:12:0x0042 A[Catch: all -> 0x007c, TryCatch #1 {all -> 0x007c, blocks: (B:3:0x0005, B:5:0x0012, B:9:0x001f, B:11:0x0034, B:13:0x0046, B:15:0x004e, B:17:0x0058, B:12:0x0042, B:23:0x0070), top: B:34:0x0005 }] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9287 m22860(AbstractC22044 abstractC22044, MediaMetadataRetriever mediaMetadataRetriever) {
+        C9287 c9287M22864;
+        C9287 c9287M22858;
+        final C18984 c18984 = new C18984(abstractC22044);
+        try {
+            mediaMetadataRetriever.setDataSource(c18984);
+            byte[] embeddedPicture = mediaMetadataRetriever.getEmbeddedPicture();
+            if (!c18984.f61530 && !Thread.currentThread().isInterrupted()) {
+                if (embeddedPicture == null) {
+                    String name = abstractC22044.getName();
+                    if (name.regionMatches(true, name.length() - 4, ".wav", 0, 4)) {
+                        c9287M22864 = m22856(c18984.getSize(), new InterfaceC12227() { // from class: l.ܿۢۚ
+                            @Override // l.InterfaceC12227
+                            /* JADX INFO: renamed from: ۙ */
+                            public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                                return c18984.readAt(j, bArr, i, i2);
+                            }
+                        });
+                    } else {
+                        c9287M22864 = m22864(embeddedPicture);
+                    }
+                } else {
+                    c9287M22864 = m22864(embeddedPicture);
+                }
+                if (c9287M22864.m24500() == EnumC2576.SUCCESS || !m22865(abstractC22044.getName()) || (c9287M22858 = m22858(new InterfaceC12227() { // from class: l.ܿۢۚ
+                    @Override // l.InterfaceC12227
+                    /* JADX INFO: renamed from: ۙ */
+                    public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                        return c18984.readAt(j, bArr, i, i2);
+                    }
+                }, c18984.getSize(), true)) == null) {
+                    c18984.close();
+                    return c9287M22864;
+                }
+                c18984.close();
+                return c9287M22858;
+            }
+            C9287 c9287 = new C9287(EnumC2576.RETRYABLE, null);
+            c18984.close();
+            return c9287;
+        } catch (Throwable th) {
+            try {
+                c18984.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
+            }
+            throw th;
+        }
     }
 
-    public /* synthetic */ C8542(int i, Object obj) {
-        int i2 = 21344384;
-        int i3 = C1398.f5802;
-        int i4 = C1668.f6641;
-        this.f29566 = i;
-        this.f29567 = obj;
-        int iM11306 = ThreadFactoryC3888.m11306("᩷֡") ^ i3;
-        int i5 = ((iM11306 ^ i4) * 21597) ^ (-1705255553);
-        int i6 = -515931353;
-        while (true) {
-            i2 = (iM11306 ^ i6) ^ (i5 & (((i2 ^ i4) * (-24439)) >> 31));
-            switch (i2) {
-                case -1661821720:
-                case -584234503:
-                    C1066.m4023();
-                    C3535.m10431();
-                    iM11306 = (ThreadFactoryC3888.m11306("ܰ᩹") + i3) * (-7);
-                    i5 = ((iM11306 ^ i4) * 6963) ^ 195101467;
-                    i6 = -644502116;
-                    break;
-                case -903246640:
-                case 2120150375:
-                    if (C2788.f10625 >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("ܺۨ") ^ i4;
-                        i5 = ((iM11306 ^ i3) * (-19521)) ^ (-873353027);
-                        i6 = 36350327;
-                    } else {
-                        iM11306 = C19806.m45029("ۤܳ") ^ i4;
-                        i5 = ((iM11306 ^ i3) * (-14763)) ^ (-509785701);
-                        i6 = 1760264175;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9287 m22857(final MediaDataSource mediaDataSource, String str) {
+        if (m22862(str)) {
+            try {
+                C9287 c9287M22858 = m22858(new InterfaceC12227() { // from class: l.۟ۢۚ
+                    @Override // l.InterfaceC12227
+                    /* JADX INFO: renamed from: ۙ */
+                    public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                        return mediaDataSource.readAt(j, bArr, i, i2);
                     }
-                    break;
-                case -131247398:
-                case 200349834:
-                    C1148.m4232();
-                    CallableC1627.m5507();
-                    throw new RuntimeException();
-                case -7254081:
-                case 2006955605:
-                    return;
-                case 806307995:
-                case 1428091486:
-                    C3743.m10966();
-                    if (RunnableC1606.f6488 < 0) {
-                        iM11306 = (C19806.m45029("֡۬") ^ i4) * (-123);
-                        i5 = ((iM11306 ^ i3) * 24027) ^ 1885930354;
-                        i6 = 1393078223;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܰ᩹") + i3) * (-7);
-                        i5 = ((iM11306 ^ i4) * 6963) ^ 195101467;
-                        i6 = -644502116;
+                }, mediaDataSource.getSize(), false);
+                if (c9287M22858 != null) {
+                    return c9287M22858;
+                }
+            } catch (IOException | OutOfMemoryError | RuntimeException unused) {
+                return new C9287(EnumC2576.RETRYABLE, null);
+            }
+        }
+        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+        try {
+            try {
+                C1085 c1085 = new C1085(mediaDataSource);
+                mediaMetadataRetriever.setDataSource(c1085);
+                byte[] embeddedPicture = mediaMetadataRetriever.getEmbeddedPicture();
+                if (!c1085.f3879 && !Thread.currentThread().isInterrupted()) {
+                    C9287 c9287M22864 = m22864(embeddedPicture);
+                    if (c9287M22864.m24500() != EnumC2576.SUCCESS && m22865(str)) {
+                        C9287 c9287M22859 = m22858(new InterfaceC12227() { // from class: l.۟ۢۚ
+                            @Override // l.InterfaceC12227
+                            /* JADX INFO: renamed from: ۙ */
+                            public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                                return mediaDataSource.readAt(j, bArr, i, i2);
+                            }
+                        }, mediaDataSource.getSize(), true);
+                        if (c9287M22859 != null) {
+                            try {
+                                mediaMetadataRetriever.release();
+                            } catch (Exception unused2) {
+                            }
+                            return c9287M22859;
+                        }
+                    } else if (embeddedPicture == null) {
+                        return m22856(mediaDataSource.getSize(), new InterfaceC12227() { // from class: l.۟ۢۚ
+                            @Override // l.InterfaceC12227
+                            /* JADX INFO: renamed from: ۙ */
+                            public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                                return mediaDataSource.readAt(j, bArr, i, i2);
+                            }
+                        });
                     }
-                    break;
-                case 1799251979:
-                case 1978237114:
-                    if (C1977.f7413 <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܰ᩹") + i3) * (-7);
-                        i5 = ((iM11306 ^ i4) * 6963) ^ 195101467;
-                        i6 = -644502116;
-                    } else {
-                        iM11306 = C19806.m45029("۠ܿ") ^ i3;
-                        i5 = ((iM11306 ^ i4) * (-18355)) ^ 842317384;
-                        i6 = -164061093;
-                    }
-                    break;
-                default:
-                    C0050.m946();
-                    if (AbstractC0464.m2313() != 0) {
-                        iM11306 = (C19806.m45029("֡۬") ^ i4) * (-123);
-                        i5 = ((iM11306 ^ i3) * 24027) ^ 1885930354;
-                        i6 = 1393078223;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܶܿ") + i3) * q.h;
-                        i5 = ((iM11306 ^ i4) * 25353) ^ 674328188;
-                        i6 = 1557331696;
-                    }
-                    break;
+                    return c9287M22864;
+                }
+                return new C9287(EnumC2576.RETRYABLE, null);
+            } catch (IOException | OutOfMemoryError | RuntimeException unused3) {
+                return new C9287(EnumC2576.RETRYABLE, null);
+            }
+        } finally {
+            try {
+                mediaMetadataRetriever.release();
+            } catch (Exception unused4) {
             }
         }
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        C0074 c0074 = null;
-        Hct hct = null;
-        C14315 c14315 = null;
-        AbstractC23903 abstractC23903 = null;
-        AbstractC8774 abstractC8774 = null;
-        int i = -1785940039;
-        int i2 = C1977.f7413;
-        int i3 = C1398.f5802;
-        int iM11306 = ThreadFactoryC3888.m11306("ܿۚ") ^ i2;
-        int i4 = ((iM11306 ^ i3) * 23221) ^ (-1656248058);
-        int i5 = 1059127846;
-        while (true) {
-            i = ((((i ^ i3) * 29479) >> 31) & i4) ^ (iM11306 ^ i5);
-            switch (i) {
-                case -2075084296:
-                case -1201800490:
-                    switch (this.f29566) {
-                        case 0:
-                            iM11306 = C19806.m45029("֨ۗ") ^ i2;
-                            i4 = ((iM11306 ^ i3) * (-12309)) ^ (-51985873);
-                            i5 = -1130850646;
-                            break;
-                        case 1:
-                            iM11306 = ThreadFactoryC3888.m11306("᩹ۛ") ^ i2;
-                            i4 = ((iM11306 ^ i3) * 12503) ^ (-738188466);
-                            i5 = -1962699628;
-                            break;
-                        case 2:
-                            iM11306 = C19806.m45029("ۨۙ") ^ i2;
-                            i4 = ((iM11306 ^ i3) * (-15433)) ^ (-970995673);
-                            i5 = -1707164343;
-                            break;
-                        default:
-                            iM11306 = (i2 - ThreadFactoryC3888.m11306("ᩴ֫")) * 65;
-                            i4 = ((iM11306 ^ i3) * 2891) ^ (-760291170);
-                            i5 = -583627956;
-                            break;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C9287 m22863(AbstractC22044 abstractC22044) {
+        try {
+            final C13961 c13961M49855 = abstractC22044.m49855("r");
+            try {
+                C9287 c9287M22858 = m22858(new InterfaceC12227() { // from class: l.֡ۢۚ
+                    @Override // l.InterfaceC12227
+                    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+                    public final int mo2073(long j, byte[] bArr, int i, int i2) {
+                        C13961 c13961 = c13961M49855;
+                        c13961.seek(j);
+                        return c13961.read(bArr, i, i2);
                     }
-                    break;
-                case -1864707805:
-                case -935592900:
-                    c14315 = (C14315) this.f29567;
-                    if (C1066.f4915 <= 0) {
-                        iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                        i5 = -1179310426;
-                    } else {
-                        iM11306 = C19806.m45029("֫ۨ") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 18423) ^ (-666190408);
-                        i5 = -1778750197;
-                    }
-                    break;
-                case -1540537931:
-                case 1831106777:
-                    if (C19806.f63586) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩸") + i2) * 101;
-                        i4 = ((iM11306 ^ i3) * 12405) ^ 432175158;
-                        i5 = 302929863;
-                    } else {
-                        iM11306 = C19806.m45029("ܰۘ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * (-17057)) ^ (-1412360265);
-                        i5 = 1184091973;
-                    }
-                    break;
-                case -1417000032:
-                case 662178072:
-                    C0817.m3399();
-                    if (C0962.f3784) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩶ۨ") ^ i3) * q.h;
-                        i4 = ((iM11306 ^ i2) * (-7941)) ^ 143240565;
-                        i5 = 827214181;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩸") + i2) * 101;
-                        i4 = ((iM11306 ^ i3) * 12405) ^ 432175158;
-                        i5 = 302929863;
-                    }
-                    break;
-                case -1290162961:
-                case -161457723:
-                    if (C2871.f10837 >= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("֡᩵") ^ i3) * 31;
-                        i4 = ((iM11306 ^ i2) * 3699) ^ (-1687050831);
-                        i5 = 282176783;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۚ֨") ^ i3;
-                        i4 = ((iM11306 ^ i2) * (-10547)) ^ 57237605;
-                        i5 = -1354410485;
-                    }
-                    break;
-                case -1175748914:
-                case 1290597864:
-                    return DynamicColor.lambda$fromArgb$1(hct, (DynamicScheme) obj);
-                case -1134568392:
-                case -1054421411:
-                    ThreadFactoryC3888.m11300();
-                    C3660.m10791();
-                    iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                    i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                    i5 = -1179310426;
-                    break;
-                case -1091572117:
-                case 565860911:
-                    return C14315.m34543(c14315, (InterfaceC4290) obj);
-                case -921101600:
-                case 79369692:
-                    return C3128.m9440(abstractC23903, abstractC8774, false);
-                case -776778732:
-                case 580025901:
-                    return C0074.m1003(c0074, (String) obj);
-                case -653970798:
-                case 1446331921:
-                    hct = (Hct) this.f29567;
-                    if (C1977.f7413 <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩸") + i2) * 101;
-                        i4 = ((iM11306 ^ i3) * 12405) ^ 432175158;
-                        i5 = 302929863;
-                    } else {
-                        iM11306 = C19806.m45029("᩶֨") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 11321) ^ (-1487355691);
-                        i5 = 1744501223;
-                    }
-                    break;
-                case -403410801:
-                case 263052353:
-                    abstractC23903 = (AbstractC23903) this.f29567;
-                    if (C2788.f10625 >= 0) {
-                        iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                        i5 = -1179310426;
-                    } else {
-                        iM11306 = C19806.m45029("۟ܽ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * (-14743)) ^ (-477566098);
-                        i5 = 1724443823;
-                    }
-                    break;
-                case -340760938:
-                case 450360067:
-                    C10634.m26820();
-                    return null;
-                case -291652351:
-                case 428219868:
-                    c0074 = (C0074) this.f29567;
-                    if (C1025.f4800 >= 0) {
-                        iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                        i5 = -1179310426;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩵֫") + i3) * 119;
-                        i4 = ((iM11306 ^ i2) * (-18441)) ^ (-1225478434);
-                        i5 = 717849912;
-                    }
-                    break;
-                case 25162851:
-                case 1845844443:
-                    if (C3535.m10431() <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩸") + i2) * 101;
-                        i4 = ((iM11306 ^ i3) * 12405) ^ 432175158;
-                        i5 = 302929863;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۢ᩶") + i3) * 99;
-                        i4 = ((iM11306 ^ i2) * 397) ^ 1441387490;
-                        i5 = -1924299037;
-                    }
-                    break;
-                case 345421673:
-                case 401116497:
-                    if (C1461.f5957 <= 0) {
-                        iM11306 = (i3 - ThreadFactoryC3888.m11306("ۜ᩷")) * UMErrorCode.E_UM_BE_CREATE_FAILED;
-                        i4 = ((iM11306 ^ i2) * (-8643)) ^ 205972855;
-                        i5 = 1827435939;
-                    } else {
-                        iM11306 = C19806.m45029("᩵ۛ") ^ i3;
-                        i4 = ((iM11306 ^ i2) * (-7253)) ^ (-953905299);
-                        i5 = 711588504;
-                    }
-                    break;
-                case 357776536:
-                case 1334511571:
-                    if (C7105.f23796 >= 0) {
-                        iM11306 = (i3 - ThreadFactoryC3888.m11306("ۜ᩷")) * UMErrorCode.E_UM_BE_CREATE_FAILED;
-                        i4 = ((iM11306 ^ i2) * (-8643)) ^ 205972855;
-                        i5 = 1827435939;
-                    } else {
-                        iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                        i5 = -1179310426;
-                    }
-                    break;
-                case 618469680:
-                case 1461742137:
-                    if (C2788.m8472() != 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("֡᩵") ^ i3) * 31;
-                        i4 = ((iM11306 ^ i2) * 3699) ^ (-1687050831);
-                        i5 = 282176783;
-                    } else {
-                        iM11306 = C19806.m45029("֨᩶") ^ i2;
-                        i4 = ((iM11306 ^ i3) * (-28647)) ^ (-492793867);
-                        i5 = -518195035;
-                    }
-                    break;
-                case 885894421:
-                case 975363428:
-                    abstractC8774 = (AbstractC8774) obj;
-                    if (C2704.f10408) {
-                        iM11306 = ThreadFactoryC3888.m11306("ܳ۫") ^ i3;
-                        i4 = ((iM11306 ^ i2) * (-3467)) ^ (-1115124887);
-                        i5 = -502478587;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("֡᩵") ^ i3) * 31;
-                        i4 = ((iM11306 ^ i2) * 3699) ^ (-1687050831);
-                        i5 = 282176783;
-                    }
-                    break;
-                default:
-                    if (C0216.m1591() > 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩸") + i2) * 101;
-                        i4 = ((iM11306 ^ i3) * 12405) ^ 432175158;
-                        i5 = 302929863;
-                    } else {
-                        iM11306 = C19806.m45029("۫ܿ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 20251) ^ 678509066;
-                        i5 = -1179310426;
-                    }
-                    break;
+                }, c13961M49855.length(), m22865(abstractC22044.getName()));
+                c13961M49855.close();
+                return c9287M22858;
+            } catch (Throwable th) {
+                try {
+                    c13961M49855.close();
+                } catch (Throwable th2) {
+                    th.addSuppressed(th2);
+                }
+                throw th;
             }
+        } catch (IOException unused) {
+            return null;
         }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9287 m22858(InterfaceC12227 interfaceC12227, long j, boolean z) {
+        C10033 c10033 = new C10033();
+        if (z) {
+            C14508.m35029(interfaceC12227, j, c10033);
+        } else {
+            C14508.m35024(interfaceC12227, j, c10033);
+        }
+        return Thread.currentThread().isInterrupted() ? new C9287(EnumC2576.RETRYABLE, null) : c10033.f32164;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m22862(String str) {
+        return str.regionMatches(true, str.length() + (-5), ".flac", 0, 5) || str.regionMatches(true, str.length() + (-4), ".ogg", 0, 4) || str.regionMatches(true, str.length() + (-4), ".oga", 0, 4) || str.regionMatches(true, str.length() + (-5), ".opus", 0, 5);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m22865(String str) {
+        return str.regionMatches(true, str.length() + (-4), ".mp3", 0, 4) || str.regionMatches(true, str.length() + (-4), ".mp2", 0, 4) || str.regionMatches(true, str.length() + (-5), ".mpga", 0, 5);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9287 m22856(long j, InterfaceC12227 interfaceC12227) {
+        C10033 c10033 = new C10033();
+        C20342.m46732(interfaceC12227, j, c10033);
+        if (Thread.currentThread().isInterrupted()) {
+            return new C9287(EnumC2576.RETRYABLE, null);
+        }
+        if (c10033.f32164 != null) {
+            return c10033.f32164;
+        }
+        return c10033.f32163 != null ? c10033.f32163 : new C9287(EnumC2576.NO_COVER, null);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C9287 m22864(byte[] bArr) {
+        if (Thread.currentThread().isInterrupted()) {
+            return new C9287(EnumC2576.RETRYABLE, null);
+        }
+        if (bArr == null) {
+            return new C9287(EnumC2576.NO_COVER, null);
+        }
+        if (bArr.length == 0 || bArr.length > 8388608) {
+            return new C9287(EnumC2576.INVALID_COVER, null);
+        }
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeByteArray(bArr, 0, bArr.length, options);
+        int i = options.outWidth;
+        int i2 = options.outHeight;
+        if (i <= 0 || i2 <= 0 || Math.max(i, i2) > 16384 || ((long) i) * ((long) i2) > 16777216 || Math.max(i, i2) > ((long) Math.min(i, i2)) * 32) {
+            return new C9287(EnumC2576.INVALID_COVER, null);
+        }
+        Bitmap bitmapM22342 = C8275.m22342(new C18716(bArr));
+        return new C9287(bitmapM22342 == null ? EnumC2576.INVALID_COVER : EnumC2576.SUCCESS, bitmapM22342);
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.jce.spec;
 
 import java.math.BigInteger;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECPrivateKeySpec extends ECKeySpec {
     public BigInteger d;
 

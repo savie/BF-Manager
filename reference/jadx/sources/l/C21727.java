@@ -1,30 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ܿܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z3PG */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21727 extends AbstractC0477 {
+import android.view.View;
+import androidx.transition.FragmentTransitionSupport;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC0477 f70442;
+/* JADX INFO: renamed from: l.᩷֫ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F63S */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21727 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public AbstractC0477 f70443 = C19280.f62237;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final AbstractC11284 f69327 = new C5319();
 
-    public C21727(AbstractC19611 abstractC19611) {
-        this.f70442 = abstractC19611.f62963.values().iterator();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final AbstractC11284 f69328;
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f70443.hasNext() || this.f70442.hasNext();
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!this.f70443.hasNext()) {
-            this.f70443 = ((AbstractC1826) this.f70442.next()).iterator();
+    static {
+        AbstractC11284 abstractC11284 = null;
+        try {
+            abstractC11284 = (AbstractC11284) FragmentTransitionSupport.class.getDeclaredConstructor(null).newInstance(null);
+        } catch (Exception unused) {
         }
-        return this.f70443.next();
+        f69328 = abstractC11284;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m49295(ArrayList arrayList, int i) {
+        int size = arrayList.size();
+        while (true) {
+            size--;
+            if (size < 0) {
+                return;
+            } else {
+                ((View) arrayList.get(size)).setVisibility(i);
+            }
+        }
     }
 }

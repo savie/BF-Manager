@@ -1,39 +1,88 @@
 package l;
 
-import android.util.AttributeSet;
-import android.widget.ImageView;
-import com.google.android.material.chip.Chip;
+import java.util.function.Consumer;
+import java.util.function.DoubleBinaryOperator;
+import java.util.function.DoubleConsumer;
 
-/* JADX INFO: renamed from: l.ۡۜۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L5HA */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8714 extends C10125 {
+/* JADX INFO: renamed from: l.۠ܶۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8714 implements InterfaceC18873, InterfaceC13080 {
+    public boolean a;
+    public double b;
+    public final /* synthetic */ DoubleBinaryOperator c;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f29956;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f29957;
-
-    public C8714(ImageView imageView, AttributeSet attributeSet, int i) {
-        super(imageView, attributeSet, i);
-        this.f29956 = m22546(imageView, attributeSet, true);
-        this.f29957 = m22546(imageView, attributeSet, false);
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(int i) {
+        AbstractC13956.t();
+        throw null;
     }
 
-    public C8714() {
-        this.f29956 = 0;
-        this.f29957 = 0;
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(long j) {
+        AbstractC13956.u();
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m22546(ImageView imageView, AttributeSet attributeSet, boolean z) {
-        int attributeResourceValue = attributeSet.getAttributeResourceValue(Chip.NAMESPACE_ANDROID, z ? "src" : "background", 0);
-        if (attributeResourceValue > 0) {
-            if (C7302.f24237.contains(imageView.getResources().getResourceTypeName(attributeResourceValue)) && !C7302.m19454(imageView, z, attributeResourceValue)) {
-                return attributeResourceValue;
-            }
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        n((Double) obj);
+    }
+
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
+        return AbstractC2946.a(this, doubleConsumer);
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void end() {
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    @Override // l.InterfaceC13080
+    public final /* synthetic */ void n(Double d) {
+        AbstractC13956.n(this, d);
+    }
+
+    public C8714(DoubleBinaryOperator doubleBinaryOperator) {
+        this.c = doubleBinaryOperator;
+    }
+
+    @Override // l.InterfaceC18873
+    public final void i(InterfaceC18873 interfaceC18873) {
+        C8714 c8714 = (C8714) interfaceC18873;
+        if (c8714.a) {
+            return;
         }
-        return 0;
+        accept(c8714.b);
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        this.a = true;
+        this.b = 0.0d;
+    }
+
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final void accept(double d) {
+        if (this.a) {
+            this.a = false;
+            this.b = d;
+        } else {
+            this.b = this.c.applyAsDouble(this.b, d);
+        }
+    }
+
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return this.a ? C21725.c : new C21725(this.b);
     }
 }

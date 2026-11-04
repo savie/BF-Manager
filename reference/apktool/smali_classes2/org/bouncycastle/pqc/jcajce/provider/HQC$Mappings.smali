@@ -182,7 +182,7 @@
     sget-object v8, Lorg/bouncycastle/asn1/bc/BCObjectIdentifiers;->pqc_kem_hqc:Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;
 
     .line 0
-    invoke-static {v7, v8, p1, v1}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v7, v8, p1, v1}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     const-string v7, "org.bouncycastle.pqc.jcajce.provider.hqc.HQCCipherSpi$HQC128"
 

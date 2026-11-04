@@ -5,7 +5,7 @@ import java.util.Map;
 import org.bouncycastle.jcajce.spec.MLDSAParameterSpec;
 import org.bouncycastle.pqc.crypto.mldsa.MLDSAParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Utils {
     public static Map parameters;
 

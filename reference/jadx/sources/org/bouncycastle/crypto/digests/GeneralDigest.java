@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.util.Memoable;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GeneralDigest implements ExtendedDigest, Memoable {
     public static final int BYTE_LENGTH = 64;
     public long byteCount;

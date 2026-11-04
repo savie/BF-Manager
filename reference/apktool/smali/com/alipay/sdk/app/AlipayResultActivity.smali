@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final a:Ll/ܰۧᩴ;
+.field public static final a:Ll/ܽ֫ۗ;
 
 
 # direct methods
@@ -12,11 +12,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
-    sput-object v0, Lcom/alipay/sdk/app/AlipayResultActivity;->a:Ll/ܰۧᩴ;
+    sput-object v0, Lcom/alipay/sdk/app/AlipayResultActivity;->a:Ll/ܽ֫ۗ;
 
     return-void
 .end method
@@ -36,9 +36,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/alipay/sdk/app/AlipayResultActivity;->a:Ll/ܰۧᩴ;
+    sget-object v0, Lcom/alipay/sdk/app/AlipayResultActivity;->a:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v0, p1}, Ll/ܰۧᩴ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/ܽ֫ۗ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

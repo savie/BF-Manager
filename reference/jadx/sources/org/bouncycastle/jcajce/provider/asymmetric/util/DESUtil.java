@@ -7,7 +7,7 @@ import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESUtil {
     public static final Set des;
 

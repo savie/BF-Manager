@@ -6,7 +6,7 @@
 # static fields
 .field public static final synthetic ۙ:I
 
-.field public static final ܰ:Ljava/util/regex/Pattern;
+.field public static final ᩷:Ljava/util/regex/Pattern;
 
 
 # direct methods
@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/S3HttpUtils;->ܰ:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/S3HttpUtils;->᩷:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -189,12 +189,12 @@
     const-string v0, "UTF-8"
 
     .line 76
-    invoke-static {p0, v0}, Ll/ܿۤᩴ;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/᩸۬᩹;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     .line 78
-    sget-object v0, Lcom/amazonaws/services/s3/internal/S3HttpUtils;->ܰ:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/amazonaws/services/s3/internal/S3HttpUtils;->᩷:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 

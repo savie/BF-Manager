@@ -4,20 +4,20 @@ package com.amazonaws.services.s3;
 public class S3ClientOptions {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f471 = false;
+    public boolean f461 = false;
 
     @Deprecated
     public S3ClientOptions() {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m455() {
-        return this.f471;
+    public final boolean m449() {
+        return this.f461;
     }
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m454(boolean z) {
-        this.f471 = z;
+    public final void m448(boolean z) {
+        this.f461 = z;
     }
 }

@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.bouncycastle.crypto.SecretWithEncapsulation;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SecretWithEncapsulationImpl implements SecretWithEncapsulation {
     public final byte[] cipher_text;
     public final AtomicBoolean hasBeenDestroyed = new AtomicBoolean(false);

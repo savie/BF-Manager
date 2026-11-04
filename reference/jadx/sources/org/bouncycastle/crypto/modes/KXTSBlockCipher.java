@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KXTSBlockCipher extends DefaultBufferedBlockCipher {
     public static final long RED_POLY_128 = 135;
     public static final long RED_POLY_256 = 1061;

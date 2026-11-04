@@ -1,12 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ܺ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: B99Q */
+/* JADX INFO: renamed from: l.֡ܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W8IC */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C0513 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20270 m2406(Enum[] enumArr) {
-        C13465.m32966(enumArr, "entries");
-        return new C16742(enumArr);
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || C0513.class != obj.getClass()) {
+            return false;
+        }
+        return Float.compare(0.0f, 0.0f) == 0;
+    }
+
+    public final int hashCode() {
+        return Float.floatToIntBits(0.0f) + 16337;
     }
 }

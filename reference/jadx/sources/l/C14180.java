@@ -1,19 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: S5XC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14180 extends C23352 {
-    @Override // l.C23352, l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4463(C4651 c4651) {
-        c4651.m12841(EnumC18182.VALUE_ARRAY.f58128);
-        super.mo4463(c4651);
-    }
+/* JADX INFO: renamed from: l.۬᩺ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6B2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14180 extends C24649 {
 
-    @Override // l.C23352, l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4462(int i) {
-        return super.mo4462(i + 1);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9730 f44838;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object m34468() {
+        return this.f44838;
     }
 }

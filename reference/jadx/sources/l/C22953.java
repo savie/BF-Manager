@@ -1,57 +1,30 @@
 package l;
 
-import java.util.Iterator;
-import java.util.Map;
-
-/* JADX INFO: renamed from: l.᩺ۧܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 067E */
-/* JADX INFO: loaded from: classes.dex */
-public class C22953 extends AbstractC10627 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Map f74624;
-
-    public C22953(Map map) {
-        map.getClass();
-        this.f74624 = map;
+/* JADX INFO: renamed from: l.᩸ܿۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C22953 extends AbstractC19969 implements InterfaceC2898 {
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1967(this);
     }
 
-    /* JADX INFO: renamed from: ܰ */
-    public Map mo36411() {
-        return this.f74624;
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.EMPTY_STATEMENT;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
-    public Iterator iterator() {
-        return new C4607(mo36411().entrySet().iterator());
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5890(this, obj);
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return mo36411().size();
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean isEmpty() {
-        return mo36411().isEmpty();
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        return mo36411().containsKey(obj);
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public boolean remove(Object obj) {
-        if (!contains(obj)) {
-            return false;
-        }
-        mo36411().remove(obj);
-        return true;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public void clear() {
-        mo36411().clear();
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68478;
     }
 }

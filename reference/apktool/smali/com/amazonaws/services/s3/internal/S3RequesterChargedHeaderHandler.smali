@@ -25,7 +25,7 @@
     check-cast p1, Lcom/amazonaws/services/s3/internal/S3RequesterChargedResult;
 
     .line 38
-    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p2
 

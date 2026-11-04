@@ -9,180 +9,180 @@ import java.io.Serializable;
 public abstract class AbstractPutObjectRequest extends AmazonWebServiceRequest implements Serializable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f523;
+    public CannedAccessControlList f513;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public String f524;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public ObjectMetadata f514;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public String f525;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public SSEAwsKeyManagementParams f515;
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public ObjectTagging f516;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public File f517;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public String f518;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public String f519;
 
     /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public ObjectTagging f526;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public ObjectMetadata f527;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public File f528;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public SSEAwsKeyManagementParams f529;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public CannedAccessControlList f530;
+    public String f520;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public transient InputStream f531;
+    public String f521;
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public String f532;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public transient InputStream f522;
 
     public AbstractPutObjectRequest(File file, String str, String str2) {
-        this.f523 = str;
-        this.f525 = str2;
-        this.f528 = file;
+        this.f521 = str;
+        this.f520 = str2;
+        this.f517 = file;
     }
 
     public AbstractPutObjectRequest(String str, String str2, InputStream inputStream, ObjectMetadata objectMetadata) {
-        this.f523 = str;
-        this.f525 = str2;
-        this.f531 = inputStream;
-        this.f527 = objectMetadata;
+        this.f521 = str;
+        this.f520 = str2;
+        this.f522 = inputStream;
+        this.f514 = objectMetadata;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m498() {
-        return this.f523;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m509() {
-        return this.f525;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final String m515() {
-        return this.f524;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo497(String str) {
-        this.f524 = str;
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m514(String str) {
-        this.f524 = str;
-    }
-
-    /* JADX INFO: renamed from: ᩷ܰ, reason: not valid java name and contains not printable characters */
-    public final File m516() {
-        return this.f528;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final ObjectMetadata m499() {
-        return this.f527;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m502(ObjectMetadata objectMetadata) {
-        this.f527 = objectMetadata;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo511(ObjectMetadata objectMetadata) {
-        this.f527 = objectMetadata;
-        return this;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m501() {
+        return this.f521;
     }
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final CannedAccessControlList m506() {
-        return this.f530;
+    public final String m499() {
+        return this.f520;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m501(CannedAccessControlList cannedAccessControlList) {
-        this.f530 = cannedAccessControlList;
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final String m504() {
+        return this.f518;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo510(CannedAccessControlList cannedAccessControlList) {
-        this.f530 = cannedAccessControlList;
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final InputStream m518() {
-        return this.f531;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo500(InputStream inputStream) {
-        this.f531 = inputStream;
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m505(String str) {
-        this.f532 = str;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String m507() {
-        return this.f532;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo508(String str) {
-        this.f532 = str;
-        return this;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m511(String str) {
+        this.f518 = str;
     }
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final ObjectTagging m517() {
-        return this.f526;
+    public AbstractPutObjectRequest mo512(String str) {
+        this.f518 = str;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ۘ᩷, reason: not valid java name and contains not printable characters */
+    public final File m492() {
+        return this.f517;
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final ObjectMetadata m491() {
+        return this.f514;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m503(ObjectTagging objectTagging) {
-        this.f526 = objectTagging;
+    public final void m495(ObjectMetadata objectMetadata) {
+        this.f514 = objectMetadata;
     }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final SSEAwsKeyManagementParams m519() {
-        return this.f529;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractPutObjectRequest mo508(ObjectMetadata objectMetadata) {
+        this.f514 = objectMetadata;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final CannedAccessControlList m506() {
+        return this.f513;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m504(SSEAwsKeyManagementParams sSEAwsKeyManagementParams) {
-        this.f529 = sSEAwsKeyManagementParams;
+    public final void m494(CannedAccessControlList cannedAccessControlList) {
+        this.f513 = cannedAccessControlList;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractPutObjectRequest mo513(SSEAwsKeyManagementParams sSEAwsKeyManagementParams) {
-        this.f529 = sSEAwsKeyManagementParams;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractPutObjectRequest mo507(CannedAccessControlList cannedAccessControlList) {
+        this.f513 = cannedAccessControlList;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final InputStream m503() {
+        return this.f522;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public AbstractPutObjectRequest mo493(InputStream inputStream) {
+        this.f522 = inputStream;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m498(String str) {
+        this.f519 = str;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String m502() {
+        return this.f519;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public AbstractPutObjectRequest mo500(String str) {
+        this.f519 = str;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final ObjectTagging m505() {
+        return this.f516;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m496(ObjectTagging objectTagging) {
+        this.f516 = objectTagging;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final SSEAwsKeyManagementParams m513() {
+        return this.f515;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m497(SSEAwsKeyManagementParams sSEAwsKeyManagementParams) {
+        this.f515 = sSEAwsKeyManagementParams;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractPutObjectRequest mo510(SSEAwsKeyManagementParams sSEAwsKeyManagementParams) {
+        this.f515 = sSEAwsKeyManagementParams;
         return this;
     }
 
     @Override // com.amazonaws.AmazonWebServiceRequest
     /* JADX INFO: renamed from: clone */
-    public AbstractPutObjectRequest mo162clone() {
-        return (AbstractPutObjectRequest) super.mo162clone();
+    public AbstractPutObjectRequest mo156clone() {
+        return (AbstractPutObjectRequest) super.mo156clone();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractPutObjectRequest m512(PutObjectRequest putObjectRequest) {
-        m160(putObjectRequest);
-        ObjectMetadata objectMetadata = this.f527;
-        putObjectRequest.mo510(this.f530);
-        putObjectRequest.mo500(this.f531);
-        putObjectRequest.mo511(objectMetadata == null ? null : objectMetadata.m639clone());
-        putObjectRequest.mo508(this.f532);
-        putObjectRequest.mo497(this.f524);
-        putObjectRequest.mo513(this.f529);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractPutObjectRequest m509(PutObjectRequest putObjectRequest) {
+        m154(putObjectRequest);
+        ObjectMetadata objectMetadata = this.f514;
+        putObjectRequest.mo507(this.f513);
+        putObjectRequest.mo493(this.f522);
+        putObjectRequest.mo508(objectMetadata == null ? null : objectMetadata.m633clone());
+        putObjectRequest.mo500(this.f519);
+        putObjectRequest.mo512(this.f518);
+        putObjectRequest.mo510(this.f515);
         return putObjectRequest;
     }
 }

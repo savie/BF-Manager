@@ -8,7 +8,7 @@ import org.bouncycastle.math.ec.ECFieldElement;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DSTU4145PointEncoder {
     public static ECPoint decodePoint(ECCurve eCCurve, byte[] bArr) {
         ECFieldElement eCFieldElementMultiply;

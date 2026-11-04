@@ -1,44 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8A1P */
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.ܿۡۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 47LN */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18214 extends AbstractC14792 {
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        return 0;
+public final /* synthetic */ class C18214 implements Predicate {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f59467;
+
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        return 0;
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f59467) {
+            case 0:
+                break;
+            case 1:
+                break;
+        }
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 
-    public C18214(String str, InterfaceC10601 interfaceC10601) {
-        super(interfaceC10601, (byte) 8, str);
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        int i2 = i + 1;
-        bArr[i] = 4;
-        return (i2 + m35440(this.f48357, i2, bArr)) - i;
-    }
-
-    @Override // l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("SmbComQueryInformation[");
-        sb.append(super.toString());
-        sb.append(",filename=");
-        return new String(C22697.m50267(sb, this.f48357, "]"));
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f59467) {
+            case 0:
+                return true;
+            case 1:
+                return C12971.m32366((C12971) obj);
+            default:
+                return !(((AbstractC21654) obj) instanceof C20908);
+        }
     }
 }

@@ -1,52 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟᩶ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
+/* JADX INFO: renamed from: l.۟ۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: A9YZ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7700 extends C16167 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f25480;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public volatile long f25481;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f25482;
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ᩺ */
-    public final long mo3306() {
-        return this.f25481;
+public final class C7700 extends AbstractC3971 {
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo1722(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3301(long j) {
-        this.f25481 = j;
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo1723(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ֨ */
-    public final InterfaceC0769 mo3299() {
-        return this.f25482;
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1725(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3305(InterfaceC0769 interfaceC0769) {
-        this.f25482 = interfaceC0769;
+    public C7700(String str, InterfaceC5878 interfaceC5878) {
+        super(interfaceC5878, (byte) 0, str);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC0769 mo3300() {
-        return this.f25480;
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo1724(int i, byte[] bArr) {
+        int i2 = i + 1;
+        bArr[i] = 4;
+        return (i2 + m12758(this.f13608, i2, bArr)) - i;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3302(InterfaceC0769 interfaceC0769) {
-        this.f25480 = interfaceC0769;
+    @Override // l.AbstractC3971
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbComCreateDirectory[");
+        sb.append(super.toString());
+        sb.append(",directoryName=");
+        return new String(C8947.m23910(sb, this.f13608, "]"));
     }
 }

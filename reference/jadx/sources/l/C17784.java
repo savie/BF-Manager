@@ -1,68 +1,20 @@
 package l;
 
-import android.content.ContentProvider;
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.ParcelFileDescriptor;
-import org.chromium.support_lib_boundary.DropDataContentProviderBoundaryInterface;
-
-/* JADX INFO: renamed from: l.ᩳۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R71Y */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17784 extends ContentProvider {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public DropDataContentProviderBoundaryInterface f56392;
-
-    @Override // android.content.ContentProvider
-    public final boolean onCreate() {
-        return true;
+/* JADX INFO: renamed from: l.ܽᩴܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 65M6 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17784 extends AbstractC16292 {
+    public final String toString() {
+        return "return";
     }
 
-    @Override // android.content.ContentProvider
-    public final ParcelFileDescriptor openFile(Uri uri, String str) {
-        return m41369().openFile(this, uri);
+    public C17784() {
+        super(EnumC20768.RETURN_VOID);
     }
 
-    @Override // android.content.ContentProvider
-    public final Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
-        return m41369().query(uri, strArr, str, strArr2, str2);
-    }
-
-    @Override // android.content.ContentProvider
-    public final String getType(Uri uri) {
-        return m41369().getType(uri);
-    }
-
-    @Override // android.content.ContentProvider
-    public final Uri insert(Uri uri, ContentValues contentValues) {
-        throw new UnsupportedOperationException("Insert method is not supported.");
-    }
-
-    @Override // android.content.ContentProvider
-    public final int delete(Uri uri, String str, String[] strArr) {
-        throw new UnsupportedOperationException("delete method is not supported.");
-    }
-
-    @Override // android.content.ContentProvider
-    public final int update(Uri uri, ContentValues contentValues, String str, String[] strArr) {
-        throw new UnsupportedOperationException("update method is not supported.");
-    }
-
-    @Override // android.content.ContentProvider
-    public final Bundle call(String str, String str2, Bundle bundle) {
-        return m41369().call(str, str2, bundle);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private DropDataContentProviderBoundaryInterface m41369() {
-        if (this.f56392 == null) {
-            DropDataContentProviderBoundaryInterface dropDataProvider = C21352.m47879().getDropDataProvider();
-            this.f56392 = dropDataProvider;
-            dropDataProvider.onCreate();
-        }
-        return this.f56392;
+    @Override // l.AbstractC12563
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC12563 mo2797(C5194 c5194) {
+        return new C17784();
     }
 }

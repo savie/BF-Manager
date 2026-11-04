@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ASN1EncodableVector {
     public static final int DEFAULT_CAPACITY = 10;
     public static final ASN1Encodable[] EMPTY_ELEMENTS = new ASN1Encodable[0];

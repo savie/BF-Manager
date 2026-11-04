@@ -1,22 +1,38 @@
-.class public interface abstract Ll/᩻ۢۙ;
-.super Ljava/lang/Object;
-.source "D8SC"
+.class public final Ll/᩻ۢۙ;
+.super Ljava/lang/Exception;
+.source "E8QX"
 
 
-# static fields
-.field public static final ۨ:Ll/֡ۛۘ;
+# instance fields
+.field public final ܰ:I
+
+.field public final ܿ:Z
+
+.field public final ᩶:Ll/ܳ᩹ۙ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(ILl/ܳ᩹ۙ;Z)V
     .locals 1
 
-    .line 39
-    new-instance v0, Ll/֡ۛۘ;
+    const-string v0, "AudioTrack write failed: "
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-static {p1, v0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Ll/᩻ۢۙ;->ۨ:Ll/֡ۛۘ;
+    move-result-object v0
+
+    .line 339
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    .line 340
+    iput-boolean p3, p0, Ll/᩻ۢۙ;->ܿ:Z
+
+    .line 341
+    iput p1, p0, Ll/᩻ۢۙ;->ܰ:I
+
+    .line 342
+    iput-object p2, p0, Ll/᩻ۢۙ;->᩶:Ll/ܳ᩹ۙ;
 
     return-void
 .end method

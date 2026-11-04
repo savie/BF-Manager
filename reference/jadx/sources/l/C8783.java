@@ -1,19 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۡᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U5 */
+/* JADX INFO: renamed from: l.۠ܿۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6XI */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C8783 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C8077 f30203 = new C8077();
+    public final C9528 f28629;
 
-    static {
-        new C10504(C7681.f25444);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f28630;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C19366 m22855(InterfaceC18660 interfaceC18660, Object obj) {
-        return new C19366(interfaceC18660, obj);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f28631;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f28632;
+
+    public C8783(int i, C9528 c9528, int i2, int i3) {
+        this.f28631 = i;
+        this.f28629 = c9528;
+        this.f28632 = i2;
+        this.f28630 = i3;
     }
 }

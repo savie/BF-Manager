@@ -6,7 +6,7 @@
 # static fields
 .field public static final synthetic ۙ:I
 
-.field public static final ܰ:Ljava/lang/Object;
+.field public static final ᩷:Ljava/lang/Object;
 
 
 # direct methods

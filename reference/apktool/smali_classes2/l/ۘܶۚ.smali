@@ -1,25 +1,67 @@
 .class public final Ll/ۘܶۚ;
 .super Ljava/lang/Object;
-.source "14T3"
+.source "G7AI"
 
 
 # instance fields
-.field public ۙ:Ljava/util/HashSet;
+.field public final ۙ:Ll/֨ܽۚ;
+
+.field public final ۤ:Ll/۠ܳۤ;
+
+.field public final ᩷:Ll/ۖܳۤ;
+
+.field public ᩸:Ll/۫ܶۚ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ll/֨ܽۚ;Ll/ۖܳۤ;Ll/۠ܳۤ;)V
+    .locals 0
 
-    .line 77
+    .line 1384
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
-    new-instance v0, Ljava/util/HashSet;
+    .line 1385
+    iput-object p1, p0, Ll/ۘܶۚ;->ۙ:Ll/֨ܽۚ;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    .line 1386
+    iput-object p2, p0, Ll/ۘܶۚ;->᩷:Ll/ۖܳۤ;
 
-    iput-object v0, p0, Ll/ۘܶۚ;->ۙ:Ljava/util/HashSet;
+    .line 1387
+    iput-object p3, p0, Ll/ۘܶۚ;->ۤ:Ll/۠ܳۤ;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final ۙ()Ll/۫ܶۚ;
+    .locals 3
+
+    .line 1394
+    iget-object v0, p0, Ll/ۘܶۚ;->᩸:Ll/۫ܶۚ;
+
+    if-nez v0, :cond_0
+
+    .line 1395
+    iget-object v0, p0, Ll/ۘܶۚ;->᩷:Ll/ۖܳۤ;
+
+    iget-object v1, p0, Ll/ۘܶۚ;->ۤ:Ll/۠ܳۤ;
+
+    iget-object v2, p0, Ll/ۘܶۚ;->ۙ:Ll/֨ܽۚ;
+
+    invoke-static {v2, v0, v1}, Ll/۟ܶۚ;->ۙ(Ll/֨ܽۚ;Ll/ۖܳۤ;Ll/۠ܳۤ;)Ll/۠ܳۤ;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/۟ܶۚ;->᩷(Ll/۠ܳۤ;)Ll/۫ܶۚ;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ۘܶۚ;->᩸:Ll/۫ܶۚ;
+
+    .line 1397
+    :cond_0
+    iget-object v0, p0, Ll/ۘܶۚ;->᩸:Ll/۫ܶۚ;
+
+    return-object v0
 .end method

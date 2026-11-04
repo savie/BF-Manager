@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.pkcs.KeyDerivationFunc;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PbkdMacIntegrityCheck extends ASN1Object {
     public final ASN1OctetString mac;
     public final AlgorithmIdentifier macAlgorithm;

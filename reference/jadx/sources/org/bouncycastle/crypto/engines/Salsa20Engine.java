@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C12441;
+import l.C12669;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -14,7 +14,7 @@ import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Salsa20Engine implements SkippingStreamCipher {
     public static final int DEFAULT_ROUNDS = 20;
     public static final int STATE_SIZE = 16;
@@ -423,7 +423,7 @@ public class Salsa20Engine implements SkippingStreamCipher {
             StringBuilder sb = new StringBuilder();
             sb.append(getAlgorithmName());
             sb.append(" requires exactly ");
-            throw new IllegalArgumentException(C12441.m30911(getNonceSize(), " bytes of IV", sb));
+            throw new IllegalArgumentException(C12669.m31437(getNonceSize(), " bytes of IV", sb));
         }
         CipherParameters parameters = parametersWithIV.getParameters();
         if (parameters == null) {

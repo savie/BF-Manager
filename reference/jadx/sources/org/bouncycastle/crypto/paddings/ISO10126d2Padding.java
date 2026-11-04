@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISO10126d2Padding implements BlockCipherPadding {
     public SecureRandom random;
 

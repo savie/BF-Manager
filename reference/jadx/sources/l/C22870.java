@@ -1,184 +1,48 @@
 package l;
 
-import android.text.TextUtils;
-import java.util.Set;
-import java.util.regex.Pattern;
+import android.content.Context;
+import android.util.AttributeSet;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩺۠ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T8QU */
+/* JADX INFO: renamed from: l.᩸ܳۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y16E */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22870 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f74390;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f74391;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f74392;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final Pattern f74388 = Pattern.compile("\\s+");
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final AbstractC23844 f74385 = AbstractC23844.of((Object) "auto", (Object) "none");
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC23844 f74387 = AbstractC23844.m52567("dot", "sesame", "circle");
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC23844 f74386 = AbstractC23844.of((Object) "filled", (Object) "open");
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final AbstractC23844 f74389 = AbstractC23844.m52567("after", "before", "outside");
-
-    public C22870(int i, int i2, int i3) {
-        this.f74392 = i;
-        this.f74390 = i2;
-        this.f74391 = i3;
+public class C22870 extends AbstractC11813 {
+    public C22870(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+        m12575((InterfaceC24044) new C3755(this));
     }
 
-    /* JADX WARN: Code duplicated, block: B:25:0x006a  */
-    /* JADX WARN: Code duplicated, block: B:27:0x007d  */
-    /* JADX WARN: Code duplicated, block: B:33:0x008d  */
-    /* JADX WARN: Code duplicated, block: B:36:0x0098  */
-    /* JADX WARN: Code duplicated, block: B:44:0x00cb  */
-    /* JADX WARN: Code duplicated, block: B:50:0x00db  */
-    /* JADX WARN: Code duplicated, block: B:54:0x00f4  */
-    /* JADX WARN: Code duplicated, block: B:56:0x00f9  */
-    /* JADX WARN: Code duplicated, block: B:59:0x00ff  */
-    /* JADX WARN: Code duplicated, block: B:62:0x0109  */
-    /* JADX WARN: Code duplicated, block: B:64:0x0111  */
-    /* JADX WARN: Code duplicated, block: B:65:0x0113  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C22870 m50615(String str) {
-        int i;
-        AbstractC7804 abstractC7804M47671;
-        int i2;
-        AbstractC7804 abstractC7804M47672;
-        AbstractC7804 abstractC7804M47673;
-        String str2;
-        int iHashCode;
-        String str3;
-        int iHashCode2;
-        String str4;
-        int iHashCode3;
-        if (str == null) {
-            return null;
-        }
-        String strM46672 = C20733.m46672(str.trim());
-        if (strM46672.isEmpty()) {
-            return null;
-        }
-        AbstractC23844 abstractC23844M52571 = AbstractC23844.m52571(TextUtils.split(strM46672, f74388));
-        String str5 = (String) C16458.m38718(C21209.m47671((Set) f74389, abstractC23844M52571).iterator(), "outside");
-        int iHashCode4 = str5.hashCode();
-        int i3 = 1;
-        if (iHashCode4 != -1392885889) {
-            if (iHashCode4 != -1106037339) {
-                if (iHashCode4 == 92734940 && str5.equals("after")) {
-                    i = 2;
-                }
-            } else if (str5.equals("outside")) {
-                i = -2;
-            }
-            abstractC7804M47671 = C21209.m47671((Set) f74385, abstractC23844M52571);
-            i2 = -1;
-            if (!abstractC7804M47671.isEmpty()) {
-                str4 = (String) abstractC7804M47671.iterator().next();
-                iHashCode3 = str4.hashCode();
-                if (iHashCode3 != 3005871) {
-                    str4.equals("auto");
-                } else if (iHashCode3 == 3387192 && str4.equals("none")) {
-                    i2 = 0;
-                }
-                return new C22870(i2, 0, i);
-            }
-            abstractC7804M47672 = C21209.m47671((Set) f74386, abstractC23844M52571);
-            abstractC7804M47673 = C21209.m47671((Set) f74387, abstractC23844M52571);
-            if (!abstractC7804M47672.isEmpty() && abstractC7804M47673.isEmpty()) {
-                return new C22870(-1, 0, i);
-            }
-            str2 = (String) C16458.m38718(abstractC7804M47672.iterator(), "filled");
-            iHashCode = str2.hashCode();
-            if (iHashCode != -1274499742) {
-                int i4 = (iHashCode != 3417674 && str2.equals("open")) ? 2 : 1;
-                str3 = (String) C16458.m38718(abstractC7804M47673.iterator(), "circle");
-                iHashCode2 = str3.hashCode();
-                if (iHashCode2 != -1360216880) {
-                    str3.equals("circle");
-                } else if (iHashCode2 != -905816648) {
-                    if (iHashCode2 == 99657 && str3.equals("dot")) {
-                        i3 = 2;
-                    }
-                } else if (str3.equals("sesame")) {
-                    i3 = 3;
-                }
-                return new C22870(i3, i4, i);
-            }
-            str2.equals("filled");
-            str3 = (String) C16458.m38718(abstractC7804M47673.iterator(), "circle");
-            iHashCode2 = str3.hashCode();
-            if (iHashCode2 != -1360216880) {
-                str3.equals("circle");
-            } else if (iHashCode2 != -905816648) {
-                if (iHashCode2 == 99657) {
-                    i3 = 2;
-                }
-            } else if (str3.equals("sesame")) {
-                i3 = 3;
-            }
-            return new C22870(i3, i4, i);
-        }
-        str5.equals("before");
-        i = 1;
-        abstractC7804M47671 = C21209.m47671((Set) f74385, abstractC23844M52571);
-        i2 = -1;
-        if (!abstractC7804M47671.isEmpty()) {
-            str4 = (String) abstractC7804M47671.iterator().next();
-            iHashCode3 = str4.hashCode();
-            if (iHashCode3 != 3005871) {
-                str4.equals("auto");
-            } else if (iHashCode3 == 3387192) {
-                i2 = 0;
-            }
-            return new C22870(i2, 0, i);
-        }
-        abstractC7804M47672 = C21209.m47671((Set) f74386, abstractC23844M52571);
-        abstractC7804M47673 = C21209.m47671((Set) f74387, abstractC23844M52571);
-        if (!abstractC7804M47672.isEmpty()) {
-        }
-        str2 = (String) C16458.m38718(abstractC7804M47672.iterator(), "filled");
-        iHashCode = str2.hashCode();
-        if (iHashCode != -1274499742) {
-            if (iHashCode != 3417674) {
-            }
-            str3 = (String) C16458.m38718(abstractC7804M47673.iterator(), "circle");
-            iHashCode2 = str3.hashCode();
-            if (iHashCode2 != -1360216880) {
-                str3.equals("circle");
-            } else if (iHashCode2 != -905816648) {
-                if (iHashCode2 == 99657) {
-                    i3 = 2;
-                }
-            } else if (str3.equals("sesame")) {
-                i3 = 3;
-            }
-            return new C22870(i3, i4, i);
-        }
-        str2.equals("filled");
-        str3 = (String) C16458.m38718(abstractC7804M47673.iterator(), "circle");
-        iHashCode2 = str3.hashCode();
-        if (iHashCode2 != -1360216880) {
-            str3.equals("circle");
-        } else if (iHashCode2 != -905816648) {
-            if (iHashCode2 == 99657) {
-                i3 = 2;
-            }
-        } else if (str3.equals("sesame")) {
-            i3 = 3;
-        }
-        return new C22870(i3, i4, i);
+    public C22870(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        m12575((InterfaceC24044) new C3755(this));
+    }
+
+    public C22870(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        m12575((InterfaceC24044) new C3755(this));
+    }
+
+    public C22870(Context context) {
+        super(context);
+        m12575((InterfaceC24044) new C3755(this));
+    }
+
+    @Override // l.AbstractC11813
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        C16434 c16434 = new C16434(abstractActivityC17204, null);
+        c16434.setMax(22);
+        c16434.setPadding(c16434.getPaddingLeft(), C6907.m19160(20.0f) + c16434.getPaddingTop(), c16434.getPaddingRight(), c16434.getPaddingBottom());
+        c16434.setProgress(m29658().getInt(m12557(), 12) - 6);
+        String str = abstractActivityC17204.getString(R.string.MT_Protector) + " (";
+        C2361 c2361BuildDialog = abstractActivityC17204.buildDialog();
+        StringBuilder sbM27333 = C10732.m27333(str);
+        sbM27333.append(c16434.getProgress() + 6);
+        sbM27333.append("dp)");
+        c2361BuildDialog.m8024(sbM27333.toString());
+        c2361BuildDialog.m8005(c16434);
+        c2361BuildDialog.m8026(R.string.MT_Protector, null);
+        c16434.setOnSeekBarChangeListener(new C10935(this, c2361BuildDialog.m8016(), str));
     }
 }

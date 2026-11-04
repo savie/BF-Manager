@@ -1,48 +1,28 @@
 package l;
 
-import java.util.List;
-import java.util.RandomAccess;
+import com.umeng.analytics.pro.am;
+import java.util.Arrays;
+import java.util.Collection;
 
-/* JADX INFO: renamed from: l.ܿ۟۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 79A7 */
+/* JADX INFO: renamed from: l.ܺ᩻᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: P904 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17199 extends AbstractC5910 implements RandomAccess {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final AbstractC5910 f54840;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f54841;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f54842;
-
-    public C17199(AbstractC5910 abstractC5910, int i, int i2) {
-        this.f54840 = abstractC5910;
-        this.f54842 = i;
-        C0265.m1765(i, i2, abstractC5910.mo39302());
-        this.f54841 = i2 - i;
-    }
-
-    @Override // l.AbstractC20022
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo39302() {
-        return this.f54841;
-    }
-
-    @Override // l.AbstractC5910, java.util.List
-    public final List subList(int i, int i2) {
-        C0265.m1765(i, i2, this.f54841);
-        int i3 = this.f54842;
-        return new C17199(this.f54840, i + i3, i3 + i2);
-    }
-
-    @Override // java.util.List
-    public final Object get(int i) {
-        int i2 = this.f54841;
-        if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(C2271.m6967("index: ", i, i2, ", size: "));
+public final class C17199 extends AbstractC17376 {
+    @Override // l.AbstractC17376
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo12252(InterfaceC20029 interfaceC20029, AbstractC11528 abstractC11528, InterfaceC13864 interfaceC13864) {
+        if (interfaceC13864.mo14577()) {
+            AbstractC17376.m40819(interfaceC20029, abstractC11528, interfaceC13864.mo14574());
         }
-        return this.f54840.get(this.f54842 + i);
+        C20775 c20775Builder = interfaceC20029.builder();
+        C10420 c10420Mo7360 = interfaceC20029.mo7360();
+        InterfaceC16299 interfaceC16299Mo15471 = c10420Mo7360.m26736().mo15471(C13592.class);
+        C20775.m47526(c20775Builder, interfaceC16299Mo15471 == null ? null : interfaceC16299Mo15471.mo6845(c10420Mo7360, interfaceC20029.mo7334()), interfaceC13864.start(), interfaceC13864.end());
+    }
+
+    @Override // l.AbstractC17376
+    /* JADX INFO: renamed from: ۙ */
+    public final Collection mo12251() {
+        return Arrays.asList(am.aB, "del");
     }
 }

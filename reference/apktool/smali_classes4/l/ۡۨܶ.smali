@@ -1,44 +1,32 @@
 .class public final Ll/ۡۨܶ;
-.super Ll/ܶᩴܶ;
-.source "DBGI"
+.super Ljava/lang/Object;
+.source "W9J6"
+
+# interfaces
+.implements Ll/ۖۨܶ;
 
 
 # virtual methods
-.method public final ۚ(I)Ll/᩵ۨܶ;
-    .locals 2
+.method public final ۙ(J)Z
+    .locals 3
 
-    .line 55
-    invoke-virtual {p0, p1}, Ll/ܶᩴܶ;->ۖ(I)I
+    .line 24
+    sget-object v0, Ll/᩵֫ܶ;->᩶᩷:Ll/᩵֫ܶ;
 
-    move-result v0
+    invoke-virtual {v0}, Ll/᩵֫ܶ;->getValue()J
 
-    if-ltz v0, :cond_0
+    move-result-wide v0
 
-    .line 45
-    invoke-virtual {p0, v0}, Ll/ۚᩴܶ;->ۙ(I)Ljava/lang/Object;
+    cmp-long v2, p1, v0
 
-    move-result-object p1
+    if-nez v2, :cond_0
 
-    check-cast p1, Ll/᩵ۨܶ;
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
 
-    .line 58
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 p1, 0x0
 
-    .line 59
-    invoke-static {p1}, Ll/᩹ᩴܶ;->ۨ(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "no such label: "
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p1
 .end method

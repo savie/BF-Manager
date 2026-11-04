@@ -1,133 +1,171 @@
 package l;
 
-import java.io.UnsupportedEncodingException;
-import java.security.GeneralSecurityException;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.view.View;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ܽᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: H9VO */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16803 extends AbstractC11264 {
+/* JADX INFO: renamed from: l.ܺۧ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: N3Y7 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16803 extends Drawable {
 
-    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
-    public C9853 f53799;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f54218;
 
-    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
-    public byte[] f53800;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f54219;
 
-    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
-    public String f53801;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public long f54220;
 
-    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
-    public int f53802;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public ColorFilter f54221;
 
-    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC19067 f53803;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public View f54222;
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f54223;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f54224;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public Drawable f54225;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public float f54226;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public Drawable f54227;
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getOpacity() {
+        return -3;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
+    public C16803(View view) {
+        Drawable drawableM2186 = C0385.m2186(view.getContext(), R.drawable.MT_Protector);
+        C17359.requireNonNull(drawableM2186);
+        Drawable drawableM2187 = C0385.m2186(view.getContext(), R.drawable.MT_Protector);
+        C17359.requireNonNull(drawableM2187);
+        this.f54219 = 255;
+        this.f54226 = 1.0f;
+        this.f54218 = 0;
+        this.f54222 = view;
+        this.f54227 = drawableM2186;
+        this.f54225 = drawableM2187;
+        this.f54223 = Math.max(drawableM2186.getIntrinsicWidth(), drawableM2187.getIntrinsicWidth());
+        this.f54224 = Math.max(drawableM2186.getIntrinsicHeight(), drawableM2187.getIntrinsicHeight());
     }
 
-    public C16803(InterfaceC19067 interfaceC19067, C9853 c9853, String str, String str2, AbstractC14792 abstractC14792) {
-        super(interfaceC19067.mo29449(), (byte) 117, abstractC14792);
-        this.f53803 = interfaceC19067;
-        this.f53799 = c9853;
-        this.f48357 = str;
-        this.f53801 = str2;
+    @Override // android.graphics.drawable.Drawable
+    public final void onBoundsChange(Rect rect) {
+        this.f54227.setBounds(rect);
+        this.f54225.setBounds(rect);
     }
 
-    /* JADX WARN: Code duplicated, block: B:25:0x007b  */
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        C9853 c9853 = this.f53799;
-        if (c9853.f33648 == 0) {
-            InterfaceC19067 interfaceC19067 = this.f53803;
-            if (interfaceC19067.mo13093() instanceof C18652) {
-                C18652 c18652 = (C18652) interfaceC19067.mo13093();
-                if ((c18652 instanceof C21474) && !((C21474) c18652).m48092() && c18652.getPassword().isEmpty()) {
-                    this.f53802 = 1;
-                } else if (c9853.f33646) {
-                    try {
-                        byte[] bArrM43143 = c18652.m43143(interfaceC19067, c9853.f33652);
-                        this.f53800 = bArrM43143;
-                        this.f53802 = bArrM43143.length;
-                    } catch (GeneralSecurityException e) {
-                        throw new C17655("Failed to encrypt password", e);
-                    }
-                } else {
-                    if (((C9895) interfaceC19067.mo29449()).m25081()) {
-                        throw new C17655("Plain text passwords are disabled");
-                    }
-                    this.f53800 = new byte[(c18652.getPassword().length() + 1) * 2];
-                    this.f53802 = m35440(c18652.getPassword(), 0, this.f53800);
-                }
+    @Override // android.graphics.drawable.Drawable
+    public final void draw(Canvas canvas) {
+        float f = this.f54226 * 255.0f;
+        int i = (int) f;
+        int i2 = (int) (f * 0.4f);
+        int i3 = this.f54218;
+        Drawable drawable = this.f54225;
+        Drawable drawable2 = this.f54227;
+        boolean z = false;
+        if (i3 == 0) {
+            drawable2.setAlpha(i);
+            drawable.setAlpha(i2);
+        } else if (i3 == 1) {
+            int iCurrentTimeMillis = (int) (System.currentTimeMillis() - this.f54220);
+            if (iCurrentTimeMillis < 0 || iCurrentTimeMillis >= 200) {
+                this.f54218 = 0;
+                drawable2.setAlpha(i);
+                drawable.setAlpha(i2);
             } else {
-                this.f53802 = 1;
+                int i4 = (int) ((iCurrentTimeMillis / 200.0f) * (i - i2));
+                drawable2.setAlpha(i2 + i4);
+                drawable.setAlpha(i - i4);
+                z = true;
+            }
+        } else if (i3 == 2) {
+            drawable2.setAlpha(i2);
+            drawable.setAlpha(i);
+        } else if (i3 == 3) {
+            int iCurrentTimeMillis2 = (int) (System.currentTimeMillis() - this.f54220);
+            if (iCurrentTimeMillis2 < 0 || iCurrentTimeMillis2 >= 200) {
+                this.f54218 = 2;
+                drawable2.setAlpha(i2);
+                drawable.setAlpha(i);
+            } else {
+                int i5 = (int) ((iCurrentTimeMillis2 / 200.0f) * (i - i2));
+                drawable2.setAlpha(i - i5);
+                drawable.setAlpha(i2 + i5);
+                z = true;
+            }
+        }
+        drawable2.draw(canvas);
+        drawable.draw(canvas);
+        if (z) {
+            this.f54222.invalidate();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m39696(boolean z) {
+        if (z) {
+            int i = this.f54218;
+            if (i == 0 || i == 1) {
+                return;
+            } else {
+                this.f54218 = 1;
             }
         } else {
-            this.f53802 = 1;
-        }
-        bArr[i] = 0;
-        bArr[i + 1] = 0;
-        C4850.m13546(this.f53802, i + 2, bArr);
-        return 4;
-    }
-
-    /* JADX WARN: Code duplicated, block: B:14:0x0040  */
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        int i2;
-        String str = this.f53801;
-        if (this.f53799.f33648 == 0) {
-            InterfaceC19067 interfaceC19067 = this.f53803;
-            if (interfaceC19067.mo13093() instanceof C18652) {
-                C18652 c18652 = (C18652) interfaceC19067.mo13093();
-                if ((c18652 instanceof C21474) && !((C21474) c18652).m48092() && c18652.getPassword().isEmpty()) {
-                    i2 = i + 1;
-                    bArr[i] = 0;
-                } else {
-                    System.arraycopy(this.f53800, 0, bArr, i, this.f53802);
-                    i2 = this.f53802 + i;
-                }
+            int i2 = this.f54218;
+            if (i2 == 2 || i2 == 3) {
+                return;
             } else {
-                i2 = i + 1;
-                bArr[i] = 0;
+                this.f54218 = 3;
             }
-        } else {
-            i2 = i + 1;
-            bArr[i] = 0;
         }
-        int iM35440 = i2 + m35440(this.f48357, i2, bArr);
-        try {
-            System.arraycopy(str.getBytes("ASCII"), 0, bArr, iM35440, str.length());
-            int length = str.length() + iM35440;
-            bArr[length] = 0;
-            return (length + 1) - i;
-        } catch (UnsupportedEncodingException unused) {
-            return 0;
-        }
+        this.f54220 = System.currentTimeMillis();
+        this.f54222.invalidate();
     }
 
-    @Override // l.AbstractC11264, l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("SmbComTreeConnectAndX[");
-        sb.append(super.toString());
-        sb.append(",disconnectTid=false,passwordLength=");
-        sb.append(this.f53802);
-        sb.append(",password=");
-        sb.append(C5993.m16281(this.f53800, this.f53802, 0));
-        sb.append(",path=");
-        sb.append(this.f48357);
-        sb.append(",service=");
-        return new String(C22697.m50267(sb, this.f53801, "]"));
+    @Override // android.graphics.drawable.Drawable
+    public final void setAlpha(int i) {
+        this.f54219 = i;
+        this.f54226 = i / 255.0f;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getAlpha() {
+        return this.f54219;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setColorFilter(ColorFilter colorFilter) {
+        this.f54221 = colorFilter;
+        this.f54227.setColorFilter(colorFilter);
+        this.f54225.setColorFilter(colorFilter);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final ColorFilter getColorFilter() {
+        return this.f54221;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getIntrinsicWidth() {
+        return this.f54223;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getIntrinsicHeight() {
+        return this.f54224;
     }
 }

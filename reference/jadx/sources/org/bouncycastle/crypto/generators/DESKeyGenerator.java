@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.KeyGenerationParameters;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.DESParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESKeyGenerator extends CipherKeyGenerator {
     @Override // org.bouncycastle.crypto.CipherKeyGenerator
     public byte[] generateKey() {

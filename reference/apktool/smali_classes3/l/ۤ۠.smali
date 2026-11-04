@@ -1,553 +1,435 @@
-.class public Ll/ۤ۠;
+.class public final Ll/ۤ۠;
 .super Ljava/lang/Object;
-.source "Q57Q"
+.source "95QI"
+
+
+# static fields
+.field public static final ᩴ:Ljava/util/ArrayList;
+
+.field public static final synthetic ᩸:I
 
 
 # instance fields
-.field public ۖ:I
+.field public ۙ:Landroid/util/SparseArray;
 
-.field public ۙ:I
+.field public ۤ:Ljava/util/WeakHashMap;
 
-.field public ۚ:I
-
-.field public ۨ:I
-
-.field public final ܰ:Ljava/util/LinkedHashMap;
+.field public ᩷:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 51
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4988
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-lez p1, :cond_0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 55
-    iput p1, p0, Ll/ۤ۠;->ۨ:I
-
-    .line 56
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    const/high16 v0, 0x3f400000    # 0.75f
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v2, v0, v1}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
-
-    iput-object p1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
+    sput-object v0, Ll/ۤ۠;->ᩴ:Ljava/util/ArrayList;
 
     return-void
-
-    .line 53
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "maxSize <= 0"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method private ۨ(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    .line 259
-    invoke-virtual {p0, p1, p2}, Ll/ۤ۠;->ܰ(Ljava/lang/Object;Ljava/lang/Object;)I
+    .line 4984
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-ltz v0, :cond_0
+    .line 4992
+    iput-object v0, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
+
+    .line 4997
+    iput-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    .line 5003
+    iput-object v0, p0, Ll/ۤ۠;->᩷:Ljava/lang/ref/WeakReference;
+
+    return-void
+.end method
+
+.method public static ۤ(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    .locals 2
+
+    const p1, 0x7f0a0605
+
+    .line 5103
+    invoke-virtual {p0, p1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/ArrayList;
+
+    if-eqz p0, :cond_1
+
+    .line 5105
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    sub-int/2addr p1, v0
+
+    :goto_0
+    if-ltz p1, :cond_1
+
+    .line 5106
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩷۠;
+
+    invoke-interface {v1}, Ll/᩷۠;->ۙ()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     return v0
 
-    .line 261
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    add-int/lit8 p1, p1, -0x1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v2, "Negative size: "
+    :cond_1
+    const/4 p0, 0x0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return p0
+.end method
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method private ᩷(Landroid/view/View;Landroid/view/KeyEvent;)Landroid/view/View;
+    .locals 3
 
-    const-string p1, "="
+    .line 5042
+    iget-object v0, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->containsKey(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    throw v0
+    .line 5045
+    :cond_0
+    instance-of v0, p1, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_2
+
+    .line 5046
+    move-object v0, p1
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    .line 5048
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    :cond_1
+    add-int/lit8 v1, v1, -0x1
+
+    if-ltz v1, :cond_2
+
+    .line 5049
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 5050
+    invoke-direct {p0, v2, p2}, Ll/ۤ۠;->᩷(Landroid/view/View;Landroid/view/KeyEvent;)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    return-object v2
+
+    .line 5056
+    :cond_2
+    invoke-static {p1, p2}, Ll/ۤ۠;->ۤ(Landroid/view/View;Landroid/view/KeyEvent;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized toString()Ljava/lang/String;
-    .locals 7
-
-    const-string v1, "LruCache[maxSize="
-
-    move-object v0, p0
-
-    .line 3
-    monitor-enter v0
-
-    .line 348
-    :try_start_0
-    iget v2, p0, Ll/ۤ۠;->ۙ:I
-
-    iget v3, p0, Ll/ۤ۠;->ۖ:I
-
-    add-int/2addr v3, v2
-
-    if-eqz v3, :cond_0
-
-    mul-int/lit8 v2, v2, 0x64
-
-    .line 349
-    div-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 350
-    :goto_0
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    iget v3, p0, Ll/ۤ۠;->ۨ:I
-
-    .line 351
-    iget v4, p0, Ll/ۤ۠;->ۙ:I
-
-    iget v5, p0, Ll/ۤ۠;->ۖ:I
-
-    .line 350
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",hits="
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",misses="
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",hitRate="
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "%]"
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final ۙ(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    if-eqz p1, :cond_1
-
-    move-object v0, p0
-
-    .line 88
-    monitor-enter v0
-
-    .line 89
-    :try_start_0
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 91
-    iget v1, p0, Ll/ۤ۠;->ۙ:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Ll/ۤ۠;->ۙ:I
-
-    .line 92
-    monitor-exit v0
-
-    return-object p1
-
-    .line 94
-    :cond_0
-    iget p1, p0, Ll/ۤ۠;->ۖ:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Ll/ۤ۠;->ۖ:I
-
-    .line 95
-    monitor-exit v0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    .line 84
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "key == null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final ۙ(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_1
-
-    move-object v0, p0
-
-    .line 143
-    monitor-enter v0
-
-    .line 145
-    :try_start_0
-    iget v1, p0, Ll/ۤ۠;->ۚ:I
-
-    invoke-direct {p0, p1, p2}, Ll/ۤ۠;->ۨ(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Ll/ۤ۠;->ۚ:I
-
-    .line 146
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, p1, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    .line 148
-    iget v1, p0, Ll/ۤ۠;->ۚ:I
-
-    invoke-direct {p0, p1, p2}, Ll/ۤ۠;->ۨ(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    sub-int/2addr v1, p1
-
-    iput v1, p0, Ll/ۤ۠;->ۚ:I
-
-    .line 150
-    :cond_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 156
-    iget p1, p0, Ll/ۤ۠;->ۨ:I
-
-    invoke-virtual {p0, p1}, Ll/ۤ۠;->ۙ(I)V
-
-    return-object p2
-
-    :catchall_0
-    move-exception p1
-
-    .line 150
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    .line 139
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "key == null || value == null"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final declared-synchronized ۙ()Ljava/util/LinkedHashMap;
-    .locals 3
-
-    move-object v0, p0
-
-    .line 1
-    monitor-enter v0
-
-    .line 344
-    :try_start_0
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    iget-object v2, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1, v2}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final ۙ(I)V
+.method public final ۙ(Landroid/view/KeyEvent;)Z
     .locals 4
 
-    :goto_0
-    move-object v0, p0
+    .line 5068
+    iget-object v0, p0, Ll/ۤ۠;->᩷:Ljava/lang/ref/WeakReference;
 
-    .line 171
-    monitor-enter v0
+    if-eqz v0, :cond_0
 
-    .line 172
-    :try_start_0
-    iget v1, p0, Ll/ۤ۠;->ۚ:I
+    .line 5069
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    if-ltz v1, :cond_3
+    move-result-object v0
 
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, p0, Ll/ۤ۠;->ۚ:I
-
-    if-nez v1, :cond_3
-
-    .line 177
-    :cond_0
-    iget v1, p0, Ll/ۤ۠;->ۚ:I
-
-    if-le v1, p1, :cond_2
-
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
+    if-ne v0, p1, :cond_0
 
     goto :goto_1
 
-    .line 181
+    .line 5072
+    :cond_0
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ll/ۤ۠;->᩷:Ljava/lang/ref/WeakReference;
+
+    .line 5006
+    iget-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    if-nez v0, :cond_1
+
+    .line 5007
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    .line 5009
     :cond_1
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
 
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    .line 182
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    .line 183
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 184
-    iget-object v3, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3, v2}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 185
-    iget v3, p0, Ll/ۤ۠;->ۚ:I
-
-    invoke-direct {p0, v2, v1}, Ll/ۤ۠;->ۨ(Ljava/lang/Object;Ljava/lang/Object;)I
+    .line 5078
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
 
-    sub-int/2addr v3, v1
+    const/4 v2, 0x1
 
-    iput v3, p0, Ll/ۤ۠;->ۚ:I
+    if-ne v1, v2, :cond_2
 
-    .line 187
-    monitor-exit v0
+    .line 5079
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_2
+
+    .line 5081
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/ref/WeakReference;
+
+    .line 5082
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->removeAt(I)V
 
     goto :goto_0
 
-    .line 178
     :cond_2
-    :goto_1
-    monitor-exit v0
+    const/4 v3, 0x0
 
-    return-void
+    :goto_0
+    if-nez v3, :cond_3
 
-    .line 173
+    .line 5086
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Ljava/lang/ref/WeakReference;
+
     :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-eqz v3, :cond_5
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 5089
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Landroid/view/View;
 
-    move-result-object v2
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    .line 5090
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result-object v2
+    move-result v1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_4
 
-    const-string v2, ".sizeOf() is reporting inconsistent results!"
+    .line 5091
+    invoke-static {v0, p1}, Ll/ۤ۠;->ۤ(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_4
+    return v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catchall_0
-    move-exception p1
-
-    .line 187
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public ܰ(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    const/4 p1, 0x1
+    :cond_5
+    :goto_1
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final ܰ(Ljava/lang/Object;)V
-    .locals 3
+.method public final ۙ(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    .locals 7
 
-    if-eqz p1, :cond_1
+    .line 5023
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
-    move-object v0, p0
+    move-result v0
 
-    .line 205
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_6
+
+    .line 5141
+    iget-object v0, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
+
+    if-eqz v0, :cond_0
+
+    .line 5142
+    invoke-virtual {v0}, Ljava/util/WeakHashMap;->clear()V
+
+    .line 5144
+    :cond_0
+    sget-object v2, Ll/ۤ۠;->ᩴ:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    move-object v0, v2
+
+    .line 5147
     monitor-enter v0
 
-    .line 206
+    .line 5148
     :try_start_0
-    iget-object v1, p0, Ll/ۤ۠;->ܰ:Ljava/util/LinkedHashMap;
+    iget-object v3, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
 
-    invoke-virtual {v1, p1}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v3, :cond_2
 
-    move-result-object v1
+    .line 5149
+    new-instance v3, Ljava/util/WeakHashMap;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v3}, Ljava/util/WeakHashMap;-><init>()V
 
-    .line 208
-    iget v2, p0, Ll/ۤ۠;->ۚ:I
+    iput-object v3, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
 
-    invoke-direct {p0, p1, v1}, Ll/ۤ۠;->ۨ(Ljava/lang/Object;Ljava/lang/Object;)I
+    .line 5151
+    :cond_2
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result p1
+    move-result v2
 
-    sub-int/2addr v2, p1
+    sub-int/2addr v2, v1
 
-    iput v2, p0, Ll/ۤ۠;->ۚ:I
+    :goto_0
+    if-ltz v2, :cond_5
 
-    .line 210
-    :cond_0
+    .line 5152
+    sget-object v3, Ll/ۤ۠;->ᩴ:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/ref/WeakReference;
+
+    .line 5153
+    invoke-virtual {v4}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    if-nez v4, :cond_3
+
+    .line 5155
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    goto :goto_2
+
+    .line 5157
+    :cond_3
+    iget-object v3, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
+
+    sget-object v5, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5158
+    invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v3
+
+    .line 5159
+    :goto_1
+    instance-of v4, v3, Landroid/view/View;
+
+    if-eqz v4, :cond_4
+
+    .line 5160
+    iget-object v4, p0, Ll/ۤ۠;->ۤ:Ljava/util/WeakHashMap;
+
+    move-object v5, v3
+
+    check-cast v5, Landroid/view/View;
+
+    sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5161
+    invoke-interface {v3}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v3
+
+    goto :goto_1
+
+    :cond_4
+    :goto_2
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    .line 5165
+    :cond_5
     monitor-exit v0
 
-    return-void
+    goto :goto_3
 
     :catchall_0
     move-exception p1
@@ -558,13 +440,64 @@
 
     throw p1
 
-    .line 201
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    .line 5027
+    :cond_6
+    :goto_3
+    invoke-direct {p0, p1, p2}, Ll/ۤ۠;->᩷(Landroid/view/View;Landroid/view/KeyEvent;)Landroid/view/View;
 
-    const-string v0, "key == null"
+    move-result-object p1
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 5031
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
-    throw p1
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    .line 5032
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result p2
+
+    if-eqz p1, :cond_8
+
+    .line 5033
+    invoke-static {p2}, Landroid/view/KeyEvent;->isModifierKey(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    .line 5006
+    iget-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    if-nez v0, :cond_7
+
+    .line 5007
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    .line 5009
+    :cond_7
+    iget-object v0, p0, Ll/ۤ۠;->ۙ:Landroid/util/SparseArray;
+
+    .line 5034
+    new-instance v2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_8
+    if-eqz p1, :cond_9
+
+    return v1
+
+    :cond_9
+    const/4 p1, 0x0
+
+    return p1
 .end method

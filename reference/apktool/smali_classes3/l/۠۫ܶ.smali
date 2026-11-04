@@ -1,25 +1,29 @@
 .class public abstract Ll/۠۫ܶ;
 .super Ljava/lang/Object;
-.source "Z3GV"
+.source "N9JE"
+
+
+# instance fields
+.field public final ۙ:Ll/֫ܿ᩵;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/֫ܿ᩵;)V
     .locals 0
 
-    .line 255
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 26
+    iput-object p1, p0, Ll/۠۫ܶ;->ۙ:Ll/֫ܿ᩵;
 
     return-void
 .end method
 
-.method public static ۙ()Ll/۠۫ܶ;
-    .locals 1
 
-    .line 61
-    invoke-static {}, Ll/ᩴ۫ܶ;->ܰ()Ll/ᩴ۫ܶ;
+# virtual methods
+.method public abstract ۙ(Ll/ۙۚܶ;)I
+.end method
 
-    move-result-object v0
-
-    return-object v0
+.method public abstract ۙ(Ll/ۙۚܶ;Ll/֨۫ܶ;)V
 .end method

@@ -1,59 +1,60 @@
 package l;
 
-import java.util.AbstractCollection;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONValue;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+import org.bouncycastle.i18n.TextBundle;
 
-/* JADX INFO: renamed from: l.ۛۧ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: E4Y9 */
+/* JADX INFO: renamed from: l.ۛ֡ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6V6 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6022 extends AbstractC13639 implements InterfaceC22969 {
+public final class C6022 {
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f20584;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public String f20585;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f20586;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final JSONArray f20587 = JSON.array();
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final EnumC10297 f20488 = EnumC10297.f35054;
+    public final JSONArray f20583 = JSON.array();
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final AbstractCollection f20489;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f20581 = new ArrayList();
 
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۤ */
-    public final String mo1142() {
-        return mo5435().f35326;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f20582 = -1;
+
+    public C6022(int i) {
+        this.f20584 = i;
     }
 
-    /* JADX WARN: Type inference failed for: r1v0, types: [java.util.AbstractCollection, java.util.List] */
-    public C6022(ArrayList arrayList, int i) {
-        super(f20488);
-        if (arrayList == null) {
-            this.f20489 = AbstractC22433.of();
-            return;
-        }
-        this.f20489 = new ArrayList();
-        Iterator it = arrayList.iterator();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m17486(long j, String str) {
+        JSONArray jSONArray = this.f20583;
+        Iterator it = jSONArray.iterator();
         while (it.hasNext()) {
-            this.f20489.add(new C14490(this, i, (C5171) it.next()));
-            i++;
+            if (str.equals(((JSONValue) it.next()).asObject().getString("reason"))) {
+                return;
+            }
         }
+        jSONArray.add(JSON.object().add("reason", str).add("line", j));
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.util.AbstractCollection, java.util.List] */
-    @Override // l.InterfaceC5391
-    /* JADX INFO: renamed from: ܽ */
-    public final List mo14955() {
-        return this.f20489;
-    }
-
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.util.AbstractCollection, java.util.List] */
-    @Override // l.AbstractC3384, l.InterfaceC1594
-    /* JADX INFO: renamed from: ۡ */
-    public final int mo5436() {
-        return (this.f20489.size() * 2) + 4;
-    }
-
-    @Override // l.AbstractC3384
-    /* JADX INFO: renamed from: ۛ */
-    public final EnumC18057 mo2108() {
-        return f20488.f35328;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final JSONArray m17485() {
+        JSONArray jSONArrayArray = JSON.array();
+        for (C11987 c11987 : this.f20581) {
+            jSONArrayArray.add(JSON.object().add("startLine", c11987.f38622).add("startColumn", c11987.f38620).add(TextBundle.TEXT_ENTRY, c11987.f38621.toString()));
+        }
+        return jSONArrayArray;
     }
 }

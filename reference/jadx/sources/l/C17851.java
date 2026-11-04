@@ -1,68 +1,73 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳۚ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 165B */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17851 extends C18557 {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.HashMap;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public InterfaceC3739 f56538;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public InterfaceC12913 f56539;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C22085 f56540;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public InterfaceC12913 f56541;
-
-    @Override // l.C18557, l.InterfaceC19969
-    public final int getType() {
-        return 0;
-    }
-
-    @Override // l.C18557, l.AbstractC21379, l.InterfaceC19969
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean mo41440() {
-        return false;
-    }
-
-    @Override // l.C18557, l.InterfaceC19969
-    public final String getText() {
-        InterfaceC3739 interfaceC3739 = this.f56538;
-        InterfaceC12913 interfaceC12913 = this.f56539;
-        InterfaceC12913 interfaceC12914 = this.f56541;
-        if (interfaceC12914 != null) {
-            int iMo30180 = interfaceC12914.mo30180();
-            int iMo30181 = interfaceC12913.mo30180();
-            if (interfaceC12913.getType() == -1) {
-                iMo30181 = interfaceC3739.size();
+/* JADX INFO: renamed from: l.ܽ᩷ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 84GP */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17851 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static byte[] m41699(String str) throws IOException {
+        C24363 c24363M49093 = C21576.m49093();
+        C0496 c0496 = new C0496();
+        c0496.m2397(str);
+        C9444 c9444Execute = c24363M49093.m54450(c0496.m2389()).execute();
+        if (c9444Execute.m24819()) {
+            AbstractC8699 abstractC8699M24818 = c9444Execute.m24818();
+            if (abstractC8699M24818 == null) {
+                throw new IOException("Response body is null");
             }
-            return interfaceC3739.mo10948(iMo30180, iMo30181);
+            return abstractC8699M24818.m23393();
         }
-        if (!(interfaceC12914 instanceof InterfaceC19969)) {
-            return "<unknown>";
-        }
-        ((InterfaceC16441) interfaceC3739).getClass();
-        return "n/a";
+        throw new IOException("Response code: " + c9444Execute.m24820() + "\nMessage: " + c9444Execute.m24825());
     }
 
-    @Override // l.C18557
-    public final String toString() {
-        C22085 c22085 = this.f56540;
-        if (c22085 instanceof C13619) {
-            return C12441.m30911(((C13619) c22085).f11055, ">", new StringBuilder("<missing type: "));
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static HashMap m41700(String str) {
+        HashMap map = new HashMap();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new StringReader(str));
+            String strSubstring = null;
+            StringBuilder sb = null;
+            while (true) {
+                try {
+                    String line = bufferedReader.readLine();
+                    if (line == null) {
+                        break;
+                    }
+                    String strTrim = line.trim();
+                    if (strTrim.startsWith("[") && strTrim.endsWith("]")) {
+                        if (strSubstring != null) {
+                            map.put(strSubstring, sb.toString());
+                        }
+                        strSubstring = strTrim.substring(1, strTrim.length() - 1);
+                        sb = new StringBuilder();
+                    } else if (strSubstring != null) {
+                        if (sb.length() > 0) {
+                            sb.append('\n');
+                        }
+                        sb.append(line);
+                    }
+                } catch (Throwable th) {
+                    try {
+                        bufferedReader.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                    throw th;
+                }
+                return map;
+            }
+            if (strSubstring != null) {
+                map.put(strSubstring, sb.toString());
+            }
+            bufferedReader.close();
+            return map;
+        } catch (IOException unused) {
+            return map;
         }
-        if (c22085 instanceof C6562) {
-            return "<extraneous: " + ((C6562) c22085).f71539 + ", resync=" + getText() + ">";
-        }
-        if (c22085 instanceof C2951) {
-            return "<mismatched token: " + c22085.f71539 + ", resync=" + getText() + ">";
-        }
-        if (!(c22085 instanceof C11502)) {
-            return "<error: " + getText() + ">";
-        }
-        return "<unexpected: " + c22085.f71539 + ", resync=" + getText() + ">";
     }
 }

@@ -1,500 +1,524 @@
 .class public final Ll/۠ܰ;
 .super Ljava/lang/Object;
-.source "E5FU"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+.source "31AL"
 
 
 # instance fields
-.field public final ֡:J
+.field public ۙ:I
 
-.field public ֫:Landroid/media/session/PlaybackState;
-
-.field public final ۛ:Landroid/os/Bundle;
-
-.field public final ۢ:J
-
-.field public final ۧ:J
-
-.field public final ۫:I
-
-.field public final ܳ:I
-
-.field public final ܺ:J
-
-.field public ܽ:Ljava/util/ArrayList;
-
-.field public final ܿ:Ljava/lang/CharSequence;
-
-.field public final ᩶:J
-
-.field public final ᩻:F
+.field public ᩷:Landroid/util/SparseArray;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)V
+    .locals 5
 
-    .line 868
-    new-instance v0, Ll/ۜܰ;
-
-    .line 869
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 868
-    sput-object v0, Ll/۠ܰ;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IJJFJILjava/lang/CharSequence;JLjava/util/ArrayList;JLandroid/os/Bundle;)V
-    .locals 3
-
-    move-object v0, p0
-
-    .line 561
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move v1, p1
+    const/4 v0, -0x1
 
-    .line 562
-    iput v1, v0, Ll/۠ܰ;->ܳ:I
+    .line 41
+    iput v0, p0, Ll/۠ܰ;->ۙ:I
 
-    move-wide v1, p2
+    .line 46
+    new-instance v0, Landroid/util/SparseArray;
 
-    .line 563
-    iput-wide v1, v0, Ll/۠ܰ;->ۧ:J
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    move-wide v1, p4
+    iput-object v0, p0, Ll/۠ܰ;->᩷:Landroid/util/SparseArray;
 
-    .line 564
-    iput-wide v1, v0, Ll/۠ܰ;->֡:J
+    .line 47
+    new-instance v0, Landroid/util/SparseArray;
 
-    move v1, p6
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 565
-    iput v1, v0, Ll/۠ܰ;->᩻:F
+    .line 70
+    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
-    move-wide v1, p7
+    move-result-object v0
 
-    .line 566
-    iput-wide v1, v0, Ll/۠ܰ;->ܺ:J
+    .line 71
+    sget-object v1, Ll/֨ܰ;->᩶:[I
 
-    move v1, p9
+    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    .line 567
-    iput v1, v0, Ll/۠ܰ;->۫:I
+    move-result-object v0
 
-    move-object v1, p10
+    .line 72
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->getIndexCount()I
 
-    .line 568
-    iput-object v1, v0, Ll/۠ܰ;->ܿ:Ljava/lang/CharSequence;
+    move-result v1
 
-    move-wide v1, p11
+    const/4 v2, 0x0
 
-    .line 569
-    iput-wide v1, v0, Ll/۠ܰ;->ۢ:J
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    .line 570
-    new-instance v1, Ljava/util/ArrayList;
+    .line 75
+    invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getIndex(I)I
 
-    move-object/from16 v2, p13
+    move-result v3
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    if-nez v3, :cond_0
 
-    iput-object v1, v0, Ll/۠ܰ;->ܽ:Ljava/util/ArrayList;
+    .line 77
+    iget v4, p0, Ll/۠ܰ;->ۙ:I
 
-    move-wide/from16 v1, p14
+    invoke-virtual {v0, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    .line 571
-    iput-wide v1, v0, Ll/۠ܰ;->᩶:J
+    move-result v3
 
-    move-object/from16 v1, p16
+    iput v3, p0, Ll/۠ܰ;->ۙ:I
 
-    .line 572
-    iput-object v1, v0, Ll/۠ܰ;->ۛ:Landroid/os/Bundle;
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    .line 80
+    :cond_1
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 575
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 87
+    :try_start_0
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
-    .line 576
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x0
+
+    :goto_1
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_6
+
+    if-eqz v0, :cond_4
+
+    const/4 v2, 0x2
+
+    const-string v3, "StateSet"
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_2
+
+    goto :goto_2
+
+    .line 119
+    :cond_2
+    :try_start_1
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iput v0, p0, Ll/۠ܰ;->ܳ:I
+    if-eqz v0, :cond_5
 
-    .line 577
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    goto :goto_3
 
-    move-result-wide v0
+    .line 96
+    :cond_3
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    iput-wide v0, p0, Ll/۠ܰ;->ۧ:J
+    move-result-object v0
 
-    .line 578
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    .line 97
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_2
+
+    :sswitch_0
+    const-string v2, "Variant"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iput v0, p0, Ll/۠ܰ;->᩻:F
+    if-eqz v0, :cond_5
 
-    .line 579
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    .line 107
+    new-instance v0, Ll/ۖܰ;
 
-    move-result-wide v0
+    invoke-direct {v0, p1, p2}, Ll/ۖܰ;-><init>(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)V
 
-    iput-wide v0, p0, Ll/۠ܰ;->ۢ:J
+    if-eqz v1, :cond_5
 
-    .line 580
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    .line 274
+    iget-object v2, v1, Ll/ۡܰ;->ۤ:Ljava/util/ArrayList;
 
-    move-result-wide v0
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput-wide v0, p0, Ll/۠ܰ;->֡:J
+    goto :goto_2
 
-    .line 581
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    .line 97
+    :sswitch_1
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-wide v0
+    goto :goto_2
 
-    iput-wide v0, p0, Ll/۠ܰ;->ܺ:J
+    :sswitch_2
+    const-string v2, "LayoutDescription"
 
-    .line 582
-    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    goto :goto_2
 
-    move-result-object v0
+    :sswitch_3
+    const-string v2, "State"
 
-    check-cast v0, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Ll/۠ܰ;->ܿ:Ljava/lang/CharSequence;
+    move-result v0
 
-    .line 583
-    sget-object v0, Ll/ᩴܰ;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-eqz v0, :cond_5
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+    .line 103
+    new-instance v0, Ll/ۡܰ;
 
-    move-result-object v0
+    invoke-direct {v0, p1, p2}, Ll/ۡܰ;-><init>(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)V
 
-    iput-object v0, p0, Ll/۠ܰ;->ܽ:Ljava/util/ArrayList;
+    .line 104
+    iget-object v1, p0, Ll/۠ܰ;->᩷:Landroid/util/SparseArray;
 
-    .line 584
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    iget v2, v0, Ll/ۡܰ;->᩷:I
 
-    move-result-wide v0
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    iput-wide v0, p0, Ll/۠ܰ;->᩶:J
+    move-object v1, v0
 
-    .line 585
-    const-class v0, Ll/֨ܰ;
+    goto :goto_2
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    .line 93
+    :cond_4
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    .line 89
+    :cond_5
+    :goto_2
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
+    move-result v0
+    :try_end_1
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result-object v0
+    goto :goto_1
 
-    iput-object v0, p0, Ll/۠ܰ;->ۛ:Landroid/os/Bundle;
-
-    .line 587
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Ll/۠ܰ;->۫:I
-
+    :catch_0
+    :cond_6
+    :goto_3
     return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x4c7d471 -> :sswitch_3
+        0x4d92b252 -> :sswitch_2
+        0x526c4e31 -> :sswitch_1
+        0x7155a865 -> :sswitch_0
+    .end sparse-switch
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final ۙ(FFII)I
     .locals 4
 
-    .line 592
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 177
+    iget-object v0, p0, Ll/۠ܰ;->᩷:Landroid/util/SparseArray;
 
-    const-string v1, "PlaybackState {state="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 593
-    iget v1, p0, Ll/۠ܰ;->ܳ:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", position="
-
-    .line 594
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll/۠ܰ;->ۧ:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buffered position="
-
-    .line 595
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll/۠ܰ;->֡:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", speed="
-
-    .line 596
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll/۠ܰ;->᩻:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", updated="
-
-    .line 597
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll/۠ܰ;->ۢ:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", actions="
-
-    .line 598
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll/۠ܰ;->ܺ:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", error code="
-
-    .line 599
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll/۠ܰ;->۫:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", error message="
-
-    .line 600
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll/۠ܰ;->ܿ:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", custom actions="
-
-    .line 601
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll/۠ܰ;->ܽ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active item id="
-
-    .line 602
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll/۠ܰ;->᩶:J
-
-    const-string v3, "}"
-
-    .line 0
-    invoke-static {v0, v1, v2, v3}, Ll/ܶۛۘ;->ۙ(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ll/ۡܰ;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    if-nez v0, :cond_0
 
-    .line 614
-    iget v0, p0, Ll/۠ܰ;->ܳ:I
+    return p4
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    .line 178
+    :cond_0
+    iget-object p4, v0, Ll/ۡܰ;->ۤ:Ljava/util/ArrayList;
 
-    .line 615
-    iget-wide v0, p0, Ll/۠ܰ;->ۧ:J
+    iget v0, v0, Ll/ۡܰ;->ۙ:I
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    const/high16 v1, -0x40800000    # -1.0f
 
-    .line 616
-    iget v0, p0, Ll/۠ܰ;->᩻:F
+    cmpl-float v2, p1, v1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    if-eqz v2, :cond_6
 
-    .line 617
-    iget-wide v0, p0, Ll/۠ܰ;->ۢ:J
+    cmpl-float v1, p2, v1
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-nez v1, :cond_1
 
-    .line 618
-    iget-wide v0, p0, Ll/۠ܰ;->֡:J
+    goto :goto_1
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    .line 193
+    :cond_1
+    invoke-virtual {p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 619
-    iget-wide v0, p0, Ll/۠ܰ;->ܺ:J
+    move-result-object p4
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    const/4 v1, 0x0
 
-    .line 620
-    iget-object v0, p0, Ll/۠ܰ;->ܿ:Ljava/lang/CharSequence;
-
-    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
-
-    .line 621
-    iget-object p2, p0, Ll/۠ܰ;->ܽ:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
-
-    .line 622
-    iget-wide v0, p0, Ll/۠ܰ;->᩶:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    .line 623
-    iget-object p2, p0, Ll/۠ܰ;->ۛ:Landroid/os/Bundle;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
-
-    .line 625
-    iget p2, p0, Ll/۠ܰ;->۫:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
-.end method
-
-.method public final ۙ()Landroid/media/session/PlaybackState;
-    .locals 8
-
-    .line 849
-    iget-object v0, p0, Ll/۠ܰ;->֫:Landroid/media/session/PlaybackState;
-
-    if-nez v0, :cond_2
-
-    .line 850
-    invoke-static {}, Ll/᩺ܰ;->ۙ()Landroid/media/session/PlaybackState$Builder;
-
-    move-result-object v0
-
-    .line 851
-    iget v5, p0, Ll/۠ܰ;->᩻:F
-
-    iget-wide v6, p0, Ll/۠ܰ;->ۢ:J
-
-    iget v2, p0, Ll/۠ܰ;->ܳ:I
-
-    iget-wide v3, p0, Ll/۠ܰ;->ۧ:J
-
-    move-object v1, v0
-
-    invoke-static/range {v1 .. v7}, Ll/᩺ܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;IJFJ)V
-
-    .line 852
-    iget-wide v1, p0, Ll/۠ܰ;->֡:J
-
-    invoke-static {v0, v1, v2}, Ll/᩺ܰ;->ۨ(Landroid/media/session/PlaybackState$Builder;J)V
-
-    .line 853
-    iget-wide v1, p0, Ll/۠ܰ;->ܺ:J
-
-    invoke-static {v0, v1, v2}, Ll/᩺ܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;J)V
-
-    .line 854
-    iget-object v1, p0, Ll/۠ܰ;->ܿ:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Ll/᩺ܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;Ljava/lang/CharSequence;)V
-
-    .line 855
-    iget-object v1, p0, Ll/۠ܰ;->ܽ:Ljava/util/ArrayList;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
+    :cond_2
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_4
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ᩴܰ;
-
-    .line 857
-    invoke-virtual {v2}, Ll/ᩴܰ;->ۙ()Landroid/media/session/PlaybackState$CustomAction;
+    invoke-interface {p4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 856
-    invoke-static {v0, v2}, Ll/᩺ܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;Landroid/media/session/PlaybackState$CustomAction;)V
+    check-cast v2, Ll/ۖܰ;
+
+    .line 194
+    invoke-virtual {v2, p1, p2}, Ll/ۖܰ;->ۙ(FF)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 195
+    iget v1, v2, Ll/ۖܰ;->ۙ:I
+
+    if-ne p3, v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v1, v2
 
     goto :goto_0
 
-    .line 859
+    :cond_4
+    if-eqz v1, :cond_5
+
+    .line 202
+    iget p1, v1, Ll/ۖܰ;->ۙ:I
+
+    return p1
+
+    :cond_5
+    return v0
+
+    :cond_6
+    :goto_1
+    if-ne v0, p3, :cond_7
+
+    goto :goto_2
+
+    .line 185
+    :cond_7
+    invoke-virtual {p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_8
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_9
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ll/ۖܰ;
+
+    .line 186
+    iget p2, p2, Ll/ۖܰ;->ۙ:I
+
+    if-ne p3, p2, :cond_8
+
+    :goto_2
+    return p3
+
+    :cond_9
+    return v0
+.end method
+
+.method public final ۙ(I)I
+    .locals 5
+
+    const/4 v0, -0x1
+
+    int-to-float v1, v0
+
+    const/4 v2, 0x0
+
+    .line 210
+    iget-object v3, p0, Ll/۠ܰ;->᩷:Landroid/util/SparseArray;
+
+    if-ne v0, p1, :cond_6
+
+    if-ne p1, v0, :cond_0
+
+    .line 213
+    invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۡܰ;
+
+    goto :goto_0
+
+    .line 215
     :cond_0
-    iget-wide v1, p0, Ll/۠ܰ;->᩶:J
+    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Ll/᩺ܰ;->ܰ(Landroid/media/session/PlaybackState$Builder;J)V
+    move-result-object p1
 
-    .line 860
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast p1, Ll/ۡܰ;
 
-    const/16 v2, 0x16
+    :goto_0
+    if-nez p1, :cond_1
 
-    if-lt v1, v2, :cond_1
+    goto :goto_3
 
-    .line 861
-    iget-object v1, p0, Ll/۠ܰ;->ۛ:Landroid/os/Bundle;
-
-    invoke-static {v0, v1}, Ll/ܶܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;Landroid/os/Bundle;)V
-
-    .line 863
+    .line 218
     :cond_1
-    invoke-static {v0}, Ll/᩺ܰ;->ۙ(Landroid/media/session/PlaybackState$Builder;)Landroid/media/session/PlaybackState;
+    iget-object v3, p1, Ll/ۡܰ;->ۤ:Ljava/util/ArrayList;
 
-    move-result-object v0
+    .line 278
+    :goto_1
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
-    iput-object v0, p0, Ll/۠ܰ;->֫:Landroid/media/session/PlaybackState;
+    move-result v4
 
-    .line 865
+    if-ge v2, v4, :cond_3
+
+    .line 279
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ll/ۖܰ;
+
+    invoke-virtual {v4, v1, v1}, Ll/ۖܰ;->ۙ(FF)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    goto :goto_2
+
     :cond_2
-    iget-object v0, p0, Ll/۠ܰ;->֫:Landroid/media/session/PlaybackState;
+    add-int/lit8 v2, v2, 0x1
 
-    return-object v0
+    goto :goto_1
+
+    :cond_3
+    const/4 v2, -0x1
+
+    :goto_2
+    if-ne v0, v2, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    if-ne v2, v0, :cond_5
+
+    .line 231
+    iget p1, p1, Ll/ۡܰ;->ۙ:I
+
+    return p1
+
+    :cond_5
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۖܰ;
+
+    iget p1, p1, Ll/ۖܰ;->ۙ:I
+
+    return p1
+
+    .line 234
+    :cond_6
+    invoke-virtual {v3, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۡܰ;
+
+    if-nez p1, :cond_7
+
+    :goto_3
+    return v0
+
+    .line 235
+    :cond_7
+    iget-object v3, p1, Ll/ۡܰ;->ۤ:Ljava/util/ArrayList;
+
+    .line 278
+    :goto_4
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v2, v4, :cond_9
+
+    .line 279
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ll/ۖܰ;
+
+    invoke-virtual {v4, v1, v1}, Ll/ۖܰ;->ۙ(FF)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_4
+
+    :cond_9
+    const/4 v2, -0x1
+
+    :goto_5
+    if-ne v2, v0, :cond_a
+
+    .line 239
+    iget p1, p1, Ll/ۡܰ;->ۙ:I
+
+    return p1
+
+    :cond_a
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۖܰ;
+
+    iget p1, p1, Ll/ۖܰ;->ۙ:I
+
+    return p1
 .end method

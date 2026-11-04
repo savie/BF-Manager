@@ -1,115 +1,194 @@
 .class public final Ll/ۛᩳۙ;
-.super Ll/᩺֡;
-.source "N5WY"
-
-
-# instance fields
-.field public ۨ:Ll/᩹ܰ;
-
-.field public ܰ:[I
+.super Ljava/lang/Object;
+.source "H8RW"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static ۙ(IILl/ܿܶۙ;)I
+    .locals 3
 
-    .line 2697
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xa
 
-    const/4 v0, 0x0
+    :goto_0
+    if-lez v0, :cond_2
 
-    .line 139
-    iput-object v0, p0, Ll/ۛᩳۙ;->ܰ:[I
+    .line 625
+    invoke-static {v0}, Ll/ۜۨۙ;->᩷(I)I
 
-    return-void
-.end method
+    move-result v1
 
+    if-nez v1, :cond_0
 
-# virtual methods
-.method public final ۙ(Ll/ۚ֡;)V
-    .locals 4
+    goto :goto_1
 
-    .line 252
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x22
-
-    if-lt v0, v1, :cond_0
-
-    .line 253
-    invoke-interface {p1}, Ll/ۚ֡;->ۙ()Landroid/app/Notification$Builder;
-
-    move-result-object p1
-
-    .line 255
-    invoke-static {}, Ll/۫ᩳۙ;->ۙ()Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 256
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    const/4 v3, 0x0
-
-    .line 254
-    invoke-static {v0, v3, v1, v3, v2}, Ll/ܿᩳۙ;->ۙ(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/ۛᩳۙ;->ܰ:[I
-
-    iget-object v2, p0, Ll/ۛᩳۙ;->ۨ:Ll/᩹ܰ;
-
-    invoke-static {v0, v1, v2}, Ll/۫ᩳۙ;->ۙ(Landroid/app/Notification$MediaStyle;[ILl/᩹ܰ;)Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    .line 253
-    invoke-static {p1, v0}, Ll/۫ᩳۙ;->ۙ(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
-
-    return-void
-
-    .line 259
+    .line 629
     :cond_0
-    invoke-interface {p1}, Ll/ۚ֡;->ۙ()Landroid/app/Notification$Builder;
+    new-instance v2, Landroid/media/AudioFormat$Builder;
 
-    move-result-object p1
+    invoke-direct {v2}, Landroid/media/AudioFormat$Builder;-><init>()V
 
-    .line 260
-    invoke-static {}, Ll/۫ᩳۙ;->ۙ()Landroid/app/Notification$MediaStyle;
+    .line 631
+    invoke-virtual {v2, p0}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v1, p0, Ll/ۛᩳۙ;->ܰ:[I
+    .line 632
+    invoke-virtual {v2, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
 
-    iget-object v2, p0, Ll/ۛᩳۙ;->ۨ:Ll/᩹ܰ;
+    move-result-object v2
 
-    invoke-static {v0, v1, v2}, Ll/۫ᩳۙ;->ۙ(Landroid/app/Notification$MediaStyle;[ILl/᩹ܰ;)Landroid/app/Notification$MediaStyle;
+    .line 633
+    invoke-virtual {v2, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 259
-    invoke-static {p1, v0}, Ll/۫ᩳۙ;->ۙ(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
+    .line 634
+    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
 
-    return-void
+    move-result-object v1
+
+    .line 636
+    invoke-virtual {p2}, Ll/ܿܶۙ;->ۙ()Ll/᩶ܶۙ;
+
+    move-result-object v2
+
+    iget-object v2, v2, Ll/᩶ܶۙ;->ۙ:Landroid/media/AudioAttributes;
+
+    .line 635
+    invoke-static {v1, v2}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return v0
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public final ۙ(Ll/᩹ܰ;)V
-    .locals 0
+.method public static ۙ(Ll/ܿܶۙ;)Ll/֫۫ܽ;
+    .locals 6
 
-    .line 171
-    iput-object p1, p0, Ll/ۛᩳۙ;->ۨ:Ll/᩹ܰ;
+    .line 596
+    sget v0, Ll/֫۫ܽ;->᩶:I
 
-    return-void
-.end method
+    .line 730
+    new-instance v0, Ll/᩸۫ܽ;
 
-.method public final varargs ۙ([I)V
-    .locals 0
+    invoke-direct {v0}, Ll/᩸۫ܽ;-><init>()V
 
-    .line 162
-    iput-object p1, p0, Ll/ۛᩳۙ;->ܰ:[I
+    .line 597
+    sget-object v1, Ll/ܰᩳۙ;->ۤ:Ll/ܽ۫ܽ;
 
-    return-void
+    invoke-virtual {v1}, Ll/ܽ۫ܽ;->keySet()Ll/۠۫ܽ;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ll/ۙ۫ܽ;->iterator()Ll/ۘ᩻ܽ;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    .line 598
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-static {v3}, Ll/ۜۨۙ;->ۙ(I)I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_1
+
+    goto :goto_0
+
+    .line 602
+    :cond_1
+    new-instance v4, Landroid/media/AudioFormat$Builder;
+
+    invoke-direct {v4}, Landroid/media/AudioFormat$Builder;-><init>()V
+
+    const/16 v5, 0xc
+
+    .line 604
+    invoke-virtual {v4, v5}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v4
+
+    .line 605
+    invoke-virtual {v4, v3}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v3
+
+    const v4, 0xbb80
+
+    .line 606
+    invoke-virtual {v3, v4}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v3
+
+    .line 607
+    invoke-virtual {v3}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
+
+    move-result-object v3
+
+    .line 608
+    invoke-virtual {p0}, Ll/ܿܶۙ;->ۙ()Ll/᩶ܶۙ;
+
+    move-result-object v4
+
+    iget-object v4, v4, Ll/᩶ܶۙ;->ۙ:Landroid/media/AudioAttributes;
+
+    .line 602
+    invoke-static {v3, v4}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 609
+    invoke-virtual {v0, v2}, Ll/ۜܳܽ;->᩷(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p0, 0x2
+
+    .line 612
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ll/ۜܳܽ;->᩷(Ljava/lang/Object;)V
+
+    .line 613
+    invoke-virtual {v0}, Ll/᩸۫ܽ;->ۙ()Ll/֫۫ܽ;
+
+    move-result-object p0
+
+    return-object p0
 .end method

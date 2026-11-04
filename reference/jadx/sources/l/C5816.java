@@ -1,504 +1,153 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.Callable;
 
-/* JADX INFO: renamed from: l.ۛۘ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+/* JADX INFO: renamed from: l.ۚܿ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 643O */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5816 extends AbstractC0584 implements InterfaceC18266 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public C15135 f19749;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public List f19750;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public C22190 f19751;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C21463 f19752;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f19753;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C4487 f19754;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C22190 f19755;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Object f19756;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public List f19757;
-
-    public /* synthetic */ C5816(int i) {
-        this();
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC0584 mo2777clear() {
-        m15997();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC3967 mo2777clear() {
-        m15997();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mo2777clear() {
-        m15997();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mo2777clear() {
-        m15997();
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC3967 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC21607 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC0584
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46302;
-        c6956.m18696(C1582.class, C5816.class);
-        return c6956;
-    }
-
-    public C5816() {
-        this.f19756 = "";
-        List list = Collections.EMPTY_LIST;
-        this.f19757 = list;
-        this.f19750 = list;
-        this.f19752 = C21463.m48084();
-        if (AbstractC18245.alwaysUseFieldBuilders) {
-            m15995();
-            m15996();
-            m15994();
-        }
-    }
-
-    public C5816(InterfaceC6790 interfaceC6790, int i) {
-        super(interfaceC6790);
-        this.f19756 = "";
-        List list = Collections.EMPTY_LIST;
-        this.f19757 = list;
-        this.f19750 = list;
-        this.f19752 = C21463.m48084();
-        if (AbstractC18245.alwaysUseFieldBuilders) {
-            m15995();
-            m15996();
-            m15994();
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15997() {
-        super.mo2777clear();
-        this.f19753 = 0;
-        this.f19756 = "";
-        C22190 c22190 = this.f19751;
-        if (c22190 == null) {
-            this.f19757 = Collections.EMPTY_LIST;
-        } else {
-            this.f19757 = null;
-            c22190.m49245();
-        }
-        this.f19753 &= -3;
-        this.f19754 = null;
-        C15135 c15135 = this.f19749;
-        if (c15135 != null) {
-            c15135.m36296();
-            this.f19749 = null;
-        }
-        C22190 c22191 = this.f19755;
-        if (c22191 == null) {
-            this.f19750 = Collections.EMPTY_LIST;
-        } else {
-            this.f19750 = null;
-            c22191.m49245();
-        }
-        this.f19753 &= -9;
-        this.f19752 = C21463.m48084();
-    }
-
-    @Override // l.AbstractC0584, l.InterfaceC22500, l.InterfaceC18266
-    public final C2806 getDescriptorForType() {
-        return C14097.f46324;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return C1582.getDefaultInstance();
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return C1582.getDefaultInstance();
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC1332 build() {
-        C1582 c1582BuildPartial = buildPartial();
-        if (c1582BuildPartial.isInitialized()) {
-            return c1582BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c1582BuildPartial);
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC23206 build() {
-        C1582 c1582BuildPartial = buildPartial();
-        if (c1582BuildPartial.isInitialized()) {
-            return c1582BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c1582BuildPartial);
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final C1582 buildPartial() {
-        C4487 c4487;
-        int i = 0;
-        C1582 c1582 = new C1582(this, 0);
-        C22190 c22190 = this.f19751;
-        if (c22190 != null) {
-            c1582.f6339 = c22190.m49248();
-        } else {
-            if ((this.f19753 & 2) != 0) {
-                this.f19757 = C0561.unmodifiableList(this.f19757);
-                this.f19753 &= -3;
-            }
-            c1582.f6339 = this.f19757;
-        }
-        C22190 c22191 = this.f19755;
-        if (c22191 != null) {
-            c1582.f6343 = c22191.m49248();
-        } else {
-            if ((this.f19753 & 8) != 0) {
-                this.f19750 = C0561.unmodifiableList(this.f19750);
-                this.f19753 &= -9;
-            }
-            c1582.f6343 = this.f19750;
-        }
-        int i2 = this.f19753;
-        if (i2 != 0) {
-            if ((i2 & 1) != 0) {
-                c1582.f6338 = this.f19756;
-                i = 1;
-            }
-            if ((i2 & 4) != 0) {
-                C15135 c15135 = this.f19749;
-                if (c15135 == null) {
-                    c4487 = this.f19754;
-                } else {
-                    c4487 = (C4487) c15135.m36297();
-                }
-                c1582.f6342 = c4487;
-                i |= 2;
-            }
-            if ((i2 & 16) != 0) {
-                this.f19752.mo6483();
-                c1582.f6340 = this.f19752;
-            }
-            c1582.f6341 = i | c1582.f6341;
-        }
-        onBuilt();
-        return c1582;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final AbstractC3967 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C1582) {
-            m15998((C1582) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final InterfaceC22500 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C1582) {
-            m15998((C1582) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15998(C1582 c1582) {
-        C4487 c4487;
-        if (c1582 == C1582.getDefaultInstance()) {
-            return;
-        }
-        if (c1582.hasName()) {
-            this.f19756 = c1582.f6338;
-            this.f19753 |= 1;
-            onChanged();
-        }
-        if (this.f19751 == null) {
-            if (!c1582.f6339.isEmpty()) {
-                if (this.f19757.isEmpty()) {
-                    this.f19757 = c1582.f6339;
-                    this.f19753 &= -3;
-                } else {
-                    if ((this.f19753 & 2) == 0) {
-                        this.f19757 = new ArrayList(this.f19757);
-                        this.f19753 |= 2;
-                    }
-                    this.f19757.addAll(c1582.f6339);
-                }
-                onChanged();
-            }
-        } else if (!c1582.f6339.isEmpty()) {
-            if (!this.f19751.m49238()) {
-                this.f19751.m49242(c1582.f6339);
-            } else {
-                this.f19751.m49236();
-                this.f19751 = null;
-                this.f19757 = c1582.f6339;
-                this.f19753 &= -3;
-                this.f19751 = AbstractC18245.alwaysUseFieldBuilders ? m15995() : null;
-            }
-        }
-        if (c1582.m5402()) {
-            C4487 c4487M5403 = c1582.m5403();
-            C15135 c15135 = this.f19749;
-            if (c15135 == null) {
-                if ((this.f19753 & 4) == 0 || (c4487 = this.f19754) == null || c4487 == C4487.getDefaultInstance()) {
-                    this.f19754 = c4487M5403;
-                } else {
-                    this.f19753 |= 4;
-                    onChanged();
-                    ((C2993) m15996().m36293()).m8957(c4487M5403);
-                }
-            } else {
-                c15135.m36294(c4487M5403);
-            }
-            if (this.f19754 != null) {
-                this.f19753 |= 4;
-                onChanged();
-            }
-        }
-        if (this.f19755 == null) {
-            if (!c1582.f6343.isEmpty()) {
-                if (this.f19750.isEmpty()) {
-                    this.f19750 = c1582.f6343;
-                    this.f19753 &= -9;
-                } else {
-                    if ((this.f19753 & 8) == 0) {
-                        this.f19750 = new ArrayList(this.f19750);
-                        this.f19753 |= 8;
-                    }
-                    this.f19750.addAll(c1582.f6343);
-                }
-                onChanged();
-            }
-        } else if (!c1582.f6343.isEmpty()) {
-            if (!this.f19755.m49238()) {
-                this.f19755.m49242(c1582.f6343);
-            } else {
-                this.f19755.m49236();
-                this.f19755 = null;
-                this.f19750 = c1582.f6343;
-                this.f19753 &= -9;
-                this.f19755 = AbstractC18245.alwaysUseFieldBuilders ? m15994() : null;
-            }
-        }
-        if (!c1582.f6340.isEmpty()) {
-            if (this.f19752.isEmpty()) {
-                this.f19752 = c1582.f6340;
-                this.f19753 |= 16;
-            } else {
-                if (!this.f19752.mo6484()) {
-                    this.f19752 = new C21463(this.f19752);
-                }
-                this.f19753 |= 16;
-                this.f19752.addAll(c1582.f6340);
-            }
-            onChanged();
-        }
-        mo2781mergeUnknownFields(c1582.getUnknownFields());
-        onChanged();
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final C5816 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        c2701.getClass();
-        boolean z = false;
-        while (!z) {
-            try {
-                try {
-                    int iMo6048 = abstractC3262.mo6048();
-                    if (iMo6048 != 0) {
-                        if (iMo6048 == 10) {
-                            this.f19756 = abstractC3262.mo6050();
-                            this.f19753 |= 1;
-                        } else if (iMo6048 == 18) {
-                            C2370 c2370 = (C2370) abstractC3262.mo6024(C2370.parser(), c2701);
-                            C22190 c22190 = this.f19751;
-                            if (c22190 != null) {
-                                c22190.m49251(c2370);
-                            } else {
-                                if ((this.f19753 & 2) == 0) {
-                                    this.f19757 = new ArrayList(this.f19757);
-                                    this.f19753 |= 2;
-                                }
-                                this.f19757.add(c2370);
-                            }
-                        } else if (iMo6048 == 26) {
-                            abstractC3262.mo6027(m15996().m36293(), c2701);
-                            this.f19753 |= 4;
-                        } else if (iMo6048 == 34) {
-                            C14284 c14284 = (C14284) abstractC3262.mo6024(C14284.parser(), c2701);
-                            C22190 c22191 = this.f19755;
-                            if (c22191 != null) {
-                                c22191.m49251(c14284);
-                            } else {
-                                if ((this.f19753 & 8) == 0) {
-                                    this.f19750 = new ArrayList(this.f19750);
-                                    this.f19753 |= 8;
-                                }
-                                this.f19750.add(c14284);
-                            }
-                        } else if (iMo6048 == 42) {
-                            AbstractC23725 abstractC23725Mo6050 = abstractC3262.mo6050();
-                            if (!this.f19752.mo6484()) {
-                                this.f19752 = new C21463(this.f19752);
-                            }
-                            this.f19753 |= 16;
-                            this.f19752.mo21383(abstractC23725Mo6050);
-                        } else if (!super.parseUnknownField(abstractC3262, c2701, iMo6048)) {
-                        }
-                    }
-                    z = true;
-                } catch (C4529 e) {
-                    throw e.m12650();
-                }
-            } catch (Throwable th) {
-                onChanged();
-                throw th;
-            }
-        }
-        onChanged();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.InterfaceC15445
-    public final boolean isInitialized() {
-        int iM49252;
-        C4487 defaultInstance;
-        C2370 c2370;
-        int i = 0;
-        while (true) {
-            C22190 c22190 = this.f19751;
-            if (c22190 == null) {
-                iM49252 = this.f19757.size();
-            } else {
-                iM49252 = c22190.m49252();
-            }
-            if (i < iM49252) {
-                C22190 c22191 = this.f19751;
-                if (c22191 == null) {
-                    c2370 = (C2370) this.f19757.get(i);
-                } else {
-                    c2370 = (C2370) c22191.m49249(i);
-                }
-                if (!c2370.isInitialized()) {
-                    break;
-                }
-                i++;
-            } else {
-                if ((this.f19753 & 4) == 0) {
-                    return true;
-                }
-                C15135 c15135 = this.f19749;
-                if (c15135 == null) {
-                    defaultInstance = this.f19754;
-                    if (defaultInstance == null) {
-                        defaultInstance = C4487.getDefaultInstance();
-                    }
-                } else {
-                    defaultInstance = (C4487) c15135.m36295();
-                }
-                if (!defaultInstance.isInitialized()) {
-                    break;
-                }
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    private C22190 m15995() {
-        if (this.f19751 == null) {
-            this.f19751 = new C22190(this.f19757, (this.f19753 & 2) != 0, getParentForChildren(), isClean());
-            this.f19757 = null;
-        }
-        return this.f19751;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private C15135 m15996() {
-        C4487 defaultInstance;
-        C15135 c15135 = this.f19749;
-        if (c15135 == null) {
-            if (c15135 == null) {
-                defaultInstance = this.f19754;
-                if (defaultInstance == null) {
-                    defaultInstance = C4487.getDefaultInstance();
-                }
-            } else {
-                defaultInstance = (C4487) c15135.m36295();
-            }
-            this.f19749 = new C15135(defaultInstance, getParentForChildren(), isClean());
-            this.f19754 = null;
-        }
-        return this.f19749;
-    }
+public class C5816 extends AbstractC11781 implements InterfaceC17974 {
 
     /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    private C22190 m15994() {
-        if (this.f19755 == null) {
-            this.f19755 = new C22190(this.f19750, (this.f19753 & 8) != 0, getParentForChildren(), isClean());
-            this.f19750 = null;
+    public Object f19996;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public int f19997;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public int f19998;
+
+    @Override // l.AbstractC11781, l.InterfaceC13564
+    /* JADX INFO: renamed from: ܶ */
+    public int mo2973() {
+        return 9;
+    }
+
+    @Override // l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ۙ */
+    public EnumC5296 mo9558() {
+        long j = this.f38071;
+        if ((8589934592L & j) != 0) {
+            if (m16950()) {
+                return EnumC5296.EXCEPTION_PARAMETER;
+            }
+            return EnumC5296.PARAMETER;
         }
-        return this.f19755;
+        if ((16384 & j) != 0) {
+            return EnumC5296.ENUM_CONSTANT;
+        }
+        EnumC13603 enumC13603 = this.f38069.f38066;
+        if (enumC13603 == EnumC13603.f43213 || enumC13603 == EnumC13603.f43208) {
+            return EnumC5296.FIELD;
+        }
+        if (m16956()) {
+            return EnumC5296.RESOURCE_VARIABLE;
+        }
+        if ((j & 576460752303423488L) != 0) {
+            return EnumC5296.BINDING_VARIABLE;
+        }
+        return EnumC5296.LOCAL_VARIABLE;
+    }
+
+    @Override // l.InterfaceC12753
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public AbstractC22664 mo16952() {
+        return this.f38067;
+    }
+
+    @Override // l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public InterfaceC12753 mo16951() {
+        return this.f38069;
+    }
+
+    @Override // l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ᩹ */
+    public AbstractC19728 mo9563() {
+        return this.f38072;
+    }
+
+    @Override // l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public /* bridge */ /* synthetic */ C14769 mo16957() {
+        return mo16957();
+    }
+
+    public C5816(long j, AbstractC19728 abstractC19728, AbstractC22664 abstractC22664, AbstractC11781 abstractC11781) {
+        super(EnumC13603.f43205, j, abstractC19728, abstractC22664, abstractC11781);
+        this.f19997 = -1;
+        this.f19998 = -1;
+    }
+
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5816 mo16960(AbstractC11781 abstractC11781) {
+        C13273 c13273 = new C13273(this, this.f38071, this.f38072, this.f38067, abstractC11781, abstractC11781);
+        c13273.f19997 = this.f19997;
+        c13273.f19998 = this.f19998;
+        c13273.f19996 = this.f19996;
+        return c13273;
+    }
+
+    @Override // l.AbstractC11781
+    public final String toString() {
+        return this.f38072.toString();
+    }
+
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC11781 mo16954(AbstractC22664 abstractC22664, C24705 c24705) {
+        return new C5816(this.f38071, this.f38072, c24705.m55126(this, abstractC22664), this.f38069);
+    }
+
+    @Override // l.InterfaceC12753
+    /* JADX INFO: renamed from: ۙ */
+    public Object mo7871(AbstractC9024 abstractC9024, Object obj) {
+        return abstractC9024.mo22365(this, obj);
+    }
+
+    /* JADX INFO: renamed from: ܿۙ, reason: not valid java name and contains not printable characters */
+    public final Object m16958() {
+        return C8257.m22245(m16959(), this.f38067);
+    }
+
+    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m16950() {
+        return this.f19996 == EnumC5296.EXCEPTION_PARAMETER;
+    }
+
+    /* JADX INFO: renamed from: ۟ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m16956() {
+        return this.f19996 == EnumC5296.RESOURCE_VARIABLE;
+    }
+
+    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m16959() {
+        Object obj = this.f19996;
+        if (obj == EnumC5296.EXCEPTION_PARAMETER || obj == EnumC5296.RESOURCE_VARIABLE) {
+            return null;
+        }
+        if (obj instanceof Callable) {
+            Callable callable = (Callable) obj;
+            this.f19996 = null;
+            try {
+                this.f19996 = callable.call();
+            } catch (Exception e) {
+                throw new AssertionError(e);
+            }
+        }
+        return this.f19996;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m16955(Object obj) {
+        C11972.m30023(this, !(obj instanceof C3168));
+        this.f19996 = obj;
+    }
+
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object mo16953(InterfaceC2087 interfaceC2087, Locale locale) {
+        return interfaceC2087.mo7177(this, (Object) locale);
     }
 }

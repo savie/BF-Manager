@@ -1,31 +1,54 @@
-.class public interface abstract Ll/᩺ܽ;
+.class public final Ll/᩺ܽ;
 .super Ljava/lang/Object;
-.source "1B13"
+.source "95GJ"
 
 # interfaces
-.implements Landroid/os/IInterface;
+.implements Ll/۟ۚ;
 
 
-# static fields
-.field public static final ۨ:Ljava/lang/String;
+# instance fields
+.field public final synthetic ܰ:Ll/ܿܽ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ll/ܿܽ;)V
+    .locals 0
 
-    const/16 v0, 0x24
+    .line 109
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x2e
+    iput-object p1, p0, Ll/᩺ܽ;->ܰ:Ll/ܿܽ;
 
-    const-string v2, "androidx$core$app$unusedapprestrictions$IUnusedAppRestrictionsBackportCallback"
+    return-void
+.end method
 
-    .line 126
-    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
-    move-result-object v0
+# virtual methods
+.method public final onMenuItemSelected(Ll/ۢۚ;Landroid/view/MenuItem;)Z
+    .locals 0
 
-    sput-object v0, Ll/᩺ܽ;->ۨ:Ljava/lang/String;
+    .line 112
+    iget-object p1, p0, Ll/᩺ܽ;->ܰ:Ll/ܿܽ;
+
+    iget-object p1, p1, Ll/ܿܽ;->ۤ:Ll/᩶ܽ;
+
+    if-eqz p1, :cond_0
+
+    .line 113
+    invoke-interface {p1, p2}, Ll/᩶ܽ;->onMenuItemClick(Landroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final onMenuModeChange(Ll/ۢۚ;)V
+    .locals 0
 
     return-void
 .end method

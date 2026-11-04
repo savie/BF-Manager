@@ -8,11 +8,11 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
-import l.C15844;
-import l.C18616;
-import l.C5031;
-import l.C8033;
-import l.InterfaceC11754;
+import l.C14625;
+import l.C22666;
+import l.C3977;
+import l.C4185;
+import l.InterfaceC22491;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ScrimInsetsFrameLayout extends FrameLayout {
@@ -24,7 +24,7 @@ public class ScrimInsetsFrameLayout extends FrameLayout {
     public Rect insets;
     public Rect tempRect;
 
-    public void onInsetsChanged(C15844 c15844) {
+    public void onInsetsChanged(C3977 c3977) {
     }
 
     public ScrimInsetsFrameLayout(Context context) {
@@ -42,24 +42,24 @@ public class ScrimInsetsFrameLayout extends FrameLayout {
         this.drawBottomInsetForeground = true;
         this.drawLeftInsetForeground = true;
         this.drawRightInsetForeground = true;
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f26678, i, C18616.f59847, new int[0]);
-        this.insetForeground = typedArrayObtainStyledAttributes.getDrawable(C8033.f27370);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f46395, i, C4185.f14438, new int[0]);
+        this.insetForeground = typedArrayObtainStyledAttributes.getDrawable(C14625.f47618);
         typedArrayObtainStyledAttributes.recycle();
         setWillNotDraw(true);
-        C5031.m13989(this, new InterfaceC11754() { // from class: com.google.android.material.internal.ScrimInsetsFrameLayout.1
-            @Override // l.InterfaceC11754
-            public C15844 onApplyWindowInsets(View view, C15844 c15844) {
+        C22666.m51097(this, new InterfaceC22491() { // from class: com.google.android.material.internal.ScrimInsetsFrameLayout.1
+            @Override // l.InterfaceC22491
+            public C3977 onApplyWindowInsets(View view, C3977 c3977) {
                 ScrimInsetsFrameLayout scrimInsetsFrameLayout = ScrimInsetsFrameLayout.this;
                 if (scrimInsetsFrameLayout.insets == null) {
                     scrimInsetsFrameLayout.insets = new Rect();
                 }
-                ScrimInsetsFrameLayout.this.insets.set(c15844.m37683(), c15844.m37681(), c15844.m37672(), c15844.m37670());
-                ScrimInsetsFrameLayout.this.onInsetsChanged(c15844);
-                ScrimInsetsFrameLayout.this.setWillNotDraw(!c15844.m37690() || ScrimInsetsFrameLayout.this.insetForeground == null);
+                ScrimInsetsFrameLayout.this.insets.set(c3977.m12822(), c3977.m12824(), c3977.m12814(), c3977.m12825());
+                ScrimInsetsFrameLayout.this.onInsetsChanged(c3977);
+                ScrimInsetsFrameLayout.this.setWillNotDraw(!c3977.m12834() || ScrimInsetsFrameLayout.this.insetForeground == null);
                 ScrimInsetsFrameLayout scrimInsetsFrameLayout2 = ScrimInsetsFrameLayout.this;
-                int i2 = C5031.f17539;
+                int i2 = C22666.f73603;
                 scrimInsetsFrameLayout2.postInvalidateOnAnimation();
-                return c15844.m37682();
+                return c3977.m12823();
             }
         });
     }

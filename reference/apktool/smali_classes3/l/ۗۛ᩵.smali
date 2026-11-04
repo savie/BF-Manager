@@ -1,227 +1,241 @@
 .class public final Ll/ۗۛ᩵;
-.super Ll/ۗܿ᩵;
-.source "I4QP"
+.super Ljava/lang/Object;
+.source "19TU"
 
 # interfaces
-.implements Ll/᩵ܰۡ;
-.implements Ll/ۤۙۡ;
-
-
-# static fields
-.field public static final ۫:Ll/ᩳ۫᩵;
+.implements Ll/۫ۛ᩵;
 
 
 # instance fields
-.field public ֡:Ll/۟ۨۡ;
+.field public ֡:J
 
-.field public final ܽ:I
+.field public ۟:I
 
+.field public ܰ:J
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public ܿ:Z
 
-    .line 47
-    sget-object v0, Ll/ᩳ۫᩵;->ܳ:Ll/ᩳ۫᩵;
-
-    sput-object v0, Ll/ۗۛ᩵;->۫:Ll/ᩳ۫᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۤ۫᩵;ILl/۟ۨۡ;)V
-    .locals 1
-
-    .line 56
-    invoke-direct {p0, p1}, Ll/ۗܿ᩵;-><init>(Ll/ۤ۫᩵;)V
-
-    .line 194
-    sget p1, Ll/᩶۫᩵;->ۙ:I
-
-    if-lez p2, :cond_0
-
-    const/16 p1, 0xa
-
-    if-ge p2, p1, :cond_0
-
-    .line 57
-    iput p2, p0, Ll/ۗۛ᩵;->ܽ:I
-
-    .line 58
-    iput-object p3, p0, Ll/ۗۛ᩵;->֡:Ll/۟ۨۡ;
-
-    return-void
-
-    .line 195
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    .line 197
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    new-array p3, p3, [Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    aput-object p2, p3, v0
-
-    const-string p2, "Invalid verification error value: %d. Must be between 1 and 9, inclusive"
-
-    .line 196
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public ᩶:Z
 
 
 # virtual methods
-.method public final getReference()Ll/۟ۨۡ;
+.method public final getAttributes()I
     .locals 1
-
-    .line 69
-    iget-object v0, p0, Ll/ۗۛ᩵;->֡:Ll/۟ۨۡ;
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/۠᩺ۡ;)V
-    .locals 1
-
-    .line 69
-    iget-object v0, p0, Ll/ۗۛ᩵;->֡:Ll/۟ۨۡ;
-
-    .line 84
-    invoke-virtual {p1, v0}, Ll/۠᩺ۡ;->ۙ(Ll/۟ۨۡ;)Ll/ܳۜۡ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۗۛ᩵;->֡:Ll/۟ۨۡ;
-
-    return-void
-.end method
-
-.method public final ۛ()Ll/ᩳ۫᩵;
-    .locals 1
-
-    .line 79
-    sget-object v0, Ll/ۗۛ᩵;->۫:Ll/ᩳ۫᩵;
-
-    return-object v0
-.end method
-
-.method public final ۠()I
-    .locals 1
-
-    .line 63
-    iget v0, p0, Ll/ۗۛ᩵;->ܽ:I
-
-    return v0
-.end method
-
-.method public final ۤ()Ljava/lang/String;
-    .locals 1
-
-    .line 43
-    invoke-virtual {p0}, Ll/ۗܿ᩵;->ۜ()Ll/ۤ۫᩵;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ll/ۤ۫᩵;->۫:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ᩵()I
-    .locals 2
-
-    .line 74
-    iget-object v0, p0, Ll/ۗۛ᩵;->֡:Ll/۟ۨۡ;
-
-    .line 58
-    instance-of v1, v0, Ll/᩷ۨۡ;
-
-    if-eqz v1, :cond_0
 
     const/4 v0, 0x0
 
+    return v0
+.end method
+
+.method public final getSize()J
+    .locals 2
+
+    .line 69
+    iget-wide v0, p0, Ll/ۗۛ᩵;->֡:J
+
+    return-wide v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    const/16 v0, 0x16
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    .line 126
+    new-instance v0, Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "SmbQueryInfoStandard[allocationSize="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Ll/ۗۛ᩵;->ܰ:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ",endOfFile="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Ll/ۗۛ᩵;->֡:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ",numberOfLinks="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ll/ۗۛ᩵;->۟:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ",deletePending="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Ll/ۗۛ᩵;->᩶:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ",directory="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Ll/ۗۛ᩵;->ܿ:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, "]"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final ۙ(II[B)I
+    .locals 2
+
+    .line 81
+    invoke-static {p1, p3}, Ll/֡ܰ᩵;->ۤ(I[B)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ll/ۗۛ᩵;->ܰ:J
+
+    add-int/lit8 p2, p1, 0x8
+
+    .line 83
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->ۤ(I[B)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ll/ۗۛ᩵;->֡:J
+
+    add-int/lit8 p2, p1, 0x10
+
+    .line 85
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result p2
+
+    iput p2, p0, Ll/ۗۛ᩵;->۟:I
+
+    add-int/lit8 p2, p1, 0x14
+
+    add-int/lit8 v0, p1, 0x15
+
+    .line 87
+    aget-byte p2, p3, p2
+
+    and-int/lit16 p2, p2, 0xff
+
+    const/4 v1, 0x0
+
+    if-lez p2, :cond_0
+
+    const/4 p2, 0x1
+
     goto :goto_0
 
-    .line 60
     :cond_0
-    instance-of v1, v0, Ll/ܺۨۡ;
+    const/4 p2, 0x0
 
-    if-eqz v1, :cond_1
+    :goto_0
+    iput-boolean p2, p0, Ll/ۗۛ᩵;->᩶:Z
 
-    const/4 v0, 0x1
+    add-int/lit8 p2, p1, 0x16
 
-    goto :goto_0
+    .line 88
+    aget-byte p3, p3, v0
 
-    .line 62
+    and-int/lit16 p3, p3, 0xff
+
+    if-lez p3, :cond_1
+
+    const/4 v1, 0x1
+
     :cond_1
-    instance-of v1, v0, Ll/ᩴۨۡ;
+    iput-boolean v1, p0, Ll/ۗۛ᩵;->ܿ:Z
 
-    if-eqz v1, :cond_2
+    sub-int/2addr p2, p1
 
-    const/4 v0, 0x2
+    return p2
+.end method
 
-    goto :goto_0
+.method public final ۙ(I[B)I
+    .locals 3
 
-    .line 64
-    :cond_2
-    instance-of v1, v0, Ll/ۡۨۡ;
+    .line 112
+    iget-wide v0, p0, Ll/ۗۛ᩵;->ܰ:J
 
-    if-eqz v1, :cond_3
+    invoke-static {v0, v1, p1, p2}, Ll/֡ܰ᩵;->ۤ(JI[B)V
 
-    const/4 v0, 0x3
+    add-int/lit8 v0, p1, 0x8
 
-    goto :goto_0
+    .line 114
+    iget-wide v1, p0, Ll/ۗۛ᩵;->֡:J
 
-    .line 66
-    :cond_3
-    instance-of v1, v0, Ll/᩵ۨۡ;
+    invoke-static {v1, v2, v0, p2}, Ll/֡ܰ᩵;->ۤ(JI[B)V
 
-    if-eqz v1, :cond_4
+    add-int/lit8 v0, p1, 0x10
 
-    const/4 v0, 0x4
+    .line 116
+    iget v1, p0, Ll/ۗۛ᩵;->۟:I
 
-    goto :goto_0
+    int-to-long v1, v1
 
-    .line 68
-    :cond_4
-    instance-of v1, v0, Ll/ᩳۨۡ;
+    invoke-static {v1, v2, v0, p2}, Ll/֡ܰ᩵;->᩷(JI[B)V
 
-    if-eqz v1, :cond_5
+    add-int/lit8 v0, p1, 0x14
+
+    add-int/lit8 v1, p1, 0x15
+
+    .line 118
+    iget-boolean v2, p0, Ll/ۗۛ᩵;->᩶:Z
+
+    int-to-byte v2, v2
+
+    aput-byte v2, p2, v0
+
+    add-int/lit8 v0, p1, 0x16
+
+    .line 119
+    iget-boolean v2, p0, Ll/ۗۛ᩵;->ܿ:Z
+
+    int-to-byte v2, v2
+
+    aput-byte v2, p2, v1
+
+    sub-int/2addr v0, p1
+
+    return v0
+.end method
+
+.method public final ۡ()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final ᩷()B
+    .locals 1
 
     const/4 v0, 0x5
 
-    goto :goto_0
-
-    .line 70
-    :cond_5
-    instance-of v0, v0, Ll/۠ۨۡ;
-
-    if-eqz v0, :cond_6
-
-    const/4 v0, 0x6
-
-    :goto_0
     return v0
-
-    .line 73
-    :cond_6
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Invalid reference"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

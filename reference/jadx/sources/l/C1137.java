@@ -1,147 +1,143 @@
 package l;
 
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.util.Arrays;
+import org.bouncycastle.crypto.prng.X931RNG;
 
-/* JADX INFO: renamed from: l.֨۬ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1S8 */
+/* JADX INFO: renamed from: l.֨ۧܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86JZ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1137 extends InputStream implements InterfaceC20818 {
+public final class C1137 {
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f5105 = 0;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final long f4216;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10748 f5107;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f4217;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public InputStream f5109;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f4218;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final byte[] f5106 = new byte[4096];
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public int f5112 = 0;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f5111 = 0;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f5114 = 0;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f5110 = false;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public IOException f5113 = null;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final byte[] f4219;
 
     /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final byte[] f5108 = new byte[1];
+    public final int f4220;
 
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f4221;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f4222;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final int f4223;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final int f4224;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final int f4225;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f4226;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f4227;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f4228;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int f4229;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f4230;
+
+    public C1137(long j, byte[] bArr) throws IOException {
+        this.f4216 = j;
+        if (!C7103.m19446(bArr)) {
+            throw new IOException("Invalid TGA header");
+        }
+        this.f4219 = bArr;
+        this.f4226 = bArr[0] & 255;
+        this.f4224 = bArr[2] & 255;
+        this.f4218 = C8594.m23096(3, bArr);
+        this.f4221 = bArr[1] != 0 ? C8594.m23096(5, bArr) : 0;
+        this.f4222 = bArr[7] & 255;
+        short sM23096 = (short) C8594.m23096(8, bArr);
+        this.f4223 = sM23096;
+        short sM23097 = (short) C8594.m23096(10, bArr);
+        this.f4229 = sM23097;
+        int iM23096 = C8594.m23096(12, bArr);
+        this.f4230 = iM23096;
+        int iM23097 = C8594.m23096(14, bArr);
+        this.f4220 = iM23097;
+        int i = sM23096 + iM23096;
+        this.f4225 = i;
+        int i2 = sM23097 + iM23097;
+        this.f4228 = i2;
+        this.f4217 = bArr[16] & 255;
+        this.f4227 = bArr[17] & 255;
+        if (i <= 0 || i2 <= 0) {
+            throw new IOException("Invalid TGA canvas dimensions");
+        }
+        if (((long) i) * ((long) i2) > j || ((long) iM23096) * ((long) iM23097) > j) {
+            throw new C9339("TGA dimensions exceed decode limits");
+        }
     }
 
-    public C1137(InputStream inputStream, InterfaceC10748 interfaceC10748) {
-        inputStream.getClass();
-        this.f5109 = inputStream;
-        this.f5107 = interfaceC10748;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m4212(boolean z) {
+        return (((long) this.f4221) * 4) + X931RNG.BLOCK64_RESEED_MAX + ((!z || this.f4224 < 9) ? 0L : ((long) this.f4220) * 16) + ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS;
     }
 
-    @Override // java.io.InputStream
-    public final int read() {
-        byte[] bArr = this.f5108;
-        if (read(bArr, 0, 1) == -1) {
-            return -1;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4213(C1137 c1137) throws IOException {
+        if (!Arrays.equals(this.f4219, c1137.f4219)) {
+            throw new IOException("TGA header changed during decoding");
         }
-        return bArr[0] & 255;
     }
 
-    @Override // java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) throws IOException {
-        int i3;
-        byte[] bArr2 = this.f5106;
-        if (i < 0 || i2 < 0 || (i3 = i + i2) < 0 || i3 > bArr.length) {
-            throw new IndexOutOfBoundsException();
-        }
-        if (i2 == 0) {
-            return 0;
-        }
-        if (this.f5109 == null) {
-            throw new C21599("Stream closed");
-        }
-        IOException iOException = this.f5113;
-        if (iOException != null) {
-            throw iOException;
-        }
-        int i4 = 0;
-        while (true) {
-            try {
-                int iMin = Math.min(this.f5111, i2);
-                System.arraycopy(bArr2, this.f5112, bArr, i, iMin);
-                int i5 = this.f5112 + iMin;
-                this.f5112 = i5;
-                int i6 = this.f5111 - iMin;
-                this.f5111 = i6;
-                i += iMin;
-                i2 -= iMin;
-                i4 += iMin;
-                int i7 = this.f5114;
-                if (i5 + i6 + i7 == 4096) {
-                    System.arraycopy(bArr2, i5, bArr2, 0, i6 + i7);
-                    this.f5112 = 0;
-                }
-                if (i2 == 0 || this.f5110) {
-                    break;
-                    break;
-                }
-                int i8 = this.f5112 + this.f5111 + this.f5114;
-                int i9 = this.f5109.read(bArr2, i8, 4096 - i8);
-                if (i9 == -1) {
-                    this.f5110 = true;
-                    this.f5111 = this.f5114;
-                    this.f5114 = 0;
-                } else {
-                    int i10 = this.f5114 + i9;
-                    this.f5114 = i10;
-                    int iMo1309 = this.f5107.mo1309(this.f5112, i10, bArr2);
-                    this.f5111 = iMo1309;
-                    this.f5114 -= iMo1309;
-                }
-            } catch (IOException e) {
-                this.f5113 = e;
-                throw e;
-            }
-        }
-        if (i4 > 0) {
-            return i4;
-        }
-        return -1;
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public static boolean m4205(C1137 c1137) {
+        return c1137.f4224 >= 9;
     }
 
-    @Override // java.io.InputStream
-    public final int available() throws IOException {
-        if (this.f5109 == null) {
-            throw new C21599("Stream closed");
-        }
-        IOException iOException = this.f5113;
-        if (iOException != null) {
-            throw iOException;
-        }
-        return this.f5111;
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public static boolean m4203(C1137 c1137) {
+        int i = c1137.f4224;
+        return i == 2 || i == 10;
     }
 
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        InputStream inputStream = this.f5109;
-        if (inputStream != null) {
-            try {
-                inputStream.close();
-            } finally {
-                this.f5109 = null;
-            }
-        }
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public static int m4204(C1137 c1137) {
+        return (c1137.f4217 + 7) / 8;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public static boolean m4211(C1137 c1137) {
+        return (c1137.f4227 & 15) != 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m4196(C1137 c1137, int i) {
+        return (c1137.f4227 & 16) == 0 ? i - c1137.f4223 : (c1137.f4230 - 1) - i;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static int m4208(C1137 c1137, int i) {
+        return (c1137.f4227 & 32) != 0 ? i - c1137.f4229 : (c1137.f4220 - 1) - i;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static int m4199(C1137 c1137, int i) {
+        return (c1137.f4227 & 16) == 0 ? i + c1137.f4223 : (c1137.f4230 - 1) - i;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static int m4210(C1137 c1137, int i) {
+        return (c1137.f4227 & 32) != 0 ? i + c1137.f4229 : (c1137.f4220 - 1) - i;
     }
 }

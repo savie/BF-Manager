@@ -1,16 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۖ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q86R */
+import java.lang.reflect.GenericArrayType;
+import java.lang.reflect.Type;
+
+/* JADX INFO: renamed from: l.᩶ۨܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 47TI */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C21297 extends EnumC19181 {
-    public C21297(String str, int i) {
-        super(str, i, null);
+public final class C21297 implements GenericArrayType {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Type f67907;
+
+    public C21297(Type type) {
+        C17359.requireNonNull(type);
+        this.f67907 = C7872.m21404(type);
     }
 
-    @Override // l.EnumC19181, l.InterfaceC8598
-    /* JADX INFO: renamed from: ۙ */
-    public Double mo20826(C5379 c5379) {
-        return Double.valueOf(c5379.m14920());
+    @Override // java.lang.reflect.GenericArrayType
+    public final Type getGenericComponentType() {
+        return this.f67907;
+    }
+
+    public final boolean equals(Object obj) {
+        return (obj instanceof GenericArrayType) && C7872.m21407(this, (GenericArrayType) obj);
+    }
+
+    public final int hashCode() {
+        return this.f67907.hashCode();
+    }
+
+    public final String toString() {
+        return C7872.m21412(this.f67907) + "[]";
     }
 }

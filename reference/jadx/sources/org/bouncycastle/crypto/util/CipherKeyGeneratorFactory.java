@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.util;
 
 import java.security.SecureRandom;
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -14,7 +14,7 @@ import org.bouncycastle.internal.asn1.kisa.KISAObjectIdentifiers;
 import org.bouncycastle.internal.asn1.ntt.NTTObjectIdentifiers;
 import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherKeyGeneratorFactory {
     public static CipherKeyGenerator createCipherKeyGenerator(SecureRandom secureRandom, int i) {
         CipherKeyGenerator cipherKeyGenerator = new CipherKeyGenerator();
@@ -81,6 +81,6 @@ public class CipherKeyGeneratorFactory {
         if (PKCSObjectIdentifiers.RC2_CBC.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
             return createCipherKeyGenerator(secureRandom, 128);
         }
-        throw new IllegalArgumentException(C22979.m50820("cannot recognise cipher: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("cannot recognise cipher: ", aSN1ObjectIdentifier));
     }
 }

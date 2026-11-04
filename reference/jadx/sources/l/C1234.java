@@ -1,38 +1,27 @@
 package l;
 
-import android.widget.SeekBar;
-import android.widget.TextView;
+/* JADX INFO: renamed from: l.֨ܳ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1234 extends AbstractC6323 {
 
-/* JADX INFO: renamed from: l.֨ܽۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P7JT */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1234 implements SeekBar.OnSeekBarChangeListener {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC7135 f4486;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13230 f5402;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ TextView f5403;
-
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onStartTrackingTouch(SeekBar seekBar) {
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C1234(ActivityC7135 activityC7135) {
+        super(true);
+        this.f4486 = activityC7135;
     }
 
-    public C1234(C13230 c13230, TextView textView) {
-        this.f5402 = c13230;
-        this.f5403 = textView;
-    }
-
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onProgressChanged(SeekBar seekBar, int i, boolean z) {
-        this.f5403.setText(String.valueOf(i + 2));
-    }
-
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onStopTrackingTouch(SeekBar seekBar) {
-        int progress = seekBar.getProgress() + 2;
-        C13230 c13230 = this.f5402;
-        c13230.m42292().edit().putInt(c13230.m13157(), progress).apply();
-        c13230.mo13141((CharSequence) String.valueOf(progress));
+    @Override // l.AbstractC6323
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2768() {
+        ActivityC7135 activityC7135 = this.f4486;
+        if (activityC7135.f23595.getVisibility() == 0) {
+            ActivityC7135.m19698(activityC7135);
+        } else {
+            activityC7135.finish();
+        }
     }
 }

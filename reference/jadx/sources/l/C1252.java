@@ -1,32 +1,27 @@
 package l;
 
-import android.graphics.Typeface;
+import android.text.Spanned;
+import android.widget.TextView;
+import java.lang.ref.WeakReference;
 
-/* JADX INFO: renamed from: l.֨ܿ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 857F */
+/* JADX INFO: renamed from: l.֨ܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: V91O */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1252 extends C22234 {
+public final class C1252 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC20864 f5440;
+    public final WeakReference f4530;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4485(Typeface typeface) {
-        AbstractC20864 abstractC20864 = this.f5440;
-        if (abstractC20864 != null) {
-            abstractC20864.m46900(typeface);
+    public static TextView m4534(Spanned spanned) {
+        C1252[] c1252Arr = (C1252[]) spanned.getSpans(0, spanned.length(), C1252.class);
+        if (c1252Arr == null || c1252Arr.length <= 0) {
+            return null;
         }
+        return (TextView) c1252Arr[0].f4530.get();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4484(int i) {
-        AbstractC20864 abstractC20864 = this.f5440;
-        if (abstractC20864 != null) {
-            abstractC20864.m46899(i);
-        }
-    }
-
-    public C1252(AbstractC20864 abstractC20864) {
-        this.f5440 = abstractC20864;
+    public C1252(TextView textView) {
+        this.f4530 = new WeakReference(textView);
     }
 }

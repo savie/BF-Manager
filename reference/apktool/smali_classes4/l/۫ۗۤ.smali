@@ -1,81 +1,55 @@
-.class public abstract Ll/۫ۗۤ;
-.super Ll/ܶۗۤ;
-.source "57L9"
+.class public final synthetic Ll/۫ۗۤ;
+.super Ljava/lang/Object;
+.source "G7I1"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
-
-
-# instance fields
-.field public final synthetic ۫:Ll/ۧۗۤ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
-    .locals 0
-
-    .line 312
-    iput-object p1, p0, Ll/۫ۗۤ;->۫:Ll/ۧۗۤ;
-
-    .line 313
-    invoke-direct {p0, p1, p2}, Ll/ܶۗۤ;-><init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
-
-    return-void
-.end method
+.implements Ll/ۖ᩵ۤ;
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic negate()Ljava/util/function/Predicate;
+.method public final negate()Ll/֨ۗۤ;
     .locals 1
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
+
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->ۙ(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public abstract ۙ(Ll/ܽۤۤ;)Ll/ۤ᩵ۤ;
+.method public final ۙ(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p1}, Ljava/lang/Character;->isEmoji(I)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final varargs ۙ(Ll/᩷ۗۤ;Ll/᩷ۗۤ;[I)V
-    .locals 2
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
 
-    .line 336
-    iget-object v0, p0, Ll/ܶۗۤ;->֡:Ll/᩸᩷۟;
-
-    new-instance v1, Ll/֡ۗۤ;
-
-    invoke-direct {v1, p0, p1, p2, p3}, Ll/֡ۗۤ;-><init>(Ll/۫ۗۤ;Ll/᩷ۗۤ;Ll/᩷ۗۤ;[I)V
-
-    invoke-virtual {v0, v1}, Ll/᩸᩷۟;->ܰ(Ljava/lang/Object;)Ll/᩸᩷۟;
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->᩷(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 
-    iput-object p1, p0, Ll/ܶۗۤ;->֡:Ll/᩸᩷۟;
-
-    return-void
+    return-object p1
 .end method

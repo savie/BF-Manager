@@ -1,9 +1,9 @@
 package org.bouncycastle.util.test;
 
-import l.C12441;
-import l.C22697;
-import l.C9023;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C10732;
+import l.C22783;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.util.Strings;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -29,15 +29,15 @@ public class SimpleTestResult implements TestResult {
     }
 
     public static TestResult failed(Test test, String str, Object obj, Object obj2) {
-        StringBuilder sbM23356 = C9023.m23356(str);
+        StringBuilder sbM27333 = C10732.m27333(str);
         String str2 = SEPARATOR;
-        sbM23356.append(str2);
-        sbM23356.append("Expected: ");
-        sbM23356.append(obj);
-        sbM23356.append(str2);
-        sbM23356.append("Found   : ");
-        sbM23356.append(obj2);
-        return failed(test, sbM23356.toString());
+        sbM27333.append(str2);
+        sbM27333.append("Expected: ");
+        sbM27333.append(obj);
+        sbM27333.append(str2);
+        sbM27333.append("Found   : ");
+        sbM27333.append(obj2);
+        return failed(test, sbM27333.toString());
     }
 
     public static TestResult failed(Test test, String str, Throwable th) {
@@ -45,10 +45,10 @@ public class SimpleTestResult implements TestResult {
     }
 
     public static String failedMessage(String str, String str2, String str3, String str4) {
-        StringBuilder sbM30914 = C12441.m30914(str, " failing ", str2);
+        StringBuilder sbM51387 = C22783.m51387(str, " failing ", str2);
         String str5 = SEPARATOR;
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sbM30914, str5, "    expected: ", str3, str5);
-        return C22697.m50267(sbM30914, "    got     : ", str4);
+        C4794.m14774(sbM51387, str5, "    expected: ", str3, str5);
+        return C8947.m23910(sbM51387, "    got     : ", str4);
     }
 
     public static TestResult successful(Test test, String str) {

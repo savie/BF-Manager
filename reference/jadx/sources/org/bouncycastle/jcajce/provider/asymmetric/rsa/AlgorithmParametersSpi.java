@@ -22,7 +22,7 @@ import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.jcajce.provider.util.DigestFactory;
 import org.bouncycastle.jcajce.util.MessageDigestUtils;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
 
     public class OAEP extends AlgorithmParametersSpi {

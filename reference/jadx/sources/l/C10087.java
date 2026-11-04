@@ -1,41 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤۚܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N8Q4 */
+import java.util.HashMap;
+
+/* JADX INFO: renamed from: l.ۢۧᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B4S2 */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C10087 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC6558[] f34440;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object f34441;
+    public final HashMap f32329;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C9456 f34442;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f32330;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C5490[] f34443;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f32331;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f34444;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f32332;
 
-    public C10087(C5490[] c5490Arr, InterfaceC6558[] interfaceC6558Arr, C9456 c9456, Object obj) {
-        C2023.m6507(c5490Arr.length == interfaceC6558Arr.length);
-        this.f34443 = c5490Arr;
-        this.f34440 = (InterfaceC6558[]) interfaceC6558Arr.clone();
-        this.f34442 = c9456;
-        this.f34441 = obj;
-        this.f34444 = c5490Arr.length;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C14562 f32333;
+
+    public /* synthetic */ C10087(int i) {
+        this();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m25496(int i) {
-        return this.f34443[i] != null;
+    public C10087(C19038 c19038) {
+        this.f32333 = new C14562();
+        HashMap map = new HashMap();
+        this.f32332 = map;
+        HashMap map2 = new HashMap();
+        this.f32329 = map2;
+        HashMap map3 = new HashMap();
+        this.f32331 = map3;
+        this.f32330 = new HashMap();
+        this.f32333 = c19038.f61667;
+        map.putAll(c19038.f61669);
+        map2.putAll(c19038.f61663);
+        map3.putAll(c19038.f61664);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m25497(C10087 c10087, int i) {
-        return c10087 != null && C13638.equals(this.f34443[i], c10087.f34443[i]) && C13638.equals(this.f34440[i], c10087.f34440[i]);
+    public C10087() {
+        this.f32333 = new C14562();
+        this.f32332 = new HashMap();
+        this.f32329 = new HashMap();
+        this.f32331 = new HashMap();
+        this.f32330 = new HashMap();
     }
 }

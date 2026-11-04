@@ -1,29 +1,55 @@
-.class public abstract Ll/ܽۢۨ;
+.class public final Ll/ܽۢۨ;
 .super Ljava/lang/Object;
-.source "Q94P"
+.source "K5E8"
 
-
-# instance fields
-.field public final ۙ:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
-
-    .line 126
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 127
-    iput-object p1, p0, Ll/ܽۢۨ;->ۙ:Ljava/lang/String;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public abstract ۙ()Ljava/lang/String;
-.end method
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-.method public abstract ۙ(Ljava/lang/String;)V
+    .line 119
+    check-cast p1, Ll/ܺۢۨ;
+
+    check-cast p2, Ll/ܺۢۨ;
+
+    .line 121
+    invoke-virtual {p1}, Ll/ܺۢۨ;->۫()Ll/ܽۖۨ;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ll/ܽۖۨ;->ܰ:Ll/᩵۠ۨ;
+
+    .line 209
+    iget p1, p1, Ll/ۤ۠ۨ;->᩶:I
+
+    .line 122
+    invoke-virtual {p2}, Ll/ܺۢۨ;->۫()Ll/ܽۖۨ;
+
+    move-result-object p2
+
+    iget-object p2, p2, Ll/ܽۖۨ;->ܰ:Ll/᩵۠ۨ;
+
+    .line 209
+    iget p2, p2, Ll/ۤ۠ۨ;->᩶:I
+
+    if-ge p1, p2, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    if-ne p1, p2, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
 .end method

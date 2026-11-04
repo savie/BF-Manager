@@ -18,13 +18,13 @@
     .locals 4
 
     .line 34
-    sget v0, Ll/ۖ۟ܶ;->֡᩹:I
+    sget v0, Ll/ۧ۬ܺ;->ܿܳ:I
 
-    sget v1, Ll/ۖ۟ܶ;->ۧ᩹:I
+    sget v1, Ll/ۧ۬ܺ;->֨ܳ:I
 
-    sget v2, Ll/ۖ۟ܶ;->ܽ᩹:I
+    sget v2, Ll/ۧ۬ܺ;->֡ܳ:I
 
-    sget v3, Ll/ۖ۟ܶ;->᩻᩹:I
+    sget v3, Ll/ۧ۬ܺ;->ۡܳ:I
 
     filled-new-array {v0, v1, v2, v3}, [I
 
@@ -101,7 +101,7 @@
     .line 85
     sget-object v0, Lcom/google/android/material/color/HarmonizedColorAttributes;->HARMONIZED_MATERIAL_ATTRIBUTES:[I
 
-    sget v1, Ll/ᩴ۟ܶ;->ۧ۠:I
+    sget v1, Ll/ۘ۬ܺ;->֨ۗ:I
 
     invoke-static {v0, v1}, Lcom/google/android/material/color/HarmonizedColorAttributes;->create([II)Lcom/google/android/material/color/HarmonizedColorAttributes;
 

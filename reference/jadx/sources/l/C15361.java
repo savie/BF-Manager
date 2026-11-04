@@ -1,48 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶܽ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4QP */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15361 extends AbstractC11833 {
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C14655 f50036;
+/* JADX INFO: renamed from: l.ܳ۬ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6EN */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C15361 implements Function {
 
-    public C15361(C12063 c12063, C13825 c13825, byte b) {
-        this.f50036 = (C14655) c12063.f40354.m44688((int) C12076.m30047(c13825.m33646(b + 1)));
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2551 f50117;
+
+    public /* synthetic */ C15361(C2551 c2551) {
+        this.f50117 = c2551;
     }
 
-    public C15361(C14655 c14655) {
-        this.f50036 = c14655;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4463(C4651 c4651) {
-        byte[] bArrM30048 = C12076.m30048(this.f50036.m23325());
-        c4651.m12841(EnumC18182.VALUE_STRING.f58128 | ((bArrM30048.length - 1) << 5));
-        c4651.m12837(bArrM30048, 0, bArrM30048.length);
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4462(int i) {
-        return C12076.m30051(this.f50036.m23325()) + i + 1;
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo4464(AbstractC11833 abstractC11833) {
-        return this.f50036.m23325() - ((C15361) abstractC11833).f50036.m23325();
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ᩸ */
-    public final EnumC18182 mo4465() {
-        return EnumC18182.VALUE_STRING;
-    }
-
-    public final int hashCode() {
-        return this.f50036.hashCode();
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        C18959 c18959 = (C18959) obj;
+        int i = C13124.f41929[c18959.getType().ordinal()];
+        C2551 c2551 = this.f50117;
+        switch (i) {
+            case 1:
+            case 2:
+                C2551 c2551M5668 = c2551.mo8527().m5668(((AbstractC15251) c18959).mo18926());
+                if (c2551M5668 == null || C17446.m40944(c2551, c2551M5668)) {
+                    return null;
+                }
+                break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                C17467 c17467M5670 = c2551.mo8527().m5670((C14022) ((C3319) c18959).m10937());
+                if (c17467M5670 == null || C17446.m40945(c2551, c17467M5670)) {
+                    return null;
+                }
+                break;
+            default:
+                return null;
+        }
+        return Boolean.FALSE;
     }
 }

@@ -1,71 +1,32 @@
 package l;
 
-import java.util.NoSuchElementException;
-
-/* JADX INFO: renamed from: l.ۙᩴᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J1MI */
+/* JADX INFO: renamed from: l.ۙۤۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M605 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4837 implements InterfaceC13722 {
+public final class C4837 extends AbstractC19819 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC13722 f16993;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10802 f16897;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11894 f16994;
-
-    public C4837(C11894 c11894, InterfaceC13722 interfaceC13722) {
-        this.f16994 = c11894;
-        this.f16993 = interfaceC13722;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4837(C10802 c10802, C24975 c24975, int i, int i2) {
+        super(c24975, i, i2);
+        this.f16897 = c10802;
     }
 
-    @Override // java.util.ListIterator
-    public final int nextIndex() {
-        return this.f16993.nextIndex() - this.f16994.f39905;
+    @Override // l.AbstractC19819
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object mo14867(C8565 c8565, int i) {
+        return Integer.valueOf(c8565.m22996());
     }
 
-    @Override // java.util.ListIterator
-    public final int previousIndex() {
-        return this.f16993.previousIndex() - this.f16994.f39905;
-    }
-
-    @Override // java.util.Iterator, java.util.ListIterator
-    public final boolean hasNext() {
-        return this.f16993.nextIndex() < this.f16994.f39904;
-    }
-
-    @Override // l.InterfaceC21086
-    public final boolean hasPrevious() {
-        return this.f16993.previousIndex() >= this.f16994.f39905;
-    }
-
-    @Override // java.util.Iterator, java.util.ListIterator
+    @Override // l.AbstractC19819, java.util.ListIterator, java.util.Iterator
     public final Object next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+        int iNextIndex = nextIndex();
+        C10802 c10802 = this.f16897;
+        if (iNextIndex == c10802.f34283.f73776) {
+            c10802.f34281 = m45585();
         }
-        return this.f16993.next();
-    }
-
-    @Override // l.InterfaceC21086, java.util.ListIterator
-    public final Object previous() {
-        if (!hasPrevious()) {
-            throw new NoSuchElementException();
-        }
-        return this.f16993.previous();
-    }
-
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final void add(Object obj) {
-        this.f16993.add(obj);
-    }
-
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final void set(Object obj) {
-        this.f16993.set(obj);
-    }
-
-    @Override // l.InterfaceC13722, java.util.Iterator, java.util.ListIterator
-    public final void remove() {
-        this.f16993.remove();
+        return (Integer) super.next();
     }
 }

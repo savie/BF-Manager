@@ -2,7 +2,7 @@ package org.bouncycastle.asn1;
 
 import java.io.OutputStream;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ASN1Generator {
     public OutputStream _out;
 

@@ -1,37 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13052 {
+import com.alipay.sdk.m.p.d;
+import java.security.spec.MGF1ParameterSpec;
+import java.security.spec.PSSParameterSpec;
+import java.util.function.Supplier;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public InterfaceC13717 f43501;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int[] f43502;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public C1056 f43503;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C23595 f43504;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f43505;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C23595 f43506;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f43507;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f43508;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public char[] f43509;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C23595 f43510;
+/* JADX INFO: renamed from: l.۫ۤ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1VV */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C13052 implements Supplier {
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return new C12306(257, XMSSKeyParameters.SHA_256, d.a, "SHA256withRSA/PSS", new PSSParameterSpec(XMSSKeyParameters.SHA_256, "MGF1", MGF1ParameterSpec.SHA256, 32, 1));
+    }
 }

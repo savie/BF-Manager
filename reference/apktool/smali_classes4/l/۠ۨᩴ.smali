@@ -1,52 +1,168 @@
-.class public Ll/۠ۨᩴ;
-.super Ll/ۤۨᩴ;
-.source "H32"
+.class public final synthetic Ll/۠ۨᩴ;
+.super Ljava/lang/Object;
+.source "097P"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
+.implements Ljava/util/function/Predicate;
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x17c644f4f4567f9L
+# instance fields
+.field public final synthetic ܰ:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, Ll/۠ۨᩴ;->ܰ:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final subList(II)Ljava/util/List;
-    .locals 4
-
-    .line 830
-    invoke-virtual {p0, p1}, Ll/᩷ۨᩴ;->ۙ(I)V
-
-    .line 831
-    invoke-virtual {p0, p2}, Ll/᩷ۨᩴ;->ۙ(I)V
-
-    if-gt p1, p2, :cond_0
-
-    .line 835
-    new-instance v0, Ll/۠ۨᩴ;
-
-    .line 825
-    invoke-direct {v0, p0, p1, p2}, Ll/ۤۨᩴ;-><init>(Ll/᩷ۨᩴ;II)V
-
-    return-object v0
-
-    .line 832
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, ") is greater than end index ("
-
-    const-string v2, ")"
-
-    const-string v3, "Start index ("
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
     .line 0
-    invoke-static {v3, p1, v1, v2, p2}, Ll/۠ۜ᩵;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object p1
 
-    .line 832
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-object p1
+.end method
 
-    throw v0
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
+
+    .line 0
+    iget v0, p0, Ll/۠ۨᩴ;->ܰ:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    iget v0, p0, Ll/۠ۨᩴ;->ܰ:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 7
+    check-cast p1, Ll/ܳ֫᩺;
+
+    .line 10
+    invoke-static {p1}, Ll/ܽۚۗ;->nonNull(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 14
+    :pswitch_0
+    check-cast p1, Ll/ۙۧ᩵;
+
+    .line 62
+    invoke-virtual {p1}, Ll/ۙۧ᩵;->᩷()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۚ۠ۗ;
+
+    invoke-virtual {p1}, Ll/ۚ۠ۗ;->᩸()Z
+
+    move-result p1
+
+    return p1
+
+    .line 0
+    :pswitch_1
+    check-cast p1, Ll/ۤܶ֫;
+
+    .line 192
+    iget p1, p1, Ll/ۤܶ֫;->ۤ:I
+
+    const v0, 0x624c706e
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    .line 0
+    :pswitch_2
+    check-cast p1, Ll/᩷ۨᩴ;
+
+    invoke-virtual {p1}, Ll/᩷ۨᩴ;->᩺ۙ()Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

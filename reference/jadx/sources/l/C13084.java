@@ -1,17 +1,19 @@
 package l;
 
-import com.alipay.sdk.m.p.d;
-import java.security.spec.MGF1ParameterSpec;
-import java.security.spec.PSSParameterSpec;
-import java.util.function.Supplier;
-import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
-
-/* JADX INFO: renamed from: l.۬ۨۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B1VV */
+/* JADX INFO: renamed from: l.۫ۨۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5I3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13084 implements Supplier {
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        return new C10262(257, XMSSKeyParameters.SHA_256, d.a, "SHA256withRSA/PSS", new PSSParameterSpec(XMSSKeyParameters.SHA_256, "MGF1", MGF1ParameterSpec.SHA256, 32, 1));
+public final class C13084 extends AbstractC1944 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1898 f41828;
+
+    public C13084(C1898 c1898) {
+        this.f41828 = c1898;
+    }
+
+    @Override // l.InterfaceC6351
+    public final InterfaceC6813 getValue() {
+        return this.f41828.f6396.mo7875();
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISAACEngine implements StreamCipher {
     public final int sizeL = 8;
     public final int stateArraySize = 256;
@@ -219,7 +219,7 @@ public class ISAACEngine implements StreamCipher {
     @Override // org.bouncycastle.crypto.StreamCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to ISAAC init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to ISAAC init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         setKey(key);

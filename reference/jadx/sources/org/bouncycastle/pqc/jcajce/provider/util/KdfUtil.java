@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.jcajce.provider.util;
 
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -134,6 +134,6 @@ public class KdfUtil {
         if (aSN1ObjectIdentifier.equals((ASN1Primitive) NISTObjectIdentifiers.id_shake256)) {
             return new SHAKEDigest(256);
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest OID: ", aSN1ObjectIdentifier));
     }
 }

@@ -1,122 +1,107 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ᩴᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B8CV */
+import android.content.pm.PackageInstaller;
+import com.umeng.analytics.pro.am;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: renamed from: l.᩹᩺ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LAQJ */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23887 extends AbstractC5232 {
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public double f77374;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public double f77375;
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public double f77376;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public C7659 f77377;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public double f77378;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public double f77379;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C7659 f77380;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public C7659 f77381;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public double f77382;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public double f77383;
+public final class C23887 {
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public double f77384;
+    public String f77360;
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public double f77385;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f77358 = new ArrayList();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public double f77386;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public ArrayList f77359 = new ArrayList();
 
     /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public double f77387;
+    public long f77361 = 0;
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public double f77388;
+    public long f77362 = 0;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public double f77389;
-
-    @Override // l.AbstractC0998
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2809() {
-        double d = this.f77377.m36893()[0];
-        double d2 = this.f77380.m36893()[0];
-        if (d < 1.0E-5d) {
-            d = 1.0E-5d;
-        }
-        if (d2 < 1.0E-5d) {
-            d2 = 1.0E-5d;
-        }
-        if (d != this.f77378 || d2 != this.f77379) {
-            this.f77378 = d;
-            this.f77379 = d2;
-            double dM10098 = this.f4666.m10098() * d;
-            if (dM10098 >= 0.499d) {
-                dM10098 = 0.499d;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m53390(C22941 c22941, List list) throws IOException {
+        ArrayList arrayList;
+        C8002 entry = c22941.getEntry("manifest.json");
+        if (entry != null) {
+            try {
+                this.f77360 = AbstractC12454.m30925(new String(c22941.m51731(entry, (C3374) null), StandardCharsets.UTF_8)).m35343(am.o);
+            } catch (Exception unused) {
             }
-            double d3 = dM10098 * 6.283185307179586d;
-            this.f77385 = d3;
-            this.f77384 = Math.cos(d3);
-            double dSin = Math.sin(this.f77385) / (d2 * 2.0d);
-            double d4 = 1.0d / (dSin + 1.0d);
-            double d5 = this.f77384;
-            double d6 = 1.0d - d5;
-            double d7 = 0.5d * d6 * d4;
-            this.f77374 = d7;
-            this.f77375 = d6 * d4;
-            this.f77389 = d7;
-            this.f77388 = d5 * (-2.0d) * d4;
-            this.f77383 = (1.0d - dSin) * d4;
         }
-        double[] dArrM36893 = this.f18144.m36893();
-        double[] dArrM36894 = this.f77381.m36893();
-        double[] dArrM36895 = this.f18143.m36893();
-        double d8 = this.f77376;
-        double d9 = this.f77387;
-        double d10 = this.f77382;
-        double d11 = this.f77386;
-        double d12 = this.f77374;
-        double d13 = this.f77375;
-        double d14 = this.f77389;
-        double d15 = this.f77388;
-        double d16 = d10;
-        double d17 = this.f77383;
+        ArrayList arrayListM30296 = list != null ? C12127.m30296(c22941, list) : null;
+        Iterator it = c22941.m51742().iterator();
+        while (true) {
+            boolean zHasNext = it.hasNext();
+            arrayList = this.f77358;
+            if (!zHasNext) {
+                break;
+            }
+            C8002 c8002 = (C8002) it.next();
+            String name = c8002.getName();
+            if (C12127.m30297(name) && (arrayListM30296 == null || arrayListM30296.contains(name))) {
+                C14584.m35187(name, false);
+                System.out.println("add ".concat(name));
+                arrayList.add(c8002);
+                this.f77361 = c8002.getSize() + this.f77361;
+            }
+        }
+        for (C8002 c8003 : c22941.m51742()) {
+            if (!c8003.isDirectory() && c8003.getName().startsWith("Android/")) {
+                C14584.m35187(c8003.getName(), false);
+                this.f77359.add(c8003);
+                this.f77362 = c8003.getSize() + this.f77362;
+            }
+        }
+        Collections.sort(arrayList, new C0187(2));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m53388(C21649 c21649, PackageInstaller.Session session, ExecutorService executorService) throws Exception {
+        ArrayList arrayList = this.f77358;
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            executorService.submit(new RunnableC0766(c21649, (C8002) it.next(), session));
+        }
         int i = 0;
-        double d18 = d9;
-        double d19 = d11;
-        double d20 = d8;
-        while (i < 8) {
-            double d21 = dArrM36893[i];
-            d19 = (((d18 * d14) + ((d13 * d20) + (d12 * d21))) - (d15 * d16)) - (d19 * d17);
-            dArrM36895[i] = dArrM36894[i] * d19;
-            int i2 = i + 1;
-            double d22 = dArrM36893[i2];
-            d16 = (((d20 * d14) + ((d13 * d21) + (d12 * d22))) - (d15 * d19)) - (d16 * d17);
-            dArrM36895[i2] = dArrM36894[i2] * d16;
-            i += 2;
-            d18 = d21;
-            d20 = d22;
+        while (i < arrayList.size()) {
+            if (((Runnable) c21649.f69114.poll(500L, TimeUnit.MILLISECONDS)) != null) {
+                i++;
+            } else if (c21649.f69113) {
+                return;
+            } else {
+                c21649.m49175();
+            }
         }
-        this.f77376 = d20;
-        this.f77387 = d18;
-        this.f77382 = d16 + 1.0E-26d;
-        this.f77386 = d19 - 1.0E-26d;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m53389(C21649 c21649, C10745 c10745, ExecutorService executorService) throws Exception {
+        ArrayList<C8002> arrayList = this.f77359;
+        if (arrayList.isEmpty()) {
+            return;
+        }
+        c10745.m27396();
+        c10745.m27394(false);
+        C3374 c3374 = new C3374(this.f77362);
+        c3374.m11078(new C21151(c10745));
+        c21649.f69111 = c3374;
+        for (C8002 c8002 : arrayList) {
+            executorService.submit(new RunnableC18665(c21649, c8002, C6382.f21566.m49876(C14584.m35187(c8002.getName(), false)), false));
+        }
+        C5261.m15837(executorService);
+        c21649.m49175();
     }
 }

@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.x509.DSAParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
     public DSAParameterSpec currentSpec;
 

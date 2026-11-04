@@ -2,32 +2,32 @@ package bin.mt.plugin.api.drawable;
 
 import android.graphics.drawable.Drawable;
 import bin.mt.plugin.api.util.ServiceLoader;
-import l.C0252;
-import l.C0649;
-import l.C21111;
-import l.InterfaceC12691;
+import l.C14538;
+import l.C24236;
+import l.C25272;
+import l.InterfaceC15888;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialIconsImpl implements InterfaceC12691 {
+public class MaterialIconsImpl implements InterfaceC15888 {
     public static void register() {
-        ServiceLoader.register(InterfaceC12691.class, new MaterialIconsImpl());
+        ServiceLoader.register(InterfaceC15888.class, new MaterialIconsImpl());
     }
 
-    @Override // l.InterfaceC12691
+    @Override // l.InterfaceC15888
     public Drawable get(String str) {
-        C21111 c21111M2944 = C0649.m2944(str, true);
-        if (c21111M2944 != null) {
-            return c21111M2944;
+        C24236 c24236M35076 = C14538.m35076(str, true);
+        if (c24236M35076 != null) {
+            return c24236M35076;
         }
-        throw new IllegalArgumentException(C0252.m1693("Filled material icon not found: ", str));
+        throw new IllegalArgumentException(C25272.m56409("Filled material icon not found: ", str));
     }
 
-    @Override // l.InterfaceC12691
+    @Override // l.InterfaceC15888
     public Drawable getOutlined(String str) {
-        C21111 c21111M2944 = C0649.m2944(str, false);
-        if (c21111M2944 != null) {
-            return c21111M2944;
+        C24236 c24236M35076 = C14538.m35076(str, false);
+        if (c24236M35076 != null) {
+            return c24236M35076;
         }
-        throw new IllegalArgumentException(C0252.m1693("Outlined material icon not found: ", str));
+        throw new IllegalArgumentException(C25272.m56409("Outlined material icon not found: ", str));
     }
 }

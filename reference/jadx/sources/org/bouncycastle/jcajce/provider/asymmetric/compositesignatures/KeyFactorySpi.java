@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import l.C0561;
-import l.C8479;
-import l.C9013;
+import l.C11958;
+import l.C16076;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -50,7 +50,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Exceptions;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInfoConverter {
     public static Map componentKeySizes;
     public static final AlgorithmIdentifier ecDsaBrainpoolP256r1;
@@ -186,7 +186,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
         }
         arrayList.add(this.helper.createKeyFactory(CompositeIndex.getBaseName(pairing[0])));
         arrayList.add(this.helper.createKeyFactory(CompositeIndex.getBaseName(pairing[1])));
-        return C0561.unmodifiableList(arrayList);
+        return C4681.unmodifiableList(arrayList);
     }
 
     private X509EncodedKeySpec[] getKeysSpecs(ASN1ObjectIdentifier aSN1ObjectIdentifier, ASN1BitString[] aSN1BitStringArr) throws IOException {
@@ -229,7 +229,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
             }
             throw new InvalidKeyException("Key not recognized");
         } catch (IOException e) {
-            throw new InvalidKeyException(C9013.m23329(e, new StringBuilder("Key could not be parsed: ")));
+            throw new InvalidKeyException(C11958.m29932(e, new StringBuilder("Key could not be parsed: ")));
         }
     }
 
@@ -251,7 +251,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
                     privateKeyArr[i] = this.helper.createKeyFactory(privateKeyInfo2.getPrivateKeyAlgorithm().getAlgorithm().getId()).generatePrivate(new PKCS8EncodedKeySpec(privateKeyInfo2.getEncoded()));
                     i++;
                 } catch (Exception e) {
-                    throw new IOException(C8479.m22142(e, new StringBuilder("cannot decode generic composite: ")), e);
+                    throw new IOException(C16076.m38224(e, new StringBuilder("cannot decode generic composite: ")), e);
                 }
             }
             return new CompositePrivateKey(privateKeyArr);
@@ -317,7 +317,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
                     publicKeyArr[i] = this.helper.createKeyFactory(subjectPublicKeyInfo2.getAlgorithm().getAlgorithm().getId()).generatePublic(new X509EncodedKeySpec(subjectPublicKeyInfo2.getEncoded()));
                     i++;
                 } catch (Exception e) {
-                    throw new IOException(C8479.m22142(e, new StringBuilder("cannot decode generic composite: ")), e);
+                    throw new IOException(C16076.m38224(e, new StringBuilder("cannot decode generic composite: ")), e);
                 }
             }
             return new CompositePublicKey(publicKeyArr);

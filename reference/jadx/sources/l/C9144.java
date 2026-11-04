@@ -1,23 +1,45 @@
 package l;
 
-import android.media.AudioAttributes;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.ۡ᩸ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y21J */
+/* JADX INFO: renamed from: l.ۡۙܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z2Y5 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C9144 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C19727 m23470(AbstractC5749 abstractC5749) {
-        C19727 c19727 = new C19727();
-        c19727.f63305 = (AudioAttributes) abstractC5749.m15818(c19727.f63305, 1);
-        c19727.f63306 = abstractC5749.m15817(c19727.f63306, 2);
-        return c19727;
-    }
+public final /* synthetic */ class C9144 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m23471(C19727 c19727, AbstractC5749 abstractC5749) {
-        abstractC5749.getClass();
-        abstractC5749.m15842(c19727.f63305, 1);
-        abstractC5749.m15838(c19727.f63306, 2);
+    public static final /* synthetic */ int[] f29717;
+
+    static {
+        int[] iArr = new int[TimeUnit.values().length];
+        f29717 = iArr;
+        try {
+            iArr[TimeUnit.NANOSECONDS.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f29717[TimeUnit.MICROSECONDS.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f29717[TimeUnit.MILLISECONDS.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f29717[TimeUnit.SECONDS.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f29717[TimeUnit.MINUTES.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f29717[TimeUnit.HOURS.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f29717[TimeUnit.DAYS.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
     }
 }

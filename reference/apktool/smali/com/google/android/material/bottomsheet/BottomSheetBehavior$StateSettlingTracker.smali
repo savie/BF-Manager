@@ -101,7 +101,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->continueSettlingRunnable:Ljava/lang/Runnable;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1359
     invoke-virtual {p1, v0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V

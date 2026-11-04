@@ -1,85 +1,173 @@
-.class public final synthetic Ll/ۛۜᩴ;
-.super Ljava/lang/Object;
-.source "J18G"
-
-# interfaces
-.implements Ll/᩻ۜᩴ;
+.class public abstract Ll/ۛۜᩴ;
+.super Ljava/io/OutputStream;
+.source "964V"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩻ۜᩴ;
+.field public final ܰ:Ll/۟֡֫;
 
-.field public final synthetic ᩶:Ljava/util/function/IntConsumer;
+.field public final ܿ:Ljava/lang/StringBuilder;
+
+.field public ᩶:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩻ۜᩴ;Ljava/util/function/IntConsumer;)V
-    .locals 0
+.method public constructor <init>(ILl/۟֡֫;)V
+    .locals 2
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 308
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    iput-object p1, p0, Ll/ۛۜᩴ;->ܺ:Ll/᩻ۜᩴ;
+    .line 309
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p2, p0, Ll/ۛۜᩴ;->᩶:Ljava/util/function/IntConsumer;
+    const/high16 v1, 0x80000
+
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iput-object v0, p0, Ll/ۛۜᩴ;->ܿ:Ljava/lang/StringBuilder;
+
+    .line 310
+    iput-object p2, p0, Ll/ۛۜᩴ;->ܰ:Ll/۟֡֫;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(I)V
+.method public finish()Ljava/lang/String;
     .locals 1
 
-    .line 63
-    iget-object v0, p0, Ll/ۛۜᩴ;->ܺ:Ll/᩻ۜᩴ;
+    .line 335
+    iget-object v0, p0, Ll/ۛۜᩴ;->ܿ:Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/function/IntConsumer;->accept(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 64
-    iget-object v0, p0, Ll/ۛۜᩴ;->᩶:Ljava/util/function/IntConsumer;
+    move-result-object v0
 
-    invoke-interface {v0, p1}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
+.method public final write(I)V
+    .locals 1
+
+    .line 339
+    iget-object v0, p0, Ll/ۛۜᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    and-int/lit16 p1, p1, 0xff
+
+    .line 316
+    invoke-virtual {p0, p1}, Ll/ۛۜᩴ;->ۙ(I)V
+
+    .line 317
+    iget p1, p0, Ll/ۛۜᩴ;->᩶:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ll/ۛۜᩴ;->᩶:I
+
+    return-void
+
+    .line 340
+    :cond_0
+    new-instance p1, Ll/ܶۜᩴ;
+
+    .line 501
+    invoke-direct {p1}, Ljava/io/IOException;-><init>()V
+
+    .line 340
+    throw p1
+.end method
+
+.method public final write([BII)V
+    .locals 5
+
+    int-to-long v0, p2
+
+    int-to-long v2, p3
+
+    add-long/2addr v0, v2
+
+    long-to-int p3, v0
+
+    int-to-long v2, p3
+
+    cmp-long v4, v0, v2
+
+    if-nez v4, :cond_3
+
+    :goto_0
+    if-ge p2, p3, :cond_2
+
+    .line 324
+    iget v0, p0, Ll/ۛۜᩴ;->᩶:I
+
+    and-int/lit16 v0, v0, 0xfff
+
+    if-nez v0, :cond_1
+
+    .line 339
+    iget-object v0, p0, Ll/ۛۜᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    .line 340
+    :cond_0
+    new-instance p1, Ll/ܶۜᩴ;
+
+    .line 501
+    invoke-direct {p1}, Ljava/io/IOException;-><init>()V
+
+    .line 340
+    throw p1
+
+    .line 327
+    :cond_1
+    :goto_1
+    aget-byte v0, p1, p2
+
+    and-int/lit16 v0, v0, 0xff
+
+    invoke-virtual {p0, v0}, Ll/ۛۜᩴ;->ۙ(I)V
+
+    .line 328
+    iget v0, p0, Ll/ۛۜᩴ;->᩶:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Ll/ۛۜᩴ;->᩶:I
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۧۜᩴ;->ۙ(Ll/᩻ۜᩴ;Ljava/lang/Object;)V
+    :cond_3
+    new-instance p1, Ljava/lang/ArithmeticException;
 
-    return-void
+    invoke-direct {p1}, Ljava/lang/ArithmeticException;-><init>()V
+
+    throw p1
 .end method
 
-.method public final andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
-
-    .line 102
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/IntConsumer;)Ljava/util/function/IntConsumer;
-    .locals 0
-
-    .line 35
-    invoke-static {p0, p1}, Ll/ۧۜᩴ;->ۙ(Ll/᩻ۜᩴ;Ljava/util/function/IntConsumer;)Ll/ۛۜᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic ۨ(Ljava/lang/Integer;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۧۜᩴ;->ۙ(Ll/᩻ۜᩴ;Ljava/lang/Integer;)V
-
-    return-void
+.method public abstract ۙ(I)V
 .end method

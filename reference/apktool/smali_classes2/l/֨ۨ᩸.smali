@@ -1,148 +1,42 @@
-.class public final enum Ll/֨ۨ᩸;
-.super Ljava/lang/Enum;
-.source "Y7S4"
+.class public final synthetic Ll/֨ۨ᩸;
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
-# static fields
-.field public static final enum ֡:Ll/֨ۨ᩸;
+# instance fields
+.field public final synthetic ܰ:Ll/ܿۛ᩸;
 
-.field public static final enum ۫:Ll/֨ۨ᩸;
-
-.field public static final synthetic ܺ:[Ll/֨ۨ᩸;
-
-.field public static final enum ܽ:Ll/֨ۨ᩸;
-
-.field public static final enum ᩶:Ll/֨ۨ᩸;
+.field public final synthetic ᩶:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 315
-    new-instance v0, Ll/֨ۨ᩸;
-
-    const-string v1, "NONE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ll/֨ۨ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/֨ۨ᩸;->ܽ:Ll/֨ۨ᩸;
-
-    .line 316
-    new-instance v0, Ll/֨ۨ᩸;
-
-    const-string v1, "WHITESPACE"
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ll/֨ۨ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/֨ۨ᩸;->۫:Ll/֨ۨ᩸;
-
-    .line 317
-    new-instance v0, Ll/֨ۨ᩸;
-
-    const-string v1, "NEWLINE"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ll/֨ۨ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/֨ۨ᩸;->֡:Ll/֨ۨ᩸;
-
-    .line 318
-    new-instance v0, Ll/֨ۨ᩸;
-
-    const-string v1, "BLANK_LINE"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ll/֨ۨ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/֨ۨ᩸;->᩶:Ll/֨ۨ᩸;
-
-    .line 314
-    invoke-static {}, Ll/֨ۨ᩸;->ۙ()[Ll/֨ۨ᩸;
-
-    move-result-object v0
-
-    sput-object v0, Ll/֨ۨ᩸;->ܺ:[Ll/֨ۨ᩸;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Ll/ܿۛ᩸;Landroid/widget/CheckBox;)V
     .locals 0
 
-    .line 314
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֨ۨ᩸;->ܰ:Ll/ܿۛ᩸;
+
+    iput-object p2, p0, Ll/֨ۨ᩸;->᩶:Landroid/widget/CheckBox;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll/֨ۨ᩸;
-    .locals 1
 
-    .line 314
-    const-class v0, Ll/֨ۨ᩸;
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 0
+    iget-object p1, p0, Ll/֨ۨ᩸;->ܰ:Ll/ܿۛ᩸;
 
-    move-result-object p0
+    iget-object p2, p0, Ll/֨ۨ᩸;->᩶:Landroid/widget/CheckBox;
 
-    check-cast p0, Ll/֨ۨ᩸;
+    invoke-static {p1, p2}, Ll/ܿۛ᩸;->ۙ(Ll/ܿۛ᩸;Landroid/widget/CheckBox;)V
 
-    return-object p0
-.end method
-
-.method public static values()[Ll/֨ۨ᩸;
-    .locals 1
-
-    .line 314
-    sget-object v0, Ll/֨ۨ᩸;->ܺ:[Ll/֨ۨ᩸;
-
-    invoke-virtual {v0}, [Ll/֨ۨ᩸;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/֨ۨ᩸;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/֨ۨ᩸;
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ll/֨ۨ᩸;
-
-    .line 314
-    sget-object v1, Ll/֨ۨ᩸;->ܽ:Ll/֨ۨ᩸;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/֨ۨ᩸;->۫:Ll/֨ۨ᩸;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/֨ۨ᩸;->֡:Ll/֨ۨ᩸;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/֨ۨ᩸;->᩶:Ll/֨ۨ᩸;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    return-void
 .end method

@@ -8,45 +8,45 @@ import java.util.LinkedList;
 /* JADX INFO: loaded from: classes.dex */
 public class AWSCredentialsProviderChain implements AWSCredentialsProvider {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Log f124 = LogFactory.m302(AWSCredentialsProviderChain.class);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Log f114 = LogFactory.m296(AWSCredentialsProviderChain.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public LinkedList f125 = new LinkedList();
+    public LinkedList f115 = new LinkedList();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f126 = true;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f116 = true;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AWSCredentialsProvider f127;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AWSCredentialsProvider f117;
 
     public AWSCredentialsProviderChain(AWSCredentialsProvider... aWSCredentialsProviderArr) {
         if (aWSCredentialsProviderArr.length == 0) {
             throw new IllegalArgumentException("No credential providers specified");
         }
         for (AWSCredentialsProvider aWSCredentialsProvider : aWSCredentialsProviderArr) {
-            this.f125.add(aWSCredentialsProvider);
+            this.f115.add(aWSCredentialsProvider);
         }
     }
 
     @Override // com.amazonaws.auth.AWSCredentialsProvider
     /* JADX INFO: renamed from: ۙ */
-    public final AWSCredentials mo208() {
+    public final AWSCredentials mo202() {
         AWSCredentialsProvider aWSCredentialsProvider;
-        Log log = f124;
-        if (this.f126 && (aWSCredentialsProvider = this.f127) != null) {
-            return aWSCredentialsProvider.mo208();
+        Log log = f114;
+        if (this.f116 && (aWSCredentialsProvider = this.f117) != null) {
+            return aWSCredentialsProvider.mo202();
         }
-        for (AWSCredentialsProvider aWSCredentialsProvider2 : this.f125) {
+        for (AWSCredentialsProvider aWSCredentialsProvider2 : this.f115) {
             try {
-                AWSCredentials aWSCredentialsMo208 = aWSCredentialsProvider2.mo208();
-                if (aWSCredentialsMo208.mo206() != null && aWSCredentialsMo208.mo207() != null) {
-                    log.mo298("Loading credentials from " + aWSCredentialsProvider2.toString());
-                    this.f127 = aWSCredentialsProvider2;
-                    return aWSCredentialsMo208;
+                AWSCredentials aWSCredentialsMo202 = aWSCredentialsProvider2.mo202();
+                if (aWSCredentialsMo202.mo200() != null && aWSCredentialsMo202.mo201() != null) {
+                    log.mo291("Loading credentials from " + aWSCredentialsProvider2.toString());
+                    this.f117 = aWSCredentialsProvider2;
+                    return aWSCredentialsMo202;
                 }
             } catch (Exception e) {
-                log.mo298("Unable to load credentials from " + aWSCredentialsProvider2.toString() + ": " + e.getMessage());
+                log.mo291("Unable to load credentials from " + aWSCredentialsProvider2.toString() + ": " + e.getMessage());
             }
         }
         throw new AmazonClientException("Unable to load AWS credentials from any provider in the chain");

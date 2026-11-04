@@ -4,23 +4,23 @@ package com.amazonaws.services.s3.model;
 public class PartETag {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f639;
+    public String f629;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f640;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f630;
 
     public PartETag(int i, String str) {
-        this.f640 = i;
-        this.f639 = str;
+        this.f630 = i;
+        this.f629 = str;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m644() {
-        return this.f640;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m638() {
+        return this.f630;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m643() {
-        return this.f639;
+    public final String m637() {
+        return this.f629;
     }
 }

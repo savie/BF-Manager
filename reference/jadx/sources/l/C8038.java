@@ -1,29 +1,24 @@
 package l;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.۠۟᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 052E */
+/* JADX INFO: renamed from: l.۟ܿۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6X9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8038 extends AbstractDialogInterfaceOnClickListenerC17341 {
+public final class C8038 {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public SimpleDateFormat f28142;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f26661;
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String strM40352 = m40352();
-        if (strM40352.trim().isEmpty()) {
-            m40364();
-            return;
-        }
-        try {
-            new SimpleDateFormat(strM40352, Locale.ENGLISH);
-            ApplicationC0716.f2992.edit().putString("rdtp", strM40352).apply();
-            m40364();
-        } catch (Exception unused) {
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f26662;
+
+    public C8038() {
+        throw null;
+    }
+
+    public C8038(ArrayList arrayList, boolean z) {
+        this.f26661 = arrayList;
+        this.f26662 = z;
     }
 }

@@ -263,7 +263,7 @@
 
     if-eq p1, v0, :cond_a
 
-    const-class v0, Ll/ܰۧᩴ;
+    const-class v0, Ll/ܽ֫ۗ;
 
     if-ne p1, v0, :cond_4
 
@@ -378,9 +378,9 @@
 
     :cond_a
     :goto_1
-    new-instance p1, Ll/ܰۧᩴ;
+    new-instance p1, Ll/ܽ֫ۗ;
 
-    invoke-direct {p1}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {p1}, Ll/ܽ֫ۗ;-><init>()V
 
     return-object p1
 

@@ -1,82 +1,119 @@
 package l;
 
-import com.alipay.sdk.app.OpenAuthTask;
-import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.֫ᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1A38 */
+/* JADX INFO: renamed from: l.֫ܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C4OQ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1985 extends AbstractC2712 {
+public final class C1985 extends AbstractC6968 {
 
-    /* JADX INFO: renamed from: ۬ܰ, reason: not valid java name and contains not printable characters */
-    public static final String[] f7434 = {"WrLehDO\u0000B16BBDz\u0000", "WrLehDz\u0000B16BBDz\u0000"};
-
-    /* JADX INFO: renamed from: ֨ܰ, reason: not valid java name and contains not printable characters */
-    public int f7435;
-
-    /* JADX INFO: renamed from: ۚܰ, reason: not valid java name and contains not printable characters */
-    public String f7436;
-
-    /* JADX INFO: renamed from: ᩹ܰ, reason: not valid java name and contains not printable characters */
-    public String f7437;
-
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int mo6397(int i, byte[] bArr) {
-        return 0;
-    }
-
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int mo6399(int i, byte[] bArr) {
-        return 0;
-    }
-
-    public C1985(InterfaceC10601 interfaceC10601, String str, int i) {
-        super(interfaceC10601, (byte) 37, (byte) 104);
-        this.f7437 = null;
-        this.f7436 = str;
-        this.f7435 = i;
-        this.f10436 = "\\PIPE\\LANMAN";
-        this.f10440 = 8;
-        this.f10424 = 16384;
-        this.f10432 = 0;
-        this.f10428 = OpenAuthTask.Duplex;
-    }
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public String f6646 = null;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m6400(int i, String str) {
-        reset();
-        this.f7437 = str;
+    public final C24975 f6647;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f6648;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f6649;
+
+    public C1985(C24975 c24975, int i) {
+        this.f6647 = c24975;
+        this.f6649 = i;
     }
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo6398(byte[] bArr) {
-        char c = m8267() == 104 ? (char) 0 : (char) 1;
-        try {
-            byte[] bytes = f7434[c].getBytes("ASCII");
-            C4850.m13546(m8267() & 255, 0, bArr);
-            System.arraycopy(bytes, 0, bArr, 2, bytes.length);
-            int length = bytes.length;
-            C4850.m13546(1L, 2 + length, bArr);
-            C4850.m13546(this.f10424, length + 4, bArr);
-            C4850.m13550(this.f7435, length + 6, bArr);
-            int i = length + 10;
-            int iM35441 = i + m35441(this.f7436.toUpperCase(), bArr, i, false);
-            return c == 1 ? iM35441 + m35441(this.f7437.toUpperCase(), bArr, iM35441, false) : iM35441;
-        } catch (UnsupportedEncodingException unused) {
-            return 0;
+    @Override // l.InterfaceC4859
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String mo6804() {
+        C24975 c24975 = this.f6647;
+        return c24975.m55822(c24975.m55818().m8721(c24975.m55812(this.f6649)));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m6801(Writer writer) {
+        C24975 c24975 = this.f6647;
+        c24975.m55787(writer, c24975.m55818().m8721(c24975.m55812(this.f6649)));
+    }
+
+    @Override // l.InterfaceC4859
+    public final String getName() {
+        C24975 c24975 = this.f6647;
+        return c24975.m55782(c24975.m55818().mo8719(c24975.m55812(this.f6649) + 4));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m6807(Writer writer) {
+        C24975 c24975 = this.f6647;
+        c24975.m55816(c24975.m55818().mo8719(c24975.m55812(this.f6649) + 4), writer, false);
+    }
+
+    @Override // l.InterfaceC4859
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final List mo6805() {
+        int iM6800 = m6800();
+        C24975 c24975 = this.f6647;
+        int iMo8719 = c24975.m55818().mo8719(iM6800 + 8);
+        if (iMo8719 > 0) {
+            return new C5714(this, iMo8719 + 4, c24975.m55818().mo8719(iMo8719));
+        }
+        return AbstractC1928.of();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m6803(Writer writer) {
+        int iM6800 = m6800();
+        C24975 c24975 = this.f6647;
+        int iMo8719 = c24975.m55818().mo8719(iM6800 + 8);
+        if (iMo8719 > 0) {
+            int iMo87110 = c24975.m55818().mo8719(iMo8719);
+            int i = iMo8719 + 4;
+            for (int i2 = 0; i2 < iMo87110; i2++) {
+                c24975.m55787(writer, c24975.m55818().m8721((i2 * 2) + i));
+            }
         }
     }
 
-    @Override // l.AbstractC2712, l.AbstractC14792
+    @Override // l.InterfaceC4859
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String mo6802() {
+        int iM6800 = m6800();
+        C24975 c24975 = this.f6647;
+        return c24975.m55822(c24975.m55818().mo8719(iM6800 + 4));
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m6808(Writer writer) {
+        int iM6800 = m6800();
+        C24975 c24975 = this.f6647;
+        c24975.m55787(writer, c24975.m55818().mo8719(iM6800 + 4));
+    }
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    private int m6800() {
+        if (this.f6648 == 0) {
+            C24975 c24975 = this.f6647;
+            this.f6648 = c24975.m55796(c24975.m55818().m8721(c24975.m55812(this.f6649) + 2));
+        }
+        return this.f6648;
+    }
+
+    @Override // l.AbstractC6968
     public final String toString() {
-        StringBuilder sb = new StringBuilder("NetServerEnum2[");
-        sb.append(super.toString());
-        sb.append(",name=");
-        sb.append(this.f10436);
-        sb.append(",serverTypes=");
-        return new String(C22697.m50267(sb, this.f7435 == -1 ? "SV_TYPE_ALL" : "SV_TYPE_DOMAIN_ENUM", "]"));
+        if (this.f6646 == null) {
+            this.f6646 = C14684.m35306((InterfaceC4859) this, false);
+        }
+        return this.f6646;
+    }
+
+    @Override // l.AbstractC13679, l.InterfaceC10824
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void mo6806() throws C22013 {
+        int i = this.f6649;
+        if (i < 0 || i >= this.f6647.m55781()) {
+            throw new C22013("method@" + i);
+        }
     }
 }

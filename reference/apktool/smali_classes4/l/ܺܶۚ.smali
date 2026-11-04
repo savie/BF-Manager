@@ -1,30 +1,31 @@
 .class public final Ll/ܺܶۚ;
 .super Ljava/lang/Object;
-.source "86ZM"
+.source "G7AI"
 
 
 # instance fields
-.field public final ۙ:I
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public ۨ:Ll/ۗᩳۨ;
+.field public final ۤ:Ljava/util/ArrayList;
 
-.field public ܰ:I
+.field public final ᩷:Ll/۫ܶۚ;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>(Ll/۫ܶۚ;Ljava/util/ArrayList;Ljava/util/ArrayList;IZILjava/lang/String;)V
+    .locals 0
 
-    .line 852
+    .line 1156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 850
-    sget-object v0, Ll/ۗᩳۨ;->֨:Ll/ۗᩳۨ;
+    .line 1157
+    iput-object p1, p0, Ll/ܺܶۚ;->᩷:Ll/۫ܶۚ;
 
-    iput-object v0, p0, Ll/ܺܶۚ;->ۨ:Ll/ۗᩳۨ;
+    .line 1158
+    iput-object p2, p0, Ll/ܺܶۚ;->ۙ:Ljava/util/ArrayList;
 
-    .line 853
-    iput p1, p0, Ll/ܺܶۚ;->ۙ:I
+    .line 1159
+    iput-object p3, p0, Ll/ܺܶۚ;->ۤ:Ljava/util/ArrayList;
 
     return-void
 .end method

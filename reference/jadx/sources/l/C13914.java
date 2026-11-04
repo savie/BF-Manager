@@ -1,61 +1,33 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ܰܺۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: NB3C */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13914 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f45831;
+/* JADX INFO: renamed from: l.۬ܳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J4LB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13914 extends AbstractC24293 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f45832;
+    public final /* synthetic */ ComponentCallbacksC11612 f44126;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C2063 f45833;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f45834;
-
-    public C13914() {
-        throw null;
+    public C13914(ComponentCallbacksC11612 componentCallbacksC11612) {
+        this.f44126 = componentCallbacksC11612;
     }
 
-    public C13914(String str, String str2, C2063 c2063) {
-        this.f45831 = str;
-        this.f45832 = str2;
-        this.f45833 = c2063;
-        this.f45834 = null;
+    @Override // l.AbstractC24293
+    /* JADX INFO: renamed from: ۙ */
+    public final View mo21642(int i) {
+        ComponentCallbacksC11612 componentCallbacksC11612 = this.f44126;
+        View view = componentCallbacksC11612.mView;
+        if (view == null) {
+            throw new IllegalStateException("Fragment " + componentCallbacksC11612 + " does not have a view");
+        }
+        return view.findViewById(i);
     }
 
-    public C13914(String str, CharSequence charSequence, int i) {
-        this.f45831 = charSequence;
-        this.f45832 = str;
-        this.f45833 = new C2063(0, i, false, 0, null, null, null);
-        this.f45834 = null;
-    }
-
-    public C13914(CharSequence charSequence, String str, ArrayList arrayList, int i) {
-        this.f45831 = charSequence;
-        this.f45832 = str;
-        this.f45833 = new C2063(0, i, false, 0, null, null, null);
-        this.f45834 = arrayList;
-    }
-
-    public C13914(String str, boolean z, int i, AbstractC20745 abstractC20745, C6037 c6037, HashMap map) {
-        this.f45831 = str;
-        this.f45832 = "\n";
-        this.f45833 = new C2063(255, 0, z, i, abstractC20745, c6037, map);
-        this.f45834 = null;
-    }
-
-    public C13914(String str, int i) {
-        this.f45831 = str;
-        this.f45832 = "\n";
-        this.f45833 = new C2063(i, 0, false, 0, null, null, null);
-        this.f45834 = null;
+    @Override // l.AbstractC24293
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo21643() {
+        return this.f44126.mView != null;
     }
 }

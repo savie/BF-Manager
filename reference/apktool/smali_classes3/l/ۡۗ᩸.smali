@@ -1,17 +1,36 @@
-.class public interface abstract Ll/ۡۗ᩸;
+.class public final synthetic Ll/ۡۗ᩸;
 .super Ljava/lang/Object;
-.source "59KS"
+.source "06KD"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۜۗ᩸;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۜۗ᩸;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۡۗ᩸;->ܰ:Ll/ۜۗ᩸;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract init([B)V
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract update([B)V
-.end method
+    .line 0
+    iget-object v0, p0, Ll/ۡۗ᩸;->ܰ:Ll/ۜۗ᩸;
 
-.method public abstract update([BII)V
-.end method
+    invoke-static {v0}, Ll/ۜۗ᩸;->᩷(Ll/ۜۗ᩸;)V
 
-.method public abstract ۙ()[B
+    return-void
 .end method

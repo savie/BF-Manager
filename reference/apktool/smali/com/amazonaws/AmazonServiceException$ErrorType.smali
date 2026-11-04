@@ -6,9 +6,9 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
+.field public static final synthetic ܰ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
 
-.field public static final enum ܽ:Lcom/amazonaws/AmazonServiceException$ErrorType;
+.field public static final enum ܿ:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
 .field public static final enum ᩶:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
@@ -37,7 +37,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/amazonaws/AmazonServiceException$ErrorType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/AmazonServiceException$ErrorType;->֡:Lcom/amazonaws/AmazonServiceException$ErrorType;
+    sput-object v1, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܿ:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
     .line 66
     new-instance v3, Lcom/amazonaws/AmazonServiceException$ErrorType;
@@ -48,7 +48,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/amazonaws/AmazonServiceException$ErrorType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܽ:Lcom/amazonaws/AmazonServiceException$ErrorType;
+    sput-object v3, Lcom/amazonaws/AmazonServiceException$ErrorType;->֡:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
     const/4 v5, 0x3
 
@@ -61,7 +61,7 @@
     aput-object v3, v5, v6
 
     .line 58
-    sput-object v5, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܺ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
+    sput-object v5, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܰ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     .locals 1
 
     .line 58
-    sget-object v0, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܺ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
+    sget-object v0, Lcom/amazonaws/AmazonServiceException$ErrorType;->ܰ:[Lcom/amazonaws/AmazonServiceException$ErrorType;
 
     invoke-virtual {v0}, [Lcom/amazonaws/AmazonServiceException$ErrorType;->clone()Ljava/lang/Object;
 

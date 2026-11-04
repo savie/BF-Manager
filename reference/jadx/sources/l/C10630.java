@@ -1,87 +1,130 @@
 package l;
 
-import java.util.Iterator;
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import bin.mt.plus.R;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۤ᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M605 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10630 {
+/* JADX INFO: renamed from: l.ۤۙۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 09LR */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10630 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7807 f36289;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f36290;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public AbstractC22044 f33714;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f36291;
+    public final /* synthetic */ ActivityC16597 f33715;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f36292;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C15425 f33716;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f36293;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f33717 = false;
 
-    public C10630(C7807 c7807, int i) {
-        this.f36289 = c7807;
-        this.f36292 = i;
+    public C10630(ActivityC16597 activityC16597) {
+        this.f33715 = activityC16597;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static AbstractC15673 m26809(C10630 c10630) {
-        C7807 c7807 = c10630.f36289;
-        return new C19096(c10630, c7807.f25683, c10630.f36292, c7807.f25694);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8199(this.f33715, 100);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private int m26811() {
-        if (this.f36293 == 0) {
-            C7807 c7807 = this.f36289;
-            C18825 c18825M42184 = c7807.f25683.m41166().m42184(this.f36292);
-            for (int i = 0; i < c7807.f25694; i++) {
-                c18825M42184.m43449();
-            }
-            this.f36293 = c18825M42184.m43447();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws IOException {
+        C15425 c15425;
+        ActivityC16597 activityC16597 = this.f33715;
+        AbstractC22044 abstractC22044 = activityC16597.f53685;
+        if (abstractC22044.mo4285() > 20971520) {
+            throw new IOException("File too large");
         }
-        return this.f36293;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Iterator m26812(C10630 c10630) {
-        C7807 c7807 = c10630.f36289;
-        return new C8513(c10630, c7807.f25683, c10630.m26811(), c7807.f25685);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private int m26806() {
-        if (this.f36290 == 0) {
-            C7807 c7807 = this.f36289;
-            C18825 c18825M42184 = c7807.f25683.m41166().m42184(m26811());
-            for (int i = 0; i < c7807.f25685; i++) {
-                c18825M42184.m43449();
+        byte[] bArrM49865 = abstractC22044.m49865();
+        try {
+            c15425 = new C15425(bArrM49865);
+        } catch (IOException e) {
+            Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrM49865, 0, bArrM49865.length);
+            if (bitmapDecodeByteArray == null) {
+                throw e;
             }
-            this.f36290 = c18825M42184.m43447();
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            bitmapDecodeByteArray.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+            c15425 = new C15425(byteArrayOutputStream.toByteArray());
         }
-        return this.f36290;
+        this.f33716 = c15425;
+        if (c15425.m36952()) {
+            activityC16597.f53688 = true;
+        } else if (activityC16597.f53683.toLowerCase().endsWith(".9.png") && this.f33716.m36950()) {
+            activityC16597.f53688 = false;
+        } else {
+            activityC16597.f53688 = false;
+            this.f33717 = true;
+        }
+        AbstractC22044 abstractC22044M49877 = C6382.f21565.m49877();
+        this.f33714 = abstractC22044M49877;
+        abstractC22044M49877.m49849(this.f33716.m36954());
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Iterator m26807(C10630 c10630) {
-        C7807 c7807 = c10630.f36289;
-        return new C19802(c10630, c7807.f25683, c10630.m26806(), c7807.f25691);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static Iterator m26805(C10630 c10630) {
-        C7807 c7807 = c10630.f36289;
-        C17684 c17684 = c7807.f25683;
-        if (c10630.f36291 == 0) {
-            C18825 c18825M42184 = c17684.m41166().m42184(c10630.m26806());
-            for (int i = 0; i < c7807.f25691; i++) {
-                c18825M42184.m43449();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        boolean z = this.f33717;
+        ActivityC16597 activityC16597 = this.f33715;
+        if (!z) {
+            activityC16597.f53686.m4741(this.f33716);
+            activityC16597.m39264(this.f33716);
+            activityC16597.f53682 = this.f33714;
+            return;
+        }
+        C2361 c2361BuildDialog = activityC16597.buildDialog();
+        c2361BuildDialog.m8021(R.string.MT_Protector);
+        c2361BuildDialog.m8000(R.string.MT_Protector);
+        c2361BuildDialog.m8026(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۙۙۧ
+            @Override // android.content.DialogInterface.OnClickListener
+            public final void onClick(DialogInterface dialogInterface, int i) {
+                C10630 c10630 = this.f16473;
+                ActivityC16597 activityC16598 = c10630.f33715;
+                try {
+                    activityC16598.f53686.m4741(c10630.f33716);
+                    activityC16598.f53686.m4743(true);
+                    activityC16598.f53686.m4743(false);
+                    activityC16598.f53686.m4755();
+                    String strM49874 = activityC16598.f53685.m49874();
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(strM49874);
+                    sb.append(strM49874.endsWith(".9") ? ".png" : ".9.png");
+                    activityC16598.f53683 = sb.toString();
+                    activityC16598.f53685 = null;
+                    activityC16598.m39264(c10630.f33716);
+                    activityC16598.f53682 = c10630.f33714;
+                } catch (Exception e) {
+                    activityC16598.m40402((Throwable) e, true);
+                }
             }
-            c10630.f36291 = c18825M42184.m43447();
-        }
-        return new C9219(c17684, c10630.f36291, c7807.f25684);
+        });
+        c2361BuildDialog.m8022(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.᩷ۙۧ
+            @Override // android.content.DialogInterface.OnClickListener
+            public final void onClick(DialogInterface dialogInterface, int i) {
+                this.f69559.f33715.finish();
+            }
+        });
+        c2361BuildDialog.m8012(false);
+        c2361BuildDialog.m8016();
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f33715.m40402((Throwable) exc, true);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

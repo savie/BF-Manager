@@ -1,46 +1,88 @@
 .class public final synthetic Ll/ܽ۬᩺;
 .super Ljava/lang/Object;
-.source "08W3"
-
-# interfaces
-.implements Ll/֡ۧ᩺;
+.source "W7SR"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ܳ۬᩺;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܳ۬᩺;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 936
+    invoke-static {}, Ll/۬ۘ᩺;->values()[Ll/۬ۘ᩺;
 
-    iput-object p1, p0, Ll/ܽ۬᩺;->ܺ:Ll/ܳ۬᩺;
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 2
+    sput-object v0, Ll/ܽ۬᩺;->ۙ:[I
 
-    .line 2
-    sget-object p1, Ll/ܳ۬᩺;->ۘܰ:Ll/ܽۧ᩺;
+    :try_start_0
+    sget-object v1, Ll/۬ۘ᩺;->֫ۙ:Ll/۬ۘ᩺;
 
-    .line 140
-    new-instance p1, Ll/ۧ۬᩺;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v0, p0, Ll/ܽ۬᩺;->ܺ:Ll/ܳ۬᩺;
+    move-result v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {p1, v0, v1}, Ll/ۧ۬᩺;-><init>(Ll/ܳ۬᩺;Z)V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
-    invoke-virtual {p1}, Ll/ۗ᩷᩺;->֨()V
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ܽ۬᩺;->ۙ:[I
 
+    sget-object v1, Ll/۬ۘ᩺;->ۧۙ:Ll/۬ۘ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ܽ۬᩺;->ۙ:[I
+
+    sget-object v1, Ll/۬ۘ᩺;->ᩳ:Ll/۬ۘ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ܽ۬᩺;->ۙ:[I
+
+    sget-object v1, Ll/۬ۘ᩺;->ܳۙ:Ll/۬ۘ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
 .end method

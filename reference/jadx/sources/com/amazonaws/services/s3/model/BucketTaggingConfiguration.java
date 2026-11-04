@@ -7,22 +7,22 @@ import java.util.ArrayList;
 /* JADX INFO: loaded from: classes.dex */
 public class BucketTaggingConfiguration implements Serializable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public ArrayList f548;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ArrayList f538;
 
     public BucketTaggingConfiguration() {
-        this.f548 = null;
-        this.f548 = new ArrayList(1);
+        this.f538 = null;
+        this.f538 = new ArrayList(1);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList m536() {
-        return this.f548;
+    public final ArrayList m530() {
+        return this.f538;
     }
 
     public final String toString() {
         StringBuffer stringBuffer = new StringBuffer("{");
-        stringBuffer.append("TagSets: " + this.f548);
+        stringBuffer.append("TagSets: " + this.f538);
         stringBuffer.append(l.d);
         return stringBuffer.toString();
     }

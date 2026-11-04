@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.util;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class PBKDFConfig {
     public final ASN1ObjectIdentifier algorithm;
 

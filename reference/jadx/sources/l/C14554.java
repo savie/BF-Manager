@@ -1,49 +1,25 @@
 package l;
 
-import bin.mt.json.JSONValue;
-import com.google.android.material.color.utilities.DynamicScheme;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ܳ۬᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 969A */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14554 implements Function {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f47652;
-
+/* JADX INFO: renamed from: l.ܰۧۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E67S */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14554 implements InterfaceC22760 {
     public /* synthetic */ C14554(int i) {
-        this.f47652 = i;
+        this();
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    public C14554() {
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f47652) {
-            case 0:
-                return new C9221((C17367) obj);
-            case 1:
-                return C9030.stream(((C0206) obj).f1365);
-            case 2:
-                return C6730.m18172((String) obj);
-            case 3:
-                return (CharSequence) obj;
-            case 4:
-                return ((JSONValue) obj).asString();
-            case 5:
-                return ((DynamicScheme) obj).primaryPalette;
-            default:
-                return ((DynamicScheme) obj).primaryPalette;
+    @Override // l.InterfaceC22760
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1200(C19929 c19929) {
+        String strM34647 = ((C14270) c19929.m45858()).m34647();
+        C14270 c14270 = new C14270();
+        try {
+            c14270.m34620(C14554.class.getResourceAsStream(strM34647));
+        } catch (Exception unused) {
         }
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+        c19929.m45857(c14270);
     }
 }

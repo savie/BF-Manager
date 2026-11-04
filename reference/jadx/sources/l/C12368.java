@@ -1,77 +1,47 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.۫ۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: renamed from: l.ۨ۫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z3PG */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12368 extends AbstractC17535 {
+public final class C12368 extends AbstractC4911 {
+    public static final long serialVersionUID = 0;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f41350;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final transient AbstractC6403 f39725;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7648 f41351;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f41352;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C1693 f41353;
-
-    public C12368(C1693 c1693, int i, C7648 c7648, int i2) {
-        this.f41353 = c1693;
-        this.f41350 = i;
-        this.f41351 = c7648;
-        this.f41352 = i2;
+    public C12368(AbstractC6403 abstractC6403) {
+        this.f39725 = abstractC6403;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C12368)) {
-            return false;
+    @Override // l.AbstractC4911, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean contains(Object obj) {
+        return this.f39725.mo17039(obj);
+    }
+
+    @Override // l.AbstractC4911, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
+    public final AbstractC4516 iterator() {
+        AbstractC6403 abstractC6403 = this.f39725;
+        abstractC6403.getClass();
+        return new C3419(abstractC6403);
+    }
+
+    @Override // l.AbstractC4911
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo6619(int i, Object[] objArr) {
+        AbstractC4516 it = this.f39725.f21604.values().iterator();
+        while (it.hasNext()) {
+            i = ((AbstractC4911) it.next()).mo6619(i, objArr);
         }
-        C12368 c12368 = (C12368) obj;
-        return this.f41350 == c12368.f41350 && this.f41352 == c12368.f41352 && C13638.equals(this.f41353, c12368.f41353) && C13638.equals(this.f41351, c12368.f41351);
+        return i;
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f41351) + ((C13638.hashCode(this.f41353) + C17922.m41614(this.f41350, 31, this.f41352, 31)) * 31);
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f39725.f21605;
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f41353, Integer.valueOf(this.f41350), this.f41351, Integer.valueOf(this.f41352)};
-        String[] strArrSplit = "group;trackIndex;format;logicalIndex".length() == 0 ? new String[0] : "group;trackIndex;format;logicalIndex".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C12368.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m30779() {
-        return this.f41352;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7648 m30780() {
-        return this.f41351;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C1693 m30781() {
-        return this.f41353;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m30782() {
-        return this.f41350;
+    @Override // l.AbstractC4911
+    public Object writeReplace() {
+        return super.writeReplace();
     }
 }

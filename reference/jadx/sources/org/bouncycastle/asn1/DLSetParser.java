@@ -2,7 +2,7 @@ package org.bouncycastle.asn1;
 
 import java.io.IOException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 @Deprecated
 public class DLSetParser implements ASN1SetParser {
     public ASN1StreamParser _parser;

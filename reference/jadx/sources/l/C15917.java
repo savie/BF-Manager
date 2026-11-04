@@ -1,65 +1,51 @@
 package l;
 
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.ܺۨ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7AI */
+/* JADX INFO: renamed from: l.ܶۜۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 99SU */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15917 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String f51577;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C17327 f51578;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final Set f51579;
+public final /* synthetic */ class C15917 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18738 f51580;
+    public static final /* synthetic */ int[] f51723;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C13531 f51581;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C13531 f51582;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int f51583;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C13531 f51584;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f51585;
-
-    public C15917(C18738 c18738, int i, String str, String str2, Set set) {
-        this.f51580 = c18738;
-        this.f51583 = i;
-        this.f51577 = str;
-        this.f51585 = str2;
-        this.f51579 = set;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C9567 m37868() {
-        String str;
-        C17327 c17327 = this.f51578;
-        String str2 = this.f51577;
-        if (c17327 == null) {
-            return new C9567(str2, true, null, null, null, null, null, false);
+    static {
+        int[] iArr = new int[EnumC22631.values().length];
+        f51723 = iArr;
+        try {
+            iArr[EnumC22631.f73369.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        C13531 c13531 = this.f51581;
-        if (c13531 == null && (c13531 = this.f51584) == null) {
-            c13531 = this.f51582;
+        try {
+            f51723[EnumC22631.f73278.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        if (c13531 != null) {
-            String str3 = c13531.f44684;
-            String strM20035 = ("item_list".equals(str3) || "null_value".equals(str3) || "unparsed".equals(str3) || (str = c13531.f44683) == null) ? null : C7521.m20035(0, str.length(), 300, str);
-            C17327 c17328 = this.f51578;
-            return new C9567(str2, false, c17328.f55133, c17328.f55132, c13531.f44678, str3, strM20035, c13531.f44686);
+        try {
+            f51723[EnumC22631.f73302.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        return new C9567(str2, false, c17327.f55133, c17327.f55132, null, "null_value", null, false);
+        try {
+            f51723[EnumC22631.f73345.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f51723[EnumC22631.f73337.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f51723[EnumC22631.f73245.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f51723[EnumC22631.f73393.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f51723[EnumC22631.f73433.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f51723[EnumC22631.f73465.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
     }
 }

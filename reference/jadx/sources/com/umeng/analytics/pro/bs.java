@@ -1,6 +1,6 @@
 package com.umeng.analytics.pro;
 
-import l.C12441;
+import l.C12669;
 
 /* JADX INFO: compiled from: P45T */
 /* JADX INFO: loaded from: classes.dex */
@@ -25,7 +25,7 @@ public final class bs {
         sb.append("' type: ");
         sb.append((int) this.b);
         sb.append(" seqid:");
-        return C12441.m30911(this.c, ">", sb);
+        return C12669.m31437(this.c, ">", sb);
     }
 
     public boolean equals(Object obj) {

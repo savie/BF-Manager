@@ -1,363 +1,220 @@
-.class public final Ll/᩺ܳ᩸;
+.class public Ll/᩺ܳ᩸;
 .super Ljava/lang/Object;
-.source "29EQ"
+.source "4B3Z"
 
 # interfaces
-.implements Ll/ۡۙᩳ;
-
-
-# static fields
-.field public static final ۘ:[B
+.implements Lnet/sf/sevenzipjbinding/IOutCreateCallback;
 
 
 # instance fields
-.field public ֨:J
+.field public ֡:I
 
-.field public ۖ:[B
+.field public ۟:J
 
-.field public ۙ:I
+.field public final ܰ:Ll/᩶ܳ᩸;
 
-.field public ۚ:I
+.field public ܿ:Lnet/sf/sevenzipjbinding/ISequentialInStream;
 
-.field public ۨ:I
-
-.field public ۬:[B
-
-.field public ܰ:I
-
-.field public ᩹:I
+.field public ᩶:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ll/᩶ܳ᩸;)V
     .locals 1
 
-    const/4 v0, 0x4
-
-    new-array v0, v0, [B
-
-    .line 29
-    fill-array-data v0, :array_0
-
-    sput-object v0, Ll/᩺ܳ᩸;->ۘ:[B
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 1
-        -0x3t
-        0x53t
-        0x4dt
-        0x42t
-    .end array-data
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 50
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x10
+    const/4 v0, -0x1
 
-    new-array v1, v0, [B
+    .line 67
+    iput v0, p0, Ll/᩺ܳ᩸;->֡:I
 
-    .line 51
-    iput-object v1, p0, Ll/᩺ܳ᩸;->۬:[B
+    const/4 v0, 0x0
 
-    new-array v0, v0, [B
+    .line 68
+    iput-object v0, p0, Ll/᩺ܳ᩸;->ܿ:Lnet/sf/sevenzipjbinding/ISequentialInStream;
 
-    .line 52
-    iput-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
-
-    return-void
-.end method
-
-.method public constructor <init>(JI[B)V
-    .locals 1
-
-    .line 41
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x10
-
-    new-array v0, v0, [B
-
-    .line 42
-    iput-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
-
-    .line 43
-    iput-object p4, p0, Ll/᩺ܳ᩸;->ۖ:[B
-
-    .line 44
-    iput p3, p0, Ll/᩺ܳ᩸;->ۚ:I
-
-    const/4 p3, 0x0
-
-    .line 45
-    iput p3, p0, Ll/᩺ܳ᩸;->᩹:I
-
-    const/4 p3, 0x1
-
-    .line 46
-    iput p3, p0, Ll/᩺ܳ᩸;->ۙ:I
-
-    .line 47
-    iput-wide p1, p0, Ll/᩺ܳ᩸;->֨:J
+    .line 91
+    iput-object p1, p0, Ll/᩺ܳ᩸;->ܰ:Ll/᩶ܳ᩸;
 
     return-void
 .end method
 
-.method public static ۙ([B)Z
+.method private ۙ(JJ)V
     .locals 1
 
-    .line 132
-    sget-object v0, Ll/᩺ܳ᩸;->ۘ:[B
+    .line 139
+    iget-object v0, p0, Ll/᩺ܳ᩸;->ܰ:Ll/᩶ܳ᩸;
 
-    invoke-static {p0, v0}, Ll/֨ܳ᩸;->ۙ([B[B)Z
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    if-nez v0, :cond_1
+
+    .line 142
+    invoke-static {p1, p2, p3, p4}, Ll/ۗۧܺ;->ۙ(JJ)I
+
+    move-result p1
+
+    .line 143
+    iget p2, p0, Ll/᩺ܳ᩸;->֡:I
+
+    if-eq p1, p2, :cond_0
+
+    .line 144
+    iput p1, p0, Ll/᩺ܳ᩸;->֡:I
+
+    .line 145
+    new-instance p2, Ll/ۨܳ᩸;
+
+    invoke-direct {p2, p0, p1}, Ll/ۨܳ᩸;-><init>(Ll/᩺ܳ᩸;I)V
+
+    invoke-static {p2}, Ll/᩶᩷ۧ;->ۙ(Ljava/lang/Runnable;)V
+
+    :cond_0
+    return-void
+
+    .line 140
+    :cond_1
+    new-instance p1, Lnet/sf/sevenzipjbinding/SevenZipException;
+
+    const-string p2, "Canceled"
+
+    invoke-direct {p1, p2}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final ֨()J
+.method public getItemInformation(ILnet/sf/sevenzipjbinding/impl/OutItemFactory;)Lnet/sf/sevenzipjbinding/IOutItemBase;
     .locals 2
 
-    .line 121
-    iget-wide v0, p0, Ll/᩺ܳ᩸;->֨:J
+    .line 96
+    iget-object v0, p0, Ll/᩺ܳ᩸;->ܰ:Ll/᩶ܳ᩸;
 
-    return-wide v0
-.end method
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
 
-.method public final ۖ()[B
-    .locals 1
+    move-result v1
 
-    .line 105
-    iget-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
+    if-nez v1, :cond_0
 
-    return-object v0
-.end method
+    .line 99
+    invoke-interface {v0, p1, p2}, Ll/᩶ܳ᩸;->getItemInformation(ILnet/sf/sevenzipjbinding/impl/OutItemFactory;)Lnet/sf/sevenzipjbinding/impl/OutItem;
 
-.method public final ۙ()I
-    .locals 1
+    move-result-object p1
 
-    .line 84
-    iget v0, p0, Ll/᩺ܳ᩸;->ܰ:I
-
-    return v0
-.end method
-
-.method public final ۙ(Ll/᩵ۙᩳ;)V
-    .locals 3
-
-    .line 70
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->᩺()I
-
-    move-result v0
-
-    iput v0, p0, Ll/᩺ܳ᩸;->ܰ:I
-
-    .line 72
-    sget-object v0, Ll/᩺ܳ᩸;->ۘ:[B
-
-    invoke-static {p1, v0}, Ll/֨ܳ᩸;->ۙ(Ll/ۧۢ᩸;[B)V
-
-    .line 139
-    iget-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
-
-    array-length v0, v0
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_0
-
-    new-array v0, v1, [B
-
-    .line 140
-    iput-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
-
-    .line 142
-    :cond_0
-    iget-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
-
-    .line 293
-    array-length v2, v0
-
-    invoke-virtual {p1, v2, v0}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    .line 149
-    iget-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
-
-    array-length v0, v0
-
-    if-eq v0, v1, :cond_1
-
-    new-array v0, v1, [B
-
-    .line 150
-    iput-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
-
-    .line 152
-    :cond_1
-    iget-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
-
-    .line 293
-    array-length v1, v0
-
-    invoke-virtual {p1, v1, v0}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    .line 75
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
-
-    move-result v0
-
-    iput v0, p0, Ll/᩺ܳ᩸;->ۚ:I
-
-    .line 76
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->֨()I
-
-    move-result v0
-
-    iput v0, p0, Ll/᩺ܳ᩸;->᩹:I
-
-    .line 77
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->֨()I
-
-    move-result v0
-
-    iput v0, p0, Ll/᩺ܳ᩸;->ۙ:I
-
-    .line 78
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->᩹()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ll/᩺ܳ᩸;->֨:J
-
-    .line 79
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ܶ()I
-
-    move-result p1
-
-    iput p1, p0, Ll/᩺ܳ᩸;->ۨ:I
-
-    return-void
-.end method
-
-.method public final ۚ()I
-    .locals 1
-
-    .line 109
-    iget v0, p0, Ll/᩺ܳ᩸;->ۚ:I
-
-    return v0
-.end method
-
-.method public final ۨ()I
-    .locals 1
-
-    .line 117
-    iget v0, p0, Ll/᩺ܳ᩸;->ۙ:I
-
-    return v0
-.end method
-
-.method public final ۬()[B
-    .locals 1
+    return-object p1
 
     .line 97
-    iget-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
+    :cond_0
+    new-instance p1, Lnet/sf/sevenzipjbinding/SevenZipException;
 
-    return-object v0
+    const-string p2, "Canceled"
+
+    invoke-direct {p1, p2}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final ܰ()I
-    .locals 1
-
-    .line 89
-    iget v0, p0, Ll/᩺ܳ᩸;->ۨ:I
-
-    return v0
-.end method
-
-.method public final ܰ(Ll/᩵ۙᩳ;)V
+.method public final getStream(I)Lnet/sf/sevenzipjbinding/ISequentialInStream;
     .locals 2
 
-    .line 57
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->᩺()I
+    .line 105
+    iget-object v0, p0, Ll/᩺ܳ᩸;->ܰ:Ll/᩶ܳ᩸;
 
-    move-result v0
+    invoke-interface {v0}, Ll/۟֡֫;->۫()Z
 
-    iput v0, p0, Ll/᩺ܳ᩸;->ܰ:I
+    move-result v1
 
-    .line 58
-    sget-object v0, Ll/᩺ܳ᩸;->ۘ:[B
+    if-nez v1, :cond_0
 
-    const/4 v1, 0x4
+    .line 109
+    :try_start_0
+    invoke-interface {v0, p1}, Ll/᩶ܳ᩸;->getStream(I)Lnet/sf/sevenzipjbinding/ISequentialInStream;
 
-    .line 318
-    invoke-virtual {p1, v1, v0}, Ll/ۧۢ᩸;->ۙ(I[B)V
+    move-result-object p1
 
-    .line 59
-    iget-object v0, p0, Ll/᩺ܳ᩸;->۬:[B
+    .line 110
+    iput-object p1, p0, Ll/᩺ܳ᩸;->ܿ:Lnet/sf/sevenzipjbinding/ISequentialInStream;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 318
-    array-length v1, v0
+    return-object p1
 
-    invoke-virtual {p1, v1, v0}, Ll/ۧۢ᩸;->ۙ(I[B)V
+    :catch_0
+    move-exception p1
 
-    .line 60
-    iget-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
+    .line 113
+    new-instance v0, Lnet/sf/sevenzipjbinding/SevenZipException;
 
-    .line 318
-    array-length v1, v0
+    invoke-direct {v0, p1}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1, v1, v0}, Ll/ۧۢ᩸;->ۙ(I[B)V
+    throw v0
 
-    .line 61
-    iget-object v0, p0, Ll/᩺ܳ᩸;->ۖ:[B
+    .line 106
+    :cond_0
+    new-instance p1, Lnet/sf/sevenzipjbinding/SevenZipException;
 
-    array-length v0, v0
+    const-string v0, "Canceled"
 
-    rsub-int/lit8 v0, v0, 0x10
+    invoke-direct {p1, v0}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ll/᩵ۙᩳ;->֨(I)V
+    throw p1
+.end method
 
-    .line 62
-    iget v0, p0, Ll/᩺ܳ᩸;->ۚ:I
+.method public final setCompleted(J)V
+    .locals 2
 
-    int-to-long v0, v0
+    .line 134
+    iput-wide p1, p0, Ll/᩺ܳ᩸;->᩶:J
 
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(J)V
+    .line 135
+    iget-wide v0, p0, Ll/᩺ܳ᩸;->۟:J
 
-    .line 63
-    iget v0, p0, Ll/᩺ܳ᩸;->᩹:I
-
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ܰ(I)V
-
-    .line 64
-    iget v0, p0, Ll/᩺ܳ᩸;->ۙ:I
-
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ܰ(I)V
-
-    .line 65
-    iget-wide v0, p0, Ll/᩺ܳ᩸;->֨:J
-
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ۙ(J)V
+    invoke-direct {p0, p1, p2, v0, v1}, Ll/᩺ܳ᩸;->ۙ(JJ)V
 
     return-void
 .end method
 
-.method public final ᩹()I
+.method public final setOperationResult(Z)V
     .locals 1
 
-    .line 113
-    iget v0, p0, Ll/᩺ܳ᩸;->᩹:I
+    .line 119
+    iget-object v0, p0, Ll/᩺ܳ᩸;->ܿ:Lnet/sf/sevenzipjbinding/ISequentialInStream;
 
-    return v0
+    invoke-static {v0}, Ll/᩵֫ܺ;->ۙ(Ljava/lang/AutoCloseable;)V
+
+    const/4 v0, 0x0
+
+    .line 120
+    iput-object v0, p0, Ll/᩺ܳ᩸;->ܿ:Lnet/sf/sevenzipjbinding/ISequentialInStream;
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    .line 122
+    :cond_0
+    new-instance p1, Lnet/sf/sevenzipjbinding/SevenZipException;
+
+    invoke-direct {p1}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final setTotal(J)V
+    .locals 2
+
+    .line 128
+    iput-wide p1, p0, Ll/᩺ܳ᩸;->۟:J
+
+    .line 129
+    iget-wide v0, p0, Ll/᩺ܳ᩸;->᩶:J
+
+    invoke-direct {p0, v0, v1, p1, p2}, Ll/᩺ܳ᩸;->ۙ(JJ)V
+
+    return-void
 .end method

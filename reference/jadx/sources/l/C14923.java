@@ -1,119 +1,97 @@
 package l;
 
-import java.io.DataInput;
-import java.io.DataInputStream;
-import java.io.EOFException;
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܶ֫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B2LU */
+/* JADX INFO: renamed from: l.ܰ᩺ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 43ZG */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14923 extends FilterInputStream implements DataInput, InterfaceC20818 {
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+public class C14923 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C8957 f48743;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C8957 f48744;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C14177 f48745;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f48746 = new ArrayList();
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C13652 f48747;
+
+    public C14923(C21637 c21637, C13652 c13652) {
+        this.f48747 = c13652;
+        this.f48745 = c21637.f69083;
+        C8957 c8957 = C14177.f44826;
+        this.f48743 = c8957;
+        this.f48744 = c8957;
     }
 
-    public C14923(C6455 c6455) {
-        super(c6455);
-    }
-
-    @Override // java.io.DataInput
-    public final String readLine() {
-        throw new UnsupportedOperationException("readLine is not supported");
-    }
-
-    @Override // java.io.DataInput
-    public final void readFully(byte[] bArr) {
-        int i = C2221.f7996;
-        C2221.m6840(this, bArr, 0, bArr.length);
-    }
-
-    @Override // java.io.DataInput
-    public final void readFully(byte[] bArr, int i, int i2) {
-        C2221.m6840(this, bArr, i, i2);
-    }
-
-    @Override // java.io.DataInput
-    public final int skipBytes(int i) {
-        return (int) ((FilterInputStream) this).in.skip(i);
-    }
-
-    @Override // java.io.DataInput
-    public final int readUnsignedByte() throws IOException {
-        int i = ((FilterInputStream) this).in.read();
-        if (i >= 0) {
-            return i;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C8957 m35905(int i) {
+        if (i == 0) {
+            return this.f48744;
         }
-        throw new EOFException();
+        ArrayList arrayList = this.f48746;
+        for (int size = arrayList.size(); size < i; size++) {
+            arrayList.add(this.f48747.m33426());
+        }
+        return (C8957) arrayList.get(i - 1);
     }
 
-    @Override // java.io.DataInput
-    public final int readUnsignedShort() throws IOException {
-        return C17039.m39816((byte) 0, (byte) 0, m35670(), m35670());
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C8957 m35906() {
+        return this.f48743;
     }
 
-    @Override // java.io.DataInput
-    public final int readInt() throws IOException {
-        byte bM35670 = m35670();
-        byte bM35671 = m35670();
-        return C17039.m39816(m35670(), m35670(), bM35671, bM35670);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m35902() {
+        this.f48743 = this.f48744;
+        ArrayList arrayList = this.f48746;
+        if (!arrayList.isEmpty()) {
+            this.f48744 = (C8957) arrayList.remove(0);
+        } else {
+            this.f48744 = this.f48747.m33426();
+        }
     }
 
-    @Override // java.io.DataInput
-    public final long readLong() throws IOException {
-        byte bM35670 = m35670();
-        byte bM35671 = m35670();
-        byte bM35672 = m35670();
-        byte bM35673 = m35670();
-        byte bM35674 = m35670();
-        byte bM35675 = m35670();
-        return ((((long) bM35671) & 255) << 8) | ((((long) bM35673) & 255) << 24) | ((((long) bM35675) & 255) << 40) | ((((long) m35670()) & 255) << 56) | ((((long) m35670()) & 255) << 48) | ((((long) bM35674) & 255) << 32) | ((((long) bM35672) & 255) << 16) | (((long) bM35670) & 255);
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C8957 m35903() {
+        C8957 c8957 = this.f48744;
+        int i = c8957.f29214;
+        EnumC7466 enumC7466 = c8957.f29212;
+        if (enumC7466.f24714.length() < 2 || enumC7466.f24715 != EnumC2991.DEFAULT) {
+            throw new AssertionError("Cant split" + enumC7466);
+        }
+        String strSubstring = enumC7466.f24714.substring(0, 1);
+        C14177 c14177 = this.f48745;
+        EnumC7466 enumC7466M34465 = c14177.m34465(strSubstring);
+        EnumC7466 enumC7466M34466 = c14177.m34465(enumC7466.f24714.substring(1));
+        if (enumC7466M34465 == null || enumC7466M34466 == null) {
+            throw new AssertionError("Cant split - bad subtokens");
+        }
+        C8957[] c8957Arr = {new C8957(enumC7466M34465, i, enumC7466M34465.f24714.length() + i, c8957.f29211), new C8957(enumC7466M34466, enumC7466M34465.f24714.length() + i, c8957.f29213, null)};
+        this.f48743 = c8957Arr[0];
+        C8957 c8958 = c8957Arr[1];
+        this.f48744 = c8958;
+        return c8958;
     }
 
-    @Override // java.io.DataInput
-    public final float readFloat() {
-        return Float.intBitsToFloat(readInt());
-    }
-
-    @Override // java.io.DataInput
-    public final double readDouble() {
-        return Double.longBitsToDouble(readLong());
-    }
-
-    @Override // java.io.DataInput
-    public final String readUTF() {
-        return new DataInputStream(((FilterInputStream) this).in).readUTF();
-    }
-
-    @Override // java.io.DataInput
-    public final short readShort() {
-        return (short) readUnsignedShort();
-    }
-
-    @Override // java.io.DataInput
-    public final char readChar() {
-        return (char) readUnsignedShort();
-    }
-
-    @Override // java.io.DataInput
-    public final byte readByte() {
-        return (byte) readUnsignedByte();
-    }
-
-    @Override // java.io.DataInput
-    public final boolean readBoolean() {
-        return readUnsignedByte() != 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC1829 m35904() {
+        return this.f48747.mo31480();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private byte m35670() throws IOException {
-        int i = ((FilterInputStream) this).in.read();
-        if (i != -1) {
-            return (byte) i;
-        }
-        throw new EOFException();
+    public final int m35900() {
+        return this.f48747.f43355;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m35901(int i) {
+        this.f48747.f43355 = i;
     }
 }

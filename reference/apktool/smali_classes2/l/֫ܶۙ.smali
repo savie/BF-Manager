@@ -1,24 +1,16 @@
-.class public final Ll/֫ܶۙ;
-.super Ll/ۗܶۙ;
-.source "MANG"
-
-
-# static fields
-.field public static final ܰ:Ll/֫ܶۙ;
+.class public final synthetic Ll/֫ܶۙ;
+.super Ljava/lang/Object;
+.source "J219"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public static synthetic ۙ(IILjava/lang/String;)V
     .locals 1
 
-    .line 2
-    new-instance v0, Ll/֫ܶۙ;
-
-    .line 42
-    invoke-direct {v0}, Ll/ۗܶۙ;-><init>()V
-
     .line 0
-    sput-object v0, Ll/֫ܶۙ;->ܰ:Ll/֫ܶۙ;
+    new-instance v0, Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+
+    invoke-direct {v0, p2, p0, p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
 
     return-void
 .end method

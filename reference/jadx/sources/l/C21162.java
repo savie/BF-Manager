@@ -1,20 +1,18 @@
 package l;
 
-import java.util.List;
-import java.util.RandomAccess;
-
-/* JADX INFO: renamed from: l.᩷᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.᩶۟۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: N9ZJ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21162 extends C10358 implements RandomAccess {
-    public static final long serialVersionUID = -2542308836966382001L;
+public final class C21162 {
 
-    @Override // l.C10358, java.util.List
-    public final List subList(int i, int i2) {
-        return new C21162(this.b.subList(i, i2));
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f67564;
 
-    private Object writeReplace() {
-        return new C10358(this.b);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9973 f67565;
+
+    public C21162(C9973 c9973, boolean z) {
+        this.f67565 = c9973;
+        this.f67564 = z;
     }
 }

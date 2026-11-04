@@ -1,97 +1,58 @@
 .class public final Ll/ᩳ֫;
 .super Ljava/lang/Object;
-.source "E9O4"
+.source "Q63C"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic ܺ:Landroid/view/ViewGroup;
-
-.field public ᩶:I
+.field public final synthetic ܰ:Ll/ۖ֫;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
+.method public constructor <init>(Ll/ۖ֫;)V
     .locals 0
 
-    .line 87
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 0
-    iput-object p1, p0, Ll/ᩳ֫;->ܺ:Landroid/view/ViewGroup;
+    iput-object p1, p0, Ll/ᩳ֫;->ܰ:Ll/ۖ֫;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 2
+.method public final run()V
+    .locals 3
 
-    .line 89
-    iget v0, p0, Ll/ᩳ֫;->᩶:I
+    .line 130
+    iget-object v0, p0, Ll/ᩳ֫;->ܰ:Ll/ۖ֫;
 
-    iget-object v1, p0, Ll/ᩳ֫;->ܺ:Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Ll/ۖ֫;->ۚ()V
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+    .line 131
+    iget-object v1, v0, Ll/ۖ֫;->᩶:Ll/᩶֫;
 
-    move-result v1
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    if-ge v0, v1, :cond_0
+    move-result-object v1
 
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
-    return v0
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v1
 
-    return v0
-.end method
+    iget-object v2, v0, Ll/ۖ֫;->ܽۙ:Landroid/animation/AnimatorListenerAdapter;
 
-.method public final next()Ljava/lang/Object;
-    .locals 2
+    .line 132
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 90
-    iget v0, p0, Ll/ᩳ֫;->᩶:I
+    move-result-object v1
 
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Ll/ᩳ֫;->᩶:I
-
-    iget-object v1, p0, Ll/ᩳ֫;->ܺ:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    .line 91
-    iget v0, p0, Ll/ᩳ֫;->᩶:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ll/ᩳ֫;->᩶:I
-
-    iget-object v1, p0, Ll/ᩳ֫;->ܺ:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
+    iput-object v1, v0, Ll/ۖ֫;->ۖ:Landroid/view/ViewPropertyAnimator;
 
     return-void
 .end method

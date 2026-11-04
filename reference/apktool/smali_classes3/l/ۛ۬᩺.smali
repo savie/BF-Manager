@@ -1,82 +1,94 @@
-.class public final Ll/ۛ۬᩺;
-.super Ll/ܿ۫ۚ;
-.source "08W3"
+.class public final synthetic Ll/ۛ۬᩺;
+.super Ljava/lang/Object;
+.source "W7SR"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic ۗ:Ll/ܳ۬᩺;
-
-.field public final synthetic ۙۙ:I
+.field public final synthetic ܰ:Ll/ۖ᩷ۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܳ۬᩺;Ll/۫ܶۘ;I)V
+.method public synthetic constructor <init>(Ll/ۖ᩷ۘ;)V
     .locals 0
 
-    .line 79
-    iput-object p1, p0, Ll/ۛ۬᩺;->ۗ:Ll/ܳ۬᩺;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ll/ۛ۬᩺;->ۙۙ:I
-
-    const/4 p1, -0x1
-
-    .line 40
-    invoke-direct {p0, p2, p1}, Ll/ܿ۫ۚ;-><init>(Ll/۫ܶۘ;I)V
+    iput-object p1, p0, Ll/ۛ۬᩺;->ܰ:Ll/ۖ᩷ۘ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ᩴ()V
-    .locals 2
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 84
-    :try_start_0
-    invoke-virtual {p0}, Ll/ܿ۫ۚ;->ۜ()Ljava/lang/String;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    .line 2
+    check-cast p1, Ll/᩸۟᩺;
+
+    .line 1846
+    iget-object v0, p0, Ll/ۛ۬᩺;->ܰ:Ll/ۖ᩷ۘ;
+
+    iget-object v0, v0, Ll/ۖ᩷ۘ;->ۙ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-gtz v0, :cond_0
-
-    .line 89
-    invoke-virtual {p0}, Ll/ܿ۫ۚ;->ܰ()V
-
-    return-void
-
-    .line 92
     :cond_0
-    iget v1, p0, Ll/ۛ۬᩺;->ۙۙ:I
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-le v0, v1, :cond_1
+    move-result v1
 
-    const v0, 0x7f120794
+    if-eqz v1, :cond_1
 
-    .line 93
-    invoke-static {v0}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-void
+    move-result-object v1
 
-    .line 97
+    check-cast v1, Ll/ۡ᩷ۘ;
+
+    .line 1847
+    iget-object v2, v1, Ll/ۛ۟ۘ;->ܰ:Ljava/lang/Object;
+
+    check-cast v2, Ll/ܿᩳۘ;
+
+    invoke-virtual {v2, p1}, Ll/ܿᩳۘ;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-object v1
+
     :cond_1
-    new-instance v1, Ll/ܿ۬᩺;
+    const/4 p1, 0x0
 
-    invoke-direct {v1, p0, v0}, Ll/ܿ۬᩺;-><init>(Ll/ۛ۬᩺;I)V
+    return-object p1
+.end method
 
-    .line 128
-    invoke-virtual {v1}, Ll/ۗ᩷᩺;->֨()V
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    return-void
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+
+    move-result-object p1
+
+    return-object p1
 .end method

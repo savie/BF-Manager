@@ -7,9 +7,9 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.Set;
-import l.C0561;
-import l.C3184;
-import l.C8479;
+import l.C13645;
+import l.C4681;
+import l.C6421;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.math.Primes;
 import org.bouncycastle.math.ec.endo.ECEndomorphism;
@@ -335,7 +335,7 @@ public abstract class ECCurve {
 
     public class Fp extends AbstractFp {
         public static final int FP_DEFAULT_COORDS = 4;
-        public static final Set knownQs = C0561.synchronizedSet(new HashSet());
+        public static final Set knownQs = C4681.synchronizedSet(new HashSet());
         public static final BigIntegers.Cache validatedQs = new BigIntegers.Cache();
         public ECPoint.Fp infinity;
         public BigInteger q;
@@ -457,7 +457,7 @@ public abstract class ECCurve {
             if (i2 <= 128) {
                 return 4;
             }
-            return C3184.m9602(i2, 127, 2, 4);
+            return C6421.m18182(i2, 127, 2, 4);
         }
         if (i >= 1024) {
             if (i2 <= 100) {
@@ -466,13 +466,13 @@ public abstract class ECCurve {
             if (i2 <= 112) {
                 return 5;
             }
-            return C3184.m9602(i2, UMErrorCode.E_UM_BE_CREATE_FAILED, 2, 5);
+            return C6421.m18182(i2, UMErrorCode.E_UM_BE_CREATE_FAILED, 2, 5);
         }
         if (i < 512) {
             if (i2 <= 80) {
                 return 40;
             }
-            return C3184.m9602(i2, 79, 2, 40);
+            return C6421.m18182(i2, 79, 2, 40);
         }
         if (i2 <= 80) {
             return 5;
@@ -480,7 +480,7 @@ public abstract class ECCurve {
         if (i2 <= 100) {
             return 7;
         }
-        return C3184.m9602(i2, 99, 2, 7);
+        return C6421.m18182(i2, 99, 2, 7);
     }
 
     public void checkPoint(ECPoint eCPoint) {
@@ -954,7 +954,7 @@ public abstract class ECCurve {
             if (i <= Properties.asInteger("org.bouncycastle.ec.max_f2m_field_size", 1142)) {
                 return FiniteFields.getBinaryExtensionField((i3 | i4) == 0 ? new int[]{0, i2, i} : new int[]{0, i2, i3, i4, i});
             }
-            throw new IllegalArgumentException(C8479.m22141(i, "field size out of range: "));
+            throw new IllegalArgumentException(C13645.m33382(i, "field size out of range: "));
         }
     }
 }

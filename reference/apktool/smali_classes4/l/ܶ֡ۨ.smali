@@ -1,329 +1,129 @@
-.class public abstract Ll/ܶ֡ۨ;
-.super Ljava/lang/Object;
-.source "251F"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final enum Ll/ܶ֡ۨ;
+.super Ljava/lang/Enum;
+.source "Y7UD"
 
 
-# instance fields
-.field public final ֡:Ll/ۡ᩸᩺;
+# static fields
+.field public static final enum ֡:Ll/ܶ֡ۨ;
 
-.field public final ۫:Landroid/widget/CheckBox;
+.field public static final synthetic ܰ:[Ll/ܶ֡ۨ;
 
-.field public final ܺ:Ll/ۘ֡ۨ;
+.field public static final enum ܿ:Ll/ܶ֡ۨ;
 
-.field public final ܽ:Landroid/widget/CheckBox;
-
-.field public final ܿ:Landroid/widget/TextView;
-
-.field public final ᩶:Ll/᩵ۡۜ;
+.field public static final enum ᩶:Ll/ܶ֡ۨ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۘ֡ۨ;)V
-    .locals 6
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 29
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 11
+    new-instance v0, Ll/ܶ֡ۨ;
 
-    .line 30
-    iput-object p1, p0, Ll/ܶ֡ۨ;->ܺ:Ll/ۘ֡ۨ;
+    const-string v1, "NONE"
 
-    const v0, 0x7f0d009d
+    const/4 v2, 0x0
 
-    .line 31
-    invoke-virtual {p1, v0}, Ll/۫ܶۘ;->ۙ(I)Landroid/view/View;
+    invoke-direct {v0, v1, v2}, Ll/ܶ֡ۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܶ֡ۨ;->֡:Ll/ܶ֡ۨ;
+
+    .line 13
+    new-instance v0, Ll/ܶ֡ۨ;
+
+    const-string v1, "BLOCKS"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ܶ֡ۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܶ֡ۨ;->᩶:Ll/ܶ֡ۨ;
+
+    .line 15
+    new-instance v0, Ll/ܶ֡ۨ;
+
+    const-string v1, "BLOCKS_AND_INLINES"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ܶ֡ۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܶ֡ۨ;->ܿ:Ll/ܶ֡ۨ;
+
+    .line 9
+    invoke-static {}, Ll/ܶ֡ۨ;->ۙ()[Ll/ܶ֡ۨ;
 
     move-result-object v0
 
-    const v1, 0x7f0a017d
-
-    .line 32
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ۡ᩸᩺;
-
-    iput-object v1, p0, Ll/ܶ֡ۨ;->֡:Ll/ۡ᩸᩺;
-
-    const v1, 0x7f0a00da
-
-    .line 33
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    iput-object v1, p0, Ll/ܶ֡ۨ;->ܽ:Landroid/widget/CheckBox;
-
-    const v2, 0x7f0a00de
-
-    .line 34
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/CheckBox;
-
-    iput-object v2, p0, Ll/ܶ֡ۨ;->۫:Landroid/widget/CheckBox;
-
-    const v3, 0x7f0a0631
-
-    .line 35
-    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iput-object v3, p0, Ll/ܶ֡ۨ;->ܿ:Landroid/widget/TextView;
-
-    .line 37
-    sget-object v3, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
-
-    const-string v4, "dex_search_match_case"
-
-    const/4 v5, 0x0
-
-    invoke-interface {v3, v4, v5}, Ll/ۛۧ᩺;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Landroid/widget/CompoundButton;->setChecked(Z)V
-
-    .line 38
-    new-instance v1, Ll/ۜ֡ۨ;
-
-    invoke-direct {v1, p0}, Ll/ۜ֡ۨ;-><init>(Ll/ܶ֡ۨ;)V
-
-    invoke-virtual {v2, v1}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-
-    .line 39
-    sget-object v1, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
-
-    const-string v3, "dex_search_regex"
-
-    invoke-interface {v1, v3, v5}, Ll/ۛۧ᩺;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    invoke-virtual {v2, v1}, Landroid/widget/CompoundButton;->setChecked(Z)V
-
-    .line 42
-    sget v1, Ll/᩵ۡۜ;->᩶:I
-
-    .line 186
-    new-instance v1, Ll/۠ۡۜ;
-
-    invoke-direct {v1, p1}, Ll/۠ۡۜ;-><init>(Landroid/content/Context;)V
-
-    .line 43
-    invoke-virtual {v1, v0}, Ll/۠ۡۜ;->ۙ(Landroid/view/View;)V
-
-    const p1, 0x7f12070a
-
-    const/4 v0, 0x0
-
-    .line 44
-    invoke-virtual {v1, p1, v0}, Ll/۠ۡۜ;->ۖ(ILandroid/content/DialogInterface$OnClickListener;)V
-
-    const p1, 0x7f12015e
-
-    .line 45
-    invoke-virtual {v1, p1, v0}, Ll/۠ۡۜ;->ܰ(ILandroid/content/DialogInterface$OnClickListener;)V
-
-    .line 46
-    invoke-virtual {v1}, Ll/۠ۡۜ;->ۙ()Ll/᩵ۡۜ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ܶ֡ۨ;->᩶:Ll/᩵ۡۜ;
+    sput-object v0, Ll/ܶ֡ۨ;->ܰ:[Ll/ܶ֡ۨ;
 
     return-void
 .end method
 
-.method public static bridge synthetic ۙ(Ll/ܶ֡ۨ;)Ll/۫ܶۘ;
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
-    iget-object p0, p0, Ll/ܶ֡ۨ;->ܺ:Ll/ۘ֡ۨ;
+    .line 9
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/ܶ֡ۨ;
+    .locals 1
+
+    .line 9
+    const-class v0, Ll/ܶ֡ۨ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ܶ֡ۨ;
 
     return-object p0
 .end method
 
-.method public static synthetic ۙ(Ll/ܶ֡ۨ;Z)V
-    .locals 0
-
-    .line 38
-    iget-object p0, p0, Ll/ܶ֡ۨ;->֡:Ll/ۡ᩸᩺;
-
-    invoke-virtual {p0, p1}, Ll/ۡ᩸᩺;->ܰ(Z)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
-
-    .line 61
-    iget-object p1, p0, Ll/ܶ֡ۨ;->ܽ:Landroid/widget/CheckBox;
-
-    invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result p1
-
-    .line 62
-    iget-object v0, p0, Ll/ܶ֡ۨ;->۫:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result v0
-
-    .line 63
-    iget-object v1, p0, Ll/ܶ֡ۨ;->֡:Ll/ۡ᩸᩺;
-
-    invoke-virtual {v1}, Ll/ۡ᩸᩺;->ۨ()Ll/ۗ֫ۖ;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v0, :cond_0
-
-    .line 66
-    invoke-static {v2}, Ll/ᩳۛ᩺;->ۙ(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    move-object v3, v2
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    const/16 v4, 0x8
-
-    .line 71
-    :try_start_0
-    invoke-static {v3, v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v4, 0x4a
-
-    .line 73
-    invoke-static {v3, v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object v3
-    :try_end_0
-    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 82
-    :goto_1
-    sget-object v4, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
-
-    invoke-interface {v4}, Ll/ۛۧ᩺;->edit()Ll/ܿۧ᩺;
-
-    move-result-object v4
-
-    const-string v5, "dex_search_match_case"
-
-    .line 83
-    invoke-interface {v4, v5, p1}, Ll/ܿۧ᩺;->putBoolean(Ljava/lang/String;Z)Ll/ܿۧ᩺;
-
-    move-result-object p1
-
-    const-string v4, "dex_search_regex"
-
-    .line 84
-    invoke-interface {p1, v4, v0}, Ll/ܿۧ᩺;->putBoolean(Ljava/lang/String;Z)Ll/ܿۧ᩺;
-
-    move-result-object p1
-
-    .line 85
-    invoke-interface {p1}, Ll/ܿۧ᩺;->apply()V
-
-    .line 86
-    invoke-virtual {v1}, Ll/ۡ᩸᩺;->᩹()V
-
-    .line 88
-    iget-object p1, p0, Ll/ܶ֡ۨ;->᩶:Ll/᩵ۡۜ;
-
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->dismiss()V
-
-    .line 90
-    new-instance p1, Ll/᩺֡ۨ;
-
-    invoke-direct {p1, p0, v3, v2}, Ll/᩺֡ۨ;-><init>(Ll/ܶ֡ۨ;Ljava/util/regex/Pattern;Ljava/lang/String;)V
-
-    .line 119
-    invoke-virtual {p1}, Ll/ۗ᩷᩺;->֨()V
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    .line 77
-    invoke-virtual {p1}, Ljava/util/regex/PatternSyntaxException;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ll/ܺۡۜ;->ۙ(Ljava/lang/CharSequence;)Ll/ܺۡۜ;
-
-    .line 78
-    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
-
-    return-void
-.end method
-
-.method public abstract ۙ()V
-.end method
-
-.method public abstract ۙ(Ljava/util/regex/Pattern;Ljava/lang/String;)V
-.end method
-
-.method public final ۙ(Z)V
+.method public static values()[Ll/ܶ֡ۨ;
     .locals 1
 
-    if-eqz p1, :cond_0
+    .line 9
+    sget-object v0, Ll/ܶ֡ۨ;->ܰ:[Ll/ܶ֡ۨ;
 
-    const p1, 0x7f12090f
+    invoke-virtual {v0}, [Ll/ܶ֡ۨ;->clone()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const p1, 0x7f1208f4
+    check-cast v0, [Ll/ܶ֡ۨ;
 
-    .line 50
-    :goto_0
-    iget-object v0, p0, Ll/ܶ֡ۨ;->ܿ:Landroid/widget/TextView;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+.method public static synthetic ۙ()[Ll/ܶ֡ۨ;
+    .locals 3
 
-    .line 51
-    iget-object p1, p0, Ll/ܶ֡ۨ;->᩶:Ll/᩵ۡۜ;
+    const/4 v0, 0x3
 
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->ۘ()V
+    new-array v0, v0, [Ll/ܶ֡ۨ;
 
-    .line 52
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->ۚ()Landroid/widget/Button;
+    .line 9
+    sget-object v1, Ll/ܶ֡ۨ;->֡:Ll/ܶ֡ۨ;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    aput-object v1, v0, v2
 
-    return-void
+    sget-object v1, Ll/ܶ֡ۨ;->᩶:Ll/ܶ֡ۨ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ܶ֡ۨ;->ܿ:Ll/ܶ֡ۨ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

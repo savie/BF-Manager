@@ -1,121 +1,134 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import java.net.InetAddress;
 
-/* JADX INFO: renamed from: l.᩷۫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X4HD */
+/* JADX INFO: renamed from: l.᩵᩹᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: XA2E */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20882 implements InterfaceC17354 {
+public final class C20882 implements InterfaceC24612 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC17354 f67819;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C14168 f66831;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC12483 f67820;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C3728 f66832;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f67821;
+    public final C3728 f66833;
 
-    public C20882(InterfaceC17354 interfaceC17354, AbstractActivityC12483 abstractActivityC12483, String str) {
-        this.f67819 = interfaceC17354;
-        this.f67820 = abstractActivityC12483;
-        this.f67821 = str;
+    public C20882(C14168 c14168) {
+        this.f66831 = c14168;
+        this.f66832 = new C3728("JmDNS(" + c14168.getName() + ").Timer", true);
+        this.f66833 = new C3728("JmDNS(" + c14168.getName() + ").State.Timer", false);
     }
 
-    @Override // l.InterfaceC17354
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۫ */
+    public final void mo34436() {
+        this.f66832.purge();
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ᩹ */
+    public final void mo34459() {
+        this.f66833.purge();
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo34449() {
+        this.f66832.cancel();
+    }
+
+    @Override // l.InterfaceC24612
     /* JADX INFO: renamed from: ۙ */
-    public final void mo6536(C14558 c14558, boolean z) {
-        this.f67819.mo6536(c14558, z);
+    public final void mo34415() {
+        this.f66833.cancel();
     }
 
-    @Override // l.InterfaceC17354
-    public final void onCanceled() {
-        this.f67819.onCanceled();
-    }
-
-    @Override // l.InterfaceC17354
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo6537(Exception exc) {
-        final AbstractActivityC12483 abstractActivityC12483;
-        boolean z = exc instanceof C15721;
-        final InterfaceC17354 interfaceC17354 = this.f67819;
-        if (z && (abstractActivityC12483 = this.f67820) != null) {
-            final String str = this.f67821;
-            C16737.m39273(new Runnable() { // from class: l.۟۫᩹
-                @Override // java.lang.Runnable
-                public final void run() {
-                    final AbstractActivityC12483 abstractActivityC12484 = abstractActivityC12483;
-                    boolean zIsFinishing = abstractActivityC12484.isFinishing();
-                    final InterfaceC17354 interfaceC17355 = interfaceC17354;
-                    if (zIsFinishing || abstractActivityC12484.getLifecycle().mo9170() == EnumC9414.DESTROYED) {
-                        interfaceC17355.onCanceled();
-                        return;
-                    }
-                    View viewM30995 = abstractActivityC12484.m30995(R.layout.MT_Protector);
-                    ((TextView) viewM30995.findViewById(R.id.MT_Protector)).setText(R.string.MT_Protector);
-                    final InterfaceC13175 interfaceC13175M50994 = C23053.m50994(abstractActivityC12484, viewM30995, str);
-                    C8067 c8067BuildDialog = abstractActivityC12484.buildDialog();
-                    c8067BuildDialog.m21258(viewM30995);
-                    c8067BuildDialog.m21251(R.string.MT_Protector, null);
-                    c8067BuildDialog.m21275(R.string.MT_Protector, new DialogInterfaceOnClickListenerC19471(0, interfaceC17355));
-                    c8067BuildDialog.m21271(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-                    c8067BuildDialog.m21256(new DialogInterface.OnCancelListener() { // from class: l.ۡ۫᩹
-                        @Override // android.content.DialogInterface.OnCancelListener
-                        public final void onCancel(DialogInterface dialogInterface) {
-                            interfaceC17355.onCanceled();
-                        }
-                    });
-                    final DialogInterfaceC19356 dialogInterfaceC19356M21269 = c8067BuildDialog.m21269();
-                    if (!dialogInterfaceC19356M21269.m44375()) {
-                        interfaceC17355.onCanceled();
-                        return;
-                    }
-                    final TextView textView = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-                    interfaceC13175M50994.mo4315(new Runnable() { // from class: l.ۤ۫᩹
-                        @Override // java.lang.Runnable
-                        public final void run() {
-                            InterfaceC13175 interfaceC13175 = interfaceC13175M50994;
-                            C23053.m50998(textView, interfaceC13175.mo4316());
-                            dialogInterfaceC19356M21269.m44373().setEnabled(!interfaceC13175.mo4313());
-                        }
-                    });
-                    final C22347 c22347 = new C22347(viewM30995);
-                    dialogInterfaceC19356M21269.m44361().setOnClickListener(new ViewOnClickListenerC22999(abstractActivityC12484, 0));
-                    dialogInterfaceC19356M21269.m44373().setOnClickListener(new View.OnClickListener() { // from class: l.ܶ۫᩹
-                        @Override // android.view.View.OnClickListener
-                        public final void onClick(View view) {
-                            DialogInterfaceC19356 dialogInterfaceC19356 = dialogInterfaceC19356M21269;
-                            if (dialogInterfaceC19356.m44375()) {
-                                InterfaceC13175 interfaceC13175 = interfaceC13175M50994;
-                                if (interfaceC13175.mo4317()) {
-                                    return;
-                                }
-                                C11392 c11392Mo4314 = interfaceC13175.mo4314();
-                                C14558 c14558M50995 = C23053.m50995(c11392Mo4314);
-                                boolean zMo1457 = c14558M50995.m35031().mo1457();
-                                InterfaceC17354 interfaceC17356 = interfaceC17355;
-                                if (zMo1457) {
-                                    boolean z2 = c14558M50995.m35031() instanceof C19954;
-                                    C22347 c22348 = c22347;
-                                    if (!z2 || c22348.m49556(dialogInterfaceC19356)) {
-                                        C23053.m50999(new C20177(z2, c22348, dialogInterfaceC19356, interfaceC17356, interfaceC13175, c11392Mo4314, c14558M50995, textView), c14558M50995.m35031(), abstractActivityC12484);
-                                        return;
-                                    }
-                                    return;
-                                }
-                                interfaceC13175.mo6719(c11392Mo4314);
-                                dialogInterfaceC19356.dismiss();
-                                interfaceC17356.mo6536(c14558M50995, false);
-                            }
-                        }
-                    });
-                }
-            });
-            return true;
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo34435() {
+        C6866 c6866 = new C6866(this.f66831);
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        if (jCurrentTimeMillis - c6866.m42076().m34444() < 5000) {
+            c6866.m42076().m34416(c6866.m42076().m34434() + 1);
+        } else {
+            c6866.m42076().m34416(1);
         }
-        return interfaceC17354.mo6537(exc);
+        c6866.m42076().m34450(jCurrentTimeMillis);
+        boolean zM34432 = c6866.m42076().m34432();
+        C3728 c3728 = this.f66833;
+        if (zM34432 && c6866.m42076().m34434() < 10) {
+            c3728.schedule(c6866, C14168.m34400().nextInt(251), 250L);
+        } else {
+            if (c6866.m42076().m34457() || c6866.m42076().m34438()) {
+                return;
+            }
+            c3728.schedule(c6866, 1000L, 1000L);
+        }
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo34442() {
+        C9102 c9102 = new C9102(this.f66831);
+        if (c9102.m42076().m34457() || c9102.m42076().m34438()) {
+            return;
+        }
+        this.f66833.schedule(c9102, 1000L, 1000L);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ܳ */
+    public final void mo34440() {
+        C13577 c13577 = new C13577(this.f66831);
+        if (c13577.m42076().m34457() || c13577.m42076().m34438()) {
+            return;
+        }
+        long j = C3137.f10164;
+        this.f66833.schedule(c13577, j, j);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۚ */
+    public final void mo34431() {
+        this.f66833.schedule(new C2391(this.f66831), 0L, 1000L);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ܽ */
+    public final void mo34443() {
+        C0154 c0154 = new C0154(this.f66831);
+        if (c0154.m42076().m34457() || c0154.m42076().m34438()) {
+            return;
+        }
+        this.f66832.schedule(c0154, 10000L, 10000L);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo34428(C17307 c17307) {
+        C9848 c9848 = new C9848(this.f66831, c17307);
+        if (c9848.m42076().m34457() || c9848.m42076().m34438()) {
+            return;
+        }
+        this.f66832.schedule(c9848, 225L, 225L);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo34418(String str) {
+        C0900 c0900 = new C0900(this.f66831, str);
+        if (c0900.m42076().m34457() || c0900.m42076().m34438()) {
+            return;
+        }
+        this.f66832.schedule(c0900, 225L, 225L);
+    }
+
+    @Override // l.InterfaceC24612
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo34421(C0525 c0525, InetAddress inetAddress, int i) {
+        new C7612(this.f66831, c0525, inetAddress, i).m20812(this.f66832);
     }
 }

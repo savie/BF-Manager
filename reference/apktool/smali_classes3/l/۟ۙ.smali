@@ -1,3 +1,17 @@
-.class public final Ll/۟ۙ;
-.super Ll/ۤۙ;
-.source "N5R1"
+.class public interface abstract Ll/۟ۙ;
+.super Ljava/lang/Object;
+.source "U6BF"
+
+
+# virtual methods
+.method public abstract ۙ()Ll/֡ۙ;
+.end method
+
+.method public abstract ۙ(Ll/ۚܶۙ;)V
+.end method
+
+.method public abstract ᩷()Ll/ۚܶۙ;
+.end method
+
+.method public abstract ᩸()Ll/ۗ᩷;
+.end method

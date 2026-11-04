@@ -9,7 +9,7 @@ import java.security.interfaces.DSAPrivateKey;
 import java.security.spec.DSAParameterSpec;
 import java.security.spec.DSAPrivateKeySpec;
 import java.util.Enumeration;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -23,7 +23,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.PKCS12BagAttributeCarrie
 import org.bouncycastle.jce.interfaces.PKCS12BagAttributeCarrier;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCDSAPrivateKey implements DSAPrivateKey, PKCS12BagAttributeCarrier {
     public static final long serialVersionUID = -4677259546958385734L;
     public transient PKCS12BagAttributeCarrierImpl attrCarrier = new PKCS12BagAttributeCarrierImpl();
@@ -133,7 +133,7 @@ public class BCDSAPrivateKey implements DSAPrivateKey, PKCS12BagAttributeCarrier
         StringBuilder sb = new StringBuilder("DSA Private Key [");
         String strLineSeparator = Strings.lineSeparator();
         BigInteger bigIntegerModPow = getParams().getG().modPow(this.x, getParams().getP());
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, DSAUtil.generateKeyFingerprint(bigIntegerModPow, getParams()), "]", strLineSeparator, "            Y: ");
+        C4794.m14774(sb, DSAUtil.generateKeyFingerprint(bigIntegerModPow, getParams()), "]", strLineSeparator, "            Y: ");
         sb.append(bigIntegerModPow.toString(16));
         sb.append(strLineSeparator);
         return sb.toString();

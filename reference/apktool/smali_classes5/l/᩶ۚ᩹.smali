@@ -1,25 +1,25 @@
 .class public final Ll/᩶ۚ᩹;
-.super Ll/ۙۡ᩵;
-.source "56MU"
+.super Ljava/util/ArrayList;
+.source "XBJ6"
 
 
-# instance fields
-.field public final ֨:Ljava/lang/StringBuilder;
-
-
-# direct methods
-.method public constructor <init>()V
+# virtual methods
+.method public final ᩷()Z
     .locals 1
 
-    .line 7
-    invoke-direct {p0}, Ll/ܳ᩵᩵;-><init>()V
+    .line 20
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
-    .line 190
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-gez v0, :cond_0
 
-    iput-object v0, p0, Ll/᩶ۚ᩹;->֨:Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    return-void
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

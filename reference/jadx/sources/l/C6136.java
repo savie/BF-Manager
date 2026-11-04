@@ -1,35 +1,41 @@
 package l;
 
-import java.util.regex.Pattern;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.lang.reflect.Array;
 
-/* JADX INFO: renamed from: l.ۛܶ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H7RN */
+/* JADX INFO: renamed from: l.ۛۘۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 62DG */
 /* JADX INFO: loaded from: classes3.dex */
-public final enum C6136 extends EnumC19730 {
-    public /* synthetic */ C6136(EnumC19024 enumC19024, EnumC18318 enumC18318) {
-        this("LIMIT_MODULES", 77, "--limit-modules", "opt.arg.limitmods", "opt.limitmods", enumC19024, enumC18318);
-    }
-
-    public C6136(String str, int i, String str2, String str3, String str4, EnumC19024 enumC19024, EnumC18318 enumC18318) {
-        super(str, i, str2, str3, str4, enumC19024, enumC18318, 0);
-    }
-
-    @Override // l.EnumC19730
-    /* JADX INFO: renamed from: ۙ */
-    public void mo2368(AbstractC10558 abstractC10558, String str, String str2) throws C21846 {
-        if (str2.isEmpty()) {
-            throw abstractC10558.m26710(C23879.m52614(str));
+public final class C6136 extends AbstractC9863 {
+    @Override // l.AbstractC9863
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo17737(CharSequence charSequence, StringWriter stringWriter) throws IOException {
+        if (charSequence.charAt(0) == '\"') {
+            if (charSequence.charAt(charSequence.length() - 1) == '\"') {
+                String string = charSequence.subSequence(1, charSequence.length() - 1).toString();
+                char[] cArr = C24036.f77761;
+                if (!C24276.m54286((CharSequence) string)) {
+                    if (!((cArr != null ? Array.getLength(cArr) : 0) == 0)) {
+                        int length = string.length();
+                        int length2 = cArr.length;
+                        int i = length - 1;
+                        int i2 = length2 - 1;
+                        for (int i3 = 0; i3 < length; i3++) {
+                            char cCharAt = string.charAt(i3);
+                            for (int i4 = 0; i4 < length2; i4++) {
+                                if (cArr[i4] == cCharAt && (!Character.isHighSurrogate(cCharAt) || i4 == i2 || (i3 < i && cArr[i4 + 1] == string.charAt(i3 + 1)))) {
+                                    stringWriter.write(AbstractC21292.f67894.m48531(string, C24036.f77760, C24036.f77762));
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+                stringWriter.write(string);
+                return;
+            }
         }
-        if (mo4848().matcher(str2).matches()) {
-            abstractC10558.mo12006(EnumC19730.f63404.f63414, str2);
-            return;
-        }
-        throw abstractC10558.m26710(C23879.m52615(str, str2));
-    }
-
-    @Override // l.EnumC19730
-    /* JADX INFO: renamed from: ۚ */
-    public Pattern mo4848() {
-        return Pattern.compile(",*[^,].*");
+        stringWriter.write(charSequence.toString());
     }
 }

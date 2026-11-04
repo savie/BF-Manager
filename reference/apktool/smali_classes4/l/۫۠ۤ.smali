@@ -1,78 +1,214 @@
-.class public final synthetic Ll/۫۠ۤ;
+.class public final Ll/۫۠ۤ;
 .super Ljava/lang/Object;
-.source "R450"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "492R"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩻᩵ۤ;
+.field public ۙ:Ll/᩸ۜۤ;
+
+.field public ۤ:Z
+
+.field public ۫:Ll/᩸ۜۤ;
+
+.field public ܳ:Ll/᩸ۜۤ;
+
+.field public ᩴ:Z
+
+.field public ᩷:Z
+
+.field public ᩸:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩻᩵ۤ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/۫۠ۤ;->ܺ:Ll/᩻᩵ۤ;
+    .line 9
+    new-instance v0, Ll/᩸ۜۤ;
+
+    .line 13
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iput-object v0, p0, Ll/۫۠ۤ;->ۙ:Ll/᩸ۜۤ;
+
+    .line 10
+    new-instance v0, Ll/᩸ۜۤ;
+
+    .line 13
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    iput-object v0, p0, Ll/۫۠ۤ;->ܳ:Ll/᩸ۜۤ;
+
+    .line 11
+    new-instance v0, Ll/᩸ۜۤ;
+
+    .line 13
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    iput-object v0, p0, Ll/۫۠ۤ;->۫:Ll/᩸ۜۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final ۙ()Ljava/lang/String;
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 116
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object p1
-.end method
+    iget-object v1, p0, Ll/۫۠ۤ;->ۙ:Ll/᩸ۜۤ;
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    const-string v1, "->"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll/۫۠ۤ;->ܳ:Ll/᩸ۜۤ;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll/۫۠ۤ;->۫:Ll/᩸ۜۤ;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final ۙ(Ll/۫۠ۤ;)V
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 18
+    iget-object v0, p0, Ll/۫۠ۤ;->ۙ:Ll/᩸ۜۤ;
 
-    move-result-object p1
+    iget-object v1, p1, Ll/۫۠ۤ;->ۙ:Ll/᩸ۜۤ;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ll/᩸ۜۤ;->ۙ(Ll/᩸ۜۤ;)V
+
+    .line 19
+    iget-object v0, p0, Ll/۫۠ۤ;->ܳ:Ll/᩸ۜۤ;
+
+    iget-object v1, p1, Ll/۫۠ۤ;->ܳ:Ll/᩸ۜۤ;
+
+    invoke-virtual {v0, v1}, Ll/᩸ۜۤ;->ۙ(Ll/᩸ۜۤ;)V
+
+    .line 20
+    iget-object v0, p0, Ll/۫۠ۤ;->۫:Ll/᩸ۜۤ;
+
+    iget-object v1, p1, Ll/۫۠ۤ;->۫:Ll/᩸ۜۤ;
+
+    invoke-virtual {v0, v1}, Ll/᩸ۜۤ;->ۙ(Ll/᩸ۜۤ;)V
+
+    .line 21
+    iget-boolean v0, p1, Ll/۫۠ۤ;->᩷:Z
+
+    iput-boolean v0, p0, Ll/۫۠ۤ;->᩷:Z
+
+    .line 22
+    iget-boolean v0, p1, Ll/۫۠ۤ;->᩸:Z
+
+    iput-boolean v0, p0, Ll/۫۠ۤ;->᩸:Z
+
+    .line 23
+    iget-boolean v0, p1, Ll/۫۠ۤ;->ۤ:Z
+
+    iput-boolean v0, p0, Ll/۫۠ۤ;->ۤ:Z
+
+    .line 24
+    iget-boolean p1, p1, Ll/۫۠ۤ;->ᩴ:Z
+
+    iput-boolean p1, p0, Ll/۫۠ۤ;->ᩴ:Z
+
+    return-void
 .end method
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
+.method public final ᩷()Lorg/json/JSONObject;
+    .locals 3
 
-    .line 0
-    iget-object v0, p0, Ll/۫۠ۤ;->ܺ:Ll/᩻᩵ۤ;
+    .line 131
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    check-cast p1, Ll/᩻᩵ۤ;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    if-ne p1, v0, :cond_0
+    .line 132
+    iget-object v1, p0, Ll/۫۠ۤ;->ۙ:Ll/᩸ۜۤ;
 
-    const/4 p1, 0x1
+    const/16 v2, 0x61
 
-    return p1
+    invoke-virtual {v1, v0, v2}, Ll/᩸ۜۤ;->᩷(Lorg/json/JSONObject;C)V
 
-    :cond_0
-    const/4 p1, 0x0
+    .line 133
+    iget-object v1, p0, Ll/۫۠ۤ;->۫:Ll/᩸ۜۤ;
 
-    return p1
+    const/16 v2, 0x64
+
+    invoke-virtual {v1, v0, v2}, Ll/᩸ۜۤ;->᩷(Lorg/json/JSONObject;C)V
+
+    .line 134
+    iget-object v1, p0, Ll/۫۠ۤ;->ܳ:Ll/᩸ۜۤ;
+
+    const/16 v2, 0x67
+
+    invoke-virtual {v1, v0, v2}, Ll/᩸ۜۤ;->᩷(Lorg/json/JSONObject;C)V
+
+    const-string v1, "j"
+
+    .line 135
+    iget-boolean v2, p0, Ll/۫۠ۤ;->᩷:Z
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "k"
+
+    .line 136
+    iget-boolean v2, p0, Ll/۫۠ۤ;->᩸:Z
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "l"
+
+    .line 137
+    iget-boolean v2, p0, Ll/۫۠ۤ;->ۤ:Z
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "m"
+
+    .line 138
+    iget-boolean v2, p0, Ll/۫۠ۤ;->ᩴ:Z
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    .line 141
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

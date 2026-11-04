@@ -1,62 +1,37 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.media.AudioTrack;
 
-/* JADX INFO: renamed from: l.᩹ᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1FH */
+/* JADX INFO: renamed from: l.᩸֨ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 68UW */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22451 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public Object f73286;
+public final class C22451 extends AudioTrack.StreamEventCallback {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f73287;
+    public final /* synthetic */ C19467 f72667;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f73288;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f73289;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f73290;
-
-    public C22451(int i, String str, String str2, ArrayList arrayList) {
-        this.f73288 = str;
-        this.f73289 = str2;
-        this.f73287 = arrayList;
-        this.f73290 = i;
+    public C22451(C19467 c19467) {
+        this.f72667 = c19467;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m49936() {
-        return this.f73288;
+    @Override // android.media.AudioTrack.StreamEventCallback
+    public final void onDataRequest(AudioTrack audioTrack, int i) {
+        if (audioTrack.equals(this.f72667.f62896.f48952) && this.f72667.f62896.f48935 != null && this.f72667.f62896.f48964) {
+            this.f72667.f62896.f48935.mo6331();
+        }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m49937() {
-        return this.f73289;
+    @Override // android.media.AudioTrack.StreamEventCallback
+    public final void onPresentationEnded(AudioTrack audioTrack) {
+        if (audioTrack.equals(this.f72667.f62896.f48952)) {
+            this.f72667.f62896.f48948 = true;
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m49934() {
-        return this.f73287;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m49938() {
-        return this.f73290;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Object m49933() {
-        return this.f73286;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m49935(Object obj) {
-        this.f73286 = obj;
+    @Override // android.media.AudioTrack.StreamEventCallback
+    public final void onTearDown(AudioTrack audioTrack) {
+        if (audioTrack.equals(this.f72667.f62896.f48952) && this.f72667.f62896.f48935 != null && this.f72667.f62896.f48964) {
+            this.f72667.f62896.f48935.mo6331();
+        }
     }
 }

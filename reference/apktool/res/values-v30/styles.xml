@@ -4,6 +4,6 @@
         <item name="android:windowLayoutInDisplayCutoutMode">always</item>
         <item name="android:enforceStatusBarContrast">false</item>
         <item name="android:enforceNavigationBarContrast">false</item>
-        <item name="APKTOOL_RENAMED_0x7f04027e">?android:isLightTheme</item>
+        <item name="APKTOOL_RENAMED_0x7f040280">?android:isLightTheme</item>
     </style>
 </resources>

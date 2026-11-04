@@ -1,8 +1,8 @@
 package org.bouncycastle.jcajce.provider.asymmetric;
 
-import l.C18917;
-import l.C19028;
-import l.C7997;
+import l.C18011;
+import l.C22121;
+import l.C2458;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
@@ -10,7 +10,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.ecgost.KeyFactorySpi;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECGOST {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.asymmetric.ecgost.";
     public static final String PREFIX_COMMON = "org.bouncycastle.jcajce.provider.asymmetric.ec.";
@@ -34,7 +34,7 @@ public class ECGOST {
             configurableProvider.addAlgorithm("Alg.Alias.Signature.GOST-3410-2001", "ECGOST3410");
             configurableProvider.addAlgorithm("KeyAgreement.ECGOST3410", "org.bouncycastle.jcajce.provider.asymmetric.ecgost.KeyAgreementSpi$ECVKO");
             configurableProvider.addAlgorithm("Alg.Alias.KeyAgreement." + aSN1ObjectIdentifier, "ECGOST3410");
-            C7997.m21058(C18917.m43575(configurableProvider, "Alg.Alias.KeyAgreement.GOST-3410-2001", "ECGOST3410", "Alg.Alias.KeyAgreement."), CryptoProObjectIdentifiers.gostR3410_2001_CryptoPro_ESDH, configurableProvider, "ECGOST3410");
+            C18011.m41992(C22121.m50077(configurableProvider, "Alg.Alias.KeyAgreement.GOST-3410-2001", "ECGOST3410", "Alg.Alias.KeyAgreement."), CryptoProObjectIdentifiers.gostR3410_2001_CryptoPro_ESDH, configurableProvider, "ECGOST3410");
             configurableProvider.addAlgorithm("AlgorithmParameters.ECGOST3410", "org.bouncycastle.jcajce.provider.asymmetric.ec.AlgorithmParametersSpi");
             configurableProvider.addAlgorithm("AlgorithmParameters.ECGOST3410-2012", "org.bouncycastle.jcajce.provider.asymmetric.ec.AlgorithmParametersSpi");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.GOST-3410-2001", "ECGOST3410");
@@ -66,7 +66,7 @@ public class ECGOST {
             configurableProvider.addAlgorithm("KeyAgreement.ECGOST3410-2012-256", "org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi$ECVKO256");
             configurableProvider.addAlgorithm("KeyAgreement.ECGOST3410-2012-512", "org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi$ECVKO512");
             configurableProvider.addAlgorithm("Alg.Alias.KeyAgreement." + aSN1ObjectIdentifier3, "ECGOST3410-2012-256");
-            C7997.m21058(C19028.m43760("ECGOST3410-2012-256", "Alg.Alias.KeyAgreement.", C19028.m43760("ECGOST3410-2012-512", "Alg.Alias.KeyAgreement.", new StringBuilder("Alg.Alias.KeyAgreement."), aSN1ObjectIdentifier5, configurableProvider), aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier4, configurableProvider, "ECGOST3410-2012-512");
+            C18011.m41992(C2458.m8290("ECGOST3410-2012-256", "Alg.Alias.KeyAgreement.", C2458.m8290("ECGOST3410-2012-512", "Alg.Alias.KeyAgreement.", new StringBuilder("Alg.Alias.KeyAgreement."), aSN1ObjectIdentifier5, configurableProvider), aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier4, configurableProvider, "ECGOST3410-2012-512");
         }
     }
 }

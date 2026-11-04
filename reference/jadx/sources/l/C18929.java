@@ -1,62 +1,89 @@
 package l;
 
+import android.net.LocalSocket;
+import java.io.FileDescriptor;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
-/* JADX INFO: renamed from: l.ᩴᩳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6AIE */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18929 {
+/* JADX INFO: renamed from: l.ᩳ۟ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K17F */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18929 implements InterfaceC14759 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public long f61244;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final AtomicInteger f61409 = new AtomicInteger(16777215 & ((int) (System.currentTimeMillis() / 100)));
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AtomicInteger f61248 = new AtomicInteger(0);
+    public final LocalSocket f61410;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Object f61246 = new Object();
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f61411;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ConcurrentMapC13783 f61245 = new ConcurrentMapC13783();
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final AtomicLong f61249 = new AtomicLong();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C0583 f61247 = new C0583();
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m43601(C18929 c18929) {
-        c18929.f61244--;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m43604(C18929 c18929) {
-        c18929.f61244++;
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ۖ᩷ */
+    public final boolean mo35490() {
+        return false;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ConcurrentMapC13783 m43607() {
-        return this.f61245;
+    public static String m43957() {
+        return C21576.m49092() + "-" + f61409.getAndIncrement();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AtomicInteger m43609() {
-        return this.f61248;
+    public C18929(LocalSocket localSocket) {
+        this.f61410 = localSocket;
+        try {
+            int sendBufferSize = localSocket.getSendBufferSize();
+            if (sendBufferSize < 1024 || sendBufferSize > 262144) {
+                localSocket.setSendBufferSize(262144);
+            }
+        } catch (Exception unused) {
+        }
+        FileDescriptor fileDescriptor = localSocket.getFileDescriptor();
+        int i = -1;
+        if (fileDescriptor != null) {
+            try {
+                Field declaredField = FileDescriptor.class.getDeclaredField("descriptor");
+                declaredField.setAccessible(true);
+                i = declaredField.getInt(fileDescriptor);
+            } catch (Exception unused2) {
+            }
+        }
+        this.f61411 = i;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C0583 m43608() {
-        return this.f61247;
+    @Override // l.InterfaceC14759
+    public final InputStream getInputStream() {
+        return this.f61410.getInputStream();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AtomicLong m43606() {
-        return this.f61249;
+    @Override // l.InterfaceC14759
+    public final OutputStream getOutputStream() {
+        return this.f61410.getOutputStream();
     }
 
-    public final String toString() {
-        return "ObjectDeque [idleObjects=" + this.f61247 + ", createCount=" + this.f61248 + ", allObjects=" + this.f61245 + ", numInterested=" + this.f61249 + "]";
+    @Override // l.InterfaceC14759
+    public final int getSendBufferSize() {
+        return Math.min(this.f61410.getSendBufferSize(), 262144);
+    }
+
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ᩺ */
+    public final boolean mo35492() {
+        return this.f61411 >= 0;
+    }
+
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ᩹ۙ */
+    public final int mo35491() {
+        return this.f61411;
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        this.f61410.close();
     }
 }

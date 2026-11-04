@@ -1,6 +1,6 @@
 package org.bouncycastle.jce.spec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST28147ParameterSpec extends org.bouncycastle.jcajce.spec.GOST28147ParameterSpec {
     public GOST28147ParameterSpec(String str) {
         super(str);

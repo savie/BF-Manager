@@ -1,11 +1,9 @@
 package l;
 
-import java.util.Map;
-
-/* JADX INFO: renamed from: l.ܳ۬ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: WBQM */
+/* JADX INFO: renamed from: l.ܰۧۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F962 */
 /* JADX INFO: loaded from: classes4.dex */
-public interface InterfaceC14551 extends Map.Entry {
-    /* JADX INFO: renamed from: ۙ */
-    int mo17726();
+public interface InterfaceC14551 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    void m35101();
 }

@@ -1,120 +1,75 @@
-.class public final enum Ll/ۨ۟ᩴ;
-.super Ljava/lang/Enum;
-.source "N673"
+.class public final Ll/ۨ۟ᩴ;
+.super Ljava/io/OutputStream;
+.source "N17O"
 
 
-# static fields
-.field public static final enum CONTINUE:Ll/ۨ۟ᩴ;
-
-.field public static final enum SKIP_SIBLINGS:Ll/ۨ۟ᩴ;
-
-.field public static final enum SKIP_SUBTREE:Ll/ۨ۟ᩴ;
-
-.field public static final enum TERMINATE:Ll/ۨ۟ᩴ;
-
-.field public static final synthetic a:[Ll/ۨ۟ᩴ;
+# instance fields
+.field public final ܰ:Ll/ۗ۟ᩴ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Ll/ۗ۟ᩴ;)V
+    .locals 0
 
-    .line 42
-    new-instance v0, Ll/ۨ۟ᩴ;
+    .line 169
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    const-string v1, "CONTINUE"
-
-    const/4 v2, 0x0
-
-    .line 36
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 42
-    sput-object v0, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    .line 46
-    new-instance v1, Ll/ۨ۟ᩴ;
-
-    const-string v3, "TERMINATE"
-
-    const/4 v4, 0x1
-
-    .line 36
-    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    sput-object v1, Ll/ۨ۟ᩴ;->TERMINATE:Ll/ۨ۟ᩴ;
-
-    .line 53
-    new-instance v3, Ll/ۨ۟ᩴ;
-
-    const-string v5, "SKIP_SUBTREE"
-
-    const/4 v6, 0x2
-
-    .line 36
-    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 53
-    sput-object v3, Ll/ۨ۟ᩴ;->SKIP_SUBTREE:Ll/ۨ۟ᩴ;
-
-    .line 61
-    new-instance v5, Ll/ۨ۟ᩴ;
-
-    const-string v7, "SKIP_SIBLINGS"
-
-    const/4 v8, 0x3
-
-    .line 36
-    invoke-direct {v5, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 61
-    sput-object v5, Ll/ۨ۟ᩴ;->SKIP_SIBLINGS:Ll/ۨ۟ᩴ;
-
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Ll/ۨ۟ᩴ;
-
-    aput-object v0, v7, v2
-
-    aput-object v1, v7, v4
-
-    aput-object v3, v7, v6
-
-    aput-object v5, v7, v8
-
-    .line 36
-    sput-object v7, Ll/ۨ۟ᩴ;->a:[Ll/ۨ۟ᩴ;
+    .line 170
+    iput-object p1, p0, Ll/ۨ۟ᩴ;->ܰ:Ll/ۗ۟ᩴ;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll/ۨ۟ᩴ;
+
+# virtual methods
+.method public final close()V
     .locals 1
 
-    .line 36
-    const-class v0, Ll/ۨ۟ᩴ;
+    .line 190
+    iget-object v0, p0, Ll/ۨ۟ᩴ;->ܰ:Ll/ۗ۟ᩴ;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0}, Ll/ۗ۟ᩴ;->ۙ()V
 
-    move-result-object p0
-
-    check-cast p0, Ll/ۨ۟ᩴ;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Ll/ۨ۟ᩴ;
+.method public final flush()V
     .locals 1
 
-    .line 36
-    sget-object v0, Ll/ۨ۟ᩴ;->a:[Ll/ۨ۟ᩴ;
+    .line 185
+    iget-object v0, p0, Ll/ۨ۟ᩴ;->ܰ:Ll/ۗ۟ᩴ;
 
-    invoke-virtual {v0}, [Ll/ۨ۟ᩴ;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ll/ۗ۟ᩴ;->ۤ()V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, [Ll/ۨ۟ᩴ;
+.method public final write(I)V
+    .locals 3
 
-    return-object v0
+    int-to-byte p1, p1
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [B
+
+    const/4 v2, 0x0
+
+    aput-byte p1, v1, v2
+
+    .line 175
+    invoke-virtual {p0, v1, v2, v0}, Ll/ۨ۟ᩴ;->write([BII)V
+
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 1
+
+    .line 180
+    iget-object v0, p0, Ll/ۨ۟ᩴ;->ܰ:Ll/ۗ۟ᩴ;
+
+    invoke-virtual {v0, p1, p2, p3}, Ll/ۗ۟ᩴ;->᩷([BII)V
+
+    return-void
 .end method

@@ -1,49 +1,34 @@
 .class public abstract Ll/֡ܺۙ;
-.super Ll/ᩳܺۙ;
-.source "58MC"
-
-
-# instance fields
-.field public ֡:I
-
-.field public ܽ:J
-
-.field public ᩶:Z
+.super Ljava/lang/Object;
+.source "U6B4"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static ۙ(Ll/ۤ᩻ۙ;)Ll/֡ܺۙ;
+    .locals 2
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 128
+    new-instance v0, Ll/֨ܺۙ;
 
-    return-void
+    move-object v1, p0
+
+    check-cast v1, Ll/ۗܺۙ;
+
+    invoke-interface {v1}, Ll/ۗܺۙ;->getViewModelStore()Ll/᩹ܺۙ;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Ll/֨ܺۙ;-><init>(Ll/ۤ᩻ۙ;Ll/᩹ܺۙ;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public ܰ()V
-    .locals 2
-
-    .line 56
-    invoke-super {p0}, Ll/ᩳܺۙ;->ܰ()V
-
-    const-wide/16 v0, 0x0
-
-    .line 57
-    iput-wide v0, p0, Ll/֡ܺۙ;->ܽ:J
-
-    const/4 v0, 0x0
-
-    .line 58
-    iput v0, p0, Ll/֡ܺۙ;->֡:I
-
-    .line 59
-    iput-boolean v0, p0, Ll/֡ܺۙ;->᩶:Z
-
-    return-void
+.method public abstract ۙ()V
 .end method
 
-.method public abstract ᩴ()V
+.method public abstract ۙ(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method

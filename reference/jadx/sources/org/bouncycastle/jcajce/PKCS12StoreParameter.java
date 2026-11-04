@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce;
 import java.io.OutputStream;
 import java.security.KeyStore;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12StoreParameter implements KeyStore.LoadStoreParameter {
     public final boolean forDEREncoding;
     public final OutputStream out;

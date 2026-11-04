@@ -1,30 +1,27 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.۟֫ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F1FR */
+/* JADX INFO: renamed from: l.ۜ۫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: J8TG */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7151 implements Consumer {
+public final class C7151 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16324 f23907;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f23648;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f23908;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f23649;
 
-    public /* synthetic */ C7151(C16324 c16324, boolean z) {
-        this.f23907 = c16324;
-        this.f23908 = z;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final float[] f23650;
 
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final void n(Object obj) {
-        C16324.m38492(this.f23907, this.f23908, (ActivityC5677) obj);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final float[] f23651;
 
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    public C7151(int i, int i2, float[] fArr, float[] fArr2) {
+        this.f23649 = i;
+        C20782.m47565(((long) fArr.length) * 2 == ((long) fArr2.length) * 3);
+        this.f23651 = fArr;
+        this.f23650 = fArr2;
+        this.f23648 = i2;
     }
 }

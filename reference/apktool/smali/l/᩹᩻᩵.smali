@@ -1,70 +1,46 @@
 .class public final Ll/᩹᩻᩵;
-.super Ljava/util/AbstractList;
-.source "M605"
-
-
-# instance fields
-.field public final synthetic ֡:I
-
-.field public final synthetic ܺ:Ll/۟᩻᩵;
-
-.field public final synthetic ᩶:I
-
-
-# direct methods
-.method public constructor <init>(Ll/۟᩻᩵;II)V
-    .locals 0
-
-    .line 167
-    iput-object p1, p0, Ll/᩹᩻᩵;->ܺ:Ll/۟᩻᩵;
-
-    iput p2, p0, Ll/᩹᩻᩵;->᩶:I
-
-    iput p3, p0, Ll/᩹᩻᩵;->֡:I
-
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
-
-    return-void
-.end method
+.super Ll/ܳܺ᩵;
+.source "Y6HM"
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 3
+.method public final ۙ(Ll/ۧ᩻᩵;ILl/ۨܺ᩵;)V
+    .locals 2
 
-    .line 171
-    iget-object v0, p0, Ll/᩹᩻᩵;->ܺ:Ll/۟᩻᩵;
+    .line 126
+    invoke-virtual {p1}, Ll/ۧ᩻᩵;->᩷()[I
 
-    iget-object v0, v0, Ll/۟᩻᩵;->֡:Ll/ܿ᩻᩵;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    .line 127
+    invoke-static {p2}, Ll/ܳܺ᩵;->ۙ(I)I
 
-    iget v2, p0, Ll/᩹᩻᩵;->᩶:I
+    move-result p2
 
-    add-int/lit8 v2, v2, 0x4
+    aput p2, v0, v1
 
-    mul-int/lit8 p1, p1, 0x2
+    .line 128
+    invoke-virtual {p3}, Ll/ۨܺ᩵;->ܶ()I
 
-    add-int/2addr p1, v2
+    move-result p2
 
-    invoke-virtual {v1, p1}, Ll/ᩳܳ᩵;->ۜ(I)I
+    and-int/lit16 p3, p2, 0xff
 
-    move-result p1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1}, Ll/ܿ᩻᩵;->᩺(I)Ljava/lang/String;
+    .line 129
+    aput p3, v0, v1
 
-    move-result-object p1
+    shr-int/lit8 p2, p2, 0x8
 
-    return-object p1
-.end method
+    int-to-byte p2, p2
 
-.method public final size()I
-    .locals 1
+    int-to-long p2, p2
 
-    .line 176
-    iget v0, p0, Ll/᩹᩻᩵;->֡:I
+    .line 130
+    invoke-virtual {p1, p2, p3}, Ll/ۧ᩻᩵;->ۙ(J)V
 
-    return v0
+    return-void
 .end method

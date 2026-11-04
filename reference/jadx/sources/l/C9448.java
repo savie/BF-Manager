@@ -1,52 +1,38 @@
 package l;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۢ۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: P5UK */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9448 {
+/* JADX INFO: renamed from: l.ۡܳܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G1V7 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C9448 implements InterfaceC7140 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m24201(C20424 c20424, C12283 c12283, InterfaceC17822 interfaceC17822, InterfaceC10975 interfaceC10975, boolean z) throws IOException {
-        int iMo28400 = interfaceC17822.mo28400();
-        if (z && EnumC15236.STATIC.m36501(iMo28400) && EnumC15236.FINAL.m36501(iMo28400) && interfaceC10975 != null) {
-            if (C23365.m51480(interfaceC10975)) {
-                interfaceC10975 = null;
-            } else {
-                c12283.getClass();
-                c12283.write("# The value of this static final field might be set in the static constructor\n", 0, 78);
-            }
-        }
-        c12283.getClass();
-        c12283.write(".field ", 0, 7);
-        int iMo28401 = interfaceC17822.mo28400();
-        Set setMo28398 = interfaceC17822.mo28398();
-        for (EnumC15236 enumC15236 : EnumC15236.m36490(iMo28401)) {
-            c12283.write(enumC15236.toString());
-            c12283.write(32);
-        }
-        Iterator it = setMo28398.iterator();
-        while (it.hasNext()) {
-            c12283.write(((EnumC18763) it.next()).toString());
-            c12283.write(32);
-        }
-        C22304.m49470((Writer) c12283, (InterfaceC18735) interfaceC17822, true);
-        if (interfaceC10975 != null) {
-            c12283.write(" = ", 0, 3);
-            c20424.getClass();
-            AbstractC14387.m34621(c12283, interfaceC10975);
-        }
-        c12283.write(10);
-        Set annotations = interfaceC17822.getAnnotations();
-        if (annotations.size() > 0) {
-            c12283.m30527();
-            c20424.getClass();
-            C18619.m43060(c12283, annotations);
-            c12283.m30526();
-            c12283.write(".end field\n", 0, 11);
-        }
+    public final InterfaceC7140 f30642;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C24404 f30643;
+
+    public C9448(C24404 c24404, InterfaceC7140 interfaceC7140) {
+        this.f30643 = c24404;
+        this.f30642 = interfaceC7140;
+    }
+
+    @Override // l.InterfaceC7140
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo2841() {
+        return this.f30642.mo2841();
+    }
+
+    @Override // l.InterfaceC7140
+    /* JADX INFO: renamed from: ֫ */
+    public final List mo2839() {
+        return C19906.m45836((InterfaceC4288) this.f30643.m54578(), this.f30642.mo2839());
+    }
+
+    @Override // l.InterfaceC7140
+    /* JADX INFO: renamed from: ۧ */
+    public final Iterable mo2842() {
+        return C19906.m45834(this.f30642.mo2842(), this.f30643.m54588());
     }
 }

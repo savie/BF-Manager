@@ -18,7 +18,7 @@ import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECGOST3410Signer implements DSAExt {
     public ECKeyParameters key;
     public SecureRandom random;

@@ -1,20 +1,39 @@
-.class public abstract Ll/ܽ۫ᩴ;
+.class public final synthetic Ll/ܽ۫ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "4AWI"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
 
-# static fields
-.field public static final a:Ll/֡۫ᩴ;
+# instance fields
+.field public final synthetic ۙ:[Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>([Z)V
+    .locals 0
 
-    .line 188
-    sget-object v0, Ll/֡۫ᩴ;->MODIFIED_JULIAN_DAY:Ll/֡۫ᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Ll/ܽ۫ᩴ;->a:Ll/֡۫ᩴ;
+    iput-object p1, p0, Ll/ܽ۫ᩴ;->ۙ:[Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;IZ)V
+    .locals 0
+
+    .line 2
+    sget p1, Ll/ۚۚᩴ;->ۛ᩷:I
+
+    .line 603
+    iget-object p1, p0, Ll/ܽ۫ᩴ;->ۙ:[Z
+
+    aput-boolean p3, p1, p2
 
     return-void
 .end method

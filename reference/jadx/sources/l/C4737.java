@@ -1,15 +1,24 @@
 package l;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
+/* JADX INFO: renamed from: l.ۙۜᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAKQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4737 implements InterfaceC17003 {
 
-/* JADX INFO: renamed from: l.ۙܶ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 53XL */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C4737 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InputStream m13105(InterfaceC13911 interfaceC13911) {
-        InputStream inputStream = interfaceC13911.getInputStream();
-        return !inputStream.markSupported() ? new BufferedInputStream(inputStream) : inputStream;
+    public final /* synthetic */ ServiceC10702 f16668;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int[] f16669;
+
+    public C4737(ServiceC10702 serviceC10702, int[] iArr) {
+        this.f16668 = serviceC10702;
+        this.f16669 = iArr;
+    }
+
+    @Override // l.InterfaceC17003
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14636() {
+        this.f16668.f33976.getLocationOnScreen(this.f16669);
     }
 }

@@ -1,6 +1,11 @@
-.class public final Ll/۫ۜ᩸;
+.class public interface abstract Ll/۫ۜ᩸;
 .super Ljava/lang/Object;
-.source "T9Q9"
+.source "X68P"
 
-# interfaces
-.implements Ll/ܿᩴ᩸;
+
+# virtual methods
+.method public abstract ۙ(Z)V
+.end method
+
+.method public abstract ۙ(ZZ)V
+.end method

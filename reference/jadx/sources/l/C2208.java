@@ -1,143 +1,109 @@
 package l;
 
-import android.util.SparseArray;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
-import bin.mt.plus.R;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.WeakHashMap;
+/* JADX INFO: renamed from: l.֫᩸ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 48CI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2208 extends AbstractC11902 {
 
-/* JADX INFO: renamed from: l.ۖ֫, reason: contains not printable characters */
-/* JADX INFO: compiled from: 95QI */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2208 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final AbstractC11902 f7251 = new C2208(0);
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f7955 = 0;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final ArrayList f7956 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public WeakHashMap f7958 = null;
-
+    @Override // l.AbstractC11902
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public SparseArray f7957 = null;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public WeakReference f7959 = null;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m6821(View view, KeyEvent keyEvent) {
-        if (keyEvent.getAction() == 0) {
-            WeakHashMap weakHashMap = this.f7958;
-            if (weakHashMap != null) {
-                weakHashMap.clear();
+    public final int mo7536(int i, int i2, byte[] bArr, byte[] bArr2) {
+        int i3;
+        int i4;
+        int i5;
+        int i6;
+        C23800.m53094(0, i, bArr);
+        C23800.m53094(0, i2, bArr2);
+        if (i2 == 0) {
+            if (i == 1 && bArr[0] == 0) {
+                return 0;
             }
-            ArrayList arrayList = f7956;
-            if (!arrayList.isEmpty()) {
-                synchronized (arrayList) {
-                    if (this.f7958 == null) {
-                        this.f7958 = new WeakHashMap();
+            throw new C2602("Output buffer too small");
+        }
+        int i7 = 0;
+        int i8 = 0;
+        while (true) {
+            byte b = bArr[i7];
+            i3 = i7 + 1;
+            i4 = (b & 255) >>> 4;
+            if (i4 == 15) {
+                byte b2 = -1;
+                while (i3 < i) {
+                    int i9 = i3 + 1;
+                    byte b3 = bArr[i3];
+                    if (b3 != -1) {
+                        b2 = b3;
+                        i3 = i9;
+                        break;
                     }
-                    for (int size = arrayList.size() - 1; size >= 0; size--) {
-                        ArrayList arrayList2 = f7956;
-                        View view2 = (View) ((WeakReference) arrayList2.get(size)).get();
-                        if (view2 == null) {
-                            arrayList2.remove(size);
-                        } else {
-                            this.f7958.put(view2, Boolean.TRUE);
-                            for (ViewParent parent = view2.getParent(); parent instanceof View; parent = parent.getParent()) {
-                                this.f7958.put((View) parent, Boolean.TRUE);
-                            }
-                        }
+                    i4 += 255;
+                    b2 = b3;
+                    i3 = i9;
+                }
+                i4 += b2 & 255;
+            }
+            i5 = i8 + i4;
+            int i10 = i2 - 8;
+            if (i5 > i10 || (i6 = i3 + i4) > i - 8) {
+                break;
+            }
+            C25329.m56604(i3, bArr, i8, bArr2, i4);
+            int i11 = (bArr[i6] & 255) | ((bArr[i6 + 1] & 255) << 8);
+            int i12 = i6 + 2;
+            int i13 = i5 - i11;
+            if (i13 < 0) {
+                throw new C2602(C13645.m33382(i12, "Malformed input at "));
+            }
+            int i14 = b & 15;
+            if (i14 == 15) {
+                byte b4 = -1;
+                while (i12 < i) {
+                    int i15 = i12 + 1;
+                    byte b5 = bArr[i12];
+                    if (b5 != -1) {
+                        i12 = i15;
+                        b4 = b5;
+                        break;
                     }
+                    i14 += 255;
+                    i12 = i15;
+                    b4 = b5;
+                }
+                i14 += b4 & 255;
+            }
+            int i16 = i14;
+            int i17 = i12;
+            int i18 = i16 + 4;
+            int i19 = i5 + i18;
+            if (i19 <= i10) {
+                do {
+                    for (int i20 = 0; i20 < 8; i20++) {
+                        bArr2[i5 + i20] = bArr2[i13 + i20];
+                    }
+                    i13 += 8;
+                    i5 += 8;
+                } while (i5 < i19);
+            } else {
+                if (i19 > i2) {
+                    throw new C2602(C13645.m33382(i17, "Malformed input at "));
+                }
+                for (int i21 = 0; i21 < i18; i21++) {
+                    bArr2[i5 + i21] = bArr2[i13 + i21];
                 }
             }
+            i7 = i17;
+            i8 = i19;
         }
-        View viewM6819 = m6819(view, keyEvent);
-        if (keyEvent.getAction() == 0) {
-            int keyCode = keyEvent.getKeyCode();
-            if (viewM6819 != null && !KeyEvent.isModifierKey(keyCode)) {
-                if (this.f7957 == null) {
-                    this.f7957 = new SparseArray();
-                }
-                this.f7957.put(keyCode, new WeakReference(viewM6819));
-            }
+        if (i5 > i2) {
+            throw new C2602();
         }
-        return viewM6819 != null;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private View m6819(View view, KeyEvent keyEvent) {
-        View viewM6819;
-        WeakHashMap weakHashMap = this.f7958;
-        if (weakHashMap == null || !weakHashMap.containsKey(view)) {
-            return null;
+        if (i3 + i4 != i) {
+            throw new C2602(C13645.m33382(i3, "Malformed input at "));
         }
-        if (view instanceof ViewGroup) {
-            ViewGroup viewGroup = (ViewGroup) view;
-            int childCount = viewGroup.getChildCount();
-            do {
-                childCount--;
-                if (childCount >= 0) {
-                    viewM6819 = m6819(viewGroup.getChildAt(childCount), keyEvent);
-                }
-            } while (viewM6819 == null);
-            return viewM6819;
-        }
-        if (m6818(view, keyEvent)) {
-            return view;
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m6820(KeyEvent keyEvent) {
-        WeakReference weakReference;
-        int iIndexOfKey;
-        WeakReference weakReference2 = this.f7959;
-        if (weakReference2 != null && weakReference2.get() == keyEvent) {
-            return false;
-        }
-        this.f7959 = new WeakReference(keyEvent);
-        if (this.f7957 == null) {
-            this.f7957 = new SparseArray();
-        }
-        SparseArray sparseArray = this.f7957;
-        if (keyEvent.getAction() != 1 || (iIndexOfKey = sparseArray.indexOfKey(keyEvent.getKeyCode())) < 0) {
-            weakReference = null;
-        } else {
-            weakReference = (WeakReference) sparseArray.valueAt(iIndexOfKey);
-            sparseArray.removeAt(iIndexOfKey);
-        }
-        if (weakReference == null) {
-            weakReference = (WeakReference) sparseArray.get(keyEvent.getKeyCode());
-        }
-        if (weakReference == null) {
-            return false;
-        }
-        View view = (View) weakReference.get();
-        if (view != null && view.isAttachedToWindow()) {
-            m6818(view, keyEvent);
-        }
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m6818(View view, KeyEvent keyEvent) {
-        ArrayList arrayList = (ArrayList) view.getTag(R.id.MT_Protector);
-        if (arrayList == null) {
-            return false;
-        }
-        for (int size = arrayList.size() - 1; size >= 0; size--) {
-            if (((InterfaceC11382) arrayList.get(size)).m28490()) {
-                return true;
-            }
-        }
-        return false;
+        System.arraycopy(bArr, i3, bArr2, i8, i4);
+        return i5;
     }
 }

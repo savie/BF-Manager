@@ -1,9 +1,8 @@
 package bin.mt.plugin.api.ui;
 
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface PluginCompoundButton extends PluginButton {
 
-    /* JADX INFO: loaded from: classes.dex */
     public interface OnCheckedChangeListener {
         void onCheckedChanged(PluginCompoundButton pluginCompoundButton, boolean z);
     }

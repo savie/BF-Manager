@@ -1,82 +1,79 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.content.res.XmlResourceParser;
-import android.util.AttributeSet;
-import android.util.Property;
-import android.view.View;
-import android.view.ViewGroup;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ۘ᩻ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P5CY */
+/* JADX INFO: renamed from: l.ۘܺܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E2GW */
 /* JADX INFO: loaded from: classes3.dex */
-public class C4274 extends AbstractC4337 {
-    @Override // l.AbstractC11766
-    public final boolean isSeekingSupported() {
-        return true;
-    }
+public final class C4274 extends AbstractC19432 {
 
-    public C4274(int i) {
-        setMode(i);
-    }
-
-    public C4274(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C21208.f69013);
-        setMode(C12398.m30833(typedArrayObtainStyledAttributes, (XmlResourceParser) attributeSet, "fadingMode", 0, getMode()));
-        typedArrayObtainStyledAttributes.recycle();
-    }
-
-    @Override // l.AbstractC4337, l.AbstractC11766
-    public final void captureStartValues(C8238 c8238) {
-        super.captureStartValues(c8238);
-        Float fValueOf = (Float) c8238.f28685.getTag(R.id.MT_Protector);
-        if (fValueOf == null) {
-            if (c8238.f28685.getVisibility() == 0) {
-                fValueOf = Float.valueOf(C16000.m37975(c8238.f28685));
-            } else {
-                fValueOf = Float.valueOf(0.0f);
-            }
-        }
-        c8238.f28686.put("android:fade:transitionAlpha", fValueOf);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final char[] f15529 = "0123456789ABCDEF".toCharArray();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private ObjectAnimator m12083(float f, float f2, View view) {
-        if (f == f2) {
+    public final boolean[] f15530;
+
+    public C4274() {
+        C12128.m30308("Alphanumeric characters are always 'safe' and should not be explicitly specified", !"-._~!$'()*,;&=@:+/".matches(".*[0-9A-Za-z].*"));
+        char[] charArray = "-._~!$'()*,;&=@:+/".concat("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789").toCharArray();
+        int iMax = -1;
+        for (char c : charArray) {
+            iMax = Math.max((int) c, iMax);
+        }
+        boolean[] zArr = new boolean[iMax + 1];
+        for (char c2 : charArray) {
+            zArr[c2] = true;
+        }
+        this.f15530 = zArr;
+    }
+
+    @Override // l.AbstractC19432
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final char[] mo13627(int i) {
+        boolean[] zArr = this.f15530;
+        if (i < zArr.length && zArr[i]) {
             return null;
         }
-        C16000.m37977(view, f);
-        ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(view, (Property<View, Float>) C16000.f51807, f2);
-        C13448 c13448 = new C13448(view);
-        objectAnimatorOfFloat.addListener(c13448);
-        getRootTransition().addListener(c13448);
-        return objectAnimatorOfFloat;
-    }
-
-    @Override // l.AbstractC4337
-    public final Animator onAppear(ViewGroup viewGroup, View view, C8238 c8238, C8238 c8239) {
-        C16000.m37982();
-        return m12083(m12082(c8238, 0.0f), 1.0f, view);
-    }
-
-    @Override // l.AbstractC4337
-    public final Animator onDisappear(ViewGroup viewGroup, View view, C8238 c8238, C8238 c8239) {
-        C16000.m37982();
-        ObjectAnimator objectAnimatorM12083 = m12083(m12082(c8238, 1.0f), 0.0f, view);
-        if (objectAnimatorM12083 == null) {
-            C16000.m37977(view, m12082(c8239, 1.0f));
+        char[] cArr = f15529;
+        if (i <= 127) {
+            return new char[]{'%', cArr[i >>> 4], cArr[i & 15]};
         }
-        return objectAnimatorM12083;
+        if (i <= 2047) {
+            return new char[]{'%', cArr[(i >>> 10) | 12], cArr[(i >>> 6) & 15], '%', cArr[((i >>> 4) & 3) | 8], cArr[i & 15]};
+        }
+        if (i <= 65535) {
+            return new char[]{'%', 'E', cArr[i >>> 12], '%', cArr[((i >>> 10) & 3) | 8], cArr[(i >>> 6) & 15], '%', cArr[((i >>> 4) & 3) | 8], cArr[i & 15]};
+        }
+        if (i <= 1114111) {
+            return new char[]{'%', 'F', cArr[(i >>> 18) & 7], '%', cArr[((i >>> 16) & 3) | 8], cArr[(i >>> 12) & 15], '%', cArr[((i >>> 10) & 3) | 8], cArr[(i >>> 6) & 15], '%', cArr[((i >>> 4) & 3) | 8], cArr[i & 15]};
+        }
+        throw new IllegalArgumentException(C13645.m33382(i, "Invalid unicode character value "));
+    }
+
+    @Override // l.AbstractC19432
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo13625(int i, int i2, String str) {
+        str.getClass();
+        while (i < i2) {
+            char cCharAt = str.charAt(i);
+            boolean[] zArr = this.f15530;
+            if (cCharAt >= zArr.length || !zArr[cCharAt]) {
+                break;
+            }
+            i++;
+        }
+        return i;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static float m12082(C8238 c8238, float f) {
-        Float f2;
-        return (c8238 == null || (f2 = (Float) c8238.f28686.get("android:fade:transitionAlpha")) == null) ? f : f2.floatValue();
+    public final String m13626(String str) {
+        str.getClass();
+        int length = str.length();
+        for (int i = 0; i < length; i++) {
+            char cCharAt = str.charAt(i);
+            boolean[] zArr = this.f15530;
+            if (cCharAt >= zArr.length || !zArr[cCharAt]) {
+                return m44925(i, str);
+            }
+        }
+        return str;
     }
 }

@@ -8,11 +8,11 @@ public enum ServiceNameFactory {
     ;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m201(String str) {
-        HttpClientConfig httpClientConfigM286 = InternalConfig.Factory.m289().m286(str);
-        if (httpClientConfigM286 == null) {
+    public static String m195(String str) {
+        HttpClientConfig httpClientConfigM280 = InternalConfig.Factory.m283().m280(str);
+        if (httpClientConfigM280 == null) {
             return null;
         }
-        return httpClientConfigM286.m285();
+        return httpClientConfigM280.m279();
     }
 }

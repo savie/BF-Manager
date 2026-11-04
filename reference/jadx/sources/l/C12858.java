@@ -1,37 +1,17 @@
 package l;
 
-import android.transition.Transition;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.۬ۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 451G */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12858 implements Transition.TransitionListener {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Runnable f42769;
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionCancel(Transition transition) {
+/* JADX INFO: renamed from: l.۫ۘ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 07MC */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C12858 implements Consumer {
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionPause(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionResume(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionStart(Transition transition) {
-    }
-
-    public C12858(Runnable runnable) {
-        this.f42769 = runnable;
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionEnd(Transition transition) {
-        this.f42769.run();
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        ((C15841) obj).m37788();
     }
 }

@@ -8,7 +8,7 @@ import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.ECGenParameterSpec;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ua.DSTU4145NamedCurves;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
@@ -29,7 +29,7 @@ import org.bouncycastle.jce.spec.ECParameterSpec;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends KeyPairGenerator {
     public String algorithm;
     public Object ecParams;
@@ -117,7 +117,7 @@ public class KeyPairGeneratorSpi extends KeyPairGenerator {
                 String name = z ? ((ECGenParameterSpec) algorithmParameterSpec).getName() : ((ECNamedCurveGenParameterSpec) algorithmParameterSpec).getName();
                 ECDomainParameters byOID = DSTU4145NamedCurves.getByOID(new ASN1ObjectIdentifier(name));
                 if (byOID == null) {
-                    throw new InvalidAlgorithmParameterException(C0252.m1693("unknown curve name: ", name));
+                    throw new InvalidAlgorithmParameterException(C25272.m56409("unknown curve name: ", name));
                 }
                 ECNamedCurveSpec eCNamedCurveSpec = new ECNamedCurveSpec(name, byOID.getCurve(), byOID.getG(), byOID.getN(), byOID.getH(), byOID.getSeed());
                 this.ecParams = eCNamedCurveSpec;

@@ -1,41 +1,74 @@
 package l;
 
-import android.R;
-import bin.mt.plus.Main;
+import android.app.Activity;
+import android.app.Application;
+import android.os.Bundle;
 
-/* JADX INFO: renamed from: l.۠ۤ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z1XC */
+/* JADX INFO: renamed from: l.۟᩶, reason: contains not printable characters */
+/* JADX INFO: compiled from: K22G */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8121 extends AbstractDialogInterfaceOnClickListenerC17341 {
+public final class C8121 implements Application.ActivityLifecycleCallbacks {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11545 f28441;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Object f26792;
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final void mo21386() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Activity f26796;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f26797;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f26795 = false;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f26793 = false;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f26794 = false;
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityCreated(Activity activity, Bundle bundle) {
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C8121(Main main, C11545 c11545) {
-        super(main, R.string.paste);
-        this.f28441 = c11545;
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityResumed(Activity activity) {
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String strM40352 = m40352();
-        if (!strM40352.startsWith("/")) {
-            strM40352 = "/".concat(strM40352);
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityStopped(Activity activity) {
+    }
+
+    public C8121(Activity activity) {
+        this.f26796 = activity;
+        this.f26797 = activity.hashCode();
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityStarted(Activity activity) {
+        if (this.f26796 == activity) {
+            this.f26795 = true;
         }
-        boolean zEndsWith = strM40352.endsWith("/");
-        C11545 c11545 = this.f28441;
-        if (!zEndsWith && c11545.m28817().mo13041(strM40352)) {
-            c11545.m28763(C6730.m18175(strM40352));
-            strM40352 = C6730.m18172(strM40352);
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityPaused(Activity activity) {
+        if (!this.f26793 || this.f26794 || this.f26795 || !C19308.m44680(this.f26792, this.f26797, activity)) {
+            return;
         }
-        c11545.m28812(strM40352, false);
-        m40364();
+        this.f26794 = true;
+        this.f26792 = null;
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityDestroyed(Activity activity) {
+        if (this.f26796 == activity) {
+            this.f26796 = null;
+            this.f26793 = true;
+        }
     }
 }

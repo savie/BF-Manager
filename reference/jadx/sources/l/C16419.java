@@ -1,122 +1,61 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.ܽۙᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1DS */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16419 implements InterfaceC11687 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f52830;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f52831;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12186 f52832;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f52833;
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return 16721;
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C13804.m33553(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C13804.m33554(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* bridge */ /* synthetic */ Comparator getComparator() {
-        getComparator();
-        throw null;
-    }
-
-    @Override // l.InterfaceC11687, l.InterfaceC20693
-    public final InterfaceC4692 getComparator() {
-        throw new IllegalStateException();
-    }
-
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(Object obj) {
-        InterfaceC1164 interfaceC1164 = (InterfaceC1164) obj;
-        C12186 c12186 = this.f52832;
-        char[] cArr = c12186.f40782;
-        int i = this.f52831 ? this.f52833 : c12186.f40783;
-        while (true) {
-            int i2 = this.f52830;
-            if (i2 >= i) {
-                return;
+/* JADX INFO: renamed from: l.ܶ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D6VQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16419 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m38983(int[] iArr, int i, C23879 c23879, CharSequence charSequence, int i2) {
+        int i3 = 0;
+        if (i == 1 || i == 2) {
+            boolean z = i == 2;
+            int i4 = c23879.f77326 - i2;
+            while (i3 < iArr.length) {
+                if (i3 >= i4) {
+                    c23879.f77334 = true;
+                    return -1;
+                }
+                char cCharAt = charSequence.charAt(i2 + i3);
+                int i5 = iArr[i3];
+                if (i5 != cCharAt) {
+                    if (i5 != (z ? C17933.m41869(cCharAt) : C12690.m31488(cCharAt))) {
+                    }
+                }
+                if (c23879.m53350()) {
+                    return -2;
+                }
+                i3++;
             }
-            interfaceC1164.mo4297(cArr[i2]);
-            this.f52830++;
+            return i2 + iArr.length;
         }
-    }
-
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(Object obj) {
-        InterfaceC1164 interfaceC1164 = (InterfaceC1164) obj;
-        int i = this.f52830;
-        boolean z = this.f52831;
-        C12186 c12186 = this.f52832;
-        if (i >= (z ? this.f52833 : c12186.f40783)) {
-            return false;
+        if (i != 3 && i != 4 && i != 5) {
+            throw new IllegalArgumentException(C13645.m33382(i, "Unknown regex literal type: "));
         }
-        char[] cArr = c12186.f40782;
-        this.f52830 = i + 1;
-        interfaceC1164.mo4297(cArr[i]);
-        return true;
-    }
-
-    public C16419(C12186 c12186) {
-        this(c12186, 0, c12186.f40783, false);
-    }
-
-    public C16419(C12186 c12186, int i, int i2, boolean z) {
-        this.f52832 = c12186;
-        this.f52830 = i;
-        this.f52833 = i2;
-        this.f52831 = z;
-    }
-
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return (this.f52831 ? this.f52833 : this.f52832.f40783) - this.f52830;
-    }
-
-    @Override // l.InterfaceC20693
-    public final InterfaceC11687 trySplit() {
-        boolean z = this.f52831;
-        C12186 c12186 = this.f52832;
-        int i = z ? this.f52833 : c12186.f40783;
-        int i2 = this.f52830;
-        int i3 = (i - i2) >> 1;
-        if (i3 <= 1) {
-            return null;
+        int i6 = c23879.f77326;
+        while (i3 < iArr.length) {
+            if (i2 >= i6) {
+                c23879.f77334 = true;
+                return -1;
+            }
+            int iCodePointAt = Character.codePointAt(charSequence, i2);
+            int i7 = iArr[i3];
+            if (i7 != iCodePointAt) {
+                if (i != 3) {
+                    if (i7 != (i == 5 ? C17933.m41869(iCodePointAt) : C12690.m31488(iCodePointAt))) {
+                    }
+                }
+            }
+            i2 += Character.charCount(iCodePointAt);
+            if (i2 > i6) {
+                c23879.f77334 = true;
+                return -1;
+            }
+            if (c23879.m53350()) {
+                return -2;
+            }
+            i3++;
         }
-        this.f52833 = i;
-        int i4 = i3 + i2;
-        this.f52830 = i4;
-        this.f52831 = true;
-        return new C16419(c12186, i2, i4, true);
+        return i2;
+        return -1;
     }
 }

@@ -1,70 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15190 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C21539 f49580;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C21539 f49581;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f49582;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m36407(C21539 c21539) {
-        this.f49581 = c21539;
+/* JADX INFO: renamed from: l.ܳ۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C15190 extends EnumC8806 {
+    public /* synthetic */ C15190() {
+        this("ScriptDataLessthanSign", 16);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C21539 m36402() {
-        C21539 c21539 = this.f49581;
-        this.f49581 = null;
-        return c21539;
+    public C15190(String str, int i) {
+        super(str, i, 0);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m36403(C21539 c21539) {
-        if (this.f49580 != null) {
-            throw new IllegalStateException("HLS preview frame is already pending");
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        char cM54669 = c24448.m54669();
+        if (cM54669 == '!') {
+            c8260.m22254("<!");
+            c8260.m22269(EnumC8806.f28723);
+            return;
         }
-        this.f49580 = c21539;
-        this.f49582 = c21539.m48261();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m36405(C21539 c21539) {
-        C21539 c215310 = this.f49580;
-        if (c215310 == null || c215310.m48261() != c21539.m48261()) {
-            return false;
+        if (cM54669 == '/') {
+            c8260.m22261();
+            c8260.m22269(EnumC8806.f28696);
+        } else if (cM54669 == 65535) {
+            c8260.m22254("<");
+            c8260.m22267(this);
+            c8260.m22269(EnumC8806.f28749);
+        } else {
+            c8260.m22254("<");
+            c24448.m54660();
+            c8260.m22269(EnumC8806.f28704);
         }
-        this.f49580 = null;
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m36409(C21539 c21539) {
-        C21539 c215310 = this.f49581;
-        return c215310 != null && c215310.m48261() > c21539.m48261();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m36408() {
-        return this.f49580 != null;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m36406() {
-        return this.f49582;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m36404() {
-        this.f49581 = null;
-        this.f49580 = null;
-        this.f49582 = 0L;
     }
 }

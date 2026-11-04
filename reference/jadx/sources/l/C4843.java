@@ -1,286 +1,391 @@
 package l;
 
-import android.text.TextUtils;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.IdentityHashMap;
-import java.util.Set;
+import com.alipay.sdk.m.y.q;
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
+import com.google.android.material.color.MaterialColors;
+import com.google.android.material.slider.BaseSlider;
+import com.google.android.material.textfield.IndicatorViewController;
+import com.google.android.material.textfield.TextInputLayout;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import java.util.ArrayList;
+import moe.shizuku.server.IShizukuService;
+import org.bouncycastle.asn1.BERTags;
+import org.bouncycastle.crypto.engines.ThreefishEngine;
+import org.bouncycastle.crypto.params.DHParameters;
+import org.bouncycastle.math.Primes;
+import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
+import org.bouncycastle.pqc.math.ntru.HRSS1373Polynomial;
 
-/* JADX INFO: renamed from: l.ۙ᩵֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R9JP */
+/* JADX INFO: renamed from: l.ۙۤܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W4KG */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C4843 {
+public class C4843 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f17015 = 0;
+    public Object f16916;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C18724 f17016 = new C18724(new C5924(), new C23978());
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Object[] f16917;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C16418 m13438(boolean z, EnumC3101 enumC3101, EnumC14392 enumC14392) {
-        EnumC3101 enumC3102 = EnumC3101.DEFAULT_SIGNED;
-        if (enumC3101 != enumC3102 && enumC14392 != EnumC14392.SMB2_ONLY) {
-            throw new IllegalArgumentException("Unsigned SMB mode requires SMB2 dialects");
+    public final void m14878(int i, Object obj) {
+        Object[] objArr = this.f16917;
+        if (i > objArr.length || i < 0) {
+            return;
         }
-        C0189 c0189M38649 = C16418.m38649();
-        c0189M38649.m1397();
-        if (enumC14392 == EnumC14392.SMB2_ONLY) {
-            c0189M38649.m1406(false);
-            c0189M38649.m1407(EnumC20508.SMB_2_1, EnumC20508.SMB_2_0_2);
-        } else {
-            c0189M38649.m1406(true);
-            if (enumC14392 == EnumC14392.SMB3_ONLY) {
-                c0189M38649.m1407(EnumC20508.SMB_3_1_1, EnumC20508.SMB_3_0_2, EnumC20508.SMB_3_0);
-            }
-        }
-        if (enumC3101 != enumC3102) {
-            c0189M38649.m1410(false);
-            c0189M38649.m1414();
-            if (enumC3101 == EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT) {
-                c0189M38649.m1408();
-            }
-        }
-        if (z) {
-            c0189M38649.m1413(true);
-        }
-        return c0189M38649.m1398();
+        objArr[i] = obj;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m13446(C6254 c6254) {
-        for (EnumC14392 enumC14392 : EnumC14392.values()) {
-            for (EnumC3101 enumC3101 : EnumC3101.values()) {
-                if (enumC3101 == EnumC3101.DEFAULT_SIGNED || enumC14392 == EnumC14392.SMB2_ONLY) {
-                    f17016.m43259(new C23564(c6254, enumC3101, enumC14392));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m14879(AbstractC15283 abstractC15283, AbstractC11528 abstractC11528) {
+        ArrayList arrayList;
+        int i;
+        EnumC1114 enumC1114 = abstractC15283.f49969;
+        if (enumC1114 == null) {
+            return;
+        }
+        switch (C14120.f44655[enumC1114.ordinal()]) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+                m14878(((C22743) abstractC15283).f73803, abstractC11528.mo12625(abstractC15283));
+                this.f16916 = null;
+                return;
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+                m14878(((C13046) abstractC15283).f41759, abstractC11528.mo12625(abstractC15283));
+                this.f16916 = null;
+                return;
+            case 21:
+                m14878(((C4097) abstractC15283).f13956, abstractC11528.mo12625(abstractC15283));
+                this.f16916 = null;
+                return;
+            case 22:
+            case 23:
+            case 24:
+            case 25:
+            case 26:
+            case 27:
+            case 28:
+            case 29:
+            case 30:
+                C6335 c6335 = (C6335) abstractC15283;
+                m14878(c6335.f21447, abstractC11528.mo12626(abstractC15283, m14877(c6335.f21448)));
+                this.f16916 = null;
+                return;
+            case 31:
+            case 32:
+            case 33:
+            case 34:
+                m14878(((C20505) abstractC15283).f65695, abstractC11528.mo12626(abstractC15283, this.f16916));
+                this.f16916 = null;
+                return;
+            case 35:
+            case 36:
+            case 37:
+            case 38:
+            case 39:
+            case 40:
+            case 41:
+            case 42:
+            case 43:
+            case 44:
+            case WXMediaMessage.IMediaObject.TYPE_BUSINESS_CARD /* 45 */:
+            case 46:
+            case 47:
+            case 48:
+            case 49:
+            case 50:
+            case 51:
+            case 52:
+            case 53:
+            case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
+            case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
+            case 56:
+                C6335 c6336 = (C6335) abstractC15283;
+                m14878(c6336.f21447, abstractC11528.mo12631(abstractC15283, m14877(c6336.f21448)));
+                this.f16916 = null;
+                return;
+            case 57:
+            case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
+            case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
+            case 60:
+            case 61:
+            case 62:
+                abstractC11528.mo12631(abstractC15283, m14877(((C11554) abstractC15283).f36337));
+                this.f16916 = null;
+                return;
+            case 63:
+                abstractC11528.mo12631(abstractC15283, m14877(((C23489) abstractC15283).f34295));
+                this.f16916 = null;
+                return;
+            case 64:
+                abstractC11528.mo12631(abstractC15283, m14877(((C16029) abstractC15283).f34295));
+                this.f16916 = null;
+                return;
+            case 65:
+            case 66:
+            case 67:
+            case 68:
+            case 69:
+            case 70:
+            case 71:
+                abstractC11528.mo12631(abstractC15283, m14877(((C13046) abstractC15283).f41759));
+                this.f16916 = null;
+                return;
+            case 72:
+            case 73:
+            case 74:
+            case 75:
+            case WXMediaMessage.IMediaObject.TYPE_MUSIC_VIDEO /* 76 */:
+            case 77:
+            case 78:
+                C13046 c13046 = (C13046) abstractC15283;
+                m14878(c13046.f41759, abstractC11528.mo12631(abstractC15283, m14877(c13046.f41761)));
+                this.f16916 = null;
+                return;
+            case 79:
+            case 80:
+                C4097 c4097 = (C4097) abstractC15283;
+                m14878(c4097.f13956, abstractC11528.mo12631(abstractC15283, m14877(c4097.f13958)));
+                this.f16916 = null;
+                return;
+            case 81:
+                int i2 = ((C4097) abstractC15283).f13956;
+                m14878(i2, abstractC11528.mo12631(abstractC15283, m14877(i2)));
+                this.f16916 = null;
+                return;
+            case 82:
+            case BaseSlider.DEFAULT_LABEL_ANIMATION_ENTER_DURATION /* 83 */:
+            case 84:
+                abstractC11528.mo12631(abstractC15283, m14877(((C20505) abstractC15283).f65695));
+                this.f16916 = null;
+                return;
+            case 85:
+            case HRSS1373Polynomial.K /* 86 */:
+            case TextInputLayout.DEFAULT_PLACEHOLDER_FADE_DURATION /* 87 */:
+                abstractC11528.mo12633(abstractC15283, m14877(((C20505) abstractC15283).f65695));
+                this.f16916 = null;
+                return;
+            case 88:
+            case 89:
+            case 90:
+            case 91:
+            case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
+            case 93:
+            case MaterialColors.TONE_SURFACE_CONTAINER_LIGHT /* 94 */:
+            case 95:
+            case 96:
+            case 97:
+            case 98:
+            case q.f /* 99 */:
+            case 100:
+            case 101:
+            case IShizukuService.Stub.TRANSACTION_attachUserService /* 102 */:
+            case IShizukuService.Stub.TRANSACTION_dispatchPackageChanged /* 103 */:
+            case IShizukuService.Stub.TRANSACTION_isHidden /* 104 */:
+            case IShizukuService.Stub.TRANSACTION_dispatchPermissionConfirmationResult /* 105 */:
+            case IShizukuService.Stub.TRANSACTION_getFlagsForUid /* 106 */:
+            case IShizukuService.Stub.TRANSACTION_updateFlagsForUid /* 107 */:
+            case 108:
+            case 109:
+            case UMErrorCode.E_UM_BE_JSON_FAILED /* 110 */:
+            case UMErrorCode.E_UM_BE_CREATE_FAILED /* 111 */:
+            case UMErrorCode.E_UM_BE_DEFLATE_FAILED /* 112 */:
+            case UMErrorCode.E_UM_BE_RAW_OVERSIZE /* 113 */:
+            case 114:
+            case 115:
+            case 116:
+            case BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION /* 117 */:
+            case 118:
+            case 119:
+            case UMErrorCode.E_UM_BE_NOT_MAINPROCESS /* 120 */:
+            case UMErrorCode.E_UM_BE_EMPTY_URL_PATH /* 121 */:
+            case 122:
+            case 123:
+            case 124:
+            case q.h /* 125 */:
+            case 126:
+            case 127:
+            case 128:
+            case 129:
+            case 130:
+            case 131:
+                C24235 c24235 = (C24235) abstractC15283;
+                m14878(c24235.f78483, abstractC11528.mo12627(abstractC15283, m14877(c24235.f78485), m14877(c24235.f78484)));
+                this.f16916 = null;
+                return;
+            case 132:
+            case 133:
+            case 134:
+            case 135:
+            case 136:
+            case 137:
+                C11554 c11554 = (C11554) abstractC15283;
+                abstractC11528.mo12627(abstractC15283, m14877(c11554.f36337), m14877(c11554.f36339));
+                this.f16916 = null;
+                return;
+            case 138:
+            case 139:
+            case 140:
+            case 141:
+            case 142:
+            case 143:
+            case 144:
+                C13046 c13047 = (C13046) abstractC15283;
+                abstractC11528.mo12627(abstractC15283, m14877(c13047.f41761), m14877(c13047.f41759));
+                this.f16916 = null;
+                return;
+            case 145:
+            case 146:
+            case 147:
+            case 148:
+            case 149:
+            case 150:
+            case 151:
+                C24235 c24236 = (C24235) abstractC15283;
+                abstractC11528.mo12628(abstractC15283, m14877(c24236.f78485), m14877(c24236.f78484), m14877(c24236.f78483));
+                this.f16916 = null;
+                return;
+            case 152:
+            case 153:
+            case EnumC24309.f78687 /* 154 */:
+            case 155:
+            case 156:
+            case 157:
+            case 158:
+            case 159:
+            case DHParameters.DEFAULT_MINIMUM_LENGTH /* 160 */:
+            case 161:
+            case 162:
+            case 163:
+            case 164:
+            case 165:
+                AbstractC21997 abstractC21997 = (AbstractC21997) abstractC15283;
+                int[] iArr = abstractC21997.f70962;
+                C12126 c12126Mo39609 = abstractC21997.mo39609();
+                if (enumC1114 == EnumC1114.f4064 || enumC1114 == EnumC1114.f3987 || enumC1114 == EnumC1114.f4009 || enumC1114 == EnumC1114.f4110) {
+                    arrayList = new ArrayList(c12126Mo39609.m30292().length);
+                    i = 0;
+                } else {
+                    i = 1;
+                    arrayList = new ArrayList(c12126Mo39609.m30292().length + 1);
+                    arrayList.add(m14877(iArr[0]));
                 }
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C10864 m13434(C6254 c6254, EnumC14392 enumC14392, boolean z, boolean z2) {
-        IOException e;
-        C18724 c18724 = f17016;
-        if (!z2 || enumC14392 == EnumC14392.SMB3_ONLY) {
-            e = null;
-        } else {
-            try {
-                return m13435(new C23564(c6254, EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT, EnumC14392.SMB2_ONLY));
-            } catch (IOException e2) {
-                e = e2;
-                c18724.m43259(new C23564(c6254, EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT, EnumC14392.SMB2_ONLY));
-            }
-        }
-        if (z && enumC14392 != EnumC14392.SMB3_ONLY) {
-            try {
-                return m13435(new C23564(c6254, EnumC3101.SMB2_UNSIGNED, EnumC14392.SMB2_ONLY));
-            } catch (IOException unused) {
-                c18724.m43259(new C23564(c6254, EnumC3101.SMB2_UNSIGNED, EnumC14392.SMB2_ONLY));
-            }
-        }
-        try {
-            return m13435(new C23564(c6254, EnumC3101.DEFAULT_SIGNED, enumC14392));
-        } catch (IOException e3) {
-            if (enumC14392 == EnumC14392.SMB3_ONLY || !m13444(c6254, e3)) {
-                throw e3;
-            }
-            try {
-                return m13435(new C23564(c6254, EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT, EnumC14392.SMB2_ONLY));
-            } catch (IOException e4) {
-                m13439(e4, e3);
-                if (e != null) {
-                    m13439(e4, e);
+                for (String str : c12126Mo39609.m30292()) {
+                    arrayList.add(m14877(iArr[i]));
+                    char cCharAt = str.charAt(0);
+                    i = (cCharAt == 'J' || cCharAt == 'D') ? i + 2 : i + 1;
                 }
-                throw e4;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C10864 m13435(C23564 c23564) throws IOException {
-        try {
-            return (C10864) f17016.m43257(c23564);
-        } catch (Exception e) {
-            if (e instanceof IOException) {
-                throw ((IOException) e);
-            }
-            Throwable cause = e.getCause();
-            if (cause instanceof IOException) {
-                throw ((IOException) cause);
-            }
-            throw new IOException(e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m13441(C6254 c6254, C12185 c12185, EnumC14392 enumC14392, C1359 c1359) throws Exception {
-        try {
-            m13440(c6254, c12185, EnumC3101.DEFAULT_SIGNED, enumC14392, c1359);
-        } catch (Exception e) {
-            if (enumC14392 == EnumC14392.SMB3_ONLY || !m13444(c6254, e)) {
-                throw e;
-            }
-            try {
-                m13440(c6254, c12185, EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT, EnumC14392.SMB2_ONLY, c1359);
-            } catch (Exception e2) {
-                m13439(e2, e);
-                throw e2;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m13440(C6254 c6254, C12185 c12185, EnumC3101 enumC3101, EnumC14392 enumC14392, C1359 c1359) {
-        C19946 c19946 = new C19946(m13438(false, enumC3101, enumC14392));
-        C1163 c1163 = null;
-        try {
-            C1163 c1163M45243 = c19946.m45243(c6254.f21212, c6254.f21214);
-            if ((enumC3101 == EnumC3101.SMB2_UNSIGNED) && c1163M45243.m4281().m32543()) {
-                throw new IOException("SMB server requires signing");
-            }
-            new C12310(EnumC21522.f69924.m48246(c1163M45243.m4285(c12185))).m30572(((C6254) c1359.f5706).f21214);
-            try {
-                c1163M45243.m4288(true);
-            } catch (IOException unused) {
-            }
-            C19431.m44468(c19946);
-        } catch (Throwable th) {
-            if (0 != 0) {
-                try {
-                    c1163.m4288(true);
-                } catch (IOException unused2) {
+                this.f16916 = abstractC11528.mo12629(abstractC15283, arrayList);
+                return;
+            case 166:
+            case 167:
+                int[] iArr2 = ((C1860) abstractC15283).f6261;
+                ArrayList arrayList2 = new ArrayList(iArr2.length);
+                for (int i3 : iArr2) {
+                    arrayList2.add(m14877(i3));
                 }
-            }
-            C19431.m44468(c19946);
-            throw th;
+                this.f16916 = abstractC11528.mo12629(abstractC15283, arrayList2);
+                return;
+            case 168:
+            case 169:
+            case 170:
+            case 171:
+            case 172:
+            case 173:
+            case 174:
+            case HideBottomViewOnScrollBehavior.DEFAULT_EXIT_ANIMATION_DURATION_MS /* 175 */:
+            case PicnicEngine.MAX_AUX_BYTES /* 176 */:
+            case 177:
+            case 178:
+            case 179:
+            case 180:
+            case 181:
+            case 182:
+            case 183:
+            case 184:
+            case 185:
+            case 186:
+            case 187:
+            case 188:
+            case 189:
+            case 190:
+            case 191:
+            case 192:
+            case 193:
+            case 194:
+            case 195:
+            case 196:
+            case 197:
+            case 198:
+            case 199:
+                C6335 c6337 = (C6335) abstractC15283;
+                int i4 = c6337.f21447;
+                m14878(i4, abstractC11528.mo12627(abstractC15283, m14877(i4), m14877(c6337.f21448)));
+                this.f16916 = null;
+                return;
+            case 200:
+            case 201:
+            case 202:
+            case 203:
+            case 204:
+            case 205:
+            case 206:
+            case 207:
+            case 208:
+            case 209:
+            case 210:
+            case Primes.SMALL_FACTOR_LIMIT /* 211 */:
+            case 212:
+            case 213:
+            case 214:
+            case 215:
+            case 216:
+            case IndicatorViewController.DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION /* 217 */:
+            case 218:
+                C12300 c12300 = (C12300) abstractC15283;
+                m14878(c12300.f39537, abstractC11528.mo12631(abstractC15283, m14877(c12300.f39536)));
+                this.f16916 = null;
+                return;
+            case 219:
+                abstractC11528.mo12631(abstractC15283, m14877(((C5589) abstractC15283).f19406));
+                this.f16916 = null;
+                return;
+            case 220:
+            case 221:
+            case 222:
+            case 223:
+            case BERTags.FLAGS /* 224 */:
+                this.f16916 = null;
+                return;
+            default:
+                throw new RuntimeException("not support " + enumC1114);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C13311 m13437(C6254 c6254, EnumC14392 enumC14392, boolean z, EnumC15428 enumC15428) {
-        C9453 c9453M13433;
-        C0219 c0219 = new C0219();
-        C16418 c16418M13438 = m13438(z, EnumC3101.DEFAULT_SIGNED, enumC14392);
-        try {
-            C12185 c12185M13445 = m13445(c6254);
-            try {
-                c9453M13433 = m13433(c6254, c16418M13438, c12185M13445, c0219);
-            } catch (Exception e) {
-                if (enumC14392 == EnumC14392.SMB3_ONLY || !m13444(c6254, e)) {
-                    throw e;
-                }
-                try {
-                    c9453M13433 = m13433(c6254, m13438(false, EnumC3101.SMB2_GUEST_UNSIGNED_COMPAT, EnumC14392.SMB2_ONLY), c12185M13445, c0219);
-                } catch (Exception e2) {
-                    m13439(e2, e);
-                    throw e2;
-                }
-            }
-            EnumC15428 enumC15429 = EnumC15428.SMB3_ONLY;
-            if (enumC15428 == enumC15429) {
-                return new C13311(enumC15429, null, false);
-            }
-            return new C13311(EnumC15428.SMB2_ONLY, null, c9453M13433.m24211());
-        } catch (Exception e3) {
-            return C4137.m11765(e3);
+    public final Object m14877(int i) {
+        Object[] objArr = this.f16917;
+        if (i > objArr.length || i < 0) {
+            return null;
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C9453 m13433(C6254 c6254, C16418 c16418, C12185 c12185, C0219 c0219) throws Exception {
-        C19946 c19946 = new C19946(c16418);
-        try {
-            C1163 c1163M45243 = c19946.m45243(c6254.f21212, c6254.f21214);
-            try {
-                c1163M45243.m4285(c12185);
-                C9453 c9453 = new C9453((c1163M45243.m4290().m11484().m46306() || c1163M45243.m4281().m32543()) ? false : true);
-                try {
-                    c1163M45243.m4288(true);
-                } catch (IOException unused) {
-                } finally {
-                    C19431.m44468(c19946);
-                }
-                return c9453;
-            } catch (Throwable th) {
-                try {
-                    try {
-                        c1163M45243.m4288(true);
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                        throw th;
-                    }
-                } catch (IOException unused2) {
-                } finally {
-                    C19431.m44468(c19946);
-                }
-                throw th;
-            }
-        } catch (Exception e) {
-            C19431.m44468(c19946);
-            throw e;
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m13447(C10864 c10864) {
-        try {
-            f17016.m43260(c10864.f36943, c10864);
-        } catch (IllegalStateException unused) {
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m13442(C10864 c10864) {
-        try {
-            f17016.m43258(c10864.f36943, c10864);
-        } catch (Exception unused) {
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m13444(C6254 c6254, Exception exc) {
-        String str = c6254.f21210;
-        String str2 = c6254.f21215;
-        if (TextUtils.isEmpty(str)) {
-            return (TextUtils.isEmpty(str2) || str2.equals("guest")) && m13443(exc, Collections.newSetFromMap(new IdentityHashMap()));
-        }
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m13443(Throwable th, Set set) {
-        if (th == null || !set.add(th)) {
-            return false;
-        }
-        if (th instanceof C10275) {
-            return true;
-        }
-        for (Throwable th2 : th.getSuppressed()) {
-            if (m13443(th2, set)) {
-                return true;
-            }
-        }
-        return m13443(th.getCause(), set);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m13439(Throwable th, Throwable th2) {
-        if (th != th2) {
-            th.addSuppressed(th2);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static C12185 m13445(C6254 c6254) {
-        String str = c6254.f21215;
-        String str2 = c6254.f21210;
-        if (TextUtils.isEmpty(str) && TextUtils.isEmpty(str2)) {
-            return new C12185("", new char[0], null);
-        }
-        if (str.equals("guest") && TextUtils.isEmpty(str2)) {
-            return new C12185("Guest", new char[0], null);
-        }
-        return new C12185(str, str2.toCharArray(), c6254.f21211);
+        return objArr[i];
     }
 }

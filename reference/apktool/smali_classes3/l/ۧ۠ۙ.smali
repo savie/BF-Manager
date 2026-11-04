@@ -1,85 +1,41 @@
 .class public final Ll/ۧ۠ۙ;
 .super Ljava/lang/Object;
-.source "48R2"
+.source "U7MS"
 
 
-# static fields
-.field public static final ۙ:Ll/ۧ۠ۙ;
+# instance fields
+.field public final ۙ:Z
+
+.field public final ۤ:J
+
+.field public final ᩴ:J
+
+.field public final ᩷:Z
+
+.field public final ᩸:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JZJJZ)V
+    .locals 0
 
-    .line 992
-    new-instance v0, Ll/ۧ۠ۙ;
+    .line 95
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1015
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 96
+    iput-wide p1, p0, Ll/ۧ۠ۙ;->ᩴ:J
 
-    .line 998
-    sput-object v0, Ll/ۧ۠ۙ;->ۙ:Ll/ۧ۠ۙ;
+    .line 97
+    iput-boolean p3, p0, Ll/ۧ۠ۙ;->᩷:Z
 
-    const/4 v0, 0x1
+    .line 98
+    iput-wide p4, p0, Ll/ۧ۠ۙ;->ۤ:J
 
-    .line 1055
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
+    .line 99
+    iput-wide p6, p0, Ll/ۧ۠ۙ;->᩸:J
 
-    const/4 v0, 0x2
-
-    .line 1056
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    const/4 v0, 0x3
-
-    .line 1058
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
+    .line 100
+    iput-boolean p8, p0, Ll/ۧ۠ۙ;->ۙ:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    .line 1037
-    const-class v1, Ll/ۧ۠ۙ;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    .line 1040
-    :cond_1
-    check-cast p1, Ll/ۧ۠ۙ;
-
-    return v0
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const/16 v0, 0x745f
-
-    return v0
 .end method

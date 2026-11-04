@@ -1,114 +1,96 @@
 package l;
 
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.renderscript.Allocation;
-import android.renderscript.Element;
-import android.renderscript.RenderScript;
-import android.renderscript.ScriptIntrinsicBlur;
+import java.util.Comparator;
+import java.util.function.Consumer;
+import java.util.function.DoubleConsumer;
 
-/* JADX INFO: renamed from: l.ۧۛ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: LBKC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10820 {
+/* JADX INFO: renamed from: l.ۤۧۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10820 implements InterfaceC3012 {
+    public long a;
+    public final long b;
+    public final double c;
+    public final double d;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int f36847 = Math.round(127.5f);
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static float m27124(Bitmap bitmap) {
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
-        C5880 c5880 = new C5880(bitmap);
-        int i = 0;
-        for (int i2 = 0; i2 < width; i2++) {
-            for (int i3 = 0; i3 < height; i3++) {
-                if (c5880.m16089(i2, i3)) {
-                    i++;
-                }
-            }
-        }
-        return i / (width * height);
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return 17728;
     }
 
-    /* JADX WARN: Code duplicated, block: B:42:0x009f  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m27125(Bitmap bitmap, float f, int i, int i2, int i3) {
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
-        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        bitmapCreateBitmap.eraseColor(16777215 & i3);
-        int i4 = width - 1;
-        int i5 = height - 1;
-        C5880 c5880 = new C5880(bitmap);
-        for (int i6 = 0; i6 < width; i6++) {
-            if (c5880.m16089(i6, 0)) {
-                m27126(bitmapCreateBitmap, i6 + i, i2, i3);
-            }
-            if (c5880.m16089(i6, i5)) {
-                m27126(bitmapCreateBitmap, i6 + i, i5 + i2, i3);
-            }
-        }
-        for (int i7 = 0; i7 < height; i7++) {
-            if (c5880.m16089(0, i7)) {
-                m27126(bitmapCreateBitmap, i, i7 + i2, i3);
-            }
-            if (c5880.m16089(i4, i7)) {
-                m27126(bitmapCreateBitmap, i4 + i, i7 + i2, i3);
-            }
-        }
-        for (int i8 = 1; i8 < i4; i8++) {
-            for (int i9 = 1; i9 < i5; i9++) {
-                if (c5880.m16089(i8, i9)) {
-                    int i10 = i8 - 1;
-                    int i11 = i9 - 1;
-                    if (c5880.m16089(i10, i11) && c5880.m16089(i8, i11)) {
-                        int i12 = i8 + 1;
-                        if (c5880.m16089(i12, i11) && c5880.m16089(i10, i9) && c5880.m16089(i12, i9)) {
-                            int i13 = i9 + 1;
-                            if (!c5880.m16089(i10, i13) || !c5880.m16089(i8, i13) || !c5880.m16089(i12, i13)) {
-                                m27126(bitmapCreateBitmap, i8 + i, i9 + i2, i3);
-                            }
-                        } else {
-                            m27126(bitmapCreateBitmap, i8 + i, i9 + i2, i3);
-                        }
-                    } else {
-                        m27126(bitmapCreateBitmap, i8 + i, i9 + i2, i3);
-                    }
-                }
-            }
-        }
-        RenderScript renderScriptCreate = RenderScript.create(C16737.m39277());
-        Allocation allocationCreateFromBitmap = Allocation.createFromBitmap(renderScriptCreate, bitmapCreateBitmap);
-        Allocation allocationCreateTyped = Allocation.createTyped(renderScriptCreate, allocationCreateFromBitmap.getType());
-        ScriptIntrinsicBlur scriptIntrinsicBlurCreate = ScriptIntrinsicBlur.create(renderScriptCreate, Element.U8_4(renderScriptCreate));
-        scriptIntrinsicBlurCreate.setInput(allocationCreateFromBitmap);
-        scriptIntrinsicBlurCreate.setRadius(f);
-        scriptIntrinsicBlurCreate.forEach(allocationCreateTyped);
-        allocationCreateTyped.copyTo(bitmapCreateBitmap);
-        renderScriptCreate.destroy();
-        for (int i14 = 0; i14 < width; i14++) {
-            for (int i15 = 0; i15 < height; i15++) {
-                int pixel = bitmap.getPixel(i14, i15);
-                int pixel2 = bitmapCreateBitmap.getPixel(i14, i15);
-                if ((pixel >>> 24) < f36847) {
-                    if (Color.alpha(pixel) == 0) {
-                        pixel = pixel2;
-                    } else if (Color.alpha(pixel2) != 0) {
-                        pixel = C3224.m9670(pixel, pixel2);
-                    }
-                    bitmap.setPixel(i14, i15, pixel);
-                }
-            }
-        }
-        bitmapCreateBitmap.recycle();
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        AbstractC2946.b(this, consumer);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m27126(Bitmap bitmap, int i, int i2, int i3) {
-        if (i < 0 || i2 < 0 || i >= bitmap.getWidth() || i2 >= bitmap.getHeight()) {
-            return;
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ Comparator getComparator() {
+        return C18105.$default$getComparator(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return AbstractC2946.g(this, consumer);
+    }
+
+    public C10820(long j, long j2, double d, double d2) {
+        this.a = j;
+        this.b = j2;
+        this.c = d;
+        this.d = d2;
+    }
+
+    @Override // l.InterfaceC9154, l.InterfaceC8409
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public final C10820 trySplit() {
+        long j = this.a;
+        long j2 = (this.b + j) >>> 1;
+        if (j2 <= j) {
+            return null;
         }
-        bitmap.setPixel(i, i2, i3);
+        this.a = j2;
+        return new C10820(j, j2, this.c, this.d);
+    }
+
+    @Override // l.InterfaceC8409
+    public final long estimateSize() {
+        return this.b - this.a;
+    }
+
+    @Override // l.InterfaceC9154
+    public final boolean tryAdvance(DoubleConsumer doubleConsumer) {
+        doubleConsumer.getClass();
+        long j = this.a;
+        if (j >= this.b) {
+            return false;
+        }
+        doubleConsumer.accept(C20233.current().a(this.c, this.d));
+        this.a = j + 1;
+        return true;
+    }
+
+    @Override // l.InterfaceC9154
+    public final void forEachRemaining(DoubleConsumer doubleConsumer) {
+        doubleConsumer.getClass();
+        long j = this.a;
+        long j2 = this.b;
+        if (j < j2) {
+            this.a = j2;
+            C20233 c20233Current = C20233.current();
+            do {
+                doubleConsumer.accept(c20233Current.a(this.c, this.d));
+                j++;
+            } while (j < j2);
+        }
     }
 }

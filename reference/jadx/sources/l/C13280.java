@@ -1,49 +1,78 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.۬ᩳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: X6VB */
+/* JADX INFO: renamed from: l.۫ᩳۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6IM */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13280 extends AbstractC17535 {
+public final class C13280 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f42415;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f44100;
+    public C15517 f42417;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f44101;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f42419;
 
-    public C13280(String str, int i) {
-        this.f44101 = str;
-        this.f44100 = i;
-    }
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final boolean f42420;
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C13280)) {
-            return false;
-        }
-        C13280 c13280 = (C13280) obj;
-        return this.f44100 == c13280.f44100 && C13638.equals(this.f44101, c13280.f44101);
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f42422;
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f44101) + (this.f44100 * 31);
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public JSONObject f42423;
 
-    public final String toString() {
-        Object[] objArr = {this.f44101, Integer.valueOf(this.f44100)};
-        String[] strArrSplit = "literal;group".length() == 0 ? new String[0] : "literal;group".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C13280.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public long f42424;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final String f42425;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f42427;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final boolean f42428;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f42429;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f42430;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final String f42432;
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public long f42416 = -1;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public String f42431 = "ready";
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public String f42426 = "";
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public JSONArray f42421 = JSON.array();
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final long f42418 = System.currentTimeMillis() + 600000;
+
+    public C13280(String str, String str2, String str3, boolean z, boolean z2, long j, String str4, String str5, long j2, long j3) {
+        this.f42415 = str;
+        this.f42425 = str2;
+        this.f42432 = str3;
+        this.f42428 = z;
+        this.f42420 = z2;
+        this.f42424 = j;
+        this.f42422 = str4;
+        this.f42430 = str5;
+        this.f42429 = j2;
+        this.f42427 = j3 + 600000;
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.cryptlib;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CryptlibObjectIdentifiers {
     public static final ASN1ObjectIdentifier cryptlib;
     public static final ASN1ObjectIdentifier curvey25519;

@@ -1,7 +1,7 @@
 package bin.mt.plugin.api.translation;
 
 import com.alipay.sdk.app.OpenAuthTask;
-import l.C11280;
+import l.C20364;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseBatchTranslationEngine extends BaseTranslationEngine implements BatchTranslationEngine {
@@ -14,7 +14,7 @@ public abstract class BaseBatchTranslationEngine extends BaseTranslationEngine i
 
     @Override // bin.mt.plugin.api.translation.BatchTranslationEngine
     public BatchTranslationEngine.BatchingStrategy createBatchingStrategy() {
-        return new C11280(this, 100, OpenAuthTask.Duplex);
+        return new C20364(this, 100, OpenAuthTask.Duplex);
     }
 
     @Override // bin.mt.plugin.api.translation.TranslationEngine, bin.mt.plugin.api.translation.BatchTranslationEngine

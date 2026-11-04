@@ -1,113 +1,104 @@
-.class public Ll/ۨۙ᩵;
-.super Ll/֫ۨ᩵;
-.source "9443"
+.class public final synthetic Ll/ۨۙ᩵;
+.super Ljava/lang/Object;
+.source "V6HP"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public ᩶:Z
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ljava/util/List;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/util/List;)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, Ll/ۨۙ᩵;->ܰ:I
+
+    iput-object p2, p0, Ll/ۨۙ᩵;->᩶:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final close()V
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    .line 55
-    iget-boolean v0, p0, Ll/ۨۙ᩵;->᩶:Z
+    .line 2
+    iget v0, p0, Ll/ۨۙ᩵;->ܰ:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
+
+    .line 7
+    iget-object v0, p0, Ll/ۨۙ᩵;->᩶:Ljava/util/List;
+
+    .line 9
+    check-cast p1, Ljava/util/Map;
+
+    .line 12
+    invoke-static {v0, p1}, Ll/ۗ۟ۗ;->ۙ(Ljava/util/List;Ljava/util/Map;)V
+
+    return-void
+
+    .line 15
+    :pswitch_0
+    iget-object v0, p0, Ll/ۨۙ᩵;->᩶:Ljava/util/List;
+
+    .line 17
+    check-cast v0, Ljava/util/ArrayList;
+
+    .line 19
+    check-cast p1, Ll/᩹ۡۗ;
+
+    .line 320
+    invoke-interface {p1}, Ll/᩹ۡۗ;->ۙ()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
 
-    .line 57
-    :cond_0
-    :try_start_0
-    invoke-super {p0}, Ll/֫ۨ᩵;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 0
+    :pswitch_1
+    iget-object v0, p0, Ll/ۨۙ᩵;->᩶:Ljava/util/List;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    check-cast p1, Ll/᩻ۡۗ;
+
+    .line 112
+    invoke-virtual {p1}, Ll/᩻ۡۗ;->ܶۙ()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
 
-    :catch_0
-    const/4 v0, 0x1
+    nop
 
-    .line 59
-    iput-boolean v0, p0, Ll/ۨۙ᩵;->᩶:Z
-
-    .line 60
-    invoke-virtual {p0}, Ll/ۨۙ᩵;->ۙ()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final flush()V
-    .locals 1
+.method public synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    .locals 0
 
-    .line 45
-    iget-boolean v0, p0, Ll/ۨۙ᩵;->᩶:Z
+    .line 0
+    invoke-static {p0, p1}, Ll/ۨۧۗ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    return-void
-
-    .line 47
-    :cond_0
-    :try_start_0
-    invoke-super {p0}, Ll/֫ۨ᩵;->flush()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const/4 v0, 0x1
-
-    .line 49
-    iput-boolean v0, p0, Ll/ۨۙ᩵;->᩶:Z
-
-    .line 50
-    invoke-virtual {p0}, Ll/ۨۙ᩵;->ۙ()V
-
-    return-void
-.end method
-
-.method public ۙ()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final ۙ(Ll/ۛۨ᩵;J)V
-    .locals 1
-
-    .line 32
-    iget-boolean v0, p0, Ll/ۨۙ᩵;->᩶:Z
-
-    if-eqz v0, :cond_0
-
-    .line 33
-    invoke-virtual {p1, p2, p3}, Ll/ۛۨ᩵;->skip(J)V
-
-    return-void
-
-    .line 37
-    :cond_0
-    :try_start_0
-    invoke-super {p0, p1, p2, p3}, Ll/֫ۨ᩵;->ۙ(Ll/ۛۨ᩵;J)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const/4 p1, 0x1
-
-    .line 39
-    iput-boolean p1, p0, Ll/ۨۙ᩵;->᩶:Z
-
-    .line 40
-    invoke-virtual {p0}, Ll/ۨۙ᩵;->ۙ()V
-
-    return-void
+    return-object p1
 .end method

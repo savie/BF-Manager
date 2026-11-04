@@ -1,24 +1,62 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ۫۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 075F */
+/* JADX INFO: renamed from: l.ᩳ֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18758 implements InterfaceC20723 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20723 f60812;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20723 f60813;
-
-    public C18758(InterfaceC20723 interfaceC20723, InterfaceC20723 interfaceC20724, C1263 c1263) {
-        this.f60812 = interfaceC20723;
-        this.f60813 = c1263 != null ? new C18052(c1263, interfaceC20724) : interfaceC20724;
+public final enum C18758 extends EnumC13820 {
+    public /* synthetic */ C18758() {
+        this("BeforeAttributeName", 33);
     }
 
-    @Override // l.InterfaceC20723
+    public C18758(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC13820
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC15785 mo4000() {
-        return new C22992(this);
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == 0) {
+            c13646.m33394(this);
+            c13646.f43330.m8316();
+            c3952.m12688();
+            c13646.m33401(EnumC13820.f43840);
+            return;
+        }
+        if (cM12689 != ' ') {
+            if (cM12689 != '\"' && cM12689 != '\'') {
+                if (cM12689 == '/') {
+                    c13646.m33401(EnumC13820.f43832);
+                    return;
+                }
+                if (cM12689 == 65535) {
+                    c13646.m33399(this);
+                    c13646.m33401(EnumC13820.f43874);
+                    return;
+                }
+                if (cM12689 == '\t' || cM12689 == '\n' || cM12689 == '\f' || cM12689 == '\r') {
+                    return;
+                }
+                switch (cM12689) {
+                    case '<':
+                    case '=':
+                        break;
+                    case '>':
+                        c13646.m33397();
+                        c13646.m33401(EnumC13820.f43874);
+                        break;
+                    default:
+                        c13646.f43330.m8316();
+                        c3952.m12688();
+                        c13646.m33401(EnumC13820.f43840);
+                        break;
+                }
+                return;
+            }
+            c13646.m33394(this);
+            c13646.f43330.m8316();
+            c13646.f43330.m8307(cM12689);
+            c13646.m33401(EnumC13820.f43840);
+        }
     }
 }

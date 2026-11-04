@@ -1,138 +1,129 @@
 package l;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۢ᩻۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B6MB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9919 implements AutoCloseable {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final RectF f33896;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C5270 f33897;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C20502 f33898;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10625 f33899;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f33900;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C20937 f33901;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Bitmap f33902;
-
-    public C9919(C20937 c20937, Bitmap bitmap, C20502 c20502, C5270 c5270) {
-        this.f33901 = c20937;
-        this.f33902 = bitmap;
-        this.f33898 = c20502;
-        this.f33897 = c5270;
-        this.f33899 = null;
-        this.f33896 = new RectF(0.0f, 0.0f, c20937.f68250, c20937.f68251);
-    }
-
-    public C9919(C20937 c20937, InterfaceC10625 interfaceC10625) {
-        this.f33901 = c20937;
-        this.f33899 = interfaceC10625;
-        this.f33902 = null;
-        this.f33898 = null;
-        this.f33897 = null;
-        this.f33896 = new RectF(0.0f, 0.0f, c20937.f68250, c20937.f68251);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long m25123() {
-        InterfaceC10625 interfaceC10625 = this.f33899;
-        if (interfaceC10625 == null) {
-            return 0L;
-        }
-        return interfaceC10625.mo23241();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m25122() {
-        InterfaceC10625 interfaceC10625 = this.f33899;
-        return interfaceC10625 != null ? interfaceC10625.mo23237() : this.f33898.m46301();
-    }
+/* JADX INFO: renamed from: l.ۢۚ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86J8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9919 extends C25153 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m25121() {
-        C5270 c5270;
-        return (this.f33900 || (c5270 = this.f33897) == null || !c5270.m14553()) ? false : true;
+    public C5949 f31849;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final CharSequence f31850;
+
+    public C9919(CharSequence charSequence) {
+        this.f31850 = charSequence;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m25116() {
-        C5270 c5270 = this.f33897;
-        if (c5270 == null) {
-            return 1;
-        }
-        return c5270.m14555();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C20232 m25117(RectF rectF, float f, C0745 c0745, long j, C11393 c11393) throws IOException {
-        C5270 c5270;
-        if (this.f33900 || (c5270 = this.f33897) == null || !c5270.m14553()) {
-            throw new IOException("No SVG raster document");
-        }
-        return this.f33897.m14551(rectF, f, c0745, j, c11393);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25118(Canvas canvas, Paint paint) {
-        if (this.f33900) {
-            return;
-        }
-        InterfaceC10625 interfaceC10625 = this.f33899;
-        if (interfaceC10625 != null) {
-            interfaceC10625.mo23238(canvas, this.f33896, paint);
-        } else {
-            if (this.f33897.m14554(canvas)) {
-                return;
+    /* JADX WARN: Code duplicated, block: B:9:0x0017  */
+    @Override // l.InterfaceC2032
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2202(AbstractC9488 abstractC9488, Object obj, int i, int i2, String str, C10234 c10234) {
+        int iM25739;
+        if (this.f31849 == null) {
+            boolean z = obj instanceof InterfaceC8743;
+            CharSequence charSequence = this.f31850;
+            if (z) {
+                InterfaceC8743 interfaceC8743 = (InterfaceC8743) obj;
+                if (interfaceC8743.mo23442() >= 0) {
+                    iM25739 = interfaceC8743.mo23442();
+                } else {
+                    iM25739 = m25739(charSequence, i, i2, false);
+                }
+            } else {
+                iM25739 = m25739(charSequence, i, i2, false);
             }
-            canvas.drawBitmap(this.f33902, (Rect) null, this.f33896, paint);
+            this.f31849 = m25740(str, charSequence, iM25739);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25120(boolean z, RunnableC7159 runnableC7159) {
-        InterfaceC10625 interfaceC10625;
-        if (this.f33900 || (interfaceC10625 = this.f33899) == null) {
-            return;
+    public final void m25743(int i, String str) {
+        if (this.f31849 == null) {
+            this.f31849 = m25740(str, this.f31850, i);
         }
-        interfaceC10625.mo23240(z, runnableC7159);
-    }
-
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        m25119(null);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25119(C20502 c20502) {
-        if (this.f33900) {
-            return;
+    public static boolean m25741(int i, int i2, CharSequence charSequence) {
+        if (i2 > i && charSequence.charAt(i2) == charSequence.charAt(i)) {
+            int i3 = 0;
+            for (int i4 = i2 - 1; i4 > i && charSequence.charAt(i4) == '\\'; i4--) {
+                i3++;
+            }
+            if ((i3 & 1) == 0) {
+                return true;
+            }
         }
-        this.f33900 = true;
-        InterfaceC10625 interfaceC10625 = this.f33899;
-        if (interfaceC10625 != null) {
-            interfaceC10625.mo23239(c20502);
-            return;
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m25742() {
+        this.f31849 = null;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m25744() {
+        C5949 c5949 = this.f31849;
+        if (c5949 != null) {
+            throw c5949;
         }
-        this.f33902.recycle();
-        this.f33898.close();
-        this.f33897.m14552(c20502);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m25739(CharSequence charSequence, int i, int i2, boolean z) {
+        int i3 = 0;
+        while (i3 < charSequence.length() && i > 1) {
+            if ((i3 & 1023) == 0) {
+                C18870.m43769();
+            }
+            int i4 = i3 + 1;
+            if (charSequence.charAt(i3) == '\n') {
+                i--;
+            }
+            i3 = i4;
+        }
+        while (i3 < charSequence.length()) {
+            int i5 = i2 - 1;
+            if (i2 <= 0) {
+                break;
+            }
+            if ((i3 & 1023) == 0) {
+                C18870.m43769();
+            }
+            int i6 = i3 + 1;
+            i3 = (z && Character.isHighSurrogate(charSequence.charAt(i3)) && i6 < charSequence.length() && Character.isLowSurrogate(charSequence.charAt(i6))) ? i3 + 2 : i6;
+            i2 = i5;
+        }
+        return i3;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C5949 m25740(String str, CharSequence charSequence, int i) {
+        int i2 = 0;
+        int i3 = 1;
+        int i4 = 1;
+        while (i2 < i && i2 < charSequence.length()) {
+            if ((i2 & 1023) == 0) {
+                C18870.m43769();
+            }
+            char cCharAt = charSequence.charAt(i2);
+            if (cCharAt == '\r') {
+                int i5 = i2 + 1;
+                if (i5 < i && charSequence.charAt(i5) == '\n') {
+                    i2 = i5;
+                }
+            } else {
+                if (cCharAt != '\n') {
+                    i4++;
+                }
+                i2++;
+            }
+            i3++;
+            i4 = 1;
+            i2++;
+        }
+        return new C5949(i3, i4, str);
     }
 }

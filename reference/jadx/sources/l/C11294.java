@@ -1,47 +1,88 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧ᩹᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: XARL */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C11294 {
+import java.util.Iterator;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.NavigableSet;
+import java.util.SortedSet;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f38132;
+/* JADX INFO: renamed from: l.ۧ֫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 067E */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11294 extends C24721 implements NavigableSet {
+    @Override // java.util.NavigableSet
+    public final Object ceiling(Object obj) {
+        return ((NavigableMap) this.f5499).ceilingKey(obj);
+    }
 
-    static {
-        int[] iArr = new int[EnumC19139.values().length];
-        f38132 = iArr;
-        try {
-            iArr[EnumC19139.CHANNEL.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f38132[EnumC19139.CUSTOM.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f38132[EnumC19139.MODE.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f38132[EnumC19139.MORE.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f38132[EnumC19139.POP_MODE.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f38132[EnumC19139.PUSH_MODE.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f38132[EnumC19139.SKIP.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f38132[EnumC19139.TYPE.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
+    @Override // java.util.NavigableSet
+    public final NavigableSet descendingSet() {
+        return ((NavigableMap) this.f5499).descendingKeySet();
+    }
+
+    @Override // java.util.NavigableSet
+    public final Object floor(Object obj) {
+        return ((NavigableMap) this.f5499).floorKey(obj);
+    }
+
+    @Override // java.util.NavigableSet
+    public final NavigableSet headSet(Object obj, boolean z) {
+        return ((NavigableMap) this.f5499).headMap(obj, z).navigableKeySet();
+    }
+
+    @Override // java.util.NavigableSet
+    public final Object higher(Object obj) {
+        return ((NavigableMap) this.f5499).higherKey(obj);
+    }
+
+    @Override // java.util.NavigableSet
+    public final Object lower(Object obj) {
+        return ((NavigableMap) this.f5499).lowerKey(obj);
+    }
+
+    @Override // java.util.NavigableSet
+    public final Object pollFirst() {
+        return C15769.m37708(((NavigableMap) this.f5499).pollFirstEntry());
+    }
+
+    @Override // java.util.NavigableSet
+    public final Object pollLast() {
+        return C15769.m37708(((NavigableMap) this.f5499).pollLastEntry());
+    }
+
+    @Override // java.util.NavigableSet
+    public final NavigableSet subSet(Object obj, boolean z, Object obj2, boolean z2) {
+        return ((NavigableMap) this.f5499).subMap(obj, z, obj2, z2).navigableKeySet();
+    }
+
+    @Override // java.util.NavigableSet
+    public final NavigableSet tailSet(Object obj, boolean z) {
+        return ((NavigableMap) this.f5499).tailMap(obj, z).navigableKeySet();
+    }
+
+    @Override // l.C1600
+    /* JADX INFO: renamed from: ᩷ */
+    public final Map mo5613() {
+        return (NavigableMap) this.f5499;
+    }
+
+    @Override // java.util.NavigableSet
+    public final Iterator descendingIterator() {
+        return descendingSet().iterator();
+    }
+
+    @Override // java.util.SortedSet, java.util.NavigableSet
+    public final SortedSet subSet(Object obj, Object obj2) {
+        return subSet(obj, true, obj2, false);
+    }
+
+    @Override // java.util.SortedSet, java.util.NavigableSet
+    public final SortedSet headSet(Object obj) {
+        return headSet(obj, false);
+    }
+
+    @Override // java.util.SortedSet, java.util.NavigableSet
+    public final SortedSet tailSet(Object obj) {
+        return tailSet(obj, true);
     }
 }

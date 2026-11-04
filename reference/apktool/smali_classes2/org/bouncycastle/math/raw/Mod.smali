@@ -796,19 +796,19 @@
     const/4 v0, 0x2
 
     .line 0
-    invoke-static {p0, p0, v0, p0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, p0, v0, p0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result p0
 
@@ -1664,7 +1664,7 @@
 
     move-wide/from16 v29, v10
 
-    invoke-static/range {v23 .. v30}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v23 .. v30}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v10
 
@@ -1680,7 +1680,7 @@
 
     move-wide/from16 v29, v31
 
-    invoke-static/range {v23 .. v30}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v23 .. v30}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v0
 
@@ -1809,7 +1809,7 @@
 
     move-wide/from16 v19, v9
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v9
 
@@ -1819,7 +1819,7 @@
 
     move-wide/from16 v19, v7
 
-    invoke-static/range {v17 .. v24}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v17 .. v24}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v4
 

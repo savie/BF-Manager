@@ -7,13 +7,13 @@
 
 
 # static fields
-.field public static final ֡:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
+.field public static final ܿ:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
 
 .field public static final ᩶:Lcom/amazonaws/services/s3/metrics/S3ServiceMetric$1;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -98,7 +98,7 @@
     aput-object v4, v1, v0
 
     .line 75
-    sput-object v1, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->֡:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
+    sput-object v1, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܿ:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
     invoke-direct {p0}, Lcom/amazonaws/metrics/SimpleMetricType;-><init>()V
 
     .line 85
-    iput-object p1, p0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܺ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -119,7 +119,7 @@
     .locals 1
 
     .line 109
-    sget-object v0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->֡:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
+    sget-object v0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܿ:[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
 
     invoke-virtual {v0}, [Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->clone()Ljava/lang/Object;
 
@@ -136,7 +136,7 @@
     .locals 1
 
     .line 90
-    iget-object v0, p0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

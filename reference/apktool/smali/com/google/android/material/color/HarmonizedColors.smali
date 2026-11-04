@@ -171,7 +171,7 @@
     aget v5, v2, v4
 
     .line 140
-    invoke-static {p0, v5}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {p0, v5}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result v6
 
@@ -294,7 +294,7 @@
     move-result-object v0
 
     .line 104
-    sget v1, Ll/ᩴ۟ܶ;->᩻۠:I
+    sget v1, Ll/ۘ۬ܺ;->ۡۗ:I
 
     .line 105
     invoke-virtual {p1, v1}, Lcom/google/android/material/color/HarmonizedColorsOptions;->getThemeOverlayResourceId(I)I

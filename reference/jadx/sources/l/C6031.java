@@ -1,28 +1,155 @@
 package l;
 
-import java.util.function.Predicate;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
 
-/* JADX INFO: renamed from: l.ۛۨۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B7TD */
+/* JADX INFO: renamed from: l.ۛ֡ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9Q9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C6031 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+public final class C6031 extends AbstractC2716 {
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream) {
+        return super.parseDelimitedFrom(inputStream);
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream, C24215 c24215) {
+        return super.parseDelimitedFrom(inputStream, c24215);
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream) {
+        return super.parseFrom(inputStream);
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        return C13638.nonNull((C10971) obj);
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream, C24215 c24215) {
+        return super.parseFrom(inputStream, c24215);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer) {
+        return super.parseFrom(byteBuffer);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer, C24215 c24215) {
+        return super.parseFrom(byteBuffer, c24215);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3660 abstractC3660) {
+        return super.parseFrom(abstractC3660);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        return super.parseFrom(abstractC3660, c24215);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC17084 abstractC17084) {
+        return super.parseFrom(abstractC17084);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC17084 abstractC17084, C24215 c24215) {
+        return super.parseFrom(abstractC17084, c24215);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr) {
+        return super.parseFrom(bArr);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2) {
+        return super.parseFrom(bArr, i, i2);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2, C24215 c24215) {
+        return super.parseFrom(bArr, i, i2, c24215);
+    }
+
+    @Override // l.AbstractC2716, l.InterfaceC11490
+    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, C24215 c24215) {
+        return super.parseFrom(bArr, c24215);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream) {
+        return super.parsePartialDelimitedFrom(inputStream);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream, C24215 c24215) {
+        return super.parsePartialDelimitedFrom(inputStream, c24215);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream) {
+        return super.parsePartialFrom(inputStream);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream, C24215 c24215) {
+        return super.parsePartialFrom(inputStream, c24215);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC3660 abstractC3660) {
+        return super.parsePartialFrom(abstractC3660);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC17084 abstractC17084) {
+        return super.parsePartialFrom(abstractC17084);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC17084 abstractC17084, C24215 c24215) {
+        return super.parsePartialFrom(abstractC17084, c24215);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr) {
+        return super.parsePartialFrom(bArr);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2) {
+        return super.parsePartialFrom(bArr, i, i2);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2, C24215 c24215) {
+        return super.parsePartialFrom(bArr, i, i2, c24215);
+    }
+
+    @Override // l.AbstractC2716
+    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, C24215 c24215) {
+        return super.parsePartialFrom(bArr, c24215);
+    }
+
+    @Override // l.InterfaceC11490
+    public final Object parsePartialFrom(AbstractC3660 abstractC3660, C24215 c24215) throws C20463 {
+        C23931 c23931NewBuilder = C0064.newBuilder();
+        try {
+            c23931NewBuilder.m53448(abstractC3660, c24215);
+            return c23931NewBuilder.buildPartial();
+        } catch (C20463 e) {
+            e.m46972(c23931NewBuilder.buildPartial());
+            throw e;
+        } catch (IOException e2) {
+            C20463 c20463 = new C20463(e2.getMessage(), e2);
+            c20463.m46972(c23931NewBuilder.buildPartial());
+            throw c20463;
+        } catch (C24128 e3) {
+            C20463 c20463M53671 = e3.m53671();
+            c20463M53671.m46972(c23931NewBuilder.buildPartial());
+            throw c20463M53671;
+        }
     }
 }

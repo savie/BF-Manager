@@ -1,310 +1,200 @@
 .class public final Ll/ۤ᩶᩵;
-.super Ll/ۨ֡᩵;
-.source "L58X"
-
-# interfaces
-.implements Ll/ۨܺ᩵;
+.super Ll/ᩴ᩵᩵;
+.source "Z9WT"
 
 
 # static fields
-.field public static final ۘ:Ll/ۗ᩶᩵;
+.field public static final serialVersionUID:J = 0x6d63427a380dfa0L
 
 
 # instance fields
-.field public ֨:B
+.field public ܰ:I
 
-.field public ۖ:B
-
-.field public ۚ:B
-
-.field public ۨ:B
-
-.field public ۬:B
-
-.field public ᩹:B
+.field public ᩶:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 2
 
-    .line 41
-    new-instance v0, Ll/ۡ᩶᩵;
-
-    .line 151
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 41
-    sput-object v0, Ll/ۤ᩶᩵;->ۘ:Ll/ۗ᩶᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/֨֡᩵;IBBBBBLl/ۡܽ᩵;)V
-    .locals 0
-
-    .line 51
-    invoke-direct {p0, p1, p8}, Ll/ۨ֡᩵;-><init>(Ll/֨֡᩵;Ll/ۡܽ᩵;)V
-
-    const/4 p1, 0x5
-
-    if-gt p2, p1, :cond_1
-
-    const/16 p1, 0x10
-
-    if-ge p3, p1, :cond_0
-
-    if-ge p4, p1, :cond_0
-
-    if-ge p5, p1, :cond_0
-
-    if-ge p6, p1, :cond_0
-
-    if-ge p7, p1, :cond_0
-
-    int-to-byte p1, p2
-
-    .line 65
-    iput-byte p1, p0, Ll/ۤ᩶᩵;->ۖ:B
-
-    .line 66
-    iput-byte p7, p0, Ll/ۤ᩶᩵;->ۨ:B
-
-    .line 67
-    iput-byte p3, p0, Ll/ۤ᩶᩵;->ۚ:B
-
-    .line 68
-    iput-byte p4, p0, Ll/ۤ᩶᩵;->᩹:B
-
-    .line 69
-    iput-byte p5, p0, Ll/ۤ᩶᩵;->֨:B
-
-    .line 70
-    iput-byte p6, p0, Ll/ۤ᩶᩵;->۬:B
-
-    return-void
-
-    .line 62
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "All register args must fit in 4 bits"
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 54
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "regCount cannot be greater than 5"
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ll/۫֡᩵;Ll/֨֡᩵;[BI)V
-    .locals 1
-
-    .line 76
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/ۨ֡᩵;-><init>(Ll/۫֡᩵;Ll/֨֡᩵;[BI)V
+    const/4 v0, 0x2
 
     .line 105
-    iget-byte p1, p0, Ll/ۤ᩶᩵;->ۖ:B
+    invoke-static {v0, p1}, Ll/ۤ᩶᩵;->ۙ(II)Ljava/lang/String;
 
-    const/4 p2, 0x5
+    move-result-object v1
 
-    if-gt p1, p2, :cond_0
+    .line 58
+    invoke-direct {p0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    add-int/lit8 p1, p4, 0x1
+    .line 106
+    iput v0, p0, Ll/ۤ᩶᩵;->ܰ:I
 
-    .line 82
-    aget-byte v0, p3, p1
-
-    invoke-static {v0}, Ll/ܳܶܶ;->ۙ(B)B
-
-    move-result v0
-
-    iput-byte v0, p0, Ll/ۤ᩶᩵;->ۖ:B
-
-    .line 83
-    aget-byte p1, p3, p1
-
-    and-int/lit8 p1, p1, 0xf
-
-    int-to-byte p1, p1
-
-    iput-byte p1, p0, Ll/ۤ᩶᩵;->ۨ:B
-
-    add-int/lit8 p1, p4, 0x4
-
-    .line 84
-    aget-byte p1, p3, p1
-
-    and-int/lit8 v0, p1, 0xf
-
-    int-to-byte v0, v0
-
-    iput-byte v0, p0, Ll/ۤ᩶᩵;->ۚ:B
-
-    .line 85
-    invoke-static {p1}, Ll/ܳܶܶ;->ۙ(B)B
-
-    move-result p1
-
-    iput-byte p1, p0, Ll/ۤ᩶᩵;->᩹:B
-
-    add-int/2addr p4, p2
-
-    .line 86
-    aget-byte p1, p3, p4
-
-    and-int/lit8 p2, p1, 0xf
-
-    int-to-byte p2, p2
-
-    iput-byte p2, p0, Ll/ۤ᩶᩵;->֨:B
-
-    .line 87
-    invoke-static {p1}, Ll/ܳܶܶ;->ۙ(B)B
-
-    move-result p1
-
-    iput-byte p1, p0, Ll/ۤ᩶᩵;->۬:B
+    .line 107
+    iput p1, p0, Ll/ۤ᩶᩵;->᩶:I
 
     return-void
+.end method
 
-    .line 79
+.method public static ۙ(II)Ljava/lang/String;
+    .locals 1
+
+    if-eqz p0, :cond_5
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const-string p1, "unknown error class: "
+
+    .line 0
+    invoke-static {p0, p1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
+    const/4 p0, -0x1
 
-    const-string p2, "regCount cannot be greater than 5"
+    if-eq p1, p0, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    const/16 p0, 0x8f
 
-    throw p1
+    if-eq p1, p0, :cond_1
+
+    packed-switch p1, :pswitch_data_0
+
+    const-string p0, "ERR_SSN_SRVC/Unknown error code: "
+
+    invoke-static {p1, p0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "ERR_SSN_SRVC/Called name present, but insufficient resources"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "ERR_SSN_SRVC/Called name not present"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "ERR_SSN_SRVC/Not listening for calling name"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "ERR_SSN_SRVC/Not listening on called name"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "ERR_SSN_SRVC/Unspecified error"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "ERR_SSN_SRVC/Connection refused"
+
+    return-object p0
+
+    :cond_3
+    if-eq p1, v0, :cond_4
+
+    const-string p0, "ERR_NAM_SRVC/"
+
+    goto :goto_0
+
+    :cond_4
+    const-string p0, "ERR_NAM_SRVC/FMT_ERR: Format Error"
+
+    .line 69
+    :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "Unknown error code: "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    const-string p0, "SUCCESS"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x80
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final ֨()B
-    .locals 1
-
-    .line 105
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->ۖ:B
-
-    return v0
-.end method
-
-.method public final ۙ()B
-    .locals 1
-
-    .line 109
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->ۨ:B
-
-    return v0
-.end method
-
-.method public final ۚ()B
-    .locals 1
-
-    .line 121
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->֨:B
-
-    return v0
-.end method
-
-.method public final ۜ()Ll/֨ܺ᩵;
-    .locals 1
-
-    .line 101
-    sget-object v0, Ll/֨ܺ᩵;->ᩴۙ:Ll/֨ܺ᩵;
-
-    return-object v0
-.end method
-
-.method public final ۨ()B
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
     .line 113
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->ۚ:B
+    new-instance v0, Ljava/lang/String;
 
-    return v0
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public final ܰ()B
-    .locals 1
+    const-string v2, "errorClass="
 
-    .line 125
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->۬:B
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    iget v2, p0, Ll/ۤ᩶᩵;->ܰ:I
 
-.method public final ܰ(Ll/ۙ۫᩵;I)V
-    .locals 1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 93
-    iget-object p2, p0, Ll/ۙ֡᩵;->ۙ:Ll/֨֡᩵;
+    const-string v3, ",errorCode="
 
-    iget-byte p2, p2, Ll/֨֡᩵;->۫:B
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
+    iget v3, p0, Ll/ۤ᩶᩵;->᩶:I
 
-    .line 94
-    iget-byte p2, p0, Ll/ۤ᩶᩵;->ۖ:B
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    shl-int/lit8 p2, p2, 0x4
+    const-string v4, ",errorString="
 
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->ۨ:B
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    or-int/2addr p2, v0
+    .line 114
+    invoke-static {v2, v3}, Ll/ۤ᩶᩵;->ۙ(II)Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
+    move-result-object v2
 
-    .line 95
-    invoke-virtual {p0}, Ll/ۨ֡᩵;->᩺()Ll/ۡܽ᩵;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p2}, Ll/ۡܽ᩵;->ۚ()I
+    move-result-object v1
 
-    move-result p2
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ۖ(I)V
-
-    .line 96
-    iget-byte p2, p0, Ll/ۤ᩶᩵;->᩹:B
-
-    shl-int/lit8 p2, p2, 0x4
-
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->ۚ:B
-
-    or-int/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
-
-    .line 97
-    iget-byte p2, p0, Ll/ۤ᩶᩵;->۬:B
-
-    shl-int/lit8 p2, p2, 0x4
-
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->֨:B
-
-    or-int/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
-
-    return-void
-.end method
-
-.method public final ᩹()B
-    .locals 1
-
-    .line 117
-    iget-byte v0, p0, Ll/ۤ᩶᩵;->᩹:B
-
-    return v0
+    return-object v0
 .end method

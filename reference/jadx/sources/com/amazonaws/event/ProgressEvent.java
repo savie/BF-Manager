@@ -4,27 +4,27 @@ package com.amazonaws.event;
 public class ProgressEvent {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f166;
+    public long f156;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f167;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f157;
 
     public ProgressEvent(long j) {
-        this.f166 = j;
+        this.f156 = j;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m226() {
-        return this.f166;
+    public final long m220() {
+        return this.f156;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m228() {
-        return this.f167;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m222() {
+        return this.f157;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m227(int i) {
-        this.f167 = i;
+    public final void m221(int i) {
+        this.f157 = i;
     }
 }

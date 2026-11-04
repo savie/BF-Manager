@@ -1,40 +1,26 @@
-.class public Ll/ۙ֨ۘ;
-.super Landroid/os/Handler;
-.source "87OT"
+.class public interface abstract annotation Ll/ۙ֨ۘ;
+.super Ljava/lang/Object;
+.source "144S"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# direct methods
-.method public constructor <init>(Landroid/os/Looper;)V
-    .locals 0
+# annotations
+.annotation runtime Ljava/lang/annotation/Documented;
+.end annotation
 
-    .line 35
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    return-void
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
+    }
+.end annotation
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 0
-
-    .line 39
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/ref/WeakReference;
-
-    .line 40
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbin/mt/plugin/api/util/UIUpdaterGroup;
-
-    if-eqz p1, :cond_0
-
-    .line 42
-    invoke-static {p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->access$000(Lbin/mt/plugin/api/util/UIUpdaterGroup;)V
-
-    :cond_0
-    return-void
+.method public abstract value()Ll/᩷֨ۘ;
 .end method

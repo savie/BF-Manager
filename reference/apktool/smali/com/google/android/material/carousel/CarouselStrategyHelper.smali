@@ -635,7 +635,7 @@
 
     move-result-object p0
 
-    sget v0, Ll/֨۟ܶ;->ܰ֨:I
+    sget v0, Ll/ܽ۬ܺ;->᩷۫:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -652,7 +652,7 @@
 
     move-result-object p0
 
-    sget v0, Ll/֨۟ܶ;->ۖ֨:I
+    sget v0, Ll/ܽ۬ܺ;->᩸۫:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -669,7 +669,7 @@
 
     move-result-object p0
 
-    sget v0, Ll/֨۟ܶ;->ۚ֨:I
+    sget v0, Ll/ܽ۬ܺ;->ᩴ۫:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
 

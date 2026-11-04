@@ -2,7 +2,7 @@ package org.bouncycastle.i18n;
 
 import java.util.Locale;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LocalizedException extends Exception {
     public Throwable cause;
     public ErrorBundle message;

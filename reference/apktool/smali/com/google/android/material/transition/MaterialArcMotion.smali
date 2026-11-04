@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/material/transition/MaterialArcMotion;
-.super Ll/᩵᩻ܰ;
+.super Ll/ᩴۡ᩷;
 .source "MaterialArcMotion.java"
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 32
-    invoke-direct {p0}, Ll/᩵᩻ܰ;-><init>()V
+    invoke-direct {p0}, Ll/ᩴۡ᩷;-><init>()V
 
     return-void
 .end method

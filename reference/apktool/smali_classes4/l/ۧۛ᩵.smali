@@ -1,67 +1,100 @@
 .class public final Ll/ۧۛ᩵;
-.super Ll/ۙۛ᩵;
-.source "M4Q9"
+.super Ljava/lang/Object;
+.source "5A0Y"
 
 # interfaces
-.implements Ll/ܶܰۡ;
+.implements Ll/ܽۛ᩵;
+.implements Ll/ܺ᩵᩵;
 
 
-# static fields
-.field public static final ܽ:Ll/ᩳ۫᩵;
+# instance fields
+.field public ܰ:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    .line 43
-    sget-object v0, Ll/ᩳ۫᩵;->۫:Ll/ᩳ۫᩵;
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Ll/ۧۛ᩵;->ܽ:Ll/ᩳ۫᩵;
+    const-wide/16 v0, 0x0
+
+    .line 56
+    iput-wide v0, p0, Ll/ۧۛ᩵;->ܰ:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۛ()Ll/ᩳ۫᩵;
+.method public final size()I
     .locals 1
 
-    .line 52
-    sget-object v0, Ll/ۧۛ᩵;->ܽ:Ll/ᩳ۫᩵;
+    const/16 v0, 0x8
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    .line 102
+    new-instance v0, Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "EndOfFileInformation[endOfFile="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Ll/ۧۛ᩵;->ܰ:J
+
+    const-string v4, "]"
+
+    .line 0
+    invoke-static {v1, v2, v3, v4}, Ll/ۖܶ᩸;->ۙ(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 102
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public final ۤ()Ljava/lang/String;
+.method public final ۙ(II[B)I
+    .locals 0
+
+    .line 67
+    invoke-static {p1, p3}, Ll/֡ܰ᩵;->ۤ(I[B)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ll/ۧۛ᩵;->ܰ:J
+
+    const/16 p1, 0x8
+
+    return p1
+.end method
+
+.method public final ۙ(I[B)I
     .locals 2
 
-    .line 42
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 90
+    iget-wide v0, p0, Ll/ۧۛ᩵;->ܰ:J
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, v1, p1, p2}, Ll/֡ܰ᩵;->ۤ(JI[B)V
 
-    invoke-virtual {p0}, Ll/ۗܿ᩵;->ۜ()Ll/ۤ۫᩵;
+    const/16 p1, 0x8
 
-    move-result-object v1
+    return p1
+.end method
 
-    iget-object v1, v1, Ll/ۤ۫᩵;->۫:Ljava/lang/String;
+.method public final ᩷()B
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v0, 0x14
 
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۙۛ᩵;->᩸()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

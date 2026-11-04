@@ -1,12 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽܳۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W7BE */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16701 extends C2340 {
-    @Override // l.C12925
-    /* JADX INFO: renamed from: ۙ */
-    public final C15187 mo32011(C15187 c15187, C12738 c12738) {
-        return c15187;
+import android.net.Uri;
+
+/* JADX INFO: renamed from: l.ܺ۠ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D7NJ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16701 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C15648 f53951;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Uri f53952;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f53953;
+
+    public C16701(Uri uri, C15648 c15648, String str) {
+        this.f53952 = uri;
+        this.f53951 = c15648;
+        this.f53953 = str;
     }
 }

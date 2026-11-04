@@ -1,388 +1,262 @@
-.class public abstract Ll/᩻۫ۚ;
+.class public final Ll/᩻۫ۚ;
 .super Ljava/lang/Object;
-.source "X81I"
+.source "N795"
+
+# interfaces
+.implements Ll/᩸ۧۤ;
+.implements Ll/᩷۠ܶ;
 
 
-# instance fields
-.field public ۖ:I
+# static fields
+.field public static ܰ:Ljava/lang/String;
 
-.field public final ۙ:Ll/ۧۧۖ;
+.field public static ܿ:J
 
-.field public ۚ:I
-
-.field public ۨ:Z
-
-.field public final ܰ:Landroid/widget/ImageView;
-
-.field public final ᩹:Ll/ۧۧۖ;
+.field public static ᩶:J
 
 
 # direct methods
-.method public constructor <init>(Ll/۫ܶۘ;II)V
-    .locals 7
+.method public static declared-synchronized ۙ(Ljava/lang/String;)J
+    .locals 5
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    const-class v0, Ll/᩻۫ۚ;
 
-    const/4 v0, 0x1
-
-    .line 22
-    iput-boolean v0, p0, Ll/᩻۫ۚ;->ۨ:Z
-
-    const v1, 0x7f0d00bd
-
-    .line 25
-    invoke-virtual {p1, v1}, Ll/۫ܶۘ;->ۙ(I)Landroid/view/View;
-
-    move-result-object v1
-
-    const v2, 0x7f0a017d
-
-    .line 26
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ۧۧۖ;
-
-    iput-object v2, p0, Ll/᩻۫ۚ;->᩹:Ll/ۧۧۖ;
-
-    const v3, 0x7f0a017e
-
-    .line 27
-    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ۧۧۖ;
-
-    iput-object v3, p0, Ll/᩻۫ۚ;->ۙ:Ll/ۧۧۖ;
-
-    const v4, 0x7f0a0287
+    .line 3
+    monitor-enter v0
 
     .line 28
-    invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    :try_start_0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-object v4
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v4, Landroid/widget/ImageView;
-
-    iput-object v4, p0, Ll/᩻۫ۚ;->ܰ:Landroid/widget/ImageView;
-
-    const v5, 0x7f0a0631
+    if-eqz v1, :cond_0
 
     .line 29
-    invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    monitor-exit v0
 
-    move-result-object v5
+    const-wide/16 v0, 0x0
 
-    check-cast v5, Landroid/widget/TextView;
+    return-wide v0
 
-    const v6, 0x7f120b87
+    .line 31
+    :cond_0
+    :try_start_1
+    sget-wide v1, Ll/᩻۫ۚ;->ܿ:J
 
-    .line 30
-    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    sput-wide v1, Ll/᩻۫ۚ;->ܿ:J
+
+    sput-wide v1, Ll/᩻۫ۚ;->᩶:J
 
     .line 32
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ll/ۧۧۖ;->ܰ(Ljava/lang/CharSequence;)V
+    sput-object p0, Ll/᩻۫ۚ;->ܰ:Ljava/lang/String;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 33
-    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    monitor-exit v0
 
-    move-result-object v5
+    return-wide v1
 
-    invoke-virtual {v3, v5}, Ll/ۧۧۖ;->ܰ(Ljava/lang/CharSequence;)V
+    :catchall_0
+    move-exception p0
 
-    .line 34
-    invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result p2
+    throw p0
+.end method
 
-    iput p2, p0, Ll/᩻۫ۚ;->ۚ:I
+.method public static declared-synchronized ۙ()Ljava/lang/String;
+    .locals 2
 
-    .line 35
-    invoke-static {v0, p3}, Ljava/lang/Math;->max(II)I
+    .line 2
+    const-class v0, Ll/᩻۫ۚ;
 
-    move-result p2
+    .line 3
+    monitor-enter v0
 
-    iput p2, p0, Ll/᩻۫ۚ;->ۖ:I
+    .line 51
+    :try_start_0
+    sget-object v1, Ll/᩻۫ۚ;->ܰ:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 37
-    new-instance p2, Landroid/text/InputFilter$LengthFilter;
+    monitor-exit v0
 
-    const/4 p3, 0x6
+    return-object v1
 
-    invoke-direct {p2, p3}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+    :catchall_0
+    move-exception v1
 
-    new-array v5, v0, [Landroid/text/InputFilter;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/4 v6, 0x0
+    throw v1
+.end method
 
-    aput-object p2, v5, v6
+.method public static declared-synchronized ۙ(J)V
+    .locals 6
 
-    invoke-virtual {v2, v5}, Ll/ۧۧۖ;->ۙ([Landroid/text/InputFilter;)V
+    .line 2
+    const-class v0, Ll/᩻۫ۚ;
 
-    .line 38
-    new-instance p2, Landroid/text/InputFilter$LengthFilter;
+    .line 3
+    monitor-enter v0
 
-    invoke-direct {p2, p3}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+    const-wide/16 v1, 0x0
 
-    new-array p3, v0, [Landroid/text/InputFilter;
+    cmp-long v3, p0, v1
 
-    aput-object p2, p3, v6
-
-    invoke-virtual {v3, p3}, Ll/ۧۧۖ;->ۙ([Landroid/text/InputFilter;)V
+    if-eqz v3, :cond_0
 
     .line 40
-    new-instance p2, Ll/ۛ۫ۚ;
-
-    invoke-direct {p2, p0}, Ll/ۛ۫ۚ;-><init>(Ll/᩻۫ۚ;)V
-
-    invoke-virtual {v2, p2}, Ll/ۛܳۖ;->ۙ(Landroid/text/TextWatcher;)V
-
-    .line 63
-    new-instance p2, Ll/ۧ۫ۚ;
-
-    invoke-direct {p2, p0}, Ll/ۧ۫ۚ;-><init>(Ll/᩻۫ۚ;)V
-
-    invoke-virtual {v3, p2}, Ll/ۛܳۖ;->ۙ(Landroid/text/TextWatcher;)V
-
-    .line 86
-    new-instance p2, Ll/᩹ᩳ᩺;
-
-    const/4 p3, 0x2
-
-    invoke-direct {p2, p3, p0}, Ll/᩹ᩳ᩺;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v4, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 105
-    invoke-virtual {p1}, Ll/۫ܶۘ;->buildDialog()Ll/۠ۡۜ;
-
-    move-result-object p1
-
-    .line 106
-    invoke-virtual {p1, v1}, Ll/۠ۡۜ;->ۙ(Landroid/view/View;)V
-
-    const/4 p2, 0x0
-
-    const p3, 0x7f12015e
-
-    const v0, 0x7f12070a
-
-    .line 0
-    invoke-static {p1, v0, p2, p3, p2}, Ll/ۗ᩸ᩴ;->ۙ(Ll/۠ۡۜ;ILandroid/content/DialogInterface$OnClickListener;ILandroid/content/DialogInterface$OnClickListener;)Ll/᩵ۡۜ;
-
-    move-result-object p1
-
-    .line 110
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->ۚ()Landroid/widget/Button;
-
-    move-result-object p2
-
-    new-instance p3, Ll/᩹ۡ᩺;
-
-    invoke-direct {p3, p0, p1}, Ll/᩹ۡ᩺;-><init>(Ll/᩻۫ۚ;Ll/᩵ۡۜ;)V
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic ۖ(Ll/᩻۫ۚ;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/᩻۫ۚ;->ۖ:I
-
-    return p0
-.end method
-
-.method public static synthetic ۙ(Ll/᩻۫ۚ;)V
-    .locals 3
-
-    .line 87
-    iget-object v0, p0, Ll/᩻۫ۚ;->ܰ:Landroid/widget/ImageView;
-
-    iget-boolean v1, p0, Ll/᩻۫ۚ;->ۨ:Z
-
-    xor-int/lit8 v2, v1, 0x1
-
-    iput-boolean v2, p0, Ll/᩻۫ۚ;->ۨ:Z
-
-    if-nez v1, :cond_1
-
-    const v1, 0x7f08021b
-
-    .line 89
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 91
     :try_start_0
-    iget-object v0, p0, Ll/᩻۫ۚ;->᩹:Ll/ۧۧۖ;
+    sget-wide v3, Ll/᩻۫ۚ;->᩶:J
 
-    invoke-virtual {v0}, Ll/ۛܳۖ;->ܰܰ()Ll/ۗ֫ۖ;
+    cmp-long v5, p0, v3
 
-    move-result-object v0
+    if-nez v5, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 p0, 0x0
 
-    move-result-object v0
+    .line 41
+    sput-object p0, Ll/᩻۫ۚ;->ܰ:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 92
-    iget-object v1, p0, Ll/᩻۫ۚ;->ۙ:Ll/ۧۧۖ;
-
-    invoke-virtual {v1}, Ll/ۛܳۖ;->ܰܰ()Ll/ۗ֫ۖ;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    if-lez v0, :cond_0
-
-    if-lez v1, :cond_0
-
-    .line 94
-    iput v0, p0, Ll/᩻۫ۚ;->ۚ:I
-
-    .line 95
-    iput v1, p0, Ll/᩻۫ۚ;->ۖ:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    return-void
-
-    :cond_1
-    const p0, 0x7f08024f
-
-    .line 101
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    return-void
-.end method
-
-.method public static synthetic ۙ(Ll/᩻۫ۚ;Ll/᩵ۡۜ;)V
-    .locals 4
-
-    .line 113
-    iget-object v0, p0, Ll/᩻۫ۚ;->ۙ:Ll/ۧۧۖ;
-
-    iget-object v1, p0, Ll/᩻۫ۚ;->᩹:Ll/ۧۧۖ;
-
-    const v2, 0x7f120b48
-
-    :try_start_0
-    invoke-virtual {v1}, Ll/ۛܳۖ;->ܰܰ()Ll/ۗ֫ۖ;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-
-    .line 120
-    :try_start_1
-    invoke-virtual {v0}, Ll/ۛܳۖ;->ܰܰ()Ll/ۗ֫ۖ;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 126
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->dismiss()V
-
-    .line 127
-    invoke-virtual {p0, v1, v0}, Ll/᩻۫ۚ;->ۙ(II)V
-
-    return-void
-
-    .line 122
-    :catch_0
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
-
-    .line 123
-    invoke-static {v2}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
+    .line 42
+    sput-wide v1, Ll/᩻۫ۚ;->᩶:J
 
     goto :goto_0
 
-    .line 115
-    :catch_1
-    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
+    :catchall_0
+    move-exception p0
 
-    .line 116
-    invoke-static {v2}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
+    .line 40
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    throw p0
+
+    .line 44
+    :cond_0
     :goto_0
+    monitor-exit v0
+
     return-void
-.end method
-
-.method public static bridge synthetic ۚ(Ll/᩻۫ۚ;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/᩻۫ۚ;->ۚ:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/᩻۫ۚ;)Z
-    .locals 0
-
-    .line 0
-    iget-boolean p0, p0, Ll/᩻۫ۚ;->ۨ:Z
-
-    return p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/᩻۫ۚ;)Ll/ۧۧۖ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩻۫ۚ;->ۙ:Ll/ۧۧۖ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ᩹(Ll/᩻۫ۚ;)Ll/ۧۧۖ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩻۫ۚ;->᩹:Ll/ۧۧۖ;
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public abstract ۙ(II)V
+.method public ۙ(FLjava/lang/Float;Ljava/lang/Float;)Ljava/lang/Object;
+    .locals 0
+
+    .line 39
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
+
+    move-result p2
+
+    .line 40
+    invoke-virtual {p3}, Ljava/lang/Number;->floatValue()F
+
+    move-result p3
+
+    sub-float/2addr p3, p2
+
+    mul-float p3, p3, p1
+
+    add-float/2addr p3, p2
+
+    invoke-static {p3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public ۙ(Ll/ᩴܺۤ;)V
+    .locals 5
+
+    .line 15
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ܰ֫ۤ;
+
+    invoke-virtual {v0}, Ll/ܰ֫ۤ;->ۚ()I
+
+    move-result v0
+
+    .line 16
+    new-instance v1, Ljava/util/Random;
+
+    invoke-direct {v1}, Ljava/util/Random;-><init>()V
+
+    .line 17
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 18
+    invoke-virtual {v1}, Ljava/util/Random;->nextInt()I
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    rem-int/lit8 v3, v3, 0x9
+
+    const/4 v4, 0x1
+
+    add-int/2addr v3, v4
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    :goto_0
+    if-ge v4, v0, :cond_0
+
+    .line 20
+    invoke-virtual {v1}, Ljava/util/Random;->nextInt()I
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    rem-int/lit8 v3, v3, 0xa
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    .line 21
+    :cond_0
+    new-instance v0, Ll/ܰ֫ۤ;
+
+    invoke-direct {v0}, Ll/ܰ֫ۤ;-><init>()V
+
+    .line 22
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ll/ܰ֫ۤ;->ۙ(Ljava/lang/String;)V
+
+    .line 23
+    invoke-virtual {p1, v0}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
+
+    return-void
 .end method

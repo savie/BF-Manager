@@ -1,8 +1,8 @@
 package org.bouncycastle.math.raw;
 
 import java.util.Random;
-import l.C16236;
-import l.C7309;
+import l.C11958;
+import l.C24966;
 import org.bouncycastle.util.Integers;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -207,10 +207,10 @@ public abstract class Mod {
     }
 
     public static int inverse32(int i) {
-        int iM38346 = C16236.m38346(i, i, 2, i);
-        int iM38347 = C16236.m38346(i, iM38346, 2, iM38346);
-        int iM38348 = C16236.m38346(i, iM38347, 2, iM38347);
-        return C16236.m38346(i, iM38348, 2, iM38348);
+        int iM55770 = C24966.m55770(i, i, 2, i);
+        int iM55771 = C24966.m55770(i, iM55770, 2, iM55770);
+        int iM55772 = C24966.m55770(i, iM55771, 2, iM55771);
+        return C24966.m55770(i, iM55772, 2, iM55772);
     }
 
     public static int modOddInverse(int[] iArr, int[] iArr2, int[] iArr3) {
@@ -436,13 +436,13 @@ public abstract class Mod {
             long j18 = iArr2[i14];
             long j19 = j3 * j18;
             long j20 = i15;
-            long jM19505 = C7309.m19505(j20, j10, j19 + (j * j16), j14);
-            long jM19506 = C7309.m19505(j20, j17, (j18 * j7) + (j16 * j6), j15);
+            long jM29929 = C11958.m29929(j20, j10, j19 + (j * j16), j14);
+            long jM299210 = C11958.m29929(j20, j17, (j18 * j7) + (j16 * j6), j15);
             int i16 = i14 - 1;
-            iArr[i16] = ((int) jM19505) & M30;
-            j14 = jM19505 >> 30;
-            iArr2[i16] = ((int) jM19506) & M30;
-            j15 = jM19506 >> 30;
+            iArr[i16] = ((int) jM29929) & M30;
+            j14 = jM29929 >> 30;
+            iArr2[i16] = ((int) jM299210) & M30;
+            j15 = jM299210 >> 30;
             i14++;
             i3 = i;
             j12 = j17;
@@ -473,13 +473,13 @@ public abstract class Mod {
             long j13 = j * j12;
             long j14 = j;
             long j15 = iArr2[i6];
-            long jM19505 = C7309.m19505(j3, j15, j13, j9);
-            long jM19506 = C7309.m19505(j11, j15, j6 * j12, j10);
+            long jM29929 = C11958.m29929(j3, j15, j13, j9);
+            long jM299210 = C11958.m29929(j11, j15, j6 * j12, j10);
             int i7 = i6 - 1;
-            iArr[i7] = ((int) jM19505) & M30;
-            j9 = jM19505 >> 30;
-            iArr2[i7] = 1073741823 & ((int) jM19506);
-            j10 = jM19506 >> 30;
+            iArr[i7] = ((int) jM29929) & M30;
+            j9 = jM29929 >> 30;
+            iArr2[i7] = 1073741823 & ((int) jM299210);
+            j10 = jM299210 >> 30;
             i6++;
             j7 = j11;
             j = j14;

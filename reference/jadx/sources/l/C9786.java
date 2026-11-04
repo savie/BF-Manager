@@ -1,58 +1,49 @@
 package l;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+/* JADX INFO: renamed from: l.ۢ֨᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: T57T */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9786 extends C3075 {
 
-/* JADX INFO: renamed from: l.ۢ᩵ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 82VA */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9786 extends OutputStream {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public AbstractC8036 f31548;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f33494 = false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C0092 f31549;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final FileOutputStream f33495;
-
-    public C9786(File file) {
-        this.f33495 = new FileOutputStream(file);
-    }
-
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        FileOutputStream fileOutputStream = this.f33495;
-        if (this.f33494) {
-            return;
+    @Override // l.C8781, l.InterfaceC15161
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo5866(C12510 c12510, Object obj) {
+        C12510 c12510Mo5866 = super.mo5866(c12510, obj);
+        if (c12510 == this.f31548) {
+            c12510Mo5866.f40170.f15825 &= 16;
         }
-        this.f33494 = true;
-        flush();
-        try {
-            fileOutputStream.getFD().sync();
-        } catch (IOException e) {
-            C0303.m1852("Failed to sync file descriptor:", e);
+        return c12510Mo5866;
+    }
+
+    @Override // l.C8781
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC8036 mo23491(AbstractC8036 abstractC8036, Object obj) {
+        C0092 c0092 = this.f31549;
+        AbstractC8036 abstractC8036Mo23491 = super.mo23491(abstractC8036, (Object) null);
+        if (abstractC8036 != null) {
+            AbstractC8036 abstractC8037 = c0092.f1007;
+            AbstractC8036 abstractC8038 = c0092.f1004;
+            if (abstractC8036 == abstractC8037) {
+                C11972.m30021(abstractC8038);
+                return abstractC8038;
+            }
         }
-        fileOutputStream.close();
+        return abstractC8036Mo23491;
     }
 
-    @Override // java.io.OutputStream, java.io.Flushable
-    public final void flush() throws IOException {
-        this.f33495.flush();
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(int i) throws IOException {
-        this.f33495.write(i);
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr) throws IOException {
-        this.f33495.write(bArr);
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        this.f33495.write(bArr, i, i2);
+    @Override // l.C8781, l.InterfaceC15161
+    /* JADX INFO: renamed from: ۙ */
+    public final C12510 mo5866(C12510 c12510, Object obj) {
+        C12510 c12510Mo5866 = super.mo5866(c12510, obj);
+        if (c12510 == this.f31548) {
+            c12510Mo5866.f40170.f15825 &= 16;
+        }
+        return c12510Mo5866;
     }
 }

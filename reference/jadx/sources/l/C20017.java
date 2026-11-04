@@ -1,338 +1,280 @@
 package l;
 
-import android.view.View;
-import com.alipay.sdk.m.y.q;
-import com.umeng.analytics.pro.o;
+import com.google.android.material.color.ColorResourcesTableCreator;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩶۟ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V6B4 */
+/* JADX INFO: renamed from: l.ᩴᩴۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44RQ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20017 extends C2934 {
+public final class C20017 extends AbstractC22343 {
 
-    /* JADX INFO: renamed from: ֫᩺ۘ, reason: not valid java name and contains not printable characters */
-    private static final short[] f64119 = {4907, -13876, -8768, -14244, 1519, -12828, 11822, -2547, 371, -18520, -22305, -22370};
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public boolean f64313;
 
-    /* JADX WARN: Code duplicated, block: B:31:0x00eb A[PHI: r11 r12 r16
-      0x00eb: PHI (r11v4 int) = (r11v3 int), (r11v2 int), (r11v2 int) binds: [B:30:0x00e9, B:26:0x00ca, B:9:0x005b] A[DONT_GENERATE, DONT_INLINE]
-      0x00eb: PHI (r12v4 int) = (r12v2 int), (r12v3 int), (r12v2 int) binds: [B:30:0x00e9, B:26:0x00ca, B:9:0x005b] A[DONT_GENERATE, DONT_INLINE]
-      0x00eb: PHI (r16v22 int) = (r16v14 int), (r16v15 int), (r16v25 int) binds: [B:30:0x00e9, B:26:0x00ca, B:9:0x005b] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:61:0x0234 A[PHI: r3 r6 r16
-      0x0234: PHI (r3v4 char) = (r3v3 char), (r3v2 char) binds: [B:60:0x0232, B:52:0x01f2] A[DONT_GENERATE, DONT_INLINE]
-      0x0234: PHI (r6v3 int) = (r6v2 int), (r6v4 int) binds: [B:60:0x0232, B:52:0x01f2] A[DONT_GENERATE, DONT_INLINE]
-      0x0234: PHI (r16v7 int) = (r16v4 int), (r16v8 int) binds: [B:60:0x0232, B:52:0x01f2] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:65:0x0267 A[PHI: r2 r4 r5 r16
-      0x0267: PHI (r2v4 short[]) = (r2v3 short[]), (r2v2 short[]) binds: [B:64:0x0265, B:56:0x0212] A[DONT_GENERATE, DONT_INLINE]
-      0x0267: PHI (r4v3 short) = (r4v2 short), (r4v4 short) binds: [B:64:0x0265, B:56:0x0212] A[DONT_GENERATE, DONT_INLINE]
-      0x0267: PHI (r5v3 int) = (r5v2 int), (r5v4 int) binds: [B:64:0x0265, B:56:0x0212] A[DONT_GENERATE, DONT_INLINE]
-      0x0267: PHI (r16v5 int) = (r16v3 int), (r16v6 int) binds: [B:64:0x0265, B:56:0x0212] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:66:0x0269 A[PHI: r1 r2 r4 r5 r10
-      0x0269: PHI (r1v50 int) = (r1v12 int), (r1v34 int), (r1v2 int) binds: [B:65:0x0267, B:34:0x0122, B:11:0x0061] A[DONT_GENERATE, DONT_INLINE]
-      0x0269: PHI (r2v5 short[]) = (r2v4 short[]), (r2v2 short[]), (r2v2 short[]) binds: [B:65:0x0267, B:34:0x0122, B:11:0x0061] A[DONT_GENERATE, DONT_INLINE]
-      0x0269: PHI (r4v5 short) = (r4v3 short), (r4v2 short), (r4v2 short) binds: [B:65:0x0267, B:34:0x0122, B:11:0x0061] A[DONT_GENERATE, DONT_INLINE]
-      0x0269: PHI (r5v5 int) = (r5v3 int), (r5v2 int), (r5v2 int) binds: [B:65:0x0267, B:34:0x0122, B:11:0x0061] A[DONT_GENERATE, DONT_INLINE]
-      0x0269: PHI (r10v4 short[]) = (r10v2 short[]), (r10v3 short[]), (r10v2 short[]) binds: [B:65:0x0267, B:34:0x0122, B:11:0x0061] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:70:0x029e A[PHI: r8 r16
-      0x029e: PHI (r8v4 short) = (r8v2 short), (r8v3 short), (r8v2 short) binds: [B:69:0x029c, B:44:0x019a, B:8:0x0057] A[DONT_GENERATE, DONT_INLINE]
-      0x029e: PHI (r16v23 int) = (r16v2 int), (r16v10 int), (r16v24 int) binds: [B:69:0x029c, B:44:0x019a, B:8:0x0057] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code restructure failed: missing block: B:14:0x006c, code lost:
-    
-        if (l.C1189.f5284 > 0) goto L8;
-     */
-    @Override // l.C2934, l.InterfaceC7503
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final void onDrawerOpened(android.view.View r20) {
-        /*
-            Method dump skipped, instruction units count: 882
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C20017.onDrawerOpened(android.view.View):void");
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public boolean f64314;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C13304[] f64315;
+
+    public C20017(C23747 c23747, C20500 c20500) {
+        super(c23747);
+        if (c20500.m47021() != ((C25239) super.mo9071()).mo27606()) {
+            throw new IllegalArgumentException("Config layout differs from package");
+        }
+        this.f72322 = c20500;
+        this.f64315 = new C13304[c23747.f76957.size()];
     }
 
-    @Override // l.C2934, l.InterfaceC7503
-    public final void onDrawerSlide(View view, float f) {
-        int iM8650 = 0;
-        short[] sArr = null;
-        short s = 0;
-        int i = 0;
-        short s2 = 0;
-        int i2 = 0;
-        short[] sArr2 = null;
-        int i3 = 0;
-        int i4 = 0;
-        int i5 = -272705516;
-        int i6 = C1460.f5948;
-        int i7 = RunnableC0195.f1321;
-        int iM11306 = (i6 - ThreadFactoryC3888.m11306("ܺ᩸")) * 11;
-        int i8 = ((iM11306 ^ i7) * (-25685)) ^ (-1879528344);
-        int i9 = 2131805991;
-        while (true) {
-            i5 = ((((i5 ^ i7) * 21707) >> 31) & i8) ^ (iM11306 ^ i9);
-            switch (i5) {
-                case -2141421746:
-                case -1275315121:
-                    if (C0962.f3784) {
-                        iM11306 = (i7 - C19806.m45029("ۨۧ")) * (-91);
-                        i8 = ((iM11306 ^ i6) * (-20495)) ^ 541365510;
-                        i9 = -1267001258;
-                    } else {
-                        iM11306 = C19806.m45029("۠ۘ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 9279) ^ (-88572838);
-                        i9 = 1576771956;
-                    }
-                    break;
-                case -1958725843:
-                case 350974101:
-                    C2788.m8472();
-                    C1977.m6356();
-                    iM11306 = (ThreadFactoryC3888.m11306("ۚ۫") ^ i6) * (-67);
-                    i8 = ((iM11306 ^ i7) * (-9325)) ^ 1164580495;
-                    i9 = 286421869;
-                    break;
-                case -1953948261:
-                case -32287933:
-                    iM8650 = C2871.m8650(view);
-                    sArr2 = f64119;
-                    i3 = 9;
-                    if (C1977.m6356()) {
-                        iM11306 = C19806.m45029("۬֨") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 14263) ^ (-820497241);
-                        i9 = 1867935399;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۜ۬") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 30113) ^ (-390583718);
-                        i9 = 2124330540;
-                    }
-                    break;
-                case -1773629208:
-                case 245420288:
-                    i2 = 19310;
-                    iM11306 = (ThreadFactoryC3888.m11306("ᩴܽ") ^ i6) * (-27);
-                    i8 = ((iM11306 ^ i7) * (-15137)) ^ 1995964256;
-                    i9 = 262637656;
-                    break;
-                case -1476012858:
-                case -1291790328:
-                    if (C1419.f5860 >= 0) {
-                        iM11306 = (C19806.m45029("ۢۧ") + i7) * (-73);
-                        i8 = ((iM11306 ^ i6) * 23059) ^ 1247461689;
-                        i9 = 368376156;
-                    } else {
-                        iM11306 = C19806.m45029("ۨܿ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 29399) ^ (-1627715195);
-                        i9 = -859233950;
-                    }
-                    break;
-                case -1422968675:
-                case 1864116838:
-                    if (C3577.f13150 >= 0) {
-                        iM11306 = C19806.m45029("᩶ܰ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-10435)) ^ 1236920051;
-                        i9 = 459063408;
-                    } else {
-                        iM11306 = (C19806.m45029("֨ۜ") ^ i7) * q.h;
-                        i8 = ((iM11306 ^ i6) * (-7331)) ^ 662203910;
-                        i9 = -882902419;
-                    }
-                    break;
-                case -1413322200:
-                case 1023465833:
-                    break;
-                case -1326351964:
-                case 919363695:
-                    i = 48164 * s;
-                    s2 = 12041;
-                    if (CallableC1627.f6528) {
-                        iM11306 = C19806.m45029("ۤۢ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-22897)) ^ (-1374591212);
-                        i9 = -958783593;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚ۫") ^ i6) * (-67);
-                        i8 = ((iM11306 ^ i7) * (-9325)) ^ 1164580495;
-                        i9 = 286421869;
-                    }
-                    break;
-                case -1284835866:
-                case 814490385:
-                    if (iM8650 == (C19806.m45029(C7105.m18989(sArr2, i3, i4, i2)) ^ 2097271739)) {
-                        iM11306 = (i7 - C19806.m45029("ᩴܶ")) * 49;
-                        i8 = ((iM11306 ^ i6) * o.a.z) ^ 802409966;
-                        i9 = 1809205589;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩻ܳ") + i6) * (-81);
-                        i8 = ((iM11306 ^ i7) * (-10731)) ^ (-1308605228);
-                        i9 = 2015086586;
-                    }
-                    break;
-                case -1181740578:
-                case 2068837847:
-                    if (C0797.f3386) {
-                        iM11306 = C19806.m45029("᩶ܰ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-10435)) ^ 1236920051;
-                        i9 = 459063408;
-                    } else {
-                        iM11306 = C19806.m45029("᩶ܽ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 627) ^ (-1489328952);
-                        i9 = 1461020217;
-                    }
-                    break;
-                case -987700835:
-                case 815392532:
-                    super.onDrawerSlide(view, f);
-                    iM11306 = (ThreadFactoryC3888.m11306("᩻ܳ") + i6) * (-81);
-                    i8 = ((iM11306 ^ i7) * (-10731)) ^ (-1308605228);
-                    i9 = 2015086586;
-                    break;
-                case -808982025:
-                case 1379134452:
-                    if (C2477.f9839 <= 0) {
-                        iM11306 = C19806.m45029("۬֨") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 14263) ^ (-820497241);
-                        i9 = 1867935399;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚ۫") ^ i6) * (-67);
-                        i8 = ((iM11306 ^ i7) * (-9325)) ^ 1164580495;
-                        i9 = 286421869;
-                    }
-                    break;
-                case -701104799:
-                case 1597463270:
-                    C2477.m7593();
-                    C0278.m1789();
-                    break;
-                case -652371746:
-                case 583812703:
-                    int i10 = s + s2;
-                    if (i - (i10 * i10) > 0) {
-                        iM11306 = C19806.m45029("ۖ᩺") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 25079) ^ (-264111713);
-                        i9 = -1384781513;
-                    } else {
-                        iM11306 = C19806.m45029("ۙۧ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-2425)) ^ 193767537;
-                        i9 = -960703234;
-                    }
-                    break;
-                case -582239249:
-                case 1252383520:
-                    i4 = 3;
-                    if (C3535.f13026 <= 0) {
-                        iM11306 = (C19806.m45029("ۢۧ") + i7) * (-73);
-                        i8 = ((iM11306 ^ i6) * 23059) ^ 1247461689;
-                        i9 = 368376156;
-                    } else {
-                        iM11306 = (i7 - C19806.m45029("ܳ۟")) * (-77);
-                        i8 = ((iM11306 ^ i6) * 5047) ^ (-395794078);
-                        i9 = -2004903500;
-                    }
-                    break;
-                case -18354516:
-                case -11960644:
-                    if (MenuItemOnMenuItemClickListenerC3244.f12064 >= 0) {
-                        iM11306 = (C19806.m45029("ۢۧ") + i7) * (-73);
-                        i8 = ((iM11306 ^ i6) * 23059) ^ 1247461689;
-                        i9 = 368376156;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚ۫") ^ i6) * (-67);
-                        i8 = ((iM11306 ^ i7) * (-9325)) ^ 1164580495;
-                        i9 = 286421869;
-                    }
-                    break;
-                case 172376838:
-                case 1999652722:
-                    C2249.m6915();
-                    if (RunnableC3388.f12514 >= 0) {
-                        iM11306 = C19806.m45029("᩶ܰ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-10435)) ^ 1236920051;
-                        i9 = 459063408;
-                    } else {
-                        iM11306 = C19806.m45029("۬֨") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 14263) ^ (-820497241);
-                        i9 = 1867935399;
-                    }
-                    break;
-                case 411732774:
-                case 1371063046:
-                    s = sArr[8];
-                    if (C1668.m5583()) {
-                        iM11306 = C19806.m45029("ᩳۢ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 5429) ^ 625684089;
-                        i9 = -1793422093;
-                    } else {
-                        iM11306 = (i7 - C19806.m45029("ۨۧ")) * (-91);
-                        i8 = ((iM11306 ^ i6) * (-20495)) ^ 541365510;
-                        i9 = -1267001258;
-                    }
-                    break;
-                case 501421850:
-                case 581601894:
-                    i2 = 12762;
-                    iM11306 = (ThreadFactoryC3888.m11306("ᩴܽ") ^ i6) * (-27);
-                    i8 = ((iM11306 ^ i7) * (-15137)) ^ 1995964256;
-                    i9 = 262637656;
-                    break;
-                case 879749158:
-                case 1859783625:
-                    sArr = f64119;
-                    if (C0817.f3443) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ᩴۙ") + i6) * 27;
-                        i8 = ((iM11306 ^ i7) * 18151) ^ 767551270;
-                        i9 = 373152639;
-                    } else {
-                        iM11306 = C19806.m45029("᩶ܰ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-10435)) ^ 1236920051;
-                        i9 = 459063408;
-                    }
-                    break;
-                default:
-                    if (C1419.f5860 >= 0) {
-                        iM11306 = (C19806.m45029("ۢۧ") + i7) * (-73);
-                        i8 = ((iM11306 ^ i6) * 23059) ^ 1247461689;
-                        i9 = 368376156;
-                    } else {
-                        iM11306 = C19806.m45029("ܿ۠") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-16051)) ^ (-1364770275);
-                        i9 = -1621518368;
-                    }
-                    break;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46051(C20500 c20500) {
+        if (c20500.m47021() != ((C25239) super.mo9071()).mo27606()) {
+            throw new IllegalArgumentException("Config layout differs from package");
+        }
+        this.f72322 = c20500;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13304 m46050(int i) {
+        C13304[] c13304Arr = this.f64315;
+        if (i < c13304Arr.length) {
+            C13304 c13304 = c13304Arr[i];
+            if (c13304 != null) {
+                return c13304;
             }
+            C13304 c13305 = new C13304(this, i);
+            c13304Arr[i] = c13305;
+            return c13305;
+        }
+        ((C23747) super.getType()).m53014(i);
+        C13304[] c13304Arr2 = new C13304[((C23747) super.getType()).f76957.size()];
+        C13304[] c13304Arr3 = this.f64315;
+        System.arraycopy(c13304Arr3, 0, c13304Arr2, 0, c13304Arr3.length);
+        this.f64315 = c13304Arr2;
+        C13304 c13306 = new C13304(this, i);
+        c13304Arr2[i] = c13306;
+        return c13306;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m46056(int i) {
+        this.f64315[i] = null;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int m46054() {
+        int i = 0;
+        for (C13304 c13304 : this.f64315) {
+            if (c13304 != null) {
+                i++;
+            }
+        }
+        return i;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46052(InterfaceC23332 interfaceC23332, C6593 c6593, C3374 c3374) throws IOException {
+        C20500 c20500Mo9073 = mo9073();
+        short sM47024 = (short) (c20500Mo9073.m47024() + 24);
+        interfaceC23332.mo17788(ColorResourcesTableCreator.HEADER_TYPE_TYPE);
+        interfaceC23332.mo17788(sM47024);
+        long position = interfaceC23332.getPosition();
+        interfaceC23332.mo17795();
+        interfaceC23332.writeByte(((C23747) super.getType()).mo35833());
+        boolean z = this.f64314;
+        int i = z;
+        if (this.f64313) {
+            i = (z ? 1 : 0) | 2;
+        }
+        interfaceC23332.writeByte(i);
+        int i2 = 0;
+        interfaceC23332.writeByte(0);
+        interfaceC23332.writeByte(0);
+        int i3 = 1;
+        if (this.f64314) {
+            List list = (List) C13847.stream(this.f64315).filter(new C15025(1)).collect(C2025.toList());
+            int size = list.size();
+            interfaceC23332.writeInt(size);
+            int i4 = size * 4;
+            interfaceC23332.writeInt(sM47024 + i4);
+            c20500Mo9073.m47022(interfaceC23332);
+            long position2 = interfaceC23332.getPosition();
+            interfaceC23332.skipBytes(i4);
+            int[] iArr = new int[size];
+            long position3 = interfaceC23332.getPosition();
+            while (i2 < size) {
+                if (c3374 != null) {
+                    c3374.m11079(i3);
+                }
+                C13304 c13304 = (C13304) list.get(i2);
+                int iMo23383 = c13304.mo23383();
+                long position4 = interfaceC23332.getPosition() - position3;
+                if (position4 % 4 != 0) {
+                    throw new RuntimeException();
+                }
+                long j = position3;
+                long j2 = position4 / 4;
+                if (j2 < 0 || j2 > 65535) {
+                    throw new IOException("Sparse offset out of range");
+                }
+                iArr[i2] = iMo23383 | (((int) j2) << 16);
+                c13304.m32854(interfaceC23332, c6593);
+                i2++;
+                i3 = 1;
+                position3 = j;
+            }
+            long position5 = interfaceC23332.getPosition();
+            interfaceC23332.seek(position);
+            interfaceC23332.writeInt((int) ((position5 - position) + 4));
+            interfaceC23332.seek(position2);
+            interfaceC23332.mo17790(iArr);
+            interfaceC23332.seek(position5);
             return;
         }
+        if (this.f64313) {
+            int size2 = ((C23747) super.getType()).f76957.size();
+            interfaceC23332.writeInt(size2);
+            int i5 = size2 * 2;
+            if (i5 % 4 != 0) {
+                i5 += 2;
+            }
+            interfaceC23332.writeInt(sM47024 + i5);
+            c20500Mo9073.m47022(interfaceC23332);
+            long position6 = interfaceC23332.getPosition();
+            interfaceC23332.skipBytes(i5);
+            int[] iArr2 = new int[size2];
+            Arrays.fill(iArr2, -1);
+            long position7 = interfaceC23332.getPosition();
+            for (C13304 c13305 : m50412()) {
+                if (c3374 != null) {
+                    c3374.m11079(1);
+                }
+                int position8 = (int) (interfaceC23332.getPosition() - position7);
+                if (position8 % 4 != 0) {
+                    throw new RuntimeException();
+                }
+                int i6 = position8 / 4;
+                if (i6 == 65535) {
+                    throw new IOException("Offset 16 out of range");
+                }
+                iArr2[c13305.mo23383()] = i6;
+                c13305.m32854(interfaceC23332, c6593);
+            }
+            long position9 = interfaceC23332.getPosition();
+            interfaceC23332.seek(position);
+            interfaceC23332.writeInt((int) ((position9 - position) + 4));
+            interfaceC23332.seek(position6);
+            for (int i7 = 0; i7 < size2; i7++) {
+                int i8 = iArr2[i7];
+                if (i8 == -1) {
+                    i8 = 65535;
+                }
+                interfaceC23332.mo17812(i8);
+            }
+            interfaceC23332.seek(position9);
+            return;
+        }
+        int size3 = ((C23747) super.getType()).f76957.size();
+        interfaceC23332.writeInt(size3);
+        int i9 = size3 * 4;
+        interfaceC23332.writeInt(sM47024 + i9);
+        c20500Mo9073.m47022(interfaceC23332);
+        long position10 = interfaceC23332.getPosition();
+        interfaceC23332.skipBytes(i9);
+        int[] iArr3 = new int[size3];
+        Arrays.fill(iArr3, -1);
+        long position11 = interfaceC23332.getPosition();
+        for (C13304 c13306 : m50412()) {
+            if (c3374 != null) {
+                c3374.m11079(1);
+            }
+            iArr3[c13306.mo23383()] = (int) (interfaceC23332.getPosition() - position11);
+            c13306.m32854(interfaceC23332, c6593);
+        }
+        long position12 = interfaceC23332.getPosition();
+        interfaceC23332.seek(position);
+        interfaceC23332.writeInt((int) ((position12 - position) + 4));
+        interfaceC23332.seek(position10);
+        interfaceC23332.mo17790(iArr3);
+        interfaceC23332.seek(position12);
     }
 
-    /* JADX WARN: Code duplicated, block: B:37:0x0123 A[PHI: r1 r10 r12
-      0x0123: PHI (r1v50 int) = (r1v30 int), (r1v40 int), (r1v2 int) binds: [B:36:0x0121, B:29:0x00d0, B:11:0x0057] A[DONT_GENERATE, DONT_INLINE]
-      0x0123: PHI (r10v4 short[]) = (r10v3 short[]), (r10v2 short[]), (r10v2 short[]) binds: [B:36:0x0121, B:29:0x00d0, B:11:0x0057] A[DONT_GENERATE, DONT_INLINE]
-      0x0123: PHI (r12v4 int) = (r12v2 int), (r12v3 int), (r12v2 int) binds: [B:36:0x0121, B:29:0x00d0, B:11:0x0057] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:60:0x021d A[PHI: r4 r8 r16
-      0x021d: PHI (r4v4 char) = (r4v3 char), (r4v2 char), (r4v2 char) binds: [B:59:0x021b, B:47:0x01b4, B:9:0x0051] A[DONT_GENERATE, DONT_INLINE]
-      0x021d: PHI (r8v4 short) = (r8v2 short), (r8v3 short), (r8v2 short) binds: [B:59:0x021b, B:47:0x01b4, B:9:0x0051] A[DONT_GENERATE, DONT_INLINE]
-      0x021d: PHI (r16v21 int) = (r16v4 int), (r16v7 int), (r16v24 int) binds: [B:59:0x021b, B:47:0x01b4, B:9:0x0051] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:64:0x0250 A[PHI: r3 r7 r16
-      0x0250: PHI (r3v4 short[]) = (r3v3 short[]), (r3v2 short[]), (r3v2 short[]) binds: [B:63:0x024e, B:51:0x01d8, B:12:0x0059] A[DONT_GENERATE, DONT_INLINE]
-      0x0250: PHI (r7v4 int) = (r7v2 int), (r7v3 int), (r7v2 int) binds: [B:63:0x024e, B:51:0x01d8, B:12:0x0059] A[DONT_GENERATE, DONT_INLINE]
-      0x0250: PHI (r16v19 int) = (r16v3 int), (r16v6 int), (r16v20 int) binds: [B:63:0x024e, B:51:0x01d8, B:12:0x0059] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:68:0x0282 A[PHI: r2 r5 r6 r16
-      0x0282: PHI (r2v3 int) = (r2v2 int), (r2v2 int), (r2v4 int) binds: [B:67:0x0280, B:55:0x01f9, B:24:0x00b0] A[DONT_GENERATE, DONT_INLINE]
-      0x0282: PHI (r5v4 short) = (r5v2 short), (r5v3 short), (r5v2 short) binds: [B:67:0x0280, B:55:0x01f9, B:24:0x00b0] A[DONT_GENERATE, DONT_INLINE]
-      0x0282: PHI (r6v4 short) = (r6v2 short), (r6v3 short), (r6v2 short) binds: [B:67:0x0280, B:55:0x01f9, B:24:0x00b0] A[DONT_GENERATE, DONT_INLINE]
-      0x0282: PHI (r16v15 int) = (r16v2 int), (r16v5 int), (r16v16 int) binds: [B:67:0x0280, B:55:0x01f9, B:24:0x00b0] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code restructure failed: missing block: B:14:0x005f, code lost:
-    
-        if (l.ThreadFactoryC3888.f14547 <= 0) goto L12;
-     */
-    @Override // l.C2934, l.InterfaceC7503
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final void onDrawerClosed(android.view.View r20) {
-        /*
-            Method dump skipped, instruction units count: 858
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C20017.onDrawerClosed(android.view.View):void");
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۛ */
+    public final int mo9069() {
+        return this.f64315.length - 1;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ܺ */
+    public final boolean mo9075(int i) {
+        C13304[] c13304Arr = this.f64315;
+        return i < c13304Arr.length && c13304Arr[i] != null;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۨۙ */
+    public final boolean mo9072() {
+        return this.f64314;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m46055(boolean z) {
+        this.f64314 = z;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ֫᩷ */
+    public final boolean mo9067() {
+        return this.f64313;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46053(boolean z) {
+        this.f64313 = z;
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo9070(int i) {
+        return this.f64315[i].mo18156();
+    }
+
+    @Override // l.InterfaceC2731
+    /* JADX INFO: renamed from: ᩷ */
+    public final C13304 mo9076(int i) {
+        if (i < 0) {
+            return null;
+        }
+        C13304[] c13304Arr = this.f64315;
+        if (i >= c13304Arr.length) {
+            return null;
+        }
+        return c13304Arr[i];
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC7206 mo9068() {
+        return (C23001) super.mo9068();
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC10869 mo9071() {
+        return (C25239) super.mo9071();
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    public final InterfaceC15344 getType() {
+        return (C23747) super.getType();
+    }
+
+    @Override // l.AbstractC22343, l.InterfaceC2731
+    public final C23747 getType() {
+        return (C23747) super.getType();
     }
 }

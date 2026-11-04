@@ -1,129 +1,80 @@
 .class public final synthetic Ll/ۢ۠ۚ;
 .super Ljava/lang/Object;
-.source "D18B"
+.source "X8B6"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ljava/lang/reflect/InvocationHandler;
 
 
 # instance fields
-.field public final synthetic ۙ:I
+.field public final synthetic ܰ:Ll/ܶۜۚ;
 
-.field public final synthetic ܰ:Ljava/lang/Object;
+.field public final synthetic ᩶:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ll/ܶۜۚ;I)V
     .locals 0
 
     .line 0
-    iput p1, p0, Ll/ۢ۠ۚ;->ۙ:I
-
-    iput-object p2, p0, Ll/ۢ۠ۚ;->ܰ:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۢ۠ۚ;->ܰ:Ll/ܶۜۚ;
+
+    iput p2, p0, Ll/ۢ۠ۚ;->᩶:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
     .line 2
-    iget v0, p0, Ll/ۢ۠ۚ;->ۙ:I
+    sget p1, Ll/ܶۜۚ;->ۡ᩷:I
 
-    packed-switch v0, :pswitch_data_0
+    .line 858
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    .line 7
-    iget-object v0, p0, Ll/ۢ۠ۚ;->ܰ:Ljava/lang/Object;
+    move-result-object p1
 
-    .line 9
-    check-cast v0, Ll/ۢ᩹ۖ;
+    const-string p2, "onTranslucentConversionComplete"
 
-    .line 663
-    invoke-static {v0}, Ll/ۖ֨ۖ;->ۙ(Ll/ۢ᩹ۖ;)V
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x0
+    move-result p1
 
-    return-object v0
+    if-eqz p1, :cond_0
 
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/ۢ۠ۚ;->ܰ:Ljava/lang/Object;
+    if-eqz p3, :cond_0
 
-    check-cast v0, Ll/۠֡ۚ;
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-static {v0}, Ll/۠֡ۚ;->ۙ(Ll/۠֡ۚ;)B
+    const/4 p2, 0x0
 
-    move-result v0
+    aget-object p2, p3, p2
 
-    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    .line 859
+    invoke-virtual {p1, p2}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    return-object v0
+    if-eqz p1, :cond_0
 
-    :pswitch_1
-    iget-object v0, p0, Ll/ۢ۠ۚ;->ܰ:Ljava/lang/Object;
+    .line 860
+    new-instance p1, Ll/ۡ۠ۚ;
 
-    check-cast v0, Ll/ܿ۟ۚ;
+    iget-object p2, p0, Ll/ۢ۠ۚ;->ܰ:Ll/ܶۜۚ;
 
-    .line 245
-    :try_start_0
-    invoke-virtual {v0}, Ll/ܿ۟ۚ;->ۜܰ()Ljava/io/InputStream;
+    iget p3, p0, Ll/ۢ۠ۚ;->᩶:I
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p1, p2, p3}, Ll/ۡ۠ۚ;-><init>(Ll/ܶۜۚ;I)V
 
-    .line 246
-    :try_start_1
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p2, p1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 247
-    :try_start_2
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    :cond_0
+    const/4 p1, 0x0
 
-    goto :goto_1
-
-    :catchall_0
-    move-exception v1
-
-    .line 245
-    :try_start_3
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_4
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_0
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
-
-    .line 248
-    :catch_0
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    :goto_1
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

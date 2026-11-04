@@ -1,6 +1,6 @@
 package org.simpleframework.xml.stream;
 
-import l.C0242;
+import l.C3188;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class InputAttribute implements InputNode {
@@ -101,6 +101,6 @@ public class InputAttribute implements InputNode {
     }
 
     public String toString() {
-        return C0242.m1617("attribute ", this.name, "='", this.value, "'");
+        return C3188.m10404("attribute ", this.name, "='", this.value, "'");
     }
 }

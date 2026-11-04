@@ -1,14 +1,14 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C23234;
-import l.C5800;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SipHash {
 
     public class KeyGen extends BaseKeyGenerator {
@@ -17,14 +17,12 @@ public final class SipHash {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac24 extends BaseMac {
         public Mac24() {
             super(new org.bouncycastle.crypto.macs.SipHash());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac48 extends BaseMac {
         public Mac48() {
             super(new org.bouncycastle.crypto.macs.SipHash(4, 8));
@@ -38,8 +36,8 @@ public final class SipHash {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$Mac24", "Mac.SIPHASH-2-4", sb, configurableProvider);
-            configurableProvider.addAlgorithm("KeyGenerator.SIPHASH", C23234.m51270("Mac.SIPHASH-4-8", C23234.m51270("Alg.Alias.Mac.SIPHASH", "SIPHASH-2-4", str, "$Mac48", configurableProvider), str, "$KeyGen", configurableProvider));
+            C8947.m23913(str, "$Mac24", "Mac.SIPHASH-2-4", sb, configurableProvider);
+            configurableProvider.addAlgorithm("KeyGenerator.SIPHASH", C18176.m42346("Mac.SIPHASH-4-8", C18176.m42346("Alg.Alias.Mac.SIPHASH", "SIPHASH-2-4", str, "$Mac48", configurableProvider), str, "$KeyGen", configurableProvider));
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.SIPHASH-2-4", "SIPHASH");
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.SIPHASH-4-8", "SIPHASH");
         }

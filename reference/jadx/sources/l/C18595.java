@@ -1,27 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
-/* JADX INFO: loaded from: classes5.dex */
-public final enum C18595 extends EnumC7306 {
-    public /* synthetic */ C18595() {
-        this("FORMAT_11X", 4);
+/* JADX INFO: renamed from: l.ܿ᩷ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5GL */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18595 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C19143 f60392;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Object f60393;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m43172() {
+        return this.f60393 != null;
     }
 
-    public C18595(String str, int i) {
-        super(str, i, 0);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m43173(Object obj, C19143 c19143) {
+        return this.f60393 == obj && this.f60392 == c19143;
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        return new C20007(this, EnumC7306.m19496(i), 0, 0, 0L, EnumC7306.m19493(i));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m43174(C19143 c19143) {
+        return this.f60393 != null && this.f60392 == c19143;
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        EnumC7306.m19460(abstractC17806.m41390(), abstractC17806.mo16133());
-        interfaceC21334.m47859();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m43175(Object obj, C19143 c19143) {
+        if (this.f60393 != null) {
+            return false;
+        }
+        this.f60393 = obj;
+        this.f60392 = c19143;
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final synchronized void m43176(Object obj, C19143 c19143) {
+        if (m43173(obj, c19143)) {
+            this.f60393 = null;
+            this.f60392 = null;
+        }
     }
 }

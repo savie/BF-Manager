@@ -1,67 +1,48 @@
 package l;
 
-import java.io.OutputStream;
-import java.security.MessageDigest;
+import android.content.Context;
+import android.util.AttributeSet;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩹ۨۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51WE */
+/* JADX INFO: renamed from: l.᩷ᩴۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T8VV */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22256 implements InterfaceC19248 {
+public class C22256 extends AbstractC11813 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C1088 f72754;
+    /* JADX INFO: renamed from: ۢۙ, reason: not valid java name and contains not printable characters */
+    public C9524 f71668;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC19248 f72755;
+    public C22256(Context context) {
+        super(context);
+        m50309();
+    }
 
-    @Override // l.InterfaceC19248
+    public C22256(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        m50309();
+    }
+
+    public C22256(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        m50309();
+    }
+
+    public C22256(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+        m50309();
+    }
+
+    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
+    private void m50309() {
+        mo12567((CharSequence) C21576.m49088(R.string.MT_Protector).concat(" mt.cc"));
+    }
+
+    @Override // l.AbstractC11813
     /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo25491(long j, C1388 c1388) {
-        C17836.m41424(this, c1388, j);
-    }
-
-    @Override // l.InterfaceC19248
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo25493(MessageDigest messageDigest, long j) {
-        C17836.m41423(this, messageDigest, j);
-    }
-
-    @Override // l.InterfaceC19248
-    /* JADX INFO: renamed from: ۨ */
-    public final /* synthetic */ InterfaceC19248 mo25494() {
-        return C17836.m41421(this);
-    }
-
-    @Override // l.InterfaceC19248
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo25495() {
-        return size() - mo25490();
-    }
-
-    public C22256(C1088 c1088, InterfaceC19248 interfaceC19248) {
-        this.f72755 = interfaceC19248;
-        this.f72754 = c1088;
-    }
-
-    @Override // l.InterfaceC19248
-    public final long size() {
-        return this.f72755.size();
-    }
-
-    @Override // l.InterfaceC19248
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo25490() {
-        return this.f72755.mo25490();
-    }
-
-    @Override // l.InterfaceC19248
-    public final void reset() {
-        this.f72755.reset();
-    }
-
-    @Override // l.InterfaceC19248
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo25492(OutputStream outputStream, long j) {
-        this.f72755.mo25492(new C5322(this, outputStream), j);
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        if (this.f71668 == null) {
+            this.f71668 = new C9524(abstractActivityC17204);
+        }
+        this.f71668.m24922(false, new RunnableC10858(1));
     }
 }

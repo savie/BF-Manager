@@ -1,79 +1,61 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.֨ܰۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0BM3 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1154 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public boolean f5174;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public String f5175;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f5176;
+/* JADX INFO: renamed from: l.֨ۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81J9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1154 extends AbstractC21091 {
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public String f5177;
+    public final /* synthetic */ C13831 f4260;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f5178;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f5179;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f5180;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m4250() {
-        return this.f5175;
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo3000() {
+        return 4;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m4249() {
-        return this.f5176;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C1154(C13831 c13831, AbstractC3191 abstractC3191) {
+        super(abstractC3191);
+        this.f4260 = c13831;
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String m4254() {
-        return this.f5177;
+    @Override // l.AbstractC21091
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ComponentCallbacksC11612 mo4255(int i) {
+        if (i == 0) {
+            return new ViewOnClickListenerC19404();
+        }
+        if (i == 1) {
+            return new C15829();
+        }
+        if (i == 2) {
+            return new C18372();
+        }
+        if (i == 3) {
+            return new C1965();
+        }
+        throw new RuntimeException();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m4247() {
-        return this.f5178;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m4253() {
-        return MotionUtils.EASING_TYPE_FORMAT_START + this.f5176 + MotionUtils.EASING_TYPE_FORMAT_END + this.f5177;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final boolean m4252() {
-        return this.f5174;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m4246() {
-        return this.f5180;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m4251() {
-        return this.f5179;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String m4248() {
-        return this.f5175 + MotionUtils.EASING_TYPE_FORMAT_START + this.f5176 + MotionUtils.EASING_TYPE_FORMAT_END + this.f5177;
-    }
-
-    public final String toString() {
-        return m4248();
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final CharSequence mo2996(int i) {
+        C13831 c13831 = this.f4260;
+        if (i == 0) {
+            return c13831.getString(R.string.MT_Protector);
+        }
+        if (i == 1) {
+            return c13831.getString(R.string.MT_Protector);
+        }
+        if (i == 2) {
+            return c13831.getString(R.string.MT_Protector);
+        }
+        if (i == 3) {
+            return c13831.getString(R.string.MT_Protector);
+        }
+        throw new RuntimeException();
     }
 }

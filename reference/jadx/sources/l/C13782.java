@@ -1,38 +1,41 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۧᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+import java.util.LinkedHashSet;
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.۬ۤۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7SB */
 /* JADX INFO: loaded from: classes4.dex */
-public final enum C13782 extends EnumC21210 {
-    public /* synthetic */ C13782() {
-        this("ScriptDataEscapedDash", 22);
+public final /* synthetic */ class C13782 implements Consumer {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f43730;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f43731;
+
+    public /* synthetic */ C13782(int i, Object obj) {
+        this.f43730 = i;
+        this.f43731 = obj;
     }
 
-    public C13782(String str, int i) {
-        super(str, i, 0);
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f43730) {
+            case 0:
+                ((C10377) this.f43731).m29569((C14769) obj);
+                break;
+            case 1:
+                ((LinkedHashSet) this.f43731).add((Integer) obj);
+                break;
+            default:
+                C4430.m14087((C2551) this.f43731, (C17973) obj);
+                break;
+        }
     }
 
-    @Override // l.EnumC21210
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        if (c12931.m32043()) {
-            c20692.m46544(this);
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        char cM32033 = c12931.m32033();
-        if (cM32033 == 0) {
-            c20692.m46542(this);
-            c20692.m46535((char) 65533);
-            c20692.m46532(EnumC21210.f69063);
-        } else if (cM32033 == '-') {
-            c20692.m46535(cM32033);
-            c20692.m46532(EnumC21210.f69074);
-        } else if (cM32033 == '<') {
-            c20692.m46532(EnumC21210.f69078);
-        } else {
-            c20692.m46535(cM32033);
-            c20692.m46532(EnumC21210.f69063);
-        }
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 }

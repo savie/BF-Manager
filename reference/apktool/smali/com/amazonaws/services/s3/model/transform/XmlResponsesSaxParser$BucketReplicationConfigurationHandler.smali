@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final ֡:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
+.field public ֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
-.field public ۫:Ljava/lang/String;
+.field public ۟:Ljava/lang/String;
 
-.field public ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+.field public final ܿ:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
 
-.field public ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+.field public ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/ReplicationRule;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
     return-void
 
@@ -92,13 +92,13 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
     :cond_1
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 4
 
     const-string v0, "ReplicationConfiguration"
@@ -121,27 +121,27 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;
 
     if-eqz v0, :cond_0
 
     .line 2263
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۫:Ljava/lang/String;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۟:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
     invoke-virtual {v1, p1, v0}, Lcom/amazonaws/services/s3/model/BucketReplicationConfiguration;->ۙ(Ljava/lang/String;Lcom/amazonaws/services/s3/model/ReplicationRule;)V
 
     const/4 p1, 0x0
 
     .line 2265
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
     .line 2266
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۫:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۟:Ljava/lang/String;
 
     .line 2267
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
     return-void
 
@@ -156,7 +156,7 @@
     if-eqz p1, :cond_a
 
     .line 2269
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -186,11 +186,11 @@
     if-eqz v0, :cond_2
 
     .line 2273
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۫:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->۟:Ljava/lang/String;
 
     return-void
 
@@ -205,9 +205,9 @@
     if-eqz v0, :cond_4
 
     .line 2275
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -238,9 +238,9 @@
     if-eqz v0, :cond_5
 
     .line 2278
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -255,9 +255,9 @@
     if-eqz p1, :cond_a
 
     .line 2281
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/ReplicationRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/ReplicationRule;
 
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -297,9 +297,9 @@
     if-eqz v0, :cond_9
 
     .line 2286
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -330,9 +330,9 @@
     if-eqz p1, :cond_a
 
     .line 2288
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketReplicationConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/ReplicationDestinationConfig;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

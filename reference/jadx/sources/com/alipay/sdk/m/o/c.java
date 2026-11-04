@@ -15,10 +15,10 @@ import com.alipay.sdk.m.y.q;
 import com.google.android.material.motion.MotionUtils;
 import com.google.android.material.timepicker.ChipTextInputComboView;
 import java.util.Random;
-import l.C12278;
-import l.C1694;
-import l.C9023;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C10732;
+import l.C12669;
+import l.C3188;
+import l.C4794;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -49,9 +49,9 @@ public class c {
     public static String b() {
         String hexString = Long.toHexString(System.currentTimeMillis());
         Random random = new Random();
-        StringBuilder sbM23356 = C9023.m23356(hexString);
-        sbM23356.append(random.nextInt(OpenAuthTask.OK) + 1000);
-        return sbM23356.toString();
+        StringBuilder sbM27333 = C10732.m27333(hexString);
+        sbM27333.append(random.nextInt(OpenAuthTask.OK) + 1000);
+        return sbM27333.toString();
     }
 
     public static String d() {
@@ -145,9 +145,9 @@ public class c {
             String strE2 = q.e(contextB);
             String strF2 = q.f(contextB);
             String strA = a(contextB);
-            StringBuilder sbM30515 = C12278.m30515("Msp/15.8.40 (", strF, l.b, strE, l.b);
-            ASN1BMPString$$ExternalSyntheticOutline0.m(sbM30515, strC, l.b, strE2, l.b);
-            this.a = C1694.m5622(sbM30515, strF2, l.b, strA);
+            StringBuilder sbM10406 = C3188.m10406("Msp/15.8.40 (", strF, l.b, strE, l.b);
+            C4794.m14774(sbM10406, strC, l.b, strE2, l.b);
+            this.a = C12669.m31438(sbM10406, strF2, l.b, strA);
         }
         String strC2 = d.d(contextB).c();
         String strB = q.b(contextB);
@@ -166,10 +166,10 @@ public class c {
         String strI = i();
         String strH = h();
         StringBuilder sb = new StringBuilder();
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, this.a, l.b, strC2, l.b);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, strB, l.b, strE3, l.b);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, strC3, l.b, strB2, l.b);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, this.c, l.b, strReplace, l.b);
+        C4794.m14774(sb, this.a, l.b, strC2, l.b);
+        C4794.m14774(sb, strB, l.b, strE3, l.b);
+        C4794.m14774(sb, strC3, l.b, strB2, l.b);
+        C4794.m14774(sb, this.c, l.b, strReplace, l.b);
         sb.append(strReplace2);
         sb.append(l.b);
         sb.append(zE);
@@ -178,8 +178,8 @@ public class c {
         sb.append(l.b);
         sb.append(d());
         sb.append(l.b);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, this.b, l.b, strG, l.b);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, strF3, l.b, strI, l.b);
+        C4794.m14774(sb, this.b, l.b, strG, l.b);
+        C4794.m14774(sb, strF3, l.b, strI, l.b);
         sb.append(strH);
         if (aVar2 != null) {
             String strA2 = com.alipay.sdk.m.a0.b.a(aVar, contextB, com.alipay.sdk.m.x.a.a(contextB).f(), com.alipay.sdk.m.a0.b.c(aVar, contextB));

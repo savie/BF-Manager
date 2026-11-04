@@ -1,27 +1,45 @@
-.class public Ll/ۛۨۙ;
-.super Ll/ܿۨۙ;
-.source "UB1K"
+.class public final synthetic Ll/ۛۨۙ;
+.super Ljava/lang/Object;
+.source "J8TX"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/᩺ۨۙ;
+
+.field public final synthetic ᩶:Landroid/content/Context;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩺ۨۙ;Landroid/content/Context;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۛۨۙ;->ܰ:Ll/᩺ۨۙ;
+
+    iput-object p2, p0, Ll/ۛۨۙ;->᩶:Landroid/content/Context;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Landroid/content/pm/ResolveInfo;)Landroid/content/pm/ProviderInfo;
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    .line 315
-    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
+    .line 2
+    iget-object v0, p0, Ll/ۛۨۙ;->᩶:Landroid/content/Context;
 
-    return-object p1
-.end method
+    .line 257
+    iget-object v1, p0, Ll/ۛۨۙ;->ܰ:Ll/᩺ۨۙ;
 
-.method public final ۙ(Landroid/content/pm/PackageManager;Landroid/content/Intent;)Ljava/util/List;
-    .locals 1
+    iget-object v1, v1, Ll/᩺ۨۙ;->ۙ:Ll/ۘۨۙ;
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ll/ۘۨۙ;->ۙ(Landroid/content/Context;Ll/ۘۨۙ;)V
 
-    .line 309
-    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->queryIntentContentProviders(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

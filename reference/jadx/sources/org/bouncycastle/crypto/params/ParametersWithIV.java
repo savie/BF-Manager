@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.params;
 
 import org.bouncycastle.crypto.CipherParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ParametersWithIV implements CipherParameters {
     public byte[] iv;
     public CipherParameters parameters;

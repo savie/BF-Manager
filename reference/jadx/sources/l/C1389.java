@@ -1,50 +1,79 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
+import java.util.function.Consumer;
+import java.util.function.IntBinaryOperator;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.֨᩸۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6X3 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1389 implements InterfaceC12679 {
+/* JADX INFO: renamed from: l.֨᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1389 implements InterfaceC18873, InterfaceC12334 {
+    public int a;
+    public final /* synthetic */ int b;
+    public final /* synthetic */ IntBinaryOperator c;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC8446 f5787;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17617 f5788;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f5789;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3070 f5790;
-
-    public C1389(C17617 c17617, InterfaceC8446 interfaceC8446, String str, C3070 c3070) {
-        this.f5788 = c17617;
-        this.f5787 = interfaceC8446;
-        this.f5789 = str;
-        this.f5790 = c3070;
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final /* synthetic */ void accept(double d) {
+        AbstractC13956.m();
+        throw null;
     }
 
-    @Override // l.InterfaceC12679
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C9152 mo4873(AbstractC20745 abstractC20745) throws C12731 {
-        this.f5787.mo22107(abstractC20745);
-        C5928 c5928M40947 = this.f5788.m40947(abstractC20745.mo33989());
-        String str = this.f5790.f11560;
-        JSONArray jSONArrayArray = JSON.array();
-        String str2 = this.f5789;
-        C17617.m40985(str2, c5928M40947, str, jSONArrayArray);
-        if (c5928M40947.m16197() < 0 || c5928M40947.m16197() > 9007199254740991L) {
-            throw C17617.m40953(JSON.array(), "The prepared file size exceeds the supported JSON integer range.", str2, str, "produce_temp");
-        }
-        return new C9152(c5928M40947.m16197(), null);
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(long j) {
+        AbstractC13956.u();
+        throw null;
     }
 
-    @Override // l.InterfaceC12679
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo4874(C3070 c3070) {
-        this.f5787.mo22106(c3070);
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        d((Integer) obj);
+    }
+
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
+        return C4109.$default$andThen(this, intConsumer);
+    }
+
+    @Override // l.InterfaceC12334
+    public final /* synthetic */ void d(Integer num) {
+        AbstractC13956.p(this, num);
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void end() {
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    public C1389(int i, IntBinaryOperator intBinaryOperator) {
+        this.b = i;
+        this.c = intBinaryOperator;
+    }
+
+    @Override // l.InterfaceC18873
+    public final void i(InterfaceC18873 interfaceC18873) {
+        accept(((C1389) interfaceC18873).a);
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        this.a = this.b;
+    }
+
+    @Override // l.InterfaceC15143
+    public final void accept(int i) {
+        this.a = this.c.applyAsInt(this.a, i);
+    }
+
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return Integer.valueOf(this.a);
     }
 }

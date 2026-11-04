@@ -1,47 +1,14 @@
 .class public interface abstract Ll/ۘ۠;
 .super Ljava/lang/Object;
-.source "23ZR"
+.source "I508"
 
 
 # virtual methods
-.method public abstract ֨(Ll/۬۠;)V
+.method public abstract onAnimationCancel()V
 .end method
 
-.method public abstract ۖ(Ll/۬۠;)F
+.method public abstract onAnimationEnd()V
 .end method
 
-.method public abstract ۘ(Ll/۬۠;)F
-.end method
-
-.method public abstract ۙ(Ll/۬۠;)F
-.end method
-
-.method public abstract ۙ(Ll/ۚ۠;Landroid/content/Context;Landroid/content/res/ColorStateList;FFF)V
-.end method
-
-.method public abstract ۙ(Ll/۬۠;F)V
-.end method
-
-.method public abstract ۙ(Ll/۬۠;Landroid/content/res/ColorStateList;)V
-.end method
-
-.method public abstract ۚ(Ll/۬۠;)V
-.end method
-
-.method public abstract ۨ(Ll/۬۠;)Landroid/content/res/ColorStateList;
-.end method
-
-.method public abstract ۨ(Ll/۬۠;F)V
-.end method
-
-.method public abstract ۬(Ll/۬۠;)V
-.end method
-
-.method public abstract ܰ(Ll/۬۠;)F
-.end method
-
-.method public abstract ܰ(Ll/۬۠;F)V
-.end method
-
-.method public abstract ᩹(Ll/۬۠;)F
+.method public abstract ۙ()V
 .end method

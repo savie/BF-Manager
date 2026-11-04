@@ -17,7 +17,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GCMSIVBlockCipher implements AEADBlockCipher {
     public static final byte ADD = -31;
     public static final int AEAD_COMPLETE = 2;

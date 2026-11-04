@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.crypto.util.DigestFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OpenSSLPBEParametersGenerator extends PBEParametersGenerator {
     public final Digest digest;
 

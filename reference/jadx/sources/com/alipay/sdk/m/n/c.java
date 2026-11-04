@@ -16,7 +16,7 @@ public class c {
     public static final String k = "formSubmit";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77912l = "namespace";
+    public static final String f82028l = "namespace";
     public static final String m = "apiVersion";
     public static final String n = "apiName";
 }

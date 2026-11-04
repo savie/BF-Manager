@@ -11,33 +11,29 @@ import org.bouncycastle.jcajce.spec.MLDSAParameterSpec;
 import org.bouncycastle.pqc.crypto.mldsa.HashMLDSASigner;
 import org.bouncycastle.pqc.crypto.mldsa.MLDSAParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HashSignatureSpi extends BaseDeterministicOrRandomSignature {
     public MLDSAParameters parameters;
     public HashMLDSASigner signer;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA extends HashSignatureSpi {
         public MLDSA() {
             super(new HashMLDSASigner());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA44 extends HashSignatureSpi {
         public MLDSA44() {
             super(new HashMLDSASigner(), MLDSAParameters.ml_dsa_44_with_sha512);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA65 extends HashSignatureSpi {
         public MLDSA65() {
             super(new HashMLDSASigner(), MLDSAParameters.ml_dsa_65_with_sha512);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA87 extends HashSignatureSpi {
         public MLDSA87() {
             super(new HashMLDSASigner(), MLDSAParameters.ml_dsa_87_with_sha512);

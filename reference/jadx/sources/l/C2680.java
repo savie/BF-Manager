@@ -1,176 +1,234 @@
 package l;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.List;
+import org.bouncycastle.crypto.engines.ThreefishEngine;
 
-/* JADX INFO: renamed from: l.ۖܿ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: A4XC */
+/* JADX INFO: renamed from: l.ۖ۫᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: M6OO */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2680 implements InterfaceC19595 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f10350;
+public final class C2680 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC4777 f10351;
+    public boolean f8520;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f10352;
+    public final int f8521;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ HashMap f10353;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f8522;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C13265[] f10354;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f8523;
 
-    public C2680(int i, ArrayList arrayList, HashMap map) {
-        this.f10350 = i;
-        this.f10352 = arrayList;
-        this.f10353 = map;
-        this.f10354 = new C13265[i];
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f8524;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int[] f8525;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f8527;
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f8519 = -1;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f8526 = -1;
+
+    public C2680(int i, C7998 c7998) {
+        this.f8522 = i;
+        C7998 c7999 = c7998.f9157;
+        this.f8527 = c7999 != null ? c7999.mo1229() : -1;
+        this.f8521 = c7998.f26549.mo23438();
+        this.f8523 = i == 57 && (c7998.f9157 instanceof C15423);
     }
 
-    @Override // l.InterfaceC19595
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6323(Object obj, Object obj2, AbstractC4777 abstractC4777, AbstractC4777 abstractC4778) {
-        C13265[] c13265Arr = (C13265[]) obj;
-        C13265[] c13265Arr2 = (C13265[]) obj2;
-        int i = 0;
-        int i2 = this.f10350;
-        if (c13265Arr2 != null) {
-            while (i < i2) {
-                C13265 c13265 = c13265Arr[i];
-                C13265 c13266 = c13265Arr2[i];
-                if (c13265 != null && c13266 != null) {
-                    if (c13266.f44047 == null) {
-                        c13266.f44047 = new HashSet();
+    /* JADX WARN: Code duplicated, block: B:46:0x0065 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:48:0x0068  */
+    /* JADX WARN: Code duplicated, block: B:58:0x007a A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:65:0x0086  */
+    /* JADX WARN: Code duplicated, block: B:66:0x0088  */
+    /* JADX WARN: Code duplicated, block: B:73:0x0096  */
+    /* JADX WARN: Code duplicated, block: B:74:0x009b  */
+    /* JADX WARN: Code duplicated, block: B:76:0x00a0  */
+    /* JADX WARN: Code duplicated, block: B:85:? A[RETURN, SYNTHETIC] */
+    /* JADX WARN: Switch 'out' block B:71:0x0091 for B:34:0x004f already processed. Defaulting to fallback option. */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m8849(InterfaceC8743 interfaceC8743) {
+        int[] iArr;
+        int i;
+        int type = interfaceC8743.getType();
+        int i2 = this.f8522;
+        if (i2 != 1) {
+            if (i2 == 18) {
+                if (type != 136 && type != 133) {
+                    return;
+                }
+            } else if (i2 != 25) {
+                if (i2 == 30) {
+                    if (type != 94) {
+                        return;
                     }
-                    c13266.f44047.add(c13265);
+                } else if (i2 != 34) {
+                    if (i2 == 41) {
+                        if (type != 136 && type != 95) {
+                            return;
+                        }
+                    } else if (i2 == 47) {
+                        if (type != 94) {
+                            return;
+                        }
+                    } else if (i2 == 54) {
+                        if (type != 92) {
+                            return;
+                        }
+                    } else if (i2 == 64) {
+                        if (type != 136) {
+                            return;
+                        }
+                    } else if (i2 == 8 || i2 == 9 || i2 == 14) {
+                        if (type != 94) {
+                            return;
+                        }
+                    } else if (i2 != 15) {
+                        if (i2 != 50 && i2 != 51) {
+                            switch (i2) {
+                                case 21:
+                                    if (type != 18) {
+                                    }
+                                    break;
+                                case 22:
+                                    if (type != 17 && type != 38) {
+                                    }
+                                    break;
+                                case 23:
+                                    if (type != 91 && type != 92) {
+                                    }
+                                    break;
+                                default:
+                                    switch (i2) {
+                                        case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
+                                            if (type != 136) {
+                                                break;
+                                            }
+                                        case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
+                                        case 60:
+                                            iArr = this.f8525;
+                                            if (iArr == null) {
+                                                this.f8525 = new int[2];
+                                            } else {
+                                                i = this.f8524;
+                                                if (i == iArr.length) {
+                                                    this.f8525 = Arrays.copyOf(iArr, i * 2);
+                                                }
+                                            }
+                                            int[] iArr2 = this.f8525;
+                                            int i3 = this.f8524;
+                                            this.f8524 = i3 + 1;
+                                            iArr2[i3] = interfaceC8743.mo23438();
+                                            break;
+                                        default:
+                                            switch (i2) {
+                                                case 66:
+                                                    if (type != 94) {
+                                                    }
+                                                    iArr = this.f8525;
+                                                    if (iArr == null) {
+                                                        this.f8525 = new int[2];
+                                                    } else {
+                                                        i = this.f8524;
+                                                        if (i == iArr.length) {
+                                                            this.f8525 = Arrays.copyOf(iArr, i * 2);
+                                                        }
+                                                    }
+                                                    int[] iArr3 = this.f8525;
+                                                    int i4 = this.f8524;
+                                                    this.f8524 = i4 + 1;
+                                                    iArr3[i4] = interfaceC8743.mo23438();
+                                                    break;
+                                                case 67:
+                                                    if (type != 136) {
+                                                    }
+                                                    iArr = this.f8525;
+                                                    if (iArr == null) {
+                                                        this.f8525 = new int[2];
+                                                    } else {
+                                                        i = this.f8524;
+                                                        if (i == iArr.length) {
+                                                            this.f8525 = Arrays.copyOf(iArr, i * 2);
+                                                        }
+                                                    }
+                                                    int[] iArr4 = this.f8525;
+                                                    int i5 = this.f8524;
+                                                    this.f8524 = i5 + 1;
+                                                    iArr4[i5] = interfaceC8743.mo23438();
+                                                    break;
+                                                case 68:
+                                                    if (type != 92) {
+                                                    }
+                                                    iArr = this.f8525;
+                                                    if (iArr == null) {
+                                                        this.f8525 = new int[2];
+                                                    } else {
+                                                        i = this.f8524;
+                                                        if (i == iArr.length) {
+                                                            this.f8525 = Arrays.copyOf(iArr, i * 2);
+                                                        }
+                                                    }
+                                                    int[] iArr5 = this.f8525;
+                                                    int i6 = this.f8524;
+                                                    this.f8524 = i6 + 1;
+                                                    iArr5[i6] = interfaceC8743.mo23438();
+                                                    break;
+                                            }
+                                            break;
+                                    }
+                                    break;
+                            }
+                        }
+                        if (type != 94) {
+                            return;
+                        }
+                    } else if (type != 136) {
+                        return;
+                    }
+                } else if (type != 43 && type != 91 && type != 92 && type != 94) {
+                    return;
                 }
-                i++;
+            } else if (type != 10 && type != 21) {
+                return;
             }
-            return c13265Arr2;
+        } else if (type != 93) {
+            return;
         }
-        C13265[] c13265Arr3 = new C13265[i2];
-        while (i < i2) {
-            C13265 c13267 = c13265Arr[i];
-            if (c13267 != null) {
-                C13265 c13268 = new C13265(c13267.f44048);
-                this.f10352.add(c13268);
-                c13268.f44045 = c13267.f44045;
-                c13268.f44044 = c13267;
-                c13268.f44046 = (BitSet) c13267.f44046.clone();
-                c13265Arr3[i] = c13268;
-            }
-            i++;
-        }
-        return c13265Arr3;
-    }
-
-    @Override // l.InterfaceC19595
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6324(Object obj, AbstractC4777 abstractC4777) {
-        this.f10351 = abstractC4777;
-        int i = this.f10350;
-        C13265[] c13265Arr = this.f10354;
-        System.arraycopy((C13265[]) obj, 0, c13265Arr, 0, i);
-        EnumC2890 enumC2890 = abstractC4777.f16795;
-        if (enumC2890 == EnumC2890.FILL_ARRAY_DATA) {
-            if (abstractC4777.mo13244().f23823 == EnumC9947.LOCAL) {
-                int i2 = ((C2184) abstractC4777.mo13244()).f7921;
-                if (i2 >= 0) {
-                    C13265 c13265 = c13265Arr[i2];
-                    c13265.f44046.set(0, Array.getLength(((C14760) abstractC4777.mo13245()).f48276));
-                    return c13265Arr;
-                }
-            } else {
-                m8218(abstractC4777.mo13244());
-                return c13265Arr;
-            }
+        iArr = this.f8525;
+        if (iArr == null) {
+            this.f8525 = new int[2];
         } else {
-            EnumC2890 enumC2891 = EnumC2890.ASSIGN;
-            if (enumC2890 == enumC2891 && abstractC4777.mo13244().f23823 == EnumC9947.ARRAY) {
-                m8218(abstractC4777.mo13245());
-                C6292 c6292 = (C6292) abstractC4777.mo13244();
-                AbstractC7124 abstractC7124 = c6292.f61770;
-                if (abstractC7124.f23823 == EnumC9947.LOCAL) {
-                    C2184 c2184 = (C2184) abstractC7124;
-                    if (c2184.f7921 >= 0) {
-                        c13265Arr[c2184.f7921].f44046.set(((Number) ((C14760) c6292.f61771).f48276).intValue());
-                        return c13265Arr;
-                    }
-                    m8218(c6292);
-                    return c13265Arr;
-                }
-                m8218(c6292);
-                return c13265Arr;
-            }
-            if (enumC2890 == enumC2891 && abstractC4777.mo13244().f23823 == EnumC9947.LOCAL) {
-                C2184 c2185 = (C2184) abstractC4777.mo13244();
-                m8218(abstractC4777.mo13245());
-                if (c2185.f7921 >= 0) {
-                    C13265 c13266 = new C13265(c2185);
-                    c13266.f44045 = (C1269) this.f10353.get(c2185);
-                    c13266.f44046 = new BitSet();
-                    this.f10352.add(c13266);
-                    c13265Arr[c2185.f7921] = c13266;
-                    return c13265Arr;
-                }
-            } else {
-                int i3 = C22437.f73219[abstractC4777.f16801.ordinal()];
-                if (i3 == 2) {
-                    m8218(abstractC4777.mo5126());
-                    return c13265Arr;
-                }
-                if (i3 == 3) {
-                    m8218(abstractC4777.mo13244());
-                    m8218(abstractC4777.mo13245());
-                    return c13265Arr;
-                }
-                if (i3 == 4) {
-                    throw new RuntimeException();
-                }
+            i = this.f8524;
+            if (i == iArr.length) {
+                this.f8525 = Arrays.copyOf(iArr, i * 2);
             }
         }
-        return c13265Arr;
-    }
-
-    @Override // l.InterfaceC19595
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6322() {
-        return new C13265[this.f10350];
+        int[] iArr6 = this.f8525;
+        int i7 = this.f8524;
+        this.f8524 = i7 + 1;
+        iArr6[i7] = interfaceC8743.mo23438();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m8218(AbstractC7124 abstractC7124) {
-        int i;
-        int i2 = C22437.f73219[abstractC7124.f23822.ordinal()];
-        if (i2 == 1) {
-            if (abstractC7124.f23823 != EnumC9947.LOCAL || (i = ((C2184) abstractC7124).f7921) < 0) {
-                return;
-            }
-            C13265 c13265 = this.f10354[i];
-            c13265.f44045.f5496.add(this.f10351);
-            c13265.f44049 = true;
-            return;
-        }
-        if (i2 == 2) {
-            m8218(abstractC7124.mo19020());
-            return;
-        }
-        if (i2 == 3) {
-            m8218(abstractC7124.mo19024());
-            m8218(abstractC7124.mo19019());
-        } else {
-            if (i2 != 4) {
-                return;
-            }
-            for (AbstractC7124 abstractC7125 : abstractC7124.mo19023()) {
-                m8218(abstractC7125);
+    public final int m8847(int i) {
+        return this.f8525[i];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m8848(int i, List list) {
+        for (int i2 = 0; i2 < this.f8524; i2++) {
+            if (((InterfaceC8743) list.get(this.f8525[i2])).getType() == i) {
+                return this.f8525[i2];
             }
         }
+        return -1;
     }
 }

@@ -1,136 +1,147 @@
 package l;
 
-import android.content.DialogInterface;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.RippleDrawable;
+import android.text.TextUtils;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import bin.mt.plus.R;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import org.bouncycastle.crypto.params.DHParameters;
 
-/* JADX INFO: renamed from: l.ܽۘ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 123V */
+/* JADX INFO: renamed from: l.ܶ᩹ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E6CW */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16401 extends AbstractC3492 {
+public final class C16401 extends LinearLayout {
 
-    /* JADX INFO: renamed from: ۗܰܺ, reason: not valid java name and contains not printable characters */
-    private static final short[] f52761 = {9505, -13861, -13863, -13884, -13887, -13874, -13880, -13857, -13836, -13874, -13869, -13878, -13880, -13857, -13881, -13870, -13836, -13882, -13878, -13857, -13880, -13885, -13874, -13883, -13878, -13879, -13881, -13874, -13836, -13879, -13886, -13883, -13836, -13880, -13884, -13883, -13859, -13874, -13863, -13857, -13878, -13876, -13863, -13874, -13874, -13882, -13874, -13883, -13857, -13947, -13857, -13869, -13857, -27531, -22637, -26408, -30939, -23170, -27104, -21772, -28518, -13880, -13879, -13874, -13875, -13876, -13885, -13887, -13881, -13848, -13847, -13842, -13843, -13844, -13853, -13855, -13849};
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f53219;
 
     /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public List f52762;
+    public boolean f53220;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Runnable f52763;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public boolean f53221;
 
     /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f52764;
+    public final TextView f53222;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public boolean f53223;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final TextView f53224;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public boolean f53225;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final C17893 f53226;
 
     /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11545 f52765;
+    public final TextView f53227;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC11462 f52766;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f53228;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C13662 f52767;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f53229;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f52768;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public int f53230;
 
-    /*  JADX ERROR: Type inference failed
-        jadx.core.utils.exceptions.JadxOverflowException: Type inference error: updates count limit reached with updateSeq = 40721. Try increasing type updates limit count.
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:79)
-        */
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public void mo1159() {
-        /*
-            Method dump skipped, instruction units count: 4072
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C16401.mo1159():void");
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final GradientDrawable f53231;
+
+    public C16401(Context context) {
+        super(context);
+        setGravity(16);
+        setPadding(m38951(4), 0, m38951(4), 0);
+        setMinimumHeight(m38951(34));
+        C17717 c17717 = new C17717(context);
+        GradientDrawable gradientDrawableM41483 = c17717.m41483(0, 3, 0);
+        this.f53231 = gradientDrawableM41483;
+        setBackground(new RippleDrawable(ColorStateList.valueOf(587202559), gradientDrawableM41483, c17717.m41483(-1, 3, 0)));
+        C17893 c17893 = new C17893(this, context);
+        this.f53226 = c17893;
+        addView(c17893, new LinearLayout.LayoutParams(m38951(24), -1));
+        LinearLayout linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(1);
+        linearLayout.setGravity(16);
+        linearLayout.setPadding(0, m38951(4), 0, m38951(4));
+        addView(linearLayout, new LinearLayout.LayoutParams(0, -2, 1.0f));
+        TextView textViewM41488 = c17717.m41488(11, -920329, "");
+        this.f53224 = textViewM41488;
+        Typeface typeface = Typeface.MONOSPACE;
+        textViewM41488.setTypeface(typeface);
+        textViewM41488.setSingleLine();
+        TextUtils.TruncateAt truncateAt = TextUtils.TruncateAt.END;
+        textViewM41488.setEllipsize(truncateAt);
+        textViewM41488.setIncludeFontPadding(false);
+        linearLayout.addView(textViewM41488, new LinearLayout.LayoutParams(-1, -2));
+        TextView textViewM41489 = c17717.m41488(9, -5129275, "");
+        this.f53227 = textViewM41489;
+        textViewM41489.setSingleLine();
+        textViewM41489.setEllipsize(truncateAt);
+        textViewM41489.setIncludeFontPadding(false);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
+        layoutParams.topMargin = m38951(2);
+        linearLayout.addView(textViewM41489, layoutParams);
+        TextView textViewM414810 = c17717.m41488(11, -5129275, "");
+        this.f53222 = textViewM414810;
+        textViewM414810.setTypeface(typeface);
+        textViewM414810.setGravity(8388613);
+        textViewM414810.setIncludeFontPadding(false);
+        textViewM414810.setPadding(m38951(8), 0, 0, 0);
+        addView(textViewM414810);
     }
 
-    public C16401(C11545 c11545, AbstractC11462 abstractC11462, boolean z, boolean z2, Runnable runnable) {
-        this.f52765 = c11545;
-        this.f52766 = abstractC11462;
-        this.f52764 = z;
-        this.f52768 = z2;
-        this.f52763 = runnable;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38961(int i, String str, String str2, C23861 c23861, boolean z, RunnableC4995 runnableC4995, RunnableC22149 runnableC22149) {
+        int[] iArr = c23861.f77253;
+        int i2 = iArr[i];
+        this.f53219 = i2;
+        this.f53228 = c23861.f77247[i];
+        int[] iArr2 = c23861.f77250;
+        int i3 = iArr2[i];
+        boolean z2 = i3 >= 0;
+        this.f53220 = z2;
+        this.f53225 = z2 && i2 > iArr[i3];
+        this.f53221 = c23861.m53209(i);
+        int i4 = i + 1;
+        this.f53229 = i4 < iArr2.length && iArr2[i4] == i;
+        this.f53223 = !c23861.m53207(i);
+        this.f53230 = z ? -13058049 : -5129275;
+        this.f53224.setText(str);
+        String strM44060 = C18969.m44060(DHParameters.DEFAULT_MINIMUM_LENGTH, str2);
+        TextView textView = this.f53227;
+        textView.setText(strM44060);
+        textView.setVisibility((str2 == null || str2.isEmpty()) ? 8 : 0);
+        TextView textView2 = this.f53222;
+        textView2.setText("#" + i);
+        textView2.setTextColor(this.f53230);
+        setSelected(z);
+        this.f53231.setColor(z ? -14464680 : 0);
+        setOnClickListener(new ViewOnClickListenerC15533(4, runnableC4995));
+        C17893 c17893 = this.f53226;
+        c17893.getLayoutParams().width = m38951((this.f53219 * 16) + 24);
+        c17893.requestLayout();
+        String string = null;
+        c17893.setOnClickListener(this.f53229 ? new ViewOnClickListenerC25177(2, runnableC22149) : null);
+        c17893.setClickable(this.f53229);
+        if (this.f53229) {
+            string = getContext().getString(this.f53223 ? R.string.MT_Protector : R.string.MT_Protector, str);
+        }
+        c17893.setContentDescription(string);
+        c17893.setImportantForAccessibility(this.f53229 ? 0 : 2);
+        c17893.invalidate();
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        this.f52767 = this.f52765.m28770(true, this.f52766.mo28619(this.f52764));
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C11545 c11545 = this.f52765;
-        C5900 c5900 = c11545.f38826;
-        AbstractC11462 abstractC11462 = c11545.f38817;
-        AbstractC11462 abstractC11463 = this.f52766;
-        if (abstractC11462 != abstractC11463) {
-            return;
-        }
-        if (this.f52767.m33367()) {
-            if (this.f52768) {
-                c11545.m28731(Collections.EMPTY_LIST, false);
-                c5900.m16166();
-                return;
-            }
-            return;
-        }
-        c11545.m28731(this.f52762, false);
-        if (this.f52762.size() == 3 && (abstractC11463 instanceof C11672) && c11545.m28798().equals("/data/data/")) {
-            Set set = (Set) C9030.stream(this.f52762).filter(new C15696(0)).map(new C19929(0)).collect(C1890.toSet());
-            if (set.contains(C16737.m39293()) && set.contains("com.google.android.gms")) {
-                C8067 c8067BuildDialog = c11545.m28824().buildDialog();
-                c8067BuildDialog.m21274(R.string.MT_Protector);
-                c8067BuildDialog.m21253(R.string.MT_Protector);
-                c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.֡ۘ᩹
-                    @Override // android.content.DialogInterface.OnClickListener
-                    public final void onClick(DialogInterface dialogInterface, int i) {
-                        this.f1277.f52765.m28824().m31020("https://mt.cc/download");
-                    }
-                });
-                c8067BuildDialog.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-                c8067BuildDialog.m21269();
-            }
-        }
-        c5900.m16166();
-        Runnable runnable = this.f52763;
-        if (runnable != null) {
-            runnable.run();
-        }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        if (this.f52767.m33367()) {
-            return;
-        }
-        boolean z = exc instanceof C4987;
-        C11545 c11545 = this.f52765;
-        if (z || (exc instanceof C8142)) {
-            C15829.m37612(0, exc.getMessage()).m37622();
-        } else {
-            c11545.m28824().m31002(exc, (DialogInterface.OnDismissListener) null);
-        }
-        c11545.m28745();
-        if (this.f52768) {
-            c11545.m28731(Collections.EMPTY_LIST, false);
-            c11545.f38826.m16166();
-        }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f52767.m33365();
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int m38951(int i) {
+        return Math.round(i * getResources().getDisplayMetrics().density);
     }
 }

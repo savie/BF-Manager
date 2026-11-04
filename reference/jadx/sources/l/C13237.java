@@ -1,49 +1,48 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.۬ܽۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F416 */
+/* JADX INFO: renamed from: l.۫ܽۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 82T8 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13237 implements Predicate {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f43990;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f43991;
-
-    public /* synthetic */ C13237(int i, Object obj) {
-        this.f43990 = i;
-        this.f43991 = obj;
+public final class C13237 extends AbstractC22188 implements InterfaceC6067 {
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // l.InterfaceC16617
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo7063() {
+        return ((InterfaceC6067) this.f71487).mo7063();
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f43990) {
-            case 0:
-                break;
-        }
-        return C8512.$default$negate(this);
+    @Override // l.InterfaceC16617
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo7061() {
+        return ((InterfaceC6067) this.f71487).mo7061();
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    @Override // l.InterfaceC16617
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo7064() {
+        return ((InterfaceC6067) this.f71487).mo7064();
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f43990) {
-            case 0:
-                return ((AbstractC16579) obj).m39005(((C19524) this.f43991).f62771);
-            default:
-                return ((C19670) obj) != ((C10164) this.f43991).f34730;
-        }
+    @Override // l.InterfaceC0210
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo1655() {
+        return ((InterfaceC6067) this.f71487).mo1655();
+    }
+
+    @Override // l.InterfaceC16617
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo7065() {
+        return ((InterfaceC6067) this.f71487).mo7065();
+    }
+
+    @Override // l.InterfaceC16617
+    /* JADX INFO: renamed from: ܳ */
+    public final int mo7062() {
+        return ((InterfaceC6067) this.f71487).mo7062();
     }
 }

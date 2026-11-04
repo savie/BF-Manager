@@ -1,16 +1,41 @@
 package l;
 
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.۫۫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X4HD */
+/* JADX INFO: renamed from: l.ۨܰ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0JF */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12416 extends C21430 {
-    @Override // l.InterfaceC15081
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2189(AbstractActivityC12483 abstractActivityC12483, C5202 c5202, boolean z) {
-        if (c5202.m14380() && z) {
-            DialogInterfaceOnClickListenerC14147.m34221(abstractActivityC12483, "def_sign_key_warn", abstractActivityC12483.getString(R.string.MT_Protector), true);
+public class C12416 extends C14653 {
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C4213 f39916;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C12416(C4213 c4213) {
+        super(c4213.f15392);
+        this.f39916 = c4213;
+        this.f47942 = c4213.firstEntry();
+    }
+
+    @Override // l.C14653
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void mo30887() {
+        C11670 c11670M29343 = this.f47939.m29343();
+        this.f47939 = c11670M29343;
+        C4213 c4213 = this.f39916;
+        if (c4213.f15394 || c11670M29343 == null || Integer.compare(c11670M29343.f3592, c4213.f15395) >= 0) {
+            return;
         }
+        this.f47939 = null;
+    }
+
+    @Override // l.C14653
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo30886() {
+        C11670 c11670M29344 = this.f47942.m29344();
+        this.f47942 = c11670M29344;
+        C4213 c4213 = this.f39916;
+        if (c4213.f15393 || c11670M29344 == null || Integer.compare(c11670M29344.f3592, c4213.f15396) < 0) {
+            return;
+        }
+        this.f47942 = null;
     }
 }

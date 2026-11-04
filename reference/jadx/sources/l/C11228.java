@@ -1,97 +1,89 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧ᩶ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11228 extends C23928 {
+/* JADX INFO: renamed from: l.ۤ᩻ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6MK */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11228 implements Appendable, CharSequence, AutoCloseable {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f37994;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f37995;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f37996;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public volatile long f37997;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C0352 f35419;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f37998;
+    public final C2830 f35420;
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public volatile long f37999;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC24329 f35421;
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ᩺ */
-    public final long mo3306() {
-        return this.f37997;
+    public C11228(InterfaceC24329 interfaceC24329, C0352 c0352) {
+        this.f35421 = interfaceC24329;
+        this.f35419 = c0352;
+        this.f35420 = new C2830(interfaceC24329, c0352, 524288);
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3301(long j) {
-        this.f37997 = j;
+    @Override // java.lang.Appendable
+    public final C11228 append(CharSequence charSequence) {
+        if (charSequence == null) {
+            charSequence = "null";
+        }
+        m28292(0, charSequence.length(), charSequence);
+        return this;
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ֨ */
-    public final InterfaceC0769 mo3299() {
-        return this.f37996;
+    @Override // java.lang.CharSequence
+    public final CharSequence subSequence(int i, int i2) {
+        return new C18334(i, i2, this);
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3305(InterfaceC0769 interfaceC0769) {
-        this.f37996 = interfaceC0769;
+    @Override // java.lang.CharSequence
+    public final int length() {
+        return this.f35420.length();
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC0769 mo3300() {
-        return this.f37994;
+    @Override // java.lang.CharSequence
+    public final char charAt(int i) {
+        return this.f35420.charAt(i);
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3302(InterfaceC0769 interfaceC0769) {
-        this.f37994 = interfaceC0769;
+    @Override // java.lang.Appendable
+    public final Appendable append(char c) throws Throwable {
+        this.f35420.append(c);
+        return this;
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۜ */
-    public final long mo2936() {
-        return this.f37999;
+    @Override // java.lang.Appendable
+    public final C11228 append(char c) throws Throwable {
+        this.f35420.append(c);
+        return this;
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo2937(long j) {
-        this.f37999 = j;
+    @Override // java.lang.Appendable
+    public final Appendable append(CharSequence charSequence, int i, int i2) {
+        this.f35420.append(charSequence, i, i2);
+        return this;
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC0769 mo2939() {
-        return this.f37998;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C11228 m28292(int i, int i2, CharSequence charSequence) {
+        this.f35420.append(charSequence, i, i2);
+        return this;
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo2938(InterfaceC0769 interfaceC0769) {
-        this.f37998 = interfaceC0769;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m28293(int i) {
+        this.f35420.m9321(i);
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۘ */
-    public final InterfaceC0769 mo2935() {
-        return this.f37995;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C11228 m28291() {
+        return new C11228(this.f35421, this.f35419);
     }
 
-    @Override // l.C23928, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo2934(InterfaceC0769 interfaceC0769) {
-        this.f37995 = interfaceC0769;
+    public final C8796 finish() {
+        return this.f35420.finish();
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        this.f35420.close();
     }
 }

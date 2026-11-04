@@ -1,90 +1,70 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.BitSet;
+import java.util.Locale;
 
-/* JADX INFO: renamed from: l.ۧᩳۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 470D */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11156 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f37822;
+/* JADX INFO: renamed from: l.ۤ᩸ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A8DI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11156 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16800 f37823;
+    public final BitSet f35136;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f37824;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f35137;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f37825;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f37826;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final EnumC23856 f37827;
-
-    public C11156(int i, int i2, int i3, int i4, EnumC23856 enumC23856, C16800 c16800) {
-        this.f37822 = i;
-        this.f37826 = i2;
-        this.f37824 = i3;
-        this.f37825 = i4;
-        this.f37827 = enumC23856;
-        this.f37823 = c16800;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C11156)) {
-            return false;
-        }
-        C11156 c11156 = (C11156) obj;
-        return this.f37822 == c11156.f37822 && this.f37826 == c11156.f37826 && this.f37824 == c11156.f37824 && this.f37825 == c11156.f37825 && C13638.equals(this.f37827, c11156.f37827) && C13638.equals(this.f37823, c11156.f37823);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f37823) + ((C13638.hashCode(this.f37827) + (((((((this.f37822 * 31) + this.f37826) * 31) + this.f37824) * 31) + this.f37825) * 31)) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f37822), Integer.valueOf(this.f37826), Integer.valueOf(this.f37824), Integer.valueOf(this.f37825), this.f37827, this.f37823};
-        String[] strArrSplit = "oldReplayOffset;newReplayOffset;oldSuffixOffset;newSuffixOffset;reason;affectedDecisions".length() == 0 ? new String[0] : "oldReplayOffset;newReplayOffset;oldSuffixOffset;newSuffixOffset;reason;affectedDecisions".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C11156.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public C11156(EnumC22345... enumC22345Arr) {
+        this.f35136 = new BitSet(8);
+        this.f35137 = 1;
+        if (enumC22345Arr != null) {
+            for (EnumC22345 enumC22345 : enumC22345Arr) {
+                this.f35136.set(enumC22345.f72335);
             }
         }
-        sb.append("]");
-        return sb.toString();
+        m28104();
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m28089() {
-        return this.f37824;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m28090() {
-        return this.f37825;
+    public C11156(byte b, int i) {
+        this.f35136 = BitSet.valueOf(new byte[]{b});
+        this.f35137 = i;
+        m28104();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16800 m28091() {
-        return this.f37823;
+    public static C11156 m28103(byte b) {
+        byte b2 = (byte) (b & 192);
+        return new C11156((byte) (b ^ b2), b2 >>> 6);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m28092() {
-        return this.f37826;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte m28105() {
+        return (byte) (this.f35136.toByteArray()[0] | ((this.f35137 & 3) << 6));
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m28093() {
-        return this.f37822;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private void m28104() {
+        int i = EnumC22345.RESERVED_0.f72335;
+        BitSet bitSet = this.f35136;
+        if (bitSet.get(i)) {
+            throw new RuntimeException("Reserved0 field must be 0");
+        }
+        if (bitSet.get(EnumC22345.RESERVED_1.f72335)) {
+            throw new RuntimeException("Reserved1 field must be 0");
+        }
+        if (!bitSet.get(EnumC22345.BLOCK_INDEPENDENCE.f72335)) {
+            throw new RuntimeException("Dependent block stream is unsupported (BLOCK_INDEPENDENCE must be set)");
+        }
+        int i2 = this.f35137;
+        if (i2 == 1) {
+            return;
+        }
+        Locale locale = Locale.ROOT;
+        throw new RuntimeException(C14442.m34864(i2, "Version ", " is unsupported"));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m28106(EnumC22345 enumC22345) {
+        return this.f35136.get(enumC22345.f72335);
     }
 }

@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
-import l.C15489;
-import l.C16523;
-import l.EnumC19730;
+import l.C13645;
+import l.C14442;
+import l.EnumC7687;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -22,7 +22,7 @@ import org.bouncycastle.crypto.engines.ThreefishEngine;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IETFUtils {
     public static void addMultiValuedRDN(X500NameStyle x500NameStyle, X500NameBuilder x500NameBuilder, X500NameTokenizer x500NameTokenizer) {
         String strNextToken = x500NameTokenizer.nextToken();
@@ -241,7 +241,7 @@ public class IETFUtils {
     }
 
     public static String stripInternalSpaces(String str) {
-        if (str.indexOf(EnumC19730.f63352) < 0) {
+        if (str.indexOf(EnumC7687.f25319) < 0) {
             return str;
         }
         StringBuilder sb = new StringBuilder();
@@ -398,7 +398,7 @@ public class IETFUtils {
         try {
             return ASN1Primitive.fromByteArray(Hex.decodeStrict(str, 1, str.length() - 1));
         } catch (IOException e) {
-            throw new IllegalStateException(C15489.m37075("unknown encoding in name: ", e));
+            throw new IllegalStateException(C13645.m33383("unknown encoding in name: ", e));
         }
     }
 
@@ -414,6 +414,6 @@ public class IETFUtils {
         if (aSN1ObjectIdentifier != null) {
             return aSN1ObjectIdentifier;
         }
-        throw new IllegalArgumentException(C16523.m38890("Unknown object id - ", str, " - passed to distinguished name"));
+        throw new IllegalArgumentException(C14442.m34865("Unknown object id - ", str, " - passed to distinguished name"));
     }
 }

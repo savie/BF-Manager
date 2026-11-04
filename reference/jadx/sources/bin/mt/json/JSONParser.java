@@ -4,7 +4,7 @@ import com.alipay.sdk.m.u0.b;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.crypto.engines.ThreefishEngine;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -464,7 +464,7 @@ public class JSONParser {
     }
 
     private JSONParseException expected(String str) {
-        return isEndOfText() ? error("Unexpected end of input") : error(C0252.m1693("Expected ", str));
+        return isEndOfText() ? error("Unexpected end of input") : error(C25272.m56409("Expected ", str));
     }
 
     private JSONParseException error(String str) {

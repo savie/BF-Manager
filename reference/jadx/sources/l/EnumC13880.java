@@ -1,77 +1,81 @@
 package l;
 
-/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* JADX INFO: renamed from: l.ܰܳۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M43N */
-/* JADX INFO: loaded from: classes3.dex */
-public abstract class EnumC13880 {
+/* JADX INFO: renamed from: l.۬۬ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O27D */
+/* JADX INFO: loaded from: classes4.dex */
+public enum EnumC13880 {
+    TERMINATOR(new int[]{0, 0, 0}, 0),
+    NUMERIC(new int[]{10, 12, 14}, 1),
+    ALPHANUMERIC(new int[]{9, 11, 13}, 2),
+    STRUCTURED_APPEND(new int[]{0, 0, 0}, 3),
+    BYTE(new int[]{8, 16, 16}, 4),
+    ECI(new int[]{0, 0, 0}, 7),
+    KANJI(new int[]{8, 10, 12}, 8),
+    FNC1_FIRST_POSITION(new int[]{0, 0, 0}, 5),
+    FNC1_SECOND_POSITION(new int[]{0, 0, 0}, 9),
+    HANZI(new int[]{8, 10, 12}, 13);
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45734;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45735;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45736;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45739;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f44033;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ EnumC13880[] f45740;
+    public final int[] f44034;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final EnumC8112 f45741;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45738 = new C6388(EnumC8112.f28428);
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final EnumC13880 f45737 = new C11328(EnumC8112.f28425);
-
-    public /* synthetic */ EnumC13880(String str, int i, EnumC8112 enumC8112, int i2) {
-        this(str, i, enumC8112);
-    }
-
-    /* JADX INFO: renamed from: ۨ */
-    public abstract AbstractC16579 mo6718(C10229 c10229, C19524 c19524);
-
-    public static EnumC13880 valueOf(String str) {
-        return (EnumC13880) Enum.valueOf(EnumC13880.class, str);
-    }
-
-    public static EnumC13880[] values() {
-        return (EnumC13880[]) f45740.clone();
+    EnumC13880(int[] iArr, int i) {
+        this.f44034 = iArr;
+        this.f44033 = i;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ EnumC13880[] m33720() {
-        return new EnumC13880[]{f45738, f45737, f45739, f45735, f45736, f45734};
+    public static EnumC13880 m33826(int i) {
+        if (i == 0) {
+            return TERMINATOR;
+        }
+        if (i == 1) {
+            return NUMERIC;
+        }
+        if (i == 2) {
+            return ALPHANUMERIC;
+        }
+        if (i == 3) {
+            return STRUCTURED_APPEND;
+        }
+        if (i == 4) {
+            return BYTE;
+        }
+        if (i == 5) {
+            return FNC1_FIRST_POSITION;
+        }
+        if (i == 7) {
+            return ECI;
+        }
+        if (i == 8) {
+            return KANJI;
+        }
+        if (i == 9) {
+            return FNC1_SECOND_POSITION;
+        }
+        if (i == 13) {
+            return HANZI;
+        }
+        throw new IllegalArgumentException();
     }
 
-    static {
-        EnumC8112 enumC8112 = EnumC8112.f28427;
-        f45739 = new C2154(enumC8112);
-        f45735 = new C9917(enumC8112);
-        f45736 = new C3565(enumC8112);
-        f45734 = new C4706(enumC8112);
-        f45740 = m33720();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int m33829(C10634 c10634) {
+        char c;
+        int iM27131 = c10634.m27131();
+        if (iM27131 <= 9) {
+            c = 0;
+        } else {
+            c = iM27131 <= 26 ? (char) 1 : (char) 2;
+        }
+        return this.f44034[c];
     }
 
-    public EnumC13880(String str, int i, EnumC8112 enumC8112) {
-        super(str, i);
-        this.f45741 = enumC8112;
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public boolean mo6717(C10229 c10229, C19524 c19524) {
-        return m33721(c10229, c19524).m48595() && !c10229.m26018();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C21825 m33721(C10229 c10229, C19524 c19524) {
-        return AbstractC16579.m38995(c10229.m26012(this.f45741), new C2860(c19524));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int m33828() {
+        return this.f44033;
     }
 }

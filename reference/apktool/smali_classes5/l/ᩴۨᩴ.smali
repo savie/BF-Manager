@@ -1,29 +1,14 @@
-.class public abstract Ll/ᩴۨᩴ;
-.super Ljava/lang/Object;
-.source "MCFO"
-
-# interfaces
-.implements Ll/ۤۖᩴ;
-.implements Ll/ۛܿᩴ;
+.class public final Ll/ᩴۨᩴ;
+.super Ll/ۧۨᩴ;
+.source "66XX"
 
 
 # virtual methods
-.method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+.method public final ۙ(Ll/ۚۨᩴ;)Ll/ܳۨᩴ;
     .locals 0
 
-    .line 917
-    check-cast p1, Ll/ᩳۖᩴ;
+    .line 191
+    sget-object p1, Ll/ܳۨᩴ;->۟:Ll/ܳۨᩴ;
 
-    invoke-interface {p0, p1}, Ll/ۤۖᩴ;->ۨ(Ll/ᩳۖᩴ;)V
-
-    return-void
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۡۖᩴ;->ۙ(Ll/ۤۖᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
+    return-object p1
 .end method

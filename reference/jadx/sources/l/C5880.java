@@ -1,35 +1,32 @@
 package l;
 
-import android.graphics.Bitmap;
-
-/* JADX INFO: renamed from: l.ۛۛ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: CBJR */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5880 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean[] f20066;
+/* JADX INFO: renamed from: l.ۚ᩵᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6QN */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5880 implements InterfaceC2017, InterfaceC25138 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f20067;
+    public final /* synthetic */ InterfaceC2984 f20164;
 
-    public C5880(Bitmap bitmap) {
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
-        this.f20067 = width;
-        this.f20066 = new boolean[width * height];
-        int[] iArr = new int[width];
-        for (int i = 0; i < height; i++) {
-            bitmap.getPixels(iArr, 0, width, 0, i, width, 1);
-            int i2 = i * width;
-            for (int i3 = 0; i3 < width; i3++) {
-                this.f20066[i2 + i3] = (iArr[i3] >>> 24) >= C10820.f36847;
-            }
-        }
+    public /* synthetic */ C5880(InterfaceC2984 interfaceC2984) {
+        this.f20164 = interfaceC2984;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m16089(int i, int i2) {
-        return this.f20066[(i2 * this.f20067) + i];
+    @Override // l.InterfaceC25138
+    public Object apply(Object obj) {
+        return C16320.m38725((C16320) this.f20164, (Throwable) obj);
+    }
+
+    @Override // l.InterfaceC2017
+    /* JADX INFO: renamed from: ᩷ */
+    public void mo1355(Object obj, Throwable th) {
+        C12679 c12679 = (C12679) this.f20164;
+        c12679.f40618.post(new Runnable() { // from class: l.ܽ᩹᩸
+            @Override // java.lang.Runnable
+            public final void run() {
+                Throwable th2 = th;
+                C12679.m31466(this.f58637, l, th2);
+            }
+        });
     }
 }

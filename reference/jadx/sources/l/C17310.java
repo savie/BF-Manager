@@ -1,96 +1,72 @@
 package l;
 
 import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
 
-/* JADX INFO: renamed from: l.ܿۧᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܽۗ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: BWD */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17310 implements InterfaceC18576 {
-    public long a;
-    public final long b;
-    public final int c;
-    public final int d;
+public final class C17310 implements InterfaceC16564, InterfaceC7136 {
 
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return 17728;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Comparator f56373;
+
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public final /* synthetic */ Comparator thenComparing(Comparator comparator) {
+        return C24770.m55294(this, comparator);
     }
 
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C17870.a(this, consumer);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparing(Function function) {
+        return C2661.$default$thenComparing(this, function);
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ Comparator getComparator() {
-        return C21398.$default$getComparator(this);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparing(Function function, Comparator comparator) {
+        return C8627.thenComparing(this, C2661.comparing(function, comparator));
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingDouble(ToDoubleFunction toDoubleFunction) {
+        return C2661.$default$thenComparingDouble(this, toDoubleFunction);
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingInt(ToIntFunction toIntFunction) {
+        return C2661.$default$thenComparingInt(this, toIntFunction);
     }
 
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C17870.b(this, consumer);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingLong(ToLongFunction toLongFunction) {
+        return C2661.$default$thenComparingLong(this, toLongFunction);
     }
 
-    public C17310(long j, long j2, int i, int i2) {
-        this.a = j;
-        this.b = j2;
-        this.c = i;
-        this.d = i2;
+    @Override // l.InterfaceC16564
+    /* JADX INFO: renamed from: ۤ */
+    public final C11343 mo28640(InterfaceC16564 interfaceC16564) {
+        return new C11343(this, interfaceC16564);
     }
 
-    @Override // l.InterfaceC20693
-    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-    public final C17310 trySplit() {
-        long j = this.a;
-        long j2 = (this.b + j) >>> 1;
-        if (j2 <= j) {
-            return null;
-        }
-        this.a = j2;
-        return new C17310(j, j2, this.c, this.d);
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public final Comparator reversed() {
+        return new C15818(this);
     }
 
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.b - this.a;
+    public C17310(Comparator comparator) {
+        this.f56373 = comparator;
     }
 
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(IntConsumer intConsumer) {
-        intConsumer.getClass();
-        long j = this.a;
-        if (j >= this.b) {
-            return false;
-        }
-        intConsumer.accept(C22249.current().b(this.c, this.d));
-        this.a = j + 1;
-        return true;
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return this.f56373.compare((Character) obj, (Character) obj2);
     }
 
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(IntConsumer intConsumer) {
-        intConsumer.getClass();
-        long j = this.a;
-        long j2 = this.b;
-        if (j < j2) {
-            this.a = j2;
-            C22249 c22249Current = C22249.current();
-            do {
-                intConsumer.accept(c22249Current.b(this.c, this.d));
-                j++;
-            } while (j < j2);
-        }
+    @Override // l.InterfaceC16564
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo28639(char c, char c2) {
+        return this.f56373.compare(Character.valueOf(c), Character.valueOf(c2));
     }
 }

@@ -25,13 +25,13 @@ import com.google.android.material.internal.ToolbarUtils;
 import com.google.android.material.internal.TouchObserverFrameLayout;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.motion.MaterialMainContainerBackHelper;
-import l.C0443;
-import l.C13638;
-import l.C22815;
-import l.C5031;
-import l.C6938;
-import l.C7603;
-import l.C8539;
+import l.C0597;
+import l.C16390;
+import l.C17359;
+import l.C17531;
+import l.C18584;
+import l.C22666;
+import l.C24289;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SearchViewAnimationHelper {
@@ -56,7 +56,7 @@ public class SearchViewAnimationHelper {
     public final ImageButton clearButton;
     public final TouchObserverFrameLayout contentContainer;
     public final View divider;
-    public final C6938 dummyToolbar;
+    public final C16390 dummyToolbar;
     public final EditText editText;
     public final FrameLayout headerContainer;
     public final ClippableRoundedCornerLayout rootView;
@@ -64,7 +64,7 @@ public class SearchViewAnimationHelper {
     public SearchBar searchBar;
     public final TextView searchPrefix;
     public final SearchView searchView;
-    public final C6938 toolbar;
+    public final C16390 toolbar;
     public final FrameLayout toolbarContainer;
 
     public SearchViewAnimationHelper(SearchView searchView) {
@@ -169,7 +169,7 @@ public class SearchViewAnimationHelper {
     private void startShowAnimationTranslate() {
         if (this.searchView.isAdjustNothingSoftInputMode()) {
             final SearchView searchView = this.searchView;
-            C13638.requireNonNull(searchView);
+            C17359.requireNonNull(searchView);
             searchView.postDelayed(new Runnable() { // from class: com.google.android.material.search.SearchViewAnimationHelper$$ExternalSyntheticLambda4
                 @Override // java.lang.Runnable
                 public final void run() {
@@ -278,7 +278,7 @@ public class SearchViewAnimationHelper {
     }
 
     private void setActionMenuViewAlphaIfNeeded(float f) {
-        C22815 actionMenuView;
+        C17531 actionMenuView;
         if (!this.searchView.isMenuItemsAnimated() || (actionMenuView = ToolbarUtils.getActionMenuView(this.toolbar)) == null) {
             return;
         }
@@ -366,31 +366,31 @@ public class SearchViewAnimationHelper {
         if (navigationIconButton == null) {
             return;
         }
-        Drawable drawableM20135 = C7603.m20135(navigationIconButton.getDrawable());
+        Drawable drawableM2698 = C0597.m2698(navigationIconButton.getDrawable());
         if (this.searchView.isAnimatedNavigationIcon()) {
-            addDrawerArrowDrawableAnimatorIfNeeded(animatorSet, drawableM20135);
-            addFadeThroughDrawableAnimatorIfNeeded(animatorSet, drawableM20135);
+            addDrawerArrowDrawableAnimatorIfNeeded(animatorSet, drawableM2698);
+            addFadeThroughDrawableAnimatorIfNeeded(animatorSet, drawableM2698);
         } else {
-            setFullDrawableProgressIfNeeded(drawableM20135);
+            setFullDrawableProgressIfNeeded(drawableM2698);
         }
     }
 
     private void addDrawerArrowDrawableAnimatorIfNeeded(AnimatorSet animatorSet, Drawable drawable) {
-        if (drawable instanceof C8539) {
-            final C8539 c8539 = (C8539) drawable;
+        if (drawable instanceof C24289) {
+            final C24289 c24289 = (C24289) drawable;
             ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
             valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.google.android.material.search.SearchViewAnimationHelper$$ExternalSyntheticLambda1
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                    SearchViewAnimationHelper.lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(c8539, valueAnimator);
+                    SearchViewAnimationHelper.lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(c24289, valueAnimator);
                 }
             });
             animatorSet.playTogether(valueAnimatorOfFloat);
         }
     }
 
-    public static /* synthetic */ void lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(C8539 c8539, ValueAnimator valueAnimator) {
-        c8539.m22294(((Float) valueAnimator.getAnimatedValue()).floatValue());
+    public static /* synthetic */ void lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(C24289 c24289, ValueAnimator valueAnimator) {
+        c24289.m54300(((Float) valueAnimator.getAnimatedValue()).floatValue());
     }
 
     private void addFadeThroughDrawableAnimatorIfNeeded(AnimatorSet animatorSet, Drawable drawable) {
@@ -412,8 +412,8 @@ public class SearchViewAnimationHelper {
     }
 
     private void setFullDrawableProgressIfNeeded(Drawable drawable) {
-        if (drawable instanceof C8539) {
-            ((C8539) drawable).m22294(1.0f);
+        if (drawable instanceof C24289) {
+            ((C24289) drawable).m54300(1.0f);
         }
         if (drawable instanceof FadeThroughDrawable) {
             ((FadeThroughDrawable) drawable).setProgress(1.0f);
@@ -421,7 +421,7 @@ public class SearchViewAnimationHelper {
     }
 
     private void addActionMenuViewAnimatorIfNeeded(AnimatorSet animatorSet) {
-        C22815 actionMenuView = ToolbarUtils.getActionMenuView(this.toolbar);
+        C17531 actionMenuView = ToolbarUtils.getActionMenuView(this.toolbar);
         if (actionMenuView == null) {
             return;
         }
@@ -504,7 +504,7 @@ public class SearchViewAnimationHelper {
     private int getFromTranslationXStart(View view) {
         int marginStart = ((ViewGroup.MarginLayoutParams) view.getLayoutParams()).getMarginStart();
         SearchBar searchBar = this.searchBar;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         int paddingStart = searchBar.getPaddingStart();
         if (ViewUtils.isLayoutRtl(this.searchBar)) {
             return ((this.searchBar.getWidth() - this.searchBar.getRight()) + marginStart) - paddingStart;
@@ -538,8 +538,8 @@ public class SearchViewAnimationHelper {
         this.dummyToolbar.setVisibility(8);
     }
 
-    private void setMenuItemsNotClickable(C6938 c6938) {
-        C22815 actionMenuView = ToolbarUtils.getActionMenuView(c6938);
+    private void setMenuItemsNotClickable(C16390 c16390) {
+        C17531 actionMenuView = ToolbarUtils.getActionMenuView(c16390);
         if (actionMenuView != null) {
             for (int i = 0; i < actionMenuView.getChildCount(); i++) {
                 View childAt = actionMenuView.getChildAt(i);
@@ -550,8 +550,8 @@ public class SearchViewAnimationHelper {
         }
     }
 
-    public void startBackProgress(C0443 c0443) {
-        this.backHelper.startBackProgress(c0443, this.searchBar);
+    public void startBackProgress(C18584 c18584) {
+        this.backHelper.startBackProgress(c18584, this.searchBar);
     }
 
     /* JADX WARN: Type inference fix 'apply assigned field type' failed
@@ -564,13 +564,13 @@ public class SearchViewAnimationHelper {
     	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
     	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
      */
-    public void updateBackProgress(C0443 c0443) {
-        if (c0443.m2268() <= 0.0f) {
+    public void updateBackProgress(C18584 c18584) {
+        if (c18584.m43163() <= 0.0f) {
             return;
         }
         MaterialMainContainerBackHelper materialMainContainerBackHelper = this.backHelper;
         SearchBar searchBar = this.searchBar;
-        materialMainContainerBackHelper.updateBackProgress(c0443, searchBar, searchBar.getCornerSize());
+        materialMainContainerBackHelper.updateBackProgress(c18584, searchBar, searchBar.getCornerSize());
         AnimatorSet animatorSet = this.backProgressAnimatorSet;
         if (animatorSet == null) {
             if (this.searchView.isAdjustNothingSoftInputMode()) {
@@ -585,10 +585,10 @@ public class SearchViewAnimationHelper {
             }
             return;
         }
-        animatorSet.setCurrentPlayTime((long) (c0443.m2268() * this.backProgressAnimatorSet.getDuration()));
+        animatorSet.setCurrentPlayTime((long) (c18584.m43163() * this.backProgressAnimatorSet.getDuration()));
     }
 
-    public C0443 onHandleBackInvoked() {
+    public C18584 onHandleBackInvoked() {
         return this.backHelper.onHandleBackInvoked();
     }
 

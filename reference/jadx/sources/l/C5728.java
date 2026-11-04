@@ -1,24 +1,23 @@
 package l;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۛ֨۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 079R */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5728 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f19492;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f19493;
+/* JADX INFO: renamed from: l.ۚܳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 64JA */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5728 implements Consumer {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f19494;
+    public final /* synthetic */ C16168 f19738;
 
-    public C5728(String str, String str2, ArrayList arrayList) {
-        this.f19493 = str;
-        this.f19492 = str2;
-        this.f19494 = arrayList;
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        this.f19738.f52490.m40773((ArrayList) obj);
     }
 }

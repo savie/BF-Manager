@@ -1,18 +1,53 @@
-.class public final synthetic Ll/᩵ۜ᩵;
+.class public final Ll/᩵ۜ᩵;
 .super Ljava/lang/Object;
-.source "M4LF"
-
-# interfaces
-.implements Ljava/util/function/Supplier;
+.source "2AYL"
 
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
+# static fields
+.field public static final ۙ:Ll/ۜ᩷ۨ;
+
+.field public static final ᩷:Ll/ۜ᩷ۨ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 140
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "REMOVED_TASK"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/᩵ۜ᩵;->᩷:Ll/ۜ᩷ۨ;
+
+    .line 165
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "CLOSED_EMPTY"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/᩵ۜ᩵;->ۙ:Ll/ۜ᩷ۨ;
+
+    return-void
+.end method
+
+.method public static final synthetic ۙ()Ll/ۜ᩷ۨ;
     .locals 1
 
-    const/16 v0, 0x2000
+    .line 1
+    sget-object v0, Ll/᩵ۜ᩵;->ۙ:Ll/ۜ᩷ۨ;
 
-    new-array v0, v0, [B
+    return-object v0
+.end method
+
+.method public static final synthetic ᩷()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/᩵ۜ᩵;->᩷:Ll/ۜ᩷ۨ;
 
     return-object v0
 .end method

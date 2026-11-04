@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EntropyDaemon implements Runnable {
     public static final Logger LOG = Logger.getLogger(EntropyDaemon.class.getName());
     public final LinkedList tasks = new LinkedList();

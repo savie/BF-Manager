@@ -1,20 +1,30 @@
 package l;
 
-import android.view.View;
+import android.util.StateSet;
 
-/* JADX INFO: renamed from: l.ۘ᩵ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21WY */
+/* JADX INFO: renamed from: l.ۘ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9OD */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4151 extends AbstractC2034 {
-    @Override // l.AbstractC3445
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo4726(Object obj) {
-        return Float.valueOf(C3115.m9345((View) obj).m9361());
+public class C4151 extends AbstractC20559 {
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public int[][] f14105;
+
+    @Override // l.AbstractC20559
+    /* JADX INFO: renamed from: ᩴ */
+    public void mo6582() {
+        throw null;
     }
 
-    @Override // l.AbstractC2034
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6531(Object obj, float f) {
-        C3115.m9345((View) obj).m9375(f);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m13305(int[] iArr) {
+        int[][] iArr2 = this.f14105;
+        int i = this.f65825;
+        for (int i2 = 0; i2 < i; i2++) {
+            if (StateSet.stateSetMatches(iArr2[i2], iArr)) {
+                return i2;
+            }
+        }
+        return -1;
     }
 }

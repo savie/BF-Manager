@@ -7,7 +7,7 @@ import com.umeng.analytics.pro.am;
 import com.umeng.commonsdk.statistics.idtracking.g;
 import java.io.File;
 import java.util.HashMap;
-import l.C0242;
+import l.C3188;
 import org.simpleframework.xml.strategy.Name;
 import org.simpleframework.xml.stream.DocumentReader;
 
@@ -15,33 +15,33 @@ import org.simpleframework.xml.stream.DocumentReader;
 public final class Mimetypes {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f793;
+    public final HashMap f783;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Log f792 = LogFactory.m302(Mimetypes.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Log f782 = LogFactory.m296(Mimetypes.class);
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static Mimetypes f791 = null;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static Mimetypes f781 = null;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized Mimetypes m729() {
-        Mimetypes mimetypes = f791;
+    public static synchronized Mimetypes m723() {
+        Mimetypes mimetypes = f781;
         if (mimetypes != null) {
             return mimetypes;
         }
-        f791 = new Mimetypes();
-        if (f792.mo294()) {
-            HashMap map = f791.f793;
+        f781 = new Mimetypes();
+        if (f782.mo287()) {
+            HashMap map = f781.f783;
             for (String str : map.keySet()) {
-                f792.mo298("Setting mime type for extension '" + str + "' to '" + ((String) map.get(str)) + "'");
+                f782.mo291("Setting mime type for extension '" + str + "' to '" + ((String) map.get(str)) + "'");
             }
         }
-        return f791;
+        return f781;
     }
 
     public Mimetypes() {
         HashMap map = new HashMap();
-        this.f793 = map;
+        this.f783 = map;
         map.put("3gp", "video/3gpp");
         map.put("ai", "application/postscript");
         map.put("aif", "audio/x-aiff");
@@ -221,31 +221,31 @@ public final class Mimetypes {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m730(File file) {
+    public final String m724(File file) {
         int i;
         String name = file.getName();
         int iLastIndexOf = name.lastIndexOf(".");
-        Log log = f792;
+        Log log = f782;
         if (iLastIndexOf <= 0 || (i = iLastIndexOf + 1) >= name.length()) {
-            if (!log.mo294()) {
+            if (!log.mo287()) {
                 return "application/octet-stream";
             }
-            log.mo298("File name has no extension, mime type cannot be recognised for: ".concat(name));
+            log.mo291("File name has no extension, mime type cannot be recognised for: ".concat(name));
             return "application/octet-stream";
         }
-        String strM789 = StringUtils.m789(name.substring(i));
-        HashMap map = this.f793;
-        if (map.containsKey(strM789)) {
-            String str = (String) map.get(strM789);
-            if (log.mo294()) {
-                log.mo298(C0242.m1617("Recognised extension '", strM789, "', mimetype is: '", str, "'"));
+        String strM783 = StringUtils.m783(name.substring(i));
+        HashMap map = this.f783;
+        if (map.containsKey(strM783)) {
+            String str = (String) map.get(strM783);
+            if (log.mo287()) {
+                log.mo291(C3188.m10404("Recognised extension '", strM783, "', mimetype is: '", str, "'"));
             }
             return str;
         }
-        if (!log.mo294()) {
+        if (!log.mo287()) {
             return "application/octet-stream";
         }
-        log.mo298("Extension '" + strM789 + "' is unrecognized in mime type listing, using default mime type: 'application/octet-stream'");
+        log.mo291("Extension '" + strM783 + "' is unrecognized in mime type listing, using default mime type: 'application/octet-stream'");
         return "application/octet-stream";
     }
 }

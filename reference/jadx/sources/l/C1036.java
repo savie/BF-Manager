@@ -1,66 +1,68 @@
 package l;
 
-import android.graphics.RectF;
+import android.util.Base64;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.֨ۢ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G6MJ */
+/* JADX INFO: renamed from: l.֨۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8WE */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C1036 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final float f4826;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f4827;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f4828;
+    public static final /* synthetic */ int f3749 = 0;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final RectF f4829;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static ArrayList f3750 = new ArrayList();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f4830;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final RectF f4831;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long f4832;
-
-    public C1036(long j, long j2, int i, int i2, int i3, int i4) {
-        this.f4827 = i3;
-        this.f4828 = j;
-        this.f4832 = j2;
-        this.f4830 = i4;
-        float fScalb = Math.scalb(1.0f, i3);
-        this.f4826 = fScalb;
-        double d = i4;
-        double d2 = j * d;
-        double d3 = j2 * d;
-        double d4 = fScalb;
-        double d5 = i;
-        double d6 = d2 + d;
-        float fMin = (float) Math.min(d5, d6 / d4);
-        double d7 = i2;
-        double d8 = d + d3;
-        this.f4831 = new RectF((float) (d2 / d4), (float) (d3 / d4), fMin, (float) Math.min(d7, d8 / d4));
-        this.f4829 = new RectF((float) Math.max(0.0d, (d2 - 1.0d) / d4), (float) Math.max(0.0d, (d3 - 1.0d) / d4), (float) Math.min(d5, (d6 + 1.0d) / d4), (float) Math.min(d7, (d8 + 1.0d) / d4));
+    static {
+        m3940();
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C1036)) {
-            return false;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m3940() {
+        C20348 c20348M46740;
+        boolean z;
+        try {
+            byte[] bArrMo7903 = ApplicationC17729.f58258.mo7903("mfr", (byte[]) null);
+            if (bArrMo7903 != null) {
+                c20348M46740 = new C20348(bArrMo7903);
+                z = false;
+            } else {
+                String string = ApplicationC17729.f58258.getString("mfr", null);
+                if (string == null) {
+                    return;
+                }
+                c20348M46740 = C20348.m46740(Base64.decode(string, 0));
+                z = true;
+            }
+            C17364.m40795((InterfaceC15872) c20348M46740, 1419064394);
+            int i = c20348M46740.readInt();
+            ArrayList arrayList = new ArrayList(i);
+            for (int i2 = 0; i2 < i; i2++) {
+                arrayList.add(new C9984(c20348M46740.m46757(), c20348M46740.m46756()));
+            }
+            f3750 = arrayList;
+            if (z) {
+                m3942();
+            }
+        } catch (Exception unused) {
         }
-        C1036 c1036 = (C1036) obj;
-        return this.f4827 == c1036.f4827 && this.f4830 == c1036.f4830 && this.f4828 == c1036.f4828 && this.f4832 == c1036.f4832;
     }
 
-    public final int hashCode() {
-        int i = ((this.f4827 * 31) + this.f4830) * 31;
-        long j = this.f4828;
-        int i2 = (i + ((int) (j ^ (j >>> 32)))) * 31;
-        long j2 = this.f4832;
-        return i2 + ((int) (j2 ^ (j2 >>> 32)));
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static ArrayList m3941() {
+        return f3750;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static void m3942() {
+        ArrayList<C9984> arrayList = new ArrayList(f3750);
+        C6178 c6178M34975 = C14483.m34975(1419064394);
+        c6178M34975.writeInt(arrayList.size());
+        for (C9984 c9984 : arrayList) {
+            c6178M34975.m17804(c9984.f32084);
+            c6178M34975.m17786((CharSequence) c9984.f32085);
+        }
+        ApplicationC17729.f58258.edit().mo3488("mfr", c6178M34975.m17796()).apply();
     }
 }

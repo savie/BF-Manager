@@ -1,49 +1,57 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.۠ܺ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: H528 */
+/* JADX INFO: renamed from: l.۠֨ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K69S */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8285 extends C21460 {
+public final class C8285 extends AbstractC24188 implements InterfaceC10015, InterfaceC21204 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public C2639 f28773;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6288 f27243 = new C2319();
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public List[] f28774;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte f27244;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f28775;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f27245;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C3097 f28776;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public ArrayList f28777;
-
-    @Override // l.InterfaceC18993
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13930 mo21702(String str, EnumC11959 enumC11959) {
-        if (this.f28777 == null) {
-            this.f28777 = new ArrayList(5);
+    public C8285(EnumC7779 enumC7779, short s, int i) {
+        super(enumC7779);
+        if (s >= 256) {
+            throw new RuntimeException("The register number must be less than v256");
         }
-        C13930 c13930 = new C13930(str, enumC11959);
-        this.f28777.add(c13930);
-        return c13930;
+        this.f27244 = (byte) s;
+        this.f27245 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18993 m21703(int i) {
-        C3097 c3097 = this.f28776;
-        if (this.f28774 == null) {
-            this.f28774 = new List[c3097.m9291().length];
-        }
-        if (i >= this.f28774.length) {
-            System.err.println("WARN: parameter out-of-range in " + c3097);
-            return null;
-        }
-        return new C18868(this, i);
+    public C8285(EnumC7779 enumC7779, byte[] bArr, int i) {
+        super(enumC7779);
+        this.f27244 = (byte) (bArr[i + 1] & 255);
+        this.f27245 = C12556.m31233(i + 2, bArr);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2086(C24166 c24166, int i) {
+        c24166.m54138(this.f78334.f25844);
+        c24166.m54138(this.f27244);
+        c24166.m54134(this.f27245);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ۧ */
+    public final EnumC7801 mo2083() {
+        return EnumC7801.Format31i;
+    }
+
+    @Override // l.InterfaceC10015
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo9996() {
+        return this.f27244 & 255;
+    }
+
+    @Override // l.InterfaceC21204
+    /* JADX INFO: renamed from: ᩴ */
+    public final long mo15898() {
+        return this.f27245;
     }
 }

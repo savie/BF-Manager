@@ -1,46 +1,82 @@
 .class public final synthetic Ll/۠֡ۙ;
 .super Ljava/lang/Object;
-.source "M8TF"
+.source "98TD"
 
 # interfaces
-.implements Ll/۟ۡۙ;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܿ۫ۙ;
+.field public final synthetic ֡:Ll/ۢۙ᩷;
+
+.field public final synthetic ۟:I
+
+.field public final synthetic ܰ:Ll/ۚ۟ۙ;
+
+.field public final synthetic ܿ:Ll/ܰۙ᩷;
+
+.field public final synthetic ᩶:Landroid/util/Pair;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܿ۫ۙ;)V
+.method public synthetic constructor <init>(Ll/ۚ۟ۙ;Landroid/util/Pair;Ll/ܰۙ᩷;Ll/ۢۙ᩷;I)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/۠֡ۙ;->ܺ:Ll/ܿ۫ۙ;
+    iput-object p1, p0, Ll/۠֡ۙ;->ܰ:Ll/ۚ۟ۙ;
+
+    iput-object p2, p0, Ll/۠֡ۙ;->᩶:Landroid/util/Pair;
+
+    iput-object p3, p0, Ll/۠֡ۙ;->ܿ:Ll/ܰۙ᩷;
+
+    iput-object p4, p0, Ll/۠֡ۙ;->֡:Ll/ۢۙ᩷;
+
+    iput p5, p0, Ll/۠֡ۙ;->۟:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final run()V
+    .locals 7
 
-    .line 2
-    check-cast p1, Ll/᩵۠ۙ;
+    .line 575
+    iget-object v0, p0, Ll/۠֡ۙ;->ܰ:Ll/ۚ۟ۙ;
 
-    .line 2198
-    iget-object v0, p0, Ll/۠֡ۙ;->ܺ:Ll/ܿ۫ۙ;
+    iget-object v0, v0, Ll/ۚ۟ۙ;->᩶:Ll/ܺ۟ۙ;
 
-    iget-boolean v1, v0, Ll/ܿ۫ۙ;->ۨ:Z
+    invoke-static {v0}, Ll/ܺ۟ۙ;->ۤ(Ll/ܺ۟ۙ;)Ll/᩷ᩳۙ;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    .line 2199
-    iget-boolean v0, v0, Ll/ܿ۫ۙ;->ۨ:Z
+    iget-object v0, p0, Ll/۠֡ۙ;->᩶:Landroid/util/Pair;
 
-    invoke-interface {p1, v0}, Ll/᩵۠ۙ;->ۖ(Z)V
+    iget-object v2, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    .line 576
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Ll/۠ۙ᩷;
+
+    .line 575
+    iget-object v4, p0, Ll/۠֡ۙ;->ܿ:Ll/ܰۙ᩷;
+
+    iget-object v5, p0, Ll/۠֡ۙ;->֡:Ll/ۢۙ᩷;
+
+    iget v6, p0, Ll/۠֡ۙ;->۟:I
+
+    invoke-interface/range {v1 .. v6}, Ll/۫᩷᩷;->ۙ(ILl/۠ۙ᩷;Ll/ܰۙ᩷;Ll/ۢۙ᩷;I)V
 
     return-void
 .end method

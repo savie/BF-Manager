@@ -1,11 +1,11 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C0252;
-import l.C16523;
+import l.C14442;
+import l.C4794;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class SymmetricAlgorithmProvider extends AlgorithmProvider {
     public void addPoly1305Algorithm(ConfigurableProvider configurableProvider, String str, String str2, String str3) {
         configurableProvider.addAlgorithm("Mac.POLY1305-" + str, str2);
@@ -16,19 +16,19 @@ public abstract class SymmetricAlgorithmProvider extends AlgorithmProvider {
 
     public void addCMacAlgorithm(ConfigurableProvider configurableProvider, String str, String str2, String str3) {
         configurableProvider.addAlgorithm("Mac." + str + "-CMAC", str2);
-        StringBuilder sbM1694 = C0252.m1694(str, "-CMAC", C16523.m38890("Alg.Alias.Mac.", str, "CMAC"), "KeyGenerator.", configurableProvider);
-        sbM1694.append(str);
-        sbM1694.append("-CMAC");
-        configurableProvider.addAlgorithm(sbM1694.toString(), str3);
-        configurableProvider.addAlgorithm(C16523.m38890("Alg.Alias.KeyGenerator.", str, "CMAC"), str + "-CMAC");
+        StringBuilder sbM14772 = C4794.m14772(str, "-CMAC", C14442.m34865("Alg.Alias.Mac.", str, "CMAC"), "KeyGenerator.", configurableProvider);
+        sbM14772.append(str);
+        sbM14772.append("-CMAC");
+        configurableProvider.addAlgorithm(sbM14772.toString(), str3);
+        configurableProvider.addAlgorithm(C14442.m34865("Alg.Alias.KeyGenerator.", str, "CMAC"), str + "-CMAC");
     }
 
     public void addGMacAlgorithm(ConfigurableProvider configurableProvider, String str, String str2, String str3) {
         configurableProvider.addAlgorithm("Mac." + str + "-GMAC", str2);
-        StringBuilder sbM1694 = C0252.m1694(str, "-GMAC", C16523.m38890("Alg.Alias.Mac.", str, "GMAC"), "KeyGenerator.", configurableProvider);
-        sbM1694.append(str);
-        sbM1694.append("-GMAC");
-        configurableProvider.addAlgorithm(sbM1694.toString(), str3);
-        configurableProvider.addAlgorithm(C16523.m38890("Alg.Alias.KeyGenerator.", str, "GMAC"), str + "-GMAC");
+        StringBuilder sbM14772 = C4794.m14772(str, "-GMAC", C14442.m34865("Alg.Alias.Mac.", str, "GMAC"), "KeyGenerator.", configurableProvider);
+        sbM14772.append(str);
+        sbM14772.append("-GMAC");
+        configurableProvider.addAlgorithm(sbM14772.toString(), str3);
+        configurableProvider.addAlgorithm(C14442.m34865("Alg.Alias.KeyGenerator.", str, "GMAC"), str + "-GMAC");
     }
 }

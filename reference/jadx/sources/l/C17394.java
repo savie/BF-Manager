@@ -1,173 +1,95 @@
 package l;
 
-import java.io.EOFException;
+import bin.mt.plus.R;
 import java.io.IOException;
-import java.io.InterruptedIOException;
 
-/* JADX INFO: renamed from: l.ܿܰ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: T4F2 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17394 implements InterfaceC10008 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final long f55356;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f55358;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11045 f55360;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f55361;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C6043 f55357 = new C6043();
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C6043 f55359 = new C6043();
-
-    public C17394(C11045 c11045, long j) {
-        this.f55360 = c11045;
-        this.f55356 = j;
+/* JADX INFO: renamed from: l.ܽۛᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46JS */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17394 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m40856() {
+        return ApplicationC17729.f58258.getString("ais", "");
     }
 
-    /* JADX WARN: Code duplicated, block: B:33:0x0092  */
-    /* JADX WARN: Code duplicated, block: B:35:0x009a A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:36:0x009c A[RETURN] */
-    /* JADX WARN: Code duplicated, block: B:37:0x009d  */
-    @Override // l.InterfaceC10008
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo2293(C6043 c6043, long j) throws C13805 {
-        EnumC9365 enumC9365;
-        long jMo2293;
-        while (true) {
-            synchronized (this.f55360) {
-                this.f55360.f37508.m39092();
-                try {
-                    C11045 c11045 = this.f55360;
-                    enumC9365 = c11045.f37514;
-                    if (enumC9365 == null) {
-                        enumC9365 = null;
-                    }
-                    if (!this.f55358) {
-                        c11045.f37512.isEmpty();
-                        if (this.f55359.size() > 0) {
-                            C6043 c6044 = this.f55359;
-                            jMo2293 = c6044.mo2293(c6043, Math.min(8192L, c6044.size()));
-                            C11045 c11046 = this.f55360;
-                            long j2 = c11046.f37513 + jMo2293;
-                            c11046.f37513 = j2;
-                            if (enumC9365 != null || j2 < c11046.f37516.f65608.m12788() / 2) {
-                                break;
-                                break;
-                            }
-                            C11045 c11047 = this.f55360;
-                            c11047.f37516.m45694(c11047.f37517, c11047.f37513);
-                            this.f55360.f37513 = 0L;
-                            break;
-                        }
-                        if (this.f55361 || enumC9365 != null) {
-                            jMo2293 = -1;
-                            break;
-                        }
-                        try {
-                            this.f55360.wait();
-                            this.f55360.f37508.m16599();
-                        } catch (InterruptedException unused) {
-                            Thread.currentThread().interrupt();
-                            throw new InterruptedIOException();
-                        }
-                    } else {
-                        throw new IOException("stream closed");
-                    }
-                } catch (Throwable th) {
-                    this.f55360.f37508.m16599();
-                    throw th;
-                }
-            }
-            if (jMo2293 != -1) {
-                this.f55360.f37516.m45689(jMo2293);
-                return jMo2293;
-            }
-            if (enumC9365 == null) {
-                return -1L;
-            }
-            throw new C13805(enumC9365);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m40860(String str) {
+        if (!str.isEmpty() && !m40858(str)) {
+            throw new IllegalArgumentException("Invalid installer package name");
         }
-        this.f55360.f37508.m16599();
-        if (jMo2293 != -1) {
-            this.f55360.f37516.m45689(jMo2293);
-            return jMo2293;
-        }
-        if (enumC9365 == null) {
-            return -1L;
-        }
-        throw new C13805(enumC9365);
+        ApplicationC17729.f58258.edit().putString("ais", str).apply();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40511(InterfaceC23683 interfaceC23683, long j) {
-        boolean z;
-        boolean z2;
-        long size;
-        while (j > 0) {
-            synchronized (this.f55360) {
-                z = this.f55361;
-                z2 = this.f55359.size() + j > this.f55356;
-            }
-            if (z2) {
-                interfaceC23683.skip(j);
-                this.f55360.m27863(EnumC9365.FLOW_CONTROL_ERROR);
-                return;
-            }
-            if (z) {
-                interfaceC23683.skip(j);
-                return;
-            }
-            long jMo2293 = interfaceC23683.mo2293(this.f55357, j);
-            if (jMo2293 == -1) {
-                throw new EOFException();
-            }
-            j -= jMo2293;
-            synchronized (this.f55360) {
-                if (this.f55358) {
-                    size = this.f55357.size();
-                    this.f55357.m16407();
-                } else {
-                    boolean z3 = this.f55359.size() == 0;
-                    this.f55359.m16411((InterfaceC10008) this.f55357);
-                    if (z3) {
-                        this.f55360.notifyAll();
+    public static boolean m40858(String str) {
+        if (!str.isEmpty() && str.length() < 255) {
+            boolean z = true;
+            boolean z2 = false;
+            for (int i = 0; i < str.length(); i++) {
+                char cCharAt = str.charAt(i);
+                if (cCharAt == '.') {
+                    if (z) {
+                        return false;
                     }
-                    size = 0;
+                    z = true;
+                    z2 = true;
+                } else {
+                    if ((cCharAt < 'a' || cCharAt > 'z') && ((cCharAt < 'A' || cCharAt > 'Z') && (z || (cCharAt != '_' && (cCharAt < '0' || cCharAt > '9'))))) {
+                        return false;
+                    }
+                    z = false;
                 }
             }
-            if (size > 0) {
-                this.f55360.f37516.m45689(size);
+            if (!z && (z2 || str.equals("android"))) {
+                return true;
             }
         }
+        return false;
     }
 
-    @Override // l.InterfaceC10008
-    /* JADX INFO: renamed from: ۜ */
-    public final C20591 mo2292() {
-        return this.f55360.f37508;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static String m40859(String str) {
+        if (str.isEmpty()) {
+            return "";
+        }
+        if (!m40858(str)) {
+            throw new IllegalArgumentException("Invalid installer package name");
+        }
+        return "-i " + C7756.m21098(str) + " ";
     }
 
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        long size;
-        synchronized (this.f55360) {
-            this.f55358 = true;
-            size = this.f55359.size();
-            this.f55359.m16407();
-            this.f55360.f37512.isEmpty();
-            this.f55360.notifyAll();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m40855(InterfaceC24911 interfaceC24911) throws IOException {
+        C11484 c11484Mo6263 = interfaceC24911.mo6263("am get-current-user", true);
+        String strTrim = c11484Mo6263.m28854().trim();
+        if (!c11484Mo6263.m28855()) {
+            try {
+                int i = Integer.parseInt(strTrim);
+                if (i >= 0) {
+                    return i;
+                }
+            } catch (NumberFormatException unused) {
+            }
         }
-        if (size > 0) {
-            this.f55360.f37516.m45689(size);
+        throw new IOException(C25272.m56409("Unable to resolve current installation user: ", strTrim));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m40857(InterfaceC24911 interfaceC24911, String str, String str2) throws C4866 {
+        if (str2.isEmpty()) {
+            return;
         }
-        this.f55360.m27854();
+        StringBuilder sbM51387 = C22783.m51387("pm list packages --user ", str, " ");
+        sbM51387.append(C7756.m21098(str2));
+        C11484 c11484Mo6263 = interfaceC24911.mo6263(sbM51387.toString(), true);
+        if (c11484Mo6263.m28855()) {
+            throw new C4866(c11484Mo6263.f36124);
+        }
+        for (String str3 : c11484Mo6263.f36125) {
+            if (str3.trim().equals("package:".concat(str2))) {
+                return;
+            }
+        }
+        throw new C4866(C21576.m49059(R.string.MT_Protector, str2));
     }
 }

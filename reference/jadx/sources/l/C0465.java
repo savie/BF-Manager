@@ -1,39 +1,43 @@
 package l;
 
-import java.util.LinkedHashSet;
+import android.content.Context;
+import android.util.AttributeSet;
 
-/* JADX INFO: renamed from: l.֡ܳ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: N78D */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0465 {
+/* JADX INFO: renamed from: l.֡ܰ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J1JQ */
+/* JADX INFO: loaded from: classes3.dex */
+public class C0465 extends AbstractC13143 {
+    public C0465(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public String f2093;
+    public C0465(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public String f2094;
+    @Override // l.AbstractC13143, android.view.View
+    public final void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        m32668();
+    }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public String f2095;
+    @Override // android.view.View
+    public final void setVisibility(int i) {
+        super.setVisibility(i);
+        m32668();
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f2096;
+    @Override // android.view.View
+    public final void setElevation(float f) {
+        super.setElevation(f);
+        m32668();
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final LinkedHashSet f2097 = new LinkedHashSet();
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public String f2098;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f2099;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public String f2100;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f2101;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public String f2102;
+    @Override // l.AbstractC13143
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo2278() {
+        C11651 c11651 = (C11651) getLayoutParams();
+        c11651.f37714.m26805(0);
+        c11651.f37714.m26824(0);
+    }
 }

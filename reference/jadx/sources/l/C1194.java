@@ -1,16 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ܶۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U4S1 */
+import android.widget.CompoundButton;
+
+/* JADX INFO: renamed from: l.֨۬ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O8UQ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1194 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f5295;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f5296;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f5297;
+public final /* synthetic */ class C1194 implements CompoundButton.OnCheckedChangeListener {
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        C6421.m18184(ApplicationC17729.f58258, "mbp", z);
+    }
 }

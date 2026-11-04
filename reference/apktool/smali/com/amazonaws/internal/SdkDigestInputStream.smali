@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/amazonaws/internal/MetricAware;
-.implements Ll/᩷ۤᩴ;
+.implements Ll/۠ۜ᩹;
 
 
 # virtual methods
@@ -85,7 +85,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    invoke-static {p0, p1}, Ll/ۡۜ᩹;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
     move-result-wide v0
 

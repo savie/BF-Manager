@@ -1,78 +1,66 @@
 package l;
 
-import java.util.Spliterator;
-
-/* JADX INFO: renamed from: l.۬ۙᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97L */
+/* JADX INFO: renamed from: l.۫ۚۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4E9 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12891 extends AbstractC19385 {
+public final class C12891 implements InterfaceC7099 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7952 f42858;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f41235;
 
-    @Override // l.AbstractC19385, l.AbstractC3861, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C23508 f41236;
 
-    public C12891(C7952 c7952) {
-        this.f42858 = c7952;
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16620 f41237;
 
-    @Override // l.AbstractC3861, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
-    public final InterfaceC15277 iterator() {
-        return new C0895(this.f42858);
-    }
-
-    @Override // l.AbstractC19385, l.AbstractC3861, java.util.Collection, java.lang.Iterable, l.InterfaceC23475, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC11687 spliterator() {
-        return new C3717(this.f42858);
-    }
-
-    @Override // l.AbstractC3861, l.InterfaceC6809
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2288(InterfaceC1164 interfaceC1164) {
-        C7952 c7952 = this.f42858;
-        char[] cArr = c7952.f26123;
-        if (c7952.f26122) {
-            interfaceC1164.mo4297(cArr[c7952.f26126]);
+    @Override // l.InterfaceC7099, java.io.Closeable, java.lang.AutoCloseable
+    public final synchronized void close() {
+        if (this.f41235) {
+            return;
         }
-        int i = c7952.f26126;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return;
-            }
-            char c = cArr[i2];
-            if (c != 0) {
-                interfaceC1164.mo4297(c);
-            }
-            i = i2;
+        this.f41235 = true;
+        this.f41237.f53744.mo6442("0\r\n\r\n");
+        C23508 c23508 = this.f41236;
+        C22411 c22411M52696 = c23508.m52696();
+        c23508.m52695();
+        c22411M52696.mo50548();
+        c22411M52696.mo50552();
+        this.f41237.f53746 = 3;
+    }
+
+    @Override // l.InterfaceC7099, java.io.Flushable
+    public final synchronized void flush() {
+        if (this.f41235) {
+            return;
         }
+        this.f41237.f53744.flush();
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f42858.f26121;
+    public C12891(C16620 c16620) {
+        this.f41237 = c16620;
+        this.f41236 = new C23508(c16620.f53744.mo6067());
     }
 
-    @Override // l.InterfaceC23475
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2286(char c) {
-        return this.f42858.mo15965(c);
+    @Override // l.InterfaceC7099
+    /* JADX INFO: renamed from: ۧ */
+    public final C22411 mo6067() {
+        return this.f41236;
     }
 
-    @Override // l.AbstractC19385
+    @Override // l.InterfaceC7099
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2289(char c) {
-        C7952 c7952 = this.f42858;
-        int i = c7952.f26121;
-        c7952.mo7436(c);
-        return c7952.f26121 != i;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final void clear() {
-        this.f42858.clear();
+    public final void mo6066(C1879 c1879, long j) {
+        InterfaceC11573 interfaceC11573 = this.f41237.f53744;
+        if (this.f41235) {
+            throw new IllegalStateException("closed");
+        }
+        if (j == 0) {
+            return;
+        }
+        interfaceC11573.mo6453(j);
+        interfaceC11573.mo6442("\r\n");
+        interfaceC11573.mo6066(c1879, j);
+        interfaceC11573.mo6442("\r\n");
     }
 }

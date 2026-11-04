@@ -1,104 +1,70 @@
-.class public final Ll/ۨ᩸᩺;
-.super Ll/۫۫ܰ;
-.source "T8W7"
+.class public final synthetic Ll/ۨ᩸᩺;
+.super Ljava/lang/Object;
+.source "B7FA"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ۜ᩸᩺;
-
-.field public final synthetic ܰ:Landroid/widget/TextView;
+.field public final synthetic ܰ:Ll/ܽۙ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ᩸᩺;Landroid/widget/TextView;)V
+.method public synthetic constructor <init>(Ll/ܽۙ᩺;)V
     .locals 0
 
-    .line 60
-    iput-object p1, p0, Ll/ۨ᩸᩺;->ۙ:Ll/ۜ᩸᩺;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ll/ۨ᩸᩺;->ܰ:Landroid/widget/TextView;
-
-    invoke-direct {p0}, Ll/۫۫ܰ;-><init>()V
+    iput-object p1, p0, Ll/ۨ᩸᩺;->ܰ:Ll/ܽۙ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged()V
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 63
-    iget-object v0, p0, Ll/ۨ᩸᩺;->ۙ:Ll/ۜ᩸᩺;
+    .line 2
+    check-cast p1, Ll/ۜۧ᩺;
 
-    invoke-static {v0}, Ll/ۜ᩸᩺;->ܰ(Ll/ۜ᩸᩺;)Ljava/util/List;
+    .line 65
+    iget-object v0, p0, Ll/ۨ᩸᩺;->ܰ:Ll/ܽۙ᩺;
 
-    move-result-object v0
+    iget-object v0, v0, Ll/ۚ᩸᩺;->۫:Ll/ܳۤ᩺;
 
-    check-cast v0, Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    .line 497
+    sget-object v1, Ll/ۗۙ᩺;->۠:Ll/ۗۙ᩺;
 
-    move-result v0
+    invoke-virtual {v0, v1, p1}, Ll/ܳۤ᩺;->ۙ(Ll/ۗۙ᩺;Ll/۬᩸᩺;)Ll/۟ۙ᩺;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    iget-object v1, p0, Ll/ۨ᩸᩺;->ܰ:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final onItemRangeChanged(II)V
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
     .locals 0
 
-    .line 68
-    invoke-virtual {p0}, Ll/ۨ᩸᩺;->onChanged()V
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final onItemRangeChanged(IILjava/lang/Object;)V
-    .locals 0
-
-    .line 73
-    invoke-virtual {p0}, Ll/ۨ᩸᩺;->onChanged()V
-
-    return-void
-.end method
-
-.method public final onItemRangeInserted(II)V
-    .locals 0
-
-    .line 78
-    invoke-virtual {p0}, Ll/ۨ᩸᩺;->onChanged()V
-
-    return-void
-.end method
-
-.method public final onItemRangeMoved(III)V
-    .locals 0
-
-    .line 88
-    invoke-virtual {p0}, Ll/ۨ᩸᩺;->onChanged()V
-
-    return-void
-.end method
-
-.method public final onItemRangeRemoved(II)V
-    .locals 0
-
-    .line 83
-    invoke-virtual {p0}, Ll/ۨ᩸᩺;->onChanged()V
-
-    return-void
+    return-object p1
 .end method

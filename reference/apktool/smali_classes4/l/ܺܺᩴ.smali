@@ -1,72 +1,46 @@
-.class public abstract synthetic Ll/ܺܺᩴ;
+.class public final Ll/ܺܺᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "V702"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final ֫:I
+
+.field public ۙ:I
+
+.field public ۚ:J
+
+.field public ۤ:[Ll/ܺܺᩴ;
+
+.field public ۧ:Ljava/lang/Object;
+
+.field public ۫:Ll/֫ܺᩴ;
+
+.field public final ܳ:I
+
+.field public ܺ:[I
+
+.field public ᩴ:Z
+
+.field public ᩷:[Ll/֫ܺᩴ;
+
+.field public ᩸:Ll/֫ܺᩴ;
+
+.field public ᩻:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(II)V
+    .locals 0
 
-    .line 2724
-    invoke-static {}, Ll/ᩳܺᩴ;->values()[Ll/ᩳܺᩴ;
+    .line 5341
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 5342
+    iput p1, p0, Ll/ܺܺᩴ;->ܳ:I
 
-    array-length v0, v0
+    .line 5343
+    iput p2, p0, Ll/ܺܺᩴ;->֫:I
 
-    new-array v0, v0, [I
-
-    sput-object v0, Ll/ܺܺᩴ;->a:[I
-
-    :try_start_0
-    sget-object v1, Ll/ᩳܺᩴ;->ENTRY:Ll/ᩳܺᩴ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ܺܺᩴ;->a:[I
-
-    sget-object v1, Ll/ᩳܺᩴ;->START_DIRECTORY:Ll/ᩳܺᩴ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/ܺܺᩴ;->a:[I
-
-    sget-object v1, Ll/ᩳܺᩴ;->END_DIRECTORY:Ll/ᩳܺᩴ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
     return-void
 .end method

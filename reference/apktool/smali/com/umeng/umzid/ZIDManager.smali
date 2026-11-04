@@ -906,18 +906,18 @@
 
     const-string p2, "\u4f20\u5165\u53c2\u6570Context\u4e3anull"
 
-    .line 12
+    .line 13
     invoke-interface {p3, p1, p2}, Lcom/umeng/umzid/IZIDCompletionCallback;->onFailure(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 17
+    .line 18
     :cond_0
     monitor-exit v0
 
     return-void
 
-    .line 21
+    .line 22
     :cond_1
     :try_start_1
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -932,18 +932,18 @@
 
     const-string p2, "\u4f20\u5165\u53c2\u6570appkey\u4e3a\u7a7a"
 
-    .line 33
+    .line 35
     invoke-interface {p3, p1, p2}, Lcom/umeng/umzid/IZIDCompletionCallback;->onFailure(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 34
+    .line 36
     :cond_2
     monitor-exit v0
 
     return-void
 
-    .line 38
+    .line 40
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;

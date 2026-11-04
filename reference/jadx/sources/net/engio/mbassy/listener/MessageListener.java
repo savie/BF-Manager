@@ -6,7 +6,7 @@ import java.util.List;
 import net.engio.mbassy.common.IPredicate;
 import net.engio.mbassy.common.ReflectionUtils;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageListener {
     public ArrayList handlers = new ArrayList();
     public Listener listenerAnnotation;

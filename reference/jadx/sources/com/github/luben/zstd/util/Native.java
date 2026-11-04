@@ -8,18 +8,18 @@ import java.io.InputStream;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.util.concurrent.atomic.AtomicBoolean;
-import l.C12278;
-import l.C22697;
+import l.C3188;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum Native {
     ;
 
-    public static final String libname = "libzstd-jni-1.5.7-7";
-    public static final String libnameShort = "zstd-jni-1.5.7-7";
+    public static final String libname = "libzstd-jni-1.5.7-12";
+    public static final String libnameShort = "zstd-jni-1.5.7-12";
     public static final String nativePathOverride = "ZstdNativePath";
     public static final String tempFolderOverride = "ZstdTempFolder";
-    public static final String errorMsg = C22697.m50267(new StringBuilder("Unsupported OS/arch, cannot find "), resourceName(), " or load zstd-jni-1.5.7-7 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.7-7 in your system.");
+    public static final String errorMsg = C8947.m23910(new StringBuilder("Unsupported OS/arch, cannot find "), resourceName(), " or load zstd-jni-1.5.7-12 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.7-12 in your system.");
     public static AtomicBoolean loaded = new AtomicBoolean(false);
 
     public static synchronized void assumeLoaded() {
@@ -51,9 +51,9 @@ public enum Native {
         if (strOsName.equals("darwin") && property.equals("amd64")) {
             property = "x86_64";
         }
-        StringBuilder sbM30515 = C12278.m30515("/", strOsName, "/", property, "/libzstd-jni-1.5.7-7.");
-        sbM30515.append(libExtension());
-        return sbM30515.toString();
+        StringBuilder sbM10406 = C3188.m10406("/", strOsName, "/", property, "/libzstd-jni-1.5.7-12.");
+        sbM10406.append(libExtension());
+        return sbM10406.toString();
     }
 
     public static void loadLibrary(final String str) {
@@ -85,8 +85,10 @@ public enum Native {
         }
     }
 
-    /* JADX WARN: Code duplicated, block: B:70:0x0140 A[Catch: IOException -> 0x014e, all -> 0x014f, TryCatch #2 {IOException -> 0x014e, blocks: (B:68:0x013b, B:70:0x0140, B:72:0x0145, B:74:0x014b), top: B:81:0x013b }] */
-    /* JADX WARN: Code duplicated, block: B:72:0x0145 A[Catch: IOException -> 0x014e, all -> 0x014f, TryCatch #2 {IOException -> 0x014e, blocks: (B:68:0x013b, B:70:0x0140, B:72:0x0145, B:74:0x014b), top: B:81:0x013b }] */
+    /* JADX WARN: Code duplicated, block: B:103:? A[RETURN, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:42:0x00b8 A[Catch: IOException -> 0x00c4, all -> 0x014a, TryCatch #3 {, blocks: (B:4:0x0005, B:8:0x000f, B:10:0x001c, B:16:0x0032, B:18:0x003a, B:40:0x00b3, B:42:0x00b8, B:43:0x00bb, B:45:0x00c1, B:68:0x0136, B:70:0x013b, B:72:0x0140, B:74:0x0146, B:75:0x0149, B:22:0x0047, B:23:0x006d, B:13:0x0026), top: B:83:0x0005, inners: #7, #9 }] */
+    /* JADX WARN: Code duplicated, block: B:45:0x00c1 A[Catch: IOException -> 0x00c4, all -> 0x014a, TRY_LEAVE, TryCatch #3 {, blocks: (B:4:0x0005, B:8:0x000f, B:10:0x001c, B:16:0x0032, B:18:0x003a, B:40:0x00b3, B:42:0x00b8, B:43:0x00bb, B:45:0x00c1, B:68:0x0136, B:70:0x013b, B:72:0x0140, B:74:0x0146, B:75:0x0149, B:22:0x0047, B:23:0x006d, B:13:0x0026), top: B:83:0x0005, inners: #7, #9 }] */
+    /* JADX WARN: Code duplicated, block: B:70:0x013b A[Catch: IOException -> 0x0149, all -> 0x014a, TryCatch #3 {, blocks: (B:4:0x0005, B:8:0x000f, B:10:0x001c, B:16:0x0032, B:18:0x003a, B:40:0x00b3, B:42:0x00b8, B:43:0x00bb, B:45:0x00c1, B:68:0x0136, B:70:0x013b, B:72:0x0140, B:74:0x0146, B:75:0x0149, B:22:0x0047, B:23:0x006d, B:13:0x0026), top: B:83:0x0005, inners: #7, #9 }] */
     public static synchronized void load(File file) {
         Throwable th;
         File fileCreateTempFile;
@@ -103,7 +105,6 @@ public enum Native {
             return;
         }
         try {
-            Class.forName("org.osgi.framework.BundleEvent");
             loadLibrary(libname);
             loaded.set(true);
         } catch (Throwable unused) {
@@ -160,6 +161,14 @@ public enum Native {
                             } catch (UnsatisfiedLinkError e3) {
                                 try {
                                     loadLibrary(libnameShort);
+                                    loaded.set(true);
+                                    resourceAsStream.close();
+                                    if (fileOutputStream2 != null) {
+                                        fileOutputStream2.close();
+                                    }
+                                    if (fileCreateTempFile.exists()) {
+                                        fileCreateTempFile.delete();
+                                    }
                                 } catch (UnsatisfiedLinkError e4) {
                                     UnsatisfiedLinkError unsatisfiedLinkError2 = new UnsatisfiedLinkError(e3.getMessage() + "\n" + e4.getMessage() + "\n" + errorMsg);
                                     unsatisfiedLinkError2.setStackTrace(e4.getStackTrace());
@@ -191,7 +200,7 @@ public enum Native {
                         }
                     } catch (IOException e5) {
                         e = e5;
-                        ExceptionInInitializerError exceptionInInitializerError = new ExceptionInInitializerError("Cannot unpack libzstd-jni-1.5.7-7: " + e.getMessage());
+                        ExceptionInInitializerError exceptionInInitializerError = new ExceptionInInitializerError("Cannot unpack libzstd-jni-1.5.7-12: " + e.getMessage());
                         exceptionInInitializerError.setStackTrace(e.getStackTrace());
                         throw exceptionInInitializerError;
                     }
@@ -199,26 +208,16 @@ public enum Native {
                     FileOutputStream fileOutputStream3 = fileOutputStream2;
                     e = e6;
                     fileOutputStream = fileOutputStream3;
-                    ExceptionInInitializerError exceptionInInitializerError2 = new ExceptionInInitializerError("Cannot unpack libzstd-jni-1.5.7-7: " + e.getMessage());
+                    ExceptionInInitializerError exceptionInInitializerError2 = new ExceptionInInitializerError("Cannot unpack libzstd-jni-1.5.7-12: " + e.getMessage());
                     exceptionInInitializerError2.setStackTrace(e.getStackTrace());
                     throw exceptionInInitializerError2;
-                } catch (Throwable th3) {
-                    th = th3;
-                    resourceAsStream.close();
-                    if (fileOutputStream2 != null) {
-                        fileOutputStream2.close();
-                    }
-                    if (fileCreateTempFile != null) {
-                        fileCreateTempFile.delete();
-                    }
-                    throw th;
                 }
             } catch (IOException e7) {
                 fileOutputStream = null;
                 e = e7;
                 fileCreateTempFile = null;
-            } catch (Throwable th4) {
-                th = th4;
+            } catch (Throwable th3) {
+                th = th3;
                 fileCreateTempFile = null;
             }
         }

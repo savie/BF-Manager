@@ -41,7 +41,7 @@
     const-string v0, "com.rosan.dhizuku"
 
     .line 19
-    invoke-static {p0, v0}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -55,7 +55,7 @@
     const-string v0, ".action.REQUEST_DHIZUKU_PERMISSION"
 
     .line 0
-    invoke-static {p0, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -68,7 +68,7 @@
     const-string v0, "com.rosan.dhizuku"
 
     .line 13
-    invoke-static {p0, v0}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -82,7 +82,7 @@
     const-string v0, ".dhizuku_server.provider"
 
     .line 0
-    invoke-static {p0, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

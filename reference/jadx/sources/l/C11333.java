@@ -1,29 +1,28 @@
 package l;
 
-import android.text.TextUtils;
-import com.umeng.analytics.pro.am;
-import java.util.Collection;
-import java.util.Collections;
+import java.nio.charset.Charset;
 
-/* JADX INFO: renamed from: l.ۧ᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G8XL */
+/* JADX INFO: renamed from: l.ۧۗۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAGY */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11333 extends AbstractC2159 {
-    @Override // l.AbstractC2159
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6724(C18410 c18410, InterfaceC9239 interfaceC9239, InterfaceC21022 interfaceC21022) {
-        InterfaceC4774 interfaceC4774Mo19014;
-        String str = (String) interfaceC21022.attributes().get("href");
-        if (TextUtils.isEmpty(str) || (interfaceC4774Mo19014 = c18410.m42695().mo19014(C21483.class)) == null) {
-            return null;
-        }
-        AbstractC16769.f53671.m34276(interfaceC9239, str);
-        return interfaceC4774Mo19014.mo6311(c18410, interfaceC9239);
+public final class C11333 implements InterfaceC24760 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Charset f35706;
+
+    public C11333(Charset charset) {
+        this.f35706 = charset;
     }
 
-    @Override // l.AbstractC3382
-    /* JADX INFO: renamed from: ۙ */
-    public final Collection mo3243() {
-        return Collections.singleton(am.av);
+    @Override // l.InterfaceC24760
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String mo28621(int i, int i2, byte[] bArr) {
+        return new String(bArr, i, i2, this.f35706);
+    }
+
+    @Override // l.InterfaceC24760
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] mo28622(String str) {
+        return str.getBytes(this.f35706);
     }
 }

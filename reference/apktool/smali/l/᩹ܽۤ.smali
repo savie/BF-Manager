@@ -1,86 +1,73 @@
-.class public final synthetic Ll/᩹ܽۤ;
-.super Ljava/lang/Object;
-.source "F416"
-
-# interfaces
-.implements Ll/ᩳ᩻ۤ;
+.class public final Ll/᩹ܽۤ;
+.super Ljava/util/LinkedHashMap;
+.source "17JK"
 
 
 # instance fields
-.field public final synthetic ֨:Ll/᩸᩷۟;
-
-.field public final synthetic ۖ:Ll/֨۫ۤ;
-
-.field public final synthetic ۘ:Ll/᩷ᩴۤ;
-
-.field public final synthetic ۙ:Ll/ۜ۫ۤ;
-
-.field public final synthetic ۚ:Ll/ۡ۠۟;
-
-.field public final synthetic ۨ:Ll/ۛ۠۟;
-
-.field public final synthetic ۬:Ll/᩸᩷۟;
-
-.field public final synthetic ܰ:Ll/۠᩵۟;
-
-.field public final synthetic ᩹:Ll/ۙۧۤ;
+.field public final synthetic ܰ:Ll/᩵ܽۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۜ۫ۤ;Ll/۠᩵۟;Ll/ۛ۠۟;Ll/֨۫ۤ;Ll/ۡ۠۟;Ll/ۙۧۤ;Ll/᩸᩷۟;Ll/᩸᩷۟;Ll/᩷ᩴۤ;)V
-    .locals 0
+.method public constructor <init>(Ll/᩵ܽۤ;)V
+    .locals 2
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 95
+    iput-object p1, p0, Ll/᩹ܽۤ;->ܰ:Ll/᩵ܽۤ;
 
-    iput-object p1, p0, Ll/᩹ܽۤ;->ۙ:Ll/ۜ۫ۤ;
+    const/4 p1, 0x6
 
-    iput-object p2, p0, Ll/᩹ܽۤ;->ܰ:Ll/۠᩵۟;
+    const/high16 v0, 0x3f400000    # 0.75f
 
-    iput-object p3, p0, Ll/᩹ܽۤ;->ۨ:Ll/ۛ۠۟;
+    const/4 v1, 0x1
 
-    iput-object p4, p0, Ll/᩹ܽۤ;->ۖ:Ll/֨۫ۤ;
-
-    iput-object p5, p0, Ll/᩹ܽۤ;->ۚ:Ll/ۡ۠۟;
-
-    iput-object p6, p0, Ll/᩹ܽۤ;->᩹:Ll/ۙۧۤ;
-
-    iput-object p7, p0, Ll/᩹ܽۤ;->֨:Ll/᩸᩷۟;
-
-    iput-object p8, p0, Ll/᩹ܽۤ;->۬:Ll/᩸᩷۟;
-
-    iput-object p9, p0, Ll/᩹ܽۤ;->ۘ:Ll/᩷ᩴۤ;
+    invoke-direct {p0, p1, v0, v1}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/᩵ܳۤ;)V
-    .locals 10
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+    .locals 2
 
-    .line 0
-    iget-object v7, p0, Ll/᩹ܽۤ;->۬:Ll/᩸᩷۟;
+    .line 98
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
 
-    iget-object v8, p0, Ll/᩹ܽۤ;->ۘ:Ll/᩷ᩴۤ;
+    move-result v0
 
-    iget-object v0, p0, Ll/᩹ܽۤ;->ۙ:Ll/ۜ۫ۤ;
+    const/4 v1, 0x5
 
-    iget-object v1, p0, Ll/᩹ܽۤ;->ܰ:Ll/۠᩵۟;
+    if-le v0, v1, :cond_0
 
-    iget-object v2, p0, Ll/᩹ܽۤ;->ۨ:Ll/ۛ۠۟;
+    .line 100
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    iget-object v3, p0, Ll/᩹ܽۤ;->ۖ:Ll/֨۫ۤ;
+    move-result-object p1
 
-    iget-object v4, p0, Ll/᩹ܽۤ;->ۚ:Ll/ۡ۠۟;
+    check-cast p1, Ll/ܳܽۤ;
 
-    iget-object v5, p0, Ll/᩹ܽۤ;->᩹:Ll/ۙۧۤ;
+    invoke-interface {p1}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v6, p0, Ll/᩹ܽۤ;->֨:Ll/᩸᩷۟;
+    goto :goto_0
 
-    move-object v9, p1
+    :catch_0
+    move-exception p1
 
-    invoke-static/range {v0 .. v9}, Ll/ۜ۫ۤ;->ۙ(Ll/ۜ۫ۤ;Ll/۠᩵۟;Ll/ۛ۠۟;Ll/֨۫ۤ;Ll/ۡ۠۟;Ll/ۙۧۤ;Ll/᩸᩷۟;Ll/᩸᩷۟;Ll/᩷ᩴۤ;Ll/᩵ܳۤ;)V
+    .line 102
+    iget-object v0, p0, Ll/᩹ܽۤ;->ܰ:Ll/᩵ܽۤ;
 
-    return-void
+    invoke-static {v0, p1}, Ll/᩵ܽۤ;->ۙ(Ll/᩵ܽۤ;Ljava/io/IOException;)V
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

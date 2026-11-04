@@ -103,7 +103,7 @@ public class e {
             public static final String k = "__av";
 
             /* JADX INFO: renamed from: l, reason: collision with root package name */
-            public static final String f77933l = "__vc";
+            public static final String f82049l = "__vc";
         }
 
         /* JADX INFO: compiled from: D48O */
@@ -121,7 +121,7 @@ public class e {
             public static final String k = "TEXT";
 
             /* JADX INFO: renamed from: l, reason: collision with root package name */
-            public static final String f77934l = "TEXT";
+            public static final String f82050l = "TEXT";
         }
     }
 }

@@ -1,48 +1,36 @@
-.class public final synthetic Ll/֫ܿۚ;
+.class public final Ll/֫ܿۚ;
 .super Ljava/lang/Object;
-.source "K7A7"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "D6X3"
 
 
 # instance fields
-.field public final synthetic ֡:Landroid/widget/EditText;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ܺ:Ll/۫ܶۘ;
+.field public final ۤ:Ljava/lang/String;
 
-.field public final synthetic ᩶:Ljava/lang/Runnable;
+.field public final ᩷:J
+
+.field public final ᩸:Lbin/mt/json/JSONArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۫ܶۘ;Ljava/lang/Runnable;Landroid/widget/EditText;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lbin/mt/json/JSONArray;J)V
     .locals 0
 
-    .line 0
+    .line 1964
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֫ܿۚ;->ܺ:Ll/۫ܶۘ;
+    .line 1965
+    iput-object p1, p0, Ll/֫ܿۚ;->ۤ:Ljava/lang/String;
 
-    iput-object p2, p0, Ll/֫ܿۚ;->᩶:Ljava/lang/Runnable;
+    .line 1966
+    iput-object p2, p0, Ll/֫ܿۚ;->ۙ:Ljava/lang/String;
 
-    iput-object p3, p0, Ll/֫ܿۚ;->֡:Landroid/widget/EditText;
+    .line 1970
+    iput-object p3, p0, Ll/֫ܿۚ;->᩸:Lbin/mt/json/JSONArray;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .line 0
-    iget-object p1, p0, Ll/֫ܿۚ;->᩶:Ljava/lang/Runnable;
-
-    iget-object v0, p0, Ll/֫ܿۚ;->֡:Landroid/widget/EditText;
-
-    iget-object v1, p0, Ll/֫ܿۚ;->ܺ:Ll/۫ܶۘ;
-
-    invoke-static {v1, p1, v0}, Ll/ۢܿۚ;->ۙ(Ll/۫ܶۘ;Ljava/lang/Runnable;Landroid/widget/EditText;)V
+    .line 1971
+    iput-wide p4, p0, Ll/֫ܿۚ;->᩷:J
 
     return-void
 .end method

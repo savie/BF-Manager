@@ -1,69 +1,32 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.֨᩺ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R7YU */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1422 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String f5866;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f5867;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f5868;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f5869;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f5870;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f5871;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean f5872;
-
-    public C1422(String str, String str2, String str3, boolean z, String str4, String str5, String str6) {
-        this.f5867 = str;
-        this.f5868 = str2;
-        this.f5871 = str3;
-        this.f5872 = z;
-        this.f5866 = str4;
-        this.f5870 = str5;
-        this.f5869 = str6;
+/* JADX INFO: renamed from: l.֨᩶ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C1422 extends EnumC14757 {
+    public /* synthetic */ C1422() {
+        this("FORMAT_22CS", 18);
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C1422)) {
-            return false;
-        }
-        C1422 c1422 = (C1422) obj;
-        return this.f5872 == c1422.f5872 && C13638.equals(this.f5867, c1422.f5867) && C13638.equals(this.f5868, c1422.f5868) && C13638.equals(this.f5871, c1422.f5871) && C13638.equals(this.f5866, c1422.f5866) && C13638.equals(this.f5870, c1422.f5870) && C13638.equals(this.f5869, c1422.f5869);
+    public C1422(String str, int i) {
+        super(str, i, 0);
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f5869) + C0589.m2789(C0589.m2789(C0589.m2789(C0589.m2789(C0589.m2789((this.f5872 ? 1231 : 1237) * 31, 31, this.f5867), 31, this.f5868), 31, this.f5871), 31, this.f5866), 31, this.f5870);
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        int iM35466 = EnumC14757.m35466(i);
+        int iM35445 = EnumC14757.m35445(i);
+        int iM35463 = EnumC14757.m35463(i);
+        int i2 = interfaceC16337.read();
+        EnumC11862 enumC11862 = EnumC11862.UNKNOWN;
+        return new C9536(this, iM35466, i2, 0, 0L, iM35445, iM35463);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f5867, this.f5868, this.f5871, Boolean.valueOf(this.f5872), this.f5866, this.f5870, this.f5869};
-        String[] strArrSplit = "message;checkBox1;checkBox2;verifyEmail;verifyMessage;lastConfirmMessage;successMessage".length() == 0 ? new String[0] : "message;checkBox1;checkBox2;verifyEmail;verifyMessage;lastConfirmMessage;successMessage".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C1422.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        EnumC14757.m35480(abstractC3659.m11863(), EnumC14757.m35469(abstractC3659.mo2677(), abstractC3659.mo4905()));
+        interfaceC23797.m53082();
     }
 }

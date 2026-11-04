@@ -3,8 +3,8 @@ package org.bouncycastle.pqc.crypto.crystals.dilithium;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.umeng.commonsdk.statistics.UMErrorCode;
 import java.security.SecureRandom;
-import l.C1694;
-import l.C2271;
+import l.C12669;
+import l.C14442;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.util.Arrays;
 
@@ -371,7 +371,7 @@ public class DilithiumEngine {
             this.DilithiumCTilde = 48;
         } else {
             if (i != 5) {
-                throw new IllegalArgumentException(C2271.m6966(i, "The mode ", "is not supported by Crystals Dilithium!"));
+                throw new IllegalArgumentException(C14442.m34864(i, "The mode ", "is not supported by Crystals Dilithium!"));
             }
             this.DilithiumK = 8;
             this.DilithiumL = 7;
@@ -396,7 +396,7 @@ public class DilithiumEngine {
         int i7 = this.DilithiumL;
         int i8 = this.DilithiumPolyEtaPackedBytes;
         this.CryptoSecretKeyBytes = (i5 * 416) + (i8 * i5) + (i7 * i8) + 128;
-        this.CryptoBytes = C1694.m5620(i7, this.DilithiumPolyZPackedBytes, this.DilithiumCTilde, i6);
+        this.CryptoBytes = C12669.m31436(i7, this.DilithiumPolyZPackedBytes, this.DilithiumCTilde, i6);
         int i9 = this.DilithiumGamma1;
         if (i9 == 131072) {
             i2 = this.symmetric.stream256BlockBytes;

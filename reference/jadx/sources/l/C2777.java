@@ -1,43 +1,57 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import java.util.function.Predicate;
+/* JADX INFO: renamed from: l.ۖܺۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8AR0 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C2777 implements InterfaceC19383 {
 
-/* JADX INFO: renamed from: l.ۖ᩷ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2777 implements Predicate {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f9156;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23800 f10604;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C7998 f9157;
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // l.InterfaceC19383
+    public int getChildCount() {
+        throw null;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
+    @Override // l.InterfaceC19383
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public InterfaceC19383 mo9151(int i) {
+        throw null;
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    /* JADX INFO: renamed from: ᩷ */
+    public int mo1229() {
+        return -1;
     }
 
-    public C2777(C23800 c23800) {
-        this.f10604 = c23800;
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        AbstractC23903 abstractC23903 = (AbstractC23903) obj;
-        if (abstractC23903.f77452 != EnumC10477.f35879) {
-            return false;
+    @Override // l.InterfaceC19383
+    public final String getText() {
+        if (getChildCount() == 0) {
+            return "";
         }
-        AbstractC11242 abstractC11242 = abstractC23903.f77453;
-        C23942 c23942 = this.f10604.f76940;
-        return (abstractC11242 == c23942.f77632 || abstractC11242 == c23942.f77608 || (abstractC23903.mo20276() & ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF) != 0) ? false : true;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < getChildCount(); i++) {
+            sb.append(mo9151(i).getText());
+        }
+        return sb.toString();
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        for (C2777 c2777 = this; c2777 != null; c2777 = c2777.f9157) {
+            int i = c2777.f9156;
+            if (i != -1) {
+                sb.append(i);
+            }
+            C7998 c7998 = c2777.f9157;
+            if (c7998 != null && c7998.f9156 != -1) {
+                sb.append(" ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

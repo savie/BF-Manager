@@ -1,35 +1,24 @@
 .class public final Ll/ᩴۛܶ;
-.super Ll/ۜܳܶ;
-.source "I5ZF"
+.super Ljava/lang/Object;
+.source "E9GO"
 
 
-# instance fields
-.field public final synthetic ᩶:Ll/ۨ᩷ܶ;
+# static fields
+.field public static final ۙ:Ll/ᩴ֫ܶ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;Ll/ۨ᩷ܶ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
-    .line 824
-    iput-object p2, p0, Ll/ᩴۛܶ;->᩶:Ll/ۨ᩷ܶ;
+    .line 22
+    new-instance v0, Ll/ᩴ֫ܶ;
 
-    invoke-direct {p0, p1}, Ll/ۜܳܶ;-><init>(Ljava/util/Iterator;)V
+    const-string v1, "1.3.6.1.5.5.2"
+
+    invoke-direct {v0, v1}, Ll/ᩴ֫ܶ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/ᩴۛܶ;->ۙ:Ll/ᩴ֫ܶ;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 828
-    iget-object v0, p0, Ll/ᩴۛܶ;->᩶:Ll/ۨ᩷ܶ;
-
-    invoke-interface {v0, p1}, Ll/ۨ᩷ܶ;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,6 +1,5 @@
 package org.bouncycastle.asn1.bc;
 
-import l.C18828;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
@@ -14,7 +13,7 @@ import org.bouncycastle.asn1.x509.GeneralName;
 import org.bouncycastle.asn1.x509.GeneralNames;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExternalValue extends ASN1Object {
     public final AlgorithmIdentifier hashAlg;
     public final byte[] hashValue;
@@ -29,7 +28,7 @@ public class ExternalValue extends ASN1Object {
         if (aSN1Sequence.getObjectAt(2) instanceof ASN1BitString) {
             this.hashValue = ASN1BitString.getInstance(aSN1Sequence.getObjectAt(2)).getOctets();
         } else {
-            this.hashValue = C18828.m43458(aSN1Sequence, 2);
+            this.hashValue = ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 2);
         }
     }
 

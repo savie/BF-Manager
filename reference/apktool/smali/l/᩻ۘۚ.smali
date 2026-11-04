@@ -1,101 +1,140 @@
-.class public interface abstract Ll/᩻ۘۚ;
+.class public final Ll/᩻ۘۚ;
 .super Ljava/lang/Object;
-.source "5707"
+.source "D6W4"
+
+
+# instance fields
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ۫:Ljava/lang/String;
+
+.field public final ܳ:J
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public final ᩷:J
+
+.field public final ᩸:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
+    .locals 0
+
+    .line 338
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 339
+    iput-object p1, p0, Ll/᩻ۘۚ;->ۤ:Ljava/lang/String;
+
+    .line 340
+    iput-object p2, p0, Ll/᩻ۘۚ;->ۙ:Ljava/lang/String;
+
+    .line 341
+    iput-object p3, p0, Ll/᩻ۘۚ;->᩸:Ljava/lang/String;
+
+    .line 342
+    iput-object p4, p0, Ll/᩻ۘۚ;->۫:Ljava/lang/String;
+
+    .line 343
+    iput-wide p5, p0, Ll/᩻ۘۚ;->᩷:J
+
+    .line 344
+    iput-wide p7, p0, Ll/᩻ۘۚ;->ܳ:J
+
+    .line 345
+    iput-object p9, p0, Ll/᩻ۘۚ;->ᩴ:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/᩻ۘۚ;)Ljava/lang/String;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩻ۘۚ;->᩸:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/᩻ۘۚ;)Ljava/lang/String;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩻ۘۚ;->۫:Ljava/lang/String;
+
+    return-object p0
+.end method
 
 
 # virtual methods
-.method public abstract ֡(I)I
-.end method
+.method public final ۙ()Lbin/mt/json/JSONObject;
+    .locals 4
 
-.method public abstract ֨(I)I
-.end method
+    .line 350
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
 
-.method public abstract ۖ(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ۘ(I)I
-.end method
+    const-string v1, "credentialId"
 
-.method public abstract ۙ()I
-.end method
+    iget-object v2, p0, Ll/᩻ۘۚ;->ۤ:Ljava/lang/String;
 
-.method public abstract ۙ(I)I
-.end method
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-.method public abstract ۚ(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ۛ(I)I
-.end method
+    const-string v1, "clientName"
 
-.method public abstract ۜ(I)I
-.end method
+    iget-object v2, p0, Ll/᩻ۘۚ;->ۙ:Ljava/lang/String;
 
-.method public abstract ۟(I)I
-.end method
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-.method public abstract ۠(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ۡ(I)Ll/֡ᩳۚ;
-.end method
+    const-string v1, "digest"
 
-.method public abstract ۤ(I)I
-.end method
+    iget-object v2, p0, Ll/᩻ۘۚ;->᩸:Ljava/lang/String;
 
-.method public abstract ۧ(I)I
-.end method
+    .line 351
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-.method public abstract ۨ()I
-.end method
+    move-result-object v0
 
-.method public abstract ۨ(I)J
-.end method
+    const-string v1, "token"
 
-.method public abstract ۫(I)I
-.end method
+    iget-object v2, p0, Ll/᩻ۘۚ;->۫:Ljava/lang/String;
 
-.method public abstract ۬(I)I
-.end method
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-.method public abstract ܰ()I
-.end method
+    move-result-object v0
 
-.method public abstract ܰ(I)I
-.end method
+    const-string v1, "createdAt"
 
-.method public abstract ܶ(I)I
-.end method
+    iget-wide v2, p0, Ll/᩻ۘۚ;->᩷:J
 
-.method public abstract ܺ(I)I
-.end method
+    invoke-virtual {v0, v1, v2, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;J)Lbin/mt/json/JSONObject;
 
-.method public abstract ܽ(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ܿ(I)I
-.end method
+    const-string v1, "lastUsedAt"
 
-.method public abstract ᩳ(I)I
-.end method
+    iget-wide v2, p0, Ll/᩻ۘۚ;->ܳ:J
 
-.method public abstract ᩴ(I)I
-.end method
+    .line 352
+    invoke-virtual {v0, v1, v2, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;J)Lbin/mt/json/JSONObject;
 
-.method public abstract ᩵(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ᩶(I)I
-.end method
+    const-string v1, "lastIp"
 
-.method public abstract ᩷(I)I
-.end method
+    iget-object v2, p0, Ll/᩻ۘۚ;->ᩴ:Ljava/lang/String;
 
-.method public abstract ᩸(I)I
-.end method
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-.method public abstract ᩹(I)I
-.end method
+    move-result-object v0
 
-.method public abstract ᩺(I)I
+    return-object v0
 .end method

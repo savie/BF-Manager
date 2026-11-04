@@ -1,36 +1,37 @@
 package l;
 
-import java.util.EnumSet;
+import android.app.AppOpsManager;
+import android.content.Context;
+import android.os.Binder;
+import android.os.Build;
 
-/* JADX INFO: renamed from: l.ۗ֨۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: renamed from: l.ۖ᩶, reason: contains not printable characters */
+/* JADX INFO: compiled from: X4NC */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2900 extends AbstractC3956 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0429 f10943;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2900(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
-        super(c0429, abstractC11242, enumC11368, enumSet);
-        this.f10943 = c0429;
+public final class C2900 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m9530(String str) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            return C1409.m5146(str);
+        }
+        return null;
     }
 
-    @Override // l.AbstractC3956
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        C22492 c22492 = (C22492) abstractC23903;
-        C0429 c0429 = this.f10943;
-        if (c0429.f1957.f63139 != c22492) {
-            c0429.m2249(c22492);
-            return;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m9528(Context context, String str, String str2) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            return C1409.m5144((AppOpsManager) C1409.m5145(context, AppOpsManager.class), str, str2);
         }
-        char cM2248 = c0429.m2248();
-        for (int i2 = 0; i2 < cM2248; i2++) {
-            c0429.m2248();
-            c0429.m2248();
-            c0429.m2248();
-            c0429.m2248();
+        return 1;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m9529(Context context, String str, String str2, int i) {
+        if (Build.VERSION.SDK_INT >= 29) {
+            AppOpsManager appOpsManagerM25099 = C9611.m25099(context);
+            int iM25097 = C9611.m25097(appOpsManagerM25099, str, Binder.getCallingUid(), str2);
+            return iM25097 != 0 ? iM25097 : C9611.m25097(appOpsManagerM25099, str, i, C9611.m25098(context));
         }
+        return m9528(context, str, str2);
     }
 }

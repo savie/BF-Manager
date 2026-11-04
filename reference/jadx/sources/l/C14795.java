@@ -1,243 +1,124 @@
 package l;
 
-import android.text.GetChars;
-import android.text.TextUtils;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ܳ᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z96R */
+/* JADX INFO: renamed from: l.ܰᩴۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6J0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14795 implements Appendable, CharSequence, GetChars {
+public final class C14795 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f48383;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f48404;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public char[] f48384;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f48405;
 
-    @Override // java.lang.Appendable
-    public final /* bridge */ /* synthetic */ Appendable append(char c) {
-        append(c);
-        return this;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C25239 f48406;
 
-    @Override // java.lang.Appendable
-    public final /* bridge */ /* synthetic */ Appendable append(CharSequence charSequence, int i, int i2) {
-        append(charSequence, i, i2);
-        return this;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f48407;
 
-    public C14795() {
-        this(16);
-    }
-
-    public C14795(int i) {
-        this.f48384 = new char[i];
-    }
-
-    @Override // java.lang.CharSequence
-    public final int length() {
-        return this.f48383;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private void m35459(int i) {
-        char[] cArr = this.f48384;
-        if (i - cArr.length > 0) {
-            int length = (cArr.length << 1) + 2;
-            if (length - i < 0) {
-                length = i;
+    public C14795(C25239 c25239) {
+        ArrayList arrayList = new ArrayList();
+        this.f48404 = arrayList;
+        this.f48405 = new HashMap();
+        this.f48407 = new HashMap();
+        this.f48406 = c25239;
+        arrayList.add(new C4355());
+        ArrayList arrayList2 = new ArrayList();
+        Iterator it = c25239.mo19822().iterator();
+        while (it.hasNext()) {
+            arrayList2.add((C23747) it.next());
+        }
+        Collections.sort(arrayList2, new C24493(0));
+        HashMap map = new HashMap();
+        Iterator it2 = arrayList2.iterator();
+        while (true) {
+            if (!it2.hasNext()) {
+                break;
             }
-            if (length > 0 && 2147483639 - length >= 0) {
-                i = length;
+            C23747 c23747 = (C23747) it2.next();
+            String typeName = c23747.getTypeName();
+            Integer num = (Integer) map.get(typeName);
+            int iIntValue = num != null ? num.intValue() : 0;
+            map.put(typeName, Integer.valueOf(iIntValue + 1));
+            if (iIntValue == this.f48404.size()) {
+                this.f48404.add(new C4355());
+            }
+            C4355 c4355 = (C4355) this.f48404.get(iIntValue);
+            c4355.f15731.add(c23747);
+            this.f48405.put(Integer.valueOf(c23747.mo35833()), c4355);
+            this.f48407.put(Integer.valueOf(c23747.mo35833()), c23747);
+        }
+        ArrayList<C4355> arrayList3 = this.f48404;
+        for (C2118 c2118 : this.f48406.mo19824()) {
+            HashMap map2 = new HashMap();
+            if (c2118.mo7301() == 0) {
+                ((C4355) arrayList3.get(0)).f15732.add(c2118);
             } else {
-                if (Integer.MAX_VALUE - i < 0) {
-                    throw new OutOfMemoryError();
-                }
-                if (i <= 2147483639) {
-                    i = 2147483639;
-                }
-            }
-            this.f48384 = Arrays.copyOf(cArr, i);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m35465(int i) {
-        m35459(i);
-        int i2 = this.f48383;
-        if (i2 < i) {
-            Arrays.fill(this.f48384, i2, i, (char) 0);
-        }
-        this.f48383 = i;
-    }
-
-    @Override // java.lang.CharSequence
-    public final char charAt(int i) {
-        return this.f48384[i];
-    }
-
-    @Override // android.text.GetChars
-    public final void getChars(int i, int i2, char[] cArr, int i3) {
-        if (i < 0) {
-            throw new StringIndexOutOfBoundsException(i);
-        }
-        if (i2 < 0 || i2 > this.f48383) {
-            throw new StringIndexOutOfBoundsException(i2);
-        }
-        if (i > i2) {
-            throw new StringIndexOutOfBoundsException("srcBegin > srcEnd");
-        }
-        System.arraycopy(this.f48384, i, cArr, i3, i2 - i);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m35466(String str) {
-        if (str == null) {
-            m35460();
-            return;
-        }
-        int length = str.length();
-        m35459(this.f48383 + length);
-        str.getChars(0, length, this.f48384, this.f48383);
-        this.f48383 += length;
-    }
-
-    @Override // java.lang.Appendable
-    public final C14795 append(CharSequence charSequence) {
-        if (charSequence == null) {
-            m35460();
-            return this;
-        }
-        if (charSequence instanceof String) {
-            m35466((String) charSequence);
-            return this;
-        }
-        if (charSequence instanceof C14795) {
-            return append(charSequence);
-        }
-        append(charSequence, 0, charSequence.length());
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m35460() {
-        int i = this.f48383;
-        int i2 = i + 4;
-        m35459(i2);
-        char[] cArr = this.f48384;
-        cArr[i] = 'n';
-        cArr[i + 1] = 'u';
-        cArr[i + 2] = 'l';
-        cArr[i + 3] = 'l';
-        this.f48383 = i2;
-    }
-
-    @Override // java.lang.Appendable
-    public final void append(CharSequence charSequence, int i, int i2) {
-        if (charSequence == null) {
-            charSequence = "null";
-        }
-        int i3 = i2 - i;
-        m35459(this.f48383 + i3);
-        int i4 = this.f48383;
-        while (i < i2) {
-            this.f48384[i4] = charSequence.charAt(i);
-            i++;
-            i4++;
-        }
-        this.f48383 += i3;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m35463(char[] cArr) {
-        int length = cArr.length;
-        m35459(this.f48383 + length);
-        System.arraycopy(cArr, 0, this.f48384, this.f48383, length);
-        this.f48383 += length;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m35464(char[] cArr, int i, int i2) {
-        if (i2 > 0) {
-            m35459(this.f48383 + i2);
-        }
-        System.arraycopy(cArr, i, this.f48384, this.f48383, i2);
-        this.f48383 += i2;
-    }
-
-    @Override // java.lang.Appendable
-    public final void append(char c) {
-        m35459(this.f48383 + 1);
-        char[] cArr = this.f48384;
-        int i = this.f48383;
-        this.f48383 = i + 1;
-        cArr[i] = c;
-    }
-
-    @Override // java.lang.CharSequence
-    public final CharSequence subSequence(int i, int i2) {
-        return m35461(i, i2);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m35461(int i, int i2) {
-        if (i < 0) {
-            throw new StringIndexOutOfBoundsException(i);
-        }
-        if (i2 > this.f48383) {
-            throw new StringIndexOutOfBoundsException(i2);
-        }
-        if (i > i2) {
-            throw new StringIndexOutOfBoundsException(i2 - i);
-        }
-        return new String(this.f48384, i, i2 - i);
-    }
-
-    @Override // java.lang.CharSequence
-    public final String toString() {
-        return new String(this.f48384, 0, this.f48383);
-    }
-
-    public final char[] getValue() {
-        return this.f48384;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m35462() {
-        this.f48384 = new char[16];
-        this.f48383 = 0;
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj instanceof C14795) {
-            C14795 c14795 = (C14795) obj;
-            int i = this.f48383;
-            if (i != c14795.f48383) {
-                return false;
-            }
-            char[] cArr = this.f48384;
-            char[] cArr2 = c14795.f48384;
-            for (int i2 = 0; i2 < i; i2++) {
-                if (cArr[i2] != cArr2[i2]) {
-                    return false;
+                for (C11812 c11812 : c2118.mo15047()) {
+                    HashMap map3 = new HashMap();
+                    if (((C14763) c11812.mo7534()).isEmpty()) {
+                        map3.put((C4355) arrayList3.get(0), new C14763());
+                    }
+                    for (int i = 0; i < ((C14763) c11812.mo7534()).size(); i++) {
+                        int i2 = ((C14763) c11812.mo7534()).getInt(i);
+                        C4355 c4355M35633 = m35633(i2);
+                        C14763 c14763 = (C14763) map3.get(c4355M35633);
+                        if (c14763 == null) {
+                            c14763 = new C14763();
+                            map3.put(c4355M35633, c14763);
+                        }
+                        c14763.add(i2);
+                    }
+                    for (C4355 c4356 : arrayList3) {
+                        C14763 c14764 = (C14763) map3.get(c4356);
+                        if (c14764 != null) {
+                            C2118 c2119 = (C2118) map2.get(c4356);
+                            if (c2119 == null) {
+                                c2119 = new C2118(c2118.getName(), c2118.mo15048());
+                                map2.put(c4356, c2119);
+                                c4356.f15732.add(c2119);
+                            }
+                            c2119.m7298(c11812.mo7535(), c14764);
+                        }
+                    }
                 }
             }
-            return true;
         }
-        if (obj instanceof CharSequence) {
-            return TextUtils.equals(this, (CharSequence) obj);
+        for (C17033 c17033 : this.f48406.mo19825()) {
+            if (c17033.mo40124() == 0) {
+                ((C4355) this.f48404.get(0)).f15730.add(c17033);
+            } else {
+                HashMap map4 = new HashMap();
+                for (C17779 c17779 : c17033.mo12015()) {
+                    C4355 c4355M35634 = m35633(c17779.mo45586());
+                    C17033 c17034 = (C17033) map4.get(c4355M35634);
+                    if (c17034 == null) {
+                        c17034 = new C17033();
+                        map4.put(c4355M35634, c17034);
+                        c4355M35634.f15730.add(c17034);
+                    }
+                    c17034.m40125(c17779.mo45587(), c17779.mo45586());
+                }
+            }
         }
-        return false;
+        ArrayList arrayList4 = this.f48404;
+        Collections.reverse(arrayList4.subList(1, arrayList4.size()));
     }
 
-    public final int hashCode() {
-        char[] cArr = this.f48384;
-        int i = this.f48383;
-        int i2 = 0;
-        for (int i3 = 0; i3 < i; i3++) {
-            i2 = (i2 * 31) + cArr[i3];
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private C4355 m35633(int i) {
+        int i2 = (i >>> 16) & 255;
+        C23747 c23747 = (C23747) this.f48407.get(Integer.valueOf(i2));
+        int i3 = 65535 & i;
+        if ((i >>> 24) == this.f48406.mo27607() && c23747 != null && i3 < c23747.f76957.size() && c23747.m53021(i3) != null) {
+            return (C4355) this.f48405.get(Integer.valueOf(i2));
         }
-        return i2;
+        return (C4355) this.f48404.get(0);
     }
 }

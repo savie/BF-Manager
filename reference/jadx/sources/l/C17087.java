@@ -1,14 +1,25 @@
 package l;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.ViewGroup;
+import java.io.File;
 
-/* JADX INFO: renamed from: l.ܿۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q63C */
+/* JADX INFO: renamed from: l.ܺ᩶᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: J9LL */
 /* JADX INFO: loaded from: classes4.dex */
-public class C17087 extends ViewGroup.MarginLayoutParams {
-    public C17087(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
+public final class C17087 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m40242(File file) {
+        if (file.isDirectory()) {
+            File[] fileArrListFiles = file.listFiles();
+            if (fileArrListFiles == null) {
+                return false;
+            }
+            boolean z = true;
+            for (File file2 : fileArrListFiles) {
+                z = m40242(file2) && z;
+            }
+            return z;
+        }
+        file.delete();
+        return true;
     }
 }

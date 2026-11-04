@@ -1,61 +1,35 @@
 .class public final Ll/ۖܿۚ;
-.super Ljava/lang/Object;
-.source "S5I2"
+.super Ljava/lang/Exception;
+.source "T6XI"
 
 
 # instance fields
-.field public final ۙ:Z
+.field public final ܰ:I
 
-.field public final ܰ:Ll/ۛᩳۨ;
+.field public final ܿ:Ll/ۜܿۚ;
+
+.field public final ᩶:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ܳᩳۨ;Z)V
+.method public constructor <init>(Ll/ۜܿۚ;II)V
     .locals 1
 
-    .line 163
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 142
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    const-string v0, ""
+    move-result-object v0
 
-    .line 164
-    invoke-virtual {p1, v0}, Ll/ܳᩳۨ;->matcher(Ljava/lang/CharSequence;)Ll/ۛᩳۨ;
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    .line 143
+    iput-object p1, p0, Ll/ۖܿۚ;->ܿ:Ll/ۜܿۚ;
 
-    iput-object p1, p0, Ll/ۖܿۚ;->ܰ:Ll/ۛᩳۨ;
+    .line 144
+    iput p2, p0, Ll/ۖܿۚ;->᩶:I
 
-    .line 165
-    iput-boolean p2, p0, Ll/ۖܿۚ;->ۙ:Z
+    .line 145
+    iput p3, p0, Ll/ۖܿۚ;->ܰ:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(Ljava/lang/String;)Z
-    .locals 1
-
-    .line 169
-    iget-object v0, p0, Ll/ۖܿۚ;->ܰ:Ll/ۛᩳۨ;
-
-    invoke-virtual {v0, p1}, Ll/ۛᩳۨ;->reset(Ljava/lang/CharSequence;)V
-
-    .line 170
-    iget-boolean p1, p0, Ll/ۖܿۚ;->ۙ:Z
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Ll/ۛᩳۨ;->matches()Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    invoke-virtual {v0}, Ll/ۛᩳۨ;->find()Z
-
-    move-result p1
-
-    return p1
 .end method

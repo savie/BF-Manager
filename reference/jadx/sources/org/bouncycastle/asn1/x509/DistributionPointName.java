@@ -1,9 +1,9 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C12441;
-import l.C22697;
-import l.C3012;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C14483;
+import l.C3188;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Object;
@@ -15,7 +15,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.util.ASN1Dump;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DistributionPointName extends ASN1Object implements ASN1Choice {
     public static final int FULL_NAME = 0;
     public static final int NAME_RELATIVE_TO_CRL_ISSUER = 1;
@@ -46,8 +46,8 @@ public class DistributionPointName extends ASN1Object implements ASN1Choice {
     }
 
     private void appendObject(StringBuilder sb, String str, String str2, String str3) {
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, str2, ":", str);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
+        C4794.m14774(sb, ASN1Dump.TAB, str2, ":", str);
+        C4794.m14774(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
     }
 
     public static DistributionPointName getInstance(Object obj) {
@@ -57,7 +57,7 @@ public class DistributionPointName extends ASN1Object implements ASN1Choice {
         if (obj instanceof ASN1TaggedObject) {
             return new DistributionPointName((ASN1TaggedObject) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in factory: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in factory: "));
     }
 
     public static DistributionPointName getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {
@@ -85,7 +85,7 @@ public class DistributionPointName extends ASN1Object implements ASN1Choice {
         String string;
         String str;
         String strLineSeparator = Strings.lineSeparator();
-        StringBuilder sbM8976 = C3012.m8976("DistributionPointName: [", strLineSeparator);
+        StringBuilder sbM10405 = C3188.m10405("DistributionPointName: [", strLineSeparator);
         if (this.type == 0) {
             string = this.name.toString();
             str = "fullName";
@@ -93,7 +93,7 @@ public class DistributionPointName extends ASN1Object implements ASN1Choice {
             string = this.name.toString();
             str = "nameRelativeToCRLIssuer";
         }
-        appendObject(sbM8976, strLineSeparator, str, string);
-        return C22697.m50267(sbM8976, "]", strLineSeparator);
+        appendObject(sbM10405, strLineSeparator, str, string);
+        return C8947.m23910(sbM10405, "]", strLineSeparator);
     }
 }

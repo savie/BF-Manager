@@ -1,92 +1,89 @@
 package res;
 
-import android.accessibilityservice.AccessibilityService;
-import android.accessibilityservice.AccessibilityServiceInfo;
+import android.animation.Animator;
 import java.nio.ByteOrder;
 
-/* JADX INFO: loaded from: MT_2.26.10.apk:assets/Hex.class */
+/* JADX INFO: loaded from: MT2.26.11.apk:assets/Hex.class */
 public class Hex {
     /* JADX WARN: Multi-variable type inference failed */
     public Hex() {
-        super/*android.accessibilityservice.AccessibilityService*/.onCreate();
-        return;
+        super/*android.animation.Animator*/.addListener(this);
     }
 
-    /* JADX WARN: Not initialized variable reg: 3, insn: 0x0000: MOVE (r0 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY]) = (r3 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY] A[D('src' java.lang.String)]) (LINE:12), block:B:2:0x0000 */
     /* JADX WARN: Type inference failed for: r0v1, types: [void] */
-    /* JADX WARN: Type inference failed for: r0v11, types: [boolean, long[]] */
-    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, java.lang.String] */
-    /* JADX WARN: Type inference failed for: r0v7, types: [android.animation.Animator, void] */
-    /* JADX INFO: renamed from: ۢ */
-    public static boolean m28800() {
-        ?? OnDestroy = AccessibilityService.onDestroy();
-        ?? settingsActivityName = AccessibilityServiceInfo.getSettingsActivityName();
-        ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-        settingsActivityName.cancel();
-        ?? End = settingsActivityName.end();
-        ?? r0 = new long[OnDestroy.length / 8];
-        End.getDuration();
-        return r0;
-    }
-
-    /* JADX WARN: Not initialized variable reg: 3, insn: 0x0000: MOVE (r0 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY]) = (r3 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY] A[D('src' java.lang.String)]) (LINE:22), block:B:2:0x0000 */
-    /* JADX WARN: Type inference failed for: r0v1, types: [void] */
-    /* JADX WARN: Type inference failed for: r0v11, types: [int[], java.lang.String] */
-    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, java.lang.String] */
-    /* JADX WARN: Type inference failed for: r0v7, types: [android.animation.Animator, long] */
-    /* JADX INFO: renamed from: ۤ */
-    public static String m28801() {
-        ?? OnDestroy = AccessibilityService.onDestroy();
-        ?? settingsActivityName = AccessibilityServiceInfo.getSettingsActivityName();
-        ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-        settingsActivityName.cancel();
-        ?? startDelay = settingsActivityName.getStartDelay();
-        ?? r0 = new int[OnDestroy.length / 4];
-        startDelay.isPaused();
-        return r0;
-    }
-
-    /* JADX WARN: Not initialized variable reg: 3, insn: 0x0000: MOVE (r0 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY]) = (r3 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY] A[D('src' java.lang.String)]) (LINE:32), block:B:2:0x0000 */
-    /* JADX WARN: Type inference failed for: r0v1, types: [void] */
-    /* JADX WARN: Type inference failed for: r0v11, types: [long, short[], void] */
-    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, java.lang.String] */
+    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, void] */
     /* JADX WARN: Type inference failed for: r0v7, types: [android.animation.Animator, boolean] */
-    /* JADX INFO: renamed from: ۤۙ */
-    public static void m28748() {
-        ?? OnDestroy = AccessibilityService.onDestroy();
-        ?? settingsActivityName = AccessibilityServiceInfo.getSettingsActivityName();
+    public static long[] decode_J(String src) {
+        ?? Cancel = Animator.cancel();
+        ?? End = Animator.end();
         ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-        settingsActivityName.cancel();
-        ?? IsRunning = settingsActivityName.isRunning();
-        ?? r0 = new short[OnDestroy.length / 2];
-        IsRunning.setDuration(r0);
+        End.getStartDelay();
+        ?? IsPaused = End.isPaused();
+        long[] data = new long[Cancel.length / 8];
+        IsPaused.isRunning();
+        return data;
     }
 
-    /* JADX WARN: Not initialized variable reg: 5, insn: 0x0000: MOVE (r0 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY]) = (r5 I:??[int, float, boolean, short, byte, char, OBJECT, ARRAY] A[D('src' java.lang.String)]) (LINE:42), block:B:2:0x0000 */
-    /* JADX WARN: Type inference failed for: r0v16, types: [android.animation.AnimatorInflater, android.content.Context, int, java.lang.RuntimeException, java.lang.Throwable] */
-    /* JADX WARN: Type inference failed for: r0v28, types: [android.animation.AnimatorInflater, android.content.Context, int, java.lang.RuntimeException, java.lang.Throwable] */
-    /* JADX WARN: Type inference failed for: r0v3, types: [int, void] */
-    /* JADX WARN: Type inference failed for: r0v5, types: [boolean, byte[]] */
-    /* JADX WARN: Type inference failed for: r5v0, types: [android.animation.Animator, android.animation.TimeInterpolator, long] */
-    /*  JADX ERROR: JadxRuntimeException in pass: ModVisitor
-        jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v28 ??, still in use, count: 4, list:
-          (r0v28 ?? I:android.content.Context) from 0x00ce: INVOKE (r0v28 ?? I:android.animation.AnimatorInflater), (r0v28 ?? I:android.content.Context), (r0v28 ?? I:int) SUPER call: android.animation.AnimatorInflater.loadAnimator(android.content.Context, int):android.animation.Animator A[MD:(android.content.Context, int):android.animation.Animator throws android.content.res.Resources$NotFoundException (c)]
-          (r0v28 ?? I:java.lang.Throwable) from 0x00d1: THROW (r0v28 ?? I:java.lang.Throwable)
-          (r0v28 ?? I:android.animation.AnimatorInflater) from 0x00ce: INVOKE (r0v28 ?? I:android.animation.AnimatorInflater), (r0v28 ?? I:android.content.Context), (r0v28 ?? I:int) SUPER call: android.animation.AnimatorInflater.loadAnimator(android.content.Context, int):android.animation.Animator A[MD:(android.content.Context, int):android.animation.Animator throws android.content.res.Resources$NotFoundException (c)]
-          (r0v28 ?? I:int) from 0x00ce: INVOKE (r0v28 ?? I:android.animation.AnimatorInflater), (r0v28 ?? I:android.content.Context), (r0v28 ?? I:int) SUPER call: android.animation.AnimatorInflater.loadAnimator(android.content.Context, int):android.animation.Animator A[MD:(android.content.Context, int):android.animation.Animator throws android.content.res.Resources$NotFoundException (c)]
-        	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
-        	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
-        	at jadx.core.utils.InsnRemover.unbindInsn(InsnRemover.java:93)
-        	at jadx.core.utils.InsnRemover.addAndUnbind(InsnRemover.java:59)
-        	at jadx.core.dex.visitors.ModVisitor.removeStep(ModVisitor.java:463)
-        	at jadx.core.dex.visitors.ModVisitor.visit(ModVisitor.java:97)
-        */
-    /* JADX INFO: renamed from: ۧ */
-    public static boolean m28802() {
-        /*
-            Method dump skipped, instruction units count: 229
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: res.Hex.m28802():boolean");
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v1, types: [void] */
+    /* JADX WARN: Type inference failed for: r0v11, types: [android.animation.TimeInterpolator, int[]] */
+    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, long, void] */
+    public static int[] decode_I(String src) {
+        ?? Cancel = Animator.cancel();
+        ?? End = Animator.end();
+        ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
+        End.getStartDelay();
+        Animator duration = End.setDuration(End);
+        ?? r0 = new int[Cancel.length / 4];
+        duration.setInterpolator(r0);
+        return r0;
+    }
+
+    /* JADX WARN: Type inference failed for: r0v1, types: [void] */
+    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, long, void] */
+    /* JADX WARN: Type inference failed for: r0v7, types: [android.animation.Animator, void] */
+    public static short[] decode_S(String src) {
+        ?? Cancel = Animator.cancel();
+        ?? End = Animator.end();
+        ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
+        End.getStartDelay();
+        ?? startDelay = End.setStartDelay(End);
+        short[] data = new short[Cancel.length / 2];
+        startDelay.setTarget(data);
+        return data;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v3, types: [android.animation.Animator, int] */
+    public static byte[] decode_B(String str) {
+        int hh;
+        int i;
+        char[] d = str.start();
+        byte[] ret = new byte[str.loadAnimator(str, str) / 2];
+        for (int i2 = 0; i2 < ret.length; i2++) {
+            char h = d[2 * i2];
+            char l2 = d[(2 * i2) + 1];
+            if (h >= '0' && h <= '9') {
+                hh = h - '0';
+            } else if (h >= 'a' && h <= 'f') {
+                hh = (h - 'a') + 10;
+            } else if (h >= 'A' && h <= 'F') {
+                hh = (h - 'A') + 10;
+            } else {
+                throw new RuntimeException();
+            }
+            if (l2 >= '0' && l2 <= '9') {
+                i = l2 - '0';
+            } else if (l2 >= 'a' && l2 <= 'f') {
+                i = (l2 - 'a') + 10;
+            } else if (l2 >= 'A' && l2 <= 'F') {
+                i = (l2 - 'A') + 10;
+            } else {
+                throw new RuntimeException();
+            }
+            int ll = i;
+            ret[i2] = (byte) ((hh << 4) | ll);
+        }
+        return ret;
     }
 }

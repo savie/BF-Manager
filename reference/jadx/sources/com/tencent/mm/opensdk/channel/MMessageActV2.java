@@ -10,7 +10,7 @@ import com.tencent.mm.opensdk.channel.a.b;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MMessageActV2 {
@@ -69,7 +69,7 @@ public class MMessageActV2 {
             return false;
         }
         if (d.b(args.targetClassName)) {
-            args.targetClassName = C22697.m50267(new StringBuilder(), args.targetPkgName, DEFAULT_ENTRY_CLASS_NAME);
+            args.targetClassName = C8947.m23910(new StringBuilder(), args.targetPkgName, DEFAULT_ENTRY_CLASS_NAME);
         }
         Log.i(TAG, "send, targetPkgName = " + args.targetPkgName + ", targetClassName = " + args.targetClassName + ", launchMode = " + args.launchMode);
         Intent intent = new Intent();

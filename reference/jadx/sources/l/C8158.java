@@ -1,110 +1,77 @@
 package l;
 
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.۠ۨᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 19FV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8158 implements InterfaceC18035 {
+/* JADX INFO: renamed from: l.۟᩷ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S4H6 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8158 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC18472 f28510 = new C18741();
+    public final boolean f26914;
 
-    @Override // l.InterfaceC18035
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo21469(C20858 c20858, C11748 c11748, InterfaceC21563 interfaceC21563) {
-        return interfaceC21563.mo16392(c11748);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f26915;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f26916;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f26917;
+
+    public C8158(String str, int i, boolean z, boolean z2) {
+        this.f26915 = str;
+        this.f26917 = z;
+        this.f26914 = z2;
+        this.f26916 = i;
     }
 
-    @Override // l.InterfaceC18035
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo21470(C20858 c20858, C11771 c11771, C11748 c11748, InterfaceC21563 interfaceC21563) throws C15214 {
-        C12747 c12747;
-        String strM50267;
-        if (((C1186) c11771.mo25478()).m4349() != EnumC3055.STATUS_STOPPED_ON_SYMLINK.getValue()) {
-            return interfaceC21563.mo16392(c11748);
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C8158)) {
+            return false;
         }
-        C17685 c17685M29402 = c11771.m29402();
-        if (c17685M29402 == null) {
-            c12747 = null;
-            break;
-        }
-        Iterator it = c17685M29402.m41206().iterator();
-        while (true) {
-            if (!it.hasNext()) {
-                c12747 = null;
-                break;
-            }
-            InterfaceC16980 interfaceC16980 = (InterfaceC16980) it.next();
-            if (interfaceC16980 instanceof C12747) {
-                c12747 = (C12747) interfaceC16980;
-                break;
-            }
-        }
-        if (c12747 == null) {
-            throw new C15214(((C1186) c11771.mo25478()).m4349(), "Create failed for " + c11748 + ": missing symlink data");
-        }
-        String strM29358 = c11748.m29358();
-        int iM31680 = c12747.m31680();
-        byte[] bArrM28401 = C11336.m28401(strM29358);
-        int length = bArrM28401.length - iM31680;
-        Charset charset = C7393.f24570;
-        String str = new String(bArrM28401, length, iM31680, charset);
-        String strM31678 = c12747.m31678();
-        if (c12747.m31679()) {
-            strM50267 = C15489.m37076(strM31678, str);
-        } else {
-            byte[] bArrM28402 = C11336.m28401(strM29358);
-            String str2 = new String(bArrM28402, 0, bArrM28402.length - iM31680, charset);
-            StringBuilder sb = new StringBuilder();
-            int iLastIndexOf = str2.lastIndexOf("\\");
-            if (iLastIndexOf != -1) {
-                sb.append((CharSequence) str2, 0, iLastIndexOf);
-                sb.append('\\');
-            }
-            strM50267 = C22697.m50267(sb, strM31678, str);
-        }
-        ArrayList arrayList = new ArrayList();
-        int i = 0;
-        while (true) {
-            int iIndexOf = strM50267.indexOf(92, i);
-            if (iIndexOf == -1) {
-                break;
-            }
-            arrayList.add(strM50267.substring(i, iIndexOf));
-            i = iIndexOf + 1;
-        }
-        arrayList.add(strM50267.substring(i));
-        int i2 = 0;
-        while (i2 < arrayList.size()) {
-            String str3 = (String) arrayList.get(i2);
-            if (".".equals(str3)) {
-                arrayList.remove(i2);
-            } else if ("..".equals(str3)) {
-                if (i2 > 0) {
-                    arrayList.remove(i2);
-                    i2--;
-                }
-                arrayList.remove(i2);
-            } else {
-                i2++;
-            }
-        }
-        StringBuilder sb2 = new StringBuilder();
-        for (int i3 = 0; i3 < arrayList.size(); i3++) {
-            if (i3 > 0) {
-                sb2.append('\\');
-            }
-            sb2.append((String) arrayList.get(i3));
-        }
-        return interfaceC21563.mo16392(new C11748(c11748.m29355(), c11748.m29357(), sb2.toString()));
+        C8158 c8158 = (C8158) obj;
+        return this.f26917 == c8158.f26917 && this.f26914 == c8158.f26914 && this.f26916 == c8158.f26916 && C17359.equals(this.f26915, c8158.f26915);
     }
 
-    @Override // l.InterfaceC18035
+    public final int hashCode() {
+        return C17359.hashCode(this.f26915) + ((((((this.f26917 ? 1231 : 1237) * 31) + (this.f26914 ? 1231 : 1237)) * 31) + this.f26916) * 31);
+    }
+
+    public final int size() {
+        return this.f26916;
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f26915, Boolean.valueOf(this.f26917), Boolean.valueOf(this.f26914), Integer.valueOf(this.f26916)};
+        String[] strArrSplit = "text;warning;searching;size".length() == 0 ? new String[0] : "text;warning;searching;size".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C8158.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18472 mo21471() {
-        return this.f28510;
+    public final boolean m22061() {
+        return this.f26914;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m22062() {
+        return this.f26917;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m22063() {
+        return this.f26915;
     }
 }

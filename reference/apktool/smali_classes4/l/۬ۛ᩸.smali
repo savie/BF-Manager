@@ -1,60 +1,63 @@
-.class public final Ll/۬ۛ᩸;
-.super Ll/ᩳܿ᩸;
-.source "Y9J1"
+.class public final synthetic Ll/۬ۛ᩸;
+.super Ljava/lang/Object;
+.source "3B3L"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/۟ܰ᩸;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/۟ܰ᩸;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۬ۛ᩸;->ܰ:Ll/۟ܰ᩸;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܳܿ᩸;[B)Ll/ۡܿ᩸;
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 58
-    array-length p1, p2
+    .line 35
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v0, 0x0
+    .line 52
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v1, 0x1
+    move-result p1
 
-    if-ne p1, v1, :cond_0
+    invoke-virtual {p0, p1}, Ll/۬ۛ᩸;->ۙ(Z)V
 
-    const/4 p1, 0x1
+    return-void
+.end method
 
-    goto :goto_0
+.method public final andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    .locals 0
 
-    :cond_0
-    const/4 p1, 0x0
+    .line 83
+    invoke-static {p0, p1}, Ll/ۨۧۗ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
 
-    :goto_0
-    array-length v1, p2
-
-    if-eqz p1, :cond_2
-
-    .line 59
-    new-instance p1, Ll/ۜۛ᩸;
-
-    aget-byte v1, p2, v0
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x1
-
-    :cond_1
-    invoke-direct {p1, p2, v0}, Ll/ۜۛ᩸;-><init>([BZ)V
+    move-result-object p1
 
     return-object p1
+.end method
 
-    .line 26
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Value of ASN1Boolean should have length 1, but was "
+.method public final ۙ(Z)V
+    .locals 1
 
     .line 0
-    invoke-static {v1, p2}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Ll/۬ۛ᩸;->ܰ:Ll/۟ܰ᩸;
 
-    move-result-object p2
+    invoke-static {v0, p1}, Ll/۟ܰ᩸;->ۙ(Ll/۟ܰ᩸;Z)V
 
-    .line 26
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

@@ -1,32 +1,60 @@
-.class public final Ll/ܰ֫᩸;
-.super Ll/ۨܳ᩸;
-.source "L9I2"
+.class public final synthetic Ll/ܰ֫᩸;
+.super Ljava/lang/Object;
+.source "61L9"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/ᩳ֫᩸;
+
+.field public final synthetic ᩷:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ᩳ֫᩸;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܰ֫᩸;->ۙ:Ll/ᩳ֫᩸;
+
+    iput p2, p0, Ll/ܰ֫᩸;->᩷:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ܰ(Ll/᩵ۙᩳ;)V
-    .locals 2
+.method public final call()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x2
+    .line 987
+    new-instance v0, Ll/ۡܰ᩸;
 
-    .line 33
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ۚ(I)V
+    iget-object v1, p0, Ll/ܰ֫᩸;->ۙ:Ll/ᩳ֫᩸;
 
-    .line 34
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->֨()I
+    iget-object v2, v1, Ll/ᩳ֫᩸;->᩻:Ll/ۖ֫᩸;
 
-    move-result v0
+    invoke-static {v2}, Ll/ۖ֫᩸;->ۚ(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
 
-    .line 35
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->ۘ()I
+    move-result-object v2
 
-    move-result v1
+    iget-object v2, v2, Ll/֨ۚ᩸;->᩸:Ll/᩷ۨᩴ;
 
-    .line 36
-    invoke-virtual {p1, v0}, Ll/ۧۢ᩸;->ۖ(I)V
+    invoke-direct {v0, v2}, Ll/ۡܰ᩸;-><init>(Ll/᩷ۨᩴ;)V
 
-    .line 37
-    invoke-virtual {p1, v1}, Ll/ۧۢ᩸;->ۨ(I)[B
+    new-instance v2, Ll/֡֫᩸;
 
-    return-void
+    invoke-direct {v2, v1}, Ll/֡֫᩸;-><init>(Ll/ᩳ֫᩸;)V
+
+    iget v1, p0, Ll/ܰ֫᩸;->᩷:I
+
+    invoke-static {v0, v1, v2}, Ll/᩻᩶᩸;->ۙ(Ll/ۡܰ᩸;ILl/۟֡֫;)Ll/ۚ᩶᩸;
+
+    move-result-object v0
+
+    return-object v0
 .end method

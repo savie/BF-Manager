@@ -53,33 +53,33 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import l.AbstractC3000;
-import l.C0976;
-import l.C10405;
-import l.C1181;
-import l.C12025;
-import l.C12441;
-import l.C15179;
-import l.C15945;
-import l.C16407;
-import l.C16631;
-import l.C17910;
-import l.C18000;
-import l.C18616;
-import l.C1977;
-import l.C20946;
-import l.C22006;
-import l.C22144;
-import l.C22357;
-import l.C22697;
-import l.C23521;
-import l.C2387;
-import l.C3798;
-import l.C4274;
-import l.C5031;
-import l.C7603;
-import l.C8033;
-import l.RunnableC7793;
+import l.AbstractC6898;
+import l.C0385;
+import l.C0597;
+import l.C1075;
+import l.C11642;
+import l.C12669;
+import l.C14625;
+import l.C16863;
+import l.C17609;
+import l.C18085;
+import l.C19835;
+import l.C20209;
+import l.C21414;
+import l.C22666;
+import l.C22687;
+import l.C2327;
+import l.C23577;
+import l.C24323;
+import l.C4185;
+import l.C5204;
+import l.C5752;
+import l.C5781;
+import l.C6039;
+import l.C7508;
+import l.C8581;
+import l.C9217;
+import l.RunnableC6915;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TextInputLayout extends LinearLayout implements ViewTreeObserver.OnGlobalLayoutListener {
@@ -87,7 +87,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public static final int BOX_BACKGROUND_NONE = 0;
     public static final int BOX_BACKGROUND_OUTLINE = 2;
     public static final int DEFAULT_PLACEHOLDER_FADE_DURATION = 87;
-    public static final int DEF_STYLE_RES = C18616.f59947;
+    public static final int DEF_STYLE_RES = C4185.f14934;
     public static final int[][] EDIT_TEXT_BACKGROUND_RIPPLE_STATE = {new int[]{R.attr.state_pressed}, new int[0]};
     public static final int END_ICON_CLEAR_TEXT = 2;
     public static final int END_ICON_CUSTOM = -1;
@@ -160,8 +160,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public CharSequence originalHint;
     public MaterialShapeDrawable outlinedDropDownMenuBackground;
     public boolean placeholderEnabled;
-    public C4274 placeholderFadeIn;
-    public C4274 placeholderFadeOut;
+    public C2327 placeholderFadeIn;
+    public C2327 placeholderFadeOut;
     public CharSequence placeholderText;
     public int placeholderTextAppearance;
     public ColorStateList placeholderTextColor;
@@ -209,7 +209,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public TextInputLayout(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9140);
+        this(context, attributeSet, C11642.f36622);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -221,7 +221,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         this.minWidth = -1;
         this.maxWidth = -1;
         this.indicatorViewController = new IndicatorViewController(this);
-        this.lengthCounter = new C22697();
+        this.lengthCounter = new C5781();
         this.tmpRect = new Rect();
         this.tmpBoundsRect = new Rect();
         this.tmpRectF = new RectF();
@@ -240,48 +240,48 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         collapsingTextHelper.setTextSizeInterpolator(timeInterpolator);
         collapsingTextHelper.setPositionInterpolator(timeInterpolator);
         collapsingTextHelper.setCollapsedTextGravity(8388659);
-        C1977 c1977ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C8033.f28070, i, i2, C8033.f26581, C8033.f26474, C8033.f27009, C8033.f27859, C8033.f27647);
-        StartCompoundLayout startCompoundLayout = new StartCompoundLayout(this, c1977ObtainTintedStyledAttributes);
+        C5204 c5204ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C14625.f47852, i, i2, C14625.f47053, C14625.f46681, C14625.f46964, C14625.f47602, C14625.f47442);
+        StartCompoundLayout startCompoundLayout = new StartCompoundLayout(this, c5204ObtainTintedStyledAttributes);
         this.startLayout = startCompoundLayout;
-        this.hintEnabled = c1977ObtainTintedStyledAttributes.m6376(C8033.f27275, true);
-        setHint(c1977ObtainTintedStyledAttributes.m6368(C8033.f27963));
-        this.hintAnimationEnabled = c1977ObtainTintedStyledAttributes.m6376(C8033.f27594, true);
-        this.expandedHintEnabled = c1977ObtainTintedStyledAttributes.m6376(C8033.f26903, true);
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26954)) {
-            setMinEms(c1977ObtainTintedStyledAttributes.m6381(C8033.f26954, -1));
-        } else if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27804)) {
-            setMinWidth(c1977ObtainTintedStyledAttributes.m6384(C8033.f27804, -1));
+        this.hintEnabled = c5204ObtainTintedStyledAttributes.m15654(C14625.f46645, true);
+        setHint(c5204ObtainTintedStyledAttributes.m15659(C14625.f47319));
+        this.hintAnimationEnabled = c5204ObtainTintedStyledAttributes.m15654(C14625.f46114, true);
+        this.expandedHintEnabled = c5204ObtainTintedStyledAttributes.m15654(C14625.f47816, true);
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46309)) {
+            setMinEms(c5204ObtainTintedStyledAttributes.m15657(C14625.f46309, -1));
+        } else if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47532)) {
+            setMinWidth(c5204ObtainTintedStyledAttributes.m15665(C14625.f47532, -1));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27698)) {
-            setMaxEms(c1977ObtainTintedStyledAttributes.m6381(C8033.f27698, -1));
-        } else if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27751)) {
-            setMaxWidth(c1977ObtainTintedStyledAttributes.m6384(C8033.f27751, -1));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47213)) {
+            setMaxEms(c5204ObtainTintedStyledAttributes.m15657(C14625.f47213, -1));
+        } else if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47746)) {
+            setMaxWidth(c5204ObtainTintedStyledAttributes.m15665(C14625.f47746, -1));
         }
         this.shapeAppearanceModel = ShapeAppearanceModel.builder(context2, attributeSet, i, i2).build();
-        this.boxLabelCutoutPaddingPx = context2.getResources().getDimensionPixelOffset(C0976.f4157);
-        this.boxCollapsedPaddingTopPx = c1977ObtainTintedStyledAttributes.m6374(C8033.f27910, 0);
-        this.boxStrokeWidthDefaultPx = c1977ObtainTintedStyledAttributes.m6384(C8033.f26795, context2.getResources().getDimensionPixelSize(C0976.f4062));
-        this.boxStrokeWidthFocusedPx = c1977ObtainTintedStyledAttributes.m6384(C8033.f27166, context2.getResources().getDimensionPixelSize(C0976.f4510));
+        this.boxLabelCutoutPaddingPx = context2.getResources().getDimensionPixelOffset(C17609.f57348);
+        this.boxCollapsedPaddingTopPx = c5204ObtainTintedStyledAttributes.m15652(C14625.f46362, 0);
+        this.boxStrokeWidthDefaultPx = c5204ObtainTintedStyledAttributes.m15665(C14625.f46787, context2.getResources().getDimensionPixelSize(C17609.f57914));
+        this.boxStrokeWidthFocusedPx = c5204ObtainTintedStyledAttributes.m15665(C14625.f46150, context2.getResources().getDimensionPixelSize(C17609.f57276));
         this.boxStrokeWidthPx = this.boxStrokeWidthDefaultPx;
-        float fM6380 = c1977ObtainTintedStyledAttributes.m6380(C8033.f27592);
-        float fM6381 = c1977ObtainTintedStyledAttributes.m6380(C8033.f26368);
-        float fM6382 = c1977ObtainTintedStyledAttributes.m6380(C8033.f27539);
-        float fM6383 = c1977ObtainTintedStyledAttributes.m6380(C8033.f27857);
+        float fM15656 = c5204ObtainTintedStyledAttributes.m15656(C14625.f46097);
+        float fM15657 = c5204ObtainTintedStyledAttributes.m15656(C14625.f47372);
+        float fM15658 = c5204ObtainTintedStyledAttributes.m15656(C14625.f47106);
+        float fM15659 = c5204ObtainTintedStyledAttributes.m15656(C14625.f47585);
         ShapeAppearanceModel.Builder builder = this.shapeAppearanceModel.toBuilder();
-        if (fM6380 >= 0.0f) {
-            builder.setTopLeftCornerSize(fM6380);
+        if (fM15656 >= 0.0f) {
+            builder.setTopLeftCornerSize(fM15656);
         }
-        if (fM6381 >= 0.0f) {
-            builder.setTopRightCornerSize(fM6381);
+        if (fM15657 >= 0.0f) {
+            builder.setTopRightCornerSize(fM15657);
         }
-        if (fM6382 >= 0.0f) {
-            builder.setBottomRightCornerSize(fM6382);
+        if (fM15658 >= 0.0f) {
+            builder.setBottomRightCornerSize(fM15658);
         }
-        if (fM6383 >= 0.0f) {
-            builder.setBottomLeftCornerSize(fM6383);
+        if (fM15659 >= 0.0f) {
+            builder.setBottomLeftCornerSize(fM15659);
         }
         this.shapeAppearanceModel = builder.build();
-        ColorStateList colorStateList = MaterialResources.getColorStateList(context2, c1977ObtainTintedStyledAttributes, C8033.f27113);
+        ColorStateList colorStateList = MaterialResources.getColorStateList(context2, c5204ObtainTintedStyledAttributes, C14625.f46522);
         if (colorStateList != null) {
             int defaultColor = colorStateList.getDefaultColor();
             this.defaultFilledBackgroundColor = defaultColor;
@@ -292,9 +292,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 this.hoveredFilledBackgroundColor = colorStateList.getColorForState(new int[]{R.attr.state_hovered, R.attr.state_enabled}, -1);
             } else {
                 this.focusedFilledBackgroundColor = this.defaultFilledBackgroundColor;
-                ColorStateList colorStateListM39102 = C16631.m39102(context2.getResources(), C22144.f71761, context2.getTheme());
-                this.disabledFilledBackgroundColor = colorStateListM39102.getColorForState(new int[]{-16842910}, -1);
-                this.hoveredFilledBackgroundColor = colorStateListM39102.getColorForState(new int[]{R.attr.state_hovered}, -1);
+                ColorStateList colorStateListM24393 = C9217.m24393(context2.getResources(), C16863.f55091, context2.getTheme());
+                this.disabledFilledBackgroundColor = colorStateListM24393.getColorForState(new int[]{-16842910}, -1);
+                this.hoveredFilledBackgroundColor = colorStateListM24393.getColorForState(new int[]{R.attr.state_hovered}, -1);
             }
         } else {
             this.boxBackgroundColor = 0;
@@ -303,84 +303,84 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.focusedFilledBackgroundColor = 0;
             this.hoveredFilledBackgroundColor = 0;
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27007)) {
-            ColorStateList colorStateListM6385 = c1977ObtainTintedStyledAttributes.m6385(C8033.f27007);
-            this.focusedTextColor = colorStateListM6385;
-            this.defaultHintTextColor = colorStateListM6385;
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46947)) {
+            ColorStateList colorStateListM15666 = c5204ObtainTintedStyledAttributes.m15666(C14625.f46947);
+            this.focusedTextColor = colorStateListM15666;
+            this.defaultHintTextColor = colorStateListM15666;
         }
-        ColorStateList colorStateList2 = MaterialResources.getColorStateList(context2, c1977ObtainTintedStyledAttributes, C8033.f27273);
-        this.focusedStrokeColor = c1977ObtainTintedStyledAttributes.m6373(C8033.f27273);
-        this.defaultStrokeColor = C10405.m26299(context2, C22144.f72146);
-        this.disabledColor = C10405.m26299(context2, C22144.f71738);
-        this.hoveredStrokeColor = C10405.m26299(context2, C22144.f71825);
+        ColorStateList colorStateList2 = MaterialResources.getColorStateList(context2, c5204ObtainTintedStyledAttributes, C14625.f46628);
+        this.focusedStrokeColor = c5204ObtainTintedStyledAttributes.m15651(C14625.f46628);
+        this.defaultStrokeColor = C7508.m20558(context2, C16863.f54478);
+        this.disabledColor = C7508.m20558(context2, C16863.f54659);
+        this.hoveredStrokeColor = C7508.m20558(context2, C16863.f54554);
         if (colorStateList2 != null) {
             setBoxStrokeColorStateList(colorStateList2);
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27645)) {
-            setBoxStrokeErrorColor(MaterialResources.getColorStateList(context2, c1977ObtainTintedStyledAttributes, C8033.f27645));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47425)) {
+            setBoxStrokeErrorColor(MaterialResources.getColorStateList(context2, c5204ObtainTintedStyledAttributes, C14625.f47425));
         }
-        if (c1977ObtainTintedStyledAttributes.m6387(C8033.f27647, -1) != -1) {
-            setHintTextAppearance(c1977ObtainTintedStyledAttributes.m6387(C8033.f27647, 0));
+        if (c5204ObtainTintedStyledAttributes.m15660(C14625.f47442, -1) != -1) {
+            setHintTextAppearance(c5204ObtainTintedStyledAttributes.m15660(C14625.f47442, 0));
         }
-        this.cursorColor = c1977ObtainTintedStyledAttributes.m6385(C8033.f27382);
-        this.cursorErrorColor = c1977ObtainTintedStyledAttributes.m6385(C8033.f27222);
-        int iM6387 = c1977ObtainTintedStyledAttributes.m6387(C8033.f27009, 0);
-        CharSequence charSequenceM6368 = c1977ObtainTintedStyledAttributes.m6368(C8033.f27965);
-        int iM6381 = c1977ObtainTintedStyledAttributes.m6381(C8033.f27488, 1);
-        boolean zM6376 = c1977ObtainTintedStyledAttributes.m6376(C8033.f27700, false);
-        int iM6388 = c1977ObtainTintedStyledAttributes.m6387(C8033.f27859, 0);
-        boolean zM6377 = c1977ObtainTintedStyledAttributes.m6376(C8033.f27541, false);
-        CharSequence charSequenceM6369 = c1977ObtainTintedStyledAttributes.m6368(C8033.f27912);
-        int iM6389 = c1977ObtainTintedStyledAttributes.m6387(C8033.f26667, 0);
-        CharSequence charSequenceM63610 = c1977ObtainTintedStyledAttributes.m6368(C8033.f26583);
-        boolean zM6378 = c1977ObtainTintedStyledAttributes.m6376(C8033.f28123, false);
-        setCounterMaxLength(c1977ObtainTintedStyledAttributes.m6381(C8033.f27433, -1));
-        this.counterTextAppearance = c1977ObtainTintedStyledAttributes.m6387(C8033.f26581, 0);
-        this.counterOverflowTextAppearance = c1977ObtainTintedStyledAttributes.m6387(C8033.f26474, 0);
-        setBoxBackgroundMode(c1977ObtainTintedStyledAttributes.m6381(C8033.f26901, 0));
-        setErrorContentDescription(charSequenceM6368);
-        setErrorAccessibilityLiveRegion(iM6381);
+        this.cursorColor = c5204ObtainTintedStyledAttributes.m15666(C14625.f47656);
+        this.cursorErrorColor = c5204ObtainTintedStyledAttributes.m15666(C14625.f46858);
+        int iM15660 = c5204ObtainTintedStyledAttributes.m15660(C14625.f46964, 0);
+        CharSequence charSequenceM15659 = c5204ObtainTintedStyledAttributes.m15659(C14625.f47336);
+        int iM15657 = c5204ObtainTintedStyledAttributes.m15657(C14625.f47283, 1);
+        boolean zM15654 = c5204ObtainTintedStyledAttributes.m15654(C14625.f47230, false);
+        int iM15661 = c5204ObtainTintedStyledAttributes.m15660(C14625.f47602, 0);
+        boolean zM15655 = c5204ObtainTintedStyledAttributes.m15654(C14625.f47123, false);
+        CharSequence charSequenceM156510 = c5204ObtainTintedStyledAttributes.m15659(C14625.f46379);
+        int iM15662 = c5204ObtainTintedStyledAttributes.m15660(C14625.f46390, 0);
+        CharSequence charSequenceM156511 = c5204ObtainTintedStyledAttributes.m15659(C14625.f47070);
+        boolean zM15656 = c5204ObtainTintedStyledAttributes.m15654(C14625.f46734, false);
+        setCounterMaxLength(c5204ObtainTintedStyledAttributes.m15657(C14625.f46256, -1));
+        this.counterTextAppearance = c5204ObtainTintedStyledAttributes.m15660(C14625.f47053, 0);
+        this.counterOverflowTextAppearance = c5204ObtainTintedStyledAttributes.m15660(C14625.f46681, 0);
+        setBoxBackgroundMode(c5204ObtainTintedStyledAttributes.m15657(C14625.f47799, 0));
+        setErrorContentDescription(charSequenceM15659);
+        setErrorAccessibilityLiveRegion(iM15657);
         setCounterOverflowTextAppearance(this.counterOverflowTextAppearance);
-        setHelperTextTextAppearance(iM6388);
-        setErrorTextAppearance(iM6387);
+        setHelperTextTextAppearance(iM15661);
+        setErrorTextAppearance(iM15660);
         setCounterTextAppearance(this.counterTextAppearance);
-        setPlaceholderText(charSequenceM63610);
-        setPlaceholderTextAppearance(iM6389);
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27115)) {
-            setErrorTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f27115));
+        setPlaceholderText(charSequenceM156511);
+        setPlaceholderTextAppearance(iM15662);
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46539)) {
+            setErrorTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f46539));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26370)) {
-            setHelperTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f26370));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47389)) {
+            setHelperTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f47389));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26797)) {
-            setHintTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f26797));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46804)) {
+            setHintTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f46804));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26690)) {
-            setCounterTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f26690));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46433)) {
+            setCounterTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f46433));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27060)) {
-            setCounterOverflowTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f27060));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46575)) {
+            setCounterOverflowTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f46575));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27359)) {
-            setPlaceholderTextColor(c1977ObtainTintedStyledAttributes.m6385(C8033.f27359));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47613)) {
+            setPlaceholderTextColor(c5204ObtainTintedStyledAttributes.m15666(C14625.f47613));
         }
-        EndCompoundLayout endCompoundLayout = new EndCompoundLayout(this, c1977ObtainTintedStyledAttributes);
+        EndCompoundLayout endCompoundLayout = new EndCompoundLayout(this, c5204ObtainTintedStyledAttributes);
         this.endLayout = endCompoundLayout;
-        boolean zM6379 = c1977ObtainTintedStyledAttributes.m6376(C8033.f27486, true);
-        c1977ObtainTintedStyledAttributes.m6379();
-        int i3 = C5031.f17539;
+        boolean zM15657 = c5204ObtainTintedStyledAttributes.m15654(C14625.f47266, true);
+        c5204ObtainTintedStyledAttributes.m15664();
+        int i3 = C22666.f73603;
         setImportantForAccessibility(2);
         if (Build.VERSION.SDK_INT >= 26) {
-            C5031.m13994((ViewGroup) this, 1);
+            C22666.m51100((ViewGroup) this, 1);
         }
         frameLayout.addView(startCompoundLayout);
         frameLayout.addView(endCompoundLayout);
         addView(frameLayout);
-        setEnabled(zM6379);
-        setHelperTextEnabled(zM6377);
-        setErrorEnabled(zM6376);
-        setCounterEnabled(zM6378);
-        setHelperText(charSequenceM6369);
+        setEnabled(zM15657);
+        setHelperTextEnabled(zM15655);
+        setErrorEnabled(zM15654);
+        setCounterEnabled(zM15656);
+        setHelperText(charSequenceM156510);
     }
 
     @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -390,7 +390,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         boolean zUpdateEditTextHeightBasedOnIcon = updateEditTextHeightBasedOnIcon();
         boolean zUpdateDummyDrawables = updateDummyDrawables();
         if (zUpdateEditTextHeightBasedOnIcon || zUpdateDummyDrawables) {
-            this.editText.post(new RunnableC7793(4, this));
+            this.editText.post(new RunnableC6915(7, this));
         }
     }
 
@@ -459,7 +459,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.boxUnderlineFocused = new MaterialShapeDrawable();
         } else {
             if (i != 2) {
-                throw new IllegalArgumentException(C12441.m30911(this.boxBackgroundMode, " is illegal; only @BoxBackgroundMode constants are supported.", new StringBuilder()));
+                throw new IllegalArgumentException(C12669.m31437(this.boxBackgroundMode, " is illegal; only @BoxBackgroundMode constants are supported.", new StringBuilder()));
             }
             if (!this.hintEnabled || (this.boxBackground instanceof CutoutDrawable)) {
                 this.boxBackground = new MaterialShapeDrawable(this.shapeAppearanceModel);
@@ -485,7 +485,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     private void updateEditTextBoxBackground() {
         Drawable editTextBoxBackground = getEditTextBoxBackground();
         EditText editText = this.editText;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         editText.setBackground(editTextBoxBackground);
     }
 
@@ -494,7 +494,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         if (!(editText instanceof AutoCompleteTextView) || EditTextUtils.isEditable(editText)) {
             return this.boxBackground;
         }
-        int color = MaterialColors.getColor(this.editText, C2387.f9206);
+        int color = MaterialColors.getColor(this.editText, C11642.f37175);
         int i = this.boxBackgroundMode;
         if (i == 2) {
             return getOutlinedBoxBackgroundWithRipple(getContext(), this.boxBackground, color, EDIT_TEXT_BACKGROUND_RIPPLE_STATE);
@@ -506,7 +506,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public static Drawable getOutlinedBoxBackgroundWithRipple(Context context, MaterialShapeDrawable materialShapeDrawable, int i, int[][] iArr) {
-        int color = MaterialColors.getColor(context, C2387.f8699, LOG_TAG);
+        int color = MaterialColors.getColor(context, C11642.f36968, LOG_TAG);
         MaterialShapeDrawable materialShapeDrawable2 = new MaterialShapeDrawable(materialShapeDrawable.getShapeAppearanceModel());
         int iLayer = MaterialColors.layer(i, color, 0.1f);
         materialShapeDrawable2.setFillColor(new ColorStateList(iArr, new int[]{iLayer, 0}));
@@ -555,15 +555,15 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
 
     private MaterialShapeDrawable getDropDownMaterialShapeDrawable(boolean z) {
         float dimensionPixelOffset;
-        float dimensionPixelOffset2 = getResources().getDimensionPixelOffset(C0976.f4396);
+        float dimensionPixelOffset2 = getResources().getDimensionPixelOffset(C17609.f57740);
         float f = z ? dimensionPixelOffset2 : 0.0f;
         EditText editText = this.editText;
         if (editText instanceof MaterialAutoCompleteTextView) {
             dimensionPixelOffset = ((MaterialAutoCompleteTextView) editText).getPopupElevation();
         } else {
-            dimensionPixelOffset = getResources().getDimensionPixelOffset(C0976.f4003);
+            dimensionPixelOffset = getResources().getDimensionPixelOffset(C17609.f57454);
         }
-        int dimensionPixelOffset3 = getResources().getDimensionPixelOffset(C0976.f3868);
+        int dimensionPixelOffset3 = getResources().getDimensionPixelOffset(C17609.f57413);
         ShapeAppearanceModel shapeAppearanceModelBuild = ShapeAppearanceModel.builder().setTopLeftCornerSize(f).setTopRightCornerSize(f).setBottomLeftCornerSize(dimensionPixelOffset2).setBottomRightCornerSize(dimensionPixelOffset2).build();
         EditText editText2 = this.editText;
         MaterialShapeDrawable materialShapeDrawableCreateWithElevationOverlay = MaterialShapeDrawable.createWithElevationOverlay(getContext(), dimensionPixelOffset, editText2 instanceof MaterialAutoCompleteTextView ? ((MaterialAutoCompleteTextView) editText2).getDropDownBackgroundTintList() : null);
@@ -575,9 +575,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     private void updateBoxCollapsedPaddingTop() {
         if (this.boxBackgroundMode == 1) {
             if (MaterialResources.isFontScaleAtLeast2_0(getContext())) {
-                this.boxCollapsedPaddingTopPx = getResources().getDimensionPixelSize(C0976.f4174);
+                this.boxCollapsedPaddingTopPx = getResources().getDimensionPixelSize(C17609.f57173);
             } else if (MaterialResources.isFontScaleAtLeast1_3(getContext())) {
-                this.boxCollapsedPaddingTopPx = getResources().getDimensionPixelSize(C0976.f4008);
+                this.boxCollapsedPaddingTopPx = getResources().getDimensionPixelSize(C17609.f57455);
             }
         }
     }
@@ -588,12 +588,12 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
         if (MaterialResources.isFontScaleAtLeast2_0(getContext())) {
             EditText editText = this.editText;
-            int i = C5031.f17539;
-            editText.setPaddingRelative(editText.getPaddingStart(), getResources().getDimensionPixelSize(C0976.f4385), this.editText.getPaddingEnd(), getResources().getDimensionPixelSize(C0976.f4221));
+            int i = C22666.f73603;
+            editText.setPaddingRelative(editText.getPaddingStart(), getResources().getDimensionPixelSize(C17609.f57739), this.editText.getPaddingEnd(), getResources().getDimensionPixelSize(C17609.f57386));
         } else if (MaterialResources.isFontScaleAtLeast1_3(getContext())) {
             EditText editText2 = this.editText;
-            int i2 = C5031.f17539;
-            editText2.setPaddingRelative(editText2.getPaddingStart(), getResources().getDimensionPixelSize(C0976.f4362), this.editText.getPaddingEnd(), getResources().getDimensionPixelSize(C0976.f3819));
+            int i2 = C22666.f73603;
+            editText2.setPaddingRelative(editText2.getPaddingStart(), getResources().getDimensionPixelSize(C17609.f57150), this.editText.getPaddingEnd(), getResources().getDimensionPixelSize(C17609.f57716));
         }
     }
 
@@ -666,7 +666,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public void setBoxBackgroundColorResource(int i) {
-        setBoxBackgroundColor(C10405.m26299(getContext(), i));
+        setBoxBackgroundColor(C7508.m20558(getContext(), i));
     }
 
     public void setBoxBackgroundColor(int i) {
@@ -849,7 +849,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         int gravity = this.editText.getGravity();
         this.collapsingTextHelper.setCollapsedTextGravity((gravity & (-113)) | 48);
         this.collapsingTextHelper.setExpandedTextGravity(gravity);
-        int i4 = C5031.f17539;
+        int i4 = C22666.f73603;
         this.originalEditTextMinimumHeight = editText.getMinimumHeight();
         this.editText.addTextChangedListener(new TextWatcher(editText) { // from class: com.google.android.material.textfield.TextInputLayout.1
             public int previousLineCount;
@@ -884,7 +884,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 if (lineCount != i5) {
                     if (lineCount < i5) {
                         EditText editText2 = this.val$editText;
-                        int i6 = C5031.f17539;
+                        int i6 = C22666.f73603;
                         int minimumHeight = editText2.getMinimumHeight();
                         int i7 = TextInputLayout.this.originalEditTextMinimumHeight;
                         if (minimumHeight != i7) {
@@ -1263,16 +1263,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public void setCounterEnabled(boolean z) {
         if (this.counterEnabled != z) {
             if (z) {
-                C22357 c22357 = new C22357(getContext());
-                this.counterView = c22357;
-                c22357.setId(C3798.f13713);
+                C5752 c5752 = new C5752(getContext());
+                this.counterView = c5752;
+                c5752.setId(C23577.f76431);
                 Typeface typeface = this.typeface;
                 if (typeface != null) {
                     this.counterView.setTypeface(typeface);
                 }
                 this.counterView.setMaxLines(1);
                 this.indicatorViewController.addIndicator(this.counterView, 2);
-                ((ViewGroup.MarginLayoutParams) this.counterView.getLayoutParams()).setMarginStart(getResources().getDimensionPixelOffset(C0976.f4346));
+                ((ViewGroup.MarginLayoutParams) this.counterView.getLayoutParams()).setMarginStart(getResources().getDimensionPixelOffset(C17609.f57606));
                 updateCounterTextAppearanceAndColor();
                 updateCounter();
             } else {
@@ -1357,8 +1357,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             if (z != this.counterOverflowed) {
                 updateCounterTextAppearanceAndColor();
             }
-            int i2 = C18000.f57553;
-            this.counterView.setText(new C15179().m36397().m41914(getContext().getString(C17910.f56773, Integer.valueOf(iCountLength), Integer.valueOf(this.counterMaxLength))));
+            int i2 = C6039.f20662;
+            this.counterView.setText(new C20209().m46481().m17519(getContext().getString(C24323.f78808, Integer.valueOf(iCountLength), Integer.valueOf(this.counterMaxLength))));
         }
         if (this.editText == null || z == this.counterOverflowed) {
             return;
@@ -1371,24 +1371,24 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public static void updateCounterContentDescription(Context context, TextView textView, int i, int i2, boolean z) {
         int i3;
         if (z) {
-            i3 = C17910.f56753;
+            i3 = C24323.f78747;
         } else {
-            i3 = C17910.f56817;
+            i3 = C24323.f78771;
         }
         textView.setContentDescription(context.getString(i3, Integer.valueOf(i), Integer.valueOf(i2)));
     }
 
     public void setPlaceholderText(CharSequence charSequence) {
         if (this.placeholderTextView == null) {
-            C22357 c22357 = new C22357(getContext());
-            this.placeholderTextView = c22357;
-            c22357.setId(C3798.f13995);
+            C5752 c5752 = new C5752(getContext());
+            this.placeholderTextView = c5752;
+            c5752.setId(C23577.f76443);
             TextView textView = this.placeholderTextView;
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             textView.setImportantForAccessibility(2);
-            C4274 c4274CreatePlaceholderFadeTransition = createPlaceholderFadeTransition();
-            this.placeholderFadeIn = c4274CreatePlaceholderFadeTransition;
-            c4274CreatePlaceholderFadeTransition.setStartDelay(67L);
+            C2327 c2327CreatePlaceholderFadeTransition = createPlaceholderFadeTransition();
+            this.placeholderFadeIn = c2327CreatePlaceholderFadeTransition;
+            c2327CreatePlaceholderFadeTransition.setStartDelay(67L);
             this.placeholderFadeOut = createPlaceholderFadeTransition();
             setPlaceholderTextAppearance(this.placeholderTextAppearance);
             setPlaceholderTextColor(this.placeholderTextColor);
@@ -1424,11 +1424,11 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         this.placeholderEnabled = z;
     }
 
-    private C4274 createPlaceholderFadeTransition() {
-        C4274 c4274 = new C4274();
-        c4274.setDuration(MotionUtils.resolveThemeDuration(getContext(), C2387.f9435, 87));
-        c4274.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C2387.f9129, AnimationUtils.LINEAR_INTERPOLATOR));
-        return c4274;
+    private C2327 createPlaceholderFadeTransition() {
+        C2327 c2327 = new C2327();
+        c2327.setDuration(MotionUtils.resolveThemeDuration(getContext(), C11642.f36696, 87));
+        c2327.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C11642.f36628, AnimationUtils.LINEAR_INTERPOLATOR));
+        return c2327;
     }
 
     private void updatePlaceholderText() {
@@ -1450,7 +1450,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             return;
         }
         this.placeholderTextView.setText(this.placeholderText);
-        C1181.m4320(this.inputFrame, this.placeholderFadeIn);
+        C1075.m4036(this.inputFrame, this.placeholderFadeIn);
         this.placeholderTextView.setVisibility(0);
         this.placeholderTextView.bringToFront();
         announceForAccessibility(this.placeholderText);
@@ -1462,7 +1462,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             return;
         }
         textView.setText((CharSequence) null);
-        C1181.m4320(this.inputFrame, this.placeholderFadeOut);
+        C1075.m4036(this.inputFrame, this.placeholderFadeOut);
         this.placeholderTextView.setVisibility(4);
     }
 
@@ -1500,7 +1500,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         this.placeholderTextAppearance = i;
         TextView textView = this.placeholderTextView;
         if (textView != null) {
-            C16407.m38617(textView, i);
+            C18085.m42126(textView, i);
         }
     }
 
@@ -1627,14 +1627,14 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
 
     public void setTextAppearanceCompatWithErrorFallback(TextView textView, int i) {
         try {
-            C16407.m38617(textView, i);
+            C18085.m42126(textView, i);
             if (Build.VERSION.SDK_INT < 23 || textView.getTextColors().getDefaultColor() != -65281) {
                 return;
             }
         } catch (Exception unused) {
         }
-        C16407.m38617(textView, C18616.f59413);
-        textView.setTextColor(C10405.m26299(getContext(), C22144.f72095));
+        C18085.m42126(textView, C4185.f14811);
+        textView.setTextColor(C7508.m20558(getContext(), C16863.f54584));
     }
 
     private int calculateLabelMarginTop() {
@@ -1736,7 +1736,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     private int calculateBoxBackgroundColor() {
-        return this.boxBackgroundMode == 1 ? MaterialColors.layer(MaterialColors.getColor(this, C2387.f8699, 0), this.boxBackgroundColor) : this.boxBackgroundColor;
+        return this.boxBackgroundMode == 1 ? MaterialColors.layer(MaterialColors.getColor(this, C11642.f36968, 0), this.boxBackgroundColor) : this.boxBackgroundColor;
     }
 
     private void applyBoxAttributes() {
@@ -1792,14 +1792,14 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         if (editText == null || this.boxBackgroundMode != 0 || (background = editText.getBackground()) == null) {
             return;
         }
-        Rect rect = C20946.f68271;
+        Rect rect = C21414.f68210;
         Drawable drawableMutate = background.mutate();
         if (shouldShowError()) {
-            drawableMutate.setColorFilter(C23521.m51801(getErrorCurrentTextColors(), PorterDuff.Mode.SRC_IN));
+            drawableMutate.setColorFilter(C8581.m23069(getErrorCurrentTextColors(), PorterDuff.Mode.SRC_IN));
         } else if (this.counterOverflowed && (textView = this.counterView) != null) {
-            drawableMutate.setColorFilter(C23521.m51801(textView.getCurrentTextColor(), PorterDuff.Mode.SRC_IN));
+            drawableMutate.setColorFilter(C8581.m23069(textView.getCurrentTextColor(), PorterDuff.Mode.SRC_IN));
         } else {
-            C7603.m20137(drawableMutate);
+            C0597.m2699(drawableMutate);
             this.editText.refreshDrawableState();
         }
     }
@@ -1808,7 +1808,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         return this.indicatorViewController.errorShouldBeShown();
     }
 
-    public class SavedState extends AbstractC3000 {
+    public class SavedState extends AbstractC6898 {
         public static final Parcelable.Creator CREATOR = new Parcelable.ClassLoaderCreator() { // from class: com.google.android.material.textfield.TextInputLayout.SavedState.1
             @Override // android.os.Parcelable.ClassLoaderCreator
             public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
@@ -1838,7 +1838,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.isEndIconChecked = parcel.readInt() == 1;
         }
 
-        @Override // l.AbstractC3000, android.os.Parcelable
+        @Override // l.AbstractC6898, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
             TextUtils.writeToParcel(this.error, parcel, i);
@@ -1963,7 +1963,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public void setStartIconDrawable(int i) {
-        setStartIconDrawable(i != 0 ? C15945.m37904(getContext(), i) : null);
+        setStartIconDrawable(i != 0 ? C0385.m2186(getContext(), i) : null);
     }
 
     public void setStartIconDrawable(Drawable drawable) {
@@ -2223,7 +2223,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public void setTextInputAccessibilityDelegate(AccessibilityDelegate accessibilityDelegate) {
         EditText editText = this.editText;
         if (editText != null) {
-            C5031.m13990(editText, accessibilityDelegate);
+            C22666.m51098(editText, accessibilityDelegate);
         }
     }
 
@@ -2477,7 +2477,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         CollapsingTextHelper collapsingTextHelper = this.collapsingTextHelper;
         boolean state = collapsingTextHelper != null ? collapsingTextHelper.setState(drawableState) : false;
         if (this.editText != null) {
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             updateLabelState(isLaidOut() && isEnabled());
         }
         updateEditTextBackground();
@@ -2575,17 +2575,17 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         ColorStateList colorStateList;
         ColorStateList colorStateListOrNull = this.cursorColor;
         if (colorStateListOrNull == null) {
-            colorStateListOrNull = MaterialColors.getColorStateListOrNull(getContext(), C2387.f9444);
+            colorStateListOrNull = MaterialColors.getColorStateListOrNull(getContext(), C11642.f36697);
         }
         EditText editText = this.editText;
         if (editText == null || editText.getTextCursorDrawable() == null) {
             return;
         }
-        Drawable drawableMutate = C7603.m20139(this.editText.getTextCursorDrawable()).mutate();
+        Drawable drawableMutate = C0597.m2697(this.editText.getTextCursorDrawable()).mutate();
         if (isOnError() && (colorStateList = this.cursorErrorColor) != null) {
             colorStateListOrNull = colorStateList;
         }
-        C7603.m20129(drawableMutate, colorStateListOrNull);
+        C0597.m2690(drawableMutate, colorStateListOrNull);
     }
 
     private void expandHint(boolean z) {
@@ -2614,8 +2614,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         if (this.animator == null) {
             ValueAnimator valueAnimator = new ValueAnimator();
             this.animator = valueAnimator;
-            valueAnimator.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C2387.f8957, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR));
-            this.animator.setDuration(MotionUtils.resolveThemeDuration(getContext(), C2387.f8923, 167));
+            valueAnimator.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C11642.f36560, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR));
+            this.animator.setDuration(MotionUtils.resolveThemeDuration(getContext(), C11642.f36799, 167));
             this.animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.google.android.material.textfield.TextInputLayout.3
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public void onAnimationUpdate(ValueAnimator valueAnimator2) {
@@ -2643,16 +2643,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         return this.collapsingTextHelper.getCollapsedTextHeight();
     }
 
-    public class AccessibilityDelegate extends C12025 {
+    public class AccessibilityDelegate extends C22687 {
         public final TextInputLayout layout;
 
         public AccessibilityDelegate(TextInputLayout textInputLayout) {
             this.layout = textInputLayout;
         }
 
-        @Override // l.C12025
-        public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
-            super.onInitializeAccessibilityNodeInfo(view, c22006);
+        @Override // l.C22687
+        public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
+            super.onInitializeAccessibilityNodeInfo(view, c19835);
             EditText editText = this.layout.getEditText();
             CharSequence text = editText != null ? editText.getText() : null;
             CharSequence hint = this.layout.getHint();
@@ -2666,46 +2666,46 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             boolean zIsEmpty3 = TextUtils.isEmpty(error);
             boolean z = (zIsEmpty3 && TextUtils.isEmpty(counterOverflowDescription)) ? false : true;
             String string = !zIsEmpty2 ? hint.toString() : "";
-            this.layout.startLayout.setupAccessibilityNodeInfo(c22006);
+            this.layout.startLayout.setupAccessibilityNodeInfo(c19835);
             if (!zIsEmpty) {
-                c22006.m48828(text);
+                c19835.m45646(text);
             } else if (!TextUtils.isEmpty(string)) {
-                c22006.m48828(string);
+                c19835.m45646(string);
                 if (!zIsHintExpanded && placeholderText != null) {
-                    c22006.m48828(string + ", " + ((Object) placeholderText));
+                    c19835.m45646(string + ", " + ((Object) placeholderText));
                 }
             } else if (placeholderText != null) {
-                c22006.m48828(placeholderText);
+                c19835.m45646(placeholderText);
             }
             if (!TextUtils.isEmpty(string)) {
                 if (Build.VERSION.SDK_INT >= 26) {
-                    c22006.m48845(string);
+                    c19835.m45688(string);
                 } else {
                     if (!zIsEmpty) {
                         string = ((Object) text) + ", " + string;
                     }
-                    c22006.m48828(string);
+                    c19835.m45646(string);
                 }
-                c22006.m48880(zIsEmpty);
+                c19835.m45690(zIsEmpty);
             }
             if (text == null || text.length() != counterMaxLength) {
                 counterMaxLength = -1;
             }
-            c22006.m48870(counterMaxLength);
+            c19835.m45678(counterMaxLength);
             if (z) {
                 if (zIsEmpty3) {
                     error = counterOverflowDescription;
                 }
-                c22006.m48865(error);
+                c19835.m45654(error);
             }
             View helperTextView = this.layout.indicatorViewController.getHelperTextView();
             if (helperTextView != null) {
-                c22006.m48873(helperTextView);
+                c19835.m45681(helperTextView);
             }
-            this.layout.endLayout.getEndIconDelegate().onInitializeAccessibilityNodeInfo(view, c22006);
+            this.layout.endLayout.getEndIconDelegate().onInitializeAccessibilityNodeInfo(view, c19835);
         }
 
-        @Override // l.C12025
+        @Override // l.C22687
         public void onPopulateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
             super.onPopulateAccessibilityEvent(view, accessibilityEvent);
             this.layout.endLayout.getEndIconDelegate().onPopulateAccessibilityEvent(view, accessibilityEvent);

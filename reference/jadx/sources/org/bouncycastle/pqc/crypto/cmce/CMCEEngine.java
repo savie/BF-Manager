@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto.cmce;
 
 import java.lang.reflect.Array;
 import java.security.SecureRandom;
-import l.C17492;
+import l.C25227;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.util.Arrays;
 
@@ -763,7 +763,7 @@ public class CMCEEngine {
             jArr2[i6] = j2;
             long j3 = j2 | ((long) i6);
             jArr2[i6] = j3;
-            jArr2[i6] = j3 & C17492.FOREVER_NS;
+            jArr2[i6] = j3 & C25227.FOREVER_NS;
         }
         sort64(jArr2, 0, i5);
         for (int i7 = 1; i7 < (1 << this.GFBITS); i7++) {
@@ -1132,7 +1132,7 @@ public class CMCEEngine {
                     jArr[i13] = j2;
                     long j3 = j2 | ((long) i13);
                     jArr[i13] = j3;
-                    jArr[i13] = j3 & C17492.FOREVER_NS;
+                    jArr[i13] = j3 & C25227.FOREVER_NS;
                 }
                 sort64(jArr, 0, i12);
                 for (int i14 = 0; i14 < (1 << this.GFBITS); i14++) {

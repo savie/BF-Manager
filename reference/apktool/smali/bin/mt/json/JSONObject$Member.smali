@@ -133,7 +133,7 @@
     iget-object v1, p0, Lbin/mt/json/JSONObject$Member;->name:Ljava/lang/String;
 
     .line 0
-    invoke-static {v0, v0, v1}, Ll/ܰܿۙ;->ۙ(IILjava/lang/String;)I
+    invoke-static {v0, v0, v1}, Ll/ۨۨ᩹;->ۙ(IILjava/lang/String;)I
 
     move-result v0
 

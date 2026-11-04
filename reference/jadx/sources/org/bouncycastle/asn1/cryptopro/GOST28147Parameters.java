@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST28147Parameters extends ASN1Object {
     public ASN1OctetString iv;
     public ASN1ObjectIdentifier paramSet;

@@ -9,6 +9,7 @@ import java.nio.ByteBuffer;
 /* JADX INFO: loaded from: classes.dex */
 public class ZstdOutputStreamNoFinalizer extends FilterOutputStream {
     public static final int dstSize;
+    public ZstdDictCompress active_dict;
     public final BufferPool bufferPool;
     public boolean closeFrameOnFlush;
     public final byte[] dst;
@@ -274,38 +275,44 @@ public class ZstdOutputStreamNoFinalizer extends FilterOutputStream {
         if (Zstd.isError(jLoadFastDictCompress)) {
             throw new ZstdIOException(jLoadFastDictCompress);
         }
+        this.active_dict = zstdDictCompress;
         return this;
     }
 
     @Override // java.io.FilterOutputStream, java.io.OutputStream
     public synchronized void write(byte[] bArr, int i, int i2) {
-        try {
-            if (this.isClosed) {
-                throw new IOException("StreamClosed");
-            }
-            if (this.frameClosed) {
-                long jResetCStream = resetCStream(this.stream);
-                if (Zstd.isError(jResetCStream)) {
-                    throw new ZstdIOException(jResetCStream);
+        if (i >= 0 && i2 >= 0) {
+            try {
+                if (i2 <= bArr.length - i) {
+                    if (this.isClosed) {
+                        throw new IOException("StreamClosed");
+                    }
+                    if (this.frameClosed) {
+                        long jResetCStream = resetCStream(this.stream);
+                        if (Zstd.isError(jResetCStream)) {
+                            throw new ZstdIOException(jResetCStream);
+                        }
+                        this.frameClosed = false;
+                        this.frameStarted = true;
+                    }
+                    int i3 = i2 + i;
+                    this.srcPos = i;
+                    while (this.srcPos < i3) {
+                        long jCompressStream = compressStream(this.stream, this.dst, dstSize, bArr, i3);
+                        if (Zstd.isError(jCompressStream)) {
+                            throw new ZstdIOException(jCompressStream);
+                        }
+                        long j = this.dstPos;
+                        if (j > 0) {
+                            ((FilterOutputStream) this).out.write(this.dst, 0, (int) j);
+                        }
+                    }
                 }
-                this.frameClosed = false;
-                this.frameStarted = true;
+            } catch (Throwable th) {
+                throw th;
             }
-            int i3 = i2 + i;
-            this.srcPos = i;
-            while (this.srcPos < i3) {
-                long jCompressStream = compressStream(this.stream, this.dst, dstSize, bArr, i3);
-                if (Zstd.isError(jCompressStream)) {
-                    throw new ZstdIOException(jCompressStream);
-                }
-                long j = this.dstPos;
-                if (j > 0) {
-                    ((FilterOutputStream) this).out.write(this.dst, 0, (int) j);
-                }
-            }
-        } catch (Throwable th) {
-            throw th;
         }
+        throw new IndexOutOfBoundsException("Requested length " + i2 + " from offset " + i + " in buffer of size " + bArr.length);
     }
 
     @Override // java.io.FilterOutputStream, java.io.OutputStream

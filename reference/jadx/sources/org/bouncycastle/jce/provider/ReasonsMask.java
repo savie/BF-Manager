@@ -2,7 +2,7 @@ package org.bouncycastle.jce.provider;
 
 import org.bouncycastle.asn1.x509.ReasonFlags;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ReasonsMask {
     public static final ReasonsMask allReasons = new ReasonsMask(33023);
     public int _reasons;

@@ -1,110 +1,48 @@
-.class public final Ll/۠ۚ᩸;
+.class public final synthetic Ll/۠ۚ᩸;
 .super Ljava/lang/Object;
-.source "TUG"
+.source "61L9"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:I
 
 
 # direct methods
-.method public static ۙ(Ljava/lang/StringBuilder;)Ljava/io/Writer;
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    .line 72
-    new-instance v0, Ll/ᩴۚ᩸;
+    .line 0
+    iput p1, p0, Ll/۠ۚ᩸;->ܰ:I
 
-    invoke-direct {v0, p0}, Ll/ᩴۚ᩸;-><init>(Ljava/lang/StringBuilder;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    return-void
 .end method
 
-.method public static ۙ(Ll/ۚ۬᩸;)Ll/֫ۨ᩸;
-    .locals 2
 
-    .line 44
-    :try_start_0
-    invoke-virtual {p0}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
-    :try_end_0
-    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ll/۬۬᩸; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 0
+    iget v0, p0, Ll/۠ۚ᩸;->ܰ:I
 
-    .line 46
-    :try_start_1
-    sget-object v1, Ll/ܺ֨᩸;->᩵:Ll/۟ۖ᩸;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, p0}, Ll/۟ۖ᩸;->ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
+    invoke-static {}, Ll/ܽۛ֫;->ۙ()V
 
-    move-result-object p0
+    return-void
 
-    check-cast p0, Ll/֫ۨ᩸;
-    :try_end_1
-    .catch Ljava/io/EOFException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ll/۬۬᩸; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+    :pswitch_0
+    sget v0, Ll/ۖ֫᩸;->۟᩷:I
 
-    return-object p0
+    return-void
 
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    .line 62
-    new-instance v0, Ll/᩹ۖ᩸;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catch_2
-    move-exception p0
-
-    .line 60
-    new-instance v0, Ll/ۢۨ᩸;
-
-    .line 62
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 60
-    throw v0
-
-    :catch_3
-    move-exception p0
-
-    .line 58
-    new-instance v0, Ll/᩹ۖ᩸;
-
-    .line 62
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 58
-    throw v0
-
-    :catch_4
-    move-exception p0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    .line 53
-    sget-object p0, Ll/ۗۨ᩸;->ۙ:Ll/ۗۨ᩸;
-
-    return-object p0
-
-    .line 56
-    :cond_0
-    new-instance v0, Ll/᩹ۖ᩸;
-
-    .line 62
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 56
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

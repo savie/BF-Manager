@@ -17,7 +17,7 @@
     .locals 7
 
     .line 50
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object v1
 
@@ -42,7 +42,7 @@
     move-result-object v1
 
     .line 65
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۖ()Lcom/amazonaws/http/HttpMethodName;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩸()Lcom/amazonaws/http/HttpMethodName;
 
     move-result-object v3
 
@@ -62,7 +62,7 @@
 
     .line 73
     :goto_0
-    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     if-ne v3, v5, :cond_2
 
@@ -82,7 +82,7 @@
     const-string v2, "?"
 
     .line 0
-    invoke-static {v0, v2, v1}, Ll/֫۟ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 135
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v4
 
@@ -112,7 +112,7 @@
     const-string v6, ":"
 
     .line 0
-    invoke-static {v5, v6}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v6}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -134,7 +134,7 @@
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 143
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v4
 
@@ -225,12 +225,12 @@
     move-result-object v4
 
     .line 89
-    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->۫:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->۟:Lcom/amazonaws/http/HttpMethodName;
 
     if-ne v3, v5, :cond_8
 
     .line 90
-    sget-object v3, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v3, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     const-string v6, "X-HTTP-Method-Override"
 
@@ -243,7 +243,7 @@
 
     .line 93
     :cond_8
-    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     if-ne v3, v5, :cond_9
 
@@ -304,7 +304,7 @@
     invoke-direct {p1, v1, v0, v2, v4}, Lcom/amazonaws/http/HttpRequest;-><init>(Ljava/lang/String;Ljava/net/URI;Ljava/util/HashMap;Ljava/io/InputStream;)V
 
     .line 119
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۘ()Z
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->֫()Z
 
     move-result p0
 

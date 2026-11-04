@@ -3,7 +3,7 @@ package org.bouncycastle.jce.exception;
 import java.security.cert.CertPath;
 import java.security.cert.CertPathBuilderException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExtCertPathBuilderException extends CertPathBuilderException implements ExtException {
     public Throwable cause;
 

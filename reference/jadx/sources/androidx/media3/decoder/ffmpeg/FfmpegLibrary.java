@@ -1,22 +1,22 @@
 package androidx.media3.decoder.ffmpeg;
 
 import com.umeng.analytics.pro.cb;
-import l.AbstractC19354;
-import l.C0303;
-import l.C11572;
-import l.C1920;
-import l.C7648;
+import l.C12401;
+import l.C15648;
+import l.C1896;
+import l.C21616;
+import l.RunnableC5051;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class FfmpegLibrary {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC19354 f11;
+    public static final C12401 f11;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
     public static String f12;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
     public static int f13;
 
     public static native int ffmpegGetInputBufferPaddingSize();
@@ -26,14 +26,19 @@ public final class FfmpegLibrary {
     public static native boolean ffmpegHasDecoder(String str);
 
     static {
-        C11572.m28868("media3.decoder.ffmpeg");
-        f11 = new C1920("ffmpegJNI");
+        C21616.m49139("media3.decoder.ffmpeg");
+        f11 = new C12401("ffmpegJNI");
         f13 = -1;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m20(RunnableC5051 runnableC5051) {
+        f11.m30873(runnableC5051);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
     public static int m18() {
-        if (!f11.m44359()) {
+        if (!f11.m49810()) {
             return -1;
         }
         if (f13 == -1) {
@@ -42,14 +47,14 @@ public final class FfmpegLibrary {
         return f13;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m20() {
-        return f11.m44359();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m21() {
+        return f11.m49810();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m21() {
-        if (!f11.m44359()) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m22() {
+        if (!f11.m49810()) {
             return null;
         }
         if (f12 == null) {
@@ -58,23 +63,23 @@ public final class FfmpegLibrary {
         return f12;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m22(C7648 c7648) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m23(C15648 c15648) {
         String strM19;
-        if (!f11.m44359() || (strM19 = m19(c7648)) == null) {
+        if (!f11.m49810() || (strM19 = m19(c15648)) == null) {
             return false;
         }
         if (ffmpegHasDecoder(strM19)) {
             return true;
         }
-        C0303.m1848("No " + strM19 + " decoder available. Check the FFmpeg build configuration.");
+        C1896.m6517("No " + strM19 + " decoder available. Check the FFmpeg build configuration.");
         return false;
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m19(C7648 c7648) {
-        String str = c7648.f25265;
+    public static String m19(C15648 c15648) {
+        String str = c15648.f50848;
         if (str == null) {
             return null;
         }
@@ -152,7 +157,7 @@ public final class FfmpegLibrary {
                 break;
             case 1504831518:
                 if (str.equals("audio/mpeg")) {
-                    b = cb.f77931l;
+                    b = cb.f82047l;
                 }
                 break;
             case 1504891608:

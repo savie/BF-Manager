@@ -1,34 +1,38 @@
-.class public interface abstract Ll/۟᩹ᩴ;
+.class public final synthetic Ll/۟᩹ᩴ;
 .super Ljava/lang/Object;
-.source "SLZ"
+.source "470W"
 
 # interfaces
-.implements Ll/ۜ֫ᩳ;
-.implements Ljava/util/function/IntToDoubleFunction;
+.implements Ll/۟֡֫;
 
 
-# annotations
-.annotation runtime Ljava/lang/FunctionalInterface;
-.end annotation
+# instance fields
+.field public final synthetic ܰ:Ll/ᩳ᩹ᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ᩳ᩹ᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۟᩹ᩴ;->ܰ:Ll/ᩳ᩹ᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract get(I)F
-.end method
+.method public final ۫()Z
+    .locals 1
 
-.method public abstract get(Ljava/lang/Object;)Ljava/lang/Float;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
+    .line 0
+    iget-object v0, p0, Ll/۟᩹ᩴ;->ܰ:Ll/ᩳ᩹ᩴ;
 
-.method public abstract remove(I)F
-.end method
+    invoke-static {v0}, Ll/ᩳ᩹ᩴ;->ۙ(Ll/ᩳ᩹ᩴ;)Z
 
-.method public abstract ۙ(FI)F
-.end method
+    move-result v0
 
-.method public abstract ۙ(I)Z
-.end method
-
-.method public abstract ۨ()F
+    return v0
 .end method

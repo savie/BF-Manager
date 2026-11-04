@@ -9,7 +9,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECCSIKeyGenerationParameters extends KeyGenerationParameters {
     public final ECPoint G;
     public final Digest digest;

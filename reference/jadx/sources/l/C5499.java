@@ -1,87 +1,61 @@
 package l;
 
-import java.util.Iterator;
-import java.util.ListIterator;
+import com.alipay.sdk.m.n.a;
+import com.alipay.sdk.m.n.b;
+import com.alipay.sdk.m.t.e;
+import java.util.ArrayList;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.ۚܿܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4VB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5499 extends AbstractC22433 {
+/* JADX INFO: renamed from: l.ۚ۟ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6LR */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5499 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final transient int f18900;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public HashSet f19129;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final transient int f18901;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC22433 f18902;
-
-    @Override // l.AbstractC1826
-    /* JADX INFO: renamed from: ᩹ */
-    public final boolean mo5042() {
-        return true;
+    public C5499() {
+        int iM9136 = 0;
+        Object[] objArr = {a.s, b.a, "mailto", e.m};
+        ArrayList arrayList = new ArrayList(4);
+        while (iM9136 < 4) {
+            Object obj = objArr[iM9136];
+            iM9136 = C2764.m9136(obj, arrayList, obj, iM9136, 1);
+        }
+        this.f19129 = new HashSet(C4681.unmodifiableList(arrayList));
     }
 
-    @Override // l.AbstractC22433, l.AbstractC1826, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set, java.util.NavigableSet
-    public final Iterator iterator() {
-        return listIterator(0);
-    }
-
-    @Override // l.AbstractC22433, java.util.List
-    public final ListIterator listIterator() {
-        return listIterator(0);
-    }
-
-    @Override // l.AbstractC22433, java.util.List
-    public final /* bridge */ /* synthetic */ ListIterator listIterator(int i) {
-        return listIterator(i);
-    }
-
-    public C5499(AbstractC22433 abstractC22433, int i, int i2) {
-        this.f18902 = abstractC22433;
-        this.f18900 = i;
-        this.f18901 = i2;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final int size() {
-        return this.f18901;
-    }
-
-    @Override // l.AbstractC1826
-    /* JADX INFO: renamed from: ۨ */
-    public final Object[] mo5970() {
-        return this.f18902.mo5970();
-    }
-
-    @Override // l.AbstractC1826
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo5969() {
-        return this.f18902.mo5969() + this.f18900;
-    }
-
-    @Override // l.AbstractC1826
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo5967() {
-        return this.f18902.mo5969() + this.f18900 + this.f18901;
-    }
-
-    @Override // java.util.List
-    public final Object get(int i) {
-        C18304.m42510(i, this.f18901);
-        return this.f18902.get(i + this.f18900);
-    }
-
-    @Override // l.AbstractC22433, java.util.List
-    public final AbstractC22433 subList(int i, int i2) {
-        C18304.m42511(i, i2, this.f18901);
-        int i3 = this.f18900;
-        return this.f18902.subList(i + i3, i2 + i3);
-    }
-
-    @Override // l.AbstractC22433, l.AbstractC1826
-    public Object writeReplace() {
-        return super.writeReplace();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m16326(String str) {
+        char cCharAt;
+        int length = str.length();
+        while (length > 0 && ((cCharAt = str.charAt(length - 1)) == '\t' || cCharAt == '\n' || cCharAt == '\f' || cCharAt == '\r' || cCharAt == ' ')) {
+            length--;
+        }
+        int i = 0;
+        while (i < length) {
+            char cCharAt2 = str.charAt(i);
+            if (cCharAt2 != '\t' && cCharAt2 != '\n' && cCharAt2 != '\f' && cCharAt2 != '\r' && cCharAt2 != ' ') {
+                break;
+            }
+            i++;
+        }
+        if (i != 0 || length != str.length()) {
+            str = str.substring(i, length);
+        }
+        int length2 = str.length();
+        for (int i2 = 0; i2 < length2; i2++) {
+            char cCharAt3 = str.charAt(i2);
+            if (cCharAt3 == '#' || cCharAt3 == '/') {
+                return str;
+            }
+            if (cCharAt3 == ':') {
+                return !this.f19129.contains(str.substring(0, i2).toLowerCase()) ? "" : str;
+            }
+            if (cCharAt3 == '?') {
+                return str;
+            }
+        }
+        return str;
     }
 }

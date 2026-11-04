@@ -39,7 +39,7 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
-import l.C22697;
+import l.C8947;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -58,7 +58,7 @@ public class c implements UMLogDataProtocol {
     public static Method k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static Method f77948l;
+    public static Method f82064l;
     public static boolean m;
     public Context e;
 
@@ -88,7 +88,7 @@ public class c implements UMLogDataProtocol {
             }
             Method declaredMethod3 = i.getDeclaredMethod("getSDKVersion", null);
             if (declaredMethod3 != null) {
-                f77948l = declaredMethod3;
+                f82064l = declaredMethod3;
             }
         } catch (Throwable unused) {
         }
@@ -111,12 +111,12 @@ public class c implements UMLogDataProtocol {
     public static String b() {
         Method method;
         Class cls = i;
-        if (cls == null || (method = j) == null || f77948l == null) {
+        if (cls == null || (method = j) == null || f82064l == null) {
             return "";
         }
         try {
             Object objInvoke = method.invoke(cls, null);
-            return objInvoke != null ? (String) f77948l.invoke(objInvoke, null) : "";
+            return objInvoke != null ? (String) f82064l.invoke(objInvoke, null) : "";
         } catch (Throwable unused) {
             return "";
         }
@@ -426,7 +426,7 @@ public class c implements UMLogDataProtocol {
                         break;
                     }
                     break;
-                case a.f77947l /* 32775 */:
+                case a.f82063l /* 32775 */:
                     InfoPreferenceAgent.class.getMethod("saveUA", Context.class, String.class).invoke(InfoPreferenceAgent.class, this.e, (String) obj);
                     break;
                 case a.m /* 32776 */:
@@ -567,7 +567,7 @@ public class c implements UMLogDataProtocol {
                     File filesDir = this.e.getFilesDir();
                     StringBuilder sb = new StringBuilder();
                     sb.append(filesDir.getAbsolutePath());
-                    File file4 = new File(C22697.m50267(sb, File.separator, aq.m));
+                    File file4 = new File(C8947.m23910(sb, File.separator, aq.m));
                     if (file4.exists()) {
                         file4.delete();
                     }
@@ -647,7 +647,7 @@ public class c implements UMLogDataProtocol {
         File filesDir = context.getFilesDir();
         StringBuilder sb = new StringBuilder();
         sb.append(filesDir.getAbsolutePath());
-        File file = new File(C22697.m50267(sb, File.separator, aq.f77926l));
+        File file = new File(C8947.m23910(sb, File.separator, aq.f82042l));
         if (file.exists()) {
             return;
         }

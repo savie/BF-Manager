@@ -3,11 +3,10 @@ package org.bouncycastle.jcajce.provider.keystore;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCFKS {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.keystore.bcfks.";
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends AsymmetricAlgorithmProvider {
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {

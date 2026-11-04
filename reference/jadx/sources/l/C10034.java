@@ -1,35 +1,24 @@
 package l;
 
-import android.view.View;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ۤۘۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 61L9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10034 implements InterfaceC21530 {
+/* JADX INFO: renamed from: l.ۢۢۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BJX */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10034 extends AbstractC0078 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC4471 f34252;
+    public final String f32165;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f34253;
-
-    public C10034(ActivityC4471 activityC4471, View view) {
-        this.f34252 = activityC4471;
-        this.f34253 = view;
+    public C10034(String str) {
+        this.f32165 = str;
     }
 
-    @Override // l.InterfaceC21530
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final View mo25319() {
-        return this.f34253.findViewById(R.id.MT_Protector);
+    @Override // l.AbstractC0078
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1133(C15496 c15496, C15496 c15497) {
+        return c15497.m37076(this.f32165);
     }
 
-    @Override // l.InterfaceC21530
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo25320() {
-        ActivityC4471 activityC4471 = this.f34252;
-        activityC4471.m12450();
-        activityC4471.m12463();
+    public final String toString() {
+        return C25272.m56409(".", this.f32165);
     }
 }

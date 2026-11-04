@@ -6,35 +6,35 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ֫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ۗ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
 .field public static final enum ۙۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final ۛ:Ljava/util/Map;
+.field public static final enum ۜ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ۢ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۠:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ۨۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۡ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final ۢ:Ljava/util/Map;
 
-.field public static final enum ܰۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۤۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ۬:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final synthetic ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final ܿ:Lcom/amazonaws/logging/Log;
+.field public static final ᩳ:Lcom/amazonaws/logging/Log;
 
 .field public static final enum ᩶:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-.field public static final enum ᩻:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public static final enum ᩷ۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܰۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->᩷ۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 44
     new-instance v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -61,7 +61,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 48
     new-instance v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -72,7 +72,7 @@
 
     invoke-direct {v2, v3, v4}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->᩻:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۡ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 53
     new-instance v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -83,7 +83,7 @@
 
     invoke-direct {v3, v4, v5}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۗ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۬:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 57
     new-instance v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -94,7 +94,7 @@
 
     invoke-direct {v4, v5, v6}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 61
     new-instance v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -116,7 +116,7 @@
 
     invoke-direct {v6, v7, v8}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v6, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v6, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 71
     new-instance v7, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -129,7 +129,7 @@
 
     invoke-direct {v7, v9, v11}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v7, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۨۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v7, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۤۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 77
     new-instance v9, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -140,7 +140,7 @@
 
     invoke-direct {v9, v12, v14}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v9, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 84
     new-instance v12, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -153,7 +153,7 @@
 
     invoke-direct {v12, v15, v14}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v12, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 91
     new-instance v14, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -166,7 +166,7 @@
 
     invoke-direct {v14, v15, v11}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v14, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۢ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v14, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۜ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 98
     new-instance v11, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -179,7 +179,7 @@
 
     invoke-direct {v11, v15, v8}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v11, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v11, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۠:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 103
     new-instance v8, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -239,14 +239,14 @@
     aput-object v8, v15, v13
 
     .line 33
-    sput-object v15, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sput-object v15, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 107
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۛ:Ljava/util/Map;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۢ:Ljava/util/Map;
 
     .line 108
     invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->values()[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
@@ -263,7 +263,7 @@
     aget-object v3, v0, v2
 
     .line 109
-    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۛ:Ljava/util/Map;
+    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۢ:Ljava/util/Map;
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -283,7 +283,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ᩳ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -316,7 +316,7 @@
     .locals 1
 
     .line 33
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v0}, [Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->clone()Ljava/lang/Object;
 
@@ -331,7 +331,7 @@
     .locals 3
 
     .line 122
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۛ:Ljava/util/Map;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۢ:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -350,7 +350,7 @@
 
     .line 126
     :cond_0
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ᩳ:Lcom/amazonaws/logging/Log;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -380,7 +380,7 @@
     .locals 1
 
     .line 132
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -388,7 +388,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 133
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

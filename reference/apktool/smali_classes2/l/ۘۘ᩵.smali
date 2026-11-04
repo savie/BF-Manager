@@ -1,174 +1,213 @@
 .class public final Ll/ۘۘ᩵;
 .super Ljava/lang/Object;
-.source "367O"
-
-# interfaces
-.implements Ljava/io/Serializable;
+.source "5A1F"
 
 
-# instance fields
-.field public final ܺ:Ljava/lang/Object;
+# static fields
+.field public static final ۙ:[B
 
-.field public final ᩶:Ljava/lang/Object;
+.field public static final ۤ:[B
+
+.field public static final ᩷:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
-    .line 15
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "SmbSign"
 
-    .line 16
-    iput-object p1, p0, Ll/ۘۘ᩵;->ܺ:Ljava/lang/Object;
+    .line 37
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
 
-    .line 17
-    iput-object p2, p0, Ll/ۘۘ᩵;->᩶:Ljava/lang/Object;
+    move-result-object v0
+
+    sput-object v0, Ll/ۘۘ᩵;->ۙ:[B
+
+    const-string v0, "SMB2AESCMAC"
+
+    .line 38
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۘۘ᩵;->᩷:[B
+
+    const-string v0, "SMBSigningKey"
+
+    .line 39
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۘۘ᩵;->ۤ:[B
+
+    const-string v0, "SmbRpc"
+
+    .line 41
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v0, "SMB2APP"
+
+    .line 42
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v0, "SMBAppKey"
+
+    .line 43
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v0, "ServerIn "
+
+    .line 45
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v0, "SMB2AESCCM"
+
+    .line 46
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v1, "SMB2C2SCipherKey"
+
+    .line 47
+    invoke-static {v1}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v1, "ServerOut"
+
+    .line 49
+    invoke-static {v1}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    .line 50
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
+
+    const-string v0, "SMB2S2CCipherKey"
+
+    .line 51
+    invoke-static {v0}, Ll/ۘۘ᩵;->ۙ(Ljava/lang/String;)[B
 
     return-void
 .end method
 
+.method public static ۙ(I[B[B)[B
+    .locals 5
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const/16 v0, 0x311
 
-    const/4 v0, 0x1
+    if-ne p0, v0, :cond_0
 
-    if-ne p1, p0, :cond_0
+    .line 70
+    sget-object v1, Ll/ۘۘ᩵;->ۤ:[B
 
-    return v0
+    goto :goto_0
 
-    .line 25
     :cond_0
-    instance-of v1, p1, Ll/ۘۘ᩵;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    .line 29
-    :cond_1
-    check-cast p1, Ll/ۘۘ᩵;
-
-    .line 30
-    iget-object v1, p1, Ll/ۘۘ᩵;->ܺ:Ljava/lang/Object;
-
-    .line 43
-    iget-object v3, p0, Ll/ۘۘ᩵;->ܺ:Ljava/lang/Object;
-
-    if-nez v3, :cond_3
-
-    if-nez v1, :cond_2
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    .line 47
-    :cond_3
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
+    sget-object v1, Ll/ۘۘ᩵;->᩷:[B
 
     :goto_0
-    if-eqz v1, :cond_6
-
-    .line 30
-    iget-object p1, p1, Ll/ۘۘ᩵;->᩶:Ljava/lang/Object;
-
-    .line 43
-    iget-object v1, p0, Ll/ۘۘ᩵;->᩶:Ljava/lang/Object;
-
-    if-nez v1, :cond_5
-
-    if-nez p1, :cond_4
-
-    const/4 p1, 0x1
+    if-ne p0, v0, :cond_1
 
     goto :goto_1
 
-    :cond_4
-    const/4 p1, 0x0
+    .line 71
+    :cond_1
+    sget-object p2, Ll/ۘۘ᩵;->ۙ:[B
 
-    goto :goto_1
-
-    .line 47
-    :cond_5
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
+    .line 124
     :goto_1
-    if-eqz p1, :cond_6
+    new-instance p0, Lorg/bouncycastle/crypto/generators/KDFCounterBytesGenerator;
 
-    return v0
+    new-instance v0, Lorg/bouncycastle/crypto/macs/HMac;
 
-    :cond_6
-    return v2
-.end method
+    new-instance v2, Lorg/bouncycastle/crypto/digests/SHA256Digest;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-direct {v2}, Lorg/bouncycastle/crypto/digests/SHA256Digest;-><init>()V
+
+    invoke-direct {v0, v2}, Lorg/bouncycastle/crypto/macs/HMac;-><init>(Lorg/bouncycastle/crypto/Digest;)V
+
+    invoke-direct {p0, v0}, Lorg/bouncycastle/crypto/generators/KDFCounterBytesGenerator;-><init>(Lorg/bouncycastle/crypto/Mac;)V
+
+    .line 127
+    array-length v0, v1
+
+    array-length v2, p2
+
+    add-int/2addr v0, v2
+
+    add-int/lit8 v2, v0, 0x5
+
+    new-array v2, v2, [B
+
+    .line 136
+    array-length v3, v1
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 139
+    array-length v1, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v3, p2
+
+    invoke-static {p2, v4, v2, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v0, v0, 0x4
+
+    const/16 p2, -0x80
+
+    .line 141
+    aput-byte p2, v2, v0
+
+    .line 143
+    new-instance p2, Lorg/bouncycastle/crypto/params/KDFCounterParameters;
 
     const/4 v0, 0x0
 
-    .line 37
-    iget-object v1, p0, Ll/ۘۘ᩵;->ܺ:Ljava/lang/Object;
+    const/16 v1, 0x20
 
-    invoke-static {v0, v1}, Ll/ۙܺ᩺;->ۙ(ILjava/lang/Object;)I
+    invoke-direct {p2, p1, v0, v2, v1}, Lorg/bouncycastle/crypto/params/KDFCounterParameters;-><init>([B[B[BI)V
 
-    move-result v0
+    .line 144
+    invoke-virtual {p0, p2}, Lorg/bouncycastle/crypto/generators/KDFCounterBytesGenerator;->init(Lorg/bouncycastle/crypto/DerivationParameters;)V
 
-    .line 38
-    iget-object v1, p0, Ll/ۘۘ᩵;->᩶:Ljava/lang/Object;
+    const/16 p1, 0x10
 
-    invoke-static {v0, v1}, Ll/ۙܺ᩺;->ۙ(ILjava/lang/Object;)I
+    new-array p2, p1, [B
 
-    move-result v0
+    .line 147
+    invoke-virtual {p0, p2, v4, p1}, Lorg/bouncycastle/crypto/generators/KDFCounterBytesGenerator;->generateBytes([BII)I
 
-    const/4 v1, 0x2
-
-    .line 39
-    invoke-static {v0, v1}, Ll/ۙܺ᩺;->ۙ(II)I
-
-    move-result v0
-
-    return v0
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public static ۙ(Ljava/lang/String;)[B
     .locals 3
 
-    const/4 v0, 0x2
+    .line 157
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    move-result v0
 
-    const/4 v1, 0x0
+    add-int/lit8 v0, v0, 0x1
 
-    .line 44
-    iget-object v2, p0, Ll/ۘۘ᩵;->ܺ:Ljava/lang/Object;
+    new-array v0, v0, [B
 
-    aput-object v2, v0, v1
+    .line 158
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    const/4 v1, 0x1
+    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    iget-object v2, p0, Ll/ۘۘ᩵;->᩶:Ljava/lang/Object;
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
 
-    const-string v1, "(%s, %s)"
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move-result p0
 
-    move-result-object v0
+    invoke-static {v1, v2, v0, v2, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
 .end method

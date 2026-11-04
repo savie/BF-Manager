@@ -1,182 +1,362 @@
 package l;
 
-import android.graphics.Color;
-import android.text.TextUtils;
-import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Date;
+import org.simpleframework.xml.core.AnnotationHandler;
 
-/* JADX INFO: renamed from: l.ۚۡۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 096Y */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5242 {
+/* JADX INFO: renamed from: l.ۙ᩺᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y9V3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5242 extends AbstractC3971 implements InterfaceC8619 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final HashMap f18173;
+    /* JADX INFO: renamed from: ۟ۙ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f18447 = C16980.m40037(C5242.class);
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f18172 = Pattern.compile("^rgb\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$");
+    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f18448;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f18174 = Pattern.compile("^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$");
+    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
+    public int f18449;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f18175 = Pattern.compile("^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d*\\.?\\d*?)\\)$");
+    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
+    public int f18450;
 
-    static {
-        HashMap map = new HashMap();
-        f18173 = map;
-        C6009.m16314(-984833, map, "aliceblue", -332841, "antiquewhite");
-        C15037.m36025(map, "aqua", -16711681, -8388652, "aquamarine");
-        C6009.m16314(-983041, map, "azure", -657956, "beige");
-        C6009.m16314(-6972, map, "bisque", -16777216, "black");
-        C6009.m16314(-5171, map, "blanchedalmond", -16776961, "blue");
-        C6009.m16314(-7722014, map, "blueviolet", -5952982, "brown");
-        C6009.m16314(-2180985, map, "burlywood", -10510688, "cadetblue");
-        C6009.m16314(-8388864, map, "chartreuse", -2987746, "chocolate");
-        C6009.m16314(-32944, map, "coral", -10185235, "cornflowerblue");
-        C6009.m16314(-1828, map, "cornsilk", -2354116, "crimson");
-        C15037.m36025(map, "cyan", -16711681, -16777077, "darkblue");
-        C6009.m16314(-16741493, map, "darkcyan", -4684277, "darkgoldenrod");
-        C15037.m36025(map, "darkgray", -5658199, -16751616, "darkgreen");
-        C15037.m36025(map, "darkgrey", -5658199, -4343957, "darkkhaki");
-        C6009.m16314(-7667573, map, "darkmagenta", -11179217, "darkolivegreen");
-        C6009.m16314(-29696, map, "darkorange", -6737204, "darkorchid");
-        C6009.m16314(-7667712, map, "darkred", -1468806, "darksalmon");
-        C6009.m16314(-7357297, map, "darkseagreen", -12042869, "darkslateblue");
-        map.put("darkslategray", -13676721);
-        map.put("darkslategrey", -13676721);
-        C15037.m36025(map, "darkturquoise", -16724271, -7077677, "darkviolet");
-        C6009.m16314(-60269, map, "deeppink", -16728065, "deepskyblue");
-        map.put("dimgray", -9868951);
-        map.put("dimgrey", -9868951);
-        C15037.m36025(map, "dodgerblue", -14774017, -5103070, "firebrick");
-        C6009.m16314(-1296, map, "floralwhite", -14513374, "forestgreen");
-        C15037.m36025(map, "fuchsia", -65281, -2302756, "gainsboro");
-        C6009.m16314(-460545, map, "ghostwhite", -10496, "gold");
-        map.put("goldenrod", -2448096);
-        map.put("gray", -8355712);
-        C6009.m16314(-16744448, map, "green", -5374161, "greenyellow");
-        C15037.m36025(map, "grey", -8355712, -983056, "honeydew");
-        C6009.m16314(-38476, map, "hotpink", -3318692, "indianred");
-        C6009.m16314(-11861886, map, "indigo", -16, "ivory");
-        C6009.m16314(-989556, map, "khaki", -1644806, "lavender");
-        C6009.m16314(-3851, map, "lavenderblush", -8586240, "lawngreen");
-        C6009.m16314(-1331, map, "lemonchiffon", -5383962, "lightblue");
-        C6009.m16314(-1015680, map, "lightcoral", -2031617, "lightcyan");
-        map.put("lightgoldenrodyellow", -329006);
-        map.put("lightgray", -2894893);
-        map.put("lightgreen", -7278960);
-        map.put("lightgrey", -2894893);
-        C6009.m16314(-18751, map, "lightpink", -24454, "lightsalmon");
-        C6009.m16314(-14634326, map, "lightseagreen", -7876870, "lightskyblue");
-        map.put("lightslategray", -8943463);
-        map.put("lightslategrey", -8943463);
-        C15037.m36025(map, "lightsteelblue", -5192482, -32, "lightyellow");
-        C6009.m16314(-16711936, map, "lime", -13447886, "limegreen");
-        map.put("linen", -331546);
-        map.put("magenta", -65281);
-        C6009.m16314(-8388608, map, "maroon", -10039894, "mediumaquamarine");
-        C6009.m16314(-16777011, map, "mediumblue", -4565549, "mediumorchid");
-        C6009.m16314(-7114533, map, "mediumpurple", -12799119, "mediumseagreen");
-        C6009.m16314(-8689426, map, "mediumslateblue", -16713062, "mediumspringgreen");
-        C6009.m16314(-12004916, map, "mediumturquoise", -3730043, "mediumvioletred");
-        C6009.m16314(-15132304, map, "midnightblue", -655366, "mintcream");
-        C6009.m16314(-6943, map, "mistyrose", -6987, "moccasin");
-        C6009.m16314(-8531, map, "navajowhite", -16777088, "navy");
-        C6009.m16314(-133658, map, "oldlace", -8355840, "olive");
-        C6009.m16314(-9728477, map, "olivedrab", -23296, "orange");
-        C6009.m16314(-47872, map, "orangered", -2461482, "orchid");
-        C6009.m16314(-1120086, map, "palegoldenrod", -6751336, "palegreen");
-        C6009.m16314(-5247250, map, "paleturquoise", -2396013, "palevioletred");
-        C6009.m16314(-4139, map, "papayawhip", -9543, "peachpuff");
-        C6009.m16314(-3308225, map, "peru", -16181, "pink");
-        C6009.m16314(-2252579, map, "plum", -5185306, "powderblue");
-        C6009.m16314(-8388480, map, "purple", -10079335, "rebeccapurple");
-        C6009.m16314(-65536, map, "red", -4419697, "rosybrown");
-        C6009.m16314(-12490271, map, "royalblue", -7650029, "saddlebrown");
-        C6009.m16314(-360334, map, "salmon", -744352, "sandybrown");
-        C6009.m16314(-13726889, map, "seagreen", -2578, "seashell");
-        C6009.m16314(-6270419, map, "sienna", -4144960, "silver");
-        C6009.m16314(-7876885, map, "skyblue", -9807155, "slateblue");
-        map.put("slategray", -9404272);
-        map.put("slategrey", -9404272);
-        C15037.m36025(map, "snow", -1286, -16711809, "springgreen");
-        C6009.m16314(-12156236, map, "steelblue", -2968436, "tan");
-        C6009.m16314(-16744320, map, "teal", -2572328, "thistle");
-        C6009.m16314(-40121, map, "tomato", 0, "transparent");
-        C6009.m16314(-12525360, map, "turquoise", -1146130, "violet");
-        C6009.m16314(-663885, map, "wheat", -1, "white");
-        C6009.m16314(-657931, map, "whitesmoke", -256, "yellow");
-        map.put("yellowgreen", -6632142);
+    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
+    public int f18451;
+
+    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
+    public C21125 f18452;
+
+    /* JADX INFO: renamed from: ܿۙ, reason: not valid java name and contains not printable characters */
+    public int f18453;
+
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public int f18454;
+
+    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
+    public int f18455;
+
+    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
+    public int f18456;
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo1723(int i, byte[] bArr) {
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m14437(String str) {
-        return m14436(str, false);
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo1724(int i, byte[] bArr) {
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m14435(String str) {
-        return m14436(str, true);
+    public C5242(InterfaceC23032 interfaceC23032) {
+        super(interfaceC23032.mo2875());
+        this.f18452 = new C21125();
+        this.f18454 = ((C14826) interfaceC23032.mo2875()).m35738();
+        this.f18456 = ((C14826) interfaceC23032.mo2875()).m35721();
+        this.f18450 = ((C14826) interfaceC23032.mo2875()).m35727();
+        this.f18455 = ((C14826) interfaceC23032.mo2875()).m35711();
+        this.f18449 = ((C14826) interfaceC23032.mo2875()).m35714();
+        this.f18453 = ((C14826) interfaceC23032.mo2875()).m35717();
+        this.f18448 = ((C14826) interfaceC23032.mo2875()).m35743();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m14436(String str, boolean z) {
-        int i;
-        C2023.m6507(!TextUtils.isEmpty(str));
-        String strReplace = str.replace(" ", "");
-        if (strReplace.charAt(0) == '#') {
-            int i2 = (int) Long.parseLong(strReplace.substring(1), 16);
-            if (strReplace.length() == 7) {
-                return (-16777216) | i2;
-            }
-            if (strReplace.length() == 9) {
-                return ((i2 & 255) << 24) | (i2 >>> 8);
-            }
-            throw new IllegalArgumentException();
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۫ */
+    public final EnumC25270 mo11409() {
+        return EnumC25270.SMB1;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۢ */
+    public final int mo11405() {
+        return this.f18453;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo11401(InterfaceC23032 interfaceC23032) {
+        return m12793().equals(interfaceC23032.mo2875());
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo11402(InterfaceC23032 interfaceC23032, InterfaceC2653 interfaceC2653) {
+        if (this.f18451 > 10) {
+            return false;
         }
-        if (strReplace.startsWith("rgba")) {
-            Matcher matcher = (z ? f18175 : f18174).matcher(strReplace);
-            if (matcher.matches()) {
-                if (z) {
-                    String strGroup = matcher.group(4);
-                    strGroup.getClass();
-                    i = (int) (Float.parseFloat(strGroup) * 255.0f);
-                } else {
-                    String strGroup2 = matcher.group(4);
-                    strGroup2.getClass();
-                    i = Integer.parseInt(strGroup2, 10);
-                }
-                String strGroup3 = matcher.group(1);
-                strGroup3.getClass();
-                int i3 = Integer.parseInt(strGroup3, 10);
-                String strGroup4 = matcher.group(2);
-                strGroup4.getClass();
-                int i4 = Integer.parseInt(strGroup4, 10);
-                String strGroup5 = matcher.group(3);
-                strGroup5.getClass();
-                return Color.argb(i, i3, i4, Integer.parseInt(strGroup5, 10));
-            }
-        } else if (strReplace.startsWith("rgb")) {
-            Matcher matcher2 = f18172.matcher(strReplace);
-            if (matcher2.matches()) {
-                String strGroup6 = matcher2.group(1);
-                strGroup6.getClass();
-                int i5 = Integer.parseInt(strGroup6, 10);
-                String strGroup7 = matcher2.group(2);
-                strGroup7.getClass();
-                int i6 = Integer.parseInt(strGroup7, 10);
-                String strGroup8 = matcher2.group(3);
-                strGroup8.getClass();
-                return Color.rgb(i5, i6, Integer.parseInt(strGroup8, 10));
+        C21125 c21125 = this.f18452;
+        int i = c21125.f67480 & Integer.MIN_VALUE;
+        InterfaceC25186 interfaceC25186 = f18447;
+        if (i != Integer.MIN_VALUE && c21125.f67484 != 8 && ((C14826) interfaceC23032.mo2875()).m35718() == 0) {
+            interfaceC25186.mo13729("Unexpected encryption key length: " + c21125.f67484);
+            return false;
+        }
+        if (interfaceC2653.mo8797() || c21125.f67481) {
+            this.f18456 |= 4;
+            if (interfaceC2653.mo8797() || c21125.f67481) {
+                this.f18456 |= 16;
             }
         } else {
-            Integer num = (Integer) f18173.get(C20733.m46672(strReplace));
-            if (num != null) {
-                return num.intValue();
+            if (c21125.f67495) {
+                interfaceC23032.mo2875().getClass();
+            }
+            this.f18456 &= 65515;
+        }
+        if (interfaceC25186.mo13707()) {
+            StringBuilder sb = new StringBuilder("Signing ");
+            sb.append((this.f18456 & 4) != 0 ? "enabled " : "not-enabled ");
+            sb.append((this.f18456 & 16) != 0 ? AnnotationHandler.REQUIRED : "not-required");
+            interfaceC25186.mo13721(sb.toString());
+        }
+        int iMin = Math.min(this.f18450, c21125.f67492);
+        this.f18450 = iMin;
+        if (iMin < 1) {
+            this.f18450 = 1;
+        }
+        this.f18455 = Math.min(this.f18455, c21125.f67491);
+        this.f18449 = Math.min(this.f18449, c21125.f67491);
+        this.f18453 = Math.min(this.f18453, c21125.f67491);
+        int i2 = this.f18454;
+        int i3 = c21125.f67480;
+        int i4 = i2 & i3;
+        this.f18454 = i4;
+        if ((i3 & Integer.MIN_VALUE) == Integer.MIN_VALUE) {
+            this.f18454 = i4 | Integer.MIN_VALUE;
+        }
+        if (((C14826) interfaceC23032.mo2875()).m35743()) {
+            this.f18454 |= 4;
+        } else {
+            interfaceC23032.mo2875().getClass();
+        }
+        if ((this.f18454 & 4) == 0) {
+            interfaceC23032.mo2875().getClass();
+            this.f18448 = false;
+            this.f18456 &= EnumC6121.f20881;
+        } else {
+            this.f18448 = ((C14826) interfaceC23032.mo2875()).m35743();
+        }
+        if (this.f18448) {
+            interfaceC25186.mo13721("Unicode is enabled");
+            return true;
+        }
+        interfaceC25186.mo13721("Unicode is disabled");
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public final int m15752() {
+        return this.f18454;
+    }
+
+    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
+    public final int m15754() {
+        return this.f18455;
+    }
+
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public final int m15751() {
+        return this.f18450;
+    }
+
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public final int m15755() {
+        return this.f18450;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ܺ */
+    public final int mo11412() {
+        return this.f18449;
+    }
+
+    @Override // l.InterfaceC8619
+    public final int getSendBufferSize() {
+        return this.f18455;
+    }
+
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public final int m15753() {
+        return this.f18456;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۤ */
+    public final boolean mo11406(int i) {
+        return (this.f18454 & i) == i;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۜ */
+    public final boolean mo11404() {
+        m12793().getClass();
+        return mo11406(4096);
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ܰ */
+    public final boolean mo11410() {
+        return (this.f18456 & 4) == 4;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo11415(InterfaceC21299 interfaceC21299) {
+        if (interfaceC21299 instanceof AbstractC3971) {
+            AbstractC3971 abstractC3971 = (AbstractC3971) interfaceC21299;
+            abstractC3971.m12785(this.f18456);
+            abstractC3971.m12792(abstractC3971.mo12783() || this.f18448);
+            if (abstractC3971.m12781()) {
+                abstractC3971.m12785(32768);
+            }
+            if (abstractC3971 instanceof AbstractC10461) {
+                ((AbstractC10461) abstractC3971).m26882(this.f18455);
             }
         }
-        throw new IllegalArgumentException();
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11400(InterfaceC17965 interfaceC17965) {
+        if (interfaceC17965 instanceof AbstractC3971) {
+            ((AbstractC3971) interfaceC17965).m12792(this.f18448);
+        }
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ۨ */
+    public final boolean mo11407() {
+        C21125 c21125 = this.f18452;
+        return c21125.f67495 || c21125.f67481;
+    }
+
+    @Override // l.InterfaceC8619
+    /* JADX INFO: renamed from: ܽ */
+    public final boolean mo11413() {
+        return this.f18452.f67481;
+    }
+
+    /* JADX INFO: renamed from: ۗۙ, reason: not valid java name and contains not printable characters */
+    public final C21125 m15750() {
+        return this.f18452;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo1722(int i, byte[] bArr) {
+        int iM2318 = C0481.m2318(i, bArr);
+        this.f18451 = iM2318;
+        int i2 = i + 2;
+        if (iM2318 > 10) {
+            return i2 - i;
+        }
+        int i3 = i + 3;
+        byte b = bArr[i2];
+        C21125 c21125 = this.f18452;
+        c21125.f67496 = b & 255;
+        c21125.f67485 = b & 1;
+        c21125.f67482 = (b & 2) == 2;
+        c21125.f67495 = (b & 4) == 4;
+        c21125.f67481 = (b & 8) == 8;
+        c21125.f67492 = C0481.m2318(i3, bArr);
+        c21125.f67487 = C0481.m2318(i + 5, bArr);
+        c21125.f67491 = C0481.m2322(i + 7, bArr);
+        c21125.f67486 = C0481.m2322(i + 11, bArr);
+        c21125.f67488 = C0481.m2322(i + 15, bArr);
+        c21125.f67480 = C0481.m2322(i + 19, bArr);
+        c21125.f67489 = C0481.m2324(i + 23, bArr);
+        int iM2319 = C0481.m2318(i + 31, bArr);
+        if (iM2319 > 32767) {
+            iM2319 = (65536 - iM2319) * (-1);
+        }
+        c21125.f67490 = iM2319;
+        c21125.f67484 = bArr[i + 33] & 255;
+        return (i + 34) - i;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1725(int i, byte[] bArr) {
+        int i2;
+        int iM53449;
+        C21125 c21125 = this.f18452;
+        if ((c21125.f67480 & Integer.MIN_VALUE) == 0) {
+            int i3 = c21125.f67484;
+            byte[] bArr2 = new byte[i3];
+            c21125.f67493 = bArr2;
+            System.arraycopy(bArr, i, bArr2, 0, i3);
+            int i4 = c21125.f67484;
+            i2 = i + i4;
+            if (this.f13598 > i4) {
+                if ((this.f18456 & 32768) == 32768) {
+                    iM53449 = C23933.m53454(i2, 256, bArr);
+                    c21125.f67483 = C23933.m53453(i2, iM53449, bArr);
+                } else {
+                    iM53449 = C23933.m53449(i2, 256, bArr);
+                    c21125.f67483 = C23933.m53450(bArr, i2, iM53449, m12793());
+                }
+                i2 += iM53449;
+            } else {
+                c21125.f67483 = new String();
+            }
+        } else {
+            byte[] bArr3 = new byte[16];
+            c21125.f67494 = bArr3;
+            System.arraycopy(bArr, i, bArr3, 0, 16);
+            int length = c21125.f67494.length + i;
+            c21125.f67483 = new String();
+            int i5 = this.f13598;
+            if (i5 > 16) {
+                int i6 = i5 - 16;
+                c21125.f67484 = i6;
+                byte[] bArr4 = new byte[i6];
+                c21125.f67493 = bArr4;
+                System.arraycopy(bArr, length, bArr4, 0, i6);
+                InterfaceC25186 interfaceC25186 = f18447;
+                if (interfaceC25186.mo13707()) {
+                    interfaceC25186.mo13721("Have initial token ".concat(C6033.m17504(c21125.f67493, 0, c21125.f67484)));
+                }
+            }
+            i2 = length;
+        }
+        return i2 - i;
+    }
+
+    @Override // l.AbstractC3971
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbComNegotiateResponse[");
+        sb.append(super.toString());
+        sb.append(",wordCount=");
+        sb.append(this.f13609);
+        sb.append(",dialectIndex=");
+        sb.append(this.f18451);
+        sb.append(",securityMode=0x");
+        C21125 c21125 = this.f18452;
+        C8008.m21876(c21125.f67496, 1, ",security=", sb);
+        sb.append(c21125.f67485 == 0 ? "share" : "user");
+        sb.append(",encryptedPasswords=");
+        sb.append(c21125.f67482);
+        sb.append(",maxMpxCount=");
+        sb.append(c21125.f67492);
+        sb.append(",maxNumberVcs=");
+        sb.append(c21125.f67487);
+        sb.append(",maxBufferSize=");
+        sb.append(c21125.f67491);
+        sb.append(",maxRawSize=");
+        sb.append(c21125.f67486);
+        sb.append(",sessionKey=0x");
+        C8008.m21876(c21125.f67488, 8, ",capabilities=0x", sb);
+        sb.append(C6033.m17503(c21125.f67480, 8));
+        sb.append(",serverTime=");
+        sb.append(new Date(c21125.f67489));
+        sb.append(",serverTimeZone=");
+        sb.append(c21125.f67490);
+        sb.append(",encryptionKeyLength=");
+        sb.append(c21125.f67484);
+        sb.append(",byteCount=");
+        sb.append(this.f13598);
+        sb.append(",oemDomainName=");
+        return new String(C8947.m23910(sb, c21125.f67483, "]"));
     }
 }

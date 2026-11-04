@@ -1311,7 +1311,7 @@
 
     invoke-direct {v4, p0, v5}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v4}, Ll/ᩴ᩸ۨ;->ۙ(Ljava/io/RandomAccessFile;)Ljava/nio/channels/FileChannel;
+    invoke-static {v4}, Ll/ۚܽۤ;->ۙ(Ljava/io/RandomAccessFile;)Ljava/nio/channels/FileChannel;
 
     move-result-object v3
 

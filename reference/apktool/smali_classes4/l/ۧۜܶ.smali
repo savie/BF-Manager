@@ -1,13 +1,17 @@
 .class public final Ll/ۧۜܶ;
-.super Ll/ᩳۘܶ;
-.source "ZB9J"
+.super Ll/᩻ۜܶ;
+.source "P89T"
 
 
 # virtual methods
-.method public final ᩴ()I
+.method public final ۫()Ll/ܽۜܶ;
     .locals 1
 
-    const/4 v0, 0x0
+    .line 91
+    new-instance v0, Ll/ܽۜܶ;
 
-    return v0
+    .line 53
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
 .end method

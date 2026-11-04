@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NullDigest implements Digest {
     public OpenByteArrayOutputStream bOut = new OpenByteArrayOutputStream();
 

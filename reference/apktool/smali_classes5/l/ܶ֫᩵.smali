@@ -1,77 +1,73 @@
-.class public final Ll/ܶ֫᩵;
-.super Ll/ۜۢ᩵;
-.source "94XD"
+.class public final synthetic Ll/ܶ֫᩵;
+.super Ljava/lang/Object;
+.source "T6GT"
 
 # interfaces
-.implements Ll/ᩳܰۡ;
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public final synthetic ܰ:Ljava/util/List;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/List;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܶ֫᩵;->ܰ:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 2
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 50
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    move-result-object p1
 
-    move-result-object v0
-
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۙ(I)B
-
-    move-result v0
-
-    and-int/lit8 v0, v0, 0xf
-
-    return v0
+    return-object p1
 .end method
 
-.method public final synthetic ۤ()Ljava/lang/String;
+.method public synthetic negate()Ljava/util/function/Predicate;
     .locals 1
 
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final ܺ()J
-    .locals 2
-
-    .line 60
-    invoke-virtual {p0}, Ll/ܶ֫᩵;->᩺()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final ᩺()I
-    .locals 2
-
-    .line 55
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object v0
 
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
+    return-object v0
+.end method
 
-    add-int/lit8 v1, v1, 0x1
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۙ(I)B
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    move-result v0
+    move-result-object p1
 
-    shl-int/lit8 v0, v0, 0x18
+    return-object p1
+.end method
 
-    shr-int/lit8 v0, v0, 0x1c
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    return v0
+    .line 0
+    iget-object v0, p0, Ll/ܶ֫᩵;->ܰ:Ljava/util/List;
+
+    check-cast p1, Ll/᩷ۡۗ;
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

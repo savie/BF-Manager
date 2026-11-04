@@ -1,247 +1,137 @@
-.class public Ll/ܽᩴۙ;
-.super Ljava/lang/Object;
-.source "78PS"
+.class public final Ll/ܽᩴۙ;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
+.source "ZB20"
 
 
 # instance fields
-.field public final ۖ:Z
+.field public final ۙ:Ll/ܺᩴۙ;
 
-.field public final ۙ:Z
-
-.field public final ۚ:J
-
-.field public final ۨ:Z
-
-.field public final ܰ:J
-
-.field public final ᩹:Z
+.field public final ᩷:Landroid/widget/TextView;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
-
-    .line 1847
-    new-instance v0, Ll/֡ᩴۙ;
-
-    invoke-direct {v0}, Ll/֡ᩴۙ;-><init>()V
-
-    .line 1967
-    new-instance v1, Ll/ܽᩴۙ;
-
-    invoke-direct {v1, v0}, Ll/ܽᩴۙ;-><init>(Ll/֡ᩴۙ;)V
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    .line 0
-    invoke-static {v2, v3, v4, v0, v1}, Ll/ۡܿۡ;->ۙ(IIIII)V
-
-    const/4 v0, 0x5
-
-    .line 2071
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    const/4 v0, 0x6
-
-    .line 2072
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    const/4 v0, 0x7
-
-    .line 2073
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/֡ᩴۙ;)V
+.method public constructor <init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
     .locals 2
 
-    .line 2020
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 46
+    new-instance v0, Ll/ܺᩴۙ;
 
-    .line 2021
-    sget-object v0, Ll/ᩳۤۙ;->ۖ:Ljava/lang/String;
+    .line 80
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 2023
-    invoke-static {p1}, Ll/֡ᩴۙ;->ۚ(Ll/֡ᩴۙ;)J
+    const/4 v1, 0x0
 
-    move-result-wide v0
+    .line 55
+    invoke-direct {p0, p2, v1}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
 
-    iput-wide v0, p0, Ll/ܽᩴۙ;->ۚ:J
+    .line 56
+    iput-object p1, p0, Ll/ܽᩴۙ;->᩷:Landroid/widget/TextView;
 
-    .line 2024
-    invoke-static {p1}, Ll/֡ᩴۙ;->ܰ(Ll/֡ᩴۙ;)J
+    .line 57
+    iput-object v0, p0, Ll/ܽᩴۙ;->ۙ:Ll/ܺᩴۙ;
 
-    move-result-wide v0
-
-    iput-wide v0, p0, Ll/ܽᩴۙ;->ܰ:J
-
-    .line 2025
-    invoke-static {p1}, Ll/֡ᩴۙ;->ۖ(Ll/֡ᩴۙ;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Ll/ܽᩴۙ;->ۖ:Z
-
-    .line 2026
-    invoke-static {p1}, Ll/֡ᩴۙ;->ۨ(Ll/֡ᩴۙ;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Ll/ܽᩴۙ;->ۨ:Z
-
-    .line 2027
-    invoke-static {p1}, Ll/֡ᩴۙ;->᩹(Ll/֡ᩴۙ;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Ll/ܽᩴۙ;->᩹:Z
-
-    .line 2028
-    invoke-static {p1}, Ll/֡ᩴۙ;->ۙ(Ll/֡ᩴۙ;)Z
+    .line 92
+    invoke-static {}, Ll/֫᩸ۙ;->ᩴ()Z
 
     move-result p1
 
-    iput-boolean p1, p0, Ll/ܽᩴۙ;->ۙ:Z
+    if-eqz p1, :cond_0
 
+    .line 93
+    invoke-static {}, Ll/֫᩸ۙ;->᩸()Ll/֫᩸ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p3}, Ll/֫᩸ۙ;->ۙ(Landroid/view/inputmethod/EditorInfo;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final deleteSurroundingText(II)Z
+    .locals 2
 
-    const/4 v0, 0x1
+    .line 77
+    iget-object v0, p0, Ll/ܽᩴۙ;->᩷:Landroid/widget/TextView;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 
-    return v0
+    move-result-object v0
 
-    .line 2041
+    .line 63
+    iget-object v1, p0, Ll/ܽᩴۙ;->ۙ:Ll/ܺᩴۙ;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    .line 87
+    invoke-static {p0, v0, p1, p2, v1}, Ll/֫᩸ۙ;->ۙ(Landroid/view/inputmethod/InputConnection;Landroid/text/Editable;IIZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 65
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingText(II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    instance-of v1, p1, Ll/ܽᩴۙ;
+    return v1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    .line 2045
     :cond_1
-    check-cast p1, Ll/ܽᩴۙ;
+    :goto_0
+    const/4 p1, 0x1
 
-    .line 2047
-    iget-wide v3, p0, Ll/ܽᩴۙ;->ۚ:J
-
-    iget-wide v5, p1, Ll/ܽᩴۙ;->ۚ:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Ll/ܽᩴۙ;->ܰ:J
-
-    iget-wide v5, p1, Ll/ܽᩴۙ;->ܰ:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-boolean v1, p0, Ll/ܽᩴۙ;->ۖ:Z
-
-    iget-boolean v3, p1, Ll/ܽᩴۙ;->ۖ:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Ll/ܽᩴۙ;->ۨ:Z
-
-    iget-boolean v3, p1, Ll/ܽᩴۙ;->ۨ:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Ll/ܽᩴۙ;->᩹:Z
-
-    iget-boolean v3, p1, Ll/ܽᩴۙ;->᩹:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Ll/ܽᩴۙ;->ۙ:Z
-
-    iget-boolean p1, p1, Ll/ܽᩴۙ;->ۙ:Z
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 7
+.method public final deleteSurroundingTextInCodePoints(II)Z
+    .locals 2
 
-    .line 2057
-    iget-wide v0, p0, Ll/ܽᩴۙ;->ۚ:J
+    .line 77
+    iget-object v0, p0, Ll/ܽᩴۙ;->᩷:Landroid/widget/TextView;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 
-    ushr-long v3, v0, v2
+    move-result-object v0
 
-    xor-long/2addr v0, v3
+    .line 71
+    iget-object v1, p0, Ll/ܽᩴۙ;->ۙ:Ll/ܺᩴۙ;
 
-    long-to-int v1, v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    mul-int/lit8 v1, v1, 0x1f
+    const/4 v1, 0x1
 
-    .line 2058
-    iget-wide v3, p0, Ll/ܽᩴۙ;->ܰ:J
+    .line 87
+    invoke-static {p0, v0, p1, p2, v1}, Ll/֫᩸ۙ;->ۙ(Landroid/view/inputmethod/InputConnection;Landroid/text/Editable;IIZ)Z
 
-    ushr-long v5, v3, v2
+    move-result v0
 
-    xor-long v2, v3, v5
+    if-nez v0, :cond_1
 
-    long-to-int v0, v2
+    .line 73
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingTextInCodePoints(II)Z
 
-    add-int/2addr v1, v0
+    move-result p1
 
-    mul-int/lit8 v1, v1, 0x1f
+    if-eqz p1, :cond_0
 
-    .line 2059
-    iget-boolean v0, p0, Ll/ܽᩴۙ;->ۖ:Z
+    goto :goto_0
 
-    add-int/2addr v1, v0
+    :cond_0
+    const/4 p1, 0x0
 
-    mul-int/lit8 v1, v1, 0x1f
+    return p1
 
-    .line 2060
-    iget-boolean v0, p0, Ll/ܽᩴۙ;->ۨ:Z
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 2061
-    iget-boolean v0, p0, Ll/ܽᩴۙ;->᩹:Z
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 2062
-    iget-boolean v0, p0, Ll/ܽᩴۙ;->ۙ:Z
-
-    add-int/2addr v1, v0
-
+    :cond_1
+    :goto_0
     return v1
 .end method

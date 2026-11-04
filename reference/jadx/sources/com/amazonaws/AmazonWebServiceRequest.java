@@ -6,35 +6,35 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class AmazonWebServiceRequest implements Cloneable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public ProgressListener f86;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ProgressListener f76;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final RequestClientOptions f87 = new RequestClientOptions();
+    public final RequestClientOptions f77 = new RequestClientOptions();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final RequestClientOptions m161() {
-        return this.f87;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final RequestClientOptions m155() {
+        return this.f77;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo159(ProgressListener progressListener) {
-        this.f86 = progressListener;
+    public void mo153(ProgressListener progressListener) {
+        this.f76 = progressListener;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public ProgressListener mo158() {
-        return this.f86;
+    public ProgressListener mo152() {
+        return this.f76;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m160(PutObjectRequest putObjectRequest) {
-        putObjectRequest.f86 = this.f86;
+    public final void m154(PutObjectRequest putObjectRequest) {
+        putObjectRequest.f76 = this.f76;
     }
 
     @Override // 
     /* JADX INFO: renamed from: clone, reason: merged with bridge method [inline-methods] */
-    public AmazonWebServiceRequest mo162clone() {
+    public AmazonWebServiceRequest mo156clone() {
         try {
             AmazonWebServiceRequest amazonWebServiceRequest = (AmazonWebServiceRequest) super.clone();
             amazonWebServiceRequest.getClass();

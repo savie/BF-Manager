@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.crypto.util.DigestFactory;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RC2WrapEngine implements Wrapper {
     public static final byte[] IV2 = {74, -35, -94, 44, 121, -24, PublicSuffixDatabase.EXCEPTION_MARKER, 5};
     public CBCBlockCipher engine;

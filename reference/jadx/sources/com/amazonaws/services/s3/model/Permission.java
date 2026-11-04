@@ -9,31 +9,31 @@ public enum Permission {
     WriteAcp("WRITE_ACP", "x-amz-grant-write-acp");
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f648;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public String f638;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public String f649;
+    public String f639;
 
     Permission(String str, String str2) {
-        this.f649 = str;
-        this.f648 = str2;
+        this.f639 = str;
+        this.f638 = str2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String m647() {
-        return this.f648;
+    public String m641() {
+        return this.f638;
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return this.f649;
+        return this.f639;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Permission m646(String str) {
+    public static Permission m640(String str) {
         for (Permission permission : values()) {
-            if (permission.f649.equals(str)) {
+            if (permission.f639.equals(str)) {
                 return permission;
             }
         }

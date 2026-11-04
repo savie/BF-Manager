@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AbstractConcurrentSet implements Set {
     public static final AtomicLong id = new AtomicLong();
     public final Map entries;

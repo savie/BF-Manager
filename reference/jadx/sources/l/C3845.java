@@ -1,28 +1,27 @@
 package l;
 
-import java.io.InputStream;
+import android.text.TextUtils;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ۘۡ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: C12B */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3845 extends AbstractC19603 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22212 f14373;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12107 f14374;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C3845(String str, long j, C1023 c1023, C22212 c22212, C12107 c12107) {
-        super(str, j, c1023);
-        this.f14373 = c22212;
-        this.f14374 = c12107;
+/* JADX INFO: renamed from: l.ۘۖ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95QI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3845 extends AbstractC0116 {
+    @Override // l.AbstractC0116
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1247(View view, Object obj) {
+        C8320.m22414(view, (CharSequence) obj);
     }
 
-    @Override // l.AbstractC19603
+    @Override // l.AbstractC0116
     /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo2898() {
-        return this.f14373.m49332().m7471(this.f14374);
+    public final boolean mo1248(Object obj, Object obj2) {
+        return !TextUtils.equals((CharSequence) obj, (CharSequence) obj2);
+    }
+
+    @Override // l.AbstractC0116
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1246(View view) {
+        return C8320.m22413(view);
     }
 }

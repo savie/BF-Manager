@@ -22,11 +22,11 @@ import com.google.android.material.motion.MotionUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C0976;
-import l.C18616;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C17609;
+import l.C22666;
+import l.C4185;
 import org.bouncycastle.math.ec.rfc8032.Ed448;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -67,7 +67,7 @@ public class ClockHandView extends View {
     }
 
     public ClockHandView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8500);
+        this(context, attributeSet, C11642.f36914);
     }
 
     public ClockHandView(Context context, AttributeSet attributeSet, int i) {
@@ -78,20 +78,20 @@ public class ClockHandView extends View {
         this.paint = paint;
         this.selectorBox = new RectF();
         this.currentLevel = 1;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8033.f27851, i, C18616.f60015);
-        this.animationDuration = MotionUtils.resolveThemeDuration(context, C2387.f9469, 200);
-        this.animationInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8957, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
-        this.circleRadius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27586, 0);
-        this.selectorRadius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27267, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C14625.f47586, i, C4185.f14194);
+        this.animationDuration = MotionUtils.resolveThemeDuration(context, C11642.f37310, 200);
+        this.animationInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36560, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
+        this.circleRadius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46098, 0);
+        this.selectorRadius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46629, 0);
         Resources resources = getResources();
-        this.selectorStrokeWidth = resources.getDimensionPixelSize(C0976.f4031);
-        this.centerDotRadius = resources.getDimensionPixelSize(C0976.f4244);
-        int color = typedArrayObtainStyledAttributes.getColor(C8033.f26362, 0);
+        this.selectorStrokeWidth = resources.getDimensionPixelSize(C17609.f57502);
+        this.centerDotRadius = resources.getDimensionPixelSize(C17609.f57315);
+        int color = typedArrayObtainStyledAttributes.getColor(C14625.f47373, 0);
         paint.setAntiAlias(true);
         paint.setColor(color);
         setHandRotation(0.0f);
         this.scaledTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         setImportantForAccessibility(2);
         typedArrayObtainStyledAttributes.recycle();
     }

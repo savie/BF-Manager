@@ -1,45 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۙۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 06PO */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16409 implements AutoCloseable, InterfaceC5614 {
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C3329 f52788;
+/* JADX INFO: renamed from: l.ܶ᩹᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 97L */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16409 extends AbstractC5312 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC12176 f52789;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19393 f53252;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final long f52790;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f52791;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final InterfaceC0180 f52792;
-
-    public C16409(AbstractC12176 abstractC12176, long j, CharSequence charSequence, C3329 c3329, InterfaceC0180 interfaceC0180) {
-        this.f52789 = abstractC12176;
-        this.f52790 = j;
-        this.f52791 = charSequence;
-        this.f52788 = c3329;
-        this.f52792 = interfaceC0180;
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        AbstractC12176 abstractC12176 = this.f52789;
-        return abstractC12176.f40755 || this.f52790 != abstractC12176.f40760;
+    public C16409(C19393 c19393) {
+        this.f53252 = c19393;
     }
 
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        C3329 c3329 = this.f52788;
-        if (c3329 != null) {
-            c3329.close();
+    @Override // l.AbstractC5312, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC15224 iterator() {
+        return new C0748(this.f53252);
+    }
+
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC2546 spliterator() {
+        return new C8206(this.f53252);
+    }
+
+    @Override // l.AbstractC5312, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        C19393 c19393 = this.f53252;
+        char[] cArr = c19393.f62668;
+        Object[] objArr = c19393.f62673;
+        if (c19393.f62676) {
+            consumer.accept(objArr[c19393.f62674]);
         }
+        int i = c19393.f62674;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            if (cArr[i2] != 0) {
+                consumer.accept(objArr[i2]);
+            }
+            i = i2;
+        }
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f53252.f62670;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final boolean contains(Object obj) {
+        return this.f53252.containsValue(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final void clear() {
+        this.f53252.clear();
     }
 }

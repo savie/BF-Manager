@@ -1,44 +1,56 @@
-.class public final Ll/ᩳ᩸᩺;
-.super Ll/۫ܿ᩺;
-.source "W5L3"
+.class public final synthetic Ll/ᩳ᩸᩺;
+.super Ljava/lang/Object;
+.source "B7FA"
 
-
-# instance fields
-.field public final synthetic ܺ:Ll/᩸᩸᩺;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩸᩸᩺;)V
-    .locals 0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 539
-    iput-object p1, p0, Ll/ᩳ᩸᩺;->ܺ:Ll/᩸᩸᩺;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/function/IntPredicate;
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 3
+.method public synthetic and(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+    .locals 0
 
-    .line 542
-    invoke-static {}, Ll/ܽܺۘ;->ۜ()Landroid/os/Handler;
+    .line 0
+    invoke-static {p0, p1}, Ll/ܰۧۗ;->$default$and(Ljava/util/function/IntPredicate;Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
 
     move-result-object p1
 
-    .line 543
-    iget-object v0, p0, Ll/ᩳ᩸᩺;->ܺ:Ll/᩸᩸᩺;
+    return-object p1
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+.method public synthetic negate()Ljava/util/function/IntPredicate;
+    .locals 1
 
-    const-wide/16 v1, 0x12c
+    .line 0
+    invoke-static {p0}, Ll/ܰۧۗ;->$default$negate(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
 
-    .line 544
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    move-result-object v0
 
-    return-void
+    return-object v0
+.end method
+
+.method public synthetic or(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܰۧۗ;->$default$or(Ljava/util/function/IntPredicate;Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(I)Z
+    .locals 0
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

@@ -1,49 +1,28 @@
 .class public final Ll/۬ܶۙ;
-.super Ll/ۨ֡۠;
-.source "MANZ"
+.super Ljava/lang/Object;
+.source "U8TP"
 
 # interfaces
-.implements Ll/ܶ᩶۠;
-
-
-# static fields
-.field public static final ᩶:Ll/۬ܶۙ;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 2
-    new-instance v0, Ll/۬ܶۙ;
-
-    const/4 v1, 0x1
-
-    .line 0
-    invoke-direct {v0, v1}, Ll/ۨ֡۠;-><init>(I)V
-
-    sput-object v0, Ll/۬ܶۙ;->᩶:Ll/۬ܶۙ;
-
-    return-void
-.end method
+.implements Landroid/os/Parcelable$Creator;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .line 110
-    check-cast p1, Ll/ۗܶۙ;
+    .line 395
+    new-instance v0, Ll/ۙ᩹ۙ;
 
-    const-string v0, "$this$initializer"
+    invoke-direct {v0, p1}, Ll/ۙ᩹ۙ;-><init>(Landroid/os/Parcel;)V
 
-    .line 0
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    .line 110
-    new-instance p1, Ll/ܶܶۙ;
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {p1}, Ll/ܶܶۙ;-><init>()V
+    .line 400
+    new-array p1, p1, [Ll/ۙ᩹ۙ;
 
     return-object p1
 .end method

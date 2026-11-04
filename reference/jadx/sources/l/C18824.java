@@ -1,136 +1,68 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ᩴܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ᩳۘ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1N0 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C18824 implements Collection, Serializable, InterfaceC10441 {
-    public static final long serialVersionUID = 1820017752578914078L;
-    public final Collection a;
+public final class C18824 extends AbstractC6957 {
 
-    @Override // java.util.Collection
-    public final /* synthetic */ Stream parallelStream() {
-        return C2223.convert(parallelStream());
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15399 f61180;
+
+    @Override // l.AbstractC6957, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // java.util.Collection, java.lang.Iterable
-    public final /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+    public C18824(C15399 c15399) {
+        this.f61180 = c15399;
     }
 
-    @Override // java.util.Collection
-    public final /* synthetic */ Stream stream() {
-        return C2223.convert(stream());
+    @Override // l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC6036 iterator() {
+        return new C22859(this.f61180);
     }
 
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final /* synthetic */ Object[] toArray(IntFunction intFunction) {
-        return toArray((Object[]) intFunction.apply(0));
+    @Override // l.AbstractC6957, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC15949 spliterator() {
+        return new C19875(this.f61180);
     }
 
-    public C18824(Collection collection) {
-        collection.getClass();
-        this.a = collection;
+    @Override // l.AbstractC6957, l.InterfaceC20206
+    public final void forEach(IntConsumer intConsumer) {
+        C15399 c15399 = this.f61180;
+        int[] iArr = c15399.f50196;
+        int[] iArr2 = c15399.f50195;
+        if (c15399.f50203) {
+            intConsumer.accept(iArr2[c15399.f50194]);
+        }
+        int i = c15399.f50194;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            if (iArr[i2] != 0) {
+                intConsumer.accept(iArr2[i2]);
+            }
+            i = i2;
+        }
     }
 
-    @Override // java.util.Collection
+    @Override // java.util.AbstractCollection, java.util.Collection
     public final int size() {
-        return this.a.size();
+        return this.f61180.f50197;
     }
 
-    @Override // java.util.Collection
-    public final boolean isEmpty() {
-        return this.a.isEmpty();
+    @Override // l.InterfaceC1340
+    public final boolean contains(int i) {
+        return this.f61180.m36871(i);
     }
 
-    @Override // java.util.Collection, java.util.Set
-    public boolean contains(Object obj) {
-        return this.a.contains(obj);
-    }
-
-    @Override // java.util.Collection, java.util.Set
-    public Object[] toArray() {
-        return this.a.toArray();
-    }
-
-    @Override // java.util.Collection, java.util.Set
-    public Object[] toArray(Object[] objArr) {
-        return this.a.toArray(objArr);
-    }
-
-    public final String toString() {
-        return this.a.toString();
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable, java.util.Set
-    public Iterator iterator() {
-        return new C21646(this);
-    }
-
-    @Override // java.util.Collection
-    public final boolean add(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection
-    public final boolean remove(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection, java.util.Set
-    public boolean containsAll(Collection collection) {
-        return this.a.containsAll(collection);
-    }
-
-    @Override // java.util.Collection
-    public final boolean addAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection
+    @Override // java.util.AbstractCollection, java.util.Collection
     public final void clear() {
-        throw new UnsupportedOperationException();
-    }
-
-    public void forEach(Consumer consumer) {
-        C9030.a(this.a, consumer);
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final boolean removeIf(Predicate predicate) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public InterfaceC20693 spliterator() {
-        return C9030.b(this.a);
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public InterfaceC5046 stream() {
-        return C9030.stream(this.a);
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public InterfaceC5046 parallelStream() {
-        return C9030.parallelStream(this.a);
+        this.f61180.clear();
     }
 }

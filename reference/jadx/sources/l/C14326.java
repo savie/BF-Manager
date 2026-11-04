@@ -1,76 +1,35 @@
 package l;
 
-import java.io.IOException;
-import java.lang.reflect.AccessibleObject;
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܳۚ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 47S6 */
+/* JADX INFO: renamed from: l.ܰۗ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: C6L */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14326 extends AbstractC7186 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC20592 f46938 = new C23498();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashMap f46941 = new HashMap();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f46940 = new HashMap();
+public final /* synthetic */ class C14326 {
+    @Deprecated
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Character m34752(InterfaceC8360 interfaceC8360) {
+        return Character.valueOf(interfaceC8360.mo5320());
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f46939 = new HashMap();
-
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        Enum r3 = (Enum) obj;
-        c1145.m4212(r3 == null ? null : (String) this.f46939.get(r3));
-    }
-
-    public C14326(Class cls) {
-        try {
-            Field[] declaredFields = cls.getDeclaredFields();
-            int i = 0;
-            for (Field field : declaredFields) {
-                if (field.isEnumConstant()) {
-                    declaredFields[i] = field;
-                    i++;
-                }
-            }
-            Field[] fieldArr = (Field[]) Arrays.copyOf(declaredFields, i);
-            AccessibleObject.setAccessible(fieldArr, true);
-            for (Field field2 : fieldArr) {
-                Enum r3 = (Enum) field2.get(null);
-                String strName = r3.name();
-                String string = r3.toString();
-                InterfaceC19887 interfaceC19887 = (InterfaceC19887) field2.getAnnotation(InterfaceC19887.class);
-                if (interfaceC19887 != null) {
-                    strName = interfaceC19887.value();
-                    for (String str : interfaceC19887.alternate()) {
-                        this.f46941.put(str, r3);
-                    }
-                }
-                this.f46941.put(strName, r3);
-                this.f46940.put(string, r3);
-                this.f46939.put(r3, strName);
-            }
-        } catch (IllegalAccessException e) {
-            throw new AssertionError(e);
+    public static void m34754(InterfaceC21040 interfaceC21040, InterfaceC12089 interfaceC12089) {
+        C17359.requireNonNull(interfaceC12089);
+        while (interfaceC21040.hasNext()) {
+            interfaceC12089.mo10258(interfaceC21040.mo5320());
         }
     }
 
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
+    @Deprecated
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m34753(InterfaceC21040 interfaceC21040, Consumer consumer) {
+        InterfaceC12089 c6124;
+        if (consumer instanceof InterfaceC12089) {
+            c6124 = (InterfaceC12089) consumer;
+        } else {
+            C17359.requireNonNull(consumer);
+            c6124 = new C6124(consumer);
         }
-        String strM14922 = c5379.m14922();
-        Enum r0 = (Enum) this.f46941.get(strM14922);
-        return r0 == null ? (Enum) this.f46940.get(strM14922) : r0;
+        interfaceC21040.forEachRemaining(c6124);
     }
 }

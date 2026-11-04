@@ -1,82 +1,453 @@
-.class public Ll/۬֡᩹;
-.super Ll/ۧ۬᩹;
-.source "9B3J"
-
-
-# instance fields
-.field public ۖ:Ll/֡ܽ᩹;
+.class public abstract Ll/۬֡᩹;
+.super Ll/ܳ᩺᩹;
+.source "PCGG"
 
 
 # direct methods
-.method public constructor <init>(Ll/֡ܽ᩹;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    const v0, 0x7f120900
-
-    const v1, 0x7f080252
-
-    .line 11
-    invoke-direct {p0, v0, v1}, Ll/ۧ۬᩹;-><init>(II)V
-
-    .line 12
-    iput-object p1, p0, Ll/۬֡᩹;->ۖ:Ll/֡ܽ᩹;
+    .line 1245
+    invoke-direct {p0}, Ll/ܳ᩺᩹;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۨۜ᩹;)V
-    .locals 2
+.method public final add(II)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 17
-    iget-object v0, p0, Ll/۬֡᩹;->ۖ:Ll/֡ܽ᩹;
+    .line 1254
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {v0}, Ll/֡ܽ᩹;->ۙ()Ll/ۨܽ᩹;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    move-result-object v1
-
-    invoke-static {p1, v0, v1}, Ll/᩹ܽ᩹;->ۙ(Ll/ۨۜ᩹;Ll/֡ܽ᩹;Ll/ۨܽ᩹;)V
-
-    return-void
+    throw p1
 .end method
 
-.method public ᩹()Z
-    .locals 2
+.method public final bridge synthetic add(ILjava/lang/Object;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 22
-    iget-object v0, p0, Ll/۬֡᩹;->ۖ:Ll/֡ܽ᩹;
+    .line 1245
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-interface {v0}, Ll/֡ܽ᩹;->ۙ()Ll/ۨܽ᩹;
+    invoke-virtual {p0, p1, p2}, Ll/۬֡᩹;->ۙ(ILjava/lang/Integer;)V
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    .line 880
-    iget-object v1, v0, Ll/ۨܽ᩹;->ۖ:Ljava/lang/String;
+    throw p1
+.end method
 
-    if-eqz v1, :cond_1
+.method public final add(I)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    iget-object v0, v0, Ll/ۨܽ᩹;->ۨ:Ljava/util/ArrayList;
+    .line 1265
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    move-result v0
+    throw p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    goto :goto_0
+    .line 1245
+    check-cast p1, Ljava/lang/Integer;
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 1397
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    goto :goto_1
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    throw p1
+.end method
 
-    :goto_1
-    xor-int/lit8 v0, v0, 0x1
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    return v0
+    .line 1287
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1276
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1518
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove(I)Ljava/lang/Integer;
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1408
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1408
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1419
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1320
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final removeIf(Ljava/util/function/Predicate;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1342
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final replaceAll(Ljava/util/function/UnaryOperator;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1364
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1331
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final set(II)I
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1507
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1245
+    check-cast p2, Ljava/lang/Integer;
+
+    .line 1430
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final sort(Ljava/util/Comparator;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1595
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(II)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1540
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(II[I)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1562
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(ILjava/lang/Integer;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1386
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(Ljava/util/function/IntUnaryOperator;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1375
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(ILl/֨ܿ᩹;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1463
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(Ljava/lang/Integer;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1397
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(Ljava/util/function/IntPredicate;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1353
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۙ(Ll/֨ܿ᩹;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1441
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۤ(Ll/ۙ֡᩹;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1573
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ۤ(Ll/֨ܿ᩹;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1485
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ܶ(I)I
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1298
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ܽ(I)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1309
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩷(ILjava/lang/Integer;)Ljava/lang/Integer;
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1430
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩷(II[I)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1551
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩷(Ll/ۙ֡᩹;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1584
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩸(Ll/֨ܿ᩹;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1496
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

@@ -1,53 +1,71 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۢ᩷ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H38Z */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9838 implements InterfaceC23949 {
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final C2075 f33616 = new C2075();
+/* JADX INFO: renamed from: l.ۢۗۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M4MG */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9838 extends AbstractC9204 implements InterfaceC2665 {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Object f33617;
+    public Set f31665;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public volatile InterfaceC23949 f33618;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final InterfaceC23265 f31666;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f31667;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C2381 f31668;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Object f33619 = new Object();
+    public final C18634 f31669;
 
-    public C9838(InterfaceC23949 interfaceC23949) {
-        this.f33618 = interfaceC23949;
+    public C9838(C2381 c2381, int i, InterfaceC23265 interfaceC23265, C18634 c18634, Set set) {
+        this.f31668 = c2381;
+        this.f31667 = i;
+        this.f31666 = interfaceC23265;
+        this.f31669 = c18634;
+        this.f31665 = set;
     }
 
-    @Override // l.InterfaceC23949
-    public final Object get() {
-        InterfaceC23949 interfaceC23949 = this.f33618;
-        C2075 c2075 = f33616;
-        if (interfaceC23949 != c2075) {
-            synchronized (this.f33619) {
-                if (this.f33618 != c2075) {
-                    Object obj = this.f33618.get();
-                    this.f33617 = obj;
-                    this.f33618 = c2075;
-                    return obj;
-                }
-            }
-        }
-        return this.f33617;
+    @Override // l.InterfaceC2665
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo8823() {
+        return this.f31667;
     }
 
-    public final String toString() {
-        Object obj = this.f33618;
-        StringBuilder sb = new StringBuilder("Suppliers.memoize(");
-        if (obj == f33616) {
-            obj = "<supplier that returned " + this.f33617 + ">";
-        }
-        sb.append(obj);
-        sb.append(MotionUtils.EASING_TYPE_FORMAT_END);
-        return sb.toString();
+    @Override // l.InterfaceC2665
+    /* JADX INFO: renamed from: ۨۙ */
+    public final InterfaceC16791 mo8822() {
+        return this.f31666;
+    }
+
+    @Override // l.InterfaceC2665
+    public final Set getAnnotations() {
+        return this.f31669;
+    }
+
+    @Override // l.InterfaceC8304
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo4500() {
+        return this.f31668.f7661.f68791.f12443;
+    }
+
+    @Override // l.InterfaceC8304
+    public final String getName() {
+        return this.f31668.f7660.f12443;
+    }
+
+    @Override // l.InterfaceC8304
+    public final String getType() {
+        return this.f31668.f7663.f68791.f12443;
+    }
+
+    @Override // l.InterfaceC2665
+    /* JADX INFO: renamed from: ۗ */
+    public final Set mo8821() {
+        return this.f31665;
     }
 }

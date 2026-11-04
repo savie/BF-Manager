@@ -1,39 +1,7 @@
 package l;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.util.AttributeSet;
-import android.view.View;
-
-/* JADX INFO: renamed from: l.ۤܺ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 41JE */
-/* JADX INFO: loaded from: classes3.dex */
-public class C10384 extends View {
-    @Override // android.view.View
-    public final void draw(Canvas canvas) {
-    }
-
-    @Override // android.view.View
-    public final void setVisibility(int i) {
-    }
-
-    public C10384(Context context) {
-        super(context);
-        super.setVisibility(8);
-    }
-
-    public C10384(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        super.setVisibility(8);
-    }
-
-    public C10384(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        super.setVisibility(8);
-    }
-
-    @Override // android.view.View
-    public final void onMeasure(int i, int i2) {
-        setMeasuredDimension(0, 0);
-    }
+/* JADX INFO: renamed from: l.ۢ᩷ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J6WT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10384 extends AbstractC11800 {
 }

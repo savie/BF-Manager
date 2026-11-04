@@ -1,38 +1,56 @@
-.class public final synthetic Ll/ۛۛۚ;
+.class public final Ll/ۛۛۚ;
 .super Ljava/lang/Object;
-.source "964K"
-
-# interfaces
-.implements Ll/ۚ᩸ۘ;
+.source "87AO"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۠ۧۚ;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۚ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/util/ArrayList;
+
+.field public final ۫:Ljava/lang/String;
+
+.field public final ܳ:Ljava/lang/String;
+
+.field public final ᩴ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۠ۧۚ;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/util/ArrayList;)V
     .locals 0
 
-    .line 0
+    .line 739
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۛۛۚ;->ܺ:Ll/۠ۧۚ;
+    .line 740
+    iput-object p1, p0, Ll/ۛۛۚ;->ۚ:Ljava/lang/String;
+
+    .line 741
+    iput-object p2, p0, Ll/ۛۛۚ;->ۙ:Ljava/lang/String;
+
+    .line 742
+    iput-object p3, p0, Ll/ۛۛۚ;->۫:Ljava/lang/String;
+
+    .line 743
+    iput-object p4, p0, Ll/ۛۛۚ;->ܳ:Ljava/lang/String;
+
+    .line 745
+    iput-object p5, p0, Ll/ۛۛۚ;->᩸:Ljava/lang/String;
+
+    .line 747
+    iput p6, p0, Ll/ۛۛۚ;->ᩴ:I
+
+    .line 748
+    iput p7, p0, Ll/ۛۛۚ;->᩷:I
+
+    .line 751
+    iput-object p8, p0, Ll/ۛۛۚ;->ۤ:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final ֨()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Ll/ۛۛۚ;->ܺ:Ll/۠ۧۚ;
-
-    invoke-static {v0}, Ll/۠ۧۚ;->ܰ(Ll/۠ۧۚ;)Z
-
-    move-result v0
-
-    return v0
 .end method

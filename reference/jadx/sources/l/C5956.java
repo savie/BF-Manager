@@ -1,23 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۡ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 574A */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5956 {
+import java.util.Comparator;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f20258;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f20259;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f20260;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C10896 f20261;
-
-    public C5956(String str) {
-        this.f20259 = str;
+/* JADX INFO: renamed from: l.ۚ᩹ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G5VL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5956 implements Comparator {
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return Integer.compare(((InterfaceC3939) obj).getKey(), ((InterfaceC3939) obj2).getKey());
     }
 }

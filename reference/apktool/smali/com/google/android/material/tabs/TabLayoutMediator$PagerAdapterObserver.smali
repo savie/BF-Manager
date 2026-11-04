@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/tabs/TabLayoutMediator$PagerAdapterObserver;
-.super Ll/۫۫ܰ;
+.super Ll/֫۟᩷;
 .source "TabLayoutMediator.java"
 
 
@@ -14,7 +14,7 @@
     .line 288
     iput-object p1, p0, Lcom/google/android/material/tabs/TabLayoutMediator$PagerAdapterObserver;->this$0:Lcom/google/android/material/tabs/TabLayoutMediator;
 
-    invoke-direct {p0}, Ll/۫۫ܰ;-><init>()V
+    invoke-direct {p0}, Ll/֫۟᩷;-><init>()V
 
     return-void
 .end method

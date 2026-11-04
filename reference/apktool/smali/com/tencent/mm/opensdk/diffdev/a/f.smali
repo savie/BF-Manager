@@ -28,7 +28,7 @@
     const-string p2, "https://long.open.weixin.qq.com/connect/l/qrconnect?f=json&uuid="
 
     .line 0
-    invoke-static {p2, p1}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

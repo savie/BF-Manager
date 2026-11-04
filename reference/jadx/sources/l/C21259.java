@@ -1,23 +1,30 @@
 package l;
 
-import android.view.View;
-import android.view.ViewGroup;
-
-/* JADX INFO: renamed from: l.᩸֫, reason: contains not printable characters */
-/* JADX INFO: compiled from: E9O4 */
+/* JADX INFO: renamed from: l.᩶ۤ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7D3 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21259 extends AbstractC11348 implements InterfaceC15456 {
+public class C21259 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final C21259 f69227 = new C21259(1);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f67820;
 
-    @Override // l.InterfaceC15456
-    public final Object invoke(Object obj) {
-        View view = (View) obj;
-        ViewGroup viewGroup = view instanceof ViewGroup ? (ViewGroup) view : null;
-        if (viewGroup != null) {
-            return new C17731(viewGroup);
+    public C21259() {
+        this.f67820 = -1;
+    }
+
+    public C21259(int i) {
+        this.f67820 = i;
+    }
+
+    public int hashCode() {
+        if (mo20871()) {
+            return this.f67820;
         }
-        return null;
+        return 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public boolean mo20871() {
+        return this.f67820 != -1;
     }
 }

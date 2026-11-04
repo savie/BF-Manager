@@ -1,61 +1,58 @@
 package l;
 
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ܽۚ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 98AW */
+/* JADX INFO: renamed from: l.ܶ᩺ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBEJ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16425 implements InterfaceC10594 {
+public final class C16425 extends C23885 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17130 f52844;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C11995 f53298;
 
-    public C16425(C17130 c17130) {
-        this.f52844 = c17130;
+    public C16425(C3747 c3747, C5985 c5985, C11995 c11995) {
+        super(c3747, c5985);
+        this.f53298 = c11995;
     }
 
-    @Override // l.InterfaceC10594
-    public final void setTitle(int i) {
-        this.f52844.m41591(R.string.MT_Protector);
+    @Override // l.C23885, l.InterfaceC16470
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo38989(C23930 c23930) {
+        super.mo38989(c23930);
+        m38988((AbstractC17216) c23930);
     }
 
-    @Override // l.InterfaceC10594
-    public final void setName(String str) {
-        this.f52844.mo2982(str);
+    @Override // l.C23885, l.InterfaceC16470
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo38985(C6030 c6030) {
+        super.mo38985(c6030);
+        m38988((AbstractC17216) c6030);
     }
 
-    @Override // l.InterfaceC10594
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo24047(C3761 c3761) {
-        this.f52844.mo2983(c3761);
+    @Override // l.C23885, l.InterfaceC16470
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo38984(C2301 c2301) {
+        super.mo38984(c2301);
+        m38988((AbstractC17216) c2301);
     }
 
-    @Override // l.InterfaceC10594
-    /* JADX INFO: renamed from: ᩸ۙ */
-    public final void mo24050() {
-        this.f52844.m2974(true);
+    @Override // l.C23885, l.InterfaceC16470
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo38987(C8267 c8267) {
+        super.mo38987(c8267);
+        m38988((AbstractC17216) c8267);
     }
 
-    @Override // l.InterfaceC10594
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo24048(long j) {
-        this.f52844.mo2975(j);
+    @Override // l.C23885, l.InterfaceC16470
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo38986(C6776 c6776) {
+        super.mo38986(c6776);
+        m38988((AbstractC17216) c6776);
     }
 
-    @Override // l.InterfaceC10594
-    public final void setProgress(int i) {
-        this.f52844.mo21455(i);
-    }
-
-    @Override // l.InterfaceC10594
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo24046() {
-        this.f52844.cancel();
-    }
-
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f52844.mo2357();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38988(AbstractC17216 abstractC17216) {
+        C20946 c20946M30150 = this.f53298.m30150(abstractC17216);
+        if (c20946M30150 != null) {
+            m53385(new C20155(abstractC17216.m40433(), c20946M30150));
+        }
     }
 }

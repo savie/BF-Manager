@@ -1,14 +1,22 @@
 package l;
 
-import android.content.pm.PackageInfo;
-import android.webkit.WebView;
+import android.graphics.PointF;
+import android.util.Property;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ܳۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C6YR */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14258 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static PackageInfo m34393() {
-        return WebView.getCurrentWebViewPackage();
+/* JADX INFO: renamed from: l.ܰ֨᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: A65W */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14258 extends Property {
+    @Override // android.util.Property
+    public final /* bridge */ /* synthetic */ Object get(Object obj) {
+        return null;
+    }
+
+    @Override // android.util.Property
+    public final void set(Object obj, Object obj2) {
+        View view = (View) obj;
+        PointF pointF = (PointF) obj2;
+        C11319.m28607(view, view.getLeft(), view.getTop(), Math.round(pointF.x), Math.round(pointF.y));
     }
 }

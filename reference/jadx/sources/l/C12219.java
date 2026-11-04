@@ -1,30 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۛ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3ANU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12219 extends AbstractC2525 {
+/* JADX INFO: renamed from: l.ۨ۟᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86TL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12219 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC1073 f40849;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f39258;
 
-    public C12219(AbstractC5868 abstractC5868, AbstractC1073 abstractC1073) {
-        this.f40849 = abstractC1073;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f39259;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C21498 f39260;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C3335 f39261;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f39262;
+
+    public C12219() {
+        this(new C3335(), new C21498(-1, -1), 0L, 0L, 16777216L);
     }
 
-    @Override // l.InterfaceC15456
-    public final /* bridge */ /* synthetic */ Object invoke(Object obj) {
-        mo4130((Throwable) obj);
-        return C7321.f24318;
-    }
-
-    @Override // l.AbstractC1114
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4130(Throwable th) {
-        this.f40849.m12073();
-    }
-
-    public final String toString() {
-        return "RemoveReceiveOnCancel[" + this.f40849 + ']';
+    public C12219(C3335 c3335, C21498 c21498, long j, long j2, long j3) {
+        if (j2 < 0 || j < 0 || j > j2 || j3 < 0) {
+            throw new IllegalArgumentException("Invalid history state");
+        }
+        C17359.requireNonNull(c3335);
+        this.f39261 = c3335;
+        C17359.requireNonNull(c21498);
+        this.f39260 = c21498;
+        this.f39258 = j;
+        this.f39262 = j2;
+        this.f39259 = j3;
     }
 }

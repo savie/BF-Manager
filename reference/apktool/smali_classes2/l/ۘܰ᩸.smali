@@ -1,129 +1,75 @@
-.class public final enum Ll/ۘܰ᩸;
-.super Ljava/lang/Enum;
-.source "17QI"
+.class public final synthetic Ll/ۘܰ᩸;
+.super Ljava/lang/Object;
+.source "3B3L"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
-# static fields
-.field public static final enum ֡:Ll/ۘܰ᩸;
+# instance fields
+.field public final synthetic ۙ:Ll/᩶ܰ᩸;
 
-.field public static final synthetic ܺ:[Ll/ۘܰ᩸;
+.field public final synthetic ۤ:J
 
-.field public static final enum ܽ:Ll/ۘܰ᩸;
-
-.field public static final enum ᩶:Ll/ۘܰ᩸;
+.field public final synthetic ᩷:Ll/ۚܰ᩸;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 3980
-    new-instance v0, Ll/ۘܰ᩸;
-
-    const-string v1, "NONE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ll/ۘܰ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۘܰ᩸;->֡:Ll/ۘܰ᩸;
-
-    .line 3981
-    new-instance v0, Ll/ۘܰ᩸;
-
-    const-string v1, "FIELD"
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ll/ۘܰ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۘܰ᩸;->᩶:Ll/ۘܰ᩸;
-
-    .line 3982
-    new-instance v0, Ll/ۘܰ᩸;
-
-    const-string v1, "PARAMETER"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ll/ۘܰ᩸;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۘܰ᩸;->ܽ:Ll/ۘܰ᩸;
-
-    .line 3979
-    invoke-static {}, Ll/ۘܰ᩸;->ۙ()[Ll/ۘܰ᩸;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۘܰ᩸;->ܺ:[Ll/ۘܰ᩸;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Ll/᩶ܰ᩸;Ll/ۚܰ᩸;J)V
     .locals 0
 
-    .line 3979
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۘܰ᩸;->ۙ:Ll/᩶ܰ᩸;
+
+    iput-object p2, p0, Ll/ۘܰ᩸;->᩷:Ll/ۚܰ᩸;
+
+    iput-wide p3, p0, Ll/ۘܰ᩸;->ۤ:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll/ۘܰ᩸;
-    .locals 1
 
-    .line 3979
-    const-class v0, Ll/ۘܰ᩸;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/ۘܰ᩸;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/ۘܰ᩸;
-    .locals 1
-
-    .line 3979
-    sget-object v0, Ll/ۘܰ᩸;->ܺ:[Ll/ۘܰ᩸;
-
-    invoke-virtual {v0}, [Ll/ۘܰ᩸;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/ۘܰ᩸;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/ۘܰ᩸;
+# virtual methods
+.method public final call()Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x3
+    .line 2626
+    iget-object v0, p0, Ll/ۘܰ᩸;->ۙ:Ll/᩶ܰ᩸;
 
-    new-array v0, v0, [Ll/ۘܰ᩸;
+    iget-object v0, v0, Ll/᩶ܰ᩸;->᩷:Ll/۟ܰ᩸;
 
-    .line 3979
-    sget-object v1, Ll/ۘܰ᩸;->֡:Ll/ۘܰ᩸;
+    iget-object v1, p0, Ll/ۘܰ᩸;->᩷:Ll/ۚܰ᩸;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Ll/ۚܰ᩸;->ۢ()Z
 
-    aput-object v1, v0, v2
+    move-result v2
 
-    sget-object v1, Ll/ۘܰ᩸;->᩶:Ll/ۘܰ᩸;
+    if-eqz v2, :cond_0
 
-    const/4 v2, 0x1
+    .line 2627
+    invoke-virtual {v1}, Ll/ۚܰ᩸;->ۙ()Z
 
-    aput-object v1, v0, v2
+    .line 2628
+    invoke-virtual {v1}, Ll/ۚܰ᩸;->ۢ()Z
 
-    sget-object v1, Ll/ۘܰ᩸;->ܽ:Ll/ۘܰ᩸;
+    move-result v1
 
-    const/4 v2, 0x2
+    if-eqz v1, :cond_0
 
-    aput-object v1, v0, v2
+    .line 2629
+    iget-wide v1, p0, Ll/ۘܰ᩸;->ۤ:J
+
+    invoke-virtual {v0, v1, v2}, Ll/ۜܽ᩸;->ۙ(J)V
+
+    const/4 v1, 0x1
+
+    .line 2630
+    invoke-virtual {v0, v1}, Ll/ۜܽ᩸;->᩷(Z)V
+
+    :cond_0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

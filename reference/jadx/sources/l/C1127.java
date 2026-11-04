@@ -1,430 +1,116 @@
 package l;
 
-import android.R;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.view.ActionProvider;
-import android.view.ContextMenu;
-import android.view.KeyEvent;
-import android.view.MenuItem;
-import android.view.SubMenu;
-import android.view.View;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.֨۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S51M */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1127 implements InterfaceMenuItemC9720 {
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public Intent f5059;
+/* JADX INFO: renamed from: l.֨ۧۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7KX */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1127 extends AbstractC0578 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public CharSequence f5060;
+    public boolean f4196;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public char f5062;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public AbstractC22664 f4197;
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public CharSequence f5063;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Context f5066;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public char f5067;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public CharSequence f5068;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC9329 f4198;
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public CharSequence f5069;
+    public C14769 f4199 = C14769.m35543();
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public Drawable f5071;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C2920 f4200;
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public int f5070 = 4096;
+    public AbstractC22664 f4201;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public int f5072 = 4096;
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public ColorStateList f5057 = null;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public PorterDuff.Mode f5065 = null;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f5058 = false;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f5061 = false;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f5064 = 16;
-
-    @Override // android.view.MenuItem
-    public final boolean collapseActionView() {
-        return false;
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1949(AbstractC8036 abstractC8036) {
+        this.f4201 = this.f4198.f30324.f58739.f48263;
     }
 
-    @Override // android.view.MenuItem
-    public final boolean expandActionView() {
-        return false;
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1500(C5887 c5887) {
+        if (!c5887.f26659.m51067(EnumC21172.ERROR)) {
+            this.f4201 = c5887.f26659;
+        } else {
+            this.f4201 = m4170(c5887.f20169, this.f4200.f9550).f38067;
+        }
     }
 
-    @Override // android.view.MenuItem
-    public final View getActionView() {
-        return null;
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1525(C23041 c23041) {
+        if (!c23041.f26659.m51067(EnumC21172.ERROR)) {
+            this.f4201 = c23041.f26659;
+            return;
+        }
+        boolean z = this.f4196;
+        try {
+            this.f4196 = false;
+            c23041.f74776.mo2284(this);
+            AbstractC22664 abstractC22664 = this.f4201;
+            this.f4196 = z;
+            this.f4201 = m4170(c23041.f74774, abstractC22664.f73596).f38067;
+        } catch (Throwable th) {
+            this.f4196 = z;
+            throw th;
+        }
     }
 
-    @Override // android.view.MenuItem
-    public final int getGroupId() {
-        return 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final int getItemId() {
-        return R.id.home;
-    }
-
-    @Override // android.view.MenuItem
-    public final ContextMenu.ContextMenuInfo getMenuInfo() {
-        return null;
-    }
-
-    @Override // android.view.MenuItem
-    public final int getOrder() {
-        return 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final SubMenu getSubMenu() {
-        return null;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean hasSubMenu() {
-        return false;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean isActionViewExpanded() {
-        return false;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final void setShowAsAction(int i) {
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setShowAsActionFlags(int i) {
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC5674 mo4156() {
-        return null;
-    }
-
-    @Override // l.InterfaceMenuItemC9720
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean mo4158() {
-        return false;
-    }
-
-    @Override // l.InterfaceMenuItemC9720
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo4159() {
-        return true;
-    }
-
-    public C1127(Context context, CharSequence charSequence) {
-        this.f5066 = context;
-        this.f5068 = charSequence;
-    }
-
-    @Override // android.view.MenuItem
-    public final char getAlphabeticShortcut() {
-        return this.f5062;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final int getAlphabeticModifiers() {
-        return this.f5072;
-    }
-
-    @Override // android.view.MenuItem
-    public final Drawable getIcon() {
-        return this.f5071;
-    }
-
-    @Override // android.view.MenuItem
-    public final Intent getIntent() {
-        return this.f5059;
-    }
-
-    @Override // android.view.MenuItem
-    public final char getNumericShortcut() {
-        return this.f5067;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final int getNumericModifiers() {
-        return this.f5070;
-    }
-
-    @Override // android.view.MenuItem
-    public final CharSequence getTitle() {
-        return this.f5068;
-    }
-
-    @Override // android.view.MenuItem
-    public final CharSequence getTitleCondensed() {
-        CharSequence charSequence = this.f5069;
-        return charSequence != null ? charSequence : this.f5068;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean isCheckable() {
-        return (this.f5064 & 1) != 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean isChecked() {
-        return (this.f5064 & 2) != 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean isEnabled() {
-        return (this.f5064 & 16) != 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final boolean isVisible() {
-        return (this.f5064 & 8) == 0;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setAlphabeticShortcut(char c) {
-        this.f5062 = Character.toLowerCase(c);
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final MenuItem setAlphabeticShortcut(char c, int i) {
-        this.f5062 = Character.toLowerCase(c);
-        this.f5072 = KeyEvent.normalizeMetaState(i);
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setCheckable(boolean z) {
-        this.f5064 = (z ? 1 : 0) | (this.f5064 & (-2));
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setChecked(boolean z) {
-        this.f5064 = (z ? 2 : 0) | (this.f5064 & (-3));
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setEnabled(boolean z) {
-        this.f5064 = (z ? 16 : 0) | (this.f5064 & (-17));
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setIcon(Drawable drawable) {
-        this.f5071 = drawable;
-        m4155();
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setIcon(int i) {
-        this.f5071 = C10405.m26304(this.f5066, i);
-        m4155();
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setIntent(Intent intent) {
-        this.f5059 = intent;
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setNumericShortcut(char c) {
-        this.f5067 = c;
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final MenuItem setNumericShortcut(char c, int i) {
-        this.f5067 = c;
-        this.f5070 = KeyEvent.normalizeMetaState(i);
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setShortcut(char c, char c2) {
-        this.f5067 = c;
-        this.f5062 = Character.toLowerCase(c2);
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final MenuItem setShortcut(char c, char c2, int i, int i2) {
-        this.f5067 = c;
-        this.f5070 = KeyEvent.normalizeMetaState(i);
-        this.f5062 = Character.toLowerCase(c2);
-        this.f5072 = KeyEvent.normalizeMetaState(i2);
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setTitle(CharSequence charSequence) {
-        this.f5068 = charSequence;
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setTitle(int i) {
-        this.f5068 = this.f5066.getResources().getString(i);
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setTitleCondensed(CharSequence charSequence) {
-        this.f5069 = charSequence;
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setVisible(boolean z) {
-        this.f5064 = (this.f5064 & 8) | (z ? 0 : 8);
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setActionView(View view) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setActionProvider(ActionProvider actionProvider) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // android.view.MenuItem
-    public final ActionProvider getActionProvider() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setActionView(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceMenuItemC9720
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceMenuItemC9720 mo4157(AbstractC5674 abstractC5674) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener onActionExpandListener) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setContentDescription(CharSequence charSequence) {
-        this.f5060 = charSequence;
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final InterfaceMenuItemC9720 setContentDescription(CharSequence charSequence) {
-        this.f5060 = charSequence;
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final CharSequence getContentDescription() {
-        return this.f5060;
-    }
-
-    @Override // android.view.MenuItem
-    public final MenuItem setTooltipText(CharSequence charSequence) {
-        this.f5063 = charSequence;
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final InterfaceMenuItemC9720 setTooltipText(CharSequence charSequence) {
-        this.f5063 = charSequence;
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final CharSequence getTooltipText() {
-        return this.f5063;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final MenuItem setIconTintList(ColorStateList colorStateList) {
-        this.f5057 = colorStateList;
-        this.f5058 = true;
-        m4155();
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final ColorStateList getIconTintList() {
-        return this.f5057;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final MenuItem setIconTintMode(PorterDuff.Mode mode) {
-        this.f5065 = mode;
-        this.f5061 = true;
-        m4155();
-        return this;
-    }
-
-    @Override // l.InterfaceMenuItemC9720, android.view.MenuItem
-    public final PorterDuff.Mode getIconTintMode() {
-        return this.f5065;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    private void m4155() {
-        Drawable drawable = this.f5071;
-        if (drawable != null) {
-            if (this.f5058 || this.f5061) {
-                Drawable drawableM20139 = C7603.m20139(drawable);
-                this.f5071 = drawableM20139;
-                Drawable drawableMutate = drawableM20139.mutate();
-                this.f5071 = drawableMutate;
-                if (this.f5058) {
-                    C7603.m20129(drawableMutate, this.f5057);
-                }
-                if (this.f5061) {
-                    C7603.m20132(this.f5071, this.f5065);
+    @Override // l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1973(C25191 c25191) {
+        if (!c25191.f26659.m51067(EnumC21172.ERROR)) {
+            this.f4201 = c25191.f26659;
+            return;
+        }
+        c25191.f81425.mo2284(this);
+        C10510 c10510 = (C10510) this.f4201;
+        if (this.f4199.contains(c10510.f73596)) {
+            C24550 c24550 = (C24550) c10510.f73596;
+            int iM35551 = c25191.f81424.m35551();
+            C17929 c17929 = this.f4198.f30324;
+            C10510 c10511 = (C10510) c24550.f38067;
+            C11972.m30026(c10511.f33438.isEmpty());
+            if (iM35551 == 1) {
+                AbstractC22712 abstractC22712 = c17929.f58729.f49864;
+                abstractC22712.getClass();
+                char[] charArray = "T".toCharArray();
+                c10511.f33438 = c10511.f33438.m35552(new C17969(c24550, c17929.f58739.f48241, abstractC22712.mo2069(charArray, charArray.length)));
+            } else {
+                while (iM35551 > 0) {
+                    c10511.f33438 = c10511.f33438.m35552(new C17969(c24550, c17929.f58739.f48241, c17929.f58729.f49864.m51194(C13645.m33382(iM35551, "T"))));
+                    iM35551--;
                 }
             }
         }
+        C14769 c14769 = c25191.f81424;
+        C18499 c18499 = new C18499();
+        Iterator it = c14769.iterator();
+        while (it.hasNext()) {
+            ((AbstractC8036) it.next()).mo2284(this);
+            c18499.m43089(this.f4201);
+        }
+        this.f4201 = new C19026(c10510.f73596, c25191.f26659, c18499.m43093());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C24550 m4170(AbstractC19728 abstractC19728, AbstractC11781 abstractC11781) {
+        C24550 c24550 = new C24550(this.f4196 ? 512 : 0, abstractC19728, abstractC11781);
+        c24550.f79576 = new C14654(c24550);
+        c24550.f38067 = new C10075(this.f4197, c24550);
+        this.f4199 = this.f4199.m35552(c24550);
+        return c24550;
+    }
+
+    public C1127(AbstractC9329 abstractC9329, C2920 c2920, AbstractC22664 abstractC22664, boolean z) {
+        this.f4198 = abstractC9329;
+        this.f4200 = c2920;
+        this.f4197 = abstractC22664;
+        this.f4196 = z;
     }
 }

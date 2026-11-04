@@ -12,7 +12,7 @@ import java.util.Properties;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentMap;
-import l.ConcurrentMapC13783;
+import l.ConcurrentMapC17249;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -66,8 +66,8 @@ public class h implements i, j {
         if (type == SortedMap.class || type == TreeMap.class) {
             return new TreeMap();
         }
-        if (type == ConcurrentMap.class || type == ConcurrentMapC13783.class) {
-            return new ConcurrentMapC13783();
+        if (type == ConcurrentMap.class || type == ConcurrentMapC17249.class) {
+            return new ConcurrentMapC17249();
         }
         if (type == Map.class || type == HashMap.class) {
             return new HashMap();

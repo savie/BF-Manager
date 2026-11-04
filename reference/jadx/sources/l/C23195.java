@@ -1,77 +1,159 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺᩵۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23195 extends AbstractC8774 implements InterfaceC22367 {
+import com.google.android.material.motion.MotionUtils;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public C6656 f75262;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public C18258 f75263;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public C21825 f75264;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f75265;
+/* JADX INFO: renamed from: l.᩹֨ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: YITR */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23195 extends AbstractC16481 {
 
     /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f75266;
+    public final long f75163;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public C21783 f75267;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C21452 f75268;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public C21825 f75269;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public C21825 f75270;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public boolean f75271;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public AbstractC11242 f75272;
-
-    public C23195(C21783 c21783, AbstractC11242 abstractC11242, AbstractC5930 abstractC5930, C21825 c21825, C6656 c6656, C21825 c21826, C21825 c21827, C21452 c21452, AbstractC5930 abstractC5931, C18258 c18258) {
-        this.f75267 = c21783;
-        this.f75272 = abstractC11242;
-        this.f75266 = abstractC5930;
-        this.f75269 = c21825;
-        this.f75270 = c21826;
-        this.f75262 = c6656;
-        this.f75264 = c21827;
-        this.f75268 = c21452;
-        this.f75265 = abstractC5931;
-        this.f75263 = c18258;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C23195 m52118(long j, AbstractC1566 abstractC1566) {
+        return new C23195(j, abstractC1566);
     }
 
-    @Override // l.AbstractC8774
+    @Override // l.AbstractC0074
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3961(this);
+    public final void mo1130(AbstractC1566 abstractC1566) {
+        this.f976 = abstractC1566;
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.METHOD;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C23195 m52120(long j, AbstractC1566 abstractC1566) {
+        if (j != 0 && !abstractC1566.mo5564() && !abstractC1566.mo5566(EnumC12006.LONG) && !abstractC1566.mo5566(EnumC12006.DOUBLE)) {
+            if (j == 1) {
+                abstractC1566 = AbstractC1566.f5415;
+            } else if (j < 0) {
+                abstractC1566 = AbstractC1566.f5423;
+            } else {
+                abstractC1566 = AbstractC1566.f5439;
+            }
+        }
+        return new C23195(j, abstractC1566);
     }
 
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1918(this, obj);
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public static C23195 m52119() {
+        return new C23195(0L, AbstractC1566.f5436);
     }
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60478;
+    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
+    public static C23195 m52121() {
+        return new C23195(1L, AbstractC1566.f5436);
+    }
+
+    public C23195(long j, AbstractC1566 abstractC1566) {
+        if (j != 0 && abstractC1566.mo5543()) {
+            throw new C8597("Wrong literal type: " + abstractC1566 + " for value: " + j);
+        }
+        this.f75163 = j;
+        this.f976 = abstractC1566;
+    }
+
+    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
+    public final long m52122() {
+        return this.f75163;
+    }
+
+    @Override // l.AbstractC16481
+    /* JADX INFO: renamed from: ۚۙ */
+    public final boolean mo39117() {
+        return this.f75163 == 0;
+    }
+
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m52125() {
+        int i = C15735.f51174[this.f976.mo5558().ordinal()];
+        return i == 1 || i == 2 || i == 3 || i == 4 || i == 5;
+    }
+
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m52123() {
+        boolean zM52125 = m52125();
+        long j = this.f75163;
+        if (zM52125) {
+            return j < 0;
+        }
+        AbstractC1566 abstractC1566 = this.f976;
+        if (abstractC1566 == AbstractC1566.f5440) {
+            float fIntBitsToFloat = Float.intBitsToFloat((int) j);
+            return (fIntBitsToFloat >= 0.0f || Float.isInfinite(fIntBitsToFloat) || Float.isNaN(fIntBitsToFloat)) ? false : true;
+        }
+        if (abstractC1566 == AbstractC1566.f5424) {
+            double dLongBitsToDouble = Double.longBitsToDouble(j);
+            if (dLongBitsToDouble < 0.0d && !Double.isInfinite(dLongBitsToDouble) && !Double.isNaN(dLongBitsToDouble)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public final C23195 m52124() {
+        long jDoubleToLongBits;
+        boolean zM52125 = m52125();
+        long j = this.f75163;
+        if (zM52125) {
+            jDoubleToLongBits = -j;
+        } else {
+            AbstractC1566 abstractC1566 = this.f976;
+            if (abstractC1566 == AbstractC1566.f5440) {
+                jDoubleToLongBits = Float.floatToIntBits(-Float.intBitsToFloat((int) j));
+            } else {
+                if (abstractC1566 != AbstractC1566.f5424) {
+                    return null;
+                }
+                jDoubleToLongBits = Double.doubleToLongBits(-Double.longBitsToDouble(j));
+            }
+        }
+        return new C23195(jDoubleToLongBits, this.f976);
+    }
+
+    @Override // l.AbstractC16481
+    /* JADX INFO: renamed from: ۠ */
+    public final AbstractC16481 mo17528() {
+        C23195 c23195 = new C23195(this.f75163, this.f976);
+        c23195.m39414(this);
+        c23195.mo39114(this.f53443);
+        return c23195;
+    }
+
+    public final int hashCode() {
+        long j = this.f75163;
+        return (this.f976.f5441 * 31) + ((int) (j ^ (j >>> 32)));
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && C23195.class == obj.getClass()) {
+            C23195 c23195 = (C23195) obj;
+            if (this.f75163 == c23195.f75163 && this.f976.equals(c23195.f976)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC16678
+    /* JADX INFO: renamed from: ֨ */
+    public final String mo17521() {
+        return Long.toString(this.f75163);
+    }
+
+    public final String toString() {
+        try {
+            String strM36534 = C15186.m36534(this.f75163, this.f976, C12326.m30748(), true, false);
+            if (this.f976.equals(AbstractC1566.f5436) && (strM36534.equals("true") || strM36534.equals("false"))) {
+                return strM36534;
+            }
+            return MotionUtils.EASING_TYPE_FORMAT_START + strM36534 + ' ' + this.f976 + ')';
+        } catch (C8597 unused) {
+            return MotionUtils.EASING_TYPE_FORMAT_START + this.f75163 + ' ' + this.f976 + ')';
+        }
     }
 }

@@ -5,8 +5,8 @@ import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
-import l.C12441;
-import l.C23234;
+import l.C18011;
+import l.C22783;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WXChannelShareVideo {
@@ -97,7 +97,7 @@ public class WXChannelShareVideo {
                     this.jumpInfo = iWXChannelJumpInfo;
                     iWXChannelJumpInfo.unserialize(bundle);
                 } catch (Exception e) {
-                    C23234.m51271(e, C12441.m30914("get WXChannelJumpInfo from bundle failed: unknown ident ", string, ", ex = "), TAG);
+                    C18011.m41991(e, C22783.m51387("get WXChannelJumpInfo from bundle failed: unknown ident ", string, ", ex = "), TAG);
                 }
             }
         }

@@ -8,11 +8,11 @@ import com.amazonaws.services.s3.model.AmazonS3Exception;
 public class CompleteMultipartUploadRetryCondition implements RetryPolicy.RetryCondition {
     @Override // com.amazonaws.retry.RetryPolicy.RetryCondition
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo428(AmazonClientException amazonClientException, int i) {
+    public final boolean mo422(AmazonClientException amazonClientException, int i) {
         if (!(amazonClientException instanceof AmazonS3Exception)) {
             return false;
         }
         AmazonS3Exception amazonS3Exception = (AmazonS3Exception) amazonClientException;
-        return amazonS3Exception.m144() != null && amazonS3Exception.m149() != null && amazonS3Exception.m144().contains("InternalError") && amazonS3Exception.m149().contains("Please try again.") && i < 3;
+        return amazonS3Exception.m136() != null && amazonS3Exception.m141() != null && amazonS3Exception.m136().contains("InternalError") && amazonS3Exception.m141().contains("Please try again.") && i < 3;
     }
 }

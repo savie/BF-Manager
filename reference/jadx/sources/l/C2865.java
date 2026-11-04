@@ -1,48 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes2.dex */
-public final enum C2865 extends EnumC21210 {
-    public /* synthetic */ C2865() {
-        this("BeforeDoctypePublicIdentifier", 55);
-    }
+import java.util.Collections;
+import java.util.List;
 
-    public C2865(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC21210
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        char cM32033 = c12931.m32033();
-        if (cM32033 == '\t' || cM32033 == '\n' || cM32033 == '\f' || cM32033 == '\r' || cM32033 == ' ') {
-            return;
-        }
-        if (cM32033 == '\"') {
-            c20692.m46532(EnumC21210.f69038);
-            return;
-        }
-        if (cM32033 == '\'') {
-            c20692.m46532(EnumC21210.f69082);
-            return;
-        }
-        if (cM32033 == '>') {
-            c20692.m46542(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        if (cM32033 == 65535) {
-            c20692.m46544(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        c20692.m46542(this);
-        c20692.f67294.getClass();
-        c20692.m46532(EnumC21210.f69019);
+/* JADX INFO: renamed from: l.ۖᩴۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J4FT */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2865 implements InterfaceC8831 {
+    @Override // l.InterfaceC8831
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo9461() {
+        List list = Collections.EMPTY_LIST;
     }
 }

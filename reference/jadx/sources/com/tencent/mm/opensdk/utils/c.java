@@ -2,7 +2,7 @@ package com.tencent.mm.opensdk.utils;
 
 import android.net.Uri;
 import android.provider.BaseColumns;
-import l.C23234;
+import l.C18011;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class c {
@@ -32,7 +32,7 @@ public final class c {
                         return null;
                 }
             } catch (Exception e) {
-                C23234.m51271(e, new StringBuilder("resolveObj exception:"), "MicroMsg.SDK.PluginProvider.Resolver");
+                C18011.m41991(e, new StringBuilder("resolveObj exception:"), "MicroMsg.SDK.PluginProvider.Resolver");
                 return null;
             }
         }

@@ -1,77 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۗ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: X9M9 */
+import android.os.Parcel;
+import android.os.Parcelable;
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ۨۚۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 223J */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C12140 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final float f40641;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f40643;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f40642 = false;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C16373 f40645 = null;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f40644 = Integer.MAX_VALUE;
-
-    public C12140(float f, int i) {
-        this.f40641 = f;
-        this.f40643 = i;
+public final class C12140 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        C6175 c6175 = new C6175();
+        c6175.f21030 = null;
+        c6175.f21031 = new ArrayList();
+        c6175.f21035 = new ArrayList();
+        c6175.f21033 = parcel.createStringArrayList();
+        c6175.f21036 = parcel.createStringArrayList();
+        c6175.f21034 = (C22866[]) parcel.createTypedArray(C22866.CREATOR);
+        c6175.f21029 = parcel.readInt();
+        c6175.f21030 = parcel.readString();
+        c6175.f21031 = parcel.createStringArrayList();
+        c6175.f21035 = parcel.createTypedArrayList(C15406.CREATOR);
+        c6175.f21032 = parcel.createTypedArrayList(C16615.CREATOR);
+        return c6175;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m30215(C16373 c16373, float f) {
-        float f2 = c16373.f52692;
-        float f3 = this.f40641;
-        float fAbs = Math.abs((f2 * f3) - f);
-        float fAbs2 = Math.abs((c16373.f52691 * f3) - f);
-        int i = this.f40643 * 2;
-        if (fAbs <= fAbs2) {
-            return fAbs <= ((float) i) ? -1 : 0;
-        }
-        return fAbs2 <= ((float) i) ? 1 : 0;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16373 m30213() {
-        if (this.f40642) {
-            return this.f40645;
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30214(C16373 c16373, float f) {
-        int iMin;
-        float f2 = c16373.f52692;
-        float f3 = this.f40641;
-        int iAbs = (int) Math.abs((f2 * f3) - f);
-        int iAbs2 = (int) Math.abs((c16373.f52691 * f3) - f);
-        float f4 = c16373.f52692 * f3;
-        int i = this.f40643;
-        float f5 = i;
-        if (f4 - f5 < f && f < (c16373.f52691 * f3) + f5) {
-            iMin = Math.min(iAbs, iAbs2);
-        } else {
-            iMin = -Math.min(iAbs, iAbs2);
-        }
-        if (iMin >= 0) {
-            this.f40642 = true;
-        } else {
-            iMin = -iMin;
-            if (iMin > i * 4) {
-                return;
-            }
-        }
-        if (iMin < this.f40644) {
-            this.f40645 = c16373;
-            this.f40644 = iMin;
-        }
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C6175[i];
     }
 }

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
+<selector android:enterFadeDuration="100" android:exitFadeDuration="200"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/APKTOOL_RENAMED_0x7f060052" />
-    <corners android:radius="4.0dp" />
-</shape>
+    <item android:state_pressed="true">
+        <color android:color="#33ffffff" />
+    </item>
+    <item android:state_focused="true">
+        <color android:color="#33ffffff" />
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

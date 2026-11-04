@@ -1,29 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳܰᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A9E0 */
+import java.util.function.IntConsumer;
+
+/* JADX INFO: renamed from: l.ܰۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C14571 extends AbstractC1869 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC4314 f47682 = C13488.m32997(C14571.class);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C6808 f47683;
-
-    public C14571(C6808 c6808) {
-        this.f47683 = c6808;
+public final class C14571 extends AbstractC7114 {
+    @Override // l.AbstractC24620
+    public final InterfaceC8409 b(InterfaceC8409 interfaceC8409) {
+        return new C14571((InterfaceC7664) interfaceC8409, this);
     }
 
-    @Override // l.AbstractC1869
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6062(C2597 c2597) {
-        long jM4341 = ((C1186) c2597.m19360()).m4341();
-        if (this.f47683.m18403(Long.valueOf(jM4341)) == null && !c2597.m8069()) {
-            f47682.mo12118(Long.valueOf(jM4341), "Received response with unknown sequence number << {} >>");
-            this.f53462.m39153(new C19803(c2597.m19360()));
-            return;
+    @Override // l.InterfaceC7664
+    public final boolean tryAdvance(IntConsumer intConsumer) {
+        boolean zTest;
+        if (this.c && a() && ((InterfaceC7664) this.a).tryAdvance((IntConsumer) this)) {
+            zTest = this.e.test(this.f);
+            if (zTest) {
+                intConsumer.accept(this.f);
+                return true;
+            }
+        } else {
+            zTest = true;
         }
-        this.f53462.m39153(c2597);
+        this.c = false;
+        if (!zTest) {
+            this.b.set(true);
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC24620, l.InterfaceC8409
+    public final InterfaceC7664 trySplit() {
+        if (this.b.get()) {
+            return null;
+        }
+        return (InterfaceC7664) super.trySplit();
     }
 }

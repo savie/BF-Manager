@@ -3,7 +3,7 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import l.C17290;
+import l.C22837;
 
 /* JADX INFO: loaded from: classes.dex */
 public class HandleScanResult {
@@ -26,7 +26,7 @@ public class HandleScanResult {
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public void toBundle(Bundle bundle) {
             super.toBundle(bundle);
-            bundle.putString("_wxapi_scan_qrcode_result", C17290.encode(this.scanResult));
+            bundle.putString("_wxapi_scan_qrcode_result", C22837.encode(this.scanResult));
         }
     }
 

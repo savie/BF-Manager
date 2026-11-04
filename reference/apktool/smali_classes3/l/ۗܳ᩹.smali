@@ -1,77 +1,23 @@
 .class public final Ll/ۗܳ᩹;
 .super Ljava/lang/Object;
-.source "E29Y"
+.source "58WY"
 
 # interfaces
-.implements Ll/ۤܺۚ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۙ֫᩹;
-
-.field public final synthetic ᩶:Ll/ۙۧ᩹;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۙ֫᩹;Ll/ۙۧ᩹;)V
-    .locals 0
-
-    .line 761
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۗܳ᩹;->ܺ:Ll/ۙ֫᩹;
-
-    iput-object p2, p0, Ll/ۗܳ᩹;->᩶:Ll/ۙۧ᩹;
-
-    return-void
-.end method
+.implements Ll/ܶᩴ᩹;
 
 
 # virtual methods
-.method public final ֨()Z
-    .locals 1
-
-    .line 770
-    iget-object v0, p0, Ll/ۗܳ᩹;->ܺ:Ll/ۙ֫᩹;
-
-    .line 301
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->֨()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic ۘۙ()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final ۙ(JJJ)V
+.method public final ۙ(Ll/ۢ᩸᩹;Ll/ܺᩴ᩹;)Ljava/lang/Object;
     .locals 0
 
-    .line 764
-    iget-object p1, p0, Ll/ۗܳ᩹;->ܺ:Ll/ۙ֫᩹;
+    .line 15
+    new-instance p2, Ll/ۡܳ᩹;
 
-    invoke-virtual {p1, p3, p4, p5, p6}, Ll/᩶᩷ۜ;->ۨ(JJ)V
+    invoke-virtual {p1}, Ll/ۢ᩸᩹;->۫()Ll/ܳܳ᩹;
 
-    .line 765
-    iget-object p2, p0, Ll/ۗܳ᩹;->᩶:Ll/ۙۧ᩹;
+    move-result-object p1
 
-    invoke-virtual {p2}, Ll/ۙۧ᩹;->ܰ()J
+    invoke-direct {p2, p1}, Ll/ۡܳ᩹;-><init>(Ll/ܳܳ᩹;)V
 
-    move-result-wide p5
-
-    add-long/2addr p5, p3
-
-    invoke-virtual {p2}, Ll/ۙۧ᩹;->ۖ()J
-
-    move-result-wide p2
-
-    invoke-virtual {p1, p5, p6, p2, p3}, Ll/ᩳ۟ۜ;->ܰ(JJ)V
-
-    return-void
+    return-object p2
 .end method

@@ -11,10 +11,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import com.google.android.material.animation.AnimationUtils;
-import l.C0443;
-import l.C0976;
-import l.C22819;
-import l.C5031;
+import l.C17609;
+import l.C18584;
+import l.C1874;
+import l.C22666;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialSideContainerBackHelper extends MaterialBackAnimationHelper {
@@ -25,20 +25,20 @@ public class MaterialSideContainerBackHelper extends MaterialBackAnimationHelper
     public MaterialSideContainerBackHelper(View view) {
         super(view);
         Resources resources = view.getResources();
-        this.maxScaleXDistanceShrink = resources.getDimension(C0976.f4241);
-        this.maxScaleXDistanceGrow = resources.getDimension(C0976.f3839);
-        this.maxScaleYDistance = resources.getDimension(C0976.f3933);
+        this.maxScaleXDistanceShrink = resources.getDimension(C17609.f57329);
+        this.maxScaleXDistanceGrow = resources.getDimension(C17609.f57564);
+        this.maxScaleYDistance = resources.getDimension(C17609.f57210);
     }
 
-    public void startBackProgress(C0443 c0443) {
-        super.onStartBackProgress(c0443);
+    public void startBackProgress(C18584 c18584) {
+        super.onStartBackProgress(c18584);
     }
 
-    public void updateBackProgress(C0443 c0443, int i) {
-        if (super.onUpdateBackProgress(c0443) == null) {
+    public void updateBackProgress(C18584 c18584, int i) {
+        if (super.onUpdateBackProgress(c18584) == null) {
             return;
         }
-        updateBackProgress(c0443.m2268(), c0443.m2270() == 0, i);
+        updateBackProgress(c18584.m43163(), c18584.m43165() == 0, i);
     }
 
     public void updateBackProgress(float f, boolean z, int i) {
@@ -91,8 +91,8 @@ public class MaterialSideContainerBackHelper extends MaterialBackAnimationHelper
         }
     }
 
-    public void finishBackProgress(C0443 c0443, final int i, Animator.AnimatorListener animatorListener, ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
-        final boolean z = c0443.m2270() == 0;
+    public void finishBackProgress(C18584 c18584, final int i, Animator.AnimatorListener animatorListener, ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
+        final boolean z = c18584.m43165() == 0;
         boolean zCheckAbsoluteGravity = checkAbsoluteGravity(i, 3);
         float scaleX = (this.view.getScaleX() * this.view.getWidth()) + getEdgeMargin(zCheckAbsoluteGravity);
         View view = this.view;
@@ -104,8 +104,8 @@ public class MaterialSideContainerBackHelper extends MaterialBackAnimationHelper
         if (animatorUpdateListener != null) {
             objectAnimatorOfFloat.addUpdateListener(animatorUpdateListener);
         }
-        objectAnimatorOfFloat.setInterpolator(new C22819());
-        objectAnimatorOfFloat.setDuration(AnimationUtils.lerp(this.hideDurationMax, this.hideDurationMin, c0443.m2268()));
+        objectAnimatorOfFloat.setInterpolator(new C1874());
+        objectAnimatorOfFloat.setDuration(AnimationUtils.lerp(this.hideDurationMax, this.hideDurationMin, c18584.m43163()));
         objectAnimatorOfFloat.addListener(new AnimatorListenerAdapter() { // from class: com.google.android.material.motion.MaterialSideContainerBackHelper.1
             @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
             public void onAnimationEnd(Animator animator) {
@@ -138,7 +138,7 @@ public class MaterialSideContainerBackHelper extends MaterialBackAnimationHelper
 
     private boolean checkAbsoluteGravity(int i, int i2) {
         View view = this.view;
-        int i3 = C5031.f17539;
+        int i3 = C22666.f73603;
         return (Gravity.getAbsoluteGravity(i, view.getLayoutDirection()) & i2) == i2;
     }
 

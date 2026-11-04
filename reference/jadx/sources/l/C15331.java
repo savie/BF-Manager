@@ -1,44 +1,59 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶܺ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: X9MQ */
+/* JADX INFO: renamed from: l.ܳۨ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: RA0U */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15331 extends AbstractC18858 {
+public final class C15331 extends AbstractC6383 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC8400 f49935;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f50083;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f49936;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C1908[] f50084;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public int f49937;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C15331(InterfaceC14771 interfaceC14771, InterfaceC22386 interfaceC22386, InterfaceC8400 interfaceC8400, Object obj) {
-        super(interfaceC14771, interfaceC22386);
-        this.f49935 = interfaceC8400;
-        this.f49936 = obj;
-        C13465.m32963((Object) interfaceC14771, "null cannot be cast to non-null type kotlin.coroutines.Continuation<kotlin.Any?>");
+    @Override // l.AbstractC6383
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo6571(C3399 c3399) {
+        c3399.m11136(4);
+        c3399.m11138(this.f50083);
+        c3399.m11129(this.f50084);
+        if (this.f50084 != null) {
+            C3399 c33910 = c3399.f11057;
+            int i = this.f50083;
+            c33910.m11138(i);
+            int i2 = c33910.f11055;
+            c33910.m11128(i * 4);
+            C3399 c3399M11132 = c33910.m11132(i2);
+            for (int i3 = 0; i3 < i; i3++) {
+                this.f50084[i3].mo6571(c3399M11132);
+            }
+        }
     }
 
-    @Override // l.AbstractC21680
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo11546(Object obj) throws Throwable {
-        int i = this.f49937;
-        if (i != 0) {
-            if (i == 1) {
-                this.f49937 = 2;
-                C18610.m43015(obj);
-                return obj;
+    @Override // l.AbstractC6383
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo6570(C3399 c3399) throws C20553 {
+        c3399.m11136(4);
+        this.f50083 = c3399.m11127();
+        if (c3399.m11127() != 0) {
+            C3399 c33910 = c3399.f11057;
+            int iM11127 = c33910.m11127();
+            int i = c33910.f11055;
+            c33910.m11128(iM11127 * 4);
+            if (this.f50084 == null) {
+                if (iM11127 < 0 || iM11127 > 65535) {
+                    throw new C20553("invalid array conformance");
+                }
+                this.f50084 = new C1908[iM11127];
             }
-            throw new IllegalStateException("This coroutine had already completed");
+            C3399 c3399M11132 = c33910.m11132(i);
+            for (int i2 = 0; i2 < iM11127; i2++) {
+                C1908[] c1908Arr = this.f50084;
+                if (c1908Arr[i2] == null) {
+                    c1908Arr[i2] = new C1908();
+                }
+                c1908Arr[i2].mo6570(c3399M11132);
+            }
         }
-        this.f49937 = 1;
-        C18610.m43015(obj);
-        InterfaceC8400 interfaceC8400 = this.f49935;
-        C13465.m32963((Object) interfaceC8400, "null cannot be cast to non-null type kotlin.Function2<R of kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.createCoroutineUnintercepted, kotlin.coroutines.Continuation<T of kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.createCoroutineUnintercepted>, kotlin.Any?>");
-        C6408.m17553(2, interfaceC8400);
-        return interfaceC8400.mo3208(this.f49936, this);
     }
 }

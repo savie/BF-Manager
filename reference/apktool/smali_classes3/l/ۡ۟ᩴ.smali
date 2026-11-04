@@ -1,17 +1,38 @@
-.class public interface abstract Ll/ۡ۟ᩴ;
+.class public final synthetic Ll/ۡ۟ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "P6HO"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۜ۟ᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۜ۟ᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۡ۟ᩴ;->ܰ:Ll/ۜ۟ᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract poll()Ll/᩵۟ᩴ;
-.end method
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 1
 
-.method public abstract poll(JLjava/util/concurrent/TimeUnit;)Ll/᩵۟ᩴ;
-.end method
+    .line 0
+    iget-object v0, p0, Ll/ۡ۟ᩴ;->ܰ:Ll/ۜ۟ᩴ;
 
-.method public abstract take()Ll/᩵۟ᩴ;
+    invoke-static {v0, p1}, Ll/ۜ۟ᩴ;->ۙ(Ll/ۜ۟ᩴ;Landroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
 .end method

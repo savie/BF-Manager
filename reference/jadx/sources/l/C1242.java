@@ -1,122 +1,161 @@
 package l;
 
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import bin.mt.plus.R;
-import java.util.Collections;
-import java.util.Set;
-import java.util.WeakHashMap;
-
-/* JADX INFO: renamed from: l.֨ܽۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28VT */
+/* JADX INFO: renamed from: l.֨ܳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O5QJ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1242 extends AbstractC0414 {
+public final class C1242 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public EnumC4225 f4491;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC20293 f5415;
+    public AbstractC8699 f4492;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Set f5416 = Collections.newSetFromMap(new WeakHashMap());
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public C9444 f4493;
 
-    public C1242(ActivityC20293 activityC20293) {
-        this.f5415 = activityC20293;
-    }
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public long f4495;
 
-    @Override // l.AbstractC0414
-    public final int getItemViewType(int i) {
-        if (i == 0) {
-            return 0;
-        }
-        int i2 = i - 1;
-        int iMax = Math.max(1, this.f5415.f65762.size());
-        return (i2 >= iMax && i2 - iMax == 0) ? 1 : 2;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C9444 f4496;
 
-    @Override // l.AbstractC0414
-    public final AbstractC12554 onCreateViewHolder(ViewGroup viewGroup, int i) {
-        ActivityC20293 activityC20293 = this.f5415;
-        if (i == 0 || i == 1) {
-            return new ViewOnClickListenerC4064(activityC20293, LayoutInflater.from(activityC20293).inflate(R.layout.MT_Protector, viewGroup, false), i == 0);
-        }
-        ViewOnClickListenerC16060 viewOnClickListenerC16060 = new ViewOnClickListenerC16060(activityC20293, LayoutInflater.from(activityC20293).inflate(R.layout.MT_Protector, viewGroup, false));
-        this.f5416.add(viewOnClickListenerC16060.f51953);
-        return viewOnClickListenerC16060;
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f4497;
 
-    @Override // l.AbstractC0414
-    public final void onBindViewHolder(AbstractC12554 abstractC12554, int i) {
-        int size;
-        if (abstractC12554 instanceof ViewOnClickListenerC16060) {
-            ViewOnClickListenerC16060 viewOnClickListenerC16060 = (ViewOnClickListenerC16060) abstractC12554;
-            int i2 = i - 1;
-            ActivityC20293 activityC20293 = this.f5415;
-            if (activityC20293.f65762.isEmpty()) {
-                if (i2 == 0) {
-                    viewOnClickListenerC16060.f51954.setImageDrawable(activityC20293.f65765);
-                    viewOnClickListenerC16060.f51953.setText(R.string.MT_Protector);
-                    viewOnClickListenerC16060.f51953.setTextColor(C20368.f66009);
-                    viewOnClickListenerC16060.itemView.setClickable(false);
-                    viewOnClickListenerC16060.itemView.setLongClickable(false);
-                    return;
-                }
-                size = i - 3;
-            } else {
-                if (i2 < activityC20293.f65762.size()) {
-                    AbstractC17131 abstractC17131 = (AbstractC17131) activityC20293.f65762.get(i2);
-                    viewOnClickListenerC16060.f51954.setImageDrawable(activityC20293.f65765);
-                    viewOnClickListenerC16060.f51953.setText(abstractC17131.mo1456());
-                    if (activityC20293.f65754 != null && abstractC17131.mo1453().equals(activityC20293.f65754)) {
-                        viewOnClickListenerC16060.f51953.setTextColor(C20368.f65973);
-                        activityC20293.f65754 = null;
-                    } else {
-                        viewOnClickListenerC16060.f51953.setTextColor(C20368.f65976);
-                    }
-                    viewOnClickListenerC16060.itemView.setClickable(true);
-                    viewOnClickListenerC16060.itemView.setLongClickable(true);
-                    return;
-                }
-                size = i2 - (activityC20293.f65762.size() + 1);
-            }
-            if (activityC20293.f65760.isEmpty()) {
-                if (size == 0) {
-                    viewOnClickListenerC16060.f51954.setImageDrawable(activityC20293.f65756);
-                    viewOnClickListenerC16060.f51953.setText(R.string.MT_Protector);
-                    viewOnClickListenerC16060.f51953.setTextColor(C20368.f66009);
-                    viewOnClickListenerC16060.itemView.setClickable(false);
-                    viewOnClickListenerC16060.itemView.setLongClickable(false);
-                    return;
-                }
-                return;
-            }
-            if (size < activityC20293.f65760.size()) {
-                AbstractC20745 abstractC20745 = (AbstractC20745) activityC20293.f65760.get(size);
-                viewOnClickListenerC16060.f51954.setImageDrawable(activityC20293.f65756);
-                viewOnClickListenerC16060.f51953.setText(abstractC20745.getName());
-                if (activityC20293.f65759 != null && abstractC20745.getName().equals(activityC20293.f65759)) {
-                    viewOnClickListenerC16060.f51953.setTextColor(C20368.f65973);
-                    activityC20293.f65759 = null;
-                } else {
-                    viewOnClickListenerC16060.f51953.setTextColor(C20368.f65976);
-                }
-                viewOnClickListenerC16060.itemView.setClickable(true);
-                viewOnClickListenerC16060.itemView.setLongClickable(true);
-            }
-        }
-    }
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public long f4498;
 
-    @Override // l.AbstractC0414
-    public final int getItemCount() {
-        ActivityC20293 activityC20293 = this.f5415;
-        return Math.max(1, activityC20293.f65760.size()) + Math.max(1, activityC20293.f65762.size()) + 2;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C9444 f4500;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C5717 f4501;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public C7954 f4502;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f4494 = -1;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C1988 f4499 = new C1988();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4485(C7954 c7954) {
+        this.f4502 = c7954;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4459() {
-        for (TextView textView : this.f5416) {
-            if (textView.getCurrentTextColor() == C20368.f65973) {
-                textView.setTextColor(C20368.f65976);
-            }
+    public final void m4483(EnumC4225 enumC4225) {
+        this.f4491 = enumC4225;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4480(int i) {
+        this.f4494 = i;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m4492(String str) {
+        this.f4497 = str;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4484(C5717 c5717) {
+        this.f4501 = c5717;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m4490() {
+        C1988 c1988 = this.f4499;
+        c1988.getClass();
+        C11682.m29359("Proxy-Authenticate");
+        C11682.m29357("OkHttp-Preemptive", "Proxy-Authenticate");
+        c1988.m6812("Proxy-Authenticate");
+        c1988.m6814("Proxy-Authenticate", "OkHttp-Preemptive");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4482(String str) {
+        this.f4499.m6811("Warning", str);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4488(C11682 c11682) {
+        this.f4499 = c11682.m29362();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4486(AbstractC8699 abstractC8699) {
+        this.f4492 = abstractC8699;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m4493(C9444 c9444) {
+        if (c9444 != null) {
+            m4478("networkResponse", c9444);
         }
+        this.f4496 = c9444;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4487(C9444 c9444) {
+        if (c9444 != null) {
+            m4478("cacheResponse", c9444);
+        }
+        this.f4500 = c9444;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m4478(String str, C9444 c9444) {
+        if (c9444.f30632 != null) {
+            throw new IllegalArgumentException(str.concat(".body != null"));
+        }
+        if (c9444.f30624 != null) {
+            throw new IllegalArgumentException(str.concat(".networkResponse != null"));
+        }
+        if (c9444.f30633 != null) {
+            throw new IllegalArgumentException(str.concat(".cacheResponse != null"));
+        }
+        if (c9444.f30629 != null) {
+            throw new IllegalArgumentException(str.concat(".priorResponse != null"));
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m4489(C9444 c9444) {
+        if (c9444.f30632 == null) {
+            this.f4493 = c9444;
+            return;
+        }
+        throw new IllegalArgumentException("priorResponse.body != null");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m4491(long j) {
+        this.f4498 = j;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m4481(long j) {
+        this.f4495 = j;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C9444 m4479() {
+        if (this.f4502 == null) {
+            throw new IllegalStateException("request == null");
+        }
+        if (this.f4491 == null) {
+            throw new IllegalStateException("protocol == null");
+        }
+        if (this.f4494 < 0) {
+            throw new IllegalStateException("code < 0: " + this.f4494);
+        }
+        if (this.f4497 == null) {
+            throw new IllegalStateException("message == null");
+        }
+        return new C9444(this);
     }
 }

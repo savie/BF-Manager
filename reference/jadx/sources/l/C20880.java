@@ -1,20 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷۫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N67N */
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.᩵᩹ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 97QO */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20880 extends C20749 {
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f67816;
-
-    public C20880(int i) {
-        super(null, "Invalid reference type: %d", Integer.valueOf(i));
-        this.f67816 = i;
+public final /* synthetic */ class C20880 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m46923() {
-        return this.f67816;
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((C17007) obj).mo32404() == EnumC15230.ERROR;
     }
 }

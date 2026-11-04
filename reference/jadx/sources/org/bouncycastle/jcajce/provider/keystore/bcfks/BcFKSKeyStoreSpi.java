@@ -43,11 +43,11 @@ import javax.crypto.Mac;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import l.C0252;
-import l.C12441;
-import l.C16523;
-import l.C22979;
-import l.C8479;
+import l.C14442;
+import l.C16076;
+import l.C20196;
+import l.C22783;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -107,7 +107,7 @@ import org.bouncycastle.jce.interfaces.ECKey;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BcFKSKeyStoreSpi extends KeyStoreSpi {
     public static final BigInteger CERTIFICATE;
     public static final BigInteger PRIVATE_KEY;
@@ -230,7 +230,6 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DefShared extends SharedKeyStoreSpi {
         public DefShared() {
             super(new DefaultJcaJceHelper());
@@ -449,7 +448,6 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class StdShared extends SharedKeyStoreSpi {
         public StdShared() {
             super(new BCJcaJceHelper());
@@ -727,7 +725,7 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
         if (aSN1ObjectIdentifier2.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
             return new KeyDerivationFunc(aSN1ObjectIdentifier2, new PBKDF2Params(bArr, PKCS12KeyStoreSpi.MIN_ITERATIONS, i, new AlgorithmIdentifier(PKCSObjectIdentifiers.id_hmacWithSHA512, DERNull.INSTANCE)));
         }
-        throw new IllegalStateException(C22979.m50820("unknown derivation algorithm: ", aSN1ObjectIdentifier));
+        throw new IllegalStateException(C20196.m46452("unknown derivation algorithm: ", aSN1ObjectIdentifier));
     }
 
     private KeyDerivationFunc generatePkbdAlgorithmIdentifier(KeyDerivationFunc keyDerivationFunc, int i) {
@@ -1320,14 +1318,14 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
         }
         if (!objectData.getType().equals(PRIVATE_KEY) && !objectData.getType().equals(PROTECTED_PRIVATE_KEY)) {
             if (!objectData.getType().equals(SECRET_KEY) && !objectData.getType().equals(PROTECTED_SECRET_KEY)) {
-                throw new UnrecoverableKeyException(C16523.m38890("BCFKS KeyStore unable to recover secret key (", str, "): type not recognized"));
+                throw new UnrecoverableKeyException(C14442.m34865("BCFKS KeyStore unable to recover secret key (", str, "): type not recognized"));
             }
             EncryptedSecretKeyData encryptedSecretKeyData = EncryptedSecretKeyData.getInstance(objectData.getData());
             try {
                 SecretKeyData secretKeyData = SecretKeyData.getInstance(decryptData("SECRET_KEY_ENCRYPTION", encryptedSecretKeyData.getKeyEncryptionAlgorithm(), cArr, encryptedSecretKeyData.getEncryptedKeyData()));
                 return this.helper.createSecretKeyFactory(secretKeyData.getKeyAlgorithm().getId()).generateSecret(new SecretKeySpec(secretKeyData.getKeyBytes(), secretKeyData.getKeyAlgorithm().getId()));
             } catch (Exception e) {
-                throw new UnrecoverableKeyException(C8479.m22142(e, C12441.m30914("BCFKS KeyStore unable to recover secret key (", str, "): ")));
+                throw new UnrecoverableKeyException(C16076.m38224(e, C22783.m51387("BCFKS KeyStore unable to recover secret key (", str, "): ")));
             }
         }
         PrivateKey privateKey = (PrivateKey) this.privateKeyCache.get(str);
@@ -1341,7 +1339,7 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
             this.privateKeyCache.put(str, privateKeyGeneratePrivate);
             return privateKeyGeneratePrivate;
         } catch (Exception e2) {
-            throw new UnrecoverableKeyException(C8479.m22142(e2, C12441.m30914("BCFKS KeyStore unable to recover private key (", str, "): ")));
+            throw new UnrecoverableKeyException(C16076.m38224(e2, C22783.m51387("BCFKS KeyStore unable to recover private key (", str, "): ")));
         }
     }
 
@@ -1354,7 +1352,7 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
             dateExtractCreationDate = date;
         } else {
             if (!objectData.getType().equals(CERTIFICATE)) {
-                throw new KeyStoreException(C0252.m1693("BCFKS KeyStore already has a key entry with alias ", str));
+                throw new KeyStoreException(C25272.m56409("BCFKS KeyStore already has a key entry with alias ", str));
             }
             dateExtractCreationDate = extractCreationDate(objectData, date);
         }
@@ -1411,7 +1409,7 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
             try {
                 byte[] bArrCalculateMac = calculateMac(str, cArr);
                 if (this.cache.containsKey(str) && !Arrays.constantTimeAreEqual((byte[]) this.cache.get(str), bArrCalculateMac)) {
-                    throw new UnrecoverableKeyException(C16523.m38890("unable to recover key (", str, MotionUtils.EASING_TYPE_FORMAT_END));
+                    throw new UnrecoverableKeyException(C14442.m34865("unable to recover key (", str, MotionUtils.EASING_TYPE_FORMAT_END));
                 }
                 Key keyEngineGetKey = super.engineGetKey(str, cArr);
                 if (keyEngineGetKey != null && !this.cache.containsKey(str)) {
@@ -1419,9 +1417,9 @@ public class BcFKSKeyStoreSpi extends KeyStoreSpi {
                 }
                 return keyEngineGetKey;
             } catch (InvalidKeyException e) {
-                StringBuilder sbM30914 = C12441.m30914("unable to recover key (", str, "): ");
-                sbM30914.append(e.getMessage());
-                throw new UnrecoverableKeyException(sbM30914.toString());
+                StringBuilder sbM51387 = C22783.m51387("unable to recover key (", str, "): ");
+                sbM51387.append(e.getMessage());
+                throw new UnrecoverableKeyException(sbM51387.toString());
             }
         }
     }

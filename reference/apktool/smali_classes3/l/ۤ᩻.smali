@@ -1,71 +1,54 @@
 .class public final Ll/ۤ᩻;
 .super Ljava/lang/Object;
-.source "C5P1"
-
-
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
-
-# instance fields
-.field public final ۙ:Landroid/view/GestureDetector;
+.source "B4VX"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-    .locals 2
+.method public static ۙ(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Landroid/widget/TextView;)V
+    .locals 0
 
-    .line 78
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p0, :cond_1
 
-    .line 79
-    new-instance v0, Landroid/view/GestureDetector;
+    .line 28
+    iget-object p0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
-    const/4 v1, 0x0
+    if-nez p0, :cond_1
 
-    invoke-direct {v0, p1, p2, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V
+    .line 31
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    iput-object v0, p0, Ll/ۤ᩻;->ۙ:Landroid/view/GestureDetector;
+    move-result-object p0
 
-    return-void
-.end method
+    .line 32
+    :goto_0
+    instance-of p2, p0, Landroid/view/View;
 
+    if-eqz p2, :cond_1
 
-# virtual methods
-.method public final ۙ()V
-    .locals 2
+    .line 33
+    instance-of p2, p0, Ll/ۢ᩹;
 
-    const/4 v0, 0x0
+    if-eqz p2, :cond_0
 
-    .line 112
-    iget-object v1, p0, Ll/ۤ᩻;->ۙ:Landroid/view/GestureDetector;
+    .line 34
+    check-cast p0, Ll/ۢ᩹;
 
-    invoke-virtual {v1, v0}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
+    invoke-interface {p0}, Ll/ۢ᩹;->getHint()Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final ۙ(Landroid/view/GestureDetector$OnDoubleTapListener;)V
-    .locals 1
-
-    .line 123
-    iget-object v0, p0, Ll/ۤ᩻;->ۙ:Landroid/view/GestureDetector;
-
-    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->setOnDoubleTapListener(Landroid/view/GestureDetector$OnDoubleTapListener;)V
+    iput-object p0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
     return-void
-.end method
 
-.method public final ۙ(Landroid/view/MotionEvent;)Z
-    .locals 1
+    .line 37
+    :cond_0
+    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
-    .line 98
-    iget-object v0, p0, Ll/ۤ᩻;->ۙ:Landroid/view/GestureDetector;
+    move-result-object p0
 
-    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    goto :goto_0
 
-    move-result p1
-
-    return p1
+    :cond_1
+    return-void
 .end method

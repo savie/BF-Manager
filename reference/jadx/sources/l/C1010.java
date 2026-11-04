@@ -1,32 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۡۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M7AP */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1010 {
+import android.content.Context;
+import android.view.MotionEvent;
+import android.view.accessibility.AccessibilityEvent;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7768 f4696;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f4697;
+/* JADX INFO: renamed from: l.֨ۜ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: F1OQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1010 extends C25227 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC2557 f4698;
+    public final /* synthetic */ C6976 f3675;
 
-    public C1010(String str, C6794 c6794, C7768 c7768) {
-        this.f4697 = str;
-        this.f4698 = c6794;
-        this.f4696 = c7768;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C1010(C6976 c6976, Context context) {
+        super(context);
+        this.f3675 = c6976;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C1010 m3835(String str, C6794 c6794) {
-        return new C1010(str, c6794, null);
+    @Override // l.C25227, android.view.ViewGroup, android.view.View
+    public final CharSequence getAccessibilityClassName() {
+        this.f3675.f23024.getClass();
+        return super.getAccessibilityClassName();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C1010 m3836(String str, C7768 c7768) {
-        return new C1010(str, null, c7768);
+    @Override // android.view.View
+    public final void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
+        super.onInitializeAccessibilityEvent(accessibilityEvent);
+        C6976 c6976 = this.f3675;
+        accessibilityEvent.setFromIndex(c6976.f23027);
+        accessibilityEvent.setToIndex(c6976.f23027);
+        accessibilityEvent.setSource(c6976.f23024.f61358);
+        accessibilityEvent.setClassName("androidx.viewpager.widget.ViewPager");
+    }
+
+    @Override // l.C25227, android.view.View
+    public final boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.f3675.m19285() && super.onTouchEvent(motionEvent);
+    }
+
+    @Override // l.C25227, android.view.ViewGroup
+    public final boolean onInterceptTouchEvent(MotionEvent motionEvent) {
+        return this.f3675.m19285() && super.onInterceptTouchEvent(motionEvent);
     }
 }

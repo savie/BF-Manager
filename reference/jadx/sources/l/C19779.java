@@ -1,105 +1,74 @@
 package l;
 
-import java.util.HashMap;
+import android.content.DialogInterface;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.FrameLayout;
+import bin.mt.plus.Main;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩵᩺ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SBD8 */
+/* JADX INFO: renamed from: l.ᩴۧ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: SAKA */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19779 extends C18947 {
+public final class C19779 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C16956 f63532;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ CheckBox f63624;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final int f63533;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5609 f63625;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final HashMap f63534;
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ View f63626;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C16956[] f63535;
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ CheckBox f63627;
 
-    public C19779(C17661 c17661) {
-        C5667 c5667M41141 = c17661.m41141();
-        int iM36890 = c5667M41141.m36890();
-        int iM15555 = c5667M41141.m15555();
-        this.f63533 = iM15555;
-        C16956 c16956 = new C16956(iM15555);
-        this.f63532 = c16956;
-        this.f63535 = new C16956[iM36890];
-        this.f63534 = new HashMap(c5667M41141.m15554());
-        c16956.mo9637();
-    }
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ RunnableC3547 f63628;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m44994(int i, C16956 c16956) {
-        C16956[] c16956Arr = this.f63535;
-        try {
-            C16956 c16957 = c16956Arr[i];
-            if (c16957 == null) {
-                m43641();
-                try {
-                    c16956Arr[i] = c16956;
-                    return true;
-                } catch (ArrayIndexOutOfBoundsException unused) {
-                    throw new IllegalArgumentException("bogus label");
-                }
-            }
-            C16956 c16956M39744 = c16957.m39744();
-            if (c16957.size() != 0) {
-                c16956M39744.m39742(c16956);
-            } else {
-                c16956M39744 = c16956.m39744();
-            }
-            if (c16957.equals(c16956M39744)) {
-                return false;
-            }
-            c16956M39744.mo9637();
-            m43641();
-            try {
-                c16956Arr[i] = c16956M39744;
-                return true;
-            } catch (ArrayIndexOutOfBoundsException unused2) {
-                throw new IllegalArgumentException("bogus label");
-            }
-        } catch (ArrayIndexOutOfBoundsException unused3) {
-            throw new IllegalArgumentException("bogus label");
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C19779(C5609 c5609, Main main, View view, CheckBox checkBox, CheckBox checkBox2, RunnableC3547 runnableC3547) {
+        super(main, R.string.MT_Protector);
+        this.f63625 = c5609;
+        this.f63626 = view;
+        this.f63627 = checkBox;
+        this.f63624 = checkBox2;
+        this.f63628 = runnableC3547;
+        if (c5609.f19437) {
+            FrameLayout frameLayoutM22941 = m22941();
+            frameLayoutM22941.setVisibility(0);
+            frameLayoutM22941.addView(view);
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16956 m44992(C12018 c12018) {
-        try {
-            C16956 c16956 = this.f63535[c12018.mo29913()];
-            return c16956 != null ? c16956 : this.f63532;
-        } catch (ArrayIndexOutOfBoundsException unused) {
-            throw new IllegalArgumentException("bogus label");
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        C5609 c5609 = this.f63625;
+        String strTrim = m22914().trim();
+        if (strTrim.isEmpty()) {
+            m22951();
+            return;
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44993(AbstractC15546 abstractC15546, C16251 c16251) {
-        m43641();
-        this.f63534.put(abstractC15546, c16251);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16251 m44990(AbstractC15546 abstractC15546) {
-        return (C16251) this.f63534.get(abstractC15546);
-    }
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final int m44995() {
-        return this.f63534.size();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16956 m44991(int i) {
+        long jM50717 = C22482.m50717(strTrim);
+        if (jM50717 < 0) {
+            m22952(R.string.MT_Protector);
+            return;
+        }
         try {
-            C16956 c16956 = this.f63535[i];
-            return c16956 != null ? c16956.m39744() : new C16956(this.f63533);
-        } catch (ArrayIndexOutOfBoundsException unused) {
-            throw new IllegalArgumentException("bogus label");
+            C6265.m17912(c5609.f19440.m23192(), EnumC12230.MODIFY_DIRECTORY_LINKED);
+            boolean z = false;
+            boolean z2 = c5609.f19437 && this.f63627.isChecked();
+            if (c5609.f19437 && this.f63624.isChecked()) {
+                z = true;
+            }
+            if (c5609.f19438 || z2 || z || jM50717 != ((InterfaceC2386) c5609.f19439.get(0)).getTime()) {
+                new C15303(c5609, jM50717, z2, z, this.f63628).m8197();
+            }
+            m22951();
+        } catch (C4866 e) {
+            c5609.f19440.m23233().m40401(e, (DialogInterface.OnDismissListener) null);
         }
     }
 }

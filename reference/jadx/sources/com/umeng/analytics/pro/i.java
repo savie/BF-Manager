@@ -39,7 +39,7 @@ public class i {
     public String k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public List f77935l;
+    public List f82051l;
 
     /* JADX INFO: compiled from: O4N1 */
     public enum a {
@@ -60,7 +60,7 @@ public class i {
         this.i = new ArrayList();
         this.j = new ArrayList();
         this.k = null;
-        this.f77935l = new ArrayList();
+        this.f82051l = new ArrayList();
     }
 
     public static i a(Context context) {
@@ -76,7 +76,7 @@ public class i {
         synchronized (this) {
             l();
             this.i.clear();
-            this.f77935l.clear();
+            this.f82051l.clear();
             this.j.clear();
         }
     }
@@ -100,11 +100,11 @@ public class i {
     }
 
     public void b() {
-        this.f77935l.clear();
+        this.f82051l.clear();
     }
 
     public boolean c() {
-        return this.f77935l.isEmpty();
+        return this.f82051l.isEmpty();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:23:0x0099, code lost:
@@ -790,14 +790,14 @@ public class i {
         cursor = null;
         cursor = null;
         Cursor cursor2 = null;
-        if (this.f77935l.isEmpty()) {
+        if (this.f82051l.isEmpty()) {
             return null;
         }
         try {
             sQLiteDatabaseA = g.a(d).a();
             try {
                 sQLiteDatabaseA.beginTransaction();
-                Cursor cursorA = a(e.c.a, sQLiteDatabaseA, null, "__ii=? ", new String[]{(String) this.f77935l.get(0)}, null, null, null, null);
+                Cursor cursorA = a(e.c.a, sQLiteDatabaseA, null, "__ii=? ", new String[]{(String) this.f82051l.get(0)}, null, null, null, null);
                 if (cursorA != null) {
                     try {
                         if (cursorA.moveToNext()) {
@@ -1563,12 +1563,12 @@ public class i {
                     sQLiteDatabaseA = g.a(d).a();
                     sQLiteDatabaseA.beginTransaction();
                     if (!z2) {
-                        int size = this.f77935l.size();
+                        int size = this.f82051l.size();
                         int i = 0;
                         if (size > 0) {
                             int i2 = 0;
                             while (i < size) {
-                                String str = (String) this.f77935l.get(i);
+                                String str = (String) this.f82051l.get(i);
                                 if (str == null) {
                                     i2 = 1;
                                 }

@@ -37,7 +37,7 @@
     const-string v1, "MicroMsg.IntentUtil"
 
     .line 0
-    invoke-static {p0, p1, v1}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {p0, p1, v1}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -76,7 +76,7 @@
     const-string v1, "MicroMsg.IntentUtil"
 
     .line 0
-    invoke-static {p0, p1, v1}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {p0, p1, v1}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     return-object v0
 .end method

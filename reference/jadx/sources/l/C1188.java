@@ -1,110 +1,101 @@
 package l;
 
-import android.text.SpannableStringBuilder;
-import android.text.TextUtils;
-import android.text.style.ForegroundColorSpan;
-import android.widget.TextView;
-import bin.mt.plugin.api.ui.dialog.DualProgressDialog;
-import bin.mt.plugin.api.util.Consumer;
-import com.umeng.commonsdk.listener.OnGetOaidListener;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.util.List;
-import net.sf.sevenzipjbinding.ISequentialOutStream;
-import net.sf.sevenzipjbinding.SevenZipException;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.֨ܳ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4BMC */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C1188 implements InterfaceC7359, InterfaceC18848, InterfaceC4509, ISequentialOutStream, Consumer, OnGetOaidListener, InterfaceC13320, InterfaceC17591 {
+/* JADX INFO: renamed from: l.֨۫᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5BI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1188 extends C19087 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f5283;
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f4335;
 
-    public /* synthetic */ C1188(Object obj) {
-        this.f5283 = obj;
+    public C1188() {
+        throw null;
     }
 
-    public /* synthetic */ C1188(C19602 c19602, C13314 c13314) {
-        this.f5283 = c13314;
+    @Override // l.C19087
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final String mo4365() {
+        return "={" + ((String) C1170.stream(this.f4335).map(new C10210(5)).collect(C2025.joining(","))) + '}';
     }
 
-    @Override // bin.mt.plugin.api.util.Consumer
-    /* JADX INFO: renamed from: accept */
-    public void mo42471accept(Object obj) {
-        ((DualProgressDialog) this.f5283).lambda$new$0((CharSequence) obj);
-    }
-
-    @Override // com.umeng.commonsdk.listener.OnGetOaidListener
-    public void onGetOaid(String str) {
-        ((java.util.function.Consumer) this.f5283).n(str);
-    }
-
-    @Override // l.InterfaceC13320
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1179(AbstractC23903 abstractC23903) {
-        ((C12325) this.f5283).m30618((C19670) abstractC23903);
-    }
-
-    @Override // l.InterfaceC13320
-    /* JADX INFO: renamed from: ۨ */
-    public /* synthetic */ boolean mo1180() {
-        return false;
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        C13314 c13314 = (C13314) this.f5283;
-        ((InterfaceC10430) obj).mo26347(c13314);
-        int i = c13314.f44194;
-    }
-
-    @Override // net.sf.sevenzipjbinding.ISequentialOutStream
-    public int write(ByteBuffer byteBuffer) throws SevenZipException {
-        try {
-            return ((InterfaceC10983) this.f5283).write(byteBuffer);
-        } catch (IOException e) {
-            throw new SevenZipException(e);
-        }
-    }
-
-    @Override // l.InterfaceC17591
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo1012(int i, int i2, byte[] bArr) {
-        return ((C23942) this.f5283).f77631.mo17388(i, i2, bArr);
-    }
-
-    @Override // l.InterfaceC18848
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void mo4355(AbstractC20745 abstractC20745) {
-        C3872.m11211(((C11545) this.f5283).m28824(), abstractC20745, (List) null);
-    }
-
-    @Override // l.InterfaceC4509
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo4354(TextView textView) {
-        List<InterfaceC2557> list = (List) this.f5283;
-        textView.setEllipsize(TextUtils.TruncateAt.END);
-        textView.setMaxLines(5);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
-        StringBuilder sb = new StringBuilder();
-        for (InterfaceC2557 interfaceC2557 : list) {
-            if (spannableStringBuilder.length() < 1000) {
-                if (spannableStringBuilder.length() > 0) {
-                    int length = spannableStringBuilder.length();
-                    spannableStringBuilder.append((CharSequence) ", ");
-                    spannableStringBuilder.setSpan(new ForegroundColorSpan(C20368.f65970), length, length + 2, 17);
+    /* JADX WARN: Code duplicated, block: B:39:0x0094  */
+    @Override // l.C19087, l.AbstractC20997, l.InterfaceC16454
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1688() {
+        int i;
+        ArrayList<C19087> arrayList = this.f4335;
+        int size = arrayList.size();
+        if (arrayList.size() > 0) {
+            EnumC5619 enumC5619M6504 = m6504();
+            int i2 = 0;
+            if (enumC5619M6504 == EnumC5619.HAS_DEFAULT_VALUE || enumC5619M6504 == EnumC5619.INLINED_ELEMENT) {
+                C19087 c19087 = (C19087) arrayList.get(0);
+                int iM48002 = ((c19087 instanceof C10136) || (c19087 instanceof C4699)) ? this.f67148 + 10 + m48002() : 1;
+                if (m6504() != EnumC5619.INLINED_ELEMENT) {
+                    switch (C7900.f26252[((C19087) arrayList.get(0)).f61803.ordinal()]) {
+                        case 10:
+                        case 11:
+                        case 12:
+                        case 13:
+                            i = 1;
+                            break;
+                        default:
+                            int i3 = size % 2;
+                            if (size > 10) {
+                                if (i3 == 0) {
+                                    i = 4;
+                                } else {
+                                    i = 6;
+                                }
+                            } else if (i3 == 0) {
+                                i = 2;
+                            } else {
+                                i = 3;
+                            }
+                            break;
+                    }
+                } else {
+                    i = 1;
                 }
-                spannableStringBuilder.append((CharSequence) interfaceC2557.getName());
+                m48006(m6507() + "{ ");
+                InterfaceC13676 interfaceC13676 = this.f67151;
+                String str = AbstractC20997.f67120;
+                interfaceC13676.mo3879(m48007(4, str));
+                for (C19087 c19088 : arrayList) {
+                    c19088.mo6502(EnumC5619.INLINED_ELEMENT);
+                    c19088.f67148 = iM48002;
+                    if (((c19088 instanceof C10136) || (c19088 instanceof C4699) || (c19088 instanceof C9390)) && i2 % i == 0 && i2 != 0) {
+                        this.f67151.mo3879(m48007(4, str));
+                    }
+                    c19088.mo1688();
+                    if (i2 < size - 1) {
+                        StringBuilder sb = new StringBuilder(",");
+                        sb.append(i2 % i == i + (-1) ? System.lineSeparator() : " ");
+                        m48009(sb.toString());
+                    }
+                    i2++;
+                }
+                this.f67151.mo3881(" }");
+                m48009("  }");
+                return;
             }
-            if (sb.length() > 0) {
-                sb.append(", ");
+            m48006("{");
+            for (C19087 c19089 : arrayList) {
+                c19089.m47994(this);
+                if ((c19089 instanceof C4699) || (c19089 instanceof C9390)) {
+                    m48009(c19089.m47995());
+                }
+                c19089.mo1688();
+                if (i2 < size - 1) {
+                    m48006(",");
+                }
+                i2++;
             }
-            sb.append(interfaceC2557.getName());
+            m47989();
+            return;
         }
-        String string = sb.toString();
-        textView.setText(spannableStringBuilder);
-        textView.setOnClickListener(new ViewOnClickListenerC18579(1, string));
-        C0674.m3027(textView);
+        m48009(m6507() + "{ } }");
     }
 }

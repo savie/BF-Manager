@@ -6,7 +6,7 @@
 # static fields
 .field public static final synthetic ۙ:I
 
-.field public static final ܰ:Ljava/util/HashMap;
+.field public static final ᩷:Ljava/util/HashMap;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/logging/LogFactory;->ܰ:Ljava/util/HashMap;
+    sput-object v0, Lcom/amazonaws/logging/LogFactory;->᩷:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     const-string v3, "Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels"
 
-    invoke-interface {v1, v3}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v1, v3}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -123,7 +123,7 @@
 
     const-string v4, "Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels"
 
-    invoke-interface {v1, v4}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v1, v4}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     .line 87
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -132,7 +132,7 @@
 
     .line 55
     :cond_0
-    sget-object v1, Lcom/amazonaws/logging/LogFactory;->ܰ:Ljava/util/HashMap;
+    sget-object v1, Lcom/amazonaws/logging/LogFactory;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -201,7 +201,7 @@
 
     .line 65
     :goto_1
-    sget-object v2, Lcom/amazonaws/logging/LogFactory;->ܰ:Ljava/util/HashMap;
+    sget-object v2, Lcom/amazonaws/logging/LogFactory;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v2, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1

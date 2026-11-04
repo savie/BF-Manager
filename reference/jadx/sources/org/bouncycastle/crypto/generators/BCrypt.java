@@ -5,7 +5,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BCrypt {
     public static final int MAGIC_STRING_LENGTH = 6;
     public static final int MAX_COST = 31;

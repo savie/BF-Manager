@@ -1,50 +1,47 @@
 .class public final synthetic Ll/ᩴ֡᩹;
 .super Ljava/lang/Object;
-.source "X5LN"
-
-# interfaces
-.implements Ll/᩷᩸;
-
-
-# instance fields
-.field public final synthetic ֡:[Ll/ۘܽ᩹;
-
-.field public final synthetic ܺ:Ll/᩹ܽ᩹;
-
-.field public final synthetic ᩶:I
+.source "J18G"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩹ܽ᩹;I[Ll/ۘܽ᩹;)V
+.method public static ۙ(Ll/ܳ֡᩹;Ljava/util/function/IntConsumer;)Ll/᩸֡᩹;
+    .locals 1
+
+    .line 61
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 62
+    new-instance v0, Ll/᩸֡᩹;
+
+    invoke-direct {v0, p0, p1}, Ll/᩸֡᩹;-><init>(Ll/ܳ֡᩹;Ljava/util/function/IntConsumer;)V
+
+    return-object v0
+.end method
+
+.method public static ۙ(Ll/ܳ֡᩹;Ljava/lang/Integer;)V
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 45
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iput-object p1, p0, Ll/ᩴ֡᩹;->ܺ:Ll/᩹ܽ᩹;
+    move-result p1
 
-    iput p2, p0, Ll/ᩴ֡᩹;->᩶:I
-
-    iput-object p3, p0, Ll/ᩴ֡᩹;->֡:[Ll/ۘܽ᩹;
+    invoke-interface {p0, p1}, Ljava/util/function/IntConsumer;->accept(I)V
 
     return-void
 .end method
 
+.method public static bridge synthetic ۙ(Ll/ܳ֡᩹;Ljava/lang/Object;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+    .line 35
+    check-cast p1, Ljava/lang/Integer;
 
-    .line 0
-    iget v0, p0, Ll/ᩴ֡᩹;->᩶:I
+    invoke-interface {p0, p1}, Ll/ܳ֡᩹;->ۤ(Ljava/lang/Integer;)V
 
-    iget-object v1, p0, Ll/ᩴ֡᩹;->֡:[Ll/ۘܽ᩹;
-
-    iget-object v2, p0, Ll/ᩴ֡᩹;->ܺ:Ll/᩹ܽ᩹;
-
-    invoke-static {v2, v0, v1, p1}, Ll/᩹ܽ᩹;->ۙ(Ll/᩹ܽ᩹;I[Ll/ۘܽ᩹;Landroid/view/MenuItem;)V
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

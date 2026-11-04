@@ -3,8 +3,8 @@ package com.umeng.commonsdk.vchannel;
 import android.content.Context;
 import com.umeng.commonsdk.service.UMGlobalContext;
 import java.util.Map;
-import l.C15489;
-import l.C3012;
+import l.C14483;
+import l.C3188;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -57,12 +57,12 @@ public class b {
             for (String str : this.f.keySet()) {
                 Object obj = this.f.get(str);
                 if (obj == null) {
-                    string = C15489.m37076(str, ": null,");
+                    string = C14483.m34972(str, ": null,");
                 } else {
-                    StringBuilder sbM8976 = C3012.m8976(str, ": ");
-                    sbM8976.append(obj.toString());
-                    sbM8976.append(",");
-                    string = sbM8976.toString();
+                    StringBuilder sbM10405 = C3188.m10405(str, ": ");
+                    sbM10405.append(obj.toString());
+                    sbM10405.append(",");
+                    string = sbM10405.toString();
                 }
                 sb.append(string);
             }

@@ -1,166 +1,95 @@
-.class public abstract Ll/ۧ᩵ᩴ;
-.super Ll/֫ᩳᩴ;
-.source "Y1FB"
+.class public final synthetic Ll/ۧ᩵ᩴ;
+.super Ljava/lang/Object;
+.source "898C"
 
 # interfaces
-.implements Ll/ۛܿᩴ;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public ܺ:I
-
-.field public ᩶:I
+.field public final synthetic ܰ:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
-    .line 26
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 813
-    iput p1, p0, Ll/ۧ᩵ᩴ;->᩶:I
+    iput-boolean p1, p0, Ll/ۧ᩵ᩴ;->ܰ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 2
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 882
-    :goto_0
-    iget v0, p0, Ll/ۧ᩵ᩴ;->᩶:I
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-virtual {p0}, Ll/ۧ᩵ᩴ;->ۙ()I
+    move-result-object p1
 
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 883
-    iget v0, p0, Ll/ۧ᩵ᩴ;->᩶:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Ll/ۧ᩵ᩴ;->᩶:I
-
-    iput v0, p0, Ll/ۧ᩵ᩴ;->ܺ:I
-
-    invoke-virtual {p0, v0}, Ll/ۧ᩵ᩴ;->ܰ(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final hasNext()Z
-    .locals 2
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
 
-    .line 862
-    iget v0, p0, Ll/ۧ᩵ᩴ;->᩶:I
-
-    invoke-virtual {p0}, Ll/ۧ᩵ᩴ;->ۙ()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public next()Ljava/lang/Object;
-    .locals 2
-
-    .line 867
-    invoke-virtual {p0}, Ll/ۧ᩵ᩴ;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 868
-    iget v0, p0, Ll/ۧ᩵ᩴ;->᩶:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Ll/ۧ᩵ᩴ;->᩶:I
-
-    iput v0, p0, Ll/ۧ᩵ᩴ;->ܺ:I
-
-    invoke-virtual {p0, v0}, Ll/ۧ᩵ᩴ;->ܰ(I)Ljava/lang/Object;
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object v0
 
     return-object v0
-
-    .line 867
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
 .end method
 
-.method public remove()V
-    .locals 3
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 873
-    iget v0, p0, Ll/ۧ᩵ᩴ;->ܺ:I
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    const/4 v1, -0x1
+    move-result-object p1
 
-    if-eq v0, v1, :cond_1
+    return-object p1
+.end method
 
-    .line 874
-    invoke-virtual {p0, v0}, Ll/ۧ᩵ᩴ;->ۨ(I)V
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 876
-    iget v0, p0, Ll/ۧ᩵ᩴ;->ܺ:I
+    .line 2
+    check-cast p1, Ljava/io/File;
 
-    iget v2, p0, Ll/ۧ᩵ᩴ;->᩶:I
+    .line 71
+    iget-boolean v0, p0, Ll/ۧ᩵ᩴ;->ܰ:Z
 
-    if-ge v0, v2, :cond_0
+    if-nez v0, :cond_1
 
-    add-int/lit8 v2, v2, -0x1
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    iput v2, p0, Ll/ۧ᩵ᩴ;->᩶:I
+    move-result-object p1
 
-    .line 877
+    const-string v0, "."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    iput v1, p0, Ll/ۧ᩵ᩴ;->ܺ:I
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 
-    .line 873
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public abstract ۙ()I
-.end method
-
-.method public abstract ۨ(I)V
-.end method
-
-.method public abstract ܰ(I)Ljava/lang/Object;
+    return p1
 .end method

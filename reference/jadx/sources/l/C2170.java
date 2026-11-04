@@ -1,111 +1,250 @@
 package l;
 
-import android.os.Bundle;
-import android.os.SystemClock;
-import android.text.TextUtils;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.DocumentsContract;
+import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۖ֡ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 78M9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2170 extends C15100 {
+/* JADX INFO: renamed from: l.֫᩶ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 59S0 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C2170 extends AbstractC2082 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final boolean f7876;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final boolean f7148;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final int f7877;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final String f7149;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final String f7878;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public transient C25291 f7150;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C7648 f7879;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C15274 f7880;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final int f7881;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final int f7882;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2170 m6756(IOException iOException, int i) {
-        return new C2170(0, iOException, i);
+    @Override // l.AbstractC22044
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C2170 mo7467() {
+        return this;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2170 m6758(Throwable th, String str, int i, C7648 c7648, int i2, C15274 c15274, boolean z, int i3) {
-        return new C2170(1, th, i3, str, i, c7648, c7648 == null ? 4 : i2, c15274, z);
+    @Override // l.AbstractC22044
+    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo7468() {
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2170 m6757(RuntimeException runtimeException, int i) {
-        return new C2170(2, runtimeException, i);
+    public C2170(File file, Uri uri, C25291 c25291) {
+        super(file, uri);
+        this.f7150 = c25291;
+        this.f7149 = c25291.f81684;
+        String path = file.getPath();
+        this.f7148 = path.length() != 18 ? false : path.equalsIgnoreCase(c25291.m56469());
     }
 
-    public C2170(int i, Exception exc, int i2) {
-        this(i, exc, i2, null, -1, null, 4, null, false);
+    @Override // l.AbstractC2082
+    /* JADX INFO: renamed from: ۙ */
+    public C2170 mo2937(File file, Uri uri) {
+        return new C2170(file, uri, m7465());
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2170(String str, Throwable th, int i, int i2, String str2, int i3, C7648 c7648, int i4, C15274 c15274, long j, boolean z) {
-        super(str, th, i, j);
-        Bundle bundle = Bundle.EMPTY;
-        C2023.m6507(!z || i2 == 1);
-        C2023.m6507(th != null || i2 == 3);
-        this.f7882 = i2;
-        this.f7878 = str2;
-        this.f7877 = i3;
-        this.f7879 = c7648;
-        this.f7881 = i4;
-        this.f7880 = c15274;
-        this.f7876 = z;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2170 m6759(C15274 c15274) {
-        String message = getMessage();
-        String str = C17983.f57504;
-        return new C2170(message, getCause(), this.f49319, this.f7882, this.f7878, this.f7877, this.f7879, this.f7881, c15274, this.f49320, this.f7876);
-    }
-
-    /* JADX WARN: Illegal instructions before constructor call */
-    public C2170(int i, Throwable th, int i2, String str, int i3, C7648 c7648, int i4, C15274 c15274, boolean z) {
-        String string;
-        String str2;
-        if (i == 0) {
-            string = "Source error";
-        } else if (i != 1) {
-            string = i != 3 ? "Unexpected runtime error" : "Remote error";
-        } else {
-            StringBuilder sb = new StringBuilder();
-            sb.append(str);
-            sb.append(" error, index=");
-            sb.append(i3);
-            sb.append(", format=");
-            sb.append(c7648);
-            sb.append(", format_supported=");
-            String str3 = C17983.f57504;
-            if (i4 == 0) {
-                str2 = "NO";
-            } else if (i4 == 1) {
-                str2 = "NO_UNSUPPORTED_TYPE";
-            } else if (i4 == 2) {
-                str2 = "NO_UNSUPPORTED_DRM";
-            } else if (i4 == 3) {
-                str2 = "NO_EXCEEDS_CAPABILITIES";
-            } else {
-                if (i4 != 4) {
-                    throw new IllegalStateException();
-                }
-                str2 = "YES";
-            }
-            sb.append(str2);
-            string = sb.toString();
+    /* JADX INFO: renamed from: ۙۤ, reason: not valid java name and contains not printable characters */
+    public final C25291 m7465() {
+        C25291 c25291 = this.f7150;
+        if (c25291 != null) {
+            return c25291;
         }
-        this(TextUtils.isEmpty(null) ? string : C15489.m37076(string, ": null"), th, i2, i, str, i3, c7648, i4, c15274, SystemClock.elapsedRealtime(), z);
+        C25291 c25291M40226 = C17085.m40226(this.f7149);
+        C17359.requireNonNull(c25291M40226);
+        this.f7150 = c25291M40226;
+        return c25291M40226;
+    }
+
+    @Override // l.AbstractC2082, l.C22965
+    /* JADX INFO: renamed from: ܿ᩷ */
+    public void mo2952() {
+        super.mo2952();
+        String str = mo42888().getPathSegments().get(3);
+        C25291 c25291M7465 = m7465();
+        synchronized (c25291M7465.f81683) {
+            Iterator it = c25291M7465.f81683.values().iterator();
+            while (it.hasNext()) {
+                if (str.equals(it.next())) {
+                    it.remove();
+                }
+            }
+        }
+        C5261.m15836(new RunnableC4773(3, c25291M7465), c25291M7465, 500L);
+    }
+
+    @Override // l.AbstractC2082
+    /* JADX INFO: renamed from: ۠᩷ */
+    public final void mo7166() {
+        Cursor cursorQuery = C21576.m49091().query(m7465().f81685, new String[]{"document_id", "_display_name"}, null, null, null);
+        if (cursorQuery == null) {
+            try {
+                C20815.m47617(this);
+            } catch (Throwable th) {
+                if (cursorQuery != null) {
+                    try {
+                        cursorQuery.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                }
+                throw th;
+            }
+        }
+        if (cursorQuery != null) {
+            cursorQuery.close();
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m7469(File file, Uri uri, boolean z) {
+        String strSubstring = file.getPath().substring(19);
+        boolean z2 = !z && file.getName().equals(C23053.m51954(uri));
+        C25291 c25291M7465 = m7465();
+        String strM56470 = c25291M7465.m56470(strSubstring, z2);
+        String str = uri.getPathSegments().get(3);
+        if (strM56470.equals(str)) {
+            return;
+        }
+        c25291M7465.f81683.put(C8947.m23910(new StringBuilder(), c25291M7465.f81687, strSubstring), str);
+        C5261.m15836(new RunnableC4773(3, c25291M7465), c25291M7465, 500L);
+    }
+
+    @Override // l.AbstractC2082
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2940(File file, Uri uri, boolean z) {
+        m7469(file, uri, z);
+    }
+
+    @Override // l.C22965
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo7464(Uri uri, boolean z) {
+        super.mo7464(uri, z);
+        m7469(new File(this.f6914.getPath()), uri, z);
+    }
+
+    @Override // l.AbstractC2082, l.C22965, l.AbstractC22044
+    /* JADX INFO: renamed from: ֨ */
+    public boolean mo2934() {
+        if (this.f7148) {
+            return true;
+        }
+        return super.mo2934();
+    }
+
+    @Override // l.AbstractC2082, l.C22965, l.AbstractC22044
+    /* JADX INFO: renamed from: ۛۙ */
+    public final boolean mo4281() {
+        if (this.f7148) {
+            return true;
+        }
+        return super.mo4281();
+    }
+
+    @Override // l.AbstractC2082, l.C22965, l.AbstractC22044
+    /* JADX INFO: renamed from: ۠ۙ */
+    public final long mo4285() {
+        if (this.f7148) {
+            return -1L;
+        }
+        return super.mo4285();
+    }
+
+    @Override // l.AbstractC2082, l.C22965, l.AbstractC22044
+    /* JADX INFO: renamed from: ۡۙ */
+    public final long mo4286() {
+        if (this.f7148) {
+            return 0L;
+        }
+        return super.mo4286();
+    }
+
+    /* JADX INFO: renamed from: ۫ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m7466() {
+        return this.f7148;
+    }
+
+    @Override // l.AbstractC2082, l.C22965, l.AbstractC22044
+    /* JADX INFO: renamed from: ᩺ۙ */
+    public final boolean mo4304() {
+        if (this.f7148) {
+            return false;
+        }
+        return super.mo4304();
+    }
+
+    @Override // l.AbstractC2082
+    /* JADX INFO: renamed from: ۖ᩷ */
+    public final boolean mo7163() {
+        return "com.android.mtp.documents".equals(mo42888().getAuthority());
+    }
+
+    @Override // l.AbstractC2082
+    /* JADX INFO: renamed from: ۬᩷ */
+    public boolean mo2949() throws IOException {
+        if (this.f7148) {
+            return true;
+        }
+        C25291 c25291M7465 = m7465();
+        Uri uri = c25291M7465.f81685;
+        Uri uriM51956 = C23053.m51956(uri);
+        String path = this.f6914.getPath();
+        int length = c25291M7465.m56469().length() + 1;
+        boolean zEquals = true;
+        while (length < path.length()) {
+            int iIndexOf = path.indexOf(47, length);
+            if (iIndexOf < 0) {
+                iIndexOf = path.length();
+            }
+            String strSubstring = path.substring(length, iIndexOf);
+            Cursor cursorQuery = C21576.m49091().query(C23053.m51952(uriM51956), new String[]{"document_id", "_display_name", "mime_type"}, null, null, null);
+            if (cursorQuery == null) {
+                throw new IOException("Provider directory is unavailable");
+            }
+            try {
+                C20069.m46193(cursorQuery);
+                Uri uri2 = null;
+                while (cursorQuery.moveToNext()) {
+                    String string = cursorQuery.getString(1);
+                    String string2 = cursorQuery.getString(0);
+                    if (string == null || string2 == null) {
+                        throw new IOException("Provider returned invalid child identity");
+                    }
+                    if (strSubstring.equals(string)) {
+                        Uri uriBuildDocumentUriUsingTree = DocumentsContract.buildDocumentUriUsingTree(uri, string2);
+                        if (uri2 != null && !uri2.equals(uriBuildDocumentUriUsingTree)) {
+                            throw new IOException("Provider path has ambiguous child names");
+                        }
+                        uri2 = uriBuildDocumentUriUsingTree;
+                        zEquals = "vnd.android.document/directory".equals(cursorQuery.getString(2));
+                    }
+                }
+                cursorQuery.close();
+                if (uri2 == null) {
+                    return false;
+                }
+                if (iIndexOf < path.length() && !zEquals) {
+                    throw new IOException("Provider path parent is not a directory");
+                }
+                length = iIndexOf + 1;
+                uriM51956 = uri2;
+            } catch (Throwable th) {
+                if (cursorQuery != null) {
+                    try {
+                        cursorQuery.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                }
+                throw th;
+            }
+        }
+        if (!uriM51956.equals(mo42888())) {
+            mo7464(uriM51956, zEquals);
+        }
+        return true;
     }
 }

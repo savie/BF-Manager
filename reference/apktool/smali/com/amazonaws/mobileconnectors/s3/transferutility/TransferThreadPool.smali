@@ -6,9 +6,9 @@
 # static fields
 .field public static final ۙ:Lcom/amazonaws/logging/Log;
 
-.field public static ۨ:Ljava/util/concurrent/ThreadPoolExecutor;
+.field public static ۤ:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public static ܰ:Ljava/util/concurrent/ThreadPoolExecutor;
+.field public static ᩷:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
@@ -69,7 +69,7 @@
 
     move-result-object v3
 
-    invoke-interface {v4, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v4, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     int-to-double v2, v2
 
@@ -89,7 +89,7 @@
     move-result v2
 
     .line 40
-    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ܰ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->᩷:Ljava/util/concurrent/ThreadPoolExecutor;
 
     if-nez v3, :cond_0
 
@@ -123,11 +123,11 @@
     invoke-virtual {v10, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     .line 41
-    sput-object v10, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ܰ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sput-object v10, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->᩷:Ljava/util/concurrent/ThreadPoolExecutor;
 
     .line 43
     :cond_0
-    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۨ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۤ:Ljava/util/concurrent/ThreadPoolExecutor;
 
     if-nez v3, :cond_1
 
@@ -161,7 +161,7 @@
     invoke-virtual {v10, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     .line 44
-    sput-object v10, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۨ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sput-object v10, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۤ:Ljava/util/concurrent/ThreadPoolExecutor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -175,7 +175,7 @@
     if-eqz v0, :cond_2
 
     .line 51
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۨ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ۤ:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
@@ -185,7 +185,7 @@
 
     .line 53
     :cond_2
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->ܰ:Ljava/util/concurrent/ThreadPoolExecutor;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferThreadPool;->᩷:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 

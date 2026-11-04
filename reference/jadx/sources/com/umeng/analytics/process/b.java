@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import com.umeng.analytics.pro.h;
 import java.io.File;
-import l.C15489;
+import l.C14483;
 
 /* JADX INFO: compiled from: 8BLD */
 /* JADX INFO: loaded from: classes.dex */
@@ -54,6 +54,6 @@ public class b extends SQLiteOpenHelper {
         if (!file.exists()) {
             file.mkdirs();
         }
-        return String.format(C15489.m37076(strB, a.e), str);
+        return String.format(C14483.m34972(strB, a.e), str);
     }
 }

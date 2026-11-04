@@ -1,29 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡֨ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8ML */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0084 {
-
+/* JADX INFO: renamed from: l.֡֨ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 08D7 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0084 extends AbstractC8909 {
+    @Override // l.AbstractC8909
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f994 = -9223372036854775807L;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f995 = -9223372036854775807L;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m1021() {
-        return this.f994;
+    public final double mo1150(int i) {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m1022() {
-        return this.f995;
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final double mo1151(int i, double d) {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m1018(C0084 c0084) {
-        c0084.f994 = -9223372036854775807L;
-        c0084.f995 = -9223372036854775807L;
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo1152() {
+        throw null;
     }
 }

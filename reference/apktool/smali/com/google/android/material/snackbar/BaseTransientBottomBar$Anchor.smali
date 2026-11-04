@@ -46,7 +46,7 @@
     invoke-direct {v0, p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;Landroid/view/View;)V
 
     .line 1476
-    sget p0, Ll/ۚ֫;->ۙ:I
+    sget p0, Ll/᩸۠;->ۙ:I
 
     .line 4137
     invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z

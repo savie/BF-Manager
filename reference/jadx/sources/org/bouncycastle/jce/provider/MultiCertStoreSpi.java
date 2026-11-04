@@ -16,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import org.bouncycastle.jce.MultiCertStoreParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MultiCertStoreSpi extends CertStoreSpi {
     public MultiCertStoreParameters params;
 

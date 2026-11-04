@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/Base64;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/Base64;
 
 .field public static final ᩶:Lcom/amazonaws/util/Base64Codec;
 
@@ -18,7 +18,7 @@
     new-array v0, v0, [Lcom/amazonaws/util/Base64;
 
     .line 23
-    sput-object v0, Lcom/amazonaws/util/Base64;->ܺ:[Lcom/amazonaws/util/Base64;
+    sput-object v0, Lcom/amazonaws/util/Base64;->ܰ:[Lcom/amazonaws/util/Base64;
 
     .line 26
     new-instance v0, Lcom/amazonaws/util/Base64Codec;
@@ -58,7 +58,7 @@
     .locals 1
 
     .line 23
-    sget-object v0, Lcom/amazonaws/util/Base64;->ܺ:[Lcom/amazonaws/util/Base64;
+    sget-object v0, Lcom/amazonaws/util/Base64;->ܰ:[Lcom/amazonaws/util/Base64;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/Base64;->clone()Ljava/lang/Object;
 
@@ -145,7 +145,7 @@
     return-object p0
 .end method
 
-.method public static varargs ۨ([B)Ljava/lang/String;
+.method public static varargs ۤ([B)Ljava/lang/String;
     .locals 1
 
     if-nez p0, :cond_0
@@ -178,7 +178,7 @@
     return-object p0
 .end method
 
-.method public static ܰ([B)[B
+.method public static ᩷([B)[B
     .locals 1
 
     if-eqz p0, :cond_1

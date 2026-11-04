@@ -1,152 +1,136 @@
 package l;
 
-import com.alipay.sdk.m.y.q;
-import java.io.IOException;
-import java.io.Writer;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Spliterator;
 
-/* JADX INFO: renamed from: l.ۙ֨᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7P2 */
-/* JADX INFO: loaded from: classes2.dex */
-public class C4323 {
+/* JADX INFO: renamed from: l.ۘܿ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N1QM */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4323 extends C22399 {
+    public static final long serialVersionUID = -3185226345314976296L;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final int f15517 = 31;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C14763 f15669;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Writer f15521;
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final char[] f15512 = {'\\', '\"'};
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final char[] f15519 = {'\\', '\\'};
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final char[] f15520 = {'\\', 'n'};
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final char[] f15513 = {'\\', 'r'};
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final char[] f15518 = {'\\', 't'};
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final char[] f15514 = {'\\', 'u', '2', '0', '2', '8'};
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final char[] f15516 = {'\\', 'u', '2', '0', '2', '9'};
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final char[] f15515 = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-
-    public C4323(Writer writer) {
-        this.f15521 = writer;
+    @Override // l.C20161, l.AbstractC15685, l.AbstractC6957, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void m12159(String str) throws IOException {
-        this.f15521.write(str);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4323(C14763 c14763, int i, int i2) {
+        super(c14763, i, i2);
+        this.f15669 = c14763;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public void m12151(String str) throws IOException {
-        this.f15521.write(str);
+    @Override // l.C20161, l.InterfaceC9018
+    public final int getInt(int i) {
+        m37464(i);
+        return this.f15669.f48233[i + this.f64763];
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public void m12155(String str) throws IOException {
-        this.f15521.write(34);
-        m12153(str);
-        this.f15521.write(34);
+    @Override // l.AbstractC15685, java.util.List
+    public final ListIterator listIterator(int i) {
+        return new C6561(this, i);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void mo12158() throws IOException {
-        this.f15521.write(91);
+    @Override // l.C20161, l.AbstractC15685, java.util.List
+    public final InterfaceC8273 listIterator(int i) {
+        return new C6561(this, i);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo12152() throws IOException {
-        this.f15521.write(93);
+    @Override // l.C20161, l.AbstractC15685, l.AbstractC6957, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        return new C24461(this);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public void mo12156() throws IOException {
-        this.f15521.write(44);
+    @Override // l.C20161, l.AbstractC15685, l.AbstractC6957, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC15949 spliterator() {
+        return new C24461(this);
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public void mo12160() throws IOException {
-        this.f15521.write(123);
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public void mo12154() throws IOException {
-        this.f15521.write(q.h);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public void m12157(String str) throws IOException {
-        this.f15521.write(34);
-        m12153(str);
-        this.f15521.write(34);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public void mo12150() throws IOException {
-        this.f15521.write(58);
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public void mo12149() throws IOException {
-        this.f15521.write(44);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void m12153(String str) throws IOException {
-        int length = str.length();
-        int i = 0;
-        for (int i2 = 0; i2 < length; i2++) {
-            char[] cArrM12148 = m12148(str.charAt(i2));
-            if (cArrM12148 != null) {
-                this.f15521.write(str, i, i2 - i);
-                this.f15521.write(cArrM12148);
-                i = i2 + 1;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m13820(int i, int i2, int[] iArr) {
+        C14763 c14763 = this.f15669;
+        int[] iArr2 = c14763.f48233;
+        int i3 = this.f64763;
+        if (iArr2 == iArr && i3 == i && this.f64764 == i2) {
+            return true;
+        }
+        if (i2 - i != size()) {
+            return false;
+        }
+        while (i3 < this.f64764) {
+            int i4 = i3 + 1;
+            int i5 = c14763.f48233[i3];
+            int i6 = i + 1;
+            if (i5 != iArr[i]) {
+                return false;
             }
+            i = i6;
+            i3 = i4;
         }
-        this.f15521.write(str, i, length - i);
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static char[] m12148(char c) {
-        if (c > '\\') {
-            if (c < 8232 || c > 8233) {
-                return null;
+    @Override // l.AbstractC15685, java.util.Collection, java.util.List
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof List)) {
+            return false;
+        }
+        if (obj instanceof C14763) {
+            C14763 c14763 = (C14763) obj;
+            return m13820(0, c14763.f48234, c14763.f48233);
+        }
+        if (obj instanceof C4323) {
+            C4323 c4323 = (C4323) obj;
+            return m13820(c4323.f64763, c4323.f64764, c4323.f15669.f48233);
+        }
+        return super.equals(obj);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m13819(int i, int i2, int[] iArr) {
+        int i3;
+        C14763 c14763 = this.f15669;
+        int[] iArr2 = c14763.f48233;
+        int i4 = this.f64763;
+        if (iArr2 == iArr && i4 == i && this.f64764 == i2) {
+            return 0;
+        }
+        while (true) {
+            i3 = this.f64764;
+            if (i4 >= i3 || i4 >= i2) {
+                break;
             }
-            return c == 8232 ? f15514 : f15516;
+            int iCompare = Integer.compare(c14763.f48233[i4], iArr[i]);
+            if (iCompare != 0) {
+                return iCompare;
+            }
+            i4++;
+            i++;
         }
-        if (c == '\\') {
-            return f15519;
+        if (i4 < i2) {
+            return -1;
         }
-        if (c > '\"') {
-            return null;
+        return i4 < i3 ? 1 : 0;
+    }
+
+    @Override // l.C20161, l.AbstractC15685, java.lang.Comparable
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int compareTo(List list) {
+        if (list instanceof C14763) {
+            C14763 c14763 = (C14763) list;
+            return m13819(0, c14763.f48234, c14763.f48233);
         }
-        if (c == '\"') {
-            return f15512;
+        if (list instanceof C4323) {
+            C4323 c4323 = (C4323) list;
+            return m13819(c4323.f64763, c4323.f64764, c4323.f15669.f48233);
         }
-        if (c > 31) {
-            return null;
-        }
-        if (c == '\n') {
-            return f15520;
-        }
-        if (c == '\r') {
-            return f15513;
-        }
-        if (c == '\t') {
-            return f15518;
-        }
-        char[] cArr = f15515;
-        return new char[]{'\\', 'u', '0', '0', cArr[(c >> 4) & 15], cArr[c & 15]};
+        return super.compareTo(list);
     }
 }

@@ -1,24 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤܽ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: G1V3 */
-/* JADX INFO: loaded from: classes3.dex */
-public abstract class AbstractC10425 {
-    /* JADX INFO: renamed from: ۙ */
-    public abstract String mo15749();
+/* JADX INFO: renamed from: l.ۢ᩹ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class AbstractC10425 extends AbstractC3123 {
+    @Override // l.AbstractC15470
+    public final boolean p0() {
+        return true;
+    }
 
-    /* JADX INFO: renamed from: ۨ */
-    public abstract void mo15750();
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final InterfaceC16194 sequential() {
+        this.h.r = false;
+        return this;
+    }
 
-    /* JADX INFO: renamed from: ܰ */
-    public abstract void mo15751();
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final InterfaceC16194 parallel() {
+        this.h.r = true;
+        return this;
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static AbstractC10425 m26322() {
-        try {
-            return (AbstractC10425) C5715.class.newInstance();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    @Override // l.InterfaceC19924
+    public final InterfaceC19924 unordered() {
+        return !EnumC21614.ORDERED.p(this.m) ? this : new C11939(this, EnumC21614.r, 2);
+    }
+
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final /* bridge */ /* synthetic */ InterfaceC8409 spliterator() {
+        return spliterator();
     }
 }

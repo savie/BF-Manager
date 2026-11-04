@@ -1,41 +1,85 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ۠ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V7BB */
+import java.util.Arrays;
+
+/* JADX INFO: renamed from: l.ۘ᩻ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N6ZQ */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4517 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f16076;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f16077;
+    public final long[][] f16099;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f16078;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f16079;
-
-    public C4517(long j, long j2, boolean z, boolean z2) {
-        this.f16079 = z;
-        this.f16076 = z2;
-        this.f16078 = j;
-        this.f16077 = j2;
+    public C4517(int i) {
+        int i2 = (int) ((((long) i) + 63) >>> 6);
+        int i3 = 1;
+        int i4 = i2;
+        while (i4 > 1) {
+            i4 = (int) ((((long) i4) + 63) >>> 6);
+            i3++;
+        }
+        this.f16099 = new long[i3][];
+        for (int i5 = 0; i5 < i3; i5++) {
+            this.f16099[i5] = new long[i2];
+            i2 = (int) ((((long) i2) + 63) >>> 6);
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C4517 m12620(long j) {
-        return new C4517(0L, j <= 0 ? -1L : j - 1, false, true);
+    public final void m14242() {
+        for (long[] jArr : this.f16099) {
+            Arrays.fill(jArr, 0L);
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C4517 m12621(long j, long j2) {
-        return new C4517(j, j2, true, true);
+    public final void m14243(int i) {
+        long[][] jArr = this.f16099;
+        int length = jArr.length;
+        int i2 = 0;
+        while (i2 < length) {
+            long[] jArr2 = jArr[i2];
+            int i3 = i >>> 6;
+            long j = jArr2[i3];
+            jArr2[i3] = (1 << (i & 63)) | j;
+            if (j != 0) {
+                return;
+            }
+            i2++;
+            i = i3;
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C4517 m12619() {
-        return new C4517(0L, 0L, false, false);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m14245(int i) {
+        long[][] jArr = this.f16099;
+        int length = jArr.length;
+        int i2 = 0;
+        while (i2 < length) {
+            long[] jArr2 = jArr[i2];
+            int i3 = i >>> 6;
+            long j = (~(1 << (i & 63))) & jArr2[i3];
+            jArr2[i3] = j;
+            if (j != 0) {
+                return;
+            }
+            i2++;
+            i = i3;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m14244() {
+        long[][] jArr = this.f16099;
+        int length = jArr.length;
+        long j = jArr[length - 1][0];
+        if (j == 0) {
+            return -1;
+        }
+        int iNumberOfLeadingZeros = 63 - Long.numberOfLeadingZeros(j);
+        for (int i = length - 2; i >= 0; i--) {
+            iNumberOfLeadingZeros = ((iNumberOfLeadingZeros << 6) + 63) - Long.numberOfLeadingZeros(jArr[i][iNumberOfLeadingZeros]);
+        }
+        return iNumberOfLeadingZeros;
     }
 }

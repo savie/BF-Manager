@@ -1,80 +1,97 @@
 .class public final Ll/ۛۡ᩹;
-.super Ll/ۙ۬᩹;
-.source "11Z9"
+.super Ll/᩵ۡ᩹;
+.source "H1MW"
+
+# interfaces
+.implements Ll/ۛ֡᩹;
+.implements Ll/ᩴۚۗ;
 
 
-# static fields
-.field public static final ۫:Ll/ۛۡ᩹;
+# instance fields
+.field public final synthetic ۢ:Ll/ۘۡ᩹;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ll/ۘۡ᩹;)V
+    .locals 0
 
-    .line 8
-    new-instance v0, Ll/ۛۡ᩹;
+    .line 1232
+    iput-object p1, p0, Ll/ۛۡ᩹;->ۢ:Ll/ۘۡ᩹;
 
-    const v1, 0x7f1205f9
-
-    const v2, 0x7f080231
-
-    .line 15
-    invoke-direct {v0, v1, v2}, Ll/ۙ۬᩹;-><init>(II)V
-
-    .line 8
-    sput-object v0, Ll/ۛۡ᩹;->۫:Ll/ۛۡ᩹;
+    .line 1233
+    invoke-direct {p0, p1}, Ll/᩵ۡ᩹;-><init>(Ll/ۘۡ᩹;)V
 
     return-void
 .end method
 
-.method public static ֨()Ll/ۛۡ᩹;
+
+# virtual methods
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۨ֡᩹;->ۙ(Ll/ۛ֡᩹;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public final next()Ljava/lang/Integer;
     .locals 1
 
-    .line 11
-    sget-object v0, Ll/ۛۡ᩹;->۫:Ll/ۛۡ᩹;
+    .line 46
+    invoke-virtual {p0}, Ll/ۛۡ᩹;->nextInt()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-
-# virtual methods
-.method public final ۖ(Ll/᩸ۜ᩹;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
+.method public final bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 20
-    sget-object v0, Ll/ۛۡ᩹;->۫:Ll/ۛۡ᩹;
+    .line 28
+    invoke-virtual {p0}, Ll/ۛۡ᩹;->next()Ljava/lang/Integer;
 
-    if-eq p0, v0, :cond_0
+    move-result-object v0
 
-    .line 23
-    invoke-super {p0, p1}, Ll/ۙ۬᩹;->ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
-
-    return-object p0
-
-    .line 21
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public final ۨ(Ll/᩸ۜ᩹;)V
-    .locals 0
+.method public final nextInt()I
+    .locals 2
 
-    .line 33
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 1246
+    iget-object v0, p0, Ll/ۛۡ᩹;->ۢ:Ll/ۘۡ᩹;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iget-object v0, v0, Ll/ۘۡ᩹;->۠:[I
 
-    throw p1
+    invoke-virtual {p0}, Ll/᩵ۡ᩹;->ۙ()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    return v0
+.end method
+
+.method public final ۙ(ILjava/lang/Object;)V
+    .locals 1
+
+    .line 1231
+    check-cast p2, Ljava/util/function/IntConsumer;
+
+    .line 1241
+    iget-object v0, p0, Ll/ۛۡ᩹;->ۢ:Ll/ۘۡ᩹;
+
+    iget-object v0, v0, Ll/ۘۡ᩹;->۠:[I
+
+    aget p1, v0, p1
+
+    invoke-interface {p2, p1}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    return-void
 .end method

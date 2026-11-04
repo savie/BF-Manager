@@ -1,150 +1,134 @@
-.class public final synthetic Ll/۫ۨۨ;
-.super Ljava/lang/Object;
-.source "45G7"
-
-# interfaces
-.implements Ll/᩷֨ۨ;
-.implements Ll/᩷᩸;
-.implements Ll/᩸᩻᩺;
-.implements Ll/ۜ᩸۬;
-
-
-# instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.class public final Ll/۫ۨۨ;
+.super Ll/ܳۨۨ;
+.source "K2S3"
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    .line 0
-    iput p1, p0, Ll/۫ۨۨ;->ܺ:I
+    .line 105
+    invoke-direct {p0}, Ll/ܳۨۨ;-><init>()V
 
-    iput-object p2, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
+    move-object v0, p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 109
+    monitor-enter v0
+
+    const/16 v1, 0x400
+
+    .line 110
+    :try_start_0
+    invoke-virtual {p0, v1}, Ll/ܳۨۨ;->ۙ(I)V
+
+    .line 111
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public final declared-synchronized write(I)V
     .locals 1
 
-    .line 0
-    iget v0, p0, Ll/۫ۨۨ;->ܺ:I
+    move-object v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    iget-object v0, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
+    .line 155
+    :try_start_0
+    invoke-virtual {p0, p1}, Ll/ܳۨۨ;->᩷(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v0, Ll/ۤۡۘ;
-
-    invoke-static {v0, p1}, Ll/ۤۡۘ;->ۙ(Ll/ۤۡۘ;Landroid/view/MenuItem;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/۠ܺ᩹;
-
-    invoke-static {v0, p1}, Ll/۠ܺ᩹;->ۙ(Ll/۠ܺ᩹;Landroid/view/MenuItem;)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic ۙ()V
-    .locals 0
+    .line 156
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public ۙ(I)V
+.method public final write([BII)V
+    .locals 1
+
+    .line 139
+    invoke-static {p2, p3, p1}, Ll/ۙ᩵ۨ;->ۙ(II[B)V
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    :cond_0
+    move-object v0, p0
+
+    .line 143
+    monitor-enter v0
+
+    .line 144
+    :try_start_0
+    invoke-virtual {p0, p2, p3, p1}, Ll/ܳۨۨ;->ᩴ(II[B)V
+
+    .line 145
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۙ()[B
     .locals 2
 
-    .line 2
-    iget v0, p0, Ll/۫ۨۨ;->ܺ:I
+    move-object v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    .line 1
+    monitor-enter v0
 
-    .line 7
-    iget-object v0, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
+    .line 129
+    :try_start_0
+    invoke-virtual {p0}, Ll/ܳۨۨ;->᩷()[B
 
-    .line 9
-    check-cast v0, Ll/᩶ܽ᩺;
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    int-to-float p1, p1
+    monitor-exit v0
 
-    const v1, 0x3f19999a    # 0.6f
+    return-object v1
 
-    mul-float p1, p1, v1
+    :catchall_0
+    move-exception v1
 
-    float-to-int p1, p1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 124
-    invoke-interface {v0, p1}, Ll/᩶ܽ᩺;->ۙ(I)V
-
-    return-void
-
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/᩵ܺ֨;
-
-    invoke-virtual {v0, p1}, Ll/ᩳ۟ۜ;->ۜ(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public ۙ(Ll/᩷᩸۬;Ljava/io/BufferedOutputStream;)V
-    .locals 0
-
-    .line 2
-    iget-object p1, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
-
-    .line 4
-    check-cast p1, [B
-
-    .line 118
-    invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
-
-    return-void
-.end method
-
-.method public ۙ(Ljava/lang/String;)Z
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Ll/۫ۨۨ;->᩶:Ljava/lang/Object;
-
-    .line 4
-    check-cast v0, Ljava/lang/String;
-
-    .line 379
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    throw v1
 .end method

@@ -1,14 +1,17 @@
 package l;
 
-import android.view.View;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.᩷֨ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4X1 */
-/* JADX INFO: loaded from: classes4.dex */
-public abstract class AbstractC20537 {
+/* JADX INFO: renamed from: l.᩵ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1A5 */
+/* JADX INFO: loaded from: classes5.dex */
+public abstract class AbstractC20537 extends AbstractC0641 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f65771;
+
+    @Override // l.AbstractC0641
     /* JADX INFO: renamed from: ۙ */
-    public abstract View mo12110(int i);
-
-    /* JADX INFO: renamed from: ܰ */
-    public abstract boolean mo12111();
+    public final void mo2828(HashSet hashSet) {
+    }
 }

@@ -1,51 +1,82 @@
 package l;
 
-import android.widget.ImageView;
-
-/* JADX INFO: renamed from: l.᩹ۡ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: C12B */
+/* JADX INFO: renamed from: l.᩷ܽۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LARQ */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22191 implements InterfaceC3263, InterfaceC21574 {
+public final class C22191 implements InterfaceC5037 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f72600;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C22191 f71497;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f72601;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final String[] f71498;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f72602;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String[] f71499;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f72603;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String[] f71500;
 
-    public /* synthetic */ C22191(Object obj, Object obj2, Object obj3, Object obj4) {
-        this.f72601 = obj;
-        this.f72603 = obj2;
-        this.f72600 = obj3;
-        this.f72602 = obj4;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String[] f71501;
+
+    static {
+        String[] strArr = new String[0];
+        f71498 = strArr;
+        f71497 = new C22191(strArr, strArr, strArr);
     }
 
-    @Override // l.InterfaceC3263
-    /* JADX INFO: renamed from: ۙ */
-    public void mo3187(C10840 c10840) {
-        C15136.m36302((C15136) this.f72601, (C10840) this.f72603, (C21422) this.f72600, (C11545) this.f72602, c10840);
+    public C22191(String[] strArr, String[] strArr2, String[] strArr3) {
+        String[] strArr4 = f71498;
+        strArr = strArr == null ? strArr4 : strArr;
+        this.f71501 = strArr;
+        strArr2 = strArr2 == null ? strArr4 : strArr2;
+        this.f71500 = strArr2;
+        strArr3 = strArr3 == null ? strArr4 : strArr3;
+        this.f71499 = strArr3;
+        Math.max(strArr3.length, Math.max(strArr.length, strArr2.length));
     }
 
-    @Override // l.InterfaceC21574
-    /* JADX INFO: renamed from: ܰ */
-    public void mo14999(int i) {
-        C14745 c14745 = (C14745) this.f72601;
-        ImageView imageView = (ImageView) this.f72603;
-        InterfaceC21926 interfaceC21926 = (InterfaceC21926) this.f72600;
-        C16148 c16148 = (C16148) this.f72602;
-        EnumC23917 enumC23917 = EnumC23917.IMMUTABLE;
-        c14745.f48224 = i;
-        c14745.f48225 = enumC23917;
-        imageView.setImageBitmap(interfaceC21926.mo40846(c14745));
-        if (c16148.mo38231()) {
-            c16148.m38232();
-            ((DialogInterfaceC19356) c16148.mo7338()).m44372(false);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m50200(int i) {
+        if (i < 0) {
+            return null;
         }
+        String[] strArr = this.f71501;
+        if (i < strArr.length) {
+            return strArr[i];
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m50199(int i) {
+        if (i >= 0) {
+            String[] strArr = this.f71500;
+            if (i < strArr.length) {
+                return strArr[i];
+            }
+        }
+        if (i == -1) {
+            return "EOF";
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m50198(int i) {
+        String str;
+        if (i >= 0) {
+            String[] strArr = this.f71499;
+            if (i < strArr.length && (str = strArr[i]) != null) {
+                return str;
+            }
+        }
+        String strM50200 = m50200(i);
+        if (strM50200 != null) {
+            return strM50200;
+        }
+        String strM50199 = m50199(i);
+        return strM50199 != null ? strM50199 : Integer.toString(i);
     }
 }

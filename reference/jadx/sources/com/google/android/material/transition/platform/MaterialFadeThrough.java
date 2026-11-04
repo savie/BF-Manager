@@ -4,13 +4,13 @@ import android.animation.Animator;
 import android.transition.TransitionValues;
 import android.view.View;
 import android.view.ViewGroup;
-import l.C2387;
+import l.C11642;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class MaterialFadeThrough extends MaterialVisibility {
     public static final float DEFAULT_START_SCALE = 0.92f;
-    public static final int DEFAULT_THEMED_DURATION_ATTR = C2387.f9163;
-    public static final int DEFAULT_THEMED_EASING_ATTR = C2387.f8957;
+    public static final int DEFAULT_THEMED_DURATION_ATTR = C11642.f37276;
+    public static final int DEFAULT_THEMED_EASING_ATTR = C11642.f36560;
 
     @Override // com.google.android.material.transition.platform.MaterialVisibility
     public /* bridge */ /* synthetic */ void addAdditionalAnimatorProvider(VisibilityAnimatorProvider visibilityAnimatorProvider) {

@@ -1,367 +1,446 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X1G7 */
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ᩴ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 06VH */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20149 implements InterfaceC19429, InterfaceC15690 {
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ۙ */
-    public void mo7690(InterfaceC6599 interfaceC6599) {
-    }
+public final class C20149 {
 
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ᩹ */
-    public void mo7696() {
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final boolean f64728;
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final C5979 f64729;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m45563(String str) {
-        System.out.println(str);
-    }
+    public final C22387 f64730;
 
-    /* JADX WARN: Code duplicated, block: B:106:0x0113 A[PHI: r3
-      0x0113: PHI (r3v4 int) = (r3v3 int), (r3v3 int), (r3v7 int) binds: [B:105:0x0111, B:102:0x010a, B:100:0x0103] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:109:0x0118 A[RETURN] */
-    /* JADX WARN: Code duplicated, block: B:93:0x00ed  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m45559(int i, CharSequence charSequence) {
-        int iCharCount;
-        boolean z;
-        boolean z2;
-        int i2 = i;
-        if (i2 <= 1) {
-            return 0;
-        }
-        int i3 = -1;
-        boolean z3 = false;
-        while (true) {
-            int iCodePointBefore = Character.codePointBefore(charSequence, i2);
-            iCharCount = i2 - Character.charCount(iCodePointBefore);
-            if (iCodePointBefore <= 127) {
-                if (z3) {
-                    return i3;
-                }
-            } else if (19968 > iCodePointBefore || iCodePointBefore > 40869) {
-                if (iCodePointBefore == 65533) {
-                    if (z3) {
-                        return i3;
-                    }
-                } else if (!C9739.m24695(iCodePointBefore) || iCodePointBefore == 65039) {
-                    if (iCodePointBefore != 8205) {
-                        if (iCodePointBefore == 8419 && iCharCount >= 1) {
-                            int i4 = iCharCount - 1;
-                            char cCharAt = charSequence.charAt(i4);
-                            if (cCharAt == 65039 && iCharCount >= 2) {
-                                int i5 = iCharCount - 2;
-                                char cCharAt2 = charSequence.charAt(i5);
-                                int i6 = C23850.f77103;
-                                if (('0' <= cCharAt2 && cCharAt2 <= '9') || cCharAt2 == '#' || cCharAt2 == '*') {
-                                    if (!z3) {
-                                        return i5;
-                                    }
-                                }
-                            } else {
-                                int i7 = C23850.f77103;
-                                if (('0' <= cCharAt && cCharAt <= '9') || cCharAt == '#' || cCharAt == '*') {
-                                    if (!z3) {
-                                        return i4;
-                                    }
-                                }
-                            }
-                            return i3;
-                        }
-                        if (iCodePointBefore != 65039) {
-                            z = false;
-                        } else {
-                            if (iCharCount > 0) {
-                                iCodePointBefore = Character.codePointBefore(charSequence, iCharCount);
-                                int i8 = C23850.f77103;
-                                if ((48 <= iCodePointBefore && iCodePointBefore <= 57) || iCodePointBefore == 35 || iCodePointBefore == 42 || C23850.m52576(iCodePointBefore)) {
-                                    iCharCount -= Character.charCount(iCodePointBefore);
-                                    z = true;
-                                } else if (z3) {
-                                }
-                                return i3;
-                            }
-                            if (z3) {
-                                return i3;
-                            }
-                        }
-                        if (iCharCount >= 2) {
-                            if (127462 <= iCodePointBefore && iCodePointBefore <= 127487) {
-                                int iCodePointBefore2 = Character.codePointBefore(charSequence, iCharCount);
-                                if (127462 <= iCodePointBefore2 && iCodePointBefore2 <= 127487) {
-                                    iCharCount -= 2;
-                                }
-                            } else if (iCodePointBefore == 917631) {
-                                int i9 = iCharCount;
-                                while (true) {
-                                    int iCodePointBefore3 = Character.codePointBefore(charSequence, i9);
-                                    if (917536 > iCodePointBefore3 || iCodePointBefore3 > 917630) {
-                                        if (iCodePointBefore3 == 127988) {
-                                            i9 -= 2;
-                                            z2 = true;
-                                        }
-                                        if (z2) {
-                                            iCharCount = i9;
-                                        }
-                                    } else {
-                                        i9 -= 2;
-                                        if (i9 < 2) {
-                                        }
-                                    }
-                                    z2 = false;
-                                    if (z2) {
-                                        iCharCount = i9;
-                                    }
-                                }
-                            } else if (127995 <= iCodePointBefore && iCodePointBefore <= 127999) {
-                                if (C23850.m52576(Character.codePointBefore(charSequence, iCharCount))) {
-                                    iCharCount -= 2;
-                                    z = true;
-                                }
-                            } else if (C23850.m52576(iCodePointBefore)) {
-                                z = true;
-                            }
-                        } else if (C23850.m52576(iCodePointBefore)) {
-                            z = true;
-                        }
-                        if (z) {
-                            if (iCharCount >= 3 && charSequence.charAt(iCharCount - 1) == 8205) {
-                                z3 = true;
-                                int i10 = iCharCount;
-                                i2 = iCharCount - 1;
-                                i3 = i10;
-                            }
-                        } else if (z3) {
-                            return i3;
-                        }
-                        return iCharCount;
-                    }
-                    if (z3) {
-                        return i3;
-                    }
-                } else if (z3) {
-                    return i3;
-                }
-            } else if (z3) {
-                return i3;
-            }
-        }
-        return iCharCount;
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final boolean f64731;
 
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ۙ */
-    public InterfaceC8011 mo7684(int i, int i2) {
-        return new C7928();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f64732;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m45564(InterfaceC23218 interfaceC23218, AbstractC14730 abstractC14730) {
-        int i = 0;
-        AbstractC14730 abstractC14730M35261 = abstractC14730;
-        while (abstractC14730M35261 != null) {
-            AbstractC14730 abstractC14730M35270 = abstractC14730M35261.m35270();
-            int iMo2831 = abstractC14730M35270 != null ? abstractC14730M35270.mo2831() : 0;
-            AbstractC14730 abstractC14730M35273 = abstractC14730M35261.m35273();
-            interfaceC23218.mo20359(abstractC14730M35261, i);
-            if (abstractC14730M35270 != null && !abstractC14730M35261.m35266()) {
-                if (iMo2831 == abstractC14730M35270.mo2831()) {
-                    abstractC14730M35261 = abstractC14730M35270.m35261(abstractC14730M35261.m35267());
-                } else if (abstractC14730M35273 == null) {
-                    i--;
-                    abstractC14730M35261 = abstractC14730M35270;
-                } else {
-                    abstractC14730M35261 = abstractC14730M35273;
-                }
-            }
-            if (abstractC14730M35261.mo2831() > 0) {
-                abstractC14730M35261 = abstractC14730M35261.m35261(0);
-                i++;
-            } else {
-                while (abstractC14730M35261.m35273() == null && i > 0) {
-                    interfaceC23218.mo20358(abstractC14730M35261, i);
-                    abstractC14730M35261 = abstractC14730M35261.m35270();
-                    i--;
-                }
-                interfaceC23218.mo20358(abstractC14730M35261, i);
-                if (abstractC14730M35261 == abstractC14730) {
-                    return;
-                } else {
-                    abstractC14730M35261 = abstractC14730M35261.m35273();
-                }
-            }
-        }
-    }
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final int f64733;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static IndexOutOfBoundsException m45565(int i, int i2) {
-        return new IndexOutOfBoundsException(C2271.m6967("index=", i, i2, ", length="));
-    }
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final boolean f64734;
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AbstractC21680 m45562(InterfaceC15456 interfaceC15456, InterfaceC14771 interfaceC14771) {
-        C13465.m32966(interfaceC15456, "<this>");
-        C13465.m32966(interfaceC14771, "completion");
-        if (interfaceC15456 instanceof AbstractC21680) {
-            throw new UnsupportedOperationException("create(Continuation) has not been overridden");
-        }
-        InterfaceC22386 context = interfaceC14771.getContext();
-        return context == C1218.f5350 ? new C4040(interfaceC15456, interfaceC14771) : new C6863(interfaceC14771, context, interfaceC15456);
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f64735;
 
-    /* JADX WARN: Code duplicated, block: B:33:0x004b A[DONT_INVERT, EDGE_INSN: B:33:0x004b->B:105:0x0102 BREAK  A[LOOP:0: B:6:0x0007->B:109:0x010b]] */
-    /* JADX WARN: Code duplicated, block: B:35:0x004f  */
-    /* JADX WARN: Code duplicated, block: B:89:0x00d0  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m45558(int i, int i2, CharSequence charSequence) {
-        int i3;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C8348 f64736;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final C23133 f64737;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final Object[] f64738;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final int f64739;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int[] f64740;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final C21028 f64741;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C14314 f64742;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C18044 f64743;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int f64744;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final boolean f64745;
+
+    /* JADX WARN: Code duplicated, block: B:158:0x021c  */
+    /* JADX WARN: Code duplicated, block: B:164:0x0235 A[EDGE_INSN: B:164:0x0235->B:165:0x0236 BREAK  A[LOOP:2: B:59:0x00ed->B:159:0x021e]] */
+    /* JADX WARN: Code duplicated, block: B:167:0x023a  */
+    /* JADX WARN: Code duplicated, block: B:168:0x023c  */
+    /* JADX WARN: Code duplicated, block: B:170:0x0240  */
+    /* JADX WARN: Code duplicated, block: B:171:0x0242  */
+    /* JADX WARN: Code duplicated, block: B:173:0x0246  */
+    /* JADX WARN: Code duplicated, block: B:174:0x0248  */
+    /* JADX WARN: Code duplicated, block: B:176:0x024c  */
+    /* JADX WARN: Code duplicated, block: B:177:0x024e A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:178:0x0250  */
+    /* JADX WARN: Code duplicated, block: B:179:0x0252  */
+    /* JADX WARN: Code duplicated, block: B:182:0x0257 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:184:0x025a  */
+    /* JADX WARN: Code duplicated, block: B:185:0x025c  */
+    /* JADX WARN: Code duplicated, block: B:187:0x0260  */
+    /* JADX WARN: Code duplicated, block: B:190:0x0268  */
+    /* JADX WARN: Code duplicated, block: B:192:0x026d  */
+    /* JADX WARN: Code duplicated, block: B:221:0x02ac  */
+    /* JADX WARN: Code duplicated, block: B:222:0x02ae  */
+    /* JADX WARN: Code duplicated, block: B:229:0x02ba  */
+    /* JADX WARN: Code duplicated, block: B:246:0x0235 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:274:0x02a8 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:275:0x02a6 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:48:0x00c7  */
+    /* JADX WARN: Code duplicated, block: B:49:0x00d0  */
+    /* JADX WARN: Failed to find 'out' block for switch in B:210:0x0291. Please report as an issue. */
+    public C20149(int[] iArr, Object[] objArr, int i, int i2, int i3, boolean z, boolean z2, C21028 c21028, boolean z3, C5979 c5979, C22387 c22387, C0407 c0407, C0407 c0408) {
+        boolean z4;
+        C18044 c18044;
+        byte b;
         int i4;
-        boolean zM52576;
-        int iCodePointAt;
-        boolean z;
-        if (i >= i2 - 1) {
-            return i2;
-        }
-        int i5 = -1;
-        boolean z2 = false;
+        int i5;
+        int i6;
+        boolean z5;
+        int i7;
+        boolean z6;
+        boolean z7;
+        boolean z8;
+        boolean zMo1303;
+        this.f64740 = iArr;
+        this.f64738 = objArr;
+        this.f64735 = i;
+        this.f64744 = i2;
+        this.f64739 = i3;
+        this.f64731 = z;
+        this.f64728 = z2;
+        this.f64741 = c21028;
+        this.f64732 = z3;
+        this.f64729 = c5979;
+        this.f64730 = c22387;
+        this.f64736 = z3 ? null : C8348.m22459(iArr, objArr, i);
+        this.f64742 = iArr[i] == 17 ? (C14314) objArr[iArr[i + 2]] : null;
+        int i8 = 0;
+        int i9 = i;
         while (true) {
-            char cCharAt = charSequence.charAt(i);
-            if (cCharAt > 127) {
-                if (19968 <= cCharAt && cCharAt <= 40869) {
-                    if (z2) {
-                        break;
-                    }
-                    return i + 1;
-                }
-                if (cCharAt == 65533) {
-                    if (z2) {
-                        break;
-                    }
-                    return i + 1;
-                }
-                if (C9739.m24695(cCharAt)) {
-                    if (z2) {
-                        break;
-                    }
-                    return i + 1;
-                }
-                if (cCharAt == 8205) {
-                    if (z2) {
-                        break;
-                    }
-                    return i + 1;
-                }
-                int iCodePointAt2 = Character.codePointAt(charSequence, i);
-                int iCharCount = Character.charCount(iCodePointAt2) + i;
-                int i6 = i2 - iCharCount;
-                if (i6 >= 2) {
-                    if (127462 <= iCodePointAt2 && iCodePointAt2 <= 127487) {
-                        int iCodePointAt3 = Character.codePointAt(charSequence, iCharCount);
-                        if (127462 <= iCodePointAt3 && iCodePointAt3 <= 127487) {
-                            iCharCount += 2;
-                            i6 -= 2;
-                        }
-                    } else if (iCodePointAt2 == 127988) {
-                        int i7 = i6;
-                        int i8 = iCharCount;
-                        while (true) {
-                            int iCodePointAt4 = Character.codePointAt(charSequence, i8);
-                            if (917536 > iCodePointAt4 || iCodePointAt4 > 917630) {
-                                if (iCodePointAt4 == 917631) {
-                                    i7 -= 2;
-                                    i8 += 2;
-                                    z = true;
-                                }
-                                if (z) {
-                                    iCharCount = i8;
-                                    i6 = i7;
-                                }
-                            } else {
-                                i7 -= 2;
-                                i8 += 2;
-                                if (i7 < 2) {
+            int i10 = 4;
+            int i11 = 3;
+            int i12 = 1;
+            if (i8 < iArr.length / 8) {
+                int i13 = iArr[i9];
+                if (i13 != 20) {
+                    if (i13 == 1 || i13 == 3 || (i13 == 16 && iArr[i9 + 2] != 0)) {
+                        i9 = iArr[i9 + 1];
+                        i8++;
+                    } else if (i13 == 4) {
+                        int i14 = iArr[i9 + 1];
+                        if (iArr[i14] == 20) {
+                            C2250 c2250 = (C2250) objArr[iArr[i14 + 2]];
+                            if (c2250.f7365 != 0) {
+                                InterfaceC2885 interfaceC2885 = (InterfaceC2885) objArr[iArr[i9 + 2]];
+                                int iM15728 = C5233.m15728(interfaceC2885);
+                                int i15 = 0;
+                                while (true) {
+                                    if (i15 < iM15728) {
+                                        if (!interfaceC2885.mo1303(i15) || (!c2250.f7362.mo1303(i15) && i15 != c2250.f7360 && (c2250.f7363 || !Character.isSurrogate((char) i15)))) {
+                                            i15++;
+                                        }
+                                    }
                                 }
                             }
-                            z = false;
-                            if (z) {
-                                iCharCount = i8;
-                                i6 = i7;
-                            }
-                        }
-                    } else {
-                        zM52576 = C23850.m52576(iCodePointAt2);
-                        if (zM52576 && 127995 <= (iCodePointAt = Character.codePointAt(charSequence, iCharCount)) && iCodePointAt <= 127999) {
-                            iCharCount += 2;
-                            i6 -= 2;
                         }
                     }
-                    zM52576 = false;
+                }
+                z4 = true;
+                this.f64734 = z4;
+                if (iArr[i] == 21) {
+                    c18044 = (C18044) objArr[iArr[i + 2]];
                 } else {
-                    zM52576 = C23850.m52576(iCodePointAt2);
+                    c18044 = null;
                 }
-                if (i6 >= 1 && charSequence.charAt(iCharCount) == 65039) {
-                    iCharCount++;
-                    i6--;
-                    zM52576 = true;
-                }
-                if (!zM52576) {
-                    if (z2) {
-                        break;
-                    }
-                } else if (i6 >= 3 && charSequence.charAt(iCharCount) == 8205) {
-                    i = iCharCount + 1;
-                    z2 = true;
-                    i5 = iCharCount;
-                }
-                return iCharCount;
-            }
-            int i9 = C23850.f77103;
-            if ((('0' <= cCharAt && cCharAt <= '9') || cCharAt == '#' || cCharAt == '*') && (i3 = i + 1) < i2) {
-                char cCharAt2 = charSequence.charAt(i3);
-                if (cCharAt2 != 65039 || (i4 = i + 2) >= i2 || charSequence.charAt(i4) != 8419) {
-                    if (cCharAt2 != 8419) {
-                        if (!z2) {
-                            break;
-                        }
-                        return i + 1;
-                    }
-                    if (z2) {
-                        break;
-                    }
-                    return i + 2;
-                }
-                if (z2) {
+                this.f64743 = c18044;
+                int i16 = 11;
+                if (!z3 || this.f64742 != null || this.f64736 != null || z4 || c18044 != null) {
+                    b = -1;
                     break;
                 }
-                return i + 3;
+                ArrayList arrayList = new ArrayList();
+                int i17 = 0;
+                boolean z9 = false;
+                b = 0;
+                int i18 = i;
+                while (true) {
+                    if (i17 < iArr.length / 8) {
+                        int i19 = iArr[i18];
+                        if (i19 == 0) {
+                            if (!z9 || !arrayList.isEmpty()) {
+                                break;
+                            } else {
+                                break;
+                            }
+                        }
+                        if (i19 != i12 && i19 != i11) {
+                            int i20 = 7;
+                            if (i19 != i10) {
+                                if (i19 == 7) {
+                                    arrayList.add(Integer.valueOf(iArr[i18 + 2]));
+                                } else if (i19 != 8) {
+                                    if (i19 != i16) {
+                                        if (i19 != 16) {
+                                            if (i19 != 28 && i19 != 29) {
+                                            }
+                                        } else if (iArr[i18 + 2] == 0) {
+                                        }
+                                    }
+                                } else if (arrayList.isEmpty() || ((Integer) C18011.m41990(arrayList, 1)).intValue() != iArr[i18 + 2]) {
+                                }
+                                b = 1;
+                            } else {
+                                InterfaceC2885 interfaceC2886 = (InterfaceC2885) objArr[iArr[i18 + 2]];
+                                int i21 = iArr[i18 + 1];
+                                int i22 = 0;
+                                while (true) {
+                                    if (i22 < iArr.length / 8) {
+                                        int i23 = iArr[i21];
+                                        if (i23 == i20 || i23 == 8 || i23 == 11) {
+                                            i21 = iArr[i21 + 1];
+                                        } else {
+                                            if (i23 != 0) {
+                                                if (i23 == 1 || (i23 == 4 && iArr[i21 + 3] > 0)) {
+                                                    InterfaceC2885 interfaceC2887 = (InterfaceC2885) objArr[iArr[i21 + 2]];
+                                                    C0407 c0409 = C5233.f18438;
+                                                    int iM33756 = C13830.m33756(interfaceC2887);
+                                                    if (iM33756 >= 0) {
+                                                        zMo1303 = interfaceC2886.mo1303(iM33756);
+                                                        z8 = !zMo1303;
+                                                        if (z8) {
+                                                            z9 = true;
+                                                        }
+                                                    } else {
+                                                        int iMin = Math.min(C5233.m15728(interfaceC2886), C5233.m15728(interfaceC2887));
+                                                        int i24 = 0;
+                                                        while (true) {
+                                                            if (i24 < iMin) {
+                                                                if (interfaceC2886.mo1303(i24) && interfaceC2887.mo1303(i24)) {
+                                                                    z8 = false;
+                                                                    if (z8) {
+                                                                        z9 = true;
+                                                                    }
+                                                                } else {
+                                                                    i24++;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                } else {
+                                                    if (i23 == 3 || i23 == 28 || i23 == 29) {
+                                                        int[] iArr2 = (int[]) objArr[iArr[i21 + 2]];
+                                                        if (iArr2.length == 0) {
+                                                            i21 = iArr[i21 + 1];
+                                                        } else {
+                                                            int i25 = iArr2[0];
+                                                            if (i23 == 3) {
+                                                                zMo1303 = interfaceC2886.mo1303(i25);
+                                                                z8 = !zMo1303;
+                                                                if (z8) {
+                                                                    z9 = true;
+                                                                }
+                                                            } else {
+                                                                if (i23 == 28) {
+                                                                    int i26 = ((i25 + (-97)) | (122 - i25)) >= 0 ? i25 - 32 : i25;
+                                                                    if (interfaceC2886.mo1303(i25) || (i26 != i25 && interfaceC2886.mo1303(i26))) {
+                                                                    }
+                                                                } else {
+                                                                    int iM15729 = C5233.m15728(interfaceC2886);
+                                                                    int i27 = 0;
+                                                                    while (true) {
+                                                                        if (i27 < iM15729) {
+                                                                            if ((i27 != i25 && i25 != C17933.m41869(i27)) || !interfaceC2886.mo1303(i27)) {
+                                                                                i27++;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (z8) {
+                                                                    z9 = true;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    z8 = false;
+                                                    if (z8) {
+                                                        z9 = true;
+                                                    }
+                                                }
+                                            }
+                                            z8 = true;
+                                            if (z8) {
+                                                z9 = true;
+                                            }
+                                        }
+                                        i22++;
+                                        i20 = 7;
+                                    }
+                                    z8 = false;
+                                    if (z8) {
+                                        z9 = true;
+                                    }
+                                }
+                            }
+                        }
+                        i18 = iArr[i18 + 1];
+                        i17++;
+                        i10 = 4;
+                        i12 = 1;
+                        i16 = 11;
+                        i11 = 3;
+                    }
+                    b = -1;
+                    break;
+                }
+                if (this.f64742 != null) {
+                    i4 = 1;
+                } else if (this.f64736 != null) {
+                    i4 = 2;
+                } else if (this.f64734) {
+                    i4 = 3;
+                } else if (this.f64743 != null) {
+                    i4 = 4;
+                } else if (b >= 0) {
+                    i4 = 5;
+                } else {
+                    i4 = 0;
+                }
+                this.f64733 = i4;
+                if (b >= 0) {
+                    if (!z3) {
+                        if (!this.f64734) {
+                            i5 = 0;
+                            i6 = i;
+                            while (true) {
+                                if (i5 >= iArr.length / 8) {
+                                    i7 = iArr[i6];
+                                    if (i7 == 0) {
+                                        if (i7 == 1 && i7 != 2 && i7 != 3 && i7 != 11) {
+                                            if (i7 != 20) {
+                                                if (i7 != 34 && i7 != 39 && i7 != 42 && i7 != 36 && i7 != 37) {
+                                                    switch (i7) {
+                                                        case 15:
+                                                            break;
+                                                        case 16:
+                                                            if (iArr[i6 + 2] != 0) {
+                                                            }
+                                                            break;
+                                                        case 17:
+                                                            break;
+                                                        default:
+                                                            switch (i7) {
+                                                                case 28:
+                                                                case 29:
+                                                                case 30:
+                                                                case 31:
+                                                                case 32:
+                                                                    continue;
+                                                            }
+                                                            break;
+                                                    }
+                                                    if (!z5) {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        i6 = iArr[i6 + 1];
+                                        i5++;
+                                    }
+                                    z5 = true;
+                                    if (!z5) {
+                                    }
+                                }
+                                z5 = false;
+                                if (!z5) {
+                                }
+                            }
+                        }
+                        z6 = false;
+                    }
+                    z6 = true;
+                } else if (b != 0) {
+                    z6 = true;
+                } else {
+                    z6 = false;
+                }
+                this.f64745 = z6;
+                if (!z3 || z || z2) {
+                    z7 = true;
+                } else {
+                    z7 = false;
+                }
+                this.f64737 = C23133.m52061(iArr, objArr, i, i2, c0407, c0408, z7);
+                return;
             }
-            if (!z2) {
+            z4 = false;
+            this.f64734 = z4;
+            if (iArr[i] == 21) {
+                c18044 = (C18044) objArr[iArr[i + 2]];
+            } else {
+                c18044 = null;
+            }
+            this.f64743 = c18044;
+            int i110 = 11;
+            if (!z3) {
+                b = -1;
+                break;
+            } else {
+                b = -1;
                 break;
             }
-            return i + 1;
+            if (this.f64742 != null) {
+                i4 = 1;
+            } else if (this.f64736 != null) {
+                i4 = 2;
+            } else if (this.f64734) {
+                i4 = 3;
+            } else if (this.f64743 != null) {
+                i4 = 4;
+            } else if (b >= 0) {
+                i4 = 5;
+            } else {
+                i4 = 0;
+            }
+            this.f64733 = i4;
+            if (b >= 0) {
+                if (!z3) {
+                    if (!this.f64734) {
+                        i5 = 0;
+                        i6 = i;
+                        while (true) {
+                            if (i5 >= iArr.length / 8) {
+                                i7 = iArr[i6];
+                                if (i7 == 0) {
+                                    if (i7 == 1) {
+                                    }
+                                    i6 = iArr[i6 + 1];
+                                    i5++;
+                                }
+                                z5 = true;
+                                if (!z5) {
+                                }
+                            }
+                            z5 = false;
+                            if (!z5) {
+                            }
+                        }
+                    }
+                    z6 = false;
+                }
+                z6 = true;
+            } else if (b != 0) {
+                z6 = true;
+            } else {
+                z6 = false;
+            }
+            this.f64745 = z6;
+            if (z3) {
+                z7 = true;
+            } else {
+                z7 = true;
+            }
+            this.f64737 = C23133.m52061(iArr, objArr, i, i2, c0407, c0408, z7);
+            return;
         }
-        return i5;
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC14771 m45560(InterfaceC8400 interfaceC8400, Object obj, InterfaceC14771 interfaceC14771) {
-        C13465.m32966(interfaceC8400, "<this>");
-        C13465.m32966(interfaceC14771, "completion");
-        if (interfaceC8400 instanceof AbstractC21680) {
-            return ((AbstractC21680) interfaceC8400).mo20747(obj, interfaceC14771);
-        }
-        InterfaceC22386 context = interfaceC14771.getContext();
-        return context == C1218.f5350 ? new C23092(interfaceC8400, obj, interfaceC14771) : new C15331(interfaceC14771, context, interfaceC8400, obj);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC14771 m45561(InterfaceC14771 interfaceC14771) {
-        C13465.m32966(interfaceC14771, "<this>");
-        AbstractC18858 abstractC18858 = interfaceC14771 instanceof AbstractC18858 ? (AbstractC18858) interfaceC14771 : null;
-        return abstractC18858 != null ? abstractC18858.m43493() : interfaceC14771;
     }
 }

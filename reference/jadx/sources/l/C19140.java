@@ -1,39 +1,54 @@
 package l;
 
-import java.io.IOException;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩵֨᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: renamed from: l.ᩳܳۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C2RI */
 /* JADX INFO: loaded from: classes5.dex */
-public class C19140 extends AbstractC7186 {
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        Number number = (Number) obj;
-        if (number == null) {
-            c1145.m4214();
-        } else {
-            c1145.m4211(number.byteValue());
-        }
+public class C19140 extends AbstractC11813 {
+    public C19140(Context context) {
+        super(context);
     }
 
-    @Override // l.AbstractC7186
+    public C19140(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
+
+    public C19140(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+    }
+
+    public C19140(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+    }
+
+    @Override // l.C3906
+    /* JADX INFO: renamed from: ۢ */
+    public final void mo12582() {
+        super.mo12582();
+        mo12567((CharSequence) String.valueOf(m29658().getInt(m12557(), 4)));
+    }
+
+    @Override // l.AbstractC11813
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
-        }
-        try {
-            int iM14926 = c5379.m14926();
-            if (iM14926 <= 255 && iM14926 >= -128) {
-                return Byte.valueOf((byte) iM14926);
-            }
-            StringBuilder sbM40153 = C17214.m40153(iM14926, "Lossy conversion from ", " to byte; at path ");
-            sbM40153.append(c5379.m14928());
-            throw new C22003(sbM40153.toString());
-        } catch (NumberFormatException e) {
-            throw new C22003(e);
-        }
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        View viewM40395 = abstractActivityC17204.m40395(R.layout.MT_Protector);
+        SeekBar seekBar = (SeekBar) viewM40395.findViewById(R.id.MT_Protector);
+        TextView textView = (TextView) viewM40395.findViewById(R.id.textView);
+        seekBar.setOnSeekBarChangeListener(new C7953(this, textView));
+        int i = m29658().getInt(m12557(), 4);
+        seekBar.setProgress(i - 1);
+        textView.setText(String.valueOf(i));
+        int i2 = DialogInterfaceC8327.f27315;
+        C2361 c2361 = new C2361(abstractActivityC17204);
+        c2361.m8024(m12578());
+        c2361.m8005(viewM40395);
+        c2361.m8026(R.string.MT_Protector, null);
+        c2361.m8016();
     }
 }

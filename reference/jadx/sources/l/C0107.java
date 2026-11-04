@@ -1,85 +1,62 @@
 package l;
 
-import java.util.function.IntFunction;
+import java.lang.ref.WeakReference;
 
-/* JADX INFO: renamed from: l.֡֫ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0107 extends AbstractC10580 {
-    public final /* synthetic */ long s;
-    public final /* synthetic */ long t;
+/* JADX INFO: renamed from: l.֡֫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S1JO */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C0107 {
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C0107(AbstractC8575 abstractC8575, int i, long j, long j2) {
-        super(abstractC8575, i);
-        this.s = j;
-        this.t = j2;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Object f1048 = new Object();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C17930 f1049 = new C17930();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public WeakReference f1050 = new WeakReference(null);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m1212(InterfaceC11217 interfaceC11217, final InterfaceC18006 interfaceC18006) {
+        C17930 c17930 = this.f1049;
+        if (c17930.m40355()) {
+            InterfaceC16438 interfaceC16438 = (InterfaceC16438) this.f1050.get();
+            if (interfaceC16438 != null) {
+                c17930.m40354(interfaceC16438);
+                this.f1050.clear();
+            }
+            if (c17930.m40355()) {
+                throw new RuntimeException();
+            }
+        }
+        InterfaceC16438 interfaceC16439 = new InterfaceC16438() { // from class: l.᩶֫ܺ
+            @Override // l.InterfaceC16438
+            /* JADX INFO: renamed from: ۙ */
+            public final void mo1486(Object obj) {
+                C0107.m1210(interfaceC18006, (Object[]) obj);
+            }
+        };
+        this.f1050 = new WeakReference(interfaceC16439);
+        c17930.m40350(interfaceC11217, interfaceC16439);
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC20693 o0(AbstractC5752 abstractC5752, InterfaceC20693 interfaceC20693) {
-        long j;
-        long j2;
-        long jR = abstractC5752.R(interfaceC20693);
-        if (jR > 0 && interfaceC20693.hasCharacteristics(16384)) {
-            InterfaceC7535 interfaceC7535 = (InterfaceC7535) abstractC5752.h0(interfaceC20693);
-            long j3 = this.s;
-            return new C22574(interfaceC7535, j3, AbstractC20092.c(j3, this.t));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m1210(InterfaceC18006 interfaceC18006, Object[] objArr) {
+        Object obj = objArr[0];
+        Object obj2 = f1048;
+        if (obj != obj2) {
+            objArr[0] = obj2;
+            interfaceC18006.mo1736(obj);
         }
-        if (EnumC2970.ORDERED.s(abstractC5752.m)) {
-            return ((InterfaceC8616) new C15153(this, abstractC5752, interfaceC20693, new C1040(22), this.s, this.t).invoke()).spliterator();
-        }
-        InterfaceC7535 interfaceC7536 = (InterfaceC7535) abstractC5752.h0(interfaceC20693);
-        long j4 = this.s;
-        long j5 = this.t;
-        if (j4 <= jR) {
-            long jMin = jR - j4;
-            if (j5 >= 0) {
-                jMin = Math.min(j5, jMin);
-            }
-            j2 = jMin;
-            j = 0;
-        } else {
-            j = j4;
-            j2 = j5;
-        }
-        return new C16564(interfaceC7536, j, j2);
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC8616 n0(AbstractC22686 abstractC22686, InterfaceC20693 interfaceC20693, IntFunction intFunction) {
-        long j;
-        long j2;
-        long jR = abstractC22686.R(interfaceC20693);
-        if (jR > 0 && interfaceC20693.hasCharacteristics(16384)) {
-            AbstractC5752 abstractC5752 = (AbstractC5752) abstractC22686;
-            while (abstractC5752.f77961l > 0) {
-                abstractC5752 = abstractC5752.i;
-            }
-            return AbstractC22686.I(abstractC22686, AbstractC20092.b(abstractC5752.m0(), interfaceC20693, this.s, this.t), true);
-        }
-        if (!EnumC2970.ORDERED.s(((AbstractC5752) abstractC22686).m)) {
-            InterfaceC7535 interfaceC7535 = (InterfaceC7535) abstractC22686.h0(interfaceC20693);
-            long j3 = this.s;
-            long j4 = this.t;
-            if (j3 <= jR) {
-                long jMin = jR - j3;
-                if (j4 >= 0) {
-                    jMin = Math.min(j4, jMin);
-                }
-                j = jMin;
-                j2 = 0;
-            } else {
-                j = j4;
-                j2 = j3;
-            }
-            return AbstractC22686.I(this, new C16564(interfaceC7535, j2, j), true);
-        }
-        return (InterfaceC8616) new C15153(this, abstractC22686, interfaceC20693, intFunction, this.s, this.t).invoke();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m1211(Object obj) {
+        this.f1049.mo40353(new Object[]{obj});
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC19171 q0(int i, InterfaceC19171 interfaceC19171) {
-        return new C21274(this, interfaceC19171);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m1213(C23001 c23001) {
+        this.f1049.mo40348(new Object[]{c23001});
     }
 }

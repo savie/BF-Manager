@@ -1,15 +1,16 @@
 package l;
 
-import android.content.Context;
-
-/* JADX INFO: renamed from: l.۠ܽ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: U8V6 */
+/* JADX INFO: renamed from: l.۠֨᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: T1LK */
 /* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C8295 {
+    @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC19584 m21732(Context context, ViewOnTouchListenerC18878 viewOnTouchListenerC18878) {
-        C10412 c10412 = new C10412(context);
-        c10412.f35597 = viewOnTouchListenerC18878;
-        return c10412;
+    public static Integer m22386(InterfaceC6804 interfaceC6804, Object obj) {
+        int iMo7848 = interfaceC6804.mo7848(obj);
+        if (iMo7848 != 0 || interfaceC6804.containsKey(obj)) {
+            return Integer.valueOf(iMo7848);
+        }
+        return null;
     }
 }

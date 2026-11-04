@@ -2,7 +2,7 @@ package com.google.android.material.animation;
 
 import android.util.Property;
 import android.view.ViewGroup;
-import l.C3798;
+import l.C23577;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ChildrenAlphaProperty extends Property {
@@ -14,14 +14,14 @@ public class ChildrenAlphaProperty extends Property {
 
     @Override // android.util.Property
     public Float get(ViewGroup viewGroup) {
-        Float f = (Float) viewGroup.getTag(C3798.f13975);
+        Float f = (Float) viewGroup.getTag(C23577.f76373);
         return f != null ? f : Float.valueOf(1.0f);
     }
 
     @Override // android.util.Property
     public void set(ViewGroup viewGroup, Float f) {
         float fFloatValue = f.floatValue();
-        viewGroup.setTag(C3798.f13975, f);
+        viewGroup.setTag(C23577.f76373, f);
         int childCount = viewGroup.getChildCount();
         for (int i = 0; i < childCount; i++) {
             viewGroup.getChildAt(i).setAlpha(fFloatValue);

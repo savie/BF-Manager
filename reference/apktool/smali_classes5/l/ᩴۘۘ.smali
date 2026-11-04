@@ -1,31 +1,26 @@
-.class public final Ll/ᩴۘۘ;
-.super Ll/֨ۘۘ;
-.source "N7NV"
+.class public interface abstract Ll/ᩴۘۘ;
+.super Ljava/lang/Object;
+.source "J7L7"
 
 # interfaces
-.implements Lbin/mt/plugin/api/ui/builder/PluginCheckBoxBuilder;
+.implements Ljava/io/Closeable;
 
 
 # virtual methods
-.method public final ۙ(Landroid/content/Context;)Landroid/view/View;
-    .locals 1
-
-    .line 27
-    new-instance v0, Ll/ܽۜ;
-
-    invoke-direct {v0, p1}, Ll/ܽۜ;-><init>(Landroid/content/Context;)V
-
-    return-object v0
+.method public abstract ۙۙ()Ljava/util/List;
 .end method
 
-.method public final ۙ(Lbin/mt/plugin/api/ui/PluginUI;Lbin/mt/plugin/api/ui/PluginViewGroup;)Ll/ۗ۬ۘ;
-    .locals 1
+.method public abstract ۡ()Ljava/lang/String;
+.end method
 
-    .line 22
-    new-instance v0, Ll/᩹۬ۘ;
+.method public abstract ۢۙ()Ll/ܺۡۘ;
+.end method
 
-    .line 12
-    invoke-direct {v0, p1, p2}, Ll/۬۬ۘ;-><init>(Lbin/mt/plugin/api/ui/PluginUI;Lbin/mt/plugin/api/ui/PluginViewGroup;)V
+.method public abstract ۧۙ()Ljava/util/List;
+.end method
 
-    return-object v0
+.method public abstract ܶ᩷()Ljava/lang/String;
+.end method
+
+.method public abstract ᩳ᩷()Ljava/util/List;
 .end method

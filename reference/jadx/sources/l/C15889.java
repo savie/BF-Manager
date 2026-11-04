@@ -1,39 +1,98 @@
 package l;
 
-import android.content.Context;
-import android.media.AudioAttributes;
-import android.media.AudioTrack;
-import android.os.Build;
+import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.function.DoubleConsumer;
 
-/* JADX INFO: renamed from: l.ܺۧۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 08N4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15889 implements InterfaceC13066 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AudioTrack m37802(C10099 c10099, C2708 c2708, int i, Context context) {
-        boolean z = c10099.f34487;
-        int i2 = c10099.f34485;
-        int i3 = c10099.f34486;
-        int i4 = c10099.f34484;
-        int i5 = Build.VERSION.SDK_INT;
-        if (i5 >= 23) {
-            AudioTrack.Builder sessionId = new AudioTrack.Builder().setAudioAttributes(m37801(c2708, z)).setAudioFormat(C17983.m41859(i4, i3, i2)).setTransferMode(1).setBufferSizeInBytes(c10099.f34483).setSessionId(i);
-            if (i5 >= 29) {
-                sessionId.setOffloadedPlayback(c10099.f34482);
-            }
-            if (i5 >= 34 && context != null) {
-                sessionId.setContext(context);
-            }
-            return sessionId.build();
-        }
-        return new AudioTrack(m37801(c2708, z), C17983.m41859(i4, i3, i2), c10099.f34483, 1, i);
+/* JADX INFO: renamed from: l.ܶۛۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15889 extends C10668 implements InterfaceC5228 {
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(int i) {
+        AbstractC13956.t();
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AudioAttributes m37801(C2708 c2708, boolean z) {
-        if (!z) {
-            return c2708.m8258().f39861;
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(long j) {
+        AbstractC13956.u();
+        throw null;
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        n((Double) obj);
+    }
+
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
+        return AbstractC2946.a(this, doubleConsumer);
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    @Override // l.InterfaceC13080
+    public final /* synthetic */ void n(Double d) {
+        AbstractC13956.n(this, d);
+    }
+
+    @Override // l.InterfaceC4262
+    public final /* bridge */ /* synthetic */ InterfaceC13409 build() {
+        build();
+        return this;
+    }
+
+    @Override // l.InterfaceC5228, l.InterfaceC4262
+    public final InterfaceC2047 build() {
+        int i = this.b;
+        double[] dArr = this.a;
+        if (i >= dArr.length) {
+            return this;
         }
-        return new AudioAttributes.Builder().setContentType(3).setFlags(16).setUsage(1).build();
+        throw new IllegalStateException(String.format("Current size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(dArr.length)));
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        double[] dArr = this.a;
+        if (j != dArr.length) {
+            throw new IllegalStateException(String.format("Begin size %d is not equal to fixed size %d", Long.valueOf(j), Integer.valueOf(dArr.length)));
+        }
+        this.b = 0;
+    }
+
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final void accept(double d) {
+        int i = this.b;
+        double[] dArr = this.a;
+        if (i < dArr.length) {
+            this.b = i + 1;
+            dArr[i] = d;
+            return;
+        }
+        throw new IllegalStateException(String.format("Accept exceeded fixed size of %d", Integer.valueOf(dArr.length)));
+    }
+
+    @Override // l.InterfaceC15143
+    public final void end() {
+        int i = this.b;
+        double[] dArr = this.a;
+        if (i < dArr.length) {
+            throw new IllegalStateException(String.format("End size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(dArr.length)));
+        }
+    }
+
+    @Override // l.C10668
+    public final String toString() {
+        double[] dArr = this.a;
+        return String.format("DoubleFixedNodeBuilder[%d][%s]", Integer.valueOf(dArr.length - this.b), Arrays.toString(dArr));
     }
 }

@@ -4,26 +4,26 @@
 
 
 # static fields
-.field public static final ֡:Lcom/amazonaws/logging/Log;
+.field public static final ֡:Ljava/util/Map;
 
-.field public static final enum ۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
-    .annotation runtime Ll/᩶ۖ᩸;
+.field public static final enum ۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    .annotation runtime Ll/ۗۨܽ;
         value = "MOBILE"
     .end annotation
 .end field
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+.field public static final synthetic ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
-.field public static final ܽ:Ljava/util/Map;
+.field public static final ܿ:Lcom/amazonaws/logging/Log;
 
-.field public static final enum ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
-    .annotation runtime Ll/᩶ۖ᩸;
+.field public static final enum ᩳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    .annotation runtime Ll/ۗۨܽ;
         value = "WIFI"
     .end annotation
 .end field
 
 .field public static final enum ᩶:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
-    .annotation runtime Ll/᩶ۖ᩸;
+    .annotation runtime Ll/ۗۨܽ;
         value = "ANY"
     .end annotation
 .end field
@@ -53,7 +53,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType$2;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ᩳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     .line 57
     new-instance v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType$3;
@@ -64,7 +64,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType$3;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    sput-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     const/4 v5, 0x3
 
@@ -77,14 +77,14 @@
     aput-object v3, v5, v6
 
     .line 30
-    sput-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    sput-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܽ:Ljava/util/Map;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->֡:Ljava/util/Map;
 
     .line 69
     invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->values()[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
@@ -99,7 +99,7 @@
     aget-object v3, v0, v2
 
     .line 70
-    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܽ:Ljava/util/Map;
+    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->֡:Ljava/util/Map;
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->֡:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܿ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -161,7 +161,7 @@
     .locals 1
 
     .line 30
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     invoke-virtual {v0}, [Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->clone()Ljava/lang/Object;
 
@@ -176,7 +176,7 @@
     .locals 3
 
     .line 94
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܽ:Ljava/util/Map;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->֡:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -195,7 +195,7 @@
 
     .line 98
     :cond_0
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->֡:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->ܿ:Lcom/amazonaws/logging/Log;
 
     new-instance v1, Ljava/lang/StringBuilder;
 

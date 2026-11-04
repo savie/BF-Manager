@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12PBEParams extends ASN1Object {
     public ASN1Integer iterations;
     public ASN1OctetString iv;

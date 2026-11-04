@@ -1,11 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖܶۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K411 */
-/* JADX INFO: loaded from: classes3.dex */
-public interface InterfaceC2610 extends InterfaceC0723 {
-    AbstractC5930 getExpression();
+import java.util.List;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    AbstractC11242 mo8084();
+/* JADX INFO: renamed from: l.ۖۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: C8OA */
+/* JADX INFO: loaded from: classes2.dex */
+public interface InterfaceC2610 {
+    @Deprecated
+    /* JADX INFO: renamed from: ۙ */
+    void mo4878(List list);
+
+    /* JADX INFO: renamed from: ۙ */
+    void mo4879(C11831 c11831);
 }

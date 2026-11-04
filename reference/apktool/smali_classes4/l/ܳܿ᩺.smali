@@ -1,74 +1,65 @@
-.class public final Ll/ܳܿ᩺;
+.class public final synthetic Ll/ܳܿ᩺;
 .super Ljava/lang/Object;
-.source "0APD"
+.source "643O"
 
 # interfaces
-.implements Ljava/lang/CharSequence;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/CharSequence;
+.field public final synthetic ۙ:Ll/ۚܿ᩺;
+
+.field public final synthetic ۤ:Ll/ᩳ۠᩺;
+
+.field public final synthetic ᩴ:Ll/ۨܿۘ;
+
+.field public final synthetic ᩷:Ll/֡۠᩺;
+
+.field public final synthetic ᩸:Ll/ۗۙۘ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public synthetic constructor <init>(Ll/ۚܿ᩺;Ll/֡۠᩺;Ll/ᩳ۠᩺;Ll/ۗۙۘ;Ll/ۨܿۘ;)V
     .locals 0
 
-    .line 8
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    iput-object p1, p0, Ll/ܳܿ᩺;->ܺ:Ljava/lang/CharSequence;
+    iput-object p1, p0, Ll/ܳܿ᩺;->ۙ:Ll/ۚܿ᩺;
+
+    iput-object p2, p0, Ll/ܳܿ᩺;->᩷:Ll/֡۠᩺;
+
+    iput-object p3, p0, Ll/ܳܿ᩺;->ۤ:Ll/ᩳ۠᩺;
+
+    iput-object p4, p0, Ll/ܳܿ᩺;->᩸:Ll/ۗۙۘ;
+
+    iput-object p5, p0, Ll/ܳܿ᩺;->ᩴ:Ll/ۨܿۘ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final charAt(I)C
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 5
 
-    .line 19
-    iget-object v0, p0, Ll/ܳܿ᩺;->ܺ:Ljava/lang/CharSequence;
+    .line 2
+    iget-object v0, p0, Ll/ܳܿ᩺;->ᩴ:Ll/ۨܿۘ;
 
-    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
+    .line 1740
+    iget-object v1, p0, Ll/ܳܿ᩺;->ۙ:Ll/ۚܿ᩺;
 
-    move-result p1
+    iget-object v1, v1, Ll/ۧܿ᩺;->֨:Ll/᩸۟᩺;
 
-    .line 20
-    invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
+    iget-object v2, p0, Ll/ܳܿ᩺;->᩷:Ll/֡۠᩺;
 
-    move-result p1
+    iget-object v3, p0, Ll/ܳܿ᩺;->ۤ:Ll/ᩳ۠᩺;
 
-    return p1
-.end method
+    iget-object v4, p0, Ll/ܳܿ᩺;->᩸:Ll/ۗۙۘ;
 
-.method public final length()I
-    .locals 1
+    invoke-virtual {v2, v3, v4, v0, v1}, Ll/֡۠᩺;->ۙ(Ll/ᩳ۠᩺;Ll/ۗۙۘ;Ll/ۨܿۘ;Ll/᩸۟᩺;)Ljava/lang/Object;
 
-    .line 14
-    iget-object v0, p0, Ll/ܳܿ᩺;->ܺ:Ljava/lang/CharSequence;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final subSequence(II)Ljava/lang/CharSequence;
-    .locals 2
-
-    .line 26
-    new-instance v0, Ll/ܳܿ᩺;
-
-    iget-object v1, p0, Ll/ܳܿ᩺;->ܺ:Ljava/lang/CharSequence;
-
-    invoke-interface {v1, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ll/ܳܿ᩺;-><init>(Ljava/lang/CharSequence;)V
+    move-result-object v0
 
     return-object v0
 .end method

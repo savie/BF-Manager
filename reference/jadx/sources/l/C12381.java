@@ -1,68 +1,64 @@
 package l;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ProviderInfo;
-import android.content.pm.ResolveInfo;
-import android.content.pm.Signature;
-import android.os.Build;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۫ۨۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UB1K */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12381 {
+/* JADX INFO: renamed from: l.ۨ۬ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R7DV */
+/* JADX INFO: loaded from: classes4.dex */
+public class C12381 implements InterfaceC5597 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C17319 f41383;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ArrayList f39750 = new ArrayList();
 
-    public C12381() {
-        this.f41383 = Build.VERSION.SDK_INT >= 28 ? new C10970() : new C6030();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C7660 f39751;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f39752;
+
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ᩸ */
+    public final /* synthetic */ boolean mo6416() {
+        return true;
+    }
+
+    @Override // l.InterfaceC5597
+    /* JADX INFO: renamed from: ۙ */
+    public InterfaceC3359 mo7367(C15291 c15291) {
+        Iterator it = this.f39750.iterator();
+        while (it.hasNext()) {
+            ((C20586) it.next()).mo7367(c15291);
+        }
+        return this;
+    }
+
+    public C12381(C7660 c7660, boolean z) {
+        this.f39751 = c7660;
+        this.f39752 = z;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C17050 m30802(Context context) {
-        ProviderInfo providerInfoMo16352;
-        C14329 c14329;
-        ApplicationInfo applicationInfo;
-        PackageManager packageManager = context.getPackageManager();
-        C9535.m24383(packageManager, "Package manager required to locate emoji font provider");
-        Intent intent = new Intent("androidx.content.action.LOAD_EMOJI_FONT");
-        C17319 c17319 = this.f41383;
-        Iterator it = c17319.mo16353(packageManager, intent).iterator();
-        while (true) {
-            if (!it.hasNext()) {
-                providerInfoMo16352 = null;
-                break;
-            }
-            providerInfoMo16352 = c17319.mo16352((ResolveInfo) it.next());
-            if (providerInfoMo16352 != null && (applicationInfo = providerInfoMo16352.applicationInfo) != null && (applicationInfo.flags & 1) == 1) {
-                break;
-            }
+    public void m30862(C20586 c20586) {
+        this.f39750.add(c20586);
+    }
+
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        C11388 c11388 = (C11388) interfaceC9397;
+        c11388.m28740(this.f39751.f67820);
+        ArrayList arrayList = this.f39750;
+        c11388.m28740(arrayList.size());
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            ((InterfaceC3359) it.next()).mo1599(c11388);
         }
-        if (providerInfoMo16352 == null) {
-            c14329 = null;
-        } else {
-            try {
-                String str = providerInfoMo16352.authority;
-                String str2 = providerInfoMo16352.packageName;
-                Signature[] signatureArrMo27725 = c17319.mo27725(packageManager, str2);
-                ArrayList arrayList = new ArrayList();
-                for (Signature signature : signatureArrMo27725) {
-                    arrayList.add(signature.toByteArray());
-                }
-                c14329 = new C14329(str, str2, "emojicompat-emoji-font", Collections.singletonList(arrayList));
-            } catch (PackageManager.NameNotFoundException unused) {
-                c14329 = null;
-            }
-        }
-        if (c14329 == null) {
-            return null;
-        }
-        return new C17050(context, c14329);
+    }
+
+    @Override // l.InterfaceC3359
+    public int getLength() {
+        return C1170.stream(this.f39750).flatMapToInt(new C8110(5)).sum() + 4;
     }
 }

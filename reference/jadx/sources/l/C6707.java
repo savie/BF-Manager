@@ -1,252 +1,194 @@
 package l;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.ref.SoftReference;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-/* JADX INFO: renamed from: l.ۜۤ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 43ZG */
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: renamed from: l.ۛ᩹ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D6GY */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C6707 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f22602;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f22305;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f22306;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String[] f22307;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int[] f22308;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f22309;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] f22310;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f22311;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final List f22604;
+    public static final Object f22304 = new Object();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C11647 f22606;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static volatile SoftReference f22303 = new SoftReference(null);
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f22605 = 0;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f22603 = 0;
-
-    public C6707(ArrayList arrayList) {
-        this.f22606 = C11647.m29101("", (C0316) null);
-        this.f22602 = 0;
-        this.f22604 = arrayList;
-        if (arrayList.isEmpty()) {
-            return;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C6707 m18719() {
+        C6707 c6707;
+        C6707 c6708 = (C6707) f22303.get();
+        if (c6708 != null) {
+            return c6708;
         }
-        m18125(0, 0);
-        C11647 c11647 = (C11647) arrayList.get(0);
-        this.f22606 = c11647;
-        this.f22602 = c11647.m29102().length();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6707 m18124(C2473 c2473) {
-        return new C6707(c2473.m7586());
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final char m18135() {
-        if (this.f22603 < this.f22602) {
-            return this.f22606.m29102().charAt(this.f22603);
-        }
-        return this.f22605 < this.f22604.size() + (-1) ? '\n' : (char) 0;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m18127() {
-        if (this.f22603 >= this.f22602) {
-            return this.f22605 < this.f22604.size() + (-1) ? 10 : 0;
-        }
-        char cCharAt = this.f22606.m29102().charAt(this.f22603);
-        if (!Character.isHighSurrogate(cCharAt) || this.f22603 + 1 >= this.f22602) {
-            return cCharAt;
-        }
-        char cCharAt2 = this.f22606.m29102().charAt(this.f22603 + 1);
-        return Character.isLowSurrogate(cCharAt2) ? Character.toCodePoint(cCharAt, cCharAt2) : cCharAt;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m18134() {
-        int i = this.f22603;
-        if (i <= 0) {
-            return this.f22605 > 0 ? 10 : 0;
-        }
-        int i2 = i - 1;
-        char cCharAt = this.f22606.m29102().charAt(i2);
-        if (Character.isLowSurrogate(cCharAt) && i2 > 0) {
-            char cCharAt2 = this.f22606.m29102().charAt(i - 2);
-            if (Character.isHighSurrogate(cCharAt2)) {
-                return Character.toCodePoint(cCharAt2, cCharAt);
-            }
-        }
-        return cCharAt;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m18132() {
-        return this.f22603 < this.f22602 || this.f22605 < this.f22604.size() - 1;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m18138() {
-        C11647 c11647M29101;
-        int i = this.f22603 + 1;
-        this.f22603 = i;
-        if (i > this.f22602) {
-            int i2 = this.f22605 + 1;
-            this.f22605 = i2;
-            List list = this.f22604;
-            if (i2 < list.size()) {
-                c11647M29101 = (C11647) list.get(this.f22605);
-            } else {
-                c11647M29101 = C11647.m29101("", (C0316) null);
-            }
-            this.f22606 = c11647M29101;
-            this.f22602 = c11647M29101.m29102().length();
-            this.f22603 = 0;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m18136(char c) {
-        if (m18135() != c) {
-            return false;
-        }
-        m18138();
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m18133(String str) {
-        int i = this.f22603;
-        if (i < this.f22602 && str.length() + i <= this.f22602) {
-            for (int i2 = 0; i2 < str.length(); i2++) {
-                if (this.f22606.m29102().charAt(this.f22603 + i2) == str.charAt(i2)) {
+        synchronized (f22304) {
+            c6707 = (C6707) f22303.get();
+            if (c6707 == null) {
+                InputStream resourceAsStream = C6707.class.getResourceAsStream("/assets/a");
+                if (resourceAsStream == null) {
+                    throw new IOException("Class set asset not found: /assets/a");
+                }
+                try {
+                    C6707 c6709 = new C6707(C20244.m46522(C24653.m55007(resourceAsStream), 0));
+                    resourceAsStream.close();
+                    f22303 = new SoftReference(c6709);
+                    c6707 = c6709;
+                } catch (Throwable th) {
+                    try {
+                        resourceAsStream.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                    throw th;
                 }
             }
-            this.f22603 = str.length() + this.f22603;
-            return true;
         }
-        return false;
+        return c6707;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m18137(char c) {
-        int i = 0;
-        while (m18135() == c) {
-            i++;
-            m18138();
+    public C6707(byte[] bArr) throws IOException {
+        this.f22310 = bArr;
+        C12672 c12672 = new C12672(this, 0, bArr.length);
+        if (c12672.readInt() != 1297367891 || c12672.readInt() != 1) {
+            throw new IOException("Unsupported shared class set format");
         }
-        return i;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m18129(InterfaceC3179 interfaceC3179) {
-        int i = 0;
-        while (((C9531) interfaceC3179).m24377(m18135())) {
-            i++;
-            m18138();
+        int i = c12672.readInt();
+        this.f22311 = i;
+        int iPosition = c12672.position();
+        this.f22309 = iPosition;
+        if (i < 17 || i > c12672.m31447()) {
+            throw new IOException("Invalid embedded class set length");
         }
-        return i;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m18126() {
-        int i = 0;
-        while (true) {
-            char cM18135 = m18135();
-            if (cM18135 != ' ') {
-                switch (cM18135) {
-                    case '\t':
-                    case '\n':
-                    case 11:
-                    case '\f':
-                    case '\r':
-                        break;
-                    default:
-                        return i;
+        C12672 c12673 = new C12672(this, iPosition, i);
+        byte[] bArr2 = new byte[8];
+        c12673.readFully(bArr2);
+        if (!"jadx-cst".equals(new String(bArr2, StandardCharsets.US_ASCII)) || c12673.readUnsignedByte() != 5 || c12673.readInt() != 34) {
+            throw new IOException("Expected JADX v5 API 34 class set");
+        }
+        int i2 = c12673.readInt();
+        if (i2 <= 0 || i2 > c12673.m31447() / 6) {
+            throw new IOException("Invalid class count");
+        }
+        this.f22307 = new String[i2];
+        this.f22305 = new int[i2];
+        this.f22308 = new int[i2];
+        this.f22306 = new HashMap(i2);
+        for (int i3 = 0; i3 < i2; i3++) {
+            c12673.readInt();
+            int unsignedByte = c12673.readUnsignedByte();
+            if (unsignedByte < 1 || unsignedByte > 3) {
+                throw new IOException("Invalid class source");
+            }
+            String strM31444 = c12673.m31444();
+            this.f22307[i3] = "L" + strM31444.replace('.', '/') + ';';
+            if (strM31444.isEmpty() || this.f22306.put(this.f22307[i3], Integer.valueOf(i3)) != null) {
+                throw new IOException("Invalid or duplicate class name");
+            }
+        }
+        for (int i4 = 0; i4 < i2; i4++) {
+            this.f22305[i4] = c12673.position();
+            c12673.m31449(false);
+            c12673.m31445(0, false);
+            int unsignedShort = c12673.readUnsignedShort();
+            for (int i5 = 0; i5 < unsignedShort; i5++) {
+                c12673.m31446(false);
+            }
+        }
+        if (c12673.m31447() != 0) {
+            throw new IOException("Trailing embedded class set data");
+        }
+        int i6 = this.f22309;
+        int i7 = this.f22311;
+        C12672 c12674 = new C12672(this, i6 + i7, (bArr.length - i6) - i7);
+        for (int i8 = 0; i8 < i2; i8++) {
+            this.f22308[i8] = c12674.position();
+            for (int i9 = 0; i9 < 2; i9++) {
+                int unsignedShort2 = c12674.readUnsignedShort();
+                for (int i10 = 0; i10 < unsignedShort2; i10++) {
+                    String strM31448 = c12674.m31448();
+                    int unsignedShort3 = c12674.readUnsignedShort();
+                    if (i9 == 0) {
+                        if (strM31448.indexOf(58) <= 0) {
+                            throw new IOException("Invalid supplemental member");
+                        }
+                    } else {
+                        if (strM31448.indexOf(40) <= 0 || (unsignedShort3 & 66) != 64) {
+                            throw new IOException("Invalid supplemental member");
+                        }
+                    }
                 }
             }
-            i++;
-            m18138();
+        }
+        if (c12674.m31447() != 0) {
+            throw new IOException("Trailing shared class set data");
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m18128(char c) {
-        int i = 0;
-        while (true) {
-            char cM18135 = m18135();
-            if (cM18135 == 0) {
-                return -1;
-            }
-            if (cM18135 == c) {
-                return i;
-            }
-            i++;
-            m18138();
-        }
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C3884 m18139() {
-        return new C3884(this.f22605, this.f22603);
+    public final ByteArrayInputStream m18721() {
+        return new ByteArrayInputStream(this.f22310, this.f22309, this.f22311);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18131(C3884 c3884) {
-        int i = c3884.f14514;
-        int i2 = c3884.f14513;
-        m18125(i, i2);
-        int i3 = c3884.f14514;
-        this.f22605 = i3;
-        this.f22603 = i2;
-        C11647 c11647 = (C11647) this.f22604.get(i3);
-        this.f22606 = c11647;
-        this.f22602 = c11647.m29102().length();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2473 m18130(C3884 c3884, C3884 c3885) {
-        int i = c3884.f14514;
-        int i2 = c3884.f14513;
-        int i3 = c3885.f14514;
-        int i4 = c3885.f14513;
-        List list = this.f22604;
-        if (i != i3) {
-            C2473 c2473 = new C2473();
-            C11647 c11647 = (C11647) list.get(i);
-            c2473.m7584(c11647.m29103(i2, c11647.m29102().length()));
-            while (true) {
-                i++;
-                if (i < i3) {
-                    c2473.m7584((C11647) list.get(i));
-                } else {
-                    c2473.m7584(((C11647) list.get(i3)).m29103(0, i4));
-                    return c2473;
-                }
-            }
-        } else {
-            C11647 c11648 = (C11647) list.get(i);
-            CharSequence charSequenceSubSequence = c11648.m29102().subSequence(i2, i4);
-            C0316 c0316M29104 = c11648.m29104();
-            C11647 c11647M29101 = C11647.m29101(charSequenceSubSequence, c0316M29104 != null ? c0316M29104.m1951(i2, i4) : null);
-            C2473 c2474 = new C2473();
-            c2474.m7584(c11647M29101);
-            return c2474;
+    public final C3723 m18722(String str) throws IOException {
+        Integer num = (Integer) this.f22306.get(str);
+        if (num == null) {
+            return null;
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m18125(int i, int i2) {
-        List list = this.f22604;
-        if (i < 0 || i >= list.size()) {
-            StringBuilder sbM40153 = C17214.m40153(i, "Line index ", " out of range, number of lines: ");
-            sbM40153.append(list.size());
-            throw new IllegalArgumentException(sbM40153.toString());
+        int iIntValue = num.intValue();
+        int[] iArr = this.f22305;
+        C12672 c12672 = new C12672(this, iArr[iIntValue], (this.f22309 + this.f22311) - iArr[num.intValue()]);
+        List listM31449 = c12672.m31449(true);
+        c12672.m31445(0, false);
+        ArrayList arrayList = new ArrayList();
+        ArrayList arrayList2 = new ArrayList();
+        int unsignedShort = c12672.readUnsignedShort();
+        for (int i = 0; i < unsignedShort; i++) {
+            C20877 c20877M31446 = c12672.m31446(true);
+            String str2 = c20877M31446.f66826;
+            (((c20877M31446.f66825 & 10) != 0 || str2.startsWith("<init>(") || str2.startsWith("<clinit>(")) ? arrayList : arrayList2).add(str2);
         }
-        C11647 c11647 = (C11647) list.get(i);
-        if (i2 < 0 || i2 > c11647.m29102().length()) {
-            StringBuilder sbM40154 = C17214.m40153(i2, "Index ", " out of range, line length: ");
-            sbM40154.append(c11647.m29102().length());
-            throw new IllegalArgumentException(sbM40154.toString());
+        int iIntValue2 = num.intValue();
+        int[] iArr2 = this.f22308;
+        C12672 c12673 = new C12672(this, iArr2[iIntValue2], this.f22310.length - iArr2[num.intValue()]);
+        ArrayList arrayList3 = new ArrayList();
+        ArrayList arrayList4 = new ArrayList();
+        int unsignedShort2 = c12673.readUnsignedShort();
+        for (int i2 = 0; i2 < unsignedShort2; i2++) {
+            ((c12673.readUnsignedShort() & 8) != 0 ? arrayList3 : arrayList4).add(c12673.m31448());
         }
+        int unsignedShort3 = c12673.readUnsignedShort();
+        for (int i3 = 0; i3 < unsignedShort3; i3++) {
+            String strM31448 = c12673.m31448();
+            (((c12673.readUnsignedShort() & 10) != 0 || strM31448.startsWith("<init>(") || strM31448.startsWith("<clinit>(")) ? arrayList : arrayList2).add(strM31448);
+        }
+        return new C3723(str, listM31449, arrayList3, arrayList4, arrayList, arrayList2);
     }
 }

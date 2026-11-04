@@ -4,15 +4,15 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import l.C9013;
-import l.C9023;
+import l.C11958;
+import l.C14483;
 import org.bouncycastle.util.io.Streams;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSContextBasedVerifier {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final int f77979l;
+    public final int f82095l;
     public final LMSPublicKeyParameters lmsPublicKey;
 
     public HSSPublicKeyParameters(int i, LMSPublicKeyParameters lMSPublicKeyParameters) {
@@ -20,7 +20,7 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
         if (lMSPublicKeyParameters == null) {
             throw new NullPointerException("lmsPublicKey");
         }
-        this.f77979l = i;
+        this.f82095l = i;
         this.lmsPublicKey = lMSPublicKeyParameters;
     }
 
@@ -32,7 +32,7 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
             return false;
         }
         HSSPublicKeyParameters hSSPublicKeyParameters = (HSSPublicKeyParameters) obj;
-        if (this.f77979l != hSSPublicKeyParameters.f77979l) {
+        if (this.f82095l != hSSPublicKeyParameters.f82095l) {
             return false;
         }
         return this.lmsPublicKey.equals(hSSPublicKeyParameters.lmsPublicKey);
@@ -40,11 +40,11 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
 
     @Override // org.bouncycastle.pqc.crypto.lms.LMSKeyParameters, org.bouncycastle.util.Encodable
     public byte[] getEncoded() {
-        return Composer.compose().u32str(this.f77979l).bytes(this.lmsPublicKey.getEncoded()).build();
+        return Composer.compose().u32str(this.f82095l).bytes(this.lmsPublicKey.getEncoded()).build();
     }
 
     public int getL() {
-        return this.f77979l;
+        return this.f82095l;
     }
 
     public LMSPublicKeyParameters getLMSPublicKey() {
@@ -52,7 +52,7 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
     }
 
     public int hashCode() {
-        return this.lmsPublicKey.hashCode() + (this.f77979l * 31);
+        return this.lmsPublicKey.hashCode() + (this.f82095l * 31);
     }
 
     @Override // org.bouncycastle.pqc.crypto.lms.LMSContextBasedVerifier
@@ -81,7 +81,7 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
             if (obj instanceof InputStream) {
                 return getInstance(Streams.readAll((InputStream) obj));
             }
-            throw new IllegalArgumentException(C9023.m23354(obj, "cannot parse "));
+            throw new IllegalArgumentException(C14483.m34971("cannot parse ", obj));
         }
         DataInputStream dataInputStream = null;
         try {
@@ -110,7 +110,7 @@ public class HSSPublicKeyParameters extends LMSKeyParameters implements LMSConte
             LMSSignedPubKey[] signedPubKey = hSSSignature.getSignedPubKey();
             return (signedPubKey.length != 0 ? signedPubKey[signedPubKey.length - 1].getPublicKey() : getLMSPublicKey()).generateOtsContext(hSSSignature.getSignature()).withSignedPublicKeys(signedPubKey);
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("cannot parse signature: ")));
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("cannot parse signature: ")));
         }
     }
 }

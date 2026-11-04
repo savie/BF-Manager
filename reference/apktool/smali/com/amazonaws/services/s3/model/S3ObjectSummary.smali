@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public ֨:Ljava/lang/String;
-
-.field public ۖ:Ljava/util/Date;
-
 .field public ۙ:Ljava/lang/String;
 
-.field public ۚ:Lcom/amazonaws/services/s3/model/Owner;
+.field public ۤ:Ljava/lang/String;
 
-.field public ۨ:Ljava/lang/String;
+.field public ۫:Ljava/lang/String;
 
-.field public ܰ:Ljava/lang/String;
+.field public ܳ:J
 
-.field public ᩹:J
+.field public ᩴ:Lcom/amazonaws/services/s3/model/Owner;
+
+.field public ᩷:Ljava/lang/String;
+
+.field public ᩸:Ljava/util/Date;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۨ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۤ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ܰ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩷:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩹:J
+    iget-wide v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ܳ:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۖ:Ljava/util/Date;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩸:Ljava/util/Date;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->֨:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->۫:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۚ:Lcom/amazonaws/services/s3/model/Owner;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ᩴ:Lcom/amazonaws/services/s3/model/Owner;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -104,20 +104,11 @@
     return-object v0
 .end method
 
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 200
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->֨:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public final ۙ()Ljava/lang/String;
     .locals 1
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -126,7 +117,7 @@
     .locals 0
 
     .line 134
-    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩹:J
+    iput-wide p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ܳ:J
 
     return-void
 .end method
@@ -135,7 +126,7 @@
     .locals 0
 
     .line 180
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۚ:Lcom/amazonaws/services/s3/model/Owner;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ᩴ:Lcom/amazonaws/services/s3/model/Owner;
 
     return-void
 .end method
@@ -153,43 +144,52 @@
     .locals 0
 
     .line 157
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۖ:Ljava/util/Date;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩸:Ljava/util/Date;
 
     return-void
 .end method
 
-.method public final ۨ()J
+.method public final ۤ()J
     .locals 2
 
     .line 124
-    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩹:J
+    iget-wide v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ܳ:J
 
     return-wide v0
 .end method
 
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 0
 
     .line 90
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۨ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۤ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ܰ()Ljava/util/Date;
+.method public final ᩷()Ljava/util/Date;
     .locals 1
 
     .line 146
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ۖ:Ljava/util/Date;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩸:Ljava/util/Date;
 
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     .line 114
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->ܰ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->᩷:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 0
+
+    .line 200
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3ObjectSummary;->۫:Ljava/lang/String;
 
     return-void
 .end method

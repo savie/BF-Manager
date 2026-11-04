@@ -1,29 +1,39 @@
 package l;
 
-import java.util.AbstractCollection;
-import java.util.Iterator;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ᩴۘۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5EV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18507 extends AbstractCollection {
+/* JADX INFO: renamed from: l.ܿᩳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z9PJ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18507 extends AbstractC9843 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19213 f58947;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final C18507 f60193 = new C18507(R.string.MT_Protector, R.drawable.MT_Protector);
 
-    public C18507(C19213 c19213) {
-        this.f58947 = c19213;
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ᩸ */
+    public final boolean mo2481(C12915 c12915) {
+        return false;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        C19213 c19213 = this.f58947;
-        return C16458.m38721(AbstractC22433.of((Object) c19213.f62052.iterator(), (Object) c19213.f62050.iterator()), AbstractC10959.m27714());
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static C18507 m43097() {
+        return f60193;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final int size() {
-        C19213 c19213 = this.f58947;
-        return c19213.f62050.size() + c19213.f62052.size();
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC9843 mo2725(AbstractC9843 abstractC9843) {
+        if (this == f60193) {
+            throw new IllegalStateException();
+        }
+        super.mo2725(abstractC9843);
+        return this;
+    }
+
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2016(C12915 c12915) {
+        throw new UnsupportedOperationException();
     }
 }

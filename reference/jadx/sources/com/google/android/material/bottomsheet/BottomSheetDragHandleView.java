@@ -7,21 +7,21 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import l.AbstractC23790;
-import l.AbstractC6483;
-import l.C12025;
-import l.C16621;
-import l.C17910;
-import l.C18616;
-import l.C2387;
-import l.C2830;
-import l.C5031;
-import l.C9494;
-import l.C9679;
+import l.AbstractC11103;
+import l.AbstractC1936;
+import l.C11642;
+import l.C15578;
+import l.C15688;
+import l.C17340;
+import l.C22666;
+import l.C22687;
+import l.C24323;
+import l.C4185;
+import l.C8451;
 
 /* JADX INFO: loaded from: classes.dex */
-public class BottomSheetDragHandleView extends C2830 implements AccessibilityManager.AccessibilityStateChangeListener {
-    public static final int DEF_STYLE_RES = C18616.f59747;
+public class BottomSheetDragHandleView extends C15688 implements AccessibilityManager.AccessibilityStateChangeListener {
+    public static final int DEF_STYLE_RES = C4185.f14239;
     public final AccessibilityManager accessibilityManager;
     public boolean accessibilityServiceEnabled;
     public BottomSheetBehavior bottomSheetBehavior;
@@ -37,14 +37,14 @@ public class BottomSheetDragHandleView extends C2830 implements AccessibilityMan
     }
 
     public BottomSheetDragHandleView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8815);
+        this(context, attributeSet, C11642.f36658);
     }
 
     public BottomSheetDragHandleView(Context context, AttributeSet attributeSet, int i) {
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, DEF_STYLE_RES), attributeSet, i);
-        this.clickToExpandActionLabel = getResources().getString(C17910.f56825);
-        this.clickToCollapseActionLabel = getResources().getString(C17910.f56889);
-        this.clickFeedback = getResources().getString(C17910.f56791);
+        this.clickToExpandActionLabel = getResources().getString(C24323.f78751);
+        this.clickToCollapseActionLabel = getResources().getString(C24323.f78793);
+        this.clickFeedback = getResources().getString(C24323.f78780);
         this.bottomSheetCallback = new BottomSheetBehavior.BottomSheetCallback() { // from class: com.google.android.material.bottomsheet.BottomSheetDragHandleView.1
             @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
             public void onSlide(View view, float f) {
@@ -57,8 +57,8 @@ public class BottomSheetDragHandleView extends C2830 implements AccessibilityMan
         };
         this.accessibilityManager = (AccessibilityManager) getContext().getSystemService("accessibility");
         updateInteractableState();
-        C5031.m13990(this, new C12025() { // from class: com.google.android.material.bottomsheet.BottomSheetDragHandleView.2
-            @Override // l.C12025
+        C22666.m51098(this, new C22687() { // from class: com.google.android.material.bottomsheet.BottomSheetDragHandleView.2
+            @Override // l.C22687
             public void onPopulateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
                 super.onPopulateAccessibilityEvent(view, accessibilityEvent);
                 if (accessibilityEvent.getEventType() == 1) {
@@ -117,18 +117,18 @@ public class BottomSheetDragHandleView extends C2830 implements AccessibilityMan
         } else if (i == 3) {
             this.clickToExpand = false;
         }
-        C5031.m13988(this, C9494.f32123, this.clickToExpand ? this.clickToExpandActionLabel : this.clickToCollapseActionLabel, new C16621(this));
+        C22666.m51096(this, C8451.f27630, this.clickToExpand ? this.clickToExpandActionLabel : this.clickToCollapseActionLabel, new C17340(this));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ boolean lambda$onBottomSheetStateChanged$0(View view, AbstractC6483 abstractC6483) {
+    public /* synthetic */ boolean lambda$onBottomSheetStateChanged$0(View view, AbstractC1936 abstractC1936) {
         return expandOrCollapseBottomSheetIfPossible();
     }
 
     private void updateInteractableState() {
         this.interactable = this.accessibilityServiceEnabled && this.bottomSheetBehavior != null;
         int i = this.bottomSheetBehavior == null ? 2 : 1;
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         setImportantForAccessibility(i);
         setClickable(this.interactable);
     }
@@ -178,10 +178,10 @@ public class BottomSheetDragHandleView extends C2830 implements AccessibilityMan
                 return null;
             }
             ViewGroup.LayoutParams layoutParams = parentView.getLayoutParams();
-            if (layoutParams instanceof C9679) {
-                AbstractC23790 abstractC23790M24630 = ((C9679) layoutParams).m24630();
-                if (abstractC23790M24630 instanceof BottomSheetBehavior) {
-                    return (BottomSheetBehavior) abstractC23790M24630;
+            if (layoutParams instanceof C15578) {
+                AbstractC11103 abstractC11103M37307 = ((C15578) layoutParams).m37307();
+                if (abstractC11103M37307 instanceof BottomSheetBehavior) {
+                    return (BottomSheetBehavior) abstractC11103M37307;
                 }
             }
         }

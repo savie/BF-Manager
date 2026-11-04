@@ -1,13 +1,23 @@
 package l;
 
-import java.util.Comparator;
+import org.bouncycastle.pqc.crypto.mlkem.MLKEMParameters;
 
-/* JADX INFO: renamed from: l.ۚܿ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M59C */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5502 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        return ((InterfaceC6533) obj).getName().compareTo(((InterfaceC6533) obj2).getName());
+/* JADX INFO: renamed from: l.ۚ۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7UZ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5502 extends AbstractC11467 {
+    public C5502() {
+        this.f36056 = MLKEMParameters.ml_kem_1024;
+    }
+
+    @Override // l.InterfaceC20724
+    public final byte[] getPublicKey() {
+        return this.f36055.getEncoded();
+    }
+
+    @Override // l.InterfaceC20724
+    /* JADX INFO: renamed from: ۙ */
+    public final byte[] mo6228(byte[] bArr) {
+        return this.f36054.extractSecret(bArr);
     }
 }

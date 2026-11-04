@@ -1,42 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܽۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H74H */
+import java.util.HashMap;
+import java.util.HashSet;
+
+/* JADX INFO: renamed from: l.ۡ᩺ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A797 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9704 implements InterfaceC15690 {
+public final class C9704 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2522 f32692;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f31333;
 
-    public C9704(C2522 c2522) {
-        this.f32692 = c2522;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public HashSet f31334;
 
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC8011 mo7684(int i, int i2) {
-        C2522 c2522 = this.f32692;
-        C3352 c3352 = (C3352) c2522.f10021.get(i);
-        if (c3352 != null) {
-            return c3352;
-        }
-        if (c2522.f10020) {
-            return new C7928();
-        }
-        C3352 c3353 = new C3352(c2522, c2522.f10009, i);
-        c2522.f10021.put(i, c3353);
-        return c3353;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final HashSet f31335;
 
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ᩹ */
-    public final void mo7696() {
-        this.f32692.f10020 = true;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C1502 f31337;
 
-    @Override // l.InterfaceC15690
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo7690(InterfaceC6599 interfaceC6599) {
-        this.f32692.f10018 = interfaceC6599;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C10450 f31339;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final HashMap f31336 = new HashMap();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f31338 = new HashMap();
+
+    public C9704(boolean z, C1502 c1502, HashSet hashSet) {
+        this.f31333 = z;
+        this.f31337 = c1502;
+        this.f31335 = hashSet;
     }
 }

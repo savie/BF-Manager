@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RFC5649WrapEngine implements Wrapper {
     public static final byte[] DEFAULT_IV = {-90, 89, 89, -90};
     public final BlockCipher engine;

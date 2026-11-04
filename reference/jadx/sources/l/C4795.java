@@ -1,229 +1,146 @@
 package l;
 
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.util.Locale;
+import android.text.TextUtils;
+import com.alipay.sdk.m.n.c;
+import com.google.android.material.motion.MotionUtils;
+import com.umeng.analytics.pro.d;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
 
-/* JADX INFO: renamed from: l.ۙܿᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4795 implements InterfaceC15235, InterfaceC12413, Comparable, Serializable {
-    public static final /* synthetic */ int b = 0;
-    public static final long serialVersionUID = -23038383694477807L;
-    public final int a;
+/* JADX INFO: renamed from: l.ۙۡۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7CF */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4795 {
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return this.a - ((C4795) obj).a;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final String f16792;
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public ScheduledFuture f16793;
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public List f16794;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f16796;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public boolean f16797;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public C25154 f16801;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public List f16802;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public String f16803;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public AbstractC18900 f16804;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public List f16806;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public long f16808;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final String f16810;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f16811;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public long f16813;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C21578 f16814;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C21578 f16815;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public int f16816;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public List f16817;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public boolean f16818;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public String f16809 = "running";
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public String f16799 = "";
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public String f16812 = "";
+
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public int f16798 = 0;
+
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public String f16795 = "";
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public String f16807 = "";
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f16800 = "";
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f16805 = "";
+
+    public C4795(String str, String str2) {
+        C21578 c21578 = C21578.f68936;
+        this.f16815 = c21578;
+        this.f16814 = c21578;
+        this.f16803 = "";
+        List list = Collections.EMPTY_LIST;
+        this.f16817 = list;
+        this.f16806 = list;
+        this.f16802 = list;
+        this.f16794 = list;
+        this.f16792 = str;
+        this.f16810 = str2;
     }
 
-    static {
-        C16770 c16770 = new C16770();
-        c16770.m(EnumC18762.YEAR, 4, 10, EnumC1247.EXCEEDS_PAD);
-        c16770.q(Locale.getDefault(), EnumC5481.SMART, null);
-    }
-
-    public static C4795 V(int i) {
-        EnumC18762.YEAR.T(i);
-        return new C4795(i);
-    }
-
-    @Override // l.InterfaceC15235
-    public final long g(InterfaceC15235 interfaceC15235, InterfaceC18056 interfaceC18056) {
-        C4795 c4795V;
-        if (interfaceC15235 instanceof C4795) {
-            c4795V = (C4795) interfaceC15235;
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public static LinkedHashMap m14796(C4795 c4795) {
+        LinkedHashMap linkedHashMap;
+        LinkedHashMap linkedHashMap2 = new LinkedHashMap();
+        linkedHashMap2.put("taskId", c4795.f16792);
+        linkedHashMap2.put("type", c4795.f16810);
+        linkedHashMap2.put("done", Boolean.valueOf(c4795.f16818));
+        linkedHashMap2.put(c.a, c4795.f16809);
+        linkedHashMap2.put("title", c4795.f16799);
+        linkedHashMap2.put("name", c4795.f16812);
+        linkedHashMap2.put("progress", Integer.valueOf(c4795.f16798));
+        linkedHashMap2.put("remaining", c4795.f16795);
+        linkedHashMap2.put("speed", Long.valueOf(c4795.f16813));
+        linkedHashMap2.put(d.O, c4795.f16807);
+        linkedHashMap2.put("refreshDirectories", c4795.f16817);
+        linkedHashMap2.put("invalidatePrefixes", c4795.f16806);
+        linkedHashMap2.put("pathMoves", c4795.f16802);
+        linkedHashMap2.put("markedPaths", c4795.f16794);
+        if (TextUtils.isEmpty(c4795.f16800)) {
+            linkedHashMap = null;
         } else {
-            C13638.requireNonNull(interfaceC15235, "temporal");
-            try {
-                if (!C7122.c.equals(AbstractC14884.r(interfaceC15235))) {
-                    interfaceC15235 = C18991.X(interfaceC15235);
-                }
-                c4795V = V(interfaceC15235.l(EnumC18762.YEAR));
-            } catch (C15464 e) {
-                throw new C15464("Unable to obtain Year from TemporalAccessor: " + interfaceC15235 + " of type " + interfaceC15235.getClass().getName(), e);
-            }
+            LinkedHashMap linkedHashMap3 = new LinkedHashMap();
+            linkedHashMap3.put("id", c4795.f16800);
+            linkedHashMap3.put(MotionUtils.EASING_TYPE_PATH, c4795.f16805);
+            linkedHashMap3.put("incoming", C21949.m49659(c4795.f16815));
+            linkedHashMap3.put("existing", C21949.m49659(c4795.f16814));
+            linkedHashMap3.put("selectedAction", c4795.f16803);
+            linkedHashMap3.put("recyclable", Boolean.valueOf(c4795.f16797));
+            linkedHashMap3.put("moveToRecycleBin", Boolean.valueOf(c4795.f16811));
+            linkedHashMap = linkedHashMap3;
         }
-        if (interfaceC18056 instanceof EnumC22996) {
-            long j = ((long) c4795V.a) - ((long) this.a);
-            int i = AbstractC6767.b[((EnumC22996) interfaceC18056).ordinal()];
-            if (i == 1) {
-                return j;
-            }
-            if (i == 2) {
-                return j / 10;
-            }
-            if (i == 3) {
-                return j / 100;
-            }
-            if (i == 4) {
-                return j / 1000;
-            }
-            if (i == 5) {
-                EnumC18762 enumC18762 = EnumC18762.ERA;
-                return c4795V.G(enumC18762) - G(enumC18762);
-            }
-            throw new C14530("Unsupported unit: " + interfaceC18056);
-        }
-        return interfaceC18056.l(this, c4795V);
-    }
-
-    public C4795(int i) {
-        this.a = i;
-    }
-
-    @Override // l.InterfaceC21584
-    public final boolean e(InterfaceC11002 interfaceC11002) {
-        if (interfaceC11002 instanceof EnumC18762) {
-            return interfaceC11002 == EnumC18762.YEAR || interfaceC11002 == EnumC18762.YEAR_OF_ERA || interfaceC11002 == EnumC18762.ERA;
-        }
-        return interfaceC11002 != null && interfaceC11002.l(this);
-    }
-
-    @Override // l.InterfaceC21584
-    public final C1828 n(InterfaceC11002 interfaceC11002) {
-        if (interfaceC11002 == EnumC18762.YEAR_OF_ERA) {
-            return C1828.f(1L, this.a <= 0 ? 1000000000L : 999999999L);
-        }
-        return AbstractC23702.d(this, interfaceC11002);
-    }
-
-    @Override // l.InterfaceC21584
-    public final int l(InterfaceC11002 interfaceC11002) {
-        return n(interfaceC11002).a(G(interfaceC11002), interfaceC11002);
-    }
-
-    @Override // l.InterfaceC21584
-    public final long G(InterfaceC11002 interfaceC11002) {
-        if (!(interfaceC11002 instanceof EnumC18762)) {
-            return interfaceC11002.C(this);
-        }
-        int i = AbstractC6767.a[((EnumC18762) interfaceC11002).ordinal()];
-        if (i == 1) {
-            int i2 = this.a;
-            if (i2 < 1) {
-                i2 = 1 - i2;
-            }
-            return i2;
-        }
-        if (i == 2) {
-            return this.a;
-        }
-        if (i == 3) {
-            return this.a < 1 ? 0 : 1;
-        }
-        throw new C14530(AbstractC21107.a("Unsupported field: ", interfaceC11002));
-    }
-
-    @Override // l.InterfaceC15235
-    /* JADX INFO: renamed from: Y, reason: merged with bridge method [inline-methods] */
-    public final C4795 c(long j, InterfaceC11002 interfaceC11002) {
-        if (!(interfaceC11002 instanceof EnumC18762)) {
-            return (C4795) interfaceC11002.G(this, j);
-        }
-        EnumC18762 enumC18762 = (EnumC18762) interfaceC11002;
-        enumC18762.T(j);
-        int i = AbstractC6767.a[enumC18762.ordinal()];
-        if (i == 1) {
-            if (this.a < 1) {
-                j = 1 - j;
-            }
-            return V((int) j);
-        }
-        if (i == 2) {
-            return V((int) j);
-        }
-        if (i == 3) {
-            return G(EnumC18762.ERA) == j ? this : V(1 - this.a);
-        }
-        throw new C14530(AbstractC21107.a("Unsupported field: ", interfaceC11002));
-    }
-
-    @Override // l.InterfaceC15235
-    /* JADX INFO: renamed from: W, reason: merged with bridge method [inline-methods] */
-    public final C4795 d(long j, InterfaceC18056 interfaceC18056) {
-        if (!(interfaceC18056 instanceof EnumC22996)) {
-            return (C4795) interfaceC18056.m(this, j);
-        }
-        int i = AbstractC6767.b[((EnumC22996) interfaceC18056).ordinal()];
-        if (i == 1) {
-            return X(j);
-        }
-        if (i == 2) {
-            return X(AbstractC1726.Q(j, 10));
-        }
-        if (i == 3) {
-            return X(AbstractC1726.Q(j, 100));
-        }
-        if (i == 4) {
-            return X(AbstractC1726.Q(j, 1000));
-        }
-        if (i == 5) {
-            EnumC18762 enumC18762 = EnumC18762.ERA;
-            return c(AbstractC1726.P(G(enumC18762), j), enumC18762);
-        }
-        throw new C14530("Unsupported unit: " + interfaceC18056);
-    }
-
-    public final C4795 X(long j) {
-        if (j == 0) {
-            return this;
-        }
-        EnumC18762 enumC18762 = EnumC18762.YEAR;
-        return V(enumC18762.b.a(((long) this.a) + j, enumC18762));
-    }
-
-    @Override // l.InterfaceC15235
-    /* JADX INFO: renamed from: C */
-    public final InterfaceC15235 w(long j, EnumC22996 enumC22996) {
-        return j == Long.MIN_VALUE ? d(C17492.FOREVER_NS, enumC22996).d(1L, enumC22996) : d(-j, enumC22996);
-    }
-
-    @Override // l.InterfaceC21584
-    public final Object T(C22935 c22935) {
-        if (c22935 == AbstractC23702.b) {
-            return C7122.c;
-        }
-        if (c22935 == AbstractC23702.c) {
-            return EnumC22996.YEARS;
-        }
-        return AbstractC23702.c(this, c22935);
-    }
-
-    @Override // l.InterfaceC12413
-    public final InterfaceC15235 s(InterfaceC15235 interfaceC15235) {
-        if (!AbstractC14884.r(interfaceC15235).equals(C7122.c)) {
-            throw new C15464("Adjustment only supported on ISO date-time");
-        }
-        return interfaceC15235.c(this.a, EnumC18762.YEAR);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        return (obj instanceof C4795) && this.a == ((C4795) obj).a;
-    }
-
-    public final int hashCode() {
-        return this.a;
-    }
-
-    public final String toString() {
-        return Integer.toString(this.a);
-    }
-
-    private Object writeReplace() {
-        return new C3944((byte) 11, this);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Deserialization via serialization delegate");
-    }
-
-    @Override // l.InterfaceC15235
-    public final InterfaceC15235 m(C18991 c18991) {
-        return (C4795) AbstractC1726.a(c18991, this);
+        linkedHashMap2.put("conflict", linkedHashMap);
+        return linkedHashMap2;
     }
 }

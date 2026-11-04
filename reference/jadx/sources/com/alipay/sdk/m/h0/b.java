@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import l.C15489;
+import l.C14483;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -68,6 +68,6 @@ public class b {
     }
 
     public static String b() {
-        return C15489.m37076(new SimpleDateFormat(AWS4Signer.DATE_PATTERN).format(Calendar.getInstance().getTime()), ".log");
+        return C14483.m34972(new SimpleDateFormat(AWS4Signer.DATE_PATTERN).format(Calendar.getInstance().getTime()), ".log");
     }
 }

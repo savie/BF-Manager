@@ -1,111 +1,40 @@
 package l;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.concurrent.atomic.AtomicBoolean;
+/* JADX INFO: renamed from: l.ۛ᩻۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 22BV */
+/* JADX INFO: loaded from: classes.dex */
+public final class C6750 extends AbstractC2432 {
 
-/* JADX INFO: renamed from: l.ۜۨ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P70I */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6750 implements AutoCloseable {
+    /* JADX INFO: renamed from: ܳ᩷ۚ, reason: not valid java name and contains not printable characters */
+    private static final short[] f22475;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final long f22761;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C13101 f22762;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final C22710 f22763;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final long f22764;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AtomicBoolean f22765 = new AtomicBoolean();
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final long f22766;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C19182 f22767;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C5838 f22768;
-
-    public C6750(long j, long j2, long j3, C22710 c22710, C5838 c5838) {
-        this.f22764 = j;
-        this.f22761 = j2;
-        this.f22766 = j3;
-        this.f22763 = c22710;
-        this.f22768 = c5838;
-        this.f22762 = new C13101(C7893.m20861(c22710));
-        this.f22767 = new C19182(c22710);
+    static {
+        ApplicationC23172.m52091(71);
+        f22475 = new short[]{5232, -6110, -6098, -6100, -6033, -6102, -6104, -6099, -6099, -6033, -6112, -6095, -6102, -6092, -6097, -6095, -6112, -6110, -6102, -6108, -6093, -6098, -6093, -6106, -6033, -6101, -6108, -6091, -6109, -6093, -6112, -6104, -6097, -6094, -6033, -6101, -6112, -6089, -6112, -6033, -6107, -6108, -6110, -6098, -6100, -6095, -6104, -6099, -6108, -6093, -6033, -6100, -6112, -6104, -6097, -6033, -6137, -6108, -6093, -6097, -6105, -6099, -6098, -6090, -6108, -6093, -6034, -6099, -6104, -6109, -6034, -6112, -6093, -6100, -6108, -6112, -6109, -6104, -6036, -6089, -6026, -6112, -6034, -6099, -6104, -6109, -6144, -6093, -6100, -6140, -6095, -6104, -6110, -6121, -6100, -6033, -6094, -6098, -6034, -6099, -6104, -6109, -6034, -6112, -6093, -6100, -6108, -6112, -6109, -6104, -6036, -6089, -6026, -6112, -6034, -6099, -6104, -6109, -6112, -6095, -6102, -6092, -6097, -6095, -6112, -6110, -6102, -6108, -6093, -6033, -6094, -6098, -6034, -6112, -6094, -6094, -6108, -6091, -6094, -6034, -6144, -6095, -6102, -6124, -6097, -6095, -6112, -6110, -6102, -6108, -6093, -6034, -6112, -6094, -6094, -6108, -6091, -6094, -6034, -6144, -6095, -6102, -6124, -6097, -6095, -6112, -6110, -6102, -6108, -6093, -6114, -6094, -6098, -6034, -6112, -6093, -6100, -6034, -6099, -6104, -6109, -6144, -6095, -6102, -6124, -6097, -6095, -6112, -6110, -6102, -6108, -6093, 6456, -11944, -11957, -11948, -11940, -11944, -11941, -11952, -12012, -11953, -12018, -11944};
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18251(OutputStream outputStream, int i) throws C8599 {
-        m18253();
-        this.f22767.m44038(outputStream, i);
-        m18253();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18745[] m18252() throws C8599 {
-        m18253();
-        InterfaceC18745[] interfaceC18745ArrM20861 = C7893.m20861(this.f22763);
-        try {
-            m18253();
-            return interfaceC18745ArrM20861;
-        } catch (IOException | Error | RuntimeException e) {
-            try {
-                C15218.m36423(interfaceC18745ArrM20861);
-            } catch (IOException e2) {
-                e.addSuppressed(e2);
-            }
-            throw e;
-        }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
     }
 
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        if (this.f22765.compareAndSet(false, true)) {
-            this.f22762.m32350();
-        }
-    }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public native void mo1136();
 
-    public final int length() {
-        if (!this.f22765.get()) {
-            return this.f22767.m44036();
-        }
-        throw new IllegalStateException("HexRange is closed");
-    }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public native void mo1138();
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C3927 m18250() {
-        AtomicBoolean atomicBoolean = this.f22765;
-        if (!atomicBoolean.get()) {
-            C13101 c13101 = this.f22762;
-            c13101.m32351();
-            if (atomicBoolean.get()) {
-                c13101.m32350();
-                throw new IllegalStateException("HexRange is closed");
-            }
-            return new C3927(this.f22764, this.f22761, this.f22766, this.f22763, this.f22768, this.f22762);
-        }
-        throw new IllegalStateException("HexRange is closed");
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m18253() throws C8599 {
-        if (!this.f22765.get()) {
-            for (InterfaceC18745 interfaceC18745 : this.f22762.f43627) {
-                if (!interfaceC18745.mo2300()) {
-                    throw new C8599();
-                }
-            }
-            return;
-        }
-        throw new IllegalStateException("HexRange is closed");
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        C1398.m5108("local");
+        C19540.m45072("local", "local", new C3766());
     }
 }

@@ -1,112 +1,84 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: U1BV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8371 {
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public float f29039;
+/* JADX INFO: renamed from: l.۠ۘۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1KQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8371 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public float f29040;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11273 f27460;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public float f29041;
+    public final /* synthetic */ String f27461;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f29042;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1965 f27462;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public float f29043;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C10745 f27463;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public float f29044;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21903() {
-        this.f29040 = 0.0f;
-        this.f29041 = 0.0f;
-        this.f29039 = 0.0f;
-        this.f29042 = 0.0f;
-        this.f29043 = 0.0f;
+    public C8371(C1965 c1965, String str, C11273 c11273) {
+        this.f27462 = c1965;
+        this.f27461 = str;
+        this.f27460 = c11273;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21905(AbstractC8102 abstractC8102, float f) {
-        if (abstractC8102 != null) {
-            this.f29040 = abstractC8102.m21320(f);
-            this.f29044 = abstractC8102.m21316(f);
-        }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        C10745 c10745 = new C10745((AbstractActivityC17204) this.f27462.requireActivity());
+        c10745.m27397(R.string.MT_Protector);
+        c10745.mo25916((Runnable) null);
+        c10745.mo25931();
+        this.f27463 = c10745;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m21909(AbstractC8102 abstractC8102, AbstractC8102 abstractC8103, float f) {
-        if (abstractC8102 != null) {
-            this.f29039 = abstractC8102.m21320(f);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        String str = this.f27461;
+        C1965 c1965 = this.f27462;
+        c1965.f6594 = str;
+        if (c1965.f6591 == null || c1965.f6591.length < c1965.f6596.size()) {
+            c1965.f6591 = new int[c1965.f6596.size()];
         }
-        if (abstractC8103 != null) {
-            this.f29041 = abstractC8103.m21320(f);
+        int i = 0;
+        for (int i2 = 0; i2 < c1965.f6596.size(); i2++) {
+            if (this.f27460.m28527(((C13591) c1965.f6596.get(i2)).m33319())) {
+                c1965.f6591[i] = i2;
+                i++;
+            }
+            this.f27463.m27403((i * 100) / c1965.f6596.size());
+            if (this.f27463.m27399()) {
+                return;
+            }
         }
+        c1965.f6597 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21906(AbstractC8102 abstractC8102, AbstractC8102 abstractC8103, float f) {
-        if (abstractC8102 != null) {
-            this.f29043 = abstractC8102.m21320(f);
-        }
-        if (abstractC8103 != null) {
-            this.f29042 = abstractC8103.m21320(f);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21907(AbstractC22172 abstractC22172, float f) {
-        if (abstractC22172 != null) {
-            this.f29040 = abstractC22172.m49194(f);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m21910(AbstractC22172 abstractC22172, AbstractC22172 abstractC22173, float f) {
-        if (abstractC22172 != null) {
-            this.f29039 = abstractC22172.m49194(f);
-        }
-        if (abstractC22173 != null) {
-            this.f29041 = abstractC22173.m49194(f);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21908(AbstractC22172 abstractC22172, AbstractC22172 abstractC22173, float f) {
-        if (abstractC22172 == null && abstractC22173 == null) {
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f27463.m27399()) {
             return;
         }
-        if (abstractC22172 == null) {
-            this.f29043 = abstractC22172.m49194(f);
-        }
-        if (abstractC22173 == null) {
-            this.f29042 = abstractC22173.m49194(f);
-        }
+        C1965 c1965 = this.f27462;
+        c1965.f6589 = true;
+        C1965.m6764(c1965);
+        c1965.f6595.notifyDataSetChanged();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21904(float f, float f2, int i, int i2, float[] fArr) {
-        float f3 = fArr[0];
-        float f4 = fArr[1];
-        float f5 = (f - 0.5f) * 2.0f;
-        float f6 = (f2 - 0.5f) * 2.0f;
-        float f7 = f3 + this.f29039;
-        float f8 = f4 + this.f29041;
-        float f9 = (this.f29043 * f5) + f7;
-        float f10 = (this.f29042 * f6) + f8;
-        float radians = (float) Math.toRadians(this.f29044);
-        float radians2 = (float) Math.toRadians(this.f29040);
-        double d = radians;
-        double d2 = i2 * f6;
-        float fSin = (((float) ((Math.sin(d) * ((double) ((-i) * f5))) - (Math.cos(d) * d2))) * radians2) + f9;
-        float fCos = (radians2 * ((float) ((Math.cos(d) * ((double) (i * f5))) - (Math.sin(d) * d2)))) + f10;
-        fArr[0] = fSin;
-        fArr[1] = fCos;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f27462.f6592.m51299(exc);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        this.f27463.m27405();
     }
 }

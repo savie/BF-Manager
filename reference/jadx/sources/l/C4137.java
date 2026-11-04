@@ -1,65 +1,174 @@
 package l;
 
-import java.util.Collections;
-import java.util.IdentityHashMap;
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.ۘ᩵֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 67G0 */
+/* JADX INFO: renamed from: l.ۘۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F4KD */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4137 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C13311 m11765(Exception exc) {
-        if (m11767(exc, Collections.newSetFromMap(new IdentityHashMap()))) {
-            return new C13311(EnumC15428.SMB1_ONLY, null, false);
-        }
-        return new C13311(EnumC15428.UNKNOWN, exc, false);
-    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m11766(Throwable th) {
-        return m11768(th, Collections.newSetFromMap(new IdentityHashMap()));
+    public int f14032;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f14033 = 0;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f14034;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f14035;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f14036;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final char[] f14037;
+
+    public C4137(String str) {
+        this.f14037 = str.toCharArray();
+        this.f14036 = str.length();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m11767(Throwable th, Set set) {
-        if (th == null || !set.add(th)) {
-            return false;
-        }
-        if (th instanceof C21919) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private boolean m13265() {
+        int i;
+        int i2;
+        int i3;
+        char[] cArr;
+        char c;
+        do {
+            i = this.f14033;
+            i2 = this.f14036;
+            if (i >= i2) {
+                return false;
+            }
+            i3 = i + 1;
+            this.f14033 = i3;
+            cArr = this.f14037;
+            c = cArr[i];
+            if (c == '\n') {
+                break;
+            }
+        } while (c != '\r');
+        if (i3 >= i2) {
             return true;
         }
-        for (Throwable th2 : th.getSuppressed()) {
-            if (m11767(th2, set)) {
-                return true;
-            }
+        char c2 = cArr[i3];
+        if (c2 != '\n' && c2 != '\r') {
+            return true;
         }
-        return m11767(th.getCause(), set);
+        this.f14033 = i + 2;
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m11768(Throwable th, Set set) {
-        if (th == null || !set.add(th)) {
-            return false;
-        }
-        if (th instanceof C10360) {
-            C10360 c10360 = (C10360) th;
-            EnumC2162 enumC2162M26257 = c10360.m26257();
-            if (enumC2162M26257 == EnumC2162.SMB2_SESSION_SETUP && c10360.m26258() == EnumC3055.STATUS_ACCESS_DENIED.getValue()) {
-                return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m13266() {
+        String string;
+        while (true) {
+            int i = this.f14033;
+            int i2 = this.f14036;
+            if (i >= i2) {
+                return false;
             }
-            if (enumC2162M26257 == EnumC2162.SMB2_NEGOTIATE) {
-                long jM26258 = c10360.m26258();
-                if (jM26258 == EnumC3055.STATUS_NOT_SUPPORTED.getValue() || jM26258 == EnumC3055.STATUS_INVALID_PARAMETER.getValue() || jM26258 == EnumC3055.STATUS_NOT_IMPLEMENTED.getValue()) {
+            int i3 = i + 1;
+            this.f14033 = i3;
+            char[] cArr = this.f14037;
+            char c = cArr[i];
+            if (c == '\"') {
+                this.f14035 = i3;
+                StringBuilder sb = new StringBuilder();
+                while (true) {
+                    int i4 = this.f14033;
+                    string = null;
+                    if (i4 >= i2) {
+                        break;
+                    }
+                    int i5 = i4 + 1;
+                    this.f14033 = i5;
+                    char c2 = cArr[i4];
+                    if (c2 != '\n') {
+                        if (c2 == '\"') {
+                            this.f14032 = i4;
+                            string = sb.toString();
+                            break;
+                        }
+                        if (c2 != '\\') {
+                            sb.append(c2);
+                        } else {
+                            if (i5 == i2) {
+                                break;
+                            }
+                            int i6 = i4 + 2;
+                            this.f14033 = i6;
+                            char c3 = cArr[i5];
+                            if (c3 != '\"' && c3 != '\'') {
+                                if (c3 != 'U') {
+                                    if (c3 != '\\') {
+                                        if (c3 == 'b') {
+                                            sb.append('\b');
+                                        } else if (c3 == 'f') {
+                                            sb.append('\f');
+                                        } else if (c3 == 'n') {
+                                            sb.append('\n');
+                                        } else if (c3 == 'r') {
+                                            sb.append('\r');
+                                        } else if (c3 == 't') {
+                                            sb.append('\t');
+                                        } else if (c3 != 'u') {
+                                            m13265();
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (i2 - i6 < 4) {
+                                    this.f14033 = i2;
+                                    break;
+                                }
+                                String str = new String(cArr, i6, 4);
+                                this.f14033 += 4;
+                                try {
+                                    sb.append((char) Integer.parseInt(str, 16));
+                                } catch (NumberFormatException unused) {
+                                    m13265();
+                                }
+                            }
+                            sb.append(c3);
+                        }
+                    } else {
+                        break;
+                    }
+                }
+                this.f14034 = string;
+                if (string != null) {
                     return true;
                 }
+            } else if (c != '#') {
+                if (c == '\'' && i3 < i2) {
+                    int i7 = i + 2;
+                    this.f14033 = i7;
+                    if (cArr[i3] == '\\') {
+                        if (i7 != i2) {
+                            this.f14033 = i + 3;
+                            char c4 = cArr[i7];
+                            if (c4 == 'u' || c4 == 'U') {
+                                int i8 = i + 7;
+                                this.f14033 = i8;
+                                if (i8 > i2) {
+                                    this.f14033 = i2;
+                                }
+                            }
+                        }
+                    }
+                    int i9 = this.f14033;
+                    if (i9 != i2) {
+                        this.f14033 = i9 + 1;
+                        if (cArr[i9] != '\'') {
+                            m13266();
+                        }
+                    }
+                }
+            } else if (!m13265()) {
+                return false;
             }
         }
-        for (Throwable th2 : th.getSuppressed()) {
-            if (m11768(th2, set)) {
-                return true;
-            }
-        }
-        return m11768(th.getCause(), set);
     }
 }

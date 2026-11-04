@@ -1,110 +1,74 @@
 package l;
 
-import java.util.Iterator;
+import java.util.EnumSet;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ܶ᩶ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T57T */
+/* JADX INFO: renamed from: l.ܳܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S9GP */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15458 extends C22220 {
+public final class C15458 extends C24652 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18279 f50376;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final EnumC16446 f50321;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C4603 f50377;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final Set f50322;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C19003 f50378 = new C19003();
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C6117 f50323;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractC8774 f50379;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Set f50324;
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final EnumC11225 f50325;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Set f50326;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final Set f50327;
+
+    public C15458(EnumC15700 enumC15700, long j, long j2, EnumC16446 enumC16446, Set set, Set set2, Set set3, EnumC11225 enumC11225, Set set4, C6117 c6117) {
+        super(57, enumC15700, EnumC23906.SMB2_CREATE, j, j2);
+        this.f50321 = enumC16446 != null ? enumC16446 : EnumC16446.Identification;
+        this.f50326 = set;
+        this.f50322 = set2 == null ? EnumSet.noneOf(EnumC12038.class) : set2;
+        this.f50327 = set3 == null ? EnumSet.noneOf(EnumC0785.class) : set3;
+        this.f50325 = enumC11225 != null ? enumC11225 : EnumC11225.FILE_OPEN_IF;
+        this.f50324 = set4 == null ? EnumSet.noneOf(EnumC23160.class) : set4;
+        this.f50323 = c6117;
     }
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3955(C21452 c21452) {
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3959(C22489 c22489) {
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3961(C23195 c23195) {
-    }
-
-    @Override // l.C22220
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo7248(AbstractC8774 abstractC8774) {
-        if (abstractC8774 != null) {
-            for (AbstractC23219 abstractC23219 : this.f50376.f58322) {
-                if (abstractC23219.f75335.f58324.contains(abstractC23219.f75334) && abstractC8774.m22847(abstractC23219.f75336) && abstractC23219.mo8404(abstractC8774)) {
-                    Iterator it = abstractC23219.mo8405(abstractC8774).iterator();
-                    while (it.hasNext()) {
-                        this.f50378.m43723(new C6990(this.f50376, this.f50379, abstractC8774, (AbstractC8774) it.next(), abstractC23219, this.f50377));
-                    }
-                    break;
-                }
-            }
+    @Override // l.C24652
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo7006(C7453 c7453) {
+        byte[] bArrM40357;
+        int i = this.f79801;
+        c7453.m56023(i);
+        c7453.m56005((byte) 0);
+        c7453.m56005((byte) 0);
+        c7453.m56025(this.f50321.getValue());
+        c7453.m20459(8);
+        c7453.m20459(8);
+        c7453.m56025(C10961.m27791(this.f50326));
+        c7453.m56025(C10961.m27791(this.f50322));
+        c7453.m56025(C10961.m27791(this.f50327));
+        c7453.m56025(this.f50325.getValue());
+        c7453.m56025(C10961.m27791(this.f50324));
+        int i2 = i + 63;
+        String strM17651 = this.f50323.m17651();
+        if (strM17651 == null || strM17651.trim().length() == 0) {
+            c7453.m56023(i2);
+            c7453.m56023(0);
+            bArrM40357 = new byte[1];
+        } else {
+            bArrM40357 = C17192.m40357(strM17651);
+            c7453.m56023(i2);
+            c7453.m56023(bArrM40357.length);
         }
-        super.mo7248(abstractC8774);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3914(C0285 c0285) {
-        mo7248(c0285.f1596);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3960(C22885 c22885) {
-        mo7248(c22885.f74426);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3944(C14398 c14398) {
-        mo7248(c14398.f47207);
-        m49334(c14398.f47205);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3950(C16514 c16514) {
-        mo7248(c16514.f53044);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3918(C2026 c2026) {
-        mo7248(c2026.f7570);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3942(C13713 c13713) {
-        mo7248(c13713.f45220);
-        m49334(c13713.f45221);
-        mo7248(c13713.f45218);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3924(C4849 c4849) {
-        mo7248(c4849.f17076);
-    }
-
-    public C15458(C18279 c18279, AbstractC8774 abstractC8774, C4603 c4603) {
-        this.f50376 = c18279;
-        this.f50379 = abstractC8774;
-        c18279.f58320.getClass();
-        this.f50377 = C6761.m18290(c4603);
+        c7453.m56025(0L);
+        c7453.m56025(0L);
+        c7453.m56007(bArrM40357.length, bArrM40357);
     }
 }

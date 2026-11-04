@@ -1,206 +1,91 @@
 package l;
 
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.֫᩻ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֫᩶ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46W4 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C2160 implements Collection, Serializable, InterfaceC10441 {
-    public static final long serialVersionUID = 3053995032091335093L;
-    public final Collection a;
-    public final Object b;
+public final class C2160 extends AbstractC2323 {
 
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final /* synthetic */ Object[] toArray(IntFunction intFunction) {
-        return toArray((Object[]) intFunction.apply(0));
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final boolean f7117;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f7118;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final long f7119;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f7120;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String f7121;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Long f7122;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final long f7123;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Long f7124;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f7125;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f7126;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final boolean f7127;
+
+    public C2160(String str, boolean z, boolean z2, boolean z3, long j, long j2, Long l2, Long l3, String str2, boolean z4, boolean z5) {
+        this.f7121 = str;
+        this.f7127 = z;
+        this.f7126 = z2;
+        this.f7117 = z3;
+        this.f7119 = j;
+        this.f7123 = j2;
+        this.f7122 = l2;
+        this.f7124 = l3;
+        this.f7125 = str2;
+        this.f7120 = z4;
+        this.f7118 = z5;
     }
 
-    public C2160(Collection collection) {
-        this.a = (Collection) C13638.requireNonNull(collection);
-        this.b = this;
-    }
-
-    public C2160(Collection collection, Object obj) {
-        this.a = (Collection) C13638.requireNonNull(collection);
-        this.b = C13638.requireNonNull(obj);
-    }
-
-    @Override // java.util.Collection
-    public final int size() {
-        int size;
-        synchronized (this.b) {
-            size = this.a.size();
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C2160)) {
+            return false;
         }
-        return size;
+        C2160 c2160 = (C2160) obj;
+        return this.f7127 == c2160.f7127 && this.f7126 == c2160.f7126 && this.f7117 == c2160.f7117 && this.f7120 == c2160.f7120 && this.f7118 == c2160.f7118 && this.f7119 == c2160.f7119 && this.f7123 == c2160.f7123 && C17359.equals(this.f7121, c2160.f7121) && C17359.equals(this.f7122, c2160.f7122) && C17359.equals(this.f7124, c2160.f7124) && C17359.equals(this.f7125, c2160.f7125);
     }
 
-    @Override // java.util.Collection
-    public final boolean isEmpty() {
-        boolean zIsEmpty;
-        synchronized (this.b) {
-            zIsEmpty = this.a.isEmpty();
-        }
-        return zIsEmpty;
-    }
-
-    @Override // java.util.Collection
-    public final boolean contains(Object obj) {
-        boolean zContains;
-        synchronized (this.b) {
-            zContains = this.a.contains(obj);
-        }
-        return zContains;
-    }
-
-    @Override // java.util.Collection
-    public final Object[] toArray() {
-        Object[] array;
-        synchronized (this.b) {
-            array = this.a.toArray();
-        }
-        return array;
-    }
-
-    @Override // java.util.Collection
-    public final Object[] toArray(Object[] objArr) {
-        Object[] array;
-        synchronized (this.b) {
-            array = this.a.toArray(objArr);
-        }
-        return array;
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        return this.a.iterator();
-    }
-
-    @Override // java.util.Collection
-    public final boolean add(Object obj) {
-        boolean zAdd;
-        synchronized (this.b) {
-            zAdd = this.a.add(obj);
-        }
-        return zAdd;
-    }
-
-    @Override // java.util.Collection
-    public final boolean remove(Object obj) {
-        boolean zRemove;
-        synchronized (this.b) {
-            zRemove = this.a.remove(obj);
-        }
-        return zRemove;
-    }
-
-    @Override // java.util.Collection
-    public final boolean containsAll(Collection collection) {
-        boolean zContainsAll;
-        synchronized (this.b) {
-            zContainsAll = this.a.containsAll(collection);
-        }
-        return zContainsAll;
-    }
-
-    @Override // java.util.Collection
-    public final boolean addAll(Collection collection) {
-        boolean zAddAll;
-        synchronized (this.b) {
-            zAddAll = this.a.addAll(collection);
-        }
-        return zAddAll;
-    }
-
-    @Override // java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        boolean zRemoveAll;
-        synchronized (this.b) {
-            zRemoveAll = this.a.removeAll(collection);
-        }
-        return zRemoveAll;
-    }
-
-    @Override // java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        boolean zRetainAll;
-        synchronized (this.b) {
-            zRetainAll = this.a.retainAll(collection);
-        }
-        return zRetainAll;
-    }
-
-    @Override // java.util.Collection
-    public final void clear() {
-        synchronized (this.b) {
-            this.a.clear();
-        }
+    public final int hashCode() {
+        int i = (((((((this.f7127 ? 1231 : 1237) * 31) + (this.f7126 ? 1231 : 1237)) * 31) + (this.f7117 ? 1231 : 1237)) * 31) + (this.f7120 ? 1231 : 1237)) * 31;
+        int i2 = this.f7118 ? 1231 : 1237;
+        long j = this.f7119;
+        int i3 = (((i + i2) * 31) + ((int) (j ^ (j >>> 32)))) * 31;
+        long j2 = this.f7123;
+        return C17359.hashCode(this.f7125) + ((C17359.hashCode(this.f7124) + ((C17359.hashCode(this.f7122) + C24966.m55771((i3 + ((int) (j2 ^ (j2 >>> 32)))) * 31, 31, this.f7121)) * 31)) * 31);
     }
 
     public final String toString() {
-        String string;
-        synchronized (this.b) {
-            string = this.a.toString();
+        Object[] objArr = {this.f7121, Boolean.valueOf(this.f7127), Boolean.valueOf(this.f7126), Boolean.valueOf(this.f7117), Long.valueOf(this.f7119), Long.valueOf(this.f7123), this.f7122, this.f7124, this.f7125, Boolean.valueOf(this.f7120), Boolean.valueOf(this.f7118)};
+        String[] strArrSplit = "namePattern;nameRegex;exactName;nameCaseSensitive;minSize;maxSize;minModifiedAt;maxModifiedAt;contentPattern;contentRegex;contentCaseSensitive".length() == 0 ? new String[0] : "namePattern;nameRegex;exactName;nameCaseSensitive;minSize;maxSize;minModifiedAt;maxModifiedAt;contentPattern;contentRegex;contentCaseSensitive".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C2160.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
         }
-        return string;
-    }
-
-    @Override // java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        synchronized (this.b) {
-            C9030.a(this.a, consumer);
-        }
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final boolean removeIf(Predicate predicate) {
-        boolean zRemoveIf;
-        synchronized (this.b) {
-            zRemoveIf = C9030.removeIf(this.a, predicate);
-        }
-        return zRemoveIf;
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable
-    public final Spliterator spliterator() {
-        return C7287.convert(C9030.b(this.a));
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC20693 spliterator() {
-        return C9030.b(this.a);
-    }
-
-    @Override // java.util.Collection
-    public final Stream stream() {
-        return C2223.convert(C9030.stream(this.a));
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final InterfaceC5046 stream() {
-        return C9030.stream(this.a);
-    }
-
-    @Override // java.util.Collection
-    public final Stream parallelStream() {
-        return C2223.convert(C9030.parallelStream(this.a));
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final InterfaceC5046 parallelStream() {
-        return C9030.parallelStream(this.a);
-    }
-
-    private void writeObject(ObjectOutputStream objectOutputStream) {
-        synchronized (this.b) {
-            objectOutputStream.defaultWriteObject();
-        }
+        sb.append("]");
+        return sb.toString();
     }
 }

@@ -1,36 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗۚ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: TBJG */
+/* JADX INFO: renamed from: l.ۗ֡ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N8KR */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3037 extends AbstractC4946 {
+public final class C3037 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f11348;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public long f9841;
 
-    public C3037(int i) {
-        super(0);
-        this.f11348 = false;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f9842;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f9843;
+
+    public C3037() {
+        this.f9843 = -9223372036854775807L;
+        this.f9842 = -3.4028235E38f;
+        this.f9841 = -9223372036854775807L;
     }
 
-    @Override // l.AbstractC4946
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4959() {
-        this.f11348 = false;
+    public C3037(C20191 c20191) {
+        this.f9843 = c20191.f64821;
+        this.f9842 = c20191.f64820;
+        this.f9841 = c20191.f64819;
     }
 
-    @Override // l.AbstractC4946
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo4961() {
-        int i;
-        StringBuilder sb = new StringBuilder();
-        while (!this.f11348 && (i = this.f17280.read()) != -1) {
-            char c = (char) i;
-            sb.append(c);
-            if (c == '>' && sb.toString().endsWith("?>")) {
-                this.f11348 = true;
-            }
-        }
-        return sb.toString();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m9876(long j) {
+        this.f9843 = j;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m9874(float f) {
+        C20782.m47565(f > 0.0f || f == -3.4028235E38f);
+        this.f9842 = f;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m9875(long j) {
+        C20782.m47565(j >= 0 || j == -9223372036854775807L);
+        this.f9841 = j;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C20191 m9873() {
+        return new C20191(this);
     }
 }

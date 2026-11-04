@@ -7,8 +7,9 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C22697;
-import l.C8479;
+import l.C16076;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.DerivationFunction;
 import org.bouncycastle.crypto.agreement.ECVKOAgreement;
 import org.bouncycastle.crypto.digests.GOST3411_2012_256Digest;
@@ -22,7 +23,7 @@ import org.bouncycastle.jcajce.spec.UserKeyingMaterialSpec;
 import org.bouncycastle.jce.interfaces.ECPrivateKey;
 import org.bouncycastle.jce.interfaces.ECPublicKey;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyAgreementSpi extends BaseAgreementSpi {
     public ECVKOAgreement agreement;
     public String kaAlgorithm;
@@ -51,11 +52,6 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
         return publicKey instanceof BCECGOST3410_2012PublicKey ? ((BCECGOST3410_2012PublicKey) publicKey).engineGetKeyParameters() : ECUtil.generatePublicKeyParameter(publicKey);
     }
 
-    public static String getSimpleName(Class cls) {
-        String name = cls.getName();
-        return name.substring(name.lastIndexOf(46) + 1);
-    }
-
     @Override // org.bouncycastle.jcajce.provider.asymmetric.util.BaseAgreementSpi
     public byte[] doCalcSecret() {
         return this.result;
@@ -67,7 +63,7 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
             StringBuilder sb = new StringBuilder();
             sb.append(this.kaAlgorithm);
             sb.append(" key agreement requires ");
-            throw new InvalidKeyException(C22697.m50267(sb, getSimpleName(ECPrivateKey.class), " for initialisation"));
+            throw new InvalidKeyException(C8947.m23910(sb, getSimpleName(ECPrivateKey.class), " for initialisation"));
         }
         if (algorithmParameterSpec != null && !(algorithmParameterSpec instanceof UserKeyingMaterialSpec)) {
             throw new InvalidAlgorithmParameterException("No algorithm parameters supported");
@@ -82,22 +78,22 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
     @Override // javax.crypto.KeyAgreementSpi
     public Key engineDoPhase(Key key, boolean z) throws InvalidKeyException {
         if (this.parameters == null) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " not initialised."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " not initialised."));
         }
         if (!z) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
         }
         if (!(key instanceof PublicKey)) {
             StringBuilder sb = new StringBuilder();
             sb.append(this.kaAlgorithm);
             sb.append(" key agreement requires ");
-            throw new InvalidKeyException(C22697.m50267(sb, getSimpleName(ECPublicKey.class), " for doPhase"));
+            throw new InvalidKeyException(C8947.m23910(sb, getSimpleName(ECPublicKey.class), " for doPhase"));
         }
         try {
             this.result = this.agreement.calculateAgreement(generatePublicKeyParameter((PublicKey) key));
             return null;
         } catch (Exception e) {
-            throw new InvalidKeyException(this, C8479.m22142(e, new StringBuilder("calculation failed: "))) { // from class: org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi.1
+            throw new InvalidKeyException(this, C16076.m38224(e, new StringBuilder("calculation failed: "))) { // from class: org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi.1
                 public final /* synthetic */ KeyAgreementSpi this$0;
 
                 {
@@ -110,5 +106,9 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
                 }
             };
         }
+    }
+
+    public static String getSimpleName(Class cls) {
+        return C18063.m42088(46, 1, cls.getName());
     }
 }

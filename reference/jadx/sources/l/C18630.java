@@ -1,74 +1,92 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import java.util.Comparator;
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ܿ᩹ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18630 extends AbstractC14728 implements InterfaceC4251 {
+public final class C18630 extends AbstractC16547 implements InterfaceC8409, Consumer {
+    public Object f;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public static final EnumC13425 f60397 = EnumC13425.STATEMENT;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final EnumC13425 f60398 = EnumC13425.RULE;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public boolean f60399;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public C21825 f60400;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC8774 f60401;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final EnumC13425 f60402;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public C21825 f60403;
-
-    public C18630(EnumC13425 enumC13425, C21825 c21825, C21825 c21826, AbstractC8774 abstractC8774) {
-        C6171.m17171(c21825);
-        C6171.m17176(c21825.isEmpty() || c21825.f70876 != null);
-        this.f60402 = enumC13425;
-        this.f60400 = c21825;
-        this.f60403 = c21826;
-        this.f60401 = abstractC8774;
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3952(this);
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ Comparator getComparator() {
+        return C18105.$default$getComparator(this);
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.CASE;
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
     }
 
-    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public final C21825 m43083() {
-        return (C21825) C9030.stream(this.f60400).filter(new C11757(1)).map(new C18663(10)).collect(C21825.m48587());
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
     }
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C21825 m43084() {
-        if (this.f60402 == EnumC13425.STATEMENT) {
-            return this.f60403;
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        this.f = obj;
+    }
+
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final boolean tryAdvance(Consumer consumer) {
+        C17359.requireNonNull(consumer);
+        while (e() != EnumC4615.NO_MORE && this.a.tryAdvance(this)) {
+            if (a(1L) == 1) {
+                consumer.accept(this.f);
+                this.f = null;
+                return true;
+            }
         }
-        return null;
+        return false;
     }
 
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1904(this, obj);
+    @Override // l.InterfaceC8409
+    public final void forEachRemaining(Consumer consumer) {
+        C17359.requireNonNull(consumer);
+        C8846 c8846 = null;
+        while (true) {
+            EnumC4615 enumC4615E = e();
+            if (enumC4615E == EnumC4615.NO_MORE) {
+                return;
+            }
+            EnumC4615 enumC4615 = EnumC4615.MAYBE_MORE;
+            InterfaceC8409 interfaceC8409 = this.a;
+            if (enumC4615E == enumC4615) {
+                int i = this.c;
+                if (c8846 == null) {
+                    c8846 = new C8846(i);
+                } else {
+                    c8846.a = 0;
+                }
+                long j = 0;
+                while (interfaceC8409.tryAdvance(c8846)) {
+                    j++;
+                    if (j >= i) {
+                        break;
+                    }
+                }
+                if (j == 0) {
+                    return;
+                }
+                long jA = a(j);
+                for (int i2 = 0; i2 < jA; i2++) {
+                    consumer.accept(c8846.b[i2]);
+                }
+            } else {
+                interfaceC8409.forEachRemaining(consumer);
+                return;
+            }
+        }
     }
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60486;
+    @Override // l.AbstractC16547
+    public final InterfaceC8409 b(InterfaceC8409 interfaceC8409) {
+        return new C18630(interfaceC8409, this);
     }
 }

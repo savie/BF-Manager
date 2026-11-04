@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertificationRequest extends ASN1Object {
     public CertificationRequestInfo reqInfo;
     public AlgorithmIdentifier sigAlgId;

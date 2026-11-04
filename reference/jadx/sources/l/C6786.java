@@ -1,32 +1,37 @@
 package l;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import android.text.Editable;
+import android.text.TextWatcher;
+import com.umeng.analytics.pro.am;
 
-/* JADX INFO: renamed from: l.ۜ۬ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UBFO */
+/* JADX INFO: renamed from: l.ۜ֨֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6AY4 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6786 extends AbstractC5106 {
+public final class C6786 implements TextWatcher {
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final List f22913;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1626 f22615;
 
-    @Override // l.AbstractC5106
-    /* JADX INFO: renamed from: ۜ */
-    public final void mo12266() {
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+        C15243.m36590(charSequence, am.aB);
     }
 
-    public C6786(C4669 c4669) {
-        super(null, c4669, 4);
-        C3963 c3963 = new C3963();
-        c3963.m36533(0);
-        this.f22913 = Collections.singletonList(c3963);
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+        C15243.m36590(charSequence, am.aB);
     }
 
-    @Override // l.AbstractC23721
-    /* JADX INFO: renamed from: ۖ */
-    public final Collection mo12263() {
-        return this.f22913;
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        C15243.m36590(editable, am.aB);
+        C1626 c1626 = this.f22615;
+        if (c1626.m5770()) {
+            c1626.m5768((CharSequence) null);
+        }
+    }
+
+    public C6786(C1626 c1626) {
+        this.f22615 = c1626;
     }
 }

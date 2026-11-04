@@ -6,9 +6,9 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+.field public static final synthetic ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
-.field public static final enum ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+.field public static final enum ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
 .field public static final enum ᩶:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
@@ -26,7 +26,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     .line 29
     new-instance v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
@@ -37,7 +37,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     .line 33
     new-instance v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
@@ -61,7 +61,7 @@
     aput-object v3, v5, v6
 
     .line 21
-    sput-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sput-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     .locals 1
 
     .line 21
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܺ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܰ:[Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     invoke-virtual {v0}, [Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->clone()Ljava/lang/Object;
 
@@ -109,7 +109,7 @@
     .locals 3
 
     .line 42
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -125,7 +125,7 @@
 
     .line 45
     :cond_0
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferType;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -164,7 +164,7 @@
     const-string v2, " is not a recognized type"
 
     .line 0
-    invoke-static {v1, p0, v2}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

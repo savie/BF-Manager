@@ -806,7 +806,7 @@
     move-wide/from16 v18, v22
 
     .line 247
-    invoke-static/range {v12 .. v19}, Ll/ᩳ֫ᩳ;->ۙ(DDDD)D
+    invoke-static/range {v12 .. v19}, Ll/᩸ᩳ;->ۙ(DDDD)D
 
     move-result-wide v12
 
@@ -1524,7 +1524,7 @@
     move-wide/from16 v22, v0
 
     .line 412
-    invoke-static/range {v16 .. v23}, Ll/ᩳ֫ᩳ;->ۙ(DDDD)D
+    invoke-static/range {v16 .. v23}, Ll/᩸ᩳ;->ۙ(DDDD)D
 
     move-result-wide v8
 

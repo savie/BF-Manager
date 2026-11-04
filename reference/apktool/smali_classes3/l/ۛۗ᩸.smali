@@ -1,27 +1,42 @@
-.class public final Ll/ۛۗ᩸;
+.class public final synthetic Ll/ۛۗ᩸;
 .super Ljava/lang/Object;
-.source "99JQ"
+.source "16SF"
 
 # interfaces
-.implements Ll/֡ۢ᩸;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/֨ۗ᩸;
+
+.field public final synthetic ᩶:Z
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/֨ۗ᩸;Z)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۛۗ᩸;->ܰ:Ll/֨ۗ᩸;
+
+    iput-boolean p2, p0, Ll/ۛۗ᩸;->᩶:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final create()Ljava/lang/Object;
-    .locals 3
+.method public final run()V
+    .locals 2
 
-    .line 41
-    new-instance v0, Ll/ܿۗ᩸;
+    .line 0
+    iget-object v0, p0, Ll/ۛۗ᩸;->ܰ:Ll/֨ۗ᩸;
 
-    new-instance v1, Lorg/bouncycastle/crypto/BufferedBlockCipher;
+    iget-boolean v1, p0, Ll/ۛۗ᩸;->᩶:Z
 
-    new-instance v2, Lorg/bouncycastle/crypto/engines/DESEngine;
+    invoke-static {v0, v1}, Ll/֨ۗ᩸;->ۙ(Ll/֨ۗ᩸;Z)V
 
-    invoke-direct {v2}, Lorg/bouncycastle/crypto/engines/DESEngine;-><init>()V
-
-    invoke-direct {v1, v2}, Lorg/bouncycastle/crypto/BufferedBlockCipher;-><init>(Lorg/bouncycastle/crypto/BlockCipher;)V
-
-    invoke-direct {v0, v1}, Ll/ܳۗ᩸;-><init>(Lorg/bouncycastle/crypto/BufferedBlockCipher;)V
-
-    return-object v0
+    return-void
 .end method

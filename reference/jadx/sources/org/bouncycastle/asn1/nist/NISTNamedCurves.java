@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.asn1.x9.X9ECParametersHolder;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NISTNamedCurves {
     public static final Hashtable objIds = new Hashtable();
     public static final Hashtable names = new Hashtable();

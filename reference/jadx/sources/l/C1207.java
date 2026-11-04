@@ -1,155 +1,87 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
+import java.lang.ref.WeakReference;
 
-/* JADX INFO: renamed from: l.֨ܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1207 extends AbstractC18785 {
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream) {
-        return super.parseDelimitedFrom(inputStream);
+/* JADX INFO: renamed from: l.֨۬᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 872H */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C1207 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int f4376;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f4377;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f4378;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f4379;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final WeakReference f4380;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f4381;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f4382;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f4383;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f4384;
+
+    public C1207(int i, int i2, int i3, int i4, int i5, int i6, int i7, InterfaceC19106 interfaceC19106, int i8) {
+        this.f4381 = i;
+        this.f4382 = i2;
+        this.f4384 = i3;
+        this.f4378 = i4;
+        this.f4383 = i5;
+        this.f4377 = i6;
+        this.f4379 = i7;
+        this.f4380 = new WeakReference(interfaceC19106);
+        this.f4376 = i8;
     }
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseDelimitedFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream) {
-        return super.parseFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer) {
-        return super.parseFrom(byteBuffer);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer, C2701 c2701) {
-        return super.parseFrom(byteBuffer, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262) {
-        return super.parseFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        return super.parseFrom(abstractC3262, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725) {
-        return super.parseFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parseFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr) {
-        return super.parseFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2) {
-        return super.parseFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parseFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, C2701 c2701) {
-        return super.parseFrom(bArr, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream) {
-        return super.parsePartialDelimitedFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialDelimitedFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream) {
-        return super.parsePartialFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC3262 abstractC3262) {
-        return super.parsePartialFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725) {
-        return super.parsePartialFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parsePartialFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr) {
-        return super.parsePartialFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2) {
-        return super.parsePartialFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parsePartialFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, C2701 c2701) {
-        return super.parsePartialFrom(bArr, c2701);
-    }
-
-    @Override // l.InterfaceC6271
-    public final Object parsePartialFrom(AbstractC3262 abstractC3262, C2701 c2701) throws C4529 {
-        C13203 c13203NewBuilder = C23081.newBuilder();
-        try {
-            c13203NewBuilder.m32672(abstractC3262, c2701);
-            return c13203NewBuilder.buildPartial();
-        } catch (C2474 e) {
-            C4529 c4529M7587 = e.m7587();
-            c4529M7587.m12651(c13203NewBuilder.buildPartial());
-            throw c4529M7587;
-        } catch (C4529 e2) {
-            e2.m12651(c13203NewBuilder.buildPartial());
-            throw e2;
-        } catch (IOException e3) {
-            C4529 c4529 = new C4529(e3.getMessage(), e3);
-            c4529.m12651(c13203NewBuilder.buildPartial());
-            throw c4529;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m4422(int i, int i2, int i3, int i4, int i5, InterfaceC19106 interfaceC19106, int i6) {
+        int i7;
+        int i8;
+        int i9;
+        int i10;
+        int i11;
+        int i12 = this.f4381;
+        if (i12 <= 0 || interfaceC19106 != this.f4380.get() || i6 != this.f4376 || i5 != this.f4379 || i3 != (i7 = this.f4383) || i4 != (i8 = this.f4377) || (i9 = this.f4382) < 0 || i9 > (i10 = this.f4378) || (i11 = this.f4384) < 0 || i11 > i10) {
+            return 0;
         }
+        long j = i12;
+        if (((long) i9) + j == i7 && ((long) i11) + j == i8) {
+            if (i < 0 || i > i10 || i2 < 0 || i2 > i10) {
+                return 0;
+            }
+            long j2 = i;
+            long j3 = j2 + j;
+            long j4 = i2;
+            long j5 = j + j4;
+            long j6 = i5;
+            if (j3 <= j6 && j5 <= j6) {
+                long jM4421 = m4421(i3, i4, j2, j4);
+                long jM4422 = m4421(i3, i4, j3, j5);
+                if (jM4422 < 10 && jM4422 < jM4421) {
+                    return i12;
+                }
+            }
+        }
+        return 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static long m4421(int i, int i2, long j, long j2) {
+        long j3 = i;
+        long j4 = i2;
+        return Math.min(Math.min(Math.abs(j - j3), Math.abs(j - j4)), Math.min(Math.abs(j2 - j3), Math.abs(j2 - j4)));
     }
 }

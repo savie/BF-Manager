@@ -1,34 +1,21 @@
 package l;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
+/* JADX INFO: renamed from: l.ܰۙۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: QAL8 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14360 extends AbstractC24804 {
 
-/* JADX INFO: renamed from: l.ܳۜۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E67S */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14360 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) {
-        InputStream inputStream = (InputStream) ((C14277) c15313.m36673()).m34475();
-        C14277 c14277 = new C14277();
-        try {
-            byte[] bArr = new byte[10240];
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            while (true) {
-                int i = inputStream.read(bArr);
-                if (i == -1) {
-                    break;
-                } else {
-                    byteArrayOutputStream.write(bArr, 0, i);
-                }
-            }
-            inputStream.close();
-            byte[] byteArray = byteArrayOutputStream.toByteArray();
-            byteArrayOutputStream.close();
-            c14277.m34465(byteArray);
-        } catch (Exception unused) {
-        }
-        c15313.m36672(c14277);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC23955 f45284;
+
+    @Override // l.AbstractC24804
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object mo34789(C13614 c13614, InterfaceC4825 interfaceC4825) {
+        Object objMo3124 = this.f45284.mo3124(c13614, interfaceC4825);
+        return objMo3124 == EnumC16757.COROUTINE_SUSPENDED ? objMo3124 : C11471.f36082;
+    }
+
+    public C14360(InterfaceC23955 interfaceC23955) {
+        this.f45284 = interfaceC23955;
     }
 }

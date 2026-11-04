@@ -1,74 +1,67 @@
 package l;
 
 import android.content.DialogInterface;
-import bin.mt.plugin.api.util.ResultCallback;
-import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۡ᩵ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: PAPA */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9079 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ۡۖᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G668 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9079 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ResultCallback f30948;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC14806 f29507;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f30949;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ DialogInterfaceC8327 f29508;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC10490 f30950;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20194 f29509;
 
-    public C9079(AbstractActivityC10490 abstractActivityC10490, boolean z, ResultCallback resultCallback) {
-        this.f30950 = abstractActivityC10490;
-        this.f30949 = z;
-        this.f30948 = resultCallback;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f29510;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public AbstractC22044 f29511;
+
+    public C9079(AbstractActivityC17204 abstractActivityC17204, AbstractC14806 abstractC14806, DialogInterfaceC8327 dialogInterfaceC8327, C20194 c20194) {
+        this.f29510 = abstractActivityC17204;
+        this.f29507 = abstractC14806;
+        this.f29508 = dialogInterfaceC8327;
+        this.f29509 = c20194;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f30950, R.string.MT_Protector);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8199(this.f29510, 100);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        AbstractActivityC10490 abstractActivityC10490 = this.f30950;
-        abstractActivityC10490.mo7996(abstractActivityC10490.f35938.m17000().toString());
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        AbstractC22044 abstractC22044M39164 = C16530.m39164();
+        AbstractC14806 abstractC14806 = this.f29507;
+        this.f29511 = C12569.m31283(abstractC22044M39164, abstractC14806.mo18532(), abstractC14806.m35652().getEncoded(), abstractC14806.m35653().getEncoded());
+        abstractC14806.mo18535();
+        abstractC14806.mo18536();
     }
 
-    @Override // l.AbstractC3492
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C15829.m37611(R.string.MT_Protector);
-        boolean z = this.f30949;
-        AbstractActivityC10490 abstractActivityC10490 = this.f30950;
-        if (z) {
-            abstractActivityC10490.finish();
-        } else {
-            abstractActivityC10490.f35938.m17057(false);
-        }
-        ResultCallback resultCallback = this.f30948;
-        if (resultCallback != null) {
-            resultCallback.onSuccess();
-        }
+    public final void mo1134() {
+        C6331.m18055();
+        this.f29508.dismiss();
+        this.f29509.accept(this.f29511);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
-    }
-
-    @Override // l.AbstractC3492
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        AbstractActivityC10490 abstractActivityC10490 = this.f30950;
-        abstractActivityC10490.m31002(exc, (DialogInterface.OnDismissListener) null);
-        abstractActivityC10490.mo7993(exc);
-        ResultCallback resultCallback = this.f30948;
-        if (resultCallback != null) {
-            resultCallback.onFailure(C2641.m8151(exc));
-        }
+    public final void mo1135(Exception exc) {
+        this.f29510.m40401(exc, (DialogInterface.OnDismissListener) null);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

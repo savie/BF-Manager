@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x509.CRLReason;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RevokedInfo extends ASN1Object {
     public CRLReason revocationReason;
     public ASN1GeneralizedTime revocationTime;

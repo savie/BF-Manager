@@ -1,76 +1,61 @@
-.class public final synthetic Ll/᩻᩸ᩴ;
+.class public final Ll/᩻᩸ᩴ;
 .super Ljava/lang/Object;
-.source "EBUA"
+.source "N988"
 
 # interfaces
-.implements Ljava/util/function/LongPredicate;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/util/function/Predicate;
+.field public final synthetic ۙ:Landroid/widget/TextView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/Predicate;)V
+.method public constructor <init>(Landroid/widget/TextView;)V
     .locals 0
 
-    .line 0
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩻᩸ᩴ;->ܺ:Ljava/util/function/Predicate;
+    iput-object p1, p0, Ll/᩻᩸ᩴ;->ۙ:Landroid/widget/TextView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/LongPredicate;)Ljava/util/function/LongPredicate;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ᩳ᩻ᩴ;->$default$and(Ljava/util/function/LongPredicate;Ljava/util/function/LongPredicate;)Ljava/util/function/LongPredicate;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public synthetic negate()Ljava/util/function/LongPredicate;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/ᩳ᩻ᩴ;->$default$negate(Ljava/util/function/LongPredicate;)Ljava/util/function/LongPredicate;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/LongPredicate;)Ljava/util/function/LongPredicate;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ᩳ᩻ᩴ;->$default$or(Ljava/util/function/LongPredicate;Ljava/util/function/LongPredicate;)Ljava/util/function/LongPredicate;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final test(J)Z
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 2
-    iget-object v0, p0, Ll/᩻᩸ᩴ;->ܺ:Ljava/util/function/Predicate;
+    const/4 p1, 0x0
 
-    .line 256
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 31
+    iget-object v0, p0, Ll/᩻᩸ᩴ;->ۙ:Landroid/widget/TextView;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {v0, p1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+    const/4 p1, 0x0
 
-    move-result p1
+    .line 32
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    return p1
+    return-void
 .end method

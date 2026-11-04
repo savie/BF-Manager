@@ -6,8 +6,8 @@ import javax.net.ssl.SSLSocketFactory;
 public class TLS12SocketFactory extends SSLSocketFactory {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f207 = 0;
+    public static final /* synthetic */ int f197 = 0;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Object f208 = null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Object f198 = null;
 }

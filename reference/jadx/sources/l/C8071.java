@@ -1,34 +1,61 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34PY */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8071 extends C8777 {
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.InvalidObjectException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+import java.util.Map;
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8777 f28286;
+/* JADX INFO: renamed from: l.۟ᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6IE */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C8071 implements Externalizable {
+    public static final long serialVersionUID = 0;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C8071(C8777 c8777, AbstractC16579 abstractC16579, AbstractC0618 abstractC0618, C3794 c3794) {
-        super(abstractC16579, abstractC0618, c3794);
-        this.f28286 = c8777;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Object f26708;
+
+    @Override // java.io.Externalizable
+    public final void readExternal(ObjectInput objectInput) throws IOException {
+        C15243.m36590(objectInput, "input");
+        byte b = objectInput.readByte();
+        if (b != 0) {
+            throw new InvalidObjectException(C13645.m33382(b, "Unsupported flags value: "));
+        }
+        int i = objectInput.readInt();
+        if (i < 0) {
+            throw new InvalidObjectException("Illegal size value: " + i + '.');
+        }
+        C14782 c14782 = new C14782(i);
+        for (int i2 = 0; i2 < i; i2++) {
+            c14782.put(objectInput.readObject(), objectInput.readObject());
+        }
+        this.f26708 = c14782.m35603();
     }
 
-    @Override // l.C8777, l.AbstractC16579
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16579 mo1929(C3794 c3794) {
-        return new C8071(this, this.f30194, this.f53222, c3794);
+    /* JADX WARN: Type inference failed for: r0v2, types: [java.lang.Object, java.util.Map] */
+    /* JADX WARN: Type inference failed for: r0v4, types: [java.lang.Object, java.util.Map] */
+    @Override // java.io.Externalizable
+    public final void writeExternal(ObjectOutput objectOutput) throws IOException {
+        C15243.m36590(objectOutput, "output");
+        objectOutput.writeByte(0);
+        objectOutput.writeInt(this.f26708.size());
+        for (Map.Entry entry : this.f26708.entrySet()) {
+            objectOutput.writeObject(entry.getKey());
+            objectOutput.writeObject(entry.getValue());
+        }
     }
 
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ֡ */
-    public final AbstractC16579 mo5593() {
-        return this.f28286.mo5593();
+    public C8071(Map map) {
+        this.f26708 = map;
     }
 
-    @Override // l.C8777, l.InterfaceC18982
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16579 mo21285() {
-        return this.f30194;
+    public C8071() {
+        this.f26708 = C11053.f34872;
+    }
+
+    private final Object readResolve() {
+        return this.f26708;
     }
 }

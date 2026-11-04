@@ -1,59 +1,46 @@
 package l;
 
-import android.content.ClipData;
-import android.content.Context;
-import android.text.Editable;
-import android.text.Selection;
-import android.text.Spanned;
-import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-
-/* JADX INFO: renamed from: l.۫ۙۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: WB13 */
+/* JADX INFO: renamed from: l.ۨۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: I9WL */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12174 implements InterfaceC2580 {
-    @Override // l.InterfaceC2580
+public final class C12174 implements InterfaceC4145 {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f39153;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public long f39154;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public long f39155;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f39156;
+
+    @Override // l.InterfaceC4145
+    /* JADX INFO: renamed from: ᩸ */
+    public final long mo13272() {
+        return this.f39154 * ((long) this.f39153) * ((long) this.f39156);
+    }
+
+    @Override // l.InterfaceC2149
     /* JADX INFO: renamed from: ۙ */
-    public final C18374 mo8037(View view, C18374 c18374) {
-        CharSequence charSequenceCoerceToStyledText;
-        if (Log.isLoggable("ReceiveContent", 3)) {
-            C13638.toString(c18374);
-        }
-        if (c18374.m42620() == 2) {
-            return c18374;
-        }
-        ClipData clipDataM42619 = c18374.m42619();
-        int iM42621 = c18374.m42621();
-        TextView textView = (TextView) view;
-        Editable editable = (Editable) textView.getText();
-        Context context = textView.getContext();
-        boolean z = false;
-        for (int i = 0; i < clipDataM42619.getItemCount(); i++) {
-            ClipData.Item itemAt = clipDataM42619.getItemAt(i);
-            if ((iM42621 & 1) != 0) {
-                charSequenceCoerceToStyledText = itemAt.coerceToText(context);
-                if (charSequenceCoerceToStyledText instanceof Spanned) {
-                    charSequenceCoerceToStyledText = charSequenceCoerceToStyledText.toString();
-                }
-            } else {
-                charSequenceCoerceToStyledText = itemAt.coerceToStyledText(context);
-            }
-            if (charSequenceCoerceToStyledText != null) {
-                if (z) {
-                    editable.insert(Selection.getSelectionEnd(editable), "\n");
-                    editable.insert(Selection.getSelectionEnd(editable), charSequenceCoerceToStyledText);
-                } else {
-                    int selectionStart = Selection.getSelectionStart(editable);
-                    int selectionEnd = Selection.getSelectionEnd(editable);
-                    int iMax = Math.max(0, Math.min(selectionStart, selectionEnd));
-                    int iMax2 = Math.max(0, Math.max(selectionStart, selectionEnd));
-                    Selection.setSelection(editable, iMax2);
-                    editable.replace(iMax, iMax2, charSequenceCoerceToStyledText);
-                    z = true;
-                }
-            }
-        }
-        return null;
+    public final int mo6138(int i, int i2, byte[] bArr) {
+        this.f39153 = C0481.m2322(i + 4, bArr);
+        this.f39154 = C0481.m2322(i + 8, bArr);
+        this.f39155 = C0481.m2322(i + 12, bArr);
+        this.f39156 = C0481.m2318(i + 16, bArr);
+        return (i + 20) - i;
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbInfoAllocation[alloc=");
+        sb.append(this.f39154);
+        sb.append(",free=");
+        sb.append(this.f39155);
+        sb.append(",sectPerAlloc=");
+        sb.append(this.f39153);
+        sb.append(",bytesPerSect=");
+        return new String(C12669.m31437(this.f39156, "]", sb));
     }
 }

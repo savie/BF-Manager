@@ -1,70 +1,46 @@
 package l;
 
-import bin.mt.plus.R;
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۘ֨ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K14B */
+/* JADX INFO: renamed from: l.ۗᩴۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3604 extends AbstractC3492 {
+public final class C3604 {
+    public final Map a;
+    public final Map b;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14895 f13257;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C11697 f13258;
-
-    public C3604(C14895 c14895) {
-        this.f13257 = c14895;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        C14895 c14895 = this.f13257;
-        c14895.f48665.setVisibility(0);
-        c14895.f48663 = true;
-        c14895.f48666 = false;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        C14895 c14895 = this.f13257;
-        c14895.f48664.m17521();
-        if (c14895.f48662) {
-            this.f13258 = C14895.m35612(c14895);
-        }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C14895 c14895 = this.f13257;
-        if (c14895.f48662) {
-            c14895.f48660.m32414(this.f13258);
-            if (this.f13258 == null) {
-                C15829.m37611(R.string.MT_Protector);
+    public C3604(Map map) {
+        this.a = map;
+        HashMap map2 = new HashMap();
+        ArrayList arrayList = new ArrayList();
+        for (Map.Entry entry : map.entrySet()) {
+            HashMap map3 = new HashMap();
+            for (Map.Entry entry2 : ((Map) entry.getValue()).entrySet()) {
+                String str = (String) entry2.getValue();
+                String str2 = (String) entry2.getValue();
+                Long l2 = (Long) entry2.getKey();
+                ConcurrentMapC17249 concurrentMapC17249 = C12553.a;
+                map3.put(str, new AbstractMap.SimpleImmutableEntry(str2, l2));
             }
+            ArrayList arrayList2 = new ArrayList(map3.values());
+            Collections.sort(arrayList2, C12553.b);
+            map2.put((EnumC10315) entry.getKey(), arrayList2);
+            arrayList.addAll(arrayList2);
+            map2.put(null, arrayList);
         }
+        Collections.sort(arrayList, C12553.b);
+        this.b = map2;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        C14895 c14895 = this.f13257;
-        if (c14895.f48662) {
-            c14895.f48666 = true;
-            c14895.f48667.m42627((Throwable) exc);
+    public final String a(long j, EnumC10315 enumC10315) {
+        Map map = (Map) this.a.get(enumC10315);
+        if (map != null) {
+            return (String) map.get(Long.valueOf(j));
         }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        C14895 c14895 = this.f13257;
-        if (c14895.f48662) {
-            c14895.f48665.setVisibility(8);
-        }
-        c14895.f48663 = false;
+        return null;
     }
 }

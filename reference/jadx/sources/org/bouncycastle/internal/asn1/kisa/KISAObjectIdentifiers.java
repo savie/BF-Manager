@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.kisa;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface KISAObjectIdentifiers {
     public static final ASN1ObjectIdentifier id_seedCBC = new ASN1ObjectIdentifier("1.2.410.200004.1.4");
     public static final ASN1ObjectIdentifier id_seedMAC = new ASN1ObjectIdentifier("1.2.410.200004.1.7");

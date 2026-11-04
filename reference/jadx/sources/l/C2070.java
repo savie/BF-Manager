@@ -1,33 +1,34 @@
 package l;
 
-import java.util.Arrays;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.֫᩷ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8BJP */
+/* JADX INFO: renamed from: l.֫ܿۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2070 extends AbstractC3481 {
-    public C2070(List list) {
-        this.f12776.addAll(list);
-        this.f12777 = this.f12776.size();
-    }
+public final class C2070 extends AbstractC19969 implements InterfaceC10686 {
 
-    public C2070(AbstractC4166... abstractC4166Arr) {
-        this(Arrays.asList(abstractC4166Arr));
-    }
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f6892;
 
-    @Override // l.AbstractC4166
+    @Override // l.AbstractC8036
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2407(C0617 c0617, C0617 c0618) {
-        for (int i = this.f12777 - 1; i >= 0; i--) {
-            if (!((AbstractC4166) this.f12776.get(i)).mo2407(c0617, c0618)) {
-                return false;
-            }
-        }
-        return true;
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1491(this);
     }
 
-    public final String toString() {
-        return C4145.m11781(this.f12776, "");
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.THROW;
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5843(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68502;
     }
 }

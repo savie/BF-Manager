@@ -1,46 +1,50 @@
 package l;
 
-import android.graphics.Path;
+import java.util.HashSet;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۜۤܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: TB7B */
+/* JADX INFO: renamed from: l.ۛ᩹ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: KAQ1 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6704 extends AbstractC21521 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public float f22596;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Path f22597;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f22598;
+public final /* synthetic */ class C6704 implements Function {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18699 f22599;
+    public final /* synthetic */ int f22295;
 
-    public C6704(C18699 c18699, float f, float f2, Path path) {
-        this.f22599 = c18699;
-        this.f22598 = f;
-        this.f22596 = f2;
-        this.f22597 = path;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f22296;
+
+    public /* synthetic */ C6704(int i, Object obj) {
+        this.f22295 = i;
+        this.f22296 = obj;
     }
 
-    @Override // l.AbstractC21521
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo18118(AbstractC10898 abstractC10898) {
-        return !(abstractC10898 instanceof C23598);
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.AbstractC21521
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11256(String str) {
-        C18699 c18699 = this.f22599;
-        if (c18699.m43231()) {
-            Path path = new Path();
-            c18699.f60673.f74547.getTextPath(str, 0, str.length(), this.f22598, this.f22596, path);
-            this.f22597.addPath(path);
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f22295) {
+            case 0:
+                return C24604.m54926((C24604) this.f22296, (String) obj);
+            case 1:
+                return ((AbstractC2805) obj).mo9275((AbstractC2805) this.f22296);
+            default:
+                HashSet hashSet = (HashSet) this.f22296;
+                AbstractC1566 abstractC1566 = (AbstractC1566) obj;
+                if (!abstractC1566.m5569()) {
+                    return null;
+                }
+                hashSet.add(abstractC1566.mo5570());
+                return null;
         }
-        this.f22598 = c18699.f60673.f74547.measureText(str) + this.f22598;
     }
 }

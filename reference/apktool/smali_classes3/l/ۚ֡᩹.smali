@@ -1,199 +1,336 @@
-.class public final synthetic Ll/ۚ֡᩹;
+.class public final Ll/ۚ֡᩹;
 .super Ljava/lang/Object;
-.source "IB3L"
+.source "K9S0"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/۠֡᩹;
+.implements Ll/ᩴۚۗ;
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public ܰ:I
+
+.field public final synthetic ᩶:Ll/ۧ֡᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ll/ۧ֡᩹;I)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/ۚ֡᩹;->ܺ:I
-
+    .line 475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
+
+    .line 476
+    iget p1, p1, Ll/ۧ֡᩹;->᩶:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Ll/ۚ֡᩹;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public final add(I)V
+    .locals 0
+
+    .line 520
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final bridge synthetic add(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    invoke-static {p0, p1}, Ll/ۖ֡᩹;->ۙ(Ll/۠֡᩹;Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 2
-    iget v0, p0, Ll/ۚ֡᩹;->ܺ:I
+    .line 475
+    check-cast p1, Ljava/util/function/IntConsumer;
 
-    const-string v1, "/"
+    invoke-virtual {p0, p1}, Ll/ۚ֡᩹;->forEachRemaining(Ljava/util/function/IntConsumer;)V
 
-    const/4 v2, 0x1
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
-
-    .line 10
-    check-cast p1, Ll/ۙ᩶۟;
-
-    .line 13
-    invoke-virtual {p1}, Ll/ۙ᩶۟;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 17
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    new-array v0, v2, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    aput-object p1, v0, v1
-
-    const-string p1, "#%d?"
-
-    .line 19
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
 
     .line 0
-    :pswitch_1
-    check-cast p1, Ll/ۜۙۤ;
+    invoke-static {p0, p1}, Ll/ۨ֡᩹;->ۙ(Ll/ۛ֡᩹;Ljava/util/function/Consumer;)V
 
-    invoke-virtual {p1}, Ll/ۜۙۤ;->toString()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
+    .locals 4
 
-    return-object p1
+    .line 512
+    iget-object v0, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
 
-    :pswitch_2
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
+    iget-object v1, v0, Ll/ۧ֡᩹;->ܰ:[I
 
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$tKELCMc_78I3d-Sdl--8J4qr0GA(Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/TonalPalette;
+    .line 513
+    :goto_0
+    iget v2, p0, Ll/ۚ֡᩹;->ܰ:I
 
-    move-result-object p1
+    iget v3, v0, Ll/ۧ֡᩹;->֡:I
 
-    return-object p1
+    if-ge v2, v3, :cond_0
 
-    :pswitch_3
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
+    add-int/lit8 v3, v2, 0x1
 
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$r_xs8P9u8eQiwAFSUeg78FqZrgo(Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/TonalPalette;
+    .line 514
+    iput v3, p0, Ll/ۚ֡᩹;->ܰ:I
 
-    move-result-object p1
+    aget v2, v1, v2
 
-    return-object p1
+    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
 
-    :pswitch_4
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
+    goto :goto_0
 
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$HdtGC_9fg1Pe6_4H7_lQbumkKw8(Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/TonalPalette;
+    :cond_0
+    return-void
+.end method
 
-    move-result-object p1
+.method public final hasNext()Z
+    .locals 2
 
-    return-object p1
+    .line 480
+    iget v0, p0, Ll/ۚ֡᩹;->ܰ:I
 
-    :pswitch_5
-    check-cast p1, Ljava/lang/String;
+    iget-object v1, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
 
-    .line 360
-    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    iget v1, v1, Ll/ۧ֡᩹;->֡:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
+    .locals 2
+
+    .line 485
+    iget v0, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    iget-object v1, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
+
+    iget v1, v1, Ll/ۧ֡᩹;->᩶:I
+
+    if-le v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Integer;
+    .locals 1
+
+    .line 103
+    invoke-static {p0}, Ll/ۨ֡᩹;->ۙ(Ll/ۛ֡᩹;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 1
+
+    .line 31
+    invoke-virtual {p0}, Ll/ۚ֡᩹;->next()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final nextIndex()I
+    .locals 2
+
+    .line 502
+    iget v0, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    iget-object v1, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
+
+    iget v1, v1, Ll/ۧ֡᩹;->᩶:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final nextInt()I
+    .locals 3
+
+    .line 490
+    invoke-virtual {p0}, Ll/ۚ֡᩹;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    .line 491
+    iget-object v0, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
 
-    move-result-object p1
+    iget-object v0, v0, Ll/ۧ֡᩹;->ܰ:[I
 
+    iget v1, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    aget v0, v0, v1
+
+    return v0
+
+    .line 490
     :cond_0
-    return-object p1
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 0
-    :pswitch_6
-    check-cast p1, Ll/ۖܰۜ;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    .line 10
-    iget-object p1, p1, Ll/ۖܰۜ;->ۨ:Ljava/lang/String;
-
-    return-object p1
-
-    .line 0
-    :pswitch_7
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll/᩵֫ۘ;
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Ll/ۖ۬᩹;
-
-    .line 25
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-interface {p1}, Ll/ۖ۬᩹;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    .line 44
+    invoke-virtual {p0}, Ll/ۚ֡᩹;->ܽۙ()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final previousIndex()I
+    .locals 2
+
+    .line 507
+    iget v0, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    iget-object v1, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
+
+    iget v1, v1, Ll/ۧ֡᩹;->᩶:I
+
+    sub-int/2addr v0, v1
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    .line 530
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final bridge synthetic set(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    invoke-static {p0, p1}, Ll/ۖ֡᩹;->᩷(Ll/۠֡᩹;Ljava/lang/Object;)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public final ۙ(I)V
+    .locals 0
+
+    .line 525
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final synthetic ۙ(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ֡᩹;->ۙ(Ll/۠֡᩹;Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final ܽۙ()I
+    .locals 2
+
+    .line 496
+    invoke-virtual {p0}, Ll/ۚ֡᩹;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 497
+    iget-object v0, p0, Ll/ۚ֡᩹;->᩶:Ll/ۧ֡᩹;
+
+    iget-object v0, v0, Ll/ۧ֡᩹;->ܰ:[I
+
+    iget v1, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Ll/ۚ֡᩹;->ܰ:I
+
+    aget v0, v0, v1
+
+    return v0
+
+    .line 496
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final synthetic ᩷(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ֡᩹;->᩷(Ll/۠֡᩹;Ljava/lang/Integer;)V
+
+    return-void
 .end method

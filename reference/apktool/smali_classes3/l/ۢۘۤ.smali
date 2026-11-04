@@ -1,20 +1,41 @@
 .class public final Ll/ۢۘۤ;
-.super Ll/᩻ۜۤ;
-.source "P5QW"
+.super Ljava/lang/Object;
+.source "D77D"
 
 
 # instance fields
-.field public final synthetic ᩶:Ll/ۙۜۤ;
+.field public final ۙ:J
+
+.field public final ۤ:I
+
+.field public final ᩴ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:Ll/ۜۘۤ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۙۜۤ;Ll/ۙۜۤ;)V
+.method public constructor <init>(IIJILl/ۜۘۤ;)V
     .locals 0
 
-    .line 359
-    iput-object p1, p0, Ll/ۢۘۤ;->᩶:Ll/ۙۜۤ;
+    .line 270
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll/᩻ۜۤ;-><init>(Ll/ۙۜۤ;)V
+    .line 271
+    iput p1, p0, Ll/ۢۘۤ;->ᩴ:I
+
+    .line 272
+    iput p2, p0, Ll/ۢۘۤ;->᩷:I
+
+    .line 273
+    iput-wide p3, p0, Ll/ۢۘۤ;->ۙ:J
+
+    .line 274
+    iput p5, p0, Ll/ۢۘۤ;->ۤ:I
+
+    .line 275
+    iput-object p6, p0, Ll/ۢۘۤ;->᩸:Ll/ۜۘۤ;
 
     return-void
 .end method
@@ -22,22 +43,29 @@
 
 # virtual methods
 .method public final ۙ()V
-    .locals 2
+    .locals 1
 
-    .line 362
-    iget-object v0, p0, Ll/ۢۘۤ;->᩶:Ll/ۙۜۤ;
+    .line 282
+    iget-object v0, p0, Ll/ۢۘۤ;->᩸:Ll/ۜۘۤ;
 
-    iget-object v1, v0, Ll/ۙۜۤ;->ۧ:Lpl/droidsonroids/gif/GifInfoHandle;
+    .line 730
+    iget-object v0, v0, Ll/ۜۘۤ;->ۙ:Ll/۬ۘۤ;
 
-    invoke-virtual {v1}, Lpl/droidsonroids/gif/GifInfoHandle;->ۡ()Z
+    invoke-virtual {v0}, Ll/۬ۘۤ;->ۙ()V
 
-    move-result v1
+    return-void
+.end method
 
-    if-eqz v1, :cond_0
+.method public final ᩷()V
+    .locals 1
 
-    .line 363
-    invoke-virtual {v0}, Ll/ۙۜۤ;->start()V
+    .line 289
+    iget-object v0, p0, Ll/ۢۘۤ;->᩸:Ll/ۜۘۤ;
 
-    :cond_0
+    .line 735
+    iget-object v0, v0, Ll/ۜۘۤ;->ۙ:Ll/۬ۘۤ;
+
+    invoke-virtual {v0}, Ll/۬ۘۤ;->᩷()V
+
     return-void
 .end method

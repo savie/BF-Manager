@@ -1,113 +1,102 @@
-.class public interface abstract Ll/᩵ۢᩴ;
+.class public final Ll/᩵ۢᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "192I"
 
 # interfaces
-.implements Ll/ۛܳᩴ;
+.implements Landroid/text/TextWatcher;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۛۢᩴ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۛۢᩴ;)V
+    .locals 0
+
+    .line 143
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩵ۢᩴ;->ܰ:Ll/ۛۢᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Ll/ۚۤᩴ;)Ll/᩵ۢᩴ;
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 2
+
+    .line 156
+    iget-object v0, p0, Ll/᩵ۢᩴ;->ܰ:Ll/ۛۢᩴ;
+
+    invoke-static {v0}, Ll/ۛۢᩴ;->᩸(Ll/ۛۢᩴ;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    .line 159
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 160
+    invoke-static {p1}, Ll/ۧܺܺ;->ۤ(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 161
+    invoke-static {p1}, Ll/ۧܺܺ;->֫(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 162
+    invoke-static {v0}, Ll/ۛۢᩴ;->᩷(Ll/ۛۢᩴ;)Ll/᩶᩶᩻;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ll/᩶᩶᩻;->ۙ(I)V
+
+    .line 163
+    invoke-static {v0, p1}, Ll/ۛۢᩴ;->᩷(Ll/ۛۢᩴ;I)V
+
+    .line 164
+    invoke-static {v0}, Ll/ۛۢᩴ;->ۙ(Ll/ۛۢᩴ;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 165
+    invoke-static {v0}, Ll/ۛۢᩴ;->ۤ(Ll/ۛۢᩴ;)Ll/۠ۖۧ;
+
+    move-result-object p1
+
+    invoke-static {v0}, Ll/ۛۢᩴ;->֫(Ll/ۛۢᩴ;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ll/۠ۖۧ;->ۙ(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method
 
-.method public abstract allMatch(Ljava/util/function/DoublePredicate;)Z
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract anyMatch(Ljava/util/function/DoublePredicate;)Z
-.end method
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-.method public abstract average()Ll/ܽۛᩴ;
-.end method
-
-.method public abstract boxed()Ll/ۚ֫ᩴ;
-.end method
-
-.method public abstract collect(Ljava/util/function/Supplier;Ljava/util/function/ObjDoubleConsumer;Ljava/util/function/BiConsumer;)Ljava/lang/Object;
-.end method
-
-.method public abstract count()J
-.end method
-
-.method public abstract distinct()Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract dropWhile(Ljava/util/function/DoublePredicate;)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract filter(Ljava/util/function/DoublePredicate;)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract findAny()Ll/ܽۛᩴ;
-.end method
-
-.method public abstract findFirst()Ll/ܽۛᩴ;
-.end method
-
-.method public abstract forEach(Ljava/util/function/DoubleConsumer;)V
-.end method
-
-.method public abstract forEachOrdered(Ljava/util/function/DoubleConsumer;)V
-.end method
-
-.method public abstract h()Ll/ᩴܰ۠;
-.end method
-
-.method public abstract i()Ll/ܰ֫ᩴ;
-.end method
-
-.method public abstract iterator()Ll/ۙ᩻ᩴ;
-.end method
-
-.method public abstract limit(J)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract map(Ljava/util/function/DoubleUnaryOperator;)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract mapToObj(Ljava/util/function/DoubleFunction;)Ll/ۚ֫ᩴ;
-.end method
-
-.method public abstract max()Ll/ܽۛᩴ;
-.end method
-
-.method public abstract min()Ll/ܽۛᩴ;
-.end method
-
-.method public abstract noneMatch(Ljava/util/function/DoublePredicate;)Z
-.end method
-
-.method public abstract parallel()Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract peek(Ljava/util/function/DoubleConsumer;)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract reduce(DLjava/util/function/DoubleBinaryOperator;)D
-.end method
-
-.method public abstract reduce(Ljava/util/function/DoubleBinaryOperator;)Ll/ܽۛᩴ;
-.end method
-
-.method public abstract sequential()Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract skip(J)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract sorted()Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract spliterator()Ll/۟ܳᩴ;
-.end method
-
-.method public abstract sum()D
-.end method
-
-.method public abstract summaryStatistics()Ll/ܿ᩹۠;
-.end method
-
-.method public abstract takeWhile(Ljava/util/function/DoublePredicate;)Ll/᩵ۢᩴ;
-.end method
-
-.method public abstract toArray()[D
+    return-void
 .end method

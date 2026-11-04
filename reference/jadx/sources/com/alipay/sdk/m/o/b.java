@@ -10,7 +10,7 @@ import com.umeng.analytics.pro.am;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C1679;
+import l.C20196;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -104,7 +104,7 @@ public final class b {
     public boolean k = false;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f77913l = true;
+    public boolean f82029l = true;
     public boolean m = false;
     public boolean n = false;
     public boolean o = false;
@@ -145,7 +145,7 @@ public final class b {
                 if (bVarA != null) {
                     b.this.a(this.a, bVarA.a());
                     b.this.j(com.alipay.sdk.m.w.a.f());
-                    com.alipay.sdk.m.m.a.a(this.a, com.alipay.sdk.m.m.b.f77909l, "offcfg|" + this.c + "|" + this.d);
+                    com.alipay.sdk.m.m.a.a(this.a, com.alipay.sdk.m.m.b.f82025l, "offcfg|" + this.c + "|" + this.d);
                 }
             } catch (Throwable th) {
                 g.a(th);
@@ -218,7 +218,7 @@ public final class b {
     }
 
     public boolean b() {
-        return this.f77913l;
+        return this.f82029l;
     }
 
     public boolean c() {
@@ -509,7 +509,7 @@ public final class b {
         this.i = jSONObject.optBoolean(u0, true);
         this.j = jSONObject.optBoolean(v0, true);
         this.k = jSONObject.optBoolean(w0, false);
-        this.f77913l = jSONObject.optBoolean(x0, true);
+        this.f82029l = jSONObject.optBoolean(x0, true);
         this.m = jSONObject.optBoolean(y0, false);
         this.n = jSONObject.optBoolean(z0, false);
         this.o = jSONObject.optBoolean(A0, false);
@@ -574,14 +574,14 @@ public final class b {
     }
 
     public void a(com.alipay.sdk.m.w.a aVar, Context context, boolean z, int i) {
-        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "oncfg|" + z + "|" + i);
+        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "oncfg|" + z + "|" + i);
         a aVar2 = new a(aVar, context, z, i);
         if (z && !q.h()) {
             int iF = f();
             if (q.a(iF, aVar2, "AlipayDCPBlok")) {
                 return;
             }
-            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.m0, "" + iF);
+            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.m0, "" + iF);
             return;
         }
         Thread thread = new Thread(aVar2);
@@ -601,6 +601,6 @@ public final class b {
         if (aVar == null) {
             return;
         }
-        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "getConfig", C1679.m5594(str, "|", str2));
+        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "getConfig", C20196.m46451(str, "|", str2));
     }
 }

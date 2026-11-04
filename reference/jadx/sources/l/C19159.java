@@ -1,18 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵֫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 44WG */
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
+
+/* JADX INFO: renamed from: l.ᩳܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K77A */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19159 extends AbstractC6686 implements InterfaceC8920 {
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۤ */
-    public final /* synthetic */ String mo1142() {
-        throw null;
+public final class C19159 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f61991;
+
+    public C19159(boolean z) {
+        this.f61991 = z;
     }
 
-    @Override // l.InterfaceC3005
-    /* JADX INFO: renamed from: ᩸ */
-    public final int mo8965() {
-        return this.f22552.m41166().mo5854(this.f22553 + 2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final JSONObject m44398() {
+        JSONObject jSONObjectObject = JSON.object();
+        boolean z = this.f61991;
+        return jSONObjectObject.add("confused", z).add("appReferenceOutput", z ? "hex8_upper_no_0x" : "names_or_hex").add("appNameReferencesAccepted", !z).add("systemNameReferencesAccepted", true).add("hexPrefixAccepted", true);
     }
 }

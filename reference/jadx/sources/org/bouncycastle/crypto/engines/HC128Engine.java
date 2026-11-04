@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.math.ec.custom.sec.SecP521R1Field;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HC128Engine implements StreamCipher {
     public boolean initialised;
     public byte[] iv;
@@ -158,7 +158,7 @@ public class HC128Engine implements StreamCipher {
         this.iv = parametersWithIV.getIV();
         CipherParameters parameters = parametersWithIV.getParameters();
         if (!(parameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("Invalid parameter passed to HC128 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("Invalid parameter passed to HC128 init - ", cipherParameters));
         }
         this.key = ((KeyParameter) parameters).getKey();
         init();

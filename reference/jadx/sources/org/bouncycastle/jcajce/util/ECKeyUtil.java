@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.security.interfaces.ECPublicKey;
 import java.security.spec.ECParameterSpec;
 import java.security.spec.ECPoint;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
@@ -16,7 +16,7 @@ import org.bouncycastle.asn1.x9.X9ECPoint;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECKeyUtil {
 
     public class ECPublicKeyWithCompression implements ECPublicKey {
@@ -67,7 +67,7 @@ public class ECKeyUtil {
             try {
                 return new SubjectPublicKeyInfo(subjectPublicKeyInfo.getAlgorithm(), ASN1OctetString.getInstance(new X9ECPoint(curve.decodePoint(subjectPublicKeyInfo.getPublicKeyData().getOctets()), true).toASN1Primitive()).getOctets()).getEncoded();
             } catch (IOException e) {
-                throw new IllegalStateException(C9013.m23329(e, new StringBuilder("unable to encode EC public key: ")));
+                throw new IllegalStateException(C11958.m29932(e, new StringBuilder("unable to encode EC public key: ")));
             }
         }
     }

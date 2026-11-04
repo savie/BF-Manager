@@ -1,13 +1,22 @@
 .class public final Ll/۫ܰ᩺;
-.super Ll/᩺᩹᩵;
-.source "T6QI"
+.super Ljava/lang/Object;
+.source "U7L3"
 
 
-# virtual methods
-.method public final ܰ()I
+# static fields
+.field public static final ۙ:Ll/۬֡ۘ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x92
+    .line 44
+    new-instance v0, Ll/۬֡ۘ;
 
-    return v0
+    invoke-direct {v0}, Ll/۬֡ۘ;-><init>()V
+
+    sput-object v0, Ll/۫ܰ᩺;->ۙ:Ll/۬֡ۘ;
+
+    return-void
 .end method

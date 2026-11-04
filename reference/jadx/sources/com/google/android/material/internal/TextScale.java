@@ -6,42 +6,42 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.HashMap;
-import l.AbstractC11766;
-import l.C8238;
+import l.AbstractC0329;
+import l.C22508;
 
 /* JADX INFO: loaded from: classes.dex */
-public class TextScale extends AbstractC11766 {
+public class TextScale extends AbstractC0329 {
     public static final String PROPNAME_SCALE = "android:textscale:scale";
 
-    @Override // l.AbstractC11766
-    public void captureStartValues(C8238 c8238) {
-        captureValues(c8238);
+    @Override // l.AbstractC0329
+    public void captureStartValues(C22508 c22508) {
+        captureValues(c22508);
     }
 
-    @Override // l.AbstractC11766
-    public void captureEndValues(C8238 c8238) {
-        captureValues(c8238);
+    @Override // l.AbstractC0329
+    public void captureEndValues(C22508 c22508) {
+        captureValues(c22508);
     }
 
-    private void captureValues(C8238 c8238) {
-        View view = c8238.f28685;
+    private void captureValues(C22508 c22508) {
+        View view = c22508.f72817;
         if (view instanceof TextView) {
-            c8238.f28686.put(PROPNAME_SCALE, Float.valueOf(((TextView) view).getScaleX()));
+            c22508.f72818.put(PROPNAME_SCALE, Float.valueOf(((TextView) view).getScaleX()));
         }
     }
 
-    @Override // l.AbstractC11766
-    public Animator createAnimator(ViewGroup viewGroup, C8238 c8238, C8238 c8239) {
-        if (c8238 == null || c8239 == null || !(c8238.f28685 instanceof TextView)) {
+    @Override // l.AbstractC0329
+    public Animator createAnimator(ViewGroup viewGroup, C22508 c22508, C22508 c22509) {
+        if (c22508 == null || c22509 == null || !(c22508.f72817 instanceof TextView)) {
             return null;
         }
-        View view = c8239.f28685;
+        View view = c22509.f72817;
         if (!(view instanceof TextView)) {
             return null;
         }
         final TextView textView = (TextView) view;
-        HashMap map = c8238.f28686;
-        HashMap map2 = c8239.f28686;
+        HashMap map = c22508.f72818;
+        HashMap map2 = c22509.f72818;
         float fFloatValue = map.get(PROPNAME_SCALE) != null ? ((Float) map.get(PROPNAME_SCALE)).floatValue() : 1.0f;
         float fFloatValue2 = map2.get(PROPNAME_SCALE) != null ? ((Float) map2.get(PROPNAME_SCALE)).floatValue() : 1.0f;
         if (fFloatValue == fFloatValue2) {

@@ -559,13 +559,13 @@
     const-string v3, ", ex = "
 
     .line 0
-    invoke-static {v2, v0, v3}, Ll/۫ܰۖ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v3}, Ll/᩸ۨۧ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v2, "MicroMsg.SDK.WXMusicVideoObject"
 
-    invoke-static {v1, v0, v2}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {v1, v0, v2}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     :cond_0
     :goto_0

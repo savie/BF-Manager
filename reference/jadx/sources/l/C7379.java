@@ -1,73 +1,168 @@
 package l;
 
-import bin.mt.plus.R;
-import com.umeng.analytics.pro.d;
+import android.app.Application;
+import android.content.ContextWrapper;
+import android.os.Build;
+import android.os.Looper;
+import com.alipay.sdk.m.y.c;
 
-/* JADX INFO: renamed from: l.۟ۢۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
+/* JADX INFO: renamed from: l.ۜ᩶ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 48SH */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7379 extends AbstractDialogInterfaceOnClickListenerC17341 {
+public final class C7379 {
 
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f24475;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public C1413 f24266;
 
     /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC15847 f24476;
+    public InterfaceC6908 f24267;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f24477;
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public C10361 f24268;
 
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f24478;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C7750 f24269;
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f24479;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public C23788 f24270;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C7379(ViewOnClickListenerC15847 viewOnClickListenerC15847, AbstractActivityC12483 abstractActivityC12483, String str, String str2, String str3, String str4) {
-        super(abstractActivityC12483, -1);
-        this.f24476 = viewOnClickListenerC15847;
-        this.f24477 = str;
-        this.f24475 = str2;
-        this.f24478 = str3;
-        this.f24479 = str4;
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public long f24271;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9615 f24272;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public Looper f24273;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public long f24274;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public long f24275;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f24276;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ContextWrapper f24277;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public int f24278;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public InterfaceC6908 f24279;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public String f24280;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f24281;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C0404 f24282;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public C1019 f24283;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f24284;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C18412 f24285;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f24286;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public long f24287;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public C9221 f24288;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public long f24289;
+
+    public C7379(final Application application) {
+        this(application, new InterfaceC6908() { // from class: l.ۖ᩶ۙ
+            @Override // l.InterfaceC6908
+            public final Object get() {
+                return new C24534(application);
+            }
+        }, new InterfaceC6908() { // from class: l.۠᩶ۙ
+            @Override // l.InterfaceC6908
+            public final Object get() {
+                return new C12131(new C17162(application), new C13644());
+            }
+        });
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String strM40352 = m40352();
-        if (this.f24477.equals(strM40352)) {
-            m40365(R.string.MT_Protector);
-            return;
+    public C7379(ActivityC7135 activityC7135, C24534 c24534, C12131 c12131) {
+        this(activityC7135, new C8125(c24534), new C19312(c12131));
+    }
+
+    public C7379(ContextWrapper contextWrapper, InterfaceC6908 interfaceC6908, InterfaceC6908 interfaceC6909) {
+        C10361 c10361 = new C10361(contextWrapper);
+        C1413 c1413 = new C1413();
+        C9615 c9615 = new C9615(0, contextWrapper);
+        C7750 c7750 = new C7750();
+        this.f24277 = contextWrapper;
+        this.f24267 = interfaceC6908;
+        this.f24279 = interfaceC6909;
+        this.f24268 = c10361;
+        this.f24266 = c1413;
+        this.f24272 = c9615;
+        this.f24269 = c7750;
+        String str = C7116.f23455;
+        Looper looperMyLooper = Looper.myLooper();
+        this.f24273 = looperMyLooper == null ? Looper.getMainLooper() : looperMyLooper;
+        this.f24285 = C18412.f59977;
+        this.f24281 = 1;
+        this.f24276 = true;
+        this.f24288 = C9221.f30042;
+        this.f24274 = 5000L;
+        this.f24271 = 15000L;
+        this.f24289 = c.a;
+        this.f24283 = C1019.f3686;
+        this.f24270 = new C16328().m38750();
+        this.f24282 = InterfaceC14814.f48448;
+        this.f24287 = 500L;
+        this.f24275 = 2000L;
+        this.f24284 = true;
+        this.f24280 = "";
+        this.f24278 = -1000;
+        if (Build.VERSION.SDK_INT >= 35) {
         }
-        if (!strM40352.startsWith(this.f24475)) {
-            m40347(d.O);
-            return;
-        }
-        try {
-            String strM37865 = C15916.m37840(strM40352.substring(this.f24475.length()), this.f24476.f51287.m21596(this.f24478)).m37865();
-            StringBuilder sb = new StringBuilder();
-            sb.append(this.f24479);
-            String strM50267 = C22697.m50267(sb, this.f24475, strM37865);
-            if (this.f24476.f51287.m21609(strM50267)) {
-                m40365(R.string.MT_Protector);
-                return;
-            }
-            try {
-                C8229 c8229 = this.f24476.f51287;
-                String str = this.f24478;
-                synchronized (c8229) {
-                    c8229.m21576(strM50267, c8229.m21568(str));
-                }
-                this.f24476.m37734();
-                this.f24476.m37735(strM50267);
-                m40364();
-            } catch (Exception e) {
-                this.f24476.f51295.m42627((Throwable) e);
-            }
-        } catch (Exception e2) {
-            this.f24476.f51295.m42627((Throwable) e2);
-        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20267(C24534 c24534) {
+        C20782.m47568(!this.f24286);
+        this.f24267 = new C8125(c24534);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20266(C12131 c12131) {
+        C20782.m47568(!this.f24286);
+        this.f24279 = new C19312(c12131);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m20269() {
+        C20782.m47568(!this.f24286);
+        this.f24274 = 10000L;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m20268() {
+        C20782.m47568(!this.f24286);
+        this.f24271 = 15000L;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC5054 m20265() {
+        C20782.m47568(!this.f24286);
+        this.f24286 = true;
+        return new C8782(this);
     }
 }

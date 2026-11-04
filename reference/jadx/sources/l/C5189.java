@@ -1,27 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
-/* JADX INFO: loaded from: classes3.dex */
-public final enum C5189 extends EnumC7306 {
-    public /* synthetic */ C5189() {
-        this("FORMAT_10X", 1);
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ۙ᩸ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 65Y3 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5189 implements Iterable, Iterator {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f18099 = 0;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC22343 f18100;
+
+    public C5189(AbstractC22343 abstractC22343) {
+        this.f18100 = abstractC22343;
     }
 
-    public C5189(String str, int i) {
-        super(str, i, 0);
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        this.f18099 = 0;
+        return this;
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        return new C10835(this, EnumC7306.m19496(i), 0, 0, EnumC7306.m19493(i));
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        while (true) {
+            int i = this.f18099;
+            AbstractC22343 abstractC22343 = this.f18100;
+            if (i > abstractC22343.mo9069()) {
+                return false;
+            }
+            if (abstractC22343.mo9075(this.f18099)) {
+                return true;
+            }
+            this.f18099++;
+        }
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        abstractC17806.getClass();
-        interfaceC21334.m47859();
+    @Override // java.util.Iterator
+    public final Object next() {
+        int i = this.f18099;
+        this.f18099 = i + 1;
+        InterfaceC8697 interfaceC8697Mo9076 = this.f18100.mo9076(i);
+        C17359.requireNonNull(interfaceC8697Mo9076);
+        return interfaceC8697Mo9076;
     }
 }

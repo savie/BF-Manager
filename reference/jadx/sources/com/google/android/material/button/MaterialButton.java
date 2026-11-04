@@ -33,21 +33,21 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import l.AbstractC3000;
-import l.C0236;
-import l.C10405;
-import l.C15945;
-import l.C18616;
-import l.C2387;
-import l.C5031;
-import l.C7603;
-import l.C8033;
+import l.AbstractC6898;
+import l.C0385;
+import l.C0597;
+import l.C11642;
+import l.C14625;
+import l.C22666;
+import l.C4185;
+import l.C7508;
+import l.C7836;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialButton extends C0236 implements Checkable, Shapeable {
+public class MaterialButton extends C7836 implements Checkable, Shapeable {
     public static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
     public static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
-    public static final int DEF_STYLE_RES = C18616.f59481;
+    public static final int DEF_STYLE_RES = C4185.f14394;
     public static final int ICON_GRAVITY_END = 3;
     public static final int ICON_GRAVITY_START = 1;
     public static final int ICON_GRAVITY_TEXT_END = 4;
@@ -89,7 +89,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
 
         @Override // android.view.inspector.InspectionCompanion
         public void mapProperties(PropertyMapper propertyMapper) {
-            this.mIconPaddingId = propertyMapper.mapInt("iconPadding", C2387.f8825);
+            this.mIconPaddingId = propertyMapper.mapInt("iconPadding", C11642.f36674);
             this.mPropertiesMapped = true;
         }
 
@@ -107,7 +107,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
     }
 
     public MaterialButton(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8741);
+        this(context, attributeSet, C11642.f37051);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -118,13 +118,13 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         this.checked = false;
         this.broadcasting = false;
         Context context2 = getContext();
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f27025, i, i2, new int[0]);
-        this.iconPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27787, 0);
-        this.iconTintMode = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C8033.f26884, -1), PorterDuff.Mode.SRC_IN);
-        this.iconTint = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C8033.f27096);
-        this.icon = MaterialResources.getDrawable(getContext(), typedArrayObtainStyledAttributes, C8033.f27734);
-        this.iconGravity = typedArrayObtainStyledAttributes.getInteger(C8033.f26937, 1);
-        this.iconSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f26990, 0);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f46559, i, i2, new int[0]);
+        this.iconPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f47514, 0);
+        this.iconTintMode = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C14625.f47781, -1), PorterDuff.Mode.SRC_IN);
+        this.iconTint = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C14625.f46504);
+        this.icon = MaterialResources.getDrawable(getContext(), typedArrayObtainStyledAttributes, C14625.f47728);
+        this.iconGravity = typedArrayObtainStyledAttributes.getInteger(C14625.f46291, 1);
+        this.iconSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46929, 0);
         MaterialButtonHelper materialButtonHelper = new MaterialButtonHelper(this, ShapeAppearanceModel.builder(context2, attributeSet, i, i2).build());
         this.materialButtonHelper = materialButtonHelper;
         materialButtonHelper.loadFromAttributes(typedArrayObtainStyledAttributes);
@@ -144,7 +144,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         this.accessibilityClassName = str;
     }
 
-    @Override // l.C0236, android.view.View
+    @Override // l.C7836, android.view.View
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         accessibilityNodeInfo.setClassName(getA11yClassName());
@@ -153,7 +153,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         accessibilityNodeInfo.setClickable(isClickable());
     }
 
-    @Override // l.C0236, android.view.View
+    @Override // l.C7836, android.view.View
     public void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
         super.onInitializeAccessibilityEvent(accessibilityEvent);
         accessibilityEvent.setClassName(getA11yClassName());
@@ -178,7 +178,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         setChecked(savedState.checked);
     }
 
-    @Override // l.C0236
+    @Override // l.C7836
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
         if (isUsingOriginalBackground()) {
             this.materialButtonHelper.setSupportBackgroundTintList(colorStateList);
@@ -187,7 +187,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         }
     }
 
-    @Override // l.C0236
+    @Override // l.C7836
     public ColorStateList getSupportBackgroundTintList() {
         if (isUsingOriginalBackground()) {
             return this.materialButtonHelper.getSupportBackgroundTintList();
@@ -195,7 +195,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         return super.getSupportBackgroundTintList();
     }
 
-    @Override // l.C0236
+    @Override // l.C7836
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
         if (isUsingOriginalBackground()) {
             this.materialButtonHelper.setSupportBackgroundTintMode(mode);
@@ -204,7 +204,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         }
     }
 
-    @Override // l.C0236
+    @Override // l.C7836
     public PorterDuff.Mode getSupportBackgroundTintMode() {
         if (isUsingOriginalBackground()) {
             return this.materialButtonHelper.getSupportBackgroundTintMode();
@@ -246,12 +246,12 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         setBackgroundDrawable(drawable);
     }
 
-    @Override // l.C0236, android.view.View
+    @Override // l.C7836, android.view.View
     public void setBackgroundResource(int i) {
-        setBackgroundDrawable(i != 0 ? C15945.m37904(getContext(), i) : null);
+        setBackgroundDrawable(i != 0 ? C0385.m2186(getContext(), i) : null);
     }
 
-    @Override // l.C0236, android.view.View
+    @Override // l.C7836, android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         if (isUsingOriginalBackground()) {
             if (drawable != getBackground()) {
@@ -266,7 +266,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         super.setBackgroundDrawable(drawable);
     }
 
-    @Override // l.C0236, android.widget.TextView, android.view.View
+    @Override // l.C7836, android.widget.TextView, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         MaterialButtonHelper materialButtonHelper;
         super.onLayout(z, i, i2, i3, i4);
@@ -276,7 +276,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         updateIconPosition(getMeasuredWidth(), getMeasuredHeight());
     }
 
-    @Override // l.C0236, android.widget.TextView
+    @Override // l.C7836, android.widget.TextView
     public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
         super.onTextChanged(charSequence, i, i2, i3);
         updateIconPosition(getMeasuredWidth(), getMeasuredHeight());
@@ -357,7 +357,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
                 intrinsicWidth = this.icon.getIntrinsicWidth();
             }
             int textLayoutWidth = i - getTextLayoutWidth();
-            int i4 = C5031.f17539;
+            int i4 = C22666.f73603;
             int paddingEnd = (((textLayoutWidth - getPaddingEnd()) - intrinsicWidth) - this.iconPadding) - getPaddingStart();
             if (actualTextAlignment == Layout.Alignment.ALIGN_CENTER) {
                 paddingEnd /= 2;
@@ -415,7 +415,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
     }
 
     private boolean isLayoutRTL() {
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         return getLayoutDirection() == 1;
     }
 
@@ -457,7 +457,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
     }
 
     public void setIconResource(int i) {
-        setIcon(i != 0 ? C15945.m37904(getContext(), i) : null);
+        setIcon(i != 0 ? C0385.m2186(getContext(), i) : null);
     }
 
     public Drawable getIcon() {
@@ -472,7 +472,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
     }
 
     public void setIconTintResource(int i) {
-        setIconTint(C10405.m26305(getContext(), i));
+        setIconTint(C7508.m20564(getContext(), i));
     }
 
     public ColorStateList getIconTint() {
@@ -493,12 +493,12 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
     private void updateIcon(boolean z) {
         Drawable drawable = this.icon;
         if (drawable != null) {
-            Drawable drawableMutate = C7603.m20139(drawable).mutate();
+            Drawable drawableMutate = C0597.m2697(drawable).mutate();
             this.icon = drawableMutate;
-            C7603.m20129(drawableMutate, this.iconTint);
+            C0597.m2690(drawableMutate, this.iconTint);
             PorterDuff.Mode mode = this.iconTintMode;
             if (mode != null) {
-                C7603.m20132(this.icon, mode);
+                C0597.m2693(this.icon, mode);
             }
             int intrinsicWidth = this.iconSize;
             if (intrinsicWidth == 0) {
@@ -561,7 +561,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
 
     public void setRippleColorResource(int i) {
         if (isUsingOriginalBackground()) {
-            setRippleColor(C10405.m26305(getContext(), i));
+            setRippleColor(C7508.m20564(getContext(), i));
         }
     }
 
@@ -580,7 +580,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
 
     public void setStrokeColorResource(int i) {
         if (isUsingOriginalBackground()) {
-            setStrokeColor(C10405.m26305(getContext(), i));
+            setStrokeColor(C7508.m20564(getContext(), i));
         }
     }
 
@@ -778,7 +778,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
         }
     }
 
-    public class SavedState extends AbstractC3000 {
+    public class SavedState extends AbstractC6898 {
         public static final Parcelable.Creator CREATOR = new Parcelable.ClassLoaderCreator() { // from class: com.google.android.material.button.MaterialButton.SavedState.1
             @Override // android.os.Parcelable.ClassLoaderCreator
             public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
@@ -809,7 +809,7 @@ public class MaterialButton extends C0236 implements Checkable, Shapeable {
             readFromParcel(parcel);
         }
 
-        @Override // l.AbstractC3000, android.os.Parcelable
+        @Override // l.AbstractC6898, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
             parcel.writeInt(this.checked ? 1 : 0);

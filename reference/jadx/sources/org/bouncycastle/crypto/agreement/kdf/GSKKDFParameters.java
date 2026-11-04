@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.agreement.kdf;
 
 import org.bouncycastle.crypto.DerivationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GSKKDFParameters implements DerivationParameters {
     public final byte[] nonce;
     public final int startCounter;

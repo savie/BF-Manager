@@ -1,13 +1,11 @@
 .class public final Ll/ܿۙ᩺;
-.super Ll/᩺᩹᩵;
-.source "T6QI"
+.super Ll/᩶ۙ᩺;
+.source "77E4"
 
 
-# virtual methods
-.method public final ܰ()I
-    .locals 1
+# instance fields
+.field public ۟:I
 
-    const/16 v0, 0x7e
+.field public ۢ:I
 
-    return v0
-.end method
+.field public ᩳ:J

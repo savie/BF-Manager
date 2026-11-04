@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.digests.SHA1Digest;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OldPKCS12ParametersGenerator extends PBEParametersGenerator {
     public static final int IV_MATERIAL = 2;
     public static final int KEY_MATERIAL = 1;

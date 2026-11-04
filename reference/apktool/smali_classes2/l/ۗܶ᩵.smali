@@ -1,131 +1,56 @@
-.class public final Ll/ۗܶ᩵;
-.super Ljavax/net/ServerSocketFactory;
-.source "G2VK"
+.class public abstract Ll/ۗܶ᩵;
+.super Ljava/util/EventObject;
+.source "1A27"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public final ۙ:Ljavax/net/ssl/SSLContext;
-
-
-# direct methods
-.method public constructor <init>(Ljavax/net/ssl/SSLContext;)V
-    .locals 0
-
-    .line 44
-    invoke-direct {p0}, Ljavax/net/ServerSocketFactory;-><init>()V
-
-    .line 45
-    iput-object p1, p0, Ll/ۗܶ᩵;->ۙ:Ljavax/net/ssl/SSLContext;
-
-    return-void
-.end method
+# static fields
+.field public static final serialVersionUID:J = -0x76c5b4f8185b11bfL
 
 
 # virtual methods
-.method public final createServerSocket()Ljava/net/ServerSocket;
-    .locals 3
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
 
-    .line 73
-    iget-object v0, p0, Ll/ۗܶ᩵;->ۙ:Ljavax/net/ssl/SSLContext;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getServerSocketFactory()Ljavax/net/ssl/SSLServerSocketFactory;
+    .line 12
+    invoke-virtual {p0}, Ll/ۗܶ᩵;->clone()Ll/ۗܶ᩵;
 
     move-result-object v0
-
-    .line 51
-    invoke-virtual {v0}, Ljavax/net/ServerSocketFactory;->createServerSocket()Ljava/net/ServerSocket;
-
-    move-result-object v0
-
-    .line 84
-    move-object v1, v0
-
-    check-cast v1, Ljavax/net/ssl/SSLServerSocket;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljavax/net/ssl/SSLServerSocket;->setUseClientMode(Z)V
 
     return-object v0
 .end method
 
-.method public final createServerSocket(I)Ljava/net/ServerSocket;
-    .locals 2
-
-    .line 73
-    iget-object v0, p0, Ll/ۗܶ᩵;->ۙ:Ljavax/net/ssl/SSLContext;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getServerSocketFactory()Ljavax/net/ssl/SSLServerSocketFactory;
-
-    move-result-object v0
-
-    .line 57
-    invoke-virtual {v0, p1}, Ljavax/net/ServerSocketFactory;->createServerSocket(I)Ljava/net/ServerSocket;
-
-    move-result-object p1
-
-    .line 84
-    move-object v0, p1
-
-    check-cast v0, Ljavax/net/ssl/SSLServerSocket;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljavax/net/ssl/SSLServerSocket;->setUseClientMode(Z)V
-
-    return-object p1
-.end method
-
-.method public final createServerSocket(II)Ljava/net/ServerSocket;
+.method public clone()Ll/ۗܶ᩵;
     .locals 1
 
-    .line 73
-    iget-object v0, p0, Ll/ۗܶ᩵;->ۙ:Ljavax/net/ssl/SSLContext;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getServerSocketFactory()Ljavax/net/ssl/SSLServerSocketFactory;
+    .line 65
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 63
-    invoke-virtual {v0, p1, p2}, Ljavax/net/ServerSocketFactory;->createServerSocket(II)Ljava/net/ServerSocket;
+    check-cast v0, Ll/ۗܶ᩵;
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    return-object v0
 
-    .line 84
-    move-object p2, p1
+    :catch_0
+    const/4 v0, 0x0
 
-    check-cast p2, Ljavax/net/ssl/SSLServerSocket;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p2, v0}, Ljavax/net/ssl/SSLServerSocket;->setUseClientMode(Z)V
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final createServerSocket(IILjava/net/InetAddress;)Ljava/net/ServerSocket;
-    .locals 1
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    .line 73
-    iget-object v0, p0, Ll/ۗܶ᩵;->ۙ:Ljavax/net/ssl/SSLContext;
+.method public abstract ۙ()Ll/ܺܶ᩵;
+.end method
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getServerSocketFactory()Ljavax/net/ssl/SSLServerSocketFactory;
+.method public abstract ۤ()Ljava/lang/String;
+.end method
 
-    move-result-object v0
-
-    .line 69
-    invoke-virtual {v0, p1, p2, p3}, Ljavax/net/ServerSocketFactory;->createServerSocket(IILjava/net/InetAddress;)Ljava/net/ServerSocket;
-
-    move-result-object p1
-
-    .line 84
-    move-object p2, p1
-
-    check-cast p2, Ljavax/net/ssl/SSLServerSocket;
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p2, p3}, Ljavax/net/ssl/SSLServerSocket;->setUseClientMode(Z)V
-
-    return-object p1
+.method public abstract ᩷()Ll/ۨܶ᩵;
 .end method

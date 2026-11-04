@@ -98,7 +98,7 @@
     const-string v4, "<Letter envelop="
 
     .line 0
-    invoke-static {v4, v0, v2, v1, v3}, Ll/֡ۜۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v0, v2, v1, v3}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

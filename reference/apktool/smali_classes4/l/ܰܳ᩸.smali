@@ -1,60 +1,73 @@
-.class public Ll/ܰܳ᩸;
-.super Ll/ۨܳ᩸;
-.source "W9GA"
-
-
-# instance fields
-.field public ۚ:I
+.class public final synthetic Ll/ܰܳ᩸;
+.super Ljava/lang/Object;
+.source "4B3Z"
 
 
 # direct methods
-.method public constructor <init>(ILl/᩶᩻᩸;Ll/֫᩻᩸;JJI)V
-    .locals 0
+.method public static ۙ(Ll/᩶ܳ᩸;ILnet/sf/sevenzipjbinding/impl/OutItemFactory;)Lnet/sf/sevenzipjbinding/impl/OutItem;
+    .locals 3
 
-    .line 23
-    invoke-direct/range {p0 .. p7}, Ll/ۨܳ᩸;-><init>(ILl/᩶᩻᩸;Ll/֫᩻᩸;JJ)V
+    .line 157
+    invoke-virtual {p2}, Lnet/sf/sevenzipjbinding/impl/OutItemFactory;->createOutItem()Lnet/sf/sevenzipjbinding/IOutItemBase;
 
-    .line 24
-    iput p8, p0, Ll/ܰܳ᩸;->ۚ:I
+    move-result-object p2
 
-    return-void
-.end method
+    check-cast p2, Lnet/sf/sevenzipjbinding/impl/OutItem;
 
+    .line 158
+    invoke-interface {p0, p1}, Ll/᩶ܳ᩸;->᩸(I)Ll/ܿܳ᩸;
 
-# virtual methods
-.method public final ۚ()I
-    .locals 1
+    move-result-object p0
 
-    .line 29
-    iget v0, p0, Ll/ܰܳ᩸;->ۚ:I
+    .line 212
+    iget-object p1, p0, Ll/ܿܳ᩸;->ۤ:Ljava/lang/String;
 
-    return v0
-.end method
+    const-string v0, "/"
 
-.method public final ۬()I
-    .locals 2
+    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    .line 137
-    invoke-virtual {p0}, Ll/ۤۙᩳ;->ܰ()Ll/ۡۙᩳ;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 213
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {p2, v0}, Lnet/sf/sevenzipjbinding/impl/OutItem;->setPropertyIsDir(Ljava/lang/Boolean;)V
+
+    goto :goto_0
+
+    .line 215
+    :cond_0
+    iget-wide v0, p0, Ll/ܿܳ᩸;->ۙ:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    check-cast v0, Ll/֨ܳ᩸;
+    invoke-virtual {p2, v0}, Lnet/sf/sevenzipjbinding/impl/OutItem;->setDataSize(Ljava/lang/Long;)V
 
-    invoke-virtual {v0}, Ll/֨ܳ᩸;->ۖ()I
+    .line 217
+    :goto_0
+    new-instance v0, Ljava/util/Date;
 
-    move-result v0
+    iget-wide v1, p0, Ll/ܿܳ᩸;->᩸:J
 
-    const/high16 v1, 0x10000
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    mul-int v0, v0, v1
+    invoke-virtual {p2, v0}, Lnet/sf/sevenzipjbinding/impl/OutItem;->setPropertyLastModificationTime(Ljava/util/Date;)V
 
-    .line 33
-    iget v1, p0, Ll/ܰܳ᩸;->ۚ:I
+    .line 218
+    invoke-virtual {p2, p1}, Lnet/sf/sevenzipjbinding/impl/OutItem;->setPropertyPath(Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+    .line 219
+    iget-object p0, p0, Ll/ܿܳ᩸;->᩷:Ljava/lang/String;
 
-    move-result v0
+    if-eqz p0, :cond_1
 
-    return v0
+    .line 220
+    invoke-virtual {p2, p0}, Lnet/sf/sevenzipjbinding/impl/OutItem;->setPropertySymLink(Ljava/lang/String;)V
+
+    :cond_1
+    return-object p2
 .end method

@@ -5,78 +5,78 @@ import java.util.Date;
 /* JADX INFO: loaded from: classes.dex */
 public class S3ObjectSummary {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public String f657;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public String f647;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public Date f658;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f648;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public String f649;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public long f650;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public Owner f651;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f652;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public Date f653;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f659;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public Owner f660;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f661;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f662;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public long f663;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m663(String str) {
-        this.f659 = str;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m660() {
-        return this.f661;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m666(String str) {
-        this.f661 = str;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m668(String str) {
-        this.f662 = str;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m665() {
-        return this.f663;
+    public final void m656(String str) {
+        this.f647 = str;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m661(long j) {
-        this.f663 = j;
+    public final String m653() {
+        return this.f648;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Date m667() {
-        return this.f658;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m664(Date date) {
-        this.f658 = date;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m662(Owner owner) {
-        this.f660 = owner;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
     public final void m659(String str) {
-        this.f657 = str;
+        this.f648 = str;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m661(String str) {
+        this.f652 = str;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long m658() {
+        return this.f650;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m654(long j) {
+        this.f650 = j;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Date m660() {
+        return this.f653;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m657(Date date) {
+        this.f653 = date;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m655(Owner owner) {
+        this.f651 = owner;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m662(String str) {
+        this.f649 = str;
     }
 
     public final String toString() {
-        return "S3ObjectSummary{bucketName='" + this.f659 + "', key='" + this.f661 + "', eTag='" + this.f662 + "', size=" + this.f663 + ", lastModified=" + this.f658 + ", storageClass='" + this.f657 + "', owner=" + this.f660 + '}';
+        return "S3ObjectSummary{bucketName='" + this.f647 + "', key='" + this.f648 + "', eTag='" + this.f652 + "', size=" + this.f650 + ", lastModified=" + this.f653 + ", storageClass='" + this.f649 + "', owner=" + this.f651 + '}';
     }
 }

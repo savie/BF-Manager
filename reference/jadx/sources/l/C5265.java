@@ -1,12 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚۢۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: ZAV2 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5265 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 66;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ۙ᩻᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8OZ */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5265 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List f18561;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f18562;
+
+    public C5265(long j, List list) {
+        this.f18562 = j;
+        this.f18561 = list;
     }
 }

@@ -1,66 +1,19 @@
 .class public final Ll/ۖۡ᩸;
-.super Ljava/util/AbstractList;
-.source "Z93V"
-
-# interfaces
-.implements Ljava/util/List;
-.implements Ljava/util/RandomAccess;
+.super Ljava/lang/Object;
+.source "UAZD"
 
 
 # instance fields
-.field public ܺ:Ll/᩹ۡ᩸;
+.field public ۙ:Z
 
+.field public ۤ:F
 
-# direct methods
-.method public constructor <init>(Ll/᩹ۡ᩸;)V
-    .locals 0
+.field public ۫:Z
 
-    .line 561
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+.field public ܳ:Z
 
-    .line 562
-    iput-object p1, p0, Ll/ۖۡ᩸;->ܺ:Ll/᩹ۡ᩸;
+.field public ᩴ:Z
 
-    return-void
-.end method
+.field public ᩷:Z
 
-
-# virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 572
-    iget-object v0, p0, Ll/ۖۡ᩸;->ܺ:Ll/᩹ۡ᩸;
-
-    invoke-virtual {v0, p1}, Ll/᩹ۡ᩸;->ܰ(I)Ll/ᩳᩴ᩸;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 567
-    iget-object v0, p0, Ll/ۖۡ᩸;->ܺ:Ll/᩹ۡ᩸;
-
-    invoke-virtual {v0}, Ll/᩹ۡ᩸;->᩹()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ܰ()V
-    .locals 1
-
-    .line 576
-    iget v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    return-void
-.end method
+.field public ᩸:F

@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410PublicKeyAlgParameters extends ASN1Object {
     public ASN1ObjectIdentifier digestParamSet;
     public ASN1ObjectIdentifier encryptionParamSet;

@@ -1,84 +1,110 @@
 .class public final Ll/ۙᩴ;
 .super Ljava/lang/Object;
-.source "V659"
+.source "43T5"
 
 # interfaces
-.implements Ll/֡۬;
+.implements Ll/ۜ᩸;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۜᩴ;
+.field public final ۙ:Ljava/lang/CharSequence;
+
+.field public final ۤ:Ll/ܶ᩹;
+
+.field public final ᩷:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜᩴ;)V
-    .locals 0
+.method public constructor <init>(Ll/ܶ᩹;)V
+    .locals 1
 
-    .line 1251
+    .line 574
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۙᩴ;->ܺ:Ll/ۜᩴ;
+    .line 575
+    iput-object p1, p0, Ll/ۙᩴ;->ۤ:Ll/ܶ᩹;
+
+    .line 576
+    invoke-virtual {p1}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ۙᩴ;->᩷:Landroid/graphics/drawable/Drawable;
+
+    .line 577
+    invoke-virtual {p1}, Ll/ܶ᩹;->getNavigationContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/ۙᩴ;->ۙ:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemSelected(Ll/۫۬;Landroid/view/MenuItem;)Z
+.method public final ۙ()Landroid/content/Context;
     .locals 1
 
-    .line 1259
-    iget-object v0, p0, Ll/ۙᩴ;->ܺ:Ll/ۜᩴ;
+    .line 602
+    iget-object v0, p0, Ll/ۙᩴ;->ۤ:Ll/ܶ᩹;
 
-    iget-object v0, v0, Ll/ۜᩴ;->mMenuBuilderCallback:Ll/֡۬;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 1260
-    invoke-interface {v0, p1, p2}, Ll/֡۬;->onMenuItemSelected(Ll/۫۬;Landroid/view/MenuItem;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method
 
-.method public final onMenuModeChange(Ll/۫۬;)V
-    .locals 2
+.method public final ۙ(I)V
+    .locals 1
 
-    .line 1267
-    iget-object v0, p0, Ll/ۙᩴ;->ܺ:Ll/ۜᩴ;
+    .line 588
+    iget-object v0, p0, Ll/ۙᩴ;->ۤ:Ll/ܶ᩹;
 
-    iget-object v1, v0, Ll/ۜᩴ;->mMenuView:Ll/᩺ۜ;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v1}, Ll/᩺ۜ;->ۘ()Z
+    .line 589
+    iget-object p1, p0, Ll/ۙᩴ;->ۙ:Ljava/lang/CharSequence;
 
-    move-result v1
+    invoke-virtual {v0, p1}, Ll/ܶ᩹;->setNavigationContentDescription(Ljava/lang/CharSequence;)V
 
-    if-nez v1, :cond_0
-
-    .line 1268
-    iget-object v1, v0, Ll/ۜᩴ;->mMenuHostHelper:Ll/ۛ᩻;
-
-    invoke-virtual {v1, p1}, Ll/ۛ᩻;->ܰ(Landroid/view/Menu;)V
-
-    .line 1271
-    :cond_0
-    iget-object v0, v0, Ll/ۜᩴ;->mMenuBuilderCallback:Ll/֡۬;
-
-    if-eqz v0, :cond_1
-
-    .line 1272
-    invoke-interface {v0, p1}, Ll/֡۬;->onMenuModeChange(Ll/۫۬;)V
-
-    :cond_1
     return-void
+
+    .line 591
+    :cond_0
+    invoke-virtual {v0, p1}, Ll/ܶ᩹;->setNavigationContentDescription(I)V
+
+    return-void
+.end method
+
+.method public final ۙ(Landroid/graphics/drawable/Drawable;I)V
+    .locals 1
+
+    .line 582
+    iget-object v0, p0, Ll/ۙᩴ;->ۤ:Ll/ܶ᩹;
+
+    invoke-virtual {v0, p1}, Ll/ܶ᩹;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+
+    .line 583
+    invoke-virtual {p0, p2}, Ll/ۙᩴ;->ۙ(I)V
+
+    return-void
+.end method
+
+.method public final ۤ()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 597
+    iget-object v0, p0, Ll/ۙᩴ;->᩷:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

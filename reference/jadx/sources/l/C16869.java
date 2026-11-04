@@ -1,25 +1,76 @@
 package l;
 
-import android.widget.AbsListView;
+import java.net.URI;
+import java.nio.file.ProviderNotFoundException;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.ServiceLoader;
 
-/* JADX INFO: renamed from: l.ܽ᩶ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P676 */
+/* JADX INFO: renamed from: l.ܺ۬᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16869 implements AbsListView.OnScrollListener {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC3588 f53965;
-
-    @Override // android.widget.AbsListView.OnScrollListener
-    public final void onScroll(AbsListView absListView, int i, int i2, int i3) {
+public final class C16869 {
+    public static AbstractC25075 getDefault() {
+        return AbstractC23808.a;
     }
 
-    public C16869(ActivityC3588 activityC3588) {
-        this.f53965 = activityC3588;
+    public static AbstractC25075 getFileSystem(URI uri) {
+        String scheme = uri.getScheme();
+        for (AbstractC22733 abstractC22733 : AbstractC22733.d()) {
+            if (scheme.equalsIgnoreCase(abstractC22733.getScheme())) {
+                return abstractC22733.getFileSystem(uri);
+            }
+        }
+        throw new ProviderNotFoundException("Provider \"" + scheme + "\" not found");
     }
 
-    @Override // android.widget.AbsListView.OnScrollListener
-    public final void onScrollStateChanged(AbsListView absListView, int i) {
-        this.f53965.f13203.m30532(false);
+    public static AbstractC25075 newFileSystem(URI uri, Map map) {
+        return newFileSystem(uri, map, null);
+    }
+
+    public static AbstractC25075 newFileSystem(URI uri, Map map, ClassLoader classLoader) {
+        String scheme = uri.getScheme();
+        for (AbstractC22733 abstractC22733 : AbstractC22733.d()) {
+            if (scheme.equalsIgnoreCase(abstractC22733.getScheme())) {
+                try {
+                    return abstractC22733.newFileSystem(uri, map);
+                } catch (UnsupportedOperationException unused) {
+                }
+            }
+        }
+        if (classLoader != null) {
+            for (AbstractC22733 abstractC22734 : ServiceLoader.load(AbstractC22733.class, classLoader)) {
+                if (scheme.equalsIgnoreCase(abstractC22734.getScheme())) {
+                    try {
+                        return abstractC22734.newFileSystem(uri, map);
+                    } catch (UnsupportedOperationException unused2) {
+                    }
+                }
+            }
+        }
+        throw new ProviderNotFoundException("Provider \"" + scheme + "\" not found");
+    }
+
+    public static AbstractC25075 newFileSystem(InterfaceC24329 interfaceC24329, ClassLoader classLoader) {
+        interfaceC24329.getClass();
+        Map map = Collections.EMPTY_MAP;
+        Iterator it = AbstractC22733.d().iterator();
+        while (it.hasNext()) {
+            try {
+                return ((AbstractC22733) it.next()).newFileSystem(interfaceC24329, map);
+            } catch (UnsupportedOperationException unused) {
+            }
+        }
+        if (classLoader != null) {
+            Iterator it2 = ServiceLoader.load(AbstractC22733.class, classLoader).iterator();
+            while (it2.hasNext()) {
+                try {
+                    return ((AbstractC22733) it2.next()).newFileSystem(interfaceC24329, map);
+                } catch (UnsupportedOperationException unused2) {
+                }
+            }
+        }
+        throw new ProviderNotFoundException("Provider not found");
     }
 }

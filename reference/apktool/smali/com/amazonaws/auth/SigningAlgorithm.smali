@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final enum ֡:Lcom/amazonaws/auth/SigningAlgorithm;
+.field public static final synthetic ܰ:[Lcom/amazonaws/auth/SigningAlgorithm;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/auth/SigningAlgorithm;
+.field public static final enum ܿ:Lcom/amazonaws/auth/SigningAlgorithm;
 
 .field public static final enum ᩶:Lcom/amazonaws/auth/SigningAlgorithm;
 
@@ -35,7 +35,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/amazonaws/auth/SigningAlgorithm;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/auth/SigningAlgorithm;->֡:Lcom/amazonaws/auth/SigningAlgorithm;
+    sput-object v1, Lcom/amazonaws/auth/SigningAlgorithm;->ܿ:Lcom/amazonaws/auth/SigningAlgorithm;
 
     const/4 v3, 0x2
 
@@ -46,7 +46,7 @@
     aput-object v1, v3, v4
 
     .line 19
-    sput-object v3, Lcom/amazonaws/auth/SigningAlgorithm;->ܺ:[Lcom/amazonaws/auth/SigningAlgorithm;
+    sput-object v3, Lcom/amazonaws/auth/SigningAlgorithm;->ܰ:[Lcom/amazonaws/auth/SigningAlgorithm;
 
     return-void
 .end method
@@ -79,7 +79,7 @@
     .locals 1
 
     .line 19
-    sget-object v0, Lcom/amazonaws/auth/SigningAlgorithm;->ܺ:[Lcom/amazonaws/auth/SigningAlgorithm;
+    sget-object v0, Lcom/amazonaws/auth/SigningAlgorithm;->ܰ:[Lcom/amazonaws/auth/SigningAlgorithm;
 
     invoke-virtual {v0}, [Lcom/amazonaws/auth/SigningAlgorithm;->clone()Ljava/lang/Object;
 

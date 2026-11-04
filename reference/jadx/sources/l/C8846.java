@@ -1,19 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۧ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 19KT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8846 implements InterfaceC18723 {
-    @Override // l.InterfaceC18723
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC13785 mo2111() {
-        return EnumC13785.FileInternalInformation;
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.۠᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8846 extends AbstractC1894 implements Consumer {
+    public final Object[] b;
+
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // l.InterfaceC18723
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC19429 mo2112(C10922 c10922) {
-        c10922.m27401();
-        return new C5487();
+    public C8846(int i) {
+        this.b = new Object[i];
+    }
+
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        int i = this.a;
+        this.a = i + 1;
+        this.b[i] = obj;
     }
 }

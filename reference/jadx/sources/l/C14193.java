@@ -1,12 +1,10 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J57K */
+/* JADX INFO: renamed from: l.۬᩺᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: IF3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14193 implements InterfaceC19010 {
-    @Override // l.InterfaceC19010
-    public final boolean apply(Object obj) {
-        InterfaceC17822 interfaceC17822 = (InterfaceC17822) obj;
-        return interfaceC17822 != null && EnumC15236.STATIC.m36501(interfaceC17822.mo28400());
-    }
+public final class C14193 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C8973 f44870 = new C8973();
 }

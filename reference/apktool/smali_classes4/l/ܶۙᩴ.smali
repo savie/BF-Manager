@@ -1,495 +1,2093 @@
-.class public abstract Ll/ܶۙᩴ;
-.super Ljava/lang/Object;
-.source "97L"
+.class public final Ll/ܶۙᩴ;
+.super Landroid/view/inputmethod/BaseInputConnection;
+.source "05ZM"
 
 
 # instance fields
-.field public ֡:Z
+.field public ۙ:J
 
-.field public final synthetic ۫:Ll/۠ۙᩴ;
+.field public ۚ:I
 
-.field public ܺ:I
+.field public final ۤ:I
 
-.field public ܽ:I
+.field public ۫:J
 
-.field public ܿ:Ll/᩶ۙᩴ;
+.field public ܳ:J
 
-.field public ᩶:I
+.field public ᩴ:Ll/֨۬᩸;
+
+.field public final ᩷:Ll/᩺ۜ᩸;
+
+.field public ᩸:J
 
 
 # direct methods
-.method public constructor <init>(Ll/۠ۙᩴ;)V
+.method public constructor <init>(Ll/᩺ۜ᩸;I)V
     .locals 1
 
-    .line 634
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Ll/ܶۙᩴ;->۫:Ll/۠ۙᩴ;
+    .line 45
+    invoke-direct {p0, p1, v0}, Landroid/view/inputmethod/BaseInputConnection;-><init>(Landroid/view/View;Z)V
 
-    .line 640
-    iget v0, p1, Ll/۠ۙᩴ;->᩻:I
+    .line 46
+    iput-object p1, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    iput v0, p0, Ll/ܶۙᩴ;->ܽ:I
-
-    const/4 v0, -0x1
-
-    .line 646
-    iput v0, p0, Ll/ܶۙᩴ;->᩶:I
-
-    .line 648
-    iget v0, p1, Ll/۠ۙᩴ;->ܳ:I
-
-    iput v0, p0, Ll/ܶۙᩴ;->ܺ:I
-
-    .line 650
-    iget-boolean p1, p1, Ll/۠ۙᩴ;->ܺ:Z
-
-    iput-boolean p1, p0, Ll/ܶۙᩴ;->֡:Z
+    .line 47
+    iput p2, p0, Ll/ܶۙᩴ;->ۤ:I
 
     return-void
+.end method
+
+.method private ۙ(II)I
+    .locals 8
+
+    .line 626
+    iget-object v0, p0, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 630
+    :cond_0
+    iget-object v1, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v6
+
+    .line 634
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->۠ۙ()I
+
+    move-result v3
+
+    .line 635
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->ۖۙ()I
+
+    move-result v4
+
+    .line 636
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->᩹ۤ()I
+
+    move-result v5
+
+    .line 638
+    invoke-interface {v6}, Ll/ۡ᩶᩸;->ۛ᩷()I
+
+    move-result v7
+
+    move v1, p1
+
+    move v2, p2
+
+    .line 631
+    invoke-virtual/range {v0 .. v7}, Ll/֨۬᩸;->ۙ(IIIIILl/ᩳ۬᩸;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method private ۙ()Z
+    .locals 2
+
+    .line 647
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    iget v1, p0, Ll/ܶۙᩴ;->ۤ:I
+
+    invoke-virtual {v0, v1}, Ll/᩺ۜ᩸;->᩸(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private ᩷()Z
+    .locals 2
+
+    .line 643
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    iget v1, p0, Ll/ܶۙᩴ;->ۤ:I
+
+    invoke-virtual {v0, v1}, Ll/᩺ۜ᩸;->ᩴ(I)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 
 # virtual methods
-.method public final forEachRemaining(Ljava/lang/Object;)V
-    .locals 5
+.method public final beginBatchEdit()Z
+    .locals 1
 
-    .line 686
-    iget-boolean v0, p0, Ll/ܶۙᩴ;->֡:Z
+    .line 137
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
 
-    iget-object v1, p0, Ll/ܶۙᩴ;->۫:Ll/۠ۙᩴ;
+    move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 687
-    iput-boolean v0, p0, Ll/ܶۙᩴ;->֡:Z
+    return v0
 
-    .line 688
-    iget v0, v1, Ll/۠ۙᩴ;->᩻:I
-
-    iput v0, p0, Ll/ܶۙᩴ;->᩶:I
-
-    invoke-virtual {p0, v0, p1}, Ll/ܶۙᩴ;->ۙ(ILjava/lang/Object;)V
-
-    .line 689
-    iget v0, p0, Ll/ܶۙᩴ;->ܺ:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ll/ܶۙᩴ;->ܺ:I
-
-    .line 691
+    .line 140
     :cond_0
-    iget-object v0, v1, Ll/۠ۙᩴ;->ܽ:[C
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    .line 692
-    :cond_1
-    :goto_0
-    iget v2, p0, Ll/ܶۙᩴ;->ܺ:I
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ()V
 
-    if-eqz v2, :cond_4
+    const/4 v0, 0x1
 
-    .line 693
-    iget v2, p0, Ll/ܶۙᩴ;->ܽ:I
+    return v0
+.end method
 
-    add-int/lit8 v2, v2, -0x1
+.method public final clearMetaKeyStates(I)Z
+    .locals 3
 
-    iput v2, p0, Ll/ܶۙᩴ;->ܽ:I
+    .line 156
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    if-gez v2, :cond_3
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
 
-    const/high16 v3, -0x80000000
+    move-result v1
 
-    .line 695
-    iput v3, p0, Ll/ܶۙᩴ;->᩶:I
+    if-nez v1, :cond_0
 
-    .line 696
-    iget-object v3, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
+    const/4 p1, 0x0
 
-    neg-int v2, v2
+    return p1
 
-    add-int/lit8 v2, v2, -0x1
+    .line 159
+    :cond_0
+    invoke-virtual {p0}, Ll/ܶۙᩴ;->getEditable()Landroid/text/Editable;
 
-    invoke-virtual {v3, v2}, Ll/᩶ۙᩴ;->getChar(I)C
+    move-result-object v1
 
-    move-result v2
+    .line 162
+    sget-object v2, Ll/᩺ۜ᩸;->ۧᩴ:Landroid/text/method/TextKeyListener;
 
-    .line 697
-    invoke-static {v2}, Ll/ۢ᩻᩺;->ۙ(I)I
+    .line 164
+    :try_start_0
+    invoke-interface {v2, v0, v1, p1}, Landroid/text/method/KeyListener;->clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
+
+    .line 165
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->֫᩸()V
+
+    .line 166
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    :try_end_0
+    .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final closeConnection()V
+    .locals 1
+
+    .line 176
+    invoke-super {p0}, Landroid/view/inputmethod/BaseInputConnection;->closeConnection()V
+
+    .line 178
+    :try_start_0
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    iget-object v0, v0, Ll/᩺ۜ᩸;->᩸ۙ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+.end method
+
+.method public final commitCompletion(Landroid/view/inputmethod/CompletionInfo;)Z
+    .locals 1
+
+    .line 398
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 401
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->commitCompletion(Landroid/view/inputmethod/CompletionInfo;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+    .locals 1
+
+    .line 513
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 516
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final commitCorrection(Landroid/view/inputmethod/CorrectionInfo;)Z
+    .locals 1
+
+    .line 406
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 409
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->commitCorrection(Landroid/view/inputmethod/CorrectionInfo;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final commitText(Ljava/lang/CharSequence;I)Z
+    .locals 8
+
+    .line 255
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 257
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
 
     move-result v3
 
-    iget v4, v1, Ll/۠ۙᩴ;->ܿ:I
+    if-nez v3, :cond_0
 
-    :goto_1
-    and-int/2addr v3, v4
+    return v2
 
-    .line 698
-    aget-char v4, v0, v3
+    :cond_0
+    if-nez p1, :cond_1
 
-    if-eq v2, v4, :cond_2
+    const-string p1, ""
 
-    add-int/lit8 v3, v3, 0x1
+    .line 264
+    :cond_1
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    iget v4, v1, Ll/۠ۙᩴ;->ܿ:I
+    move-result-wide v3
 
-    goto :goto_1
+    .line 265
+    iput-wide v3, p0, Ll/ܶۙᩴ;->᩸:J
 
-    .line 699
+    .line 266
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-nez v5, :cond_2
+
+    if-ne p2, v6, :cond_2
+
+    .line 267
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۠ۙ()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۖۙ()I
+
+    move-result v7
+
+    if-eq v5, v7, :cond_2
+
+    .line 269
+    iput-wide v3, p0, Ll/ܶۙᩴ;->ۙ:J
+
+    .line 272
     :cond_2
-    invoke-virtual {p0, v3, p1}, Ll/ܶۙᩴ;->ۙ(ILjava/lang/Object;)V
+    iget-object v5, p0, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
 
-    .line 700
-    iget v2, p0, Ll/ܶۙᩴ;->ܺ:I
+    if-eqz v5, :cond_3
 
-    add-int/lit8 v2, v2, -0x1
+    iget v5, v5, Ll/֨۬᩸;->ܳ:I
 
-    iput v2, p0, Ll/ܶۙᩴ;->ܺ:I
+    if-lez v5, :cond_3
 
-    goto :goto_0
+    .line 274
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    .line 701
+    move-result v5
+
+    const/4 v7, 0x2
+
+    if-ne v5, v7, :cond_3
+
+    if-ne p2, v6, :cond_3
+
+    .line 276
+    iput-wide v3, p0, Ll/ܶۙᩴ;->۫:J
+
+    .line 277
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۠ۙ()I
+
+    move-result v3
+
+    iput v3, p0, Ll/ܶۙᩴ;->ۚ:I
+
+    .line 280
     :cond_3
-    aget-char v3, v0, v2
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۫()V
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v3, :cond_1
+    .line 282
+    :try_start_1
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->commitText(Ljava/lang/CharSequence;I)Z
 
-    .line 702
-    iput v2, p0, Ll/ܶۙᩴ;->᩶:I
+    move-result p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {p0, v2, p1}, Ll/ܶۙᩴ;->ۙ(ILjava/lang/Object;)V
+    .line 284
+    :try_start_2
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۙۙ()V
 
-    .line 703
-    iget v2, p0, Ll/ܶۙᩴ;->ܺ:I
+    return p1
 
-    add-int/lit8 v2, v2, -0x1
+    :catchall_0
+    move-exception p1
 
-    iput v2, p0, Ll/ܶۙᩴ;->ܺ:I
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۙۙ()V
+
+    .line 285
+    throw p1
+    :try_end_2
+    .catch Ljava/io/UncheckedIOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception p1
 
     goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 287
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    return v2
 
     :cond_4
-    return-void
+    throw p1
 .end method
 
-.method public bridge synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
+.method public final commitText(Ljava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+    .locals 4
 
-    .line 765
-    invoke-virtual {p0, p1}, Ll/ܶۙᩴ;->forEachRemaining(Ljava/lang/Object;)V
+    .line 553
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    return-void
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 555
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    .line 558
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->commitText(Ljava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 560
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
 .end method
 
-.method public final hasNext()Z
+.method public final deleteSurroundingText(II)Z
+    .locals 8
+
+    .line 327
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 329
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    :cond_0
+    const/4 v3, 0x1
+
+    if-ne p1, v3, :cond_1
+
+    if-nez p2, :cond_1
+
+    .line 332
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v3
+
+    iget-wide v5, p0, Ll/ܶۙᩴ;->ۙ:J
+
+    sub-long/2addr v3, v5
+
+    const-wide/16 v5, 0x64
+
+    cmp-long v7, v3, v5
+
+    if-gez v7, :cond_1
+
+    return v2
+
+    .line 336
+    :cond_1
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->deleteSurroundingText(II)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 338
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    return v2
+
+    :cond_2
+    throw p1
+.end method
+
+.method public final deleteSurroundingTextInCodePoints(II)Z
+    .locals 4
+
+    .line 346
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 348
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    .line 351
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->deleteSurroundingTextInCodePoints(II)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 353
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final endBatchEdit()Z
     .locals 1
 
-    .line 661
-    iget v0, p0, Ll/ܶۙᩴ;->ܺ:I
+    .line 147
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
 
-    if-eqz v0, :cond_0
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 150
+    :cond_0
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۬()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final finishComposingText()Z
+    .locals 2
+
+    .line 380
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 383
+    :cond_0
+    invoke-virtual {p0}, Ll/ܶۙᩴ;->getEditable()Landroid/text/Editable;
+
+    move-result-object v0
+
+    .line 386
+    iget-object v1, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->ܳ()V
+
+    .line 388
+    :try_start_0
+    invoke-static {v0}, Landroid/view/inputmethod/BaseInputConnection;->removeComposingSpans(Landroid/text/Spannable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 390
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->۬()V
 
     const/4 v0, 0x1
 
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    :catchall_0
+    move-exception v0
 
-    return v0
+    invoke-virtual {v1}, Ll/᩺ۜ᩸;->۬()V
+
+    .line 391
+    throw v0
 .end method
 
-.method public remove()V
-    .locals 11
+.method public final getEditable()Landroid/text/Editable;
+    .locals 3
 
-    .line 742
-    iget v0, p0, Ll/ܶۙᩴ;->᩶:I
+    .line 132
+    new-instance v0, Ll/ۨ۬᩸;
 
-    const/4 v1, -0x1
+    iget-object v1, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    if-eq v0, v1, :cond_8
+    iget v2, p0, Ll/ܶۙᩴ;->ۤ:I
 
-    .line 743
-    iget-object v2, p0, Ll/ܶۙᩴ;->۫:Ll/۠ۙᩴ;
+    invoke-direct {v0, v1, v2}, Ll/ۨ۬᩸;-><init>(Ll/᩺ۜ᩸;I)V
 
-    iget v3, v2, Ll/۠ۙᩴ;->᩻:I
+    return-object v0
+.end method
 
-    const/4 v4, 0x0
+.method public final getExtractedText(Landroid/view/inputmethod/ExtractedTextRequest;I)Landroid/view/inputmethod/ExtractedText;
+    .locals 13
 
-    const/4 v5, 0x0
+    .line 208
+    iget-object p2, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    if-ne v0, v3, :cond_0
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
 
-    .line 744
-    iput-boolean v5, v2, Ll/۠ۙᩴ;->ܺ:Z
+    move-result-object v0
 
-    .line 745
-    iget-object v0, v2, Ll/۠ۙᩴ;->֫:[Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    aput-object v4, v0, v3
+    .line 210
+    :try_start_0
+    new-instance v2, Landroid/view/inputmethod/ExtractedText;
 
-    goto :goto_2
+    invoke-direct {v2}, Landroid/view/inputmethod/ExtractedText;-><init>()V
 
-    .line 746
-    :cond_0
-    iget v3, p0, Ll/ܶۙᩴ;->ܽ:I
+    .line 211
+    invoke-virtual {p2, p1, v2}, Ll/᩺ۜ᩸;->ۙ(Landroid/view/inputmethod/ExtractedTextRequest;Landroid/view/inputmethod/ExtractedText;)Z
 
-    if-ltz v3, :cond_7
+    move-result p1
 
-    .line 718
-    iget-object v6, v2, Ll/۠ۙᩴ;->ܽ:[C
+    if-eqz p1, :cond_1
 
-    .line 719
-    iget-object v7, v2, Ll/۠ۙᩴ;->֫:[Ljava/lang/Object;
+    .line 212
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->ۚۤ()Z
 
-    :goto_0
-    add-int/lit8 v3, v0, 0x1
+    move-result p1
 
-    .line 721
-    iget v8, v2, Ll/۠ۙᩴ;->ܿ:I
+    if-eqz p1, :cond_0
 
-    and-int/2addr v3, v8
+    .line 213
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
 
-    .line 723
-    :goto_1
-    aget-char v8, v6, v3
+    move-result-object v11
 
-    if-nez v8, :cond_1
+    .line 214
+    new-instance p1, Ll/֨۬᩸;
 
-    .line 724
-    aput-char v5, v6, v0
+    iget v4, v2, Landroid/view/inputmethod/ExtractedText;->startOffset:I
 
-    .line 725
-    aput-object v4, v7, v0
+    iget v5, v2, Landroid/view/inputmethod/ExtractedText;->selectionStart:I
 
-    .line 753
-    :goto_2
-    iget v0, v2, Ll/۠ۙᩴ;->ܳ:I
+    iget v6, v2, Landroid/view/inputmethod/ExtractedText;->selectionEnd:I
 
-    add-int/lit8 v0, v0, -0x1
+    iget-object v3, v2, Landroid/view/inputmethod/ExtractedText;->text:Ljava/lang/CharSequence;
 
-    iput v0, v2, Ll/۠ۙᩴ;->ܳ:I
+    .line 218
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
-    .line 754
-    iput v1, p0, Ll/ܶۙᩴ;->᩶:I
+    move-result v7
 
-    return-void
+    .line 219
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->۠ۙ()I
 
-    .line 728
-    :cond_1
-    invoke-static {v8}, Ll/ۢ᩻᩺;->ۙ(I)I
+    move-result v8
+
+    .line 220
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->ۖۙ()I
 
     move-result v9
 
-    iget v10, v2, Ll/۠ۙᩴ;->ܿ:I
+    .line 221
+    invoke-virtual {p2}, Ll/᩺ۜ᩸;->᩹ۤ()I
 
-    and-int/2addr v9, v10
+    move-result v10
 
-    if-gt v0, v3, :cond_2
+    .line 223
+    invoke-interface {v11}, Ll/ۡ᩶᩸;->ۛ᩷()I
 
-    if-ge v0, v9, :cond_3
+    move-result v12
 
-    if-le v9, v3, :cond_6
+    move-object v3, p1
 
-    goto :goto_3
+    invoke-direct/range {v3 .. v12}, Ll/֨۬᩸;-><init>(IIIIIIILl/ᩳ۬᩸;I)V
 
-    :cond_2
-    if-lt v0, v9, :cond_6
+    iput-object p1, p0, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
 
-    if-le v9, v3, :cond_6
+    .line 225
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    :cond_3
-    :goto_3
-    if-ge v3, v0, :cond_5
+    move-result-wide v3
 
-    .line 733
-    iget-object v9, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
+    iput-wide v3, p0, Ll/ܶۙᩴ;->ܳ:J
 
-    if-nez v9, :cond_4
+    return-object v2
 
-    new-instance v9, Ll/᩶ۙᩴ;
+    .line 227
+    :cond_0
+    iput-object v1, p0, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
 
-    const/4 v10, 0x2
+    return-object v2
 
-    invoke-direct {v9, v10}, Ll/᩶ۙᩴ;-><init>(I)V
+    .line 231
+    :cond_1
+    iput-object v1, p0, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v9, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
+    return-object v1
 
-    .line 734
-    :cond_4
-    iget-object v9, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
-
-    aget-char v10, v6, v3
-
-    invoke-virtual {v9, v10}, Ll/᩶ۙᩴ;->ܰ(C)Z
-
-    .line 736
-    :cond_5
-    aput-char v8, v6, v0
-
-    .line 737
-    aget-object v8, v7, v3
-
-    aput-object v8, v7, v0
-
-    move v0, v3
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_6
-    add-int/lit8 v3, v3, 0x1
+    :catch_1
+    move-exception p1
 
-    and-int/2addr v3, v10
+    .line 235
+    :goto_0
+    invoke-virtual {p2, v0, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
 
-    goto :goto_1
+    move-result p2
 
-    .line 749
-    :cond_7
-    iget-object v0, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
+    if-eqz p2, :cond_2
 
-    neg-int v3, v3
+    return-object v1
 
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-virtual {v0, v3}, Ll/᩶ۙᩴ;->getChar(I)C
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Ll/۠ۙᩴ;->ۚ(C)Ljava/lang/Object;
-
-    .line 750
-    iput v1, p0, Ll/ܶۙᩴ;->᩶:I
-
-    return-void
-
-    .line 742
-    :cond_8
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
+    :cond_2
+    throw p1
 .end method
 
-.method public final ۙ()I
-    .locals 5
+.method public final getSelectedText(I)Ljava/lang/CharSequence;
+    .locals 9
 
-    .line 665
-    invoke-virtual {p0}, Ll/ܶۙᩴ;->hasNext()Z
+    .line 74
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    const/4 v1, 0x0
 
-    .line 666
-    iget v0, p0, Ll/ܶۙᩴ;->ܺ:I
+    if-nez v0, :cond_0
 
-    add-int/lit8 v0, v0, -0x1
+    return-object v1
 
-    iput v0, p0, Ll/ܶۙᩴ;->ܺ:I
-
-    .line 667
-    iget-boolean v0, p0, Ll/ܶۙᩴ;->֡:Z
-
-    iget-object v1, p0, Ll/ܶۙᩴ;->۫:Ll/۠ۙᩴ;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 668
-    iput-boolean v0, p0, Ll/ܶۙᩴ;->֡:Z
-
-    .line 669
-    iget v0, v1, Ll/۠ۙᩴ;->᩻:I
-
-    iput v0, p0, Ll/ܶۙᩴ;->᩶:I
-
-    return v0
-
-    .line 671
+    .line 75
     :cond_0
-    iget-object v0, v1, Ll/۠ۙᩴ;->ܽ:[C
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
 
-    .line 673
-    :cond_1
-    iget v2, p0, Ll/ܶۙᩴ;->ܽ:I
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
 
-    add-int/lit8 v2, v2, -0x1
+    move-result-object v2
 
-    iput v2, p0, Ll/ܶۙᩴ;->ܽ:I
-
-    if-gez v2, :cond_3
-
-    const/high16 v3, -0x80000000
-
-    .line 675
-    iput v3, p0, Ll/ܶۙᩴ;->᩶:I
-
-    .line 676
-    iget-object v3, p0, Ll/ܶۙᩴ;->ܿ:Ll/᩶ۙᩴ;
-
-    neg-int v2, v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v3, v2}, Ll/᩶ۙᩴ;->getChar(I)C
-
-    move-result v2
-
-    .line 677
-    invoke-static {v2}, Ll/ۢ᩻᩺;->ۙ(I)I
+    .line 77
+    :try_start_0
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۠ۙ()I
 
     move-result v3
 
-    iget v4, v1, Ll/۠ۙᩴ;->ܿ:I
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۖۙ()I
 
-    :goto_0
-    and-int/2addr v3, v4
+    move-result v4
 
-    .line 678
-    aget-char v4, v0, v3
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
-    if-eq v2, v4, :cond_2
+    move-result v3
 
-    add-int/lit8 v3, v3, 0x1
+    .line 78
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۠ۙ()I
 
-    iget v4, v1, Ll/۠ۙᩴ;->ܿ:I
+    move-result v4
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۖۙ()I
+
+    move-result v5
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    if-ltz v3, :cond_2
+
+    int-to-long v4, v4
+
+    int-to-long v6, v3
+
+    sub-long/2addr v4, v6
+
+    const-wide/16 v6, 0x2710
+
+    cmp-long v8, v4, v6
+
+    if-lez v8, :cond_2
+
+    add-int/lit16 v4, v3, 0x2710
+
+    and-int/lit8 p1, p1, 0x1
+
+    if-eqz p1, :cond_1
+
+    .line 84
+    invoke-interface {v2, v3, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    invoke-static {v2, v3, v4}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 86
+    :cond_2
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->getSelectedText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_2
-    return v3
+    :catch_1
+    move-exception p1
 
-    .line 681
+    .line 88
+    :goto_0
+    invoke-virtual {v0, v2, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    return-object v1
+
     :cond_3
-    aget-char v3, v0, v2
+    throw p1
+.end method
 
-    if-eqz v3, :cond_1
+.method public final getSurroundingText(III)Landroid/view/inputmethod/SurroundingText;
+    .locals 7
 
-    iput v2, p0, Ll/ܶۙᩴ;->᩶:I
+    .line 96
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    if-ltz p1, :cond_3
+
+    if-ltz p2, :cond_3
+
+    .line 114
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۖۙ()I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۠ۙ()I
+
+    move-result v4
+
+    int-to-long v4, v4
+
+    sub-long/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x2710
+
+    cmp-long v6, v2, v4
+
+    if-lez v6, :cond_1
+
+    return-object v1
+
+    .line 102
+    :cond_1
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v2
+
+    const/16 v3, 0x2710
+
+    .line 104
+    :try_start_0
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    .line 105
+    invoke-static {p2, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    .line 104
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->getSurroundingText(III)Landroid/view/inputmethod/SurroundingText;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 107
+    :goto_0
+    invoke-virtual {v0, v2, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    return-object v1
+
+    :cond_2
+    throw p1
+
+    .line 98
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Surrounding text lengths must be nonnegative"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final getTextAfterCursor(II)Ljava/lang/CharSequence;
+    .locals 4
+
+    .line 63
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    .line 64
+    :cond_0
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v2
+
+    const/16 v3, 0x2710
+
+    .line 65
+    :try_start_0
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->getTextAfterCursor(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 67
+    :goto_0
+    invoke-virtual {v0, v2, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return-object v1
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final getTextBeforeCursor(II)Ljava/lang/CharSequence;
+    .locals 4
+
+    .line 52
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    .line 53
+    :cond_0
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v2
+
+    const/16 v3, 0x2710
+
+    .line 54
+    :try_start_0
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->getTextBeforeCursor(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 56
+    :goto_0
+    invoke-virtual {v0, v2, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return-object v1
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final performContextMenuAction(I)Z
+    .locals 4
+
+    .line 186
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 188
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
 
     return v2
 
-    .line 665
+    .line 191
+    :cond_0
+    invoke-virtual {v0, p1}, Ll/᩺ۜ᩸;->ܺ(I)V
+
+    .line 192
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->᩷ۤ()Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 194
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final performEditorAction(I)Z
+    .locals 1
+
+    .line 468
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 471
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->performEditorAction(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final performHandwritingGesture(Landroid/view/inputmethod/HandwritingGesture;Ljava/util/concurrent/Executor;Ljava/util/function/IntConsumer;)V
+    .locals 1
+
+    .line 577
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 580
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->performHandwritingGesture(Landroid/view/inputmethod/HandwritingGesture;Ljava/util/concurrent/Executor;Ljava/util/function/IntConsumer;)V
+
+    return-void
+.end method
+
+.method public final performPrivateCommand(Ljava/lang/String;Landroid/os/Bundle;)Z
+    .locals 1
+
+    .line 492
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 495
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->performPrivateCommand(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final performSpellCheck()Z
+    .locals 1
+
+    .line 568
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 571
+    :cond_0
+    invoke-super {p0}, Landroid/view/inputmethod/BaseInputConnection;->performSpellCheck()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final previewHandwritingGesture(Landroid/view/inputmethod/PreviewableHandwritingGesture;Landroid/os/CancellationSignal;)Z
+    .locals 1
+
+    .line 586
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 589
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->previewHandwritingGesture(Landroid/view/inputmethod/PreviewableHandwritingGesture;Landroid/os/CancellationSignal;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final replaceText(IILjava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+    .locals 4
+
+    .line 313
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 315
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    .line 318
+    :cond_0
+    invoke-super/range {p0 .. p5}, Landroid/view/inputmethod/BaseInputConnection;->replaceText(IILjava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 320
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final reportFullscreenMode(Z)Z
+    .locals 1
+
+    .line 484
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 487
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->reportFullscreenMode(Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final requestCursorUpdates(I)Z
+    .locals 2
+
+    .line 500
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    const/4 v0, 0x3
+
+    if-gt p1, v0, :cond_1
+
+    .line 504
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0, p1, v1}, Ll/᩺ۜ᩸;->ۚ(II)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final requestCursorUpdates(II)Z
+    .locals 2
+
+    .line 594
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    const/4 v0, 0x3
+
+    if-gt p1, v0, :cond_1
+
+    .line 598
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0, p1, p2}, Ll/᩺ۜ᩸;->ۚ(II)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final requestTextBoundsInfo(Landroid/graphics/RectF;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
+    .locals 1
+
+    .line 607
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 610
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->requestTextBoundsInfo(Landroid/graphics/RectF;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public final sendKeyEvent(Landroid/view/KeyEvent;)Z
+    .locals 1
+
+    .line 476
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 479
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final setComposingRegion(II)Z
+    .locals 3
+
+    .line 360
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    .line 362
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    .line 365
+    :cond_0
+    invoke-direct {p0, p1, p2}, Ll/ܶۙᩴ;->ۙ(II)I
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    add-int/2addr p1, v2
+
+    add-int/2addr p2, v2
+
+    .line 371
+    :cond_1
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->setComposingRegion(II)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 373
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    throw p1
+.end method
+
+.method public final setComposingRegion(IILandroid/view/inputmethod/TextAttribute;)Z
+    .locals 3
+
+    .line 537
+    iget-object p3, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {p3}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    .line 539
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    return v1
+
+    .line 543
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Ll/ܶۙᩴ;->setComposingRegion(II)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 545
+    :goto_0
+    invoke-virtual {p3, v0, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v1
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final setComposingText(Ljava/lang/CharSequence;I)Z
+    .locals 4
+
+    .line 294
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 296
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    .line 299
+    :cond_0
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->۫()V
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 301
+    :try_start_1
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/BaseInputConnection;->setComposingText(Ljava/lang/CharSequence;I)Z
+
+    move-result p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 303
+    :try_start_2
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۙۙ()V
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۙۙ()V
+
+    .line 304
+    throw p1
+    :try_end_2
+    .catch Ljava/io/UncheckedIOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 306
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final setComposingText(Ljava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+    .locals 4
+
+    .line 522
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 524
+    :try_start_0
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    return v2
+
+    .line 527
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/BaseInputConnection;->setComposingText(Ljava/lang/CharSequence;ILandroid/view/inputmethod/TextAttribute;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 529
+    :goto_0
+    invoke-virtual {v0, v1, p1}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return v2
+
+    :cond_1
+    throw p1
+.end method
+
+.method public final setImeConsumesInput(Z)Z
+    .locals 1
+
+    .line 616
+    invoke-direct {p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 619
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/inputmethod/BaseInputConnection;->setImeConsumesInput(Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final setSelection(II)Z
+    .locals 17
+
+    move-object/from16 v1, p0
+
+    move/from16 v0, p1
+
+    move/from16 v2, p2
+
+    .line 414
+    iget-object v3, v1, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v3}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    .line 416
+    :try_start_0
+    invoke-direct/range {p0 .. p0}, Ll/ܶۙᩴ;->᩷()Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    return v5
+
+    .line 419
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v6
+
+    const-wide/16 v8, 0x64
+
+    const/4 v10, 0x1
+
+    if-ne v0, v10, :cond_1
+
+    if-ne v2, v10, :cond_1
+
+    .line 420
+    iget-wide v11, v1, Ll/ܶۙᩴ;->۫:J
+
+    sub-long v11, v6, v11
+
+    cmp-long v13, v11, v8
+
+    if-gez v13, :cond_1
+
+    .line 421
+    iget v0, v1, Ll/ܶۙᩴ;->ۚ:I
+
+    add-int/2addr v0, v10
+
+    move v2, v0
+
+    goto :goto_1
+
+    .line 423
+    :cond_1
+    iget-object v11, v1, Ll/ܶۙᩴ;->ᩴ:Ll/֨۬᩸;
+
+    if-eqz v11, :cond_9
+
+    iget-wide v12, v1, Ll/ܶۙᩴ;->ܳ:J
+
+    sub-long v12, v6, v12
+
+    cmp-long v14, v12, v8
+
+    if-gez v14, :cond_9
+
+    .line 425
+    iget v12, v11, Ll/֨۬᩸;->ᩴ:I
+
+    .line 426
+    iget v13, v11, Ll/֨۬᩸;->᩸:I
+
+    .line 427
+    iget v14, v11, Ll/֨۬᩸;->ܳ:I
+
+    .line 428
+    iget v11, v11, Ll/֨۬᩸;->ۚ:I
+
+    const/16 v15, 0xa
+
+    if-eqz v14, :cond_3
+
+    sub-int v16, v0, v12
+
+    .line 431
+    invoke-static/range {v16 .. v16}, Ljava/lang/Math;->abs(I)I
+
+    move-result v10
+
+    if-lt v10, v15, :cond_2
+
+    sub-int v10, v0, v13
+
+    invoke-static {v10}, Ljava/lang/Math;->abs(I)I
+
+    move-result v10
+
+    if-ge v10, v15, :cond_3
+
+    :cond_2
+    add-int/2addr v0, v14
+
+    goto :goto_0
+
+    :cond_3
+    add-int v10, v14, v11
+
+    if-eq v0, v10, :cond_4
+
+    if-ne v0, v11, :cond_5
+
+    .line 435
     :cond_4
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v3}, Ll/᩺ۜ᩸;->᩹ۤ()I
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result v0
 
+    :cond_5
+    :goto_0
+    if-eqz v14, :cond_7
+
+    sub-int v10, v2, v12
+
+    .line 438
+    invoke-static {v10}, Ljava/lang/Math;->abs(I)I
+
+    move-result v10
+
+    if-lt v10, v15, :cond_6
+
+    sub-int v10, v2, v13
+
+    invoke-static {v10}, Ljava/lang/Math;->abs(I)I
+
+    move-result v10
+
+    if-ge v10, v15, :cond_7
+
+    :cond_6
+    add-int/2addr v2, v14
+
+    goto :goto_1
+
+    :cond_7
+    add-int/2addr v14, v11
+
+    if-eq v2, v14, :cond_8
+
+    if-ne v2, v11, :cond_9
+
+    .line 442
+    :cond_8
+    invoke-virtual {v3}, Ll/᩺ۜ᩸;->᩹ۤ()I
+
+    move-result v2
+
+    .line 449
+    :cond_9
+    :goto_1
+    invoke-super {v1, v0, v2}, Landroid/view/inputmethod/BaseInputConnection;->setSelection(II)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_c
+
+    if-ne v0, v2, :cond_a
+
+    .line 451
+    invoke-virtual {v3}, Ll/᩺ۜ᩸;->֫᩸()V
+
+    .line 1378
+    :cond_a
+    invoke-virtual {v3, v2, v5}, Ll/᩺ۜ᩸;->ۙ(IZ)Z
+
+    .line 454
+    iget-wide v10, v1, Ll/ܶۙᩴ;->᩸:J
+
+    sub-long/2addr v6, v10
+
+    cmp-long v0, v6, v8
+
+    if-gez v0, :cond_b
+
+    .line 1061
+    invoke-virtual {v3, v5}, Ll/᩺ۜ᩸;->᩸(Z)V
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_b
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_c
+    return v5
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    .line 461
+    :goto_2
+    invoke-virtual {v3, v4, v0}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_d
+
+    return v5
+
+    :cond_d
     throw v0
 .end method
 
-.method public abstract ۙ(ILjava/lang/Object;)V
-.end method
+.method public final takeSnapshot()Landroid/view/inputmethod/TextSnapshot;
+    .locals 4
 
-.method public bridge synthetic ܰ(Ll/֨ܰᩴ;)V
-    .locals 0
+    .line 121
+    invoke-direct {p0}, Ll/ܶۙᩴ;->ۙ()Z
 
-    .line 1066
-    invoke-virtual {p0, p1}, Ll/ܶۙᩴ;->forEachRemaining(Ljava/lang/Object;)V
+    move-result v0
 
-    return-void
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    .line 122
+    :cond_0
+    iget-object v0, p0, Ll/ܶۙᩴ;->᩷:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v2
+
+    .line 123
+    :try_start_0
+    invoke-super {p0}, Landroid/view/inputmethod/BaseInputConnection;->takeSnapshot()Landroid/view/inputmethod/TextSnapshot;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/UncheckedIOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/᩺ۢ᩸; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v3
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v3
+
+    .line 125
+    :goto_0
+    invoke-virtual {v0, v2, v3}, Ll/᩺ۜ᩸;->ۙ(Ll/ᩳ۬᩸;Ljava/lang/RuntimeException;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-object v1
+
+    :cond_1
+    throw v3
 .end method

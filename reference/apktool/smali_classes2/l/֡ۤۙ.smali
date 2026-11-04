@@ -1,26 +1,16 @@
 .class public final Ll/֡ۤۙ;
 .super Ljava/lang/Object;
-.source "S8SC"
-
-
-# instance fields
-.field public final ۙ:I
-
-.field public final ܰ:I
+.source "7B0R"
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public static ۙ(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 0
 
-    .line 232
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 107
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-    .line 233
-    iput p1, p0, Ll/֡ۤۙ;->ۙ:I
+    move-result-object p0
 
-    .line 234
-    iput p2, p0, Ll/֡ۤۙ;->ܰ:I
-
-    return-void
+    return-object p0
 .end method

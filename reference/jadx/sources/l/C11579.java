@@ -1,30 +1,54 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ۠ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C11579 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+import java.util.TreeMap;
+
+/* JADX INFO: renamed from: l.ۧۧᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4TV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11579 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Integer f36376;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f36377;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final TreeMap f36378 = new TreeMap();
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C18415 f36379;
+
+    public C11579(String str) {
+        C17359.requireNonNull(str, "regex");
+        C18415 c18415M42925 = C18415.m42925(str);
+        this.f36379 = c18415M42925;
+        this.f36377 = c18415M42925.matcher((CharSequence) "").groupCount();
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return Character.isDefined(i);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m29112(int i) {
+        if (1 > this.f36377) {
+            throw new IllegalArgumentException("Capture group out of range: 1");
+        }
+        if (i != 1447446) {
+            this.f36378.put(1, Integer.valueOf(i));
+            return;
+        }
+        throw new IllegalArgumentException("Color is reserved for style inheritance");
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29111(int i) {
+        if (i != 1447446) {
+            this.f36376 = Integer.valueOf(i);
+            return;
+        }
+        throw new IllegalArgumentException("Color is reserved for style inheritance");
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C16800 m29110() {
+        return new C16800(this);
     }
 }

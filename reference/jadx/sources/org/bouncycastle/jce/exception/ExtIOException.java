@@ -2,7 +2,7 @@ package org.bouncycastle.jce.exception;
 
 import java.io.IOException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExtIOException extends IOException implements ExtException {
     public Throwable cause;
 

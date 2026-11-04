@@ -1,63 +1,78 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜۧۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 68UW */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6715 {
+import java.util.Spliterator;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f22629;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f22630;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int f22631;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18252 f22632;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C7648 f22633;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final int f22634;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f22635;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int f22636;
+/* JADX INFO: renamed from: l.ۛ᩹᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 97L */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6715 extends AbstractC1318 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f22637;
+    public final /* synthetic */ C19393 f22342;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean f22638;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f22639;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final int f22640;
-
-    public C6715(C7648 c7648, int i, int i2, int i3, int i4, int i5, int i6, int i7, C18252 c18252, boolean z, boolean z2, boolean z3) {
-        this.f22633 = c7648;
-        this.f22639 = i;
-        this.f22631 = i2;
-        this.f22634 = i3;
-        this.f22640 = i4;
-        this.f22629 = i5;
-        this.f22636 = i6;
-        this.f22637 = i7;
-        this.f22632 = c18252;
-        this.f22635 = z;
-        this.f22630 = z2;
-        this.f22638 = z3;
+    @Override // l.AbstractC1318, l.AbstractC4301, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10099 m18154() {
-        return new C10099(this.f22636, this.f22640, this.f22629, this.f22637, this.f22638, this.f22631 == 1);
+    public C6715(C19393 c19393) {
+        this.f22342 = c19393;
+    }
+
+    @Override // l.AbstractC4301, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
+    public final InterfaceC21040 iterator() {
+        return new C12680(this.f22342);
+    }
+
+    @Override // l.AbstractC1318, l.AbstractC4301, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC16321 spliterator() {
+        return new C24615(this.f22342);
+    }
+
+    @Override // l.AbstractC4301, l.InterfaceC3886
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5932(InterfaceC12089 interfaceC12089) {
+        C19393 c19393 = this.f22342;
+        char[] cArr = c19393.f62668;
+        if (c19393.f62676) {
+            interfaceC12089.mo10258(cArr[c19393.f62674]);
+        }
+        int i = c19393.f62674;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            char c = cArr[i2];
+            if (c != 0) {
+                interfaceC12089.mo10258(c);
+            }
+            i = i2;
+        }
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f22342.f62670;
+    }
+
+    @Override // l.InterfaceC12835
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo5936(char c) {
+        return this.f22342.mo19857(c);
+    }
+
+    @Override // l.AbstractC1318
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo4844(char c) {
+        C19393 c19393 = this.f22342;
+        int i = c19393.f62670;
+        c19393.mo11585(c);
+        return c19393.f62670 != i;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f22342.clear();
     }
 }

@@ -1,86 +1,167 @@
-.class public final Ll/ۢ᩸᩸;
-.super Ljava/lang/Object;
-.source "B9Q3"
+.class public final enum Ll/ۢ᩸᩸;
+.super Ljava/lang/Enum;
+.source "CB7W"
 
 
-# instance fields
-.field public final ۙ:Ll/ۖ᩸᩸;
+# static fields
+.field public static final enum ֡:Ll/ۢ᩸᩸;
 
-.field public final ܰ:I
+.field public static final enum ۟:Ll/ۢ᩸᩸;
+
+.field public static final synthetic ܰ:[Ll/ۢ᩸᩸;
+
+.field public static final enum ܿ:Ll/ۢ᩸᩸;
+
+.field public static final enum ᩳ:Ll/ۢ᩸᩸;
+
+.field public static final enum ᩶:Ll/ۢ᩸᩸;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۖ᩸᩸;I)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 323
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 20
+    new-instance v0, Ll/ۢ᩸᩸;
 
-    .line 324
-    iput-object p1, p0, Ll/ۢ᩸᩸;->ۙ:Ll/ۖ᩸᩸;
+    const-string v1, "UNIVERSAL"
 
-    .line 325
-    iput p2, p0, Ll/ۢ᩸᩸;->ܰ:I
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ᩸᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ᩸᩸;->ᩳ:Ll/ۢ᩸᩸;
+
+    .line 21
+    new-instance v0, Ll/ۢ᩸᩸;
+
+    const-string v1, "APPLICATION"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ᩸᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ᩸᩸;->᩶:Ll/ۢ᩸᩸;
+
+    .line 22
+    new-instance v0, Ll/ۢ᩸᩸;
+
+    const-string v1, "CONTEXT_SPECIFIC"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ᩸᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ᩸᩸;->֡:Ll/ۢ᩸᩸;
+
+    .line 23
+    new-instance v0, Ll/ۢ᩸᩸;
+
+    const-string v1, "PRIVATE"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ᩸᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ᩸᩸;->۟:Ll/ۢ᩸᩸;
+
+    .line 29
+    new-instance v0, Ll/ۢ᩸᩸;
+
+    const-string v1, "AUTOMATIC"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ᩸᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ᩸᩸;->ܿ:Ll/ۢ᩸᩸;
+
+    .line 19
+    invoke-static {}, Ll/ۢ᩸᩸;->ۙ()[Ll/ۢ᩸᩸;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۢ᩸᩸;->ܰ:[Ll/ۢ᩸᩸;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .line 19
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 335
-    instance-of v0, p1, Ll/ۢ᩸᩸;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 338
-    :cond_0
-    check-cast p1, Ll/ۢ᩸᩸;
-
-    .line 339
-    iget-object v0, p0, Ll/ۢ᩸᩸;->ۙ:Ll/ۖ᩸᩸;
-
-    iget-object v2, p1, Ll/ۢ᩸᩸;->ۙ:Ll/ۖ᩸᩸;
-
-    if-ne v0, v2, :cond_1
-
-    iget v0, p0, Ll/ۢ᩸᩸;->ܰ:I
-
-    iget p1, p1, Ll/ۢ᩸᩸;->ܰ:I
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Ll/ۢ᩸᩸;
+    .locals 1
 
-    .line 330
-    iget-object v0, p0, Ll/ۢ᩸᩸;->ۙ:Ll/ۖ᩸᩸;
+    .line 19
+    const-class v0, Ll/ۢ᩸᩸;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    const v1, 0xffff
+    check-cast p0, Ll/ۢ᩸᩸;
 
-    mul-int v0, v0, v1
+    return-object p0
+.end method
 
-    iget v1, p0, Ll/ۢ᩸᩸;->ܰ:I
+.method public static values()[Ll/ۢ᩸᩸;
+    .locals 1
 
-    add-int/2addr v0, v1
+    .line 19
+    sget-object v0, Ll/ۢ᩸᩸;->ܰ:[Ll/ۢ᩸᩸;
 
-    return v0
+    invoke-virtual {v0}, [Ll/ۢ᩸᩸;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۢ᩸᩸;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/ۢ᩸᩸;
+    .locals 3
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Ll/ۢ᩸᩸;
+
+    .line 19
+    sget-object v1, Ll/ۢ᩸᩸;->ᩳ:Ll/ۢ᩸᩸;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢ᩸᩸;->᩶:Ll/ۢ᩸᩸;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢ᩸᩸;->֡:Ll/ۢ᩸᩸;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢ᩸᩸;->۟:Ll/ۢ᩸᩸;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢ᩸᩸;->ܿ:Ll/ۢ᩸᩸;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

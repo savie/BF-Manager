@@ -1,31 +1,36 @@
 package l;
 
-import bin.mt.plus.R;
+import java.io.FilterInputStream;
+import java.io.InputStream;
+import java.io.InterruptedIOException;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩸ۡ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X20E */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21485 extends AbstractC4674 {
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final C21485 f69811 = new C21485(R.string.MT_Protector, R.drawable.MT_Protector);
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static C21485 m48102() {
-        return f69811;
+/* JADX INFO: renamed from: l.᩶ᩳۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6L2 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21485 extends FilterInputStream implements InterfaceC8469 {
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        return c21422.m47975() == 1 && !c21422.m47981().isDirectory();
+    public C21485(InputStream inputStream) {
+        super(inputStream);
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        InterfaceC2557 interfaceC2557M47981 = c21422.m47981();
-        c21422.m47960().mo23627(interfaceC2557M47981);
-        C17901.m41532(c21422.m47965(), interfaceC2557M47981, interfaceC2557M47981.mo7972().m48182() == null);
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read() throws InterruptedIOException {
+        if (Thread.currentThread().isInterrupted()) {
+            throw new InterruptedIOException("ZIP operation cancelled");
+        }
+        return ((FilterInputStream) this).in.read();
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws InterruptedIOException {
+        if (Thread.currentThread().isInterrupted()) {
+            throw new InterruptedIOException("ZIP operation cancelled");
+        }
+        return ((FilterInputStream) this).in.read(bArr, i, i2);
     }
 }

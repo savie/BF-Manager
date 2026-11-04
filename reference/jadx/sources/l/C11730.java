@@ -1,128 +1,378 @@
 package l;
 
-import java.lang.reflect.GenericArrayType;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
-import java.lang.reflect.WildcardType;
+import com.alipay.sdk.m.y.q;
+import java.math.BigDecimal;
+import moe.shizuku.server.IShizukuService;
+import org.bouncycastle.crypto.engines.ThreefishEngine;
 
-/* JADX INFO: renamed from: l.ۨ۬᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: O2OG */
+/* JADX INFO: renamed from: l.ۧܺܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D66F */
 /* JADX INFO: loaded from: classes3.dex */
-public class C11730 {
-
+public final class C11730 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f39422;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Type f39423;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Class f39424;
-
-    public C11730() {
-        Type genericSuperclass = getClass().getGenericSuperclass();
-        if (genericSuperclass instanceof ParameterizedType) {
-            ParameterizedType parameterizedType = (ParameterizedType) genericSuperclass;
-            if (parameterizedType.getRawType() == C11730.class) {
-                Type typeM51551 = C23415.m51551(parameterizedType.getActualTypeArguments()[0]);
-                if (!C13638.equals(System.getProperty("gson.allowCapturingTypeVariables"), "true")) {
-                    m29315(typeM51551);
+    public static int m29452(char c) {
+        switch (c) {
+            case '1':
+                return 1;
+            case '2':
+                return 2;
+            case '3':
+                return 3;
+            case '4':
+                return 4;
+            case '5':
+                return 5;
+            case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
+                return 6;
+            case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
+                return 7;
+            case '8':
+                return 8;
+            case '9':
+                return 9;
+            default:
+                switch (c) {
+                    case 'A':
+                        return 10;
+                    case 'B':
+                        return 11;
+                    case 'C':
+                        return 12;
+                    case 'D':
+                        return 13;
+                    case 'E':
+                        return 14;
+                    case 'F':
+                        return 15;
+                    default:
+                        switch (c) {
+                            case 'a':
+                                return 10;
+                            case 'b':
+                                return 11;
+                            case q.f /* 99 */:
+                                return 12;
+                            case 'd':
+                                return 13;
+                            case 'e':
+                                return 14;
+                            case IShizukuService.Stub.TRANSACTION_attachUserService /* 102 */:
+                                return 15;
+                            default:
+                                return 0;
+                        }
                 }
-                this.f39423 = typeM51551;
-                this.f39424 = C23415.m51555(typeM51551);
-                this.f39422 = typeM51551.hashCode();
-                return;
-            }
-        } else if (genericSuperclass == C11730.class) {
-            throw new IllegalStateException("TypeToken must be created with a type argument: new TypeToken<...>() {}; When using code shrinkers (ProGuard, R8, ...) make sure that generic signatures are preserved.\nSee " + "https://github.com/google/gson/blob/main/Troubleshooting.md#".concat("type-token-raw"));
-        }
-        throw new IllegalStateException("Must only create direct subclasses of TypeToken");
-    }
-
-    public C11730(Type type) {
-        C13638.requireNonNull(type);
-        Type typeM51551 = C23415.m51551(type);
-        this.f39423 = typeM51551;
-        this.f39424 = C23415.m51555(typeM51551);
-        this.f39422 = typeM51551.hashCode();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m29315(Type type) {
-        if (type instanceof TypeVariable) {
-            TypeVariable typeVariable = (TypeVariable) type;
-            throw new IllegalArgumentException("TypeToken type argument must not contain a type variable; captured type variable " + typeVariable.getName() + " declared by " + typeVariable.getGenericDeclaration() + "\nSee " + "https://github.com/google/gson/blob/main/Troubleshooting.md#".concat("typetoken-type-variable"));
-        }
-        if (type instanceof GenericArrayType) {
-            m29315(((GenericArrayType) type).getGenericComponentType());
-            return;
-        }
-        int i = 0;
-        if (type instanceof ParameterizedType) {
-            ParameterizedType parameterizedType = (ParameterizedType) type;
-            Type ownerType = parameterizedType.getOwnerType();
-            if (ownerType != null) {
-                m29315(ownerType);
-            }
-            Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-            int length = actualTypeArguments.length;
-            while (i < length) {
-                m29315(actualTypeArguments[i]);
-                i++;
-            }
-            return;
-        }
-        if (!(type instanceof WildcardType)) {
-            if (type == null) {
-                throw new IllegalArgumentException("TypeToken captured `null` as type argument; probably a compiler / runtime bug");
-            }
-            return;
-        }
-        WildcardType wildcardType = (WildcardType) type;
-        for (Type type2 : wildcardType.getLowerBounds()) {
-            m29315(type2);
-        }
-        Type[] upperBounds = wildcardType.getUpperBounds();
-        int length2 = upperBounds.length;
-        while (i < length2) {
-            m29315(upperBounds[i]);
-            i++;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Class m29316() {
-        return this.f39424;
+    public static boolean m29454(String str, C5765 c5765) {
+        int iM29452;
+        int iM29453;
+        if (!str.startsWith("#") || !m29453(str.substring(1))) {
+            return false;
+        }
+        char[] charArray = str.toCharArray();
+        int length = str.length();
+        if (length == 4) {
+            c5765.f19814 = 31;
+            iM29452 = (m29452(charArray[1]) << 20) | (-16777216) | (m29452(charArray[1]) << 16) | (m29452(charArray[2]) << 12) | (m29452(charArray[2]) << 8) | (m29452(charArray[3]) << 4);
+            iM29453 = m29452(charArray[3]);
+        } else if (length == 5) {
+            c5765.f19814 = 30;
+            iM29452 = (m29452(charArray[1]) << 28) | (m29452(charArray[1]) << 24) | (m29452(charArray[2]) << 20) | (m29452(charArray[2]) << 16) | (m29452(charArray[3]) << 12) | (m29452(charArray[3]) << 8) | (m29452(charArray[4]) << 4);
+            iM29453 = m29452(charArray[4]);
+        } else if (length == 7) {
+            c5765.f19814 = 29;
+            iM29452 = (m29452(charArray[1]) << 20) | (-16777216) | (m29452(charArray[2]) << 16) | (m29452(charArray[3]) << 12) | (m29452(charArray[4]) << 8) | (m29452(charArray[5]) << 4);
+            iM29453 = m29452(charArray[6]);
+        } else {
+            if (length != 9) {
+                return false;
+            }
+            c5765.f19814 = 28;
+            iM29452 = (m29452(charArray[1]) << 28) | (m29452(charArray[2]) << 24) | (m29452(charArray[3]) << 20) | (m29452(charArray[4]) << 16) | (m29452(charArray[5]) << 12) | (m29452(charArray[6]) << 8) | (m29452(charArray[7]) << 4);
+            iM29453 = m29452(charArray[8]);
+        }
+        c5765.f19813 = iM29452 | iM29453;
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Type m29317() {
-        return this.f39423;
-    }
-
-    public final int hashCode() {
-        return this.f39422;
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj instanceof C11730) {
-            return C23415.m51554(this.f39423, ((C11730) obj).f39423);
+    /* JADX WARN: Code duplicated, block: B:13:0x0023 A[PHI: r6
+      0x0023: PHI (r6v1 java.lang.String) = (r6v0 java.lang.String), (r6v10 java.lang.String) binds: [B:9:0x0016, B:11:0x0020] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:20:0x0036 A[Catch: NumberFormatException -> 0x0059, TryCatch #0 {NumberFormatException -> 0x0059, blocks: (B:18:0x0030, B:20:0x0036, B:22:0x0046, B:23:0x004b), top: B:30:0x0030 }] */
+    /* JADX WARN: Code duplicated, block: B:21:0x0044 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:22:0x0046 A[Catch: NumberFormatException -> 0x0059, TryCatch #0 {NumberFormatException -> 0x0059, blocks: (B:18:0x0030, B:20:0x0036, B:22:0x0046, B:23:0x004b), top: B:30:0x0030 }] */
+    /* JADX WARN: Code duplicated, block: B:25:0x0055  */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m29458(String str, C5765 c5765) {
+        char cCharAt;
+        int iM29456;
+        if (str.length() != 0) {
+            boolean z = str.charAt(0) == '-';
+            if (z) {
+                str = str.substring(1);
+                if (str.length() != 0) {
+                    cCharAt = str.charAt(0);
+                    if (cCharAt >= '0' && cCharAt <= '9') {
+                        try {
+                            if (m29462(str)) {
+                                iM29456 = m29456(str.substring(2));
+                                c5765.f19814 = 17;
+                            } else {
+                                if (z) {
+                                    str = "-".concat(str);
+                                    z = false;
+                                }
+                                iM29456 = Integer.parseInt(str);
+                                c5765.f19814 = 16;
+                            }
+                            if (z) {
+                                iM29456 = -iM29456;
+                            }
+                            c5765.f19813 = iM29456;
+                            return true;
+                        } catch (NumberFormatException unused) {
+                        }
+                    }
+                }
+            } else {
+                cCharAt = str.charAt(0);
+                if (cCharAt >= '0') {
+                    if (m29462(str)) {
+                        iM29456 = m29456(str.substring(2));
+                        c5765.f19814 = 17;
+                    } else {
+                        if (z) {
+                            str = "-".concat(str);
+                            z = false;
+                        }
+                        iM29456 = Integer.parseInt(str);
+                        c5765.f19814 = 16;
+                    }
+                    if (z) {
+                        iM29456 = -iM29456;
+                    }
+                    c5765.f19813 = iM29456;
+                    return true;
+                }
+            }
         }
         return false;
     }
 
-    public final String toString() {
-        return C23415.m51548(this.f39423);
+    /* JADX WARN: Code duplicated, block: B:33:0x008d  */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m29463(String str, C5765 c5765) {
+        int i;
+        char c = 0;
+        if (str.length() != 0) {
+            for (EnumC2036 enumC2036 : EnumC2036.values()) {
+                try {
+                    if (str.endsWith(enumC2036.f6780)) {
+                        String strSubstring = str.substring(0, str.length() - enumC2036.f6778);
+                        c5765.f19815 = strSubstring;
+                        c5765.f19814 = enumC2036.f6776;
+                        c5765.f19813 = enumC2036.f6777;
+                        c5765.f19812 = enumC2036.f6779;
+                        if (strSubstring.length() == 0) {
+                            break;
+                        }
+                        try {
+                            Float.parseFloat(strSubstring);
+                            float f = Float.parseFloat(c5765.f19815) * c5765.f19812;
+                            boolean z = f < 0.0f;
+                            if (z) {
+                                f = -f;
+                            }
+                            long j = (long) ((f * 8388608.0f) + 0.5f);
+                            if ((8388607 & j) == 0) {
+                                c = 23;
+                                i = 0;
+                            } else if (((-8388608) & j) == 0) {
+                                i = 3;
+                            } else if (((-2147483648L) & j) == 0) {
+                                c = '\b';
+                                i = 2;
+                            } else if (((-549755813888L) & j) == 0) {
+                                c = 16;
+                                i = 1;
+                            } else {
+                                c = 23;
+                                i = 0;
+                            }
+                            int i2 = (int) ((j >> c) & 16777215);
+                            if (z) {
+                                i2 = (-i2) & 16777215;
+                            }
+                            c5765.f19813 = (i << 4) | (i2 << 8) | c5765.f19813;
+                            return true;
+                        } catch (NumberFormatException unused) {
+                            break;
+                        }
+                    }
+                } catch (NumberFormatException unused2) {
+                }
+            }
+            if (str.length() != 0) {
+                Float.parseFloat(str);
+                c5765.f19813 = Float.floatToRawIntBits(Float.parseFloat(str));
+                c5765.f19814 = 4;
+                c5765.f19812 = 1.0f;
+                c5765.f19815 = str;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static int m29456(String str) {
+        int iM29452 = 0;
+        for (char c : str.toCharArray()) {
+            iM29452 = (iM29452 << 4) | m29452(c);
+        }
+        return iM29452;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static boolean m29464(String str) {
+        if (str == null || str.isEmpty()) {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            char cCharAt = str.charAt(i);
+            if ((cCharAt < '0' || cCharAt > '9') && !(i == 0 && cCharAt == '-')) {
+                return false;
+            }
+        }
+        if (str.length() < 10) {
+            return true;
+        }
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException unused) {
+            return false;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m29462(String str) {
+        if (str.length() < 3 || str.length() > 10) {
+            return false;
+        }
+        if (!str.startsWith("0x") && !str.startsWith("0X")) {
+            return false;
+        }
+        for (int i = 2; i < str.length(); i++) {
+            char cCharAt = str.charAt(i);
+            if (((cCharAt < '0' || cCharAt > '9') && ((cCharAt < 'A' || cCharAt > 'F') && cCharAt < 'a')) || cCharAt > 'f') {
+                return false;
+            }
+        }
+        return true;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C11730 m29314(Type type) {
-        return new C11730(type);
+    public static boolean m29453(String str) {
+        if (str.length() < 1 || str.length() > 8) {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            char cCharAt = str.charAt(i);
+            if (((cCharAt < '0' || cCharAt > '9') && ((cCharAt < 'A' || cCharAt > 'F') && cCharAt < 'a')) || cCharAt > 'f') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static boolean m29461(String str) {
+        if (str.length() < 1 || str.length() > 16) {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            char cCharAt = str.charAt(i);
+            if (((cCharAt < '0' || cCharAt > '9') && ((cCharAt < 'A' || cCharAt > 'F') && cCharAt < 'a')) || cCharAt > 'f') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static boolean m29460(String str) {
+        String strReplace = str.replace(" ", "").replace("_", "");
+        if (strReplace.startsWith("-")) {
+            strReplace = strReplace.substring(1);
+        }
+        if (strReplace.length() != 0) {
+            for (int i = 0; i < strReplace.length(); i++) {
+                char cCharAt = strReplace.charAt(i);
+                if (cCharAt >= '0' && cCharAt <= '9') {
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static boolean m29459(String str) {
+        String strReplace = str.replace(" ", "").replace("_", "");
+        if (strReplace.length() == 0) {
+            return false;
+        }
+        for (int i = 0; i < strReplace.length(); i++) {
+            char cCharAt = strReplace.charAt(i);
+            if ((cCharAt < '0' || cCharAt > '9') && ((cCharAt < 'A' || cCharAt > 'F') && (cCharAt < 'a' || cCharAt > 'f'))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m29457(String str) {
+        return (str.length() == 3 || str.length() == 4 || str.length() == 6 || str.length() == 8) && m29453(str);
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static int m29451(String str) {
+        int iM29452;
+        int iM29453;
+        char[] charArray = str.toCharArray();
+        int length = str.length();
+        if (length == 3) {
+            iM29452 = (m29452(charArray[0]) << 20) | (-16777216) | (m29452(charArray[0]) << 16) | (m29452(charArray[1]) << 12) | (m29452(charArray[1]) << 8) | (m29452(charArray[2]) << 4);
+            iM29453 = m29452(charArray[2]);
+        } else if (length == 4) {
+            iM29452 = (m29452(charArray[0]) << 28) | (m29452(charArray[0]) << 24) | (m29452(charArray[1]) << 20) | (m29452(charArray[1]) << 16) | (m29452(charArray[2]) << 12) | (m29452(charArray[2]) << 8) | (m29452(charArray[3]) << 4);
+            iM29453 = m29452(charArray[3]);
+        } else if (length == 6) {
+            iM29452 = (m29452(charArray[0]) << 20) | (-16777216) | (m29452(charArray[1]) << 16) | (m29452(charArray[2]) << 12) | (m29452(charArray[3]) << 8) | (m29452(charArray[4]) << 4);
+            iM29453 = m29452(charArray[5]);
+        } else if (length == 8) {
+            iM29452 = (m29452(charArray[0]) << 28) | (m29452(charArray[1]) << 24) | (m29452(charArray[2]) << 20) | (m29452(charArray[3]) << 16) | (m29452(charArray[4]) << 12) | (m29452(charArray[5]) << 8) | (m29452(charArray[6]) << 4);
+            iM29453 = m29452(charArray[7]);
+        } else {
+            throw new RuntimeException("Hex color format error: " + ((Object) charArray));
+        }
+        return iM29452 | iM29453;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C11730 m29313(Class cls) {
-        return new C11730(cls);
+    public static boolean m29455(C5765 c5765) {
+        String str = c5765.f19815;
+        if (str == null || str.length() == 0) {
+            return false;
+        }
+        try {
+            return new BigDecimal(str).precision() <= 7;
+        } catch (Exception unused) {
+            return false;
+        }
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.engines;
 
 import org.bouncycastle.crypto.digests.SHA1Digest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CAST6Engine extends CAST5Engine {
     public static final int BLOCK_SIZE = 16;
     public static final int ROUNDS = 12;

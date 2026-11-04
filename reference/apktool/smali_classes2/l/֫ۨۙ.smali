@@ -1,111 +1,301 @@
 .class public final Ll/֫ۨۙ;
-.super Ll/ۢۨۙ;
-.source "DB30"
+.super Ljava/lang/Object;
+.source "93Z4"
 
 
-# instance fields
-.field public volatile ۨ:Ll/ܺۖۙ;
-
-.field public volatile ܰ:Ll/֫ۖۙ;
+# static fields
+.field public static final ۙ:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final ۙ(Ljava/lang/CharSequence;IIZ)Ljava/lang/CharSequence;
+# direct methods
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 1777
-    iget-object v0, p0, Ll/֫ۨۙ;->ۨ:Ll/ܺۖۙ;
+    .line 132
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Ll/ܺۖۙ;->ۙ(Ljava/lang/CharSequence;IIZ)Ljava/lang/CharSequence;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
 
-    return-object p1
+    return-void
 .end method
 
-.method public final ۙ(Landroid/view/inputmethod/EditorInfo;)V
-    .locals 3
+.method public static ۙ(Ljava/lang/String;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
 
-    .line 1782
-    iget-object v0, p1, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    .line 195
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
 
-    iget-object v1, p0, Ll/֫ۨۙ;->ܰ:Ll/֫ۖۙ;
-
-    invoke-virtual {v1}, Ll/֫ۖۙ;->ۨ()I
-
-    move-result v1
-
-    const-string v2, "android.support.text.emoji.emojiCompat_metadataVersion"
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    .line 1783
-    iget-object p1, p1, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v0, "android.support.text.emoji.emojiCompat_replaceAll"
+    monitor-enter v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    .line 76
+    :try_start_0
+    invoke-static {p0, v1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 199
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public final ۙ(Ll/֫ۖۙ;)V
-    .locals 5
+.method public static ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
 
-    .line 1735
-    iput-object p1, p0, Ll/֫ۨۙ;->ܰ:Ll/֫ۖۙ;
+    if-nez p1, :cond_0
 
-    .line 1736
-    new-instance p1, Ll/ܺۖۙ;
+    const/4 p0, 0x0
 
-    iget-object v0, p0, Ll/֫ۨۙ;->ܰ:Ll/֫ۖۙ;
+    goto :goto_1
 
-    iget-object v1, p0, Ll/ۢۨۙ;->ۙ:Ll/۬ۖۙ;
+    .line 329
+    :cond_0
+    sget-object p0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
 
-    .line 1738
-    invoke-static {v1}, Ll/۬ۖۙ;->ۙ(Ll/۬ۖۙ;)Ll/ۙۖۙ;
+    move-object v0, p0
 
-    move-result-object v1
+    monitor-enter v0
 
-    iget-object v2, p0, Ll/ۢۨۙ;->ۙ:Ll/۬ۖۙ;
+    move-object p0, p1
 
-    .line 1739
-    invoke-static {v2}, Ll/۬ۖۙ;->ܰ(Ll/۬ۖۙ;)Ll/ܰۖۙ;
+    :goto_0
+    if-eqz p0, :cond_2
 
-    move-result-object v2
+    .line 362
+    :try_start_0
+    instance-of v1, p0, Ljava/net/UnknownHostException;
 
-    .line 35
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-eqz v1, :cond_1
 
-    const/16 v4, 0x22
+    const-string p0, "UnknownHostException (no network)"
 
-    if-lt v3, v4, :cond_0
+    .line 338
+    monitor-exit v0
 
-    .line 36
-    invoke-static {}, Ll/۠ۖۙ;->ۙ()Ljava/util/Set;
+    goto :goto_1
 
-    move-result-object v3
+    .line 365
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
 
     goto :goto_0
 
-    .line 38
-    :cond_0
-    invoke-static {}, Ll/᩵ۖۙ;->ۙ()Ljava/util/Set;
+    .line 342
+    :cond_2
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p0
 
-    .line 1742
-    :goto_0
-    invoke-direct {p1, v0, v1, v2, v3}, Ll/ܺۖۙ;-><init>(Ll/֫ۖۙ;Ll/ۙۖۙ;Ll/ܰۖۙ;Ljava/util/Set;)V
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    iput-object p1, p0, Ll/֫ۨۙ;->ۨ:Ll/ܺۖۙ;
+    move-result-object p0
 
-    .line 1745
-    iget-object p1, p0, Ll/ۢۨۙ;->ۙ:Ll/۬ۖۙ;
+    const-string p1, "\t"
 
-    invoke-virtual {p1}, Ll/۬ۖۙ;->ۨ()V
+    const-string v1, "    "
+
+    invoke-virtual {p0, p1, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 353
+    :goto_1
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    const-string p1, "\n"
+
+    const-string v0, "\n  "
+
+    .line 354
+    invoke-virtual {p0, p1, v0}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    :cond_3
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    .line 344
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ۤ(Ljava/lang/String;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
+
+    .line 226
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 81
+    :try_start_0
+    invoke-static {p0, v1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 230
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ۤ(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
+
+    .line 273
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 86
+    :try_start_0
+    invoke-static {p0, p1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 277
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ᩷(Ljava/lang/String;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
+
+    .line 288
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 91
+    :try_start_0
+    invoke-static {p0, v1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 292
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ᩷(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
+
+    .line 304
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 91
+    :try_start_0
+    invoke-static {p0, p1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 308
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ᩸(Ljava/lang/String;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
+    .end annotation
+
+    .line 257
+    sget-object v0, Ll/֫ۨۙ;->ۙ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 86
+    :try_start_0
+    invoke-static {p0, v1}, Ll/֫ۨۙ;->ۙ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 261
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

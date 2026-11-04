@@ -1,36 +1,16 @@
-.class public final Ll/ۚۡ;
+.class public final synthetic Ll/ۚۡ;
 .super Ljava/lang/Object;
-.source "71DP"
-
-
-# instance fields
-.field public ۖ:F
-
-.field public ۙ:F
-
-.field public ۨ:I
-
-.field public ܰ:F
+.source "JB1Y"
 
 
 # direct methods
-.method public constructor <init>(IFFF)V
-    .locals 0
+.method public static synthetic ۙ(Landroid/content/ClipData;I)Landroid/view/ContentInfo$Builder;
+    .locals 1
 
-    .line 60
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    new-instance v0, Landroid/view/ContentInfo$Builder;
 
-    .line 61
-    iput p1, p0, Ll/ۚۡ;->ۨ:I
+    invoke-direct {v0, p0, p1}, Landroid/view/ContentInfo$Builder;-><init>(Landroid/content/ClipData;I)V
 
-    .line 62
-    iput p4, p0, Ll/ۚۡ;->ۖ:F
-
-    .line 63
-    iput p3, p0, Ll/ۚۡ;->ۙ:F
-
-    .line 64
-    iput p2, p0, Ll/ۚۡ;->ܰ:F
-
-    return-void
+    return-object v0
 .end method

@@ -1,29 +1,37 @@
 package l;
 
-import java.util.function.Predicate;
+import android.os.Build;
 
-/* JADX INFO: renamed from: l.ۘۙۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9R5 */
+/* JADX INFO: renamed from: l.ۗ᩸ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7AQD */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3703 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        int i = ActivityC10055.f34353;
-        return ((C8644) obj).f29820 != null;
+public final class C3703 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m12023(String str) {
+        if (Build.VERSION.SDK_INT >= 26) {
+            if (str.length() > 1 && str.charAt(0) == '+') {
+                str = str.substring(1);
+            }
+            long j = Long.parseLong(str, 16);
+            if ((4294967295L & j) == j) {
+                return (int) j;
+            }
+            throw new NumberFormatException(C14442.m34865("Input ", str, " in base 16 is not in the range of an unsigned integer"));
+        }
+        int length = str.length();
+        if (length <= 0) {
+            throw new NumberFormatException(C14442.m34865("For input string: \"", str, "\""));
+        }
+        if (str.charAt(0) == '-') {
+            throw new NumberFormatException(C14442.m34865("Illegal leading minus sign on unsigned string ", str, "."));
+        }
+        if (length <= 5) {
+            return Integer.parseInt(str, 16);
+        }
+        long j2 = Long.parseLong(str, 16);
+        if (((-4294967296L) & j2) == 0) {
+            return (int) j2;
+        }
+        throw new NumberFormatException(C14442.m34865("String value ", str, " exceeds range of unsigned int."));
     }
 }

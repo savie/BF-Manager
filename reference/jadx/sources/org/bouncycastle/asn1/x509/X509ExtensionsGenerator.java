@@ -3,14 +3,14 @@ package org.bouncycastle.asn1.x509;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Vector;
-import l.C15489;
-import l.C17114;
+import l.C13645;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.DEROctetString;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509ExtensionsGenerator {
     public Hashtable extensions = new Hashtable();
     public Vector extOrdering = new Vector();
@@ -19,13 +19,13 @@ public class X509ExtensionsGenerator {
         try {
             addExtension(aSN1ObjectIdentifier, z, aSN1Encodable.toASN1Primitive().getEncoded(ASN1Encoding.DER));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("error encoding value: ", e));
+            throw new IllegalArgumentException(C13645.m33383("error encoding value: ", e));
         }
     }
 
     public void addExtension(ASN1ObjectIdentifier aSN1ObjectIdentifier, boolean z, byte[] bArr) {
         if (this.extensions.containsKey(aSN1ObjectIdentifier)) {
-            throw new IllegalArgumentException(C17114.m39969("extension ", aSN1ObjectIdentifier, " already added"));
+            throw new IllegalArgumentException(C13921.m33901("extension ", aSN1ObjectIdentifier, " already added"));
         }
         this.extOrdering.addElement(aSN1ObjectIdentifier);
         this.extensions.put(aSN1ObjectIdentifier, new X509Extension(z, new DEROctetString(bArr)));

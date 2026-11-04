@@ -1,53 +1,90 @@
-.class public final synthetic Ll/ۘۡۘ;
+.class public final Ll/ۘۡۘ;
 .super Ljava/lang/Object;
-.source "E72G"
+.source "07KX"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/String;
+.field public ܰ:I
 
-.field public final synthetic ܺ:Ll/ۤۚ᩹;
+.field public final synthetic ܿ:I
 
-.field public final synthetic ᩶:Ll/ᩴۚ᩹;
+.field public final synthetic ᩶:Ll/ܰۡۘ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۤۚ᩹;Ll/ᩴۚ᩹;Ljava/lang/String;)V
+.method public constructor <init>(Ll/ܰۡۘ;I)V
     .locals 0
 
-    .line 0
+    .line 465
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۘۡۘ;->ܺ:Ll/ۤۚ᩹;
+    iput-object p1, p0, Ll/ۘۡۘ;->᩶:Ll/ܰۡۘ;
 
-    iput-object p2, p0, Ll/ۘۡۘ;->᩶:Ll/ᩴۚ᩹;
+    iput p2, p0, Ll/ۘۡۘ;->ܿ:I
 
-    iput-object p3, p0, Ll/ۘۡۘ;->֡:Ljava/lang/String;
+    const/4 p1, 0x0
+
+    .line 466
+    iput p1, p0, Ll/ۘۡۘ;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final hasNext()Z
+    .locals 2
 
-    .line 2
-    sget-object v0, Ll/ۤۡۘ;->֫ܰ:Ll/۠ۡۘ;
+    .line 470
+    iget v0, p0, Ll/ۘۡۘ;->ܰ:I
 
+    iget v1, p0, Ll/ۘۡۘ;->ܿ:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
-    .line 166
-    iget-object v1, p0, Ll/ۘۡۘ;->ܺ:Ll/ۤۚ᩹;
+    return v0
+.end method
 
-    iget-object v2, p0, Ll/ۘۡۘ;->᩶:Ll/ᩴۚ᩹;
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v3, p0, Ll/ۘۡۘ;->֡:Ljava/lang/String;
+    .line 475
+    invoke-virtual {p0}, Ll/ۘۡۘ;->hasNext()Z
 
-    invoke-virtual {v1, v2, v3, v0}, Ll/ۤۚ᩹;->ۙ(Ll/ᩴۚ᩹;Ljava/lang/String;Z)V
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_0
+
+    .line 478
+    iget v0, p0, Ll/ۘۡۘ;->ܰ:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Ll/ۘۡۘ;->ܰ:I
+
+    iget-object v1, p0, Ll/ۘۡۘ;->᩶:Ll/ܰۡۘ;
+
+    invoke-virtual {v1, v0}, Ll/ܰۡۘ;->getName(I)Ll/᩺۬᩹;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 476
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method

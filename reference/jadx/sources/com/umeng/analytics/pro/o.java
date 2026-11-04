@@ -46,7 +46,7 @@ public class o {
     public static Context a = null;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77938l = "first_activate_time";
+    public static final String f82054l = "first_activate_time";
     public static final String m = "ana_is_f";
     public static final String n = "thtstart";
     public static final String o = "dstk_last_time";
@@ -93,7 +93,7 @@ public class o {
         public static final int k = 4352;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final int f77939l = 4353;
+        public static final int f82055l = 4353;
         public static final int m = 4354;
         public static final int n = 4355;
         public static final int o = 4356;
@@ -172,7 +172,7 @@ public class o {
                 if (this.u) {
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> network is now available, rebuild instant session data packet.");
                     Context context = a;
-                    UMWorkDispatch.sendEvent(context, a.f77939l, CoreProtocol.getInstance(context), null);
+                    UMWorkDispatch.sendEvent(context, a.f82055l, CoreProtocol.getInstance(context), null);
                 }
             }
             synchronized (this.w) {
@@ -283,7 +283,7 @@ public class o {
                                     break;
                                 }
                                 return;
-                            case a.f77939l /* 4353 */:
+                            case a.f82055l /* 4353 */:
                                 a(obj, true);
                                 return;
                             case a.m /* 4354 */:
@@ -747,14 +747,14 @@ public class o {
                     sharedPreferences.edit().putLong(m, 0L).commit();
                 }
             }
-            jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.f77932l), m());
+            jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.f82048l), m());
             jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.m), n());
             if (sharedPreferences != null) {
                 String string = sharedPreferences.getString("vers_name", "");
                 if (!TextUtils.isEmpty(string)) {
                     String str2 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()));
                     if (TextUtils.isEmpty(strImprintProperty)) {
-                        jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.f77932l), sharedPreferences.getString("vers_pre_version", "0"));
+                        jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.f82048l), sharedPreferences.getString("vers_pre_version", "0"));
                         jSONObject.put(com.umeng.commonsdk.statistics.b.a(com.umeng.analytics.pro.d.m), sharedPreferences.getString("vers_date", str2));
                     }
                     sharedPreferences.edit().putString("pre_version", string).putString("cur_version", DeviceConfig.getAppVersionName(a)).putString("pre_date", str2).remove("vers_name").remove("vers_code").remove("vers_date").remove("vers_pre_version").commit();
@@ -1535,7 +1535,7 @@ public class o {
                 i.a(a).b();
                 UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> removeAllInstantData: send INSTANT_SESSION_START_CONTINUE event because OVERSIZE.");
                 Context context = a;
-                UMWorkDispatch.sendEvent(context, a.f77939l, CoreProtocol.getInstance(context), null);
+                UMWorkDispatch.sendEvent(context, a.f82055l, CoreProtocol.getInstance(context), null);
                 return;
             }
             if (jSONObject.has("content")) {

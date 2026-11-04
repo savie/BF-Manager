@@ -1,46 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ۚۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A5YB */
+import bin.mt.json.JSONObject;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.pqc.jcajce.provider.sphincsplus.SPHINCSPlusKeyFactorySpi;
+
+/* JADX INFO: renamed from: l.᩸ۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q1K7 */
 /* JADX INFO: loaded from: classes.dex */
-public class C22783 implements InterfaceC5143, InterfaceC9564 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f74163;
-
-    @Override // l.InterfaceC10975
-    /* JADX INFO: renamed from: ᩸ */
-    public final int mo2656() {
-        return 4;
+public final /* synthetic */ class C22783 implements InterfaceC19795, InterfaceC17544 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static JSONObject m51386(JSONObject jSONObject, String str, String str2, String str3, String str4) {
+        return C10932.m27731(jSONObject.add(str3, C10932.m27740(str, str2)), str4);
     }
 
-    public C22783(int i) {
-        this.f74163 = i;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static StringBuilder m51387(String str, String str2, String str3) {
+        StringBuilder sb = new StringBuilder(str);
+        sb.append(str2);
+        sb.append(str3);
+        return sb;
     }
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        InterfaceC10975 interfaceC10975 = (InterfaceC10975) obj;
-        int iCompare = Integer.compare(4, interfaceC10975.mo2656());
-        if (iCompare != 0) {
-            return iCompare;
-        }
-        return Integer.compare(this.f74163, ((InterfaceC9564) interfaceC10975).getValue());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m51388(BouncyCastleProvider bouncyCastleProvider, ASN1ObjectIdentifier aSN1ObjectIdentifier) {
+        bouncyCastleProvider.addKeyInfoConverter(aSN1ObjectIdentifier, new SPHINCSPlusKeyFactorySpi());
     }
 
-    public final boolean equals(Object obj) {
-        if (obj instanceof InterfaceC9564) {
-            return this.f74163 == ((InterfaceC9564) obj).getValue();
-        }
-        return false;
+    @Override // l.InterfaceC19795
+    public void invoke(Object obj) {
+        ((InterfaceC19992) obj).getClass();
     }
 
-    @Override // l.InterfaceC9564
-    public final int getValue() {
-        return this.f74163;
-    }
-
-    public final int hashCode() {
-        return this.f74163;
+    @Override // l.InterfaceC17544
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1209(int i) {
+        System.out.println("SmaliCache progress " + i + "%");
     }
 }

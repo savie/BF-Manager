@@ -1,53 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗ᩷۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: O3Z6 */
+/* JADX INFO: renamed from: l.ۗܳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N3OT */
 /* JADX INFO: loaded from: classes2.dex */
-public class C3479 implements InterfaceC9831 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f12773;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f12774 = 0;
+public final class C3479 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f12772 = 1;
+    public final AbstractC10190 f12025;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public void mo10210(int i) {
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C11682 f12026;
 
-    @Override // l.InterfaceC9831
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int mo10209(int i) {
-        if (i == this.f12774) {
-            return this.f12772;
+    public static C3479 m11430(String str, String str2, AbstractC10190 abstractC10190) {
+        if (str == null) {
+            throw new NullPointerException("name == null");
         }
-        this.f12774 = i;
-        int length = this.f12773.length - 1;
-        int i2 = 0;
-        while (i2 <= length) {
-            int i3 = (i2 + length) >> 1;
-            int i4 = this.f12773[i3];
-            if (i4 < i) {
-                i2 = i3 + 1;
-            } else {
-                if (i4 <= i) {
-                    int i5 = i3 + 1;
-                    this.f12772 = i5;
-                    return i5;
-                }
-                length = i3 - 1;
-            }
+        StringBuilder sb = new StringBuilder("form-data; name=");
+        C20633.m47243(sb, str);
+        if (str2 != null) {
+            sb.append("; filename=");
+            C20633.m47243(sb, str2);
         }
-        this.f12772 = i2;
-        return i2;
+        C1988 c1988 = new C1988();
+        String string = sb.toString();
+        C11682.m29359("Content-Disposition");
+        c1988.m6814("Content-Disposition", string);
+        C11682 c11682 = new C11682(c1988);
+        if (c11682.m29361("Content-Type") != null) {
+            throw new IllegalArgumentException("Unexpected header: Content-Type");
+        }
+        if (c11682.m29361("Content-Length") != null) {
+            throw new IllegalArgumentException("Unexpected header: Content-Length");
+        }
+        return new C3479(c11682, abstractC10190);
     }
 
-    @Override // l.InterfaceC9831
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int mo10211(int i) {
-        return (i - this.f12773[mo10209(i) - 1]) + 1;
+    public C3479(C11682 c11682, AbstractC10190 abstractC10190) {
+        this.f12026 = c11682;
+        this.f12025 = abstractC10190;
     }
 }

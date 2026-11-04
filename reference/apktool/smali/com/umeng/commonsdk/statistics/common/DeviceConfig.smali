@@ -4760,7 +4760,7 @@
     const-string v3, "getDeviceId, serial no: "
 
     .line 0
-    invoke-static {v3, v1}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -7,28 +7,28 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ResponseHeaderHandlerChain extends S3XmlResponseHandler {
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final List f496;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final List f486;
 
     public ResponseHeaderHandlerChain(Unmarshaller unmarshaller, HeaderHandler... headerHandlerArr) {
         super(unmarshaller);
-        this.f496 = Arrays.asList(headerHandlerArr);
+        this.f486 = Arrays.asList(headerHandlerArr);
     }
 
     @Override // com.amazonaws.services.s3.internal.S3XmlResponseHandler, com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final AmazonWebServiceResponse mo276(HttpResponse httpResponse) {
-        AmazonWebServiceResponse amazonWebServiceResponseMo276 = super.mo276(httpResponse);
-        Object objM166 = amazonWebServiceResponseMo276.m166();
-        if (objM166 != null) {
-            Iterator it = this.f496.iterator();
+    public final AmazonWebServiceResponse mo270(HttpResponse httpResponse) {
+        AmazonWebServiceResponse amazonWebServiceResponseMo270 = super.mo270(httpResponse);
+        Object objM160 = amazonWebServiceResponseMo270.m160();
+        if (objM160 != null) {
+            Iterator it = this.f486.iterator();
             while (it.hasNext()) {
-                ((HeaderHandler) it.next()).mo463(objM166, httpResponse);
+                ((HeaderHandler) it.next()).mo457(objM160, httpResponse);
             }
         }
-        return amazonWebServiceResponseMo276;
+        return amazonWebServiceResponseMo270;
     }
 }

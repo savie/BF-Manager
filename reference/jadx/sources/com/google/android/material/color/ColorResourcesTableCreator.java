@@ -15,8 +15,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import l.C3012;
-import l.C9576;
+import l.C4791;
+import l.C7750;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class ColorResourcesTableCreator {
@@ -63,7 +63,7 @@ public final class ColorResourcesTableCreator {
                 StringBuilder sb = new StringBuilder("Non color resource found: name=");
                 sb.append(colorResource2.name);
                 sb.append(", typeId=");
-                throw new IllegalArgumentException(C9576.m24440(sb, colorResource2.typeId & 255));
+                throw new IllegalArgumentException(C4791.m14766(sb, colorResource2.typeId & 255));
             }
             if (colorResource2.packageId == 1) {
                 packageInfo = ANDROID_PACKAGE_INFO;
@@ -320,7 +320,7 @@ public final class ColorResourcesTableCreator {
         public final TypeChunk typeChunk;
 
         public TypeSpecChunk(List list) {
-            this.entryCount = ((ColorResource) C3012.m8974(1, list)).entryId + 1;
+            this.entryCount = ((ColorResource) C7750.m21093(1, list)).entryId + 1;
             HashSet hashSet = new HashSet();
             Iterator it = list.iterator();
             while (it.hasNext()) {

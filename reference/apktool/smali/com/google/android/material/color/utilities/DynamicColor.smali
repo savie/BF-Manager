@@ -263,15 +263,15 @@
     move-result-object p1
 
     .line 233
-    new-instance v1, Lcom/google/android/material/color/utilities/DynamicColor$$ExternalSyntheticLambda0;
-
-    invoke-direct {v1, p1}, Lcom/google/android/material/color/utilities/DynamicColor$$ExternalSyntheticLambda0;-><init>(Lcom/google/android/material/color/utilities/TonalPalette;)V
-
-    new-instance p1, Ll/ۡ֨ۘ;
+    new-instance v1, Ll/ۛᩳ᩻;
 
     const/4 v2, 0x1
 
-    invoke-direct {p1, v2, v0}, Ll/ۡ֨ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Ll/ۛᩳ᩻;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Ll/᩵ۜۗ;
+
+    invoke-direct {p1, v2, v0}, Ll/᩵ۜۗ;-><init>(ILjava/lang/Object;)V
 
     invoke-static {p0, v1, p1}, Lcom/google/android/material/color/utilities/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/android/material/color/utilities/DynamicColor;
 

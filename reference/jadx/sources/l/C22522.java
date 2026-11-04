@@ -1,15 +1,24 @@
 package l;
 
-import bin.mt.plus.Main;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩹᩶᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 164Z */
+/* JADX INFO: renamed from: l.᩸ۗۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U8EV */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22522 implements InterfaceC17295 {
-    @Override // l.InterfaceC17295
-    public final void accept(Object obj) {
-        Main main = (Main) obj;
-        main.m134();
-        C18177.m42297(main, null);
+public final class C22522 extends InputStream implements InterfaceC8469 {
+    @Override // java.io.InputStream
+    public final int read() {
+        return 0;
+    }
+
+    @Override // java.io.InputStream
+    public final long skip(long j) {
+        return j;
+    }
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 }

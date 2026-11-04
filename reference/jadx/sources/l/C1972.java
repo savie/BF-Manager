@@ -1,132 +1,97 @@
 package l;
 
-import java.util.ConcurrentModificationException;
-import java.util.Map;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.֫ܿᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֫ܰᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 313O */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C1972 {
-    public static Object $default$getOrDefault(Map map, Object obj, Object obj2) {
-        Object obj3 = map.get(obj);
-        return (obj3 != null || map.containsKey(obj)) ? obj3 : obj2;
-    }
+public final class C1972 {
 
-    public static void $default$forEach(Map map, BiConsumer biConsumer) {
-        C13638.requireNonNull(biConsumer);
-        for (Map.Entry entry : map.entrySet()) {
-            try {
-                biConsumer.accept(entry.getKey(), entry.getValue());
-            } catch (IllegalStateException e) {
-                throw new ConcurrentModificationException(e);
-            }
-        }
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f6614;
 
-    public static void $default$replaceAll(Map map, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        for (Map.Entry entry : map.entrySet()) {
-            try {
-                try {
-                    entry.setValue(biFunction.apply(entry.getKey(), entry.getValue()));
-                } catch (IllegalStateException e) {
-                    throw new ConcurrentModificationException(e);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C4955 f6615;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f6616;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f6617;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C12853 f6618;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C25093 f6619;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final View f6620;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f6621;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final TextView f6622;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f6623;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final View f6624;
+
+    public C1972(C25093 c25093, String str, int i) {
+        this.f6619 = c25093;
+        this.f6614 = str;
+        this.f6616 = i;
+        this.f6618 = C12853.m31892(c25093.f81149, c25093.f81148.m46655(), str);
+        View viewM40395 = c25093.f81138.m40395(R.layout.MT_Protector);
+        this.f6624 = viewM40395;
+        C25227 c25227 = (C25227) viewM40395.findViewById(R.id.MT_Protector);
+        c25227.setLayoutManager(new C19458((Context) c25093.f81138, 3));
+        C4955 c4955 = new C4955(c25093, this);
+        this.f6615 = c4955;
+        c25227.setAdapter(c4955);
+        this.f6620 = viewM40395.findViewById(R.id.MT_Protector);
+        TextView textView = (TextView) viewM40395.findViewById(R.id.MT_Protector);
+        this.f6622 = textView;
+        textView.setOnClickListener(new View.OnClickListener() { // from class: l.۫ܰᩴ
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                C1972 c1972 = this.f42083;
+                if (c1972.f6617) {
+                    c1972.m6791();
                 }
-            } catch (IllegalStateException e2) {
-                throw new ConcurrentModificationException(e2);
             }
-        }
+        });
+        C18597.m43181(c25227);
     }
 
-    public static Object $default$putIfAbsent(Map map, Object obj, Object obj2) {
-        Object obj3 = map.get(obj);
-        return obj3 == null ? map.put(obj, obj2) : obj3;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m6791() {
+        if (this.f6623 || this.f6621 || this.f6619.f81151) {
+            return;
+        }
+        this.f6621 = true;
+        this.f6617 = false;
+        m6792();
+        new C5701(this).m8197();
     }
 
-    public static boolean $default$remove(Map map, Object obj, Object obj2) {
-        Object obj3 = map.get(obj);
-        if (!C13638.equals(obj3, obj2)) {
-            return false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m6792() {
+        int i = 8;
+        this.f6620.setVisibility(this.f6621 ? 0 : 8);
+        int i2 = this.f6617 ? R.string.MT_Protector : R.string.MT_Protector;
+        TextView textView = this.f6622;
+        textView.setText(i2);
+        textView.setClickable(this.f6617);
+        if (!this.f6621 && ((this.f6623 || this.f6617) && this.f6615.getItemCount() == 0)) {
+            i = 0;
         }
-        if (obj3 == null && !map.containsKey(obj)) {
-            return false;
-        }
-        map.remove(obj);
-        return true;
-    }
-
-    public static boolean $default$replace(Map map, Object obj, Object obj2, Object obj3) {
-        Object obj4 = map.get(obj);
-        if (!C13638.equals(obj4, obj2)) {
-            return false;
-        }
-        if (obj4 == null && !map.containsKey(obj)) {
-            return false;
-        }
-        map.put(obj, obj3);
-        return true;
-    }
-
-    public static Object $default$replace(Map map, Object obj, Object obj2) {
-        Object obj3 = map.get(obj);
-        return (obj3 != null || map.containsKey(obj)) ? map.put(obj, obj2) : obj3;
-    }
-
-    public static Object $default$computeIfAbsent(Map map, Object obj, Function function) {
-        Object objApply;
-        C13638.requireNonNull(function);
-        Object obj2 = map.get(obj);
-        if (obj2 != null || (objApply = function.apply(obj)) == null) {
-            return obj2;
-        }
-        map.put(obj, objApply);
-        return objApply;
-    }
-
-    public static Object $default$computeIfPresent(Map map, Object obj, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        Object obj2 = map.get(obj);
-        if (obj2 != null) {
-            Object objApply = biFunction.apply(obj, obj2);
-            if (objApply != null) {
-                map.put(obj, objApply);
-                return objApply;
-            }
-            map.remove(obj);
-        }
-        return null;
-    }
-
-    public static Object $default$compute(Map map, Object obj, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        Object obj2 = map.get(obj);
-        Object objApply = biFunction.apply(obj, obj2);
-        if (objApply == null) {
-            if (obj2 == null && !map.containsKey(obj)) {
-                return null;
-            }
-            map.remove(obj);
-            return null;
-        }
-        map.put(obj, objApply);
-        return objApply;
-    }
-
-    public static Object $default$merge(Map map, Object obj, Object obj2, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        C13638.requireNonNull(obj2);
-        Object obj3 = map.get(obj);
-        if (obj3 != null) {
-            obj2 = biFunction.apply(obj3, obj2);
-        }
-        if (obj2 == null) {
-            map.remove(obj);
-            return obj2;
-        }
-        map.put(obj, obj2);
-        return obj2;
+        textView.setVisibility(i);
     }
 }

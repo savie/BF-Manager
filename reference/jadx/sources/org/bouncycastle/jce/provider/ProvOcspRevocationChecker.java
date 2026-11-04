@@ -14,11 +14,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import l.C0242;
-import l.C22697;
-import l.C3184;
-import l.C8479;
-import l.C9013;
+import l.C11958;
+import l.C15127;
+import l.C16076;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1GeneralizedTime;
@@ -30,6 +29,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1String;
 import org.bouncycastle.asn1.DERNull;
 import org.bouncycastle.asn1.DEROctetString;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
 import org.bouncycastle.asn1.ocsp.BasicOCSPResponse;
@@ -68,7 +68,7 @@ import org.bouncycastle.jce.exception.ExtCertPathValidatorException;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ProvOcspRevocationChecker implements PKIXCertRevocationChecker {
     public static final int DEFAULT_OCSP_MAX_RESPONSE_SIZE = 32768;
     public static final int DEFAULT_OCSP_TIMEOUT = 15000;
@@ -241,9 +241,9 @@ public class ProvOcspRevocationChecker implements PKIXCertRevocationChecker {
             List<java.security.cert.Extension> ocspExtensions = this.parent.getOcspExtensions();
             bArr = null;
             for (int i = 0; i != ocspExtensions.size(); i++) {
-                java.security.cert.Extension extensionM9604 = C3184.m9604(ocspExtensions.get(i));
-                byte[] value = extensionM9604.getValue();
-                if (OCSPObjectIdentifiers.id_pkix_ocsp_nonce.getId().equals(extensionM9604.getId())) {
+                java.security.cert.Extension extensionM36401 = C15127.m36401(ocspExtensions.get(i));
+                byte[] value = extensionM36401.getValue();
+                if (OCSPObjectIdentifiers.id_pkix_ocsp_nonce.getId().equals(extensionM36401.getId())) {
                     bArr = value;
                 }
             }
@@ -345,7 +345,7 @@ public class ProvOcspRevocationChecker implements PKIXCertRevocationChecker {
         try {
             return Certificate.getInstance(this.parameters.getSigningCert().getEncoded());
         } catch (Exception e) {
-            throw new CertPathValidatorException(C8479.m22142(e, new StringBuilder("cannot process signing cert: ")), e, this.parameters.getCertPath(), this.parameters.getIndex());
+            throw new CertPathValidatorException(C16076.m38224(e, new StringBuilder("cannot process signing cert: ")), e, this.parameters.getCertPath(), this.parameters.getIndex());
         }
     }
 
@@ -357,13 +357,13 @@ public class ProvOcspRevocationChecker implements PKIXCertRevocationChecker {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(digestName.substring(0, iIndexOf));
-        return C0242.m1616(iIndexOf + 1, digestName, sb);
+        return ExternalValue$$ExternalSyntheticOutline0.m(iIndexOf + 1, digestName, sb);
     }
 
     public static String getSignatureName(AlgorithmIdentifier algorithmIdentifier) {
         ASN1Encodable parameters = algorithmIdentifier.getParameters();
         if (parameters != null && !DERNull.INSTANCE.equals(parameters) && algorithmIdentifier.getAlgorithm().equals((ASN1Primitive) PKCSObjectIdentifiers.id_RSASSA_PSS)) {
-            return C22697.m50267(new StringBuilder(), getDigestName(RSASSAPSSparams.getInstance(parameters).getHashAlgorithm().getAlgorithm()), "WITHRSAANDMGF1");
+            return C8947.m23910(new StringBuilder(), getDigestName(RSASSAPSSparams.getInstance(parameters).getHashAlgorithm().getAlgorithm()), "WITHRSAANDMGF1");
         }
         Map map = oids;
         boolean zContainsKey = map.containsKey(algorithmIdentifier.getAlgorithm());
@@ -403,7 +403,7 @@ public class ProvOcspRevocationChecker implements PKIXCertRevocationChecker {
             }
             return true;
         } catch (IOException e) {
-            throw new CertPathValidatorException(C9013.m23329(e, new StringBuilder("OCSP response failure: ")), e, pKIXCertRevocationCheckerParameters.getCertPath(), pKIXCertRevocationCheckerParameters.getIndex());
+            throw new CertPathValidatorException(C11958.m29932(e, new StringBuilder("OCSP response failure: ")), e, pKIXCertRevocationCheckerParameters.getCertPath(), pKIXCertRevocationCheckerParameters.getIndex());
         } catch (CertPathValidatorException e2) {
             throw e2;
         } catch (GeneralSecurityException e3) {

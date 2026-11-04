@@ -256,7 +256,7 @@
 
     const-string v1, "illegal object in getInstance: "
 
-    invoke-static {p0, v1}, Ll/۫ܰۖ;->ۙ(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Ll/ܰۡۗ;->ۙ(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -396,7 +396,7 @@
 
     const/4 v4, 0x3
 
-    invoke-static {v3, v0, v2, v4}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v3, v0, v2, v4}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v2
 

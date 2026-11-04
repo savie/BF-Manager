@@ -1,36 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ۧ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R5O3 */
+import bin.mt.plus.R;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.֫۟ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D1Q7 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1772 extends C14474 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Object f6906;
-
-    public C1772(int i) {
-        super(i);
-        this.f6906 = new Object();
+public final class C1772 extends AbstractC9843 {
+    public C1772() {
+        super(R.string.MT_Protector, R.drawable.MT_Protector);
     }
 
-    @Override // l.C14474, l.InterfaceC23646
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo5812() {
-        Object objMo5812;
-        synchronized (this.f6906) {
-            objMo5812 = super.mo5812();
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2016(C12915 c12915) {
+        if (!C18978.m44078()) {
+            C22673.m51152(R.string.MT_Protector);
+            return;
         }
-        return objMo5812;
-    }
-
-    @Override // l.C14474, l.InterfaceC23646
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo5813(Object obj) {
-        boolean zMo5813;
-        C13465.m32966(obj, AbstractC11766.MATCH_INSTANCE_STR);
-        synchronized (this.f6906) {
-            zMo5813 = super.mo5813(obj);
+        if (c12915.m31981() == 2) {
+            ArrayList arrayList = new ArrayList(2);
+            Iterator it = c12915.m31982().iterator();
+            while (it.hasNext()) {
+                arrayList.add(new C14406((InterfaceC2386) it.next()));
+            }
+            c12915.m31987().mo10162(c12915.m31983(), arrayList, new RunnableC16313(3, arrayList, c12915));
+            return;
         }
-        return zMo5813;
+        c12915.m31987().m20201(c12915.m31983(), c12915.m31989(), new C12958(c12915.m31974(), c12915));
     }
 }

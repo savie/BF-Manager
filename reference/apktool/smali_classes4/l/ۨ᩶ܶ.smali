@@ -1,19 +1,18 @@
 .class public final Ll/ۨ᩶ܶ;
-.super Ll/ܰ᩶ܶ;
-.source "E3QI"
+.super Ll/᩶᩶ܶ;
+.source "T7UQ"
 
 
-# virtual methods
-.method public final next()Ljava/lang/Object;
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    .line 4319
-    invoke-virtual {p0}, Ll/ܰ᩶ܶ;->ܰ()Ll/ۚ֡ܶ;
+    .line 31
+    invoke-direct {p0}, Ll/ۨܿܶ;-><init>()V
 
-    move-result-object v0
+    const-string v0, "sha-1"
 
-    .line 4346
-    iget-object v0, v0, Ll/ۚ֡ܶ;->ܺ:Ljava/lang/Object;
+    iput-object v0, p0, Ll/᩶᩶ܶ;->ۗ:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method

@@ -8,13 +8,13 @@
 
 .field public static final enum ֡ۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final ֨ۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ֨:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ֫:Lcom/amazonaws/regions/Regions;
+.field public static final enum ֫ۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۖۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۖ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۗ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۗۙ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ۘۙ:Lcom/amazonaws/regions/Regions;
 
@@ -22,45 +22,45 @@
 
 .field public static final enum ۚۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۛ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۛۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۜۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۜ:Lcom/amazonaws/regions/Regions;
+
+.field public static final enum ۟:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ۟ۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۠ۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۠:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۡۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۡ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ۢ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ۤۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۧ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۧۙ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ۨۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۫:Lcom/amazonaws/regions/Regions;
+.field public static final ۫ۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ۫ۙ:Lcom/amazonaws/regions/Regions;
-
-.field public static final enum ۬ۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ۬:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ܰۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ܳ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ܳۙ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ܶۙ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ܺۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ܽ:Lcom/amazonaws/regions/Regions;
-
 .field public static final enum ܽۙ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ܿ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ᩳۙ:Lcom/amazonaws/regions/Regions;
+.field public static final enum ܿۙ:Lcom/amazonaws/regions/Regions;
+
+.field public static final enum ᩳ:Lcom/amazonaws/regions/Regions;
 
 .field public static final enum ᩴۙ:Lcom/amazonaws/regions/Regions;
 
@@ -78,11 +78,11 @@
 
 .field public static final enum ᩺ۙ:Lcom/amazonaws/regions/Regions;
 
-.field public static final enum ᩻:Lcom/amazonaws/regions/Regions;
+.field public static final enum ᩻ۙ:Lcom/amazonaws/regions/Regions;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -100,7 +100,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/regions/Regions;->۠ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v0, Lcom/amazonaws/regions/Regions;->ۗۙ:Lcom/amazonaws/regions/Regions;
 
     .line 27
     new-instance v1, Lcom/amazonaws/regions/Regions;
@@ -113,7 +113,7 @@
 
     invoke-direct {v1, v3, v4, v2}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v1, Lcom/amazonaws/regions/Regions;->֡ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v1, Lcom/amazonaws/regions/Regions;->ܿۙ:Lcom/amazonaws/regions/Regions;
 
     .line 30
     new-instance v2, Lcom/amazonaws/regions/Regions;
@@ -126,7 +126,7 @@
 
     invoke-direct {v2, v4, v5, v3}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v2, Lcom/amazonaws/regions/Regions;->ܺۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v2, Lcom/amazonaws/regions/Regions;->ܰۙ:Lcom/amazonaws/regions/Regions;
 
     .line 33
     new-instance v3, Lcom/amazonaws/regions/Regions;
@@ -152,7 +152,7 @@
 
     invoke-direct {v4, v6, v7, v5}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v4, Lcom/amazonaws/regions/Regions;->ܽۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v4, Lcom/amazonaws/regions/Regions;->֡ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 39
     new-instance v5, Lcom/amazonaws/regions/Regions;
@@ -165,7 +165,7 @@
 
     invoke-direct {v5, v7, v8, v6}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v5, Lcom/amazonaws/regions/Regions;->۫ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v5, Lcom/amazonaws/regions/Regions;->۟ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 42
     new-instance v6, Lcom/amazonaws/regions/Regions;
@@ -178,7 +178,7 @@
 
     invoke-direct {v6, v8, v9, v7}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v6, Lcom/amazonaws/regions/Regions;->᩺ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v6, Lcom/amazonaws/regions/Regions;->᩻ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 45
     new-instance v7, Lcom/amazonaws/regions/Regions;
@@ -191,7 +191,7 @@
 
     invoke-direct {v7, v10, v12, v8}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v7, Lcom/amazonaws/regions/Regions;->ܶۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v7, Lcom/amazonaws/regions/Regions;->ܺۙ:Lcom/amazonaws/regions/Regions;
 
     .line 48
     new-instance v8, Lcom/amazonaws/regions/Regions;
@@ -204,7 +204,7 @@
 
     invoke-direct {v8, v13, v15, v10}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v8, Lcom/amazonaws/regions/Regions;->᩸ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v8, Lcom/amazonaws/regions/Regions;->ܽۙ:Lcom/amazonaws/regions/Regions;
 
     .line 51
     new-instance v10, Lcom/amazonaws/regions/Regions;
@@ -219,7 +219,7 @@
 
     invoke-direct {v10, v15, v12, v13}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v10, Lcom/amazonaws/regions/Regions;->ᩳۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v10, Lcom/amazonaws/regions/Regions;->ܶۙ:Lcom/amazonaws/regions/Regions;
 
     .line 54
     new-instance v12, Lcom/amazonaws/regions/Regions;
@@ -234,7 +234,7 @@
 
     invoke-direct {v12, v15, v14, v13}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v12, Lcom/amazonaws/regions/Regions;->ᩴۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v12, Lcom/amazonaws/regions/Regions;->᩹ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 57
     new-instance v13, Lcom/amazonaws/regions/Regions;
@@ -249,7 +249,7 @@
 
     invoke-direct {v13, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v13, Lcom/amazonaws/regions/Regions;->۬ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v13, Lcom/amazonaws/regions/Regions;->ۚۙ:Lcom/amazonaws/regions/Regions;
 
     .line 60
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -264,7 +264,7 @@
 
     invoke-direct {v11, v15, v9, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۘۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->֫ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 63
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -279,7 +279,7 @@
 
     invoke-direct {v9, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ۜۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ۧۙ:Lcom/amazonaws/regions/Regions;
 
     .line 66
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -294,7 +294,7 @@
 
     invoke-direct {v11, v15, v9, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ܽ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->֡:Lcom/amazonaws/regions/Regions;
 
     .line 69
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -309,7 +309,7 @@
 
     invoke-direct {v9, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->۫:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->۟:Lcom/amazonaws/regions/Regions;
 
     .line 72
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -339,7 +339,7 @@
 
     invoke-direct {v9, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ۧ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->֨:Lcom/amazonaws/regions/Regions;
 
     .line 78
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -354,7 +354,7 @@
 
     invoke-direct {v11, v15, v9, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->᩻:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ۡ:Lcom/amazonaws/regions/Regions;
 
     .line 81
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -369,7 +369,7 @@
 
     invoke-direct {v9, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->֫:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->۠:Lcom/amazonaws/regions/Regions;
 
     .line 84
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -384,7 +384,7 @@
 
     invoke-direct {v11, v15, v9, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۢ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ۜ:Lcom/amazonaws/regions/Regions;
 
     .line 87
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -399,7 +399,7 @@
 
     invoke-direct {v9, v15, v11, v14}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ۗ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->۬:Lcom/amazonaws/regions/Regions;
 
     .line 90
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -414,7 +414,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->۟ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->᩺ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 93
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -429,7 +429,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ܿ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ᩳ:Lcom/amazonaws/regions/Regions;
 
     .line 96
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -444,7 +444,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۛ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ۢ:Lcom/amazonaws/regions/Regions;
 
     .line 99
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -459,7 +459,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->᩷ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ۘۙ:Lcom/amazonaws/regions/Regions;
 
     .line 102
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -474,7 +474,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۨۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ۤۙ:Lcom/amazonaws/regions/Regions;
 
     .line 105
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -489,7 +489,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->᩹ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ܳۙ:Lcom/amazonaws/regions/Regions;
 
     .line 108
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -504,7 +504,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۚۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ᩴۙ:Lcom/amazonaws/regions/Regions;
 
     .line 111
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -519,7 +519,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ۤۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ۛۙ:Lcom/amazonaws/regions/Regions;
 
     .line 114
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -534,7 +534,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->֡:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ܿ:Lcom/amazonaws/regions/Regions;
 
     .line 117
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -549,7 +549,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ܳ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->ۖ:Lcom/amazonaws/regions/Regions;
 
     .line 120
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -564,7 +564,7 @@
 
     invoke-direct {v11, v9, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lcom/amazonaws/regions/Regions;->ۡۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v11, Lcom/amazonaws/regions/Regions;->ۨۙ:Lcom/amazonaws/regions/Regions;
 
     .line 123
     new-instance v9, Lcom/amazonaws/regions/Regions;
@@ -579,7 +579,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ܰۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->᩷ۙ:Lcom/amazonaws/regions/Regions;
 
     .line 126
     new-instance v11, Lcom/amazonaws/regions/Regions;
@@ -609,7 +609,7 @@
 
     invoke-direct {v9, v11, v14, v15}, Lcom/amazonaws/regions/Regions;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lcom/amazonaws/regions/Regions;->ۖۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/regions/Regions;->᩸ۙ:Lcom/amazonaws/regions/Regions;
 
     const/16 v11, 0x24
 
@@ -755,7 +755,7 @@
     sput-object v11, Lcom/amazonaws/regions/Regions;->᩶:[Lcom/amazonaws/regions/Regions;
 
     .line 135
-    sput-object v5, Lcom/amazonaws/regions/Regions;->֨ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v5, Lcom/amazonaws/regions/Regions;->۫ۙ:Lcom/amazonaws/regions/Regions;
 
     return-void
 .end method
@@ -767,7 +767,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 140
-    iput-object p3, p0, Lcom/amazonaws/regions/Regions;->ܺ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/regions/Regions;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -846,7 +846,7 @@
     const-string v2, " value!"
 
     .line 0
-    invoke-static {v1, p0, v2}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -862,7 +862,7 @@
     .locals 1
 
     .line 147
-    iget-object v0, p0, Lcom/amazonaws/regions/Regions;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/regions/Regions;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

@@ -10,13 +10,13 @@ import com.google.android.material.dialog.InsetDialogOnTouchListener;
 import com.google.android.material.dialog.MaterialDialogs;
 import com.google.android.material.resources.MaterialAttributes;
 import com.google.android.material.shape.MaterialShapeDrawable;
-import l.C18616;
-import l.C2387;
+import l.C11642;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialStyledDatePickerDialog extends DatePickerDialog {
     public static final int DEF_STYLE_ATTR = 16843612;
-    public static final int DEF_STYLE_RES = C18616.f59332;
+    public static final int DEF_STYLE_RES = C4185.f14555;
     public final Drawable background;
     public final Rect backgroundInsets;
 
@@ -35,7 +35,7 @@ public class MaterialStyledDatePickerDialog extends DatePickerDialog {
     public MaterialStyledDatePickerDialog(Context context, int i, DatePickerDialog.OnDateSetListener onDateSetListener, int i2, int i3, int i4) {
         super(context, i, onDateSetListener, i2, i3, i4);
         Context context2 = getContext();
-        int iResolveOrThrow = MaterialAttributes.resolveOrThrow(getContext(), C2387.f8699, getClass().getCanonicalName());
+        int iResolveOrThrow = MaterialAttributes.resolveOrThrow(getContext(), C11642.f36968, getClass().getCanonicalName());
         int i5 = DEF_STYLE_RES;
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context2, null, 16843612, i5);
         materialShapeDrawable.setFillColor(ColorStateList.valueOf(iResolveOrThrow));

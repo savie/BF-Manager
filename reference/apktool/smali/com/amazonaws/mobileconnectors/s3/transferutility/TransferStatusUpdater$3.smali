@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public final synthetic ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
+.field public final synthetic ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
 
 
 # direct methods
@@ -17,7 +17,7 @@
     .line 286
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$3;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$3;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     .locals 1
 
     .line 289
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$3;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$3;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;
 
     invoke-interface {v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferListener;->ۙ()V
 

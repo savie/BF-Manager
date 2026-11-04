@@ -1,8 +1,9 @@
-.class public interface abstract Ll/ܳۡۙ;
+.class public final Ll/ܳۡۙ;
 .super Ljava/lang/Object;
-.source "J8TX"
+.source "38V0"
 
 
-# virtual methods
-.method public abstract ۙ(I)V
-.end method
+# instance fields
+.field public ۙ:Landroid/os/Handler;
+
+.field public ᩷:Ljava/lang/Object;

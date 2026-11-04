@@ -1,58 +1,27 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.content.Context;
+import android.widget.TextView;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-/* JADX INFO: renamed from: l.۬ۢۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q5YY */
+/* JADX INFO: renamed from: l.۫ۢܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: QB4F */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13023 extends AbstractC17535 {
+public final class C13023 extends C3054 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f43433;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AtomicBoolean f41704;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f43434;
-
-    public C13023(int i, int i2) {
-        this.f43433 = i;
-        this.f43434 = i2;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C13023(Context context, List list, AtomicBoolean atomicBoolean) {
+        super(context, list);
+        this.f41704 = atomicBoolean;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C13023)) {
-            return false;
-        }
-        C13023 c13023 = (C13023) obj;
-        return this.f43433 == c13023.f43433 && this.f43434 == c13023.f43434;
-    }
-
-    public final int hashCode() {
-        return (this.f43433 * 31) + this.f43434;
-    }
-
-    public final int length() {
-        return this.f43434;
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f43433), Integer.valueOf(this.f43434)};
-        String[] strArrSplit = "index;length".length() == 0 ? new String[0] : "index;length".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C13023.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m32202() {
-        return this.f43433;
+    @Override // l.C3054
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8126(TextView textView, boolean z) {
+        textView.setTextColor(this.f41704.get() ? C3296.f10758 : C3296.f10754);
     }
 }

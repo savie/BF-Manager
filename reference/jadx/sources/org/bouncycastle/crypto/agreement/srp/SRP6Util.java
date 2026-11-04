@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.CryptoException;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SRP6Util {
     public static BigInteger ZERO = BigInteger.valueOf(0);
     public static BigInteger ONE = BigInteger.valueOf(1);

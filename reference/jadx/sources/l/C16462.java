@@ -1,22 +1,30 @@
 package l;
 
-import java.io.IOException;
+import java.io.FilterInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ܽۛ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 39IB */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16462 extends AbstractC18909 {
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo10037(AbstractC9032 abstractC9032) {
-        return ((C12229) abstractC9032).f76110.length + 1;
+/* JADX INFO: renamed from: l.ܺ֡ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6V7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16462 extends FilterInputStream implements InterfaceC8469 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3038 f53379;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10038(AbstractC9032 abstractC9032, C15382 c15382) throws IOException {
-        C12229 c12229 = (C12229) abstractC9032;
-        c15382.write(c12229.f40860);
-        c15382.write(c12229.f76110);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C16462(InputStream inputStream, C3038 c3038) {
+        super(inputStream);
+        this.f53379 = c3038;
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        this.f53379.close();
     }
 }

@@ -1,21 +1,31 @@
 .class public final Ll/᩻ۤۙ;
-.super Ljava/lang/Object;
-.source "S8SC"
+.super Ll/᩵ۤۙ;
+.source "7B5N"
 
 
-# instance fields
-.field public final ۙ:I
-
-
-# direct methods
-.method public constructor <init>(I)V
+# virtual methods
+.method public final getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 483
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 147
+    check-cast p1, Landroid/view/View;
 
-    .line 487
-    iput p1, p0, Ll/᩻ۤۙ;->ۙ:I
+    .line 155
+    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final setValue(Ljava/lang/Object;F)V
+    .locals 0
+
+    .line 147
+    check-cast p1, Landroid/view/View;
+
+    .line 150
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
 
     return-void
 .end method

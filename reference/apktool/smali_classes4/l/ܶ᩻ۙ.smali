@@ -1,23 +1,8 @@
-.class public final Ll/ܶ᩻ۙ;
+.class public interface abstract Ll/ܶ᩻ۙ;
 .super Ljava/lang/Object;
-.source "08RN"
-
-# interfaces
-.implements Ll/ܳۧۙ;
+.source "X5IW"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/᩸᩻ۙ;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩸᩻ۙ;)V
-    .locals 0
-
-    .line 876
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ܶ᩻ۙ;->ۙ:Ll/᩸᩻ۙ;
-
-    return-void
+# virtual methods
+.method public abstract ۙ(Ljava/lang/Object;)V
 .end method

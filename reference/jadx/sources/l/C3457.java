@@ -1,53 +1,27 @@
 package l;
 
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
-
-/* JADX INFO: renamed from: l.ۗ᩶ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1TZ */
+/* JADX INFO: renamed from: l.ۗܰۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6LQ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3457 extends Thread {
+public final /* synthetic */ class C3457 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4995 f12718;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f11863;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ FileDescriptor f12719;
-
-    public C3457(C4995 c4995, FileDescriptor fileDescriptor) {
-        this.f12718 = c4995;
-        this.f12719 = fileDescriptor;
-    }
-
-    @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() {
-        C4995 c4995 = this.f12718;
+    static {
+        int[] iArr = new int[EnumC13152.values().length];
+        f11863 = iArr;
         try {
-            FileInputStream fileInputStream = new FileInputStream(this.f12719);
-            try {
-                byte[] bArr = new byte[4096];
-                while (true) {
-                    int i = fileInputStream.read(bArr);
-                    if (i == -1 || !c4995.f17381.m35394(i, bArr)) {
-                        break;
-                        break;
-                    }
-                    c4995.f17387.sendEmptyMessage(1);
-                }
-                fileInputStream.close();
-            } catch (Throwable th) {
-                try {
-                    fileInputStream.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-                throw th;
-            }
-        } catch (Exception unused) {
-        } catch (Throwable th3) {
-            c4995.f17384.countDown();
-            throw th3;
+            iArr[EnumC13152.LEFT.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        c4995.f17384.countDown();
+        try {
+            f11863[EnumC13152.CENTER.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f11863[EnumC13152.RIGHT.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
     }
 }

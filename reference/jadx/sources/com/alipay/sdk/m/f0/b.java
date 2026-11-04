@@ -27,7 +27,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
-import l.C15489;
+import l.C24770;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -86,7 +86,7 @@ public class b {
         } catch (Throwable unused) {
             availableBlocks = 0;
         }
-        return C15489.m37074(availableBlocks, "");
+        return C24770.m55292(availableBlocks, "");
     }
 
     public synchronized String a(Context context) {
@@ -119,7 +119,7 @@ public class b {
         } catch (Throwable unused) {
             blockSize = 0;
         }
-        return C15489.m37074(blockSize, "");
+        return C24770.m55292(blockSize, "");
     }
 
     public String b(Context context) {
@@ -390,7 +390,7 @@ public class b {
                     }
                     if (bufferedReader != null) {
                     }
-                    return C15489.m37074(j, "");
+                    return C24770.m55292(j, "");
                 }
             } catch (Throwable unused4) {
             }
@@ -401,7 +401,7 @@ public class b {
             bufferedReader.close();
         } catch (Throwable unused6) {
         }
-        return C15489.m37074(j, "");
+        return C24770.m55292(j, "");
     }
 
     public String g(Context context) {
@@ -421,7 +421,7 @@ public class b {
         } catch (Throwable unused) {
             blockCount = 0;
         }
-        return C15489.m37074(blockCount, "");
+        return C24770.m55292(blockCount, "");
     }
 
     public String h(Context context) {
@@ -440,7 +440,7 @@ public class b {
         } catch (Throwable unused) {
             blockSize = 0;
         }
-        return C15489.m37074(blockSize, "");
+        return C24770.m55292(blockSize, "");
     }
 
     public String i(Context context) {

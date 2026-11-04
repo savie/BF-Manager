@@ -23,7 +23,7 @@ import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM2Signer implements Signer, ECConstants {
     public final Digest digest;
     public ECKeyParameters ecKey;

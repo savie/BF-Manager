@@ -1,239 +1,133 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۜۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C1WV */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C12234 {
+import java.io.IOException;
+import java.util.EnumSet;
+import java.util.Set;
+
+/* JADX INFO: renamed from: l.ۨ۠ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G4EY */
+/* JADX INFO: loaded from: classes4.dex */
+public class C12234 extends AbstractC8909 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public Set f39375;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public EnumC4031 f39376;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f39377;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public byte[] f39378;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public byte f39379;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public byte f39380;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public short f39381;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public short f39382;
+
+    public C12234() {
+        super(4);
+        this.f39380 = (byte) 5;
+        this.f39379 = (byte) 0;
+        this.f39378 = new byte[]{16, 0, 0, 0};
+        this.f39382 = (short) 16;
+        this.f39381 = (short) 0;
+        this.f39377 = 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public void mo3948(C7760 c7760) throws IOException {
+        if (this.f39376 != null) {
+            if (this.f39375 == null) {
+                throw new IllegalStateException("Invalid PFC flag(s): " + this.f39375);
+            }
+            c7760.m21131(this.f39380);
+            c7760.m21131(this.f39379);
+            c7760.m21131((byte) this.f39376.getValue());
+            c7760.m21131((byte) C10961.m27791(this.f39375));
+            c7760.m21134(this.f39378);
+            c7760.m21135(this.f39382);
+            c7760.m21135(0);
+            c7760.m21136(this.f39377);
+            return;
+        }
+        throw new IllegalStateException("Invalid PDU type: " + this.f39376);
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final EnumC4031 m30524() {
+        return this.f39376;
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final Set m30520() {
+        return this.f39375;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int m30525() {
+        return this.f39382;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int m30526() {
+        return this.f39381;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f40875;
+    public final void m30522(EnumC4031 enumC4031) {
+        this.f39376 = enumC4031;
+    }
 
-    static {
-        int[] iArr = new int[EnumC10297.values().length];
-        f40875 = iArr;
-        try {
-            iArr[EnumC10297.f35313.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m30521(EnumSet enumSet) {
+        this.f39375 = enumSet;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m30523(short s) {
+        this.f39382 = s;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m30527(int i) {
+        this.f39377 = i;
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public void mo8464(C0302 c0302) throws IOException {
+        this.f39380 = c0302.m1879();
+        byte bM1879 = c0302.m1879();
+        this.f39379 = bM1879;
+        if (5 != this.f39380 || bM1879 != 0) {
+            throw new IOException(String.format("Version mismatch: %d.%d != 5.0", Byte.valueOf(this.f39380), Byte.valueOf(this.f39379)));
         }
-        try {
-            f40875[EnumC10297.f35225.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        EnumC4031 enumC4031 = (EnumC4031) C10961.m27793(c0302.m1879(), EnumC4031.class, null);
+        if (enumC4031 != null) {
+            this.f39376 = enumC4031;
+            this.f39375 = C10961.m27792(c0302.m1879(), EnumC14471.class);
+            byte[] bArr = new byte[4];
+            c0302.m1883(bArr);
+            if (bArr[0] != 16) {
+                throw new IOException(String.format("Integer and Character representation mismatch: %d", Byte.valueOf(bArr[0])));
+            }
+            if (bArr[1] == 0) {
+                this.f39378 = bArr;
+                this.f39382 = c0302.m1887();
+                this.f39381 = c0302.m1887();
+                this.f39377 = c0302.m1884();
+                return;
+            }
+            throw new IOException(String.format("Floating-Point representation mismatch: %d", Byte.valueOf(bArr[1])));
         }
-        try {
-            f40875[EnumC10297.f35305.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f40875[EnumC10297.f35110.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f40875[EnumC10297.f35078.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f40875[EnumC10297.f35200.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f40875[EnumC10297.f35297.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f40875[EnumC10297.f35257.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f40875[EnumC10297.f35265.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f40875[EnumC10297.f35142.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f40875[EnumC10297.f35267.ordinal()] = 11;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f40875[EnumC10297.f35291.ordinal()] = 12;
-        } catch (NoSuchFieldError unused12) {
-        }
-        try {
-            f40875[EnumC10297.f35309.ordinal()] = 13;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f40875[EnumC10297.f35204.ordinal()] = 14;
-        } catch (NoSuchFieldError unused14) {
-        }
-        try {
-            f40875[EnumC10297.f35180.ordinal()] = 15;
-        } catch (NoSuchFieldError unused15) {
-        }
-        try {
-            f40875[EnumC10297.f35194.ordinal()] = 16;
-        } catch (NoSuchFieldError unused16) {
-        }
-        try {
-            f40875[EnumC10297.f35088.ordinal()] = 17;
-        } catch (NoSuchFieldError unused17) {
-        }
-        try {
-            f40875[EnumC10297.f35185.ordinal()] = 18;
-        } catch (NoSuchFieldError unused18) {
-        }
-        try {
-            f40875[EnumC10297.f35079.ordinal()] = 19;
-        } catch (NoSuchFieldError unused19) {
-        }
-        try {
-            f40875[EnumC10297.f35281.ordinal()] = 20;
-        } catch (NoSuchFieldError unused20) {
-        }
-        try {
-            f40875[EnumC10297.f35053.ordinal()] = 21;
-        } catch (NoSuchFieldError unused21) {
-        }
-        try {
-            f40875[EnumC10297.f35071.ordinal()] = 22;
-        } catch (NoSuchFieldError unused22) {
-        }
-        try {
-            f40875[EnumC10297.f35160.ordinal()] = 23;
-        } catch (NoSuchFieldError unused23) {
-        }
-        try {
-            f40875[EnumC10297.f35138.ordinal()] = 24;
-        } catch (NoSuchFieldError unused24) {
-        }
-        try {
-            f40875[EnumC10297.f35269.ordinal()] = 25;
-        } catch (NoSuchFieldError unused25) {
-        }
-        try {
-            f40875[EnumC10297.f35168.ordinal()] = 26;
-        } catch (NoSuchFieldError unused26) {
-        }
-        try {
-            f40875[EnumC10297.f35135.ordinal()] = 27;
-        } catch (NoSuchFieldError unused27) {
-        }
-        try {
-            f40875[EnumC10297.f35321.ordinal()] = 28;
-        } catch (NoSuchFieldError unused28) {
-        }
-        try {
-            f40875[EnumC10297.f35216.ordinal()] = 29;
-        } catch (NoSuchFieldError unused29) {
-        }
-        try {
-            f40875[EnumC10297.f35235.ordinal()] = 30;
-        } catch (NoSuchFieldError unused30) {
-        }
-        try {
-            f40875[EnumC10297.f35316.ordinal()] = 31;
-        } catch (NoSuchFieldError unused31) {
-        }
-        try {
-            f40875[EnumC10297.f35052.ordinal()] = 32;
-        } catch (NoSuchFieldError unused32) {
-        }
-        try {
-            f40875[EnumC10297.f35098.ordinal()] = 33;
-        } catch (NoSuchFieldError unused33) {
-        }
-        try {
-            f40875[EnumC10297.f35272.ordinal()] = 34;
-        } catch (NoSuchFieldError unused34) {
-        }
-        try {
-            f40875[EnumC10297.f35209.ordinal()] = 35;
-        } catch (NoSuchFieldError unused35) {
-        }
-        try {
-            f40875[EnumC10297.f35233.ordinal()] = 36;
-        } catch (NoSuchFieldError unused36) {
-        }
-        try {
-            f40875[EnumC10297.f35218.ordinal()] = 37;
-        } catch (NoSuchFieldError unused37) {
-        }
-        try {
-            f40875[EnumC10297.f35261.ordinal()] = 38;
-        } catch (NoSuchFieldError unused38) {
-        }
-        try {
-            f40875[EnumC10297.f35151.ordinal()] = 39;
-        } catch (NoSuchFieldError unused39) {
-        }
-        try {
-            f40875[EnumC10297.f35175.ordinal()] = 40;
-        } catch (NoSuchFieldError unused40) {
-        }
-        try {
-            f40875[EnumC10297.f35080.ordinal()] = 41;
-        } catch (NoSuchFieldError unused41) {
-        }
-        try {
-            f40875[EnumC10297.f35141.ordinal()] = 42;
-        } catch (NoSuchFieldError unused42) {
-        }
-        try {
-            f40875[EnumC10297.f35103.ordinal()] = 43;
-        } catch (NoSuchFieldError unused43) {
-        }
-        try {
-            f40875[EnumC10297.f35289.ordinal()] = 44;
-        } catch (NoSuchFieldError unused44) {
-        }
-        try {
-            f40875[EnumC10297.f35323.ordinal()] = 45;
-        } catch (NoSuchFieldError unused45) {
-        }
-        try {
-            f40875[EnumC10297.f35253.ordinal()] = 46;
-        } catch (NoSuchFieldError unused46) {
-        }
-        try {
-            f40875[EnumC10297.f35274.ordinal()] = 47;
-        } catch (NoSuchFieldError unused47) {
-        }
-        try {
-            f40875[EnumC10297.f35117.ordinal()] = 48;
-        } catch (NoSuchFieldError unused48) {
-        }
-        try {
-            f40875[EnumC10297.f35147.ordinal()] = 49;
-        } catch (NoSuchFieldError unused49) {
-        }
-        try {
-            f40875[EnumC10297.f35164.ordinal()] = 50;
-        } catch (NoSuchFieldError unused50) {
-        }
-        try {
-            f40875[EnumC10297.f35286.ordinal()] = 51;
-        } catch (NoSuchFieldError unused51) {
-        }
-        try {
-            f40875[EnumC10297.f35189.ordinal()] = 52;
-        } catch (NoSuchFieldError unused52) {
-        }
-        try {
-            f40875[EnumC10297.f35238.ordinal()] = 53;
-        } catch (NoSuchFieldError unused53) {
-        }
-        try {
-            f40875[EnumC10297.f35162.ordinal()] = 54;
-        } catch (NoSuchFieldError unused54) {
-        }
-        try {
-            f40875[EnumC10297.f35129.ordinal()] = 55;
-        } catch (NoSuchFieldError unused55) {
-        }
-        try {
-            f40875[EnumC10297.f35314.ordinal()] = 56;
-        } catch (NoSuchFieldError unused56) {
-        }
+        throw new IOException(String.format("PDU type invalid: %d", enumC4031));
     }
 }

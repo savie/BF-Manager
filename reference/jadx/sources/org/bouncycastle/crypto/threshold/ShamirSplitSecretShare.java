@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.threshold;
 
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ShamirSplitSecretShare implements SecretShare {
     public final int r;
     public final byte[] secretShare;

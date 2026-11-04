@@ -1,53 +1,51 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.content.DialogInterface;
+import bin.mt.plus.R;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۙܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: L6Y6 */
+/* JADX INFO: renamed from: l.ۙۜۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G16V */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4729 extends AbstractC17535 {
+public final class C4729 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f16668;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC10694 f16654;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f16669;
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f16655;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f16670;
-
-    public C4729(String str, String str2, String str3) {
-        this.f16669 = str;
-        this.f16670 = str2;
-        this.f16668 = str3;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4729(ActivityC10694 activityC10694, ActivityC10694 activityC10695, String str) {
+        super(activityC10695, -1);
+        this.f16654 = activityC10694;
+        this.f16655 = str;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C4729)) {
-            return false;
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        ActivityC10694 activityC10694 = this.f16654;
+        String strM22914 = m22914();
+        if (strM22914.length() == 0) {
+            m22951();
+            return;
         }
-        C4729 c4729 = (C4729) obj;
-        return C13638.equals(this.f16669, c4729.f16669) && C13638.equals(this.f16670, c4729.f16670) && C13638.equals(this.f16668, c4729.f16668);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f16668) + C0589.m2789(C13638.hashCode(this.f16669) * 31, 31, this.f16670);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f16669, this.f16670, this.f16668};
-        String[] strArrSplit = "traversalId;policyRevision;directoryPath".length() == 0 ? new String[0] : "traversalId;policyRevision;directoryPath".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C4729.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+        if (strM22914.contains("/") || strM22914.contains("\\")) {
+            m22952(R.string.MT_Protector);
+            return;
         }
-        sb.append("]");
-        return sb.toString();
+        if (C16704.m39468(strM22914)) {
+            m22952(R.string.MT_Protector);
+            return;
+        }
+        try {
+            C16704.m39464(this.f16655, strM22914);
+        } catch (IOException e) {
+            activityC10694.m40401(e, (DialogInterface.OnDismissListener) null);
+        }
+        activityC10694.f33934 = C16704.m39467();
+        activityC10694.f33935.notifyDataSetChanged();
+        m22951();
     }
 }

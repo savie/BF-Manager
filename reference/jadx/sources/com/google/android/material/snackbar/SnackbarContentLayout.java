@@ -11,10 +11,10 @@ import android.widget.TextView;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.motion.MotionUtils;
-import l.C0976;
-import l.C2387;
-import l.C3798;
-import l.C5031;
+import l.C11642;
+import l.C17609;
+import l.C22666;
+import l.C23577;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SnackbarContentLayout extends LinearLayout implements ContentViewCallback {
@@ -29,14 +29,14 @@ public class SnackbarContentLayout extends LinearLayout implements ContentViewCa
 
     public SnackbarContentLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.contentInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8957, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
+        this.contentInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36560, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
     }
 
     @Override // android.view.View
     public void onFinishInflate() {
         super.onFinishInflate();
-        this.messageView = (TextView) findViewById(C3798.f14015);
-        this.actionView = (Button) findViewById(C3798.f14003);
+        this.messageView = (TextView) findViewById(C23577.f76510);
+        this.actionView = (Button) findViewById(C23577.f76391);
     }
 
     public TextView getMessageView() {
@@ -49,7 +49,7 @@ public class SnackbarContentLayout extends LinearLayout implements ContentViewCa
 
     public void updateActionTextColorAlphaIfNeeded(float f) {
         if (f != 1.0f) {
-            this.actionView.setTextColor(MaterialColors.layer(MaterialColors.getColor(this, C2387.f8699), this.actionView.getCurrentTextColor(), f));
+            this.actionView.setTextColor(MaterialColors.layer(MaterialColors.getColor(this, C11642.f36968), this.actionView.getCurrentTextColor(), f));
         }
     }
 
@@ -59,8 +59,8 @@ public class SnackbarContentLayout extends LinearLayout implements ContentViewCa
         if (getOrientation() == 1) {
             return;
         }
-        int dimensionPixelSize = getResources().getDimensionPixelSize(C0976.f3916);
-        int dimensionPixelSize2 = getResources().getDimensionPixelSize(C0976.f4130);
+        int dimensionPixelSize = getResources().getDimensionPixelSize(C17609.f57579);
+        int dimensionPixelSize2 = getResources().getDimensionPixelSize(C17609.f57368);
         Layout layout = this.messageView.getLayout();
         boolean z = layout != null && layout.getLineCount() > 1;
         if (z && this.maxInlineActionWidth > 0 && this.actionView.getMeasuredWidth() > this.maxInlineActionWidth) {
@@ -94,7 +94,7 @@ public class SnackbarContentLayout extends LinearLayout implements ContentViewCa
     }
 
     public static void updateTopBottomPadding(View view, int i, int i2) {
-        int i3 = C5031.f17539;
+        int i3 = C22666.f73603;
         if (!view.isPaddingRelative()) {
             view.setPadding(view.getPaddingLeft(), i, view.getPaddingRight(), i2);
         } else {

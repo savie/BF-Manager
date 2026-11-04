@@ -1,11 +1,16 @@
-.class public interface abstract Ll/ۧ֡;
+.class public final Ll/ۧ֡;
 .super Ljava/lang/Object;
-.source "LALX"
+.source "P5TS"
 
 
-# virtual methods
-.method public abstract ֨(Ll/ܿۧ;)V
-.end method
+# direct methods
+.method public static ۙ(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
+    .locals 0
 
-.method public abstract ᩹(Ll/ܿۧ;)V
+    .line 693
+    invoke-virtual {p0, p1}, Landroid/app/RemoteInput$Builder;->setEditChoicesBeforeSending(I)Landroid/app/RemoteInput$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

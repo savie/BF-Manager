@@ -7,7 +7,7 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C22697;
+import l.C8947;
 import org.bouncycastle.crypto.DerivationFunction;
 import org.bouncycastle.crypto.RawAgreement;
 import org.bouncycastle.crypto.agreement.X25519Agreement;
@@ -28,125 +28,108 @@ import org.bouncycastle.jcajce.spec.UserKeyingMaterialSpec;
 import org.bouncycastle.jcajce.spec.XDHParameterSpec;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyAgreementSpi extends BaseAgreementSpi {
     public RawAgreement agreement;
     public DHUParameterSpec dhuSpec;
     public byte[] result;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X25519 extends KeyAgreementSpi {
         public X25519() {
             super(XDHParameterSpec.X25519);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X25519UwithSHA256CKDF extends KeyAgreementSpi {
         public X25519UwithSHA256CKDF() {
             super("X25519UwithSHA256CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X25519UwithSHA256KDF extends KeyAgreementSpi {
         public X25519UwithSHA256KDF() {
             super("X25519UwithSHA256KDF", new KDF2BytesGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X25519withSHA256CKDF extends KeyAgreementSpi {
         public X25519withSHA256CKDF() {
             super("X25519withSHA256CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X25519withSHA256HKDF extends KeyAgreementSpi {
         public X25519withSHA256HKDF() {
             super("X25519withSHA256HKDF", new HKDFBytesGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X25519withSHA256KDF extends KeyAgreementSpi {
         public X25519withSHA256KDF() {
             super("X25519withSHA256KDF", new KDF2BytesGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X25519withSHA384CKDF extends KeyAgreementSpi {
         public X25519withSHA384CKDF() {
             super("X25519withSHA384CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA384()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X25519withSHA512CKDF extends KeyAgreementSpi {
         public X25519withSHA512CKDF() {
             super("X25519withSHA512CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X448 extends KeyAgreementSpi {
         public X448() {
             super(XDHParameterSpec.X448);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X448UwithSHA512CKDF extends KeyAgreementSpi {
         public X448UwithSHA512CKDF() {
             super("X448UwithSHA512CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X448UwithSHA512KDF extends KeyAgreementSpi {
         public X448UwithSHA512KDF() {
             super("X448UwithSHA512KDF", new KDF2BytesGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X448withSHA256CKDF extends KeyAgreementSpi {
         public X448withSHA256CKDF() {
             super("X448withSHA256CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA256()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class X448withSHA384CKDF extends KeyAgreementSpi {
         public X448withSHA384CKDF() {
             super("X448withSHA384CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA384()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X448withSHA512CKDF extends KeyAgreementSpi {
         public X448withSHA512CKDF() {
             super("X448withSHA512CKDF", new ConcatenationKDFGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X448withSHA512HKDF extends KeyAgreementSpi {
         public X448withSHA512HKDF() {
             super("X448withSHA512HKDF", new HKDFBytesGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class X448withSHA512KDF extends KeyAgreementSpi {
         public X448withSHA512KDF() {
             super("X448withSHA512KDF", new KDF2BytesGenerator(DigestFactory.createSHA512()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public final class XDH extends KeyAgreementSpi {
         public XDH() {
             super("XDH");
@@ -230,10 +213,10 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
             throw new InvalidKeyException("public XDH key required");
         }
         if (this.agreement == null) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " not initialised."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " not initialised."));
         }
         if (!z) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
         }
         AsymmetricKeyParameter asymmetricKeyParameterGeneratePublicKeyParameter = EdECUtil.generatePublicKeyParameter((PublicKey) key);
         byte[] bArr = new byte[this.agreement.getAgreementSize()];

@@ -1,48 +1,30 @@
 package l;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.os.Build;
-import android.os.Bundle;
+import java.util.UUID;
 
-/* JADX INFO: renamed from: l.֡᩺ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P1KP */
+/* JADX INFO: renamed from: l.֡᩸۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: T7U3 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0717 extends C19997 {
+public final class C0717 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12713 f2994;
+    public static final ConcurrentMapC17249 f2637 = new ConcurrentMapC17249();
 
-    public C0717(C12713 c12713) {
-        this.f2994 = c12713;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m3036(AbstractC2323 abstractC2323) {
+        String string = UUID.randomUUID().toString();
+        f2637.put(string, abstractC2323);
+        C21576.m49077().postDelayed(new RunnableC20330(2, string), ((long) 10) * 1000);
+        return string;
     }
 
-    @Override // l.C19997, android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityCreated(Activity activity, Bundle bundle) {
-        C13465.m32966(activity, "activity");
-        if (Build.VERSION.SDK_INT < 29) {
-            int i = FragmentC9891.f33768;
-            Fragment fragmentFindFragmentByTag = activity.getFragmentManager().findFragmentByTag("androidx.lifecycle.LifecycleDispatcher.report_fragment_tag");
-            C13465.m32963((Object) fragmentFindFragmentByTag, "null cannot be cast to non-null type androidx.lifecycle.ReportFragment");
-            ((FragmentC9891) fragmentFindFragmentByTag).m25035(this.f2994.f42397);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Object m3038(String str) {
+        ConcurrentMapC17249 concurrentMapC17249 = f2637;
+        Object obj = concurrentMapC17249.get(str);
+        if (obj != null) {
+            concurrentMapC17249.remove(str);
         }
-    }
-
-    @Override // l.C19997, android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityPaused(Activity activity) {
-        C13465.m32966(activity, "activity");
-        this.f2994.m31564();
-    }
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityPreCreated(Activity activity, Bundle bundle) {
-        C13465.m32966(activity, "activity");
-        C16241.m38360(activity, new C20474(this.f2994));
-    }
-
-    @Override // l.C19997, android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityStopped(Activity activity) {
-        C13465.m32966(activity, "activity");
-        this.f2994.m31563();
+        return obj;
     }
 }

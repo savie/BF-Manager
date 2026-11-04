@@ -1,48 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧ᩶۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 340V */
+import java.util.Map;
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.ۤ᩻ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51FV */
 /* JADX INFO: loaded from: classes4.dex */
-@InterfaceC16741(EnumC12508.RELEASE_6)
-public class C11221 extends AbstractC7693 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Object mo28183(AbstractC23903 abstractC23903, Object obj) {
-        return null;
+public final /* synthetic */ class C11221 implements Predicate {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f35386;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f35387;
+
+    public /* synthetic */ C11221(int i, Object obj) {
+        this.f35386 = i;
+        this.f35387 = obj;
     }
 
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo20327(C16142 c16142, Object obj) {
-        return mo28183((AbstractC23903) c16142, obj);
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo20329(C19670 c19670, Object obj) {
-        return mo28183((AbstractC23903) c19670, obj);
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f35386) {
+            case 0:
+                break;
+        }
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo20326(C6263 c6263, Object obj) {
-        return mo28183((AbstractC23903) c6263, obj);
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo18689(C7675 c7675, Object obj) {
-        return mo28183((AbstractC23903) c7675, obj);
-    }
-
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo18690(C18258 c18258, Object obj) {
-        return mo28183((AbstractC23903) c18258, obj);
-    }
-
-    @Override // l.AbstractC7693
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo20328(C16847 c16847, Object obj) {
-        return mo28183((AbstractC23903) c16847, obj);
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f35386) {
+            case 0:
+                return ((String) ((Map.Entry) obj).getKey()).startsWith((String) this.f35387);
+            default:
+                return ((C9649) this.f35387).m25166((C21943) obj);
+        }
     }
 }

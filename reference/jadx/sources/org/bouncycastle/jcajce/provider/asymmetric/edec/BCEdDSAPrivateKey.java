@@ -22,7 +22,7 @@ import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCEdDSAPrivateKey implements EdDSAPrivateKey, BCKey {
     public static final long serialVersionUID = 1;
     public final byte[] attributes;

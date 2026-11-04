@@ -17,12 +17,12 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
-import l.C0976;
-import l.C10946;
-import l.C15089;
-import l.C17910;
-import l.C2387;
-import l.C3798;
+import l.C11642;
+import l.C12388;
+import l.C17609;
+import l.C2310;
+import l.C23577;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RangeDateSelector implements DateSelector {
@@ -78,26 +78,26 @@ public class RangeDateSelector implements DateSelector {
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
-    public void setSelection(C10946 c10946) {
-        Object obj = c10946.f37217;
-        Object obj2 = c10946.f37218;
+    public void setSelection(C2310 c2310) {
+        Object obj = c2310.f7473;
+        Object obj2 = c2310.f7474;
         if (obj != null && obj2 != null && !isValidRange(((Long) obj).longValue(), ((Long) obj2).longValue())) {
             throw new IllegalArgumentException();
         }
-        Object obj3 = c10946.f37217;
+        Object obj3 = c2310.f7473;
         this.selectedStartItem = obj3 == null ? null : Long.valueOf(UtcDates.canonicalYearMonthDay(((Long) obj3).longValue()));
         this.selectedEndItem = obj2 != null ? Long.valueOf(UtcDates.canonicalYearMonthDay(((Long) obj2).longValue())) : null;
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
-    public C10946 getSelection() {
-        return new C10946(this.selectedStartItem, this.selectedEndItem);
+    public C2310 getSelection() {
+        return new C2310(this.selectedStartItem, this.selectedEndItem);
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
     public Collection getSelectedRanges() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new C10946(this.selectedStartItem, this.selectedEndItem));
+        arrayList.add(new C2310(this.selectedStartItem, this.selectedEndItem));
         return arrayList;
     }
 
@@ -120,10 +120,10 @@ public class RangeDateSelector implements DateSelector {
         int i;
         Resources resources = context.getResources();
         DisplayMetrics displayMetrics = resources.getDisplayMetrics();
-        if (Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels) > resources.getDimensionPixelSize(C0976.f4199)) {
-            i = C2387.f9219;
+        if (Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels) > resources.getDimensionPixelSize(C17609.f57482)) {
+            i = C11642.f36539;
         } else {
-            i = C2387.f9287;
+            i = C11642.f37255;
         }
         return MaterialAttributes.resolveOrThrow(context, i, MaterialDatePicker.class.getCanonicalName());
     }
@@ -133,17 +133,17 @@ public class RangeDateSelector implements DateSelector {
         Resources resources = context.getResources();
         Long l2 = this.selectedStartItem;
         if (l2 == null && this.selectedEndItem == null) {
-            return resources.getString(C17910.f56769);
+            return resources.getString(C24323.f78799);
         }
         Long l3 = this.selectedEndItem;
         if (l3 == null) {
-            return resources.getString(C17910.f56842, DateStrings.getDateString(l2.longValue()));
+            return resources.getString(C24323.f78738, DateStrings.getDateString(l2.longValue()));
         }
         if (l2 == null) {
-            return resources.getString(C17910.f56731, DateStrings.getDateString(l3.longValue()));
+            return resources.getString(C24323.f78853, DateStrings.getDateString(l3.longValue()));
         }
-        C10946 dateRangeString = DateStrings.getDateRangeString(l2, l3);
-        return resources.getString(C17910.f56813, dateRangeString.f37217, dateRangeString.f37218);
+        C2310 dateRangeString = DateStrings.getDateRangeString(l2, l3);
+        return resources.getString(C24323.f78786, dateRangeString.f7473, dateRangeString.f7474);
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
@@ -151,20 +151,20 @@ public class RangeDateSelector implements DateSelector {
         String string;
         String string2;
         Resources resources = context.getResources();
-        C10946 dateRangeString = DateStrings.getDateRangeString(this.selectedStartItem, this.selectedEndItem);
-        Object obj = dateRangeString.f37217;
+        C2310 dateRangeString = DateStrings.getDateRangeString(this.selectedStartItem, this.selectedEndItem);
+        Object obj = dateRangeString.f7473;
         if (obj == null) {
-            string = resources.getString(C17910.f56754);
+            string = resources.getString(C24323.f78748);
         } else {
             string = (String) obj;
         }
-        Object obj2 = dateRangeString.f37218;
+        Object obj2 = dateRangeString.f7474;
         if (obj2 == null) {
-            string2 = resources.getString(C17910.f56754);
+            string2 = resources.getString(C24323.f78748);
         } else {
             string2 = (String) obj2;
         }
-        return resources.getString(C17910.f56736, string, string2);
+        return resources.getString(C24323.f78819, string, string2);
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
@@ -177,7 +177,7 @@ public class RangeDateSelector implements DateSelector {
 
     @Override // com.google.android.material.datepicker.DateSelector
     public int getDefaultTitleResId() {
-        return C17910.f56847;
+        return C24323.f78858;
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
@@ -191,16 +191,16 @@ public class RangeDateSelector implements DateSelector {
     @Override // com.google.android.material.datepicker.DateSelector
     public View onCreateTextInputView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle, CalendarConstraints calendarConstraints, final OnSelectionChangedListener onSelectionChangedListener) {
         String defaultTextInputHint;
-        View viewInflate = layoutInflater.inflate(C15089.f49254, viewGroup, false);
-        final TextInputLayout textInputLayout = (TextInputLayout) viewInflate.findViewById(C3798.f13952);
-        final TextInputLayout textInputLayout2 = (TextInputLayout) viewInflate.findViewById(C3798.f14106);
+        View viewInflate = layoutInflater.inflate(C12388.f39842, viewGroup, false);
+        final TextInputLayout textInputLayout = (TextInputLayout) viewInflate.findViewById(C23577.f76187);
+        final TextInputLayout textInputLayout2 = (TextInputLayout) viewInflate.findViewById(C23577.f76292);
         EditText editText = textInputLayout.getEditText();
         EditText editText2 = textInputLayout2.getEditText();
         if (ManufacturerUtils.isDateInputKeyboardMissingSeparatorCharacters()) {
             editText.setInputType(17);
             editText2.setInputType(17);
         }
-        this.invalidRangeStartError = viewInflate.getResources().getString(C17910.f56779);
+        this.invalidRangeStartError = viewInflate.getResources().getString(C24323.f78893);
         SimpleDateFormat defaultTextInputFormat = this.textInputFormat;
         boolean z = defaultTextInputFormat != null;
         if (!z) {

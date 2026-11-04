@@ -1,62 +1,89 @@
 .class public final Ll/ۙ۠ᩴ;
-.super Ll/᩹۠ᩴ;
-.source "H1MW"
+.super Ljava/lang/Object;
+.source "I4HH"
 
 # interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Ll/۟᩷᩸;
 
 
 # instance fields
-.field public final synthetic ۛ:Ll/ۜ۠ᩴ;
+.field public final synthetic ܰ:Ll/ۤ۠ᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۠ᩴ;)V
+.method public constructor <init>(Ll/ۤ۠ᩴ;)V
     .locals 0
 
-    .line 1128
-    iput-object p1, p0, Ll/ۙ۠ᩴ;->ۛ:Ll/ۜ۠ᩴ;
+    .line 250
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1129
-    invoke-direct {p0, p1}, Ll/᩹۠ᩴ;-><init>(Ll/ۜ۠ᩴ;)V
+    iput-object p1, p0, Ll/ۙ۠ᩴ;->ܰ:Ll/ۤ۠ᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 2
+.method public final ֡()V
+    .locals 3
 
-    .line 1142
-    iget-object v0, p0, Ll/ۙ۠ᩴ;->ۛ:Ll/ۜ۠ᩴ;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ll/᩹۠ᩴ;->ۙ()I
+    const-string v1, "V1"
 
-    move-result v1
+    const/4 v2, 0x0
 
-    aget-object v0, v0, v1
+    aput-object v1, v0, v2
 
-    return-object v0
-.end method
+    const v1, 0x7f120b67
 
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 1
+    .line 253
+    invoke-static {v1, v0}, Ll/᩶᩷ۧ;->ۙ(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 1127
-    check-cast p2, Ljava/util/function/Consumer;
+    move-result-object v0
 
-    .line 1137
-    iget-object v0, p0, Ll/ۙ۠ᩴ;->ۛ:Ll/ۜ۠ᩴ;
+    iget-object v1, p0, Ll/ۙ۠ᩴ;->ܰ:Ll/ۤ۠ᩴ;
 
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-interface {p2, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Ll/ۤ۠ᩴ;->ۙ(Ljava/lang/CharSequence;)V
 
     return-void
+.end method
+
+.method public final ۙ(II)V
+    .locals 0
+
+    .line 263
+    iget-object p1, p0, Ll/ۙ۠ᩴ;->ܰ:Ll/ۤ۠ᩴ;
+
+    invoke-virtual {p1, p2}, Ll/ۤ۠ᩴ;->᩷(I)V
+
+    return-void
+.end method
+
+.method public final ۙ(ZZ)V
+    .locals 1
+
+    .line 258
+    iget-object v0, p0, Ll/ۙ۠ᩴ;->ܰ:Ll/ۤ۠ᩴ;
+
+    invoke-static {p1, p2}, Ll/֡᩷᩸;->ۙ(ZZ)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ll/ۤ۠ᩴ;->ۙ(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final ۫()Z
+    .locals 1
+
+    .line 268
+    iget-object v0, p0, Ll/ۙ۠ᩴ;->ܰ:Ll/ۤ۠ᩴ;
+
+    iget-boolean v0, v0, Ll/ۤ۠ᩴ;->᩷:Z
+
+    return v0
 .end method

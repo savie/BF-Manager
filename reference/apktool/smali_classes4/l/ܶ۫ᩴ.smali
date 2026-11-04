@@ -1,23 +1,38 @@
-.class public interface abstract Ll/ܶ۫ᩴ;
+.class public final synthetic Ll/ܶ۫ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "4AWI"
 
 # interfaces
-.implements Ll/᩸۫ᩴ;
+.implements Landroid/view/View$OnLongClickListener;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۚۚᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۚۚᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܶ۫ᩴ;->ܰ:Ll/ۚۚᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract C(JLl/᩺۫ᩴ;)Ll/ܶ۫ᩴ;
-.end method
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 1
 
-.method public abstract c(JLl/ۧ۫ᩴ;)Ll/ܶ۫ᩴ;
-.end method
+    .line 0
+    iget-object v0, p0, Ll/ܶ۫ᩴ;->ܰ:Ll/ۚۚᩴ;
 
-.method public abstract d(JLl/ᩳ۫ᩴ;)Ll/ܶ۫ᩴ;
-.end method
+    invoke-static {v0, p1}, Ll/ۚۚᩴ;->ۙ(Ll/ۚۚᩴ;Landroid/view/View;)Z
 
-.method public abstract g(Ll/ܶ۫ᩴ;Ll/ᩳ۫ᩴ;)J
-.end method
+    move-result p1
 
-.method public abstract m(Ll/ᩴ᩶ᩴ;)Ll/ܶ۫ᩴ;
+    return p1
 .end method

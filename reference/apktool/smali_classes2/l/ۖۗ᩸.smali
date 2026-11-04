@@ -1,60 +1,72 @@
-.class public final Ll/ۖۗ᩸;
+.class public final synthetic Ll/ۖۗ᩸;
 .super Ljava/lang/Object;
-.source "43Q0"
+.source "06KD"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public static ۙ(JLjava/util/concurrent/Future;)Ljava/lang/Object;
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    .line 2
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    .line 0
+    iput p1, p0, Ll/ۖۗ᩸;->ܰ:I
 
-    .line 4
-    sget-object v1, Ll/᩸ۗ᩸;->ܺ:Ll/ۨۗ᩸;
+    iput-object p2, p0, Ll/ۖۗ᩸;->᩶:Ljava/lang/Object;
 
-    .line 42
-    :try_start_0
-    invoke-interface {p2, p0, p1, v0}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    return-object p0
 
-    :catch_0
-    move-exception p0
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    goto :goto_0
+    .line 0
+    iget v0, p0, Ll/ۖۗ᩸;->ܰ:I
 
-    :catch_1
-    move-exception p0
+    packed-switch v0, :pswitch_data_0
 
-    .line 47
-    :goto_0
-    invoke-interface {v1, p0}, Ll/ۨۗ᩸;->ۙ(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    iget-object v0, p0, Ll/ۖۗ᩸;->᩶:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Ll/᩻ܰ᩸;
 
-    throw p0
+    invoke-virtual {v0}, Ll/᩻ܰ᩸;->᩷()V
 
-    :catch_2
-    move-exception p0
+    return-void
 
-    .line 44
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    :pswitch_0
+    iget-object v0, p0, Ll/ۖۗ᩸;->᩶:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Ll/᩸᩹᩸;
 
-    invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
+    invoke-static {v0}, Ll/᩸᩹᩸;->ۙ(Ll/᩸᩹᩸;)V
 
-    .line 45
-    invoke-interface {v1, p0}, Ll/ۨۗ᩸;->ۙ(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    return-void
 
-    move-result-object p0
+    :pswitch_1
+    iget-object v0, p0, Ll/ۖۗ᩸;->᩶:Ljava/lang/Object;
 
-    throw p0
+    check-cast v0, Ll/ۜۗ᩸;
+
+    invoke-static {v0}, Ll/ۜۗ᩸;->ۙ(Ll/ۜۗ᩸;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

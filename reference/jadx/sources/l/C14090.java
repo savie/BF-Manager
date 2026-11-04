@@ -1,13 +1,10 @@
 package l;
 
-import android.graphics.Paint;
+/* JADX INFO: renamed from: l.۬᩶ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 48SH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14090 {
 
-/* JADX INFO: renamed from: l.ܰ᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: FAIR */
-/* JADX INFO: loaded from: classes3.dex */
-public class C14090 extends Paint {
-    @InterfaceC16341
-    public synchronized long getNativeInstance() {
-        return super.getNativeInstance();
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C14090 f44596 = new C14090();
 }

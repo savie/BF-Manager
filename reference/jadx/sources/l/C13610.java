@@ -1,118 +1,66 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.DoubleConsumer;
-import java.util.function.IntFunction;
+import bin.mt.plus.R;
+import java.util.function.Supplier;
 
-/* JADX INFO: renamed from: l.ܰۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.۬ۙۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D7B1 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13610 extends C5848 implements InterfaceC7163, InterfaceC15021 {
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(int i) {
-        AbstractC22686.t();
-        throw null;
+public final class C13610 extends AbstractC2432 {
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12359 f43232;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ DialogInterfaceC8327 f43233;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23065 f43234;
+
+    public C13610(C23065 c23065, C12359 c12359, DialogInterfaceC8327 dialogInterfaceC8327) {
+        this.f43234 = c23065;
+        this.f43232 = c12359;
+        this.f43233 = dialogInterfaceC8327;
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8199(this.f43234.f74817, 300);
     }
 
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        n((Double) obj);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        int i = ServiceC6459.f21716;
+        final C20629 c20629 = new C20629(0);
+        int i2 = C11678.f37828;
+        C1897.m6529(this.f43232, new Supplier() { // from class: l.֫ܳۚ
+            @Override // java.util.function.Supplier
+            public final Object get() {
+                return C11678.m29354(c20629);
+            }
+        });
     }
 
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        DialogInterfaceC8327 dialogInterfaceC8327 = this.f43233;
+        C23065 c23065 = this.f43234;
+        C23065.m51975(c23065, dialogInterfaceC8327);
+        new C6899(c23065).m8197();
     }
 
-    @Override // l.InterfaceC15021, l.InterfaceC23280
-    public final InterfaceC7163 build() {
-        return this;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        C22673.m51154((CharSequence) this.f43234.f74817.getString(R.string.MT_Protector, exc.getMessage()));
     }
 
-    @Override // l.InterfaceC23280
-    public final InterfaceC8616 build() {
-        return this;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void end() {
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.C(this, j, j2);
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ Object[] m(IntFunction intFunction) {
-        return AbstractC22686.v(this, intFunction);
-    }
-
-    @Override // l.InterfaceC8857
-    public final /* synthetic */ void n(Double d) {
-        AbstractC22686.n(this, d);
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ int o() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC8616 a(int i) {
-        a(i);
-        throw null;
-    }
-
-    @Override // l.InterfaceC0853
-    public final InterfaceC0853 a(int i) {
-        throw new IndexOutOfBoundsException();
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void k(Object[] objArr, int i) {
-        AbstractC22686.w(this, (Double[]) objArr, i);
-    }
-
-    @Override // l.AbstractC21502, l.InterfaceC0853
-    public final void e(int i, Object obj) {
-        super.e(i, (double[]) obj);
-    }
-
-    @Override // l.AbstractC21502, l.InterfaceC0853
-    public final void g(Object obj) {
-        super.g((DoubleConsumer) obj);
-    }
-
-    @Override // l.C5848, l.AbstractC21502, java.lang.Iterable, l.InterfaceC16585, l.InterfaceC10441, java.util.Set, l.InterfaceC22810
-    public final InterfaceC10110 spliterator() {
-        return super.spliterator();
-    }
-
-    @Override // l.C5848, l.AbstractC21502, java.lang.Iterable, l.InterfaceC16585, l.InterfaceC10441, java.util.Set, l.InterfaceC22810
-    public final InterfaceC20693 spliterator() {
-        return super.spliterator();
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        clear();
-        s(j);
-    }
-
-    @Override // l.AbstractC21502, l.InterfaceC0853
-    public final Object b() {
-        return (double[]) super.b();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

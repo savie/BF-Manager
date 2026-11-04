@@ -1,149 +1,289 @@
 package l;
 
-import java.util.ArrayList;
+import com.alipay.sdk.m.y.l;
+import java.util.concurrent.CancellationException;
 
-/* JADX INFO: renamed from: l.۠ۚ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: K6AA */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7974 extends AbstractC15030 implements InterfaceC16441, InterfaceC19263 {
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public boolean f26186;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C0212 f26187;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C23805 f26188;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public Object f26189;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public C17063 f26190;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public Object f26191;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public int f26192;
-
-    public C7974(C18557 c18557) {
-        C23805 c23805 = new C23805();
-        this.f26186 = false;
-        this.f26192 = 0;
-        this.f26191 = c18557;
-        this.f26188 = c23805;
-        C0212 c0212 = new C0212();
-        c0212.f1381 = true;
-        c0212.f1386 = c18557;
-        c0212.f1383 = c18557;
-        c0212.f1385 = new C22791();
-        c0212.f1384 = c23805.m52463(2, "DOWN");
-        c0212.f1382 = c23805.m52463(3, "UP");
-        c0212.f1387 = c23805.m52463(-1, "EOF");
-        this.f26187 = c0212;
-    }
-
-    @Override // l.AbstractC15030
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final Object mo21037() {
-        C0212 c0212 = this.f26187;
-        Object next = c0212.next();
-        if (next == c0212.f1382) {
-            int i = this.f26192 - 1;
-            this.f26192 = i;
-            if (i == 0 && this.f26186) {
-                return c0212.next();
-            }
-        } else if (next == c0212.f1384) {
-            this.f26192++;
-        }
-        if (this.f26192 == 0) {
-            this.f26188.getClass();
-            if (((InterfaceC19969) next).mo41440()) {
-                this.f26186 = true;
-                c0212.next();
-                this.f26192++;
-                return c0212.next();
-            }
-        }
-        return next;
-    }
-
-    @Override // l.AbstractC15030, l.C22791
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Object mo21035() {
-        Object objMo21035 = super.mo21035();
-        if (this.f74178 == 0 && m21039(this.f49003)) {
-            this.f26189 = this.f49003;
-        }
-        return objMo21035;
-    }
-
-    @Override // l.AbstractC15030
+/* JADX INFO: renamed from: l.۟ܶۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X7PO */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7974 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo21034(Object obj) {
-        this.f26188.getClass();
-        return (obj == null ? 0 : ((InterfaceC19969) obj).getType()) == -1;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3739 m21031() {
-        return this.f26190;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21033(C17063 c17063) {
-        this.f26190 = c17063;
-    }
-
-    @Override // l.InterfaceC16441
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C23805 mo21036() {
-        return this.f26188;
-    }
-
-    @Override // l.InterfaceC14242
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo21038(int i) {
-        Object objM36017 = m36017(i);
-        this.f26188.getClass();
-        if (objM36017 == null) {
-            return 0;
-        }
-        return ((InterfaceC19969) objM36017).getType();
-    }
-
-    @Override // l.InterfaceC19263
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo21032(boolean z) {
-        Object obj;
-        int i = this.f74178;
-        ArrayList arrayList = this.f74176;
-        Object obj2 = arrayList.get(i);
-        if (m21039(obj2)) {
-            return obj2;
-        }
-        if (!z) {
-            return null;
-        }
-        int i2 = this.f74178;
-        do {
-            i2--;
-            if (i2 >= 0) {
-                obj = arrayList.get(i2);
+    public static void m21762(C18415 c18415, String str) {
+        int length = str.length();
+        int i = 0;
+        while (i < length) {
+            m21759((InterfaceC0516) null, i);
+            char cCharAt = str.charAt(i);
+            if (cCharAt == '\\') {
+                i++;
+                if (i == length) {
+                    throw new C24383("The last '\\' need follow a character.", str, length - 1);
+                }
+            } else if (cCharAt != '$') {
+                continue;
             } else {
-                return this.f26189;
+                int i2 = i + 1;
+                if (i2 == length) {
+                    throw new C24383("The last '$' must be followed by a group index", str, length - 1);
+                }
+                char cCharAt2 = str.charAt(i2);
+                if (cCharAt2 == '{') {
+                    StringBuilder sb = new StringBuilder();
+                    int i3 = i2;
+                    while (true) {
+                        i3++;
+                        if (i3 == length) {
+                            throw new C24383("Missing ending brace '}' from replacement string", str, length - 1);
+                        }
+                        m21759((InterfaceC0516) null, i3);
+                        char cCharAt3 = str.charAt(i3);
+                        if (cCharAt3 == '}') {
+                            if (sb.length() == 0) {
+                                throw new C24383("The '${' must be followed by a group name or index", str, i2);
+                            }
+                            if (sb.length() == 0) {
+                                throw new C24383("The '${' must be followed by a group name or index", str, i2);
+                            }
+                            String string = sb.toString();
+                            if (C12690.m31487(string.charAt(0))) {
+                                try {
+                                    Integer.parseInt(string);
+                                } catch (NumberFormatException e) {
+                                    throw new C24383(e.toString(), str, i + 2);
+                                }
+                            } else if (c18415 != null && !c18415.m42930().containsKey(string)) {
+                                throw new C24383(C14442.m34865("No group with name {", string, l.d), str, i2);
+                            }
+                            i = i3;
+                            break;
+                        }
+                        if (((cCharAt3 - 'a') | ('z' - cCharAt3)) < 0 && ((cCharAt3 - 'A') | ('Z' - cCharAt3)) < 0 && !C12690.m31487(cCharAt3)) {
+                            throw new C24383("The '${' must be followed by a group name or index", str, i2);
+                        }
+                        sb.append(cCharAt3);
+                    }
+                } else {
+                    if (cCharAt2 < '0' || cCharAt2 > '9') {
+                        throw new C24383("The '$' must be followed by a group index", str, i);
+                    }
+                    i = i2;
+                }
             }
-        } while (!m21039(obj));
-        return obj;
+            i++;
+        }
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m21039(Object obj) {
-        this.f26188.getClass();
-        InterfaceC12913 interfaceC12913 = obj instanceof C18557 ? ((C18557) obj).f59042 : null;
-        return interfaceC12913 != null && interfaceC12913.getLine() > 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m21760(InterfaceC0516 interfaceC0516, StringBuilder sb, String str) {
+        int i;
+        int iIntValue;
+        interfaceC0516.mo2478();
+        StringBuilder sb2 = new StringBuilder();
+        int length = str.length();
+        int i2 = 0;
+        int i3 = 0;
+        while (i2 < length) {
+            int i4 = i3 + 1;
+            m21759(interfaceC0516, i3);
+            char cCharAt = str.charAt(i2);
+            if (cCharAt == '\\') {
+                i = i2 + 1;
+                if (i == length) {
+                    throw new C24383("The last '\\' need follow a character.", str, length - 1);
+                }
+                char cCharAt2 = str.charAt(i);
+                if (cCharAt2 == 'L' || cCharAt2 == 'U' || cCharAt2 == 'l' || cCharAt2 == 'u') {
+                    sb2.append('\\');
+                    sb2.append(cCharAt2);
+                } else {
+                    if (sb2.length() != 0) {
+                        throw new C24383("The '" + ((Object) sb2) + "' need follow a '$'.", str, i2 - sb2.length());
+                    }
+                    if (cCharAt2 == 'n') {
+                        sb.append("\n");
+                    } else if (cCharAt2 == 'r') {
+                        sb.append("\r");
+                    } else if (cCharAt2 != 't') {
+                        sb.append(cCharAt2);
+                    } else {
+                        sb.append("\t");
+                    }
+                }
+            } else {
+                if (cCharAt == '$') {
+                    i = i2 + 1;
+                    if (i == length) {
+                        throw new C24383("The last '$' must be followed by a group index", str, length - 1);
+                    }
+                    char cCharAt3 = str.charAt(i);
+                    if (cCharAt3 == '{') {
+                        StringBuilder sb3 = new StringBuilder();
+                        int i5 = i;
+                        while (true) {
+                            i5++;
+                            if (i5 == length) {
+                                throw new C24383("Missing ending brace '}' from replacement string", str, length - 1);
+                            }
+                            int i6 = i4 + 1;
+                            m21759(interfaceC0516, i4);
+                            char cCharAt4 = str.charAt(i5);
+                            if (cCharAt4 == '}') {
+                                if (sb3.length() == 0) {
+                                    throw new C24383("The '${' must be followed by a group name or index", str, i);
+                                }
+                                if (sb3.length() == 0) {
+                                    throw new C24383("The '${' must be followed by a group name or index", str, i);
+                                }
+                                C18415 c18415Pattern = interfaceC0516.pattern();
+                                String string = sb3.toString();
+                                if (C12690.m31487(string.charAt(0))) {
+                                    try {
+                                        iIntValue = Integer.parseInt(string);
+                                    } catch (NumberFormatException e) {
+                                        throw new C24383(e.toString(), str, i2 + 2);
+                                    }
+                                } else {
+                                    Integer num = (Integer) c18415Pattern.m42930().get(string);
+                                    if (num == null) {
+                                        throw new C24383(C14442.m34865("No group with name {", string, l.d), str, i);
+                                    }
+                                    iIntValue = num.intValue();
+                                }
+                                if (sb2.length() != 0) {
+                                    m21761(interfaceC0516, sb, sb2, iIntValue);
+                                    sb2.setLength(0);
+                                } else if (iIntValue <= interfaceC0516.groupCount()) {
+                                    int iStart = interfaceC0516.start(iIntValue);
+                                    int iEnd = interfaceC0516.end(iIntValue);
+                                    if (iStart != -1 && iEnd != -1) {
+                                        CharSequence text = interfaceC0516.getText();
+                                        while (iStart < iEnd) {
+                                            m21759(interfaceC0516, 0);
+                                            int iMin = Math.min(4096, iEnd - iStart) + iStart;
+                                            sb.append(text, iStart, iMin);
+                                            iStart = iMin;
+                                        }
+                                    }
+                                }
+                                i2 = i5;
+                                i3 = i6;
+                                break;
+                            }
+                            if (((cCharAt4 - 'a') | ('z' - cCharAt4)) < 0 && ((cCharAt4 - 'A') | ('Z' - cCharAt4)) < 0 && !C12690.m31487(cCharAt4)) {
+                                throw new C24383("The '${' must be followed by a group name or index", str, i);
+                            }
+                            sb3.append(cCharAt4);
+                            i4 = i6;
+                        }
+                    } else {
+                        if (cCharAt3 < '0' || cCharAt3 > '9') {
+                            throw new C24383("The '$' must be followed by a group index", str, i2);
+                        }
+                        if (sb2.length() == 0) {
+                            int i7 = cCharAt3 - '0';
+                            if (i7 <= interfaceC0516.groupCount()) {
+                                int iStart2 = interfaceC0516.start(i7);
+                                int iEnd2 = interfaceC0516.end(i7);
+                                if (iStart2 != -1 && iEnd2 != -1) {
+                                    CharSequence text2 = interfaceC0516.getText();
+                                    while (iStart2 < iEnd2) {
+                                        m21759(interfaceC0516, 0);
+                                        int iMin2 = Math.min(4096, iEnd2 - iStart2) + iStart2;
+                                        sb.append(text2, iStart2, iMin2);
+                                        iStart2 = iMin2;
+                                    }
+                                }
+                            }
+                        } else {
+                            m21761(interfaceC0516, sb, sb2, cCharAt3 - '0');
+                            sb2.setLength(0);
+                        }
+                    }
+                } else {
+                    if (sb2.length() != 0) {
+                        throw new C24383("The '" + ((Object) sb2) + "' need follow a '$'.", str, i2 - sb2.length());
+                    }
+                    sb.append(cCharAt);
+                    i3 = i4;
+                }
+                i2++;
+            }
+            i2 = i;
+            i3 = i4;
+            i2++;
+        }
+        if (sb2.length() == 0) {
+            interfaceC0516.mo2478();
+            return;
+        }
+        throw new C24383("The '" + ((Object) sb2) + "' need follow a '$'.", str, str.length() - sb2.length());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m21761(InterfaceC0516 interfaceC0516, StringBuilder sb, StringBuilder sb2, int i) {
+        String strGroup;
+        int i2;
+        if (i <= interfaceC0516.groupCount() && (strGroup = interfaceC0516.group(i)) != null) {
+            int length = sb2.length() / 2;
+            int i3 = 0;
+            for (int i4 = 0; i4 < length; i4++) {
+                m21759(interfaceC0516, i4);
+                char cCharAt = sb2.charAt((i4 * 2) + 1);
+                if (cCharAt == 'L') {
+                    while (i3 < strGroup.length()) {
+                        m21759(interfaceC0516, i3);
+                        sb.append(Character.toLowerCase(strGroup.charAt(i3)));
+                        i3++;
+                    }
+                    return;
+                }
+                if (cCharAt == 'U') {
+                    while (i3 < strGroup.length()) {
+                        m21759(interfaceC0516, i3);
+                        sb.append(Character.toUpperCase(strGroup.charAt(i3)));
+                        i3++;
+                    }
+                    return;
+                }
+                if (cCharAt == 'l') {
+                    if (i3 >= strGroup.length()) {
+                        return;
+                    }
+                    i2 = i3 + 1;
+                    sb.append(Character.toLowerCase(strGroup.charAt(i3)));
+                } else if (cCharAt == 'u') {
+                    if (i3 >= strGroup.length()) {
+                        return;
+                    }
+                    i2 = i3 + 1;
+                    sb.append(Character.toUpperCase(strGroup.charAt(i3)));
+                } else {
+                    throw new IllegalStateException();
+                }
+                i3 = i2;
+            }
+            if (i3 < strGroup.length()) {
+                int length2 = strGroup.length();
+                while (i3 < length2) {
+                    m21759(interfaceC0516, 0);
+                    int iMin = Math.min(4096, length2 - i3) + i3;
+                    sb.append((CharSequence) strGroup, i3, iMin);
+                    i3 = iMin;
+                }
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m21759(InterfaceC0516 interfaceC0516, int i) {
+        if ((i & 1023) != 0) {
+            return;
+        }
+        if (interfaceC0516 != null) {
+            interfaceC0516.mo2478();
+        }
+        if (Thread.currentThread().isInterrupted()) {
+            throw new CancellationException("Regex replacement canceled");
+        }
     }
 }

@@ -1,179 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: X1BE */
+import java.util.function.IntConsumer;
+import java.util.function.IntPredicate;
+
+/* JADX INFO: renamed from: l.ۤۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public class C10842 extends C17191 {
+public final class C10842 extends AbstractC21857 implements InterfaceC12334 {
+    public final /* synthetic */ EnumC17381 c;
+    public final /* synthetic */ IntPredicate d;
 
-    /* JADX INFO: renamed from: ۬ܰ, reason: not valid java name and contains not printable characters */
-    public int f36910 = 0;
-
-    /* JADX INFO: renamed from: ۚܰ, reason: not valid java name and contains not printable characters */
-    public int f36907 = 0;
-
-    /* JADX INFO: renamed from: ֨ܰ, reason: not valid java name and contains not printable characters */
-    public int f36902 = 0;
-
-    /* JADX INFO: renamed from: ᩹ܰ, reason: not valid java name and contains not printable characters */
-    public int f36912 = 0;
-
-    /* JADX INFO: renamed from: ۘܰ, reason: not valid java name and contains not printable characters */
-    public int f36905 = 0;
-
-    /* JADX INFO: renamed from: ۜܰ, reason: not valid java name and contains not printable characters */
-    public int f36908 = 0;
-
-    /* JADX INFO: renamed from: ۖܰ, reason: not valid java name and contains not printable characters */
-    public boolean f36903 = false;
-
-    /* JADX INFO: renamed from: ܰܰ, reason: not valid java name and contains not printable characters */
-    public int f36911 = 0;
-
-    /* JADX INFO: renamed from: ۙܰ, reason: not valid java name and contains not printable characters */
-    public int f36906 = 0;
-
-    /* JADX INFO: renamed from: ۗۙ, reason: not valid java name and contains not printable characters */
-    public C1668 f36904 = new C1668();
-
-    /* JADX INFO: renamed from: ۨܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC9431 f36909 = null;
-
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1743(int i, int i2, int i3, int i4) {
+    @Override // java.util.function.Consumer
+    public final /* bridge */ /* synthetic */ void accept(Object obj) {
+        d((Integer) obj);
     }
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final void m27186(int i) {
-        this.f36910 = i;
-        this.f36907 = i;
-        this.f36902 = i;
-        this.f36912 = i;
+    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
+        return C4109.$default$andThen(this, intConsumer);
     }
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final void m27179(int i) {
-        this.f36902 = i;
-        this.f36905 = i;
-        this.f36908 = i;
+    @Override // l.InterfaceC12334
+    public final /* synthetic */ void d(Integer num) {
+        AbstractC13956.p(this, num);
     }
 
-    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public final void m27195(int i) {
-        this.f36912 = i;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C10842(EnumC17381 enumC17381, IntPredicate intPredicate) {
+        super(enumC17381);
+        this.c = enumC17381;
+        this.d = intPredicate;
     }
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final void m27191(int i) {
-        this.f36905 = i;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m27189(boolean z) {
-        int i = this.f36902;
-        if (i > 0 || this.f36912 > 0) {
-            if (z) {
-                this.f36905 = this.f36912;
-                this.f36908 = i;
-            } else {
-                this.f36905 = i;
-                this.f36908 = this.f36912;
-            }
+    @Override // l.AbstractC21857, l.InterfaceC15143
+    public final void accept(int i) {
+        if (this.a) {
+            return;
         }
-    }
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final void m27192(int i) {
-        this.f36910 = i;
-    }
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final void m27194(int i) {
-        this.f36908 = i;
-    }
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public final void m27185(int i) {
-        this.f36907 = i;
-    }
-
-    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public final int m27196() {
-        return this.f36910;
-    }
-
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    public final int m27184() {
-        return this.f36907;
-    }
-
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    public final int m27197() {
-        return this.f36905;
-    }
-
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public final int m27190() {
-        return this.f36908;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m27187(boolean z) {
-        this.f36903 = z;
-    }
-
-    /* JADX INFO: renamed from: ᩳۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m27193() {
-        return this.f36903;
-    }
-
-    @Override // l.C17191
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo27180() {
-        for (int i = 0; i < this.f54816; i++) {
-            C20719 c20719 = this.f54815[i];
-            if (c20719 != null) {
-                c20719.m46580();
-            }
+        boolean zTest = this.d.test(i);
+        EnumC17381 enumC17381 = this.c;
+        if (zTest == enumC17381.a) {
+            this.a = true;
+            this.b = enumC17381.b;
         }
-    }
-
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public final int m27181() {
-        return this.f36911;
-    }
-
-    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
-    public final int m27188() {
-        return this.f36906;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m27183(int i, int i2) {
-        this.f36911 = i;
-        this.f36906 = i2;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m27182(C20719 c20719, EnumC7313 enumC7313, int i, EnumC7313 enumC7314, int i2) {
-        InterfaceC9431 interfaceC9431;
-        C20719 c207110;
-        while (true) {
-            interfaceC9431 = this.f36909;
-            if (interfaceC9431 != null || (c207110 = this.f67433) == null) {
-                break;
-            } else {
-                this.f36909 = ((C15781) c207110).f51115;
-            }
-        }
-        C1668 c1668 = this.f36904;
-        c1668.f6645 = enumC7313;
-        c1668.f6644 = enumC7314;
-        c1668.f6650 = i;
-        c1668.f6647 = i2;
-        interfaceC9431.mo8094(c20719, c1668);
-        c20719.m46608(c1668.f6649);
-        c20719.m46620(c1668.f6651);
-        c20719.m46598(c1668.f6646);
-        c20719.m46644(c1668.f6643);
     }
 }

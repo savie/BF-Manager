@@ -1,15 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ᩸ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: MANG */
+/* JADX INFO: renamed from: l.ۧ᩻ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A63D */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11966 extends AbstractC3310 {
-    public C11966() {
-        this(C1899.f7169);
-    }
-
-    public C11966(AbstractC3310 abstractC3310) {
-        C13465.m32966(abstractC3310, "initialExtras");
-        m9814().putAll(abstractC3310.m9814());
+public final class C11966 implements InterfaceC22760 {
+    @Override // l.InterfaceC22760
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1200(C19929 c19929) {
+        try {
+            ((C22935) ((C14270) c19929.m45858()).m34634()).m51693();
+        } catch (Exception unused) {
+        }
     }
 }

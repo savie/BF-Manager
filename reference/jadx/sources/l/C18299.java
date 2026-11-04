@@ -1,44 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳ᩷ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+
+/* JADX INFO: renamed from: l.ܿۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J1AU */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C18299 extends EnumC8422 {
-    public /* synthetic */ C18299() {
-        this("TagOpen", 7);
+public class C18299 extends AbstractC13143 implements InterfaceC13823 {
+
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public boolean f59663;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public boolean f59664;
+
+    public C18299(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f59663 = false;
+        this.f59664 = false;
+        mo19751(attributeSet);
     }
 
-    public C18299(String str, int i) {
-        super(str, i, 0);
+    public C18299(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f59663 = false;
+        this.f59664 = false;
+        mo19751(attributeSet);
     }
 
-    @Override // l.EnumC8422
+    @Override // l.AbstractC13143
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7392 = c2424.m7392();
-        if (cM7392 == '!') {
-            c8111.m21360(EnumC8422.f29240);
-            return;
-        }
-        if (cM7392 == '/') {
-            c8111.m21360(EnumC8422.f29191);
-            return;
-        }
-        if (cM7392 != '?') {
-            if (c2424.m7379()) {
-                c8111.m21355(true);
-                c8111.m21353(EnumC8422.f29212);
-                return;
-            } else {
-                c8111.m21365(this);
-                c8111.m21356('<');
-                c8111.m21353(EnumC8422.f29249);
-                return;
+    public final void mo19751(AttributeSet attributeSet) {
+        super.mo19751(attributeSet);
+        if (attributeSet != null) {
+            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C1211.f4441);
+            int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
+            for (int i = 0; i < indexCount; i++) {
+                int index = typedArrayObtainStyledAttributes.getIndex(i);
+                if (index == 1) {
+                    this.f59663 = typedArrayObtainStyledAttributes.getBoolean(index, this.f59663);
+                } else if (index == 0) {
+                    this.f59664 = typedArrayObtainStyledAttributes.getBoolean(index, this.f59664);
+                }
             }
+            typedArrayObtainStyledAttributes.recycle();
         }
-        C22222 c22222 = c8111.f28423;
-        c22222.mo3991();
-        c22222.f72666 = true;
-        c8111.m21353(EnumC8422.f29258);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean m42634() {
+        return this.f59663;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m42635() {
+        return this.f59664;
     }
 }

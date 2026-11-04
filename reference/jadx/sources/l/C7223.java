@@ -1,28 +1,61 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۘܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
-/* JADX INFO: loaded from: classes3.dex */
-public final enum C7223 extends EnumC7306 {
-    public /* synthetic */ C7223() {
-        this("FORMAT_21H", 11);
+import java.util.function.Function;
+import java.util.function.IntConsumer;
+
+/* JADX INFO: renamed from: l.ۜܶۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7223 extends AbstractC9591 {
+    public boolean b;
+    public final C13453 c;
+    public final /* synthetic */ C13651 d;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C7223(C13651 c13651, InterfaceC15143 interfaceC15143) {
+        super(interfaceC15143);
+        this.d = c13651;
+        InterfaceC15143 interfaceC15144 = this.a;
+        C17359.requireNonNull(interfaceC15144);
+        this.c = new C13453(interfaceC15144, 1);
     }
 
-    public C7223(String str, int i) {
-        super(str, i, 0);
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final void c(long j) {
+        this.a.c(-1L);
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        int iM19496 = EnumC7306.m19496(i);
-        return new C20007(this, iM19496, 0, 0, ((long) ((short) interfaceC14985.read())) << (iM19496 == 21 ? (char) 16 : '0'), EnumC7306.m19493(i));
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        InterfaceC17686 interfaceC17686 = (InterfaceC17686) ((Function) this.d.t).apply(obj);
+        if (interfaceC17686 != null) {
+            try {
+                boolean z = this.b;
+                C13453 c13453 = this.c;
+                if (!z) {
+                    interfaceC17686.sequential().forEach(c13453);
+                } else {
+                    InterfaceC7664 interfaceC7664Spliterator = interfaceC17686.sequential().spliterator();
+                    while (!this.a.f() && interfaceC7664Spliterator.tryAdvance((IntConsumer) c13453)) {
+                    }
+                }
+            } catch (Throwable th) {
+                try {
+                    interfaceC17686.close();
+                } catch (Throwable th2) {
+                    th.addSuppressed(th2);
+                }
+                throw th;
+            }
+        }
+        if (interfaceC17686 != null) {
+            interfaceC17686.close();
+        }
     }
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        EnumC7306.m19460(abstractC17806.m41390(), abstractC17806.mo16133());
-        interfaceC21334.m47864();
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final boolean f() {
+        this.b = true;
+        return this.a.f();
     }
 }

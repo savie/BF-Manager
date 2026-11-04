@@ -1,30 +1,47 @@
 package l;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.view.AbsSavedState;
+import java.util.Comparator;
+import java.util.SortedMap;
 
-/* JADX INFO: renamed from: l.᩹᩷ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C682 */
+/* JADX INFO: renamed from: l.᩸ۘۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22537 extends C23948 {
-    public static final Parcelable.Creator CREATOR = new C5603();
+public final class C22537 extends C22908 implements SortedMap {
+    public static final long serialVersionUID = -8806743815996713206L;
+    public final SortedMap e;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f73507;
-
-    @Override // android.view.AbsSavedState, android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        super.writeToParcel(parcel, i);
-        parcel.writeString(this.f73507);
+    public C22537(SortedMap sortedMap) {
+        super(sortedMap);
+        this.e = sortedMap;
     }
 
-    public C22537(Parcel parcel) {
-        super(parcel);
-        this.f73507 = parcel.readString();
+    @Override // java.util.SortedMap
+    public final Comparator comparator() {
+        return this.e.comparator();
     }
 
-    public C22537() {
-        super(AbsSavedState.EMPTY_STATE);
+    @Override // java.util.SortedMap
+    public final SortedMap subMap(Object obj, Object obj2) {
+        return new C22537(this.e.subMap(obj, obj2));
+    }
+
+    @Override // java.util.SortedMap
+    public final SortedMap headMap(Object obj) {
+        return new C22537(this.e.headMap(obj));
+    }
+
+    @Override // java.util.SortedMap
+    public final SortedMap tailMap(Object obj) {
+        return new C22537(this.e.tailMap(obj));
+    }
+
+    @Override // java.util.SortedMap
+    public final Object firstKey() {
+        return this.e.firstKey();
+    }
+
+    @Override // java.util.SortedMap
+    public final Object lastKey() {
+        return this.e.lastKey();
     }
 }

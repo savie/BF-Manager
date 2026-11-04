@@ -1,13 +1,32 @@
 package l;
 
-import java.util.function.IntFunction;
+import java.io.IOException;
+import java.math.BigDecimal;
 
-/* JADX INFO: renamed from: l.۬ۗ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: B29A */
+/* JADX INFO: renamed from: l.۫ۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12852 implements IntFunction {
-    @Override // java.util.function.IntFunction
-    public final Object apply(int i) {
-        return new String[i];
+public class C12852 extends AbstractC17567 {
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) throws IOException {
+        c21362.m48588((BigDecimal) obj);
+    }
+
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        if (c4208.m13438() == EnumC14648.NULL) {
+            c4208.m13444();
+            return null;
+        }
+        String strM13453 = c4208.m13453();
+        try {
+            return C10680.m27228(strM13453);
+        } catch (NumberFormatException e) {
+            StringBuilder sbM51387 = C22783.m51387("Failed parsing '", strM13453, "' as BigDecimal; at path ");
+            sbM51387.append(c4208.m13451());
+            throw new C7367(sbM51387.toString(), e);
+        }
     }
 }

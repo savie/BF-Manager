@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient
-        android:startColor="#70000000"
-        android:endColor="#00000000"
-        android:angle="270"
-        android:type="linear"
-        android:centerY="0.3"
-        android:centerColor="#30000000"/>
-</shape>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/MT_Protector_res_0x7f060031">
+    <item android:id="@android:id/mask">
+        <inset
+            android:insetLeft="@dimen/MT_Protector_res_0x7f070059"
+            android:insetRight="@dimen/MT_Protector_res_0x7f070059"
+            android:insetTop="@dimen/MT_Protector_res_0x7f07005a"
+            android:insetBottom="@dimen/MT_Protector_res_0x7f07005a">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/MT_Protector_res_0x7f07005d"/>
+                <solid android:color="@android:color/white"/>
+                <padding
+                    android:left="@dimen/MT_Protector_res_0x7f07005b"
+                    android:top="@dimen/MT_Protector_res_0x7f07005c"
+                    android:right="@dimen/MT_Protector_res_0x7f07005b"
+                    android:bottom="@dimen/MT_Protector_res_0x7f07005c"/>
+            </shape>
+        </inset>
+    </item>
+</ripple>

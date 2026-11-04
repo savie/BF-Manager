@@ -1,30 +1,36 @@
 .class public final Ll/᩺֫ۙ;
 .super Ljava/lang/Object;
-.source "W7MS"
+.source "VB94"
 
 # interfaces
-.implements Ll/ۢ֫ۙ;
+.implements Ll/ۧۢ;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/᩶֫ۙ;
+
+
+# direct methods
+.method public constructor <init>(Ll/᩶֫ۙ;)V
+    .locals 0
+
+    .line 545
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩺֫ۙ;->ۙ:Ll/᩶֫ۙ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ܶ᩹ܰ;
+.method public final ۙ()V
     .locals 1
 
-    .line 28
-    new-instance v0, Ll/֫֫ۙ;
+    .line 548
+    iget-object v0, p0, Ll/᩺֫ۙ;->ۙ:Ll/᩶֫ۙ;
 
-    invoke-direct {v0}, Ll/֫֫ۙ;-><init>()V
+    invoke-virtual {v0}, Ll/᩶֫ۙ;->ۙ()V
 
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/ۛ֫ۙ;Ll/ܽ֫ۙ;)Ll/ܶ᩹ܰ;
-    .locals 1
-
-    .line 35
-    new-instance v0, Ll/֫֫ۙ;
-
-    invoke-direct {v0, p1, p2}, Ll/֫֫ۙ;-><init>(Ll/ۛ֫ۙ;Ll/ܽ֫ۙ;)V
-
-    return-object v0
+    return-void
 .end method

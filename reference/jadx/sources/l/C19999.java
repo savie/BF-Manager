@@ -1,58 +1,28 @@
 package l;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collections;
-import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩶ۜۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: EB82 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19999 {
+/* JADX INFO: renamed from: l.ᩴᩳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C12B */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19999 extends AbstractC20970 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Map f64015;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15481 f64260;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C19999 m45285(String str) throws IOException {
-        if (str == null || str.isEmpty()) {
-            return new C19999();
-        }
-        InputStream inputStreamMo33970 = C5553.m15313(str, new String[0]).mo33970();
-        try {
-            C19999 c19999 = new C19999(inputStreamMo33970);
-            if (inputStreamMo33970 != null) {
-                inputStreamMo33970.close();
-            }
-            return c19999;
-        } catch (Throwable th) {
-            if (inputStreamMo33970 != null) {
-                try {
-                    inputStreamMo33970.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-            }
-            throw th;
-        }
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C8002 f64261;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C19999(String str, long j, C11048 c11048, C15481 c15481, C8002 c8002) {
+        super(str, j, c11048);
+        this.f64260 = c15481;
+        this.f64261 = c8002;
     }
 
-    public C19999(InputStream inputStream) {
-        this.f64015 = C11186.m28126(inputStream).m28127();
-    }
-
-    public C19999() {
-        this.f64015 = Collections.EMPTY_MAP;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m45286(String str) {
-        return (String) C9735.getOrDefault(this.f64015, str, str);
-    }
-
-    public final String toString() {
-        StringBuilder sb = new StringBuilder();
-        C9030.stream(this.f64015.entrySet()).sorted(new C20704()).forEach(new C15766(0, sb));
-        return sb.toString();
+    @Override // l.AbstractC20970
+    /* JADX INFO: renamed from: ۙ */
+    public final InputStream mo10654() {
+        return this.f64260.m37046().m51727(this.f64261);
     }
 }

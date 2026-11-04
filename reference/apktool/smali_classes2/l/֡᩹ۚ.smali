@@ -1,21 +1,31 @@
-.class public final synthetic Ll/֡᩹ۚ;
+.class public final Ll/֡᩹ۚ;
 .super Ljava/lang/Object;
-.source "47JZ"
-
-# interfaces
-.implements Ljava/util/function/ToIntFunction;
+.source "L78E"
 
 
-# virtual methods
-.method public final applyAsInt(Ljava/lang/Object;)I
+# instance fields
+.field public final ۙ:Z
+
+.field public final ۤ:Z
+
+.field public final ᩷:Z
+
+
+# direct methods
+.method public constructor <init>(ZZZ)V
     .locals 0
 
-    .line 0
-    check-cast p1, Ll/᩸֨ᩴ;
+    .line 1886
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Ll/᩸֨ᩴ;->ۘ()I
+    .line 1887
+    iput-boolean p1, p0, Ll/֡᩹ۚ;->ۤ:Z
 
-    move-result p1
+    .line 1888
+    iput-boolean p2, p0, Ll/֡᩹ۚ;->᩷:Z
 
-    return p1
+    .line 1889
+    iput-boolean p3, p0, Ll/֡᩹ۚ;->ۙ:Z
+
+    return-void
 .end method

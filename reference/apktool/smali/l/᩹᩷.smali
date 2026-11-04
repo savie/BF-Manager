@@ -1,87 +1,185 @@
-.class public Ll/᩹᩷;
-.super Ll/ۚ᩷;
-.source "J1BI"
+.class public final Ll/᩹᩷;
+.super Ljava/lang/Object;
+.source "E5FU"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
 
 # instance fields
-.field public ᩸:I
+.field public final ֡:Ljava/lang/CharSequence;
+
+.field public final ܰ:Ljava/lang/String;
+
+.field public final ܿ:I
+
+.field public final ᩶:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Ll/۟᩷;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 24
-    invoke-direct {p0, p1}, Ll/ۚ᩷;-><init>(Ll/۟᩷;)V
+    .line 975
+    new-instance v0, Ll/ܶ᩷;
 
-    .line 25
-    instance-of p1, p1, Ll/ܶ᩷;
+    .line 976
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
-
-    .line 26
-    sget-object p1, Ll/ۖ᩷;->ܽ:Ll/ۖ᩷;
-
-    iput-object p1, p0, Ll/ۚ᩷;->ۜ:Ll/ۖ᩷;
+    .line 975
+    sput-object v0, Ll/᩹᩷;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
+.end method
 
-    .line 28
-    :cond_0
-    sget-object p1, Ll/ۖ᩷;->᩻:Ll/ۖ᩷;
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    iput-object p1, p0, Ll/ۚ᩷;->ۜ:Ll/ۖ᩷;
+    .line 904
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 905
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/᩹᩷;->ܰ:Ljava/lang/String;
+
+    .line 906
+    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Ll/᩹᩷;->֡:Ljava/lang/CharSequence;
+
+    .line 907
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ll/᩹᩷;->ܿ:I
+
+    .line 908
+    const-class v0, Ll/۫᩷;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/᩹᩷;->᩶:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(I)V
+.method public final describeContents()I
     .locals 1
 
-    .line 33
-    iget-boolean v0, p0, Ll/ۚ᩷;->֨:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    goto :goto_1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_0
-    const/4 v0, 0x1
+    .line 1032
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 36
-    iput-boolean v0, p0, Ll/ۚ᩷;->֨:Z
+    const-string v1, "Action:mName=\'"
 
-    .line 37
-    iput p1, p0, Ll/ۚ᩷;->ܶ:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 38
-    iget-object p1, p0, Ll/ۚ᩷;->ܰ:Ljava/util/ArrayList;
+    iget-object v1, p0, Ll/᩹᩷;->֡:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", mIcon="
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    iget v1, p0, Ll/᩹᩷;->ܿ:I
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v1, ", mExtras="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll/᩹᩷;->᩶:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ll/ܰ᩷;
+    return-object v0
+.end method
 
-    .line 39
-    invoke-interface {v0, v0}, Ll/ܰ᩷;->ۙ(Ll/ܰ᩷;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    goto :goto_0
+    .line 913
+    iget-object v0, p0, Ll/᩹᩷;->ܰ:Ljava/lang/String;
 
-    :cond_1
-    :goto_1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 914
+    iget-object v0, p0, Ll/᩹᩷;->֡:Ljava/lang/CharSequence;
+
+    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+
+    .line 915
+    iget p2, p0, Ll/᩹᩷;->ܿ:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 916
+    iget-object p2, p0, Ll/᩹᩷;->᩶:Landroid/os/Bundle;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
     return-void
+.end method
+
+.method public final ۙ()Landroid/media/session/PlaybackState$CustomAction;
+    .locals 3
+
+    .line 969
+    iget-object v0, p0, Ll/᩹᩷;->֡:Ljava/lang/CharSequence;
+
+    iget v1, p0, Ll/᩹᩷;->ܿ:I
+
+    .line 970
+    iget-object v2, p0, Ll/᩹᩷;->ܰ:Ljava/lang/String;
+
+    invoke-static {v2, v0, v1}, Ll/᩻᩷;->ۙ(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/media/session/PlaybackState$CustomAction$Builder;
+
+    move-result-object v0
+
+    .line 971
+    iget-object v1, p0, Ll/᩹᩷;->᩶:Landroid/os/Bundle;
+
+    invoke-static {v0, v1}, Ll/᩻᩷;->ۙ(Landroid/media/session/PlaybackState$CustomAction$Builder;Landroid/os/Bundle;)V
+
+    .line 972
+    invoke-static {v0}, Ll/᩻᩷;->ۙ(Landroid/media/session/PlaybackState$CustomAction$Builder;)Landroid/media/session/PlaybackState$CustomAction;
+
+    move-result-object v0
+
+    return-object v0
 .end method

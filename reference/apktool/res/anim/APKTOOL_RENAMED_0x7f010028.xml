@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pathInterpolator android:controlX1="0.4" android:controlY1="0.0" android:controlX2="1.0" android:controlY2="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale android:interpolator="@android:anim/decelerate_interpolator" android:duration="250" android:pivotX="50.0%" android:pivotY="50.0%" android:fromXScale="1.0" android:toXScale="0.1" android:fromYScale="1.0" android:toYScale="0.1" />
+    <alpha android:interpolator="@android:anim/decelerate_interpolator" android:duration="250" android:fromAlpha="1.0" android:toAlpha="0.0" />
+    <translate android:interpolator="@android:anim/accelerate_interpolator" android:duration="500" android:fromXDelta="0.0" android:toXDelta="-100.0%p" android:fromYDelta="0.0" android:toYDelta="-100.0%p" />
+</set>

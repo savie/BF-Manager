@@ -1,44 +1,41 @@
 package l;
 
-import java.util.AbstractMap;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.᩷ܳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O5F3 */
+/* JADX INFO: renamed from: l.᩶֡ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U4HR */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20939 extends AbstractC9943 {
+public final class C20939 extends AbstractC0802 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16001 f68253;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f66991 = new StringBuilder();
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Iterator f68254;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f66990 = null;
 
-    public C20939(C16001 c16001, Iterator it) {
-        this.f68254 = it;
-        this.f68253 = c16001;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f66989 = new StringBuilder();
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f66988 = new StringBuilder();
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f66992 = false;
+
+    public C20939() {
+        this.f2843 = EnumC9750.Doctype;
     }
 
-    @Override // l.AbstractC9943
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo20056() {
-        Iterator it = this.f68254;
-        if (!it.hasNext()) {
-            m25170();
-            return null;
-        }
-        C9548 c9548 = (C9548) it.next();
-        C16001 c16001 = this.f68253;
-        if (c16001.f51810.f32247.compareTo(c9548.f32248) < 0) {
-            C9548 c9548M24410 = c9548.m24410(c16001.f51810);
-            AbstractC18054 abstractC18054 = c9548M24410.f32247;
-            if (!c16001.f51809.m24405(abstractC18054)) {
-                m25170();
-                return null;
-            }
-            return new AbstractMap.SimpleImmutableEntry(abstractC18054, c9548M24410);
-        }
-        m25170();
-        return null;
+    @Override // l.AbstractC0802
+    /* JADX INFO: renamed from: ۫ */
+    public final void mo3216() {
+        super.mo3216();
+        AbstractC0802.m3211(this.f66991);
+        this.f66990 = null;
+        AbstractC0802.m3211(this.f66989);
+        AbstractC0802.m3211(this.f66988);
+        this.f66992 = false;
+    }
+
+    public final String toString() {
+        return C14442.m34865("<!doctype ", this.f66991.toString(), ">");
     }
 }

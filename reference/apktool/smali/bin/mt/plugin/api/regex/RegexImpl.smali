@@ -3,7 +3,7 @@
 .source "RegexImpl.java"
 
 # interfaces
-.implements Ll/ۛ᩹ۘ;
+.implements Ll/ۗۛ֫;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     invoke-direct {v0}, Lbin/mt/plugin/api/regex/RegexImpl;-><init>()V
 
-    const-class v1, Ll/ۛ᩹ۘ;
+    const-class v1, Ll/ۗۛ֫;
 
     invoke-static {v1, v0}, Lbin/mt/plugin/api/util/ServiceLoader;->register(Ljava/lang/Class;Ljava/lang/Object;)V
 
@@ -37,9 +37,9 @@
     .locals 0
 
     .line 25
-    check-cast p1, Ll/ܳᩳۨ;
+    check-cast p1, Ll/ܿܶۤ;
 
-    invoke-static {p1, p2}, Ll/ۢᩳۨ;->ۙ(Ll/ܳᩳۨ;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Ll/۟ܶۤ;->ۙ(Ll/ܿܶۤ;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 15
-    invoke-static {p1}, Ll/ܳᩳۨ;->ۙ(Ljava/lang/String;)Ll/ܳᩳۨ;
+    invoke-static {p1}, Ll/ܿܶۤ;->ۙ(Ljava/lang/String;)Ll/ܿܶۤ;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
     .locals 0
 
     .line 20
-    invoke-static {p2, p1}, Ll/ܳᩳۨ;->ۙ(ILjava/lang/String;)Ll/ܳᩳۨ;
+    invoke-static {p2, p1}, Ll/ܿܶۤ;->ۙ(ILjava/lang/String;)Ll/ܿܶۤ;
 
     move-result-object p1
 

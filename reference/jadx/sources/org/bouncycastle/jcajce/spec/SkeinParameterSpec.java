@@ -11,12 +11,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import l.C0561;
-import l.C15489;
+import l.C13645;
+import l.C4681;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SkeinParameterSpec implements AlgorithmParameterSpec {
     public static final int PARAM_TYPE_CONFIG = 4;
     public static final int PARAM_TYPE_KEY = 0;
@@ -79,7 +79,7 @@ public class SkeinParameterSpec implements AlgorithmParameterSpec {
                 outputStreamWriter.close();
                 return set(8, byteArrayOutputStream.toByteArray());
             } catch (IOException e) {
-                throw new IllegalStateException(C15489.m37075("Byte I/O failed: ", e));
+                throw new IllegalStateException(C13645.m33383("Byte I/O failed: ", e));
             }
         }
 
@@ -95,7 +95,7 @@ public class SkeinParameterSpec implements AlgorithmParameterSpec {
                 outputStreamWriter.close();
                 return set(8, byteArrayOutputStream.toByteArray());
             } catch (IOException e) {
-                throw new IllegalStateException(C15489.m37075("Byte I/O failed: ", e));
+                throw new IllegalStateException(C13645.m33383("Byte I/O failed: ", e));
             }
         }
 
@@ -113,7 +113,7 @@ public class SkeinParameterSpec implements AlgorithmParameterSpec {
     }
 
     public SkeinParameterSpec(Map map) {
-        this.parameters = C0561.unmodifiableMap(map);
+        this.parameters = C4681.unmodifiableMap(map);
     }
 
     public byte[] getKey() {

@@ -1,55 +1,53 @@
 package l;
 
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.net.SocketTimeoutException;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۚ᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W8NJ */
+/* JADX INFO: renamed from: l.ۚۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: T8N8 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C5594 extends C20018 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f19202;
+public final class C5594 implements InterfaceC0636 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C5594 m15470(IOException iOException, int i) {
-        int i2;
-        String message = iOException.getMessage();
-        if (iOException instanceof SocketTimeoutException) {
-            i2 = 2002;
-        } else if (iOException instanceof InterruptedIOException) {
-            i2 = 1004;
-        } else {
-            i2 = (message == null || !C20733.m46672(message).matches("cleartext.*not permitted.*")) ? 2001 : 2007;
+    public final C7467 f19418;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte[] f19419;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C25368 f19420;
+
+    @Override // l.InterfaceC0636
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2803() {
+    }
+
+    public C5594(InterfaceC13433 interfaceC13433, C25368 c25368) {
+        C14368.m34811();
+        this.f19420 = c25368;
+        this.f19418 = new C7467(interfaceC13433);
+    }
+
+    @Override // l.InterfaceC0636
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2802() {
+        C7467 c7467 = this.f19418;
+        c7467.m20510();
+        try {
+            c7467.mo8326(this.f19420);
+            int i = 0;
+            while (i != -1) {
+                int iM20513 = (int) c7467.m20513();
+                byte[] bArr = this.f19419;
+                if (bArr == null) {
+                    this.f19419 = new byte[1024];
+                } else if (iM20513 == bArr.length) {
+                    this.f19419 = Arrays.copyOf(bArr, bArr.length * 2);
+                }
+                byte[] bArr2 = this.f19419;
+                i = c7467.read(bArr2, iM20513, bArr2.length - iM20513);
+            }
+        } finally {
+            C18856.m43745(c7467);
         }
-        if (i2 != 2007) {
-            return new C5594(iOException, i2, i);
-        }
-        return new C2771(2007, iOException, "Cleartext HTTP traffic not permitted. See https://developer.android.com/guide/topics/media/issues/cleartext-not-permitted");
-    }
-
-    public C5594() {
-        super(2008);
-        this.f19202 = 1;
-    }
-
-    public C5594(String str, int i) {
-        super(str, i == 2000 ? 2001 : i);
-        this.f19202 = 1;
-    }
-
-    /* JADX WARN: Illegal instructions before constructor call */
-    public C5594(IOException iOException, int i, int i2) {
-        if (i == 2000 && i2 == 1) {
-            i = 2001;
-        }
-        super(i, iOException);
-        this.f19202 = i2;
-    }
-
-    public C5594(int i, IOException iOException, String str) {
-        super(str, iOException, i == 2000 ? 2001 : i);
-        this.f19202 = 1;
     }
 }

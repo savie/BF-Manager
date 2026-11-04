@@ -1,28 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5SO */
+import java.util.LinkedHashSet;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.᩵ܰۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D77D */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20609 extends C10026 implements InterfaceC13722 {
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final /* synthetic */ void add(Object obj) {
-        C17745.m41310();
-        throw null;
+public final /* synthetic */ class C20609 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final /* synthetic */ void set(Object obj) {
-        C17745.m41312();
-        throw null;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // l.C19904, java.util.Iterator, java.util.ListIterator
-    public final Object next() {
-        return m45175().f18266;
-    }
-
-    @Override // l.C19904, l.InterfaceC21086, java.util.ListIterator
-    public final Object previous() {
-        return m45176().f18266;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return new LinkedHashSet();
     }
 }

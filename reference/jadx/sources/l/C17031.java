@@ -1,26 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ֫ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P70J */
+import java.util.HashSet;
+
+/* JADX INFO: renamed from: l.ܺᩴۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C7AH */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C17031 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C7381 f54412;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashSet f55653;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f54413;
+    public static C17031 m40121(String... strArr) {
+        HashSet hashSet = new HashSet();
+        hashSet.add("2025-11-25");
+        for (String str : strArr) {
+            C17359.requireNonNull(str, "supportedProtocolVersion");
+            hashSet.add(str);
+        }
+        return new C17031(hashSet);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f54414;
+    public C17031(HashSet hashSet) {
+        this.f55653 = hashSet;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2516 f54415;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m40122(String str) {
+        return this.f55653.contains(str) ? str : "2025-11-25";
+    }
 
-    public C17031(C2516 c2516, C7381 c7381, boolean z, boolean z2) {
-        this.f54415 = c2516;
-        this.f54412 = c7381;
-        this.f54413 = z;
-        this.f54414 = z2;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m40123(String str) {
+        return this.f55653.contains(str);
     }
 }

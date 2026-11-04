@@ -1,12 +1,16 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۖ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: T6QI */
+import javax.crypto.spec.GCMParameterSpec;
+import org.bouncycastle.crypto.params.AEADParameters;
+import org.bouncycastle.crypto.params.KeyParameter;
+
+/* JADX INFO: renamed from: l.ܳ᩹ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G9IQ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15656 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 186;
+public final class C15656 extends AbstractC5962 {
+    @Override // l.AbstractC5962
+    /* JADX INFO: renamed from: ۙ */
+    public final AEADParameters mo17348(byte[] bArr, GCMParameterSpec gCMParameterSpec) {
+        return new AEADParameters(new KeyParameter(bArr), gCMParameterSpec.getTLen(), gCMParameterSpec.getIV());
     }
 }

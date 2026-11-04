@@ -1,56 +1,75 @@
 package l;
 
-import java.util.BitSet;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 
-/* JADX INFO: renamed from: l.ܰ֨ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: EBF1 */
+/* JADX INFO: renamed from: l.۬֡᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6S5 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13492 extends AbstractC14322 {
+public final class C13492 extends InputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C13492 f44591 = new C13492();
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ FileChannel f42910;
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3096() {
-        return 2;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f42911;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public long f42912;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final byte[] f42913 = new byte[1];
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo3100(AbstractC10794 abstractC10794) {
-        return "";
+    public C13492(C6781 c6781, FileChannel fileChannel) {
+        this.f42910 = fileChannel;
+        this.f42912 = c6781.f22605;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo3097(AbstractC10794 abstractC10794) {
-        C0727 c0727M38695 = abstractC10794.m38695();
-        return c0727M38695.m15275get(0).m38392() + ", " + c0727M38695.m15275get(1).m38392() + ", " + c0727M38695.m15275get(2).m38392();
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = this.f42913;
+        if (read(bArr, 0, 1) == -1) {
+            return -1;
+        }
+        return bArr[0] & 255;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo3101(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        return (abstractC16438 instanceof C19052) && c0727M38695.size() == 3 && AbstractC14322.m34568(c0727M38695.m15275get(0).m38400()) && AbstractC14322.m34568(c0727M38695.m15275get(1).m38400()) && AbstractC14322.m34568(c0727M38695.m15275get(2).m38400());
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        C17359.checkFromIndexSize(i, i2, bArr.length);
+        if (this.f42911) {
+            throw new IOException("Migration state stream is closed");
+        }
+        if (i2 == 0) {
+            return 0;
+        }
+        long j = this.f42912;
+        if (j == 0) {
+            return -1;
+        }
+        int i3 = this.f42910.read(ByteBuffer.wrap(bArr, i, (int) Math.min(i2, j)));
+        if (i3 <= 0) {
+            throw new EOFException("Migration state changed during reading");
+        }
+        this.f42912 -= (long) i3;
+        return i3;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final BitSet mo3098(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        BitSet bitSet = new BitSet(3);
-        bitSet.set(0, AbstractC14322.m34568(c0727M38695.m15275get(0).m38400()));
-        bitSet.set(1, AbstractC14322.m34568(c0727M38695.m15275get(1).m38400()));
-        bitSet.set(2, AbstractC14322.m34568(c0727M38695.m15275get(2).m38400()));
-        return bitSet;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3099(C2718 c2718, AbstractC10794 abstractC10794) {
-        C0727 c0727M38695 = abstractC10794.m38695();
-        AbstractC14322.m34567((InterfaceC23865) c2718, AbstractC14322.m34565(abstractC10794, c0727M38695.m15275get(0).m38400()), AbstractC14322.m34563(c0727M38695.m15275get(1).m38400(), c0727M38695.m15275get(2).m38400()));
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        if (this.f42911) {
+            return;
+        }
+        this.f42911 = true;
+        this.f42910.close();
     }
 }

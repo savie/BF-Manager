@@ -1,104 +1,57 @@
 .class public final Ll/֫ܺᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/Iterator;
+.source "V702"
 
 
 # instance fields
-.field public a:I
+.field public ۙ:J
 
-.field public final synthetic b:Ll/ܶۤᩴ;
+.field public ۤ:I
+
+.field public ᩷:I
+
+.field public ᩸:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܶۤᩴ;)V
+.method public constructor <init>(ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 918
+    .line 5354
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֫ܺᩴ;->b:Ll/ܶۤᩴ;
-
-    const/4 p1, 0x0
-
-    .line 919
-    iput p1, p0, Ll/֫ܺᩴ;->a:I
+    .line 5355
+    invoke-virtual {p0, p1, p2}, Ll/֫ܺᩴ;->ۙ(ILjava/lang/CharSequence;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public final ۙ(ILjava/lang/CharSequence;)V
     .locals 2
 
-    .line 923
-    iget v0, p0, Ll/֫ܺᩴ;->a:I
+    .line 5359
+    iput-object p2, p0, Ll/֫ܺᩴ;->᩸:Ljava/lang/CharSequence;
 
-    iget-object v1, p0, Ll/֫ܺᩴ;->b:Ll/ܶۤᩴ;
+    .line 5360
+    iput p1, p0, Ll/֫ܺᩴ;->ۤ:I
 
-    .line 143
-    iget-object v1, v1, Ll/ܶۤᩴ;->c:Ljava/util/List;
+    .line 5361
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    move-result p1
 
-    move-result v1
+    iput p1, p0, Ll/֫ܺᩴ;->᩷:I
 
-    if-ge v0, v1, :cond_0
+    .line 5362
+    iget-wide p1, p0, Ll/֫ܺᩴ;->ۙ:J
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x1
 
-    return v0
+    add-long/2addr p1, v0
 
-    :cond_0
-    const/4 v0, 0x0
+    iput-wide p1, p0, Ll/֫ܺᩴ;->ۙ:J
 
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    .line 928
-    iget v0, p0, Ll/֫ܺᩴ;->a:I
-
-    iget-object v1, p0, Ll/֫ܺᩴ;->b:Ll/ܶۤᩴ;
-
-    .line 143
-    iget-object v1, v1, Ll/ܶۤᩴ;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 929
-    iget-object v0, p0, Ll/֫ܺᩴ;->b:Ll/ܶۤᩴ;
-
-    iget v1, p0, Ll/֫ܺᩴ;->a:I
-
-    .line 49
-    invoke-virtual {v0, v1}, Ll/ܶۤᩴ;->l(I)Ll/ܶۤᩴ;
-
-    move-result-object v0
-
-    .line 930
-    iget v1, p0, Ll/֫ܺᩴ;->a:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Ll/֫ܺᩴ;->a:I
-
-    return-object v0
-
-    .line 933
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return-void
 .end method

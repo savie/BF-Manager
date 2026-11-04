@@ -9,18 +9,18 @@ import com.amazonaws.services.s3.model.S3ObjectInputStream;
 public class S3ObjectResponseHandler extends AbstractS3ResponseHandler {
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo276(HttpResponse httpResponse) {
+    public final Object mo270(HttpResponse httpResponse) {
         S3Object s3Object = new S3Object();
-        AmazonWebServiceResponse amazonWebServiceResponseM457 = AbstractS3ResponseHandler.m457(httpResponse);
-        if (httpResponse.m270().get("x-amz-website-redirect-location") != null) {
+        AmazonWebServiceResponse amazonWebServiceResponseM451 = AbstractS3ResponseHandler.m451(httpResponse);
+        if (httpResponse.m263().get("x-amz-website-redirect-location") != null) {
         }
-        httpResponse.m270().get("x-amz-request-charged");
-        if (httpResponse.m270().get("x-amz-tagging-count") != null) {
-            Integer.parseInt((String) httpResponse.m270().get("x-amz-tagging-count"));
+        httpResponse.m263().get("x-amz-request-charged");
+        if (httpResponse.m263().get("x-amz-tagging-count") != null) {
+            Integer.parseInt((String) httpResponse.m263().get("x-amz-tagging-count"));
         }
-        AbstractS3ResponseHandler.m456(httpResponse, s3Object.m653());
-        s3Object.m651(new S3ObjectInputStream(httpResponse.m267()));
-        amazonWebServiceResponseM457.m165(s3Object);
-        return amazonWebServiceResponseM457;
+        AbstractS3ResponseHandler.m450(httpResponse, s3Object.m647());
+        s3Object.m645(new S3ObjectInputStream(httpResponse.m260()));
+        amazonWebServiceResponseM451.m159(s3Object);
+        return amazonWebServiceResponseM451;
     }
 }

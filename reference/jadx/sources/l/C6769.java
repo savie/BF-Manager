@@ -1,29 +1,50 @@
 package l;
 
-import java.util.HashMap;
-
-/* JADX INFO: renamed from: l.ۜ۫᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 94T8 */
+/* JADX INFO: renamed from: l.ۜ֡ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6769 implements InterfaceC7600 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ HashMap f22861;
-
-    @Override // l.InterfaceC9012
-    /* JADX INFO: renamed from: ۙ */
-    public final C2184 mo4153(C2184 c2184, C15592 c15592) {
-        return c2184;
+public final enum C6769 extends EnumC8806 {
+    public /* synthetic */ C6769() {
+        this("TagName", 9);
     }
 
-    public C6769(HashMap map) {
-        this.f22861 = map;
+    public C6769(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // l.InterfaceC10423
+    @Override // l.EnumC8806
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7124 mo4154(C2184 c2184) {
-        C2184 c2185 = (C2184) this.f22861.get(c2184);
-        return c2185 == null ? c2184 : c2185;
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        c8260.f27184.m43491(c24448.m54672());
+        char cM54669 = c24448.m54669();
+        if (cM54669 != 0) {
+            if (cM54669 != ' ') {
+                if (cM54669 == '/') {
+                    c8260.m22269(EnumC8806.f28708);
+                    return;
+                }
+                if (cM54669 == '<') {
+                    c24448.m54660();
+                    c8260.m22262(this);
+                } else if (cM54669 != '>') {
+                    if (cM54669 == 65535) {
+                        c8260.m22267(this);
+                        c8260.m22269(EnumC8806.f28749);
+                        return;
+                    } else if (cM54669 != '\t' && cM54669 != '\n' && cM54669 != '\f' && cM54669 != '\r') {
+                        AbstractC18701 abstractC18701 = c8260.f27184;
+                        abstractC18701.getClass();
+                        abstractC18701.m43491(String.valueOf(cM54669));
+                        return;
+                    }
+                }
+                c8260.m22264();
+                c8260.m22269(EnumC8806.f28749);
+                return;
+            }
+            c8260.m22269(EnumC8806.f28728);
+            return;
+        }
+        c8260.f27184.m43491(EnumC8806.f28746);
     }
 }

@@ -1,84 +1,40 @@
 package l;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import sun.misc.Unsafe;
+import java.util.HashSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۖ᩶ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2762 {
-    public static final C2762 b;
-    public final Unsafe a;
-
-    static {
-        Field fieldG = g();
-        fieldG.setAccessible(true);
-        try {
-            b = new C2762((Unsafe) fieldG.get(null));
-        } catch (IllegalAccessException e) {
-            throw new AssertionError("Couldn't get the Unsafe", e);
-        }
+/* JADX INFO: renamed from: l.ۖܶ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7A22 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2762 extends C23120 {
+    @Override // l.AbstractC14694
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean mo9135(AbstractC14694 abstractC14694) {
+        return true;
     }
 
-    public C2762(Unsafe unsafe) {
-        this.a = unsafe;
-    }
-
-    public static Field g() {
-        try {
-            return Unsafe.class.getDeclaredField("theUnsafe");
-        } catch (NoSuchFieldException e) {
-            for (Field field : Unsafe.class.getDeclaredFields()) {
-                if (Modifier.isStatic(field.getModifiers()) && Unsafe.class.isAssignableFrom(field.getType())) {
-                    return field;
-                }
+    @Override // l.C23120
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo9133(C14168 c14168, HashSet hashSet) {
+        String lowerCase = m35359().toLowerCase();
+        if (c14168.m34408().f69056.equalsIgnoreCase(lowerCase)) {
+            hashSet.addAll(c14168.m34408().m49145(m35354(), m35348(), C3137.f10167));
+        } else {
+            if (c14168.m34433().containsKey(lowerCase)) {
+                new C5220(m35359(), EnumC24021.TYPE_PTR, m35354(), m35348()).mo9133(c14168, hashSet);
+                return;
             }
-            throw new AssertionError("Couldn't find the Unsafe", e);
+            Iterator it = ((ConcurrentMapC17249) c14168.m34445()).values().iterator();
+            while (it.hasNext()) {
+                m52052(c14168, hashSet, (C17307) ((AbstractC12457) it.next()));
+            }
         }
     }
 
-    public final int e(C15900 c15900, long j) {
-        int intVolatile;
-        do {
-            intVolatile = this.a.getIntVolatile(c15900, j);
-        } while (!this.a.compareAndSwapInt(c15900, j, intVolatile, intVolatile - 4));
-        return intVolatile;
-    }
-
-    public final long i(Field field) {
-        return this.a.objectFieldOffset(field);
-    }
-
-    public final long h(Class cls, String str) {
-        try {
-            return i(cls.getDeclaredField(str));
-        } catch (NoSuchFieldException e) {
-            throw new AssertionError("Cannot find field:", e);
-        }
-    }
-
-    public final int a(Class cls) {
-        return this.a.arrayBaseOffset(cls);
-    }
-
-    public final int b(Class cls) {
-        return this.a.arrayIndexScale(cls);
-    }
-
-    public final Object f(Object obj, long j) {
-        return this.a.getObjectVolatile(obj, j);
-    }
-
-    public final void j(Object obj, long j, C19427 c19427) {
-        this.a.putObjectVolatile(obj, j, c19427);
-    }
-
-    public final boolean c(Object obj, long j, int i, int i2) {
-        return this.a.compareAndSwapInt(obj, j, i, i2);
-    }
-
-    public final boolean d(Object obj, long j, long j2, long j3) {
-        return this.a.compareAndSwapLong(obj, j, j2, j3);
+    @Override // l.C23120
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo9134(C14168 c14168) {
+        String lowerCase = m35359().toLowerCase();
+        return c14168.m34408().f69056.equals(lowerCase) || ((ConcurrentMapC17249) c14168.m34445()).containsKey(lowerCase);
     }
 }

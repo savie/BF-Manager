@@ -1,73 +1,42 @@
-.class public final Ll/ۧۧ᩹;
-.super Ll/ܶᩳ᩹;
-.source "SB6I"
-
-
-# instance fields
-.field public final ܰۙ:Ll/ᩳ᩹ۖ;
+.class public final enum Ll/ۧۧ᩹;
+.super Ll/۬ۧ᩹;
+.source "XBIX"
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳ᩹ۖ;)V
-    .locals 9
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    .line 10
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->֨()Ljava/lang/String;
+    const-string v0, "CharacterReferenceInRcdata"
 
-    move-result-object v1
+    const/4 v1, 0x3
 
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->᩹()Ljava/lang/String;
+    .line 0
+    invoke-direct {p0, v0, v1}, Ll/ۧۧ᩹;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v2
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->ۖ()Ljava/lang/String;
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    move-result-object v3
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->۬()J
-
-    move-result-wide v4
-
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->ۘ()J
-
-    move-result-wide v6
-
-    invoke-virtual {p1}, Ll/ᩳ᩹ۖ;->ۜ()Z
-
-    move-result v0
-
-    xor-int/lit8 v8, v0, 0x1
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v8}, Ll/ܶᩳ᩹;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJZ)V
-
-    .line 11
-    iput-object p1, p0, Ll/ۧۧ᩹;->ܰۙ:Ll/ᩳ᩹ۖ;
+    .line 64
+    invoke-direct {p0, p1, p2, v0}, Ll/۬ۧ᩹;-><init>(Ljava/lang/String;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۨ()Ll/ᩳ᩹ۖ;
-    .locals 1
+.method public ۙ(Ll/۬ۚ᩹;Ll/ۘۚ᩹;)V
+    .locals 0
 
-    .line 15
-    iget-object v0, p0, Ll/ۧۧ᩹;->ܰۙ:Ll/ᩳ᩹ۖ;
+    .line 66
+    sget-object p2, Ll/۬ۧ᩹;->ۜۙ:Ll/۬ۧ᩹;
 
-    return-object v0
-.end method
+    invoke-static {p1, p2}, Ll/۬ۧ᩹;->ۙ(Ll/۬ۚ᩹;Ll/۬ۧ᩹;)V
 
-.method public final ᩴ()Z
-    .locals 1
-
-    .line 20
-    iget-object v0, p0, Ll/ۧۧ᩹;->ܰۙ:Ll/ᩳ᩹ۖ;
-
-    invoke-virtual {v0}, Ll/ᩳ᩹ۖ;->᩺()Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

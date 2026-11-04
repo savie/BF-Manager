@@ -3,7 +3,7 @@ package org.bouncycastle.i18n;
 import java.util.Locale;
 import java.util.TimeZone;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageBundle extends TextBundle {
     public static final String TITLE_ENTRY = "title";
 

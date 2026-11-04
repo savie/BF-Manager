@@ -4,13 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import l.C18616;
-import l.C2387;
-import l.C5031;
+import l.C11642;
+import l.C22666;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class LinearProgressIndicator extends BaseProgressIndicator {
-    public static final int DEF_STYLE_RES = C18616.f59347;
+    public static final int DEF_STYLE_RES = C4185.f14559;
     public static final int INDETERMINATE_ANIMATION_TYPE_CONTIGUOUS = 0;
     public static final int INDETERMINATE_ANIMATION_TYPE_DISJOINT = 1;
     public static final int INDICATOR_DIRECTION_END_TO_START = 3;
@@ -31,7 +31,7 @@ public class LinearProgressIndicator extends BaseProgressIndicator {
     }
 
     public LinearProgressIndicator(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9461);
+        this(context, attributeSet, C11642.f37300);
     }
 
     public LinearProgressIndicator(Context context, AttributeSet attributeSet, int i) {
@@ -51,7 +51,7 @@ public class LinearProgressIndicator extends BaseProgressIndicator {
         LinearProgressIndicatorSpec linearProgressIndicatorSpec = (LinearProgressIndicatorSpec) baseProgressIndicatorSpec;
         boolean z2 = true;
         if (((LinearProgressIndicatorSpec) baseProgressIndicatorSpec).indicatorDirection != 1) {
-            int i5 = C5031.f17539;
+            int i5 = C22666.f73603;
             if ((getLayoutDirection() != 1 || ((LinearProgressIndicatorSpec) this.spec).indicatorDirection != 2) && (getLayoutDirection() != 0 || ((LinearProgressIndicatorSpec) this.spec).indicatorDirection != 3)) {
                 z2 = false;
             }
@@ -137,7 +137,7 @@ public class LinearProgressIndicator extends BaseProgressIndicator {
         LinearProgressIndicatorSpec linearProgressIndicatorSpec = (LinearProgressIndicatorSpec) baseProgressIndicatorSpec;
         boolean z = true;
         if (i != 1) {
-            int i2 = C5031.f17539;
+            int i2 = C22666.f73603;
             if ((getLayoutDirection() != 1 || ((LinearProgressIndicatorSpec) this.spec).indicatorDirection != 2) && (getLayoutDirection() != 0 || i != 3)) {
                 z = false;
             }

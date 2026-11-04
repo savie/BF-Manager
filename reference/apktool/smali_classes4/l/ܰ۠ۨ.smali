@@ -1,82 +1,169 @@
-.class public final synthetic Ll/ܰ۠ۨ;
-.super Ljava/lang/Object;
-.source "G7I1"
-
-# interfaces
-.implements Ll/ܰۡۨ;
+.class public final Ll/ܰ۠ۨ;
+.super Ljava/lang/RuntimeException;
+.source "M5SW"
 
 
-# virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
+# instance fields
+.field public ܰ:Ljava/lang/StringBuffer;
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(I)Z
-    .locals 1
-
-    .line 410
-    invoke-static {p1}, Ljava/lang/Character;->isTitleCase(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 411
-    invoke-static {p1}, Ljava/lang/Character;->isLowerCase(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 412
-    invoke-static {p1}, Ljava/lang/Character;->isUpperCase(I)Z
-
-    move-result p1
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    .locals 2
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    if-eqz p2, :cond_1
 
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    .line 89
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    .line 88
+    :goto_0
+    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 92
+    instance-of p1, p2, Ll/ܰ۠ۨ;
+
+    const/16 v0, 0xc8
+
+    if-eqz p1, :cond_2
+
+    .line 93
+    check-cast p2, Ll/ܰ۠ۨ;
+
+    iget-object p1, p2, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 94
+    new-instance p2, Ljava/lang/StringBuffer;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    invoke-direct {p2, v1}, Ljava/lang/StringBuffer;-><init>(I)V
+
+    iput-object p2, p0, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    .line 95
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    return-void
+
+    .line 97
+    :cond_2
+    new-instance p1, Ljava/lang/StringBuffer;
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuffer;-><init>(I)V
+
+    iput-object p1, p0, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    return-void
+.end method
+
+.method public static ۙ(Ljava/lang/String;Ljava/lang/Exception;)Ll/ܰ۠ۨ;
+    .locals 2
+
+    .line 53
+    instance-of v0, p1, Ll/ܰ۠ۨ;
+
+    if-eqz v0, :cond_0
+
+    .line 54
+    check-cast p1, Ll/ܰ۠ۨ;
+
+    goto :goto_0
+
+    .line 56
+    :cond_0
+    new-instance v0, Ll/ܰ۠ۨ;
+
+    const/4 v1, 0x0
+
+    .line 78
+    invoke-direct {v0, v1, p1}, Ll/ܰ۠ۨ;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+
+    move-object p1, v0
+
+    .line 125
+    :goto_0
+    iget-object v0, p1, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    if-eqz p0, :cond_2
+
+    .line 129
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v1, "\n"
+
+    .line 130
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    const/16 p0, 0xa
+
+    .line 131
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    :cond_1
     return-object p1
+
+    .line 126
+    :cond_2
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "str == null"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final printStackTrace(Ljava/io/PrintStream;)V
+    .locals 1
+
+    .line 106
+    invoke-super {p0, p1}, Ljava/lang/RuntimeException;->printStackTrace(Ljava/io/PrintStream;)V
+
+    .line 107
+    iget-object v0, p0, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final printStackTrace(Ljava/io/PrintWriter;)V
+    .locals 1
+
+    .line 115
+    invoke-super {p0, p1}, Ljava/lang/RuntimeException;->printStackTrace(Ljava/io/PrintWriter;)V
+
+    .line 116
+    iget-object v0, p0, Ll/ܰ۠ۨ;->ܰ:Ljava/lang/StringBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+
+    return-void
 .end method

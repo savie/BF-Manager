@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.digests;
 import com.google.android.material.motion.MotionUtils;
 import org.bouncycastle.crypto.ExtendedDigest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ShortenedDigest implements ExtendedDigest {
     public ExtendedDigest baseDigest;
     public int length;

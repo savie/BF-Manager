@@ -1,42 +1,44 @@
 .class public final Ll/᩻ܽᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "R704"
 
 
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+# instance fields
+.field public final ۙ:J
+
+.field public final ᩷:Ll/᩶ܽᩴ;
+
+
+# direct methods
+.method public constructor <init>(Ll/᩶ܽᩴ;J)V
     .locals 0
 
-    .line 102
-    check-cast p1, Ljava/util/Map$Entry;
+    .line 1245
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/util/Map$Entry;
+    .line 1246
+    iput-object p1, p0, Ll/᩻ܽᩴ;->᩷:Ll/᩶ܽᩴ;
 
-    .line 105
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    .line 1247
+    iput-wide p2, p0, Ll/᩻ܽᩴ;->ۙ:J
 
-    move-result-object p2
+    return-void
+.end method
 
-    check-cast p2, Ljava/lang/String;
+.method public static bridge synthetic ۙ(Ll/᩻ܽᩴ;)J
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    .line 0
+    iget-wide v0, p0, Ll/᩻ܽᩴ;->ۙ:J
 
-    move-result p2
+    return-wide v0
+.end method
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+.method public static bridge synthetic ᩷(Ll/᩻ܽᩴ;)Ll/᩶ܽᩴ;
+    .locals 0
 
-    move-result-object p1
+    .line 0
+    iget-object p0, p0, Ll/᩻ܽᩴ;->᩷:Ll/᩶ܽᩴ;
 
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    sub-int/2addr p2, p1
-
-    return p2
+    return-object p0
 .end method

@@ -1,58 +1,132 @@
-.class public final enum Ll/۫ܺܶ;
-.super Ll/ۢܺܶ;
-.source "E3QI"
+.class public final Ll/۫ܺܶ;
+.super Ll/᩺᩻ܶ;
+.source "F9GX"
+
+
+# instance fields
+.field public ܳ:Ll/᩻᩻ܶ;
+
+.field public ᩴ:Ljava/util/EnumSet;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    .line 452
-    invoke-direct {p0, p1, p2, v0}, Ll/ۢܺܶ;-><init>(Ljava/lang/String;ILl/ۡܺܶ;)V
+    .line 35
+    invoke-direct {p0}, Ll/᩺᩻ܶ;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ll/ᩳ᩶ܶ;Ljava/lang/Object;ILl/֨֡ܶ;)Ll/֨֡ܶ;
-    .locals 0
+.method public final ֫()Ll/᩻᩻ܶ;
+    .locals 1
 
-    .line 456
-    new-instance p1, Ll/۟᩶ܶ;
+    .line 91
+    iget-object v0, p0, Ll/۫ܺܶ;->ܳ:Ll/᩻᩻ܶ;
 
-    .line 1008
-    invoke-direct {p1, p2, p3, p4}, Ll/ܺ᩶ܶ;-><init>(Ljava/lang/Object;ILl/֨֡ܶ;)V
-
-    const-wide p2, 0x7fffffffffffffffL
-
-    .line 1013
-    iput-wide p2, p1, Ll/۟᩶ܶ;->۫:J
-
-    .line 919
-    sget-object p2, Ll/ܶ᩶ܶ;->᩶:Ll/ܶ᩶ܶ;
-
-    .line 1026
-    iput-object p2, p1, Ll/۟᩶ܶ;->ܿ:Ll/֨֡ܶ;
-
-    .line 1039
-    iput-object p2, p1, Ll/۟᩶ܶ;->ۛ:Ll/֨֡ܶ;
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public ۙ(Ll/ᩳ᩶ܶ;Ll/֨֡ܶ;Ll/֨֡ܶ;Ljava/lang/Object;)Ll/֨֡ܶ;
-    .locals 0
+.method public final ۚ()Ljava/util/EnumSet;
+    .locals 1
 
-    .line 465
-    invoke-super {p0, p1, p2, p3, p4}, Ll/ۢܺܶ;->ۙ(Ll/ᩳ᩶ܶ;Ll/֨֡ܶ;Ll/֨֡ܶ;Ljava/lang/Object;)Ll/֨֡ܶ;
+    .line 87
+    iget-object v0, p0, Ll/۫ܺܶ;->ᩴ:Ljava/util/EnumSet;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    .line 466
-    invoke-virtual {p0, p2, p1}, Ll/ۢܺܶ;->ۙ(Ll/֨֡ܶ;Ll/֨֡ܶ;)V
+.method public final ᩷(Ll/ۜ᩹ܶ;)V
+    .locals 4
 
-    return-object p1
+    .line 47
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->۫()I
+
+    .line 48
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ᩴ()B
+
+    .line 49
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ᩴ()B
+
+    .line 50
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ۚ()J
+
+    move-result-wide v0
+
+    const-class v2, Ll/᩷᩻ܶ;
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Ll/ۤܶܶ;->ۙ(JLjava/lang/Class;Ll/᩵֫ܶ;)Ll/᩸ܶܶ;
+
+    move-result-object v0
+
+    check-cast v0, Ll/᩷᩻ܶ;
+
+    .line 51
+    invoke-static {p1}, Ll/ۗ֫ܶ;->ۙ(Ll/᩻ܶܶ;)Ll/᩹֫ܶ;
+
+    .line 52
+    invoke-static {p1}, Ll/ۗ֫ܶ;->ۙ(Ll/᩻ܶܶ;)Ll/᩹֫ܶ;
+
+    .line 53
+    invoke-static {p1}, Ll/ۗ֫ܶ;->ۙ(Ll/᩻ܶܶ;)Ll/᩹֫ܶ;
+
+    .line 54
+    invoke-static {p1}, Ll/ۗ֫ܶ;->ۙ(Ll/᩻ܶܶ;)Ll/᩹֫ܶ;
+
+    const/16 v0, 0x8
+
+    .line 55
+    invoke-virtual {p1, v0}, Ll/᩻ܶܶ;->ۤ(I)[B
+
+    .line 56
+    invoke-virtual {p1, v0}, Ll/᩻ܶܶ;->ۤ(I)[B
+
+    .line 57
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ۚ()J
+
+    move-result-wide v1
+
+    const-class v3, Ll/ۨ֫ܶ;
+
+    invoke-static {v1, v2, v3}, Ll/ۤܶܶ;->ۙ(JLjava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ll/۫ܺܶ;->ᩴ:Ljava/util/EnumSet;
+
+    const/4 v1, 0x4
+
+    .line 58
+    invoke-virtual {p1, v1}, Ll/᩻ܶܶ;->ᩴ(I)V
+
+    .line 47
+    new-instance v1, Ll/᩻᩻ܶ;
+
+    new-array v2, v0, [B
+
+    .line 293
+    invoke-virtual {p1, v0, v2}, Ll/᩻ܶܶ;->᩷(I[B)V
+
+    new-array v3, v0, [B
+
+    invoke-virtual {p1, v0, v3}, Ll/᩻ܶܶ;->᩷(I[B)V
+
+    .line 47
+    invoke-direct {v1, v2, v3}, Ll/᩻᩻ܶ;-><init>([B[B)V
+
+    .line 59
+    iput-object v1, p0, Ll/۫ܺܶ;->ܳ:Ll/᩻᩻ܶ;
+
+    .line 62
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ۚ()J
+
+    .line 63
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ۚ()J
+
+    return-void
 .end method

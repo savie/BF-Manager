@@ -1,66 +1,34 @@
-.class public Ll/ܺ۟᩹;
+.class public interface abstract Ll/ܺ۟᩹;
 .super Ljava/lang/Object;
-.source "P4TK"
+.source "PCE"
 
 # interfaces
-.implements Ll/۟ۜۙ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۤ۟᩹;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۤ۟᩹;)V
-    .locals 0
-
-    .line 103
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ܺ۟᩹;->ܺ:Ll/ۤ۟᩹;
-
-    return-void
-.end method
+.implements Ll/ۚ۟᩹;
+.implements Ljava/util/SortedSet;
+.implements Ll/᩵֡᩹;
 
 
 # virtual methods
-.method public final synthetic ۖ(Ll/֨᩺ۙ;)V
-    .locals 0
-
-    return-void
+.method public abstract comparator()Ll/ۙ֡᩹;
 .end method
 
-.method public final synthetic ۙ(Ll/֨᩺ۙ;)V
-    .locals 0
-
-    return-void
+.method public abstract spliterator()Ll/ܶ۟᩹;
 .end method
 
-.method public final synthetic ۚ(Ll/֨᩺ۙ;)V
-    .locals 0
-
-    return-void
+.method public abstract ۟()Ll/۠֡᩹;
 .end method
 
-.method public final synthetic ۨ(Ll/֨᩺ۙ;)V
-    .locals 0
-
-    return-void
+.method public abstract ۤ(II)Ll/ܺ۟᩹;
 .end method
 
-.method public final ܰ(Ll/֨᩺ۙ;)V
-    .locals 0
-
-    .line 106
-    iget-object p1, p0, Ll/ܺ۟᩹;->ܺ:Ll/ۤ۟᩹;
-
-    invoke-virtual {p1}, Ll/ۤ۟᩹;->run()V
-
-    return-void
+.method public abstract ۫ۙ()I
 .end method
 
-.method public final synthetic ᩹(Ll/֨᩺ۙ;)V
-    .locals 0
+.method public abstract ܳ(I)Ll/ܺ۟᩹;
+.end method
 
-    return-void
+.method public abstract ᩵()I
+.end method
+
+.method public abstract ᩹(I)Ll/ܺ۟᩹;
 .end method

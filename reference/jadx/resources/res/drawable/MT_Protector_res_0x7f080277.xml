@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:height="@dimen/MT_Protector_res_0x7f070332"
-    android:width="@dimen/MT_Protector_res_0x7f070333"
-    android:viewportWidth="@integer/MT_Protector_res_0x7f0b0040"
-    android:viewportHeight="@integer/MT_Protector_res_0x7f0b003f">
-    <path
-        android:name="track"
-        android:fillColor="#ffffffff"
-        android:pathData="@string/MT_Protector_res_0x7f120689"/>
-</vector>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/MT_Protector_res_0x7f080282">
+    <target
+        android:name="@string/MT_Protector_res_0x7f12080e"
+        android:animation="@drawable/MT_Protector_res_0x7f080010"/>
+    <target
+        android:name="@string/MT_Protector_res_0x7f12080e"
+        android:animation="@drawable/MT_Protector_res_0x7f080011"/>
+    <target
+        android:name="@string/MT_Protector_res_0x7f120810"
+        android:animation="@drawable/MT_Protector_res_0x7f080012"/>
+</animated-vector>

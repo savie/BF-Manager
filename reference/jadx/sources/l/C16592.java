@@ -1,77 +1,35 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ܽۧۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UAZD */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16592 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f53242;
+/* JADX INFO: renamed from: l.ܺۙۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S424 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16592 extends C23174 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f53243;
+    public AbstractC11781 f53675;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f53244;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f53245;
-
-    public C16592(int i, int i2, int i3, int i4) {
-        this.f53245 = i;
-        this.f53244 = i2;
-        this.f53242 = i3;
-        this.f53243 = i4;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1500(C5887 c5887) {
+        AbstractC11781 abstractC11781 = this.f53675;
+        c5887.f20170 = abstractC11781;
+        c5887.f26659 = abstractC11781.f38067;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C16592)) {
-            return false;
-        }
-        C16592 c16592 = (C16592) obj;
-        return this.f53245 == c16592.f53245 && this.f53244 == c16592.f53244 && this.f53242 == c16592.f53242 && this.f53243 == c16592.f53243;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1525(C23041 c23041) {
+        AbstractC11781 abstractC11781 = this.f53675;
+        c23041.f74775 = abstractC11781;
+        c23041.f26659 = abstractC11781.f38067;
+        this.f53675 = abstractC11781.f38069;
+        mo5474(c23041.f74776);
     }
 
-    public final int hashCode() {
-        return (((((this.f53245 * 31) + this.f53244) * 31) + this.f53242) * 31) + this.f53243;
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f53245), Integer.valueOf(this.f53244), Integer.valueOf(this.f53242), Integer.valueOf(this.f53243)};
-        String[] strArrSplit = "left;top;width;height".length() == 0 ? new String[0] : "left;top;width;height".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C16592.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m39023() {
-        return this.f53244;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m39024() {
-        return this.f53243;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m39025() {
-        return this.f53245;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m39026() {
-        return this.f53242;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1509(C10360 c10360) {
+        this.f53675 = c10360.f32981;
+        mo5474(c10360.f32980);
     }
 }

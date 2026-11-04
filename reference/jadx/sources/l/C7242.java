@@ -1,13 +1,12 @@
 package l;
 
-import java.util.function.ToLongFunction;
-
-/* JADX INFO: renamed from: l.۟ۙ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1761 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7242 implements ToLongFunction {
-    @Override // java.util.function.ToLongFunction
-    public final long applyAsLong(Object obj) {
-        return ((C3312) obj).f12236;
+/* JADX INFO: renamed from: l.ۜܶ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6QI */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7242 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 177;
     }
 }

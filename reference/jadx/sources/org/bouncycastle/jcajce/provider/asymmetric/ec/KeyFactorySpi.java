@@ -9,9 +9,9 @@ import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
-import l.C17114;
-import l.C8479;
-import l.C9013;
+import l.C11958;
+import l.C13921;
+import l.C16076;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
@@ -33,54 +33,47 @@ import org.bouncycastle.jce.spec.ECParameterSpec;
 import org.bouncycastle.jce.spec.ECPrivateKeySpec;
 import org.bouncycastle.jce.spec.ECPublicKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInfoConverter {
     public String algorithm;
     public ProviderConfiguration configuration;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class EC extends KeyFactorySpi {
         public EC() {
             super("EC", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECDH extends KeyFactorySpi {
         public ECDH() {
             super("ECDH", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECDHC extends KeyFactorySpi {
         public ECDHC() {
             super("ECDHC", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECDSA extends KeyFactorySpi {
         public ECDSA() {
             super("ECDSA", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECGOST3410 extends KeyFactorySpi {
         public ECGOST3410() {
             super("ECGOST3410", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECGOST3410_2012 extends KeyFactorySpi {
         public ECGOST3410_2012() {
             super("ECGOST3410-2012", BouncyCastleProvider.CONFIGURATION);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECMQV extends KeyFactorySpi {
         public ECMQV() {
             super("ECMQV", BouncyCastleProvider.CONFIGURATION);
@@ -118,7 +111,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
         try {
             return new BCECPrivateKey(this.algorithm, new PrivateKeyInfo(new AlgorithmIdentifier(X9ObjectIdentifiers.id_ecPublicKey, eCPrivateKey.getParametersObject()), eCPrivateKey), this.configuration);
         } catch (IOException e) {
-            throw new InvalidKeySpecException(C9013.m23329(e, new StringBuilder("bad encoding: ")));
+            throw new InvalidKeySpecException(C11958.m29932(e, new StringBuilder("bad encoding: ")));
         }
     }
 
@@ -141,7 +134,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
             ECDomainParameters parameters = ((ECPublicKeyParameters) publicKey).getParameters();
             return engineGeneratePublic(new ECPublicKeySpec(((ECPublicKeyParameters) publicKey).getQ(), new ECParameterSpec(parameters.getCurve(), parameters.getG(), parameters.getN(), parameters.getH(), parameters.getSeed())));
         } catch (Exception e) {
-            throw new InvalidKeySpecException(C8479.m22142(e, new StringBuilder("invalid KeySpec: ")), e);
+            throw new InvalidKeySpecException(C16076.m38224(e, new StringBuilder("invalid KeySpec: ")), e);
         }
     }
 
@@ -186,7 +179,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
             try {
                 return new OpenSSHPublicKeySpec(OpenSSHPublicKeyUtil.encodePublicKey(new ECPublicKeyParameters(bCECPublicKey.getQ(), new ECDomainParameters(parameters.getCurve(), parameters.getG(), parameters.getN(), parameters.getH(), parameters.getSeed()))));
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("unable to produce encoding: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("unable to produce encoding: ")));
             }
         }
         if (!cls.isAssignableFrom(OpenSSHPrivateKeySpec.class) || !(key instanceof ECPrivateKey)) {
@@ -198,7 +191,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
         try {
             return new OpenSSHPrivateKeySpec(PrivateKeyInfo.getInstance(key.getEncoded()).parsePrivateKey().toASN1Primitive().getEncoded());
         } catch (IOException e2) {
-            throw new IllegalArgumentException(C9013.m23329(e2, new StringBuilder("cannot encoded key: ")));
+            throw new IllegalArgumentException(C11958.m29932(e2, new StringBuilder("cannot encoded key: ")));
         }
     }
 
@@ -208,7 +201,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
         if (algorithm.equals((ASN1Primitive) X9ObjectIdentifiers.id_ecPublicKey)) {
             return new BCECPrivateKey(this.algorithm, privateKeyInfo, this.configuration);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 
     @Override // org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter
@@ -217,6 +210,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
         if (algorithm.equals((ASN1Primitive) X9ObjectIdentifiers.id_ecPublicKey)) {
             return new BCECPublicKey(this.algorithm, subjectPublicKeyInfo, this.configuration);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 }

@@ -1,19 +1,21 @@
 package l;
 
-import android.view.textclassifier.TextClassificationManager;
-import android.view.textclassifier.TextClassifier;
-import android.widget.TextView;
-
-/* JADX INFO: renamed from: l.ܿ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: T22W */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17647 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static TextClassifier m41118(TextView textView) {
-        TextClassificationManager textClassificationManager = (TextClassificationManager) textView.getContext().getSystemService(TextClassificationManager.class);
-        if (textClassificationManager != null) {
-            return textClassificationManager.getTextClassifier();
+/* JADX INFO: renamed from: l.ܽܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1F0 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17647 extends AbstractC7952 {
+    @Override // l.AbstractC7952
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo13484(C13304 c13304, C12426 c12426, C2008 c2008) throws C10254 {
+        if (c2008.m6864()) {
+            if (!c2008.m6859().m39906().startsWith("#")) {
+                C24361.m54439(c13304, c12426, c2008);
+                return;
+            } else {
+                C24361.m54440(c13304, c12426, c2008);
+                return;
+            }
         }
-        return TextClassifier.NO_OP;
+        C24361.m54439(c13304, c12426, c2008);
     }
 }

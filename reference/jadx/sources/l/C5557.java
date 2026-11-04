@@ -1,34 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ᩵ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M283 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5557 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15341(Object obj) {
-        if (obj == null) {
-            throw new C22491("Object must not be null");
-        }
+/* JADX INFO: renamed from: l.ۚۢۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: JIT5 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5557 extends C18959 {
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final String f19299;
+
+    public C5557(String str) {
+        super(EnumC24203.CONST_STR, 0);
+        this.f19299 = str;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15344(boolean z) {
-        if (!z) {
-            throw new C22491("Must be true");
-        }
+    public final String getString() {
+        return this.f19299;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15342(String str) {
-        if (str == null || str.length() == 0) {
-            throw new C22491("String must not be empty");
-        }
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final C18959 mo4072() {
+        C5557 c5557 = new C5557(this.f19299);
+        m44033(c5557);
+        return c5557;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15343(String str, String str2) {
-        if (str == null || str.length() == 0) {
-            throw new C22491(str2);
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ᩴ */
+    public final boolean mo4075(C18959 c18959) {
+        if (this == c18959) {
+            return true;
         }
+        if ((c18959 instanceof C5557) && super.mo4075(c18959)) {
+            return this.f19299.equals(((C5557) c18959).f19299);
+        }
+        return false;
+    }
+
+    @Override // l.C18959
+    public final String toString() {
+        return m44038() + C12326.m30748().m30751(this.f19299) + m44019();
     }
 }

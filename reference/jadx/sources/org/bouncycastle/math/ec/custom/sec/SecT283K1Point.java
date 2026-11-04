@@ -1,6 +1,6 @@
 package org.bouncycastle.math.ec.custom.sec;
 
-import l.C0833;
+import l.C1402;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECFieldElement;
@@ -125,7 +125,7 @@ public class SecT283K1Point extends ECPoint.AbstractF2m {
         ECFieldElement eCFieldElementMultiply2;
         ECFieldElement eCFieldElementMultiply3;
         ECFieldElement eCFieldElementSquarePlusProduct;
-        ECFieldElement eCFieldElementM3430;
+        ECFieldElement eCFieldElementM5128;
         ECFieldElement eCFieldElementMultiply4;
         if (isInfinity()) {
             return eCPoint;
@@ -168,11 +168,11 @@ public class SecT283K1Point extends ECPoint.AbstractF2m {
             ECFieldElement xCoord = eCPointNormalize.getXCoord();
             ECFieldElement yCoord = eCPointNormalize.getYCoord();
             ECFieldElement eCFieldElementDivide = yCoord.add(rawYCoord).divide(xCoord);
-            eCFieldElementM3430 = C0833.m3430(eCFieldElementDivide, eCFieldElementDivide, xCoord);
-            if (eCFieldElementM3430.isZero()) {
-                return new SecT283K1Point(curve, eCFieldElementM3430, curve.getB());
+            eCFieldElementM5128 = C1402.m5128(eCFieldElementDivide, eCFieldElementDivide, xCoord);
+            if (eCFieldElementM5128.isZero()) {
+                return new SecT283K1Point(curve, eCFieldElementM5128, curve.getB());
             }
-            eCFieldElementSquarePlusProduct = eCFieldElementDivide.multiply(xCoord.add(eCFieldElementM3430)).add(eCFieldElementM3430).add(yCoord).divide(eCFieldElementM3430).add(eCFieldElementM3430);
+            eCFieldElementSquarePlusProduct = eCFieldElementDivide.multiply(xCoord.add(eCFieldElementM5128)).add(eCFieldElementM5128).add(yCoord).divide(eCFieldElementM5128).add(eCFieldElementM5128);
             eCFieldElementMultiply4 = curve.fromBigInteger(ECConstants.ONE);
         } else {
             ECFieldElement eCFieldElementSquare = eCFieldElementAdd2.square();
@@ -187,9 +187,9 @@ public class SecT283K1Point extends ECPoint.AbstractF2m {
                 eCFieldElementMultiply9 = eCFieldElementMultiply9.multiply(zCoord);
             }
             eCFieldElementSquarePlusProduct = eCFieldElementMultiply7.add(eCFieldElementSquare).squarePlusProduct(eCFieldElementMultiply9, eCFieldElement.add(eCFieldElement2));
-            eCFieldElementM3430 = eCFieldElementMultiply8;
+            eCFieldElementM5128 = eCFieldElementMultiply8;
             eCFieldElementMultiply4 = !zIsOne ? eCFieldElementMultiply9.multiply(eCFieldElement2) : eCFieldElementMultiply9;
         }
-        return new SecT283K1Point(curve, eCFieldElementM3430, eCFieldElementSquarePlusProduct, new ECFieldElement[]{eCFieldElementMultiply4});
+        return new SecT283K1Point(curve, eCFieldElementM5128, eCFieldElementSquarePlusProduct, new ECFieldElement[]{eCFieldElementMultiply4});
     }
 }

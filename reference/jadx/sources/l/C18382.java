@@ -1,25 +1,50 @@
 package l;
 
-import java.io.IOException;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ᩳ᩻ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K3OA */
+/* JADX INFO: renamed from: l.ܿܰ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18382 extends AbstractC21536 {
-    @Override // l.AbstractC21536
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo5038() {
-        return 2;
+public final class C18382 extends AbstractC2323 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f59886;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17636 f59887;
+
+    public C18382(boolean z, C17636 c17636) {
+        this.f59886 = z;
+        this.f59887 = c17636;
     }
 
-    public C18382(Long l2) {
-        super(EnumC13776.f45429, l2);
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C18382)) {
+            return false;
+        }
+        C18382 c18382 = (C18382) obj;
+        return this.f59886 == c18382.f59886 && C17359.equals(this.f59887, c18382.f59887);
     }
 
-    @Override // l.AbstractC21536
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3209(InterfaceC19275 interfaceC19275) throws IOException {
-        super.mo3209(interfaceC19275);
-        ((C23509) interfaceC19275).m51767(((Long) this.f69953).longValue());
+    public final int hashCode() {
+        return C17359.hashCode(this.f59887) + ((this.f59886 ? 1231 : 1237) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {Boolean.valueOf(this.f59886), this.f59887};
+        String[] strArrSplit = "active;inactive".length() == 0 ? new String[0] : "active;inactive".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C18382.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

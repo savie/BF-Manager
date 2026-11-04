@@ -2,15 +2,15 @@ package bin.mt.plugin.api.ui.dialog;
 
 import bin.mt.plugin.api.ui.PluginUI;
 import bin.mt.plugin.api.util.Consumer;
-import l.C2106;
-import l.C9576;
+import l.C2402;
+import l.C24094;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseCancelableDialog {
     public boolean cancelable;
     public boolean canceled;
     public boolean needSetKeyListener = true;
-    public Consumer onCancelListener = new C9576();
+    public Consumer onCancelListener = new C2402();
     public final PluginUI pluginUI;
 
     public abstract void dismiss();
@@ -29,7 +29,7 @@ public abstract class BaseCancelableDialog {
         this.cancelable = z;
         if (z && this.needSetKeyListener) {
             this.needSetKeyListener = false;
-            getDialog().setOnKeyListener(new C2106(this));
+            getDialog().setOnKeyListener(new C24094(this));
         }
         return this;
     }

@@ -1,23 +1,25 @@
 package l;
 
-import android.media.LoudnessCodecController;
 import android.media.MediaCodec;
-import android.os.Bundle;
 
-/* JADX INFO: renamed from: l.ۧۢۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8SC */
+/* JADX INFO: renamed from: l.ۤܰۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K8TS */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10909 implements LoudnessCodecController.OnLoudnessCodecUpdateListener {
+public final class C10909 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14437 f37106;
+    public final MediaCodec.CryptoInfo f34539;
 
-    public C10909(C14437 c14437) {
-        this.f37106 = c14437;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final MediaCodec.CryptoInfo.Pattern f34540 = C22098.m50061();
+
+    public C10909(MediaCodec.CryptoInfo cryptoInfo) {
+        this.f34539 = cryptoInfo;
     }
 
-    public final Bundle onLoudnessCodecUpdate(MediaCodec mediaCodec, Bundle bundle) {
-        ((C0219) this.f37106.f47323).getClass();
-        return bundle;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m27688(C10909 c10909, int i, int i2) {
+        c10909.f34540.set(i, i2);
+        c10909.f34539.setPattern(c10909.f34540);
     }
 }

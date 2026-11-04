@@ -1,39 +1,50 @@
-.class public final enum Ll/ܳܽۤ;
-.super Ll/֫ܽۤ;
-.source "F416"
+.class public interface abstract Ll/ܳܽۤ;
+.super Ljava/lang/Object;
+.source "W4H2"
 
-
-# direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const-string v0, "NO_INFERENCE_HOOK"
-
-    const/4 v1, 0x2
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ܳܽۤ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 479
-    invoke-direct {p0, p1, p2, v0}, Ll/֫ܽۤ;-><init>(Ljava/lang/String;II)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # virtual methods
-.method public ۙ()Z
-    .locals 1
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    const/4 v0, 0x0
+.method public abstract isClosed()Z
+.end method
 
-    return v0
+.method public abstract length()J
+.end method
+
+.method public abstract position()J
+.end method
+
+.method public abstract read([BII)I
+.end method
+
+.method public abstract seek(J)V
+.end method
+
+.method public abstract setLength(J)V
+.end method
+
+.method public abstract write([BII)V
+.end method
+
+.method public abstract ۙۤ()Ljava/nio/channels/FileChannel;
+.end method
+
+.method public abstract ۚۤ()Z
+.end method
+
+.method public abstract ۤ(JJ)Ll/ܳܽۤ;
+.end method
+
+.method public abstract ܺ()V
+.end method
+
+.method public abstract ᩷(JJ)Ll/ܳܽۤ;
+.end method
+
+.method public abstract ᩻()Ll/ܳܽۤ;
 .end method

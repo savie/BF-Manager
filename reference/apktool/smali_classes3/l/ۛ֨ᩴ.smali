@@ -1,150 +1,62 @@
-.class public final Ll/ۛ֨ᩴ;
-.super Ll/۫֨ᩴ;
-.source "M1N0"
+.class public final synthetic Ll/ۛ֨ᩴ;
+.super Ljava/lang/Object;
+.source "6AK0"
 
 # interfaces
-.implements Ll/ۨܶᩴ;
-
-
-# instance fields
-.field public final synthetic ۛ:Ll/ۧ֨ᩴ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۧ֨ᩴ;)V
-    .locals 0
-
-    .line 1275
-    iput-object p1, p0, Ll/ۛ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    invoke-direct {p0, p1}, Ll/۫֨ᩴ;-><init>(Ll/ۧ֨ᩴ;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۧ֨ᩴ;IIZ)V
-    .locals 0
-
-    .line 1278
-    iput-object p1, p0, Ll/ۛ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    .line 1279
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/۫֨ᩴ;-><init>(Ll/ۧ֨ᩴ;IIZ)V
-
-    return-void
-.end method
+.implements Ljava/util/function/Predicate;
 
 
 # virtual methods
-.method public final characteristics()I
-    .locals 1
-
-    .line 1284
-    iget-boolean v0, p0, Ll/۫֨ᩴ;->᩶:Z
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x100
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x140
-
-    return v0
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ۙ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)V
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final bridge synthetic getComparator()Ljava/util/Comparator;
+.method public synthetic negate()Ljava/util/function/Predicate;
     .locals 1
 
-    .line 29
-    invoke-virtual {p0}, Ll/ۛ֨ᩴ;->getComparator()Ll/ܽۜᩴ;
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final getComparator()Ll/ܽۜᩴ;
-    .locals 1
-
-    .line 158
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public synthetic getExactSizeIfKnown()J
-    .locals 2
-
     .line 0
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getExactSizeIfKnown(Ll/᩷ۛᩴ;)J
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public synthetic hasCharacteristics(I)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۛᩴ;->$default$hasCharacteristics(Ll/᩷ۛᩴ;I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ܰ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ۙ(IIZ)Ll/۫֨ᩴ;
-    .locals 2
-
-    .line 1294
-    new-instance v0, Ll/ۛ֨ᩴ;
-
-    iget-object v1, p0, Ll/ۛ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    invoke-direct {v0, v1, p1, p2, p3}, Ll/ۛ֨ᩴ;-><init>(Ll/ۧ֨ᩴ;IIZ)V
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 1
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 1272
-    check-cast p2, Ljava/util/function/IntConsumer;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    .line 1289
-    iget-object v0, p0, Ll/ۛ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
+    move-result-object p1
 
-    iget-object v0, v0, Ll/ۧ֨ᩴ;->ۢ:[I
+    return-object p1
+.end method
 
-    aget p1, v0, p1
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-interface {p2, p1}, Ljava/util/function/IntConsumer;->accept(I)V
+    .line 2
+    check-cast p1, Ll/᩶֨ᩴ;
 
-    return-void
+    .line 170
+    iget-object p1, p1, Ll/᩶֨ᩴ;->᩶:Ljava/io/IOException;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

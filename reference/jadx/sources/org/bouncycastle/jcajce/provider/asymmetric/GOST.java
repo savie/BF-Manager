@@ -1,13 +1,13 @@
 package org.bouncycastle.jcajce.provider.asymmetric;
 
-import l.C7997;
+import l.C18011;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.asymmetric.gost.KeyFactorySpi;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.asymmetric.gost.";
 
@@ -32,7 +32,7 @@ public class GOST {
             configurableProvider.addAlgorithm("Alg.Alias.Signature.GOST3411WITHGOST3410", "GOST3410");
             configurableProvider.addAlgorithm("Alg.Alias.Signature.GOST3411WithGOST3410", "GOST3410");
             configurableProvider.addAlgorithm("Alg.Alias.Signature.GOST3411/GOST3410", "GOST3410");
-            C7997.m21058(new StringBuilder("Alg.Alias.Signature."), CryptoProObjectIdentifiers.gostR3411_94_with_gostR3410_94, configurableProvider, "GOST3410");
+            C18011.m41992(new StringBuilder("Alg.Alias.Signature."), CryptoProObjectIdentifiers.gostR3411_94_with_gostR3410_94, configurableProvider, "GOST3410");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator.GOST-3410", "GOST3410");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.GOST-3410", "GOST3410");
         }

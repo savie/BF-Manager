@@ -29,7 +29,7 @@
     const/4 v0, 0x1
 
     .line 0
-    invoke-static {v0, p1}, Ll/ۗۙᩴ;->ۙ(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Ll/۟۠֫;->ۙ(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v1
 

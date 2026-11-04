@@ -504,19 +504,19 @@
     new-instance v1, Lorg/bouncycastle/pqc/crypto/ntruprime/NTRULPRimePrivateKeyParameters;
 
     .line 0
-    invoke-static {v0, v10}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v10}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v14
 
-    invoke-static {v0, v9}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v9}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v15
 
-    invoke-static {v0, v11}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v11}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v16
 
-    invoke-static {v0, v3}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v3}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v17
 
@@ -549,23 +549,23 @@
 
     new-instance v1, Lorg/bouncycastle/pqc/crypto/ntruprime/SNTRUPrimePrivateKeyParameters;
 
-    invoke-static {v0, v10}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v10}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v14
 
-    invoke-static {v0, v9}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v9}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v15
 
-    invoke-static {v0, v11}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v11}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v16
 
-    invoke-static {v0, v3}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v3}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v17
 
-    invoke-static {v0, v4}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v4}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v18
 
@@ -636,11 +636,11 @@
 
     check-cast v0, Lorg/bouncycastle/asn1/ASN1Sequence;
 
-    invoke-static {v0, v10}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v10}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v2
 
-    invoke-static {v0, v9}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v9}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v0
 
@@ -1599,7 +1599,7 @@
 
     const-string v2, "unknown private key version: "
 
-    invoke-static {v1, v2}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1708,11 +1708,11 @@
 
     check-cast v0, Lorg/bouncycastle/asn1/ASN1Sequence;
 
-    invoke-static {v0, v10}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v10}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v2
 
-    invoke-static {v0, v9}, Ll/ᩴܳ᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v0, v9}, Lorg/bouncycastle/asn1/bc/ExternalValue$$ExternalSyntheticOutline0;->m(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v0
 

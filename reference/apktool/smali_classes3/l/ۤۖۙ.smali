@@ -1,11 +1,11 @@
-.class public interface abstract Ll/ۤۖۙ;
+.class public final Ll/ۤۖۙ;
 .super Ljava/lang/Object;
-.source "RB0P"
+.source "A7N6"
 
 
-# virtual methods
-.method public abstract ۙ()Ljava/lang/Object;
-.end method
+# instance fields
+.field public ۙ:Ll/᩺ۤ᩷;
 
-.method public abstract ۙ(Ljava/lang/CharSequence;IILl/ۙۚۙ;)Z
-.end method
+.field public ۤ:Landroid/net/Uri;
+
+.field public ᩷:Z

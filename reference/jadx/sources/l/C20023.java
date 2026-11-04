@@ -1,35 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+import java.util.HashMap;
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.ᩴᩴܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F1VH */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C20023 extends EnumC8422 {
-    public /* synthetic */ C20023() {
-        this("Comment", 46);
+public final class C20023 extends AbstractC21976 implements InterfaceC11621 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22261 f64321;
+
+    public C20023(C22261 c22261) {
+        this.f64321 = c22261;
     }
 
-    public C20023(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC8422
+    @Override // l.AbstractC21976
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7392 = c2424.m7392();
-        if (cM7392 == 0) {
-            c8111.m21365(this);
-            c2424.m7374();
-            c8111.f28423.m49336((char) 65533);
-        } else if (cM7392 == '-') {
-            c8111.m21360(EnumC8422.f29245);
-        } else {
-            if (cM7392 == 65535) {
-                c8111.m21368(this);
-                c8111.m21352();
-                c8111.m21353(EnumC8422.f29249);
-                return;
-            }
-            c8111.f28423.m49337(c2424.m7373('-', 0));
+    public final void mo17037(AbstractC0500 abstractC0500) {
+        String strM17036;
+        String strM35295 = abstractC0500.m35295();
+        if (C13923.m33909(strM35295) || (strM17036 = C5853.m17036(abstractC0500)) == null) {
+            return;
+        }
+        C22261 c22261 = this.f64321;
+        AbstractC5107 abstractC5107 = C14143.f44726;
+        Map map = (Map) c22261.get(abstractC5107);
+        if (map == null) {
+            map = new HashMap();
+            c22261.put(abstractC5107, map);
+        }
+        String str = (String) map.get(strM17036);
+        if (str == null || (C11818.m29667(abstractC0500) instanceof C13310) || strM35295.compareTo(str) < 0) {
+            map.put(strM17036, strM35295);
         }
     }
 }

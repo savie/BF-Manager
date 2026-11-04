@@ -1,7 +1,7 @@
 package com.alipay.apmobilesecuritysdk.b;
 
 import com.alipay.sdk.m.i0.d;
-import l.C15489;
+import l.C14483;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -14,7 +14,7 @@ public class a {
     }
 
     private String a(String str, String str2) {
-        return C15489.m37076(str, str2);
+        return C14483.m34972(str, str2);
     }
 
     public void a(int i) {

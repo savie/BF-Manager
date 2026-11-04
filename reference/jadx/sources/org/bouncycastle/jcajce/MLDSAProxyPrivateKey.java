@@ -5,7 +5,7 @@ import org.bouncycastle.jcajce.interfaces.MLDSAPrivateKey;
 import org.bouncycastle.jcajce.interfaces.MLDSAPublicKey;
 import org.bouncycastle.jcajce.spec.MLDSAParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MLDSAProxyPrivateKey implements MLDSAPrivateKey {
     public final MLDSAPublicKey publicKey;
 

@@ -1,75 +1,51 @@
 .class public final Ll/᩻۠ۨ;
-.super Ljava/lang/Object;
-.source "I6VW"
-
-# interfaces
-.implements Ll/᩶᩵ۨ;
-
-
-# instance fields
-.field public final ۙ:Ll/ۗ۠ۨ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۗ۠ۨ;)V
-    .locals 0
-
-    .line 71
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 72
-    iput-object p1, p0, Ll/᩻۠ۨ;->ۙ:Ll/ۗ۠ۨ;
-
-    return-void
-.end method
+.super Ll/ܶ۠ۨ;
+.source "N4OR"
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
+.method public final ۙ(Ll/ۘ۠ۨ;Ll/ܽ۠ۨ;)V
+    .locals 5
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 43
+    iget-object v0, p0, Ll/ܶ۠ۨ;->ۤ:Ljava/util/ArrayList;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+    :goto_0
+    iget-object v3, p0, Ll/ܶ۠ۨ;->᩷:Ll/ܳ۠ۨ;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ܺ᩵ۨ;->ۙ(Ll/᩶᩵ۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    if-ge v2, v1, :cond_0
 
-    move-result-object p1
+    .line 46
+    iget v4, v3, Ll/ܳ۠ۨ;->ܰ:I
 
-    return-object p1
-.end method
+    invoke-virtual {p1, v4}, Ll/ۘ۠ۨ;->ۙ(I)V
 
-.method public final ۙ(I)Z
-    .locals 1
+    .line 48
+    iget-object v4, p0, Ll/ܶ۠ۨ;->ۙ:Ll/᩻ۖۨ;
 
-    .line 77
-    iget-object v0, p0, Ll/᩻۠ۨ;->ۙ:Ll/ۗ۠ۨ;
+    invoke-static {v4, v3}, Ll/ᩴ۠ۨ;->ۙ(Ll/᩻ۖۨ;Ll/ܳ۠ۨ;)Ll/ۤ۠ۨ;
 
-    invoke-virtual {v0, p1}, Ll/ۗ۠ۨ;->ۙ(I)Z
+    move-result-object v3
 
-    move-result p1
+    .line 50
+    invoke-virtual {v0, v2, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-.end method
+    .line 51
+    invoke-virtual {v3, p1, v2, p2}, Ll/ۤ۠ۨ;->ۙ(Ll/ۘ۠ۨ;ILl/ܽ۠ۨ;)V
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+    add-int/lit8 v2, v2, 0x1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ܺ᩵ۨ;->ܰ(Ll/᩶᩵ۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    goto :goto_0
 
-    move-result-object p1
+    .line 54
+    :cond_0
+    invoke-virtual {p2, v3, v0}, Ll/ܽ۠ۨ;->ۙ(Ll/ܳ۠ۨ;Ljava/util/ArrayList;)V
 
-    return-object p1
+    return-void
 .end method

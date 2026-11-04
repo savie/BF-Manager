@@ -1,93 +1,71 @@
 package l;
 
-import com.alipay.sdk.m.y.q;
-import java.io.IOException;
-import java.io.Writer;
+/* JADX INFO: renamed from: l.ۧۙܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X23D */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11380 {
 
-/* JADX INFO: renamed from: l.ۨ֨᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X7QW */
-/* JADX INFO: loaded from: classes4.dex */
-public class C11380 extends C4323 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public EnumC7169 f35816;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final char[] f38369;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C19585 f35817;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public int f38370;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C10634 f35818;
 
-    public C11380(Writer writer, char[] cArr) {
-        super(writer);
-        this.f38369 = cArr;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f35819 = -1;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public EnumC13880 f35820;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19585 m28706() {
+        return this.f35817;
     }
 
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ܰ */
-    public void mo12158() throws IOException {
-        this.f38370++;
-        this.f15521.write(91);
-        m28480();
-    }
-
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ۙ */
-    public void mo12152() throws IOException {
-        this.f38370--;
-        m28480();
-        this.f15521.write(93);
-    }
-
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ۨ */
-    public void mo12156() throws IOException {
-        this.f15521.write(44);
-        if (m28480()) {
-            return;
+    public final String toString() {
+        StringBuilder sbM3018 = C0703.m3018(200, "<<\n mode: ");
+        sbM3018.append(this.f35820);
+        sbM3018.append("\n ecLevel: ");
+        sbM3018.append(this.f35816);
+        sbM3018.append("\n version: ");
+        sbM3018.append(this.f35818);
+        sbM3018.append("\n maskPattern: ");
+        sbM3018.append(this.f35819);
+        if (this.f35817 == null) {
+            sbM3018.append("\n matrix: null\n");
+        } else {
+            sbM3018.append("\n matrix:\n");
+            sbM3018.append(this.f35817);
         }
-        this.f15521.write(32);
+        sbM3018.append(">>\n");
+        return sbM3018.toString();
     }
 
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ᩹ */
-    public void mo12160() throws IOException {
-        this.f38370++;
-        this.f15521.write(123);
-        m28480();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28710(EnumC13880 enumC13880) {
+        this.f35820 = enumC13880;
     }
 
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ۚ */
-    public void mo12154() throws IOException {
-        this.f38370--;
-        m28480();
-        this.f15521.write(q.h);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28708(EnumC7169 enumC7169) {
+        this.f35816 = enumC7169;
     }
 
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ۖ */
-    public void mo12150() throws IOException {
-        this.f15521.write(58);
-        this.f15521.write(32);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28709(C10634 c10634) {
+        this.f35818 = c10634;
     }
 
-    @Override // l.C4323
-    /* JADX INFO: renamed from: ֨ */
-    public void mo12149() throws IOException {
-        this.f15521.write(44);
-        if (m28480()) {
-            return;
-        }
-        this.f15521.write(32);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28707(int i) {
+        this.f35819 = i;
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    private boolean m28480() throws IOException {
-        if (this.f38369 == null) {
-            return false;
-        }
-        this.f15521.write(10);
-        for (int i = 0; i < this.f38370; i++) {
-            this.f15521.write(this.f38369);
-        }
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28711(C19585 c19585) {
+        this.f35817 = c19585;
     }
 }

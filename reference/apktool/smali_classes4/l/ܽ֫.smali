@@ -1,47 +1,74 @@
 .class public final Ll/ܽ֫;
 .super Ljava/lang/Object;
-.source "63SN"
+.source "C4MC"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/᩹֫;
 
 
 # direct methods
-.method public static ۙ(Landroid/view/Window;Z)V
-    .locals 2
+.method public constructor <init>(Ll/᩹֫;)V
+    .locals 0
 
-    .line 119
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 60
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    .line 120
-    invoke-static {p0, p1}, Ll/֡֫;->ۙ(Landroid/view/Window;Z)V
+    iput-object p1, p0, Ll/ܽ֫;->ܰ:Ll/᩹֫;
 
     return-void
+.end method
 
-    .line 150
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object p0
+# virtual methods
+.method public final onGlobalLayout()V
+    .locals 3
 
-    .line 151
-    invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
+    .line 66
+    iget-object v0, p0, Ll/ܽ֫;->ܰ:Ll/᩹֫;
 
-    move-result v0
+    iget-object v1, v0, Ll/᩹֫;->۬:Ll/ۛܽ;
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v0}, Ll/᩹֫;->isShowing()Z
 
-    and-int/lit16 p1, v0, -0x701
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v1}, Ll/ܺܽ;->ۧ()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 67
+    iget-object v2, v0, Ll/᩹֫;->ᩴۙ:Landroid/view/View;
+
+    if-eqz v2, :cond_1
+
+    .line 68
+    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     goto :goto_0
 
+    .line 72
+    :cond_0
+    invoke-virtual {v1}, Ll/ܺܽ;->show()V
+
+    return-void
+
+    .line 69
     :cond_1
-    or-int/lit16 p1, v0, 0x700
-
-    .line 152
     :goto_0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
+    invoke-virtual {v0}, Ll/᩹֫;->dismiss()V
 
+    :cond_2
     return-void
 .end method

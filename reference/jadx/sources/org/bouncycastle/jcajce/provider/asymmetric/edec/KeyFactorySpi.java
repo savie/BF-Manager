@@ -9,8 +9,8 @@ import java.security.PublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import l.C17114;
-import l.C9013;
+import l.C11958;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
@@ -156,7 +156,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
                     try {
                         encoded = new SubjectPublicKeyInfo(new AlgorithmIdentifier(subjectPublicKeyInfo.getAlgorithm().getAlgorithm()), subjectPublicKeyInfo.getPublicKeyData().getBytes()).getEncoded(ASN1Encoding.DER);
                     } catch (IOException e) {
-                        throw new InvalidKeySpecException(C9013.m23329(e, new StringBuilder("attempt to reconstruct key failed: ")));
+                        throw new InvalidKeySpecException(C11958.m29932(e, new StringBuilder("attempt to reconstruct key failed: ")));
                     }
                 }
                 switch (encoded[8]) {
@@ -224,7 +224,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
                 }
             }
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognized"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognized"));
     }
 
     @Override // org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter
@@ -252,6 +252,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi implements AsymmetricKeyInf
                 }
             }
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognized"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognized"));
     }
 }

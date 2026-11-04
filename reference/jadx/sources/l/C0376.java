@@ -1,153 +1,140 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
+/* JADX INFO: renamed from: l.֡ۤ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: C7DS */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C0376 {
 
-/* JADX INFO: renamed from: l.֡ۧᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0376 extends AbstractC3053 implements InterfaceC10441 {
-    public static final long serialVersionUID = 2249069246763182397L;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f1907;
 
-    @Override // java.util.Collection
-    public final /* synthetic */ Stream parallelStream() {
-        return C2223.convert(C21980.stream(C9030.b(this), true));
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f1908;
 
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final /* synthetic */ InterfaceC5046 parallelStream() {
-        return C21980.stream(C9030.b(this), true);
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable
-    public final /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
-    }
-
-    @Override // java.util.Collection
-    public final /* synthetic */ Stream stream() {
-        return C2223.convert(C21980.stream(C9030.b(this), false));
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final /* synthetic */ InterfaceC5046 stream() {
-        return C21980.stream(C9030.b(this), false);
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final /* synthetic */ Object[] toArray(IntFunction intFunction) {
-        return toArray((Object[]) intFunction.apply(0));
-    }
-
-    @Override // l.AbstractC3053, java.util.Collection
-    public final boolean contains(Object obj) {
-        return this.a.containsValue(obj);
-    }
-
-    @Override // l.AbstractC3053, java.util.Collection
-    public final boolean remove(Object obj) {
-        AbstractC1081 abstractC1081;
-        if (obj == null) {
-            return false;
+    static {
+        int[] iArr = new int[EnumC11079.values().length];
+        f1908 = iArr;
+        try {
+            iArr[EnumC11079.NORMAL.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        Object it = iterator();
-        do {
-            abstractC1081 = (AbstractC1081) it;
-            if (!abstractC1081.hasNext()) {
-                return false;
-            }
-        } while (!obj.equals(((C18015) it).next()));
-        abstractC1081.remove();
-        return true;
-    }
-
-    @Override // l.AbstractC3053, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        ConcurrentMapC13783 concurrentMapC13783 = this.a;
-        C19427[] c19427Arr = concurrentMapC13783.a;
-        int length = c19427Arr == null ? 0 : c19427Arr.length;
-        return new C18015(c19427Arr, length, length, concurrentMapC13783, 1);
-    }
-
-    @Override // java.util.Collection
-    public final boolean add(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection
-    public final boolean addAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC3053, java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        collection.getClass();
-        Object it = iterator();
-        boolean z = false;
-        while (true) {
-            AbstractC1081 abstractC1081 = (AbstractC1081) it;
-            if (!abstractC1081.hasNext()) {
-                return z;
-            }
-            if (collection.contains(((C18015) it).next())) {
-                abstractC1081.remove();
-                z = true;
-            }
+        try {
+            f1908[EnumC11079.WIDE.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-    }
-
-    @Override // java.util.Collection, l.InterfaceC10441
-    public final boolean removeIf(Predicate predicate) {
-        ConcurrentMapC13783 concurrentMapC13783 = this.a;
-        predicate.getClass();
-        C19427[] c19427Arr = concurrentMapC13783.a;
-        boolean z = false;
-        if (c19427Arr != null) {
-            C20838 c20838 = new C20838(c19427Arr, c19427Arr.length, 0, c19427Arr.length);
-            while (true) {
-                C19427 c19427A = c20838.a();
-                if (c19427A == null) {
-                    break;
-                }
-                Object obj = c19427A.b;
-                Object obj2 = c19427A.c;
-                if (predicate.test(obj2) && concurrentMapC13783.g(obj, null, obj2) != null) {
-                    z = true;
-                }
-            }
+        try {
+            f1908[EnumC11079.PRIVELEGED.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        return z;
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC20693 spliterator() {
-        ConcurrentMapC13783 concurrentMapC13783 = this.a;
-        long j = concurrentMapC13783.j();
-        C19427[] c19427Arr = concurrentMapC13783.a;
-        int length = c19427Arr == null ? 0 : c19427Arr.length;
-        return new C18721(c19427Arr, length, 0, length, j < 0 ? 0L : j, 1);
-    }
-
-    @Override // java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        consumer.getClass();
-        C19427[] c19427Arr = this.a.a;
-        if (c19427Arr == null) {
-            return;
+        try {
+            f1908[EnumC11079.NONPRIVELEGED.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
         }
-        C20838 c20838 = new C20838(c19427Arr, c19427Arr.length, 0, c19427Arr.length);
-        while (true) {
-            C19427 c19427A = c20838.a();
-            if (c19427A == null) {
-                return;
-            } else {
-                consumer.n(c19427A.c);
-            }
+        int[] iArr2 = new int[EnumC22268.values().length];
+        f1907 = iArr2;
+        try {
+            iArr2[EnumC22268.f71926.ordinal()] = 1;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f1907[EnumC22268.f71748.ordinal()] = 2;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f1907[EnumC22268.f71749.ordinal()] = 3;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f1907[EnumC22268.f72019.ordinal()] = 4;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f1907[EnumC22268.f71805.ordinal()] = 5;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f1907[EnumC22268.f71958.ordinal()] = 6;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f1907[EnumC22268.f72057.ordinal()] = 7;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f1907[EnumC22268.f72013.ordinal()] = 8;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f1907[EnumC22268.f71751.ordinal()] = 9;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f1907[EnumC22268.f71860.ordinal()] = 10;
+        } catch (NoSuchFieldError unused14) {
+        }
+        try {
+            f1907[EnumC22268.f72090.ordinal()] = 11;
+        } catch (NoSuchFieldError unused15) {
+        }
+        try {
+            f1907[EnumC22268.f72101.ordinal()] = 12;
+        } catch (NoSuchFieldError unused16) {
+        }
+        try {
+            f1907[EnumC22268.f71794.ordinal()] = 13;
+        } catch (NoSuchFieldError unused17) {
+        }
+        try {
+            f1907[EnumC22268.f72046.ordinal()] = 14;
+        } catch (NoSuchFieldError unused18) {
+        }
+        try {
+            f1907[EnumC22268.f71925.ordinal()] = 15;
+        } catch (NoSuchFieldError unused19) {
+        }
+        try {
+            f1907[EnumC22268.f71838.ordinal()] = 16;
+        } catch (NoSuchFieldError unused20) {
+        }
+        try {
+            f1907[EnumC22268.f72002.ordinal()] = 17;
+        } catch (NoSuchFieldError unused21) {
+        }
+        try {
+            f1907[EnumC22268.f71980.ordinal()] = 18;
+        } catch (NoSuchFieldError unused22) {
+        }
+        try {
+            f1907[EnumC22268.f71893.ordinal()] = 19;
+        } catch (NoSuchFieldError unused23) {
+        }
+        try {
+            f1907[EnumC22268.f72025.ordinal()] = 20;
+        } catch (NoSuchFieldError unused24) {
+        }
+        try {
+            f1907[EnumC22268.f71858.ordinal()] = 21;
+        } catch (NoSuchFieldError unused25) {
+        }
+        try {
+            f1907[EnumC22268.f71887.ordinal()] = 22;
+        } catch (NoSuchFieldError unused26) {
+        }
+        try {
+            f1907[EnumC22268.f71762.ordinal()] = 23;
+        } catch (NoSuchFieldError unused27) {
+        }
+        try {
+            f1907[EnumC22268.f71934.ordinal()] = 24;
+        } catch (NoSuchFieldError unused28) {
+        }
+        try {
+            f1907[EnumC22268.f71967.ordinal()] = 25;
+        } catch (NoSuchFieldError unused29) {
+        }
+        try {
+            f1907[EnumC22268.f72076.ordinal()] = 26;
+        } catch (NoSuchFieldError unused30) {
         }
     }
 }

@@ -372,7 +372,7 @@
     move-result v0
 
     .line 286
-    invoke-static {p0, v0}, Ll/ۗ۫;->ۨ(II)I
+    invoke-static {p0, v0}, Ll/ᩴᩳ;->ۤ(II)I
 
     move-result p0
 

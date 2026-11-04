@@ -1,31 +1,43 @@
 package l;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+/* JADX INFO: renamed from: l.ܳۤ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: V743 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15272 implements AutoCloseable {
 
-/* JADX INFO: renamed from: l.ܶܰۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: PANA */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15272 extends AbstractC11348 implements InterfaceC4871 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f49922;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C22732 f49923;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ClassLoader f49776;
+    public final C5578 f49924;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C15272(ClassLoader classLoader) {
-        super(0);
-        this.f49776 = classLoader;
+    public C15272(C5578 c5578, C22732 c22732) {
+        this.f49924 = c5578;
+        this.f49923 = c22732;
     }
 
-    @Override // l.InterfaceC4871
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo3788() throws NoSuchMethodException, ClassNotFoundException {
-        C18093.f57858.getClass();
-        ClassLoader classLoader = this.f49776;
-        Method declaredMethod = classLoader.loadClass("androidx.window.extensions.WindowExtensionsProvider").getDeclaredMethod("getWindowExtensions", null);
-        Class<?> clsLoadClass = classLoader.loadClass("androidx.window.extensions.WindowExtensions");
-        C13465.m32967(declaredMethod, "getWindowExtensionsMethod");
-        C13465.m32967(clsLoadClass, "windowExtensionsClass");
-        return Boolean.valueOf(declaredMethod.getReturnType().equals(clsLoadClass) && Modifier.isPublic(declaredMethod.getModifiers()));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m36636() {
+        return this.f49923.f73774;
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        if (this.f49922) {
+            return;
+        }
+        this.f49922 = true;
+        C5578 c5578 = this.f49924;
+        C22732 c22732 = this.f49923;
+        synchronized (c5578) {
+            int i = c22732.f73775;
+            if (i <= 0) {
+                throw new IllegalStateException("Preview page is not pinned");
+            }
+            c22732.f73775 = i - 1;
+        }
     }
 }

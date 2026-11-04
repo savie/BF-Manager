@@ -18,7 +18,7 @@ import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.field.PolynomialExtensionField;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU4145ECBinary extends ASN1Object {
     public ASN1Integer a;
     public ASN1OctetString b;

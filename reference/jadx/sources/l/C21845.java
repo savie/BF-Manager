@@ -1,76 +1,30 @@
 package l;
 
-import com.alipay.sdk.m.t.e;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.᩸᩸ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H76E */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21845 {
+/* JADX INFO: renamed from: l.᩷ۚܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U9KG */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21845 extends AbstractC15877 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final String[] f70913 = {"call", "jump", e.m, "unknown"};
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC15877 f69602;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m48620(Iterable iterable) {
-        if (iterable == null) {
-            throw new NullPointerException("referenceKinds is null");
-        }
-        Iterator it = iterable.iterator();
-        int i = 0;
-        while (it.hasNext()) {
-            int iM48621 = m48621((String) it.next());
-            if (iM48621 == 0) {
-                throw new IllegalArgumentException("Invalid referenceKind");
-            }
-            if ((i & iM48621) != 0) {
-                throw new IllegalArgumentException("Duplicate referenceKind");
-            }
-            i |= iM48621;
-        }
-        m48623(i);
-        return i;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C21845(AbstractC15877 abstractC15877, EnumC23337 enumC23337, int i, EnumC13857 enumC13857, Set set) {
+        super(enumC23337, i, enumC13857, set, 0);
+        this.f69602 = abstractC15877;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m48623(int i) {
-        if (i == 0 || (i & (-16)) != 0) {
-            throw new IllegalArgumentException("Invalid referenceKind mask");
-        }
+    @Override // l.AbstractC15877
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC2671 mo6071(C1112 c1112) {
+        return this.f69602.mo6071(c1112);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static List m48622(int i) {
-        m48623(i);
-        ArrayList arrayList = new ArrayList(4);
-        if ((i & 1) != 0) {
-            arrayList.add("call");
-        }
-        if ((i & 2) != 0) {
-            arrayList.add("jump");
-        }
-        if ((i & 4) != 0) {
-            arrayList.add(e.m);
-        }
-        if ((i & 8) != 0) {
-            arrayList.add("unknown");
-        }
-        return C0561.unmodifiableList(arrayList);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m48621(String str) {
-        if ("call".equals(str)) {
-            return 1;
-        }
-        if ("jump".equals(str)) {
-            return 2;
-        }
-        if (e.m.equals(str)) {
-            return 4;
-        }
-        return "unknown".equals(str) ? 8 : 0;
+    @Override // l.AbstractC15877
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC8637 mo6072(C2083 c2083) {
+        return this.f69602.mo6072(c2083);
     }
 }

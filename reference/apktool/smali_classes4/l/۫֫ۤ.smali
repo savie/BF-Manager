@@ -1,86 +1,98 @@
 .class public final Ll/۫֫ۤ;
-.super Ll/᩹ۤ۟;
-.source "8459"
+.super Ljava/lang/Object;
+.source "71QY"
+
+# interfaces
+.implements Ll/ᩴ֫ۤ;
 
 
-# instance fields
-.field public ۙ:Z
+# static fields
+.field public static final ᩷:Ll/۫֫ۤ;
 
-.field public ܰ:Ll/᩻᩵ۤ;
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 4
+    new-instance v0, Ll/۫֫ۤ;
+
+    .line 6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    sput-object v0, Ll/۫֫ۤ;->᩷:Ll/۫֫ۤ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۜ۠۟;)V
-    .locals 2
-
-    .line 3252
-    iget-object v0, p1, Ll/ۜ۠۟;->ۛ:Ll/ۛ۠۟;
-
-    invoke-static {v0}, Ll/ۗۡ۟;->᩶(Ll/ۡۡ۟;)Ll/᩻᩵ۤ;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/۫֫ۤ;->ܰ:Ll/᩻᩵ۤ;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 p1, 0x1
-
-    .line 3253
-    iput-boolean p1, p0, Ll/۫֫ۤ;->ۙ:Z
-
-    return-void
-
-    .line 3256
-    :cond_0
-    invoke-super {p0, p1}, Ll/᩹ۤ۟;->ۙ(Ll/ۜ۠۟;)V
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/۬ۡ۟;)V
-    .locals 2
-
-    .line 3261
-    iget-object v0, p1, Ll/۬ۡ۟;->ۛ:Ll/ۛ۠۟;
-
-    invoke-static {v0}, Ll/ۗۡ۟;->᩶(Ll/ۡۡ۟;)Ll/᩻᩵ۤ;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/۫֫ۤ;->ܰ:Ll/᩻᩵ۤ;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 p1, 0x1
-
-    .line 3262
-    iput-boolean p1, p0, Ll/۫֫ۤ;->ۙ:Z
-
-    return-void
-
-    .line 288
-    :cond_0
-    iget-object p1, p1, Ll/۬ۡ۟;->ۛ:Ll/ۛ۠۟;
-
-    invoke-virtual {p0, p1}, Ll/۫֫ۤ;->ܰ(Ll/ۡۡ۟;)V
-
-    return-void
-.end method
-
-.method public final ܰ(Ll/ۡۡ۟;)V
+.method public final ۙ()I
     .locals 1
 
-    if-eqz p1, :cond_0
+    .line 23
+    sget v0, Ll/ۖۚۤ;->ܽ:I
 
-    .line 3245
-    iget-object v0, p0, Ll/۫֫ۤ;->ܰ:Ll/᩻᩵ۤ;
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final ۙ(I[B)I
+    .locals 5
 
-    .line 3246
-    invoke-virtual {p1, p0}, Ll/ۡۡ۟;->ۙ(Ll/᩵ۡ۟;)V
+    const/4 v0, 0x4
 
+    const/4 v1, 0x0
+
+    if-ge p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 13
     :cond_0
-    return-void
+    aget-byte p1, p2, v1
+
+    const/16 v0, 0xff
+
+    and-int/2addr p1, v0
+
+    const/4 v2, 0x1
+
+    .line 14
+    aget-byte v2, p2, v2
+
+    and-int/2addr v2, v0
+
+    const/4 v3, 0x2
+
+    .line 15
+    aget-byte v3, p2, v3
+
+    and-int/2addr v3, v0
+
+    const/4 v4, 0x3
+
+    .line 16
+    aget-byte p2, p2, v4
+
+    and-int/2addr p2, v0
+
+    if-ne p1, v0, :cond_2
+
+    const/16 p1, 0xfe
+
+    if-ne v2, p1, :cond_2
+
+    if-nez v3, :cond_1
+
+    if-eqz p2, :cond_2
+
+    :cond_1
+    const/16 p1, 0x64
+
+    return p1
+
+    :cond_2
+    :goto_0
+    return v1
 .end method

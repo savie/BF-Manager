@@ -1,93 +1,50 @@
 package l;
 
-import android.net.Uri;
-import java.io.IOException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.Map;
-import javax.crypto.Cipher;
-import javax.crypto.CipherInputStream;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۜܳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 47LW */
+/* JADX INFO: renamed from: l.ۜ֫ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D6KU */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6818 implements InterfaceC15785 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC15785 f22980;
+public final class C6818 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public CipherInputStream f22981;
+    public final String f22682;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final byte[] f22982;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f22683;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f22983;
-
-    public C6818(InterfaceC15785 interfaceC15785, byte[] bArr, byte[] bArr2) {
-        this.f22980 = interfaceC15785;
-        this.f22982 = bArr;
-        this.f22983 = bArr2;
+    public C6818(String str, String str2) {
+        this.f22683 = str;
+        this.f22682 = str2;
     }
 
-    @Override // l.InterfaceC6942
-    public final int read(byte[] bArr, int i, int i2) throws IOException {
-        this.f22981.getClass();
-        int i3 = this.f22981.read(bArr, i, i2);
-        if (i3 < 0) {
-            return -1;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C6818)) {
+            return false;
         }
-        return i3;
+        C6818 c6818 = (C6818) obj;
+        return C17359.equals(this.f22683, c6818.f22683) && C17359.equals(this.f22682, c6818.f22682);
     }
 
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۚ */
-    public final Uri mo9274() {
-        return this.f22980.mo9274();
+    public final int hashCode() {
+        return C17359.hashCode(this.f22682) + (C17359.hashCode(this.f22683) * 31);
     }
 
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final Map mo9273() {
-        return this.f22980.mo9273();
-    }
-
-    @Override // l.InterfaceC15785
-    public final void close() {
-        if (this.f22981 != null) {
-            this.f22981 = null;
-            this.f22980.close();
-        }
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo9272(C12257 c12257) {
-        try {
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
-            try {
-                cipher.init(2, new SecretKeySpec(this.f22982, "AES"), new IvParameterSpec(this.f22983));
-                C0261 c0261 = new C0261(this.f22980, c12257);
-                this.f22981 = new CipherInputStream(c0261, cipher);
-                c0261.m1760();
-                return -1L;
-            } catch (InvalidAlgorithmParameterException | InvalidKeyException e) {
-                throw new RuntimeException(e);
+    public final String toString() {
+        Object[] objArr = {this.f22683, this.f22682};
+        String[] strArrSplit = "source;path".length() == 0 ? new String[0] : "source;path".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C6818.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
             }
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException e2) {
-            throw new RuntimeException(e2);
         }
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11161(InterfaceC19706 interfaceC19706) {
-        interfaceC19706.getClass();
-        this.f22980.mo11161(interfaceC19706);
+        sb.append("]");
+        return sb.toString();
     }
 }

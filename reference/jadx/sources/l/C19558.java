@@ -1,62 +1,25 @@
 package l;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.Writer;
+import android.widget.AbsListView;
 
-/* JADX INFO: renamed from: l.᩵ܺۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9B2H */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19558 extends Writer {
+/* JADX INFO: renamed from: l.ᩴۘۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4646 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19558 implements AbsListView.OnScrollListener {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f62861;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15082 f63075;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final BufferedWriter f62862;
-
-    public C19558(BufferedWriter bufferedWriter, String str) {
-        this.f62862 = bufferedWriter;
-        this.f62861 = str;
+    @Override // android.widget.AbsListView.OnScrollListener
+    public final void onScroll(AbsListView absListView, int i, int i2, int i3) {
     }
 
-    @Override // java.io.Writer
-    public final void write(char[] cArr, int i, int i2) throws IOException {
-        int i3 = i2 + i;
-        int i4 = i;
-        while (true) {
-            BufferedWriter bufferedWriter = this.f62862;
-            if (i < i3) {
-                if (cArr[i] == '\n') {
-                    bufferedWriter.write(cArr, i4, i - i4);
-                    bufferedWriter.write(this.f62861);
-                    i4 = i + 1;
-                }
-                i++;
-            } else {
-                bufferedWriter.write(cArr, i4, i3 - i4);
-                return;
-            }
-        }
+    public C19558(C15082 c15082) {
+        this.f63075 = c15082;
     }
 
-    @Override // java.io.Writer
-    public final void write(int i) throws IOException {
-        BufferedWriter bufferedWriter = this.f62862;
-        if (i == 10) {
-            bufferedWriter.write(this.f62861);
-        } else {
-            bufferedWriter.write(i);
-        }
-    }
-
-    @Override // java.io.Writer, java.io.Flushable
-    public final void flush() throws IOException {
-        this.f62862.flush();
-    }
-
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f62862.close();
+    @Override // android.widget.AbsListView.OnScrollListener
+    public final void onScrollStateChanged(AbsListView absListView, int i) {
+        this.f63075.f49227.f75448.m36199(false);
     }
 }

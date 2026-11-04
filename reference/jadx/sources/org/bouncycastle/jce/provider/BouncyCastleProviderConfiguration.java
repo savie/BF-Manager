@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import javax.crypto.spec.DHParameterSpec;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.crypto.params.DSAParameters;
@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.provider.config.ProviderConfigurationPermission;
 import org.bouncycastle.jcajce.spec.DHDomainParameterSpec;
 import org.bouncycastle.jce.spec.ECParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BouncyCastleProviderConfiguration implements ProviderConfiguration {
     public volatile Object dhDefaultParams;
     public volatile ECParameterSpec ecImplicitCaParams;
@@ -35,12 +35,12 @@ public class BouncyCastleProviderConfiguration implements ProviderConfiguration 
 
     @Override // org.bouncycastle.jcajce.provider.config.ProviderConfiguration
     public Set getAcceptableNamedCurves() {
-        return C0561.unmodifiableSet(this.acceptableNamedCurves);
+        return C4681.unmodifiableSet(this.acceptableNamedCurves);
     }
 
     @Override // org.bouncycastle.jcajce.provider.config.ProviderConfiguration
     public Map getAdditionalECParameters() {
-        return C0561.unmodifiableMap(this.additionalECParameters);
+        return C4681.unmodifiableMap(this.additionalECParameters);
     }
 
     @Override // org.bouncycastle.jcajce.provider.config.ProviderConfiguration

@@ -1,157 +1,87 @@
 package l;
 
-import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.content.res.XmlResourceParser;
-import android.graphics.Color;
-import android.os.Build;
-import android.util.AttributeSet;
-import android.util.StateSet;
-import android.util.TypedValue;
-import android.util.Xml;
-import bin.mt.plus.R;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.᩹۫, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q216 */
+/* JADX INFO: renamed from: l.᩷᩵ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M779 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22275 {
+public final class C22275 extends AbstractC19137 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f72789 = 0;
+    public JSONObject f72136;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final ThreadLocal f72790 = new ThreadLocal();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C20037 f72137;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ColorStateList m49440(Resources resources, XmlResourceParser xmlResourceParser, Resources.Theme theme) throws XmlPullParserException, IOException {
-        int next;
-        AttributeSet attributeSetAsAttributeSet = Xml.asAttributeSet(xmlResourceParser);
-        do {
-            next = xmlResourceParser.next();
-            if (next == 2) {
-                break;
-            }
-        } while (next != 1);
-        if (next != 2) {
-            throw new XmlPullParserException("No start tag found");
-        }
-        return m49441(resources, xmlResourceParser, attributeSetAsAttributeSet, theme);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public JSONObject f72138;
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo1809() {
+        return "Read APK Resource";
     }
 
-    /* JADX WARN: Code duplicated, block: B:32:0x008b  */
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r4v2 */
-    /* JADX WARN: Type inference failed for: r4v3, types: [boolean, int] */
-    /* JADX WARN: Type inference failed for: r4v4 */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ColorStateList m49441(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) throws XmlPullParserException, IOException {
-        int depth;
-        int color;
-        float f;
-        float f2;
-        String name = xmlPullParser.getName();
-        if (!name.equals("selector")) {
-            throw new XmlPullParserException(xmlPullParser.getPositionDescription() + ": invalid color state list tag " + name);
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1811() {
+        return "Batch-read resources.arsc values by exact resource locators and concrete variants in reads[]. Item-level missing-resource or missing-variant failures do not stop the batch; argument errors or an unreadable table fail the tool. To edit, first create a session with mt_apk_session_create if needed, then re-read the same locator and variant with its non-empty editSessionId. Use mt_apk_resource_edit only when editable=true and complete valueXml is available; targetVersion alone is insufficient.";
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩸ */
+    public final String mo1812() {
+        return "mt_apk_resource_read";
+    }
+
+    public C22275(C20037 c20037) {
+        this.f72137 = c20037;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1805() {
+        return JSON.object().add("readOnlyHint", true);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۤ */
+    public final JSONObject mo1808() {
+        JSONObject jSONObject = this.f72136;
+        if (jSONObject != null) {
+            return jSONObject;
         }
-        ?? r4 = 1;
-        int depth2 = xmlPullParser.getDepth() + 1;
-        Object[] objArr = new int[20][];
-        int[] iArr = new int[20];
-        int i = 0;
-        int i2 = 0;
-        while (true) {
-            int next = xmlPullParser.next();
-            if (next == r4 || ((depth = xmlPullParser.getDepth()) < depth2 && next == 3)) {
-                break;
-            }
-            if (next == 2 && depth <= depth2 && xmlPullParser.getName().equals("item")) {
-                int[] iArr2 = C1335.f5645;
-                TypedArray typedArrayObtainAttributes = theme == null ? resources.obtainAttributes(attributeSet, iArr2) : theme.obtainStyledAttributes(attributeSet, iArr2, i, i);
-                int resourceId = typedArrayObtainAttributes.getResourceId(i, -1);
-                if (resourceId == -1) {
-                    color = typedArrayObtainAttributes.getColor(i, -65281);
-                } else {
-                    ThreadLocal threadLocal = f72790;
-                    TypedValue typedValue = (TypedValue) threadLocal.get();
-                    if (typedValue == null) {
-                        typedValue = new TypedValue();
-                        threadLocal.set(typedValue);
-                    }
-                    resources.getValue(resourceId, typedValue, (boolean) r4);
-                    int i3 = typedValue.type;
-                    if (i3 < 28 || i3 > 31) {
-                        try {
-                            color = m49440(resources, resources.getXml(resourceId), theme).getDefaultColor();
-                        } catch (Exception unused) {
-                            color = typedArrayObtainAttributes.getColor(i, -65281);
-                        }
-                    } else {
-                        color = typedArrayObtainAttributes.getColor(i, -65281);
-                    }
-                }
-                if (typedArrayObtainAttributes.hasValue(r4)) {
-                    f = typedArrayObtainAttributes.getFloat(r4, 1.0f);
-                } else {
-                    f = typedArrayObtainAttributes.hasValue(3) ? typedArrayObtainAttributes.getFloat(3, 1.0f) : 1.0f;
-                }
-                if (Build.VERSION.SDK_INT >= 31 && typedArrayObtainAttributes.hasValue(2)) {
-                    f2 = typedArrayObtainAttributes.getFloat(2, -1.0f);
-                } else {
-                    f2 = typedArrayObtainAttributes.getFloat(4, -1.0f);
-                }
-                typedArrayObtainAttributes.recycle();
-                int attributeCount = attributeSet.getAttributeCount();
-                int[] iArr3 = new int[attributeCount];
-                int i4 = 0;
-                for (int i5 = 0; i5 < attributeCount; i5++) {
-                    int attributeNameResource = attributeSet.getAttributeNameResource(i5);
-                    if (attributeNameResource != 16843173 && attributeNameResource != 16843551 && attributeNameResource != R.attr.MT_Protector && attributeNameResource != R.attr.MT_Protector) {
-                        int i6 = i4 + 1;
-                        if (!attributeSet.getAttributeBooleanValue(i5, false)) {
-                            attributeNameResource = -attributeNameResource;
-                        }
-                        iArr3[i4] = attributeNameResource;
-                        i4 = i6;
-                    }
-                }
-                int[] iArrTrimStateSet = StateSet.trimStateSet(iArr3, i4);
-                boolean z = f2 >= 0.0f && f2 <= 100.0f;
-                if (f != 1.0f || z) {
-                    int iM12402 = C4449.m12402((int) ((Color.alpha(color) * f) + 0.5f), 0, 255);
-                    if (z) {
-                        C2518 c2518M7812 = C2518.m7812(color);
-                        color = C2518.m7813(c2518M7812.m7816(), c2518M7812.m7814(), f2);
-                    }
-                    color = (color & 16777215) | (iM12402 << 24);
-                }
-                int i7 = i2 + 1;
-                if (i7 > iArr.length) {
-                    int[] iArr4 = new int[i2 <= 4 ? 8 : i2 * 2];
-                    System.arraycopy(iArr, 0, iArr4, 0, i2);
-                    iArr = iArr4;
-                }
-                iArr[i2] = color;
-                if (i7 > objArr.length) {
-                    Object[] objArr2 = (Object[]) Array.newInstance(objArr.getClass().getComponentType(), i2 > 4 ? i2 * 2 : 8);
-                    System.arraycopy(objArr, 0, objArr2, 0, i2);
-                    objArr = objArr2;
-                }
-                objArr[i2] = iArrTrimStateSet;
-                objArr = (int[][]) objArr;
-                i2 = i7;
-            }
-            r4 = 1;
-            i = 0;
+        JSONObject jSONObjectM19209 = C6929.m19209("{\n  \"workspaceId\": {\n    \"type\": \"string\",\n    \"description\": \"Workspace id returned by mt_apk_workspace_open.\"\n  },\n  \"editSessionId\": {\n    \"type\": \"string\",\n    \"description\": \"Edit session id. Pass the id returned by mt_apk_session_create to read the edited session; pass an empty string to read the base workspace.\"\n  },\n  \"reads\": {\n    \"type\": \"array\",\n    \"description\": \"Resource reads. Runtime accepts 1..200 items. Each item reads one exact resource locator and one concrete public variant.\",\n    \"items\": {\n      \"type\": \"object\",\n      \"additionalProperties\": false,\n      \"description\": \"One resource value read.\",\n      \"properties\": {\n        \"locator\": {\n          \"type\": \"string\",\n          \"description\": \"Resource locator string such as resource:0x7f010000. The resource: prefix is required; hex input is case-insensitive and output is lowercase.\"\n        },\n        \"variant\": {\n          \"type\": \"string\",\n          \"description\": \"Concrete public resource variant to read, such as default; not wildcard *.\"\n        }\n      },\n      \"required\": [\n        \"locator\",\n        \"variant\"\n      ]\n    }\n  },\n  \"maxValueChars\": {\n    \"type\": \"integer\",\n    \"description\": \"Maximum characters for the decoded value summary only. Suggested value is 4096; allowed range is 1..32768. valueTruncated=true only means this summary was cut; the exact full summary length is not returned.\"\n  },\n  \"maxValueXmlChars\": {\n    \"type\": \"integer\",\n    \"description\": \"Maximum characters for complete valueXml. Suggested value is 32768; allowed range is 1..1048576. valueXml is omitted rather than returned partially when it exceeds this budget.\"\n  },\n  \"maxItemsPerValue\": {\n    \"type\": \"integer\",\n    \"description\": \"Maximum item_list children returned per result. Suggested value is 50; allowed range is 0..2000. This does not affect valueXml.\"\n  },\n  \"resolveDepth\": {\n    \"type\": \"integer\",\n    \"description\": \"Use 0 for no reference summary or 1 for a direct referenced-resource summary. Suggested value is 0. The summary selects the same variant, then default, then the first sorted available variant; this is not Android device configuration matching.\"\n  }\n}\n");
+        this.f72136 = jSONObjectM19209;
+        return jSONObjectM19209;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩴ */
+    public final JSONObject mo1810() {
+        JSONObject jSONObject = this.f72138;
+        if (jSONObject != null) {
+            return jSONObject;
         }
-        int[] iArr5 = new int[i2];
-        int[][] iArr6 = new int[i2][];
-        System.arraycopy(iArr, 0, iArr5, 0, i2);
-        System.arraycopy(objArr, 0, iArr6, 0, i2);
-        return new ColorStateList(iArr6, iArr5);
+        JSONObject jSONObjectM19083 = C6855.m19083();
+        this.f72138 = jSONObjectM19083;
+        return jSONObjectM19083;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final C1238 mo1807(JSONObject jSONObject) {
+        try {
+            return this.f72137.m46095(C4375.m13929(jSONObject));
+        } finally {
+            int i = C24294.f78630;
+        }
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1806(C10186 c10186) {
+        return C15300.m36730(c10186, JSON.object(), c10186.f32599);
     }
 }

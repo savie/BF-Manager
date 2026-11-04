@@ -1,65 +1,163 @@
 .class public final Ll/᩶ۨ᩸;
-.super Ll/۟ۖ᩸;
-.source "688Y"
+.super Ljava/lang/Object;
+.source "1B3K"
 
 
-# virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
+# static fields
+.field public static final ۙ:Ll/᩷ۨᩴ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 456
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
+    .line 13
+    sget-object v0, Ll/ۛۨᩴ;->ᩴ:Ll/᩷ۨᩴ;
+
+    const-string v1, "text"
+
+    invoke-virtual {v0, v1}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
 
     move-result-object v0
 
-    sget-object v1, Ll/᩹۬᩸;->᩻:Ll/᩹۬᩸;
+    sput-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
 
-    if-ne v0, v1, :cond_0
+    .line 16
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->֨()Z
 
-    .line 457
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->۫()V
+    move-result v1
 
-    const/4 p1, 0x0
+    if-eqz v1, :cond_0
 
-    return-object p1
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->ۛۙ()Z
 
-    .line 460
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 17
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->ᩳ()Z
+
+    .line 20
     :cond_0
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ܺ()D
+    :try_start_0
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->ۡ()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-wide v0
+    return-void
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    :catch_0
+    move-exception v0
 
-    move-result-object p1
+    .line 22
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    return-object p1
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
+.method public static ۙ()Ll/᩷ۨᩴ;
+    .locals 1
+
+    .line 27
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
+
+    return-object v0
+.end method
+
+.method public static ۙ(Ljava/lang/String;)Ll/᩷ۨᩴ;
+    .locals 1
+
+    const-string v0, ".lit"
+
+    .line 47
+    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v0, p0}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۤ()Ll/᩷ۨᩴ;
     .locals 2
 
-    .line 453
-    check-cast p2, Ljava/lang/Number;
+    .line 35
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
 
-    if-nez p2, :cond_0
+    const-string v1, "list"
 
-    .line 466
-    invoke-virtual {p1}, Ll/֨۬᩸;->ᩳ()Ll/֨۬᩸;
+    invoke-virtual {v0, v1}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
 
-    return-void
+    move-result-object v0
 
-    .line 469
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
+    return-object v0
+.end method
 
-    move-result-wide v0
+.method public static ۤ(Ljava/lang/String;)Ll/᩷ۨᩴ;
+    .locals 1
 
-    .line 470
-    invoke-static {v0, v1}, Ll/ۛۨ᩸;->ۙ(D)V
+    const-string v0, ".tat"
 
-    .line 471
-    invoke-virtual {p1, v0, v1}, Ll/֨۬᩸;->ۙ(D)V
+    .line 43
+    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object p0
+
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v0, p0}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ᩷()Ll/᩷ۨᩴ;
+    .locals 2
+
+    .line 31
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
+
+    const-string v1, "current"
+
+    invoke-virtual {v0, v1}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static ᩷(Ljava/lang/String;)Ll/᩷ۨᩴ;
+    .locals 1
+
+    .line 39
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ".dat"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Ll/᩶ۨ᩸;->ۙ:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v0, p0}, Ll/᩷ۨᩴ;->᩸(Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object p0
+
+    return-object p0
 .end method

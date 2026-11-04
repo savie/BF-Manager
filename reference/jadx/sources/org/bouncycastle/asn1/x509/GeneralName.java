@@ -2,8 +2,8 @@ package org.bouncycastle.asn1.x509;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
-import l.C12441;
-import l.C8479;
+import l.C13645;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1IA5String;
@@ -19,7 +19,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.util.IPAddress;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GeneralName extends ASN1Object implements ASN1Choice {
     public static final int dNSName = 2;
     public static final int directoryName = 4;
@@ -47,7 +47,7 @@ public class GeneralName extends ASN1Object implements ASN1Choice {
             this.obj = new X500Name(str);
         } else {
             if (i != 7) {
-                throw new IllegalArgumentException(C8479.m22141(i, "can't process String for tag: "));
+                throw new IllegalArgumentException(C13645.m33382(i, "can't process String for tag: "));
             }
             byte[] generalNameEncoding = toGeneralNameEncoding(str);
             if (generalNameEncoding == null) {
@@ -87,7 +87,7 @@ public class GeneralName extends ASN1Object implements ASN1Choice {
         }
         if (!(obj instanceof ASN1TaggedObject)) {
             if (!(obj instanceof byte[])) {
-                throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in getInstance: "));
+                throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in getInstance: "));
             }
             try {
                 return getInstance(ASN1Primitive.fromByteArray((byte[]) obj));
@@ -113,7 +113,7 @@ public class GeneralName extends ASN1Object implements ASN1Choice {
             case 8:
                 return new GeneralName(tagNo, ASN1ObjectIdentifier.getInstance(aSN1TaggedObject, false));
             default:
-                throw new IllegalArgumentException(C8479.m22141(tagNo, "unknown tag: "));
+                throw new IllegalArgumentException(C13645.m33382(tagNo, "unknown tag: "));
         }
     }
 

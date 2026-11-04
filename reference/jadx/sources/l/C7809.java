@@ -1,29 +1,34 @@
 package l;
 
-import java.util.function.Function;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.۟᩻᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: NB79 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7809 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+/* JADX INFO: renamed from: l.۟ۢ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6BG */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7809 extends AbstractC6898 {
+    public static final Parcelable.Creator CREATOR = new C0351();
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f26016;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f26017;
+
+    public C7809(Parcelable parcelable) {
+        super(parcelable);
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    public C7809(Parcel parcel) {
+        super(parcel, null);
+        this.f26016 = parcel.readInt() != 0;
+        this.f26017 = parcel.readInt();
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        C18334 c18334 = (C18334) obj;
-        int iM16343 = C6024.m16343(c18334);
-        if (iM16343 == 0) {
-            return null;
-        }
-        return new C16981(c18334.m42573(), c18334.m42575(), C6024.m16342(c18334), (int) c18334.m42577(), iM16343);
+    @Override // l.AbstractC6898, android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeInt(this.f26016 ? 1 : 0);
+        parcel.writeInt(this.f26017);
     }
 }

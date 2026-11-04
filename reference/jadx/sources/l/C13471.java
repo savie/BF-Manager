@@ -1,48 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰ֡ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.۫᩻᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q3ZI */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13471 extends AbstractC20981 {
+public final /* synthetic */ class C13471 implements Function {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f44538;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f42872;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f44539;
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۜ */
-    public final long mo2936() {
-        return C17492.FOREVER_NS;
+    public /* synthetic */ C13471(int i) {
+        this.f42872 = i;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo2937(long j) {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC0769 mo2939() {
-        return this.f44538;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo2938(InterfaceC0769 interfaceC0769) {
-        this.f44538 = interfaceC0769;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۘ */
-    public final InterfaceC0769 mo2935() {
-        return this.f44539;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo2934(InterfaceC0769 interfaceC0769) {
-        this.f44539 = interfaceC0769;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f42872) {
+            case 0:
+                EnumC11979 enumC11979 = (EnumC11979) obj;
+                return String.format("%-26s: \"%s\"", enumC11979.name(), enumC11979.f38601);
+            default:
+                return C1170.stream(((AbstractC15029) obj).m36184()).filter(new C10754(2));
+        }
     }
 }

@@ -1,623 +1,129 @@
-.class public final enum Ll/᩻۫;
-.super Ljava/lang/Enum;
-.source "CBRS"
+.class public final Ll/᩻۫;
+.super Ll/ܽ۫;
+.source "Y22J"
 
 
-# static fields
-.field public static final enum ֡:Ll/᩻۫;
+# instance fields
+.field public final ۙ:Landroid/animation/ObjectAnimator;
 
-.field public static final enum ֨ۙ:Ll/᩻۫;
-
-.field public static final enum ֫:Ll/᩻۫;
-
-.field public static final enum ۖۙ:Ll/᩻۫;
-
-.field public static final enum ۗ:Ll/᩻۫;
-
-.field public static final enum ۘۙ:Ll/᩻۫;
-
-.field public static final enum ۙۙ:Ll/᩻۫;
-
-.field public static final enum ۚۙ:Ll/᩻۫;
-
-.field public static final enum ۛ:Ll/᩻۫;
-
-.field public static final enum ۜۙ:Ll/᩻۫;
-
-.field public static final enum ۠ۙ:Ll/᩻۫;
-
-.field public static final enum ۢ:Ll/᩻۫;
-
-.field public static final enum ۧ:Ll/᩻۫;
-
-.field public static final enum ۨۙ:Ll/᩻۫;
-
-.field public static final enum ۫:Ll/᩻۫;
-
-.field public static final enum ۬ۙ:Ll/᩻۫;
-
-.field public static final enum ܰۙ:Ll/᩻۫;
-
-.field public static final enum ܳ:Ll/᩻۫;
-
-.field public static final enum ܶۙ:Ll/᩻۫;
-
-.field public static final synthetic ܺ:[Ll/᩻۫;
-
-.field public static final enum ܽ:Ll/᩻۫;
-
-.field public static final enum ܿ:Ll/᩻۫;
-
-.field public static final enum ᩳۙ:Ll/᩻۫;
-
-.field public static final enum ᩴۙ:Ll/᩻۫;
-
-.field public static final enum ᩵ۙ:Ll/᩻۫;
-
-.field public static final enum ᩶:Ll/᩻۫;
-
-.field public static final enum ᩸ۙ:Ll/᩻۫;
-
-.field public static final enum ᩹ۙ:Ll/᩻۫;
-
-.field public static final enum ᩺ۙ:Ll/᩻۫;
-
-.field public static final enum ᩻:Ll/᩻۫;
+.field public final ᩷:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 37
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "CLEAR"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->᩶:Ll/᩻۫;
-
-    .line 47
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SRC"
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ܶۙ:Ll/᩻۫;
-
-    .line 57
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DST"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۧ:Ll/᩻۫;
-
-    .line 67
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SRC_OVER"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->۠ۙ:Ll/᩻۫;
-
-    .line 77
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DST_OVER"
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۢ:Ll/᩻۫;
-
-    .line 88
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SRC_IN"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ᩳۙ:Ll/᩻۫;
-
-    .line 98
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DST_IN"
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ܳ:Ll/᩻۫;
-
-    .line 110
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SRC_OUT"
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ᩴۙ:Ll/᩻۫;
-
-    .line 122
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DST_OUT"
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->֫:Ll/᩻۫;
-
-    .line 133
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SRC_ATOP"
-
-    const/16 v2, 0x9
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->᩸ۙ:Ll/᩻۫;
-
-    .line 144
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DST_ATOP"
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->᩻:Ll/᩻۫;
-
-    .line 157
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "XOR"
-
-    const/16 v2, 0xb
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->᩵ۙ:Ll/᩻۫;
-
-    .line 168
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "PLUS"
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->۬ۙ:Ll/᩻۫;
-
-    .line 179
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "MODULATE"
-
-    const/16 v2, 0xd
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۚۙ:Ll/᩻۫;
-
-    .line 189
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SCREEN"
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۜۙ:Ll/᩻۫;
-
-    .line 204
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "OVERLAY"
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->֨ۙ:Ll/᩻۫;
-
-    .line 217
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DARKEN"
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ܿ:Ll/᩻۫;
-
-    .line 230
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "LIGHTEN"
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۨۙ:Ll/᩻۫;
-
-    .line 250
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "COLOR_DODGE"
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->۫:Ll/᩻۫;
-
-    .line 274
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "COLOR_BURN"
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ܽ:Ll/᩻۫;
-
-    .line 296
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "HARD_LIGHT"
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۙۙ:Ll/᩻۫;
-
-    .line 342
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SOFT_LIGHT"
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->᩺ۙ:Ll/᩻۫;
-
-    .line 361
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "DIFFERENCE"
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۛ:Ll/᩻۫;
-
-    .line 379
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "EXCLUSION"
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۗ:Ll/᩻۫;
+.method public constructor <init>(Landroid/graphics/drawable/AnimationDrawable;ZZ)V
+    .locals 4
+
+    .line 351
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 391
-    new-instance v0, Ll/᩻۫;
+    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
-    const-string v1, "MULTIPLY"
+    move-result v0
 
-    const/16 v2, 0x18
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
+    if-eqz p2, :cond_0
 
-    sput-object v0, Ll/᩻۫;->᩹ۙ:Ll/᩻۫;
+    add-int/lit8 v2, v0, -0x1
 
-    .line 398
-    new-instance v0, Ll/᩻۫;
+    goto :goto_0
 
-    const-string v1, "HUE"
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ܰۙ:Ll/᩻۫;
-
-    .line 405
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "SATURATION"
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۘۙ:Ll/᩻۫;
-
-    .line 412
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "COLOR"
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->֡:Ll/᩻۫;
-
-    .line 419
-    new-instance v0, Ll/᩻۫;
-
-    const-string v1, "LUMINOSITY"
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v1, v2}, Ll/᩻۫;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/᩻۫;->ۖۙ:Ll/᩻۫;
-
-    .line 27
-    invoke-static {}, Ll/᩻۫;->ۙ()[Ll/᩻۫;
-
-    move-result-object v0
-
-    sput-object v0, Ll/᩻۫;->ܺ:[Ll/᩻۫;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 27
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll/᩻۫;
-    .locals 1
-
-    .line 27
-    const-class v0, Ll/᩻۫;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/᩻۫;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/᩻۫;
-    .locals 1
-
-    .line 27
-    sget-object v0, Ll/᩻۫;->ܺ:[Ll/᩻۫;
-
-    invoke-virtual {v0}, [Ll/᩻۫;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/᩻۫;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/᩻۫;
-    .locals 3
-
-    const/16 v0, 0x1d
-
-    new-array v0, v0, [Ll/᩻۫;
-
-    .line 27
-    sget-object v1, Ll/᩻۫;->᩶:Ll/᩻۫;
-
+    :cond_0
     const/4 v2, 0x0
 
-    aput-object v1, v0, v2
+    :goto_0
+    const/4 v3, 0x1
 
-    sget-object v1, Ll/᩻۫;->ܶۙ:Ll/᩻۫;
+    if-eqz p2, :cond_1
 
-    const/4 v2, 0x1
+    goto :goto_1
 
-    aput-object v1, v0, v2
+    :cond_1
+    add-int/lit8 v1, v0, -0x1
 
-    sget-object v1, Ll/᩻۫;->ۧ:Ll/᩻۫;
+    .line 394
+    :goto_1
+    new-instance v0, Ll/ܺ۫;
 
-    const/4 v2, 0x2
+    invoke-direct {v0, p1, p2}, Ll/ܺ۫;-><init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
 
-    aput-object v1, v0, v2
+    const-string p2, "currentIndex"
 
-    sget-object v1, Ll/᩻۫;->۠ۙ:Ll/᩻۫;
+    .line 396
+    filled-new-array {v2, v1}, [I
 
-    const/4 v2, 0x3
+    move-result-object v1
 
-    aput-object v1, v0, v2
+    .line 397
+    invoke-static {p1, p2, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
-    sget-object v1, Ll/᩻۫;->ۢ:Ll/᩻۫;
+    move-result-object p1
 
-    const/4 v2, 0x4
+    .line 398
+    invoke-virtual {p1, v3}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    aput-object v1, v0, v2
+    .line 399
+    invoke-virtual {v0}, Ll/ܺ۫;->ۙ()I
 
-    sget-object v1, Ll/᩻۫;->ᩳۙ:Ll/᩻۫;
+    move-result p2
 
-    const/4 v2, 0x5
+    int-to-long v1, p2
 
-    aput-object v1, v0, v2
+    invoke-virtual {p1, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    sget-object v1, Ll/᩻۫;->ܳ:Ll/᩻۫;
+    .line 400
+    invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const/4 v2, 0x6
+    .line 401
+    iput-boolean p3, p0, Ll/᩻۫;->᩷:Z
 
-    aput-object v1, v0, v2
+    .line 402
+    iput-object p1, p0, Ll/᩻۫;->ۙ:Landroid/animation/ObjectAnimator;
 
-    sget-object v1, Ll/᩻۫;->ᩴۙ:Ll/᩻۫;
+    return-void
+.end method
 
-    const/4 v2, 0x7
 
-    aput-object v1, v0, v2
+# virtual methods
+.method public final ۙ()Z
+    .locals 1
 
-    sget-object v1, Ll/᩻۫;->֫:Ll/᩻۫;
+    .line 407
+    iget-boolean v0, p0, Ll/᩻۫;->᩷:Z
 
-    const/16 v2, 0x8
+    return v0
+.end method
 
-    aput-object v1, v0, v2
+.method public final ۤ()V
+    .locals 1
 
-    sget-object v1, Ll/᩻۫;->᩸ۙ:Ll/᩻۫;
+    .line 412
+    iget-object v0, p0, Ll/᩻۫;->ۙ:Landroid/animation/ObjectAnimator;
 
-    const/16 v2, 0x9
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    aput-object v1, v0, v2
+    return-void
+.end method
 
-    sget-object v1, Ll/᩻۫;->᩻:Ll/᩻۫;
+.method public final ᩷()V
+    .locals 1
 
-    const/16 v2, 0xa
+    .line 417
+    iget-object v0, p0, Ll/᩻۫;->ۙ:Landroid/animation/ObjectAnimator;
 
-    aput-object v1, v0, v2
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
-    sget-object v1, Ll/᩻۫;->᩵ۙ:Ll/᩻۫;
+    return-void
+.end method
 
-    const/16 v2, 0xb
+.method public final ᩸()V
+    .locals 1
 
-    aput-object v1, v0, v2
+    .line 422
+    iget-object v0, p0, Ll/᩻۫;->ۙ:Landroid/animation/ObjectAnimator;
 
-    sget-object v1, Ll/᩻۫;->۬ۙ:Ll/᩻۫;
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    const/16 v2, 0xc
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۚۙ:Ll/᩻۫;
-
-    const/16 v2, 0xd
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۜۙ:Ll/᩻۫;
-
-    const/16 v2, 0xe
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->֨ۙ:Ll/᩻۫;
-
-    const/16 v2, 0xf
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ܿ:Ll/᩻۫;
-
-    const/16 v2, 0x10
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۨۙ:Ll/᩻۫;
-
-    const/16 v2, 0x11
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->۫:Ll/᩻۫;
-
-    const/16 v2, 0x12
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ܽ:Ll/᩻۫;
-
-    const/16 v2, 0x13
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۙۙ:Ll/᩻۫;
-
-    const/16 v2, 0x14
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->᩺ۙ:Ll/᩻۫;
-
-    const/16 v2, 0x15
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۛ:Ll/᩻۫;
-
-    const/16 v2, 0x16
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۗ:Ll/᩻۫;
-
-    const/16 v2, 0x17
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->᩹ۙ:Ll/᩻۫;
-
-    const/16 v2, 0x18
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ܰۙ:Ll/᩻۫;
-
-    const/16 v2, 0x19
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۘۙ:Ll/᩻۫;
-
-    const/16 v2, 0x1a
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->֡:Ll/᩻۫;
-
-    const/16 v2, 0x1b
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩻۫;->ۖۙ:Ll/᩻۫;
-
-    const/16 v2, 0x1c
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    return-void
 .end method

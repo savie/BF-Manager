@@ -1,39 +1,51 @@
 package l;
 
-import com.alipay.sdk.m.t.e;
-import java.util.zip.CRC32;
+import android.net.Uri;
+import java.util.UUID;
 
-/* JADX INFO: renamed from: l.ᩳۜۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q5UU */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17886 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public void mo3144(C15313 c15313) {
-        C14277 c14277 = new C14277();
-        CRC32 crc32 = new CRC32();
-        crc32.update((byte[]) ((C14277) c15313.m36673()).m34475());
-        c14277.m34464(crc32.getValue());
-        c15313.m36672(c14277);
-    }
+/* JADX INFO: renamed from: l.ܽ᩹ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 78PS */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17886 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m41515(String str) {
-        if (!"code".equals(str) && !e.m.equals(str) && !"both".equals(str)) {
-            throw new IllegalArgumentException("Invalid scanKind");
-        }
+    public boolean f58613;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public UUID f58614;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte[] f58615;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f58616;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f58617;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public Uri f58618;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC1928 f58619;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public AbstractC17589 f58620;
+
+    public C17886() {
+        this.f58620 = AbstractC17589.of();
+        this.f58616 = true;
+        this.f58619 = AbstractC1928.of();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m41514(int i, String str) {
-        m41515(str);
-        C21845.m48623(i);
-        if (e.m.equals(str)) {
-            if (i != 4) {
-                throw new IllegalArgumentException("scanKind=data requires referenceKinds=[data]");
-            }
-        } else if ("both".equals(str) && (i & 4) == 0) {
-            throw new IllegalArgumentException("scanKind=both requires referenceKinds containing data");
-        }
+    public C17886(C16394 c16394) {
+        this.f58614 = c16394.f53199;
+        this.f58618 = c16394.f53203;
+        this.f58620 = c16394.f53205;
+        this.f58617 = c16394.f53202;
+        this.f58616 = c16394.f53201;
+        this.f58613 = c16394.f53198;
+        this.f58619 = c16394.f53204;
+        this.f58615 = c16394.f53200;
     }
 }

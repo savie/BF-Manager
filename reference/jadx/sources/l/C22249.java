@@ -1,394 +1,203 @@
 package l;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.media.MediaDataSource;
+import android.media.MediaMetadataRetriever;
+import android.os.Build;
+import java.io.Closeable;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.ObjectStreamField;
-import java.security.AccessController;
-import java.security.SecureRandom;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 
-/* JADX INFO: renamed from: l.᩹ۧᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.᩷ᩴ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: M799 */
 /* JADX INFO: loaded from: classes.dex */
-public class C22249 extends Random {
-    public static final long serialVersionUID = -5851777807851030925L;
-    public long a;
-    public int b;
-    public final boolean c;
-    public static final ObjectStreamField[] serialPersistentFields = {new ObjectStreamField("rnd", Long.TYPE), new ObjectStreamField("initialized", Boolean.TYPE)};
-    public static final ThreadLocal d = new ThreadLocal();
-    public static final AtomicInteger e = new AtomicInteger();
-    public static final C16605 f = new C16605();
-    public static final AtomicLong g = new AtomicLong(f(System.currentTimeMillis()) ^ f(System.nanoTime()));
+public final class C22249 implements InterfaceC5095 {
 
-    public /* synthetic */ C22249(int i) {
-        this();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Closeable f71658;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final MediaMetadataRetriever f71659;
+
+    @Override // l.InterfaceC5095
+    /* JADX INFO: renamed from: ۤ */
+    public final /* synthetic */ void mo15405() {
     }
 
-    public static int e(long j) {
-        long j2 = (j ^ (j >>> 33)) * (-49064778989728563L);
-        return (int) (((j2 ^ (j2 >>> 33)) * (-4265267296055464877L)) >>> 32);
+    @Override // l.InterfaceC5095
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ boolean mo15406() {
+        return false;
     }
 
-    public static long f(long j) {
-        long j2 = (j ^ (j >>> 33)) * (-49064778989728563L);
-        long j3 = (j2 ^ (j2 >>> 33)) * (-4265267296055464877L);
-        return j3 ^ (j3 >>> 33);
+    @Override // l.InterfaceC5095
+    /* JADX INFO: renamed from: ۙ */
+    public final Bitmap mo15403(long j, int i, int i2, InterfaceC8911 interfaceC8911) {
+        interfaceC8911.mo23824();
+        return m50306(this.f71659, j, i, i2);
     }
 
-    public C22249() {
-        this.c = true;
+    public C22249(MediaMetadataRetriever mediaMetadataRetriever, Closeable closeable) {
+        this.f71659 = mediaMetadataRetriever;
+        this.f71658 = closeable;
     }
 
-    public static final void d() {
-        int iAddAndGet = e.addAndGet(-1640531527);
-        if (iAddAndGet == 0) {
-            iAddAndGet = 1;
-        }
-        long jF = f(g.getAndAdd(-4942790177534073029L));
-        C22249 c22249 = (C22249) f.get();
-        c22249.a = jF;
-        c22249.b = iAddAndGet;
-    }
-
-    public static C22249 current() {
-        C22249 c22249 = (C22249) f.get();
-        if (c22249.b == 0) {
-            d();
-        }
-        return c22249;
-    }
-
-    @Override // java.util.Random
-    public final void setSeed(long j) {
-        if (this.c) {
-            throw new UnsupportedOperationException();
-        }
-    }
-
-    public final long g() {
-        long j = this.a - 7046029254386353131L;
-        this.a = j;
-        return j;
-    }
-
-    @Override // java.util.Random
-    public final int next(int i) {
-        return nextInt() >>> (32 - i);
-    }
-
-    public final long c(long j, long j2) {
-        long jF = f(g());
-        if (j >= j2) {
-            return jF;
-        }
-        long j3 = j2 - j;
-        long j4 = j3 - 1;
-        if ((j3 & j4) == 0) {
-            return (jF & j4) + j;
-        }
-        if (j3 > 0) {
-            while (true) {
-                long j5 = jF >>> 1;
-                long j6 = j5 + j4;
-                long j7 = j5 % j3;
-                if (j6 - j7 >= 0) {
-                    return j7 + j;
+    /* JADX WARN: Code duplicated, block: B:63:0x00bf  */
+    /* JADX WARN: Code duplicated, block: B:65:0x00c2  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC5095 m50304(Context context, C6044 c6044) {
+        IOException th;
+        MediaDataSource c0596;
+        if (Build.VERSION.SDK_INT >= 23) {
+            try {
+                C14131 c14131M34349 = C14131.m34349(c6044);
+                if (c14131M34349 != null) {
+                    return c14131M34349;
                 }
-                jF = f(g());
+            } catch (IOException unused) {
             }
+        }
+        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+        Closeable closeable = null;
+        closeable = null;
+        try {
+            if (c6044.m17551()) {
+                AbstractC22044 abstractC22044M17543 = c6044.m17543();
+                if (abstractC22044M17543 == null) {
+                    throw new IOException("Missing local preview file");
+                }
+                if (abstractC22044M17543.m49870()) {
+                    mediaMetadataRetriever.setDataSource(abstractC22044M17543.mo4278());
+                } else if (abstractC22044M17543.mo42886()) {
+                    mediaMetadataRetriever.setDataSource(context, abstractC22044M17543.mo42888());
+                } else if (Build.VERSION.SDK_INT >= 23) {
+                    c0596 = new C0596(abstractC22044M17543);
+                    try {
+                        mediaMetadataRetriever.setDataSource(c0596);
+                        closeable = c0596;
+                    } catch (Throwable th2) {
+                        th = th2;
+                        try {
+                            mediaMetadataRetriever.release();
+                        } catch (Throwable unused2) {
+                        }
+                        C20244.m46520(c0596);
+                        if (th instanceof IOException) {
+                            throw th;
+                        }
+                        throw new IOException("Failed to open video preview data source", th);
+                    }
+                } else {
+                    throw new IOException("Unsupported video preview data source");
+                }
+                return new C22249(mediaMetadataRetriever, closeable);
+            }
+            if (c6044.m17548() && Build.VERSION.SDK_INT >= 23) {
+                C20960 c20960M17546 = c6044.m17546();
+                if (c20960M17546 == null) {
+                    throw new IOException("Missing network preview descriptor");
+                }
+                C17976 c17976M47918 = c20960M17546.m47918();
+                c17976M47918.m41955(mediaMetadataRetriever);
+                closeable = c17976M47918;
+            } else if (c6044.m17547() && Build.VERSION.SDK_INT >= 23) {
+                InterfaceC1278 interfaceC1278M17552 = c6044.m17552();
+                if (interfaceC1278M17552 == null) {
+                    throw new IOException("Missing paged preview handle");
+                }
+                C10797 c10797 = new C10797(interfaceC1278M17552);
+                try {
+                    mediaMetadataRetriever.setDataSource(c10797);
+                    c10797.m27504();
+                    closeable = c10797;
+                } catch (Throwable th3) {
+                    th = th3;
+                    c0596 = c10797;
+                    mediaMetadataRetriever.release();
+                    C20244.m46520(c0596);
+                    if (th instanceof IOException) {
+                        throw th;
+                    }
+                    throw new IOException("Failed to open video preview data source", th);
+                }
+            } else {
+                throw new IOException("Unsupported video preview data source");
+            }
+            return new C22249(mediaMetadataRetriever, closeable);
+        } catch (Throwable th4) {
+            th = th4;
+            c0596 = null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Bitmap m50306(MediaMetadataRetriever mediaMetadataRetriever, long j, int i, int i2) {
+        if (Build.VERSION.SDK_INT >= 27) {
+            return mediaMetadataRetriever.getScaledFrameAtTime(j, 2, Math.max(1, i), Math.max(1, i2));
+        }
+        Bitmap frameAtTime = mediaMetadataRetriever.getFrameAtTime(j, 2);
+        if (frameAtTime == null) {
+            return null;
+        }
+        int iMax = Math.max(1, i);
+        int iMax2 = Math.max(1, i2);
+        if (frameAtTime.getWidth() <= iMax && frameAtTime.getHeight() <= iMax2) {
+            return frameAtTime;
+        }
+        float fMin = Math.min(iMax / frameAtTime.getWidth(), iMax2 / frameAtTime.getHeight());
+        return Bitmap.createScaledBitmap(frameAtTime, Math.max(1, Math.round(frameAtTime.getWidth() * fMin)), Math.max(1, Math.round(frameAtTime.getHeight() * fMin)), true);
+    }
+
+    @Override // l.InterfaceC5095
+    /* JADX INFO: renamed from: ᩸ */
+    public final C13298 mo15407() {
+        return m50307(this.f71659);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C13298 m50307(MediaMetadataRetriever mediaMetadataRetriever) {
+        int i;
+        int i2;
+        String strExtractMetadata = mediaMetadataRetriever.extractMetadata(18);
+        int i3 = 0;
+        if (strExtractMetadata == null || strExtractMetadata.isEmpty()) {
+            i = 0;
         } else {
-            while (true) {
-                if (jF >= j && jF < j2) {
-                    return jF;
-                }
-                jF = f(g());
+            try {
+                i = Integer.parseInt(strExtractMetadata);
+            } catch (NumberFormatException unused) {
+                i = 0;
             }
         }
-    }
-
-    public final int b(int i, int i2) {
-        int iE = e(g());
-        if (i >= i2) {
-            return iE;
-        }
-        int i3 = i2 - i;
-        int i4 = i3 - 1;
-        if ((i3 & i4) == 0) {
-            return (iE & i4) + i;
-        }
-        if (i3 > 0) {
-            int iE2 = iE >>> 1;
-            while (true) {
-                int i5 = iE2 + i4;
-                int i6 = iE2 % i3;
-                if (i5 - i6 >= 0) {
-                    return i6 + i;
-                }
-                iE2 = e(g()) >>> 1;
-            }
+        int iMax = Math.max(0, i);
+        String strExtractMetadata2 = mediaMetadataRetriever.extractMetadata(19);
+        if (strExtractMetadata2 == null || strExtractMetadata2.isEmpty()) {
+            i2 = 0;
         } else {
-            while (true) {
-                if (iE >= i && iE < i2) {
-                    return iE;
-                }
-                iE = e(g());
+            try {
+                i2 = Integer.parseInt(strExtractMetadata2);
+            } catch (NumberFormatException unused2) {
+                i2 = 0;
             }
         }
-    }
-
-    public final double a(double d2, double d3) {
-        double dNextLong = (nextLong() >>> 11) * 1.1102230246251565E-16d;
-        if (d2 >= d3) {
-            return dNextLong;
-        }
-        double d4 = ((d3 - d2) * dNextLong) + d2;
-        return d4 >= d3 ? Double.longBitsToDouble(Double.doubleToLongBits(d3) - 1) : d4;
-    }
-
-    @Override // java.util.Random
-    public final int nextInt() {
-        return e(g());
-    }
-
-    @Override // java.util.Random
-    public final int nextInt(int i) {
-        if (i <= 0) {
-            throw new IllegalArgumentException("bound must be positive");
-        }
-        int iE = e(g());
-        int i2 = i - 1;
-        if ((i & i2) == 0) {
-            return iE & i2;
-        }
-        while (true) {
-            int i3 = iE >>> 1;
-            int i4 = i3 + i2;
-            int i5 = i3 % i;
-            if (i4 - i5 >= 0) {
-                return i5;
-            }
-            iE = e(g());
-        }
-    }
-
-    public final int nextInt(int i, int i2) {
-        if (i >= i2) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        return b(i, i2);
-    }
-
-    @Override // java.util.Random
-    public final long nextLong() {
-        return f(g());
-    }
-
-    public final long nextLong(long j) {
-        if (j <= 0) {
-            throw new IllegalArgumentException("bound must be positive");
-        }
-        long jF = f(g());
-        long j2 = j - 1;
-        if ((j & j2) == 0) {
-            return jF & j2;
-        }
-        while (true) {
-            long j3 = jF >>> 1;
-            long j4 = j3 + j2;
-            long j5 = j3 % j;
-            if (j4 - j5 >= 0) {
-                return j5;
-            }
-            jF = f(g());
-        }
-    }
-
-    public final long nextLong(long j, long j2) {
-        if (j >= j2) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        return c(j, j2);
-    }
-
-    @Override // java.util.Random
-    public final double nextDouble() {
-        return (f(g()) >>> 11) * 1.1102230246251565E-16d;
-    }
-
-    public final double nextDouble(double d2) {
-        if (d2 <= 0.0d) {
-            throw new IllegalArgumentException("bound must be positive");
-        }
-        double dF = (f(g()) >>> 11) * 1.1102230246251565E-16d * d2;
-        return dF < d2 ? dF : Double.longBitsToDouble(Double.doubleToLongBits(d2) - 1);
-    }
-
-    public final double nextDouble(double d2, double d3) {
-        if (d2 >= d3) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        return a(d2, d3);
-    }
-
-    @Override // java.util.Random
-    public final boolean nextBoolean() {
-        return e(g()) < 0;
-    }
-
-    @Override // java.util.Random
-    public final float nextFloat() {
-        return (e(g()) >>> 8) * 5.9604645E-8f;
-    }
-
-    @Override // java.util.Random
-    public final double nextGaussian() {
-        ThreadLocal threadLocal = d;
-        Double d2 = (Double) threadLocal.get();
-        if (d2 != null) {
-            threadLocal.set(null);
-            return d2.doubleValue();
-        }
-        while (true) {
-            double dNextDouble = (nextDouble() * 2.0d) - 1.0d;
-            double dNextDouble2 = (nextDouble() * 2.0d) - 1.0d;
-            double d3 = (dNextDouble2 * dNextDouble2) + (dNextDouble * dNextDouble);
-            if (d3 < 1.0d && d3 != 0.0d) {
-                double dSqrt = StrictMath.sqrt((StrictMath.log(d3) * (-2.0d)) / d3);
-                d.set(Double.valueOf(dNextDouble2 * dSqrt));
-                return dNextDouble * dSqrt;
+        int iMax2 = Math.max(0, i2);
+        String strExtractMetadata3 = mediaMetadataRetriever.extractMetadata(24);
+        if (strExtractMetadata3 != null && !strExtractMetadata3.isEmpty()) {
+            try {
+                i3 = Integer.parseInt(strExtractMetadata3);
+            } catch (NumberFormatException unused3) {
             }
         }
+        return C2112.m7291(iMax, iMax2, i3, 1.0f);
     }
 
-    @Override // java.util.Random
-    public final IntStream ints(long j) {
-        if (j >= 0) {
-            return C4340.convert(C21980.a(new C17310(0L, j, Integer.MAX_VALUE, 0)));
+    @Override // l.InterfaceC5095
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15404() {
+        try {
+            this.f71659.release();
+        } catch (Throwable unused) {
         }
-        throw new IllegalArgumentException("size must be non-negative");
-    }
-
-    @Override // java.util.Random
-    public final IntStream ints() {
-        return C4340.convert(C21980.a(new C17310(0L, C17492.FOREVER_NS, Integer.MAX_VALUE, 0)));
-    }
-
-    @Override // java.util.Random
-    public final IntStream ints(long j, int i, int i2) {
-        if (j < 0) {
-            throw new IllegalArgumentException("size must be non-negative");
-        }
-        if (i < i2) {
-            return C4340.convert(C21980.a(new C17310(0L, j, i, i2)));
-        }
-        throw new IllegalArgumentException("bound must be greater than origin");
-    }
-
-    @Override // java.util.Random
-    public final IntStream ints(int i, int i2) {
-        if (i < i2) {
-            return C4340.convert(C21980.a(new C17310(0L, C17492.FOREVER_NS, i, i2)));
-        }
-        throw new IllegalArgumentException("bound must be greater than origin");
-    }
-
-    @Override // java.util.Random
-    public final LongStream longs(long j) {
-        if (j < 0) {
-            throw new IllegalArgumentException("size must be non-negative");
-        }
-        C6021 c6021 = new C6021(0L, j, C17492.FOREVER_NS, 0L);
-        return C2567.b(new C19199(c6021, EnumC2970.n(c6021), false));
-    }
-
-    @Override // java.util.Random
-    public final LongStream longs() {
-        C6021 c6021 = new C6021(0L, C17492.FOREVER_NS, C17492.FOREVER_NS, 0L);
-        return C2567.b(new C19199(c6021, EnumC2970.n(c6021), false));
-    }
-
-    @Override // java.util.Random
-    public final LongStream longs(long j, long j2, long j3) {
-        if (j < 0) {
-            throw new IllegalArgumentException("size must be non-negative");
-        }
-        if (j2 >= j3) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        C6021 c6021 = new C6021(0L, j, j2, j3);
-        return C2567.b(new C19199(c6021, EnumC2970.n(c6021), false));
-    }
-
-    @Override // java.util.Random
-    public final LongStream longs(long j, long j2) {
-        if (j >= j2) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        C6021 c6021 = new C6021(0L, C17492.FOREVER_NS, j, j2);
-        return C2567.b(new C19199(c6021, EnumC2970.n(c6021), false));
-    }
-
-    @Override // java.util.Random
-    public final DoubleStream doubles(long j) {
-        if (j < 0) {
-            throw new IllegalArgumentException("size must be non-negative");
-        }
-        C12372 c12372 = new C12372(0L, j, Double.MAX_VALUE, 0.0d);
-        return C22208.b(new C4228(c12372, EnumC2970.n(c12372), false));
-    }
-
-    @Override // java.util.Random
-    public final DoubleStream doubles() {
-        C12372 c12372 = new C12372(0L, C17492.FOREVER_NS, Double.MAX_VALUE, 0.0d);
-        return C22208.b(new C4228(c12372, EnumC2970.n(c12372), false));
-    }
-
-    @Override // java.util.Random
-    public final DoubleStream doubles(long j, double d2, double d3) {
-        if (j < 0) {
-            throw new IllegalArgumentException("size must be non-negative");
-        }
-        if (d2 >= d3) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        C12372 c12372 = new C12372(0L, j, d2, d3);
-        return C22208.b(new C4228(c12372, EnumC2970.n(c12372), false));
-    }
-
-    @Override // java.util.Random
-    public final DoubleStream doubles(double d2, double d3) {
-        if (d2 >= d3) {
-            throw new IllegalArgumentException("bound must be greater than origin");
-        }
-        C12372 c12372 = new C12372(0L, C17492.FOREVER_NS, d2, d3);
-        return C22208.b(new C4228(c12372, EnumC2970.n(c12372), false));
-    }
-
-    static {
-        if (((Boolean) AccessController.doPrivileged(new C6166(2))).booleanValue()) {
-            byte[] seed = SecureRandom.getSeed(8);
-            long j = ((long) seed[0]) & 255;
-            for (int i = 1; i < 8; i++) {
-                j = (j << 8) | (((long) seed[i]) & 255);
-            }
-            g.set(j);
-        }
-    }
-
-    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
-        ObjectOutputStream.PutField putFieldPutFields = objectOutputStream.putFields();
-        putFieldPutFields.put("rnd", this.a);
-        putFieldPutFields.put("initialized", true);
-        objectOutputStream.writeFields();
-    }
-
-    private Object readResolve() {
-        return current();
+        C20244.m46520(this.f71658);
     }
 }

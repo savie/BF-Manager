@@ -1,27 +1,41 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡᩹᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0AST */
+/* JADX INFO: renamed from: l.֡᩸ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class AbstractC0709 extends C4403 {
-    @Override // l.C4403
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo3127(Object obj) {
-        if (obj instanceof C20466) {
-            return (C20466) obj;
+public abstract /* synthetic */ class AbstractC0709 {
+    public static final /* synthetic */ int[] a;
+
+    static {
+        int[] iArr = new int[EnumC8692.values().length];
+        a = iArr;
+        try {
+            iArr[EnumC8692.DAY_OF_MONTH.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        return null;
-    }
-
-    @Override // l.C4403
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Object[][] mo3129(int i) {
-        return new C20466[i][];
-    }
-
-    @Override // l.C4403
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object[] mo3128(int i) {
-        return new C20466[i];
+        try {
+            a[EnumC8692.DAY_OF_YEAR.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            a[EnumC8692.ALIGNED_WEEK_OF_MONTH.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            a[EnumC8692.YEAR_OF_ERA.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            a[EnumC8692.PROLEPTIC_MONTH.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            a[EnumC8692.YEAR.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            a[EnumC8692.ERA.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
     }
 }

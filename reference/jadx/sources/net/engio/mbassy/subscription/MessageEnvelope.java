@@ -1,6 +1,6 @@
 package net.engio.mbassy.subscription;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageEnvelope {
     public Object message;
 

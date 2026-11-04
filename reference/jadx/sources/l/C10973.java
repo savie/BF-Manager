@@ -1,24 +1,106 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۨ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7MK */
+import java.util.Comparator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.LongConsumer;
+
+/* JADX INFO: renamed from: l.ۤܺۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10973 extends C3210 {
+public final /* synthetic */ class C10973 implements InterfaceC9900 {
+    public final /* synthetic */ Spliterator.OfLong a;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19003 f37388;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C10973(C4352 c4352, C19003 c19003) {
-        super(c4352);
-        this.f37388 = c19003;
+    public /* synthetic */ C10973(Spliterator.OfLong ofLong) {
+        this.a = ofLong;
     }
 
-    @Override // l.C1799, l.AbstractC9562
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo5884(C5558 c5558, C6656 c6656) {
-        this.f6950.put(c5558, c6656.f22475);
-        this.f37388.m43723(c6656);
-        return true;
+    public static /* synthetic */ InterfaceC9900 a(Spliterator.OfLong ofLong) {
+        if (ofLong == null) {
+            return null;
+        }
+        return ofLong instanceof C7465 ? ((C7465) ofLong).a : new C10973(ofLong);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ int characteristics() {
+        return this.a.characteristics();
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        Spliterator.OfLong ofLong = this.a;
+        if (obj instanceof C10973) {
+            obj = ((C10973) obj).a;
+        }
+        return ofLong.equals(obj);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ long estimateSize() {
+        return this.a.estimateSize();
+    }
+
+    @Override // l.InterfaceC9154
+    public final /* synthetic */ void forEachRemaining(Object obj) {
+        this.a.forEachRemaining(obj);
+    }
+
+    @Override // l.InterfaceC9900, l.InterfaceC8409
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        this.a.forEachRemaining((Consumer<? super Long>) consumer);
+    }
+
+    @Override // l.InterfaceC9900
+    public final /* synthetic */ void forEachRemaining(LongConsumer longConsumer) {
+        this.a.forEachRemaining(longConsumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ Comparator getComparator() {
+        return this.a.getComparator();
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ long getExactSizeIfKnown() {
+        return this.a.getExactSizeIfKnown();
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ boolean hasCharacteristics(int i) {
+        return this.a.hasCharacteristics(i);
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.InterfaceC9154
+    public final /* synthetic */ boolean tryAdvance(Object obj) {
+        return this.a.tryAdvance(obj);
+    }
+
+    @Override // l.InterfaceC9900, l.InterfaceC8409, l.InterfaceC7664
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return this.a.tryAdvance((Consumer<? super Long>) consumer);
+    }
+
+    @Override // l.InterfaceC9900
+    public final /* synthetic */ boolean tryAdvance(LongConsumer longConsumer) {
+        return this.a.tryAdvance(longConsumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ InterfaceC8409 trySplit() {
+        return C19553.a(this.a.trySplit());
+    }
+
+    @Override // l.InterfaceC9154, l.InterfaceC8409
+    public final /* synthetic */ InterfaceC9154 trySplit() {
+        return C4637.a(this.a.trySplit());
+    }
+
+    @Override // l.InterfaceC9900, l.InterfaceC9154, l.InterfaceC8409
+    public final /* synthetic */ InterfaceC9900 trySplit() {
+        return a(this.a.trySplit());
     }
 }

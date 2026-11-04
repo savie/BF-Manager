@@ -1,318 +1,61 @@
 package l;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩹ܶۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 35OG */
+/* JADX INFO: renamed from: l.᩷᩹ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z1GQ */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22366 {
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Pattern f73042 = Pattern.compile("((-)?infinityf)|(nanf)", 2);
+public final class C22366 implements InterfaceC19777 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Pattern f73041 = Pattern.compile("((-)?infinityd?)|(nand?)", 2);
+    public C6178 f72407 = new C6178();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte m49600(String str) {
-        char[] charArray;
-        boolean z;
-        if (str == null) {
-            throw new NumberFormatException("string is null");
-        }
-        if (str.length() == 0) {
-            throw new NumberFormatException("string is blank");
-        }
-        int i = 1;
-        byte b = 0;
-        if (str.toUpperCase().endsWith("T")) {
-            charArray = str.substring(0, str.length() - 1).toCharArray();
-        } else {
-            charArray = str.toCharArray();
-        }
-        if (charArray[0] == '-') {
-            z = true;
-        } else {
-            i = 0;
-            z = false;
-        }
-        byte b2 = 10;
-        if (charArray[i] == '0') {
-            int i2 = i + 1;
-            if (i2 == charArray.length) {
-                return (byte) 0;
-            }
-            char c = charArray[i2];
-            if (c == 'x' || c == 'X') {
-                i += 2;
-                b2 = 16;
-            } else {
-                b2 = Character.digit(c, 8) >= 0 ? (byte) 8 : (byte) 10;
-                i = i2;
-            }
-        }
-        byte b3 = (byte) (127 / (b2 / 2));
-        while (i < charArray.length) {
-            int iDigit = Character.digit(charArray[i], (int) b2);
-            if (iDigit < 0) {
-                throw new NumberFormatException("The string contains invalid an digit - '" + charArray[i] + "'");
-            }
-            byte b4 = (byte) (b * b2);
-            if (b > b3) {
-                throw new NumberFormatException(str.concat(" cannot fit into a byte"));
-            }
-            if (b4 < 0 && b4 >= (-iDigit)) {
-                throw new NumberFormatException(str.concat(" cannot fit into a byte"));
-            }
-            b = (byte) (b4 + iDigit);
-            i++;
-        }
-        if (!z || b == -128) {
-            return b;
-        }
-        if (b >= 0) {
-            return (byte) (b * (-1));
-        }
-        throw new NumberFormatException(str.concat(" cannot fit into a byte"));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24132 f72408;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9378 f72409;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C25350 f72410;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23582 f72411;
+
+    public C22366(C25350 c25350, C24132 c24132, C23582 c23582, C9378 c9378) {
+        this.f72410 = c25350;
+        this.f72408 = c24132;
+        this.f72411 = c23582;
+        this.f72409 = c9378;
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static short m49607(String str) {
-        char[] charArray;
-        boolean z;
-        if (str == null) {
-            throw new NumberFormatException("string is null");
-        }
-        if (str.length() == 0) {
-            throw new NumberFormatException("string is blank");
-        }
-        int i = 1;
-        short s = 0;
-        if (str.toUpperCase().endsWith("S")) {
-            charArray = str.substring(0, str.length() - 1).toCharArray();
-        } else {
-            charArray = str.toCharArray();
-        }
-        if (charArray[0] == '-') {
-            z = true;
-        } else {
-            i = 0;
-            z = false;
-        }
-        short s2 = 10;
-        if (charArray[i] == '0') {
-            int i2 = i + 1;
-            if (i2 == charArray.length) {
-                return (short) 0;
-            }
-            char c = charArray[i2];
-            if (c == 'x' || c == 'X') {
-                i += 2;
-                s2 = 16;
-            } else {
-                s2 = Character.digit(c, 8) >= 0 ? (short) 8 : (short) 10;
-                i = i2;
-            }
-        }
-        short s3 = (short) (EnumC23529.f76192 / (s2 / 2));
-        while (i < charArray.length) {
-            int iDigit = Character.digit(charArray[i], (int) s2);
-            if (iDigit < 0) {
-                throw new NumberFormatException("The string contains invalid an digit - '" + charArray[i] + "'");
-            }
-            short s4 = (short) (s * s2);
-            if (s > s3) {
-                throw new NumberFormatException(str.concat(" cannot fit into a short"));
-            }
-            if (s4 < 0 && s4 >= (-iDigit)) {
-                throw new NumberFormatException(str.concat(" cannot fit into a short"));
-            }
-            s = (short) (s4 + iDigit);
-            i++;
-        }
-        if (!z || s == Short.MIN_VALUE) {
-            return s;
-        }
-        if (s >= 0) {
-            return (short) (s * (-1));
-        }
-        throw new NumberFormatException(str.concat(" cannot fit into a short"));
+    @Override // l.InterfaceC19777
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo34769() {
+        C6178 c6178 = this.f72407;
+        c6178.writeInt(1382253410);
+        C25350 c25350 = this.f72410;
+        c6178.writeInt(c25350.f81831.m29987(c25350.m56683()));
+        c6178.writeInt(1382253410);
+        this.f72408.m53910(c6178, true);
+        c6178.writeInt(1382253410);
+        C23582 c23582 = this.f72411;
+        c23582.m52823(c6178);
+        c6178.writeInt(1382253410);
+        c23582.m52809(c6178);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static int m49598(String str) {
-        int i;
-        boolean z;
-        if (str == null) {
-            throw new NumberFormatException("string is null");
-        }
-        if (str.length() == 0) {
-            throw new NumberFormatException("string is blank");
-        }
-        char[] charArray = str.toCharArray();
-        int i2 = 0;
-        if (charArray[0] == '-') {
-            i = 1;
-            z = true;
-        } else {
-            i = 0;
-            z = false;
-        }
-        int i3 = 10;
-        if (charArray[i] == '0') {
-            int i4 = i + 1;
-            if (i4 == charArray.length) {
-                return 0;
+    @Override // l.InterfaceC19777
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo34768() {
+        try {
+            this.f72409.m24701();
+            byte[] bArrM37704 = C15768.m37704(this.f72407.size(), this.f72407.m17808());
+            synchronized (this.f72410) {
+                this.f72409.m24696(bArrM37704);
             }
-            char c = charArray[i4];
-            if (c == 'x' || c == 'X') {
-                i += 2;
-                i3 = 16;
-            } else {
-                i3 = Character.digit(c, 8) >= 0 ? 8 : 10;
-                i = i4;
-            }
+        } catch (IOException e) {
+            this.f72410.f81835.m51299(e);
         }
-        int i5 = Integer.MAX_VALUE / (i3 / 2);
-        while (i < charArray.length) {
-            int iDigit = Character.digit(charArray[i], i3);
-            if (iDigit < 0) {
-                throw new NumberFormatException("The string contains an invalid digit - '" + charArray[i] + "'");
-            }
-            int i6 = i2 * i3;
-            if (i2 > i5) {
-                throw new NumberFormatException(str.concat(" cannot fit into an int"));
-            }
-            if (i6 < 0 && i6 >= (-iDigit)) {
-                throw new NumberFormatException(str.concat(" cannot fit into an int"));
-            }
-            i2 = i6 + iDigit;
-            i++;
-        }
-        if (!z || i2 == Integer.MIN_VALUE) {
-            return i2;
-        }
-        if (i2 >= 0) {
-            return i2 * (-1);
-        }
-        throw new NumberFormatException(str.concat(" cannot fit into an int"));
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static long m49602(String str) {
-        char[] charArray;
-        if (str == null) {
-            throw new NumberFormatException("string is null");
-        }
-        if (str.length() == 0) {
-            throw new NumberFormatException("string is blank");
-        }
-        int i = 0;
-        boolean z = true;
-        if (str.toUpperCase().endsWith("L")) {
-            charArray = str.substring(0, str.length() - 1).toCharArray();
-        } else {
-            charArray = str.toCharArray();
-        }
-        if (charArray[0] == '-') {
-            i = 1;
-        } else {
-            z = false;
-        }
-        int i2 = 10;
-        if (charArray[i] == '0') {
-            int i3 = i + 1;
-            if (i3 == charArray.length) {
-                return 0L;
-            }
-            char c = charArray[i3];
-            if (c == 'x' || c == 'X') {
-                i += 2;
-                i2 = 16;
-            } else {
-                i2 = Character.digit(c, 8) >= 0 ? 8 : 10;
-                i = i3;
-            }
-        }
-        long j = C17492.FOREVER_NS / ((long) (i2 / 2));
-        long j2 = 0;
-        while (i < charArray.length) {
-            int iDigit = Character.digit(charArray[i], i2);
-            if (iDigit < 0) {
-                throw new NumberFormatException("The string contains an invalid digit - '" + charArray[i] + "'");
-            }
-            long j3 = ((long) i2) * j2;
-            if (j2 > j) {
-                throw new NumberFormatException(str.concat(" cannot fit into a long"));
-            }
-            if (j3 < 0 && j3 >= (-iDigit)) {
-                throw new NumberFormatException(str.concat(" cannot fit into a long"));
-            }
-            j2 = ((long) iDigit) + j3;
-            i++;
-        }
-        if (!z || j2 == Long.MIN_VALUE) {
-            return j2;
-        }
-        if (j2 >= 0) {
-            return j2 * (-1);
-        }
-        throw new NumberFormatException(str.concat(" cannot fit into a long"));
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static float m49603(String str) {
-        Matcher matcher = f73042.matcher(str);
-        if (matcher.matches()) {
-            if (matcher.start(1) != -1) {
-                return matcher.start(2) != -1 ? Float.NEGATIVE_INFINITY : Float.POSITIVE_INFINITY;
-            }
-            return Float.NaN;
-        }
-        return Float.parseFloat(str);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static double m49605(String str) {
-        Matcher matcher = f73041.matcher(str);
-        if (matcher.matches()) {
-            if (matcher.start(1) != -1) {
-                return matcher.start(2) != -1 ? Double.NEGATIVE_INFINITY : Double.POSITIVE_INFINITY;
-            }
-            return Double.NaN;
-        }
-        return Double.parseDouble(str);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m49606(long j) {
-        if (j > -1 || j < -2147483648L) {
-            throw new NumberFormatException(Long.toString(j) + " cannot fit into an int");
-        }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static void m49599(long j) {
-        if (!(j > 65535) && !(j < -32768)) {
-            return;
-        }
-        throw new NumberFormatException(Long.toString(j) + " cannot fit into a short");
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49601(long j) {
-        if (!(j > 255) && !(j < -128)) {
-            return;
-        }
-        throw new NumberFormatException(Long.toString(j) + " cannot fit into a byte");
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m49604(long j) {
-        if (!(j > 15) && !(j < -8)) {
-            return;
-        }
-        throw new NumberFormatException(Long.toString(j) + " cannot fit into a nibble");
     }
 }

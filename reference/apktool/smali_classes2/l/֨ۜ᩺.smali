@@ -1,44 +1,20 @@
-.class public final Ll/֨ۜ᩺;
-.super Landroid/database/DataSetObserver;
-.source "J5HS"
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/ۜۜ᩺;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۜۜ᩺;)V
-    .locals 0
-
-    .line 211
-    iput-object p1, p0, Ll/֨ۜ᩺;->ۙ:Ll/ۜۜ᩺;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
-
-    return-void
-.end method
+.class public interface abstract Ll/֨ۜ᩺;
+.super Ljava/lang/Object;
+.source "542M"
 
 
 # virtual methods
-.method public final onChanged()V
-    .locals 1
-
-    .line 214
-    iget-object v0, p0, Ll/֨ۜ᩺;->ۙ:Ll/ۜۜ᩺;
-
-    invoke-static {v0}, Ll/ۜۜ᩺;->ۨ(Ll/ۜۜ᩺;)V
-
-    return-void
+.method public abstract ۙ(Ll/ۙᩳۘ;Ll/᩸۟᩺;Ll/᩸۟᩺;)Ll/֨ۢۘ;
 .end method
 
-.method public final onInvalidated()V
-    .locals 1
+.method public abstract ۙ()Ll/ۖۤۘ;
+.end method
 
-    .line 219
-    iget-object v0, p0, Ll/֨ۜ᩺;->ۙ:Ll/ۜۜ᩺;
+.method public abstract ۙ(Ll/ۙᩳۘ;Ll/ܺᩳۘ;)V
+.end method
 
-    invoke-static {v0}, Ll/ۜۜ᩺;->ۨ(Ll/ۜۜ᩺;)V
+.method public abstract ۙ(Ll/᩸۟᩺;Ll/᩸۟᩺;Ll/֨ۢۘ;)Z
+.end method
 
-    return-void
+.method public abstract ᩷()Ll/ۘ۬᩺;
 .end method

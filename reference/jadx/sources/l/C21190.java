@@ -1,96 +1,63 @@
 package l;
 
-import org.bouncycastle.crypto.DefaultBufferedBlockCipher;
-import org.bouncycastle.crypto.engines.CAST5Engine;
-import org.bouncycastle.crypto.modes.CBCBlockCipher;
-import org.bouncycastle.crypto.params.KeyParameter;
-import org.bouncycastle.crypto.params.ParametersWithIV;
+import android.database.DataSetObserver;
 
-/* JADX INFO: renamed from: l.᩷᩺ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27W6 */
+/* JADX INFO: renamed from: l.᩶۠᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5V7 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21190 implements InterfaceC1142 {
+public final class C21190 extends DataSetObserver implements InterfaceC4739, InterfaceC13730 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public DefaultBufferedBlockCipher f68975;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f67659;
 
-    @Override // l.InterfaceC1142
-    public final int getBlockSize() {
-        return 16;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0307 f67660;
+
+    public C21190(C0307 c0307) {
+        this.f67660 = c0307;
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo2383() {
-        return 8;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2384(int i) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2387(byte[] bArr) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2388() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۚ */
-    public final /* synthetic */ boolean mo2389() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۨ */
-    public final /* synthetic */ boolean mo2390() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ int mo2391() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo2392(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2386(int i, byte[] bArr, byte[] bArr2) throws Exception {
-        if (bArr2.length > 8) {
-            byte[] bArr3 = new byte[8];
-            System.arraycopy(bArr2, 0, bArr3, 0, 8);
-            bArr2 = bArr3;
+    @Override // l.InterfaceC4739
+    public final void onPageScrolled(int i, float f, int i2) {
+        if (f > 0.5f) {
+            i++;
         }
-        if (bArr.length > 16) {
-            byte[] bArr4 = new byte[16];
-            System.arraycopy(bArr, 0, bArr4, 0, 16);
-            bArr = bArr4;
-        }
-        try {
-            ParametersWithIV parametersWithIV = new ParametersWithIV(new KeyParameter(bArr, 0, bArr.length), bArr2, 0, bArr2.length);
-            DefaultBufferedBlockCipher defaultBufferedBlockCipher = new DefaultBufferedBlockCipher(CBCBlockCipher.newInstance(new CAST5Engine()));
-            this.f68975 = defaultBufferedBlockCipher;
-            defaultBufferedBlockCipher.init(i == 0, parametersWithIV);
-        } catch (Exception e) {
-            this.f68975 = null;
-            throw e;
+        this.f67660.mo1890(f, false, i);
+    }
+
+    @Override // l.InterfaceC4739
+    public final void onPageSelected(int i) {
+        if (this.f67659 == 0) {
+            C0307 c0307 = this.f67660;
+            C15179 c15179 = c0307.f1647;
+            c0307.m1892(c15179.f49522, c15179.f49541);
+            float f = c0307.f1640;
+            if (f < 0.0f) {
+                f = 0.0f;
+            }
+            c0307.mo1890(f, true, c0307.f1647.f49522);
         }
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2385(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
-        this.f68975.processBytes(bArr, i, i2, bArr2, i3);
+    @Override // l.InterfaceC4739
+    public final void onPageScrollStateChanged(int i) {
+        this.f67659 = i;
+    }
+
+    @Override // l.InterfaceC13730
+    public final void onAdapterChanged(C15179 c15179, AbstractC6274 abstractC6274, AbstractC6274 abstractC6275) {
+        this.f67660.m1893(abstractC6274, abstractC6275);
+    }
+
+    @Override // android.database.DataSetObserver
+    public final void onChanged() {
+        C0307 c0307 = this.f67660;
+        C15179 c15179 = c0307.f1647;
+        c0307.m1892(c15179.f49522, c15179.f49541);
+        float f = c0307.f1640;
+        if (f < 0.0f) {
+            f = 0.0f;
+        }
+        c0307.mo1890(f, true, c0307.f1647.f49522);
     }
 }

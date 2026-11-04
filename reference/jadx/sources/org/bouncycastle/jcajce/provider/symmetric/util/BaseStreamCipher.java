@@ -15,8 +15,8 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEParameterSpec;
 import javax.crypto.spec.RC2ParameterSpec;
 import javax.crypto.spec.RC5ParameterSpec;
-import l.C0242;
-import l.C16523;
+import l.C14442;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -261,7 +261,7 @@ public class BaseStreamCipher extends BaseWrapCipher implements PBE {
                     int iIndexOf = algorithmName.indexOf(45);
                     StringBuilder sb = new StringBuilder();
                     sb.append(algorithmName.substring(0, iIndexOf));
-                    algorithmName = C0242.m1616(iIndexOf + 1, algorithmName, sb);
+                    algorithmName = ExternalValue$$ExternalSyntheticOutline0.m(iIndexOf + 1, algorithmName, sb);
                 }
                 try {
                     AlgorithmParameters algorithmParametersCreateParametersInstance2 = createParametersInstance(algorithmName);
@@ -278,7 +278,7 @@ public class BaseStreamCipher extends BaseWrapCipher implements PBE {
     @Override // org.bouncycastle.jcajce.provider.symmetric.util.BaseWrapCipher, javax.crypto.CipherSpi
     public void engineSetPadding(String str) throws NoSuchPaddingException {
         if (!str.equalsIgnoreCase("NoPadding")) {
-            throw new NoSuchPaddingException(C16523.m38890("Padding ", str, " unknown."));
+            throw new NoSuchPaddingException(C14442.m34865("Padding ", str, " unknown."));
         }
     }
 }

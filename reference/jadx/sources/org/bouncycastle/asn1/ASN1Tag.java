@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ASN1Tag {
     public final int tagClass;
     public final int tagNumber;

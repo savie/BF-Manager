@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
-.field public final ᩶:Ll/ۖۜۤ;
+.field public final ᩶:Ll/ۗۗ᩺;
 
 
 # direct methods
@@ -21,14 +21,14 @@
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
     .line 31
-    invoke-static {p1}, Ll/ۖۜۤ;->ۙ(I)Ll/ۖۜۤ;
+    invoke-static {p1}, Ll/ۗۗ᩺;->ۙ(I)Ll/ۗۗ᩺;
 
     move-result-object p1
 
-    iput-object p1, p0, Lpl/droidsonroids/gif/GifIOException;->᩶:Ll/ۖۜۤ;
+    iput-object p1, p0, Lpl/droidsonroids/gif/GifIOException;->᩶:Ll/ۗۗ᩺;
 
     .line 32
-    iput-object p2, p0, Lpl/droidsonroids/gif/GifIOException;->ܺ:Ljava/lang/String;
+    iput-object p2, p0, Lpl/droidsonroids/gif/GifIOException;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -39,14 +39,14 @@
     .locals 3
 
     .line 24
-    iget-object v0, p0, Lpl/droidsonroids/gif/GifIOException;->᩶:Ll/ۖۜۤ;
+    iget-object v0, p0, Lpl/droidsonroids/gif/GifIOException;->᩶:Ll/ۗۗ᩺;
 
-    iget-object v1, p0, Lpl/droidsonroids/gif/GifIOException;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lpl/droidsonroids/gif/GifIOException;->ܰ:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     .line 25
-    invoke-virtual {v0}, Ll/ۖۜۤ;->ܰ()Ljava/lang/String;
+    invoke-virtual {v0}, Ll/ۗۗ᩺;->᩸()Ljava/lang/String;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ll/ۖۜۤ;->ܰ()Ljava/lang/String;
+    invoke-virtual {v0}, Ll/ۗۗ᩺;->᩸()Ljava/lang/String;
 
     move-result-object v0
 

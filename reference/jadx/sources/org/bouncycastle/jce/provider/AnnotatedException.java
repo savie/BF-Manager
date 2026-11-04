@@ -2,7 +2,7 @@ package org.bouncycastle.jce.provider;
 
 import org.bouncycastle.jce.exception.ExtException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnnotatedException extends Exception implements ExtException {
     public Throwable _underlyingException;
 

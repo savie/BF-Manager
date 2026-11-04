@@ -1,118 +1,152 @@
 .class public final Ll/۟ۛ᩺;
 .super Ljava/lang/Object;
-.source "P9RB"
+.source "P3JQ"
+
+# interfaces
+.implements Ljava/lang/Iterable;
+
+
+# instance fields
+.field public ܰ:Ll/ܿ᩵᩺;
+
+.field public ܿ:Ll/۟ۛ᩺;
+
+.field public ᩶:Ll/ᩴۛ᩺;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ll/۟ۛ᩺;Ll/ᩴۛ᩺;)V
+    .locals 2
 
-    .line 11
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 107
+    invoke-interface {p2}, Ll/ᩴۛ᩺;->ۙ()Ll/᩸ۛ᩺;
+
+    move-result-object v0
+
+    sget-object v1, Ll/᩸ۛ᩺;->ۚۙ:Ll/᩸ۛ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    .line 108
+    move-object p1, p2
+
+    check-cast p1, Ll/ܿ᩵᩺;
+
+    iput-object p1, p0, Ll/۟ۛ᩺;->ܰ:Ll/ܿ᩵᩺;
+
+    const/4 p1, 0x0
+
+    .line 109
+    iput-object p1, p0, Ll/۟ۛ᩺;->ܿ:Ll/۟ۛ᩺;
+
+    goto :goto_0
+
+    .line 112
+    :cond_0
+    iget-object v0, p1, Ll/۟ۛ᩺;->ܰ:Ll/ܿ᩵᩺;
+
+    iput-object v0, p0, Ll/۟ۛ᩺;->ܰ:Ll/ܿ᩵᩺;
+
+    .line 113
+    iput-object p1, p0, Ll/۟ۛ᩺;->ܿ:Ll/۟ۛ᩺;
+
+    .line 115
+    :goto_0
+    iput-object p2, p0, Ll/۟ۛ᩺;->᩶:Ll/ᩴۛ᩺;
 
     return-void
 .end method
 
-.method public static ۙ(Ljava/lang/String;)[B
-    .locals 4
+.method public static ۙ(Ll/ܿ᩵᩺;Ll/۟ܰۘ;)Ll/۟ۛ᩺;
+    .locals 2
 
-    .line 34
-    const-class v0, Ll/۟ۛ᩺;
+    .line 50
+    new-instance v0, Ll/۟ۛ᩺;
 
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    .line 98
+    invoke-direct {v0, v1, p0}, Ll/۟ۛ᩺;-><init>(Ll/۟ۛ᩺;Ll/ᩴۛ᩺;)V
 
-    const/4 v0, 0x4
+    .line 130
+    iget-object p0, v0, Ll/۟ۛ᩺;->᩶:Ll/ᩴۛ᩺;
 
-    :try_start_0
-    new-array v1, v0, [B
+    if-ne p0, p1, :cond_0
 
-    .line 2064
-    invoke-static {p0, v1, v0}, Ll/᩶ۜ᩵;->ܰ(Ljava/io/InputStream;[BI)V
+    return-object v0
 
-    const/4 v0, 0x0
-
-    .line 16
-    invoke-static {v0, v1}, Ll/ܶۢ᩺;->ۙ(I[B)I
-
-    move-result v1
-
-    const v2, -0x479d9e05
-
-    if-ne v1, v2, :cond_2
-
-    .line 51
-    invoke-static {p0, v0}, Ll/᩵ۧ᩺;->ۙ(Ljava/io/InputStream;I)[B
-
-    move-result-object v1
-
-    .line 21
-    :goto_0
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_0
-
-    .line 23
-    aget-byte v2, v1, v0
-
-    array-length v3, v1
-
-    div-int/lit8 v3, v3, 0x2
-
-    xor-int/2addr v2, v3
-
-    int-to-byte v2, v2
-
-    aput-byte v2, v1, v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
+    .line 86
     :cond_0
-    if-eqz p0, :cond_1
+    :try_start_0
+    new-instance p0, Ll/ܿۛ᩺;
 
-    .line 26
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+    .line 83
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_1
+    .line 86
+    invoke-virtual {p0, v0, p1}, Ll/ᩳۛ᩺;->ۙ(Ll/۟ۛ᩺;Ll/۟ܰۘ;)V
+    :try_end_0
+    .catch Ll/֡ۛ᩺; {:try_start_0 .. :try_end_0} :catch_0
+
     return-object v1
 
-    .line 18
-    :cond_2
-    :try_start_1
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Bad magic"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :catchall_0
-    move-exception v0
-
-    if-eqz p0, :cond_3
-
-    .line 15
-    :try_start_2
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
+    :catch_0
     move-exception p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    .line 88
+    iget-object p0, p0, Ll/֡ۛ᩺;->ܰ:Ll/۟ۛ᩺;
 
-    :cond_3
-    :goto_1
-    throw v0
+    return-object p0
+.end method
+
+.method public static bridge synthetic ۙ(Ll/۟ۛ᩺;)Ll/ᩴۛ᩺;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/۟ۛ᩺;->᩶:Ll/ᩴۛ᩺;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/۟ۛ᩺;)Ll/۟ۛ᩺;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/۟ۛ᩺;->ܿ:Ll/۟ۛ᩺;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    .line 146
+    new-instance v0, Ll/᩶ۛ᩺;
+
+    invoke-direct {v0, p0}, Ll/᩶ۛ᩺;-><init>(Ll/۟ۛ᩺;)V
+
+    return-object v0
+.end method
+
+.method public final ۤ()Ll/ᩴۛ᩺;
+    .locals 1
+
+    .line 130
+    iget-object v0, p0, Ll/۟ۛ᩺;->᩶:Ll/ᩴۛ᩺;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ll/ܿ᩵᩺;
+    .locals 1
+
+    .line 122
+    iget-object v0, p0, Ll/۟ۛ᩺;->ܰ:Ll/ܿ᩵᩺;
+
+    return-object v0
 .end method

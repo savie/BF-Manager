@@ -1,27 +1,22 @@
-.class public final synthetic Ll/ۢܺ᩹;
+.class public final Ll/ۢܺ᩹;
 .super Ljava/lang/Object;
-.source "164Z"
-
-# interfaces
-.implements Ll/ܿۧ;
+.source "CCEK"
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+# static fields
+.field public static final ۙ:[Z
 
-    .line 2
-    check-cast p1, Lbin/mt/plus/Main;
 
-    .line 164
-    new-instance v0, Landroid/content/Intent;
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
 
-    const-class v1, Ll/ۨۤۖ;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    new-array v0, v0, [Z
 
-    .line 165
-    invoke-virtual {p1, v0}, Lbin/mt/plus/Main;->startActivity(Landroid/content/Intent;)V
+    .line 102
+    sput-object v0, Ll/ۢܺ᩹;->ۙ:[Z
 
     return-void
 .end method

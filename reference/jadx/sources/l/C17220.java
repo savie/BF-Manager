@@ -1,31 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ۠۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 99Z8 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17220 extends AbstractC17529 {
-    @Override // l.AbstractC12591
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo3800(int i, byte[] bArr) {
-        return 0;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+
+/* JADX INFO: renamed from: l.ܽ֡᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: B66A */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17220 extends GestureDetector.SimpleOnGestureListener {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f56114 = true;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11999 f56115;
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final boolean onDown(MotionEvent motionEvent) {
+        return true;
     }
 
-    @Override // l.AbstractC17529
-    /* JADX INFO: renamed from: ۨ */
-    public final AbstractC6240 mo3799(InterfaceC19067 interfaceC19067) {
-        return new C5931(interfaceC19067.mo29449());
+    public C17220(C11999 c11999) {
+        this.f56115 = c11999;
     }
 
-    @Override // l.InterfaceC3314
-    public final int size() {
-        return AbstractC12591.m31337(68);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40440() {
+        this.f56114 = false;
     }
 
-    @Override // l.AbstractC12591
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo3796(int i, byte[] bArr) {
-        C4850.m13546(4L, i, bArr);
-        C4850.m13546(0L, i + 2, bArr);
-        return 4;
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final void onLongPress(MotionEvent motionEvent) {
+        View viewM30175;
+        AbstractC11800 childViewHolder;
+        C11999 c11999 = this.f56115;
+        AbstractC16474 abstractC16474 = c11999.f38680;
+        if (!this.f56114 || (viewM30175 = c11999.m30175(motionEvent)) == null || (childViewHolder = c11999.f38692.getChildViewHolder(viewM30175)) == null) {
+            return;
+        }
+        if ((AbstractC16474.m39082(abstractC16474.mo9678(childViewHolder), c11999.f38692.getLayoutDirection()) & 16711680) != 0) {
+            int pointerId = motionEvent.getPointerId(0);
+            int i = c11999.f38694;
+            if (pointerId == i) {
+                int iFindPointerIndex = motionEvent.findPointerIndex(i);
+                float x = motionEvent.getX(iFindPointerIndex);
+                float y = motionEvent.getY(iFindPointerIndex);
+                c11999.f38672 = x;
+                c11999.f38681 = y;
+                c11999.f38683 = 0.0f;
+                c11999.f38685 = 0.0f;
+                if (abstractC16474.mo17826()) {
+                    c11999.m30171(childViewHolder, 2);
+                }
+            }
+        }
     }
 }

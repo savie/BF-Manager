@@ -14,8 +14,8 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.RSAPrivateCrtKeySpec;
 import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.RSAPublicKeySpec;
-import l.C17114;
-import l.C9013;
+import l.C11958;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
@@ -108,7 +108,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
             try {
                 return new OpenSSHPublicKeySpec(OpenSSHPublicKeyUtil.encodePublicKey(new RSAKeyParameters(false, ((RSAPublicKey) key).getModulus(), ((RSAPublicKey) key).getPublicExponent())));
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("unable to produce encoding: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("unable to produce encoding: ")));
             }
         }
         if (!cls.isAssignableFrom(OpenSSHPrivateKeySpec.class) || !(key instanceof RSAPrivateCrtKey)) {
@@ -117,7 +117,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         try {
             return new OpenSSHPrivateKeySpec(OpenSSHPrivateKeyUtil.encodePrivateKey(new RSAPrivateCrtKeyParameters(((RSAPrivateCrtKey) key).getModulus(), ((RSAPrivateCrtKey) key).getPublicExponent(), ((RSAPrivateCrtKey) key).getPrivateExponent(), ((RSAPrivateCrtKey) key).getPrimeP(), ((RSAPrivateCrtKey) key).getPrimeQ(), ((RSAPrivateCrtKey) key).getPrimeExponentP(), ((RSAPrivateCrtKey) key).getPrimeExponentQ(), ((RSAPrivateCrtKey) key).getCrtCoefficient())));
         } catch (IOException e2) {
-            throw new IllegalArgumentException(C9013.m23329(e2, new StringBuilder("unable to produce encoding: ")));
+            throw new IllegalArgumentException(C11958.m29932(e2, new StringBuilder("unable to produce encoding: ")));
         }
     }
 
@@ -125,7 +125,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
     public PrivateKey generatePrivate(PrivateKeyInfo privateKeyInfo) throws IOException {
         ASN1ObjectIdentifier algorithm = privateKeyInfo.getPrivateKeyAlgorithm().getAlgorithm();
         if (!RSAUtil.isRsaOid(algorithm)) {
-            throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+            throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
         }
         org.bouncycastle.asn1.pkcs.RSAPrivateKey rSAPrivateKey = org.bouncycastle.asn1.pkcs.RSAPrivateKey.getInstance(privateKeyInfo.parsePrivateKey());
         return rSAPrivateKey.getCoefficient().intValue() == 0 ? new BCRSAPrivateKey(privateKeyInfo.getPrivateKeyAlgorithm(), rSAPrivateKey) : new BCRSAPrivateCrtKey(privateKeyInfo);
@@ -137,6 +137,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (RSAUtil.isRsaOid(algorithm)) {
             return new BCRSAPublicKey(subjectPublicKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 }

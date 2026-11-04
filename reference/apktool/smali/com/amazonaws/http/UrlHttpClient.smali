@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/http/UrlHttpClient;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/http/UrlHttpClient;->᩷:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 7
 
     .line 80
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۚ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ᩴ()Ljava/net/URI;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     invoke-virtual {v0, v2}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
     .line 271
-    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->ۚ()I
+    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->ᩴ()I
 
     move-result v1
 
@@ -88,7 +88,7 @@
     invoke-virtual {v0, v1}, Ljava/net/URLConnection;->setUseCaches(Z)V
 
     .line 276
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩹()Z
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ܳ()Z
 
     move-result v2
 
@@ -110,13 +110,13 @@
 
     .line 208
     :cond_1
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۨ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۤ()Ljava/util/Map;
 
     move-result-object v2
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۨ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۤ()Ljava/util/Map;
 
     move-result-object v2
 
@@ -127,7 +127,7 @@
     if-nez v2, :cond_4
 
     .line 212
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۨ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۤ()Ljava/util/Map;
 
     move-result-object v2
 
@@ -198,7 +198,7 @@
 
     .line 236
     :cond_4
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩸()Ljava/lang/String;
 
     move-result-object v2
 
@@ -212,7 +212,7 @@
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ܰ()J
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩷()J
 
     move-result-wide v2
 
@@ -228,14 +228,14 @@
     invoke-virtual {v0, v2}, Ljava/net/URLConnection;->setDoOutput(Z)V
 
     .line 171
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩹()Z
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ܳ()Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
     .line 172
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ܰ()J
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩷()J
 
     move-result-wide v2
 
@@ -301,7 +301,7 @@
     const-string v5, "HEAD"
 
     .line 109
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpRequest;->᩸()Ljava/lang/String;
 
     move-result-object p1
 

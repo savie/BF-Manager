@@ -1,106 +1,157 @@
 package l;
 
-import java.security.cert.CertificateParsingException;
-import java.security.cert.X509Certificate;
+import com.alipay.sdk.m.y.q;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLException;
-import javax.net.ssl.SSLSession;
+import java.util.HashMap;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.۟ۨ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q4EB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7454 implements HostnameVerifier {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C7454 f24839 = new C7454();
-
-    @Override // javax.net.ssl.HostnameVerifier
-    public final boolean verify(String str, SSLSession sSLSession) {
-        try {
-            return m19936((X509Certificate) sSLSession.getPeerCertificates()[0], str);
-        } catch (SSLException unused) {
-            return false;
+/* JADX INFO: renamed from: l.ۜ᩹ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: DATI */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7454 implements InterfaceC10591 {
+    @Override // l.InterfaceC10591
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3063(C9690 c9690, Object obj, Object obj2, Type type) {
+        boolean z;
+        C5372 c5372 = c9690.f31276;
+        C12829 c12829 = c9690.f31277;
+        if (obj == null) {
+            c5372.m16046();
+            return;
         }
-    }
-
-    /* JADX WARN: Code duplicated, block: B:60:0x00e0  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m19936(X509Certificate x509Certificate, String str) {
-        boolean zEquals;
-        int length;
-        if (C0140.m1240(str)) {
-            List listM19935 = m19935(x509Certificate, 7);
-            int size = listM19935.size();
-            for (int i = 0; i < size; i++) {
-                if (str.equalsIgnoreCase((String) listM19935.get(i))) {
-                    return true;
+        Map treeMap = (Map) obj;
+        Class<?> cls = treeMap.getClass();
+        boolean z2 = (cls == C14691.class || cls == HashMap.class || cls == LinkedHashMap.class) && treeMap.containsKey("@type");
+        if ((c5372.f18847 & EnumC1643.SortField.f5702) != 0) {
+            if (treeMap instanceof C14691) {
+                treeMap = ((C14691) treeMap).m35338();
+            }
+            if (!(treeMap instanceof SortedMap) && !(treeMap instanceof LinkedHashMap)) {
+                try {
+                    treeMap = new TreeMap(treeMap);
+                } catch (Exception unused) {
                 }
             }
-            return false;
         }
-        String lowerCase = str.toLowerCase(Locale.US);
-        for (String strConcat : m19935(x509Certificate, 2)) {
-            if (lowerCase == null || lowerCase.length() == 0 || lowerCase.startsWith(".") || lowerCase.endsWith("..") || strConcat == null || strConcat.length() == 0 || strConcat.startsWith(".") || strConcat.endsWith("..")) {
-                zEquals = false;
+        IdentityHashMap identityHashMap = c9690.f31286;
+        if (identityHashMap != null && identityHashMap.containsKey(obj)) {
+            c9690.m25282(obj);
+            return;
+        }
+        C15066 c15066 = c9690.f31285;
+        c9690.m25279(c15066, obj, obj2);
+        try {
+            c5372.write(123);
+            c9690.m25280();
+            if ((c5372.f18847 & EnumC1643.WriteClassName.f5702) == 0 || z2) {
+                z = true;
             } else {
-                String strConcat2 = !lowerCase.endsWith(".") ? lowerCase.concat(".") : lowerCase;
-                if (!strConcat.endsWith(".")) {
-                    strConcat = strConcat.concat(".");
-                }
-                String lowerCase2 = strConcat.toLowerCase(Locale.US);
-                if (!lowerCase2.contains("*")) {
-                    zEquals = strConcat2.equals(lowerCase2);
-                } else if (!lowerCase2.startsWith("*.") || lowerCase2.indexOf(42, 1) != -1 || strConcat2.length() < lowerCase2.length() || "*.".equals(lowerCase2)) {
-                    zEquals = false;
-                } else {
-                    String strSubstring = lowerCase2.substring(1);
-                    if (strConcat2.endsWith(strSubstring) && ((length = strConcat2.length() - strSubstring.length()) <= 0 || strConcat2.lastIndexOf(46, length - 1) == -1)) {
-                        zEquals = true;
-                    } else {
-                        zEquals = false;
+                c12829.getClass();
+                c5372.m16049("@type", false);
+                c5372.m16047(obj.getClass().getName());
+                z = false;
+            }
+            Class<?> cls2 = null;
+            InterfaceC10591 interfaceC10591 = null;
+            for (Map.Entry entry : treeMap.entrySet()) {
+                Object value = entry.getValue();
+                Object key = entry.getKey();
+                ArrayList arrayList = c9690.f31278;
+                if (arrayList != null) {
+                    Iterator it = arrayList.iterator();
+                    Object objM30927 = key;
+                    while (true) {
+                        if (it.hasNext()) {
+                            InterfaceC19542 interfaceC19542 = (InterfaceC19542) it.next();
+                            if (objM30927 != null && !(objM30927 instanceof String)) {
+                                objM30927 = AbstractC12454.m30927(objM30927);
+                            }
+                            if (!interfaceC19542.m45077()) {
+                            }
+                        }
                     }
                 }
-            }
-            if (zEquals) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m19934(X509Certificate x509Certificate) {
-        List listM19935 = m19935(x509Certificate, 7);
-        List listM19936 = m19935(x509Certificate, 2);
-        ArrayList arrayList = new ArrayList(listM19936.size() + listM19935.size());
-        arrayList.addAll(listM19935);
-        arrayList.addAll(listM19936);
-        return arrayList;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static List m19935(X509Certificate x509Certificate, int i) {
-        Integer num;
-        String str;
-        ArrayList arrayList = new ArrayList();
-        try {
-            Collection<List<?>> subjectAlternativeNames = x509Certificate.getSubjectAlternativeNames();
-            if (subjectAlternativeNames == null) {
-                return Collections.EMPTY_LIST;
-            }
-            for (List<?> list : subjectAlternativeNames) {
-                if (list != null && list.size() >= 2 && (num = (Integer) list.get(0)) != null && num.intValue() == i && (str = (String) list.get(1)) != null) {
-                    arrayList.add(str);
+                ArrayList arrayList2 = c9690.f31274;
+                if (arrayList2 != null) {
+                    Object objM30928 = (key == null || (key instanceof String)) ? key : AbstractC12454.m30927(key);
+                    Iterator it2 = arrayList2.iterator();
+                    while (true) {
+                        if (it2.hasNext()) {
+                            if (!((InterfaceC22526) it2.next()).apply()) {
+                            }
+                        }
+                    }
+                }
+                ArrayList arrayList3 = c9690.f31279;
+                if (arrayList3 != null) {
+                    if (key != null && !(key instanceof String)) {
+                        key = AbstractC12454.m30927(key);
+                    }
+                    Iterator it3 = arrayList3.iterator();
+                    while (it3.hasNext()) {
+                        key = ((InterfaceC4626) it3.next()).m14437();
+                    }
+                }
+                ArrayList arrayList4 = c9690.f31282;
+                if (arrayList4 != null) {
+                    Object objM30929 = (key == null || (key instanceof String)) ? key : AbstractC12454.m30927(key);
+                    Iterator it4 = arrayList4.iterator();
+                    while (it4.hasNext()) {
+                        value = ((InterfaceC24764) it4.next()).m55268();
+                    }
+                }
+                if (value != null || (c5372.f18847 & EnumC1643.WriteMapNullValue.f5702) != 0) {
+                    if (key instanceof String) {
+                        String str = (String) key;
+                        if (!z) {
+                            c5372.write(44);
+                        }
+                        if ((c5372.f18847 & EnumC1643.PrettyFormat.f5702) != 0) {
+                            c9690.m25283();
+                        }
+                        c5372.m16049(str, true);
+                    } else {
+                        if (!z) {
+                            c5372.write(44);
+                        }
+                        if ((c5372.f18847 & EnumC1643.WriteNonStringKeyAsString.f5702) != 0 && !(key instanceof Enum)) {
+                            c9690.m25278(AbstractC12454.m30927(key));
+                        } else {
+                            c9690.m25277(key);
+                        }
+                        c5372.write(58);
+                    }
+                    if (value == null) {
+                        c5372.m16046();
+                    } else {
+                        Class<?> cls3 = value.getClass();
+                        if (cls3 == cls2) {
+                            interfaceC10591.mo3063(c9690, value, key, null);
+                        } else {
+                            InterfaceC10591 interfaceC10591M31835 = c12829.m31835(cls3);
+                            interfaceC10591M31835.mo3063(c9690, value, key, null);
+                            interfaceC10591 = interfaceC10591M31835;
+                            cls2 = cls3;
+                        }
+                    }
+                    z = false;
                 }
             }
-            return arrayList;
-        } catch (CertificateParsingException unused) {
-            return Collections.EMPTY_LIST;
+            c9690.f31285 = c15066;
+            c9690.m25276();
+            if ((c5372.f18847 & EnumC1643.PrettyFormat.f5702) != 0 && treeMap.size() > 0) {
+                c9690.m25283();
+            }
+            c5372.write(q.h);
+        } catch (Throwable th) {
+            c9690.f31285 = c15066;
+            throw th;
         }
     }
 }

@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.agreement.jpake.JPAKERound2Payload;
 import org.bouncycastle.crypto.agreement.jpake.JPAKERound3Payload;
 import org.bouncycastle.crypto.digests.SHA256Digest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKEExample {
     public static BigInteger deriveSessionKey(BigInteger bigInteger) {
         SavableDigest savableDigestNewInstance = SHA256Digest.newInstance();

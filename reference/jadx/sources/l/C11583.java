@@ -1,30 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ۠ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 88CY */
+/* JADX INFO: renamed from: l.ۧۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11583 extends AbstractC0998 {
+public final enum C11583 extends EnumC13820 {
+    public /* synthetic */ C11583() {
+        this("CharacterReferenceInRcdata", 3);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C7659 f38944;
+    public C11583(String str, int i) {
+        super(str, i, 0);
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C21064 f38945;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C7659 f38946;
-
-    @Override // l.AbstractC0998
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2809() {
-        double[] dArrM36893 = this.f38946.m36893();
-        double[] dArrM36894 = this.f38944.m36893();
-        C21064 c21064 = this.f38945;
-        double[] dArrM36892 = c21064.m36892(0);
-        double[] dArrM36895 = c21064.m36892(1);
-        for (int i = 0; i < 8; i++) {
-            dArrM36892[i] = dArrM36893[i];
-            dArrM36895[i] = dArrM36894[i];
-        }
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        EnumC13820.m33735(c13646, EnumC13820.f43834);
     }
 }

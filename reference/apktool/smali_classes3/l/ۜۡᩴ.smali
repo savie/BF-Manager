@@ -1,30 +1,54 @@
 .class public final synthetic Ll/ۜۡᩴ;
 .super Ljava/lang/Object;
-.source "0C59"
+.source "964K"
 
 # interfaces
-.implements Ljava/util/function/BiConsumer;
+.implements Ljava/lang/Runnable;
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+# instance fields
+.field public final synthetic ֡:Ll/۠ۨܳ;
+
+.field public final synthetic ܰ:Ll/ܰۖᩴ;
+
+.field public final synthetic ܿ:I
+
+.field public final synthetic ᩶:Ll/۬֨ᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܰۖᩴ;Ll/۬֨ᩴ;ILl/۠ۨܳ;)V
     .locals 0
 
     .line 0
-    check-cast p1, Ll/ᩳۡᩴ;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2}, Ll/ᩳۡᩴ;->add(Ljava/lang/Object;)Z
+    iput-object p1, p0, Ll/ۜۡᩴ;->ܰ:Ll/ܰۖᩴ;
+
+    iput-object p2, p0, Ll/ۜۡᩴ;->᩶:Ll/۬֨ᩴ;
+
+    iput p3, p0, Ll/ۜۡᩴ;->ܿ:I
+
+    iput-object p4, p0, Ll/ۜۡᩴ;->֡:Ll/۠ۨܳ;
 
     return-void
 .end method
 
-.method public synthetic andThen(Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
-    .locals 0
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۖ᩻ᩴ;->$default$andThen(Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
+    iget v0, p0, Ll/ۜۡᩴ;->ܿ:I
 
-    move-result-object p1
+    iget-object v1, p0, Ll/ۜۡᩴ;->֡:Ll/۠ۨܳ;
 
-    return-object p1
+    iget-object v2, p0, Ll/ۜۡᩴ;->ܰ:Ll/ܰۖᩴ;
+
+    iget-object v3, p0, Ll/ۜۡᩴ;->᩶:Ll/۬֨ᩴ;
+
+    invoke-static {v2, v3, v0, v1}, Ll/ܰۖᩴ;->ۙ(Ll/ܰۖᩴ;Ll/۬֨ᩴ;ILl/۠ۨܳ;)V
+
+    return-void
 .end method

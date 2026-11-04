@@ -1,35 +1,50 @@
-.class public final Ll/ܶܽ᩸;
+.class public final synthetic Ll/ܶܽ᩸;
 .super Ljava/lang/Object;
-.source "K5RM"
+.source "Q649"
 
 # interfaces
-.implements Ll/۟ܽ᩸;
+.implements Ll/֡֨֫;
 
 
 # instance fields
-.field public ۙ:Ll/ۖ֡᩸;
+.field public final synthetic ܰ:Ll/ۘܽ᩸;
 
-.field public ܰ:Ll/۟֡᩸;
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۘܽ᩸;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܶܽ᩸;->ܰ:Ll/ۘܽ᩸;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۖ֡᩸;Ll/ܺ֡᩸;)Ll/ۖ֡᩸;
+.method public final synthetic ۙ()V
     .locals 0
 
-    return-object p1
+    return-void
 .end method
 
-.method public final ۙ(Ll/ۖ֡᩸;)Ll/۟֡᩸;
-    .locals 1
+.method public final ۙ(Ljava/lang/String;)V
+    .locals 2
+
+    .line 2
+    sget v0, Ll/ۘܽ᩸;->᩹᩷:I
+
+    .line 119
+    new-instance v0, Ll/᩺ܽ᩸;
+
+    iget-object v1, p0, Ll/ܶܽ᩸;->ܰ:Ll/ۘܽ᩸;
+
+    invoke-direct {v0, v1, p1}, Ll/᩺ܽ᩸;-><init>(Ll/ۘܽ᩸;Ljava/lang/String;)V
 
     .line 172
-    iget-object v0, p0, Ll/ܶܽ᩸;->ۙ:Ll/ۖ֡᩸;
+    invoke-virtual {v0}, Ll/ۖۙܺ;->۫()V
 
-    if-ne p1, v0, :cond_0
-
-    .line 173
-    iget-object p1, p0, Ll/ܶܽ᩸;->ܰ:Ll/۟֡᩸;
-
-    :cond_0
-    return-object p1
+    return-void
 .end method

@@ -1,277 +1,606 @@
-.class public final Ll/֨ܺ᩹;
-.super Ll/ۚ᩷᩹;
-.source "BAG5"
+.class public abstract Ll/֨ܺ᩹;
+.super Ljava/util/AbstractCollection;
+.source "LBZE"
+
+# interfaces
+.implements Ll/۠ܺ᩹;
+.implements Ll/ۡ۫ۗ;
 
 
-# direct methods
-.method public static ۙ(Landroid/view/SubMenu;)V
-    .locals 8
+# virtual methods
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    const v0, 0x7f0a0059
+    .line 34
+    check-cast p1, Ljava/lang/Byte;
 
-    const-string v1, "FTP"
+    .line 154
+    invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
 
-    const/4 v2, 0x0
+    move-result p1
 
-    .line 58
-    invoke-interface {p0, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p0, p1}, Ll/۠ܺ᩹;->᩸(B)Z
 
-    .line 59
-    invoke-static {}, Ll/֫۠᩺;->ᩳ()Z
+    move-result p1
 
-    move-result v0
-
-    const v1, 0x7f120702
-
-    const v3, 0x7f0a005b
-
-    const v4, 0x7f0a005e
-
-    const v5, 0x7f0a005d
-
-    const v6, 0x7f0a005c
-
-    const v7, 0x7f0a005a
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "FTPS"
-
-    .line 60
-    invoke-interface {p0, v2, v7, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    const-string v0, "SFTP"
-
-    .line 61
-    invoke-interface {p0, v2, v6, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    const-string v0, "SMB"
-
-    .line 62
-    invoke-interface {p0, v2, v5, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    const-string v0, "WebDav"
-
-    .line 63
-    invoke-interface {p0, v2, v4, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    .line 64
-    invoke-static {v1}, Ll/ܽܺۘ;->ܰ(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p0, v2, v3, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    return-void
-
-    :cond_0
-    const-string v0, "FTPS (VIP)"
-
-    .line 66
-    invoke-interface {p0, v2, v7, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
-
-    const-string v0, "SFTP (VIP)"
-
-    .line 67
-    invoke-interface {p0, v2, v6, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
-
-    const-string v0, "SMB (VIP)"
-
-    .line 68
-    invoke-interface {p0, v2, v5, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
-
-    const-string v0, "WebDav (VIP)"
-
-    .line 69
-    invoke-interface {p0, v2, v4, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
-
-    .line 70
-    invoke-static {v1}, Ll/ܽܺۘ;->ܰ(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, " (VIP)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p0, v2, v3, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    invoke-interface {p0, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
-
-    return-void
+    return p1
 .end method
 
-.method public static ۙ(Ll/۫ܶۘ;I)Z
-    .locals 1
+.method public addAll(Ljava/util/Collection;)Z
+    .locals 2
 
-    const v0, 0x7f0a0059
+    .line 161
+    instance-of v0, p1, Ll/۠ܺ᩹;
 
-    if-ne p1, v0, :cond_0
+    if-eqz v0, :cond_2
 
-    .line 76
-    invoke-static {p0}, Ll/ۙܶ֨;->ܰ(Ll/۫ܶۘ;)V
+    .line 162
+    check-cast p1, Ll/۠ܺ᩹;
 
-    goto :goto_0
+    .line 149
+    invoke-interface {p1}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
 
     :cond_0
-    const v0, 0x7f0a005a
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    if-ne p1, v0, :cond_1
+    move-result v1
 
-    .line 78
-    invoke-static {p0}, Ll/۬ܶ֨;->ܰ(Ll/۫ܶۘ;)V
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll/֨ܺ᩹;->᩸(B)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f0a005c
+    return v0
 
-    if-ne p1, v0, :cond_2
-
-    .line 80
-    invoke-static {p0}, Ll/᩹ᩴ֨;->ܰ(Ll/۫ܶۘ;)V
-
-    goto :goto_0
-
+    .line 164
     :cond_2
-    const v0, 0x7f0a005e
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    if-ne p1, v0, :cond_3
+    move-result p1
 
-    .line 82
-    invoke-static {p0}, Ll/ۡۡ֨;->ܰ(Ll/۫ܶۘ;)V
-
-    goto :goto_0
-
-    :cond_3
-    const v0, 0x7f0a005d
-
-    if-ne p1, v0, :cond_4
-
-    .line 84
-    invoke-static {p0}, Ll/֨᩵֨;->ܰ(Ll/۫ܶۘ;)V
-
-    goto :goto_0
-
-    :cond_4
-    const v0, 0x7f0a005b
-
-    if-ne p1, v0, :cond_5
-
-    .line 86
-    invoke-static {p0}, Ll/ܿ᩸֨;->ܰ(Ll/۫ܶۘ;)V
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_5
-    const/4 p0, 0x0
-
-    return p0
+    return p1
 .end method
 
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-# virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 5
+    if-nez p1, :cond_0
 
-    .line 35
-    iget-object v0, p0, Ll/ۛ᩷᩹;->᩶:Ll/۫᩷᩹;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ll/۫᩷᩹;->ۨ()Z
+    return p1
+
+    .line 166
+    :cond_0
+    check-cast p1, Ljava/lang/Byte;
+
+    invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
+
+    move-result p1
+
+    invoke-interface {p0, p1}, Ll/۠ܺ᩹;->ۤ(B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public containsAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 181
+    instance-of v0, p1, Ll/۠ܺ᩹;
+
+    if-eqz v0, :cond_2
+
+    .line 182
+    check-cast p1, Ll/۠ܺ᩹;
+
+    .line 169
+    invoke-interface {p1}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Ll/۠ܺ᩹;->ۤ(B)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x1
+
+    :goto_0
+    return p1
+
+    .line 184
+    :cond_2
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public forEach(Ljava/util/function/Consumer;)V
+    .locals 1
+
+    .line 149
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 152
+    instance-of v0, p1, Ll/᩷ܽ᩹;
 
     if-eqz v0, :cond_0
 
-    return v1
+    check-cast p1, Ll/᩷ܽ᩹;
 
-    .line 38
+    goto :goto_0
+
     :cond_0
-    new-instance v0, Ll/ܺ᩸;
+    new-instance v0, Ll/ۤܽ᩹;
 
-    iget-object v2, p0, Ll/ܳ۟᩹;->ܺ:Lbin/mt/plus/Main;
+    invoke-direct {v0, p1}, Ll/ۤܽ᩹;-><init>(Ljava/util/function/Consumer;)V
 
-    const v3, 0x800055
+    move-object p1, v0
 
-    invoke-direct {v0, v2, p1, v3}, Ll/ܺ᩸;-><init>(Landroid/content/Context;Landroid/view/View;I)V
+    :goto_0
+    invoke-interface {p0, p1}, Ll/᩸ܽ᩹;->᩷(Ll/᩷ܽ᩹;)V
 
-    .line 39
-    invoke-static {p1}, Ll/ۗۘ᩺;->ۘ(Landroid/view/View;)V
+    return-void
+.end method
 
-    .line 40
-    invoke-virtual {v0}, Ll/ܺ᩸;->ۖ()V
+.method public bridge synthetic iterator()Ljava/util/Iterator;
+    .locals 1
 
-    .line 41
-    invoke-virtual {v0}, Ll/ܺ᩸;->ۨ()Ll/۫۬;
+    .line 1306
+    invoke-interface {p0}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic parallelStream()Ljava/util/stream/Stream;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ll/֨ܺ᩹;->parallelStream()Ll/᩵ܺۗ;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/ۗܺۗ;->convert(Ll/᩵ܺۗ;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final parallelStream()Ll/᩵ܺۗ;
+    .locals 1
+
+    .line 336
+    invoke-static {p0}, Ll/ۢ۫ۗ;->$default$parallelStream(Ljava/util/Collection;)Ll/᩵ܺۗ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 178
+    :cond_0
+    check-cast p1, Ljava/lang/Byte;
+
+    invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
+
+    move-result p1
+
+    invoke-interface {p0, p1}, Ll/۠ܺ᩹;->᩷(B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public removeAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    .line 202
+    instance-of v0, p1, Ll/۠ܺ᩹;
+
+    if-eqz v0, :cond_2
+
+    .line 203
+    check-cast p1, Ll/۠ܺ᩹;
+
+    .line 190
+    invoke-interface {p1}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
 
     move-result-object p1
 
-    const v2, 0x7f1202d3
+    const/4 v0, 0x0
 
-    .line 42
-    invoke-interface {p1, v1, v2, v1, v2}, Landroid/view/Menu;->addSubMenu(IIII)Landroid/view/SubMenu;
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll/֨ܺ᩹;->᩷(B)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+
+    .line 205
+    :cond_2
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public removeIf(Ljava/util/function/Predicate;)Z
+    .locals 1
+
+    .line 256
+    instance-of v0, p1, Ll/᩻ܽ᩹;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/᩻ܽ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ll/ۖܺ᩹;
+
+    invoke-direct {v0, p1}, Ll/ۖܺ᩹;-><init>(Ljava/util/function/Predicate;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/۠ܺ᩹;->ۙ(Ll/᩻ܽ᩹;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public retainAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    .line 226
+    instance-of v0, p1, Ll/۠ܺ᩹;
+
+    if-eqz v0, :cond_2
+
+    .line 227
+    check-cast p1, Ll/۠ܺ᩹;
+
+    .line 211
+    invoke-interface {p0}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v2
+
+    invoke-interface {p1, v2}, Ll/۠ܺ᩹;->ۤ(B)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 212
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+
+    .line 229
+    :cond_2
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public synthetic spliterator()Ljava/util/Spliterator;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ll/֨ܺ᩹;->spliterator()Ll/۠ۚۗ;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/ۖۚۗ;->convert(Ll/۠ۚۗ;)Ljava/util/Spliterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic spliterator()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Ll/ۢ۫ۗ;->$default$spliterator(Ljava/util/Collection;)Ll/۠ۚۗ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic stream()Ljava/util/stream/Stream;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ll/֨ܺ᩹;->stream()Ll/᩵ܺۗ;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/ۗܺۗ;->convert(Ll/᩵ܺۗ;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final stream()Ll/᩵ܺۗ;
+    .locals 1
+
+    .line 314
+    invoke-static {p0}, Ll/ۢ۫ۗ;->$default$stream(Ljava/util/Collection;)Ll/᩵ܺۗ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۢ۫ۗ;->$default$toArray(Ljava/util/Collection;Ljava/util/function/IntFunction;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    .line 234
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "{"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 235
+    invoke-interface {p0}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object v1
+
+    .line 236
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    :goto_0
+    add-int/lit8 v4, v2, -0x1
+
+    if-eqz v2, :cond_1
+
+    if-eqz v3, :cond_0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    goto :goto_1
+
+    :cond_0
+    const-string v2, ", "
+
+    .line 242
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 243
+    :goto_1
+    invoke-interface {v1}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v2
+
+    .line 244
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 43
-    invoke-interface {v2}, Landroid/view/SubMenu;->getItem()Landroid/view/MenuItem;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move v2, v4
 
-    const v4, 0x7f0801ce
+    goto :goto_0
 
-    invoke-interface {v3, v4}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
+    :cond_1
+    const-string v1, "}"
 
-    .line 44
-    invoke-static {v2}, Ll/֨ܺ᩹;->ۙ(Landroid/view/SubMenu;)V
+    .line 246
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v2, 0x7f1202d2
+    .line 247
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 45
-    invoke-interface {p1, v1, v2, v1, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
+    move-result-object v0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    const v1, 0x7f0801fb
+.method public ۙ(Ll/᩻ܽ᩹;)Z
+    .locals 3
 
-    invoke-interface {p1, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
+    .line 272
+    invoke-interface {p0}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
 
-    .line 46
-    new-instance p1, Ll/᩹ܺ᩹;
+    move-result-object v0
 
-    invoke-direct {p1, p0}, Ll/᩹ܺ᩹;-><init>(Ll/֨ܺ᩹;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1}, Ll/ܺ᩸;->ۙ(Ll/᩷᩸;)V
+    .line 273
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 53
-    invoke-virtual {v0}, Ll/ܺ᩸;->ۚ()V
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 274
+    invoke-interface {v0}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v2
+
+    invoke-interface {p1, v2}, Ll/᩻ܽ᩹;->᩷(B)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 275
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+.end method
+
+.method public ᩷(B)Z
+    .locals 2
+
+    .line 72
+    invoke-interface {p0}, Ll/۠ܺ᩹;->iterator()Ll/ᩴܽ᩹;
+
+    move-result-object v0
+
+    .line 73
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ll/ᩴܽ᩹;->nextByte()B
+
+    move-result v1
+
+    if-ne p1, v1, :cond_0
+
+    .line 74
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     const/4 p1, 0x1
 
     return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public ᩸(B)Z
+    .locals 0
+
+    .line 48
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

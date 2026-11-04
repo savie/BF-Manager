@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/internal/TextScale;
-.super Ll/ۨܳܰ;
+.super Ll/֡ۡ᩷;
 .source "TextScale.java"
 
 
@@ -12,16 +12,16 @@
     .locals 0
 
     .line 34
-    invoke-direct {p0}, Ll/ۨܳܰ;-><init>()V
+    invoke-direct {p0}, Ll/֡ۡ᩷;-><init>()V
 
     return-void
 .end method
 
-.method private captureValues(Ll/۠ܳܰ;)V
+.method private captureValues(Ll/᩸ۖ᩷;)V
     .locals 2
 
     .line 48
-    iget-object v0, p1, Ll/۠ܳܰ;->ۨ:Landroid/view/View;
+    iget-object v0, p1, Ll/᩸ۖ᩷;->ۤ:Landroid/view/View;
 
     instance-of v1, v0, Landroid/widget/TextView;
 
@@ -31,7 +31,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 50
-    iget-object p1, p1, Ll/۠ܳܰ;->ܰ:Ljava/util/HashMap;
+    iget-object p1, p1, Ll/᩸ۖ᩷;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
 
@@ -51,25 +51,25 @@
 
 
 # virtual methods
-.method public captureEndValues(Ll/۠ܳܰ;)V
+.method public captureEndValues(Ll/᩸ۖ᩷;)V
     .locals 0
 
     .line 44
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Ll/۠ܳܰ;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Ll/᩸ۖ᩷;)V
 
     return-void
 .end method
 
-.method public captureStartValues(Ll/۠ܳܰ;)V
+.method public captureStartValues(Ll/᩸ۖ᩷;)V
     .locals 0
 
     .line 39
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Ll/۠ܳܰ;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Ll/᩸ۖ᩷;)V
 
     return-void
 .end method
 
-.method public createAnimator(Landroid/view/ViewGroup;Ll/۠ܳܰ;Ll/۠ܳܰ;)Landroid/animation/Animator;
+.method public createAnimator(Landroid/view/ViewGroup;Ll/᩸ۖ᩷;Ll/᩸ۖ᩷;)Landroid/animation/Animator;
     .locals 3
 
     if-eqz p2, :cond_4
@@ -77,13 +77,13 @@
     if-eqz p3, :cond_4
 
     .line 59
-    iget-object p1, p2, Ll/۠ܳܰ;->ۨ:Landroid/view/View;
+    iget-object p1, p2, Ll/᩸ۖ᩷;->ۤ:Landroid/view/View;
 
     instance-of p1, p1, Landroid/widget/TextView;
 
     if-eqz p1, :cond_4
 
-    iget-object p1, p3, Ll/۠ܳܰ;->ۨ:Landroid/view/View;
+    iget-object p1, p3, Ll/᩸ۖ᩷;->ۤ:Landroid/view/View;
 
     instance-of v0, p1, Landroid/widget/TextView;
 
@@ -96,10 +96,10 @@
     check-cast p1, Landroid/widget/TextView;
 
     .line 66
-    iget-object p2, p2, Ll/۠ܳܰ;->ܰ:Ljava/util/HashMap;
+    iget-object p2, p2, Ll/᩸ۖ᩷;->᩷:Ljava/util/HashMap;
 
     .line 67
-    iget-object p3, p3, Ll/۠ܳܰ;->ܰ:Ljava/util/HashMap;
+    iget-object p3, p3, Ll/᩸ۖ᩷;->᩷:Ljava/util/HashMap;
 
     const-string v0, "android:textscale:scale"
 

@@ -261,7 +261,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v0}, Ll/ۡܽ᩹;->ۙ(Ljava/io/IOException;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ۧ᩺᩻;->ۙ(Ljava/io/IOException;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -467,7 +467,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v11, v1, v10, v1}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v11, v1, v10, v1}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v1
 

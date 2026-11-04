@@ -2,13 +2,13 @@ package org.bouncycastle.crypto.signers;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.pqc.crypto.sphincs.SPHINCSKeyParameters;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISOTrailers {
     public static final int TRAILER_IMPLICIT = 188;
     public static final int TRAILER_RIPEMD128 = 13004;
@@ -35,7 +35,7 @@ public class ISOTrailers {
         map.put("SHA-512/224", Integers.valueOf(TRAILER_SHA512_224));
         map.put(SPHINCSKeyParameters.SHA512_256, Integers.valueOf(TRAILER_SHA512_256));
         map.put("Whirlpool", Integers.valueOf(14284));
-        trailerMap = C0561.unmodifiableMap(map);
+        trailerMap = C4681.unmodifiableMap(map);
     }
 
     public static Integer getTrailer(Digest digest) {

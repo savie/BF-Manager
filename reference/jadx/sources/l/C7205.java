@@ -1,22 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۗ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 365W */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7205 extends AbstractC15673 {
+import java.util.Set;
+
+/* JADX INFO: renamed from: l.ۜܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E61U */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7205 extends AbstractC18901 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Set f23780;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20611 f24017;
+    public final /* synthetic */ String f23781;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C7205(AbstractC20611 abstractC20611, C17684 c17684, int i, int i2) {
-        super(c17684, i, i2);
-        this.f24017 = abstractC20611;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f23782;
+
+    public C7205(String str, String str2, Set set) {
+        this.f23780 = set;
+        this.f23782 = str;
+        this.f23781 = str2;
     }
 
-    @Override // l.AbstractC15673
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1249(C18825 c18825, int i) {
-        return this.f24017.mo15967(c18825, i);
+    @Override // l.InterfaceC13851
+    public final Set getAnnotations() {
+        return this.f23780;
+    }
+
+    @Override // l.InterfaceC13851, l.InterfaceC15125
+    public final String getName() {
+        return this.f23782;
+    }
+
+    @Override // l.InterfaceC19775
+    public final String getType() {
+        return this.f23781;
     }
 }

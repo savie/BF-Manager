@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public ܺ:Z
+.field public ܰ:Z
 
 .field public final ᩶:[B
 
@@ -31,7 +31,7 @@
     const/4 p1, 0x0
 
     .line 36
-    iput-boolean p1, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܺ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܰ:Z
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     .locals 7
 
     .line 57
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 58
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -56,7 +56,7 @@
     if-ne v0, v1, :cond_5
 
     .line 59
-    iget-boolean v1, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܺ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܰ:Z
 
     if-nez v1, :cond_5
 
@@ -129,7 +129,7 @@
 
     .line 125
     :cond_0
-    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->ۨ()V
+    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->ۤ()V
 
     const-string v4, "="
 
@@ -144,7 +144,7 @@
 
     .line 128
     :cond_1
-    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->ۨ()V
+    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->ۤ()V
 
     const-string v4, "\""
 
@@ -159,7 +159,7 @@
 
     .line 132
     :cond_2
-    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->ܰ()Z
+    invoke-virtual {v1}, Lcom/amazonaws/util/NamespaceRemovingInputStream$StringPrefixSlicer;->᩷()Z
 
     move-result v4
 
@@ -209,7 +209,7 @@
     move-result v0
 
     .line 73
-    iput-boolean v5, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܺ:Z
+    iput-boolean v5, p0, Lcom/amazonaws/util/NamespaceRemovingInputStream;->ܰ:Z
 
     :cond_5
     return v0

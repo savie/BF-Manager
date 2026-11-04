@@ -1,21 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗ֨ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0JF */
+import java.util.HashSet;
+import java.util.Set;
+
+/* JADX INFO: renamed from: l.ۖ᩶ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7TB */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2909 extends C23017 implements InterfaceC13722 {
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final void add(Object obj) {
-        throw new UnsupportedOperationException();
+public final class C2909 implements InterfaceC0059 {
+    @Override // l.InterfaceC0059
+    /* JADX INFO: renamed from: ۙ */
+    public final Set mo978() {
+        HashSet hashSet = new HashSet(1);
+        Object obj = new Object[]{'\\'}[0];
+        C17359.requireNonNull(obj);
+        if (hashSet.add(obj)) {
+            return C4681.unmodifiableSet(hashSet);
+        }
+        throw new IllegalArgumentException(C14483.m34971("duplicate element: ", obj));
     }
 
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final void set(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Iterator, java.util.ListIterator
-    public final Object next() {
-        return m50909();
+    @Override // l.InterfaceC0059
+    public final InterfaceC17958 create() {
+        return new C8875();
     }
 }

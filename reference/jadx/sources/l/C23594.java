@@ -1,40 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34PY */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23594 extends C0309 {
+import android.view.View;
+import android.widget.TextView;
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public boolean f76438;
+/* JADX INFO: renamed from: l.᩹ܰۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O1JS */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23594 extends AbstractC11800 {
 
-    public C23594() {
-        throw null;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public View f76598;
 
-    @Override // l.C0309, l.AbstractC16579
-    /* JADX INFO: renamed from: ۙ */
-    public final C0309 mo1929(C3794 c3794) {
-        throw new AssertionError("Cannot add metadata to an intersection type");
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public TextView f76599;
 
-    @Override // l.C0309, l.AbstractC16579
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16579 mo1929(C3794 c3794) {
-        throw new AssertionError("Cannot add metadata to an intersection type");
-    }
-
-    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
-    public final C21825 m52021() {
-        if (!this.f76438) {
-            return this.f1658.m48597(this.f1654);
-        }
-        return this.f1658;
-    }
-
-    @Override // l.C0309, l.AbstractC16579, l.InterfaceC9105
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC19688 mo1931() {
-        return EnumC19688.INTERSECTION;
+    public C23594(View view) {
+        super(view);
+        this.f76599 = (TextView) view.findViewById(R.id.textView);
+        this.f76598 = view.findViewById(R.id.more);
     }
 }

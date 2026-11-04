@@ -1,37 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘۤܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: TB7B */
+import java.io.IOError;
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ۘۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z40Z */
 /* JADX INFO: loaded from: classes2.dex */
-public class C3881 extends AbstractC21521 {
-
+public final class C3881 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18699 f14509;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f14510;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public float f14511;
-
-    @Override // l.AbstractC21521
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo11256(String str) {
-        C18699 c18699 = this.f14509;
-        if (c18699.m43231()) {
-            if (c18699.f60673.f74551) {
-                c18699.f60666.drawText(str, this.f14511, this.f14510, c18699.f60673.f74547);
-            }
-            if (c18699.f60673.f74549) {
-                c18699.f60666.drawText(str, this.f14511, this.f14510, c18699.f60673.f74548);
-            }
-        }
-        this.f14511 = c18699.f60673.f74547.measureText(str) + this.f14511;
+    public static int m12509(InterfaceC19637 interfaceC19637) {
+        AbstractC8036 abstractC8036 = (AbstractC8036) interfaceC19637;
+        abstractC8036.getClass();
+        return C11239.m28342(abstractC8036);
     }
 
-    public C3881(C18699 c18699, float f, float f2) {
-        this.f14509 = c18699;
-        this.f14511 = f;
-        this.f14510 = f2;
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m12510(InterfaceC17573 interfaceC17573, C7704 c7704) {
+        try {
+            return c7704.m20985().mo43139().mo7621(false).subSequence(m12509((InterfaceC19637) interfaceC17573), C11239.m28320((AbstractC8036) interfaceC17573, ((C19113) c7704.m20985()).f61860)).toString();
+        } catch (IOException e) {
+            throw new IOError(e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC3058 m12512(InterfaceC20557 interfaceC20557) {
+        Cloneable cloneableMo47123 = interfaceC20557.mo47123();
+        if (cloneableMo47123 instanceof InterfaceC3403) {
+            return ((InterfaceC3403) cloneableMo47123).mo11141();
+        }
+        return ((InterfaceC19811) cloneableMo47123).getName();
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m12511(InterfaceC22049 interfaceC22049) {
+        EnumC21461 enumC21461Mo2285 = ((AbstractC8036) interfaceC22049).mo2285();
+        if (enumC21461Mo2285 == EnumC21461.f68452) {
+            return "=";
+        }
+        boolean z = interfaceC22049 instanceof InterfaceC0661;
+        if (z) {
+            enumC21461Mo2285 = enumC21461Mo2285.m48823();
+        }
+        new C9526(null, true);
+        String strM24923 = C9526.m24923(enumC21461Mo2285);
+        return z ? strM24923.concat("=") : strM24923;
     }
 }

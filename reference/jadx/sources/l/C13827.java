@@ -1,22 +1,29 @@
 package l;
 
-import java.util.concurrent.CountDownLatch;
+import org.xmlpull.v1.XmlPullParser;
 
-/* JADX INFO: renamed from: l.ܰ۫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1B34 */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۬ۨۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X8RW */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13827 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m33741(XmlPullParser xmlPullParser, String str) {
+        return xmlPullParser.getEventType() == 3 && xmlPullParser.getName().equals(str);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m33740(XmlPullParser xmlPullParser, String str) {
+        return xmlPullParser.getEventType() == 2 && xmlPullParser.getName().equals(str);
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public CountDownLatch f45635 = new CountDownLatch(1);
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5359 f45636;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Boolean f45637;
-
-    public C13827(C5359 c5359) {
-        this.f45636 = c5359;
+    public static String m33739(XmlPullParser xmlPullParser, String str) {
+        int attributeCount = xmlPullParser.getAttributeCount();
+        for (int i = 0; i < attributeCount; i++) {
+            if (xmlPullParser.getAttributeName(i).equals(str)) {
+                return xmlPullParser.getAttributeValue(i);
+            }
+        }
+        return null;
     }
 }

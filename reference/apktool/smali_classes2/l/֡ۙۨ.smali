@@ -1,98 +1,69 @@
 .class public final Ll/֡ۙۨ;
-.super Ll/᩶ۙۨ;
-.source "XAPG"
+.super Ljava/lang/Object;
+.source "1ANI"
 
 
-# instance fields
-.field public final ۖ:Ll/ܺۙۨ;
+# static fields
+.field public static final ۙ:Ll/ۜ᩷ۨ;
 
-.field public final ۙ:Ll/᩵ۙۨ;
-
-.field public final ۨ:Ljava/lang/Object;
-
-.field public final ܰ:Ljava/lang/String;
+.field public static final ᩷:Ll/ۜ᩷ۨ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ll/ܺۙۨ;Ll/᩵ۙۨ;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "value"
+    .line 237
+    new-instance v0, Ll/ۜ᩷ۨ;
 
-    .line 6
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v1, "NONE"
 
-    .line 120
-    invoke-direct {p0}, Ll/᩶ۙۨ;-><init>()V
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
 
-    .line 116
-    iput-object p1, p0, Ll/֡ۙۨ;->ۨ:Ljava/lang/Object;
+    sput-object v0, Ll/֡ۙۨ;->ۙ:Ll/ۜ᩷ۨ;
 
-    const-string p1, "SidecarAdapter"
+    .line 239
+    new-instance v0, Ll/ۜ᩷ۨ;
 
-    .line 117
-    iput-object p1, p0, Ll/֡ۙۨ;->ܰ:Ljava/lang/String;
+    const-string v1, "PENDING"
 
-    .line 118
-    iput-object p2, p0, Ll/֡ۙۨ;->ۖ:Ll/ܺۙۨ;
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
 
-    .line 119
-    iput-object p3, p0, Ll/֡ۙۨ;->ۙ:Ll/᩵ۙۨ;
+    sput-object v0, Ll/֡ۙۨ;->᩷:Ll/ۜ᩷ۨ;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ()Ljava/lang/Object;
+.method public static final ۙ(Ll/ۖۧۙ;)Ll/ۘۙۨ;
     .locals 1
 
-    .line 137
-    iget-object v0, p0, Ll/֡ۙۨ;->ۨ:Ljava/lang/Object;
+    .line 183
+    new-instance v0, Ll/ܿۙۨ;
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Ll/۠ۙۨ;->ۙ:Ll/ۜ᩷ۨ;
+
+    :cond_0
+    invoke-direct {v0, p0}, Ll/ܿۙۨ;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final ۙ(Ljava/lang/String;Ll/ܶ᩶۠;)Ll/᩶ۙۨ;
-    .locals 6
+.method public static final synthetic ۙ()Ll/ۜ᩷ۨ;
+    .locals 1
 
-    .line 123
-    iget-object v0, p0, Ll/֡ۙۨ;->ۨ:Ljava/lang/Object;
+    .line 1
+    sget-object v0, Ll/֡ۙۨ;->ۙ:Ll/ۜ᩷ۨ;
 
-    invoke-interface {p2, v0}, Ll/ܶ᩶۠;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p2
+.method public static final synthetic ᩷()Ll/ۜ᩷ۨ;
+    .locals 1
 
-    check-cast p2, Ljava/lang/Boolean;
+    .line 1
+    sget-object v0, Ll/֡ۙۨ;->᩷:Ll/ۜ᩷ۨ;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    return-object p0
-
-    .line 126
-    :cond_0
-    new-instance p2, Ll/۟ۙۨ;
-
-    .line 130
-    iget-object v4, p0, Ll/֡ۙۨ;->ۙ:Ll/᩵ۙۨ;
-
-    .line 131
-    iget-object v5, p0, Ll/֡ۙۨ;->ۖ:Ll/ܺۙۨ;
-
-    .line 126
-    iget-object v1, p0, Ll/֡ۙۨ;->ۨ:Ljava/lang/Object;
-
-    iget-object v2, p0, Ll/֡ۙۨ;->ܰ:Ljava/lang/String;
-
-    move-object v0, p2
-
-    move-object v3, p1
-
-    invoke-direct/range {v0 .. v5}, Ll/۟ۙۨ;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ll/᩵ۙۨ;Ll/ܺۙۨ;)V
-
-    return-object p2
+    return-object v0
 .end method

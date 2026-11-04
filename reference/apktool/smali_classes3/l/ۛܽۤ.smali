@@ -1,135 +1,173 @@
 .class public final Ll/ۛܽۤ;
-.super Ll/ۙܺۤ;
-.source "F416"
+.super Ljava/io/FilterOutputStream;
+.source "HC85"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۜ۫ۤ;
+.field public ܰ:[B
+
+.field public ᩶:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۫ۤ;)V
+.method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 4899
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 76
+    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 3316
-    iput-object p1, p0, Ll/ۛܽۤ;->ܺ:Ll/ۜ۫ۤ;
+    const/16 p1, 0x2000
 
+    new-array p1, p1, [B
+
+    .line 80
+    iput-object p1, p0, Ll/ۛܽۤ;->ܰ:[B
+
+    return-void
+.end method
+
+.method public constructor <init>([BLjava/io/OutputStream;)V
+    .locals 0
+
+    .line 93
+    invoke-direct {p0, p2}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    .line 94
+    array-length p2, p1
+
+    if-eqz p2, :cond_0
+
+    .line 97
+    iput-object p1, p0, Ll/ۛܽۤ;->ܰ:[B
+
+    return-void
+
+    .line 95
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Buffer size == 0"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method private ۙ()V
+    .locals 4
+
+    .line 104
+    iget v0, p0, Ll/ۛܽۤ;->᩶:I
+
+    if-lez v0, :cond_0
+
+    .line 105
+    iget-object v1, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    iget-object v2, p0, Ll/ۛܽۤ;->ܰ:[B
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3, v0}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 106
+    iput v3, p0, Ll/ۛܽۤ;->᩶:I
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/֡ۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final flush()V
+    .locals 1
 
-    .line 3316
-    check-cast p2, Ll/۫۟۟;
+    .line 163
+    invoke-direct {p0}, Ll/ۛܽۤ;->ۙ()V
 
-    .line 0
-    instance-of p2, p1, Ll/᩻ۡۤ;
+    .line 164
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    if-eqz p2, :cond_2
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 3321
-    check-cast p1, Ll/᩻ۡۤ;
+    return-void
+.end method
 
-    .line 3325
-    iget-object p2, p0, Ll/ۛܽۤ;->ܺ:Ll/ۜ۫ۤ;
+.method public final write(I)V
+    .locals 3
 
-    iget-object p2, p2, Ll/ۜ۫ۤ;->ۘۙ:Ll/᩻ܺۤ;
+    .line 117
+    iget v0, p0, Ll/ۛܽۤ;->᩶:I
 
-    .line 3330
-    new-instance v0, Ll/ᩴ᩷۟;
+    iget-object v1, p0, Ll/ۛܽۤ;->ܰ:[B
 
-    invoke-direct {v0}, Ll/ᩴ᩷۟;-><init>()V
+    array-length v2, v1
 
-    .line 3331
-    new-instance v1, Ll/ᩴ᩷۟;
+    if-lt v0, v2, :cond_0
 
-    invoke-direct {v1}, Ll/ᩴ᩷۟;-><init>()V
+    .line 118
+    invoke-direct {p0}, Ll/ۛܽۤ;->ۙ()V
 
-    .line 3332
-    iget-object v2, p1, Ll/֡ۡۤ;->ܳ:Ll/᩸᩷۟;
-
-    invoke-virtual {v2}, Ll/᩸᩷۟;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ܽۤۤ;
-
-    .line 3333
-    invoke-virtual {v3}, Ll/ܽۤۤ;->ᩳۙ()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 3334
-    iget-object v4, v3, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
-
-    iget-object v4, v4, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
-
-    invoke-virtual {v4}, Ll/ܽۤۤ;->᩷()Ll/᩸᩷۟;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ll/ᩴ᩷۟;->ۙ(Ll/᩸᩷۟;)V
-
-    .line 3336
+    .line 120
     :cond_0
-    iget-object v3, v3, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
+    iget v0, p0, Ll/ۛܽۤ;->᩶:I
 
-    iget-object v3, v3, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
+    add-int/lit8 v2, v0, 0x1
 
-    invoke-virtual {v1, v3}, Ll/ᩴ᩷۟;->ۙ(Ljava/lang/Object;)V
+    iput v2, p0, Ll/ۛܽۤ;->᩶:I
 
-    goto :goto_0
+    int-to-byte p1, p1
 
-    .line 3338
+    aput-byte p1, v1, v0
+
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 3
+
+    .line 140
+    iget-object v0, p0, Ll/ۛܽۤ;->ܰ:[B
+
+    array-length v1, v0
+
+    if-lt p3, v1, :cond_0
+
+    .line 144
+    invoke-direct {p0}, Ll/ۛܽۤ;->ۙ()V
+
+    .line 145
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    return-void
+
+    .line 148
+    :cond_0
+    array-length v1, v0
+
+    iget v2, p0, Ll/ۛܽۤ;->᩶:I
+
+    sub-int/2addr v1, v2
+
+    if-le p3, v1, :cond_1
+
+    .line 149
+    invoke-direct {p0}, Ll/ۛܽۤ;->ۙ()V
+
+    .line 151
     :cond_1
-    invoke-virtual {v1}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
+    iget v1, p0, Ll/ۛܽۤ;->᩶:I
 
-    move-result-object v1
+    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual {p2, v1}, Ll/᩻ܺۤ;->᩹(Ll/᩸᩷۟;)Ll/᩻ۡۤ;
+    .line 152
+    iget p1, p0, Ll/ۛܽۤ;->᩶:I
 
-    move-result-object v1
+    add-int/2addr p1, p3
 
-    .line 3339
-    invoke-virtual {v0}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
+    iput p1, p0, Ll/ۛܽۤ;->᩶:I
 
-    move-result-object v0
-
-    iput-object v0, v1, Ll/֡ۡۤ;->᩻:Ll/᩸᩷۟;
-
-    .line 3340
-    iget-object v0, v1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
-
-    iget-wide v1, v0, Ll/᩻᩵ۤ;->֡:J
-
-    const-wide/16 v3, 0x200
-
-    or-long/2addr v1, v3
-
-    iput-wide v1, v0, Ll/᩻᩵ۤ;->֡:J
-
-    .line 3325
-    invoke-virtual {p2, v0}, Ll/᩻ܺۤ;->ۙ(Ll/֡᩵ۤ;)Ll/᩻᩵ۤ;
-
-    :cond_2
-    return-object p1
+    return-void
 .end method

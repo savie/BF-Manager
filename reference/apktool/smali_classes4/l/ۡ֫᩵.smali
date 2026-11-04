@@ -1,125 +1,145 @@
-.class public final Ll/ۡ֫᩵;
-.super Ll/ۜۢ᩵;
-.source "E4WJ"
+.class public final synthetic Ll/ۡ֫᩵;
+.super Ljava/lang/Object;
+.source "4IX4"
 
 # interfaces
-.implements Ll/ۤܰۡ;
-.implements Ll/ۤۙۡ;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public ܽ:Ll/۠ܿ᩵;
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ᩻᩵;Ll/ۤ۫᩵;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 50
-    invoke-direct {p0, p1, p2, p3}, Ll/ۜۢ᩵;-><init>(Ll/ܿ᩻᩵;Ll/ۤ۫᩵;I)V
+    .line 0
+    iput p1, p0, Ll/ۡ֫᩵;->ܰ:I
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Ll/ۡ֫᩵;->᩶:Ljava/lang/Object;
 
-    .line 45
-    iput-object p1, p0, Ll/ۡ֫᩵;->ܽ:Ll/۠ܿ᩵;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getReference()Ll/۟ۨۡ;
-    .locals 4
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 61
-    iget-object v0, p0, Ll/ۡ֫᩵;->ܽ:Ll/۠ܿ᩵;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    .line 63
-    :cond_0
-    iget-object v0, p0, Ll/ۜۢ᩵;->֡:Ll/ۤ۫᩵;
-
-    iget v0, v0, Ll/ۤ۫᩵;->ܿ:I
-
-    iget-object v1, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v1}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
-
-    move-result-object v2
-
-    iget v3, p0, Ll/ۜۢ᩵;->᩶:I
-
-    add-int/lit8 v3, v3, 0x2
-
-    invoke-virtual {v2, v3}, Ll/ᩳܳ᩵;->ۜ(I)I
-
-    move-result v2
-
-    invoke-static {v1, v0, v2}, Ll/ۙ֫۠;->ۙ(Ll/ܿ᩻᩵;II)Ll/۠ܿ᩵;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ()I
-    .locals 2
-
-    .line 55
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
-
-    move-result-object v0
-
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۘ(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ۙ(Ll/۠᩺ۡ;)V
-    .locals 1
-
-    .line 73
-    invoke-virtual {p0}, Ll/ۡ֫᩵;->getReference()Ll/۟ۨۡ;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ll/۠᩺ۡ;->ۙ(Ll/۟ۨۡ;)Ll/ܳۜۡ;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
     move-result-object p1
 
-    check-cast p1, Ll/۠ܿ᩵;
-
-    iput-object p1, p0, Ll/ۡ֫᩵;->ܽ:Ll/۠ܿ᩵;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final synthetic ۤ()Ljava/lang/String;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x0
+    .line 2
+    iget v0, p0, Ll/ۡ֫᩵;->ܰ:I
 
-    throw v0
+    packed-switch v0, :pswitch_data_0
+
+    .line 7
+    iget-object v0, p0, Ll/ۡ֫᩵;->᩶:Ljava/lang/Object;
+
+    .line 9
+    check-cast v0, Ll/۫ᩴۤ;
+
+    .line 11
+    check-cast p1, Ljava/lang/String;
+
+    .line 22
+    invoke-virtual {v0}, Ll/۫ᩴۤ;->ܿ()Ll/᩻ᩴۤ;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/᩻ᩴۤ;->ۘ()Ll/᩹ᩴۤ;
+
+    move-result-object p1
+
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    .line 0
+    :pswitch_0
+    iget-object v0, p0, Ll/ۡ֫᩵;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/᩷۠ۗ;
+
+    check-cast p1, Ll/ᩳۡۗ;
+
+    .line 77
+    invoke-virtual {p1}, Ll/ᩳۡۗ;->ۤۙ()Z
+
+    move-result v1
+
+    sget-object v2, Ll/ۧ۟ۗ;->ۧ:Ll/ۧ۟ۗ;
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1, v2}, Ll/ܺ۟ۗ;->᩷(Ll/֫᩶ۗ;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 78
+    :cond_0
+    invoke-virtual {p1, v2}, Ll/ܺ۟ۗ;->ۙ(Ll/֫᩶ۗ;)Ll/ۧ᩶ۗ;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    return-object p1
+
+    .line 25
+    :cond_2
+    invoke-virtual {p1}, Ll/᩹ᩴۤ;->ۚ()Ll/ۛᩴۤ;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final ᩵()I
-    .locals 1
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 68
-    iget-object v0, p0, Ll/ۜۢ᩵;->֡:Ll/ۤ۫᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    iget v0, v0, Ll/ۤ۫᩵;->ܿ:I
+    move-result-object p1
 
-    return v0
+    return-object p1
 .end method

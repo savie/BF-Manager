@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.gm;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface GMObjectIdentifiers {
     public static final ASN1ObjectIdentifier hmac_sm3;
     public static final ASN1ObjectIdentifier id_sm9PublicKey;

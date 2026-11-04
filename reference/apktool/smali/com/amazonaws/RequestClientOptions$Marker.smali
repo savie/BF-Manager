@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܺ:[Lcom/amazonaws/RequestClientOptions$Marker;
+.field public static final synthetic ܰ:[Lcom/amazonaws/RequestClientOptions$Marker;
 
 .field public static final enum ᩶:Lcom/amazonaws/RequestClientOptions$Marker;
 
@@ -31,7 +31,7 @@
     aput-object v0, v1, v2
 
     .line 39
-    sput-object v1, Lcom/amazonaws/RequestClientOptions$Marker;->ܺ:[Lcom/amazonaws/RequestClientOptions$Marker;
+    sput-object v1, Lcom/amazonaws/RequestClientOptions$Marker;->ܰ:[Lcom/amazonaws/RequestClientOptions$Marker;
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     .locals 1
 
     .line 39
-    sget-object v0, Lcom/amazonaws/RequestClientOptions$Marker;->ܺ:[Lcom/amazonaws/RequestClientOptions$Marker;
+    sget-object v0, Lcom/amazonaws/RequestClientOptions$Marker;->ܰ:[Lcom/amazonaws/RequestClientOptions$Marker;
 
     invoke-virtual {v0}, [Lcom/amazonaws/RequestClientOptions$Marker;->clone()Ljava/lang/Object;
 

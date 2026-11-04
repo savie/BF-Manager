@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.constraints;
 
 import java.util.Set;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Utils {
     public static void addAliases(Set set) {
         if (set.contains("RC4")) {

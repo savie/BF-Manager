@@ -1,27 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ۠۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: W6LP */
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ۧۧ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 76EN */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C11580 {
+public final class C11580 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f38937;
+    public final InterfaceC17730 f36380;
 
-    static {
-        int[] iArr = new int[EnumC12279.values().length];
-        f38937 = iArr;
-        try {
-            iArr[EnumC12279.REGULAR.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f38937[EnumC12279.MISSING.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f38937[EnumC12279.DIRECTORY.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC13673 f36381;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m29113() {
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList m29115() {
+        return null;
+    }
+
+    public C11580(InterfaceC17730 interfaceC17730, InterfaceC13673 interfaceC13673) {
+        this.f36380 = interfaceC17730;
+        this.f36381 = interfaceC13673;
+        throw null;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC13673 m29114() {
+        return this.f36381;
+    }
+
+    public final String toString() {
+        throw null;
     }
 }

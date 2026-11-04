@@ -53,11 +53,11 @@
     move-result-object v6
 
     .line 144
-    sget-object v2, Ll/۠۟ܶ;->ܽۖۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->֡᩸ۙ:[I
 
-    sget v0, Ll/۠۟ܶ;->ۖۚۙ:I
+    sget v0, Ll/ܰ۬ܺ;->᩸ᩴۙ:I
 
-    sget v1, Ll/۠۟ܶ;->ܰۚۙ:I
+    sget v1, Ll/ܰ۬ܺ;->᩷ᩴۙ:I
 
     filled-new-array {v0, v1}, [I
 
@@ -72,7 +72,7 @@
     move v4, p4
 
     .line 145
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/֫ᩳ;
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/ۙ᩹;
 
     move-result-object v0
 
@@ -110,29 +110,29 @@
     invoke-virtual {v2, p1}, Lcom/google/android/material/navigation/NavigationBarMenuView;->setPresenter(Lcom/google/android/material/navigation/NavigationBarPresenter;)V
 
     .line 163
-    invoke-virtual {v1, p1}, Ll/۫۬;->addMenuPresenter(Ll/᩹ۘ;)V
+    invoke-virtual {v1, p1}, Ll/ۢۚ;->addMenuPresenter(Ll/ۚ֫;)V
 
     .line 164
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {p1, v4, v1}, Lcom/google/android/material/navigation/NavigationBarPresenter;->initForMenu(Landroid/content/Context;Ll/۫۬;)V
+    invoke-virtual {p1, v4, v1}, Lcom/google/android/material/navigation/NavigationBarPresenter;->initForMenu(Landroid/content/Context;Ll/ۢۚ;)V
 
     .line 166
-    sget p1, Ll/۠۟ܶ;->֫ۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۠᩸ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 167
-    sget p1, Ll/۠۟ܶ;->֫ۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۠᩸ۙ:I
 
     .line 168
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -154,14 +154,14 @@
 
     .line 174
     :goto_0
-    sget p1, Ll/۠۟ܶ;->ܳۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۖ᩸ۙ:I
 
     .line 177
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    sget v5, Ll/֨۟ܶ;->ۛ۟:I
+    sget v5, Ll/ܽ۬ܺ;->ۢ᩺:I
 
     .line 178
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -169,7 +169,7 @@
     move-result v4
 
     .line 175
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p1
 
@@ -177,9 +177,9 @@
     invoke-virtual {p0, p1}, Lcom/google/android/material/navigation/NavigationBarView;->setItemIconSize(I)V
 
     .line 180
-    sget p1, Ll/۠۟ܶ;->ۖۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩸ᩴۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
@@ -188,10 +188,10 @@
     if-eqz p1, :cond_1
 
     .line 181
-    sget p1, Ll/۠۟ܶ;->ۖۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩸ᩴۙ:I
 
     .line 182
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
@@ -200,19 +200,19 @@
 
     .line 185
     :cond_1
-    sget p1, Ll/۠۟ܶ;->ܰۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩷ᩴۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
     .line 186
-    sget p1, Ll/۠۟ܶ;->ܰۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩷ᩴۙ:I
 
     .line 187
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
@@ -221,10 +221,10 @@
 
     .line 190
     :cond_2
-    sget p1, Ll/۠۟ܶ;->ۨۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۤᩴۙ:I
 
     .line 191
-    invoke-virtual {v0, p1, v3}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, p1, v3}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result p1
 
@@ -232,18 +232,18 @@
     invoke-virtual {p0, p1}, Lcom/google/android/material/navigation/NavigationBarView;->setItemTextAppearanceActiveBoldEnabled(Z)V
 
     .line 194
-    sget p1, Ll/۠۟ܶ;->ۚۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ᩴᩴۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
     .line 195
-    sget p1, Ll/۠۟ܶ;->ۚۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ᩴᩴۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -289,26 +289,26 @@
     invoke-virtual {p2, v6}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
 
     .line 211
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     .line 3370
     invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 214
     :cond_6
-    sget p1, Ll/۠۟ܶ;->ۗۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۬᩸ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
     .line 215
-    sget p1, Ll/۠۟ܶ;->ۗۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۬᩸ۙ:I
 
     .line 216
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p1
 
@@ -317,19 +317,19 @@
 
     .line 219
     :cond_7
-    sget p1, Ll/۠۟ܶ;->ۢۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۜ᩸ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
     .line 220
-    sget p1, Ll/۠۟ܶ;->ۢۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۜ᩸ۙ:I
 
     .line 221
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p1
 
@@ -338,19 +338,19 @@
 
     .line 224
     :cond_8
-    sget p1, Ll/۠۟ܶ;->۫ۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۟᩸ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_9
 
     .line 225
-    sget p1, Ll/۠۟ܶ;->۫ۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۟᩸ۙ:I
 
     .line 226
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p1
 
@@ -359,18 +359,18 @@
 
     .line 229
     :cond_9
-    sget p1, Ll/۠۟ܶ;->ۛۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۢ᩸ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_a
 
     .line 230
-    sget p1, Ll/۠۟ܶ;->ۛۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۢ᩸ۙ:I
 
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p1
 
@@ -380,10 +380,10 @@
 
     .line 233
     :cond_a
-    sget p1, Ll/۠۟ܶ;->ܿۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ᩳ᩸ۙ:I
 
     .line 234
-    invoke-static {v6, v0, p1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/֫ᩳ;I)Landroid/content/res/ColorStateList;
+    invoke-static {v6, v0, p1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/ۙ᩹;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -396,15 +396,15 @@
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Ll/۟ܿ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p2, p1}, Ll/֡ᩳ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 238
-    sget p1, Ll/۠۟ܶ;->᩹ۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ܳᩴۙ:I
 
     const/4 p2, -0x1
 
     .line 239
-    invoke-virtual {v0, p1, p2}, Ll/֫ᩳ;->ۖ(II)I
+    invoke-virtual {v0, p1, p2}, Ll/ۙ᩹;->᩸(II)I
 
     move-result p1
 
@@ -412,9 +412,9 @@
     invoke-virtual {p0, p1}, Lcom/google/android/material/navigation/NavigationBarView;->setLabelVisibilityMode(I)V
 
     .line 243
-    sget p1, Ll/۠۟ܶ;->᩻ۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۡ᩸ۙ:I
 
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
@@ -427,10 +427,10 @@
 
     .line 247
     :cond_b
-    sget p1, Ll/۠۟ܶ;->ۙۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۙᩴۙ:I
 
     .line 248
-    invoke-static {v6, v0, p1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/֫ᩳ;I)Landroid/content/res/ColorStateList;
+    invoke-static {v6, v0, p1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/ۙ᩹;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -439,10 +439,10 @@
 
     .line 252
     :goto_1
-    sget p1, Ll/۠۟ܶ;->ۧۖۙ:I
+    sget p1, Ll/ܰ۬ܺ;->֨᩸ۙ:I
 
     .line 253
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
@@ -452,7 +452,7 @@
     invoke-virtual {p0, v3}, Lcom/google/android/material/navigation/NavigationBarView;->setItemActiveIndicatorEnabled(Z)V
 
     .line 259
-    sget-object p2, Ll/۠۟ܶ;->ۤۖۙ:[I
+    sget-object p2, Ll/ܰ۬ܺ;->ۛ᩸ۙ:[I
 
     .line 260
     invoke-virtual {v6, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
@@ -460,7 +460,7 @@
     move-result-object p1
 
     .line 263
-    sget p2, Ll/۠۟ܶ;->ܺۖۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ܰ᩸ۙ:I
 
     .line 264
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -471,7 +471,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/navigation/NavigationBarView;->setItemActiveIndicatorWidth(I)V
 
     .line 268
-    sget p2, Ll/۠۟ܶ;->᩷ۖۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۘ᩸ۙ:I
 
     .line 269
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -482,7 +482,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/navigation/NavigationBarView;->setItemActiveIndicatorHeight(I)V
 
     .line 273
-    sget p2, Ll/۠۟ܶ;->᩶ۖۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩶᩸ۙ:I
 
     .line 274
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
@@ -493,7 +493,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/navigation/NavigationBarView;->setItemActiveIndicatorMarginHorizontal(I)V
 
     .line 278
-    sget p2, Ll/۠۟ܶ;->۟ۖۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩺᩸ۙ:I
 
     .line 279
     invoke-static {v6, p1, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -504,7 +504,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/navigation/NavigationBarView;->setItemActiveIndicatorColor(Landroid/content/res/ColorStateList;)V
 
     .line 285
-    sget p2, Ll/۠۟ܶ;->֡ۖۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ܿ᩸ۙ:I
 
     .line 286
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -528,18 +528,18 @@
 
     .line 295
     :cond_c
-    sget p1, Ll/۠۟ܶ;->֨ۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۫ᩴۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_d
 
     .line 296
-    sget p1, Ll/۠۟ܶ;->֨ۚۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۫ᩴۙ:I
 
-    invoke-virtual {v0, p1, v4}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v4}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
@@ -547,7 +547,7 @@
 
     .line 299
     :cond_d
-    invoke-virtual {v0}, Ll/֫ᩳ;->ۚ()V
+    invoke-virtual {v0}, Ll/ۙ᩹;->ᩴ()V
 
     .line 301
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -557,7 +557,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/navigation/NavigationBarView$1;-><init>(Lcom/google/android/material/navigation/NavigationBarView;)V
 
-    invoke-virtual {v1, p1}, Ll/۫۬;->setCallback(Ll/֡۬;)V
+    invoke-virtual {v1, p1}, Ll/ۢۚ;->setCallback(Ll/۟ۚ;)V
 
     return-void
 .end method
@@ -589,13 +589,13 @@
     if-nez v0, :cond_0
 
     .line 898
-    new-instance v0, Ll/ۗ֨;
+    new-instance v0, Ll/᩷ۚ;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ll/ۗ֨;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ll/᩷ۚ;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/google/android/material/navigation/NavigationBarView;->menuInflater:Landroid/view/MenuInflater;
 
@@ -859,7 +859,7 @@
     return-object v0
 .end method
 
-.method public getMenuView()Ll/۬ۘ;
+.method public getMenuView()Ll/ۧ֫;
     .locals 1
 
     .line 376
@@ -980,7 +980,7 @@
     check-cast p1, Lcom/google/android/material/navigation/NavigationBarView$SavedState;
 
     .line 931
-    invoke-virtual {p1}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -991,7 +991,7 @@
 
     iget-object p1, p1, Lcom/google/android/material/navigation/NavigationBarView$SavedState;->menuPresenterState:Landroid/os/Bundle;
 
-    invoke-virtual {v0, p1}, Ll/۫۬;->restorePresenterStates(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Ll/ۢۚ;->restorePresenterStates(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1019,7 +1019,7 @@
     .line 920
     iget-object v2, p0, Lcom/google/android/material/navigation/NavigationBarView;->menu:Lcom/google/android/material/navigation/NavigationBarMenu;
 
-    invoke-virtual {v2, v0}, Ll/۫۬;->savePresenterStates(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v0}, Ll/ۢۚ;->savePresenterStates(Landroid/os/Bundle;)V
 
     return-object v1
 .end method
@@ -1325,7 +1325,7 @@
     .line 727
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarView;->menu:Lcom/google/android/material/navigation/NavigationBarMenu;
 
-    invoke-virtual {v0, p1}, Ll/۫۬;->findItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v0, p1}, Ll/ۢۚ;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -1338,7 +1338,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Ll/۫۬;->performItemAction(Landroid/view/MenuItem;Ll/᩹ۘ;I)Z
+    invoke-virtual {v0, p1, v1, v2}, Ll/ۢۚ;->performItemAction(Landroid/view/MenuItem;Ll/ۚ֫;I)Z
 
     move-result v0
 

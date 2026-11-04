@@ -1,50 +1,68 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.PrimitiveIterator;
+import java.util.function.Consumer;
+import java.util.function.DoubleConsumer;
 
-/* JADX INFO: renamed from: l.ܶܳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5J5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15295 extends AbstractC6724 {
+/* JADX INFO: renamed from: l.ܳۧۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C15295 implements InterfaceC16787, InterfaceC19597 {
+    public final /* synthetic */ PrimitiveIterator.OfDouble a;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Iterable f49835;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18116 f49836;
-
-    public C15295(C18116 c18116, Collection collection) {
-        this.f49836 = c18116;
-        this.f49835 = collection;
+    public /* synthetic */ C15295(PrimitiveIterator.OfDouble ofDouble) {
+        this.a = ofDouble;
     }
 
-    @Override // java.util.AbstractMap, java.util.Map
-    public final boolean containsKey(Object obj) {
-        return get(obj) != null;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Object get(Object obj) {
-        if (!(obj instanceof C9548)) {
-            return null;
+    public final /* synthetic */ boolean equals(Object obj) {
+        PrimitiveIterator.OfDouble ofDouble = this.a;
+        if (obj instanceof C15295) {
+            obj = ((C15295) obj).a;
         }
-        C9548 c9548 = (C9548) obj;
-        C21644 c21644 = (C21644) this.f49836.f57930.get(c9548.f32247);
-        if (c21644 == null || !((C9548) c21644.getKey()).equals(c9548)) {
-            return null;
-        }
-        return c21644.getValue();
+        return ofDouble.equals(obj);
     }
 
-    @Override // java.util.AbstractMap, java.util.Map
-    public final int size() {
-        return this.f49836.f57930.size();
+    @Override // l.InterfaceC24073
+    public final /* synthetic */ void forEachRemaining(Object obj) {
+        this.a.forEachRemaining(obj);
     }
 
-    @Override // l.AbstractC6724
-    /* JADX INFO: renamed from: ۙ */
-    public final Iterator mo18156() {
-        return this.f49835.iterator();
+    @Override // l.InterfaceC16787, java.util.Iterator, l.InterfaceC19597
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        this.a.forEachRemaining((Consumer<? super Double>) consumer);
+    }
+
+    @Override // l.InterfaceC16787
+    public final /* synthetic */ void forEachRemaining(DoubleConsumer doubleConsumer) {
+        this.a.forEachRemaining(doubleConsumer);
+    }
+
+    @Override // java.util.Iterator
+    public final /* synthetic */ boolean hasNext() {
+        return this.a.hasNext();
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.InterfaceC16787, java.util.Iterator
+    public final /* synthetic */ Double next() {
+        return this.a.next();
+    }
+
+    @Override // java.util.Iterator
+    public final /* synthetic */ Object next() {
+        return this.a.next();
+    }
+
+    @Override // l.InterfaceC16787
+    public final /* synthetic */ double nextDouble() {
+        return this.a.nextDouble();
+    }
+
+    @Override // java.util.Iterator
+    public final /* synthetic */ void remove() {
+        this.a.remove();
     }
 }

@@ -1,27 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ᩴ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6X1 */
+import android.transition.Transition;
+import android.view.View;
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.᩸֫ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 451G */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22473 {
+public final class C22473 implements Transition.TransitionListener {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f73369;
+    public final /* synthetic */ ArrayList f72710;
 
-    static {
-        int[] iArr = new int[EnumC4812.values().length];
-        f73369 = iArr;
-        try {
-            iArr[EnumC4812.MATCH_NOT_FOUND.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ View f72711;
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionCancel(Transition transition) {
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionPause(Transition transition) {
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionResume(Transition transition) {
+    }
+
+    public C22473(View view, ArrayList arrayList) {
+        this.f72711 = view;
+        this.f72710 = arrayList;
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionEnd(Transition transition) {
+        transition.removeListener(this);
+        this.f72711.setVisibility(8);
+        ArrayList arrayList = this.f72710;
+        int size = arrayList.size();
+        for (int i = 0; i < size; i++) {
+            ((View) arrayList.get(i)).setVisibility(0);
         }
-        try {
-            f73369[EnumC4812.MATCH_AMBIGUOUS.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f73369[EnumC4812.MATCH_OVERLAP.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
+    }
+
+    @Override // android.transition.Transition.TransitionListener
+    public final void onTransitionStart(Transition transition) {
+        transition.removeListener(this);
+        transition.addListener(this);
     }
 }

@@ -1,17 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ܽۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5E1 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0534 extends AbstractC23114 {
+import java.util.Map;
+import java.util.function.Predicate;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public Object f2284;
+/* JADX INFO: renamed from: l.֡ܺۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7QT */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C0534 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
 
-    @Override // l.AbstractC23114
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo2544(AbstractC20521 abstractC20521) {
-        abstractC20521.mo8457(this.f2284);
-        m51119(abstractC20521);
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((C3517) ((Map.Entry) obj).getValue()).f12092;
     }
 }

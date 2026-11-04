@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public final synthetic ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+.field public final synthetic ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
 
 # direct methods
@@ -17,7 +17,7 @@
     .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     .locals 6
 
     .line 122
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     invoke-virtual {v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۙ()Z
 
@@ -37,7 +37,7 @@
     if-eqz v0, :cond_0
 
     .line 123
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     invoke-static {v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۙ(Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;)V
 
@@ -45,7 +45,7 @@
 
     .line 125
     :cond_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler$1;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     move-object v0, v1
 
@@ -54,7 +54,7 @@
 
     .line 212
     :try_start_0
-    iget-object v2, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    iget-object v2, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     invoke-virtual {v2}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۙ()Ljava/util/Map;
 
@@ -83,7 +83,7 @@
     check-cast v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     .line 213
-    iget v4, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v4, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -96,23 +96,23 @@
     if-eqz v4, :cond_1
 
     .line 214
-    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     iget-object v5, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۙ:Landroid/net/ConnectivityManager;
 
     .line 216
-    invoke-virtual {v3, v4, v5}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ(Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;Landroid/net/ConnectivityManager;)Z
+    invoke-virtual {v3, v4, v5}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷(Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;Landroid/net/ConnectivityManager;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
     .line 217
-    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    iget-object v4, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
-    iget v3, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v3, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
-    sget-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۨۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۤۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v4, v3, v5}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۙ(ILcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;)V
     :try_end_0

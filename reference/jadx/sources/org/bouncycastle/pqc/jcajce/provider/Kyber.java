@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C18917;
-import l.C7997;
+import l.C18011;
+import l.C22121;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -42,9 +42,9 @@ public class Kyber {
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.KYBER768", "ML-KEM-768");
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.KYBER1024", "ML-KEM-1024");
             KyberKeyFactorySpi kyberKeyFactorySpi = new KyberKeyFactorySpi();
-            StringBuilder sbM43575 = C18917.m43575(configurableProvider, "Cipher.KYBER", "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Base", "Alg.Alias.Cipher.");
+            StringBuilder sbM50077 = C22121.m50077(configurableProvider, "Cipher.KYBER", "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Base", "Alg.Alias.Cipher.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier4 = BCObjectIdentifiers.pqc_kem_kyber;
-            C7997.m21058(sbM43575, aSN1ObjectIdentifier4, configurableProvider, "KYBER");
+            C18011.m41992(sbM50077, aSN1ObjectIdentifier4, configurableProvider, "KYBER");
             addCipherAlgorithm(configurableProvider, "ML-KEM-512", "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Kyber512", aSN1ObjectIdentifier);
             addCipherAlgorithm(configurableProvider, "ML-KEM-768", "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Kyber768", aSN1ObjectIdentifier2);
             addCipherAlgorithm(configurableProvider, "ML-KEM-1024", "org.bouncycastle.pqc.jcajce.provider.kyber.KyberCipherSpi$Kyber1024", aSN1ObjectIdentifier3);

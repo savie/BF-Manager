@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x9;
 
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1Null;
 import org.bouncycastle.asn1.ASN1Object;
@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X962Parameters extends ASN1Object implements ASN1Choice {
     public ASN1Primitive params;
 
@@ -42,7 +42,7 @@ public class X962Parameters extends ASN1Object implements ASN1Choice {
         try {
             return new X962Parameters(ASN1Primitive.fromByteArray((byte[]) obj));
         } catch (Exception e) {
-            throw new IllegalArgumentException(C8479.m22142(e, new StringBuilder("unable to parse encoded data: ")));
+            throw new IllegalArgumentException(C16076.m38224(e, new StringBuilder("unable to parse encoded data: ")));
         }
     }
 

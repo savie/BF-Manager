@@ -1,43 +1,24 @@
 package l;
 
-import bin.mt.plus.R;
-import java.util.concurrent.CancellationException;
-
-/* JADX INFO: renamed from: l.ۛۗۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 66VE */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5780 {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m15915(C6222 c6222) throws C22356 {
-        m15912();
-        boolean zFind = c6222.find();
-        m15913(c6222);
-        return zFind;
+/* JADX INFO: renamed from: l.ۚܽۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 82T8 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5780 extends AbstractC22188 implements InterfaceC14269 {
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m15914(C6222 c6222, int i) throws C22356 {
-        m15912();
-        boolean zFind = c6222.find(i);
-        m15913(c6222);
-        return zFind;
+    @Override // l.InterfaceC24077
+    /* JADX INFO: renamed from: ᩹ */
+    public final int mo2772() {
+        return ((InterfaceC14269) this.f71487).mo2772();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15913(C6222 c6222) throws C22356 {
-        m15912();
-        if (c6222.m17270()) {
-            throw new C22356(R.string.MT_Protector);
-        }
-        if (c6222.m17258()) {
-            throw new C22356(R.string.MT_Protector);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15912() {
-        if (Thread.currentThread().isInterrupted()) {
-            throw new CancellationException("Search canceled");
-        }
+    @Override // l.InterfaceC0210
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo1655() {
+        return ((InterfaceC14269) this.f71487).mo1655();
     }
 }

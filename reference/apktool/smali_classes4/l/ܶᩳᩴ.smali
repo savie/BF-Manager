@@ -1,70 +1,42 @@
 .class public final synthetic Ll/ܶᩳᩴ;
 .super Ljava/lang/Object;
-.source "1BWX"
+.source "L9CC"
 
 # interfaces
-.implements Ljava/util/function/LongUnaryOperator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic ۙ:Ljava/util/function/UnaryOperator;
+.field public final synthetic ܰ:Ll/᩹ᩳᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/UnaryOperator;)V
+.method public synthetic constructor <init>(Ll/᩹ᩳᩴ;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܶᩳᩴ;->ۙ:Ljava/util/function/UnaryOperator;
+    iput-object p1, p0, Ll/ܶᩳᩴ;->ܰ:Ll/᩹ᩳᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/LongUnaryOperator;)Ljava/util/function/LongUnaryOperator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ᩴ᩻ᩴ;->$default$andThen(Ljava/util/function/LongUnaryOperator;Ljava/util/function/LongUnaryOperator;)Ljava/util/function/LongUnaryOperator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final applyAsLong(J)J
+.method public final run()V
     .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/ܶᩳᩴ;->ۙ:Ljava/util/function/UnaryOperator;
+    .line 2
+    iget-object v0, p0, Ll/ܶᩳᩴ;->ܰ:Ll/᩹ᩳᩴ;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 1412
+    iget-object v0, v0, Ll/᩹ᩳᩴ;->ۙ:Ll/ۖᩳᩴ;
 
-    move-result-object p1
+    invoke-static {v0}, Ll/ۖᩳᩴ;->ۨ(Ll/ۖᩳᩴ;)V
 
-    invoke-interface {v0, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1413
+    invoke-static {v0}, Ll/ۖᩳᩴ;->᩵(Ll/ۖᩳᩴ;)V
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public synthetic compose(Ljava/util/function/LongUnaryOperator;)Ljava/util/function/LongUnaryOperator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ᩴ᩻ᩴ;->$default$compose(Ljava/util/function/LongUnaryOperator;Ljava/util/function/LongUnaryOperator;)Ljava/util/function/LongUnaryOperator;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

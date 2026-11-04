@@ -1,84 +1,120 @@
-.class public final synthetic Ll/᩵ᩴۨ;
+.class public final Ll/᩵ᩴۨ;
 .super Ljava/lang/Object;
-.source "G7I1"
-
-# interfaces
-.implements Ll/ܰۡۨ;
+.source "H4E0"
 
 
 # instance fields
-.field public final synthetic ۙ:Ljava/lang/Character$UnicodeBlock;
+.field public ۙ:I
+
+.field public ۤ:I
+
+.field public ᩴ:Z
+
+.field public ᩷:I
+
+.field public ᩸:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Character$UnicodeBlock;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
+    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩵ᩴۨ;->ۙ:Ljava/lang/Character$UnicodeBlock;
+    const/4 v0, -0x1
+
+    .line 281
+    iput v0, p0, Ll/᩵ᩴۨ;->ۙ:I
+
+    .line 282
+    iput v0, p0, Ll/᩵ᩴۨ;->᩷:I
+
+    .line 283
+    iput v0, p0, Ll/᩵ᩴۨ;->ۤ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
+.method public final ۙ()Ll/ۨᩴۨ;
     .locals 1
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 370
+    new-instance v0, Ll/ۨᩴۨ;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Ll/ۨᩴۨ;-><init>(Ll/᩵ᩴۨ;)V
 
     return-object v0
 .end method
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(I)Z
-    .locals 1
+.method public final ۤ()V
+    .locals 5
 
     .line 2
-    iget-object v0, p0, Ll/᩵ᩴۨ;->ۙ:Ljava/lang/Character$UnicodeBlock;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    .line 288
-    invoke-static {p1}, Ljava/lang/Character$UnicodeBlock;->of(I)Ljava/lang/Character$UnicodeBlock;
+    const/4 v1, 0x3
 
-    move-result-object p1
+    int-to-long v1, v1
 
-    if-ne v0, p1, :cond_0
+    .line 342
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
-    const/4 p1, 0x1
+    move-result-wide v0
 
-    return p1
+    const-wide/32 v2, 0x7fffffff
+
+    cmp-long v4, v0, v2
+
+    if-lez v4, :cond_0
+
+    const v0, 0x7fffffff
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    long-to-int v0, v0
 
-    return p1
+    .line 345
+    :goto_0
+    iput v0, p0, Ll/᩵ᩴۨ;->ۤ:I
+
+    return-void
 .end method
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+.method public final ᩷()V
+    .locals 5
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    .line 2
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object p1
+    const/4 v1, 0x3
 
-    return-object p1
+    int-to-long v1, v1
+
+    .line 309
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v0
+
+    const-wide/32 v2, 0x7fffffff
+
+    cmp-long v4, v0, v2
+
+    if-lez v4, :cond_0
+
+    const v0, 0x7fffffff
+
+    goto :goto_0
+
+    :cond_0
+    long-to-int v0, v0
+
+    .line 312
+    :goto_0
+    iput v0, p0, Ll/᩵ᩴۨ;->ۙ:I
+
+    return-void
 .end method

@@ -1,52 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ᩶ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
+/* JADX INFO: renamed from: l.ܶܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: O91I */
 /* JADX INFO: loaded from: classes5.dex */
-public class C16167 extends AbstractC20981 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final InterfaceC0769 f52244;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f52245;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public volatile InterfaceC12639 f52246 = ConcurrentMapC21937.f71143;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Object f52247;
-
-    public C16167(Object obj, int i, InterfaceC0769 interfaceC0769) {
-        this.f52247 = obj;
-        this.f52245 = i;
-        this.f52244 = interfaceC0769;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    public final Object getKey() {
-        return this.f52247;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۚ */
-    public final InterfaceC12639 mo3304() {
-        return this.f52246;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
+public final class C16167 implements InterfaceC16299 {
+    @Override // l.InterfaceC16299
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3303(InterfaceC12639 interfaceC12639) {
-        this.f52246 = interfaceC12639;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    public final int getHash() {
-        return this.f52245;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    public final InterfaceC0769 getNext() {
-        return this.f52244;
+    public final Object mo6845(C10420 c10420, InterfaceC17045 interfaceC17045) {
+        if (EnumC22135.BULLET == AbstractC22881.f74344.m29675(interfaceC17045)) {
+            return new C12438(c10420.m26734(), ((Integer) AbstractC22881.f74339.m29675(interfaceC17045)).intValue());
+        }
+        return new C7964(c10420.m26734(), String.valueOf(AbstractC22881.f74343.m29675(interfaceC17045)), (InterfaceC10946) AbstractC22881.f74342.m29675(interfaceC17045));
     }
 }

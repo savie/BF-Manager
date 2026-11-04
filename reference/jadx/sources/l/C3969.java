@@ -1,20 +1,21 @@
 package l;
 
-import android.content.Intent;
-import bin.mt.plus.R;
+import java.util.Date;
 
-/* JADX INFO: renamed from: l.ۘ۬᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 98W2 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3969 extends AbstractC15260 {
-    @Override // l.AbstractC15260
+/* JADX INFO: renamed from: l.ۘۛܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G851 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C3969 implements InterfaceC16075 {
+    public final String toString() {
+        return "DefaultDateTypeAdapter#DEFAULT_STYLE_FACTORY";
+    }
+
+    @Override // l.InterfaceC16075
     /* JADX INFO: renamed from: ۙ */
-    public final void mo4217(AbstractActivityC12483 abstractActivityC12483) {
-        if (!C1709.m5692()) {
-            C15829.m37611(R.string.MT_Protector);
-            new ViewOnClickListenerC19680(abstractActivityC12483);
-        } else {
-            abstractActivityC12483.startActivity(new Intent(abstractActivityC12483, (Class<?>) ActivityC23376.class));
+    public final AbstractC17567 mo1459(C24522 c24522, C6446 c6446) {
+        if (c6446.m18232() == Date.class) {
+            return new C18139(AbstractC21123.f67477, 2, 2);
         }
+        return null;
     }
 }

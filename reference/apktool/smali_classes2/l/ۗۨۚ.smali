@@ -1,72 +1,41 @@
-.class public final synthetic Ll/ۗۨۚ;
+.class public final Ll/ۗۨۚ;
 .super Ljava/lang/Object;
-.source "R16R"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "079R"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/ۛܳۖ;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ۛ:Landroid/view/View;
+.field public final ۤ:Z
 
-.field public final synthetic ۫:I
+.field public final ᩴ:Ljava/lang/String;
 
-.field public final synthetic ܺ:Ll/ۖۖۚ;
+.field public final ᩷:Ljava/lang/String;
 
-.field public final synthetic ܽ:I
-
-.field public final synthetic ܿ:I
-
-.field public final synthetic ᩶:I
+.field public final ᩸:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۖۖۚ;ILl/ۛܳۖ;IIILandroid/view/View;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 0
 
-    .line 0
+    .line 687
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۗۨۚ;->ܺ:Ll/ۖۖۚ;
+    .line 688
+    iput-object p1, p0, Ll/ۗۨۚ;->ᩴ:Ljava/lang/String;
 
-    iput p2, p0, Ll/ۗۨۚ;->᩶:I
+    .line 689
+    iput-object p2, p0, Ll/ۗۨۚ;->ۙ:Ljava/lang/String;
 
-    iput-object p3, p0, Ll/ۗۨۚ;->֡:Ll/ۛܳۖ;
+    .line 690
+    iput-object p3, p0, Ll/ۗۨۚ;->᩷:Ljava/lang/String;
 
-    iput p4, p0, Ll/ۗۨۚ;->ܽ:I
+    .line 691
+    iput-boolean p4, p0, Ll/ۗۨۚ;->ۤ:Z
 
-    iput p5, p0, Ll/ۗۨۚ;->۫:I
-
-    iput p6, p0, Ll/ۗۨۚ;->ܿ:I
-
-    iput-object p7, p0, Ll/ۗۨۚ;->ۛ:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 7
-
-    .line 0
-    iget v5, p0, Ll/ۗۨۚ;->ܿ:I
-
-    iget-object v6, p0, Ll/ۗۨۚ;->ۛ:Landroid/view/View;
-
-    iget-object v0, p0, Ll/ۗۨۚ;->ܺ:Ll/ۖۖۚ;
-
-    iget v1, p0, Ll/ۗۨۚ;->᩶:I
-
-    iget-object v2, p0, Ll/ۗۨۚ;->֡:Ll/ۛܳۖ;
-
-    iget v3, p0, Ll/ۗۨۚ;->ܽ:I
-
-    iget v4, p0, Ll/ۗۨۚ;->۫:I
-
-    invoke-static/range {v0 .. v6}, Ll/ۖۖۚ;->ۙ(Ll/ۖۖۚ;ILl/ۛܳۖ;IIILandroid/view/View;)V
+    .line 692
+    iput-boolean p5, p0, Ll/ۗۨۚ;->᩸:Z
 
     return-void
 .end method

@@ -1,12 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ܽۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6QA */
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.֫۬ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 998H */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1943 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 10;
+public final /* synthetic */ class C1943 implements InterfaceC21941 {
+    @Override // l.InterfaceC21941
+    public final Object get() {
+        return RunnableC21479.m48865(R.drawable.MT_Protector);
     }
 }

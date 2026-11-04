@@ -6,7 +6,7 @@ import java.util.Set;
 import javax.crypto.spec.DHParameterSpec;
 import org.bouncycastle.jce.spec.ECParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ProviderConfiguration {
     Set getAcceptableNamedCurves();
 

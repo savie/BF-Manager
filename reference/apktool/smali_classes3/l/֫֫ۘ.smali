@@ -1,66 +1,114 @@
 .class public final synthetic Ll/֫֫ۘ;
 .super Ljava/lang/Object;
-.source "F1E5"
+.source "A451"
 
 # interfaces
-.implements Ll/ܿ᩵ۚ;
-.implements Ll/᩸᩻᩺;
-.implements Lcom/google/android/material/animation/AnimatableView$Listener;
+.implements Ljava/util/function/BiPredicate;
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/lang/Object;
+.field public final synthetic ܰ:Ll/᩻֫ۘ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Ll/᩻֫ۘ;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Ll/֫֫ۘ;->ܺ:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֫֫ۘ;->ܰ:Ll/᩻֫ۘ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd()V
-    .locals 1
+.method public synthetic and(Ljava/util/function/BiPredicate;)Ljava/util/function/BiPredicate;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Ll/֫֫ۘ;->ܺ:Ljava/lang/Object;
+    invoke-static {p0, p1}, Ll/᩵ۧۗ;->$default$and(Ljava/util/function/BiPredicate;Ljava/util/function/BiPredicate;)Ljava/util/function/BiPredicate;
 
-    check-cast v0, Landroid/animation/Animator;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public ۙ(I)V
+.method public synthetic negate()Ljava/util/function/BiPredicate;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Ll/֫֫ۘ;->ܺ:Ljava/lang/Object;
+    invoke-static {p0}, Ll/᩵ۧۗ;->$default$negate(Ljava/util/function/BiPredicate;)Ljava/util/function/BiPredicate;
 
-    check-cast v0, Ll/ۛۨ֨;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ll/ᩳ۟ۜ;->ۜ(I)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public ۙ(Ll/᩷۠ۚ;)V
-    .locals 1
+.method public synthetic or(Ljava/util/function/BiPredicate;)Ljava/util/function/BiPredicate;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Ll/֫֫ۘ;->ܺ:Ljava/lang/Object;
+    invoke-static {p0, p1}, Ll/᩵ۧۗ;->$default$or(Ljava/util/function/BiPredicate;Ljava/util/function/BiPredicate;)Ljava/util/function/BiPredicate;
 
-    check-cast v0, Ll/۠᩺ۡ;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Ll/ܺ۬ۡ;->ۙ(Ll/᩷۠ۚ;)V
+    return-object p1
+.end method
 
-    return-void
+.method public final test(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
+
+    .line 2
+    check-cast p2, Ll/ܰᩳۘ;
+
+    .line 4826
+    instance-of v0, p1, Ll/᩸۟᩺;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/᩸۟᩺;
+
+    .line 4827
+    invoke-virtual {p1, p2}, Ll/᩸۟᩺;->᩷(Ll/ܰᩳۘ;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 4828
+    :cond_0
+    instance-of v0, p1, Ll/ܺᩳۘ;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Ll/ܺᩳۘ;
+
+    .line 4836
+    invoke-virtual {p1}, Ll/ܺᩳۘ;->ۤ()[Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/᩹ܺۗ;->of([Ljava/lang/Object;)Ll/᩵ܺۗ;
+
+    move-result-object p1
+
+    new-instance v0, Ll/ۧ֫ۘ;
+
+    iget-object v1, p0, Ll/֫֫ۘ;->ܰ:Ll/᩻֫ۘ;
+
+    invoke-direct {v0, v1, p2}, Ll/ۧ֫ۘ;-><init>(Ll/᩻֫ۘ;Ll/ܰᩳۘ;)V
+
+    .line 4837
+    invoke-interface {p1, v0}, Ll/᩵ܺۗ;->anyMatch(Ljava/util/function/Predicate;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

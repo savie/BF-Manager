@@ -1,115 +1,25 @@
 package l;
 
-import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
-import android.graphics.ColorFilter;
-import android.graphics.Matrix;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.widget.ImageView;
-import bin.mt.plugin.api.ui.PluginImageView;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.ۤ۬ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7IB */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10304 extends C3247 implements PluginImageView {
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final Drawable getImageDrawable() {
-        return ((ImageView) this.f12078).getDrawable();
+/* JADX INFO: renamed from: l.ۢᩳܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: JBI9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10304 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C24960 f32881;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m26553(C24960 c24960) {
+        C10304 c10304 = new C10304(c24960);
+        C20946[] c20946Arr = new C20946[c24960.m55741()];
+        HashSet hashSet = new HashSet();
+        c24960.m55733(new C19255(c10304, c20946Arr, hashSet));
+        c24960.m55728(hashSet);
     }
 
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImage(Drawable drawable) {
-        ((ImageView) this.f12078).setImageDrawable(drawable);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImage(Bitmap bitmap) {
-        ((ImageView) this.f12078).setImageBitmap(bitmap);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final ColorStateList getImageTintList() {
-        return ((ImageView) this.f12078).getImageTintList();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImageTintList(ColorStateList colorStateList) {
-        ((ImageView) this.f12078).setImageTintList(colorStateList);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final PorterDuff.Mode getImageTintMode() {
-        return ((ImageView) this.f12078).getImageTintMode();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImageTintMode(PorterDuff.Mode mode) {
-        ((ImageView) this.f12078).setImageTintMode(mode);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final ImageView.ScaleType getScaleType() {
-        return ((ImageView) this.f12078).getScaleType();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setScaleType(ImageView.ScaleType scaleType) {
-        ((ImageView) this.f12078).setScaleType(scaleType);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final Matrix getImageMatrix() {
-        return ((ImageView) this.f12078).getImageMatrix();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImageMatrix(Matrix matrix) {
-        ((ImageView) this.f12078).setImageMatrix(matrix);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final boolean getCropToPadding() {
-        return ((ImageView) this.f12078).getCropToPadding();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setCropToPadding(boolean z) {
-        ((ImageView) this.f12078).setCropToPadding(z);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final ColorFilter getColorFilter() {
-        return ((ImageView) this.f12078).getColorFilter();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setColorFilter(int i, PorterDuff.Mode mode) {
-        ((ImageView) this.f12078).setColorFilter(i, mode);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setColorFilter(int i) {
-        ((ImageView) this.f12078).setColorFilter(i);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setColorFilter(ColorFilter colorFilter) {
-        ((ImageView) this.f12078).setColorFilter(colorFilter);
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void clearColorFilter() {
-        ((ImageView) this.f12078).clearColorFilter();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final int getImageAlpha() {
-        return ((ImageView) this.f12078).getImageAlpha();
-    }
-
-    @Override // bin.mt.plugin.api.ui.PluginImageView
-    public final void setImageAlpha(int i) {
-        ((ImageView) this.f12078).setImageAlpha(i);
+    public C10304(C24960 c24960) {
+        this.f32881 = c24960;
     }
 }

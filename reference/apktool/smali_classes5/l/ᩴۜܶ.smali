@@ -1,81 +1,83 @@
-.class public final enum Ll/ᩴۜܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ᩴۜܶ;
+.super Ll/ܰۜܶ;
+.source "88A4"
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ll/᩶ۜܶ;)V
+    .locals 0
 
-    const-string v0, "FORMAT_11X"
-
-    const/4 v1, 0x4
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ᩴۜܶ;-><init>(Ljava/lang/String;I)V
+    .line 69
+    invoke-direct {p0, p1}, Ll/ܰۜܶ;-><init>(Ll/᩶ۜܶ;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public static synthetic ۙ(Ll/ᩴۜܶ;Ll/ۚۜܶ;[Ll/᩷ۜܶ;)Ll/ۧۜܶ;
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 60
+    invoke-virtual {p0, p1, p2}, Ll/ܰۜܶ;->ۙ(Ll/ۚۜܶ;[Ll/᩷ۜܶ;)Ll/ۧۜܶ;
 
-    .line 107
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 8
+.method public final ۙ(Ljava/lang/String;)Ljava/util/ArrayList;
+    .locals 2
 
-    .line 111
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    if-eqz p1, :cond_1
 
-    move-result v2
+    const-string v0, "\\\\"
 
-    .line 112
-    invoke-static {p1}, Ll/۟ۜܶ;->ۖ(I)I
+    .line 135
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v7
+    move-result v1
 
-    .line 113
-    new-instance p1, Ll/᩶ۜܶ;
+    if-eqz v1, :cond_0
 
-    const/4 v4, 0x0
+    goto :goto_0
 
-    const-wide/16 v5, 0x0
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    move-object v0, p1
+    .line 136
+    :goto_0
+    new-instance v0, Ll/ۤۜܶ;
 
-    move-object v1, p0
+    .line 55
+    new-instance v1, Ll/᩺ۜܶ;
 
-    invoke-direct/range {v0 .. v7}, Ll/᩶ۜܶ;-><init>(Ll/۟ۜܶ;IIIJI)V
+    .line 49
+    invoke-direct {v1}, Ll/ۘۜܶ;-><init>()V
+
+    .line 56
+    invoke-virtual {v1, p1}, Ll/ۘۜܶ;->ۙ(Ljava/lang/String;)V
+
+    .line 136
+    invoke-direct {v0, p0, v1}, Ll/ۤۜܶ;-><init>(Ll/ᩴۜܶ;Ll/᩺ۜܶ;)V
+
+    invoke-virtual {v0}, Ll/᩸ۜܶ;->ۙ()V
+
+    invoke-virtual {v0}, Ll/᩸ۜܶ;->᩷()Ljava/util/ArrayList;
+
+    move-result-object p1
 
     return-object p1
-.end method
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 1
+    .line 133
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    .line 121
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    const-string v0, "Server name must not be null"
 
-    move-result v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۙ()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ll/۟ۜܶ;->ܰ(II)S
-
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ۙ()V
-
-    return-void
+    throw p1
 .end method

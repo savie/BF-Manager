@@ -20,7 +20,7 @@
 
 .field public dirtyColors:Z
 
-.field public interpolator:Ll/᩺ۜۙ;
+.field public interpolator:Ll/֫ۧۙ;
 
 .field public newIndicatorColorIndex:I
 
@@ -60,11 +60,11 @@
     iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     .line 58
-    new-instance p1, Ll/᩺ۜۙ;
+    new-instance p1, Ll/֫ۧۙ;
 
-    invoke-direct {p1}, Ll/᩺ۜۙ;-><init>()V
+    invoke-direct {p1}, Ll/֫ۧۙ;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/᩺ۜۙ;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/֫ۧۙ;
 
     return-void
 .end method
@@ -329,9 +329,9 @@
 
     check-cast v1, Lcom/google/android/material/progressindicator/DrawingDelegate$ActiveIndicator;
 
-    iget-object v3, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/᩺ۜۙ;
+    iget-object v3, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/֫ۧۙ;
 
-    invoke-virtual {v3, p1}, Ll/᩸ۜۙ;->getInterpolation(F)F
+    invoke-virtual {v3, p1}, Ll/᩻ۧۙ;->getInterpolation(F)F
 
     move-result v3
 
@@ -363,9 +363,9 @@
 
     check-cast v1, Lcom/google/android/material/progressindicator/DrawingDelegate$ActiveIndicator;
 
-    iget-object v3, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/᩺ۜۙ;
+    iget-object v3, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Ll/֫ۧۙ;
 
-    invoke-virtual {v3, p1}, Ll/᩸ۜۙ;->getInterpolation(F)F
+    invoke-virtual {v3, p1}, Ll/᩻ۧۙ;->getInterpolation(F)F
 
     move-result p1
 
@@ -415,7 +415,7 @@
     return-void
 .end method
 
-.method public registerAnimatorsCompleteCallback(Ll/ۖ֫ܰ;)V
+.method public registerAnimatorsCompleteCallback(Ll/۟ۖ᩷;)V
     .locals 0
 
     return-void

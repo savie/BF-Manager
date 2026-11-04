@@ -33,7 +33,7 @@ import org.bouncycastle.math.field.Polynomial;
 import org.bouncycastle.math.field.PolynomialExtensionField;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EC5Util {
 
     public class CustomCurves {

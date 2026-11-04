@@ -1,23 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩵ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D18B */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2730 implements Comparable {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 f10506;
+/* JADX INFO: renamed from: l.ۖܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R4U5 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C2730 implements Iterator {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f9085 = 0;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final long f10507;
+    public final /* synthetic */ AbstractC8696 f9086;
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return -Long.compare(this.f10507, ((C2730) obj).f10507);
+    public C2730(AbstractC8696 abstractC8696) {
+        this.f9086 = abstractC8696;
     }
 
-    public C2730(AbstractC20745 abstractC20745) {
-        this.f10506 = abstractC20745;
-        this.f10507 = abstractC20745.mo33964();
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f9085 < this.f9086.size();
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        int i = this.f9085;
+        this.f9085 = i + 1;
+        return this.f9086.mo23382(i);
     }
 }

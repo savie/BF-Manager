@@ -1,10 +1,10 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.util.Memoable;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Zuc256CoreEngine extends Zuc128CoreEngine {
     public byte[] theD;
     public static final byte[] EK_d = {34, 47, 36, 42, 109, 64, 64, 64, 64, 64, 64, 64, 64, 82, 16, UTF8.S_P3A};
@@ -23,7 +23,7 @@ public class Zuc256CoreEngine extends Zuc128CoreEngine {
             this.theD = EK_d64;
         } else {
             if (i != 128) {
-                throw new IllegalArgumentException(C8479.m22141(i, "Unsupported length: "));
+                throw new IllegalArgumentException(C13645.m33382(i, "Unsupported length: "));
             }
             this.theD = EK_d128;
         }

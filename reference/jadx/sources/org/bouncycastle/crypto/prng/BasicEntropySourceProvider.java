@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.prng;
 
 import java.security.SecureRandom;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BasicEntropySourceProvider implements EntropySourceProvider {
     public final boolean _predictionResistant;
     public final SecureRandom _sr;

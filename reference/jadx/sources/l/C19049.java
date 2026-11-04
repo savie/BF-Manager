@@ -1,32 +1,126 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ᩹ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1F8 */
+import android.os.Handler;
+import android.os.Looper;
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ᩳۨۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 78OY */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19049 extends C11994 {
-    @Override // l.C11994, l.InterfaceC1409
+public final class C19049 implements InterfaceC4879 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final ArrayList f61728 = new ArrayList(50);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Handler f61729;
+
+    public C19049(Handler handler) {
+        this.f61729 = handler;
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۤ */
+    public final Looper mo14968() {
+        return this.f61729.getLooper();
+    }
+
+    @Override // l.InterfaceC4879
     /* JADX INFO: renamed from: ۙ */
-    public final void mo4924(InterfaceC9380 interfaceC9380, InterfaceC3609 interfaceC3609, C22577 c22577, C2820 c2820) {
-        int iMo25192;
-        if (!interfaceC3609.mo7644()) {
-            throw new RuntimeException();
-        }
-        for (InterfaceC9961 interfaceC9961 : interfaceC3609.values()) {
-            int iMo25193 = interfaceC9961.mo25193();
-            if (iMo25193 < 16777220 || iMo25193 > 16777225 || ((iMo25192 = interfaceC9961.mo25192()) != 0 && iMo25192 != 1 && iMo25192 != 2 && iMo25192 != 3)) {
-                super.mo4924(interfaceC9380, interfaceC3609, c22577, c2820);
-                return;
+    public final boolean mo14964() {
+        return this.f61729.hasMessages(1);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC14068 mo14960(int i) {
+        C7862 c7862M44160 = m44160();
+        c7862M44160.m21396(this.f61729.obtainMessage(i));
+        return c7862M44160;
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC14068 mo14963(int i, Object obj) {
+        C7862 c7862M44160 = m44160();
+        c7862M44160.m21396(this.f61729.obtainMessage(i, obj));
+        return c7862M44160;
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC14068 mo14961(int i, int i2, int i3) {
+        C7862 c7862M44160 = m44160();
+        c7862M44160.m21396(this.f61729.obtainMessage(i, i2, i3));
+        return c7862M44160;
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC14068 mo14962(int i, int i2, Object obj) {
+        C7862 c7862M44160 = m44160();
+        c7862M44160.m21396(this.f61729.obtainMessage(i, 0, i2, obj));
+        return c7862M44160;
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo14967(InterfaceC14068 interfaceC14068) {
+        return ((C7862) interfaceC14068).m21397(this.f61729);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo14971(int i) {
+        return this.f61729.sendEmptyMessage(i);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo14965(long j) {
+        return this.f61729.sendEmptyMessageAtTime(2, j);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo14969(int i) {
+        C20782.m47565(i != 0);
+        this.f61729.removeMessages(i);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo14970() {
+        this.f61729.removeCallbacksAndMessages(null);
+    }
+
+    @Override // l.InterfaceC4879
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo14966(Runnable runnable) {
+        return this.f61729.post(runnable);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static C7862 m44160() {
+        C7862 c7862;
+        ArrayList arrayList = f61728;
+        synchronized (arrayList) {
+            if (arrayList.isEmpty()) {
+                c7862 = new C7862(0);
+            } else {
+                c7862 = (C7862) arrayList.remove(arrayList.size() - 1);
             }
         }
-        interfaceC9380.mo24062("plurals");
-        interfaceC9380.mo24061("name", interfaceC3609.mo7645());
-        C7054.m18906(interfaceC9380, interfaceC3609, c2820);
-        for (InterfaceC9961 interfaceC9962 : interfaceC3609.values()) {
-            interfaceC9380.mo24062("item");
-            interfaceC9380.mo24061("quantity", InterfaceC9961.f34034[interfaceC9962.mo25193() - 16777220]);
-            C7054.m18903(interfaceC9380, C7054.m18900(c22577, interfaceC9962));
-            interfaceC9380.mo24060("item");
+        return c7862;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m44159(C7862 c7862) {
+        ArrayList arrayList = f61728;
+        synchronized (arrayList) {
+            if (arrayList.size() < 50) {
+                arrayList.add(c7862);
+            }
         }
-        interfaceC9380.mo24060("plurals");
     }
 }

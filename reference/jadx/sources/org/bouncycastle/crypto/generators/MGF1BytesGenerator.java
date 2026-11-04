@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.params.MGFParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MGF1BytesGenerator implements DerivationFunction {
     public Digest digest;
     public int hLen;

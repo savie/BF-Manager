@@ -1,21 +1,16 @@
 package l;
 
-import java.util.function.IntBinaryOperator;
-
-/* JADX INFO: renamed from: l.᩵ۨ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N22M */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19440 extends AbstractC22686 {
-    public final /* synthetic */ IntBinaryOperator h;
-    public final /* synthetic */ int i;
-
-    @Override // l.AbstractC22686
-    public final InterfaceC2319 e0() {
-        return new C22262(this.i, this.h);
+public final class C19440 extends C2834 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C9545 m44927(AbstractC3290 abstractC3290) {
+        return C2834.m9340(abstractC3290);
     }
 
-    public C19440(EnumC22761 enumC22761, IntBinaryOperator intBinaryOperator, int i) {
-        this.h = intBinaryOperator;
-        this.i = i;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m44928(C9545 c9545, AbstractC3290 abstractC3290) {
+        C2834.m9341(c9545, abstractC3290);
     }
 }

@@ -1,33 +1,65 @@
 package l;
 
-import java.util.function.Consumer;
+/* JADX INFO: renamed from: l.ۢۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q574 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9882 extends AbstractC12384 implements InterfaceC11286 {
 
-/* JADX INFO: renamed from: l.ۢ᩹ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K9H */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9882 extends AbstractC5026 implements InterfaceC6269, InterfaceC6206 {
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f31788 = EnumC7011.Format22s;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C11377 f33729;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f31789;
 
-    public C9882(C3614 c3614) {
-        super(c3614);
-        this.f33729 = new C11377(c3614);
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final int f31790;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f31791;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " v" + mo1542() + ", v" + mo1541() + ", " + mo1545();
     }
 
-    @Override // l.AbstractC5026
+    public C9882(int i, int i2, int i3, EnumC22631 enumC22631) {
+        super(enumC22631);
+        C6544.m18432(i);
+        this.f31789 = i;
+        C6544.m18432(i2);
+        this.f31790 = i2;
+        C6544.m18434(i3);
+        this.f31791 = i3;
+    }
+
+    @Override // l.InterfaceC12142
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3343(int i, Object obj) {
-        C11377 c11377 = this.f33729;
-        c11377.f38366 = i;
-        ((Consumer) obj).accept(c11377);
+    public final int mo1542() {
+        return this.f31789;
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        int iM13969 = m13969();
-        C11377 c11377 = this.f33729;
-        c11377.f38366 = iM13969;
-        return c11377;
+    @Override // l.InterfaceC18109
+    /* JADX INFO: renamed from: ۘ */
+    public final int mo1541() {
+        return this.f31790;
+    }
+
+    @Override // l.InterfaceC3193
+    /* JADX INFO: renamed from: ᩻ */
+    public final int mo1546() {
+        return this.f31791;
+    }
+
+    @Override // l.InterfaceC18855
+    /* JADX INFO: renamed from: ܰ */
+    public final long mo1545() {
+        return this.f31791;
+    }
+
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f31788;
     }
 }

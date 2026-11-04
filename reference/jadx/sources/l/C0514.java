@@ -1,21 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ܺۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4BJX */
+/* JADX INFO: renamed from: l.֡ܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7AI */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0514 extends AbstractC4166 {
-    public final String toString() {
-        return ":empty";
-    }
+public final class C0514 {
 
-    @Override // l.AbstractC4166
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo2407(C0617 c0617, C0617 c0618) {
-        for (AbstractC14730 abstractC14730 : c0618.m35264()) {
-            if (!(abstractC14730 instanceof C18257) && !(abstractC14730 instanceof C11598) && !(abstractC14730 instanceof C7674)) {
-                return false;
-            }
-        }
-        return true;
+    public final C3497 f2201;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f2202;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C3717 f2203;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f2204;
+
+    public C0514(String str, C3717 c3717, String str2, C3497 c3497) {
+        this.f2204 = str;
+        this.f2203 = c3717;
+        this.f2202 = str2;
+        this.f2201 = c3497;
     }
 }

@@ -1,69 +1,47 @@
 package l;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-
-/* JADX INFO: renamed from: l.۠ۤۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F7HH */
+/* JADX INFO: renamed from: l.۟᩵ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G4YY */
 /* JADX INFO: loaded from: classes3.dex */
-public class C8107 extends BroadcastReceiver {
+public final /* synthetic */ class C8107 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C16667 f28385 = new C16667();
+    public static final /* synthetic */ int[] f26772;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C18690 m21325(int i) {
-        C18690 c18690;
-        C16667 c16667 = f28385;
-        synchronized (c16667) {
-            Object c18691 = c16667.get(i);
-            if (c18691 == null && !c16667.mo8945(i)) {
-                c18691 = new C18690(i);
-                c16667.mo8944(i, c18691);
-            }
-            c18690 = (C18690) c18691;
+    static {
+        int[] iArr = new int[EnumC7011.values().length];
+        f26772 = iArr;
+        try {
+            iArr[EnumC7011.Format11n.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        return c18690;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m21326(int i, int i2, String str) {
-        C18690 c18690;
-        C16667 c16667 = f28385;
-        synchronized (c16667) {
-            c18690 = (C18690) c16667.get(i);
+        try {
+            f26772[EnumC7011.Format21ih.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        if (c18690 != null) {
-            C18690.m43175(c18690, i2, str);
+        try {
+            f26772[EnumC7011.Format21lh.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-    }
-
-    @Override // android.content.BroadcastReceiver
-    public final void onReceive(Context context, Intent intent) {
-        int intExtra = intent.getIntExtra("android.content.pm.extra.SESSION_ID", -1);
-        int intExtra2 = intent.getIntExtra("android.content.pm.extra.STATUS", -999);
-        if (intExtra2 == -1) {
-            System.out.println("Requesting user confirmation for installation");
-            m21326(intExtra, 1, intent.getStringExtra("android.content.pm.extra.PACKAGE_NAME"));
-            Intent intent2 = (Intent) intent.getParcelableExtra("android.intent.extra.INTENT");
-            int i = ActivityC17984.f57515;
-            Intent intent3 = new Intent(context, (Class<?>) ActivityC17984.class);
-            intent3.putExtra("confirmationIntent", intent2);
-            intent3.putExtra("sessionID", intExtra);
-            intent3.addFlags(268435456);
-            context.startActivity(intent3);
-            return;
+        try {
+            f26772[EnumC7011.Format21s.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
         }
-        if (intExtra2 == 0) {
-            System.out.println("Installation succeed");
-            m21326(intExtra, 0, intent.getStringExtra("android.content.pm.extra.PACKAGE_NAME"));
-        } else if (intExtra2 == 3) {
-            System.out.println("Installation canceled");
-            m21326(intExtra, 2, null);
-        } else {
-            System.out.println("Installation failed");
-            m21326(intExtra, 3, intent.getStringExtra("android.content.pm.extra.STATUS_MESSAGE"));
+        try {
+            f26772[EnumC7011.Format31i.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f26772[EnumC7011.Format51l.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f26772[EnumC7011.Format22b.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f26772[EnumC7011.Format22s.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
         }
     }
 }

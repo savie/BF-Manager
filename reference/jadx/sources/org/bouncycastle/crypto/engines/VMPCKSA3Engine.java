@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class VMPCKSA3Engine extends VMPCEngine {
     @Override // org.bouncycastle.crypto.engines.VMPCEngine, org.bouncycastle.crypto.StreamCipher
     public String getAlgorithmName() {

@@ -1,42 +1,28 @@
 package l;
 
-import java.util.Collections;
-import java.util.List;
+import dalvik.system.DexClassLoader;
+import java.lang.reflect.Method;
 
-/* JADX INFO: renamed from: l.۫ᩴܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K8I6 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12596 implements InterfaceC9753 {
+/* JADX INFO: renamed from: l.ۨ᩶֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E411 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C12596 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final List f42103;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Method f40426;
 
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo15243() {
-        return 1;
-    }
+    /* JADX INFO: renamed from: ᩶۠ۘ, reason: not valid java name and contains not printable characters */
+    private static final short[] f40427 = null;
 
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo15244(long j) {
-        return j < 0 ? 0 : -1;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static DexClassLoader f40428;
 
-    public C12596(List list) {
-        this.f42103 = list;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static native Class m31304(Object obj, String str);
 
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo15245(int i) {
-        C2023.m6507(i == 0);
-        return 0L;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static native Object m31305(String str, String str2, String str3, String str4);
 
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۨ */
-    public final List mo15247(long j) {
-        return j >= 0 ? this.f42103 : Collections.EMPTY_LIST;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static native synchronized void m31306();
 }

@@ -30,8 +30,8 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C2271;
+import l.C14442;
+import l.C4681;
 
 /* JADX INFO: compiled from: 05JA */
 /* JADX INFO: loaded from: classes.dex */
@@ -49,7 +49,7 @@ public class d implements av, Serializable, Cloneable {
     public String c;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public byte f77956l;
+    public byte f82072l;
 
     static {
         HashMap map = new HashMap();
@@ -60,7 +60,7 @@ public class d implements av, Serializable, Cloneable {
         enumMap.put(e.PROPERTY, new bh("property", (byte) 1, new bk(cb.k, new bi((byte) 11), new bm((byte) 12, com.umeng.commonsdk.statistics.proto.e.class))));
         enumMap.put(e.VERSION, new bh("version", (byte) 1, new bi((byte) 8)));
         enumMap.put(e.CHECKSUM, new bh("checksum", (byte) 1, new bi((byte) 11)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         d = mapUnmodifiableMap;
         bh.a(d.class, mapUnmodifiableMap);
     }
@@ -99,7 +99,7 @@ public class d implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {
@@ -123,7 +123,7 @@ public class d implements av, Serializable, Cloneable {
     }
 
     public d() {
-        this.f77956l = (byte) 0;
+        this.f82072l = (byte) 0;
     }
 
     public d(Map map, int i2, String str) {
@@ -135,8 +135,8 @@ public class d implements av, Serializable, Cloneable {
     }
 
     public d(d dVar) {
-        this.f77956l = (byte) 0;
-        this.f77956l = dVar.f77956l;
+        this.f82072l = (byte) 0;
+        this.f82072l = dVar.f82072l;
         if (dVar.e()) {
             HashMap map = new HashMap();
             for (Map.Entry entry : dVar.a.entrySet()) {
@@ -214,15 +214,15 @@ public class d implements av, Serializable, Cloneable {
     }
 
     public void g() {
-        this.f77956l = as.b(this.f77956l, 0);
+        this.f82072l = as.b(this.f82072l, 0);
     }
 
     public boolean h() {
-        return as.a(this.f77956l, 0);
+        return as.a(this.f82072l, 0);
     }
 
     public void b(boolean z) {
-        this.f77956l = as.a(this.f77956l, 0, z);
+        this.f82072l = as.a(this.f82072l, 0, z);
     }
 
     public String i() {
@@ -308,7 +308,7 @@ public class d implements av, Serializable, Cloneable {
 
     private void a(ObjectInputStream objectInputStream) throws IOException {
         try {
-            this.f77956l = (byte) 0;
+            this.f82072l = (byte) 0;
             read(new bo(new cg(objectInputStream)));
         } catch (bb e2) {
             throw new IOException(e2.getMessage());

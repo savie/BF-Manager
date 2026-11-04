@@ -4,7 +4,7 @@ import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
 import org.bouncycastle.crypto.EphemeralKeyPair;
 import org.bouncycastle.crypto.KeyEncoder;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EphemeralKeyPairGenerator {
     public AsymmetricCipherKeyPairGenerator gen;
     public KeyEncoder keyEncoder;

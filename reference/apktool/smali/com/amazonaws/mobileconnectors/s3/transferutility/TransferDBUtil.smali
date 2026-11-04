@@ -6,9 +6,9 @@
 # static fields
 .field public static final ۙ:Ljava/lang/Object;
 
-.field public static ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+.field public static ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷:Lcom/amazonaws/logging/Log;
 
     .line 47
     new-instance v0, Ljava/lang/Object;
@@ -41,9 +41,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
-    new-instance v0, Ll/ۛۨ᩸;
+    new-instance v0, Ll/᩺᩵ܽ;
 
-    invoke-direct {v0}, Ll/ۛۨ᩸;-><init>()V
+    invoke-direct {v0}, Ll/᩺᩵ܽ;-><init>()V
 
     .line 65
     sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۙ:Ljava/lang/Object;
@@ -52,7 +52,7 @@
 
     .line 66
     :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
     if-nez v1, :cond_0
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v1, p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;-><init>(Landroid/content/Context;)V
 
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
     .line 69
     :cond_0
@@ -77,69 +77,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
-.end method
-
-.method public static ۖ(I)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 494
-    :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
-
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, v0, v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 863
-    :try_start_1
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 864
-    new-instance v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
-
-    invoke-direct {v0, p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;-><init>(I)V
-
-    .line 865
-    invoke-virtual {v0, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۙ(Landroid/database/Cursor;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 869
-    :cond_0
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception p0
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 871
-    :cond_1
-    throw p0
 .end method
 
 .method public static ۙ(ILcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;)I
@@ -160,7 +97,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 228
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -169,27 +106,27 @@
     if-eqz p1, :cond_0
 
     .line 229
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 231
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۠:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 232
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->᩻:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۡ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 233
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -203,7 +140,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۨۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v5, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۤۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 235
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -225,9 +162,9 @@
 
     .line 238
     :cond_0
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -249,7 +186,7 @@
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     .line 180
-    iget v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -260,7 +197,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 181
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -271,7 +208,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 182
-    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -282,7 +219,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 183
-    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ:J
+    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -293,11 +230,11 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 184
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    iget p0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget p0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -319,7 +256,7 @@
     if-gtz v0, :cond_0
 
     .line 678
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷:Lcom/amazonaws/logging/Log;
 
     const-string v2, "Cannot create a string of 0 or less placeholders."
 
@@ -378,7 +315,7 @@
     const-string p0, ")"
 
     .line 0
-    invoke-static {v4, v1, p0}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v1, p0}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -405,7 +342,7 @@
     const-string v2, ") and type=?"
 
     .line 0
-    invoke-static {v4, v1, v2}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v1, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -444,7 +381,7 @@
 
     .line 483
     :cond_4
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
     invoke-virtual {p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ()Landroid/net/Uri;
 
@@ -469,9 +406,9 @@
 
     .line 605
     :try_start_0
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -488,7 +425,7 @@
     if-eqz p0, :cond_1
 
     .line 607
-    sget-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     const-string v2, "state"
 
@@ -569,10 +506,10 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩷(Ljava/lang/String;)V
 
     .line 620
-    invoke-virtual {p0, p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۨ(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۤ(Ljava/lang/String;)V
 
     new-instance v2, Ljava/io/File;
 
@@ -618,7 +555,7 @@
     move-result v2
 
     .line 625
-    invoke-virtual {p0, v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۨ(I)V
+    invoke-virtual {p0, v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۤ(I)V
 
     const-string v2, "bytes_total"
 
@@ -632,7 +569,7 @@
     move-result-wide v2
 
     .line 627
-    invoke-virtual {p0, v2, v3}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܰ(J)V
+    invoke-virtual {p0, v2, v3}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩷(J)V
 
     const-string v2, "is_last_part"
 
@@ -673,9 +610,9 @@
     .locals 1
 
     .line 559
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -702,9 +639,9 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 197
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -715,95 +652,7 @@
     return-void
 .end method
 
-.method public static ۚ(I)J
-    .locals 5
-
-    const/4 v0, 0x0
-
-    .line 507
-    :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
-
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ(I)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0, v0, v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x0
-
-    .line 508
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const-string p0, "state"
-
-    .line 509
-    invoke-interface {v0, p0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result p0
-
-    invoke-interface {v0, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 510
-    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
-
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۙ(Ljava/lang/String;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
-
-    move-result-object p0
-
-    invoke-virtual {v3, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "bytes_total"
-
-    .line 512
-    invoke-interface {v0, p0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result p0
-
-    .line 511
-    invoke-interface {v0, p0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    add-long/2addr v1, v3
-
-    goto :goto_0
-
-    .line 517
-    :cond_1
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    return-wide v1
-
-    :catchall_0
-    move-exception p0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 519
-    :cond_2
-    throw p0
-.end method
-
-.method public static ۨ(I)Landroid/net/Uri;
+.method public static ۤ(I)Landroid/net/Uri;
     .locals 2
 
     .line 827
@@ -811,7 +660,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
     invoke-virtual {v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ()Landroid/net/Uri;
 
@@ -836,7 +685,7 @@
     return-object p0
 .end method
 
-.method public static ۨ(ILjava/lang/String;)V
+.method public static ۤ(ILjava/lang/String;)V
     .locals 2
 
     .line 267
@@ -850,69 +699,9 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 269
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p0, v0, v1, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public static ܰ(I)Landroid/net/Uri;
-    .locals 2
-
-    .line 838
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
-
-    invoke-virtual {v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ()Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "/part/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ܰ(ILjava/lang/String;)V
-    .locals 2
-
-    .line 280
-    new-instance v0, Landroid/content/ContentValues;
-
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
-
-    const-string v1, "etag"
-
-    .line 281
-    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 282
-    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
-
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -923,7 +712,7 @@
     return-void
 .end method
 
-.method public static ᩹(I)Ljava/util/ArrayList;
+.method public static ܳ(I)Ljava/util/ArrayList;
     .locals 4
 
     .line 572
@@ -935,9 +724,9 @@
 
     .line 577
     :try_start_0
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -1000,6 +789,217 @@
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     .line 587
+    :cond_1
+    throw p0
+.end method
+
+.method public static ᩴ(I)J
+    .locals 5
+
+    const/4 v0, 0x0
+
+    .line 507
+    :try_start_0
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷(I)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0, v0, v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x0
+
+    .line 508
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const-string p0, "state"
+
+    .line 509
+    invoke-interface {v0, p0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result p0
+
+    invoke-interface {v0, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 510
+    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۙ(Ljava/lang/String;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+
+    move-result-object p0
+
+    invoke-virtual {v3, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "bytes_total"
+
+    .line 512
+    invoke-interface {v0, p0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result p0
+
+    .line 511
+    invoke-interface {v0, p0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-long/2addr v1, v3
+
+    goto :goto_0
+
+    .line 517
+    :cond_1
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    return-wide v1
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .line 519
+    :cond_2
+    throw p0
+.end method
+
+.method public static ᩷(I)Landroid/net/Uri;
+    .locals 2
+
+    .line 838
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+
+    invoke-virtual {v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ()Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/part/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ᩷(ILjava/lang/String;)V
+    .locals 2
+
+    .line 280
+    new-instance v0, Landroid/content/ContentValues;
+
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v1, "etag"
+
+    .line 281
+    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 282
+    sget-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, p0, v0, v1, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public static ᩸(I)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 494
+    :try_start_0
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;
+
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۤ(I)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v0, v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۙ(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 863
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 864
+    new-instance v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+
+    invoke-direct {v0, p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;-><init>(I)V
+
+    .line 865
+    invoke-virtual {v0, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۙ(Landroid/database/Cursor;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 869
+    :cond_0
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .line 871
     :cond_1
     throw p0
 .end method

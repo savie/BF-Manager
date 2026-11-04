@@ -378,13 +378,13 @@
 
     const-string v1, "setThumbImage exception:"
 
-    .line 31
+    .line 30
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, "MicroMsg.SDK.WXMediaMessage"
 
     .line 0
-    invoke-static {p1, v0, v1}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     return-void
 .end method

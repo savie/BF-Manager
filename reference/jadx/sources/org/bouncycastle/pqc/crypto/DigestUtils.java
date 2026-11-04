@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
 import org.bouncycastle.asn1.x509.X509ObjectIdentifiers;
@@ -36,6 +36,6 @@ public class DigestUtils {
         if (map.containsKey(str)) {
             return (ASN1ObjectIdentifier) map.get(str);
         }
-        throw new IllegalArgumentException(C0252.m1693("unrecognised digest algorithm: ", str));
+        throw new IllegalArgumentException(C25272.m56409("unrecognised digest algorithm: ", str));
     }
 }

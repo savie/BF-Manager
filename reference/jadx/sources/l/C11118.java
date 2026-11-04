@@ -1,7 +1,16 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧܽ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: C962 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C11118 extends C6178 {
+/* JADX INFO: renamed from: l.ۤ᩶ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O99Y */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11118 extends RuntimeException {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public static final C11118 f35063 = new C11118("Permission denied");
+
+    @Override // java.lang.Throwable
+    public final synchronized Throwable fillInStackTrace() {
+        setStackTrace(new StackTraceElement[0]);
+        return this;
+    }
 }

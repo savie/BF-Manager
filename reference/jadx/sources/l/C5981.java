@@ -1,32 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: D5ZX */
+import java.security.cert.CertificateExpiredException;
+import java.security.cert.CertificateNotYetValidException;
+import java.security.cert.X509Certificate;
+import javax.net.ssl.X509TrustManager;
+
+/* JADX INFO: renamed from: l.ۚ᩺ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 63TE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5981 extends AbstractC9031 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C17684 f20345;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f20346;
-
-    public C5981(C17684 c17684, int i) {
-        this.f20345 = c17684;
-        this.f20346 = i;
+public final class C5981 implements X509TrustManager {
+    @Override // javax.net.ssl.X509TrustManager
+    public final void checkClientTrusted(X509Certificate[] x509CertificateArr, String str) {
     }
 
-    @Override // l.InterfaceC15914
-    public final String getType() {
-        return this.f20345.m41204(this.f20346);
-    }
-
-    @Override // l.AbstractC8325, l.InterfaceC7446
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1997() throws C10269 {
-        int i = this.f20346;
-        if (i < 0 || i >= this.f20345.m41196()) {
-            throw new C10269("type@" + i);
+    @Override // javax.net.ssl.X509TrustManager
+    public final void checkServerTrusted(X509Certificate[] x509CertificateArr, String str) throws CertificateNotYetValidException, CertificateExpiredException {
+        for (X509Certificate x509Certificate : x509CertificateArr) {
+            x509Certificate.checkValidity();
         }
+    }
+
+    @Override // javax.net.ssl.X509TrustManager
+    public final X509Certificate[] getAcceptedIssuers() {
+        return C13438.f42798;
     }
 }

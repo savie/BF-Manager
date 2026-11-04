@@ -1,358 +1,250 @@
 package l;
 
-import java.io.InputStream;
+import android.util.Base64;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Random;
+import net.engio.mbassy.listener.MessageHandler;
+import org.checkerframework.checker.nullness.qual.RequiresNonNull;
 
-/* JADX INFO: renamed from: l.ܿ֨ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R3YJ */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17008 extends AbstractC20536 {
-
-    /* JADX INFO: renamed from: ۜۖ֡, reason: not valid java name and contains not printable characters */
-    private static final short[] f54358 = {2394, 780, 847, 854, 846};
+/* JADX INFO: renamed from: l.ܺᩳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O8L1 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17008 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10659 f54359;
+    public String f55568;
 
-    /* JADX WARN: Code duplicated, block: B:59:0x01f5 A[PHI: r5 r8 r9 r16
-      0x01f5: PHI (r5v6 char) = (r5v3 char), (r5v2 char), (r5v2 char) binds: [B:58:0x01f3, B:6:0x004c, B:11:0x005d] A[DONT_GENERATE, DONT_INLINE]
-      0x01f5: PHI (r8v6 int) = (r8v2 int), (r8v3 int), (r8v2 int) binds: [B:58:0x01f3, B:6:0x004c, B:11:0x005d] A[DONT_GENERATE, DONT_INLINE]
-      0x01f5: PHI (r9v6 int) = (r9v2 int), (r9v3 int), (r9v2 int) binds: [B:58:0x01f3, B:6:0x004c, B:11:0x005d] A[DONT_GENERATE, DONT_INLINE]
-      0x01f5: PHI (r16v24 int) = (r16v4 int), (r16v15 int), (r16v29 int) binds: [B:58:0x01f3, B:6:0x004c, B:11:0x005d] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:63:0x022c A[PHI: r4 r10 r16
-      0x022c: PHI (r4v4 short[]) = (r4v3 short[]), (r4v2 short[]), (r4v2 short[]) binds: [B:62:0x022a, B:49:0x019b, B:18:0x0072] A[DONT_GENERATE, DONT_INLINE]
-      0x022c: PHI (r10v4 int) = (r10v2 int), (r10v3 int), (r10v2 int) binds: [B:62:0x022a, B:49:0x019b, B:18:0x0072] A[DONT_GENERATE, DONT_INLINE]
-      0x022c: PHI (r16v13 int) = (r16v3 int), (r16v6 int), (r16v14 int) binds: [B:62:0x022a, B:49:0x019b, B:18:0x0072] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:67:0x025e A[PHI: r6 r7 r12 r16
-      0x025e: PHI (r6v4 short) = (r6v2 short), (r6v3 short), (r6v2 short) binds: [B:66:0x025c, B:54:0x01d5, B:30:0x00d5] A[DONT_GENERATE, DONT_INLINE]
-      0x025e: PHI (r7v4 short) = (r7v2 short), (r7v3 short), (r7v2 short) binds: [B:66:0x025c, B:54:0x01d5, B:30:0x00d5] A[DONT_GENERATE, DONT_INLINE]
-      0x025e: PHI (r12v3 short[]) = (r12v2 short[]), (r12v2 short[]), (r12v4 short[]) binds: [B:66:0x025c, B:54:0x01d5, B:30:0x00d5] A[DONT_GENERATE, DONT_INLINE]
-      0x025e: PHI (r16v11 int) = (r16v2 int), (r16v5 int), (r16v12 int) binds: [B:66:0x025c, B:54:0x01d5, B:30:0x00d5] A[DONT_GENERATE, DONT_INLINE]] */
-    @Override // l.AbstractC20536
-    /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo19030(String str) {
-        int iM11306;
-        int i;
-        int i2;
-        int iM11307;
-        int i3;
-        int i4;
-        int i5 = C1875.f7103;
-        int i6 = MenuItemOnMenuItemClickListenerC3244.f12064;
-        int iM45029 = C19806.m45029("ܺۚ") ^ i5;
-        int i7 = ((iM45029 ^ i6) * 28015) ^ 1200362538;
-        short[] sArr = null;
-        short[] sArr2 = null;
-        int i8 = iM45029 ^ 512576761;
-        StringBuilder sb = null;
-        char c = 0;
-        short s = 0;
-        short s2 = 0;
-        int i9 = 0;
-        int i10 = 0;
-        int i11 = 0;
-        int i12 = 0;
-        int i13 = 1389720045;
-        String strM6288 = null;
-        InterfaceC5719 interfaceC5719 = null;
-        while (true) {
-            int i14 = i8 ^ (i7 & (((i13 ^ i6) * (-149)) >> 31));
-            switch (i14) {
-                case -1781793399:
-                case 199701934:
-                    C0962.m3746();
-                    if (C1937.f7317 >= 0) {
-                        i14 = i14;
-                        iM11306 = (C19806.m45029("ۚ۫") ^ i6) * (-117);
-                        i = ((iM11306 ^ i5) * (-9795)) ^ (-707116328);
-                        i2 = -1009039703;
-                        i4 = i14;
-                        i8 = iM11306 ^ i2;
-                        i7 = i;
-                        i13 = i4;
-                    } else {
-                        i14 = i14;
-                        int iM11308 = ThreadFactoryC3888.m11306("᩸ۡ") ^ i5;
-                        i7 = ((iM11308 ^ i6) * 15975) ^ (-1712962638);
-                        i13 = i14;
-                        i8 = iM11308 ^ (-1064205822);
-                        sb = null;
-                    }
-                    break;
-                case -1683997504:
-                case -1435748789:
-                    C0216.m1591();
-                    if (C0671.m3008() < 0) {
-                        i14 = i14;
-                        int iM11309 = ThreadFactoryC3888.m11306("᩸ۡ") ^ i5;
-                        i7 = ((iM11309 ^ i6) * 15975) ^ (-1712962638);
-                        i13 = i14;
-                        i8 = iM11309 ^ (-1064205822);
-                        sb = null;
-                    } else {
-                        iM11306 = C19806.m45029("ܰ᩷") ^ i6;
-                        i14 = i14;
-                        i = ((iM11306 ^ i5) * (-10395)) ^ (-385166455);
-                        i2 = 238061824;
-                        i4 = i14;
-                        i8 = iM11306 ^ i2;
-                        i7 = i;
-                        i13 = i4;
-                    }
-                    break;
-                case -1524118756:
-                case 1160770235:
-                    i14 = i14;
-                    if ((i10 + i11) - i9 >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("ܺۤ") ^ i5;
-                        i = ((iM11306 ^ i6) * 15141) ^ (-525714006);
-                        i2 = 1092274818;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("᩹᩹") ^ i6;
-                        i = ((iM11306 ^ i5) * (-29789)) ^ (-1459300457);
-                        i2 = -1843722708;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -1522912846:
-                case 499405380:
-                    i14 = i14;
-                    c = 0;
-                    if (C1419.f5860 >= 0) {
-                        iM11306 = (C19806.m45029("ۚ۫") ^ i6) * (-117);
-                        i = ((iM11306 ^ i5) * (-9795)) ^ (-707116328);
-                        i2 = -1009039703;
-                    } else {
-                        iM11306 = (C19806.m45029("۫ۚ") + i5) * (-99);
-                        i = ((iM11306 ^ i6) * (-24751)) ^ (-1759998525);
-                        i2 = -1162094308;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -1440006203:
-                case -455618337:
-                    i12 = 802;
-                    iM11306 = C19806.m45029("ܳ֫") ^ i5;
-                    i = ((iM11306 ^ i6) * (-21717)) ^ (-2085660513);
-                    i2 = -1325787922;
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -1355651600:
-                case -1264227128:
-                    C1377.m4833();
-                    return null;
-                case -1324083312:
-                case 117283064:
-                    i14 = i14;
-                    s = sArr[c];
-                    s2 = 11534;
-                    if (C0526.m2437() >= 0) {
-                        iM11306 = C19806.m45029("ۧۚ") ^ i5;
-                        i = ((iM11306 ^ i6) * 30683) ^ 186863828;
-                        i2 = -522782000;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۛ᩶") ^ i6;
-                        i = ((iM11306 ^ i5) * (-15931)) ^ (-64254018);
-                        i2 = -1665072508;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -1319528766:
-                case 857365691:
-                    i12 = 32648;
-                    iM11306 = C19806.m45029("ܳ֫") ^ i5;
-                    i = ((iM11306 ^ i6) * (-21717)) ^ (-2085660513);
-                    i2 = -1325787922;
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -1094893066:
-                case -864773086:
-                    i14 = i14;
-                    sArr = f54358;
-                    if (C19806.m45024()) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܰܺ") ^ i5) * (-23);
-                        i = ((iM11306 ^ i6) * 4675) ^ (-785441514);
-                        i2 = -1181527536;
-                    } else {
-                        iM11306 = (C19806.m45029("ۙᩴ") + i6) * (-47);
-                        i = ((iM11306 ^ i5) * (-23025)) ^ (-848622905);
-                        i2 = -716693856;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -972511199:
-                case 1729216495:
-                    ViewGroupOnHierarchyChangeListenerC1916.m6233();
-                    RunnableC0195.m1431();
-                    iM11306 = C19806.m45029("ܰ᩷") ^ i6;
-                    i14 = i14;
-                    i = ((iM11306 ^ i5) * (-10395)) ^ (-385166455);
-                    i2 = 238061824;
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -690949162:
-                case 1293736103:
-                    i14 = i14;
-                    i11 = 33258289;
-                    if (C0278.m1789() <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܰܺ") ^ i5) * (-23);
-                        i = ((iM11306 ^ i6) * 4675) ^ (-785441514);
-                        i2 = -1181527536;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܿ᩷") ^ i6) * 23;
-                        i = ((iM11306 ^ i5) * (-12383)) ^ (-1625169101);
-                        i2 = -765150555;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -615277812:
-                case -417512984:
-                    i14 = i14;
-                    C1148.m4223(sb, str);
-                    sArr2 = f54358;
-                    if (C0629.m2907()) {
-                        iM11307 = (ThreadFactoryC3888.m11306("ۨ۬") + i5) * 23;
-                        i7 = ((iM11307 ^ i6) * (-31299)) ^ (-214576840);
-                        i3 = 731845299;
-                        i4 = i14;
-                        i8 = iM11307 ^ i3;
-                        i13 = i4;
-                    }
-                    iM11306 = C19806.m45029("ۧۚ") ^ i5;
-                    i = ((iM11306 ^ i6) * 30683) ^ 186863828;
-                    i2 = -522782000;
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case -469231726:
-                case 1540088731:
-                    i14 = i14;
-                    interfaceC5719 = this.f54359.f36354;
-                    if (C3660.f13403 < 0) {
-                        sb = new StringBuilder();
-                        if (CallableC1627.f6528) {
-                            iM11307 = C19806.m45029("ᩳܶ") ^ i6;
-                            i7 = ((iM11307 ^ i5) * 25029) ^ 1646227257;
-                            i3 = 2052240792;
-                            i4 = i14;
-                            i8 = iM11307 ^ i3;
-                            i13 = i4;
-                            break;
-                        }
-                    }
-                    int iM113010 = ThreadFactoryC3888.m11306("᩸ۡ") ^ i5;
-                    i7 = ((iM113010 ^ i6) * 15975) ^ (-1712962638);
-                    i13 = i14;
-                    i8 = iM113010 ^ (-1064205822);
-                    sb = null;
-                    break;
-                case -383651460:
-                case 182685012:
-                    i14 = i14;
-                    strM6288 = C1937.m6288(sArr2, 1, 4, i12);
-                    if (ViewTreeObserverOnPreDrawListenerC3327.f12317 > 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("ۛ۠") ^ i6;
-                        i = ((iM11306 ^ i5) * 4073) ^ (-711643341);
-                        i2 = -849816141;
-                        i4 = i14;
-                        i8 = iM11306 ^ i2;
-                        i7 = i;
-                        i13 = i4;
-                    } else {
-                        int iM113011 = ThreadFactoryC3888.m11306("᩸ۡ") ^ i5;
-                        i7 = ((iM113011 ^ i6) * 15975) ^ (-1712962638);
-                        i13 = i14;
-                        i8 = iM113011 ^ (-1064205822);
-                        sb = null;
-                    }
-                    break;
-                case -243772424:
-                case -172181068:
-                    i14 = i14;
-                    if (C1668.f6641 >= 0) {
-                        iM11306 = C19806.m45029("ۧۚ") ^ i5;
-                        i = ((iM11306 ^ i6) * 30683) ^ 186863828;
-                        i2 = -522782000;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ܶۨ") ^ i5;
-                        i = ((iM11306 ^ i6) * (-23155)) ^ 520387740;
-                        i2 = 658860541;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                case 719338949:
-                case 1817844577:
-                    C2788.m8480(sb, strM6288);
-                    return interfaceC5719.getAssetsAsStream(C2124.m6674(sb));
-                case 732146374:
-                case 974092849:
-                    if (ThreadFactoryC3888.m11300() <= 0) {
-                        iM11306 = C19806.m45029("ܰ᩷") ^ i6;
-                        i14 = i14;
-                        i = ((iM11306 ^ i5) * (-10395)) ^ (-385166455);
-                        i2 = 238061824;
-                    } else {
-                        i14 = i14;
-                        iM11306 = (ThreadFactoryC3888.m11306("ܰܺ") ^ i5) * (-23);
-                        i = ((iM11306 ^ i6) * 4675) ^ (-785441514);
-                        i2 = -1181527536;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
-                default:
-                    i14 = i14;
-                    i9 = s * s2;
-                    i10 = s * s;
-                    if (C2477.m7593() >= 0) {
-                        iM11306 = (C19806.m45029("ۚ۫") ^ i6) * (-117);
-                        i = ((iM11306 ^ i5) * (-9795)) ^ (-707116328);
-                        i2 = -1009039703;
-                    } else {
-                        iM11306 = C19806.m45029("۟۫") ^ i5;
-                        i = ((iM11306 ^ i6) * (-10477)) ^ (-1467926477);
-                        i2 = -1506995994;
-                    }
-                    i4 = i14;
-                    i8 = iM11306 ^ i2;
-                    i7 = i;
-                    i13 = i4;
-                    break;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C23722 f55574;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final C11787 f55567 = new C11787();
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final Random f55566 = new Random();
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C11328 f55570 = new C11328();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C1634 f55572 = new C1634();
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final HashMap f55571 = new HashMap();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC24755 f55573 = AbstractC24755.f80138;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f55569 = -1;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized String m40102() {
+        return this.f55568;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized String m40103(AbstractC24755 abstractC24755, C8402 c8402) {
+        return m40095(abstractC24755.mo15535(c8402.f27520, this.f55572).f5657, c8402).f81464;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m40104(C11041 c11041) {
+        C23722 c23722;
+        String str = this.f55568;
+        if (str != null) {
+            C25214 c25214 = (C25214) this.f55571.get(str);
+            c25214.getClass();
+            m40096(c25214);
+        }
+        Iterator it = this.f55571.values().iterator();
+        while (it.hasNext()) {
+            C25214 c25215 = (C25214) it.next();
+            it.remove();
+            if (c25215.f81459 && (c23722 = this.f55574) != null) {
+                c23722.m52993(c11041, c25215.f81464);
             }
         }
     }
 
-    public C17008(C10659 c10659) {
-        this.f54359 = c10659;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m40105(C11041 c11041, int i) {
+        this.f55574.getClass();
+        boolean z = i == 0;
+        Iterator it = this.f55571.values().iterator();
+        while (it.hasNext()) {
+            C25214 c25214 = (C25214) it.next();
+            if (c25214.m56224(c11041)) {
+                it.remove();
+                if (c25214.f81459) {
+                    boolean zEquals = c25214.f81464.equals(this.f55568);
+                    if (z && zEquals) {
+                        boolean unused = c25214.f81463;
+                    }
+                    if (zEquals) {
+                        m40096(c25214);
+                    }
+                    this.f55574.m52993(c11041, c25214.f81464);
+                }
+            }
+        }
+        m40101(c11041);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m40107(C11041 c11041) {
+        this.f55574.getClass();
+        AbstractC24755 abstractC24755 = this.f55573;
+        this.f55573 = c11041.f34846;
+        Iterator it = this.f55571.values().iterator();
+        while (it.hasNext()) {
+            C25214 c25214 = (C25214) it.next();
+            if (!c25214.m56225(abstractC24755, this.f55573) || c25214.m56224(c11041)) {
+                it.remove();
+                if (c25214.f81459) {
+                    if (c25214.f81464.equals(this.f55568)) {
+                        m40096(c25214);
+                    }
+                    this.f55574.m52993(c11041, c25214.f81464);
+                }
+            }
+        }
+        m40101(c11041);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final synchronized void m40108(C11041 c11041) {
+        this.f55574.getClass();
+        if (c11041.f34846.m55264()) {
+            return;
+        }
+        C8402 c8402 = c11041.f34850;
+        if (c8402 != null) {
+            if (c8402.f27518 < m40097()) {
+                return;
+            }
+            C25214 c25214 = (C25214) this.f55571.get(this.f55568);
+            if (c25214 != null && c25214.f81460 == -1 && c25214.f81461 != c11041.f34848) {
+                return;
+            }
+        }
+        C25214 c25214M40095 = m40095(c11041.f34848, c11041.f34850);
+        if (this.f55568 == null) {
+            this.f55568 = c25214M40095.f81464;
+        }
+        C8402 c8403 = c11041.f34850;
+        if (c8403 != null && c8403.m22581()) {
+            C8402 c8404 = c11041.f34850;
+            Object obj = c8404.f27520;
+            C25214 c25214M40096 = m40095(c11041.f34848, new C8402(c8404.f27516, c8404.f27518, obj));
+            if (!c25214M40096.f81459) {
+                c25214M40096.f81459 = true;
+                c11041.f34846.mo15535(c11041.f34850.f27520, this.f55572);
+                this.f55572.m5787(c11041.f34850.f27516);
+                Math.max(0L, C7116.m19506(0L) + C7116.m19506(this.f55572.f5659));
+                this.f55574.getClass();
+            }
+        }
+        if (!c25214M40095.f81459) {
+            c25214M40095.f81459 = true;
+            this.f55574.getClass();
+        }
+        if (c25214M40095.f81464.equals(this.f55568) && !c25214M40095.f81463) {
+            c25214M40095.f81463 = true;
+            this.f55574.m52992(c11041, c25214M40095.f81464);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40106(C23722 c23722) {
+        this.f55574 = c23722;
+    }
+
+    @RequiresNonNull({MessageHandler.Properties.Listener})
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private void m40101(C11041 c11041) {
+        AbstractC24755 abstractC24755 = c11041.f34846;
+        int i = c11041.f34848;
+        C8402 c8402 = c11041.f34850;
+        boolean zM55264 = abstractC24755.m55264();
+        HashMap map = this.f55571;
+        if (zM55264) {
+            String str = this.f55568;
+            if (str != null) {
+                C25214 c25214 = (C25214) map.get(str);
+                c25214.getClass();
+                m40096(c25214);
+                return;
+            }
+            return;
+        }
+        C25214 c25215 = (C25214) map.get(this.f55568);
+        this.f55568 = m40095(i, c8402).f81464;
+        m40108(c11041);
+        if (c8402 != null) {
+            long j = c8402.f27518;
+            if (c8402.m22581()) {
+                if (c25215 != null && c25215.f81460 == j && c25215.f81458 != null && c25215.f81458.f27516 == c8402.f27516 && c25215.f81458.f27519 == c8402.f27519) {
+                    return;
+                }
+                m40095(i, new C8402(j, c8402.f27520));
+                this.f55574.getClass();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m40096(C25214 c25214) {
+        if (c25214.f81460 != -1) {
+            this.f55569 = c25214.f81460;
+        }
+        this.f55568 = null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long m40097() {
+        C25214 c25214 = (C25214) this.f55571.get(this.f55568);
+        if (c25214 != null && c25214.f81460 != -1) {
+            return c25214.f81460;
+        }
+        return this.f55569 + 1;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private C25214 m40095(int i, C8402 c8402) {
+        HashMap map = this.f55571;
+        C25214 c25214 = null;
+        long j = C25227.FOREVER_NS;
+        for (C25214 c25215 : map.values()) {
+            c25215.m56226(i, c8402);
+            if (c25215.m56223(i, c8402)) {
+                long j2 = c25215.f81460;
+                if (j2 == -1 || j2 < j) {
+                    c25214 = c25215;
+                    j = j2;
+                } else if (j2 == j) {
+                    String str = C7116.f23455;
+                    if (c25214.f81458 != null && c25215.f81458 != null) {
+                        c25214 = c25215;
+                    }
+                }
+            }
+        }
+        if (c25214 != null) {
+            return c25214;
+        }
+        String strM40099 = m40099();
+        C25214 c25216 = new C25214(this, strM40099, i, c8402);
+        map.put(strM40099, c25216);
+        return c25216;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m40099() {
+        byte[] bArr = new byte[12];
+        f55566.nextBytes(bArr);
+        return Base64.encodeToString(bArr, 10);
     }
 }

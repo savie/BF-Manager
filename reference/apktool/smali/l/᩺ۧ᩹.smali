@@ -1,74 +1,151 @@
-.class public final synthetic Ll/᩺ۧ᩹;
-.super Ljava/lang/Object;
-.source "57TP"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
-
-# instance fields
-.field public final synthetic ֨:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic ۖ:Ll/ᩳۧ᩹;
-
-.field public final synthetic ۙ:Ll/ᩴۧ᩹;
-
-.field public final synthetic ۚ:Ljava/util/concurrent/CountDownLatch;
-
-.field public final synthetic ۨ:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic ܰ:Ljava/lang/Object;
-
-.field public final synthetic ᩹:Ll/᩸ۧ᩹;
+.class public final enum Ll/᩺ۧ᩹;
+.super Ll/۬ۧ᩹;
+.source "XBIX"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ᩴۧ᩹;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ll/ᩳۧ᩹;Ljava/util/concurrent/CountDownLatch;Ll/᩸ۧ᩹;Ljava/util/concurrent/atomic/AtomicReference;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
+
+    const-string v0, "AfterDoctypePublicIdentifier"
+
+    const/16 v1, 0x3a
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0, v1}, Ll/᩺ۧ᩹;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Ll/᩺ۧ᩹;->ۙ:Ll/ᩴۧ᩹;
+    return-void
+.end method
 
-    iput-object p2, p0, Ll/᩺ۧ᩹;->ܰ:Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    iput-object p3, p0, Ll/᩺ۧ᩹;->ۨ:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Ll/᩺ۧ᩹;->ۖ:Ll/ᩳۧ᩹;
-
-    iput-object p5, p0, Ll/᩺ۧ᩹;->ۚ:Ljava/util/concurrent/CountDownLatch;
-
-    iput-object p6, p0, Ll/᩺ۧ᩹;->᩹:Ll/᩸ۧ᩹;
-
-    iput-object p7, p0, Ll/᩺ۧ᩹;->֨:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 1347
+    invoke-direct {p0, p1, p2, v0}, Ll/۬ۧ᩹;-><init>(Ljava/lang/String;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public ۙ(Ll/۬ۚ᩹;Ll/ۘۚ᩹;)V
+    .locals 1
 
-    .line 0
-    iget-object v5, p0, Ll/᩺ۧ᩹;->᩹:Ll/᩸ۧ᩹;
+    .line 1349
+    invoke-virtual {p2}, Ll/ۘۚ᩹;->᩷()C
 
-    iget-object v6, p0, Ll/᩺ۧ᩹;->֨:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result p2
 
-    iget-object v0, p0, Ll/᩺ۧ᩹;->ۙ:Ll/ᩴۧ᩹;
+    const/16 v0, 0x9
 
-    iget-object v1, p0, Ll/᩺ۧ᩹;->ܰ:Ljava/lang/Object;
+    if-eq p2, v0, :cond_4
 
-    iget-object v2, p0, Ll/᩺ۧ᩹;->ۨ:Ljava/util/concurrent/atomic/AtomicReference;
+    const/16 v0, 0xa
 
-    iget-object v3, p0, Ll/᩺ۧ᩹;->ۖ:Ll/ᩳۧ᩹;
+    if-eq p2, v0, :cond_4
 
-    iget-object v4, p0, Ll/᩺ۧ᩹;->ۚ:Ljava/util/concurrent/CountDownLatch;
+    const/16 v0, 0xc
 
-    invoke-static/range {v0 .. v6}, Ll/ᩴۧ᩹;->ۙ(Ll/ᩴۧ᩹;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ll/ᩳۧ᩹;Ljava/util/concurrent/CountDownLatch;Ll/᩸ۧ᩹;Ljava/util/concurrent/atomic/AtomicReference;)V
+    if-eq p2, v0, :cond_4
 
-    const/4 v0, 0x0
+    const/16 v0, 0xd
 
-    return-object v0
+    if-eq p2, v0, :cond_4
+
+    const/16 v0, 0x20
+
+    if-eq p2, v0, :cond_4
+
+    const/16 v0, 0x22
+
+    if-eq p2, v0, :cond_3
+
+    const/16 v0, 0x27
+
+    if-eq p2, v0, :cond_2
+
+    const/16 v0, 0x3e
+
+    if-eq p2, v0, :cond_1
+
+    const v0, 0xffff
+
+    if-eq p2, v0, :cond_0
+
+    .line 1379
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->ۤ(Ll/۬ۧ᩹;)V
+
+    .line 1380
+    iget-object p2, p1, Ll/۬ۚ᩹;->۫:Ll/ᩳۚ᩹;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1381
+    sget-object p2, Ll/۬ۧ᩹;->۫ۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 1373
+    :cond_0
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->᩷(Ll/۬ۧ᩹;)V
+
+    .line 1374
+    iget-object p2, p1, Ll/۬ۚ᩹;->۫:Ll/ᩳۚ᩹;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1375
+    invoke-virtual {p1}, Ll/۬ۚ᩹;->᩸()V
+
+    .line 1376
+    sget-object p2, Ll/۬ۧ᩹;->᩵ۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 1359
+    :cond_1
+    invoke-virtual {p1}, Ll/۬ۚ᩹;->᩸()V
+
+    .line 1360
+    sget-object p2, Ll/۬ۧ᩹;->᩵ۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 1368
+    :cond_2
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->ۤ(Ll/۬ۧ᩹;)V
+
+    .line 1370
+    sget-object p2, Ll/۬ۧ᩹;->᩶ۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 1363
+    :cond_3
+    invoke-virtual {p1, p0}, Ll/۬ۚ᩹;->ۤ(Ll/۬ۧ᩹;)V
+
+    .line 1365
+    sget-object p2, Ll/۬ۧ᩹;->ܰۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
+
+    .line 1356
+    :cond_4
+    sget-object p2, Ll/۬ۧ᩹;->ᩴۙ:Ll/۬ۧ᩹;
+
+    invoke-virtual {p1, p2}, Ll/۬ۚ᩹;->᩸(Ll/۬ۧ᩹;)V
+
+    return-void
 .end method

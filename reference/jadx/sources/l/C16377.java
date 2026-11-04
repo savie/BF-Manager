@@ -1,23 +1,12 @@
 package l;
 
-import java.util.function.BiConsumer;
-import java.util.function.IntFunction;
+import java.nio.ByteOrder;
 
-/* JADX INFO: renamed from: l.ܽۗᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܶ᩸ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: DACT */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16377 implements IntFunction, BiConsumer {
-    @Override // java.util.function.BiConsumer
-    public void accept(Object obj, Object obj2) {
-        ((StringBuilder) obj).append((CharSequence) obj2);
-    }
+public final class C16377 {
 
-    public /* synthetic */ BiConsumer andThen(BiConsumer biConsumer) {
-        return C2866.$default$andThen(this, biConsumer);
-    }
-
-    @Override // java.util.function.IntFunction
-    public Object apply(int i) {
-        return new Double[i];
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final ByteOrder f53164 = ByteOrder.nativeOrder();
 }

@@ -1,13 +1,13 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.RC5Parameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RC564Engine implements BlockCipher {
     public static final long P64 = -5196783011329398165L;
     public static final long Q64 = -7046029254386353131L;
@@ -126,7 +126,7 @@ public class RC564Engine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof RC5Parameters)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to RC564 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to RC564 init - ", cipherParameters));
         }
         RC5Parameters rC5Parameters = (RC5Parameters) cipherParameters;
         this.forEncryption = z;

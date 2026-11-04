@@ -1,46 +1,153 @@
 package l;
 
-import java.io.IOException;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.IntFunction;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
-/* JADX INFO: renamed from: l.ܽ۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: A4J0 */
+/* JADX INFO: renamed from: l.ܺ֫ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16503 extends AbstractC15798 {
+public class C16503 extends AbstractC24709 implements Set, Serializable, InterfaceC14375 {
+    public static final long serialVersionUID = 7249069246763182397L;
+    public final Object b;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static C19805 f53018 = new C19805(200);
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f53019;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C16503 m38776(int i, InterfaceC15707 interfaceC15707) {
-        C16503 c16503 = (C16503) f53018.m45009();
-        if (c16503 != null) {
-            c16503.f25545 = i;
-            c16503.f53019 = interfaceC15707.getLineNumber();
-        } else {
-            c16503 = new C16503(i, -2);
-            c16503.f53019 = interfaceC15707.getLineNumber();
-        }
-        if (interfaceC15707 instanceof C8617) {
-            ((C8617) interfaceC15707).m22393();
-        }
-        return c16503;
+    @Override // java.util.Collection
+    public final /* synthetic */ Stream parallelStream() {
+        return C3516.convert(C12465.stream(C1170.b(this), true));
     }
 
-    @Override // l.AbstractC7724
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo9290() {
-        f53018.m45011(this);
+    @Override // java.util.Collection, l.InterfaceC9372
+    /* JADX INFO: renamed from: parallelStream */
+    public final /* synthetic */ InterfaceC20670 mo52748parallelStream() {
+        return C12465.stream(C1170.b(this), true);
     }
 
-    @Override // l.AbstractC7724
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1773(C12283 c12283) throws IOException {
-        c12283.getClass();
-        c12283.write(".line ", 0, 6);
-        c12283.m30528(this.f53019);
+    @Override // java.util.Collection, l.InterfaceC9372
+    public final /* synthetic */ boolean removeIf(Predicate predicate) {
+        return C10118.$default$removeIf(this, predicate);
+    }
+
+    @Override // java.util.Collection, java.lang.Iterable, java.util.Set
+    public final /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
+    }
+
+    @Override // java.util.Collection
+    public final /* synthetic */ Stream stream() {
+        return C3516.convert(C12465.stream(C1170.b(this), false));
+    }
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    /* JADX INFO: renamed from: stream */
+    public final /* synthetic */ InterfaceC20670 mo52749stream() {
+        return C12465.stream(C1170.b(this), false);
+    }
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    public final /* synthetic */ Object[] toArray(IntFunction intFunction) {
+        return toArray((Object[]) intFunction.apply(0));
+    }
+
+    public C16503(ConcurrentMapC17249 concurrentMapC17249, Object obj) {
+        super(concurrentMapC17249);
+        this.b = obj;
+    }
+
+    @Override // l.AbstractC24709, java.util.Collection
+    public boolean contains(Object obj) {
+        return this.a.containsKey(obj);
+    }
+
+    @Override // l.AbstractC24709, java.util.Collection
+    public boolean remove(Object obj) {
+        return this.a.remove(obj) != null;
+    }
+
+    @Override // l.AbstractC24709, java.util.Collection, java.lang.Iterable
+    public final Iterator iterator() {
+        ConcurrentMapC17249 concurrentMapC17249 = this.a;
+        C9790[] c9790Arr = concurrentMapC17249.a;
+        int length = c9790Arr == null ? 0 : c9790Arr.length;
+        return new C0096(c9790Arr, length, length, concurrentMapC17249, 0);
+    }
+
+    @Override // java.util.Collection, java.util.Set
+    public boolean add(Object obj) {
+        Object obj2 = this.b;
+        if (obj2 != null) {
+            return this.a.f(obj, obj2, true) == null;
+        }
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.Collection, java.util.Set
+    public final boolean addAll(Collection collection) {
+        Object obj = this.b;
+        if (obj == null) {
+            throw new UnsupportedOperationException();
+        }
+        Iterator it = collection.iterator();
+        boolean z = false;
+        while (it.hasNext()) {
+            if (this.a.f(it.next(), obj, true) == null) {
+                z = true;
+            }
+        }
+        return z;
+    }
+
+    @Override // java.util.Collection, java.util.Set
+    public final int hashCode() {
+        Object it = iterator();
+        int iHashCode = 0;
+        while (((AbstractC12028) it).hasNext()) {
+            iHashCode += ((C0096) it).next().hashCode();
+        }
+        return iHashCode;
+    }
+
+    @Override // java.util.Collection, java.util.Set
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof Set)) {
+            return false;
+        }
+        Set set = (Set) obj;
+        if (set != this) {
+            return containsAll(set) && set.containsAll(this);
+        }
         return true;
+    }
+
+    @Override // java.util.Collection, java.lang.Iterable, java.util.Set, l.InterfaceC14375, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        ConcurrentMapC17249 concurrentMapC17249 = this.a;
+        long j = concurrentMapC17249.j();
+        C9790[] c9790Arr = concurrentMapC17249.a;
+        int length = c9790Arr == null ? 0 : c9790Arr.length;
+        return new C7554(c9790Arr, length, 0, length, j < 0 ? 0L : j, 0);
+    }
+
+    @Override // java.lang.Iterable, l.InterfaceC9372, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        consumer.getClass();
+        C9790[] c9790Arr = this.a.a;
+        if (c9790Arr == null) {
+            return;
+        }
+        C8300 c8300 = new C8300(c9790Arr, c9790Arr.length, 0, c9790Arr.length);
+        while (true) {
+            C9790 c9790A = c8300.a();
+            if (c9790A == null) {
+                return;
+            } else {
+                consumer.n(c9790A.b);
+            }
+        }
     }
 }

@@ -1,160 +1,372 @@
-.class public final synthetic Ll/ۗۙᩴ;
+.class public final Ll/ۗۙᩴ;
 .super Ljava/lang/Object;
-.source "RC7A"
+.source "F6SK"
 
-# interfaces
-.implements Ll/᩷ۡۙ;
-.implements Ll/۟ۡۙ;
-.implements Ll/ܺ۬۠;
-.implements Ll/ۡۡۜ;
+
+# instance fields
+.field public final ֫:I
+
+.field public final ۙ:Z
+
+.field public final ۚ:I
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ۧ:F
+
+.field public final ۫:Ljava/lang/String;
+
+.field public final ܳ:I
+
+.field public final ܺ:Z
+
+.field public final ᩴ:F
+
+.field public final ᩷:Z
+
+.field public final ᩸:Z
+
+.field public final ᩻:Z
 
 
 # direct methods
-.method public static bridge synthetic ۙ(Ljava/lang/Object;)Landroid/os/storage/StorageVolume;
+.method public constructor <init>(FFIIILjava/lang/String;Ljava/lang/String;ZZZZZ)V
     .locals 0
 
-    .line 0
-    check-cast p0, Landroid/os/storage/StorageVolume;
+    .line 18
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    .line 19
+    iput-object p6, p0, Ll/ۗۙᩴ;->۫:Ljava/lang/String;
+
+    iput p3, p0, Ll/ۗۙᩴ;->֫:I
+
+    iput p1, p0, Ll/ۗۙᩴ;->ۧ:F
+
+    iput p4, p0, Ll/ۗۙᩴ;->ܳ:I
+
+    .line 20
+    iput p2, p0, Ll/ۗۙᩴ;->ᩴ:F
+
+    .line 21
+    iput-boolean p8, p0, Ll/ۗۙᩴ;->᩸:Z
+
+    iput-boolean p9, p0, Ll/ۗۙᩴ;->ۙ:Z
+
+    iput-boolean p10, p0, Ll/ۗۙᩴ;->᩻:Z
+
+    .line 22
+    iput-boolean p11, p0, Ll/ۗۙᩴ;->᩷:Z
+
+    iput p5, p0, Ll/ۗۙᩴ;->ۚ:I
+
+    iput-object p7, p0, Ll/ۗۙᩴ;->ۤ:Ljava/lang/String;
+
+    iput-boolean p12, p0, Ll/ۗۙᩴ;->ܺ:Z
+
+    return-void
 .end method
 
-.method public static ۙ(ILjava/util/List;)Ljava/lang/Object;
-    .locals 1
+.method public static ۙ(Ljava/io/ByteArrayInputStream;JI)Ll/ۗۙᩴ;
+    .locals 19
 
-    .line 0
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    move-wide/from16 v0, p1
+
+    move-object/from16 v2, p0
+
+    move/from16 v3, p3
+
+    .line 27
+    invoke-static {v0, v1, v2}, Ll/ܺ֡᩸;->ۙ(JLjava/io/InputStream;)Ll/ܺ֡᩸;
+
+    move-result-object v2
+
+    if-ltz v3, :cond_c
+
+    int-to-long v4, v3
+
+    cmp-long v6, v0, v4
+
+    if-gtz v6, :cond_c
+
+    .line 29
+    :try_start_0
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
 
     move-result v0
 
-    sub-int/2addr v0, p0
+    const v1, 0x17272716
 
-    .line 2
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const v4, 0x1727271b
 
-    move-result-object p0
+    if-lt v0, v1, :cond_0
 
-    return-object p0
-.end method
+    if-gt v0, v4, :cond_0
 
-.method public static ۙ(Ljava/security/Key;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+    move v5, v0
 
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    const/4 v5, 0x0
 
-    .line 1
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-nez v5, :cond_1
 
-    .line 2
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 31
+    invoke-virtual {v2, v0, v3}, Ll/ܺ֡᩸;->ۙ(II)Ljava/lang/String;
 
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    :goto_1
+    move-object v12, v0
 
-    return-object p0
-.end method
+    goto :goto_2
 
-.method public static ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
+    :cond_1
+    invoke-virtual {v2, v3}, Ll/ܺ֡᩸;->ۤ(I)Ljava/lang/String;
 
-    .line 0
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    .line 1
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_1
 
-    .line 2
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 32
+    :goto_2
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readByte()I
 
-    .line 3
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v9
+
+    .line 49
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v7
+
+    .line 34
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
+
+    move-result v10
+
+    .line 35
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۙ()Z
+
+    move-result v14
+
+    const v0, 0x17272717
+
+    if-lt v5, v0, :cond_2
+
+    .line 36
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۙ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x1
+
+    const/4 v15, 0x1
+
+    goto :goto_3
+
+    :cond_2
+    const/4 v0, 0x0
+
+    const/4 v15, 0x0
+
+    .line 37
+    :goto_3
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۙ()Z
+
+    move-result v17
+
+    if-lt v5, v1, :cond_3
+
+    .line 38
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
+
+    .line 39
+    :cond_3
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
+
+    move-result v11
+
+    const v0, 0x17272718
+
+    if-lt v5, v0, :cond_4
+
+    .line 40
+    invoke-virtual {v2, v3}, Ll/ܺ֡᩸;->᩷(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_4
+    move-object v13, v0
+
+    goto :goto_5
+
+    :cond_4
+    const-string v0, ""
+
+    goto :goto_4
+
+    :goto_5
+    const v0, 0x17272719
+
+    if-lt v5, v0, :cond_6
+
+    .line 41
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۙ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    const/4 v0, 0x0
+
+    const/16 v18, 0x0
+
+    goto :goto_7
+
+    :cond_6
+    :goto_6
+    const/4 v0, 0x1
+
+    const/16 v18, 0x1
+
+    :goto_7
+    const v0, 0x1727271a
+
+    if-lt v5, v0, :cond_8
+
+    .line 42
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۙ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    goto :goto_8
+
+    :cond_7
+    const/4 v0, 0x0
+
+    const/16 v16, 0x0
+
+    goto :goto_9
+
+    :cond_8
+    :goto_8
+    const/4 v0, 0x1
+
+    const/16 v16, 0x1
+
+    :goto_9
+    if-lt v5, v4, :cond_9
+
+    .line 49
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->readInt()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v0
+
+    move v8, v0
+
+    goto :goto_a
+
+    :cond_9
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    :goto_a
+    if-lt v5, v4, :cond_b
+
+    const v0, 0x3f4ccccd    # 0.8f
+
+    cmpl-float v0, v8, v0
+
+    if-ltz v0, :cond_a
+
+    const/high16 v0, 0x40000000    # 2.0f
+
+    cmpg-float v0, v8, v0
+
+    if-gtz v0, :cond_a
+
+    goto :goto_b
+
+    .line 45
+    :cond_a
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Invalid line spacing"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 46
+    :cond_b
+    :goto_b
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->ۤ()V
+
+    .line 47
+    new-instance v0, Ll/ۗۙᩴ;
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v18}, Ll/ۗۙᩴ;-><init>(FFIIILjava/lang/String;Ljava/lang/String;ZZZZZ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 48
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->close()V
 
     return-object v0
-.end method
 
-.method public static ۙ(Ll/ۙܰᩴ;Ljava/util/Comparator;)Ljava/util/Comparator;
-    .locals 1
+    .line 28
+    :cond_c
+    :try_start_1
+    new-instance v0, Ljava/io/IOException;
 
-    .line 76
-    instance-of v0, p1, Ll/ۙܰᩴ;
+    const-string v1, "Legacy preferences exceed app state limit"
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ll/ۙܰᩴ;
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-interface {p0, p1}, Ll/ۙܰᩴ;->ۨ(Ll/ۙܰᩴ;)Ll/ۢۙᩴ;
+    :catchall_0
+    move-exception v0
 
-    move-result-object p0
+    move-object v1, v0
 
-    return-object p0
+    .line 27
+    :try_start_2
+    invoke-virtual {v2}, Ll/ܺ֡᩸;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 77
-    :cond_0
-    invoke-static {p0, p1}, Ll/۟ܿᩴ;->$default$thenComparing(Ljava/util/Comparator;Ljava/util/Comparator;)Ljava/util/Comparator;
+    goto :goto_c
 
-    move-result-object p0
+    :catchall_1
+    move-exception v0
 
-    return-object p0
-.end method
+    move-object v2, v0
 
-.method public static bridge synthetic ۙ(Landroid/content/res/Configuration;I)V
-    .locals 0
+    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    .line 0
-    iput p1, p0, Landroid/content/res/Configuration;->colorMode:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 0
-    check-cast p1, Ll/۫֨۠;
-
-    return-object p1
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ll/ۤܿۙ;
-
-    .line 268
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public ۙ(Ljava/lang/Object;Landroid/os/Message;)V
-    .locals 0
-
-    .line 0
-    check-cast p1, Ll/۠ۘ᩺;
-
-    invoke-static {p1}, Ll/۠ۘ᩺;->ۙ(Ll/۠ۘ᩺;)V
-
-    return-void
-.end method
-
-.method public ۙ(Ljava/lang/Object;Ll/ۡᩴۙ;)V
-    .locals 1
-
-    check-cast p1, Ll/᩵۠ۙ;
-
-    .line 301
-    new-instance v0, Ll/۠۠ۙ;
-
-    invoke-direct {v0, p2}, Ll/۠۠ۙ;-><init>(Ll/ۡᩴۙ;)V
-
-    invoke-interface {p1, v0}, Ll/᩵۠ۙ;->ۙ(Ll/۠۠ۙ;)V
-
-    return-void
+    :goto_c
+    throw v1
 .end method

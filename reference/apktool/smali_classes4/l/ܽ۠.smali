@@ -1,211 +1,97 @@
-.class public abstract Ll/ܽ۠;
+.class public final Ll/ܽ۠;
 .super Ljava/lang/Object;
-.source "G58P"
+.source "E9O4"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public ۙ:Ll/᩷۠;
+.field public final synthetic ܰ:Landroid/view/ViewGroup;
 
-.field public ۨ:Ll/֡۠;
-
-.field public ܰ:Ll/ܺ۠;
+.field public ᩶:I
 
 
 # direct methods
-.method public static ۙ(Ljava/util/Map;Ljava/util/Collection;)Z
-    .locals 3
+.method public constructor <init>(Landroid/view/ViewGroup;)V
+    .locals 0
 
-    .line 478
-    invoke-interface {p0}, Ljava/util/Map;->size()I
+    .line 87
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    .line 0
+    iput-object p1, p0, Ll/ܽ۠;->ܰ:Landroid/view/ViewGroup;
 
-    .line 479
-    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .line 480
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 481
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 482
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_0
-
-    .line 485
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Map;->size()I
-
-    move-result p0
-
-    if-eq v0, p0, :cond_2
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static ۙ(Ljava/util/Set;Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    .line 518
-    :cond_0
-    instance-of v0, p1, Ljava/util/Set;
-
-    if-eqz v0, :cond_1
-
-    .line 519
-    check-cast p1, Ljava/util/Set;
-
-    .line 522
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_1
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz p0, :cond_1
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :catch_0
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract ۙ(Ljava/lang/Object;)I
-.end method
+.method public final hasNext()Z
+    .locals 2
 
-.method public abstract ۙ(II)Ljava/lang/Object;
-.end method
+    .line 89
+    iget v0, p0, Ll/ܽ۠;->᩶:I
 
-.method public abstract ۙ(ILjava/lang/Object;)Ljava/lang/Object;
-.end method
+    iget-object v1, p0, Ll/ܽ۠;->ܰ:Landroid/view/ViewGroup;
 
-.method public abstract ۙ()V
-.end method
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
-.method public abstract ۙ(I)V
-.end method
+    move-result v1
 
-.method public abstract ۙ(Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    if-ge v0, v1, :cond_0
 
-.method public final ۙ(I[Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 3
+    const/4 v0, 0x1
 
-    .line 499
-    invoke-virtual {p0}, Ll/ܽ۠;->ۨ()I
-
-    move-result v0
-
-    .line 500
-    array-length v1, p2
-
-    if-ge v1, v0, :cond_0
-
-    .line 502
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p2
-
-    invoke-static {p2, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, [Ljava/lang/Object;
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    .line 506
-    invoke-virtual {p0, v1, p1}, Ll/ܽ۠;->ۙ(II)Ljava/lang/Object;
-
-    move-result-object v2
-
-    aput-object v2, p2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 508
-    :cond_1
-    array-length p1, p2
-
-    if-le p1, v0, :cond_2
-
-    const/4 p1, 0x0
-
-    .line 509
-    aput-object p1, p2, v0
-
-    :cond_2
-    return-object p2
+    return v0
 .end method
 
-.method public abstract ۨ()I
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    .line 90
+    iget v0, p0, Ll/ܽ۠;->᩶:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Ll/ܽ۠;->᩶:I
+
+    iget-object v1, p0, Ll/ܽ۠;->ܰ:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw v0
 .end method
 
-.method public abstract ܰ(Ljava/lang/Object;)I
-.end method
+.method public final remove()V
+    .locals 2
 
-.method public abstract ܰ()Ljava/util/Map;
+    .line 91
+    iget v0, p0, Ll/ܽ۠;->᩶:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ll/ܽ۠;->᩶:I
+
+    iget-object v1, p0, Ll/ܽ۠;->ܰ:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
+
+    return-void
 .end method

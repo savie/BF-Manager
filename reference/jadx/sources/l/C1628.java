@@ -1,51 +1,42 @@
 package l;
 
-import android.widget.EditText;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.֫ۛ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6Y9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1628 implements InterfaceC1692 {
+/* JADX INFO: renamed from: l.֫ۖ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F416 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C1628 implements Function {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ RunnableC12918 f6533;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC12483 f6534;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ EditText f6535;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f5643;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceC19356 f6536;
+    public final /* synthetic */ AbstractC0578 f5644;
 
-    public C1628(RunnableC12918 runnableC12918, DialogInterfaceC19356 dialogInterfaceC19356, AbstractActivityC12483 abstractActivityC12483, EditText editText) {
-        this.f6533 = runnableC12918;
-        this.f6536 = dialogInterfaceC19356;
-        this.f6534 = abstractActivityC12483;
-        this.f6535 = editText;
+    public /* synthetic */ C1628(AbstractC0578 abstractC0578, int i) {
+        this.f5643 = i;
+        this.f5644 = abstractC0578;
     }
 
-    @Override // l.InterfaceC1692
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3908(String str) {
-        this.f6533.run();
-        if (this.f6536.m44375()) {
-            AbstractActivityC12483 abstractActivityC12483 = this.f6534;
-            if (abstractActivityC12483.isFinishing() || abstractActivityC12483.isDestroyed()) {
-                return;
-            }
-            if (str.length() > 1 && str.endsWith("/")) {
-                str = C20630.m46498(1, 0, str);
-            }
-            EditText editText = this.f6535;
-            editText.setText(str);
-            editText.setSelection(editText.length());
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f5643) {
+            case 0:
+                AbstractC22664 abstractC22664 = (AbstractC22664) obj;
+                return abstractC22664.mo40452() ? abstractC22664 : ((C0310) this.f5644).f1670.m55152(abstractC22664);
+            default:
+                return Integer.valueOf(((C20518) this.f5644).f65727.size());
         }
-    }
-
-    @Override // l.InterfaceC1692
-    public final void onCanceled() {
-        this.f6533.run();
     }
 }

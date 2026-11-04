@@ -1,50 +1,39 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 
-/* JADX INFO: renamed from: l.֡ۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0203 extends AbstractC6457 implements InterfaceC13036 {
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void forEach(Consumer consumer) {
-        AbstractC22686.A(this, consumer);
+/* JADX INFO: renamed from: l.֡ۙ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y9AZ */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C0203 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f1362;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f1363 = false;
+
+    public C0203() {
+        PackageInfo packageInfoM49057;
+        boolean z = C20340.f65260;
+        try {
+            packageInfoM49057 = C21576.m49057("bin.mt.termex");
+        } catch (PackageManager.NameNotFoundException unused) {
+            packageInfoM49057 = null;
+        }
+        this.f1362 = packageInfoM49057 != null ? packageInfoM49057.lastUpdateTime : 0L;
     }
 
-    @Override // l.AbstractC6457, l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.D(this, j, j2);
-    }
-
-    @Override // l.AbstractC6457, l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC8616 a(int i) {
-        a(i);
-        throw null;
-    }
-
-    @Override // l.AbstractC6457, l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC0853 a(int i) {
-        throw new IndexOutOfBoundsException();
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void k(Object[] objArr, int i) {
-        AbstractC22686.x(this, (Integer[]) objArr, i);
-    }
-
-    @Override // l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ Object b() {
-        return AbstractC22686.e;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC10110 spliterator() {
-        return C19988.b;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC20693 spliterator() {
-        return C19988.b;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m1604() {
+        PackageInfo packageInfoM49057;
+        boolean z = C20340.f65260;
+        try {
+            packageInfoM49057 = C21576.m49057("bin.mt.termex");
+        } catch (PackageManager.NameNotFoundException unused) {
+            packageInfoM49057 = null;
+        }
+        return (packageInfoM49057 == null || packageInfoM49057.lastUpdateTime == this.f1362) ? false : true;
     }
 }

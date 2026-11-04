@@ -1,228 +1,283 @@
 .class public final Ll/۬ۘۤ;
-.super Ll/ۖۘۤ;
-.source "M1T7"
+.super Ljava/lang/Object;
+.source "G1PO"
 
 
 # instance fields
-.field public final synthetic ۖ:Ll/ۘۘۤ;
+.field public ۙ:Ljava/lang/ref/SoftReference;
 
-.field public final ۨ:[Ll/֨ۘۤ;
+.field public final ۤ:Ll/ۛ᩸ۛ;
+
+.field public final ᩴ:Ll/ۢۘۤ;
+
+.field public volatile ᩷:I
+
+.field public final ᩸:Ll/᩷ۨᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۘۘۤ;II)V
-    .locals 0
+.method public constructor <init>(Ll/ۛ᩸ۛ;Ll/᩷ۨᩴ;IIJI)V
+    .locals 7
 
-    .line 132
-    iput-object p1, p0, Ll/۬ۘۤ;->ۖ:Ll/ۘۘۤ;
+    .line 724
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
-    invoke-direct {p0, p2, p3}, Ll/ۖۘۤ;-><init>(II)V
+    .line 725
+    iput-object p1, p0, Ll/۬ۘۤ;->ۤ:Ll/ۛ᩸ۛ;
 
-    const/4 p1, 0x1
+    .line 726
+    iput-object p2, p0, Ll/۬ۘۤ;->᩸:Ll/᩷ۨᩴ;
 
-    add-int/2addr p2, p3
+    .line 727
+    new-instance p2, Ll/ۢۘۤ;
 
-    shl-int/2addr p1, p2
+    new-instance v6, Ll/ۜۘۤ;
 
-    .line 135
-    new-array p1, p1, [Ll/֨ۘۤ;
+    invoke-direct {v6, p0}, Ll/ۜۘۤ;-><init>(Ll/۬ۘۤ;)V
 
-    iput-object p1, p0, Ll/۬ۘۤ;->ۨ:[Ll/֨ۘۤ;
+    move-object v0, p2
 
-    const/4 p1, 0x0
+    move v1, p3
 
-    .line 136
-    :goto_0
-    iget-object p2, p0, Ll/۬ۘۤ;->ۨ:[Ll/֨ۘۤ;
+    move v2, p4
 
-    array-length p3, p2
+    move-wide v3, p5
 
-    if-ge p1, p3, :cond_0
+    move v5, p7
 
-    .line 137
-    new-instance p3, Ll/֨ۘۤ;
+    invoke-direct/range {v0 .. v6}, Ll/ۢۘۤ;-><init>(IIJILl/ۜۘۤ;)V
 
-    invoke-direct {p3, p0}, Ll/֨ۘۤ;-><init>(Ll/۬ۘۤ;)V
+    iput-object p2, p0, Ll/۬ۘۤ;->ᩴ:Ll/ۢۘۤ;
 
-    aput-object p3, p2, p1
+    .line 738
+    invoke-virtual {p1, p0}, Ll/᩻ۤۛ;->ۙ(Ljava/lang/Object;)V
 
-    add-int/lit8 p1, p1, 0x1
+    .line 739
+    invoke-virtual {p1}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
 
-    goto :goto_0
+    move-result-object p2
 
-    :cond_0
+    invoke-virtual {p2}, Ll/ۗ᩷ۛ;->ۙ()[B
+
+    move-result-object p2
+
+    .line 740
+    invoke-virtual {p1}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
+
+    move-result-object p1
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p3}, Ll/ۗ᩷ۛ;->᩷([B)V
+
+    .line 741
+    new-instance p1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Ll/۬ۘۤ;->ۙ:Ljava/lang/ref/SoftReference;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()V
-    .locals 10
+.method public final declared-synchronized ۙ()V
+    .locals 4
 
-    .line 146
-    iget-object v0, p0, Ll/۬ۘۤ;->ۖ:Ll/ۘۘۤ;
+    const-string v1, "Failed to load dex buffer: "
 
-    invoke-static {v0}, Ll/ۘۘۤ;->ۙ(Ll/ۘۘۤ;)Ll/֫۬ۤ;
+    move-object v0, p0
+
+    .line 3
+    monitor-enter v0
+
+    .line 745
+    :try_start_0
+    iget v2, p0, Ll/۬ۘۤ;->᩷:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p0, Ll/۬ۘۤ;->᩷:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 748
+    :try_start_1
+    iget-object v2, p0, Ll/۬ۘۤ;->ۤ:Ll/ۛ᩸ۛ;
+
+    invoke-virtual {v2}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ll/ۗ᩷ۛ;->ۙ()[B
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    .line 749
+    iget-object v2, p0, Ll/۬ۘۤ;->ۙ:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [B
+
+    if-nez v2, :cond_0
+
+    .line 751
+    iget-object v2, p0, Ll/۬ۘۤ;->᩸:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v2}, Ll/᩷ۨᩴ;->ܶ᩷()[B
+
+    move-result-object v2
+
+    :cond_0
+    if-eqz v2, :cond_1
+
+    .line 756
+    iget-object v1, p0, Ll/۬ۘۤ;->ۤ:Ll/ۛ᩸ۛ;
+
+    invoke-virtual {v1}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Ll/֫۬ۤ;->ۙ(I)I
-
-    move-result v1
-
-    invoke-static {v0}, Ll/ۘۘۤ;->ۙ(Ll/ۘۘۤ;)Ll/֫۬ۤ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/֫۬ۤ;->ۙ()I
-
-    move-result v0
-
-    invoke-virtual {p0, v1, v0}, Ll/ۖۘۤ;->ۙ(II)I
-
-    move-result v0
-
-    .line 147
-    iget-object v1, p0, Ll/۬ۘۤ;->ۨ:[Ll/֨ۘۤ;
-
-    aget-object v0, v1, v0
-
-    .line 153
-    iget-object v1, v0, Ll/ۨۘۤ;->ۙ:[S
-
-    .line 155
-    iget-object v0, v0, Ll/֨ۘۤ;->ܰ:Ll/۬ۘۤ;
-
-    iget-object v0, v0, Ll/۬ۘۤ;->ۖ:Ll/ۘۘۤ;
-
-    iget-object v3, v0, Ll/ۚۘۤ;->ܶ:Ll/᩵ۘۤ;
-
-    invoke-virtual {v3}, Ll/᩵ۘۤ;->ܰ()Z
-
-    move-result v3
-
-    const/16 v4, 0x100
-
-    const/4 v5, 0x1
-
-    if-eqz v3, :cond_1
-
-    :cond_0
-    shl-int/lit8 v2, v5, 0x1
-
-    .line 157
-    invoke-static {v0}, Ll/ۘۘۤ;->ܰ(Ll/ۘۘۤ;)Ll/ۡۘۤ;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1, v5}, Ll/ۡۘۤ;->ۙ([SI)I
-
-    move-result v3
-
-    or-int v5, v2, v3
-
-    if-lt v5, v4, :cond_0
+    invoke-virtual {v1, v2}, Ll/ۗ᩷ۛ;->᩷([B)V
 
     goto :goto_0
 
-    .line 161
+    .line 754
     :cond_1
-    invoke-static {v0}, Ll/ۘۘۤ;->ۙ(Ll/ۘۘۤ;)Ll/֫۬ۤ;
+    new-instance v2, Ljava/io/IOException;
 
-    move-result-object v3
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v6, v0, Ll/ۚۘۤ;->᩺:[I
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget v2, v6, v2
+    iget-object v1, p0, Ll/۬ۘۤ;->᩸:Ll/᩷ۨᩴ;
 
-    invoke-virtual {v3, v2}, Ll/֫۬ۤ;->ۙ(I)I
-
-    move-result v2
-
-    const/16 v3, 0x100
-
-    const/4 v6, 0x1
-
-    :cond_2
-    shl-int/2addr v2, v5
-
-    and-int v7, v2, v3
-
-    .line 169
-    invoke-static {v0}, Ll/ۘۘۤ;->ܰ(Ll/ۘۘۤ;)Ll/ۡۘۤ;
-
-    move-result-object v8
-
-    add-int v9, v3, v7
-
-    add-int/2addr v9, v6
-
-    invoke-virtual {v8, v1, v9}, Ll/ۡۘۤ;->ۙ([SI)I
-
-    move-result v8
-
-    shl-int/2addr v6, v5
-
-    or-int/2addr v6, v8
-
-    rsub-int/lit8 v8, v8, 0x0
-
-    not-int v7, v7
-
-    xor-int/2addr v7, v8
-
-    and-int/2addr v3, v7
-
-    if-lt v6, v4, :cond_2
-
-    move v5, v6
-
-    .line 175
-    :goto_0
-    invoke-static {v0}, Ll/ۘۘۤ;->ۙ(Ll/ۘۘۤ;)Ll/֫۬ۤ;
+    invoke-virtual {v1}, Ll/᩷ۨᩴ;->ܺۙ()Ljava/lang/String;
 
     move-result-object v1
 
-    int-to-byte v2, v5
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ll/֫۬ۤ;->ۙ(B)V
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 176
-    iget-object v0, v0, Ll/ۚۘۤ;->ܶ:Ll/᩵ۘۤ;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ll/᩵ۘۤ;->ۖ()V
+    invoke-direct {v2, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 765
+    :cond_2
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 762
+    :try_start_2
+    iget v2, p0, Ll/۬ۘۤ;->᩷:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    iput v2, p0, Ll/۬ۘۤ;->᩷:I
+
+    .line 764
+    throw v1
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v1
 .end method
 
-.method public final ܰ()V
-    .locals 3
+.method public final declared-synchronized ᩷()V
+    .locals 4
 
-    const/4 v0, 0x0
+    move-object v0, p0
 
-    .line 141
-    :goto_0
-    iget-object v1, p0, Ll/۬ۘۤ;->ۨ:[Ll/֨ۘۤ;
+    .line 1
+    monitor-enter v0
 
-    array-length v2, v1
+    .line 768
+    :try_start_0
+    iget v1, p0, Ll/۬ۘۤ;->᩷:I
 
-    if-ge v0, v2, :cond_0
+    add-int/lit8 v1, v1, -0x1
 
-    .line 142
-    aget-object v1, v1, v0
+    iput v1, p0, Ll/۬ۘۤ;->᩷:I
 
-    .line 107
-    iget-object v1, v1, Ll/ۨۘۤ;->ۙ:[S
+    if-nez v1, :cond_0
 
-    invoke-static {v1}, Ll/۬֫ᩳ;->ۙ([S)V
+    .line 769
+    iget-object v1, p0, Ll/۬ۘۤ;->ۤ:Ll/ۛ᩸ۛ;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {v1}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
 
-    goto :goto_0
+    move-result-object v1
 
+    invoke-virtual {v1}, Ll/ۗ᩷ۛ;->ۙ()[B
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 771
+    iget-object v2, p0, Ll/۬ۘۤ;->ۤ:Ll/ۛ᩸ۛ;
+
+    invoke-virtual {v2}, Ll/᩻ۤۛ;->ᩴ()Ll/ۗ᩷ۛ;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ll/ۗ᩷ۛ;->᩷([B)V
+
+    .line 772
+    iget-object v2, p0, Ll/۬ۘۤ;->ۙ:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    .line 773
+    new-instance v2, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v2, v1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v2, p0, Ll/۬ۘۤ;->ۙ:Ljava/lang/ref/SoftReference;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 777
     :cond_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

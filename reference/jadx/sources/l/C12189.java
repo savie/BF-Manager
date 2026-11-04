@@ -1,64 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۙ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: A70P */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12189 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f40787;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f40788;
+/* JADX INFO: renamed from: l.ۨۜ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8BV */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12189 implements InterfaceC3573 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C5838 f40789;
+    public final /* synthetic */ C6224 f39193;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30295(int i, boolean z) {
-        if (this.f40787) {
-            throw new IllegalStateException("Dirty builder already built");
-        }
-        if (i <= 0) {
-            throw new IllegalArgumentException("Dirty run length must be positive");
-        }
-        int i2 = this.f40788;
-        if (((long) i2) + ((long) i) > 2147483647L) {
-            throw new ArithmeticException("Dirty length overflow");
-        }
-        this.f40788 = i2 + i;
-        this.f40789 = C9367.m24035(this.f40789, C9367.m24039(i, z));
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ */
+    public final /* synthetic */ void mo3465() {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30296(int i, long[] jArr) {
-        if (this.f40787) {
-            throw new IllegalStateException("Dirty builder already built");
-        }
-        if (i <= 0 || i > 65536 || jArr.length != C9367.m24033(i)) {
-            throw new IllegalArgumentException("Invalid dirty bitmap");
-        }
-        int i2 = i & 63;
-        if (i2 != 0 && (jArr[jArr.length - 1] >>> i2) != 0) {
-            throw new IllegalArgumentException("Dirty bitmap has trailing bits");
-        }
-        if (((long) this.f40788) + ((long) i) > 2147483647L) {
-            throw new ArithmeticException("Dirty length overflow");
-        }
-        C5838 c5838M24034 = C9367.m24034(i, jArr);
-        if (!c5838M24034.m16052()) {
-            throw new IllegalArgumentException("Uniform dirty bitmap is not canonical");
-        }
-        this.f40788 += i;
-        this.f40789 = C9367.m24035(this.f40789, c5838M24034);
+    public C12189(C6224 c6224) {
+        this.f39193 = c6224;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5838 m30294() {
-        if (this.f40787) {
-            throw new IllegalStateException("Dirty builder already built");
-        }
-        this.f40787 = true;
-        return this.f40789;
+    @Override // l.InterfaceC3573
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3466(long j, long j2, long j3) {
+        C3986 c3986 = this.f39193.f21147;
+        InterfaceC24124 interfaceC24124 = c3986.f13634;
+        C3374.m11075(j2, j3);
+        interfaceC24124.getClass();
+        c3986.f13634.setProgress(C3374.m11075(c3986.f13636.m6383() + j2, c3986.f13636.m6379()));
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f39193.f21147.f13634.mo924();
     }
 }

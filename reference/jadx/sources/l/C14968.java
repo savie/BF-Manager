@@ -1,15 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۗ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1A0Y */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14968 implements InterfaceC11440 {
-    @Override // l.InterfaceC11440
-    /* JADX INFO: renamed from: ۙ */
-    public final Throwable mo12998(Throwable th) {
-        if (th instanceof C21317) {
-            return (C21317) th;
-        }
-        return new C21317(th);
+import java.util.function.ToIntFunction;
+
+/* JADX INFO: renamed from: l.ܳ֡ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M3ZI */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C14968 implements ToIntFunction {
+    @Override // java.util.function.ToIntFunction
+    public final int applyAsInt(Object obj) {
+        return C11239.m28346((AbstractC8036) obj);
     }
 }

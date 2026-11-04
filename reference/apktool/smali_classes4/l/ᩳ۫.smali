@@ -1,138 +1,14 @@
-.class public final Ll/ᩳ۫;
+.class public interface abstract Ll/ᩳ۫;
 .super Ljava/lang/Object;
-.source "P204"
+.source "O5Y7"
 
 
-# instance fields
-.field public final ۙ:[I
-
-.field public final ܰ:[F
-
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    .line 226
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 227
-    filled-new-array {p1, p2}, [I
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ᩳ۫;->ۙ:[I
-
-    const/4 p1, 0x2
-
-    new-array p1, p1, [F
-
-    .line 228
-    fill-array-data p1, :array_0
-
-    iput-object p1, p0, Ll/ᩳ۫;->ܰ:[F
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+# virtual methods
+.method public abstract ۙ(Ll/ۢ۫;)V
 .end method
 
-.method public constructor <init>(III)V
-    .locals 0
-
-    .line 231
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 232
-    filled-new-array {p1, p2, p3}, [I
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ᩳ۫;->ۙ:[I
-
-    const/4 p1, 0x3
-
-    new-array p1, p1, [F
-
-    .line 233
-    fill-array-data p1, :array_0
-
-    iput-object p1, p0, Ll/ᩳ۫;->ܰ:[F
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f000000    # 0.5f
-        0x3f800000    # 1.0f
-    .end array-data
+.method public abstract ۙ(Ll/ۢ۫;Landroid/view/Menu;)Z
 .end method
 
-.method public constructor <init>(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
-    .locals 4
-
-    .line 216
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 217
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    .line 218
-    new-array v1, v0, [I
-
-    iput-object v1, p0, Ll/ᩳ۫;->ۙ:[I
-
-    .line 219
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Ll/ᩳ۫;->ܰ:[F
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    .line 221
-    iget-object v2, p0, Ll/ᩳ۫;->ۙ:[I
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    aput v3, v2, v1
-
-    .line 222
-    iget-object v2, p0, Ll/ᩳ۫;->ܰ:[F
-
-    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Float;
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    aput v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+.method public abstract ۙ(Ll/ۢ۫;Landroid/view/MenuItem;)Z
 .end method

@@ -1,160 +1,668 @@
-.class public final synthetic Ll/֡ۤᩴ;
+.class public final Ll/֡ۤᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "L6R5"
+
+
+# instance fields
+.field public ۙ:Ll/᩹ܽ᩵;
+
+.field public ۤ:I
+
+.field public ۫:Ll/ۗ֨᩸;
+
+.field public ܳ:Z
+
+.field public final ᩴ:Ll/ܿۤᩴ;
+
+.field public final ᩷:Ljava/lang/Object;
+
+.field public ᩸:I
 
 
 # direct methods
-.method public static forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
+.method public constructor <init>(Ll/ܿۤᩴ;)V
     .locals 1
 
-    instance-of v0, p0, Ll/ܽۤᩴ;
+    .line 17
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    .line 10
+    new-instance v0, Ljava/lang/Object;
 
-    check-cast p0, Ll/ܽۤᩴ;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0, p1}, Ll/ܽۤᩴ;->forEach(Ljava/util/function/Consumer;)V
+    iput-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
 
-    return-void
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/Collection;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Ljava/util/Collection;
-
-    .line 663
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 664
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 665
-    invoke-interface {p1, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    .line 0
-    :cond_2
-    invoke-static {p0, p1}, Ll/᩶ۤᩴ;->$default$forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
+    .line 18
+    iput-object p1, p0, Ll/֡ۤᩴ;->ᩴ:Ll/ܿۤᩴ;
 
     return-void
 .end method
 
-.method public static spliterator(Ljava/lang/Iterable;)Ll/᩷ۛᩴ;
+.method public static synthetic ۙ(Ll/֡ۤᩴ;IILjava/lang/CharSequence;II)V
+    .locals 6
+
+    .line 91
+    iget-object v0, p0, Ll/֡ۤᩴ;->ᩴ:Ll/ܿۤᩴ;
+
+    move v1, p1
+
+    move v2, p2
+
+    move-object v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    invoke-interface/range {v0 .. v5}, Ll/ܿۤᩴ;->ۙ(IILjava/lang/CharSequence;II)V
+
+    return-void
+.end method
+
+.method private ܳ()V
+    .locals 4
+
+    .line 55
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 56
+    :try_start_0
+    iget-object v1, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    if-eqz v1, :cond_2
+
+    iget-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0}, Ll/֡ۤᩴ;->ۙ()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    .line 57
+    :cond_0
+    iget-object v1, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    const/4 v2, 0x0
+
+    .line 58
+    iput-object v2, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    .line 59
+    iget-boolean v3, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    .line 60
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    .line 61
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Text owner is closed"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/Throwable;)V
+
+    return-void
+
+    .line 62
+    :cond_1
+    invoke-virtual {v1, v2}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 56
+    :cond_2
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 60
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method private ᩴ()V
+    .locals 3
+
+    .line 107
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 108
+    :try_start_0
+    iget v1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    .line 109
+    :cond_0
+    iget-object v1, p0, Ll/֡ۤᩴ;->۫:Ll/ۗ֨᩸;
+
+    const/4 v2, 0x0
+
+    .line 110
+    iput-object v2, p0, Ll/֡ۤᩴ;->۫:Ll/ۗ֨᩸;
+
+    .line 111
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    .line 112
+    invoke-virtual {v1}, Ll/ۗ֨᩸;->run()V
+
+    :cond_1
+    return-void
+
+    .line 108
+    :cond_2
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 111
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+
+# virtual methods
+.method public final ۙ(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;
+    .locals 2
+
+    .line 68
+    :try_start_0
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 69
+    :try_start_1
+    iget-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-eqz v1, :cond_0
+
+    .line 71
+    monitor-exit v0
+
+    goto :goto_0
+
+    .line 73
+    :cond_0
+    iget p1, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ll/֡ۤᩴ;->ۤ:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 74
+    :try_start_2
+    invoke-interface {p2}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 75
+    :try_start_3
+    iget p2, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    add-int/lit8 p2, p2, -0x1
+
+    iput p2, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 78
+    :goto_0
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ܳ()V
+
+    .line 79
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ᩴ()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 75
+    :try_start_4
+    iget p2, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    add-int/lit8 p2, p2, -0x1
+
+    iput p2, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    throw p1
+
+    :catchall_1
+    move-exception p1
+
+    .line 76
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :try_start_5
+    throw p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :catchall_2
+    move-exception p1
+
+    .line 78
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ܳ()V
+
+    .line 79
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ᩴ()V
+
+    .line 80
+    throw p1
+.end method
+
+.method public final ۙ(Ll/᩹ۤᩴ;)Ljava/lang/Object;
+    .locals 3
+
+    .line 85
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 86
+    :try_start_0
+    iget v1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v2, p1}, Ll/֡ۤᩴ;->ۙ(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    :goto_0
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception p1
+
+    .line 87
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final ۙ(Ll/ۗ֨᩸;)V
+    .locals 2
+
+    .line 96
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 97
+    :try_start_0
+    iget-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    .line 98
+    iput-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    .line 99
+    iput-object p1, p0, Ll/֡ۤᩴ;->۫:Ll/ۗ֨᩸;
+
+    .line 100
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 101
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ܳ()V
+
+    .line 102
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ᩴ()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 100
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final ۙ(Z)V
+    .locals 2
+
+    .line 23
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    if-eqz p1, :cond_1
+
+    .line 25
+    :try_start_0
+    iget-boolean p1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-nez p1, :cond_0
+
+    .line 26
+    iget p1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    goto :goto_0
+
+    .line 25
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Text owner is closed"
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 28
+    :cond_1
+    iget p1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    if-eqz p1, :cond_2
+
+    add-int/lit8 p1, p1, -0x1
+
+    .line 29
+    iput p1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    .line 31
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ܳ()V
+
+    .line 33
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ᩴ()V
+
+    return-void
+
+    .line 28
+    :cond_2
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Unbalanced internal read-only state"
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 31
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final ۙ()Z
+    .locals 2
+
+    .line 39
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-nez v1, :cond_0
+
+    iget v1, p0, Ll/֡ۤᩴ;->᩸:I
+
+    if-nez v1, :cond_0
+
+    iget v1, p0, Ll/֡ۤᩴ;->ۤ:I
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ۤ()V
+    .locals 2
+
+    .line 116
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 117
+    invoke-direct {p0}, Ll/֡ۤᩴ;->ܳ()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 116
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ᩷()Z
     .locals 1
 
-    instance-of v0, p0, Ll/ܽۤᩴ;
+    .line 36
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    check-cast p0, Ll/ܽۤᩴ;
+    iget v0, p0, Ll/֡ۤᩴ;->ۤ:I
 
-    invoke-interface {p0}, Ll/ܽۤᩴ;->spliterator()Ll/᩷ۛᩴ;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    return v0
 
     :cond_0
-    instance-of v0, p0, Ljava/util/LinkedHashSet;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ljava/util/LinkedHashSet;
-
-    const/16 v0, 0x11
-
-    .line 196
-    invoke-static {p0, v0}, Ll/᩶ۛᩴ;->spliterator(Ljava/util/Collection;I)Ll/᩷ۛᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 0
-    :cond_1
-    instance-of v0, p0, Ljava/util/SortedSet;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Ljava/util/SortedSet;
-
-    .line 256
-    new-instance v0, Ll/ᩳܳᩴ;
-
-    invoke-direct {v0, p0, p0}, Ll/ᩳܳᩴ;-><init>(Ljava/util/SortedSet;Ljava/util/Collection;)V
-
-    return-object v0
-
-    .line 0
-    :cond_2
-    instance-of v0, p0, Ljava/util/Set;
-
-    if-eqz v0, :cond_3
-
-    check-cast p0, Ljava/util/Set;
-
-    invoke-static {p0}, Ll/ۜۛᩴ;->$default$spliterator(Ljava/util/Set;)Ll/᩷ۛᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    instance-of v0, p0, Ljava/util/List;
-
-    if-eqz v0, :cond_4
-
-    check-cast p0, Ljava/util/List;
-
-    invoke-static {p0}, Ll/ۧܿᩴ;->$default$spliterator(Ljava/util/List;)Ll/᩷ۛᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_4
-    instance-of v0, p0, Ljava/util/Collection;
-
-    if-eqz v0, :cond_5
-
-    check-cast p0, Ljava/util/Collection;
-
-    invoke-static {p0}, Ll/᩵ܿᩴ;->$default$spliterator(Ljava/util/Collection;)Ll/᩷ۛᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 101
-    :cond_5
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Ll/᩶ۛᩴ;->b(Ljava/util/Iterator;I)Ll/᩹ܳᩴ;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final ᩸()Ll/᩹ܽ᩵;
+    .locals 4
 
-    return-object p0
+    .line 44
+    iget-object v0, p0, Ll/֡ۤᩴ;->᩷:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 45
+    :try_start_0
+    iget-boolean v1, p0, Ll/֡ۤᩴ;->ܳ:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Text owner is closed"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/IllegalStateException;)Ll/᩹ܽ᩵;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 46
+    :cond_0
+    invoke-virtual {p0}, Ll/֡ۤᩴ;->ۙ()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ll/᩹ܽ᩵;->᩸(Ljava/lang/Object;)Ll/᩹ܽ᩵;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 47
+    :cond_1
+    iget-object v1, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    if-nez v1, :cond_2
+
+    new-instance v1, Ll/᩹ܽ᩵;
+
+    invoke-direct {v1}, Ll/᩹ܽ᩵;-><init>()V
+
+    iput-object v1, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    .line 48
+    :cond_2
+    iget-object v1, p0, Ll/֡ۤᩴ;->ۙ:Ll/᩹ܽ᩵;
+
+    new-instance v2, Ll/ۖܶ᩸;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Ll/ۖܶ᩸;-><init>(I)V
+
+    invoke-virtual {v1, v2}, Ll/᩹ܽ᩵;->᩷(Ll/᩻ܶ᩵;)Ll/᩹ܽ᩵;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 49
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

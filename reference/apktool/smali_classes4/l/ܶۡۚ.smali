@@ -1,50 +1,69 @@
-.class public final synthetic Ll/ܶۡۚ;
+.class public final Ll/ܶۡۚ;
 .super Ljava/lang/Object;
-.source "LAQJ"
-
-# interfaces
-.implements Ll/᩸᩻᩺;
+.source "B75R"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩸ۡۚ;
+.field public ֫:I
+
+.field public ۙ:Ll/֨ܺ֫;
+
+.field public ۚ:Ll/۫ۡۚ;
+
+.field public ۤ:Ll/᩻ۡۚ;
+
+.field public ۧ:I
+
+.field public final ۫:I
+
+.field public ܳ:Ll/ܽܽ֫;
+
+.field public ܶ:Ll/ܽۡۚ;
+
+.field public final ܺ:Ljava/util/ArrayDeque;
+
+.field public ܽ:Z
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public ᩷:Ll/۫۫֫;
+
+.field public ᩸:I
+
+.field public ᩻:Ll/ܺۡۚ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩸ۡۚ;)V
-    .locals 0
+.method public constructor <init>(Ll/᩻ۡۚ;ILl/۫۫֫;)V
+    .locals 1
 
-    .line 0
+    .line 870
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܶۡۚ;->ܺ:Ll/᩸ۡۚ;
+    .line 866
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
+    iput-object v0, p0, Ll/ܶۡۚ;->ܺ:Ljava/util/ArrayDeque;
 
-# virtual methods
-.method public final ۙ(I)V
-    .locals 2
+    .line 871
+    iput-object p1, p0, Ll/ܶۡۚ;->ۤ:Ll/᩻ۡۚ;
 
-    .line 530
-    iget-object v0, p0, Ll/ܶۡۚ;->ܺ:Ll/᩸ۡۚ;
+    .line 872
+    check-cast p1, Ll/᩷ۖۚ;
 
-    iget-object v1, v0, Ll/᩸ۡۚ;->ۘ:Ll/֫ۧۚ;
+    invoke-virtual {p1}, Ll/᩷ۖۚ;->᩷()Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Ll/֫ۧۚ;->ܰ(I)V
+    move-result-object p1
 
-    const/16 v1, 0x64
+    iput-object p1, p0, Ll/ܶۡۚ;->ᩴ:Ljava/lang/String;
 
-    if-ne p1, v1, :cond_0
+    .line 873
+    iput p2, p0, Ll/ܶۡۚ;->۫:I
 
-    .line 532
-    iget-object p1, v0, Ll/᩸ۡۚ;->ۘ:Ll/֫ۧۚ;
+    .line 874
+    iput-object p3, p0, Ll/ܶۡۚ;->᩷:Ll/۫۫֫;
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Ll/֫ۧۚ;->ۙ(Z)V
-
-    :cond_0
     return-void
 .end method

@@ -1,46 +1,29 @@
 package l;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-/* JADX INFO: renamed from: l.ܳ֡ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۬᩺ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F70I */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C14179 {
-    public final Map a;
-    public final Map b;
 
-    public C14179(Map map) {
-        this.a = map;
-        HashMap map2 = new HashMap();
-        ArrayList arrayList = new ArrayList();
-        for (Map.Entry entry : map.entrySet()) {
-            HashMap map3 = new HashMap();
-            for (Map.Entry entry2 : ((Map) entry.getValue()).entrySet()) {
-                String str = (String) entry2.getValue();
-                String str2 = (String) entry2.getValue();
-                Long l2 = (Long) entry2.getKey();
-                ConcurrentMapC13783 concurrentMapC13783 = C9240.a;
-                map3.put(str, new AbstractMap.SimpleImmutableEntry(str2, l2));
-            }
-            ArrayList arrayList2 = new ArrayList(map3.values());
-            Collections.sort(arrayList2, C9240.b);
-            map2.put((EnumC4069) entry.getKey(), arrayList2);
-            arrayList.addAll(arrayList2);
-            map2.put(null, arrayList);
-        }
-        Collections.sort(arrayList, C9240.b);
-        this.b = map2;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C14179 f44834 = new C14179(EnumC4640.NOT_FOUND, null);
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C14179 f44835 = new C14179(EnumC4640.UNAVAILABLE, null);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C7468 f44836;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final EnumC4640 f44837;
+
+    public C14179(EnumC4640 enumC4640, C7468 c7468) {
+        this.f44837 = enumC4640;
+        this.f44836 = c7468;
     }
 
-    public final String a(long j, EnumC4069 enumC4069) {
-        Map map = (Map) this.a.get(enumC4069);
-        if (map != null) {
-            return (String) map.get(Long.valueOf(j));
-        }
-        return null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C14179 m34467(C7468 c7468) {
+        return new C14179(EnumC4640.FOUND, c7468);
     }
 }

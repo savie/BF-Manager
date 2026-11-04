@@ -1,39 +1,40 @@
 .class public final Ll/ۚۗ;
 .super Ljava/lang/Object;
-.source "44RH"
 
 
-# instance fields
-.field public final ۙ:Ljava/lang/Object;
+# static fields
+.field public static ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 1381
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    .line 1382
-    iput-object p1, p0, Ll/ۚۗ;->ۙ:Ljava/lang/Object;
+    new-array v0, v0, [I
+
+    .line 0
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ll/ۚۗ;->ۙ:[I
 
     return-void
-.end method
 
-.method public static ۙ(FFF)Ll/ۚۗ;
-    .locals 2
-
-    .line 1375
-    new-instance v0, Ll/ۚۗ;
-
-    const/4 v1, 0x1
-
-    .line 1376
-    invoke-static {v1, p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ll/ۚۗ;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
-
-    return-object v0
+    :array_0
+    .array-data 4
+        0x101013f
+        0x1010140
+        0x7f0400a7
+        0x7f0400a8
+        0x7f0400a9
+        0x7f0400ab
+        0x7f0400ac
+        0x7f0400ad
+        0x7f040148
+        0x7f040149
+        0x7f04014b
+        0x7f04014c
+        0x7f04014e
+    .end array-data
 .end method

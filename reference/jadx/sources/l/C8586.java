@@ -1,117 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۖۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 26O7 */
+/* JADX INFO: renamed from: l.۠ۧۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E762 */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C8586 {
 
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f28067;
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29687 = C14690.m35219(" *+(?<directive>\\.class) ++(?<modifiers>(?:(?>public|private|protected|static|final|synchronized|volatile|bridge|transient|varargs|native|interface|abstract|strictfp|synthetic|annotation|enum|constructor|declared-synchronized|whitelist|greylist-max-o|greylist-max-p|greylist-max-q|greylist-max-r|greylist|blacklist|core-platform-api|test-api) ++)*+)(?<type>L[^;\\r\\n]*+;)");
+    public final long f28068;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29688 = C14690.m35219(" *+(?<directive>\\.)method ++(?<modifiers>(?:(?>public|private|protected|static|final|synchronized|volatile|bridge|transient|varargs|native|interface|abstract|strictfp|synthetic|annotation|enum|constructor|declared-synchronized|whitelist|greylist-max-o|greylist-max-p|greylist-max-q|greylist-max-r|greylist|blacklist|core-platform-api|test-api) ++)*+)(?<name>[^ \\r\\n(]++) *+\\( *+(?<parameters>[^ \\r\\n)]*+) *+\\) *+(?<type>\\[*+(?:[VCZBISJDF]|L[^;\\r\\n]*+;))");
+    public final String f28069;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29691 = C14690.m35219(" *+(?<directive>\\.)field ++(?<modifiers>(?:(?>public|private|protected|static|final|synchronized|volatile|bridge|transient|varargs|native|interface|abstract|strictfp|synthetic|annotation|enum|constructor|declared-synchronized|whitelist|greylist-max-o|greylist-max-p|greylist-max-q|greylist-max-r|greylist|blacklist|core-platform-api|test-api) ++)*+)(?<name>[^ \\r\\n:]++) *+: *+(?<type>\\[*+(?:[VCZBISJDF]|L[^;\\r\\n]*+;))(?: *+= *+(?<value>[^ \\f\\t\\r\\n\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]++))?+");
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f28070;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29692 = C14690.m35219(" *+\\.end ++method");
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String f28071;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29689 = C14690.m35219(" *+\\.end ++field");
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f28072;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29690 = C14690.m35219(" *+(?:const-string(?:/jumbo)?+ ++[vp][0-9]++ *+,|\\.field [^\\r\\n=]++=) *+\"");
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final byte[] f28073;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29685 = C14690.m35219("method ++(?<modifiers>(?:(?>public|private|protected|static|final|synchronized|volatile|bridge|transient|varargs|native|interface|abstract|strictfp|synthetic|annotation|enum|constructor|declared-synchronized|whitelist|greylist-max-o|greylist-max-p|greylist-max-q|greylist-max-r|greylist|blacklist|core-platform-api|test-api) ++)*+)(?<name>[^ \\r\\n(]++) *+\\( *+(?<parameters>[^ \\r\\n)]*+) *+\\) *+(?<type>[^ \\r\\n]++)");
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final String f28074;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C14690 f29686 = C14690.m35219("field ++(?<modifiers>(?:(?>public|private|protected|static|final|synchronized|volatile|bridge|transient|varargs|native|interface|abstract|strictfp|synthetic|annotation|enum|constructor|declared-synchronized|whitelist|greylist-max-o|greylist-max-p|greylist-max-q|greylist-max-r|greylist|blacklist|core-platform-api|test-api) ++)*+)(?<name>[^ \\r\\n:]++) *+: *+(?<type>[^ \\r\\n=]++)");
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f28075;
 
-    /* JADX WARN: Code duplicated, block: B:13:0x0026  */
-    /* JADX WARN: Code duplicated, block: B:17:0x002f  */
-    /* JADX WARN: Code duplicated, block: B:19:0x0035 A[ADDED_TO_REGION] */
-    /* JADX WARN: Code duplicated, block: B:21:0x0038 A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:22:0x003a  */
-    /* JADX WARN: Code duplicated, block: B:29:0x0049  */
-    /* JADX WARN: Code duplicated, block: B:37:0x0050 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:40:? A[SYNTHETIC] */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m22367(C6222 c6222, int i) {
-        char cCharAt;
-        int i2;
-        int i3;
-        CharSequence text = c6222.getText();
-        int length = text.length();
-        if (i >= length) {
-            return false;
-        }
-        if (i != 0) {
-            int i4 = i - 1;
-            if (text.charAt(i4) != '\n' && (text.charAt(i4) != '\r' || text.charAt(i) == '\n')) {
-                while (i < length) {
-                    cCharAt = text.charAt(i);
-                    if (cCharAt != '\r') {
-                        if (cCharAt == '\r') {
-                            i = i3;
-                        }
-                        i2 = i + 1;
-                        if (i2 < length) {
-                            continue;
-                        }
-                    } else {
-                        if (cCharAt == '\r') {
-                            i = i3;
-                        }
-                        i2 = i + 1;
-                        if (i2 < length) {
-                            continue;
-                        }
-                    }
-                    i++;
-                }
-                return false;
-            }
-            if (!c6222.lookingAt(i)) {
-                while (i < length) {
-                    cCharAt = text.charAt(i);
-                    if (cCharAt != '\r' || cCharAt == '\n') {
-                        if (cCharAt == '\r' && (i3 = i + 1) < length && text.charAt(i3) == '\n') {
-                            i = i3;
-                        }
-                        i2 = i + 1;
-                        if (i2 < length || !c6222.lookingAt(i2)) {
-                        }
-                    }
-                    i++;
-                }
-                return false;
-            }
-        } else if (!c6222.lookingAt(i)) {
-            while (i < length) {
-                cCharAt = text.charAt(i);
-                if (cCharAt != '\r') {
-                    if (cCharAt == '\r') {
-                        i = i3;
-                    }
-                    i2 = i + 1;
-                    if (i2 < length) {
-                        continue;
-                    }
-                } else {
-                    if (cCharAt == '\r') {
-                        i = i3;
-                    }
-                    i2 = i + 1;
-                    if (i2 < length) {
-                        continue;
-                    }
-                }
-                i++;
-            }
-            return false;
-        }
-        return true;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f28076;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f28077;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final String f28078;
+
+    public C8586(String str, String str2, String str3, String str4, String str5, long j, String str6, String str7, byte[] bArr, String str8, String str9, String str10) {
+        this.f28074 = str;
+        this.f28077 = str2;
+        this.f28067 = str3;
+        this.f28075 = str4;
+        this.f28070 = str5;
+        this.f28068 = j;
+        this.f28076 = str6;
+        this.f28069 = str7;
+        this.f28073 = (byte[]) bArr.clone();
+        this.f28072 = str8;
+        this.f28078 = str9;
+        this.f28071 = str10;
     }
 }

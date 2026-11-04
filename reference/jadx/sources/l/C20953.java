@@ -1,20 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ܶ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H7RN */
+/* JADX INFO: renamed from: l.᩶֡᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 34PY */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C20953 extends EnumC19730 {
-    public /* synthetic */ C20953(EnumC19024 enumC19024, EnumC18318 enumC18318, EnumC7029 enumC7029) {
-        this("SHOULDSTOP", 69, "--should-stop", null, enumC19024, enumC18318, enumC7029);
+public final class C20953 extends C17969 {
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17969 f67024;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C20953(C17969 c17969, AbstractC22970 abstractC22970, AbstractC22664 abstractC22664, AbstractC22664 abstractC22665, C14458 c14458) {
+        super(abstractC22970, abstractC22664, abstractC22665, c14458);
+        this.f67024 = c17969;
     }
 
-    public C20953(String str, int i, String str2, String str3, EnumC19024 enumC19024, EnumC18318 enumC18318, EnumC7029 enumC7029) {
-        super(str, i, str2, str3, enumC19024, enumC18318, enumC7029, 0);
-    }
-
-    @Override // l.EnumC19730
+    @Override // l.C17969, l.AbstractC22664
     /* JADX INFO: renamed from: ۙ */
-    public void mo2368(AbstractC10558 abstractC10558, String str, String str2) {
-        EnumC15497.SHOULDSTOP.m37094(abstractC10558, str, str2);
+    public final /* bridge */ /* synthetic */ AbstractC22664 mo4934(C14458 c14458) {
+        return mo4934(c14458);
+    }
+
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ܿ */
+    public final AbstractC22664 mo4935() {
+        return this.f67024.mo4935();
+    }
+
+    @Override // l.C17969, l.AbstractC22664
+    /* JADX INFO: renamed from: ᩸ۙ */
+    public final AbstractC22664 mo19992() {
+        return this.f67024.mo19992();
+    }
+
+    @Override // l.C17969
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo19991(AbstractC22664 abstractC22664) {
+        this.f67024.mo19991(abstractC22664);
     }
 }

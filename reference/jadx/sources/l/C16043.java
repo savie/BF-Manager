@@ -1,48 +1,65 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺܺܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16043 extends AbstractC20981 {
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f51929;
+/* JADX INFO: renamed from: l.ܶۧۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D5S8 */
+/* JADX INFO: loaded from: classes4.dex */
+@Deprecated
+public final class C16043 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f51930;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashMap f52043 = new HashMap();
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3301(long j) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f52044;
+
+    public C16043(HashMap map) {
+        this.f52044 = map;
+        for (Map.Entry entry : map.entrySet()) {
+            EnumC9330 enumC9330 = (EnumC9330) entry.getValue();
+            List arrayList = (List) this.f52043.get(enumC9330);
+            if (arrayList == null) {
+                arrayList = new ArrayList();
+                this.f52043.put(enumC9330, arrayList);
+            }
+            arrayList.add((C23503) entry.getKey());
+        }
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ᩺ */
-    public final long mo3306() {
-        return C17492.FOREVER_NS;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38209(InterfaceC11217 interfaceC11217, EnumC9330 enumC9330, Object obj) {
+        HashMap map = this.f52043;
+        m38208((List) map.get(enumC9330), interfaceC11217, enumC9330, obj);
+        m38208((List) map.get(EnumC9330.ON_ANY), interfaceC11217, enumC9330, obj);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ֨ */
-    public final InterfaceC0769 mo3299() {
-        return this.f51929;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3305(InterfaceC0769 interfaceC0769) {
-        this.f51929 = interfaceC0769;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC0769 mo3300() {
-        return this.f51930;
-    }
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3302(InterfaceC0769 interfaceC0769) {
-        this.f51930 = interfaceC0769;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m38208(List list, InterfaceC11217 interfaceC11217, EnumC9330 enumC9330, Object obj) {
+        if (list != null) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                C23503 c23503 = (C23503) list.get(size);
+                Method method = c23503.f75984;
+                try {
+                    int i = c23503.f75983;
+                    if (i == 0) {
+                        method.invoke(obj, null);
+                    } else if (i == 1) {
+                        method.invoke(obj, interfaceC11217);
+                    } else if (i == 2) {
+                        method.invoke(obj, interfaceC11217, enumC9330);
+                    }
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                } catch (InvocationTargetException e2) {
+                    throw new RuntimeException("Failed to call observer method", e2.getCause());
+                }
+            }
+        }
     }
 }

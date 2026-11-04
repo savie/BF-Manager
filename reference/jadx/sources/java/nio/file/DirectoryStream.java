@@ -10,7 +10,7 @@ public interface DirectoryStream<T> extends Closeable, Iterable<T> {
     /* JADX INFO: compiled from: N673 */
     public interface Filter<T> {
         /* JADX INFO: renamed from: accept */
-        boolean mo14669accept(T t);
+        boolean mo10607accept(T t);
     }
 
     @Override // java.lang.Iterable

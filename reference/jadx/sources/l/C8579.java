@@ -1,75 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡ֫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07T7 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8579 extends AbstractC17750 {
+import java.util.function.Predicate;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC9990 f29654;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f29655;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public long f29656;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public long f29657;
+/* JADX INFO: renamed from: l.۠ۤ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: O7F0 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8579 implements Predicate {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C16277 f29658;
+    public final /* synthetic */ int f28016;
 
-    public C8579(AbstractC9990 abstractC9990, C16277 c16277) {
-        this.f29654 = abstractC9990;
-        this.f29658 = c16277;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f28017;
+
+    public /* synthetic */ C8579(int i, Object obj) {
+        this.f28016 = i;
+        this.f28017 = obj;
     }
 
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ۨ */
-    public final long mo20775() {
-        return this.f29657;
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo20778(long j) {
-        this.f29657 = j;
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f28016) {
+            case 0:
+                break;
+        }
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo20773() {
-        return this.f29655;
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo20774(long j) {
-        this.f29655 = j;
-    }
-
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ۖ */
-    public final long mo20772() {
-        return this.f29656;
-    }
-
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo20776(long j) {
-        this.f29656 = j;
-    }
-
-    @Override // l.AbstractC17750
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo20777() {
-        String string = this.f29658.toString();
-        AbstractC9990 abstractC9990 = this.f29654;
-        Object objMo3902 = abstractC9990.mo3902(string);
-        abstractC9990.mo3905(this.f29657, objMo3902);
-        abstractC9990.mo3900(this.f29655, objMo3902);
-        abstractC9990.mo3903(this.f29656, objMo3902);
-        return objMo3902;
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f28016) {
+            case 0:
+                return EnumC5202.m15634((EnumC22356) this.f28017, (EnumC5202) obj);
+            default:
+                return ((C22763) this.f28017).m51341((AbstractC22044) obj);
+        }
     }
 }

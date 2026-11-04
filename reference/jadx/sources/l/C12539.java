@@ -1,16 +1,22 @@
 package l;
 
-import java.util.Comparator;
+import java.security.cert.X509Certificate;
+import javax.net.ssl.X509TrustManager;
 
-/* JADX INFO: renamed from: l.۫ܽ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: C5XL */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12539 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        C17477 c17477 = (C17477) obj;
-        C17477 c17478 = (C17477) obj2;
-        int size = c17478.f55614.size() - c17477.f55614.size();
-        return size == 0 ? c17478.f55612.size() - c17477.f55612.size() : size;
+/* JADX INFO: renamed from: l.ۨᩳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: NA5M */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12539 implements X509TrustManager {
+    @Override // javax.net.ssl.X509TrustManager
+    public final void checkClientTrusted(X509Certificate[] x509CertificateArr, String str) {
+    }
+
+    @Override // javax.net.ssl.X509TrustManager
+    public final void checkServerTrusted(X509Certificate[] x509CertificateArr, String str) {
+    }
+
+    @Override // javax.net.ssl.X509TrustManager
+    public final X509Certificate[] getAcceptedIssuers() {
+        return new X509Certificate[0];
     }
 }

@@ -1,46 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ᩹ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z8VY */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9879 implements InterfaceC5374 {
+/* JADX INFO: renamed from: l.ۢۙۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6428 */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C9879 extends EnumC0931 {
+    public /* synthetic */ C9879(EnumC21461 enumC21461) {
+        this("YIELD", 2, enumC21461);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5023 f33727;
+    public C9879(String str, int i, EnumC21461 enumC21461) {
+        super(str, i, 0, enumC21461);
+    }
 
-    @Override // l.InterfaceC5374
+    @Override // l.EnumC0931
     /* JADX INFO: renamed from: ۙ */
-    public final void mo7956(C13314 c13314) {
-    }
-
-    public C9879(C5023 c5023) {
-        this.f33727 = c5023;
-    }
-
-    @Override // l.InterfaceC5374
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo7955() {
-        InterfaceC3228 interfaceC3228M35930 = this.f33727.m35930();
-        if (interfaceC3228M35930 != null) {
-            interfaceC3228M35930.mo9681();
-        }
-    }
-
-    @Override // l.InterfaceC5374
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo7957() {
-        C5023 c5023 = this.f33727;
-        if (c5023.f17491 != null) {
-            C5023.m13924(c5023);
-        }
-    }
-
-    @Override // l.InterfaceC5374
-    /* JADX INFO: renamed from: ᩹ */
-    public final void mo7958() {
-        C5023 c5023 = this.f33727;
-        if (c5023.f17491 != null) {
-            c5023.m13940(0, 1);
-        }
+    public AbstractC8036 mo3735(AbstractC8036 abstractC8036) {
+        return ((C4307) abstractC8036).f15610;
     }
 }

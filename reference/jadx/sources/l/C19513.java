@@ -1,76 +1,8 @@
 package l;
 
-import java.util.Arrays;
-
-/* JADX INFO: renamed from: l.᩵ܰ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D70T */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19513 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f62753;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] f62754;
-
-    public C19513(int[] iArr) {
-        this.f62754 = iArr;
-        this.f62753 = Arrays.hashCode(iArr);
-    }
-
-    public final boolean equals(Object obj) {
-        return (obj instanceof C19513) && Arrays.equals(this.f62754, ((C19513) obj).f62754);
-    }
-
-    public final int hashCode() {
-        return this.f62753;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m44574(int i) {
-        return Arrays.binarySearch(this.f62754, i) >= 0;
-    }
-
-    /* JADX WARN: Code duplicated, block: B:27:0x003e  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C19513 m44573(C19513 c19513) {
-        int i;
-        int[] iArr = this.f62754;
-        int length = iArr.length;
-        int[] iArr2 = c19513.f62754;
-        int[] iArr3 = c19513.f62754;
-        int length2 = length + iArr2.length;
-        int[] iArrCopyOf = new int[length2];
-        int i2 = 0;
-        int i3 = 0;
-        int i4 = 0;
-        while (true) {
-            if (i2 >= iArr.length && i3 >= iArr3.length) {
-                break;
-            }
-            if (i3 >= iArr3.length || (i2 < iArr.length && iArr[i2] < iArr3[i3])) {
-                i = iArr[i2];
-                i2++;
-            } else if (i2 < iArr.length) {
-                int i5 = iArr3[i3];
-                i = iArr[i2];
-                if (i5 < i) {
-                    i = iArr3[i3];
-                    i3++;
-                } else {
-                    i2++;
-                    i3++;
-                }
-            } else {
-                i = iArr3[i3];
-                i3++;
-            }
-            iArrCopyOf[i4] = i;
-            i4++;
-        }
-        if (i4 != length2) {
-            iArrCopyOf = Arrays.copyOf(iArrCopyOf, i4);
-        }
-        return new C19513(iArrCopyOf);
-    }
+/* JADX INFO: renamed from: l.ᩴۖۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 79BB */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19513 extends IndexOutOfBoundsException {
+    public static final long serialVersionUID = 6807380416709738314L;
 }

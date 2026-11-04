@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SSHBuffer {
     public final byte[] buffer;
     public int pos = 0;

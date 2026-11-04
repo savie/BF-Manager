@@ -1,33 +1,24 @@
 package l;
 
-import java.util.function.Consumer;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ۗ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DD2 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3116 extends AbstractC22498 implements InterfaceC6269, InterfaceC6206 {
+/* JADX INFO: renamed from: l.ۗۖ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: N619 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C3116 extends C15794 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C2741 f11747;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static boolean f10089 = true;
 
-    public C3116(C6975 c6975) {
-        super(c6975);
-        this.f11747 = new C2741(c6975);
-    }
-
-    @Override // l.AbstractC22498
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5667(int i, Object obj) {
-        C2741 c2741 = this.f11747;
-        c2741.f10536 = i;
-        ((Consumer) obj).accept(c2741);
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        int iM50014 = m50014();
-        C2741 c2741 = this.f11747;
-        c2741.f10536 = iM50014;
-        return c2741;
+    @Override // l.C16540
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void mo10194(View view, int i, int i2, int i3, int i4) {
+        if (f10089) {
+            try {
+                C23254.m52275(view, i, i2, i3, i4);
+            } catch (NoSuchMethodError unused) {
+                f10089 = false;
+            }
+        }
     }
 }

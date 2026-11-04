@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.io;
 import java.io.OutputStream;
 import javax.crypto.Mac;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MacUpdatingOutputStream extends OutputStream {
     public Mac mac;
 

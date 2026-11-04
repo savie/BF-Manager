@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.drbg;
 
 import org.bouncycastle.crypto.prng.EntropySource;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IncrementalEntropySource extends EntropySource {
     byte[] getEntropy(long j);
 }

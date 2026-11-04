@@ -1,20 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۗ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: G4FN */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0845 extends C16627 {
+/* JADX INFO: renamed from: l.֨֫ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P77N */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C0845 {
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3667 f3488;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22012 f3166;
 
-    public C0845(C3667 c3667) {
-        this.f3488 = c3667;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17384 f3167;
 
-    @Override // l.C16627
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final void mo3458() {
-        this.f3488.cancel();
+    public C0845(C22012 c22012, C17384 c17384) {
+        this.f3166 = c22012;
+        this.f3167 = c17384;
     }
 }

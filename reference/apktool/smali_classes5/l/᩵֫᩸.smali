@@ -1,167 +1,129 @@
 .class public final Ll/᩵֫᩸;
-.super Ll/ۤ֫᩸;
-.source "09JC"
+.super Ljava/lang/Object;
+.source "61L9"
+
+# interfaces
+.implements Ll/۫ۜ᩸;
 
 
 # instance fields
-.field public ܰ:Ljava/util/List;
+.field public final synthetic ۙ:Ll/ۖ֫᩸;
+
+.field public final synthetic ۤ:Z
+
+.field public final synthetic ᩷:Ll/᩺ۜ᩸;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ll/ۖ֫᩸;ZLl/᩺ۜ᩸;)V
+    .locals 0
 
-    .line 34
-    sget-object v0, Ll/۟֫᩸;->ܽ:Ll/۟֫᩸;
+    .line 394
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ll/ۤ֫᩸;-><init>(Ll/۟֫᩸;)V
+    iput-object p1, p0, Ll/᩵֫᩸;->ۙ:Ll/ۖ֫᩸;
 
-    .line 35
-    new-instance v0, Ljava/util/ArrayList;
+    iput-boolean p2, p0, Ll/᩵֫᩸;->ۤ:Z
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/᩵֫᩸;->ܰ:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
-
-    .line 39
-    sget-object v0, Ll/۟֫᩸;->ܽ:Ll/۟֫᩸;
-
-    invoke-direct {p0, v0}, Ll/ۤ֫᩸;-><init>(Ll/۟֫᩸;)V
-
-    .line 40
-    iput-object p1, p0, Ll/᩵֫᩸;->ܰ:Ljava/util/List;
+    iput-object p3, p0, Ll/᩵֫᩸;->᩷:Ll/᩺ۜ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ(Ll/᩵ۙᩳ;)I
-    .locals 4
+.method public final ۙ(Z)V
+    .locals 3
 
-    .line 45
-    iget-object v0, p0, Ll/᩵֫᩸;->ܰ:Ljava/util/List;
+    .line 397
+    iget-object v0, p0, Ll/᩵֫᩸;->ۙ:Ll/ۖ֫᩸;
 
-    if-eqz v0, :cond_1
+    iget-boolean v1, p0, Ll/᩵֫᩸;->ۤ:Z
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    if-eqz v1, :cond_0
 
-    move-result v1
+    .line 398
+    invoke-static {v0}, Ll/ۖ֫᩸;->ۗ(Ll/ۖ֫᩸;)Ll/֫ۧ᩸;
 
-    if-nez v1, :cond_1
+    move-result-object v2
 
-    .line 49
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v2, p1}, Ll/֫ۧ᩸;->ۚ(Z)V
 
-    move-result v1
+    goto :goto_0
 
-    invoke-virtual {p1, v1}, Ll/ۧۢ᩸;->ܰ(I)V
+    .line 400
+    :cond_0
+    invoke-static {v0}, Ll/ۖ֫᩸;->ۗ(Ll/ۖ֫᩸;)Ll/֫ۧ᩸;
 
-    .line 51
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ll/֫ۧ᩸;->֫(Z)V
+
+    .line 402
+    :goto_0
+    invoke-static {v0}, Ll/ۖ֫᩸;->֫(Ll/ۖ֫᩸;)Ll/᩻ۡ᩸;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/᩻ۡ᩸;->֫()Ll/᩺ۜ᩸;
+
+    move-result-object p1
+
+    iget-object v2, p0, Ll/᩵֫᩸;->᩷:Ll/᩺ۜ᩸;
+
+    if-eq v2, p1, :cond_1
+
+    return-void
+
+    :cond_1
+    if-eqz v1, :cond_2
+
+    .line 406
+    invoke-static {v0}, Ll/ۖ֫᩸;->ۛ(Ll/ۖ֫᩸;)V
+
+    return-void
+
+    .line 408
+    :cond_2
+    invoke-static {v0}, Ll/ۖ֫᩸;->᩺(Ll/ۖ֫᩸;)V
+
+    return-void
+.end method
+
+.method public final ۙ(ZZ)V
+    .locals 3
+
+    .line 414
+    iget-object v0, p0, Ll/᩵֫᩸;->ۙ:Ll/ۖ֫᩸;
+
+    invoke-static {v0}, Ll/ۖ֫᩸;->֫(Ll/ۖ֫᩸;)Ll/᩻ۡ᩸;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ll/᩻ۡ᩸;->֫()Ll/᩺ۜ᩸;
 
-    move-result v2
+    move-result-object v1
 
-    if-eqz v2, :cond_0
+    iget-object v2, p0, Ll/᩵֫᩸;->᩷:Ll/᩺ۜ᩸;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eq v2, v1, :cond_0
 
-    move-result-object v2
+    return-void
 
-    check-cast v2, Ll/᩵ܳ᩸;
-
-    .line 52
-    invoke-virtual {v2}, Ll/᩵ܳ᩸;->getValue()J
-
-    move-result-wide v2
-
-    long-to-int v3, v2
-
-    invoke-virtual {p1, v3}, Ll/ۧۢ᩸;->ܰ(I)V
-
-    goto :goto_0
-
-    .line 54
+    .line 417
     :cond_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-static {v0}, Ll/ۖ֫᩸;->ۗ(Ll/ۖ֫᩸;)Ll/֫ۧ᩸;
 
-    move-result p1
+    move-result-object v1
 
-    mul-int/lit8 p1, p1, 0x2
+    invoke-virtual {v1, p1}, Ll/֫ۧ᩸;->ۧ(Z)V
 
-    add-int/lit8 p1, p1, 0x2
+    .line 418
+    invoke-static {v0}, Ll/ۖ֫᩸;->ۗ(Ll/ۖ֫᩸;)Ll/֫ۧ᩸;
 
-    return p1
+    move-result-object p1
 
-    .line 46
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1, p2}, Ll/֫ۧ᩸;->۫(Z)V
 
-    const-string v0, "Cannot serialize an empty or null cipherList"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final ܰ()Ljava/util/List;
-    .locals 1
-
-    .line 67
-    iget-object v0, p0, Ll/᩵֫᩸;->ܰ:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final ܰ(Ll/᩵ۙᩳ;)V
-    .locals 6
-
-    .line 60
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->֨()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    .line 62
-    invoke-virtual {p1}, Ll/ۧۢ᩸;->֨()I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    const-class v4, Ll/᩵ܳ᩸;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v3, v4, v5}, Ll/᩷ۢ᩸;->ۙ(JLjava/lang/Class;Ll/ۗۛ᩸;)Ll/ܺۢ᩸;
-
-    move-result-object v2
-
-    check-cast v2, Ll/᩵ܳ᩸;
-
-    iget-object v3, p0, Ll/᩵֫᩸;->ܰ:Ljava/util/List;
-
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

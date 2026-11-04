@@ -1,43 +1,35 @@
 .class public Ll/۬ۡۨ;
-.super Ll/᩻ۡۨ;
-.source "Z6QT"
+.super Ljava/lang/Object;
+.source "G5PX"
 
 
-# instance fields
-.field public final ۨ:Ll/ܰۡۨ;
-
-.field public final ܰ:I
-
-
-# direct methods
-.method public constructor <init>(ILl/ܰۡۨ;)V
+# virtual methods
+.method public ۙ(I)V
     .locals 0
 
-    .line 1870
-    invoke-direct {p0}, Ll/᩻ۡۨ;-><init>()V
+    const/4 p1, 0x0
 
-    .line 1871
-    iput-object p2, p0, Ll/۬ۡۨ;->ۨ:Ll/ܰۡۨ;
+    throw p1
+.end method
 
-    .line 1872
-    iput p1, p0, Ll/۬ۡۨ;->ܰ:I
+.method public ۙ(II)V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(Ll/֨ۡۨ;I)V
+.method public ۙ(IIIIZ)V
     .locals 0
 
-    .line 1865
-    invoke-direct {p0}, Ll/᩻ۡۨ;-><init>()V
+    const/4 p1, 0x0
 
-    .line 1866
-    iget-object p1, p1, Ll/֨ۡۨ;->ܰ:Ll/ܰۡۨ;
+    throw p1
+.end method
 
-    iput-object p1, p0, Ll/۬ۡۨ;->ۨ:Ll/ܰۡۨ;
+.method public ۙ(IIIZ)V
+    .locals 0
 
-    .line 1867
-    iput p2, p0, Ll/۬ۡۨ;->ܰ:I
+    const/4 p1, 0x0
 
-    return-void
+    throw p1
 .end method

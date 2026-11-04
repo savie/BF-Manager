@@ -4,7 +4,7 @@ import java.util.Enumeration;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface PKCS12BagAttributeCarrier {
     ASN1Encodable getBagAttribute(ASN1ObjectIdentifier aSN1ObjectIdentifier);
 

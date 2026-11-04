@@ -6,9 +6,9 @@
 # instance fields
 .field public ۙ:I
 
-.field public final ۨ:Lcom/amazonaws/metrics/ThroughputMetricType;
+.field public final ۤ:Lcom/amazonaws/metrics/ThroughputMetricType;
 
-.field public ܰ:J
+.field public ᩷:J
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object p1, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ۨ:Lcom/amazonaws/metrics/ThroughputMetricType;
+    iput-object p1, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ۤ:Lcom/amazonaws/metrics/ThroughputMetricType;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ܰ:J
+    iget-wide v2, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->᩷:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -57,7 +57,7 @@
 
     const/4 v0, 0x1
 
-    iget-object v4, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ۨ:Lcom/amazonaws/metrics/ThroughputMetricType;
+    iget-object v4, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ۤ:Lcom/amazonaws/metrics/ThroughputMetricType;
 
     aput-object v4, v3, v0
 
@@ -99,7 +99,7 @@
     iput v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ۙ:I
 
     .line 57
-    iget-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ܰ:J
+    iget-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->᩷:J
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -109,12 +109,12 @@
 
     add-long/2addr v2, v0
 
-    iput-wide v2, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ܰ:J
+    iput-wide v2, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->᩷:J
 
     return-void
 .end method
 
-.method public final ۨ()V
+.method public final ۤ()V
     .locals 2
 
     const/4 v0, 0x0
@@ -125,16 +125,16 @@
     const-wide/16 v0, 0x0
 
     .line 62
-    iput-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ܰ:J
+    iput-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->᩷:J
 
     return-void
 .end method
 
-.method public final ܰ()J
+.method public final ᩷()J
     .locals 2
 
     .line 39
-    iget-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->ܰ:J
+    iget-wide v0, p0, Lcom/amazonaws/metrics/ByteThroughputProvider;->᩷:J
 
     return-wide v0
 .end method

@@ -116,7 +116,7 @@
     .line 0
     iget-object v0, p0, Lorg/bouncycastle/x509/ExtendedPKIXBuilderParameters;->excludedCerts:Ljava/util/Set;
 
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 

@@ -1,85 +1,32 @@
 .class public final Ll/᩶ۜۨ;
 .super Ljava/lang/Object;
-.source "T5RH"
+.source "M59C"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 7
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 41
+    check-cast p1, Ll/ᩳ۫ۛ;
 
-    .line 193
-    sput-boolean v0, Ll/ܿۜۨ;->ۙ:Z
+    check-cast p2, Ll/ᩳ۫ۛ;
 
-    .line 194
-    new-instance v0, Ll/֡ۜۨ;
+    .line 44
+    invoke-interface {p1}, Ll/ᩳ۫ۛ;->getName()Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Ll/֡ۜۨ;-><init>(Ll/ܶܶۨ;)V
+    move-result-object p1
 
-    .line 195
-    new-instance p1, Ll/ܺۜۨ;
+    invoke-interface {p2}, Ll/ᩳ۫ۛ;->getName()Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ll/ܺۜۨ;-><init>(Ll/֡ۜۨ;)V
+    move-result-object p2
 
-    .line 239
-    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+    invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    .line 240
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result p1
 
-    move-result-wide v1
-
-    .line 241
-    :cond_0
-    iget-boolean p1, v0, Ll/֡ۜۨ;->ܰ:Z
-
-    if-eqz p1, :cond_2
-
-    const-wide/16 v3, 0xc8
-
-    .line 242
-    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
-
-    .line 243
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    sub-long/2addr v3, v1
-
-    const-wide/16 v5, 0x3a98
-
-    cmp-long p1, v3, v5
-
-    if-gtz p1, :cond_1
-
-    .line 246
-    sget-boolean p1, Ll/ܿۜۨ;->ۙ:Z
-
-    if-nez p1, :cond_0
-
-    .line 247
-    invoke-virtual {v0}, Ll/֡ۜۨ;->ۙ()V
-
-    return-void
-
-    .line 244
-    :cond_1
-    invoke-virtual {v0}, Ll/֡ۜۨ;->ۙ()V
-
-    .line 245
-    new-instance p1, Ljava/io/IOException;
-
-    const-string v0, "Connection timed out"
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    return-void
+    return p1
 .end method

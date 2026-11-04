@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.spec;
 
 import java.security.spec.EncodedKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RawEncodedKeySpec extends EncodedKeySpec {
     public RawEncodedKeySpec(byte[] bArr) {
         super(bArr);

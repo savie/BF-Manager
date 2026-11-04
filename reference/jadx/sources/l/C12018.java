@@ -1,128 +1,122 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ᩺ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: PBDW */
+import java.util.Iterator;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ۨ֨ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X93U */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12018 implements InterfaceC23181 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C4129 f40257;
+public class C12018 implements InterfaceC16493 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21895 f40258;
+    public final C20223 f38747;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f40259;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Class f38748;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f40260;
-
-    public final boolean equals(Object obj) {
-        return this == obj;
+    public C12018(Class cls, Class cls2, String str) {
+        C20223 c20223 = new C20223(cls, cls2, str);
+        this.f38748 = c20223.f64910.getReturnType();
+        this.f38747 = c20223;
     }
 
-    public C12018(int i, C21895 c21895, C4129 c4129, int i2) {
-        if (i < 0) {
-            throw new IllegalArgumentException("label < 0");
-        }
-        try {
-            c21895.m43642();
-            int size = c21895.size();
-            if (size == 0) {
-                throw new IllegalArgumentException("insns.size() == 0");
-            }
-            int i3 = size - 2;
-            while (true) {
-                if (i3 < 0) {
-                    if (c21895.m15274get(size - 1).m37181().m31577() == 1) {
-                        throw new IllegalArgumentException("insns does not end with a branch or throwing instruction");
-                    }
-                    try {
-                        c4129.m43642();
-                        if (i2 < -1) {
-                            throw new IllegalArgumentException("primarySuccessor < -1");
-                        }
-                        if (i2 >= 0) {
-                            int iM11755 = c4129.m11755(i2);
-                            if (!((iM11755 >= 0 ? iM11755 : -1) >= 0)) {
-                                throw new IllegalArgumentException("primarySuccessor " + i2 + " not in successors " + c4129);
-                            }
-                        }
-                        this.f40260 = i;
-                        this.f40258 = c21895;
-                        this.f40257 = c4129;
-                        this.f40259 = i2;
-                        return;
-                    } catch (NullPointerException unused) {
-                        throw new NullPointerException("successors == null");
-                    }
-                }
-                if (c21895.m15274get(i3).m37181().m31577() != 1) {
-                    throw new IllegalArgumentException(C2271.m6966(i3, "insns[", "] is a branch or can throw"));
-                }
-                i3--;
-            }
-        } catch (NullPointerException unused2) {
-            throw new NullPointerException("insns == null");
-        }
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ */
+    public Object mo10006(AbstractC9035 abstractC9035) {
+        return this.f38747.m46493(abstractC9035);
     }
 
-    public final int hashCode() {
-        return System.identityHashCode(this);
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩷ */
+    public Object mo10008(AbstractC15001 abstractC15001) {
+        return this.f38747.m46500(abstractC15001);
     }
 
-    @Override // l.InterfaceC23181
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object mo30209(AbstractC9035 abstractC9035) {
+        return mo10006(abstractC9035);
+    }
+
+    @Override // l.InterfaceC16493
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo29913() {
-        return this.f40260;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C21895 m29911() {
-        return this.f40258;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C4129 m29916() {
-        return this.f40257;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m29918() {
-        return this.f40259;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m29910() {
-        C4129 c4129 = this.f40257;
-        if (c4129.size() != 2) {
-            throw new UnsupportedOperationException("block doesn't have exactly two successors");
+    public final void mo30208(AbstractC15001 abstractC15001, Object obj) {
+        mo30207(abstractC15001);
+        Iterator it = ((List) obj).iterator();
+        while (it.hasNext()) {
+            mo10010(abstractC15001, it.next());
         }
-        int i = c4129.get(0);
-        return i == this.f40259 ? c4129.get(1) : i;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC15546 m29915() {
-        return this.f40258.m15274get(0);
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ */
+    public Object mo10005(int i, AbstractC9035 abstractC9035) {
+        return this.f38747.m46492(i, abstractC9035);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AbstractC15546 m29914() {
-        return this.f40258.m48689();
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩷ */
+    public Object mo10009(AbstractC15001 abstractC15001, int i) {
+        return this.f38747.m46494(abstractC15001, i);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m29917() {
-        return this.f40258.m48689().m37184();
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ */
+    public void mo10007(AbstractC15001 abstractC15001, int i, Object obj) {
+        this.f38747.m46496(abstractC15001, i, obj);
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean m29912() {
-        return this.f40258.m48689().mo6700().size() != 0;
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩷ */
+    public void mo10010(AbstractC15001 abstractC15001, Object obj) {
+        this.f38747.m46497(abstractC15001, obj);
     }
 
-    public final String toString() {
-        return "{" + C22475.m49982(this.f40260) + '}';
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean mo30212(AbstractC9035 abstractC9035) {
+        throw new UnsupportedOperationException("hasField() called on a repeated field.");
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean mo30210(AbstractC15001 abstractC15001) {
+        throw new UnsupportedOperationException("hasField() called on a repeated field.");
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int mo30213(AbstractC9035 abstractC9035) {
+        return this.f38747.m46499(abstractC9035);
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int mo30211(AbstractC15001 abstractC15001) {
+        return this.f38747.m46498(abstractC15001);
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo30207(AbstractC15001 abstractC15001) {
+        this.f38747.m46495(abstractC15001);
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ */
+    public InterfaceC14299 mo17567() {
+        throw new UnsupportedOperationException("newBuilderForField() called on a non-Message type.");
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final InterfaceC14299 mo30214(AbstractC15001 abstractC15001) {
+        throw new UnsupportedOperationException("getFieldBuilder() called on a non-Message type.");
+    }
+
+    @Override // l.InterfaceC16493
+    /* JADX INFO: renamed from: ۙ */
+    public InterfaceC14299 mo17568(AbstractC15001 abstractC15001, int i) {
+        throw new UnsupportedOperationException("getRepeatedFieldBuilder() called on a non-Message type.");
     }
 }

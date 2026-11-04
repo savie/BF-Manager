@@ -9,26 +9,26 @@ import android.util.AttributeSet;
 import android.view.View;
 import com.umeng.analytics.pro.cb;
 import java.lang.reflect.Constructor;
-import l.C0236;
-import l.C11151;
-import l.C12108;
-import l.C12232;
-import l.C12274;
-import l.C12709;
-import l.C14121;
-import l.C15302;
-import l.C15532;
-import l.C15760;
-import l.C16465;
-import l.C1647;
-import l.C22357;
-import l.C2830;
-import l.C4241;
-import l.C5031;
-import l.C5653;
-import l.C5716;
-import l.C7064;
-import l.ViewOnClickListenerC16216;
+import l.C10072;
+import l.C10401;
+import l.C10467;
+import l.C13451;
+import l.C13801;
+import l.C15688;
+import l.C16192;
+import l.C16434;
+import l.C17180;
+import l.C18277;
+import l.C19023;
+import l.C22666;
+import l.C23148;
+import l.C25386;
+import l.C5752;
+import l.C7836;
+import l.C8712;
+import l.C9086;
+import l.C9370;
+import l.ViewOnClickListenerC18386;
 import org.simpleframework.xml.strategy.Name;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -41,7 +41,7 @@ public class AppCompatViewInflater {
     public static final int[] sAccessibilityPaneTitle = {R.attr.accessibilityPaneTitle};
     public static final int[] sScreenReaderFocusable = {R.attr.screenReaderFocusable};
     public static final String[] sClassPrefixList = {"android.widget.", "android.view.", "android.webkit."};
-    public static final C12274 sConstructorMap = new C12274();
+    public static final C9086 sConstructorMap = new C9086();
 
     public View createView(Context context, String str, AttributeSet attributeSet) {
         return null;
@@ -55,7 +55,7 @@ public class AppCompatViewInflater {
             context2 = m0(context2, attributeSet, z2, z3);
         }
         if (z4) {
-            C11151.m28072(context2);
+            C8712.m23406(context2);
         }
         str.getClass();
         byte b = -1;
@@ -202,60 +202,60 @@ public class AppCompatViewInflater {
         return viewCreateRatingBar;
     }
 
-    public C22357 createTextView(Context context, AttributeSet attributeSet) {
-        return new C22357(context, attributeSet);
+    public C5752 createTextView(Context context, AttributeSet attributeSet) {
+        return new C5752(context, attributeSet);
     }
 
-    public C2830 createImageView(Context context, AttributeSet attributeSet) {
-        return new C2830(context, attributeSet);
+    public C15688 createImageView(Context context, AttributeSet attributeSet) {
+        return new C15688(context, attributeSet);
     }
 
-    public C0236 createButton(Context context, AttributeSet attributeSet) {
-        return new C0236(context, attributeSet);
+    public C7836 createButton(Context context, AttributeSet attributeSet) {
+        return new C7836(context, attributeSet);
     }
 
-    public C1647 createEditText(Context context, AttributeSet attributeSet) {
-        return new C1647(context, attributeSet);
+    public C13801 createEditText(Context context, AttributeSet attributeSet) {
+        return new C13801(context, attributeSet);
     }
 
-    public C12709 createSpinner(Context context, AttributeSet attributeSet) {
-        return new C12709(context, attributeSet);
+    public C10467 createSpinner(Context context, AttributeSet attributeSet) {
+        return new C10467(context, attributeSet);
     }
 
-    public C14121 createImageButton(Context context, AttributeSet attributeSet) {
-        return new C14121(context, attributeSet);
+    public C23148 createImageButton(Context context, AttributeSet attributeSet) {
+        return new C23148(context, attributeSet);
     }
 
-    public C16465 createCheckBox(Context context, AttributeSet attributeSet) {
-        return new C16465(context, attributeSet);
+    public C19023 createCheckBox(Context context, AttributeSet attributeSet) {
+        return new C19023(context, attributeSet);
     }
 
-    public C4241 createRadioButton(Context context, AttributeSet attributeSet) {
-        return new C4241(context, attributeSet);
+    public C25386 createRadioButton(Context context, AttributeSet attributeSet) {
+        return new C25386(context, attributeSet);
     }
 
-    public C12232 createCheckedTextView(Context context, AttributeSet attributeSet) {
-        return new C12232(context, attributeSet);
+    public C10072 createCheckedTextView(Context context, AttributeSet attributeSet) {
+        return new C10072(context, attributeSet);
     }
 
-    public C15760 createAutoCompleteTextView(Context context, AttributeSet attributeSet) {
-        return new C15760(context, attributeSet);
+    public C18277 createAutoCompleteTextView(Context context, AttributeSet attributeSet) {
+        return new C18277(context, attributeSet);
     }
 
-    public C5653 createMultiAutoCompleteTextView(Context context, AttributeSet attributeSet) {
-        return new C5653(context, attributeSet);
+    public C13451 createMultiAutoCompleteTextView(Context context, AttributeSet attributeSet) {
+        return new C13451(context, attributeSet);
     }
 
-    public C7064 createRatingBar(Context context, AttributeSet attributeSet) {
-        return new C7064(context, attributeSet);
+    public C17180 createRatingBar(Context context, AttributeSet attributeSet) {
+        return new C17180(context, attributeSet);
     }
 
-    public C15532 createSeekBar(Context context, AttributeSet attributeSet) {
-        return new C15532(context, attributeSet);
+    public C16434 createSeekBar(Context context, AttributeSet attributeSet) {
+        return new C16434(context, attributeSet);
     }
 
-    public C15302 createToggleButton(Context context, AttributeSet attributeSet) {
-        return new C15302(context, attributeSet);
+    public C16192 createToggleButton(Context context, AttributeSet attributeSet) {
+        return new C16192(context, attributeSet);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
@@ -306,7 +306,7 @@ public class AppCompatViewInflater {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, sOnClickAttrs);
             String string = typedArrayObtainStyledAttributes.getString(0);
             if (string != null) {
-                view.setOnClickListener(new ViewOnClickListenerC16216(view, string));
+                view.setOnClickListener(new ViewOnClickListenerC18386(view, string));
             }
             typedArrayObtainStyledAttributes.recycle();
         }
@@ -315,8 +315,8 @@ public class AppCompatViewInflater {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
     private View m2(Context context, String str, String str2) {
         String str3;
-        C12274 c12274 = sConstructorMap;
-        Constructor constructor = (Constructor) c12274.getOrDefault(str, null);
+        C9086 c9086 = sConstructorMap;
+        Constructor constructor = (Constructor) c9086.get(str);
         if (constructor == null) {
             if (str2 != null) {
                 try {
@@ -328,7 +328,7 @@ public class AppCompatViewInflater {
                 str3 = str;
             }
             constructor = Class.forName(str3, false, context.getClassLoader()).asSubclass(View.class).getConstructor(sConstructorSignature);
-            c12274.put(str, constructor);
+            c9086.put(str, constructor);
         }
         constructor.setAccessible(true);
         return (View) constructor.newInstance(this.mConstructorArgs);
@@ -336,13 +336,13 @@ public class AppCompatViewInflater {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
     public static Context m0(Context context, AttributeSet attributeSet, boolean z, boolean z2) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C12108.f40517, 0, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C10401.f33066, 0, 0);
         int resourceId = z ? typedArrayObtainStyledAttributes.getResourceId(0, 0) : 0;
         if (z2 && resourceId == 0) {
             resourceId = typedArrayObtainStyledAttributes.getResourceId(4, 0);
         }
         typedArrayObtainStyledAttributes.recycle();
-        return (resourceId == 0 || ((context instanceof C5716) && ((C5716) context).m15753() == resourceId)) ? context : new C5716(context, resourceId);
+        return (resourceId == 0 || ((context instanceof C9370) && ((C9370) context).m24680() == resourceId)) ? context : new C9370(context, resourceId);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
@@ -352,17 +352,17 @@ public class AppCompatViewInflater {
         }
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, sAccessibilityHeading);
         if (typedArrayObtainStyledAttributes.hasValue(0)) {
-            C5031.m13993(view, typedArrayObtainStyledAttributes.getBoolean(0, false));
+            C22666.m51099(view, typedArrayObtainStyledAttributes.getBoolean(0, false));
         }
         typedArrayObtainStyledAttributes.recycle();
         TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, sAccessibilityPaneTitle);
         if (typedArrayObtainStyledAttributes2.hasValue(0)) {
-            C5031.m13986(view, (CharSequence) typedArrayObtainStyledAttributes2.getString(0));
+            C22666.m51091(view, (CharSequence) typedArrayObtainStyledAttributes2.getString(0));
         }
         typedArrayObtainStyledAttributes2.recycle();
         TypedArray typedArrayObtainStyledAttributes3 = context.obtainStyledAttributes(attributeSet, sScreenReaderFocusable);
         if (typedArrayObtainStyledAttributes3.hasValue(0)) {
-            C5031.m14012(view, typedArrayObtainStyledAttributes3.getBoolean(0, false));
+            C22666.m51123(view, typedArrayObtainStyledAttributes3.getBoolean(0, false));
         }
         typedArrayObtainStyledAttributes3.recycle();
     }

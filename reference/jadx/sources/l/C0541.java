@@ -1,162 +1,109 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.lang.ref.SoftReference;
-import java.text.DateFormatSymbols;
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
+import android.os.SystemClock;
+import bin.mt.plus.Main;
+import bin.mt.plus.R;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 
-/* JADX INFO: renamed from: l.֡ܽᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֡ܺ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 795C */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0541 extends C20298 {
-    public static final ConcurrentMapC13783 i = new ConcurrentMapC13783();
-    public final EnumC4069 e;
-    public final boolean f;
-    public final Map g;
-    public final Map h;
+public class C0541 extends AbstractC16610 {
 
-    public C0541(EnumC4069 enumC4069, boolean z) {
-        super(AbstractC23702.e, "ZoneText(" + enumC4069 + MotionUtils.EASING_TYPE_FORMAT_END);
-        this.g = new HashMap();
-        this.h = new HashMap();
-        this.e = (EnumC4069) C13638.requireNonNull(enumC4069, "textStyle");
-        this.f = z;
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f2266 = new ArrayList();
+
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f2265 = new ArrayList();
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final boolean mo2535() {
+        return false;
     }
 
-    /* JADX WARN: Code duplicated, block: B:22:0x0084  */
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v12 */
-    /* JADX WARN: Type inference failed for: r0v13 */
-    /* JADX WARN: Type inference failed for: r0v3 */
-    /* JADX WARN: Type inference failed for: r0v4 */
-    /* JADX WARN: Type inference fix 'apply assigned field type' failed
-    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
-    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
-    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
-    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
-     */
-    @Override // l.C20298, l.InterfaceC22415
-    public final boolean l(C11126 c11126, StringBuilder sb) {
-        ?? G;
-        String[] strArr;
-        AbstractC9114 abstractC9114 = (AbstractC9114) c11126.b(AbstractC23702.a);
-        if (abstractC9114 == null) {
-            return false;
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C12187 mo2531() {
+        String[] strArrM43831 = m43831("ARG_PATHS");
+        String strM43865 = m43865("targetPath");
+        C6265.m17912(strM43865, EnumC12230.MODIFY_DIRECTORY);
+        SystemClock.sleep(200L);
+        C3374 c3374 = new C3374(strArrM43831.length);
+        c3374.m11078(new C24159(this));
+        int length = 1000 / strArrM43831.length;
+        if (length > 200) {
+            length = 200;
         }
-        String strK = abstractC9114.k();
-        if (!(abstractC9114 instanceof C2678)) {
-            InterfaceC21584 interfaceC21584 = c11126.a;
-            String str = null;
-            Map concurrentMapC13783 = null;
-            if (this.f) {
-                G = 2;
-            } else if (interfaceC21584.e(EnumC18762.INSTANT_SECONDS)) {
-                G = abstractC9114.W().g(C18285.W(interfaceC21584));
-            } else {
-                EnumC18762 enumC18762 = EnumC18762.EPOCH_DAY;
-                if (interfaceC21584.e(enumC18762)) {
-                    EnumC18762 enumC18763 = EnumC18762.NANO_OF_DAY;
-                    if (interfaceC21584.e(enumC18763)) {
-                        C1952 c1952Y = C1952.Y(C18991.i0(interfaceC21584.G(enumC18762)), C3363.a0(interfaceC21584.G(enumC18763)));
-                        Object objE = abstractC9114.W().e(c1952Y);
-                        if ((objE instanceof C13263 ? (C13263) objE : null) == null) {
-                            C15380 c15380W = abstractC9114.W();
-                            C10525 c10525W = C10525.W(c1952Y, abstractC9114, null);
-                            G = c15380W.g(C18285.ofEpochSecond(c10525W.U(), c10525W.b().d));
-                        } else {
-                            G = 2;
-                        }
-                    } else {
-                        G = 2;
-                    }
-                } else {
-                    G = 2;
-                }
+        for (String str : strArrM43831) {
+            AbstractC22044 abstractC22044M35193 = C14584.m35193(str, new String[0]);
+            String name = abstractC22044M35193.getName();
+            c3374.m11079(1);
+            mo29447(name);
+            if (length > 0) {
+                SystemClock.sleep(length);
             }
-            Locale locale = c11126.b.b;
-            EnumC4069 enumC4069 = EnumC4069.NARROW;
-            EnumC4069 enumC40610 = this.e;
-            if (enumC40610 != enumC4069) {
-                ConcurrentMapC13783 concurrentMapC13784 = i;
-                SoftReference softReference = (SoftReference) concurrentMapC13784.get(strK);
-                if (softReference == null || (concurrentMapC13783 = (Map) softReference.get()) == null || (strArr = (String[]) concurrentMapC13783.get(locale)) == null) {
-                    TimeZone timeZone = TimeZone.getTimeZone(strK);
-                    String[] strArr2 = {strK, timeZone.getDisplayName(false, 1, locale), timeZone.getDisplayName(false, 0, locale), timeZone.getDisplayName(true, 1, locale), timeZone.getDisplayName(true, 0, locale), strK, strK};
-                    if (concurrentMapC13783 == null) {
-                        concurrentMapC13783 = new ConcurrentMapC13783();
-                    }
-                    concurrentMapC13783.put(locale, strArr2);
-                    concurrentMapC13784.put(strK, new SoftReference(concurrentMapC13783));
-                    strArr = strArr2;
-                }
-                if (G == 0) {
-                    str = strArr[enumC40610.a + 1];
-                } else if (G == 1) {
-                    str = strArr[enumC40610.a + 3];
-                } else {
-                    str = strArr[enumC40610.a + 5];
-                }
+            try {
+                C14584.m35193(C11293.m28549(strM43865, name), new String[0]).mo2946(abstractC22044M35193.mo2951());
+                this.f2266.add(name);
+            } catch (IOException unused) {
+                this.f2265.add(name);
             }
-            if (str != null) {
-                strK = str;
+            if (mo924()) {
+                return C12187.m30469();
             }
         }
-        sb.append(strK);
-        return true;
+        return C12187.m30468();
     }
 
-    @Override // l.C20298
-    public final C19593 a(C12537 c12537) {
-        C19593 c19593;
-        if (this.e == EnumC4069.NARROW) {
-            return super.a(c12537);
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public final C11983 mo2534() {
+        return C14620.f46053;
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo2528() {
+        m43868(R.string.MT_Protector);
+        m43859(R.string.MT_Protector);
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo2530(AbstractActivityC17204 abstractActivityC17204, C12187 c12187, boolean z) {
+        ArrayList arrayList = this.f2265;
+        if (arrayList.isEmpty()) {
+            return;
         }
-        Locale locale = c12537.a.b;
-        boolean z = c12537.b;
-        Set set = C18201.d;
-        int size = set.size();
-        Map map = z ? this.g : this.h;
-        Map.Entry entry = (Map.Entry) map.get(locale);
-        if (entry != null && ((Integer) entry.getKey()).intValue() == size && (c19593 = (C19593) ((SoftReference) entry.getValue()).get()) != null) {
-            return c19593;
+        abstractActivityC17204.m40397(R.string.MT_Protector, C24276.m54283(arrayList, "\n"), false);
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo2529(Main main, C8614 c8614, C8614 c8615, C12187 c12187) {
+        if (c12187.m30474() && m43863(c8614)) {
+            c8614.m23209();
         }
-        C19593 c19594 = c12537.b ? new C19593("", null, null) : new C8304("", null, null);
-        for (String[] strArr : DateFormatSymbols.getInstance(locale).getZoneStrings()) {
-            String str = strArr[0];
-            if (set.contains(str)) {
-                c19594.a(str, str);
-                HashMap map2 = (HashMap) AbstractC23121.d;
-                String str2 = (String) map2.get(str);
-                if (str2 == null) {
-                    HashMap map3 = (HashMap) AbstractC23121.g;
-                    if (map3.containsKey(str)) {
-                        str = (String) map3.get(str);
-                        str2 = (String) map2.get(str);
-                    }
-                }
-                if (str2 != null) {
-                    Map map4 = (Map) ((HashMap) AbstractC23121.f).get(str2);
-                    str = (map4 == null || !map4.containsKey(locale.getCountry())) ? (String) ((HashMap) AbstractC23121.e).get(str2) : (String) map4.get(locale.getCountry());
-                }
-                HashMap map5 = (HashMap) AbstractC23121.g;
-                if (map5.containsKey(str)) {
-                    str = (String) map5.get(str);
-                }
-                for (int i2 = this.e == EnumC4069.FULL ? 1 : 2; i2 < strArr.length; i2 += 2) {
-                    c19594.a(strArr[i2], str);
-                }
-            }
+        ArrayList arrayList = this.f2266;
+        if (arrayList.isEmpty() || !m43837(c8615)) {
+            return;
         }
-        map.put(locale, new AbstractMap.SimpleImmutableEntry(Integer.valueOf(size), new SoftReference(c19594)));
-        return c19594;
+        c8615.m23176((Collection) arrayList);
+        c8615.m23216();
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo2533(C12187 c12187) {
+        C6331.m18055();
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public final CharSequence mo2532() {
+        return C21576.m49088(R.string.MT_Protector);
     }
 }

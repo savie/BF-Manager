@@ -1,56 +1,54 @@
 package l;
 
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
-import android.os.Looper;
-import android.os.SystemClock;
-import android.widget.TextView;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩳܳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F90M */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18117 implements Drawable.Callback {
+/* JADX INFO: renamed from: l.ܿۚܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5ZF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18117 implements InterfaceC9802 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final TextView f57931;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f59280;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final RunnableC18823 f57932;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public Object f59281;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Rect f57933;
+    public final Iterator f59282;
 
-    public C18117(TextView textView, RunnableC18823 runnableC18823, Rect rect) {
-        this.f57931 = textView;
-        this.f57932 = runnableC18823;
-        this.f57933 = new Rect(rect);
+    public C18117(Iterator it) {
+        it.getClass();
+        this.f59282 = it;
     }
 
-    @Override // android.graphics.drawable.Drawable.Callback
-    public final void invalidateDrawable(Drawable drawable) {
-        Looper looperMyLooper = Looper.myLooper();
-        Looper mainLooper = Looper.getMainLooper();
-        TextView textView = this.f57931;
-        if (looperMyLooper != mainLooper) {
-            textView.post(new RunnableC21645(this, drawable));
-            return;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f59280 || this.f59282.hasNext();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!this.f59280) {
+            return this.f59282.next();
         }
-        Rect bounds = drawable.getBounds();
-        if (!this.f57933.equals(bounds)) {
-            this.f57932.m43428();
-            this.f57933 = new Rect(bounds);
-        } else {
-            textView.postInvalidate();
+        Object obj = this.f59281;
+        this.f59280 = false;
+        this.f59281 = null;
+        return obj;
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        C12128.m30314("Can't remove after you've peeked at next", !this.f59280);
+        this.f59282.remove();
+    }
+
+    @Override // l.InterfaceC9802
+    public final Object peek() {
+        if (!this.f59280) {
+            this.f59281 = this.f59282.next();
+            this.f59280 = true;
         }
-    }
-
-    @Override // android.graphics.drawable.Drawable.Callback
-    public final void scheduleDrawable(Drawable drawable, Runnable runnable, long j) {
-        this.f57931.postDelayed(runnable, j - SystemClock.uptimeMillis());
-    }
-
-    @Override // android.graphics.drawable.Drawable.Callback
-    public final void unscheduleDrawable(Drawable drawable, Runnable runnable) {
-        this.f57931.removeCallbacks(runnable);
+        return this.f59281;
     }
 }

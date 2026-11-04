@@ -9,12 +9,12 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Blake2sDigest implements ExtendedDigest {
     public static final int BLOCK_LENGTH_BYTES = 64;
     public static final int ROUNDS = 10;
     public static final int[] blake2s_IV = {1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225};
-    public static final byte[][] blake2s_sigma = {new byte[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, cb.k, cb.f77931l, 15}, new byte[]{cb.f77931l, 10, 4, 8, 9, 15, cb.k, 6, 1, 12, 0, 2, 11, 7, 5, 3}, new byte[]{11, 8, 12, 0, 5, 2, 15, cb.k, 10, cb.f77931l, 3, 6, 7, 1, 9, 4}, new byte[]{7, 9, 3, 1, cb.k, 12, 11, cb.f77931l, 2, 6, 5, 10, 4, 0, 15, 8}, new byte[]{9, 0, 5, 7, 2, 4, 10, 15, cb.f77931l, 1, 11, 12, 6, 8, 3, cb.k}, new byte[]{2, 12, 6, 10, 0, 11, 8, 3, 4, cb.k, 7, 5, 15, cb.f77931l, 1, 9}, new byte[]{12, 5, 1, 15, cb.f77931l, cb.k, 4, 10, 0, 7, 6, 3, 9, 2, 8, 11}, new byte[]{cb.k, 11, 7, cb.f77931l, 12, 1, 3, 9, 5, 0, 15, 4, 8, 6, 2, 10}, new byte[]{6, 15, cb.f77931l, 9, 11, 3, 0, 8, 12, 2, cb.k, 7, 1, 4, 10, 5}, new byte[]{10, 2, 8, 4, 7, 6, 1, 5, 15, 11, 9, cb.f77931l, 3, 12, cb.k, 0}};
+    public static final byte[][] blake2s_sigma = {new byte[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, cb.k, cb.f82047l, 15}, new byte[]{cb.f82047l, 10, 4, 8, 9, 15, cb.k, 6, 1, 12, 0, 2, 11, 7, 5, 3}, new byte[]{11, 8, 12, 0, 5, 2, 15, cb.k, 10, cb.f82047l, 3, 6, 7, 1, 9, 4}, new byte[]{7, 9, 3, 1, cb.k, 12, 11, cb.f82047l, 2, 6, 5, 10, 4, 0, 15, 8}, new byte[]{9, 0, 5, 7, 2, 4, 10, 15, cb.f82047l, 1, 11, 12, 6, 8, 3, cb.k}, new byte[]{2, 12, 6, 10, 0, 11, 8, 3, 4, cb.k, 7, 5, 15, cb.f82047l, 1, 9}, new byte[]{12, 5, 1, 15, cb.f82047l, cb.k, 4, 10, 0, 7, 6, 3, 9, 2, 8, 11}, new byte[]{cb.k, 11, 7, cb.f82047l, 12, 1, 3, 9, 5, 0, 15, 4, 8, 6, 2, 10}, new byte[]{6, 15, cb.f82047l, 9, 11, 3, 0, 8, 12, 2, cb.k, 7, 1, 4, 10, 5}, new byte[]{10, 2, 8, 4, 7, 6, 1, 5, 15, 11, 9, cb.f82047l, 3, 12, cb.k, 0}};
     public byte[] buffer;
     public int bufferPos;
     public int[] chainValue;

@@ -1,102 +1,89 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۨܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11769 implements InterfaceC18576 {
-    public final int[] a;
-    public int b;
-    public final int c;
-    public final int d;
+/* JADX INFO: renamed from: l.ۧܿۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T1PJ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11769 implements Comparable {
 
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C17870.a(this, consumer);
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final boolean f38033;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final boolean f38034;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final String f38035;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f38036;
+
+    @Override // java.lang.Comparable
+    public final int compareTo(Object obj) {
+        return (!this.f38034 ? 1 : 0) - (!((C11769) obj).f38034 ? 1 : 0);
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C17870.b(this, consumer);
-    }
-
-    public C11769(int[] iArr, int i, int i2, int i3) {
-        this.a = iArr;
-        this.b = i;
-        this.c = i2;
-        this.d = i3 | 16448;
-    }
-
-    @Override // l.InterfaceC20693
-    public final InterfaceC18576 trySplit() {
-        int i = this.b;
-        int i2 = (this.c + i) >>> 1;
-        if (i >= i2) {
-            return null;
+    public C11769(String str, boolean z) {
+        if (str.startsWith("!") || str.startsWith("！")) {
+            str = str.substring(1);
+            this.f38034 = true;
+        } else {
+            this.f38034 = false;
         }
-        this.b = i2;
-        return new C11769(this.a, i, i2, this.d);
-    }
-
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(IntConsumer intConsumer) {
-        int i;
-        intConsumer.getClass();
-        int[] iArr = this.a;
-        int length = iArr.length;
-        int i2 = this.c;
-        if (length < i2 || (i = this.b) < 0) {
-            return;
+        if (str.endsWith("**")) {
+            this.f38036 = 2;
+            this.f38035 = C1402.m5124(2, 0, str);
+        } else if (str.endsWith("*")) {
+            this.f38036 = 1;
+            this.f38035 = C1402.m5124(1, 0, str);
+        } else {
+            this.f38036 = 0;
+            this.f38035 = str;
         }
-        this.b = i2;
-        if (i < i2) {
-            do {
-                intConsumer.accept(iArr[i]);
-                i++;
-            } while (i < i2);
+        this.f38033 = z;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:20:0x0044 A[RETURN] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m29546(String str) {
+        String str2 = this.f38035;
+        int i = this.f38036;
+        if (i != 0) {
+            if (i == 1) {
+                if (str.startsWith(str2) && str.indexOf(46, str2.length()) == -1) {
+                    return true;
+                }
+                return false;
+            }
+            return str.startsWith(str2);
         }
-    }
-
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(IntConsumer intConsumer) {
-        intConsumer.getClass();
-        int i = this.b;
-        if (i < 0 || i >= this.c) {
-            return false;
+        if (str.startsWith(str2)) {
+            String strSubstring = str.substring(str2.length());
+            if (strSubstring.isEmpty() || (this.f38033 && strSubstring.charAt(0) == '$' && strSubstring.indexOf(46) == -1)) {
+                return true;
+            }
         }
-        this.b = i + 1;
-        intConsumer.accept(this.a[i]);
-        return true;
+        return false;
     }
 
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.c - this.b;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.d;
-    }
-
-    @Override // l.InterfaceC20693
-    public final Comparator getComparator() {
-        if (C21398.$default$hasCharacteristics(this, 4)) {
-            return null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InterfaceC4787 m29545(String str) {
+        ArrayList arrayList = new ArrayList();
+        ArrayList arrayList2 = new ArrayList();
+        for (String str2 : str.split("\n")) {
+            if (!str2.isEmpty()) {
+                C11769 c11769 = new C11769(str2, false);
+                if (c11769.f38034) {
+                    arrayList2.add(c11769);
+                } else {
+                    arrayList.add(c11769);
+                }
+            }
         }
-        throw new IllegalStateException();
+        if (arrayList.isEmpty() && arrayList2.isEmpty()) {
+            return new C3769();
+        }
+        return new C2075(arrayList2, arrayList);
     }
 }

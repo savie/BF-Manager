@@ -1,29 +1,36 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۗۖ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 667N */
+/* JADX INFO: renamed from: l.ۖ᩸ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H61Y */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2951 extends C22085 {
+public final class C2951 implements Iterable, Iterator {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public int f11055;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f9635 = 0;
 
-    public C2951() {
-        this.f11055 = 0;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC5101 f9636;
+
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return this;
     }
 
-    public C2951(int i, InterfaceC14242 interfaceC14242) {
-        super(interfaceC14242);
-        this.f11055 = i;
+    public C2951(AbstractC5101 abstractC5101) {
+        this.f9636 = abstractC5101;
     }
 
-    @Override // java.lang.Throwable
-    public String toString() {
-        StringBuilder sb = new StringBuilder("MismatchedTokenException(");
-        sb.append(m49026());
-        sb.append("!=");
-        return C12441.m30911(this.f11055, MotionUtils.EASING_TYPE_FORMAT_END, sb);
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f9635 < this.f9636.size();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        int i = this.f9635;
+        this.f9635 = i + 1;
+        return this.f9636.getItem(i);
     }
 }

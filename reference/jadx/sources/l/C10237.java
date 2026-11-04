@@ -1,98 +1,31 @@
 package l;
 
-import java.lang.reflect.Field;
+/* JADX INFO: renamed from: l.ۢܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R9E5 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10237 extends C24652 {
 
-/* JADX INFO: renamed from: l.ۤۤ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 59PE */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10237 extends AbstractC20820 {
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo19849() {
-        return false;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C6117 f32709;
+
+    public C10237(EnumC15700 enumC15700, C6117 c6117, long j) {
+        super(9, enumC15700, EnumC23906.SMB2_TREE_CONNECT, j, 0L);
+        this.f32709 = c6117;
     }
 
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo19839(Field field) {
-        try {
-            return field.get(null);
-        } catch (IllegalAccessException unused) {
-            return null;
-        }
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ܰ */
-    public final byte mo19848(long j, Object obj) {
-        if (C15882.f51457) {
-            return C15882.m37767(j, obj);
-        }
-        return C15882.m37792(j, obj);
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19841(Object obj, long j, byte b) {
-        if (C15882.f51457) {
-            C15882.m37788(obj, j, b);
+    @Override // l.C24652
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo7006(C7453 c7453) {
+        c7453.m56023(this.f79801);
+        EnumC15700 enumC15700 = EnumC15700.UNKNOWN;
+        c7453.m20461();
+        c7453.m56023(72);
+        String strM17653 = this.f32709.m17653();
+        if (strM17653 == null) {
+            c7453.m56023(0);
         } else {
-            C15882.m37761(obj, j, b);
+            c7453.m56023(strM17653.length() * 2);
         }
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo19846(long j, Object obj) {
-        if (C15882.f51457) {
-            return C15882.m37790(j, obj);
-        }
-        return C15882.m37763(j, obj);
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19844(Object obj, long j, boolean z) {
-        if (C15882.f51457) {
-            C15882.m37780(obj, j, z);
-        } else {
-            C15882.m37797(obj, j, z);
-        }
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۖ */
-    public final float mo19837(long j, Object obj) {
-        return Float.intBitsToFloat(m46823(j, obj));
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19843(Object obj, long j, float f) {
-        m46820(Float.floatToIntBits(f), j, obj);
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۨ */
-    public final double mo19847(long j, Object obj) {
-        return Double.longBitsToDouble(m46826(j, obj));
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19842(Object obj, long j, double d) {
-        m46822(obj, j, Double.doubleToLongBits(d));
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final byte mo19838(long j) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC20820
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19840(long j, byte[] bArr, long j2, long j3) {
-        throw new UnsupportedOperationException();
+        c7453.m56026(strM17653, C22150.f71349);
     }
 }

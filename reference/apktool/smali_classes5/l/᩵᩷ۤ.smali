@@ -1,193 +1,154 @@
 .class public final Ll/᩵᩷ۤ;
-.super Ll/ᩳܺۤ;
-.source "X43L"
+.super Ljava/lang/Object;
+.source "OANW"
+
+# interfaces
+.implements Ll/ۢۙۤ;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩻ܺۤ;
+.field public final ۙ:Ljava/util/WeakHashMap;
+
+.field public final ۤ:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field public final ᩷:Ll/᩶᩷ۤ;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ܺۤ;)V
+.method public constructor <init>(Ll/᩶᩷ۤ;)V
     .locals 0
 
-    .line 4899
+    .line 375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 441
-    iput-object p1, p0, Ll/᩵᩷ۤ;->ܺ:Ll/᩻ܺۤ;
+    .line 376
+    iput-object p1, p0, Ll/᩵᩷ۤ;->᩷:Ll/᩶᩷ۤ;
+
+    .line 378
+    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    iput-object p1, p0, Ll/᩵᩷ۤ;->ۤ:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 385
+    new-instance p1, Ljava/util/WeakHashMap;
+
+    invoke-direct {p1}, Ljava/util/WeakHashMap;-><init>()V
+
+    iput-object p1, p0, Ll/᩵᩷ۤ;->ۙ:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic ۙ(Ljava/lang/Object;Ll/ܽۤۤ;)Ljava/lang/Object;
-    .locals 0
+.method public final ۙ(Landroid/app/Activity;Ll/۬᩷ۤ;)V
+    .locals 3
 
-    .line 441
-    check-cast p1, Ljava/util/Set;
+    .line 2
+    iget-object v0, p0, Ll/᩵᩷ۤ;->ۙ:Ljava/util/WeakHashMap;
 
-    const/4 p1, 0x0
+    const-string v1, "activity"
 
-    return-object p1
-.end method
+    .line 7
+    invoke-static {p1, v1}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public final ۙ(Ll/֡ۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 390
+    iget-object v1, p0, Ll/᩵᩷ۤ;->ۤ:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 441
-    check-cast p2, Ljava/util/Set;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 450
-    invoke-virtual {p1}, Ll/ܽۤۤ;->᩹ۙ()Z
+    .line 391
+    :try_start_0
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
+    check-cast v2, Ll/۬᩷ۤ;
 
-    .line 451
-    iget-object v0, p0, Ll/᩵᩷ۤ;->ܺ:Ll/᩻ܺۤ;
+    .line 169
+    invoke-virtual {p2, v2}, Ll/۬᩷ۤ;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Ll/᩻ܺۤ;->֨(Ll/ܽۤۤ;)Ll/᩸᩷۟;
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    new-instance v0, Ll/ᩴ᩷ۤ;
+    .line 393
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {v0, p0, p2}, Ll/ᩴ᩷ۤ;-><init>(Ll/᩵᩷ۤ;Ljava/util/Set;)V
+    return-void
 
-    invoke-static {p1, v0}, Ll/֡ۤᩴ;->forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
-
-    goto :goto_0
-
-    .line 453
+    .line 395
     :cond_0
-    invoke-virtual {p1}, Ll/֡ۡۤ;->᩷()Ll/᩸᩷۟;
-
-    move-result-object p1
-
-    new-instance v0, Ll/۠᩷ۤ;
-
-    invoke-direct {v0, p0, p2}, Ll/۠᩷ۤ;-><init>(Ll/᩵᩷ۤ;Ljava/util/Set;)V
-
-    invoke-static {p1, v0}, Ll/֡ۤᩴ;->forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/֡ۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 441
-    check-cast p2, Ljava/util/Set;
-
-    .line 465
-    iget-object p1, p1, Ll/֡ۤۤ;->֫:Ll/ܽۤۤ;
-
-    .line 4900
-    invoke-virtual {p1, p0, p2}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ۡۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 441
-    check-cast p2, Ljava/util/Set;
-
-    .line 460
-    iget-object p1, p1, Ll/ۡۡۤ;->ۧ:Ll/ܽۤۤ;
-
-    .line 4900
-    invoke-virtual {p1, p0, p2}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 460
-    check-cast p1, Ljava/lang/Void;
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/᩷ۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 441
-    check-cast p2, Ljava/util/Set;
-
-    .line 479
-    invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 480
-    invoke-virtual {p1}, Ll/᩺ۤۤ;->ۖۙ()Ll/ܽۤۤ;
+    :try_start_1
+    invoke-virtual {v0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4900
-    invoke-virtual {v0, p0, p2}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Ll/۬᩷ۤ;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1693
-    iget-object p1, p1, Ll/᩺ۤۤ;->᩻:Ll/ܽۤۤ;
+    .line 390
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 4900
-    invoke-virtual {p1, p0, p2}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 397
+    iget-object v0, p0, Ll/᩵᩷ۤ;->᩷:Ll/᩶᩷ۤ;
 
-    :cond_0
-    const/4 p1, 0x0
+    .line 144
+    iget-object v0, v0, Ll/᩶᩷ۤ;->ۙ:Ll/֡᩷ۤ;
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Ll/֡᩷ۤ;->ۙ()Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.method public final ۙ(Ll/᩺ۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    move-result-object v0
 
-    .line 441
-    check-cast p2, Ljava/util/Set;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 471
-    iget-object v0, p1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ll/᩻᩵ۤ;->ܿ()J
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-wide v0
+    move-result v1
 
-    const-wide/16 v2, 0x1000
+    if-eqz v1, :cond_2
 
-    and-long/2addr v0, v2
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-wide/16 v2, 0x0
+    move-result-object v1
 
-    cmp-long v4, v0, v2
+    check-cast v1, Ll/ܿ᩷ۤ;
 
-    if-eqz v4, :cond_0
+    .line 145
+    invoke-virtual {v1}, Ll/ܿ᩷ۤ;->ۙ()Landroid/app/Activity;
 
-    invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v0
+    invoke-static {v2, p1}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    move-result v2
 
-    .line 472
-    invoke-virtual {p1}, Ll/᩺ۤۤ;->ۖۙ()Ll/ܽۤۤ;
+    if-nez v2, :cond_1
 
-    move-result-object p1
+    goto :goto_0
 
-    .line 4900
-    invoke-virtual {p1, p0, p2}, Ll/ܽۤۤ;->ۙ(Ll/ܺۤۤ;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 148
+    :cond_1
+    invoke-virtual {v1, p2}, Ll/ܿ᩷ۤ;->ۙ(Ll/۬᩷ۤ;)V
 
-    :cond_0
-    const/4 p1, 0x0
+    goto :goto_0
 
-    return-object p1
+    :cond_2
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 390
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
 .end method

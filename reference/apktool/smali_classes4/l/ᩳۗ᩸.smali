@@ -1,17 +1,20 @@
-.class public interface abstract Ll/ᩳۗ᩸;
+.class public final Ll/ᩳۗ᩸;
 .super Ljava/lang/Object;
-.source "A9C8"
+.source "16SF"
 
 
-# virtual methods
-.method public abstract update([BII)[B
-.end method
+# instance fields
+.field public final synthetic ۙ:Ll/֨ۗ᩸;
 
-.method public abstract ۙ(Ll/ᩴۗ᩸;[BLjavax/crypto/spec/GCMParameterSpec;)V
-.end method
 
-.method public abstract ۙ([B)V
-.end method
+# direct methods
+.method public constructor <init>(Ll/֨ۗ᩸;)V
+    .locals 0
 
-.method public abstract ܰ(I[B)[B
+    .line 86
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ᩳۗ᩸;->ۙ:Ll/֨ۗ᩸;
+
+    return-void
 .end method

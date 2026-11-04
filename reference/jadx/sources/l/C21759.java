@@ -1,19 +1,19 @@
 package l;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+/* JADX INFO: renamed from: l.᩷ۖܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I9QN */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class C21759 {
 
-/* JADX INFO: renamed from: l.᩸ᩴۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U8TP */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21759 implements Parcelable.Creator {
-    @Override // android.os.Parcelable.Creator
-    public final Object createFromParcel(Parcel parcel) {
-        return new C8354(parcel);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f69402;
 
-    @Override // android.os.Parcelable.Creator
-    public final Object[] newArray(int i) {
-        return new C8354[i];
+    static {
+        int[] iArr = new int[EnumC16711.values().length];
+        f69402 = iArr;
+        try {
+            iArr[EnumC16711.PROTO3.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
     }
 }

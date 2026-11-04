@@ -1,75 +1,96 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚᩴᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 78BU */
+/* JADX INFO: renamed from: l.ۚۡۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5YG */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5542 extends C13304 {
+public final class C5542 extends AbstractC14490 implements InterfaceC14512 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public double f19004;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6288 f19254 = new C12999();
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public double[] f19005;
+    public byte f19255;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C7659 f19006;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte f19256;
 
-    public C5542(C7659 c7659, double d) {
-        super(c7659, d);
-        this.f19005 = new double[8];
-        this.f19006 = c7659;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public byte f19257;
 
-    @Override // l.C13304
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final double mo15279() {
-        return this.f19004;
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public byte f19258;
 
-    @Override // l.C13304
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo15280(double d) {
-        this.f19004 = d;
-        super.mo15280(d);
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public byte f19259;
 
-    @Override // l.C13304
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final double[] mo15281() {
-        double[] dArrMo15281;
-        int i;
-        double[] dArr;
-        double[] dArrMo15282;
-        int iM32793 = m32793();
-        if (iM32793 == 0) {
-            dArrMo15282 = super.mo15281();
-        } else {
-            if (this.f19006.m20215()) {
-                dArrMo15281 = super.mo15281();
-                i = 0;
-            } else {
-                dArrMo15281 = m32790(0).mo15281();
-                i = 1;
-            }
-            int i2 = 0;
-            while (true) {
-                dArr = this.f19005;
-                if (i2 >= dArr.length) {
-                    break;
-                }
-                dArr[i2] = dArrMo15281[i2];
-                i2++;
-            }
-            while (i < iM32793) {
-                double[] dArrMo15283 = m32790(i).mo15281();
-                for (int i3 = 0; i3 < dArr.length; i3++) {
-                    dArr[i3] = dArr[i3] + dArrMo15283[i3];
-                }
-                i++;
-            }
-            dArrMo15282 = dArr;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public byte f19260;
+
+    public C5542(C24738 c24738, EnumC7779 enumC7779, byte[] bArr, int i) {
+        super(c24738, enumC7779, bArr, i);
+        if (this.f19260 > 5) {
+            throw new RuntimeException("regCount cannot be greater than 5");
         }
-        this.f19004 = dArrMo15282[0];
-        return dArrMo15282;
+        int i2 = i + 1;
+        this.f19260 = C12556.m31232(bArr[i2]);
+        this.f19256 = (byte) (bArr[i2] & 15);
+        byte b = bArr[i + 4];
+        this.f19259 = (byte) (b & 15);
+        this.f19258 = C12556.m31232(b);
+        byte b2 = bArr[i + 5];
+        this.f19257 = (byte) (b2 & 15);
+        this.f19255 = C12556.m31232(b2);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2086(C24166 c24166, int i) {
+        c24166.m54138(this.f78334.f25844);
+        c24166.m54138((this.f19260 << 4) | this.f19256);
+        c24166.m54139(m35002().m27353());
+        c24166.m54138((this.f19258 << 4) | this.f19259);
+        c24166.m54138((this.f19255 << 4) | this.f19257);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ۧ */
+    public final EnumC7801 mo2083() {
+        return EnumC7801.Format35s;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final byte mo16451() {
+        return this.f19260;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte mo16452() {
+        return this.f19256;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final byte mo16456() {
+        return this.f19259;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final byte mo16453() {
+        return this.f19258;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final byte mo16454() {
+        return this.f19257;
+    }
+
+    @Override // l.InterfaceC14512
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte mo16455() {
+        return this.f19255;
     }
 }

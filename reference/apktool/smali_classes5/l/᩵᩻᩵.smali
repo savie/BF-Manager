@@ -1,73 +1,43 @@
 .class public final Ll/᩵᩻᩵;
-.super Ll/ܺۗ᩵;
-.source "M605"
-
-
-# instance fields
-.field public final synthetic ܿ:Ll/ۤ᩻᩵;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۤ᩻᩵;Ll/ܿ᩻᩵;II)V
-    .locals 0
-
-    .line 690
-    iput-object p1, p0, Ll/᩵᩻᩵;->ܿ:Ll/ۤ᩻᩵;
-
-    invoke-direct {p0, p2, p3, p4}, Ll/ܺۗ᩵;-><init>(Ll/ܿ᩻᩵;II)V
-
-    return-void
-.end method
+.super Ll/ܳܺ᩵;
+.source "Y6HM"
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
+.method public final ۙ(Ll/ۧ᩻᩵;ILl/ۨܺ᩵;)V
     .locals 3
 
-    .line 698
-    invoke-virtual {p0}, Ll/ܺۗ᩵;->nextIndex()I
-
-    move-result v0
-
-    iget-object v1, p0, Ll/᩵᩻᩵;->ܿ:Ll/ۤ᩻᩵;
-
-    iget-object v2, v1, Ll/ۤ᩻᩵;->ۖ:Ll/۟᩻᩵;
-
-    invoke-static {v2}, Ll/۟᩻᩵;->ۙ(Ll/۟᩻᩵;)I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_0
-
-    .line 699
-    invoke-virtual {p0}, Ll/ܺۗ᩵;->ۙ()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ll/ۤ᩻᩵;->ۨ(Ll/ۤ᩻᩵;I)V
-
-    .line 701
-    :cond_0
-    invoke-super {p0}, Ll/ܺۗ᩵;->next()Ljava/lang/Object;
+    .line 147
+    invoke-virtual {p1}, Ll/ۧ᩻᩵;->᩷()[I
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    .line 148
+    invoke-static {p2}, Ll/ܳܺ᩵;->᩷(I)I
 
-.method public final ۙ(Ll/ᩴܳ᩵;I)Ljava/lang/Object;
-    .locals 0
+    move-result v2
 
-    .line 693
-    invoke-virtual {p1}, Ll/ᩴܳ᩵;->ܶ()I
+    aput v2, v0, v1
 
-    move-result p1
+    const/4 v1, 0x1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 149
+    invoke-static {p2}, Ll/ܳܺ᩵;->ۤ(I)I
 
-    move-result-object p1
+    move-result p2
 
-    return-object p1
+    aput p2, v0, v1
+
+    .line 150
+    invoke-virtual {p3}, Ll/ۨܺ᩵;->ۧ()I
+
+    move-result p2
+
+    int-to-long p2, p2
+
+    invoke-virtual {p1, p2, p3}, Ll/ۧ᩻᩵;->ۙ(J)V
+
+    return-void
 .end method

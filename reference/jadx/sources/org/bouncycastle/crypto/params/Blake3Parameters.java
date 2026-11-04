@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.params;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Blake3Parameters implements CipherParameters {
     public static final int KEYLEN = 32;
     public byte[] theContext;

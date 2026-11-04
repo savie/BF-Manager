@@ -8,7 +8,7 @@ import java.security.spec.EllipticCurve;
 import org.bouncycastle.jcajce.provider.asymmetric.util.EC5Util;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECPointUtil {
     public static ECPoint decodePoint(EllipticCurve ellipticCurve, byte[] bArr) {
         ECCurve f2m;

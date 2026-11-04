@@ -1,210 +1,151 @@
 .class public final Ll/᩺ܿ᩸;
-.super Ljava/io/FilterInputStream;
-.source "Y9IP"
-
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Ll/᩷ۤᩴ;
-
-
-# static fields
-.field public static final ᩶:Ll/ۙ֨ۤ;
-
-
-# instance fields
-.field public final ܺ:Ll/ۢ᩻᩺;
+.super Ljava/lang/Object;
+.source "K6QN"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static ۙ(Ljava/lang/Object;)J
+    .locals 7
 
-    .line 32
-    const-class v0, Ll/᩺ܿ᩸;
+    .line 17
+    instance-of v0, p0, Ll/۟ۢ᩸;
 
-    invoke-static {v0}, Ll/ܰ֨ۤ;->ۙ(Ljava/lang/Class;)Ll/ۙ֨ۤ;
+    const-wide/16 v1, 0x70
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    sput-object v0, Ll/᩺ܿ᩸;->᩶:Ll/ۙ֨ۤ;
+    check-cast p0, Ll/۟ۢ᩸;
 
-    return-void
-.end method
+    iget-wide v3, p0, Ll/۟ۢ᩸;->ۙ:J
 
-.method public constructor <init>(Ll/۠ܿ᩸;Ljava/io/InputStream;)V
-    .locals 0
+    goto :goto_0
 
-    .line 36
-    invoke-direct {p0, p2}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    .line 18
+    :cond_0
+    instance-of v0, p0, Ll/ۚ֨᩸;
 
-    .line 37
-    iput-object p1, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    check-cast p0, Ll/ۚ֨᩸;
 
-.method public constructor <init>(Ll/ۢ᩻᩺;[B)V
-    .locals 1
+    const-wide/16 v0, 0x30
 
-    .line 41
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    invoke-virtual {p0}, Ll/ۚ֨᩸;->ۙ()J
 
-    invoke-direct {v0, p2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    move-result-wide v2
 
-    invoke-direct {p0, v0}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    add-long/2addr v2, v0
 
-    .line 42
-    iput-object p1, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    return-wide v2
 
-    return-void
-.end method
+    .line 19
+    :cond_1
+    instance-of v0, p0, Ll/ܽܿ᩸;
 
+    if-eqz v0, :cond_2
 
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+    check-cast p0, Ll/ܽܿ᩸;
 
-    .line 69
-    new-instance v0, Ll/ۜܿ᩸;
+    iget-object p0, p0, Ll/ܽܿ᩸;->ܳ:[Ll/֨ܿ᩸;
 
-    invoke-direct {v0, p0}, Ll/ۜܿ᩸;-><init>(Ll/᩺ܿ᩸;)V
+    array-length p0, p0
 
-    return-object v0
-.end method
+    int-to-long v3, p0
 
-.method public final readObject()Ll/ۡܿ᩸;
-    .locals 6
+    const-wide/16 v5, 0x8
 
-    .line 47
-    iget-object v0, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    mul-long v3, v3, v5
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    add-long/2addr v3, v1
 
-    invoke-static {p0}, Ll/ۢ᩻᩺;->ܰ(Ll/᩺ܿ᩸;)Ll/ܳܿ᩸;
+    return-wide v3
 
-    move-result-object v1
+    .line 20
+    :cond_2
+    instance-of v0, p0, Ll/ᩳܿ᩸;
 
-    .line 48
-    sget-object v2, Ll/᩺ܿ᩸;->᩶:Ll/ۙ֨ۤ;
+    if-eqz v0, :cond_3
 
-    const-string v3, "Read ASN.1 tag {}"
+    return-wide v1
 
-    invoke-interface {v2, v1, v3}, Ll/ۙ֨ۤ;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 21
+    :cond_3
+    instance-of p0, p0, Ll/᩷֡᩸;
 
-    .line 49
-    invoke-static {p0}, Ll/ۢ᩻᩺;->ۙ(Ll/᩺ܿ᩸;)I
+    if-eqz p0, :cond_4
 
-    move-result v3
-
-    const-string v4, "Read ASN.1 object length: {}"
-
-    .line 50
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-interface {v2, v5, v4}, Ll/ۙ֨ۤ;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 51
-    invoke-static {v3, p0}, Ll/ۢ᩻᩺;->ۙ(ILl/᩺ܿ᩸;)[B
-
-    move-result-object v3
-
-    .line 54
-    invoke-virtual {v1, v0}, Ll/ܳܿ᩸;->ۙ(Ll/ۢ᩻᩺;)Ll/ᩳܿ᩸;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v3}, Ll/ᩳܿ᩸;->ۙ(Ll/ܳܿ᩸;[B)Ll/ۡܿ᩸;
-
-    move-result-object v0
-
-    const-string v1, "Read ASN.1 object: {}"
-
-    .line 55
-    invoke-interface {v2, v0, v1}, Ll/ۙ֨ۤ;->ۚ(Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ll/᩸ܿ᩸; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    .line 60
-    new-instance v1, Ll/᩸ܿ᩸;
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const-string v3, "Cannot parse ASN.1 object from stream"
-
-    invoke-direct {v1, v0, v3, v2}, Ll/᩸ܿ᩸;-><init>(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    throw v1
-
-    :catch_1
-    move-exception v0
-
-    .line 58
-    throw v0
-.end method
-
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-
-    move-result-wide v0
+    const-wide/16 v0, 0x58
 
     return-wide v0
+
+    .line 22
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Unsupported text budget object"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public final ۖ()Ll/ܳܿ᩸;
-    .locals 1
+.method public static ۙ(Ljava/lang/Object;Ljava/util/function/Consumer;)V
+    .locals 3
 
-    .line 97
-    iget-object v0, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    .line 25
+    instance-of v0, p0, Ll/᩷֡᩸;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_0
 
-    invoke-static {p0}, Ll/ۢ᩻᩺;->ܰ(Ll/᩺ܿ᩸;)Ll/ܳܿ᩸;
+    check-cast p0, Ll/᩷֡᩸;
 
-    move-result-object v0
+    iget-object p0, p0, Ll/᩷֡᩸;->ۤ:Ll/֨ܿ᩸;
 
-    return-object v0
-.end method
+    invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-.method public final ۙ(I)[B
-    .locals 1
+    return-void
 
-    .line 65
-    iget-object v0, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    .line 26
+    :cond_0
+    instance-of v0, p0, Ll/ܽܿ᩸;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_1
 
-    invoke-static {p1, p0}, Ll/ۢ᩻᩺;->ۙ(ILl/᩺ܿ᩸;)[B
+    check-cast p0, Ll/ܽܿ᩸;
 
-    move-result-object p1
+    .line 27
+    iget-object p0, p0, Ll/ܽܿ᩸;->ܳ:[Ll/֨ܿ᩸;
 
-    return-object p1
-.end method
+    array-length v0, p0
 
-.method public final ۨ()I
-    .locals 1
+    const/4 v1, 0x0
 
-    .line 101
-    iget-object v0, p0, Ll/᩺ܿ᩸;->ܺ:Ll/ۢ᩻᩺;
+    :goto_0
+    if-ge v1, v0, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    aget-object v2, p0, v1
 
-    invoke-static {p0}, Ll/ۢ᩻᩺;->ۙ(Ll/᩺ܿ᩸;)I
+    invoke-interface {p1, v2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    move-result v0
+    add-int/lit8 v1, v1, 0x1
 
-    return v0
+    goto :goto_0
+
+    .line 28
+    :cond_1
+    instance-of v0, p0, Ll/ᩳܿ᩸;
+
+    if-eqz v0, :cond_2
+
+    check-cast p0, Ll/ᩳܿ᩸;
+
+    invoke-virtual {p0}, Ll/ᩳܿ᩸;->᩸()Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
 .end method

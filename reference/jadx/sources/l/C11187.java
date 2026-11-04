@@ -1,87 +1,72 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧᩴᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 68CW */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11187 extends AbstractC5232 {
+import android.os.Bundle;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public C20359 f37884;
+/* JADX INFO: renamed from: l.ۤ᩹᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 16RW */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11187 {
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public C7659 f37887;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Bundle f35284;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public double f37889;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C11121 f35285;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C20508 f35286;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C16122 f35287;
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public double f37888 = 0.0d;
+    public long f35288;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public double f37885 = 1.0d;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public double f37886 = 1.0E-5d;
-
-    public C11187() {
-        C7659 c7659 = new C7659("Time");
-        this.f37887 = c7659;
-        m3818(c7659);
-        this.f18144.m20211(1.0E-5d, 1.0d, 1.0d);
-        C20359 c20359 = new C20359();
-        this.f37884 = c20359;
-        m3818(c20359);
+    public C11187(C7941 c7941, C16320 c16320, C24132 c24132) {
+        this.f35288 = c16320.f52980.mo11043().m41105();
+        this.f35284 = new Bundle(c7941.f23990);
+        C23056 c23056M21635 = c7941.m21635();
+        C11121 c11121 = null;
+        if (c23056M21635 != null) {
+            int i = c23056M21635.f74804;
+            int i2 = c23056M21635.f74803;
+            boolean z = c23056M21635.f74806;
+            int i3 = c23056M21635.f74805;
+            AbstractC22044 abstractC22044 = c23056M21635.f74802;
+            c11121 = new C11121(i, i2, z, i3, abstractC22044 != null ? abstractC22044.mo4294() : null, c23056M21635.f74807 != null, c23056M21635.f74808);
+        }
+        this.f35285 = c11121;
+        this.f35286 = c24132.m53867();
+        this.f35287 = c7941.f26385.m52815();
     }
 
-    @Override // l.AbstractC0998
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2809() {
-        double[] dArrM36893 = this.f18143.m36893();
-        int i = 0;
-        double d = this.f18144.m36893()[0];
-        double d2 = this.f37887.m36893()[0];
-        C20359 c20359 = this.f37884;
-        double dM45936 = c20359.m45936();
-        double d3 = this.f37886;
-        double dMax = Math.max(d3, d);
-        double dMax2 = Math.max(d3, dM45936);
-        if (d2 != this.f37888) {
-            this.f37885 = Math.pow(dMax / dMax2, 1.0d / (((double) this.f4666.m10091()) * d2));
-            this.f37888 = d2;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m28188(C11187 c11187) {
+        if (c11187 == null) {
+            return false;
         }
-        if (dMax != this.f37889) {
-            this.f37885 = Math.pow(dMax / dMax2, 1.0d / (d2 * ((double) this.f4666.m10091())));
-            this.f37889 = dMax;
+        C11121 c11121 = c11187.f35285;
+        Bundle bundle = c11187.f35284;
+        if (this.f35288 != c11187.f35288 || !this.f35286.m47029(c11187.f35286) || !this.f35287.m38283(c11187.f35287)) {
+            return false;
         }
-        double d4 = this.f37889;
-        if (dMax2 < d4) {
-            while (i < 8) {
-                dMax2 *= this.f37885;
-                double d5 = this.f37889;
-                if (dMax2 > d5) {
-                    this.f37885 = 1.0d;
-                    dMax2 = d5;
-                }
-                dArrM36893[i] = dMax2;
-                i++;
+        C11121 c11122 = this.f35285;
+        if (c11122 == null) {
+            if (c11121 != null) {
+                return false;
             }
-        } else if (dMax2 > d4) {
-            while (i < 8) {
-                dMax2 *= this.f37885;
-                double d6 = this.f37889;
-                if (dMax2 < d6) {
-                    this.f37885 = 1.0d;
-                    dMax2 = d6;
-                }
-                dArrM36893[i] = dMax2;
-                i++;
-            }
-        } else if (dMax2 == d4) {
-            while (i < 8) {
-                dArrM36893[i] = this.f37889;
-                i++;
+        } else if (!c11122.m28071(c11121)) {
+            return false;
+        }
+        Bundle bundle2 = this.f35284;
+        if (bundle2.size() != bundle.size()) {
+            return false;
+        }
+        for (String str : bundle2.keySet()) {
+            if (!bundle.containsKey(str) || !C17359.equals(bundle2.get(str), bundle.get(str))) {
+                return false;
             }
         }
-        c20359.m45937(dMax2);
+        return true;
     }
 }

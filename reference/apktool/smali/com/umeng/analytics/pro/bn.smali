@@ -791,7 +791,7 @@
     const-string v1, "Message length exceeded: "
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -811,7 +811,7 @@
     const-string v1, "Negative length: "
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,23 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳܳۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D7LF */
+/* JADX INFO: renamed from: l.ܿۚۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I4F9 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18112 extends AbstractC12034 {
+public final class C18112 extends AbstractRunnableC22060 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19524 f57922;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22478 f59268;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C18112(C19524 c19524, C13174 c13174, C21825 c21825) {
-        super(c21825);
-        this.f57922 = c19524;
-        C13638.requireNonNull(c13174);
+    public C18112(C22478 c22478, Object... objArr) {
+        super("OkHttp %s ping", objArr);
+        this.f59268 = c22478;
     }
 
-    @Override // l.InterfaceC7800
+    @Override // l.AbstractRunnableC22060
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo20469() {
-        return this.f57922.m44603().m48598(this.f40298).m48595();
+    public final void mo1658() {
+        this.f59268.m50693(2, 0, false);
     }
 }

@@ -1,14 +1,8 @@
-.class public final Ll/᩶ۡۨ;
-.super Ll/᩻ۡۨ;
-.source "Z6QT"
+.class public interface abstract Ll/᩶ۡۨ;
+.super Ljava/lang/Object;
+.source "U5DR"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1700
-    invoke-direct {p0}, Ll/᩻ۡۨ;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract ᩴ()J
 .end method

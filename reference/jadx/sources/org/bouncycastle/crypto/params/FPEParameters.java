@@ -4,7 +4,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.util.RadixConverter;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FPEParameters implements CipherParameters {
     public final KeyParameter key;
     public final RadixConverter radixConverter;

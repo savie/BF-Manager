@@ -9,7 +9,7 @@
     const-string v0, "HmacSHA3-"
 
     .line 0
-    invoke-static {p1, v0}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

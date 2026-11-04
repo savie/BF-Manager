@@ -1,0 +1,36 @@
+package com.google.android.material.color.utilities;
+
+import java.util.function.Function;
+import l.C24247;
+
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class MaterialDynamicColors$$ExternalSyntheticLambda49 implements Function {
+    public final /* synthetic */ int $r8$classId;
+    public final /* synthetic */ MaterialDynamicColors f$0;
+
+    public /* synthetic */ MaterialDynamicColors$$ExternalSyntheticLambda49(MaterialDynamicColors materialDynamicColors, int i) {
+        this.$r8$classId = i;
+        this.f$0 = materialDynamicColors;
+    }
+
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.$r8$classId) {
+            case 0:
+                return this.f$0.lambda$onBackground$14((DynamicScheme) obj);
+            default:
+                return this.f$0.lambda$primaryFixedDim$108((DynamicScheme) obj);
+        }
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+}

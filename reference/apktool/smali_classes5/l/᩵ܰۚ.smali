@@ -1,40 +1,26 @@
-.class public final synthetic Ll/᩵ܰۚ;
+.class public final Ll/᩵ܰۚ;
 .super Ljava/lang/Object;
-.source "44TS"
-
-# interfaces
-.implements Ljava/util/function/BooleanSupplier;
+.source "O6XG"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۡܰۚ;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ᩷:Lbin/mt/json/JSONArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۡܰۚ;)V
+.method public constructor <init>(Lbin/mt/json/JSONArray;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
+    .line 281
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩵ܰۚ;->ܺ:Ll/ۡܰۚ;
+    .line 282
+    iput-object p2, p0, Ll/᩵ܰۚ;->ۙ:Ljava/lang/String;
+
+    .line 286
+    iput-object p1, p0, Ll/᩵ܰۚ;->᩷:Lbin/mt/json/JSONArray;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getAsBoolean()Z
-    .locals 2
-
-    .line 540
-    iget-object v0, p0, Ll/᩵ܰۚ;->ܺ:Ll/ۡܰۚ;
-
-    iget-object v1, v0, Ll/ۡܰۚ;->۟:Ll/ۤܰۚ;
-
-    invoke-static {v1, v0}, Ll/ۤܰۚ;->ܰ(Ll/ۤܰۚ;Ll/ۡܰۚ;)Z
-
-    move-result v0
-
-    return v0
 .end method

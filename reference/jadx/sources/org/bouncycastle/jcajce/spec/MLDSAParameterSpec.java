@@ -6,7 +6,7 @@ import java.util.Map;
 import org.bouncycastle.jcajce.provider.asymmetric.compositesignatures.SignatureSpi;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MLDSAParameterSpec implements AlgorithmParameterSpec {
     public static final MLDSAParameterSpec ml_dsa_44;
     public static final MLDSAParameterSpec ml_dsa_44_with_sha512;

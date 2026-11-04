@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static final ᩹:Lcom/amazonaws/logging/Log;
+.field public static final ܳ:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public ۖ:I
-
 .field public ۙ:[B
 
-.field public ۚ:I
+.field public ۤ:I
 
-.field public ۨ:I
+.field public ᩴ:I
 
-.field public ܰ:Z
+.field public ᩷:Z
+
+.field public ᩸:I
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩹:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ܳ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     const/4 v0, -0x1
 
     .line 29
-    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     .line 33
     new-array v0, p1, [B
@@ -52,7 +52,7 @@
     iput-object v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۙ:[B
 
     .line 34
-    iput p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۖ:I
+    iput p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩸:I
 
     return-void
 .end method
@@ -65,19 +65,19 @@
     const/4 v0, -0x1
 
     .line 52
-    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     .line 53
-    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۨ:I
+    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۤ:I
 
     add-int v1, v0, p2
 
-    iget v2, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۖ:I
+    iget v2, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩸:I
 
     if-le v1, v2, :cond_1
 
     .line 54
-    sget-object p1, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩹:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/auth/DecodedStreamBuffer;->ܳ:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p1}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -102,13 +102,13 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_0
     const/4 p1, 0x1
 
     .line 59
-    iput-boolean p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ܰ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩷:Z
 
     return-void
 
@@ -119,11 +119,11 @@
     invoke-static {p3, p1, v1, v0, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 63
-    iget p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۨ:I
+    iget p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۤ:I
 
     add-int/2addr p1, p2
 
-    iput p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۨ:I
+    iput p1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۤ:I
 
     return-void
 .end method
@@ -132,13 +132,13 @@
     .locals 2
 
     .line 68
-    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    iget v1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۨ:I
+    iget v1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۤ:I
 
     if-ge v0, v1, :cond_0
 
@@ -152,18 +152,18 @@
     return v0
 .end method
 
-.method public final ۨ()V
+.method public final ۤ()V
     .locals 4
 
     .line 76
-    iget-boolean v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ܰ:Z
+    iget-boolean v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩷:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
     .line 81
-    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iput v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     return-void
 
@@ -177,12 +177,12 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۖ:I
+    iget v2, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩸:I
 
     const-string v3, " has been exceeded."
 
     .line 0
-    invoke-static {v2, v3, v1}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v3, v1}, Ll/ۨ᩹ۧ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -193,15 +193,15 @@
     throw v0
 .end method
 
-.method public final ܰ()B
+.method public final ᩷()B
     .locals 2
 
     .line 72
-    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iget v0, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۚ:I
+    iput v1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ᩴ:I
 
     iget-object v1, p0, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۙ:[B
 

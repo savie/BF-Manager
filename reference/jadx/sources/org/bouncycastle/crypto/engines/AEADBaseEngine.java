@@ -2,10 +2,10 @@ package org.bouncycastle.crypto.engines;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import l.C12441;
-import l.C22697;
-import l.C2271;
-import l.C8479;
+import l.C12669;
+import l.C13645;
+import l.C14442;
+import l.C8947;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -18,7 +18,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AEADBaseEngine implements AEADCipher {
     public int AADBufferSize;
     public int BlockSize;
@@ -221,14 +221,14 @@ public abstract class AEADBaseEngine implements AEADCipher {
             if (j <= this.max) {
                 return;
             }
-            throw new IllegalStateException(C12441.m30911(this.n, " bytes per key (including nonce, AAD, and message)", new StringBuilder("Total data limit exceeded: maximum 2^")));
+            throw new IllegalStateException(C12669.m31437(this.n, " bytes per key (including nonce, AAD, and message)", new StringBuilder("Total data limit exceeded: maximum 2^")));
         }
 
         public void increment(int i) {
             long j = this.count + ((long) i);
             this.count = j;
             if (j > this.max) {
-                throw new IllegalStateException(C2271.m6966(i, "Total data limit exceeded: maximum 2^", " bytes per key (including nonce, AAD, and message)"));
+                throw new IllegalStateException(C14442.m34864(i, "Total data limit exceeded: maximum 2^", " bytes per key (including nonce, AAD, and message)"));
             }
         }
 
@@ -782,7 +782,7 @@ public abstract class AEADBaseEngine implements AEADCipher {
             int i = this.macSizeLowerBound;
             if (i == 0) {
                 if (macSize != (this.MAC_SIZE << 3)) {
-                    throw new IllegalArgumentException(C8479.m22141(macSize, "Invalid value for MAC size: "));
+                    throw new IllegalArgumentException(C13645.m33382(macSize, "Invalid value for MAC size: "));
                 }
             } else {
                 if (macSize > 128 || macSize < (i << 3) || (macSize & 7) != 0) {
@@ -800,20 +800,20 @@ public abstract class AEADBaseEngine implements AEADCipher {
             this.initialAssociatedText = null;
         }
         if (key == null) {
-            throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " Init parameters must include a key"));
+            throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " Init parameters must include a key"));
         }
         if (iv == null || iv.length != this.IV_SIZE) {
             StringBuilder sb = new StringBuilder();
             sb.append(this.algorithmName);
             sb.append(" requires exactly ");
-            throw new IllegalArgumentException(C12441.m30911(this.IV_SIZE, " bytes of IV", sb));
+            throw new IllegalArgumentException(C12669.m31437(this.IV_SIZE, " bytes of IV", sb));
         }
         byte[] key2 = key.getKey();
         if (key2.length != this.KEY_SIZE) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(this.algorithmName);
             sb2.append(" key must be ");
-            throw new IllegalArgumentException(C12441.m30911(this.KEY_SIZE, " bytes long", sb2));
+            throw new IllegalArgumentException(C12669.m31437(this.KEY_SIZE, " bytes long", sb2));
         }
         CryptoServicesRegistrar.checkConstraints(new DefaultServiceProperties(getAlgorithmName(), 128, cipherParameters, Utils.getPurpose(z)));
         this.m_state = z ? State.EncInit : State.DecInit;
@@ -938,7 +938,7 @@ public abstract class AEADBaseEngine implements AEADCipher {
                 this.m_state = State.DecFinal;
                 break;
             default:
-                throw new IllegalStateException(C22697.m50267(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
+                throw new IllegalStateException(C8947.m23910(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
         }
         this.aadOperator.reset();
         this.dataOperator.reset();
@@ -1115,11 +1115,11 @@ public abstract class AEADBaseEngine implements AEADCipher {
                 return;
             }
             if (i == 4) {
-                throw new IllegalStateException(C22697.m50267(new StringBuilder(), getAlgorithmName(), " cannot be reused for encryption"));
+                throw new IllegalStateException(C8947.m23910(new StringBuilder(), getAlgorithmName(), " cannot be reused for encryption"));
             }
             if (i != 5) {
                 if (i != 6) {
-                    throw new IllegalStateException(C22697.m50267(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
+                    throw new IllegalStateException(C8947.m23910(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
                 }
                 return;
             }
@@ -1137,7 +1137,7 @@ public abstract class AEADBaseEngine implements AEADCipher {
             case 3:
                 return true;
             case 4:
-                throw new IllegalStateException(C22697.m50267(new StringBuilder(), getAlgorithmName(), " cannot be reused for encryption"));
+                throw new IllegalStateException(C8947.m23910(new StringBuilder(), getAlgorithmName(), " cannot be reused for encryption"));
             case 5:
             case 6:
                 finishAAD(State.DecData, z);
@@ -1145,7 +1145,7 @@ public abstract class AEADBaseEngine implements AEADCipher {
             case 7:
                 return false;
             default:
-                throw new IllegalStateException(C22697.m50267(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
+                throw new IllegalStateException(C8947.m23910(new StringBuilder(), getAlgorithmName(), " needs to be initialized"));
         }
     }
 
@@ -1174,9 +1174,9 @@ public abstract class AEADBaseEngine implements AEADCipher {
         } else if (!Arrays.constantTimeAreEqual(this.MAC_SIZE, this.mac, 0, this.m_buf, this.m_bufPos)) {
             DecryptionFailureCounter decryptionFailureCounter = this.decryptionFailureCounter;
             if (decryptionFailureCounter == null || !decryptionFailureCounter.increment()) {
-                throw new InvalidCipherTextException(C22697.m50267(new StringBuilder(), this.algorithmName, " mac does not match"));
+                throw new InvalidCipherTextException(C8947.m23910(new StringBuilder(), this.algorithmName, " mac does not match"));
             }
-            throw new InvalidCipherTextException(C22697.m50267(new StringBuilder(), this.algorithmName, " decryption failure limit exceeded"));
+            throw new InvalidCipherTextException(C8947.m23910(new StringBuilder(), this.algorithmName, " decryption failure limit exceeded"));
         }
         reset(!zCheckData);
         return i2;

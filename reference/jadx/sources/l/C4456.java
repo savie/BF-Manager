@@ -1,38 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۛ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAYQ */
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ۘ᩸᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7FA */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4456 extends AbstractC3375 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final Object f15861;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final C13630 f15862;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C21576 f15863;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C2339 f15864;
-
-    @Override // l.InterfaceC15456
-    public final /* bridge */ /* synthetic */ Object invoke(Object obj) {
-        mo12440((Throwable) obj);
-        return C7321.f24318;
+public final enum C4456 extends EnumC14896 {
+    public /* synthetic */ C4456() {
+        this(AbstractC0329.MATCH_INSTANCE_STR, 0);
     }
 
-    public C4456(C2339 c2339, C13630 c13630, C21576 c21576, Object obj) {
-        this.f15864 = c2339;
-        this.f15862 = c13630;
-        this.f15863 = c21576;
-        this.f15861 = obj;
+    @Override // l.EnumC14896, l.InterfaceC3359
+    /* JADX INFO: renamed from: ᩸ */
+    public /* bridge */ /* synthetic */ boolean mo6416() {
+        return true;
     }
 
-    @Override // l.AbstractC19460
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo12440(Throwable th) {
-        C2339.m7105(this.f15864, this.f15862, this.f15863, this.f15861);
+    public C4456(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC14896, l.InterfaceC3359
+    public int getLength() {
+        this.f48662.getClass();
+        return this.f48658.getLength() + 6 + this.f48659.getLength() + this.f48660.getLength() + this.f48661.getLength() + this.f48657.getLength();
+    }
+
+    @Override // l.EnumC14896, l.InterfaceC3359
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        this.f48662.mo1599(interfaceC9397);
+        this.f48658.mo1599(interfaceC9397);
+        this.f48659.mo1599(interfaceC9397);
+        this.f48660.mo1599(interfaceC9397);
+        this.f48661.mo1599(interfaceC9397);
+        this.f48657.mo1599(interfaceC9397);
     }
 }

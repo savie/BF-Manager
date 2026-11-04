@@ -1,58 +1,41 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.MaterialDynamicColors;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.᩶ۘ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 123V */
+/* JADX INFO: renamed from: l.ᩴܺۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G53U */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C19929 implements Function {
+public final class C19929 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f63864;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Object[] f64101 = new Object[40];
 
-    public /* synthetic */ C19929(int i) {
-        this.f63864 = i;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f64102 = -1;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m45856() {
+        return this.f64101[this.f64102];
     }
 
-    public /* synthetic */ C19929(C12590 c12590) {
-        this.f63864 = 8;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m45858() {
+        Object[] objArr = this.f64101;
+        int i = this.f64102;
+        Object obj = objArr[i];
+        this.f64102 = i - 1;
+        objArr[i] = null;
+        return obj;
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f63864) {
-            case 0:
-                return ((InterfaceC2557) obj).getName();
-            case 1:
-                return ((InterfaceC2557) obj).getName().toLowerCase();
-            case 2:
-                return ((C14078) obj).m34060();
-            case 3:
-                return ((C2565) obj).f10124;
-            case 4:
-                return MaterialDynamicColors.lambda$surfaceContainerLow$24((DynamicScheme) obj);
-            case 5:
-                int i = C7240.f24124;
-                return "????";
-            case 6:
-                return String.format("#%d?", (Integer) obj);
-            case 7:
-                return String.format("#%d", (Integer) obj);
-            default:
-                return C12590.m31330((InterfaceC15455) obj);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m45857(C14270 c14270) {
+        int i = this.f64102 + 1;
+        this.f64102 = i;
+        Object[] objArr = this.f64101;
+        if (i == objArr.length) {
+            Object[] objArr2 = new Object[objArr.length * 2];
+            this.f64101 = objArr2;
+            System.arraycopy(objArr, 0, objArr2, 0, objArr.length);
         }
+        this.f64101[this.f64102] = c14270;
     }
 }

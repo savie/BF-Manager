@@ -1,60 +1,84 @@
-.class public final Ll/ܽܽۤ;
-.super Ll/ۖ۫ۤ;
-.source "F416"
+.class public interface abstract Ll/ܽܽۤ;
+.super Ljava/lang/Object;
+.source "54YN"
+
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Ljava/nio/channels/SeekableByteChannel;
 
 
 # virtual methods
-.method public final ۙ(Ll/ۡ۠۟;)V
-    .locals 1
-
-    .line 2262
-    iget-object v0, p1, Ll/ۡ۠۟;->֫:Ll/᩹᩵ۤ;
-
-    if-eqz v0, :cond_0
-
-    .line 2266
-    invoke-super {p0, p1}, Ll/ۖ۫ۤ;->ۙ(Ll/ۡ۠۟;)V
-
-    :cond_0
-    return-void
+.method public abstract available()I
 .end method
 
-.method public final ۙ(Ll/᩹᩵۟;)V
-    .locals 1
-
-    .line 2272
-    iget-object v0, p1, Ll/ۡۡ۟;->᩶:Ll/ܽۤۤ;
-
-    if-eqz v0, :cond_0
-
-    .line 2276
-    invoke-super {p0, p1}, Ll/᩹ۤ۟;->ۙ(Ll/᩹᩵۟;)V
-
-    :cond_0
-    return-void
+.method public abstract flush()V
 .end method
 
-.method public final ܰ(Ll/ۡۡ۟;)V
-    .locals 2
+.method public abstract getFilePointer()J
+.end method
 
-    if-eqz p1, :cond_1
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    .line 2251
-    iget-object v0, p1, Ll/ۡۡ۟;->᩶:Ll/ܽۤۤ;
+.method public abstract isClosed()Z
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract length()J
+.end method
 
-    sget-object v1, Ll/ܽۤۤ;->ۛ:Ll/ܳۡۤ;
+.method public abstract read()I
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public abstract read(Ljava/nio/ByteBuffer;)I
+.end method
 
-    goto :goto_0
+.method public abstract read([B)I
+.end method
 
-    .line 2257
-    :cond_0
-    invoke-super {p0, p1}, Ll/ۖ۫ۤ;->ܰ(Ll/ۡۡ۟;)V
+.method public abstract read([BII)I
+.end method
 
-    :cond_1
-    :goto_0
-    return-void
+.method public abstract readByte()B
+.end method
+
+.method public abstract readFully([B)V
+.end method
+
+.method public abstract readFully([BII)V
+.end method
+
+.method public abstract readInt()I
+.end method
+
+.method public abstract readLong()J
+.end method
+
+.method public abstract seek(J)V
+.end method
+
+.method public abstract skipBytes(I)I
+.end method
+
+.method public abstract write(I)V
+.end method
+
+.method public abstract write([B)V
+.end method
+
+.method public abstract write([BII)V
+.end method
+
+.method public abstract ۚۙ()Ll/ܳܽۤ;
+.end method
+
+.method public abstract ۡ᩷()I
+.end method
+
+.method public abstract ᩷(II[B)I
+.end method
+
+.method public abstract ᩷(JJ)Ll/۬ܺۤ;
+.end method
+
+.method public abstract ᩻()Ll/۬ܺۤ;
 .end method

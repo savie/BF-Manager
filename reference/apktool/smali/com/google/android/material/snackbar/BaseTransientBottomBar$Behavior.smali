@@ -59,16 +59,16 @@
     return p1
 .end method
 
-.method public onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
     .line 1418
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->delegate:Lcom/google/android/material/snackbar/BaseTransientBottomBar$BehaviorDelegate;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$BehaviorDelegate;->onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$BehaviorDelegate;->onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)V
 
     .line 1419
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

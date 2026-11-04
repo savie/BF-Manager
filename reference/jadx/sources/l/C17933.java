@@ -1,96 +1,88 @@
 package l;
 
+import android.util.Base64;
+import com.alipay.sdk.m.p.a;
+import com.alipay.sdk.m.p.d;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Collections;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.Spliterator;
-import java.util.function.Consumer;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ᩳ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S24 */
+/* JADX INFO: renamed from: l.ܽ᩻ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44KM */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17933 extends AbstractC5543 implements InterfaceC17228, InterfaceC22810 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15818 f57369;
-
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+public final class C17933 implements InterfaceC22760 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m41873(String str, byte[] bArr) {
+        try {
+            PublicKey publicKeyGeneratePublic = KeyFactory.getInstance(d.a).generatePublic(new X509EncodedKeySpec(Base64.decode("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqlaL2//kwVLAAn+mac25arQOjgrRXVr4kl2nrcaoW05YzgdQzyPvADHD1zv3gg33fS+wQlzfnvKUHDSxOFGHubeW36Qkk85sNIZuBZk5ezJx00OdZafzdC6wUr7mreDUlylJWEGbfVALtP8osW8gS1c8H2i4jsHvamAWpwsYR0QIDAQAB", 0)));
+            Signature signature = Signature.getInstance("SHA1WithRSA");
+            signature.initVerify(publicKeyGeneratePublic);
+            signature.update(bArr);
+            return signature.verify(Base64.decode(str, 0));
+        } catch (Exception unused) {
+            return false;
+        }
     }
 
-    public C17933(C15818 c15818) {
-        this.f57369 = c15818;
-    }
-
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final Iterator iterator() {
-        return new C22873(this);
-    }
-
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC6269 iterator() {
-        return new C22873(this);
-    }
-
-    @Override // l.InterfaceC17228
+    @Override // l.InterfaceC22760
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC6269 mo15355() {
-        return new C15112(this);
+    public void mo1200(C19929 c19929) {
+        ((C14270) c19929.m45858()).toString();
     }
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC7371 spliterator() {
-        return new C21461(this, 0, this.f57369.f51193);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Object m41870(InterfaceC13343 interfaceC13343, String str, EnumC23040 enumC23040, Integer num) {
+        C15580 c15580;
+        return (interfaceC13343.mo17112() == null || interfaceC13343.mo17112().isEmpty() || (c15580 = (C15580) interfaceC13343.mo17112().get(str)) == null || c15580.m37317() != enumC23040) ? num : c15580.m37318();
     }
 
-    @Override // l.AbstractC14695, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        C15818 c15818 = this.f57369;
-        int i = c15818.f51193;
-        for (int i2 = 0; i2 < i; i2++) {
-            consumer.accept(new C8762(c15818, i2));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m41869(int i) {
+        if (i < 65 || i > 90) {
+            return ((i < 97 || i > 122) && (i & a.g) != 0) ? Character.toLowerCase(Character.toUpperCase(i)) : i;
         }
+        return i + 32;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f57369.f51193;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final void m41872(Throwable th, InterfaceC11536 interfaceC11536) {
+        Throwable runtimeException;
+        Iterator it = C2186.m7492().iterator();
+        while (it.hasNext()) {
+            try {
+                ((InterfaceC1052) it.next()).mo3950(th);
+            } catch (Throwable th2) {
+                if (th == th2) {
+                    runtimeException = th;
+                } else {
+                    runtimeException = new RuntimeException("Exception while trying to handle coroutine exception", th2);
+                    C18856.m43744(runtimeException, th);
+                }
+                Thread threadCurrentThread = Thread.currentThread();
+                threadCurrentThread.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread, runtimeException);
+            }
+        }
+        try {
+            C18856.m43744(th, new C11880(interfaceC11536));
+        } catch (Throwable unused) {
+        }
+        Thread threadCurrentThread2 = Thread.currentThread();
+        threadCurrentThread2.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread2, th);
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        if (!(obj instanceof Map.Entry)) {
-            return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static List m41871(InterfaceC13343 interfaceC13343, String str) {
+        if (interfaceC13343.mo17112() == null || interfaceC13343.mo17112().isEmpty()) {
+            return Collections.EMPTY_LIST;
         }
-        Map.Entry entry = (Map.Entry) obj;
-        Object key = entry.getKey();
-        C15818 c15818 = this.f57369;
-        return c15818.containsKey(key) && C13638.equals(c15818.get(key), entry.getValue());
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean remove(Object obj) {
-        if (!(obj instanceof Map.Entry)) {
-            return false;
+        C15580 c15580 = (C15580) interfaceC13343.mo17112().get(str);
+        if (c15580 == null || c15580.m37317() != EnumC23040.ENCODED_ARRAY) {
+            return Collections.EMPTY_LIST;
         }
-        Map.Entry entry = (Map.Entry) obj;
-        Object key = entry.getKey();
-        Object value = entry.getValue();
-        C15818 c15818 = this.f57369;
-        int iM37599 = c15818.m37599(key);
-        if (iM37599 == -1 || !C13638.equals(value, c15818.f51191[iM37599])) {
-            return false;
-        }
-        int i = (c15818.f51193 - iM37599) - 1;
-        Object[] objArr = c15818.f51195;
-        int i2 = iM37599 + 1;
-        System.arraycopy(objArr, i2, objArr, iM37599, i);
-        Object[] objArr2 = c15818.f51191;
-        System.arraycopy(objArr2, i2, objArr2, iM37599, i);
-        int i3 = c15818.f51193 - 1;
-        c15818.f51193 = i3;
-        c15818.f51195[i3] = null;
-        c15818.f51191[i3] = null;
-        return true;
+        return (List) c15580.m37318();
     }
 }

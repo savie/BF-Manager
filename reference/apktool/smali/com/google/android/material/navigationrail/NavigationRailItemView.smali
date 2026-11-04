@@ -19,7 +19,7 @@
     .locals 1
 
     .line 61
-    sget v0, Ll/֨۟ܶ;->᩹᩷:I
+    sget v0, Ll/ܽ۬ܺ;->ܳۘ:I
 
     return v0
 .end method
@@ -28,7 +28,7 @@
     .locals 1
 
     .line 55
-    sget v0, Ll/ܶ۟ܶ;->᩵ܰ:I
+    sget v0, Ll/ۨ۬ܺ;->᩵᩷:I
 
     return v0
 .end method

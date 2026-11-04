@@ -1,18 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩺۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: D445 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21182 extends AbstractC23903 {
-    @Override // l.AbstractC23903
-    /* JADX INFO: renamed from: ۫ */
-    public final boolean mo20273() {
-        return false;
-    }
+import java.io.IOException;
+import java.io.InputStream;
 
-    @Override // l.InterfaceC14625
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo3841(AbstractC7693 abstractC7693, Object obj) {
-        throw new C21804(this, obj);
+/* JADX INFO: renamed from: l.᩶۠ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G5CT */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21182 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static byte[] m48331(InputStream inputStream, int i) throws IOException {
+        byte[] bArr = new byte[i];
+        int i2 = 0;
+        while (i > 0) {
+            int i3 = inputStream.read(bArr, i2, i);
+            if (i3 == -1) {
+                throw new RuntimeException("unexpected EOF");
+            }
+            i2 += i3;
+            i -= i3;
+        }
+        return bArr;
     }
 }

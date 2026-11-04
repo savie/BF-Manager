@@ -1,13 +1,39 @@
 package l;
 
-import java.util.Comparator;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 71DP */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0608 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        return Integer.compare(((C5238) obj).f18162, ((C5238) obj2).f18162);
+/* JADX INFO: renamed from: l.֡ᩳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D95H */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0608 extends AbstractC9843 {
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final C0608 f2417 = new C0608(R.string.MT_Protector, R.drawable.MT_Protector);
+
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ᩸ */
+    public final boolean mo2481(C12915 c12915) {
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static C0608 m2724() {
+        return f2417;
+    }
+
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC9843 mo2725(AbstractC9843 abstractC9843) {
+        if (this == f2417) {
+            throw new IllegalStateException();
+        }
+        super.mo2725(abstractC9843);
+        return this;
+    }
+
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2016(C12915 c12915) {
+        throw new UnsupportedOperationException();
     }
 }

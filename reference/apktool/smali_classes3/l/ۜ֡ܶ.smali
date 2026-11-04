@@ -1,26 +1,18 @@
-.class public final enum Ll/ۜ֡ܶ;
-.super Ll/᩸֡ܶ;
-.source "Y3M1"
+.class public final Ll/ۜ֡ܶ;
+.super Ljava/lang/Exception;
+.source "X7XS"
+
+
+# static fields
+.field public static final serialVersionUID:J = -0x1L
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    .line 60
-    invoke-direct {p0, p1, p2, v0}, Ll/᩸֡ܶ;-><init>(Ljava/lang/String;ILl/۬֡ܶ;)V
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public ۙ()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

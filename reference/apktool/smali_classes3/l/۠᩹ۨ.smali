@@ -1,75 +1,117 @@
-.class public Ll/۠᩹ۨ;
-.super Ljava/lang/Object;
-.source "31EV"
+.class public abstract Ll/۠᩹ۨ;
+.super Ljava/io/FilterOutputStream;
+.source "JAH8"
 
-# interfaces
-.implements Ll/֨᩹ۨ;
+
+# instance fields
+.field public ܰ:Z
+
+.field public final ܿ:[B
+
+.field public ᩶:Z
+
+
+# direct methods
+.method public constructor <init>(Ljava/io/OutputStream;)V
+    .locals 0
+
+    .line 94
+    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [B
+
+    .line 59
+    iput-object p1, p0, Ll/۠᩹ۨ;->ܿ:[B
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
-    .locals 0
+.method public close()V
+    .locals 1
 
-    .line 30
-    invoke-static {p1}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
+    .line 126
+    invoke-super {p0}, Ljava/io/FilterOutputStream;->close()V
 
-    move-result-object p1
+    const/4 v0, 0x1
 
-    return-object p1
+    .line 127
+    iput-boolean v0, p0, Ll/۠᩹ۨ;->ܰ:Z
+
+    return-void
 .end method
 
-.method public ۙ(Ll/ۢۚۨ;Ll/ۘ֨ۨ;Ll/᩹᩹ۨ;Ll/ۖ᩹ۨ;)V
-    .locals 4
+.method public finish()V
+    .locals 1
 
-    .line 17
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->֨ۙ()Z
+    const/4 v0, 0x1
 
-    move-result v0
+    .line 198
+    iput-boolean v0, p0, Ll/۠᩹ۨ;->᩶:Z
+
+    return-void
+.end method
+
+.method public final isClosed()Z
+    .locals 1
+
+    .line 229
+    iget-boolean v0, p0, Ll/۠᩹ۨ;->ܰ:Z
+
+    return v0
+.end method
+
+.method public final write(I)V
+    .locals 2
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-byte p1, p1
+
+    .line 265
+    iget-object v0, p0, Ll/۠᩹ۨ;->ܿ:[B
+
+    const/4 v1, 0x0
+
+    aput-byte p1, v0, v1
+
+    const/4 p1, 0x1
+
+    .line 266
+    invoke-virtual {p0, v0, v1, p1}, Ljava/io/OutputStream;->write([BII)V
+
+    return-void
+.end method
+
+.method public final ۙ()V
+    .locals 2
+
+    .line 239
+    iget-boolean v0, p0, Ll/۠᩹ۨ;->᩶:Z
 
     if-nez v0, :cond_0
 
-    .line 20
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->getValue()Ll/ۤ֨ۨ;
-
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {p0, v0}, Ll/۠᩹ۨ;->ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 22
-    invoke-interface {p1, v1}, Ll/ۢۚۨ;->ܰ(Ljava/lang/String;)V
-
-    const-string v2, "name"
-
-    .line 23
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->ۗۙ()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {p1, v2, v3}, Ll/ۢۚۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 24
-    invoke-static {p1, p2, p4}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۢۚۨ;Ll/ۘ֨ۨ;Ll/ۖ᩹ۨ;)V
-
-    .line 25
-    invoke-static {p3, v0}, Ll/ۜ᩹ۨ;->ۙ(Ll/᩹᩹ۨ;Ll/ۤ֨ۨ;)Ljava/lang/CharSequence;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۢۚۨ;Ljava/lang/CharSequence;)V
-
-    .line 26
-    invoke-interface {p1, v1}, Ll/ۢۚۨ;->ۙ(Ljava/lang/String;)V
-
     return-void
 
-    .line 18
+    .line 120
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+    const-string v1, "Stream has already been finished."
 
-    throw p1
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final ᩷()Z
+    .locals 1
+
+    .line 239
+    iget-boolean v0, p0, Ll/۠᩹ۨ;->᩶:Z
+
+    return v0
 .end method

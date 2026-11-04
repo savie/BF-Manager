@@ -1,6 +1,6 @@
 package org.bouncycastle.iana;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AEADAlgorithm {
     public static final int AEAD_AES_128_CCM = 3;
     public static final int AEAD_AES_128_CCM_8 = 18;

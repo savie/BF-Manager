@@ -3,7 +3,7 @@ package net.engio.mbassy.bus.config;
 import java.util.Collection;
 import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IBusConfiguration {
 
     public final class Properties {

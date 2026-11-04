@@ -1,247 +1,298 @@
 package l;
 
 import com.google.android.material.slider.BasicLabelFormatter;
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.math.BigInteger;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.᩸᩶ᩴ, reason: contains not printable characters */
+/* JADX INFO: renamed from: l.᩷ۙۗ, reason: contains not printable characters */
 /* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21813 implements InterfaceC6062, Comparable, Serializable {
-    public static final C21813 ZERO = new C21813(0, 0);
-    public static final BigInteger c = BigInteger.valueOf(1000000000);
-    public static final long serialVersionUID = 3078945930695997490L;
-    public final long a;
-    public final int b;
+/* JADX INFO: loaded from: classes.dex */
+public final class C21813 implements Comparable {
+    public final TimeUnit a;
+    public final long b;
+    public C0358 c;
+    public String d;
 
-    public static C21813 ofMinutes(long j) {
-        return m(AbstractC1726.Q(j, 60), 0);
-    }
-
-    public static C21813 ofSeconds(long j) {
-        return m(j, 0);
-    }
-
-    public static C21813 s(long j, long j2) {
-        return m(AbstractC1726.P(j, AbstractC1726.z(j2, 1000000000L)), (int) AbstractC1726.O(j2, 1000000000L));
-    }
-
-    public static C21813 ofMillis(long j) {
-        long j2 = j / 1000;
-        int i = (int) (j % 1000);
-        if (i < 0) {
-            i += 1000;
-            j2--;
+    public static long k(long j, long j2, long j3) {
+        if (j > j3) {
+            return C25227.FOREVER_NS;
         }
-        return m(j2, i * BasicLabelFormatter.MILLION);
+        if (j < (-j3)) {
+            return Long.MIN_VALUE;
+        }
+        return j * j2;
     }
 
-    public static C21813 n(long j) {
-        long j2 = j / 1000000000;
-        int i = (int) (j % 1000000000);
-        if (i < 0) {
-            i = (int) (((long) i) + 1000000000);
-            j2--;
-        }
-        return m(j2, i);
+    public C21813(long j, TimeUnit timeUnit, C0358 c0358) {
+        this.b = j;
+        this.a = timeUnit;
+        this.c = c0358;
     }
 
-    public static C21813 of(long j, InterfaceC18056 interfaceC18056) {
-        C21813 c21813 = ZERO;
-        c21813.getClass();
-        C13638.requireNonNull(interfaceC18056, "unit");
-        if (interfaceC18056 == EnumC22996.DAYS) {
-            return c21813.C(AbstractC1726.Q(j, 86400), 0L);
-        }
-        if (interfaceC18056.isDurationEstimated()) {
-            throw new C14530("Unit must not have an estimated duration");
-        }
-        if (j == 0) {
-            return c21813;
-        }
-        if (interfaceC18056 instanceof EnumC22996) {
-            int i = AbstractC17000.a[((EnumC22996) interfaceC18056).ordinal()];
-            if (i == 1) {
-                return c21813.C(0L, j);
-            }
-            if (i == 2) {
-                return c21813.C((j / 1000000000) * 1000, 0L).C(0L, (j % 1000000000) * 1000);
-            }
-            if (i != 3) {
-                return i != 4 ? c21813.C(AbstractC1726.Q(interfaceC18056.getDuration().a, j), 0L) : c21813.C(j, 0L);
-            }
-            return c21813.C(j / 1000, (j % 1000) * 1000000);
-        }
-        C21813 duration = interfaceC18056.getDuration();
-        duration.getClass();
-        if (j == 0) {
-            duration = c21813;
-        } else if (j != 1) {
-            BigInteger bigIntegerExact = BigDecimal.valueOf(duration.a).add(BigDecimal.valueOf(duration.b, 9)).multiply(BigDecimal.valueOf(j)).movePointRight(9).toBigIntegerExact();
-            BigInteger[] bigIntegerArrDivideAndRemainder = bigIntegerExact.divideAndRemainder(c);
-            if (bigIntegerArrDivideAndRemainder[0].bitLength() > 63) {
-                throw new ArithmeticException("Exceeds capacity of Duration: " + bigIntegerExact);
-            }
-            duration = s(bigIntegerArrDivideAndRemainder[0].longValue(), bigIntegerArrDivideAndRemainder[1].intValue());
-        }
-        return c21813.C(duration.a, 0L).C(0L, duration.b);
+    public static C21813 from(long j, TimeUnit timeUnit) {
+        C17359.requireNonNull(timeUnit, "unit");
+        return new C21813(j, timeUnit, null);
     }
 
-    public static C21813 between(InterfaceC15235 interfaceC15235, InterfaceC15235 interfaceC15236) {
-        try {
-            return n(interfaceC15235.g(interfaceC15236, EnumC22996.NANOS));
-        } catch (ArithmeticException | C15464 unused) {
-            long jG = interfaceC15235.g(interfaceC15236, EnumC22996.SECONDS);
-            long j = 0;
-            try {
-                EnumC18762 enumC18762 = EnumC18762.NANO_OF_SECOND;
-                long jG2 = interfaceC15236.G(enumC18762) - interfaceC15235.G(enumC18762);
-                if (jG > 0 && jG2 < 0) {
-                    jG++;
-                } else if (jG < 0 && jG2 > 0) {
-                    jG--;
-                }
-                j = jG2;
-            } catch (C15464 unused2) {
-            }
-            return s(jG, j);
+    public static C21813 fromMillis(long j) {
+        return new C21813(j, TimeUnit.MILLISECONDS, null);
+    }
+
+    public static C21813 from(C0358 c0358) {
+        C17359.requireNonNull(c0358, "instant");
+        return new C21813(0L, null, c0358);
+    }
+
+    public long to(TimeUnit timeUnit) {
+        C17359.requireNonNull(timeUnit, "unit");
+        TimeUnit timeUnit2 = this.a;
+        if (timeUnit2 != null) {
+            return timeUnit.convert(this.b, timeUnit2);
         }
-    }
-
-    public static C21813 m(long j, int i) {
-        if ((((long) i) | j) == 0) {
-            return ZERO;
+        long jConvert = timeUnit.convert(this.c.getEpochSecond(), TimeUnit.SECONDS);
+        if (jConvert == Long.MIN_VALUE || jConvert == C25227.FOREVER_NS) {
+            return jConvert;
         }
-        return new C21813(j, i);
-    }
-
-    public C21813(long j, int i) {
-        this.a = j;
-        this.b = i;
-    }
-
-    public boolean isZero() {
-        return (this.a | ((long) this.b)) == 0;
-    }
-
-    public boolean isNegative() {
-        return this.a < 0;
-    }
-
-    public final C21813 C(long j, long j2) {
-        if ((j | j2) == 0) {
-            return this;
+        long jConvert2 = timeUnit.convert(this.c.getNano(), TimeUnit.NANOSECONDS);
+        long j = jConvert + jConvert2;
+        if (((jConvert2 ^ j) & (jConvert ^ j)) >= 0) {
+            return j;
         }
-        return s(AbstractC1726.P(AbstractC1726.P(this.a, j), j2 / 1000000000), ((long) this.b) + (j2 % 1000000000));
-    }
-
-    @Override // l.InterfaceC6062
-    public final InterfaceC15235 l(InterfaceC15235 interfaceC15235) {
-        long j = this.a;
-        if (j != 0) {
-            interfaceC15235 = interfaceC15235.d(j, EnumC22996.SECONDS);
+        if (jConvert < 0) {
+            return Long.MIN_VALUE;
         }
-        int i = this.b;
-        return i != 0 ? interfaceC15235.d(i, EnumC22996.NANOS) : interfaceC15235;
+        return C25227.FOREVER_NS;
     }
 
     public long toMillis() {
-        long j = this.a;
-        long j2 = this.b;
-        if (j < 0) {
-            j++;
-            j2 -= 1000000000;
+        TimeUnit timeUnit = this.a;
+        if (timeUnit != null) {
+            return timeUnit.toMillis(this.b);
         }
-        return AbstractC1726.P(AbstractC1726.Q(j, 1000), j2 / 1000000);
+        long epochSecond = this.c.getEpochSecond();
+        int nano = this.c.getNano();
+        long j = epochSecond * 1000;
+        if (((Math.abs(epochSecond) | 1000) >>> 31) == 0 || j / 1000 == epochSecond) {
+            return j + ((long) (nano / BasicLabelFormatter.MILLION));
+        }
+        if (epochSecond < 0) {
+            return Long.MIN_VALUE;
+        }
+        return C25227.FOREVER_NS;
     }
 
-    public long toNanos() {
-        long j = this.a;
-        long j2 = this.b;
-        if (j < 0) {
-            j++;
-            j2 -= 1000000000;
+    /* JADX WARN: Code duplicated, block: B:18:0x0089  */
+    /* JADX WARN: Code duplicated, block: B:19:0x008e  */
+    /* JADX WARN: Code duplicated, block: B:21:0x0097  */
+    /* JADX WARN: Code duplicated, block: B:22:0x009c  */
+    public C0358 toInstant() {
+        long jK;
+        int iO;
+        if (this.c == null) {
+            switch (AbstractC0930.a[this.a.ordinal()]) {
+                case 1:
+                    jK = k(this.b, 86400L, 106751991167300L);
+                    iO = 0;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 2:
+                    jK = k(this.b, 3600L, 2562047788015215L);
+                    iO = 0;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 3:
+                    jK = k(this.b, 60L, 153722867280912930L);
+                    iO = 0;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 4:
+                    jK = this.b;
+                    iO = 0;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 5:
+                    jK = AbstractC1758.z(this.b, 1000L);
+                    iO = ((int) AbstractC1758.O(this.b, 1000L)) * BasicLabelFormatter.MILLION;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 6:
+                    jK = AbstractC1758.z(this.b, 1000000L);
+                    iO = ((int) AbstractC1758.O(this.b, 1000000L)) * 1000;
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                case 7:
+                    jK = AbstractC1758.z(this.b, 1000000000L);
+                    iO = (int) AbstractC1758.O(this.b, 1000000000L);
+                    if (jK <= -31557014167219200L) {
+                        this.c = C0358.c;
+                    } else if (jK >= 31556889864403199L) {
+                        this.c = C0358.d;
+                    } else {
+                        this.c = C0358.ofEpochSecond(jK, iO);
+                    }
+                    break;
+                default:
+                    throw new AssertionError("Unit not handled");
+            }
         }
-        return AbstractC1726.P(AbstractC1726.Q(j, 1000000000L), j2);
-    }
-
-    @Override // java.lang.Comparable
-    public int compareTo(C21813 c21813) {
-        int iCompare = Long.compare(this.a, c21813.a);
-        return iCompare != 0 ? iCompare : this.b - c21813.b;
+        return this.c;
     }
 
     public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof C21813) {
-            C21813 c21813 = (C21813) obj;
-            if (this.a == c21813.a && this.b == c21813.b) {
-                return true;
-            }
-        }
-        return false;
+        return (obj instanceof C21813) && compareTo((C21813) obj) == 0;
     }
 
     public final int hashCode() {
-        long j = this.a;
-        return (this.b * 51) + ((int) (j ^ (j >>> 32)));
+        return toInstant().hashCode();
+    }
+
+    public final long p(long j) {
+        TimeUnit timeUnit = this.a;
+        if (timeUnit != null) {
+            return timeUnit.toNanos(this.b - timeUnit.convert(j, TimeUnit.DAYS));
+        }
+        return TimeUnit.SECONDS.toNanos(toInstant().getEpochSecond() - TimeUnit.DAYS.toSeconds(j));
+    }
+
+    @Override // java.lang.Comparable
+    /* JADX INFO: renamed from: j, reason: merged with bridge method [inline-methods] */
+    public final int compareTo(C21813 c21813) {
+        long days;
+        long days2;
+        TimeUnit timeUnit = this.a;
+        if (timeUnit != null && timeUnit == c21813.a) {
+            return Long.compare(this.b, c21813.b);
+        }
+        long epochSecond = toInstant().getEpochSecond();
+        int iCompare = Long.compare(epochSecond, c21813.toInstant().getEpochSecond());
+        if (iCompare != 0) {
+            return iCompare;
+        }
+        int iCompare2 = Long.compare(toInstant().getNano(), c21813.toInstant().getNano());
+        if (iCompare2 != 0) {
+            return iCompare2;
+        }
+        if (epochSecond != 31556889864403199L && epochSecond != -31557014167219200L) {
+            return 0;
+        }
+        TimeUnit timeUnit2 = this.a;
+        if (timeUnit2 != null) {
+            days = timeUnit2.toDays(this.b);
+        } else {
+            days = TimeUnit.SECONDS.toDays(toInstant().getEpochSecond());
+        }
+        TimeUnit timeUnit3 = c21813.a;
+        if (timeUnit3 != null) {
+            days2 = timeUnit3.toDays(c21813.b);
+        } else {
+            days2 = TimeUnit.SECONDS.toDays(c21813.toInstant().getEpochSecond());
+        }
+        if (days == days2) {
+            return Long.compare(p(days), c21813.p(days2));
+        }
+        return Long.compare(days, days2);
+    }
+
+    public static void i(StringBuilder sb, int i, int i2) {
+        while (i > 0) {
+            sb.append((char) ((i2 / i) + 48));
+            i2 %= i;
+            i /= 10;
+        }
     }
 
     public final String toString() {
-        if (this == ZERO) {
-            return "PT0S";
-        }
-        long j = this.a;
-        if (j < 0 && this.b > 0) {
-            j++;
-        }
-        long j2 = j / 3600;
-        int i = (int) ((j % 3600) / 60);
-        int i2 = (int) (j % 60);
-        StringBuilder sb = new StringBuilder(24);
-        sb.append("PT");
-        if (j2 != 0) {
-            sb.append(j2);
-            sb.append('H');
-        }
-        if (i != 0) {
-            sb.append(i);
-            sb.append('M');
-        }
-        if (i2 == 0 && this.b == 0 && sb.length() > 2) {
-            return sb.toString();
-        }
-        if (this.a < 0 && this.b > 0 && i2 == 0) {
-            sb.append("-0");
-        } else {
-            sb.append(i2);
-        }
-        if (this.b > 0) {
-            int length = sb.length();
-            if (this.a < 0) {
-                sb.append(2000000000 - ((long) this.b));
+        long epochSecond;
+        int nano;
+        long jZ;
+        C19003 c19003U;
+        if (this.d == null) {
+            if (this.c == null && this.a.compareTo(TimeUnit.SECONDS) >= 0) {
+                epochSecond = this.a.toSeconds(this.b);
+                nano = 0;
             } else {
-                sb.append(((long) this.b) + 1000000000);
+                epochSecond = toInstant().getEpochSecond();
+                nano = toInstant().getNano();
             }
-            while (sb.charAt(sb.length() - 1) == '0') {
-                sb.setLength(sb.length() - 1);
+            if (epochSecond >= -62167219200L) {
+                long j = epochSecond - 253402300800L;
+                jZ = AbstractC1758.z(j, 315569520000L) + 1;
+                c19003U = C19003.U(AbstractC1758.O(j, 315569520000L) - 62167219200L, nano, C11149.f);
+            } else {
+                long j2 = epochSecond + 62167219200L;
+                jZ = j2 / 315569520000L;
+                c19003U = C19003.U((j2 % 315569520000L) - 62167219200L, nano, C11149.f);
             }
-            sb.setCharAt(length, '.');
+            int year = (((int) jZ) * 10000) + c19003U.a.getYear();
+            if (year <= 0) {
+                year--;
+            }
+            int nano2 = c19003U.b.getNano();
+            StringBuilder sb = new StringBuilder(64);
+            sb.append(year < 0 ? "-" : "");
+            int iAbs = Math.abs(year);
+            if (iAbs < 10000) {
+                i(sb, 1000, Math.abs(iAbs));
+            } else {
+                sb.append(String.valueOf(iAbs));
+            }
+            sb.append('-');
+            i(sb, 10, c19003U.a.getMonthValue());
+            sb.append('-');
+            i(sb, 10, c19003U.a.getDayOfMonth());
+            sb.append('T');
+            i(sb, 10, c19003U.b.getHour());
+            sb.append(':');
+            i(sb, 10, c19003U.b.getMinute());
+            sb.append(':');
+            i(sb, 10, c19003U.b.getSecond());
+            if (nano2 != 0) {
+                sb.append('.');
+                int i = 100000000;
+                while (nano2 % 10 == 0) {
+                    nano2 /= 10;
+                    i /= 10;
+                }
+                i(sb, i, nano2);
+            }
+            sb.append('Z');
+            this.d = sb.toString();
         }
-        sb.append('S');
-        return sb.toString();
-    }
-
-    private Object writeReplace() {
-        return new C3944((byte) 1, this);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Deserialization via serialization delegate");
+        return this.d;
     }
 }

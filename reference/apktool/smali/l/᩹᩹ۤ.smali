@@ -1,86 +1,82 @@
-.class public final Ll/᩹᩹ۤ;
-.super Ll/᩺᩹ۤ;
-.source "34PY"
+.class public final synthetic Ll/᩹᩹ۤ;
+.super Ljava/lang/Object;
+.source "G7I1"
 
-
-# instance fields
-.field public final ۖ:Ljava/util/List;
-
-.field public final ۙ:Ljava/util/ArrayList;
-
-.field public final ۨ:Ljava/util/List;
-
-.field public final ܰ:Ll/᩺᩹ۤ;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ll/᩺᩹ۤ;Ljava/util/ArrayList;)V
-    .locals 0
-
-    .line 162
-    invoke-direct {p0}, Ll/᩺᩹ۤ;-><init>()V
-
-    .line 163
-    iput-object p1, p0, Ll/᩹᩹ۤ;->ۖ:Ljava/util/List;
-
-    .line 164
-    iput-object p2, p0, Ll/᩹᩹ۤ;->ۙ:Ljava/util/ArrayList;
-
-    .line 165
-    iput-object p3, p0, Ll/᩹᩹ۤ;->ܰ:Ll/᩺᩹ۤ;
-
-    .line 166
-    iput-object p4, p0, Ll/᩹᩹ۤ;->ۨ:Ljava/util/List;
-
-    return-void
-.end method
+# interfaces
+.implements Ll/ۖ᩵ۤ;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final negate()Ll/֨ۗۤ;
+    .locals 1
 
-    .line 175
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 176
-    iget-object v1, p0, Ll/᩹᩹ۤ;->ۖ:Ljava/util/List;
-
-    const-string v2, "> "
-
-    const-string v3, "<"
-
-    invoke-static {v0, v3, v1, v2}, Ll/᩺᩹ۤ;->ܰ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
-
-    .line 177
-    iget-object v1, p0, Ll/᩹᩹ۤ;->ܰ:Ll/᩺᩹ۤ;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 178
-    iget-object v1, p0, Ll/᩹᩹ۤ;->ۙ:Ljava/util/ArrayList;
-
-    const-string v2, ")"
-
-    const-string v3, " ("
-
-    invoke-static {v0, v3, v1, v2}, Ll/᩺᩹ۤ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
-
-    .line 179
-    iget-object v1, p0, Ll/᩹᩹ۤ;->ۨ:Ljava/util/List;
-
-    const-string v2, ""
-
-    const-string v3, " throws "
-
-    invoke-static {v0, v3, v1, v2}, Ll/᩺᩹ۤ;->ܰ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
-
-    .line 180
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->ۙ(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(I)Z
+    .locals 1
+
+    .line 400
+    invoke-static {p1}, Ljava/lang/Character;->isLowerCase(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 401
+    invoke-static {p1}, Ljava/lang/Character;->isUpperCase(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 402
+    invoke-static {p1}, Ljava/lang/Character;->isTitleCase(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->᩷(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+
+    move-result-object p1
+
+    return-object p1
 .end method

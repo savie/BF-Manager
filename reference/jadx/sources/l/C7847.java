@@ -1,120 +1,138 @@
 package l;
 
-import java.util.Arrays;
-import org.bouncycastle.asn1.util.ASN1Dump;
+import android.content.res.AssetManager;
+import android.net.Uri;
+import android.text.Html;
+import android.webkit.WebResourceResponse;
+import bin.mt.plus.R;
+import com.alipay.sdk.m.w.a;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.Locale;
+import org.json.JSONObject;
 
-/* JADX INFO: renamed from: l.۠֨ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M5FW */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7847 extends AbstractC12432 {
+/* JADX INFO: renamed from: l.۟ۧܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 56K2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7847 implements AutoCloseable {
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public static final C18430 f25805 = new C18430();
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final String[] f26136 = {"index.md", "index.markdown", "index.html", "index.htm"};
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C13574 f25806;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final C0851 f26137;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C23535 f25807;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final String f26138;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AssetManager f26139;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public byte[] f25808;
+    public final boolean f26140;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m20726(C7847[] c7847Arr) {
-        Arrays.sort(c7847Arr, f25805);
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public volatile boolean f26141;
 
-    public C7847(C4669 c4669, C23535 c23535) {
-        super(1, -1);
-        if (c23535 == null) {
-            throw new NullPointerException("annotation == null");
-        }
-        this.f25807 = c23535;
-        this.f25806 = null;
-        this.f25808 = null;
-        mo4171(c4669);
-    }
-
-    @Override // l.AbstractC21603
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC18075 mo4170() {
-        return EnumC18075.TYPE_ANNOTATION_ITEM;
-    }
-
-    public final int hashCode() {
-        return this.f25807.hashCode();
-    }
-
-    @Override // l.AbstractC12432
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo6990(AbstractC12432 abstractC12432) {
-        return this.f25807.compareTo(((C7847) abstractC12432).f25807);
-    }
-
-    @Override // l.AbstractC12432
-    /* JADX INFO: renamed from: ۜ */
-    public final String mo6991() {
-        return this.f25807.mo2376();
-    }
-
-    @Override // l.AbstractC21603
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4171(C4669 c4669) {
-        C11457 c11457M12877 = c4669.m12877();
-        C23535 c23535 = this.f25807;
-        this.f25806 = c11457M12877.m28604(c23535.getType());
-        C0872.m3488(c4669, c23535);
-    }
-
-    @Override // l.AbstractC12432
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo19042(C16665 c16665, int i) {
-        C2718 c2718 = new C2718();
-        new C0872(c16665.m52251(), c2718).m3493(this.f25807, false);
-        byte[] bArrM8278 = c2718.m8278();
-        this.f25808 = bArrM8278;
-        m30903(bArrM8278.length + 1);
+    public C7847(C0851 c0851, AssetManager assetManager, String str, boolean z) {
+        this.f26137 = c0851;
+        this.f26139 = assetManager;
+        this.f26138 = str == null ? null : "/".concat(str);
+        this.f26140 = z;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m20727(C2718 c2718) {
-        StringBuilder sb = new StringBuilder("    visibility: ");
-        C23535 c23535 = this.f25807;
-        sb.append(c23535.getVisibility().mo2376());
-        c2718.m8283(0, sb.toString());
-        c2718.m8283(0, "    type: " + c23535.getType().mo2376());
-        for (C3072 c3072 : c23535.m51861()) {
-            c2718.m8283(0, ASN1Dump.TAB + c3072.getName().mo2376() + ": " + C0872.m3490(c3072.getValue()));
+    public static boolean m21368(String str) {
+        if (str == null) {
+            return false;
+        }
+        String lowerCase = str.toLowerCase(Locale.ROOT);
+        return lowerCase.endsWith(".md") || lowerCase.endsWith(".markdown");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final WebResourceResponse m21370(Uri uri) {
+        try {
+            try {
+                if (this.f26141) {
+                    return C0851.m3474(404, "Not Found");
+                }
+                String strM3481 = this.f26137.m3481(uri.getPath(), f26136);
+                if (strM3481 == null) {
+                    return m21367(R.string.MT_Protector);
+                }
+                if (!strM3481.equals(uri.getPath())) {
+                    String strReplace = JSONObject.quote(uri.buildUpon().path(strM3481).query(null).fragment(null).build().toString()).replace("<", "\\u003c");
+                    return m21369(200, "<!doctype html><meta charset=\"utf-8\"><script>try{var key='mt-markdown-position:'+location.pathname+location.search;if(sessionStorage.getItem('mt-markdown-link')===key){var next=document.createElement('a');next.href=" + strReplace + "+location.search;sessionStorage.setItem('mt-markdown-link','mt-markdown-position:'+next.pathname+next.search);}}catch(e){}location.replace(" + strReplace + "+location.search+location.hash)</script>");
+                }
+                WebResourceResponse webResourceResponseMo3477 = this.f26137.mo3477(strM3481);
+                if (webResourceResponseMo3477.getStatusCode() != 200) {
+                    if (webResourceResponseMo3477.getData() != null) {
+                        webResourceResponseMo3477.getData().close();
+                    }
+                    return m21367(R.string.MT_Protector);
+                }
+                if (!strM3481.equals(this.f26138) && m21368(strM3481)) {
+                    C13812 c13812 = new C13812();
+                    BufferedInputStream bufferedInputStream = new BufferedInputStream(webResourceResponseMo3477.getData());
+                    try {
+                        byte[] bArr = new byte[8192];
+                        bufferedInputStream.mark(8192);
+                        int iM15487 = C5125.m15487(bufferedInputStream, bArr, 0, 8192);
+                        bufferedInputStream.reset();
+                        InputStreamReader inputStreamReader = new InputStreamReader(bufferedInputStream, C2448.m8272(iM15487 == 0 ? C2448.f7850 : C2448.m8273(iM15487, bArr)));
+                        char[] cArr = new char[4096];
+                        boolean z = true;
+                        while (true) {
+                            int i = inputStreamReader.read(cArr);
+                            if (i != -1) {
+                                if (this.f26141) {
+                                    throw new IOException("Markdown preview closed");
+                                }
+                                int i2 = (z && i > 0 && cArr[0] == 65279) ? 1 : 0;
+                                c13812.m33722(-1, new String(cArr, i2, i - i2));
+                                z = false;
+                            } else {
+                                bufferedInputStream.close();
+                                StringWriter stringWriter = new StringWriter();
+                                C11224.m28289(c13812, uri.getLastPathSegment(), this.f26140, this.f26139, stringWriter, C21576.m49088(R.string.MT_Protector));
+                                return this.f26141 ? C0851.m3474(404, "Not Found") : m21369(200, stringWriter.toString());
+                            }
+                        }
+                    } catch (Throwable th) {
+                        try {
+                            bufferedInputStream.close();
+                        } catch (Throwable th2) {
+                            th.addSuppressed(th2);
+                        }
+                        throw th;
+                    }
+                }
+                return webResourceResponseMo3477;
+            } catch (C22413 unused) {
+                return m21367(R.string.MT_Protector);
+            }
+        } catch (IOException | RuntimeException unused2) {
+            return m21367(R.string.MT_Protector);
         }
     }
 
-    @Override // l.AbstractC12432
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo6992(C4669 c4669, C2718 c2718) {
-        boolean zM8288 = c2718.m8288();
-        C23535 c23535 = this.f25807;
-        EnumC14363 visibility = c23535.getVisibility();
-        if (zM8288) {
-            c2718.m8283(0, m30901() + " annotation");
-            StringBuilder sb = new StringBuilder("  visibility: VISBILITY_");
-            sb.append(visibility);
-            c2718.m8283(1, sb.toString());
-        }
-        int i = C17724.f56257[visibility.ordinal()];
-        if (i == 1) {
-            c2718.m8280(0);
-        } else if (i == 2) {
-            c2718.m8280(1);
-        } else if (i == 3) {
-            c2718.m8280(2);
-        } else {
-            throw new RuntimeException("shouldn't happen");
-        }
-        if (zM8288) {
-            new C0872(c4669, c2718).m3493(c23535, true);
-        } else {
-            c2718.m8287(this.f25808);
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static WebResourceResponse m21367(int i) {
+        return m21369(404, "<!doctype html><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width\"><p>" + Html.escapeHtml(C21576.m49088(i)) + "</p>");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static WebResourceResponse m21369(int i, String str) {
+        return new WebResourceResponse("text/html", a.D, i, i == 200 ? "OK" : "Not Found", C0851.m3475(), new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8)));
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        this.f26141 = true;
     }
 }

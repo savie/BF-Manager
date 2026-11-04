@@ -1,23 +1,8 @@
-.class public final Ll/ۛۡۨ;
-.super Ll/᩻ۡۨ;
-.source "Z6QT"
+.class public interface abstract Ll/ۛۡۨ;
+.super Ljava/lang/Object;
+.source "R524"
 
 
-# instance fields
-.field public ܰ:Ll/ܰۡۨ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ܰۡۨ;)V
-    .locals 0
-
-    .line 1756
-    invoke-direct {p0}, Ll/᩻ۡۨ;-><init>()V
-
-    .line 1757
-    invoke-static {p1}, Ll/ۗ۠ۨ;->ۖ(Ll/ܰۡۨ;)V
-
-    iput-object p1, p0, Ll/ۛۡۨ;->ܰ:Ll/ܰۡۨ;
-
-    return-void
+# virtual methods
+.method public abstract ۙ(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)Ll/᩺ۡۨ;
 .end method

@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.x509.TBSCertList;
 import org.bouncycastle.asn1.x509.TBSCertificateStructure;
 import org.bouncycastle.asn1.x509.X509Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PrincipalUtil {
     public static X509Principal getIssuerX509Principal(X509CRL x509crl) throws CRLException {
         try {

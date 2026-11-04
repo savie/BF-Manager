@@ -8,10 +8,10 @@ import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.RC2ParameterSpec;
-import l.C0280;
-import l.C23234;
-import l.C5800;
-import l.C9023;
+import l.C12669;
+import l.C18063;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
@@ -34,7 +34,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RC2 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -159,28 +159,24 @@ public final class RC2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new RC2Engine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBCMAC extends BaseMac {
         public CBCMAC() {
             super(new CBCBlockCipherMac(new RC2Engine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB8MAC extends BaseMac {
         public CFB8MAC() {
             super(new CFBBlockCipherMac(new RC2Engine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new RC2Engine());
@@ -200,11 +196,11 @@ public final class RC2 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$Wrap", "Cipher.RC2WRAP", C9023.m23357(str, "$ECB", "Cipher.RC2", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.1.2.840.113549.3.2", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.RC2", C9023.m23357(str, "$KeyGenerator", "KeyGenerator.1.2.840.113549.3.2", C9023.m23357(str, "$KeyGenerator", "KeyGenerator.RC2", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.1.2.840.113549.3.2", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.RC2", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$Wrap", "Cipher.RC2WRAP", C18063.m42089(str, "$ECB", "Cipher.RC2", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.1.2.840.113549.3.2", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.RC2", C18063.m42089(str, "$KeyGenerator", "KeyGenerator.1.2.840.113549.3.2", C18063.m42089(str, "$KeyGenerator", "KeyGenerator.RC2", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.1.2.840.113549.3.2", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.RC2", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", PKCSObjectIdentifiers.id_alg_CMSRC2wrap, "RC2WRAP");
             configurableProvider.addAlgorithm("Cipher", PKCSObjectIdentifiers.RC2_CBC, str + "$CBC");
-            C5800.m15969(str, "$CBCMAC", "Mac.RC2MAC", new StringBuilder(), configurableProvider);
-            configurableProvider.addAlgorithm("Mac.RC2MAC/CFB8", C23234.m51270("Alg.Alias.Mac.RC2", "RC2MAC", str, "$CFB8MAC", configurableProvider));
+            C8947.m23913(str, "$CBCMAC", "Mac.RC2MAC", new StringBuilder(), configurableProvider);
+            configurableProvider.addAlgorithm("Mac.RC2MAC/CFB8", C18176.m42346("Alg.Alias.Mac.RC2", "RC2MAC", str, "$CFB8MAC", configurableProvider));
             configurableProvider.addAlgorithm("Alg.Alias.Mac.RC2/CFB8", "RC2MAC/CFB8");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHMD2ANDRC2-CBC", "PBEWITHMD2ANDRC2");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHMD5ANDRC2-CBC", "PBEWITHMD5ANDRC2");
@@ -215,7 +211,7 @@ public final class RC2 {
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory", aSN1ObjectIdentifier2, "PBEWITHMD5ANDRC2");
             ASN1ObjectIdentifier aSN1ObjectIdentifier3 = PKCSObjectIdentifiers.pbeWithSHA1AndRC2_CBC;
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory", aSN1ObjectIdentifier3, "PBEWITHSHA1ANDRC2");
-            C5800.m15969(str, "$PBEWithSHAAnd40BitKeyFactory", "SecretKeyFactory.PBEWITHSHAAND40BITRC2-CBC", C9023.m23357(str, "$PBEWithSHAAnd128BitKeyFactory", "SecretKeyFactory.PBEWITHSHAAND128BITRC2-CBC", C9023.m23357(str, "$PBEWithSHA1KeyFactory", "SecretKeyFactory.PBEWITHSHA1ANDRC2", C9023.m23357(str, "$PBEWithMD5KeyFactory", "SecretKeyFactory.PBEWITHMD5ANDRC2", C9023.m23357(str, "$PBEWithMD2KeyFactory", "SecretKeyFactory.PBEWITHMD2ANDRC2", C0280.m1793("Alg.Alias.SecretKeyFactory.1.2.840.113549.1.12.1.5", "PBEWITHSHAAND128BITRC2-CBC", "Alg.Alias.SecretKeyFactory.1.2.840.113549.1.12.1.6", "PBEWITHSHAAND40BITRC2-CBC", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$PBEWithSHAAnd40BitKeyFactory", "SecretKeyFactory.PBEWITHSHAAND40BITRC2-CBC", C18063.m42089(str, "$PBEWithSHAAnd128BitKeyFactory", "SecretKeyFactory.PBEWITHSHAAND128BITRC2-CBC", C18063.m42089(str, "$PBEWithSHA1KeyFactory", "SecretKeyFactory.PBEWITHSHA1ANDRC2", C18063.m42089(str, "$PBEWithMD5KeyFactory", "SecretKeyFactory.PBEWITHMD5ANDRC2", C18063.m42089(str, "$PBEWithMD2KeyFactory", "SecretKeyFactory.PBEWITHMD2ANDRC2", C12669.m31439("Alg.Alias.SecretKeyFactory.1.2.840.113549.1.12.1.5", "PBEWITHSHAAND128BITRC2-CBC", "Alg.Alias.SecretKeyFactory.1.2.840.113549.1.12.1.6", "PBEWITHSHAAND40BITRC2-CBC", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier, "PBEWITHMD2ANDRC2");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier2, "PBEWITHMD5ANDRC2");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier3, "PBEWITHSHA1ANDRC2");
@@ -224,8 +220,8 @@ public final class RC2 {
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.PBEWithSHAAnd3KeyTripleDES", "PKCS12PBE");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", PKCSObjectIdentifiers.pbeWithSHAAnd128BitRC2_CBC, "PBEWITHSHAAND128BITRC2-CBC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", PKCSObjectIdentifiers.pbeWithSHAAnd40BitRC2_CBC, "PBEWITHSHAAND40BITRC2-CBC");
-            C5800.m15969(str, "$PBEWithSHA1AndRC2", "Cipher.PBEWITHSHA1ANDRC2", C0280.m1793("Alg.Alias.Cipher.PBEWITHSHA1AND128BITRC2-CBC", "PBEWITHSHAAND128BITRC2-CBC", "Alg.Alias.Cipher.PBEWITHSHA1AND40BITRC2-CBC", "PBEWITHSHAAND40BITRC2-CBC", configurableProvider), configurableProvider);
-            C5800.m15969(str, "$PBEWithMD5AndRC2", "Cipher.PBEWITHMD5ANDRC2", C9023.m23357(str, "$PBEWithSHAAnd40BitRC2", "Cipher.PBEWITHSHAAND40BITRC2-CBC", C9023.m23357(str, "$PBEWithSHAAnd128BitRC2", "Cipher.PBEWITHSHAAND128BITRC2-CBC", C0280.m1793("Alg.Alias.Cipher.PBEWITHSHAANDRC2-CBC", "PBEWITHSHA1ANDRC2", "Alg.Alias.Cipher.PBEWITHSHA1ANDRC2-CBC", "PBEWITHSHA1ANDRC2", configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$PBEWithSHA1AndRC2", "Cipher.PBEWITHSHA1ANDRC2", C12669.m31439("Alg.Alias.Cipher.PBEWITHSHA1AND128BITRC2-CBC", "PBEWITHSHAAND128BITRC2-CBC", "Alg.Alias.Cipher.PBEWITHSHA1AND40BITRC2-CBC", "PBEWITHSHAAND40BITRC2-CBC", configurableProvider), configurableProvider);
+            C8947.m23913(str, "$PBEWithMD5AndRC2", "Cipher.PBEWITHMD5ANDRC2", C18063.m42089(str, "$PBEWithSHAAnd40BitRC2", "Cipher.PBEWITHSHAAND40BITRC2-CBC", C18063.m42089(str, "$PBEWithSHAAnd128BitRC2", "Cipher.PBEWITHSHAAND128BITRC2-CBC", C12669.m31439("Alg.Alias.Cipher.PBEWITHSHAANDRC2-CBC", "PBEWITHSHA1ANDRC2", "Alg.Alias.Cipher.PBEWITHSHA1ANDRC2-CBC", "PBEWITHSHA1ANDRC2", configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHMD5ANDRC2-CBC", "PBEWITHMD5ANDRC2");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.PBEWITHSHA1ANDRC2", "PKCS12PBE");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.PBEWITHSHAANDRC2", "PKCS12PBE");
@@ -235,70 +231,60 @@ public final class RC2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD2KeyFactory extends PBESecretKeyFactory {
         public PBEWithMD2KeyFactory() {
             super("PBEwithMD2andRC2", PKCSObjectIdentifiers.pbeWithMD2AndRC2_CBC, true, 0, 5, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD5AndRC2 extends BaseBlockCipher {
         public PBEWithMD5AndRC2() {
             super(new CBCBlockCipher(new RC2Engine()), 0, 0, 64, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD5KeyFactory extends PBESecretKeyFactory {
         public PBEWithMD5KeyFactory() {
             super("PBEwithMD5andRC2", PKCSObjectIdentifiers.pbeWithMD5AndRC2_CBC, true, 0, 0, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHA1AndRC2 extends BaseBlockCipher {
         public PBEWithSHA1AndRC2() {
             super(new CBCBlockCipher(new RC2Engine()), 0, 1, 64, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHA1KeyFactory extends PBESecretKeyFactory {
         public PBEWithSHA1KeyFactory() {
             super("PBEwithSHA1andRC2", PKCSObjectIdentifiers.pbeWithSHA1AndRC2_CBC, true, 0, 1, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAnd128BitKeyFactory extends PBESecretKeyFactory {
         public PBEWithSHAAnd128BitKeyFactory() {
             super("PBEwithSHAand128BitRC2-CBC", PKCSObjectIdentifiers.pbeWithSHAAnd128BitRC2_CBC, true, 2, 1, 128, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAnd128BitRC2 extends BaseBlockCipher {
         public PBEWithSHAAnd128BitRC2() {
             super(new CBCBlockCipher(new RC2Engine()), 2, 1, 128, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAnd40BitKeyFactory extends PBESecretKeyFactory {
         public PBEWithSHAAnd40BitKeyFactory() {
             super("PBEwithSHAand40BitRC2-CBC", PKCSObjectIdentifiers.pbeWithSHAAnd40BitRC2_CBC, true, 2, 1, 40, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAnd40BitRC2 extends BaseBlockCipher {
         public PBEWithSHAAnd40BitRC2() {
             super(new CBCBlockCipher(new RC2Engine()), 2, 1, 40, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Wrap extends BaseWrapCipher {
         public Wrap() {
             super(new RC2WrapEngine());

@@ -1,35 +1,41 @@
 .class public final Ll/᩻ܽܶ;
-.super Ll/ۢܽܶ;
-.source "O2OZ"
-
-
-# instance fields
-.field public final synthetic ۫:Ll/ۨ۫ܶ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۨ۫ܶ;)V
-    .locals 0
-
-    .line 804
-    iput-object p1, p0, Ll/᩻ܽܶ;->۫:Ll/ۨ۫ܶ;
-
-    invoke-direct {p0, p1}, Ll/ۢܽܶ;-><init>(Ll/ۨ۫ܶ;)V
-
-    return-void
-.end method
+.super Ll/ۧܽܶ;
+.source "V9KS"
 
 
 # virtual methods
-.method public final ܰ(I)Ljava/lang/Object;
+.method public final ۙ(Ll/ۧܶܶ;)V
     .locals 2
 
-    .line 807
-    new-instance v0, Ll/ۙ۫ܶ;
+    .line 33
+    iget-object v0, p0, Ll/ۧܽܶ;->ۙ:Ll/֫ܽܶ;
 
-    iget-object v1, p0, Ll/᩻ܽܶ;->۫:Ll/ۨ۫ܶ;
+    invoke-virtual {v0}, Ll/֫ܽܶ;->getValue()J
 
-    invoke-direct {v0, v1, p1}, Ll/ۙ۫ܶ;-><init>(Ll/ۨ۫ܶ;I)V
+    move-result-wide v0
 
-    return-object v0
+    long-to-int v1, v0
+
+    invoke-virtual {p1, v1}, Ll/᩻ܶܶ;->᩷(I)V
+
+    .line 34
+    iget-object v0, p0, Ll/ۧܽܶ;->᩷:Ljava/lang/Object;
+
+    check-cast v0, [B
+
+    array-length v0, v0
+
+    invoke-virtual {p1, v0}, Ll/᩻ܶܶ;->᩷(I)V
+
+    .line 35
+    iget-object v0, p0, Ll/ۧܽܶ;->᩷:Ljava/lang/Object;
+
+    check-cast v0, [B
+
+    .line 318
+    array-length v1, v0
+
+    invoke-virtual {p1, v1, v0}, Ll/᩻ܶܶ;->ۙ(I[B)V
+
+    return-void
 .end method

@@ -1,75 +1,66 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ۬ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W6ZV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18772 {
+import android.view.View;
+import bin.mt.plus.Main;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f60856;
+/* JADX INFO: renamed from: l.ᩳۖܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y4ZV */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18772 extends AbstractViewOnClickListenerC21206 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f60857;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final C20613 f60972;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f60858;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final C25291 f60973;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C14690[] f60859;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final String f60974;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C14690 m43333(C8626 c8626, CharSequence charSequence, int[] iArr, int[] iArr2) {
-        for (int i = 0; i < this.f60856; i++) {
-            C14690 c14690 = this.f60859[i];
-            if (this.f60858[i] == c8626.m22408() && c8626.m22412(c14690.pattern(), charSequence, iArr, iArr2)) {
-                int i2 = this.f60858[i];
-                if (i == 0) {
-                    return c14690;
-                }
-                C14690[] c14690Arr = this.f60859;
-                System.arraycopy(c14690Arr, 0, c14690Arr, 1, i);
-                int[] iArr3 = this.f60858;
-                System.arraycopy(iArr3, 0, iArr3, 1, i);
-                this.f60859[0] = c14690;
-                this.f60858[0] = i2;
-                return c14690;
-            }
-        }
-        C14690 c14690M35218 = C14690.m35218(c8626.m22408(), c8626.m22409(charSequence, iArr, iArr2));
-        int iM22408 = c8626.m22408();
-        if (this.f60859 == null) {
-            this.f60859 = new C14690[8];
-            this.f60858 = new int[8];
-        }
-        int length = c14690M35218.pattern().length();
-        while (true) {
-            int i3 = this.f60856;
-            if (i3 == 8 || this.f60857 + length > 16384) {
-                C14690[] c14690Arr2 = this.f60859;
-                int i4 = i3 - 1;
-                this.f60856 = i4;
-                C14690 c14691 = c14690Arr2[i4];
-                c14690Arr2[i4] = null;
-                this.f60857 -= c14691.pattern().length();
-            } else {
-                C14690[] c14690Arr3 = this.f60859;
-                System.arraycopy(c14690Arr3, 0, c14690Arr3, 1, i3);
-                int[] iArr4 = this.f60858;
-                System.arraycopy(iArr4, 0, iArr4, 1, this.f60856);
-                this.f60859[0] = c14690M35218;
-                this.f60858[0] = iM22408;
-                this.f60856++;
-                this.f60857 += length;
-                return c14690M35218;
-            }
-        }
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final String f60975;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final String f60976;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0873 f60977;
+
+    @Override // l.AbstractC6796
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo3322() {
+        return 1;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43334() {
-        this.f60859 = null;
-        this.f60858 = null;
-        this.f60856 = 0;
-        this.f60857 = 0;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C18772(C0873 c0873, Main main, int i, String str, String str2, C20613 c20613) {
+        super(main);
+        this.f60977 = c0873;
+        this.f60975 = C21576.m49088(i);
+        this.f60974 = str;
+        this.f60973 = null;
+        this.f60976 = str2 != null ? str2 : str;
+        this.f60972 = c20613;
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C18772(C0873 c0873, Main main, String str, String str2, C20613 c20613, C25291 c25291) {
+        super(main);
+        this.f60977 = c0873;
+        this.f60975 = str;
+        this.f60974 = str2;
+        this.f60973 = c25291;
+        this.f60976 = str2;
+        this.f60972 = c20613;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        if (this.f60977.f27860.m24482() || AbstractViewOnClickListenerC21206.f67690.m55200()) {
+            return;
+        }
+        Main main = this.f22654;
+        main.m127();
+        main.m117().m46155().m23226(this.f60974, true);
     }
 }

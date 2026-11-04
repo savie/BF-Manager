@@ -1,40 +1,56 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۧۗۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7FF */
+/* JADX INFO: renamed from: l.ۤ۟᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6A7 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10726 extends AbstractC9315 {
+public final class C10726 implements InterfaceC20449 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f36563;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C25227 f34063;
 
-    @Override // l.InterfaceC4705
-    public final int getLength() {
-        return 2;
+    public C10726(C25227 c25227) {
+        this.f34063 = c25227;
     }
 
-    public C10726(EnumC2300 enumC2300, int i) {
-        super(enumC2300);
-        this.f36563 = i;
+    @Override // l.InterfaceC20449
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo27314(float f) {
+        int i;
+        int i2;
+        C25227 c25227 = this.f34063;
+        if (c25227.mLayout.canScrollVertically()) {
+            i2 = (int) f;
+            i = 0;
+        } else {
+            i = c25227.mLayout.canScrollHorizontally() ? (int) f : 0;
+            i2 = 0;
+        }
+        if (i == 0 && i2 == 0) {
+            return false;
+        }
+        c25227.stopScroll();
+        return c25227.flingNoThresholdCheck(i, i2);
     }
 
-    @Override // l.InterfaceC4705
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2341(InterfaceC19275 interfaceC19275) throws IOException {
-        ((C23509) interfaceC19275).m51770(this.f36563);
+    @Override // l.InterfaceC20449
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo27315() {
+        this.f34063.stopScroll();
     }
 
-    @Override // l.AbstractC9315
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo5333() {
-        return String.format("{ throws_type_index: %d; }", Integer.valueOf(this.f36563));
-    }
-
-    @Override // l.AbstractC9315
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo5332() {
-        return String.valueOf(this.f36563);
+    @Override // l.InterfaceC20449
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final float mo27313() {
+        float f;
+        C25227 c25227 = this.f34063;
+        if (c25227.mLayout.canScrollVertically()) {
+            f = c25227.mScaledVerticalScrollFactor;
+        } else {
+            if (!c25227.mLayout.canScrollHorizontally()) {
+                return 0.0f;
+            }
+            f = c25227.mScaledHorizontalScrollFactor;
+        }
+        return -f;
     }
 }

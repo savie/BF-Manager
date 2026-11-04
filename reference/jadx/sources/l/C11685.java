@@ -1,26 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۨܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3BBD */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11685 extends AbstractC1100 {
+import java.util.HashSet;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C17432 f39298;
+/* JADX INFO: renamed from: l.ۧܳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5XL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11685 {
 
-    public C11685(C17432 c17432) {
-        super("SourceDebugExtension");
-        this.f39298 = c17432;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public char f37848;
 
-    @Override // l.InterfaceC5771
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo2281() {
-        return this.f39298.m40640() + 6;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public HashSet f37845 = new HashSet(4);
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C17432 m29180() {
-        return this.f39298;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public HashSet f37847 = new HashSet(3);
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f37846 = -1;
 }

@@ -1,59 +1,44 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import com.alipay.sdk.m.o.b;
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 
-/* JADX INFO: renamed from: l.֫ۙۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 37EB */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1595 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.֫֫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T4F2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1595 extends C15302 {
 
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11289 f5494;
+
+    public C1595(C11289 c11289) {
+        this.f5494 = c11289;
+    }
+
+    @Override // l.C15302
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo5606() {
+        EnumC15874 enumC15874 = EnumC15874.CANCEL;
+        C11289 c11289 = this.f5494;
+        c11289.m28545(enumC15874);
+        c11289.f35604.m50704();
+    }
+
+    @Override // l.C15302
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10332 f6451;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f6452;
-
-    public C1595(String str, C10332 c10332) {
-        this.f6452 = str;
-        this.f6451 = c10332;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C1595)) {
-            return false;
+    public final IOException mo5607(IOException iOException) {
+        SocketTimeoutException socketTimeoutException = new SocketTimeoutException(b.n0);
+        if (iOException != null) {
+            socketTimeoutException.initCause(iOException);
         }
-        C1595 c1595 = (C1595) obj;
-        return C13638.equals(this.f6452, c1595.f6452) && C13638.equals(this.f6451, c1595.f6451);
+        return socketTimeoutException;
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f6451) + (C13638.hashCode(this.f6452) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f6452, this.f6451};
-        String[] strArrSplit = "strBsm;cpx2Const".length() == 0 ? new String[0] : "strBsm;cpx2Const".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C1595.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final void m5608() throws IOException {
+        if (m36748()) {
+            throw mo5607((IOException) null);
         }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10332 m5437() {
-        return this.f6451;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m5438() {
-        return this.f6452;
     }
 }

@@ -1,55 +1,65 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۡۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UBJ4 */
+/* JADX INFO: renamed from: l.ۨۤ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26GC */
 /* JADX INFO: loaded from: classes4.dex */
-public final enum C12304 extends EnumC1719 {
-    public /* synthetic */ C12304() {
-        this("InHeadNoscript", 4);
-    }
+public final class C12304 extends AbstractC1118 {
 
-    public C12304(String str, int i) {
-        super(str, i, 0);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C21943 f39567;
 
-    @Override // l.EnumC1719
-    /* JADX INFO: renamed from: ۙ */
-    public boolean mo1923(AbstractC21516 abstractC21516, C5247 c5247) {
-        if (abstractC21516.m48232()) {
-            c5247.m14466(this);
-            return true;
-        }
-        if (abstractC21516.m48236() && ((C6699) abstractC21516).f74529.equals("html")) {
-            EnumC1719 enumC1719 = EnumC1719.f6813;
-            c5247.f63277 = abstractC21516;
-            return enumC1719.mo1923(abstractC21516, c5247);
-        }
-        if (abstractC21516.m48231() && ((C3876) abstractC21516).f74529.equals("noscript")) {
-            c5247.m14483();
-            c5247.m14486(EnumC1719.f6812);
-            return true;
-        }
-        if (EnumC1719.m5736(abstractC21516) || abstractC21516.m48235() || (abstractC21516.m48236() && C4145.m11787(((C6699) abstractC21516).f74529, C14421.f47285))) {
-            EnumC1719 enumC17110 = EnumC1719.f6812;
-            c5247.f63277 = abstractC21516;
-            return enumC17110.mo1923(abstractC21516, c5247);
-        }
-        if (abstractC21516.m48231() && ((C3876) abstractC21516).f74529.equals("br")) {
-            return m30562(abstractC21516, c5247);
-        }
-        if ((!abstractC21516.m48236() || !C4145.m11787(((C6699) abstractC21516).f74529, C14421.f47291)) && !abstractC21516.m48231()) {
-            return m30562(abstractC21516, c5247);
-        }
-        c5247.m14466(this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C0701 f39568;
+
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ֫ */
+    public final boolean mo4145() {
         return false;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private boolean m30562(AbstractC21516 abstractC21516, C5247 c5247) {
-        c5247.m14466(this);
-        C5288 c5288 = new C5288();
-        c5288.m14654(abstractC21516.toString());
-        c5247.m14467(c5288);
-        return true;
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ۫ */
+    public final C19017 mo4150() {
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static AbstractC14124 m30715(C0701 c0701, C21943 c21943) {
+        return new C20509(c0701, c21943);
+    }
+
+    public C12304(C7830 c7830, C0701 c0701, C21943 c21943) {
+        super(c7830);
+        this.f39567 = c21943;
+        this.f39568 = c0701;
+    }
+
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ܳ */
+    public final AbstractC11902 mo4151() {
+        return new C11558(this);
+    }
+
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ᩸ */
+    public final EnumC10066 mo4155() {
+        return EnumC10066.NOT_READY;
+    }
+
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ۚ */
+    public final C0701 mo4148() {
+        return this.f39568;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final C21943 m30716() {
+        return this.f39567;
+    }
+
+    @Override // l.AbstractC1118
+    /* JADX INFO: renamed from: ᩷ */
+    public final AbstractC1118 mo4154(C7830 c7830) {
+        return new C12304(c7830, this.f39568.m3005(), this.f39567);
     }
 }

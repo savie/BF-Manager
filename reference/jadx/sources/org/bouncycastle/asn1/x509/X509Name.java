@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
-import l.C15489;
-import l.C16523;
+import l.C13645;
+import l.C14442;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -28,7 +28,7 @@ import org.bouncycastle.crypto.engines.ThreefishEngine;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509Name extends ASN1Object {
     public static final ASN1ObjectIdentifier BUSINESS_CATEGORY;
     public static final ASN1ObjectIdentifier C;
@@ -781,14 +781,14 @@ public class X509Name extends ASN1Object {
         if (aSN1ObjectIdentifier != null) {
             return aSN1ObjectIdentifier;
         }
-        throw new IllegalArgumentException(C16523.m38890("Unknown object id - ", strTrim, " - passed to distinguished name"));
+        throw new IllegalArgumentException(C14442.m34865("Unknown object id - ", strTrim, " - passed to distinguished name"));
     }
 
     private ASN1Primitive decodeObject(String str) {
         try {
             return ASN1Primitive.fromByteArray(Hex.decodeStrict(str, 1, str.length() - 1));
         } catch (IOException e) {
-            throw new IllegalStateException(C15489.m37075("unknown encoding in name: ", e));
+            throw new IllegalStateException(C13645.m33383("unknown encoding in name: ", e));
         }
     }
 }

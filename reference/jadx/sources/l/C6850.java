@@ -1,97 +1,53 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.ۜܶᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: AAP5 */
+/* JADX INFO: renamed from: l.ۜۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R5S6 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6850 implements InterfaceC11790 {
+public final class C6850 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f23048 = false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final int[] f22761 = new int[0];
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f23049;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Object[] f22762 = new Object[0];
 
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return 17749;
-    }
-
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C13907.m33739(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public final Comparator getComparator() {
-        return null;
-    }
-
-    @Override // l.InterfaceC11790, l.InterfaceC20693
-    public final InterfaceC16481 getComparator() {
-        return null;
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.InterfaceC18576, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C13907.m33740(this, consumer);
-    }
-
-    @Override // l.InterfaceC10110, l.InterfaceC20693
-    public final /* bridge */ /* synthetic */ InterfaceC10110 trySplit() {
-        return null;
-    }
-
-    @Override // l.InterfaceC18576, l.InterfaceC10110, l.InterfaceC20693
-    public final /* bridge */ /* synthetic */ InterfaceC18576 trySplit() {
-        return null;
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* bridge */ /* synthetic */ InterfaceC20693 trySplit() {
-        return null;
-    }
-
-    public C6850(int i) {
-        this.f23049 = i;
-    }
-
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(IntConsumer intConsumer) {
-        C13638.requireNonNull(intConsumer);
-        if (this.f23048) {
-            return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final int m19064(int i, int i2, int[] iArr) {
+        C15243.m36590(iArr, "array");
+        int i3 = i - 1;
+        int i4 = 0;
+        while (i4 <= i3) {
+            int i5 = (i4 + i3) >>> 1;
+            int i6 = iArr[i5];
+            if (i6 < i2) {
+                i4 = i5 + 1;
+            } else {
+                if (i6 <= i2) {
+                    return i5;
+                }
+                i3 = i5 - 1;
+            }
         }
-        this.f23048 = true;
-        intConsumer.accept(this.f23049);
-        return true;
+        return ~i4;
     }
 
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.f23048 ? 0L : 1L;
-    }
-
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(IntConsumer intConsumer) {
-        C13638.requireNonNull(intConsumer);
-        if (this.f23048) {
-            return;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final int m19065(long j, long[] jArr, int i) {
+        C15243.m36590(jArr, "array");
+        int i2 = i - 1;
+        int i3 = 0;
+        while (i3 <= i2) {
+            int i4 = (i3 + i2) >>> 1;
+            long j2 = jArr[i4];
+            if (j2 < j) {
+                i3 = i4 + 1;
+            } else {
+                if (j2 <= j) {
+                    return i4;
+                }
+                i2 = i4 - 1;
+            }
         }
-        this.f23048 = true;
-        intConsumer.accept(this.f23049);
+        return ~i3;
     }
 }

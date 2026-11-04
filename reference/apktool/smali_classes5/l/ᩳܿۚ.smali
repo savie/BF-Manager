@@ -1,62 +1,94 @@
-.class public final synthetic Ll/ᩳܿۚ;
+.class public final Ll/ᩳܿۚ;
 .super Ljava/lang/Object;
-.source "6AK0"
+.source "Y6X9"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Ljava/lang/AutoCloseable;
+
+
+# instance fields
+.field public ܰ:Ll/۟ܿۚ;
+
+.field public final synthetic ᩶:Ll/ۢܿۚ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۢܿۚ;Ll/۟ܿۚ;)V
+    .locals 0
+
+    .line 99
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ᩳܿۚ;->᩶:Ll/ۢܿۚ;
+
+    .line 100
+    iput-object p2, p0, Ll/ᩳܿۚ;->ܰ:Ll/۟ܿۚ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final close()V
+    .locals 3
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 105
+    iget-object v0, p0, Ll/ᩳܿۚ;->᩶:Ll/ۢܿۚ;
 
-    move-result-object p1
+    invoke-static {v0}, Ll/ۢܿۚ;->ۤ(Ll/ۢܿۚ;)Ljava/util/concurrent/locks/ReentrantLock;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 107
+    :try_start_0
+    iget-object v1, p0, Ll/ᩳܿۚ;->ܰ:Ll/۟ܿۚ;
+
+    if-eqz v1, :cond_0
+
+    .line 108
+    invoke-static {v0}, Ll/ۢܿۚ;->ۙ(Ll/ۢܿۚ;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ll/ᩳܿۚ;->ܰ:Ll/۟ܿۚ;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    const/4 v1, 0x0
+
+    .line 109
+    iput-object v1, p0, Ll/ᩳܿۚ;->ܰ:Ll/۟ܿۚ;
+
+    .line 110
+    invoke-static {v0}, Ll/ۢܿۚ;->᩷(Ll/ۢܿۚ;)Ljava/util/concurrent/locks/Condition;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Condition;->signalAll()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 113
+    :cond_0
+    invoke-static {v0}, Ll/ۢܿۚ;->ۤ(Ll/ۢܿۚ;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+    return-void
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    :catchall_0
+    move-exception v1
 
-    move-result-object p1
+    invoke-static {v0}, Ll/ۢܿۚ;->ۤ(Ll/ۢܿۚ;)Ljava/util/concurrent/locks/ReentrantLock;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 2
-    check-cast p1, Ll/᩵ܿۚ;
-
-    .line 170
-    iget-object p1, p1, Ll/᩵ܿۚ;->᩶:Ljava/io/IOException;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    .line 114
+    throw v1
 .end method

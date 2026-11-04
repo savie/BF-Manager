@@ -1,113 +1,67 @@
-.class public final Ll/ۧ۟ܶ;
-.super Ll/۫۟ܶ;
-.source "532I"
+.class public abstract Ll/ۧ۟ܶ;
+.super Ljava/lang/Object;
+.source "G7YC"
+
+# interfaces
+.implements Ll/᩵ܿܶ;
 
 
-# static fields
-.field public static final ᩶:Ll/ܳ۟ܶ;
+# instance fields
+.field public ۙ:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMExtractor;
 
+.field public ۤ:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPublicKeyParameters;
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 1116
-    new-instance v0, Ll/ۧ۟ܶ;
-
-    const-string v1, "CharMatcher.none()"
-
-    .line 1119
-    invoke-direct {v0, v1}, Ll/۫۟ܶ;-><init>(Ljava/lang/String;)V
-
-    .line 1116
-    sput-object v0, Ll/ۧ۟ܶ;->᩶:Ll/ܳ۟ܶ;
-
-    return-void
-.end method
+.field public ᩷:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMParameters;
 
 
 # virtual methods
-.method public final ۖ(Ljava/lang/CharSequence;)Z
-    .locals 0
+.method public init()V
+    .locals 4
 
-    .line 902
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 46
+    new-instance v0, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyPairGenerator;
 
-    const/4 p1, 0x1
+    invoke-direct {v0}, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyPairGenerator;-><init>()V
 
-    return p1
-.end method
+    .line 47
+    new-instance v1, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyGenerationParameters;
 
-.method public final ۙ(ILjava/lang/CharSequence;)I
-    .locals 0
+    new-instance v2, Ljava/security/SecureRandom;
 
-    .line 1135
-    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+    invoke-direct {v2}, Ljava/security/SecureRandom;-><init>()V
 
-    move-result p2
+    iget-object v3, p0, Ll/ۧ۟ܶ;->᩷:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMParameters;
 
-    .line 1136
-    invoke-static {p1, p2}, Ll/ᩳ᩷ܶ;->ܰ(II)V
+    invoke-direct {v1, v2, v3}, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyGenerationParameters;-><init>(Ljava/security/SecureRandom;Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMParameters;)V
 
-    const/4 p1, -0x1
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyPairGenerator;->init(Lorg/bouncycastle/crypto/KeyGenerationParameters;)V
 
-    return p1
-.end method
+    .line 48
+    invoke-virtual {v0}, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMKeyPairGenerator;->generateKeyPair()Lorg/bouncycastle/crypto/AsymmetricCipherKeyPair;
 
-.method public final ۙ(Ljava/lang/CharSequence;)I
-    .locals 0
+    move-result-object v0
 
-    .line 902
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 49
+    new-instance v1, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMExtractor;
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/AsymmetricCipherKeyPair;->getPrivate()Lorg/bouncycastle/crypto/params/AsymmetricKeyParameter;
 
-    return p1
-.end method
+    move-result-object v2
 
-.method public final ۙ()Ll/ܳ۟ܶ;
-    .locals 1
+    check-cast v2, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPrivateKeyParameters;
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v2}, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMExtractor;-><init>(Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPrivateKeyParameters;)V
 
-    throw v0
-.end method
+    iput-object v1, p0, Ll/ۧ۟ܶ;->ۙ:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMExtractor;
 
-.method public final ۙ(C)Z
-    .locals 0
+    .line 50
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/AsymmetricCipherKeyPair;->getPublic()Lorg/bouncycastle/crypto/params/AsymmetricKeyParameter;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
-.end method
+    check-cast v0, Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPublicKeyParameters;
 
-.method public final ۨ(Ljava/lang/CharSequence;)Z
-    .locals 0
+    iput-object v0, p0, Ll/ۧ۟ܶ;->ۤ:Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPublicKeyParameters;
 
-    .line 1148
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final ܰ(Ljava/lang/CharSequence;)I
-    .locals 0
-
-    .line 902
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, -0x1
-
-    return p1
+    return-void
 .end method

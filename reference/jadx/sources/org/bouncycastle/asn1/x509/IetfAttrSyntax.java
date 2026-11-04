@@ -15,7 +15,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IetfAttrSyntax extends ASN1Object {
     public static final int VALUE_OCTETS = 1;
     public static final int VALUE_OID = 2;

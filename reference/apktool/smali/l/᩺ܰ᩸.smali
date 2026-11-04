@@ -1,45 +1,50 @@
-.class public abstract Ll/᩺ܰ᩸;
+.class public final synthetic Ll/᩺ܰ᩸;
 .super Ljava/lang/Object;
-.source "17QI"
+.source "3B3L"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/᩶ܰ᩸;
+
+.field public final synthetic ᩷:Ll/ܿܰ᩸;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Ll/᩶ܰ᩸;Ll/ܿܰ᩸;)V
     .locals 0
 
-    .line 2729
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩺ܰ᩸;->ۙ:Ll/᩶ܰ᩸;
+
+    iput-object p2, p0, Ll/᩺ܰ᩸;->᩷:Ll/ܿܰ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract ۙ()Ll/᩹ܿܶ;
-.end method
-
-.method public abstract ۨ()Ll/᩹ܿܶ;
-.end method
-
-.method public final ܰ()Z
+.method public final call()Ljava/lang/Object;
     .locals 2
 
-    .line 2746
-    invoke-virtual {p0}, Ll/᩺ܰ᩸;->ۙ()Ll/᩹ܿܶ;
+    .line 2612
+    iget-object v0, p0, Ll/᩺ܰ᩸;->ۙ:Ll/᩶ܰ᩸;
 
-    move-result-object v0
+    iget-object v0, v0, Ll/᩶ܰ᩸;->᩷:Ll/۟ܰ᩸;
 
-    invoke-static {v0}, Ll/ۡܿᩴ;->stream(Ljava/util/Collection;)Ll/ۚ֫ᩴ;
+    iget-object v1, p0, Ll/᩺ܰ᩸;->᩷:Ll/ܿܰ᩸;
 
-    move-result-object v0
+    invoke-static {v1}, Ll/ܿܰ᩸;->᩷(Ll/ܿܰ᩸;)Ll/ܽܰ᩸;
 
-    new-instance v1, Ll/ۜܰ᩸;
+    move-result-object v1
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, v1}, Ll/۟ܰ᩸;->᩷(Ll/۟ܰ᩸;Ll/ܽܰ᩸;)V
 
-    invoke-interface {v0, v1}, Ll/ۚ֫ᩴ;->anyMatch(Ljava/util/function/Predicate;)Z
+    const/4 v0, 0x0
 
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

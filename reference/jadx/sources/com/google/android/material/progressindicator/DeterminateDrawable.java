@@ -5,23 +5,23 @@ import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import l.AbstractC20847;
-import l.AbstractC2220;
-import l.C15909;
-import l.C20142;
-import l.C4449;
-import l.InterfaceC8147;
+import l.AbstractC24227;
+import l.AbstractC7591;
+import l.C14529;
+import l.C16973;
+import l.C4089;
+import l.InterfaceC23481;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityChange {
     public static final float GAP_RAMP_DOWN_THRESHOLD = 0.01f;
-    public static final AbstractC20847 INDICATOR_LENGTH_IN_LEVEL = new AbstractC20847("indicatorLevel") { // from class: com.google.android.material.progressindicator.DeterminateDrawable.1
-        @Override // l.AbstractC20847
+    public static final AbstractC24227 INDICATOR_LENGTH_IN_LEVEL = new AbstractC24227("indicatorLevel") { // from class: com.google.android.material.progressindicator.DeterminateDrawable.1
+        @Override // l.AbstractC24227
         public float getValue(DeterminateDrawable determinateDrawable) {
             return determinateDrawable.getIndicatorFraction() * 10000.0f;
         }
 
-        @Override // l.AbstractC20847
+        @Override // l.AbstractC24227
         public void setValue(DeterminateDrawable determinateDrawable, float f) {
             determinateDrawable.setIndicatorFraction(f / 10000.0f);
         }
@@ -31,8 +31,8 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
     public final DrawingDelegate.ActiveIndicator activeIndicator;
     public DrawingDelegate drawingDelegate;
     public boolean skipAnimationOnLevelChange;
-    public final C15909 springAnimation;
-    public final C20142 springForce;
+    public final C4089 springAnimation;
+    public final C14529 springForce;
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
     public /* bridge */ /* synthetic */ void clearAnimationCallbacks() {
@@ -70,8 +70,8 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
-    public /* bridge */ /* synthetic */ void registerAnimationCallback(AbstractC2220 abstractC2220) {
-        super.registerAnimationCallback(abstractC2220);
+    public /* bridge */ /* synthetic */ void registerAnimationCallback(AbstractC7591 abstractC7591) {
+        super.registerAnimationCallback(abstractC7591);
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
@@ -105,8 +105,8 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
-    public /* bridge */ /* synthetic */ boolean unregisterAnimationCallback(AbstractC2220 abstractC2220) {
-        return super.unregisterAnimationCallback(abstractC2220);
+    public /* bridge */ /* synthetic */ boolean unregisterAnimationCallback(AbstractC7591 abstractC7591) {
+        return super.unregisterAnimationCallback(abstractC7591);
     }
 
     public DeterminateDrawable(Context context, BaseProgressIndicatorSpec baseProgressIndicatorSpec, DrawingDelegate drawingDelegate) {
@@ -114,13 +114,13 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
         this.skipAnimationOnLevelChange = false;
         setDrawingDelegate(drawingDelegate);
         this.activeIndicator = new DrawingDelegate.ActiveIndicator();
-        C20142 c20142 = new C20142();
-        this.springForce = c20142;
-        c20142.m45501(1.0f);
-        c20142.m45503(50.0f);
-        C15909 c15909 = new C15909(this, INDICATOR_LENGTH_IN_LEVEL);
-        this.springAnimation = c15909;
-        c15909.m37818(c20142);
+        C14529 c14529 = new C14529();
+        this.springForce = c14529;
+        c14529.m35071(1.0f);
+        c14529.m35073(50.0f);
+        C4089 c4089 = new C4089(this, INDICATOR_LENGTH_IN_LEVEL);
+        this.springAnimation = c4089;
+        c4089.m13165(c14529);
         setGrowFraction(1.0f);
     }
 
@@ -140,12 +140,12 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
         return new DeterminateDrawable(context, circularProgressIndicatorSpec, circularDrawingDelegate);
     }
 
-    public void addSpringAnimationEndListener(InterfaceC8147 interfaceC8147) {
-        this.springAnimation.m26050(interfaceC8147);
+    public void addSpringAnimationEndListener(InterfaceC23481 interfaceC23481) {
+        this.springAnimation.m30682(interfaceC23481);
     }
 
-    public void removeSpringAnimationEndListener(InterfaceC8147 interfaceC8147) {
-        this.springAnimation.m26053(interfaceC8147);
+    public void removeSpringAnimationEndListener(InterfaceC23481 interfaceC23481) {
+        this.springAnimation.m30684(interfaceC23481);
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
@@ -157,25 +157,25 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
             return visibleInternal;
         }
         this.skipAnimationOnLevelChange = false;
-        this.springForce.m45503(50.0f / systemAnimatorDurationScale);
+        this.springForce.m35073(50.0f / systemAnimatorDurationScale);
         return visibleInternal;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void jumpToCurrentState() {
-        this.springAnimation.m37820();
+        this.springAnimation.m13167();
         setIndicatorFraction(getLevel() / 10000.0f);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean onLevelChange(int i) {
         if (this.skipAnimationOnLevelChange) {
-            this.springAnimation.m37820();
+            this.springAnimation.m13167();
             setIndicatorFraction(i / 10000.0f);
             return true;
         }
-        this.springAnimation.m26052(getIndicatorFraction() * 10000.0f);
-        this.springAnimation.m37819(i);
+        this.springAnimation.m30683(getIndicatorFraction() * 10000.0f);
+        this.springAnimation.m13166(i);
         return true;
     }
 
@@ -204,12 +204,12 @@ public final class DeterminateDrawable extends DrawableWithAnimatedVisibilityCha
             DrawingDelegate.ActiveIndicator activeIndicator = this.activeIndicator;
             BaseProgressIndicatorSpec baseProgressIndicatorSpec = this.baseSpec;
             activeIndicator.color = baseProgressIndicatorSpec.indicatorColors[0];
-            int iM12401 = baseProgressIndicatorSpec.indicatorTrackGapSize;
-            if (iM12401 > 0) {
+            int iM40018 = baseProgressIndicatorSpec.indicatorTrackGapSize;
+            if (iM40018 > 0) {
                 if (!(this.drawingDelegate instanceof LinearDrawingDelegate)) {
-                    iM12401 = (int) ((C4449.m12401(getIndicatorFraction(), 0.0f, 0.01f) * iM12401) / 0.01f);
+                    iM40018 = (int) ((C16973.m40018(getIndicatorFraction(), 0.0f, 0.01f) * iM40018) / 0.01f);
                 }
-                this.drawingDelegate.fillTrack(canvas, this.paint, getIndicatorFraction(), 1.0f, this.baseSpec.trackColor, getAlpha(), iM12401);
+                this.drawingDelegate.fillTrack(canvas, this.paint, getIndicatorFraction(), 1.0f, this.baseSpec.trackColor, getAlpha(), iM40018);
             } else {
                 this.drawingDelegate.fillTrack(canvas, this.paint, 0.0f, 1.0f, baseProgressIndicatorSpec.trackColor, getAlpha(), 0);
             }

@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CramerShoupCoreEngine {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public boolean forEncryption;

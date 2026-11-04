@@ -5,7 +5,7 @@ import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
 import java.util.LinkedList;
 import java.util.List;
-import l.C23234;
+import l.C18011;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONStringer;
@@ -68,7 +68,7 @@ public class AddCardToWXCardPackage {
                 jSONStringer.endArray();
                 jSONStringer.endObject();
             } catch (Exception e) {
-                C23234.m51271(e, new StringBuilder("Req.toBundle exception:"), AddCardToWXCardPackage.TAG);
+                C18011.m41991(e, new StringBuilder("Req.toBundle exception:"), AddCardToWXCardPackage.TAG);
             }
             bundle.putString("_wxapi_add_card_to_wx_card_list", jSONStringer.toString());
         }
@@ -116,7 +116,7 @@ public class AddCardToWXCardPackage {
                     this.cardArrary.add(wXCardItem);
                 }
             } catch (Exception e) {
-                C23234.m51271(e, new StringBuilder("fromBundle exception: "), AddCardToWXCardPackage.TAG);
+                C18011.m41991(e, new StringBuilder("fromBundle exception: "), AddCardToWXCardPackage.TAG);
             }
         }
 
@@ -145,7 +145,7 @@ public class AddCardToWXCardPackage {
                 jSONStringer.endArray();
                 jSONStringer.endObject();
             } catch (Exception e) {
-                C23234.m51271(e, new StringBuilder("Resp.toBundle exception:"), AddCardToWXCardPackage.TAG);
+                C18011.m41991(e, new StringBuilder("Resp.toBundle exception:"), AddCardToWXCardPackage.TAG);
             }
             bundle.putString("_wxapi_add_card_to_wx_card_list", jSONStringer.toString());
         }

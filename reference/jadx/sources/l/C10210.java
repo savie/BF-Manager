@@ -1,34 +1,47 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤۢ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6MQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10210 {
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f34868;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C23616 f34869;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f34870;
+/* JADX INFO: renamed from: l.ۢܶۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W6QR */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C10210 implements Function {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f34871;
+    public final /* synthetic */ int f32651;
 
-    public C10210(int i, int i2, int i3, C23616 c23616) {
-        this.f34868 = i;
-        this.f34871 = i2;
-        this.f34870 = i3;
-        this.f34869 = c23616;
+    public /* synthetic */ C10210(int i) {
+        this.f32651 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m25996(C19382 c19382) {
-        if (this.f34868 == c19382.f62459 && this.f34871 == c19382.f62464) {
-            return this.f34870 == ((C20565) c19382.f62462).f67004.f68246;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f32651) {
+            case 0:
+                return C13414.m33056((C9093) obj);
+            case 1:
+                return ((C1711) obj).m6082();
+            case 2:
+                return MaterialDynamicColors.lambda$onSurfaceVariant$36((DynamicScheme) obj);
+            case 3:
+                return ((DynamicScheme) obj).neutralPalette;
+            case 4:
+                return MaterialDynamicColors.lambda$neutralVariantPaletteKeyColor$9((DynamicScheme) obj);
+            default:
+                return ((C19087) obj).toString();
         }
-        return false;
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 }

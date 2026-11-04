@@ -1,48 +1,63 @@
-.class public final synthetic Ll/᩹ۜ᩹;
-.super Ljava/lang/Object;
-.source "M292"
-
-# interfaces
-.implements Ll/ۘۜ᩹;
+.class public final Ll/᩹ۜ᩹;
+.super Ljava/nio/channels/FileLock;
+.source "N673"
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/lang/String;
+.field public final a:Ljava/nio/channels/FileLock;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/nio/channels/FileLock;Ll/ܶۜ᩹;)V
+    .locals 7
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 275
+    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->position()J
 
-    iput-object p1, p0, Ll/᩹ۜ᩹;->ܺ:Ljava/lang/String;
+    move-result-wide v2
+
+    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->size()J
+
+    move-result-wide v4
+
+    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->isShared()Z
+
+    move-result v6
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    invoke-direct/range {v0 .. v6}, Ljava/nio/channels/FileLock;-><init>(Ljava/nio/channels/FileChannel;JJZ)V
+
+    .line 276
+    iput-object p1, p0, Ll/᩹ۜ᩹;->a:Ljava/nio/channels/FileLock;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۖ۬᩹;)Z
+.method public final isValid()Z
     .locals 1
 
-    .line 104
-    invoke-interface {p1}, Ll/ۖ۬᩹;->getName()Ljava/lang/String;
+    .line 281
+    iget-object v0, p0, Ll/᩹ۜ᩹;->a:Ljava/nio/channels/FileLock;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/nio/channels/FileLock;->isValid()Z
 
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    return v0
+.end method
 
-    iget-object v0, p0, Ll/᩹ۜ᩹;->ܺ:Ljava/lang/String;
+.method public final release()V
+    .locals 1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    .line 286
+    iget-object v0, p0, Ll/᩹ۜ᩹;->a:Ljava/nio/channels/FileLock;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/nio/channels/FileLock;->release()V
 
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
+    return-void
 .end method

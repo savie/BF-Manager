@@ -1,153 +1,112 @@
 .class public final Ll/ۙܶۙ;
 .super Ljava/lang/Object;
-.source "M1H2"
+.source "X6AW"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ֡:Ll/ܰ᩷;
+
+.field public final synthetic ܰ:Ll/ۤܶۙ;
+
+.field public final synthetic ܿ:Ljava/lang/String;
+
+.field public final synthetic ᩶:Ll/ᩴܶۙ;
 
 
 # direct methods
-.method public static ۙ(Landroid/os/Bundle;Landroid/os/Bundle;)Ll/ܰܶۙ;
-    .locals 5
+.method public constructor <init>(Ll/ۤܶۙ;Ll/ᩴܶۙ;Ljava/lang/String;Landroid/os/Bundle;Ll/ܰ᩷;)V
+    .locals 0
 
-    if-nez p0, :cond_2
+    .line 1096
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p1, :cond_0
+    iput-object p1, p0, Ll/ۙܶۙ;->ܰ:Ll/ۤܶۙ;
 
-    .line 368
-    new-instance p0, Ll/ܰܶۙ;
+    iput-object p2, p0, Ll/ۙܶۙ;->᩶:Ll/ᩴܶۙ;
 
-    invoke-direct {p0}, Ll/ܰܶۙ;-><init>()V
+    iput-object p3, p0, Ll/ۙܶۙ;->ܿ:Ljava/lang/String;
 
-    return-object p0
+    iput-object p5, p0, Ll/ۙܶۙ;->֡:Ll/ܰ᩷;
 
-    .line 370
-    :cond_0
-    new-instance p0, Ljava/util/HashMap;
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 371
-    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 1099
+    iget-object v0, p0, Ll/ۙܶۙ;->᩶:Ll/ᩴܶۙ;
+
+    .line 1152
+    iget-object v0, v0, Ll/ᩴܶۙ;->ۙ:Landroid/os/Messenger;
+
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    .line 1101
+    iget-object v1, p0, Ll/ۙܶۙ;->ܰ:Ll/ۤܶۙ;
+
+    iget-object v1, v1, Ll/ۤܶۙ;->ۙ:Ll/۫ܶۙ;
+
+    iget-object v1, v1, Ll/۫ܶۙ;->ܰ:Ll/ܰۗ;
+
+    invoke-virtual {v1, v0}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Ll/᩹ܽۙ;
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, "key"
-
-    .line 372
-    invoke-static {v1, v2}, Ll/ܰ֡۠;->ܰ(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 374
-    :cond_1
-    new-instance p1, Ll/ܰܶۙ;
+    .line 1843
+    :cond_0
+    new-instance v0, Ll/᩻ܽۙ;
 
-    invoke-direct {p1, p0}, Ll/ܰܶۙ;-><init>(Ljava/util/HashMap;)V
+    iget-object v1, p0, Ll/ۙܶۙ;->ܿ:Ljava/lang/String;
 
-    return-object p1
+    iget-object v2, p0, Ll/ۙܶۙ;->֡:Ll/ܰ᩷;
 
-    :cond_2
-    const-string p1, "keys"
+    invoke-direct {v0, v1, v2}, Ll/᩻ܽۙ;-><init>(Ljava/lang/Object;Ll/ܰ᩷;)V
 
-    .line 381
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+    const/4 v2, 0x4
 
-    move-result-object p1
+    .line 1431
+    invoke-virtual {v0, v2}, Ll/۟ܽۙ;->ۙ(I)V
 
-    const-string v0, "values"
+    .line 1432
+    invoke-virtual {v0}, Ll/۟ܽۙ;->ܳ()V
 
-    .line 382
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    if-eqz p1, :cond_4
-
-    if-eqz p0, :cond_4
-
-    .line 383
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    .line 1863
+    invoke-virtual {v0}, Ll/۟ܽۙ;->᩷()Z
 
     move-result v0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    if-eqz v0, :cond_1
 
-    move-result v1
+    :goto_0
+    return-void
 
-    if-ne v0, v1, :cond_4
+    .line 1864
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 386
-    new-instance v0, Ljava/util/LinkedHashMap;
+    const-string v2, "onSearch must call detach() or sendResult() before returning for query="
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    .line 0
+    invoke-static {v2, v1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 387
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    move-result-object v1
 
-    move-result v1
+    .line 1864
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
-
-    :goto_1
-    if-ge v2, v1, :cond_3
-
-    .line 388
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v4, "null cannot be cast to non-null type kotlin.String"
-
-    invoke-static {v3, v4}, Ll/ܰ֡۠;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 390
-    :cond_3
-    new-instance p0, Ll/ܰܶۙ;
-
-    invoke-direct {p0, v0}, Ll/ܰܶۙ;-><init>(Ljava/util/HashMap;)V
-
-    return-object p0
-
-    .line 383
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Invalid bundle passed as restored state"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw v0
 .end method

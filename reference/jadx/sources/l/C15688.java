@@ -1,60 +1,186 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T57T */
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.util.AttributeSet;
+import android.widget.ImageView;
+
+/* JADX INFO: renamed from: l.ܳ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4X8 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15688 {
+public class C15688 extends ImageView {
+    public final C0378 mBackgroundTintHelper;
+    public boolean mHasLevel;
+    public final C20164 mImageHelper;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int[] f50929;
+    public C15688(Context context) {
+        this(context, null);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f50930;
+    public C15688(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String[] f50931;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C15688(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        C8712.m23406(context);
+        this.mHasLevel = false;
+        C9457.m24831(getContext(), this);
+        C0378 c0378 = new C0378(this);
+        this.mBackgroundTintHelper = c0378;
+        c0378.m2178(attributeSet, i);
+        C20164 c20164 = new C20164(this);
+        this.mImageHelper = c20164;
+        c20164.m46380(attributeSet, i);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int[] f50932;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f50933;
-
-    public C15688(C19921 c19921) {
-        byte[] bArr = new byte[0];
-        this.f50933 = bArr;
-        this.f50930 = c19921.f63845.m51050();
-        this.f50929 = new int[0];
-        this.f50932 = new int[0];
-        this.f50931 = new String[c19921.f63847.size()];
-        System.arraycopy(c19921.f63846, 0, bArr, 0, 0);
-        for (C20626 c20626 : c19921.f63848.values()) {
-            int[] iArr = this.f50929;
-            c20626.getClass();
-            iArr[0] = 0;
-            this.f50932[0] = 0;
-        }
-        c19921.f63847.toArray(this.f50931);
-        for (Integer num : c19921.f63849) {
-            int iIntValue = num.intValue();
-            byte[] bArr2 = this.f50930;
-            short s = (short) ((bArr2[iIntValue] & 255) | ((bArr2[iIntValue + 1] & 255) << 8));
-            int iIntValue2 = num.intValue();
-            ((C20626) c19921.f63848.get(Short.valueOf(s))).getClass();
-            byte[] bArr3 = this.f50930;
-            byte b = (byte) 0;
-            bArr3[iIntValue2] = b;
-            bArr3[iIntValue2 + 1] = b;
-            bArr3[iIntValue2 + 2] = b;
-            bArr3[iIntValue2 + 3] = b;
+    @Override // android.widget.ImageView
+    public void setImageResource(int i) {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46376(i);
         }
     }
 
-    public C15688(byte[] bArr, byte[] bArr2, int[] iArr, int[] iArr2, String[] strArr) {
-        this.f50933 = bArr;
-        this.f50930 = bArr2;
-        this.f50929 = iArr;
-        this.f50932 = iArr2;
-        this.f50931 = strArr;
+    @Override // android.widget.ImageView
+    public void setImageDrawable(Drawable drawable) {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null && drawable != null && !this.mHasLevel) {
+            c20164.m46379(drawable);
+        }
+        super.setImageDrawable(drawable);
+        C20164 c20165 = this.mImageHelper;
+        if (c20165 != null) {
+            c20165.m46383();
+            if (this.mHasLevel) {
+                return;
+            }
+            this.mImageHelper.m46375();
+        }
+    }
+
+    @Override // android.widget.ImageView
+    public void setImageBitmap(Bitmap bitmap) {
+        super.setImageBitmap(bitmap);
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46383();
+        }
+    }
+
+    @Override // android.widget.ImageView
+    public void setImageURI(Uri uri) {
+        super.setImageURI(uri);
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46383();
+        }
+    }
+
+    @Override // android.view.View
+    public void setBackgroundResource(int i) {
+        super.setBackgroundResource(i);
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            c0378.m2175(i);
+        }
+    }
+
+    @Override // android.view.View
+    public void setBackgroundDrawable(Drawable drawable) {
+        super.setBackgroundDrawable(drawable);
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            c0378.m2182();
+        }
+    }
+
+    public void setSupportBackgroundTintList(ColorStateList colorStateList) {
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            c0378.m2181(colorStateList);
+        }
+    }
+
+    public ColorStateList getSupportBackgroundTintList() {
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            return c0378.m2180();
+        }
+        return null;
+    }
+
+    public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            c0378.m2177(mode);
+        }
+    }
+
+    public PorterDuff.Mode getSupportBackgroundTintMode() {
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            return c0378.m2179();
+        }
+        return null;
+    }
+
+    public void setSupportImageTintList(ColorStateList colorStateList) {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46377(colorStateList);
+        }
+    }
+
+    public ColorStateList getSupportImageTintList() {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            return c20164.m46381();
+        }
+        return null;
+    }
+
+    public void setSupportImageTintMode(PorterDuff.Mode mode) {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46378(mode);
+        }
+    }
+
+    public PorterDuff.Mode getSupportImageTintMode() {
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            return c20164.m46384();
+        }
+        return null;
+    }
+
+    @Override // android.widget.ImageView, android.view.View
+    public void drawableStateChanged() {
+        super.drawableStateChanged();
+        C0378 c0378 = this.mBackgroundTintHelper;
+        if (c0378 != null) {
+            c0378.m2174();
+        }
+        C20164 c20164 = this.mImageHelper;
+        if (c20164 != null) {
+            c20164.m46383();
+        }
+    }
+
+    @Override // android.widget.ImageView, android.view.View
+    public boolean hasOverlappingRendering() {
+        return this.mImageHelper.m46382() && super.hasOverlappingRendering();
+    }
+
+    @Override // android.widget.ImageView
+    public void setImageLevel(int i) {
+        super.setImageLevel(i);
+        this.mHasLevel = true;
     }
 }

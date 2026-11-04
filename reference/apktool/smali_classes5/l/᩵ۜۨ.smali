@@ -1,73 +1,93 @@
 .class public final Ll/᩵ۜۨ;
 .super Ljava/lang/Object;
-.source "T5RH"
+.source "014Q"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ll/ۧۜۨ;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/᩺ۜۨ;
+
+.field public final synthetic ᩷:[Z
+
+
+# direct methods
+.method public constructor <init>(Ll/᩺ۜۨ;[Z)V
+    .locals 0
+
+    .line 171
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩵ۜۨ;->ۙ:Ll/᩺ۜۨ;
+
+    iput-object p2, p0, Ll/᩵ۜۨ;->᩷:[Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 3
+.method public final ۙ(I)V
+    .locals 2
 
-    .line 271
-    :try_start_0
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    .line 181
+    iget-object v0, p0, Ll/᩵ۜۨ;->ۙ:Ll/᩺ۜۨ;
 
-    move-result-object v0
+    invoke-static {v0}, Ll/᩺ۜۨ;->ۙ(Ll/᩺ۜۨ;)I
 
-    check-cast v0, Ll/ܳۘۨ;
+    move-result v0
 
-    invoke-virtual {v0}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
+    if-ge p1, v0, :cond_0
 
-    move-result-object v0
+    .line 182
+    iget-object v0, p0, Ll/᩵ۜۨ;->᩷:[Z
 
-    check-cast v0, [B
+    const/4 v1, 0x0
 
-    .line 272
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
+    aput-boolean v1, v0, p1
 
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    :cond_0
+    return-void
+.end method
 
-    .line 273
-    new-instance v2, Ljava/util/zip/GZIPOutputStream;
+.method public final ۤ(I)V
+    .locals 2
 
-    invoke-direct {v2, v1}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+    .line 174
+    iget-object v0, p0, Ll/᩵ۜۨ;->ۙ:Ll/᩺ۜۨ;
 
-    .line 274
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write([B)V
+    invoke-static {v0}, Ll/᩺ۜۨ;->ۙ(Ll/᩺ۜۨ;)I
 
-    .line 275
-    invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
+    move-result v0
 
-    .line 276
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    if-ge p1, v0, :cond_0
 
-    .line 277
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    .line 175
+    iget-object v0, p0, Ll/᩵ۜۨ;->᩷:[Z
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x0
 
-    goto :goto_0
+    aput-boolean v1, v0, p1
 
-    :catch_0
-    const/4 v0, 0x0
+    :cond_0
+    return-void
+.end method
 
-    new-array v0, v0, [B
+.method public final ᩷(I)V
+    .locals 0
 
-    .line 281
-    :goto_0
-    new-instance v1, Ll/ܳۘۨ;
+    .line 573
+    invoke-virtual {p0, p1}, Ll/᩵ۜۨ;->ۤ(I)V
 
-    invoke-direct {v1}, Ll/ܳۘۨ;-><init>()V
+    return-void
+.end method
 
-    .line 282
-    invoke-virtual {v1, v0}, Ll/ܳۘۨ;->ۙ(Ljava/lang/Object;)V
+.method public final ᩸(I)V
+    .locals 0
 
-    .line 283
-    invoke-virtual {p1, v1}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    .line 579
+    invoke-virtual {p0, p1}, Ll/᩵ۜۨ;->ۙ(I)V
 
     return-void
 .end method

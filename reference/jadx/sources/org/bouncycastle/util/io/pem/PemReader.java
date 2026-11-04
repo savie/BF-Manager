@@ -6,15 +6,15 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import l.C15489;
-import l.C16523;
-import l.C8824;
-import l.InterfaceC5046;
-import l.InterfaceC8118;
+import l.C1012;
+import l.C14442;
+import l.C14483;
+import l.InterfaceC18911;
+import l.InterfaceC20670;
 import org.bouncycastle.util.encoders.Base64;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class PemReader extends BufferedReader implements InterfaceC8118 {
+public class PemReader extends BufferedReader implements InterfaceC18911 {
     public static final String BEGIN = "-----BEGIN ";
     public static final String END = "-----END ";
     public static final String LAX_PEM_PARSING_SYSTEM_PROPERTY_NAME = "org.bouncycastle.pemreader.lax";
@@ -26,7 +26,7 @@ public class PemReader extends BufferedReader implements InterfaceC8118 {
 
     private PemObject loadObject(String str) throws IOException {
         String line;
-        String strM38890 = C16523.m38890(END, str, "-----");
+        String strM34865 = C14442.m34865(END, str, "-----");
         StringBuffer stringBuffer = new StringBuffer();
         ArrayList arrayList = new ArrayList();
         while (true) {
@@ -49,7 +49,7 @@ public class PemReader extends BufferedReader implements InterfaceC8118 {
                     }
                     line = strTrim;
                 }
-                if (line.indexOf(strM38890) == 0) {
+                if (line.indexOf(strM34865) == 0) {
                     break;
                 }
                 stringBuffer.append(line.trim());
@@ -58,12 +58,12 @@ public class PemReader extends BufferedReader implements InterfaceC8118 {
         if (line != null) {
             return new PemObject(str, arrayList, Base64.decode(stringBuffer.toString()));
         }
-        throw new IOException(C15489.m37076(strM38890, " not found"));
+        throw new IOException(C14483.m34972(strM34865, " not found"));
     }
 
-    @Override // java.io.BufferedReader, l.InterfaceC8118
-    public /* synthetic */ InterfaceC5046 lines() {
-        return C8824.lines(this);
+    @Override // java.io.BufferedReader, l.InterfaceC18911
+    public /* synthetic */ InterfaceC20670 lines() {
+        return C1012.lines(this);
     }
 
     public PemObject readPemObject() throws IOException {

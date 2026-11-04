@@ -1,70 +1,94 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۡܰ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D70T */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8930 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.۠᩸᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7FA */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8930 implements InterfaceC3359 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f30619;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f30620;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final ArrayList f29125 = new ArrayList();
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C19513 f30621;
+    public final ArrayList f29124 = new ArrayList();
 
-    public C8930(C19513 c19513, int i, long j) {
-        this.f30621 = c19513;
-        this.f30619 = i;
-        this.f30620 = j;
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ᩸ */
+    public final /* synthetic */ boolean mo6416() {
+        return true;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C8930)) {
-            return false;
-        }
-        C8930 c8930 = (C8930) obj;
-        return this.f30619 == c8930.f30619 && this.f30620 == c8930.f30620 && C13638.equals(this.f30621, c8930.f30621);
-    }
-
-    public final int hashCode() {
-        int i = this.f30619 * 31;
-        long j = this.f30620;
-        return C13638.hashCode(this.f30621) + ((i + ((int) (j ^ (j >>> 32)))) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f30621, Integer.valueOf(this.f30619), Long.valueOf(this.f30620)};
-        String[] strArrSplit = "ownerSetKey;occurrenceBytes;savingBytes".length() == 0 ? new String[0] : "ownerSetKey;occurrenceBytes;savingBytes".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C8930.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public C8930(Set set, final Function function, final C20864 c20864) {
+        C17359.requireNonNull(set);
+        C4937.forEach(set, new Consumer() { // from class: l.ۖ᩸᩺
+            public /* synthetic */ Consumer andThen(Consumer consumer) {
+                return C12312.$default$andThen(this, consumer);
             }
+
+            @Override // java.util.function.Consumer
+            public final void accept(Object obj) {
+                C7660 c7660;
+                C7110 c7110 = (C7110) obj;
+                boolean zMo4218 = c7110.mo4218();
+                C8930 c8930 = this.f9651;
+                Function function2 = function;
+                if (!zMo4218) {
+                    c8930.f29125.add((C7660) function2.apply(c7110));
+                    return;
+                }
+                ArrayList arrayList = c8930.f29124;
+                C7660 c7661 = (C7660) function2.apply(c7110);
+                Integer numValueOf = Integer.valueOf(((C1144) c7110).m4217());
+                C5268 c5268 = (C5268) c7110;
+                if (c5268.m15858() == null) {
+                    c7660 = null;
+                } else {
+                    c7660 = (C7660) c20864.apply(c5268.m15858());
+                }
+                arrayList.add(new C7008(c7661, numValueOf, c7660));
+            }
+        });
+    }
+
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        ArrayList arrayList = this.f29125;
+        if (arrayList.isEmpty()) {
+            ArrayList<C7008> arrayList2 = this.f29124;
+            C11388 c11388 = (C11388) interfaceC9397;
+            c11388.m28740(arrayList2.size());
+            for (C7008 c7008 : arrayList2) {
+                c11388.m28740(((C7660) c7008.f61428).f67820);
+                c11388.m28740(((Integer) c7008.f61429).intValue());
+                Object obj = c7008.f23101;
+                c11388.m28740(obj == null ? 0 : ((C7660) obj).f67820);
+            }
+            return;
         }
-        sb.append("]");
-        return sb.toString();
+        C11388 c11389 = (C11388) interfaceC9397;
+        c11389.m28740(arrayList.size());
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            c11389.m28740(((C7660) it.next()).f67820);
+        }
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long m23219() {
-        return this.f30620;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m23220() {
-        return this.f30619;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C19513 m23221() {
-        return this.f30621;
+    @Override // l.InterfaceC3359
+    public final int getLength() {
+        int size;
+        ArrayList arrayList = this.f29125;
+        if (arrayList.isEmpty()) {
+            size = this.f29124.size() * 6;
+        } else {
+            size = arrayList.size() * 2;
+        }
+        return size + 2;
     }
 }

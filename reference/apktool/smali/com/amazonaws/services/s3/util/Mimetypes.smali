@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+.field public static ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
 
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
@@ -24,12 +24,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/util/Mimetypes;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/util/Mimetypes;->᩷:Lcom/amazonaws/logging/Log;
 
     const/4 v0, 0x0
 
     .line 65
-    sput-object v0, Lcom/amazonaws/services/s3/util/Mimetypes;->ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+    sput-object v0, Lcom/amazonaws/services/s3/util/Mimetypes;->ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
 
     return-void
 .end method
@@ -1209,7 +1209,7 @@
 
     .line 267
     :try_start_0
-    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1227,10 +1227,10 @@
 
     invoke-direct {v1}, Lcom/amazonaws/services/s3/util/Mimetypes;-><init>()V
 
-    sput-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+    sput-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
 
     .line 271
-    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ܰ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->᩷:Lcom/amazonaws/logging/Log;
 
     invoke-interface {v1}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -1239,7 +1239,7 @@
     if-eqz v1, :cond_1
 
     .line 272
-    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
 
     iget-object v1, v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۙ:Ljava/util/HashMap;
 
@@ -1266,7 +1266,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 274
-    sget-object v4, Lcom/amazonaws/services/s3/util/Mimetypes;->ܰ:Lcom/amazonaws/logging/Log;
+    sget-object v4, Lcom/amazonaws/services/s3/util/Mimetypes;->᩷:Lcom/amazonaws/logging/Log;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1300,13 +1300,13 @@
     move-result-object v3
 
     .line 274
-    invoke-interface {v4, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v4, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 278
     :cond_1
-    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۨ:Lcom/amazonaws/services/s3/util/Mimetypes;
+    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ۤ:Lcom/amazonaws/services/s3/util/Mimetypes;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1343,7 +1343,7 @@
     move-result v0
 
     .line 342
-    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->ܰ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/util/Mimetypes;->᩷:Lcom/amazonaws/logging/Log;
 
     if-lez v0, :cond_2
 
@@ -1394,12 +1394,12 @@
     const-string v4, "Recognised extension \'"
 
     .line 0
-    invoke-static {v4, p1, v2, v0, v3}, Ll/֡ۜۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, p1, v2, v0, v3}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 347
-    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_0
     return-object v0
@@ -1429,7 +1429,7 @@
 
     move-result-object p1
 
-    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1448,7 +1448,7 @@
 
     move-result-object p1
 
-    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_3
     :goto_0

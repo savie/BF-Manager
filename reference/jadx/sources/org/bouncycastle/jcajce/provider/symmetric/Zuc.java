@@ -1,8 +1,8 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C23234;
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.Zuc128Engine;
 import org.bouncycastle.crypto.engines.Zuc256Engine;
@@ -14,10 +14,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseStreamCipher;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Zuc {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -37,7 +36,6 @@ public class Zuc {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = Zuc.class.getName();
 
@@ -45,47 +43,41 @@ public class Zuc {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ZucMac256", "Mac.ZUC-256", C9023.m23357(str, "$ZucMac128", "Mac.ZUC-128", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.ZUC-256", C9023.m23357(str, "$KeyGen256", "KeyGenerator.ZUC-256", C9023.m23357(str, "$Zuc256", "Cipher.ZUC-256", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.ZUC-128", C9023.m23357(str, "$KeyGen128", "KeyGenerator.ZUC-128", C9023.m23357(str, "$Zuc128", "Cipher.ZUC-128", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
-            configurableProvider.addAlgorithm("Mac.ZUC-256-32", C23234.m51270("Mac.ZUC-256-64", C23234.m51270("Alg.Alias.Mac.ZUC-256-128", "ZUC-256", str, "$ZucMac256_64", configurableProvider), str, "$ZucMac256_32", configurableProvider));
+            C8947.m23913(str, "$ZucMac256", "Mac.ZUC-256", C18063.m42089(str, "$ZucMac128", "Mac.ZUC-128", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.ZUC-256", C18063.m42089(str, "$KeyGen256", "KeyGenerator.ZUC-256", C18063.m42089(str, "$Zuc256", "Cipher.ZUC-256", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.ZUC-128", C18063.m42089(str, "$KeyGen128", "KeyGenerator.ZUC-128", C18063.m42089(str, "$Zuc128", "Cipher.ZUC-128", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            configurableProvider.addAlgorithm("Mac.ZUC-256-32", C18176.m42346("Mac.ZUC-256-64", C18176.m42346("Alg.Alias.Mac.ZUC-256-128", "ZUC-256", str, "$ZucMac256_64", configurableProvider), str, "$ZucMac256_32", configurableProvider));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Zuc128 extends BaseStreamCipher {
         public Zuc128() {
             super(new Zuc128Engine(), 16, 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Zuc256 extends BaseStreamCipher {
         public Zuc256() {
             super(new Zuc256Engine(), 25, 256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ZucMac128 extends BaseMac {
         public ZucMac128() {
             super(new Zuc128Mac());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ZucMac256 extends BaseMac {
         public ZucMac256() {
             super(new Zuc256Mac(128));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ZucMac256_32 extends BaseMac {
         public ZucMac256_32() {
             super(new Zuc256Mac(32));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ZucMac256_64 extends BaseMac {
         public ZucMac256_64() {
             super(new Zuc256Mac(64));

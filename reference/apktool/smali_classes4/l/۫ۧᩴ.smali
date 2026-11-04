@@ -1,299 +1,146 @@
 .class public final Ll/۫ۧᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "5ATX"
 
 # interfaces
-.implements Ll/۟ܳᩴ;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public a:J
+.field public final ܰ:Ll/ۚۧᩴ;
 
-.field public final b:J
-
-.field public final c:D
-
-.field public final d:D
+.field public final ᩶:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJDD)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 904
+    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 905
-    iput-wide p1, p0, Ll/۫ۧᩴ;->a:J
+    .line 120
+    iput-object p1, p0, Ll/۫ۧᩴ;->᩶:Ljava/lang/String;
 
-    iput-wide p3, p0, Ll/۫ۧᩴ;->b:J
+    .line 121
+    new-instance p1, Ll/ۚۧᩴ;
 
-    .line 906
-    iput-wide p5, p0, Ll/۫ۧᩴ;->c:D
+    .line 146
+    invoke-direct {p1}, Ll/ۜۡ᩹;-><init>()V
 
-    iput-wide p7, p0, Ll/۫ۧᩴ;->d:D
+    .line 121
+    iput-object p1, p0, Ll/۫ۧᩴ;->ܰ:Ll/ۚۧᩴ;
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Ll/۫ۧᩴ;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/۫ۧᩴ;)Ll/ۚۧᩴ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/۫ۧᩴ;->ܰ:Ll/ۚۧᩴ;
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a()Ll/۫ۧᩴ;
-    .locals 10
-
-    .line 910
-    iget-wide v1, p0, Ll/۫ۧᩴ;->a:J
-
-    iget-wide v3, p0, Ll/۫ۧᩴ;->b:J
-
-    add-long/2addr v3, v1
-
-    const/4 v0, 0x1
-
-    ushr-long/2addr v3, v0
-
-    cmp-long v0, v3, v1
-
-    if-gtz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 912
-    :cond_0
-    new-instance v9, Ll/۫ۧᩴ;
-
-    iput-wide v3, p0, Ll/۫ۧᩴ;->a:J
-
-    iget-wide v5, p0, Ll/۫ۧᩴ;->c:D
-
-    iget-wide v7, p0, Ll/۫ۧᩴ;->d:D
-
-    move-object v0, v9
-
-    invoke-direct/range {v0 .. v8}, Ll/۫ۧᩴ;-><init>(JJDD)V
-
-    return-object v9
-.end method
-
-.method public final characteristics()I
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    const/16 v0, 0x4540
+    .line 115
+    check-cast p1, Ll/۫ۧᩴ;
 
-    return v0
+    .line 142
+    iget-object v0, p0, Ll/۫ۧᩴ;->᩶:Ljava/lang/String;
+
+    iget-object p1, p1, Ll/۫ۧᩴ;->᩶:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final estimateSize()J
-    .locals 4
+.method public final ۙ()Ljava/lang/String;
+    .locals 2
 
-    .line 916
-    iget-wide v0, p0, Ll/۫ۧᩴ;->b:J
+    .line 137
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Ll/۫ۧᩴ;->a:J
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sub-long/2addr v0, v2
+    iget-object v1, p0, Ll/۫ۧᩴ;->᩶:Ljava/lang/String;
 
-    return-wide v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
+    iget-object v1, p0, Ll/۫ۧᩴ;->ܰ:Ll/ۚۧᩴ;
 
-    .line 897
-    check-cast p1, Ljava/util/function/DoubleConsumer;
+    invoke-virtual {v1}, Ll/ۚۧᩴ;->ۙ()Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ll/۫ۧᩴ;->forEachRemaining(Ljava/util/function/DoubleConsumer;)V
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/ܶ֡ᩴ;->b(Ll/۟ܳᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final forEachRemaining(Ljava/util/function/DoubleConsumer;)V
-    .locals 9
-
-    .line 936
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 937
-    iget-wide v0, p0, Ll/۫ۧᩴ;->a:J
-
-    .line 938
-    iget-wide v2, p0, Ll/۫ۧᩴ;->b:J
-
-    cmp-long v4, v0, v2
-
-    if-gez v4, :cond_1
-
-    .line 939
-    iput-wide v2, p0, Ll/۫ۧᩴ;->a:J
-
-    .line 941
-    invoke-static {}, Ll/᩹ۧᩴ;->current()Ll/᩹ۧᩴ;
-
-    move-result-object v4
-
-    .line 943
-    :cond_0
-    iget-wide v5, p0, Ll/۫ۧᩴ;->c:D
-
-    iget-wide v7, p0, Ll/۫ۧᩴ;->d:D
-
-    invoke-virtual {v4, v5, v6, v7, v8}, Ll/᩹ۧᩴ;->a(DD)D
-
-    move-result-wide v5
-
-    invoke-interface {p1, v5, v6}, Ljava/util/function/DoubleConsumer;->accept(D)V
-
-    const-wide/16 v5, 0x1
-
-    add-long/2addr v0, v5
-
-    cmp-long v5, v0, v2
-
-    if-ltz v5, :cond_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final synthetic getComparator()Ljava/util/Comparator;
-    .locals 1
-
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getComparator(Ll/᩷ۛᩴ;)Ljava/util/Comparator;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final synthetic getExactSizeIfKnown()J
-    .locals 2
+.method public final ۙ(Ljava/util/ArrayList;I)V
+    .locals 3
 
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getExactSizeIfKnown(Ll/᩷ۛᩴ;)J
+    add-int/lit8 v0, p2, 0x1
 
-    move-result-wide v0
+    .line 125
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    move-result-object p2
 
-.method public final synthetic hasCharacteristics(I)Z
-    .locals 0
+    check-cast p2, Ljava/lang/String;
 
-    invoke-static {p0, p1}, Ll/᩸ۛᩴ;->$default$hasCharacteristics(Ll/᩷ۛᩴ;I)Z
+    .line 126
+    iget-object v1, p0, Ll/۫ۧᩴ;->ܰ:Ll/ۚۧᩴ;
 
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 897
-    check-cast p1, Ljava/util/function/DoubleConsumer;
-
-    invoke-virtual {p0, p1}, Ll/۫ۧᩴ;->tryAdvance(Ljava/util/function/DoubleConsumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/ܶ֡ᩴ;->g(Ll/۟ܳᩴ;Ljava/util/function/Consumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final tryAdvance(Ljava/util/function/DoubleConsumer;)Z
-    .locals 7
-
-    .line 925
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 926
-    iget-wide v0, p0, Ll/۫ۧᩴ;->a:J
-
-    iget-wide v2, p0, Ll/۫ۧᩴ;->b:J
-
-    cmp-long v4, v0, v2
-
-    if-gez v4, :cond_0
-
-    .line 928
-    invoke-static {}, Ll/᩹ۧᩴ;->current()Ll/᩹ۧᩴ;
+    invoke-virtual {v1, p2}, Ll/ۜۡ᩹;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    iget-wide v3, p0, Ll/۫ۧᩴ;->c:D
+    check-cast v2, Ll/۫ۧᩴ;
 
-    iget-wide v5, p0, Ll/۫ۧᩴ;->d:D
+    if-nez v2, :cond_0
 
-    invoke-virtual {v2, v3, v4, v5, v6}, Ll/᩹ۧᩴ;->a(DD)D
+    .line 128
+    new-instance v2, Ll/۫ۧᩴ;
 
-    move-result-wide v2
+    invoke-direct {v2, p2}, Ll/۫ۧᩴ;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, v2, v3}, Ljava/util/function/DoubleConsumer;->accept(D)V
+    .line 129
+    invoke-virtual {v1, p2, v2}, Ll/ۜۡ᩹;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    .line 929
-    iput-wide v0, p0, Ll/۫ۧᩴ;->a:J
-
-    const/4 p1, 0x1
-
-    return p1
-
+    .line 131
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    return p1
-.end method
+    move-result p2
 
-.method public final bridge synthetic trySplit()Ll/۟ܳᩴ;
-    .locals 1
+    if-eq v0, p2, :cond_1
 
-    .line 897
-    invoke-virtual {p0}, Ll/۫ۧᩴ;->a()Ll/۫ۧᩴ;
+    .line 132
+    invoke-virtual {v2, p1, v0}, Ll/۫ۧᩴ;->ۙ(Ljava/util/ArrayList;I)V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic trySplit()Ll/ۤۛᩴ;
-    .locals 1
-
-    .line 897
-    invoke-virtual {p0}, Ll/۫ۧᩴ;->a()Ll/۫ۧᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic trySplit()Ll/᩷ۛᩴ;
-    .locals 1
-
-    .line 897
-    invoke-virtual {p0}, Ll/۫ۧᩴ;->a()Ll/۫ۧᩴ;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_1
+    return-void
 .end method

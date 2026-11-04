@@ -1,37 +1,30 @@
 package l;
 
-import bin.mt.plus.R;
+import java.lang.reflect.Type;
 
-/* JADX INFO: renamed from: l.ۧ᩻᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: J8EC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11337 {
+/* JADX INFO: renamed from: l.ۧۗܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: GAW5 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11337 implements InterfaceC10591, InterfaceC3725 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22149 f38247;
+    public static C11337 f35710 = new C11337();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C11545 f38248;
-
-    public C11337(C11545 c11545) {
-        this.f38248 = c11545;
-        C22149 c22149 = new C22149(c11545.m28824());
-        c22149.m49138();
-        c22149.m49155();
-        this.f38247 = c22149;
+    @Override // l.InterfaceC10591
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3063(C9690 c9690, Object obj, Object obj2, Type type) {
+        String str = (String) obj;
+        C5372 c5372 = c9690.f31276;
+        if (str == null) {
+            c5372.m16046();
+        } else {
+            c5372.m16047(str);
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28402(C6397 c6397) {
-        String name = c6397.getName();
-        C22149 c22149 = this.f38247;
-        c22149.m49151(name, (ViewOnLongClickListenerC10944) null);
-        c22149.m49142(R.string.MT_Protector, c6397.m17543().getName());
-        if (c6397.getSize() != -1) {
-            c22149.m49157(c6397.getSize()).m9599(8);
-        }
-        c22149.m49144(c6397.m17544());
-        c22149.m49159();
-        C23519.m51792(c22149.m49160(), this.f38248, c6397);
+    @Override // l.InterfaceC3725
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo12124(C2759 c2759, Type type, Object obj) {
+        return c2759.m9119();
     }
 }

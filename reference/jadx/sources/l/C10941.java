@@ -1,39 +1,53 @@
 package l;
 
-import java.io.IOException;
-import java.nio.channels.AsynchronousFileChannel;
-import java.nio.channels.Channel;
+import java.util.AbstractSet;
+import java.util.Iterator;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۧۤᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۤܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O2OZ */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10941 implements Channel {
-    public static final InterfaceC20030[] b = new InterfaceC20030[0];
-    public final /* synthetic */ AsynchronousFileChannel a;
+public final class C10941 extends AbstractSet {
 
-    @Override // java.nio.channels.Channel, java.io.Closeable, java.lang.AutoCloseable
-    public final /* synthetic */ void close() throws IOException {
-        this.a.close();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15416 f34600;
+
+    public C10941(C15416 c15416) {
+        this.f34600 = c15416;
     }
 
-    public final /* synthetic */ boolean equals(Object obj) {
-        AsynchronousFileChannel asynchronousFileChannel = this.a;
-        if (obj instanceof C10941) {
-            obj = ((C10941) obj).a;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f34600.size();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.f34600.containsKey(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean remove(Object obj) {
+        C15416 c15416 = this.f34600;
+        Map mapM36914 = c15416.m36914();
+        if (mapM36914 != null) {
+            return mapM36914.keySet().remove(obj);
         }
-        return asynchronousFileChannel.equals(obj);
+        return c15416.m36910(obj) != C15416.f50234;
     }
 
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f34600.clear();
     }
 
-    @Override // java.nio.channels.Channel
-    public final /* synthetic */ boolean isOpen() {
-        return this.a.isOpen();
-    }
-
-    public C10941(AsynchronousFileChannel asynchronousFileChannel) {
-        this.a = asynchronousFileChannel;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        C15416 c15416 = this.f34600;
+        Map mapM36914 = c15416.m36914();
+        if (mapM36914 != null) {
+            return mapM36914.keySet().iterator();
+        }
+        return new C8836(c15416);
     }
 }

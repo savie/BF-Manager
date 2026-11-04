@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.params.NaccacheSternPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NaccacheSternEngine implements AsymmetricBlockCipher {
     public boolean forEncryption;
     public NaccacheSternKeyParameters key;

@@ -1,214 +1,202 @@
 package l;
 
-import android.net.Uri;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+/* JADX INFO: renamed from: l.ۖۙۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 12B7 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2427 extends AbstractC9980 {
 
-/* JADX INFO: renamed from: l.ۖۡ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28FF */
-/* JADX INFO: loaded from: classes2.dex */
-public class C2427 extends ArrayList implements InterfaceC6908 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ RunnableC20835 f7768;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f9731;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Boolean f9733;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final HashMap f9729 = new HashMap();
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C15070 f9732 = new C15070();
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public ArrayList f9730 = null;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public boolean mo7409() {
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void mo7412(int i, int i2) {
-    }
-
-    public C2427(int i, List list) {
-        if (list.isEmpty()) {
-            throw new IllegalArgumentException();
-        }
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            InterfaceC2557 interfaceC2557 = (InterfaceC2557) it.next();
-            String path = interfaceC2557.getPath();
-            Uri uriBuild = new Uri.Builder().scheme("mt_media").path(path).build();
-            C20348 c20348 = new C20348();
-            c20348.m45916(uriBuild);
-            c20348.m45917(interfaceC2557);
-            c20348.m45918(interfaceC2557.mo7963());
-            C13689 c13689M45915 = c20348.m45915();
-            this.f9729.put(path, c13689M45915);
-            add(c13689M45915);
-        }
-        this.f9731 = i;
-    }
-
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final void mo7405() {
-        int iM27092;
-        m7402();
-        int i = this.f9731;
-        C15070 c15070 = this.f9732;
-        if (c15070.isEmpty()) {
-            iM27092 = i - 1;
-            if (iM27092 < 0) {
-                iM27092 = size() - 1;
+    @Override // l.AbstractC9980
+    public final void onScrolled(C25227 c25227, int i, int i2) {
+        int i3 = -206974107;
+        int i4 = C2419.f7754;
+        int i5 = C2375.f7641;
+        int iM2761 = (C0619.m2761("ۤ۠") + i5) * (-41);
+        int i6 = ((iM2761 ^ i4) * (-7521)) ^ 921966694;
+        int i7 = 635452458;
+        while (true) {
+            i3 = ((((i3 ^ i4) * (-27359)) >> 31) & i6) ^ (iM2761 ^ i7);
+            switch (i3) {
+                case -1866934331:
+                case -415528954:
+                    C20932.m47848();
+                    break;
+                case -1635722536:
+                case 1842795753:
+                    if (AbstractC3624.f12429 <= 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = C0619.m2761("֨ܶ") ^ i5;
+                        i6 = ((iM2761 ^ i4) * 13307) ^ 927949971;
+                        i7 = -1967074450;
+                    }
+                    break;
+                case -1625200134:
+                case -1549256047:
+                    if (C4238.f15451 >= 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = C0773.m3169("᩵֫") ^ i5;
+                        i6 = ((iM2761 ^ i4) * 29227) ^ 1771134049;
+                        i7 = 1845448457;
+                    }
+                    break;
+                case -1519784640:
+                case -486718794:
+                    if (C2375.f7641 <= 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = C0619.m2761("ۤۗ") ^ i4;
+                        i6 = ((iM2761 ^ i5) * (-9355)) ^ 2008950241;
+                        i7 = -202484797;
+                    }
+                    break;
+                case -1418334100:
+                case -232399078:
+                    if (C2419.f7754 < 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = (C0619.m2761("ᩴۘ") ^ i5) * (-83);
+                        i6 = ((iM2761 ^ i4) * 32473) ^ (-1748076712);
+                        i7 = -1936149284;
+                    }
+                    break;
+                case -1173156361:
+                case 1590511152:
+                    C2966.m9664();
+                    iM2761 = (C0619.m2761("ᩴۘ") ^ i5) * (-83);
+                    i6 = ((iM2761 ^ i4) * 32473) ^ (-1748076712);
+                    i7 = -1936149284;
+                    break;
+                case -886624637:
+                case -94108375:
+                    if (C3779.f12953 <= 0) {
+                        iM2761 = C0619.m2761("۬ᩴ") ^ i4;
+                        i6 = ((iM2761 ^ i5) * (-24609)) ^ 839690156;
+                        i7 = 1886329908;
+                    } else {
+                        iM2761 = (C0619.m2761("ۜܺ") ^ i5) * 75;
+                        i6 = ((iM2761 ^ i4) * (-15665)) ^ (-293231937);
+                        i7 = -539224229;
+                    }
+                    break;
+                case -526104576:
+                case 1779892670:
+                    this.f7768.run();
+                    break;
+                case -189055909:
+                case 2073644602:
+                    if (C3690.f12684 <= 0) {
+                        iM2761 = (C0619.m2761("ܳۧ") + i5) * 67;
+                        i6 = ((iM2761 ^ i4) * (-21849)) ^ (-1980783224);
+                        i7 = -493787971;
+                    } else {
+                        iM2761 = (i4 - C0619.m2761("֨ۚ")) * 79;
+                        i6 = ((iM2761 ^ i5) * 27137) ^ (-1836107896);
+                        i7 = -411563649;
+                    }
+                    break;
+                case -132633418:
+                case 441913535:
+                    C3779.m12264();
+                    if (C1519.f5300 >= 0) {
+                        iM2761 = (C0619.m2761("ܳۧ") + i5) * 67;
+                        i6 = ((iM2761 ^ i4) * (-21849)) ^ (-1980783224);
+                        i7 = -493787971;
+                    } else {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    }
+                    break;
+                case -71005865:
+                case 1837113486:
+                    if (C2375.f7641 <= 0) {
+                        iM2761 = C0619.m2761("۬ᩴ") ^ i4;
+                        i6 = ((iM2761 ^ i5) * (-24609)) ^ 839690156;
+                        i7 = 1886329908;
+                    } else {
+                        iM2761 = C0773.m3169("۫ܶ") ^ i5;
+                        i6 = ((iM2761 ^ i4) * (-28823)) ^ (-1379637135);
+                        i7 = 1895188707;
+                    }
+                    break;
+                case -31526503:
+                case 1538418565:
+                    if (C2023.f6737) {
+                        iM2761 = (C0773.m3169("ܽܺ") + i4) * 7;
+                        i6 = ((iM2761 ^ i5) * (-22421)) ^ (-649590770);
+                        i7 = 272191613;
+                    } else {
+                        iM2761 = C0619.m2761("֡ۜ") ^ i4;
+                        i6 = ((iM2761 ^ i5) * (-24987)) ^ (-1685323485);
+                        i7 = 391519531;
+                    }
+                    break;
+                case 69730609:
+                case 1706458456:
+                    if (C2310.f7472 >= 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = (C0619.m2761("ۗۗ") + i4) * (-23);
+                        i6 = ((iM2761 ^ i5) * (-30749)) ^ (-1270093596);
+                        i7 = -1477848240;
+                    }
+                    break;
+                case 185245129:
+                case 1961653850:
+                    C1080.m4050();
+                    if (C1519.f5300 < 0) {
+                        iM2761 = (C0773.m3169("ܽܺ") + i4) * 7;
+                        i6 = ((iM2761 ^ i5) * (-22421)) ^ (-649590770);
+                        i7 = 272191613;
+                    } else {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    }
+                    break;
+                case 421716646:
+                case 612047600:
+                    if (C0269.f1558 <= 0) {
+                        iM2761 = (C0773.m3169("۫ۜ") ^ i4) * 19;
+                        i6 = ((iM2761 ^ i5) * (-2389)) ^ 625528495;
+                        i7 = 2115658353;
+                    } else {
+                        iM2761 = (i4 - C0773.m3169("֨ۜ")) * 99;
+                        i6 = ((iM2761 ^ i5) * 31259) ^ (-111395437);
+                        i7 = 1013802859;
+                    }
+                    break;
+                default:
+                    if (C2288.f7433 <= 0) {
+                        iM2761 = C0619.m2761("۬ᩴ") ^ i4;
+                        i6 = ((iM2761 ^ i5) * (-24609)) ^ 839690156;
+                        i7 = 1886329908;
+                    } else {
+                        iM2761 = (i5 - C0619.m2761("ܺۨ")) * (-111);
+                        i6 = ((iM2761 ^ i4) * (-11877)) ^ (-483790827);
+                        i7 = -1287288645;
+                    }
+                    break;
             }
-        } else {
-            iM27092 = c15070.m27092();
-        }
-        m7404(iM27092);
-        mo7412(i, iM27092);
-    }
-
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final void mo7411() {
-        int iIntValue;
-        m7402();
-        if (size() == 1) {
             return;
         }
-        int i = this.f9731;
-        int size = size();
-        C15070 c15070 = this.f9732;
-        int i2 = 0;
-        if (c15070.isEmpty() || c15070.getInt(c15070.size() - 1) != i) {
-            c15070.add(i);
-            if (c15070.size() > 100) {
-                c15070.mo3180(0);
-            }
-        }
-        if (mo7409()) {
-            ArrayList arrayList = this.f9730;
-            if (arrayList == null) {
-                this.f9730 = new ArrayList(size - 1);
-                for (int i3 = 0; i3 < size; i3++) {
-                    if (i3 != i) {
-                        this.f9730.add(Integer.valueOf(i3));
-                    }
-                }
-                Collections.shuffle(this.f9730);
-            } else if (arrayList.isEmpty()) {
-                for (int i4 = 0; i4 < size; i4++) {
-                    this.f9730.add(Integer.valueOf(i4));
-                }
-                Collections.shuffle(this.f9730);
-                if (((Integer) this.f9730.get(0)).intValue() == i) {
-                    this.f9730.remove(0);
-                    this.f9730.add(Integer.valueOf(i));
-                }
-            }
-            iIntValue = ((Integer) this.f9730.get(0)).intValue();
-            this.f9730.remove(0);
-        } else {
-            iIntValue = i + 1;
-            if (iIntValue < size) {
-            }
-            m7404(i2);
-            mo7412(i, i2);
-        }
-        i2 = iIntValue;
-        m7404(i2);
-        mo7412(i, i2);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m7407(int i) {
-        m7402();
-        int i2 = this.f9731;
-        if (i != i2) {
-            C15070 c15070 = this.f9732;
-            if (c15070.isEmpty() || c15070.getInt(c15070.size() - 1) != i2) {
-                c15070.add(i2);
-                if (c15070.size() > 100) {
-                    c15070.mo3180(0);
-                }
-            }
-            this.f9730 = null;
-            m7404(i);
-            mo7412(i2, i);
-        }
-    }
-
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean mo7408() {
-        m7402();
-        if (mo7409()) {
-            ArrayList arrayList = this.f9730;
-            if (arrayList == null || !arrayList.isEmpty()) {
-                return false;
-            }
-        } else if (this.f9731 != size() - 1) {
-            return false;
-        }
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    private void m7402() {
-        boolean zMo7409 = mo7409();
-        Boolean bool = this.f9733;
-        if (bool == null || bool.booleanValue() != zMo7409) {
-            this.f9730 = null;
-            this.f9733 = Boolean.valueOf(zMo7409);
-        }
-    }
-
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int mo7403() {
-        return this.f9731;
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC2557 mo7410() {
-        return m7401((C13689) get(this.f9731));
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // l.InterfaceC6908
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C13689 mo7413() {
-        return (C13689) get(this.f9731);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m7404(int i) {
-        if (i < 0 || i >= size()) {
-            throw new IndexOutOfBoundsException();
-        }
-        this.f9731 = i;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13689 m7406(String str) {
-        return (C13689) this.f9729.get(str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC2557 m7401(C13689 c13689) {
-        C14704 c14704 = c13689.f45157;
-        C13638.requireNonNull(c14704);
-        Object obj = c14704.f48035;
-        C13638.requireNonNull(obj);
-        return (InterfaceC2557) obj;
+    public C2427(RunnableC20835 runnableC20835) {
+        this.f7768 = runnableC20835;
     }
 }

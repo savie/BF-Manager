@@ -75,12 +75,12 @@
     .locals 1
 
     .line 170
-    sget v0, Ll/ᩴ۟ܶ;->۫ۧ:I
+    sget v0, Ll/ۘ۬ܺ;->۟֨:I
 
     sput v0, Lcom/google/android/material/badge/BadgeDrawable;->DEFAULT_STYLE:I
 
     .line 171
-    sget v0, Ll/ۖ۟ܶ;->۠ܰ:I
+    sget v0, Ll/ۧ۬ܺ;->ۗ᩷:I
 
     sput v0, Lcom/google/android/material/badge/BadgeDrawable;->DEFAULT_THEME_ATTR:I
 
@@ -635,7 +635,7 @@
     if-eq v1, v2, :cond_7
 
     .line 1318
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p2}, Landroid/view/View;->getLayoutDirection()I
@@ -680,7 +680,7 @@
 
     .line 1310
     :cond_7
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p2}, Landroid/view/View;->getLayoutDirection()I
@@ -1050,7 +1050,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/ᩳ۟ܶ;->ۖۨ:I
+    sget v2, Ll/᩺۬ܺ;->᩸ۤ:I
 
     .line 1504
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1335,7 +1335,7 @@
     move-result-object v0
 
     .line 1482
-    sget v1, Ll/ᩳ۟ܶ;->۟ۙ:I
+    sget v1, Ll/᩺۬ܺ;->᩺ۙ:I
 
     .line 1483
     invoke-virtual {v2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1620,7 +1620,7 @@
 
     move-result v0
 
-    sget v1, Ll/ۘ۟ܶ;->᩺᩹:I
+    sget v1, Ll/᩹۬ܺ;->᩻ܳ:I
 
     if-ne v0, v1, :cond_0
 
@@ -2077,7 +2077,7 @@
 
     move-result v1
 
-    sget v2, Ll/ۘ۟ܶ;->᩺᩹:I
+    sget v2, Ll/᩹۬ܺ;->᩻ܳ:I
 
     if-eq v1, v2, :cond_1
 
@@ -2110,7 +2110,7 @@
     invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 425
-    sget v2, Ll/ۘ۟ܶ;->᩺᩹:I
+    sget v2, Ll/᩹۬ܺ;->᩻ܳ:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 

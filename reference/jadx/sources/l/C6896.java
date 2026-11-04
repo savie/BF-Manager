@@ -1,53 +1,94 @@
 package l;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.nio.file.attribute.FileTime;
+import java.nio.file.attribute.GroupPrincipal;
+import java.nio.file.attribute.PosixFileAttributes;
+import java.nio.file.attribute.UserPrincipal;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۜܽ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q1UG */
+/* JADX INFO: renamed from: l.ۜۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6896 extends AbstractC21803 implements InterfaceC21733 {
+public final /* synthetic */ class C6896 implements PosixFileAttributes {
+    public final /* synthetic */ InterfaceC10624 a;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC10425 f23217;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2662 f23218;
-
-    public C6896(AbstractC10425 abstractC10425, C2662 c2662) {
-        super(2);
-        this.f23217 = abstractC10425;
-        this.f23218 = c2662;
+    public /* synthetic */ C6896(InterfaceC10624 interfaceC10624) {
+        this.a = interfaceC10624;
     }
 
-    @Override // l.AbstractC21803
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4483(AbstractC6066 abstractC6066) {
-        String strMo15749;
-        String strM39114 = abstractC6066.m39114();
-        if (C1791.m5871(strM39114)) {
-            return;
-        }
-        C2662 c2662 = this.f23218;
-        AbstractC11836 abstractC11836 = C13953.f45909;
-        Map map = (Map) c2662.get(abstractC11836);
-        if (map == null) {
-            map = new HashMap();
-            c2662.put(abstractC11836, map);
-        }
-        if (m18509(abstractC6066) == null) {
-            AbstractC10425 abstractC10425 = this.f23217;
-            abstractC10425.mo15751();
-            do {
-                strMo15749 = abstractC10425.mo15749();
-            } while (map.containsKey(strMo15749));
-            map.put(strMo15749, strM39114);
-            C15364.m36802(abstractC6066).mo2194(strMo15749);
-        }
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ FileTime creationTime() {
+        return AbstractC1758.o(this.a.creationTime());
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m18509(AbstractC6066 abstractC6066) {
-        return (String) C15364.m36802(abstractC6066).mo2192();
+    public final /* synthetic */ boolean equals(Object obj) {
+        InterfaceC10624 interfaceC10624 = this.a;
+        if (obj instanceof C6896) {
+            obj = ((C6896) obj).a;
+        }
+        return interfaceC10624.equals(obj);
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ Object fileKey() {
+        return this.a.fileKey();
+    }
+
+    @Override // java.nio.file.attribute.PosixFileAttributes
+    public final /* synthetic */ GroupPrincipal group() {
+        C9132 c9132Group = this.a.group();
+        if (c9132Group == null) {
+            return null;
+        }
+        return c9132Group.a;
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ boolean isDirectory() {
+        return this.a.isDirectory();
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ boolean isOther() {
+        return this.a.isOther();
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ boolean isRegularFile() {
+        return this.a.isRegularFile();
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ boolean isSymbolicLink() {
+        return this.a.isSymbolicLink();
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ FileTime lastAccessTime() {
+        return AbstractC1758.o(this.a.lastAccessTime());
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ FileTime lastModifiedTime() {
+        return AbstractC1758.o(this.a.lastModifiedTime());
+    }
+
+    @Override // java.nio.file.attribute.PosixFileAttributes
+    public final /* synthetic */ UserPrincipal owner() {
+        return C15099.a(this.a.owner());
+    }
+
+    @Override // java.nio.file.attribute.PosixFileAttributes
+    public final /* synthetic */ Set permissions() {
+        return AbstractC1758.v(this.a.permissions());
+    }
+
+    @Override // java.nio.file.attribute.BasicFileAttributes
+    public final /* synthetic */ long size() {
+        return this.a.size();
     }
 }

@@ -3,13 +3,13 @@ package net.sf.sevenzipjbinding;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import l.C0219;
-import l.C12800;
-import l.C15489;
-import l.C3626;
-import l.EnumC19730;
+import l.C0716;
+import l.C14483;
+import l.C22121;
+import l.C8174;
+import l.EnumC7687;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SevenZipException extends IOException {
     public static final String NEW_LINE = System.getProperty("line.separator");
     public static final long serialVersionUID = 42;
@@ -76,19 +76,19 @@ public class SevenZipException extends IOException {
         }
         Throwable cause = getCause();
         if (cause != null) {
-            C0219.m1594(sb, NEW_LINE, str, "Caused by (first thrown): ");
+            C22121.m50078(sb, NEW_LINE, str, "Caused by (first thrown): ");
             printMessageToStringBuilder(str, sb, cause);
         }
         if (this.causeLastThrown != null) {
-            C0219.m1594(sb, NEW_LINE, str, "Caused by (last thrown): ");
+            C22121.m50078(sb, NEW_LINE, str, "Caused by (last thrown): ");
             printMessageToStringBuilder(str, sb, this.causeLastThrown);
         }
         if (this.causeFirstPotentialThrown != null) {
-            C0219.m1594(sb, NEW_LINE, str, "Caused by (first potential thrown): ");
+            C22121.m50078(sb, NEW_LINE, str, "Caused by (first potential thrown): ");
             printMessageToStringBuilder(str, sb, this.causeFirstPotentialThrown);
         }
         if (this.causeLastPotentialThrown != null) {
-            C0219.m1594(sb, NEW_LINE, str, "Caused by (last potential thrown): ");
+            C22121.m50078(sb, NEW_LINE, str, "Caused by (last potential thrown): ");
             printMessageToStringBuilder(str, sb, this.causeLastPotentialThrown);
         }
     }
@@ -97,7 +97,7 @@ public class SevenZipException extends IOException {
         sb.append(th.getClass().getCanonicalName());
         sb.append(": ");
         if (th instanceof SevenZipException) {
-            ((SevenZipException) th).printToStringBuilder(C15489.m37076(str, EnumC19730.f63352), sb, false);
+            ((SevenZipException) th).printToStringBuilder(C14483.m34972(str, EnumC7687.f25319), sb, false);
         } else {
             sb.append(th.getMessage());
         }
@@ -109,7 +109,7 @@ public class SevenZipException extends IOException {
 
     public void printStackTraceExtended(PrintStream printStream) {
         synchronized (printStream) {
-            printStackTraceToPrintWriter(new PrintWriter(new C12800(printStream)), this, null);
+            printStackTraceToPrintWriter(new PrintWriter(new C0716(printStream)), this, null);
         }
     }
 
@@ -133,18 +133,18 @@ public class SevenZipException extends IOException {
         }
         printWriter.println("+------ SevenZipException with multiple 'cause by' exceptions. Stacktraces for all involved exceptions:");
         printWriter.println("+-- The SevenZipException itself with first thrown 'cause by' exception (first cause): ");
-        printStackTraceRecursive(new PrintWriter(new C3626(printWriter, "  FIRST THROWN CAUSE ")), sevenZipException, th);
+        printStackTraceRecursive(new PrintWriter(new C8174(printWriter, "  FIRST THROWN CAUSE ")), sevenZipException, th);
         if (sevenZipException.causeLastThrown != null) {
             printWriter.println("+-- Last thrown 'cause by' exception (last cause): ");
-            printStackTraceOfThrowable(new PrintWriter(new C3626(printWriter, "  LAST THROWN CAUSE ")), sevenZipException.causeLastThrown, sevenZipException);
+            printStackTraceOfThrowable(new PrintWriter(new C8174(printWriter, "  LAST THROWN CAUSE ")), sevenZipException.causeLastThrown, sevenZipException);
         }
         if (sevenZipException.causeFirstPotentialThrown != null) {
             printWriter.println("+-- First thrown potential 'cause by' exception, thrown in an other thread (first possible cause): ");
-            printStackTraceOfThrowable(new PrintWriter(new C3626(printWriter, "  FIRST THROWN POTENTIAL CAUSE ")), sevenZipException.causeFirstPotentialThrown, sevenZipException);
+            printStackTraceOfThrowable(new PrintWriter(new C8174(printWriter, "  FIRST THROWN POTENTIAL CAUSE ")), sevenZipException.causeFirstPotentialThrown, sevenZipException);
         }
         if (sevenZipException.causeLastPotentialThrown != null) {
             printWriter.println("+-- Last thrown potential 'cause by' exception, thrown in an other thread (last possible cause): ");
-            printStackTraceOfThrowable(new PrintWriter(new C3626(printWriter, "  LAST THROWN POTENTIAL CAUSE ")), sevenZipException.causeLastPotentialThrown, sevenZipException);
+            printStackTraceOfThrowable(new PrintWriter(new C8174(printWriter, "  LAST THROWN POTENTIAL CAUSE ")), sevenZipException.causeLastPotentialThrown, sevenZipException);
         }
         printWriter.println("+------ End of stacktrace of SevenZipException with multiple 'cause by' exceptions");
     }

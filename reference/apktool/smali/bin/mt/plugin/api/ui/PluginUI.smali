@@ -12,9 +12,9 @@
     .locals 1
 
     .line 313
-    new-instance v0, Ll/ܳ᩹ۘ;
+    new-instance v0, Ll/ۛۛ֫;
 
-    invoke-direct {v0}, Ll/ܳ᩹ۘ;-><init>()V
+    invoke-direct {v0}, Ll/ۛۛ֫;-><init>()V
 
     sput-object v0, Lbin/mt/plugin/api/ui/PluginUI;->DEFAULT_STYLE:Lbin/mt/plugin/api/ui/PluginUI$Style;
 

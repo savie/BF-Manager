@@ -18,7 +18,7 @@ import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECNRSigner implements DSAExt {
     public boolean forSigning;
     public ECKeyParameters key;

@@ -16,7 +16,7 @@ import org.bouncycastle.asn1.DERBMPString;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.jce.interfaces.PKCS12BagAttributeCarrier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12BagAttributeCarrierImpl implements PKCS12BagAttributeCarrier {
     public Hashtable pkcs12Attributes;
     public Vector pkcs12Ordering;

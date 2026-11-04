@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.DefaultBufferedBlockCipher;
 import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OldCTSBlockCipher extends DefaultBufferedBlockCipher {
     public int blockSize;
 

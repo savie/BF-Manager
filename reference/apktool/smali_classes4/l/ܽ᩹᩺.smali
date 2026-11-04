@@ -1,58 +1,37 @@
-.class public final synthetic Ll/ܽ᩹᩺;
+.class public final Ll/ܽ᩹᩺;
 .super Ljava/lang/Object;
-.source "H1KB"
-
-# interfaces
-.implements Ljava/util/function/IntPredicate;
+.source "C1RH"
 
 
-# virtual methods
-.method public synthetic and(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
-    .locals 0
+# instance fields
+.field public ۙ:I
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩺᩻ᩴ;->$default$and(Ljava/util/function/IntPredicate;Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+.field public final ۤ:[I
 
-    move-result-object p1
+.field public final ᩷:[I
 
-    return-object p1
-.end method
 
-.method public synthetic negate()Ljava/util/function/IntPredicate;
+# direct methods
+.method public constructor <init>(I)V
     .locals 1
 
-    .line 0
-    invoke-static {p0}, Ll/᩺᩻ᩴ;->$default$negate(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+    .line 13
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
-.end method
+    .line 11
+    iput v0, p0, Ll/ܽ᩹᩺;->ۙ:I
 
-.method public synthetic or(Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
-    .locals 0
+    .line 14
+    new-array v0, p1, [I
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩺᩻ᩴ;->$default$or(Ljava/util/function/IntPredicate;Ljava/util/function/IntPredicate;)Ljava/util/function/IntPredicate;
+    iput-object v0, p0, Ll/ܽ᩹᩺;->ۤ:[I
 
-    move-result-object p1
+    .line 15
+    new-array p1, p1, [I
 
-    return-object p1
-.end method
+    iput-object p1, p0, Ll/ܽ᩹᩺;->᩷:[I
 
-.method public final test(I)Z
-    .locals 1
-
-    const/4 v0, -0x1
-
-    if-eq p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

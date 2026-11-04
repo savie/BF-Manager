@@ -4,7 +4,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.engines.Zuc128CoreEngine;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Zuc128Mac implements Mac {
     public static final int TOPBIT = 128;
     public int theByteIndex;

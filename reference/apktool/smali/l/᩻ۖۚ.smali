@@ -1,283 +1,635 @@
 .class public final Ll/᩻ۖۚ;
-.super Ll/ܿᩴܶ;
-.source "J7R3"
+.super Ljava/lang/Object;
+.source "I73O"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final ۖ:Ljava/lang/String;
+.field public ֡:Ll/ۧۖۚ;
 
-.field public final ۙ:Ljava/lang/String;
+.field public ܰ:Z
 
-.field public final ۚ:Ljava/lang/String;
+.field public final ܿ:Ljava/util/ArrayList;
 
-.field public final ۨ:Ll/ۧۧ;
-
-.field public final ܰ:Ljava/lang/String;
+.field public ᩶:J
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ll/ۧۧ;)V
-    .locals 0
-
-    .line 405
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    .line 19
+    sget-object v0, Ll/ۧۖۚ;->ܿ:Ll/ۧۖۚ;
 
-    iput-object p2, p0, Ll/᩻ۖۚ;->ۚ:Ljava/lang/String;
+    iput-object v0, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    iput-object p3, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
+    .line 20
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p4, p0, Ll/᩻ۖۚ;->ܰ:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p5, p0, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
+    iput-object v0, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method public static bridge synthetic ۙ(Ll/᩻ۖۚ;)Ljava/lang/String;
-    .locals 0
+.method private ۚ()V
+    .locals 4
 
-    .line 0
-    iget-object p0, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
+    .line 129
+    iget-object v0, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    return-object p0
+    sget-object v1, Ll/ۧۖۚ;->֡:Ll/ۧۖۚ;
+
+    if-eq v0, v1, :cond_0
+
+    .line 130
+    iput-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
+
+    .line 131
+    iget-wide v0, p0, Ll/᩻ۖۚ;->᩶:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ll/᩻ۖۚ;->᩶:J
+
+    :cond_0
+    return-void
 .end method
 
-.method public static bridge synthetic ۨ(Ll/᩻ۖۚ;)Ljava/lang/String;
-    .locals 0
+.method private ۫()V
+    .locals 4
 
-    .line 0
-    iget-object p0, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    .line 121
+    iget-object v0, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    return-object p0
-.end method
+    sget-object v1, Ll/ۧۖۚ;->᩶:Ll/ۧۖۚ;
 
-.method public static bridge synthetic ܰ(Ll/᩻ۖۚ;)Ll/ۧۧ;
-    .locals 0
+    if-eq v0, v1, :cond_0
 
-    .line 0
-    iget-object p0, p0, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
+    .line 122
+    iput-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    return-object p0
+    .line 123
+    iget-wide v0, p0, Ll/᩻ۖۚ;->᩶:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ll/᩻ۖۚ;->᩶:J
+
+    .line 125
+    :cond_0
+    iget-object v0, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final declared-synchronized close()V
     .locals 2
 
-    .line 405
-    instance-of v0, p1, Ll/᩻ۖۚ;
+    move-object v0, p0
 
-    if-eqz v0, :cond_0
+    .line 1
+    monitor-enter v0
 
-    check-cast p1, Ll/᩻ۖۚ;
+    .line 94
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    iget-object v1, p1, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    .line 95
+    monitor-exit v0
 
-    invoke-static {v0, v1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۚ:Ljava/lang/String;
-
-    iget-object v1, p1, Ll/᩻ۖۚ;->ۚ:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
-
-    iget-object v1, p1, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/᩻ۖۚ;->ܰ:Ljava/lang/String;
-
-    iget-object v1, p1, Ll/᩻ۖۚ;->ܰ:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
-
-    iget-object p1, p1, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
-
-    invoke-static {v0, p1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v1, 0x1
 
-    return p1
+    .line 97
+    :try_start_1
+    iput-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
+
+    .line 98
+    invoke-direct {p0}, Ll/᩻ۖۚ;->۫()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 99
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
 .end method
 
-.method public final hashCode()I
+.method public final declared-synchronized ۙ(Ll/֫ۖۚ;Ll/۫ۖۚ;)Ljava/util/List;
     .locals 3
 
-    .line 405
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    move-object v0, p0
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->hashCode(Ljava/lang/Object;)I
+    .line 1
+    monitor-enter v0
 
-    move-result v0
+    .line 37
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
 
-    const/16 v1, 0x1f
+    if-nez v1, :cond_7
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    .line 0
-    iget-object v2, p0, Ll/᩻ۖۚ;->ۚ:Ljava/lang/String;
+    sget-object v2, Ll/ۧۖۚ;->᩶:Ll/ۧۖۚ;
 
-    invoke-static {v0, v1, v2}, Ll/֡ᩴۖ;->ۙ(IILjava/lang/String;)I
+    if-ne v1, v2, :cond_0
 
-    move-result v0
+    goto :goto_1
 
-    iget-object v2, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
+    .line 40
+    :cond_0
+    sget-object v2, Ll/֫ۖۚ;->᩶:Ll/֫ۖۚ;
 
-    invoke-static {v0, v1, v2}, Ll/֡ᩴۖ;->ۙ(IILjava/lang/String;)I
+    if-ne p1, v2, :cond_1
 
-    move-result v0
+    .line 41
+    invoke-direct {p0}, Ll/᩻ۖۚ;->۫()V
 
-    iget-object v2, p0, Ll/᩻ۖۚ;->ܰ:Ljava/lang/String;
+    .line 42
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0, v1, v2}, Ll/֡ᩴۖ;->ۙ(IILjava/lang/String;)I
+    monitor-exit v0
 
-    move-result v0
+    return-object p1
 
-    .line 405
-    iget-object v1, p0, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
+    .line 44
+    :cond_1
+    :try_start_1
+    sget-object v2, Ll/֫ۖۚ;->֡:Ll/֫ۖۚ;
 
-    invoke-static {v1}, Ll/ܰۛᩴ;->hashCode(Ljava/lang/Object;)I
+    if-ne p1, v2, :cond_4
 
-    move-result v1
+    .line 45
+    invoke-direct {p0}, Ll/᩻ۖۚ;->ۚ()V
 
-    add-int/2addr v1, v0
+    if-eqz p2, :cond_2
 
-    return v1
+    .line 47
+    iget-object p1, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 111
+    :cond_2
+    iget-object p1, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    .line 112
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    goto :goto_0
+
+    .line 114
+    :cond_3
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-direct {p2, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 115
+    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-object p1, p2
+
+    .line 49
+    :goto_0
+    monitor-exit v0
+
+    return-object p1
+
+    :cond_4
+    if-nez p2, :cond_5
+
+    .line 52
+    :try_start_2
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v0
+
+    return-object p1
+
+    .line 54
+    :cond_5
+    :try_start_3
+    sget-object p1, Ll/ۧۖۚ;->֡:Ll/ۧۖۚ;
+
+    if-ne v1, p1, :cond_6
+
+    .line 55
+    invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    monitor-exit v0
+
+    return-object p1
+
+    .line 57
+    :cond_6
+    :try_start_4
+    iget-object p1, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 58
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    monitor-exit v0
+
+    return-object p1
+
+    .line 38
+    :cond_7
+    :goto_1
+    :try_start_5
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    monitor-exit v0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_6
+    monitor-exit v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    throw p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final declared-synchronized ۙ(Ll/᩻۠ۙ;)V
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 72
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
+
+    if-nez v1, :cond_2
+
+    if-eqz p1, :cond_2
+
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
+
+    sget-object v2, Ll/ۧۖۚ;->᩶:Ll/ۧۖۚ;
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_1
+
+    .line 75
+    :cond_0
+    iget-boolean p1, p1, Ll/᩻۠ۙ;->۫:Z
+
+    if-eqz p1, :cond_1
+
+    .line 76
+    invoke-direct {p0}, Ll/᩻ۖۚ;->ۚ()V
+
+    goto :goto_0
+
+    .line 78
+    :cond_1
+    invoke-direct {p0}, Ll/᩻ۖۚ;->۫()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 80
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    .line 73
+    :cond_2
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۙ()Z
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 84
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
+
+    sget-object v2, Ll/ۧۖۚ;->᩶:Ll/ۧۖۚ;
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_0
+
+    .line 87
+    :cond_0
+    invoke-direct {p0}, Ll/᩻ۖۚ;->ۚ()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 88
+    monitor-exit v0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 85
+    :cond_1
+    :goto_0
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۤ()Ll/ۧۖۚ;
     .locals 2
 
-    .line 412
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v0, p0
 
-    const-string v1, "["
+    .line 1
+    monitor-enter v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 27
+    :try_start_0
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, p0, Ll/᩻ۖۚ;->ۚ:Ljava/lang/String;
+    monitor-exit v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v1
 
-    const-string v1, "] "
+    :catchall_0
+    move-exception v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v1, p0, Ll/᩻ۖۚ;->ܰ:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v1
 .end method
 
-.method public final ۙ()Ljava/lang/String;
-    .locals 2
+.method public final declared-synchronized ܳ()J
+    .locals 3
 
-    .line 416
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v0, p0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 1
+    monitor-enter v0
 
-    iget-object v1, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    .line 137
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_0
 
-    const-string v1, "/"
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v2, Ll/ۧۖۚ;->֡:Ll/ۧۖۚ;
 
-    iget-object v1, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Ll/᩻ۖۚ;->᩶:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    const-wide/16 v1, -0x1
 
-    return-object v0
+    :goto_0
+    monitor-exit v0
+
+    return-wide v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method
 
-.method public final ۙ(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
+.method public final declared-synchronized ᩷()Ljava/util/List;
+    .locals 3
 
-    .line 420
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۖ:Ljava/lang/String;
+    move-object v0, p0
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1
+    monitor-enter v0
 
-    move-result p1
+    .line 64
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
 
-    if-eqz p1, :cond_0
+    if-nez v1, :cond_2
 
-    iget-object p1, p0, Ll/᩻ۖۚ;->ۙ:Ljava/lang/String;
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v2, Ll/ۧۖۚ;->֡:Ll/ۧۖۚ;
 
-    move-result p1
+    if-eq v1, v2, :cond_0
 
-    if-eqz p1, :cond_0
+    goto :goto_1
+
+    .line 111
+    :cond_0
+    iget-object v1, p0, Ll/᩻ۖۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 112
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    goto :goto_0
+
+    .line 114
+    :cond_1
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 115
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v1, v2
+
+    .line 67
+    :goto_0
+    monitor-exit v0
+
+    return-object v1
+
+    .line 65
+    :cond_2
+    :goto_1
+    :try_start_1
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ᩷(J)Z
+    .locals 4
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    const-wide/16 v1, 0x0
+
+    cmp-long v3, p1, v1
+
+    if-ltz v3, :cond_0
+
+    .line 142
+    :try_start_0
+    iget-boolean v1, p0, Ll/᩻ۖۚ;->ܰ:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Ll/᩻ۖۚ;->֡:Ll/ۧۖۚ;
+
+    sget-object v2, Ll/ۧۖۚ;->֡:Ll/ۧۖۚ;
+
+    if-ne v1, v2, :cond_0
+
+    iget-wide v1, p0, Ll/᩻ۖۚ;->᩶:J
+
+    cmp-long v3, v1, p1
+
+    if-nez v3, :cond_0
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
+    monitor-exit v0
+
     return p1
-.end method
-
-.method public final ۨ()Ll/ۧۧ;
-    .locals 1
-
-    .line 405
-    iget-object v0, p0, Ll/᩻ۖۚ;->ۨ:Ll/ۧۧ;
-
-    return-object v0
 .end method

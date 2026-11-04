@@ -1,326 +1,183 @@
 package l;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Pair;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.IdentityHashMap;
-import java.util.Iterator;
-import java.util.List;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import bin.mt.json.JSONValue;
+import com.google.android.material.motion.MotionUtils;
 
-/* JADX INFO: renamed from: l.۫۫ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 98TD */
+/* JADX INFO: renamed from: l.ۨܰۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6XG */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C12402 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8313 f41426;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC16635 f41427;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f41429;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public InterfaceC19706 f41430;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8065 f41431;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final C9724 f41436;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public InterfaceC10273 f41434 = new C8862();
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final IdentityHashMap f41435 = new IdentityHashMap();
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final HashMap f41425 = new HashMap();
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final ArrayList f41432 = new ArrayList();
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f41428 = new HashMap();
+    public final C13921 f39898;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashSet f41433 = new HashSet();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C22209 f39899;
 
-    public C12402(InterfaceC16635 interfaceC16635, InterfaceC8313 interfaceC8313, InterfaceC8065 interfaceC8065, C9724 c9724) {
-        this.f41436 = c9724;
-        this.f41427 = interfaceC16635;
-        this.f41426 = interfaceC8313;
-        this.f41431 = interfaceC8065;
+    public C12402(C22209 c22209) {
+        C13921 c13921 = new C13921(1);
+        this.f39899 = c22209;
+        this.f39898 = c13921;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30851(List list, InterfaceC10273 interfaceC10273) {
-        ArrayList arrayList = this.f41432;
-        m30839(0, arrayList.size());
-        return m30850(arrayList.size(), list, interfaceC10273);
+    public final C20607 m30879(String str) throws C10186 {
+        C22209 c22209 = this.f39899;
+        C9113 c9113M50227 = c22209.m50227();
+        String strM50226 = C22209.m50226(str, c9113M50227, MotionUtils.EASING_TYPE_PATH);
+        C19225 c19225M50233 = c22209.m50233(strM50226);
+        try {
+            C20607 c20607M30877 = m30877(strM50226, c9113M50227);
+            c19225M50233.close();
+            return c20607M30877;
+        } catch (Throwable th) {
+            try {
+                c19225M50233.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
+            }
+            throw th;
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30850(int i, List list, InterfaceC10273 interfaceC10273) {
-        if (!list.isEmpty()) {
-            this.f41434 = interfaceC10273;
-            for (int i2 = i; i2 < list.size() + i; i2++) {
-                C0406 c0406 = (C0406) list.get(i2 - i);
-                ArrayList arrayList = this.f41432;
-                if (i2 > 0) {
-                    C0406 c0407 = (C0406) arrayList.get(i2 - 1);
-                    c0406.f1897 = c0407.f1893.m4269().mo19929() + c0407.f1897;
+    private C20607 m30877(String str, C9113 c9113) throws C10186 {
+        String str2;
+        C9113 c9113M50227;
+        String str3;
+        C3453 c3453;
+        boolean z;
+        boolean z2;
+        C10186 c10186M30875;
+        C22209 c22209 = this.f39899;
+        AbstractC22044 abstractC22044M50232 = c22209.m50232(str);
+        m30878(m30874(abstractC22044M50232), str);
+        m30876(abstractC22044M50232, c9113.f29602);
+        String parent = abstractC22044M50232.getParent();
+        do {
+            C9113 c9113M50228 = c22209.m50227();
+            c9113M50228.m24270(str);
+            str2 = c9113M50228.f29602;
+            if (parent != null) {
+                c9113M50228.m24270(parent);
+            }
+            c9113M50228.m24269(str);
+            AbstractC22044 abstractC22044M50233 = c22209.m50232(str);
+            c22209.m50231(abstractC22044M50233, new C10577(str, str2));
+            m30878(m30874(abstractC22044M50233), str);
+            m30876(abstractC22044M50233, str2);
+            c9113M50227 = c22209.m50227();
+            str3 = c9113M50227.f29602;
+        } while (!str2.equals(str3));
+        AbstractC22044 abstractC22044M50234 = c22209.m50232(str);
+        c22209.m50231(abstractC22044M50234, new C10577(str, str3));
+        m30878(m30874(abstractC22044M50234), str);
+        EnumC15330 enumC15330M30876 = m30876(abstractC22044M50234, str3);
+        String str4 = enumC15330M30876 == EnumC15330.ATOMIC ? "atomic" : "best_effort";
+        JSONArray<JSONValue> jSONArrayArray = JSON.array();
+        try {
+            abstractC22044M50234.mo4298().mo8793();
+            c10186M30875 = null;
+            z = true;
+            z2 = true;
+        } catch (C22790 e) {
+            try {
+                C1907 c1907Mo8790 = c22209.m50232(str).mo4298().mo8790();
+                if (c1907Mo8790.m6567() == EnumC13093.MISSING) {
+                    c3453 = new C3453(true, true);
+                } else if (c1907Mo8790.m6567() == EnumC13093.REGULAR) {
+                    c3453 = new C3453(false, true);
                 } else {
-                    c0406.f1897 = 0;
+                    c3453 = new C3453(true, false);
                 }
-                c0406.f1896 = false;
-                c0406.f1894.clear();
-                int iMo19929 = c0406.f1893.m4269().mo19929();
-                for (int i3 = i2; i3 < arrayList.size(); i3++) {
-                    ((C0406) arrayList.get(i3)).f1897 += iMo19929;
-                }
-                arrayList.add(i2, c0406);
-                this.f41425.put(c0406.f1895, c0406);
-                if (this.f41429) {
-                    m30844(c0406);
-                    if (this.f41435.isEmpty()) {
-                        this.f41433.add(c0406);
-                    } else {
-                        C20163 c20163 = (C20163) this.f41428.get(c0406);
-                        if (c20163 != null) {
-                            c20163.f65478.mo17764(c20163.f65477);
-                        }
+            } catch (RuntimeException | C22790 unused) {
+                boolean z3 = enumC15330M30876 == EnumC15330.ATOMIC;
+                c3453 = new C3453(!z3, z3);
+            }
+            C10186 c10186M50224 = C22209.m50224(e);
+            C10186 c10186M26302 = e.m51409() != EnumC10855.IO_ERROR ? c10186M50224 : C10186.m26302("FILE_DELETE_FAILED", "Failed to permanently delete the local file.", "warning", (JSONArray) null, new JSONObject(c10186M50224.f32602));
+            String str5 = c9113M50227.f29602;
+            z = c3453.f11256;
+            z2 = c3453.f11257;
+            c10186M30875 = m30875(c10186M26302, str, str5, str4, z, z2, jSONArrayArray);
+        }
+        if (z || !z2) {
+            try {
+                this.f39898.getClass();
+                AbstractC11810.m29655();
+                C20108.m46239(str);
+                C20081.m46203();
+            } catch (RuntimeException unused2) {
+                for (JSONValue jSONValue : jSONArrayArray) {
+                    if (!jSONValue.isString() || !"File change notification could not be completed.".equals(jSONValue.asString())) {
                     }
                 }
+                jSONArrayArray.add("File change notification could not be completed.");
             }
         }
-        return m30847();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30848(int i, int i2, List list) {
-        ArrayList arrayList = this.f41432;
-        C2023.m6507(i >= 0 && i <= i2 && i2 <= arrayList.size());
-        C2023.m6507(list.size() == i2 - i);
-        for (int i3 = i; i3 < i2; i3++) {
-            ((C0406) arrayList.get(i3)).f1893.mo4109((C13689) list.get(i3 - i));
+        if (c10186M30875 != null) {
+            throw m30875(c10186M30875, str, c9113M50227.f29602, str4, z, z2, jSONArrayArray);
         }
-        return m30847();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m30845() {
-        return this.f41429;
+        return new C20607(new JSONArray(jSONArrayArray), str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30849(int i, int i2, InterfaceC10273 interfaceC10273) {
-        C2023.m6507(i >= 0 && i <= i2 && i2 <= this.f41432.size());
-        this.f41434 = interfaceC10273;
-        m30839(i, i2);
-        return m30847();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30852(InterfaceC10273 interfaceC10273) {
-        int size = this.f41432.size();
-        if (interfaceC10273.getLength() != size) {
-            interfaceC10273 = interfaceC10273.mo23001().mo22995(size);
-        }
-        this.f41434 = interfaceC10273;
-        return m30847();
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30855() {
-        C2023.m6507(this.f41432.size() >= 0);
-        this.f41434 = null;
-        return m30847();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m30856() {
-        return this.f41432.size();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30854(InterfaceC19706 interfaceC19706) {
-        C2023.m6510(!this.f41429);
-        this.f41430 = interfaceC19706;
-        int i = 0;
-        while (true) {
-            ArrayList arrayList = this.f41432;
-            if (i < arrayList.size()) {
-                C0406 c0406 = (C0406) arrayList.get(i);
-                m30844(c0406);
-                this.f41433.add(c0406);
-                i++;
-            } else {
-                this.f41429 = true;
-                return;
-            }
+    private C1907 m30874(AbstractC22044 abstractC22044) throws C10186 {
+        try {
+            return abstractC22044.mo4298().mo8790();
+        } catch (C22790 e) {
+            this.f39899.getClass();
+            throw C22209.m50224(e);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2572 m30846(C15274 c15274, InterfaceC15732 interfaceC15732, long j) {
-        Object obj = c15274.f49778;
-        int i = AbstractC18979.f61434;
-        Pair pair = (Pair) obj;
-        Object obj2 = pair.first;
-        C15274 c15274M36575 = c15274.m36575(pair.second);
-        C0406 c0406 = (C0406) this.f41425.get(obj2);
-        c0406.getClass();
-        this.f41433.add(c0406);
-        C20163 c20163 = (C20163) this.f41428.get(c0406);
-        if (c20163 != null) {
-            c20163.f65478.mo17761(c20163.f65477);
+    private void m30878(C1907 c1907, String str) throws C10186 {
+        int i = C23591.f76596[c1907.m6567().ordinal()];
+        C22209 c22209 = this.f39899;
+        if (i == 2) {
+            c22209.getClass();
+            throw C22209.m50225(str);
         }
-        c0406.f1894.add(c15274M36575);
-        C2572 c2572Mo4105 = c0406.f1893.mo4105(c15274M36575, interfaceC15732, j);
-        this.f41435.put(c2572Mo4105, c0406);
-        m30838();
-        return c2572Mo4105;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30853(InterfaceC6806 interfaceC6806) {
-        IdentityHashMap identityHashMap = this.f41435;
-        C0406 c0406 = (C0406) identityHashMap.remove(interfaceC6806);
-        c0406.getClass();
-        c0406.f1893.mo4108(interfaceC6806);
-        c0406.f1894.remove(((C2572) interfaceC6806).f10136);
-        if (!identityHashMap.isEmpty()) {
-            m30838();
+        if (i == 3) {
+            throw C24770.m55295(c1907, c22209, "FILE_NOT_REGULAR", "Directory paths must be deleted with mt_file_delete_directory.", str);
         }
-        m30840(c0406);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final void m30858() {
-        HashMap map = this.f41428;
-        for (C20163 c20163 : map.values()) {
-            try {
-                c20163.f65478.mo17768(c20163.f65477);
-            } catch (RuntimeException e) {
-                C0303.m1854("Failed to release child source.", e);
-            }
-            InterfaceC18095 interfaceC18095 = c20163.f65478;
-            C15930 c15930 = c20163.f65479;
-            interfaceC18095.mo17760((InterfaceC20918) c15930);
-            c20163.f65478.mo17758((InterfaceC16262) c15930);
+        if (i == 4) {
+            throw C24770.m55295(c1907, c22209, "FILE_IS_SYMLINK", "Symbolic links are not accepted by mt_file_delete.", str);
         }
-        map.clear();
-        this.f41433.clear();
-        this.f41429 = false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16511 m30847() {
-        ArrayList arrayList = this.f41432;
-        if (arrayList.isEmpty()) {
-            return AbstractC16511.f53035;
-        }
-        int iMo19929 = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            C0406 c0406 = (C0406) arrayList.get(i);
-            c0406.f1897 = iMo19929;
-            iMo19929 += c0406.f1893.m4269().mo19929();
-        }
-        return new C9580(arrayList, this.f41434);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10273 m30857() {
-        return this.f41434;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    private void m30838() {
-        Iterator it = this.f41433.iterator();
-        while (it.hasNext()) {
-            C0406 c0406 = (C0406) it.next();
-            if (c0406.f1894.isEmpty()) {
-                C20163 c20163 = (C20163) this.f41428.get(c0406);
-                if (c20163 != null) {
-                    c20163.f65478.mo17764(c20163.f65477);
-                }
-                it.remove();
-            }
+        if (i == 5) {
+            throw C24770.m55295(c1907, c22209, "FILE_UNSUPPORTED_TYPE", "Special nodes cannot be deleted by general file tools.", str);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m30839(int i, int i2) {
-        for (int i3 = i2 - 1; i3 >= i; i3--) {
-            ArrayList arrayList = this.f41432;
-            C0406 c0406 = (C0406) arrayList.remove(i3);
-            this.f41425.remove(c0406.f1895);
-            int i4 = -c0406.f1893.m4269().mo19929();
-            for (int i5 = i3; i5 < arrayList.size(); i5++) {
-                ((C0406) arrayList.get(i5)).f1897 += i4;
-            }
-            c0406.f1896 = true;
-            if (this.f41429) {
-                m30840(c0406);
-            }
+    public static EnumC15330 m30876(AbstractC22044 abstractC22044, String str) throws C10186 {
+        EnumC15330 enumC15330Mo8788 = abstractC22044.mo4298().mo8788(EnumC5636.DELETE_FILE_OR_LINK);
+        if (enumC15330Mo8788 != EnumC15330.UNSUPPORTED) {
+            return enumC15330Mo8788;
         }
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v0, types: [l.ۜ۫ۙ, l.᩸ܰܰ] */
-    /* JADX WARN: Type inference fix 'apply assigned field type' failed
-    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
-    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
-    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
-    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
-     */
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m30844(C0406 c0406) {
-        C1161 c1161 = c0406.f1893;
-        ?? r1 = new InterfaceC21623() { // from class: l.ۜ۫ۙ
-            @Override // l.InterfaceC21623
-            /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-            public final void mo18265(AbstractC6537 abstractC6537, AbstractC16511 abstractC16511) {
-                ((C0530) this.f22790.f41427).m2520();
-            }
-        };
-        C15930 c15930 = new C15930(this, c0406);
-        this.f41428.put(c0406, new C20163(c1161, r1, c15930));
-        String str = C17983.f57504;
-        Looper looperMyLooper = Looper.myLooper();
-        if (looperMyLooper == null) {
-            looperMyLooper = Looper.getMainLooper();
-        }
-        c1161.mo17757(new Handler(looperMyLooper, null), (InterfaceC20918) c15930);
-        Looper looperMyLooper2 = Looper.myLooper();
-        if (looperMyLooper2 == null) {
-            looperMyLooper2 = Looper.getMainLooper();
-        }
-        c1161.mo17756(new Handler(looperMyLooper2, null), (InterfaceC16262) c15930);
-        c1161.mo17762((InterfaceC21623) r1, this.f41430, this.f41436);
+        throw C10186.m26306("FILE_BACKEND_UNSUPPORTED", "The file backend does not support checked permanent deletion.", "fatal", null, C22121.m50076(MotionUtils.EASING_TYPE_PATH, abstractC22044.mo4294(), "policyRevision", str).add("operation", "delete_file").add("backendReason", "unsupported").add("changed", false).add("operationMode", JSON.NULL).add("stateKnown", true).add("warnings", new JSONArray(JSON.array())));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m30840(C0406 c0406) {
-        if (c0406.f1896 && c0406.f1894.isEmpty()) {
-            C20163 c20163 = (C20163) this.f41428.remove(c0406);
-            c20163.getClass();
-            C15930 c15930 = c20163.f65479;
-            InterfaceC18095 interfaceC18095 = c20163.f65478;
-            interfaceC18095.mo17768(c20163.f65477);
-            interfaceC18095.mo17760((InterfaceC20918) c15930);
-            interfaceC18095.mo17758((InterfaceC16262) c15930);
-            this.f41433.remove(c0406);
+    public static C10186 m30875(C10186 c10186, String str, String str2, String str3, boolean z, boolean z2, JSONArray jSONArray) {
+        JSONObject jSONObject = c10186.f32602;
+        JSONArray jSONArray2 = c10186.f32599;
+        String str4 = c10186.f32604;
+        String str5 = c10186.f32601;
+        JSONObject jSONObject2 = new JSONObject(jSONObject);
+        jSONObject2.put(MotionUtils.EASING_TYPE_PATH, str);
+        jSONObject2.put("policyRevision", str2);
+        jSONObject2.put("changed", z);
+        jSONObject2.put("operationMode", JSON.value(str3));
+        jSONObject2.put("stateKnown", z2);
+        jSONObject2.put("warnings", new JSONArray(jSONArray));
+        if (c10186.f32600) {
+            return C10186.m26302(str5, c10186.getMessage(), str4, jSONArray2, jSONObject2);
         }
+        return C10186.m26306(str5, c10186.getMessage(), str4, jSONArray2, jSONObject2);
     }
 }

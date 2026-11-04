@@ -1,38 +1,68 @@
-.class public final Ll/ۛܺ;
+.class public interface abstract Ll/ۛܺ;
 .super Ljava/lang/Object;
-.source "S6AR"
-
-# interfaces
-.implements Ll/ۨܳ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۖ᩶;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۖ᩶;)V
-    .locals 0
-
-    .line 3312
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۛܺ;->ܺ:Ll/ۖ᩶;
-
-    return-void
-.end method
+.source "S4L6"
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
-    .locals 0
+.method public abstract collapseActionView()V
+.end method
 
-    .line 3316
-    iget-object p1, p0, Ll/ۛܺ;->ܺ:Ll/ۖ᩶;
+.method public abstract getContext()Landroid/content/Context;
+.end method
 
-    invoke-virtual {p1, p2}, Ll/ۖ᩶;->setWindowInsets(Ll/ܺۢ;)Ll/ܺۢ;
+.method public abstract setVisibility(I)V
+.end method
 
-    move-result-object p1
+.method public abstract ֫()V
+.end method
 
-    return-object p1
+.method public abstract ۙ(IJ)Ll/᩺۠;
+.end method
+
+.method public abstract ۙ(I)V
+.end method
+
+.method public abstract ۙ(Landroid/graphics/drawable/Drawable;)V
+.end method
+
+.method public abstract ۙ(Landroid/view/Menu;Ll/۫֫;)V
+.end method
+
+.method public abstract ۙ(Landroid/view/Window$Callback;)V
+.end method
+
+.method public abstract ۙ(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract ۙ(Z)V
+.end method
+
+.method public abstract ۙ()Z
+.end method
+
+.method public abstract ۚ()V
+.end method
+
+.method public abstract ۤ()Z
+.end method
+
+.method public abstract ۧ()I
+.end method
+
+.method public abstract ۫()Z
+.end method
+
+.method public abstract ܳ()Z
+.end method
+
+.method public abstract ᩴ()V
+.end method
+
+.method public abstract ᩷(I)V
+.end method
+
+.method public abstract ᩷()Z
+.end method
+
+.method public abstract ᩸()Z
 .end method

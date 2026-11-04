@@ -15,14 +15,14 @@ import com.google.android.material.shape.AbsoluteCornerSize;
 import com.google.android.material.shape.CornerSize;
 import com.google.android.material.shape.RelativeCornerSize;
 import com.google.android.material.shape.ShapeAppearanceModel;
-import l.AbstractC11766;
-import l.AbstractC19798;
-import l.C0280;
-import l.C15489;
-import l.C21643;
-import l.C22420;
-import l.C8479;
-import l.C9215;
+import l.AbstractC0329;
+import l.AbstractC19720;
+import l.C13645;
+import l.C14483;
+import l.C15244;
+import l.C19967;
+import l.C25210;
+import l.C4608;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TransitionUtils {
@@ -40,33 +40,33 @@ public class TransitionUtils {
         return obj != null ? obj : obj2;
     }
 
-    public static boolean maybeApplyThemeInterpolator(AbstractC11766 abstractC11766, Context context, int i, TimeInterpolator timeInterpolator) {
-        if (i == 0 || abstractC11766.getInterpolator() != null) {
+    public static boolean maybeApplyThemeInterpolator(AbstractC0329 abstractC0329, Context context, int i, TimeInterpolator timeInterpolator) {
+        if (i == 0 || abstractC0329.getInterpolator() != null) {
             return false;
         }
-        abstractC11766.setInterpolator(MotionUtils.resolveThemeInterpolator(context, i, timeInterpolator));
+        abstractC0329.setInterpolator(MotionUtils.resolveThemeInterpolator(context, i, timeInterpolator));
         return true;
     }
 
-    public static boolean maybeApplyThemeDuration(AbstractC11766 abstractC11766, Context context, int i) {
+    public static boolean maybeApplyThemeDuration(AbstractC0329 abstractC0329, Context context, int i) {
         int iResolveThemeDuration;
-        if (i == 0 || abstractC11766.getDuration() != -1 || (iResolveThemeDuration = MotionUtils.resolveThemeDuration(context, i, -1)) == -1) {
+        if (i == 0 || abstractC0329.getDuration() != -1 || (iResolveThemeDuration = MotionUtils.resolveThemeDuration(context, i, -1)) == -1) {
             return false;
         }
-        abstractC11766.setDuration(iResolveThemeDuration);
+        abstractC0329.setDuration(iResolveThemeDuration);
         return true;
     }
 
-    public static boolean maybeApplyThemePath(AbstractC11766 abstractC11766, Context context, int i) {
-        AbstractC19798 abstractC19798ResolveThemePath;
-        if (i == 0 || (abstractC19798ResolveThemePath = resolveThemePath(context, i)) == null) {
+    public static boolean maybeApplyThemePath(AbstractC0329 abstractC0329, Context context, int i) {
+        AbstractC19720 abstractC19720ResolveThemePath;
+        if (i == 0 || (abstractC19720ResolveThemePath = resolveThemePath(context, i)) == null) {
             return false;
         }
-        abstractC11766.setPathMotion(abstractC19798ResolveThemePath);
+        abstractC0329.setPathMotion(abstractC19720ResolveThemePath);
         return true;
     }
 
-    public static AbstractC19798 resolveThemePath(Context context, int i) {
+    public static AbstractC19720 resolveThemePath(Context context, int i) {
         TypedValue typedValue = new TypedValue();
         if (!context.getTheme().resolveAttribute(i, typedValue, true)) {
             return null;
@@ -74,7 +74,7 @@ public class TransitionUtils {
         int i2 = typedValue.type;
         if (i2 != 16) {
             if (i2 == 3) {
-                return new C9215(C22420.m49743(String.valueOf(typedValue.string)));
+                return new C15244(C25210.m56212(String.valueOf(typedValue.string)));
             }
             throw new IllegalArgumentException("Motion path theme attribute must either be an enum value or path data string");
         }
@@ -85,7 +85,7 @@ public class TransitionUtils {
         if (i3 == 1) {
             return new MaterialArcMotion();
         }
-        throw new IllegalArgumentException(C8479.m22141(i3, "Invalid motion path type: "));
+        throw new IllegalArgumentException(C13645.m33382(i3, "Invalid motion path type: "));
     }
 
     public static ShapeAppearanceModel convertToRelativeCornerSizes(ShapeAppearanceModel shapeAppearanceModel, final RectF rectF) {
@@ -106,7 +106,7 @@ public class TransitionUtils {
     }
 
     public static float lerp(float f, float f2, float f3) {
-        return C0280.m1792(f2, f, f3, f);
+        return C19967.m45884(f2, f, f3, f);
     }
 
     public static float lerp(float f, float f2, float f3, float f4, float f5) {
@@ -164,7 +164,7 @@ public class TransitionUtils {
                 return view;
             }
         }
-        throw new IllegalArgumentException(C15489.m37076(resourceName, " is not a valid ancestor"));
+        throw new IllegalArgumentException(C14483.m34972(resourceName, " is not a valid ancestor"));
     }
 
     public static RectF getRelativeBounds(View view) {
@@ -207,15 +207,15 @@ public class TransitionUtils {
         canvas.restoreToCount(iSave);
     }
 
-    public static void maybeAddTransition(C21643 c21643, AbstractC11766 abstractC11766) {
-        if (abstractC11766 != null) {
-            c21643.m48354(abstractC11766);
+    public static void maybeAddTransition(C4608 c4608, AbstractC0329 abstractC0329) {
+        if (abstractC0329 != null) {
+            c4608.m14411(abstractC0329);
         }
     }
 
-    public static void maybeRemoveTransition(C21643 c21643, AbstractC11766 abstractC11766) {
-        if (abstractC11766 != null) {
-            c21643.m48353(abstractC11766);
+    public static void maybeRemoveTransition(C4608 c4608, AbstractC0329 abstractC0329) {
+        if (abstractC0329 != null) {
+            c4608.m14410(abstractC0329);
         }
     }
 }

@@ -1,14 +1,14 @@
 package org.bouncycastle.pqc.crypto.mayo;
 
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.EnumC2300;
+import l.EnumC24309;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class MayoParameters {
     public static final MayoParameters mayo1 = new MayoParameters("MAYO_1", 86, 78, 5, 8, 78, 81, 10, 39, 312, 39, 40, 120159, 24336, 24, 1420, 454, new int[]{8, 1, 1, 0}, 24, 32, 24);
     public static final MayoParameters mayo2 = new MayoParameters("MAYO_2", 81, 64, 4, 17, 64, 69, 4, 32, 544, 32, 34, 66560, 34816, 24, 4912, 186, new int[]{8, 0, 2, 8}, 24, 32, 24);
     public static final MayoParameters mayo3 = new MayoParameters("MAYO_3", 118, 108, 7, 10, 108, UMErrorCode.E_UM_BE_CREATE_FAILED, 11, 54, 540, 54, 55, 317844, 58320, 32, 2986, 681, new int[]{8, 0, 1, 7}, 32, 48, 32);
-    public static final MayoParameters mayo5 = new MayoParameters("MAYO_5", EnumC2300.f8185, 142, 9, 12, 142, 145, 12, 71, 852, 71, 72, 720863, 120984, 40, 5554, 964, new int[]{4, 0, 8, 1}, 40, 64, 40);
+    public static final MayoParameters mayo5 = new MayoParameters("MAYO_5", EnumC24309.f78687, 142, 9, 12, 142, 145, 12, 71, 852, 71, 72, 720863, 120984, 40, 5554, 964, new int[]{4, 0, 8, 1}, 40, 64, 40);
     public static final int pkSeedBytes = 16;
     public final int ACols;
     public final int OBytes;

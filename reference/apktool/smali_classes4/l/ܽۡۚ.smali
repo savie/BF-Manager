@@ -1,41 +1,36 @@
-.class public final synthetic Ll/ܽۡۚ;
+.class public final Ll/ܽۡۚ;
 .super Ljava/lang/Object;
-.source "LAQJ"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "B75R"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۛۡۚ;
+.field public final ۙ:Landroid/media/MediaDataSource;
+
+.field public final ۤ:Landroid/media/MediaMetadataRetriever;
+
+.field public final ᩷:Ll/֨ܺ֫;
+
+.field public final ᩸:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۛۡۚ;)V
+.method public constructor <init>(JLandroid/media/MediaMetadataRetriever;Landroid/media/MediaDataSource;Ll/֨ܺ֫;)V
     .locals 0
 
-    .line 0
+    .line 894
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܽۡۚ;->ܺ:Ll/ۛۡۚ;
+    .line 895
+    iput-wide p1, p0, Ll/ܽۡۚ;->᩸:J
 
-    return-void
-.end method
+    .line 896
+    iput-object p3, p0, Ll/ܽۡۚ;->ۤ:Landroid/media/MediaMetadataRetriever;
 
+    .line 897
+    iput-object p4, p0, Ll/ܽۡۚ;->ۙ:Landroid/media/MediaDataSource;
 
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .line 2
-    iget-object v0, p0, Ll/ܽۡۚ;->ܺ:Ll/ۛۡۚ;
-
-    .line 1132
-    iget-object v0, v0, Ll/ۛۡۚ;->֨:Ll/᩹ۤۚ;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Ll/᩹ۤۚ;->ܰ:Z
+    .line 898
+    iput-object p5, p0, Ll/ܽۡۚ;->᩷:Ll/֨ܺ֫;
 
     return-void
 .end method

@@ -1,171 +1,186 @@
 package l;
 
+import com.google.android.material.motion.MotionUtils;
+import com.google.android.material.slider.BasicLabelFormatter;
 import java.util.ArrayList;
-import org.bouncycastle.math.ec.rfc7748.X448Field;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩻ۡۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.᩹ܰۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4917 */
 /* JADX INFO: loaded from: classes.dex */
-public class C23595 {
+public final class C23595 extends AbstractC9008 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C23595 f76439 = C22141.f71668;
+    public final C19865 f76600;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m52022(C17285 c17285) {
-        C23595 c23595;
-        ArrayList arrayList = new ArrayList();
-        C23595 c23596 = this;
-        while (true) {
-            boolean z = false;
-            if (c23596 != null) {
-                if (!(c23596 instanceof C2030)) {
-                    if (c23596 instanceof C17244) {
-                        c17285.f55043 = false;
-                        c17285.f55042 = false;
-                    } else if (c23596 instanceof C3132) {
-                        c23596 = ((C3132) c23596).f11790;
-                    } else if (c23596 instanceof C19402) {
-                        arrayList.add(new C5996(0, c23596, c17285));
-                        c23596 = c23596.f76439;
-                    } else if (c23596 instanceof C17949) {
-                        arrayList.add(new C5996(1, c23596, c17285));
-                    } else if (c23596 instanceof C13758) {
-                        arrayList.add(new C5996(2, c23596, c17285));
-                        c23596 = ((C13758) c23596).f45371;
-                    } else if (c23596 instanceof C3837) {
-                        C3837 c3837 = (C3837) c23596;
-                        arrayList.add(new C5996(3, c23596, c17285, c3837.f14305, c3837.f14307));
-                        c17285.m40245();
-                        c23596 = c3837.f14308;
-                    } else if (c23596 instanceof C19361) {
-                        C19361 c19361 = (C19361) c23596;
-                        arrayList.add(new C5996(3, c23596, c17285, c19361.f62410, c19361.f62409));
-                        c17285.m40245();
-                        c23596 = c19361.f62413;
-                    } else if (c23596 instanceof C14732) {
-                        C14732 c14732 = (C14732) c23596;
-                        C5996 c5996 = new C5996(4, c23596, c17285);
-                        arrayList.add(c5996);
-                        c17285.m40245();
-                        if (c14732.f48160 == 0) {
-                            c5996.f20392 = 1;
-                            c5996.f20388 += c5996.f20391;
-                            c5996.f20390 += c5996.f20386;
-                            c23595 = c14732.f48159.f76439;
-                        } else {
-                            c23595 = c14732.f48161[0];
-                        }
-                        c23596 = c23595;
-                    } else {
-                        if (c23596 instanceof C21518) {
-                            int i = c17285.f55041;
-                            int[] iArr = ((C21518) c23596).f69912;
-                            c17285.f55041 = i + iArr.length;
-                            c17285.f55044 += iArr.length;
-                        } else if (c23596 instanceof C1015) {
-                            c17285.f55041++;
-                            c17285.f55044++;
-                        } else if (c23596 instanceof C20067) {
-                            c17285.f55041++;
-                            c17285.f55044 += 2;
-                        } else if ((c23596 instanceof C5955) || (c23596 instanceof C5207)) {
-                            c17285.f55041++;
-                            c17285.f55042 = false;
-                        } else if (c23596 instanceof C13011) {
-                            c17285.f55041 += ((C13011) c23596).f43383;
-                            if (c17285.f55043) {
-                                c17285.f55044 += Integer.MAX_VALUE;
-                            }
-                            c17285.f55042 = false;
-                        } else if ((c23596 instanceof C19671) || (c23596 instanceof C9793)) {
-                            c17285.f55043 = false;
-                        } else if (c23596 instanceof C6264) {
-                            c17285.f55041 += ((C6264) c23596).f21231.length;
-                            c17285.f55043 = false;
-                        }
-                        c23596 = c23596.f76439;
-                    }
-                }
-                c23596 = null;
-            } else {
-                if (arrayList.isEmpty()) {
-                    return c17285.f55042;
-                }
-                C5996 c5997 = (C5996) C19084.m43861(arrayList, 1);
-                int i2 = c5997.f20383;
-                int i3 = c5997.f20389;
-                C23595 c23597 = c5997.f20394;
-                if (i2 == 0) {
-                    c17285.f55043 = false;
-                    c17285.f55042 = false;
-                } else if (i2 == 1) {
-                    c17285.f55043 = false;
-                    c17285.f55042 = false;
-                    C19028.m43762(arrayList, 1);
-                    c23596 = c23597.f76439;
-                } else if (i2 == 2) {
-                    if (((C13758) c23597).f45370 != EnumC4584.INDEPENDENT) {
-                        c17285.f55041 = c5997.f20388;
-                        c17285.f55042 = false;
-                    }
-                    C19028.m43762(arrayList, 1);
-                    c23596 = c23597.f76439;
-                } else if (i2 == 3) {
-                    int i4 = c17285.f55041;
-                    int i5 = c5997.f20384;
-                    int i6 = c5997.f20388;
-                    int i7 = (i4 * i5) + i6;
-                    if (i7 < i6) {
-                        i7 = X448Field.M28;
-                    }
-                    c17285.f55041 = i7;
-                    if (c5997.f20385 && c17285.f55043) {
-                        int i8 = c17285.f55044 * i3;
-                        int i9 = c5997.f20390;
-                        int i10 = i8 + i9;
-                        c17285.f55044 = i10;
-                        if (i10 < i9) {
-                            c17285.f55043 = false;
-                        }
-                    } else {
-                        c17285.f55043 = false;
-                    }
-                    if (c17285.f55042 && i5 == i3 && c5997.f20387) {
-                        z = true;
-                    }
-                    c17285.f55042 = z;
-                    C19028.m43762(arrayList, 1);
-                    c23596 = c23597.f76439;
-                } else {
-                    if (i2 != 4) {
-                        throw new AssertionError(c5997.f20383);
-                    }
-                    C14732 c14733 = (C14732) c23597;
-                    if (c5997.f20392 == 0) {
-                        c5997.f20391 = Math.min(c5997.f20391, c17285.f55041);
-                        c5997.f20386 = Math.max(c5997.f20386, c17285.f55044);
-                        c5997.f20385 &= c17285.f55043;
-                        c17285.m40245();
-                        int i11 = c5997.f20393 + 1;
-                        c5997.f20393 = i11;
-                        if (i11 < c14733.f48160) {
-                            c23596 = c14733.f48161[i11];
-                        } else {
-                            c5997.f20388 += c5997.f20391;
-                            c5997.f20390 += c5997.f20386;
-                            c5997.f20392 = 1;
-                            c23596 = c14733.f48159.f76439;
-                        }
-                    } else {
-                        c17285.f55041 += c5997.f20388;
-                        c17285.f55044 += c5997.f20390;
-                        c17285.f55043 &= c5997.f20385;
-                        c17285.f55042 = false;
-                    }
-                }
-                C19028.m43762(arrayList, 1);
-            }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f76601;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f76602;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Integer f76603;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f76604;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f76605;
+
+    public C23595(ArrayList arrayList, C14228 c14228) {
+        Integer numValueOf = Integer.valueOf(BasicLabelFormatter.MILLION);
+        this.f76600 = new C19865();
+        ArrayList arrayList2 = new ArrayList();
+        this.f76602 = arrayList2;
+        this.f76601 = 0;
+        this.f76604 = true;
+        this.f76605 = arrayList;
+        arrayList2.add(c14228);
+        this.f76603 = numValueOf;
+    }
+
+    @Override // l.AbstractC9008, l.InterfaceC8263
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo22279() {
+        return this.f76604;
+    }
+
+    @Override // l.InterfaceC8263
+    /* JADX INFO: renamed from: ᩴ */
+    public final AbstractC23705 mo7447() {
+        return this.f76600;
+    }
+
+    @Override // l.InterfaceC8263
+    /* JADX INFO: renamed from: ۙ */
+    public final C7932 mo7444(InterfaceC4753 interfaceC4753) {
+        CharSequence charSequenceM34537 = interfaceC4753.getLine().m34537();
+        int iM18955 = C6790.m18955('|', charSequenceM34537, interfaceC4753.mo14654());
+        if (iM18955 == -1) {
+            return null;
         }
+        if (iM18955 == interfaceC4753.mo14654() && C6790.m18956(iM18955 + 1, charSequenceM34537.length(), charSequenceM34537) == charSequenceM34537.length()) {
+            this.f76604 = false;
+            return null;
+        }
+        return C7932.m21504(interfaceC4753.getIndex());
+    }
+
+    @Override // l.AbstractC9008, l.InterfaceC8263
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7445(C14228 c14228) {
+        this.f76602.add(c14228);
+    }
+
+    @Override // l.AbstractC9008, l.InterfaceC8263
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo22277(InterfaceC23180 interfaceC23180) {
+        C19865 c19865 = this.f76600;
+        List listM14263 = c19865.m14263();
+        C5280 c5280 = !listM14263.isEmpty() ? (C5280) listM14263.get(0) : null;
+        C1966 c1966 = new C1966();
+        if (c5280 != null) {
+            c1966.m14257(c5280);
+        }
+        c19865.m14256(c1966);
+        C11660 c11660 = new C11660();
+        c11660.m14255(c1966.m14263());
+        c1966.m14256(c11660);
+        ArrayList arrayList = this.f76602;
+        ArrayList arrayListM52834 = m52834((C14228) arrayList.get(0));
+        int size = arrayListM52834.size();
+        for (int i = 0; i < size; i++) {
+            C5695 c5695M52833 = m52833((C14228) arrayListM52834.get(i), i, interfaceC23180);
+            c5695M52833.m16722();
+            c11660.m14256(c5695M52833);
+        }
+        int i2 = 2;
+        C15389 c15389 = null;
+        while (i2 < arrayList.size()) {
+            C14228 c14228 = (C14228) arrayList.get(i2);
+            C5280 c5281 = i2 < listM14263.size() ? (C5280) listM14263.get(i2) : null;
+            ArrayList arrayListM52835 = m52834(c14228);
+            C11660 c11661 = new C11660();
+            if (c5281 != null) {
+                c11661.m14257(c5281);
+            }
+            int i3 = 0;
+            while (i3 < size) {
+                c11661.m14256(m52833(i3 < arrayListM52835.size() ? (C14228) arrayListM52835.get(i3) : C14228.m34536("", (C5280) null), i3, interfaceC23180));
+                i3++;
+            }
+            if (c15389 == null) {
+                c15389 = new C15389();
+                c19865.m14256(c15389);
+            }
+            c15389.m14256(c11661);
+            c15389.m14257(c5281);
+            i2++;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private C5695 m52833(C14228 c14228, int i, InterfaceC23180 interfaceC23180) {
+        Integer num = this.f76603;
+        if (num != null) {
+            if (this.f76601 >= num.intValue()) {
+                throw new IllegalArgumentException("Aborting parsing because maximum number of cells reached (maxCells = " + num + MotionUtils.EASING_TYPE_FORMAT_END);
+            }
+            this.f76601++;
+        }
+        C5695 c5695 = new C5695();
+        C5280 c5280M34539 = c14228.m34539();
+        if (c5280M34539 != null) {
+            c5695.m14257(c5280M34539);
+        }
+        ArrayList arrayList = this.f76605;
+        if (i < arrayList.size()) {
+            c5695.m16720(((C16135) arrayList.get(i)).m38316());
+        }
+        CharSequence charSequenceM34537 = c14228.m34537();
+        int iM18956 = C6790.m18956(0, charSequenceM34537.length(), charSequenceM34537);
+        C14228 c14228M34538 = c14228.m34538(iM18956, C6790.m18973(charSequenceM34537.length() - 1, iM18956, charSequenceM34537) + 1);
+        C20942 c20942 = new C20942();
+        c20942.m47874(c14228M34538);
+        interfaceC23180.mo11851(c20942, c5695);
+        return c5695;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static ArrayList m52834(C14228 c14228) {
+        CharSequence charSequenceM34537 = c14228.m34537();
+        int iM18956 = C6790.m18956(0, charSequenceM34537.length(), charSequenceM34537);
+        int length = charSequenceM34537.length();
+        if (charSequenceM34537.charAt(iM18956) == '|') {
+            iM18956++;
+            length = C6790.m18973(charSequenceM34537.length() - 1, iM18956, charSequenceM34537) + 1;
+        }
+        ArrayList arrayList = new ArrayList();
+        StringBuilder sb = new StringBuilder();
+        int i = iM18956;
+        while (iM18956 < length) {
+            char cCharAt = charSequenceM34537.charAt(iM18956);
+            if (cCharAt == '\\') {
+                int i2 = iM18956 + 1;
+                if (i2 < length && charSequenceM34537.charAt(i2) == '|') {
+                    sb.append('|');
+                    iM18956 = i2;
+                } else {
+                    sb.append('\\');
+                }
+            } else if (cCharAt == '|') {
+                arrayList.add(C14228.m34536(sb.toString(), c14228.m34538(i, iM18956).m34539()));
+                sb.setLength(0);
+                i = iM18956 + 1;
+            } else {
+                sb.append(cCharAt);
+            }
+            iM18956++;
+        }
+        if (sb.length() > 0) {
+            arrayList.add(C14228.m34536(sb.toString(), c14228.m34538(i, c14228.m34537().length()).m34539()));
+        }
+        return arrayList;
     }
 }

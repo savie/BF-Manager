@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.teletrust.TeleTrusTNamedCurves;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.internal.asn1.cryptlib.CryptlibObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECNamedCurveTable {
     public static void addEnumeration(Vector vector, Enumeration enumeration) {
         while (enumeration.hasMoreElements()) {

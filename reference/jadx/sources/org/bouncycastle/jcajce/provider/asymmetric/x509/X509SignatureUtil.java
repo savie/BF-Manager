@@ -11,14 +11,14 @@ import java.security.SignatureException;
 import java.security.spec.PSSParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0242;
-import l.C22697;
-import l.C9013;
+import l.C11958;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.DERNull;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.asn1.pkcs.RSASSAPSSparams;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
@@ -35,7 +35,7 @@ import org.bouncycastle.util.Objects;
 import org.bouncycastle.util.Properties;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509SignatureUtil {
     public static final Map algNames;
 
@@ -136,7 +136,7 @@ public class X509SignatureUtil {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(digestName.substring(0, iIndexOf));
-        return C0242.m1616(iIndexOf + 1, digestName, sb);
+        return ExternalValue$$ExternalSyntheticOutline0.m(iIndexOf + 1, digestName, sb);
     }
 
     public static String getSignatureName(AlgorithmIdentifier algorithmIdentifier) {
@@ -157,7 +157,7 @@ public class X509SignatureUtil {
                 digestAlgName = getDigestAlgName(algorithmIdentifier2.getAlgorithm());
                 str = "withECDSA";
             }
-            return C22697.m50267(sb, digestAlgName, str);
+            return C8947.m23910(sb, digestAlgName, str);
         }
         String str2 = (String) algNames.get(algorithm);
         return str2 != null ? str2 : findAlgName(algorithm);
@@ -179,7 +179,7 @@ public class X509SignatureUtil {
                 }
             }
         } catch (IOException e2) {
-            throw new SignatureException(C9013.m23329(e2, new StringBuilder("IOException decoding parameters: ")));
+            throw new SignatureException(C11958.m29932(e2, new StringBuilder("IOException decoding parameters: ")));
         }
     }
 }

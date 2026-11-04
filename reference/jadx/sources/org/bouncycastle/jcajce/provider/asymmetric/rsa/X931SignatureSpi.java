@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.engines.RSABlindedEngine;
 import org.bouncycastle.crypto.signers.X931Signer;
 import org.bouncycastle.crypto.util.DigestFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X931SignatureSpi extends SignatureSpi {
     public X931Signer signer;
 

@@ -1,64 +1,42 @@
-.class public final Ll/֨ۗۙ;
+.class public final synthetic Ll/֨ۗۙ;
 .super Ljava/lang/Object;
-.source "I8QN"
+.source "R7UD"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static ۙ:Ljava/lang/Boolean;
+# instance fields
+.field public final synthetic ܰ:Ll/ۡۗۙ;
+
+.field public final synthetic ᩶:I
 
 
 # direct methods
-.method public static ۙ(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)I
-    .locals 2
-
-    .line 88
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_1
-
-    sget-object v0, Ll/֨ۗۙ;->ۙ:Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 92
-    :cond_0
-    invoke-static {p0, p1, p2, p3, p4}, Ll/᩹ۗۙ;->ۙ(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۙ()Ljava/lang/Boolean;
-    .locals 1
-
-    .line 0
-    sget-object v0, Ll/֨ۗۙ;->ۙ:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic ۙ(Ljava/lang/Boolean;)V
+.method public synthetic constructor <init>(Ll/ۡۗۙ;I)V
     .locals 0
 
     .line 0
-    sput-object p0, Ll/֨ۗۙ;->ۙ:Ljava/lang/Boolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֨ۗۙ;->ܰ:Ll/ۡۗۙ;
+
+    iput p2, p0, Ll/֨ۗۙ;->᩶:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Ll/֨ۗۙ;->ܰ:Ll/ۡۗۙ;
+
+    iget v1, p0, Ll/֨ۗۙ;->᩶:I
+
+    invoke-static {v0, v1}, Ll/ۡۗۙ;->ۙ(Ll/ۡۗۙ;I)V
 
     return-void
 .end method

@@ -6,9 +6,9 @@
 # static fields
 .field public static final synthetic ۙ:I
 
-.field public static volatile ۨ:Ljava/lang/String;
+.field public static volatile ۤ:Ljava/lang/String;
 
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/util/VersionInfoUtils;->᩷:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     .locals 2
 
     .line 78
-    sget-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۨ:Ljava/lang/String;
+    sget-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۤ:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -51,12 +51,12 @@
 
     .line 80
     :try_start_0
-    sget-object v1, Lcom/amazonaws/util/VersionInfoUtils;->ۨ:Ljava/lang/String;
+    sget-object v1, Lcom/amazonaws/util/VersionInfoUtils;->ۤ:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     .line 81
-    invoke-static {}, Lcom/amazonaws/util/VersionInfoUtils;->ܰ()V
+    invoke-static {}, Lcom/amazonaws/util/VersionInfoUtils;->᩷()V
 
     .line 82
     :cond_0
@@ -76,12 +76,12 @@
     .line 84
     :cond_1
     :goto_0
-    sget-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۨ:Ljava/lang/String;
+    sget-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static ܰ()V
+.method public static ᩷()V
     .locals 6
 
     const/16 v0, 0x80
@@ -89,7 +89,7 @@
     const-string v1, "aws-sdk-"
 
     .line 0
-    invoke-static {v0, v1}, Ll/ܿ۠ۖ;->ۙ(ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ll/֡᩷᩸;->ۙ(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
     move-result-object v0
 
     .line 93
-    sput-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۨ:Ljava/lang/String;
+    sput-object v0, Lcom/amazonaws/util/VersionInfoUtils;->ۤ:Ljava/lang/String;
 
     return-void
 .end method

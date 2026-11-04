@@ -1,13 +1,70 @@
 package l;
 
-import java.util.function.ToLongFunction;
+/* JADX INFO: renamed from: l.ۡ֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C9062 extends EnumC13820 {
+    public /* synthetic */ C9062() {
+        this("BeforeAttributeValue", 36);
+    }
 
-/* JADX INFO: renamed from: l.ۡᩴۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V7AU */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9062 implements ToLongFunction {
-    @Override // java.util.function.ToLongFunction
-    public final long applyAsLong(Object obj) {
-        return ((C22467) obj).f73343;
+    public C9062(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == 0) {
+            c13646.m33394(this);
+            c13646.f43330.m8314((char) 65533);
+            c13646.m33401(EnumC13820.f43833);
+            return;
+        }
+        if (cM12689 != ' ') {
+            if (cM12689 == '\"') {
+                c13646.m33401(EnumC13820.f43821);
+                return;
+            }
+            if (cM12689 != '`') {
+                if (cM12689 == 65535) {
+                    c13646.m33399(this);
+                    c13646.m33397();
+                    c13646.m33401(EnumC13820.f43874);
+                    return;
+                }
+                if (cM12689 == '\t' || cM12689 == '\n' || cM12689 == '\f' || cM12689 == '\r') {
+                    return;
+                }
+                if (cM12689 == '&') {
+                    c3952.m12688();
+                    c13646.m33401(EnumC13820.f43833);
+                    return;
+                }
+                if (cM12689 == '\'') {
+                    c13646.m33401(EnumC13820.f43838);
+                    return;
+                }
+                switch (cM12689) {
+                    case '<':
+                    case '=':
+                        break;
+                    case '>':
+                        c13646.m33394(this);
+                        c13646.m33397();
+                        c13646.m33401(EnumC13820.f43874);
+                        break;
+                    default:
+                        c3952.m12688();
+                        c13646.m33401(EnumC13820.f43833);
+                        break;
+                }
+                return;
+            }
+            c13646.m33394(this);
+            c13646.f43330.m8314(cM12689);
+            c13646.m33401(EnumC13820.f43833);
+        }
     }
 }

@@ -9,9 +9,9 @@
 # instance fields
 .field public final ۙ:J
 
-.field public final synthetic ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+.field public final synthetic ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
-.field public ܰ:J
+.field public ᩷:J
 
 
 # direct methods
@@ -21,10 +21,10 @@
     .line 502
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
     .line 503
-    iput-wide p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ܰ:J
+    iput-wide p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->᩷:J
 
     .line 504
     iput-wide p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۙ:J
@@ -44,9 +44,9 @@
 
     .line 514
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
-    iget-object v1, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->᩹:Ljava/util/HashMap;
+    iget-object v1, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ܳ:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -67,7 +67,7 @@
 
     const-string p2, "Update received for unknown part. Ignoring."
 
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -85,9 +85,9 @@
     iget-wide p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۙ:J
 
     .line 523
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
-    iget-object p3, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->᩹:Ljava/util/HashMap;
+    iget-object p3, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ܳ:Ljava/util/HashMap;
 
     invoke-virtual {p3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -125,48 +125,48 @@
 
     .line 530
     :cond_1
-    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ܰ:J
+    iget-wide v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->᩷:J
 
     cmp-long p3, p1, v1
 
     if-lez p3, :cond_2
 
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
     .line 531
     invoke-static {p3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ۙ(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     move-result-object p3
 
-    iget-wide v1, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iget-wide v1, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     cmp-long p3, p1, v1
 
     if-gtz p3, :cond_2
 
     .line 532
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
-    invoke-static {p3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ܰ(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    invoke-static {p3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->᩷(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     move-result-object v1
 
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
     invoke-static {p3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ۙ(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     move-result-object p3
 
-    iget v2, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v2, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;
 
     .line 534
     invoke-static {p3}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;->ۙ(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask;)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     move-result-object p3
 
-    iget-wide v5, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iget-wide v5, p3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     const/4 v7, 0x1
 
@@ -176,7 +176,7 @@
     invoke-virtual/range {v1 .. v7}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۙ(IJJZ)V
 
     .line 536
-    iput-wide p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ܰ:J
+    iput-wide p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->᩷:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

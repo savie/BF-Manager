@@ -1,62 +1,17 @@
-.class public final synthetic Ll/᩹ܺ᩹;
+.class public abstract Ll/᩹ܺ᩹;
 .super Ljava/lang/Object;
-.source "BAG5"
-
-# interfaces
-.implements Ll/᩷᩸;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/֨ܺ᩹;
+.source "D8ZC"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/֨ܺ᩹;)V
-    .locals 0
+.method public static ۙ()Ll/᩹ܺ᩹;
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 16
+    new-instance v0, Ll/ܶܺ᩹;
 
-    iput-object p1, p0, Ll/᩹ܺ᩹;->ܺ:Ll/֨ܺ᩹;
+    .line 10
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
-
-    .line 2
-    iget-object v0, p0, Ll/᩹ܺ᩹;->ܺ:Ll/֨ܺ᩹;
-
-    .line 47
-    iget-object v0, v0, Ll/ܳ۟᩹;->ܺ:Lbin/mt/plus/Main;
-
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v1
-
-    const v2, 0x7f1202d2
-
-    if-ne v1, v2, :cond_0
-
-    .line 48
-    invoke-static {v0}, Ll/ۚ᩷᩹;->ۙ(Ll/۫ܶۘ;)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 51
-    :cond_0
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ll/֨ܺ᩹;->ۙ(Ll/۫ܶۘ;I)Z
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method

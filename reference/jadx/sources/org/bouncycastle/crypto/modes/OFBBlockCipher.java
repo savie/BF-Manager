@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes;
 
-import l.C2271;
+import l.C14442;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.StreamBlockCipher;
@@ -105,7 +105,7 @@ public class OFBBlockCipher extends StreamBlockCipher {
     public OFBBlockCipher(BlockCipher blockCipher, int i) {
         super(blockCipher);
         if (i > blockCipher.getBlockSize() * 8 || i < 8 || i % 8 != 0) {
-            throw new IllegalArgumentException(C2271.m6966(i, "0FB", " not supported"));
+            throw new IllegalArgumentException(C14442.m34864(i, "0FB", " not supported"));
         }
         this.cipher = blockCipher;
         this.blockSize = i / 8;

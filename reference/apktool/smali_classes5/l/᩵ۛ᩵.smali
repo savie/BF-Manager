@@ -1,7 +1,6 @@
-.class public final Ll/᩵ۛ᩵;
-.super Ll/ۚۛ᩵;
-.source "H4NZ"
+.class public interface abstract Ll/᩵ۛ᩵;
+.super Ljava/lang/Object;
+.source "Q9Y3"
 
-
-# instance fields
-.field public ᩶:Ll/ܶۛ᩵;
+# interfaces
+.implements Ll/֫᩵᩵;

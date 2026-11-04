@@ -3,9 +3,9 @@
     <item
         android:state_enabled="true"
         android:state_pressed="true"
-        android:color="@color/MT_Protector_res_0x7f06009a"
+        android:color="@color/MT_Protector_res_0x7f06009c"
         android:alpha="@dimen/MT_Protector_res_0x7f0700cf"/>
     <item
-        android:color="@color/MT_Protector_res_0x7f06009a"
+        android:color="@color/MT_Protector_res_0x7f06009c"
         android:alpha="@dimen/MT_Protector_res_0x7f0700cd"/>
 </selector>

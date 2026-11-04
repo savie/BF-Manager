@@ -1,28 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ᩳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: YAH1 */
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.ArrayList;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.᩶ۘۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6I5 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21045 extends AbstractC7640 {
+public final /* synthetic */ class C21045 implements Function {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0583 f68560;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f67257;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C21045(C0583 c0583) {
-        super(c0583);
-        this.f68560 = c0583;
+    public /* synthetic */ C21045(int i) {
+        this.f67257 = i;
     }
 
-    @Override // l.AbstractC7640
-    /* JADX INFO: renamed from: ۙ */
-    public final C20340 mo20192() {
-        return this.f68560.f2553;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.AbstractC7640
-    /* JADX INFO: renamed from: ۙ */
-    public final C20340 mo20193(C20340 c20340) {
-        return c20340.f65878;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f67257) {
+            case 0:
+                ((InterfaceC17730) obj).m41522();
+                throw null;
+            case 1:
+                return new ArrayList();
+            case 2:
+                return ((DynamicScheme) obj).neutralVariantPalette;
+            case 3:
+                return ((DynamicScheme) obj).neutralPalette;
+            case 4:
+                return MaterialDynamicColors.lambda$surfaceContainerHighest$30((DynamicScheme) obj);
+            default:
+                return ((C24927) obj).m55571();
+        }
     }
 }

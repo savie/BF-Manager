@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.spec;
 
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CompositeSignatureSpec implements AlgorithmParameterSpec {
     public final boolean isPrehashMode;
     public final AlgorithmParameterSpec secondaryParameterSpec;

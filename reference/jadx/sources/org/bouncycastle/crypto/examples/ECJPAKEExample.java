@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.agreement.ecjpake.ECJPAKERound3Payload;
 import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECJPAKEExample {
     public static BigInteger deriveSessionKey(BigInteger bigInteger) {
         SavableDigest savableDigestNewInstance = SHA256Digest.newInstance();

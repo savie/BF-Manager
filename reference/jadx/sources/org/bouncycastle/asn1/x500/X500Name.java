@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x500.style.BCStyle;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X500Name extends ASN1Object implements ASN1Choice {
     public static X500NameStyle defaultStyle = BCStyle.INSTANCE;
     public int hashCodeValue;

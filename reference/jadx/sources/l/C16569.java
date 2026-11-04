@@ -1,15 +1,15 @@
 package l;
 
-import android.view.View;
+import java.io.Serializable;
+import java.util.Comparator;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ܽۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1D4 */
+/* JADX INFO: renamed from: l.ܺۘۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16569 extends AbstractC23625 {
-    @Override // l.AbstractC23625
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo2000(float f, long j, View view, C21070 c21070) {
-        view.setScaleX(m52090(f, j, view, c21070));
-        return this.f76537;
+public final /* synthetic */ class C16569 implements Comparator, Serializable {
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return ((Comparable) ((Map.Entry) obj).getKey()).compareTo(((Map.Entry) obj2).getKey());
     }
 }

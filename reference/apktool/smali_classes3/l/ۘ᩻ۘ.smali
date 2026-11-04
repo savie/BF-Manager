@@ -1,43 +1,24 @@
 .class public final synthetic Ll/ۘ᩻ۘ;
 .super Ljava/lang/Object;
-.source "61KH"
+.source "N43O"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/ۜ֡ۘ;
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final ۙ(Ll/ۙ۟ۘ;)Ljava/lang/Object;
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 60
+    new-instance v0, Ll/ܿ᩻ۘ;
 
-    move-result-object p1
+    invoke-direct {v0}, Ll/ܿ᩻ۘ;-><init>()V
 
-    return-object p1
-.end method
+    .line 61
+    const-class v1, Ll/֡᩻ۘ;
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    check-cast p1, Ll/᩷۠ۚ;
-
-    new-instance v0, Ll/᩺᩻ۘ;
-
-    invoke-direct {v0, p1}, Ll/᩺᩻ۘ;-><init>(Ll/᩷۠ۚ;)V
+    invoke-virtual {p1, v1, v0}, Ll/ۙ۟ۘ;->ۙ(Ljava/lang/Class;Ljava/lang/Object;)V
 
     return-object v0
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
 .end method

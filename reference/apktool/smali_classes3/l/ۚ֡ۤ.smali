@@ -1,51 +1,53 @@
 .class public final synthetic Ll/ۚ֡ۤ;
 .super Ljava/lang/Object;
-.source "I7LP"
+.source "28VT"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ll/֨֨;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۬֡ۤ;
+.field public final synthetic ۙ:Ll/᩺֡ۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۬֡ۤ;)V
+.method public synthetic constructor <init>(Ll/᩺֡ۤ;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۚ֡ۤ;->ܺ:Ll/۬֡ۤ;
+    iput-object p1, p0, Ll/ۚ֡ۤ;->ۙ:Ll/᩺֡ۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    .line 536
-    iget-object v0, p0, Ll/ۚ֡ۤ;->ܺ:Ll/۬֡ۤ;
+    .line 2
+    check-cast p1, Ll/᩷ۨᩴ;
 
-    iget-object v1, v0, Ll/ۨ֡ۤ;->ۙۙ:Ll/ۛ۠۟;
+    .line 450
+    iget-object v0, p0, Ll/ۚ֡ۤ;->ۙ:Ll/᩺֡ۤ;
 
-    check-cast v1, Ll/᩹᩵۟;
+    iget-object v0, v0, Ll/᩺֡ۤ;->᩶:Ll/ۘ֡ۤ;
 
-    iget-object v1, v1, Ll/᩹᩵۟;->ܳ:Ll/᩸᩷۟;
+    invoke-virtual {p1}, Ll/᩷ۨᩴ;->getName()Ljava/lang/String;
 
-    invoke-static {v1}, Ll/ۗۡ۟;->ۙ(Ll/᩸᩷۟;)Ll/᩸᩷۟;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-static {v0, p1}, Ll/ۘ֡ۤ;->᩷(Ll/ۘ֡ۤ;Ljava/lang/String;)V
 
-    .line 537
-    invoke-static {v1}, Ll/ۨۛᩴ;->of(Ljava/lang/Object;)Ll/ۨۛᩴ;
+    .line 451
+    invoke-static {v0}, Ll/ۘ֡ۤ;->ܺ(Ll/ۘ֡ۤ;)V
 
-    move-result-object v2
+    const p1, 0x7f1204b6
 
-    iput-object v2, v0, Ll/۬֡ۤ;->ۖۙ:Ll/ۨۛᩴ;
+    .line 452
+    invoke-static {p1}, Ll/᩸۠ۧ;->ۙ(I)Ll/᩸۠ۧ;
 
-    return-object v1
+    return-void
 .end method

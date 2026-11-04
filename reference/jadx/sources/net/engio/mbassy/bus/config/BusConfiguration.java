@@ -5,10 +5,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import l.C0561;
+import l.C4681;
 import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BusConfiguration implements IBusConfiguration {
     public final Map properties = new HashMap();
     public final List publicationErrorHandlers = new ArrayList();
@@ -48,6 +48,6 @@ public class BusConfiguration implements IBusConfiguration {
 
     @Override // net.engio.mbassy.bus.config.IBusConfiguration
     public Collection getRegisteredPublicationErrorHandlers() {
-        return C0561.unmodifiableCollection(this.publicationErrorHandlers);
+        return C4681.unmodifiableCollection(this.publicationErrorHandlers);
     }
 }

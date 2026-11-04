@@ -2,7 +2,7 @@ package bin.mt.plugin.api.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C13638;
+import l.C17359;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ServiceLoader {
@@ -21,7 +21,7 @@ public class ServiceLoader {
 
     public static Object get(Class cls) {
         Object obj = IMPL_MAP.get(cls);
-        C13638.requireNonNull(obj);
+        C17359.requireNonNull(obj);
         return obj;
     }
 }

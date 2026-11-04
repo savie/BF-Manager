@@ -1,18 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨᩷᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34DO */
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: renamed from: l.֨ᩴܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D70T */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C1376 {
 
-    /* JADX INFO: renamed from: ۟᩵ܰ, reason: not valid java name and contains not printable characters */
-    private static final short[] f5748;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f4907;
 
-    static {
-        ApplicationC6132.m17119(22);
-        f5748 = new short[]{8776, -17017, -16936, -16924, -16921, -16922, -16958, -16924, -16944, -16914, -16932, -16902, -17019, -16904, -16913, -16947, -16936, -16928, -16944, -17018, -16932, -16943, -16899, -17009, -16927, -16947, -16946, -16912, -16938, -16959, -16940, -16908, -16899};
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22808 f4908;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C10127 f4909;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f4910;
+
+    public C1376(C8636 c8636) {
+        this.f4908 = c8636.f28220;
+        this.f4910 = c8636.f28222;
+        this.f4907 = c8636.f28219;
+        this.f4909 = c8636.f28221;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static native byte[] m4825(byte[] bArr, int[] iArr);
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof C1376) {
+            C1376 c1376 = (C1376) obj;
+            if (this.f4908 == c1376.f4908 && this.f4910 == c1376.f4910 && this.f4907 == c1376.f4907 && this.f4909 == c1376.f4909) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return System.identityHashCode(this.f4909) + (((((System.identityHashCode(this.f4908) * 31) + this.f4910) * 31) + this.f4907) * 31);
+    }
 }

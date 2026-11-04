@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.ua;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface UAObjectIdentifiers {
     public static final ASN1ObjectIdentifier UaOid;
     public static final ASN1ObjectIdentifier alg_id;

@@ -2,7 +2,7 @@ package org.bouncycastle.jce.exception;
 
 import java.security.cert.CertificateEncodingException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExtCertificateEncodingException extends CertificateEncodingException implements ExtException {
     public Throwable cause;
 

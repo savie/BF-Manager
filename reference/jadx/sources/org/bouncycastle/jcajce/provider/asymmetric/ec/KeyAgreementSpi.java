@@ -8,8 +8,9 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C22697;
-import l.C8479;
+import l.C16076;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.asn1.x9.X9IntegerConverter;
 import org.bouncycastle.crypto.BasicAgreement;
 import org.bouncycastle.crypto.CipherParameters;
@@ -39,7 +40,7 @@ import org.bouncycastle.jce.interfaces.MQVPrivateKey;
 import org.bouncycastle.jce.interfaces.MQVPublicKey;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyAgreementSpi extends BaseAgreementSpi {
     public static final X9IntegerConverter converter = new X9IntegerConverter();
     public Object agreement;
@@ -361,11 +362,6 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
         this.agreement = eCDHCUnifiedAgreement;
     }
 
-    public static String getSimpleName(Class cls) {
-        String name = cls.getName();
-        return name.substring(name.lastIndexOf(46) + 1);
-    }
-
     public byte[] bigIntToBytes(BigInteger bigInteger) {
         X9IntegerConverter x9IntegerConverter = converter;
         return x9IntegerConverter.integerToBytes(bigInteger, x9IntegerConverter.getByteLength(this.parameters.getCurve()));
@@ -380,10 +376,10 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
     public Key engineDoPhase(Key key, boolean z) throws InvalidKeyException {
         CipherParameters cipherParametersGeneratePublicKeyParameter;
         if (this.parameters == null) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " not initialised."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " not initialised."));
         }
         if (!z) {
-            throw new IllegalStateException(C22697.m50267(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
+            throw new IllegalStateException(C8947.m23910(new StringBuilder(), this.kaAlgorithm, " can only be between two parties."));
         }
         Object obj = this.agreement;
         if (obj instanceof ECMQVBasicAgreement) {
@@ -400,7 +396,7 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this.kaAlgorithm);
                 sb.append(" key agreement requires ");
-                throw new InvalidKeyException(C22697.m50267(sb, getSimpleName(ECPublicKey.class), " for doPhase"));
+                throw new InvalidKeyException(C8947.m23910(sb, getSimpleName(ECPublicKey.class), " for doPhase"));
             }
             cipherParametersGeneratePublicKeyParameter = ECUtils.generatePublicKeyParameter((PublicKey) key);
         }
@@ -413,7 +409,7 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
             this.result = ((ECDHCUnifiedAgreement) obj2).calculateAgreement(cipherParametersGeneratePublicKeyParameter);
             return null;
         } catch (Exception e) {
-            throw new InvalidKeyException(this, C8479.m22142(e, new StringBuilder("calculation failed: "))) { // from class: org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi.1
+            throw new InvalidKeyException(this, C16076.m38224(e, new StringBuilder("calculation failed: "))) { // from class: org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi.1
                 public final /* synthetic */ KeyAgreementSpi this$0;
 
                 {
@@ -426,6 +422,10 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
                 }
             };
         }
+    }
+
+    public static String getSimpleName(Class cls) {
+        return C18063.m42088(46, 1, cls.getName());
     }
 
     @Override // org.bouncycastle.jcajce.provider.asymmetric.util.BaseAgreementSpi
@@ -444,7 +444,7 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this.kaAlgorithm);
                 sb.append(" key agreement requires ");
-                throw new InvalidAlgorithmParameterException(C22697.m50267(sb, getSimpleName(MQVParameterSpec.class), " for initialisation"));
+                throw new InvalidAlgorithmParameterException(C8947.m23910(sb, getSimpleName(MQVParameterSpec.class), " for initialisation"));
             }
             if (z) {
                 MQVPrivateKey mQVPrivateKey = (MQVPrivateKey) key;
@@ -472,7 +472,7 @@ public class KeyAgreementSpi extends BaseAgreementSpi {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(this.kaAlgorithm);
                 sb2.append(" key agreement requires ");
-                throw new InvalidKeyException(C22697.m50267(sb2, getSimpleName(ECPrivateKey.class), " for initialisation"));
+                throw new InvalidKeyException(C8947.m23910(sb2, getSimpleName(ECPrivateKey.class), " for initialisation"));
             }
             if (this.kdf == null && (algorithmParameterSpec instanceof UserKeyingMaterialSpec)) {
                 throw new InvalidAlgorithmParameterException("no KDF specified for UserKeyingMaterialSpec");

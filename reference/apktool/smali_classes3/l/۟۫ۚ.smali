@@ -1,45 +1,26 @@
-.class public final synthetic Ll/۟۫ۚ;
+.class public final Ll/۟۫ۚ;
 .super Ljava/lang/Object;
-.source "0AIV"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "L79Z"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩶۫ۚ;
+.field public final ۙ:I
+
+.field public final ᩷:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩶۫ۚ;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    .line 0
+    .line 446
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/۟۫ۚ;->ܺ:Ll/᩶۫ۚ;
+    .line 447
+    iput p1, p0, Ll/۟۫ۚ;->᩷:I
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 147
-    iget-object v0, p0, Ll/۟۫ۚ;->ܺ:Ll/᩶۫ۚ;
-
-    iget-object v1, v0, Ll/֫ۧۚ;->ۘ:Landroid/widget/ProgressBar;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 148
-    iget-object v0, v0, Ll/֫ۧۚ;->ۜ:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    .line 448
+    iput p2, p0, Ll/۟۫ۚ;->ۙ:I
 
     return-void
 .end method

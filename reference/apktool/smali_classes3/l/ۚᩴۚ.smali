@@ -1,204 +1,92 @@
-.class public final Ll/ۚᩴۚ;
+.class public final synthetic Ll/ۚᩴۚ;
 .super Ljava/lang/Object;
-.source "B9A2"
+.source "I6X2"
 
 # interfaces
-.implements Ll/ۨᩴۚ;
+.implements Ll/ۨۢᩴ;
 
 
 # instance fields
-.field public final ۙ:Landroid/content/ComponentName;
+.field public final synthetic ֡:Landroid/graphics/drawable/GradientDrawable;
 
-.field public final ܰ:Landroid/content/pm/ResolveInfo;
+.field public final synthetic ܰ:[I
+
+.field public final synthetic ܿ:Landroid/widget/ImageView;
+
+.field public final synthetic ᩶:Ll/ܽ֡֫;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/pm/ResolveInfo;)V
-    .locals 2
+.method public synthetic constructor <init>(Landroid/graphics/drawable/GradientDrawable;Landroid/widget/ImageView;Ll/ܽ֡֫;[I)V
+    .locals 0
 
-    .line 182
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
-    iput-object p1, p0, Ll/ۚᩴۚ;->ܰ:Landroid/content/pm/ResolveInfo;
+    iput-object p4, p0, Ll/ۚᩴۚ;->ܰ:[I
 
-    .line 184
-    new-instance v0, Landroid/content/ComponentName;
+    iput-object p3, p0, Ll/ۚᩴۚ;->᩶:Ll/ܽ֡֫;
 
-    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iput-object p2, p0, Ll/ۚᩴۚ;->ܿ:Landroid/widget/ImageView;
 
-    iget-object v1, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-direct {v0, v1, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, p0, Ll/ۚᩴۚ;->ۙ:Landroid/content/ComponentName;
+    iput-object p1, p0, Ll/ۚᩴۚ;->֡:Landroid/graphics/drawable/GradientDrawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ljava/lang/String;
-    .locals 1
-
-    .line 203
-    iget-object v0, p0, Ll/ۚᩴۚ;->ۙ:Landroid/content/ComponentName;
-
-    invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(Landroid/content/pm/PackageManager;)Ljava/lang/String;
+.method public final ۙ(I)V
     .locals 2
 
-    .line 190
-    iget-object v0, p0, Ll/ۚᩴۚ;->ܰ:Landroid/content/pm/ResolveInfo;
+    .line 81
+    invoke-static {p1}, Ll/֡ܳۚ;->ۙ(I)I
 
-    :try_start_0
-    invoke-virtual {v0, p1}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    move-result p1
 
-    move-result-object v1
+    iget-object v0, p0, Ll/ۚᩴۚ;->ܰ:[I
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    aput p1, v0, v1
 
-    .line 191
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    .line 173
+    iget-object v0, p0, Ll/ۚᩴۚ;->᩶:Ll/ܽ֡֫;
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    invoke-static {v0, p1}, Ll/֡ܳۚ;->ۙ(Landroid/content/Context;I)I
 
-    invoke-virtual {v0, p1}, Landroid/content/pm/PackageItemInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    move-result p1
 
-    move-result-object p1
+    .line 164
+    iget-object v0, p0, Ll/ۚᩴۚ;->֡:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 192
-    invoke-virtual {v1, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-object v1
-
-    .line 195
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " - "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    .line 197
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ۛܳۖ;)Z
-    .locals 3
-
-    .line 208
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    .line 209
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.PROCESS_TEXT"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 210
-    iget-object v1, p0, Ll/ۚᩴۚ;->ۙ:Landroid/content/ComponentName;
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    const-string v1, "text/plain"
-
-    .line 211
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "android.intent.extra.PROCESS_TEXT"
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
     .line 212
-    invoke-virtual {p1}, Ll/ۛܳۖ;->ܽۙ()Ljava/lang/String;
+    invoke-static {p1}, Ll/۠ۚܺ;->ۙ(I)I
 
-    move-result-object v2
+    move-result p1
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const/16 v0, 0xdc
 
-    const-string v1, "android.intent.extra.PROCESS_TEXT_READONLY"
+    if-le p1, v0, :cond_0
 
-    const/4 v2, 0x1
+    const p1, -0xc4c4c5
 
-    .line 213
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 215
-    :try_start_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v2
-
-    :catch_0
-    move-exception p1
-
-    .line 218
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    instance-of p1, p1, Landroid/os/TransactionTooLargeException;
-
-    if-eqz p1, :cond_0
-
-    const p1, 0x7f120933
-
-    .line 219
-    invoke-static {p1}, Ll/ܺۡۜ;->ۙ(I)Ll/ܺۡۜ;
-
-    return v2
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p1, -0x1
 
-    return p1
+    .line 165
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ll/ۚᩴۚ;->ܿ:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
 .end method

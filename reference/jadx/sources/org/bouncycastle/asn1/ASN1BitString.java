@@ -3,9 +3,9 @@ package org.bouncycastle.asn1;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import l.C12441;
-import l.C8479;
-import l.C9013;
+import l.C11958;
+import l.C13645;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -111,10 +111,10 @@ public abstract class ASN1BitString extends ASN1Primitive implements ASN1String,
             try {
                 return (ASN1BitString) TYPE.fromByteArray((byte[]) obj);
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct BIT STRING from byte[]: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct BIT STRING from byte[]: ")));
             }
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 
     public static ASN1BitString getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {
@@ -277,7 +277,7 @@ public abstract class ASN1BitString extends ASN1Primitive implements ASN1String,
         if (i == 0) {
             return getBitStream();
         }
-        throw new IOException(C8479.m22141(i, "expected octet-aligned bitstring, but found padBits: "));
+        throw new IOException(C13645.m33382(i, "expected octet-aligned bitstring, but found padBits: "));
     }
 
     @Override // org.bouncycastle.asn1.ASN1String
@@ -294,7 +294,7 @@ public abstract class ASN1BitString extends ASN1Primitive implements ASN1String,
             }
             return sb.toString();
         } catch (IOException e) {
-            throw new ASN1ParsingException(C9013.m23329(e, new StringBuilder("Internal error encoding BitString: ")), e);
+            throw new ASN1ParsingException(C11958.m29932(e, new StringBuilder("Internal error encoding BitString: ")), e);
         }
     }
 }

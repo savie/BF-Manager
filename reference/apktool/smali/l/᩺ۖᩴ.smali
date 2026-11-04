@@ -1,98 +1,156 @@
-.class public final synthetic Ll/᩺ۖᩴ;
-.super Ljava/lang/Object;
-.source "8ATV"
-
-# interfaces
-.implements Ll/ᩳۖᩴ;
+.class public final Ll/᩺ۖᩴ;
+.super Landroid/content/BroadcastReceiver;
+.source "964K"
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/util/function/DoubleConsumer;
+.field public final ۙ:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/DoubleConsumer;)V
-    .locals 0
+.method public constructor <init>(Ll/ܰۖᩴ;)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 238
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Ll/᩺ۖᩴ;->ܺ:Ljava/util/function/DoubleConsumer;
+    .line 239
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ll/᩺ۖᩴ;->ۙ:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic accept(D)V
-    .locals 0
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1, p2}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;D)V
+    .line 244
+    iget-object p1, p0, Ll/᩺ۖᩴ;->ۙ:Ljava/lang/ref/WeakReference;
 
-    return-void
-.end method
-
-.method public final bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
-
-    .line 105
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Ll/ܰۖᩴ;
 
-.method public final synthetic andThen(Ljava/util/function/DoubleConsumer;)Ljava/util/function/DoubleConsumer;
-    .locals 0
+    if-eqz p1, :cond_2
 
-    .line 35
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/util/function/DoubleConsumer;)Ll/ᩳۖᩴ;
+    .line 245
+    invoke-static {p1}, Ll/ܰۖᩴ;->֫(Ll/ܰۖᩴ;)Ll/۠ۖۧ;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/۠ۖۧ;->۫()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "pkgName"
+
+    .line 249
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 250
+    invoke-static {p1}, Ll/ܰۖᩴ;->ܳ(Ll/ܰۖᩴ;)Ll/ۧۙܺ;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/ۧۙܺ;->ܳ()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p2, v0}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 253
+    :cond_1
+    invoke-static {}, Ll/ܰۖᩴ;->᩷()V
+
+    .line 255
+    invoke-static {p1}, Ll/ܰۖᩴ;->ܺ(Ll/ܰۖᩴ;)Ll/۠ۨܳ;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/۠ۨܳ;->᩹()Lbin/mt/plus/Main;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/ܽ֡֫;->buildDialog()Ll/ۖۖۧ;
+
+    move-result-object v0
+
+    const v1, 0x7f120d44
+
+    invoke-virtual {v0, v1}, Ll/ۖۖۧ;->᩷(I)V
+
+    const v1, 0x7f12005a
+
+    .line 256
+    invoke-virtual {v0, v1}, Ll/ۖۖۧ;->ۙ(I)V
+
+    new-instance v1, Ll/ۨۖᩴ;
+
+    invoke-direct {v1, p1, p2}, Ll/ۨۖᩴ;-><init>(Ll/ܰۖᩴ;Ljava/lang/String;)V
+
+    const p2, 0x7f1208c9
+
+    .line 257
+    invoke-virtual {v0, p2, v1}, Ll/ۖۖۧ;->᩸(ILandroid/content/DialogInterface$OnClickListener;)V
+
+    const p2, 0x7f120161
+
+    const/4 v1, 0x0
+
+    .line 262
+    invoke-virtual {v0, p2, v1}, Ll/ۖۖۧ;->᩷(ILandroid/content/DialogInterface$OnClickListener;)V
+
+    new-instance p2, Ll/ۛۖᩴ;
+
+    invoke-direct {p2, p1}, Ll/ۛۖᩴ;-><init>(Ll/ܰۖᩴ;)V
+
+    const p1, 0x7f1204e4
+
+    .line 263
+    invoke-virtual {v0, p1, p2}, Ll/ۖۖۧ;->ۤ(ILandroid/content/DialogInterface$OnClickListener;)V
+
+    .line 264
+    invoke-virtual {v0}, Ll/ۖۖۧ;->ۤ()Ll/۠ۖۧ;
 
     move-result-object p1
 
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ᩳۖᩴ;)Ll/ܶۖᩴ;
-    .locals 1
-
-    .line 80
-    new-instance v0, Ll/ܶۖᩴ;
-
-    invoke-direct {v0, p0, p1}, Ll/ܶۖᩴ;-><init>(Ll/ᩳۖᩴ;Ll/ᩳۖᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(F)V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, Ll/᩺ۖᩴ;->ܺ:Ljava/util/function/DoubleConsumer;
-
-    float-to-double v1, p1
-
-    invoke-interface {v0, v1, v2}, Ljava/util/function/DoubleConsumer;->accept(D)V
+    .line 265
+    invoke-static {p1}, Ll/ۚۙܺ;->ۙ(Ll/۠ۖۧ;)V
 
     return-void
-.end method
 
-.method public final synthetic ۙ(Ljava/lang/Float;)V
-    .locals 0
+    .line 246
+    :cond_2
+    :goto_0
+    invoke-static {}, Ll/᩶᩷ۧ;->ᩴ()Landroid/app/Application;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۖᩴ;->ۙ(Ll/ᩳۖᩴ;Ljava/lang/Float;)V
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۜܺۙ;->ۙ(Landroid/content/ContextWrapper;)Ll/ۜܺۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Ll/ۜܺۙ;->ۙ(Landroid/content/BroadcastReceiver;)V
 
     return-void
 .end method

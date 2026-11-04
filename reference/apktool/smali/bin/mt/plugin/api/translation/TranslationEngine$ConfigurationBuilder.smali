@@ -59,7 +59,7 @@
 
     move-object v0, v10
 
-    invoke-direct/range {v0 .. v9}, Lbin/mt/plugin/api/translation/TranslationEngine$Configuration;-><init>(ILbin/mt/plugin/api/translation/TranslationEngine$TextLengthCalculator;ZZZZZZLl/᩻᩹ۘ;)V
+    invoke-direct/range {v0 .. v9}, Lbin/mt/plugin/api/translation/TranslationEngine$Configuration;-><init>(ILbin/mt/plugin/api/translation/TranslationEngine$TextLengthCalculator;ZZZZZZLl/ۨۛ֫;)V
 
     return-object v10
 .end method

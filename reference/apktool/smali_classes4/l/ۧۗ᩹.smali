@@ -1,114 +1,168 @@
-.class public final Ll/ۧۗ᩹;
+.class public final synthetic Ll/ۧۗ᩹;
 .super Ljava/lang/Object;
-.source "18AW"
+.source "RC7A"
 
 # interfaces
-.implements Ll/ۤܺۚ;
+.implements Ll/ܺۗ᩹;
+.implements Ljava/io/Serializable;
+.implements Ll/ۜ۫ۗ;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩻ۗ᩹;
+.field public final synthetic ܰ:Ll/ܺۗ᩹;
+
+.field public final synthetic ᩶:Ll/ܺۗ᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ۗ᩹;)V
+.method public synthetic constructor <init>(Ll/ܺۗ᩹;Ll/ܺۗ᩹;)V
     .locals 0
 
-    .line 459
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۧۗ᩹;->ܺ:Ll/᩻ۗ᩹;
+    iput-object p1, p0, Ll/ۧۗ᩹;->ܰ:Ll/ܺۗ᩹;
+
+    iput-object p2, p0, Ll/ۧۗ᩹;->᩶:Ll/ܺۗ᩹;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()Z
-    .locals 1
-
-    .line 468
-    iget-object v0, p0, Ll/ۧۗ᩹;->ܺ:Ll/᩻ۗ᩹;
-
-    iget-object v0, v0, Ll/᩻ۗ᩹;->ܺ:Ll/ۗۗ᩹;
-
-    invoke-static {v0}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
-
-    move-result-object v0
-
-    check-cast v0, Ll/ۧ֫᩹;
-
-    invoke-virtual {v0}, Ll/ۧ֫᩹;->֨()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic ۘۙ()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final ۙ(JJJ)V
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 462
-    iget-object p1, p0, Ll/ۧۗ᩹;->ܺ:Ll/᩻ۗ᩹;
+    .line 32
+    check-cast p1, Ljava/lang/Character;
 
-    iget-object p1, p1, Ll/᩻ۗ᩹;->ܺ:Ll/ۗۗ᩹;
+    check-cast p2, Ljava/lang/Character;
 
-    invoke-static {p1}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
-
-    move-result-object p2
-
-    invoke-static {p3, p4, p5, p6}, Ll/۠᩻᩺;->ۙ(JJ)I
-
-    move-result p5
-
-    check-cast p2, Ll/ۧ֫᩹;
-
-    .line 116
-    iget-object p2, p2, Ll/ۧ֫᩹;->ܺ:Ll/᩻֫᩹;
-
-    invoke-virtual {p2, p5}, Ll/᩶᩷ۜ;->ܶ(I)V
-
-    .line 463
-    invoke-static {p1}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
-
-    move-result-object p2
-
-    invoke-static {p1}, Ll/ۗۗ᩹;->ܰ(Ll/ۗۗ᩹;)Ll/᩷ܿ᩹;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Ll/ۘۛ᩹;->ۚ()J
-
-    move-result-wide p5
-
-    add-long/2addr p5, p3
-
-    invoke-static {p1}, Ll/ۗۗ᩹;->ܰ(Ll/ۗۗ᩹;)Ll/᩷ܿ᩹;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll/ۘۛ᩹;->۬()J
-
-    move-result-wide p3
-
-    invoke-static {p5, p6, p3, p4}, Ll/۠᩻᩺;->ۙ(JJ)I
+    .line 58
+    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
 
     move-result p1
 
-    check-cast p2, Ll/ۧ֫᩹;
+    invoke-virtual {p2}, Ljava/lang/Character;->charValue()C
 
-    .line 121
-    iget-object p2, p2, Ll/ۧ֫᩹;->ܺ:Ll/᩻֫᩹;
+    move-result p2
 
-    invoke-virtual {p2, p1}, Ll/ᩳ۟ۜ;->ۜ(I)V
+    invoke-virtual {p0, p1, p2}, Ll/ۧۗ᩹;->ۙ(CC)I
 
-    return-void
+    move-result p1
+
+    return p1
+.end method
+
+.method public final reversed()Ljava/util/Comparator;
+    .locals 1
+
+    .line 96
+    new-instance v0, Ll/ܶۗ᩹;
+
+    invoke-direct {v0, p0}, Ll/ܶۗ᩹;-><init>(Ll/ܺۗ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final synthetic thenComparing(Ljava/util/Comparator;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩻ۗ᩹;->ۙ(Ll/ܺۗ᩹;Ljava/util/Comparator;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ۫ۗ;->$default$thenComparing(Ljava/util/Comparator;Ljava/util/function/Function;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic thenComparing(Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1, p2}, Ll/ۖ۫ۗ;->$default$thenComparing(Ljava/util/Comparator;Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic thenComparingDouble(Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ۫ۗ;->$default$thenComparingDouble(Ljava/util/Comparator;Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic thenComparingInt(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ۫ۗ;->$default$thenComparingInt(Ljava/util/Comparator;Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic thenComparingLong(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۖ۫ۗ;->$default$thenComparingLong(Ljava/util/Comparator;Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(CC)I
+    .locals 1
+
+    .line 69
+    iget-object v0, p0, Ll/ۧۗ᩹;->ܰ:Ll/ܺۗ᩹;
+
+    invoke-interface {v0, p1, p2}, Ll/ܺۗ᩹;->ۙ(CC)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 70
+    iget-object v0, p0, Ll/ۧۗ᩹;->᩶:Ll/ܺۗ᩹;
+
+    invoke-interface {v0, p1, p2}, Ll/ܺۗ᩹;->ۙ(CC)I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    return v0
+.end method
+
+.method public final ۤ(Ll/ܺۗ᩹;)Ll/ۧۗ᩹;
+    .locals 1
+
+    .line 68
+    new-instance v0, Ll/ۧۗ᩹;
+
+    invoke-direct {v0, p0, p1}, Ll/ۧۗ᩹;-><init>(Ll/ܺۗ᩹;Ll/ܺۗ᩹;)V
+
+    return-object v0
 .end method

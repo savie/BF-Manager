@@ -1,26 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ֨֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07HC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5011 extends C3414 {
+/* JADX INFO: renamed from: l.ۙܺۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1761 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5011 {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3599 f17451;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f17390;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C5011(C3599 c3599, C4516 c4516) {
-        super(c4516);
-        this.f17451 = c3599;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f17391;
 
-    @Override // l.C3414, l.C4516, l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        if (super.mo2357()) {
-            return true;
-        }
-        C3599 c3599 = this.f17451;
-        return c3599.f13252.get() || c3599.f13238.get() != null;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f17392;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f17393;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f17394;
+
+    public C5011(boolean z, int i, int i2, int i3, boolean z2) {
+        this.f17393 = z;
+        this.f17391 = i;
+        this.f17394 = i2;
+        this.f17392 = i3;
+        this.f17390 = z2;
     }
 }

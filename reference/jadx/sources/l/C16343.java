@@ -1,80 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۖۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8B7K */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16343 {
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52627;
+/* JADX INFO: renamed from: l.ܶ᩶᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: WKX */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16343 extends AbstractC5312 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52628;
+    public final /* synthetic */ C19327 f53081;
 
-    static {
-        int[] iArr = new int[EnumC2936.values().length];
-        f52627 = iArr;
-        try {
-            iArr[EnumC2936.NORMAL.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
+    }
+
+    public C16343(C19327 c19327) {
+        this.f53081 = c19327;
+    }
+
+    @Override // l.AbstractC5312, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC15224 iterator() {
+        return new C0682(this.f53081);
+    }
+
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC2546 spliterator() {
+        return new C8140(this.f53081);
+    }
+
+    @Override // l.AbstractC5312, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        C19327 c19327 = this.f53081;
+        int[] iArr = c19327.f62429;
+        Object[] objArr = c19327.f62434;
+        if (c19327.f62437) {
+            consumer.accept(objArr[c19327.f62435]);
         }
-        try {
-            f52627[EnumC2936.EXPLICIT.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        int i = c19327.f62435;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            if (iArr[i2] != 0) {
+                consumer.accept(objArr[i2]);
+            }
+            i = i2;
         }
-        try {
-            f52627[EnumC2936.IMPLICIT.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        int[] iArr2 = new int[EnumC4430.values().length];
-        f52628 = iArr2;
-        try {
-            iArr2[EnumC4430.CHOICE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f52628[EnumC4430.SEQUENCE.ordinal()] = 2;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f52628[EnumC4430.UNENCODED_CONTAINER.ordinal()] = 3;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f52628[EnumC4430.OCTET_STRING.ordinal()] = 4;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f52628[EnumC4430.BIT_STRING.ordinal()] = 5;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f52628[EnumC4430.INTEGER.ordinal()] = 6;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f52628[EnumC4430.BOOLEAN.ordinal()] = 7;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f52628[EnumC4430.UTC_TIME.ordinal()] = 8;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f52628[EnumC4430.GENERALIZED_TIME.ordinal()] = 9;
-        } catch (NoSuchFieldError unused12) {
-        }
-        try {
-            f52628[EnumC4430.OBJECT_IDENTIFIER.ordinal()] = 10;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f52628[EnumC4430.SET_OF.ordinal()] = 11;
-        } catch (NoSuchFieldError unused14) {
-        }
-        try {
-            f52628[EnumC4430.SEQUENCE_OF.ordinal()] = 12;
-        } catch (NoSuchFieldError unused15) {
-        }
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f53081.f62431;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final boolean contains(Object obj) {
+        return this.f53081.containsValue(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final void clear() {
+        this.f53081.clear();
     }
 }

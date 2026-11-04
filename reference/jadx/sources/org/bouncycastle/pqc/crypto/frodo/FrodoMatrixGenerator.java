@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.crypto.frodo;
 
-import l.C1694;
+import l.C12669;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.crypto.engines.AESEngine;
 import org.bouncycastle.crypto.params.KeyParameter;
@@ -30,7 +30,7 @@ public abstract class FrodoMatrixGenerator {
                     Pack.shortToLittleEndian((short) i3, bArr2, 2);
                     aESEngine.processBlock(bArr2, 0, bArr3, 0);
                     for (int i4 = 0; i4 < 8; i4++) {
-                        sArr[C1694.m5620(i2, this.n, i3, i4)] = (short) (Pack.littleEndianToShort(bArr3, i4 * 2) & (this.q - 1));
+                        sArr[C12669.m31436(i2, this.n, i3, i4)] = (short) (Pack.littleEndianToShort(bArr3, i4 * 2) & (this.q - 1));
                     }
                 }
             }

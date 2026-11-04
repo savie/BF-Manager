@@ -5,11 +5,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.concurrent.ConcurrentMap;
-import l.C12441;
-import l.C16523;
-import l.C1679;
-import l.C9013;
-import l.ConcurrentMapC13783;
+import l.C11958;
+import l.C14442;
+import l.C14483;
+import l.C20196;
+import l.ConcurrentMapC17249;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
@@ -25,7 +25,7 @@ public class ASN1RelativeOID extends ASN1Primitive {
             return ASN1RelativeOID.createPrimitive(dEROctetString.getOctets(), false);
         }
     };
-    public static final ConcurrentMap pool = new ConcurrentMapC13783();
+    public static final ConcurrentMap pool = new ConcurrentMapC17249();
     public final byte[] contents;
     public String identifier;
 
@@ -83,10 +83,10 @@ public class ASN1RelativeOID extends ASN1Primitive {
             try {
                 return (ASN1RelativeOID) TYPE.fromByteArray((byte[]) obj);
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct relative OID from byte[]: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct relative OID from byte[]: ")));
             }
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 
     public static ASN1RelativeOID getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {
@@ -293,7 +293,7 @@ public class ASN1RelativeOID extends ASN1Primitive {
             checkContentsLength(this.contents.length + identifier.length);
             bArrConcatenate = Arrays.concatenate(this.contents, identifier);
         }
-        return new ASN1RelativeOID(bArrConcatenate, C1679.m5594(getId(), ".", str));
+        return new ASN1RelativeOID(bArrConcatenate, C20196.m46451(getId(), ".", str));
     }
 
     public static void checkIdentifier(String str) {
@@ -304,7 +304,7 @@ public class ASN1RelativeOID extends ASN1Primitive {
             throw new IllegalArgumentException("exceeded relative OID contents length limit");
         }
         if (!isValidIdentifier(str, 0)) {
-            throw new IllegalArgumentException(C16523.m38890("string ", str, " not a valid relative OID"));
+            throw new IllegalArgumentException(C14442.m34865("string ", str, " not a valid relative OID"));
         }
     }
 }

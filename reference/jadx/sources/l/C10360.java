@@ -1,41 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤܳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 29JK */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10360 extends C13865 {
+/* JADX INFO: renamed from: l.ۢ᩶ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10360 extends AbstractC8036 implements InterfaceC0420 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public long f35508;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C14769 f32979;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final EnumC2162 f35509;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f32980;
 
-    public C10360(C1186 c1186, String str) {
-        super(str);
-        this.f35508 = c1186.m4349();
-        this.f35509 = c1186.m4325();
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public C14106 f32981;
+
+    public C10360() {
+        throw null;
     }
 
-    public C10360(long j, EnumC2162 enumC2162, String str, Exception exc) {
-        super(str, exc);
-        this.f35508 = j;
-        this.f35509 = enumC2162;
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1509(this);
     }
 
-    @Override // java.lang.Throwable
-    public final String getMessage() {
-        long j = this.f35508;
-        return String.format("%s (0x%08x): %s", EnumC3055.m9149(j).name(), Long.valueOf(j), super.getMessage());
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.PACKAGE;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m26258() {
-        return this.f35508;
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo23488(this, obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC2162 m26257() {
-        return this.f35509;
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68500;
     }
 }

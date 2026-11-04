@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:left="2dp"
-        android:right="2dp">
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white"/>
-            <corners
-                android:topLeftRadius="3dp"
-                android:topRightRadius="3dp"
-                android:bottomLeftRadius="0dp"
-                android:bottomRightRadius="0dp"/>
-            <size android:height="@dimen/MT_Protector_res_0x7f070193"/>
-        </shape>
-    </item>
-</layer-list>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/MT_Protector_res_0x7f080196">
+    <target
+        android:name="icon_null"
+        android:animation="@anim/MT_Protector_res_0x7f01000f"/>
+    <target
+        android:name="check_path"
+        android:animation="@anim/MT_Protector_res_0x7f010025"/>
+</animated-vector>

@@ -1,109 +1,96 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۗۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C4SO */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0135 {
+import java.util.NoSuchElementException;
+import java.util.function.Consumer;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public boolean f1135;
+/* JADX INFO: renamed from: l.֡ۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: C1NC */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0135 extends AbstractC5530 implements InterfaceC19597 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f1136;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18780 f1098;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public boolean f1137;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f1138;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public float f1139;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final boolean f1140;
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public int f1141;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final int f1142;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public int f1143;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final int f1144;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f1145;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final boolean f1146;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f1147;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean f1148;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public float f1149;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final boolean f1150;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public int f1151;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final String f1152;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final float f1153;
-
-    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public final int f1154;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public boolean f1155;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final float f1156;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public boolean f1157;
-
-    public C0135(float f, float f2, int i, int i2, int i3, String str, String str2, boolean z, boolean z2, boolean z3, boolean z4, boolean z5) {
-        this.f1152 = str;
-        this.f1141 = i;
-        this.f1154 = i;
-        this.f1149 = f;
-        this.f1153 = f;
-        this.f1139 = f2;
-        this.f1156 = f2;
-        this.f1151 = i2;
-        this.f1142 = i2;
-        this.f1157 = z;
-        this.f1148 = z;
-        this.f1137 = z2;
-        this.f1140 = z2;
-        this.f1135 = z3;
-        this.f1146 = z3;
-        this.f1155 = z4;
-        this.f1150 = z4;
-        this.f1138 = z5;
-        this.f1147 = z5;
-        this.f1143 = i3;
-        this.f1144 = i3;
-        this.f1145 = str2;
-        this.f1136 = str2;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C0135(C18780 c18780, int i) {
+        super(i);
+        this.f1098 = c18780;
     }
 
+    @Override // l.AbstractC12987
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object mo1294(int i) {
+        C18780 c18780 = this.f1098;
+        return c18780.f60993.f31642[c18780.f51221 + i];
+    }
+
+    @Override // l.AbstractC5530
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m1213() {
-        int i = this.f1141;
-        int i2 = this.f1154;
-        return (i2 == i && this.f1153 == this.f1149 && this.f1156 == this.f1139 && this.f1142 == this.f1151 && this.f1148 == this.f1157 && this.f1140 == this.f1137 && this.f1146 == this.f1135 && this.f1150 == this.f1155 && this.f1147 == this.f1138 && this.f1144 == this.f1143 && (i2 != 1 || C13638.equals(this.f1136, this.f1145))) ? false : true;
+    public final void mo1292(int i, Object obj) {
+        this.f1098.add(i, obj);
+    }
+
+    @Override // l.AbstractC5530
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo1295(int i, Object obj) {
+        this.f1098.set(i, obj);
+    }
+
+    @Override // l.AbstractC12987
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo1293(int i) {
+        this.f1098.remove(i);
+    }
+
+    @Override // l.AbstractC12987
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo1291() {
+        C18780 c18780 = this.f1098;
+        return c18780.f51222 - c18780.f51221;
+    }
+
+    @Override // l.AbstractC12987, java.util.Iterator, java.util.ListIterator
+    public final Object next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        C18780 c18780 = this.f1098;
+        Object[] objArr = c18780.f60993.f31642;
+        int i = c18780.f51221;
+        int i2 = this.f41623;
+        this.f41623 = i2 + 1;
+        this.f41622 = i2;
+        return objArr[i + i2];
+    }
+
+    @Override // l.AbstractC5530, l.InterfaceC6847, java.util.ListIterator
+    public final Object previous() {
+        if (!hasPrevious()) {
+            throw new NoSuchElementException();
+        }
+        C18780 c18780 = this.f1098;
+        Object[] objArr = c18780.f60993.f31642;
+        int i = c18780.f51221;
+        int i2 = this.f41623 - 1;
+        this.f41623 = i2;
+        this.f41622 = i2;
+        return objArr[i + i2];
+    }
+
+    @Override // l.AbstractC12987, java.util.Iterator, l.InterfaceC19597
+    public final void forEachRemaining(Consumer consumer) {
+        C18780 c18780 = this.f1098;
+        Object[] objArr = c18780.f60993.f31642;
+        int i = c18780.f51222 - c18780.f51221;
+        while (true) {
+            int i2 = this.f41623;
+            if (i2 >= i) {
+                return;
+            }
+            int i3 = c18780.f51221;
+            this.f41623 = i2 + 1;
+            this.f41622 = i2;
+            consumer.n(objArr[i3 + i2]);
+        }
     }
 }

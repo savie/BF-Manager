@@ -1,48 +1,35 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.function.Predicate;
+import android.content.pm.PackageInfo;
+import android.graphics.drawable.ColorDrawable;
 
-/* JADX INFO: renamed from: l.᩸ۨۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R1EE */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21554 implements InterfaceC0737 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f69993;
+/* JADX INFO: renamed from: l.᩶᩶ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K1PX */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21554 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1092 f69994;
+    public final String f68836;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f69995;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C6389 f68837 = new C6389(new ColorDrawable(0));
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6094 f69996;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f68838;
 
-    public C21554(C1092 c1092, C6094 c6094, String str, String str2) {
-        this.f69994 = c1092;
-        this.f69996 = c6094;
-        this.f69995 = str;
-        this.f69993 = str2;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final PackageInfo f68839;
 
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC7794 mo3200() {
-        return this.f69994;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f68840;
 
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3202(ConcurrentLinkedQueue concurrentLinkedQueue) {
-        this.f69996.m16539(concurrentLinkedQueue, "", true, (Predicate) null);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f68841;
 
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final C10617 mo3201(ArrayList arrayList) {
-        return new C10617("", "Usage: " + this.f69995 + "->" + this.f69993, arrayList);
+    public C21554(PackageInfo packageInfo) {
+        this.f68839 = packageInfo;
+        this.f68836 = C14364.m34796(packageInfo);
+        this.f68838 = packageInfo.packageName;
+        this.f68841 = packageInfo.versionName + "   " + C8311.m22390(C14584.m35193(packageInfo.applicationInfo.sourceDir, new String[0]).mo4285());
     }
 }

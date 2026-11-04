@@ -1,37 +1,39 @@
 package l;
 
-import java.io.DataInputStream;
-import java.io.InputStream;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.۟ۘۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4QY */
+/* JADX INFO: renamed from: l.ۜܳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: L7ER */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7219 extends AbstractC8631 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final DataInputStream f24047;
-
-    public C7219(InputStream inputStream) throws C19838 {
-        DataInputStream dataInputStream = new DataInputStream(inputStream);
-        this.f24047 = dataInputStream;
-        if (dataInputStream.readUnsignedByte() != 0) {
-            throw new C19838();
-        }
-        this.f29781 = dataInputStream.readInt();
-        this.f29782 = -1;
-    }
+public final class C7219 implements InterfaceC3359 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m19187() {
-        return this.f29781 == 0;
+    public C21259 f23814;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public EnumC23570 f23815;
+
+    @Override // l.InterfaceC3359
+    public final int getLength() {
+        return 3;
     }
 
-    @Override // l.AbstractC8631
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19186() {
-        if ((this.f29782 & (-16777216)) == 0) {
-            this.f29781 = (this.f29781 << 8) | this.f24047.readUnsignedByte();
-            this.f29782 <<= 8;
-        }
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ᩸ */
+    public final /* synthetic */ boolean mo6416() {
+        return true;
+    }
+
+    public C7219(EnumC23570 enumC23570, C21259 c21259) {
+        this.f23815 = enumC23570;
+        this.f23814 = c21259;
+    }
+
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        C11388 c11388 = (C11388) interfaceC9397;
+        c11388.m28735(this.f23815.m52767().intValue());
+        c11388.m28740(this.f23814.f67820);
     }
 }

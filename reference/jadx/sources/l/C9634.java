@@ -1,7 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܰ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4EV */
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ۡ᩷֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: L756 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9634 implements InterfaceC3282 {
+public final class C9634 extends IOException {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f31153 = 0;
 }

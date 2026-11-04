@@ -4,8 +4,8 @@ import com.google.android.material.animation.AnimationUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C0561;
-import l.C3012;
+import l.C4681;
+import l.C7750;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class KeylineState {
@@ -16,7 +16,7 @@ public final class KeylineState {
 
     public KeylineState(float f, List list, int i, int i2) {
         this.itemSize = f;
-        this.keylines = C0561.unmodifiableList(list);
+        this.keylines = C4681.unmodifiableList(list);
         this.firstFocalKeylineIndex = i;
         this.lastFocalKeylineIndex = i2;
     }
@@ -54,7 +54,7 @@ public final class KeylineState {
     }
 
     public Keyline getLastKeyline() {
-        return (Keyline) C3012.m8974(1, this.keylines);
+        return (Keyline) C7750.m21093(1, this.keylines);
     }
 
     public Keyline getFirstNonAnchorKeyline() {

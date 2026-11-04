@@ -1,41 +1,30 @@
-.class public interface abstract Ll/ܺۛۙ;
+.class public final Ll/ܺۛۙ;
 .super Ljava/lang/Object;
-.source "E8QX"
+.source "S8SC"
 
 
-# virtual methods
-.method public abstract ۖ()V
-.end method
+# instance fields
+.field public final ۙ:[I
 
-.method public abstract ۙ()V
-.end method
+.field public final ᩷:Ll/֫۫ܽ;
 
-.method public abstract ۙ(I)V
-.end method
 
-.method public abstract ۙ(J)V
-.end method
+# direct methods
+.method public constructor <init>(Ljava/util/List;[I)V
+    .locals 0
 
-.method public abstract ۙ(JIJ)V
-.end method
+    .line 276
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ۙ(Ljava/lang/Exception;)V
-.end method
+    .line 277
+    invoke-static {p1}, Ll/֫۫ܽ;->copyOf(Ljava/util/Collection;)Ll/֫۫ܽ;
 
-.method public abstract ۙ(Ll/ۤۛۙ;)V
-.end method
+    move-result-object p1
 
-.method public abstract ۙ(Z)V
-.end method
+    iput-object p1, p0, Ll/ܺۛۙ;->᩷:Ll/֫۫ܽ;
 
-.method public abstract ۚ()V
-.end method
+    .line 278
+    iput-object p2, p0, Ll/ܺۛۙ;->ۙ:[I
 
-.method public abstract ۨ()V
-.end method
-
-.method public abstract ܰ()V
-.end method
-
-.method public abstract ܰ(Ll/ۤۛۙ;)V
+    return-void
 .end method

@@ -1,63 +1,208 @@
 package l;
 
-import bin.mt.plus.R;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.IntFunction;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
-/* JADX INFO: renamed from: l.ۖۗ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: E2B3 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2267 extends AbstractC4674 {
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        C11545 c11545M47970 = c21422.m47970();
-        return c21422.m47974("local") && c11545M47970.m28814("local") && !c11545M47970.m28794() && !c21422.m47966().equals(c11545M47970.m28801());
+/* JADX INFO: renamed from: l.֫᩻ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C2267 implements Collection, Serializable, InterfaceC9372 {
+    public static final long serialVersionUID = 3053995032091335093L;
+    public final Collection a;
+    public final Object b;
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    public final /* synthetic */ Object[] toArray(IntFunction intFunction) {
+        return toArray((Object[]) intFunction.apply(0));
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        C11545 c11545M47970 = c21422.m47970();
-        c21422.m47963("local");
-        c11545M47970.m28775("local");
-        m12943(c21422, R.string.MT_Protector, AbstractC4674.m12940(c21422, R.string.MT_Protector));
+    public C2267(Collection collection) {
+        this.a = (Collection) C17359.requireNonNull(collection);
+        this.b = this;
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void mo6949(C21422 c21422) {
-        C11545 c11545M47970 = c21422.m47970();
-        c11545M47970.m28775("local");
-        int i = C20725.f67443;
-        C10142 c10142 = new C10142(C11441.class);
-        c10142.m25772(c21422.m47979());
-        c10142.m25780(c21422);
-        c10142.m25768("ARG_MSG_FROM", c21422.m47972());
-        c10142.m25768("ARG_MSG_TO", c11545M47970.m28826());
-        c10142.m25768("sourcePath", c21422.m47961());
-        c10142.m25768("targetPath", c11545M47970.m28799());
-        c10142.m25763();
+    public C2267(Collection collection, Object obj) {
+        this.a = (Collection) C17359.requireNonNull(collection);
+        this.b = C17359.requireNonNull(obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m6948(AbstractC10444 abstractC10444) {
-        if (abstractC10444.m26387()) {
-            C19616 c19616Mo23365 = abstractC10444.mo23365();
-            Iterator it = c19616Mo23365.m44704().iterator();
-            while (it.hasNext()) {
-                m6948((AbstractC10444) it.next());
-            }
-            AbstractC10868 abstractC10868Mo33989 = c19616Mo23365.m26380().mo33989();
-            if (abstractC10868Mo33989.mo1799(EnumC17217.DELETE_EMPTY_DIRECTORY) == EnumC16512.UNSUPPORTED) {
-                return;
-            }
-            try {
-                abstractC10868Mo33989.mo8390();
-            } catch (C20040 e) {
-                if (e.m45399() != EnumC15807.DIRECTORY_NOT_EMPTY) {
-                    EnumC15807 enumC15807 = EnumC15807.NOT_FOUND;
-                }
-            }
+    @Override // java.util.Collection
+    public final int size() {
+        int size;
+        synchronized (this.b) {
+            size = this.a.size();
+        }
+        return size;
+    }
+
+    @Override // java.util.Collection
+    public final boolean isEmpty() {
+        boolean zIsEmpty;
+        synchronized (this.b) {
+            zIsEmpty = this.a.isEmpty();
+        }
+        return zIsEmpty;
+    }
+
+    @Override // java.util.Collection
+    public final boolean contains(Object obj) {
+        boolean zContains;
+        synchronized (this.b) {
+            zContains = this.a.contains(obj);
+        }
+        return zContains;
+    }
+
+    @Override // java.util.Collection
+    public final Object[] toArray() {
+        Object[] array;
+        synchronized (this.b) {
+            array = this.a.toArray();
+        }
+        return array;
+    }
+
+    @Override // java.util.Collection
+    public final Object[] toArray(Object[] objArr) {
+        Object[] array;
+        synchronized (this.b) {
+            array = this.a.toArray(objArr);
+        }
+        return array;
+    }
+
+    @Override // java.util.Collection, java.lang.Iterable
+    public final Iterator iterator() {
+        return this.a.iterator();
+    }
+
+    @Override // java.util.Collection
+    public final boolean add(Object obj) {
+        boolean zAdd;
+        synchronized (this.b) {
+            zAdd = this.a.add(obj);
+        }
+        return zAdd;
+    }
+
+    @Override // java.util.Collection
+    public final boolean remove(Object obj) {
+        boolean zRemove;
+        synchronized (this.b) {
+            zRemove = this.a.remove(obj);
+        }
+        return zRemove;
+    }
+
+    @Override // java.util.Collection
+    public final boolean containsAll(Collection collection) {
+        boolean zContainsAll;
+        synchronized (this.b) {
+            zContainsAll = this.a.containsAll(collection);
+        }
+        return zContainsAll;
+    }
+
+    @Override // java.util.Collection
+    public final boolean addAll(Collection collection) {
+        boolean zAddAll;
+        synchronized (this.b) {
+            zAddAll = this.a.addAll(collection);
+        }
+        return zAddAll;
+    }
+
+    @Override // java.util.Collection
+    public final boolean removeAll(Collection collection) {
+        boolean zRemoveAll;
+        synchronized (this.b) {
+            zRemoveAll = this.a.removeAll(collection);
+        }
+        return zRemoveAll;
+    }
+
+    @Override // java.util.Collection
+    public final boolean retainAll(Collection collection) {
+        boolean zRetainAll;
+        synchronized (this.b) {
+            zRetainAll = this.a.retainAll(collection);
+        }
+        return zRetainAll;
+    }
+
+    @Override // java.util.Collection
+    public final void clear() {
+        synchronized (this.b) {
+            this.a.clear();
+        }
+    }
+
+    public final String toString() {
+        String string;
+        synchronized (this.b) {
+            string = this.a.toString();
+        }
+        return string;
+    }
+
+    @Override // java.lang.Iterable, l.InterfaceC9372, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        synchronized (this.b) {
+            C1170.a(this.a, consumer);
+        }
+    }
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    public final boolean removeIf(Predicate predicate) {
+        boolean zRemoveIf;
+        synchronized (this.b) {
+            zRemoveIf = C1170.removeIf(this.a, predicate);
+        }
+        return zRemoveIf;
+    }
+
+    @Override // java.util.Collection, java.lang.Iterable
+    public final Spliterator spliterator() {
+        return C2443.convert(C1170.b(this.a));
+    }
+
+    @Override // java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        return C1170.b(this.a);
+    }
+
+    @Override // java.util.Collection
+    public final Stream stream() {
+        return C3516.convert(C1170.stream(this.a));
+    }
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    /* JADX INFO: renamed from: stream */
+    public final InterfaceC20670 mo52749stream() {
+        return C1170.stream(this.a);
+    }
+
+    @Override // java.util.Collection
+    public final Stream parallelStream() {
+        return C3516.convert(C1170.parallelStream(this.a));
+    }
+
+    @Override // java.util.Collection, l.InterfaceC9372
+    /* JADX INFO: renamed from: parallelStream */
+    public final InterfaceC20670 mo52748parallelStream() {
+        return C1170.parallelStream(this.a);
+    }
+
+    private void writeObject(ObjectOutputStream objectOutputStream) {
+        synchronized (this.b) {
+            objectOutputStream.defaultWriteObject();
         }
     }
 }

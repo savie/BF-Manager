@@ -1,96 +1,81 @@
-.class public final enum Ll/۠ۜܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/۠ۜܶ;
+.super Ljava/lang/Object;
+.source "U8CE"
+
+
+# static fields
+.field public static ۙ:D
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "FORMAT_10T"
+    const-wide/high16 v0, 0x4024000000000000L    # 10.0
 
-    const/4 v1, 0x5
+    .line 26
+    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/۠ۜܶ;-><init>(Ljava/lang/String;I)V
+    const-wide v0, 0x407b800000000000L    # 440.0
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 125
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    .line 29
+    sput-wide v0, Ll/۠ۜܶ;->ۙ:D
 
     return-void
 .end method
 
+.method public static ۙ(D)D
+    .locals 2
 
-# virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 8
+    .line 49
+    sget-wide v0, Ll/۠ۜܶ;->ۙ:D
 
-    .line 129
-    invoke-interface {p2}, Ll/᩺ۘܶ;->᩸()I
+    div-double/2addr p0, v0
 
-    move-result p2
+    invoke-static {p0, p1}, Ljava/lang/Math;->log(D)D
 
-    add-int/lit8 p2, p2, -0x1
+    move-result-wide p0
 
-    .line 130
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    const-wide/high16 v0, 0x4028000000000000L    # 12.0
 
-    move-result v2
+    mul-double p0, p0, v0
 
-    .line 131
-    invoke-static {p1}, Ll/۟ۜܶ;->ۖ(I)I
+    const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
-    move-result p1
+    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
 
-    int-to-byte p1, p1
+    move-result-wide v0
 
-    .line 132
-    new-instance v7, Ll/ۧۜܶ;
+    div-double/2addr p0, v0
 
-    add-int v4, p2, p1
+    const-wide v0, 0x4051400000000000L    # 69.0
 
-    const-wide/16 v5, 0x0
+    add-double/2addr p0, v0
 
-    const/4 v3, 0x0
-
-    move-object v0, v7
-
-    move-object v1, p0
-
-    .line 30
-    invoke-direct/range {v0 .. v6}, Ll/ᩳۘܶ;-><init>(Ll/۟ۜܶ;IIIJ)V
-
-    return-object v7
+    return-wide p0
 .end method
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 1
+.method public static ᩷(D)D
+    .locals 2
 
-    .line 139
-    invoke-interface {p2}, Ll/᩺ۘܶ;->᩸()I
+    const-wide v0, 0x4051400000000000L    # 69.0
 
-    move-result v0
+    sub-double/2addr p0, v0
 
-    invoke-virtual {p1, v0}, Ll/ᩳۘܶ;->ܰ(I)I
+    const-wide v0, 0x3fb5555555555555L    # 0.08333333333333333
 
-    move-result v0
+    mul-double p0, p0, v0
 
-    .line 140
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
-    move-result p1
+    .line 57
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->pow(DD)D
 
-    invoke-static {p1, v0}, Ll/۟ۜܶ;->ܰ(II)S
+    move-result-wide p0
 
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ۙ()V
+    sget-wide v0, Ll/۠ۜܶ;->ۙ:D
 
-    return-void
+    mul-double p0, p0, v0
+
+    return-wide p0
 .end method

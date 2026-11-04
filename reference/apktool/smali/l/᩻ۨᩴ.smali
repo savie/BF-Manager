@@ -1,208 +1,165 @@
-.class public final Ll/᩻ۨᩴ;
+.class public final synthetic Ll/᩻ۨᩴ;
 .super Ljava/lang/Object;
-.source "S6E"
+.source "X13G"
 
 # interfaces
-.implements Ll/ۤۖᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic ֡:Ll/֫ۨᩴ;
+.field public final synthetic ܰ:I
 
-.field public ܺ:I
+.field public final synthetic ܿ:Ljava/lang/Object;
 
-.field public ᩶:I
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/֫ۨᩴ;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 213
+    .line 0
+    iput p1, p0, Ll/᩻ۨᩴ;->ܰ:I
+
+    iput-object p2, p0, Ll/᩻ۨᩴ;->᩶:Ljava/lang/Object;
+
+    iput-object p3, p0, Ll/᩻ۨᩴ;->ܿ:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩻ۨᩴ;->֡:Ll/֫ۨᩴ;
-
-    const/4 p1, -0x1
-
-    .line 214
-    iput p1, p0, Ll/᩻ۨᩴ;->ܺ:I
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Ll/᩻ۨᩴ;->᩶:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    .line 213
-    check-cast p1, Ll/ᩳۖᩴ;
+    .line 2
+    iget v0, p0, Ll/᩻ۨᩴ;->ܰ:I
 
-    invoke-virtual {p0, p1}, Ll/᩻ۨᩴ;->ۨ(Ll/ᩳۖᩴ;)V
+    .line 4
+    iget-object v1, p0, Ll/᩻ۨᩴ;->ܿ:Ljava/lang/Object;
+
+    .line 6
+    iget-object v2, p0, Ll/᩻ۨᩴ;->᩶:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 11
+    check-cast v2, Ll/᩷ۨᩴ;
+
+    .line 13
+    check-cast v1, Ll/ۛ᩷۫;
+
+    .line 15
+    sget v0, Ll/᩸֫۫;->ܳ᩷:I
+
+    .line 285
+    invoke-virtual {v1}, Ll/ۛ᩷۫;->ܽ()J
+
+    move-result-wide v0
+
+    invoke-virtual {v2, v0, v1}, Ll/᩷ۨᩴ;->ۙ(J)Z
 
     return-void
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۡۖᩴ;->ۙ(Ll/ۤۖᩴ;Ljava/util/function/Consumer;)V
+    :pswitch_0
+    check-cast v2, Ll/ܰۖᩴ;
+
+    check-cast v1, Ll/۬֨ᩴ;
+
+    invoke-static {v2, v1}, Ll/ܰۖᩴ;->ۙ(Ll/ܰۖᩴ;Ll/۬֨ᩴ;)V
 
     return-void
-.end method
 
-.method public final hasNext()Z
-    .locals 2
+    :pswitch_1
+    check-cast v2, Ljava/io/InputStream;
 
-    .line 218
-    iget v0, p0, Ll/᩻ۨᩴ;->᩶:I
+    check-cast v1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
-    iget-object v1, p0, Ll/᩻ۨᩴ;->֡:Ll/֫ۨᩴ;
+    sget-object v0, Ll/ܽۨᩴ;->ܰ:Ljava/lang/String;
 
-    iget v1, v1, Ll/֫ۨᩴ;->᩶:I
+    const-wide/16 v3, -0x1
 
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    return v0
-.end method
+    .line 275
+    :try_start_0
+    invoke-static {v2, v1, v3, v4, v0}, Ll/᩶ۨᩴ;->ۙ(Ljava/io/InputStream;Ljava/io/OutputStream;JLl/᩹ܿᩴ;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    .line 276
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 46
-    invoke-virtual {p0}, Ll/᩻ۨᩴ;->nextFloat()F
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    move-result v0
+    goto :goto_3
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_1
 
-    return-object v0
-.end method
+    :catchall_1
+    move-exception v0
 
-.method public final nextFloat()F
-    .locals 3
-
-    .line 223
-    invoke-virtual {p0}, Ll/᩻ۨᩴ;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 224
-    iget-object v0, p0, Ll/᩻ۨᩴ;->֡:Ll/֫ۨᩴ;
-
-    iget-object v0, v0, Ll/֫ۨᩴ;->ܺ:[F
-
-    iget v1, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    iput v1, p0, Ll/᩻ۨᩴ;->ܺ:I
-
-    aget v0, v0, v1
-
-    return v0
-
-    .line 223
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 4
-
-    .line 229
-    iget v0, p0, Ll/᩻ۨᩴ;->ܺ:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    .line 230
-    iput v1, p0, Ll/᩻ۨᩴ;->ܺ:I
-
-    .line 231
-    iget-object v0, p0, Ll/᩻ۨᩴ;->֡:Ll/֫ۨᩴ;
-
-    iget v1, v0, Ll/֫ۨᩴ;->᩶:I
-
-    add-int/lit8 v2, v1, -0x1
-
-    iput v2, v0, Ll/֫ۨᩴ;->᩶:I
-
-    iget v2, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    add-int/lit8 v3, v2, -0x1
-
-    iput v3, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    sub-int/2addr v1, v2
-
-    .line 232
-    iget-object v0, v0, Ll/֫ۨᩴ;->ܺ:[F
-
-    invoke-static {v0, v2, v0, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
-
-    .line 229
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ۨ(Ll/ᩳۖᩴ;)V
-    .locals 4
-
-    .line 246
-    iget-object v0, p0, Ll/᩻ۨᩴ;->֡:Ll/֫ۨᩴ;
-
-    iget-object v1, v0, Ll/֫ۨᩴ;->ܺ:[F
-
-    .line 247
-    :goto_0
-    iget v2, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    iget v3, v0, Ll/֫ۨᩴ;->᩶:I
-
-    if-ge v2, v3, :cond_0
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, Ll/᩻ۨᩴ;->᩶:I
-
-    aget v2, v1, v2
-
-    invoke-interface {p1, v2}, Ll/ᩳۖᩴ;->ۙ(F)V
+    .line 274
+    :try_start_3
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     goto :goto_0
 
+    :catchall_2
+    move-exception v1
+
+    :try_start_4
+    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_1
+    if-eqz v2, :cond_0
+
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    goto :goto_2
+
+    :catchall_3
+    move-exception v1
+
+    :try_start_6
+    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
     :cond_0
+    :goto_2
+    throw v0
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
+    :catch_0
+    :goto_3
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

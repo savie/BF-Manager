@@ -1,110 +1,489 @@
 package l;
 
-import java.io.IOException;
+import com.umeng.commonsdk.statistics.UMErrorCode;
 
-/* JADX INFO: renamed from: l.۠᩷᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 94TD */
+/* JADX INFO: renamed from: l.۠ۛ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 42TB */
 /* JADX INFO: loaded from: classes3.dex */
-public class C8430 extends AbstractC7724 {
+public final class C8430 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f29278;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C20424 f29279;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f29280;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public String f29281;
-
-    @Override // l.AbstractC7724
-    /* JADX INFO: renamed from: ܰ */
-    public double mo5599() {
-        return 0.0d;
-    }
-
-    public final int hashCode() {
-        return this.f25545;
-    }
-
-    /* JADX INFO: renamed from: ۘ */
-    public int mo5598() {
-        return this.f25545;
-    }
-
-    public C8430(C20424 c20424, int i, String str) {
-        super(i);
-        this.f29279 = c20424;
-        this.f29278 = str;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m22076() {
-        return this.f29281;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C8430 f27589;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m22078(String str) {
-        this.f29281 = str;
-    }
+    public final byte[] f27590;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m22081() {
-        return this.f29281 != null;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f27591;
 
-    @Override // l.AbstractC7724, java.lang.Comparable
-    /* JADX INFO: renamed from: ۙ */
-    public final int compareTo(AbstractC7724 abstractC7724) {
-        int iCompareTo = super.compareTo(abstractC7724);
-        if (iCompareTo != 0 || !(abstractC7724 instanceof C8430)) {
-            return iCompareTo;
-        }
-        return this.f29278.compareTo(((C8430) abstractC7724).f29278);
-    }
-
-    public final boolean equals(Object obj) {
-        return (obj instanceof C8430) && compareTo((AbstractC7724) obj) == 0;
-    }
-
-    @Override // l.AbstractC7724
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1773(C12283 c12283) throws IOException {
-        c12283.write(58);
-        c12283.write(this.f29278);
-        if (this.f29279.f66197) {
-            c12283.mo6726(this.f29280);
-        } else {
-            c12283.mo6726(mo5598());
-        }
-        if (this.f29281 == null) {
-            return true;
-        }
-        c12283.write("  #", 0, 3);
-        c12283.write(this.f29281);
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m22080(C12283 c12283) throws IOException {
-        c12283.write(58);
-        c12283.write(this.f29278);
-        if (this.f29279.f66197) {
-            c12283.mo6726(this.f29280);
-        } else {
-            c12283.mo6726(mo5598());
-        }
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String m22079() {
-        return this.f29278;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f27592;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m22077(int i) {
-        this.f29280 = i;
+    public static C8430 m22618(String str, byte[] bArr) {
+        int i = -885125822;
+        int i2 = C3099.f10023;
+        int i3 = C1783.f6087;
+        int iM2761 = C0619.m2761("ܶۚ") ^ i3;
+        int i4 = ((iM2761 ^ i2) * (-2331)) ^ 441867047;
+        int i5 = -362015887;
+        while (true) {
+            i = ((((i ^ i2) * 12099) >> 31) & i4) ^ (iM2761 ^ i5);
+            switch (i) {
+                case -1607019596:
+                case 2143433176:
+                    C1542.m5459();
+                    return null;
+                case -1604805405:
+                case -820169440:
+                    if (C11235.f35427 >= 0) {
+                        iM2761 = (C0773.m3169("ۘۢ") + i3) * (-45);
+                        i4 = ((iM2761 ^ i2) * 31595) ^ 25787945;
+                        i5 = -1500850666;
+                    } else {
+                        iM2761 = C0773.m3169("᩷᩷") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 16795) ^ (-1679048330);
+                        i5 = -1571649178;
+                    }
+                    break;
+                case -1512164429:
+                case 352990445:
+                    if (RunnableC0334.f1808 > 0) {
+                        return new C8430(str, true, bArr);
+                    }
+                    iM2761 = (C0773.m3169("֡֨") ^ i2) * 99;
+                    i4 = ((iM2761 ^ i3) * (-10409)) ^ (-950224141);
+                    i5 = -19147201;
+                    break;
+                case -1438691395:
+                case 696727337:
+                    if (C0269.f1558 <= 0) {
+                        iM2761 = C0619.m2761("᩺ۤ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 595) ^ (-1090359599);
+                        i5 = 399547553;
+                    } else {
+                        iM2761 = C0773.m3169("ۨ֫") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-28565)) ^ 348734778;
+                        i5 = 1745668980;
+                    }
+                    break;
+                case -1373496703:
+                case 1652397036:
+                    if (C3077.f9998) {
+                        iM2761 = C0619.m2761("ۧ۬") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 7419) ^ (-788863473);
+                        i5 = -456297403;
+                    } else {
+                        iM2761 = C0619.m2761("᩺ۤ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 595) ^ (-1090359599);
+                        i5 = 399547553;
+                    }
+                    break;
+                case -1359363754:
+                case 1158116430:
+                    if (C2287.f7432 >= 0) {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    } else {
+                        iM2761 = (i2 - C0619.m2761("ۛ۬")) * 57;
+                        i4 = ((iM2761 ^ i3) * (-10387)) ^ (-1621769115);
+                        i5 = -98391698;
+                    }
+                    break;
+                case -972869974:
+                case 574126401:
+                    if (C3734.m12152() >= 0) {
+                        iM2761 = (C0773.m3169("ۘۢ") + i3) * (-45);
+                        i4 = ((iM2761 ^ i2) * 31595) ^ 25787945;
+                        i5 = -1500850666;
+                    } else {
+                        iM2761 = C0619.m2761("֡᩺") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-5837)) ^ (-1828502245);
+                        i5 = 2015174522;
+                    }
+                    break;
+                case -882473643:
+                case 542059781:
+                    if (C1080.f3865 >= 0) {
+                        iM2761 = (C0773.m3169("ۘۢ") + i3) * (-45);
+                        i4 = ((iM2761 ^ i2) * 31595) ^ 25787945;
+                        i5 = -1500850666;
+                    } else {
+                        iM2761 = C0773.m3169("᩺۬") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-6283)) ^ (-902878732);
+                        i5 = -269917705;
+                    }
+                    break;
+                case -819304395:
+                case -694206905:
+                    if (C2354.f7599 >= 0) {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    } else {
+                        iM2761 = (C0619.m2761("ܺ֡") ^ i3) * (-45);
+                        i4 = ((iM2761 ^ i2) * (-18947)) ^ 1578727589;
+                        i5 = 1593580158;
+                    }
+                    break;
+                case -653279620:
+                case 1753846540:
+                    C1146.m4231();
+                    if (C2419.f7754 < 0) {
+                        iM2761 = (C0773.m3169("ۘۢ") + i3) * (-45);
+                        i4 = ((iM2761 ^ i2) * 31595) ^ 25787945;
+                        i5 = -1500850666;
+                    } else {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    }
+                    break;
+                case -183706704:
+                case 929975191:
+                    C1564.m5509();
+                    if (!C0862.m3503()) {
+                        iM2761 = C0619.m2761("᩺ۤ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 595) ^ (-1090359599);
+                        i5 = 399547553;
+                    } else {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    }
+                    break;
+                case -104438211:
+                case 1378355478:
+                    C0950.m3785();
+                    if (C1783.f6087 <= 0) {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    } else {
+                        iM2761 = (i3 - C0773.m3169("ۖۜ")) * (-17);
+                        i4 = ((iM2761 ^ i2) * (-11835)) ^ 1031195401;
+                        i5 = -408967584;
+                    }
+                    break;
+                case -100451072:
+                case 1627802182:
+                    if (C2966.f9654 >= 0) {
+                        iM2761 = (C0773.m3169("֡֨") ^ i2) * 99;
+                        i4 = ((iM2761 ^ i3) * (-10409)) ^ (-950224141);
+                        i5 = -19147201;
+                    } else {
+                        iM2761 = C0619.m2761("ۢۡ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 16657) ^ (-21898670);
+                        i5 = 675882533;
+                    }
+                    break;
+                case 851722738:
+                case 1333878157:
+                    RunnableC3055.m9933();
+                    C17202.m40372();
+                    iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                    i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                    i5 = -127611897;
+                    break;
+                default:
+                    if (C13473.f42873 != 0) {
+                        iM2761 = C0619.m2761("ܶ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6645) ^ 1114574693;
+                        i5 = -127611897;
+                    } else {
+                        iM2761 = C0773.m3169("ۛ֡") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 879) ^ 880842808;
+                        i5 = -1753724779;
+                    }
+                    break;
+            }
+        }
+    }
+
+    static {
+        int i = -2072972587;
+        int i2 = AbstractC0116.f1064;
+        int i3 = C1826.f6190;
+        int iM2761 = C0619.m2761("᩷ۚ") ^ i3;
+        int i4 = ((iM2761 ^ i2) * (-16949)) ^ (-976497526);
+        int i5 = 1333471604;
+        while (true) {
+            i = ((((i ^ i2) * (-20911)) >> 31) & i4) ^ (iM2761 ^ i5);
+            switch (i) {
+                case -2057978737:
+                case -1120350175:
+                    C2354.m7983();
+                    C2966.m9664();
+                    throw new RuntimeException();
+                case -767411239:
+                case 594382680:
+                    C1146.m4231();
+                    iM2761 = C0773.m3169("᩷ᩳ") ^ i3;
+                    i4 = ((iM2761 ^ i2) * 26945) ^ (-1279431191);
+                    i5 = -639718118;
+                    break;
+                case -244987821:
+                case 1331938506:
+                    C17202.m40372();
+                    if (AbstractC0641.m2813() <= 0) {
+                        iM2761 = (C0773.m3169("ۛܿ") + i2) * 13;
+                        i4 = ((iM2761 ^ i3) * (-26931)) ^ (-880922374);
+                        i5 = 385058008;
+                    } else {
+                        iM2761 = C0773.m3169("᩷ᩳ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 26945) ^ (-1279431191);
+                        i5 = -639718118;
+                    }
+                    break;
+                case 731718096:
+                case 1393813330:
+                    if (C2834.f9334 > 0) {
+                        if (C2419.f7754 < 0) {
+                            if (C2702.f8586 > 0) {
+                                if (!RunnableC3646.f12471) {
+                                    if (C3690.f12684 > 0 && C4238.f15451 < 0) {
+                                        if (C2310.f7472 < 0) {
+                                            if (C3448.f11240 < 0) {
+                                                if (C3448.f11240 < 0) {
+                                                    if (C0862.f3233 == 0) {
+                                                        f27589 = new C8430(null, false, null);
+                                                        return;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    iM2761 = C0619.m2761("ۛ֫") ^ i3;
+                                    i4 = ((iM2761 ^ i2) * 19417) ^ (-1235556881);
+                                    i5 = 1567721626;
+                                    break;
+                                }
+                            }
+                        }
+                        iM2761 = C0773.m3169("᩷ᩳ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 26945) ^ (-1279431191);
+                        i5 = -639718118;
+                        break;
+                    }
+                    iM2761 = (C0773.m3169("ۛܿ") + i2) * 13;
+                    i4 = ((iM2761 ^ i3) * (-26931)) ^ (-880922374);
+                    i5 = 385058008;
+                    break;
+                case 966025549:
+                case 1275142929:
+                    C2419.m8174();
+                    if (C3077.f9998) {
+                        iM2761 = (C0619.m2761("᩶ۛ") + i2) * 115;
+                        i4 = ((iM2761 ^ i3) * 27349) ^ 1228594552;
+                        i5 = -1605185691;
+                    } else {
+                        iM2761 = C0773.m3169("᩷ᩳ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 26945) ^ (-1279431191);
+                        i5 = -639718118;
+                    }
+                    break;
+                default:
+                    if (RunnableC1848.f6235) {
+                        iM2761 = (C0619.m2761("ۤ᩺") ^ i3) * (-89);
+                        i4 = ((iM2761 ^ i2) * (-5413)) ^ (-878545808);
+                        i5 = 494610788;
+                    } else {
+                        iM2761 = C0773.m3169("᩷ᩳ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 26945) ^ (-1279431191);
+                        i5 = -639718118;
+                    }
+                    break;
+            }
+        }
+    }
+
+    public C8430(String str, boolean z, byte[] bArr) {
+        int i = -1132757303;
+        int i2 = C1783.f6087;
+        int i3 = C20932.f66974;
+        int iM2761 = C0619.m2761("ܶۤ") ^ i3;
+        int i4 = ((iM2761 ^ i2) * (-943)) ^ 1117155719;
+        int i5 = -1332400340;
+        while (true) {
+            i = ((((i ^ i2) * (-30097)) >> 31) & i4) ^ (iM2761 ^ i5);
+            switch (i) {
+                case -1860299127:
+                case -1054773371:
+                    if (C2023.f6737) {
+                        iM2761 = (C0773.m3169("ۙۚ") ^ i3) * (-31);
+                        i4 = ((iM2761 ^ i2) * 3969) ^ (-522816512);
+                        i5 = 728979569;
+                    } else {
+                        iM2761 = C0773.m3169("ۨܶ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-10429)) ^ (-118871644);
+                        i5 = -1825102830;
+                    }
+                    break;
+                case -1738442273:
+                case 1757618599:
+                    if (C3998.m12920()) {
+                        iM2761 = (C0773.m3169("۬ۡ") ^ i3) * UMErrorCode.E_UM_BE_RAW_OVERSIZE;
+                        i4 = ((iM2761 ^ i2) * (-19067)) ^ (-1039999726);
+                        i5 = 624214389;
+                    } else {
+                        iM2761 = (C0773.m3169("۬ۨ") ^ i2) * 9;
+                        i4 = ((iM2761 ^ i3) * 24227) ^ (-1688253484);
+                        i5 = 1603650998;
+                    }
+                    break;
+                case -1705442873:
+                case 364739693:
+                    this.f27591 = z;
+                    this.f27592 = str;
+                    if (RunnableC3646.f12471) {
+                        iM2761 = C0619.m2761("ᩳۗ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-15455)) ^ 1484510059;
+                        i5 = -1240987785;
+                    } else {
+                        iM2761 = (C0619.m2761("᩻֡") ^ i3) * (-41);
+                        i4 = ((iM2761 ^ i2) * (-32149)) ^ 228603896;
+                        i5 = -915634230;
+                    }
+                    break;
+                case -1664617162:
+                case -828476086:
+                    C23916.m53419();
+                    if (!C17202.f56030) {
+                        iM2761 = (C0773.m3169("۬ۨ") ^ i2) * 9;
+                        i4 = ((iM2761 ^ i3) * 24227) ^ (-1688253484);
+                        i5 = 1603650998;
+                    } else {
+                        iM2761 = C0619.m2761("۫ܺ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 32747) ^ (-1961037895);
+                        i5 = -1077956905;
+                    }
+                    break;
+                case -1593631097:
+                case -96811179:
+                    C1564.m5509();
+                    if (C1826.f6190 <= 0) {
+                        iM2761 = C0619.m2761("ᩳۗ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-15455)) ^ 1484510059;
+                        i5 = -1240987785;
+                    } else {
+                        iM2761 = (C0619.m2761("᩸۬") ^ i3) * (-7);
+                        i4 = ((iM2761 ^ i2) * 25575) ^ (-2000658965);
+                        i5 = -2039541328;
+                    }
+                    break;
+                case -1416147775:
+                case 55365663:
+                    if (C1542.f5343 <= 0) {
+                        iM2761 = C0619.m2761("ᩳۗ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-15455)) ^ 1484510059;
+                        i5 = -1240987785;
+                    } else {
+                        iM2761 = C0619.m2761("ᩳ֨") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 6857) ^ 1616015929;
+                        i5 = -1234594744;
+                    }
+                    break;
+                case -1317602688:
+                case 847555430:
+                    if (C2375.f7641 <= 0) {
+                        iM2761 = C0619.m2761("ᩳۗ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-15455)) ^ 1484510059;
+                        i5 = -1240987785;
+                    } else {
+                        iM2761 = C0619.m2761("ۛ᩸") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 19717) ^ 1684347838;
+                        i5 = -1297260633;
+                    }
+                    break;
+                case -1261762567:
+                case -654077782:
+                    this.f27590 = bArr;
+                    return;
+                case -1001415316:
+                case 1433409733:
+                    if (C3998.f13671 == 0) {
+                        iM2761 = C0619.m2761("۫ܺ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 32747) ^ (-1961037895);
+                        i5 = -1077956905;
+                    } else {
+                        iM2761 = (C0619.m2761("᩸۬") ^ i3) * (-7);
+                        i4 = ((iM2761 ^ i2) * 25575) ^ (-2000658965);
+                        i5 = -2039541328;
+                    }
+                    break;
+                case -980796599:
+                case -400970406:
+                    if (RunnableC0334.f1808 <= 0) {
+                        iM2761 = C0619.m2761("۫ܺ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 32747) ^ (-1961037895);
+                        i5 = -1077956905;
+                    } else {
+                        iM2761 = C0619.m2761("᩹֨") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 7905) ^ 1864693264;
+                        i5 = 1971769254;
+                    }
+                    break;
+                case -373219917:
+                case 1068604447:
+                    if (C0773.f2792 <= 0) {
+                        iM2761 = C0619.m2761("ᩳۗ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-15455)) ^ 1484510059;
+                        i5 = -1240987785;
+                    } else {
+                        iM2761 = C0619.m2761("ᩳܳ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-14517)) ^ (-863885425);
+                        i5 = 696460218;
+                    }
+                    break;
+                case -304170417:
+                case -185974874:
+                    if (C1783.m6232()) {
+                        iM2761 = (i2 - C0619.m2761("᩺۠")) * 51;
+                        i4 = ((iM2761 ^ i3) * (-27563)) ^ 1726044618;
+                        i5 = 802526378;
+                    } else {
+                        iM2761 = C0619.m2761("۫ܺ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 32747) ^ (-1961037895);
+                        i5 = -1077956905;
+                    }
+                    break;
+                case -175433074:
+                case 882652355:
+                    C2419.m8174();
+                    C2419.m8174();
+                    iM2761 = (C0619.m2761("᩸۬") ^ i3) * (-7);
+                    i4 = ((iM2761 ^ i2) * 25575) ^ (-2000658965);
+                    i5 = -2039541328;
+                    break;
+                case -60898261:
+                case 790552196:
+                    if (C3734.f12817 >= 0) {
+                        iM2761 = (C0773.m3169("ۙۚ") ^ i3) * (-31);
+                        i4 = ((iM2761 ^ i2) * 3969) ^ (-522816512);
+                        i5 = 728979569;
+                    } else {
+                        iM2761 = (C0773.m3169("ۙۛ") + i3) * 13;
+                        i4 = ((iM2761 ^ i2) * (-11169)) ^ (-420921738);
+                        i5 = 1243852983;
+                    }
+                    break;
+                case 1379878361:
+                case 1790381899:
+                    AbstractC0641.m2813();
+                    throw new RuntimeException();
+                default:
+                    if (C1321.f4751 >= 0) {
+                        iM2761 = (C0773.m3169("۬ۨ") ^ i2) * 9;
+                        i4 = ((iM2761 ^ i3) * 24227) ^ (-1688253484);
+                        i5 = 1603650998;
+                    } else {
+                        iM2761 = C0773.m3169("᩸ۢ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-26285)) ^ (-1251952899);
+                        i5 = 2025060858;
+                    }
+                    break;
+            }
+        }
     }
 }

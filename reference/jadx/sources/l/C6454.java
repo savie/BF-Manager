@@ -1,28 +1,50 @@
 package l;
 
-import android.animation.TypeEvaluator;
+import android.view.Window;
 
-/* JADX INFO: renamed from: l.ۜ֫ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 84NK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6454 implements TypeEvaluator {
+/* JADX INFO: renamed from: l.ۛܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 422Y */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6454 implements InterfaceC12772 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C5486[] f21828;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ LayoutInflaterFactory2C24354 f21701;
 
-    @Override // android.animation.TypeEvaluator
-    public final Object evaluate(float f, Object obj, Object obj2) {
-        C5486[] c5486Arr = (C5486[]) obj;
-        C5486[] c5486Arr2 = (C5486[]) obj2;
-        if (!C22420.m49739(c5486Arr, c5486Arr2)) {
-            throw new IllegalArgumentException("Can't interpolate between two incompatible pathData");
+    public C6454(LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354) {
+        this.f21701 = layoutInflaterFactory2C24354;
+    }
+
+    @Override // l.InterfaceC12772
+    public final void onCloseMenu(C9898 c9898, boolean z) {
+        C9898 rootMenu = c9898.getRootMenu();
+        boolean z2 = rootMenu != c9898;
+        if (z2) {
+            c9898 = rootMenu;
         }
-        if (!C22420.m49739(this.f21828, c5486Arr)) {
-            this.f21828 = C22420.m49742(c5486Arr);
+        LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354 = this.f21701;
+        C12419 c12419M54424 = layoutInflaterFactory2C24354.m54424(c9898);
+        if (c12419M54424 != null) {
+            if (z2) {
+                layoutInflaterFactory2C24354.m54413(c12419M54424.f39933, c12419M54424, rootMenu);
+                layoutInflaterFactory2C24354.m54415(c12419M54424, true);
+            } else {
+                layoutInflaterFactory2C24354.m54415(c12419M54424, z);
+            }
         }
-        for (int i = 0; i < c5486Arr.length; i++) {
-            this.f21828[i].m15153(c5486Arr[i], c5486Arr2[i], f);
+    }
+
+    @Override // l.InterfaceC12772
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo6418(C9898 c9898) {
+        Window.Callback callback;
+        if (c9898 != c9898.getRootMenu()) {
+            return true;
         }
-        return this.f21828;
+        LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354 = this.f21701;
+        if (!layoutInflaterFactory2C24354.f79014 || (callback = layoutInflaterFactory2C24354.f79006.getCallback()) == null || layoutInflaterFactory2C24354.f79019) {
+            return true;
+        }
+        callback.onMenuOpened(108, c9898);
+        return true;
     }
 }

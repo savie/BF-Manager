@@ -1,20 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ᩻۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: FAYC */
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.RemoteException;
+
+/* JADX INFO: renamed from: l.ܰ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 25NL */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14854 {
+public class C14854 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C24552();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f48552;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public InterfaceC6652 f48561;
 
-    static {
-        int[] iArr = new int[EnumC9915.values().length];
-        iArr[EnumC9915.PARKING.ordinal()] = 1;
-        iArr[EnumC9915.BLOCKING.ordinal()] = 2;
-        iArr[EnumC9915.CPU_ACQUIRED.ordinal()] = 3;
-        iArr[EnumC9915.DORMANT.ordinal()] = 4;
-        iArr[EnumC9915.TERMINATED.ordinal()] = 5;
-        f48552 = iArr;
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public void mo34505(int i, Bundle bundle) {
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m35782(int i, Bundle bundle) {
+        InterfaceC6652 interfaceC6652 = this.f48561;
+        if (interfaceC6652 != null) {
+            try {
+                interfaceC6652.mo14033(i, bundle);
+            } catch (RemoteException unused) {
+            }
+        }
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        synchronized (this) {
+            if (this.f48561 == null) {
+                this.f48561 = new BinderC4414(this);
+            }
+            parcel.writeStrongBinder(this.f48561.asBinder());
+        }
     }
 }

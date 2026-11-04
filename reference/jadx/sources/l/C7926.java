@@ -1,31 +1,72 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 71QY */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7926 implements InterfaceC17803 {
+/* JADX INFO: renamed from: l.۟ܰۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7926 extends AbstractC19969 implements InterfaceC21544 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C7926 f26033 = new C7926();
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public C4395 f26341;
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3481(int i, byte[] bArr) {
-        if (i >= 4) {
-            int i2 = bArr[0] & 255;
-            int i3 = bArr[1] & 255;
-            int i4 = bArr[2] & 255;
-            int i5 = bArr[3] & 255;
-            if (i2 == 255 && i3 == 254 && (i4 != 0 || i5 != 0)) {
-                return 100;
-            }
-        }
-        return 0;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public C14769 f26342;
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public C14769 f26343;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C14769 f26344;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public C24550 f26345;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public AbstractC19728 f26346;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public C14769 f26347;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f26348;
+
+    public C7926() {
+        throw null;
     }
 
-    @Override // l.InterfaceC17803
+    @Override // l.AbstractC8036
     /* JADX INFO: renamed from: ۙ */
-    public final int mo3480() {
-        return C22037.f71432;
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1505(this);
+    }
+
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        long j = this.f26341.f15825;
+        if ((8192 & j) != 0) {
+            return EnumC22621.ANNOTATION_TYPE;
+        }
+        if ((512 & j) != 0) {
+            return EnumC22621.INTERFACE;
+        }
+        if ((16384 & j) != 0) {
+            return EnumC22621.ENUM;
+        }
+        if ((j & 2305843009213693952L) != 0) {
+            return EnumC22621.RECORD;
+        }
+        return EnumC22621.CLASS;
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5858(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68501;
     }
 }

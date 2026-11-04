@@ -1,102 +1,51 @@
 package l;
 
-import android.graphics.drawable.Drawable;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import bin.mt.plus.R;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
-/* JADX INFO: renamed from: l.۬۟ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 313O */
+/* JADX INFO: renamed from: l.۫۟᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: VAXH */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12963 extends AbstractC0414 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f43073;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17901 f43074;
+public final class C12963 implements InterfaceC0812, Serializable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public List f43075;
+    public volatile Object f41561 = C5506.f19160;
 
-    public C12963(C17901 c17901) {
-        this.f43074 = c17901;
-        this.f43075 = c17901.f56681;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final Object f41562 = this;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public InterfaceC19479 f41563;
+
+    public C12963(InterfaceC19479 interfaceC19479) {
+        this.f41563 = interfaceC19479;
     }
 
-    @Override // l.AbstractC0414
-    public final void onBindViewHolder(AbstractC12554 abstractC12554, int i) {
-        Drawable drawable;
-        ViewOnClickListenerC21429 viewOnClickListenerC21429 = (ViewOnClickListenerC21429) abstractC12554;
-        C22841 c22841 = (C22841) this.f43075.get(i);
-        viewOnClickListenerC21429.f69686 = c22841;
-        viewOnClickListenerC21429.f69687.setText(c22841.f74300);
-        ImageView imageView = viewOnClickListenerC21429.f69688;
-        Drawable drawable2 = c22841.f74303;
-        if (drawable2 != null) {
-            imageView.setImageDrawable(drawable2);
-            return;
+    @Override // l.InterfaceC0812
+    public final Object getValue() {
+        Object objMo4064;
+        Object obj = this.f41561;
+        C5506 c5506 = C5506.f19160;
+        if (obj != c5506) {
+            return obj;
         }
-        String strM30649 = c22841.f74301.m30649();
-        synchronized (C17901.f56679) {
-            drawable = (Drawable) C17901.f56679.m25800(strM30649);
-            c22841.f74303 = drawable;
-        }
-        if (drawable != null) {
-            imageView.setImageDrawable(drawable);
-            return;
-        }
-        imageView.setTag(c22841.f74301);
-        RunnableC6612 runnableC6612 = c22841.f74305;
-        if (runnableC6612.f22267) {
-            return;
-        }
-        runnableC6612.f22267 = true;
-        runnableC6612.f22268 = imageView;
-        C4716.f16636.execute(runnableC6612);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m32096(String str) {
-        this.f43073 = str;
-        m32095();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32095() {
-        String str = this.f43073;
-        C17901 c17901 = this.f43074;
-        if (str == null || str.isEmpty()) {
-            this.f43075 = c17901.f56681;
-            notifyDataSetChanged();
-            return;
-        }
-        ArrayList arrayList = new ArrayList();
-        for (C22841 c22841 : (ArrayList) c17901.f56681) {
-            if (C6851.m18463((CharSequence) c22841.f74300, (CharSequence) str)) {
-                arrayList.add(c22841);
-            } else {
-                C12341 c12341 = c22841.f74301;
-                if (c12341 != null && C6851.m18463((CharSequence) c12341.m30651(), (CharSequence) str)) {
-                    arrayList.add(c22841);
-                }
+        synchronized (this.f41562) {
+            objMo4064 = this.f41561;
+            if (objMo4064 == c5506) {
+                InterfaceC19479 interfaceC19479 = this.f41563;
+                C15243.m36586(interfaceC19479);
+                objMo4064 = interfaceC19479.mo4064();
+                this.f41561 = objMo4064;
+                this.f41563 = null;
             }
         }
-        this.f43075 = arrayList;
-        notifyDataSetChanged();
+        return objMo4064;
     }
 
-    @Override // l.AbstractC0414
-    public final AbstractC12554 onCreateViewHolder(ViewGroup viewGroup, int i) {
-        C17901 c17901 = this.f43074;
-        return new ViewOnClickListenerC21429(c17901, LayoutInflater.from(c17901.f56683).inflate(R.layout.MT_Protector, viewGroup, false));
+    public final String toString() {
+        return this.f41561 != C5506.f19160 ? String.valueOf(getValue()) : "Lazy value not initialized yet.";
     }
 
-    @Override // l.AbstractC0414
-    public final int getItemCount() {
-        return this.f43075.size();
+    private final Object writeReplace() {
+        return new C9760(getValue());
     }
 }

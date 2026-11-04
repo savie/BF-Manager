@@ -1,192 +1,254 @@
 .class public final Ll/ۘۗᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "B9A2"
 
 # interfaces
-.implements Ll/ۖۚ۠;
-.implements Ll/ۡۨ۠;
+.implements Ll/᩺ۗᩴ;
+
+
+# static fields
+.field public static final ᩷:Landroid/content/ComponentName;
 
 
 # instance fields
-.field public a:Z
-
-.field public b:D
-
-.field public final synthetic c:Ljava/util/function/DoubleBinaryOperator;
+.field public final ۙ:Landroid/content/pm/PackageInfo;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/function/DoubleBinaryOperator;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 676
+    .line 123
+    new-instance v0, Landroid/content/ComponentName;
+
+    const-string v1, "com.xiaomi.aiasst.vision"
+
+    const-string v2, "com.xiaomi.aiasst.vision.control.translation.AiTranslateService"
+
+    invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Ll/ۘۗᩴ;->᩷:Landroid/content/ComponentName;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/pm/PackageManager;)V
+    .locals 2
+
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۘۗᩴ;->c:Ljava/util/function/DoubleBinaryOperator;
+    .line 127
+    sget-object v0, Ll/ۘۗᩴ;->᩷:Landroid/content/ComponentName;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/ۘۗᩴ;->ۙ:Landroid/content/pm/PackageInfo;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(D)V
-    .locals 3
-
-    .line 688
-    iget-boolean v0, p0, Ll/ۘۗᩴ;->a:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 689
-    iput-boolean v0, p0, Ll/ۘۗᩴ;->a:Z
-
-    .line 690
-    iput-wide p1, p0, Ll/ۘۗᩴ;->b:D
-
-    return-void
-
-    .line 693
-    :cond_0
-    iget-object v0, p0, Ll/ۘۗᩴ;->c:Ljava/util/function/DoubleBinaryOperator;
-
-    iget-wide v1, p0, Ll/ۘۗᩴ;->b:D
-
-    invoke-interface {v0, v1, v2, p1, p2}, Ljava/util/function/DoubleBinaryOperator;->applyAsDouble(DD)D
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ll/ۘۗᩴ;->b:D
-
-    return-void
-.end method
-
-.method public final synthetic accept(I)V
-    .locals 0
-
-    invoke-static {}, Ll/᩺֫ᩴ;->t()V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final synthetic accept(J)V
-    .locals 0
-
-    invoke-static {}, Ll/᩺֫ᩴ;->u()V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/᩺֫ᩴ;->o(Ll/ۡۨ۠;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/DoubleConsumer;)Ljava/util/function/DoubleConsumer;
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/ܶ֡ᩴ;->a(Ljava/util/function/DoubleConsumer;Ljava/util/function/DoubleConsumer;)Ll/۟᩻ᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c(J)V
-    .locals 0
-
-    const/4 p1, 0x1
-
-    .line 682
-    iput-boolean p1, p0, Ll/ۘۗᩴ;->a:Z
-
-    const-wide/16 p1, 0x0
-
-    .line 683
-    iput-wide p1, p0, Ll/ۘۗᩴ;->b:D
-
-    return-void
-.end method
-
-.method public final synthetic end()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final synthetic f()Z
+.method public final ۙ()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    .line 141
+    sget-object v0, Ll/ۘۗᩴ;->᩷:Landroid/content/ComponentName;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
-.method public final get()Ljava/lang/Object;
-    .locals 3
-
-    .line 699
-    iget-boolean v0, p0, Ll/ۘۗᩴ;->a:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Ll/ܽۛᩴ;->c:Ll/ܽۛᩴ;
+    move-result-object v0
 
     return-object v0
-
-    :cond_0
-    iget-wide v0, p0, Ll/ۘۗᩴ;->b:D
-
-    .line 113
-    new-instance v2, Ll/ܽۛᩴ;
-
-    invoke-direct {v2, v0, v1}, Ll/ܽۛᩴ;-><init>(D)V
-
-    return-object v2
 .end method
 
-.method public final i(Ll/ۖۚ۠;)V
-    .locals 2
+.method public final ۙ(Landroid/content/pm/PackageManager;)Ljava/lang/String;
+    .locals 1
 
-    .line 676
-    check-cast p1, Ll/ۘۗᩴ;
+    .line 133
+    :try_start_0
+    iget-object v0, p0, Ll/ۘۗᩴ;->ۙ:Landroid/content/pm/PackageInfo;
 
-    .line 704
-    iget-boolean v0, p1, Ll/ۘۗᩴ;->a:Z
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, p1}, Landroid/content/pm/PackageItemInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
-    .line 705
-    iget-wide v0, p1, Ll/ۘۗᩴ;->b:D
+    move-result-object p1
 
-    invoke-virtual {p0, v0, v1}, Ll/ۘۗᩴ;->accept(D)V
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_0
-    return-void
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    .line 135
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final synthetic n(Ljava/lang/Double;)V
-    .locals 0
+.method public final ۙ(Ll/᩺ۜ᩸;)Z
+    .locals 7
 
-    invoke-static {p0, p1}, Ll/᩺֫ᩴ;->n(Ll/ۡۨ۠;Ljava/lang/Double;)V
+    const/4 v0, 0x2
 
-    return-void
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    :try_start_0
+    new-array v0, v0, [I
+
+    .line 147
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    .line 148
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 149
+    invoke-virtual {p1, v3}, Landroid/view/View;->getFocusedRect(Landroid/graphics/Rect;)V
+
+    .line 150
+    aget v4, v0, v1
+
+    aget v0, v0, v2
+
+    invoke-virtual {v3, v4, v0}, Landroid/graphics/Rect;->offset(II)V
+
+    .line 151
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    .line 152
+    sget-object v4, Ll/ۘۗᩴ;->᩷:Landroid/content/ComponentName;
+
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    .line 153
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    const-string v5, "from"
+
+    const-string v6, "system_edit_box"
+
+    .line 154
+    invoke-virtual {v4, v5, v6}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "text"
+
+    .line 155
+    invoke-virtual {p1}, Ll/᩺ۜ᩸;->֨ۙ()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "floatingWindowType"
+
+    const-string v6, "startDictionaryTranslationWindow"
+
+    .line 156
+    invoke-virtual {v4, v5, v6}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "rawX"
+
+    .line 157
+    iget v6, v3, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v4, v5, v6}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v5, "rawY"
+
+    .line 158
+    iget v3, v3, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v4, v5, v3}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    .line 159
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    .line 160
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return v2
+
+    :catchall_0
+    move-exception v0
+
+    .line 163
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v3
+
+    instance-of v3, v3, Landroid/os/TransactionTooLargeException;
+
+    if-eqz v3, :cond_0
+
+    const p1, 0x7f120af2
+
+    .line 164
+    invoke-static {p1}, Ll/᩸۠ۧ;->ۙ(I)Ll/᩸۠ۧ;
+
+    return v2
+
+    .line 167
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۗۚܺ;->ۙ(Landroid/content/Context;)Landroid/app/Activity;
+
+    move-result-object p1
+
+    instance-of v2, p1, Ll/ܽ֡֫;
+
+    if-eqz v2, :cond_1
+
+    check-cast p1, Ll/ܽ֡֫;
+
+    const/4 v2, 0x0
+
+    .line 546
+    invoke-virtual {p1, v0, v2}, Ll/ܽ֡֫;->ۙ(Ljava/lang/Throwable;Landroid/content/DialogInterface$OnDismissListener;)V
+
+    goto :goto_0
+
+    .line 170
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/᩸۠ۧ;->ۙ(Ljava/lang/CharSequence;)Ll/᩸۠ۧ;
+
+    :goto_0
+    return v1
 .end method

@@ -8,7 +8,7 @@
     .locals 2
 
     .line 49
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽ()Z
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->֡()Z
 
     move-result v0
 
@@ -94,7 +94,7 @@
     return p1
 .end method
 
-.method public final ۨ()V
+.method public final ᩷()V
     .locals 3
 
     .line 78

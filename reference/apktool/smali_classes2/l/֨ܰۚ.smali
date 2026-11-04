@@ -1,42 +1,31 @@
-.class public final synthetic Ll/֨ܰۚ;
+.class public final Ll/֨ܰۚ;
 .super Ljava/lang/Object;
-.source "44TS"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "L6Y6"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۤܰۚ;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ᩶:Ll/ۡܰۚ;
+.field public final ۤ:Ll/֫ۨᩴ;
+
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۤܰۚ;Ll/ۡܰۚ;)V
+.method public constructor <init>(Ll/֫ۨᩴ;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
+    .line 572
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֨ܰۚ;->ܺ:Ll/ۤܰۚ;
+    .line 573
+    iput-object p1, p0, Ll/֨ܰۚ;->ۤ:Ll/֫ۨᩴ;
 
-    iput-object p2, p0, Ll/֨ܰۚ;->᩶:Ll/ۡܰۚ;
+    .line 574
+    iput-object p2, p0, Ll/֨ܰۚ;->ۙ:Ljava/lang/String;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Ll/֨ܰۚ;->ܺ:Ll/ۤܰۚ;
-
-    iget-object v1, p0, Ll/֨ܰۚ;->᩶:Ll/ۡܰۚ;
-
-    invoke-static {v0, v1}, Ll/ۤܰۚ;->ۙ(Ll/ۤܰۚ;Ll/ۡܰۚ;)V
+    .line 575
+    iput-object p3, p0, Ll/֨ܰۚ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

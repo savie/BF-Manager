@@ -1,12 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۢܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q69A */
-/* JADX INFO: loaded from: classes4.dex */
-public interface InterfaceC21499 {
-    void onPageScrollStateChanged(int i);
+import java.util.function.LongFunction;
 
-    void onPageScrolled(int i, float f, int i2);
+/* JADX INFO: renamed from: l.᩶ᩳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: AC8P */
+/* JADX INFO: loaded from: classes.dex */
+@FunctionalInterface
+public interface InterfaceC21499 extends InterfaceC21433, LongFunction {
+    /* JADX INFO: renamed from: ۙ */
+    boolean mo13847(long j);
 
-    void onPageSelected(int i);
+    /* JADX INFO: renamed from: ᩷ */
+    Object mo13849(long j);
 }

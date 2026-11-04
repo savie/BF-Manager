@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/sidesheet/SideSheetBehavior;
-.super Ll/᩻ܺ;
+.super Ll/ۤ᩶;
 .source "SideSheetBehavior.java"
 
 # interfaces
@@ -31,7 +31,7 @@
 
 .field public coplanarSiblingViewRef:Ljava/lang/ref/WeakReference;
 
-.field public final dragCallback:Ll/᩺ܰۙ;
+.field public final dragCallback:Ll/ۧ᩷ۙ;
 
 .field public draggable:Z
 
@@ -67,17 +67,17 @@
 
 .field public velocityTracker:Landroid/view/VelocityTracker;
 
-.field public viewDragHelper:Ll/ܶܰۙ;
+.field public viewDragHelper:Ll/᩻᩷ۙ;
 
 .field public viewRef:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public static synthetic $r8$lambda$eRzu7MgSiEjwRPskR15qKusJnfM(Lcom/google/android/material/sidesheet/SideSheetBehavior;ILandroid/view/View;Ll/ۜۗ;)Z
+.method public static synthetic $r8$lambda$eRzu7MgSiEjwRPskR15qKusJnfM(Lcom/google/android/material/sidesheet/SideSheetBehavior;ILandroid/view/View;Ll/֫۬;)Z
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->lambda$createAccessibilityViewCommandForState$2(ILandroid/view/View;Ll/ۜۗ;)Z
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->lambda$createAccessibilityViewCommandForState$2(ILandroid/view/View;Ll/֫۬;)Z
 
     move-result p0
 
@@ -106,12 +106,12 @@
     .locals 1
 
     .line 83
-    sget v0, Ll/ᩳ۟ܶ;->ܿۖ:I
+    sget v0, Ll/᩺۬ܺ;->ᩳ᩸:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->DEFAULT_ACCESSIBILITY_PANE_TITLE:I
 
     .line 107
-    sget v0, Ll/ᩴ۟ܶ;->ۡۛ:I
+    sget v0, Ll/ۘ۬ܺ;->ۨۢ:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->DEF_STYLE_RES:I
 
@@ -122,7 +122,7 @@
     .locals 1
 
     .line 139
-    invoke-direct {p0}, Ll/᩻ܺ;-><init>()V
+    invoke-direct {p0}, Ll/ۤ᩶;-><init>()V
 
     .line 105
     new-instance v0, Lcom/google/android/material/sidesheet/SideSheetBehavior$StateSettlingTracker;
@@ -166,7 +166,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior$1;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/᩺ܰۙ;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/ۧ᩷ۙ;
 
     return-void
 .end method
@@ -175,7 +175,7 @@
     .locals 5
 
     .line 142
-    invoke-direct {p0, p1, p2}, Ll/᩻ܺ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Ll/ۤ᩶;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 105
     new-instance v0, Lcom/google/android/material/sidesheet/SideSheetBehavior$StateSettlingTracker;
@@ -219,17 +219,17 @@
 
     invoke-direct {v2, p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior$1;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
 
-    iput-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/᩺ܰۙ;
+    iput-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/ۧ᩷ۙ;
 
     .line 144
-    sget-object v2, Ll/۠۟ܶ;->ۖۜۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->᩸ۧۙ:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
     .line 145
-    sget v3, Ll/۠۟ܶ;->۬ۜۙ:I
+    sget v3, Ll/ܰ۬ܺ;->ۚۧۙ:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -238,7 +238,7 @@
     if-eqz v3, :cond_0
 
     .line 146
-    sget v3, Ll/۠۟ܶ;->۬ۜۙ:I
+    sget v3, Ll/ܰ۬ܺ;->ۚۧۙ:I
 
     .line 147
     invoke-static {p1, v2, v3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -249,7 +249,7 @@
 
     .line 150
     :cond_0
-    sget v3, Ll/۠۟ܶ;->᩺ۜۙ:I
+    sget v3, Ll/ܰ۬ܺ;->᩻ۧۙ:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -275,7 +275,7 @@
 
     .line 154
     :cond_1
-    sget p2, Ll/۠۟ܶ;->ۜۜۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۧۧۙ:I
 
     invoke-virtual {v2, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -284,7 +284,7 @@
     if-eqz p2, :cond_2
 
     .line 155
-    sget p2, Ll/۠۟ܶ;->ۜۜۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۧۧۙ:I
 
     .line 156
     invoke-virtual {v2, p2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -299,7 +299,7 @@
     invoke-direct {p0, p1}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->createMaterialShapeDrawableIfNeeded(Landroid/content/Context;)V
 
     .line 160
-    sget p2, Ll/۠۟ܶ;->ۚۜۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩴۧۙ:I
 
     const/high16 v1, -0x40800000    # -1.0f
 
@@ -310,7 +310,7 @@
     iput p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->elevation:F
 
     .line 162
-    sget p2, Ll/۠۟ܶ;->ۘۜۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֫ۧۙ:I
 
     invoke-virtual {v2, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -412,11 +412,11 @@
     return p0
 .end method
 
-.method public static synthetic access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/ܶܰۙ;
+.method public static synthetic access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/᩻᩷ۙ;
     .locals 0
 
     .line 80
-    iget-object p0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object p0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     return-object p0
 .end method
@@ -634,7 +634,7 @@
     return-void
 .end method
 
-.method private createAccessibilityViewCommandForState(I)Ll/ۡۗ;
+.method private createAccessibilityViewCommandForState(I)Ll/᩵۬;
     .locals 1
 
     .line 1210
@@ -759,7 +759,7 @@
     .locals 2
 
     .line 426
-    invoke-static {p1}, Ll/ۚ֫;->ۖ(Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Ll/᩸۠;->᩸(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -777,7 +777,7 @@
     move-result-object v0
 
     .line 427
-    invoke-static {p1, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p1, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void
@@ -792,14 +792,14 @@
     move-result-object p0
 
     .line 1171
-    instance-of v0, p0, Ll/ۢܺ;
+    instance-of v0, p0, Ll/ܳ᩶;
 
     if-eqz v0, :cond_1
 
     .line 1174
-    check-cast p0, Ll/ۢܺ;
+    check-cast p0, Ll/ܳ᩶;
 
-    invoke-virtual {p0}, Ll/ۢܺ;->ۨ()Ll/᩻ܺ;
+    invoke-virtual {p0}, Ll/ܳ᩶;->ۤ()Ll/ۤ᩶;
 
     move-result-object p0
 
@@ -968,7 +968,7 @@
     return v1
 .end method
 
-.method private getViewLayoutParams()Ll/ۢܺ;
+.method private getViewLayoutParams()Ll/ܳ᩶;
     .locals 2
 
     .line 230
@@ -990,7 +990,7 @@
 
     move-result-object v1
 
-    instance-of v1, v1, Ll/ۢܺ;
+    instance-of v1, v1, Ll/ܳ᩶;
 
     if-eqz v1, :cond_0
 
@@ -999,7 +999,7 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/ۢܺ;
+    check-cast v0, Ll/ܳ᩶;
 
     return-object v0
 
@@ -1013,7 +1013,7 @@
     .locals 1
 
     .line 224
-    invoke-direct {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewLayoutParams()Ll/ۢܺ;
+    invoke-direct {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewLayoutParams()Ll/ܳ᩶;
 
     move-result-object v0
 
@@ -1038,7 +1038,7 @@
     .locals 1
 
     .line 219
-    invoke-direct {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewLayoutParams()Ll/ۢܺ;
+    invoke-direct {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewLayoutParams()Ll/ܳ᩶;
 
     move-result-object v0
 
@@ -1088,9 +1088,9 @@
     move-result p1
 
     .line 556
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
-    invoke-virtual {v0}, Ll/ܶܰۙ;->۬()I
+    invoke-virtual {v0}, Ll/᩻᩷ۙ;->ۚ()I
 
     move-result v0
 
@@ -1138,7 +1138,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 4137
     invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
@@ -1166,7 +1166,7 @@
     move-result p2
 
     .line 770
-    invoke-virtual {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewDragHelper()Ll/ܶܰۙ;
+    invoke-virtual {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->getViewDragHelper()Ll/᩻᩷ۙ;
 
     move-result-object v0
 
@@ -1179,7 +1179,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p2, p1}, Ll/ܶܰۙ;->ܰ(II)Z
+    invoke-virtual {v0, p2, p1}, Ll/᩻᩷ۙ;->᩷(II)Z
 
     move-result p1
 
@@ -1193,7 +1193,7 @@
 
     move-result p3
 
-    invoke-virtual {v0, p1, p2, p3}, Ll/ܶܰۙ;->ۙ(Landroid/view/View;II)Z
+    invoke-virtual {v0, p1, p2, p3}, Ll/᩻᩷ۙ;->ۙ(Landroid/view/View;II)Z
 
     move-result p1
 
@@ -1210,7 +1210,7 @@
     return p1
 .end method
 
-.method private synthetic lambda$createAccessibilityViewCommandForState$2(ILandroid/view/View;Ll/ۜۗ;)Z
+.method private synthetic lambda$createAccessibilityViewCommandForState$2(ILandroid/view/View;Ll/֫۬;)Z
     .locals 0
 
     .line 1211
@@ -1270,7 +1270,7 @@
     return-void
 .end method
 
-.method private maybeAssignCoplanarSiblingViewBasedId(Ll/ۖ᩶;)V
+.method private maybeAssignCoplanarSiblingViewBasedId(Ll/᩻᩶;)V
     .locals 2
 
     .line 433
@@ -1302,18 +1302,18 @@
     return-void
 .end method
 
-.method private replaceAccessibilityActionForState(Landroid/view/View;Ll/ۢۢ;I)V
+.method private replaceAccessibilityActionForState(Landroid/view/View;Ll/۠ۜ;I)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 1205
-    invoke-direct {p0, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->createAccessibilityViewCommandForState(I)Ll/ۡۗ;
+    invoke-direct {p0, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->createAccessibilityViewCommandForState(I)Ll/᩵۬;
 
     move-result-object p3
 
     .line 1204
-    invoke-static {p1, p2, v0, p3}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۢۢ;Ljava/lang/String;Ll/ۡۗ;)V
+    invoke-static {p1, p2, v0, p3}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/۠ۜ;Ljava/lang/String;Ll/᩵۬;)V
 
     return-void
 .end method
@@ -1476,7 +1476,7 @@
     const-string v2, ". Must be 0 or 1."
 
     .line 0
-    invoke-static {p1, v1, v2}, Ll/ۖۘۖ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, v2}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1494,10 +1494,10 @@
 
     move-result-object p1
 
-    check-cast p1, Ll/ۢܺ;
+    check-cast p1, Ll/ܳ᩶;
 
     .line 172
-    iget p1, p1, Ll/ۢܺ;->ۨ:I
+    iget p1, p1, Ll/ܳ᩶;->ۤ:I
 
     .line 134
     invoke-static {p1, p2}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
@@ -1526,7 +1526,7 @@
     .locals 2
 
     .line 725
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     if-eqz v0, :cond_1
 
@@ -1559,7 +1559,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Ll/ۚ֫;->ۖ(Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Ll/᩸۠;->᩸(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1635,12 +1635,12 @@
     const/high16 v1, 0x40000
 
     .line 1189
-    invoke-static {v1, v0}, Ll/ۚ֫;->ۖ(ILandroid/view/View;)V
+    invoke-static {v1, v0}, Ll/᩸۠;->᩸(ILandroid/view/View;)V
 
     const/high16 v1, 0x100000
 
     .line 1190
-    invoke-static {v1, v0}, Ll/ۚ֫;->ۖ(ILandroid/view/View;)V
+    invoke-static {v1, v0}, Ll/᩸۠;->᩸(ILandroid/view/View;)V
 
     .line 1192
     iget v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->state:I
@@ -1650,9 +1650,9 @@
     if-eq v1, v2, :cond_2
 
     .line 1193
-    sget-object v1, Ll/ۢۢ;->۬:Ll/ۢۢ;
+    sget-object v1, Ll/۠ۜ;->ۚ:Ll/۠ۜ;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->replaceAccessibilityActionForState(Landroid/view/View;Ll/ۢۢ;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->replaceAccessibilityActionForState(Landroid/view/View;Ll/۠ۜ;I)V
 
     .line 1196
     :cond_2
@@ -1663,9 +1663,9 @@
     if-eq v1, v2, :cond_3
 
     .line 1197
-    sget-object v1, Ll/ۢۢ;->ۘ:Ll/ۢۢ;
+    sget-object v1, Ll/۠ۜ;->֫:Ll/۠ۜ;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->replaceAccessibilityActionForState(Landroid/view/View;Ll/ۢۢ;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->replaceAccessibilityActionForState(Landroid/view/View;Ll/۠ۜ;I)V
 
     :cond_3
     :goto_0
@@ -1966,7 +1966,7 @@
     const-string v1, "Invalid state to get outer edge offset: "
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2019,11 +2019,11 @@
     return v0
 .end method
 
-.method public getViewDragHelper()Ll/ܶܰۙ;
+.method public getViewDragHelper()Ll/᩻᩷ۙ;
     .locals 1
 
     .line 790
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     return-object v0
 .end method
@@ -2070,7 +2070,7 @@
 
     .line 1028
     :cond_0
-    invoke-virtual {v0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onHandleBackInvoked()Ll/֡ܰ;
+    invoke-virtual {v0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onHandleBackInvoked()Ll/ܿ᩷;
 
     move-result-object v0
 
@@ -2104,7 +2104,7 @@
     move-result-object v4
 
     .line 1034
-    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->finishBackProgress(Ll/֡ܰ;ILandroid/animation/Animator$AnimatorListener;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->finishBackProgress(Ll/ܿ᩷;ILandroid/animation/Animator$AnimatorListener;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     return-void
 
@@ -2138,11 +2138,11 @@
     return v0
 .end method
 
-.method public onAttachedToLayoutParams(Ll/ۢܺ;)V
+.method public onAttachedToLayoutParams(Ll/ܳ᩶;)V
     .locals 0
 
     .line 281
-    invoke-super {p0, p1}, Ll/᩻ܺ;->onAttachedToLayoutParams(Ll/ۢܺ;)V
+    invoke-super {p0, p1}, Ll/ۤ᩶;->onAttachedToLayoutParams(Ll/ܳ᩶;)V
 
     const/4 p1, 0x0
 
@@ -2150,7 +2150,7 @@
     iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewRef:Ljava/lang/ref/WeakReference;
 
     .line 285
-    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     .line 286
     iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->sideContainerBackHelper:Lcom/google/android/material/motion/MaterialSideContainerBackHelper;
@@ -2162,7 +2162,7 @@
     .locals 1
 
     .line 291
-    invoke-super {p0}, Ll/᩻ܺ;->onDetachedFromLayoutParams()V
+    invoke-super {p0}, Ll/ۤ᩶;->onDetachedFromLayoutParams()V
 
     const/4 v0, 0x0
 
@@ -2170,7 +2170,7 @@
     iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewRef:Ljava/lang/ref/WeakReference;
 
     .line 294
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     .line 295
     iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->sideContainerBackHelper:Lcom/google/android/material/motion/MaterialSideContainerBackHelper;
@@ -2178,7 +2178,7 @@
     return-void
 .end method
 
-.method public onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .line 480
@@ -2265,12 +2265,12 @@
 
     if-nez p1, :cond_6
 
-    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     if-eqz p1, :cond_6
 
     .line 509
-    invoke-virtual {p1, p3}, Ll/ܶܰۙ;->ܰ(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p1, p3}, Ll/᩻᩷ۙ;->᩷(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -2282,11 +2282,11 @@
     return v0
 .end method
 
-.method public onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+.method public onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
     .locals 4
 
     .line 354
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 2854
     invoke-virtual {p1}, Landroid/view/View;->getFitsSystemWindows()Z
@@ -2346,7 +2346,7 @@
 
     if-nez v3, :cond_1
 
-    invoke-static {p2}, Ll/ۚ֫;->۬(Landroid/view/View;)F
+    invoke-static {p2}, Ll/᩸۠;->ۚ(Landroid/view/View;)F
 
     move-result v2
 
@@ -2363,7 +2363,7 @@
     if-eqz v0, :cond_3
 
     .line 372
-    invoke-static {p2, v0}, Ll/ۚ֫;->ۙ(Landroid/view/View;Landroid/content/res/ColorStateList;)V
+    invoke-static {p2, v0}, Ll/᩸۠;->ۙ(Landroid/view/View;Landroid/content/res/ColorStateList;)V
 
     .line 374
     :cond_3
@@ -2392,18 +2392,18 @@
     invoke-direct {p0, p2, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->setSheetEdge(Landroid/view/View;I)V
 
     .line 385
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     if-nez v0, :cond_6
 
     .line 386
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/᩺ܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->dragCallback:Ll/ۧ᩷ۙ;
 
-    invoke-static {p1, v0}, Ll/ܶܰۙ;->ۙ(Landroid/view/ViewGroup;Ll/᩺ܰۙ;)Ll/ܶܰۙ;
+    invoke-static {p1, v0}, Ll/᩻᩷ۙ;->ۙ(Landroid/view/ViewGroup;Ll/ۧ᩷ۙ;)Ll/᩻᩷ۙ;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     .line 389
     :cond_6
@@ -2414,7 +2414,7 @@
     move-result v0
 
     .line 391
-    invoke-virtual {p1, p2, p3}, Ll/ۖ᩶;->onLayoutChild(Landroid/view/View;I)V
+    invoke-virtual {p1, p2, p3}, Ll/᩻᩶;->onLayoutChild(Landroid/view/View;I)V
 
     .line 393
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -2426,7 +2426,7 @@
     .line 394
     iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->sheetDelegate:Lcom/google/android/material/sidesheet/SheetDelegate;
 
-    invoke-virtual {p3, p1}, Lcom/google/android/material/sidesheet/SheetDelegate;->getParentInnerEdge(Ll/ۖ᩶;)I
+    invoke-virtual {p3, p1}, Lcom/google/android/material/sidesheet/SheetDelegate;->getParentInnerEdge(Ll/᩻᩶;)I
 
     move-result p3
 
@@ -2469,10 +2469,10 @@
     move-result p3
 
     .line 402
-    invoke-static {p3, p2}, Ll/ۚ֫;->ܰ(ILandroid/view/View;)V
+    invoke-static {p3, p2}, Ll/᩸۠;->᩷(ILandroid/view/View;)V
 
     .line 404
-    invoke-direct {p0, p1}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->maybeAssignCoplanarSiblingViewBasedId(Ll/ۖ᩶;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->maybeAssignCoplanarSiblingViewBasedId(Ll/᩻᩶;)V
 
     .line 406
     iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->callbacks:Ljava/util/Set;
@@ -2512,7 +2512,7 @@
     return v1
 .end method
 
-.method public onMeasureChild(Ll/ۖ᩶;Landroid/view/View;IIII)Z
+.method public onMeasureChild(Ll/᩻᩶;Landroid/view/View;IIII)Z
     .locals 3
 
     .line 306
@@ -2590,25 +2590,25 @@
     return p1
 .end method
 
-.method public onRestoreInstanceState(Ll/ۖ᩶;Landroid/view/View;Landroid/os/Parcelable;)V
+.method public onRestoreInstanceState(Ll/᩻᩶;Landroid/view/View;Landroid/os/Parcelable;)V
     .locals 1
 
     .line 270
     check-cast p3, Lcom/google/android/material/sidesheet/SideSheetBehavior$SavedState;
 
     .line 271
-    invoke-virtual {p3}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p3}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 272
-    invoke-virtual {p3}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p3}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, p1, p2, v0}, Ll/᩻ܺ;->onRestoreInstanceState(Ll/ۖ᩶;Landroid/view/View;Landroid/os/Parcelable;)V
+    invoke-super {p0, p1, p2, v0}, Ll/ۤ᩶;->onRestoreInstanceState(Ll/᩻᩶;Landroid/view/View;Landroid/os/Parcelable;)V
 
     .line 275
     :cond_0
@@ -2634,13 +2634,13 @@
     return-void
 .end method
 
-.method public onSaveInstanceState(Ll/ۖ᩶;Landroid/view/View;)Landroid/os/Parcelable;
+.method public onSaveInstanceState(Ll/᩻᩶;Landroid/view/View;)Landroid/os/Parcelable;
     .locals 1
 
     .line 264
     new-instance v0, Lcom/google/android/material/sidesheet/SideSheetBehavior$SavedState;
 
-    invoke-super {p0, p1, p2}, Ll/᩻ܺ;->onSaveInstanceState(Ll/ۖ᩶;Landroid/view/View;)Landroid/os/Parcelable;
+    invoke-super {p0, p1, p2}, Ll/ۤ᩶;->onSaveInstanceState(Ll/᩻᩶;Landroid/view/View;)Landroid/os/Parcelable;
 
     move-result-object p1
 
@@ -2649,7 +2649,7 @@
     return-object v0
 .end method
 
-.method public onTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .line 523
@@ -2689,9 +2689,9 @@
     if-eqz v0, :cond_2
 
     .line 531
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
-    invoke-virtual {v0, p3}, Ll/ܶܰۙ;->ۙ(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p3}, Ll/᩻᩷ۙ;->ۙ(Landroid/view/MotionEvent;)V
 
     :cond_2
     if-nez p1, :cond_3
@@ -2741,7 +2741,7 @@
     if-eqz p1, :cond_5
 
     .line 545
-    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -2751,7 +2751,7 @@
 
     move-result p3
 
-    invoke-virtual {p1, p3, p2}, Ll/ܶܰۙ;->ۙ(ILandroid/view/View;)V
+    invoke-virtual {p1, p3, p2}, Ll/᩻᩷ۙ;->ۙ(ILandroid/view/View;)V
 
     .line 548
     :cond_5
@@ -2820,7 +2820,7 @@
     check-cast p1, Landroid/view/View;
 
     .line 940
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {p1}, Landroid/view/View;->isLaidOut()Z
@@ -2862,7 +2862,7 @@
     if-eq p1, v1, :cond_0
 
     .line 918
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
@@ -2974,7 +2974,7 @@
     const-string v0, " should not be set externally."
 
     .line 0
-    invoke-static {v2, p1, v0}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3088,7 +3088,7 @@
     return v0
 .end method
 
-.method public startBackProgress(Ll/֡ܰ;)V
+.method public startBackProgress(Ll/ܿ᩷;)V
     .locals 1
 
     .line 984
@@ -3100,12 +3100,12 @@
 
     .line 987
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->startBackProgress(Ll/֡ܰ;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->startBackProgress(Ll/ܿ᩷;)V
 
     return-void
 .end method
 
-.method public updateBackProgress(Ll/֡ܰ;)V
+.method public updateBackProgress(Ll/ܿ᩷;)V
     .locals 2
 
     .line 992
@@ -3121,7 +3121,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->updateBackProgress(Ll/֡ܰ;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->updateBackProgress(Ll/ܿ᩷;I)V
 
     .line 997
     invoke-direct {p0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->updateCoplanarSiblingBackProgress()V

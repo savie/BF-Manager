@@ -1,229 +1,167 @@
-.class public final Ll/۫ۨᩴ;
-.super Ll/᩷ۖᩴ;
-.source "HBSC"
+.class public final enum Ll/۫ۨᩴ;
+.super Ljava/lang/Enum;
+.source "66XX"
 
 
-# instance fields
-.field public final synthetic ֡:Ll/ۛۨᩴ;
+# static fields
+.field public static final enum ֡:Ll/۫ۨᩴ;
+
+.field public static final enum ۟:Ll/۫ۨᩴ;
+
+.field public static final synthetic ܰ:[Ll/۫ۨᩴ;
+
+.field public static final enum ܿ:Ll/۫ۨᩴ;
+
+.field public static final enum ᩳ:Ll/۫ۨᩴ;
+
+.field public static final enum ᩶:Ll/۫ۨᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۛۨᩴ;I)V
-    .locals 0
-
-    .line 431
-    iput-object p1, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    .line 1059
-    invoke-direct {p0, p2}, Ll/۟ۖᩴ;-><init>(I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 428
-    check-cast p1, Ll/ᩳۖᩴ;
-
-    invoke-virtual {p0, p1}, Ll/۫ۨᩴ;->ۨ(Ll/ᩳۖᩴ;)V
-
-    return-void
-.end method
-
-.method public final nextFloat()F
-    .locals 4
-
-    .line 462
-    invoke-virtual {p0}, Ll/۟ۖᩴ;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 463
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    iget-object v1, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
-
-    iget-object v1, v1, Ll/ۧۨᩴ;->ܺ:[F
-
-    iget v0, v0, Ll/ۤۨᩴ;->ܺ:I
-
-    iget v2, p0, Ll/۟ۖᩴ;->᩶:I
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, Ll/۟ۖᩴ;->᩶:I
-
-    iput v2, p0, Ll/۟ۖᩴ;->ܺ:I
-
-    add-int/2addr v0, v2
-
-    aget v0, v1, v0
-
-    return v0
-
-    .line 462
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ۙ()I
-    .locals 2
-
-    .line 457
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    iget v1, v0, Ll/ۤۨᩴ;->֡:I
-
-    iget v0, v0, Ll/ۤۨᩴ;->ܺ:I
-
-    sub-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final ۙ(FI)V
-    .locals 1
-
-    .line 442
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    invoke-virtual {v0, p1, p2}, Ll/ۤۨᩴ;->ܰ(FI)V
-
-    return-void
-.end method
-
-.method public final ۨ(I)V
-    .locals 1
-
-    .line 452
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    invoke-virtual {v0, p1}, Ll/ۤۨᩴ;->ܶ(I)F
-
-    return-void
-.end method
-
-.method public final ۨ(Ll/ᩳۖᩴ;)V
-    .locals 6
-
-    .line 474
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    iget-object v1, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
-
-    iget-object v1, v1, Ll/ۧۨᩴ;->ܺ:[F
-
-    .line 475
-    iget v2, v0, Ll/ۤۨᩴ;->֡:I
-
-    iget v3, v0, Ll/ۤۨᩴ;->ܺ:I
-
-    sub-int/2addr v2, v3
-
-    .line 476
-    :goto_0
-    iget v3, p0, Ll/۟ۖᩴ;->᩶:I
-
-    if-ge v3, v2, :cond_0
-
-    .line 477
-    iget v4, v0, Ll/ۤۨᩴ;->ܺ:I
-
-    add-int/lit8 v5, v3, 0x1
-
-    iput v5, p0, Ll/۟ۖᩴ;->᩶:I
-
-    iput v3, p0, Ll/۟ۖᩴ;->ܺ:I
-
-    add-int/2addr v4, v3
-
-    aget v3, v1, v4
-
-    invoke-interface {p1, v3}, Ll/ᩳۖᩴ;->ۙ(F)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final ܰ(I)F
-    .locals 2
-
-    .line 437
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    iget-object v1, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
-
-    iget-object v1, v1, Ll/ۧۨᩴ;->ܺ:[F
-
-    iget v0, v0, Ll/ۤۨᩴ;->ܺ:I
-
-    add-int/2addr v0, p1
-
-    aget p1, v1, v0
-
-    return p1
-.end method
-
-.method public final ܰ(FI)V
-    .locals 1
-
-    .line 447
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
-
-    invoke-virtual {v0, p1, p2}, Ll/ۤۨᩴ;->ۙ(FI)F
-
-    return-void
-.end method
-
-.method public final ᩶()F
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 468
-    invoke-virtual {p0}, Ll/᩷ۖᩴ;->hasPrevious()Z
+    .line 14
+    new-instance v0, Ll/۫ۨᩴ;
 
-    move-result v0
+    const-string v1, "MISSING"
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x0
 
-    .line 469
-    iget-object v0, p0, Ll/۫ۨᩴ;->֡:Ll/ۛۨᩴ;
+    invoke-direct {v0, v1, v2}, Ll/۫ۨᩴ;-><init>(Ljava/lang/String;I)V
 
-    iget-object v1, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
+    sput-object v0, Ll/۫ۨᩴ;->֡:Ll/۫ۨᩴ;
 
-    iget-object v1, v1, Ll/ۧۨᩴ;->ܺ:[F
+    .line 15
+    new-instance v0, Ll/۫ۨᩴ;
 
-    iget v0, v0, Ll/ۤۨᩴ;->ܺ:I
+    const-string v1, "REGULAR"
 
-    iget v2, p0, Ll/۟ۖᩴ;->᩶:I
+    const/4 v2, 0x1
 
-    add-int/lit8 v2, v2, -0x1
+    invoke-direct {v0, v1, v2}, Ll/۫ۨᩴ;-><init>(Ljava/lang/String;I)V
 
-    iput v2, p0, Ll/۟ۖᩴ;->᩶:I
+    sput-object v0, Ll/۫ۨᩴ;->ᩳ:Ll/۫ۨᩴ;
 
-    iput v2, p0, Ll/۟ۖᩴ;->ܺ:I
+    .line 16
+    new-instance v0, Ll/۫ۨᩴ;
 
-    add-int/2addr v0, v2
+    const-string v1, "DIRECTORY"
 
-    aget v0, v1, v0
+    const/4 v2, 0x2
 
-    return v0
+    invoke-direct {v0, v1, v2}, Ll/۫ۨᩴ;-><init>(Ljava/lang/String;I)V
 
-    .line 468
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    sput-object v0, Ll/۫ۨᩴ;->᩶:Ll/۫ۨᩴ;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    .line 17
+    new-instance v0, Ll/۫ۨᩴ;
 
-    throw v0
+    const-string v1, "LINK"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/۫ۨᩴ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۫ۨᩴ;->ܿ:Ll/۫ۨᩴ;
+
+    .line 18
+    new-instance v0, Ll/۫ۨᩴ;
+
+    const-string v1, "OTHER"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Ll/۫ۨᩴ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۫ۨᩴ;->۟:Ll/۫ۨᩴ;
+
+    .line 13
+    invoke-static {}, Ll/۫ۨᩴ;->ۙ()[Ll/۫ۨᩴ;
+
+    move-result-object v0
+
+    sput-object v0, Ll/۫ۨᩴ;->ܰ:[Ll/۫ۨᩴ;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 13
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/۫ۨᩴ;
+    .locals 1
+
+    .line 13
+    const-class v0, Ll/۫ۨᩴ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/۫ۨᩴ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/۫ۨᩴ;
+    .locals 1
+
+    .line 13
+    sget-object v0, Ll/۫ۨᩴ;->ܰ:[Ll/۫ۨᩴ;
+
+    invoke-virtual {v0}, [Ll/۫ۨᩴ;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/۫ۨᩴ;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/۫ۨᩴ;
+    .locals 3
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Ll/۫ۨᩴ;
+
+    .line 13
+    sget-object v1, Ll/۫ۨᩴ;->֡:Ll/۫ۨᩴ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۫ۨᩴ;->ᩳ:Ll/۫ۨᩴ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۫ۨᩴ;->᩶:Ll/۫ۨᩴ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۫ۨᩴ;->ܿ:Ll/۫ۨᩴ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۫ۨᩴ;->۟:Ll/۫ۨᩴ;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

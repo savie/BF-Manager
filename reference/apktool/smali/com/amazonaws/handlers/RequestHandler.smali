@@ -12,8 +12,8 @@
 .method public abstract ۙ()V
 .end method
 
-.method public abstract ۨ()V
+.method public abstract ۤ()V
 .end method
 
-.method public abstract ܰ()V
+.method public abstract ᩷()V
 .end method

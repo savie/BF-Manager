@@ -3,7 +3,7 @@ package org.bouncycastle.math.ec;
 import com.google.android.material.motion.MotionUtils;
 import java.math.BigInteger;
 import java.util.Hashtable;
-import l.C0833;
+import l.C1402;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -938,7 +938,7 @@ public abstract class ECPoint {
             ECFieldElement eCFieldElement5 = this.y;
             ECFieldElement eCFieldElementSquare2 = eCFieldElement.square();
             if (zIsOne) {
-                eCFieldElementMultiplyPlusProduct = C0833.m3430(eCFieldElement5, eCFieldElement5, a);
+                eCFieldElementMultiplyPlusProduct = C1402.m5128(eCFieldElement5, eCFieldElement5, a);
                 eCFieldElementSquarePlusProduct = eCFieldElementSquare2.square().add(b);
             } else {
                 ECFieldElement eCFieldElementSquare3 = eCFieldElement4.square();
@@ -1095,7 +1095,7 @@ public abstract class ECPoint {
                     return eCFieldElementAdd3.isZero() ? twice() : curve.getInfinity();
                 }
                 ECFieldElement eCFieldElementDivide = eCFieldElementAdd3.divide(eCFieldElementAdd2);
-                ECFieldElement eCFieldElementAdd4 = C0833.m3430(eCFieldElementDivide, eCFieldElementDivide, eCFieldElementAdd2).add(curve.getA());
+                ECFieldElement eCFieldElementAdd4 = C1402.m5128(eCFieldElementDivide, eCFieldElementDivide, eCFieldElementAdd2).add(curve.getA());
                 return new F2m(curve, eCFieldElementAdd4, eCFieldElementDivide.multiply(eCFieldElementMultiply5.add(eCFieldElementAdd4)).add(eCFieldElementAdd4).add(eCFieldElement2));
             }
             if (coordinateSystem == 1) {
@@ -1157,7 +1157,7 @@ public abstract class ECPoint {
                 ECFieldElement xCoord = eCPointNormalize.getXCoord();
                 ECFieldElement yCoord = eCPointNormalize.getYCoord();
                 ECFieldElement eCFieldElementDivide2 = yCoord.add(eCFieldElement9).divide(xCoord);
-                eCFieldElementAdd = C0833.m3430(eCFieldElementDivide2, eCFieldElementDivide2, xCoord).add(curve.getA());
+                eCFieldElementAdd = C1402.m5128(eCFieldElementDivide2, eCFieldElementDivide2, xCoord).add(curve.getA());
                 if (eCFieldElementAdd.isZero()) {
                     return new F2m(curve, eCFieldElementAdd, curve.getB().sqrt());
                 }
@@ -1224,16 +1224,16 @@ public abstract class ECPoint {
             ECFieldElement eCFieldElementSquare3 = zIsOne2 ? eCFieldElement3 : eCFieldElement3.square();
             ECFieldElement a = curve.getA();
             ECFieldElement eCFieldElementMultiply5 = zIsOne2 ? a : a.multiply(eCFieldElementSquare3);
-            ECFieldElement eCFieldElementM3430 = C0833.m3430(eCFieldElement2, eCFieldElementMultiply4, eCFieldElementMultiply5);
-            if (eCFieldElementM3430.isZero()) {
-                return new F2m(curve, eCFieldElementM3430, curve.getB().sqrt());
+            ECFieldElement eCFieldElementM5128 = C1402.m5128(eCFieldElement2, eCFieldElementMultiply4, eCFieldElementMultiply5);
+            if (eCFieldElementM5128.isZero()) {
+                return new F2m(curve, eCFieldElementM5128, curve.getB().sqrt());
             }
-            ECFieldElement eCFieldElementSquare4 = eCFieldElementM3430.square();
-            ECFieldElement eCFieldElementMultiply6 = zIsOne2 ? eCFieldElementM3430 : eCFieldElementM3430.multiply(eCFieldElementSquare3);
+            ECFieldElement eCFieldElementSquare4 = eCFieldElementM5128.square();
+            ECFieldElement eCFieldElementMultiply6 = zIsOne2 ? eCFieldElementM5128 : eCFieldElementM5128.multiply(eCFieldElementSquare3);
             ECFieldElement b = curve.getB();
             if (b.bitLength() < (curve.getFieldSize() >> 1)) {
                 ECFieldElement eCFieldElementSquare5 = eCFieldElement2.add(eCFieldElementMultiply).square();
-                eCFieldElementAdd = eCFieldElementSquare5.add(eCFieldElementM3430).add(eCFieldElementSquare3).multiply(eCFieldElementSquare5).add(b.isOne() ? eCFieldElementMultiply5.add(eCFieldElementSquare3).square() : eCFieldElementMultiply5.squarePlusProduct(b, eCFieldElementSquare3.square())).add(eCFieldElementSquare4);
+                eCFieldElementAdd = eCFieldElementSquare5.add(eCFieldElementM5128).add(eCFieldElementSquare3).multiply(eCFieldElementSquare5).add(b.isOne() ? eCFieldElementMultiply5.add(eCFieldElementSquare3).square() : eCFieldElementMultiply5.squarePlusProduct(b, eCFieldElementSquare3.square())).add(eCFieldElementSquare4);
                 if (!a.isZero()) {
                     if (!a.isOne()) {
                         eCFieldElementAdd = eCFieldElementAdd.add(a.addOne().multiply(eCFieldElementMultiply6));
@@ -1244,7 +1244,7 @@ public abstract class ECPoint {
             if (!zIsOne2) {
                 eCFieldElementMultiply = eCFieldElementMultiply.multiply(eCFieldElement3);
             }
-            eCFieldElementAdd = eCFieldElementMultiply.squarePlusProduct(eCFieldElementM3430, eCFieldElementMultiply4).add(eCFieldElementSquare4);
+            eCFieldElementAdd = eCFieldElementMultiply.squarePlusProduct(eCFieldElementM5128, eCFieldElementMultiply4).add(eCFieldElementSquare4);
             eCFieldElementAdd = eCFieldElementAdd.add(eCFieldElementMultiply6);
             return new F2m(curve, eCFieldElementSquare4, eCFieldElementAdd, new ECFieldElement[]{eCFieldElementMultiply6});
         }

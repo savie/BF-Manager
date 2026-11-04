@@ -1,21 +1,33 @@
 package l;
 
-import java.util.regex.Pattern;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩴۙ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 67O2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18537 extends Exception {
-    public C18537(String str) {
-        this(AbstractC22433.of((Object) C7908.m20923(str)));
+/* JADX INFO: renamed from: l.ܿᩴ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: T91K */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18537 implements InterfaceC23013 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C4981 f60242;
+
+    public C18537(C4981 c4981) {
+        this.f60242 = c4981;
     }
 
-    public C18537(Iterable iterable) {
-        super(((C7908) iterable.iterator().next()).toString());
-        AbstractC22433.m49797(iterable);
-    }
-
-    static {
-        Pattern.compile("\\R");
+    @Override // l.InterfaceC23013
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2807(InterfaceC20029 interfaceC20029, AbstractC4534 abstractC4534) {
+        String strM55016 = ((C24672) abstractC4534).m55016();
+        interfaceC20029.builder().m47532(strM55016);
+        C4981 c4981 = this.f60242;
+        if (c4981.f17326.isEmpty()) {
+            return;
+        }
+        interfaceC20029.length();
+        strM55016.length();
+        Iterator it = c4981.f17326.iterator();
+        while (it.hasNext()) {
+            ((InterfaceC14061) it.next()).m34227();
+        }
     }
 }

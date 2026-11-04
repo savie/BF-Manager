@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Enumerated;
@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ObjectDigestInfo extends ASN1Object {
     public static final int otherObjectDigest = 2;
     public static final int publicKey = 0;
@@ -33,7 +33,7 @@ public class ObjectDigestInfo extends ASN1Object {
 
     public ObjectDigestInfo(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() > 4 || aSN1Sequence.size() < 3) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         int i = 0;
         this.digestedObjectType = ASN1Enumerated.getInstance(aSN1Sequence.getObjectAt(0));

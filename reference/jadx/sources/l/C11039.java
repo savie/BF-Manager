@@ -1,44 +1,36 @@
 package l;
 
-import android.app.Activity;
-
-/* JADX INFO: renamed from: l.ۧܰۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: NAO7 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11039 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Activity f37500;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C5331 f37501;
+/* JADX INFO: renamed from: l.ۤᩳۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: WIUN */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11039 implements InterfaceC11851 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C13799 f37502;
+    public final C24927 f34843;
 
-    public C11039(Activity activity, ExecutorC2053 executorC2053, C13799 c13799) {
-        this.f37500 = activity;
-        this.f37502 = c13799;
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ᩹ */
+    public final /* synthetic */ boolean mo1794() {
+        return false;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Activity m27832() {
-        return this.f37500;
+    public C11039(C24927 c24927) {
+        this.f34843 = c24927;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17295 m27835() {
-        return this.f37502;
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֡ */
+    public final String mo1790() {
+        return toString();
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C5331 m27834() {
-        return this.f37501;
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֫ */
+    public final InterfaceC2157 mo1791() {
+        return C11457.f36028;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m27833(C5331 c5331) {
-        this.f37501 = c5331;
-        this.f37502.accept(c5331);
+    public final String toString() {
+        return "INLINED: " + this.f34843;
     }
 }

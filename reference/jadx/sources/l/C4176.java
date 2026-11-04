@@ -1,15 +1,19 @@
 package l;
 
-import bin.mt.plus.Main;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.ۘ᩶᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 164Z */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C4176 implements InterfaceC17295 {
-    @Override // l.InterfaceC17295
-    public final void accept(Object obj) {
-        Main main = (Main) obj;
-        main.m134();
-        new C22342(main).m49550();
+/* JADX INFO: renamed from: l.ۘ۬ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 58LL */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4176 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C14616(parcel);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C14616[i];
     }
 }

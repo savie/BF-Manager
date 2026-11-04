@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final ܺ:Ljava/util/LinkedList;
+.field public final ܰ:Ljava/util/LinkedList;
 
 .field public final ᩶:Ljava/lang/StringBuilder;
 
@@ -28,7 +28,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܺ:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ:Ljava/util/LinkedList;
 
     return-void
 .end method
@@ -50,12 +50,12 @@
     .locals 0
 
     .line 52
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܺ:Ljava/util/LinkedList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ:Ljava/util/LinkedList;
 
     invoke-virtual {p1}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     .line 53
-    invoke-virtual {p0, p2}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩹(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܳ(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     invoke-virtual {p0, p2, p4}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ۙ(Ljava/lang/String;Lorg/xml/sax/Attributes;)V
 
     .line 41
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܺ:Ljava/util/LinkedList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ:Ljava/util/LinkedList;
 
     invoke-virtual {p1, p2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 71
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܺ:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
@@ -103,7 +103,7 @@
     .line 75
     array-length v0, p1
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܺ:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
@@ -168,7 +168,10 @@
     return p1
 .end method
 
-.method public final ܰ()Ljava/lang/String;
+.method public abstract ܳ(Ljava/lang/String;)V
+.end method
+
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
     .line 67
@@ -179,7 +182,4 @@
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public abstract ᩹(Ljava/lang/String;)V
 .end method

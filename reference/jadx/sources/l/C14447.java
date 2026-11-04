@@ -1,212 +1,170 @@
 package l;
 
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.Collection;
-import java.util.Set;
 
-/* JADX INFO: renamed from: l.ܳۢᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: YCK3 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C14447 extends AbstractC11624 implements Cloneable {
-    public static final long serialVersionUID = 1;
+/* JADX INFO: renamed from: l.ܰ۟ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S7S9 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14447 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public transient InterfaceC14572 f47384;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C4007 f45453;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int[] f45457;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] f45459;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f45460;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public transient char[] f47385;
+    public final C8481 f45456 = new C8481();
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public transient InterfaceC2263 f47386;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f45455 = 0;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f47387;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public transient InterfaceC23475 f47388;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public transient char[] f47389;
-
-    public C14447() {
-        char[] cArr = C17124.f54609;
-        this.f47389 = cArr;
-        this.f47385 = cArr;
-    }
-
-    public C14447(int i) {
-        this.f47389 = new char[i];
-        this.f47385 = new char[i];
-    }
-
-    @Override // l.InterfaceC5086
-    /* JADX INFO: renamed from: ܳۙ */
-    public final InterfaceC18660 mo14178() {
-        if (this.f47386 == null) {
-            this.f47386 = new C20091(this);
-        }
-        return this.f47386;
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int m34848(char c) {
-        char[] cArr = this.f47389;
-        int i = this.f47387;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return -1;
-            }
-            if (cArr[i2] == c) {
-                return i2;
-            }
-            i = i2;
-        }
-    }
-
-    @Override // l.InterfaceC9508
-    /* JADX INFO: renamed from: ܰ */
-    public final char mo9552(char c) {
-        char[] cArr = this.f47389;
-        int i = this.f47387;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return (char) 0;
-            }
-            if (cArr[i2] == c) {
-                return this.f47385[i2];
-            }
-            i = i2;
-        }
-    }
-
-    @Override // l.InterfaceC6456
-    public final int size() {
-        return this.f47387;
-    }
-
-    @Override // java.util.Map
-    public final void clear() {
-        this.f47387 = 0;
-    }
-
-    @Override // l.InterfaceC9508
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo9551(char c) {
-        return m34848(c) != -1;
-    }
-
-    @Override // java.util.Map
-    public final boolean isEmpty() {
-        return this.f47387 == 0;
-    }
-
-    @Override // l.AbstractC13741, l.InterfaceC9508
-    /* JADX INFO: renamed from: ۙ */
-    public final char mo24344(char c, char c2) {
-        int iM34848 = m34848(c);
-        if (iM34848 != -1) {
-            char[] cArr = this.f47385;
-            char c3 = cArr[iM34848];
-            cArr[iM34848] = c2;
-            return c3;
-        }
-        int i = this.f47387;
-        if (i == this.f47389.length) {
-            char[] cArr2 = new char[i == 0 ? 2 : i * 2];
-            char[] cArr3 = new char[i != 0 ? i * 2 : 2];
-            while (true) {
-                int i2 = i - 1;
-                if (i == 0) {
-                    break;
-                }
-                cArr2[i2] = this.f47389[i2];
-                cArr3[i2] = this.f47385[i2];
-                i = i2;
-            }
-            this.f47389 = cArr2;
-            this.f47385 = cArr3;
-        }
-        char[] cArr4 = this.f47389;
-        int i3 = this.f47387;
-        cArr4[i3] = c;
-        this.f47385[i3] = c2;
-        this.f47387 = i3 + 1;
-        return (char) 0;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean[] f45458 = new boolean[256];
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final char m34849(char c) {
-        int iM34848 = m34848(c);
-        if (iM34848 == -1) {
-            return (char) 0;
-        }
-        char c2 = this.f47385[iM34848];
-        int i = (this.f47387 - iM34848) - 1;
-        char[] cArr = this.f47389;
-        int i2 = iM34848 + 1;
-        System.arraycopy(cArr, i2, cArr, iM34848, i);
-        char[] cArr2 = this.f47385;
-        System.arraycopy(cArr2, i2, cArr2, iM34848, i);
-        this.f47387--;
-        return c2;
-    }
+    public int f45454 = -1;
 
-    @Override // java.util.Map
-    public final Set keySet() {
-        if (this.f47384 == null) {
-            this.f47384 = new C12330(this);
-        }
-        return this.f47384;
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f45452 = 0;
 
-    @Override // java.util.Map
-    public final Collection values() {
-        if (this.f47388 == null) {
-            this.f47388 = new C23619(this);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m34869(int i, int i2) {
+        int i3 = this.f45455;
+        boolean[] zArr = this.f45458;
+        zArr[i] = true;
+        this.f45456.m22797(i, i2);
+        byte b = (byte) i;
+        byte[] bArr = this.f45459;
+        if (i2 == 1) {
+            bArr[i3] = b;
+            this.f45455 = i3 + 1;
+            return;
         }
-        return this.f47388;
-    }
-
-    public final Object clone() {
-        try {
-            C14447 c14447 = (C14447) super.clone();
-            c14447.f47389 = (char[]) this.f47389.clone();
-            c14447.f47385 = (char[]) this.f47385.clone();
-            c14447.f47386 = null;
-            c14447.f47384 = null;
-            c14447.f47388 = null;
-            return c14447;
-        } catch (CloneNotSupportedException unused) {
-            throw new InternalError();
+        if (i2 == 2) {
+            bArr[i3] = b;
+            bArr[i3 + 1] = b;
+            this.f45455 = i3 + 2;
+        } else {
+            if (i2 == 3) {
+                bArr[i3] = b;
+                bArr[i3 + 1] = b;
+                bArr[i3 + 2] = b;
+                this.f45455 = i3 + 3;
+                return;
+            }
+            int i4 = i2 - 4;
+            zArr[i4] = true;
+            bArr[i3] = b;
+            bArr[i3 + 1] = b;
+            bArr[i3 + 2] = b;
+            bArr[i3 + 3] = b;
+            bArr[i3 + 4] = (byte) i4;
+            this.f45455 = i3 + 5;
         }
     }
 
-    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
-        objectOutputStream.defaultWriteObject();
-        char[] cArr = this.f47389;
-        char[] cArr2 = this.f47385;
-        int i = this.f47387;
-        for (int i2 = 0; i2 < i; i2++) {
-            objectOutputStream.writeChar(cArr[i2]);
-            objectOutputStream.writeChar(cArr2[i2]);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m34871(int i) {
+        if (this.f45455 > this.f45460) {
+            return false;
         }
+        int i2 = this.f45454;
+        int i3 = this.f45452;
+        if (i3 == 0) {
+            this.f45454 = i;
+            this.f45452 = 1;
+        } else if (i2 != i) {
+            m34869(i2 & 255, i3);
+            this.f45454 = i;
+            this.f45452 = 1;
+        } else if (i3 == 254) {
+            m34869(i2 & 255, 255);
+            this.f45452 = 0;
+        } else {
+            this.f45452 = i3 + 1;
+        }
+        return true;
     }
 
-    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
-        objectInputStream.defaultReadObject();
-        int i = this.f47387;
-        char[] cArr = new char[i];
-        this.f47389 = cArr;
-        char[] cArr2 = new char[i];
-        this.f47385 = cArr2;
-        for (int i2 = 0; i2 < this.f47387; i2++) {
-            cArr[i2] = objectInputStream.readChar();
-            cArr2[i2] = objectInputStream.readChar();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34870() throws IOException {
+        boolean[] zArr;
+        int i = this.f45452;
+        if (i > 0) {
+            m34869(this.f45454 & 255, i);
         }
+        int i2 = this.f45455;
+        byte[] bArr = this.f45459;
+        bArr[i2] = bArr[0];
+        int[] iArr = this.f45457;
+        int iM1836 = new C0278(bArr, i2, iArr).m1836();
+        C4007 c4007 = this.f45453;
+        c4007.m12969(24, 3227993);
+        c4007.m12969(24, 2511705);
+        int iM22795 = this.f45456.m22795();
+        c4007.m12969(16, (iM22795 >>> 16) & 65535);
+        c4007.m12969(16, iM22795 & 65535);
+        c4007.m12970(false);
+        c4007.m12969(24, iM1836);
+        boolean[] zArr2 = new boolean[16];
+        int i3 = 0;
+        while (true) {
+            zArr = this.f45458;
+            if (i3 >= 16) {
+                break;
+            }
+            int i4 = i3 << 4;
+            int i5 = 0;
+            while (i5 < 16) {
+                if (zArr[i4]) {
+                    zArr2[i3] = true;
+                }
+                i5++;
+                i4++;
+            }
+            i3++;
+        }
+        for (int i6 = 0; i6 < 16; i6++) {
+            c4007.m12970(zArr2[i6]);
+        }
+        for (int i7 = 0; i7 < 16; i7++) {
+            if (zArr2[i7]) {
+                int i8 = i7 * 16;
+                int i9 = 0;
+                while (i9 < 16) {
+                    c4007.m12970(zArr[i8]);
+                    i9++;
+                    i8++;
+                }
+            }
+        }
+        C9226 c9226 = new C9226(iArr, this.f45455, zArr);
+        c9226.m24408();
+        new C9972(this.f45453, c9226.m24409(), c9226.m24412(), c9226.m24411(), c9226.m24410()).m25815();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m34872() {
+        return this.f45455 == 0 && this.f45452 == 0;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m34873() {
+        return this.f45456.m22795();
+    }
+
+    public C14447(C4007 c4007, int i) {
+        this.f45453 = c4007;
+        int i2 = i + 1;
+        this.f45459 = new byte[i2];
+        this.f45457 = new int[i2];
+        this.f45460 = i - 6;
     }
 }

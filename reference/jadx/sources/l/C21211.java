@@ -1,44 +1,57 @@
 package l;
 
-import java.util.function.DoubleUnaryOperator;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.᩷᩻ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.᩶ۡ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: CAXH */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C21211 implements DoubleUnaryOperator {
-    public final /* synthetic */ int a;
-    public final /* synthetic */ DoubleUnaryOperator b;
-    public final /* synthetic */ DoubleUnaryOperator c;
+public final class C21211 implements Iterator {
 
-    public /* synthetic */ C21211(DoubleUnaryOperator doubleUnaryOperator, DoubleUnaryOperator doubleUnaryOperator2, int i) {
-        this.a = i;
-        this.b = doubleUnaryOperator;
-        this.c = doubleUnaryOperator2;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f67699;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f67700;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f67701;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f67702;
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public final /* synthetic */ DoubleUnaryOperator andThen(DoubleUnaryOperator doubleUnaryOperator) {
-        switch (this.a) {
-            case 0:
-                break;
-        }
-        return C13451.$default$andThen(this, doubleUnaryOperator);
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f67702;
     }
 
-    public final /* synthetic */ DoubleUnaryOperator compose(DoubleUnaryOperator doubleUnaryOperator) {
-        switch (this.a) {
-            case 0:
-                break;
+    @Override // java.util.Iterator
+    public final Object next() {
+        int i = this.f67701;
+        if (i == this.f67700) {
+            if (!this.f67702) {
+                throw new NoSuchElementException();
+            }
+            this.f67702 = false;
+        } else {
+            this.f67701 = this.f67699 + i;
         }
-        return C13451.$default$compose(this, doubleUnaryOperator);
+        return Character.valueOf((char) i);
     }
 
-    @Override // java.util.function.DoubleUnaryOperator
-    public final double applyAsDouble(double d) {
-        switch (this.a) {
-            case 0:
-                return this.b.applyAsDouble(this.c.applyAsDouble(d));
-            default:
-                return this.c.applyAsDouble(this.b.applyAsDouble(d));
+    public C21211(char c, int i) {
+        this.f67699 = i;
+        this.f67700 = c;
+        boolean z = false;
+        if (i <= 0 ? 1 >= c : 1 < c || 1 == c) {
+            z = true;
         }
+        this.f67702 = z;
+        this.f67701 = z ? (char) 1 : c;
     }
 }

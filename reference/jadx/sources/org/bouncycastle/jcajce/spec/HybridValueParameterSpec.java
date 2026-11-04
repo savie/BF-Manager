@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import javax.security.auth.Destroyable;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HybridValueParameterSpec implements AlgorithmParameterSpec, Destroyable {
     public volatile AlgorithmParameterSpec baseSpec;
     public final boolean doPrepend;

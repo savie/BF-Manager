@@ -1,216 +1,198 @@
 package l;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
-/* JADX INFO: renamed from: l.ۤ۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2571 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10153 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22762 f34659;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C20424 f34660;
+/* JADX INFO: renamed from: l.ۢ۬᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: D97F */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10153 implements InterfaceC7171, InterfaceC6426 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashSet f34661;
+    public C24919 f32514;
 
-    public C10153(C20424 c20424, InterfaceC22762 interfaceC22762) {
-        InterfaceC7945 interfaceC7945Mo25747;
-        this.f34660 = c20424;
-        this.f34659 = interfaceC22762;
-        HashSet hashSet = new HashSet();
-        for (InterfaceC18528 interfaceC18528 : interfaceC22762.mo20495()) {
-            if (interfaceC18528.getName().equals("<clinit>") && (interfaceC7945Mo25747 = interfaceC18528.mo25747()) != null) {
-                for (InterfaceC1594 interfaceC1594 : interfaceC7945Mo25747.mo11508()) {
-                    switch (C8742.f30036[interfaceC1594.mo5435().ordinal()]) {
-                        case 1:
-                        case 2:
-                        case 3:
-                        case 4:
-                        case 5:
-                        case 6:
-                        case 7:
-                            InterfaceC18735 interfaceC18735 = (InterfaceC18735) ((InterfaceC10331) interfaceC1594).getReference();
-                            try {
-                                interfaceC18735.mo1997();
-                                if (interfaceC18735.mo1183().equals(interfaceC22762.getType())) {
-                                    hashSet.add(C22304.m49466(interfaceC18735));
-                                }
-                            } catch (C10269 unused) {
-                            }
-                            break;
-                    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9407 f32515;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Object f32516 = C8662.f28277;
+
+    public C10153(C9407 c9407) {
+        this.f32515 = c9407;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:37:0x008d  */
+    @Override // l.InterfaceC7171
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo19742(InterfaceC4825 interfaceC4825) throws Throwable {
+        C24919 c24919M56567;
+        AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = C9407.f30537;
+        C9407 c9407 = this.f32515;
+        C10631 c10631 = (C10631) atomicReferenceFieldUpdater.get(c9407);
+        while (!c9407.m24786()) {
+            long andIncrement = C9407.f30534.getAndIncrement(c9407);
+            long j = C8662.f28287;
+            long j2 = andIncrement / j;
+            int i = (int) (andIncrement % j);
+            if (c10631.f31168 != j2) {
+                C10631 c10631M24763 = c9407.m24763(j2, c10631);
+                if (c10631M24763 == null) {
+                    continue;
+                } else {
+                    c10631 = c10631M24763;
                 }
             }
+            Object objM24762 = c9407.m24762(c10631, i, andIncrement, null);
+            if (objM24762 == C8662.f28273) {
+                throw new IllegalStateException("unreachable");
+            }
+            if (objM24762 != C8662.f28283) {
+                if (objM24762 != C8662.f28284) {
+                    c10631.m32963();
+                    this.f32516 = objM24762;
+                    return Boolean.TRUE;
+                }
+                InterfaceC4825 interfaceC4825M33718 = C13808.m33718(interfaceC4825);
+                if (interfaceC4825M33718 instanceof C25307) {
+                    c24919M56567 = ((C25307) interfaceC4825M33718).m56567();
+                    if (c24919M56567 == null) {
+                        c24919M56567 = new C24919(interfaceC4825M33718, 2);
+                    } else {
+                        if (!c24919M56567.m55507()) {
+                            c24919M56567 = null;
+                        }
+                        if (c24919M56567 == null) {
+                            c24919M56567 = new C24919(interfaceC4825M33718, 2);
+                        }
+                    }
+                } else {
+                    c24919M56567 = new C24919(interfaceC4825M33718, 1);
+                }
+                C24919 c24919 = c24919M56567;
+                try {
+                    this.f32514 = c24919;
+                    Object objM24763 = c9407.m24762(c10631, i, andIncrement, this);
+                    if (objM24763 != C8662.f28273) {
+                        if (objM24763 == C8662.f28283) {
+                            if (andIncrement < c9407.m24780()) {
+                                c10631.m32963();
+                            }
+                            c10631 = (C10631) C9407.f30537.get(c9407);
+                            while (true) {
+                                if (c9407.m24786()) {
+                                    C24919 c249110 = this.f32514;
+                                    C15243.m36586(c249110);
+                                    this.f32514 = null;
+                                    this.f32516 = C8662.m23330();
+                                    Throwable thM24778 = c9407.m24778();
+                                    if (thM24778 == null) {
+                                        c249110.mo8188(Boolean.FALSE);
+                                    } else {
+                                        c249110.mo8188(C19676.m45347(thM24778));
+                                    }
+                                } else {
+                                    long andIncrement2 = C9407.f30534.getAndIncrement(c9407);
+                                    long j3 = C8662.f28287;
+                                    long j4 = andIncrement2 / j3;
+                                    i = (int) (andIncrement2 % j3);
+                                    if (c10631.f31168 != j4) {
+                                        C10631 c10631M24764 = c9407.m24763(j4, c10631);
+                                        if (c10631M24764 != null) {
+                                            c10631 = c10631M24764;
+                                        }
+                                    }
+                                    objM24763 = c9407.m24762(c10631, i, andIncrement2, this);
+                                    if (objM24763 == C8662.f28273) {
+                                        mo18187(c10631, i);
+                                    } else if (objM24763 == C8662.f28283) {
+                                        if (andIncrement2 < c9407.m24780()) {
+                                            c10631.m32963();
+                                        }
+                                    } else {
+                                        if (objM24763 == C8662.f28284) {
+                                            throw new IllegalStateException("unexpected");
+                                        }
+                                        c10631.m32963();
+                                    }
+                                }
+                            }
+                        } else {
+                            c10631.m32963();
+                        }
+                        this.f32516 = objM24763;
+                        this.f32514 = null;
+                        c24919.m55511((InterfaceC3071) null);
+                    } else {
+                        mo18187(c10631, i);
+                    }
+                    Object objM55515 = c24919.m55515();
+                    EnumC16757 enumC16757 = EnumC16757.COROUTINE_SUSPENDED;
+                    return objM55515;
+                } catch (Throwable th) {
+                    c24919.m55513();
+                    throw th;
+                }
+            }
+            if (andIncrement < c9407.m24780()) {
+                c10631.m32963();
+            }
         }
-        this.f34661 = hashSet;
+        this.f32516 = C8662.m23330();
+        Throwable thM24779 = c9407.m24778();
+        if (thM24779 == null) {
+            return Boolean.FALSE;
+        }
+        int i2 = C8897.f29076;
+        throw thM24779;
+    }
+
+    @Override // l.InterfaceC6426
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo18187(C10631 c10631, int i) {
+        C24919 c24919 = this.f32514;
+        if (c24919 != null) {
+            c24919.mo18187(c10631, i);
+        }
+    }
+
+    @Override // l.InterfaceC7171
+    public final Object next() throws Throwable {
+        Object obj = this.f32516;
+        if (obj != C8662.f28277) {
+            this.f32516 = C8662.f28277;
+            if (obj != C8662.m23330()) {
+                return obj;
+            }
+            int i = C9407.f30540;
+            Throwable thM24778 = this.f32515.m24778();
+            if (thM24778 == null) {
+                thM24778 = new C22566("Channel was closed");
+            }
+            int i2 = C8897.f29076;
+            throw thM24778;
+        }
+        throw new IllegalStateException("`hasNext()` has not been invoked");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25796(C12283 c12283) throws IOException {
-        int i;
-        c12283.getClass();
-        c12283.write(".class ", 0, 7);
-        InterfaceC22762 interfaceC22762 = this.f34659;
-        for (EnumC15236 enumC15236 : EnumC15236.m36498(interfaceC22762.mo20491())) {
-            c12283.write(enumC15236.toString());
-            c12283.write(32);
-        }
-        boolean z = interfaceC22762 instanceof C7807;
-        if (z) {
-            ((C7807) interfaceC22762).m20483(c12283);
+    public final boolean m26264(C14115 c14115) {
+        C24919 c24919 = this.f32514;
+        C15243.m36586(c24919);
+        this.f32514 = null;
+        this.f32516 = c14115;
+        return C8662.m23318(c24919, Boolean.TRUE, null);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m26263() {
+        C24919 c24919 = this.f32514;
+        C15243.m36586(c24919);
+        this.f32514 = null;
+        this.f32516 = C8662.m23330();
+        Throwable thM24778 = this.f32515.m24778();
+        if (thM24778 == null) {
+            c24919.mo8188(Boolean.FALSE);
         } else {
-            c12283.write(interfaceC22762.getType());
-        }
-        int i2 = 10;
-        c12283.write(10);
-        if (z) {
-            C7807 c7807 = (C7807) interfaceC22762;
-            int iM20497 = c7807.m20497();
-            if (iM20497 != -1) {
-                c12283.write(".super ", 0, 7);
-                c7807.f25683.m41172(c12283, iM20497);
-                c12283.write(10);
-            }
-        } else {
-            String strMo20494 = interfaceC22762.mo20494();
-            if (strMo20494 != null) {
-                c12283.write(".super ", 0, 7);
-                c12283.write(strMo20494, 0, strMo20494.length());
-                c12283.write(10);
-            }
-        }
-        C20424 c20424 = this.f34660;
-        if (c20424.f66199) {
-            if (z) {
-                C7807 c7808 = (C7807) interfaceC22762;
-                int iM20487 = c7808.m20487();
-                if (iM20487 != -1) {
-                    c12283.write(".source \"", 0, 9);
-                    c7808.f25683.m41192(iM20487, c12283, true);
-                    c12283.write("\"\n", 0, 2);
-                }
-            } else {
-                String strMo20493 = interfaceC22762.mo20493();
-                if (strMo20493 != null) {
-                    c12283.write(".source \"", 0, 9);
-                    C9461.m24219(c12283, strMo20493);
-                    c12283.write("\"\n", 0, 2);
-                }
-            }
-        }
-        if (z) {
-            C7807 c7809 = (C7807) interfaceC22762;
-            int[] iArrM20488 = c7809.m20488();
-            if (iArrM20488 != null) {
-                c12283.write(10);
-                c12283.write("# interfaces\n", 0, 13);
-                C17684 c17684 = c7809.f25683;
-                for (int i3 : iArrM20488) {
-                    c12283.write(".implements ", 0, 12);
-                    c17684.m41172(c12283, i3);
-                    c12283.write(10);
-                }
-            }
-        } else {
-            List<String> listMo20500 = interfaceC22762.mo20500();
-            if (listMo20500.size() != 0) {
-                c12283.write(10);
-                c12283.write("# interfaces\n", 0, 13);
-                for (String str : listMo20500) {
-                    c12283.write(".implements ", 0, 12);
-                    c12283.write(str);
-                    c12283.write(10);
-                }
-            }
-        }
-        Set annotations = interfaceC22762.getAnnotations();
-        if (annotations.size() != 0) {
-            c12283.write("\n\n", 0, 2);
-            c12283.write("# annotations\n", 0, 14);
-            C18619.m43060(c12283, annotations);
-        }
-        Iterable<InterfaceC17822> iterableM20485 = z ? ((C7807) interfaceC22762).m20485(false) : interfaceC22762.mo20496();
-        boolean z2 = c20424.f66195;
-        if (z2) {
-            iterableM20485 = Arrays.asList((InterfaceC17822[]) C22808.m50470(iterableM20485, InterfaceC17822.class));
-            Iterator it = iterableM20485.iterator();
-            int i4 = 0;
-            i = -1;
-            while (it.hasNext()) {
-                InterfaceC10975 interfaceC10975Mo28399 = ((InterfaceC17822) it.next()).mo28399();
-                if (interfaceC10975Mo28399 != null && !C23365.m51480(interfaceC10975Mo28399)) {
-                    i = i4;
-                }
-                i4++;
-            }
-        } else {
-            i = 0;
-        }
-        boolean z3 = false;
-        int i5 = 0;
-        for (InterfaceC17822 interfaceC17822 : iterableM20485) {
-            if (!z3) {
-                c12283.write("\n\n", 0, 2);
-                c12283.write("# static fields", 0, 15);
-                z3 = true;
-            }
-            c12283.write(i2);
-            HashSet hashSet = this.f34661;
-            C9448.m24201(c20424, c12283, interfaceC17822, (!z2 || i5 <= i) ? interfaceC17822.mo28399() : null, !hashSet.isEmpty() && hashSet.remove(C22304.m49466(interfaceC17822)));
-            i5++;
-            i2 = 10;
-        }
-        boolean z4 = false;
-        for (InterfaceC17822 interfaceC17823 : z ? ((C7807) interfaceC22762).m20482(false) : interfaceC22762.mo20489()) {
-            if (!z4) {
-                c12283.write("\n\n", 0, 2);
-                c12283.write("# instance fields", 0, 17);
-                z4 = true;
-            }
-            c12283.write(10);
-            C9448.m24201(c20424, c12283, interfaceC17823, interfaceC17823.mo28399(), false);
-        }
-        boolean z5 = false;
-        for (InterfaceC18528 interfaceC18528 : z ? ((C7807) interfaceC22762).m20492(false) : interfaceC22762.mo20495()) {
-            if (!z5) {
-                c12283.write("\n\n", 0, 2);
-                c12283.write("# direct methods", 0, 16);
-                z5 = true;
-            }
-            c12283.write(10);
-            InterfaceC7945 interfaceC7945Mo25747 = interfaceC18528.mo25747();
-            if (interfaceC7945Mo25747 == null || !interfaceC7945Mo25747.mo11508().iterator().hasNext()) {
-                C10547.m26680(c12283, interfaceC18528, c20424);
-            } else {
-                C10547 c10547 = new C10547(c20424, interfaceC18528, interfaceC7945Mo25747);
-                c10547.m26684(c12283);
-                c10547.m26687();
-            }
-        }
-        boolean z6 = false;
-        for (InterfaceC18528 interfaceC18529 : z ? ((C7807) interfaceC22762).m20499(false) : interfaceC22762.mo20486()) {
-            if (!z6) {
-                c12283.write("\n\n", 0, 2);
-                c12283.write("# virtual methods", 0, 17);
-                z6 = true;
-            }
-            c12283.write(10);
-            InterfaceC7945 interfaceC7945Mo25748 = interfaceC18529.mo25747();
-            if (interfaceC7945Mo25748 == null || !interfaceC7945Mo25748.mo11508().iterator().hasNext()) {
-                C10547.m26680(c12283, interfaceC18529, c20424);
-            } else {
-                C10547 c10548 = new C10547(c20424, interfaceC18529, interfaceC7945Mo25748);
-                c10548.m26684(c12283);
-                c10548.m26687();
-            }
+            c24919.mo8188(C19676.m45347(thM24778));
         }
     }
 }

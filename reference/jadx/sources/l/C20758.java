@@ -1,36 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷۠᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: I9QN */
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+
+/* JADX INFO: renamed from: l.᩵ᩴۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20758 implements InterfaceC4154 {
+public final class C20758 extends C12553 {
+    public final /* synthetic */ C3604 d;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC4154[] f67555;
-
-    public C20758(InterfaceC4154... interfaceC4154Arr) {
-        this.f67555 = interfaceC4154Arr;
+    public C20758(C3604 c3604) {
+        this.d = c3604;
     }
 
-    @Override // l.InterfaceC4154
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo11797(Class cls) {
-        for (InterfaceC4154 interfaceC4154 : this.f67555) {
-            if (interfaceC4154.mo11797(cls)) {
-                return true;
-            }
-        }
-        return false;
+    @Override // l.C12553
+    public final String b(InterfaceC8912 interfaceC8912, InterfaceC16831 interfaceC16831, long j, EnumC10315 enumC10315, Locale locale) {
+        return this.d.a(j, enumC10315);
     }
 
-    @Override // l.InterfaceC4154
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC13328 mo11796(Class cls) {
-        for (InterfaceC4154 interfaceC4154 : this.f67555) {
-            if (interfaceC4154.mo11797(cls)) {
-                return interfaceC4154.mo11796(cls);
-            }
+    @Override // l.C12553
+    public final String c(InterfaceC16831 interfaceC16831, long j, EnumC10315 enumC10315, Locale locale) {
+        return this.d.a(j, enumC10315);
+    }
+
+    @Override // l.C12553
+    public final Iterator d(InterfaceC8912 interfaceC8912, InterfaceC16831 interfaceC16831, EnumC10315 enumC10315, Locale locale) {
+        List list = (List) ((HashMap) this.d.b).get(enumC10315);
+        if (list != null) {
+            return list.iterator();
         }
-        throw new UnsupportedOperationException("No factory is available for message type: ".concat(cls.getName()));
+        return null;
+    }
+
+    @Override // l.C12553
+    public final Iterator e(InterfaceC16831 interfaceC16831, EnumC10315 enumC10315, Locale locale) {
+        List list = (List) ((HashMap) this.d.b).get(enumC10315);
+        if (list != null) {
+            return list.iterator();
+        }
+        return null;
     }
 }

@@ -1,57 +1,51 @@
 .class public final Ll/ܺۨۤ;
-.super Ll/᩷ۨۤ;
-.source "57D5"
+.super Ll/֡ۨۤ;
+.source "Z6QT"
+
+
+# instance fields
+.field public final ۚ:Ll/ۡۨۤ;
+
+.field public final ۤ:Z
+
+.field public final ۫:I
+
+.field public final ܳ:I
+
+.field public final ᩴ:I
+
+.field public final ᩷:Ll/֡ۨۤ;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ll/֡ۨۤ;IILl/ۡۨۤ;IIZ)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 1935
+    invoke-direct {p0}, Ll/֡ۨۤ;-><init>()V
 
-    throw v0
-.end method
+    .line 1936
+    iput-object p1, p0, Ll/ܺۨۤ;->᩷:Ll/֡ۨۤ;
 
+    .line 1937
+    iput-object p4, p0, Ll/ܺۨۤ;->ۚ:Ll/ۡۨۤ;
 
-# virtual methods
-.method public final ۨ()Z
-    .locals 1
+    .line 1938
+    iput p2, p0, Ll/ܺۨۤ;->ᩴ:I
 
-    .line 49
-    iget-boolean v0, p0, Ll/ۜۨۤ;->ۘۙ:Z
+    .line 1939
+    iput p3, p0, Ll/ܺۨۤ;->᩸:I
 
-    if-eqz v0, :cond_0
+    .line 1940
+    iput p5, p0, Ll/ܺۨۤ;->۫:I
 
-    iget-boolean v0, p0, Ll/ۜۨۤ;->ᩴۙ:Z
+    .line 1941
+    iput p6, p0, Ll/ܺۨۤ;->ܳ:I
 
-    if-eqz v0, :cond_0
+    .line 1942
+    iput-boolean p7, p0, Ll/ܺۨۤ;->ۤ:Z
 
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ܶ()Ljava/lang/String;
-    .locals 3
-
-    .line 58
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Ll/᩷ܳۡ;->᩹ۖ:Ll/᩷ܳۡ;
-
-    const-string v2, ":"
-
-    .line 0
-    invoke-static {v1, v0, v2}, Ll/ܺ᩹᩺;->ۙ(Ll/᩷ܳۡ;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

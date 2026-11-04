@@ -1,15 +1,10 @@
 package l;
 
-import java.util.Map;
+/* JADX INFO: renamed from: l.ۡۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: L8QH */
+/* JADX INFO: loaded from: classes3.dex */
+public interface InterfaceC9321 {
 
-/* JADX INFO: renamed from: l.ۢۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W1F6 */
-/* JADX INFO: loaded from: classes4.dex */
-public interface InterfaceC9321 extends InterfaceC17081, Map {
-    @Override // java.util.Map
-    @Deprecated
-    InterfaceC18660 entrySet();
-
-    /* JADX INFO: renamed from: ᩹ */
-    InterfaceC18660 mo8794();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC9321 f30290 = new C1119();
 }

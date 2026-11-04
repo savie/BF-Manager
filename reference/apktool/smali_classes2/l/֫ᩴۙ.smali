@@ -1,72 +1,101 @@
-.class public final Ll/֫ᩴۙ;
+.class public Ll/֫ᩴۙ;
 .super Ljava/lang/Object;
-.source "78PS"
+.source "S3IR"
 
 
-# static fields
-.field public static final ۙ:Ll/֫ᩴۙ;
+# instance fields
+.field public ۙ:Ljava/nio/ByteBuffer;
+
+.field public ۤ:I
+
+.field public ᩷:I
+
+.field public ᩸:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    .line 2212
-    new-instance v0, Ll/֫ᩴۙ;
+    .line 28
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2231
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 2171
-    sput-object v0, Ll/֫ᩴۙ;->ۙ:Ll/֫ᩴۙ;
-
-    const/4 v0, 0x0
-
-    .line 2264
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    const/4 v0, 0x1
-
-    .line 2265
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
-
-    const/4 v0, 0x2
-
-    .line 2266
-    invoke-static {v0}, Ll/ᩳۤۙ;->֨(I)V
+    .line 37
+    invoke-static {}, Ll/ۚۤ᩹;->ᩴ()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final ۙ(I)I
+    .locals 2
 
-    const/4 v0, 0x1
+    .line 53
+    iget v0, p0, Ll/֫ᩴۙ;->ۤ:I
 
-    if-ne p0, p1, :cond_0
+    if-ge p1, v0, :cond_0
 
-    return v0
+    iget-object v0, p0, Ll/֫ᩴۙ;->ۙ:Ljava/nio/ByteBuffer;
 
-    .line 2247
-    :cond_0
-    instance-of p1, p1, Ll/֫ᩴۙ;
+    iget v1, p0, Ll/֫ᩴۙ;->᩸:I
 
-    if-nez p1, :cond_1
+    add-int/2addr v1, p1
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result p1
 
     return p1
 
-    :cond_1
-    return v0
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final ۙ(Ljava/nio/ByteBuffer;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 298
+    iput-object p1, p0, Ll/֫ᩴۙ;->ۙ:Ljava/nio/ByteBuffer;
 
-    return v0
+    if-eqz p1, :cond_0
+
+    .line 300
+    iput p2, p0, Ll/֫ᩴۙ;->᩷:I
+
+    .line 301
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result p1
+
+    sub-int/2addr p2, p1
+
+    iput p2, p0, Ll/֫ᩴۙ;->᩸:I
+
+    .line 302
+    iget-object p1, p0, Ll/֫ᩴۙ;->ۙ:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result p1
+
+    iput p1, p0, Ll/֫ᩴۙ;->ۤ:I
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 304
+    iput p1, p0, Ll/֫ᩴۙ;->᩷:I
+
+    .line 305
+    iput p1, p0, Ll/֫ᩴۙ;->᩸:I
+
+    .line 306
+    iput p1, p0, Ll/֫ᩴۙ;->ۤ:I
+
+    return-void
 .end method

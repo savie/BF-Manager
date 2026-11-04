@@ -1,19 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳ᩻᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: J9F5 */
-/* JADX INFO: loaded from: classes5.dex */
-public class C18391 extends AbstractC10068 {
-    /* JADX INFO: renamed from: ܰ */
-    public void mo22237(C19240 c19240) {
-        throw null;
-    }
+/* JADX INFO: renamed from: l.ܿܳۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A6XK */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18391 extends IllegalArgumentException {
 
-    @Override // l.InterfaceC19388
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo29404(C19240 c19240) {
-        this.f34398 = c19240;
-        ((C15570) this.f34399).m37205(c19240);
-        mo22237(c19240);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final EnumC21375 f59906;
+
+    public C18391(EnumC21375 enumC21375) {
+        super("Invalid MCP Home path: " + enumC21375.name());
+        this.f59906 = enumC21375;
     }
 }

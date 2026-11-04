@@ -1,47 +1,42 @@
-.class public final synthetic Ll/ۡۜ᩹;
+.class public final Ll/ۡۜ᩹;
 .super Ljava/lang/Object;
-.source "I29D"
-
-# interfaces
-.implements Ljava/util/function/LongConsumer;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۛۜ᩹;
+.source "N673"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۛۜ᩹;)V
-    .locals 0
+.method public static transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .locals 6
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "out"
 
-    iput-object p1, p0, Ll/ۡۜ᩹;->ܺ:Ll/ۛۜ᩹;
+    .line 57
+    invoke-static {p1, v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-void
-.end method
+    const/16 v0, 0x2000
 
+    new-array v1, v0, [B
 
-# virtual methods
-.method public final accept(J)V
-    .locals 1
+    const-wide/16 v2, 0x0
 
-    .line 0
-    iget-object v0, p0, Ll/ۡۜ᩹;->ܺ:Ll/ۛۜ᩹;
+    :goto_0
+    const/4 v4, 0x0
 
-    invoke-static {v0, p1, p2}, Ll/ۛۜ᩹;->ۙ(Ll/ۛۜ᩹;J)V
+    .line 61
+    invoke-virtual {p0, v1, v4, v0}, Ljava/io/InputStream;->read([BII)I
 
-    return-void
-.end method
+    move-result v5
 
-.method public synthetic andThen(Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
-    .locals 0
+    if-ltz v5, :cond_0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸᩻ᩴ;->$default$andThen(Ljava/util/function/LongConsumer;Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
+    .line 62
+    invoke-virtual {p1, v1, v4, v5}, Ljava/io/OutputStream;->write([BII)V
 
-    move-result-object p1
+    int-to-long v4, v5
 
-    return-object p1
+    add-long/2addr v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v2
 .end method

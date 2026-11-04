@@ -1,102 +1,44 @@
-.class public final Ll/ۖ۫᩺;
-.super Ll/ܳ۫᩺;
-.source "51V0"
+.class public final synthetic Ll/ۖ۫᩺;
+.super Ljava/lang/Object;
+.source "C5BI"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
 
 
 # instance fields
-.field public final ܽ:Ll/᩸۫᩺;
+.field public final synthetic ܰ:Ll/ۙۚ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۫᩺;Ll/ۨ᩹ۡ;Ll/ۘۙۡ;)V
+.method public synthetic constructor <init>(Ll/ۙۚ᩺;)V
     .locals 0
 
-    .line 219
-    invoke-direct {p0, p2, p3}, Ll/ܳ۫᩺;-><init>(Ll/ۨ᩹ۡ;Ll/ۘۙۡ;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 220
-    invoke-static {p1}, Ll/ۜ۫᩺;->ܰ(Ll/ۜ۫᩺;)Ll/ᩳ۫᩺;
-
-    move-result-object p1
-
-    invoke-interface {p3}, Ll/ۘۙۡ;->getType()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ll/ᩳ۫᩺;->ܰ(Ljava/lang/String;)Ll/᩸۫᩺;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۖ۫᩺;->ܽ:Ll/᩸۫᩺;
+    iput-object p1, p0, Ll/ۖ۫᩺;->ܰ:Ll/ۙۚ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getElements()Ljava/util/Set;
-    .locals 5
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    .line 226
-    new-instance v0, Ljava/util/ArrayList;
+    .line 199
+    iget-object v0, p0, Ll/ۖ۫᩺;->ܰ:Ll/ۙۚ᩺;
 
-    invoke-super {p0}, Ll/ܳ۫᩺;->getElements()Ljava/util/Set;
+    iget-object v1, v0, Ll/֫ۧ᩺;->ۤ᩷:Ll/֫֫᩺;
 
-    move-result-object v1
+    iget v0, v0, Ll/ۙۚ᩺;->ۚ᩷:I
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v1, v0}, Ll/֫֫᩺;->ۛ(I)Ll/ܳ֫᩺;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    .line 227
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    .line 228
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ۜۙۡ;
-
-    .line 229
-    iget-object v3, p0, Ll/ۖ۫᩺;->ܽ:Ll/᩸۫᩺;
-
-    invoke-interface {v2}, Ll/ۜۙۡ;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ll/᩸۫᩺;->ܰ(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    .line 231
-    invoke-interface {v2}, Ll/ۜۙۡ;->getValue()Ll/ۧۨۡ;
-
-    move-result-object v2
-
-    .line 232
-    new-instance v4, Ll/ۨ۫᩺;
-
-    invoke-direct {v4, v3, v2}, Ll/ۨ۫᩺;-><init>(Ljava/lang/String;Ll/ۧۨۡ;)V
-
-    .line 245
-    invoke-virtual {v0, v1, v4}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 248
-    :cond_1
-    invoke-static {v0}, Ll/ۜ۫᩺;->ۙ(Ljava/util/ArrayList;)Ljava/util/Set;
+    invoke-virtual {v0}, Ll/ܳ֫᩺;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 

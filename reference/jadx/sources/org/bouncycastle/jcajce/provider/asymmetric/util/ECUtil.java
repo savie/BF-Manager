@@ -33,7 +33,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Fingerprint;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECUtil {
     public static int[] convertMidTerms(int[] iArr) {
         int i;

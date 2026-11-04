@@ -1,94 +1,50 @@
 package l;
 
-import java.util.function.IntFunction;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ᩴۖ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܿܽܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q4HB */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18465 extends C0335 implements InterfaceC8616, InterfaceC23280 {
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(double d) {
-        AbstractC22686.m();
-        throw null;
+public final class C18465 extends InputStream implements InterfaceC8469 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public C0566 f60096;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public byte[] f60097 = new byte[1];
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public C10260 f60098;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(int i) {
-        AbstractC22686.t();
-        throw null;
+    public C18465(C22941 c22941, C8002 c8002, C10260 c10260, String str) throws IOException {
+        this.f60098 = c10260;
+        byte[] bArr = new byte[12];
+        C17719.m41498(c10260, bArr, 12);
+        this.f60096 = new C0566(c22941, c8002, str, bArr);
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
-    }
-
-    @Override // l.InterfaceC23280
-    public final InterfaceC8616 build() {
-        return this;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void end() {
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.F(this, j, j2, intFunction);
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ int o() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC8616 a(int i) {
-        throw new IndexOutOfBoundsException();
-    }
-
-    @Override // l.InterfaceC8616
-    public final void k(Object[] objArr, int i) {
-        long j = i;
-        long jCount = count() + j;
-        if (jCount > objArr.length || jCount < j) {
-            throw new IndexOutOfBoundsException("does not fit");
-        }
-        if (this.c == 0) {
-            System.arraycopy(this.e, 0, objArr, i, this.b);
-            return;
-        }
-        for (int i2 = 0; i2 < this.c; i2++) {
-            Object[] objArr2 = this.f[i2];
-            System.arraycopy(objArr2, 0, objArr, i, objArr2.length);
-            i += this.f[i2].length;
-        }
-        int i3 = this.b;
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int i3 = this.f60098.read(bArr, i, i2);
         if (i3 > 0) {
-            System.arraycopy(this.e, 0, objArr, i, i3);
+            this.f60096.m2581(i, i3, bArr);
         }
+        return i3;
     }
 
-    @Override // l.InterfaceC8616
-    public final Object[] m(IntFunction intFunction) {
-        long jCount = count();
-        if (jCount >= 2147483639) {
-            throw new IllegalArgumentException("Stream size exceeds max array size");
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = this.f60097;
+        if (read(bArr) <= 0) {
+            return -1;
         }
-        Object[] objArr = (Object[]) intFunction.apply((int) jCount);
-        k(objArr, 0);
-        return objArr;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        clear();
-        p(j);
+        return bArr[0] & 255;
     }
 }

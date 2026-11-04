@@ -1,27 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۘۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O1K3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7921 implements InterfaceC3453 {
+/* JADX INFO: renamed from: l.۟۬᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7SR */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7921 extends C23174 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23444 f26016;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f26308;
 
-    @Override // l.InterfaceC3453
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f26309;
+
+    @Override // l.C23174, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final String mo4305(AbstractC20745 abstractC20745) {
-        return "file";
+    public final void mo1505(C7926 c7926) {
     }
 
-    public C7921(C23444 c23444) {
-        this.f26016 = c23444;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1518(C16327 c16327) {
     }
 
-    @Override // l.InterfaceC3453
+    @Override // l.C23174, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC20745 mo4306(String str) {
-        C23444 c23444 = this.f26016;
-        return c23444.m50130(c23444.f75896.m47183()).m33318();
+    public final void mo1521(C18565 c18565) {
+    }
+
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1510(C11018 c11018) {
+        if (c11018.f34795 != null) {
+            this.f26309 = false;
+        } else {
+            this.f26308 = false;
+        }
     }
 }

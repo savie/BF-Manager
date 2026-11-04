@@ -1,34 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۨܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2BF0 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10980 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f37396;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f37397;
-
-    public C10980(int i, int i2) {
-        if (i < 0) {
-            throw new IllegalArgumentException("startPc < 0");
-        }
-        if (i2 < 0) {
-            throw new IllegalArgumentException("lineNumber < 0");
-        }
-        this.f37397 = i;
-        this.f37396 = i2;
+/* JADX INFO: renamed from: l.ۤܺۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M67K */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10980 extends AbstractC5015 {
+    @Override // l.AbstractC5015
+    /* JADX INFO: renamed from: ᩷ */
+    public final Object mo15242(Object obj) {
+        return obj;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m27731() {
-        return this.f37397;
+    public C10980(C17370 c17370, String str) {
+        super(c17370, str);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m27730() {
-        return this.f37396;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C9730 m27824() {
+        InterfaceC21665 interfaceC21665 = (InterfaceC21665) m15239();
+        this.f17399.getClass();
+        return new C9730(interfaceC21665);
     }
 }

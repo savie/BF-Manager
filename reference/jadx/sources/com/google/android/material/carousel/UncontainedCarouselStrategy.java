@@ -3,7 +3,7 @@ package com.google.android.material.carousel;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import l.C22432;
+import l.C18185;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class UncontainedCarouselStrategy extends CarouselStrategy {
@@ -18,11 +18,11 @@ public final class UncontainedCarouselStrategy extends CarouselStrategy {
     public KeylineState onFirstChildMeasuredWithMargins(Carousel carousel, View view) {
         float f;
         float containerWidth = carousel.isHorizontal() ? carousel.getContainerWidth() : carousel.getContainerHeight();
-        C22432 c22432 = (C22432) view.getLayoutParams();
-        float f2 = ((ViewGroup.MarginLayoutParams) c22432).topMargin + ((ViewGroup.MarginLayoutParams) c22432).bottomMargin;
+        C18185 c18185 = (C18185) view.getLayoutParams();
+        float f2 = ((ViewGroup.MarginLayoutParams) c18185).topMargin + ((ViewGroup.MarginLayoutParams) c18185).bottomMargin;
         float measuredHeight = view.getMeasuredHeight();
         if (carousel.isHorizontal()) {
-            float f3 = ((ViewGroup.MarginLayoutParams) c22432).leftMargin + ((ViewGroup.MarginLayoutParams) c22432).rightMargin;
+            float f3 = ((ViewGroup.MarginLayoutParams) c18185).leftMargin + ((ViewGroup.MarginLayoutParams) c18185).rightMargin;
             measuredHeight = view.getMeasuredWidth();
             f = f3;
         } else {

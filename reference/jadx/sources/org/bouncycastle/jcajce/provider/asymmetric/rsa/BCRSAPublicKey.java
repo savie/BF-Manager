@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAPublicKeySpec;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.DERNull;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.interfaces.BCKey;
 import org.bouncycastle.jcajce.provider.asymmetric.util.KeyUtil;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCRSAPublicKey implements RSAPublicKey, BCKey {
     public static final AlgorithmIdentifier DEFAULT_ALGORITHM_IDENTIFIER = new AlgorithmIdentifier(PKCSObjectIdentifiers.rsaEncryption, DERNull.INSTANCE);
     public static final long serialVersionUID = 2675817738516720772L;
@@ -135,7 +135,7 @@ public class BCRSAPublicKey implements RSAPublicKey, BCKey {
         String strLineSeparator = Strings.lineSeparator();
         sb.append(RSAUtil.generateKeyFingerprint(getModulus()));
         sb.append("],[");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, RSAUtil.generateExponentFingerprint(getPublicExponent()), "]", strLineSeparator, "        modulus: ");
+        C4794.m14774(sb, RSAUtil.generateExponentFingerprint(getPublicExponent()), "]", strLineSeparator, "        modulus: ");
         sb.append(getModulus().toString(16));
         sb.append(strLineSeparator);
         sb.append("public exponent: ");

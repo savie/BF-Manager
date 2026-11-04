@@ -4,7 +4,7 @@ package com.amazonaws.util;
 public final class TimingInfoUnmodifiable extends TimingInfo {
     @Override // com.amazonaws.util.TimingInfo
     /* JADX INFO: renamed from: ۙ */
-    public final void mo791() {
+    public final void mo784() {
         throw new UnsupportedOperationException();
     }
 }

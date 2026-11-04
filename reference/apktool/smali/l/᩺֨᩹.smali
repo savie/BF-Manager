@@ -1,112 +1,220 @@
 .class public final Ll/᩺֨᩹;
 .super Ljava/lang/Object;
-.source "X202"
+.source "W1E0"
+
+# interfaces
+.implements Ll/ܳ۠᩹;
+.implements Ll/ᩴۚۗ;
 
 
-# static fields
-.field public static final ۙ:Ljava/util/HashMap;
+# instance fields
+.field public final synthetic ֡:Ll/᩶֨᩹;
+
+.field public ܰ:I
+
+.field public ܿ:I
+
+.field public ᩶:Ll/ᩳ֨᩹;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ll/᩶֨᩹;)V
+    .locals 0
 
-    .line 9
-    new-instance v0, Ljava/util/HashMap;
+    .line 233
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p1, p0, Ll/᩺֨᩹;->֡:Ll/᩶֨᩹;
 
-    sput-object v0, Ll/᩺֨᩹;->ۙ:Ljava/util/HashMap;
+    const/4 p1, -0x1
+
+    .line 235
+    iput p1, p0, Ll/᩺֨᩹;->ܰ:I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Ll/᩺֨᩹;->ܿ:I
 
     return-void
 .end method
 
-.method public static ۙ(Ll/᩸ۜ᩹;)Ll/ۙ۬᩹;
+
+# virtual methods
+.method public final forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 6
+
+    .line 272
+    iget-object v0, p0, Ll/᩺֨᩹;->֡:Ll/᩶֨᩹;
+
+    iget-object v1, v0, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
+
+    iget v1, v1, Ll/ۖ֨᩹;->֡:I
+
+    .line 273
+    :goto_0
+    iget v2, p0, Ll/᩺֨᩹;->ܿ:I
+
+    if-ge v2, v1, :cond_0
+
+    .line 274
+    new-instance v3, Ll/ᩳ֨᩹;
+
+    iget-object v4, v0, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
+
+    add-int/lit8 v5, v2, 0x1
+
+    iput v5, p0, Ll/᩺֨᩹;->ܿ:I
+
+    iput v2, p0, Ll/᩺֨᩹;->ܰ:I
+
+    invoke-direct {v3, v4, v2}, Ll/ᩳ֨᩹;-><init>(Ll/ۖ֨᩹;I)V
+
+    iput-object v3, p0, Ll/᩺֨᩹;->᩶:Ll/ᩳ֨᩹;
+
+    .line 275
+    invoke-interface {p1, v3}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final hasNext()Z
     .locals 2
 
-    .line 21
-    invoke-virtual {p0}, Ll/᩸ۜ᩹;->ۖ()Ll/ۨۘ᩹;
+    .line 239
+    iget v0, p0, Ll/᩺֨᩹;->ܿ:I
 
-    move-result-object v0
+    iget-object v1, p0, Ll/᩺֨᩹;->֡:Ll/᩶֨᩹;
 
-    .line 22
-    invoke-virtual {p0}, Ll/᩸ۜ᩹;->ۨ()Ll/ۨۜ᩹;
+    iget-object v1, v1, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
 
-    move-result-object p0
+    iget v1, v1, Ll/ۖ֨᩹;->֡:I
 
-    invoke-virtual {p0}, Ll/ۨۜ᩹;->ܶ()Ll/ۨۘ᩹;
+    if-ge v0, v1, :cond_0
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    .line 24
-    sget-object v1, Ll/᩺֨᩹;->ۙ:Ljava/util/HashMap;
+    return v0
 
-    invoke-virtual {v0}, Ll/ۨۘ᩹;->۫()Ljava/lang/String;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object v0
+    return v0
+.end method
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    move-result-object v0
+    .line 245
+    invoke-virtual {p0}, Ll/᩺֨᩹;->hasNext()Z
 
-    check-cast v0, Ljava/util/Map;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 26
-    invoke-virtual {p0}, Ll/ۨۘ᩹;->۫()Ljava/lang/String;
+    .line 246
+    new-instance v0, Ll/ᩳ֨᩹;
 
-    move-result-object p0
+    iget-object v1, p0, Ll/᩺֨᩹;->֡:Ll/᩶֨᩹;
 
-    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v1, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
 
-    move-result-object p0
+    iget v2, p0, Ll/᩺֨᩹;->ܿ:I
 
-    check-cast p0, Ll/ۜ֨᩹;
+    add-int/lit8 v3, v2, 0x1
 
-    if-eqz p0, :cond_0
+    iput v3, p0, Ll/᩺֨᩹;->ܿ:I
 
-    .line 28
-    invoke-interface {p0}, Ll/ۜ֨᩹;->create()Ll/ۙ۬᩹;
+    iput v2, p0, Ll/᩺֨᩹;->ܰ:I
 
-    move-result-object p0
+    invoke-direct {v0, v1, v2}, Ll/ᩳ֨᩹;-><init>(Ll/ۖ֨᩹;I)V
 
-    return-object p0
+    iput-object v0, p0, Ll/᩺֨᩹;->᩶:Ll/ᩳ֨᩹;
 
-    .line 32
+    return-object v0
+
+    .line 245
     :cond_0
-    invoke-static {}, Ll/᩶ۡ᩹;->֨()Ll/᩶ۡ᩹;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    return-object p0
+    throw v0
 .end method
 
-.method public static ۙ(Ljava/lang/String;Ljava/lang/String;Ll/ۜ֨᩹;)V
-    .locals 2
+.method public final remove()V
+    .locals 6
 
-    .line 12
-    sget-object v0, Ll/᩺֨᩹;->ۙ:Ljava/util/HashMap;
+    .line 251
+    iget v0, p0, Ll/᩺֨᩹;->ܰ:I
 
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, -0x1
 
-    move-result-object v1
+    if-eq v0, v1, :cond_0
 
-    check-cast v1, Ljava/util/Map;
+    .line 252
+    iput v1, p0, Ll/᩺֨᩹;->ܰ:I
 
-    if-nez v1, :cond_0
+    .line 253
+    iget-object v0, p0, Ll/᩺֨᩹;->֡:Ll/᩶֨᩹;
 
-    .line 14
-    new-instance v1, Ljava/util/HashMap;
+    iget-object v2, v0, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    iget v3, v2, Ll/ۖ֨᩹;->֡:I
 
-    .line 15
-    invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    add-int/lit8 v4, v3, -0x1
 
-    .line 17
-    :cond_0
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v4, v2, Ll/ۖ֨᩹;->֡:I
+
+    iget v4, p0, Ll/᩺֨᩹;->ܿ:I
+
+    add-int/lit8 v5, v4, -0x1
+
+    iput v5, p0, Ll/᩺֨᩹;->ܿ:I
+
+    sub-int/2addr v3, v4
+
+    .line 254
+    iget-object v2, v2, Ll/ۖ֨᩹;->᩶:[Ljava/lang/Object;
+
+    invoke-static {v2, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 255
+    iget-object v2, v0, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
+
+    iget-object v2, v2, Ll/ۖ֨᩹;->۟:[I
+
+    iget v4, p0, Ll/᩺֨᩹;->ܿ:I
+
+    add-int/lit8 v5, v4, 0x1
+
+    invoke-static {v2, v5, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 256
+    iget-object v2, p0, Ll/᩺֨᩹;->᩶:Ll/ᩳ֨᩹;
+
+    iput v1, v2, Ll/ᩳ֨᩹;->ܰ:I
+
+    .line 257
+    iget-object v0, v0, Ll/᩶֨᩹;->ܰ:Ll/ۖ֨᩹;
+
+    iget-object v1, v0, Ll/ۖ֨᩹;->᩶:[Ljava/lang/Object;
+
+    iget v0, v0, Ll/ۖ֨᩹;->֡:I
+
+    const/4 v2, 0x0
+
+    aput-object v2, v1, v0
 
     return-void
+
+    .line 251
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
 .end method

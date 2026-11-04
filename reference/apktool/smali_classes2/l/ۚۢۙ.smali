@@ -1,47 +1,76 @@
-.class public interface abstract Ll/ۚۢۙ;
-.super Ljava/lang/Object;
-.source "57N4"
+.class public final Ll/ۚۢۙ;
+.super Ljava/lang/Exception;
+.source "E8QX"
 
 
-# virtual methods
-.method public abstract stop()V
-.end method
+# instance fields
+.field public final ܰ:I
 
-.method public abstract ۖ()V
-.end method
+.field public final ܿ:Z
 
-.method public abstract ۖ(Landroid/net/Uri;)Z
-.end method
+.field public final ᩶:Ll/ܳ᩹ۙ;
 
-.method public abstract ۙ()J
-.end method
 
-.method public abstract ۙ(Landroid/net/Uri;Z)Ll/ܽ֫ۙ;
-.end method
+# direct methods
+.method public constructor <init>(IIIIILl/ܳ᩹ۙ;ZLjava/lang/RuntimeException;)V
+    .locals 3
 
-.method public abstract ۙ(Landroid/net/Uri;)V
-.end method
+    const-string v0, "AudioTrack init failed "
 
-.method public abstract ۙ(Landroid/net/Uri;Ll/۟ܰܰ;Ll/ۖۢۙ;)V
-.end method
+    const-string v1, " Config("
 
-.method public abstract ۙ(Ll/ۙۢۙ;)V
-.end method
+    const-string v2, ", "
 
-.method public abstract ۙ(Landroid/net/Uri;J)Z
-.end method
+    .line 0
+    invoke-static {v0, p1, v1, v2, p2}, Ll/֨᩵ᩴ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
-.method public abstract ۨ(Landroid/net/Uri;)V
-.end method
+    move-result-object p2
 
-.method public abstract ۨ()Z
-.end method
+    .line 291
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public abstract ܰ()Ll/ۛ֫ۙ;
-.end method
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public abstract ܰ(Landroid/net/Uri;)V
-.end method
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public abstract ܰ(Ll/ۙۢۙ;)V
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, ") "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    if-eqz p7, :cond_0
+
+    const-string p3, " (recoverable)"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p3, ""
+
+    .line 306
+    :goto_0
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 264
+    invoke-direct {p0, p2, p8}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 265
+    iput p1, p0, Ll/ۚۢۙ;->ܰ:I
+
+    .line 266
+    iput-boolean p7, p0, Ll/ۚۢۙ;->ܿ:Z
+
+    .line 267
+    iput-object p6, p0, Ll/ۚۢۙ;->᩶:Ll/ܳ᩹ۙ;
+
+    return-void
 .end method

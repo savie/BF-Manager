@@ -1,253 +1,125 @@
 .class public final Ll/᩹۟᩸;
 .super Ljava/lang/Object;
-.source "L9QC"
+.source "R6U3"
+
+
+# instance fields
+.field public final ۙ:I
+
+.field public final ۤ:Ll/᩹۟᩸;
+
+.field public final ۫:I
+
+.field public final ܳ:Ll/᩹۟᩸;
+
+.field public ᩴ:Ll/ۢۢ᩸;
+
+.field public final ᩷:Ljava/lang/Object;
+
+.field public volatile ᩸:J
 
 
 # direct methods
-.method public static ۙ(Ll/ۗ۬᩸;Ll/ۗۤ᩸;Ll/ۚ۟᩸;)Ljava/lang/Object;
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 2
 
-    .line 204
-    sget-object v0, Ll/ۧۤ᩸;->ۙ:[I
+    .line 140
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    const-wide/16 v0, -0x1
 
-    move-result p1
+    .line 137
+    iput-wide v0, p0, Ll/᩹۟᩸;->᩸:J
 
-    aget p1, v0, p1
+    .line 141
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iput-object p1, p0, Ll/᩹۟᩸;->᩷:Ljava/lang/Object;
 
-    .line 246
-    new-instance p0, Ljava/lang/RuntimeException;
+    const/4 p1, 0x0
 
-    const-string p1, "There is no way to get here, but the compiler thinks otherwise."
+    .line 142
+    iput-object p1, p0, Ll/᩹۟᩸;->ܳ:Ll/᩹۟᩸;
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Ll/᩹۟᩸;->ۤ:Ll/᩹۟᩸;
 
-    throw p0
+    const/4 p1, 0x1
 
-    .line 243
-    :pswitch_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    .line 143
+    iput p1, p0, Ll/᩹۟᩸;->۫:I
 
-    const-string p1, "readPrimitiveField() cannot handle enums."
+    iput p1, p0, Ll/᩹۟᩸;->ۙ:I
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    throw p0
+.method public constructor <init>(Ll/᩹۟᩸;Ll/᩹۟᩸;)V
+    .locals 4
 
-    .line 239
-    :pswitch_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    .line 146
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "readPrimitiveField() cannot handle embedded messages."
+    const-wide/16 v0, -0x1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 137
+    iput-wide v0, p0, Ll/᩹۟᩸;->᩸:J
 
-    throw p0
+    .line 147
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
-    :pswitch_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iput-object p1, p0, Ll/᩹۟᩸;->ۤ:Ll/᩹۟᩸;
 
-    const-string p1, "readPrimitiveField() cannot handle nested groups."
+    .line 148
+    invoke-static {p2}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object p2, p0, Ll/᩹۟᩸;->ܳ:Ll/᩹۟᩸;
 
-    throw p0
+    const/4 v0, 0x0
 
-    .line 235
-    :pswitch_3
-    invoke-virtual {p2, p0}, Ll/ۚ۟᩸;->ۙ(Ll/ۗ۬᩸;)Ljava/lang/Object;
+    .line 149
+    iput-object v0, p0, Ll/᩹۟᩸;->᩷:Ljava/lang/Object;
 
-    move-result-object p0
+    .line 150
+    iget v0, p1, Ll/᩹۟᩸;->ۙ:I
 
-    return-object p0
+    iget v1, p2, Ll/᩹۟᩸;->ۙ:I
 
-    .line 232
-    :pswitch_4
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ۡ()J
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
-    move-result-wide p0
+    move-result v0
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object p0
+    iput v0, p0, Ll/᩹۟᩸;->ۙ:I
 
-    return-object p0
+    .line 151
+    iget p1, p1, Ll/᩹۟᩸;->۫:I
 
-    .line 230
-    :pswitch_5
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->᩵()I
+    iget p2, p2, Ll/᩹۟᩸;->۫:I
 
-    move-result p0
+    int-to-long v0, p1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    int-to-long p1, p2
 
-    move-result-object p0
+    add-long/2addr v0, p1
 
-    return-object p0
+    long-to-int p1, v0
 
-    .line 228
-    :pswitch_6
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->۠()J
+    int-to-long v2, p1
 
-    move-result-wide p0
+    cmp-long p2, v0, v2
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-nez p2, :cond_0
 
-    move-result-object p0
+    iput p1, p0, Ll/᩹۟᩸;->۫:I
 
-    return-object p0
+    return-void
 
-    .line 226
-    :pswitch_7
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ᩴ()I
+    .line 0
+    :cond_0
+    new-instance p1, Ljava/lang/ArithmeticException;
 
-    move-result p0
+    invoke-direct {p1}, Ljava/lang/ArithmeticException;-><init>()V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 224
-    :pswitch_8
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ܺ()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 222
-    :pswitch_9
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->᩹()Ll/᩻۬᩸;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 220
-    :pswitch_a
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ۚ()Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 218
-    :pswitch_b
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ۘ()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 216
-    :pswitch_c
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ۜ()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 214
-    :pswitch_d
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->ܶ()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 212
-    :pswitch_e
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->᩶()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 210
-    :pswitch_f
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->᩸()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 208
-    :pswitch_10
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->᩺()F
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 206
-    :pswitch_11
-    invoke-virtual {p0}, Ll/ۗ۬᩸;->֨()D
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

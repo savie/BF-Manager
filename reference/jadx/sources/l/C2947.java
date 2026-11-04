@@ -1,26 +1,28 @@
 package l;
 
-import android.media.Spatializer;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۗۖܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18UV */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2947 implements Spatializer.OnSpatializerStateChangedListener {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12909 f11053;
-
-    public C2947(C12909 c12909) {
-        this.f11053 = c12909;
+/* JADX INFO: renamed from: l.ۖ᩸ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8459 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2947 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // android.media.Spatializer.OnSpatializerStateChangedListener
-    public final void onSpatializerEnabledChanged(Spatializer spatializer, boolean z) {
-        this.f11053.m31986();
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
     }
 
-    @Override // android.media.Spatializer.OnSpatializerStateChangedListener
-    public final void onSpatializerAvailableChanged(Spatializer spatializer, boolean z) {
-        this.f11053.m31986();
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return (((C22224) obj).f71601.f38071 & 16777216) != 0;
     }
 }

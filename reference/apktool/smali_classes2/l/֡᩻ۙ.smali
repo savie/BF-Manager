@@ -1,27 +1,23 @@
-.class public interface abstract Ll/֡᩻ۙ;
+.class public final Ll/֡᩻ۙ;
 .super Ljava/lang/Object;
-.source "E8LB"
-
-
-# static fields
-.field public static final ܰ:Ll/᩷ۘᩳ;
+.source "P96C"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public static ۙ(Landroid/app/Activity;)V
     .locals 1
 
-    .line 36
-    new-instance v0, Ll/᩷ۘᩳ;
+    const-string v0, "activity"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    invoke-static {p0, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v0, Ll/֡᩻ۙ;->ܰ:Ll/᩷ۘᩳ;
+    .line 145
+    new-instance v0, Ll/۟᩻ۙ;
+
+    invoke-direct {v0}, Ll/۟᩻ۙ;-><init>()V
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract ۙ()V
 .end method

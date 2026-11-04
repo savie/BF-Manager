@@ -1,17 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜ᩷۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: L42O */
+/* JADX INFO: renamed from: l.ۜ۠ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 07CI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7008 extends C21825 {
-    @Override // l.C21825, java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final boolean isEmpty() {
-        return true;
+public final class C7008 extends C18941 {
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final Object f23101;
+
+    public C7008(C7660 c7660, Integer num, Object obj) {
+        super(c7660, num);
+        this.f23101 = obj;
     }
 
-    @Override // l.C21825
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C21825 mo18818(C21825 c21825) {
-        throw new UnsupportedOperationException();
+    @Override // l.C18941
+    public final String toString() {
+        return "Triplet{ " + this.f61428 + ", " + this.f61429 + ", " + this.f23101 + " }";
     }
 }

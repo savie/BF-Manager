@@ -1,83 +1,109 @@
-.class public Ll/ᩴۖۙ;
-.super Ljava/lang/Object;
-.source "EB24"
+.class public final Ll/ᩴۖۙ;
+.super Ll/ۤ᩸᩷;
+.source "A7N6"
 
-# interfaces
-.implements Ll/ۘۧܰ;
+
+# instance fields
+.field public ۫:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ll/ܺۗۙ;[I)V
+    .locals 1
 
-    .line 73
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 67
+    invoke-direct {p0, p1, p2}, Ll/ۤ᩸᩷;-><init>(Ll/ܺۗۙ;[I)V
+
+    const/4 v0, 0x0
+
+    .line 1075
+    aget p2, p2, v0
+
+    invoke-virtual {p1, p2}, Ll/ܺۗۙ;->ۙ(I)Ll/ܳ᩹ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ll/ۤ᩸᩷;->ۙ(Ll/ܳ᩹ۙ;)I
+
+    move-result p1
+
+    iput p1, p0, Ll/ᩴۖۙ;->۫:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 2
-
-    .line 88
-    new-instance v0, Ll/ۜۖۙ;
-
-    .line 150
-    new-instance v1, Ll/᩸ۖۙ;
-
-    invoke-direct {v1, p1}, Ll/᩸ۖۙ;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {v0, v1}, Ll/ۗۨۙ;-><init>(Ll/ۚۖۙ;)V
-
-    const/4 v1, 0x1
-
-    .line 1546
-    iput v1, v0, Ll/ۗۨۙ;->ܰ:I
-
-    .line 88
-    invoke-static {v0}, Ll/۬ۖۙ;->ۙ(Ll/ۗۨۙ;)V
-
-    .line 103
-    invoke-static {p1}, Ll/֨ۧܰ;->ۙ(Landroid/content/Context;)Ll/֨ۧܰ;
-
-    move-result-object p1
-
-    .line 105
-    invoke-virtual {p1}, Ll/֨ۧܰ;->ۙ()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll/֨᩺ۙ;
-
-    .line 106
-    invoke-interface {p1}, Ll/֨᩺ۙ;->getLifecycle()Ll/ۗۜۙ;
-
-    move-result-object p1
-
-    .line 107
-    new-instance v0, Ll/ۘۖۙ;
-
-    invoke-direct {v0, p0, p1}, Ll/ۘۖۙ;-><init>(Ll/ᩴۖۙ;Ll/ۗۜۙ;)V
-
-    invoke-virtual {p1, v0}, Ll/ۗۜۙ;->ۙ(Ll/᩹᩺ۙ;)V
-
-    .line 73
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p1
-.end method
-
-.method public final ۙ()Ljava/util/List;
+.method public final ֫()I
     .locals 1
 
-    .line 128
-    const-class v0, Ll/᩷᩺ۙ;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final ۙ()I
+    .locals 1
+
+    .line 1102
+    iget v0, p0, Ll/ᩴۖۙ;->۫:I
+
+    return v0
+.end method
+
+.method public final ۙ(JJJLjava/util/List;[Ll/ܿۤ᩷;)V
+    .locals 0
+
+    .line 1085
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+
+    .line 1086
+    iget p3, p0, Ll/ᩴۖۙ;->۫:I
+
+    invoke-virtual {p0, p3, p1, p2}, Ll/ۤ᩸᩷;->ۙ(IJ)Z
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    .line 1090
+    :cond_0
+    iget p3, p0, Ll/ۤ᩸᩷;->ᩴ:I
+
+    :cond_1
+    add-int/lit8 p3, p3, -0x1
+
+    if-ltz p3, :cond_2
+
+    .line 1091
+    invoke-virtual {p0, p3, p1, p2}, Ll/ۤ᩸᩷;->ۙ(IJ)Z
+
+    move-result p4
+
+    if-nez p4, :cond_1
+
+    .line 1092
+    iput p3, p0, Ll/ᩴۖۙ;->۫:I
+
+    return-void
+
+    .line 1097
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩷()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

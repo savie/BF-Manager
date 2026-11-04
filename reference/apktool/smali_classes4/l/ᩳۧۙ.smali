@@ -1,101 +1,96 @@
-.class public final Ll/ᩳۧۙ;
+.class public final synthetic Ll/ᩳۧۙ;
 .super Ljava/lang/Object;
-.source "68UW"
+.source "Y5SN"
 
 
-# instance fields
-.field public final ۙ:Landroid/media/AudioTrack;
-
-.field public ۨ:Ll/᩸ۧۙ;
-
-.field public final ܰ:Ll/ۘۛۙ;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/AudioTrack;Ll/ۘۛۙ;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 2107
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2108
-    iput-object p1, p0, Ll/ᩳۧۙ;->ۙ:Landroid/media/AudioTrack;
-
-    .line 2109
-    iput-object p2, p0, Ll/ᩳۧۙ;->ܰ:Ll/ۘۛۙ;
-
-    .line 2110
-    new-instance p2, Ll/᩸ۧۙ;
-
-    invoke-direct {p2, p0}, Ll/᩸ۧۙ;-><init>(Ll/ᩳۧۙ;)V
-
-    iput-object p2, p0, Ll/ᩳۧۙ;->ۨ:Ll/᩸ۧۙ;
-
-    .line 2111
-    new-instance p2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    .line 0
+    invoke-static {}, Ll/ۖۧۙ;->values()[Ll/ۖۧۙ;
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    array-length v0, v0
 
-    .line 2112
-    iget-object v0, p0, Ll/ᩳۧۙ;->ۨ:Ll/᩸ۧۙ;
+    new-array v0, v0, [I
 
-    invoke-virtual {p1, v0, p2}, Landroid/media/AudioTrack;->addOnRoutingChangedListener(Landroid/media/AudioRouting$OnRoutingChangedListener;Landroid/os/Handler;)V
+    :try_start_0
+    sget-object v1, Ll/ۖۧۙ;->ܿ:Ll/ۖۧۙ;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-.method public static ۙ(Ll/ᩳۧۙ;Landroid/media/AudioRouting;)V
-    .locals 1
+    move-result v1
 
-    .line 2121
-    iget-object v0, p0, Ll/ᩳۧۙ;->ۨ:Ll/᩸ۧۙ;
+    const/4 v2, 0x1
 
-    if-nez v0, :cond_0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    :catch_0
+    :try_start_1
+    sget-object v1, Ll/ۖۧۙ;->ۢ:Ll/ۖۧۙ;
 
-    .line 2125
-    :cond_0
-    invoke-interface {p1}, Landroid/media/AudioRouting;->getRoutedDevice()Landroid/media/AudioDeviceInfo;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object p1
+    move-result v1
 
-    if-eqz p1, :cond_1
+    const/4 v2, 0x2
 
-    .line 2127
-    iget-object p0, p0, Ll/ᩳۧۙ;->ܰ:Ll/ۘۛۙ;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {p0, p1}, Ll/ۘۛۙ;->ۙ(Landroid/media/AudioDeviceInfo;)V
+    :catch_1
+    :try_start_2
+    sget-object v1, Ll/ۖۧۙ;->ᩳ:Ll/ۖۧۙ;
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
+    move-result v1
 
-# virtual methods
-.method public final ۙ()V
-    .locals 2
+    const/4 v2, 0x3
 
-    .line 2116
-    iget-object v0, p0, Ll/ᩳۧۙ;->ۨ:Ll/᩸ۧۙ;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 155
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_2
+    :try_start_3
+    sget-object v1, Ll/ۖۧۙ;->֡:Ll/ۖۧۙ;
 
-    .line 2116
-    iget-object v1, p0, Ll/ᩳۧۙ;->ۙ:Landroid/media/AudioTrack;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {v1, v0}, Landroid/media/AudioTrack;->removeOnRoutingChangedListener(Landroid/media/AudioRouting$OnRoutingChangedListener;)V
+    move-result v1
 
-    const/4 v0, 0x0
+    const/4 v2, 0x4
 
-    .line 2117
-    iput-object v0, p0, Ll/ᩳۧۙ;->ۨ:Ll/᩸ۧۙ;
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Ll/ۖۧۙ;->۟:Ll/ۖۧۙ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Ll/ᩳۧۙ;->ۙ:[I
 
     return-void
 .end method

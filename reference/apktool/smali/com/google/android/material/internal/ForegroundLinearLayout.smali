@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/internal/ForegroundLinearLayout;
-.super Ll/ۙ᩸;
+.super Ll/ۤܽ;
 .source "ForegroundLinearLayout.java"
 
 
@@ -44,7 +44,7 @@
     .locals 8
 
     .line 63
-    invoke-direct {p0, p1, p2, p3}, Ll/ۙ᩸;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ll/ۤܽ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 43
     new-instance v0, Landroid/graphics/Rect;
@@ -76,7 +76,7 @@
     iput-boolean v1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z
 
     .line 65
-    sget-object v4, Ll/۠۟ܶ;->ۛܽ:[I
+    sget-object v4, Ll/ܰ۬ܺ;->ۢ֡:[I
 
     const/4 v6, 0x0
 
@@ -94,7 +94,7 @@
     move-result-object p1
 
     .line 69
-    sget p2, Ll/۠۟ܶ;->᩻ܽ:I
+    sget p2, Ll/ܰ۬ܺ;->ۡ֡:I
 
     iget p3, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
@@ -106,7 +106,7 @@
     iput p2, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
     .line 72
-    sget p2, Ll/۠۟ܶ;->ۧܽ:I
+    sget p2, Ll/ܰ۬ܺ;->֨֡:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -119,7 +119,7 @@
 
     .line 77
     :cond_0
-    sget p2, Ll/۠۟ܶ;->ܳܽ:I
+    sget p2, Ll/ܰ۬ܺ;->ۖ֡:I
 
     .line 78
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -339,7 +339,7 @@
     .locals 0
 
     .line 193
-    invoke-super/range {p0 .. p5}, Ll/ۙ᩸;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Ll/ۤܽ;->onLayout(ZIIII)V
 
     .line 194
     iget-boolean p2, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z

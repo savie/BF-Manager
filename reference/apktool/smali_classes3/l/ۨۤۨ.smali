@@ -1,31 +1,42 @@
-.class public final Ll/ۨۤۨ;
+.class public abstract Ll/ۨۤۨ;
 .super Ljava/lang/Object;
-.source "Z6QT"
+.source "LAYC"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public ۖ:I
+.field public ܰ:J
 
-.field public ۙ:I
-
-.field public ۚ:Z
-
-.field public ۨ:Ll/ۗᩳۨ;
-
-.field public final ܰ:Ll/᩻ۡۨ;
-
-.field public ᩹:Z
+.field public ᩶:Ll/ۛۤۨ;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ۡۨ;)V
+.method public constructor <init>()V
+    .locals 3
+
+    const-wide/16 v0, 0x0
+
+    .line 85
+    sget-object v2, Ll/ܰۤۨ;->ܳ:Ll/ۛۤۨ;
+
+    invoke-direct {p0, v0, v1, v2}, Ll/ۨۤۨ;-><init>(JLl/ۛۤۨ;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JLl/ۛۤۨ;)V
     .locals 0
 
-    .line 1549
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1550
-    iput-object p1, p0, Ll/ۨۤۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 81
+    iput-wide p1, p0, Ll/ۨۤۨ;->ܰ:J
+
+    .line 83
+    iput-object p3, p0, Ll/ۨۤۨ;->᩶:Ll/ۛۤۨ;
 
     return-void
 .end method

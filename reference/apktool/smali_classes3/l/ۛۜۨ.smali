@@ -1,47 +1,72 @@
-.class public final Ll/ۛۜۨ;
+.class public final synthetic Ll/ۛۜۨ;
 .super Ljava/lang/Object;
-.source "E67S"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.source "014Q"
 
 
-# virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
+# static fields
+.field public static final synthetic ۙ:[I
+
+
+# direct methods
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 64
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    .line 72
+    invoke-static {}, Ll/ۜ۠ۨ;->values()[Ll/ۜ۠ۨ;
 
     move-result-object v0
 
-    check-cast v0, Ll/ܳۘۨ;
+    array-length v0, v0
 
-    invoke-virtual {v0}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    sput-object v0, Ll/ۛۜۨ;->ۙ:[I
 
-    check-cast v0, [B
-
-    .line 65
-    new-instance v1, Ll/ܳۘۨ;
-
-    invoke-direct {v1}, Ll/ܳۘۨ;-><init>()V
-
-    .line 67
     :try_start_0
-    new-instance v2, Ljava/io/ByteArrayInputStream;
+    sget-object v1, Ll/ۜ۠ۨ;->ۤۙ:Ll/ۜ۠ۨ;
 
-    invoke-direct {v2, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 68
-    invoke-virtual {v1, v2}, Ll/ܳۘۨ;->ۙ(Ljava/lang/Object;)V
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     :catch_0
-    invoke-virtual {p1, v1}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    :try_start_1
+    sget-object v0, Ll/ۛۜۨ;->ۙ:[I
 
+    sget-object v1, Ll/ۜ۠ۨ;->ۚۙ:Ll/ۜ۠ۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۛۜۨ;->ۙ:[I
+
+    sget-object v1, Ll/ۜ۠ۨ;->ܶۙ:Ll/ۜ۠ۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
 .end method

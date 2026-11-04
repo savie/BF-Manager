@@ -1,43 +1,94 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ᩷᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 65Z3 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C6313 {
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.ShortBufferException;
+import javax.crypto.spec.DESedeKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+
+/* JADX INFO: renamed from: l.ۛۢܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57WQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6313 implements InterfaceC21360 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f21337;
+    public Cipher f21400;
 
-    static {
-        int[] iArr = new int[EnumC21815.values().length];
-        f21337 = iArr;
-        try {
-            iArr[EnumC21815.f70822.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    @Override // l.InterfaceC21360
+    public final int getBlockSize() {
+        return 24;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3921(int i) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3924(byte[] bArr) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo3925() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۤ */
+    public final /* synthetic */ boolean mo3926() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩴ */
+    public final /* synthetic */ boolean mo3927() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ int mo3928() {
+        return 0;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ void mo3929(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo3930() {
+        return 8;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3923(int i, byte[] bArr, byte[] bArr2) throws Exception {
+        if (bArr2.length > 8) {
+            byte[] bArr3 = new byte[8];
+            System.arraycopy(bArr2, 0, bArr3, 0, 8);
+            bArr2 = bArr3;
+        }
+        if (bArr.length > 24) {
+            byte[] bArr4 = new byte[24];
+            System.arraycopy(bArr, 0, bArr4, 0, 24);
+            bArr = bArr4;
         }
         try {
-            f21337[EnumC21815.f70635.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+            this.f21400 = Cipher.getInstance("DESede/CTR/NoPadding");
+            this.f21400.init(i == 0 ? 1 : 2, SecretKeyFactory.getInstance("DESede").generateSecret(new DESedeKeySpec(bArr)), new IvParameterSpec(bArr2));
+        } catch (Exception e) {
+            this.f21400 = null;
+            throw e;
         }
-        try {
-            f21337[EnumC21815.f70790.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f21337[EnumC21815.f70750.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f21337[EnumC21815.f70796.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f21337[EnumC21815.f70691.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f21337[EnumC21815.f70737.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3922(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
+        this.f21400.update(bArr, i, i2, bArr2, i3);
     }
 }

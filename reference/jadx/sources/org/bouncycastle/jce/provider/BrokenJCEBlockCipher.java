@@ -20,9 +20,9 @@ import javax.crypto.spec.PBEParameterSpec;
 import javax.crypto.spec.RC2ParameterSpec;
 import javax.crypto.spec.RC5ParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C0252;
-import l.C16523;
-import l.C8479;
+import l.C13645;
+import l.C14442;
+import l.C25272;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -44,7 +44,7 @@ import org.bouncycastle.crypto.params.RC5Parameters;
 import org.bouncycastle.jcajce.provider.symmetric.util.BCPBEKey;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BrokenJCEBlockCipher implements BrokenPBE {
     public Class[] availableSpecs;
     public BufferedBlockCipher cipher;
@@ -56,42 +56,36 @@ public class BrokenJCEBlockCipher implements BrokenPBE {
     public int pbeKeySize;
     public int pbeType;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BrokePBEWithMD5AndDES extends BrokenJCEBlockCipher {
         public BrokePBEWithMD5AndDES() {
             super(new CBCBlockCipher(new DESEngine()), 0, 0, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BrokePBEWithSHA1AndDES extends BrokenJCEBlockCipher {
         public BrokePBEWithSHA1AndDES() {
             super(new CBCBlockCipher(new DESEngine()), 0, 1, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BrokePBEWithSHAAndDES2Key extends BrokenJCEBlockCipher {
         public BrokePBEWithSHAAndDES2Key() {
             super(new CBCBlockCipher(new DESedeEngine()), 2, 1, 128, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BrokePBEWithSHAAndDES3Key extends BrokenJCEBlockCipher {
         public BrokePBEWithSHAAndDES3Key() {
             super(new CBCBlockCipher(new DESedeEngine()), 2, 1, 192, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class OldPBEWithSHAAndDES3Key extends BrokenJCEBlockCipher {
         public OldPBEWithSHAAndDES3Key() {
             super(new CBCBlockCipher(new DESedeEngine()), 3, 1, 192, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class OldPBEWithSHAAndTwofish extends BrokenJCEBlockCipher {
         public OldPBEWithSHAAndTwofish() {
             super(new CBCBlockCipher(new TwofishEngine()), 3, 1, 256, 128);
@@ -308,7 +302,7 @@ public class BrokenJCEBlockCipher implements BrokenPBE {
             if (i != 2) {
                 if (i != 3) {
                     if (i != 4) {
-                        throw new IllegalArgumentException(C8479.m22141(i, "unknown opmode: "));
+                        throw new IllegalArgumentException(C13645.m33382(i, "unknown opmode: "));
                     }
                 }
             }
@@ -368,7 +362,7 @@ public class BrokenJCEBlockCipher implements BrokenPBE {
             }
         }
         if (!upperCase.startsWith("CFB")) {
-            throw new IllegalArgumentException(C0252.m1693("can't support mode ", str));
+            throw new IllegalArgumentException(C25272.m56409("can't support mode ", str));
         }
         this.ivLength = this.cipher.getUnderlyingCipher().getBlockSize();
         if (upperCase.length() == 3) {
@@ -388,7 +382,7 @@ public class BrokenJCEBlockCipher implements BrokenPBE {
             this.cipher = new PaddedBufferedBlockCipher(this.cipher.getUnderlyingCipher());
         } else {
             if (!upperCase.equals("WITHCTS")) {
-                throw new NoSuchPaddingException(C16523.m38890("Padding ", str, " unknown."));
+                throw new NoSuchPaddingException(C14442.m34865("Padding ", str, " unknown."));
             }
             this.cipher = new CTSBlockCipher(this.cipher.getUnderlyingCipher());
         }
@@ -408,7 +402,7 @@ public class BrokenJCEBlockCipher implements BrokenPBE {
                 if (i == 2) {
                     return keyFactory.generatePrivate(new PKCS8EncodedKeySpec(bArrEngineDoFinal));
                 }
-                throw new InvalidKeyException(C8479.m22141(i, "Unknown key type "));
+                throw new InvalidKeyException(C13645.m33382(i, "Unknown key type "));
             } catch (NoSuchAlgorithmException e) {
                 throw new InvalidKeyException("Unknown key type " + e.getMessage());
             } catch (NoSuchProviderException e2) {

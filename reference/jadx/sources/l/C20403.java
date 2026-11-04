@@ -1,96 +1,242 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶᩶᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: P5YG */
+import java.util.Set;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
+/* JADX INFO: renamed from: l.᩵ۜ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20403 extends AbstractC11357 implements InterfaceC11812 {
+public final class C20403 extends AbstractC25075 {
+    public final String a;
+    public final String b;
+    public final C3995 c;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC3468 f66100 = new C16170();
+    @Override // l.AbstractC25075
+    public final String getSeparator() {
+        return "/";
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public byte f66101;
+    @Override // l.AbstractC25075
+    public final boolean isOpen() {
+        return true;
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f66102;
+    @Override // l.AbstractC25075
+    public final boolean isReadOnly() {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public byte f66103;
+    @Override // l.AbstractC25075
+    public final Set supportedFileAttributeViews() {
+        return AbstractC1758.D(new Object[]{"basic"});
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte f66104;
+    public C20403(C3995 c3995, String str, String str2) {
+        this.c = c3995;
+        this.a = str;
+        this.b = str2;
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public byte f66105;
+    @Override // l.AbstractC25075
+    public final AbstractC22733 provider() {
+        return this.c;
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public byte f66106;
+    @Override // l.AbstractC25075, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        throw new UnsupportedOperationException();
+    }
 
-    public C20403(C12063 c12063, EnumC0772 enumC0772, byte[] bArr, int i) {
-        super(c12063, enumC0772, bArr, i);
-        if (this.f66102 > 5) {
-            throw new RuntimeException("regCount cannot be greater than 5");
+    @Override // l.AbstractC25075
+    public final Iterable getRootDirectories() {
+        return AbstractC1758.B(new Object[]{new C21149(this, "/", this.a, this.b)});
+    }
+
+    @Override // l.AbstractC25075
+    public final Iterable getFileStores() {
+        throw new UnsupportedOperationException("");
+    }
+
+    @Override // l.AbstractC25075
+    public final InterfaceC24329 getPath(String str, String[] strArr) {
+        if (strArr.length != 0) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(str);
+            for (String str2 : strArr) {
+                if (!str2.isEmpty()) {
+                    if (sb.length() > 0) {
+                        sb.append('/');
+                    }
+                    sb.append(str2);
+                }
+            }
+            str = sb.toString();
         }
-        int i2 = i + 1;
-        this.f66102 = C14611.m35076(bArr[i2]);
-        this.f66104 = (byte) (bArr[i2] & 15);
-        byte b = bArr[i + 4];
-        this.f66103 = (byte) (b & 15);
-        this.f66106 = C14611.m35076(b);
-        byte b2 = bArr[i + 5];
-        this.f66101 = (byte) (b2 & 15);
-        this.f66105 = C14611.m35076(b2);
+        return new C21149(this, str, this.a, this.b);
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4759(C4651 c4651, int i) {
-        c4651.m12841(this.f15468.f3346);
-        c4651.m12841((this.f66102 << 4) | this.f66104);
-        c4651.m12833(m28439().m23325());
-        c4651.m12841((this.f66106 << 4) | this.f66103);
-        c4651.m12841((this.f66105 << 4) | this.f66101);
+    @Override // l.AbstractC25075
+    public final InterfaceC4191 getPathMatcher(String str) {
+        int i;
+        int i2;
+        int iIndexOf = str.indexOf(58);
+        int i3 = 0;
+        if (iIndexOf <= 0 || iIndexOf == str.length()) {
+            throw new IllegalArgumentException(String.format("Requested <syntax>:<pattern> spliterator(':') position(%d) is out of bound in %s", Integer.valueOf(iIndexOf), str));
+        }
+        String strSubstring = str.substring(0, iIndexOf);
+        String strSubstring2 = str.substring(iIndexOf + 1);
+        if (strSubstring.equalsIgnoreCase("glob")) {
+            StringBuilder sb = new StringBuilder("^");
+            int i4 = 0;
+            loop0: while (true) {
+                boolean z = false;
+                while (true) {
+                    if (i4 >= strSubstring2.length()) {
+                        if (z) {
+                            throw new PatternSyntaxException("Missing '}", strSubstring2, i4 - 1);
+                        }
+                        sb.append('$');
+                        strSubstring2 = sb.toString();
+                        break loop0;
+                    }
+                    i = i4 + 1;
+                    char cCharAt = strSubstring2.charAt(i4);
+                    if (cCharAt != '*') {
+                        if (cCharAt != ',') {
+                            char c = '/';
+                            if (cCharAt == '/') {
+                                sb.append(cCharAt);
+                            } else if (cCharAt == '?') {
+                                sb.append("[^/]");
+                            } else if (cCharAt != '{') {
+                                if (cCharAt != '}') {
+                                    if (cCharAt == '[') {
+                                        sb.append("[[^/]&&[");
+                                        if (AbstractC1758.S(strSubstring2, i) == '^') {
+                                            sb.append("\\^");
+                                            i2 = i4 + 2;
+                                        } else {
+                                            if (AbstractC1758.S(strSubstring2, i) == '!') {
+                                                sb.append('^');
+                                                i = i4 + 2;
+                                            }
+                                            if (AbstractC1758.S(strSubstring2, i) == '-') {
+                                                sb.append('-');
+                                                i2 = i + 1;
+                                            } else {
+                                                i2 = i;
+                                            }
+                                        }
+                                        boolean z2 = false;
+                                        char c2 = 0;
+                                        while (true) {
+                                            if (i2 < strSubstring2.length()) {
+                                                int i5 = i2 + 1;
+                                                char cCharAt2 = strSubstring2.charAt(i2);
+                                                if (cCharAt2 == ']') {
+                                                    i2 = i5;
+                                                    cCharAt = cCharAt2;
+                                                } else {
+                                                    if (cCharAt2 == c) {
+                                                        throw new PatternSyntaxException("Explicit 'name separator' in class", strSubstring2, i2);
+                                                    }
+                                                    if (cCharAt2 == '\\' || cCharAt2 == '[' || (cCharAt2 == '&' && AbstractC1758.S(strSubstring2, i5) == '&')) {
+                                                        sb.append('\\');
+                                                    }
+                                                    sb.append(cCharAt2);
+                                                    if (cCharAt2 != '-') {
+                                                        i2 = i5;
+                                                        cCharAt = cCharAt2;
+                                                        c2 = cCharAt;
+                                                        z2 = true;
+                                                    } else {
+                                                        if (!z2) {
+                                                            throw new PatternSyntaxException("Invalid range", strSubstring2, i2);
+                                                        }
+                                                        i = i2 + 2;
+                                                        cCharAt = AbstractC1758.S(strSubstring2, i5);
+                                                        if (cCharAt == 0 || cCharAt == ']') {
+                                                            break;
+                                                        }
+                                                        if (cCharAt < c2) {
+                                                            throw new PatternSyntaxException("Invalid range", strSubstring2, i2 - 1);
+                                                        }
+                                                        sb.append(cCharAt);
+                                                        i2 = i;
+                                                        z2 = false;
+                                                    }
+                                                    c = '/';
+                                                }
+                                            }
+                                            i = i2;
+                                            break;
+                                        }
+                                        if (cCharAt != ']') {
+                                            throw new PatternSyntaxException("Missing ']", strSubstring2, i - 1);
+                                        }
+                                        sb.append("]]");
+                                    } else if (cCharAt != '\\') {
+                                        if (".^$+{[]|()".indexOf(cCharAt) != -1) {
+                                            sb.append('\\');
+                                        }
+                                        sb.append(cCharAt);
+                                    } else {
+                                        if (i == strSubstring2.length()) {
+                                            throw new PatternSyntaxException("No character to escape", strSubstring2, i4);
+                                        }
+                                        i4 += 2;
+                                        char cCharAt3 = strSubstring2.charAt(i);
+                                        if ("\\*?[{".indexOf(cCharAt3) != -1 || ".^$+{[]|()".indexOf(cCharAt3) != -1) {
+                                            sb.append('\\');
+                                        }
+                                        sb.append(cCharAt3);
+                                    }
+                                } else {
+                                    if (z) {
+                                        break;
+                                    }
+                                    sb.append('}');
+                                }
+                            } else {
+                                if (z) {
+                                    throw new PatternSyntaxException("Cannot nest groups", strSubstring2, i4);
+                                }
+                                sb.append("(?:(?:");
+                                i4 = i;
+                                z = true;
+                            }
+                        } else if (z) {
+                            sb.append(")|(?:");
+                        } else {
+                            sb.append(',');
+                        }
+                        i4 = i;
+                    } else if (AbstractC1758.S(strSubstring2, i) == '*') {
+                        sb.append(".*");
+                        i4 += 2;
+                    } else {
+                        sb.append("[^/]*");
+                        i4 = i;
+                    }
+                }
+                sb.append("))");
+                i4 = i;
+            }
+        } else if (!strSubstring.equalsIgnoreCase("regex")) {
+            throw new UnsupportedOperationException("Syntax '" + strSubstring + "' not recognized");
+        }
+        return new C3249(i3, Pattern.compile(strSubstring2));
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ۜ */
-    public final EnumC1227 mo4758() {
-        return EnumC1227.Format35s;
+    @Override // l.AbstractC25075
+    public final AbstractC19575 getUserPrincipalLookupService() {
+        throw new UnsupportedOperationException();
     }
 
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ֨ */
-    public final byte mo26663() {
-        return this.f66102;
-    }
-
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ۙ */
-    public final byte mo26664() {
-        return this.f66104;
-    }
-
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ۨ */
-    public final byte mo26666() {
-        return this.f66103;
-    }
-
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ᩹ */
-    public final byte mo26668() {
-        return this.f66106;
-    }
-
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ۚ */
-    public final byte mo26665() {
-        return this.f66101;
-    }
-
-    @Override // l.InterfaceC11812
-    /* JADX INFO: renamed from: ܰ */
-    public final byte mo26667() {
-        return this.f66105;
+    @Override // l.AbstractC25075
+    public final InterfaceC1208 newWatchService() {
+        throw new UnsupportedOperationException();
     }
 }

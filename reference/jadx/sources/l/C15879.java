@@ -1,30 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۤᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q8DM */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15879 implements Comparable {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final double f51451;
+/* JADX INFO: renamed from: l.ܶۚܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5ZF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15879 extends AbstractC4516 {
 
-    public C15879(double d) {
-        this.f51451 = d;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f51635 = 0;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Iterator[] f51636;
+
+    public C15879(Iterator[] itArr) {
+        this.f51636 = itArr;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final double m37754() {
-        return this.f51451;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f51635 < this.f51636.length;
     }
 
-    @Override // java.lang.Comparable
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
-    public final int compareTo(C15879 c15879) {
-        double d = c15879.f51451;
-        double d2 = this.f51451;
-        if (d2 < d) {
-            return -1;
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
         }
-        return d2 == d ? 0 : 1;
+        int i = this.f51635;
+        Iterator[] itArr = this.f51636;
+        Iterator it = itArr[i];
+        C17359.requireNonNull(it);
+        int i2 = this.f51635;
+        itArr[i2] = null;
+        this.f51635 = i2 + 1;
+        return it;
     }
 }

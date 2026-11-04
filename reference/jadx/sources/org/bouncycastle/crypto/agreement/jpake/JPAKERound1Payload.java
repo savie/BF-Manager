@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.agreement.jpake;
 import java.math.BigInteger;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKERound1Payload {
     public final BigInteger gx1;
     public final BigInteger gx2;

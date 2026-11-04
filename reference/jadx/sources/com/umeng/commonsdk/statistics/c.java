@@ -40,7 +40,7 @@ public class c {
     public Defcon k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public long f77952l;
+    public long f82068l;
     public int m;
     public int n;
     public Context r;
@@ -51,7 +51,7 @@ public class c {
         this.h = null;
         this.i = null;
         this.k = null;
-        this.f77952l = 0L;
+        this.f82068l = 0L;
         this.m = 0;
         this.n = 0;
         this.a = null;
@@ -59,7 +59,7 @@ public class c {
         this.i = ImprintHandler.getImprintService(context).c();
         this.k = Defcon.getService(this.r);
         SharedPreferences sharedPreferences = PreferenceWrapper.getDefault(this.r);
-        this.f77952l = sharedPreferences.getLong("thtstart", 0L);
+        this.f82068l = sharedPreferences.getLong("thtstart", 0L);
         this.m = sharedPreferences.getInt("gkvc", 0);
         this.n = sharedPreferences.getInt("ekvc", 0);
         this.a = UMEnvelopeBuild.imprintProperty(this.r, "track_list", null);

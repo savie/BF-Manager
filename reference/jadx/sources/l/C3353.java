@@ -1,842 +1,867 @@
 package l;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.lang.ref.ReferenceQueue;
+import java.util.AbstractQueue;
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReferenceArray;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
 
-/* JADX INFO: renamed from: l.ۗܽۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H14L */
+/* JADX INFO: renamed from: l.ۗۤܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E3QI */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3353 {
+public final class C3353 extends ReentrantLock {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final C14681 f12403 = new C14681();
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final ConcurrentMapC5942 f10940;
 
     /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final HashSet f12404;
+    public final AbstractQueue f10941;
 
     /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List f12405;
+    public volatile AtomicReferenceArray f10942;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f12406;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f12407;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public float f12408;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractQueue f10943;
 
     /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final Matrix f12409;
+    public long f10944;
 
     /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public float f12410;
+    public final long f10945;
 
     /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public float f12411;
+    public int f10946;
 
     /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final C11697 f12412;
+    public final InterfaceC5920 f10947;
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public float f12413;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f12414;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final AtomicInteger f10948 = new AtomicInteger();
 
     /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public boolean f12415;
+    public final ReferenceQueue f10949;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f12416;
+    public final AbstractQueue f10950;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public float f12417;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final ReferenceQueue f10951;
 
     /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public boolean f12418;
+    public int f10952;
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public float f12419;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public volatile int f10953;
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public RectF f12420;
-
-    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public float f12421;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public float f12422;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f12423;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public int f12424;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10003(C14644 c14644) {
-        if (c14644.f47887.isEmpty()) {
-            throw new IllegalArgumentException();
+    public C3353(ConcurrentMapC5942 concurrentMapC5942, int i, long j, InterfaceC5920 interfaceC5920) {
+        Collection concurrentLinkedQueue;
+        Collection c15636;
+        Collection c8157;
+        this.f10940 = concurrentMapC5942;
+        this.f10945 = j;
+        interfaceC5920.getClass();
+        this.f10947 = interfaceC5920;
+        AtomicReferenceArray atomicReferenceArray = new AtomicReferenceArray(i);
+        int length = (atomicReferenceArray.length() * 3) / 4;
+        this.f10946 = length;
+        if (concurrentMapC5942.f20337 == EnumC16360.INSTANCE && length == j) {
+            this.f10946 = length + 1;
         }
-        int iM9996 = m9996();
-        int i = m10006().f47888;
-        int i2 = c14644.f47888;
-        if (iM9996 > i2 || i2 > i) {
-            int i3 = this.f12414;
-            ArrayList arrayList = this.f12406;
-            List list = this.f12405;
-            if (i3 == -1) {
-                list.add(0, new C14644(-1, ""));
-                arrayList.add(0, null);
-                this.f12414 = 0;
-            }
-            C1942 c1942 = new C1942();
-            list.add(this.f12414, c14644);
-            arrayList.add(this.f12414, c1942);
-            C15682 c15682M46955 = C11116.f37737.m46955(C16387.f52730);
-            int length = c14644.f47887.length();
-            if (length != 0) {
-                c1942.f7326.add(new C9705(length, c15682M46955));
-            }
-            this.f12414++;
-        }
-    }
-
-    public C3353(C11697 c11697, int i, ArrayList arrayList) {
-        this.f12414 = -1;
-        this.f12420 = new RectF();
-        this.f12407 = C20368.m45991();
-        this.f12416 = 0;
-        this.f12409 = new Matrix();
-        this.f12412 = c11697;
-        this.f12423 = i;
-        this.f12405 = arrayList;
-        this.f12404 = new HashSet();
-        if (arrayList.size() > 210) {
-            int size = arrayList.size() / 2;
-            arrayList.set(size - 100, new C14644(-1, "......"));
-            arrayList.subList(size - 99, size + 100).clear();
-        }
-        int size2 = arrayList.size();
-        boolean z = true;
-        int i2 = 0;
-        while (true) {
-            String strSubstring = null;
-            if (i2 >= size2) {
-                break;
-            }
-            C14644 c14644 = (C14644) arrayList.get(i2);
-            if (!c14644.f47887.isEmpty()) {
-                if (c14644.f47887.startsWith(".sparse-switch") || c14644.f47887.startsWith(".packed-switch")) {
-                    z = false;
-                } else if (z) {
-                    if (c14644.f47887.length() > 100) {
-                        c14644.f47887 = C13012.m32189(100, c14644.f47887);
-                    }
-                    if (c14644.f47887.startsWith(":")) {
-                        int iIndexOf = c14644.f47887.indexOf(32);
-                        strSubstring = iIndexOf == -1 ? c14644.f47887 : c14644.f47887.substring(0, iIndexOf);
-                    }
-                    if (strSubstring != null) {
-                        this.f12404.add(strSubstring);
-                    }
-                }
-            }
-            i2++;
-        }
-        this.f12406 = new ArrayList(arrayList.size());
-        C2793 c2793 = new C2793();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            C14644 c14645 = (C14644) it.next();
-            if (c14645.f47887.isEmpty()) {
-                this.f12406.add(null);
-            } else {
-                C1942 c1942 = new C1942();
-                this.f12406.add(c1942);
-                try {
-                    c2793.m8488(C11116.f37736.m6201(c14645.f47887, f12403).m30436());
-                    while (c2793.m8490()) {
-                        C15682 c15682M8491 = c2793.m8491();
-                        int iM8492 = c2793.m8492();
-                        int iM8487 = c2793.m8487();
-                        if (iM8492 != iM8487) {
-                            c1942.f7326.add(new C9705(iM8487, c15682M8491));
-                        }
-                    }
-                } catch (C7297 unused) {
-                    C15682 c15682M46969 = C11116.f37737.m46969();
-                    int length = c14645.f47887.length();
-                    if (length != 0) {
-                        c1942.f7326.add(new C9705(length, c15682M46969));
-                    }
-                }
-                c1942.f7326.trimToSize();
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m9996() {
-        return ((C14644) this.f12405.get(this.f12414 + 1)).f47888;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10001(Paint paint) {
-        float fontSpacing = paint.getFontSpacing();
-        List list = this.f12405;
-        if (list.isEmpty()) {
-            this.f12417 = 4.0f * fontSpacing;
-            this.f12422 = (fontSpacing * 3.0f) + paint.measureText("EXIT");
-            float fMeasureText = paint.measureText("0") * 0.6f;
-            this.f12411 = fMeasureText;
-            this.f12419 = fMeasureText;
-            this.f12418 = true;
-            return;
-        }
-        this.f12417 = list.size() * fontSpacing;
-        float fMeasureText2 = paint.measureText("0");
-        float length = (String.valueOf(((C14644) C3012.m8974(1, list)).f47888).length() + 1) * fMeasureText2;
-        this.f12419 = 0.7f * fMeasureText2;
-        this.f12411 = fMeasureText2 * 0.5f;
-        if (this.f12418) {
-            this.f12422 = m9994(this.f12424, paint);
+        this.f10942 = atomicReferenceArray;
+        EnumC4099 enumC4099 = concurrentMapC5942.f20338;
+        EnumC4099 enumC40910 = EnumC4099.f13963;
+        this.f10951 = enumC4099 != enumC40910 ? new ReferenceQueue() : null;
+        this.f10949 = concurrentMapC5942.f20347 != enumC40910 ? new ReferenceQueue() : null;
+        if (!concurrentMapC5942.m17298() && !concurrentMapC5942.m17295()) {
+            concurrentLinkedQueue = ConcurrentMapC5942.f20332;
         } else {
-            this.f12424 = 0;
-            int size = list.size();
-            float f = 0.0f;
-            for (int i = 0; i < size; i++) {
-                float fM9994 = m9994(i, paint);
-                if (fM9994 > f) {
-                    this.f12424 = i;
-                    f = fM9994;
+            concurrentLinkedQueue = new ConcurrentLinkedQueue();
+        }
+        this.f10941 = (AbstractQueue) concurrentLinkedQueue;
+        if (!concurrentMapC5942.m17299()) {
+            c15636 = ConcurrentMapC5942.f20332;
+        } else {
+            c15636 = new C15636();
+        }
+        this.f10943 = (AbstractQueue) c15636;
+        if (!concurrentMapC5942.m17298() && !concurrentMapC5942.m17295()) {
+            c8157 = ConcurrentMapC5942.f20332;
+        } else {
+            c8157 = new C8157();
+        }
+        this.f10950 = (AbstractQueue) c8157;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2213 m11010(InterfaceC2213 interfaceC2213, InterfaceC2213 interfaceC2214) {
+        Object key = interfaceC2213.getKey();
+        if (key == null) {
+            return null;
+        }
+        InterfaceC10064 interfaceC10064Mo7552 = interfaceC2213.mo7552();
+        Object obj = interfaceC10064Mo7552.get();
+        if (obj == null && interfaceC10064Mo7552.mo2147()) {
+            return null;
+        }
+        InterfaceC2213 interfaceC2213Mo5197 = this.f10940.f20351.mo5197(this, interfaceC2213, interfaceC2214, key);
+        interfaceC2213Mo5197.mo7547(interfaceC10064Mo7552.mo2144(this.f10949, obj, interfaceC2213Mo5197));
+        return interfaceC2213Mo5197;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m11017(InterfaceC2213 interfaceC2213, Object obj, Object obj2, long j) {
+        InterfaceC10064 interfaceC10064Mo7552 = interfaceC2213.mo7552();
+        ConcurrentMapC5942 concurrentMapC5942 = this.f10940;
+        int iMo3920 = concurrentMapC5942.f20337.mo3920(obj, obj2);
+        C12128.m30314("Weights must be non-negative", iMo3920 >= 0);
+        interfaceC2213.mo7547(concurrentMapC5942.f20347.mo13191(this, interfaceC2213, obj2, iMo3920));
+        m11012();
+        this.f10944 += (long) iMo3920;
+        if (concurrentMapC5942.m17298()) {
+            interfaceC2213.mo7545(j);
+        }
+        if (concurrentMapC5942.m17299() || concurrentMapC5942.f20341 > 0) {
+            interfaceC2213.mo7548(j);
+        }
+        this.f10950.add(interfaceC2213);
+        this.f10943.add(interfaceC2213);
+        interfaceC10064Mo7552.mo2145(obj2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11005(Object obj, int i, AbstractC20836 abstractC20836) {
+        C1862 c1862;
+        InterfaceC10064 interfaceC10064Mo7552;
+        Object objM11004;
+        lock();
+        try {
+            long jMo37347 = this.f10940.f20353.mo37347();
+            m11025(jMo37347);
+            boolean z = true;
+            int i2 = this.f10953 - 1;
+            AtomicReferenceArray atomicReferenceArray = this.f10942;
+            int length = (atomicReferenceArray.length() - 1) & i;
+            InterfaceC2213 interfaceC2213 = (InterfaceC2213) atomicReferenceArray.get(length);
+            InterfaceC2213 interfaceC2213Mo5196 = interfaceC2213;
+            while (true) {
+                c1862 = null;
+                if (interfaceC2213Mo5196 == null) {
+                    interfaceC10064Mo7552 = null;
+                    break;
                 }
-            }
-            this.f12422 = f;
-            this.f12418 = true;
-        }
-        this.f12417 = (this.f12411 * 2.0f) + this.f12417;
-        this.f12422 = (this.f12419 * 2.0f) + length + this.f12422;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private float m9994(int i, Paint paint) {
-        C14644 c14644 = (C14644) this.f12405.get(i);
-        C1942 c1942 = (C1942) this.f12406.get(i);
-        float f = 0.0f;
-        if (!c14644.f47887.isEmpty() && c1942 != null) {
-            int i2 = 0;
-            for (C9705 c9705 : c1942.f7326) {
-                float fMeasureText = paint.measureText(c14644.f47887, i2, c9705.f32696);
-                c9705.f32695 = fMeasureText;
-                f += fMeasureText;
-                i2 = c9705.f32696;
-            }
-        }
-        return f;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final float m10005() {
-        if (!this.f12418) {
-            throw new IllegalStateException("Need measure");
-        }
-        return this.f12422;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final float m10007() {
-        if (!this.f12418) {
-            throw new IllegalStateException("Need measure");
-        }
-        return this.f12417;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m9999(float f, float f2, float f3, float f4) {
-        this.f12410 = f;
-        this.f12421 = f2;
-        this.f12413 = f3;
-        this.f12408 = f4;
-        this.f12415 = true;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final float m10008() {
-        if (!this.f12415) {
-            throw new IllegalStateException("Need layout");
-        }
-        return this.f12410;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final float m9995() {
-        if (!this.f12415) {
-            throw new IllegalStateException("Need layout");
-        }
-        return this.f12421;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final float m10004() {
-        if (!this.f12415) {
-            throw new IllegalStateException("Need layout");
-        }
-        return this.f12413;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final float m9998() {
-        if (!this.f12415) {
-            throw new IllegalStateException("Need layout");
-        }
-        return this.f12408;
-    }
-
-    /* JADX WARN: Code duplicated, block: B:56:0x023d  */
-    /* JADX WARN: Code duplicated, block: B:98:0x0422  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10000(Canvas canvas, C4916 c4916, C4916 c4917, RectF rectF, float f) {
-        boolean z;
-        int iSave;
-        float f2;
-        float f3;
-        float f4;
-        float f5;
-        List list;
-        C11697 c11697;
-        int i;
-        int iSave2;
-        ArrayList arrayList;
-        boolean z2;
-        int i2;
-        C14644 c14644;
-        C14644 c14645;
-        C11697 c11698;
-        C11697 c11699;
-        C3353 c3353;
-        C14644 c14646;
-        int i3;
-        C14644 c14647;
-        int i4;
-        Canvas canvas2 = canvas;
-        float f6 = this.f12410;
-        float f7 = this.f12421;
-        if (rectF.intersects(f6, f7, this.f12413 + f6, this.f12408 + f7)) {
-            List list2 = this.f12405;
-            boolean zIsEmpty = list2.isEmpty();
-            float fontSpacing = c4916.getFontSpacing();
-            float f8 = -c4916.getFontMetrics().ascent;
-            float fM9998 = zIsEmpty ? m9998() / 4.0f : (m9998() - (this.f12411 * 2.0f)) / list2.size();
-            float f9 = (f8 / fontSpacing) * fM9998;
-            float fM10008 = m10008();
-            float fM9995 = m9995();
-            float f10 = fM10008 * f;
-            float f11 = fM9995 * f;
-            float f12 = this.f12413 * f;
-            float f13 = this.f12408 * f;
-            float f14 = ((this.f12419 + this.f12411) / 4.0f) * f;
-            float fMeasureText = c4916.measureText("0");
-            float length = zIsEmpty ? 0.0f : (String.valueOf(((C14644) C3012.m8974(1, list2)).f47888).length() + 1) * fMeasureText;
-            float f15 = length * f;
-            float f16 = f12 + f10;
-            RectF rectF2 = this.f12420;
-            rectF2.set(f10, f11, f16, f13 + f11);
-            C11697 c116910 = this.f12412;
-            int i5 = c116910.f39324;
-            List list3 = list2;
-            Paint.Style style = Paint.Style.FILL;
-            c4916.setStyle(style);
-            C11697 c116911 = c116910;
-            if (i5 == this.f12423) {
-                float f17 = C11116.f37735;
-                c4916.setColor(C20368.m45983(-13421779, -1309));
-            } else {
-                float f18 = C11116.f37735;
-                c4916.setColor(zIsEmpty ? C20368.m45983(-13948117, -328966) : C20368.m45983(-13948117, -1));
-            }
-            canvas2.drawRoundRect(rectF2, f14, f14, c4916);
-            if (!zIsEmpty) {
-                rectF2.right = rectF2.left + f14 + f14;
-                c4916.setColor(C20368.m45983(-13223878, -986896));
-                canvas2.drawRoundRect(rectF2, f14, f14, c4916);
-                rectF2.left = rectF2.right - f14;
-                rectF2.right = f15 + f10;
-                canvas2.drawRect(rectF2, c4916);
-                c4916.setStyle(Paint.Style.STROKE);
-                c4916.setColor(C20368.m45983(-11184811, -3092272));
-                c4916.setStrokeWidth(1.0f * f);
-                float f19 = rectF2.right;
-                canvas.drawLine(f19, rectF2.top, f19, rectF2.bottom, c4916);
-            }
-            rectF2.left = f10;
-            rectF2.right = f16;
-            c4916.setStyle(Paint.Style.STROKE);
-            c4916.setColor(C20368.m45983(-11513776, -4144960));
-            c4916.setStrokeWidth(C11116.f37735 * 1.5f * f);
-            canvas2.drawRoundRect(rectF2, f14, f14, c4916);
-            if (zIsEmpty) {
-                c4916.setTextAlign(Paint.Align.CENTER);
-                c4916.setStyle(style);
-                c4916.setColor(C20368.m45983(-7829368, -16777216));
-                iSave = canvas.save();
-                canvas2.scale(f, f);
-                canvas.drawText("EXIT", 0, 4, (this.f12413 / 2.0f) + fM10008, (fM9998 * 1.5f) + fM9995 + f9, (Paint) c4916);
-                canvas2.restoreToCount(iSave);
-                c4916.setTextAlign(Paint.Align.LEFT);
-                z = false;
-            } else {
-                C3353 c3354 = this;
-                float f20 = c3354.f12411;
-                float f21 = fM9995 + f20;
-                float f22 = f20 + f9 + fM9995;
-                float f23 = fM10008 + c3354.f12419 + length;
-                float f24 = (fM10008 + length) - fMeasureText;
-                boolean z3 = f <= 0.15f;
-                c4916.setStyle(style);
-                int size = list3.size();
-                int i6 = 0;
-                float f25 = f21;
-                Canvas canvas3 = canvas2;
-                int i7 = 0;
-                float f26 = f22;
-                z = false;
-                while (i7 < size) {
-                    if (i7 > 0) {
-                        f26 += fM9998;
-                        f25 += fM9998;
-                    }
-                    float f27 = f26;
-                    float f28 = f25;
-                    RectF rectF3 = rectF;
-                    int i8 = size;
-                    int i9 = i6;
-                    if (rectF3.intersects(rectF3.left, f28, rectF3.right, f28 + fM9998)) {
-                        if (f24 < rectF3.left || fM10008 > rectF3.right) {
-                            list = list3;
+                Object key = interfaceC2213Mo5196.getKey();
+                if (interfaceC2213Mo5196.getHash() != i || key == null || !this.f10940.f20336.m31910(obj, key)) {
+                    interfaceC2213Mo5196 = interfaceC2213Mo5196.getNext();
+                } else {
+                    interfaceC10064Mo7552 = interfaceC2213Mo5196.mo7552();
+                    if (!interfaceC10064Mo7552.mo2146()) {
+                        Object obj2 = interfaceC10064Mo7552.get();
+                        if (obj2 == null) {
+                            m11015(key, obj2, interfaceC10064Mo7552.mo2148(), EnumC23842.f77216);
+                        } else if (this.f10940.m17296(interfaceC2213Mo5196, jMo37347)) {
+                            m11015(key, obj2, interfaceC10064Mo7552.mo2148(), EnumC23842.f77214);
                         } else {
-                            list = list3;
-                            int i10 = ((C14644) list.get(i7)).f47888;
-                            if (i10 != -1) {
-                                String strValueOf = String.valueOf(i10);
-                                if (z) {
-                                    iSave2 = i9;
-                                } else {
-                                    iSave2 = canvas3.save();
-                                    canvas3.scale(f, f);
-                                    z = true;
-                                }
-                                float f29 = f24;
-                                for (int length2 = strValueOf.length() - 1; length2 >= 0; length2--) {
-                                    canvas3.drawText(strValueOf, length2, length2 + 1, f29, f27, (Paint) c4917);
-                                    f29 -= fMeasureText;
-                                }
-                            }
-                            arrayList = c3354.f12406;
-                            if (z3) {
-                                f2 = f28;
-                                c14645 = (C14644) list.get(i7);
-                                C1942 c1942 = (C1942) arrayList.get(i7);
-                                i2 = iSave2;
-                                if (!c14645.f47887.isEmpty() || c1942 == null) {
-                                    z2 = z;
-                                    f3 = f24;
-                                    f4 = fM9998;
-                                    f5 = f23;
-                                    c11697 = c116911;
-                                    i = i7;
-                                    list = list;
-                                    i6 = i2;
-                                    z = z2;
-                                    canvas3 = canvas3;
-                                } else {
-                                    int i11 = i7;
-                                    if (c3354.f12407 != C20368.m45991()) {
-                                        c3354.f12407 = C20368.m45991();
-                                        c11698 = c116911;
-                                        c11698.f39320 -= (long) c3354.f12416;
-                                        m9997();
-                                    } else {
-                                        c11698 = c116911;
-                                    }
-                                    float f30 = f27 - f9;
-                                    Iterator it = c1942.f7326.iterator();
-                                    C4916 c4918 = c4916;
-                                    float f31 = f23;
-                                    int iSave3 = i2;
-                                    int i12 = 0;
-                                    while (it.hasNext()) {
-                                        C9705 c9705 = (C9705) it.next();
-                                        float f32 = c9705.f32695;
-                                        Iterator it2 = it;
-                                        C15682 c15682 = c9705.f32693;
-                                        float f33 = f24;
-                                        int i13 = c9705.f32696;
-                                        float f34 = f31 + f32;
-                                        float f35 = f23;
-                                        if (f34 < rectF3.left || f31 > rectF3.right) {
-                                            i13 = i13;
-                                            c11699 = c11698;
-                                            c3353 = c3354;
-                                            rectF = rectF3;
-                                            c14646 = c14645;
-                                            int i14 = i11;
-                                            fM9998 = fM9998;
-                                            i3 = i14;
-                                            iSave3 = iSave3;
-                                        } else {
-                                            int i15 = i13 - i12;
-                                            if (10 >= i15 || i15 >= 100) {
-                                                c14646 = c14645;
-                                                int iSave4 = iSave3;
-                                                i13 = i13;
-                                                c11699 = c11698;
-                                                c3353 = c3354;
-                                                rectF = rectF;
-                                                int i16 = i11;
-                                                fM9998 = fM9998;
-                                                i3 = i16;
-                                                c4918.setColor(c15682.m37379());
-                                                if (!z) {
-                                                    iSave4 = canvas3.save();
-                                                    canvas3.scale(f, f);
-                                                    z = true;
-                                                }
-                                                iSave3 = iSave4;
-                                                canvas3.drawText(c14646.f47887, i12, c9705.f32696, f31, f30 + f9, (Paint) c4918);
-                                            } else {
-                                                Bitmap bitmap = c9705.f32694;
-                                                if (bitmap == null) {
-                                                    i4 = iSave3;
-                                                    if (c11698.f39320 >= 5242880) {
-                                                        c4918.setColor(c15682.m37379());
-                                                        if (z) {
-                                                            iSave3 = i4;
-                                                        } else {
-                                                            iSave3 = canvas3.save();
-                                                            canvas3.scale(f, f);
-                                                            z = true;
-                                                        }
-                                                        canvas3.drawText(c14645.f47887, i12, c9705.f32696, f31, f30 + f9, (Paint) c4918);
-                                                        canvas3 = canvas;
-                                                        rectF = rectF;
-                                                        c14646 = c14645;
-                                                        i13 = i13;
-                                                        c11699 = c11698;
-                                                        c3353 = this;
-                                                        int i17 = i11;
-                                                        fM9998 = fM9998;
-                                                        i3 = i17;
-                                                    } else {
-                                                        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(Math.max(1, (int) ((f32 * 0.1f) + 0.5f)), Math.max(1, (int) ((fM9998 * 0.1f) + 0.5f)), Bitmap.Config.ARGB_4444);
-                                                        c9705.f32694 = bitmapCreateBitmap;
-                                                        Canvas canvas4 = new Canvas(bitmapCreateBitmap);
-                                                        canvas4.scale(0.1f, 0.1f);
-                                                        c4918.setColor(c15682.m37379());
-                                                        c14647 = c14645;
-                                                        c11699 = c11698;
-                                                        i3 = i11;
-                                                        canvas4.drawText(c14645.f47887, i12, c9705.f32696, 0.0f, f9, (Paint) c4916);
-                                                        int height = bitmapCreateBitmap.getHeight() * bitmapCreateBitmap.getWidth() * 2;
-                                                        c3353 = this;
-                                                        c3353.f12416 += height;
-                                                        c11699.f39320 += (long) height;
-                                                        canvas3 = canvas;
-                                                        c4918 = c4916;
-                                                        bitmap = bitmapCreateBitmap;
-                                                    }
-                                                } else {
-                                                    c14647 = c14645;
-                                                    i4 = iSave3;
-                                                    c11699 = c11698;
-                                                    c3353 = c3354;
-                                                    i3 = i11;
-                                                }
-                                                Matrix matrix = c3353.f12409;
-                                                matrix.reset();
-                                                float f36 = 10.0f * f;
-                                                matrix.setScale(f36, f36);
-                                                matrix.postTranslate(f31 * f, f30 * f);
-                                                int i18 = i4;
-                                                if (z) {
-                                                    canvas3.restoreToCount(i18);
-                                                    z = false;
-                                                }
-                                                canvas3.drawBitmap(bitmap, matrix, c4918);
-                                                iSave3 = i18;
-                                                c14646 = c14647;
-                                            }
-                                        }
-                                        c14645 = c14646;
-                                        rectF3 = rectF;
-                                        f31 = f34;
-                                        it = it2;
-                                        f23 = f35;
-                                        i12 = i13;
-                                        c3354 = c3353;
-                                        c11698 = c11699;
-                                        f24 = f33;
-                                        float f37 = fM9998;
-                                        i11 = i3;
-                                        fM9998 = f37;
-                                    }
-                                    i6 = iSave3;
-                                    f3 = f24;
-                                    f5 = f23;
-                                    c11697 = c11698;
-                                    int i19 = i11;
-                                    f4 = fM9998;
-                                    i = i19;
-                                    z = z;
-                                    list = list;
-                                }
-                            } else {
-                                z2 = z;
-                                i2 = iSave2;
-                                f2 = f28;
-                                f3 = f24;
-                                f4 = fM9998;
-                                f5 = f23;
-                                c11697 = c116911;
-                                i = i7;
-                                c14644 = (C14644) list.get(i);
-                                C1942 c1943 = (C1942) arrayList.get(i);
-                                if (!c14644.f47887.isEmpty() || c1943 == null) {
-                                    i6 = i2;
-                                    z = z2;
-                                    canvas3 = canvas3;
-                                } else {
-                                    if (!z2) {
-                                        int iSave5 = canvas3.save();
-                                        canvas3.scale(f, f);
-                                        i2 = iSave5;
-                                        z2 = true;
-                                    }
-                                    float f38 = f5;
-                                    int i20 = 0;
-                                    for (C9705 c9706 : c1943.f7326) {
-                                        float f39 = f38 + c9706.f32695;
-                                        if (f39 >= rectF3.left && f38 <= rectF3.right) {
-                                            c4916.setColor(c9706.f32693.m37379());
-                                            canvas3.drawText(c14644.f47887, i20, c9706.f32696, f38, f27, (Paint) c4916);
-                                        }
-                                        i20 = c9706.f32696;
-                                        f38 = f39;
-                                        canvas3 = canvas3;
-                                    }
-                                    i6 = i2;
-                                    z = z2;
-                                }
-                            }
+                            m11027(interfaceC2213Mo5196, jMo37347);
+                            this.f10947.mo17230();
+                            unlock();
+                            m11022();
+                            return obj2;
                         }
-                        iSave2 = i9;
-                        arrayList = c3354.f12406;
-                        if (z3) {
-                            f2 = f28;
-                            c14645 = (C14644) list.get(i7);
-                            C1942 c1944 = (C1942) arrayList.get(i7);
-                            i2 = iSave2;
-                            if (c14645.f47887.isEmpty()) {
-                            }
-                            z2 = z;
-                            f3 = f24;
-                            f4 = fM9998;
-                            f5 = f23;
-                            c11697 = c116911;
-                            i = i7;
-                            list = list;
-                            i6 = i2;
-                            z = z2;
-                            canvas3 = canvas3;
-                        } else {
-                            z2 = z;
-                            i2 = iSave2;
-                            f2 = f28;
-                            f3 = f24;
-                            f4 = fM9998;
-                            f5 = f23;
-                            c11697 = c116911;
-                            i = i7;
-                            c14644 = (C14644) list.get(i);
-                            C1942 c1945 = (C1942) arrayList.get(i);
-                            if (c14644.f47887.isEmpty()) {
-                            }
-                            i6 = i2;
-                            z = z2;
-                            canvas3 = canvas3;
-                        }
-                    } else {
-                        f2 = f28;
-                        f3 = f24;
-                        f4 = fM9998;
-                        f5 = f23;
-                        list = list3;
-                        c11697 = c116911;
-                        i = i7;
-                        i6 = i9;
+                        this.f10943.remove(interfaceC2213Mo5196);
+                        this.f10950.remove(interfaceC2213Mo5196);
+                        this.f10953 = i2;
+                        break;
                     }
-                    i7 = i + 1;
-                    c3354 = this;
-                    list3 = list;
-                    c116911 = c11697;
-                    f26 = f27;
-                    size = i8;
-                    f25 = f2;
-                    fM9998 = f4;
-                    f24 = f3;
-                    f23 = f5;
+                    z = false;
+                    break;
                 }
-                iSave = i6;
-                canvas2 = canvas3;
             }
             if (z) {
-                canvas2.restoreToCount(iSave);
+                c1862 = new C1862();
+                if (interfaceC2213Mo5196 == null) {
+                    EnumC4845 enumC4845 = this.f10940.f20351;
+                    obj.getClass();
+                    interfaceC2213Mo5196 = enumC4845.mo5196(this, obj, i, interfaceC2213);
+                    interfaceC2213Mo5196.mo7547(c1862);
+                    atomicReferenceArray.set(length, interfaceC2213Mo5196);
+                } else {
+                    interfaceC2213Mo5196.mo7547(c1862);
+                }
+            }
+            unlock();
+            m11022();
+            if (z) {
+                try {
+                    synchronized (interfaceC2213Mo5196) {
+                        objM11004 = m11004(obj, i, c1862, c1862.m6392(obj, abstractC20836));
+                    }
+                    this.f10947.mo17228();
+                    return objM11004;
+                } catch (Throwable th) {
+                    this.f10947.mo17228();
+                    throw th;
+                }
+            }
+            return m11008(interfaceC2213Mo5196, obj, interfaceC10064Mo7552);
+        } catch (Throwable th2) {
+            unlock();
+            m11022();
+            throw th2;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11008(InterfaceC2213 interfaceC2213, Object obj, InterfaceC10064 interfaceC10064) {
+        InterfaceC5920 interfaceC5920 = this.f10947;
+        if (!interfaceC10064.mo2146()) {
+            throw new AssertionError();
+        }
+        C12128.m30313(obj, "Recursive load of: %s", !Thread.holdsLock(interfaceC2213));
+        try {
+            Object objMo2149 = interfaceC10064.mo2149();
+            if (objMo2149 == null) {
+                throw new C3682("CacheLoader returned null for key " + obj + ".");
+            }
+            m11020(interfaceC2213, this.f10940.f20353.mo37347());
+            interfaceC5920.mo17228();
+            return objMo2149;
+        } catch (Throwable th) {
+            interfaceC5920.mo17228();
+            throw th;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11004(Object obj, int i, C1862 c1862, InterfaceFutureC14736 interfaceFutureC14736) throws Throwable {
+        Object objM44537;
+        InterfaceC5920 interfaceC5920 = this.f10947;
+        try {
+            objM44537 = C19212.m44537(interfaceFutureC14736);
+            try {
+                if (objM44537 == null) {
+                    throw new C3682("CacheLoader returned null for key " + obj + ".");
+                }
+                C2433 c2433 = c1862.f6264;
+                TimeUnit timeUnit = TimeUnit.NANOSECONDS;
+                interfaceC5920.mo17232(c2433.m8201());
+                m11014(obj, i, c1862, objM44537);
+                return objM44537;
+            } catch (Throwable th) {
+                th = th;
+                if (objM44537 == null) {
+                    C2433 c2434 = c1862.f6264;
+                    TimeUnit timeUnit2 = TimeUnit.NANOSECONDS;
+                    interfaceC5920.mo17229(c2434.m8201());
+                    lock();
+                    try {
+                        AtomicReferenceArray atomicReferenceArray = this.f10942;
+                        int length = (atomicReferenceArray.length() - 1) & i;
+                        InterfaceC2213 interfaceC2213 = (InterfaceC2213) atomicReferenceArray.get(length);
+                        for (InterfaceC2213 next = interfaceC2213; next != null; next = next.getNext()) {
+                            Object key = next.getKey();
+                            if (next.getHash() == i && key != null && this.f10940.f20336.m31910(obj, key)) {
+                                if (next.mo7552() != c1862) {
+                                    break;
+                                }
+                                if (c1862.f6265.mo2147()) {
+                                    next.mo7547(c1862.f6265);
+                                    break;
+                                }
+                                atomicReferenceArray.set(length, m11023(interfaceC2213, next));
+                                break;
+                            }
+                        }
+                    } finally {
+                        unlock();
+                        m11022();
+                    }
+                }
+                throw th;
+            }
+        } catch (Throwable th2) {
+            th = th2;
+            objM44537 = null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11007(InterfaceC2213 interfaceC2213, final Object obj, final int i, Object obj2, long j, AbstractC20836 abstractC20836) {
+        Object objM44537;
+        C1862 c1862;
+        final C1862 c1863;
+        if (this.f10940.f20341 > 0 && j - interfaceC2213.mo7550() > this.f10940.f20341 && !interfaceC2213.mo7552().mo2146()) {
+            C17359.requireNonNull(abstractC20836);
+            lock();
+            try {
+                long jMo37347 = this.f10940.f20353.mo37347();
+                m11025(jMo37347);
+                AtomicReferenceArray atomicReferenceArray = this.f10942;
+                int length = (atomicReferenceArray.length() - 1) & i;
+                InterfaceC2213 interfaceC2214 = (InterfaceC2213) atomicReferenceArray.get(length);
+                InterfaceC2213 next = interfaceC2214;
+                while (true) {
+                    objM44537 = null;
+                    if (next != null) {
+                        Object key = next.getKey();
+                        if (next.getHash() != i || key == null || !this.f10940.f20336.m31910(obj, key)) {
+                            next = next.getNext();
+                        } else {
+                            InterfaceC10064 interfaceC10064Mo7552 = next.mo7552();
+                            if (!interfaceC10064Mo7552.mo2146() && jMo37347 - next.mo7550() >= this.f10940.f20341) {
+                                this.f10952++;
+                                c1862 = new C1862(interfaceC10064Mo7552);
+                                next.mo7547(c1862);
+                            } else {
+                                unlock();
+                                m11022();
+                                c1863 = null;
+                                break;
+                            }
+                        }
+                    } else {
+                        this.f10952++;
+                        c1862 = new C1862();
+                        EnumC4845 enumC4845 = this.f10940.f20351;
+                        obj.getClass();
+                        InterfaceC2213 interfaceC2213Mo5196 = enumC4845.mo5196(this, obj, i, interfaceC2214);
+                        interfaceC2213Mo5196.mo7547(c1862);
+                        atomicReferenceArray.set(length, interfaceC2213Mo5196);
+                    }
+                    unlock();
+                    m11022();
+                    c1863 = c1862;
+                    break;
+                }
+                if (c1863 != null) {
+                    final InterfaceFutureC14736 interfaceFutureC14736M6392 = c1863.m6392(obj, abstractC20836);
+                    interfaceFutureC14736M6392.mo7375(new Runnable() { // from class: l.᩹ۤܽ
+                        @Override // java.lang.Runnable
+                        public final void run() {
+                            C3353 c3353 = this.f75963;
+                            Object obj3 = obj;
+                            int i2 = i;
+                            C1862 c1864 = c1863;
+                            try {
+                                c3353.m11004(obj3, i2, c1864, interfaceFutureC14736M6392);
+                            } catch (Throwable th) {
+                                ConcurrentMapC5942.f20333.log(Level.WARNING, "Exception thrown during refresh", th);
+                                c1864.f6263.mo2584(th);
+                            }
+                        }
+                    }, C18466.m43012());
+                    if (interfaceFutureC14736M6392.isDone()) {
+                        try {
+                            objM44537 = C19212.m44537(interfaceFutureC14736M6392);
+                        } catch (Throwable unused) {
+                        }
+                    }
+                }
+                if (objM44537 != null) {
+                    return objM44537;
+                }
+            } catch (Throwable th) {
+                unlock();
+                m11022();
+                throw th;
+            }
+        }
+        return obj2;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final void m11021() {
+        if (tryLock()) {
+            try {
+                m11024();
+            } finally {
+                unlock();
             }
         }
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final void m9997() {
-        for (C1942 c1942 : this.f12406) {
-            if (c1942 != null) {
-                for (C9705 c9705 : c1942.f7326) {
-                    Bitmap bitmap = c9705.f32694;
-                    if (bitmap != null) {
-                        bitmap.recycle();
-                        c9705.f32694 = null;
+    /* JADX WARN: Code duplicated, block: B:47:0x0112 A[EDGE_INSN: B:47:0x0112->B:48:0x0115 BREAK  A[LOOP:3: B:26:0x00b6->B:41:0x0102]] */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m11024() {
+        int i = 0;
+        if (this.f10940.f20338 != EnumC4099.f13963) {
+            int i2 = 0;
+            do {
+                Object objPoll = this.f10951.poll();
+                if (objPoll == null) {
+                    break;
+                }
+                InterfaceC2213 interfaceC2213 = (InterfaceC2213) objPoll;
+                ConcurrentMapC5942 concurrentMapC5942 = this.f10940;
+                concurrentMapC5942.getClass();
+                int hash = interfaceC2213.getHash();
+                C3353 c3353M17297 = concurrentMapC5942.m17297(hash);
+                c3353M17297.lock();
+                try {
+                    AtomicReferenceArray atomicReferenceArray = c3353M17297.f10942;
+                    int length = hash & (atomicReferenceArray.length() - 1);
+                    InterfaceC2213 interfaceC2214 = (InterfaceC2213) atomicReferenceArray.get(length);
+                    for (InterfaceC2213 next = interfaceC2214; next != null; next = next.getNext()) {
+                        if (next == interfaceC2213) {
+                            c3353M17297.f10952++;
+                            InterfaceC2213 interfaceC2213M11011 = c3353M17297.m11011(interfaceC2214, next, next.getKey(), next.mo7552().get(), next.mo7552(), EnumC23842.f77216);
+                            int i3 = c3353M17297.f10953 - 1;
+                            atomicReferenceArray.set(length, interfaceC2213M11011);
+                            c3353M17297.f10953 = i3;
+                            break;
+                        }
+                    }
+                    c3353M17297.unlock();
+                    c3353M17297.m11022();
+                    i2++;
+                } catch (Throwable th) {
+                    c3353M17297.unlock();
+                    c3353M17297.m11022();
+                    throw th;
+                }
+            } while (i2 != 16);
+        }
+        if (this.f10940.f20347 != EnumC4099.f13963) {
+            do {
+                Object objPoll2 = this.f10949.poll();
+                if (objPoll2 == null) {
+                    return;
+                }
+                InterfaceC10064 interfaceC10064 = (InterfaceC10064) objPoll2;
+                ConcurrentMapC5942 concurrentMapC5943 = this.f10940;
+                concurrentMapC5943.getClass();
+                InterfaceC2213 entry = interfaceC10064.getEntry();
+                int hash2 = entry.getHash();
+                C3353 c3353M17298 = concurrentMapC5943.m17297(hash2);
+                Object key = entry.getKey();
+                c3353M17298.lock();
+                try {
+                    AtomicReferenceArray atomicReferenceArray2 = c3353M17298.f10942;
+                    int length2 = hash2 & (atomicReferenceArray2.length() - 1);
+                    InterfaceC2213 interfaceC2215 = (InterfaceC2213) atomicReferenceArray2.get(length2);
+                    InterfaceC2213 next2 = interfaceC2215;
+                    while (true) {
+                        if (next2 == null) {
+                            c3353M17298.unlock();
+                            if (!c3353M17298.isHeldByCurrentThread()) {
+                                c3353M17298.m11022();
+                                break;
+                            }
+                            break;
+                        }
+                        Object key2 = next2.getKey();
+                        if (next2.getHash() == hash2 && key2 != null && c3353M17298.f10940.f20336.m31910(key, key2)) {
+                            if (next2.mo7552() != interfaceC10064) {
+                                c3353M17298.unlock();
+                                if (!c3353M17298.isHeldByCurrentThread()) {
+                                    c3353M17298.m11022();
+                                    break;
+                                }
+                                break;
+                            }
+                            c3353M17298.f10952++;
+                            InterfaceC2213 interfaceC2213M11012 = c3353M17298.m11011(interfaceC2215, next2, key2, interfaceC10064.get(), interfaceC10064, EnumC23842.f77216);
+                            int i4 = c3353M17298.f10953 - 1;
+                            atomicReferenceArray2.set(length2, interfaceC2213M11012);
+                            c3353M17298.f10953 = i4;
+                            c3353M17298.unlock();
+                            if (!c3353M17298.isHeldByCurrentThread()) {
+                                c3353M17298.m11022();
+                                break;
+                            }
+                            break;
+                        }
+                        next2 = next2.getNext();
+                    }
+                    i++;
+                } catch (Throwable th2) {
+                    c3353M17298.unlock();
+                    if (!c3353M17298.isHeldByCurrentThread()) {
+                        c3353M17298.m11022();
+                    }
+                    throw th2;
+                }
+            } while (i != 16);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m11020(InterfaceC2213 interfaceC2213, long j) {
+        if (this.f10940.m17298()) {
+            interfaceC2213.mo7545(j);
+        }
+        this.f10941.add(interfaceC2213);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m11027(InterfaceC2213 interfaceC2213, long j) {
+        if (this.f10940.m17298()) {
+            interfaceC2213.mo7545(j);
+        }
+        this.f10950.add(interfaceC2213);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m11012() {
+        while (true) {
+            InterfaceC2213 interfaceC2213 = (InterfaceC2213) this.f10941.poll();
+            if (interfaceC2213 == null) {
+                return;
+            }
+            AbstractQueue abstractQueue = this.f10950;
+            if (abstractQueue.contains(interfaceC2213)) {
+                abstractQueue.add(interfaceC2213);
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m11013(long j) {
+        InterfaceC2213 interfaceC2213;
+        InterfaceC2213 interfaceC2214;
+        m11012();
+        do {
+            interfaceC2213 = (InterfaceC2213) this.f10943.peek();
+            ConcurrentMapC5942 concurrentMapC5942 = this.f10940;
+            if (interfaceC2213 == null || !concurrentMapC5942.m17296(interfaceC2213, j)) {
+                do {
+                    interfaceC2214 = (InterfaceC2213) this.f10950.peek();
+                    if (interfaceC2214 == null || !concurrentMapC5942.m17296(interfaceC2214, j)) {
+                        return;
+                    }
+                } while (m11018(interfaceC2214, interfaceC2214.getHash(), EnumC23842.f77214));
+                throw new AssertionError();
+            }
+        } while (m11018(interfaceC2213, interfaceC2213.getHash(), EnumC23842.f77214));
+        throw new AssertionError();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m11015(Object obj, Object obj2, int i, EnumC23842 enumC23842) {
+        this.f10944 -= (long) i;
+        if (enumC23842.mo29788()) {
+            this.f10947.mo17231();
+        }
+        ConcurrentMapC5942 concurrentMapC5942 = this.f10940;
+        if (concurrentMapC5942.f20339 != ConcurrentMapC5942.f20332) {
+            concurrentMapC5942.f20339.offer(new C20858(obj, obj2));
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m11016(InterfaceC2213 interfaceC2213) {
+        InterfaceC2213 interfaceC2214;
+        if (this.f10940.m17295()) {
+            m11012();
+            long jMo2148 = interfaceC2213.mo7552().mo2148();
+            long j = this.f10945;
+            if (jMo2148 > j && !m11018(interfaceC2213, interfaceC2213.getHash(), EnumC23842.f77215)) {
+                throw new AssertionError();
+            }
+            while (this.f10944 > j) {
+                Iterator it = this.f10950.iterator();
+                do {
+                    if (!it.hasNext()) {
+                        throw new AssertionError();
+                    }
+                    interfaceC2214 = (InterfaceC2213) it.next();
+                } while (interfaceC2214.mo7552().mo2148() <= 0);
+                if (!m11018(interfaceC2214, interfaceC2214.getHash(), EnumC23842.f77215)) {
+                    throw new AssertionError();
+                }
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2213 m11009(int i, Object obj) {
+        AtomicReferenceArray atomicReferenceArray = this.f10942;
+        for (InterfaceC2213 next = (InterfaceC2213) atomicReferenceArray.get((atomicReferenceArray.length() - 1) & i); next != null; next = next.getNext()) {
+            if (next.getHash() == i) {
+                Object key = next.getKey();
+                if (key == null) {
+                    m11021();
+                } else if (this.f10940.f20336.m31910(obj, key)) {
+                    return next;
+                }
+            }
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11006(InterfaceC2213 interfaceC2213, long j) {
+        if (interfaceC2213.getKey() == null) {
+            m11021();
+            return null;
+        }
+        Object obj = interfaceC2213.mo7552().get();
+        if (obj == null) {
+            m11021();
+            return null;
+        }
+        if (!this.f10940.m17296(interfaceC2213, j)) {
+            return obj;
+        }
+        if (!tryLock()) {
+            return null;
+        }
+        try {
+            m11013(j);
+            return null;
+        } finally {
+            unlock();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m11003(Object obj, int i, Object obj2, boolean z) {
+        int i2;
+        lock();
+        try {
+            long jMo37347 = this.f10940.f20353.mo37347();
+            m11025(jMo37347);
+            if (this.f10953 + 1 > this.f10946) {
+                m11019();
+            }
+            AtomicReferenceArray atomicReferenceArray = this.f10942;
+            int length = i & (atomicReferenceArray.length() - 1);
+            InterfaceC2213 interfaceC2213 = (InterfaceC2213) atomicReferenceArray.get(length);
+            for (InterfaceC2213 next = interfaceC2213; next != null; next = next.getNext()) {
+                Object key = next.getKey();
+                if (next.getHash() == i && key != null && this.f10940.f20336.m31910(obj, key)) {
+                    InterfaceC10064 interfaceC10064Mo7552 = next.mo7552();
+                    Object obj3 = interfaceC10064Mo7552.get();
+                    if (obj3 != null) {
+                        if (z) {
+                            m11027(next, jMo37347);
+                        } else {
+                            this.f10952++;
+                            m11015(obj, obj3, interfaceC10064Mo7552.mo2148(), EnumC23842.f77212);
+                            m11017(next, obj, obj2, jMo37347);
+                            m11016(next);
+                        }
+                        return obj3;
+                    }
+                    this.f10952++;
+                    if (interfaceC10064Mo7552.mo2147()) {
+                        m11015(obj, obj3, interfaceC10064Mo7552.mo2148(), EnumC23842.f77216);
+                        m11017(next, obj, obj2, jMo37347);
+                        i2 = this.f10953;
+                    } else {
+                        m11017(next, obj, obj2, jMo37347);
+                        i2 = this.f10953 + 1;
+                    }
+                    this.f10953 = i2;
+                    m11016(next);
+                    return null;
+                }
+            }
+            this.f10952++;
+            InterfaceC2213 interfaceC2213Mo5196 = this.f10940.f20351.mo5196(this, obj, i, interfaceC2213);
+            m11017(interfaceC2213Mo5196, obj, obj2, jMo37347);
+            atomicReferenceArray.set(length, interfaceC2213Mo5196);
+            this.f10953++;
+            m11016(interfaceC2213Mo5196);
+            return null;
+        } finally {
+            unlock();
+            m11022();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m11019() {
+        AtomicReferenceArray atomicReferenceArray = this.f10942;
+        int length = atomicReferenceArray.length();
+        if (length >= 1073741824) {
+            return;
+        }
+        int i = this.f10953;
+        AtomicReferenceArray atomicReferenceArray2 = new AtomicReferenceArray(length << 1);
+        this.f10946 = (atomicReferenceArray2.length() * 3) / 4;
+        int length2 = atomicReferenceArray2.length() - 1;
+        for (int i2 = 0; i2 < length; i2++) {
+            InterfaceC2213 next = (InterfaceC2213) atomicReferenceArray.get(i2);
+            if (next != null) {
+                InterfaceC2213 next2 = next.getNext();
+                int hash = next.getHash() & length2;
+                if (next2 == null) {
+                    atomicReferenceArray2.set(hash, next);
+                } else {
+                    InterfaceC2213 interfaceC2213 = next;
+                    while (next2 != null) {
+                        int hash2 = next2.getHash() & length2;
+                        if (hash2 != hash) {
+                            interfaceC2213 = next2;
+                            hash = hash2;
+                        }
+                        next2 = next2.getNext();
+                    }
+                    atomicReferenceArray2.set(hash, interfaceC2213);
+                    while (next != interfaceC2213) {
+                        int hash3 = next.getHash() & length2;
+                        InterfaceC2213 interfaceC2213M11010 = m11010(next, (InterfaceC2213) atomicReferenceArray2.get(hash3));
+                        if (interfaceC2213M11010 != null) {
+                            atomicReferenceArray2.set(hash3, interfaceC2213M11010);
+                        } else {
+                            m11026(next);
+                            i--;
+                        }
+                        next = next.getNext();
                     }
                 }
             }
         }
-        this.f12416 = 0;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C14644 m10006() {
-        return (C14644) C3012.m8974(1, this.f12405);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        return obj != null && C3353.class == obj.getClass() && this.f12423 == ((C3353) obj).f12423;
-    }
-
-    public final int hashCode() {
-        return this.f12423;
+        this.f10942 = atomicReferenceArray2;
+        this.f10953 = i;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10002(C11018 c11018) {
-        c11018.writeInt(this.f12423);
-        List<C14644> list = this.f12405;
-        c11018.writeInt(list.size());
-        for (C14644 c14644 : list) {
-            c11018.writeInt(c14644.f47888);
-            c11018.m27786(c14644.f47887);
-        }
-        HashSet hashSet = this.f12404;
-        c11018.writeInt(hashSet.size());
-        Iterator it = hashSet.iterator();
-        while (it.hasNext()) {
-            c11018.m27786((String) it.next());
-        }
-        C0158 c0158 = new C0158();
-        ArrayList<C1942> arrayList = this.f12406;
-        for (C1942 c1942 : arrayList) {
-            if (c1942 != null) {
-                Iterator it2 = c1942.f7326.iterator();
-                while (it2.hasNext()) {
-                    c0158.m1260(((C9705) it2.next()).f32693);
+    public final void m11014(Object obj, int i, C1862 c1862, Object obj2) {
+        lock();
+        try {
+            long jMo37347 = this.f10940.f20353.mo37347();
+            m11025(jMo37347);
+            int i2 = this.f10953 + 1;
+            if (i2 > this.f10946) {
+                m11019();
+                i2 = this.f10953 + 1;
+            }
+            AtomicReferenceArray atomicReferenceArray = this.f10942;
+            int length = i & (atomicReferenceArray.length() - 1);
+            InterfaceC2213 interfaceC2213 = (InterfaceC2213) atomicReferenceArray.get(length);
+            for (InterfaceC2213 next = interfaceC2213; next != null; next = next.getNext()) {
+                Object key = next.getKey();
+                if (next.getHash() == i && key != null && this.f10940.f20336.m31910(obj, key)) {
+                    InterfaceC10064 interfaceC10064Mo7552 = next.mo7552();
+                    Object obj3 = interfaceC10064Mo7552.get();
+                    if (c1862 == interfaceC10064Mo7552 || (obj3 == null && interfaceC10064Mo7552 != ConcurrentMapC5942.f20334)) {
+                        this.f10952++;
+                        if (c1862.f6265.mo2147()) {
+                            m11015(obj, obj3, c1862.f6265.mo2148(), obj3 == null ? EnumC23842.f77216 : EnumC23842.f77212);
+                            i2--;
+                        }
+                        m11017(next, obj, obj2, jMo37347);
+                        this.f10953 = i2;
+                        m11016(next);
+                    } else {
+                        m11015(obj, obj2, 0, EnumC23842.f77212);
+                    }
                 }
             }
+            this.f10952++;
+            EnumC4845 enumC4845 = this.f10940.f20351;
+            obj.getClass();
+            InterfaceC2213 interfaceC2213Mo5196 = enumC4845.mo5196(this, obj, i, interfaceC2213);
+            m11017(interfaceC2213Mo5196, obj, obj2, jMo37347);
+            atomicReferenceArray.set(length, interfaceC2213Mo5196);
+            this.f10953 = i2;
+            m11016(interfaceC2213Mo5196);
+        } finally {
+            unlock();
+            m11022();
         }
-        c0158.m1258(c11018);
-        c11018.writeInt(arrayList.size());
-        for (C1942 c1943 : arrayList) {
-            if (c1943 == null) {
-                c11018.writeInt(-1);
-            } else {
-                ArrayList<C9705> arrayList2 = c1943.f7326;
-                c11018.writeInt(arrayList2.size());
-                for (C9705 c9705 : arrayList2) {
-                    c11018.writeByte(c0158.m1256(c9705.f32693));
-                    c11018.writeInt(c9705.f32696);
-                    c11018.m27778(c9705.f32695);
-                }
-            }
-        }
-        c11018.writeByte(this.f12418 ? (byte) 1 : (byte) 0);
-        c11018.writeInt(this.f12424);
-        c11018.m27778(this.f12419);
-        c11018.m27778(this.f12411);
-        c11018.m27778(this.f12422);
-        c11018.m27778(this.f12417);
-        c11018.writeByte(this.f12415 ? (byte) 1 : (byte) 0);
-        c11018.m27778(this.f12410);
-        c11018.m27778(this.f12421);
-        c11018.m27778(this.f12413);
-        c11018.m27778(this.f12408);
-        c11018.writeInt(this.f12414);
     }
 
-    public C3353(C11697 c11697, C17367 c17367) {
-        this.f12414 = -1;
-        this.f12420 = new RectF();
-        this.f12407 = C20368.m45991();
-        this.f12416 = 0;
-        this.f12409 = new Matrix();
-        this.f12412 = c11697;
-        this.f12423 = c17367.readInt();
-        int i = c17367.readInt();
-        this.f12405 = new ArrayList(i);
-        for (int i2 = 0; i2 < i; i2++) {
-            this.f12405.add(new C14644(c17367.readInt(), c17367.m40458()));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2213 m11011(InterfaceC2213 interfaceC2213, InterfaceC2213 interfaceC2214, Object obj, Object obj2, InterfaceC10064 interfaceC10064, EnumC23842 enumC23842) {
+        m11015(obj, obj2, interfaceC10064.mo2148(), enumC23842);
+        this.f10943.remove(interfaceC2214);
+        this.f10950.remove(interfaceC2214);
+        if (interfaceC10064.mo2146()) {
+            interfaceC10064.mo2145(null);
+            return interfaceC2213;
         }
-        int i3 = c17367.readInt();
-        this.f12404 = new HashSet(i3);
-        for (int i4 = 0; i4 < i3; i4++) {
-            this.f12404.add(c17367.m40458());
-        }
-        C0158 c0158 = new C0158();
-        c0158.m1259(c17367);
-        int i5 = c17367.readInt();
-        this.f12406 = new ArrayList(i5);
-        for (int i6 = 0; i6 < i5; i6++) {
-            int i7 = c17367.readInt();
-            if (i7 == -1) {
-                this.f12406.add(null);
+        return m11023(interfaceC2213, interfaceC2214);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2213 m11023(InterfaceC2213 interfaceC2213, InterfaceC2213 interfaceC2214) {
+        int i = this.f10953;
+        InterfaceC2213 next = interfaceC2214.getNext();
+        while (interfaceC2213 != interfaceC2214) {
+            InterfaceC2213 interfaceC2213M11010 = m11010(interfaceC2213, next);
+            if (interfaceC2213M11010 != null) {
+                next = interfaceC2213M11010;
             } else {
-                C1942 c1942 = new C1942();
-                c1942.f7326.ensureCapacity(i7);
-                for (int i8 = 0; i8 < i7; i8++) {
-                    C9705 c9705 = new C9705(c17367.readInt(), c0158.m1257(c17367.readByte() & 255));
-                    c9705.f32695 = c17367.m40450();
-                    c1942.f7326.add(c9705);
-                }
-                this.f12406.add(c1942);
+                m11026(interfaceC2213);
+                i--;
+            }
+            interfaceC2213 = interfaceC2213.getNext();
+        }
+        this.f10953 = i;
+        return next;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m11026(InterfaceC2213 interfaceC2213) {
+        Object key = interfaceC2213.getKey();
+        interfaceC2213.getHash();
+        m11015(key, interfaceC2213.mo7552().get(), interfaceC2213.mo7552().mo2148(), EnumC23842.f77216);
+        this.f10943.remove(interfaceC2213);
+        this.f10950.remove(interfaceC2213);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m11018(InterfaceC2213 interfaceC2213, int i, EnumC23842 enumC23842) {
+        AtomicReferenceArray atomicReferenceArray = this.f10942;
+        int length = i & (atomicReferenceArray.length() - 1);
+        InterfaceC2213 interfaceC2214 = (InterfaceC2213) atomicReferenceArray.get(length);
+        for (InterfaceC2213 next = interfaceC2214; next != null; next = next.getNext()) {
+            if (next == interfaceC2213) {
+                this.f10952++;
+                InterfaceC2213 interfaceC2213M11011 = m11011(interfaceC2214, next, next.getKey(), next.mo7552().get(), next.mo7552(), enumC23842);
+                int i2 = this.f10953 - 1;
+                atomicReferenceArray.set(length, interfaceC2213M11011);
+                this.f10953 = i2;
+                return true;
             }
         }
-        this.f12418 = c17367.readByte() != 0;
-        this.f12424 = c17367.readInt();
-        this.f12419 = c17367.m40450();
-        this.f12411 = c17367.m40450();
-        this.f12422 = c17367.m40450();
-        this.f12417 = c17367.m40450();
-        this.f12415 = c17367.readByte() != 0;
-        this.f12410 = c17367.m40450();
-        this.f12421 = c17367.m40450();
-        this.f12413 = c17367.m40450();
-        this.f12408 = c17367.m40450();
-        this.f12414 = c17367.readInt();
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m11028() {
+        if ((this.f10948.incrementAndGet() & 63) == 0) {
+            m11025(this.f10940.f20353.mo37347());
+            m11022();
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m11025(long j) {
+        if (tryLock()) {
+            try {
+                m11024();
+                m11013(j);
+                this.f10948.set(0);
+            } finally {
+                unlock();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m11022() {
+        if (isHeldByCurrentThread()) {
+            return;
+        }
+        while (true) {
+            ConcurrentMapC5942 concurrentMapC5942 = this.f10940;
+            C20858 c20858 = (C20858) concurrentMapC5942.f20339.poll();
+            if (c20858 == null) {
+                return;
+            }
+            try {
+                concurrentMapC5942.f20348.mo12024(c20858);
+            } catch (Throwable th) {
+                ConcurrentMapC5942.f20333.log(Level.WARNING, "Exception thrown by removal listener", th);
+            }
+        }
     }
 }

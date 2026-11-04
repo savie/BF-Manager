@@ -14,7 +14,7 @@ import org.bouncycastle.asn1.DERIA5String;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CrlID extends ASN1Object {
     public ASN1Integer crlNum;
     public ASN1GeneralizedTime crlTime;

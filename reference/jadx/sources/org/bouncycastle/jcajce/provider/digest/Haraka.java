@@ -1,12 +1,12 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.digests.Haraka256Digest;
 import org.bouncycastle.crypto.digests.Haraka512Digest;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Haraka {
 
     public class Digest256 extends BCMessageDigest implements Cloneable {
@@ -35,7 +35,6 @@ public class Haraka {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = Haraka.class.getName();
 
@@ -43,7 +42,7 @@ public class Haraka {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$Digest512", "MessageDigest.HARAKA-512", C9023.m23357(str, "$Digest256", "MessageDigest.HARAKA-256", sb, configurableProvider), configurableProvider);
+            C8947.m23913(str, "$Digest512", "MessageDigest.HARAKA-512", C18063.m42089(str, "$Digest256", "MessageDigest.HARAKA-256", sb, configurableProvider), configurableProvider);
         }
     }
 }

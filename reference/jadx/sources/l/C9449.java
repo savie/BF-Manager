@@ -1,41 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ۟᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 75TB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9449 {
+/* JADX INFO: renamed from: l.ۡܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M5U2 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9449 extends C25049 {
+    @Override // l.C25049
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC17589 mo14568() {
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f31963;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f31964;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f31965;
-
-    public C9449(String str, String str2, String str3) {
-        this.f31965 = str;
-        this.f31964 = str3;
-        this.f31963 = str2;
+    @Override // l.C25049
+    /* JADX INFO: renamed from: ۙ */
+    public final C25049 mo14569(Object obj, Object obj2) {
+        super.mo14569(obj, obj2);
+        return this;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m24202() {
-        return this.f31963;
+    public final void m24829(Integer num, String str) {
+        super.mo14569((Object) num, (Object) str);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m24204() {
-        return this.f31965;
+    public C9449() {
+        super(4);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m24203() {
-        return this.f31964;
-    }
-
-    public final String toString() {
-        return this.f31965 + "->" + this.f31963 + ":" + this.f31964;
+    @Override // l.C25049
+    /* JADX INFO: renamed from: ᩷ */
+    public final AbstractC8704 mo14570() {
+        if (this.f81024 == 0) {
+            return C13532.f42996;
+        }
+        return new C13532(this.f81024, this.f81023);
     }
 }

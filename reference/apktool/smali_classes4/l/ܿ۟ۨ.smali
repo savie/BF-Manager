@@ -1,23 +1,36 @@
-.class public interface abstract annotation Ll/ܿ۟ۨ;
+.class public final Ll/ܿ۟ۨ;
 .super Ljava/lang/Object;
-.source "4APJ"
-
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
+.source "M7S7"
 
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+# instance fields
+.field public final ۙ:I
 
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->PACKAGE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->ANNOTATION_TYPE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+.field public final ۤ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:I
+
+
+# direct methods
+.method public constructor <init>(IIII)V
+    .locals 0
+
+    .line 488
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 490
+    iput p1, p0, Ll/ܿ۟ۨ;->ۙ:I
+
+    .line 491
+    iput p2, p0, Ll/ܿ۟ۨ;->᩷:I
+
+    .line 492
+    iput p3, p0, Ll/ܿ۟ۨ;->ۤ:I
+
+    .line 493
+    iput p4, p0, Ll/ܿ۟ۨ;->᩸:I
+
+    return-void
+.end method

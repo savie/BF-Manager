@@ -13,7 +13,7 @@ import org.bouncycastle.crypto.params.RSAKeyParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.KeyUtil;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JCERSAPublicKey implements RSAPublicKey {
     public static final long serialVersionUID = 2675817738516720772L;
     public BigInteger modulus;

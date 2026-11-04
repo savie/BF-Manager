@@ -1,170 +1,154 @@
 package l;
 
-import android.util.Xml;
-import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
+import android.widget.TextView;
+import bin.mt.plus.Main;
+import bin.mt.plus.R;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Stack;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-import org.simpleframework.xml.stream.DocumentReader;
-import org.xmlpull.v1.XmlPullParser;
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۘܺ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: O5NZ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4052 {
+/* JADX INFO: renamed from: l.ۘۡܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L5KK */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4052 extends AbstractViewOnClickListenerC8526 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f14950;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public static final C17930 f13791 = new C17930();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final ArrayList f14951 = new ArrayList();
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public static final C17930 f13792 = new C17930();
 
-    static {
-        m11556("png", "89 50 4E 47");
-        m11556("jpg", "FF D8 FF");
-        m11556("gif", "47 49 46 38");
-        m11556("webp", "52 49 46 46 ?? ?? ?? ?? 57 45 42 50 56 50 38");
-        m11556("bmp", "42 4D");
-        m11556("bmp", "42 41");
-        m11556("bmp", "43 49");
-        m11556("bmp", "43 50");
-        m11556("bmp", "49 43");
-        m11556("bmp", "50 54");
-        m11556("mp4", "00 00 00 ?? 66 74 79 70 69 73 6F 36");
-        m11556("mp4", "00 00 00 ?? 66 74 79 70 6D 70 34 32");
-        m11556("m4a", "00 00 00 ?? 66 74 79 70 4D 34 41 20");
-        m11556("mp3", "49 44 33");
-        m11556("ogg", "4F 67 67 53");
-        m11556("wav", "52 49 46 46 ?? ?? ?? ?? 57 41 56 45");
-        m11556("ttf", "00 01 00 00");
-        m11556("ttc", "74 74 63 66");
-        m11556("otf", "4F 54 54 4F");
-        f14950 = Pattern.compile("\\s*<!doctype *(\\w+)[ >]", 2);
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final Set f13793;
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    public C4052(Main main, final C9271 c9271) {
+        String strM49088 = C21576.m49088(R.string.MT_Protector);
+        super(main, strM49088, strM49088, c9271);
+        this.f13793 = C4681.synchronizedSet(Collections.newSetFromMap(new IdentityHashMap()));
+        if (C17423.f56657) {
+            m13031();
+        }
+        C22961.m51799(main, new C17476(0, this, c9271));
+        f13792.m40350(main, new InterfaceC16438() { // from class: l.ܶۡܳ
+            @Override // l.InterfaceC16438
+            /* JADX INFO: renamed from: ۙ */
+            public final void mo1486(Object obj) {
+                C4052.m13030(this.f51898, c9271);
+            }
+        });
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m13032(C4052 c4052, C9271 c9271) {
+        if (C17423.f56657) {
+            c4052.m13031();
+            c9271.notifyDataSetChanged();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m11554(int i, byte[] bArr) {
-        return (bArr[i + 3] & 255) | (bArr[i] << 24) | ((bArr[i + 1] & 255) << 16) | ((bArr[i + 2] & 255) << 8);
+    public static /* synthetic */ void m13030(C4052 c4052, C9271 c9271) {
+        if (C17423.f56657) {
+            c4052.m13031();
+            c9271.notifyDataSetChanged();
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m11555(byte[] bArr) {
-        String lowerCase = "plist";
-        Iterator it = f14951.iterator();
-        while (true) {
-            if (it.hasNext()) {
-                C1230 c1230 = (C1230) it.next();
-                if (C1230.m4429(c1230, bArr)) {
-                    lowerCase = c1230.f5393;
-                    break;
-                }
+    @Override // l.AbstractViewOnClickListenerC8526
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int mo13033() {
+        if (C17423.f56657) {
+            return super.mo13033();
+        }
+        return 0;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private void m13031() {
+        ArrayList arrayList = this.f27858;
+        arrayList.clear();
+        C5061 c5061M51808 = C22961.m51808();
+        int iM15315 = c5061M51808.m15315();
+        for (int i = 0; i < iM15315; i++) {
+            arrayList.add(new C6290(this, this.f22654, c5061M51808.m15320(i)));
+        }
+    }
+
+    @Override // l.AbstractViewOnClickListenerC8526
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3565(AbstractViewOnLongClickListenerC5544 abstractViewOnLongClickListenerC5544, int i) {
+        final C24190 c24190 = (C24190) abstractViewOnLongClickListenerC5544;
+        C6290 c6290 = (C6290) this.f27858.get(i);
+        c24190.f78336 = c6290;
+        C3034 c3034 = c24190.f19265;
+        TextView textView = c24190.f19262;
+        c24190.f19266.setText(c6290.f21355.m25122());
+        C8877 c8877M25121 = c6290.f21355.m25121();
+        if (c8877M25121 == null) {
+            textView.setText(c6290.f21355.m25117());
+        } else {
+            AbstractC0148 abstractC0148M20792 = C7606.m20792(c8877M25121.m23755());
+            if (abstractC0148M20792 == null) {
+                textView.setText("error " + c6290.f21355.m25117());
             } else {
-                String str = new String(bArr, StandardCharsets.UTF_8);
-                if (str.startsWith("-----BEGIN CERTIFICATE-----")) {
-                    lowerCase = "cer";
-                    break;
-                }
-                if (str.startsWith("-----BEGIN PRIVATE KEY-----")) {
-                    lowerCase = "key";
-                    break;
-                }
-                if (C6851.m18466("<html>", str)) {
-                    lowerCase = "html";
-                    break;
-                }
-                Matcher matcher = f14950.matcher(str);
-                if (matcher.lookingAt()) {
-                    lowerCase = matcher.group(1).toLowerCase();
-                    break;
-                }
-                try {
-                    XmlPullParser xmlPullParserNewPullParser = Xml.newPullParser();
-                    xmlPullParserNewPullParser.setInput(new StringReader(str));
-                    Stack stack = new Stack();
-                    C13226 c13226 = null;
-                    while (true) {
-                        int next = xmlPullParserNewPullParser.next();
-                        if (next == 1) {
-                            break;
-                        }
-                        if (next == 2) {
-                            C13226 c13227 = new C13226(xmlPullParserNewPullParser.getName());
-                            if (c13226 == null) {
-                                c13226 = c13227;
-                            } else {
-                                ((C13226) stack.peek()).f43979.add(c13227);
-                            }
-                            stack.push(c13227);
-                        } else if (next == 3) {
-                            stack.pop();
-                        }
-                    }
-                    if (c13226 != null) {
-                        String str2 = c13226.f43980;
-                        if (!str2.equals("svg")) {
-                            if (!str2.equals("plist")) {
-                                if (!str2.equals("kml") && ((!str2.equals("Placemark") || !c13226.m32712()) && (!str2.equals("Folder") || !c13226.m32710()))) {
-                                    if (str2.equals("Document") && c13226.m32711("name")) {
-                                        Iterator it2 = c13226.f43979.iterator();
-                                        while (true) {
-                                            if (it2.hasNext()) {
-                                                C13226 c13228 = (C13226) it2.next();
-                                                if (!c13228.f43980.equals("Placemark") || !c13228.m32712()) {
-                                                }
-                                            }
-                                        }
-                                    }
-                                    lowerCase = DocumentReader.RESERVED;
-                                    break;
-                                }
-                                lowerCase = "kml";
-                                break;
-                            }
-                            break;
-                        }
-                        lowerCase = "svg";
-                        break;
-                    }
-                    try {
-                        Object objNextValue = new JSONTokener(str).nextValue();
-                        if (!(objNextValue instanceof JSONObject) && !(objNextValue instanceof JSONArray)) {
-                            lowerCase = null;
-                            break;
-                        }
-                        lowerCase = "json";
-                        break;
-                    } catch (Throwable unused) {
-                    }
-                } catch (Exception unused2) {
-                }
+                textView.setText(abstractC0148M20792.mo1332() + c6290.f21355.m25117());
             }
         }
-        if (lowerCase != null && lowerCase.equals("png")) {
-            int i = 8;
-            while (bArr.length - i >= 8) {
-                int iM11554 = m11554(i, bArr);
-                int iM11555 = m11554(i + 4, bArr);
-                int i2 = i + 8;
-                if (iM11555 == 1852855395) {
-                    return ".9.png";
-                }
-                i = i2 + iM11554 + 4;
+        c3034.setTag(c6290.f21355);
+        c3034.m9864(c6290.m17972());
+        if (c6290.f21355.m25121() == null && c6290.f21355.m25104() == null) {
+            final C9622 c9622 = c6290.f21355;
+            if (this.f13793.add(c9622)) {
+                final String strM25117 = c9622.m25117();
+                C5261.f18540.execute(new Runnable() { // from class: l.᩵ۡܳ
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        C4052.m13029(this.f65553, strM25117, c24190, c9622);
+                    }
+                });
             }
         }
-        if (lowerCase != null) {
-            return ".".concat(lowerCase);
-        }
-        return null;
+        c24190.itemView.setOnClickListener(c6290);
+        this.f27860.m24477((AbstractViewOnLongClickListenerC5544) c24190);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11556(String str, String str2) {
-        f14951.add(new C1230(str, str2));
+    public static void m13029(final C4052 c4052, final String str, final C24190 c24190, final C9622 c9622) {
+        C20613 c20613M23976;
+        Set set = c4052.f13793;
+        try {
+            try {
+                AbstractC22044 abstractC22044M35193 = C14584.m35193(str, new String[0]);
+                if (!abstractC22044M35193.mo2934()) {
+                    c20613M23976 = C8969.m23952(str, true).m23976();
+                } else {
+                    c20613M23976 = C13461.f42854.mo3626(new C6004(abstractC22044M35193));
+                }
+            } catch (RuntimeException unused) {
+                c20613M23976 = C8969.m23952(str, true).m23976();
+            }
+            final C20613 c20613 = c20613M23976;
+            C21576.m49068(new Runnable() { // from class: l.ۨۡܳ
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f39418.getClass();
+                    C9622 c9623 = c9622;
+                    if (str.equals(c9623.m25117())) {
+                        C20613 c20614 = c20613;
+                        c9623.m25113(c20614);
+                        C24190 c24191 = c24190;
+                        C6290 c6290 = c24191.f78336;
+                        C3034 c3034 = c24191.f19265;
+                        if (c6290 != null && c24191.f78336.f21355 == c9623 && c3034.getTag() == c9623) {
+                            c3034.m9864(c20614.f66117);
+                        }
+                    }
+                }
+            });
+        } finally {
+            set.remove(c9622);
+        }
     }
 }

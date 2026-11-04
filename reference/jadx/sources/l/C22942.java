@@ -1,36 +1,84 @@
 package l;
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
-/* JADX INFO: renamed from: l.᩺ۧۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V8VP */
+/* JADX INFO: renamed from: l.᩸ܽܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O7SL */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22942 implements TextWatcher {
+public final class C22942 extends AbstractC11007 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18002 f74572;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final AtomicReferenceFieldUpdater f74545 = AtomicReferenceFieldUpdater.newUpdater(C5788.class, Thread.class, "᩷");
 
-    @Override // android.text.TextWatcher
-    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final AtomicReferenceFieldUpdater f74542 = AtomicReferenceFieldUpdater.newUpdater(C5788.class, C5788.class, "ۙ");
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final AtomicReferenceFieldUpdater f74543 = AtomicReferenceFieldUpdater.newUpdater(AbstractC2059.class, C5788.class, "ܿ");
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final AtomicReferenceFieldUpdater f74541 = AtomicReferenceFieldUpdater.newUpdater(AbstractC2059.class, C7257.class, "ܰ");
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final AtomicReferenceFieldUpdater f74544 = AtomicReferenceFieldUpdater.newUpdater(AbstractC2059.class, Object.class, "᩶");
+
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo27856(C5788 c5788, Thread thread) {
+        f74545.lazySet(c5788, thread);
     }
 
-    @Override // android.text.TextWatcher
-    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo27857(C5788 c5788, C5788 c5789) {
+        f74542.lazySet(c5788, c5789);
     }
 
-    public C22942(C18002 c18002) {
-        this.f74572 = c18002;
-    }
-
-    @Override // android.text.TextWatcher
-    public final void afterTextChanged(Editable editable) {
-        C18002 c18002 = this.f74572;
-        if (c18002.m41930()) {
-            c18002.f57583.m26207();
-            c18002.f57574.m26207();
-            c18002.f57572.removeMessages(0);
-            c18002.f57572.sendEmptyMessageDelayed(0, 100L);
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo27859(AbstractC2059 abstractC2059, C5788 c5788, C5788 c5789) {
+        AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f74543;
+        while (!atomicReferenceFieldUpdater.compareAndSet(abstractC2059, c5788, c5789)) {
+            if (atomicReferenceFieldUpdater.get(abstractC2059) != c5788) {
+                return false;
+            }
         }
+        return true;
+    }
+
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo27860(AbstractC2059 abstractC2059, C7257 c7257, C7257 c7258) {
+        AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f74541;
+        while (!atomicReferenceFieldUpdater.compareAndSet(abstractC2059, c7257, c7258)) {
+            if (atomicReferenceFieldUpdater.get(abstractC2059) != c7257) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final C7257 mo27855(AbstractC2059 abstractC2059, C7257 c7257) {
+        return (C7257) f74541.getAndSet(abstractC2059, c7257);
+    }
+
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final C5788 mo27854(AbstractC2059 abstractC2059, C5788 c5788) {
+        return (C5788) f74543.getAndSet(abstractC2059, c5788);
+    }
+
+    @Override // l.AbstractC11007
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo27858(AbstractC2059 abstractC2059, Object obj, Object obj2) {
+        AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f74544;
+        while (!atomicReferenceFieldUpdater.compareAndSet(abstractC2059, obj, obj2)) {
+            if (atomicReferenceFieldUpdater.get(abstractC2059) != obj) {
+                return false;
+            }
+        }
+        return true;
     }
 }

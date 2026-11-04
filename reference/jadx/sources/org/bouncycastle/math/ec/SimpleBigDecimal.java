@@ -1,7 +1,7 @@
 package org.bouncycastle.math.ec;
 
 import java.math.BigInteger;
-import l.C16523;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class SimpleBigDecimal {
@@ -147,6 +147,6 @@ public class SimpleBigDecimal {
         for (int i3 = 0; i3 < length; i3++) {
             cArr[i + i3] = string2.charAt(i3);
         }
-        return C16523.m38890(string, ".", new String(cArr));
+        return C14442.m34865(string, ".", new String(cArr));
     }
 }

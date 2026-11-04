@@ -1,36 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ۛᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes2.dex */
-public final enum C1641 extends EnumC21210 {
-    public /* synthetic */ C1641() {
-        this("Data", 0);
+import android.widget.TextView;
+
+/* JADX INFO: renamed from: l.֫ۗܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7HV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1641 extends AbstractC1778 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC12081 f5673;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ TextView f5674;
+
+    public C1641(ActivityC12081 activityC12081, TextView textView) {
+        this.f5673 = activityC12081;
+        this.f5674 = textView;
     }
 
-    public C1641(String str, int i) {
-        super(str, i, 0);
+    @Override // l.AbstractC1778
+    public final void onChanged() {
+        this.f5674.setVisibility(this.f5673.f38897.isEmpty() ? 0 : 8);
     }
 
-    @Override // l.EnumC21210
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        char cM32027 = c12931.m32027();
-        if (cM32027 == 0) {
-            c20692.m46542(this);
-            c20692.m46535(c12931.m32033());
-        } else {
-            if (cM32027 == '&') {
-                c20692.m46538(EnumC21210.f69027);
-                return;
-            }
-            if (cM32027 == '<') {
-                c20692.m46538(EnumC21210.f69083);
-            } else if (cM32027 == 65535) {
-                c20692.m46537(new C18575());
-            } else {
-                c20692.m46536(c12931.m32030());
-            }
-        }
+    @Override // l.AbstractC1778
+    public final void onItemRangeChanged(int i, int i2) {
+        onChanged();
+    }
+
+    @Override // l.AbstractC1778
+    public final void onItemRangeChanged(int i, int i2, Object obj) {
+        onChanged();
+    }
+
+    @Override // l.AbstractC1778
+    public final void onItemRangeInserted(int i, int i2) {
+        onChanged();
+    }
+
+    @Override // l.AbstractC1778
+    public final void onItemRangeRemoved(int i, int i2) {
+        onChanged();
+    }
+
+    @Override // l.AbstractC1778
+    public final void onItemRangeMoved(int i, int i2, int i3) {
+        onChanged();
     }
 }

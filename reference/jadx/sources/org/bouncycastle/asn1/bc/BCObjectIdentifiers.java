@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.bc;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface BCObjectIdentifiers {
     public static final ASN1ObjectIdentifier bc;
     public static final ASN1ObjectIdentifier bc_exch;

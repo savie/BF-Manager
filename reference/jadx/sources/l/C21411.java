@@ -1,15 +1,16 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۜ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: EA25 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21411 extends C17883 {
-    static {
-        C13488.m32998(C21411.class.getName());
+/* JADX INFO: renamed from: l.᩶ܶ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5SO */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C21411 extends C13951 implements InterfaceC15970 {
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final void add(Object obj) {
+        throw new UnsupportedOperationException();
     }
 
-    public final String toString() {
-        C17214.m40152(2048, "[Status for ").append(((InterfaceC14543) m41505()).toString());
-        throw null;
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final void set(Object obj) {
+        throw new UnsupportedOperationException();
     }
 }

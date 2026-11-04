@@ -1,15 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ۫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O91I */
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicIntegerArray;
+
+/* JADX INFO: renamed from: l.ۙۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4649 implements InterfaceC4774 {
-    @Override // l.InterfaceC4774
+public class C4649 extends AbstractC17567 {
+    @Override // l.AbstractC17567
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo6311(C18410 c18410, InterfaceC9239 interfaceC9239) {
-        if (EnumC20297.BULLET == AbstractC16769.f53673.m34277(interfaceC9239)) {
-            return new C5355(c18410.m42692(), ((Integer) AbstractC16769.f53672.m34277(interfaceC9239)).intValue());
+    public final void mo3723(C21362 c21362, Object obj) throws IOException {
+        AtomicIntegerArray atomicIntegerArray = (AtomicIntegerArray) obj;
+        c21362.m48585();
+        int length = atomicIntegerArray.length();
+        for (int i = 0; i < length; i++) {
+            c21362.m48601(atomicIntegerArray.get(i));
         }
-        return new C21583(c18410.m42692(), String.valueOf(AbstractC16769.f53677.m34277(interfaceC9239)), (InterfaceC0540) AbstractC16769.f53670.m34277(interfaceC9239));
+        c21362.m48594();
+    }
+
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        ArrayList arrayList = new ArrayList();
+        c4208.m13441();
+        while (c4208.m13457()) {
+            try {
+                arrayList.add(Integer.valueOf(c4208.m13455()));
+            } catch (NumberFormatException e) {
+                throw new C7367(e);
+            }
+        }
+        c4208.m13449();
+        int size = arrayList.size();
+        AtomicIntegerArray atomicIntegerArray = new AtomicIntegerArray(size);
+        for (int i = 0; i < size; i++) {
+            atomicIntegerArray.set(i, ((Integer) arrayList.get(i)).intValue());
+        }
+        return atomicIntegerArray;
     }
 }

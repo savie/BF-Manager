@@ -1,338 +1,146 @@
 .class public final Ll/֨ᩴ᩵;
-.super Ll/ܳᩳ᩵;
-.source "L2E6"
+.super Ljava/lang/Object;
+.source "GISE"
 
 
 # instance fields
-.field public final ܰ:Ljava/util/EnumSet;
+.field public final ۙ:Ll/᩹ۡۗ;
+
+.field public final ᩷:Ll/ܿۡۗ;
 
 
 # direct methods
-.method public varargs constructor <init>([Ll/᩹ᩴ᩵;)V
-    .locals 2
+.method public constructor <init>(Ll/ܿۡۗ;Ll/᩹ۡۗ;)V
+    .locals 0
 
-    .line 56
-    invoke-direct {p0}, Ll/ܳᩳ᩵;-><init>()V
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    array-length v0, p1
+    .line 13
+    iput-object p1, p0, Ll/֨ᩴ᩵;->᩷:Ll/ܿۡۗ;
 
-    if-lez v0, :cond_0
-
-    .line 58
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/֨ᩴ᩵;->ܰ:Ljava/util/EnumSet;
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x1
-
-    new-array p1, p1, [Ll/᩹ᩴ᩵;
-
-    .line 60
-    sget-object v0, Ll/᩹ᩴ᩵;->ܽ:Ll/᩹ᩴ᩵;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p1, v1
-
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/֨ᩴ᩵;->ܰ:Ljava/util/EnumSet;
+    .line 14
+    iput-object p2, p0, Ll/֨ᩴ᩵;->ۙ:Ll/᩹ۡۗ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/CharSequence;ILjava/io/StringWriter;)I
-    .locals 7
-
-    .line 79
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    .line 81
-    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x26
-
-    const/4 v3, 0x0
-
-    if-ne v1, v2, :cond_d
-
-    add-int/lit8 v1, v0, -0x2
-
-    if-ge p2, v1, :cond_d
-
-    add-int/lit8 v1, p2, 0x1
-
-    invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x23
-
-    if-ne v1, v2, :cond_d
-
-    add-int/lit8 v1, p2, 0x2
-
-    .line 85
-    invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v2
-
-    const/16 v4, 0x78
-
-    const/4 v5, 0x1
-
-    if-eq v2, v4, :cond_1
-
-    const/16 v4, 0x58
-
-    if-ne v2, v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    add-int/lit8 v1, p2, 0x3
-
-    if-ne v1, v0, :cond_2
-
-    goto/16 :goto_7
-
-    :cond_2
-    const/4 p2, 0x1
-
-    :goto_1
-    move v2, v1
-
-    :goto_2
-    if-ge v2, v0, :cond_6
-
-    .line 98
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x30
-
-    if-lt v4, v6, :cond_3
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x39
-
-    if-le v4, v6, :cond_5
-
-    .line 99
-    :cond_3
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x61
-
-    if-lt v4, v6, :cond_4
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x66
-
-    if-le v4, v6, :cond_5
-
-    .line 100
-    :cond_4
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x41
-
-    if-lt v4, v6, :cond_6
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    const/16 v6, 0x46
-
-    if-gt v4, v6, :cond_6
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    if-eq v2, v0, :cond_7
-
-    .line 104
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    const/16 v4, 0x3b
-
-    if-ne v0, v4, :cond_7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    goto :goto_3
+    if-ne p0, p1, :cond_0
 
-    :cond_7
-    const/4 v0, 0x0
+    return v0
 
-    :goto_3
-    if-nez v0, :cond_a
+    :cond_0
+    const/4 v1, 0x0
 
-    .line 107
-    sget-object v4, Ll/᩹ᩴ᩵;->ܽ:Ll/᩹ᩴ᩵;
+    if-eqz p1, :cond_2
 
-    .line 71
-    iget-object v6, p0, Ll/֨ᩴ᩵;->ܰ:Ljava/util/EnumSet;
+    .line 30
+    const-class v2, Ll/֨ᩴ᩵;
 
-    if-eqz v6, :cond_8
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v6, v4}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v4
+    if-eq v2, v3, :cond_1
 
-    if-eqz v4, :cond_8
+    goto :goto_0
 
-    return v3
+    .line 33
+    :cond_1
+    check-cast p1, Ll/֨ᩴ᩵;
 
-    .line 110
-    :cond_8
-    sget-object v4, Ll/᩹ᩴ᩵;->᩶:Ll/᩹ᩴ᩵;
+    .line 34
+    iget-object v2, p0, Ll/֨ᩴ᩵;->᩷:Ll/ܿۡۗ;
 
-    if-eqz v6, :cond_a
+    iget-object v3, p1, Ll/֨ᩴ᩵;->᩷:Ll/ܿۡۗ;
 
-    .line 71
-    invoke-virtual {v6, v4}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v2
 
-    if-nez v4, :cond_9
+    if-eqz v2, :cond_2
 
-    goto :goto_4
+    iget-object v2, p0, Ll/֨ᩴ᩵;->ۙ:Ll/᩹ۡۗ;
 
-    .line 111
-    :cond_9
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object p1, p1, Ll/֨ᩴ᩵;->ۙ:Ll/᩹ۡۗ;
 
-    const-string p2, "Semi-colon required at end of numeric entity"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_a
-    :goto_4
-    if-eqz p2, :cond_b
-
-    .line 118
-    :try_start_0
-    invoke-interface {p1, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/16 v4, 0x10
-
-    invoke-static {p1, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    .line 35
+    invoke-static {v2, p1}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    goto :goto_5
+    if-eqz p1, :cond_2
 
-    .line 120
-    :cond_b
-    invoke-interface {p1, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    return v0
 
-    move-result-object p1
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+.method public final hashCode()I
+    .locals 3
 
-    move-result-object p1
+    const/4 v0, 0x2
 
-    const/16 v4, 0xa
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-static {p1, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    const/4 v1, 0x0
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 40
+    iget-object v2, p0, Ll/֨ᩴ᩵;->᩷:Ll/ܿۡۗ;
 
-    :goto_5
-    const v4, 0xffff
+    aput-object v2, v0, v1
 
-    if-le p1, v4, :cond_c
+    const/4 v1, 0x1
 
-    .line 127
-    invoke-static {p1}, Ljava/lang/Character;->toChars(I)[C
+    iget-object v2, p0, Ll/֨ᩴ᩵;->ۙ:Ll/᩹ۡۗ;
 
-    move-result-object p1
+    aput-object v2, v0, v1
 
-    .line 128
-    aget-char v3, p1, v3
+    invoke-static {v0}, Ll/ܽۚۗ;->hash([Ljava/lang/Object;)I
 
-    invoke-virtual {p3, v3}, Ljava/io/Writer;->write(I)V
+    move-result v0
 
-    .line 129
-    aget-char p1, p1, v5
+    return v0
+.end method
 
-    invoke-virtual {p3, p1}, Ljava/io/Writer;->write(I)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_6
+    .line 45
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 131
-    :cond_c
-    invoke-virtual {p3, p1}, Ljava/io/Writer;->write(I)V
+    const-string v1, "UsePlace{region="
 
-    :goto_6
-    add-int/lit8 v2, v2, 0x2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sub-int/2addr v2, v1
+    iget-object v1, p0, Ll/֨ᩴ᩵;->᩷:Ll/ܿۡۗ;
 
-    add-int/2addr v2, p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v2, v0
+    const-string v1, ", block="
 
-    return v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    :cond_d
-    :goto_7
-    return v3
+    iget-object v1, p0, Ll/֨ᩴ᩵;->ۙ:Ll/᩹ۡۗ;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

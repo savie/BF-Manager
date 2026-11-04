@@ -44,14 +44,14 @@
     move/from16 v1, p3
 
     .line 187
-    invoke-static {v1, v8, v0}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v1, v8, v0}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v1
 
     move/from16 v2, p4
 
     .line 188
-    invoke-static {v2, v8, v0}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v2, v8, v0}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v2
 
@@ -80,7 +80,7 @@
     const v4, 0x3c23d70a    # 0.01f
 
     .line 196
-    invoke-static {v1, v8, v4}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v1, v8, v4}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v5
 
@@ -97,7 +97,7 @@
     const v9, 0x3f7d70a4    # 0.99f
 
     .line 201
-    invoke-static {v2, v9, v0}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {v2, v9, v0}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result v9
 

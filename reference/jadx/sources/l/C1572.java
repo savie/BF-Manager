@@ -1,27 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ۘ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: C9Z7 */
+/* JADX INFO: renamed from: l.֫֨ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V7AU */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C1572 {
+public final class C1572 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f6322;
+    public String f5457;
 
-    static {
-        int[] iArr = new int[EnumC14357.values().length];
-        f6322 = iArr;
-        try {
-            iArr[EnumC14357.TYPE_A.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f6322[EnumC14357.TYPE_A6.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f6322[EnumC14357.TYPE_AAAA.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f5458;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f5459;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f5460;
+
+    public /* synthetic */ C1572(int i) {
+        this();
+    }
+
+    public C1572() {
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -14,8 +14,8 @@ public class SABERPublicKey extends ASN1Object {
     public byte[] seed_A;
 
     public SABERPublicKey(ASN1Sequence aSN1Sequence) {
-        this.seed_A = C15489.m37078(aSN1Sequence, 0);
-        this.b = C15489.m37078(aSN1Sequence, 1);
+        this.seed_A = C20551.m47118(aSN1Sequence, 0);
+        this.b = C20551.m47118(aSN1Sequence, 1);
     }
 
     public SABERPublicKey(byte[] bArr, byte[] bArr2) {

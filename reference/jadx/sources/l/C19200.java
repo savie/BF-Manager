@@ -1,50 +1,32 @@
 package l;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.function.IntFunction;
+import java.util.function.LongPredicate;
 
-/* JADX INFO: renamed from: l.᩵ۗ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: E61U */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19200 implements Iterator {
+/* JADX INFO: renamed from: l.ᩳܽۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19200 extends AbstractC10425 {
+    public final /* synthetic */ LongPredicate s;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final Iterator f62013;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Iterator f62014;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Iterator f62015;
-
-    public C19200(List list, List list2, Iterator it) {
-        this.f62013 = list.iterator();
-        this.f62014 = list2.iterator();
-        this.f62015 = it;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C19200(AbstractC3123 abstractC3123, int i, LongPredicate longPredicate) {
+        super(abstractC3123, i);
+        this.s = longPredicate;
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f62013.hasNext();
+    @Override // l.AbstractC15470
+    public final InterfaceC8409 o0(AbstractC15470 abstractC15470, InterfaceC8409 interfaceC8409) {
+        return EnumC21614.ORDERED.p(abstractC15470.m) ? n0(abstractC15470, interfaceC8409, new C13189(27)).spliterator() : new C3957((InterfaceC9900) abstractC15470.h0(interfaceC8409), this.s);
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        Set setOf;
-        String string = ((CharSequence) this.f62013.next()).toString();
-        Iterator it = this.f62014;
-        if (it.hasNext()) {
-            setOf = (Set) it.next();
-        } else {
-            setOf = AbstractC23844.of();
-        }
-        Iterator it2 = this.f62015;
-        return new C7911(it2.hasNext() ? (String) it2.next() : null, string, setOf);
+    @Override // l.AbstractC15470
+    public final InterfaceC13409 n0(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409, IntFunction intFunction) {
+        return (InterfaceC13409) new C5118(this, abstractC13956, interfaceC8409, intFunction).invoke();
     }
 
-    @Override // java.util.Iterator
-    public final void remove() {
-        throw new UnsupportedOperationException();
+    @Override // l.AbstractC15470
+    public final InterfaceC15143 q0(int i, InterfaceC15143 interfaceC15143) {
+        return new C3538(this, interfaceC15143);
     }
 }

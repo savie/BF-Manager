@@ -26,7 +26,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -43,7 +43,7 @@
 
     iput-object p1, p0, Lorg/bouncycastle/util/io/pem/PemObject;->type:Ljava/lang/String;
 
-    invoke-static {p2}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Ll/ۙۚۗ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 

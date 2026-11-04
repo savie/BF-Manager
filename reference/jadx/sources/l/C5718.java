@@ -1,61 +1,40 @@
 package l;
 
-import bin.mt.plus.R;
-import java.util.Iterator;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.zip.Inflater;
+import java.util.zip.InflaterInputStream;
 
-/* JADX INFO: renamed from: l.ۛ֨ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K5R1 */
+/* JADX INFO: renamed from: l.ۚܳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: F8CE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5718 extends AbstractDialogInterfaceOnClickListenerC17341 {
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC13125 f19484;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C5718(ActivityC13125 activityC13125, ActivityC13125 activityC13126) {
-        super(activityC13126, -1);
-        this.f19484 = activityC13125;
+public final class C5718 implements InterfaceC1989 {
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo6815(InterfaceC17713 interfaceC17713) {
+        return -1L;
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        ActivityC13125.f43709 = m40352();
-        String strTrim = ActivityC13125.f43709.toLowerCase().trim();
-        if (strTrim.length() > 0) {
-            if (strTrim.startsWith("@") || strTrim.startsWith("?")) {
-                strTrim = strTrim.substring(1);
-            } else if (strTrim.startsWith("0x")) {
-                strTrim = strTrim.substring(2);
-            }
-            if (!C6461.m17648(strTrim)) {
-                m40365(R.string.MT_Protector);
-                return;
-            }
-            int iM17654 = C6461.m17654(strTrim);
-            int i = (iM17654 >>> 24) & 255;
-            int i2 = (iM17654 >>> 16) & 255;
-            int i3 = iM17654 & 65535;
-            ActivityC13125 activityC13125 = this.f19484;
-            for (InterfaceC17721 interfaceC17721 : activityC13125.f43713.f5091.mo17615()) {
-                if (interfaceC17721.mo19106() == i) {
-                    for (InterfaceC19133 interfaceC19133 : interfaceC17721.mo19112()) {
-                        if (interfaceC19133.mo26942() == i2) {
-                            Iterator it = interfaceC19133.mo25271().iterator();
-                            while (it.hasNext()) {
-                                for (InterfaceC3609 interfaceC3609 : ((InterfaceC12783) it.next()).mo31746()) {
-                                    if (interfaceC3609.mo10691() == i3) {
-                                        activityC13125.f43713.f5096.add((C18551) interfaceC3609);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            activityC13125.setTitle(ActivityC13125.f43709);
-            activityC13125.m32482(EnumC16653.SEARCH_BY_ID);
-            m40364();
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo6818(byte[] bArr, int i) {
+        if (i < 2) {
+            return false;
         }
+        byte b = bArr[0];
+        int i2 = b & 255;
+        return (b & 15) == 8 && ((i2 >> 4) & 15) <= 7 && ((i2 << 8) + (bArr[1] & 255)) % 31 == 0;
+    }
+
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final InputStream mo6816(InputStream inputStream) {
+        return new InflaterInputStream(inputStream, new Inflater(), 65536);
+    }
+
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final OutputStream mo6817(OutputStream outputStream, int i, long j) {
+        throw new UnsupportedOperationException();
     }
 }

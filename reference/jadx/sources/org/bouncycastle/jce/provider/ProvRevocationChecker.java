@@ -23,7 +23,7 @@ import org.bouncycastle.jcajce.PKIXCertRevocationChecker;
 import org.bouncycastle.jcajce.PKIXCertRevocationCheckerParameters;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ProvRevocationChecker extends PKIXRevocationChecker implements PKIXCertRevocationChecker {
     public static final int DEFAULT_OCSP_MAX_RESPONSE_SIZE = 32768;
     public static final int DEFAULT_OCSP_TIMEOUT = 15000;

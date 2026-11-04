@@ -1,117 +1,89 @@
 package l;
 
-import android.content.Context;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Interpolator;
+/* JADX INFO: renamed from: l.ܿܿۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8YL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18483 extends AbstractC23705 {
 
-/* JADX INFO: renamed from: l.ᩴۗۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J9R5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18483 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C21305 f58901;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public String f60156;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C21305 f58903;
+    public int f60157;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f58904;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public String f60158;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Interpolator f58905 = new InterpolatorC17777();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public Integer f60159;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f58902 = true;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public Integer f60160;
 
-    public C18483(Context context) {
-        this.f58901 = new C21305(context);
-        this.f58903 = new C21305(context);
+    @Override // l.AbstractC4534
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2667(InterfaceC17212 interfaceC17212) {
+        interfaceC17212.mo7353(this);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m42851() {
-        return this.f58901.f69328 && this.f58903.f69328;
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final Integer m43074() {
+        return this.f60160;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m42855() {
-        return this.f58903.f69323;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m42856() {
-        if (m42851()) {
-            return false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m43075(Integer num) {
+        if (num.intValue() < 3) {
+            throw new IllegalArgumentException("openingFenceLength needs to be >= 3");
         }
-        int i = this.f58904;
-        C21305 c21305 = this.f58903;
-        C21305 c21306 = this.f58901;
-        if (i != 0) {
-            if (i == 1) {
-                if (!c21306.f69328 && !c21306.m47774() && !c21306.m47773()) {
-                    c21306.m47775();
-                }
-                if (!c21305.f69328 && !c21305.m47774() && !c21305.m47773()) {
-                    c21305.m47775();
-                }
-            }
-            return true;
+        Integer num2 = this.f60159;
+        if (num2 == null || num2.intValue() >= num.intValue()) {
+            this.f60160 = num;
+            return;
         }
-        long jCurrentAnimationTimeMillis = AnimationUtils.currentAnimationTimeMillis() - c21306.f69327;
-        int i2 = c21306.f69316;
-        if (jCurrentAnimationTimeMillis < i2) {
-            float interpolation = ((InterpolatorC17777) this.f58905).getInterpolation(jCurrentAnimationTimeMillis / i2);
-            c21306.m47770(interpolation);
-            c21305.m47770(interpolation);
-            return true;
-        }
-        m42852();
-        return true;
+        throw new IllegalArgumentException("fence lengths required to be: closingFenceLength >= openingFenceLength");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42853(long j, long j2) {
-        this.f58904 = 0;
-        this.f58901.m47771(0L, 0L);
-        this.f58903.m47771(j, j2);
-    }
-
-    /* JADX WARN: Code duplicated, block: B:11:0x003d  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42854(long j, long j2, long j3, long j4) {
-        long j5;
-        long j6;
-        long j7;
-        if (!this.f58902 || m42851()) {
-            j5 = j2;
-            j6 = 0;
-            j7 = j5;
-        } else {
-            float f = this.f58901.f69318;
-            float f2 = this.f58903.f69318;
-            float f3 = 0L;
-            if (Math.signum(f3) == Math.signum(f)) {
-                j5 = j2;
-                float f4 = j5;
-                if (Math.signum(f4) == Math.signum(f2)) {
-                    j6 = (long) (f3 + f);
-                    j7 = (long) (f4 + f2);
-                }
-            } else {
-                j5 = j2;
-            }
-            j6 = 0;
-            j7 = j5;
+    public final void m43071(Integer num) {
+        if (num.intValue() < 3) {
+            throw new IllegalArgumentException("closingFenceLength needs to be >= 3");
         }
-        this.f58904 = 1;
-        this.f58901.m47772(0L, j6, 0L, 0L, 0L);
-        this.f58903.m47772(j, j7, 0L, j3, j4);
+        Integer num2 = this.f60160;
+        if (num2 == null || num.intValue() >= num2.intValue()) {
+            this.f60159 = num;
+            return;
+        }
+        throw new IllegalArgumentException("fence lengths required to be: closingFenceLength >= openingFenceLength");
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int m43069() {
+        return this.f60157;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42852() {
-        this.f58901.m47775();
-        this.f58903.m47775();
+    public final void m43070(int i) {
+        this.f60157 = i;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String m43073() {
+        return this.f60156;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m43072(String str) {
+        this.f60156 = str;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final String m43077() {
+        return this.f60158;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m43076(String str) {
+        this.f60158 = str;
     }
 }

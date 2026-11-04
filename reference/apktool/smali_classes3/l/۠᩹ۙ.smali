@@ -1,70 +1,50 @@
-.class public final Ll/۠᩹ۙ;
-.super Ljava/lang/Object;
-.source "RB93"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public Ll/۠᩹ۙ;
+.super Ljava/lang/Exception;
+.source "I8HD"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/ܽۘۙ;
+.field public final ܰ:I
 
-.field public final synthetic ܺ:Ll/ܽۘۙ;
-
-.field public final synthetic ᩶:Z
+.field public final ᩶:J
 
 
 # direct methods
-.method public constructor <init>(Ll/ܽۘۙ;Ll/ܽۘۙ;ZLl/᩸۠;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 5
 
-    .line 530
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Ll/۠᩹ۙ;->֡:Ll/ܽۘۙ;
+    const/4 v1, 0x4
 
-    iput-object p2, p0, Ll/۠᩹ۙ;->ܺ:Ll/ܽۘۙ;
+    const/4 v2, 0x0
 
-    iput-boolean p3, p0, Ll/۠᩹ۙ;->᩶:Z
+    const/4 v3, 0x1
+
+    const/4 v4, 0x2
+
+    .line 0
+    invoke-static {v2, v3, v4, v0, v1}, Ll/ۙۡۤ;->ۙ(IIIII)V
+
+    const/4 v0, 0x5
+
+    .line 591
+    invoke-static {v0}, Ll/ۜۨۙ;->۫(I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;IJ)V
+    .locals 0
 
     .line 533
-    iget-object v0, p0, Ll/۠᩹ۙ;->֡:Ll/ܽۘۙ;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 534
-    invoke-virtual {v0}, Ll/ܽۘۙ;->ۖ()Ll/᩺֨ۙ;
+    iput p3, p0, Ll/۠᩹ۙ;->ܰ:I
 
-    move-result-object v0
-
-    iget-object v1, p0, Ll/۠᩹ۙ;->ܺ:Ll/ܽۘۙ;
-
-    invoke-virtual {v1}, Ll/ܽۘۙ;->ۖ()Ll/᩺֨ۙ;
-
-    move-result-object v1
-
-    .line 533
-    sget-object v2, Ll/ۖۘۙ;->ۙ:Ll/ܶۘۙ;
-
-    .line 93
-    iget-boolean v2, p0, Ll/۠᩹ۙ;->᩶:Z
-
-    if-eqz v2, :cond_0
-
-    .line 94
-    invoke-virtual {v1}, Ll/᩺֨ۙ;->getEnterTransitionCallback()Ll/֨ܽ;
-
-    return-void
-
-    .line 95
-    :cond_0
-    invoke-virtual {v0}, Ll/᩺֨ۙ;->getEnterTransitionCallback()Ll/֨ܽ;
+    .line 536
+    iput-wide p4, p0, Ll/۠᩹ۙ;->᩶:J
 
     return-void
 .end method

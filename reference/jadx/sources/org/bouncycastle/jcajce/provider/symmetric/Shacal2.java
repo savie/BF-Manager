@@ -5,8 +5,8 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -21,7 +21,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Shacal2 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -47,7 +47,6 @@ public final class Shacal2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -55,21 +54,18 @@ public final class Shacal2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new Shacal2Engine()), 256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC extends BaseMac {
         public CMAC() {
             super(new CMac(new Shacal2Engine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.Shacal2.ECB.1
@@ -87,7 +83,6 @@ public final class Shacal2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = Shacal2.class.getName();
 
@@ -95,7 +90,7 @@ public final class Shacal2 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.SHACAL-2", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.SHACAL-2", C9023.m23357(str, "$KeyGen", "KeyGenerator.SHACAL-2", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.Shacal2", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.Shacal2", C9023.m23357(str, "$KeyGen", "KeyGenerator.Shacal2", C9023.m23357(str, "$ECB", "Cipher.SHACAL-2", C9023.m23357(str, "$ECB", "Cipher.Shacal2", C9023.m23357(str, "$CMAC", "Mac.Shacal-2CMAC", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.SHACAL-2", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.SHACAL-2", C18063.m42089(str, "$KeyGen", "KeyGenerator.SHACAL-2", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.Shacal2", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.Shacal2", C18063.m42089(str, "$KeyGen", "KeyGenerator.Shacal2", C18063.m42089(str, "$ECB", "Cipher.SHACAL-2", C18063.m42089(str, "$ECB", "Cipher.Shacal2", C18063.m42089(str, "$CMAC", "Mac.Shacal-2CMAC", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
         }
     }
 }

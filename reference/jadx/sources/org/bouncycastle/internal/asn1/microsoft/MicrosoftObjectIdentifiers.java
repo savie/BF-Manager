@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.microsoft;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface MicrosoftObjectIdentifiers {
     public static final ASN1ObjectIdentifier microsoft;
     public static final ASN1ObjectIdentifier microsoftAppPolicies;

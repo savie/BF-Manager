@@ -1,56 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘܳ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7A5 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3992 {
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.RejectedExecutionException;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final long f14825;
+/* JADX INFO: renamed from: l.ۘۜ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: MAWZ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3992 extends AbstractC24130 implements InterfaceC19654 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f14826;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final Executor f13657;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean f14827;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f14828;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f14829;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f14830;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String f14831;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 f14832;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f14833;
-
-    public C3992(AbstractC20745 abstractC20745, String str, String str2, String str3, boolean z, long j, long j2, String str4) {
-        this.f14832 = abstractC20745;
-        this.f14833 = str;
-        this.f14828 = str2;
-        this.f14830 = str3;
-        this.f14827 = z;
-        this.f14826 = j;
-        this.f14829 = j2;
-        this.f14825 = j2;
-        this.f14831 = str4;
+    public C3992(Executor executor) {
+        this.f13657 = executor;
+        C15609.m37340(executor);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C3992 m11495(long j, long j2, AbstractC20745 abstractC20745, String str, String str2, String str3, boolean z) {
-        return new C3992(abstractC20745, str, str2, null, z, j, j2, str3);
+    public final int hashCode() {
+        return System.identityHashCode(this.f13657);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C3992 m11494(long j, long j2, AbstractC20745 abstractC20745, String str, String str2, String str3, boolean z) {
-        return new C3992(abstractC20745, str, null, str3, z, j, j2, str2);
+    @Override // l.AbstractC18951
+    public final String toString() {
+        return this.f13657.toString();
+    }
+
+    @Override // l.AbstractC18951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11210(InterfaceC11536 interfaceC11536, Runnable runnable) {
+        try {
+            this.f13657.execute(runnable);
+        } catch (RejectedExecutionException e) {
+            CancellationException cancellationException = new CancellationException("The task was rejected");
+            cancellationException.initCause(e);
+            C13686.m33478(interfaceC11536, cancellationException);
+            C1755.m6200().mo11210(interfaceC11536, runnable);
+        }
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        Executor executor = this.f13657;
+        ExecutorService executorService = executor instanceof ExecutorService ? (ExecutorService) executor : null;
+        if (executorService != null) {
+            executorService.shutdown();
+        }
+    }
+
+    public final boolean equals(Object obj) {
+        return (obj instanceof C3992) && ((C3992) obj).f13657 == this.f13657;
     }
 }

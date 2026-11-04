@@ -1,50 +1,44 @@
-.class public final synthetic Ll/ᩳ֫ۤ;
+.class public final Ll/ᩳ֫ۤ;
 .super Ljava/lang/Object;
-.source "8459"
+.source "86A1"
 
 # interfaces
-.implements Ll/ܳ֫ۤ;
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/֫֫ۤ;
-
-.field public final synthetic ۨ:Ll/ܳ֫ۤ;
-
-.field public final synthetic ܰ:Ll/᩹۠۟;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/֫֫ۤ;Ll/᩹۠۟;Ll/ܳ֫ۤ;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ᩳ֫ۤ;->ۙ:Ll/֫֫ۤ;
-
-    iput-object p2, p0, Ll/ᩳ֫ۤ;->ܰ:Ll/᩹۠۟;
-
-    iput-object p3, p0, Ll/ᩳ֫ۤ;->ۨ:Ll/ܳ֫ۤ;
-
-    return-void
-.end method
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public final ۙ(Ll/ۛ۠۟;)Ll/ۛ۠۟;
-    .locals 3
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 4
 
-    .line 0
-    iget-object v0, p0, Ll/ᩳ֫ۤ;->ܰ:Ll/᩹۠۟;
+    .line 77
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-    iget-object v1, p0, Ll/ᩳ֫ۤ;->ۨ:Ll/ܳ֫ۤ;
+    move-result-object v0
 
-    iget-object v2, p0, Ll/ᩳ֫ۤ;->ۙ:Ll/֫֫ۤ;
+    check-cast v0, Ll/ܰ֫ۤ;
 
-    invoke-static {v1, v2, v0, p1}, Ll/֫֫ۤ;->ۙ(Ll/ܳ֫ۤ;Ll/֫֫ۤ;Ll/᩹۠۟;Ll/ۛ۠۟;)Ll/ۛ۠۟;
+    invoke-virtual {v0}, Ll/ܰ֫ۤ;->ܺ()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    .line 78
+    new-instance v1, Ll/ܰ֫ۤ;
+
+    invoke-direct {v1}, Ll/ܰ֫ۤ;-><init>()V
+
+    .line 79
+    sget-object v2, Ll/᩶᩷ۧ;->۫:Ll/ۢ֫ܺ;
+
+    const/4 v3, 0x0
+
+    invoke-interface {v2, v0, v3}, Ll/ۢ֫ܺ;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Ll/ܰ֫ۤ;->ۙ(Z)V
+
+    .line 80
+    invoke-virtual {p1, v1}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
+
+    return-void
 .end method

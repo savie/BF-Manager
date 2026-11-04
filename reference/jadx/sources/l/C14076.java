@@ -1,78 +1,49 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
-/* JADX INFO: renamed from: l.ܰ᩷᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5T9 */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۬᩵ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E9CL */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C14076 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f46228;
+    public ReentrantLock f44570 = new ReentrantLock();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f46229;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public HashMap f44571 = new HashMap();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String[] f46230;
-
-    public C14076(String str, String[] strArr) {
-        this.f46230 = strArr;
-        this.f46229 = str;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String[] m34051() {
-        return this.f46230;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m34050() {
-        return this.f46229;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C7365 m34243(String str) {
+        ReentrantLock reentrantLock = this.f44570;
+        reentrantLock.lock();
+        try {
+            return (C7365) this.f44571.get(str);
+        } finally {
+            reentrantLock.unlock();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m34049() {
-        if (this.f46228 == null) {
-            StringBuilder sb = new StringBuilder(MotionUtils.EASING_TYPE_FORMAT_START);
-            String[] strArr = this.f46230;
-            if (strArr != null) {
-                for (String str : strArr) {
-                    sb.append(str);
-                }
-            }
-            sb.append(MotionUtils.EASING_TYPE_FORMAT_END);
-            sb.append(this.f46229);
-            this.f46228 = sb.toString();
+    public final void m34244(C7365 c7365) {
+        ReentrantLock reentrantLock = this.f44570;
+        reentrantLock.lock();
+        try {
+            this.f44571.put(c7365.m20224(), c7365);
+        } finally {
+            reentrantLock.unlock();
         }
-        return this.f46228;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m34245(String str) {
+        ReentrantLock reentrantLock = this.f44570;
+        reentrantLock.lock();
+        try {
+            this.f44571.remove(str);
+        } finally {
+            reentrantLock.unlock();
         }
-        if (obj != null && C14076.class == obj.getClass()) {
-            C14076 c14076 = (C14076) obj;
-            String str = c14076.f46229;
-            if (!Arrays.equals(this.f46230, c14076.f46230)) {
-                return false;
-            }
-            String str2 = this.f46229;
-            if (str2 != null) {
-                return str2.equals(str);
-            }
-            if (str == null) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        int iHashCode = Arrays.hashCode(this.f46230) * 31;
-        String str = this.f46229;
-        return iHashCode + (str != null ? str.hashCode() : 0);
     }
 }

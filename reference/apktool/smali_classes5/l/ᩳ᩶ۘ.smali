@@ -1,43 +1,34 @@
-.class public final synthetic Ll/ᩳ᩶ۘ;
-.super Ljava/lang/Object;
-.source "FB8V"
-
-# interfaces
-.implements Ll/ۘۖ;
+.class public abstract Ll/ᩳ᩶ۘ;
+.super Ll/᩷᩶ۘ;
+.source "H44W"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/۠᩶ۘ;
+.field public ۟:Ll/᩶ܿۘ;
+
+.field public ᩳ:Ll/ۜ᩶᩺;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۠᩶ۘ;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ᩳ᩶ۘ;->ۙ:Ll/۠᩶ۘ;
+    .line 2092
+    invoke-direct {p0}, Ll/᩷᩶ۘ;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 2
+.method public abstract ۙ(Ll/۟᩶ۘ;)Ll/᩷᩶ۘ;
+.end method
 
-    .line 2
-    check-cast p1, Ll/ۤ᩶ۘ;
+.method public final ۤۙ()Ll/᩶ܿۘ;
+    .locals 1
 
-    .line 25
-    iget v0, p1, Ll/ۤ᩶ۘ;->ܰ:I
+    .line 2107
+    iget-object v0, p0, Ll/ᩳ᩶ۘ;->۟:Ll/᩶ܿۘ;
 
-    iget-object p1, p1, Ll/ۤ᩶ۘ;->ۙ:Landroid/content/Intent;
-
-    iget-object v1, p0, Ll/ᩳ᩶ۘ;->ۙ:Ll/۠᩶ۘ;
-
-    invoke-interface {v1, p1, v0}, Ll/۠᩶ۘ;->ۙ(Landroid/content/Intent;I)V
-
-    return-void
+    return-object v0
 .end method

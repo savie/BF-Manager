@@ -1,115 +1,121 @@
-.class public final synthetic Ll/ᩴۚۤ;
-.super Ljava/lang/Object;
-.source "L7ER"
-
-# interfaces
-.implements Ljava/util/function/Supplier;
+.class public final Ll/ᩴۚۤ;
+.super Ll/᩶᩸ۤ;
+.source "Y545"
 
 
 # instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ll/ܳۨۤ;
+.field public final ۟:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܳۨۤ;I)V
+.method public constructor <init>(Ll/۬۫ۤ;II)V
     .locals 0
 
-    .line 0
-    iput p2, p0, Ll/ᩴۚۤ;->ܺ:I
+    .line 22
+    invoke-direct {p0, p1}, Ll/᩶᩸ۤ;-><init>(Ll/ۤ᩸ۤ;)V
 
-    iput-object p1, p0, Ll/ᩴۚۤ;->᩶:Ll/ܳۨۤ;
+    const/4 p1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 23
+    iput p1, p0, Ll/ᩴۚۤ;->۟:I
+
+    const/4 p1, -0x1
+
+    .line 24
+    iput p1, p0, Ll/᩶᩸ۤ;->ܿ:I
+
+    .line 25
+    iput p2, p0, Ll/᩶᩸ۤ;->֡:I
+
+    .line 26
+    iput p3, p0, Ll/᩶᩸ۤ;->᩶:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/۬۫ۤ;IILl/ܺۚۤ;)V
+    .locals 0
+
+    .line 10
+    invoke-direct {p0, p1}, Ll/᩶᩸ۤ;-><init>(Ll/ۤ᩸ۤ;)V
+
+    .line 11
+    iput p2, p0, Ll/ᩴۚۤ;->۟:I
+
+    .line 12
+    iput p3, p0, Ll/᩶᩸ۤ;->ܿ:I
+
+    const/4 p1, 0x2
+
+    .line 14
+    invoke-virtual {p4, p1}, Ll/ܺۚۤ;->᩸(I)V
+
+    .line 16
+    invoke-virtual {p4}, Ll/ܺۚۤ;->ۤ()B
+
+    .line 17
+    invoke-virtual {p4}, Ll/ܺۚۤ;->ۤ()B
+
+    move-result p1
+
+    iput p1, p0, Ll/᩶᩸ۤ;->֡:I
+
+    .line 18
+    invoke-virtual {p4}, Ll/ܺۚۤ;->᩸()I
+
+    move-result p1
+
+    iput p1, p0, Ll/᩶᩸ۤ;->᩶:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+.method public final getEntry()Ll/۠ܳۤ;
+    .locals 1
 
-    .line 2
-    iget v0, p0, Ll/ᩴۚۤ;->ܺ:I
-
-    .line 4
-    iget-object v1, p0, Ll/ᩴۚۤ;->᩶:Ll/ܳۨۤ;
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 9
-    check-cast v1, Ll/ۤۙۤ;
-
-    .line 199
-    iget-object v0, v1, Ll/ܳۨۤ;->ۨܰ:Ll/ۧܰۤ;
-
-    iget v1, v1, Ll/ۤۙۤ;->۬ܰ:I
-
-    invoke-virtual {v0, v1}, Ll/ۧܰۤ;->ۤ(I)Ll/۫ܰۤ;
+    .line 51
+    invoke-super {p0}, Ll/᩶᩸ۤ;->getEntry()Ll/۠ܳۤ;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/۫ܰۤ;->ۨ()Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, Ll/۬۫ۤ;
 
     return-object v0
+.end method
 
-    .line 0
-    :pswitch_0
-    check-cast v1, Ll/ܿۚۤ;
+.method public final ֫ۙ()I
+    .locals 1
 
-    .line 274
-    iget v0, v1, Ll/ܿۚۤ;->ۘܰ:I
+    .line 56
+    iget v0, p0, Ll/ᩴۚۤ;->۟:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final ۙ()Ll/ۜܳۤ;
+    .locals 1
 
-    iget-object v2, v1, Ll/ܿۚۤ;->ܶܰ:[I
-
-    .line 275
-    invoke-static {v2}, Ll/ᩴ۫ۡ;->ۙ([I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v1, v1, Ll/ܿۚۤ;->ۡܰ:[I
-
-    invoke-static {v1}, Ll/ᩴ۫ۡ;->ۙ([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x3
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    const/4 v0, 0x2
-
-    aput-object v1, v3, v0
-
-    const-string v0, " stack_map_entry:pc=%d numloc=%s  numstack=%s"
-
-    .line 19
-    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 31
+    invoke-super {p0}, Ll/᩶᩸ۤ;->ۙ()Ll/ۜܳۤ;
 
     move-result-object v0
+
+    check-cast v0, Ll/ܳۚۤ;
 
     return-object v0
+.end method
 
-    nop
+.method public final ۤ()Ll/ۤ۫ۤ;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    .line 36
+    invoke-super {p0}, Ll/᩶᩸ۤ;->ۤ()Ll/ۤ۫ۤ;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۤۚۤ;
+
+    return-object v0
 .end method

@@ -1,14 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۘۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E4UB */
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+/* JADX INFO: renamed from: l.ۧۜ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C11452 {
+public final class C11452 {
+    public Set a;
+    public Map b;
+    public boolean c;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C8485 f38553;
+    public final boolean b(String str) {
+        return this.c || ((HashSet) this.a).contains(str);
+    }
 
-    public C11452(C8485 c8485) {
-        this.f38553 = c8485;
+    public final void a(Object obj, String str) {
+        ((HashMap) this.b).put(str, obj);
     }
 }

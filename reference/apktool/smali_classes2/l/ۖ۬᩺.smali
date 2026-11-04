@@ -1,74 +1,135 @@
-.class public final synthetic Ll/ۖ۬᩺;
+.class public final Ll/ۖ۬᩺;
 .super Ljava/lang/Object;
-.source "98W2"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.source "W7SR"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/Object;
-
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public ۙ:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
-    iput p1, p0, Ll/ۖ۬᩺;->ܺ:I
-
-    iput-object p2, p0, Ll/ۖ۬᩺;->᩶:Ljava/lang/Object;
-
-    iput-object p3, p0, Ll/ۖ۬᩺;->֡:Ljava/lang/Object;
-
+    .line 251
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 253
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    iput-object v0, p0, Ll/ۖ۬᩺;->ۙ:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+.method public final ۙ(Ll/ۧܿ᩺;Ll/᩵֫ۘ;)Ll/ۡ۬᩺;
+    .locals 2
 
-    .line 0
-    iget p1, p0, Ll/ۖ۬᩺;->ܺ:I
+    .line 274
+    iget-object v0, p0, Ll/ۖ۬᩺;->ۙ:Ljava/util/WeakHashMap;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Ll/ۖ۬᩺;->᩶:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Ll/ܺۘۘ;
+    check-cast p1, Ll/ܰᩳۘ;
 
-    iget-object v0, p0, Ll/ۖ۬᩺;->֡:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    check-cast v0, Lbin/mt/plugin/api/ui/dialog/PluginDialog$OnClickListener;
+    goto :goto_0
 
-    invoke-static {p1, v0, p2}, Ll/ܺۘۘ;->ۨ(Ll/ܺۘۘ;Lbin/mt/plugin/api/ui/dialog/PluginDialog$OnClickListener;I)V
+    .line 276
+    :cond_0
+    invoke-virtual {p1}, Ll/ܰᩳۘ;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۡ۬᩺;
+
+    .line 265
+    iget-object v1, v0, Ll/ۡ۬᩺;->ۙ:Ll/ܰ۠᩺;
+
+    iget-object v1, v1, Ll/ܰ۠᩺;->ۙ:Ll/֨ۜ᩺;
+
+    invoke-interface {v1}, Ll/֨ۜ᩺;->᩷()Ll/ۘ۬᩺;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/ۘ۬᩺;->ܳ:Ll/᩵֫ۘ;
+
+    if-ne v1, p2, :cond_1
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/۟ܿۘ;Ll/ܰ۠᩺;)V
+    .locals 4
+
+    .line 287
+    iget-object v0, p2, Ll/ܰ۠᩺;->ۙ:Ll/֨ۜ᩺;
+
+    invoke-interface {v0}, Ll/֨ۜ᩺;->᩷()Ll/ۘ۬᩺;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/ۘ۬᩺;->᩸:Ll/ۧܿ᩺;
+
+    .line 288
+    iget-object v1, p0, Ll/ۖ۬᩺;->ۙ:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ll/ܰᩳۘ;
+
+    if-nez v2, :cond_0
+
+    .line 290
+    invoke-static {}, Ll/ܰᩳۘ;->ܳ()Ll/ܰᩳۘ;
+
+    move-result-object v2
+
+    .line 292
+    :cond_0
+    new-instance v3, Ll/ۡ۬᩺;
+
+    .line 259
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    .line 260
+    iput-object p1, v3, Ll/ۡ۬᩺;->᩷:Ll/۟ܿۘ;
+
+    .line 261
+    iput-object p2, v3, Ll/ۡ۬᩺;->ۙ:Ll/ܰ۠᩺;
+
+    .line 292
+    invoke-virtual {v2, v3}, Ll/ܰᩳۘ;->᩷(Ljava/lang/Object;)Ll/ܰᩳۘ;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ll/ۖ۬᩺;->᩶:Ljava/lang/Object;
-
-    check-cast p1, Ll/᩹۬᩺;
-
-    iget-object p2, p0, Ll/ۖ۬᩺;->֡:Ljava/lang/Object;
-
-    check-cast p2, Ll/۫ܶۘ;
-
-    invoke-static {p1, p2}, Ll/᩹۬᩺;->ۙ(Ll/᩹۬᩺;Ll/۫ܶۘ;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.modes;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -19,7 +19,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KGCMBlockCipher implements AEADBlockCipher {
     public static final int MIN_MAC_BITS = 64;
     public long[] b;
@@ -242,7 +242,7 @@ public class KGCMBlockCipher implements AEADBlockCipher {
             this.initialAssociatedText = aEADParameters.getAssociatedText();
             int macSize = aEADParameters.getMacSize();
             if (macSize < 64 || macSize > (this.blockSize << 3) || (macSize & 7) != 0) {
-                throw new IllegalArgumentException(C8479.m22141(macSize, "Invalid value for MAC size: "));
+                throw new IllegalArgumentException(C13645.m33382(macSize, "Invalid value for MAC size: "));
             }
             this.macSize = macSize >>> 3;
             key = aEADParameters.getKey();

@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import l.ConcurrentMapC13783;
+import l.ConcurrentMapC17249;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -20,7 +20,7 @@ public class a {
     public static final int d = 3;
     public static final int e = 4;
     public static final int f = 5;
-    public static ConcurrentMapC13783 g;
+    public static ConcurrentMapC17249 g;
     public static ExecutorService h = Executors.newFixedThreadPool(16);
 
     /* JADX INFO: renamed from: com.alipay.sdk.m.a0.a$a, reason: collision with other inner class name */
@@ -31,17 +31,17 @@ public class a {
 
     public static synchronized void a(int i, Object obj) {
         if (g == null) {
-            g = new ConcurrentMapC13783();
+            g = new ConcurrentMapC17249();
         }
         g.put(Integer.valueOf(i), new Pair(Long.valueOf(SystemClock.elapsedRealtime()), obj));
     }
 
     public static Pair a(int i, TimeUnit timeUnit, long j) {
-        ConcurrentMapC13783 concurrentMapC13783 = g;
-        if (concurrentMapC13783 == null) {
+        ConcurrentMapC17249 concurrentMapC17249 = g;
+        if (concurrentMapC17249 == null) {
             return new Pair(Boolean.FALSE, null);
         }
-        Pair pair = (Pair) concurrentMapC13783.get(Integer.valueOf(i));
+        Pair pair = (Pair) concurrentMapC17249.get(Integer.valueOf(i));
         if (pair == null) {
             return new Pair(Boolean.FALSE, null);
         }
@@ -73,7 +73,7 @@ public class a {
                 return pairA.second;
             }
             if (z2 && q.h()) {
-                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, "ch_get_main", "" + i);
+                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, "ch_get_main", "" + i);
                 g.d("getC", i + " skip");
                 objCall = null;
             } else {
@@ -88,7 +88,7 @@ public class a {
             return objCall;
         } catch (Throwable th) {
             g.a(a, "ch_get_e|" + i, th);
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "ch_get_e|" + i, th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "ch_get_e|" + i, th);
             g.d("getC", i + " err");
             return null;
         }

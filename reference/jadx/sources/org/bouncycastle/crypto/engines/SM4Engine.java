@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.engines;
 import com.google.android.material.color.ColorResourcesTableCreator;
 import com.umeng.analytics.pro.bo;
 import com.umeng.analytics.pro.cb;
-import l.C0219;
+import l.C14483;
 import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -19,12 +19,12 @@ import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.encoders.Base32Encoder;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM4Engine implements BlockCipher {
     public static final int BLOCK_SIZE = 16;
     public final int[] X = new int[4];
     public int[] rk;
-    public static final byte[] Sbox = {-42, -112, -23, -2, -52, GCMSIVBlockCipher.ADD, Base32Encoder.DEFAULT_PADDING, -73, 22, -74, 20, -62, 40, -5, 44, 5, 43, 103, -102, 118, 42, -66, 4, -61, -86, 68, 19, 38, 73, -122, 6, -103, -100, 66, UTF8.S_P4A, -12, -111, -17, -104, 122, 51, 84, 11, 67, -19, -49, -84, 98, -28, -77, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, -87, -55, 8, -24, -107, GCMSIVBlockCipher.MASK, -33, -108, -6, 117, -113, 63, -90, 71, 7, -89, -4, -13, 115, 23, -70, -125, 89, 60, 25, -26, -123, 79, -88, 104, 107, -127, -78, KeyFactorySpi.Ed448_type, 100, -38, -117, -8, -21, 15, 75, KeyFactorySpi.Ed25519_type, 86, -99, 53, 30, 36, cb.f77931l, 94, 99, 88, -47, -94, 37, 34, 124, 59, 1, PublicSuffixDatabase.EXCEPTION_MARKER, 120, -121, -44, 0, 70, 87, -97, -45, 39, 82, 76, 54, 2, -25, -96, -60, -56, -98, -22, -65, -118, -46, 64, -57, 56, -75, -93, -9, -14, -50, -7, 97, 21, -95, bo.k, -82, 93, -92, -101, 52, 26, 85, -83, -109, 50, UTF8.S_P3A, -11, -116, -79, -29, 29, -10, -30, 46, bo.h, 102, -54, UTF8.S_P4B, -64, 41, 35, -85, cb.k, 83, 78, KeyFactorySpi.x448_type, -43, -37, 55, 69, -34, -3, -114, 47, 3, -1, 106, 114, 109, 108, 91, 81, -115, 27, -81, -110, -69, -35, PSSSigner.TRAILER_IMPLICIT, ColorResourcesTableCreator.APPLICATION_PACKAGE_ID, 17, -39, 92, 65, bo.j, 16, 90, -40, 10, -63, 49, -120, -91, -51, 123, -67, 45, 116, -48, 18, -72, -27, -76, -80, -119, 105, -105, 74, 12, -106, 119, 126, 101, -71, -15, 9, -59, KeyFactorySpi.x25519_type, -58, -124, 24, -16, 125, -20, 58, -36, 77, UTF8.S_CS3, 121, -18, 95, 62, -41, -53, 57, 72};
+    public static final byte[] Sbox = {-42, -112, -23, -2, -52, GCMSIVBlockCipher.ADD, Base32Encoder.DEFAULT_PADDING, -73, 22, -74, 20, -62, 40, -5, 44, 5, 43, 103, -102, 118, 42, -66, 4, -61, -86, 68, 19, 38, 73, -122, 6, -103, -100, 66, UTF8.S_P4A, -12, -111, -17, -104, 122, 51, 84, 11, 67, -19, -49, -84, 98, -28, -77, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, -87, -55, 8, -24, -107, GCMSIVBlockCipher.MASK, -33, -108, -6, 117, -113, 63, -90, 71, 7, -89, -4, -13, 115, 23, -70, -125, 89, 60, 25, -26, -123, 79, -88, 104, 107, -127, -78, KeyFactorySpi.Ed448_type, 100, -38, -117, -8, -21, 15, 75, KeyFactorySpi.Ed25519_type, 86, -99, 53, 30, 36, cb.f82047l, 94, 99, 88, -47, -94, 37, 34, 124, 59, 1, PublicSuffixDatabase.EXCEPTION_MARKER, 120, -121, -44, 0, 70, 87, -97, -45, 39, 82, 76, 54, 2, -25, -96, -60, -56, -98, -22, -65, -118, -46, 64, -57, 56, -75, -93, -9, -14, -50, -7, 97, 21, -95, bo.k, -82, 93, -92, -101, 52, 26, 85, -83, -109, 50, UTF8.S_P3A, -11, -116, -79, -29, 29, -10, -30, 46, bo.h, 102, -54, UTF8.S_P4B, -64, 41, 35, -85, cb.k, 83, 78, KeyFactorySpi.x448_type, -43, -37, 55, 69, -34, -3, -114, 47, 3, -1, 106, 114, 109, 108, 91, 81, -115, 27, -81, -110, -69, -35, PSSSigner.TRAILER_IMPLICIT, ColorResourcesTableCreator.APPLICATION_PACKAGE_ID, 17, -39, 92, 65, bo.j, 16, 90, -40, 10, -63, 49, -120, -91, -51, 123, -67, 45, 116, -48, 18, -72, -27, -76, -80, -119, 105, -105, 74, 12, -106, 119, 126, 101, -71, -15, 9, -59, KeyFactorySpi.x25519_type, -58, -124, 24, -16, 125, -20, 58, -36, 77, UTF8.S_CS3, 121, -18, 95, 62, -41, -53, 57, 72};
     public static final int[] CK = {462357, 472066609, 943670861, 1415275113, 1886879365, -1936483679, -1464879427, -993275175, -521670923, -66909679, 404694573, 876298825, 1347903077, 1819507329, -2003855715, -1532251463, -1060647211, -589042959, -117504499, 337322537, 808926789, 1280531041, 1752135293, -2071227751, -1599623499, -1128019247, -656414995, -184876535, 269950501, 741554753, 1213159005, 1684763257};
     public static final int[] FK = {-1548633402, 1453994832, 1736282519, -1301273892};
 
@@ -156,7 +156,7 @@ public class SM4Engine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to SM4 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to SM4 init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         if (key.length != 16) {

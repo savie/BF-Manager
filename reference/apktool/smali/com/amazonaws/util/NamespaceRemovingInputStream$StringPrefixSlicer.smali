@@ -66,7 +66,7 @@
     return p1
 .end method
 
-.method public final ۨ()V
+.method public final ۤ()V
     .locals 3
 
     .line 164
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public final ܰ()Z
+.method public final ᩷()Z
     .locals 3
 
     const-string v0, "\""

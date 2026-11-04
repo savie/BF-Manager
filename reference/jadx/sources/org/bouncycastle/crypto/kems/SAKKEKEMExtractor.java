@@ -11,7 +11,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SAKKEKEMExtractor implements EncapsulatedSecretExtractor {
     public final ECPoint K_bs;
     public final ECPoint P;

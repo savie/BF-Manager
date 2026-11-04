@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.encodings;
 
 import com.umeng.analytics.pro.cb;
 import java.math.BigInteger;
-import l.C1694;
+import l.C12669;
 import org.bouncycastle.crypto.AsymmetricBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.InvalidCipherTextException;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.crypto.params.RSAKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISO9796d1Encoding implements AsymmetricBlockCipher {
     public int bitSize;
     public AsymmetricBlockCipher engine;
@@ -19,8 +19,8 @@ public class ISO9796d1Encoding implements AsymmetricBlockCipher {
     public int padBits = 0;
     public static final BigInteger SIXTEEN = BigInteger.valueOf(16);
     public static final BigInteger SIX = BigInteger.valueOf(6);
-    public static byte[] shadows = {cb.f77931l, 3, 5, 8, 9, 4, 2, 15, 0, cb.k, 11, 6, 7, 10, 12, 1};
-    public static byte[] inverse = {8, 15, 6, 1, 5, 2, 11, 12, 3, 4, cb.k, 10, cb.f77931l, 9, 0, 7};
+    public static byte[] shadows = {cb.f82047l, 3, 5, 8, 9, 4, 2, 15, 0, cb.k, 11, 6, 7, 10, 12, 1};
+    public static byte[] inverse = {8, 15, 6, 1, 5, 2, 11, 12, 3, 4, cb.k, 10, cb.f82047l, 9, 0, 7};
 
     public ISO9796d1Encoding(AsymmetricBlockCipher asymmetricBlockCipher) {
         this.engine = asymmetricBlockCipher;
@@ -81,7 +81,7 @@ public class ISO9796d1Encoding implements AsymmetricBlockCipher {
         int length2 = (bArrConvertOutputDecryptOnly.length - i4) / 2;
         byte[] bArr4 = new byte[length2];
         for (int i8 = 0; i8 < length2; i8++) {
-            bArr4[i8] = bArrConvertOutputDecryptOnly[C1694.m5620(i8, 2, i4, 1)];
+            bArr4[i8] = bArrConvertOutputDecryptOnly[C12669.m31436(i8, 2, i4, 1)];
         }
         this.padBits = i5 - 1;
         return bArr4;

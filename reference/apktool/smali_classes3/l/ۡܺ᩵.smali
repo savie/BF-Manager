@@ -1,19 +1,20 @@
 .class public final Ll/ۡܺ᩵;
 .super Ljava/lang/Object;
-.source "C59K"
-
-# interfaces
-.implements Ll/ۗ᩶᩵;
+.source "I6PU"
 
 
-# virtual methods
-.method public final ۙ(Ll/۫֡᩵;Ll/֨֡᩵;[BI)Ll/ۙ֡᩵;
+# instance fields
+.field public final ۙ:Ljava/lang/Throwable;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 91
-    new-instance p1, Ll/ۤܺ᩵;
+    .line 277
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1, p2, p3, p4}, Ll/ۤܺ᩵;-><init>(Ll/֨֡᩵;[BI)V
+    iput-object p1, p0, Ll/ۡܺ᩵;->ۙ:Ljava/lang/Throwable;
 
-    return-object p1
+    return-void
 .end method

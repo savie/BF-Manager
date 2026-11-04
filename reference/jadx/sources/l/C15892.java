@@ -1,21 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۧ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: QAL8 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15892 extends AbstractC22947 {
+/* JADX INFO: renamed from: l.ܶۛۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87AO */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15892 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8400 f51480;
-
-    @Override // l.AbstractC22947
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo37803(C17302 c17302, InterfaceC14771 interfaceC14771) {
-        Object objMo3208 = this.f51480.mo3208(c17302, interfaceC14771);
-        return objMo3208 == EnumC13214.COROUTINE_SUSPENDED ? objMo3208 : C7321.f24318;
-    }
+    public final int f51653;
 
-    public C15892(InterfaceC8400 interfaceC8400) {
-        this.f51480 = interfaceC8400;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f51654;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f51655;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f51656;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f51657;
+
+    public C15892(String str, int i, String str2, int i2, int i3) {
+        this.f51655 = str;
+        this.f51657 = str2;
+        this.f51653 = i;
+        this.f51654 = i2;
+        this.f51656 = i3;
     }
 }

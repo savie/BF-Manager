@@ -1,56 +1,46 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ᩴۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P71B */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18476 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C18476 f58879 = new C18476(null, null);
-
+/* JADX INFO: renamed from: l.ܿܿۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H6IG */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18476 {
+    /* JADX WARN: Code duplicated, block: B:7:0x0022  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22710 f58880;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22710 f58881;
-
-    public /* synthetic */ C18476(C22710 c22710, C22710 c22711, int i) {
-        this(c22710, c22711);
-    }
-
-    public C18476(C22710 c22710, C22710 c22711) {
-        this.f58880 = c22710;
-        this.f58881 = c22711;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C18476)) {
-            return false;
+    public static String m43056(C2551 c2551, InterfaceC23283 interfaceC23283) {
+        int iIntValue;
+        int iM38286;
+        int i = 0;
+        if (interfaceC23283.mo45713()) {
+            C6434 c6434Mo45711 = interfaceC23283.mo45711();
+            int iM16973 = c2551.m16973() + 1;
+            C14746 c14746 = new C14746();
+            c14746.f48160 = 0;
+            Integer num = (Integer) c6434Mo45711.m18211(iM16973, c14746);
+            if (num == null) {
+                iIntValue = -1;
+            } else {
+                iIntValue = num.intValue();
+            }
+        } else {
+            iIntValue = -1;
         }
-        C18476 c18476 = (C18476) obj;
-        return C13638.equals(this.f58880, c18476.f58880) && C13638.equals(this.f58881, c18476.f58881);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f58881) + (C13638.hashCode(this.f58880) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f58880, this.f58881};
-        String[] strArrSplit = "left;right".length() == 0 ? new String[0] : "left;right".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C18476.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+        if (iIntValue == -1) {
+            return "";
+        }
+        int iM16974 = c2551.m16973();
+        InterfaceC11653 interfaceC11653M18213 = interfaceC23283.mo45711().m18213(iM16974);
+        if (!(interfaceC11653M18213 instanceof C16128) || (iM38286 = ((C16128) interfaceC11653M18213).m38286()) < 0 || iM38286 > iM16974) {
+            int iLastIndexOf = interfaceC23283.mo45712().lastIndexOf(10, iM16974);
+            if (iLastIndexOf != -1) {
+                i = iLastIndexOf + 1;
+            }
+        } else {
+            i = iM16974 - iM38286;
+            String strMo45712 = interfaceC23283.mo45712();
+            while (i < iM16974 && (strMo45712.charAt(i) == '\n' || strMo45712.charAt(i) == '\r')) {
+                i++;
             }
         }
-        sb.append("]");
-        return sb.toString();
+        return iIntValue < i ? "" : interfaceC23283.mo45712().substring(i, iIntValue);
     }
 }

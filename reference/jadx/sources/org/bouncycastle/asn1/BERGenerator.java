@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import org.bouncycastle.crypto.params.DHParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class BERGenerator extends ASN1Generator {
     public boolean _isExplicit;
     public int _tagNo;

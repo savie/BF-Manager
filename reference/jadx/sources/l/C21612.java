@@ -1,94 +1,149 @@
 package l;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.res.Resources;
+import android.graphics.Rect;
+import android.os.IBinder;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
-import java.util.ArrayList;
-import java.util.List;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.TextView;
+import bin.mt.plus.R;
+import com.alipay.sdk.m.t0.b;
 
-/* JADX INFO: renamed from: l.᩸ܰۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 56B1 */
+/* JADX INFO: renamed from: l.᩶᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: X58Q */
 /* JADX INFO: loaded from: classes.dex */
-public final class C21612 extends AbstractC3492 {
+public class C21612 {
 
-    /* JADX INFO: renamed from: ۬ܰ᩺, reason: not valid java name and contains not printable characters */
-    private static final short[] f70099;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final View f69025;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public ArrayList f70100 = new ArrayList();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final WindowManager.LayoutParams f69026;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC5788 f70101;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Rect f69027;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f70102;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int[] f69028;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceOnDismissListenerC8913 f70103;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int[] f69029;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public List f70104;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Context f69030;
 
-    static {
-        ApplicationC6132.m17119(158);
-        f70099 = new short[]{1969, -18973, -19008, -18994, -18997, -19057, -18981, -18979, -18994, -19007, -18980, -19005, -18994, -18981, -19002, -19008, -19007, -19057, -18977, -18979, -19008, -18983, -19002, -18997, -18998, -18979, -19057, -18999, -18994, -19002, -19005, -18998, -18997, -18995, -19002, -19007, -19071, -19006, -18981, -19071, -18977, -19005, -18982, -19000, -19002, -19007, -19071, -18980, -18986, -18980, -18981, -18998, -19006};
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final TextView f69031;
+
+    public C21612(Context context) {
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        this.f69026 = layoutParams;
+        this.f69027 = new Rect();
+        this.f69029 = new int[2];
+        this.f69028 = new int[2];
+        this.f69030 = context;
+        View viewInflate = LayoutInflater.from(context).inflate(R.layout.MT_Protector, (ViewGroup) null);
+        this.f69025 = viewInflate;
+        this.f69031 = (TextView) viewInflate.findViewById(R.id.MT_Protector);
+        layoutParams.setTitle(getClass().getSimpleName());
+        layoutParams.packageName = context.getPackageName();
+        layoutParams.type = b.c;
+        layoutParams.width = -2;
+        layoutParams.height = -2;
+        layoutParams.format = -3;
+        layoutParams.windowAnimations = R.style.MT_Protector;
+        layoutParams.flags = 24;
     }
 
-    @Override // l.AbstractC3492
     /* JADX INFO: renamed from: ۙ */
-    public native void mo1157();
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public native void mo1159();
-
-    public C21612(DialogInterfaceOnDismissListenerC8913 dialogInterfaceOnDismissListenerC8913, AbstractActivityC5788 abstractActivityC5788, View view) {
-        this.f70103 = dialogInterfaceOnDismissListenerC8913;
-        this.f70101 = abstractActivityC5788;
-        this.f70102 = view;
+    public void mo4706(View view, int i, int i2, boolean z, CharSequence charSequence) {
+        int height;
+        int i3;
+        if (mo4707()) {
+            mo4704();
+        }
+        this.f69031.setText(charSequence);
+        IBinder applicationWindowToken = view.getApplicationWindowToken();
+        WindowManager.LayoutParams layoutParams = this.f69026;
+        layoutParams.token = applicationWindowToken;
+        Context context = this.f69030;
+        int dimensionPixelOffset = context.getResources().getDimensionPixelOffset(R.dimen.MT_Protector);
+        int width = view.getWidth() >= dimensionPixelOffset ? i : view.getWidth() / 2;
+        if (view.getHeight() >= dimensionPixelOffset) {
+            int dimensionPixelOffset2 = context.getResources().getDimensionPixelOffset(R.dimen.MT_Protector);
+            height = i2 + dimensionPixelOffset2;
+            i3 = i2 - dimensionPixelOffset2;
+        } else {
+            height = view.getHeight();
+            i3 = 0;
+        }
+        layoutParams.gravity = 49;
+        int dimensionPixelOffset3 = context.getResources().getDimensionPixelOffset(z ? R.dimen.MT_Protector : R.dimen.MT_Protector);
+        View rootView = view.getRootView();
+        ViewGroup.LayoutParams layoutParams2 = rootView.getLayoutParams();
+        if (!(layoutParams2 instanceof WindowManager.LayoutParams) || ((WindowManager.LayoutParams) layoutParams2).type != 2) {
+            for (Context context2 = view.getContext(); context2 instanceof ContextWrapper; context2 = ((ContextWrapper) context2).getBaseContext()) {
+                if (context2 instanceof Activity) {
+                    rootView = ((Activity) context2).getWindow().getDecorView();
+                    break;
+                }
+            }
+        }
+        View view2 = this.f69025;
+        if (rootView != null) {
+            Rect rect = this.f69027;
+            rootView.getWindowVisibleDisplayFrame(rect);
+            if (rect.left < 0 && rect.top < 0) {
+                Resources resources = context.getResources();
+                int identifier = resources.getIdentifier("status_bar_height", "dimen", "android");
+                int dimensionPixelSize = identifier != 0 ? resources.getDimensionPixelSize(identifier) : 0;
+                DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+                rect.set(0, dimensionPixelSize, displayMetrics.widthPixels, displayMetrics.heightPixels);
+            }
+            int[] iArr = this.f69028;
+            rootView.getLocationOnScreen(iArr);
+            int[] iArr2 = this.f69029;
+            view.getLocationOnScreen(iArr2);
+            int i4 = iArr2[0] - iArr[0];
+            iArr2[0] = i4;
+            iArr2[1] = iArr2[1] - iArr[1];
+            layoutParams.x = (i4 + width) - (rootView.getWidth() / 2);
+            int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
+            view2.measure(iMakeMeasureSpec, iMakeMeasureSpec);
+            int measuredHeight = view2.getMeasuredHeight();
+            int i5 = iArr2[1];
+            int i6 = ((i3 + i5) - dimensionPixelOffset3) - measuredHeight;
+            int i7 = i5 + height + dimensionPixelOffset3;
+            if (z) {
+                if (i6 >= 0) {
+                    layoutParams.y = i6;
+                } else {
+                    layoutParams.y = i7;
+                }
+            } else if (measuredHeight + i7 <= rect.height()) {
+                layoutParams.y = i7;
+            } else {
+                layoutParams.y = i6;
+            }
+        }
+        ((WindowManager) context.getSystemService("window")).addView(view2, layoutParams);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        this.f70103.f30570 = true;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f70103.f30570 = false;
-    }
-
-    /* JADX WARN: Code duplicated, block: B:37:0x0128 A[PHI: r11 r12 r13 r14 r15
-      0x0128: PHI (r11v6 short[]) = (r11v3 short[]), (r11v2 short[]), (r11v2 short[]), (r11v2 short[]) binds: [B:36:0x0126, B:28:0x00e2, B:8:0x0058, B:91:0x0128] A[DONT_GENERATE, DONT_INLINE]
-      0x0128: PHI (r12v6 int) = (r12v3 int), (r12v2 int), (r12v2 int), (r12v2 int) binds: [B:36:0x0126, B:28:0x00e2, B:8:0x0058, B:91:0x0128] A[DONT_GENERATE, DONT_INLINE]
-      0x0128: PHI (r13v6 int) = (r13v3 int), (r13v2 int), (r13v2 int), (r13v2 int) binds: [B:36:0x0126, B:28:0x00e2, B:8:0x0058, B:91:0x0128] A[DONT_GENERATE, DONT_INLINE]
-      0x0128: PHI (r14v6 short[]) = (r14v2 short[]), (r14v3 short[]), (r14v2 short[]), (r14v2 short[]) binds: [B:36:0x0126, B:28:0x00e2, B:8:0x0058, B:91:0x0128] A[DONT_GENERATE, DONT_INLINE]
-      0x0128: PHI (r15v6 int) = (r15v2 int), (r15v3 int), (r15v2 int), (r15v2 int) binds: [B:36:0x0126, B:28:0x00e2, B:8:0x0058, B:91:0x0128] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:64:0x0247 A[PHI: r2 r4 r20
-      0x0247: PHI (r2v4 java.lang.String) = (r2v2 java.lang.String), (r2v2 java.lang.String), (r2v3 java.lang.String), (r2v2 java.lang.String) binds: [B:63:0x0245, B:59:0x0223, B:32:0x0103, B:7:0x0054] A[DONT_GENERATE, DONT_INLINE]
-      0x0247: PHI (r4v4 char) = (r4v2 char), (r4v3 char), (r4v2 char), (r4v2 char) binds: [B:63:0x0245, B:59:0x0223, B:32:0x0103, B:7:0x0054] A[DONT_GENERATE, DONT_INLINE]
-      0x0247: PHI (r20v5 short[]) = (r20v4 short[]), (r20v3 short[]), (r20v3 short[]), (r20v3 short[]) binds: [B:63:0x0245, B:59:0x0223, B:32:0x0103, B:7:0x0054] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:68:0x0279 A[PHI: r5 r6 r7 r8 r9
-      0x0279: PHI (r5v4 short) = (r5v2 short), (r5v3 short), (r5v2 short), (r5v2 short) binds: [B:67:0x0277, B:55:0x0204, B:51:0x01e0, B:47:0x01bf] A[DONT_GENERATE, DONT_INLINE]
-      0x0279: PHI (r6v4 int) = (r6v2 int), (r6v3 int), (r6v2 int), (r6v2 int) binds: [B:67:0x0277, B:55:0x0204, B:51:0x01e0, B:47:0x01bf] A[DONT_GENERATE, DONT_INLINE]
-      0x0279: PHI (r7v4 int) = (r7v2 int), (r7v2 int), (r7v3 int), (r7v2 int) binds: [B:67:0x0277, B:55:0x0204, B:51:0x01e0, B:47:0x01bf] A[DONT_GENERATE, DONT_INLINE]
-      0x0279: PHI (r8v3 int) = (r8v2 int), (r8v2 int), (r8v2 int), (r8v4 int) binds: [B:67:0x0277, B:55:0x0204, B:51:0x01e0, B:47:0x01bf] A[DONT_GENERATE, DONT_INLINE]
-      0x0279: PHI (r9v3 short) = (r9v2 short), (r9v2 short), (r9v2 short), (r9v4 short) binds: [B:67:0x0277, B:55:0x0204, B:51:0x01e0, B:47:0x01bf] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code restructure failed: missing block: B:10:0x0060, code lost:
-    
-        if (l.C0629.m2907() == false) goto L15;
-     */
-    @Override // l.AbstractC3492
     /* JADX INFO: renamed from: ۙ */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public void mo1158(java.lang.Exception r22) {
-        /*
-            Method dump skipped, instruction units count: 830
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C21612.mo1158(java.lang.Exception):void");
+    public void mo4704() {
+        if (mo4707()) {
+            ((WindowManager) this.f69030.getSystemService("window")).removeView(this.f69025);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷ */
+    public boolean mo4707() {
+        return this.f69025.getParent() != null;
     }
 }

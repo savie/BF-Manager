@@ -1,15 +1,12 @@
 package l;
 
-import android.content.Intent;
-import bin.mt.plus.Main;
-
-/* JADX INFO: renamed from: l.ܶ᩶᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 164Z */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15467 implements InterfaceC17295 {
-    @Override // l.InterfaceC17295
-    public final void accept(Object obj) {
-        Main main = (Main) obj;
-        main.startActivity(new Intent(main, (Class<?>) ActivityC3541.class));
+/* JADX INFO: renamed from: l.ܳܺ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZAV2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15467 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 6;
     }
 }

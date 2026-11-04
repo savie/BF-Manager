@@ -233,11 +233,11 @@
     .line 219
     iget-object v0, p0, Lcom/google/android/material/carousel/MaskableFrameLayout;->shapeableDelegate:Lcom/google/android/material/shape/ShapeableDelegate;
 
-    new-instance v1, Ll/ܽ᩷ۘ;
+    new-instance v1, Ll/֡ۜ֫;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x5
 
-    invoke-direct {v1, v2, p0}, Ll/ܽ᩷ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ll/֡ۜ֫;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/material/shape/ShapeableDelegate;->maybeClip(Landroid/graphics/Canvas;Lcom/google/android/material/canvas/CanvasCompat$CanvasOperation;)V
 
@@ -460,7 +460,7 @@
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 133
-    invoke-static {p1, v0, v1}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {p1, v0, v1}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result p1
 
@@ -491,14 +491,12 @@
 .end method
 
 .method public setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
-    .locals 2
+    .locals 1
 
     .line 101
-    new-instance v0, Ll/֡ۜᩴ;
+    new-instance v0, Ll/ܿ۟ۧ;
 
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Ll/֡ۜᩴ;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     .line 102
     invoke-virtual {p1, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->withTransformedCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;)Lcom/google/android/material/shape/ShapeAppearanceModel;

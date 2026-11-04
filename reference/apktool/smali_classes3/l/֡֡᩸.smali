@@ -1,74 +1,36 @@
 .class public final Ll/֡֡᩸;
-.super Ll/ܳ֡᩸;
-.source "94VR"
+.super Ljava/io/FilterInputStream;
+.source "R6SP"
 
 # interfaces
-.implements Ll/۫֡᩸;
-
-
-# instance fields
-.field public ᩺:Ll/ܿ֡᩸;
+.implements Ll/۠ۜ᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ֡᩸;)V
-    .locals 1
+.method public constructor <init>(Ljava/io/InputStream;)V
+    .locals 0
 
-    .line 42
-    sget-object v0, Ll/ۗ֡᩸;->۫:Ll/ۗ֡᩸;
-
-    invoke-direct {p0, v0}, Ll/ܳ֡᩸;-><init>(Ll/ۗ֡᩸;)V
-
-    .line 43
-    iput-object p1, p0, Ll/֡֡᩸;->᩺:Ll/ܿ֡᩸;
+    .line 51
+    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public synthetic transferTo(Ljava/io/OutputStream;)J
     .locals 2
 
-    .line 54
-    iget-object v0, p0, Ll/֡֡᩸;->᩺:Ll/ܿ֡᩸;
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡۜ᩹;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    invoke-virtual {v0}, Ll/ܿ֡᩸;->֨()Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v0
-
-    const-string v1, "GOTO "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/ۤ᩶᩸;)Ll/ۙܽ᩸;
-    .locals 1
-
-    .line 48
-    iget-object v0, p0, Ll/֡֡᩸;->᩺:Ll/ܿ֡᩸;
-
-    invoke-virtual {p1, v0}, Ll/ۤ᩶᩸;->ۙ(Ll/ܿ֡᩸;)Ll/ܿ֡᩸;
-
-    move-result-object p1
-
-    .line 49
-    new-instance v0, Ll/֡֡᩸;
-
-    invoke-direct {v0, p1}, Ll/֡֡᩸;-><init>(Ll/ܿ֡᩸;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ()Ll/ܿ֡᩸;
-    .locals 1
-
-    .line 34
-    iget-object v0, p0, Ll/֡֡᩸;->᩺:Ll/ܿ֡᩸;
-
-    return-object v0
+    return-wide v0
 .end method

@@ -1,131 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۨ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07OA */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C13806 {
+/* JADX INFO: renamed from: l.۬ۧۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E762 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13806 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f43780;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f45560;
+    public final long f43781;
 
-    static {
-        int[] iArr = new int[EnumC6749.values().length];
-        f45560 = iArr;
-        try {
-            iArr[EnumC6749.BEGIN_JAVADOC.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f45560[EnumC6749.END_JAVADOC.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f45560[EnumC6749.FOOTER_JAVADOC_TAG_START.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f45560[EnumC6749.SNIPPET_BEGIN.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f45560[EnumC6749.SNIPPET_END.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f45560[EnumC6749.LIST_OPEN_TAG.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f45560[EnumC6749.LIST_CLOSE_TAG.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f45560[EnumC6749.LIST_ITEM_OPEN_TAG.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f45560[EnumC6749.HEADER_OPEN_TAG.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f45560[EnumC6749.HEADER_CLOSE_TAG.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f45560[EnumC6749.PARAGRAPH_OPEN_TAG.ordinal()] = 11;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f45560[EnumC6749.BLOCKQUOTE_OPEN_TAG.ordinal()] = 12;
-        } catch (NoSuchFieldError unused12) {
-        }
-        try {
-            f45560[EnumC6749.BLOCKQUOTE_CLOSE_TAG.ordinal()] = 13;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f45560[EnumC6749.PRE_OPEN_TAG.ordinal()] = 14;
-        } catch (NoSuchFieldError unused14) {
-        }
-        try {
-            f45560[EnumC6749.PRE_CLOSE_TAG.ordinal()] = 15;
-        } catch (NoSuchFieldError unused15) {
-        }
-        try {
-            f45560[EnumC6749.CODE_OPEN_TAG.ordinal()] = 16;
-        } catch (NoSuchFieldError unused16) {
-        }
-        try {
-            f45560[EnumC6749.CODE_CLOSE_TAG.ordinal()] = 17;
-        } catch (NoSuchFieldError unused17) {
-        }
-        try {
-            f45560[EnumC6749.TABLE_OPEN_TAG.ordinal()] = 18;
-        } catch (NoSuchFieldError unused18) {
-        }
-        try {
-            f45560[EnumC6749.TABLE_CLOSE_TAG.ordinal()] = 19;
-        } catch (NoSuchFieldError unused19) {
-        }
-        try {
-            f45560[EnumC6749.MOE_BEGIN_STRIP_COMMENT.ordinal()] = 20;
-        } catch (NoSuchFieldError unused20) {
-        }
-        try {
-            f45560[EnumC6749.MOE_END_STRIP_COMMENT.ordinal()] = 21;
-        } catch (NoSuchFieldError unused21) {
-        }
-        try {
-            f45560[EnumC6749.HTML_COMMENT.ordinal()] = 22;
-        } catch (NoSuchFieldError unused22) {
-        }
-        try {
-            f45560[EnumC6749.BR_TAG.ordinal()] = 23;
-        } catch (NoSuchFieldError unused23) {
-        }
-        try {
-            f45560[EnumC6749.WHITESPACE.ordinal()] = 24;
-        } catch (NoSuchFieldError unused24) {
-        }
-        try {
-            f45560[EnumC6749.FORCED_NEWLINE.ordinal()] = 25;
-        } catch (NoSuchFieldError unused25) {
-        }
-        try {
-            f45560[EnumC6749.LITERAL.ordinal()] = 26;
-        } catch (NoSuchFieldError unused26) {
-        }
-        try {
-            f45560[EnumC6749.PARAGRAPH_CLOSE_TAG.ordinal()] = 27;
-        } catch (NoSuchFieldError unused27) {
-        }
-        try {
-            f45560[EnumC6749.LIST_ITEM_CLOSE_TAG.ordinal()] = 28;
-        } catch (NoSuchFieldError unused28) {
-        }
-        try {
-            f45560[EnumC6749.OPTIONAL_LINE_BREAK.ordinal()] = 29;
-        } catch (NoSuchFieldError unused29) {
-        }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f43782;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f43783;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String f43784;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f43785;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f43786;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final String f43787;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f43788;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f43789;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f43790;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f43791;
+
+    public C13806(String str, String str2, String str3, String str4, String str5, String str6, boolean z, int i, int i2, int i3, long j, long j2) {
+        this.f43787 = str;
+        this.f43790 = str2;
+        this.f43780 = str3;
+        this.f43788 = str4;
+        this.f43786 = str5;
+        this.f43784 = str6;
+        this.f43783 = z;
+        this.f43782 = i;
+        this.f43791 = i2;
+        this.f43785 = i3;
+        this.f43789 = j;
+        this.f43781 = j2;
     }
 }

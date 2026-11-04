@@ -1,68 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩶᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 05H4 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4880 extends AbstractC4300 implements InterfaceC3594, InterfaceC2183 {
+import java.util.Comparator;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC3468 f17159 = new C3344();
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f17160;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte f17161;
+/* JADX INFO: renamed from: l.ۙۨۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H78K */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C4880 implements Comparator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public short f17162;
+    public final /* synthetic */ int f17053;
 
-    public C4880(EnumC0772 enumC0772, byte b, byte b2, short s) {
-        super(enumC0772);
-        if (b >= 16 || b2 >= 16) {
-            throw new RuntimeException("The register number must be less than v16");
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        switch (this.f17053) {
+            case 0:
+                C23330 c23330 = (C23330) obj;
+                C23330 c23331 = (C23330) obj2;
+                int iCompareTo = c23330.f75565.compareTo(c23331.f75565);
+                if (iCompareTo != 0) {
+                    return iCompareTo;
+                }
+                int iCompareTo2 = c23330.f75564.compareTo(c23331.f75564);
+                return iCompareTo2 != 0 ? iCompareTo2 : Integer.compare(c23330.f75563, c23331.f75563);
+            default:
+                C7694 c7694 = (C7694) obj;
+                C7694 c7695 = (C7694) obj2;
+                int i = C23706.f76834;
+                boolean zStartsWith = c7694.m20965().startsWith("_");
+                if (zStartsWith == c7695.m20965().startsWith("_")) {
+                    return c7694.m20965().compareToIgnoreCase(c7695.m20965());
+                }
+                return zStartsWith ? 1 : -1;
         }
-        this.f17161 = b;
-        this.f17160 = b2;
-        this.f17162 = s;
-    }
-
-    public C4880(EnumC0772 enumC0772, byte[] bArr, int i) {
-        super(enumC0772);
-        byte b = bArr[i + 1];
-        this.f17161 = (byte) (b & 15);
-        this.f17160 = C14611.m35076(b);
-        this.f17162 = C14611.m35089(i + 2, bArr);
-    }
-
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4759(C4651 c4651, int i) {
-        c4651.m12841(this.f15468.f3346);
-        c4651.m12841((this.f17160 << 4) | this.f17161);
-        c4651.m12833(this.f17162);
-    }
-
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ۜ */
-    public final EnumC1227 mo4758() {
-        return EnumC1227.Format22s;
-    }
-
-    @Override // l.InterfaceC3594
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4757() {
-        return this.f17161;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final int m13589() {
-        return this.f17160;
-    }
-
-    @Override // l.InterfaceC2183
-    /* JADX INFO: renamed from: ۬ */
-    public final long mo6779() {
-        return this.f17162;
     }
 }

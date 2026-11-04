@@ -51,7 +51,7 @@
     invoke-direct {v1, v2, v3, v4}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
-    invoke-static {v1}, Ll/᩹֡ᩳ;->ۙ(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;
+    invoke-static {v1}, Ll/ۛ᩸᩹;->ۙ(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;
 
     move-result-object v1
 

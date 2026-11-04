@@ -1,146 +1,99 @@
-.class public Ll/ܺۜᩴ;
-.super Ljava/lang/Object;
-.source "J1FL"
-
-# interfaces
-.implements Ll/ۤۜᩴ;
-.implements Ljava/io/Serializable;
-.implements Ll/ۤܿᩴ;
-
-
-# static fields
-.field public static final serialVersionUID:J = -0x61c8864680b583e9L
+.class public final Ll/ܺۜᩴ;
+.super Ll/ۛۜᩴ;
+.source "964V"
 
 
 # instance fields
-.field public final ܺ:Ll/ۤۜᩴ;
+.field public final ֡:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۤ᩺ᩴ;)V
-    .locals 0
+.method public constructor <init>(IILl/۟֡֫;)V
+    .locals 2
 
-    .line 467
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    .line 468
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 401
+    invoke-static {p1, p2, v0}, Ll/ۘۜᩴ;->ۙ(III)J
 
-    iput-object p1, p0, Ll/ܺۜᩴ;->ܺ:Ll/ۤۜᩴ;
+    move-result-wide v0
+
+    long-to-int p1, v0
+
+    invoke-direct {p0, p1, p3}, Ll/ۛۜᩴ;-><init>(ILl/۟֡֫;)V
+
+    .line 402
+    iput p2, p0, Ll/ܺۜᩴ;->֡:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)Z
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 463
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p0, p1}, Ll/ܺۜᩴ;->ۙ(Ljava/lang/Integer;)Z
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public clear()V
+.method public final finish()Ljava/lang/String;
     .locals 1
 
-    .line 520
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 416
+    iget-object v0, p0, Ll/ۛۜᩴ;->ܿ:Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-static {v0}, Ll/ۘۜᩴ;->ۙ(Ljava/lang/StringBuilder;)V
 
-    throw v0
-.end method
-
-.method public final synthetic forEach(Ljava/util/function/Consumer;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۚ᩺ᩴ;->ۙ(Ll/ۤۜᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public forEach(Ljava/util/function/IntConsumer;)V
-    .locals 1
-
-    .line 535
-    iget-object v0, p0, Ll/ܺۜᩴ;->ܺ:Ll/ۤۜᩴ;
-
-    invoke-interface {v0, p1}, Ll/᩹᩺ᩴ;->forEach(Ljava/util/function/IntConsumer;)V
-
-    return-void
-.end method
-
-.method public final synthetic removeIf(Ljava/util/function/Predicate;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۡۜᩴ;->ۙ(Ll/ۤۜᩴ;Ljava/util/function/Predicate;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public synthetic spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Ll/ܺۜᩴ;->spliterator()Ll/᩷ۛᩴ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/۟ۛᩴ;->convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
+    .line 335
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public spliterator()Ll/ۨܶᩴ;
-    .locals 1
+.method public final ۙ(I)V
+    .locals 3
 
-    const/4 v0, 0x0
+    .line 407
+    iget v0, p0, Ll/ۛۜᩴ;->᩶:I
 
-    throw v0
-.end method
+    .line 489
+    iget-object v1, p0, Ll/ۛۜᩴ;->ܿ:Ljava/lang/StringBuilder;
 
-.method public final bridge synthetic spliterator()Ll/᩷ۛᩴ;
-    .locals 1
+    if-eqz v0, :cond_0
 
-    .line 463
-    invoke-virtual {p0}, Ll/ܺۜᩴ;->spliterator()Ll/ۨܶᩴ;
+    iget v2, p0, Ll/ܺۜᩴ;->֡:I
 
-    move-result-object v0
+    rem-int/2addr v0, v2
 
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public synthetic toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
-    .locals 0
+    const/16 v0, 0xa
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩵ܿᩴ;->$default$toArray(Ljava/util/Collection;Ljava/util/function/IntFunction;)[Ljava/lang/Object;
+    .line 490
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    :cond_0
+    const/4 v0, 0x7
 
-    return-object p1
-.end method
+    :goto_0
+    if-ltz v0, :cond_1
 
-.method public ۙ(Ljava/lang/Integer;)Z
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    ushr-int v2, p1, v0
 
-    const/4 p1, 0x0
+    and-int/lit8 v2, v2, 0x1
 
-    throw p1
+    add-int/lit8 v2, v2, 0x30
+
+    int-to-char v2, v2
+
+    .line 409
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/16 p1, 0x20
+
+    .line 411
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-void
 .end method

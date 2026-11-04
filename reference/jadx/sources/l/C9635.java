@@ -1,30 +1,56 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܰ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17QY */
+import java.io.IOException;
+import java.nio.file.WatchKey;
+import java.nio.file.WatchService;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: renamed from: l.ۡ᩷ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final enum C9635 extends EnumC3283 {
-    public /* synthetic */ C9635() {
-        this("AMBIGUOUS", 4, false);
+public final /* synthetic */ class C9635 implements WatchService {
+    public final /* synthetic */ InterfaceC1208 a;
+
+    public /* synthetic */ C9635(InterfaceC1208 interfaceC1208) {
+        this.a = interfaceC1208;
     }
 
-    public C9635(String str, int i, boolean z) {
-        super(str, i, 0, z);
+    public static /* synthetic */ WatchService b(InterfaceC1208 interfaceC1208) {
+        if (interfaceC1208 == null) {
+            return null;
+        }
+        return interfaceC1208 instanceof C10381 ? ((C10381) interfaceC1208).a : new C9635(interfaceC1208);
     }
 
-    @Override // l.EnumC3283
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC3283 mo6069(EnumC6106 enumC6106) {
-        int i = C17395.f55362[enumC6106.ordinal()];
-        if (i == 1) {
-            return EnumC3283.f12168;
+    @Override // java.nio.file.WatchService, java.io.Closeable, java.lang.AutoCloseable
+    public final /* synthetic */ void close() throws IOException {
+        this.a.close();
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        InterfaceC1208 interfaceC1208 = this.a;
+        if (obj instanceof C9635) {
+            obj = ((C9635) obj).a;
         }
-        if (i == 2 || i == 3) {
-            return EnumC3283.f12170;
-        }
-        if (i == 4) {
-            return EnumC3283.f12169;
-        }
-        throw new AssertionError();
+        return interfaceC1208.equals(obj);
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // java.nio.file.WatchService
+    public final /* synthetic */ WatchKey poll() {
+        return C8145.a(this.a.poll());
+    }
+
+    @Override // java.nio.file.WatchService
+    public final /* synthetic */ WatchKey poll(long j, TimeUnit timeUnit) {
+        return C8145.a(this.a.poll(j, timeUnit));
+    }
+
+    @Override // java.nio.file.WatchService
+    public final /* synthetic */ WatchKey take() {
+        return C8145.a(this.a.take());
     }
 }

@@ -11,14 +11,14 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.resources.MaterialResources;
-import l.C0976;
-import l.C13954;
-import l.C15844;
-import l.C18616;
-import l.C1977;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.C11642;
+import l.C13275;
+import l.C14625;
+import l.C17609;
+import l.C22666;
+import l.C3977;
+import l.C4185;
+import l.C5204;
 
 /* JADX INFO: loaded from: classes.dex */
 public class NavigationRailView extends NavigationBarView {
@@ -42,11 +42,11 @@ public class NavigationRailView extends NavigationBarView {
     }
 
     public NavigationRailView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8827);
+        this(context, attributeSet, C11642.f36671);
     }
 
     public NavigationRailView(Context context, AttributeSet attributeSet, int i) {
-        this(context, attributeSet, i, C18616.f60031);
+        this(context, attributeSet, i, C4185.f14187);
     }
 
     public NavigationRailView(Context context, AttributeSet attributeSet, int i, int i2) {
@@ -54,56 +54,56 @@ public class NavigationRailView extends NavigationBarView {
         this.paddingTopSystemWindowInsets = null;
         this.paddingBottomSystemWindowInsets = null;
         this.paddingStartSystemWindowInsets = null;
-        this.topMargin = getResources().getDimensionPixelSize(C0976.f4256);
+        this.topMargin = getResources().getDimensionPixelSize(C17609.f57316);
         Context context2 = getContext();
-        C1977 c1977ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C8033.f27300, i, i2, new int[0]);
-        int iM6387 = c1977ObtainTintedStyledAttributes.m6387(C8033.f26608, 0);
-        if (iM6387 != 0) {
-            addHeaderView(iM6387);
+        C5204 c5204ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C14625.f46477, i, i2, new int[0]);
+        int iM15660 = c5204ObtainTintedStyledAttributes.m15660(C14625.f46211, 0);
+        if (iM15660 != 0) {
+            addHeaderView(iM15660);
         }
-        setMenuGravity(c1977ObtainTintedStyledAttributes.m6381(C8033.f28044, 49));
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26822)) {
-            setItemMinimumHeight(c1977ObtainTintedStyledAttributes.m6384(C8033.f26822, -1));
+        setMenuGravity(c5204ObtainTintedStyledAttributes.m15657(C14625.f47860, 49));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46902)) {
+            setItemMinimumHeight(c5204ObtainTintedStyledAttributes.m15665(C14625.f46902, -1));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27672)) {
-            this.paddingTopSystemWindowInsets = Boolean.valueOf(c1977ObtainTintedStyledAttributes.m6376(C8033.f27672, false));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47221)) {
+            this.paddingTopSystemWindowInsets = Boolean.valueOf(c5204ObtainTintedStyledAttributes.m15654(C14625.f47221, false));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27460)) {
-            this.paddingBottomSystemWindowInsets = Boolean.valueOf(c1977ObtainTintedStyledAttributes.m6376(C8033.f27460, false));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47274)) {
+            this.paddingBottomSystemWindowInsets = Boolean.valueOf(c5204ObtainTintedStyledAttributes.m15654(C14625.f47274, false));
         }
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f27937)) {
-            this.paddingStartSystemWindowInsets = Boolean.valueOf(c1977ObtainTintedStyledAttributes.m6376(C8033.f27937, false));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47327)) {
+            this.paddingStartSystemWindowInsets = Boolean.valueOf(c5204ObtainTintedStyledAttributes.m15654(C14625.f47327, false));
         }
-        int dimensionPixelOffset = getResources().getDimensionPixelOffset(C0976.f4233);
-        int dimensionPixelOffset2 = getResources().getDimensionPixelOffset(C0976.f3831);
+        int dimensionPixelOffset = getResources().getDimensionPixelOffset(C17609.f57399);
+        int dimensionPixelOffset2 = getResources().getDimensionPixelOffset(C17609.f57729);
         float fLerp = AnimationUtils.lerp(0.0f, 1.0f, 0.3f, 1.0f, MaterialResources.getFontScale(context2) - 1.0f);
         float fLerp2 = AnimationUtils.lerp(getItemPaddingTop(), dimensionPixelOffset, fLerp);
         float fLerp3 = AnimationUtils.lerp(getItemPaddingBottom(), dimensionPixelOffset2, fLerp);
         setItemPaddingTop(Math.round(fLerp2));
         setItemPaddingBottom(Math.round(fLerp3));
-        c1977ObtainTintedStyledAttributes.m6379();
+        c5204ObtainTintedStyledAttributes.m15664();
         applyWindowInsets();
     }
 
     private void applyWindowInsets() {
         ViewUtils.doOnApplyWindowInsets(this, new ViewUtils.OnApplyWindowInsetsListener() { // from class: com.google.android.material.navigationrail.NavigationRailView.1
             @Override // com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener
-            public C15844 onApplyWindowInsets(View view, C15844 c15844, ViewUtils.RelativePadding relativePadding) {
-                C13954 c13954M37673 = c15844.m37673(7);
+            public C3977 onApplyWindowInsets(View view, C3977 c3977, ViewUtils.RelativePadding relativePadding) {
+                C13275 c13275M12817 = c3977.m12817(7);
                 NavigationRailView navigationRailView = NavigationRailView.this;
                 if (navigationRailView.shouldApplyWindowInsetPadding(navigationRailView.paddingTopSystemWindowInsets)) {
-                    relativePadding.top += c13954M37673.f45912;
+                    relativePadding.top += c13275M12817.f42408;
                 }
                 NavigationRailView navigationRailView2 = NavigationRailView.this;
                 if (navigationRailView2.shouldApplyWindowInsetPadding(navigationRailView2.paddingBottomSystemWindowInsets)) {
-                    relativePadding.bottom += c13954M37673.f45913;
+                    relativePadding.bottom += c13275M12817.f42405;
                 }
                 NavigationRailView navigationRailView3 = NavigationRailView.this;
                 if (navigationRailView3.shouldApplyWindowInsetPadding(navigationRailView3.paddingStartSystemWindowInsets)) {
-                    relativePadding.start += ViewUtils.isLayoutRtl(view) ? c13954M37673.f45914 : c13954M37673.f45915;
+                    relativePadding.start += ViewUtils.isLayoutRtl(view) ? c13275M12817.f42406 : c13275M12817.f42407;
                 }
                 relativePadding.applyToView(view);
-                return c15844;
+                return c3977;
             }
         });
     }
@@ -113,7 +113,7 @@ public class NavigationRailView extends NavigationBarView {
         if (bool != null) {
             return bool.booleanValue();
         }
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         return getFitsSystemWindows();
     }
 

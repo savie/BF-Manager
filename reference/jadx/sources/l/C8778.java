@@ -1,20 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۡۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+import android.content.ComponentName;
+import java.util.ArrayDeque;
+
+/* JADX INFO: renamed from: l.۠ܿ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G3SY */
 /* JADX INFO: loaded from: classes3.dex */
-public class C8778 extends C23595 {
+public final class C8778 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C10189 f30195;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ComponentName f28553;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f30196 = true;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public InterfaceC10489 f28554;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f30197;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f28550 = false;
 
-    public C8778(int i) {
-        this.f30197 = i;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public ArrayDeque f28552 = new ArrayDeque();
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f28551 = 0;
+
+    public C8778(ComponentName componentName) {
+        this.f28553 = componentName;
     }
 }

@@ -14,9 +14,9 @@
     .locals 1
 
     .line 35
-    new-instance v0, Ll/ۖ֨᩹;
+    new-instance v0, Ll/۠᩹ܳ;
 
-    invoke-direct {v0}, Ll/ۖ֨᩹;-><init>()V
+    invoke-direct {v0}, Ll/۠᩹ܳ;-><init>()V
 
     sput-object v0, Lbin/mt/json/WriterConfig;->MINIMAL:Lbin/mt/json/WriterConfig;
 
@@ -43,5 +43,5 @@
 
 
 # virtual methods
-.method public abstract createWriter(Ljava/io/Writer;)Ll/ۙ֨᩹;
+.method public abstract createWriter(Ljava/io/Writer;)Ll/֨᩹ܳ;
 .end method

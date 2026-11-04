@@ -1,12 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤ᩶۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: K5ZN */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10521 implements InterfaceC10597 {
-    @Override // l.InterfaceC10597
+/* JADX INFO: renamed from: l.ۤ֨ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C59K */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10521 implements InterfaceC6288 {
+    @Override // l.InterfaceC6288
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1473(Object obj) {
-        ServiceC17701.m41233();
+    public final AbstractC24188 mo1149(C24738 c24738, EnumC7779 enumC7779, byte[] bArr, int i) {
+        return new C22456(enumC7779, bArr, i);
     }
 }

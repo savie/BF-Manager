@@ -1,12 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۛ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: ZB07 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18568 extends C10621 {
-    @Override // l.C10621, l.C2339
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo4567(Object obj) {
-        throw null;
+import java.util.Stack;
+
+/* JADX INFO: renamed from: l.ܿ᩶ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: IC6V */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18568 extends ThreadLocal {
+    @Override // java.lang.ThreadLocal
+    public final Object initialValue() {
+        return new Stack();
     }
 }

@@ -1,62 +1,31 @@
 .class public final Ll/ܺ۠ۙ;
-.super Ll/ܽ۠ۙ;
-.source "B8N9"
+.super Ljava/lang/Object;
+.source "D7NJ"
 
 
-# virtual methods
-.method public final ۙ()I
-    .locals 1
+# instance fields
+.field public final ۙ:Ll/ܳ᩹ۙ;
 
-    const/4 v0, 0x0
+.field public final ۤ:Landroid/net/Uri;
 
-    return v0
-.end method
+.field public final ᩷:Ljava/lang/String;
 
-.method public final ۙ(Ljava/lang/Object;)I
+
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Ll/ܳ᩹ۙ;Ljava/lang/String;)V
     .locals 0
 
-    const/4 p1, -0x1
+    .line 144
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
-.end method
+    .line 145
+    iput-object p1, p0, Ll/ܺ۠ۙ;->ۤ:Landroid/net/Uri;
 
-.method public final ۙ(I)Ljava/lang/Object;
-    .locals 0
+    .line 146
+    iput-object p2, p0, Ll/ܺ۠ۙ;->ۙ:Ll/ܳ᩹ۙ;
 
-    .line 996
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    .line 148
+    iput-object p3, p0, Ll/ܺ۠ۙ;->᩷:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ(ILl/֡۠ۙ;J)Ll/֡۠ۙ;
-    .locals 0
-
-    .line 976
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ(ILl/᩶۠ۙ;Z)Ll/᩶۠ۙ;
-    .locals 0
-
-    .line 986
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ܰ()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

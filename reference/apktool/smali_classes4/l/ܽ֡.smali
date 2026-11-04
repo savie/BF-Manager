@@ -1,44 +1,91 @@
 .class public final Ll/ܽ֡;
 .super Ljava/lang/Object;
-.source "G3SY"
-
-
-# instance fields
-.field public ۖ:Ll/ۨ;
-
-.field public ۙ:Z
-
-.field public ۚ:Ljava/util/ArrayDeque;
-
-.field public ۨ:I
-
-.field public final ܰ:Landroid/content/ComponentName;
+.source "D2TL"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ComponentName;)V
-    .locals 2
+.method public static ۙ(Landroid/content/Intent;Ljava/util/ArrayList;)V
+    .locals 7
 
-    .line 1147
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "android.intent.extra.TEXT"
 
-    const/4 v0, 0x0
+    .line 1042
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    .line 1139
-    iput-boolean v0, p0, Ll/ܽ֡;->ۙ:Z
+    move-result-object v0
 
-    .line 1143
-    new-instance v1, Ljava/util/ArrayDeque;
+    const-string v1, "android.intent.extra.HTML_TEXT"
 
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+    .line 1043
+    invoke-virtual {p0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object v1, p0, Ll/ܽ֡;->ۚ:Ljava/util/ArrayDeque;
+    move-result-object v1
 
-    .line 1145
-    iput v0, p0, Ll/ܽ֡;->ۨ:I
+    .line 1045
+    new-instance v2, Landroid/content/ClipData;
 
-    .line 1148
-    iput-object p1, p0, Ll/ܽ֡;->ܰ:Landroid/content/ComponentName;
+    .line 1046
+    invoke-virtual {p0}, Landroid/content/Intent;->getType()Ljava/lang/String;
+
+    move-result-object v3
+
+    filled-new-array {v3}, [Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Landroid/content/ClipData$Item;
+
+    const/4 v5, 0x0
+
+    .line 1047
+    invoke-virtual {p1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/net/Uri;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v0, v1, v6, v5}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/content/Intent;Landroid/net/Uri;)V
+
+    invoke-direct {v2, v6, v3, v4}, Landroid/content/ClipData;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;Landroid/content/ClipData$Item;)V
+
+    .line 1049
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v3, 0x1
+
+    :goto_0
+    if-ge v3, v0, :cond_0
+
+    .line 1050
+    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/net/Uri;
+
+    .line 1051
+    new-instance v5, Landroid/content/ClipData$Item;
+
+    invoke-direct {v5, v4}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
+
+    invoke-virtual {v2, v5}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 1054
+    :cond_0
+    invoke-virtual {p0, v2}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
+
+    .line 1055
+    invoke-virtual {p0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-void
 .end method

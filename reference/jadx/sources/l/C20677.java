@@ -1,151 +1,21 @@
 package l;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.io.PrintStream;
 
-/* JADX INFO: renamed from: l.᩷ۚ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: W6O3 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20677 {
-    /* JADX WARN: Code duplicated, block: B:142:0x0181 A[EDGE_INSN: B:142:0x0181->B:98:0x0181 BREAK  A[LOOP:1: B:131:0x0057->B:92:0x016d], SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:143:0x0169 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:85:0x0157 A[Catch: ᩴۢۜ -> 0x017a, TryCatch #1 {ᩴۢۜ -> 0x017a, blocks: (B:9:0x0057, B:11:0x005f, B:14:0x006c, B:16:0x0072, B:19:0x0083, B:21:0x0093, B:23:0x009b, B:36:0x00b3, B:41:0x00bf, B:50:0x00d2, B:52:0x00d8, B:54:0x00de, B:56:0x00ea, B:58:0x00f2, B:60:0x00fa, B:62:0x0102, B:67:0x010e, B:71:0x011a, B:72:0x0121, B:75:0x012d, B:78:0x013b, B:81:0x0149, B:85:0x0157, B:87:0x015d, B:92:0x016d, B:90:0x016a, B:29:0x00a6, B:93:0x0171, B:94:0x0179), top: B:131:0x0057 }] */
-    /* JADX WARN: Code duplicated, block: B:87:0x015d A[Catch: ᩴۢۜ -> 0x017a, TryCatch #1 {ᩴۢۜ -> 0x017a, blocks: (B:9:0x0057, B:11:0x005f, B:14:0x006c, B:16:0x0072, B:19:0x0083, B:21:0x0093, B:23:0x009b, B:36:0x00b3, B:41:0x00bf, B:50:0x00d2, B:52:0x00d8, B:54:0x00de, B:56:0x00ea, B:58:0x00f2, B:60:0x00fa, B:62:0x0102, B:67:0x010e, B:71:0x011a, B:72:0x0121, B:75:0x012d, B:78:0x013b, B:81:0x0149, B:85:0x0157, B:87:0x015d, B:92:0x016d, B:90:0x016a, B:29:0x00a6, B:93:0x0171, B:94:0x0179), top: B:131:0x0057 }] */
+/* JADX INFO: renamed from: l.᩵ܺۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: WAV3 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20677 extends C25153 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m46517(CharSequence charSequence, boolean z, int i, C21493 c21493, C18503 c18503) {
-        int iCodePointCount = Character.codePointCount(charSequence, 0, charSequence.length()) + 1;
-        int[] iArr = new int[iCodePointCount];
-        int iCharCount = 0;
-        for (int i2 = 0; i2 < iCodePointCount; i2++) {
-            iArr[i2] = iCharCount;
-            if (iCharCount < charSequence.length()) {
-                iCharCount += Character.charCount(Character.codePointAt(charSequence, iCharCount));
-            }
-        }
-        C6676 c6676 = new C6676(new C17965(new C14325(charSequence, new RunnableC13027(c21493)), c21493), c21493);
-        c6676.m43805();
-        c6676.m43803(new C7271());
-        ArrayList arrayList = new ArrayList();
-        ArrayDeque arrayDeque = new ArrayDeque();
-        int i3 = 0;
-        int i4 = 0;
-        boolean z2 = true;
-        boolean zEquals = false;
-        while (true) {
-            try {
-                c21493.m48131();
-                if (i3 >= 200000) {
-                    throw C8794.m22909(EnumC19377.LIMIT, "Token count limit exceeded");
-                }
-                InterfaceC19761 interfaceC19761NextToken = c6676.nextToken();
-                int type = interfaceC19761NextToken.getType();
-                if (type == -1) {
-                    if (i4 != 0 || !arrayDeque.isEmpty()) {
-                        break;
-                        break;
-                    } else {
-                        arrayList.add(Integer.valueOf(charSequence.length()));
-                        break;
-                    }
-                }
-                if (type == 103) {
-                    String strTrim = interfaceC19761NextToken.getText().trim();
-                    if (strTrim.equals("# fmt: off") || strTrim.equals("# fmt: on")) {
-                        c18503.append(charSequence);
-                        return;
-                    }
-                }
-                if (type == 5 || type == 8) {
-                    i4++;
-                }
-                if (type == 7 || type == 10) {
-                    i4--;
-                } else {
-                    if (i4 <= 0 && interfaceC19761NextToken.mo22512() == 0) {
-                        if (type != 102) {
-                            if (type != 2 && type != 3) {
-                                if (z2 && arrayDeque.isEmpty() && interfaceC19761NextToken.mo22509() == 0) {
-                                    String text = interfaceC19761NextToken.getText();
-                                    boolean z3 = text.equals("elif") || text.equals("else") || text.equals("except") || text.equals("finally") || text.equals("case");
-                                    int i5 = iArr[interfaceC19761NextToken.mo22508()];
-                                    if (i5 > 0 && !z3 && !zEquals) {
-                                        arrayList.add(Integer.valueOf(i5));
-                                    }
-                                    zEquals = text.equals("@");
-                                }
-                                if (type == 12) {
-                                    arrayDeque.push(15);
-                                } else if (type == 13) {
-                                    arrayDeque.push(16);
-                                } else if (type == 14) {
-                                    arrayDeque.push(17);
-                                } else if (type == 15) {
-                                    if (arrayDeque.isEmpty()) {
-                                        break;
-                                    } else if (((Integer) arrayDeque.pop()).intValue() != type) {
-                                        break;
-                                    }
-                                } else if (type == 16 || type == 17) {
-                                    if (arrayDeque.isEmpty()) {
-                                        break;
-                                        break;
-                                    } else if (((Integer) arrayDeque.pop()).intValue() != type) {
-                                        break;
-                                        break;
-                                    }
-                                }
-                            }
-                        } else if (arrayDeque.isEmpty()) {
-                            z2 = true;
-                        }
-                    }
-                    i3++;
-                }
-                z2 = false;
-                i3++;
-            } catch (C18671 e) {
-                if (e.f60607 != EnumC19377.SYNTAX) {
-                    throw e;
-                }
-            }
-        }
-        Iterator it = arrayList.iterator();
-        int i6 = 0;
-        while (it.hasNext()) {
-            int iIntValue = ((Integer) it.next()).intValue();
-            c21493.m48131();
-            CharSequence c17499 = new C17499(i6, iIntValue, charSequence);
-            C18503 c18503M42895 = c18503.m42895();
-            try {
-                try {
-                    C8794.m22911(c17499, z, i, c21493, c18503M42895);
-                    c17499 = c18503M42895;
-                } catch (C18671 e2) {
-                    if (e2.f60607 == EnumC19377.LIMIT) {
-                        throw e2;
-                    }
-                }
-                c18503.append(c17499);
-                c18503M42895.close();
-                if (c18503.length() > 1048576) {
-                    throw C8794.m22909(EnumC19377.LIMIT, "Formatted source length limit exceeded");
-                }
-                i6 = iIntValue;
-            } catch (Throwable th) {
-                try {
-                    c18503M42895.close();
-                    throw th;
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                    throw th;
-                }
-            }
-        }
-        c18503.m42896(i6, charSequence.length(), charSequence);
-        if (c18503.length() > 1048576) {
-            throw C8794.m22909(EnumC19377.LIMIT, "Formatted source length limit exceeded");
-        }
-        c21493.m48131();
+    public static final C20677 f66293 = new C20677();
+
+    @Override // l.InterfaceC2032
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2202(AbstractC9488 abstractC9488, Object obj, int i, int i2, String str, C10234 c10234) {
+        PrintStream printStream = System.err;
+        StringBuilder sbM5126 = C1402.m5126("line ", i, ":", " ", i2);
+        sbM5126.append(str);
+        printStream.println(sbM5126.toString());
     }
 }

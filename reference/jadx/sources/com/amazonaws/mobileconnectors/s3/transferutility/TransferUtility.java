@@ -9,19 +9,19 @@ import com.amazonaws.util.VersionInfoUtils;
 /* JADX INFO: loaded from: classes.dex */
 public class TransferUtility {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Log f378 = LogFactory.m302(TransferUtility.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Log f368 = LogFactory.m296(TransferUtility.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Object f376 = new Object();
+    public static final Object f366 = new Object();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String f377 = "";
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static String f367 = "";
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m403() {
-        synchronized (f376) {
-            String str = f377;
+    public static String m397() {
+        synchronized (f366) {
+            String str = f367;
             if (str != null && !str.trim().isEmpty()) {
                 return str.trim() + "/";
             }
@@ -29,23 +29,23 @@ public class TransferUtility {
         }
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m405(AmazonWebServiceRequest amazonWebServiceRequest) {
-        RequestClientOptions requestClientOptionsM161 = amazonWebServiceRequest.m161();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m399(AmazonWebServiceRequest amazonWebServiceRequest) {
+        RequestClientOptions requestClientOptionsM155 = amazonWebServiceRequest.m155();
         StringBuilder sb = new StringBuilder("TransferService/");
-        sb.append(m403());
-        int i = VersionInfoUtils.f849;
+        sb.append(m397());
+        int i = VersionInfoUtils.f839;
         sb.append("2.81.1");
-        requestClientOptionsM161.m197(sb.toString());
+        requestClientOptionsM155.m191(sb.toString());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m404(AmazonWebServiceRequest amazonWebServiceRequest) {
-        RequestClientOptions requestClientOptionsM161 = amazonWebServiceRequest.m161();
+    public static void m398(AmazonWebServiceRequest amazonWebServiceRequest) {
+        RequestClientOptions requestClientOptionsM155 = amazonWebServiceRequest.m155();
         StringBuilder sb = new StringBuilder("TransferService_multipart/");
-        sb.append(m403());
-        int i = VersionInfoUtils.f849;
+        sb.append(m397());
+        int i = VersionInfoUtils.f839;
         sb.append("2.81.1");
-        requestClientOptionsM161.m197(sb.toString());
+        requestClientOptionsM155.m191(sb.toString());
     }
 }

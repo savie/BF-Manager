@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SLHDSAParameterSpec implements AlgorithmParameterSpec {
     public static Map parameters;
     public static final SLHDSAParameterSpec slh_dsa_sha2_128f;

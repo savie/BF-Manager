@@ -1,267 +1,172 @@
 package l;
 
-import android.os.Bundle;
-import java.io.ByteArrayInputStream;
-import java.util.Arrays;
-import java.util.UUID;
-import java.util.concurrent.CancellationException;
-import org.bouncycastle.crypto.prng.X931RNG;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.ܿᩴۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 36RQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17523 implements AutoCloseable {
+/* JADX INFO: renamed from: l.ܽۤܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E3QI */
+/* JADX INFO: loaded from: classes5.dex */
+public class C17523 extends AbstractC12631 implements Serializable {
+    public static final long serialVersionUID = 1;
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f55694;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public C6234 f55695;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public boolean f55696;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final UUID f55697;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public boolean f55698;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final long f55699;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public int f55700;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public final C12175 f55701;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final byte[] f55702;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public Bundle f55703;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public boolean f55704;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C14641 f55705;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final Bundle f55706;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public byte[] f55707;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public C3226 f55708;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public String f55709;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized C14641 m40786() {
-        return this.f55705;
-    }
+    public final long f56956;
 
     /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m40783() {
-        return this.f55700;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m40788() {
-        return this.f55709;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Bundle m40787() {
-        return new Bundle(this.f55706);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean m40792() {
-        return this.f55698;
-    }
-
-    public C17523(C3226 c3226, C6234 c6234, Bundle bundle, C12175 c12175) {
-        this.f55701 = c12175;
-        this.f55703 = new Bundle(bundle);
-        this.f55706 = new Bundle(bundle);
-        this.f55702 = C22253.m49421().digest(c6234.m17288());
-        UUID uuidM9675 = c3226.m9675();
-        this.f55697 = uuidM9675;
-        this.f55699 = c3226.m9677();
-        byte[] bArrM9676 = c3226.m9676();
-        this.f55707 = bArrM9676;
-        C7235.m19280(uuidM9675, bArrM9676);
-        this.f55708 = c3226;
-        this.f55695 = c6234;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17523 m40781(C6111 c6111, Bundle bundle, C2063 c2063, byte[] bArr, byte[] bArr2, int i, long j, byte[] bArr3) {
-        InterfaceC2916 interfaceC2916M17000 = c6111.m17000();
-        if (!(interfaceC2916M17000 instanceof C16408)) {
-            throw new IllegalStateException("Fragment checkpoint requires a session owner");
-        }
-        C16408 c16408 = (C16408) interfaceC2916M17000;
-        C1254 c1254Mo8735 = c16408.mo8735();
-        long jM4523 = c1254Mo8735.m4523();
-        C12175 c12175M16806 = c6111.m16806();
-        C6276 c6276M4554 = c1254Mo8735.m4554();
-        try {
-            C6234 c6234M52600 = C23874.m52600(c6276M4554, bundle, c2063, c12175M16806, bArr, bArr2, i);
-            c6276M4554.close();
-            try {
-                synchronized (c1254Mo8735) {
-                    if (c1254Mo8735.m4523() != jM4523 || c6111.m17000() != interfaceC2916M17000) {
-                        throw new C12585("Fragment owner changed during capture");
-                    }
-                    if (jM4523 != j || !Arrays.equals(bArr3, C22253.m49421().digest(c6234M52600.m17288()))) {
-                        C3226 c3226M4564 = c1254Mo8735.m4564();
-                        try {
-                            C17523 c17523 = new C17523(c3226M4564, c6234M52600, bundle, c12175M16806);
-                            c17523.f55698 = c16408.isChanged();
-                            c17523.f55700 = c2063 == null ? 0 : c2063.f7652;
-                            c17523.f55709 = c6111.m17042();
-                            return c17523;
-                        } catch (Throwable th) {
-                            c3226M4564.close();
-                            throw th;
-                        }
-                    }
-                    c6234M52600.close();
-                    return null;
-                }
-            } catch (Throwable th2) {
-                c6234M52600.close();
-                throw th2;
-            }
-        } catch (Throwable th3) {
-            try {
-                c6276M4554.close();
-                throw th3;
-            } catch (Throwable th4) {
-                th3.addSuppressed(th4);
-                throw th3;
-            }
-        }
-    }
+    public final long f56957;
 
     /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final byte[] m40784() {
-        return (byte[]) this.f55702.clone();
-    }
+    public final AbstractC15614 f56958;
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final C12175 m40790() {
-        return this.f55701;
-    }
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final EnumC4099 f56959;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m40785(InterfaceC3800 interfaceC3800, C10428 c10428) {
-        C3226 c3226;
-        C6234 c6234;
-        byte[] bArrM17288;
-        C14641 c14641M35146;
-        C3226 c3226M40782;
-        synchronized (this) {
-            if (this.f55694 || this.f55704 || this.f55696) {
-                throw new IllegalStateException("Fragment checkpoint is unavailable");
-            }
-            this.f55696 = true;
-            c3226 = this.f55708;
-            c6234 = this.f55695;
-            bArrM17288 = c6234.m17288();
-            c14641M35146 = this.f55705;
-        }
-        try {
-            C9017 c9017M17289 = c6234.m17289((((long) bArrM17288.length) * 4) + X931RNG.BLOCK64_RESEED_MAX);
-            if (c14641M35146 == null) {
-                try {
-                    c14641M35146 = C14641.m35146(interfaceC3800, this.f55697, new ByteArrayInputStream(bArrM17288), bArrM17288.length, bArrM17288.length, c10428);
-                } catch (Throwable th) {
-                    if (c9017M17289 == null) {
-                        throw th;
-                    }
-                    try {
-                        c9017M17289.close();
-                        throw th;
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                        throw th;
-                    }
-                }
-            }
-            synchronized (this) {
-                this.f55705 = c14641M35146;
-                if (this.f55694) {
-                    throw new CancellationException("Fragment checkpoint was discarded");
-                }
-            }
-            C6961.m18713(interfaceC3800, this.f55703);
-            long jM9678 = c3226.m9678(C7235.m19279(this.f55707, c14641M35146, this.f55697));
-            synchronized (this) {
-                this.f55704 = true;
-            }
-            if (c9017M17289 != null) {
-                c9017M17289.close();
-            }
-            synchronized (this) {
-                this.f55696 = false;
-                c3226M40782 = (this.f55694 || this.f55704) ? m40782() : null;
-            }
-            if (c3226M40782 != null) {
-                c3226M40782.close();
-            }
-            return jM9678;
-        } catch (Throwable th3) {
-            synchronized (this) {
-                this.f55696 = false;
-                c3226M40782 = (this.f55694 || this.f55704) ? m40782() : null;
-                if (c3226M40782 != null) {
-                    c3226M40782.close();
-                }
-                throw th3;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final long m40791() {
-        return this.f55699;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final UUID m40789() {
-        return this.f55697;
-    }
-
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        C3226 c3226M40782;
-        synchronized (this) {
-            this.f55694 = true;
-            c3226M40782 = !this.f55696 ? m40782() : null;
-        }
-        if (c3226M40782 != null) {
-            c3226M40782.close();
-        }
-    }
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final AbstractC12874 f56960;
 
     /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    private C3226 m40782() {
-        C3226 c3226 = this.f55708;
-        this.f55708 = null;
-        this.f55707 = null;
-        this.f55703 = null;
-        C6234 c6234 = this.f55695;
-        this.f55695 = null;
-        if (c6234 != null) {
-            c6234.close();
+    public final AbstractC12874 f56961;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC3704 f56962;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final AbstractC20836 f56963;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final InterfaceC12653 f56964;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f56965;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final long f56966;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final EnumC4099 f56967;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public transient InterfaceC2191 f56968;
+
+    public C17523(ConcurrentMapC5942 concurrentMapC5942) {
+        EnumC4099 enumC4099 = concurrentMapC5942.f20338;
+        EnumC4099 enumC40910 = concurrentMapC5942.f20347;
+        AbstractC12874 abstractC12874 = concurrentMapC5942.f20336;
+        AbstractC12874 abstractC12875 = concurrentMapC5942.f20350;
+        long j = concurrentMapC5942.f20352;
+        long j2 = concurrentMapC5942.f20342;
+        long j3 = concurrentMapC5942.f20343;
+        InterfaceC12653 interfaceC12653 = concurrentMapC5942.f20337;
+        int i = concurrentMapC5942.f20349;
+        InterfaceC3704 interfaceC3704 = concurrentMapC5942.f20348;
+        AbstractC15614 abstractC15614 = concurrentMapC5942.f20353;
+        AbstractC20836 abstractC20836 = concurrentMapC5942.f20354;
+        this.f56967 = enumC4099;
+        this.f56959 = enumC40910;
+        this.f56960 = abstractC12874;
+        this.f56961 = abstractC12875;
+        this.f56956 = j;
+        this.f56966 = j2;
+        this.f56957 = j3;
+        this.f56964 = interfaceC12653;
+        this.f56965 = i;
+        this.f56962 = interfaceC3704;
+        this.f56958 = (abstractC15614 == AbstractC15614.m37346() || abstractC15614 == C23820.f77144) ? null : abstractC15614;
+        this.f56963 = abstractC20836;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C23820 m41141() {
+        char c;
+        char c2;
+        C23820 c23820M53145 = C23820.m53145();
+        EnumC4099 enumC4099 = c23820M53145.f77156;
+        C12128.m30313(enumC4099, "Key strength was already set to %s", enumC4099 == null);
+        EnumC4099 enumC40910 = this.f56967;
+        enumC40910.getClass();
+        c23820M53145.f77156 = enumC40910;
+        EnumC4099 enumC40911 = c23820M53145.f77155;
+        C12128.m30313(enumC40911, "Value strength was already set to %s", enumC40911 == null);
+        EnumC4099 enumC40912 = this.f56959;
+        enumC40912.getClass();
+        c23820M53145.f77155 = enumC40912;
+        AbstractC12874 abstractC12874 = c23820M53145.f77158;
+        C12128.m30313(abstractC12874, "key equivalence was already set to %s", abstractC12874 == null);
+        AbstractC12874 abstractC12875 = this.f56960;
+        abstractC12875.getClass();
+        c23820M53145.f77158 = abstractC12875;
+        AbstractC12874 abstractC12876 = c23820M53145.f77154;
+        C12128.m30313(abstractC12876, "value equivalence was already set to %s", abstractC12876 == null);
+        AbstractC12874 abstractC12877 = this.f56961;
+        abstractC12877.getClass();
+        c23820M53145.f77154 = abstractC12877;
+        c23820M53145.m53148(this.f56965);
+        C12128.m30315(c23820M53145.f77148 == null);
+        InterfaceC3704 interfaceC3704 = this.f56962;
+        interfaceC3704.getClass();
+        c23820M53145.f77148 = interfaceC3704;
+        c23820M53145.f77150 = false;
+        long j = this.f56956;
+        if (j > 0) {
+            TimeUnit timeUnit = TimeUnit.NANOSECONDS;
+            long j2 = c23820M53145.f77149;
+            c = 1;
+            c2 = 0;
+            C12128.m30312(j2, "expireAfterWrite was already set to %s ns", j2 == -1);
+            if (!(j >= 0)) {
+                throw new IllegalArgumentException(C8399.m22571("duration cannot be negative: %s %s", Long.valueOf(j), timeUnit));
+            }
+            c23820M53145.f77149 = timeUnit.toNanos(j);
+        } else {
+            c = 1;
+            c2 = 0;
         }
-        return c3226;
+        long j3 = this.f56966;
+        if (j3 > 0) {
+            TimeUnit timeUnit2 = TimeUnit.NANOSECONDS;
+            long j4 = c23820M53145.f77157;
+            C12128.m30312(j4, "expireAfterAccess was already set to %s ns", j4 == -1);
+            if (!(j3 >= 0)) {
+                Object[] objArr = new Object[2];
+                objArr[c2] = Long.valueOf(j3);
+                objArr[c] = timeUnit2;
+                throw new IllegalArgumentException(C8399.m22571("duration cannot be negative: %s %s", objArr));
+            }
+            c23820M53145.f77157 = timeUnit2.toNanos(j3);
+        }
+        EnumC16360 enumC16360 = EnumC16360.INSTANCE;
+        long j5 = this.f56957;
+        InterfaceC12653 interfaceC12653 = this.f56964;
+        if (interfaceC12653 != enumC16360) {
+            c23820M53145.m53150(interfaceC12653);
+            if (j5 != -1) {
+                c23820M53145.m53152(j5);
+            }
+        } else if (j5 != -1) {
+            c23820M53145.m53149(j5);
+        }
+        AbstractC15614 abstractC15614 = this.f56958;
+        if (abstractC15614 != null) {
+            C12128.m30315(c23820M53145.f77159 == null);
+            c23820M53145.f77159 = abstractC15614;
+        }
+        return c23820M53145;
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
+        objectInputStream.defaultReadObject();
+        this.f56968 = m41141().m53146();
+    }
+
+    private Object readResolve() {
+        return this.f56968;
+    }
+
+    @Override // l.AbstractC10195
+    /* JADX INFO: renamed from: ᩴ */
+    public final Object mo26313() {
+        return this.f56968;
     }
 }

@@ -1,47 +1,75 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.view.View;
-import android.view.ViewPropertyAnimator;
+import android.text.TextUtils;
+import java.io.File;
 
-/* JADX INFO: renamed from: l.ܿ֡ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E5OI */
+/* JADX INFO: renamed from: l.ܺܿᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L51E */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16997 extends AnimatorListenerAdapter {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f54342;
+public final class C16997 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2885 f54343;
+    public final String f55537;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC12554 f54344;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final File f55538;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewPropertyAnimator f54345;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f55539;
 
-    public C16997(View view, ViewPropertyAnimator viewPropertyAnimator, C2885 c2885, AbstractC12554 abstractC12554) {
-        this.f54343 = c2885;
-        this.f54344 = abstractC12554;
-        this.f54345 = viewPropertyAnimator;
-        this.f54342 = view;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f55540;
+
+    public C16997(File file, String str) {
+        File absoluteFile = file.getAbsoluteFile();
+        this.f55538 = absoluteFile;
+        this.f55540 = str;
+        this.f55539 = null;
+        this.f55537 = absoluteFile.getPath().toLowerCase() + '/';
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationStart(Animator animator) {
-        this.f54343.getClass();
+    public C16997(File file, String str, String str2) {
+        File absoluteFile = file.getAbsoluteFile();
+        this.f55538 = absoluteFile;
+        this.f55540 = str;
+        this.f55539 = TextUtils.isEmpty(str2) ? null : str2;
+        this.f55537 = absoluteFile.getPath().toLowerCase() + '/';
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        this.f54345.setListener(null);
-        this.f54342.setAlpha(1.0f);
-        C2885 c2885 = this.f54343;
-        AbstractC12554 abstractC12554 = this.f54344;
-        c2885.m5955(abstractC12554);
-        c2885.f10876.remove(abstractC12554);
-        c2885.m8685();
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && C16997.class == obj.getClass()) {
+            C16997 c16997 = (C16997) obj;
+            String str = c16997.f55540;
+            File file = c16997.f55538;
+            File file2 = this.f55538;
+            if (file2 == null ? file != null : !file2.equals(file)) {
+                return false;
+            }
+            String str2 = this.f55540;
+            if (str2 == null ? str != null : !str2.equals(str)) {
+                return false;
+            }
+            String str3 = this.f55539;
+            String str4 = c16997.f55539;
+            if (str3 != null) {
+                return str3.equals(str4);
+            }
+            if (str4 == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        File file = this.f55538;
+        int iHashCode = (file != null ? file.hashCode() : 0) * 31;
+        String str = this.f55540;
+        int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
+        String str2 = this.f55539;
+        return iHashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 }

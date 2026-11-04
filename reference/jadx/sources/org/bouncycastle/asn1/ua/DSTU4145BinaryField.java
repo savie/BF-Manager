@@ -7,13 +7,13 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU4145BinaryField extends ASN1Object {
     public int j;
     public int k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77968l;
+    public int f82084l;
     public int m;
 
     public DSTU4145BinaryField(int i, int i2) {
@@ -24,7 +24,7 @@ public class DSTU4145BinaryField extends ASN1Object {
         this.m = i;
         this.k = i2;
         this.j = i3;
-        this.f77968l = i4;
+        this.f82084l = i4;
     }
 
     public DSTU4145BinaryField(ASN1Sequence aSN1Sequence) {
@@ -38,7 +38,7 @@ public class DSTU4145BinaryField extends ASN1Object {
             ASN1Sequence aSN1Sequence2 = ASN1Sequence.getInstance(aSN1Sequence.getObjectAt(1));
             this.k = ASN1Integer.getInstance(aSN1Sequence2.getObjectAt(0)).intPositiveValueExact();
             this.j = ASN1Integer.getInstance(aSN1Sequence2.getObjectAt(1)).intPositiveValueExact();
-            this.f77968l = ASN1Integer.getInstance(aSN1Sequence2.getObjectAt(2)).intPositiveValueExact();
+            this.f82084l = ASN1Integer.getInstance(aSN1Sequence2.getObjectAt(2)).intPositiveValueExact();
         }
     }
 
@@ -61,7 +61,7 @@ public class DSTU4145BinaryField extends ASN1Object {
     }
 
     public int getK3() {
-        return this.f77968l;
+        return this.f82084l;
     }
 
     public int getM() {
@@ -78,7 +78,7 @@ public class DSTU4145BinaryField extends ASN1Object {
             ASN1EncodableVector aSN1EncodableVector2 = new ASN1EncodableVector(3);
             aSN1EncodableVector2.add(new ASN1Integer(this.k));
             aSN1EncodableVector2.add(new ASN1Integer(this.j));
-            aSN1EncodableVector2.add(new ASN1Integer(this.f77968l));
+            aSN1EncodableVector2.add(new ASN1Integer(this.f82084l));
             aSN1EncodableVector.add(new DERSequence(aSN1EncodableVector2));
         }
         return new DERSequence(aSN1EncodableVector);

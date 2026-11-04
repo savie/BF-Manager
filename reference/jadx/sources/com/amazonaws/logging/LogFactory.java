@@ -6,31 +6,31 @@ import java.util.HashMap;
 public class LogFactory {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f226 = 0;
+    public static final /* synthetic */ int f216 = 0;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final HashMap f227 = new HashMap();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final HashMap f217 = new HashMap();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized Log m302(Class cls) {
+    public static synchronized Log m296(Class cls) {
         String simpleName;
         simpleName = cls.getSimpleName();
         if (simpleName.length() > 23) {
-            m303("LogFactory").mo291("Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels");
+            m297("LogFactory").mo294("Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels");
             simpleName = simpleName.substring(0, 23);
         }
-        return m303(simpleName);
+        return m297(simpleName);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized Log m303(String str) {
+    public static synchronized Log m297(String str) {
         Log androidLog;
         int i = 0;
         if (str.length() > 23) {
-            m303("LogFactory").mo291("Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels");
+            m297("LogFactory").mo294("Truncating log tag length as it exceed 23, the limit imposed by Android on certain API Levels");
             str = str.substring(0, 23);
         }
-        Log log = (Log) f227.get(str);
+        Log log = (Log) f217.get(str);
         if (log != null) {
             return log;
         }
@@ -48,7 +48,7 @@ public class LogFactory {
                 break;
             }
         }
-        f227.put(str, androidLog);
+        f217.put(str, androidLog);
         return androidLog;
     }
 
@@ -62,15 +62,15 @@ public class LogFactory {
         OFF(Integer.MAX_VALUE);
 
 
-        /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-        public final int f236;
+        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+        public final int f226;
 
         public int getValue() {
-            return this.f236;
+            return this.f226;
         }
 
         Level(int i) {
-            this.f236 = i;
+            this.f226 = i;
         }
     }
 }

@@ -1,16 +1,67 @@
-.class public final synthetic Ll/ۢ֫;
+.class public final Ll/ۢ֫;
 .super Ljava/lang/Object;
-.source "R9NW"
+.source "Q63C"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۖ֫;
 
 
 # direct methods
-.method public static synthetic ۙ(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
-    .locals 1
+.method public constructor <init>(Ll/ۖ֫;)V
+    .locals 0
 
-    .line 0
-    new-instance v0, Landroid/view/WindowInsetsAnimation;
+    .line 136
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/WindowInsetsAnimation;-><init>(ILandroid/view/animation/Interpolator;J)V
+    iput-object p1, p0, Ll/ۢ֫;->ܰ:Ll/ۖ֫;
 
-    return-object v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 139
+    iget-object v0, p0, Ll/ۢ֫;->ܰ:Ll/ۖ֫;
+
+    invoke-virtual {v0}, Ll/ۖ֫;->ۚ()V
+
+    .line 140
+    iget-object v1, v0, Ll/ۖ֫;->᩶:Ll/᩶֫;
+
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    iget-object v2, v0, Ll/ۖ֫;->᩶:Ll/᩶֫;
+
+    .line 141
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    neg-int v2, v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    iget-object v2, v0, Ll/ۖ֫;->ܽۙ:Landroid/animation/AnimatorListenerAdapter;
+
+    .line 142
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ll/ۖ֫;->ۖ:Landroid/view/ViewPropertyAnimator;
+
+    return-void
 .end method

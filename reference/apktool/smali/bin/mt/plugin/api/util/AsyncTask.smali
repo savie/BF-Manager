@@ -58,11 +58,11 @@
     .locals 2
 
     .line 184
-    new-instance v0, Ll/֨۟ۜ;
+    new-instance v0, Lbin/mt/plugin/api/util/AsyncTask$$ExternalSyntheticLambda1;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0, p1}, Ll/֨۟ۜ;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p0, p1}, Lbin/mt/plugin/api/util/AsyncTask$$ExternalSyntheticLambda1;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->post(Ljava/lang/Runnable;)V
 
@@ -176,11 +176,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 152
-    new-instance v0, Ll/᩶ۛ᩹;
+    new-instance v0, Ll/᩺ۤۚ;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1, p0}, Ll/᩶ۛ᩹;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/᩺ۤۚ;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->post(Ljava/lang/Runnable;)V
 
@@ -254,11 +254,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 133
-    new-instance v0, Ll/۠֫ۖ;
+    new-instance v0, Ll/ܰᩴۚ;
 
-    const/4 v1, 0x6
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p0}, Ll/۠֫ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/ܰᩴۚ;-><init>(ILjava/lang/Object;)V
 
     .line 173
     iget-object v1, p0, Lbin/mt/plugin/api/util/AsyncTask;->executor:Ljava/util/concurrent/Executor;

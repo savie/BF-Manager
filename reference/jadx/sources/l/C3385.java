@@ -1,45 +1,35 @@
 package l;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.Iterator;
+/* JADX INFO: renamed from: l.ۗۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3385 extends AbstractC19047 {
+    public final Object[] h;
 
-/* JADX INFO: renamed from: l.ۗܿ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: P9KH */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3385 extends AbstractC18909 {
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo10037(AbstractC9032 abstractC9032) throws IOException {
-        C4466 c4466 = (C4466) abstractC9032;
-        if (c4466.f15878 == null) {
-            m10036(c4466);
-        }
-        return c4466.f15878.length;
+    public C3385(InterfaceC8409 interfaceC8409, AbstractC13956 abstractC13956, Object[] objArr) {
+        super(interfaceC8409, abstractC13956, objArr.length);
+        this.h = objArr;
     }
 
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo10038(AbstractC9032 abstractC9032, C15382 c15382) throws IOException {
-        C4466 c4466 = (C4466) abstractC9032;
-        if (c4466.f15878 != null) {
-            c15382.write(c4466.f15878);
-            return;
-        }
-        Iterator it = c4466.iterator();
-        while (it.hasNext()) {
-            c15382.m36819((AbstractC9032) it.next());
-        }
+    public C3385(C3385 c3385, InterfaceC8409 interfaceC8409, long j, long j2) {
+        super(c3385, interfaceC8409, j, j2, c3385.h.length);
+        this.h = c3385.h;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m10036(C4466 c4466) throws IOException {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        C15382 c15382 = new C15382(this.f61194, byteArrayOutputStream);
-        Iterator it = c4466.iterator();
-        while (it.hasNext()) {
-            c15382.m36819((AbstractC9032) it.next());
+    @Override // l.AbstractC19047
+    public final AbstractC19047 a(InterfaceC8409 interfaceC8409, long j, long j2) {
+        return new C3385(this, interfaceC8409, j, j2);
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        int i = this.f;
+        if (i >= this.g) {
+            throw new IndexOutOfBoundsException(Integer.toString(this.f));
         }
-        c4466.f15878 = byteArrayOutputStream.toByteArray();
+        Object[] objArr = this.h;
+        this.f = i + 1;
+        objArr[i] = obj;
     }
 }

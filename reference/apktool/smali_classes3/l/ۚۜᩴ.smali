@@ -1,817 +1,434 @@
 .class public final Ll/ۚۜᩴ;
-.super Ll/ܳۚᩴ;
-.source "25I"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = -0x61c8864680b583e9L
+.super Ll/ۖۙܺ;
+.source "964V"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/᩹ۜᩴ;
+.field public final synthetic ֫:Landroid/content/Context;
 
-.field public ۫:Z
+.field public final synthetic ۚ:Ll/ܽ֡֫;
 
-.field public ܺ:Z
+.field public final synthetic ۧ:Ll/ۨ᩷ܳ;
 
-.field public ܽ:I
+.field public ۫:Ljava/lang/String;
 
-.field public ᩶:I
+.field public ܳ:Ll/ۜܳܳ;
+
+.field public ܶ:Ll/۟ܳܳ;
+
+.field public final synthetic ܺ:Ll/᩹ۜᩴ;
+
+.field public final synthetic ܽ:I
+
+.field public final synthetic ᩻:Ll/ۗ᩷ܳ;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩹ۜᩴ;IZIZ)V
-    .locals 1
+.method public constructor <init>(Ll/᩹ۜᩴ;Ll/ܽ֡֫;Ll/ۗ᩷ܳ;Ll/ۨ᩷ܳ;ILandroid/content/Context;)V
+    .locals 0
 
-    .line 1079
-    iput-object p1, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
+    .line 71
+    iput-object p1, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
 
-    .line 35
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    iput-object p2, p0, Ll/ۚۜᩴ;->ۚ:Ll/ܽ֡֫;
 
-    if-nez p3, :cond_1
+    iput-object p3, p0, Ll/ۚۜᩴ;->᩻:Ll/ۗ᩷ܳ;
 
-    if-nez p5, :cond_1
+    iput-object p4, p0, Ll/ۚۜᩴ;->ۧ:Ll/ۨ᩷ܳ;
 
-    .line 216
-    invoke-static {p2, p4}, Ljava/lang/Integer;->compare(II)I
+    iput p5, p0, Ll/ۚۜᩴ;->ܽ:I
 
-    move-result p1
+    iput-object p6, p0, Ll/ۚۜᩴ;->֫:Landroid/content/Context;
 
-    if-gtz p1, :cond_0
+    invoke-direct {p0}, Ll/ۖۙܺ;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic ۙ(Ll/ۚۜᩴ;)Z
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ll/ۚۜᩴ;->ۚ()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private ۚ()Z
+    .locals 2
+
+    .line 89
+    iget-object v0, p0, Ll/ۚۜᩴ;->᩻:Ll/ۗ᩷ܳ;
+
+    invoke-virtual {v0}, Ll/ۗ᩷ܳ;->᩷()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Ll/ۖۙܺ;->᩷:Ll/۬֨ᩴ;
+
+    if-eqz v0, :cond_0
+
+    .line 90
+    invoke-virtual {v0}, Ll/۬֨ᩴ;->᩸()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_0
+    iget-object v0, p0, Ll/ۚۜᩴ;->ۚ:Ll/ܽ֡֫;
+
+    if-eqz v0, :cond_1
+
+    .line 91
+    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_1
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
+
+    iget-object v1, p0, Ll/ۚۜᩴ;->ۧ:Ll/ۨ᩷ܳ;
+
+    .line 92
+    invoke-virtual {v0, v1}, Ll/᩹ۜᩴ;->ۙ(Ll/ۨ᩷ܳ;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
-    .line 1080
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :cond_2
+    const/4 v0, 0x0
 
-    const-string p3, ") is larger than end element ("
+    return v0
 
-    const-string p5, ")"
-
-    const-string v0, "Start element ("
-
-    .line 0
-    invoke-static {v0, p2, p3, p5, p4}, Ll/۠ۜ᩵;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 1080
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 1081
-    :cond_1
+    :cond_3
     :goto_0
-    iput p2, p0, Ll/ۚۜᩴ;->᩶:I
+    const/4 v0, 0x1
 
-    .line 1082
-    iput-boolean p3, p0, Ll/ۚۜᩴ;->ܺ:Z
+    return v0
+.end method
 
-    .line 1083
-    iput p4, p0, Ll/ۚۜᩴ;->ܽ:I
+.method public static ᩷(Ll/ۚۜᩴ;)V
+    .locals 1
 
-    .line 1084
-    iput-boolean p5, p0, Ll/ۚۜᩴ;->۫:Z
+    .line 82
+    iget-object p0, p0, Ll/ۖۙܺ;->᩷:Ll/۬֨ᩴ;
+
+    const/4 v0, 0x0
+
+    .line 44
+    invoke-virtual {p0, v0}, Ll/۬֨ᩴ;->ۙ(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(I)Z
+.method public final ۙ()V
     .locals 3
 
-    .line 1113
-    invoke-virtual {p0, p1}, Ll/ۚۜᩴ;->ۙ(I)Z
+    .line 111
+    invoke-direct {p0}, Ll/ۚۜᩴ;->ۚ()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
 
-    const-string v1, "Element ("
+    iget-object v1, p0, Ll/ۚۜᩴ;->ۚ:Ll/ܽ֡֫;
 
-    const-string v2, ") out of range ["
+    iget-object v2, p0, Ll/ۚۜᩴ;->ۧ:Ll/ۨ᩷ܳ;
 
-    .line 0
-    invoke-static {p1, v1, v2}, Ll/ܿ۠ۖ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Ll/ۘۜᩴ;->ۙ(Ll/ۨ᩷ܳ;Ll/᩹ۜᩴ;Ll/ܽ֡֫;)Z
 
-    move-result-object p1
+    move-result v0
 
-    .line 1113
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    const-string v2, "-"
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v2
+    if-nez v0, :cond_0
 
     goto :goto_0
 
+    .line 114
     :cond_0
-    iget v1, p0, Ll/ۚۜᩴ;->᩶:I
+    iget-object v0, p0, Ll/ۚۜᩴ;->֫:Landroid/content/Context;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string v1, "clipboard"
 
-    move-result-object v1
+    .line 115
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    :goto_0
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", "
+    check-cast v0, Landroid/content/ClipboardManager;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 117
+    iget-object v1, p0, Ll/ۚۜᩴ;->۫:Ljava/lang/String;
 
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->۫:Z
+    invoke-virtual {v0, v1}, Landroid/content/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    if-eqz v1, :cond_1
+    const v0, 0x7f120c2a
 
-    goto :goto_1
+    .line 118
+    invoke-static {v0}, Ll/᩸۠ۧ;->ۙ(I)Ll/᩸۠ۧ;
 
     :cond_1
-    iget v1, p0, Ll/ۚۜᩴ;->ܽ:I
+    :goto_0
+    return-void
+.end method
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+.method public final ۙ(Ljava/lang/Exception;)V
+    .locals 5
 
-    move-result-object v2
+    .line 123
+    invoke-direct {p0}, Ll/ۚۜᩴ;->ۚ()Z
 
-    :goto_1
-    const-string v1, ")"
+    move-result v0
 
-    .line 0
-    invoke-static {p1, v2, v1}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-nez v0, :cond_3
 
-    move-result-object p1
+    instance-of v0, p1, Ll/ܶۜᩴ;
 
-    .line 1113
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    throw v0
+    goto :goto_0
 
-    .line 1114
-    :cond_2
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
+    .line 126
+    :cond_0
+    instance-of v0, p1, Ll/ۗۜᩴ;
 
-    invoke-virtual {v0, p1}, Ll/᩹ۜᩴ;->add(I)Z
+    const v1, 0x7f120202
+
+    iget-object v2, p0, Ll/ۚۜᩴ;->ۚ:Ll/ܽ֡֫;
+
+    iget-object v3, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
+
+    iget-object v4, p0, Ll/ۚۜᩴ;->ۧ:Ll/ۨ᩷ܳ;
+
+    if-eqz v0, :cond_1
+
+    .line 127
+    invoke-static {v4, v3, v2}, Ll/ۘۜᩴ;->ۙ(Ll/ۨ᩷ܳ;Ll/᩹ۜᩴ;Ll/ܽ֡֫;)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_3
+
+    .line 128
+    invoke-static {v1}, Ll/᩸۠ۧ;->ۙ(I)Ll/᩸۠ۧ;
+
+    return-void
+
+    .line 130
+    :cond_1
+    instance-of v0, p1, Ljava/io/IOException;
+
+    if-eqz v0, :cond_2
+
+    .line 131
+    invoke-static {v4, v3, v2}, Ll/ۘۜᩴ;->ۙ(Ll/ۨ᩷ܳ;Ll/᩹ۜᩴ;Ll/ܽ֡֫;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 132
+    check-cast p1, Ljava/io/IOException;
+
+    invoke-virtual {v4, p1}, Ll/ۨ᩷ܳ;->ۙ(Ljava/io/IOException;)V
+
+    return-void
+
+    .line 135
+    :cond_2
+    invoke-static {v4, v3, v2}, Ll/ۘۜᩴ;->ۙ(Ll/ۨ᩷ܳ;Ll/᩹ۜᩴ;Ll/ܽ֡֫;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 136
+    invoke-static {v1}, Ll/᩸۠ۧ;->ۙ(I)Ll/᩸۠ۧ;
+
+    :cond_3
+    :goto_0
+    return-void
 .end method
 
-.method public final clear()V
-    .locals 2
+.method public final ᩴ()V
+    .locals 6
 
-    .line 1089
-    new-instance v0, Ll/ۖۜᩴ;
+    .line 98
+    iget v0, p0, Ll/ۚۜᩴ;->ܽ:I
 
-    invoke-direct {v0, p0}, Ll/ۖۜᩴ;-><init>(Ll/ۚۜᩴ;)V
+    iget-object v1, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
 
-    .line 1090
-    :goto_0
-    invoke-virtual {v0}, Ll/ۨۜᩴ;->hasNext()Z
+    :try_start_0
+    iget-object v2, p0, Ll/ۚۜᩴ;->ܶ:Ll/۟ܳܳ;
+
+    iget v3, v1, Ll/᩹ۜᩴ;->ܳ:I
+
+    iget v4, v1, Ll/᩹ۜᩴ;->ᩴ:I
+
+    new-instance v5, Ll/ܳۜᩴ;
+
+    invoke-direct {v5, p0}, Ll/ܳۜᩴ;-><init>(Ll/ۚۜᩴ;)V
+
+    invoke-virtual {v2, v3, v4, v5}, Ll/۟ܳܳ;->ۙ(IILl/۟֡֫;)Ll/ۜܳܳ;
+
+    move-result-object v2
+
+    iput-object v2, p0, Ll/ۚۜᩴ;->ܳ:Ll/ۜܳܳ;
+
+    .line 100
+    iget v1, v1, Ll/᩹ۜᩴ;->ۙ:I
+
+    new-instance v3, Ll/ܳۜᩴ;
+
+    invoke-direct {v3, p0}, Ll/ܳۜᩴ;-><init>(Ll/ۚۜᩴ;)V
+
+    invoke-static {v2, v1, v0, v3}, Ll/ۘۜᩴ;->ۙ(Ll/ۜܳܳ;IILl/ܳۜᩴ;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ll/ۚۜᩴ;->۫:Ljava/lang/String;
+
+    .line 101
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/high16 v2, 0x80000
 
-    .line 1091
-    invoke-virtual {v0}, Ll/ۨۜᩴ;->nextInt()I
+    if-le v1, v2, :cond_1
 
-    .line 1092
-    invoke-virtual {v0}, Ll/ۨۜᩴ;->remove()V
+    const/4 v1, 0x5
+
+    if-lt v0, v1, :cond_0
 
     goto :goto_0
+
+    .line 102
+    :cond_0
+    new-instance v0, Ll/ۗۜᩴ;
+
+    .line 505
+    invoke-direct {v0}, Ljava/io/IOException;-><init>()V
+
+    .line 102
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 105
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܶ:Ll/۟ܳܳ;
+
+    if-eqz v0, :cond_2
+
+    .line 161
+    invoke-virtual {v0}, Ll/۟ܳܳ;->close()V
+
+    :cond_2
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    .line 105
+    iget-object v1, p0, Ll/ۚۜᩴ;->ܶ:Ll/۟ܳܳ;
+
+    if-eqz v1, :cond_3
+
+    .line 161
+    invoke-virtual {v1}, Ll/۟ܳܳ;->close()V
+
+    .line 106
+    :cond_3
+    throw v0
+.end method
+
+.method public final ᩷()V
+    .locals 4
+
+    .line 79
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܺ:Ll/᩹ۜᩴ;
+
+    iget-object v0, v0, Ll/᩹ۜᩴ;->᩷:Ll/ᩳܳܳ;
+
+    invoke-virtual {v0}, Ll/ᩳܳܳ;->ܿ()Ll/۟ܳܳ;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ۚۜᩴ;->ܶ:Ll/۟ܳܳ;
+
+    .line 80
+    iget-object v0, p0, Ll/ۚۜᩴ;->ۚ:Ll/ܽ֡֫;
+
+    if-eqz v0, :cond_0
+
+    .line 81
+    new-instance v1, Ll/۫ۜᩴ;
+
+    invoke-direct {v1, p0}, Ll/۫ۜᩴ;-><init>(Ll/ۚۜᩴ;)V
+
+    const v2, 0x7f120203
+
+    const/16 v3, 0xc8
+
+    invoke-virtual {p0, v0, v2, v3, v1}, Ll/ۖۙܺ;->ۙ(Ll/ܽ֡֫;IILjava/lang/Runnable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final bridge synthetic comparator()Ljava/util/Comparator;
+.method public final ᩸()V
     .locals 1
 
-    .line 1060
-    invoke-virtual {p0}, Ll/ۚۜᩴ;->comparator()Ll/ܽۜᩴ;
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final comparator()Ll/ܽۜᩴ;
-    .locals 1
-
-    .line 1141
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final contains(I)Z
-    .locals 1
-
-    .line 1108
-    invoke-virtual {p0, p1}, Ll/ۚۜᩴ;->ۙ(I)Z
-
-    move-result v0
+    .line 143
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܶ:Ll/۟ܳܳ;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
+    .line 161
+    invoke-virtual {v0}, Ll/۟ܳܳ;->close()V
 
-    invoke-virtual {v0, p1}, Ll/᩹ۜᩴ;->contains(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
+    .line 144
     :cond_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Ll/ۚۜᩴ;->ܳ:Ll/ۜܳܳ;
 
-    return p1
-.end method
+    if-eqz v0, :cond_1
 
-.method public final isEmpty()Z
-    .locals 1
+    .line 146
+    :try_start_0
+    invoke-virtual {v0}, Ll/ۜܳܳ;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 940
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    iget-object v0, v0, Ll/᩹ۜᩴ;->֡:Ll/ܰۜᩴ;
-
-    .line 1244
-    invoke-virtual {p0}, Ll/ۚۜᩴ;->ۚ()Ll/ܰۜᩴ;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    xor-int/lit8 v0, v0, 0x1
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 1146
-    new-instance v0, Ll/ۖۜᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۖۜᩴ;-><init>(Ll/ۚۜᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final iterator()Ll/۬᩺ᩴ;
-    .locals 1
-
-    .line 1146
-    new-instance v0, Ll/ۖۜᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۖۜᩴ;-><init>(Ll/ۚۜᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final remove(I)Z
-    .locals 1
-
-    .line 1119
-    invoke-virtual {p0, p1}, Ll/ۚۜᩴ;->ۙ(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 1120
-    :cond_0
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    invoke-virtual {v0, p1}, Ll/᩹ۜᩴ;->remove(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final size()I
-    .locals 3
-
-    .line 1125
-    new-instance v0, Ll/ۖۜᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۖۜᩴ;-><init>(Ll/ۚۜᩴ;)V
-
-    const/4 v1, 0x0
-
-    .line 1127
-    :goto_0
-    invoke-virtual {v0}, Ll/ۨۜᩴ;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    .line 1129
-    invoke-virtual {v0}, Ll/ۨۜᩴ;->nextInt()I
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final ֨ۙ()I
-    .locals 4
-
-    .line 1203
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    iget-object v1, v0, Ll/᩹ۜᩴ;->۫:Ll/ܰۜᩴ;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
-
-    .line 1207
-    :cond_0
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->۫:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Ll/᩹ۜᩴ;->ܽ:Ll/ܰۜᩴ;
-
-    goto :goto_0
-
-    .line 1209
+    .line 152
+    :catch_0
     :cond_1
-    iget v1, p0, Ll/ۚۜᩴ;->ܽ:I
+    iget-object v0, p0, Ll/ۚۜᩴ;->᩻:Ll/ۗ᩷ܳ;
 
-    invoke-virtual {v0, v1}, Ll/᩹ۜᩴ;->ۙ(I)Ll/ܰۜᩴ;
+    invoke-virtual {v0}, Ll/ۗ᩷ܳ;->close()V
 
-    move-result-object v0
+    .line 153
+    invoke-virtual {p0}, Ll/ۖۙܺ;->ۤ()V
 
-    .line 1211
-    iget v3, v0, Ll/ܰۜᩴ;->᩶:I
-
-    .line 216
-    invoke-static {v3, v1}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v1
-
-    if-ltz v1, :cond_2
-
-    .line 1211
-    invoke-virtual {v0}, Ll/ܰۜᩴ;->ۚ()Ll/ܰۜᩴ;
-
-    move-result-object v0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_4
-
-    .line 1215
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    if-nez v1, :cond_3
-
-    iget v1, v0, Ll/ܰۜᩴ;->᩶:I
-
-    iget v3, p0, Ll/ۚۜᩴ;->᩶:I
-
-    .line 216
-    invoke-static {v1, v3}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v1
-
-    if-gez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object v2, v0
-
-    :cond_4
-    :goto_1
-    if-eqz v2, :cond_5
-
-    .line 1230
-    iget v0, v2, Ll/ܰۜᩴ;->᩶:I
-
-    return v0
-
-    .line 1229
-    :cond_5
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ۙ(I)Z
-    .locals 1
-
-    .line 1103
-    iget-boolean v0, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Ll/ۚۜᩴ;->᩶:I
-
-    .line 216
-    invoke-static {p1, v0}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v0
-
-    if-ltz v0, :cond_1
-
-    .line 1103
-    :cond_0
-    iget-boolean v0, p0, Ll/ۚۜᩴ;->۫:Z
-
-    if-nez v0, :cond_2
-
-    iget v0, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    .line 216
-    invoke-static {p1, v0}, Ljava/lang/Integer;->compare(II)I
-
-    move-result p1
-
-    if-gez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final ۚ()Ll/ܰۜᩴ;
-    .locals 3
-
-    .line 1181
-    iget-object v0, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    iget-object v1, v0, Ll/᩹ۜᩴ;->۫:Ll/ܰۜᩴ;
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
-
-    .line 1185
-    :cond_0
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Ll/᩹ۜᩴ;->֡:Ll/ܰۜᩴ;
-
-    goto :goto_0
-
-    .line 1187
-    :cond_1
-    iget v1, p0, Ll/ۚۜᩴ;->᩶:I
-
-    invoke-virtual {v0, v1}, Ll/᩹ۜᩴ;->ۙ(I)Ll/ܰۜᩴ;
-
-    move-result-object v0
-
-    .line 1189
-    iget v2, v0, Ll/ܰۜᩴ;->᩶:I
-
-    .line 216
-    invoke-static {v2, v1}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v1
-
-    if-gez v1, :cond_2
-
-    .line 1189
-    invoke-virtual {v0}, Ll/ܰۜᩴ;->ۨ()Ll/ܰۜᩴ;
-
-    move-result-object v0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_4
-
-    .line 1193
-    iget-boolean v1, p0, Ll/ۚۜᩴ;->۫:Z
-
-    if-nez v1, :cond_3
-
-    iget v1, v0, Ll/ܰۜᩴ;->᩶:I
-
-    iget v2, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    .line 216
-    invoke-static {v1, v2}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v1
-
-    if-ltz v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    return-object v0
-
-    :cond_4
-    :goto_1
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final ۨ(II)Ll/ۙܶᩴ;
-    .locals 7
-
-    .line 1168
-    iget-object v1, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    iget-boolean v0, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    iget-boolean v2, p0, Ll/ۚۜᩴ;->۫:Z
-
-    if-eqz v2, :cond_0
-
-    if-eqz v0, :cond_0
-
-    new-instance v6, Ll/ۚۜᩴ;
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, v6
-
-    move v2, p1
-
-    move v4, p2
-
-    invoke-direct/range {v0 .. v5}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object v6
-
-    .line 1169
-    :cond_0
-    iget v3, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    if-nez v2, :cond_2
-
-    .line 216
-    invoke-static {p2, v3}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v4
-
-    if-gez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v3
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    move v4, p2
-
-    .line 1170
-    :goto_1
-    iget p2, p0, Ll/ۚۜᩴ;->᩶:I
-
-    if-nez v0, :cond_4
-
-    .line 216
-    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v5
-
-    if-lez v5, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move p1, p2
-
-    :cond_4
-    :goto_2
-    if-nez v2, :cond_5
-
-    if-nez v0, :cond_5
-
-    if-ne p1, p2, :cond_5
-
-    if-ne v4, v3, :cond_5
-
-    return-object p0
-
-    .line 1172
-    :cond_5
-    new-instance p2, Ll/ۚۜᩴ;
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p2
-
-    move v2, p1
-
-    invoke-direct/range {v0 .. v5}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object p2
-.end method
-
-.method public final ۫()Ll/᩷᩺ᩴ;
-    .locals 1
-
-    .line 1146
-    new-instance v0, Ll/ۖۜᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۖۜᩴ;-><init>(Ll/ۚۜᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final ᩴ(I)Ll/ۙܶᩴ;
-    .locals 7
-
-    .line 1156
-    iget-boolean v0, p0, Ll/ۚۜᩴ;->۫:Z
-
-    iget-object v2, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ll/ۚۜᩴ;
-
-    iget-boolean v4, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    const/4 v6, 0x0
-
-    iget v3, p0, Ll/ۚۜᩴ;->᩶:I
-
-    move-object v1, v0
-
-    move v5, p1
-
-    invoke-direct/range {v1 .. v6}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object v0
-
-    .line 1157
-    :cond_0
-    iget v0, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    .line 216
-    invoke-static {p1, v0}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v0
-
-    if-gez v0, :cond_1
-
-    .line 1157
-    new-instance v0, Ll/ۚۜᩴ;
-
-    iget-boolean v4, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    const/4 v6, 0x0
-
-    iget v3, p0, Ll/ۚۜᩴ;->᩶:I
-
-    move-object v1, v0
-
-    move v5, p1
-
-    invoke-direct/range {v1 .. v6}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object v0
-
-    :cond_1
-    return-object p0
-.end method
-
-.method public final ᩵()I
-    .locals 1
-
-    .line 1221
-    invoke-virtual {p0}, Ll/ۚۜᩴ;->ۚ()Ll/ܰۜᩴ;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 1223
-    iget v0, v0, Ll/ܰۜᩴ;->᩶:I
-
-    return v0
-
-    .line 1222
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ᩹(I)Ll/ۙܶᩴ;
-    .locals 7
-
-    .line 1162
-    iget-boolean v0, p0, Ll/ۚۜᩴ;->ܺ:Z
-
-    iget-object v2, p0, Ll/ۚۜᩴ;->֡:Ll/᩹ۜᩴ;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ll/ۚۜᩴ;
-
-    iget v5, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    iget-boolean v6, p0, Ll/ۚۜᩴ;->۫:Z
-
-    const/4 v4, 0x0
-
-    move-object v1, v0
-
-    move v3, p1
-
-    invoke-direct/range {v1 .. v6}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object v0
-
-    .line 1163
-    :cond_0
-    iget v0, p0, Ll/ۚۜᩴ;->᩶:I
-
-    .line 216
-    invoke-static {p1, v0}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    .line 1163
-    new-instance v0, Ll/ۚۜᩴ;
-
-    iget v5, p0, Ll/ۚۜᩴ;->ܽ:I
-
-    iget-boolean v6, p0, Ll/ۚۜᩴ;->۫:Z
-
-    const/4 v4, 0x0
-
-    move-object v1, v0
-
-    move v3, p1
-
-    invoke-direct/range {v1 .. v6}, Ll/ۚۜᩴ;-><init>(Ll/᩹ۜᩴ;IZIZ)V
-
-    return-object v0
-
-    :cond_1
-    return-object p0
+    return-void
 .end method

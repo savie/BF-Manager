@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -20,7 +20,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Tag;->ܺ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/Tag;->ܰ:Ljava/lang/String;
 
     .line 34
     iput-object p2, p0, Lcom/amazonaws/services/s3/model/Tag;->᩶:Ljava/lang/String;
@@ -63,10 +63,10 @@
 
     iget-object v2, p1, Lcom/amazonaws/services/s3/model/Tag;->᩶:Ljava/lang/String;
 
-    iget-object p1, p1, Lcom/amazonaws/services/s3/model/Tag;->ܺ:Ljava/lang/String;
+    iget-object p1, p1, Lcom/amazonaws/services/s3/model/Tag;->ܰ:Ljava/lang/String;
 
     .line 102
-    iget-object v3, p0, Lcom/amazonaws/services/s3/model/Tag;->ܺ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/amazonaws/services/s3/model/Tag;->ܰ:Ljava/lang/String;
 
     if-eqz v3, :cond_2
 
@@ -112,7 +112,7 @@
     const/4 v0, 0x0
 
     .line 111
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Tag;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Tag;->ܰ:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -147,12 +147,12 @@
     .locals 1
 
     .line 41
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/Tag;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/Tag;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/lang/String;
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
     .line 68

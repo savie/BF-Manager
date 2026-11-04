@@ -77,7 +77,7 @@
     const-string v4, "BLAKE2B-512"
 
     .line 0
-    invoke-static {v4, v1, v0, v3, p1}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v0, v3, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     const-string v4, "BLAKE2B-384"
 
-    invoke-static {v4, v1, v0, v3, p1}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v0, v3, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
 
     const-string v4, "BLAKE2B-256"
 
-    invoke-static {v4, v1, v0, v3, p1}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v0, v3, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -149,7 +149,7 @@
 
     const-string v2, "BLAKE2B-160"
 
-    invoke-static {v0, v1, p1, v2}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1, v2}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     return-void
 .end method

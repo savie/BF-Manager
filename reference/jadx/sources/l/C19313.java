@@ -1,18 +1,42 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵۟ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C9A2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19313 {
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f62310;
+/* JADX INFO: renamed from: l.ᩳ᩶ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6XM */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19313 extends FilterInputStream implements InterfaceC8469 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f62311;
+    public long f62404;
 
-    public C19313(long j, String str) {
-        this.f62311 = str;
-        this.f62310 = j;
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
+    }
+
+    public C19313(InputStream inputStream) {
+        super(inputStream);
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read() throws IOException {
+        int i = super.read();
+        if (i >= 0) {
+            this.f62404++;
+        }
+        return i;
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int i3 = super.read(bArr, i, i2);
+        if (i3 > 0) {
+            this.f62404 += (long) i3;
+        }
+        return i3;
     }
 }

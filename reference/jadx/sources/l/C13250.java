@@ -1,85 +1,72 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.function.IntPredicate;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.۬ܿۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6TJ */
+/* JADX INFO: renamed from: l.۫ܽ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: RAPC */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13250 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f44011;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f44012;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f44013;
+public final /* synthetic */ class C13250 implements InterfaceC25185 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f44014;
+    public final /* synthetic */ IntPredicate f42341;
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C13250)) {
-            return false;
-        }
-        C13250 c13250 = (C13250) obj;
-        return this.f44013 == c13250.f44013 && this.f44012 == c13250.f44012 && C13638.equals(this.f44014, c13250.f44014) && C13638.equals(this.f44011, c13250.f44011);
+    public /* synthetic */ C13250(IntPredicate intPredicate) {
+        this.f42341 = intPredicate;
     }
 
-    public final int hashCode() {
-        int i = this.f44013 ? 1231 : 1237;
-        long j = this.f44012;
-        return C13638.hashCode(this.f44011) + C0589.m2789(((i * 31) + ((int) (j ^ (j >>> 32)))) * 31, 31, this.f44014);
+    @Override // java.util.function.IntPredicate
+    public final /* synthetic */ boolean test(int i) {
+        return C11758.m29526(this, i);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f44014, this.f44011, Long.valueOf(this.f44012), Boolean.valueOf(this.f44013)};
-        String[] strArrSplit = "key;version;byteLength;reopenable".length() == 0 ? new String[0] : "key;version;byteLength;reopenable".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C13250.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    @Override // l.InterfaceC25185
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo7133(byte b) {
+        return this.f42341.test(b);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m32726() {
-        return this.f44013;
+    public final /* synthetic */ IntPredicate and(IntPredicate intPredicate) {
+        return C11758.m29525(this, intPredicate);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m32727() {
-        return this.f44012;
+    public final /* synthetic */ IntPredicate or(IntPredicate intPredicate) {
+        return C11758.m29528(this, intPredicate);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m32728() {
-        return this.f44014;
+    @Override // java.util.function.Predicate
+    public final /* synthetic */ boolean test(Object obj) {
+        return C11758.m29527(this, (Byte) obj);
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String m32729() {
-        return this.f44011;
+    @Override // l.InterfaceC25185
+    /* JADX INFO: renamed from: ۙ */
+    public final C2064 mo7131(InterfaceC25185 interfaceC25185) {
+        return new C2064(this, interfaceC25185);
     }
 
-    public C13250(String str, String str2, long j, boolean z) {
-        C13638.requireNonNull(str);
-        C13638.requireNonNull(str2);
-        if (!str.isEmpty() && str.length() <= 1024 && str2.length() <= 512 && j >= -1 && (!z || !str2.isEmpty())) {
-            this.f44014 = str;
-            this.f44011 = str2;
-            this.f44012 = j;
-            this.f44013 = z;
-            return;
-        }
-        throw new IllegalArgumentException("Invalid text source identity");
+    @Override // java.util.function.Predicate
+    public final Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    public final IntPredicate negate() {
+        return new C15487(this);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public final Predicate mo7134negate() {
+        return new C15487(this);
+    }
+
+    @Override // l.InterfaceC25185
+    /* JADX INFO: renamed from: ᩷ */
+    public final C5793 mo7132(InterfaceC25185 interfaceC25185) {
+        return new C5793(this, interfaceC25185);
+    }
+
+    public final Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 }

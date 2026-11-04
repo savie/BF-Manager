@@ -4,7 +4,7 @@ import com.umeng.analytics.pro.cb;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class GF16 {
-    public static final byte[] F_STAR = {1, 2, 4, 8, 3, 6, 12, 11, 5, 10, 7, cb.f77931l, 15, cb.k, 9};
+    public static final byte[] F_STAR = {1, 2, 4, 8, 3, 6, 12, 11, 5, 10, 7, cb.f82047l, 15, cb.k, 9};
     public static final byte[] MT4B = new byte[256];
     public static final byte[] INV4B = new byte[16];
 

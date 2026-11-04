@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/CodecUtils;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/CodecUtils;
 
 
 # direct methods
@@ -16,7 +16,7 @@
     new-array v0, v0, [Lcom/amazonaws/util/CodecUtils;
 
     .line 23
-    sput-object v0, Lcom/amazonaws/util/CodecUtils;->ܺ:[Lcom/amazonaws/util/CodecUtils;
+    sput-object v0, Lcom/amazonaws/util/CodecUtils;->ܰ:[Lcom/amazonaws/util/CodecUtils;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 23
-    sget-object v0, Lcom/amazonaws/util/CodecUtils;->ܺ:[Lcom/amazonaws/util/CodecUtils;
+    sget-object v0, Lcom/amazonaws/util/CodecUtils;->ܰ:[Lcom/amazonaws/util/CodecUtils;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/CodecUtils;->clone()Ljava/lang/Object;
 
@@ -253,7 +253,7 @@
     return-object v2
 .end method
 
-.method public static ܰ(II)V
+.method public static ᩷(II)V
     .locals 0
 
     and-int/2addr p0, p1

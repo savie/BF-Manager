@@ -4,22 +4,22 @@ import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.security.DigestInputStream;
-import l.C10235;
-import l.InterfaceC20818;
+import l.C9214;
+import l.InterfaceC8469;
 
 /* JADX INFO: loaded from: classes.dex */
-public class SdkDigestInputStream extends DigestInputStream implements MetricAware, InterfaceC20818 {
-    @Override // java.io.InputStream, l.InterfaceC20818
+public class SdkDigestInputStream extends DigestInputStream implements MetricAware, InterfaceC8469 {
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 
     @Override // com.amazonaws.internal.MetricAware
     @Deprecated
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo279() {
+    public final boolean mo273() {
         if (((DigestInputStream) this).in instanceof MetricAware) {
-            return ((MetricAware) ((DigestInputStream) this).in).mo279();
+            return ((MetricAware) ((DigestInputStream) this).in).mo273();
         }
         return false;
     }

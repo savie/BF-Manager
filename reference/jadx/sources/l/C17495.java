@@ -1,20 +1,17 @@
 package l;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
+/* JADX INFO: renamed from: l.ܽۢۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 47AI */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17495 implements InterfaceC14953 {
+    @Override // l.InterfaceC14953
+    public final String getDescription() {
+        return "416 Requested Range Not Satisfiable";
+    }
 
-/* JADX INFO: renamed from: l.ܿܿᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C17495 {
-    public static void forEachRemaining(Iterator it, Consumer consumer) {
-        if (it instanceof InterfaceC6206) {
-            ((InterfaceC6206) it).forEachRemaining(consumer);
-            return;
-        }
-        C13638.requireNonNull(consumer);
-        while (it.hasNext()) {
-            consumer.accept(it.next());
-        }
+    @Override // l.InterfaceC14953
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo30198() {
+        return 416;
     }
 }

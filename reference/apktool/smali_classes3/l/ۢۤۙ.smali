@@ -1,30 +1,21 @@
-.class public final Ll/ۢۤۙ;
+.class public Ll/ۢۤۙ;
 .super Ljava/lang/Object;
-.source "S8SC"
+.source "UB1K"
 
 
-# instance fields
-.field public final ۙ:[I
+# virtual methods
+.method public ۙ(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    .locals 1
 
-.field public final ܰ:Ll/᩹ܿܶ;
+    const/16 v0, 0x40
 
-
-# direct methods
-.method public constructor <init>(Ljava/util/List;[I)V
-    .locals 0
-
-    .line 353
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 354
-    invoke-static {p1}, Ll/᩹ܿܶ;->copyOf(Ljava/util/Collection;)Ll/᩹ܿܶ;
+    .line 281
+    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p1
 
-    iput-object p1, p0, Ll/ۢۤۙ;->ܰ:Ll/᩹ܿܶ;
+    .line 283
+    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 355
-    iput-object p2, p0, Ll/ۢۤۙ;->ۙ:[I
-
-    return-void
+    return-object p1
 .end method

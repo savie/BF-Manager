@@ -30,23 +30,23 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import l.AbstractC2220;
-import l.C11468;
-import l.C12972;
-import l.C15945;
-import l.C16465;
-import l.C17910;
-import l.C18616;
-import l.C1977;
-import l.C22697;
-import l.C2387;
-import l.C3631;
-import l.C3798;
-import l.C7603;
-import l.C8033;
+import l.AbstractC7591;
+import l.C0385;
+import l.C0597;
+import l.C11642;
+import l.C14625;
+import l.C16117;
+import l.C19023;
+import l.C23577;
+import l.C2370;
+import l.C24323;
+import l.C4185;
+import l.C4661;
+import l.C5204;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialCheckBox extends C16465 {
+public class MaterialCheckBox extends C19023 {
     public static final int[][] CHECKBOX_STATES;
     public static final int[] ERROR_STATE_SET;
 
@@ -71,12 +71,12 @@ public class MaterialCheckBox extends C16465 {
     public CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
     public final LinkedHashSet onCheckedStateChangedListeners;
     public final LinkedHashSet onErrorChangedListeners;
-    public final C3631 transitionToUnchecked;
-    public final AbstractC2220 transitionToUncheckedCallback;
+    public final C2370 transitionToUnchecked;
+    public final AbstractC7591 transitionToUncheckedCallback;
     public boolean useMaterialThemeColors;
     public boolean usingMaterialButtonDrawable;
-    public static final int DEF_STYLE_RES = C18616.f60044;
-    public static final int[] INDETERMINATE_STATE_SET = {C2387.f8446};
+    public static final int DEF_STYLE_RES = C4185.f14195;
+    public static final int[] INDETERMINATE_STATE_SET = {C11642.f37350};
 
     @Retention(RetentionPolicy.SOURCE)
     public @interface CheckedState {
@@ -94,7 +94,7 @@ public class MaterialCheckBox extends C16465 {
     }
 
     static {
-        int i = C2387.f9403;
+        int i = C11642.f37487;
         ERROR_STATE_SET = new int[]{i};
         CHECKBOX_STATES = new int[][]{new int[]{R.attr.state_enabled, i}, new int[]{R.attr.state_enabled, R.attr.state_checked}, new int[]{R.attr.state_enabled, -16842912}, new int[]{-16842910, R.attr.state_checked}, new int[]{-16842910, -16842912}};
         FRAMEWORK_BUTTON_DRAWABLE_RES_ID = Resources.getSystem().getIdentifier("btn_check_material_anim", "drawable", "android");
@@ -105,7 +105,7 @@ public class MaterialCheckBox extends C16465 {
     }
 
     public MaterialCheckBox(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9008);
+        this(context, attributeSet, C11642.f36878);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -114,51 +114,51 @@ public class MaterialCheckBox extends C16465 {
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.onErrorChangedListeners = new LinkedHashSet();
         this.onCheckedStateChangedListeners = new LinkedHashSet();
-        this.transitionToUnchecked = C3631.m10732(getContext(), C12972.f43122);
-        this.transitionToUncheckedCallback = new AbstractC2220() { // from class: com.google.android.material.checkbox.MaterialCheckBox.1
-            @Override // l.AbstractC2220
+        this.transitionToUnchecked = C2370.m8053(getContext(), C16117.f52241);
+        this.transitionToUncheckedCallback = new AbstractC7591() { // from class: com.google.android.material.checkbox.MaterialCheckBox.1
+            @Override // l.AbstractC7591
             public void onAnimationStart(Drawable drawable) {
                 super.onAnimationStart(drawable);
                 MaterialCheckBox materialCheckBox = MaterialCheckBox.this;
                 ColorStateList colorStateList = materialCheckBox.buttonTintList;
                 if (colorStateList != null) {
-                    C7603.m20138(drawable, colorStateList.getColorForState(materialCheckBox.currentStateChecked, MaterialCheckBox.this.buttonTintList.getDefaultColor()));
+                    C0597.m2700(drawable, colorStateList.getColorForState(materialCheckBox.currentStateChecked, MaterialCheckBox.this.buttonTintList.getDefaultColor()));
                 }
             }
 
-            @Override // l.AbstractC2220
+            @Override // l.AbstractC7591
             public void onAnimationEnd(Drawable drawable) {
                 super.onAnimationEnd(drawable);
                 ColorStateList colorStateList = MaterialCheckBox.this.buttonTintList;
                 if (colorStateList != null) {
-                    C7603.m20129(drawable, colorStateList);
+                    C0597.m2690(drawable, colorStateList);
                 }
             }
         };
         Context context2 = getContext();
-        this.buttonDrawable = C11468.m28655((CompoundButton) this);
+        this.buttonDrawable = C4661.m14518((CompoundButton) this);
         this.buttonTintList = getSuperButtonTintList();
         setSupportButtonTintList(null);
-        C1977 c1977ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C8033.f28091, i, i2, new int[0]);
-        this.buttonIconDrawable = c1977ObtainTintedStyledAttributes.m6370(C8033.f27351);
-        if (this.buttonDrawable != null && ThemeEnforcement.isMaterial3Theme(context2) && isButtonDrawableLegacy(c1977ObtainTintedStyledAttributes)) {
+        C5204 c5204ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C14625.f46729, i, i2, new int[0]);
+        this.buttonIconDrawable = c5204ObtainTintedStyledAttributes.m15669(C14625.f47616);
+        if (this.buttonDrawable != null && ThemeEnforcement.isMaterial3Theme(context2) && isButtonDrawableLegacy(c5204ObtainTintedStyledAttributes)) {
             super.setButtonDrawable((Drawable) null);
-            this.buttonDrawable = C15945.m37904(context2, C12972.f43113);
+            this.buttonDrawable = C0385.m2186(context2, C16117.f52304);
             this.usingMaterialButtonDrawable = true;
             if (this.buttonIconDrawable == null) {
-                this.buttonIconDrawable = C15945.m37904(context2, C12972.f43194);
+                this.buttonIconDrawable = C0385.m2186(context2, C16117.f52368);
             }
         }
-        this.buttonIconTintList = MaterialResources.getColorStateList(context2, c1977ObtainTintedStyledAttributes, C8033.f27191);
-        this.buttonIconTintMode = ViewUtils.parseTintMode(c1977ObtainTintedStyledAttributes.m6381(C8033.f26499, -1), PorterDuff.Mode.SRC_IN);
-        this.useMaterialThemeColors = c1977ObtainTintedStyledAttributes.m6376(C8033.f26820, false);
-        this.centerIfNoTextEnabled = c1977ObtainTintedStyledAttributes.m6376(C8033.f27988, true);
-        this.errorShown = c1977ObtainTintedStyledAttributes.m6376(C8033.f26606, false);
-        this.errorAccessibilityLabel = c1977ObtainTintedStyledAttributes.m6368(C8033.f27298);
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f26393)) {
-            setCheckedState(c1977ObtainTintedStyledAttributes.m6381(C8033.f26393, 0));
+        this.buttonIconTintList = MaterialResources.getColorStateList(context2, c5204ObtainTintedStyledAttributes, C14625.f46818);
+        this.buttonIconTintMode = ViewUtils.parseTintMode(c5204ObtainTintedStyledAttributes.m15657(C14625.f47670, -1), PorterDuff.Mode.SRC_IN);
+        this.useMaterialThemeColors = c5204ObtainTintedStyledAttributes.m15654(C14625.f46872, false);
+        this.centerIfNoTextEnabled = c5204ObtainTintedStyledAttributes.m15654(C14625.f47137, true);
+        this.errorShown = c5204ObtainTintedStyledAttributes.m15654(C14625.f46181, false);
+        this.errorAccessibilityLabel = c5204ObtainTintedStyledAttributes.m15659(C14625.f46447);
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f46978)) {
+            setCheckedState(c5204ObtainTintedStyledAttributes.m15657(C14625.f46978, 0));
         }
-        c1977ObtainTintedStyledAttributes.m6379();
+        c5204ObtainTintedStyledAttributes.m15664();
         refreshButtonDrawable();
     }
 
@@ -168,16 +168,16 @@ public class MaterialCheckBox extends C16465 {
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
     public void onDraw(Canvas canvas) {
-        Drawable drawableM28655;
-        if (this.centerIfNoTextEnabled && TextUtils.isEmpty(getText()) && (drawableM28655 = C11468.m28655((CompoundButton) this)) != null) {
-            int width = ((getWidth() - drawableM28655.getIntrinsicWidth()) / 2) * (ViewUtils.isLayoutRtl(this) ? -1 : 1);
+        Drawable drawableM14518;
+        if (this.centerIfNoTextEnabled && TextUtils.isEmpty(getText()) && (drawableM14518 = C4661.m14518((CompoundButton) this)) != null) {
+            int width = ((getWidth() - drawableM14518.getIntrinsicWidth()) / 2) * (ViewUtils.isLayoutRtl(this) ? -1 : 1);
             int iSave = canvas.save();
             canvas.translate(width, 0.0f);
             super.onDraw(canvas);
             canvas.restoreToCount(iSave);
             if (getBackground() != null) {
-                Rect bounds = drawableM28655.getBounds();
-                C7603.m20128(getBackground(), bounds.left + width, bounds.top, bounds.right + width, bounds.bottom);
+                Rect bounds = drawableM14518.getBounds();
+                C0597.m2689(getBackground(), bounds.left + width, bounds.top, bounds.right + width, bounds.bottom);
                 return;
             }
             return;
@@ -326,12 +326,12 @@ public class MaterialCheckBox extends C16465 {
         this.onErrorChangedListeners.clear();
     }
 
-    @Override // l.C16465, android.widget.CompoundButton
+    @Override // l.C19023, android.widget.CompoundButton
     public void setButtonDrawable(int i) {
-        setButtonDrawable(C15945.m37904(getContext(), i));
+        setButtonDrawable(C0385.m2186(getContext(), i));
     }
 
-    @Override // l.C16465, android.widget.CompoundButton
+    @Override // l.C19023, android.widget.CompoundButton
     public void setButtonDrawable(Drawable drawable) {
         this.buttonDrawable = drawable;
         this.usingMaterialButtonDrawable = false;
@@ -364,7 +364,7 @@ public class MaterialCheckBox extends C16465 {
     }
 
     public void setButtonIconDrawableResource(int i) {
-        setButtonIconDrawable(C15945.m37904(getContext(), i));
+        setButtonIconDrawable(C0385.m2186(getContext(), i));
     }
 
     public void setButtonIconDrawable(Drawable drawable) {
@@ -403,9 +403,9 @@ public class MaterialCheckBox extends C16465 {
     public void setUseMaterialThemeColors(boolean z) {
         this.useMaterialThemeColors = z;
         if (z) {
-            C11468.m28656(this, getMaterialThemeColorsTintList());
+            C4661.m14519(this, getMaterialThemeColorsTintList());
         } else {
-            C11468.m28656(this, (ColorStateList) null);
+            C4661.m14519(this, (ColorStateList) null);
         }
     }
 
@@ -422,7 +422,7 @@ public class MaterialCheckBox extends C16465 {
     }
 
     private void refreshButtonDrawable() {
-        this.buttonDrawable = DrawableUtils.createTintableMutatedDrawableIfNeeded(this.buttonDrawable, this.buttonTintList, C11468.m28654(this));
+        this.buttonDrawable = DrawableUtils.createTintableMutatedDrawableIfNeeded(this.buttonDrawable, this.buttonTintList, C4661.m14517(this));
         this.buttonIconDrawable = DrawableUtils.createTintableMutatedDrawableIfNeeded(this.buttonIconDrawable, this.buttonIconTintList, this.buttonIconTintMode);
         setUpDefaultButtonDrawableAnimationIfNeeded();
         updateButtonTints();
@@ -431,20 +431,20 @@ public class MaterialCheckBox extends C16465 {
     }
 
     private void setUpDefaultButtonDrawableAnimationIfNeeded() {
-        C3631 c3631;
+        C2370 c2370;
         if (this.usingMaterialButtonDrawable) {
-            C3631 c3632 = this.transitionToUnchecked;
-            if (c3632 != null) {
-                c3632.m10735(this.transitionToUncheckedCallback);
-                this.transitionToUnchecked.m10734(this.transitionToUncheckedCallback);
+            C2370 c2371 = this.transitionToUnchecked;
+            if (c2371 != null) {
+                c2371.m8056(this.transitionToUncheckedCallback);
+                this.transitionToUnchecked.m8055(this.transitionToUncheckedCallback);
             }
             if (Build.VERSION.SDK_INT >= 24) {
                 Drawable drawable = this.buttonDrawable;
-                if (!(drawable instanceof AnimatedStateListDrawable) || (c3631 = this.transitionToUnchecked) == null) {
+                if (!(drawable instanceof AnimatedStateListDrawable) || (c2370 = this.transitionToUnchecked) == null) {
                     return;
                 }
-                ((AnimatedStateListDrawable) drawable).addTransition(C3798.f14033, C3798.f13964, c3631, false);
-                ((AnimatedStateListDrawable) this.buttonDrawable).addTransition(C3798.f13908, C3798.f13964, this.transitionToUnchecked, false);
+                ((AnimatedStateListDrawable) drawable).addTransition(C23577.f76470, C23577.f76413, c2370, false);
+                ((AnimatedStateListDrawable) this.buttonDrawable).addTransition(C23577.f76272, C23577.f76413, this.transitionToUnchecked, false);
             }
         }
     }
@@ -454,13 +454,13 @@ public class MaterialCheckBox extends C16465 {
         ColorStateList colorStateList2;
         Drawable drawable = this.buttonDrawable;
         if (drawable != null && (colorStateList2 = this.buttonTintList) != null) {
-            C7603.m20129(drawable, colorStateList2);
+            C0597.m2690(drawable, colorStateList2);
         }
         Drawable drawable2 = this.buttonIconDrawable;
         if (drawable2 == null || (colorStateList = this.buttonIconTintList) == null) {
             return;
         }
-        C7603.m20129(drawable2, colorStateList);
+        C0597.m2690(drawable2, colorStateList);
     }
 
     @Override // android.widget.CompoundButton, android.view.View
@@ -483,12 +483,12 @@ public class MaterialCheckBox extends C16465 {
     private String getButtonStateDescription() {
         int i = this.checkedState;
         if (i == 1) {
-            return getResources().getString(C17910.f56794);
+            return getResources().getString(C24323.f78783);
         }
         if (i == 0) {
-            return getResources().getString(C17910.f56759);
+            return getResources().getString(C24323.f78767);
         }
-        return getResources().getString(C17910.f56750);
+        return getResources().getString(C24323.f78825);
     }
 
     private ColorStateList getSuperButtonTintList() {
@@ -502,18 +502,18 @@ public class MaterialCheckBox extends C16465 {
         return getSupportButtonTintList();
     }
 
-    private boolean isButtonDrawableLegacy(C1977 c1977) {
-        return c1977.m6387(C8033.f26549, 0) == FRAMEWORK_BUTTON_DRAWABLE_RES_ID && c1977.m6387(C8033.f26659, 0) == 0;
+    private boolean isButtonDrawableLegacy(C5204 c5204) {
+        return c5204.m15660(C14625.f47048, 0) == FRAMEWORK_BUTTON_DRAWABLE_RES_ID && c5204.m15660(C14625.f46393, 0) == 0;
     }
 
     private ColorStateList getMaterialThemeColorsTintList() {
         if (this.materialThemeColorsTintList == null) {
             int[][] iArr = CHECKBOX_STATES;
             int[] iArr2 = new int[iArr.length];
-            int color = MaterialColors.getColor(this, C2387.f9444);
-            int color2 = MaterialColors.getColor(this, C2387.f8453);
-            int color3 = MaterialColors.getColor(this, C2387.f8699);
-            int color4 = MaterialColors.getColor(this, C2387.f9483);
+            int color = MaterialColors.getColor(this, C11642.f36697);
+            int color2 = MaterialColors.getColor(this, C11642.f37345);
+            int color3 = MaterialColors.getColor(this, C11642.f36968);
+            int color4 = MaterialColors.getColor(this, C11642.f37207);
             iArr2[0] = MaterialColors.layer(color3, color2, 1.0f);
             iArr2[1] = MaterialColors.layer(color3, color, 1.0f);
             iArr2[2] = MaterialColors.layer(color3, color4, 0.54f);
@@ -575,7 +575,7 @@ public class MaterialCheckBox extends C16465 {
             StringBuilder sb = new StringBuilder("MaterialCheckBox.SavedState{");
             sb.append(Integer.toHexString(System.identityHashCode(this)));
             sb.append(" CheckedState=");
-            return C22697.m50267(sb, getCheckedStateString(), l.d);
+            return C8947.m23910(sb, getCheckedStateString(), l.d);
         }
 
         private String getCheckedStateString() {

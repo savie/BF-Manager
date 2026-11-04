@@ -1,60 +1,76 @@
 package l;
 
-import java.util.List;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۨۛ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: S515 */
+/* JADX INFO: renamed from: l.ۧۢۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6E4 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11522 extends AbstractC6913 {
+public final class C11522 extends C18959 {
+
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final int f36265;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public C1828 f36266;
+
+    public C11522(int i, AbstractC16481 abstractC16481) {
+        super(EnumC24203.FILL_ARRAY, 1);
+        this.f36265 = i;
+        mo44014(abstractC16481);
+    }
+
+    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
+    public final int m29012() {
+        return this.f36265;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5171 f38737;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C5171 f38738;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9736 f38739;
-
-    public C11522(C5171 c5171, C5171 c5172, C5171 c5173) {
-        this.f38738 = c5171;
-        this.f38737 = c5172;
-        this.f38739 = new C1973(c5173);
+    public final void m29010(C1828 c1828) {
+        this.f36266 = c1828;
     }
 
-    public C11522(C5171 c5171, C5171 c5172, AbstractC9736 abstractC9736) {
-        this.f38738 = c5171;
-        this.f38737 = c5172;
-        this.f38739 = abstractC9736;
-    }
-
-    public C11522(C5171 c5171, C5171 c5172, InterfaceC15914 interfaceC15914, C5171 c5173) {
-        AbstractC9736 c14675;
-        this.f38738 = c5171;
-        this.f38737 = c5172;
-        if (interfaceC15914 != null) {
-            c14675 = new C14675(c5173, interfaceC15914);
-        } else {
-            c14675 = new C1973(c5173);
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ᩴ */
+    public final boolean mo4075(C18959 c18959) {
+        if (this == c18959) {
+            return true;
         }
-        this.f38739 = c14675;
+        if ((c18959 instanceof C11522) && super.mo4075(c18959)) {
+            return C17359.equals(this.f36266, ((C11522) c18959).f36266);
+        }
+        return false;
     }
 
-    @Override // l.InterfaceC8651
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo18941() {
-        return this.f38738.m14324().f49052;
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final C18959 mo4072() {
+        C11522 c11522 = new C11522(this.f36265, mo44035(0));
+        m44033(c11522);
+        return c11522;
     }
 
-    @Override // l.InterfaceC8651
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo18942() {
-        return this.f38737.m14324().f49052 - this.f38738.m14324().f49052;
+    @Override // l.C18959
+    public final String toString() {
+        return super.toString() + ", data: " + this.f36266;
     }
 
-    @Override // l.InterfaceC8651
-    /* JADX INFO: renamed from: ܰ */
-    public final List mo18943() {
-        return AbstractC22433.of((Object) this.f38739);
+    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
+    public final int m29014() {
+        return this.f36266.m6319();
+    }
+
+    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1566 m29011() {
+        return this.f36266.m6320();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m29009(AbstractC1566 abstractC1566) {
+        return this.f36266.m6318(abstractC1566);
+    }
+
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public final String m29013() {
+        return C17359.toString(this.f36266);
     }
 }

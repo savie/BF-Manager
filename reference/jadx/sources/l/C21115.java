@@ -1,13 +1,15 @@
 package l;
 
-import java.util.function.ToIntFunction;
-
-/* JADX INFO: renamed from: l.᩷᩷ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 12B7 */
+/* JADX INFO: renamed from: l.᩶ۛۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6B2 */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C21115 implements ToIntFunction {
-    @Override // java.util.function.ToIntFunction
-    public final int applyAsInt(Object obj) {
-        return C2871.m8641((String) obj);
+public final class C21115 extends C24649 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9730 f67447;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object m48209() {
+        return this.f67447;
     }
 }

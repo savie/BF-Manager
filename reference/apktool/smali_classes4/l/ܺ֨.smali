@@ -1,59 +1,42 @@
 .class public final Ll/ܺ֨;
 .super Ljava/lang/Object;
-
-
-# static fields
-.field public static ۙ:[I
-
-.field public static ۨ:[I
-
-.field public static ܰ:[I
+.source "M5X0"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public static ۙ(Landroid/content/Context;Ll/᩷֨;IZILandroid/os/Handler;Ll/ܺᩳ;)Landroid/graphics/Typeface;
+    .locals 1
 
-    const/4 v0, 0x6
+    .line 160
+    new-instance v0, Ll/۟ۢ;
 
-    new-array v0, v0, [I
+    invoke-direct {v0, p6, p5}, Ll/۟ۢ;-><init>(Ll/ܺᩳ;Landroid/os/Handler;)V
 
-    .line 0
-    fill-array-data v0, :array_0
+    if-eqz p3, :cond_0
 
-    sput-object v0, Ll/ܺ֨;->ۙ:[I
+    .line 163
+    invoke-static {p0, p1, v0, p2, p4}, Ll/ۚ֨;->ۙ(Landroid/content/Context;Ll/᩷֨;Ll/۟ۢ;II)Landroid/graphics/Typeface;
 
-    const v0, 0x10100d0
+    move-result-object p0
 
-    const v1, 0x1010199
+    return-object p0
 
-    filled-new-array {v0, v1}, [I
+    .line 166
+    :cond_0
+    invoke-static {p0, p1, p2, v0}, Ll/ۚ֨;->ۙ(Landroid/content/Context;Ll/᩷֨;ILl/۟ۢ;)Landroid/graphics/Typeface;
 
-    move-result-object v0
+    move-result-object p0
 
-    sput-object v0, Ll/ܺ֨;->ܰ:[I
+    return-object p0
+.end method
 
-    const v0, 0x101044a
+.method public static ۙ(Landroid/content/Context;Ll/᩷֨;)Ll/֫֨;
+    .locals 0
 
-    const v2, 0x101044b
+    .line 100
+    invoke-static {p0, p1}, Ll/ۙ֨;->ۙ(Landroid/content/Context;Ll/᩷֨;)Ll/֫֨;
 
-    const v3, 0x1010449
+    move-result-object p0
 
-    filled-new-array {v1, v3, v0, v2}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ll/ܺ֨;->ۨ:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x101011c
-        0x1010194
-        0x1010195
-        0x1010196
-        0x101030c
-        0x101030d
-    .end array-data
+    return-object p0
 .end method

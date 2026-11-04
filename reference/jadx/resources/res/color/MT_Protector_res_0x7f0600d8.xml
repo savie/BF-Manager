@@ -2,7 +2,10 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="false"
-        android:color="@color/MT_Protector_res_0x7f0601c9"
+        android:color="?attr/MT_Protector_res_0x7f040111"
         android:alpha="@dimen/MT_Protector_res_0x7f07026a"/>
-    <item android:color="@color/MT_Protector_res_0x7f0601ca"/>
+    <item
+        android:state_selected="true"
+        android:color="?attr/MT_Protector_res_0x7f04010e"/>
+    <item android:color="?attr/MT_Protector_res_0x7f040113"/>
 </selector>

@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/drawable/ScaledDrawableWrapper;
-.super Ll/᩵֨;
+.super Ll/ۛ۫;
 .source "ScaledDrawableWrapper.java"
 
 
@@ -14,7 +14,7 @@
     .locals 0
 
     .line 35
-    invoke-direct {p0, p1}, Ll/᩵֨;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, Ll/ۛ۫;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 36
     iput p2, p0, Lcom/google/android/material/drawable/ScaledDrawableWrapper;->width:I

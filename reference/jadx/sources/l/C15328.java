@@ -1,47 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶܺۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I6YB */
+import java.util.Collection;
+import java.util.HashMap;
+
+/* JADX INFO: renamed from: l.ܳۨܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5BHG */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15328 {
+public final class C15328 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f49925;
+    public final HashMap f50076 = new HashMap();
 
-    static {
-        int[] iArr = new int[EnumC17217.values().length];
-        f49925 = iArr;
-        try {
-            iArr[EnumC17217.STAT.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16820 f50077;
+
+    public C15328(C16820 c16820) {
+        this.f50077 = c16820;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13091 m36777(C5085 c5085) {
+        HashMap map = this.f50076;
+        C13091 c13091 = (C13091) map.get(c5085);
+        if (c13091 != null) {
+            return c13091;
         }
-        try {
-            f49925[EnumC17217.LIST.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f49925[EnumC17217.CREATE_FILE_EXCLUSIVE.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f49925[EnumC17217.CREATE_DIRECTORY_SINGLE.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f49925[EnumC17217.DELETE_FILE_OR_LINK.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f49925[EnumC17217.DELETE_EMPTY_DIRECTORY.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f49925[EnumC17217.RENAME_NO_REPLACE.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f49925[EnumC17217.REPLACE.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
+        C13091 c13092 = new C13091(this.f50077.f54267.mo6562(), c5085);
+        map.put(c5085, c13092);
+        return c13092;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Collection m36776() {
+        return this.f50076.values();
     }
 }

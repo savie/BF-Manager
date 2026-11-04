@@ -518,7 +518,7 @@
     move-wide v0, p0
 
     .line 257
-    invoke-static/range {v0 .. v7}, Ll/ᩳ֫ᩳ;->ۙ(DDDD)D
+    invoke-static/range {v0 .. v7}, Ll/᩸ᩳ;->ۙ(DDDD)D
 
     move-result-wide p0
 

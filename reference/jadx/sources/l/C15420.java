@@ -1,81 +1,188 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶᩴܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LBEV */
-/* JADX INFO: loaded from: classes5.dex */
-public class C15420 extends C5541 {
+import java.math.BigInteger;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.Principal;
+import java.security.Provider;
+import java.security.PublicKey;
+import java.security.SignatureException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateExpiredException;
+import java.security.cert.CertificateNotYetValidException;
+import java.security.cert.X509Certificate;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+import javax.security.auth.x500.X500Principal;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C4129 f50266;
+/* JADX INFO: renamed from: l.ܳܳ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: IB8N */
+/* JADX INFO: loaded from: classes4.dex */
+public class C15420 extends X509Certificate {
+    public static final long serialVersionUID = 1;
 
-    public C15420(int i) {
-        super(i);
-        this.f50266 = new C4129(i);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final X509Certificate f50247;
+
+    public C15420(X509Certificate x509Certificate) {
+        this.f50247 = x509Certificate;
     }
 
-    public C15420(C5667 c5667) {
-        super(c5667.size());
-        this.f50266 = c5667.f50266.m11757();
-        int size = c5667.size();
-        for (int i = 0; i < size; i++) {
-            m15252(i, c5667.m15249(i));
-        }
+    @Override // java.security.cert.X509Extension
+    public final Set getCriticalExtensionOIDs() {
+        return this.f50247.getCriticalExtensionOIDs();
     }
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final int m36890() {
-        C4129 c4129 = this.f50266;
-        int size = c4129.size();
-        do {
-            size--;
-            if (size < 0) {
-                break;
-            }
-        } while (c4129.get(size) < 0);
-        int i = size + 1;
-        c4129.m11754(i);
-        return i;
+    @Override // java.security.cert.X509Extension
+    public final byte[] getExtensionValue(String str) {
+        return this.f50247.getExtensionValue(str);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void m36888(int i, C19446 c19446) {
-        m36889(i, (InterfaceC23181) c19446);
+    @Override // java.security.cert.X509Extension
+    public final Set getNonCriticalExtensionOIDs() {
+        return this.f50247.getNonCriticalExtensionOIDs();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m36887(int i) {
-        C4129 c4129 = this.f50266;
-        if (i >= c4129.size()) {
-            return -1;
-        }
-        return c4129.get(i);
+    @Override // java.security.cert.X509Extension
+    public final boolean hasUnsupportedCriticalExtension() {
+        return this.f50247.hasUnsupportedCriticalExtension();
     }
 
-    @Override // l.C5541
-    /* JADX INFO: renamed from: ۡ */
-    public final void mo15262() {
-        super.mo15262();
-        int size = size();
-        for (int i = 0; i < size; i++) {
-            this.f50266.set(((InterfaceC23181) m15249(i)).mo29913(), i);
-        }
+    @Override // java.security.cert.X509Certificate
+    public final void checkValidity() throws CertificateNotYetValidException, CertificateExpiredException {
+        this.f50247.checkValidity();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m36889(int i, InterfaceC23181 interfaceC23181) {
-        InterfaceC23181 interfaceC23182 = (InterfaceC23181) m15263(i);
-        m15252(i, (Object) interfaceC23181);
-        C4129 c4129 = this.f50266;
-        if (interfaceC23182 != null) {
-            c4129.set(interfaceC23182.mo29913(), -1);
-        }
-        if (interfaceC23181 != null) {
-            int iMo29913 = interfaceC23181.mo29913();
-            int size = c4129.size();
-            for (int i2 = 0; i2 <= iMo29913 - size; i2++) {
-                c4129.add(-1);
-            }
-            c4129.set(iMo29913, i);
-        }
+    @Override // java.security.cert.X509Certificate
+    public final void checkValidity(Date date) throws CertificateNotYetValidException, CertificateExpiredException {
+        this.f50247.checkValidity(date);
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final int getVersion() {
+        return this.f50247.getVersion();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final BigInteger getSerialNumber() {
+        return this.f50247.getSerialNumber();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Principal getIssuerDN() {
+        return this.f50247.getIssuerDN();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Principal getSubjectDN() {
+        return this.f50247.getSubjectDN();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Date getNotBefore() {
+        return this.f50247.getNotBefore();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Date getNotAfter() {
+        return this.f50247.getNotAfter();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final byte[] getTBSCertificate() {
+        return this.f50247.getTBSCertificate();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final byte[] getSignature() {
+        return this.f50247.getSignature();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final String getSigAlgName() {
+        return this.f50247.getSigAlgName();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final String getSigAlgOID() {
+        return this.f50247.getSigAlgOID();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final byte[] getSigAlgParams() {
+        return this.f50247.getSigAlgParams();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final boolean[] getIssuerUniqueID() {
+        return this.f50247.getIssuerUniqueID();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final boolean[] getSubjectUniqueID() {
+        return this.f50247.getSubjectUniqueID();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final boolean[] getKeyUsage() {
+        return this.f50247.getKeyUsage();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final int getBasicConstraints() {
+        return this.f50247.getBasicConstraints();
+    }
+
+    @Override // java.security.cert.Certificate
+    public final void verify(PublicKey publicKey) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException, NoSuchProviderException {
+        this.f50247.verify(publicKey);
+    }
+
+    @Override // java.security.cert.Certificate
+    public final void verify(PublicKey publicKey, String str) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException, NoSuchProviderException {
+        this.f50247.verify(publicKey, str);
+    }
+
+    @Override // java.security.cert.Certificate
+    public final String toString() {
+        return this.f50247.toString();
+    }
+
+    @Override // java.security.cert.Certificate
+    public final PublicKey getPublicKey() {
+        return this.f50247.getPublicKey();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final X500Principal getIssuerX500Principal() {
+        return this.f50247.getIssuerX500Principal();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final X500Principal getSubjectX500Principal() {
+        return this.f50247.getSubjectX500Principal();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final List getExtendedKeyUsage() {
+        return this.f50247.getExtendedKeyUsage();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Collection getSubjectAlternativeNames() {
+        return this.f50247.getSubjectAlternativeNames();
+    }
+
+    @Override // java.security.cert.X509Certificate
+    public final Collection getIssuerAlternativeNames() {
+        return this.f50247.getIssuerAlternativeNames();
+    }
+
+    @Override // java.security.cert.X509Certificate, java.security.cert.Certificate
+    public final void verify(PublicKey publicKey, Provider provider) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException {
+        this.f50247.verify(publicKey, provider);
     }
 }

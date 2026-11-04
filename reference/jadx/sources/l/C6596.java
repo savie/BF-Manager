@@ -1,17 +1,29 @@
 package l;
 
-import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۜۜۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D4TB */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6596 extends ScheduledThreadPoolExecutor implements AutoCloseable {
+/* JADX INFO: renamed from: l.ۛᩴ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: NB79 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C6596 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f22217 = 0;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
 
-    @Override // java.lang.AutoCloseable
-    public final /* synthetic */ void close() {
-        C12947.m32078(this);
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        C1997 c1997 = (C1997) obj;
+        int iM44775 = C19362.m44775(c1997);
+        if (iM44775 == 0) {
+            return null;
+        }
+        return new C18528(c1997.m6840(), c1997.m6835(), C19362.m44774(c1997), (int) c1997.m6834(), iM44775);
     }
 }

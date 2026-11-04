@@ -17,7 +17,7 @@ public class UIUpdater {
     public void submitUpdate(Object obj) {
         if (ThreadUtil.isInUiThread()) {
             this.pendingData.set(NOT_SET);
-            this.uiConsumer.mo42471accept(obj);
+            this.uiConsumer.accept(obj);
         } else {
             this.pendingData.set(obj);
             this.updaterGroup.schedulePendingUpdates();
@@ -29,7 +29,7 @@ public class UIUpdater {
         Object obj = NOT_SET;
         Object andSet = atomicReference.getAndSet(obj);
         if (andSet != obj) {
-            this.uiConsumer.mo42471accept(andSet);
+            this.uiConsumer.accept(andSet);
         }
     }
 }

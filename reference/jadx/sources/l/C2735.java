@@ -1,56 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩵ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 643O */
+/* JADX INFO: renamed from: l.ۖܳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P70I */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C2735 {
+public final class C2735 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f10511;
+    public int f9095 = 1;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f10512;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22808[] f9096;
 
-    static {
-        int[] iArr = new int[EnumC18651.values().length];
-        f10511 = iArr;
-        try {
-            iArr[EnumC18651.f60542.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final synchronized void m9084() {
+        int i = this.f9095;
+        if (i <= 0) {
+            throw new IllegalStateException("HexRange root lease is closed");
         }
-        try {
-            f10511[EnumC18651.f60519.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        if (i == Integer.MAX_VALUE) {
+            throw new ArithmeticException();
         }
-        try {
-            f10511[EnumC18651.f60538.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
+        this.f9095 = i + 1;
+    }
+
+    public C2735(InterfaceC22808[] interfaceC22808Arr) {
+        this.f9096 = interfaceC22808Arr;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m9083() {
+        InterfaceC22808[] interfaceC22808Arr;
+        synchronized (this) {
+            int i = this.f9095;
+            if (i <= 0) {
+                throw new IllegalStateException("HexRange root lease closed twice");
+            }
+            int i2 = i - 1;
+            this.f9095 = i2;
+            interfaceC22808Arr = i2 == 0 ? this.f9096 : null;
         }
-        try {
-            f10511[EnumC18651.f60467.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        int[] iArr2 = new int[EnumC1923.values().length];
-        f10512 = iArr2;
-        try {
-            iArr2[EnumC1923.LOCAL_VARIABLE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f10512[EnumC1923.PACKAGE.ordinal()] = 2;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f10512[EnumC1923.PARAMETER.ordinal()] = 3;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f10512[EnumC1923.RESOURCE_VARIABLE.ordinal()] = 4;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f10512[EnumC1923.EXCEPTION_PARAMETER.ordinal()] = 5;
-        } catch (NoSuchFieldError unused9) {
+        if (interfaceC22808Arr != null) {
+            C4908.m15061(interfaceC22808Arr);
         }
     }
 }

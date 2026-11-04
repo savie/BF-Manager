@@ -1,223 +1,84 @@
 package l;
 
-import java.io.Serializable;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.RandomAccess;
-
-/* JADX INFO: renamed from: l.ۤۗ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAUN */
+/* JADX INFO: renamed from: l.ۢۢۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C43R */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10031 extends AbstractC8620 implements List, Cloneable, RandomAccess, Serializable {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f34241;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public transient Object f34242;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public transient Type f34243;
-
-    public C10031() {
-        this.f34241 = new ArrayList(10);
-    }
-
-    public C10031(ArrayList arrayList) {
-        this.f34241 = arrayList;
-    }
-
-    public C10031(int i) {
-        this.f34241 = new ArrayList(i);
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final Object m25306() {
-        return this.f34242;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m25313(Object obj) {
-        this.f34242 = obj;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Type m25309() {
-        return this.f34243;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25307(Type type) {
-        this.f34243 = type;
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final int size() {
-        return this.f34241.size();
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean isEmpty() {
-        return this.f34241.isEmpty();
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean contains(Object obj) {
-        return this.f34241.contains(obj);
-    }
-
-    @Override // java.util.List, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        return this.f34241.iterator();
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final Object[] toArray() {
-        return this.f34241.toArray();
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final Object[] toArray(Object[] objArr) {
-        return this.f34241.toArray(objArr);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean add(Object obj) {
-        return this.f34241.add(obj);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean remove(Object obj) {
-        return this.f34241.remove(obj);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean containsAll(Collection collection) {
-        return this.f34241.containsAll(collection);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean addAll(Collection collection) {
-        return this.f34241.addAll(collection);
-    }
-
-    @Override // java.util.List
-    public final boolean addAll(int i, Collection collection) {
-        return this.f34241.addAll(i, collection);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        return this.f34241.removeAll(collection);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        return this.f34241.retainAll(collection);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final void clear() {
-        this.f34241.clear();
-    }
-
-    @Override // java.util.List
-    public final Object set(int i, Object obj) {
-        return this.f34241.set(i, obj);
-    }
-
-    @Override // java.util.List
-    public final void add(int i, Object obj) {
-        this.f34241.add(i, obj);
-    }
-
-    @Override // java.util.List
-    public final Object remove(int i) {
-        return this.f34241.remove(i);
-    }
-
-    @Override // java.util.List
-    public final int indexOf(Object obj) {
-        return this.f34241.indexOf(obj);
-    }
-
-    @Override // java.util.List
-    public final int lastIndexOf(Object obj) {
-        return this.f34241.lastIndexOf(obj);
-    }
-
-    @Override // java.util.List
-    public final ListIterator listIterator() {
-        return this.f34241.listIterator();
-    }
-
-    @Override // java.util.List
-    public final ListIterator listIterator(int i) {
-        return this.f34241.listIterator(i);
-    }
-
-    @Override // java.util.List
-    public final List subList(int i, int i2) {
-        return this.f34241.subList(i, i2);
-    }
-
-    @Override // java.util.List
-    public final Object get(int i) {
-        return this.f34241.get(i);
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m25308(int i) {
-        Object obj = this.f34241.get(i);
-        if (obj == null) {
-            return 0;
-        }
-        return C8219.m21529(obj).intValue();
-    }
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public final String m25310(int i) {
-        Object obj = this.f34241.get(i);
-        int i2 = C8219.f28613;
-        if (obj == null) {
-            return null;
-        }
-        return obj.toString();
-    }
+public final class C10031 extends AbstractC22712 {
 
     /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final C15676 m25312(int i) {
-        Object obj = this.f34241.get(i);
-        if (obj instanceof C15676) {
-            return (C15676) obj;
+    public C7795[] f32159;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f32160;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f32161;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C10031 m25882(C15252 c15252) {
+        C10031 c10031 = new C10031(c15252);
+        c10031.f32160 = EnumC6121.f20881;
+        c10031.f32159 = new C7795[32768];
+        return c10031;
+    }
+
+    @Override // l.AbstractC22712
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC19728 mo2069(char[] cArr, int i) {
+        byte[] bArr = new byte[i * 3];
+        return mo2068(0, C21901.m49589(bArr, 0, i, cArr), bArr);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // l.AbstractC22712
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC19728 mo2068(int i, int i2, byte[] bArr) {
+        int iM51193 = AbstractC22712.m51193(i, i2, bArr) & this.f32160;
+        C7795 c7795 = this.f32159[iM51193];
+        C7795 c7796 = c7795;
+        C7795 c7797 = null;
+        while (c7795 != null) {
+            C18982 c18982 = (C18982) c7795.get();
+            if (c18982 != null) {
+                byte[] bArr2 = c18982.f61529;
+                if (bArr2.length == i2 && AbstractC22712.m51192(0, bArr2, i, bArr, i2)) {
+                    return c18982;
+                }
+                c7797 = c7795;
+            } else if (c7796 == c7795) {
+                C7795[] c7795Arr = this.f32159;
+                C7795 c7798 = c7795.f25899;
+                c7795Arr[iM51193] = c7798;
+                c7796 = c7798;
+            } else if (c7797 != null) {
+                c7797.f25899 = c7795.f25899;
+            } else {
+                C11972.m30024("previousNonNullTableEntry cannot be null here.");
+                throw null;
+            }
+            c7795 = c7795.f25899;
         }
-        return (C15676) AbstractC8620.m22395(obj);
-    }
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final C10031 m25311(int i) {
-        Object obj = this.f34241.get(i);
-        if (obj instanceof C10031) {
-            return (C10031) obj;
+        byte[] bArr3 = new byte[i2];
+        System.arraycopy(bArr, i, bArr3, 0, i2);
+        int i3 = this.f32161;
+        this.f32161 = i3 + 1;
+        C18982 c18983 = new C18982(this, bArr3, i3);
+        C7795 c7799 = new C7795(c18983);
+        if (c7797 == null) {
+            this.f32159[iM51193] = c7799;
+            return c18983;
         }
-        return (C10031) AbstractC8620.m22395(obj);
+        if (c7797.f25899 != null) {
+            C11972.m30024("previousNonNullTableEntry.next must be null.");
+            throw null;
+        }
+        c7797.f25899 = c7799;
+        return c18983;
     }
 
-    public final Object clone() {
-        return new C10031(new ArrayList(this.f34241));
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean equals(Object obj) {
-        return this.f34241.equals(obj);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final int hashCode() {
-        return this.f34241.hashCode();
+    @Override // l.AbstractC22712
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2070() {
+        this.f32159 = null;
     }
 }

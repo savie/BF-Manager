@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class StandardDSAEncoding implements DSAEncoding {
     public static final StandardDSAEncoding INSTANCE = new StandardDSAEncoding();
 

@@ -1,28 +1,10 @@
 package l;
 
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ProviderInfo;
-import android.content.pm.ResolveInfo;
-import android.content.pm.Signature;
-import java.util.List;
+/* JADX INFO: renamed from: l.ܽۘۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6B2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17319 extends C24649 {
 
-/* JADX INFO: renamed from: l.ܿۨۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UB1K */
-/* JADX INFO: loaded from: classes4.dex */
-public class C17319 {
-    /* JADX INFO: renamed from: ۙ */
-    public ProviderInfo mo16352(ResolveInfo resolveInfo) {
-        throw null;
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public List mo16353(PackageManager packageManager, Intent intent) {
-        throw null;
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public Signature[] mo27725(PackageManager packageManager, String str) {
-        return packageManager.getPackageInfo(str, 64).signatures;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9730 f56408;
 }

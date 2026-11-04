@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.asymmetric.util;
 
 import java.security.spec.InvalidKeySpecException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExtendedInvalidKeySpecException extends InvalidKeySpecException {
     public Throwable cause;
 

@@ -1,64 +1,95 @@
-.class public final synthetic Ll/᩻ۘ᩺;
+.class public final Ll/᩻ۘ᩺;
 .super Ljava/lang/Object;
-.source "U8UP"
+.source "07MC"
 
 # interfaces
-.implements Ll/ܿۧ;
+.implements Ll/᩹ۘ᩺;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ᩳܺ;
-
-.field public final synthetic ۨ:Ll/ᩳܺ;
-
-.field public final synthetic ܰ:Ll/ۚܺ;
+.field public final ۙ:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ᩳܺ;Ll/ۚܺ;Ll/ᩳܺ;)V
+.method public constructor <init>(Ll/ۗۘ᩺;)V
     .locals 0
 
-    .line 0
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩻ۘ᩺;->ۙ:Ll/ᩳܺ;
+    .line 90
+    new-instance p1, Ljava/util/HashMap;
 
-    iput-object p2, p0, Ll/᩻ۘ᩺;->ܰ:Ll/ۚܺ;
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p3, p0, Ll/᩻ۘ᩺;->ۨ:Ll/ᩳܺ;
+    iput-object p1, p0, Ll/᩻ۘ᩺;->ۙ:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
-
-    .line 2
-    check-cast p1, Landroid/content/res/Configuration;
-
-    .line 31
-    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v0, 0x2
-
-    iget-object v1, p0, Ll/᩻ۘ᩺;->ܰ:Ll/ۚܺ;
-
-    if-ne p1, v0, :cond_0
-
-    .line 32
-    iget-object p1, p0, Ll/᩻ۘ᩺;->ۙ:Ll/ᩳܺ;
-
-    invoke-virtual {p1, v1}, Ll/ᩳܺ;->ۙ(Ll/ۚܺ;)V
+.method public final ۙ()V
+    .locals 0
 
     return-void
+.end method
 
-    .line 34
-    :cond_0
-    iget-object p1, p0, Ll/᩻ۘ᩺;->ۨ:Ll/ᩳܺ;
+.method public final ۙ(Ll/᩶᩶᩺;)V
+    .locals 0
 
-    invoke-virtual {p1, v1}, Ll/ᩳܺ;->ۙ(Ll/ۚܺ;)V
+    .line 95
+    throw p1
+.end method
+
+.method public final ۙ(Ll/᩺᩶᩺;)V
+    .locals 1
+
+    .line 101
+    iget-object v0, p0, Ll/᩻ۘ᩺;->ۙ:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/᩺᩶᩺;Ll/ܰ᩶᩺;)V
+    .locals 2
+
+    .line 98
+    new-instance v0, Ll/ܶۘ᩺;
+
+    new-instance v1, Ll/ܽۘ᩺;
+
+    invoke-direct {v1, p2}, Ll/ܽۘ᩺;-><init>(Ll/ܰ᩶᩺;)V
+
+    invoke-direct {v0, p1, v1}, Ll/ܶۘ᩺;-><init>(Ll/᩺᩶᩺;Ll/ܰ᩶᩺;)V
+
+    iget-object p2, p0, Ll/᩻ۘ᩺;->ۙ:Ljava/util/HashMap;
+
+    invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final ᩷()V
+    .locals 3
+
+    .line 104
+    iget-object v0, p0, Ll/᩻ۘ᩺;->ۙ:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ۧۘ᩺;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v1, v2}, Ll/ۙ۬᩹;->forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
+
+    .line 105
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     return-void
 .end method

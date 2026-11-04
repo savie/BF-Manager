@@ -1,7 +1,7 @@
 package com.umeng.commonsdk.vchannel;
 
-import l.C15489;
-import l.C9023;
+import l.C10732;
+import l.C24770;
 
 /* JADX INFO: compiled from: Y5AS */
 /* JADX INFO: loaded from: classes.dex */
@@ -18,9 +18,9 @@ public class a {
     public static String j = "";
 
     static {
-        String strM37074 = C15489.m37074(System.currentTimeMillis(), "SUB");
-        StringBuilder sbM23356 = C9023.m23356(strM37074);
-        sbM23356.append(String.format("%0" + (32 - strM37074.length()) + "d", 0));
-        j = sbM23356.toString();
+        String strM55292 = C24770.m55292(System.currentTimeMillis(), "SUB");
+        StringBuilder sbM27333 = C10732.m27333(strM55292);
+        sbM27333.append(String.format("%0" + (32 - strM55292.length()) + "d", 0));
+        j = sbM27333.toString();
     }
 }

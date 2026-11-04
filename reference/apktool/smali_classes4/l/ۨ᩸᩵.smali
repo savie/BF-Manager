@@ -1,249 +1,156 @@
-.class public abstract Ll/ۨ᩸᩵;
-.super Ll/ܳܶ᩵;
-.source "F4MZ"
-
-# interfaces
-.implements Ll/ۤܶ᩵;
-
-
-# instance fields
-.field public final ۖ:Ll/ۚ᩸᩵;
-
-.field public ۙ:Ljava/util/regex/Matcher;
-
-.field public ۨ:Ljava/util/regex/MatchResult;
-
-.field public ܰ:Ljava/util/regex/Pattern;
+.class public final Ll/ۨ᩸᩵;
+.super Ll/ۛ᩸ۨ;
+.source "36GE"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static synthetic ۙ(Ll/ۛۡۗ;)Z
+    .locals 0
 
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-static {p0}, Ll/ۨ᩸᩵;->᩷(Ll/ۛۡۗ;)Z
 
-    const/16 v0, 0x20
+    move-result p0
 
-    const-string v1, "(\\S+)\\s+(\\S+)\\s+(?:(<DIR>)|([0-9]+))\\s+(\\S.*)"
-
-    .line 74
-    invoke-direct {p0, v0, v1}, Ll/ۨ᩸᩵;->ۙ(ILjava/lang/String;)V
-
-    .line 59
-    new-instance v0, Ll/ۚ᩸᩵;
-
-    invoke-direct {v0}, Ll/ۚ᩸᩵;-><init>()V
-
-    iput-object v0, p0, Ll/ۨ᩸᩵;->ۖ:Ll/ۚ᩸᩵;
-
-    return-void
+    return p0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+.method public static ᩷(Ll/ۛۡۗ;)Z
     .locals 1
 
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 39
+    sget-object v0, Ll/֫۟ۗ;->᩷ۙ:Ll/֫۟ۗ;
 
-    const/4 v0, 0x0
+    invoke-interface {p0, v0}, Ll/ۛ۟ۗ;->ۙ(Ll/֫۟ۗ;)Z
 
-    .line 60
-    invoke-direct {p0, v0, p1}, Ll/ۨ᩸᩵;->ۙ(ILjava/lang/String;)V
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 42
+    :cond_0
+    instance-of v0, p0, Ll/᩷ۡۗ;
+
+    if-eqz v0, :cond_1
+
+    .line 43
+    check-cast p0, Ll/᩷ۡۗ;
+
+    .line 44
+    invoke-virtual {p0}, Ll/᩷ۡۗ;->ۙ()Ljava/util/List;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p0
+
+    return p0
+
+    .line 46
+    :cond_1
+    instance-of v0, p0, Ll/ۜۖۗ;
+
+    if-eqz v0, :cond_2
 
     .line 47
-    new-instance p1, Ll/ۚ᩸᩵;
+    move-object v0, p0
 
-    invoke-direct {p1}, Ll/ۚ᩸᩵;-><init>()V
+    check-cast v0, Ll/ۜۖۗ;
 
-    iput-object p1, p0, Ll/ۨ᩸᩵;->ۖ:Ll/ۚ᩸᩵;
+    .line 48
+    invoke-virtual {v0}, Ll/ۜۖۗ;->ۧۙ()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method private ۙ(ILjava/lang/String;)V
-    .locals 1
+    if-eqz v0, :cond_2
 
-    .line 88
-    :try_start_0
-    invoke-static {p2, p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+    goto :goto_1
 
-    move-result-object p1
+    .line 53
+    :cond_2
+    instance-of v0, p0, Ll/ܿۡۗ;
 
-    iput-object p1, p0, Ll/ۨ᩸᩵;->ܰ:Ljava/util/regex/Pattern;
-    :try_end_0
-    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_5
 
-    return-void
+    .line 54
+    check-cast p0, Ll/ܿۡۗ;
 
-    .line 90
-    :catch_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-interface {p0}, Ll/ܿۡۗ;->ܿ()Ljava/util/List;
 
-    const-string v0, "Unparseable regex supplied: "
+    move-result-object p0
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    .line 55
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :cond_3
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw p1
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۛۡۗ;
+
+    .line 56
+    invoke-static {v0}, Ll/ۨ᩸᩵;->᩷(Ll/ۛۡۗ;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_4
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_5
+    :goto_1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 1
+.method public final ۤ(Ll/ۖۡۗ;Ll/ܿۡۗ;)Z
+    .locals 0
 
-    const/4 v0, 0x0
-
-    .line 159
-    invoke-direct {p0, v0, p1}, Ll/ۨ᩸᩵;->ۙ(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final ۙ(I)Ljava/lang/String;
-    .locals 1
-
-    .line 129
-    iget-object v0, p0, Ll/ۨ᩸᩵;->ۨ:Ljava/util/regex/MatchResult;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 132
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/regex/MatchResult;->group(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract ۙ()Ll/۫ܶ᩵;
-.end method
-
-.method public final ۙ(Ll/۫ܶ᩵;)V
-    .locals 3
-
-    .line 72
-    iget-object v0, p0, Ll/ۨ᩸᩵;->ۖ:Ll/ۚ᩸᩵;
-
-    if-eqz v0, :cond_3
-
-    .line 73
-    invoke-virtual {p0}, Ll/ۨ᩸᩵;->ۙ()Ll/۫ܶ᩵;
-
-    move-result-object v1
-
-    if-eqz p1, :cond_2
-
-    .line 75
-    invoke-virtual {p1}, Ll/۫ܶ᩵;->ۙ()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    .line 76
-    invoke-virtual {v1}, Ll/۫ܶ᩵;->ۙ()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Ll/۫ܶ᩵;->ۙ(Ljava/lang/String;)V
-
-    .line 78
-    :cond_0
-    invoke-virtual {p1}, Ll/۫ܶ᩵;->ܰ()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    .line 79
-    invoke-virtual {v1}, Ll/۫ܶ᩵;->ܰ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ll/۫ܶ᩵;->ܰ(Ljava/lang/String;)V
-
-    .line 81
-    :cond_1
-    invoke-interface {v0, p1}, Ll/ۤܶ᩵;->ۙ(Ll/۫ܶ᩵;)V
-
-    return-void
-
-    .line 83
-    :cond_2
-    invoke-interface {v0, v1}, Ll/ۤܶ᩵;->ۙ(Ll/۫ܶ᩵;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final ۨ(Ljava/lang/String;)Ljava/util/Calendar;
-    .locals 1
-
-    .line 105
-    iget-object v0, p0, Ll/ۨ᩸᩵;->ۖ:Ll/ۚ᩸᩵;
-
-    invoke-virtual {v0, p1}, Ll/ۚ᩸᩵;->ۙ(Ljava/lang/String;)Ljava/util/Calendar;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ܰ(Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 142
-    iput-object v0, p0, Ll/ۨ᩸᩵;->ۨ:Ljava/util/regex/MatchResult;
-
-    .line 143
-    iget-object v0, p0, Ll/ۨ᩸᩵;->ܰ:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۨ᩸᩵;->ۙ:Ljava/util/regex/Matcher;
-
-    .line 144
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result p1
+    .line 32
+    instance-of p1, p2, Ll/ۨۖۗ;
 
     if-eqz p1, :cond_0
 
-    .line 145
-    iget-object p1, p0, Ll/ۨ᩸᩵;->ۙ:Ljava/util/regex/Matcher;
+    .line 33
+    check-cast p2, Ll/ۨۖۗ;
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->toMatchResult()Ljava/util/regex/MatchResult;
+    invoke-virtual {p2}, Ll/ۨۖۗ;->ܿ()Ljava/util/List;
 
     move-result-object p1
 
-    iput-object p1, p0, Ll/ۨ᩸᩵;->ۨ:Ljava/util/regex/MatchResult;
+    new-instance p2, Ll/᩵᩸᩵;
 
-    .line 147
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    invoke-static {p1, p2}, Ll/֨۫ۗ;->removeIf(Ljava/util/Collection;Ljava/util/function/Predicate;)Z
+
     :cond_0
-    iget-object p1, p0, Ll/ۨ᩸᩵;->ۨ:Ljava/util/regex/MatchResult;
-
-    if-eqz p1, :cond_1
-
     const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
 
     return p1
 .end method

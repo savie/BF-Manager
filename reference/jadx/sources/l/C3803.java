@@ -1,24 +1,13 @@
 package l;
 
-import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
-/* JADX INFO: renamed from: l.ۘ۟᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 052E */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3803 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return ((C19327) obj).m44314();
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+/* JADX INFO: renamed from: l.ۘ֨ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J6I0 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C3803 implements ToIntFunction {
+    @Override // java.util.function.ToIntFunction
+    public final int applyAsInt(Object obj) {
+        return ((C17973) obj).m41954();
     }
 }

@@ -1,9 +1,7 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: AC0M */
-/* JADX INFO: loaded from: classes3.dex */
-public interface InterfaceC2263 extends InterfaceC18660 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    InterfaceC6269 mo6946();
+/* JADX INFO: renamed from: l.֫᩺᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 844E */
+/* JADX INFO: loaded from: classes2.dex */
+public interface InterfaceC2263 {
 }

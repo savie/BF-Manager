@@ -1,73 +1,91 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
+/* JADX INFO: renamed from: l.ۗ᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7AT */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3717 {
 
-/* JADX INFO: renamed from: l.ۘۙᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97L */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C3717 extends AbstractC21357 implements InterfaceC11687 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7952 f13515;
-
-    @Override // l.AbstractC21357, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C13804.m33553(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.AbstractC21357, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C13804.m33554(this, consumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* bridge */ /* synthetic */ Comparator getComparator() {
-        getComparator();
-        throw null;
-    }
-
-    @Override // l.InterfaceC11687, l.InterfaceC20693
-    public final InterfaceC4692 getComparator() {
-        throw new IllegalStateException();
-    }
-
-    @Override // l.AbstractC21357
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo10883(int i, Object obj) {
-        ((InterfaceC1164) obj).mo4297(this.f13515.f26123[i]);
+    public C23855 f12775;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final String f12776;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f12777;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f12778;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public CharSequence f12779;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f12780;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f12781;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f12782;
+
+    public C3717(String str, int i, int i2, CharSequence charSequence) {
+        this.f12776 = str;
+        this.f12778 = i;
+        this.f12781 = i2;
+        this.f12779 = charSequence;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C3717(C7952 c7952) {
-        super(c7952);
-        this.f13515 = c7952;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m12101() {
+        m12098();
+        return this.f12782;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C3717(C7952 c7952, int i, int i2, boolean z) {
-        super(c7952, i, i2, z);
-        this.f13515 = c7952;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.f69480 ? 257 : 321;
-    }
-
-    @Override // l.AbstractC21357
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC21357 mo10882(int i, int i2, boolean z) {
-        return new C3717(this.f13515, i, i2, z);
+    public final int m12099() {
+        m12098();
+        return this.f12777;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m12100() {
+        m12098();
+        return this.f12780;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private void m12098() {
+        int iCodePointCount;
+        if (this.f12782 != null) {
+            return;
+        }
+        C23855 c23855M53205 = this.f12775;
+        int i = this.f12778;
+        if (c23855M53205 == null) {
+            c23855M53205 = C23855.m53205(i, this.f12781, this.f12779);
+            this.f12775 = c23855M53205;
+        }
+        if (c23855M53205.f77241) {
+            iCodePointCount = 0;
+        } else {
+            String str = c23855M53205.f77240;
+            iCodePointCount = (240 - str.codePointCount(0, str.length())) / 2;
+        }
+        int iM4324 = C1173.m4324(i, -iCodePointCount, this.f12779);
+        this.f12777 = iM4324;
+        String strM4317 = C1173.m4317(iM4324, 240, this.f12779);
+        this.f12782 = strM4317;
+        int i2 = this.f12777;
+        this.f12780 = i2 > 0 || strM4317.length() + i2 < this.f12779.length();
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m12102() {
+        if (this.f12775 == null) {
+            this.f12775 = C23855.m53205(this.f12778, this.f12781, this.f12779);
+        }
+        m12098();
+        this.f12779 = "";
     }
 }

@@ -1,158 +1,76 @@
 package l;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Collection;
 
-/* JADX INFO: renamed from: l.ۧܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+/* JADX INFO: renamed from: l.ۤ᩵ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z69Q */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11087 extends AbstractC18245 implements InterfaceC18266 {
-    public static final long serialVersionUID = 0;
+public final class C11087 extends C6702 implements InterfaceC11921 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final C11087 f37637;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ConcurrentMapC17249 f34946;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f37638;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public List f37639;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public byte f37640;
-
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C11087.class.getName());
-        f37637 = new C11087();
-        f37638 = new C0502();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C2381 m27999(InterfaceC6813 interfaceC6813) {
+        return (C2381) ((C23022) interfaceC6813).f74716;
     }
 
-    public C11087(C16731 c16731, int i) {
-        super(c16731);
-        this.f37640 = (byte) -1;
+    @Override // l.InterfaceC13413
+    /* JADX INFO: renamed from: ܳ */
+    public final int mo5275(Object obj) {
+        return ((C23022) obj).f74714;
     }
 
-    public C11087() {
-        this.f37640 = (byte) -1;
-        this.f37639 = Collections.EMPTY_LIST;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C11833 m28001(InterfaceC6813 interfaceC6813) {
+        return (C11833) ((C23022) interfaceC6813).f74716;
     }
 
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46266;
-        c6956.m18696(C11087.class, C16731.class);
-        return c6956;
+    public C11087(C8850 c8850) {
+        super(c8850);
+        this.f34946 = new ConcurrentMapC17249();
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f37640;
-        if (b == 1) {
-            return true;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C23022 m28000(InterfaceC6813 interfaceC6813) {
+        InterfaceC17800 interfaceC17800M24234;
+        ConcurrentMapC17249 concurrentMapC17249 = this.f34946;
+        C23022 c23022 = (C23022) concurrentMapC17249.get(interfaceC6813);
+        if (c23022 != null) {
+            return c23022;
         }
-        if (b == 0) {
-            return false;
+        int iMo17433 = interfaceC6813.mo17433();
+        C8850 c8850 = this.f22294;
+        switch (iMo17433) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                interfaceC17800M24234 = c8850.f74937.m24234((InterfaceC8304) interfaceC6813.mo17434());
+                break;
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+                interfaceC17800M24234 = c8850.f74918.m17100((InterfaceC4859) interfaceC6813.mo17434());
+                break;
+            default:
+                throw new C23044(null, "Invalid method handle type: %d", Integer.valueOf(interfaceC6813.mo17433()));
         }
-        this.f37640 = (byte) 1;
-        return true;
+        C23022 c23023 = new C23022(interfaceC6813.mo17433(), interfaceC17800M24234);
+        C23022 c23024 = (C23022) concurrentMapC17249.putIfAbsent(c23023, c23023);
+        return c23024 == null ? c23023 : c23024;
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        for (int i = 0; i < this.f37639.size(); i++) {
-            abstractC22044.mo14254(1, (InterfaceC23206) this.f37639.get(i));
-        }
-        getUnknownFields().writeTo(abstractC22044);
+    @Override // l.InterfaceC13413
+    /* JADX INFO: renamed from: ۙ */
+    public final Collection mo5271() {
+        return new C22276(this.f34946.values());
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM48963 = 0;
-        for (int i2 = 0; i2 < this.f37639.size(); i2++) {
-            iM48963 += AbstractC22044.m48963(1, (InterfaceC23206) this.f37639.get(i2));
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM48963;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof C11087)) {
-            return super.equals(obj);
-        }
-        C11087 c11087 = (C11087) obj;
-        return this.f37639.equals(c11087.f37639) && getUnknownFields().equals(c11087.getUnknownFields());
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
-        }
-        int iHashCode = C14097.f46317.hashCode() + 779;
-        if (this.f37639.size() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + this.f37639.hashCode();
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C16731 newBuilder() {
-        return f37637.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f37637.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f37637.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C16731 toBuilder() {
-        int i = 0;
-        if (this == f37637) {
-            return new C16731(i);
-        }
-        C16731 c16731 = new C16731(i);
-        c16731.m39246(this);
-        return c16731;
-    }
-
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C16731(interfaceC6790, 0);
-    }
-
-    public static C11087 getDefaultInstance() {
-        return f37637;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f37638;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f37637;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f37637;
+    @Override // l.InterfaceC13413
+    public final int getItemCount() {
+        return this.f34946.size();
     }
 }

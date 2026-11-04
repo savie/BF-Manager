@@ -9,15 +9,15 @@ public enum Protocol {
     HTTPS(b.a);
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f112;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f102;
 
     Protocol(String str) {
-        this.f112 = str;
+        this.f102 = str;
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return this.f112;
+        return this.f102;
     }
 }

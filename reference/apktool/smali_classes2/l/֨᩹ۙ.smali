@@ -1,28 +1,93 @@
 .class public final Ll/֨᩹ۙ;
 .super Ljava/lang/Object;
-.source "G20T"
+.source "U8ON"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public final ۙ:I
+
+.field public final ᩷:I
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
+
+    .line 847
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 848
+    iput p1, p0, Ll/֨᩹ۙ;->᩷:I
+
+    .line 849
+    iput p2, p0, Ll/֨᩹ۙ;->ۙ:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+.method public final ۙ()I
+    .locals 2
 
-    .line 92
-    new-instance v0, Ll/۬᩹ۙ;
+    const/4 v0, 0x2
 
-    invoke-direct {v0, p1}, Ll/۬᩹ۙ;-><init>(Landroid/os/Parcel;)V
+    .line 855
+    iget v1, p0, Ll/֨᩹ۙ;->ۙ:I
 
-    return-object v0
-.end method
+    if-eq v1, v0, :cond_5
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
+    const/4 v0, 0x5
 
-    .line 97
-    new-array p1, p1, [Ll/۬᩹ۙ;
+    if-eq v1, v0, :cond_4
 
-    return-object p1
+    const/16 v0, 0x1d
+
+    if-eq v1, v0, :cond_3
+
+    const/16 v0, 0x2a
+
+    if-eq v1, v0, :cond_2
+
+    const/16 v0, 0x16
+
+    if-eq v1, v0, :cond_1
+
+    const/16 v0, 0x17
+
+    if-eq v1, v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0xf
+
+    return v0
+
+    :cond_1
+    const/high16 v0, 0x40000000    # 2.0f
+
+    return v0
+
+    :cond_2
+    const/16 v0, 0x10
+
+    return v0
+
+    :cond_3
+    const/16 v0, 0xc
+
+    return v0
+
+    :cond_4
+    const/16 v0, 0xb
+
+    return v0
+
+    :cond_5
+    const/16 v0, 0xa
+
+    return v0
 .end method

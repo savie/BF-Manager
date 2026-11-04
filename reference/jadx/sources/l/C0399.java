@@ -1,34 +1,12 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.֡ۨ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 688Y */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0399 extends AbstractC7186 {
-    @Override // l.AbstractC7186
+/* JADX INFO: renamed from: l.֡ۧ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: H6OO */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0399 extends C25153 {
+    @Override // l.InterfaceC2032
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        Number numberValueOf = (Number) obj;
-        if (numberValueOf == null) {
-            c1145.m4214();
-            return;
-        }
-        float fFloatValue = numberValueOf.floatValue();
-        C6044.m16437(fFloatValue);
-        if (!(numberValueOf instanceof Float)) {
-            numberValueOf = Float.valueOf(fFloatValue);
-        }
-        c1145.m4203(numberValueOf);
-    }
-
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
-        }
-        return Float.valueOf((float) c5379.m14920());
+    public final void mo2202(AbstractC9488 abstractC9488, Object obj, int i, int i2, String str, C10234 c10234) {
+        throw new C18298(i, i2, str);
     }
 }

@@ -1,33 +1,27 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.ArrayList;
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.ۜۚۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7CU */
+/* JADX INFO: renamed from: l.ۛܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6555 extends AbstractC6741 {
+public final enum C6555 extends EnumC14757 {
+    public /* synthetic */ C6555() {
+        this("FORMAT_20T", 6);
+    }
 
-    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
-    public ArrayList f22094;
+    public C6555(String str, int i) {
+        super(str, i, 0);
+    }
 
-    @Override // l.AbstractC6741, l.InterfaceC5144
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3628() {
-        m18209(EnumC20934.f68153.m47084() + " {");
-        m18208(1);
-        C0356.forEach(this.f22094, new Consumer() { // from class: l.ۘۚۤ
-            public /* synthetic */ Consumer andThen(Consumer consumer) {
-                return C1455.$default$andThen(this, consumer);
-            }
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        return new C2825(this, EnumC14757.m35466(i), 0, (interfaceC16337.m41673() - 1) + ((short) interfaceC16337.read()), EnumC14757.m35482(i));
+    }
 
-            @Override // java.util.function.Consumer
-            public final void accept(Object obj) {
-                this.f13556.m18209((String) obj);
-            }
-        });
-        m18227(1);
-        m18209(l.d);
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        abstractC3659.m11858(interfaceC23797.m41673());
+        interfaceC23797.m53082();
     }
 }

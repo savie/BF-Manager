@@ -66,7 +66,7 @@ public class d {
     public static final String k = "device_model";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77932l = "$pr_ve";
+    public static final String f82048l = "$pr_ve";
     public static final String m = "$ud_da";
     public static final String n = "sessions";
     public static final String o = "id";

@@ -1,30 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ܶ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34MM */
+/* JADX INFO: renamed from: l.۟֫ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 31K1 */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C7560 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f25069;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f25070;
+    public int f24925;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public String f25071;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f24926;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f25072;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f24927;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f25073;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f24928;
 
-    public C7560(String str, int i, int i2, boolean z, boolean z2) {
-        this.f25071 = str;
-        this.f25072 = i;
-        this.f25073 = i2;
-        this.f25070 = z;
-        this.f25069 = z2;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static boolean m20643(C7560 c7560) {
+        return c7560.f24927 > 0 || c7560.f24928 > 0 || c7560.f24925 > 0 || c7560.f24926 > 0;
     }
 }

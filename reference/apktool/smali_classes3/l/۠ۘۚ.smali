@@ -1,36 +1,41 @@
 .class public final Ll/۠ۘۚ;
 .super Ljava/lang/Object;
-.source "37JR"
+.source "I6XW"
 
 
 # instance fields
-.field public ۖ:Z
+.field public final ۙ:J
 
-.field public ۙ:Z
+.field public final ۤ:[B
 
-.field public ۨ:I
+.field public final ᩴ:[B
 
-.field public ܰ:Ljava/lang/String;
+.field public final ᩷:J
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IZZ)V
+.method public constructor <init>(IJJ[B[B)V
     .locals 0
 
-    .line 231
+    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
-    iput-boolean p3, p0, Ll/۠ۘۚ;->ۖ:Z
+    .line 189
+    iput p1, p0, Ll/۠ۘۚ;->᩸:I
 
-    .line 233
-    iput-boolean p4, p0, Ll/۠ۘۚ;->ۙ:Z
+    .line 190
+    iput-wide p2, p0, Ll/۠ۘۚ;->ۙ:J
 
-    .line 234
-    iput-object p1, p0, Ll/۠ۘۚ;->ܰ:Ljava/lang/String;
+    .line 191
+    iput-wide p4, p0, Ll/۠ۘۚ;->᩷:J
 
-    .line 235
-    iput p2, p0, Ll/۠ۘۚ;->ۨ:I
+    .line 192
+    iput-object p6, p0, Ll/۠ۘۚ;->ۤ:[B
+
+    .line 193
+    iput-object p7, p0, Ll/۠ۘۚ;->ᩴ:[B
 
     return-void
 .end method

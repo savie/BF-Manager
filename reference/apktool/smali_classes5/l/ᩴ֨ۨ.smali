@@ -1,17 +1,19 @@
-.class public interface abstract Ll/ᩴ֨ۨ;
+.class public final Ll/ᩴ֨ۨ;
 .super Ljava/lang/Object;
-.source "R9QY"
+.source "M59E"
 
 # interfaces
-.implements Ll/۟֨ۨ;
+.implements Ll/ۛۡۨ;
 
 
 # virtual methods
-.method public abstract ۖ()Ljava/lang/Iterable;
-.end method
+.method public final ۙ(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)Ll/᩺ۡۨ;
+    .locals 1
 
-.method public abstract ۘ()I
-.end method
+    .line 93
+    new-instance v0, Ll/ܳ֨ۨ;
 
-.method public abstract ܰ(I)Ll/۠֨ۨ;
+    invoke-direct {v0, p1, p2, p3, p4}, Ll/ܳ֨ۨ;-><init>(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)V
+
+    return-object v0
 .end method

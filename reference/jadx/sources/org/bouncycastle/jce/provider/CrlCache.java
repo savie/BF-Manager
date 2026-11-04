@@ -19,19 +19,18 @@ import java.util.Map;
 import java.util.WeakHashMap;
 import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.jcajce.PKIXCRLStore;
 import org.bouncycastle.util.CollectionStore;
 import org.bouncycastle.util.Iterable;
 import org.bouncycastle.util.Selector;
 import org.bouncycastle.util.Store;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CrlCache {
     public static final int DEFAULT_TIMEOUT = 15000;
-    public static Map cache = C0561.synchronizedMap(new WeakHashMap());
+    public static Map cache = C4681.synchronizedMap(new WeakHashMap());
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class LocalCRLStore implements PKIXCRLStore, Iterable {
         public Collection _local;
 

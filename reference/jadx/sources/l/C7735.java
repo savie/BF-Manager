@@ -1,60 +1,47 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import java.util.AbstractList;
-import java.util.Iterator;
-import java.util.function.Predicate;
+import bin.mt.radare2.Radare2Native;
 
-/* JADX INFO: renamed from: l.۟᩸۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 03CL */
+/* JADX INFO: renamed from: l.۟۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F764 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7735 extends AbstractList {
+public final class C7735 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC3110 f25572;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC0277 f25480 = new C18176();
 
-    public C7735(AbstractC3110 abstractC3110) {
-        this.f25572 = abstractC3110;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static volatile boolean f25481;
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final int size() {
-        Iterator it = this.f25572.mo3802((Predicate) null, EnumC10167.NON_RECURSIVE).iterator();
-        int i = 0;
-        while (it.hasNext()) {
-            if (!m20386((AbstractC23903) it.next())) {
-                i++;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m21062(C14087 c14087) {
+        synchronized (C7735.class) {
+            if (!f25481) {
+                f25480 = c14087;
             }
         }
-        return i;
-    }
-
-    @Override // java.util.AbstractList, java.util.List
-    public final Object get(int i) {
-        for (AbstractC23903 abstractC23903 : this.f25572.mo3802((Predicate) null, EnumC10167.NON_RECURSIVE)) {
-            if (!m20386(abstractC23903)) {
-                int i2 = i - 1;
-                if (i == 0) {
-                    return abstractC23903;
-                }
-                i = i2;
-            }
-        }
-        throw new IndexOutOfBoundsException();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ boolean m20385(AbstractC23903 abstractC23903) {
-        return !m20386(abstractC23903);
-    }
-
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
-    public final Iterator iterator() {
-        return this.f25572.mo3802(new C6964(2), EnumC10167.NON_RECURSIVE).iterator();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m20386(AbstractC23903 abstractC23903) {
-        return abstractC23903 == null || (abstractC23903.mo20276() & ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF) != 0;
+    public static void m21061() {
+        if (f25481) {
+            return;
+        }
+        synchronized (C7735.class) {
+            if (f25481) {
+                return;
+            }
+            try {
+                try {
+                    f25480.mo1814();
+                    Radare2Native.nativeVersion();
+                    f25481 = true;
+                } catch (LinkageError e) {
+                    throw new C18922("Failed to load libmt-radare2.so", e);
+                }
+            } catch (C18922 e2) {
+                throw e2;
+            }
+        }
     }
 }

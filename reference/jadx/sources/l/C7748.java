@@ -1,25 +1,22 @@
 package l;
 
-import java.util.HashMap;
+import android.graphics.Path;
+import android.view.animation.Interpolator;
 
-/* JADX INFO: renamed from: l.۟᩸᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5BM7 */
+/* JADX INFO: renamed from: l.۟۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: K582 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C7748 extends AbstractC8956 {
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public HashMap f25595 = new HashMap();
+public final class C7748 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10571 m20397(String str, String str2) {
-        HashMap map = this.f25595;
-        C10571 c10571 = (C10571) map.get(str);
-        if (c10571 != null) {
-            return c10571;
-        }
-        C10571 c10572 = new C10571(str);
-        c10572.m26734(str, str2);
-        map.put(str, c10572);
-        return c10572;
+    public static final Interpolator f25510;
+
+    static {
+        Path path = new Path();
+        path.moveTo(0.0f, 0.0f);
+        path.cubicTo(0.0375f, 0.0f, 0.12876461f, 0.0895381f, 0.25f, 0.21855351f);
+        path.cubicTo(0.32241032f, 0.2956106f, 0.43666667f, 0.41759142f, 0.48333332f, 0.48982617f);
+        path.cubicTo(0.69f, 0.80972296f, 0.79333335f, 0.95001614f, 1.0f, 1.0f);
+        f25510 = C6411.m18176(path);
     }
 }

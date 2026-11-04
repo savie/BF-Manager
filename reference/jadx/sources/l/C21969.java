@@ -1,61 +1,63 @@
 package l;
 
-import android.text.TextUtils;
+/* JADX INFO: renamed from: l.᩷ۢۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P6MK */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21969 implements InterfaceC9772 {
 
-/* JADX INFO: renamed from: l.᩹֫ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27NH */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21969 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f71274;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f71275;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f71276;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f71277;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22715 f70907;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f71278;
+    public C15496 f70908;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f71279;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C15496 f70909;
 
-    public C21969(int i, int i2, String str, String str2, String str3, String str4) {
-        this.f71278 = i;
-        this.f71274 = i2;
-        this.f71279 = str;
-        this.f71275 = str2;
-        this.f71276 = str3;
-        this.f71277 = str4;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f70910 = 0;
+
+    public C21969(C22715 c22715, C15496 c15496, C15496 c15497) {
+        this.f70907 = c22715;
+        this.f70909 = c15496;
+        this.f70908 = c15497;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C21969.class == obj.getClass()) {
-            C21969 c21969 = (C21969) obj;
-            if (this.f71278 == c21969.f71278 && this.f71274 == c21969.f71274 && TextUtils.equals(this.f71279, c21969.f71279) && TextUtils.equals(this.f71275, c21969.f71275) && TextUtils.equals(this.f71276, c21969.f71276) && TextUtils.equals(this.f71277, c21969.f71277)) {
-                return true;
+    @Override // l.InterfaceC9772
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo25484(AbstractC17734 abstractC17734, int i) {
+        boolean z = abstractC17734 instanceof C15496;
+        C22715 c22715 = this.f70907;
+        if (z) {
+            C15496 c15496 = (C15496) abstractC17734;
+            if (c22715.f73713.m29026(c15496.m37100())) {
+                C10780 c10780M51221 = C22715.m51221(c22715, c15496);
+                C15496 c15497 = c10780M51221.f34210;
+                this.f70908.m37084(c15497);
+                this.f70910 += c10780M51221.f34211;
+                this.f70908 = c15497;
+                return;
             }
+            if (abstractC17734 != this.f70909) {
+                this.f70910++;
+                return;
+            }
+            return;
         }
-        return false;
+        if (abstractC17734 instanceof C12513) {
+            this.f70908.m37084(new C12513(((C12513) abstractC17734).m56170()));
+        } else if ((abstractC17734 instanceof C2906) && c22715.f73713.m29026(abstractC17734.mo37068().mo5151())) {
+            this.f70908.m37084(new C2906(((C2906) abstractC17734).m56169()));
+        } else {
+            this.f70910++;
+        }
     }
 
-    public final int hashCode() {
-        int i = ((this.f71278 * 31) + this.f71274) * 31;
-        String str = this.f71279;
-        int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.f71275;
-        int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        String str3 = this.f71276;
-        int iHashCode3 = (iHashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31;
-        String str4 = this.f71277;
-        return iHashCode3 + (str4 != null ? str4.hashCode() : 0);
+    @Override // l.InterfaceC9772
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo25483(AbstractC17734 abstractC17734, int i) {
+        if ((abstractC17734 instanceof C15496) && this.f70907.f73713.m29026(abstractC17734.mo5151())) {
+            this.f70908 = this.f70908.mo37068();
+        }
     }
 }

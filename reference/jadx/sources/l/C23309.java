@@ -1,116 +1,57 @@
 package l;
 
-import java.io.Serializable;
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.᩺᩺ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 11LW */
+/* JADX INFO: renamed from: l.᩹ۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 64OZ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C23309 implements InterfaceC21191, Serializable, Cloneable, InterfaceC6206 {
-    public static final long serialVersionUID = -7046029254386353129L;
+public final class C23309 extends AbstractC12384 implements InterfaceC2447 {
 
-    @Override // l.InterfaceC21191
-    public final /* synthetic */ void add(int i) {
-        C7786.m20456();
-        throw null;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f75507 = EnumC7011.Format11n;
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f75508;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f75509;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " v" + mo1542() + ", " + mo1545();
     }
 
-    @Override // java.util.ListIterator
-    public final /* bridge */ /* synthetic */ void add(Object obj) {
-        mo3717((Integer) obj);
+    public C23309(EnumC22631 enumC22631, int i, int i2) {
+        super(enumC22631);
+        C6544.m18432(i);
+        this.f75508 = i;
+        if (i2 >= -8 && i2 <= 7) {
+            this.f75509 = i2;
+            return;
+        }
+        throw new IllegalArgumentException(String.format("Invalid literal value: %d. Must be between -8 and 7, inclusive.", Integer.valueOf(i2)));
     }
 
-    @Override // java.util.Iterator, l.InterfaceC13431, l.InterfaceC22104, l.InterfaceC6206
-    @Deprecated
-    public final void forEachRemaining(Consumer consumer) {
-    }
-
-    @Override // l.InterfaceC22104
-    public final void forEachRemaining(IntConsumer intConsumer) {
-    }
-
-    @Override // java.util.ListIterator, java.util.Iterator
-    public final boolean hasNext() {
-        return false;
-    }
-
-    @Override // java.util.ListIterator, l.InterfaceC21086
-    public final boolean hasPrevious() {
-        return false;
-    }
-
-    @Override // java.util.ListIterator
-    public final int nextIndex() {
-        return 0;
-    }
-
-    @Override // java.util.ListIterator
-    public final int previousIndex() {
-        return -1;
-    }
-
-    @Override // java.util.ListIterator
-    public final /* bridge */ /* synthetic */ void set(Object obj) {
-        mo3718((Integer) obj);
-    }
-
-    @Override // l.InterfaceC21191
+    @Override // l.InterfaceC12142
     /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo3716(int i) {
-        C7786.m20459();
-        throw null;
+    public final int mo1542() {
+        return this.f75508;
     }
 
-    @Override // l.InterfaceC21191
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo3717(Integer num) {
-        C7786.m20457((InterfaceC21191) this, num);
+    @Override // l.InterfaceC3193
+    /* JADX INFO: renamed from: ᩻ */
+    public final int mo1546() {
+        return this.f75509;
     }
 
-    @Override // l.InterfaceC21191
+    @Override // l.InterfaceC18855
     /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo3718(Integer num) {
-        C7786.m20460((InterfaceC21191) this, num);
+    public final long mo1545() {
+        return this.f75509;
     }
 
-    @Override // l.InterfaceC3758
-    public final /* bridge */ /* synthetic */ void forEachRemaining(Object obj) {
-    }
-
-    @Override // java.util.ListIterator, l.InterfaceC21086
-    public final Object previous() {
-        mo3719();
-        throw null;
-    }
-
-    @Override // l.InterfaceC22104
-    public final int nextInt() {
-        throw new NoSuchElementException();
-    }
-
-    @Override // l.InterfaceC21191
-    /* JADX INFO: renamed from: ᩸ۙ */
-    public final int mo3719() {
-        throw new NoSuchElementException();
-    }
-
-    @Override // l.InterfaceC21191, java.util.ListIterator, java.util.Iterator
-    public final void remove() {
-        throw new UnsupportedOperationException();
-    }
-
-    public final Object clone() {
-        return C18369.f58582;
-    }
-
-    @Override // java.util.ListIterator, java.util.Iterator
-    public final Integer next() {
-        return C1435.m5011(this);
-    }
-
-    private Object readResolve() {
-        return C18369.f58582;
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f75507;
     }
 }

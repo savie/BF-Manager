@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.x500;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface X500NameStyle {
     boolean areEqual(X500Name x500Name, X500Name x500Name2);
 

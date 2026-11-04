@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.provider.symmetric.util;
 import java.security.AlgorithmParameters;
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SpecUtil {
     public static AlgorithmParameterSpec extractSpec(AlgorithmParameters algorithmParameters, Class[] clsArr) {
         try {

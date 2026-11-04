@@ -1,53 +1,46 @@
 package l;
 
-import android.R;
-import android.content.Context;
-import android.database.Cursor;
-import android.view.ContextThemeWrapper;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CheckedTextView;
-import android.widget.CursorAdapter;
+import com.google.android.material.motion.MotionUtils;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.֨ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I67T */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0900 extends CursorAdapter {
+/* JADX INFO: renamed from: l.֨ۗ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 69WC */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0900 extends AbstractC18799 {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6545 f3622;
+    public final String f3340;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21362 f3623;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f3624;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17834 f3625;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f3626;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C0900(C6545 c6545, ContextThemeWrapper contextThemeWrapper, Cursor cursor, C21362 c21362, C17834 c17834) {
-        super((Context) contextThemeWrapper, cursor, false);
-        this.f3622 = c6545;
-        this.f3623 = c21362;
-        this.f3625 = c17834;
-        Cursor cursor2 = getCursor();
-        this.f3626 = cursor2.getColumnIndexOrThrow(c6545.f22074);
-        this.f3624 = cursor2.getColumnIndexOrThrow(c6545.f22080);
+    @Override // l.AbstractC18799
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String mo3637() {
+        return "querying service";
     }
 
-    @Override // android.widget.CursorAdapter
-    public final void bindView(View view, Context context, Cursor cursor) {
-        ((CheckedTextView) view.findViewById(R.id.text1)).setText(cursor.getString(this.f3626));
-        this.f3623.setItemChecked(cursor.getPosition(), cursor.getInt(this.f3624) == 1);
+    public C0900(C14168 c14168, String str) {
+        super(c14168);
+        this.f3340 = str;
     }
 
-    @Override // android.widget.CursorAdapter
-    public final View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-        return this.f3622.f22055.inflate(this.f3625.f56510, viewGroup, false);
+    @Override // l.AbstractC18053
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1348() {
+        return C8947.m23910(new StringBuilder("ServiceResolver("), m42076() != null ? m42076().getName() : "", MotionUtils.EASING_TYPE_FORMAT_END);
+    }
+
+    @Override // l.AbstractC18799
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C1271 mo3636(C1271 c1271) throws IOException {
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        for (AbstractC12457 abstractC12457 : ((ConcurrentMapC17249) m42076().m34445()).values()) {
+            c1271 = m42074(c1271, new C2237(abstractC12457.mo30939(), EnumC6121.CLASS_IN, false, C3137.f10167, abstractC12457.mo30944()), jCurrentTimeMillis);
+        }
+        return c1271;
+    }
+
+    @Override // l.AbstractC18799
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C1271 mo3638(C1271 c1271) {
+        return m42075(c1271, C23120.m52051(this.f3340, EnumC24021.TYPE_PTR, EnumC6121.CLASS_IN, false));
     }
 }

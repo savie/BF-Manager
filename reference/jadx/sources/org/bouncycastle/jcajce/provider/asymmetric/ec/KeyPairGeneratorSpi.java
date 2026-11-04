@@ -9,8 +9,8 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.ECGenParameterSpec;
 import java.util.Hashtable;
-import l.C0252;
-import l.C11996;
+import l.C12351;
+import l.C25272;
 import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
@@ -31,7 +31,7 @@ import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class KeyPairGeneratorSpi extends KeyPairGenerator {
 
     public class EC extends KeyPairGeneratorSpi {
@@ -153,7 +153,7 @@ public abstract class KeyPairGeneratorSpi extends KeyPairGenerator {
                     } else {
                         String nameFrom = ECUtil.getNameFrom(algorithmParameterSpec);
                         if (nameFrom == null) {
-                            throw new InvalidAlgorithmParameterException(C11996.m29881("invalid parameterSpec: ", algorithmParameterSpec));
+                            throw new InvalidAlgorithmParameterException(C12351.m30818("invalid parameterSpec: ", algorithmParameterSpec));
                         }
                         initializeNamedCurve(nameFrom, secureRandom);
                     }
@@ -176,7 +176,7 @@ public abstract class KeyPairGeneratorSpi extends KeyPairGenerator {
         public void initializeNamedCurve(String str, SecureRandom secureRandom) throws InvalidAlgorithmParameterException {
             X9ECParameters domainParametersFromName = ECUtils.getDomainParametersFromName(str, this.configuration);
             if (domainParametersFromName == null) {
-                throw new InvalidAlgorithmParameterException(C0252.m1693("unknown curve name: ", str));
+                throw new InvalidAlgorithmParameterException(C25272.m56409("unknown curve name: ", str));
             }
             this.ecParams = new ECNamedCurveSpec(str, domainParametersFromName.getCurve(), domainParametersFromName.getG(), domainParametersFromName.getN(), domainParametersFromName.getH(), null);
             this.param = createKeyGenParamsJCE(domainParametersFromName, secureRandom);

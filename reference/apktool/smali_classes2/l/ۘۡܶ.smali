@@ -1,322 +1,353 @@
-.class public final Ll/ۘۡܶ;
+.class public abstract Ll/ۘۡܶ;
 .super Ljava/lang/Object;
-.source "SB7W"
-
-# interfaces
-.implements Ljava/lang/Cloneable;
+.source "A8DU"
 
 
 # instance fields
-.field public ֡:Ll/ۗ᩵ܶ;
+.field public ۙ:Ll/ᩴۡܶ;
 
-.field public ֡ۙ:Ll/ۤۡܶ;
+.field public ۤ:J
 
-.field public ֨ۙ:Ljava/lang/Boolean;
+.field public ᩴ:Ll/ܶ֨ܶ;
 
-.field public ֫:Ll/ۤ᩵ܶ;
+.field public ᩷:Z
 
-.field public ۖۙ:Ljava/lang/String;
-
-.field public ۗ:Ljava/lang/Integer;
-
-.field public ۘۙ:Ljava/lang/Float;
-
-.field public ۙۙ:Ll/ۖۡܶ;
-
-.field public ۚۙ:Ljava/lang/String;
-
-.field public ۛ:Ll/ۤۡܶ;
-
-.field public ۜۙ:J
-
-.field public ۟ۙ:Ll/ۤ᩵ܶ;
-
-.field public ۠ۙ:Ll/ܰۡܶ;
-
-.field public ۡۙ:Ljava/lang/Float;
-
-.field public ۢ:Ll/ۙۡܶ;
-
-.field public ۤۙ:Ljava/lang/Float;
-
-.field public ۧ:Ljava/lang/Float;
-
-.field public ۨۙ:Ljava/lang/String;
-
-.field public ۫:Ll/֨ۡܶ;
-
-.field public ۫ۙ:Ljava/lang/Boolean;
-
-.field public ۬ۙ:Ll/ۤۡܶ;
-
-.field public ܰۙ:Ljava/lang/String;
-
-.field public ܳ:Ljava/util/ArrayList;
-
-.field public ܶۙ:Ljava/lang/Float;
-
-.field public ܺ:Ll/᩹᩵ܶ;
-
-.field public ܺۙ:Ll/᩹ۡܶ;
-
-.field public ܽ:Ll/ۘ᩵ܶ;
-
-.field public ܽۙ:Ljava/lang/Float;
-
-.field public ܿ:Ljava/lang/Boolean;
-
-.field public ᩳۙ:[Ll/ۤ᩵ܶ;
-
-.field public ᩴۙ:Ll/ۤ᩵ܶ;
-
-.field public ᩵ۙ:Ll/ۨۡܶ;
-
-.field public ᩶:Ljava/lang/String;
-
-.field public ᩶ۙ:Ll/۬ۡܶ;
-
-.field public ᩷ۙ:Ll/ۚۡܶ;
-
-.field public ᩸ۙ:Ll/ۤۡܶ;
-
-.field public ᩹ۙ:Ljava/lang/Float;
-
-.field public ᩺ۙ:Ll/ۤۡܶ;
-
-.field public ᩻:Ll/ۗ᩵ܶ;
+.field public final ᩸:Ljava/util/LinkedHashMap;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
-    .line 1137
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    .line 56
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    .line 1140
-    iput-wide v0, p0, Ll/ۘۡܶ;->ۜۙ:J
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Ll/ۘۡܶ;->᩸:Ljava/util/LinkedHashMap;
+
+    const/4 v0, 0x1
+
+    .line 59
+    iput-boolean v0, p0, Ll/ۘۡܶ;->᩷:Z
 
     return-void
 .end method
 
-.method public static ۙ()Ll/ۘۡܶ;
-    .locals 8
 
-    .line 1267
-    new-instance v0, Ll/ۘۡܶ;
+# virtual methods
+.method public ۙ(Ljava/lang/String;)Ll/᩷ۡܶ;
+    .locals 1
 
-    invoke-direct {v0}, Ll/ۘۡܶ;-><init>()V
+    .line 94
+    iget-object v0, p0, Ll/ۘۡܶ;->᩸:Ljava/util/LinkedHashMap;
 
-    const-wide/16 v1, -0x1
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    .line 1268
-    iput-wide v1, v0, Ll/ۘۡܶ;->ۜۙ:J
+    move-result-object p1
 
-    .line 1270
-    sget-object v1, Ll/ۘ᩵ܶ;->᩶:Ll/ۘ᩵ܶ;
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v1, v0, Ll/ۘۡܶ;->ۛ:Ll/ۤۡܶ;
+    move-result-object p1
 
-    .line 1271
-    sget-object v2, Ll/ۗ᩵ܶ;->֡:Ll/ۗ᩵ܶ;
+    check-cast p1, Ll/᩷ۡܶ;
 
-    iput-object v2, v0, Ll/ۘۡܶ;->᩻:Ll/ۗ᩵ܶ;
+    return-object p1
+.end method
 
-    const/high16 v3, 0x3f800000    # 1.0f
+.method public ۙ()V
+    .locals 3
 
-    .line 1272
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 186
+    iget-object v0, p0, Ll/ۘۡܶ;->᩸:Ljava/util/LinkedHashMap;
 
-    move-result-object v4
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    iput-object v4, v0, Ll/ۘۡܶ;->ۧ:Ljava/lang/Float;
+    move-result-object v0
 
-    const/4 v5, 0x0
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    .line 1273
-    iput-object v5, v0, Ll/ۘۡܶ;->᩸ۙ:Ll/ۤۡܶ;
+    move-result-object v0
 
-    .line 1274
-    iput-object v4, v0, Ll/ۘۡܶ;->ۤۙ:Ljava/lang/Float;
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1275
-    new-instance v6, Ll/ۤ᩵ܶ;
+    move-result v1
 
-    invoke-direct {v6, v3}, Ll/ۤ᩵ܶ;-><init>(F)V
+    if-eqz v1, :cond_1
 
-    iput-object v6, v0, Ll/ۘۡܶ;->۟ۙ:Ll/ۤ᩵ܶ;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1276
-    sget-object v3, Ll/ܰۡܶ;->᩶:Ll/ܰۡܶ;
+    move-result-object v1
 
-    iput-object v3, v0, Ll/ۘۡܶ;->۠ۙ:Ll/ܰۡܶ;
+    check-cast v1, Ll/᩷ۡܶ;
 
-    .line 1277
-    sget-object v3, Ll/ۨۡܶ;->֡:Ll/ۨۡܶ;
+    .line 187
+    instance-of v2, v1, Ll/ۙۡܶ;
 
-    iput-object v3, v0, Ll/ۘۡܶ;->᩵ۙ:Ll/ۨۡܶ;
+    if-eqz v2, :cond_0
 
-    const/high16 v3, 0x40800000    # 4.0f
+    .line 188
+    check-cast v1, Ll/ۙۡܶ;
 
-    .line 1278
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {v1}, Ll/ۙۡܶ;->ܳ()V
 
-    move-result-object v3
+    goto :goto_0
 
-    iput-object v3, v0, Ll/ۘۡܶ;->ۡۙ:Ljava/lang/Float;
+    :cond_1
+    return-void
+.end method
 
-    .line 1279
-    iput-object v5, v0, Ll/ۘۡܶ;->ᩳۙ:[Ll/ۤ᩵ܶ;
+.method public final ۙ(J)V
+    .locals 3
 
-    .line 1280
-    new-instance v3, Ll/ۤ᩵ܶ;
+    .line 207
+    iget-boolean v0, p0, Ll/ۘۡܶ;->᩷:Z
 
-    const/4 v6, 0x0
+    if-eqz v0, :cond_2
 
-    invoke-direct {v3, v6}, Ll/ۤ᩵ܶ;-><init>(F)V
+    iget-wide v0, p0, Ll/ۘۡܶ;->ۤ:J
 
-    iput-object v3, v0, Ll/ۘۡܶ;->ᩴۙ:Ll/ۤ᩵ܶ;
+    cmp-long v2, p1, v0
 
-    .line 1281
-    iput-object v4, v0, Ll/ۘۡܶ;->᩹ۙ:Ljava/lang/Float;
+    if-lez v2, :cond_2
 
-    .line 1282
-    iput-object v1, v0, Ll/ۘۡܶ;->ܽ:Ll/ۘ᩵ܶ;
+    .line 209
+    iput-wide p1, p0, Ll/ۘۡܶ;->ۤ:J
 
-    .line 1283
-    iput-object v5, v0, Ll/ۘۡܶ;->ܳ:Ljava/util/ArrayList;
+    .line 211
+    iget-object v0, p0, Ll/ۘۡܶ;->᩸:Ljava/util/LinkedHashMap;
 
-    .line 1284
-    new-instance v3, Ll/ۤ᩵ܶ;
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    const/high16 v6, 0x41400000    # 12.0f
+    move-result-object v0
 
-    sget-object v7, Ll/ۗۡܶ;->᩻:Ll/ۗۡܶ;
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v3, v6, v7}, Ll/ۤ᩵ܶ;-><init>(FLl/ۗۡܶ;)V
+    move-result-object v0
 
-    iput-object v3, v0, Ll/ۘۡܶ;->֫:Ll/ۤ᩵ܶ;
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const/16 v3, 0x190
+    move-result v1
 
-    .line 1285
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v1, :cond_1
 
-    move-result-object v3
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-object v3, v0, Ll/ۘۡܶ;->ۗ:Ljava/lang/Integer;
+    move-result-object v1
 
-    .line 1286
-    sget-object v3, Ll/ۙۡܶ;->֡:Ll/ۙۡܶ;
+    check-cast v1, Ll/᩷ۡܶ;
 
-    iput-object v3, v0, Ll/ۘۡܶ;->ۢ:Ll/ۙۡܶ;
+    .line 212
+    instance-of v2, v1, Ll/ۨ֨ܶ;
 
-    .line 1287
-    sget-object v3, Ll/᩹ۡܶ;->ܽ:Ll/᩹ۡܶ;
+    if-eqz v2, :cond_0
 
-    iput-object v3, v0, Ll/ۘۡܶ;->ܺۙ:Ll/᩹ۡܶ;
+    .line 213
+    check-cast v1, Ll/ۨ֨ܶ;
 
-    .line 1288
-    sget-object v3, Ll/֨ۡܶ;->᩶:Ll/֨ۡܶ;
+    invoke-interface {v1, p1, p2}, Ll/ۨ֨ܶ;->ۙ(J)V
 
-    iput-object v3, v0, Ll/ۘۡܶ;->۫:Ll/֨ۡܶ;
+    goto :goto_0
 
-    .line 1289
-    sget-object v3, Ll/ۚۡܶ;->ܽ:Ll/ۚۡܶ;
+    .line 217
+    :cond_1
+    invoke-virtual {p0}, Ll/ۘۡܶ;->᩷()V
 
-    iput-object v3, v0, Ll/ۘۡܶ;->᩷ۙ:Ll/ۚۡܶ;
+    :cond_2
+    return-void
+.end method
 
-    .line 1290
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+.method public final ۙ(Ll/۬֨ܶ;Ljava/lang/String;)V
+    .locals 0
 
-    iput-object v3, v0, Ll/ۘۡܶ;->֨ۙ:Ljava/lang/Boolean;
+    .line 84
+    invoke-virtual {p1, p2}, Ll/᩷ۡܶ;->ۙ(Ljava/lang/String;)V
 
-    .line 1291
-    iput-object v5, v0, Ll/ۘۡܶ;->ܺ:Ll/᩹᩵ܶ;
+    .line 85
+    invoke-virtual {p0, p1}, Ll/ۘۡܶ;->ۙ(Ll/᩷ۡܶ;)V
 
-    .line 1292
-    iput-object v5, v0, Ll/ۘۡܶ;->ۖۙ:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 1293
-    iput-object v5, v0, Ll/ۘۡܶ;->ۨۙ:Ljava/lang/String;
+.method public ۙ(Ll/ܶ֨ܶ;)V
+    .locals 1
 
-    .line 1294
-    iput-object v5, v0, Ll/ۘۡܶ;->ܰۙ:Ljava/lang/String;
+    .line 134
+    iget-object v0, p0, Ll/ۘۡܶ;->ᩴ:Ll/ܶ֨ܶ;
 
-    .line 1295
-    iput-object v3, v0, Ll/ۘۡܶ;->ܿ:Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
-    .line 1296
-    iput-object v3, v0, Ll/ۘۡܶ;->۫ۙ:Ljava/lang/Boolean;
+    if-ne v0, p1, :cond_0
 
-    .line 1297
-    iput-object v1, v0, Ll/ۘۡܶ;->᩺ۙ:Ll/ۤۡܶ;
+    goto :goto_0
 
-    .line 1298
-    iput-object v4, v0, Ll/ۘۡܶ;->ܶۙ:Ljava/lang/Float;
+    .line 135
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    .line 1299
-    iput-object v5, v0, Ll/ۘۡܶ;->᩶:Ljava/lang/String;
+    const-string v0, "Unit synthesisEngine already set."
 
-    .line 1300
-    iput-object v2, v0, Ll/ۘۡܶ;->֡:Ll/ۗ᩵ܶ;
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 1301
-    iput-object v5, v0, Ll/ۘۡܶ;->ۚۙ:Ljava/lang/String;
+    throw p1
 
-    .line 1302
-    iput-object v5, v0, Ll/ۘۡܶ;->۬ۙ:Ll/ۤۡܶ;
+    .line 137
+    :cond_1
+    :goto_0
+    iput-object p1, p0, Ll/ۘۡܶ;->ᩴ:Ll/ܶ֨ܶ;
 
-    .line 1303
-    iput-object v4, v0, Ll/ۘۡܶ;->ۘۙ:Ljava/lang/Float;
+    return-void
+.end method
 
-    .line 1304
-    iput-object v5, v0, Ll/ۘۡܶ;->֡ۙ:Ll/ۤۡܶ;
+.method public final ۙ(Ll/ᩴۡܶ;)V
+    .locals 1
 
-    .line 1305
-    iput-object v4, v0, Ll/ۘۡܶ;->ܽۙ:Ljava/lang/Float;
+    .line 194
+    iget-object v0, p0, Ll/ۘۡܶ;->ۙ:Ll/ᩴۡܶ;
 
-    .line 1306
-    sget-object v1, Ll/۬ۡܶ;->֡:Ll/۬ۡܶ;
+    if-nez v0, :cond_0
 
-    iput-object v1, v0, Ll/ۘۡܶ;->᩶ۙ:Ll/۬ۡܶ;
+    .line 198
+    iput-object p1, p0, Ll/ۘۡܶ;->ۙ:Ll/ᩴۡܶ;
 
-    .line 1307
-    sget-object v1, Ll/ۖۡܶ;->᩶:Ll/ۖۡܶ;
+    return-void
 
-    iput-object v1, v0, Ll/ۘۡܶ;->ۙۙ:Ll/ۖۡܶ;
+    .line 195
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Unit is already in a circuit."
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final ۙ(Ll/᩷ۡܶ;)V
+    .locals 2
+
+    .line 78
+    invoke-virtual {p1, p0}, Ll/᩷ۡܶ;->ۙ(Ll/ۘۡܶ;)V
+
+    .line 80
+    invoke-virtual {p1}, Ll/᩷ۡܶ;->ۙ()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ll/ۘۡܶ;->᩸:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public ۙ(Z)V
+    .locals 0
+
+    .line 236
+    iput-boolean p1, p0, Ll/ۘۡܶ;->᩷:Z
+
+    if-nez p1, :cond_0
+
+    .line 238
+    invoke-virtual {p0}, Ll/ۘۡܶ;->ۙ()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final ۚ()V
+    .locals 3
+
+    .line 120
+    iget-object v0, p0, Ll/ۘۡܶ;->ᩴ:Ll/ܶ֨ܶ;
+
+    if-eqz v0, :cond_0
+
+    .line 267
+    invoke-virtual {v0, p0}, Ll/ܶ֨ܶ;->᩷(Ll/ۘۡܶ;)V
+
+    return-void
+
+    .line 264
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "This "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " was not add()ed to a Synthesizer."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final ۤ()Ll/ᩴۡܶ;
+    .locals 1
+
+    .line 202
+    iget-object v0, p0, Ll/ۘۡܶ;->ۙ:Ll/ᩴۡܶ;
 
     return-object v0
 .end method
 
+.method public final ۫()Z
+    .locals 1
 
-# virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 2
+    .line 222
+    iget-boolean v0, p0, Ll/ۘۡܶ;->᩷:Z
 
-    .line 1335
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final ܳ()Ll/ܶ֨ܶ;
+    .locals 1
 
-    check-cast v0, Ll/ۘۡܶ;
+    .line 127
+    iget-object v0, p0, Ll/ۘۡܶ;->ᩴ:Ll/ܶ֨ܶ;
 
-    .line 1336
-    iget-object v1, p0, Ll/ۘۡܶ;->ᩳۙ:[Ll/ۤ᩵ܶ;
-
-    if-eqz v1, :cond_0
-
-    .line 1337
-    invoke-virtual {v1}, [Ll/ۤ᩵ܶ;->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Ll/ۤ᩵ܶ;
-
-    iput-object v1, v0, Ll/ۘۡܶ;->ᩳۙ:[Ll/ۤ᩵ܶ;
-
-    :cond_0
     return-object v0
+.end method
+
+.method public final ᩴ()Ll/ܶ֨ܶ;
+    .locals 1
+
+    .line 120
+    iget-object v0, p0, Ll/ۘۡܶ;->ᩴ:Ll/ܶ֨ܶ;
+
+    return-object v0
+.end method
+
+.method public abstract ᩷()V
 .end method

@@ -1,24 +1,35 @@
 package l;
 
-import android.graphics.Outline;
-import android.view.View;
-import android.view.ViewOutlineProvider;
+import android.os.Build;
 
-/* JADX INFO: renamed from: l.ܺ᩷, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1C0 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16174 extends ViewOutlineProvider {
+/* JADX INFO: renamed from: l.ܶܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5WY */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16174 extends AbstractC12507 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C15600 f52506;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int[] f52507 = null;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20407 f52250;
-
-    public C16174(C20407 c20407) {
-        this.f52250 = c20407;
+    public final void m38403(int... iArr) {
+        this.f52507 = iArr;
     }
 
-    @Override // android.view.ViewOutlineProvider
-    public final void getOutline(View view, Outline outline) {
-        C20407 c20407 = this.f52250;
-        outline.setRoundRect(0, 0, c20407.getWidth(), c20407.getHeight(), c20407.f66114);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38402(C15600 c15600) {
+        this.f52506 = c15600;
+    }
+
+    @Override // l.AbstractC12507
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo31060(InterfaceC16982 interfaceC16982) {
+        if (Build.VERSION.SDK_INT >= 34) {
+            C16920.m39901(interfaceC16982.mo40047(), C16920.m39900(C17666.m41324(C16920.m39899(), null, 0, null, Boolean.FALSE), this.f52507, this.f52506));
+        } else {
+            C16920.m39901(interfaceC16982.mo40047(), C16920.m39900(C16920.m39899(), this.f52507, this.f52506));
+        }
     }
 }

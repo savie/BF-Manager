@@ -1,30 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ܳ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: L79Z */
+/* JADX INFO: renamed from: l.۟᩺᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8227 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f28628;
+public final /* synthetic */ class C8227 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f28629;
+    public final /* synthetic */ C7941 f27077;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f28630;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Runnable f27078;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f28631;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24132 f27079;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f28632;
+    public /* synthetic */ C8227(C7941 c7941, C24132 c24132, Runnable runnable) {
+        this.f27077 = c7941;
+        this.f27079 = c24132;
+        this.f27078 = runnable;
+    }
 
-    public C8227(CharSequence charSequence, int i, int i2, boolean z) {
-        this.f28632 = charSequence;
-        this.f28630 = i;
-        this.f28628 = i2;
-        this.f28631 = z;
-        this.f28629 = Character.codePointCount(charSequence, i, i2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m22132(Object obj) {
+        C7941.m21552(this.f27077, this.f27079, this.f27078);
     }
 }

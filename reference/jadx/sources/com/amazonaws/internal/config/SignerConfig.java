@@ -4,18 +4,18 @@ package com.amazonaws.internal.config;
 public class SignerConfig {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f223;
+    public final String f213;
 
     public SignerConfig(String str) {
-        this.f223 = str;
+        this.f213 = str;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m290() {
-        return this.f223;
+    public final String m284() {
+        return this.f213;
     }
 
     public final String toString() {
-        return this.f223;
+        return this.f213;
     }
 }

@@ -1,38 +1,25 @@
 package l;
 
-import java.util.LinkedHashSet;
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.ۤۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7LF */
+/* JADX INFO: renamed from: l.ۢܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 177I */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10208 implements Consumer {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f34861;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f34862;
-
-    public /* synthetic */ C10208(int i, Object obj) {
-        this.f34861 = i;
-        this.f34862 = obj;
-    }
-
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final void n(Object obj) {
-        switch (this.f34861) {
-            case 0:
-                ((LinkedHashSet) this.f34862).add((C19670) obj);
+public final class C10208 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m26336(String str) {
+        int length = str.length();
+        while (length > 0) {
+            char cCharAt = str.charAt(length - 1);
+            if (cCharAt < '0' || cCharAt > '9') {
                 break;
-            default:
-                ((C18258) this.f34862).m52712((C21825) obj);
-                break;
+            }
+            length--;
         }
+        return length == str.length() ? str : str.substring(0, length);
     }
 
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m26337(InterfaceC2731 interfaceC2731) {
+        String strMo9074 = interfaceC2731.mo9074();
+        return (strMo9074 == null || strMo9074.isEmpty()) ? "default" : strMo9074;
     }
 }

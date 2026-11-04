@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.params.GOST3410PublicKeyParameters;
 import org.bouncycastle.jce.spec.GOST3410ParameterSpec;
 import org.bouncycastle.jce.spec.GOST3410PublicKeyParameterSetSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends KeyPairGenerator {
     public GOST3410KeyPairGenerator engine;
     public GOST3410ParameterSpec gost3410Params;

@@ -1,19 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۨۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D7UG */
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: renamed from: l.ܺۚۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O5NM */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16615 extends AbstractC12561 {
+public final class C16615 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C24821();
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12382 f53321;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f53735;
 
-    public C16615(C12382 c12382) {
-        this.f53321 = c12382;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public String f53736;
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
     }
 
-    @Override // l.AbstractC12561, android.text.TextWatcher
-    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-        this.f53321.f41389.m50264(i, i2, i3, charSequence);
+    public C16615(String str, int i) {
+        this.f53736 = str;
+        this.f53735 = i;
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.f53736);
+        parcel.writeInt(this.f53735);
     }
 }

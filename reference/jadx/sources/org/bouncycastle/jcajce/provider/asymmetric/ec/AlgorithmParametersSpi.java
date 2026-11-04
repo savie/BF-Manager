@@ -6,7 +6,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.ECGenParameterSpec;
 import java.security.spec.ECParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Null;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.DERNull;
@@ -20,7 +20,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.jce.spec.ECNamedCurveSpec;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
     public String curveName;
     public ECParameterSpec ecParameterSpec;
@@ -34,7 +34,7 @@ public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi
     public byte[] engineGetEncoded(String str) throws IOException {
         X962Parameters x962Parameters;
         if (!isASN1FormatString(str)) {
-            throw new IOException(C0252.m1693("Unknown parameters format in AlgorithmParameters object: ", str));
+            throw new IOException(C25272.m56409("Unknown parameters format in AlgorithmParameters object: ", str));
         }
         ECParameterSpec eCParameterSpec = this.ecParameterSpec;
         if (eCParameterSpec == null) {
@@ -98,7 +98,7 @@ public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi
     @Override // java.security.AlgorithmParametersSpi
     public void engineInit(byte[] bArr, String str) throws IOException {
         if (!isASN1FormatString(str)) {
-            throw new IOException(C0252.m1693("Unknown encoded parameters format in AlgorithmParameters object: ", str));
+            throw new IOException(C25272.m56409("Unknown encoded parameters format in AlgorithmParameters object: ", str));
         }
         X962Parameters x962Parameters = X962Parameters.getInstance(bArr);
         ECCurve curve = EC5Util.getCurve(BouncyCastleProvider.CONFIGURATION, x962Parameters);

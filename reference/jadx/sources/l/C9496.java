@@ -1,80 +1,84 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢۢۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R6N8 */
+/* JADX INFO: renamed from: l.ۡܺ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: X8LV */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C9496 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13542 f32131;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C3144 f32133;
+    public final long f30769;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f32134;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f30770;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f32135;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final long[] f30771;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f32136;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C18010 f30772;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f32137 = -1;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f30773;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C14435 f32132 = new C14435();
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f30774;
 
-    public C9496(C13542 c13542) {
-        this.f32131 = c13542;
+    public C9496(C18010 c18010, long j, long j2, long[] jArr, int i, int i2) {
+        C18010 c18011 = new C18010();
+        c18011.f58965 = c18010.f58965;
+        c18011.f58969 = c18010.f58969;
+        c18011.f58964 = c18010.f58964;
+        c18011.f58967 = c18010.f58967;
+        c18011.f58968 = c18010.f58968;
+        c18011.f58963 = c18010.f58963;
+        c18011.f58966 = c18010.f58966;
+        this.f30772 = c18011;
+        this.f30774 = j;
+        this.f30769 = j2;
+        this.f30771 = jArr;
+        this.f30773 = i;
+        this.f30770 = i2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C14435 m24325(int i) {
+    public static C9496 m24874(C18010 c18010, C21287 c21287) {
+        long[] jArr;
+        int i;
         int i2;
-        int i3;
-        C13542 c13542 = this.f32131;
-        c13542.m33104(i);
-        if (this.f32137 != c13542.f44700 || i < (i3 = this.f32135) || i >= i3 + this.f32133.f11872) {
-            C3144 c3144 = c13542.f44699;
-            int i4 = 0;
-            int i5 = 0;
-            int i6 = 0;
-            while (true) {
-                C3144 c3145 = c3144.f11858;
-                int i7 = c3145 == null ? 0 : c3145.f11868;
-                i2 = i4 + i7;
-                if (i < i2) {
-                    i5 += c3144.f11862;
-                    i6 += c3144.f11874;
-                    c3144 = c3145;
-                } else {
-                    int i8 = c3144.f11872;
-                    if (i < i2 + i8) {
-                        break;
-                    }
-                    i4 += i7 + i8;
-                    i5 += c3144.f11862;
-                    i6 += c3144.f11874;
-                    c3144 = c3144.f11870;
-                }
+        int iM48500 = c21287.m48500();
+        int iM48512 = (iM48500 & 1) != 0 ? c21287.m48512() : -1;
+        long jM48485 = (iM48500 & 2) != 0 ? c21287.m48485() : -1L;
+        if ((iM48500 & 4) == 4) {
+            long[] jArr2 = new long[100];
+            for (int i3 = 0; i3 < 100; i3++) {
+                jArr2[i3] = c21287.m48493();
             }
-            this.f32133 = c3144;
-            this.f32135 = i2;
-            this.f32136 = i5 + c3144.f11861;
-            this.f32134 = i6 + c3144.f11860;
-            this.f32137 = c13542.f44700;
+            jArr = jArr2;
+        } else {
+            jArr = null;
         }
-        int i9 = i - this.f32135;
-        int iM9528 = this.f32133.m9528(i9) + this.f32136;
-        C3144 c3146 = this.f32133;
-        char[] cArr = c3146.f11867;
-        int i10 = cArr != null ? cArr[i9] : c3146.f11865[i9];
-        int iM9536 = c3146.m9536(i9) + this.f32134;
-        C14435 c14435 = this.f32132;
-        c14435.m34709(iM9528, i10 + iM9528, iM9536);
-        c14435.m34711(this.f32133.m9539(i9));
-        return c14435;
+        if ((iM48500 & 8) != 0) {
+            c21287.m48503(4);
+        }
+        if (c21287.m48486() >= 24) {
+            c21287.m48503(21);
+            int iM48501 = c21287.m48501();
+            i2 = iM48501 & 4095;
+            i = (16773120 & iM48501) >> 12;
+        } else {
+            i = -1;
+            i2 = -1;
+        }
+        return new C9496(c18010, iM48512, jM48485, jArr, i, i2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m24875() {
+        long j = this.f30774;
+        if (j == -1 || j == 0) {
+            return -9223372036854775807L;
+        }
+        C18010 c18010 = this.f30772;
+        return C7116.m19473(c18010.f58967, (j * ((long) c18010.f58966)) - 1);
     }
 }

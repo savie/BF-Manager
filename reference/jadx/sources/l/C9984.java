@@ -1,49 +1,48 @@
 package l;
 
-import java.math.RoundingMode;
+import android.text.TextUtils;
 
-/* JADX INFO: renamed from: l.ۤ֫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 73GB */
+/* JADX INFO: renamed from: l.ۢ۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8WE */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9984 {
+public final class C9984 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f34116;
+    public String f32084;
 
-    static {
-        int[] iArr = new int[RoundingMode.values().length];
-        f34116 = iArr;
-        try {
-            iArr[RoundingMode.UNNECESSARY.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f32085;
+
+    public C9984(String str, String str2) {
+        this.f32084 = C18969.m44060(50, str);
+        this.f32085 = C18969.m44060(10000, str2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m25828() {
+        if (TextUtils.isEmpty(this.f32084)) {
+            return C18969.m44060(50, this.f32085);
         }
-        try {
-            f34116[RoundingMode.DOWN.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f34116[RoundingMode.FLOOR.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f34116[RoundingMode.UP.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f34116[RoundingMode.CEILING.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f34116[RoundingMode.HALF_DOWN.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f34116[RoundingMode.HALF_UP.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f34116[RoundingMode.HALF_EVEN.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
+        return this.f32084;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m25831() {
+        return this.f32084;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m25829(String str) {
+        this.f32084 = TextUtils.isEmpty(str) ? null : C18969.m44060(50, str);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m25830() {
+        return this.f32085;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m25832(String str) {
+        this.f32085 = str;
     }
 }

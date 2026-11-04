@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SecretKeyData extends ASN1Object {
     public final ASN1ObjectIdentifier keyAlgorithm;
     public final ASN1OctetString keyBytes;

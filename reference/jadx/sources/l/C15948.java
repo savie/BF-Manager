@@ -1,26 +1,54 @@
 package l;
 
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import java.util.ArrayDeque;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ܺ۬ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5XL */
+/* JADX INFO: renamed from: l.ܶ۟᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: R6U3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15948 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TextView f51655;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final TextView f51656;
+public final class C15948 implements Iterator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final TextView f51657;
+    public final ArrayDeque f51786;
 
-    public C15948(View view) {
-        this.f51655 = (TextView) view.findViewById(R.id.textView1);
-        this.f51656 = (TextView) view.findViewById(R.id.textView2);
-        this.f51657 = (TextView) view.findViewById(R.id.textView3);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f51787;
+
+    public C15948(C20424 c20424, boolean z) {
+        this.f51787 = z;
+        ArrayDeque arrayDeque = new ArrayDeque();
+        this.f51786 = arrayDeque;
+        C23408 c23408 = c20424.f65428;
+        if (c23408 != null) {
+            arrayDeque.push(c23408);
+        }
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return !this.f51786.isEmpty();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        ArrayDeque arrayDeque = this.f51786;
+        if (arrayDeque.isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        C23408 c23408 = (C23408) arrayDeque.pop();
+        while (true) {
+            Object obj = c23408.f75775;
+            C23408 c23409 = c23408.f75773;
+            c23408 = c23408.f75771;
+            if (obj != null) {
+                return obj;
+            }
+            boolean z = this.f51787;
+            arrayDeque.push(z ? c23408 : c23409);
+            if (z) {
+                c23408 = c23409;
+            }
+        }
     }
 }

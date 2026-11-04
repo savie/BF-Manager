@@ -1,84 +1,74 @@
-.class public Ll/ܺ;
-.super Ll/ܺܰ;
+.class public final Ll/ܺ;
+.super Landroid/media/browse/MediaBrowser$ConnectionCallback;
 .source "95XT"
 
 
+# instance fields
+.field public final synthetic ۙ:Ll/ܽ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ܽ;)V
+    .locals 0
+
+    .line 696
+    iput-object p1, p0, Ll/ܺ;->ۙ:Ll/ܽ;
+
+    invoke-direct {p0}, Landroid/media/browse/MediaBrowser$ConnectionCallback;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final ۙ(ILandroid/os/Bundle;)V
-    .locals 4
+.method public final onConnected()V
+    .locals 2
 
-    const/4 v0, 0x0
+    .line 701
+    iget-object v0, p0, Ll/ܺ;->ۙ:Ll/ܽ;
 
-    if-eqz p2, :cond_0
+    iget-object v1, v0, Ll/ܽ;->᩷:Ll/ۗ;
 
-    .line 1056
-    invoke-static {p2}, Ll/֨ܰ;->ۙ(Landroid/os/Bundle;)V
+    if-eqz v1, :cond_0
 
-    .line 1058
-    :try_start_0
-    invoke-virtual {p2}, Landroid/os/BaseBundle;->isEmpty()Z
-    :try_end_0
-    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 702
+    invoke-virtual {v1}, Ll/ۗ;->᩸()V
 
-    goto :goto_0
-
-    :catch_0
-    move-object p2, v0
-
+    .line 704
     :cond_0
-    :goto_0
-    if-nez p1, :cond_2
+    invoke-virtual {v0}, Ll/ܽ;->ۙ()V
 
-    if-eqz p2, :cond_2
+    return-void
+.end method
 
-    const-string p1, "search_results"
+.method public final onConnectionFailed()V
+    .locals 1
 
-    .line 2328
-    invoke-virtual {p2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    .line 717
+    iget-object v0, p0, Ll/ܺ;->ۙ:Ll/ܽ;
 
-    move-result v1
+    .line 720
+    invoke-virtual {v0}, Ll/ܽ;->᩷()V
 
-    if-eqz v1, :cond_2
+    return-void
+.end method
 
-    .line 2332
-    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
+.method public final onConnectionSuspended()V
+    .locals 2
 
-    move-result-object p1
+    .line 709
+    iget-object v0, p0, Ll/ܺ;->ۙ:Ll/ܽ;
 
-    .line 2341
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, v0, Ll/ܽ;->᩷:Ll/ۗ;
 
-    .line 2335
-    new-instance p2, Ljava/util/ArrayList;
+    if-eqz v1, :cond_0
 
-    array-length v1, p1
+    .line 710
+    invoke-virtual {v1}, Ll/ۗ;->ᩴ()V
 
-    invoke-direct {p2, v1}, Ljava/util/ArrayList;-><init>(I)V
+    .line 712
+    :cond_0
+    invoke-virtual {v0}, Ll/ܽ;->ۤ()V
 
-    .line 2336
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_1
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, p1, v2
-
-    .line 2337
-    check-cast v3, Ll/᩷;
-
-    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 2339
-    :cond_1
-    throw v0
-
-    .line 2329
-    :cond_2
-    throw v0
+    return-void
 .end method

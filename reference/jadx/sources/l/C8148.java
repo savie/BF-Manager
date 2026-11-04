@@ -1,54 +1,76 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۨۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7T2 */
-/* JADX INFO: loaded from: classes3.dex */
-public class C8148 {
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f28497;
+/* JADX INFO: renamed from: l.۟᩷ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J6WT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8148 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f28498;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Runnable f26896;
 
-    public C8148(String str) {
-        this.f28498 = str;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC19335 f26897;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C8893 f26898;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C11351 f26899;
+
+    public C8148(C8893 c8893, InterfaceC19335 interfaceC19335, Runnable runnable) {
+        this.f26898 = c8893;
+        this.f26897 = interfaceC19335;
+        this.f26896 = runnable;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m21459() {
-        return this.f28498;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8199(this.f26898.f29056, 200);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m21458() {
-        if (this.f28497 == null) {
-            String str = this.f28498;
-            String lowerCase = str.toLowerCase();
-            this.f28497 = lowerCase;
-            if (lowerCase.length() != str.length()) {
-                char[] charArray = str.toCharArray();
-                for (int i = 0; i < charArray.length; i++) {
-                    charArray[i] = Character.toLowerCase(charArray[i]);
-                }
-                this.f28497 = new String(charArray);
-            }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        this.f26899 = this.f26897.run();
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        C8893 c8893 = this.f26898;
+        if (!c8893.f29063.m22434() || c8893.f29056.isFinishing()) {
+            return;
         }
-        return this.f28497;
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj instanceof C8148) {
-            return this.f28498.equals(((C8148) obj).f28498);
+        c8893.m23809();
+        Runnable runnable = this.f26896;
+        if (runnable != null) {
+            runnable.run();
         }
-        return false;
+        C11351 c11351 = this.f26899;
+        if (c11351 != null) {
+            C8893.m23807(c8893, c11351.f35755);
+        }
     }
 
-    public final int hashCode() {
-        return this.f28498.hashCode();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        C8893 c8893 = this.f26898;
+        if (!c8893.f29063.m22434() || c8893.f29056.isFinishing()) {
+            return;
+        }
+        c8893.m23809();
+        C22673.m51159(R.string.MT_Protector);
     }
 
-    public final String toString() {
-        return this.f28498;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        this.f26899 = null;
+        this.f26898.f29058 = false;
+        m8196();
     }
 }

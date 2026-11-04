@@ -1,32 +1,27 @@
 package l;
 
-import java.nio.file.attribute.FileAttribute;
+import android.view.View;
+import android.widget.AdapterView;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۜ᩷ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C7017 implements FileAttribute {
-    public final /* synthetic */ InterfaceC20030 a;
+/* JADX INFO: renamed from: l.ۜ۠ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAKQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7017 implements AdapterView.OnItemSelectedListener {
 
-    public final /* synthetic */ boolean equals(Object obj) {
-        InterfaceC20030 interfaceC20030 = this.a;
-        if (obj instanceof C7017) {
-            obj = ((C7017) obj).a;
-        }
-        return interfaceC20030.equals(obj);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ IntConsumer f23147;
+
+    @Override // android.widget.AdapterView.OnItemSelectedListener
+    public final void onNothingSelected(AdapterView adapterView) {
     }
 
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
+    public C7017(IntConsumer intConsumer) {
+        this.f23147 = intConsumer;
     }
 
-    @Override // java.nio.file.attribute.FileAttribute
-    public final /* synthetic */ String name() {
-        return this.a.name();
-    }
-
-    @Override // java.nio.file.attribute.FileAttribute
-    public final /* synthetic */ Object value() {
-        return this.a.value();
+    @Override // android.widget.AdapterView.OnItemSelectedListener
+    public final void onItemSelected(AdapterView adapterView, View view, int i, long j) {
+        this.f23147.accept(i);
     }
 }

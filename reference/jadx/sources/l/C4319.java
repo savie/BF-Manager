@@ -1,149 +1,110 @@
 package l;
 
-import java.util.BitSet;
+import com.umeng.analytics.pro.d;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۙ֨ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J1L5 */
+/* JADX INFO: renamed from: l.ۘܿᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y9BP */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4319 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f15503;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static ArrayList f15644 = new ArrayList();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final BitSet f15504;
+    public static synchronized void m13807() {
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        int i = 0;
+        for (int size = f15644.size() - 1; size >= 0; size--) {
+            C15945 c15945 = (C15945) f15644.get(size);
+            if (!c15945.f51775.get()) {
+                c15945.m38022();
+                f15644.remove(size);
+            } else if (!c15945.m38044() && jCurrentTimeMillis - c15945.f51784 >= 30000) {
+                if (i >= 2) {
+                    c15945.m38053();
+                    c15945.m38022();
+                    f15644.remove(size);
+                } else {
+                    c15945.m38053();
+                    i++;
+                }
+            }
+        }
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int[] f15505;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static synchronized C15945 m13809() {
+        ArrayList arrayList = new ArrayList(0);
+        try {
+            long jCurrentTimeMillis = System.currentTimeMillis();
+            for (C15945 c15945 : f15644) {
+                if (!c15945.f51775.get()) {
+                    arrayList.add(c15945);
+                } else if (!c15945.f51785 && !c15945.m38044()) {
+                    synchronized (c15945) {
+                        if (jCurrentTimeMillis - c15945.f51784 > 50) {
+                            c15945.f51784 = jCurrentTimeMillis;
+                            m13808(arrayList);
+                            return c15945;
+                        }
+                    }
+                }
+            }
+            m13808(arrayList);
+            return m13810();
+        } catch (Throwable th) {
+            m13808(arrayList);
+            throw th;
+        }
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f15506;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static synchronized void m13811() {
+        ArrayList arrayList = f15644;
+        f15644 = new ArrayList();
+        C5261.f18540.execute(new RunnableC1518(2, arrayList));
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final BitSet f15507;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static boolean m13812() {
+        return f15644.isEmpty();
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int[] f15508;
-
-    public C4319(int[] iArr, int[] iArr2) {
-        int length = iArr.length;
-        int length2 = iArr2.length;
-        BitSet bitSet = new BitSet(iArr.length);
-        BitSet bitSet2 = new BitSet(iArr2.length);
-        this.f15505 = iArr;
-        this.f15508 = iArr2;
-        this.f15506 = length;
-        this.f15503 = length2;
-        this.f15504 = bitSet;
-        this.f15507 = bitSet2;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static C15945 m13810() throws IOException {
+        try {
+            C20653.m47266("creating connection");
+            C15945 c15945M4908 = ((AbstractC1336) C4013.m12986()).m4908(true);
+            C20653.m47266("connection created uid-" + c15945M4908.f51777);
+            ArrayList arrayList = new ArrayList(0);
+            for (C15945 c15945 : f15644) {
+                if (!c15945.f51775.get()) {
+                    arrayList.add(c15945);
+                }
+            }
+            m13808(arrayList);
+            f15644.add(c15945M4908);
+            C20653.m47266("connection count " + f15644.size());
+            return c15945M4908;
+        } catch (IOException e) {
+            int i = C20653.f66233;
+            C20653.m47272("mtio ".concat(d.O), e);
+            throw e;
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m12144() throws C9881 {
-        m12143(0, this.f15506, 0, this.f15503, 2);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m12143(int i, int i2, int i3, int i4, int i5) throws C9881 {
-        int[] iArr;
-        int[] iArr2;
-        int[] iArr3;
-        int i6;
-        int i7;
-        if (i2 == 0 && i4 == 0) {
+    public static void m13808(ArrayList arrayList) {
+        if (arrayList.isEmpty()) {
             return;
         }
-        BitSet bitSet = this.f15507;
-        BitSet bitSet2 = this.f15504;
-        if (i2 != 0 && i4 != 0) {
-            int iMin = Math.min(i2, i4);
-            int i8 = 0;
-            int i9 = 0;
-            while (true) {
-                iArr = this.f15508;
-                iArr2 = this.f15505;
-                if (i8 >= iMin || iArr2[i + i8] != iArr[i3 + i8]) {
-                    break;
-                }
-                i9++;
-                i8++;
-            }
-            int i10 = i + i9;
-            int i11 = i3 + i9;
-            int i12 = i2 - i9;
-            int i13 = i4 - i9;
-            int iMin2 = Math.min(i12, i13);
-            int i14 = 0;
-            for (int i15 = 1; i15 <= iMin2 && iArr2[(i10 + i12) - i15] == iArr[(i11 + i13) - i15]; i15++) {
-                i14++;
-            }
-            int i16 = i12 - i14;
-            int i17 = i13 - i14;
-            if (i16 != 0 && i17 != 0) {
-                int i18 = this.f15503;
-                int i19 = this.f15506;
-                if (i5 != 0 || i16 * 2 < i19 || i17 * 2 < i18) {
-                    int iMax = Math.max(-1, i5 - 1);
-                    int[][] iArrM28479 = new C11376(i10, i16, this.f15505, i11, this.f15508, i17).m28479();
-                    if (iArrM28479 == null) {
-                        if (iMax < 0 || i16 * 2 < i19 || i17 * 2 < i18) {
-                            new C3529(this.f15505, this.f15508, i10, i16, i11, i17, bitSet2, bitSet).m10392();
-                            return;
-                        }
-                        throw new C9881();
-                    }
-                    int[] iArr4 = iArrM28479[0];
-                    int length = iArr4.length;
-                    m12143(i10, iArr4[0], i11, iArrM28479[1][0], iMax);
-                    int i20 = 1;
-                    while (true) {
-                        iArr3 = iArrM28479[0];
-                        if (i20 >= iArr3.length) {
-                            break;
-                        }
-                        int i21 = i20 - 1;
-                        int i22 = iArr3[i21] + 1;
-                        int[] iArr5 = iArrM28479[1];
-                        int i23 = iArr5[i21] + 1;
-                        int i24 = iArr3[i20] - i22;
-                        int i25 = iArr5[i20] - i23;
-                        if (i24 > 0 || i25 > 0) {
-                            m12143(i22 + i10, i24, i11 + i23, i25, iMax);
-                        }
-                        i20++;
-                    }
-                    int i26 = length - 1;
-                    int i27 = iArr3[i26];
-                    int i28 = i16 - 1;
-                    if (i27 == i28) {
-                        i6 = 0;
-                    } else {
-                        i28 = i27 + 1;
-                        i6 = i16 - i28;
-                    }
-                    int i29 = iArrM28479[1][i26];
-                    int i30 = i17 - 1;
-                    if (i29 == i30) {
-                        i7 = 0;
-                    } else {
-                        i30 = i29 + 1;
-                        i7 = i17 - i30;
-                    }
-                    m12143(i28 + i10, i6, i30 + i11, i7, iMax);
-                    return;
-                }
-                throw new C9881();
-            }
-            bitSet2.set(i10, i16 + i10);
-            bitSet.set(i11, i11 + i17);
-            return;
+        f15644.removeAll(arrayList);
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            ((C15945) it.next()).m38022();
         }
-        bitSet2.set(i, i2 + i);
-        bitSet.set(i3, i3 + i4);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final BitSet[] m12145() {
-        return new BitSet[]{this.f15504, this.f15507};
     }
 }

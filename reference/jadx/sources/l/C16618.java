@@ -1,46 +1,117 @@
 package l;
 
-import java.util.function.LongConsumer;
-import java.util.function.LongPredicate;
+/* JADX INFO: renamed from: l.ܺۚۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1IVX */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16618 {
 
-/* JADX INFO: renamed from: l.ܽۨ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16618 extends AbstractC21287 implements InterfaceC21993 {
-    public final /* synthetic */ EnumC0120 c;
-    public final /* synthetic */ LongPredicate d;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC21094 f53739;
 
-    @Override // java.util.function.Consumer
-    public final /* bridge */ /* synthetic */ void accept(Object obj) {
-        l((Long) obj);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f53740;
+
+    public C16618(AbstractC21094 abstractC21094, int i) {
+        this.f53739 = abstractC21094;
+        this.f53740 = i;
     }
 
-    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
-        return C21917.$default$andThen(this, longConsumer);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m39314() {
+        return this.f53740;
     }
 
-    @Override // l.InterfaceC21993
-    public final /* synthetic */ void l(Long l2) {
-        AbstractC22686.r(this, l2);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m39310(int i) {
+        this.f53740 = i;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C16618(EnumC0120 enumC0120, LongPredicate longPredicate) {
-        super(enumC0120);
-        this.c = enumC0120;
-        this.d = longPredicate;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final byte m39309() {
+        byte bMo10516 = this.f53739.mo10516(this.f53740);
+        this.f53740++;
+        return bMo10516;
     }
 
-    @Override // l.AbstractC21287, l.InterfaceC19171
-    public final void accept(long j) {
-        if (this.a) {
-            return;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int m39312() {
+        int iMo10515 = this.f53739.mo10515(this.f53740);
+        this.f53740++;
+        return iMo10515;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final short m39313() {
+        short sMo10518 = this.f53739.mo10518(this.f53740);
+        this.f53740 += 2;
+        return sMo10518;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int m39311() {
+        int iMo10514 = this.f53739.mo10514(this.f53740);
+        this.f53740 += 2;
+        return iMo10514;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m39316() {
+        int iMo10513 = this.f53739.mo10513(this.f53740);
+        this.f53740 += 4;
+        return iMo10513;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] m39307(int i) {
+        int[] iArrMo42229 = this.f53739.mo42229(this.f53740, i);
+        this.f53740 = (i * 4) + this.f53740;
+        return iArrMo42229;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m39315(int i) {
+        int i2 = this.f53740;
+        if (i < 0) {
+            throw new IndexOutOfBoundsException("Negative string length");
         }
-        boolean zTest = this.d.test(j);
-        EnumC0120 enumC0120 = this.c;
-        if (zTest == enumC0120.a) {
-            this.a = true;
-            this.b = enumC0120.b;
+        StringBuilder sb = new StringBuilder(16);
+        int i3 = i;
+        while (true) {
+            int i4 = i3 - 1;
+            if (i3 == 0) {
+                break;
+            }
+            char cMo10518 = (char) this.f53739.mo10518(i2);
+            i2 += 2;
+            if (cMo10518 == 0) {
+                break;
+            }
+            sb.append(cMo10518);
+            i3 = i4;
         }
+        String string = sb.toString();
+        this.f53740 = (i * 2) + this.f53740;
+        return string;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m39306(byte[] bArr) {
+        this.f53739.mo10511(this.f53740, bArr.length, bArr);
+        this.f53740 += bArr.length;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m39305() {
+        return this.f53739.m48154(this.f53740);
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void m39308() {
+        this.f53740 += 4;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m39317(int i) {
+        this.f53740 += i;
     }
 }

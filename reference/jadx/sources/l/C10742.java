@@ -1,7 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4AL6 */
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ۤ۠ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21WX */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10742 extends AbstractC12941 {
+public final class C10742 extends ThreadLocal {
+    @Override // java.lang.ThreadLocal
+    public final Object initialValue() {
+        return new ArrayList();
+    }
 }

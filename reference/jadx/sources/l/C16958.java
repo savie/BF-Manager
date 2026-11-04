@@ -1,355 +1,193 @@
 package l;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-import java.util.function.IntPredicate;
-import java.util.function.IntUnaryOperator;
-import java.util.function.UnaryOperator;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import org.simpleframework.xml.transform.ClassTransform;
 
-/* JADX INFO: renamed from: l.ܽ᩺ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: PCGG */
+/* JADX INFO: renamed from: l.ܺܺ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: M37V */
 /* JADX INFO: loaded from: classes5.dex */
-public class C16958 extends C15776 implements InterfaceC10609, InterfaceC14674 {
-    public static final long serialVersionUID = -7046029254386353129L;
+public final class C16958 extends C25164 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10609 f54251;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f55394;
 
-    @Override // java.util.Collection
-    public /* synthetic */ Stream parallelStream() {
-        return C2223.convert(parallelStream());
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public AbstractC4280 f55395;
 
-    @Override // l.InterfaceC10609, java.util.List
-    @Deprecated
-    public final Integer remove(int i) {
-        throw null;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f55396;
 
-    @Override // java.util.Collection
-    public /* synthetic */ Stream stream() {
-        return C2223.convert(stream());
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo3175(int[] iArr) {
-        throw null;
-    }
-
-    @Override // l.InterfaceC10609
-    @Deprecated
-    /* JADX INFO: renamed from: ܰ */
-    public final Integer mo26776(int i, Integer num) {
-        throw null;
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3178(InterfaceC16481 interfaceC16481) {
-        throw null;
-    }
-
-    @Override // l.InterfaceC10131
-    public final boolean add(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10131
-    /* JADX INFO: renamed from: ᩸ */
-    public final boolean mo3182(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final int size() {
-        return this.f51096.size();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean isEmpty() {
-        return this.f51096.isEmpty();
-    }
-
-    @Override // l.InterfaceC10131
-    public final boolean contains(int i) {
-        return this.f51096.contains(i);
-    }
-
-    @Override // l.C15776, l.InterfaceC10131, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC11790 spliterator() {
-        return this.f51096.spliterator();
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection
-    @Deprecated
-    public final InterfaceC5046 stream() {
-        return this.f51096.stream();
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection
-    @Deprecated
-    public final InterfaceC5046 parallelStream() {
-        return this.f51096.parallelStream();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final Object[] toArray(Object[] objArr) {
-        return this.f51096.toArray(objArr);
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final Object[] toArray() {
-        return this.f51096.toArray();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean containsAll(Collection collection) {
-        return this.f51096.containsAll(collection);
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean addAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean removeAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean retainAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10131
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo3171(IntPredicate intPredicate) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.C15776, l.InterfaceC10131
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean add(Integer num) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection
-    @Deprecated
-    public final boolean contains(Object obj) {
-        return this.f51096.contains(obj);
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection
-    @Deprecated
-    public final boolean remove(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10131
-    /* JADX INFO: renamed from: ᩷ */
-    public final int[] mo3181() {
-        return this.f51096.mo3181();
-    }
-
-    public final String toString() {
-        return this.f51096.toString();
-    }
-
-    @Override // java.util.List
-    @Deprecated
-    public final /* bridge */ /* synthetic */ void add(int i, Object obj) {
-        mo26775(i, (Integer) obj);
-        throw null;
-    }
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return this.f54251.compareTo((List) obj);
-    }
-
-    @Override // java.util.List
-    @Deprecated
-    public final Object set(int i, Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    public C16958(InterfaceC10609 interfaceC10609) {
-        super(interfaceC10609);
-        this.f54251 = interfaceC10609;
-    }
-
-    @Override // l.InterfaceC10609
-    public final int getInt(int i) {
-        return this.f54251.getInt(i);
-    }
-
-    @Override // l.InterfaceC10609
-    public final int set(int i, int i2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    public final void add(int i, int i2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ᩳ */
-    public final int mo3180(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    public final int indexOf(int i) {
-        return this.f54251.indexOf(i);
-    }
-
-    @Override // l.InterfaceC10609
-    public final int lastIndexOf(int i) {
-        return this.f54251.lastIndexOf(i);
-    }
-
-    @Override // java.util.List
-    public final boolean addAll(int i, Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.List, l.InterfaceC14674
-    @Deprecated
-    public final void replaceAll(UnaryOperator unaryOperator) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3167(int i, int i2, int i3, int[] iArr) {
-        this.f54251.mo3167(i, i2, i3, iArr);
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3166(int i, int i2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3177(int i, int i2, int[] iArr) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3179(int[] iArr) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3168(int i, int i2, int[] iArr) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.List
-    public final InterfaceC21191 listIterator() {
-        return new C21897(this.f54251.listIterator());
-    }
-
-    @Override // java.util.Collection, java.lang.Iterable, java.util.List
-    public final Iterator iterator() {
-        return listIterator();
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection, java.lang.Iterable, l.InterfaceC22603
-    public final InterfaceC13431 iterator() {
-        return listIterator();
-    }
-
-    @Override // l.InterfaceC10131, java.util.Collection, java.lang.Iterable, l.InterfaceC22603
-    public final InterfaceC21191 iterator() {
-        return listIterator();
-    }
-
-    @Override // java.util.List
-    public final InterfaceC21191 listIterator(int i) {
-        return new C21897(this.f54251.listIterator(i));
-    }
-
-    @Override // java.util.Collection, java.util.List
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4280 m39939(C1606 c1606) {
+        String strM5640;
+        ArrayList arrayList;
+        AbstractC4280 c16212;
+        AbstractC4280 abstractC4280M39938;
+        ArrayList arrayList2;
+        if (this.f55395 == null) {
+            if (c1606 == null) {
+                strM5640 = this.f81354;
+            } else {
+                strM5640 = c1606.m5640(this.f81355, new C11737(0, this));
+            }
+            this.f55394 = strM5640;
+            this.f55396 = 0;
+            ArrayList arrayList3 = null;
+            if (strM5640.charAt(0) == '<') {
+                this.f55396++;
+                arrayList = new ArrayList();
+                while (this.f55394.charAt(this.f55396) != '>') {
+                    int iIndexOf = this.f55394.indexOf(":", this.f55396);
+                    String strSubstring = this.f55394.substring(this.f55396, iIndexOf);
+                    int i = iIndexOf + 1;
+                    this.f55396 = i;
+                    if (this.f55394.charAt(i) != ':') {
+                        abstractC4280M39938 = m39938();
+                        arrayList2 = null;
+                    } else {
+                        abstractC4280M39938 = null;
+                        arrayList2 = null;
+                    }
+                    while (this.f55394.charAt(this.f55396) == ':') {
+                        this.f55396++;
+                        if (arrayList2 == null) {
+                            arrayList2 = new ArrayList();
+                        }
+                        arrayList2.add(m39938());
+                    }
+                    arrayList.add(new C12483(strSubstring, abstractC4280M39938, arrayList2));
+                }
+                this.f55396++;
+            } else {
+                arrayList = null;
+            }
+            if (strM5640.charAt(this.f55396) == '(') {
+                ArrayList arrayListM39937 = m39937(')');
+                AbstractC4280 abstractC4280M39939 = m39938();
+                while (this.f55396 < strM5640.length() && strM5640.charAt(this.f55396) == '^') {
+                    this.f55396++;
+                    if (arrayList3 == null) {
+                        arrayList3 = new ArrayList();
+                    }
+                    arrayList3.add(m39938());
+                }
+                c16212 = new C3534(arrayList, arrayListM39937, abstractC4280M39939, arrayList3);
+            } else {
+                AbstractC4280 abstractC4280M399310 = m39938();
+                if (arrayList == null && this.f55396 == strM5640.length()) {
+                    c16212 = abstractC4280M399310;
+                } else {
+                    while (this.f55396 < strM5640.length()) {
+                        if (arrayList3 == null) {
+                            arrayList3 = new ArrayList();
+                        }
+                        arrayList3.add(m39938());
+                    }
+                    c16212 = new C16212(arrayList, abstractC4280M399310, arrayList3);
+                }
+            }
+            this.f55395 = c16212;
         }
-        return this.f51096.equals(obj);
+        return this.f55395;
     }
 
-    @Override // java.util.Collection, java.util.List
-    public final int hashCode() {
-        return this.f51096.hashCode();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private AbstractC4280 m39938() {
+        char cCharAt;
+        char cCharAt2 = this.f55394.charAt(this.f55396);
+        if (cCharAt2 == '*') {
+            this.f55396++;
+            return new C24418(EnumC6518.UNBOUNDED, null);
+        }
+        if (cCharAt2 == '+') {
+            this.f55396++;
+            return new C24418(EnumC6518.EXTENDS, m39938());
+        }
+        if (cCharAt2 == '-') {
+            this.f55396++;
+            return new C24418(EnumC6518.SUPER, m39938());
+        }
+        if (cCharAt2 == 'F') {
+            this.f55396++;
+            return new C20688(ClassTransform.FLOAT);
+        }
+        if (cCharAt2 == 'L') {
+            this.f55396++;
+            StringBuilder sb = new StringBuilder();
+            C23672 c23672 = null;
+            ArrayList arrayListM39937 = null;
+            do {
+                cCharAt = this.f55394.charAt(this.f55396);
+                if (cCharAt == '.' || cCharAt == ';') {
+                    this.f55396++;
+                    C23672 c23673 = new C23672(c23672, sb.toString(), arrayListM39937);
+                    sb.setLength(0);
+                    arrayListM39937 = null;
+                    c23672 = c23673;
+                } else if (cCharAt == '<') {
+                    arrayListM39937 = m39937('>');
+                } else {
+                    this.f55396++;
+                    sb.append(cCharAt);
+                }
+            } while (cCharAt != ';');
+            return c23672;
+        }
+        if (cCharAt2 == 'V') {
+            this.f55396++;
+            return new C20688(ClassTransform.VOID);
+        }
+        if (cCharAt2 == 'I') {
+            this.f55396++;
+            return new C20688(ClassTransform.INTEGER);
+        }
+        if (cCharAt2 == 'J') {
+            this.f55396++;
+            return new C20688(ClassTransform.LONG);
+        }
+        if (cCharAt2 == 'S') {
+            this.f55396++;
+            return new C20688(ClassTransform.SHORT);
+        }
+        if (cCharAt2 == 'T') {
+            int i = this.f55396 + 1;
+            this.f55396 = i;
+            int iIndexOf = this.f55394.indexOf(59, i);
+            C20688 c20688 = new C20688(this.f55394.substring(this.f55396, iIndexOf));
+            this.f55396 = iIndexOf + 1;
+            return c20688;
+        }
+        if (cCharAt2 == 'Z') {
+            this.f55396++;
+            return new C20688(ClassTransform.BOOLEAN);
+        }
+        if (cCharAt2 != '[') {
+            switch (cCharAt2) {
+                case 'B':
+                    this.f55396++;
+                    return new C20688(ClassTransform.BYTE);
+                case 'C':
+                    this.f55396++;
+                    return new C20688(ClassTransform.CHARACTER);
+                case 'D':
+                    this.f55396++;
+                    return new C20688(ClassTransform.DOUBLE);
+                default:
+                    throw new IllegalStateException(this.f55394.substring(0, this.f55396) + "!" + this.f55394.charAt(this.f55396) + "!" + this.f55394.substring(this.f55396 + 1));
+            }
+        }
+        this.f55396++;
+        return new C17704(m39938());
     }
 
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3169(IntUnaryOperator intUnaryOperator) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609, java.util.List
-    @Deprecated
-    public final Integer get(int i) {
-        return this.f54251.get(i);
-    }
-
-    @Override // java.util.List
-    @Deprecated
-    public final Object get(int i) {
-        return this.f54251.get(i);
-    }
-
-    @Override // l.InterfaceC10609
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo26775(int i, Integer num) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.List
-    @Deprecated
-    public final Object remove(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.InterfaceC10609, java.util.List
-    @Deprecated
-    public final int indexOf(Object obj) {
-        return this.f54251.indexOf(obj);
-    }
-
-    @Override // l.InterfaceC10609, java.util.List
-    @Deprecated
-    public final int lastIndexOf(Object obj) {
-        return this.f54251.lastIndexOf(obj);
-    }
-
-    @Override // l.InterfaceC10609
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo3174(InterfaceC16481 interfaceC16481) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.List, l.InterfaceC14674
-    @Deprecated
-    public final void sort(Comparator comparator) {
-        throw new UnsupportedOperationException();
-    }
-
-    public /* bridge */ /* synthetic */ List subList(int i, int i2) {
-        return subList(i, i2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private ArrayList m39937(char c) {
+        this.f55396++;
+        ArrayList arrayList = new ArrayList();
+        while (this.f55394.charAt(this.f55396) != c) {
+            arrayList.add(m39938());
+        }
+        this.f55396++;
+        return arrayList;
     }
 }

@@ -1,41 +1,37 @@
 .class public final Ll/ۧۢܶ;
-.super Ll/ۖۢܶ;
-.source "P3HL"
+.super Ll/᩻ۢܶ;
+.source "X7Z6"
 
 
 # direct methods
-.method public static ᩹()Ll/ۧۢܶ;
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    .line 42
-    new-instance v0, Ll/ۧۢܶ;
+    .line 40
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
-    invoke-direct {v0}, Ll/ۚۢܶ;-><init>()V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)Z
-    .locals 0
+.method public final sign()[B
+    .locals 1
 
-    .line 48
-    invoke-super {p0, p1}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Object;)Z
+    .line 79
+    iget-object v0, p0, Ll/᩻ۢܶ;->᩷:Ljava/security/Signature;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/security/Signature;->sign()[B
 
-    return p1
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final ۙ(Ljava/lang/Throwable;)Z
-    .locals 0
+.method public final ۙ()Ljava/lang/String;
+    .locals 1
 
-    .line 54
-    invoke-super {p0, p1}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Throwable;)Z
+    const-string v0, "ssh-rsa"
 
-    move-result p1
-
-    return p1
+    return-object v0
 .end method

@@ -1,8 +1,3 @@
-.class public abstract Ll/ۧ֨ۚ;
-.super Ll/۫ܿܰ;
-.source "A7IB"
-
-
-# virtual methods
-.method public abstract ۙ(Ll/֡֨ۚ;)V
-.end method
+.class public final Ll/ۧ֨ۚ;
+.super Ljava/lang/RuntimeException;
+.source "2ISH"

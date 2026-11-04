@@ -1,26 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۛۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W7SR */
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.ܿ᩶ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K1PX */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C18570 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5870 f59063;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC7987 f59064;
+    public final C1417 f60337;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C1116 f59065;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C25227 f60338;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C10104 f59066;
-
-    public C18570(C5870 c5870, C10104 c10104, C1116 c1116, InterfaceC7987 interfaceC7987) {
-        this.f59063 = c5870;
-        this.f59066 = c10104;
-        this.f59065 = c1116;
-        this.f59064 = interfaceC7987;
+    public C18570(ActivityC19974 activityC19974) {
+        C25227 c25227 = (C25227) activityC19974.m40395(R.layout.MT_Protector);
+        this.f60338 = c25227;
+        C1417 c1417 = new C1417(activityC19974);
+        this.f60337 = c1417;
+        c25227.setAdapter(c1417);
     }
 }

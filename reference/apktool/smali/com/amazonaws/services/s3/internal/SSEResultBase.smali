@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field public ֡:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
-.field public ܺ:Ljava/lang/String;
+.field public ܿ:Ljava/lang/String;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -26,43 +26,34 @@
 
 
 # virtual methods
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 34
-    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܺ:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public final ۙ()Ljava/lang/String;
     .locals 1
 
     .line 29
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۚ(Ljava/lang/String;)V
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
+
+    .line 49
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܿ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩴ(Ljava/lang/String;)V
     .locals 0
 
     .line 54
-    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܿ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ۨ()Ljava/lang/String;
-    .locals 1
-
-    .line 49
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->֡:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ܰ()Ljava/lang/String;
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
     .line 39
@@ -71,11 +62,20 @@
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     .line 44
     iput-object p1, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩶:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 0
+
+    .line 34
+    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܰ:Ljava/lang/String;
 
     return-void
 .end method

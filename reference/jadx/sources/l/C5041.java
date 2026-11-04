@@ -1,85 +1,72 @@
 package l;
 
-import android.content.Context;
-import android.util.AttributeSet;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۚ֫ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B97X */
+/* JADX INFO: renamed from: l.ۙܽܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A5XF */
 /* JADX INFO: loaded from: classes3.dex */
-public class C5041 extends C12562 {
-    @Override // l.C12562, android.widget.CompoundButton, android.widget.Checkable
-    public final void toggle() {
+public final class C5041 extends AbstractC2323 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f17458;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f17459;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean f17460;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f17461;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f17462;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f17463;
+
+    public C5041(long j, int i, long j2, long j3, boolean z, boolean z2) {
+        this.f17463 = j;
+        this.f17459 = i;
+        this.f17462 = j2;
+        this.f17461 = j3;
+        this.f17460 = z;
+        this.f17458 = z2;
     }
 
-    public C5041(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C5041(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        int i2 = 799151703;
-        int i3 = C0629.f2722;
-        int i4 = ThreadFactoryC3888.f14547;
-        int iM45029 = (i4 - C19806.m45029("᩵᩹")) * 25;
-        int i5 = ((iM45029 ^ i3) * (-6305)) ^ (-45708445);
-        int i6 = -68092694;
-        while (true) {
-            i2 = (iM45029 ^ i6) ^ (i5 & (((i2 ^ i3) * (-11459)) >> 31));
-            switch (i2) {
-                case -1818665418:
-                case 204958910:
-                    C1377.m4833();
-                    C1977.m6356();
-                    throw new RuntimeException();
-                case -1802162038:
-                case 1663510325:
-                    if (C0671.f2816 != 0) {
-                        iM45029 = (C19806.m45029("ۗ۫") + i4) * (-115);
-                        i5 = ((iM45029 ^ i3) * (-3077)) ^ (-1886699265);
-                        i6 = -1698872199;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("֡᩺") ^ i3;
-                        i5 = ((iM45029 ^ i4) * (-31361)) ^ 1165335445;
-                        i6 = -1452562033;
-                        continue;
-                    }
-                    break;
-                case -1436819231:
-                case -116602326:
-                    C0962.m3746();
-                    if (C1977.m6356()) {
-                        iM45029 = (i3 - ThreadFactoryC3888.m11306("᩺ᩴ")) * (-65);
-                        i5 = ((iM45029 ^ i4) * 24991) ^ (-2134484801);
-                        i6 = 794720837;
-                    }
-                    break;
-                case -1177317474:
-                case -472638526:
-                    if (C1377.f5749) {
-                        iM45029 = (C19806.m45029("֨ۛ") ^ i4) * (-55);
-                        i5 = ((iM45029 ^ i3) * 12283) ^ 986178502;
-                        i6 = 919798361;
-                    }
-                    break;
-                case -730042814:
-                case 1043161523:
-                    if (C2124.f7782 <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("ܶ֨") ^ i3;
-                        i5 = ((iM45029 ^ i4) * (-21169)) ^ 1991528946;
-                        i6 = -256168396;
-                    }
-                    break;
-                case 500808409:
-                case 1182601846:
-                    C0216.m1591();
-                    break;
-                default:
-                    return;
-            }
-            iM45029 = (ThreadFactoryC3888.m11306("ܿܽ") ^ i4) * (-103);
-            i5 = ((iM45029 ^ i3) * (-2429)) ^ (-1229676254);
-            i6 = -1368943748;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C5041)) {
+            return false;
         }
+        C5041 c5041 = (C5041) obj;
+        return this.f17460 == c5041.f17460 && this.f17458 == c5041.f17458 && this.f17459 == c5041.f17459 && this.f17463 == c5041.f17463 && this.f17462 == c5041.f17462 && this.f17461 == c5041.f17461;
+    }
+
+    public final int hashCode() {
+        int i = (((((this.f17460 ? 1231 : 1237) * 31) + (this.f17458 ? 1231 : 1237)) * 31) + this.f17459) * 31;
+        long j = this.f17463;
+        int i2 = (i + ((int) (j ^ (j >>> 32)))) * 31;
+        long j2 = this.f17462;
+        int i3 = (i2 + ((int) (j2 ^ (j2 >>> 32)))) * 31;
+        long j3 = this.f17461;
+        return i3 + ((int) (j3 ^ (j3 >>> 32)));
+    }
+
+    public final String toString() {
+        Object[] objArr = {Long.valueOf(this.f17463), Integer.valueOf(this.f17459), Long.valueOf(this.f17462), Long.valueOf(this.f17461), Boolean.valueOf(this.f17460), Boolean.valueOf(this.f17458)};
+        String[] strArrSplit = "offset;crc;compressedSize;size;zip64Sizes;allow32BitSizes".length() == 0 ? new String[0] : "offset;crc;compressedSize;size;zip64Sizes;allow32BitSizes".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C5041.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

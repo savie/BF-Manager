@@ -1,26 +1,25 @@
 package l;
 
-import java.util.List;
-import java.util.function.BiConsumer;
-
-/* JADX INFO: renamed from: l.ۜ᩹۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7QT */
+/* JADX INFO: renamed from: l.ۜۢۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 68UW */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7050 implements BiConsumer {
+public final class C7050 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23279 f23689;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f23253;
 
-    public /* synthetic */ C7050(C23279 c23279) {
-        this.f23689 = c23279;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f23254;
 
-    @Override // java.util.function.BiConsumer
-    public final void accept(Object obj, Object obj2) {
-        C23279.m51356(this.f23689, (String) obj, (List) obj2);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f23255;
 
-    public /* synthetic */ BiConsumer andThen(BiConsumer biConsumer) {
-        return C2866.$default$andThen(this, biConsumer);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C7445 f23256;
+
+    public C7050(C7445 c7445, long j, long j2) {
+        this.f23256 = c7445;
+        this.f23254 = j;
+        this.f23253 = j2;
     }
 }

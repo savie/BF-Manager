@@ -1,22 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 72QW */
-/* JADX INFO: loaded from: classes4.dex */
-public class C16309 implements InterfaceC2196 {
-    /* JADX INFO: renamed from: ۙ */
-    public String mo16351(String str) {
-        return str;
-    }
+/* JADX INFO: renamed from: l.ܶ᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes5.dex */
+public class C16309 extends C0407 {
 
-    @Override // l.InterfaceC2196
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1014(Object obj) {
-        String str = (String) obj;
-        if (str.length() <= 0 || str.charAt(0) != '[') {
-            return mo16351(str);
-        }
-        int iLastIndexOf = str.lastIndexOf("[") + 1;
-        return C15489.m37076(str.substring(0, iLastIndexOf), mo16351(str.substring(iLastIndexOf)));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f52951;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C0407 f52952;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f52953;
+
+    public C16309(int i, int i2, C0407 c0407) {
+        this.f52952 = c0407;
+        this.f52951 = i;
+        this.f52953 = i2;
     }
 }

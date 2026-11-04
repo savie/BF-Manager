@@ -1,19 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩺ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A63D */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8487 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) {
-        C14277 c14277 = new C14277();
-        try {
-            C23262 c23262 = (C23262) ((C14277) c15313.m36673()).m34475();
-            c14277.m34464((((long) c23262.m51342()) & 255) | ((((long) c23262.m51342()) & 255) << 8) | ((((long) c23262.m51342()) & 255) << 16) | ((((long) c23262.m51342()) & 255) << 24) | ((((long) c23262.m51342()) & 255) << 32) | ((((long) c23262.m51342()) & 255) << 40) | ((((long) c23262.m51342()) & 255) << 48) | ((255 & ((long) c23262.m51342())) << 56));
-        } catch (Exception unused) {
-            c14277.m34464(0L);
-        }
-        c15313.m36672(c14277);
+import android.view.ActionMode;
+import android.view.MenuItem;
+
+/* JADX INFO: renamed from: l.۠۟ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P6HO */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8487 implements InterfaceC7662 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6996 f27778;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActionMode.Callback f27779;
+
+    @Override // l.InterfaceC7662
+    public final void onMenuModeChange(C9898 c9898) {
+    }
+
+    public C8487(C6996 c6996, ActionMode.Callback callback) {
+        this.f27778 = c6996;
+        this.f27779 = callback;
+    }
+
+    @Override // l.InterfaceC7662
+    public final boolean onMenuItemSelected(C9898 c9898, MenuItem menuItem) {
+        return this.f27779.onActionItemClicked(this.f27778, menuItem);
     }
 }

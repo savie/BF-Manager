@@ -1,52 +1,52 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡᩶ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
+import java.util.function.IntConsumer;
+
+/* JADX INFO: renamed from: l.֡᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0643 extends C16167 {
+public final class C0643 extends AbstractC18301 implements InterfaceC12334 {
+    public final IntConsumer b;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public volatile long f2756;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f2757;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InterfaceC0769 f2758;
-
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final long mo2936() {
-        return this.f2756;
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        d((Integer) obj);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo2937(long j) {
-        this.f2756 = j;
+    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
+        return C4109.$default$andThen(this, intConsumer);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC0769 mo2939() {
-        return this.f2757;
+    @Override // l.InterfaceC12334
+    public final /* synthetic */ void d(Integer num) {
+        AbstractC13956.p(this, num);
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo2938(InterfaceC0769 interfaceC0769) {
-        this.f2757 = interfaceC0769;
+    @Override // java.util.function.Supplier
+    public final /* bridge */ /* synthetic */ Object get() {
+        return null;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC0769 mo2935() {
-        return this.f2758;
+    @Override // l.InterfaceC8605
+    public final Object b(AbstractC15470 abstractC15470, InterfaceC8409 interfaceC8409) {
+        abstractC15470.f0(interfaceC8409, this);
+        return null;
     }
 
-    @Override // l.AbstractC20981, l.InterfaceC0769
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void mo2934(InterfaceC0769 interfaceC0769) {
-        this.f2758 = interfaceC0769;
+    @Override // l.InterfaceC8605
+    public final /* bridge */ /* synthetic */ Object e(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409) {
+        a(abstractC13956, interfaceC8409);
+        return null;
+    }
+
+    public C0643(IntConsumer intConsumer, boolean z) {
+        super(z);
+        this.b = intConsumer;
+    }
+
+    @Override // l.AbstractC18301, l.InterfaceC15143
+    public final void accept(int i) {
+        this.b.accept(i);
     }
 }

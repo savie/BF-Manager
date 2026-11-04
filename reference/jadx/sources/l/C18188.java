@@ -1,10 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳܿۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 56UC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18188 extends IllegalStateException {
-    public C18188() {
-        super("Text page working set exceeds cache budget");
+import java.util.function.BiPredicate;
+
+/* JADX INFO: renamed from: l.ܿ۟᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C18188 implements BiPredicate {
+    public /* synthetic */ BiPredicate and(BiPredicate biPredicate) {
+        return C20517.$default$and(this, biPredicate);
+    }
+
+    public /* synthetic */ BiPredicate negate() {
+        return C20517.$default$negate(this);
+    }
+
+    public /* synthetic */ BiPredicate or(BiPredicate biPredicate) {
+        return C20517.$default$or(this, biPredicate);
+    }
+
+    @Override // java.util.function.BiPredicate
+    public final boolean test(Object obj, Object obj2) {
+        return ((AbstractC22664) obj).f73596 == ((AbstractC22664) obj2).f73596;
     }
 }

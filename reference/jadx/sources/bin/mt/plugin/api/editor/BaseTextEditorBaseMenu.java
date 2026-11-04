@@ -5,8 +5,8 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import bin.mt.plugin.api.PluginContext;
 import bin.mt.plugin.api.ui.PluginUI;
-import l.C13638;
-import l.C3012;
+import l.C17359;
+import l.C3188;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseTextEditorBaseMenu implements TextEditorBaseMenu {
@@ -29,7 +29,7 @@ public abstract class BaseTextEditorBaseMenu implements TextEditorBaseMenu {
     @Override // bin.mt.plugin.api.editor.TextEditorBaseMenu
     public PluginContext getContext() {
         PluginContext pluginContext = this.context;
-        C13638.requireNonNull(pluginContext);
+        C17359.requireNonNull(pluginContext);
         return pluginContext;
     }
 
@@ -38,9 +38,9 @@ public abstract class BaseTextEditorBaseMenu implements TextEditorBaseMenu {
         PluginContext context = getContext();
         String pluginId = context.getPluginId();
         int length = pluginId.length();
-        StringBuilder sbM8976 = C3012.m8976(pluginId, "\n\n");
-        sbM8976.append(getClass().getName());
-        SpannableString spannableString = new SpannableString(sbM8976.toString());
+        StringBuilder sbM10405 = C3188.m10405(pluginId, "\n\n");
+        sbM10405.append(getClass().getName());
+        SpannableString spannableString = new SpannableString(sbM10405.toString());
         int i = length + 1;
         int i2 = length + 2;
         spannableString.setSpan(new RelativeSizeSpan(0.1f), i, i2, 17);

@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -36,9 +36,9 @@ public class FalconPrivateKey extends ASN1Object {
         if (iIntValueExact != 0) {
             throw new IllegalArgumentException("unrecognized version");
         }
-        this.f = C15489.m37078(aSN1Sequence, 1);
-        this.g = C15489.m37078(aSN1Sequence, 2);
-        this.F = C15489.m37078(aSN1Sequence, 3);
+        this.f = C20551.m47118(aSN1Sequence, 1);
+        this.g = C20551.m47118(aSN1Sequence, 2);
+        this.F = C20551.m47118(aSN1Sequence, 3);
         if (aSN1Sequence.size() == 5) {
             this.publicKey = FalconPublicKey.getInstance(aSN1Sequence.getObjectAt(4));
         }

@@ -4,7 +4,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.view.View;
 import android.view.ViewGroup;
-import l.C22432;
+import l.C18185;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class CarouselOrientationHelper {
@@ -14,7 +14,7 @@ public abstract class CarouselOrientationHelper {
 
     public abstract int getDecoratedCrossAxisMeasurement(View view);
 
-    public abstract float getMaskMargins(C22432 c22432);
+    public abstract float getMaskMargins(C18185 c18185);
 
     public abstract RectF getMaskRect(float f, float f2, float f3, float f4);
 
@@ -84,8 +84,8 @@ public abstract class CarouselOrientationHelper {
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
             public int getDecoratedCrossAxisMeasurement(View view) {
-                C22432 c22432 = (C22432) view.getLayoutParams();
-                return carouselLayoutManager.getDecoratedMeasuredWidth(view) + ((ViewGroup.MarginLayoutParams) c22432).leftMargin + ((ViewGroup.MarginLayoutParams) c22432).rightMargin;
+                C18185 c18185 = (C18185) view.getLayoutParams();
+                return carouselLayoutManager.getDecoratedMeasuredWidth(view) + ((ViewGroup.MarginLayoutParams) c18185).leftMargin + ((ViewGroup.MarginLayoutParams) c18185).rightMargin;
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
@@ -95,8 +95,8 @@ public abstract class CarouselOrientationHelper {
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
-            public float getMaskMargins(C22432 c22432) {
-                return ((ViewGroup.MarginLayoutParams) c22432).topMargin + ((ViewGroup.MarginLayoutParams) c22432).bottomMargin;
+            public float getMaskMargins(C18185 c18185) {
+                return ((ViewGroup.MarginLayoutParams) c18185).topMargin + ((ViewGroup.MarginLayoutParams) c18185).bottomMargin;
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
@@ -178,8 +178,8 @@ public abstract class CarouselOrientationHelper {
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
             public int getDecoratedCrossAxisMeasurement(View view) {
-                C22432 c22432 = (C22432) view.getLayoutParams();
-                return carouselLayoutManager.getDecoratedMeasuredHeight(view) + ((ViewGroup.MarginLayoutParams) c22432).topMargin + ((ViewGroup.MarginLayoutParams) c22432).bottomMargin;
+                C18185 c18185 = (C18185) view.getLayoutParams();
+                return carouselLayoutManager.getDecoratedMeasuredHeight(view) + ((ViewGroup.MarginLayoutParams) c18185).topMargin + ((ViewGroup.MarginLayoutParams) c18185).bottomMargin;
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
@@ -189,8 +189,8 @@ public abstract class CarouselOrientationHelper {
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper
-            public float getMaskMargins(C22432 c22432) {
-                return ((ViewGroup.MarginLayoutParams) c22432).rightMargin + ((ViewGroup.MarginLayoutParams) c22432).leftMargin;
+            public float getMaskMargins(C18185 c18185) {
+                return ((ViewGroup.MarginLayoutParams) c18185).rightMargin + ((ViewGroup.MarginLayoutParams) c18185).leftMargin;
             }
 
             @Override // com.google.android.material.carousel.CarouselOrientationHelper

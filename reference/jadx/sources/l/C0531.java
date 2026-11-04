@@ -1,44 +1,58 @@
 package l;
 
-import android.os.Build;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewConfiguration;
-import android.widget.ListView;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
-/* JADX INFO: renamed from: l.֡ܽۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L9CC */
+/* JADX INFO: renamed from: l.֡ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J5NH */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0531 extends ListView {
+public final class C0531 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C12527 f2281;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean f2237;
 
-    public C0531(C12527 c12527) {
-        super(c12527.f41911);
-        this.f2281 = c12527;
-        setScrollBarDefaultDelayBeforeFade(ViewConfiguration.getScrollDefaultDelay() * 3);
-        if (Build.VERSION.SDK_INT >= 23) {
-            setScrollIndicators(3);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static Method f2238;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Method f2239;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static Method f2240;
+
+    static {
+        try {
+            Class cls = Integer.TYPE;
+            Class cls2 = Float.TYPE;
+            Method declaredMethod = AbsListView.class.getDeclaredMethod("positionSelector", cls, View.class, Boolean.TYPE, cls2, cls2);
+            f2239 = declaredMethod;
+            declaredMethod.setAccessible(true);
+            Method declaredMethod2 = AdapterView.class.getDeclaredMethod("setSelectedPositionInt", cls);
+            f2240 = declaredMethod2;
+            declaredMethod2.setAccessible(true);
+            Method declaredMethod3 = AdapterView.class.getDeclaredMethod("setNextSelectedPositionInt", cls);
+            f2238 = declaredMethod3;
+            declaredMethod3.setAccessible(true);
+            f2237 = true;
+        } catch (NoSuchMethodException unused) {
         }
     }
 
-    @Override // android.widget.ListView, android.widget.AbsListView, android.view.View
-    public final void onMeasure(int i, int i2) {
-        C12527 c12527 = this.f2281;
-        super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(c12527.f41929.getHeight() - c12527.f41921.getHeight(), 1073741824));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m2500() {
+        return f2237;
     }
 
-    @Override // android.view.ViewGroup, android.view.View
-    public final boolean dispatchTouchEvent(MotionEvent motionEvent) {
-        if (C12527.m31119(this.f2281)) {
-            return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m2499(C9479 c9479, int i, View view) {
+        try {
+            f2239.invoke(c9479, Integer.valueOf(i), view, Boolean.FALSE, -1, -1);
+            f2240.invoke(c9479, Integer.valueOf(i));
+            f2238.invoke(c9479, Integer.valueOf(i));
+        } catch (IllegalAccessException | InvocationTargetException unused) {
         }
-        return super.dispatchTouchEvent(motionEvent);
-    }
-
-    @Override // android.view.View
-    public final boolean awakenScrollBars() {
-        return super.awakenScrollBars();
     }
 }

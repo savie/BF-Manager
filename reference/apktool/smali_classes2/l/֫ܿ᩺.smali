@@ -1,14 +1,26 @@
 .class public interface abstract Ll/֫ܿ᩺;
 .super Ljava/lang/Object;
-.source "W6YQ"
-
-# interfaces
-.implements Ljava/lang/CharSequence;
+.source "643O"
 
 
 # virtual methods
-.method public abstract indexOf(CII)I
+.method public abstract ۙ(Ll/ۚܿ᩺;Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public abstract lastIndexOf(CII)I
+.method public abstract ۙ(Ll/ۜ᩶᩺;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract ۙ(Ll/ۢ᩶᩺;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract ۙ(Ll/ۧܿ᩺;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract ۙ(Ll/۬᩶᩺;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract ۙ(Ll/᩸ܿ᩺;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract ۙ(Ll/᩺᩶᩺;Ljava/lang/Object;)Ljava/lang/Object;
 .end method

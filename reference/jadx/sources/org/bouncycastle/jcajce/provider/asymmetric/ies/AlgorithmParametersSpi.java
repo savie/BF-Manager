@@ -19,7 +19,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.jce.spec.IESParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
     public IESParameterSpec currentSpec;
 

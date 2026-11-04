@@ -1,30 +1,53 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛܽۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8OH */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6175 {
+import android.os.Parcel;
+import android.os.Parcelable;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f21038;
+/* JADX INFO: renamed from: l.ۛۚۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 223J */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6175 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C12140();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f21039;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f21029;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f21040;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C9724 f21041;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public ArrayList f21032;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final float f21042;
+    public ArrayList f21033;
 
-    public C6175(C9724 c9724, AbstractC16511 abstractC16511, C15274 c15274, long j, long j2, float f, boolean z, long j3) {
-        this.f21041 = c9724;
-        this.f21039 = j2;
-        this.f21042 = f;
-        this.f21038 = z;
-        this.f21040 = j3;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C22866[] f21034;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public ArrayList f21036;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public String f21030 = null;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public ArrayList f21031 = new ArrayList();
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public ArrayList f21035 = new ArrayList();
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeStringList(this.f21033);
+        parcel.writeStringList(this.f21036);
+        parcel.writeTypedArray(this.f21034, i);
+        parcel.writeInt(this.f21029);
+        parcel.writeString(this.f21030);
+        parcel.writeStringList(this.f21031);
+        parcel.writeTypedList(this.f21035);
+        parcel.writeTypedList(this.f21032);
     }
 }

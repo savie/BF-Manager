@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EntropyGatherer implements Runnable {
     public static final Logger LOG = Logger.getLogger(EntropyGatherer.class.getName());
     public final IncrementalEntropySource baseRandom;

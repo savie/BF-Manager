@@ -1,63 +1,72 @@
 package l;
 
-import android.graphics.PointF;
-import android.view.View;
+import java.util.function.DoublePredicate;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.᩹᩻ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A65W */
+/* JADX INFO: renamed from: l.᩸ۛ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAPJ */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22620 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final View f73708;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f73709;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f73710;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f73711;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f73712;
+public final /* synthetic */ class C22620 implements InterfaceC1737 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f73713;
+    public final /* synthetic */ InterfaceC1737 f73099;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f73714;
-
-    public C22620(View view) {
-        this.f73708 = view;
+    public /* synthetic */ C22620(InterfaceC1737 interfaceC1737) {
+        this.f73099 = interfaceC1737;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m50145(PointF pointF) {
-        this.f73712 = Math.round(pointF.x);
-        int iRound = Math.round(pointF.y);
-        this.f73711 = iRound;
-        int i = this.f73714 + 1;
-        this.f73714 = i;
-        if (i == this.f73713) {
-            C16000.m37979(this.f73708, this.f73712, iRound, this.f73709, this.f73710);
-            this.f73714 = 0;
-            this.f73713 = 0;
-        }
+    @Override // java.util.function.DoublePredicate
+    public final /* synthetic */ boolean test(double d) {
+        return C5466.m16296(this, d);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50144(PointF pointF) {
-        this.f73709 = Math.round(pointF.x);
-        int iRound = Math.round(pointF.y);
-        this.f73710 = iRound;
-        int i = this.f73713 + 1;
-        this.f73713 = i;
-        if (this.f73714 == i) {
-            C16000.m37979(this.f73708, this.f73712, this.f73711, this.f73709, iRound);
-            this.f73714 = 0;
-            this.f73713 = 0;
-        }
+    public final /* synthetic */ DoublePredicate and(DoublePredicate doublePredicate) {
+        return C5466.m16295(this, doublePredicate);
+    }
+
+    public final /* synthetic */ DoublePredicate or(DoublePredicate doublePredicate) {
+        return C5466.m16298(this, doublePredicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final /* synthetic */ boolean test(Object obj) {
+        return C5466.m16297(this, (Float) obj);
+    }
+
+    @Override // l.InterfaceC1737
+    /* JADX INFO: renamed from: ᩷ */
+    public final C15160 mo6145(InterfaceC1737 interfaceC1737) {
+        return new C15160(this, interfaceC1737);
+    }
+
+    @Override // java.util.function.Predicate
+    public final Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    public final DoublePredicate negate() {
+        return new C22620(this);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public final Predicate mo7134negate() {
+        return new C22620(this);
+    }
+
+    @Override // l.InterfaceC1737
+    /* JADX INFO: renamed from: ۤ */
+    public final boolean mo6144(float f) {
+        return !this.f73099.mo6144(f);
+    }
+
+    @Override // l.InterfaceC1737
+    /* JADX INFO: renamed from: ۙ */
+    public final C12923 mo6143(InterfaceC1737 interfaceC1737) {
+        return new C12923(this, interfaceC1737);
+    }
+
+    public final Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 }

@@ -22,19 +22,19 @@
     const/4 v0, 0x2
 
     .line 0
-    invoke-static {p0, p0, v0, p0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, p0, v0, p0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v1
 
-    invoke-static {p0, v1, v0, v1}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result p0
 

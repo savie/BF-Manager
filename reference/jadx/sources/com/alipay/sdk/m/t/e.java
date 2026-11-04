@@ -28,7 +28,7 @@ public abstract class e {
     public static final String k = "api_name";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77915l = "api_version";
+    public static final String f82031l = "api_version";
     public static final String m = "data";
     public static final String n = "params";
     public static final String o = "public_key";
@@ -64,7 +64,7 @@ public abstract class e {
         map.put(p, Build.MODEL);
         map.put("namespace", "com.alipay.mobilecashier");
         map.put(k, "com.alipay.mcpay");
-        map.put(f77915l, b());
+        map.put(f82031l, b());
         return a(aVar, map, new HashMap());
     }
 
@@ -92,7 +92,7 @@ public abstract class e {
             jSONObjectA.put(com.alipay.sdk.m.n.b.j, aVarA.e());
             jSONObjectA.put(com.alipay.sdk.m.n.b.k, com.alipay.sdk.m.o.c.b(bVarC.b()));
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "BodyErr", th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "BodyErr", th);
             g.a(th);
         }
         return jSONObjectA.toString();

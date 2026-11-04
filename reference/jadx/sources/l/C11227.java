@@ -1,47 +1,50 @@
 package l;
 
-import java.util.TreeMap;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۧ᩶ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 79N1 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11227 {
+/* JADX INFO: renamed from: l.ۤ᩻ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TUG */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11227 extends AbstractC20178 implements Consumer {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f37985 = 0;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0747 f35417;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f37986;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public Object f35418;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int f37987;
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f37988;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C11227(InterfaceC8409 interfaceC8409, long j, C0747 c0747) {
+        super(interfaceC8409, j);
+        this.f35417 = c0747;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f37989;
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        this.f35418 = obj;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f37990;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final TreeMap f37991;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f37992;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f37993;
-
-    public C11227(String str, String str2, long j, int i, int i2, int i3, int[] iArr, TreeMap treeMap) {
-        this.f37988 = str;
-        this.f37989 = str2;
-        this.f37986 = j;
-        this.f37992 = i;
-        this.f37993 = i2;
-        this.f37987 = i3;
-        this.f37990 = iArr;
-        this.f37991 = treeMap;
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final boolean tryAdvance(Consumer consumer) {
+        if (!this.f64809.tryAdvance(this)) {
+            return false;
+        }
+        try {
+            C0747 c0747 = this.f35417;
+            Object obj = this.f35418;
+            long j = this.f64810;
+            this.f64810 = 1 + j;
+            if (!((C14912) c0747.f2725).apply(obj)) {
+                j = -1;
+            }
+            consumer.accept(Long.valueOf(j));
+            return true;
+        } finally {
+            this.f35418 = null;
+        }
     }
 }

@@ -1,66 +1,122 @@
-.class public abstract Ll/᩻۟᩵;
+.class public final Ll/᩻۟᩵;
 .super Ljava/lang/Object;
-.source "A5T6"
+.source "NAYZ"
+
+# interfaces
+.implements Ll/֨֡᩵;
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public ܰ:Ljava/lang/Object;
+
+.field public ᩶:Ll/ᩴ֨᩵;
 
 
 # direct methods
-.method public static ۙ(Ll/۫۠ۡ;Ljava/util/Set;)V
-    .locals 4
+.method public constructor <init>(Ll/ᩴ֨᩵;)V
+    .locals 0
 
-    .line 57
-    invoke-virtual {p0}, Ll/۫۠ۡ;->ۨ()V
+    .line 93
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    .line 94
+    iput-object p1, p0, Ll/᩻۟᩵;->᩶:Ll/ᩴ֨᩵;
 
-    move-result-object p1
+    .line 95
+    sget-object p1, Ll/ۚ۟᩵;->ۙ:Ll/ۚ۟᩵;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iput-object p1, p0, Ll/᩻۟᩵;->ܰ:Ljava/lang/Object;
 
-    move-result v0
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method private final readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 113
+    new-instance p1, Ljava/io/InvalidObjectException;
 
-    move-result-object v0
+    const-string v0, "Deserialization is supported via proxy only"
 
-    check-cast v0, Ll/ۜۙۡ;
+    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    .line 59
-    invoke-interface {v0}, Ll/ۜۙۡ;->getName()Ljava/lang/String;
+    throw p1
+.end method
+
+.method private final writeReplace()Ljava/lang/Object;
+    .locals 2
+
+    .line 111
+    new-instance v0, Ll/ۢ֡᩵;
+
+    invoke-virtual {p0}, Ll/᩻۟᩵;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Ll/۫۠ۡ;->write(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ll/ۢ֡᩵;-><init>(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    const/4 v2, 0x3
 
-    const-string v3, " = "
+# virtual methods
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
 
-    .line 116
-    invoke-virtual {p0, v3, v1, v2}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
+    .line 99
+    iget-object v0, p0, Ll/᩻۟᩵;->ܰ:Ljava/lang/Object;
 
-    .line 61
-    invoke-interface {v0}, Ll/ۜۙۡ;->getValue()Ll/ۧۨۡ;
+    sget-object v1, Ll/ۚ۟᩵;->ۙ:Ll/ۚ۟᩵;
+
+    if-ne v0, v1, :cond_0
+
+    .line 100
+    iget-object v0, p0, Ll/᩻۟᩵;->᩶:Ll/ᩴ֨᩵;
+
+    invoke-static {v0}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Ll/ᩴ֨᩵;->ۙ()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Ll/ܳ۟᩵;->ۙ(Ll/۫۠ۡ;Ll/ۧۨۡ;)V
+    iput-object v0, p0, Ll/᩻۟᩵;->ܰ:Ljava/lang/Object;
 
-    const/16 v0, 0xa
+    const/4 v0, 0x0
 
-    .line 62
-    invoke-virtual {p0, v0}, Ll/۫۠ۡ;->write(I)V
+    .line 101
+    iput-object v0, p0, Ll/᩻۟᩵;->᩶:Ll/ᩴ֨᩵;
 
-    goto :goto_0
-
-    .line 64
+    .line 104
     :cond_0
-    invoke-virtual {p0}, Ll/۫۠ۡ;->ۙ()V
+    iget-object v0, p0, Ll/᩻۟᩵;->ܰ:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 107
+    iget-object v0, p0, Ll/᩻۟᩵;->ܰ:Ljava/lang/Object;
+
+    sget-object v1, Ll/ۚ۟᩵;->ۙ:Ll/ۚ۟᩵;
+
+    if-eq v0, v1, :cond_0
+
+    .line 109
+    invoke-virtual {p0}, Ll/᩻۟᩵;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
+
+    return-object v0
 .end method

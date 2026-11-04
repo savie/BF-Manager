@@ -1,41 +1,48 @@
 package l;
 
-import java.util.Arrays;
-
-/* JADX INFO: renamed from: l.᩵ۙᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9F8 */
+/* JADX INFO: renamed from: l.ᩳܿ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 34PY */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19240 extends C10922 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final byte[] f62177 = {0, 0};
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final byte[] f62178 = {0, 0, 0, 0};
-
-    public C19240() {
+public final class C19240 extends AbstractC14239 {
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1767(C2832 c2832, Object obj) {
+        return super.mo1767((C2832) c2832.m51072(), obj);
     }
 
-    public C19240(int i) {
-        super(new byte[i]);
-        this.f37163 = 0;
-        this.f37161 = 0;
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1768(C10510 c10510, Object obj) {
+        return super.mo1768((C10510) c10510.m51072(), obj);
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final void m44194(int i) {
-        byte[] bArr = new byte[i];
-        Arrays.fill(bArr, (byte) 0);
-        m27383(i, bArr);
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1769(C10729 c10729, Object obj) {
+        return super.mo1769((C10729) c10729.m51072(), obj);
     }
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final void m44196() {
-        m27383(2, f62177);
+    @Override // l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1771(C17969 c17969, Object obj) {
+        return (C17969) c17969.m51072();
     }
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final void m44195() {
-        m27383(4, f62178);
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final C2832 mo1767(C2832 c2832, Object obj) {
+        return super.mo1767((C2832) c2832.m51072(), obj);
+    }
+
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC22664 mo1768(C10510 c10510, Object obj) {
+        return super.mo1768((C10510) c10510.m51072(), obj);
+    }
+
+    @Override // l.AbstractC14239, l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC22664 mo1769(C10729 c10729, Object obj) {
+        return super.mo1769((C10729) c10729.m51072(), obj);
     }
 }

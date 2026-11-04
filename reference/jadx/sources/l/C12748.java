@@ -1,133 +1,133 @@
 package l;
 
-import bin.mt.plus.R;
-import java.io.IOException;
-import java.util.function.Consumer;
-import net.sf.sevenzipjbinding.IInArchive;
-
-/* JADX INFO: renamed from: l.۫᩻᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: NB79 */
+/* JADX INFO: renamed from: l.۫֡᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 34PY */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12748 extends C18225 {
+public class C12748 extends C10510 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f42499;
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public AbstractC22664 f40814;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final ConcurrentMapC13783 f42500;
-
-    public C12748(final C21920 c21920) {
-        ConcurrentMapC13783 concurrentMapC13783 = new ConcurrentMapC13783();
-        this.f42500 = concurrentMapC13783;
-        C9030.stream(c21920.m48733()).map(new C7809()).filter(new C21214()).forEach(new Consumer() { // from class: l.ܺ᩻᩹
-            @Override // java.util.function.Consumer
-            /* JADX INFO: renamed from: accept */
-            public final void n(Object obj) {
-                C16981 c16981 = (C16981) obj;
-                this.f52438.f42500.put(Integer.valueOf(c16981.f54318), c16981);
-            }
-
-            public /* synthetic */ Consumer andThen(Consumer consumer) {
-                return C1455.$default$andThen(this, consumer);
-            }
-        });
-        if (concurrentMapC13783.isEmpty()) {
-            return;
-        }
-        C4716.f16636.submit(new Runnable() { // from class: l.᩶᩻᩹
-            @Override // java.lang.Runnable
-            public final void run() {
-                C12748.m31683(this.f66484, c21920);
-            }
-        });
-    }
-
-    @Override // l.C18225
+    @Override // l.C10510, l.AbstractC22664
     /* JADX INFO: renamed from: ۙ */
-    public final String mo7923(InterfaceC2557 interfaceC2557, int i) {
-        return C6024.m16342(((C10964) interfaceC2557).m27721());
+    public final AbstractC22664 mo23624(Object obj) {
+        return this;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m31683(C12748 c12748, C21920 c21920) {
-        for (int i : C9030.stream(c12748.f42500.keySet()).mapToInt(new C6339()).toArray()) {
-            C16981 c16981 = (C16981) c12748.f42500.get(Integer.valueOf(i));
-            if (c16981 != null && C18225.m42375(c16981.f54316)) {
-                c12748.f42500.remove(Integer.valueOf(i));
-                synchronized (c16981) {
-                    c16981.notifyAll();
-                }
-            }
-        }
-        if (c12748.f42500.isEmpty()) {
-            return;
-        }
-        int[] array = C9030.stream(c12748.f42500.keySet()).mapToInt(new C6339()).toArray();
-        IInArchive iInArchiveM48741 = null;
-        try {
-            iInArchiveM48741 = c21920.m48741();
-            iInArchiveM48741.extract(array, false, new C0752(c12748, iInArchiveM48741));
-        } catch (IOException unused) {
-        } finally {
-            c12748.f42500.clear();
-            C19431.m44468(iInArchiveM48741);
-        }
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۛۙ */
+    public final boolean mo9326() {
+        return true;
     }
 
-    @Override // l.C18225, l.InterfaceC13848
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo7926(InterfaceC2557 interfaceC2557) {
-        if (interfaceC2557.mo7985()) {
-            return C6024.m16343(((C10964) interfaceC2557).m27721());
-        }
-        return 0;
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final boolean mo9329() {
+        return true;
     }
 
-    @Override // l.C18225, l.InterfaceC13848
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final AbstractC22664 mo31585() {
+        return this;
+    }
+
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ܳۙ */
+    public final boolean mo18914() {
+        return false;
+    }
+
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ܺۙ */
+    public final boolean mo9331() {
+        return true;
+    }
+
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ᩹ۙ */
+    public final boolean mo18049() {
+        return true;
+    }
+
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo31586() {
+        return false;
+    }
+
+    public C12748(C24550 c24550, AbstractC22664 abstractC22664) {
+        this(abstractC22664, c24550);
+        c24550.f38067 = this;
+        c24550.f38066 = EnumC13603.f43208;
+        c24550.f79576 = new C14654((AbstractC11781) c24550);
+    }
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    public C12748(AbstractC22664 abstractC22664, AbstractC22970 abstractC22970) {
+        C14769 c14769M35543 = C14769.m35543();
+        C11256 c11256 = AbstractC22664.f73590;
+        super(null, c11256, c14769M35543);
+        this.f40814 = null;
+        this.f73596 = abstractC22970;
+        this.f40814 = abstractC22664 == null ? c11256 : abstractC22664;
+    }
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    public C12748(AbstractC22664 abstractC22664, AbstractC22970 abstractC22970, C14458 c14458) {
+        C14769 c14769M35543 = C14769.m35543();
+        C11256 c11256 = AbstractC22664.f73590;
+        super(c11256, c14769M35543, null, c14458);
+        this.f40814 = null;
+        this.f73596 = abstractC22970;
+        this.f40814 = abstractC22664 == null ? c11256 : abstractC22664;
+    }
+
+    @Override // l.C10510, l.AbstractC22664
     /* JADX INFO: renamed from: ۙ */
-    public final C14600 mo7925(AbstractC11462 abstractC11462, InterfaceC2557 interfaceC2557, int i) {
-        C18334 c18334M27721 = ((C10964) interfaceC2557).m27721();
-        int iM42575 = c18334M27721.m42575();
-        C16981 c16981 = (C16981) this.f42500.get(Integer.valueOf(iM42575));
-        if (c16981 != null) {
-            do {
-                synchronized (c16981) {
-                    try {
-                        c16981.wait(1000L);
-                    } catch (InterruptedException unused) {
-                    }
-                }
-            } while (this.f42500.containsKey(Integer.valueOf(iM42575)));
-        }
-        String strM16342 = C6024.m16342(c18334M27721);
-        if (i == 1) {
-            return m31681(strM16342, C0690.f2906, C0690.f2920);
-        }
-        if (i == 2) {
-            return m31681(strM16342, C0690.f2906, C0690.f2920);
-        }
-        if (i == 3) {
-            C0690 c0690 = C0690.f2939;
-            C14600 c14600M31681 = m31681(strM16342, c0690, c0690);
-            if (c14600M31681 != c0690.f2943) {
-                interfaceC2557.mo7976(R.id.MT_Protector, Boolean.TRUE);
-            }
-            return c14600M31681;
-        }
-        throw new RuntimeException();
+    public final C12748 mo4934(C14458 c14458) {
+        return new C14985(this, this.f40814, this.f73596, c14458);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C14600 m31681(String str, C0690 c0690, C0690 c0691) {
-        if (C18225.m42378(str)) {
-            return c0691.f2943;
-        }
-        C14600 c14600M35070 = C14600.m35070(C17169.m40091(str));
-        return c14600M35070 == null ? c0690.f2943 : c14600M35070;
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۙۙ */
+    public final EnumC21172 mo9097() {
+        return EnumC21172.ERROR;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m31687() {
-        this.f42499 = true;
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo9324(InterfaceC4764 interfaceC4764, Object obj) {
+        return interfaceC4764.mo10772(this, obj);
+    }
+
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۢ */
+    public final AbstractC22664 mo23449() {
+        return AbstractC22664.f73590;
+    }
+
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۘ */
+    public final C14769 mo9323() {
+        return C14769.m35543();
+    }
+
+    @Override // l.C10510, l.AbstractC22664
+    /* JADX INFO: renamed from: ۤۙ */
+    public C14769 mo15882() {
+        return C14769.m35543();
+    }
+
+    @Override // l.C10510, l.AbstractC22664, l.InterfaceC9769
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC18720 mo5501() {
+        return EnumC18720.ERROR;
+    }
+
+    @Override // l.AbstractC22664
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final AbstractC22664 mo31584() {
+        return this.f40814;
     }
 }

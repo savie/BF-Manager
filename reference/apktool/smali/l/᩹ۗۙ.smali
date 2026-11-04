@@ -1,338 +1,891 @@
-.class public final Ll/᩹ۗۙ;
+.class public Ll/᩹ۗۙ;
 .super Ljava/lang/Object;
-.source "I8QN"
+.source "48R2"
+
+
+# instance fields
+.field public ֡:Ll/֫۫ܽ;
+
+.field public ֨:I
+
+.field public ֫:I
+
+.field public ۖ:I
+
+.field public ۗ:I
+
+.field public ۘ:I
+
+.field public ۙ:Ll/ܶۗۙ;
+
+.field public ۚ:I
+
+.field public ۛ:Ll/֫۫ܽ;
+
+.field public ۟:I
+
+.field public ۡ:Z
+
+.field public ۢ:Z
+
+.field public ۤ:Z
+
+.field public ۧ:I
+
+.field public ۨ:Ljava/util/HashMap;
+
+.field public ۫:Z
+
+.field public ܰ:Ll/֫۫ܽ;
+
+.field public ܳ:Z
+
+.field public ܶ:I
+
+.field public ܺ:I
+
+.field public ܽ:I
+
+.field public ܿ:Ll/֫۫ܽ;
+
+.field public ᩳ:Z
+
+.field public ᩴ:I
+
+.field public ᩵:I
+
+.field public ᩶:I
+
+.field public ᩷:Ljava/util/HashSet;
+
+.field public ᩸:Z
+
+.field public ᩹:I
+
+.field public ᩺:Ll/֫۫ܽ;
+
+.field public ᩻:I
 
 
 # direct methods
-.method public static ۙ(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)I
-    .locals 2
+.method public constructor <init>()V
+    .locals 4
 
-    .line 100
-    invoke-virtual {p0}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getSupportedPerformancePoints()Ljava/util/List;
+    .line 115
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    const v0, 0x7fffffff
 
-    const/4 v0, 0x0
+    .line 117
+    iput v0, p0, Ll/᩹ۗۙ;->ܽ:I
 
-    if-eqz p0, :cond_9
+    .line 118
+    iput v0, p0, Ll/᩹ۗۙ;->ܺ:I
 
-    .line 101
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    .line 119
+    iput v0, p0, Ll/᩹ۗۙ;->᩻:I
 
-    move-result v1
+    .line 120
+    iput v0, p0, Ll/᩹ۗۙ;->ۧ:I
 
-    if-eqz v1, :cond_0
+    .line 121
+    iput v0, p0, Ll/᩹ۗۙ;->ۖ:I
 
-    goto :goto_4
-
-    .line 108
-    :cond_0
-    new-instance v1, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    double-to-int p3, p3
-
-    new-instance p4, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    invoke-direct {p4, p1, p2, p3}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;-><init>(III)V
-
-    const/4 p1, 0x0
-
-    .line 192
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    const/4 p3, 0x2
+    .line 122
+    iput v0, p0, Ll/᩹ۗۙ;->֨:I
 
     const/4 v1, 0x1
 
-    if-ge p1, p2, :cond_2
+    .line 123
+    iput-boolean v1, p0, Ll/᩹ۗۙ;->۫:Z
 
-    .line 193
-    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 124
+    iput-boolean v1, p0, Ll/᩹ۗۙ;->ۡ:Z
 
-    move-result-object p2
+    .line 125
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
 
-    invoke-static {p2}, Ll/᩺ۨ᩹;->ۙ(Ljava/lang/Object;)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+    move-result-object v2
 
-    move-result-object p2
+    iput-object v2, p0, Ll/᩹ۗۙ;->֡:Ll/֫۫ܽ;
 
-    invoke-virtual {p2, p4}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;->covers(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
+    .line 126
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
 
-    move-result p2
+    move-result-object v2
 
-    if-eqz p2, :cond_1
+    iput-object v2, p0, Ll/᩹ۗۙ;->ܿ:Ll/֫۫ܽ;
 
-    const/4 p0, 0x2
+    const/4 v2, 0x0
 
-    goto :goto_1
+    .line 127
+    iput v2, p0, Ll/᩹ۗۙ;->۟:I
 
-    :cond_1
-    add-int/lit8 p1, p1, 0x1
+    .line 129
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
+
+    move-result-object v3
+
+    iput-object v3, p0, Ll/᩹ۗۙ;->ۛ:Ll/֫۫ܽ;
+
+    .line 130
+    iput v2, p0, Ll/᩹ۗۙ;->ۘ:I
+
+    .line 131
+    iput v0, p0, Ll/᩹ۗۙ;->֫:I
+
+    .line 132
+    iput v0, p0, Ll/᩹ۗۙ;->ۚ:I
+
+    .line 133
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->᩺:Ll/֫۫ܽ;
+
+    .line 134
+    sget-object v0, Ll/ܶۗۙ;->ۙ:Ll/ܶۗۙ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ۙ:Ll/ܶۗۙ;
+
+    .line 136
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ܰ:Ll/֫۫ܽ;
+
+    .line 137
+    iput v2, p0, Ll/᩹ۗۙ;->᩶:I
+
+    .line 138
+    iput-boolean v1, p0, Ll/᩹ۗۙ;->ۢ:Z
+
+    .line 139
+    iput v2, p0, Ll/᩹ۗۙ;->ᩴ:I
+
+    .line 140
+    iput-boolean v2, p0, Ll/᩹ۗۙ;->ᩳ:Z
+
+    .line 142
+    iput-boolean v2, p0, Ll/᩹ۗۙ;->ܳ:Z
+
+    .line 144
+    iput-boolean v2, p0, Ll/᩹ۗۙ;->᩸:Z
+
+    .line 145
+    iput-boolean v2, p0, Ll/᩹ۗۙ;->ۤ:Z
+
+    .line 146
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ۨ:Ljava/util/HashMap;
+
+    .line 147
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۗۗۙ;)V
+    .locals 0
+
+    .line 161
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 162
+    invoke-direct {p0, p1}, Ll/᩹ۗۙ;->᩷(Ll/ۗۗۙ;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic ֡(Ll/᩹ۗۙ;)Ll/֫۫ܽ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->֡:Ll/֫۫ܽ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ֨(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->֨:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ֫(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->֫:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۖ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ۖ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۗ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ۗ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۘ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ۘ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۙ(Ll/᩹ۗۙ;)Ll/ܶۗۙ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->ۙ:Ll/ܶۗۙ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ۚ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ۚ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۛ(Ll/᩹ۗۙ;)Ll/֫۫ܽ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->ۛ:Ll/֫۫ܽ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ۟(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->۟:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۡ(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->ۡ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۢ(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->ۢ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۤ(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->ۤ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۧ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ۧ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۨ(Ll/᩹ۗۙ;)Ljava/util/HashMap;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->ۨ:Ljava/util/HashMap;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ۫(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->۫:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ܰ(Ll/᩹ۗۙ;)Ll/֫۫ܽ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->ܰ:Ll/֫۫ܽ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ܳ(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->ܳ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ܶ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ܶ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ܺ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ܺ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ܽ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ܽ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ܿ(Ll/᩹ۗۙ;)Ll/֫۫ܽ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->ܿ:Ll/֫۫ܽ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩳ(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->ᩳ:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩴ(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->ᩴ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩵(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->᩵:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩶(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->᩶:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/᩹ۗۙ;)Ljava/util/HashSet;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    return-object p0
+.end method
+
+.method private ᩷(Ll/ۗۗۙ;)V
+    .locals 2
+    .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNull;
+        value = {
+            "preferredVideoMimeTypes",
+            "preferredVideoLanguages",
+            "preferredAudioLanguages",
+            "preferredAudioMimeTypes",
+            "audioOffloadPreferences",
+            "preferredTextLanguages",
+            "overrides",
+            "disabledTrackTypes"
+        }
+    .end annotation
+
+    .line 290
+    iget v0, p1, Ll/ۗۗۙ;->ܽ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ܽ:I
+
+    .line 291
+    iget v0, p1, Ll/ۗۗۙ;->ܺ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ܺ:I
+
+    .line 292
+    iget v0, p1, Ll/ۗۗۙ;->᩻:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->᩻:I
+
+    .line 293
+    iget v0, p1, Ll/ۗۗۙ;->ۧ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ۧ:I
+
+    .line 294
+    iget v0, p1, Ll/ۗۗۙ;->᩵:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->᩵:I
+
+    .line 295
+    iget v0, p1, Ll/ۗۗۙ;->ۗ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ۗ:I
+
+    .line 296
+    iget v0, p1, Ll/ۗۗۙ;->᩹:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->᩹:I
+
+    .line 297
+    iget v0, p1, Ll/ۗۗۙ;->ܶ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ܶ:I
+
+    .line 298
+    iget v0, p1, Ll/ۗۗۙ;->ۖ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ۖ:I
+
+    .line 299
+    iget v0, p1, Ll/ۗۗۙ;->֨:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->֨:I
+
+    .line 300
+    iget-boolean v0, p1, Ll/ۗۗۙ;->۫:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->۫:Z
+
+    .line 302
+    iget-boolean v0, p1, Ll/ۗۗۙ;->ۡ:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ۡ:Z
+
+    .line 303
+    iget-object v0, p1, Ll/ۗۗۙ;->֡:Ll/֫۫ܽ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->֡:Ll/֫۫ܽ;
+
+    .line 304
+    iget-object v0, p1, Ll/ۗۗۙ;->ܿ:Ll/֫۫ܽ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ܿ:Ll/֫۫ܽ;
+
+    .line 305
+    iget v0, p1, Ll/ۗۗۙ;->۟:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->۟:I
+
+    .line 307
+    iget-object v0, p1, Ll/ۗۗۙ;->ۛ:Ll/֫۫ܽ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ۛ:Ll/֫۫ܽ;
+
+    .line 308
+    iget v0, p1, Ll/ۗۗۙ;->ۘ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ۘ:I
+
+    .line 309
+    iget v0, p1, Ll/ۗۗۙ;->֫:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->֫:I
+
+    .line 310
+    iget v0, p1, Ll/ۗۗۙ;->ۚ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ۚ:I
+
+    .line 311
+    iget-object v0, p1, Ll/ۗۗۙ;->᩺:Ll/֫۫ܽ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->᩺:Ll/֫۫ܽ;
+
+    .line 312
+    iget-object v0, p1, Ll/ۗۗۙ;->ۙ:Ll/ܶۗۙ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ۙ:Ll/ܶۗۙ;
+
+    .line 314
+    iget-object v0, p1, Ll/ۗۗۙ;->ܰ:Ll/֫۫ܽ;
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ܰ:Ll/֫۫ܽ;
+
+    .line 315
+    iget v0, p1, Ll/ۗۗۙ;->᩶:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->᩶:I
+
+    .line 316
+    iget-boolean v0, p1, Ll/ۗۗۙ;->ۢ:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ۢ:Z
+
+    .line 318
+    iget v0, p1, Ll/ۗۗۙ;->ᩴ:I
+
+    iput v0, p0, Ll/᩹ۗۙ;->ᩴ:I
+
+    .line 319
+    iget-boolean v0, p1, Ll/ۗۗۙ;->ᩳ:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ᩳ:Z
+
+    .line 321
+    iget-boolean v0, p1, Ll/ۗۗۙ;->ܳ:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ܳ:Z
+
+    .line 323
+    iget-boolean v0, p1, Ll/ۗۗۙ;->᩸:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->᩸:Z
+
+    .line 324
+    iget-boolean v0, p1, Ll/ۗۗۙ;->ۤ:Z
+
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ۤ:Z
+
+    .line 325
+    new-instance v0, Ljava/util/HashSet;
+
+    iget-object v1, p1, Ll/ۗۗۙ;->᩷:Ll/۠۫ܽ;
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    .line 326
+    new-instance v0, Ljava/util/HashMap;
+
+    iget-object p1, p1, Ll/ۗۗۙ;->ۨ:Ll/ܽ۫ܽ;
+
+    invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    iput-object v0, p0, Ll/᩹ۗۙ;->ۨ:Ljava/util/HashMap;
+
+    return-void
+.end method
+
+.method public static bridge synthetic ᩸(Ll/᩹ۗۙ;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Ll/᩹ۗۙ;->᩸:Z
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩹(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->᩹:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ᩺(Ll/᩹ۗۙ;)Ll/֫۫ܽ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩹ۗۙ;->᩺:Ll/֫۫ܽ;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩻(Ll/᩹ۗۙ;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩹ۗۙ;->᩻:I
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public ۙ()Ll/ۗۗۙ;
+    .locals 1
+
+    .line 881
+    new-instance v0, Ll/ۗۗۙ;
+
+    invoke-direct {v0, p0}, Ll/ۗۗۙ;-><init>(Ll/᩹ۗۙ;)V
+
+    return-object v0
+.end method
+
+.method public ۙ(I)Ll/᩹ۗۙ;
+    .locals 2
+
+    .line 829
+    iget-object v0, p0, Ll/᩹ۗۙ;->ۨ:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .line 830
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 831
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/ܽۗۙ;
+
+    .line 86
+    iget-object v1, v1, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
+
+    iget v1, v1, Ll/ܺۗۙ;->ᩴ:I
+
+    if-ne v1, p1, :cond_0
+
+    .line 833
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    :cond_2
-    const/4 p0, 0x1
-
-    :goto_1
-    if-ne p0, v1, :cond_8
-
-    .line 115
-    invoke-static {}, Ll/֨ۗۙ;->ۙ()Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    if-nez p1, :cond_8
-
-    .line 133
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 p2, 0x23
-
-    if-lt p1, p2, :cond_3
-
-    goto :goto_2
-
-    .line 139
-    :cond_3
-    invoke-static {v0}, Ll/᩹ۗۙ;->ۙ(Z)I
-
-    move-result p1
-
-    .line 142
-    invoke-static {v1}, Ll/᩹ۗۙ;->ۙ(Z)I
-
-    move-result p2
-
-    if-nez p1, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    if-nez p2, :cond_5
-
-    if-eq p1, p3, :cond_6
-
-    goto :goto_3
-
-    :cond_5
-    if-ne p1, p3, :cond_7
-
-    if-eq p2, p3, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    const/4 v1, 0x0
-
-    .line 120
-    :cond_7
-    :goto_3
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ll/֨ۗۙ;->ۙ(Ljava/lang/Boolean;)V
-
-    .line 121
-    invoke-static {}, Ll/֨ۗۙ;->ۙ()Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    return p0
-
-    :cond_9
-    :goto_4
-    return v0
+    :cond_1
+    return-object p0
 .end method
 
-.method public static ۙ(Z)I
+.method public ۙ(IZ)Ll/᩹ۗۙ;
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    .line 872
+    iget-object p2, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-object p0
+
+    .line 874
+    :cond_0
+    iget-object p2, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    return-object p0
+.end method
+
+.method public ۙ(Ljava/util/Set;)Ll/᩹ۗۙ;
+    .locals 1
+
+    .line 856
+    iget-object v0, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+
+    .line 857
+    iget-object v0, p0, Ll/᩹ۗۙ;->᩷:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    return-object p0
+.end method
+
+.method public ۙ(Ll/ܽۗۙ;)Ll/᩹ۗۙ;
+    .locals 2
+
+    .line 86
+    iget-object v0, p1, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
+
+    iget v1, v0, Ll/ܺۗۙ;->ᩴ:I
+
+    .line 814
+    invoke-virtual {p0, v1}, Ll/᩹ۗۙ;->ۙ(I)Ll/᩹ۗۙ;
+
+    .line 815
+    iget-object v1, p0, Ll/᩹ۗۙ;->ۨ:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p0
+.end method
+
+.method public varargs ۙ([Ljava/lang/String;)Ll/᩹ۗۙ;
     .locals 5
+
+    .line 885
+    sget v0, Ll/֫۫ܽ;->᩶:I
+
+    .line 730
+    new-instance v0, Ll/᩸۫ܽ;
+
+    invoke-direct {v0}, Ll/᩸۫ܽ;-><init>()V
+
+    .line 886
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v1, :cond_0
+
+    aget-object v4, p1, v3
+
+    .line 155
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 887
+    invoke-static {v4}, Ll/ۜۨۙ;->ۤ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ll/ۜܳܽ;->᩷(Ljava/lang/Object;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 889
+    :cond_0
+    invoke-virtual {v0}, Ll/᩸۫ܽ;->ۙ()Ll/֫۫ܽ;
+
+    move-result-object p1
+
+    .line 712
+    iput-object p1, p0, Ll/᩹ۗۙ;->ܰ:Ll/֫۫ܽ;
+
+    .line 713
+    iput-boolean v2, p0, Ll/᩹ۗۙ;->ۢ:Z
+
+    return-object p0
+.end method
+
+.method public final ۙ(Ll/ۗۗۙ;)V
+    .locals 0
+
+    .line 333
+    invoke-direct {p0, p1}, Ll/᩹ۗۙ;->᩷(Ll/ۗۗۙ;)V
+
+    return-void
+.end method
+
+.method public ۤ()Ll/᩹ۗۙ;
+    .locals 1
 
     const/4 v0, 0x0
 
-    .line 157
-    :try_start_0
-    new-instance v1, Ll/ۤᩴۙ;
+    new-array v0, v0, [Ljava/lang/String;
 
-    invoke-direct {v1}, Ll/ۤᩴۙ;-><init>()V
+    .line 698
+    invoke-virtual {p0, v0}, Ll/᩹ۗۙ;->ۙ([Ljava/lang/String;)Ll/᩹ۗۙ;
 
-    const-string v2, "video/avc"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ll/ۤᩴۙ;->᩹(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Ll/ۤᩴۙ;->ۙ()Ll/۟ᩴۙ;
+.method public ᩷()Ll/᩹ۗۙ;
+    .locals 1
 
-    move-result-object v1
+    const/4 v0, -0x3
 
-    iget-object v2, v1, Ll/۟ᩴۙ;->ܰۙ:Ljava/lang/String;
+    .line 739
+    iput v0, p0, Ll/᩹ۗۙ;->ᩴ:I
 
-    if-eqz v2, :cond_4
+    return-object p0
+.end method
 
-    .line 210
-    invoke-static {v2, p0, v0}, Ll/᩶ۗۙ;->ۙ(Ljava/lang/String;ZZ)Ljava/util/List;
+.method public ᩸()Ll/᩹ۗۙ;
+    .locals 1
 
-    move-result-object v2
+    const/4 v0, 0x0
 
-    .line 245
-    invoke-static {v1}, Ll/᩶ۗۙ;->ۙ(Ll/۟ᩴۙ;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    .line 247
-    invoke-static {}, Ll/᩹ܿܶ;->of()Ll/᩹ܿܶ;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    .line 249
-    :cond_0
-    invoke-static {v1, p0, v0}, Ll/᩶ۗۙ;->ۙ(Ljava/lang/String;ZZ)Ljava/util/List;
-
-    move-result-object p0
+    .line 725
+    iput v0, p0, Ll/᩹ۗۙ;->᩶:I
 
     .line 726
-    :goto_0
-    new-instance v1, Ll/ۙܿܶ;
+    iput-boolean v0, p0, Ll/᩹ۗۙ;->ۢ:Z
 
-    invoke-direct {v1}, Ll/ۙܿܶ;-><init>()V
-
-    .line 216
-    invoke-virtual {v1, v2}, Ll/᩻۫ܶ;->ۙ(Ljava/util/List;)V
-
-    .line 217
-    invoke-virtual {v1, p0}, Ll/᩻۫ܶ;->ۙ(Ljava/util/List;)V
-
-    .line 218
-    invoke-virtual {v1}, Ll/ۙܿܶ;->ۙ()Ll/᩹ܿܶ;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    .line 166
-    :goto_1
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_4
-
-    .line 167
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ۚۗۙ;
-
-    iget-object v2, v2, Ll/ۚۗۙ;->ܰ:Landroid/media/MediaCodecInfo$CodecCapabilities;
-
-    if-eqz v2, :cond_3
-
-    .line 169
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ۚۗۙ;
-
-    iget-object v2, v2, Ll/ۚۗۙ;->ܰ:Landroid/media/MediaCodecInfo$CodecCapabilities;
-
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    .line 172
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getSupportedPerformancePoints()Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    .line 173
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    .line 174
-    new-instance p0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    new-instance p0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    const/16 v1, 0x500
-
-    const/16 v3, 0x2d0
-
-    const/16 v4, 0x3c
-
-    invoke-direct {p0, v1, v3, v4}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;-><init>(III)V
-
-    const/4 v1, 0x0
-
-    .line 192
-    :goto_2
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_2
-
-    .line 193
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ll/᩺ۨ᩹;->ۙ(Ljava/lang/Object;)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p0}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;->covers(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
-
-    move-result v3
-    :try_end_0
-    .catch Ll/ۡۗۙ; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz v3, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :catch_0
-    :cond_4
-    return v0
+    return-object p0
 .end method

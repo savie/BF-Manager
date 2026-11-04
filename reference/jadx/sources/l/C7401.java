@@ -1,69 +1,87 @@
 package l;
 
-import android.content.ComponentName;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import android.os.SystemClock;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.۟ۤۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G135 */
+/* JADX INFO: renamed from: l.ۜ᩷ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: RB4Y */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7401 extends BaseAdapter {
+public final class C7401 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC20807 f24594;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final ThreadLocal f24380 = new ThreadLocal();
 
-    @Override // android.widget.Adapter
-    public final Object getItem(int i) {
-        return null;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C8892 f24383;
 
-    @Override // android.widget.Adapter
-    public final long getItemId(int i) {
-        return 0L;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C9086 f24382 = new C9086();
 
-    public C7401(ActivityC20807 activityC20807) {
-        this.f24594 = activityC20807;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f24381 = new ArrayList();
 
-    @Override // android.widget.Adapter
-    public final int getCount() {
-        return this.f24594.f67640.size();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C10383 f24384 = new C10383(this);
 
-    @Override // android.widget.Adapter
-    public final View getView(int i, View view, ViewGroup viewGroup) {
-        ActivityC20807 activityC20807 = this.f24594;
-        if (view == null) {
-            view = activityC20807.getLayoutInflater().inflate(R.layout.MT_Protector, viewGroup, false);
-            C2766.m8438(view);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f24385 = false;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC9637 m20312() {
+        if (this.f24383 == null) {
+            this.f24383 = new C8892(this.f24384);
         }
-        ViewGroup viewGroup2 = (ViewGroup) view;
-        TextView textView = (TextView) viewGroup2.getChildAt(0);
-        TextView textView2 = (TextView) viewGroup2.getChildAt(1);
-        C21512 c21512 = (C21512) activityC20807.f67640.get(i);
-        Boolean boolValueOf = (Boolean) activityC20807.f67642.m40144(i, (Integer) null);
-        if (boolValueOf == null) {
-            boolValueOf = Boolean.valueOf(c21512.m48179());
-            activityC20807.f67642.m40149(i, boolValueOf);
+        return this.f24383;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20314(AbstractC12292 abstractC12292) {
+        this.f24382.remove(abstractC12292);
+        ArrayList arrayList = this.f24381;
+        int iIndexOf = arrayList.indexOf(abstractC12292);
+        if (iIndexOf >= 0) {
+            arrayList.set(iIndexOf, null);
+            this.f24385 = true;
         }
-        textView.setText(c21512.m48176());
-        StringBuilder sb = new StringBuilder();
-        if (c21512.m48177() != null) {
-            sb.append(activityC20807.getString(R.string.MT_Protector));
-            sb.append(" - ");
-            sb.append(c21512.m48177().m18081());
-        } else {
-            ComponentName componentNameMo16277 = c21512.m48182().mo16277();
-            sb.append(componentNameMo16277.getPackageName());
-            sb.append("/");
-            sb.append(componentNameMo16277.getShortClassName());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20313(long j) {
+        ArrayList arrayList;
+        long jUptimeMillis = SystemClock.uptimeMillis();
+        int i = 0;
+        while (true) {
+            arrayList = this.f24381;
+            if (i >= arrayList.size()) {
+                break;
+            }
+            InterfaceC1435 interfaceC1435 = (InterfaceC1435) arrayList.get(i);
+            if (interfaceC1435 != null) {
+                C9086 c9086 = this.f24382;
+                Long l2 = (Long) c9086.get(interfaceC1435);
+                if (l2 == null) {
+                    interfaceC1435.mo5173(j);
+                } else if (l2.longValue() < jUptimeMillis) {
+                    c9086.remove(interfaceC1435);
+                    interfaceC1435.mo5173(j);
+                }
+            }
+            i++;
         }
-        textView2.setText(sb.toString());
-        textView2.setTextColor(boolValueOf.booleanValue() ? C20368.f66007 : C20368.f65966);
-        return view;
+        if (!this.f24385) {
+            return;
+        }
+        int size = arrayList.size();
+        while (true) {
+            size--;
+            if (size >= 0) {
+                if (arrayList.get(size) == null) {
+                    arrayList.remove(size);
+                }
+            } else {
+                this.f24385 = false;
+                return;
+            }
+        }
     }
 }

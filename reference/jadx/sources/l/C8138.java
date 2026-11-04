@@ -1,62 +1,44 @@
 package l;
 
-import java.util.Map;
+import android.content.Context;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.Choreographer;
+import com.alipay.sdk.app.OpenAuthTask;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
-/* JADX INFO: renamed from: l.۠ۧᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8138 implements Map.Entry {
-    public final Object a;
-    public Object b;
-    public final ConcurrentMapC13783 c;
-
-    public C8138(Object obj, Object obj2, ConcurrentMapC13783 concurrentMapC13783) {
-        this.a = obj;
-        this.b = obj2;
-        this.c = concurrentMapC13783;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object getKey() {
-        return this.a;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object getValue() {
-        return this.b;
-    }
-
-    @Override // java.util.Map.Entry
-    public final int hashCode() {
-        return this.a.hashCode() ^ this.b.hashCode();
-    }
-
-    public final String toString() {
-        return AbstractC14884.s(this.a, this.b);
-    }
-
-    @Override // java.util.Map.Entry
-    public final boolean equals(Object obj) {
-        Map.Entry entry;
-        Object key;
-        Object value;
-        if (!(obj instanceof Map.Entry) || (key = (entry = (Map.Entry) obj).getKey()) == null || (value = entry.getValue()) == null) {
-            return false;
+/* JADX INFO: renamed from: l.۟᩶᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 79M1 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C8138 implements InterfaceC2588 {
+    @Override // l.InterfaceC2588
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo8653(Context context) {
+        if (Build.VERSION.SDK_INT >= 24) {
+            final Context applicationContext = context.getApplicationContext();
+            Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback(this) { // from class: l.᩶᩶᩷
+                @Override // android.view.Choreographer.FrameCallback
+                public final void doFrame(long j) {
+                    Handler handler;
+                    if (Build.VERSION.SDK_INT >= 28) {
+                        handler = C18579.m43159(Looper.getMainLooper());
+                    } else {
+                        handler = new Handler(Looper.getMainLooper());
+                    }
+                    handler.postDelayed(new RunnableC3291(2, applicationContext), new Random().nextInt(Math.max(1000, 1)) + OpenAuthTask.Duplex);
+                }
+            });
+            return new C0680();
         }
-        Object obj2 = this.a;
-        if (key != obj2 && !key.equals(obj2)) {
-            return false;
-        }
-        Object obj3 = this.b;
-        return value == obj3 || value.equals(obj3);
+        return new C0680();
     }
 
-    @Override // java.util.Map.Entry
-    public final Object setValue(Object obj) {
-        obj.getClass();
-        Object obj2 = this.b;
-        this.b = obj;
-        this.c.put(this.a, obj);
-        return obj2;
+    @Override // l.InterfaceC2588
+    /* JADX INFO: renamed from: ۙ */
+    public final List mo8654() {
+        return Collections.EMPTY_LIST;
     }
 }

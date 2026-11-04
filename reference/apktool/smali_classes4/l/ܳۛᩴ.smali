@@ -1,92 +1,26 @@
-.class public final synthetic Ll/ܳۛᩴ;
+.class public final Ll/ܳۛᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/function/DoubleConsumer;
+.source "E177"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public ۙ:J
 
-.field public final synthetic b:Ljava/util/function/Consumer;
+.field public final ᩷:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/Consumer;I)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput p2, p0, Ll/ܳۛᩴ;->a:I
-
-    iput-object p1, p0, Ll/ܳۛᩴ;->b:Ljava/util/function/Consumer;
-
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 14
+    iput-wide p1, p0, Ll/ܳۛᩴ;->᩷:J
 
-
-# virtual methods
-.method public final accept(D)V
-    .locals 1
-
-    iget v0, p0, Ll/ܳۛᩴ;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 0
-    iget-object v0, p0, Ll/ܳۛᩴ;->b:Ljava/util/function/Consumer;
-
-    check-cast v0, Ll/᩵ۖ۠;
-
-    invoke-interface {v0, p1, p2}, Ll/᩵ۖ۠;->accept(D)V
+    .line 15
+    iput-wide p3, p0, Ll/ܳۛᩴ;->ۙ:J
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ll/ܳۛᩴ;->b:Ljava/util/function/Consumer;
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/DoubleConsumer;)Ljava/util/function/DoubleConsumer;
-    .locals 1
-
-    iget v0, p0, Ll/ܳۛᩴ;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܶ֡ᩴ;->a(Ljava/util/function/DoubleConsumer;Ljava/util/function/DoubleConsumer;)Ll/۟᩻ᩴ;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ll/ܶ֡ᩴ;->a(Ljava/util/function/DoubleConsumer;Ljava/util/function/DoubleConsumer;)Ll/۟᩻ᩴ;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

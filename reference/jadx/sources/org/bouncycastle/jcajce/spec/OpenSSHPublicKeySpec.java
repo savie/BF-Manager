@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.util.OpenSSHPublicKeyUtil;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OpenSSHPublicKeySpec extends EncodedKeySpec {
     public static final String[] allowedTypes = {OpenSSHPublicKeyUtil.RSA, OpenSSHPublicKeyUtil.ED_25519, OpenSSHPublicKeyUtil.DSS};
     public final String type;

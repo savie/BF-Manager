@@ -1,181 +1,63 @@
 .class public final Ll/۬ۘᩴ;
-.super Ll/᩻ۚᩴ;
-.source "WKX"
+.super Ll/ᩴۜ᩷;
+.source "313O"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۠ۘᩴ;
+.field public final synthetic ܰ:Ll/᩻ܰᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/۠ۘᩴ;)V
+.method public constructor <init>(Ll/᩻ܰᩴ;)V
     .locals 0
 
-    .line 1111
-    iput-object p1, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
+    .line 321
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    .line 421
+    iput-object p1, p0, Ll/۬ۘᩴ;->ܰ:Ll/᩻ܰᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
+.method public final onPageScrollStateChanged(I)V
     .locals 1
 
-    .line 1152
-    iget-object v0, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
+    .line 429
+    iget-object v0, p0, Ll/۬ۘᩴ;->ܰ:Ll/᩻ܰᩴ;
 
-    invoke-virtual {v0}, Ll/۠ۘᩴ;->clear()V
+    invoke-static {v0, p1}, Ll/᩻ܰᩴ;->ۙ(Ll/᩻ܰᩴ;I)V
 
+    if-nez p1, :cond_0
+
+    .line 430
+    invoke-static {v0}, Ll/᩻ܰᩴ;->ۛ(Ll/᩻ܰᩴ;)V
+
+    :cond_0
     return-void
 .end method
 
-.method public final contains(I)Z
+.method public final onPageSelected(I)V
     .locals 1
 
-    .line 1140
-    iget-object v0, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
+    .line 424
+    iget-object v0, p0, Ll/۬ۘᩴ;->ܰ:Ll/᩻ܰᩴ;
 
-    invoke-virtual {v0, p1}, Ll/۠ۘᩴ;->ۙ(I)Z
+    invoke-static {v0}, Ll/᩻ܰᩴ;->ܽ(Ll/᩻ܰᩴ;)Ljava/util/List;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
-.end method
+    check-cast v0, Ljava/util/ArrayList;
 
-.method public final forEach(Ljava/util/function/IntConsumer;)V
-    .locals 3
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1125
-    iget-object v0, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
+    move-result-object p1
 
-    iget-object v1, v0, Ll/۠ۘᩴ;->ܽ:[I
+    check-cast p1, Ll/֫ܰᩴ;
 
-    .line 1126
-    iget-boolean v2, v0, Ll/۠ۘᩴ;->ܺ:Z
+    invoke-virtual {p1}, Ll/֫ܰᩴ;->ۙ()V
 
-    if-eqz v2, :cond_0
-
-    iget v2, v0, Ll/۠ۘᩴ;->᩻:I
-
-    aget v2, v1, v2
-
-    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    .line 1127
-    :cond_0
-    iget v0, v0, Ll/۠ۘᩴ;->᩻:I
-
-    :goto_0
-    add-int/lit8 v2, v0, -0x1
-
-    if-eqz v0, :cond_2
-
-    .line 1128
-    aget v0, v1, v2
-
-    if-eqz v0, :cond_1
-
-    .line 1129
-    invoke-interface {p1, v0}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
     return-void
-.end method
-
-.method public final iterator()Ll/۬᩺ᩴ;
-    .locals 2
-
-    .line 1114
-    new-instance v0, Ll/֨ۘᩴ;
-
-    iget-object v1, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
-
-    invoke-direct {v0, v1}, Ll/֨ۘᩴ;-><init>(Ll/۠ۘᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final remove(I)Z
-    .locals 2
-
-    .line 1145
-    iget-object v0, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
-
-    iget v1, v0, Ll/۠ۘᩴ;->ܳ:I
-
-    .line 1146
-    invoke-virtual {v0, p1}, Ll/۠ۘᩴ;->remove(I)Ljava/lang/Object;
-
-    .line 1147
-    iget p1, v0, Ll/۠ۘᩴ;->ܳ:I
-
-    if-eq p1, v1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 1135
-    iget-object v0, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
-
-    iget v0, v0, Ll/۠ۘᩴ;->ܳ:I
-
-    return v0
-.end method
-
-.method public synthetic spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Ll/۬ۘᩴ;->spliterator()Ll/᩷ۛᩴ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/۟ۛᩴ;->convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final spliterator()Ll/ۨܶᩴ;
-    .locals 2
-
-    .line 1119
-    new-instance v0, Ll/ۘۘᩴ;
-
-    iget-object v1, p0, Ll/۬ۘᩴ;->ܺ:Ll/۠ۘᩴ;
-
-    invoke-direct {v0, v1}, Ll/ۘۘᩴ;-><init>(Ll/۠ۘᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic spliterator()Ll/᩷ۛᩴ;
-    .locals 1
-
-    .line 1111
-    invoke-virtual {p0}, Ll/۬ۘᩴ;->spliterator()Ll/ۨܶᩴ;
-
-    move-result-object v0
-
-    return-object v0
 .end method

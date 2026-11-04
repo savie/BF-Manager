@@ -1,49 +1,44 @@
-.class public final Ll/᩻ۡۙ;
+.class public interface abstract Ll/᩻ۡۙ;
 .super Ljava/lang/Object;
-.source "J8TX"
+.source "E8LB"
+
+
+# static fields
+.field public static final ۙ:Ll/᩻ۡۙ;
 
 
 # direct methods
-.method public static ۙ(Landroid/content/Context;Ll/ܰۤۙ;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
-    :try_start_0
-    const-string v0, "phone"
+    .line 48
+    new-instance v0, Ll/֫ۡۙ;
 
-    .line 267
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 49
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
-
-    check-cast p0, Landroid/telephony/TelephonyManager;
-
-    .line 155
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 268
-    new-instance v0, Ll/ۧۡۙ;
-
-    invoke-direct {v0, p1}, Ll/ۧۡۙ;-><init>(Ll/ܰۤۙ;)V
-
-    .line 269
-    invoke-static {p1}, Ll/ܰۤۙ;->ۙ(Ll/ܰۤۙ;)Ljava/util/concurrent/Executor;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v0}, Landroid/telephony/TelephonyManager;->registerTelephonyCallback(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyCallback;)V
-
-    .line 272
-    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->unregisterTelephonyCallback(Landroid/telephony/TelephonyCallback;)V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 48
+    sput-object v0, Ll/᩻ۡۙ;->ۙ:Ll/᩻ۡۙ;
 
     return-void
+.end method
 
-    :catch_0
-    const/4 p0, 0x5
 
-    .line 275
-    invoke-static {p1, p0}, Ll/ܰۤۙ;->ۙ(Ll/ܰۤۙ;I)V
+# virtual methods
+.method public abstract ۙ(Ll/ܳ᩹ۙ;)I
+.end method
 
-    return-void
+.method public abstract ۙ(Ll/۫ۡۙ;Ll/ܳ᩹ۙ;)Ll/ۤۡۙ;
+.end method
+
+.method public abstract ۙ()V
+.end method
+
+.method public abstract ۙ(Landroid/os/Looper;Ll/᩵ᩳۙ;)V
+.end method
+
+.method public abstract ᩷(Ll/۫ۡۙ;Ll/ܳ᩹ۙ;)Ll/ۧۡۙ;
+.end method
+
+.method public abstract ᩷()V
 .end method

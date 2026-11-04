@@ -24,8 +24,8 @@ import java.nio.channels.FileChannel;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import l.C22697;
-import l.C6001;
+import l.C19853;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public class UMFrUtils {
@@ -344,7 +344,7 @@ public class UMFrUtils {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(getEnvelopeDirPath(context));
-        File file = new File(C22697.m50267(sb, File.separator, str));
+        File file = new File(C8947.m23910(sb, File.separator, str));
         synchronized (mEnvelopeFileLock) {
             FileOutputStream fileOutputStream2 = null;
             try {
@@ -418,7 +418,7 @@ public class UMFrUtils {
             FileChannel fileChannelConvertMaybeLegacyFileChannelFromLibrary = null;
             try {
                 try {
-                    fileChannelConvertMaybeLegacyFileChannelFromLibrary = C6001.convertMaybeLegacyFileChannelFromLibrary(new RandomAccessFile(str, "r").getChannel());
+                    fileChannelConvertMaybeLegacyFileChannelFromLibrary = C19853.convertMaybeLegacyFileChannelFromLibrary(new RandomAccessFile(str, "r").getChannel());
                     MappedByteBuffer mappedByteBufferLoad = fileChannelConvertMaybeLegacyFileChannelFromLibrary.map(FileChannel.MapMode.READ_ONLY, 0L, fileChannelConvertMaybeLegacyFileChannelFromLibrary.size()).load();
                     bArr = new byte[(int) fileChannelConvertMaybeLegacyFileChannelFromLibrary.size()];
                     if (mappedByteBufferLoad.remaining() > 0) {

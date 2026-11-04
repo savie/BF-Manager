@@ -1,339 +1,231 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22375 extends AbstractC18245 implements InterfaceC18266 {
-    public static final long serialVersionUID = 0;
+import android.text.Layout;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.text.style.UnderlineSpan;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f73052;
+/* JADX INFO: renamed from: l.᩷᩹᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: J8QH */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22375 {
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public static final C22375 f73053;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f72440;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public volatile Object f73054;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public volatile Object f73055;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public boolean f73056;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f72441;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public volatile Object f73057;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f73058;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public byte f73059;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C23081 f73060;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f73061;
-
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C22375.class.getName());
-        f73053 = new C22375();
-        f73052 = new C2618();
-    }
-
-    public C22375(C5441 c5441, int i) {
-        super(c5441);
-        this.f73057 = "";
-        this.f73054 = "";
-        this.f73055 = "";
-        this.f73061 = false;
-        this.f73056 = false;
-        this.f73059 = (byte) -1;
-    }
-
-    public C22375() {
-        this.f73057 = "";
-        this.f73054 = "";
-        this.f73055 = "";
-        this.f73061 = false;
-        this.f73056 = false;
-        this.f73059 = (byte) -1;
-        this.f73057 = "";
-        this.f73054 = "";
-        this.f73055 = "";
-    }
-
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46282;
-        c6956.m18696(C22375.class, C5441.class);
-        return c6956;
-    }
-
-    public final boolean hasName() {
-        return (this.f73058 & 1) != 0;
-    }
-
-    public final String getName() {
-        Object obj = this.f73057;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f73057 = strM52260;
-        }
-        return strM52260;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final boolean m49623() {
-        return (this.f73058 & 2) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String m49618() {
-        Object obj = this.f73054;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f73054 = strM52260;
-        }
-        return strM52260;
-    }
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final boolean m49620() {
-        return (this.f73058 & 4) != 0;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final String m49627() {
-        Object obj = this.f73055;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f73055 = strM52260;
-        }
-        return strM52260;
-    }
+    public int f72443;
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final boolean m49624() {
-        return (this.f73058 & 8) != 0;
+    public int f72445;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f72446;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f72447 = new ArrayList();
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f72444 = new ArrayList();
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f72442 = new StringBuilder();
+
+    public C22375(int i, int i2) {
+        m50456(i);
+        this.f72446 = i2;
     }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final C23081 m49619() {
-        C23081 c23081 = this.f73060;
-        return c23081 == null ? C23081.getDefaultInstance() : c23081;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m50456(int i) {
+        this.f72440 = i;
+        this.f72447.clear();
+        this.f72444.clear();
+        this.f72442.setLength(0);
+        this.f72443 = 15;
+        this.f72445 = 0;
+        this.f72441 = 0;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m50457() {
+        return this.f72447.isEmpty() && this.f72444.isEmpty() && this.f72442.length() == 0;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m50455(int i) {
+        this.f72440 = i;
     }
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean m49626() {
-        return (this.f73058 & 16) != 0;
+    public final void m50458(int i) {
+        this.f72446 = i;
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final boolean m49621() {
-        return this.f73061;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m50453(int i, boolean z) {
+        this.f72447.add(new C5221(i, this.f72442.length(), z));
     }
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final boolean m49625() {
-        return (this.f73058 & 32) != 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m50451() {
+        C5221 c5221;
+        int i;
+        StringBuilder sb = this.f72442;
+        int length = sb.length();
+        if (length <= 0) {
+            return;
+        }
+        sb.delete(length - 1, length);
+        ArrayList arrayList = this.f72447;
+        int size = arrayList.size();
+        while (true) {
+            size--;
+            if (size < 0 || (i = (c5221 = (C5221) arrayList.get(size)).f18412) != length) {
+                return;
+            } else {
+                c5221.f18412 = i - 1;
+            }
+        }
     }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean m49622() {
-        return this.f73056;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m50452(char c) {
+        StringBuilder sb = this.f72442;
+        if (sb.length() < 32) {
+            sb.append(c);
+        }
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f73059;
-        if (b == 1) {
-            return true;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m50454() {
+        SpannableString spannableStringM50449 = m50449();
+        ArrayList arrayList = this.f72444;
+        arrayList.add(spannableStringM50449);
+        this.f72442.setLength(0);
+        this.f72447.clear();
+        int iMin = Math.min(this.f72446, this.f72443);
+        while (arrayList.size() >= iMin) {
+            arrayList.remove(0);
         }
-        if (b == 0) {
-            return false;
-        }
-        if (m49624() && !m49619().isInitialized()) {
-            this.f73059 = (byte) 0;
-            return false;
-        }
-        this.f73059 = (byte) 1;
-        return true;
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        if ((this.f73058 & 1) != 0) {
-            AbstractC18245.m42405(abstractC22044, 1, this.f73057);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C2137 m50450(int i) {
+        float f;
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
+        int i2 = 0;
+        while (true) {
+            ArrayList arrayList = this.f72444;
+            if (i2 >= arrayList.size()) {
+                break;
+            }
+            spannableStringBuilder.append((CharSequence) arrayList.get(i2));
+            spannableStringBuilder.append('\n');
+            i2++;
         }
-        if ((this.f73058 & 2) != 0) {
-            AbstractC18245.m42405(abstractC22044, 2, this.f73054);
+        spannableStringBuilder.append((CharSequence) m50449());
+        if (spannableStringBuilder.length() == 0) {
+            return null;
         }
-        if ((this.f73058 & 4) != 0) {
-            AbstractC18245.m42405(abstractC22044, 3, this.f73055);
+        int i3 = this.f72445 + this.f72441;
+        int length = (32 - i3) - spannableStringBuilder.length();
+        int i4 = i3 - length;
+        if (i == Integer.MIN_VALUE) {
+            if (this.f72440 != 2 || (Math.abs(i4) >= 3 && length >= 0)) {
+                i = (this.f72440 != 2 || i4 <= 0) ? 0 : 2;
+            } else {
+                i = 1;
+            }
         }
-        if ((this.f73058 & 8) != 0) {
-            abstractC22044.mo14254(4, m49619());
+        if (i != 1) {
+            if (i == 2) {
+                i3 = 32 - length;
+            }
+            f = ((i3 / 32.0f) * 0.8f) + 0.1f;
+        } else {
+            f = 0.5f;
         }
-        if ((this.f73058 & 16) != 0) {
-            abstractC22044.mo14240(5, this.f73061);
+        int i5 = this.f72443;
+        if (i5 > 7) {
+            i5 -= 17;
+        } else if (this.f72440 == 1) {
+            i5 -= this.f72446 - 1;
         }
-        if ((this.f73058 & 32) != 0) {
-            abstractC22044.mo14240(6, this.f73056);
-        }
-        getUnknownFields().writeTo(abstractC22044);
+        C5866 c5866 = new C5866();
+        c5866.m17079(spannableStringBuilder);
+        c5866.m17089(Layout.Alignment.ALIGN_NORMAL);
+        c5866.m17075(i5, 1);
+        c5866.m17086(f);
+        c5866.m17088(i);
+        return c5866.m17073();
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM42390 = (this.f73058 & 1) != 0 ? AbstractC18245.m42390(1, this.f73057) : 0;
-        if ((this.f73058 & 2) != 0) {
-            iM42390 += AbstractC18245.m42390(2, this.f73054);
-        }
-        if ((this.f73058 & 4) != 0) {
-            iM42390 += AbstractC18245.m42390(3, this.f73055);
-        }
-        if ((this.f73058 & 8) != 0) {
-            iM42390 += AbstractC22044.m48963(4, m49619());
-        }
-        if ((this.f73058 & 16) != 0) {
-            iM42390 += AbstractC22044.m48961(5);
-        }
-        if ((this.f73058 & 32) != 0) {
-            iM42390 += AbstractC22044.m48961(6);
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM42390;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof C22375)) {
-            return super.equals(obj);
-        }
-        C22375 c22375 = (C22375) obj;
-        if (hasName() != c22375.hasName()) {
-            return false;
-        }
-        if ((hasName() && !getName().equals(c22375.getName())) || m49623() != c22375.m49623()) {
-            return false;
-        }
-        if ((m49623() && !m49618().equals(c22375.m49618())) || m49620() != c22375.m49620()) {
-            return false;
-        }
-        if ((m49620() && !m49627().equals(c22375.m49627())) || m49624() != c22375.m49624()) {
-            return false;
-        }
-        if ((m49624() && !m49619().equals(c22375.m49619())) || m49626() != c22375.m49626()) {
-            return false;
-        }
-        if ((!m49626() || this.f73061 == c22375.f73061) && m49625() == c22375.m49625()) {
-            return (!m49625() || this.f73056 == c22375.f73056) && getUnknownFields().equals(c22375.getUnknownFields());
-        }
-        return false;
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
-        }
-        int iHashCode = C14097.f46274.hashCode() + 779;
-        if (hasName()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + getName().hashCode();
-        }
-        if (m49623()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + m49618().hashCode();
-        }
-        if (m49620()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + m49627().hashCode();
-        }
-        if (m49624()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 4, 53) + m49619().hashCode();
-        }
-        if (m49626()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 5, 53) + C9779.m24888(this.f73061);
-        }
-        if (m49625()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 6, 53) + C9779.m24888(this.f73056);
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C5441 newBuilder() {
-        return f73053.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f73053.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f73053.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C5441 toBuilder() {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private SpannableString m50449() {
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(this.f72442);
+        int length = spannableStringBuilder.length();
         int i = 0;
-        if (this == f73053) {
-            return new C5441(i);
+        int i2 = -1;
+        int i3 = -1;
+        int i4 = 0;
+        int i5 = -1;
+        int i6 = -1;
+        boolean z = false;
+        while (true) {
+            ArrayList arrayList = this.f72447;
+            if (i >= arrayList.size()) {
+                break;
+            }
+            C5221 c5221 = (C5221) arrayList.get(i);
+            boolean z2 = c5221.f18413;
+            int i7 = c5221.f18414;
+            if (i7 != 8) {
+                boolean z3 = i7 == 7;
+                if (i7 != 7) {
+                    i6 = C11186.f35260[i7];
+                }
+                z = z3;
+            }
+            int i8 = c5221.f18412;
+            i++;
+            if (i8 != (i < arrayList.size() ? ((C5221) arrayList.get(i)).f18412 : length)) {
+                if (i2 != -1 && !z2) {
+                    spannableStringBuilder.setSpan(new UnderlineSpan(), i2, i8, 33);
+                    i2 = -1;
+                } else if (i2 == -1 && z2) {
+                    i2 = i8;
+                }
+                if (i3 != -1 && !z) {
+                    spannableStringBuilder.setSpan(new StyleSpan(2), i3, i8, 33);
+                    i3 = -1;
+                } else if (i3 == -1 && z) {
+                    i3 = i8;
+                }
+                if (i6 != i5) {
+                    if (i5 != -1) {
+                        spannableStringBuilder.setSpan(new ForegroundColorSpan(i5), i4, i8, 33);
+                    }
+                    i5 = i6;
+                    i4 = i8;
+                }
+            }
         }
-        C5441 c5441 = new C5441(i);
-        c5441.m15044(this);
-        return c5441;
-    }
-
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C5441(interfaceC6790, 0);
-    }
-
-    public static C22375 getDefaultInstance() {
-        return f73053;
-    }
-
-    public static InterfaceC6271 parser() {
-        return f73052;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f73052;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f73053;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f73053;
+        if (i2 != -1 && i2 != length) {
+            spannableStringBuilder.setSpan(new UnderlineSpan(), i2, length, 33);
+        }
+        if (i3 != -1 && i3 != length) {
+            spannableStringBuilder.setSpan(new StyleSpan(2), i3, length, 33);
+        }
+        if (i4 != length && i5 != -1) {
+            spannableStringBuilder.setSpan(new ForegroundColorSpan(i5), i4, length, 33);
+        }
+        return new SpannableString(spannableStringBuilder);
     }
 }

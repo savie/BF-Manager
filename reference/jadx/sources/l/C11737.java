@@ -1,39 +1,41 @@
 package l;
 
-import android.os.Bundle;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۨܰۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 83VO */
+/* JADX INFO: renamed from: l.ۧܺ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: A3Q2 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11737 extends C3660 {
+public final /* synthetic */ class C11737 implements Function {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC2563 f39462;
+    public final /* synthetic */ int f37962;
 
-    public C11737(AbstractC2563 abstractC2563) {
-        this.f39462 = abstractC2563;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f37963;
+
+    public /* synthetic */ C11737(int i, Object obj) {
+        this.f37962 = i;
+        this.f37963 = obj;
     }
 
-    @Override // l.C3660
-    /* JADX INFO: renamed from: ۙ */
-    public final C22006 mo10793(int i) {
-        return C22006.m48821(this.f39462.obtainAccessibilityNodeInfo(i));
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.C3660
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo10794(int i, int i2, Bundle bundle) {
-        return this.f39462.performAction(i, i2, bundle);
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // l.C3660
-    /* JADX INFO: renamed from: ܰ */
-    public final C22006 mo10795(int i) {
-        AbstractC2563 abstractC2563 = this.f39462;
-        int i2 = i == 2 ? abstractC2563.mAccessibilityFocusedVirtualViewId : abstractC2563.mKeyboardFocusedVirtualViewId;
-        if (i2 == Integer.MIN_VALUE) {
-            return null;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f37962) {
+            case 0:
+                return "#" + ((C16958) this.f37963).f81355;
+            default:
+                return C2026.m6975((C2026) this.f37963, (InterfaceC24928) obj);
         }
-        return mo10793(i2);
     }
 }

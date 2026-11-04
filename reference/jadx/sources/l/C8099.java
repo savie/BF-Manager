@@ -1,73 +1,117 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۢ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: S9I7 */
+import android.content.res.TypedArray;
+import android.util.SparseIntArray;
+
+/* JADX INFO: renamed from: l.۟᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1BC */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C8099 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f28361;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static SparseIntArray f26760;
+
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        f26760 = sparseIntArray;
+        sparseIntArray.append(0, 1);
+        sparseIntArray.append(11, 2);
+        sparseIntArray.append(7, 4);
+        sparseIntArray.append(8, 5);
+        sparseIntArray.append(9, 6);
+        sparseIntArray.append(1, 19);
+        sparseIntArray.append(2, 20);
+        sparseIntArray.append(5, 7);
+        sparseIntArray.append(17, 8);
+        sparseIntArray.append(16, 9);
+        sparseIntArray.append(15, 10);
+        sparseIntArray.append(13, 12);
+        sparseIntArray.append(12, 13);
+        sparseIntArray.append(6, 14);
+        sparseIntArray.append(3, 15);
+        sparseIntArray.append(4, 16);
+        sparseIntArray.append(10, 17);
+        sparseIntArray.append(14, 18);
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public EnumC17976 f28362;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public EnumC21504 f28363;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public EnumC18682 f28364;
-
-    public C8099(EnumC17976 enumC17976, EnumC18682 enumC18682, EnumC21504 enumC21504) {
-        this.f28362 = enumC17976;
-        this.f28364 = enumC18682;
-        this.f28361 = 7600;
-        this.f28363 = enumC21504;
-    }
-
-    public C8099() {
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21312(C5982 c5982) throws C17271 {
-        this.f28362 = (EnumC17976) C20799.m46783(c5982.m27388(), EnumC17976.class, null);
-        this.f28364 = (EnumC18682) C20799.m46783(c5982.m27388(), EnumC18682.class, null);
-        this.f28361 = c5982.m27375();
-        c5982.m27389(3);
-        this.f28363 = (EnumC21504) C20799.m46783(c5982.m27388(), EnumC21504.class, null);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m21313(C5982 c5982) {
-        c5982.m27381((byte) this.f28362.f57492);
-        c5982.m27381((byte) this.f28364.f60635);
-        c5982.m27396(this.f28361);
-        c5982.m27383(3, new byte[]{0, 0, 0});
-        c5982.m27381((byte) this.f28363.getValue());
-    }
-
-    public final String toString() {
-        return String.format("WindowsVersion[%s, %s, %d, %s]", this.f28362, this.f28364, Integer.valueOf(this.f28361), this.f28363);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C8099.class == obj.getClass()) {
-            C8099 c8099 = (C8099) obj;
-            if (this.f28361 == c8099.f28361 && this.f28362 == c8099.f28362 && this.f28364 == c8099.f28364 && this.f28363 == c8099.f28363) {
-                return true;
+    public static void m21980(C19286 c19286, TypedArray typedArray) {
+        int indexCount = typedArray.getIndexCount();
+        for (int i = 0; i < indexCount; i++) {
+            int index = typedArray.getIndex(i);
+            SparseIntArray sparseIntArray = f26760;
+            switch (sparseIntArray.get(index)) {
+                case 1:
+                    c19286.f62352 = typedArray.getFloat(index, c19286.f62352);
+                    break;
+                case 2:
+                    c19286.f62347 = typedArray.getDimension(index, c19286.f62347);
+                    break;
+                case 3:
+                case 11:
+                default:
+                    Integer.toHexString(index);
+                    sparseIntArray.get(index);
+                    break;
+                case 4:
+                    c19286.f62355 = typedArray.getFloat(index, c19286.f62355);
+                    break;
+                case 5:
+                    c19286.f62350 = typedArray.getFloat(index, c19286.f62350);
+                    break;
+                case 6:
+                    c19286.f62351 = typedArray.getFloat(index, c19286.f62351);
+                    break;
+                case 7:
+                    c19286.f62349 = typedArray.getFloat(index, c19286.f62349);
+                    break;
+                case 8:
+                    c19286.f62342 = typedArray.getFloat(index, c19286.f62342);
+                    break;
+                case 9:
+                    typedArray.getString(index);
+                    break;
+                case 10:
+                    if (C21855.f69626) {
+                        int resourceId = typedArray.getResourceId(index, c19286.f2498);
+                        c19286.f2498 = resourceId;
+                        if (resourceId == -1) {
+                            c19286.f2500 = typedArray.getString(index);
+                        }
+                    } else if (typedArray.peekValue(index).type == 3) {
+                        c19286.f2500 = typedArray.getString(index);
+                    } else {
+                        c19286.f2498 = typedArray.getResourceId(index, c19286.f2498);
+                    }
+                    break;
+                case 12:
+                    c19286.f2499 = typedArray.getInt(index, c19286.f2499);
+                    break;
+                case 13:
+                    c19286.f62348 = typedArray.getInteger(index, c19286.f62348);
+                    break;
+                case 14:
+                    c19286.f62354 = typedArray.getFloat(index, c19286.f62354);
+                    break;
+                case 15:
+                    c19286.f62353 = typedArray.getDimension(index, c19286.f62353);
+                    break;
+                case 16:
+                    c19286.f62346 = typedArray.getDimension(index, c19286.f62346);
+                    break;
+                case 17:
+                    c19286.f62344 = typedArray.getDimension(index, c19286.f62344);
+                    break;
+                case 18:
+                    c19286.f62345 = typedArray.getFloat(index, c19286.f62345);
+                    break;
+                case 19:
+                    c19286.f62343 = typedArray.getDimension(index, c19286.f62343);
+                    break;
+                case 20:
+                    c19286.f62341 = typedArray.getDimension(index, c19286.f62341);
+                    break;
             }
         }
-        return false;
-    }
-
-    public final int hashCode() {
-        return C13638.hash(this.f28362, this.f28364, Integer.valueOf(this.f28361), this.f28363);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC21504 m21311() {
-        return this.f28363;
     }
 }

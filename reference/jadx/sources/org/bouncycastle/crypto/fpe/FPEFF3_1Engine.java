@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.engines.AESEngine;
 import org.bouncycastle.crypto.params.FPEParameters;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class FPEFF3_1Engine extends FPEEngine {
     public FPEFF3_1Engine() {
         this(AESEngine.newInstance());

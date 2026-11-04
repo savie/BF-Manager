@@ -1,79 +1,100 @@
 package l;
 
-import android.content.Context;
-import android.webkit.CookieSyncManager;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۤ۟ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10151 extends C21812 {
+/* JADX INFO: renamed from: l.ۢ۬ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J244 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10151 implements Cloneable {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7328 f34656;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Context f34657;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f32509;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18284 f34658;
+    public int[] f32510;
 
-    public C10151(C7328 c7328, Context context, InterfaceC18284 interfaceC18284) {
-        this.f34656 = c7328;
-        this.f34657 = context;
-        this.f34658 = interfaceC18284;
-        C23099.m51110("openSDK_LOG.AuthAgent", "OpenUi, TokenListener()");
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f32511;
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16215(JSONObject jSONObject) {
-        C7328 c7328 = this.f34656;
-        C23099.m51110("openSDK_LOG.AuthAgent", "OpenUi, TokenListener() onComplete");
-        try {
-            String string = jSONObject.getString("access_token");
-            String string2 = jSONObject.getString("expires_in");
-            String string3 = jSONObject.getString("openid");
-            Context context = this.f34657;
-            if (string != null) {
-                C15796 unused = c7328.f5744;
-                if (string3 != null) {
-                    c7328.f5744.m37567(string, string2);
-                    c7328.f5744.m37566(string3);
-                    C22851.m50587(context, c7328.f5744);
-                }
-            }
-            String string4 = jSONObject.getString("pf");
-            if (string4 != null) {
-                try {
-                    context.getSharedPreferences("pfStore", 0).edit().putString("pf", string4).commit();
-                } catch (Exception e) {
-                    C23099.m51111("openSDK_LOG.AuthAgent", "OpenUi, TokenListener() onComplete error", e);
-                }
-            }
-            CookieSyncManager.getInstance().sync();
-        } catch (JSONException e2) {
-            C23099.m51111("openSDK_LOG.AuthAgent", "OpenUi, TokenListener() onComplete error", e2);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f32512;
+
+    public C10151(int i, int i2) {
+        if (i < 1 || i2 < 1) {
+            throw new IllegalArgumentException("Both dimensions must be greater than 0");
         }
-        this.f34658.mo16215(jSONObject);
-        c7328.m19596();
-        C23099.m51114();
+        this.f32509 = i;
+        this.f32512 = i2;
+        int i3 = (i + 31) / 32;
+        this.f32511 = i3;
+        this.f32510 = new int[i3 * i2];
     }
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16214(C8407 c8407) {
-        C23099.m51110("openSDK_LOG.AuthAgent", "OpenUi, TokenListener() onError");
-        this.f34658.mo16214(c8407);
-        C23099.m51114();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m26262(int i, int i2) {
+        return ((this.f32510[(i / 32) + (i2 * this.f32511)] >>> (i & 31)) & 1) != 0;
     }
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16213() {
-        C23099.m51110("openSDK_LOG.AuthAgent", "OpenUi, TokenListener() onCancel");
-        this.f34658.mo16213();
-        C23099.m51114();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m26261(int i, int i2, int i3, int i4) {
+        if (i2 < 0 || i < 0) {
+            throw new IllegalArgumentException("Left and top must be nonnegative");
+        }
+        if (i4 < 1 || i3 < 1) {
+            throw new IllegalArgumentException("Height and width must be at least 1");
+        }
+        int i5 = i3 + i;
+        int i6 = i4 + i2;
+        if (i6 > this.f32512 || i5 > this.f32509) {
+            throw new IllegalArgumentException("The region must fit inside the matrix");
+        }
+        while (i2 < i6) {
+            int i7 = this.f32511 * i2;
+            for (int i8 = i; i8 < i5; i8++) {
+                int[] iArr = this.f32510;
+                int i9 = (i8 / 32) + i7;
+                iArr[i9] = iArr[i9] | (1 << (i8 & 31));
+            }
+            i2++;
+        }
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C10151)) {
+            return false;
+        }
+        C10151 c10151 = (C10151) obj;
+        return this.f32509 == c10151.f32509 && this.f32512 == c10151.f32512 && this.f32511 == c10151.f32511 && Arrays.equals(this.f32510, c10151.f32510);
+    }
+
+    public final int hashCode() {
+        int i = this.f32509;
+        return Arrays.hashCode(this.f32510) + ((((C18176.m42345(i, 31, i, 31) + this.f32512) * 31) + this.f32511) * 31);
+    }
+
+    public final String toString() {
+        int i = this.f32512;
+        int i2 = this.f32509;
+        StringBuilder sb = new StringBuilder((i2 + 1) * i);
+        for (int i3 = 0; i3 < i; i3++) {
+            for (int i4 = 0; i4 < i2; i4++) {
+                sb.append(m26262(i4, i3) ? "X " : EnumC7687.f25319);
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+    public final Object clone() {
+        int i = this.f32509;
+        int i2 = this.f32512;
+        int i3 = this.f32511;
+        int[] iArr = (int[]) this.f32510.clone();
+        C10151 c10151 = new C10151();
+        c10151.f32509 = i;
+        c10151.f32512 = i2;
+        c10151.f32511 = i3;
+        c10151.f32510 = iArr;
+        return c10151;
     }
 }

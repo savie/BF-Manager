@@ -1,119 +1,125 @@
 package l;
 
-import java.io.Writer;
-import java.util.List;
+import android.content.res.TypedArray;
+import android.util.SparseIntArray;
 
-/* JADX INFO: renamed from: l.۫ۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: C4OQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12332 extends AbstractC18908 {
+/* JADX INFO: renamed from: l.ۨۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J1B7 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12332 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f41220;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static SparseIntArray f39614;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C17684 f41221;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public String f41222 = null;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f41223;
-
-    public C12332(C17684 c17684, int i) {
-        this.f41221 = c17684;
-        this.f41223 = i;
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo9700() {
-        C17684 c17684 = this.f41221;
-        return c17684.m41204(c17684.m41166().m42183(c17684.m41180(this.f41223)));
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        f39614 = sparseIntArray;
+        sparseIntArray.append(0, 1);
+        sparseIntArray.append(9, 2);
+        sparseIntArray.append(5, 4);
+        sparseIntArray.append(6, 5);
+        sparseIntArray.append(7, 6);
+        sparseIntArray.append(3, 7);
+        sparseIntArray.append(15, 8);
+        sparseIntArray.append(14, 9);
+        sparseIntArray.append(13, 10);
+        sparseIntArray.append(11, 12);
+        sparseIntArray.append(10, 13);
+        sparseIntArray.append(4, 14);
+        sparseIntArray.append(1, 15);
+        sparseIntArray.append(2, 16);
+        sparseIntArray.append(8, 17);
+        sparseIntArray.append(12, 18);
+        sparseIntArray.append(18, 20);
+        sparseIntArray.append(17, 21);
+        sparseIntArray.append(19, 19);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30642(Writer writer) {
-        C17684 c17684 = this.f41221;
-        c17684.m41172(writer, c17684.m41166().m42183(c17684.m41180(this.f41223)));
-    }
-
-    @Override // l.InterfaceC8858
-    public final String getName() {
-        C17684 c17684 = this.f41221;
-        return c17684.m41168(c17684.m41166().mo9809(c17684.m41180(this.f41223) + 4));
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m30644(Writer writer) {
-        C17684 c17684 = this.f41221;
-        c17684.m41192(c17684.m41166().mo9809(c17684.m41180(this.f41223) + 4), writer, false);
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩳ */
-    public final List mo9699() {
-        int iM30640 = m30640();
-        C17684 c17684 = this.f41221;
-        int iMo9809 = c17684.m41166().mo9809(iM30640 + 8);
-        if (iMo9809 > 0) {
-            return new C16565(this, iMo9809 + 4, c17684.m41166().mo9809(iMo9809));
-        }
-        return AbstractC22433.of();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m30643(Writer writer) {
-        int iM30640 = m30640();
-        C17684 c17684 = this.f41221;
-        int iMo9809 = c17684.m41166().mo9809(iM30640 + 8);
-        if (iMo9809 > 0) {
-            int iMo98010 = c17684.m41166().mo9809(iMo9809);
-            int i = iMo9809 + 4;
-            for (int i2 = 0; i2 < iMo98010; i2++) {
-                c17684.m41172(writer, c17684.m41166().m42183((i2 * 2) + i));
+    public static void m30755(C6367 c6367, TypedArray typedArray) {
+        int indexCount = typedArray.getIndexCount();
+        for (int i = 0; i < indexCount; i++) {
+            int index = typedArray.getIndex(i);
+            SparseIntArray sparseIntArray = f39614;
+            switch (sparseIntArray.get(index)) {
+                case 1:
+                    c6367.f21510 = typedArray.getFloat(index, c6367.f21510);
+                    break;
+                case 2:
+                    c6367.f21505 = typedArray.getDimension(index, c6367.f21505);
+                    break;
+                case 3:
+                case 11:
+                default:
+                    Integer.toHexString(index);
+                    sparseIntArray.get(index);
+                    break;
+                case 4:
+                    c6367.f21499 = typedArray.getFloat(index, c6367.f21499);
+                    break;
+                case 5:
+                    c6367.f21503 = typedArray.getFloat(index, c6367.f21503);
+                    break;
+                case 6:
+                    c6367.f21514 = typedArray.getFloat(index, c6367.f21514);
+                    break;
+                case 7:
+                    c6367.f21508 = typedArray.getFloat(index, c6367.f21508);
+                    break;
+                case 8:
+                    c6367.f21507 = typedArray.getFloat(index, c6367.f21507);
+                    break;
+                case 9:
+                    typedArray.getString(index);
+                    break;
+                case 10:
+                    if (C21855.f69626) {
+                        int resourceId = typedArray.getResourceId(index, c6367.f2498);
+                        c6367.f2498 = resourceId;
+                        if (resourceId == -1) {
+                            c6367.f2500 = typedArray.getString(index);
+                        }
+                    } else if (typedArray.peekValue(index).type == 3) {
+                        c6367.f2500 = typedArray.getString(index);
+                    } else {
+                        c6367.f2498 = typedArray.getResourceId(index, c6367.f2498);
+                    }
+                    break;
+                case 12:
+                    c6367.f2499 = typedArray.getInt(index, c6367.f2499);
+                    break;
+                case 13:
+                    c6367.f21506 = typedArray.getInteger(index, c6367.f21506);
+                    break;
+                case 14:
+                    c6367.f21509 = typedArray.getFloat(index, c6367.f21509);
+                    break;
+                case 15:
+                    c6367.f21512 = typedArray.getDimension(index, c6367.f21512);
+                    break;
+                case 16:
+                    c6367.f21500 = typedArray.getDimension(index, c6367.f21500);
+                    break;
+                case 17:
+                    c6367.f21511 = typedArray.getDimension(index, c6367.f21511);
+                    break;
+                case 18:
+                    c6367.f21501 = typedArray.getFloat(index, c6367.f21501);
+                    break;
+                case 19:
+                    c6367.f21513 = typedArray.getInt(index, c6367.f21513);
+                    break;
+                case 20:
+                    c6367.f21502 = typedArray.getFloat(index, c6367.f21502);
+                    break;
+                case 21:
+                    if (typedArray.peekValue(index).type == 5) {
+                        c6367.f21504 = typedArray.getDimension(index, c6367.f21504);
+                    } else {
+                        c6367.f21504 = typedArray.getFloat(index, c6367.f21504);
+                    }
+                    break;
             }
-        }
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ۖ */
-    public final String mo9698() {
-        int iM30640 = m30640();
-        C17684 c17684 = this.f41221;
-        return c17684.m41204(c17684.m41166().mo9809(iM30640 + 4));
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m30641(Writer writer) {
-        int iM30640 = m30640();
-        C17684 c17684 = this.f41221;
-        c17684.m41172(writer, c17684.m41166().mo9809(iM30640 + 4));
-    }
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    private int m30640() {
-        if (this.f41220 == 0) {
-            C17684 c17684 = this.f41221;
-            this.f41220 = c17684.m41189(c17684.m41166().m42183(c17684.m41180(this.f41223) + 2));
-        }
-        return this.f41220;
-    }
-
-    @Override // l.AbstractC18908
-    public final String toString() {
-        if (this.f41222 == null) {
-            this.f41222 = C22304.m49465((InterfaceC8858) this, false);
-        }
-        return this.f41222;
-    }
-
-    @Override // l.AbstractC8325, l.InterfaceC7446
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1997() throws C10269 {
-        int i = this.f41223;
-        if (i < 0 || i >= this.f41221.m41167()) {
-            throw new C10269("method@" + i);
         }
     }
 }

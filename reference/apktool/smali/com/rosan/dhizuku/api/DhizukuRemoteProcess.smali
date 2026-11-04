@@ -34,7 +34,7 @@
     invoke-direct {p0}, Ljava/lang/Process;-><init>()V
 
     .line 25
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/rosan/dhizuku/api/DhizukuRemoteProcess;->remote:Lcom/rosan/dhizuku/aidl/IDhizukuRemoteProcess;
 

@@ -1,20 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ܳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAYC */
+/* JADX INFO: renamed from: l.۫ܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 41G0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13172 implements InterfaceC1176 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f43853;
-
-    public C13172(int i) {
-        this.f43853 = i;
-    }
-
-    @Override // l.InterfaceC1176
+public final class C13172 extends C15409 {
+    @Override // l.C15409
     /* JADX INFO: renamed from: ۙ */
-    public final int mo4307() {
-        return this.f43853;
+    public final String mo15176(InterfaceC5650 interfaceC5650) {
+        int iMo16635 = interfaceC5650.mo16635();
+        return (iMo16635 == 1 || iMo16635 == 2) ? "string" : C14049.m34212(interfaceC5650);
     }
 }

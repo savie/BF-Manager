@@ -1,17 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ۫ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S66N */
+import android.animation.Animator;
+import android.widget.BaseAdapter;
+
+/* JADX INFO: renamed from: l.ۚۖܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N4YE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5349 extends AbstractC23114 {
+public final class C5349 extends AbstractC15043 {
+    @Override // l.AbstractC15043
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Animator[] mo16002() {
+        return new Animator[0];
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f18477;
-
-    @Override // l.AbstractC23114
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2544(AbstractC20521 abstractC20521) {
-        abstractC20521.mo35158(this.f75073, this.f18477);
-        m51119(abstractC20521);
+    public C5349(BaseAdapter baseAdapter) {
+        super(baseAdapter);
     }
 }

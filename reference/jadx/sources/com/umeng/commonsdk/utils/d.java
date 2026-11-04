@@ -59,7 +59,7 @@ public class d {
     public static final String k = "header_bulid";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77958l = "header_os_version";
+    public static final String f82074l = "header_os_version";
     public static final String m = "header_resolution";
     public static final String n = "header_mc";
     public static final String o = "header_timezone";

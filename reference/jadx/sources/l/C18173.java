@@ -1,7 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳܽ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: NAWS */
+import bin.mt.json.JSONValue;
+
+/* JADX INFO: renamed from: l.ܿ۟ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 06WR */
 /* JADX INFO: loaded from: classes5.dex */
-public class C18173 extends C23113 {
+public final /* synthetic */ class C18173 implements InterfaceC18700 {
+    @Override // l.InterfaceC18700
+    /* JADX INFO: renamed from: ۙ */
+    public final C10186 mo3210(JSONValue jSONValue, String str, String str2) {
+        return C0274.m1803(jSONValue, str, str2);
+    }
 }

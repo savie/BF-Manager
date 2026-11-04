@@ -1,21 +1,37 @@
-.class public final Ll/֡ۤ;
-.super Ll/᩻ۤ;
-.source "V1D4"
+.class public final synthetic Ll/֡ۤ;
+.super Ljava/lang/Object;
+.source "K234"
+
+# interfaces
+.implements Landroid/window/OnBackInvokedCallback;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/ᩴ֨᩵;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ᩴ֨᩵;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֡ۤ;->ۙ:Ll/ᩴ֨᩵;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ܰ(FJLandroid/view/View;Ll/᩷᩵;)Z
-    .locals 0
+.method public final onBackInvoked()V
+    .locals 1
 
-    .line 256
-    invoke-virtual/range {p0 .. p5}, Ll/᩻ۤ;->ۙ(FJLandroid/view/View;Ll/᩷᩵;)F
+    .line 2
+    iget-object v0, p0, Ll/֡ۤ;->ۙ:Ll/ᩴ֨᩵;
 
-    move-result p1
+    .line 369
+    invoke-interface {v0}, Ll/ᩴ֨᩵;->ۙ()Ljava/lang/Object;
 
-    invoke-virtual {p4, p1}, Landroid/view/View;->setRotationY(F)V
-
-    .line 257
-    iget-boolean p1, p0, Ll/᩻ۤ;->ۚ:Z
-
-    return p1
+    return-void
 .end method

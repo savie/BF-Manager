@@ -20,9 +20,9 @@ import javax.crypto.spec.PBEParameterSpec;
 import javax.crypto.spec.RC2ParameterSpec;
 import javax.crypto.spec.RC5ParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C0252;
-import l.C16523;
-import l.C8479;
+import l.C13645;
+import l.C14442;
+import l.C25272;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.Wrapper;
@@ -31,7 +31,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class BaseCipherSpi extends CipherSpi {
     public byte[] iv;
     public int ivSize;
@@ -96,12 +96,12 @@ public abstract class BaseCipherSpi extends CipherSpi {
 
     @Override // javax.crypto.CipherSpi
     public void engineSetMode(String str) throws NoSuchAlgorithmException {
-        throw new NoSuchAlgorithmException(C0252.m1693("can't support mode ", str));
+        throw new NoSuchAlgorithmException(C25272.m56409("can't support mode ", str));
     }
 
     @Override // javax.crypto.CipherSpi
     public void engineSetPadding(String str) throws NoSuchPaddingException {
-        throw new NoSuchPaddingException(C16523.m38890("Padding ", str, " unknown."));
+        throw new NoSuchPaddingException(C14442.m34865("Padding ", str, " unknown."));
     }
 
     @Override // javax.crypto.CipherSpi
@@ -132,7 +132,7 @@ public abstract class BaseCipherSpi extends CipherSpi {
                 if (i == 2) {
                     return keyFactoryCreateKeyFactory.generatePrivate(new PKCS8EncodedKeySpec(bArrEngineDoFinal));
                 }
-                throw new InvalidKeyException(C8479.m22141(i, "Unknown key type "));
+                throw new InvalidKeyException(C13645.m33382(i, "Unknown key type "));
             } catch (NoSuchAlgorithmException e) {
                 throw new InvalidKeyException("Unknown key type " + e.getMessage());
             } catch (NoSuchProviderException e2) {

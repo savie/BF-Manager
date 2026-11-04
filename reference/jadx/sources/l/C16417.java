@@ -1,25 +1,59 @@
 package l;
 
-import java.lang.reflect.Type;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܽۙܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0AV8 */
+/* JADX INFO: renamed from: l.ܶ᩺ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N7AJ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16417 implements InterfaceC11747 {
-    @Override // l.InterfaceC11747
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1396(C23473 c23473, Object obj, Object obj2, Type type) {
-        C13158 c13158 = c23473.f76006;
-        if ((c13158.f43818 & EnumC3984.WriteEnumUsingToString.f14811) != 0) {
-            String string = ((Enum) obj).toString();
-            if ((c13158.f43818 & EnumC3984.UseSingleQuotes.f14811) != 0) {
-                c13158.m32536(string);
-                return;
-            } else {
-                c13158.m32532(string, (char) 0, false);
-                return;
-            }
-        }
-        c13158.writeInt(((Enum) obj).ordinal());
+public final class C16417 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public String f53268;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public long f53269;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public boolean f53270;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 f53271;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f53274;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public boolean f53275;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public String f53276;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public long f53277;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public String f53278;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final String f53281;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public long f53282;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public long f53280 = -1;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f53279 = new ArrayList();
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public String f53272 = "absent";
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public long f53273 = -1;
+
+    public C16417(AbstractC22044 abstractC22044, String str) {
+        this.f53271 = abstractC22044;
+        this.f53281 = str;
     }
 }

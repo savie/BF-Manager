@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PlainDSAEncoding implements DSAEncoding {
     public static final PlainDSAEncoding INSTANCE = new PlainDSAEncoding();
 

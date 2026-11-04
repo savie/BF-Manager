@@ -1,40 +1,74 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗ֡۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: V743 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2884 implements AutoCloseable {
+/* JADX INFO: renamed from: l.ۖ᩵ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5XG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2884 extends AbstractC11175 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f10869;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C8850 f9469;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC3718 m9504() {
+        return new C23768();
+    }
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f10870;
+    public final C14816 m9507() {
+        return new C14816(this.f9469);
+    }
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C4771 f10871;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final C17054 m9500() {
+        return new C17054(this.f9469);
+    }
 
-    public C2884(C4771 c4771, int i) {
-        this.f10871 = c4771;
-        this.f10869 = i;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C9092 m9506() {
+        return new C9092(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C5868 m9502() {
+        return new C5868(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C15059 m9510() {
+        return new C15059(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C1481 m9503() {
+        return new C1481(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C11087 m9505() {
+        return new C11087(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final InterfaceC20872 m9511() {
+        return new C24514(this.f9469);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m8675(C2884 c2884, int i) {
-        int i2;
-        if (c2884.f10870 || i < 0 || i > (i2 = c2884.f10869)) {
-            throw new IllegalStateException("Preview memory reservation is invalid");
-        }
-        c2884.f10869 = i2 - i;
-        c2884.f10871.f16790 -= i;
+    public final InterfaceC21398 m9501() {
+        return new C21618(this.f9469);
     }
 
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        if (this.f10870) {
-            return;
-        }
-        this.f10870 = true;
-        C4771.m13238(this.f10871, this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC18414 m9509() {
+        return new C19380(this.f9469);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C5365 m9508() {
+        return new C5365(this.f9469);
+    }
+
+    public C2884(C8850 c8850) {
+        this.f9469 = c8850;
     }
 }

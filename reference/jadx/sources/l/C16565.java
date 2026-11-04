@@ -1,34 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: C4OQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16565 extends AbstractC21316 {
+/* JADX INFO: renamed from: l.ܺۗ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5QW */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16565 extends AbstractRunnableC5882 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f53195;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12332 f53196;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f53623;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f53197;
+    public final /* synthetic */ C17311 f53624;
 
-    public C16565(C12332 c12332, int i, int i2) {
-        this.f53196 = c12332;
-        this.f53197 = i;
-        this.f53195 = i2;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C16565(C17311 c17311, C17311 c17312, int i) {
+        super(c17312);
+        this.f53624 = c17311;
+        this.f53623 = i;
     }
 
-    @Override // l.AbstractC21316
+    @Override // l.AbstractRunnableC5882
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo3245(int i) {
-        C17684 c17684 = this.f53196.f41221;
-        return c17684.m41204(c17684.m41166().m42183((i * 2) + this.f53197));
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final int size() {
-        return this.f53195;
+    public final void mo17109() {
+        C17311 c17311 = this.f53624;
+        c17311.f56376.m56802(this.f53623, c17311.f56386);
+        this.f20165.f56375.sendEmptyMessageAtTime(-1, 0L);
     }
 }

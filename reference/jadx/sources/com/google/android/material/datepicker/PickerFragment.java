@@ -1,10 +1,10 @@
 package com.google.android.material.datepicker;
 
 import java.util.LinkedHashSet;
-import l.ComponentCallbacksC22654;
+import l.ComponentCallbacksC11612;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class PickerFragment extends ComponentCallbacksC22654 {
+public abstract class PickerFragment extends ComponentCallbacksC11612 {
     public final LinkedHashSet onSelectionChangedListeners = new LinkedHashSet();
 
     public abstract DateSelector getDateSelector();

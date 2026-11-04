@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509.qualified;
 
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TypeOfBiometricData extends ASN1Object implements ASN1Choice {
     public static final int HANDWRITTEN_SIGNATURE = 1;
     public static final int PICTURE = 0;
@@ -16,7 +16,7 @@ public class TypeOfBiometricData extends ASN1Object implements ASN1Choice {
 
     public TypeOfBiometricData(int i) {
         if (i != 0 && i != 1) {
-            throw new IllegalArgumentException(C8479.m22141(i, "unknow PredefinedBiometricType : "));
+            throw new IllegalArgumentException(C13645.m33382(i, "unknow PredefinedBiometricType : "));
         }
         this.obj = new ASN1Integer(i);
     }

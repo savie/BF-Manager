@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field public ֡:Lcom/amazonaws/event/ProgressListener;
+.field public ֡:Ljava/util/ArrayList;
 
-.field public ۛ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+.field public ۟:Ljava/util/ArrayList;
 
-.field public ۫:Ljava/util/ArrayList;
+.field public ۢ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
 
-.field public ܽ:Ljava/util/ArrayList;
+.field public ܿ:Lcom/amazonaws/event/ProgressListener;
 
-.field public ܿ:[J
+.field public ᩳ:[J
 
 
 # direct methods
@@ -30,51 +30,38 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۛ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۢ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
 
     .line 69
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܽ:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->֡:Ljava/util/ArrayList;
 
     .line 76
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->۫:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->۟:Ljava/util/ArrayList;
 
     .line 206
     invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->ۙ(Ljava/lang/String;)V
 
     .line 250
-    invoke-virtual {v0, p2}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, p2}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->᩷(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()Ljava/lang/String;
-    .locals 1
-
-    .line 193
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۛ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
-
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->ۙ()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۘ()[J
+.method public final ֫()[J
     .locals 1
 
     .line 386
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܿ:[J
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩳ:[J
 
     if-nez v0, :cond_0
 
@@ -96,7 +83,7 @@
     .locals 1
 
     .line 855
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->֡:Lcom/amazonaws/event/ProgressListener;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܿ:Lcom/amazonaws/event/ProgressListener;
 
     return-object v0
 .end method
@@ -117,7 +104,7 @@
     aput-wide p3, v0, p1
 
     .line 413
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܿ:[J
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩳ:[J
 
     return-void
 .end method
@@ -126,29 +113,38 @@
     .locals 0
 
     .line 844
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->֡:Lcom/amazonaws/event/ProgressListener;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܿ:Lcom/amazonaws/event/ProgressListener;
 
     return-void
 .end method
 
-.method public final ۚ()Ljava/lang/String;
+.method public final ۚ()Ljava/util/ArrayList;
     .locals 1
 
-    .line 237
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۛ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+    .line 581
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->۟:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->ܰ()Ljava/lang/String;
+    return-object v0
+.end method
+
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
+
+    .line 193
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۢ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->ۙ()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۜ()Ljava/lang/String;
+.method public final ۧ()Ljava/lang/String;
     .locals 1
 
     .line 297
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۛ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۢ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -157,20 +153,24 @@
     return-object v0
 .end method
 
-.method public final ۬()Ljava/util/ArrayList;
+.method public final ܳ()Ljava/util/ArrayList;
     .locals 1
 
-    .line 581
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->۫:Ljava/util/ArrayList;
+    .line 519
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->֡:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method public final ᩹()Ljava/util/ArrayList;
+.method public final ᩴ()Ljava/lang/String;
     .locals 1
 
-    .line 519
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܽ:Ljava/util/ArrayList;
+    .line 237
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۢ:Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;
+
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3ObjectIdBuilder;->᩷()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

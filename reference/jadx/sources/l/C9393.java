@@ -1,29 +1,16 @@
 package l;
 
-import java.util.function.Predicate;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-/* JADX INFO: renamed from: l.ۢۛۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 31K1 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9393 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
+/* JADX INFO: renamed from: l.ۡ۬֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 77J6 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9393 extends AbstractC11800 {
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public ImageView f30488;
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        int i = ActivityC5677.f19358;
-        return !((AbstractC22611) obj).m50131();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public TextView f30489;
 }

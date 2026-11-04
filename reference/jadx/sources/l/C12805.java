@@ -1,54 +1,50 @@
 package l;
 
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.۬֫ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 560O */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12805 extends Drawable.ConstantState {
+/* JADX INFO: renamed from: l.۫ۖܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J7C4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12805 extends AbstractC16474 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Drawable.ConstantState f42647;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ArrayList f41026;
 
-    public C12805(Drawable.ConstantState constantState) {
-        this.f42647 = constantState;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5348 f41027;
+
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo9677(AbstractC11800 abstractC11800) {
     }
 
-    @Override // android.graphics.drawable.Drawable.ConstantState
-    public final Drawable newDrawable() {
-        C3631 c3631 = new C3631();
-        Drawable drawableNewDrawable = this.f42647.newDrawable();
-        c3631.f56306 = drawableNewDrawable;
-        drawableNewDrawable.setCallback(c3631.f13338);
-        return c3631;
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ۤ */
+    public final boolean mo17826() {
+        return false;
     }
 
-    @Override // android.graphics.drawable.Drawable.ConstantState
-    public final Drawable newDrawable(Resources resources) {
-        C3631 c3631 = new C3631();
-        Drawable drawableNewDrawable = this.f42647.newDrawable(resources);
-        c3631.f56306 = drawableNewDrawable;
-        drawableNewDrawable.setCallback(c3631.f13338);
-        return c3631;
+    public C12805(ArrayList arrayList, C5348 c5348) {
+        this.f41026 = arrayList;
+        this.f41027 = c5348;
     }
 
-    @Override // android.graphics.drawable.Drawable.ConstantState
-    public final Drawable newDrawable(Resources resources, Resources.Theme theme) {
-        C3631 c3631 = new C3631();
-        Drawable drawableNewDrawable = this.f42647.newDrawable(resources, theme);
-        c3631.f56306 = drawableNewDrawable;
-        drawableNewDrawable.setCallback(c3631.f13338);
-        return c3631;
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo9678(AbstractC11800 abstractC11800) {
+        return AbstractC16474.m39083(3, 0);
     }
 
-    @Override // android.graphics.drawable.Drawable.ConstantState
-    public final boolean canApplyTheme() {
-        return this.f42647.canApplyTheme();
-    }
-
-    @Override // android.graphics.drawable.Drawable.ConstantState
-    public final int getChangingConfigurations() {
-        return this.f42647.getChangingConfigurations();
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo9676(C25227 c25227, AbstractC11800 abstractC11800, AbstractC11800 abstractC11801) {
+        int bindingAdapterPosition = abstractC11800.getBindingAdapterPosition();
+        int bindingAdapterPosition2 = abstractC11801.getBindingAdapterPosition();
+        if (bindingAdapterPosition == -1 || bindingAdapterPosition2 == -1) {
+            return false;
+        }
+        C9911.m25734(bindingAdapterPosition, bindingAdapterPosition2, this.f41026);
+        this.f41027.notifyItemMoved(bindingAdapterPosition, bindingAdapterPosition2);
+        return true;
     }
 }

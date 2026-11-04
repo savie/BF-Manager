@@ -1,42 +1,73 @@
 package l;
 
-import java.util.Arrays;
+import android.graphics.Insets;
 
-/* JADX INFO: renamed from: l.۬ᩳ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: E7PU */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۫ᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R1B7 */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13275 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int[] f44085 = new int[128];
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f44086 = 0;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C13275 f42404 = new C13275(0, 0, 0, 0);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32759(int i, int i2) {
-        int i3 = this.f44086;
-        if (i3 != 0) {
-            if (i - (i3 == 0 ? 0 : this.f44085[i3 - 2]) == i2 - (i3 != 0 ? this.f44085[i3 - 1] : 0)) {
-                return;
-            }
+    public final int f42405;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f42406;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f42407;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f42408;
+
+    public C13275(int i, int i2, int i3, int i4) {
+        this.f42407 = i;
+        this.f42408 = i2;
+        this.f42406 = i3;
+        this.f42405 = i4;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C13275 m32819(int i, int i2, int i3, int i4) {
+        if (i == 0 && i2 == 0 && i3 == 0 && i4 == 0) {
+            return f42404;
         }
-        int i4 = i3 + 2;
-        int length = this.f44085.length;
-        while (i4 > length) {
-            length <<= 1;
+        return new C13275(i, i2, i3, i4);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C13275 m32821(C13275 c13275, C13275 c13276) {
+        return m32819(Math.max(c13275.f42407, c13276.f42407), Math.max(c13275.f42408, c13276.f42408), Math.max(c13275.f42406, c13276.f42406), Math.max(c13275.f42405, c13276.f42405));
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        int[] iArr = this.f44085;
-        if (length < iArr.length) {
-            throw new IndexOutOfBoundsException();
+        if (obj == null || C13275.class != obj.getClass()) {
+            return false;
         }
-        if (length != iArr.length) {
-            this.f44085 = Arrays.copyOf(iArr, length);
-        }
-        int[] iArr2 = this.f44085;
-        int i5 = this.f44086;
-        iArr2[i5] = i;
-        iArr2[i5 + 1] = i2;
-        this.f44086 = i5 + 2;
+        C13275 c13275 = (C13275) obj;
+        return this.f42405 == c13275.f42405 && this.f42407 == c13275.f42407 && this.f42406 == c13275.f42406 && this.f42408 == c13275.f42408;
+    }
+
+    public final int hashCode() {
+        return (((((this.f42407 * 31) + this.f42408) * 31) + this.f42406) * 31) + this.f42405;
+    }
+
+    public final String toString() {
+        return "Insets{left=" + this.f42407 + ", top=" + this.f42408 + ", right=" + this.f42406 + ", bottom=" + this.f42405 + '}';
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C13275 m32820(Insets insets) {
+        return m32819(insets.left, insets.top, insets.right, insets.bottom);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Insets m32822() {
+        return C15512.m37181(this.f42407, this.f42408, this.f42406, this.f42405);
     }
 }

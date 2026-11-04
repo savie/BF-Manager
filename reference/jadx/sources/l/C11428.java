@@ -1,33 +1,39 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۨۗۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V717 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11428 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C9271 f38477;
+/* JADX INFO: renamed from: l.ۧۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5A0Y */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11428 implements InterfaceC17395, InterfaceC17064 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C6750 f38478;
+    public long f35935 = 0;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28547() {
-        C6750 c6750 = this.f38478;
-        if (c6750 != null) {
-            try {
-                c6750.close();
-            } catch (IOException unused) {
-            }
-        }
-        C9271 c9271 = this.f38477;
-        if (c9271 != null) {
-            try {
-                c9271.close();
-            } catch (IOException unused2) {
-            }
-        }
+    @Override // l.InterfaceC17064
+    public final int size() {
+        return 8;
+    }
+
+    @Override // l.InterfaceC17395
+    /* JADX INFO: renamed from: ᩷ */
+    public final byte mo10574() {
+        return (byte) 20;
+    }
+
+    @Override // l.InterfaceC2149
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo6138(int i, int i2, byte[] bArr) {
+        this.f35935 = C0481.m2320(i, bArr);
+        return 8;
+    }
+
+    @Override // l.InterfaceC17064
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo10573(int i, byte[] bArr) {
+        C0481.m2321(this.f35935, i, bArr);
+        return 8;
+    }
+
+    public final String toString() {
+        return new String(C2764.m9137(new StringBuilder("EndOfFileInformation[endOfFile="), this.f35935, "]"));
     }
 }

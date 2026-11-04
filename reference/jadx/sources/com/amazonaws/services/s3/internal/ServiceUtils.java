@@ -8,23 +8,23 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.SSEAlgorithm;
 import com.amazonaws.util.DateUtils;
-import l.C20630;
+import l.C1402;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ServiceUtils {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f512 = 0;
+    public static final /* synthetic */ int f502 = 0;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Log f513 = LogFactory.m302(ServiceUtils.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Log f503 = LogFactory.m296(ServiceUtils.class);
 
     static {
         new DateUtils();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m486(String str) {
+    public static String m480(String str) {
         if (str == null) {
             return null;
         }
@@ -32,29 +32,29 @@ public class ServiceUtils {
         if (strTrim.startsWith("\"")) {
             strTrim = strTrim.substring(1);
         }
-        return strTrim.endsWith("\"") ? C20630.m46498(1, 0, strTrim) : strTrim;
+        return strTrim.endsWith("\"") ? C1402.m5124(1, 0, strTrim) : strTrim;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m487(AmazonWebServiceRequest amazonWebServiceRequest) {
+    public static boolean m481(AmazonWebServiceRequest amazonWebServiceRequest) {
         if (System.getProperty("com.amazonaws.services.s3.disableGetObjectMD5Validation") != null) {
             return true;
         }
         if (amazonWebServiceRequest instanceof GetObjectRequest) {
-            return ((GetObjectRequest) amazonWebServiceRequest).m569() != null;
+            return ((GetObjectRequest) amazonWebServiceRequest).m562() != null;
         }
         if (!(amazonWebServiceRequest instanceof PutObjectRequest)) {
             return false;
         }
         PutObjectRequest putObjectRequest = (PutObjectRequest) amazonWebServiceRequest;
-        ObjectMetadata objectMetadataM499 = putObjectRequest.m499();
-        if (objectMetadataM499 != null && objectMetadataM499.m632() != null) {
+        ObjectMetadata objectMetadataM491 = putObjectRequest.m491();
+        if (objectMetadataM491 != null && objectMetadataM491.m627() != null) {
             return true;
         }
-        if (putObjectRequest.m519() == null) {
+        if (putObjectRequest.m513() == null) {
             return false;
         }
-        putObjectRequest.m519().getClass();
-        return (SSEAlgorithm.KMS.getAlgorithm() == null && putObjectRequest.m519().m671() == null) ? false : true;
+        putObjectRequest.m513().getClass();
+        return (SSEAlgorithm.KMS.getAlgorithm() == null && putObjectRequest.m513().m665() == null) ? false : true;
     }
 }

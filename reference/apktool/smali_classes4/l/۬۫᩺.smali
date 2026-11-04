@@ -1,45 +1,73 @@
-.class public final Ll/۬۫᩺;
-.super Ll/᩹ܿ᩵;
-.source "51V0"
+.class public final synthetic Ll/۬۫᩺;
+.super Ljava/lang/Object;
+.source "C5BI"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic ֡:Ll/ۧۨۡ;
-
-.field public final synthetic ᩶:Ljava/lang/String;
+.field public final synthetic ܰ:Ll/ۙۚ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll/ۧۨۡ;)V
+.method public synthetic constructor <init>(Ll/ۙۚ᩺;)V
     .locals 0
 
-    .line 40
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 298
-    iput-object p1, p0, Ll/۬۫᩺;->᩶:Ljava/lang/String;
-
-    iput-object p2, p0, Ll/۬۫᩺;->֡:Ll/ۧۨۡ;
+    iput-object p1, p0, Ll/۬۫᩺;->ܰ:Ll/ۙۚ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
-    .locals 1
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 302
-    iget-object v0, p0, Ll/۬۫᩺;->᩶:Ljava/lang/String;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final getValue()Ll/ۧۨۡ;
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 308
-    iget-object v0, p0, Ll/۬۫᩺;->֡:Ll/ۧۨۡ;
+    .line 2
+    check-cast p1, Ljava/lang/Integer;
 
-    return-object v0
+    .line 193
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "#"
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Ll/۬۫᩺;->ܰ:Ll/ۙۚ᩺;
+
+    iget v0, v0, Ll/ۙۚ᩺;->ۚ᩷:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+
+    move-result-object p1
+
+    return-object p1
 .end method

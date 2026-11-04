@@ -1,59 +1,55 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+/* JADX INFO: renamed from: l.ۗܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 75HT */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3484 extends AbstractC20638 {
+    public static final long serialVersionUID = 0;
 
-/* JADX INFO: renamed from: l.ۗ᩷۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B749 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3484 extends AbstractC17535 {
+    @Override // l.AbstractC20638, java.lang.Comparable
+    public final /* bridge */ /* synthetic */ int compareTo(Object obj) {
+        return compareTo((AbstractC20638) obj);
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C2884 f12787;
-
+    @Override // l.AbstractC20638
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f12788;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f12789;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f12790;
-
-    public C3484(int i, long j, C2884 c2884, byte[] bArr) {
-        this.f12788 = bArr;
-        this.f12789 = i;
-        this.f12790 = j;
-        this.f12787 = c2884;
+    public final boolean mo11449(Comparable comparable) {
+        int i = C2346.f7567;
+        return this.f66190.compareTo(comparable) <= 0;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C3484)) {
-            return false;
-        }
-        C3484 c3484 = (C3484) obj;
-        return this.f12789 == c3484.f12789 && this.f12790 == c3484.f12790 && C13638.equals(this.f12788, c3484.f12788) && C13638.equals(this.f12787, c3484.f12787);
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final EnumC3616 mo11452() {
+        return EnumC3616.CLOSED;
     }
 
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final EnumC3616 mo11450() {
+        return EnumC3616.OPEN;
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo11448(StringBuilder sb) {
+        sb.append('[');
+        sb.append(this.f66190);
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo11451(StringBuilder sb) {
+        sb.append(this.f66190);
+        sb.append(')');
+    }
+
+    @Override // l.AbstractC20638
     public final int hashCode() {
-        int i = this.f12789 * 31;
-        long j = this.f12790;
-        return C13638.hashCode(this.f12787) + ((C13638.hashCode(this.f12788) + ((i + ((int) (j ^ (j >>> 32)))) * 31)) * 31);
+        return this.f66190.hashCode();
     }
 
     public final String toString() {
-        Object[] objArr = {this.f12788, Integer.valueOf(this.f12789), Long.valueOf(this.f12790), this.f12787};
-        String[] strArrSplit = "data;length;keyframeTimeUs;reservation".length() == 0 ? new String[0] : "data;length;keyframeTimeUs;reservation".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C3484.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+        return "\\" + this.f66190 + "/";
     }
 }

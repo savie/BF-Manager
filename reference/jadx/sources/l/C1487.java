@@ -1,58 +1,62 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.HashMap;
+import org.bouncycastle.crypto.Digest;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-/* JADX INFO: renamed from: l.֫֨ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E708 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1487 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.֨᩹ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I9IW */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1487 implements InterfaceC22370 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static HashMap f5183;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f6024;
+    public final Digest f5184;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f6025;
-
-    public C1487(int i, String str) {
-        this.f6024 = i;
-        this.f6025 = str;
+    static {
+        HashMap map = new HashMap();
+        f5183 = map;
+        map.put(XMSSKeyParameters.SHA_512, new C0741());
+        map.put("SHA256", new C8199());
+        map.put("MD4", new C19386());
+        map.put("MD5", new C10435());
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C1487)) {
-            return false;
+    public C1487(String str) {
+        InterfaceC15436 interfaceC15436 = (InterfaceC15436) f5183.get(str);
+        if (interfaceC15436 == null) {
+            throw new IllegalArgumentException(C14442.m34865("No MessageDigest ", str, " defined in BouncyCastle"));
         }
-        C1487 c1487 = (C1487) obj;
-        return this.f6024 == c1487.f6024 && C13638.equals(this.f6025, c1487.f6025);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f6025) + (this.f6024 * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f6024), this.f6025};
-        String[] strArrSplit = "group;name".length() == 0 ? new String[0] : "group;name".split(l.b);
-        StringBuilder sb = new StringBuilder("CaptureExport[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+        this.f5184 = (Digest) interfaceC15436.create();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m5133() {
-        return this.f6024;
+    public final void m5309(byte[] bArr) {
+        this.f5184.update(bArr, 0, bArr.length);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m5134() {
-        return this.f6025;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m5310(byte[] bArr, int i, int i2) {
+        this.f5184.update(bArr, i, i2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m5311() {
+        Digest digest = this.f5184;
+        byte[] bArr = new byte[digest.getDigestSize()];
+        digest.doFinal(bArr, 0);
+        return bArr;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m5312() {
+        this.f5184.reset();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m5313() {
+        return this.f5184.getDigestSize();
     }
 }

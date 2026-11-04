@@ -6,13 +6,13 @@ import java.util.HashMap;
 public class ResponseMetadata {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f117;
+    public final HashMap f107;
 
     public ResponseMetadata(HashMap map) {
-        this.f117 = map;
+        this.f107 = map;
     }
 
     public final String toString() {
-        return this.f117.toString();
+        return this.f107.toString();
     }
 }

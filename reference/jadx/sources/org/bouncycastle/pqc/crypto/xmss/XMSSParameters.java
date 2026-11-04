@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto.xmss;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
 import org.bouncycastle.crypto.Digest;
@@ -42,7 +42,7 @@ public final class XMSSParameters {
         map.put(numValueOf4, new XMSSParameters(10, aSN1ObjectIdentifier4));
         map.put(Integers.valueOf(11), new XMSSParameters(16, aSN1ObjectIdentifier4));
         map.put(Integers.valueOf(12), new XMSSParameters(20, aSN1ObjectIdentifier4));
-        paramsLookupTable = C0561.unmodifiableMap(map);
+        paramsLookupTable = C4681.unmodifiableMap(map);
     }
 
     public XMSSParameters(int i, ASN1ObjectIdentifier aSN1ObjectIdentifier) {

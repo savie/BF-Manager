@@ -1,244 +1,164 @@
 package l;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.TreeSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۙܺۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A734 */
+/* JADX INFO: renamed from: l.ۙۜ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 17L4 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4742 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C13210 f16687;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f16688;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f16689;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final C13477 f16672 = new C13477();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TreeSet f16686 = new TreeSet();
+    public final C0310 f16673;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f16685 = new ArrayList();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C15714 f16674;
 
-    public C4742(int i, String str, C13210 c13210) {
-        this.f16689 = i;
-        this.f16688 = str;
-        this.f16687 = c13210;
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C24705 f16675;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C21676 m13118(long j, long j2) {
-        long j3;
-        C21676 c21676 = new C21676(this.f16688, j, -1L, -9223372036854775807L, null);
-        TreeSet treeSet = this.f16686;
-        C21676 c21677 = (C21676) treeSet.floor(c21676);
-        if (c21677 != null && c21677.f7660 + c21677.f7657 > j) {
-            return c21677;
-        }
-        C21676 c21678 = (C21676) treeSet.ceiling(c21676);
-        if (c21678 != null) {
-            long j4 = c21678.f7660 - j;
-            if (j2 == -1) {
-                j3 = j4;
-            } else {
-                j2 = Math.min(j4, j2);
-                j3 = j2;
-            }
-        } else {
-            j3 = j2;
-        }
-        return new C21676(this.f16688, j, j3, -9223372036854775807L, null);
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C14764 f16676;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C12863 f16677;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C18499 f16678 = new C18499();
+
+    public C4742(C4747 c4747) {
+        c4747.m14646(f16672, this);
+        this.f16673 = C0310.m1899(c4747);
+        this.f16677 = C12863.m31895(c4747);
+        C15252.m36599(c4747);
+        this.f16674 = C15714.m37502(c4747);
+        this.f16676 = C14764.m35506(c4747);
+        this.f16675 = C24705.m55066(c4747);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13210 m13109() {
-        return this.f16687;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m13113(C1214 c1214) {
-        C13210 c13210 = this.f16687;
-        C13210 c13210M32697 = c13210.m32697(c1214);
-        this.f16687 = c13210M32697;
-        return !c13210M32697.equals(c13210);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m13106() {
-        return this.f16685.isEmpty();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m13116(long j, long j2) {
-        int i = 0;
+    public final void m14640() {
+        AbstractC22664 abstractC22664M14638;
+        C15714 c15714;
         while (true) {
-            ArrayList arrayList = this.f16685;
-            if (i >= arrayList.size()) {
-                return false;
-            }
-            C3476 c3476 = (C3476) arrayList.get(i);
-            long j3 = c3476.f12764;
-            long j4 = c3476.f12763;
-            if (j4 == -1) {
-                if (j >= j3) {
-                    return true;
-                }
-            } else if (j2 != -1 && j3 <= j && j + j2 <= j3 + j4) {
-                return true;
-            }
-            i++;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m13107(long j, long j2) {
-        int i = 0;
-        while (true) {
-            ArrayList arrayList = this.f16685;
-            if (i < arrayList.size()) {
-                C3476 c3476 = (C3476) arrayList.get(i);
-                long j3 = c3476.f12764;
-                if (j3 <= j) {
-                    long j4 = c3476.f12763;
-                    if (j4 == -1 || j3 + j4 > j) {
-                        return false;
-                    }
-                    i++;
-                } else {
-                    if (j2 == -1 || j + j2 > j3) {
-                        return false;
-                    }
-                    i++;
-                }
-            } else {
-                arrayList.add(new C3476(j, j2));
-                return true;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m13111(long j) {
-        int i = 0;
-        while (true) {
-            ArrayList arrayList = this.f16685;
-            if (i >= arrayList.size()) {
-                throw new IllegalStateException();
-            }
-            if (((C3476) arrayList.get(i)).f12764 == j) {
-                arrayList.remove(i);
+            C18499 c18499 = this.f16678;
+            if (!c18499.m43096()) {
                 return;
             }
-            i++;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m13112(C21676 c21676) {
-        this.f16686.add(c21676);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final TreeSet m13117() {
-        return this.f16686;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m13108(long j, long j2) {
-        C2023.m6507(j >= 0);
-        C2023.m6507(j2 >= 0);
-        C21676 c21676M13118 = m13118(j, j2);
-        long j3 = c21676M13118.f7657;
-        boolean z = c21676M13118.f7661;
-        long j4 = C17492.FOREVER_NS;
-        if (!z) {
-            if (j3 == -1) {
-                j3 = Long.MAX_VALUE;
-            }
-            return -Math.min(j3, j2);
-        }
-        long j5 = j + j2;
-        if (j5 >= 0) {
-            j4 = j5;
-        }
-        long jMax = c21676M13118.f7660 + j3;
-        if (jMax < j4) {
-            for (C21676 c21676 : this.f16686.tailSet(c21676M13118, false)) {
-                long j6 = c21676.f7660;
-                if (j6 > jMax) {
-                    break;
+            C7022 c7022 = (C7022) c18499.remove();
+            C18499 c184910 = new C18499();
+            C3168 c3168 = c7022.f23160;
+            C3168 c3169 = c7022.f23160;
+            C14479 c14479 = c7022.f23161;
+            AbstractC11781 abstractC11781 = c7022.f23156;
+            boolean zM21911 = c3168.f10273.m21911(EnumC21461.f68526);
+            boolean z = false;
+            C14764 c14764 = this.f16676;
+            if (zM21911) {
+                C24533 c24533 = (C24533) c3168.f10273;
+                boolean z2 = (abstractC11781.mo29591() & 17179869184L) != 0;
+                if (z2 || c24533.f79555.m35551() <= abstractC11781.f38067.mo50621().m35551()) {
+                    C14769 c14769 = c24533.f79555;
+                    C14769 c14769Mo50621 = abstractC11781.f38067.mo50621();
+                    while (true) {
+                        boolean zM35550 = c14769.m35550();
+                        c15714 = this.f16674;
+                        if (!zM35550 || !c14769Mo50621.m35550()) {
+                            break;
+                        }
+                        AbstractC22295 abstractC22295 = (AbstractC22295) c14769.f48335;
+                        AbstractC22664 abstractC22664 = (c14769Mo50621.f48336.m35550() || !z2) ? (AbstractC22664) c14769Mo50621.f48335 : ((C2832) c14769Mo50621.f48335).f9333;
+                        if (abstractC22295.m21911(EnumC21461.f68453)) {
+                            final C16327 c16327 = (C16327) abstractC22295;
+                            if (c16327.f53000 == EnumC17819.IMPLICIT) {
+                                for (Iterator it = c16327.f52999.iterator(); it.hasNext(); it = it) {
+                                    ((C12510) it.next()).f40166 = null;
+                                }
+                            }
+                            C24705 c24705 = this.f16675;
+                            if (c24705.m55087(abstractC22664)) {
+                                boolean zM51067 = c24705.m55143(abstractC22664).mo31585().m51067(EnumC21172.VOID);
+                                c16327.f53001 = new C8513(this, zM51067, c184910, c16327).mo8479(c16327.f53001);
+                                if (!zM51067) {
+                                    C13891 c13891M37568 = c15714.m37568();
+                                    c13891M37568.f26659 = c14764.f48263;
+                                    final C11018 c11018M37553 = c15714.m37553(c13891M37568);
+                                    C4197 c4197 = (C4197) c16327.f53001;
+                                    c4197.f15344 = c4197.f15344.m35546(c11018M37553);
+                                    c184910.m43089(new Runnable() { // from class: l.ۢ۠᩺
+                                        @Override // java.lang.Runnable
+                                        public final void run() {
+                                            C4197 c4198 = (C4197) c16327.f53001;
+                                            c4198.f15344 = C14769.m35541(c11018M37553, c4198.f15344);
+                                        }
+                                    });
+                                }
+                            }
+                            z = true;
+                        }
+                        c14769 = c14769.f48336;
+                        if (c14769Mo50621.f48336.m35550() || !z2) {
+                            c14769Mo50621 = c14769Mo50621.f48336;
+                        }
+                    }
+                    C14769 c147610 = c24533.f79555;
+                    while (c14769Mo50621.m35550()) {
+                        C14769 c147611 = c24533.f79555;
+                        C13891 c13891M37569 = c15714.m37568();
+                        c13891M37569.f26659 = c14764.f48263;
+                        c24533.f79555 = c147611.m35546(c13891M37569);
+                        c14769Mo50621 = c14769Mo50621.f48336;
+                        z = true;
+                    }
+                    c184910.m43089(new RunnableC11879(5, c24533, c147610));
                 }
-                jMax = Math.max(jMax, j6 + c21676.f7657);
-                if (jMax >= j4) {
-                    break;
-                }
             }
-        }
-        return Math.min(jMax - j, j2);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21676 m13110(C21676 c21676, long j, boolean z) {
-        File file;
-        TreeSet treeSet = this.f16686;
-        C2023.m6510(treeSet.remove(c21676));
-        File file2 = c21676.f7658;
-        file2.getClass();
-        if (z) {
-            File parentFile = file2.getParentFile();
-            parentFile.getClass();
-            File fileM48409 = C21676.m48409(parentFile, this.f16689, c21676.f7660, j);
-            if (file2.renameTo(fileM48409)) {
-                file = fileM48409;
+            if (z) {
+                C14769 c14769M28327 = C11239.m28327(c3168.f10273);
+                AbstractC22664 abstractC22665 = c14479.f45575;
+                AbstractC22664 abstractC22666 = c14479.f45575;
+                C14769 c14769Mo50622 = abstractC22665.mo50621();
+                while (c14769Mo50622.m35551() < c14769M28327.m35551()) {
+                    c14769Mo50622 = c14769Mo50622.m35546(c14764.f48263);
+                }
+                AbstractC22664 abstractC22667 = c7022.f23159;
+                AbstractC11781 abstractC11782 = c7022.f23156;
+                C0310 c0310 = this.f16673;
+                C17359.requireNonNull(c0310);
+                abstractC22664M14638 = c0310.m1943(abstractC22667, abstractC11782, new C14479(c0310, c14479.f45572, abstractC22666.mo31585(), c14479.f45571, c14479.f45574), c3169, c14769M28327, c14769Mo50622, abstractC22666.mo15882());
+                C1170.stream(c184910).forEach(new C1056());
             } else {
-                C0303.m1848("Failed to rename " + file2 + " to " + fileM48409);
-                file = file2;
+                abstractC22664M14638 = m14638(c7022.f23158, c7022.f23159, c7022.f23157, c3169, c7022.f23161);
             }
-        } else {
-            file = file2;
+            c7022.f23158.f26659 = abstractC22664M14638;
         }
-        C2023.m6510(c21676.f7661);
-        C21676 c21677 = new C21676(c21676.f7656, c21676.f7660, c21676.f7657, j, file);
-        treeSet.add(c21677);
-        return c21677;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m13115() {
-        return this.f16686.isEmpty();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m13114(C2065 c2065) {
-        if (!this.f16686.remove(c2065)) {
-            return false;
+    public final AbstractC22664 m14639(AbstractC8036 abstractC8036, AbstractC22664 abstractC22664, AbstractC11781 abstractC11781, C3168 c3168, C14479 c14479) {
+        if ((abstractC11781.f38071 & 1099511627776L) != 0 && ((C7768) c3168.f10272).f25555.m52830()) {
+            AbstractC11781 abstractC11782 = ((C13733) abstractC11781.f38067).f43588;
+            this.f16673.getClass();
+            this.f16678.m43089(new C7022(abstractC8036, abstractC22664, abstractC11781, abstractC11782, C0310.m1922(c3168), c14479));
+            return this.f16676.f48263;
         }
-        File file = c2065.f7658;
-        if (file == null) {
-            return true;
-        }
-        file.delete();
-        return true;
+        return m14638(abstractC8036, abstractC22664, abstractC11781, c3168, c14479);
     }
 
-    public final int hashCode() {
-        return this.f16687.hashCode() + C13958.m33812(this.f16689 * 31, 31, this.f16688);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C4742.class == obj.getClass()) {
-            C4742 c4742 = (C4742) obj;
-            if (this.f16689 == c4742.f16689 && this.f16688.equals(c4742.f16688) && this.f16686.equals(c4742.f16686) && this.f16687.equals(c4742.f16687)) {
-                return true;
-            }
-        }
-        return false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private AbstractC22664 m14638(AbstractC8036 abstractC8036, AbstractC22664 abstractC22664, AbstractC11781 abstractC11781, C3168 c3168, C14479 c14479) {
+        AbstractC22664 abstractC22665 = c14479.f45575;
+        C12863 c12863 = this.f16677;
+        C17359.requireNonNull(c12863);
+        C19576 c19576 = new C19576(c12863, EnumC16124.SPECULATIVE, abstractC11781, ((C7768) c3168.f10272).f25570);
+        abstractC22665.getClass();
+        AbstractC22664 abstractC22664M1937 = this.f16673.m1937(abstractC8036, abstractC22664, abstractC11781, (AbstractC22664) c19576.m34207(null, abstractC22665), c3168, c14479);
+        AbstractC22664 abstractC22666 = c14479.f45575;
+        C17359.requireNonNull(c12863);
+        C19576 c19577 = new C19576(c12863, EnumC16124.CHECK, abstractC11781, ((C7768) c3168.f10272).f25570);
+        abstractC22666.getClass();
+        return abstractC22664M1937;
     }
 }

@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.CryptoServicePurpose;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Bytes;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Haraka512Digest extends HarakaBase {
     public final byte[] buffer;
     public int off;

@@ -1,107 +1,44 @@
 package l;
 
-import android.util.SparseArray;
-import android.view.View;
-import java.lang.reflect.Array;
+/* JADX INFO: renamed from: l.۠ᩳۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 469D */
+/* JADX INFO: loaded from: classes4.dex */
+public class C8808 extends AbstractRunnableC15257 {
 
-/* JADX INFO: renamed from: l.ۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1D4 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8808 extends AbstractC23625 {
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public String f28765;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public float[] f30289;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public float[] f30290;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public SparseArray f30291;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public SparseArray f30292;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public String f30293;
-
-    public C8808() {
-        throw null;
+    public C8808(C5563 c5563, String str) {
+        super(c5563);
+        this.f28765 = str;
     }
 
-    @Override // l.AbstractC23625
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo22926(int i) {
-        SparseArray sparseArray = this.f30292;
-        int size = sparseArray.size();
-        int iM24931 = ((C9824) sparseArray.valueAt(0)).m24931();
-        double[] dArr = new double[size];
-        int i2 = iM24931 + 2;
-        this.f30290 = new float[i2];
-        this.f30289 = new float[iM24931];
-        double[][] dArr2 = (double[][]) Array.newInstance((Class<?>) Double.TYPE, size, i2);
-        for (int i3 = 0; i3 < size; i3++) {
-            int iKeyAt = sparseArray.keyAt(i3);
-            C9824 c9824 = (C9824) sparseArray.valueAt(i3);
-            float[] fArr = (float[]) this.f30291.valueAt(i3);
-            dArr[i3] = ((double) iKeyAt) * 0.01d;
-            c9824.m24930(this.f30290);
-            int i4 = 0;
-            while (true) {
-                float[] fArr2 = this.f30290;
-                if (i4 < fArr2.length) {
-                    dArr2[i3][i4] = fArr2[i4];
-                    i4++;
-                }
-            }
-            double[] dArr3 = dArr2[i3];
-            dArr3[iM24931] = fArr[0];
-            dArr3[iM24931 + 1] = fArr[1];
-        }
-        this.f76542 = AbstractC4136.m11763(i, dArr, dArr2);
-    }
-
-    @Override // l.AbstractC23625
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo22925(float f, float f2, float f3, int i, int i2) {
-        throw new RuntimeException("don't call for custom attribute call setPoint(pos, ConstraintAttribute,...)");
-    }
-
-    @Override // l.AbstractC23625
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo2000(float f, long j, View view, C21070 c21070) {
-        this.f76542.mo4690(f, this.f30290);
-        float[] fArr = this.f30290;
-        float f2 = fArr[fArr.length - 2];
-        float f3 = fArr[fArr.length - 1];
-        long j2 = j - this.f76539;
-        if (Float.isNaN(this.f76541)) {
-            float fM47477 = c21070.m47477(view, this.f30293);
-            this.f76541 = fM47477;
-            if (Float.isNaN(fM47477)) {
-                this.f76541 = 0.0f;
+    @Override // java.lang.Runnable
+    public final void run() {
+        String str;
+        String strM36601 = AbstractRunnableC15257.m36601(this.f28765);
+        C5563 c5563 = this.f49894;
+        AbstractC22044 abstractC22044M16487 = c5563.m16487();
+        long jMo4285 = 0;
+        if (strM36601.contains(AbstractC22044.f71089)) {
+            str = "550 No directory traversal allowed in SIZE param\r\n";
+        } else {
+            AbstractC22044 abstractC22044M49876 = abstractC22044M16487.m49876(strM36601);
+            if (m36609(abstractC22044M49876)) {
+                str = "550 SIZE target violates chroot\r\n";
+            } else if (!abstractC22044M49876.mo2934()) {
+                str = "550 Cannot get the SIZE of nonexistent object\r\n";
+            } else if (abstractC22044M49876.mo4304()) {
+                jMo4285 = abstractC22044M49876.mo4285();
+                str = null;
+            } else {
+                str = "550 Cannot get the size of a non-file\r\n";
             }
         }
-        float f4 = (float) ((((j2 * 1.0E-9d) * ((double) f2)) + ((double) this.f76541)) % 1.0d);
-        this.f76541 = f4;
-        this.f76539 = j;
-        float fM52089 = m52089(f4);
-        this.f76537 = false;
-        int i = 0;
-        while (true) {
-            float[] fArr2 = this.f30289;
-            if (i >= fArr2.length) {
-                break;
-            }
-            boolean z = this.f76537;
-            float f5 = this.f30290[i];
-            this.f76537 = z | (((double) f5) != 0.0d);
-            fArr2[i] = (f5 * fM52089) + f3;
-            i++;
+        if (str != null) {
+            c5563.m16486(str);
+            return;
         }
-        ((C9824) this.f30292.valueAt(0)).m24928(view, this.f30289);
-        if (f2 != 0.0f) {
-            this.f76537 = true;
-        }
-        return this.f76537;
+        c5563.m16486("213 " + jMo4285 + "\r\n");
     }
 }

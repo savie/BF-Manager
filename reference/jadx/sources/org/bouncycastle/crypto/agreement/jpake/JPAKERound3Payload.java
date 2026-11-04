@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.agreement.jpake;
 
 import java.math.BigInteger;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKERound3Payload {
     public final BigInteger macTag;
     public final String participantId;

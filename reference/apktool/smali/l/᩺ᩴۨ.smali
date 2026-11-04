@@ -1,23 +1,11 @@
-.class public final Ll/᩺ᩴۨ;
+.class public interface abstract Ll/᩺ᩴۨ;
 .super Ljava/lang/Object;
-.source "R6PB"
+.source "U5J6"
 
 
-# instance fields
-.field public ۙ:I
+# virtual methods
+.method public abstract ۙ(Ljava/io/IOException;)V
+.end method
 
-.field public final ܰ:I
-
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    .line 630
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 631
-    iput p1, p0, Ll/᩺ᩴۨ;->ܰ:I
-
-    return-void
+.method public abstract ۙ(Ll/ۡܳۨ;)V
 .end method

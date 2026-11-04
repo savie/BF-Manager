@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/MT_Protector_res_0x7f080192">
+    <target
+        android:name="icon_null"
+        android:animation="@anim/MT_Protector_res_0x7f010012"/>
+    <target
+        android:name="check_path"
+        android:animation="@anim/MT_Protector_res_0x7f010026"/>
+</animated-vector>

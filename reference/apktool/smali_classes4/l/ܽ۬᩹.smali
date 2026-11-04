@@ -1,65 +1,69 @@
-.class public final Ll/ܽ۬᩹;
-.super Ll/ۧ۬᩹;
-.source "969A"
+.class public final enum Ll/ܽ۬᩹;
+.super Ljava/lang/Enum;
+.source "N673"
 
 
-# instance fields
-.field public final synthetic ۖ:Ll/ۨۘ᩹;
+# static fields
+.field public static final enum FOLLOW_LINKS:Ll/ܽ۬᩹;
+
+.field public static final synthetic a:[Ll/ܽ۬᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۨۘ᩹;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 741
-    iput-object p1, p0, Ll/ܽ۬᩹;->ۖ:Ll/ۨۘ᩹;
+    .line 40
+    new-instance v0, Ll/ܽ۬᩹;
 
-    const p1, 0x7f120115
+    const-string v1, "FOLLOW_LINKS"
 
-    const v0, 0x7f080213
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v0}, Ll/ۧ۬᩹;-><init>(II)V
+    .line 36
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(Ll/ۨۜ᩹;)V
-    .locals 2
-
-    const-string v0, "/"
-
-    const/4 v1, 0x0
-
-    .line 744
-    invoke-virtual {p1, v0, v1}, Ll/ۨۜ᩹;->ܰ(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final ᩹()Z
-    .locals 2
-
-    .line 749
-    iget-object v0, p0, Ll/ܽ۬᩹;->ۖ:Ll/ۨۘ᩹;
-
-    invoke-virtual {v0}, Ll/ۨۘ᩹;->۟()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
+    .line 40
+    sput-object v0, Ll/ܽ۬᩹;->FOLLOW_LINKS:Ll/ܽ۬᩹;
 
     const/4 v1, 0x1
 
-    if-le v0, v1, :cond_0
+    new-array v1, v1, [Ll/ܽ۬᩹;
 
-    return v1
+    aput-object v0, v1, v2
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 36
+    sput-object v1, Ll/ܽ۬᩹;->a:[Ll/ܽ۬᩹;
 
-    return v0
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/ܽ۬᩹;
+    .locals 1
+
+    .line 36
+    const-class v0, Ll/ܽ۬᩹;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ܽ۬᩹;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ܽ۬᩹;
+    .locals 1
+
+    .line 36
+    sget-object v0, Ll/ܽ۬᩹;->a:[Ll/ܽ۬᩹;
+
+    invoke-virtual {v0}, [Ll/ܽ۬᩹;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ܽ۬᩹;
+
+    return-object v0
 .end method

@@ -1,301 +1,197 @@
 .class public final Ll/ܰۛܶ;
-.super Ll/۬ܿܶ;
-.source "F4NW"
+.super Ljava/lang/Object;
+.source "M1ME"
 
 
 # instance fields
-.field public final ۖ:Ljava/util/Comparator;
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public transient ۚ:[Ljava/lang/Object;
+.field public final ۤ:Ljava/lang/CharSequence;
 
-.field public transient ᩹:[Ljava/lang/Object;
+.field public final ᩷:Ll/ۗ᩺ܶ;
+
+.field public final ᩸:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Comparator;)V
-    .locals 1
+.method public constructor <init>(Ll/ۗ᩺ܶ;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    .line 635
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 453
-    invoke-direct {p0, v0}, Ll/۬ܿܶ;-><init>(I)V
+    .line 636
+    iput-object p1, p0, Ll/ܰۛܶ;->᩷:Ll/ۗ᩺ܶ;
 
-    .line 902
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 637
+    iput-object p2, p0, Ll/ܰۛܶ;->ۤ:Ljava/lang/CharSequence;
 
-    .line 626
-    iput-object p1, p0, Ll/ܰۛܶ;->ۖ:Ljava/util/Comparator;
+    .line 638
+    iput-object p3, p0, Ll/ܰۛܶ;->᩸:Ljava/lang/CharSequence;
 
-    new-array p1, v0, [Ljava/lang/Object;
+    .line 640
+    new-instance p1, Ljava/util/ArrayList;
 
-    .line 627
-    iput-object p1, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    new-array p1, v0, [Ljava/lang/Object;
-
-    .line 628
-    iput-object p1, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
+    iput-object p1, p0, Ll/ܰۛܶ;->ۙ:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ۜܿܶ;
-    .locals 1
+.method public final ۙ()Ll/ۗ᩺ܶ;
+    .locals 10
 
-    const/4 v0, 0x0
+    .line 645
+    iget-object v0, p0, Ll/ܰۛܶ;->᩷:Ll/ۗ᩺ܶ;
 
-    throw v0
-.end method
+    invoke-interface {v0}, Ll/ۗ᩺ܶ;->ۙ()Ll/ܶ᩺ܶ;
 
-.method public final ۙ(Ljava/lang/Object;Ljava/lang/Object;)Ll/۬ܿܶ;
-    .locals 3
+    move-result-object v0
 
-    .line 647
-    iget v0, p0, Ll/۬ܿܶ;->ۨ:I
+    iget-object v0, v0, Ll/ܶ᩺ܶ;->ܰ:Ll/ۗ᩺ܶ;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-interface {v0}, Ll/ۗ᩺ܶ;->ܳ()Ljava/util/Iterator;
 
-    .line 632
-    iget-object v1, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
+    move-result-object v0
 
-    array-length v2, v1
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-le v0, v2, :cond_0
+    move-result v1
 
-    .line 633
-    array-length v1, v1
+    iget-object v2, p0, Ll/ܰۛܶ;->ۙ:Ljava/util/ArrayList;
 
-    invoke-static {v1, v0}, Ll/ܳ۫ܶ;->ۙ(II)I
+    iget-object v3, p0, Ll/ܰۛܶ;->᩸:Ljava/lang/CharSequence;
 
-    move-result v0
+    iget-object v4, p0, Ll/ܰۛܶ;->ۤ:Ljava/lang/CharSequence;
 
-    .line 634
-    iget-object v1, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
+    if-eqz v1, :cond_5
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    iput-object v1, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
+    check-cast v1, Ll/᩸ۘܶ;
 
-    .line 635
-    iget-object v1, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
+    .line 646
+    iget v5, v1, Ll/᩸ۘܶ;->ۤ:I
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
+    .line 647
+    iget v6, v1, Ll/᩸ۘܶ;->᩸:I
 
     .line 648
-    :cond_0
-    invoke-static {p1, p2}, Ll/᩶ܽܶ;->ۙ(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget v7, v1, Ll/᩸ۘܶ;->ۙ:I
 
     .line 649
-    iget-object v0, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
-
-    iget v1, p0, Ll/۬ܿܶ;->ۨ:I
-
-    aput-object p1, v0, v1
-
-    .line 650
-    iget-object p1, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
-
-    aput-object p2, p1, v1
-
-    add-int/lit8 v1, v1, 0x1
+    iget v1, v1, Ll/᩸ۘܶ;->᩷:I
 
     .line 651
-    iput v1, p0, Ll/۬ܿܶ;->ۨ:I
+    invoke-static {v5, v4}, Ll/ܿۛܶ;->ۙ(ILjava/lang/CharSequence;)Z
 
-    return-object p0
-.end method
+    move-result v8
 
-.method public final ܰ()Ll/ۜܿܶ;
-    .locals 9
+    if-eqz v8, :cond_1
 
-    .line 752
-    iget v0, p0, Ll/۬ܿܶ;->ۨ:I
+    .line 652
+    invoke-static {v5, v7, v4}, Ll/۫᩺ܶ;->᩷(IILjava/lang/CharSequence;)I
 
-    iget-object v1, p0, Ll/ܰۛܶ;->ۖ:Ljava/util/Comparator;
+    move-result v5
 
-    if-eqz v0, :cond_4
+    :cond_1
+    add-int/lit8 v8, v7, -0x1
 
-    const/4 v2, 0x0
+    .line 654
+    invoke-static {v8, v4}, Ll/ܿۛܶ;->ۙ(ILjava/lang/CharSequence;)Z
 
-    const/4 v3, 0x0
+    move-result v8
 
-    const/4 v4, 0x1
+    if-eqz v8, :cond_2
 
-    if-eq v0, v4, :cond_3
-
-    .line 762
-    iget-object v4, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
-
-    invoke-static {v4, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 765
-    invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-
-    .line 766
-    iget v4, p0, Ll/۬ܿܶ;->ۨ:I
-
-    new-array v5, v4, [Ljava/lang/Object;
-
-    .line 772
-    :goto_0
-    iget v6, p0, Ll/۬ܿܶ;->ۨ:I
-
-    if-ge v3, v6, :cond_2
-
-    if-lez v3, :cond_1
-
-    add-int/lit8 v6, v3, -0x1
-
-    .line 774
-    aget-object v7, v0, v6
-
-    aget-object v8, v0, v3
-
-    invoke-interface {v1, v7, v8}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .line 655
+    invoke-static {v5, v7, v4}, Ll/۫᩺ܶ;->ۙ(IILjava/lang/CharSequence;)I
 
     move-result v7
 
-    if-eqz v7, :cond_0
+    .line 657
+    :cond_2
+    invoke-static {v6, v3}, Ll/ܿۛܶ;->ۙ(ILjava/lang/CharSequence;)Z
 
-    goto :goto_1
+    move-result v8
 
-    .line 775
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    if-eqz v8, :cond_3
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v4, "keys required to be distinct but compared as equal: "
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    aget-object v4, v0, v6
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, " and "
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v0, v0, v3
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 783
-    :cond_1
-    :goto_1
-    iget-object v6, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
-
-    aget-object v6, v6, v3
-
-    .line 784
-    invoke-static {v6}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v0, v6, v1}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)I
+    .line 658
+    invoke-static {v6, v1, v3}, Ll/۫᩺ܶ;->᩷(IILjava/lang/CharSequence;)I
 
     move-result v6
 
-    .line 785
-    iget-object v7, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
+    :cond_3
+    add-int/lit8 v8, v1, -0x1
 
-    aget-object v7, v7, v3
+    .line 660
+    invoke-static {v8, v3}, Ll/ܿۛܶ;->ۙ(ILjava/lang/CharSequence;)Z
 
-    invoke-static {v7}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v8
 
-    aput-object v7, v5, v6
+    if-eqz v8, :cond_4
 
-    add-int/lit8 v3, v3, 0x1
+    .line 661
+    invoke-static {v6, v1, v3}, Ll/۫᩺ܶ;->ۙ(IILjava/lang/CharSequence;)I
+
+    move-result v1
+
+    .line 664
+    :cond_4
+    new-instance v8, Ll/᩸ۘܶ;
+
+    invoke-direct {v8, v5, v7, v6, v1}, Ll/᩸ۘܶ;-><init>(IIII)V
+
+    .line 666
+    invoke-virtual {v8}, Ll/᩸ۘܶ;->ۙ()Z
+
+    move-result v9
+
+    if-nez v9, :cond_0
+
+    .line 148
+    invoke-interface {v4, v5, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    .line 149
+    invoke-interface {v3, v6, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    .line 150
+    sget-object v3, Ll/ۜۛܶ;->᩶:Ll/ۜۛܶ;
+
+    invoke-static {v4, v1, v3}, Ll/ۙ᩺ܶ;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ll/ۜۛܶ;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 668
+    invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 787
-    :cond_2
-    new-instance v3, Ll/ۖۛܶ;
+    .line 672
+    :cond_5
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
 
-    new-instance v6, Ll/ۜ᩻ܶ;
+    move-result v0
 
-    .line 353
-    array-length v7, v0
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
-    invoke-static {v7, v0}, Ll/᩹ܿܶ;->ܰ(I[Ljava/lang/Object;)Ll/᩹ܿܶ;
+    move-result v1
 
-    move-result-object v0
-
-    .line 789
-    invoke-direct {v6, v0, v1}, Ll/ۜ᩻ܶ;-><init>(Ll/᩹ܿܶ;Ljava/util/Comparator;)V
-
-    .line 353
-    invoke-static {v4, v5}, Ll/᩹ܿܶ;->ܰ(I[Ljava/lang/Object;)Ll/᩹ܿܶ;
-
-    move-result-object v0
-
-    .line 818
-    invoke-direct {v3, v6, v0, v2}, Ll/ۖۛܶ;-><init>(Ll/ۜ᩻ܶ;Ll/᩹ܿܶ;Ll/ۖۛܶ;)V
-
-    return-object v3
-
-    .line 758
-    :cond_3
-    iget-object v0, p0, Ll/ܰۛܶ;->ۚ:[Ljava/lang/Object;
-
-    aget-object v0, v0, v3
-
-    .line 759
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v4, p0, Ll/ܰۛܶ;->᩹:[Ljava/lang/Object;
-
-    aget-object v3, v4, v3
-
-    invoke-static {v3}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 147
-    new-instance v4, Ll/ۖۛܶ;
-
-    new-instance v5, Ll/ۜ᩻ܶ;
-
-    .line 148
-    invoke-static {v0}, Ll/᩹ܿܶ;->of(Ljava/lang/Object;)Ll/᩹ܿܶ;
-
-    move-result-object v0
-
-    .line 902
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 148
-    invoke-direct {v5, v0, v1}, Ll/ۜ᩻ܶ;-><init>(Ll/᩹ܿܶ;Ljava/util/Comparator;)V
-
-    .line 149
-    invoke-static {v3}, Ll/᩹ܿܶ;->of(Ljava/lang/Object;)Ll/᩹ܿܶ;
-
-    move-result-object v0
-
-    .line 818
-    invoke-direct {v4, v5, v0, v2}, Ll/ۖۛܶ;-><init>(Ll/ۜ᩻ܶ;Ll/᩹ܿܶ;Ll/ۖۛܶ;)V
-
-    return-object v4
-
-    .line 754
-    :cond_4
-    invoke-static {v1}, Ll/ۖۛܶ;->ۙ(Ljava/util/Comparator;)Ll/ۖۛܶ;
+    invoke-static {v2, v0, v1}, Ll/ܰ᩺ܶ;->ۙ(Ljava/util/ArrayList;II)Ll/ۗ᩺ܶ;
 
     move-result-object v0
 

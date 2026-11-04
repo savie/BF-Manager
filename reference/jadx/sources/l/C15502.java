@@ -1,28 +1,52 @@
 package l;
 
-import bin.mt.json.JSONArray;
+import java.util.Locale;
 
-/* JADX INFO: renamed from: l.ܶ᩸۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6X3 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15502 {
+/* JADX INFO: renamed from: l.ܳܿܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F7UY */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15502 extends C2079 {
+    public static final long serialVersionUID = -1;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final JSONArray f50499;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f50500;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f50501;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f50502;
-
-    public C15502(String str, String str2, JSONArray jSONArray, long j) {
-        this.f50501 = str;
-        this.f50500 = str2;
-        this.f50499 = jSONArray;
-        this.f50502 = j;
+    /* JADX WARN: Illegal instructions before constructor call */
+    public C15502(int i, String str, String str2) {
+        String str3;
+        Locale locale = Locale.ROOT;
+        switch (i) {
+            case 0:
+                str3 = "kex";
+                break;
+            case 1:
+                str3 = "server_host_key";
+                break;
+            case 2:
+                str3 = "cipher.c2s";
+                break;
+            case 3:
+                str3 = "cipher.s2c";
+                break;
+            case 4:
+                str3 = "mac.c2s";
+                break;
+            case 5:
+                str3 = "mac.s2c";
+                break;
+            case 6:
+                str3 = "compression.c2s";
+                break;
+            case 7:
+                str3 = "compression.s2c";
+                break;
+            case 8:
+                str3 = "lang.c2s";
+                break;
+            case 9:
+                str3 = "lang.s2c";
+                break;
+            default:
+                str3 = "";
+                break;
+        }
+        super(C8947.m23910(C3188.m10406("Algorithm negotiation fail: algorithmName=\"", str3, "\" jschProposal=\"", str, "\" serverProposal=\""), str2, "\""));
     }
 }

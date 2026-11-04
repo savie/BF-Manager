@@ -9,13 +9,13 @@ import com.alipay.sdk.m.h0.d;
 import com.amazonaws.auth.AWS4Signer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import l.C15489;
+import l.C14483;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
 public class a {
     public static String a() {
-        return C15489.m37076(new SimpleDateFormat(AWS4Signer.DATE_PATTERN).format(Calendar.getInstance().getTime()), ".log");
+        return C14483.m34972(new SimpleDateFormat(AWS4Signer.DATE_PATTERN).format(Calendar.getInstance().getTime()), ".log");
     }
 
     public static void a(Context context, com.alipay.sdk.m.l0.a aVar) {

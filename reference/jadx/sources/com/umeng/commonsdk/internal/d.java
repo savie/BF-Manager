@@ -183,7 +183,7 @@ public class d {
                 jSONObject.put("rev", aVarA.i);
                 jSONObject.put("har", aVarA.j);
                 jSONObject.put("rev", aVarA.k);
-                jSONObject.put("ser", aVarA.f77949l);
+                jSONObject.put("ser", aVarA.f82065l);
                 jSONObject.put("cur_cpu", com.umeng.commonsdk.internal.utils.d.d());
                 jSONObject.put("max_cpu", com.umeng.commonsdk.internal.utils.d.b());
                 jSONObject.put("min_cpu", com.umeng.commonsdk.internal.utils.d.c());

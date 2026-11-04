@@ -1,21 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰܿܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4VB */
+import java.io.InputStream;
+import java.io.OutputStream;
+
+/* JADX INFO: renamed from: l.۬ܺܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A5XF */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13967 extends AbstractC19115 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f45943;
-
-    public C13967(int i, AbstractC22433 abstractC22433) {
-        super(abstractC22433.size(), i);
-        this.f45943 = abstractC22433;
+public final class C13967 extends InputStream implements InterfaceC8469 {
+    @Override // java.io.InputStream
+    public final int read() {
+        return -1;
     }
 
-    @Override // l.AbstractC19115
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo19960(int i) {
-        return this.f45943.get(i);
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 }

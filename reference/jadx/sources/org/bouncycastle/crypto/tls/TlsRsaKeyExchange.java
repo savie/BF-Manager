@@ -14,7 +14,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class TlsRsaKeyExchange {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public static final int PRE_MASTER_SECRET_LENGTH = 48;

@@ -1,38 +1,102 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import com.google.android.material.motion.MotionUtils;
-import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ܽۚ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6773 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16436 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m38688(C3557 c3557) {
-        String strM43390;
-        JSONArray jSONArrayArray = JSON.array();
-        int i = c3557.f13099;
-        int i2 = c3557.f13100;
-        boolean z = i < i2;
-        int i3 = c3557.f13102;
-        String str = c3557.f13101;
-        if (z) {
-            strM43390 = C18810.m43390("available_apks", "available_apks", "", 0, JSON.object().add("prefix", str).add("recommendedLimit", i3).add("limitMax", 200), JSON.object().add("offset", i));
-            jSONArrayArray.add(C11320.m28376(C3184.m9603("workspaceId", "available_apks", "editSessionId", "").add("nextCursor", strM43390).add("limit", i3), "mt_apk_continue", "continue", "Continue available APK files"));
-        } else {
-            strM43390 = null;
+/* JADX INFO: renamed from: l.ܶ᩻ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16436 implements InterfaceC7664 {
+    public final int[] a;
+    public int b;
+    public final int c;
+    public final int d;
+
+    @Override // l.InterfaceC7664, l.InterfaceC8409
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        C0206.a(this, consumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.InterfaceC7664
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return C0206.b(this, consumer);
+    }
+
+    public C16436(int[] iArr, int i, int i2, int i3) {
+        this.a = iArr;
+        this.b = i;
+        this.c = i2;
+        this.d = i3 | 16448;
+    }
+
+    @Override // l.InterfaceC9154, l.InterfaceC8409
+    public final InterfaceC7664 trySplit() {
+        int i = this.b;
+        int i2 = (this.c + i) >>> 1;
+        if (i >= i2) {
+            return null;
         }
-        JSONObject jSONObjectAdd = JSON.object().add("prefix", str);
-        ArrayList<C9909> arrayList = c3557.f13103;
-        JSONArray jSONArrayArray2 = JSON.array();
-        for (C9909 c9909 : arrayList) {
-            JSONObject jSONObjectAdd2 = JSON.object().add(MotionUtils.EASING_TYPE_PATH, c9909.f33867).add("size", c9909.f33859).add("lastModified", c9909.f33866).add("appLabel", c9909.f33862).add("packageName", c9909.f33863).add("versionName", c9909.f33861);
-            Long l2 = c9909.f33865;
-            jSONArrayArray2.add(jSONObjectAdd2.add("versionCode", l2 == null ? JSON.NULL : JSON.value(l2.longValue())).add("manifestAvailable", c9909.f33864).add("manifestError", c9909.f33860));
+        this.b = i2;
+        return new C16436(this.a, i, i2, this.d);
+    }
+
+    @Override // l.InterfaceC9154
+    public final void forEachRemaining(IntConsumer intConsumer) {
+        int i;
+        intConsumer.getClass();
+        int[] iArr = this.a;
+        int length = iArr.length;
+        int i2 = this.c;
+        if (length < i2 || (i = this.b) < 0) {
+            return;
         }
-        return C0735.m3193(jSONObjectAdd.add("items", jSONArrayArray2).add("pagination", JSON.object().add("hasMore", i < i2).add("nextCursor", strM43390 == null ? JSON.NULL : JSON.value(strM43390)).add("returnedCount", arrayList.size()).add("limitMax", 200).add("totalAvailableCount", c3557.f13104)), jSONArrayArray);
+        this.b = i2;
+        if (i < i2) {
+            do {
+                intConsumer.accept(iArr[i]);
+                i++;
+            } while (i < i2);
+        }
+    }
+
+    @Override // l.InterfaceC9154
+    public final boolean tryAdvance(IntConsumer intConsumer) {
+        intConsumer.getClass();
+        int i = this.b;
+        if (i < 0 || i >= this.c) {
+            return false;
+        }
+        this.b = i + 1;
+        intConsumer.accept(this.a[i]);
+        return true;
+    }
+
+    @Override // l.InterfaceC8409
+    public final long estimateSize() {
+        return this.c - this.b;
+    }
+
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return this.d;
+    }
+
+    @Override // l.InterfaceC8409
+    public final Comparator getComparator() {
+        if (C18105.$default$hasCharacteristics(this, 4)) {
+            return null;
+        }
+        throw new IllegalStateException();
     }
 }

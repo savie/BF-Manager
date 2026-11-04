@@ -1,141 +1,136 @@
 package l;
 
-import android.R;
-import android.content.Context;
-import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+import android.os.Looper;
+import java.util.concurrent.CancellationException;
+import java.util.function.BooleanSupplier;
 
-/* JADX INFO: renamed from: l.۠ۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C5S0 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C7919 extends ComponentCallbacksC22654 {
+/* JADX INFO: renamed from: l.۟۬᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B6NL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7919 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public ListView f26004;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final C11555 f26296;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public View f26005;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public volatile boolean f26297;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f26007;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final BooleanSupplier f26298;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public View f26008;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public View f26009;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Handler f26011 = new Handler();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C13511 f26299;
 
     /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final Runnable f26006 = new RunnableC17796(this);
+    public final InterfaceC19106 f26300;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final AdapterView.OnItemClickListener f26010 = new C18502(this);
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Runnable f26301;
 
-    @Override // l.ComponentCallbacksC22654
-    public final View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        Context contextRequireContext = requireContext();
-        FrameLayout frameLayout = new FrameLayout(contextRequireContext);
-        LinearLayout linearLayout = new LinearLayout(contextRequireContext);
-        linearLayout.setId(16711682);
-        linearLayout.setOrientation(1);
-        linearLayout.setVisibility(8);
-        linearLayout.setGravity(17);
-        linearLayout.addView(new ProgressBar(contextRequireContext, null, R.attr.progressBarStyleLarge), new FrameLayout.LayoutParams(-2, -2));
-        frameLayout.addView(linearLayout, new FrameLayout.LayoutParams(-1, -1));
-        FrameLayout frameLayout2 = new FrameLayout(contextRequireContext);
-        frameLayout2.setId(16711683);
-        TextView textView = new TextView(contextRequireContext);
-        textView.setId(16711681);
-        textView.setGravity(17);
-        frameLayout2.addView(textView, new FrameLayout.LayoutParams(-1, -1));
-        ListView listView = new ListView(contextRequireContext);
-        listView.setId(R.id.list);
-        listView.setDrawSelectorOnTop(false);
-        frameLayout2.addView(listView, new FrameLayout.LayoutParams(-1, -1));
-        frameLayout.addView(frameLayout2, new FrameLayout.LayoutParams(-1, -1));
-        frameLayout.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
-        return frameLayout;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f26302;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final C24132 f26303;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Handler f26304;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f26305;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f26306;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f26307;
+
+    public C7919(C24132 c24132, AbstractActivityC17204 abstractActivityC17204, int i, BooleanSupplier booleanSupplier) {
+        Handler handler = new Handler(Looper.getMainLooper());
+        this.f26304 = handler;
+        RunnableC0461 runnableC0461 = new RunnableC0461(this);
+        this.f26301 = runnableC0461;
+        this.f26303 = c24132;
+        InterfaceC19106 interfaceC19106M54021 = c24132.m54021();
+        this.f26300 = interfaceC19106M54021;
+        this.f26307 = interfaceC19106M54021.mo15344();
+        this.f26302 = c24132.f78049;
+        this.f26296 = C11555.m29069(c24132);
+        this.f26298 = booleanSupplier;
+        C13511 c13511 = abstractActivityC17204 == null ? null : new C13511(abstractActivityC17204, i);
+        this.f26299 = c13511;
+        if (c13511 != null) {
+            c13511.m33188(new RunnableC15052(3, this));
+            handler.postDelayed(new RunnableC22358(2, this), 300L);
+        }
+        handler.postDelayed(runnableC0461, 200L);
     }
 
-    @Override // l.ComponentCallbacksC22654
-    public final void onViewCreated(View view, Bundle bundle) {
-        super.onViewCreated(view, bundle);
-        m20924();
-    }
-
-    @Override // l.ComponentCallbacksC22654
-    public final void onDestroyView() {
-        this.f26011.removeCallbacks(this.f26006);
-        this.f26004 = null;
-        this.f26007 = false;
-        this.f26009 = null;
-        this.f26005 = null;
-        this.f26008 = null;
-        super.onDestroyView();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m20924() {
-        if (this.f26004 != null) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m21459(C7919 c7919) {
+        if (c7919.f26306 || !c7919.m21464()) {
             return;
         }
-        View view = getView();
-        if (view == null) {
-            throw new IllegalStateException("Content view not yet created");
+        c7919.f26299.m33192();
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean m21464() {
+        if (this.f26297 || !this.f26296.m29071()) {
+            return false;
         }
-        if (view instanceof ListView) {
-            this.f26004 = (ListView) view;
-        } else {
-            TextView textView = (TextView) view.findViewById(16711681);
-            if (textView == null) {
-                this.f26008 = view.findViewById(R.id.empty);
-            } else {
-                textView.setVisibility(8);
-            }
-            this.f26005 = view.findViewById(16711682);
-            this.f26009 = view.findViewById(16711683);
-            View viewFindViewById = view.findViewById(R.id.list);
-            if (!(viewFindViewById instanceof ListView)) {
-                if (viewFindViewById == null) {
-                    throw new RuntimeException("Your content must have a ListView whose id attribute is 'android.R.id.list'");
-                }
-                throw new RuntimeException("Content has view with id attribute 'android.R.id.list' that is not a ListView class");
-            }
-            ListView listView = (ListView) viewFindViewById;
-            this.f26004 = listView;
-            View view2 = this.f26008;
-            if (view2 != null) {
-                listView.setEmptyView(view2);
-            }
+        InterfaceC19106 interfaceC19106M54021 = this.f26303.m54021();
+        InterfaceC19106 interfaceC19106 = this.f26300;
+        return interfaceC19106M54021 == interfaceC19106 && interfaceC19106.mo15344() == this.f26307 && this.f26303.f78049 == this.f26302 && this.f26298.getAsBoolean();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m21467() {
+        if (this.f26297 || !this.f26296.m29071()) {
+            return false;
         }
-        this.f26007 = true;
-        this.f26004.setOnItemClickListener(this.f26010);
-        if (this.f26005 != null) {
-            m20924();
-            View view3 = this.f26005;
-            if (view3 == null) {
-                throw new IllegalStateException("Can't be used with a custom content view");
-            }
-            if (this.f26007) {
-                this.f26007 = false;
-                view3.clearAnimation();
-                this.f26009.clearAnimation();
-                this.f26005.setVisibility(0);
-                this.f26009.setVisibility(8);
-            }
+        return this.f26305 || m21464();
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean m21465() {
+        return this.f26297;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m21468() {
+        if (this.f26297 || Thread.currentThread().isInterrupted()) {
+            throw new CancellationException("Editor search canceled");
         }
-        this.f26011.post(this.f26006);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m21463() {
+        if (this.f26305) {
+            return;
+        }
+        this.f26297 = true;
+        m21466();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m21462() {
+        if (!m21464()) {
+            return false;
+        }
+        this.f26305 = true;
+        m21466();
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m21466() {
+        this.f26306 = true;
+        this.f26304.removeCallbacksAndMessages(null);
+        C13511 c13511 = this.f26299;
+        if (c13511 != null) {
+            c13511.m33185();
+        }
     }
 }

@@ -1,184 +1,116 @@
 package l;
 
-import android.net.Uri;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import android.content.Intent;
+import android.view.MenuItem;
+import android.widget.TextView;
+import bin.mt.plus.R;
+import java.io.InputStream;
 
-/* JADX INFO: renamed from: l.۠ۤ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 274F */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8114 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f28429;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C21519 f28431;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final RunnableC4263 f28432;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C18441 f28434;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final HashMap f28436 = new HashMap();
+/* JADX INFO: renamed from: l.۟᩵ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A186 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8114 implements InterfaceC1733, InterfaceC16025, InterfaceC10523, InterfaceC3735, InterfaceC17544, InterfaceC0073, InterfaceC18006, InterfaceC21436 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashSet f28435 = new HashSet();
+    public final /* synthetic */ Object f26781;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final HashSet f28430 = new HashSet();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f28433 = new HashMap();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m21375() {
-        this.f28436.clear();
-        this.f28435.clear();
-        this.f28430.clear();
-        this.f28433.clear();
-        this.f28431 = null;
-        this.f28434 = null;
-        this.f28429++;
+    public /* synthetic */ C8114(Object obj) {
+        this.f26781 = obj;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m21376(Uri uri, C16325 c16325) {
-        C18441 c18441 = this.f28434;
-        if (c16325 != null && c18441 != null) {
-            C5741 c5741Mo14543 = c18441.mo14543();
-            if (c5741Mo14543 != null && c5741Mo14543.f19533.isEmpty()) {
-                Iterator it = c5741Mo14543.f19532.iterator();
-                while (it.hasNext()) {
-                    if (((C17030) it.next()).f54408.equals(uri)) {
-                        if (this.f28433.get(uri) == c16325) {
-                            return;
-                        }
-                        this.f28433.put(uri, c16325);
-                        if (this.f28431 != null) {
-                            this.f28431 = null;
-                            this.f28432.run();
-                        }
-                        m21373(c18441, c5741Mo14543);
-                        this.f28429++;
-                        return;
-                    }
-                }
-                return;
-            }
-            m21374();
-        }
+    @Override // l.InterfaceC10523
+    public void accept(TextView textView) {
+        C22501 c22501 = (C22501) this.f26781;
+        c22501.f72798.m15908(R.string.MT_Protector, new C21755(c22501, textView));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m21377(C12257 c12257) {
-        Uri uri = c12257.f41015;
-        long j = c12257.f41009;
-        long j2 = c12257.f41017;
-        if (j2 == -1) {
-            j2 = -1;
-        }
-        C18697 c18697 = new C18697(uri, j, j2);
-        if (this.f28430.contains(c18697)) {
-            return;
-        }
-        if (this.f28435.contains(c18697)) {
-            if (this.f28431 != null) {
-                this.f28431 = null;
-                this.f28432.run();
-            }
-            return;
-        }
-        C17991 c17991 = (C17991) this.f28436.get(c18697);
-        C18441 c18441 = this.f28434;
-        if (c17991 != null && c18441 != null) {
-            C21519 c21519 = new C21519(c17991.f57530, this.f28429, c17991.f57528, c18441.mo14535(), c18697, c17991.f57529);
-            C21519 c215110 = this.f28431;
-            if (c215110 != null && (!c215110.f69913.equals(c21519.f69913) || this.f28431.f69918 != c21519.f69918)) {
-                this.f28432.run();
-            }
-            this.f28431 = c21519;
-        }
+    @Override // l.InterfaceC3735
+    public InputStream getAssetsAsStream(String str) {
+        return C18300.m42636((C18300) this.f26781, str);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m21378(C18441 c18441) {
-        this.f28434 = c18441;
+    @Override // l.InterfaceC21436
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        ActivityC11563.m29087((ActivityC11563) this.f26781, menuItem);
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final synchronized C21519 m21379() {
-        return this.f28431;
+    @Override // l.InterfaceC0073
+    /* JADX INFO: renamed from: ۙ */
+    public /* synthetic */ void mo1127() {
     }
 
-    public C8114(RunnableC4263 runnableC4263) {
-        this.f28432 = runnableC4263;
+    @Override // l.InterfaceC17544
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1209(int i) {
+        ((InterfaceC16793) this.f26781).mo13596(i);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private void m21374() {
-        HashMap map = this.f28436;
-        boolean zIsEmpty = map.isEmpty();
-        HashSet hashSet = this.f28430;
-        HashSet hashSet2 = this.f28435;
-        if (zIsEmpty && hashSet2.isEmpty() && hashSet.isEmpty() && this.f28431 == null) {
-            return;
-        }
-        map.clear();
-        hashSet2.clear();
-        hashSet.clear();
-        this.f28433.clear();
-        this.f28431 = null;
-        this.f28429++;
-        this.f28432.run();
+    @Override // l.InterfaceC16025
+    /* JADX INFO: renamed from: ۙ */
+    public void mo8384(Intent intent, int i) {
+        C20175.m46420((C20175) this.f26781, i, intent);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m21373(C18441 c18441, C5741 c5741) {
-        long j;
-        HashMap map = this.f28436;
-        map.clear();
-        HashSet hashSet = this.f28435;
-        hashSet.clear();
-        HashSet hashSet2 = this.f28430;
-        hashSet2.clear();
-        HashMap map2 = this.f28433;
-        map2.clear();
-        Iterator it = c5741.f19532.iterator();
-        while (it.hasNext()) {
-            Uri uri = ((C17030) it.next()).f54408;
-            C16325 c16325Mo14536 = c18441.mo14536(uri, false);
-            if (c16325Mo14536 != null) {
-                String str = c16325Mo14536.f36441;
-                map2.put(uri, c16325Mo14536);
-                for (C15620 c15620 : c16325Mo14536.f52586) {
-                    C15620 c15621 = c15620.f63676;
-                    if (c15621 != null) {
-                        j = -1;
-                        Uri uriM50741 = C22923.m50741(str, c15621.f63674);
-                        long j2 = c15621.f63682;
-                        long j3 = c15621.f63679;
-                        hashSet2.add(new C18697(uriM50741, j2, j3 == -1 ? -1L : j3));
-                    } else {
-                        j = -1;
-                    }
-                    Uri uriM50742 = C22923.m50741(str, c15620.f63674);
-                    long j4 = c15620.f63682;
-                    String str2 = str;
-                    long j5 = c15620.f63679;
-                    C18697 c18697 = new C18697(uriM50742, j4, j5 == j ? j : j5);
-                    if (((C17991) C9735.putIfAbsent(map, c18697, new C17991(uri, c16325Mo14536, c15620))) != null) {
-                        map.remove(c18697);
-                        hashSet.add(c18697);
-                    }
-                    str = str2;
-                    map2 = map2;
-                    it = it;
-                }
-            }
-        }
+    @Override // l.InterfaceC18006
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1736(Object obj) {
+        C1965.m6749((C1965) this.f26781);
+    }
+
+    @Override // l.InterfaceC0073
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1128(String str) {
+        ViewOnClickListenerC19404 viewOnClickListenerC19404 = (ViewOnClickListenerC19404) this.f26781;
+        viewOnClickListenerC19404.m44872(
+        /*  JADX ERROR: Method code generation error
+            jadx.core.utils.exceptions.CodegenException: Error generate insn: 0x0004: INVOKE 
+              (r0v1 'viewOnClickListenerC19404' l.￡ﾩﾳ￡ﾩﾺￛﾧ)
+              (wrap java.lang.Runnable:0x0002: CONSTRUCTOR (r0v1 'viewOnClickListenerC19404' l.￡ﾩﾳ￡ﾩﾺￛﾧ), (r2v0 'str' java.lang.String) A[MD:(l.￡ﾩﾳ￡ﾩﾺￛﾧ, java.lang.String):void (m), WRAPPED] (LINE:181) call: l.￡ﾩﾴ￡ﾩﾺￛﾧ.<init>(l.￡ﾩﾳ￡ﾩﾺￛﾧ, java.lang.String):void type: CONSTRUCTOR)
+             DIRECT call: l.￡ﾩﾳ￡ﾩﾺￛﾧ.ￛﾙ(java.lang.Runnable):void A[MD:(java.lang.Runnable):void (m)] (LINE:181) in method: l.ￛﾟ￡ﾩﾵ￡ﾩﾴ.ￛﾙ(java.lang.String):void, file: classes4.dex
+            	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:310)
+            	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:273)
+            	at jadx.core.codegen.RegionGen.makeSimpleBlock(RegionGen.java:94)
+            	at jadx.core.dex.nodes.IBlock.generate(IBlock.java:15)
+            	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
+            	at jadx.core.dex.regions.Region.generate(Region.java:35)
+            	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
+            	at jadx.core.codegen.MethodGen.addRegionInsns(MethodGen.java:291)
+            	at jadx.core.codegen.MethodGen.addInstructions(MethodGen.java:270)
+            	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:420)
+            	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:345)
+            	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:299)
+            	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+            	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+            	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
+            	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:261)
+            Caused by: jadx.core.utils.exceptions.JadxRuntimeException: Expected class to be processed at this point, class: l.￡ﾩﾴ￡ﾩﾺￛﾧ, state: NOT_LOADED
+            	at jadx.core.dex.nodes.ClassNode.ensureProcessed(ClassNode.java:306)
+            	at jadx.core.codegen.InsnGen.inlineAnonymousConstructor(InsnGen.java:807)
+            	at jadx.core.codegen.InsnGen.makeConstructor(InsnGen.java:730)
+            	at jadx.core.codegen.InsnGen.makeInsnBody(InsnGen.java:418)
+            	at jadx.core.codegen.InsnGen.addWrappedArg(InsnGen.java:145)
+            	at jadx.core.codegen.InsnGen.addArg(InsnGen.java:121)
+            	at jadx.core.codegen.InsnGen.addArg(InsnGen.java:108)
+            	at jadx.core.codegen.InsnGen.generateMethodArguments(InsnGen.java:1143)
+            	at jadx.core.codegen.InsnGen.makeInvoke(InsnGen.java:910)
+            	at jadx.core.codegen.InsnGen.makeInsnBody(InsnGen.java:422)
+            	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:303)
+            	... 15 more
+            */
+        /*
+            this = this;
+            java.lang.Object r0 = r1.f26781
+            l.ᩳ᩺ۧ r0 = (l.ViewOnClickListenerC19404) r0
+            l.ViewOnClickListenerC19404.m44892(r0, r2)
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C8114.mo1128(java.lang.String):void");
+    }
+
+    @Override // l.InterfaceC11427
+    /* JADX INFO: renamed from: ۙ */
+    public void mo14029(AbstractC22044 abstractC22044) {
+        abstractC22044.m49879((String) this.f26781);
     }
 }

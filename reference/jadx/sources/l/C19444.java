@@ -1,18 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۨ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7AI */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19444 {
+import java.util.function.ToIntFunction;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f62608;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f62609;
-
-    public C19444(String str, int i) {
-        this.f62608 = str;
-        this.f62609 = i == 0 ? null : C22703.m50274(i);
+/* JADX INFO: renamed from: l.ᩴ֡ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M3ZI */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C19444 implements ToIntFunction {
+    @Override // java.util.function.ToIntFunction
+    public final int applyAsInt(Object obj) {
+        return C11239.m28342((AbstractC8036) obj);
     }
 }

@@ -2,7 +2,7 @@ package com.alipay.sdk.m.t;
 
 import android.text.TextUtils;
 import com.alipay.sdk.m.y.g;
-import l.C0242;
+import l.C3188;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -37,6 +37,6 @@ public final class b {
     }
 
     public String toString() {
-        return C0242.m1617("<Letter envelop=", this.a, " body=", this.b, ">");
+        return C3188.m10404("<Letter envelop=", this.a, " body=", this.b, ">");
     }
 }

@@ -113,7 +113,7 @@
     if-eqz v4, :cond_2
 
     .line 0
-    invoke-static {v5, v5, v2}, Ll/֨ۖᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
+    invoke-static {v5, v5, v2}, Ll/֨᩵ᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
 
     move-result-object v0
 

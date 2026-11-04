@@ -1,57 +1,46 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
+/* JADX INFO: renamed from: l.֨᩶ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6XM */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C1414 {
 
-/* JADX INFO: renamed from: l.֨᩹ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1N3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1414 extends AbstractC19054 implements InterfaceC7371 {
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f4987;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9177 f5841;
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ Comparator getComparator() {
-        return C21398.$default$getComparator(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
-
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
-
-    @Override // l.AbstractC19054
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo4947(int i, Object obj) {
-        ((Consumer) obj).accept(new C15527(this.f5841, i));
-    }
+    public final long f4988;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1414(C9177 c9177) {
-        super(c9177);
-        this.f5841 = c9177;
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f4989;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1414(C9177 c9177, int i, int i2, boolean z) {
-        super(c9177, i, i2, z);
-        this.f5841 = c9177;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f4990;
 
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.f61617 ? 1 : 65;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f4991;
 
-    @Override // l.AbstractC19054
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC19054 mo4946(int i, int i2, boolean z) {
-        return new C1414(this.f5841, i, i2, z);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean f4992;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f4993;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f4994;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f4995;
+
+    public C1414(String str, long j, long j2, int i, int i2, boolean z, boolean z2, long j3, long j4) {
+        this.f4987 = str;
+        this.f4993 = j;
+        this.f4995 = j2;
+        this.f4989 = i;
+        this.f4991 = i2;
+        this.f4990 = z;
+        this.f4992 = z2;
+        this.f4994 = j3;
+        this.f4988 = j4;
     }
 }

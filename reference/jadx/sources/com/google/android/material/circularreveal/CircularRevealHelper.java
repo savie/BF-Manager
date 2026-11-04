@@ -13,7 +13,7 @@ import android.view.View;
 import com.google.android.material.math.MathUtils;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import l.C8479;
+import l.C13645;
 
 /* JADX INFO: loaded from: classes.dex */
 public class CircularRevealHelper {
@@ -167,7 +167,7 @@ public class CircularRevealHelper {
                 canvas.restoreToCount(iSave);
             } else {
                 if (i != 2) {
-                    throw new IllegalStateException(C8479.m22141(i, "Unsupported strategy "));
+                    throw new IllegalStateException(C13645.m33382(i, "Unsupported strategy "));
                 }
                 this.delegate.actualDraw(canvas);
                 if (shouldDrawScrim()) {

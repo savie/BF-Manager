@@ -1,8 +1,10 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ᩺ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F6E */
+/* JADX INFO: renamed from: l.ۢۚۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K78T */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C9903 extends C20714 implements InterfaceC14842, InterfaceC22810 {
-    public static final long serialVersionUID = -7046029254386353129L;
+public final /* synthetic */ class C9903 implements InterfaceC18854 {
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+    }
 }

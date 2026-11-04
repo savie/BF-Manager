@@ -1,146 +1,201 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: JA0A */
+import com.alipay.sdk.m.y.q;
+import com.google.android.material.slider.BaseSlider;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import java.util.function.ToLongFunction;
+
+/* JADX INFO: renamed from: l.۫ᩳ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: C2R7 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13276 extends AbstractC11264 implements InterfaceC14087 {
-
-    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
-    public int f44087;
-
-    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
-    public byte f44088;
-
-    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
-    public int f44089;
-
-    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
-    public int f44090;
-
-    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
-    public int f44091;
-
-    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
-    public int f44092;
-
-    /* JADX INFO: renamed from: ܿۙ, reason: not valid java name and contains not printable characters */
-    public int f44093;
-
-    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
-    public int f44094;
-
-    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
-    public int f44095;
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        return 0;
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
-    }
-
-    public C13276(InterfaceC10601 interfaceC10601, String str, int i, int i2, int i3, int i4, int i5) {
-        super(interfaceC10601, (byte) -94, str);
-        this.f44094 = i2 | 137;
-        this.f44087 = i4;
-        this.f44089 = i3;
-        if ((i & 64) == 64) {
-            if ((i & 16) == 16) {
-                this.f44095 = 5;
-            } else {
-                this.f44095 = 4;
+public final /* synthetic */ class C13276 implements ToLongFunction {
+    @Override // java.util.function.ToLongFunction
+    public final long applyAsLong(Object obj) {
+        C20472 c20472 = null;
+        int i = -989375085;
+        int i2 = C3492.f12043;
+        int i3 = C2354.f7599;
+        int iM3169 = (i3 - C0773.m3169("ۛᩳ")) * UMErrorCode.E_UM_BE_EMPTY_URL_PATH;
+        int i4 = ((iM3169 ^ i2) * 11117) ^ (-130080694);
+        int i5 = 2025703480;
+        while (true) {
+            i = ((((i ^ i2) * 19081) >> 31) & i4) ^ (iM3169 ^ i5);
+            switch (i) {
+                case -1760463855:
+                case 527348130:
+                    if (C1321.f4751 >= 0) {
+                        iM3169 = (C0619.m2761("ᩴ֫") ^ i3) * (-99);
+                        i4 = ((iM3169 ^ i2) * 365) ^ (-888752061);
+                        i5 = -1823420632;
+                    } else {
+                        iM3169 = (C0773.m3169("ܰۚ") ^ i3) * (-21);
+                        i4 = ((iM3169 ^ i2) * 31949) ^ 917353110;
+                        i5 = 416072194;
+                    }
+                    break;
+                case -1659700901:
+                case 2073777478:
+                    c20472 = (C20472) obj;
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = (C0773.m3169("ۤۜ") ^ i2) * (-51);
+                        i4 = ((iM3169 ^ i3) * 18853) ^ 1890495410;
+                        i5 = -660336384;
+                    } else {
+                        iM3169 = C0773.m3169("ۗ᩺") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 17863) ^ (-120323528);
+                        i5 = -591178660;
+                    }
+                    break;
+                case -1199371676:
+                case -284077484:
+                    C3690.m11987();
+                    C4238.m13540();
+                    return 0L;
+                case -1158369341:
+                case 1503882234:
+                    C1519.m5403();
+                    C23916.m53419();
+                    iM3169 = C0773.m3169("᩷ܽ") ^ i2;
+                    i4 = ((iM3169 ^ i3) * (-23447)) ^ 2048096935;
+                    i5 = -52103877;
+                    break;
+                case -1111275213:
+                case -133088544:
+                    if (!C17202.f56030) {
+                        iM3169 = (C0619.m2761("ᩴ֫") ^ i3) * (-99);
+                        i4 = ((iM3169 ^ i2) * 365) ^ (-888752061);
+                        i5 = -1823420632;
+                    } else {
+                        iM3169 = (C0619.m2761("ܿܰ") ^ i2) * q.h;
+                        i4 = ((iM3169 ^ i3) * 6581) ^ 345736472;
+                        i5 = -1392373192;
+                    }
+                    break;
+                case -1013190000:
+                case -836436555:
+                    if (C23916.f77426 <= 0) {
+                        iM3169 = (C0619.m2761("ᩴ֫") ^ i3) * (-99);
+                        i4 = ((iM3169 ^ i2) * 365) ^ (-888752061);
+                        i5 = -1823420632;
+                    } else {
+                        iM3169 = (i3 - C0619.m2761("ᩴۗ")) * (-23);
+                        i4 = ((iM3169 ^ i2) * (-24795)) ^ 276671565;
+                        i5 = 1511857851;
+                    }
+                    break;
+                case -799589319:
+                case 1849458209:
+                    if (AbstractC3624.f12429 <= 0) {
+                        iM3169 = (C0619.m2761("ܿܰ") ^ i2) * q.h;
+                        i4 = ((iM3169 ^ i3) * 6581) ^ 345736472;
+                        i5 = -1392373192;
+                    } else {
+                        iM3169 = (C0773.m3169("֡ۛ") ^ i2) * (-13);
+                        i4 = ((iM3169 ^ i3) * 17847) ^ 1821823340;
+                        i5 = 1802409880;
+                    }
+                    break;
+                case -617806417:
+                case 1572106446:
+                    if (C2287.f7432 >= 0) {
+                        iM3169 = (i3 - C0619.m2761("ۨ᩶")) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
+                        i4 = ((iM3169 ^ i2) * 23725) ^ 807009140;
+                        i5 = 1186276569;
+                    } else {
+                        iM3169 = C0773.m3169("ܶۡ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-1089)) ^ (-2104182186);
+                        i5 = -27487782;
+                    }
+                    break;
+                case -603775931:
+                case -499855590:
+                    return -c20472.f65594.firstInstallTime;
+                case -581628483:
+                case 1752685838:
+                    C2288.m7767();
+                    if (C2966.f9654 >= 0) {
+                        iM3169 = (i3 - C0619.m2761("ۨ᩶")) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
+                        i4 = ((iM3169 ^ i2) * 23725) ^ 807009140;
+                        i5 = 1186276569;
+                    } else {
+                        iM3169 = C0773.m3169("᩷ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-23447)) ^ 2048096935;
+                        i5 = -52103877;
+                    }
+                    break;
+                case -507564283:
+                case -410148509:
+                    if (C3033.m9845() <= 0) {
+                        iM3169 = C0773.m3169("᩷ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-23447)) ^ 2048096935;
+                        i5 = -52103877;
+                    } else {
+                        iM3169 = C0773.m3169("ۛ۬") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 15345) ^ (-1992440691);
+                        i5 = -798116568;
+                    }
+                    break;
+                case 154009296:
+                case 307759232:
+                    if (C3492.f12043 > 0) {
+                        iM3169 = (C0619.m2761("ᩴ֫") ^ i3) * (-99);
+                        i4 = ((iM3169 ^ i2) * 365) ^ (-888752061);
+                        i5 = -1823420632;
+                    } else {
+                        iM3169 = C0773.m3169("᩷ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-23447)) ^ 2048096935;
+                        i5 = -52103877;
+                    }
+                    break;
+                case 659373921:
+                case 817913148:
+                    if (C3734.f12817 >= 0) {
+                        iM3169 = C0773.m3169("᩷ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-23447)) ^ 2048096935;
+                        i5 = -52103877;
+                    } else {
+                        iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-3457)) ^ (-248305066);
+                        i5 = -1897439490;
+                    }
+                    break;
+                case 1145985504:
+                case 1646858903:
+                    if (C13473.m33144()) {
+                        iM3169 = (C0619.m2761("۫ۙ") ^ i2) * 85;
+                        i4 = ((iM3169 ^ i3) * 20313) ^ 1118358399;
+                        i5 = -143636567;
+                    } else {
+                        iM3169 = (C0773.m3169("ۤۜ") ^ i2) * (-51);
+                        i4 = ((iM3169 ^ i3) * 18853) ^ 1890495410;
+                        i5 = -660336384;
+                    }
+                    break;
+                case 1471383162:
+                case 1722155342:
+                    if (C2310.f7472 >= 0) {
+                        iM3169 = (C0619.m2761("ܿܰ") ^ i2) * q.h;
+                        i4 = ((iM3169 ^ i3) * 6581) ^ 345736472;
+                        i5 = -1392373192;
+                    } else {
+                        iM3169 = C0619.m2761("֨ܽ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-32529)) ^ (-1049107182);
+                        i5 = 1910476800;
+                    }
+                    break;
+                default:
+                    int i6 = ViewOnClickListenerC7793.f25871;
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = (C0773.m3169("ۤۜ") ^ i2) * (-51);
+                        i4 = ((iM3169 ^ i3) * 18853) ^ 1890495410;
+                        i5 = -660336384;
+                    } else {
+                        iM3169 = (C0773.m3169("ܰ᩻") ^ i3) * UMErrorCode.E_UM_BE_RAW_OVERSIZE;
+                        i4 = ((iM3169 ^ i2) * 7845) ^ 169141365;
+                        i5 = 1493082033;
+                    }
+                    break;
             }
-        } else if ((i & 16) != 16) {
-            this.f44095 = 1;
-        } else if ((i & 32) == 32) {
-            this.f44095 = 2;
-        } else {
-            this.f44095 = 3;
         }
-        if ((i5 & 1) == 0) {
-            this.f44091 = i5 | 64;
-        } else {
-            this.f44091 = i5;
-        }
-        this.f44090 = 2;
-        this.f44088 = (byte) 3;
-    }
-
-    @Override // l.AbstractC14792, l.InterfaceC3314, l.InterfaceC9666
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC4913 mo9821() {
-        return (C4102) super.mo9821();
-    }
-
-    @Override // l.AbstractC14792, l.InterfaceC3314, l.InterfaceC9666
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC9522 mo9821() {
-        return (C4102) super.mo9821();
-    }
-
-    @Override // l.AbstractC14792, l.InterfaceC3314, l.InterfaceC9666
-    /* JADX INFO: renamed from: ܰ */
-    public final AbstractC14792 mo9821() {
-        return (C4102) super.mo9821();
-    }
-
-    @Override // l.InterfaceC14087
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC4913 mo13364(InterfaceC19067 interfaceC19067) {
-        C4102 c4102 = new C4102(interfaceC19067.mo29449());
-        mo24567((InterfaceC4913) c4102);
-        return c4102;
-    }
-
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public final void m32760() {
-        this.f44092 |= 22;
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        bArr[i] = 0;
-        this.f44093 = i + 1;
-        C4850.m13550(this.f44092, i + 3, bArr);
-        C4850.m13550(0, i + 7, bArr);
-        C4850.m13550(this.f44094, i + 11, bArr);
-        C4850.m13548(0L, i + 15, bArr);
-        C4850.m13550(this.f44087, i + 23, bArr);
-        C4850.m13550(this.f44089, i + 27, bArr);
-        C4850.m13550(this.f44095, i + 31, bArr);
-        C4850.m13550(this.f44091, i + 35, bArr);
-        C4850.m13550(this.f44090, i + 39, bArr);
-        bArr[i + 43] = this.f44088;
-        return (i + 44) - i;
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        int iM35440 = m35440(this.f48357, i, bArr);
-        C4850.m13546(m35449() ? this.f48357.length() * 2 : iM35440, this.f44093, bArr);
-        return iM35440;
-    }
-
-    @Override // l.AbstractC11264, l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("SmbComNTCreateAndX[");
-        sb.append(super.toString());
-        sb.append(",flags=0x");
-        C18855.m43491(this.f44092, 2, ",rootDirectoryFid=0,desiredAccess=0x", sb);
-        C18855.m43491(this.f44094, 4, ",allocationSize=0,extFileAttributes=0x", sb);
-        C18855.m43491(this.f44087, 4, ",shareAccess=0x", sb);
-        C18855.m43491(this.f44089, 4, ",createDisposition=0x", sb);
-        C18855.m43491(this.f44095, 4, ",createOptions=0x", sb);
-        C18855.m43491(this.f44091, 8, ",impersonationLevel=0x", sb);
-        C18855.m43491(this.f44090, 4, ",securityFlags=0x", sb);
-        C18855.m43491(this.f44088, 2, ",name=", sb);
-        return new String(C22697.m50267(sb, this.f48357, "]"));
     }
 }

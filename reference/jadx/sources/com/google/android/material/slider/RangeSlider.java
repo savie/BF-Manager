@@ -13,8 +13,8 @@ import android.view.MotionEvent;
 import com.google.android.material.internal.ThemeEnforcement;
 import java.util.ArrayList;
 import java.util.List;
-import l.C2387;
-import l.C8033;
+import l.C11642;
+import l.C14625;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RangeSlider extends BaseSlider {
@@ -421,16 +421,16 @@ public class RangeSlider extends BaseSlider {
     }
 
     public RangeSlider(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8576);
+        this(context, attributeSet, C11642.f37132);
     }
 
     public RangeSlider(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f26918, i, BaseSlider.DEF_STYLE_RES, new int[0]);
-        if (typedArrayObtainStyledAttributes.hasValue(C8033.f26971)) {
-            setValues(convertToFloat(typedArrayObtainStyledAttributes.getResources().obtainTypedArray(typedArrayObtainStyledAttributes.getResourceId(C8033.f26971, 0))));
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f46303, i, BaseSlider.DEF_STYLE_RES, new int[0]);
+        if (typedArrayObtainStyledAttributes.hasValue(C14625.f46941)) {
+            setValues(convertToFloat(typedArrayObtainStyledAttributes.getResources().obtainTypedArray(typedArrayObtainStyledAttributes.getResourceId(C14625.f46941, 0))));
         }
-        this.minSeparation = typedArrayObtainStyledAttributes.getDimension(C8033.f27768, 0.0f);
+        this.minSeparation = typedArrayObtainStyledAttributes.getDimension(C14625.f47526, 0.0f);
         typedArrayObtainStyledAttributes.recycle();
     }
 

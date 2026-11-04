@@ -1,89 +1,102 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.֡ۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: renamed from: l.֡ۤ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: OIUU */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0372 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f1843;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List f1844;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f1845;
+public final class C0372 implements Map {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f1846;
+    public final HashMap f1902 = new HashMap();
 
-    public /* synthetic */ C0372(int i, String str, String str2, ArrayList arrayList) {
-        this(i, str, str2, (List) arrayList);
-    }
-
-    public C0372(int i, String str, String str2, List list) {
-        this.f1845 = str;
-        this.f1843 = str2;
-        this.f1844 = list;
-        this.f1846 = i;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C0372)) {
-            return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C0372 m2161(C0372 c0372) {
+        c0372.getClass();
+        C0372 c0373 = new C0372();
+        for (C21943 c21943 : c0372.f1902.keySet()) {
+            c0373.put(c21943, C18271.m42424(c0372.get((Object) c21943)));
         }
-        C0372 c0372 = (C0372) obj;
-        return this.f1846 == c0372.f1846 && C13638.equals(this.f1845, c0372.f1845) && C13638.equals(this.f1843, c0372.f1843) && C13638.equals(this.f1844, c0372.f1844);
+        return c0373;
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f1844) + C0589.m2789(C0589.m2789(this.f1846 * 31, 31, this.f1845), 31, this.f1843);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f1845, this.f1843, this.f1844, Integer.valueOf(this.f1846)};
-        String[] strArrSplit = "mediaIdentity;playbackPositionKey;actions;checkedIndex".length() == 0 ? new String[0] : "mediaIdentity;playbackPositionKey;actions;checkedIndex".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C0372.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m2162(C0372 c0372, C0372 c0373) {
+        c0372.getClass();
+        for (C18271 c18271 : c0373.f1902.values()) {
+            C21943 c21943 = c18271.f59611;
+            if (c0372.f1902.containsKey(c21943)) {
+                C18271.m42421(c0372.get((Object) c21943), c18271);
+            } else {
+                c0372.put(c21943, C18271.m42424(c18271));
             }
         }
-        sb.append("]");
-        return sb.toString();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m2101() {
-        return this.f1845;
+    @Override // java.util.Map
+    public final void clear() {
+        this.f1902.clear();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m2102() {
-        return this.f1844;
+    @Override // java.util.Map
+    public final boolean containsKey(Object obj) {
+        return this.f1902.containsKey(obj);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m2103() {
-        return this.f1846;
+    @Override // java.util.Map
+    public final boolean containsValue(Object obj) {
+        if (!(obj instanceof C21943)) {
+            return false;
+        }
+        return this.f1902.containsKey((C21943) obj);
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String m2104() {
-        return this.f1843;
+    @Override // java.util.Map
+    public final Set entrySet() {
+        return this.f1902.entrySet();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C0372 m2100(String str, String str2) {
-        return new C0372(-1, str, str2, Collections.EMPTY_LIST);
+    @Override // java.util.Map
+    public final C18271 get(Object obj) {
+        return (C18271) this.f1902.get(obj);
+    }
+
+    @Override // java.util.Map
+    public final boolean isEmpty() {
+        return this.f1902.isEmpty();
+    }
+
+    @Override // java.util.Map
+    public final Set keySet() {
+        return this.f1902.keySet();
+    }
+
+    @Override // java.util.Map
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
+    public final C18271 put(C21943 c21943, C18271 c18271) {
+        return (C18271) this.f1902.put(c21943, c18271);
+    }
+
+    @Override // java.util.Map
+    public final void putAll(Map map) {
+        this.f1902.putAll(map);
+    }
+
+    @Override // java.util.Map
+    public final Object remove(Object obj) {
+        return (C18271) this.f1902.remove(obj);
+    }
+
+    @Override // java.util.Map
+    public final int size() {
+        return this.f1902.size();
+    }
+
+    @Override // java.util.Map
+    public final Collection values() {
+        return this.f1902.values();
     }
 }

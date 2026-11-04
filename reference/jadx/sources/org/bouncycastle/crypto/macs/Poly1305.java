@@ -10,7 +10,7 @@ import org.bouncycastle.math.ec.rfc7748.X25519Field;
 import org.bouncycastle.math.ec.rfc8032.Scalar448;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Poly1305 implements Mac {
     public static final int BLOCK_SIZE = 16;
     public final BlockCipher cipher;

@@ -1,22 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬۟ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 06VH */
-/* JADX INFO: loaded from: classes3.dex */
+import android.view.ViewConfiguration;
+
+/* JADX INFO: renamed from: l.۫۠, reason: contains not printable characters */
+/* JADX INFO: compiled from: W5B8 */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C12969 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f43077;
+    public static int m32361(ViewConfiguration viewConfiguration, int i, int i2, int i3) {
+        return viewConfiguration.getScaledMaximumFlingVelocity(i, i2, i3);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int[] f43078;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] f43079;
-
-    public C12969(int[] iArr, int[] iArr2, int[] iArr3) {
-        this.f43078 = iArr;
-        this.f43077 = iArr2;
-        this.f43079 = iArr3;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static int m32362(ViewConfiguration viewConfiguration, int i, int i2, int i3) {
+        return viewConfiguration.getScaledMinimumFlingVelocity(i, i2, i3);
     }
 }

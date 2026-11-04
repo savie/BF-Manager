@@ -2,13 +2,13 @@ package org.bouncycastle.asn1.x509;
 
 import java.math.BigInteger;
 import java.util.Hashtable;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Enumerated;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CRLReason extends ASN1Object {
     public static final int AA_COMPROMISE = 10;
     public static final int AFFILIATION_CHANGED = 3;
@@ -71,6 +71,6 @@ public class CRLReason extends ASN1Object {
 
     public String toString() {
         int iIntValue = getValue().intValue();
-        return C0252.m1693("CRLReason: ", (iIntValue < 0 || iIntValue > 10) ? "invalid" : reasonString[iIntValue]);
+        return C25272.m56409("CRLReason: ", (iIntValue < 0 || iIntValue > 10) ? "invalid" : reasonString[iIntValue]);
     }
 }

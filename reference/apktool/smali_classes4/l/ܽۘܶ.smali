@@ -1,107 +1,103 @@
-.class public final enum Ll/ܽۘܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ܽۘܶ;
+.super Ljava/lang/Object;
+.source "N1MQ"
+
+
+# instance fields
+.field public ۙ:Ll/ܺۘܶ;
+
+.field public ۤ:I
+
+.field public ᩷:I
+
+.field public ᩸:Ll/ܺۘܶ;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    const-string v0, "FORMAT_22S"
+    .line 255
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x10
+    .line 269
+    iput p1, p0, Ll/ܽۘܶ;->᩷:I
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ܽۘܶ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 374
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    .line 270
+    iput p1, p0, Ll/ܽۘܶ;->ۤ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 9
+.method public final ۙ()Ll/ܺۘܶ;
+    .locals 1
 
-    .line 378
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    .line 279
+    iget-object v0, p0, Ll/ܽۘܶ;->ۙ:Ll/ܺۘܶ;
 
-    move-result v2
-
-    .line 379
-    invoke-static {p1}, Ll/۟ۜܶ;->֨(I)I
-
-    move-result v7
-
-    .line 380
-    invoke-static {p1}, Ll/۟ۜܶ;->۬(I)I
-
-    move-result v8
-
-    .line 381
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
-
-    move-result p1
-
-    int-to-short p1, p1
-
-    .line 382
-    new-instance p2, Ll/ۛۜܶ;
-
-    const/4 v4, 0x0
-
-    int-to-long v5, p1
-
-    const/4 v3, 0x0
-
-    move-object v0, p2
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v8}, Ll/ۛۜܶ;-><init>(Ll/۟ۜܶ;IIIJII)V
-
-    return-object p2
+    return-object v0
 .end method
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 3
+.method public final ۙ(I)V
+    .locals 1
 
-    .line 391
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    .line 269
+    iget v0, p0, Ll/ܽۘܶ;->᩷:I
 
-    move-result v0
+    add-int/2addr v0, p1
 
-    .line 392
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۙ()I
+    iput v0, p0, Ll/ܽۘܶ;->᩷:I
 
-    move-result v1
+    .line 270
+    iget v0, p0, Ll/ܽۘܶ;->ۤ:I
 
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܰ()I
+    add-int/2addr v0, p1
 
-    move-result v2
+    iput v0, p0, Ll/ܽۘܶ;->ۤ:I
 
-    invoke-static {v1, v2}, Ll/۟ۜܶ;->ۨ(II)I
+    return-void
+.end method
 
-    move-result v1
+.method public final ۙ(II)V
+    .locals 4
 
-    .line 391
-    invoke-static {v0, v1}, Ll/۟ۜܶ;->ܰ(II)S
+    .line 261
+    new-instance v0, Ll/ܺۘܶ;
 
-    .line 393
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->᩺()S
+    iget v1, p0, Ll/ܽۘܶ;->᩷:I
 
-    .line 390
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ܶ()V
+    iget v2, p0, Ll/ܽۘܶ;->ۤ:I
+
+    invoke-direct {v0, v1, v2, p1, p2}, Ll/ܺۘܶ;-><init>(IIII)V
+
+    .line 262
+    iget-object v3, p0, Ll/ܽۘܶ;->᩸:Ll/ܺۘܶ;
+
+    if-eqz v3, :cond_0
+
+    iput-object v0, v3, Ll/ܺۘܶ;->ᩴ:Ll/ܺۘܶ;
+
+    goto :goto_0
+
+    .line 263
+    :cond_0
+    iput-object v0, p0, Ll/ܽۘܶ;->ۙ:Ll/ܺۘܶ;
+
+    .line 264
+    :goto_0
+    iput-object v0, p0, Ll/ܽۘܶ;->᩸:Ll/ܺۘܶ;
+
+    add-int/2addr v1, p1
+
+    .line 269
+    iput v1, p0, Ll/ܽۘܶ;->᩷:I
+
+    add-int/2addr v2, p2
+
+    .line 270
+    iput v2, p0, Ll/ܽۘܶ;->ۤ:I
 
     return-void
 .end method

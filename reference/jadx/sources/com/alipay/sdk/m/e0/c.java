@@ -16,7 +16,7 @@ import javax.crypto.ShortBufferException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C9023;
+import l.C10732;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -26,9 +26,9 @@ public class c {
     public static String a() {
         String str = new String();
         for (int i = 0; i < a.length() - 1; i += 4) {
-            StringBuilder sbM23356 = C9023.m23356(str);
-            sbM23356.append(a.charAt(i));
-            str = sbM23356.toString();
+            StringBuilder sbM27333 = C10732.m27333(str);
+            sbM27333.append(a.charAt(i));
+            str = sbM27333.toString();
         }
         return str;
     }

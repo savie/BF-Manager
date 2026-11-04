@@ -1,24 +1,45 @@
 package l;
 
-import java.util.ArrayList;
+import android.graphics.Matrix;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ۛܰ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: R78D */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6100 {
-
+/* JADX INFO: renamed from: l.ۛۖ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: N1N9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6100 extends C12065 {
+    @Override // l.C16540
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f20666;
+    public final void mo17606(View view, float f) {
+        view.setTransitionAlpha(f);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f20667;
+    @Override // l.C16540
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final float mo17605(View view) {
+        return view.getTransitionAlpha();
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f20668;
+    @Override // l.C12065, l.C16540
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo17607(View view, int i) {
+        view.setTransitionVisibility(i);
+    }
 
-    public C6100(int i, String str, ArrayList arrayList) {
-        this.f20667 = i;
-        this.f20666 = str;
-        this.f20668 = arrayList;
+    @Override // l.C3116, l.C16540
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo10194(View view, int i, int i2, int i3, int i4) {
+        view.setLeftTopRightBottom(i, i2, i3, i4);
+    }
+
+    @Override // l.C15794
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo17608(View view, Matrix matrix) {
+        view.transformMatrixToGlobal(matrix);
+    }
+
+    @Override // l.C15794
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo17609(View view, Matrix matrix) {
+        view.transformMatrixToLocal(matrix);
     }
 }

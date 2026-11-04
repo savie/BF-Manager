@@ -1,26 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6428 */
+/* JADX INFO: renamed from: l.ᩴ᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R6PB */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C20127 extends EnumC12366 {
-    public /* synthetic */ C20127() {
-        this("ALIVE", 0);
-    }
+public final class C20127 {
 
-    @Override // l.EnumC12366
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC12366 mo2098(EnumC12366 enumC12366) {
-        return enumC12366;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f64686;
 
-    @Override // l.EnumC12366
-    /* JADX INFO: renamed from: ܰ */
-    public EnumC12366 mo2099(EnumC12366 enumC12366) {
-        return this;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f64687;
 
-    public C20127(String str, int i) {
-        super(str, i, 0);
+    public C20127(int i) {
+        this.f64687 = i;
     }
 }

@@ -1,17 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵۠۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y9YW */
+/* JADX INFO: renamed from: l.ᩳ᩷ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PANW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19337 implements InterfaceC7778 {
-    @Override // l.InterfaceC7778
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo1805(int i, int i2, byte[] bArr) throws C2796 {
-        if (i2 < 24) {
-            throw new C2796("Invalid resume key");
-        }
-        System.arraycopy(bArr, i, new byte[24], 0, 24);
-        C4850.m13549(i + 24, bArr);
-        return (i + 28) - i;
+public final /* synthetic */ class C19337 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f62455 = 0;
+
+    static {
+        C10386 c10386 = InterfaceC1438.f5044;
     }
 }

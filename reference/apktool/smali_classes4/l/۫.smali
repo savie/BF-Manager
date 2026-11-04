@@ -1,48 +1,34 @@
 .class public final Ll/۫;
-.super Ll/ܽ;
-.source "95XT"
-
-
-# instance fields
-.field public final synthetic ܰ:Ll/ܿ;
+.super Ll/᩸ܽۙ;
+.source "Y21J"
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 856
-    iput-object p1, p0, Ll/۫;->ܰ:Ll/ܿ;
-
-    invoke-direct {p0, p1}, Ll/ܽ;-><init>(Ll/ܿ;)V
+    .line 8
+    invoke-direct {p0}, Ll/᩸ܽۙ;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onChildrenLoaded(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
+.method public static ۙ(Ll/ۗ۠᩷;)Ll/ۤܽۙ;
     .locals 0
 
-    .line 863
-    invoke-static {p3}, Ll/֨ܰ;->ۙ(Landroid/os/Bundle;)V
+    .line 10
+    invoke-static {p0}, Ll/᩸ܽۙ;->ۙ(Ll/ۗ۠᩷;)Ll/ۤܽۙ;
 
-    .line 865
-    invoke-static {p2}, Ll/᩷;->ۙ(Ljava/util/List;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public static ۙ(Ll/ۤܽۙ;Ll/ۗ۠᩷;)V
     .locals 0
 
-    .line 870
-    invoke-static {p2}, Ll/֨ܰ;->ۙ(Landroid/os/Bundle;)V
-
-    .line 871
-    iget-object p1, p0, Ll/۫;->ܰ:Ll/ܿ;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 14
+    invoke-static {p0, p1}, Ll/᩸ܽۙ;->ۙ(Ll/ۤܽۙ;Ll/ۗ۠᩷;)V
 
     return-void
 .end method

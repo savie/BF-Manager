@@ -1,110 +1,100 @@
-.class public final Ll/ۛۗ᩹;
+.class public final synthetic Ll/ۛۗ᩹;
 .super Ljava/lang/Object;
-.source "18AW"
+.source "2C5O"
 
 # interfaces
-.implements Ll/ۤܺۚ;
+.implements Ll/ۨۗ᩹;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۗۗ᩹;
+.field public final synthetic ܰ:Ljava/util/function/Consumer;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۗۗ᩹;)V
+.method public synthetic constructor <init>(Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 191
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۛۗ᩹;->ܺ:Ll/ۗۗ᩹;
+    iput-object p1, p0, Ll/ۛۗ᩹;->ܰ:Ljava/util/function/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()Z
-    .locals 1
-
-    .line 200
-    iget-object v0, p0, Ll/ۛۗ᩹;->ܺ:Ll/ۗۗ᩹;
-
-    invoke-static {v0}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
-
-    move-result-object v0
-
-    check-cast v0, Ll/ۧ֫᩹;
-
-    invoke-virtual {v0}, Ll/ۧ֫᩹;->֨()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic ۘۙ()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final ۙ(JJJ)V
+.method public final synthetic accept(I)V
     .locals 0
 
-    .line 194
-    iget-object p1, p0, Ll/ۛۗ᩹;->ܺ:Ll/ۗۗ᩹;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩵ۗ᩹;->ۙ(Ll/ۨۗ᩹;I)V
 
-    invoke-static {p1}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
+    return-void
+.end method
 
-    move-result-object p2
+.method public final bridge synthetic accept(Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {p3, p4, p5, p6}, Ll/۠᩻᩺;->ۙ(JJ)I
+    .line 0
+    invoke-static {p0, p1}, Ll/᩵ۗ᩹;->ۙ(Ll/ۨۗ᩹;Ljava/lang/Object;)V
 
-    move-result p5
+    return-void
+.end method
 
-    check-cast p2, Ll/ۧ֫᩹;
+.method public final andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    .locals 0
 
-    .line 116
-    iget-object p2, p2, Ll/ۧ֫᩹;->ܺ:Ll/᩻֫᩹;
-
-    invoke-virtual {p2, p5}, Ll/᩶᩷ۜ;->ܶ(I)V
-
-    .line 195
-    invoke-static {p1}, Ll/ۗۗ᩹;->ۙ(Ll/ۗۗ᩹;)Ll/ܳۗ᩹;
-
-    move-result-object p2
-
-    invoke-static {p1}, Ll/ۗۗ᩹;->ܰ(Ll/ۗۗ᩹;)Ll/᩷ܿ᩹;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Ll/ۘۛ᩹;->ۚ()J
-
-    move-result-wide p5
-
-    add-long/2addr p5, p3
-
-    invoke-static {p1}, Ll/ۗۗ᩹;->ܰ(Ll/ۗۗ᩹;)Ll/᩷ܿ᩹;
+    .line 105
+    invoke-static {p0, p1}, Ll/ۨۧۗ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll/ۘۛ᩹;->۬()J
+    return-object p1
+.end method
 
-    move-result-wide p3
+.method public final synthetic andThen(Ljava/util/function/IntConsumer;)Ljava/util/function/IntConsumer;
+    .locals 0
 
-    invoke-static {p5, p6, p3, p4}, Ll/۠᩻᩺;->ۙ(JJ)I
+    .line 35
+    invoke-static {p0, p1}, Ll/᩵ۗ᩹;->ۙ(Ll/ۨۗ᩹;Ljava/util/function/IntConsumer;)Ll/ۨۗ᩹;
 
-    move-result p1
+    move-result-object p1
 
-    check-cast p2, Ll/ۧ֫᩹;
+    return-object p1
+.end method
 
-    .line 121
-    iget-object p2, p2, Ll/ۧ֫᩹;->ܺ:Ll/᩻֫᩹;
+.method public final ۤ(Ll/ۨۗ᩹;)Ll/ۗۗ᩹;
+    .locals 1
 
-    invoke-virtual {p2, p1}, Ll/ᩳ۟ۜ;->ۜ(I)V
+    .line 80
+    new-instance v0, Ll/ۗۗ᩹;
+
+    invoke-direct {v0, p0, p1}, Ll/ۗۗ᩹;-><init>(Ll/ۨۗ᩹;Ll/ۨۗ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final ۤ(C)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Ll/ۛۗ᩹;->ܰ:Ljava/util/function/Consumer;
+
+    invoke-static {p1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final synthetic ᩷(Ljava/lang/Character;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩵ۗ᩹;->ۙ(Ll/ۨۗ᩹;Ljava/lang/Character;)V
 
     return-void
 .end method

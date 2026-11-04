@@ -1,82 +1,217 @@
-.class public final synthetic Ll/ۢᩴۨ;
+.class public final Ll/ۢᩴۨ;
 .super Ljava/lang/Object;
-.source "G7I1"
+.source "54GG"
 
-# interfaces
-.implements Ll/ܰۡۨ;
+
+# instance fields
+.field public ۙ:[Ljava/lang/String;
+
+.field public ۤ:Z
+
+.field public ᩷:Z
+
+.field public ᩸:[Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
+
+    .line 265
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 266
+    iput-boolean p1, p0, Ll/ۢᩴۨ;->ۤ:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
+.method public final varargs ۙ([Ljava/lang/String;)V
     .locals 1
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 293
+    iget-boolean v0, p0, Ll/ۢᩴۨ;->ۤ:Z
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    .line 295
+    array-length v0, p1
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    .line 299
+    invoke-virtual {p1}, [Ljava/lang/String;->clone()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Ll/ۢᩴۨ;->ۙ:[Ljava/lang/String;
+
+    return-void
+
+    .line 296
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "At least one cipher suite is required"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 293
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no cipher suites for cleartext connections"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final ۙ(I)Z
-    .locals 1
+.method public final varargs ۙ([Ll/֡ᩴۨ;)V
+    .locals 3
 
-    .line 404
-    invoke-static {p1}, Ljava/lang/Character;->isUpperCase(I)Z
+    .line 283
+    iget-boolean v0, p0, Ll/ۢᩴۨ;->ۤ:Z
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    if-nez v0, :cond_1
+    .line 285
+    array-length v0, p1
 
-    .line 405
-    invoke-static {p1}, Ljava/lang/Character;->isLowerCase(I)Z
+    new-array v0, v0, [Ljava/lang/String;
 
-    move-result v0
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_1
+    .line 286
+    :goto_0
+    array-length v2, p1
 
-    .line 406
-    invoke-static {p1}, Ljava/lang/Character;->isTitleCase(I)Z
+    if-ge v1, v2, :cond_0
 
-    move-result p1
+    .line 287
+    aget-object v2, p1, v1
 
-    if-eqz p1, :cond_0
+    iget-object v2, v2, Ll/֡ᩴۨ;->ۙ:Ljava/lang/String;
+
+    aput-object v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 289
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {p0, v0}, Ll/ۢᩴۨ;->ۙ([Ljava/lang/String;)V
 
-    return p1
+    return-void
 
+    .line 283
     :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return p1
+    const-string v0, "no cipher suites for cleartext connections"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+.method public final varargs ۙ([Ll/۬ܳۨ;)V
+    .locals 3
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    .line 310
+    iget-boolean v0, p0, Ll/ۢᩴۨ;->ۤ:Z
+
+    if-eqz v0, :cond_1
+
+    .line 312
+    array-length v0, p1
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    .line 313
+    :goto_0
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_0
+
+    .line 314
+    aget-object v2, p1, v1
+
+    iget-object v2, v2, Ll/۬ܳۨ;->ܰ:Ljava/lang/String;
+
+    aput-object v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 317
+    :cond_0
+    invoke-virtual {p0, v0}, Ll/ۢᩴۨ;->᩷([Ljava/lang/String;)V
+
+    return-void
+
+    .line 310
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no TLS versions for cleartext connections"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final varargs ᩷([Ljava/lang/String;)V
+    .locals 1
+
+    .line 321
+    iget-boolean v0, p0, Ll/ۢᩴۨ;->ۤ:Z
+
+    if-eqz v0, :cond_1
+
+    .line 323
+    array-length v0, p1
+
+    if-eqz v0, :cond_0
+
+    .line 327
+    invoke-virtual {p1}, [Ljava/lang/String;->clone()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Ll/ۢᩴۨ;->᩸:[Ljava/lang/String;
+
+    return-void
+
+    .line 324
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "At least one TLS version is required"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 321
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no TLS versions for cleartext connections"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

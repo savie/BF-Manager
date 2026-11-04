@@ -1,160 +1,201 @@
-.class public Ll/۠᩹᩵;
+.class public final Ll/۠᩹᩵;
 .super Ljava/lang/Object;
-.source "8AR0"
+.source "QA30"
 
 # interfaces
-.implements Ll/ܶۘ᩵;
+.implements Ljava/util/Map$Entry;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Cloneable;
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x7f841f4555d499daL
 
 
 # instance fields
-.field public ۙ:I
+.field public final ܰ:Ljava/lang/String;
 
-.field public ܰ:Ll/᩺᩹᩵;
+.field public final ᩶:Ljava/lang/String;
 
 
-# virtual methods
-.method public getChildCount()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final getText()Ljava/lang/String;
-    .locals 3
-
-    .line 129
-    invoke-virtual {p0}, Ll/۠᩹᩵;->getChildCount()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    return-object v0
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     .line 133
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const/4 v1, 0x0
+    const-string p1, ""
 
     .line 134
     :goto_0
-    invoke-virtual {p0}, Ll/۠᩹᩵;->getChildCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
+    iput-object p1, p0, Ll/۠᩹᩵;->᩶:Ljava/lang/String;
 
     .line 135
-    invoke-virtual {p0, v1}, Ll/۠᩹᩵;->ۙ(I)Ll/ܶۘ᩵;
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p1
 
-    invoke-interface {v2}, Ll/ܶۘ᩵;->getText()Ljava/lang/String;
+    iput-object p1, p0, Ll/۠᩹᩵;->ܰ:Ljava/lang/String;
 
-    move-result-object v2
+    return-void
+.end method
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x1
+# virtual methods
+.method public final clone()Ljava/lang/Object;
+    .locals 0
 
-    goto :goto_0
+    return-object p0
+.end method
 
-    .line 138
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 171
+    instance-of v0, p1, Ljava/util/Map$Entry;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 174
+    :cond_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
+
+    iget-object v2, p0, Ll/۠᩹᩵;->ܰ:Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 151
+    iget-object v0, p0, Ll/۠᩹᩵;->᩶:Ljava/lang/String;
+
+    .line 174
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
+
+    .line 143
+    iget-object v0, p0, Ll/۠᩹᩵;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    .line 225
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 151
+    iget-object v0, p0, Ll/۠᩹᩵;->᩶:Ljava/lang/String;
 
-    const-string v1, "["
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final hashCode()I
+    .locals 3
 
-    move-object v1, p0
+    const/4 v0, 0x0
+
+    .line 182
+    iget-object v1, p0, Ll/۠᩹᩵;->ܰ:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    if-eqz v1, :cond_3
+    iget-object v2, p0, Ll/۠᩹᩵;->᩶:Ljava/lang/String;
 
-    .line 101
-    iget v2, v1, Ll/۠᩹᩵;->ۙ:I
-
-    const/4 v3, -0x1
-
-    if-ne v2, v3, :cond_0
+    if-nez v2, :cond_1
 
     goto :goto_1
 
-    .line 231
-    :cond_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 240
-    :goto_1
-    iget-object v2, v1, Ll/۠᩹᩵;->ܰ:Ll/᩺᩹᩵;
-
-    if-eqz v2, :cond_2
-
-    .line 101
-    iget v2, v2, Ll/۠᩹᩵;->ۙ:I
-
-    if-ne v2, v3, :cond_1
-
-    goto :goto_2
-
     :cond_1
-    const-string v2, " "
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    .line 241
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    .line 244
-    :cond_2
-    :goto_2
-    iget-object v1, v1, Ll/۠᩹᩵;->ܰ:Ll/᩺᩹᩵;
+    :goto_1
+    xor-int/2addr v0, v1
 
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "]"
-
-    .line 247
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 248
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public ۙ(I)Ll/ܶۘ᩵;
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p1, 0x0
+    .line 125
+    check-cast p1, Ljava/lang/String;
+
+    .line 163
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
 .end method
 
-.method public ܰ()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, -0x1
+    .line 200
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Ll/۠᩹᩵;->ܰ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll/۠᩹᩵;->᩶:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

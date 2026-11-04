@@ -1,18 +1,12 @@
 package l;
 
-import java.util.Comparator;
+import java.util.regex.Pattern;
 
-/* JADX INFO: renamed from: l.ۤ᩷᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: B7EO */
+/* JADX INFO: renamed from: l.ۤ֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: R6C3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10550 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        C7727 c7727 = (C7727) obj;
-        C7727 c7728 = (C7727) obj2;
-        if (c7727.m20375() != c7728.m20375()) {
-            return c7727.m20375() ? -1 : 1;
-        }
-        return c7727.m20373().compareTo(c7728.m20373());
+public final class C10550 {
+    static {
+        Pattern.compile("(\\d+\\.\\d+\\.\\d+),\\s+(r\\d+)");
     }
 }

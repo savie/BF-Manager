@@ -1,31 +1,61 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ᩵ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SB7W */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C14735 extends AbstractC18968 {
+/* JADX INFO: renamed from: l.ܰܽܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D4GD */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14735 {
 
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public C10502 f48167;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C21449 f48147;
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public C10502 f48168;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C4295 f48148 = null;
 
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public C10502 f48169;
+    public C14735(C21449 c21449) {
+        this.f48147 = c21449;
+    }
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public C10502 f48170;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public C10502 f48171;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public C10502 f48172;
-
-    @Override // l.C8781
-    /* JADX INFO: renamed from: ֨ */
-    public final String mo1944() {
-        return "rect";
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m35424(int i, byte[] bArr) {
+        bArr.getClass();
+        if (this.f48148 == null) {
+            this.f48148 = new C4295();
+        }
+        this.f48148.m13671(bArr);
+        int i2 = i == 0 ? this.f48148.f15574 : i;
+        C4295 c4295 = this.f48148;
+        byte[] bArr2 = this.f48147.f68435;
+        int i3 = c4295.f15574;
+        int i4 = 0;
+        int i5 = (i2 / i3) + (i2 % i3 > 0 ? 1 : 0);
+        int i6 = i2 - ((i5 - 1) * i3);
+        byte[] bArr3 = new byte[i5 * i3];
+        int i7 = 0;
+        for (int i8 = 1; i8 <= i5; i8++) {
+            int i9 = c4295.f15574;
+            byte[] bArr4 = new byte[i9];
+            byte[] bArrDoFinal = new byte[bArr2.length + 4];
+            System.arraycopy(bArr2, i4, bArrDoFinal, i4, bArr2.length);
+            int length = bArr2.length;
+            bArrDoFinal[length] = (byte) (i8 / 16777216);
+            bArrDoFinal[length + 1] = (byte) (i8 / 65536);
+            bArrDoFinal[length + 2] = (byte) (i8 / 256);
+            bArrDoFinal[length + 3] = (byte) i8;
+            for (int i10 = 0; i10 < 1000; i10++) {
+                bArrDoFinal = c4295.f15575.doFinal(bArrDoFinal);
+                for (int i11 = 0; i11 < i9; i11++) {
+                    bArr4[i11] = (byte) (bArr4[i11] ^ bArrDoFinal[i11]);
+                }
+            }
+            i4 = 0;
+            System.arraycopy(bArr4, 0, bArr3, i7, i9);
+            i7 += i3;
+        }
+        if (i6 >= i3) {
+            return bArr3;
+        }
+        byte[] bArr5 = new byte[i2];
+        System.arraycopy(bArr3, i4, bArr5, i4, i2);
+        return bArr5;
     }
 }

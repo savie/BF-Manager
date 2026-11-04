@@ -1,14 +1,76 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۜۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 754E */
+import java.io.ByteArrayInputStream;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.zip.CRC32;
+
+/* JADX INFO: renamed from: l.ܳۗۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K77P */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15058 extends AbstractInterpolatorC21407 {
+public final class C15058 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C22518 m36252(AbstractC22044 abstractC22044) {
+        try {
+            C18602 c18602 = new C18602(abstractC22044, false);
+            ArrayList arrayList = new ArrayList();
+            ArrayList arrayList2 = new ArrayList();
+            m36253(arrayList2, arrayList, "V1", c18602.m43227());
+            m36253(arrayList2, arrayList, "V2", c18602.m43225());
+            m36253(arrayList2, arrayList, "V3", c18602.m43223());
+            m36253(arrayList2, arrayList, "V3.1", c18602.m43224());
+            if (arrayList.isEmpty()) {
+                return new C22518(true, false, arrayList, false, new ArrayList(), null);
+            }
+            ArrayList arrayList3 = new ArrayList();
+            Iterator it = arrayList2.iterator();
+            while (it.hasNext()) {
+                arrayList3.add(m36251((C19534) it.next()));
+            }
+            return new C22518(true, true, arrayList, arrayList3.size() > 1, arrayList3, null);
+        } catch (Exception e) {
+            String message = e.getMessage();
+            if (message == null || message.isEmpty()) {
+                message = e.getClass().getSimpleName();
+            }
+            return new C22518(false, false, new ArrayList(), false, new ArrayList(), message);
+        }
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final float[] f49086 = {0.0f, 0.0222f, 0.0424f, 0.0613f, 0.0793f, 0.0966f, 0.1132f, 0.1293f, 0.1449f, 0.16f, 0.1747f, 0.189f, 0.2029f, 0.2165f, 0.2298f, 0.2428f, 0.2555f, 0.268f, 0.2802f, 0.2921f, 0.3038f, 0.3153f, 0.3266f, 0.3377f, 0.3486f, 0.3592f, 0.3697f, 0.3801f, 0.3902f, 0.4002f, 0.41f, 0.4196f, 0.4291f, 0.4385f, 0.4477f, 0.4567f, 0.4656f, 0.4744f, 0.4831f, 0.4916f, 0.5f, 0.5083f, 0.5164f, 0.5245f, 0.5324f, 0.5402f, 0.5479f, 0.5555f, 0.5629f, 0.5703f, 0.5776f, 0.5847f, 0.5918f, 0.5988f, 0.6057f, 0.6124f, 0.6191f, 0.6257f, 0.6322f, 0.6387f, 0.645f, 0.6512f, 0.6574f, 0.6635f, 0.6695f, 0.6754f, 0.6812f, 0.687f, 0.6927f, 0.6983f, 0.7038f, 0.7093f, 0.7147f, 0.72f, 0.7252f, 0.7304f, 0.7355f, 0.7406f, 0.7455f, 0.7504f, 0.7553f, 0.76f, 0.7647f, 0.7694f, 0.774f, 0.7785f, 0.7829f, 0.7873f, 0.7917f, 0.7959f, 0.8002f, 0.8043f, 0.8084f, 0.8125f, 0.8165f, 0.8204f, 0.8243f, 0.8281f, 0.8319f, 0.8356f, 0.8392f, 0.8429f, 0.8464f, 0.8499f, 0.8534f, 0.8568f, 0.8601f, 0.8634f, 0.8667f, 0.8699f, 0.8731f, 0.8762f, 0.8792f, 0.8823f, 0.8852f, 0.8882f, 0.891f, 0.8939f, 0.8967f, 0.8994f, 0.9021f, 0.9048f, 0.9074f, 0.91f, 0.9125f, 0.915f, 0.9174f, 0.9198f, 0.9222f, 0.9245f, 0.9268f, 0.929f, 0.9312f, 0.9334f, 0.9355f, 0.9376f, 0.9396f, 0.9416f, 0.9436f, 0.9455f, 0.9474f, 0.9492f, 0.951f, 0.9528f, 0.9545f, 0.9562f, 0.9579f, 0.9595f, 0.9611f, 0.9627f, 0.9642f, 0.9657f, 0.9672f, 0.9686f, 0.97f, 0.9713f, 0.9726f, 0.9739f, 0.9752f, 0.9764f, 0.9776f, 0.9787f, 0.9798f, 0.9809f, 0.982f, 0.983f, 0.984f, 0.9849f, 0.9859f, 0.9868f, 0.9876f, 0.9885f, 0.9893f, 0.99f, 0.9908f, 0.9915f, 0.9922f, 0.9928f, 0.9934f, 0.994f, 0.9946f, 0.9951f, 0.9956f, 0.9961f, 0.9966f, 0.997f, 0.9974f, 0.9977f, 0.9981f, 0.9984f, 0.9987f, 0.9989f, 0.9992f, 0.9994f, 0.9995f, 0.9997f, 0.9998f, 0.9999f, 0.9999f, 1.0f, 1.0f};
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m36253(ArrayList arrayList, ArrayList arrayList2, String str, byte[] bArr) {
+        if (bArr == null) {
+            return;
+        }
+        arrayList2.add(str);
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            C19534 c19534 = (C19534) it.next();
+            if (Arrays.equals(c19534.f63008, bArr)) {
+                c19534.f63009.add(str);
+                return;
+            }
+        }
+        arrayList.add(new C19534(bArr, str));
+    }
 
-    public C15058() {
-        super(f49086);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C10583 m36251(C19534 c19534) {
+        byte[] bArr = c19534.f63008;
+        X509Certificate x509Certificate = (X509Certificate) CertificateFactory.getInstance("X.509").generateCertificate(new ByteArrayInputStream(bArr));
+        ArrayList arrayList = c19534.f63009;
+        int length = bArr.length;
+        int iHashCode = Arrays.hashCode(bArr);
+        String strM36173 = C15022.m36173(bArr);
+        String strM36182 = C15022.m36182(C15022.m36183().digest(bArr));
+        String strM36183 = C15022.m36182(C15022.m36179().digest(bArr));
+        CRC32 crc32 = new CRC32();
+        crc32.update(bArr);
+        Locale locale = Locale.ROOT;
+        return new C10583(arrayList, length, iHashCode, strM36173, strM36182, strM36183, String.format(locale, "%08x", Long.valueOf(crc32.getValue())), x509Certificate.getSigAlgName(), x509Certificate.getSigAlgOID(), x509Certificate.getSubjectX500Principal().getName("RFC2253"), x509Certificate.getIssuerX500Principal().getName("RFC2253"), x509Certificate.getSerialNumber().toString(16).toLowerCase(locale), x509Certificate.getNotBefore().getTime(), x509Certificate.getNotAfter().getTime());
     }
 }

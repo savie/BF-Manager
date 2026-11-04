@@ -1,80 +1,119 @@
 .class public final Ll/ۧۡ᩹;
-.super Ll/ۙ۬᩹;
-.source "Z9PJ"
+.super Ll/ۨۡ᩹;
+.source "H1MW"
+
+# interfaces
+.implements Ll/ۖ۠᩹;
 
 
-# static fields
-.field public static final ۫:Ll/ۧۡ᩹;
+# instance fields
+.field public final synthetic ۢ:Ll/ۘۡ᩹;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ll/ۘۡ᩹;)V
+    .locals 0
 
-    .line 8
-    new-instance v0, Ll/ۧۡ᩹;
+    .line 979
+    iput-object p1, p0, Ll/ۧۡ᩹;->ۢ:Ll/ۘۡ᩹;
 
-    const v1, 0x7f120606
-
-    const v2, 0x7f08023e
-
-    .line 15
-    invoke-direct {v0, v1, v2}, Ll/ۙ۬᩹;-><init>(II)V
-
-    .line 8
-    sput-object v0, Ll/ۧۡ᩹;->۫:Ll/ۧۡ᩹;
+    invoke-direct {p0, p1}, Ll/ۨۡ᩹;-><init>(Ll/ۘۡ᩹;)V
 
     return-void
 .end method
 
-.method public static ֨()Ll/ۧۡ᩹;
-    .locals 1
+.method public constructor <init>(Ll/ۘۡ᩹;IIZ)V
+    .locals 0
 
-    .line 11
-    sget-object v0, Ll/ۧۡ᩹;->۫:Ll/ۧۡ᩹;
+    .line 982
+    iput-object p1, p0, Ll/ۧۡ᩹;->ۢ:Ll/ۘۡ᩹;
 
-    return-object v0
+    .line 983
+    invoke-direct {p0, p1, p2, p3, p4}, Ll/ۨۡ᩹;-><init>(Ll/ۘۡ᩹;IIZ)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ(Ll/᩸ۜ᩹;)Z
+.method public final characteristics()I
+    .locals 1
+
+    .line 988
+    iget-boolean v0, p0, Ll/ۨۡ᩹;->᩶:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x41
+
+    return v0
+.end method
+
+.method public synthetic getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getComparator(Ll/۠ۚۗ;)Ljava/util/Comparator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
+    .locals 2
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
     .locals 0
 
-    const/4 p1, 0x0
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
+
+    move-result p1
 
     return p1
 .end method
 
-.method public final ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
-    .locals 1
+.method public final ۙ(IIZ)Ll/ۨۡ᩹;
+    .locals 2
 
-    .line 20
-    sget-object v0, Ll/ۧۡ᩹;->۫:Ll/ۧۡ᩹;
+    .line 998
+    new-instance v0, Ll/ۧۡ᩹;
 
-    if-eq p0, v0, :cond_0
+    iget-object v1, p0, Ll/ۧۡ᩹;->ۢ:Ll/ۘۡ᩹;
 
-    .line 23
-    invoke-super {p0, p1}, Ll/ۙ۬᩹;->ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
+    invoke-direct {v0, v1, p1, p2, p3}, Ll/ۧۡ᩹;-><init>(Ll/ۘۡ᩹;IIZ)V
 
-    return-object p0
-
-    .line 21
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public final ۨ(Ll/᩸ۜ᩹;)V
-    .locals 0
+.method public final ۙ(ILjava/lang/Object;)V
+    .locals 2
 
-    .line 33
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 976
+    check-cast p2, Ljava/util/function/Consumer;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    .line 993
+    new-instance v0, Ll/᩹ۡ᩹;
 
-    throw p1
+    iget-object v1, p0, Ll/ۧۡ᩹;->ۢ:Ll/ۘۡ᩹;
+
+    invoke-direct {v0, v1, p1}, Ll/᩹ۡ᩹;-><init>(Ll/ۘۡ᩹;I)V
+
+    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+
+    return-void
 .end method

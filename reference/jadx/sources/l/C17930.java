@@ -1,18 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳ۠ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8QY */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17930 {
+/* JADX INFO: renamed from: l.ܽ᩻ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L635 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C17930 extends AbstractC17184 {
+    @Override // l.AbstractC17184
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo40348(Object obj) {
+        super.mo40348(obj);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f57364;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f57365;
-
-    public C17930(int i, int i2) {
-        this.f57365 = i;
-        this.f57364 = i2;
+    @Override // l.AbstractC17184
+    /* JADX INFO: renamed from: ᩷ */
+    public void mo40353(Object obj) {
+        super.mo40353(obj);
     }
 }

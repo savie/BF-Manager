@@ -1,113 +1,111 @@
 package l;
 
+import com.alipay.sdk.m.y.l;
+import java.io.DataInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.᩸᩸ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SBDM */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21853 {
+/* JADX INFO: renamed from: l.᩷ۚ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5BI */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C21853 extends AbstractC1890 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f70927;
+    /* JADX INFO: renamed from: ֫᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f69618 = 0;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f70928;
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public C19087 f69619;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C23265[] f70929;
+    /* JADX INFO: renamed from: ۫᩷, reason: not valid java name and contains not printable characters */
+    public int f69620;
 
-    public C21853(C4108 c4108, C4213[] c4213Arr) {
-        ArrayList arrayListM11687 = c4108.m11687();
-        this.f70927 = arrayListM11687;
-        this.f70929 = new C23265[arrayListM11687.size() + 2];
-        this.f70928 = new ArrayList();
+    public C21853() {
+        throw null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m48635(C4108 c4108, C4213[] c4213Arr) {
-        int i;
-        C23265[] c23265Arr;
-        int i2;
-        C21853 c21853 = new C21853(c4108, c4213Arr);
-        C11871 c11871M11683 = c4108.m11683();
-        ArrayList arrayList = c21853.f70928;
-        if (c11871M11683 != null) {
-            arrayList.add(c11871M11683);
-            c4213Arr[c11871M11683.m29617()].f15296 = c11871M11683.m29617();
-        }
-        c4108.m11675(new C15504(c21853));
-        int size = arrayList.size() - 1;
-        int i3 = size;
-        while (true) {
-            c23265Arr = c21853.f70929;
-            if (i3 < 2) {
-                break;
-            }
-            C11871 c11871 = (C11871) arrayList.get(i3);
-            C23265 c23265 = c23265Arr[c11871.m29617()];
-            BitSet bitSetM29596 = c11871.m29596();
-            for (int iNextSetBit = bitSetM29596.nextSetBit(0); iNextSetBit >= 0; iNextSetBit = bitSetM29596.nextSetBit(iNextSetBit + 1)) {
-                C11871 c11872 = (C11871) c21853.f70927.get(iNextSetBit);
-                if (c23265Arr[c11872.m29617()] != null && (i2 = c23265Arr[c21853.m48634(c11872).m29617()].f75490) < c23265.f75490) {
-                    c23265.f75490 = i2;
+    public static C19087 m49515(DataInputStream dataInputStream, AbstractC1890 abstractC1890, boolean z) throws IOException {
+        char c = (char) dataInputStream.readByte();
+        EnumC15863 enumC15863M30327 = C12134.m30327(c);
+        switch (C7900.f26252[enumC15863M30327.ordinal()]) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                short s = dataInputStream.readShort();
+                C4699 c4699 = new C4699(enumC15863M30327, abstractC1890);
+                c4699.f16586 = s;
+                c4699.f6365 = "CPX_AnnotationValue";
+                return c4699;
+            case 11:
+                short s2 = dataInputStream.readShort();
+                short s3 = dataInputStream.readShort();
+                C9390 c9390 = new C9390(enumC15863M30327, abstractC1890);
+                c9390.f30475 = s2;
+                c9390.f30474 = s3;
+                c9390.f6365 = "CPX2_AnnotationValue";
+                return c9390;
+            case 12:
+                C0442 c0442 = new C0442(abstractC1890, z);
+                c0442.mo2258(dataInputStream);
+                return new C10136(enumC15863M30327, abstractC1890, c0442);
+            case 13:
+                C1188 c1188 = new C1188(enumC15863M30327, abstractC1890);
+                c1188.f4335 = new ArrayList();
+                c1188.f6365 = "Array_AnnotationValue";
+                short s4 = dataInputStream.readShort();
+                for (int i = 0; i < s4; i++) {
+                    c1188.f4335.add(m49515(dataInputStream, abstractC1890, z));
                 }
-            }
-            c23265Arr[((C11871) arrayList.get(c23265.f75490)).m29617()].f75492.add(c11871);
-            C11871 c11873 = c23265.f75491;
-            c23265.f75489 = c11873;
-            ArrayList arrayList2 = c23265Arr[c11873.m29617()].f75492;
-            while (!arrayList2.isEmpty()) {
-                C11871 c11874 = (C11871) C17745.m41308(arrayList2, 1);
-                C11871 c11871M48634 = c21853.m48634(c11874);
-                if (c23265Arr[c11871M48634.m29617()].f75490 < c23265Arr[c11874.m29617()].f75490) {
-                    c4213Arr[c11874.m29617()].f15296 = c11871M48634.m29617();
-                } else {
-                    c4213Arr[c11874.m29617()].f15296 = c23265.f75491.m29617();
+                return c1188;
+            default:
+                if (abstractC1890.f67152) {
+                    abstractC1890.f6369.mo4160("Unknown tag in annotation \"{0}\" [0x{1}]", Character.valueOf(C8499.m22817(c) ? c : '?'), Integer.toHexString(c));
+                    return new C10136(enumC15863M30327, abstractC1890, null);
                 }
-            }
-            i3--;
-        }
-        for (i = 2; i <= size; i++) {
-            C11871 c11875 = (C11871) arrayList.get(i);
-            if (c4213Arr[c11875.m29617()].f15296 != ((C11871) arrayList.get(c23265Arr[c11875.m29617()].f75490)).m29617()) {
-                c4213Arr[c11875.m29617()].f15296 = c4213Arr[c4213Arr[c11875.m29617()].f15296].f15296;
-            }
+                throw new C5474(abstractC1890.f6369.m32312(), "Unknown tag in annotation \"{0}\" [0x{1}]", Character.valueOf(C8499.m22817(c) ? c : '?'), Integer.toHexString(c));
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C11871 m48634(C11871 c11871) {
-        int iM29617 = c11871.m29617();
-        C23265[] c23265Arr = this.f70929;
-        C23265 c23265 = c23265Arr[iM29617];
-        if (c23265.f75489 == null) {
-            return c11871;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final String m49516() {
+        String name = this.f6371.getName(this.f69620);
+        if (this.f67132) {
+            return this.f67146 ? String.format("#%d", Integer.valueOf(this.f69620)) : String.format("#%d /* %s */", Integer.valueOf(this.f69620), name);
         }
-        if (c23265Arr[c23265Arr[c11871.m29617()].f75489.m29617()].f75489 != null) {
-            ArrayList arrayList = new ArrayList();
-            HashSet hashSet = new HashSet();
-            arrayList.add(c11871);
-            while (!arrayList.isEmpty()) {
-                int size = arrayList.size() - 1;
-                C23265 c23266 = c23265Arr[((C11871) arrayList.get(size)).m29617()];
-                C11871 c11872 = c23266.f75489;
-                C23265 c23267 = c23265Arr[c11872.m29617()];
-                if (hashSet.add(c11872) && c23267.f75489 != null) {
-                    arrayList.add(c11872);
-                } else {
-                    arrayList.remove(size);
-                    if (c23267.f75489 != null) {
-                        C11871 c11873 = c23267.f75488;
-                        if (c23265Arr[c11873.m29617()].f75490 < c23265Arr[c23266.f75488.m29617()].f75490) {
-                            c23266.f75488 = c11873;
-                        }
-                        c23266.f75489 = c23267.f75489;
-                    }
-                }
+        return name;
+    }
+
+    @Override // l.AbstractC20997, l.InterfaceC16454
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1688() {
+        m47997(m49516() + " = ");
+        C19087 c19087 = this.f69619;
+        c19087.m47994(this);
+        c19087.m48012(1);
+        C19087 c19088 = this.f69619;
+        if (c19088.f61803 == EnumC15863.AE_ARRAY) {
+            if (((C1188) c19088).f4335.size() == 0) {
+                m48009("{ }");
+                return;
             }
+            m47989();
+            m48009(m47995());
+            this.f69619.mo1688();
+            m47997(l.d);
+            return;
         }
-        return c23265.f75488;
+        c19088.mo6502(m6504());
+        this.f69619.mo1688();
+    }
+
+    public final String toString() {
+        return "<AnnotationElement " + m49516() + " = " + this.f69619.toString() + ">";
     }
 }

@@ -106,49 +106,49 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import l.C0252;
-import l.C0561;
-import l.C15489;
-import l.C3012;
-import l.C8479;
-import l.C9023;
+import l.C10732;
+import l.C14483;
+import l.C16076;
+import l.C25272;
+import l.C3188;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public static Log f462 = LogFactory.m302(AmazonS3Client.class);
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public static Log f452 = LogFactory.m296(AmazonS3Client.class);
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public static final Map f463;
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public static final Map f453;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public S3ClientOptions f464;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public S3ClientOptions f454;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public volatile String f465;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final AWSCredentialsProvider f455;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final AWSCredentialsProvider f466;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public volatile String f456;
 
     /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final S3ErrorResponseHandler f467;
+    public final S3XmlResponseHandler f457;
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final S3XmlResponseHandler f468;
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final S3ErrorResponseHandler f458;
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public int f469;
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public int f459;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final CompleteMultipartUploadRetryCondition f470;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final CompleteMultipartUploadRetryCondition f460;
 
     static {
-        AwsSdkMetrics.m317(Arrays.asList(S3ServiceMetric.m492()));
-        SignerFactory.m223(AWSS3V4Signer.class, "AWSS3V4SignerType");
+        AwsSdkMetrics.m310(Arrays.asList(S3ServiceMetric.m486()));
+        SignerFactory.m217(AWSS3V4Signer.class, "AWSS3V4SignerType");
         new BucketConfigurationXmlFactory();
         new RequestPaymentConfigurationXmlFactory();
-        f463 = C0561.synchronizedMap(new AnonymousClass1(300, 1.1f, true));
+        f453 = C4681.synchronizedMap(new AnonymousClass1(300, 1.1f, true));
     }
 
     /* JADX INFO: renamed from: com.amazonaws.services.s3.AmazonS3Client$1, reason: invalid class name */
@@ -169,81 +169,81 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
     @Deprecated
     public AmazonS3Client(AWSCredentialsProvider aWSCredentialsProvider, ClientConfiguration clientConfiguration) {
         super(clientConfiguration, new UrlHttpClient(clientConfiguration));
-        this.f467 = new S3ErrorResponseHandler();
-        this.f468 = new S3XmlResponseHandler(null);
-        this.f464 = new S3ClientOptions();
-        this.f469 = 1024;
-        this.f470 = new CompleteMultipartUploadRetryCondition();
-        this.f466 = aWSCredentialsProvider;
-        mo157("s3.amazonaws.com");
+        this.f458 = new S3ErrorResponseHandler();
+        this.f457 = new S3XmlResponseHandler(null);
+        this.f454 = new S3ClientOptions();
+        this.f459 = 1024;
+        this.f460 = new CompleteMultipartUploadRetryCondition();
+        this.f455 = aWSCredentialsProvider;
+        mo151("s3.amazonaws.com");
         HandlerChainFactory handlerChainFactory = new HandlerChainFactory();
-        CopyOnWriteArrayList copyOnWriteArrayList = this.f80;
-        copyOnWriteArrayList.addAll(handlerChainFactory.m237());
-        copyOnWriteArrayList.addAll(handlerChainFactory.m236());
+        CopyOnWriteArrayList copyOnWriteArrayList = this.f75;
+        copyOnWriteArrayList.addAll(handlerChainFactory.m231());
+        copyOnWriteArrayList.addAll(handlerChainFactory.m230());
     }
 
     @Override // com.amazonaws.AmazonWebServiceClient
     /* JADX INFO: renamed from: ۙ */
-    public void mo157(String str) {
+    public void mo151(String str) {
         if (str.endsWith("s3-accelerate.amazonaws.com")) {
             throw new IllegalStateException("To enable accelerate mode, please use AmazonS3Client.setS3ClientOptions(S3ClientOptions.builder().setAccelerateModeEnabled(true).build());");
         }
-        super.mo157(str);
+        super.mo151(str);
         if (str.endsWith("s3.amazonaws.com")) {
             return;
         }
-        this.f465 = AwsHostNameUtils.m739(this.f83.getHost(), "s3");
+        this.f456 = AwsHostNameUtils.m733(this.f71.getHost(), "s3");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ObjectListing m448(ListObjectsRequest listObjectsRequest) {
-        ValidationUtils.m797(listObjectsRequest.m596(), "The bucket name parameter must be specified when listing objects in a bucket");
+    public final ObjectListing m442(ListObjectsRequest listObjectsRequest) {
+        ValidationUtils.m791(listObjectsRequest.m592(), "The bucket name parameter must be specified when listing objects in a bucket");
         final boolean zEquals = "url".equals(null);
-        DefaultRequest defaultRequestM446 = m446(listObjectsRequest.m596(), null, listObjectsRequest, HttpMethodName.GET, null);
-        String strM597 = listObjectsRequest.m597();
-        if (strM597 != null) {
-            defaultRequestM446.m194("prefix", strM597);
+        DefaultRequest defaultRequestM440 = m440(listObjectsRequest.m592(), null, listObjectsRequest, HttpMethodName.GET, null);
+        String strM590 = listObjectsRequest.m590();
+        if (strM590 != null) {
+            defaultRequestM440.m188("prefix", strM590);
         }
-        String strM598 = listObjectsRequest.m598();
-        if (strM598 != null) {
-            defaultRequestM446.m194("delimiter", strM598);
+        String strM594 = listObjectsRequest.m594();
+        if (strM594 != null) {
+            defaultRequestM440.m188("delimiter", strM594);
         }
-        String strM600 = listObjectsRequest.m600();
-        if (strM600 != null) {
-            defaultRequestM446.m194("marker", strM600);
+        String strM593 = listObjectsRequest.m593();
+        if (strM593 != null) {
+            defaultRequestM440.m188("marker", strM593);
         }
-        if (listObjectsRequest.m599() != null && listObjectsRequest.m599().intValue() >= 0) {
-            defaultRequestM446.m194("max-keys", listObjectsRequest.m599().toString());
+        if (listObjectsRequest.m591() != null && listObjectsRequest.m591().intValue() >= 0) {
+            defaultRequestM440.m188("max-keys", listObjectsRequest.m591().toString());
         }
         Unmarshaller unmarshaller = new Unmarshaller(zEquals) { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$ListObjectsUnmarshaller
 
             /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-            public final boolean f688;
+            public final boolean f678;
 
             {
-                this.f688 = zEquals;
+                this.f678 = zEquals;
             }
 
             @Override // com.amazonaws.transform.Unmarshaller
             /* JADX INFO: renamed from: ۙ */
-            public final Object mo706(InputStream inputStream) {
-                return new XmlResponsesSaxParser().m712(inputStream, this.f688).m728();
+            public final Object mo700(InputStream inputStream) {
+                return new XmlResponsesSaxParser().m706(inputStream, this.f678).m722();
             }
         };
-        return (ObjectListing) m440(defaultRequestM446, new S3XmlResponseHandler(unmarshaller), listObjectsRequest.m596(), (String) null);
+        return (ObjectListing) m434(defaultRequestM440, new S3XmlResponseHandler(unmarshaller), listObjectsRequest.m592(), (String) null);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m453(String str, String str2) {
+    public final boolean m447(String str, String str2) {
         try {
             GetObjectMetadataRequest getObjectMetadataRequest = new GetObjectMetadataRequest(str, str2);
-            String strM566 = getObjectMetadataRequest.m566();
-            String strM567 = getObjectMetadataRequest.m567();
-            ValidationUtils.m797(strM566, "The bucket name parameter must be specified when requesting an object's metadata");
-            ValidationUtils.m797(strM567, "The key parameter must be specified when requesting an object's metadata");
+            String strM560 = getObjectMetadataRequest.m560();
+            String strM561 = getObjectMetadataRequest.m561();
+            ValidationUtils.m791(strM560, "The bucket name parameter must be specified when requesting an object's metadata");
+            ValidationUtils.m791(strM561, "The key parameter must be specified when requesting an object's metadata");
             return true;
         } catch (AmazonS3Exception e) {
-            if (e.m142() == 404) {
+            if (e.m143() == 404) {
                 return false;
             }
             throw e;
@@ -252,51 +252,51 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
     @Override // com.amazonaws.services.s3.AmazonS3
     /* JADX INFO: renamed from: ۙ */
-    public final S3Object mo437(GetObjectRequest getObjectRequest) {
+    public final S3Object mo431(GetObjectRequest getObjectRequest) {
         ProgressListenerCallbackExecutor progressListenerCallbackExecutor;
-        ValidationUtils.m797(getObjectRequest.m568(), "The bucket name parameter must be specified when requesting an object");
-        ValidationUtils.m797(getObjectRequest.m571(), "The key parameter must be specified when requesting an object");
-        DefaultRequest defaultRequestM446 = m446(getObjectRequest.m568(), getObjectRequest.m571(), getObjectRequest, HttpMethodName.GET, null);
-        getObjectRequest.m572();
-        long[] jArrM569 = getObjectRequest.m569();
-        if (jArrM569 != null) {
-            String string = "bytes=" + Long.toString(jArrM569[0]) + "-";
-            if (jArrM569[1] >= 0) {
-                StringBuilder sbM23356 = C9023.m23356(string);
-                sbM23356.append(Long.toString(jArrM569[1]));
-                string = sbM23356.toString();
+        ValidationUtils.m791(getObjectRequest.m565(), "The bucket name parameter must be specified when requesting an object");
+        ValidationUtils.m791(getObjectRequest.m568(), "The key parameter must be specified when requesting an object");
+        DefaultRequest defaultRequestM440 = m440(getObjectRequest.m565(), getObjectRequest.m568(), getObjectRequest, HttpMethodName.GET, null);
+        getObjectRequest.m566();
+        long[] jArrM562 = getObjectRequest.m562();
+        if (jArrM562 != null) {
+            String string = "bytes=" + Long.toString(jArrM562[0]) + "-";
+            if (jArrM562[1] >= 0) {
+                StringBuilder sbM27333 = C10732.m27333(string);
+                sbM27333.append(Long.toString(jArrM562[1]));
+                string = sbM27333.toString();
             }
-            defaultRequestM446.m185("Range", string);
+            defaultRequestM440.m177("Range", string);
         }
-        m443(defaultRequestM446, "If-Match", getObjectRequest.m574());
-        m443(defaultRequestM446, "If-None-Match", getObjectRequest.m573());
-        ProgressListener progressListenerMo158 = getObjectRequest.mo158();
-        if (progressListenerMo158 == null) {
-            int i = ProgressListenerCallbackExecutor.f169;
+        m437(defaultRequestM440, "If-Match", getObjectRequest.m567());
+        m437(defaultRequestM440, "If-None-Match", getObjectRequest.m564());
+        ProgressListener progressListenerMo152 = getObjectRequest.mo152();
+        if (progressListenerMo152 == null) {
+            int i = ProgressListenerCallbackExecutor.f159;
             progressListenerCallbackExecutor = null;
         } else {
-            progressListenerCallbackExecutor = new ProgressListenerCallbackExecutor(progressListenerMo158);
+            progressListenerCallbackExecutor = new ProgressListenerCallbackExecutor(progressListenerMo152);
         }
         try {
-            S3Object s3Object = (S3Object) m440(defaultRequestM446, new S3ObjectResponseHandler(), getObjectRequest.m568(), getObjectRequest.m571());
-            s3Object.m652(getObjectRequest.m568());
-            s3Object.m654(getObjectRequest.m571());
-            FilterInputStream serviceClientHolderInputStream = new ServiceClientHolderInputStream(s3Object.m650());
+            S3Object s3Object = (S3Object) m434(defaultRequestM440, new S3ObjectResponseHandler(), getObjectRequest.m565(), getObjectRequest.m568());
+            s3Object.m646(getObjectRequest.m565());
+            s3Object.m648(getObjectRequest.m568());
+            FilterInputStream serviceClientHolderInputStream = new ServiceClientHolderInputStream(s3Object.m644());
             if (progressListenerCallbackExecutor != null) {
                 ProgressReportingInputStream progressReportingInputStream = new ProgressReportingInputStream(serviceClientHolderInputStream, progressListenerCallbackExecutor);
-                progressReportingInputStream.m233();
-                progressReportingInputStream.m232(this.f469);
-                m444(progressListenerCallbackExecutor, 2);
+                progressReportingInputStream.m227();
+                progressReportingInputStream.m226(this.f459);
+                m438(progressListenerCallbackExecutor, 2);
                 serviceClientHolderInputStream = progressReportingInputStream;
             }
-            s3Object.m651(new S3ObjectInputStream(new LengthCheckInputStream(serviceClientHolderInputStream, s3Object.m653().m618(), true)));
+            s3Object.m645(new S3ObjectInputStream(new LengthCheckInputStream(serviceClientHolderInputStream, s3Object.m647().m611(), true)));
             return s3Object;
         } catch (AmazonS3Exception e) {
-            if (e.m142() == 412 || e.m142() == 304) {
-                m444(progressListenerCallbackExecutor, 16);
+            if (e.m143() == 412 || e.m143() == 304) {
+                m438(progressListenerCallbackExecutor, 16);
                 return null;
             }
-            m444(progressListenerCallbackExecutor, 8);
+            m438(progressListenerCallbackExecutor, 8);
             throw e;
         }
     }
@@ -316,123 +316,123 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public final com.amazonaws.services.s3.model.PutObjectResult mo436(com.amazonaws.services.s3.model.PutObjectRequest r18) {
+    public final com.amazonaws.services.s3.model.PutObjectResult mo430(com.amazonaws.services.s3.model.PutObjectRequest r18) {
         /*
             Method dump skipped, instruction units count: 594
             To view this dump add '--comments-level debug' option
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.amazonaws.services.s3.AmazonS3Client.mo436(com.amazonaws.services.s3.model.PutObjectRequest):com.amazonaws.services.s3.model.PutObjectResult");
+        throw new UnsupportedOperationException("Method not decompiled: com.amazonaws.services.s3.AmazonS3Client.mo430(com.amazonaws.services.s3.model.PutObjectRequest):com.amazonaws.services.s3.model.PutObjectResult");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m450(CopyObjectRequest copyObjectRequest) {
-        ValidationUtils.m797(copyObjectRequest.m545(), "The source bucket name must be specified when copying an object");
-        ValidationUtils.m797(copyObjectRequest.m547(), "The source object key must be specified when copying an object");
-        ValidationUtils.m797(copyObjectRequest.m544(), "The destination bucket name must be specified when copying an object");
-        ValidationUtils.m797(copyObjectRequest.m546(), "The destination object key must be specified when copying an object");
-        String strM546 = copyObjectRequest.m546();
-        String strM544 = copyObjectRequest.m544();
-        DefaultRequest defaultRequestM446 = m446(strM544, strM546, copyObjectRequest, HttpMethodName.PUT, null);
-        defaultRequestM446.m185("x-amz-copy-source", "/" + copyObjectRequest.m545() + "/" + copyObjectRequest.m547());
-        m443(defaultRequestM446, "x-amz-copy-source-if-match", copyObjectRequest.m549());
-        m443(defaultRequestM446, "x-amz-copy-source-if-none-match", copyObjectRequest.m548());
-        defaultRequestM446.m185("Content-Length", String.valueOf(0));
+    public final void m444(CopyObjectRequest copyObjectRequest) {
+        ValidationUtils.m791(copyObjectRequest.m538(), "The source bucket name must be specified when copying an object");
+        ValidationUtils.m791(copyObjectRequest.m541(), "The source object key must be specified when copying an object");
+        ValidationUtils.m791(copyObjectRequest.m540(), "The destination bucket name must be specified when copying an object");
+        ValidationUtils.m791(copyObjectRequest.m543(), "The destination object key must be specified when copying an object");
+        String strM543 = copyObjectRequest.m543();
+        String strM540 = copyObjectRequest.m540();
+        DefaultRequest defaultRequestM440 = m440(strM540, strM543, copyObjectRequest, HttpMethodName.PUT, null);
+        defaultRequestM440.m177("x-amz-copy-source", "/" + copyObjectRequest.m538() + "/" + copyObjectRequest.m541());
+        m437(defaultRequestM440, "x-amz-copy-source-if-match", copyObjectRequest.m542());
+        m437(defaultRequestM440, "x-amz-copy-source-if-none-match", copyObjectRequest.m539());
+        defaultRequestM440.m177("Content-Length", String.valueOf(0));
         try {
-            XmlResponsesSaxParser.CopyObjectResultHandler copyObjectResultHandler = (XmlResponsesSaxParser.CopyObjectResultHandler) m440(defaultRequestM446, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$CopyObjectUnmarshaller
+            XmlResponsesSaxParser.CopyObjectResultHandler copyObjectResultHandler = (XmlResponsesSaxParser.CopyObjectResultHandler) m434(defaultRequestM440, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$CopyObjectUnmarshaller
                 @Override // com.amazonaws.transform.Unmarshaller
                 /* JADX INFO: renamed from: ۙ */
-                public final Object mo706(InputStream inputStream) throws IOException {
+                public final Object mo700(InputStream inputStream) throws IOException {
                     XmlResponsesSaxParser xmlResponsesSaxParser = new XmlResponsesSaxParser();
                     XmlResponsesSaxParser.CopyObjectResultHandler copyObjectResultHandler2 = new XmlResponsesSaxParser.CopyObjectResultHandler();
-                    xmlResponsesSaxParser.m713(copyObjectResultHandler2, inputStream);
+                    xmlResponsesSaxParser.m707(copyObjectResultHandler2, inputStream);
                     return copyObjectResultHandler2;
                 }
-            }, new ServerSideEncryptionHeaderHandler(), new S3VersionHeaderHandler(), new ObjectExpirationHeaderHandler(), new S3RequesterChargedHeaderHandler()), strM544, strM546);
-            if (copyObjectResultHandler.m720() != null) {
-                String strM720 = copyObjectResultHandler.m720();
-                String strM718 = copyObjectResultHandler.m718();
-                String strM725 = copyObjectResultHandler.m725();
-                String strM717 = copyObjectResultHandler.m717();
-                AmazonS3Exception amazonS3Exception = new AmazonS3Exception(strM718);
-                amazonS3Exception.m146(strM720);
+            }, new ServerSideEncryptionHeaderHandler(), new S3VersionHeaderHandler(), new ObjectExpirationHeaderHandler(), new S3RequesterChargedHeaderHandler()), strM540, strM543);
+            if (copyObjectResultHandler.m712() != null) {
+                String strM712 = copyObjectResultHandler.m712();
+                String strM713 = copyObjectResultHandler.m713();
+                String strM719 = copyObjectResultHandler.m719();
+                String strM710 = copyObjectResultHandler.m710();
+                AmazonS3Exception amazonS3Exception = new AmazonS3Exception(strM713);
+                amazonS3Exception.m138(strM712);
                 AmazonServiceException.ErrorType errorType = AmazonServiceException.ErrorType.Client;
-                amazonS3Exception.m148(strM725);
-                amazonS3Exception.m525(strM717);
-                amazonS3Exception.m143(defaultRequestM446.m192());
-                amazonS3Exception.m145(200);
+                amazonS3Exception.m140(strM719);
+                amazonS3Exception.m519(strM710);
+                amazonS3Exception.m144(defaultRequestM440.m181());
+                amazonS3Exception.m137(200);
                 throw amazonS3Exception;
             }
             CopyObjectResult copyObjectResult = new CopyObjectResult();
-            copyObjectResult.m557(copyObjectResultHandler.m716());
-            copyObjectResult.m555(copyObjectResultHandler.m722());
-            copyObjectResult.mo478(copyObjectResultHandler.m723());
-            copyObjectResult.mo480(copyObjectResultHandler.m703());
-            copyObjectResult.mo485(copyObjectResultHandler.m701());
-            copyObjectResult.mo482(copyObjectResultHandler.m702());
-            copyObjectResult.mo468(copyObjectResultHandler.m721());
-            copyObjectResult.mo469(copyObjectResultHandler.m724());
-            copyObjectResult.mo465(copyObjectResultHandler.m719());
+            copyObjectResult.m548(copyObjectResultHandler.m714());
+            copyObjectResult.m550(copyObjectResultHandler.m715());
+            copyObjectResult.mo472(copyObjectResultHandler.m718());
+            copyObjectResult.mo479(copyObjectResultHandler.m695());
+            copyObjectResult.mo478(copyObjectResultHandler.m698());
+            copyObjectResult.mo476(copyObjectResultHandler.m697());
+            copyObjectResult.mo462(copyObjectResultHandler.m716());
+            copyObjectResult.mo463(copyObjectResultHandler.m717());
+            copyObjectResult.mo459(copyObjectResultHandler.m711());
         } catch (AmazonS3Exception e) {
-            if (e.m142() != 412) {
+            if (e.m143() != 412) {
                 throw e;
             }
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m451(DeleteObjectRequest deleteObjectRequest) {
-        ValidationUtils.m797(deleteObjectRequest.m558(), "The bucket name must be specified when deleting an object");
-        ValidationUtils.m797(deleteObjectRequest.m559(), "The key must be specified when deleting an object");
-        m440(m446(deleteObjectRequest.m558(), deleteObjectRequest.m559(), deleteObjectRequest, HttpMethodName.DELETE, null), this.f468, deleteObjectRequest.m558(), deleteObjectRequest.m559());
+    public final void m445(DeleteObjectRequest deleteObjectRequest) {
+        ValidationUtils.m791(deleteObjectRequest.m552(), "The bucket name must be specified when deleting an object");
+        ValidationUtils.m791(deleteObjectRequest.m553(), "The key must be specified when deleting an object");
+        m434(m440(deleteObjectRequest.m552(), deleteObjectRequest.m553(), deleteObjectRequest, HttpMethodName.DELETE, null), this.f457, deleteObjectRequest.m552(), deleteObjectRequest.m553());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m452(DeleteObjectsRequest deleteObjectsRequest) {
-        DefaultRequest defaultRequestM446 = m446(deleteObjectsRequest.m560(), null, deleteObjectsRequest, HttpMethodName.POST, null);
-        defaultRequestM446.m194("delete", null);
+    public final void m446(DeleteObjectsRequest deleteObjectsRequest) {
+        DefaultRequest defaultRequestM440 = m440(deleteObjectsRequest.m556(), null, deleteObjectsRequest, HttpMethodName.POST, null);
+        defaultRequestM440.m188("delete", null);
         new MultiObjectDeleteXmlFactory();
         XmlWriter xmlWriter = new XmlWriter();
-        xmlWriter.m489("Delete");
-        if (deleteObjectsRequest.m564()) {
-            xmlWriter.m489("Quiet");
-            xmlWriter.m490("true");
-            xmlWriter.m488();
+        xmlWriter.m483("Delete");
+        if (deleteObjectsRequest.m557()) {
+            xmlWriter.m483("Quiet");
+            xmlWriter.m484("true");
+            xmlWriter.m482();
         }
-        for (DeleteObjectsRequest.KeyVersion keyVersion : deleteObjectsRequest.m562()) {
-            xmlWriter.m489("Object");
-            xmlWriter.m489("Key");
-            xmlWriter.m490(keyVersion.m565());
-            xmlWriter.m488();
-            xmlWriter.m488();
+        for (DeleteObjectsRequest.KeyVersion keyVersion : deleteObjectsRequest.m558()) {
+            xmlWriter.m483("Object");
+            xmlWriter.m483("Key");
+            xmlWriter.m484(keyVersion.m559());
+            xmlWriter.m482();
+            xmlWriter.m482();
         }
-        xmlWriter.m488();
-        byte[] bArrM491 = xmlWriter.m491();
-        defaultRequestM446.m185("Content-Length", String.valueOf(bArrM491.length));
-        defaultRequestM446.m185("Content-Type", "application/xml");
-        defaultRequestM446.m183(new ByteArrayInputStream(bArrM491));
+        xmlWriter.m482();
+        byte[] bArrM485 = xmlWriter.m485();
+        defaultRequestM440.m177("Content-Length", String.valueOf(bArrM485.length));
+        defaultRequestM440.m177("Content-Type", "application/xml");
+        defaultRequestM440.m175(new ByteArrayInputStream(bArrM485));
         try {
             try {
-                defaultRequestM446.m185("Content-MD5", Base64.m743(MessageDigest.getInstance("MD5").digest(bArrM491)));
+                defaultRequestM440.m177("Content-MD5", Base64.m737(MessageDigest.getInstance("MD5").digest(bArrM485)));
                 ResponseHeaderHandlerChain responseHeaderHandlerChain = new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$DeleteObjectsResultUnmarshaller
                     @Override // com.amazonaws.transform.Unmarshaller
                     /* JADX INFO: renamed from: ۙ */
-                    public final Object mo706(InputStream inputStream) throws IOException {
+                    public final Object mo700(InputStream inputStream) throws IOException {
                         XmlResponsesSaxParser xmlResponsesSaxParser = new XmlResponsesSaxParser();
                         XmlResponsesSaxParser.DeleteObjectsHandler deleteObjectsHandler = new XmlResponsesSaxParser.DeleteObjectsHandler();
-                        xmlResponsesSaxParser.m713(deleteObjectsHandler, inputStream);
-                        return deleteObjectsHandler.m726();
+                        xmlResponsesSaxParser.m707(deleteObjectsHandler, inputStream);
+                        return deleteObjectsHandler.m720();
                     }
                 }, new S3RequesterChargedHeaderHandler());
-                DeleteObjectsResponse deleteObjectsResponse = (DeleteObjectsResponse) m440(defaultRequestM446, responseHeaderHandlerChain, deleteObjectsRequest.m560(), (String) null);
-                if (((ArrayList) deleteObjectsResponse.m466()).isEmpty()) {
-                    new ArrayList().addAll(deleteObjectsResponse.m464());
+                DeleteObjectsResponse deleteObjectsResponse = (DeleteObjectsResponse) m434(defaultRequestM440, responseHeaderHandlerChain, deleteObjectsRequest.m556(), (String) null);
+                if (((ArrayList) deleteObjectsResponse.m460()).isEmpty()) {
+                    new ArrayList().addAll(deleteObjectsResponse.m458());
                     return;
                 }
-                Map mapM479 = responseHeaderHandlerChain.m479();
-                MultiObjectDeleteException multiObjectDeleteException = new MultiObjectDeleteException(deleteObjectsResponse.m466(), deleteObjectsResponse.m464());
-                multiObjectDeleteException.m145(200);
-                multiObjectDeleteException.m148((String) mapM479.get("x-amz-request-id"));
-                multiObjectDeleteException.m525((String) mapM479.get("x-amz-id-2"));
+                Map mapM473 = responseHeaderHandlerChain.m473();
+                MultiObjectDeleteException multiObjectDeleteException = new MultiObjectDeleteException(deleteObjectsResponse.m460(), deleteObjectsResponse.m458());
+                multiObjectDeleteException.m137(200);
+                multiObjectDeleteException.m140((String) mapM473.get("x-amz-request-id"));
+                multiObjectDeleteException.m519((String) mapM473.get("x-amz-id-2"));
                 throw multiObjectDeleteException;
             } catch (NoSuchAlgorithmException e) {
                 throw new IllegalStateException(e);
@@ -444,53 +444,53 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
     @Override // com.amazonaws.services.s3.AmazonS3
     /* JADX INFO: renamed from: ۙ */
-    public final void mo439(AbortMultipartUploadRequest abortMultipartUploadRequest) {
-        ValidationUtils.m797(abortMultipartUploadRequest.m494(), "The bucket name parameter must be specified when aborting a multipart upload");
-        ValidationUtils.m797(abortMultipartUploadRequest.m495(), "The key parameter must be specified when aborting a multipart upload");
-        ValidationUtils.m797(abortMultipartUploadRequest.m496(), "The upload ID parameter must be specified when aborting a multipart upload");
-        String strM494 = abortMultipartUploadRequest.m494();
-        String strM495 = abortMultipartUploadRequest.m495();
-        DefaultRequest defaultRequestM446 = m446(strM494, strM495, abortMultipartUploadRequest, HttpMethodName.DELETE, null);
-        defaultRequestM446.m194("uploadId", abortMultipartUploadRequest.m496());
-        m440(defaultRequestM446, this.f468, strM494, strM495);
+    public final void mo433(AbortMultipartUploadRequest abortMultipartUploadRequest) {
+        ValidationUtils.m791(abortMultipartUploadRequest.m488(), "The bucket name parameter must be specified when aborting a multipart upload");
+        ValidationUtils.m791(abortMultipartUploadRequest.m490(), "The key parameter must be specified when aborting a multipart upload");
+        ValidationUtils.m791(abortMultipartUploadRequest.m489(), "The upload ID parameter must be specified when aborting a multipart upload");
+        String strM488 = abortMultipartUploadRequest.m488();
+        String strM490 = abortMultipartUploadRequest.m490();
+        DefaultRequest defaultRequestM440 = m440(strM488, strM490, abortMultipartUploadRequest, HttpMethodName.DELETE, null);
+        defaultRequestM440.m188("uploadId", abortMultipartUploadRequest.m489());
+        m434(defaultRequestM440, this.f457, strM488, strM490);
     }
 
     @Override // com.amazonaws.services.s3.AmazonS3
     /* JADX INFO: renamed from: ۙ */
-    public final CompleteMultipartUploadResult mo434(CompleteMultipartUploadRequest completeMultipartUploadRequest) {
-        String strM540 = completeMultipartUploadRequest.m540();
-        String strM541 = completeMultipartUploadRequest.m541();
-        String strM542 = completeMultipartUploadRequest.m542();
-        ValidationUtils.m797(strM540, "The bucket name parameter must be specified when completing a multipart upload");
-        ValidationUtils.m797(strM541, "The key parameter must be specified when completing a multipart upload");
-        ValidationUtils.m797(strM542, "The upload ID parameter must be specified when completing a multipart upload");
-        ValidationUtils.m797(completeMultipartUploadRequest.m543(), "The part ETags parameter must be specified when completing a multipart upload");
+    public final CompleteMultipartUploadResult mo428(CompleteMultipartUploadRequest completeMultipartUploadRequest) {
+        String strM535 = completeMultipartUploadRequest.m535();
+        String strM537 = completeMultipartUploadRequest.m537();
+        String strM534 = completeMultipartUploadRequest.m534();
+        ValidationUtils.m791(strM535, "The bucket name parameter must be specified when completing a multipart upload");
+        ValidationUtils.m791(strM537, "The key parameter must be specified when completing a multipart upload");
+        ValidationUtils.m791(strM534, "The upload ID parameter must be specified when completing a multipart upload");
+        ValidationUtils.m791(completeMultipartUploadRequest.m536(), "The part ETags parameter must be specified when completing a multipart upload");
         int i = 0;
         while (true) {
-            DefaultRequest defaultRequestM446 = m446(strM540, strM541, completeMultipartUploadRequest, HttpMethodName.POST, null);
-            defaultRequestM446.m194("uploadId", strM542);
-            byte[] bArrM705 = RequestXmlFactory.m705(completeMultipartUploadRequest.m543());
-            defaultRequestM446.m185("Content-Type", "application/xml");
-            defaultRequestM446.m185("Content-Length", String.valueOf(bArrM705.length));
-            defaultRequestM446.m183(new ByteArrayInputStream(bArrM705));
-            XmlResponsesSaxParser.CompleteMultipartUploadHandler completeMultipartUploadHandler = (XmlResponsesSaxParser.CompleteMultipartUploadHandler) m440(defaultRequestM446, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$CompleteMultipartUploadResultUnmarshaller
+            DefaultRequest defaultRequestM440 = m440(strM535, strM537, completeMultipartUploadRequest, HttpMethodName.POST, null);
+            defaultRequestM440.m188("uploadId", strM534);
+            byte[] bArrM699 = RequestXmlFactory.m699(completeMultipartUploadRequest.m536());
+            defaultRequestM440.m177("Content-Type", "application/xml");
+            defaultRequestM440.m177("Content-Length", String.valueOf(bArrM699.length));
+            defaultRequestM440.m175(new ByteArrayInputStream(bArrM699));
+            XmlResponsesSaxParser.CompleteMultipartUploadHandler completeMultipartUploadHandler = (XmlResponsesSaxParser.CompleteMultipartUploadHandler) m434(defaultRequestM440, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$CompleteMultipartUploadResultUnmarshaller
                 @Override // com.amazonaws.transform.Unmarshaller
                 /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-                public final Object mo706(InputStream inputStream) throws IOException {
+                public final Object mo700(InputStream inputStream) throws IOException {
                     XmlResponsesSaxParser xmlResponsesSaxParser = new XmlResponsesSaxParser();
                     XmlResponsesSaxParser.CompleteMultipartUploadHandler completeMultipartUploadHandler2 = new XmlResponsesSaxParser.CompleteMultipartUploadHandler();
-                    xmlResponsesSaxParser.m713(completeMultipartUploadHandler2, inputStream);
+                    xmlResponsesSaxParser.m707(completeMultipartUploadHandler2, inputStream);
                     return completeMultipartUploadHandler2;
                 }
-            }, new ServerSideEncryptionHeaderHandler(), new ObjectExpirationHeaderHandler(), new S3VersionHeaderHandler(), new S3RequesterChargedHeaderHandler()), strM540, strM541);
-            if (completeMultipartUploadHandler.m715() != null) {
-                return completeMultipartUploadHandler.m715();
+            }, new ServerSideEncryptionHeaderHandler(), new ObjectExpirationHeaderHandler(), new S3VersionHeaderHandler(), new S3RequesterChargedHeaderHandler()), strM535, strM537);
+            if (completeMultipartUploadHandler.m708() != null) {
+                return completeMultipartUploadHandler.m708();
             }
-            AmazonS3Exception amazonS3ExceptionM714 = completeMultipartUploadHandler.m714();
+            AmazonS3Exception amazonS3ExceptionM709 = completeMultipartUploadHandler.m709();
             int i2 = i + 1;
-            RetryPolicy retryPolicyM173 = this.f84.m173();
-            if (!((retryPolicyM173 == null || retryPolicyM173.m430() == null || retryPolicyM173 == PredefinedRetryPolicies.f450) ? false : this.f470.mo428(amazonS3ExceptionM714, i))) {
-                throw completeMultipartUploadHandler.m714();
+            RetryPolicy retryPolicyM165 = this.f74.m165();
+            if (!((retryPolicyM165 == null || retryPolicyM165.m424() == null || retryPolicyM165 == PredefinedRetryPolicies.f443) ? false : this.f460.mo422(amazonS3ExceptionM709, i))) {
+                throw completeMultipartUploadHandler.m709();
             }
             i = i2;
         }
@@ -498,112 +498,112 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
     @Override // com.amazonaws.services.s3.AmazonS3
     /* JADX INFO: renamed from: ۙ */
-    public final InitiateMultipartUploadResult mo435(InitiateMultipartUploadRequest initiateMultipartUploadRequest) {
-        ValidationUtils.m797(initiateMultipartUploadRequest.m580(), "The bucket name parameter must be specified when initiating a multipart upload");
-        ValidationUtils.m797(initiateMultipartUploadRequest.m587(), "The key parameter must be specified when initiating a multipart upload");
-        DefaultRequest defaultRequestM446 = m446(initiateMultipartUploadRequest.m580(), initiateMultipartUploadRequest.m587(), initiateMultipartUploadRequest, HttpMethodName.POST, null);
-        defaultRequestM446.m194("uploads", null);
-        if (initiateMultipartUploadRequest.m585() != null) {
-            defaultRequestM446.m185("x-amz-acl", initiateMultipartUploadRequest.m585().toString());
+    public final InitiateMultipartUploadResult mo429(InitiateMultipartUploadRequest initiateMultipartUploadRequest) {
+        ValidationUtils.m791(initiateMultipartUploadRequest.m579(), "The bucket name parameter must be specified when initiating a multipart upload");
+        ValidationUtils.m791(initiateMultipartUploadRequest.m580(), "The key parameter must be specified when initiating a multipart upload");
+        DefaultRequest defaultRequestM440 = m440(initiateMultipartUploadRequest.m579(), initiateMultipartUploadRequest.m580(), initiateMultipartUploadRequest, HttpMethodName.POST, null);
+        defaultRequestM440.m188("uploads", null);
+        if (initiateMultipartUploadRequest.m581() != null) {
+            defaultRequestM440.m177("x-amz-acl", initiateMultipartUploadRequest.m581().toString());
         }
-        ObjectMetadata objectMetadata = initiateMultipartUploadRequest.f611;
+        ObjectMetadata objectMetadata = initiateMultipartUploadRequest.f601;
         if (objectMetadata != null) {
-            m442(defaultRequestM446, objectMetadata);
+            m436(defaultRequestM440, objectMetadata);
         }
-        String strM441 = m441(initiateMultipartUploadRequest.m581());
-        if (strM441 != null) {
-            defaultRequestM446.m185("x-amz-tagging", strM441);
+        String strM435 = m435(initiateMultipartUploadRequest.m574());
+        if (strM435 != null) {
+            defaultRequestM440.m177("x-amz-tagging", strM435);
         }
-        SSEAwsKeyManagementParams sSEAwsKeyManagementParamsM586 = initiateMultipartUploadRequest.m586();
-        if (sSEAwsKeyManagementParamsM586 != null) {
+        SSEAwsKeyManagementParams sSEAwsKeyManagementParamsM578 = initiateMultipartUploadRequest.m578();
+        if (sSEAwsKeyManagementParamsM578 != null) {
             String algorithm = SSEAlgorithm.KMS.getAlgorithm();
             if (algorithm != null) {
-                defaultRequestM446.m185("x-amz-server-side-encryption", algorithm);
+                defaultRequestM440.m177("x-amz-server-side-encryption", algorithm);
             }
-            String strM671 = sSEAwsKeyManagementParamsM586.m671();
-            if (strM671 != null) {
-                defaultRequestM446.m185("x-amz-server-side-encryption-aws-kms-key-id", strM671);
+            String strM665 = sSEAwsKeyManagementParamsM578.m665();
+            if (strM665 != null) {
+                defaultRequestM440.m177("x-amz-server-side-encryption-aws-kms-key-id", strM665);
             }
         }
-        defaultRequestM446.m185("Content-Length", String.valueOf(0));
-        defaultRequestM446.m183(new ByteArrayInputStream(new byte[0]));
-        return (InitiateMultipartUploadResult) m440(defaultRequestM446, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$InitiateMultipartUploadResultUnmarshaller
+        defaultRequestM440.m177("Content-Length", String.valueOf(0));
+        defaultRequestM440.m175(new ByteArrayInputStream(new byte[0]));
+        return (InitiateMultipartUploadResult) m434(defaultRequestM440, new ResponseHeaderHandlerChain(new Unmarshaller() { // from class: com.amazonaws.services.s3.model.transform.Unmarshallers$InitiateMultipartUploadResultUnmarshaller
             @Override // com.amazonaws.transform.Unmarshaller
             /* JADX INFO: renamed from: ۙ */
-            public final Object mo706(InputStream inputStream) throws IOException {
+            public final Object mo700(InputStream inputStream) throws IOException {
                 XmlResponsesSaxParser xmlResponsesSaxParser = new XmlResponsesSaxParser();
                 XmlResponsesSaxParser.InitiateMultipartUploadHandler initiateMultipartUploadHandler = new XmlResponsesSaxParser.InitiateMultipartUploadHandler();
-                xmlResponsesSaxParser.m713(initiateMultipartUploadHandler, inputStream);
-                return initiateMultipartUploadHandler.m727();
+                xmlResponsesSaxParser.m707(initiateMultipartUploadHandler, inputStream);
+                return initiateMultipartUploadHandler.m721();
             }
-        }, new ServerSideEncryptionHeaderHandler()), initiateMultipartUploadRequest.m580(), initiateMultipartUploadRequest.m587());
+        }, new ServerSideEncryptionHeaderHandler()), initiateMultipartUploadRequest.m579(), initiateMultipartUploadRequest.m580());
     }
 
     @Override // com.amazonaws.services.s3.AmazonS3
     /* JADX INFO: renamed from: ۙ */
-    public final UploadPartResult mo438(UploadPartRequest uploadPartRequest) {
+    public final UploadPartResult mo432(UploadPartRequest uploadPartRequest) {
         InputStream inputSubstream;
         ProgressListenerCallbackExecutor progressListenerCallbackExecutor;
-        String strM674 = uploadPartRequest.m674();
-        String strM675 = uploadPartRequest.m675();
-        String strM688 = uploadPartRequest.m688();
-        int iM682 = uploadPartRequest.m682();
-        long jM691 = uploadPartRequest.m691();
-        ValidationUtils.m797(strM674, "The bucket name parameter must be specified when uploading a part");
-        ValidationUtils.m797(strM675, "The key parameter must be specified when uploading a part");
-        ValidationUtils.m797(strM688, "The upload ID parameter must be specified when uploading a part");
-        DefaultRequest defaultRequestM446 = m446(strM674, strM675, uploadPartRequest, HttpMethodName.PUT, null);
-        defaultRequestM446.m194("uploadId", strM688);
-        defaultRequestM446.m194("partNumber", Integer.toString(iM682));
-        defaultRequestM446.m185("Content-Length", Long.toString(jM691));
-        if (uploadPartRequest.m685() != null) {
-            inputSubstream = uploadPartRequest.m685();
+        String strM676 = uploadPartRequest.m676();
+        String strM668 = uploadPartRequest.m668();
+        String strM681 = uploadPartRequest.m681();
+        int iM679 = uploadPartRequest.m679();
+        long jM685 = uploadPartRequest.m685();
+        ValidationUtils.m791(strM676, "The bucket name parameter must be specified when uploading a part");
+        ValidationUtils.m791(strM668, "The key parameter must be specified when uploading a part");
+        ValidationUtils.m791(strM681, "The upload ID parameter must be specified when uploading a part");
+        DefaultRequest defaultRequestM440 = m440(strM676, strM668, uploadPartRequest, HttpMethodName.PUT, null);
+        defaultRequestM440.m188("uploadId", strM681);
+        defaultRequestM440.m188("partNumber", Integer.toString(iM679));
+        defaultRequestM440.m177("Content-Length", Long.toString(jM685));
+        if (uploadPartRequest.m675() != null) {
+            inputSubstream = uploadPartRequest.m675();
         } else {
-            if (uploadPartRequest.m689() == null) {
+            if (uploadPartRequest.m669() == null) {
                 throw new IllegalArgumentException("A File or InputStream must be specified when uploading part");
             }
             try {
-                inputSubstream = new InputSubstream(new RepeatableFileInputStream(uploadPartRequest.m689()), uploadPartRequest.m681(), jM691);
+                inputSubstream = new InputSubstream(new RepeatableFileInputStream(uploadPartRequest.m669()), uploadPartRequest.m682(), jM685);
             } catch (FileNotFoundException e) {
                 throw new IllegalArgumentException("The specified file doesn't exist", e);
             }
         }
-        if (!ServiceUtils.m487(uploadPartRequest) && inputSubstream.markSupported()) {
+        if (!ServiceUtils.m481(uploadPartRequest) && inputSubstream.markSupported()) {
             try {
-                String strM743 = Base64.m743(Md5Utils.m784(inputSubstream));
-                if (strM743 != null) {
-                    defaultRequestM446.m185("Content-MD5", strM743);
+                String strM737 = Base64.m737(Md5Utils.m778(inputSubstream));
+                if (strM737 != null) {
+                    defaultRequestM440.m177("Content-MD5", strM737);
                 }
                 inputSubstream.reset();
             } catch (Exception e2) {
-                throw new AmazonClientException(C8479.m22142(e2, new StringBuilder("Unable to calculate MD5 hash: ")), e2);
+                throw new AmazonClientException(C16076.m38224(e2, new StringBuilder("Unable to calculate MD5 hash: ")), e2);
             }
         }
-        ProgressListener progressListenerMo158 = uploadPartRequest.mo158();
-        if (progressListenerMo158 == null) {
-            int i = ProgressListenerCallbackExecutor.f169;
+        ProgressListener progressListenerMo152 = uploadPartRequest.mo152();
+        if (progressListenerMo152 == null) {
+            int i = ProgressListenerCallbackExecutor.f159;
             progressListenerCallbackExecutor = null;
         } else {
-            progressListenerCallbackExecutor = new ProgressListenerCallbackExecutor(progressListenerMo158);
+            progressListenerCallbackExecutor = new ProgressListenerCallbackExecutor(progressListenerMo152);
         }
         if (progressListenerCallbackExecutor != null) {
             ProgressReportingInputStream progressReportingInputStream = new ProgressReportingInputStream(inputSubstream, progressListenerCallbackExecutor);
-            progressReportingInputStream.m232(this.f469);
-            m444(progressListenerCallbackExecutor, 1024);
+            progressReportingInputStream.m226(this.f459);
+            m438(progressListenerCallbackExecutor, 1024);
             inputSubstream = progressReportingInputStream;
         }
         try {
             try {
-                defaultRequestM446.m183(inputSubstream);
-                ObjectMetadata objectMetadata = (ObjectMetadata) m440(defaultRequestM446, new S3MetadataResponseHandler(), strM674, strM675);
-                m444(progressListenerCallbackExecutor, 2048);
+                defaultRequestM440.m175(inputSubstream);
+                ObjectMetadata objectMetadata = (ObjectMetadata) m434(defaultRequestM440, new S3MetadataResponseHandler(), strM676, strM668);
+                m438(progressListenerCallbackExecutor, 2048);
                 UploadPartResult uploadPartResult = new UploadPartResult();
-                uploadPartResult.m695(objectMetadata.m624());
-                uploadPartResult.m693(iM682);
-                uploadPartResult.mo480(objectMetadata.m632());
-                uploadPartResult.mo485(objectMetadata.m635());
-                uploadPartResult.mo482(objectMetadata.m633());
-                objectMetadata.m627();
+                uploadPartResult.m687(objectMetadata.m629());
+                uploadPartResult.m686(iM679);
+                uploadPartResult.mo479(objectMetadata.m627());
+                uploadPartResult.mo478(objectMetadata.m628());
+                uploadPartResult.mo476(objectMetadata.m626());
+                objectMetadata.m622();
                 if (inputSubstream != null) {
                     try {
                         inputSubstream.close();
@@ -612,7 +612,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                 }
                 return uploadPartResult;
             } catch (AmazonClientException e3) {
-                m444(progressListenerCallbackExecutor, 4096);
+                m438(progressListenerCallbackExecutor, 4096);
                 throw e3;
             }
         } catch (Throwable th) {
@@ -627,35 +627,35 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m444(ProgressListenerCallbackExecutor progressListenerCallbackExecutor, int i) {
+    public static void m438(ProgressListenerCallbackExecutor progressListenerCallbackExecutor, int i) {
         if (progressListenerCallbackExecutor == null) {
             return;
         }
         ProgressEvent progressEvent = new ProgressEvent(0L);
-        progressEvent.m227(i);
-        progressListenerCallbackExecutor.m231(progressEvent);
+        progressEvent.m221(i);
+        progressListenerCallbackExecutor.m225(progressEvent);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Signer m447(DefaultRequest defaultRequest, String str, String str2) {
-        this.f464.getClass();
-        Signer signerM153 = m153(defaultRequest.m193());
-        if (this.f84.m168() == null) {
-            if ((signerM153 instanceof AWSS3V4Signer) && defaultRequest.m193().getHost().endsWith("s3.amazonaws.com") && this.f465 == null) {
-                String str3 = this.f465 == null ? (String) f463.get(str) : this.f465;
+    public final Signer m441(DefaultRequest defaultRequest, String str, String str2) {
+        this.f454.getClass();
+        Signer signerM147 = m147(defaultRequest.m187());
+        if (this.f74.m170() == null) {
+            if ((signerM147 instanceof AWSS3V4Signer) && defaultRequest.m187().getHost().endsWith("s3.amazonaws.com") && this.f456 == null) {
+                String str3 = this.f456 == null ? (String) f453.get(str) : this.f456;
                 if (str3 != null) {
-                    String strM414 = RegionUtils.m423(str3).m414();
-                    Protocol protocolM175 = this.f84.m175();
-                    if (strM414 == null) {
+                    String strM412 = RegionUtils.m417(str3).m412();
+                    Protocol protocolM169 = this.f74.m169();
+                    if (strM412 == null) {
                         throw new IllegalArgumentException("endpoint cannot be null");
                     }
-                    if (!strM414.contains("://")) {
-                        strM414 = protocolM175.toString() + "://" + strM414;
+                    if (!strM412.contains("://")) {
+                        strM412 = protocolM169.toString() + "://" + strM412;
                     }
                     try {
-                        mo449(defaultRequest, str, str2, new URI(strM414));
-                        AWSS3V4Signer aWSS3V4Signer = (AWSS3V4Signer) signerM153;
-                        aWSS3V4Signer.setServiceName(m154());
+                        mo443(defaultRequest, str, str2, new URI(strM412));
+                        AWSS3V4Signer aWSS3V4Signer = (AWSS3V4Signer) signerM147;
+                        aWSS3V4Signer.setServiceName(m148());
                         aWSS3V4Signer.setRegionName(str3);
                         return aWSS3V4Signer;
                     } catch (URISyntaxException e) {
@@ -663,16 +663,16 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                     }
                 }
             }
-            String str4 = this.f465 == null ? (String) f463.get(str) : this.f465;
+            String str4 = this.f456 == null ? (String) f453.get(str) : this.f456;
             if (str4 != null) {
                 AWSS3V4Signer aWSS3V4Signer2 = new AWSS3V4Signer();
-                aWSS3V4Signer2.setServiceName(m154());
+                aWSS3V4Signer2.setServiceName(m148());
                 aWSS3V4Signer2.setRegionName(str4);
                 return aWSS3V4Signer2;
             }
         }
-        if (!(signerM153 instanceof S3Signer)) {
-            return signerM153;
+        if (!(signerM147 instanceof S3Signer)) {
+            return signerM147;
         }
         StringBuilder sb = new StringBuilder("/");
         sb.append(str != null ? str.concat("/") : "");
@@ -680,25 +680,25 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             str2 = "";
         }
         sb.append(str2);
-        return new S3Signer(defaultRequest.m178().toString(), sb.toString());
+        return new S3Signer(defaultRequest.m189().toString(), sb.toString());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m442(DefaultRequest defaultRequest, ObjectMetadata objectMetadata) {
-        Map mapM625 = objectMetadata.m625();
-        if (mapM625.get("x-amz-server-side-encryption-aws-kms-key-id") != null && !ObjectMetadata.f630.equals(mapM625.get("x-amz-server-side-encryption"))) {
+    public static void m436(DefaultRequest defaultRequest, ObjectMetadata objectMetadata) {
+        Map mapM621 = objectMetadata.m621();
+        if (mapM621.get("x-amz-server-side-encryption-aws-kms-key-id") != null && !ObjectMetadata.f620.equals(mapM621.get("x-amz-server-side-encryption"))) {
             throw new IllegalArgumentException("If you specify a KMS key id for server side encryption, you must also set the SSEAlgorithm to ObjectMetadata.KMS_SERVER_SIDE_ENCRYPTION");
         }
-        for (Map.Entry entry : mapM625.entrySet()) {
-            defaultRequest.m185((String) entry.getKey(), entry.getValue().toString());
+        for (Map.Entry entry : mapM621.entrySet()) {
+            defaultRequest.m177((String) entry.getKey(), entry.getValue().toString());
         }
-        Date dateM630 = objectMetadata.m630();
-        if (dateM630 != null) {
-            defaultRequest.m185("Expires", DateUtils.m767("EEE, dd MMM yyyy HH:mm:ss z", dateM630));
+        Date dateM617 = objectMetadata.m617();
+        if (dateM617 != null) {
+            defaultRequest.m177("Expires", DateUtils.m761("EEE, dd MMM yyyy HH:mm:ss z", dateM617));
         }
-        Map mapM626 = objectMetadata.m626();
-        if (mapM626 != null) {
-            for (Map.Entry entry2 : mapM626.entrySet()) {
+        Map mapM610 = objectMetadata.m610();
+        if (mapM610 != null) {
+            for (Map.Entry entry2 : mapM610.entrySet()) {
                 String strTrim = (String) entry2.getKey();
                 String strTrim2 = (String) entry2.getValue();
                 if (strTrim != null) {
@@ -708,94 +708,94 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                     strTrim2 = strTrim2.trim();
                 }
                 if (!"x-amz-tagging".equals(strTrim)) {
-                    defaultRequest.m185("x-amz-meta-" + strTrim, strTrim2);
+                    defaultRequest.m177("x-amz-meta-" + strTrim, strTrim2);
                 }
             }
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m443(DefaultRequest defaultRequest, String str, ArrayList arrayList) {
+    public static void m437(DefaultRequest defaultRequest, String str, ArrayList arrayList) {
         if (arrayList == null || arrayList.isEmpty()) {
             return;
         }
-        int i = ServiceUtils.f512;
+        int i = ServiceUtils.f502;
         Iterator it = arrayList.iterator();
-        String strM37076 = "";
+        String strM34972 = "";
         boolean z = true;
         while (it.hasNext()) {
             String str2 = (String) it.next();
             if (!z) {
-                strM37076 = C15489.m37076(strM37076, ", ");
+                strM34972 = C14483.m34972(strM34972, ", ");
             }
-            strM37076 = C15489.m37076(strM37076, str2);
+            strM34972 = C14483.m34972(strM34972, str2);
             z = false;
         }
-        defaultRequest.m185(str, strM37076);
+        defaultRequest.m177(str, strM34972);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final DefaultRequest m446(String str, String str2, AmazonWebServiceRequest amazonWebServiceRequest, HttpMethodName httpMethodName, URI uri) {
+    public final DefaultRequest m440(String str, String str2, AmazonWebServiceRequest amazonWebServiceRequest, HttpMethodName httpMethodName, URI uri) {
         DefaultRequest defaultRequest = new DefaultRequest(amazonWebServiceRequest);
-        this.f464.getClass();
-        defaultRequest.m181(httpMethodName);
-        mo449(defaultRequest, str, str2, uri);
+        this.f454.getClass();
+        defaultRequest.m173(httpMethodName);
+        mo443(defaultRequest, str, str2, uri);
         return defaultRequest;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private Object m440(DefaultRequest defaultRequest, AbstractS3ResponseHandler abstractS3ResponseHandler, String str, String str2) {
-        m155(defaultRequest.m189());
+    private Object m434(DefaultRequest defaultRequest, AbstractS3ResponseHandler abstractS3ResponseHandler, String str, String str2) {
+        m149(defaultRequest.m186());
         boolean z = false;
-        S3ExecutionContext s3ExecutionContext = new S3ExecutionContext(this.f80, System.getProperty("com.amazonaws.sdk.enableRuntimeProfiling") != null);
-        AWSRequestMetrics aWSRequestMetricsM254 = s3ExecutionContext.m254();
-        defaultRequest.m182(aWSRequestMetricsM254);
-        aWSRequestMetricsM254.mo735(AWSRequestMetrics.Field.ClientExecuteTime);
+        S3ExecutionContext s3ExecutionContext = new S3ExecutionContext(this.f75, System.getProperty("com.amazonaws.sdk.enableRuntimeProfiling") != null);
+        AWSRequestMetrics aWSRequestMetricsM248 = s3ExecutionContext.m248();
+        defaultRequest.m174(aWSRequestMetricsM248);
+        aWSRequestMetricsM248.mo729(AWSRequestMetrics.Field.ClientExecuteTime);
         try {
             try {
-                if (!defaultRequest.m191().containsKey("Content-Type")) {
-                    defaultRequest.m185("Content-Type", "application/octet-stream");
+                if (!defaultRequest.m182().containsKey("Content-Type")) {
+                    defaultRequest.m177("Content-Type", "application/octet-stream");
                 }
                 if (str != null) {
-                    if (defaultRequest.m193().getHost().endsWith("s3.amazonaws.com") && this.f465 == null) {
+                    if (defaultRequest.m187().getHost().endsWith("s3.amazonaws.com") && this.f456 == null) {
                         z = true;
                     }
                     if (z) {
-                        m445(str);
+                        m439(str);
                     }
                 }
-                AWSCredentials aWSCredentialsMo208 = this.f466.mo208();
-                s3ExecutionContext.m476(m447(defaultRequest, str, str2));
-                s3ExecutionContext.m255(aWSCredentialsMo208);
-                Object objM198 = this.f81.m252(defaultRequest, abstractS3ResponseHandler, this.f467, s3ExecutionContext).m198();
-                m156(aWSRequestMetricsM254, defaultRequest);
-                return objM198;
+                AWSCredentials aWSCredentialsMo202 = this.f455.mo202();
+                s3ExecutionContext.m469(m441(defaultRequest, str, str2));
+                s3ExecutionContext.m249(aWSCredentialsMo202);
+                Object objM192 = this.f70.m246(defaultRequest, abstractS3ResponseHandler, this.f458, s3ExecutionContext).m192();
+                m150(aWSRequestMetricsM248, defaultRequest);
+                return objM192;
             } catch (AmazonS3Exception e) {
-                if (e.m142() == 301 && e.m524() != null) {
-                    String str3 = (String) ((HashMap) e.m524()).get("x-amz-bucket-region");
-                    f463.put(str, str3);
-                    e.m150("The bucket is in this region: " + str3 + ". Please use this region to retry the request");
+                if (e.m143() == 301 && e.m518() != null) {
+                    String str3 = (String) ((HashMap) e.m518()).get("x-amz-bucket-region");
+                    f453.put(str, str3);
+                    e.m142("The bucket is in this region: " + str3 + ". Please use this region to retry the request");
                 }
                 throw e;
             }
         } catch (Throwable th) {
-            m156(aWSRequestMetricsM254, defaultRequest);
+            m150(aWSRequestMetricsM248, defaultRequest);
             throw th;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m441(ObjectTagging objectTagging) {
+    public static String m435(ObjectTagging objectTagging) {
         if (objectTagging == null) {
             return null;
         }
         StringBuilder sb = new StringBuilder();
-        Iterator it = ((ArrayList) objectTagging.m640()).iterator();
+        Iterator it = ((ArrayList) objectTagging.m634()).iterator();
         while (it.hasNext()) {
             Tag tag = (Tag) it.next();
-            sb.append(S3HttpUtils.m477(tag.m672()));
+            sb.append(S3HttpUtils.m471(tag.m666()));
             sb.append(a.h);
-            sb.append(S3HttpUtils.m477(tag.m673()));
+            sb.append(S3HttpUtils.m471(tag.m667()));
             if (it.hasNext()) {
                 sb.append(com.alipay.sdk.m.w.a.p);
             }
@@ -803,34 +803,34 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         return sb.toString();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m445(String str) {
-        Map map = f463;
-        String strM578 = (String) map.get(str);
-        Log log = f462;
-        if (strM578 == null) {
-            if (log.mo294()) {
-                log.mo298("Bucket region cache doesn't have an entry for " + str + ". Trying to get bucket region from Amazon S3.");
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private void m439(String str) {
+        Map map = f453;
+        String strM572 = (String) map.get(str);
+        Log log = f452;
+        if (strM572 == null) {
+            if (log.mo287()) {
+                log.mo291("Bucket region cache doesn't have an entry for " + str + ". Trying to get bucket region from Amazon S3.");
             }
-            strM578 = null;
+            strM572 = null;
             try {
-                strM578 = ((HeadBucketResult) m440(m446(str, null, new HeadBucketRequest(), HttpMethodName.HEAD, new URI("https://s3-us-west-1.amazonaws.com")), new HeadBucketResultHandler(), str, (String) null)).m578();
+                strM572 = ((HeadBucketResult) m434(m440(str, null, new HeadBucketRequest(), HttpMethodName.HEAD, new URI("https://s3-us-west-1.amazonaws.com")), new HeadBucketResultHandler(), str, (String) null)).m572();
             } catch (AmazonS3Exception e) {
-                if (e.m524() != null) {
-                    strM578 = (String) ((HashMap) e.m524()).get("x-amz-bucket-region");
+                if (e.m518() != null) {
+                    strM572 = (String) ((HashMap) e.m518()).get("x-amz-bucket-region");
                 }
             } catch (URISyntaxException unused) {
-                log.mo291("Error while creating URI");
+                log.mo294("Error while creating URI");
             }
-            if (strM578 == null && log.mo294()) {
-                log.mo298("Not able to derive region of the " + str + " from the HEAD Bucket requests.");
+            if (strM572 == null && log.mo287()) {
+                log.mo291("Not able to derive region of the " + str + " from the HEAD Bucket requests.");
             }
-            if (strM578 != null) {
-                map.put(str, strM578);
+            if (strM572 != null) {
+                map.put(str, strM572);
             }
         }
-        if (log.mo294()) {
-            log.mo298("Region for " + str + " is " + strM578);
+        if (log.mo287()) {
+            log.mo291("Region for " + str + " is " + strM572);
         }
     }
 
@@ -838,23 +838,23 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
     /* JADX WARN: Code duplicated, block: B:39:0x00b6  */
     /* JADX WARN: Code duplicated, block: B:40:0x00b8  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo449(DefaultRequest defaultRequest, String str, String str2, URI uri) {
+    public void mo443(DefaultRequest defaultRequest, String str, String str2, URI uri) {
         String str3;
         if (uri == null) {
-            uri = this.f83;
+            uri = this.f71;
         }
-        if (this.f464.m455() || !BucketNameUtils.m458(str)) {
-            f462.mo298("Using path style addressing. Endpoint = " + uri);
-            defaultRequest.m186(uri);
+        if (this.f454.m449() || !BucketNameUtils.m452(str)) {
+            f452.mo291("Using path style addressing. Endpoint = " + uri);
+            defaultRequest.m178(uri);
             if (str != null) {
-                StringBuilder sbM8976 = C3012.m8976(str, "/");
+                StringBuilder sbM10405 = C3188.m10405(str, "/");
                 if (str2 != null) {
                     str3 = str2;
                 } else {
                     str3 = "";
                 }
-                sbM8976.append(str3);
-                defaultRequest.m184(sbM8976.toString());
+                sbM10405.append(str3);
+                defaultRequest.m176(sbM10405.toString());
             }
         } else {
             String host = uri.getHost();
@@ -873,30 +873,30 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                             } catch (NumberFormatException unused) {
                             }
                         } else {
-                            f462.mo298("Using path style addressing. Endpoint = " + uri);
-                            defaultRequest.m186(uri);
+                            f452.mo291("Using path style addressing. Endpoint = " + uri);
+                            defaultRequest.m178(uri);
                             if (str != null) {
-                                StringBuilder sbM8977 = C3012.m8976(str, "/");
+                                StringBuilder sbM10406 = C3188.m10405(str, "/");
                                 if (str2 != null) {
                                     str3 = str2;
                                 } else {
                                     str3 = "";
                                 }
-                                sbM8977.append(str3);
-                                defaultRequest.m184(sbM8977.toString());
+                                sbM10406.append(str3);
+                                defaultRequest.m176(sbM10406.toString());
                             }
                         }
                     }
                 }
             }
-            f462.mo298("Using virtual style addressing. Endpoint = " + uri);
+            f452.mo291("Using virtual style addressing. Endpoint = " + uri);
             try {
-                defaultRequest.m186(new URI(uri.getScheme() + "://" + str + "." + uri.getAuthority()));
-                defaultRequest.m184((str2 == null || !str2.startsWith("/")) ? str2 : "/".concat(str2));
+                defaultRequest.m178(new URI(uri.getScheme() + "://" + str + "." + uri.getAuthority()));
+                defaultRequest.m176((str2 == null || !str2.startsWith("/")) ? str2 : "/".concat(str2));
             } catch (URISyntaxException e) {
-                throw new IllegalArgumentException(C0252.m1693("Invalid bucket name: ", str), e);
+                throw new IllegalArgumentException(C25272.m56409("Invalid bucket name: ", str), e);
             }
         }
-        f462.mo298("Key: " + str2 + "; Request: " + defaultRequest);
+        f452.mo291("Key: " + str2 + "; Request: " + defaultRequest);
     }
 }

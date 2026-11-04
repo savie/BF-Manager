@@ -1,28 +1,20 @@
 package l;
 
-import java.util.Comparator;
+import com.umeng.analytics.pro.d;
 
-/* JADX INFO: renamed from: l.۬ۢ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: R4DT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13028 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        String str = (String) obj;
-        String str2 = (String) obj2;
-        int iMin = Math.min(str.length(), str2.length());
-        for (int i = 4; i < iMin; i++) {
-            char cCharAt = str.charAt(i);
-            char cCharAt2 = str2.charAt(i);
-            if (cCharAt != cCharAt2) {
-                return cCharAt < cCharAt2 ? -1 : 1;
-            }
-        }
-        int length = str.length();
-        int length2 = str2.length();
-        if (length != length2) {
-            return length < length2 ? -1 : 1;
-        }
-        return 0;
+/* JADX INFO: renamed from: l.۫ۢ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZB07 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13028 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC11536 m32452(InterfaceC5571 interfaceC5571, InterfaceC1842 interfaceC1842) {
+        C15243.m36590(interfaceC1842, "key");
+        return C15243.m36589(interfaceC5571.getKey(), interfaceC1842) ? C24963.f80840 : interfaceC5571;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC11536 m32453(InterfaceC5571 interfaceC5571, InterfaceC11536 interfaceC11536) {
+        C15243.m36590(interfaceC11536, d.R);
+        return C15265.m36618(interfaceC5571, interfaceC11536);
     }
 }

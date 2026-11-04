@@ -1,80 +1,54 @@
 package l;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InterruptedIOException;
-
-/* JADX INFO: renamed from: l.ۤᩳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: R6VA */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10458 {
+/* JADX INFO: renamed from: l.ۢ᩺ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: MBBQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10458 extends AbstractC6951 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f35695;
+    public static final C10458 f33274 = new C10458();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public Thread f35696 = Thread.currentThread();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C9047 f35697;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m26419() {
-        this.f35697 = null;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3133() {
+        return 2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized C9047 m26420(Closeable closeable) {
-        C9047 c9047;
-        c9047 = new C9047(closeable);
-        if (this.f35695) {
-            c9047.close();
-            throw new InterruptedIOException("Text search canceled.");
-        }
-        this.f35697 = c9047;
-        return c9047;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo3134(AbstractC2476 abstractC2476) {
+        return AbstractC6951.m19250(abstractC2476);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m26422() {
-        return this.f35695;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo3137(AbstractC2476 abstractC2476) {
+        return AbstractC6951.m19245(abstractC2476);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26421() {
-        C9047 c9047;
-        synchronized (this) {
-            this.f35695 = true;
-            Thread thread = this.f35696;
-            if (thread != null) {
-                thread.interrupt();
-            }
-            c9047 = this.f35697;
-            this.f35697 = null;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo3138(AbstractC18884 abstractC18884) {
+        if (!(abstractC18884 instanceof C24631) || abstractC18884.m43795().size() != 0) {
+            return false;
         }
-        if (c9047 == null) {
-            return;
+        C24631 c24631 = (C24631) abstractC18884;
+        if (c24631.m54967()) {
+            return mo16072(c24631);
         }
-        try {
-            c9047.close();
-        } catch (IOException unused) {
-        }
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m26423() {
-        C9047 c9047;
-        synchronized (this) {
-            this.f35696 = null;
-            c9047 = this.f35697;
-            this.f35697 = null;
-        }
-        if (c9047 == null) {
-            return;
-        }
-        try {
-            c9047.close();
-        } catch (IOException unused) {
-        }
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo16072(C24631 c24631) {
+        int iM54970 = c24631.m54970();
+        return iM54970 != 0 && ((short) iM54970) == iM54970;
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3136(C15000 c15000, AbstractC2476 abstractC2476) {
+        AbstractC6951.m19240((InterfaceC8550) c15000, AbstractC6951.m19239(abstractC2476, 0), (short) ((C24631) abstractC2476).m54970());
     }
 }

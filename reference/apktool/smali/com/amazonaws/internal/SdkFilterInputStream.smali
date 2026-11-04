@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/amazonaws/internal/MetricAware;
-.implements Ll/᩷ۤᩴ;
+.implements Ll/۠ۜ᩹;
 
 
 # virtual methods
@@ -12,7 +12,7 @@
     .locals 1
 
     .line 84
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 85
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -33,7 +33,7 @@
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 91
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     .line 96
     :try_start_0
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 97
     iget-object v1, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -77,7 +77,7 @@
     .locals 1
 
     .line 108
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 109
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -93,7 +93,7 @@
     .locals 1
 
     .line 66
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 67
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -109,7 +109,7 @@
     .locals 1
 
     .line 72
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 73
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -131,7 +131,7 @@
 
     .line 102
     :try_start_0
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 103
     iget-object v1, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -160,7 +160,7 @@
     .locals 1
 
     .line 78
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۖ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۤ()V
 
     .line 79
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
@@ -176,35 +176,11 @@
     .locals 2
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    invoke-static {p0, p1}, Ll/ۡۜ᩹;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
     move-result-wide v0
 
     return-wide v0
-.end method
-
-.method public final ۖ()V
-    .locals 1
-
-    .line 49
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 50
-    :cond_0
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->ۨ()V
-
-    .line 51
-    new-instance v0, Lcom/amazonaws/AbortedException;
-
-    invoke-direct {v0}, Lcom/amazonaws/AbortedException;-><init>()V
-
-    throw v0
 .end method
 
 .method public ۙ()Z
@@ -237,7 +213,31 @@
     return v0
 .end method
 
-.method public ۨ()V
+.method public final ۤ()V
+    .locals 1
+
+    .line 49
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 50
+    :cond_0
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkFilterInputStream;->᩷()V
+
+    .line 51
+    new-instance v0, Lcom/amazonaws/AbortedException;
+
+    invoke-direct {v0}, Lcom/amazonaws/AbortedException;-><init>()V
+
+    throw v0
+.end method
+
+.method public ᩷()V
     .locals 0
 
     return-void

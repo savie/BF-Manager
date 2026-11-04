@@ -1,107 +1,112 @@
 package l;
 
-import java.io.IOException;
-import java.nio.channels.ClosedChannelException;
-import java.util.concurrent.atomic.AtomicInteger;
+import android.webkit.WebStorage;
+import com.alipay.sdk.m.w.a;
 
-/* JADX INFO: renamed from: l.۫ۢۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F70U */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12321 implements InterfaceC18745, InterfaceC18039, InterfaceC21567 {
+/* JADX INFO: renamed from: l.ۨۧܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A6IY */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12321 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f41170;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f39593;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f39594;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final AtomicInteger f41171 = new AtomicInteger(1);
+    public C18495 f39595;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public long f41172 = -1;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C14438 f41173;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public volatile boolean f41174;
-
-    public C12321(C14438 c14438, int i) throws ClosedChannelException {
-        this.f41173 = c14438;
-        this.f41170 = i;
-        c14438.m34724();
-    }
-
-    @Override // l.InterfaceC18745
-    public final int length() {
-        return this.f41170;
-    }
-
-    @Override // l.InterfaceC18039
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo8032() {
-        return this.f41173;
-    }
-
-    @Override // l.InterfaceC18039
-    /* JADX INFO: renamed from: ۨ */
-    public final long mo8035() {
-        return this.f41173.m34720();
-    }
-
-    @Override // l.InterfaceC18745
-    /* JADX INFO: renamed from: ۛ */
-    public final boolean mo2300() {
-        return this.f41173.m34722();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m30590(long j) {
-        if (this.f41171.get() <= 0 || j < 0) {
-            throw new IllegalArgumentException("Invalid hex restore delta mapping");
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final RunnableC16050 f39596 = new Runnable() { // from class: l.ܶۧܳ
+        @Override // java.lang.Runnable
+        public final void run() {
+            this.f52051.m30728(false);
         }
-        this.f41172 = j;
-        this.f41174 = true;
+    };
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6356 f39597;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C10829 f39598;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f39599;
+
+    /* JADX WARN: Type inference failed for: r1v1, types: [l.ܶۧܳ] */
+    public C12321(C6356 c6356, String str, C10829 c10829) {
+        this.f39597 = c6356;
+        this.f39599 = str;
+        this.f39598 = c10829;
     }
 
-    @Override // l.InterfaceC18745
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2299(int i, byte[] bArr, int i2, int i3) throws IOException {
-        if (!this.f41174 || this.f41171.get() <= 0) {
-            throw new ClosedChannelException();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m30736() {
+        C6356 c6356 = this.f39597;
+        c6356.f21487.postDelayed(this.f39596, 10000L);
+        try {
+            C18495 c18495 = new C18495(c6356.f21486);
+            this.f39595 = c18495;
+            c18495.getSettings().setJavaScriptEnabled(true);
+            this.f39595.getSettings().setDomStorageEnabled(true);
+            this.f39595.getSettings().setAllowFileAccess(false);
+            this.f39595.getSettings().setAllowContentAccess(false);
+            this.f39595.getSettings().setBlockNetworkLoads(true);
+            this.f39595.setWebViewClient(new C20526(this));
+            this.f39595.loadDataWithBaseURL(this.f39599 + "/", "<!doctype html><html></html>", "text/html", a.D, null);
+        } catch (RuntimeException unused) {
+            m30728(false);
         }
-        C22979.m50823(this.f41170, i, i3);
-        C22979.m50824(bArr.length, i2, i3);
-        if (i3 == 0) {
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static void m30731(C12321 c12321) {
+        if (c12321.f39594) {
             return;
         }
-        this.f41173.m34721(this.f41172 + ((long) i), bArr, i2, i3);
+        WebStorage.getInstance().getUsageForOrigin(c12321.f39599, new C23510(c12321));
     }
 
-    @Override // l.InterfaceC18745
-    /* JADX INFO: renamed from: ֫ܰ */
-    public final InterfaceC18745 mo2298() throws ClosedChannelException {
-        AtomicInteger atomicInteger;
-        int i;
-        do {
-            atomicInteger = this.f41171;
-            i = atomicInteger.get();
-            if (i <= 0) {
-                throw new ClosedChannelException();
-            }
-        } while (!atomicInteger.compareAndSet(i, i + 1));
-        return this;
-    }
-
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        AtomicInteger atomicInteger = this.f41171;
-        int iDecrementAndGet = atomicInteger.decrementAndGet();
-        if (iDecrementAndGet > 0) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m30734(C12321 c12321) {
+        if (c12321.f39594) {
             return;
         }
-        if (iDecrementAndGet < 0) {
-            atomicInteger.incrementAndGet();
-            throw new IllegalStateException("Hex restore delta source already closed");
+        WebStorage.getInstance().getUsageForOrigin(c12321.f39599, new C23510(c12321));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m30727(final C12321 c12321, Long l2) {
+        if (c12321.f39594) {
+            return;
         }
-        this.f41173.m34725();
+        if (l2 == null || l2.longValue() != 0) {
+            c12321.f39597.f21487.postDelayed(new Runnable() { // from class: l.ܽۧܳ
+                @Override // java.lang.Runnable
+                public final void run() {
+                    C12321.m30734(this.f57019);
+                }
+            }, 50L);
+        } else {
+            c12321.m30728(true);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m30728(boolean z) {
+        if (this.f39594) {
+            return;
+        }
+        this.f39594 = true;
+        this.f39597.f21487.removeCallbacks(this.f39596);
+        C18495 c18495 = this.f39595;
+        if (c18495 != null) {
+            c18495.stopLoading();
+            this.f39595.destroy();
+            this.f39595 = null;
+        }
+        this.f39598.accept(Boolean.valueOf(z));
     }
 }

@@ -1,219 +1,96 @@
 package l;
 
-import bin.mt.plus.R;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicReference;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import bin.mt.json.JSONValue;
+import com.google.android.material.motion.MotionUtils;
+import org.simpleframework.xml.transform.ClassTransform;
 
-/* JADX INFO: renamed from: l.ܰ֨֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28AQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13479 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C0196 f44550;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f44551;
+/* JADX INFO: renamed from: l.۬֡ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 76WW */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13479 extends AbstractC19137 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC10594 f44553;
+    public JSONObject f42881;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public InterfaceC20267 f44555;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C16131 f42882;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C21026 f44556;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public JSONObject f42883;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C9867 f44558;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public AbstractC12233 f44562;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public AbstractC12233 f44564;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final List f44563 = C11445.m28558();
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final List f44561 = C11445.m28558();
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final ThreadLocal f44557 = new ThreadLocal();
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final ThreadLocal f44560 = new ThreadLocal();
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AtomicReference f44554 = new AtomicReference();
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final List f44552 = C11445.m28558();
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public int f44559 = 0;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32986(AbstractC12233 abstractC12233, AbstractC12233 abstractC12234, String str, String[] strArr, String str2, InterfaceC10594 interfaceC10594) throws Exception {
-        this.f44562 = abstractC12233;
-        this.f44564 = abstractC12234;
-        this.f44553 = interfaceC10594;
-        AbstractC20745 abstractC20745M15313 = C5553.m15313(str2, new String[0]);
-        this.f44551 = abstractC20745M15313;
-        abstractC20745M15313.mo24647();
-        this.f44551.m46739();
-        C3515 c3515 = new C3515(this, interfaceC10594);
-        if (abstractC12234 == null) {
-            C21026 c21026M47358 = C21026.m47358(c3515);
-            this.f44556 = c21026M47358;
-            if (!abstractC12233.f40874.f40387) {
-                c21026M47358.m47389();
-            }
-            this.f44556.m47379(strArr, abstractC12233);
-        } else {
-            if (!str.endsWith("/")) {
-                str = str.concat("/");
-            }
-            this.f44559 = str.length();
-            C21026 c21026M47355 = C21026.m47355(str, abstractC12234, new C16608(false), c3515);
-            this.f44556 = c21026M47355;
-            if (!abstractC12233.f40874.f40387 || !abstractC12234.f40874.f40387) {
-                c21026M47355.m47389();
-            }
-            this.f44556.m47380(strArr, abstractC12233, abstractC12234, interfaceC10594);
-        }
-        C0196 c0196 = this.f44550;
-        if (c0196 != null) {
-            this.f44556.m47377(c0196);
-        }
-        interfaceC10594.setTitle(R.string.MT_Protector);
-        interfaceC10594.mo24047(this.f44556);
-        interfaceC10594.mo24050();
-        C16842 c16842 = new C16842(0);
-        this.f44558 = new C9867(this, interfaceC10594);
-        this.f44555 = new C4305(this, interfaceC10594, c16842);
-        ExecutorService executorServiceNewFixedThreadPool = Executors.newFixedThreadPool(abstractC12233.m30349());
-        c16842.m39499();
-        Iterator it = this.f44556.m47385().iterator();
-        while (it.hasNext()) {
-            m32979(executorServiceNewFixedThreadPool, (AbstractC10444) it.next());
-        }
-        C4716.m13052(executorServiceNewFixedThreadPool);
-        c16842.m39498();
-        Iterator it2 = this.f44561.iterator();
-        while (it2.hasNext()) {
-            C19431.m44468((C22918) it2.next());
-        }
-        Exception exc = (Exception) this.f44554.get();
-        if (exc != null) {
-            throw exc;
-        }
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1805() {
+        return C24579.m54898("readOnlyHint", "destructiveHint", false, true);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ boolean m32981(C13479 c13479, InterfaceC10594 interfaceC10594) {
-        return interfaceC10594.mo2357() || c13479.f44554.get() != null;
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo1809() {
+        return "Delete Local Directory";
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32985(C0196 c0196) {
-        this.f44550 = c0196;
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1811() {
+        return "Permanently delete one allowed local directory. Use recursive=false for an empty directory, or recursive=true to remove the entire tree. The root path must be a real directory; symbolic links are rejected as roots. During recursive deletion, recognized links inside the tree are unlinked without following their targets. Access roots and trees containing them are rejected. Recursive deletion is not atomic; a failure may leave a partially deleted tree. Inspect error diagnostics for partial progress and whether retrying is safe.";
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m32979(ExecutorService executorService, AbstractC10444 abstractC10444) {
-        executorService.submit(new RunnableC20717(1, this, abstractC10444));
-        if (abstractC10444.m26387()) {
-            Iterator it = abstractC10444.mo23365().m44704().iterator();
-            while (it.hasNext()) {
-                m32979(executorService, (AbstractC10444) it.next());
-            }
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩸ */
+    public final String mo1812() {
+        return "mt_file_delete_directory";
+    }
+
+    public C13479(C16131 c16131) {
+        this.f42882 = c16131;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۤ */
+    public final JSONObject mo1808() {
+        if (this.f42881 == null) {
+            this.f42881 = C22783.m51386(JSON.object().add(MotionUtils.EASING_TYPE_PATH, C10932.m27740("string", "Non-empty absolute path or path relative to the Home captured at call start. Must identify a real directory, not a symbolic link.")), ClassTransform.BOOLEAN, "False deletes only an empty directory; true permanently deletes the checked tree.", "recursive", "Arguments for mt_file_delete_directory.");
         }
+        return this.f42881;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m32980(C13479 c13479, AbstractC10444 abstractC10444) {
-        ThreadLocal threadLocal = c13479.f44560;
-        if (c13479.f44558.mo2357()) {
-            return;
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩴ */
+    public final JSONObject mo1810() {
+        if (this.f42883 == null) {
+            this.f42883 = C10932.m27734("Result for mt_file_delete_directory.", C22783.m51386(JSON.object().add(MotionUtils.EASING_TYPE_PATH, C10932.m27740("string", "Normalized absolute directory path fixed for this call.")).add("warnings", C22121.m50076("type", "array", "description", "Deletion completed with warnings: an entry was confirmed absent despite a reported storage error, or file views may not have refreshed. Do not repeat deletion solely because notification failed.").add("items", C10932.m27740("string", "One warning message."))).add("deletedFiles", C10932.m27740("integer", "Number of regular files and recognized links confirmed deleted.")), "integer", "Number of directories confirmed deleted, including the root.", "deletedDirectories", "Successful permanent directory deletion."), C5596.m16576("mt_file_delete_directory"), C10932.m27733("mt_file_delete_directory has no automatic follow-up action."));
         }
-        c13479.f44557.set(abstractC10444.m26393());
-        c13479.f44553.setName(abstractC10444.m26393());
-        try {
-            C22918 c22918 = (C22918) threadLocal.get();
-            if (c22918 == null) {
-                AbstractC20745 abstractC20745M46688 = c13479.f44551.m46688(".zip");
-                C22918 c22919 = new C22918(abstractC20745M46688);
-                threadLocal.set(c22919);
-                c13479.f44561.add(c22919);
-                c13479.f44563.add(abstractC20745M46688);
-                c22918 = c22919;
-            }
-            if (abstractC10444.m26387()) {
-                C12107 c12107 = new C12107(abstractC10444.m26385().substring(c13479.f44559) + "/");
-                c12107.setTime(abstractC10444.m26392());
-                C18396.m42671(c12107, abstractC10444);
-                c22918.m50727(c12107);
-            } else {
-                C12107 c12108 = (abstractC10444.m26389() && abstractC10444.m26388()) ? new C12107(c13479.f44564.mo10260(abstractC10444.m26385()).substring(c13479.f44559)) : new C12107(abstractC10444.m26385().substring(c13479.f44559));
-                c12108.setTime(abstractC10444.m26392());
-                C18396.m42671(c12108, abstractC10444);
-                c22918.m50727(c12108);
-                InterfaceC2557 interfaceC2557M24620 = c13479.f44562.m24620(abstractC10444.m26362());
-                if (!abstractC10444.m26374()) {
-                    AbstractC12233 abstractC12233 = c13479.f44562;
-                    abstractC12233.getClass();
-                    C15404 c15404 = (C15404) interfaceC2557M24620;
-                    InputStream inputStreamMo10262 = abstractC12233.mo10262(0L, c15404.getPath());
-                    try {
-                        if (inputStreamMo10262 == null) {
-                            c13479.f44553.mo24046();
-                            if (inputStreamMo10262 != null) {
-                                inputStreamMo10262.close();
-                                return;
-                            }
-                            return;
-                        }
-                        C22487.m49992(inputStreamMo10262, c22918.m50720(), c15404.getSize(), c13479.f44555);
-                        inputStreamMo10262.close();
-                    } catch (Throwable th) {
-                        if (inputStreamMo10262 != null) {
-                            try {
-                                inputStreamMo10262.close();
-                            } catch (Throwable th2) {
-                                th.addSuppressed(th2);
-                            }
-                        }
-                        throw th;
-                    }
-                }
-            }
-            c13479.f44556.m10992();
-            if (abstractC10444.m26372() != null) {
-                c13479.f44552.add((String) abstractC10444.m26372());
-            }
-            c13479.f44553.mo24047(c13479.f44556);
-            c13479.f44553.setProgress(c13479.f44556.m10996());
-        } catch (Exception e) {
-            AtomicReference atomicReference = c13479.f44554;
-            while (!atomicReference.compareAndSet(null, e) && atomicReference.get() == null) {
-            }
+        return this.f42883;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1806(C10186 c10186) {
+        return C5596.m16567("mt_file_delete_directory", c10186);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final C1238 mo1807(JSONObject jSONObject) throws C10186 {
+        C9749.m25412(jSONObject, new C6768(), "Invalid directory delete argument", MotionUtils.EASING_TYPE_PATH, "recursive");
+        JSONValue jSONValue = jSONObject.get(MotionUtils.EASING_TYPE_PATH);
+        JSONValue jSONValue2 = jSONObject.get("recursive");
+        if (jSONValue == null || !jSONValue.isString()) {
+            throw m33160(jSONValue, "Invalid path", MotionUtils.EASING_TYPE_PATH);
         }
+        if (jSONValue2 == null || !jSONValue2.isBoolean()) {
+            throw m33160(jSONValue2, "Invalid recursive flag", "recursive");
+        }
+        C17623 c17623M38310 = this.f42882.m38310(jSONValue.asString(), jSONValue2.asBoolean());
+        return new C1238(C15300.m36728(JSON.object().add(MotionUtils.EASING_TYPE_PATH, c17623M38310.f57966).add("warnings", new JSONArray(c17623M38310.f57968)).add("deletedFiles", c17623M38310.f57967).add("deletedDirectories", c17623M38310.f57965), JSON.array()));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList m32984() {
-        return new ArrayList(this.f44563);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final List m32987() {
-        return this.f44552;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C10186 m33160(JSONValue jSONValue, String str, String str2) {
+        return C10186.m26301(str, str2, jSONValue, JSON.array(), JSON.object().add(MotionUtils.EASING_TYPE_PATH, "directory").add("recursive", false));
     }
 }

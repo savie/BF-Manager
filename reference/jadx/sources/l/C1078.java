@@ -1,136 +1,38 @@
 package l;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.os.Trace;
-import bin.mt.plus.R;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.֨ۧܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DB1F */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1078 {
+/* JADX INFO: renamed from: l.֨ۡ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: I7LP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1078 extends AbstractC10026 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static volatile C1078 f4936;
+    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7044 f3860;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final Object f4937 = new Object();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Context f4938;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashSet f4940 = new HashSet();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f4939 = new HashMap();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m4058() {
-        Object objM4056;
-        synchronized (f4937) {
-            objM4056 = this.f4939.get(C21179.class);
-            if (objM4056 == null) {
-                objM4056 = m4056(C21179.class, new HashSet());
-            }
-        }
-        return objM4056;
+    @Override // l.AbstractC10026
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C14479 mo4040(C14479 c14479) {
+        return c14479;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m4060() {
-        return this.f4940.contains(C21179.class);
-    }
-
-    public C1078(Context context) {
-        this.f4938 = context.getApplicationContext();
-    }
-
+    @Override // l.AbstractC6299
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C1078 m4057(Context context) {
-        if (f4936 == null) {
-            synchronized (f4937) {
-                if (f4936 == null) {
-                    f4936 = new C1078(context);
-                }
-            }
-        }
-        return f4936;
+    public final AbstractC6299 mo4038(C3168 c3168, AbstractC22295 abstractC22295) {
+        C24533 c24533 = (C24533) this.f21366;
+        Map map = this.f21368;
+        return new C1078(this.f3860, (C24533) abstractC22295, c3168, c24533, map);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private Object m4056(Class cls, HashSet hashSet) {
-        Object objMo10668;
-        HashMap map = this.f4939;
-        if (C10958.m27712()) {
-            try {
-                Trace.beginSection(cls.getSimpleName());
-            } catch (Throwable th) {
-                Trace.endSection();
-                throw th;
-            }
-        }
-        if (hashSet.contains(cls)) {
-            throw new IllegalStateException("Cannot initialize " + cls.getName() + ". Cycle detected.");
-        }
-        if (!map.containsKey(cls)) {
-            hashSet.add(cls);
-            try {
-                InterfaceC3900 interfaceC3900 = (InterfaceC3900) cls.getDeclaredConstructor(null).newInstance(null);
-                List<Class> listMo10669 = interfaceC3900.mo10669();
-                if (!listMo10669.isEmpty()) {
-                    for (Class cls2 : listMo10669) {
-                        if (!map.containsKey(cls2)) {
-                            m4056(cls2, hashSet);
-                        }
-                    }
-                }
-                objMo10668 = interfaceC3900.mo10668(this.f4938);
-                hashSet.remove(cls);
-                map.put(cls, objMo10668);
-            } catch (Throwable th2) {
-                throw new C6723(th2);
-            }
-        } else {
-            objMo10668 = map.get(cls);
-        }
-        Trace.endSection();
-        return objMo10668;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C1078(C7044 c7044, C24533 c24533, C3168 c3168, C24533 c24534, Map map) {
+        super(c7044, c24533, c3168, c24534, map);
+        this.f3860 = c7044;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4059(Bundle bundle) {
-        HashSet hashSet;
-        String string = this.f4938.getString(R.string.MT_Protector);
-        if (bundle != null) {
-            try {
-                HashSet hashSet2 = new HashSet();
-                Iterator<String> it = bundle.keySet().iterator();
-                while (true) {
-                    boolean zHasNext = it.hasNext();
-                    hashSet = this.f4940;
-                    if (!zHasNext) {
-                        break;
-                    }
-                    String next = it.next();
-                    if (string.equals(bundle.getString(next, null))) {
-                        Class<?> cls = Class.forName(next);
-                        if (InterfaceC3900.class.isAssignableFrom(cls)) {
-                            hashSet.add(cls);
-                        }
-                    }
-                }
-                Iterator it2 = hashSet.iterator();
-                while (it2.hasNext()) {
-                    m4056((Class) it2.next(), hashSet2);
-                }
-            } catch (ClassNotFoundException e) {
-                throw new C6723(e);
-            }
-        }
+    @Override // l.AbstractC10026
+    /* JADX INFO: renamed from: ۢۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22664 mo4039() {
+        return ((C24533) this.f21366).f79554.f26659;
     }
 }

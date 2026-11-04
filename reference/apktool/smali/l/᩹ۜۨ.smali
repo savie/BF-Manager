@@ -1,44 +1,52 @@
 .class public final Ll/᩹ۜۨ;
 .super Ljava/lang/Object;
-.source "86A1"
+.source "99SU"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ll/ۧۜۨ;
+
+
+# instance fields
+.field public ۙ:Z
+
+.field public ᩷:I
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 4
+.method public final ۙ(I)V
+    .locals 1
 
-    .line 55
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    .line 250
+    iget v0, p0, Ll/᩹ۜۨ;->᩷:I
 
-    move-result-object v0
+    if-ne p1, v0, :cond_0
 
-    check-cast v0, Ll/ܳۘۨ;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
+    .line 251
+    iput-boolean p1, p0, Ll/᩹ۜۨ;->ۙ:Z
 
-    move-result-object v0
+    :cond_0
+    return-void
+.end method
 
-    .line 56
-    new-instance v1, Ll/ܳۘۨ;
+.method public final ۤ(I)V
+    .locals 0
 
-    invoke-direct {v1}, Ll/ܳۘۨ;-><init>()V
+    return-void
+.end method
 
-    .line 57
-    sget-object v2, Ll/ܽܺۘ;->֨:Ll/ۛۧ᩺;
+.method public final ᩷(I)V
+    .locals 0
 
-    const-string v3, ""
+    return-void
+.end method
 
-    invoke-interface {v2, v0, v3}, Ll/ۛۧ᩺;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final ᩸(I)V
+    .locals 0
 
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ll/ܳۘۨ;->ۙ(Ljava/lang/String;)V
-
-    .line 58
-    invoke-virtual {p1, v1}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    .line 579
+    invoke-virtual {p0, p1}, Ll/᩹ۜۨ;->ۙ(I)V
 
     return-void
 .end method

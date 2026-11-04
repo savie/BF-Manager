@@ -1,31 +1,96 @@
 .class public final synthetic Ll/֫ۤۨ;
 .super Ljava/lang/Object;
-.source "Z6QT"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "FAYC"
 
 
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+# static fields
+.field public static final synthetic ۙ:[I
 
-    .line 2
-    check-cast p1, [I
 
-    .line 4
-    check-cast p2, [I
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    .line 0
+    invoke-static {}, Ll/᩻ۤۨ;->values()[Ll/᩻ۤۨ;
 
-    .line 2688
-    aget p1, p1, v0
+    move-result-object v0
 
-    aget p2, p2, v0
+    array-length v0, v0
 
-    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
+    new-array v0, v0, [I
 
-    move-result p1
+    :try_start_0
+    sget-object v1, Ll/᩻ۤۨ;->ᩳ:Ll/᩻ۤۨ;
 
-    return p1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Ll/᩻ۤۨ;->ܿ:Ll/᩻ۤۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Ll/᩻ۤۨ;->֡:Ll/᩻ۤۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Ll/᩻ۤۨ;->۟:Ll/᩻ۤۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Ll/᩻ۤۨ;->ۢ:Ll/᩻ۤۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Ll/֫ۤۨ;->ۙ:[I
+
+    return-void
 .end method

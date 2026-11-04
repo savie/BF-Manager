@@ -1,57 +1,108 @@
-.class public final synthetic Ll/ܶ֫ۤ;
+.class public final Ll/ܶ֫ۤ;
 .super Ljava/lang/Object;
-.source "8459"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "T57T"
 
 
-# virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+# instance fields
+.field public final ۙ:[B
+
+.field public final ۤ:Ljava/util/HashMap;
+
+.field public final ᩴ:Ljava/util/ArrayList;
+
+.field public final ᩷:Ljava/util/ArrayList;
+
+.field public final ᩸:Ll/᩸ܺۤ;
+
+
+# direct methods
+.method public constructor <init>([B)V
+    .locals 1
+
+    .line 32
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 21
+    new-instance v0, Ll/᩸ܺۤ;
+
+    invoke-direct {v0}, Ll/᩸ܺۤ;-><init>()V
+
+    iput-object v0, p0, Ll/ܶ֫ۤ;->᩸:Ll/᩸ܺۤ;
+
+    .line 22
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ll/ܶ֫ۤ;->ۤ:Ljava/util/HashMap;
+
+    .line 23
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/ܶ֫ۤ;->ᩴ:Ljava/util/ArrayList;
+
+    .line 24
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/ܶ֫ۤ;->᩷:Ljava/util/ArrayList;
+
+    .line 35
+    array-length p1, p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Ll/ܶ֫ۤ;->ۙ:[B
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/ܶ֫ۤ;)[B
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    iget-object p0, p0, Ll/ܶ֫ۤ;->ۙ:[B
 
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public static bridge synthetic ۤ(Ll/ܶ֫ۤ;)Ljava/util/HashMap;
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    iget-object p0, p0, Ll/ܶ֫ۤ;->ۤ:Ljava/util/HashMap;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
+.method public static bridge synthetic ᩴ(Ll/ܶ֫ۤ;)Ljava/util/ArrayList;
+    .locals 0
 
-    .line 2
-    check-cast p1, Ll/۠۠۟;
+    .line 0
+    iget-object p0, p0, Ll/ܶ֫ۤ;->ᩴ:Ljava/util/ArrayList;
 
-    .line 3603
-    sget-object v0, Ll/ᩴۡ۟;->᩺ۙ:Ll/ᩴۡ۟;
+    return-object p0
+.end method
 
-    invoke-virtual {p1, v0}, Ll/ۡۡ۟;->ۙ(Ll/ᩴۡ۟;)Z
+.method public static bridge synthetic ᩷(Ll/ܶ֫ۤ;)Ljava/util/ArrayList;
+    .locals 0
 
-    move-result p1
+    .line 0
+    iget-object p0, p0, Ll/ܶ֫ۤ;->᩷:Ljava/util/ArrayList;
 
-    return p1
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩸(Ll/ܶ֫ۤ;)Ll/᩸ܺۤ;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/ܶ֫ۤ;->᩸:Ll/᩸ܺۤ;
+
+    return-object p0
 .end method

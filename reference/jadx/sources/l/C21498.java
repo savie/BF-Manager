@@ -1,146 +1,82 @@
 package l;
 
-import android.media.MediaDataSource;
-import android.media.MediaMetadataRetriever;
-import android.os.SystemClock;
-import java.io.IOException;
-import java.io.InputStream;
-import org.bouncycastle.crypto.prng.X931RNG;
+import com.alipay.sdk.m.y.l;
 
-/* JADX INFO: renamed from: l.᩸ۢ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6K0 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21498 extends MediaDataSource {
+/* JADX INFO: renamed from: l.᩶ᩳ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6U5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21498 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12233 f69855;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f68721;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public long f69856;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f68722;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final InterfaceC2557 f69857;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final C11621 f69858;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C3630 f69859;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public InputStream f69860;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final MediaDataSource f69861;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f69862;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final long f69854 = SystemClock.elapsedRealtime() + 2500;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public long f69863 = X931RNG.BLOCK128_RESEED_MAX;
-
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final synchronized void close() {
-        if (this.f69862) {
-            return;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C21498)) {
+            return false;
         }
-        this.f69862 = true;
-        try {
-            MediaDataSource mediaDataSource = this.f69861;
-            if (mediaDataSource != null) {
-                mediaDataSource.close();
-            }
-            InputStream inputStream = this.f69860;
-            if (inputStream != null) {
-                inputStream.close();
-            }
-            C11621 c11621 = this.f69858;
-            if (c11621 != null) {
-                c11621.close();
-            }
-        } catch (Throwable th) {
-            C11621 c11622 = this.f69858;
-            if (c11622 != null) {
-                c11622.close();
-            }
-            throw th;
-        }
+        C21498 c21498 = (C21498) obj;
+        return this.f68722 == c21498.f68722 && this.f68721 == c21498.f68721;
     }
 
-    @Override // android.media.MediaDataSource
-    public final synchronized int readAt(long j, byte[] bArr, int i, int i2) {
-        int at;
-        AbstractC1886.m6135(this.f69859);
-        if (this.f69862 || this.f69863 <= 0 || SystemClock.elapsedRealtime() > this.f69854) {
-            throw new IOException("Video poster read limit reached");
-        }
-        if (i2 == 0) {
-            return 0;
-        }
-        int iMin = (int) Math.min(i2, this.f69863);
-        MediaDataSource mediaDataSource = this.f69861;
-        if (mediaDataSource != null) {
-            at = mediaDataSource.readAt(j, bArr, i, iMin);
-        } else {
-            InputStream inputStream = this.f69860;
-            if (inputStream == null || j != this.f69856) {
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-                this.f69860 = null;
-                this.f69860 = this.f69855.mo10262(j, this.f69857.getPath());
-                this.f69856 = j;
-            }
-            at = this.f69860.read(bArr, i, iMin);
-            if (at > 0) {
-                this.f69856 += (long) at;
-            }
-        }
-        if (at > 0) {
-            this.f69863 -= (long) at;
-        }
-        AbstractC1886.m6135(this.f69859);
-        return at;
+    public final int hashCode() {
+        return (this.f68722 * 31) + this.f68721;
     }
 
-    public C21498(C1667 c1667, C11621 c11621, InterfaceC2557 interfaceC2557, C3630 c3630) {
-        this.f69861 = c1667;
-        this.f69858 = c11621;
-        this.f69855 = c11621 == null ? null : (AbstractC12233) c11621.f39035;
-        this.f69857 = interfaceC2557;
-        this.f69859 = c3630;
+    public final String toString() {
+        Object[] objArr = {Integer.valueOf(this.f68722), Integer.valueOf(this.f68721)};
+        String[] strArrSplit = "start;end".length() == 0 ? new String[0] : "start;end".split(l.b);
+        StringBuilder sb = new StringBuilder("TextSelection[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C21498 m48135(MediaMetadataRetriever mediaMetadataRetriever, AbstractC20745 abstractC20745, C3630 c3630) {
-        C21498 c21498 = new C21498(new C1667(abstractC20745), null, null, c3630);
-        try {
-            mediaMetadataRetriever.setDataSource(c21498);
-            return c21498;
-        } catch (RuntimeException e) {
-            c21498.close();
-            throw e;
+    public final int m48906() {
+        return this.f68721;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m48908() {
+        return this.f68722;
+    }
+
+    public C21498(int i, int i2) {
+        if (i < -1 || i2 < -1) {
+            throw new IllegalArgumentException("Invalid text selection");
         }
+        this.f68722 = i;
+        this.f68721 = i2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C21498 m48134(MediaMetadataRetriever mediaMetadataRetriever, AbstractC12233 abstractC12233, InterfaceC2557 interfaceC2557, C3630 c3630) {
-        C21498 c21498 = new C21498(null, new C11621(abstractC12233), interfaceC2557, c3630);
-        try {
-            mediaMetadataRetriever.setDataSource(c21498);
-            return c21498;
-        } catch (RuntimeException e) {
-            c21498.close();
-            throw e;
-        }
+    public final C21498 m48907(int i, int i2, int i3) {
+        return new C21498(m48905(this.f68722, i, i2, i3), m48905(this.f68721, i, i2, i3));
     }
 
-    @Override // android.media.MediaDataSource
-    public final long getSize() {
-        MediaDataSource mediaDataSource = this.f69861;
-        return mediaDataSource != null ? mediaDataSource.getSize() : this.f69857.getSize();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m48905(int i, int i2, int i3, int i4) {
+        if (i < i2) {
+            return i;
+        }
+        if (i < i3) {
+            return (i == i2 || i4 == 0) ? i2 : i2 + ((int) ((((long) (i - i2)) * ((long) i4)) / ((long) (i3 - i2))));
+        }
+        long j = (((long) i) - ((long) (i3 - i2))) + ((long) i4);
+        int i5 = (int) j;
+        if (j == i5) {
+            return i5;
+        }
+        throw new ArithmeticException();
     }
 }

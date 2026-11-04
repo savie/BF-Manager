@@ -1,34 +1,33 @@
 package l;
 
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.۠ۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J71Y */
+/* JADX INFO: renamed from: l.۟۬ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V7E8 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7907 {
-
+public final /* synthetic */ class C7907 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f25988 = "appassets.androidplatform.net";
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f25989 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m20921(InterfaceC19196 interfaceC19196) {
-        this.f25989.add(new C10946("/", interfaceC19196));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m20920(String str) {
-        this.f25988 = str;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10024 m20919() {
-        ArrayList arrayList = new ArrayList();
-        for (C10946 c10946 : this.f25989) {
-            arrayList.add(new C8613(this.f25988, (String) c10946.f37217, (InterfaceC19196) c10946.f37218));
+    public static void m21446(InterfaceC10143 interfaceC10143, AbstractC18847 abstractC18847) {
+        switch (C19094.f61814[abstractC18847.f61223.ordinal()]) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+                interfaceC10143.mo11986((C6672) abstractC18847);
+                break;
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+                interfaceC10143.mo11985((C4851) abstractC18847);
+                break;
+            case 16:
+                interfaceC10143.mo11984((C1451) abstractC18847);
+                break;
         }
-        return new C10024(arrayList);
     }
 }

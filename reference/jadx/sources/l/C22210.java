@@ -1,107 +1,89 @@
 package l;
 
-import java.util.EnumSet;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩹ۢ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: W9ED */
+/* JADX INFO: renamed from: l.᩷ܿۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W1I5 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22210 extends C6687 {
+public final class C22210 extends AbstractC25194 {
+    @Override // l.AbstractC25194, l.AbstractC17734
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ AbstractC17734 mo41528(String str, String str2) {
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC4314 f72640 = C13488.m32997(C22210.class);
+    @Override // l.AbstractC25194, l.AbstractC17734
+    /* JADX INFO: renamed from: ۤ */
+    public final /* bridge */ /* synthetic */ int mo9543() {
+        return 0;
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f72641;
+    @Override // l.AbstractC25194, l.AbstractC17734
+    /* JADX INFO: renamed from: ܳ */
+    public final AbstractC17734 mo9544() {
+        return this;
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f72642;
+    @Override // l.AbstractC17734
+    /* JADX INFO: renamed from: ܺ */
+    public final String mo5151() {
+        return "#doctype";
+    }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public C8099 f72643;
+    @Override // l.AbstractC17734
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo5152(Appendable appendable, int i, C7381 c7381) {
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public EnumSet f72644;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    private boolean m50235(String str) {
+        return !C0669.m2902(super.mo41538(str));
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f72645;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final void m50236(String str) {
+        if (str != null) {
+            super.mo41528("pubSysKey", str);
+        }
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C22916 f72646;
+    public C22210(String str, String str2, String str3) {
+        C14838.m35754((Object) str);
+        C14838.m35754((Object) str2);
+        C14838.m35754((Object) str3);
+        super.mo41528("name", str);
+        super.mo41528("publicId", str2);
+        super.mo41528("systemId", str3);
+        if (m50235("publicId")) {
+            super.mo41528("pubSysKey", "PUBLIC");
+        } else if (m50235("systemId")) {
+            super.mo41528("pubSysKey", "SYSTEM");
+        }
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f72647;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public byte[] f72648;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public String f72649;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m49328(C5982 c5982) {
-        c5982.m27379(8, C7393.f24572);
-        c5982.m27394();
-        this.f72647 = c5982.m27375();
-        c5982.m27389(2);
-        this.f72641 = c5982.m27378();
-        this.f72644 = C20799.m46782(c5982.m27394(), EnumC3864.class);
-        byte[] bArr = new byte[8];
-        c5982.m27397(8, bArr);
-        this.f72648 = bArr;
-        c5982.m27389(8);
-        if (this.f72644.contains(EnumC3864.NTLMSSP_NEGOTIATE_TARGET_INFO)) {
-            this.f72645 = c5982.m27375();
-            c5982.m27389(2);
-            this.f72642 = c5982.m27378();
+    @Override // l.AbstractC17734
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5150(Appendable appendable, int i, C7381 c7381) throws IOException {
+        if (this.f58268 > 0 && c7381.m20280()) {
+            appendable.append('\n');
+        }
+        if (c7381.m20275() != EnumC8872.html || m50235("publicId") || m50235("systemId")) {
+            appendable.append("<!DOCTYPE");
         } else {
-            c5982.m27389(8);
+            appendable.append("<!doctype");
         }
-        if (this.f72644.contains(EnumC3864.NTLMSSP_NEGOTIATE_VERSION)) {
-            C8099 c8099 = new C8099();
-            c8099.m21312(c5982);
-            this.f72643 = c8099;
-            f72640.mo12126(c8099, "Windows version = {}");
-        } else {
-            c5982.m27389(8);
+        if (m50235("name")) {
+            appendable.append(" ").append(super.mo41538("name"));
         }
-        if (this.f72647 > 0) {
-            c5982.m27376(this.f72641);
-            this.f72649 = c5982.m27379(this.f72647 / 2, C7393.f24570);
+        if (m50235("pubSysKey")) {
+            appendable.append(" ").append(super.mo41538("pubSysKey"));
         }
-        if (this.f72645 > 0) {
-            c5982.m27376(this.f72642);
-            C22916 c22916 = new C22916();
-            c22916.m50694(c5982);
-            this.f72646 = c22916;
+        if (m50235("publicId")) {
+            appendable.append(" \"").append(super.mo41538("publicId")).append('\"');
         }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m49326() {
-        return this.f72649;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] m49331() {
-        return this.f72648;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumSet m49327() {
-        return this.f72644;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C22916 m49330() {
-        return this.f72646;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C8099 m49329() {
-        return this.f72643;
-    }
-
-    public final String toString() {
-        return "NtlmChallenge{\n  targetName='" + this.f72649 + "',\n  negotiateFlags=" + this.f72644 + ",\n  serverChallenge=" + C10216.m26000(this.f72648) + ",\n  version=" + this.f72643 + ",\n  targetInfo=" + this.f72646 + "\n}";
+        if (m50235("systemId")) {
+            appendable.append(" \"").append(super.mo41538("systemId")).append('\"');
+        }
+        appendable.append('>');
     }
 }

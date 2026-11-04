@@ -22,8 +22,8 @@ import java.util.Map;
 import java.util.TreeMap;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import l.C3012;
-import l.C8479;
+import l.C16076;
+import l.C3188;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -41,27 +41,27 @@ public abstract class AbstractAWSSigner implements Signer {
             }
         }
     };
-    public static final String EMPTY_STRING_SHA256_HEX = BinaryUtils.m750(m211(""));
+    public static final String EMPTY_STRING_SHA256_HEX = BinaryUtils.m744(m205(""));
 
     public abstract void addSessionCredentials(Request request, AWSSessionCredentials aWSSessionCredentials);
 
     public String signAndBase64Encode(String str, String str2, SigningAlgorithm signingAlgorithm) {
-        return signAndBase64Encode(str.getBytes(StringUtils.f844), str2, signingAlgorithm);
+        return signAndBase64Encode(str.getBytes(StringUtils.f834), str2, signingAlgorithm);
     }
 
     public String signAndBase64Encode(byte[] bArr, String str, SigningAlgorithm signingAlgorithm) {
         try {
-            return Base64.m743(sign(bArr, str.getBytes(StringUtils.f844), signingAlgorithm));
+            return Base64.m737(sign(bArr, str.getBytes(StringUtils.f834), signingAlgorithm));
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to calculate a request signature: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to calculate a request signature: ")), e);
         }
     }
 
     public byte[] sign(String str, byte[] bArr, SigningAlgorithm signingAlgorithm) {
         try {
-            return sign(str.getBytes(StringUtils.f844), bArr, signingAlgorithm);
+            return sign(str.getBytes(StringUtils.f834), bArr, signingAlgorithm);
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to calculate a request signature: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to calculate a request signature: ")), e);
         }
     }
 
@@ -71,33 +71,33 @@ public abstract class AbstractAWSSigner implements Signer {
             mac.init(new SecretKeySpec(bArr2, signingAlgorithm.toString()));
             return mac.doFinal(bArr);
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to calculate a request signature: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to calculate a request signature: ")), e);
         }
     }
 
     public byte[] hash(String str) {
-        return m211(str);
+        return m205(str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m211(String str) {
+    public static byte[] m205(String str) {
         try {
-            MessageDigest messageDigestM210 = m210();
-            messageDigestM210.update(str.getBytes(StringUtils.f844));
-            return messageDigestM210.digest();
+            MessageDigest messageDigestM204 = m204();
+            messageDigestM204.update(str.getBytes(StringUtils.f834));
+            return messageDigestM204.digest();
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
         }
     }
 
     public byte[] hash(InputStream inputStream) {
         try {
-            SdkDigestInputStream sdkDigestInputStream = new SdkDigestInputStream(inputStream, m210());
+            SdkDigestInputStream sdkDigestInputStream = new SdkDigestInputStream(inputStream, m204());
             while (sdkDigestInputStream.read(new byte[1024]) > -1) {
             }
             return sdkDigestInputStream.getMessageDigest().digest();
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
         }
     }
 
@@ -107,14 +107,14 @@ public abstract class AbstractAWSSigner implements Signer {
             messageDigest.update(bArr);
             return messageDigest.digest();
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to compute hash while signing request: ")), e);
         }
     }
 
     public String getCanonicalizedQueryString(Map map) {
         TreeMap treeMap = new TreeMap();
         for (Map.Entry entry : map.entrySet()) {
-            treeMap.put(HttpUtils.m775((String) entry.getKey(), false), HttpUtils.m775((String) entry.getValue(), false));
+            treeMap.put(HttpUtils.m769((String) entry.getKey(), false), HttpUtils.m769((String) entry.getValue(), false));
         }
         StringBuilder sb = new StringBuilder();
         Iterator it = treeMap.entrySet().iterator();
@@ -131,13 +131,13 @@ public abstract class AbstractAWSSigner implements Signer {
     }
 
     public String getCanonicalizedQueryString(Request request) {
-        return HttpUtils.m777(request) ? "" : getCanonicalizedQueryString(((DefaultRequest) request).m195());
+        return HttpUtils.m771(request) ? "" : getCanonicalizedQueryString(((DefaultRequest) request).m185());
     }
 
     public byte[] getBinaryRequestPayload(Request request) {
-        if (HttpUtils.m777(request)) {
-            String strM773 = HttpUtils.m773(request);
-            return strM773 == null ? new byte[0] : strM773.getBytes(StringUtils.f844);
+        if (HttpUtils.m771(request)) {
+            String strM767 = HttpUtils.m767(request);
+            return strM767 == null ? new byte[0] : strM767.getBytes(StringUtils.f834);
         }
         return getBinaryRequestPayloadWithoutQueryParams(request);
     }
@@ -166,17 +166,17 @@ public abstract class AbstractAWSSigner implements Signer {
                 byteArrayOutputStream.write(bArr, 0, i);
             }
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to read request payload to sign request: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to read request payload to sign request: ")), e);
         }
     }
 
     public InputStream getBinaryRequestPayloadStream(Request request) {
-        if (HttpUtils.m777(request)) {
-            String strM773 = HttpUtils.m773(request);
-            if (strM773 == null) {
+        if (HttpUtils.m771(request)) {
+            String strM767 = HttpUtils.m767(request);
+            if (strM767 == null) {
                 return new ByteArrayInputStream(new byte[0]);
             }
-            return new ByteArrayInputStream(strM773.getBytes(StringUtils.f844));
+            return new ByteArrayInputStream(strM767.getBytes(StringUtils.f834));
         }
         return getBinaryRequestPayloadStreamWithoutQueryParams(request);
     }
@@ -184,16 +184,16 @@ public abstract class AbstractAWSSigner implements Signer {
     public InputStream getBinaryRequestPayloadStreamWithoutQueryParams(Request request) {
         try {
             DefaultRequest defaultRequest = (DefaultRequest) request;
-            InputStream inputStreamM180 = defaultRequest.m180();
-            if (inputStreamM180 == null) {
+            InputStream inputStreamM172 = defaultRequest.m172();
+            if (inputStreamM172 == null) {
                 return new ByteArrayInputStream(new byte[0]);
             }
-            if (inputStreamM180.markSupported()) {
-                return defaultRequest.m180();
+            if (inputStreamM172.markSupported()) {
+                return defaultRequest.m172();
             }
             throw new AmazonClientException("Unable to read request payload to sign request.");
         } catch (Exception e) {
-            throw new AmazonClientException(C8479.m22142(e, new StringBuilder("Unable to read request payload to sign request: ")), e);
+            throw new AmazonClientException(C16076.m38224(e, new StringBuilder("Unable to read request payload to sign request: ")), e);
         }
     }
 
@@ -206,47 +206,47 @@ public abstract class AbstractAWSSigner implements Signer {
             return "/";
         }
         if (z) {
-            str = HttpUtils.m775(str, true);
+            str = HttpUtils.m769(str, true);
         }
         return str.startsWith("/") ? str : "/".concat(str);
     }
 
     public String getCanonicalizedEndpoint(URI uri) {
-        String strM789 = StringUtils.m789(uri.getHost());
-        if (!HttpUtils.m776(uri)) {
-            return strM789;
+        String strM783 = StringUtils.m783(uri.getHost());
+        if (!HttpUtils.m770(uri)) {
+            return strM783;
         }
-        StringBuilder sbM8976 = C3012.m8976(strM789, ":");
-        sbM8976.append(uri.getPort());
-        return sbM8976.toString();
+        StringBuilder sbM10405 = C3188.m10405(strM783, ":");
+        sbM10405.append(uri.getPort());
+        return sbM10405.toString();
     }
 
     public AWSCredentials sanitizeCredentials(AWSCredentials aWSCredentials) {
-        String strMo206;
-        String strMo207;
-        String strMo209;
+        String strMo200;
+        String strMo201;
+        String strMo203;
         synchronized (aWSCredentials) {
-            strMo206 = aWSCredentials.mo206();
-            strMo207 = aWSCredentials.mo207();
-            strMo209 = aWSCredentials instanceof AWSSessionCredentials ? ((AWSSessionCredentials) aWSCredentials).mo209() : null;
+            strMo200 = aWSCredentials.mo200();
+            strMo201 = aWSCredentials.mo201();
+            strMo203 = aWSCredentials instanceof AWSSessionCredentials ? ((AWSSessionCredentials) aWSCredentials).mo203() : null;
         }
-        if (strMo207 != null) {
-            strMo207 = strMo207.trim();
+        if (strMo201 != null) {
+            strMo201 = strMo201.trim();
         }
-        if (strMo206 != null) {
-            strMo206 = strMo206.trim();
+        if (strMo200 != null) {
+            strMo200 = strMo200.trim();
         }
-        if (strMo209 != null) {
-            strMo209 = strMo209.trim();
+        if (strMo203 != null) {
+            strMo203 = strMo203.trim();
         }
         if (aWSCredentials instanceof AWSSessionCredentials) {
-            return new BasicSessionCredentials(strMo206, strMo207, strMo209);
+            return new BasicSessionCredentials(strMo200, strMo201, strMo203);
         }
-        return new BasicAWSCredentials(strMo206, strMo207);
+        return new BasicAWSCredentials(strMo200, strMo201);
     }
 
     public String newString(byte[] bArr) {
-        return new String(bArr, StringUtils.f844);
+        return new String(bArr, StringUtils.f834);
     }
 
     public Date getSignatureDate(long j) {
@@ -256,14 +256,14 @@ public abstract class AbstractAWSSigner implements Signer {
 
     public long getTimeOffset(Request request) {
         ((DefaultRequest) request).getClass();
-        if (SDKGlobalConfiguration.m199() != 0) {
-            return SDKGlobalConfiguration.m199();
+        if (SDKGlobalConfiguration.m193() != 0) {
+            return SDKGlobalConfiguration.m193();
         }
         return 0L;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static MessageDigest m210() {
+    public static MessageDigest m204() {
         MessageDigest messageDigest = (MessageDigest) SHA256_MESSAGE_DIGEST.get();
         messageDigest.reset();
         return messageDigest;

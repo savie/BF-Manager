@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final ֡:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
+.field public final ܿ:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketLoggingConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketLoggingConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 2
 
     const-string v0, "BucketLoggingStatus"
@@ -57,12 +57,12 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketLoggingConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketLoggingConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;
 
     if-eqz v0, :cond_0
 
     .line 1169
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
@@ -81,11 +81,11 @@
     if-eqz p1, :cond_1
 
     .line 1173
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/BucketLoggingConfiguration;->᩷(Ljava/lang/String;)V
 
     :cond_1
     return-void

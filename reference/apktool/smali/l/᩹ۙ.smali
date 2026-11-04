@@ -1,192 +1,122 @@
-.class public final Ll/᩹ۙ;
-.super Ljava/lang/Object;
-.source "64W0"
-
-# interfaces
-.implements Ll/ۘۙ;
+.class public Ll/᩹ۙ;
+.super Ll/۫ۙ;
+.source "N5R1"
 
 
 # instance fields
-.field public ۚ:Landroid/os/IBinder;
+.field public final ᩴ:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
+.method public constructor <init>(Ll/ۗۙ;)V
+    .locals 1
 
-    .line 200
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 66
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 201
-    iput-object p1, p0, Ll/᩹ۙ;->ۚ:Landroid/os/IBinder;
+    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
+
+    .line 67
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    .line 924
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
+.method public final ֨()V
     .locals 1
 
-    .line 205
-    iget-object v0, p0, Ll/᩹ۙ;->ۚ:Landroid/os/IBinder;
+    .line 986
+    iget-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
 
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/۠ܰ;)V
-    .locals 4
-
-    .line 238
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    :try_start_0
-    const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
-
-    .line 240
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_0
-
-    .line 417
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 418
-    invoke-virtual {p1, v0, v2}, Ll/۠ܰ;->writeToParcel(Landroid/os/Parcel;I)V
-
-    goto :goto_0
-
-    .line 420
-    :cond_0
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 242
-    :goto_0
-    iget-object p1, p0, Ll/᩹ۙ;->ۚ:Landroid/os/IBinder;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v2, v0, v3, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 245
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    check-cast v0, Ll/ۗۙ;
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 246
-    throw p1
 .end method
 
-.method public final ۙ(Ll/ܰۙ;)V
-    .locals 4
+.method public final ۖ()V
+    .locals 1
 
-    .line 250
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    .line 999
+    iget-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    :try_start_0
-    const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
-
-    .line 252
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_0
-
-    .line 417
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 418
-    invoke-virtual {p1, v0, v2}, Ll/ܰۙ;->writeToParcel(Landroid/os/Parcel;I)V
-
-    goto :goto_0
-
-    .line 420
-    :cond_0
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 254
-    :goto_0
-    iget-object p1, p0, Ll/᩹ۙ;->ۚ:Landroid/os/IBinder;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v2, v0, v3, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 257
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    check-cast v0, Ll/ۗۙ;
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public final ۙ(Ll/ۗ᩷;)V
+    .locals 0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    .line 945
+    iget-object p1, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
 
-    .line 258
-    throw p1
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۗۙ;
+
+    return-void
+.end method
+
+.method public final ۡ()V
+    .locals 1
+
+    .line 1029
+    iget-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
+
+    return-void
+.end method
+
+.method public final ۢ()V
+    .locals 1
+
+    .line 929
+    iget-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۗۙ;
+
+    return-void
 .end method
 
 .method public final ᩳ()V
-    .locals 5
+    .locals 1
 
-    .line 226
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    .line 977
+    iget-object v0, p0, Ll/᩹ۙ;->ᩴ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    :try_start_0
-    const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
-
-    .line 228
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 229
-    iget-object v1, p0, Ll/᩹ۙ;->ۚ:Landroid/os/IBinder;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    invoke-interface {v1, v4, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 232
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    check-cast v0, Ll/ۗۙ;
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 233
-    throw v1
 .end method

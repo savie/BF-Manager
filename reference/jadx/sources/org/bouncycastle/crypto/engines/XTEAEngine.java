@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class XTEAEngine implements BlockCipher {
     public static final int block_size = 8;
     public static final int delta = -1640531527;
@@ -108,7 +108,7 @@ public class XTEAEngine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to TEA init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to TEA init - ", cipherParameters));
         }
         this._forEncryption = z;
         this._initialised = true;

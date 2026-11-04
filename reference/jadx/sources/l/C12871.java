@@ -1,25 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۘ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: YAS6 */
+/* JADX INFO: renamed from: l.۫ۙܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: MIRA */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12871 extends AbstractC21803 {
+public final class C12871 implements AutoCloseable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C12871 f42814 = new C12871(6);
+    public final C13616 f41201;
 
-    @Override // l.AbstractC21803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo14892(Object obj) {
-        if (obj == null) {
-            return 0;
-        }
-        return obj.hashCode();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C5414 f41202;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C5414 f41203;
+
+    public C12871(C5414 c5414, C5414 c5415, C13616 c13616) {
+        this.f41203 = c5414;
+        this.f41202 = c5415;
+        this.f41201 = c13616;
     }
 
-    @Override // l.AbstractC21803
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo14893(Object obj, Object obj2) {
-        return obj.equals(obj2);
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        C1685.m6033(this.f41203);
+        C1685.m6033(this.f41202);
     }
 }

@@ -1,249 +1,282 @@
-.class public final enum Ll/᩵ܳ᩸;
-.super Ljava/lang/Enum;
-.source "S9IV"
+.class public Ll/᩵ܳ᩸;
+.super Ljava/lang/Object;
+.source "BB70"
 
 # interfaces
-.implements Ll/ܺۢ᩸;
-
-
-# static fields
-.field public static final enum ۛ:Ll/᩵ܳ᩸;
-
-.field public static final enum ۧ:Ll/᩵ܳ᩸;
-
-.field public static final synthetic ۫:[Ll/᩵ܳ᩸;
-
-.field public static final enum ܿ:Ll/᩵ܳ᩸;
-
-.field public static final enum ᩻:Ll/᩵ܳ᩸;
+.implements Lnet/sf/sevenzipjbinding/ICryptoGetTextPassword;
 
 
 # instance fields
-.field public ֡:I
+.field public ֡:Ljava/lang/String;
 
-.field public ܺ:Ljava/lang/String;
+.field public ֨:Z
 
-.field public ܽ:J
+.field public ۟:Z
 
-.field public ᩶:I
+.field public ۢ:Z
+
+.field public final ܰ:Ll/ܽ֡֫;
+
+.field public ܿ:Ljava/util/Iterator;
+
+.field public ᩳ:Ljava/util/function/BooleanSupplier;
+
+.field public ᩶:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 17
+.method public constructor <init>(Ll/ܽ֡֫;)V
+    .locals 1
 
-    .line 24
-    new-instance v8, Ll/᩵ܳ᩸;
-
-    const/16 v6, 0xb
-
-    const/16 v7, 0x10
-
-    const-string v1, "AES_128_CCM"
-
-    const/4 v2, 0x0
-
-    const-wide/16 v3, 0x1
-
-    const-string v5, "AES/CCM/NoPadding"
-
-    move-object v0, v8
-
-    invoke-direct/range {v0 .. v7}, Ll/᩵ܳ᩸;-><init>(Ljava/lang/String;IJLjava/lang/String;II)V
-
-    sput-object v8, Ll/᩵ܳ᩸;->ܿ:Ll/᩵ܳ᩸;
-
-    .line 25
-    new-instance v0, Ll/᩵ܳ᩸;
-
-    const/16 v15, 0xc
-
-    const/16 v16, 0x10
-
-    const-string v10, "AES_128_GCM"
-
-    const/4 v11, 0x1
-
-    const-wide/16 v12, 0x2
-
-    const-string v14, "AES/GCM/NoPadding"
-
-    move-object v9, v0
-
-    invoke-direct/range {v9 .. v16}, Ll/᩵ܳ᩸;-><init>(Ljava/lang/String;IJLjava/lang/String;II)V
-
-    sput-object v0, Ll/᩵ܳ᩸;->ۛ:Ll/᩵ܳ᩸;
+    .line 28
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
-    new-instance v0, Ll/᩵ܳ᩸;
+    new-instance v0, Ll/᩹ܳ᩸;
 
-    const/16 v7, 0xb
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v8, 0x20
+    iput-object v0, p0, Ll/᩵ܳ᩸;->ᩳ:Ljava/util/function/BooleanSupplier;
 
-    const-string v2, "AES_256_CCM"
-
-    const/4 v3, 0x2
-
-    const-wide/16 v4, 0x3
-
-    const-string v6, "AES/CCM/NoPadding"
-
-    move-object v1, v0
-
-    invoke-direct/range {v1 .. v8}, Ll/᩵ܳ᩸;-><init>(Ljava/lang/String;IJLjava/lang/String;II)V
-
-    sput-object v0, Ll/᩵ܳ᩸;->ۧ:Ll/᩵ܳ᩸;
-
-    .line 27
-    new-instance v0, Ll/᩵ܳ᩸;
-
-    const/16 v16, 0x20
-
-    const-string v10, "AES_256_GCM"
-
-    const/4 v11, 0x3
-
-    const-wide/16 v12, 0x4
-
-    const-string v14, "AES/GCM/NoPadding"
-
-    move-object v9, v0
-
-    invoke-direct/range {v9 .. v16}, Ll/᩵ܳ᩸;-><init>(Ljava/lang/String;IJLjava/lang/String;II)V
-
-    sput-object v0, Ll/᩵ܳ᩸;->᩻:Ll/᩵ܳ᩸;
-
-    .line 23
-    invoke-static {}, Ll/᩵ܳ᩸;->֨()[Ll/᩵ܳ᩸;
-
-    move-result-object v0
-
-    sput-object v0, Ll/᩵ܳ᩸;->۫:[Ll/᩵ܳ᩸;
+    .line 29
+    iput-object p1, p0, Ll/᩵ܳ᩸;->ܰ:Ll/ܽ֡֫;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IJLjava/lang/String;II)V
+.method public static synthetic ۙ(Ll/᩵ܳ᩸;Ljava/lang/String;)V
     .locals 0
 
-    .line 34
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 35
-    iput-wide p3, p0, Ll/᩵ܳ᩸;->ܽ:J
-
-    .line 36
-    iput-object p5, p0, Ll/᩵ܳ᩸;->ܺ:Ljava/lang/String;
-
-    .line 37
-    iput p6, p0, Ll/᩵ܳ᩸;->֡:I
-
-    .line 38
-    iput p7, p0, Ll/᩵ܳ᩸;->᩶:I
+    .line 77
+    iput-object p1, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll/᩵ܳ᩸;
-    .locals 1
+.method private ܿۙ()V
+    .locals 2
 
-    .line 23
-    const-class v0, Ll/᩵ܳ᩸;
+    .line 93
+    iget-boolean v0, p0, Ll/᩵ܳ᩸;->᩶:Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    iget-object v0, p0, Ll/᩵ܳ᩸;->ᩳ:Ljava/util/function/BooleanSupplier;
 
-    check-cast p0, Ll/᩵ܳ᩸;
+    invoke-interface {v0}, Ljava/util/function/BooleanSupplier;->getAsBoolean()Z
 
-    return-object p0
-.end method
+    move-result v0
 
-.method public static values()[Ll/᩵ܳ᩸;
-    .locals 1
+    if-nez v0, :cond_0
 
-    .line 23
-    sget-object v0, Ll/᩵ܳ᩸;->۫:[Ll/᩵ܳ᩸;
+    return-void
 
-    invoke-virtual {v0}, [Ll/᩵ܳ᩸;->clone()Ljava/lang/Object;
+    :cond_0
+    const/4 v0, 0x1
 
-    move-result-object v0
+    .line 94
+    iput-boolean v0, p0, Ll/᩵ܳ᩸;->᩶:Z
 
-    check-cast v0, [Ll/᩵ܳ᩸;
+    .line 95
+    new-instance v0, Lnet/sf/sevenzipjbinding/SevenZipException;
 
-    return-object v0
-.end method
+    const-string v1, "Cancel"
 
-.method public static synthetic ֨()[Ll/᩵ܳ᩸;
-    .locals 3
+    invoke-direct {v0, v1}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ll/᩵ܳ᩸;
-
-    .line 23
-    sget-object v1, Ll/᩵ܳ᩸;->ܿ:Ll/᩵ܳ᩸;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ܳ᩸;->ۛ:Ll/᩵ܳ᩸;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ܳ᩸;->ۧ:Ll/᩵ܳ᩸;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩵ܳ᩸;->᩻:Ll/᩵ܳ᩸;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    throw v0
 .end method
 
 
 # virtual methods
-.method public getValue()J
-    .locals 2
+.method public cryptoGetTextPassword()Ljava/lang/String;
+    .locals 4
 
-    .line 42
-    iget-wide v0, p0, Ll/᩵ܳ᩸;->ܽ:J
+    .line 64
+    invoke-direct {p0}, Ll/᩵ܳ᩸;->ܿۙ()V
 
-    return-wide v0
-.end method
+    const/4 v0, 0x1
 
-.method public ۙ()Ljava/lang/String;
-    .locals 1
+    .line 65
+    iput-boolean v0, p0, Ll/᩵ܳ᩸;->֨:Z
 
-    .line 46
-    iget-object v0, p0, Ll/᩵ܳ᩸;->ܺ:Ljava/lang/String;
+    .line 66
+    iget-object v1, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    .line 67
+    iget-object v1, p0, Ll/᩵ܳ᩸;->ܿ:Ljava/util/Iterator;
+
+    if-nez v1, :cond_0
+
+    .line 68
+    invoke-static {}, Ll/᩶ۘܳ;->᩷()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ll/᩵ܳ᩸;->ܿ:Ljava/util/Iterator;
+
+    .line 70
+    :cond_0
+    iget-object v1, p0, Ll/᩵ܳ᩸;->ܿ:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 71
+    iget-object v1, p0, Ll/᩵ܳ᩸;->ܿ:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iput-object v1, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
+
+    .line 72
+    iput-boolean v0, p0, Ll/᩵ܳ᩸;->۟:Z
+
+    .line 73
+    iput-boolean v2, p0, Ll/᩵ܳ᩸;->ۢ:Z
+
+    goto :goto_0
+
+    .line 75
+    :cond_1
+    iput-boolean v2, p0, Ll/᩵ܳ᩸;->۟:Z
+
+    .line 76
+    new-instance v1, Ll/ۢۢܳ;
+
+    new-instance v2, Ll/ۗܳ᩸;
+
+    invoke-direct {v2, p0}, Ll/ۗܳ᩸;-><init>(Ll/᩵ܳ᩸;)V
+
+    iget-object v3, p0, Ll/᩵ܳ᩸;->ܰ:Ll/ܽ֡֫;
+
+    invoke-direct {v1, v3, v2}, Ll/ۢۢܳ;-><init>(Ll/ܽ֡֫;Ll/ᩳۢܳ;)V
+
+    iget-object v2, p0, Ll/᩵ܳ᩸;->ᩳ:Ljava/util/function/BooleanSupplier;
+
+    .line 78
+    invoke-virtual {v1, v2}, Ll/ۢۢܳ;->ۙ(Ljava/util/function/BooleanSupplier;)V
+
+    .line 79
+    invoke-virtual {v1}, Ll/ۢۢܳ;->ۙ()Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Ll/᩵ܳ᩸;->ۢ:Z
+
+    xor-int/2addr v0, v1
+
+    iput-boolean v0, p0, Ll/᩵ܳ᩸;->᩶:Z
+
+    .line 80
+    invoke-direct {p0}, Ll/᩵ܳ᩸;->ܿۙ()V
+
+    goto :goto_0
+
+    .line 83
+    :cond_2
+    iput-boolean v2, p0, Ll/᩵ܳ᩸;->۟:Z
+
+    .line 84
+    iput-boolean v2, p0, Ll/᩵ܳ᩸;->ۢ:Z
+
+    .line 87
+    :goto_0
+    invoke-direct {p0}, Ll/᩵ܳ᩸;->ܿۙ()V
+
+    .line 88
+    iget-object v0, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public ۚ()I
+.method public ۘۙ()Ljava/lang/String;
     .locals 1
 
-    .line 50
-    iget v0, p0, Ll/᩵ܳ᩸;->֡:I
+    .line 46
+    iget-object v0, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public ۙ(Ljava/util/function/BooleanSupplier;)V
+    .locals 0
+
+    .line 38
+    iput-object p1, p0, Ll/᩵ܳ᩸;->ᩳ:Ljava/util/function/BooleanSupplier;
+
+    return-void
+.end method
+
+.method public ۠()Z
+    .locals 1
+
+    .line 54
+    iget-boolean v0, p0, Ll/᩵ܳ᩸;->۟:Z
 
     return v0
 .end method
 
-.method public ܰ()I
+.method public ܰۙ()Z
     .locals 1
 
-    .line 54
-    iget v0, p0, Ll/᩵ܳ᩸;->᩶:I
+    .line 50
+    iget-boolean v0, p0, Ll/᩵ܳ᩸;->᩶:Z
+
+    return v0
+.end method
+
+.method public ܺ(Ljava/lang/String;)V
+    .locals 0
+
+    .line 33
+    iput-object p1, p0, Ll/᩵ܳ᩸;->֡:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public ܽ()Z
+    .locals 1
+
+    .line 58
+    iget-boolean v0, p0, Ll/᩵ܳ᩸;->ۢ:Z
+
+    return v0
+.end method
+
+.method public ᩶ۙ()Z
+    .locals 1
+
+    .line 42
+    iget-boolean v0, p0, Ll/᩵ܳ᩸;->֨:Z
 
     return v0
 .end method

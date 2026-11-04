@@ -1,154 +1,214 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۖۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: UATT */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0823 {
+import android.net.Uri;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f3450;
+/* JADX INFO: renamed from: l.֨֨ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28FF */
+/* JADX INFO: loaded from: classes3.dex */
+public class C0823 extends ArrayList implements InterfaceC20757 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f3451;
+    public int f3107;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m3418(char c) {
-        return c == '\n' || c == '\r' || c == 133 || c == 8232 || c == 8233;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Boolean f3109;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final HashMap f3108 = new HashMap();
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final C14763 f3105 = new C14763();
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public ArrayList f3106 = null;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public boolean mo3300() {
+        return false;
     }
 
-    public C0823(CharSequence charSequence) {
-        this.f3451 = charSequence;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public void mo3304(int i, int i2) {
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:29:0x005c, code lost:
-    
-        if (m3419(r9, "END") == false) goto L31;
-     */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final int m3420(int r8, boolean r9) {
-        /*
-            r7 = this;
-            java.lang.CharSequence r0 = r7.f3451
-            char r1 = r0.charAt(r8)
-            int r2 = r0.length()
-            r3 = 34
-            r4 = 1
-            if (r1 == r3) goto L93
-            r3 = 39
-            if (r1 != r3) goto L15
-            goto L93
-        L15:
-            r3 = 47
-            if (r1 != r3) goto L92
-            int r1 = r8 + 1
-            if (r1 >= r2) goto L92
-            char r1 = r0.charAt(r1)
-            if (r1 != r3) goto L71
-            if (r9 == 0) goto L5f
-            java.lang.String r9 = "// MARK_"
-            boolean r9 = r7.m3419(r8, r9)
-            if (r9 != 0) goto L2e
-            goto L5f
-        L2e:
-            int r9 = r8 + 8
-            java.lang.String r5 = "CLASS_"
-            boolean r5 = r7.m3419(r9, r5)
-            if (r5 != 0) goto L4c
-            java.lang.String r5 = "FIELD_"
-            boolean r5 = r7.m3419(r9, r5)
-            if (r5 == 0) goto L41
-            goto L4c
-        L41:
-            java.lang.String r5 = "METHOD_"
-            boolean r9 = r7.m3419(r9, r5)
-            if (r9 == 0) goto L5f
-            int r9 = r8 + 15
-            goto L4e
-        L4c:
-            int r9 = r8 + 14
-        L4e:
-            java.lang.String r5 = "START"
-            boolean r5 = r7.m3419(r9, r5)
-            if (r5 != 0) goto L71
-            java.lang.String r5 = "END"
-            boolean r9 = r7.m3419(r9, r5)
-            if (r9 == 0) goto L5f
-            goto L71
-        L5f:
-            int r8 = r8 + 2
-        L61:
-            if (r8 >= r2) goto L70
-            char r9 = r0.charAt(r8)
-            boolean r9 = m3418(r9)
-            if (r9 != 0) goto L70
-            int r8 = r8 + 1
-            goto L61
-        L70:
-            return r8
-        L71:
-            r9 = 42
-            if (r1 != r9) goto L92
-            boolean r1 = r7.f3450
-            if (r1 != 0) goto L92
-            int r1 = r8 + 2
-        L7b:
-            int r5 = r1 + 1
-            if (r5 >= r2) goto L90
-            char r6 = r0.charAt(r1)
-            if (r6 != r9) goto L8e
-            char r6 = r0.charAt(r5)
-            if (r6 != r3) goto L8e
-            int r1 = r1 + 2
-            return r1
-        L8e:
-            r1 = r5
-            goto L7b
-        L90:
-            r7.f3450 = r4
-        L92:
-            return r8
-        L93:
-            int r8 = r8 + r4
-            if (r8 >= r2) goto Lb9
-            char r9 = r0.charAt(r8)
-            if (r9 != r1) goto L9e
-            int r8 = r8 + r4
-            return r8
-        L9e:
-            boolean r3 = m3418(r9)
-            if (r3 == 0) goto La5
-            return r8
-        La5:
-            r3 = 92
-            if (r9 != r3) goto L93
-            int r9 = r8 + 1
-            if (r9 >= r2) goto L93
-            char r3 = r0.charAt(r9)
-            boolean r3 = m3418(r3)
-            if (r3 != 0) goto L93
-            r8 = r9
-            goto L93
-        Lb9:
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C0823.m3420(int, boolean):int");
+    public C0823(int i, List list) {
+        if (list.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            InterfaceC2386 interfaceC2386 = (InterfaceC2386) it.next();
+            String path = interfaceC2386.getPath();
+            Uri uriBuild = new Uri.Builder().scheme("mt_media").path(path).build();
+            C2225 c2225 = new C2225();
+            c2225.m7571(uriBuild);
+            c2225.m7572(interfaceC2386);
+            c2225.m7573(interfaceC2386.mo8100());
+            C14902 c14902M7570 = c2225.m7570();
+            this.f3108.put(path, c14902M7570);
+            add(c14902M7570);
+        }
+        this.f3107 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private boolean m3419(int i, String str) {
-        int length = str.length() + i;
-        CharSequence charSequence = this.f3451;
-        if (length <= charSequence.length()) {
-            for (int i2 = 0; i2 < str.length(); i2++) {
-                if (charSequence.charAt(i + i2) == str.charAt(i2)) {
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo3295() {
+        int iM37463;
+        m3294();
+        int i = this.f3107;
+        C14763 c14763 = this.f3105;
+        if (c14763.isEmpty()) {
+            iM37463 = i - 1;
+            if (iM37463 < 0) {
+                iM37463 = size() - 1;
+            }
+        } else {
+            iM37463 = c14763.m37463();
+        }
+        m3305(iM37463);
+        mo3304(i, iM37463);
+    }
+
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void mo3298() {
+        int iIntValue;
+        m3294();
+        if (size() == 1) {
+            return;
+        }
+        int i = this.f3107;
+        int size = size();
+        C14763 c14763 = this.f3105;
+        int i2 = 0;
+        if (c14763.isEmpty() || c14763.getInt(c14763.size() - 1) != i) {
+            c14763.add(i);
+            if (c14763.size() > 100) {
+                c14763.mo14697(0);
+            }
+        }
+        if (mo3300()) {
+            ArrayList arrayList = this.f3106;
+            if (arrayList == null) {
+                this.f3106 = new ArrayList(size - 1);
+                for (int i3 = 0; i3 < size; i3++) {
+                    if (i3 != i) {
+                        this.f3106.add(Integer.valueOf(i3));
+                    }
+                }
+                Collections.shuffle(this.f3106);
+            } else if (arrayList.isEmpty()) {
+                for (int i4 = 0; i4 < size; i4++) {
+                    this.f3106.add(Integer.valueOf(i4));
+                }
+                Collections.shuffle(this.f3106);
+                if (((Integer) this.f3106.get(0)).intValue() == i) {
+                    this.f3106.remove(0);
+                    this.f3106.add(Integer.valueOf(i));
                 }
             }
-            return true;
+            iIntValue = ((Integer) this.f3106.get(0)).intValue();
+            this.f3106.remove(0);
+        } else {
+            iIntValue = i + 1;
+            if (iIntValue < size) {
+            }
+            m3305(i2);
+            mo3304(i, i2);
         }
-        return false;
+        i2 = iIntValue;
+        m3305(i2);
+        mo3304(i, i2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m3297(int i) {
+        m3294();
+        int i2 = this.f3107;
+        if (i != i2) {
+            C14763 c14763 = this.f3105;
+            if (c14763.isEmpty() || c14763.getInt(c14763.size() - 1) != i2) {
+                c14763.add(i2);
+                if (c14763.size() > 100) {
+                    c14763.mo14697(0);
+                }
+            }
+            this.f3106 = null;
+            m3305(i);
+            mo3304(i2, i);
+        }
+    }
+
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean mo3302() {
+        m3294();
+        if (mo3300()) {
+            ArrayList arrayList = this.f3106;
+            if (arrayList == null || !arrayList.isEmpty()) {
+                return false;
+            }
+        } else if (this.f3107 != size() - 1) {
+            return false;
+        }
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    private void m3294() {
+        boolean zMo3300 = mo3300();
+        Boolean bool = this.f3109;
+        if (bool == null || bool.booleanValue() != zMo3300) {
+            this.f3106 = null;
+            this.f3109 = Boolean.valueOf(zMo3300);
+        }
+    }
+
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int mo3299() {
+        return this.f3107;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C14902 mo3301() {
+        return (C14902) get(this.f3107);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // l.InterfaceC20757
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2386 mo3303() {
+        return m3293((C14902) get(this.f3107));
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m3305(int i) {
+        if (i < 0 || i >= size()) {
+            throw new IndexOutOfBoundsException();
+        }
+        this.f3107 = i;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C14902 m3296(String str) {
+        return (C14902) this.f3108.get(str);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC2386 m3293(C14902 c14902) {
+        C20870 c20870 = c14902.f48681;
+        C17359.requireNonNull(c20870);
+        Object obj = c20870.f66803;
+        C17359.requireNonNull(obj);
+        return (InterfaceC2386) obj;
     }
 }

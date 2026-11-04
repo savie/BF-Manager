@@ -1,24 +1,24 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.ۗۖᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97S */
+/* JADX INFO: renamed from: l.ۖ᩸ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T5MA */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2950 extends AbstractC11418 implements InterfaceC9302, Serializable, Cloneable, InterfaceC22810 {
-    public static final long serialVersionUID = -7046029254386353129L;
-
-    public final Object clone() {
-        return C4444.f15833;
+public final class C2950 extends AbstractC19270 implements InterfaceC6922 {
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
     }
 
-    @Override // java.util.Collection, java.util.Set
-    public final boolean equals(Object obj) {
-        return (obj instanceof Set) && ((Set) obj).isEmpty();
+    @Override // l.InterfaceC12142
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1542() {
+        return this.f62313.m55818().mo8717(this.f62315 + 1) & 15;
     }
 
-    private Object readResolve() {
-        return C4444.f15833;
+    @Override // l.InterfaceC18109
+    /* JADX INFO: renamed from: ۘ */
+    public final int mo1541() {
+        return AbstractC17076.m40211(this.f62313.m55818().mo8717(this.f62315 + 1));
     }
 }

@@ -1,62 +1,33 @@
 .class public final Ll/֫᩺ۨ;
 .super Ljava/lang/Object;
-.source "T5YJ"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.source "63TE"
 
 
-# virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 4
+# static fields
+.field public static final ۙ:Ljavax/net/ssl/X509TrustManager;
 
-    .line 149
-    new-instance v0, Ll/ܳۘۨ;
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 150
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    .line 71
+    new-instance v0, Ll/ۚ᩺ۨ;
 
-    move-result-object v1
+    .line 39
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v1, Ll/ܳۘۨ;
-
-    invoke-virtual {v1}, Ll/ܳۘۨ;->۬()I
-
-    move-result v1
-
-    .line 151
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ܳۘۨ;
-
-    invoke-virtual {v2}, Ll/ܳۘۨ;->۬()I
-
-    move-result v2
-
-    .line 152
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ܳۘۨ;
-
-    invoke-virtual {v3}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 153
-    invoke-virtual {v3, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(Ljava/lang/String;)V
-
-    .line 154
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    .line 71
+    sput-object v0, Ll/֫᩺ۨ;->ۙ:Ljavax/net/ssl/X509TrustManager;
 
     return-void
+.end method
+
+.method public static ۙ()Ljavax/net/ssl/X509TrustManager;
+    .locals 1
+
+    .line 107
+    sget-object v0, Ll/֫᩺ۨ;->ۙ:Ljavax/net/ssl/X509TrustManager;
+
+    return-object v0
 .end method

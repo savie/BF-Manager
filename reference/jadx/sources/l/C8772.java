@@ -1,32 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۡۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAQJ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8772 implements InterfaceC10389 {
+import java.lang.ref.ReferenceQueue;
+import java.lang.ref.WeakReference;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10183 f30186;
+/* JADX INFO: renamed from: l.۠ܽ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: K6PM */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C8772 extends WeakReference {
 
-    @Override // l.InterfaceC8978
-    /* JADX INFO: renamed from: ۘۙ */
-    public final /* synthetic */ void mo2885() {
-        throw null;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Throwable f28520;
 
-    public C8772(C10183 c10183) {
-        this.f30186 = c10183;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C8772 f28521;
 
-    @Override // l.InterfaceC10389
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2886(long j, long j2, long j3) {
-        this.f30186.f34804.m5831(j2, j3);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f28522;
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f30186.f34804.m5824();
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f28523;
+
+    public C8772(AbstractFutureC13992 abstractFutureC13992, Throwable th, C8772 c8772, ReferenceQueue referenceQueue) {
+        super(abstractFutureC13992, referenceQueue);
+        this.f28520 = th;
+        this.f28521 = c8772;
+        this.f28523 = Thread.currentThread().getId();
+        this.f28522 = System.identityHashCode(abstractFutureC13992);
     }
 }

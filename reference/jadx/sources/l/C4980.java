@@ -1,22 +1,35 @@
 package l;
 
-import android.graphics.PointF;
-import android.util.Property;
-import android.view.View;
+import java.nio.ByteBuffer;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۙ᩻ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A65W */
+/* JADX INFO: renamed from: l.ۙܳ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 61W5 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C4980 extends Property {
-    @Override // android.util.Property
-    public final /* bridge */ /* synthetic */ Object get(Object obj) {
-        return null;
-    }
+@InterfaceC20862(type = EnumC9673.SEQUENCE)
+public class C4980 {
 
-    @Override // android.util.Property
-    public final void set(Object obj, Object obj2) {
-        View view = (View) obj;
-        PointF pointF = (PointF) obj2;
-        C16000.m37979(view, Math.round(pointF.x), Math.round(pointF.y), view.getRight(), view.getBottom());
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 3, listElementType = C19370.class, optional = true, tagNumber = 0, tagging = EnumC1471.IMPLICIT, type = EnumC9673.SET_OF)
+    public List f17319;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 1, listElementType = C0637.class, type = EnumC9673.SET_OF)
+    public List f17320;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 0, type = EnumC9673.INTEGER)
+    public int f17321;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 5, listElementType = C10945.class, type = EnumC9673.SET_OF)
+    public List f17322;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 4, listElementType = ByteBuffer.class, optional = true, tagNumber = 1, tagging = EnumC1471.IMPLICIT, type = EnumC9673.SET_OF)
+    public List f17323;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 2, type = EnumC9673.SEQUENCE)
+    public C10331 f17324;
 }

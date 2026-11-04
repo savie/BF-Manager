@@ -1,49 +1,39 @@
 .class public final Ll/ۜۨ;
 .super Ljava/lang/Object;
-.source "38CF"
-
-# interfaces
-.implements Ll/ᩳۨ;
+.source "L1CU"
 
 
-# virtual methods
-.method public ۙ(Ll/ۙۖ;Ll/ۙۖ;Landroid/view/Window;Landroid/view/View;ZZ)V
+# instance fields
+.field public ۙ:I
+
+.field public ۤ:I
+
+.field public ᩷:F
+
+.field public final synthetic ᩸:Ll/᩷ۛ;
+
+
+# direct methods
+.method public constructor <init>(Ll/᩷ۛ;)V
     .locals 0
 
-    const-string p5, "statusBarStyle"
+    .line 1362
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    invoke-static {p1, p5}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-object p1, p0, Ll/ۜۨ;->᩸:Ll/᩷ۛ;
 
-    const-string p1, "navigationBarStyle"
+    const/high16 p1, 0x7fc00000    # Float.NaN
 
-    .line 11
-    invoke-static {p2, p1}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1363
+    iput p1, p0, Ll/ۜۨ;->᩷:F
 
-    const-string p1, "window"
+    const/4 p1, -0x1
 
-    .line 17
-    invoke-static {p3, p1}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1365
+    iput p1, p0, Ll/ۜۨ;->ۤ:I
 
-    const-string p1, "view"
-
-    .line 23
-    invoke-static {p4, p1}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    .line 229
-    invoke-static {p3, p1}, Ll/ܽ֫;->ۙ(Landroid/view/Window;Z)V
-
-    const/high16 p1, 0x4000000
-
-    .line 230
-    invoke-virtual {p3, p1}, Landroid/view/Window;->addFlags(I)V
-
-    const/high16 p1, 0x8000000
-
-    .line 231
-    invoke-virtual {p3, p1}, Landroid/view/Window;->addFlags(I)V
+    .line 1366
+    iput p1, p0, Ll/ۜۨ;->ۙ:I
 
     return-void
 .end method

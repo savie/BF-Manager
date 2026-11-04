@@ -180,7 +180,7 @@
     .line 585
     iget-object v2, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;->selectedItemRippleOverlaidColor:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v2}, Ll/۟ܿ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v2}, Ll/֡ᩳ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 586
     new-instance v2, Landroid/graphics/drawable/RippleDrawable;
@@ -354,7 +354,7 @@
     const/4 p3, 0x0
 
     :goto_0
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 3370
     invoke-virtual {p2, p3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V

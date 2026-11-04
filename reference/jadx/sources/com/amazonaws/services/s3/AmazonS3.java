@@ -15,20 +15,20 @@ import com.amazonaws.services.s3.model.UploadPartResult;
 /* JADX INFO: loaded from: classes.dex */
 public interface AmazonS3 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    CompleteMultipartUploadResult mo434(CompleteMultipartUploadRequest completeMultipartUploadRequest);
+    CompleteMultipartUploadResult mo428(CompleteMultipartUploadRequest completeMultipartUploadRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    InitiateMultipartUploadResult mo435(InitiateMultipartUploadRequest initiateMultipartUploadRequest);
+    InitiateMultipartUploadResult mo429(InitiateMultipartUploadRequest initiateMultipartUploadRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    PutObjectResult mo436(PutObjectRequest putObjectRequest);
+    PutObjectResult mo430(PutObjectRequest putObjectRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    S3Object mo437(GetObjectRequest getObjectRequest);
+    S3Object mo431(GetObjectRequest getObjectRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    UploadPartResult mo438(UploadPartRequest uploadPartRequest);
+    UploadPartResult mo432(UploadPartRequest uploadPartRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    void mo439(AbortMultipartUploadRequest abortMultipartUploadRequest);
+    void mo433(AbortMultipartUploadRequest abortMultipartUploadRequest);
 }

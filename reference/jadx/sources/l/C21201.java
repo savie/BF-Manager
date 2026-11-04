@@ -1,15 +1,8 @@
 package l;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.TextView;
-
-/* JADX INFO: renamed from: l.᩷᩻ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C4QU */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C21201 implements AdapterView.OnItemClickListener {
-    @Override // android.widget.AdapterView.OnItemClickListener
-    public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
-        C16737.m39272((CharSequence) ((TextView) ((TextView) view.getTag()).getTag()).getText().toString());
-    }
+/* JADX INFO: renamed from: l.᩶ۡۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 29BC */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21201 extends IndexOutOfBoundsException {
+    public static final long serialVersionUID = 160715609518896765L;
 }

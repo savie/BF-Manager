@@ -1,30 +1,54 @@
 package l;
 
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.ۖ᩹ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P2S7 */
+/* JADX INFO: renamed from: l.ۖܿۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBJ4 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2818 extends AbstractC10442 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC20147 f10697;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7052 f10698;
-
-    public C2818(C7052 c7052, InterfaceC20147 interfaceC20147) {
-        this.f10698 = c7052;
-        this.f10697 = interfaceC20147;
+public final enum C2818 extends EnumC15717 {
+    public /* synthetic */ C2818() {
+        this("AfterBody", 18);
     }
 
-    @Override // l.InterfaceC20147
-    public final String getType() {
-        return (String) this.f10698.f23690.m29872().mo1014(this.f10697.getType());
+    public C2818(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // l.InterfaceC20147
-    public final Set getElements() {
-        return new C22659(this.f10697.getElements(), this.f10698.f23690.m29862());
+    @Override // l.EnumC15717
+    /* JADX INFO: renamed from: ۙ */
+    public boolean mo2666(AbstractC0802 abstractC0802, C4310 c4310) {
+        if (EnumC15717.m37586(abstractC0802)) {
+            abstractC0802.getClass();
+            c4310.m13750((C3785) abstractC0802);
+            return true;
+        }
+        if (abstractC0802.m3220()) {
+            c4310.m13752((C14225) abstractC0802);
+            return true;
+        }
+        if (abstractC0802.m3215()) {
+            c4310.m13755(this);
+            return false;
+        }
+        if (abstractC0802.m3217() && ((C7514) abstractC0802).f60787.equals("html")) {
+            EnumC15717 enumC15717 = EnumC15717.f51053;
+            c4310.f24102 = abstractC0802;
+            return enumC15717.mo2666(abstractC0802, c4310);
+        }
+        if (abstractC0802.m3218() && ((C0056) abstractC0802).f60787.equals("html")) {
+            if (c4310.m13779()) {
+                c4310.m13755(this);
+                return false;
+            }
+            if (c4310.m13783("html")) {
+                c4310.m13778("html");
+            }
+            c4310.m13765(EnumC15717.f51072);
+            return true;
+        }
+        if (abstractC0802.m3221()) {
+            return true;
+        }
+        c4310.m13755(this);
+        c4310.m13744();
+        return c4310.mo13758(abstractC0802);
     }
 }

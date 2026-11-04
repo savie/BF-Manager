@@ -1,219 +1,104 @@
 .class public final Ll/ۜᩴᩴ;
 .super Ljava/lang/Object;
-.source "W1E0"
+.source "DAOV"
 
 # interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Ljava/lang/Iterable;
 
 
 # instance fields
-.field public ֡:I
+.field public final ܰ:Ljava/util/ArrayList;
 
-.field public ܺ:I
-
-.field public final synthetic ܽ:Ll/ܶᩴᩴ;
-
-.field public ᩶:Ll/۠ᩴᩴ;
+.field public final ᩶:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܶᩴᩴ;)V
+.method public constructor <init>()V
     .locals 1
 
-    .line 283
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۜᩴᩴ;->ܽ:Ll/ܶᩴᩴ;
+    .line 15
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 284
-    new-instance v0, Ll/۠ᩴᩴ;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object p1, p1, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
+    iput-object v0, p0, Ll/ۜᩴᩴ;->ܰ:Ljava/util/ArrayList;
 
-    invoke-direct {v0, p1}, Ll/۠ᩴᩴ;-><init>(Ll/۟ᩴᩴ;)V
+    .line 16
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object v0, p0, Ll/ۜᩴᩴ;->᩶:Ll/۠ᩴᩴ;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    const/4 p1, 0x0
-
-    .line 285
-    iput p1, p0, Ll/ۜᩴᩴ;->֡:I
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ll/ۜᩴᩴ;->ܺ:I
+    iput-object v0, p0, Ll/ۜᩴᩴ;->᩶:Ljava/util/HashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 3
+.method public final clear()V
+    .locals 1
 
-    .line 323
-    iget-object v0, p0, Ll/ۜᩴᩴ;->ܽ:Ll/ܶᩴᩴ;
+    .line 29
+    iget-object v0, p0, Ll/ۜᩴᩴ;->ܰ:Ljava/util/ArrayList;
 
-    iget-object v0, v0, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget v0, v0, Ll/۟ᩴᩴ;->ܽ:I
+    .line 30
+    iget-object v0, p0, Ll/ۜᩴᩴ;->᩶:Ljava/util/HashSet;
 
-    .line 324
-    :goto_0
-    iget v1, p0, Ll/ۜᩴᩴ;->֡:I
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    if-ge v1, v0, :cond_0
-
-    add-int/lit8 v2, v1, 0x1
-
-    .line 325
-    iput v2, p0, Ll/ۜᩴᩴ;->֡:I
-
-    iput v1, p0, Ll/ۜᩴᩴ;->ܺ:I
-
-    iget-object v2, p0, Ll/ۜᩴᩴ;->᩶:Ll/۠ᩴᩴ;
-
-    iput v1, v2, Ll/۠ᩴᩴ;->ܺ:I
-
-    .line 326
-    invoke-interface {p1, v2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public final hasNext()Z
-    .locals 2
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    .line 289
-    iget v0, p0, Ll/ۜᩴᩴ;->֡:I
+    .line 40
+    iget-object v0, p0, Ll/ۜᩴᩴ;->ܰ:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Ll/ۜᩴᩴ;->ܽ:Ll/ܶᩴᩴ;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, v1, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
+    move-result-object v0
 
-    iget v1, v1, Ll/۟ᩴᩴ;->ܽ:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-object v0
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final sort(Ljava/util/Comparator;)V
+    .locals 1
+
+    .line 34
+    iget-object v0, p0, Ll/ۜᩴᩴ;->ܰ:Ljava/util/ArrayList;
+
+    invoke-static {v0, p1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Landroid/text/SpannableString;)V
     .locals 2
 
-    .line 295
-    invoke-virtual {p0}, Ll/ۜᩴᩴ;->hasNext()Z
+    .line 19
+    iget-object v0, p0, Ll/ۜᩴᩴ;->᩶:Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Landroid/text/SpannableString;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 296
-    iget v0, p0, Ll/ۜᩴᩴ;->֡:I
+    .line 20
+    iget-object v0, p0, Ll/ۜᩴᩴ;->ܰ:Ljava/util/ArrayList;
 
-    add-int/lit8 v1, v0, 0x1
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput v1, p0, Ll/ۜᩴᩴ;->֡:I
-
-    iput v0, p0, Ll/ۜᩴᩴ;->ܺ:I
-
-    iget-object v1, p0, Ll/ۜᩴᩴ;->᩶:Ll/۠ᩴᩴ;
-
-    iput v0, v1, Ll/۠ᩴᩴ;->ܺ:I
-
-    return-object v1
-
-    .line 295
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 6
-
-    .line 302
-    iget v0, p0, Ll/ۜᩴᩴ;->ܺ:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    .line 303
-    iput v1, p0, Ll/ۜᩴᩴ;->ܺ:I
-
-    .line 304
-    iget-object v0, p0, Ll/ۜᩴᩴ;->ܽ:Ll/ܶᩴᩴ;
-
-    iget-object v2, v0, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
-
-    iget v3, v2, Ll/۟ᩴᩴ;->ܽ:I
-
-    add-int/lit8 v4, v3, -0x1
-
-    iput v4, v2, Ll/۟ᩴᩴ;->ܽ:I
-
-    iget v4, p0, Ll/ۜᩴᩴ;->֡:I
-
-    add-int/lit8 v5, v4, -0x1
-
-    iput v5, p0, Ll/ۜᩴᩴ;->֡:I
-
-    sub-int/2addr v3, v4
-
-    .line 305
-    iget-object v2, v2, Ll/۟ᩴᩴ;->᩶:[Ljava/lang/Object;
-
-    invoke-static {v2, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 306
-    iget-object v2, v0, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
-
-    iget-object v2, v2, Ll/۟ᩴᩴ;->۫:[I
-
-    iget v4, p0, Ll/ۜᩴᩴ;->֡:I
-
-    add-int/lit8 v5, v4, 0x1
-
-    invoke-static {v2, v5, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 307
-    iget-object v2, p0, Ll/ۜᩴᩴ;->᩶:Ll/۠ᩴᩴ;
-
-    iput v1, v2, Ll/۠ᩴᩴ;->ܺ:I
-
-    .line 308
-    iget-object v0, v0, Ll/ܶᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
-
-    iget-object v1, v0, Ll/۟ᩴᩴ;->᩶:[Ljava/lang/Object;
-
-    iget v0, v0, Ll/۟ᩴᩴ;->ܽ:I
-
-    const/4 v2, 0x0
-
-    aput-object v2, v1, v0
-
     return-void
-
-    .line 302
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
 .end method

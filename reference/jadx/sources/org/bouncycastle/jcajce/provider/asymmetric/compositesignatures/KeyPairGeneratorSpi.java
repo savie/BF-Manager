@@ -7,14 +7,14 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.internal.asn1.iana.IANAObjectIdentifiers;
 import org.bouncycastle.jcajce.CompositePrivateKey;
 import org.bouncycastle.jcajce.CompositePublicKey;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends java.security.KeyPairGeneratorSpi {
     public final ASN1ObjectIdentifier algorithm;
     public final KeyPairGenerator[] generators;
@@ -183,7 +183,7 @@ public class KeyPairGeneratorSpi extends java.security.KeyPairGeneratorSpi {
                     this.generators[i].initialize(algorithmParameterSpec);
                 }
             } catch (Exception e) {
-                throw new IllegalStateException(C8479.m22142(e, new StringBuilder("unable to create base generator: ")));
+                throw new IllegalStateException(C16076.m38224(e, new StringBuilder("unable to create base generator: ")));
             }
         }
     }

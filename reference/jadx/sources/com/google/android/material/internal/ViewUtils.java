@@ -16,19 +16,19 @@ import android.view.inputmethod.InputMethodManager;
 import com.google.android.material.drawable.DrawableUtils;
 import java.util.ArrayList;
 import java.util.List;
-import l.C10405;
-import l.C15844;
-import l.C5031;
-import l.C5965;
-import l.C8033;
-import l.InterfaceC11754;
+import l.C14625;
+import l.C18893;
+import l.C22666;
+import l.C3977;
+import l.C7508;
+import l.InterfaceC22491;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ViewUtils {
     public static final int EDGE_TO_EDGE_FLAGS = 768;
 
     public interface OnApplyWindowInsetsListener {
-        C15844 onApplyWindowInsets(View view, C15844 c15844, RelativePadding relativePadding);
+        C3977 onApplyWindowInsets(View view, C3977 c3977, RelativePadding relativePadding);
     }
 
     public static void showKeyboard(View view) {
@@ -36,9 +36,9 @@ public class ViewUtils {
     }
 
     public static void showKeyboard(View view, boolean z) {
-        C5965 c5965M14013;
-        if (z && (c5965M14013 = C5031.m14013(view)) != null) {
-            c5965M14013.m16256(8);
+        C18893 c18893M51113;
+        if (z && (c18893M51113 = C22666.m51113(view)) != null) {
+            c18893M51113.m43814(8);
         } else {
             getInputMethodManager(view).showSoftInput(view, 1);
         }
@@ -63,9 +63,9 @@ public class ViewUtils {
     }
 
     public static void hideKeyboard(View view, boolean z) {
-        C5965 c5965M14013;
-        if (z && (c5965M14013 = C5031.m14013(view)) != null) {
-            c5965M14013.m16253(8);
+        C18893 c18893M51113;
+        if (z && (c18893M51113 = C22666.m51113(view)) != null) {
+            c18893M51113.m43811(8);
             return;
         }
         InputMethodManager inputMethodManager = getInputMethodManager(view);
@@ -75,7 +75,7 @@ public class ViewUtils {
     }
 
     public static InputMethodManager getInputMethodManager(View view) {
-        return (InputMethodManager) C10405.m26301(view.getContext(), InputMethodManager.class);
+        return (InputMethodManager) C7508.m20560(view.getContext(), InputMethodManager.class);
     }
 
     public static void setBoundsFromRect(View view, Rect rect) {
@@ -139,7 +139,7 @@ public class ViewUtils {
     }
 
     public static boolean isLayoutRtl(View view) {
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         return view.getLayoutDirection() == 1;
     }
 
@@ -172,7 +172,7 @@ public class ViewUtils {
             int i2 = this.top;
             int i3 = this.end;
             int i4 = this.bottom;
-            int i5 = C5031.f17539;
+            int i5 = C22666.f73603;
             view.setPaddingRelative(i, i2, i3, i4);
         }
     }
@@ -182,55 +182,55 @@ public class ViewUtils {
     }
 
     public static void doOnApplyWindowInsets(View view, AttributeSet attributeSet, int i, int i2, final OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
-        TypedArray typedArrayObtainStyledAttributes = view.getContext().obtainStyledAttributes(attributeSet, C8033.f27421, i, i2);
-        final boolean z = typedArrayObtainStyledAttributes.getBoolean(C8033.f26686, false);
-        final boolean z2 = typedArrayObtainStyledAttributes.getBoolean(C8033.f27378, false);
-        final boolean z3 = typedArrayObtainStyledAttributes.getBoolean(C8033.f27218, false);
+        TypedArray typedArrayObtainStyledAttributes = view.getContext().obtainStyledAttributes(attributeSet, C14625.f46239, i, i2);
+        final boolean z = typedArrayObtainStyledAttributes.getBoolean(C14625.f46422, false);
+        final boolean z2 = typedArrayObtainStyledAttributes.getBoolean(C14625.f47645, false);
+        final boolean z3 = typedArrayObtainStyledAttributes.getBoolean(C14625.f46847, false);
         typedArrayObtainStyledAttributes.recycle();
         doOnApplyWindowInsets(view, new OnApplyWindowInsetsListener() { // from class: com.google.android.material.internal.ViewUtils.1
             @Override // com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener
-            public C15844 onApplyWindowInsets(View view2, C15844 c15844, RelativePadding relativePadding) {
+            public C3977 onApplyWindowInsets(View view2, C3977 c3977, RelativePadding relativePadding) {
                 if (z) {
-                    relativePadding.bottom = c15844.m37670() + relativePadding.bottom;
+                    relativePadding.bottom = c3977.m12825() + relativePadding.bottom;
                 }
                 boolean zIsLayoutRtl = ViewUtils.isLayoutRtl(view2);
                 if (z2) {
                     if (zIsLayoutRtl) {
-                        relativePadding.end = c15844.m37683() + relativePadding.end;
+                        relativePadding.end = c3977.m12822() + relativePadding.end;
                     } else {
-                        relativePadding.start = c15844.m37683() + relativePadding.start;
+                        relativePadding.start = c3977.m12822() + relativePadding.start;
                     }
                 }
                 if (z3) {
                     if (zIsLayoutRtl) {
-                        relativePadding.start = c15844.m37672() + relativePadding.start;
+                        relativePadding.start = c3977.m12814() + relativePadding.start;
                     } else {
-                        relativePadding.end = c15844.m37672() + relativePadding.end;
+                        relativePadding.end = c3977.m12814() + relativePadding.end;
                     }
                 }
                 relativePadding.applyToView(view2);
                 OnApplyWindowInsetsListener onApplyWindowInsetsListener2 = onApplyWindowInsetsListener;
-                return onApplyWindowInsetsListener2 != null ? onApplyWindowInsetsListener2.onApplyWindowInsets(view2, c15844, relativePadding) : c15844;
+                return onApplyWindowInsetsListener2 != null ? onApplyWindowInsetsListener2.onApplyWindowInsets(view2, c3977, relativePadding) : c3977;
             }
         });
     }
 
     public static void doOnApplyWindowInsets(View view, final OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         final RelativePadding relativePadding = new RelativePadding(view.getPaddingStart(), view.getPaddingTop(), view.getPaddingEnd(), view.getPaddingBottom());
-        C5031.m13989(view, new InterfaceC11754() { // from class: com.google.android.material.internal.ViewUtils.2
-            @Override // l.InterfaceC11754
-            public C15844 onApplyWindowInsets(View view2, C15844 c15844) {
-                return onApplyWindowInsetsListener.onApplyWindowInsets(view2, c15844, new RelativePadding(relativePadding));
+        C22666.m51097(view, new InterfaceC22491() { // from class: com.google.android.material.internal.ViewUtils.2
+            @Override // l.InterfaceC22491
+            public C3977 onApplyWindowInsets(View view2, C3977 c3977) {
+                return onApplyWindowInsetsListener.onApplyWindowInsets(view2, c3977, new RelativePadding(relativePadding));
             }
         });
         requestApplyInsetsWhenAttached(view);
     }
 
     public static void requestApplyInsetsWhenAttached(View view) {
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         if (view.isAttachedToWindow()) {
-            C5031.m14002(view);
+            C22666.m51079(view);
         } else {
             view.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() { // from class: com.google.android.material.internal.ViewUtils.3
                 @Override // android.view.View.OnAttachStateChangeListener
@@ -240,18 +240,18 @@ public class ViewUtils {
                 @Override // android.view.View.OnAttachStateChangeListener
                 public void onViewAttachedToWindow(View view2) {
                     view2.removeOnAttachStateChangeListener(this);
-                    C5031.m14002(view2);
+                    C22666.m51079(view2);
                 }
             });
         }
     }
 
     public static float getParentAbsoluteElevation(View view) {
-        float fM14006 = 0.0f;
+        float fM51105 = 0.0f;
         for (ViewParent parent = view.getParent(); parent instanceof View; parent = parent.getParent()) {
-            fM14006 += C5031.m14006((View) parent);
+            fM51105 += C22666.m51105((View) parent);
         }
-        return fM14006;
+        return fM51105;
     }
 
     public static ViewOverlayImpl getOverlay(View view) {

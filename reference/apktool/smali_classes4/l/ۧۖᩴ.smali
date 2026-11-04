@@ -1,171 +1,66 @@
 .class public final synthetic Ll/ۧۖᩴ;
 .super Ljava/lang/Object;
-.source "JAPJ"
+.source "964K"
 
 # interfaces
-.implements Ll/֫ۖᩴ;
+.implements Ll/ܶ᩻ۙ;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/֫ۖᩴ;
+.field public final synthetic ܰ:I
 
-.field public final synthetic ᩶:Ll/֫ۖᩴ;
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/֫ۖᩴ;Ll/֫ۖᩴ;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
     .line 0
+    iput p1, p0, Ll/ۧۖᩴ;->ܰ:I
+
+    iput-object p2, p0, Ll/ۧۖᩴ;->᩶:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۧۖᩴ;->ܺ:Ll/֫ۖᩴ;
-
-    iput-object p2, p0, Ll/ۧۖᩴ;->᩶:Ll/֫ۖᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic and(Ljava/util/function/DoublePredicate;)Ljava/util/function/DoublePredicate;
-    .locals 0
-
-    .line 35
-    invoke-static {p0, p1}, Ll/ܳۖᩴ;->ۙ(Ll/֫ۖᩴ;Ljava/util/function/DoublePredicate;)Ll/֫ۖᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 103
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final negate()Ljava/util/function/DoublePredicate;
+.method public final ۙ(Ljava/lang/Object;)V
     .locals 1
-
-    .line 109
-    new-instance v0, Ll/ܿۖᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܿۖᩴ;-><init>(Ll/֫ۖᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final negate()Ljava/util/function/Predicate;
-    .locals 1
-
-    .line 109
-    new-instance v0, Ll/ܿۖᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܿۖᩴ;-><init>(Ll/֫ۖᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final synthetic or(Ljava/util/function/DoublePredicate;)Ljava/util/function/DoublePredicate;
-    .locals 0
-
-    .line 35
-    invoke-static {p0, p1}, Ll/ܳۖᩴ;->ܰ(Ll/֫ۖᩴ;Ljava/util/function/DoublePredicate;)Ll/֫ۖᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 148
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic test(D)Z
-    .locals 0
 
     .line 0
-    invoke-static {p0, p1, p2}, Ll/ܳۖᩴ;->ۙ(Ll/֫ۖᩴ;D)Z
+    iget v0, p0, Ll/ۧۖᩴ;->ܰ:I
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    return p1
-.end method
+    iget-object v0, p0, Ll/ۧۖᩴ;->᩶:Ljava/lang/Object;
 
-.method public final synthetic test(Ljava/lang/Object;)Z
-    .locals 0
+    check-cast v0, Ll/᩺ܺۧ;
 
-    .line 35
-    check-cast p1, Ljava/lang/Float;
+    check-cast p1, Ll/ۧ᩻ۧ;
 
-    invoke-static {p0, p1}, Ll/ܳۖᩴ;->ۙ(Ll/֫ۖᩴ;Ljava/lang/Float;)Z
+    invoke-static {v0, p1}, Ll/᩺ܺۧ;->ۙ(Ll/᩺ܺۧ;Ll/ۧ᩻ۧ;)V
 
-    move-result p1
+    return-void
 
-    return p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Ll/ۧۖᩴ;->᩶:Ljava/lang/Object;
 
-.method public final ۙ(Ll/֫ۖᩴ;)Ll/᩻ۖᩴ;
-    .locals 1
+    check-cast v0, Ll/ܰۖᩴ;
 
-    .line 126
-    new-instance v0, Ll/᩻ۖᩴ;
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-direct {v0, p0, p1}, Ll/᩻ۖᩴ;-><init>(Ll/֫ۖᩴ;Ll/֫ۖᩴ;)V
+    invoke-static {v0}, Ll/ܰۖᩴ;->ۤ(Ll/ܰۖᩴ;)V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final ۨ(F)Z
-    .locals 1
+    nop
 
-    .line 81
-    iget-object v0, p0, Ll/ۧۖᩴ;->ܺ:Ll/֫ۖᩴ;
-
-    invoke-interface {v0, p1}, Ll/֫ۖᩴ;->ۨ(F)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/ۧۖᩴ;->᩶:Ll/֫ۖᩴ;
-
-    invoke-interface {v0, p1}, Ll/֫ۖᩴ;->ۨ(F)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final ܰ(Ll/֫ۖᩴ;)Ll/ۧۖᩴ;
-    .locals 1
-
-    .line 81
-    new-instance v0, Ll/ۧۖᩴ;
-
-    invoke-direct {v0, p0, p1}, Ll/ۧۖᩴ;-><init>(Ll/֫ۖᩴ;Ll/֫ۖᩴ;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

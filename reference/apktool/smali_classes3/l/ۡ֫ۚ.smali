@@ -1,130 +1,270 @@
-.class public final synthetic Ll/ۡ֫ۚ;
-.super Ljava/lang/Object;
-.source "44R4"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Ll/ۡ֫ۚ;
+.super Ljava/io/FilterOutputStream;
+.source "P77N"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/۬ۢۚ;
-
-.field public final synthetic ܺ:Landroid/widget/EditText;
-
-.field public final synthetic ܽ:Ll/᩵ۡۜ;
-
-.field public final synthetic ᩶:Landroid/widget/CheckBox;
+.field public ܰ:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/EditText;Landroid/widget/CheckBox;Ll/۬ۢۚ;Ll/᩵ۡۜ;)V
-    .locals 0
+.method public static ۙ(Ljava/lang/RuntimeException;)Ljava/lang/RuntimeException;
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5827
+    instance-of v0, p0, Ll/ܰۧۚ;
 
-    iput-object p1, p0, Ll/ۡ֫ۚ;->ܺ:Landroid/widget/EditText;
+    if-nez v0, :cond_1
 
-    iput-object p2, p0, Ll/ۡ֫ۚ;->᩶:Landroid/widget/CheckBox;
+    .line 5828
+    invoke-static {p0}, Ll/ܿۧۚ;->ۙ(Ljava/lang/RuntimeException;)Z
 
-    iput-object p3, p0, Ll/ۡ֫ۚ;->֡:Ll/۬ۢۚ;
+    move-result v0
 
-    iput-object p4, p0, Ll/ۡ֫ۚ;->ܽ:Ll/᩵ۡۜ;
+    if-nez v0, :cond_0
 
-    return-void
+    return-object p0
+
+    .line 5831
+    :cond_0
+    new-instance v0, Ll/ܰۧۚ;
+
+    invoke-direct {v0, p0}, Ll/ܰۧۚ;-><init>(Ljava/lang/RuntimeException;)V
+
+    return-object v0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public static ۙ(Ljava/io/IOException;)Ll/ۘۧۚ;
+    .locals 1
+
+    .line 5821
+    instance-of v0, p0, Ll/ۘۧۚ;
+
+    if-eqz v0, :cond_0
+
+    .line 5822
+    check-cast p0, Ll/ۘۧۚ;
+
+    return-object p0
+
+    .line 5823
+    :cond_0
+    new-instance v0, Ll/ۘۧۚ;
+
+    invoke-direct {v0, p0}, Ll/ۘۧۚ;-><init>(Ljava/io/IOException;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final close()V
+    .locals 1
 
-    .line 44
-    iget-object p1, p0, Ll/ۡ֫ۚ;->ܺ:Landroid/widget/EditText;
-
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 45
-    iget-object v0, p0, Ll/ۡ֫ۚ;->᩶:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x10
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0xa
-
-    :goto_0
-    const/4 v1, 0x0
-
-    .line 48
+    .line 5806
     :try_start_0
-    invoke-static {p1, v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
-
-    move-result p1
+    invoke-super {p0}, Ljava/io/FilterOutputStream;->close()V
     :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-ltz p1, :cond_2
-
-    .line 934
-    iget-object v0, p0, Ll/ۡ֫ۚ;->֡:Ll/۬ۢۚ;
-
-    iget-object v2, v0, Ll/۬ۢۚ;->۫:Ll/ܰۢۚ;
-
-    invoke-virtual {v2}, Ll/ܰۢۚ;->ۖ()I
-
-    move-result v2
-
-    if-le p1, v2, :cond_1
-
-    goto :goto_1
-
-    .line 57
-    :cond_1
-    invoke-virtual {v0, p1}, Ll/۬ۢۚ;->ܰ(I)V
-
-    .line 58
-    iget-object p1, p0, Ll/ۡ֫ۚ;->ܽ:Ll/᩵ۡۜ;
-
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->dismiss()V
-
-    return-void
-
-    :cond_2
-    :goto_1
-    const p1, 0x7f12030d
-
-    .line 54
-    invoke-static {p1, v1}, Ll/ܺۡۜ;->ܰ(II)Ll/ܺۡۜ;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll/ܺۡۜ;->ܰ()V
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    const p1, 0x7f120b48
+    move-exception v0
 
-    .line 50
-    invoke-static {p1, v1}, Ll/ܺۡۜ;->ܰ(II)Ll/ܺۡۜ;
+    .line 5810
+    invoke-static {v0}, Ll/ۡ֫ۚ;->ۙ(Ljava/lang/RuntimeException;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    .line 5808
+    invoke-static {v0}, Ll/ۡ֫ۚ;->ۙ(Ljava/io/IOException;)Ll/ۘۧۚ;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    .line 5795
+    :try_start_0
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    .line 5799
+    invoke-static {v0}, Ll/ۡ֫ۚ;->ۙ(Ljava/lang/RuntimeException;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    .line 5797
+    invoke-static {v0}, Ll/ۡ֫ۚ;->ۙ(Ljava/io/IOException;)Ll/ۘۧۚ;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final write(I)V
+    .locals 6
+
+    .line 5815
+    iget-wide v0, p0, Ll/ۡ֫ۚ;->ܰ:J
+
+    const-wide v2, 0x1fffffffffffffL
+
+    const/4 v4, 0x1
+
+    int-to-long v4, v4
+
+    sub-long/2addr v2, v4
+
+    cmp-long v4, v0, v2
+
+    if-gtz v4, :cond_0
+
+    .line 5770
+    :try_start_0
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+
+    .line 5771
+    iget-wide v0, p0, Ll/ۡ֫ۚ;->ܰ:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ll/ۡ֫ۚ;->ܰ:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 5775
+    invoke-static {p1}, Ll/ۡ֫ۚ;->ۙ(Ljava/lang/RuntimeException;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll/ܺۡۜ;->ܰ()V
+    throw p1
+
+    :catch_1
+    move-exception p1
+
+    .line 5773
+    invoke-static {p1}, Ll/ۡ֫ۚ;->ۙ(Ljava/io/IOException;)Ll/ۘۧۚ;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 5816
+    :cond_0
+    new-instance p1, Ll/ۛۧۚ;
+
+    const-string v0, "Workspace ZIP entry is too large"
+
+    .line 5862
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 5816
+    throw p1
+.end method
+
+.method public final write([BII)V
+    .locals 7
+
+    if-ltz p3, :cond_0
+
+    .line 5815
+    iget-wide v0, p0, Ll/ۡ֫ۚ;->ܰ:J
+
+    int-to-long v2, p3
+
+    const-wide v4, 0x1fffffffffffffL
+
+    sub-long/2addr v4, v2
+
+    cmp-long v6, v0, v4
+
+    if-gtz v6, :cond_0
+
+    .line 5783
+    :try_start_0
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 5784
+    iget-wide p1, p0, Ll/ۡ֫ۚ;->ܰ:J
+
+    add-long/2addr p1, v2
+
+    iput-wide p1, p0, Ll/ۡ֫ۚ;->ܰ:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 5788
+    invoke-static {p1}, Ll/ۡ֫ۚ;->ۙ(Ljava/lang/RuntimeException;)Ljava/lang/RuntimeException;
+
+    move-result-object p1
+
+    throw p1
+
+    :catch_1
+    move-exception p1
+
+    .line 5786
+    invoke-static {p1}, Ll/ۡ֫ۚ;->ۙ(Ljava/io/IOException;)Ll/ۘۧۚ;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 5816
+    :cond_0
+    new-instance p1, Ll/ۛۧۚ;
+
+    const-string p2, "Workspace ZIP entry is too large"
+
+    .line 5862
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 5816
+    throw p1
 .end method

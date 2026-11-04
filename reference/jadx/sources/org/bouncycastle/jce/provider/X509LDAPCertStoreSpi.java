@@ -27,16 +27,16 @@ import javax.naming.directory.InitialDirContext;
 import javax.naming.directory.SearchControls;
 import javax.naming.directory.SearchResult;
 import javax.security.auth.x500.X500Principal;
-import l.C15489;
-import l.C16523;
-import l.C1679;
-import l.C20630;
+import l.C13645;
+import l.C1402;
+import l.C14442;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.x509.CertificatePair;
 import org.bouncycastle.jce.X509LDAPCertStoreParameters;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509LDAPCertStoreSpi extends CertStoreSpi {
     public static String[] FILTER_ESCAPE_TABLE = new String[93];
     public static String LDAP_PROVIDER = null;
@@ -125,10 +125,10 @@ public class X509LDAPCertStoreSpi extends CertStoreSpi {
     }
 
     private Set search(String str, String str2, String[] strArr) {
-        String strM5594 = C1679.m5594(str, "=", str2);
+        String strM46451 = C20196.m46451(str, "=", str2);
         DirContext dirContextConnectLDAP = null;
         if (str == null) {
-            strM5594 = null;
+            strM46451 = null;
         }
         HashSet hashSet = new HashSet();
         try {
@@ -140,8 +140,8 @@ public class X509LDAPCertStoreSpi extends CertStoreSpi {
                 for (String str3 : strArr) {
                     String[] strArr2 = {str3};
                     searchControls.setReturningAttributes(strArr2);
-                    String str4 = "(&(" + strM5594 + ")(" + strArr2[0] + "=*))";
-                    if (strM5594 == null) {
+                    String str4 = "(&(" + strM46451 + ")(" + strArr2[0] + "=*))";
+                    if (strM46451 == null) {
                         str4 = MotionUtils.EASING_TYPE_FORMAT_START + strArr2[0] + "=*)";
                     }
                     NamingEnumeration namingEnumerationSearch = dirContextConnectLDAP.search(this.params.getBaseDN(), str4, searchControls);
@@ -242,7 +242,7 @@ public class X509LDAPCertStoreSpi extends CertStoreSpi {
             hashSet.addAll(setSearch);
             return hashSet;
         } catch (IOException e) {
-            throw new CertStoreException(C15489.m37075("exception processing selector: ", e));
+            throw new CertStoreException(C13645.m33383("exception processing selector: ", e));
         }
     }
 
@@ -267,7 +267,7 @@ public class X509LDAPCertStoreSpi extends CertStoreSpi {
                     certificateRevocationListIssuerAttributeName = this.params.getCertificateRevocationListIssuerAttributeName();
                     name = new X500Principal((byte[]) obj).getName("RFC1779");
                 }
-                hashSet2.addAll(search(ldapCertificateRevocationListAttributeName, C16523.m38890("*", parseDN(name, certificateRevocationListIssuerAttributeName), "*"), strArr));
+                hashSet2.addAll(search(ldapCertificateRevocationListAttributeName, C14442.m34865("*", parseDN(name, certificateRevocationListIssuerAttributeName), "*"), strArr));
             }
         } else {
             hashSet2.addAll(search(ldapCertificateRevocationListAttributeName, "*", strArr));
@@ -308,7 +308,7 @@ public class X509LDAPCertStoreSpi extends CertStoreSpi {
                 strSubstring3 = strSubstring3.substring(1);
             }
             if (strSubstring3.endsWith("\"")) {
-                strSubstring3 = C20630.m46498(1, 0, strSubstring3);
+                strSubstring3 = C1402.m5124(1, 0, strSubstring3);
             }
             return filterEncode(strSubstring3);
         }

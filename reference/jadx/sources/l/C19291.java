@@ -1,37 +1,28 @@
 package l;
 
-import java.lang.reflect.Method;
-
-/* JADX INFO: renamed from: l.᩵ۜۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D5S8 */
-/* JADX INFO: loaded from: classes4.dex */
-@Deprecated
+/* JADX INFO: renamed from: l.ᩳ᩵ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 777Z */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C19291 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f62257;
+    public final String f62362;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Method f62258;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Long f62363;
 
-    public C19291(Method method, int i) {
-        this.f62257 = i;
-        this.f62258 = method;
-        method.setAccessible(true);
+    public C19291(String str, Long l2) {
+        this.f62362 = str;
+        this.f62363 = l2;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof C19291)) {
-            return false;
-        }
-        C19291 c19291 = (C19291) obj;
-        return this.f62257 == c19291.f62257 && this.f62258.getName().equals(c19291.f62258.getName());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C19291 m44660(C8002 c8002) {
+        return new C19291(c8002.getName(), Long.valueOf(c8002.getSize()));
     }
 
-    public final int hashCode() {
-        return this.f62258.getName().hashCode() + (this.f62257 * 31);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C19291 m44659(String str, Long l2) {
+        return new C19291(str, l2);
     }
 }

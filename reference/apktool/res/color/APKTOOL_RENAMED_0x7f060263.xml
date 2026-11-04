@@ -2,7 +2,6 @@
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:color="?APKTOOL_RENAMED_0x7f040111" android:alpha="@dimen/APKTOOL_RENAMED_0x7f07026a" />
-    <item android:state_checkable="false" android:color="?APKTOOL_RENAMED_0x7f040104" />
-    <item android:state_checked="true" android:color="?APKTOOL_RENAMED_0x7f04010e" />
-    <item android:color="?APKTOOL_RENAMED_0x7f040111" />
+    <item android:state_selected="true" android:color="?APKTOOL_RENAMED_0x7f040111" />
+    <item android:color="?APKTOOL_RENAMED_0x7f040113" />
 </selector>

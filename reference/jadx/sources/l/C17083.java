@@ -1,54 +1,519 @@
 package l;
 
-import java.util.Set;
+import com.alipay.sdk.m.y.q;
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
+import com.google.android.material.slider.BaseSlider;
+import com.google.android.material.textfield.IndicatorViewController;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import moe.shizuku.server.IShizukuService;
+import org.bouncycastle.asn1.BERTags;
+import org.bouncycastle.crypto.engines.IDEAEngine;
+import org.bouncycastle.crypto.params.DHParameters;
+import org.bouncycastle.math.Primes;
+import org.bouncycastle.math.ec.rfc8032.Scalar25519;
+import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
 
-/* JADX INFO: renamed from: l.ܿۗ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N4QO */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17083 extends AbstractC10442 {
+/* JADX INFO: renamed from: l.ܺ᩶ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: MBHU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17083 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f54500;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C25289[] f55770;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C17684 f54501;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final String f54502;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f54503;
-
-    public C17083(C17684 c17684, C18825 c18825) {
-        this.f54501 = c17684;
-        this.f54502 = c17684.m41204(c18825.m43449());
-        int iM43449 = c18825.m43449();
-        this.f54503 = iM43449;
-        this.f54500 = c18825.m43447();
-        m39868(c18825, iM43449);
+    static {
+        EnumC14757 enumC14757 = EnumC14757.f48207;
+        EnumC11862 enumC11862 = EnumC11862.NONE;
+        C25289 c25289 = new C25289(-1, "<special>", enumC11862);
+        C25289 c252810 = new C25289(256, "packed-switch-payload", enumC11862);
+        C25289 c252811 = new C25289(512, "sparse-switch-payload", enumC11862);
+        C25289 c252812 = new C25289(768, "fill-array-data-payload", enumC11862);
+        C25289 c252813 = new C25289(0, "nop", enumC11862);
+        C25289 c252814 = new C25289(1, "move", enumC11862);
+        C25289 c252815 = new C25289(2, "move/from16", enumC11862);
+        C25289 c252816 = new C25289(3, "move/16", enumC11862);
+        C25289 c252817 = new C25289(4, "move-wide", enumC11862);
+        C25289 c252818 = new C25289(5, "move-wide/from16", enumC11862);
+        C25289 c252819 = new C25289(6, "move-wide/16", enumC11862);
+        C25289 c252820 = new C25289(7, "move-object", enumC11862);
+        C25289 c252821 = new C25289(8, "move-object/from16", enumC11862);
+        C25289 c252822 = new C25289(9, "move-object/16", enumC11862);
+        C25289 c252823 = new C25289(10, "move-result", enumC11862);
+        C25289 c252824 = new C25289(11, "move-result-wide", enumC11862);
+        C25289 c252825 = new C25289(12, "move-result-object", enumC11862);
+        C25289 c252826 = new C25289(13, "move-exception", enumC11862);
+        C25289 c252827 = new C25289(14, "return-void", enumC11862);
+        C25289 c252828 = new C25289(15, "return", enumC11862);
+        C25289 c252829 = new C25289(16, "return-wide", enumC11862);
+        C25289 c252830 = new C25289(17, "return-object", enumC11862);
+        C25289 c252831 = new C25289(18, "const/4", enumC11862);
+        C25289 c252832 = new C25289(19, "const/16", enumC11862);
+        C25289 c252833 = new C25289(20, "const", enumC11862);
+        C25289 c252834 = new C25289(21, "const/high16", enumC11862);
+        C25289 c252835 = new C25289(22, "const-wide/16", enumC11862);
+        C25289 c252836 = new C25289(23, "const-wide/32", enumC11862);
+        C25289 c252837 = new C25289(24, "const-wide", enumC11862);
+        C25289 c252838 = new C25289(25, "const-wide/high16", enumC11862);
+        EnumC11862 enumC11863 = EnumC11862.STRING_REF;
+        C25289 c252839 = new C25289(26, "const-string", enumC11863);
+        C25289 c252840 = new C25289(27, "const-string/jumbo", enumC11863);
+        EnumC11862 enumC11864 = EnumC11862.TYPE_REF;
+        C25289 c252841 = new C25289(28, "const-class", enumC11864);
+        C25289 c252842 = new C25289(29, "monitor-enter", enumC11862);
+        C25289 c252843 = new C25289(30, "monitor-exit", enumC11862);
+        C25289 c252844 = new C25289(31, "check-cast", enumC11864);
+        C25289 c252845 = new C25289(32, "instance-of", enumC11864);
+        C25289 c252846 = new C25289(33, "array-length", enumC11862);
+        C25289 c252847 = new C25289(34, "new-instance", enumC11864);
+        C25289 c252848 = new C25289(35, "new-array", enumC11864);
+        C25289 c252849 = new C25289(36, "filled-new-array", enumC11864);
+        C25289 c252850 = new C25289(37, "filled-new-array/range", enumC11864);
+        C25289 c252851 = new C25289(38, "fill-array-data", enumC11862);
+        C25289 c252852 = new C25289(39, "throw", enumC11862);
+        C25289 c252853 = new C25289(40, "goto", enumC11862);
+        C25289 c252854 = new C25289(41, "goto/16", enumC11862);
+        C25289 c252855 = new C25289(42, "goto/32", enumC11862);
+        C25289 c252856 = new C25289(43, "packed-switch", enumC11862);
+        C25289 c252857 = new C25289(44, "sparse-switch", enumC11862);
+        C25289 c252858 = new C25289(45, "cmpl-float", enumC11862);
+        C25289 c252859 = new C25289(46, "cmpg-float", enumC11862);
+        C25289 c252860 = new C25289(47, "cmpl-double", enumC11862);
+        C25289 c252861 = new C25289(48, "cmpg-double", enumC11862);
+        C25289 c252862 = new C25289(49, "cmp-long", enumC11862);
+        C25289 c252863 = new C25289(50, "if-eq", enumC11862);
+        C25289 c252864 = new C25289(51, "if-ne", enumC11862);
+        C25289 c252865 = new C25289(52, "if-lt", enumC11862);
+        C25289 c252866 = new C25289(53, "if-ge", enumC11862);
+        C25289 c252867 = new C25289(54, "if-gt", enumC11862);
+        C25289 c252868 = new C25289(55, "if-le", enumC11862);
+        C25289 c252869 = new C25289(56, "if-eqz", enumC11862);
+        C25289 c252870 = new C25289(57, "if-nez", enumC11862);
+        C25289 c252871 = new C25289(58, "if-ltz", enumC11862);
+        C25289 c252872 = new C25289(59, "if-gez", enumC11862);
+        C25289 c252873 = new C25289(60, "if-gtz", enumC11862);
+        C25289 c252874 = new C25289(61, "if-lez", enumC11862);
+        C25289 c252875 = new C25289(68, "aget", enumC11862);
+        C25289 c252876 = new C25289(69, "aget-wide", enumC11862);
+        C25289 c252877 = new C25289(70, "aget-object", enumC11862);
+        C25289 c252878 = new C25289(71, "aget-boolean", enumC11862);
+        C25289 c252879 = new C25289(72, "aget-byte", enumC11862);
+        C25289 c252880 = new C25289(73, "aget-char", enumC11862);
+        C25289 c252881 = new C25289(74, "aget-short", enumC11862);
+        C25289 c252882 = new C25289(75, "aput", enumC11862);
+        C25289 c252883 = new C25289(76, "aput-wide", enumC11862);
+        C25289 c252884 = new C25289(77, "aput-object", enumC11862);
+        C25289 c252885 = new C25289(78, "aput-boolean", enumC11862);
+        C25289 c252886 = new C25289(79, "aput-byte", enumC11862);
+        C25289 c252887 = new C25289(80, "aput-char", enumC11862);
+        C25289 c252888 = new C25289(81, "aput-short", enumC11862);
+        EnumC11862 enumC11865 = EnumC11862.FIELD_REF;
+        C25289 c252889 = new C25289(82, "iget", enumC11865);
+        C25289 c252890 = new C25289(83, "iget-wide", enumC11865);
+        C25289 c252891 = new C25289(84, "iget-object", enumC11865);
+        C25289 c252892 = new C25289(85, "iget-boolean", enumC11865);
+        C25289 c252893 = new C25289(86, "iget-byte", enumC11865);
+        C25289 c252894 = new C25289(87, "iget-char", enumC11865);
+        C25289 c252895 = new C25289(88, "iget-short", enumC11865);
+        C25289 c252896 = new C25289(89, "iput", enumC11865);
+        C25289 c252897 = new C25289(90, "iput-wide", enumC11865);
+        C25289 c252898 = new C25289(91, "iput-object", enumC11865);
+        C25289 c252899 = new C25289(92, "iput-boolean", enumC11865);
+        C25289 c2528100 = new C25289(93, "iput-byte", enumC11865);
+        C25289 c2528101 = new C25289(94, "iput-char", enumC11865);
+        C25289 c2528102 = new C25289(95, "iput-short", enumC11865);
+        C25289 c2528103 = new C25289(96, "sget", enumC11865);
+        C25289 c2528104 = new C25289(97, "sget-wide", enumC11865);
+        C25289 c2528105 = new C25289(98, "sget-object", enumC11865);
+        C25289 c2528106 = new C25289(99, "sget-boolean", enumC11865);
+        C25289 c2528107 = new C25289(100, "sget-byte", enumC11865);
+        C25289 c2528108 = new C25289(101, "sget-char", enumC11865);
+        C25289 c2528109 = new C25289(IShizukuService.Stub.TRANSACTION_attachUserService, "sget-short", enumC11865);
+        C25289 c2528110 = new C25289(IShizukuService.Stub.TRANSACTION_dispatchPackageChanged, "sput", enumC11865);
+        C25289 c2528111 = new C25289(IShizukuService.Stub.TRANSACTION_isHidden, "sput-wide", enumC11865);
+        C25289 c2528112 = new C25289(IShizukuService.Stub.TRANSACTION_dispatchPermissionConfirmationResult, "sput-object", enumC11865);
+        C25289 c2528113 = new C25289(IShizukuService.Stub.TRANSACTION_getFlagsForUid, "sput-boolean", enumC11865);
+        C25289 c2528114 = new C25289(IShizukuService.Stub.TRANSACTION_updateFlagsForUid, "sput-byte", enumC11865);
+        C25289 c2528115 = new C25289(108, "sput-char", enumC11865);
+        C25289 c2528116 = new C25289(109, "sput-short", enumC11865);
+        EnumC11862 enumC11866 = EnumC11862.METHOD_REF;
+        C25289 c2528117 = new C25289(UMErrorCode.E_UM_BE_JSON_FAILED, "invoke-virtual", enumC11866);
+        C25289 c2528118 = new C25289(UMErrorCode.E_UM_BE_CREATE_FAILED, "invoke-super", enumC11866);
+        C25289 c2528119 = new C25289(UMErrorCode.E_UM_BE_DEFLATE_FAILED, "invoke-direct", enumC11866);
+        C25289 c2528120 = new C25289(UMErrorCode.E_UM_BE_RAW_OVERSIZE, "invoke-static", enumC11866);
+        C25289 c2528121 = new C25289(114, "invoke-interface", enumC11866);
+        C25289 c2528122 = new C25289(116, "invoke-virtual/range", enumC11866);
+        C25289 c2528123 = new C25289(BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION, "invoke-super/range", enumC11866);
+        C25289 c2528124 = new C25289(118, "invoke-direct/range", enumC11866);
+        C25289 c2528125 = new C25289(119, "invoke-static/range", enumC11866);
+        C25289 c2528126 = new C25289(UMErrorCode.E_UM_BE_NOT_MAINPROCESS, "invoke-interface/range", enumC11866);
+        C25289 c2528127 = new C25289(123, "neg-int", enumC11862);
+        C25289 c2528128 = new C25289(124, "not-int", enumC11862);
+        C25289 c2528129 = new C25289(q.h, "neg-long", enumC11862);
+        C25289 c2528130 = new C25289(126, "not-long", enumC11862);
+        C25289 c2528131 = new C25289(127, "neg-float", enumC11862);
+        C25289 c2528132 = new C25289(128, "neg-double", enumC11862);
+        C25289 c2528133 = new C25289(129, "int-to-long", enumC11862);
+        C25289 c2528134 = new C25289(130, "int-to-float", enumC11862);
+        C25289 c2528135 = new C25289(131, "int-to-double", enumC11862);
+        C25289 c2528136 = new C25289(132, "long-to-int", enumC11862);
+        C25289 c2528137 = new C25289(133, "long-to-float", enumC11862);
+        C25289 c2528138 = new C25289(134, "long-to-double", enumC11862);
+        C25289 c2528139 = new C25289(135, "float-to-int", enumC11862);
+        C25289 c2528140 = new C25289(136, "float-to-long", enumC11862);
+        C25289 c2528141 = new C25289(137, "float-to-double", enumC11862);
+        C25289 c2528142 = new C25289(138, "double-to-int", enumC11862);
+        C25289 c2528143 = new C25289(139, "double-to-long", enumC11862);
+        C25289 c2528144 = new C25289(140, "double-to-float", enumC11862);
+        C25289 c2528145 = new C25289(141, "int-to-byte", enumC11862);
+        C25289 c2528146 = new C25289(142, "int-to-char", enumC11862);
+        C25289 c2528147 = new C25289(143, "int-to-short", enumC11862);
+        C25289 c2528148 = new C25289(144, "add-int", enumC11862);
+        C25289 c2528149 = new C25289(145, "sub-int", enumC11862);
+        C25289 c2528150 = new C25289(146, "mul-int", enumC11862);
+        C25289 c2528151 = new C25289(147, "div-int", enumC11862);
+        C25289 c2528152 = new C25289(148, "rem-int", enumC11862);
+        C25289 c2528153 = new C25289(149, "and-int", enumC11862);
+        C25289 c2528154 = new C25289(150, "or-int", enumC11862);
+        C25289 c2528155 = new C25289(151, "xor-int", enumC11862);
+        C25289 c2528156 = new C25289(152, "shl-int", enumC11862);
+        C25289 c2528157 = new C25289(153, "shr-int", enumC11862);
+        C25289 c2528158 = new C25289(EnumC24309.f78687, "ushr-int", enumC11862);
+        C25289 c2528159 = new C25289(155, "add-long", enumC11862);
+        C25289 c2528160 = new C25289(156, "sub-long", enumC11862);
+        C25289 c2528161 = new C25289(157, "mul-long", enumC11862);
+        C25289 c2528162 = new C25289(158, "div-long", enumC11862);
+        C25289 c2528163 = new C25289(159, "rem-long", enumC11862);
+        C25289 c2528164 = new C25289(DHParameters.DEFAULT_MINIMUM_LENGTH, "and-long", enumC11862);
+        C25289 c2528165 = new C25289(161, "or-long", enumC11862);
+        C25289 c2528166 = new C25289(162, "xor-long", enumC11862);
+        C25289 c2528167 = new C25289(163, "shl-long", enumC11862);
+        C25289 c2528168 = new C25289(164, "shr-long", enumC11862);
+        C25289 c2528169 = new C25289(165, "ushr-long", enumC11862);
+        C25289 c2528170 = new C25289(166, "add-float", enumC11862);
+        C25289 c2528171 = new C25289(167, "sub-float", enumC11862);
+        C25289 c2528172 = new C25289(168, "mul-float", enumC11862);
+        C25289 c2528173 = new C25289(169, "div-float", enumC11862);
+        C25289 c2528174 = new C25289(170, "rem-float", enumC11862);
+        C25289 c2528175 = new C25289(171, "add-double", enumC11862);
+        C25289 c2528176 = new C25289(172, "sub-double", enumC11862);
+        C25289 c2528177 = new C25289(173, "mul-double", enumC11862);
+        C25289 c2528178 = new C25289(174, "div-double", enumC11862);
+        C25289 c2528179 = new C25289(HideBottomViewOnScrollBehavior.DEFAULT_EXIT_ANIMATION_DURATION_MS, "rem-double", enumC11862);
+        C25289 c2528180 = new C25289(PicnicEngine.MAX_AUX_BYTES, "add-int/2addr", enumC11862);
+        C25289 c2528181 = new C25289(177, "sub-int/2addr", enumC11862);
+        C25289 c2528182 = new C25289(178, "mul-int/2addr", enumC11862);
+        C25289 c2528183 = new C25289(179, "div-int/2addr", enumC11862);
+        C25289 c2528184 = new C25289(180, "rem-int/2addr", enumC11862);
+        C25289 c2528185 = new C25289(181, "and-int/2addr", enumC11862);
+        C25289 c2528186 = new C25289(182, "or-int/2addr", enumC11862);
+        C25289 c2528187 = new C25289(183, "xor-int/2addr", enumC11862);
+        C25289 c2528188 = new C25289(184, "shl-int/2addr", enumC11862);
+        C25289 c2528189 = new C25289(185, "shr-int/2addr", enumC11862);
+        C25289 c2528190 = new C25289(186, "ushr-int/2addr", enumC11862);
+        C25289 c2528191 = new C25289(187, "add-long/2addr", enumC11862);
+        C25289 c2528192 = new C25289(188, "sub-long/2addr", enumC11862);
+        C25289 c2528193 = new C25289(189, "mul-long/2addr", enumC11862);
+        C25289 c2528194 = new C25289(190, "div-long/2addr", enumC11862);
+        C25289 c2528195 = new C25289(191, "rem-long/2addr", enumC11862);
+        C25289 c2528196 = new C25289(192, "and-long/2addr", enumC11862);
+        C25289 c2528197 = new C25289(193, "or-long/2addr", enumC11862);
+        C25289 c2528198 = new C25289(194, "xor-long/2addr", enumC11862);
+        C25289 c2528199 = new C25289(195, "shl-long/2addr", enumC11862);
+        C25289 c2528200 = new C25289(196, "shr-long/2addr", enumC11862);
+        C25289 c2528201 = new C25289(197, "ushr-long/2addr", enumC11862);
+        C25289 c2528202 = new C25289(198, "add-float/2addr", enumC11862);
+        C25289 c2528203 = new C25289(199, "sub-float/2addr", enumC11862);
+        C25289 c2528204 = new C25289(200, "mul-float/2addr", enumC11862);
+        C25289 c2528205 = new C25289(201, "div-float/2addr", enumC11862);
+        C25289 c2528206 = new C25289(202, "rem-float/2addr", enumC11862);
+        C25289 c2528207 = new C25289(203, "add-double/2addr", enumC11862);
+        C25289 c2528208 = new C25289(204, "sub-double/2addr", enumC11862);
+        C25289 c2528209 = new C25289(205, "mul-double/2addr", enumC11862);
+        C25289 c2528210 = new C25289(206, "div-double/2addr", enumC11862);
+        C25289 c2528211 = new C25289(207, "rem-double/2addr", enumC11862);
+        C25289 c2528212 = new C25289(208, "add-int/lit16", enumC11862);
+        C25289 c2528213 = new C25289(209, "rsub-int", enumC11862);
+        C25289 c2528214 = new C25289(210, "mul-int/lit16", enumC11862);
+        C25289 c2528215 = new C25289(Primes.SMALL_FACTOR_LIMIT, "div-int/lit16", enumC11862);
+        C25289 c2528216 = new C25289(212, "rem-int/lit16", enumC11862);
+        C25289 c2528217 = new C25289(213, "and-int/lit16", enumC11862);
+        C25289 c2528218 = new C25289(214, "or-int/lit16", enumC11862);
+        C25289 c2528219 = new C25289(215, "xor-int/lit16", enumC11862);
+        C25289 c2528220 = new C25289(216, "add-int/lit8", enumC11862);
+        C25289 c2528221 = new C25289(IndicatorViewController.DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION, "rsub-int/lit8", enumC11862);
+        C25289 c2528222 = new C25289(218, "mul-int/lit8", enumC11862);
+        C25289 c2528223 = new C25289(219, "div-int/lit8", enumC11862);
+        C25289 c2528224 = new C25289(220, "rem-int/lit8", enumC11862);
+        C25289 c2528225 = new C25289(221, "and-int/lit8", enumC11862);
+        C25289 c2528226 = new C25289(222, "or-int/lit8", enumC11862);
+        C25289 c2528227 = new C25289(223, "xor-int/lit8", enumC11862);
+        C25289 c2528228 = new C25289(BERTags.FLAGS, "shl-int/lit8", enumC11862);
+        C25289 c2528229 = new C25289(HideBottomViewOnScrollBehavior.DEFAULT_ENTER_ANIMATION_DURATION_MS, "shr-int/lit8", enumC11862);
+        C25289 c2528230 = new C25289(226, "ushr-int/lit8", enumC11862);
+        EnumC11862 enumC11867 = EnumC11862.METHOD_AND_PROTO_REF;
+        C25289 c2528231 = new C25289(250, "invoke-polymorphic", enumC11867);
+        C25289 c2528232 = new C25289(251, "invoke-polymorphic/range", enumC11867);
+        EnumC11862 enumC11868 = EnumC11862.CALL_SITE_REF;
+        C25289 c2528233 = new C25289(252, "invoke-custom", enumC11868);
+        C25289 c2528234 = new C25289(253, "invoke-custom/range", enumC11868);
+        C25289 c2528235 = new C25289(Scalar25519.TARGET_LENGTH, "const-method-handle", EnumC11862.METHOD_HANDLE_REF);
+        C25289 c2528236 = new C25289(255, "const-method-type", EnumC11862.PROTO_REF);
+        f55770 = new C25289[IDEAEngine.BASE];
+        m40216(c25289);
+        m40216(c252810);
+        m40216(c252811);
+        m40216(c252812);
+        m40216(c252813);
+        m40216(c252814);
+        m40216(c252815);
+        m40216(c252816);
+        m40216(c252817);
+        m40216(c252818);
+        m40216(c252819);
+        m40216(c252820);
+        m40216(c252821);
+        m40216(c252822);
+        m40216(c252823);
+        m40216(c252824);
+        m40216(c252825);
+        m40216(c252826);
+        m40216(c252827);
+        m40216(c252828);
+        m40216(c252829);
+        m40216(c252830);
+        m40216(c252831);
+        m40216(c252832);
+        m40216(c252833);
+        m40216(c252834);
+        m40216(c252835);
+        m40216(c252836);
+        m40216(c252837);
+        m40216(c252838);
+        m40216(c252839);
+        m40216(c252840);
+        m40216(c252841);
+        m40216(c252842);
+        m40216(c252843);
+        m40216(c252844);
+        m40216(c252845);
+        m40216(c252846);
+        m40216(c252847);
+        m40216(c252848);
+        m40216(c252849);
+        m40216(c252850);
+        m40216(c252851);
+        m40216(c252852);
+        m40216(c252853);
+        m40216(c252854);
+        m40216(c252855);
+        m40216(c252856);
+        m40216(c252857);
+        m40216(c252858);
+        m40216(c252859);
+        m40216(c252860);
+        m40216(c252861);
+        m40216(c252862);
+        m40216(c252863);
+        m40216(c252864);
+        m40216(c252865);
+        m40216(c252866);
+        m40216(c252867);
+        m40216(c252868);
+        m40216(c252869);
+        m40216(c252870);
+        m40216(c252871);
+        m40216(c252872);
+        m40216(c252873);
+        m40216(c252874);
+        m40216(c252875);
+        m40216(c252876);
+        m40216(c252877);
+        m40216(c252878);
+        m40216(c252879);
+        m40216(c252880);
+        m40216(c252881);
+        m40216(c252882);
+        m40216(c252883);
+        m40216(c252884);
+        m40216(c252885);
+        m40216(c252886);
+        m40216(c252887);
+        m40216(c252888);
+        m40216(c252889);
+        m40216(c252890);
+        m40216(c252891);
+        m40216(c252892);
+        m40216(c252893);
+        m40216(c252894);
+        m40216(c252895);
+        m40216(c252896);
+        m40216(c252897);
+        m40216(c252898);
+        m40216(c252899);
+        m40216(c2528100);
+        m40216(c2528101);
+        m40216(c2528102);
+        m40216(c2528103);
+        m40216(c2528104);
+        m40216(c2528105);
+        m40216(c2528106);
+        m40216(c2528107);
+        m40216(c2528108);
+        m40216(c2528109);
+        m40216(c2528110);
+        m40216(c2528111);
+        m40216(c2528112);
+        m40216(c2528113);
+        m40216(c2528114);
+        m40216(c2528115);
+        m40216(c2528116);
+        m40216(c2528117);
+        m40216(c2528118);
+        m40216(c2528119);
+        m40216(c2528120);
+        m40216(c2528121);
+        m40216(c2528122);
+        m40216(c2528123);
+        m40216(c2528124);
+        m40216(c2528125);
+        m40216(c2528126);
+        m40216(c2528127);
+        m40216(c2528128);
+        m40216(c2528129);
+        m40216(c2528130);
+        m40216(c2528131);
+        m40216(c2528132);
+        m40216(c2528133);
+        m40216(c2528134);
+        m40216(c2528135);
+        m40216(c2528136);
+        m40216(c2528137);
+        m40216(c2528138);
+        m40216(c2528139);
+        m40216(c2528140);
+        m40216(c2528141);
+        m40216(c2528142);
+        m40216(c2528143);
+        m40216(c2528144);
+        m40216(c2528145);
+        m40216(c2528146);
+        m40216(c2528147);
+        m40216(c2528148);
+        m40216(c2528149);
+        m40216(c2528150);
+        m40216(c2528151);
+        m40216(c2528152);
+        m40216(c2528153);
+        m40216(c2528154);
+        m40216(c2528155);
+        m40216(c2528156);
+        m40216(c2528157);
+        m40216(c2528158);
+        m40216(c2528159);
+        m40216(c2528160);
+        m40216(c2528161);
+        m40216(c2528162);
+        m40216(c2528163);
+        m40216(c2528164);
+        m40216(c2528165);
+        m40216(c2528166);
+        m40216(c2528167);
+        m40216(c2528168);
+        m40216(c2528169);
+        m40216(c2528170);
+        m40216(c2528171);
+        m40216(c2528172);
+        m40216(c2528173);
+        m40216(c2528174);
+        m40216(c2528175);
+        m40216(c2528176);
+        m40216(c2528177);
+        m40216(c2528178);
+        m40216(c2528179);
+        m40216(c2528180);
+        m40216(c2528181);
+        m40216(c2528182);
+        m40216(c2528183);
+        m40216(c2528184);
+        m40216(c2528185);
+        m40216(c2528186);
+        m40216(c2528187);
+        m40216(c2528188);
+        m40216(c2528189);
+        m40216(c2528190);
+        m40216(c2528191);
+        m40216(c2528192);
+        m40216(c2528193);
+        m40216(c2528194);
+        m40216(c2528195);
+        m40216(c2528196);
+        m40216(c2528197);
+        m40216(c2528198);
+        m40216(c2528199);
+        m40216(c2528200);
+        m40216(c2528201);
+        m40216(c2528202);
+        m40216(c2528203);
+        m40216(c2528204);
+        m40216(c2528205);
+        m40216(c2528206);
+        m40216(c2528207);
+        m40216(c2528208);
+        m40216(c2528209);
+        m40216(c2528210);
+        m40216(c2528211);
+        m40216(c2528212);
+        m40216(c2528213);
+        m40216(c2528214);
+        m40216(c2528215);
+        m40216(c2528216);
+        m40216(c2528217);
+        m40216(c2528218);
+        m40216(c2528219);
+        m40216(c2528220);
+        m40216(c2528221);
+        m40216(c2528222);
+        m40216(c2528223);
+        m40216(c2528224);
+        m40216(c2528225);
+        m40216(c2528226);
+        m40216(c2528227);
+        m40216(c2528228);
+        m40216(c2528229);
+        m40216(c2528230);
+        m40216(c2528231);
+        m40216(c2528232);
+        m40216(c2528233);
+        m40216(c2528234);
+        m40216(c2528235);
+        m40216(c2528236);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m39867(C18825 c18825) {
-        c18825.m43452();
-        m39868(c18825, c18825.m43449());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m39868(C18825 c18825, int i) {
-        for (int i2 = 0; i2 < i; i2++) {
-            c18825.m43452();
-            AbstractC10872.m27240(c18825);
+    public static C25289 m40215(int i) {
+        String strM15938;
+        try {
+            C25289 c25289 = f55770[i + 1];
+            if (c25289 != null) {
+                return c25289;
+            }
+        } catch (ArrayIndexOutOfBoundsException unused) {
         }
+        if (i == ((char) i)) {
+            strM15938 = C5306.m15934(i);
+        } else {
+            strM15938 = C5306.m15938(i);
+        }
+        throw new IllegalArgumentException("bogus opcode: ".concat(strM15938));
     }
 
-    @Override // l.InterfaceC20147
-    public final String getType() {
-        return this.f54502;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static EnumC11862 m40217(int i) {
+        return m40215(i).m56466();
     }
 
-    @Override // l.InterfaceC20147
-    public final Set getElements() {
-        return new C12145(this, this.f54501, this.f54500, this.f54503);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m40216(C25289 c25289) {
+        f55770[c25289.m56467() + 1] = c25289;
     }
 }

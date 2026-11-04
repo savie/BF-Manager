@@ -1,157 +1,79 @@
-.class public abstract Ll/۟ܿ᩵;
-.super Ljava/lang/Object;
-.source "05J4"
+.class public final Ll/۟ܿ᩵;
+.super Ll/ۘܿ᩵;
+.source "F9W6"
 
-# interfaces
-.implements Ll/֡ۨۡ;
+
+# instance fields
+.field public ᩸ۙ:Ll/᩶ܿ᩵;
+
+
+# direct methods
+.method public constructor <init>(Ll/᩶ܿ᩵;Ll/ᩴ֡᩵;)V
+    .locals 1
+
+    .line 37
+    invoke-virtual {p1}, Ll/᩶ܿ᩵;->۫()Ll/ܰܿ᩵;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0, p2}, Ll/ۘܿ᩵;-><init>(Ll/ܰܿ᩵;Ll/ᩴ֡᩵;)V
+
+    .line 38
+    iput-object p1, p0, Ll/۟ܿ᩵;->᩸ۙ:Ll/᩶ܿ᩵;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 3
+.method public final close()V
+    .locals 0
 
-    .line 44
-    check-cast p1, Ll/ۧۨۡ;
+    return-void
+.end method
 
-    const/16 v0, 0x1c
+.method public final isOpen()Z
+    .locals 1
 
-    .line 60
-    invoke-interface {p1}, Ll/ۧۨۡ;->᩸()I
+    .line 49
+    iget-object v0, p0, Ll/۟ܿ᩵;->᩸ۙ:Ll/᩶ܿ᩵;
 
-    move-result v1
-
-    .line 133
-    invoke-static {v0, v1}, Ljava/lang/Integer;->compare(II)I
+    invoke-virtual {v0}, Ll/᩶ܿ᩵;->isOpen()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
     return v0
+.end method
 
-    .line 62
-    :cond_0
-    invoke-interface {p0}, Ll/֡ۨۡ;->getValue()Ljava/util/List;
+.method public final declared-synchronized ۙ()Ll/ۛܿ᩵;
+    .locals 2
 
-    move-result-object v0
+    move-object v0, p0
 
-    check-cast p1, Ll/֡ۨۡ;
+    .line 1
+    monitor-enter v0
 
-    invoke-interface {p1}, Ll/֡ۨۡ;->getValue()Ljava/util/List;
+    .line 61
+    :try_start_0
+    iget-object v1, p0, Ll/۟ܿ᩵;->᩸ۙ:Ll/᩶ܿ᩵;
 
-    move-result-object p1
-
-    .line 69
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v2
-
-    .line 133
-    invoke-static {v1, v2}, Ljava/lang/Integer;->compare(II)I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return v1
-
-    .line 71
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    .line 72
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ll/᩶ܿ᩵;->ۙ()Ll/ۛܿ᩵;
 
     move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v1, Ljava/lang/Comparable;
+    monitor-exit v0
 
-    .line 73
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-object v1
 
-    move-result-object v2
+    :catchall_0
+    move-exception v1
 
-    invoke-interface {v1, v2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 52
-    instance-of v0, p1, Ll/֡ۨۡ;
-
-    if-eqz v0, :cond_0
-
-    .line 53
-    invoke-interface {p0}, Ll/֡ۨۡ;->getValue()Ljava/util/List;
-
-    move-result-object v0
-
-    check-cast p1, Ll/֡ۨۡ;
-
-    invoke-interface {p1}, Ll/֡ۨۡ;->getValue()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 47
-    invoke-interface {p0}, Ll/֡ۨۡ;->getValue()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ᩸()I
-    .locals 1
-
-    const/16 v0, 0x1c
-
-    return v0
+    throw v1
 .end method

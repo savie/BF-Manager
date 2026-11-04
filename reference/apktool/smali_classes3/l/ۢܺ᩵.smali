@@ -1,122 +1,42 @@
-.class public final Ll/ۢܺ᩵;
-.super Ll/ۙ֡᩵;
-.source "F5F2"
-
-# interfaces
-.implements Ll/ۘ֡᩵;
-
-
-# static fields
-.field public static final ۚ:Ll/ۗ᩶᩵;
-
-
-# instance fields
-.field public ۖ:B
-
-.field public ۨ:B
-
-.field public ܰ:S
+.class public final synthetic Ll/ۢܺ᩵;
+.super Ljava/lang/Object;
+.source "I6PU"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static synthetic ۙ(Lsun/misc/Unsafe;Ll/᩹ܽ᩵;JLjava/lang/Object;)Z
+    .locals 6
 
-    .line 40
-    new-instance v0, Ll/֫ܺ᩵;
+    :cond_0
+    const/4 v4, 0x0
 
-    .line 92
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
 
-    .line 40
-    sput-object v0, Ll/ۢܺ᩵;->ۚ:Ll/ۗ᩶᩵;
+    move-object v1, p1
 
-    return-void
-.end method
+    move-wide v2, p2
 
-.method public constructor <init>(Ll/֨֡᩵;[BI)V
-    .locals 1
+    move-object v5, p4
 
-    .line 63
-    invoke-direct {p0, p1}, Ll/ۙ֡᩵;-><init>(Ll/֨֡᩵;)V
+    .line 0
+    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
-    add-int/lit8 p1, p3, 0x1
+    move-result v0
 
-    .line 65
-    aget-byte p1, p2, p1
+    if-eqz v0, :cond_1
 
-    and-int/lit8 v0, p1, 0xf
+    const/4 p0, 0x1
 
-    int-to-byte v0, v0
+    return p0
 
-    iput-byte v0, p0, Ll/ۢܺ᩵;->ۨ:B
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 66
-    invoke-static {p1}, Ll/ܳܶܶ;->ۙ(B)B
+    move-result-object v0
 
-    move-result p1
+    if-eqz v0, :cond_0
 
-    iput-byte p1, p0, Ll/ۢܺ᩵;->ۖ:B
+    const/4 p0, 0x0
 
-    add-int/lit8 p3, p3, 0x2
-
-    .line 67
-    invoke-static {p3, p2}, Ll/ܳܶܶ;->ۨ(I[B)I
-
-    move-result p1
-
-    int-to-short p1, p1
-
-    iput-short p1, p0, Ll/ۢܺ᩵;->ܰ:S
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ()I
-    .locals 1
-
-    .line 81
-    iget-byte v0, p0, Ll/ۢܺ᩵;->ۨ:B
-
-    return v0
-.end method
-
-.method public final ۜ()Ll/֨ܺ᩵;
-    .locals 1
-
-    .line 77
-    sget-object v0, Ll/֨ܺ᩵;->ۚۙ:Ll/֨ܺ᩵;
-
-    return-object v0
-.end method
-
-.method public final ܰ(Ll/ۙ۫᩵;I)V
-    .locals 1
-
-    .line 71
-    iget-object p2, p0, Ll/ۙ֡᩵;->ۙ:Ll/֨֡᩵;
-
-    iget-byte p2, p2, Ll/֨֡᩵;->۫:B
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
-
-    .line 72
-    iget-byte p2, p0, Ll/ۢܺ᩵;->ۖ:B
-
-    shl-int/lit8 p2, p2, 0x4
-
-    iget-byte v0, p0, Ll/ۢܺ᩵;->ۨ:B
-
-    or-int/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
-
-    .line 73
-    iget-short p2, p0, Ll/ۢܺ᩵;->ܰ:S
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ۖ(I)V
-
-    return-void
+    return p0
 .end method

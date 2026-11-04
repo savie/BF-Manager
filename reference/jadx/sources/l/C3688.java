@@ -1,24 +1,32 @@
 package l;
 
-import java.util.HashSet;
-
-/* JADX INFO: renamed from: l.ۘۘ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 7A22 */
+/* JADX INFO: renamed from: l.ۗ᩷᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: K3OA */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3688 extends C18506 {
-    @Override // l.C18506
+public final class C3688 implements InterfaceC10143 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo10854(C22823 c22823, HashSet hashSet) {
-        AbstractC7923 abstractC7923M8886 = c22823.m50562().m8886(m24467(), true, C17178.f54761);
-        if (abstractC7923M8886 != null) {
-            hashSet.add(abstractC7923M8886);
-        }
+    public final /* synthetic */ C15291 f12681;
+
+    public C3688(C15291 c15291) {
+        this.f12681 = c15291;
     }
 
-    @Override // l.C18506
+    @Override // l.InterfaceC10143
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo10855(C22823 c22823) {
-        String lowerCase = m24477().toLowerCase();
-        return c22823.m50562().f11191.equals(lowerCase) || ((ConcurrentMapC13783) c22823.m50563()).containsKey(lowerCase);
+    public final void mo11986(C6672 c6672) {
+        this.f12681.m36723(c6672);
+    }
+
+    @Override // l.InterfaceC10143
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo11985(C4851 c4851) {
+        this.f12681.m36722(c4851);
+    }
+
+    @Override // l.InterfaceC10143
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo11984(C1451 c1451) {
+        this.f12681.m36699((C7660) c1451.f61224);
     }
 }

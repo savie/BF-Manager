@@ -28,7 +28,7 @@ public class c {
     public static final int k = 2;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77917l = 4;
+    public static final int f82033l = 4;
     public static final int m = 11;
     public static final int n = 2000;
     public static Context o;

@@ -1,39 +1,19 @@
 .class public final synthetic Ll/ۖۡۘ;
 .super Ljava/lang/Object;
-.source "E72G"
+.source "79RF"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field public final synthetic ܺ:Landroid/webkit/JsResult;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/webkit/JsResult;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۖۡۘ;->ܺ:Landroid/webkit/JsResult;
-
-    return-void
-.end method
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public final binderDied()V
+    .locals 1
 
-    .line 2
-    sget-object p1, Ll/ۤۡۘ;->֫ܰ:Ll/۠ۡۘ;
+    const/4 v0, 0x0
 
-    .line 1010
-    iget-object p1, p0, Ll/ۖۡۘ;->ܺ:Landroid/webkit/JsResult;
-
-    invoke-virtual {p1}, Landroid/webkit/JsResult;->cancel()V
+    .line 78
+    invoke-static {v0, v0}, Ll/۫ۖۘ;->ۤ(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
 .end method

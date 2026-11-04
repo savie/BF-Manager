@@ -1,38 +1,59 @@
 package l;
 
-import java.io.IOException;
-import java.util.function.IntConsumer;
+import android.view.View;
+import java.lang.reflect.Field;
 
-/* JADX INFO: renamed from: l.᩵۠ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A186 */
+/* JADX INFO: renamed from: l.ᩳ᩷ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 71JX */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19334 implements InterfaceC12984 {
+public final class C19334 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f62356;
+    public static final Field f62449;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ IntConsumer f62357;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7817 f62358;
-
-    public C19334(AbstractC20745 abstractC20745, C7817 c7817, IntConsumer intConsumer) {
-        this.f62356 = abstractC20745;
-        this.f62358 = c7817;
-        this.f62357 = intConsumer;
+    static {
+        try {
+            Field declaredField = C8147.class.getDeclaredField("ܽۙ");
+            f62449 = declaredField;
+            declaredField.setAccessible(true);
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @Override // l.InterfaceC12984
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19602(AbstractC20745 abstractC20745, int i) {
-        this.f62358.m20584(this.f62356.mo24643(), abstractC20745.mo24643(), C16737.m39280(), this.f62357);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static View m44722(C8147 c8147, int i) {
+        return c8147.m22053(i);
     }
 
-    @Override // l.InterfaceC12984
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo19603(IOException iOException) {
-        String message = iOException.getMessage();
-        return message != null && message.startsWith("Unable to open target file");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m44724(C8147 c8147) {
+        View viewM22053 = c8147.m22053(8388611);
+        return viewM22053 != null && ((C24556) viewM22053.getLayoutParams()).f79595 == 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static float m44721(C8147 c8147, View view) {
+        c8147.getClass();
+        return ((C24556) view.getLayoutParams()).f79593;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m44723(C8147 c8147, View view, float f) {
+        c8147.m22036(f, view);
+        C24556 c24556 = (C24556) view.getLayoutParams();
+        if (f == 1.0f) {
+            c24556.f79595 = (c24556.f79595 | 1) & (-3);
+        } else if (f == 0.0f) {
+            c24556.f79595 &= -4;
+        } else {
+            c24556.f79595 = (c24556.f79595 | 2) & (-2);
+        }
+        try {
+            f62449.setFloat(c8147, f);
+            c8147.invalidate();
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

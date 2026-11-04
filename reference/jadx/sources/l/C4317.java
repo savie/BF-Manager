@@ -1,24 +1,32 @@
 package l;
 
-import android.content.Context;
-import android.hardware.display.DisplayManager;
-import android.view.Display;
+/* JADX INFO: renamed from: l.ۘܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C4317 extends EnumC14757 {
+    public /* synthetic */ C4317() {
+        this("FORMAT_22X", 8);
+    }
 
-/* JADX INFO: renamed from: l.ۙ֨ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z8VY */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4317 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m12142(Context context) {
-        DisplayManager displayManager = (DisplayManager) context.getSystemService("display");
-        Display display = displayManager != null ? displayManager.getDisplay(0) : null;
-        if (display != null && display.isHdr()) {
-            for (int i : display.getHdrCapabilities().getSupportedHdrTypes()) {
-                if (i == 1) {
-                    return true;
-                }
-            }
+    public C4317(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        return new C9536(this, EnumC14757.m35466(i), 0, 0, 0L, EnumC14757.m35482(i), interfaceC16337.read());
+    }
+
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        EnumC14757.m35480(abstractC3659.m11863(), abstractC3659.mo2677());
+        int iMo4905 = abstractC3659.mo4905();
+        if (((-65536) & iMo4905) == 0) {
+            interfaceC23797.m53082();
+            return;
         }
-        return false;
+        throw new C20288("Register B out of range: ".concat(C5306.m15937(iMo4905)), null);
     }
 }

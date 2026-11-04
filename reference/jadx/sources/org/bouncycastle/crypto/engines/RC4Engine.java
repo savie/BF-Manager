@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.StreamCipher;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RC4Engine implements StreamCipher {
     public static final int STATE_LENGTH = 256;
     public boolean forEncryption;
@@ -93,7 +93,7 @@ public class RC4Engine implements StreamCipher {
     @Override // org.bouncycastle.crypto.StreamCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to RC4 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to RC4 init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         this.workingKey = key;

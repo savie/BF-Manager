@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.DigestInfo;
 import org.bouncycastle.asn1.x509.GeneralName;
 import org.bouncycastle.asn1.x509.GeneralNames;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LinkedCertificate extends ASN1Object {
     public GeneralNames cACerts;
     public X500Name certIssuer;

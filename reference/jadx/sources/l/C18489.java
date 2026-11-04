@@ -1,45 +1,69 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۗ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: R790 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18489 {
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.net.SocketException;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean[] f58923;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int[] f58924;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f58925;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int[] f58926;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f58927;
+/* JADX INFO: renamed from: l.ܿܿᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D99I */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18489 implements InterfaceC14759 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f58928;
+    public final Socket f60166;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public long f58929;
-
-    public C18489(int i) {
-        this.f58927 = i;
-        this.f58924 = new int[i];
-        this.f58926 = new int[i];
-        this.f58925 = new int[i];
-        this.f58923 = new boolean[i];
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ۖ᩷ */
+    public final boolean mo35490() {
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static long m42876(C18489 c18489) {
-        long jM44064 = 0;
-        for (int i : c18489.f58924) {
-            jM44064 = C19195.m44064(jM44064, i);
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ᩺ */
+    public final boolean mo35492() {
+        return false;
+    }
+
+    public C18489(Socket socket) {
+        this.f60166 = socket;
+        try {
+            socket.setTcpNoDelay(true);
+        } catch (SocketException unused) {
         }
-        return jM44064;
+        try {
+            int sendBufferSize = socket.getSendBufferSize();
+            if (sendBufferSize < 1024 || sendBufferSize > 262144) {
+                socket.setSendBufferSize(262144);
+            }
+        } catch (Exception unused2) {
+        }
+    }
+
+    @Override // l.InterfaceC14759
+    public final InputStream getInputStream() {
+        return this.f60166.getInputStream();
+    }
+
+    @Override // l.InterfaceC14759
+    public final OutputStream getOutputStream() {
+        return this.f60166.getOutputStream();
+    }
+
+    @Override // l.InterfaceC14759
+    public final int getSendBufferSize() {
+        return Math.min(this.f60166.getSendBufferSize(), 262144);
+    }
+
+    @Override // l.InterfaceC14759
+    /* JADX INFO: renamed from: ᩹ۙ */
+    public final int mo35491() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        this.f60166.close();
     }
 }

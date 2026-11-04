@@ -1,35 +1,61 @@
 package l;
 
-import android.text.Layout;
-import android.text.SpannableStringBuilder;
+import android.graphics.Bitmap;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۡᩴܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M8UR */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9069 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C19652 f30924 = new C19652();
+/* JADX INFO: renamed from: l.ۡۖۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K74T */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9069 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0612 f30925;
+    public final Bitmap f29481;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f30926;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final EnumC2358 f29482;
 
-    public C9069(SpannableStringBuilder spannableStringBuilder, Layout.Alignment alignment, float f, int i, float f2, int i2, boolean z, int i3, int i4) {
-        C20369 c20369 = new C20369();
-        c20369.m46002(spannableStringBuilder);
-        c20369.m46012(alignment);
-        c20369.m45998(f, 0);
-        c20369.m45999(i);
-        c20369.m46009(f2);
-        c20369.m46011(i2);
-        c20369.m45994(-3.4028235E38f);
-        if (z) {
-            c20369.m45995(i3);
+    public C9069(EnumC2358 enumC2358, Bitmap bitmap) {
+        this.f29482 = enumC2358;
+        this.f29481 = bitmap;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C9069)) {
+            return false;
         }
-        this.f30925 = c20369.m45996();
-        this.f30926 = i4;
+        C9069 c9069 = (C9069) obj;
+        return C17359.equals(this.f29482, c9069.f29482) && C17359.equals(this.f29481, c9069.f29481);
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f29481) + (C17359.hashCode(this.f29482) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f29482, this.f29481};
+        String[] strArrSplit = "status;bitmap".length() == 0 ? new String[0] : "status;bitmap".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C9069.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Bitmap m24205() {
+        return this.f29481;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final EnumC2358 m24206() {
+        return this.f29482;
     }
 }

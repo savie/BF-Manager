@@ -1,205 +1,299 @@
 .class public final Ll/۬ܳ᩹;
 .super Ljava/lang/Object;
-.source "F8CE"
+.source "B916"
 
 # interfaces
-.implements Ll/ۜܳ᩹;
+.implements Landroid/text/method/MovementMethod;
 
 
-# static fields
-.field public static final ۙ:[I
+# instance fields
+.field public final ۙ:Landroid/text/method/MovementMethod;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/text/method/MovementMethod;)V
+    .locals 0
 
-    const/16 v0, 0xd
+    .line 81
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x11
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x5
-
-    const/16 v4, 0x9
-
-    .line 169
-    filled-new-array {v2, v3, v4, v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ll/۬ܳ᩹;->ۙ:[I
+    .line 82
+    iput-object p1, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۟᩸ۨ;)J
-    .locals 4
-
-    const-wide/16 v0, 0x4
-
-    const-wide/16 v2, -0x1
-
-    .line 105
-    :try_start_0
-    invoke-interface {p1, v0, v1}, Ll/۟᩸ۨ;->seek(J)V
-
-    .line 106
-    invoke-interface {p1}, Ll/۟᩸ۨ;->readByte()B
-
-    move-result v0
-
-    invoke-static {v0}, Ll/۟ܳ۠;->ۙ(B)Ll/۟ܳ۠;
-
-    move-result-object v0
-
-    .line 107
-    sget-object v1, Ll/ۤܳ۠;->ܿ:Ll/ۤܳ۠;
-
-    invoke-virtual {v0, v1}, Ll/۟ܳ۠;->ۙ(Ll/ۤܳ۠;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 108
-    invoke-interface {p1, v0}, Ll/۟᩸ۨ;->skipBytes(I)I
-
-    .line 109
-    invoke-interface {p1}, Ll/۟᩸ۨ;->readLong()J
-
-    move-result-wide v0
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-wide v0
-
-    :catch_0
-    :cond_0
-    return-wide v2
-.end method
-
-.method public final ۙ(Ljava/io/InputStream;)Ljava/io/InputStream;
+.method public final canSelectArbitrarily()Z
     .locals 1
 
-    .line 165
-    new-instance v0, Ll/۠ܳ۠;
+    .line 129
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    invoke-direct {v0, p1}, Ll/۠ܳ۠;-><init>(Ljava/io/InputStream;)V
+    invoke-interface {v0}, Landroid/text/method/MovementMethod;->canSelectArbitrarily()Z
 
-    return-object v0
+    move-result v0
+
+    return v0
 .end method
 
-.method public final ۙ(Ljava/io/OutputStream;IJ)Ljava/io/OutputStream;
-    .locals 2
+.method public final initialize(Landroid/widget/TextView;Landroid/text/Spannable;)V
+    .locals 1
 
-    .line 173
-    new-instance v0, Ll/ܺܳ۠;
+    .line 87
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    sget-object v1, Ll/۬ܳ᩹;->ۙ:[I
+    invoke-interface {v0, p1, p2}, Landroid/text/method/MovementMethod;->initialize(Landroid/widget/TextView;Landroid/text/Spannable;)V
 
-    aget p2, v1, p2
-
-    invoke-direct {v0, p1, p2, p3, p4}, Ll/ܺܳ۠;-><init>(Ljava/io/OutputStream;IJ)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public final ۙ([BI)Z
-    .locals 3
+.method public final onGenericMotionEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 124
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    const/4 v1, 0x4
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/MovementMethod;->onGenericMotionEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
 
-    if-ge p2, v1, :cond_0
-
-    goto :goto_1
-
-    .line 79
-    :cond_0
-    invoke-static {p1, v0, p2}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    .line 80
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 82
-    :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p2
-
-    if-ge p2, v1, :cond_1
-
-    goto :goto_1
-
-    .line 85
-    :cond_1
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result p2
-
-    const v2, 0x184d2204
-
-    if-ne p2, v2, :cond_2
-
-    const/4 p1, 0x1
+    move-result p1
 
     return p1
+.end method
 
-    :cond_2
-    ushr-int/lit8 p2, p2, 0x4
+.method public final onKeyDown(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z
+    .locals 1
 
-    const v2, 0x184d2a5
+    .line 92
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    if-ne p2, v2, :cond_5
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/method/MovementMethod;->onKeyDown(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z
 
-    .line 90
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    move-result p1
 
-    move-result p2
+    return p1
+.end method
 
-    if-ge p2, v1, :cond_3
+.method public final onKeyOther(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z
+    .locals 1
 
-    goto :goto_1
+    .line 102
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    .line 93
-    :cond_3
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/MovementMethod;->onKeyOther(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z
 
-    move-result p2
+    move-result p1
 
-    .line 94
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    return p1
+.end method
 
-    move-result v2
-
-    if-ge v2, p2, :cond_4
-
-    goto :goto_1
+.method public final onKeyUp(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z
+    .locals 1
 
     .line 97
-    :cond_4
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
 
-    move-result v2
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/method/MovementMethod;->onKeyUp(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z
 
-    add-int/2addr v2, p2
+    move-result p1
 
-    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    return p1
+.end method
+
+.method public final onTakeFocus(Landroid/widget/TextView;Landroid/text/Spannable;I)V
+    .locals 1
+
+    .line 107
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/MovementMethod;->onTakeFocus(Landroid/widget/TextView;Landroid/text/Spannable;I)V
+
+    return-void
+.end method
+
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 7
+
+    .line 118
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/MovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_3
+
+    .line 39
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    :cond_5
-    :goto_1
-    return v0
+    .line 43
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    .line 44
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    .line 45
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
+
+    move-result v3
+
+    sub-int/2addr v0, v3
+
+    .line 46
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
+
+    move-result v3
+
+    sub-int/2addr p3, v3
+
+    .line 47
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    .line 48
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    add-int/2addr v0, p3
+
+    .line 50
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object p3
+
+    .line 51
+    invoke-virtual {p3, v0}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v4
+
+    int-to-float v5, v3
+
+    .line 52
+    invoke-virtual {p3, v4, v5}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result v5
+
+    .line 54
+    const-class v6, Ll/ܶ۫᩹;
+
+    invoke-interface {p2, v5, v5, v6}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Ll/ܶ۫᩹;
+
+    .line 55
+    array-length v5, p2
+
+    if-nez v5, :cond_1
+
+    goto :goto_0
+
+    .line 59
+    :cond_1
+    aget-object p2, p2, v2
+
+    .line 62
+    invoke-virtual {p2, v3}, Ll/ܶ۫᩹;->᩷(I)Landroid/text/Layout;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_2
+
+    .line 65
+    invoke-virtual {p3, v4}, Landroid/text/Layout;->getLineTop(I)I
+
+    move-result p3
+
+    sub-int/2addr v0, p3
+
+    .line 66
+    invoke-virtual {v5, v0}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result p3
+
+    .line 67
+    invoke-virtual {p2}, Ll/ܶ۫᩹;->ۙ()I
+
+    move-result p2
+
+    rem-int/2addr v3, p2
+
+    int-to-float p2, v3
+
+    invoke-virtual {v5, p3, p2}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result p2
+
+    .line 68
+    invoke-virtual {v5}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/text/Spanned;
+
+    const-class v0, Landroid/text/style/ClickableSpan;
+
+    .line 69
+    invoke-interface {p3, p2, p2, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Landroid/text/style/ClickableSpan;
+
+    .line 70
+    array-length p3, p2
+
+    if-lez p3, :cond_2
+
+    .line 71
+    aget-object p2, p2, v2
+
+    invoke-virtual {p2, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+
+    return v1
+
+    :cond_2
+    :goto_0
+    return v2
+
+    :cond_3
+    return v1
+.end method
+
+.method public final onTrackballEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .line 112
+    iget-object v0, p0, Ll/۬ܳ᩹;->ۙ:Landroid/text/method/MovementMethod;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/MovementMethod;->onTrackballEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

@@ -1,24 +1,33 @@
 package l;
 
-import java.util.function.Function;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.۠ۗۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57L9 */
+/* JADX INFO: renamed from: l.۟۬ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6FM */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7904 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C7904 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashSet f26258;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f26259;
+
+    public C7904(ArrayList arrayList, HashSet hashSet) {
+        this.f26259 = arrayList;
+        this.f26258 = hashSet;
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return ((C3836) obj).f14264;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m21442() {
+        return this.f26259;
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Set m21441() {
+        return this.f26258;
     }
 }

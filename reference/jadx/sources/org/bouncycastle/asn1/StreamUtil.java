@@ -5,9 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.channels.FileChannel;
-import l.C6001;
+import l.C19853;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class StreamUtil {
     public static int findLimit(InputStream inputStream) {
         if (inputStream instanceof LimitedInputStream) {
@@ -21,7 +21,7 @@ public class StreamUtil {
         }
         if (inputStream instanceof FileInputStream) {
             try {
-                FileChannel fileChannelConvertMaybeLegacyFileChannelFromLibrary = C6001.convertMaybeLegacyFileChannelFromLibrary(((FileInputStream) inputStream).getChannel());
+                FileChannel fileChannelConvertMaybeLegacyFileChannelFromLibrary = C19853.convertMaybeLegacyFileChannelFromLibrary(((FileInputStream) inputStream).getChannel());
                 long size = fileChannelConvertMaybeLegacyFileChannelFromLibrary != null ? fileChannelConvertMaybeLegacyFileChannelFromLibrary.size() : 2147483647L;
                 if (size < 2147483647L) {
                     return (int) size;

@@ -1,42 +1,27 @@
 package l;
 
-import android.media.Image;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-
-/* JADX INFO: renamed from: l.ܳ᩷۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: A75O */
+/* JADX INFO: renamed from: l.ܰᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 35UV */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14775 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f48305;
+public final /* synthetic */ class C14775 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f48306;
+    public static final /* synthetic */ int[] f48345;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f48307;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ByteBuffer f48308;
-
-    public C14775(Image.Plane plane) {
-        ByteBuffer buffer = plane.getBuffer();
-        this.f48308 = buffer;
-        this.f48306 = buffer.position();
-        this.f48305 = plane.getRowStride();
-        this.f48307 = plane.getPixelStride();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m35411(C14775 c14775, int i, int i2) throws IOException {
-        ByteBuffer byteBuffer = c14775.f48308;
-        long j = c14775.f48306;
-        long j2 = (((long) i) * ((long) c14775.f48307)) + (((long) i2) * ((long) c14775.f48305)) + j;
-        if (j2 < j || j2 >= byteBuffer.limit()) {
-            throw new IOException("MPEG-TS decoder plane is truncated");
+    static {
+        int[] iArr = new int[EnumC7011.values().length];
+        f48345 = iArr;
+        try {
+            iArr[EnumC7011.ArrayPayload.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        return byteBuffer.get((int) j2) & 255;
+        try {
+            f48345[EnumC7011.PackedSwitchPayload.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f48345[EnumC7011.SparseSwitchPayload.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
     }
 }

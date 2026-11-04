@@ -1,85 +1,75 @@
 package l;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import net.sf.sevenzipjbinding.NativeXZOutputStream;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩺ܳ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8CE */
+/* JADX INFO: renamed from: l.᩸᩷֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5ZN */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23061 extends OutputStream implements InterfaceC19561 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public long f74917;
+public final class C23061 extends AbstractC2432 {
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public long f74918;
+    public final /* synthetic */ AbstractActivityC17204 f74812;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public long f74919;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C8144 f74813;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public long f74920;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final NativeXZOutputStream f74921;
-
-    public C23061(NativeXZOutputStream nativeXZOutputStream, long j) {
-        this.f74921 = nativeXZOutputStream;
-        this.f74920 = j;
+    public C23061(AbstractActivityC17204 abstractActivityC17204) {
+        this.f74812 = abstractActivityC17204;
     }
 
-    @Override // java.io.OutputStream
-    public final void write(int i) throws IOException {
-        this.f74921.write(i);
-        m51012(1);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8199(this.f74812, 300);
     }
 
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        this.f74921.write(bArr, i, i2);
-        m51012(i2);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        this.f74813 = C19331.m44714();
     }
 
-    @Override // java.io.OutputStream, java.io.Flushable
-    public final void flush() throws IOException {
-        this.f74921.flush();
-        this.f74919 = this.f74918;
-        this.f74917 = 0L;
-    }
-
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f74921.close();
-        this.f74919 = this.f74918;
-        this.f74917 = 0L;
-    }
-
-    @Override // l.InterfaceC19561
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ۙ */
-    public final long mo44661() {
-        return this.f74919;
+    public final void mo1134() {
+        AbstractActivityC17204 abstractActivityC17204 = this.f74812;
+        if (abstractActivityC17204.isFinishing() || abstractActivityC17204.isDestroyed() || !abstractActivityC17204.getLifecycle().mo23076().m8762(EnumC2619.STARTED)) {
+            return;
+        }
+        C23807 c23807M11951 = C3669.m11951();
+        if (c23807M11951 != null && !c23807M11951.f77115.mo2982()) {
+            C3669.m11940(abstractActivityC17204);
+            return;
+        }
+        if (!C19331.m44720(this.f74813)) {
+            C3669.m11940(abstractActivityC17204);
+            return;
+        }
+        C12184 c12184M22022 = this.f74813.m22022();
+        if (c12184M22022 != null) {
+            new C3669(abstractActivityC17204);
+            C3669.m11939(c12184M22022, this.f74813.m22023());
+        } else {
+            C22673.m51159(R.string.MT_Protector);
+            if (abstractActivityC17204 instanceof ActivityC20823) {
+                abstractActivityC17204.finish();
+            }
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m51012(int i) throws IOException {
-        long j = i;
-        this.f74918 += j;
-        long j2 = this.f74917 + j;
-        long j3 = j2 - (j2 % 1048576);
-        this.f74919 += j3;
-        this.f74917 = j2 - j3;
-        long j4 = this.f74920;
-        if (j4 <= 0) {
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        AbstractActivityC17204 abstractActivityC17204 = this.f74812;
+        if (abstractActivityC17204.isFinishing() || abstractActivityC17204.isDestroyed()) {
             return;
         }
-        if (j >= j4) {
-            this.f74920 = 0L;
-            this.f74921.flush();
-            this.f74919 = this.f74918;
-            this.f74917 = 0L;
-            return;
-        }
-        this.f74920 = j4 - j;
+        abstractActivityC17204.m40402(exc, abstractActivityC17204 instanceof ActivityC20823);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

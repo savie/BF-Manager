@@ -298,7 +298,7 @@
     iput-object v0, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedEndItem:Ljava/lang/Long;
 
     .line 296
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/RangeDateSelector;->getSelection()Ll/ۧۧ;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/RangeDateSelector;->getSelection()Ll/ۖ֨;
 
     move-result-object v0
 
@@ -354,7 +354,7 @@
     move-result-object v1
 
     .line 127
-    sget v2, Ll/֨۟ܶ;->ۨۤ:I
+    sget v2, Ll/ܽ۬ܺ;->ۤۛ:I
 
     .line 128
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -373,13 +373,13 @@
     if-le v1, v0, :cond_0
 
     .line 132
-    sget v0, Ll/ۖ۟ܶ;->ܽ۟:I
+    sget v0, Ll/ۧ۬ܺ;->֡᩺:I
 
     goto :goto_0
 
     .line 133
     :cond_0
-    sget v0, Ll/ۖ۟ܶ;->ᩳ۟:I
+    sget v0, Ll/ۧ۬ܺ;->ܶ᩺:I
 
     .line 134
     :goto_0
@@ -402,7 +402,7 @@
     .locals 1
 
     .line 189
-    sget v0, Ll/ᩳ۟ܶ;->ܿۨ:I
+    sget v0, Ll/᩺۬ܺ;->ᩳۤ:I
 
     return v0
 .end method
@@ -471,13 +471,13 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 105
-    new-instance v1, Ll/ۧۧ;
+    new-instance v1, Ll/ۖ֨;
 
     iget-object v2, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedStartItem:Ljava/lang/Long;
 
     iget-object v3, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedEndItem:Ljava/lang/Long;
 
-    invoke-direct {v1, v2, v3}, Ll/ۧۧ;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v2, v3}, Ll/ۖ֨;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 106
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -489,24 +489,24 @@
     .locals 1
 
     .line 51
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/RangeDateSelector;->getSelection()Ll/ۧۧ;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/RangeDateSelector;->getSelection()Ll/ۖ֨;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getSelection()Ll/ۧۧ;
+.method public getSelection()Ll/ۖ֨;
     .locals 3
 
     .line 98
-    new-instance v0, Ll/ۧۧ;
+    new-instance v0, Ll/ۖ֨;
 
     iget-object v1, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedStartItem:Ljava/lang/Long;
 
     iget-object v2, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedEndItem:Ljava/lang/Long;
 
-    invoke-direct {v0, v1, v2}, Ll/ۧۧ;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Ll/ۖ֨;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -525,17 +525,17 @@
     iget-object v1, p0, Lcom/google/android/material/datepicker/RangeDateSelector;->selectedEndItem:Ljava/lang/Long;
 
     .line 168
-    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Ll/ۧۧ;
+    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Ll/ۖ֨;
 
     move-result-object v0
 
     .line 170
-    iget-object v1, v0, Ll/ۧۧ;->ۙ:Ljava/lang/Object;
+    iget-object v1, v0, Ll/ۖ֨;->ۙ:Ljava/lang/Object;
 
     if-nez v1, :cond_0
 
     .line 171
-    sget v1, Ll/ᩳ۟ܶ;->ۘۨ:I
+    sget v1, Ll/᩺۬ܺ;->֫ۤ:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -549,12 +549,12 @@
 
     .line 174
     :goto_0
-    iget-object v0, v0, Ll/ۧۧ;->ܰ:Ljava/lang/Object;
+    iget-object v0, v0, Ll/ۖ֨;->᩷:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
     .line 175
-    sget v0, Ll/ᩳ۟ܶ;->ۘۨ:I
+    sget v0, Ll/᩺۬ܺ;->֫ۤ:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -568,7 +568,7 @@
 
     .line 177
     :goto_1
-    sget v2, Ll/ᩳ۟ܶ;->֨ۨ:I
+    sget v2, Ll/᩺۬ܺ;->۫ۤ:I
 
     const/4 v3, 0x2
 
@@ -607,7 +607,7 @@
     if-nez v1, :cond_0
 
     .line 143
-    sget v0, Ll/ᩳ۟ܶ;->ۛۨ:I
+    sget v0, Ll/᩺۬ܺ;->ۢۤ:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -626,7 +626,7 @@
     if-nez v1, :cond_1
 
     .line 146
-    sget v1, Ll/ᩳ۟ܶ;->ܽۨ:I
+    sget v1, Ll/᩺۬ܺ;->֡ۤ:I
 
     .line 148
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -652,7 +652,7 @@
     if-nez v0, :cond_2
 
     .line 151
-    sget v0, Ll/ᩳ۟ܶ;->֡ۨ:I
+    sget v0, Ll/᩺۬ܺ;->ܿۤ:I
 
     .line 153
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
@@ -676,16 +676,16 @@
 
     .line 156
     :cond_2
-    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Ll/ۧۧ;
+    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Ll/ۖ֨;
 
     move-result-object v0
 
     .line 157
-    sget v1, Ll/ᩳ۟ܶ;->۫ۨ:I
+    sget v1, Ll/᩺۬ܺ;->۟ۤ:I
 
-    iget-object v4, v0, Ll/ۧۧ;->ۙ:Ljava/lang/Object;
+    iget-object v4, v0, Ll/ۖ֨;->ۙ:Ljava/lang/Object;
 
-    iget-object v0, v0, Ll/ۧۧ;->ܰ:Ljava/lang/Object;
+    iget-object v0, v0, Ll/ۖ֨;->᩷:Ljava/lang/Object;
 
     const/4 v5, 0x2
 
@@ -747,7 +747,7 @@
     move-object/from16 v9, p0
 
     .line 208
-    sget v0, Ll/ܶ۟ܶ;->ܿܰ:I
+    sget v0, Ll/ۨ۬ܺ;->ᩳ᩷:I
 
     const/4 v10, 0x0
 
@@ -761,7 +761,7 @@
     move-result-object v11
 
     .line 211
-    sget v0, Ll/ۘ۟ܶ;->ܳ᩹:I
+    sget v0, Ll/᩹۬ܺ;->ۖܳ:I
 
     .line 212
     invoke-virtual {v11, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -773,7 +773,7 @@
     check-cast v12, Lcom/google/android/material/textfield/TextInputLayout;
 
     .line 213
-    sget v0, Ll/ۘ۟ܶ;->᩻᩹:I
+    sget v0, Ll/᩹۬ܺ;->ۡܳ:I
 
     invoke-virtual {v11, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -814,7 +814,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/ᩳ۟ܶ;->۟ۨ:I
+    sget v1, Ll/᩺۬ܺ;->᩺ۤ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1041,20 +1041,20 @@
     .locals 0
 
     .line 51
-    check-cast p1, Ll/ۧۧ;
+    check-cast p1, Ll/ۖ֨;
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/RangeDateSelector;->setSelection(Ll/ۧۧ;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/RangeDateSelector;->setSelection(Ll/ۖ֨;)V
 
     return-void
 .end method
 
-.method public setSelection(Ll/ۧۧ;)V
+.method public setSelection(Ll/ۖ֨;)V
     .locals 6
 
     .line 86
-    iget-object v0, p1, Ll/ۧۧ;->ۙ:Ljava/lang/Object;
+    iget-object v0, p1, Ll/ۖ֨;->ۙ:Ljava/lang/Object;
 
-    iget-object v1, p1, Ll/ۧۧ;->ܰ:Ljava/lang/Object;
+    iget-object v1, p1, Ll/ۖ֨;->᩷:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
@@ -1094,7 +1094,7 @@
     .line 90
     :cond_1
     :goto_0
-    iget-object p1, p1, Ll/ۧۧ;->ۙ:Ljava/lang/Object;
+    iget-object p1, p1, Ll/ۖ֨;->ۙ:Ljava/lang/Object;
 
     const/4 v0, 0x0
 

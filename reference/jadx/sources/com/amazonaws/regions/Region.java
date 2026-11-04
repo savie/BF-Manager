@@ -5,58 +5,58 @@ import java.util.HashMap;
 /* JADX INFO: loaded from: classes.dex */
 public final class Region {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f407;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f396;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final HashMap f405 = new HashMap();
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f398 = new HashMap();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f406 = new HashMap();
+    public final HashMap f395 = new HashMap();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashMap f408 = new HashMap();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f397 = new HashMap();
 
     public Region(String str) {
-        this.f407 = str;
+        this.f396 = str;
     }
 
     public final int hashCode() {
-        return this.f407.hashCode();
+        return this.f396.hashCode();
     }
 
     public final String toString() {
-        return this.f407;
+        return this.f396;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m417() {
-        return this.f407;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m409() {
+        return this.f396;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final HashMap m416() {
-        return this.f405;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap m410() {
+        return this.f398;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap m415() {
-        return this.f406;
+    public final HashMap m408() {
+        return this.f395;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashMap m418() {
-        return this.f408;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap m411() {
+        return this.f397;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m414() {
-        return (String) this.f405.get("s3");
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String m412() {
+        return (String) this.f398.get("s3");
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof Region) {
-            return this.f407.equals(((Region) obj).f407);
+            return this.f396.equals(((Region) obj).f396);
         }
         return false;
     }

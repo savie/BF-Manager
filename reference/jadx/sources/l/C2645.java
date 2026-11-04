@@ -1,24 +1,32 @@
 package l;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import com.google.android.material.tabs.TabLayout;
 
-/* JADX INFO: renamed from: l.ۖܽۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T12U */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2645 extends AbstractC12554 {
+/* JADX INFO: renamed from: l.ۖۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81J9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2645 implements TabLayout.OnTabSelectedListener {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ImageView f10299;
+    public final /* synthetic */ C13831 f8453;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final TextView f10300;
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabSelected(TabLayout.Tab tab) {
+    }
 
-    public C2645(View view) {
-        super(view);
-        this.f10300 = (TextView) view.findViewById(R.id.textView1);
-        this.f10299 = (ImageView) view.findViewById(R.id.MT_Protector);
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabUnselected(TabLayout.Tab tab) {
+    }
+
+    public C2645(C13831 c13831) {
+        this.f8453 = c13831;
+    }
+
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabReselected(TabLayout.Tab tab) {
+        C25227 c25227 = (C25227) this.f8453.f43905.findViewWithTag(C25227.TAG + tab.getPosition());
+        if (c25227 != null) {
+            c25227.scrollToPosition(0);
+        }
     }
 }

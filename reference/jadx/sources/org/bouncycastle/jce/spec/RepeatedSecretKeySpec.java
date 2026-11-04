@@ -1,6 +1,6 @@
 package org.bouncycastle.jce.spec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RepeatedSecretKeySpec extends org.bouncycastle.jcajce.spec.RepeatedSecretKeySpec {
     public String algorithm;
 

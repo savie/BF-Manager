@@ -1,32 +1,42 @@
 package l;
 
-import java.util.HashMap;
-
-/* JADX INFO: renamed from: l.ܳۖۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K2RM */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.ܰ֡ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87S9 */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C14228 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final HashMap f46619 = new HashMap();
+    public final CharSequence f44956;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5280 f44957;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m34327(String str, C10700 c10700) {
-        C3722.m10891(f46619, str, c10700);
+    public static C14228 m34536(CharSequence charSequence, C5280 c5280) {
+        return new C14228(charSequence, c5280);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C10700 m34330(String str) {
-        return (C10700) RunnableC0195.m1435(f46619, str);
+    public C14228(CharSequence charSequence, C5280 c5280) {
+        C17359.requireNonNull(charSequence, "content must not be null");
+        this.f44956 = charSequence;
+        this.f44957 = c5280;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m34328(String str) {
-        return RunnableC1895.m6163(f46619, str);
+    public final CharSequence m34537() {
+        return this.f44956;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m34329(String str) {
-        f46619.remove(str);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5280 m34539() {
+        return this.f44957;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C14228 m34538(int i, int i2) {
+        int i3;
+        CharSequence charSequenceSubSequence = this.f44956.subSequence(i, i2);
+        C5280 c5280 = this.f44957;
+        return new C14228(charSequenceSubSequence, (c5280 == null || (i3 = i2 - i) == 0) ? null : C5280.m15866(c5280.m15872(), c5280.m15867() + i, c5280.m15871() + i, i3));
     }
 }

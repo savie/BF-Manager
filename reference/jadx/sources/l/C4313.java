@@ -1,20 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X2SX */
-/* JADX INFO: loaded from: classes3.dex */
-public class C4313 implements InterfaceC2196 {
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.ۘܿۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P6LQ */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4313 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11992 f15489;
+    public final LinkedHashMap f15640 = new LinkedHashMap();
 
-    public C4313(C11992 c11992) {
-        this.f15489 = c11992;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Class f15641 = C8787.class;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Class m13803() {
+        return this.f15641;
     }
 
-    @Override // l.InterfaceC2196
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
-    public InterfaceC8858 mo1014(InterfaceC8858 interfaceC8858) {
-        return new C3523(this, interfaceC8858);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13806(C4313 c4313) {
+        for (Map.Entry entry : c4313.f15640.entrySet()) {
+            C11392.putIfAbsent(this.f15640, (String) entry.getKey(), entry.getValue());
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13805(String str, C8787 c8787) {
+        C11392.putIfAbsent(this.f15640, C16991.m40052(str), c8787);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m13804(String str) {
+        return this.f15640.get(C16991.m40052(str));
     }
 }

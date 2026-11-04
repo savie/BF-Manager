@@ -1,118 +1,68 @@
-.class public final Ll/᩹ۜ᩺;
+.class public final synthetic Ll/᩹ۜ᩺;
 .super Ljava/lang/Object;
-.source "J5HS"
+.source "542M"
 
 # interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Ll/ۨۘ᩺;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ۜۜ᩺;
+.field public final synthetic ۙ:Ll/᩷۬᩺;
+
+.field public final synthetic ۤ:Ll/ۧܿ᩺;
+
+.field public final synthetic ᩷:Ll/ۙᩳۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜۜ᩺;)V
+.method public synthetic constructor <init>(Ll/᩷۬᩺;Ll/ۙᩳۘ;Ll/ۧܿ᩺;)V
     .locals 0
 
-    .line 118
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩹ۜ᩺;->ۙ:Ll/ۜۜ᩺;
+    iput-object p1, p0, Ll/᩹ۜ᩺;->ۙ:Ll/᩷۬᩺;
+
+    iput-object p2, p0, Ll/᩹ۜ᩺;->᩷:Ll/ۙᩳۘ;
+
+    iput-object p3, p0, Ll/᩹ۜ᩺;->ۤ:Ll/ۧܿ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScroll(Landroid/widget/AbsListView;III)V
-    .locals 3
+.method public final ۙ()V
+    .locals 4
 
-    .line 138
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    .line 3587
+    sget-object v0, Ll/۫ܰۘ;->ۙ:Ll/᩻ᩳۘ;
 
-    move-result-wide v0
-
-    iget-object v2, p0, Ll/᩹ۜ᩺;->ۙ:Ll/ۜۜ᩺;
-
-    invoke-static {v2, v0, v1}, Ll/ۜۜ᩺;->ۙ(Ll/ۜۜ᩺;J)V
-
-    .line 139
-    invoke-static {v2}, Ll/ۜۜ᩺;->ܰ(Ll/ۜۜ᩺;)Landroid/widget/AbsListView$OnScrollListener;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 140
-    invoke-static {v2}, Ll/ۜۜ᩺;->ܰ(Ll/ۜۜ᩺;)Landroid/widget/AbsListView$OnScrollListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 5
-
-    .line 123
-    iget-object v0, p0, Ll/᩹ۜ᩺;->ۙ:Ll/ۜۜ᩺;
-
-    if-eqz p2, :cond_0
+    .line 4418
+    new-instance v0, Ll/᩻ᩳۘ;
 
     const/4 v1, 0x1
 
-    .line 124
-    invoke-static {v0, v1}, Ll/ۜۜ᩺;->ۙ(Ll/ۜۜ᩺;Z)V
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 125
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    const/4 v2, 0x0
 
-    move-result-wide v1
+    iget-object v3, p0, Ll/᩹ۜ᩺;->ۤ:Ll/ۧܿ᩺;
 
-    invoke-static {v0, v1, v2}, Ll/ۜۜ᩺;->ۙ(Ll/ۜۜ᩺;J)V
+    aput-object v3, v1, v2
 
-    goto :goto_0
+    const-string v2, "compiler"
 
-    .line 127
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    const-string v3, "is.preview"
 
-    move-result-wide v1
+    invoke-direct {v0, v2, v3, v1}, Ll/᩻ᩳۘ;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-wide v1, v0, Ll/ۜۜ᩺;->ۘۙ:J
+    .line 3587
+    iget-object v1, p0, Ll/᩹ۜ᩺;->ۙ:Ll/᩷۬᩺;
 
-    .line 128
-    invoke-static {v0}, Ll/ۜۜ᩺;->ۙ(Ll/ۜۜ᩺;)Ll/۬ۜ᩺;
+    iget-object v2, p0, Ll/᩹ۜ᩺;->᩷:Ll/ۙᩳۘ;
 
-    move-result-object v1
+    invoke-virtual {v1, v2, v0}, Ll/᩷۬᩺;->ۙ(Ll/ۙᩳۘ;Ll/᩻ᩳۘ;)V
 
-    const-wide/16 v2, 0x5dc
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 129
-    invoke-static {v0, v4}, Ll/ۜۜ᩺;->ۙ(Ll/ۜۜ᩺;Z)V
-
-    .line 131
-    :goto_0
-    invoke-static {v0}, Ll/ۜۜ᩺;->ܰ(Ll/ۜۜ᩺;)Landroid/widget/AbsListView$OnScrollListener;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 132
-    invoke-static {v0}, Ll/ۜۜ᩺;->ܰ(Ll/ۜۜ᩺;)Landroid/widget/AbsListView$OnScrollListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
-
-    :cond_1
     return-void
 .end method

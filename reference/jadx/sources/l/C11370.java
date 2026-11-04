@@ -1,20 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 22S9 */
+import java.nio.file.attribute.UserPrincipalLookupService;
+
+/* JADX INFO: renamed from: l.ۧۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11370 implements InterfaceC2196 {
+public final /* synthetic */ class C11370 extends AbstractC19575 {
+    public final /* synthetic */ UserPrincipalLookupService a;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11992 f38351;
-
-    @Override // l.InterfaceC2196
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1014(Object obj) {
-        return new C13487(this, (InterfaceC18528) obj);
+    @Override // l.AbstractC19575
+    public final /* synthetic */ C9132 a(String str) {
+        return C9132.a(this.a.lookupPrincipalByGroupName(str));
     }
 
-    public C11370(C11992 c11992) {
-        this.f38351 = c11992;
+    @Override // l.AbstractC19575
+    public final /* synthetic */ InterfaceC5405 b(String str) {
+        return C5162.a(this.a.lookupPrincipalByName(str));
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        UserPrincipalLookupService userPrincipalLookupService = this.a;
+        if (obj instanceof C11370) {
+            obj = ((C11370) obj).a;
+        }
+        return userPrincipalLookupService.equals(obj);
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    public C11370(UserPrincipalLookupService userPrincipalLookupService) {
+        this.a = userPrincipalLookupService;
     }
 }

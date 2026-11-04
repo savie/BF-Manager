@@ -8,7 +8,7 @@ import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HashSP800DRBG implements SP80090DRBG {
     public static final int MAX_BITS_REQUEST = 262144;
     public static final byte[] ONE = {1};

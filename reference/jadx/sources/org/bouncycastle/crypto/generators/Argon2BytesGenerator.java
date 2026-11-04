@@ -1,8 +1,8 @@
 package org.bouncycastle.crypto.generators;
 
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.C1694;
-import l.C7309;
+import l.C11958;
+import l.C12669;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.digests.Blake2bDigest;
 import org.bouncycastle.crypto.params.Argon2Parameters;
@@ -10,7 +10,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Longs;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Argon2BytesGenerator {
     public static final int ARGON2_ADDRESSES_IN_BLOCK = 128;
     public static final int ARGON2_BLOCK_SIZE = 1024;
@@ -206,8 +206,8 @@ public class Argon2BytesGenerator {
         Block block2;
         boolean zIsDataIndependentAddressing = isDataIndependentAddressing(position);
         int startingIndex = getStartingIndex(position);
-        int iM5620 = C1694.m5620(position.slice, this.segmentLength, position.lane * this.laneLength, startingIndex);
-        int prevOffset = getPrevOffset(iM5620);
+        int iM31436 = C12669.m31436(position.slice, this.segmentLength, position.lane * this.laneLength, startingIndex);
+        int prevOffset = getPrevOffset(iM31436);
         if (zIsDataIndependentAddressing) {
             Block blockClear = fillBlock.addressBlock.clear();
             Block blockClear2 = fillBlock.inputBlock.clear();
@@ -220,7 +220,7 @@ public class Argon2BytesGenerator {
         }
         boolean zIsWithXor = isWithXor(position);
         int i = startingIndex;
-        int i2 = iM5620;
+        int i2 = iM31436;
         int i3 = prevOffset;
         while (i < this.segmentLength) {
             long pseudoRandom = getPseudoRandom(fillBlock, i, block, block2, i3, zIsDataIndependentAddressing);
@@ -375,9 +375,9 @@ public class Argon2BytesGenerator {
         long j = jArr[i];
         long j2 = jArr[i2];
         long j3 = jArr[i3];
-        long jM19505 = C7309.m19505((j & 4294967295L) * 2, j2 & 4294967295L, j2, j);
-        long jRotateRight = Longs.rotateRight(j3 ^ jM19505, i4);
-        jArr[i] = jM19505;
+        long jM29929 = C11958.m29929((j & 4294967295L) * 2, j2 & 4294967295L, j2, j);
+        long jRotateRight = Longs.rotateRight(j3 ^ jM29929, i4);
+        jArr[i] = jM29929;
         jArr[i3] = jRotateRight;
     }
 

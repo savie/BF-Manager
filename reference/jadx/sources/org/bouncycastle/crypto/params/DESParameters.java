@@ -4,10 +4,10 @@ import com.umeng.analytics.pro.bo;
 import com.umeng.analytics.pro.cb;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESParameters extends KeyParameter {
     public static final int DES_KEY_LENGTH = 8;
-    public static byte[] DES_weak_keys = {1, 1, 1, 1, 1, 1, 1, 1, bo.j, bo.j, bo.j, bo.j, cb.f77931l, cb.f77931l, cb.f77931l, cb.f77931l, bo.k, bo.k, bo.k, bo.k, -15, -15, -15, -15, -2, -2, -2, -2, -2, -2, -2, -2, 1, -2, 1, -2, 1, -2, 1, -2, bo.j, bo.k, bo.j, bo.k, cb.f77931l, -15, cb.f77931l, -15, 1, bo.k, 1, bo.k, 1, -15, 1, -15, bo.j, -2, bo.j, -2, cb.f77931l, -2, cb.f77931l, -2, 1, bo.j, 1, bo.j, 1, cb.f77931l, 1, cb.f77931l, bo.k, -2, bo.k, -2, -15, -2, -15, -2, -2, 1, -2, 1, -2, 1, -2, 1, bo.k, bo.j, bo.k, bo.j, -15, cb.f77931l, -15, cb.f77931l, bo.k, 1, bo.k, 1, -15, 1, -15, 1, -2, bo.j, -2, bo.j, -2, cb.f77931l, -2, cb.f77931l, bo.j, 1, bo.j, 1, cb.f77931l, 1, cb.f77931l, 1, -2, bo.k, -2, bo.k, -2, -15, -2, -15};
+    public static byte[] DES_weak_keys = {1, 1, 1, 1, 1, 1, 1, 1, bo.j, bo.j, bo.j, bo.j, cb.f82047l, cb.f82047l, cb.f82047l, cb.f82047l, bo.k, bo.k, bo.k, bo.k, -15, -15, -15, -15, -2, -2, -2, -2, -2, -2, -2, -2, 1, -2, 1, -2, 1, -2, 1, -2, bo.j, bo.k, bo.j, bo.k, cb.f82047l, -15, cb.f82047l, -15, 1, bo.k, 1, bo.k, 1, -15, 1, -15, bo.j, -2, bo.j, -2, cb.f82047l, -2, cb.f82047l, -2, 1, bo.j, 1, bo.j, 1, cb.f82047l, 1, cb.f82047l, bo.k, -2, bo.k, -2, -15, -2, -15, -2, -2, 1, -2, 1, -2, 1, -2, 1, bo.k, bo.j, bo.k, bo.j, -15, cb.f82047l, -15, cb.f82047l, bo.k, 1, bo.k, 1, -15, 1, -15, 1, -2, bo.j, -2, bo.j, -2, cb.f82047l, -2, cb.f82047l, bo.j, 1, bo.j, 1, cb.f82047l, 1, cb.f82047l, 1, -2, bo.k, -2, bo.k, -2, -15, -2, -15};
     public static final int N_DES_WEAK_KEYS = 16;
 
     public DESParameters(byte[] bArr) {

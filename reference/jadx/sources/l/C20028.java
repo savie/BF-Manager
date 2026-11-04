@@ -1,30 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶۟ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 532I */
+import java.io.EOFException;
+
+/* JADX INFO: renamed from: l.ᩴᩴ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: J1W7 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20028 extends AbstractC15795 {
+public final class C20028 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final char f64138;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public byte[] f64337;
 
-    @Override // l.AbstractC15795, l.AbstractC14384
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC14384 mo27209() {
-        throw null;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f64338;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f64339;
+
+    public C20028(byte[] bArr, int i, int i2) {
+        this.f64337 = bArr;
+        this.f64338 = i;
+        this.f64339 = i2;
     }
 
-    public C20028(char c) {
-        this.f64138 = c;
-    }
-
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1772(char c) {
-        return c == this.f64138;
-    }
-
-    public final String toString() {
-        return C22697.m50267(new StringBuilder("CharMatcher.is('"), AbstractC14384.m34619(this.f64138), "')");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46075(int i, byte[] bArr) throws EOFException {
+        int i2 = this.f64338;
+        if (i2 + i > this.f64339) {
+            throw new EOFException();
+        }
+        System.arraycopy(bArr, 0, this.f64337, i2, i);
+        this.f64338 += i;
     }
 }

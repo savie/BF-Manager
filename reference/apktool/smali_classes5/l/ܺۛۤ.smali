@@ -1,90 +1,36 @@
 .class public Ll/ܺۛۤ;
-.super Ll/᩷ۛۤ;
-.source "W7SR"
+.super Ll/֡ۨۤ;
+.source "Z6QT"
+
+
+# instance fields
+.field public ᩷:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Ll/֡ۨۤ;)V
+    .locals 1
 
-    .line 1146
-    sget-object v0, Ll/ᩴۡ۟;->ۨۙ:Ll/ᩴۡ۟;
+    .line 750
+    invoke-direct {p0}, Ll/֡ۨۤ;-><init>()V
 
-    const/16 v1, 0xb
+    .line 751
+    iput-object p1, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
 
-    new-array v1, v1, [Ll/ᩴۡ۟;
+    .line 752
+    new-instance p1, Ll/ܰۛۤ;
 
-    sget-object v2, Ll/ᩴۡ۟;->ۚۙ:Ll/ᩴۡ۟;
+    invoke-direct {p1}, Ll/ܰۛۤ;-><init>()V
 
-    const/4 v3, 0x0
+    .line 753
+    iget-object v0, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
 
-    aput-object v2, v1, v3
+    invoke-virtual {v0, p1}, Ll/֡ۨۤ;->ۙ(Ll/ܰۛۤ;)Z
 
-    sget-object v2, Ll/ᩴۡ۟;->᩹ۙ:Ll/ᩴۡ۟;
+    .line 754
+    iget p1, p1, Ll/ܰۛۤ;->᩸:I
 
-    const/4 v3, 0x1
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ᩳۙ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x2
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ۤۙ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x3
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->۟ۙ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x4
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ܽۙ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x5
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ܳܰ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x6
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->᩹ۨ:Ll/ᩴۡ۟;
-
-    const/4 v3, 0x7
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ۖۨ:Ll/ᩴۡ۟;
-
-    const/16 v3, 0x8
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->ۘۨ:Ll/ᩴۡ۟;
-
-    const/16 v3, 0x9
-
-    aput-object v2, v1, v3
-
-    sget-object v2, Ll/ᩴۡ۟;->֡ۨ:Ll/ᩴۡ۟;
-
-    const/16 v3, 0xa
-
-    aput-object v2, v1, v3
-
-    invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;[Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ll/᩷ۛۤ;-><init>(Ljava/util/EnumSet;)V
+    iput p1, p0, Ll/ܺۛۤ;->᩷:I
 
     return-void
 .end method

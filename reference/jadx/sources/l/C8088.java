@@ -1,55 +1,49 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayDeque;
 
-/* JADX INFO: renamed from: l.۠ۢۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6PY */
+/* JADX INFO: renamed from: l.۟ᩴܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D70T */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8088 extends AbstractC17535 {
+public final class C8088 implements AutoCloseable {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C12895 f28339;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19143 f26748;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final List f28340;
+    public long f26749;
 
-    public C8088() {
-        throw null;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f26750 = new ArrayDeque();
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f26751;
+
+    public C8088(C19143 c19143) {
+        this.f26748 = c19143;
     }
 
-    public C8088(ArrayList arrayList, C12895 c12895) {
-        this.f28340 = arrayList;
-        this.f28339 = c12895;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C8088)) {
-            return false;
-        }
-        C8088 c8088 = (C8088) obj;
-        return C13638.equals(this.f28340, c8088.f28340) && C13638.equals(this.f28339, c8088.f28339);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f28339) + (C13638.hashCode(this.f28340) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f28340, this.f28339};
-        String[] strArrSplit = "tokens;root".length() == 0 ? new String[0] : "tokens;root".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C8088.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public final C14799 poll() {
+        C14799 c14799;
+        synchronized (this.f26748) {
+            if (this.f26751) {
+                throw new IllegalStateException("Change cursor is closed");
+            }
+            c14799 = (C14799) this.f26750.pollFirst();
+            if (c14799 != null) {
+                this.f26749 -= c14799.m35638();
             }
         }
-        sb.append("]");
-        return sb.toString();
+        return c14799;
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        synchronized (this.f26748) {
+            this.f26751 = true;
+            this.f26750.clear();
+            this.f26749 = 0L;
+            this.f26748.f61941.remove(this);
+        }
     }
 }

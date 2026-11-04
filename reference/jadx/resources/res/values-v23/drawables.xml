@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <drawable name="MT_Protector_res_0x7f08003a">ۗۙ᩷.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f08009d">᩹۬ܿ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f08009e">ۛ᩻ᩳ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f080190">ۖ᩹ܿ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f080191">᩶ۚۗ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f080192">ۧۜۧ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f080195">ܺ᩵ۚ.xml</drawable>
-    <drawable name="MT_Protector_res_0x7f08026c">ܰۨ᩸.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f08003a">֫᩻ۧ.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0800a4">᩶᩶ۤ.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0800a5">᩵ܳۢ.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0801a6">ۢ᩵ᩴ.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0801a7">֡ۤ᩸.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0801a8">۠۫ۜ.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f0801ab">ۙ᩸۠.xml</drawable>
+    <drawable name="MT_Protector_res_0x7f080289">֡ᩴۗ.xml</drawable>
 </resources>

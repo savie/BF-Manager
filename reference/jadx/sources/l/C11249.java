@@ -1,80 +1,58 @@
 package l;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۧ᩷ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S4VX */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11249 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m28219(int i, String str) {
-        if (i <= 1) {
-            if (i >= 0) {
-                return i == 0 ? "" : str;
-            }
-            throw new IllegalArgumentException(m28221("invalid count: %s", Integer.valueOf(i)));
+/* JADX INFO: renamed from: l.ۧ֡ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: RBB2 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11249 extends AbstractC17216 {
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final AbstractC13487 f35520;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f35521;
+
+    public C11249(C18708 c18708, C9012 c9012, C0063 c0063, ArrayList arrayList, AbstractC13487 abstractC13487) {
+        super(c18708, c9012, null, c0063);
+        if (c18708.m43508() != 1) {
+            throw new IllegalArgumentException("opcode with invalid branchingness: " + c18708.m43508());
         }
-        int length = str.length();
-        long j = ((long) length) * ((long) i);
-        int i2 = (int) j;
-        if (i2 != j) {
-            throw new ArrayIndexOutOfBoundsException(C15489.m37074(j, "Required array size too large: "));
-        }
-        char[] cArr = new char[i2];
-        str.getChars(0, length, cArr, 0);
-        while (true) {
-            int i3 = i2 - length;
-            if (length >= i3) {
-                System.arraycopy(cArr, 0, cArr, length, i3);
-                return new String(cArr);
-            }
-            System.arraycopy(cArr, 0, cArr, length, length);
-            length <<= 1;
-        }
+        this.f35521 = arrayList;
+        this.f35520 = abstractC13487;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m28221(String str, Object... objArr) {
-        int iIndexOf;
-        String strValueOf = String.valueOf(str);
-        StringBuilder sb = new StringBuilder((objArr.length * 16) + strValueOf.length());
-        int i = 0;
-        int i2 = 0;
-        while (i < objArr.length && (iIndexOf = strValueOf.indexOf("%s", i2)) != -1) {
-            sb.append((CharSequence) strValueOf, i2, iIndexOf);
-            sb.append(m28220(objArr[i]));
-            i2 = iIndexOf + 2;
-            i++;
-        }
-        sb.append((CharSequence) strValueOf, i2, strValueOf.length());
-        if (i < objArr.length) {
-            String str2 = " [";
-            while (i < objArr.length) {
-                sb.append(str2);
-                sb.append(m28220(objArr[i]));
-                i++;
-                str2 = ", ";
-            }
-            sb.append(']');
-        }
-        return sb.toString();
+    @Override // l.AbstractC17216
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC11050 mo7781() {
+        return C13705.f43487;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m28220(Object obj) {
-        if (obj == null) {
-            return "null";
-        }
-        try {
-            return obj.toString();
-        } catch (Exception e) {
-            String str = obj.getClass().getName() + '@' + Integer.toHexString(System.identityHashCode(obj));
-            Logger.getLogger("com.google.common.base.Strings").log(Level.WARNING, "Exception during lenientFormat for " + str, (Throwable) e);
-            StringBuilder sbM30914 = C12441.m30914("<", str, " threw ");
-            sbM30914.append(e.getClass().getName());
-            sbM30914.append(">");
-            return sbM30914.toString();
-        }
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m28484() {
+        return this.f35521;
+    }
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final AbstractC13487 m28485() {
+        return this.f35520;
+    }
+
+    @Override // l.AbstractC17216
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7779(InterfaceC16470 interfaceC16470) {
+        interfaceC16470.mo39058(this);
+    }
+
+    @Override // l.AbstractC17216
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC17216 mo7777(C5085 c5085) {
+        throw new UnsupportedOperationException("unsupported");
+    }
+
+    @Override // l.AbstractC17216
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC17216 mo7778(C20946 c20946, C0063 c0063) {
+        return new C11249(m40434(), m40433(), c0063, this.f35521, this.f35520);
     }
 }

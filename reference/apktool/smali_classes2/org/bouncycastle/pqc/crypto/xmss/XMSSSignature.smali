@@ -150,7 +150,7 @@
 
     const/4 v3, 0x4
 
-    invoke-static {v0, v3, v1, v2}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v0, v3, v1, v2}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v1
 

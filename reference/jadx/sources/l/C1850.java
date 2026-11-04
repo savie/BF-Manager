@@ -1,22 +1,31 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.֫۬᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: UAS0 */
+/* JADX INFO: renamed from: l.֫ۤۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1850 {
+public final class C1850 implements Iterator {
+    public int a = 0;
+    public final /* synthetic */ C21149 b;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f7063;
+    public C1850(C21149 c21149) {
+        this.b = c21149;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractC8907 f7064;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.a < this.b.c.size();
+    }
 
-    public final String toString() {
-        StringBuilder sb = new StringBuilder(MotionUtils.EASING_TYPE_FORMAT_START);
-        sb.append(this.f7064);
-        sb.append(", ");
-        return C12441.m30911(this.f7063, MotionUtils.EASING_TYPE_FORMAT_END, sb);
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (this.a < this.b.c.size()) {
+            C21149 name = this.b.getName(this.a);
+            this.a++;
+            return name;
+        }
+        throw new NoSuchElementException();
     }
 }

@@ -1,191 +1,79 @@
 package l;
 
-import android.content.Context;
-import android.graphics.SurfaceTexture;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
-import android.opengl.GLSurfaceView;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.AttributeSet;
-import android.view.Surface;
-import android.view.View;
-import android.view.WindowManager;
-import com.umeng.analytics.pro.am;
-import java.util.Iterator;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.֡۬ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M8S0 */
+/* JADX INFO: renamed from: l.֡۫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 77HE */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0435 extends GLSurfaceView {
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f2014 = 0;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final Handler f2015;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public final CopyOnWriteArrayList f2016;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final SensorManager f2017;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public Surface f2018;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final Sensor f2019;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public boolean f2020;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f2021;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C21602 f2022;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C20897 f2023;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f2024;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public SurfaceTexture f2025;
-
-    public C0435(Context context) {
-        this(context, null);
-    }
-
-    public C0435(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        this.f2016 = new CopyOnWriteArrayList();
-        this.f2015 = new Handler(Looper.getMainLooper());
-        Object systemService = context.getSystemService(am.ac);
-        systemService.getClass();
-        SensorManager sensorManager = (SensorManager) systemService;
-        this.f2017 = sensorManager;
-        Sensor defaultSensor = sensorManager.getDefaultSensor(15);
-        this.f2019 = defaultSensor == null ? sensorManager.getDefaultSensor(11) : defaultSensor;
-        C20897 c20897 = new C20897();
-        this.f2023 = c20897;
-        C15959 c15959 = new C15959(this, c20897);
-        View.OnTouchListener viewOnTouchListenerC12431 = new ViewOnTouchListenerC12431(context, c15959);
-        WindowManager windowManager = (WindowManager) context.getSystemService("window");
-        windowManager.getClass();
-        this.f2022 = new C21602(windowManager.getDefaultDisplay(), viewOnTouchListenerC12431, c15959);
-        this.f2020 = true;
-        setEGLContextClientVersion(2);
-        setRenderer(c15959);
-        setOnTouchListener(viewOnTouchListenerC12431);
-    }
+public final class C0435 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m2259(InterfaceC20192 interfaceC20192) {
-        this.f2016.add(interfaceC20192);
+    public static final byte[] f2001;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m2253(char c) {
+        if (c >= '!' && c <= '/') {
+            return true;
+        }
+        if (c >= ':' && c <= '@') {
+            return true;
+        }
+        if (c < '[' || c > '`') {
+            return c >= '{' && c <= '~';
+        }
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m2262(InterfaceC20192 interfaceC20192) {
-        this.f2016.remove(interfaceC20192);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Surface m2260() {
-        return this.f2018;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC19841 m2261() {
-        return this.f2023;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3962 m2258() {
-        return this.f2023;
-    }
-
-    @Override // android.opengl.GLSurfaceView
-    public final void onResume() {
-        super.onResume();
-        this.f2024 = true;
-        m2254();
-    }
-
-    @Override // android.opengl.GLSurfaceView
-    public final void onPause() {
-        this.f2024 = false;
-        m2254();
-        super.onPause();
-    }
-
-    @Override // android.opengl.GLSurfaceView, android.view.SurfaceView, android.view.View
-    public final void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        this.f2015.post(new RunnableC18517(1, this));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m2255(C0435 c0435) {
-        Surface surface = c0435.f2018;
-        if (surface != null) {
-            Iterator it = c0435.f2016.iterator();
-            while (it.hasNext()) {
-                ((InterfaceC20192) it.next()).mo11582();
+    static {
+        byte[] bArr = new byte[65536];
+        f2001 = bArr;
+        Arrays.fill(bArr, (byte) 15);
+        for (int i = 0; i <= 127; i++) {
+            f2001[i] = 4;
+        }
+        byte[] bArr2 = f2001;
+        bArr2[32] = 1;
+        bArr2[10] = 1;
+        bArr2[13] = 1;
+        bArr2[9] = 2;
+        bArr2[160] = 10;
+        for (int i2 = 48; i2 <= 57; i2++) {
+            f2001[i2] = 3;
+        }
+        byte[] bArr3 = f2001;
+        bArr3[35] = 3;
+        bArr3[42] = 3;
+        int[] iArr = {129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, EnumC24309.f78687, 155, 156, 157, 158, 159, 173};
+        for (int i3 = 0; i3 < 32; i3++) {
+            f2001[iArr[i3]] = 8;
+        }
+        for (int i4 = 8192; i4 <= 8207; i4++) {
+            f2001[i4] = 8;
+        }
+        for (int i5 = 8232; i5 <= 8239; i5++) {
+            f2001[i5] = 8;
+        }
+        f2001[8287] = 8;
+        for (int i6 = 8288; i6 <= 8303; i6++) {
+            if (i6 != 8293) {
+                f2001[i6] = 8;
             }
         }
-        SurfaceTexture surfaceTexture = c0435.f2025;
-        if (surfaceTexture != null) {
-            surfaceTexture.release();
+        f2001[65279] = 9;
+        for (int i7 = 19968; i7 <= 40869; i7++) {
+            f2001[i7] = 0;
         }
-        if (surface != null) {
-            surface.release();
+        f2001[65533] = 5;
+        for (int i8 = 65520; i8 <= 65528; i8++) {
+            f2001[i8] = 6;
         }
-        c0435.f2025 = null;
-        c0435.f2018 = null;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    private void m2254() {
-        boolean z = this.f2020 && this.f2024;
-        Sensor sensor = this.f2019;
-        if (sensor == null || z == this.f2021) {
-            return;
+        for (int i9 = 0; i9 < 31; i9++) {
+            f2001["（）［］〔〕〈〉｛｝【】《》「」『』〖〗｟｠〚〛，。！？：；～".charAt(i9)] = 7;
         }
-        C21602 c21602 = this.f2022;
-        SensorManager sensorManager = this.f2017;
-        if (z) {
-            sensorManager.registerListener(c21602, sensor, 0);
-        } else {
-            sensorManager.unregisterListener(c21602);
-        }
-        this.f2021 = z;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m2257(C0435 c0435, SurfaceTexture surfaceTexture) {
-        c0435.f2015.post(new RunnableC22233(2, c0435, surfaceTexture));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m2256(C0435 c0435, SurfaceTexture surfaceTexture) {
-        SurfaceTexture surfaceTexture2 = c0435.f2025;
-        Surface surface = c0435.f2018;
-        Surface surface2 = new Surface(surfaceTexture);
-        c0435.f2025 = surfaceTexture;
-        c0435.f2018 = surface2;
-        Iterator it = c0435.f2016.iterator();
-        while (it.hasNext()) {
-            ((InterfaceC20192) it.next()).mo11568(surface2);
-        }
-        if (surfaceTexture2 != null) {
-            surfaceTexture2.release();
-        }
-        if (surface != null) {
-            surface.release();
-        }
+    public static byte m2252(char c) {
+        return f2001[c];
     }
 }

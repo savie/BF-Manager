@@ -1,91 +1,68 @@
 package l;
 
-import java.io.IOException;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-/* JADX INFO: renamed from: l.ۘۨ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P70I */
+/* JADX INFO: renamed from: l.ۘۙ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: NIT3 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3927 implements AutoCloseable {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final long f14639;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C22710 f14640;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final long f14641;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AtomicBoolean f14642 = new AtomicBoolean(true);
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final long f14643;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C13101 f14644;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C5838 f14645;
-
-    public C3927(long j, long j2, long j3, C22710 c22710, C5838 c5838, C13101 c13101) {
-        this.f14641 = j;
-        this.f14639 = j2;
-        this.f14643 = j3;
-        this.f14640 = c22710;
-        this.f14645 = c5838;
-        this.f14644 = c13101;
-    }
-
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        if (this.f14642.compareAndSet(true, false)) {
-            this.f14644.m32350();
-        }
-    }
+public final /* synthetic */ class C3927 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C6750 m11404(C0843 c0843) throws Throwable {
-        AtomicBoolean atomicBoolean = this.f14642;
-        if (atomicBoolean.get()) {
-            InterfaceC5614 interfaceC5614M29777 = C11965.m29777(c0843);
-            if (interfaceC5614M29777.mo2357()) {
-                throw new C1105();
-            }
-            C6750 c6750 = null;
-            try {
-                C6750 c6751 = new C6750(this.f14641, this.f14639, this.f14643, this.f14640, this.f14645);
-                try {
-                    c6751.m18253();
-                    if (atomicBoolean.get()) {
-                        if (interfaceC5614M29777.mo2357()) {
-                            throw new C1105();
-                        }
-                        return c6751;
-                    }
-                    throw new IllegalStateException("HexRange VersionHandle is not active");
-                } catch (IOException | Error | RuntimeException e) {
-                    e = e;
-                    c6750 = c6751;
-                    if (c6750 != null) {
-                        try {
-                            c6750.close();
-                        } catch (IOException e2) {
-                            e.addSuppressed(e2);
-                        }
-                    }
-                    throw e;
-                }
-            } catch (IOException e3) {
-                e = e3;
-            } catch (Error e4) {
-                e = e4;
-            } catch (RuntimeException e5) {
-                e = e5;
-            }
-        } else {
-            throw new IllegalStateException("HexRange VersionHandle is not active");
+    public static final /* synthetic */ int[] f13408;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f13409;
+
+    static {
+        int[] iArr = new int[EnumC19727.values().length];
+        f13408 = iArr;
+        try {
+            iArr[EnumC19727.ADD.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f13408[EnumC19727.XOR.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        int[] iArr2 = new int[EnumC24203.values().length];
+        f13409 = iArr2;
+        try {
+            iArr2[EnumC24203.ARITH.ordinal()] = 1;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f13409[EnumC24203.IF.ordinal()] = 2;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f13409[EnumC24203.TERNARY.ordinal()] = 3;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f13409[EnumC24203.INVOKE.ordinal()] = 4;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f13409[EnumC24203.IPUT.ordinal()] = 5;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f13409[EnumC24203.SPUT.ordinal()] = 6;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f13409[EnumC24203.CAST.ordinal()] = 7;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f13409[EnumC24203.CHECK_CAST.ordinal()] = 8;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f13409[EnumC24203.MOVE.ordinal()] = 9;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f13409[EnumC24203.CONSTRUCTOR.ordinal()] = 10;
+        } catch (NoSuchFieldError unused12) {
         }
     }
 }

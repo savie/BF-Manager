@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.generators;
 
 import com.umeng.commonsdk.statistics.UMErrorCode;
 import java.math.BigInteger;
-import l.C3184;
+import l.C6421;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
 import org.bouncycastle.crypto.CryptoServicePurpose;
@@ -18,7 +18,7 @@ import org.bouncycastle.math.Primes;
 import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public RSAKeyGenerationParameters param;
@@ -31,7 +31,7 @@ public class RSAKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
             if (i2 <= 128) {
                 return 4;
             }
-            return C3184.m9602(i2, 127, 2, 4);
+            return C6421.m18182(i2, 127, 2, 4);
         }
         if (i >= 1024) {
             if (i2 <= 100) {
@@ -40,13 +40,13 @@ public class RSAKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
             if (i2 <= 112) {
                 return 5;
             }
-            return C3184.m9602(i2, UMErrorCode.E_UM_BE_CREATE_FAILED, 2, 5);
+            return C6421.m18182(i2, UMErrorCode.E_UM_BE_CREATE_FAILED, 2, 5);
         }
         if (i < 512) {
             if (i2 <= 80) {
                 return 40;
             }
-            return C3184.m9602(i2, 79, 2, 40);
+            return C6421.m18182(i2, 79, 2, 40);
         }
         if (i2 <= 80) {
             return 5;
@@ -54,7 +54,7 @@ public class RSAKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
         if (i2 <= 100) {
             return 7;
         }
-        return C3184.m9602(i2, 99, 2, 7);
+        return C6421.m18182(i2, 99, 2, 7);
     }
 
     public BigInteger chooseRandomPrime(int i, BigInteger bigInteger, BigInteger bigInteger2) {

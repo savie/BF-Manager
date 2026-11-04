@@ -1,51 +1,71 @@
 package l;
 
-import android.content.DialogInterface;
-import java.util.Comparator;
-import org.bouncycastle.asn1.ASN1ObjectIdentifier;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.pqc.jcajce.provider.sphincsplus.SPHINCSPlusKeyFactorySpi;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۗ᩸ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2BVX */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3509 implements InterfaceC7359, InterfaceC11787 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m10332(String str, ComponentCallbacksC22654 componentCallbacksC22654, String str2) {
-        return str + componentCallbacksC22654 + str2;
+/* JADX INFO: renamed from: l.ۗܶ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: E8QH */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3509 implements InterfaceC1272 {
+    @Override // l.InterfaceC1272
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo4645(C15648 c15648) {
+        String str = c15648.f50848;
+        return C17359.equals(str, "text/x-ssa") || C17359.equals(str, "text/vtt") || C17359.equals(str, "application/x-mp4-vtt") || C17359.equals(str, "application/x-subrip") || C17359.equals(str, "application/x-quicktime-tx3g") || C17359.equals(str, "application/pgs") || C17359.equals(str, "application/vobsub") || C17359.equals(str, "application/dvbsubs") || C17359.equals(str, "application/ttml+xml");
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static DialogInterfaceC19356 m10334(C8067 c8067, int i, DialogInterface.OnClickListener onClickListener, int i2, DialogInterface.OnClickListener onClickListener2) {
-        c8067.m21251(i, onClickListener);
-        c8067.m21275(i2, onClickListener2);
-        return c8067.m21269();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m10335(BouncyCastleProvider bouncyCastleProvider, ASN1ObjectIdentifier aSN1ObjectIdentifier) {
-        bouncyCastleProvider.addKeyInfoConverter(aSN1ObjectIdentifier, new SPHINCSPlusKeyFactorySpi());
-    }
-
-    @Override // l.InterfaceC11787
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean mo10336(int i, int i2, int i3, int i4, int i5) {
-        if (i2 == 67 && i3 == 79 && i4 == 77 && (i5 == 77 || i == 2)) {
-            return true;
+    @Override // l.InterfaceC1272
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo4647(C15648 c15648) {
+        String str = c15648.f50848;
+        if (str != null) {
+            switch (str) {
+                case "application/dvbsubs":
+                case "application/pgs":
+                case "application/x-mp4-vtt":
+                    return 2;
+                case "text/vtt":
+                    return 1;
+                case "application/x-quicktime-tx3g":
+                    return 2;
+                case "text/x-ssa":
+                    return 1;
+                case "application/vobsub":
+                    return 2;
+                case "application/x-subrip":
+                case "application/ttml+xml":
+                    return 1;
+            }
         }
-        if (i2 == 77 && i3 == 76 && i4 == 76) {
-            return i5 == 84 || i == 2;
+        throw new IllegalArgumentException(C25272.m56409("Unsupported MIME type: ", str));
+    }
+
+    @Override // l.InterfaceC1272
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC2763 mo4646(C15648 c15648) {
+        String str = c15648.f50848;
+        List list = c15648.f50835;
+        if (str != null) {
+            switch (str) {
+                case "application/dvbsubs":
+                    return new C14915(list);
+                case "application/pgs":
+                    return new C18645();
+                case "application/x-mp4-vtt":
+                    return new C11341();
+                case "text/vtt":
+                    return new C24022();
+                case "application/x-quicktime-tx3g":
+                    return new C12833(list);
+                case "text/x-ssa":
+                    return new C8204(list);
+                case "application/vobsub":
+                    return new C1647(list);
+                case "application/x-subrip":
+                    return new C9694();
+                case "application/ttml+xml":
+                    return new C21784();
+            }
         }
-        return false;
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        ((InterfaceC10430) obj).getClass();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Comparator m10333(InterfaceC4816 interfaceC4816, Comparator comparator) {
-        return comparator instanceof InterfaceC4816 ? interfaceC4816.mo13376((InterfaceC4816) comparator) : C7618.$default$thenComparing(interfaceC4816, comparator);
+        throw new IllegalArgumentException(C25272.m56409("Unsupported MIME type: ", str));
     }
 }

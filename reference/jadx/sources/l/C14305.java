@@ -2,26 +2,40 @@ package l;
 
 import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ܳۙ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17QI */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.ܰۖ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F416 */
+/* JADX INFO: loaded from: classes5.dex */
 public final /* synthetic */ class C14305 implements Function {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f45170;
+
+    public /* synthetic */ C14305(int i) {
+        this.f45170 = i;
+    }
+
     @Override // java.util.function.Function
     /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
     @Override // java.util.function.Function
     public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+        return C24247.$default$compose(this, function);
     }
 
     @Override // java.util.function.Function
     public final Object apply(Object obj) {
-        InterfaceC1657 interfaceC1657 = (InterfaceC1657) obj;
-        int i = AbstractC5400.f18636;
-        interfaceC1657.getClass();
-        return new C13599(interfaceC1657);
+        switch (this.f45170) {
+            case 0:
+                return C1170.stream(((C21351) obj).f68007);
+            case 1:
+                return ((C14764) obj).f48255;
+            case 2:
+                return ((StackTraceElement) obj).toString();
+            default:
+                return ((C12510) obj).f40168.f38067;
+        }
     }
 }

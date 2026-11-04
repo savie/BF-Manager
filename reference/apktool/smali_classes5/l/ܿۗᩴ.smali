@@ -1,138 +1,36 @@
-.class public final Ll/ܿۗᩴ;
-.super Ll/ᩴۙ۠;
-.source "N673"
+.class public final synthetic Ll/ܿۗᩴ;
+.super Ljava/lang/Object;
+.source "N15M"
 
 # interfaces
-.implements Ll/᩹ۖ۠;
+.implements Ll/ۙ᩻ۙ;
 
 
-# static fields
-.field public static final c:Ll/ۛۢᩴ;
-
-.field public static final d:Ll/ۛۢᩴ;
+# instance fields
+.field public final synthetic ܰ:Ll/ۜۗᩴ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 9
-
-    .line 242
-    new-instance v6, Ll/ۛۢᩴ;
-
-    sget-object v7, Ll/᩺ۙ۠;->LONG_VALUE:Ll/᩺ۙ۠;
-
-    .line 243
-    new-instance v4, Ll/ܰܰ۠;
-
-    const/16 v0, 0x11
+.method public synthetic constructor <init>(Ll/ۜۗᩴ;)V
+    .locals 0
 
     .line 0
-    invoke-direct {v4, v0}, Ll/ܰܰ۠;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
-    new-instance v5, Ll/ᩳۙ۠;
-
-    const/16 v0, 0xc
-
-    .line 0
-    invoke-direct {v5, v0}, Ll/ᩳۙ۠;-><init>(I)V
-
-    const/4 v1, 0x1
-
-    .line 243
-    sget-object v8, Ll/ۛۛᩴ;->c:Ll/ۛۛᩴ;
-
-    move-object v0, v6
-
-    move-object v2, v7
-
-    move-object v3, v8
-
-    invoke-direct/range {v0 .. v5}, Ll/ۛۢᩴ;-><init>(ZLl/᩺ۙ۠;Ljava/lang/Object;Ljava/util/function/Predicate;Ljava/util/function/Supplier;)V
-
-    sput-object v6, Ll/ܿۗᩴ;->c:Ll/ۛۢᩴ;
-
-    .line 245
-    new-instance v6, Ll/ۛۢᩴ;
-
-    .line 246
-    new-instance v4, Ll/ܰܰ۠;
-
-    const/16 v0, 0x11
-
-    .line 0
-    invoke-direct {v4, v0}, Ll/ܰܰ۠;-><init>(I)V
-
-    .line 246
-    new-instance v5, Ll/ᩳۙ۠;
-
-    const/16 v0, 0xc
-
-    .line 0
-    invoke-direct {v5, v0}, Ll/ᩳۙ۠;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    move-object v0, v6
-
-    .line 246
-    invoke-direct/range {v0 .. v5}, Ll/ۛۢᩴ;-><init>(ZLl/᩺ۙ۠;Ljava/lang/Object;Ljava/util/function/Predicate;Ljava/util/function/Supplier;)V
-
-    sput-object v6, Ll/ܿۗᩴ;->d:Ll/ۛۢᩴ;
+    iput-object p1, p0, Ll/ܿۗᩴ;->ܰ:Ll/ۜۗᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(J)V
+.method public final ۙ(Ll/ۤ᩻ۙ;Ll/ۡۧۙ;)V
     .locals 0
 
-    .line 234
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 0
+    iget-object p1, p0, Ll/ܿۗᩴ;->ܰ:Ll/ۜۗᩴ;
 
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ll/ᩴۙ۠;->accept(Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Ll/ۜۗᩴ;->ۙ(Ll/ۜۗᩴ;Ll/ۡۧۙ;)V
 
     return-void
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
-    .locals 0
-
-    invoke-static {p0, p1}, Ll/᩸᩻ᩴ;->$default$andThen(Ljava/util/function/LongConsumer;Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 3
-
-    .line 239
-    iget-boolean v0, p0, Ll/ᩴۙ۠;->a:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ll/ᩴۙ۠;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    .line 113
-    new-instance v2, Ll/ۛۛᩴ;
-
-    invoke-direct {v2, v0, v1}, Ll/ۛۛᩴ;-><init>(J)V
-
-    return-object v2
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
 .end method

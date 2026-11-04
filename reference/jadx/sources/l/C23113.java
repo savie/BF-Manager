@@ -1,7 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ܽ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: UAYG */
+/* JADX INFO: renamed from: l.᩸᩹ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TAQS */
 /* JADX INFO: loaded from: classes.dex */
-public class C23113 {
+public final class C23113 extends AbstractC21445 {
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public boolean f74966;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public C20129 f74967;
+
+    @Override // l.AbstractC17715
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo2479() {
+        return 10;
+    }
 }

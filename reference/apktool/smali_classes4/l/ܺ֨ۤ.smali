@@ -1,25 +1,36 @@
-.class public Ll/ܺ֨ۤ;
-.super Ljava/io/FilterInputStream;
-.source "X1S4"
+.class public final synthetic Ll/ܺ֨ۤ;
+.super Ljava/lang/Object;
+.source "W1W9"
 
 # interfaces
-.implements Ll/᩷ۤᩴ;
+.implements Landroid/view/View$OnClickListener;
 
 
-# virtual methods
-.method public final close()V
+# instance fields
+.field public final synthetic ܰ:Ll/᩶֨ۤ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩶֨ۤ;)V
     .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܺ֨ۤ;->ܰ:Ll/᩶֨ۤ;
 
     return-void
 .end method
 
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    iget-object p1, p0, Ll/ܺ֨ۤ;->ܰ:Ll/᩶֨ۤ;
 
-    move-result-wide v0
+    invoke-static {p1}, Ll/᩶֨ۤ;->ۙ(Ll/᩶֨ۤ;)V
 
-    return-wide v0
+    return-void
 .end method

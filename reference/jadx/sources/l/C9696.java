@@ -1,47 +1,122 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܺ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5F2 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9696 extends AbstractC4300 implements InterfaceC3594 {
+import java.util.Comparator;
+import java.util.function.Consumer;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC3468 f32674 = new C1933();
+/* JADX INFO: renamed from: l.ۡ᩹᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: UCGS */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9696 implements InterfaceC16321 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f32675;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte f32676;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C14171 f31306;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public short f32677;
+    public boolean f31307;
 
-    public C9696(EnumC0772 enumC0772, byte[] bArr, int i) {
-        super(enumC0772);
-        byte b = bArr[i + 1];
-        this.f32676 = (byte) (b & 15);
-        this.f32675 = C14611.m35076(b);
-        this.f32677 = (short) C14611.m35087(i + 2, bArr);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f31308;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f31309;
+
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return 16720;
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4759(C4651 c4651, int i) {
-        c4651.m12841(this.f15468.f3346);
-        c4651.m12841((this.f32675 << 4) | this.f32676);
-        c4651.m12833(this.f32677);
+    @Override // l.InterfaceC8409
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        C17813.m41657(this, consumer);
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ۜ */
-    public final EnumC1227 mo4758() {
-        return EnumC1227.Format22cs;
+    @Override // l.InterfaceC8409
+    public /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
     }
 
-    @Override // l.InterfaceC3594
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4757() {
-        return this.f32676;
+    @Override // l.InterfaceC8409
+    public /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return C17813.m41658(this, consumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public final /* bridge */ /* synthetic */ Comparator getComparator() {
+        getComparator();
+        throw null;
+    }
+
+    @Override // l.InterfaceC16321, l.InterfaceC8409
+    public final InterfaceC16564 getComparator() {
+        throw new IllegalStateException();
+    }
+
+    @Override // l.InterfaceC9154
+    public final void forEachRemaining(Object obj) {
+        InterfaceC12089 interfaceC12089 = (InterfaceC12089) obj;
+        C14171 c14171 = this.f31306;
+        char[] cArr = c14171.f44819;
+        int i = this.f31307 ? this.f31309 : c14171.f44820;
+        while (true) {
+            int i2 = this.f31308;
+            if (i2 >= i) {
+                return;
+            }
+            interfaceC12089.mo10258(cArr[i2]);
+            this.f31308++;
+        }
+    }
+
+    @Override // l.InterfaceC9154
+    public final boolean tryAdvance(Object obj) {
+        InterfaceC12089 interfaceC12089 = (InterfaceC12089) obj;
+        int i = this.f31308;
+        boolean z = this.f31307;
+        C14171 c14171 = this.f31306;
+        if (i >= (z ? this.f31309 : c14171.f44820)) {
+            return false;
+        }
+        char[] cArr = c14171.f44819;
+        this.f31308 = i + 1;
+        interfaceC12089.mo10258(cArr[i]);
+        return true;
+    }
+
+    public C9696(C14171 c14171) {
+        this(c14171, 0, c14171.f44820, false);
+    }
+
+    public C9696(C14171 c14171, int i, int i2, boolean z) {
+        this.f31306 = c14171;
+        this.f31308 = i;
+        this.f31309 = i2;
+        this.f31307 = z;
+    }
+
+    @Override // l.InterfaceC8409
+    public final long estimateSize() {
+        return (this.f31307 ? this.f31309 : this.f31306.f44820) - this.f31308;
+    }
+
+    @Override // l.InterfaceC9154, l.InterfaceC8409
+    public final InterfaceC16321 trySplit() {
+        boolean z = this.f31307;
+        C14171 c14171 = this.f31306;
+        int i = z ? this.f31309 : c14171.f44820;
+        int i2 = this.f31308;
+        int i3 = (i - i2) >> 1;
+        if (i3 <= 1) {
+            return null;
+        }
+        this.f31309 = i;
+        int i4 = i3 + i2;
+        this.f31308 = i4;
+        this.f31307 = true;
+        return new C9696(c14171, i2, i4, true);
     }
 }

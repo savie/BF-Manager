@@ -1,45 +1,55 @@
 package l;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۛ᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۛۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S696 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6345 implements Iterator, Consumer {
-    public boolean a = false;
-    public Object b;
-    public final /* synthetic */ InterfaceC20693 c;
+public final class C6345 extends BaseAdapter {
 
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C14547 f21473;
+
+    @Override // android.widget.Adapter
+    public final long getItemId(int i) {
+        return i;
     }
 
-    public C6345(InterfaceC20693 interfaceC20693) {
-        this.c = interfaceC20693;
+    @Override // android.widget.BaseAdapter, android.widget.Adapter
+    public final int getItemViewType(int i) {
+        return 0;
     }
 
-    @Override // java.util.function.Consumer
-    public final void accept(Object obj) {
-        this.a = true;
-        this.b = obj;
+    @Override // android.widget.BaseAdapter, android.widget.Adapter
+    public final int getViewTypeCount() {
+        return 3;
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        if (!this.a) {
-            this.c.tryAdvance(this);
+    public C6345(C14547 c14547) {
+        this.f21473 = c14547;
+    }
+
+    @Override // android.widget.Adapter
+    public final int getCount() {
+        throw null;
+    }
+
+    @Override // android.widget.Adapter
+    public final Object getItem(int i) {
+        throw null;
+    }
+
+    @Override // android.widget.Adapter
+    public final View getView(int i, View view, ViewGroup viewGroup) {
+        C14547 c14547 = this.f21473;
+        if (view == null || view.getId() != R.id.MT_Protector) {
+            view = LayoutInflater.from(c14547.getContext()).inflate(R.layout.MT_Protector, viewGroup, false);
         }
-        return this.a;
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!this.a && !hasNext()) {
-            throw new NoSuchElementException();
-        }
-        this.a = false;
-        return this.b;
+        c14547.getContext().getPackageManager();
+        throw null;
     }
 }

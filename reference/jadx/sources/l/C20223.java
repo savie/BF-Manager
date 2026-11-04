@@ -1,61 +1,97 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.lang.reflect.Method;
 
-/* JADX INFO: renamed from: l.᩶ܳۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X68P */
+/* JADX INFO: renamed from: l.᩵֨ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X93U */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20223 extends AbstractC17535 {
+public final class C20223 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f65636;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final Method f64906;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12359 f65637;
+    public final Method f64907;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f65638;
+    public final Method f64908;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f65639;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Method f64909;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC2916 f65640;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Method f64910;
 
-    public C20223(AbstractC12359 abstractC12359, InterfaceC2916 interfaceC2916, int i, int i2, int i3) {
-        this.f65637 = abstractC12359;
-        this.f65640 = interfaceC2916;
-        this.f65639 = i;
-        this.f65636 = i2;
-        this.f65638 = i3;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final Method f64911;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Method f64912;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Method f64913;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final Method f64914;
+
+    public C20223(Class cls, Class cls2, String str) {
+        this.f64912 = AbstractC9035.m24124(cls, C14442.m34865("get", str, "List"), new Class[0]);
+        this.f64911 = AbstractC9035.m24124(cls2, C14442.m34865("get", str, "List"), new Class[0]);
+        String strM56409 = C25272.m56409("get", str);
+        Class cls3 = Integer.TYPE;
+        Method methodM24124 = AbstractC9035.m24124(cls, strM56409, cls3);
+        this.f64910 = methodM24124;
+        this.f64908 = AbstractC9035.m24124(cls2, C25272.m56409("get", str), cls3);
+        Class<?> returnType = methodM24124.getReturnType();
+        this.f64906 = AbstractC9035.m24124(cls2, C25272.m56409("set", str), cls3, returnType);
+        this.f64907 = AbstractC9035.m24124(cls2, C25272.m56409("add", str), returnType);
+        this.f64909 = AbstractC9035.m24124(cls, C14442.m34865("get", str, "Count"), new Class[0]);
+        this.f64914 = AbstractC9035.m24124(cls2, C14442.m34865("get", str, "Count"), new Class[0]);
+        this.f64913 = AbstractC9035.m24124(cls2, C25272.m56409("clear", str), new Class[0]);
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C20223)) {
-            return false;
-        }
-        C20223 c20223 = (C20223) obj;
-        return this.f65639 == c20223.f65639 && this.f65636 == c20223.f65636 && this.f65638 == c20223.f65638 && C13638.equals(this.f65637, c20223.f65637) && C13638.equals(this.f65640, c20223.f65640);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m46493(AbstractC9035 abstractC9035) {
+        return AbstractC9035.m24123(this.f64912, abstractC9035, new Object[0]);
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f65640) + ((C13638.hashCode(this.f65637) + (((((this.f65639 * 31) + this.f65636) * 31) + this.f65638) * 31)) * 31);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m46500(AbstractC15001 abstractC15001) {
+        return AbstractC9035.m24123(this.f64911, abstractC15001, new Object[0]);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f65637, this.f65640, Integer.valueOf(this.f65639), Integer.valueOf(this.f65636), Integer.valueOf(this.f65638)};
-        String[] strArrSplit = "layout;owner;version;x;y".length() == 0 ? new String[0] : "layout;owner;version;x;y".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C20223.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m46492(int i, AbstractC9035 abstractC9035) {
+        return AbstractC9035.m24123(this.f64910, abstractC9035, Integer.valueOf(i));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m46494(AbstractC15001 abstractC15001, int i) {
+        return AbstractC9035.m24123(this.f64908, abstractC15001, Integer.valueOf(i));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46496(AbstractC15001 abstractC15001, int i, Object obj) {
+        AbstractC9035.m24123(this.f64906, abstractC15001, Integer.valueOf(i), obj);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46497(AbstractC15001 abstractC15001, Object obj) {
+        AbstractC9035.m24123(this.f64907, abstractC15001, obj);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m46499(AbstractC9035 abstractC9035) {
+        return ((Integer) AbstractC9035.m24123(this.f64909, abstractC9035, new Object[0])).intValue();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m46498(AbstractC15001 abstractC15001) {
+        return ((Integer) AbstractC9035.m24123(this.f64914, abstractC15001, new Object[0])).intValue();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46495(AbstractC15001 abstractC15001) {
+        AbstractC9035.m24123(this.f64913, abstractC15001, new Object[0]);
     }
 }

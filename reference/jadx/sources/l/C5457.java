@@ -1,14 +1,17 @@
 package l;
 
-import android.view.Window;
-import android.view.WindowInsets;
-
-/* JADX INFO: renamed from: l.ۚܺܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W5LS */
+/* JADX INFO: renamed from: l.ۚۛ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: W79N */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C5457 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m15125(Window window) {
-        window.getDecorView().getWindowInsetsController().show(WindowInsets.Type.ime());
+    public boolean f19051;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C24849 f19052;
+
+    public C5457(C24849 c24849) {
+        this.f19052 = c24849;
     }
 }

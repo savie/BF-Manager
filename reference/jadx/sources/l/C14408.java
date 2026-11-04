@@ -1,60 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ۠᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18YS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14408 implements InterfaceC1062 {
+/* JADX INFO: renamed from: l.ܰۛܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBEJ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14408 extends C12763 implements Comparable {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f47236;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C14408 f45407 = new C14408(0);
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f47237;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f47238;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C17250 f47239;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f47240;
-
-    public C14408(C17250 c17250, String str, String str2, String str3, String str4) {
-        this.f47239 = c17250;
-        this.f47236 = str;
-        this.f47240 = str2;
-        this.f47237 = str3;
-        this.f47238 = str4;
-    }
-
-    @Override // l.InterfaceC1062
-    /* JADX INFO: renamed from: ۙ */
-    public final C17250 mo4010() {
-        return this.f47239;
-    }
-
-    @Override // l.InterfaceC1062
-    /* JADX INFO: renamed from: ۖ */
-    public final String mo4009() {
-        return this.f47236;
-    }
-
-    @Override // l.InterfaceC1062
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo4012() {
-        return this.f47240;
-    }
-
-    @Override // l.InterfaceC1062
-    /* JADX INFO: renamed from: ۚ */
-    public final String mo4011() {
-        return this.f47237;
-    }
-
-    @Override // l.InterfaceC1062
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo4013() {
-        return this.f47238;
+    @Override // java.lang.Comparable
+    public final int compareTo(Object obj) {
+        C14408 c14408 = (C14408) obj;
+        if (this != c14408) {
+            int size = size();
+            int size2 = c14408.size();
+            int iMin = Math.min(size, size2);
+            for (int i = 0; i < iMin; i++) {
+                int iCompareTo = ((C3968) m31593(i)).compareTo((C3968) c14408.m31593(i));
+                if (iCompareTo != 0) {
+                    return iCompareTo;
+                }
+            }
+            if (size < size2) {
+                return -1;
+            }
+            if (size > size2) {
+                return 1;
+            }
+        }
+        return 0;
     }
 }

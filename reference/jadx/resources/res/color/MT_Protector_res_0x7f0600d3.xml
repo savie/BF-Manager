@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:state_enabled="false"
-        android:color="@android:color/transparent"/>
+        android:color="?attr/MT_Protector_res_0x7f040111"
+        android:alpha="@dimen/MT_Protector_res_0x7f07013a"/>
     <item
-        android:state_selected="true"
-        android:color="?attr/MT_Protector_res_0x7f040124"/>
+        android:color="?attr/MT_Protector_res_0x7f0400ff"
+        app:state_error="true"/>
+    <item
+        android:color="?attr/MT_Protector_res_0x7f04011a"
+        app:state_indeterminate="true"/>
     <item
         android:state_checked="true"
-        android:color="?attr/MT_Protector_res_0x7f040124"/>
-    <item android:color="?attr/MT_Protector_res_0x7f040128"/>
+        android:color="?attr/MT_Protector_res_0x7f04011a"/>
+    <item
+        android:state_checked="false"
+        android:color="?attr/MT_Protector_res_0x7f040113"/>
 </selector>

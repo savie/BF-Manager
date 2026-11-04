@@ -12,12 +12,12 @@ import bin.mt.plugin.api.ui.builder.PluginUIBuilder;
 import bin.mt.plugin.api.util.ThreadUtil;
 import bin.mt.plugin.api.util.UIUpdater;
 import bin.mt.plugin.api.util.UIUpdaterGroup;
-import l.C0051;
-import l.C13638;
-import l.C16041;
-import l.C21079;
-import l.RunnableC22797;
-import l.RunnableC3517;
+import l.C10912;
+import l.C17359;
+import l.C19863;
+import l.C22847;
+import l.RunnableC14396;
+import l.RunnableC15052;
 
 /* JADX INFO: loaded from: classes.dex */
 public class LoadingDialog extends BaseCancelableDialog {
@@ -30,15 +30,15 @@ public class LoadingDialog extends BaseCancelableDialog {
 
     public LoadingDialog(PluginUI pluginUI) {
         super(pluginUI);
-        PluginView pluginViewBuild = ((PluginLinearLayoutBuilder) ((PluginLinearLayoutBuilder) ((PluginLinearLayoutBuilder) ((PluginRootLayoutBuilder) pluginUI.buildHorizontalLayout().gravity(16).paddingDp(15.0f)).addProgressBar().style(PluginProgressBar.Style.CIRCULAR).addVerticalLayout().widthMatchParent()).marginLeftDp(15.0f)).children(new C21079(4, pluginUI))).build();
+        PluginView pluginViewBuild = ((PluginLinearLayoutBuilder) ((PluginLinearLayoutBuilder) ((PluginLinearLayoutBuilder) ((PluginRootLayoutBuilder) pluginUI.buildHorizontalLayout().gravity(16).paddingDp(15.0f)).addProgressBar().style(PluginProgressBar.Style.CIRCULAR).addVerticalLayout().widthMatchParent()).marginLeftDp(15.0f)).children(new C10912(pluginUI))).build();
         this.dialog = pluginUI.buildDialog().setView(pluginViewBuild).setCancelable(false).create();
         PluginTextView pluginTextView = (PluginTextView) pluginViewBuild.requireViewById("message");
         this.messageView = pluginTextView;
         this.secondaryMessageView = (PluginTextView) pluginViewBuild.requireViewById("secondaryMessage");
         UIUpdaterGroup uIUpdaterGroup = new UIUpdaterGroup();
-        C13638.requireNonNull(pluginTextView);
-        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C0051(pluginTextView));
-        this.secondaryMessageUpdater = uIUpdaterGroup.registerUpdater(new C16041(this));
+        C17359.requireNonNull(pluginTextView);
+        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C22847(pluginTextView));
+        this.secondaryMessageUpdater = uIUpdaterGroup.registerUpdater(new C19863(this));
     }
 
     public static /* synthetic */ void lambda$new$0(PluginUI pluginUI, PluginUIBuilder pluginUIBuilder) {
@@ -82,7 +82,7 @@ public class LoadingDialog extends BaseCancelableDialog {
     public LoadingDialog showDelay(long j) {
         ThreadUtil.assertInUIThread();
         this.delayShow = true;
-        ThreadUtil.postDelayed(new RunnableC3517(this), j);
+        ThreadUtil.postDelayed(new RunnableC14396(this), j);
         return this;
     }
 
@@ -101,7 +101,7 @@ public class LoadingDialog extends BaseCancelableDialog {
     @Override // bin.mt.plugin.api.ui.dialog.BaseCancelableDialog
     public void dismiss() {
         this.delayShow = false;
-        ThreadUtil.runOnUiThread(new RunnableC22797(1, this));
+        ThreadUtil.runOnUiThread(new RunnableC15052(5, this));
     }
 
     /* JADX INFO: Access modifiers changed from: private */

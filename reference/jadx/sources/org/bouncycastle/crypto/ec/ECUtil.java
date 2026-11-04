@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECUtil {
     public static BigInteger generateK(BigInteger bigInteger, SecureRandom secureRandom) {
         int iBitLength = bigInteger.bitLength();

@@ -6,13 +6,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
-import l.C0589;
-import l.C10235;
-import l.InterfaceC20818;
+import l.C1402;
+import l.C9214;
+import l.InterfaceC8469;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ZstdInputStreamNoFinalizer extends FilterInputStream implements InterfaceC20818 {
+public class ZstdInputStreamNoFinalizer extends FilterInputStream implements InterfaceC8469 {
     public static final int srcBuffSize;
+    public ZstdDictDecompress active_dict;
     public final BufferPool bufferPool;
     public long dstPos;
     public boolean frameFinished;
@@ -117,9 +118,9 @@ public class ZstdInputStreamNoFinalizer extends FilterInputStream implements Int
         }
     }
 
-    @Override // java.io.InputStream, l.InterfaceC20818
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 
     static {
@@ -166,6 +167,7 @@ public class ZstdInputStreamNoFinalizer extends FilterInputStream implements Int
             if (Zstd.isError(jLoadFastDictDecompress)) {
                 throw new ZstdIOException(jLoadFastDictDecompress);
             }
+            this.active_dict = zstdDictDecompress;
             zstdDictDecompress.releaseSharedLock();
         } catch (Throwable th) {
             zstdDictDecompress.releaseSharedLock();
@@ -197,9 +199,9 @@ public class ZstdInputStreamNoFinalizer extends FilterInputStream implements Int
             throw new IOException("Stream closed");
         }
         if (i < 0 || i2 > bArr.length - i) {
-            StringBuilder sbM2791 = C0589.m2791("Requested length ", i2, " from offset ", " in buffer of size ", i);
-            sbM2791.append(bArr.length);
-            throw new IndexOutOfBoundsException(sbM2791.toString());
+            StringBuilder sbM5126 = C1402.m5126("Requested length ", i2, " from offset ", " in buffer of size ", i);
+            sbM5126.append(bArr.length);
+            throw new IndexOutOfBoundsException(sbM5126.toString());
         }
         int i3 = i + i2;
         long j2 = i;

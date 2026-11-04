@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/ArrayList;
+.field public ܰ:Ljava/util/ArrayList;
 
 .field public ᩶:Ljava/util/ArrayList;
 
@@ -29,7 +29,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܺ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܰ:Ljava/util/ArrayList;
 
     .line 61
     iput-object v1, p0, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->᩶:Ljava/util/ArrayList;
@@ -43,7 +43,7 @@
     .locals 1
 
     .line 65
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܰ:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public final ܰ()Ljava/util/List;
+.method public final ᩷()Ljava/util/List;
     .locals 1
 
     .line 73

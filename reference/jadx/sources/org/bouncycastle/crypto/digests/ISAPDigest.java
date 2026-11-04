@@ -7,7 +7,6 @@ import org.bouncycastle.util.Pack;
 public class ISAPDigest extends BufferBaseDigest {
     public final AsconPermutationFriend.AsconPermutation p;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
 

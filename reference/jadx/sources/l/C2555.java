@@ -1,22 +1,22 @@
 package l;
 
-import java.util.HashMap;
-
-/* JADX INFO: renamed from: l.ۖ۬᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: TAQV */
+/* JADX INFO: renamed from: l.ۖۡۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E5RN */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2555 {
+public final class C2555 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f10105 = new HashMap();
+    public C2555 f8206;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC11729 m7962(AbstractC11729 abstractC11729) {
-        return (AbstractC11729) this.f10105.get(abstractC11729);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C10562 f8207;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m7961() {
-        return this.f10105.size();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f8208;
+
+    public C2555(int i, C10562 c10562, C2555 c2555) {
+        this.f8208 = i;
+        this.f8207 = c10562;
+        this.f8206 = c2555;
     }
 }

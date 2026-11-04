@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/amazonaws/internal/MetricAware;
-.implements Ll/᩷ۤᩴ;
+.implements Ll/۠ۜ᩹;
 
 
 # direct methods
@@ -23,14 +23,11 @@
     .locals 2
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    invoke-static {p0, p1}, Ll/ۡۜ᩹;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
     move-result-wide v0
 
     return-wide v0
-.end method
-
-.method public abstract ۖ()Ljava/io/InputStream;
 .end method
 
 .method public final ۙ()Z
@@ -39,7 +36,7 @@
     .end annotation
 
     .line 38
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۖ()Ljava/io/InputStream;
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -64,7 +61,10 @@
     return v0
 .end method
 
-.method public final ۨ()V
+.method public abstract ۤ()Ljava/io/InputStream;
+.end method
+
+.method public final ᩷()V
     .locals 1
 
     .line 53

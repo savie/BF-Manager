@@ -1,86 +1,280 @@
-.class public final synthetic Ll/֡ۚۤ;
+.class public final Ll/֡ۚۤ;
 .super Ljava/lang/Object;
-.source "L7ER"
+.source "7B6P"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܿۚۤ;
+.field public final ܰ:Ljava/io/InputStream;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܿۚۤ;)V
+.method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 0
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֡ۚۤ;->ܺ:Ll/ܿۚۤ;
+    .line 14
+    iput-object p1, p0, Ll/֡ۚۤ;->ܰ:Ljava/io/InputStream;
 
     return-void
 .end method
 
+.method private ۙ(I)I
+    .locals 2
+
+    .line 130
+    iget-object v0, p0, Ll/֡ۚۤ;->ܰ:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int p1, v0, p1
+
+    return p1
+
+    .line 132
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+.end method
+
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 6
+.method public final close()V
+    .locals 1
 
-    .line 345
-    iget-object v0, p0, Ll/֡ۚۤ;->ܺ:Ll/ܿۚۤ;
+    .line 149
+    iget-object v0, p0, Ll/֡ۚۤ;->ܰ:Ljava/io/InputStream;
 
-    iget v1, v0, Ll/ܿۚۤ;->᩵ܰ:I
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 346
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object v1
+.method public final declared-synchronized readInt()I
+    .locals 3
 
-    iget v2, v0, Ll/ܿۚۤ;->᩸ܰ:I
+    move-object v0, p0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 1
+    monitor-enter v0
 
-    move-result-object v2
+    const/4 v1, 0x0
 
-    iget-object v3, v0, Ll/ܿۚۤ;->ܶܰ:[I
+    .line 63
+    :try_start_0
+    invoke-direct {p0, v1}, Ll/֡ۚۤ;->ۙ(I)I
 
-    invoke-static {v3}, Ll/ᩴ۫ۡ;->ۙ([I)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v3
+    const/16 v2, 0x8
 
-    iget-object v0, v0, Ll/ܿۚۤ;->ۡܰ:[I
+    invoke-direct {p0, v2}, Ll/֡ۚۤ;->ۙ(I)I
 
-    invoke-static {v0}, Ll/ᩴ۫ۡ;->ۙ([I)Ljava/lang/String;
+    move-result v2
 
-    move-result-object v0
+    or-int/2addr v1, v2
 
-    const/4 v4, 0x4
+    const/16 v2, 0x10
 
-    new-array v4, v4, [Ljava/lang/Object;
+    invoke-direct {p0, v2}, Ll/֡ۚۤ;->ۙ(I)I
 
-    const/4 v5, 0x0
+    move-result v2
 
-    aput-object v1, v4, v5
+    or-int/2addr v1, v2
 
-    const/4 v1, 0x1
+    const/16 v2, 0x18
 
-    aput-object v2, v4, v1
+    invoke-direct {p0, v2}, Ll/֡ۚۤ;->ۙ(I)I
 
-    const/4 v1, 0x2
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    aput-object v3, v4, v1
+    or-int/2addr v1, v2
 
-    const/4 v1, 0x3
+    monitor-exit v0
 
-    aput-object v0, v4, v1
+    return v1
 
-    const-string v0, " full_frame=%d offset=%d numloc=%s  numstack=%s"
+    :catchall_0
+    move-exception v1
 
-    .line 19
-    invoke-static {v0, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v0
+    throw v1
+.end method
 
-    return-object v0
+.method public final declared-synchronized readShort()S
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 55
+    :try_start_0
+    invoke-direct {p0, v1}, Ll/֡ۚۤ;->ۙ(I)I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    invoke-direct {p0, v2}, Ll/֡ۚۤ;->ۙ(I)I
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    or-int/2addr v1, v2
+
+    int-to-short v1, v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized skipBytes(I)V
+    .locals 5
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    if-ltz p1, :cond_2
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p1, :cond_0
+
+    .line 45
+    :try_start_0
+    iget-object v2, p0, Ll/֡ۚۤ;->ܰ:Ljava/io/InputStream;
+
+    sub-int v3, p1, v1
+
+    int-to-long v3, v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/io/InputStream;->skip(J)J
+
+    move-result-wide v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    long-to-int v3, v2
+
+    if-lez v3, :cond_0
+
+    add-int/2addr v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    if-ne v1, p1, :cond_1
+
+    .line 52
+    monitor-exit v0
+
+    return-void
+
+    .line 50
+    :cond_1
+    :try_start_1
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    .line 40
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 50
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۡ᩷()I
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 59
+    :try_start_0
+    invoke-direct {p0, v1}, Ll/֡ۚۤ;->ۙ(I)I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    invoke-direct {p0, v2}, Ll/֡ۚۤ;->ۙ(I)I
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    or-int/2addr v1, v2
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

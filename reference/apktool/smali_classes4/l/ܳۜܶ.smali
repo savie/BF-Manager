@@ -1,177 +1,307 @@
-.class public final enum Ll/ܳۜܶ;
-.super Ljava/lang/Enum;
-.source "65AK"
-
-# interfaces
-.implements Ll/᩵ᩴܶ;
-
-
-# static fields
-.field public static final enum ֡:Ll/ܳۜܶ;
-
-.field public static final enum ۫:Ll/ܳۜܶ;
-
-.field public static final enum ܽ:Ll/ܳۜܶ;
-
-.field public static final enum ܿ:Ll/ܳۜܶ;
-
-.field public static final synthetic ᩶:[Ll/ܳۜܶ;
+.class public final Ll/ܳۜܶ;
+.super Ljava/lang/Object;
+.source "E8A6"
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:I
+
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
-
-    .line 25
-    new-instance v0, Ll/ܳۜܶ;
-
-    const/4 v1, 0x0
-
-    const-string v2, "runtime"
-
-    const-string v3, "RUNTIME"
-
-    invoke-direct {v0, v3, v1, v2}, Ll/ܳۜܶ;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ll/ܳۜܶ;->۫:Ll/ܳۜܶ;
-
-    .line 26
-    new-instance v0, Ll/ܳۜܶ;
-
-    const/4 v1, 0x1
-
-    const-string v2, "build"
-
-    const-string v3, "BUILD"
-
-    invoke-direct {v0, v3, v1, v2}, Ll/ܳۜܶ;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ll/ܳۜܶ;->֡:Ll/ܳۜܶ;
-
-    .line 27
-    new-instance v0, Ll/ܳۜܶ;
-
-    const/4 v1, 0x2
-
-    const-string v2, "system"
-
-    const-string v3, "SYSTEM"
-
-    invoke-direct {v0, v3, v1, v2}, Ll/ܳۜܶ;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    .line 28
-    new-instance v0, Ll/ܳۜܶ;
-
-    const/4 v1, 0x3
-
-    const-string v2, "embedded"
-
-    const-string v3, "EMBEDDED"
-
-    invoke-direct {v0, v3, v1, v2}, Ll/ܳۜܶ;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ll/ܳۜܶ;->ܽ:Ll/ܳۜܶ;
-
-    .line 24
-    invoke-static {}, Ll/ܳۜܶ;->ܰ()[Ll/ܳۜܶ;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ܳۜܶ;->᩶:[Ll/ܳۜܶ;
-
-    return-void
-.end method
-
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 40
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
-    iput-object p3, p0, Ll/ܳۜܶ;->ܺ:Ljava/lang/String;
+    .line 30
+    iput-object p1, p0, Ll/ܳۜܶ;->ۙ:Ljava/lang/String;
+
+    .line 32
+    iput p2, p0, Ll/ܳۜܶ;->ۤ:I
+
+    .line 33
+    iput-object p3, p0, Ll/ܳۜܶ;->᩷:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll/ܳۜܶ;
-    .locals 1
-
-    .line 24
-    const-class v0, Ll/ܳۜܶ;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/ܳۜܶ;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/ܳۜܶ;
-    .locals 1
-
-    .line 24
-    sget-object v0, Ll/ܳۜܶ;->᩶:[Ll/ܳۜܶ;
-
-    invoke-virtual {v0}, [Ll/ܳۜܶ;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/ܳۜܶ;
-
-    return-object v0
-.end method
-
-.method public static synthetic ܰ()[Ll/ܳۜܶ;
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ll/ܳۜܶ;
-
-    .line 24
-    sget-object v1, Ll/ܳۜܶ;->۫:Ll/ܳۜܶ;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/ܳۜܶ;->֡:Ll/ܳۜܶ;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/ܳۜܶ;->ܽ:Ll/ܳۜܶ;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public ۙ()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    .line 49
-    iget-object v0, p0, Ll/ܳۜܶ;->ܺ:Ljava/lang/String;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    .line 53
+    :cond_0
+    instance-of v1, p1, Ll/ܳۜܶ;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    .line 56
+    :cond_1
+    move-object v1, p1
+
+    check-cast v1, Ll/ܳۜܶ;
+
+    .line 57
+    invoke-virtual {p0, p1}, Ll/ܳۜܶ;->᩷(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 37
+    iget p1, p0, Ll/ܳۜܶ;->ۤ:I
+
+    iget v3, v1, Ll/ܳۜܶ;->ۤ:I
+
+    if-ne p1, v3, :cond_2
+
+    .line 41
+    iget-object p1, p0, Ll/ܳۜܶ;->᩷:Ljava/lang/String;
+
+    iget-object v1, v1, Ll/ܳۜܶ;->᩷:Ljava/lang/String;
+
+    .line 59
+    invoke-static {p1, v1}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    .line 31
+    invoke-virtual {p0}, Ll/ܳۜܶ;->ۤ()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 37
+    iget v1, p0, Ll/ܳۜܶ;->ۤ:I
+
+    .line 46
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object v1, v2, v3
+
+    const/4 v1, 0x1
+
+    iget-object v3, p0, Ll/ܳۜܶ;->᩷:Ljava/lang/String;
+
+    aput-object v3, v2, v1
+
+    invoke-static {v2}, Ll/ܽۚۗ;->hash([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    .line 65
+    invoke-virtual {p0}, Ll/ܳۜܶ;->ۙ()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "null"
+
+    const-string v2, "\""
+
+    if-nez v0, :cond_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    .line 0
+    :cond_0
+    invoke-static {v2, v0, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 37
+    :goto_0
+    iget v3, p0, Ll/ܳۜܶ;->ۤ:I
+
+    .line 65
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    .line 53
+    iget-object v4, p0, Ll/ܳۜܶ;->᩷:Ljava/lang/String;
+
+    if-nez v4, :cond_1
+
+    goto :goto_1
+
+    .line 0
+    :cond_1
+    invoke-static {v2, v4, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_1
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v2, v4
+
+    const/4 v0, 0x1
+
+    aput-object v3, v2, v0
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    const-string v0, "NetShareInfo1{netName: %s, type: %08x, remark: %s}"
+
+    .line 64
+    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final ۙ()Ljava/lang/String;
+    .locals 1
+
+    .line 34
+    iget-object v0, p0, Ll/ܳۜܶ;->ۙ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 46
+    :cond_0
+    instance-of v0, p1, Ll/ܳۜܶ;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 49
+    :cond_1
+    check-cast p1, Ll/ܳۜܶ;
+
+    .line 34
+    iget-object p1, p1, Ll/ܳۜܶ;->ۙ:Ljava/lang/String;
+
+    .line 49
+    iget-object v0, p0, Ll/ܳۜܶ;->ۙ:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۤ()I
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    .line 39
+    iget-object v2, p0, Ll/ܳۜܶ;->ۙ:Ljava/lang/String;
+
+    aput-object v2, v0, v1
+
+    invoke-static {v0}, Ll/ܽۚۗ;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final ᩷()I
+    .locals 1
+
+    .line 37
+    iget v0, p0, Ll/ܳۜܶ;->ۤ:I
+
+    return v0
+.end method
+
+.method public final ᩷(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 38
+    :cond_0
+    instance-of v0, p1, Ll/ܳۜܶ;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 41
+    :cond_1
+    invoke-virtual {p0, p1}, Ll/ܳۜܶ;->ۙ(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

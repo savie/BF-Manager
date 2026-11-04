@@ -17,7 +17,7 @@ import org.bouncycastle.crypto.params.GOST3410PublicKeyParameters;
 import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410KeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public GOST3410KeyGenerationParameters param;
 

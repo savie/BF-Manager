@@ -232,7 +232,7 @@
     const/4 v1, 0x1
 
     .line 0
-    invoke-static {p0, v1, v0, v1}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p0, v1, v0, v1}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result p0
 

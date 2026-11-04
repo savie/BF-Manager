@@ -1,74 +1,74 @@
 package l;
 
-import android.app.Activity;
-import android.app.Application;
-import android.os.Bundle;
+import java.io.Serializable;
+import java.util.Comparator;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
 
-/* JADX INFO: renamed from: l.ۤ᩶, reason: contains not printable characters */
-/* JADX INFO: compiled from: K22G */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10509 implements Application.ActivityLifecycleCallbacks {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f35997;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Object f35998;
+/* JADX INFO: renamed from: l.ۤ֡᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4CFT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10509 implements InterfaceC4544, Serializable, InterfaceC7136 {
+    public static final long serialVersionUID = 1;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Activity f36001;
+    public final InterfaceC4544 f33435;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f35999 = false;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f36000 = false;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f36002 = false;
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityCreated(Activity activity, Bundle bundle) {
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public final /* synthetic */ Comparator thenComparing(Comparator comparator) {
+        return C14017.m34138(this, comparator);
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityResumed(Activity activity) {
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparing(Function function) {
+        return C2661.$default$thenComparing(this, function);
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparing(Function function, Comparator comparator) {
+        return C8627.thenComparing(this, C2661.comparing(function, comparator));
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityStopped(Activity activity) {
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingDouble(ToDoubleFunction toDoubleFunction) {
+        return C2661.$default$thenComparingDouble(this, toDoubleFunction);
     }
 
-    public C10509(Activity activity) {
-        this.f36001 = activity;
-        this.f35997 = activity.hashCode();
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingInt(ToIntFunction toIntFunction) {
+        return C2661.$default$thenComparingInt(this, toIntFunction);
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityStarted(Activity activity) {
-        if (this.f36001 == activity) {
-            this.f35999 = true;
-        }
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public /* synthetic */ Comparator thenComparingLong(ToLongFunction toLongFunction) {
+        return C2661.$default$thenComparingLong(this, toLongFunction);
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityPaused(Activity activity) {
-        if (!this.f36000 || this.f36002 || this.f35999 || !C7686.m20318(this.f35998, this.f35997, activity)) {
-            return;
-        }
-        this.f36002 = true;
-        this.f35998 = null;
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return mo14286(((Integer) obj).intValue(), ((Integer) obj2).intValue());
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public final void onActivityDestroyed(Activity activity) {
-        if (this.f36001 == activity) {
-            this.f36001 = null;
-            this.f36000 = true;
-        }
+    @Override // l.InterfaceC4544
+    /* JADX INFO: renamed from: ۙ */
+    public final C7306 mo14285(InterfaceC4544 interfaceC4544) {
+        return new C7306(this, interfaceC4544);
+    }
+
+    public C10509(InterfaceC4544 interfaceC4544) {
+        this.f33435 = interfaceC4544;
+    }
+
+    @Override // l.InterfaceC4544
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo14286(int i, int i2) {
+        return this.f33435.mo14286(i2, i);
+    }
+
+    @Override // java.util.Comparator, l.InterfaceC7136
+    public final Comparator reversed() {
+        return this.f33435;
     }
 }

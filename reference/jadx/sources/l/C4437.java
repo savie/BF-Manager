@@ -1,25 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۚۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L5MW */
+/* JADX INFO: renamed from: l.ۘ᩸֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 075F */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4437 extends AbstractC21024 implements InterfaceC5143 {
+public final class C4437 implements InterfaceC15670 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final C4437 f15773 = new C4437(true);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C16281 f15891;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final C4437 f15774 = new C4437(false);
+    public final InterfaceC15670 f15892;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final boolean f15775;
-
-    public C4437(boolean z) {
-        this.f15775 = z;
+    public C4437(C16281 c16281, InterfaceC15670 interfaceC15670) {
+        this.f15891 = c16281;
+        this.f15892 = interfaceC15670;
     }
 
-    @Override // l.InterfaceC16619
-    public final boolean getValue() {
-        return this.f15775;
+    @Override // l.InterfaceC15670
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC13433 mo3996() {
+        return new C24575(this);
     }
 }

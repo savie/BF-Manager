@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.ParametersWithSBox;
 import org.bouncycastle.crypto.params.ParametersWithUKM;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CryptoProWrapEngine extends GOST28147WrapEngine {
     public static boolean bitSet(byte b, int i) {
         return (b & (1 << i)) != 0;

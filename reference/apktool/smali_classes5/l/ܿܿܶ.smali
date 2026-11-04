@@ -1,206 +1,106 @@
 .class public final Ll/ܿܿܶ;
-.super Ll/ۘܽܶ;
-.source "W3U9"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final ֡:Ll/ܿܿܶ;
-
-.field public static final ܽ:Ll/ܿܿܶ;
-
-.field public static final synthetic ᩶:I
-
-
-# instance fields
-.field public final transient ܺ:Ll/᩹ܿܶ;
+.super Ll/֡ܿܶ;
+.source "X7XP"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ll/᩸ܿܶ;)V
+    .locals 1
 
-    .line 61
-    new-instance v0, Ll/ܿܿܶ;
+    const/4 v0, 0x0
 
-    .line 62
-    sget v1, Ll/᩹ܿܶ;->᩶:I
+    .line 40
+    invoke-direct {p0, p1, v0, v0}, Ll/֡ܿܶ;-><init>(Ll/᩸ܿܶ;[B[B)V
 
-    .line 85
-    sget-object v1, Ll/ۨ᩻ܶ;->ܿ:Ll/᩹ܿܶ;
+    return-void
+.end method
 
-    .line 62
-    invoke-direct {v0, v1}, Ll/ܿܿܶ;-><init>(Ll/᩹ܿܶ;)V
+.method public constructor <init>(Ll/᩸ܿܶ;[B)V
+    .locals 1
 
-    sput-object v0, Ll/ܿܿܶ;->ܽ:Ll/ܿܿܶ;
+    const/4 v0, 0x0
 
-    .line 64
-    new-instance v0, Ll/ܿܿܶ;
+    .line 40
+    invoke-direct {p0, p1, p2, v0}, Ll/֡ܿܶ;-><init>(Ll/᩸ܿܶ;[B[B)V
+
+    return-void
+.end method
+
+.method public static ۙ(Ll/᩸ܿܶ;Ll/ۢۘܶ;)Ll/ۛܿܶ;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    const-string v1, "invalid key format"
 
     .line 65
-    invoke-static {}, Ll/ۢۧܶ;->ۖ()Ll/ۢۧܶ;
+    invoke-virtual {p1, v0, v1}, Ll/ۢۘܶ;->ۙ(ILjava/lang/String;)[[B
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    .line 67
+    aget-object v0, p1, v0
+
+    const/4 v1, 0x2
+
+    .line 68
+    aget-object v1, p1, v1
+
+    const/16 v2, 0x39
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v1
 
-    invoke-static {v1}, Ll/᩹ܿܶ;->of(Ljava/lang/Object;)Ll/᩹ܿܶ;
+    .line 69
+    new-instance v2, Ll/ܿܿܶ;
 
-    move-result-object v1
+    .line 40
+    invoke-direct {v2, p0, v0, v1}, Ll/֡ܿܶ;-><init>(Ll/᩸ܿܶ;[B[B)V
 
-    invoke-direct {v0, v1}, Ll/ܿܿܶ;-><init>(Ll/᩹ܿܶ;)V
+    const/4 p0, 0x3
 
-    sput-object v0, Ll/ܿܿܶ;->֡:Ll/ܿܿܶ;
+    .line 70
+    aget-object p0, p1, p0
 
-    return-void
-.end method
+    invoke-static {p0}, Ll/ۡ֡ܶ;->ۙ([B)Ljava/lang/String;
 
-.method public constructor <init>(Ll/᩹ܿܶ;)V
-    .locals 0
+    move-result-object p0
 
-    .line 28
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p0, v2, Ll/ۛܿܶ;->ۚ:Ljava/lang/String;
 
-    .line 159
-    iput-object p1, p0, Ll/ܿܿܶ;->ܺ:Ll/᩹ܿܶ;
+    const/4 p0, 0x0
 
-    return-void
-.end method
+    .line 71
+    iput p0, v2, Ll/ۛܿܶ;->᩻:I
 
-.method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
-
-    .line 887
-    new-instance p1, Ljava/io/InvalidObjectException;
-
-    const-string v0, "Use SerializedForm"
-
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static ۨ()Ll/ܿܿܶ;
-    .locals 1
-
-    .line 87
-    sget-object v0, Ll/ܿܿܶ;->ܽ:Ll/ܿܿܶ;
-
-    return-object v0
-.end method
-
-.method public static ܰ()Ll/ܿܿܶ;
-    .locals 1
-
-    .line 108
-    sget-object v0, Ll/ܿܿܶ;->֡:Ll/ܿܿܶ;
-
-    return-object v0
+    return-object v2
 .end method
 
 
 # virtual methods
-.method public writeReplace()Ljava/lang/Object;
-    .locals 2
+.method public final ۤ()I
+    .locals 1
 
-    .line 882
-    new-instance v0, Ll/۫ܿܶ;
+    const/16 v0, 0x39
 
-    iget-object v1, p0, Ll/ܿܿܶ;->ܺ:Ll/᩹ܿܶ;
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ll/۫ܿܶ;-><init>(Ll/᩹ܿܶ;)V
+.method public final ۫()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ssh-ed448"
 
     return-object v0
 .end method
 
-.method public final ۙ()Ljava/util/Set;
-    .locals 3
+.method public final ܳ()Ljava/lang/String;
+    .locals 1
 
-    .line 309
-    iget-object v0, p0, Ll/ܿܿܶ;->ܺ:Ll/᩹ܿܶ;
-
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 310
-    sget v0, Ll/᩻ܿܶ;->֡:I
-
-    .line 79
-    sget-object v0, Ll/ۘ᩻ܶ;->᩻:Ll/ۘ᩻ܶ;
+    const-string v0, "Ed448"
 
     return-object v0
-
-    .line 312
-    :cond_0
-    new-instance v1, Ll/ۜ᩻ܶ;
-
-    sget v2, Ll/ۢۧܶ;->֡:I
-
-    .line 129
-    sget-object v2, Ll/֫ۧܶ;->ܺ:Ll/ۧۧܶ;
-
-    .line 312
-    invoke-direct {v1, v0, v2}, Ll/ۜ᩻ܶ;-><init>(Ll/᩹ܿܶ;Ljava/util/Comparator;)V
-
-    return-object v1
-.end method
-
-.method public final ۙ(Ljava/lang/Integer;)Ll/ۢۧܶ;
-    .locals 6
-
-    .line 201
-    new-instance v1, Ll/ۡܿܶ;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 310
-    new-instance v2, Ll/᩸۫ܶ;
-
-    .line 315
-    invoke-direct {v2, p1}, Ll/ᩳ۫ܶ;-><init>(Ljava/lang/Comparable;)V
-
-    .line 172
-    sget-object v3, Ll/ܿۧܶ;->ܺ:Ll/ܿۧܶ;
-
-    .line 206
-    sget-object v4, Ll/ۙܳܶ;->᩶:Ll/ۙܳܶ;
-
-    sget-object v5, Ll/ۧ᩻ܶ;->ܽ:Ll/ۧ᩻ܶ;
-
-    .line 202
-    iget-object v0, p0, Ll/ܿܿܶ;->ܺ:Ll/᩹ܿܶ;
-
-    invoke-static/range {v0 .. v5}, Ll/ܰܳܶ;->ۙ(Ljava/util/List;Ll/ۨ᩷ܶ;Ljava/lang/Comparable;Ljava/util/Comparator;Ll/ۙܳܶ;Ll/ۧ᩻ܶ;)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    .line 210
-    iget-object v1, p0, Ll/ܿܿܶ;->ܺ:Ll/᩹ܿܶ;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll/ۢۧܶ;
-
-    .line 211
-    invoke-virtual {v0, p1}, Ll/ۢۧܶ;->ۙ(Ljava/lang/Comparable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
 .end method

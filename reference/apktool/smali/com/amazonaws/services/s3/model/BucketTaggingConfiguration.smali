@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/ArrayList;
+.field public ܰ:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     .line 31
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܺ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܰ:Ljava/util/ArrayList;
 
     .line 47
     new-instance v0, Ljava/util/ArrayList;
@@ -29,7 +29,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܺ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܰ:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -54,7 +54,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 122
-    iget-object v2, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܺ:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܰ:Ljava/util/ArrayList;
 
     .line 155
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -82,7 +82,7 @@
     .locals 1
 
     .line 122
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ܰ:Ljava/util/ArrayList;
 
     return-object v0
 .end method

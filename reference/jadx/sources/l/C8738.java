@@ -1,30 +1,40 @@
 package l;
 
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.RelativeSizeSpan;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
+import com.alipay.sdk.m.y.l;
 
-/* JADX INFO: renamed from: l.ۡ۟ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28G5 */
+/* JADX INFO: renamed from: l.۠ܺۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X32D */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C8738 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m22677(C20369 c20369) {
-        c20369.m46010(-3.4028235E38f, Integer.MIN_VALUE);
-        if (c20369.m46003() instanceof Spanned) {
-            if (!(c20369.m46003() instanceof Spannable)) {
-                c20369.m46002(SpannableString.valueOf(c20369.m46003()));
-            }
-            CharSequence charSequenceM46003 = c20369.m46003();
-            charSequenceM46003.getClass();
-            Spannable spannable = (Spannable) charSequenceM46003;
-            for (Object obj : spannable.getSpans(0, spannable.length(), Object.class)) {
-                if ((obj instanceof AbsoluteSizeSpan) || (obj instanceof RelativeSizeSpan)) {
-                    spannable.removeSpan(obj);
-                }
-            }
+    public boolean f28416;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final IntentFilter f28417;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f28418;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final BroadcastReceiver f28419;
+
+    public C8738(BroadcastReceiver broadcastReceiver, IntentFilter intentFilter) {
+        this.f28417 = intentFilter;
+        this.f28419 = broadcastReceiver;
+    }
+
+    public final String toString() {
+        StringBuilder sbM3018 = C0703.m3018(128, "Receiver{");
+        sbM3018.append(this.f28419);
+        sbM3018.append(" filter=");
+        sbM3018.append(this.f28417);
+        if (this.f28418) {
+            sbM3018.append(" DEAD");
         }
+        sbM3018.append(l.d);
+        return sbM3018.toString();
     }
 }

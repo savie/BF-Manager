@@ -1,58 +1,71 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩵۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4849 extends AbstractC14728 implements InterfaceC6368 {
+import java.util.ArrayList;
+import java.util.List;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public AbstractC14728 f17075;
+/* JADX INFO: renamed from: l.ۙۤ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: U19E */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4849 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f17076;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List f16932;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public AbstractC14728 f17077;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f16933;
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3924(this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f16934;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f16935;
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0025  */
+    public C4849(ArrayList arrayList, int i, int i2) {
+        String strM34333;
+        this.f16935 = i;
+        this.f16933 = i2;
+        if (arrayList.isEmpty()) {
+            strM34333 = null;
+        } else {
+            C14126 c14126 = (C14126) arrayList.get(0);
+            if ("Name".equalsIgnoreCase(c14126.m34332())) {
+                strM34333 = c14126.m34333();
+            } else {
+                strM34333 = null;
+            }
+        }
+        this.f16934 = strM34333;
+        this.f16932 = C4681.unmodifiableList(new ArrayList(arrayList));
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.IF;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m14891() {
+        return this.f16934;
     }
 
-    @Override // l.InterfaceC6368
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final AbstractC5930 mo13540() {
-        return this.f17076;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m14892() {
+        return this.f16935;
     }
 
-    @Override // l.InterfaceC6368
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final AbstractC14728 mo13541() {
-        return this.f17075;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m14890() {
+        return this.f16933;
     }
 
-    @Override // l.InterfaceC6368
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final AbstractC14728 mo13542() {
-        return this.f17077;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List m14889() {
+        return this.f16932;
     }
 
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1869(this, obj);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60536;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m14888(String str) {
+        for (C14126 c14126 : this.f16932) {
+            if (c14126.m34332().equalsIgnoreCase(str)) {
+                return c14126.m34333();
+            }
+        }
+        return null;
     }
 }

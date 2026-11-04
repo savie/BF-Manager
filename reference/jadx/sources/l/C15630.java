@@ -1,58 +1,40 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import android.view.ViewGroup;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܺ֫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: QATC */
+/* JADX INFO: renamed from: l.ܳ᩸ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V933 */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C15630 implements InterfaceC0106 {
+public final class C15630 extends AbstractC12964 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC0106 f50826;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22344 f50764;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC0106 f50827;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f50765 = new ArrayList();
 
-    public /* synthetic */ C15630(InterfaceC0106 interfaceC0106, InterfaceC0106 interfaceC0107) {
-        this.f50826 = interfaceC0106;
-        this.f50827 = interfaceC0107;
+    @Override // l.AbstractC12964
+    public final void onBindViewHolder(AbstractC11800 abstractC11800, int i) {
+        ((ViewOnClickListenerC13393) abstractC11800).f42683.setImageResource(((EnumC3459) this.f50765.get(i)).f11950);
     }
 
-    @Override // java.util.function.IntConsumer
-    public final /* synthetic */ void accept(int i) {
-        C19863.m45116(this, i);
+    public C15630(C22344 c22344) {
+        this.f50764 = c22344;
+        for (EnumC3459 enumC3459 : EnumC3459.values()) {
+            if (!enumC3459.f11949) {
+                this.f50765.add(enumC3459);
+            }
+        }
     }
 
-    @Override // java.util.function.Consumer
-    public final /* bridge */ /* synthetic */ void accept(Object obj) {
-        mo1139((Byte) obj);
+    @Override // l.AbstractC12964
+    public final AbstractC11800 onCreateViewHolder(ViewGroup viewGroup, int i) {
+        return new ViewOnClickListenerC13393(viewGroup.getContext());
     }
 
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo1139(Byte b) {
-        C19863.m45117((InterfaceC0106) this, b);
-    }
-
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C19863.m45115((InterfaceC0106) this, intConsumer);
-    }
-
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final C15630 mo1137(InterfaceC0106 interfaceC0106) {
-        return new C15630(this, interfaceC0106);
-    }
-
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1138(byte b) {
-        this.f50826.mo1138(b);
-        this.f50827.mo1138(b);
-    }
-
-    public final Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // l.AbstractC12964
+    public final int getItemCount() {
+        return this.f50765.size();
     }
 }

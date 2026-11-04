@@ -1,43 +1,47 @@
 .class public final Ll/ۧܳܶ;
 .super Ljava/lang/Object;
-.source "45RK"
+.source "C5XL"
 
 
-# static fields
-.field public static final ۙ:Ljava/lang/ThreadLocal;
+# instance fields
+.field public ۙ:Ljava/util/HashSet;
+
+.field public ۤ:I
+
+.field public ᩷:Ljava/util/HashSet;
+
+.field public ᩸:C
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    .line 41
-    new-instance v0, Ll/ۛܳܶ;
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    .line 56
+    new-instance v0, Ljava/util/HashSet;
 
-    .line 41
-    sput-object v0, Ll/ۧܳܶ;->ۙ:Ljava/lang/ThreadLocal;
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
+
+    iput-object v0, p0, Ll/ۧܳܶ;->ۙ:Ljava/util/HashSet;
+
+    .line 57
+    new-instance v0, Ljava/util/HashSet;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
+
+    iput-object v0, p0, Ll/ۧܳܶ;->᩷:Ljava/util/HashSet;
+
+    const/4 v0, -0x1
+
+    .line 58
+    iput v0, p0, Ll/ۧܳܶ;->ۤ:I
 
     return-void
-.end method
-
-.method public static ۙ()[C
-    .locals 1
-
-    .line 33
-    sget-object v0, Ll/ۧܳܶ;->ۙ:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [C
-
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    check-cast v0, [C
-
-    return-object v0
 .end method

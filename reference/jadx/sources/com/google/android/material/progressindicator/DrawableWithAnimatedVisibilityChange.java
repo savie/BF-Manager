@@ -14,7 +14,7 @@ import com.google.android.material.animation.AnimationUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.AbstractC2220;
+import l.AbstractC7591;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class DrawableWithAnimatedVisibilityChange extends Drawable implements Animatable {
@@ -37,7 +37,7 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
     public float growFraction;
     public ValueAnimator hideAnimator;
     public boolean ignoreCallbacks;
-    public AbstractC2220 internalAnimationCallback;
+    public AbstractC7591 internalAnimationCallback;
     public float mockGrowFraction;
     public boolean mockHideAnimationRunning;
     public boolean mockShowAnimationRunning;
@@ -74,22 +74,22 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         }
     }
 
-    public void registerAnimationCallback(AbstractC2220 abstractC2220) {
+    public void registerAnimationCallback(AbstractC7591 abstractC7591) {
         if (this.animationCallbacks == null) {
             this.animationCallbacks = new ArrayList();
         }
-        if (this.animationCallbacks.contains(abstractC2220)) {
+        if (this.animationCallbacks.contains(abstractC7591)) {
             return;
         }
-        this.animationCallbacks.add(abstractC2220);
+        this.animationCallbacks.add(abstractC7591);
     }
 
-    public boolean unregisterAnimationCallback(AbstractC2220 abstractC2220) {
+    public boolean unregisterAnimationCallback(AbstractC7591 abstractC7591) {
         List list = this.animationCallbacks;
-        if (list == null || !list.contains(abstractC2220)) {
+        if (list == null || !list.contains(abstractC7591)) {
             return false;
         }
-        this.animationCallbacks.remove(abstractC2220);
+        this.animationCallbacks.remove(abstractC7591);
         if (!this.animationCallbacks.isEmpty()) {
             return true;
         }
@@ -102,15 +102,15 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         this.animationCallbacks = null;
     }
 
-    public void setInternalAnimationCallback(AbstractC2220 abstractC2220) {
-        this.internalAnimationCallback = abstractC2220;
+    public void setInternalAnimationCallback(AbstractC7591 abstractC7591) {
+        this.internalAnimationCallback = abstractC7591;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void dispatchAnimationStart() {
-        AbstractC2220 abstractC2220 = this.internalAnimationCallback;
-        if (abstractC2220 != null) {
-            abstractC2220.onAnimationStart(this);
+        AbstractC7591 abstractC7591 = this.internalAnimationCallback;
+        if (abstractC7591 != null) {
+            abstractC7591.onAnimationStart(this);
         }
         List list = this.animationCallbacks;
         if (list == null || this.ignoreCallbacks) {
@@ -118,15 +118,15 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         }
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            ((AbstractC2220) it.next()).onAnimationStart(this);
+            ((AbstractC7591) it.next()).onAnimationStart(this);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void dispatchAnimationEnd() {
-        AbstractC2220 abstractC2220 = this.internalAnimationCallback;
-        if (abstractC2220 != null) {
-            abstractC2220.onAnimationEnd(this);
+        AbstractC7591 abstractC7591 = this.internalAnimationCallback;
+        if (abstractC7591 != null) {
+            abstractC7591.onAnimationEnd(this);
         }
         List list = this.animationCallbacks;
         if (list == null || this.ignoreCallbacks) {
@@ -134,7 +134,7 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         }
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            ((AbstractC2220) it.next()).onAnimationEnd(this);
+            ((AbstractC7591) it.next()).onAnimationEnd(this);
         }
     }
 

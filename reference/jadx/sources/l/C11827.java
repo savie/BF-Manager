@@ -1,33 +1,20 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ۨܽۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28VT */
+/* JADX INFO: renamed from: l.ۧ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: K9MM */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C11827 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+public final class C11827 extends AbstractC2133 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C11827 m29677() {
+        return new C11827();
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        AbstractC20745 abstractC20745 = (AbstractC20745) obj;
-        if (!abstractC20745.mo33971()) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m29678(Object obj) {
+        if (!AbstractC2133.f7015.mo15475(this, (Object) null, obj)) {
             return false;
         }
-        String name = abstractC20745.getName();
-        return name.endsWith(".jks") || name.endsWith(".bks") || name.endsWith(".keystore");
+        AbstractC2133.m7370((AbstractC2133) this);
+        return true;
     }
 }

@@ -1,43 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ᩵ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.ܳܶܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57R8 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15438 implements InterfaceC13717 {
+public final class C15438 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f50309;
+    public final int f50284;
 
-    public /* synthetic */ C15438(int i) {
-        this.f50309 = i;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f50285;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f50286;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f50287;
+
+    public C15438(int i, int i2, int i3, boolean z) {
+        this.f50285 = i;
+        this.f50286 = i2;
+        this.f50284 = i3;
+        this.f50287 = z;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+    public C15438() {
+        this(0, 0, 0, false);
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        switch (this.f50309) {
-            case 0:
-                return (i == 10 || i == 13 || (i | 1) == 8233 || i == 133) ? false : true;
-            default:
-                return Character.isTitleCase(i);
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C15438 m36959(int i) {
+        return new C15438(this.f50285, this.f50286, i, this.f50287);
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
-    }
-
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    public final String toString() {
+        C3179 c3179M46714 = C20333.m46714(this);
+        c3179M46714.m10380("lastIndent", this.f50285);
+        c3179M46714.m10380("indent", this.f50286);
+        c3179M46714.m10380("column", this.f50284);
+        c3179M46714.m10381("mustBreak", this.f50287);
+        return c3179M46714.toString();
     }
 }

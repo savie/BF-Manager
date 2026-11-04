@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final ۖ:Ljava/lang/String;
-
 .field public final ۙ:Ljava/io/InputStream;
 
-.field public ۚ:Ljava/net/URI;
+.field public ۤ:Z
 
-.field public ۨ:Z
+.field public ᩴ:Ljava/net/URI;
 
-.field public final ܰ:Ljava/util/Map;
+.field public final ᩷:Ljava/util/Map;
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
@@ -53,17 +53,17 @@
 
     .line 59
     :goto_0
-    iput-object p1, p0, Lcom/amazonaws/http/HttpRequest;->ۖ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/http/HttpRequest;->᩸:Ljava/lang/String;
 
     .line 60
-    iput-object p2, p0, Lcom/amazonaws/http/HttpRequest;->ۚ:Ljava/net/URI;
+    iput-object p2, p0, Lcom/amazonaws/http/HttpRequest;->ᩴ:Ljava/net/URI;
 
     .line 62
-    invoke-static {p3}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {p3}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/http/HttpRequest;->ܰ:Ljava/util/Map;
+    iput-object p1, p0, Lcom/amazonaws/http/HttpRequest;->᩷:Ljava/util/Map;
 
     .line 63
     iput-object p4, p0, Lcom/amazonaws/http/HttpRequest;->ۙ:Ljava/io/InputStream;
@@ -73,15 +73,6 @@
 
 
 # virtual methods
-.method public final ۖ()Ljava/lang/String;
-    .locals 1
-
-    .line 72
-    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->ۖ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final ۙ()Ljava/io/InputStream;
     .locals 1
 
@@ -95,36 +86,45 @@
     .locals 0
 
     .line 135
-    iput-boolean p1, p0, Lcom/amazonaws/http/HttpRequest;->ۨ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/http/HttpRequest;->ۤ:Z
 
     return-void
 .end method
 
-.method public final ۚ()Ljava/net/URI;
-    .locals 1
-
-    .line 81
-    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->ۚ:Ljava/net/URI;
-
-    return-object v0
-.end method
-
-.method public final ۨ()Ljava/util/Map;
+.method public final ۤ()Ljava/util/Map;
     .locals 1
 
     .line 100
-    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->ܰ:Ljava/util/Map;
+    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->᩷:Ljava/util/Map;
 
     return-object v0
 .end method
 
-.method public final ܰ()J
+.method public final ܳ()Z
+    .locals 1
+
+    .line 130
+    iget-boolean v0, p0, Lcom/amazonaws/http/HttpRequest;->ۤ:Z
+
+    return v0
+.end method
+
+.method public final ᩴ()Ljava/net/URI;
+    .locals 1
+
+    .line 81
+    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->ᩴ:Ljava/net/URI;
+
+    return-object v0
+.end method
+
+.method public final ᩷()J
     .locals 4
 
     const-wide/16 v0, 0x0
 
     .line 119
-    iget-object v2, p0, Lcom/amazonaws/http/HttpRequest;->ܰ:Ljava/util/Map;
+    iget-object v2, p0, Lcom/amazonaws/http/HttpRequest;->᩷:Ljava/util/Map;
 
     if-nez v2, :cond_0
 
@@ -166,11 +166,11 @@
     return-wide v0
 .end method
 
-.method public final ᩹()Z
+.method public final ᩸()Ljava/lang/String;
     .locals 1
 
-    .line 130
-    iget-boolean v0, p0, Lcom/amazonaws/http/HttpRequest;->ۨ:Z
+    .line 72
+    iget-object v0, p0, Lcom/amazonaws/http/HttpRequest;->᩸:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method

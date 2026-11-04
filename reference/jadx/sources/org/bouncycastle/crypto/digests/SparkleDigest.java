@@ -14,12 +14,10 @@ public class SparkleDigest extends BufferBaseDigest {
     public final int STATE_WORDS;
     public final int[] state;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
     }
 
-    /* JADX INFO: loaded from: classes.dex */
     public enum SparkleParameters {
         ESCH256,
         ESCH384

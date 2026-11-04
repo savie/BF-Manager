@@ -90,7 +90,7 @@
     .line 60
     iget-object p1, p0, Lcom/amazonaws/handlers/RequestHandler2Adaptor;->ۙ:Lcom/amazonaws/handlers/RequestHandler;
 
-    invoke-interface {p1}, Lcom/amazonaws/handlers/RequestHandler;->ۨ()V
+    invoke-interface {p1}, Lcom/amazonaws/handlers/RequestHandler;->ۤ()V
 
     return-void
 .end method
@@ -101,7 +101,7 @@
     .line 53
     iget-object p1, p0, Lcom/amazonaws/handlers/RequestHandler2Adaptor;->ۙ:Lcom/amazonaws/handlers/RequestHandler;
 
-    invoke-interface {p1}, Lcom/amazonaws/handlers/RequestHandler;->ܰ()V
+    invoke-interface {p1}, Lcom/amazonaws/handlers/RequestHandler;->᩷()V
 
     return-void
 .end method

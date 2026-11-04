@@ -1,116 +1,167 @@
-.class public final synthetic Ll/ۙ᩶ᩴ;
-.super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
+.class public final Ll/ۙ᩶ᩴ;
+.super Ll/᩷᩶ᩴ;
+.source "R14O"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/function/Consumer;
+.field public ۠:Ll/᩷֡ᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/Consumer;I)V
+.method public constructor <init>(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ll/᩷֡ᩴ;)V
     .locals 0
 
-    iput p2, p0, Ll/ۙ᩶ᩴ;->a:I
+    .line 18
+    invoke-direct {p0, p1, p2, p3, p4}, Ll/᩷᩶ᩴ;-><init>(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Ll/ۙ᩶ᩴ;->b:Ljava/util/function/Consumer;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 19
+    iput-object p5, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final ֨᩷()Ll/᩷֡ᩴ;
     .locals 1
 
-    iget v0, p0, Ll/ۙ᩶ᩴ;->a:I
+    .line 63
+    iget-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    check-cast p1, Ljava/util/Map$Entry;
+    .line 64
+    invoke-super {p0}, Ll/ۜܿᩴ;->֨᩷()Ll/᩷֡ᩴ;
 
-    .line 673
-    new-instance v0, Ll/᩷ܳᩴ;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Ll/᩷ܳᩴ;-><init>(Ljava/util/Map$Entry;)V
+    iput-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
 
-    iget-object p1, p0, Ll/ۙ᩶ᩴ;->b:Ljava/util/function/Consumer;
-
-    invoke-interface {p1, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/ۙ᩶ᩴ;->b:Ljava/util/function/Consumer;
-
-    .line 81
-    invoke-static {p1}, Ll/֫ۡᩴ;->p(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 0
-    :pswitch_1
-    iget-object v0, p0, Ll/ۙ᩶ᩴ;->b:Ljava/util/function/Consumer;
-
-    .line 124
-    invoke-static {p1}, Ll/֫ۡᩴ;->p(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-object v0
 .end method
 
-.method public final synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+.method public final ۙ()Ll/ۙ᩶ᩴ;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final ۙ()Ll/᩷ۨᩴ;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final ۠᩷()Z
     .locals 1
 
-    iget v0, p0, Ll/ۙ᩶ᩴ;->a:I
+    .line 71
+    iget-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    return v0
 
-    return-object p1
+    :cond_0
+    const/4 v0, 0x0
 
-    :pswitch_0
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final ۡ᩷()Ll/᩷֡ᩴ;
+    .locals 1
 
-    return-object p1
+    .line 77
+    iget-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
 
-    :pswitch_1
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final ۢ()Z
+    .locals 1
 
-    return-object p1
+    .line 39
+    invoke-super {p0}, Ll/ۜܿᩴ;->ۢ()Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 40
+    iput-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩳ()Z
+    .locals 1
+
+    .line 24
+    invoke-super {p0}, Ll/ۜܿᩴ;->ᩳ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 25
+    iput-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩳ᩷()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 57
+    iput-object v0, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
+
+    return-void
+.end method
+
+.method public final ᩷(Ll/᩷ۨᩴ;)Z
+    .locals 0
+
+    .line 48
+    invoke-super {p0, p1}, Ll/ۜܿᩴ;->᩷(Ll/᩷ۨᩴ;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 49
+    iput-object p1, p0, Ll/ۙ᩶ᩴ;->۠:Ll/᩷֡ᩴ;
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

@@ -1,29 +1,31 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ܳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M6BE */
+/* JADX INFO: renamed from: l.᩸᩶᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y169 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23059 extends AbstractC20611 {
+public final /* synthetic */ class C23059 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f74906;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f74810;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15298 f74907;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C23059(C15298 c15298, C17684 c17684, int i, int i2, int i3) {
-        super(c17684, i, i2);
-        this.f74907 = c15298;
-        this.f74906 = i3;
-    }
-
-    @Override // l.AbstractC20611
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo15967(C18825 c18825, int i) {
-        if (i == this.f74906 - 1) {
-            return new C5690(c18825);
+    static {
+        int[] iArr = new int[EnumC2176.values().length];
+        f74810 = iArr;
+        try {
+            iArr[EnumC2176.STATE_1.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        return new C21647(this.f74907.f49838, c18825);
+        try {
+            f74810[EnumC2176.STATE_1_2.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f74810[EnumC2176.STATE_2.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f74810[EnumC2176.STATE_2_1.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
     }
 }

@@ -1,285 +1,355 @@
 .class public final Ll/᩺ܳۙ;
-.super Ljava/lang/Object;
-.source "F7LT"
-
-# interfaces
-.implements Ll/ܽܳۙ;
-
-
-# static fields
-.field public static final ᩹:Ll/֨ۜܰ;
+.super Ll/ۛܳۙ;
+.source "RB93"
 
 
 # instance fields
-.field public final ۖ:Ll/۬ᩴܰ;
+.field public final ۤ:Z
 
-.field public final ۙ:Ll/ۤۘܰ;
+.field public final ᩴ:Ljava/lang/Object;
 
-.field public final ۚ:Ll/ۜۤۙ;
-
-.field public final ۨ:Z
-
-.field public final ܰ:Ll/۟ᩴۙ;
+.field public final ᩸:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ll/᩶֫ۙ;Ll/᩻ۢ;ZZ)V
     .locals 1
 
-    .line 44
-    new-instance v0, Ll/֨ۜܰ;
+    .line 918
+    invoke-direct {p0, p1, p2}, Ll/ۛܳۙ;-><init>(Ll/᩶֫ۙ;Ll/᩻ۢ;)V
 
-    .line 22
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 919
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->ۤ()Ll/ܰ֫ۙ;
 
-    .line 44
-    sput-object v0, Ll/᩺ܳۙ;->᩹:Ll/֨ۜܰ;
+    move-result-object p2
+
+    sget-object v0, Ll/ܰ֫ۙ;->۟:Ll/ܰ֫ۙ;
+
+    if-ne p2, v0, :cond_2
+
+    if-eqz p3, :cond_0
+
+    .line 921
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getReenterTransition()Ljava/lang/Object;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    .line 922
+    :cond_0
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getEnterTransition()Ljava/lang/Object;
+
+    move-result-object p2
+
+    :goto_0
+    iput-object p2, p0, Ll/᩺ܳۙ;->ᩴ:Ljava/lang/Object;
+
+    if-eqz p3, :cond_1
+
+    .line 926
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getAllowReturnTransitionOverlap()Z
+
+    move-result p2
+
+    goto :goto_1
+
+    .line 927
+    :cond_1
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getAllowEnterTransitionOverlap()Z
+
+    move-result p2
+
+    :goto_1
+    iput-boolean p2, p0, Ll/᩺ܳۙ;->ۤ:Z
+
+    goto :goto_3
+
+    :cond_2
+    if-eqz p3, :cond_3
+
+    .line 930
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getReturnTransition()Ljava/lang/Object;
+
+    move-result-object p2
+
+    goto :goto_2
+
+    .line 931
+    :cond_3
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۧ۫ۙ;->getExitTransition()Ljava/lang/Object;
+
+    move-result-object p2
+
+    :goto_2
+    iput-object p2, p0, Ll/᩺ܳۙ;->ᩴ:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    .line 933
+    iput-boolean p2, p0, Ll/᩺ܳۙ;->ۤ:Z
+
+    :goto_3
+    if-eqz p4, :cond_5
+
+    if-eqz p3, :cond_4
+
+    .line 938
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/ۧ۫ۙ;->getSharedElementReturnTransition()Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
+
+    return-void
+
+    .line 941
+    :cond_4
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/ۧ۫ۙ;->getSharedElementEnterTransition()Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
+
+    return-void
+
+    :cond_5
+    const/4 p1, 0x0
+
+    .line 944
+    iput-object p1, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(Ll/ۤۘܰ;Ll/۟ᩴۙ;Ll/ۜۤۙ;Ll/۬ᩴܰ;Z)V
-    .locals 0
+.method private ۙ(Ljava/lang/Object;)Ll/ۧ֫ۙ;
+    .locals 3
 
-    .line 87
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p1, :cond_0
 
-    .line 88
-    iput-object p1, p0, Ll/᩺ܳۙ;->ۙ:Ll/ۤۘܰ;
+    const/4 p1, 0x0
 
-    .line 89
-    iput-object p2, p0, Ll/᩺ܳۙ;->ܰ:Ll/۟ᩴۙ;
+    return-object p1
 
-    .line 90
-    iput-object p3, p0, Ll/᩺ܳۙ;->ۚ:Ll/ۜۤۙ;
+    .line 988
+    :cond_0
+    sget-object v0, Ll/᩷֫ۙ;->ۙ:Ll/ۧ֫ۙ;
 
-    .line 91
-    iput-object p4, p0, Ll/᩺ܳۙ;->ۖ:Ll/۬ᩴܰ;
+    if-eqz v0, :cond_1
 
-    .line 92
-    iput-boolean p5, p0, Ll/᩺ܳۙ;->ۨ:Z
+    .line 38
+    instance-of v1, p1, Landroid/transition/Transition;
 
-    return-void
+    if-eqz v1, :cond_1
+
+    return-object v0
+
+    .line 992
+    :cond_1
+    sget-object v0, Ll/᩷֫ۙ;->᩷:Ll/ۧ֫ۙ;
+
+    if-eqz v0, :cond_2
+
+    .line 993
+    invoke-virtual {v0, p1}, Ll/ۧ֫ۙ;->ۙ(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return-object v0
+
+    .line 996
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Transition "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " for fragment "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 997
+    invoke-virtual {p0}, Ll/ۛܳۙ;->᩷()Ll/᩶֫ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not a valid framework Transition or AndroidX Transition"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/᩺ܳۙ;
-    .locals 8
+.method public final ֫()Z
+    .locals 1
 
-    .line 116
-    iget-object v0, p0, Ll/᩺ܳۙ;->ۙ:Ll/ۤۘܰ;
+    .line 954
+    iget-boolean v0, p0, Ll/᩺ܳۙ;->ۤ:Z
 
-    invoke-interface {v0}, Ll/ۤۘܰ;->ۨ()Ll/ۤۘܰ;
+    return v0
+.end method
+
+.method public final ۚ()Z
+    .locals 1
+
+    .line 958
+    iget-object v0, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ۫()Ljava/lang/Object;
+    .locals 1
+
+    .line 950
+    iget-object v0, p0, Ll/᩺ܳۙ;->ᩴ:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final ܳ()Ljava/lang/Object;
+    .locals 1
+
+    .line 963
+    iget-object v0, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final ᩴ()Ll/ۧ֫ۙ;
+    .locals 5
+
+    .line 968
+    iget-object v0, p0, Ll/᩺ܳۙ;->ᩴ:Ljava/lang/Object;
+
+    invoke-direct {p0, v0}, Ll/᩺ܳۙ;->ۙ(Ljava/lang/Object;)Ll/ۧ֫ۙ;
 
     move-result-object v1
 
-    .line 117
-    instance-of v2, v1, Ll/ܶۡܰ;
+    .line 970
+    iget-object v2, p0, Ll/᩺ܳۙ;->᩸:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    invoke-direct {p0, v2}, Ll/᩺ܳۙ;->ۙ(Ljava/lang/Object;)Ll/ۧ֫ۙ;
 
-    const/4 v4, 0x0
+    move-result-object v3
 
-    if-nez v2, :cond_1
+    if-eqz v1, :cond_1
 
-    instance-of v1, v1, Ll/ܿ᩸ܰ;
+    if-eqz v3, :cond_1
 
-    if-eqz v1, :cond_0
+    if-ne v1, v3, :cond_0
 
     goto :goto_0
 
+    .line 973
     :cond_0
-    const/4 v1, 0x0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Mixing framework transitions and AndroidX transitions is not allowed. Fragment "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 975
+    invoke-virtual {p0}, Ll/ۛܳۙ;->᩷()Ll/᩶֫ۙ;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ll/᩶֫ۙ;->᩸()Ll/ۧ۫ۙ;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " returned Transition "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " which uses a different Transition  type than its shared element transition "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 
     :cond_1
     :goto_0
-    const/4 v1, 0x1
+    if-eqz v1, :cond_2
 
-    :goto_1
-    xor-int/2addr v1, v3
-
-    .line 123
-    invoke-static {v1}, Ll/֫᩵ۙ;->ܰ(Z)V
-
-    .line 125
-    invoke-interface {v0}, Ll/ۤۘܰ;->ۨ()Ll/ۤۘܰ;
-
-    move-result-object v1
-
-    if-ne v1, v0, :cond_2
-
-    goto :goto_2
+    return-object v1
 
     :cond_2
-    const/4 v3, 0x0
-
-    :goto_2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Can\'t recreate wrapped extractors. Outer type: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 126
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 124
-    invoke-static {v1, v3}, Ll/֫᩵ۙ;->ܰ(Ljava/lang/String;Z)V
-
-    .line 129
-    instance-of v1, v0, Ll/ۜ֫ۙ;
-
-    if-eqz v1, :cond_3
-
-    .line 130
-    new-instance v0, Ll/ۜ֫ۙ;
-
-    iget-object v1, p0, Ll/᩺ܳۙ;->ܰ:Ll/۟ᩴۙ;
-
-    iget-object v1, v1, Ll/۟ᩴۙ;->ܽ:Ljava/lang/String;
-
-    iget-object v2, p0, Ll/᩺ܳۙ;->ۖ:Ll/۬ᩴܰ;
-
-    iget-boolean v3, p0, Ll/᩺ܳۙ;->ۨ:Z
-
-    iget-object v4, p0, Ll/᩺ܳۙ;->ۚ:Ll/ۜۤۙ;
-
-    invoke-direct {v0, v1, v4, v2, v3}, Ll/ۜ֫ۙ;-><init>(Ljava/lang/String;Ll/ۜۤۙ;Ll/۬ᩴܰ;Z)V
-
-    :goto_3
-    move-object v3, v0
-
-    goto :goto_4
-
-    .line 136
-    :cond_3
-    instance-of v1, v0, Ll/֨᩵ܰ;
-
-    if-eqz v1, :cond_4
-
-    .line 137
-    new-instance v0, Ll/֨᩵ܰ;
-
-    .line 124
-    invoke-direct {v0, v4}, Ll/֨᩵ܰ;-><init>(I)V
-
-    goto :goto_3
-
-    .line 138
-    :cond_4
-    instance-of v1, v0, Ll/ۨ᩵ܰ;
-
-    if-eqz v1, :cond_5
-
-    .line 139
-    new-instance v0, Ll/ۨ᩵ܰ;
-
-    invoke-direct {v0}, Ll/ۨ᩵ܰ;-><init>()V
-
-    goto :goto_3
-
-    .line 140
-    :cond_5
-    instance-of v1, v0, Ll/ۚ᩵ܰ;
-
-    if-eqz v1, :cond_6
-
-    .line 141
-    new-instance v0, Ll/ۚ᩵ܰ;
-
-    invoke-direct {v0}, Ll/ۚ᩵ܰ;-><init>()V
-
-    goto :goto_3
-
-    .line 142
-    :cond_6
-    instance-of v1, v0, Ll/ۚ᩸ܰ;
-
-    if-eqz v1, :cond_7
-
-    .line 143
-    new-instance v0, Ll/ۚ᩸ܰ;
-
-    const/4 v1, 0x0
-
-    .line 190
-    invoke-direct {v0, v1}, Ll/ۚ᩸ܰ;-><init>(I)V
-
-    goto :goto_3
-
-    .line 149
-    :goto_4
-    new-instance v0, Ll/᩺ܳۙ;
-
-    iget-object v6, p0, Ll/᩺ܳۙ;->ۖ:Ll/۬ᩴܰ;
-
-    iget-boolean v7, p0, Ll/᩺ܳۙ;->ۨ:Z
-
-    iget-object v4, p0, Ll/᩺ܳۙ;->ܰ:Ll/۟ᩴۙ;
-
-    iget-object v5, p0, Ll/᩺ܳۙ;->ۚ:Ll/ۜۤۙ;
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v7}, Ll/᩺ܳۙ;-><init>(Ll/ۤۘܰ;Ll/۟ᩴۙ;Ll/ۜۤۙ;Ll/۬ᩴܰ;Z)V
-
-    return-object v0
-
-    .line 145
-    :cond_7
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    .line 146
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "Unexpected extractor type for recreation: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final ۙ(Ll/ܶۘܰ;)Z
-    .locals 2
-
-    .line 102
-    iget-object v0, p0, Ll/᩺ܳۙ;->ۙ:Ll/ۤۘܰ;
-
-    sget-object v1, Ll/᩺ܳۙ;->᩹:Ll/֨ۜܰ;
-
-    invoke-interface {v0, p1, v1}, Ll/ۤۘܰ;->ۙ(Ll/۟ۘܰ;Ll/֨ۜܰ;)I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object v3
 .end method

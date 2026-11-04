@@ -1,93 +1,119 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 81EW */
+import java.io.IOException;
+import java.lang.reflect.Array;
+
+/* JADX INFO: renamed from: l.ᩳ۟ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57RJ */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C18923 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f61217;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f61218;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public int f61219;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final byte[] f61378;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f61220;
+    public final C24145 f61379;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f61221;
+    public final int[] f61380 = new int[6];
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public int f61222;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int[][] f61381;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f61223;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f61382;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f61224;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f61383;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f61225;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f61384;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public String f61226;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int[][] f61385;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int[][] f61386;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m43584() {
-        return this.f61220;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m43586() {
-        return this.f61226;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m43583() {
-        return this.f61219;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m43585() {
-        return this.f61217;
-    }
-
-    public final String toString() {
-        return "Attribute{name='" + this.f61220 + "', value='" + this.f61226 + "', nameLine=" + this.f61218 + ", nameColumn=" + this.f61225 + ", nameStartPosition=" + this.f61221 + ", nameEndPosition=" + this.f61223 + ", valueLine=" + this.f61219 + ", valueColumn=" + this.f61217 + ", valueStartPosition=" + this.f61222 + ", valueEndPosition=" + this.f61224 + '}';
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    public final int m43928() throws IOException {
+        int i = this.f61382 + 1;
+        this.f61382 = i;
+        if (i % 50 == 0) {
+            int i2 = this.f61383 + 1;
+            this.f61383 = i2;
+            byte[] bArr = this.f61378;
+            if (i2 == bArr.length) {
+                throw new C7736("Error decoding BZip2 block");
+            }
+            this.f61384 = bArr[i2] & 255;
         }
-        if (obj != null && C18923.class == obj.getClass()) {
-            C18923 c18923 = (C18923) obj;
-            if (this.f61218 != c18923.f61218 || this.f61225 != c18923.f61225 || this.f61221 != c18923.f61221 || this.f61223 != c18923.f61223 || this.f61219 != c18923.f61219 || this.f61217 != c18923.f61217 || this.f61222 != c18923.f61222 || this.f61224 != c18923.f61224) {
-                return false;
+        int i3 = this.f61384;
+        int[] iArr = this.f61381[i3];
+        int i4 = this.f61380[i3];
+        C24145 c24145 = this.f61379;
+        int iM54114 = c24145.m54114(i4);
+        while (i4 <= 23) {
+            if (iM54114 <= iArr[i4]) {
+                return this.f61386[i3][iM54114 - this.f61385[i3][i4]];
             }
-            String str = this.f61220;
-            if (str == null ? c18923.f61220 != null : !str.equals(c18923.f61220)) {
-                return false;
-            }
-            String str2 = this.f61226;
-            String str3 = c18923.f61226;
-            if (str2 != null) {
-                return str2.equals(str3);
-            }
-            if (str3 == null) {
-                return true;
-            }
+            iM54114 = (iM54114 << 1) | c24145.m54114(1);
+            i4++;
         }
-        return false;
+        throw new C7736("Error decoding BZip2 block");
     }
 
-    public final int hashCode() {
-        String str = this.f61220;
-        int iHashCode = (str != null ? str.hashCode() : 0) * 31;
-        String str2 = this.f61226;
-        return ((((((((((((((((iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + this.f61218) * 31) + this.f61225) * 31) + this.f61221) * 31) + this.f61223) * 31) + this.f61219) * 31) + this.f61217) * 31) + this.f61222) * 31) + this.f61224;
+    public C18923(C24145 c24145, int i, byte[][] bArr, byte[] bArr2) {
+        Class cls = Integer.TYPE;
+        this.f61385 = (int[][]) Array.newInstance((Class<?>) cls, 6, 25);
+        this.f61381 = (int[][]) Array.newInstance((Class<?>) cls, 6, 24);
+        this.f61386 = (int[][]) Array.newInstance((Class<?>) cls, 6, 258);
+        this.f61383 = -1;
+        this.f61382 = -1;
+        this.f61379 = c24145;
+        this.f61378 = bArr2;
+        this.f61384 = bArr2[0];
+        for (int i2 = 0; i2 < bArr.length; i2++) {
+            int[] iArr = this.f61385[i2];
+            int[] iArr2 = this.f61381[i2];
+            int[] iArr3 = this.f61386[i2];
+            byte[] bArr3 = bArr[i2];
+            int iMin = 23;
+            int iMax = 0;
+            for (int i3 = 0; i3 < i; i3++) {
+                iMax = Math.max((int) bArr3[i3], iMax);
+                iMin = Math.min((int) bArr3[i3], iMin);
+            }
+            this.f61380[i2] = iMin;
+            for (int i4 = 0; i4 < i; i4++) {
+                int i5 = bArr3[i4] + 1;
+                iArr[i5] = iArr[i5] + 1;
+            }
+            for (int i6 = 1; i6 < 25; i6++) {
+                iArr[i6] = iArr[i6] + iArr[i6 - 1];
+            }
+            int i7 = 0;
+            int i8 = iMin;
+            while (i8 <= iMax) {
+                int i9 = i8 + 1;
+                int i10 = iArr[i9];
+                int i11 = iArr[i8];
+                int i12 = (i10 - i11) + i7;
+                iArr[i8] = i7 - i11;
+                iArr2[i8] = i12 - 1;
+                i7 = i12 << 1;
+                i8 = i9;
+            }
+            int i13 = 0;
+            while (iMin <= iMax) {
+                for (int i14 = 0; i14 < i; i14++) {
+                    if (bArr3[i14] == iMin) {
+                        iArr3[i13] = i14;
+                        i13++;
+                    }
+                }
+                iMin++;
+            }
+        }
     }
 }

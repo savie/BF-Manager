@@ -1,71 +1,30 @@
-.class public final Ll/ۡۙ;
-.super Ll/ᩴۙ;
-.source "N5R1"
+.class public Ll/ۡۙ;
+.super Ll/֨ۙ;
+.source "U6BF"
 
 
 # virtual methods
-.method public final ۙ(Ll/ۘܰ;)V
+.method public final ۙ(Ll/ۚܶۙ;)V
     .locals 0
 
-    .line 2378
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
+    return-void
 .end method
 
-.method public final ۙ(Ll/ܰۙ;)V
-    .locals 0
+.method public final ᩷()Ll/ۚܶۙ;
+    .locals 2
 
-    .line 2354
-    new-instance p1, Ljava/lang/AssertionError;
+    .line 4646
+    iget-object v0, p0, Ll/ۢۙ;->ۚ:Landroid/media/session/MediaSession;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    .line 4647
+    invoke-virtual {v0}, Landroid/media/session/MediaSession;->getCurrentControllerInfo()Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
-    throw p1
-.end method
+    move-result-object v0
 
-.method public final ۨ()V
-    .locals 1
+    .line 4648
+    new-instance v1, Ll/ۚܶۙ;
 
-    .line 2366
-    new-instance v0, Ljava/lang/AssertionError;
+    invoke-direct {v1, v0}, Ll/ۚܶۙ;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
 
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ܽ()V
-    .locals 1
-
-    .line 2360
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ᩳ()V
-    .locals 1
-
-    .line 2348
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ᩸()V
-    .locals 1
-
-    .line 2372
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
+    return-object v1
 .end method

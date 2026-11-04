@@ -1,86 +1,131 @@
 package l;
 
-import android.view.View;
-import bin.mt.plus.R;
-import java.util.AbstractCollection;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.᩹ۤܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28G3 */
+/* JADX INFO: renamed from: l.᩷ᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 9C2T */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22226 extends AbstractC8821 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7409 f72683;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22226(C7409 c7409) {
-        super(c7409);
-        this.f72683 = c7409;
-    }
-
-    @Override // l.AbstractC8821
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo22955(C21520 c21520) {
-        c21520.f69920.setText(R.string.MT_Protector);
-        InterfaceC10161 interfaceC10161 = this.f72683.f24662;
-        interfaceC10161.getClass();
-        c21520.f69919.setVisibility(m49349(interfaceC10161.mo25826()) ? 4 : 0);
-        c21520.itemView.setOnClickListener(new View.OnClickListener() { // from class: l.ۚۤܰ
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                C7409 c7409 = this.f18305.f72683;
-                if (c7409.f24662 == null || !c7409.f24662.mo25841(29)) {
-                    return;
-                }
-                C14395 c14395Mo25826 = c7409.f24662.mo25826();
-                InterfaceC10161 interfaceC10162 = c7409.f24662;
-                String str = C17983.f57504;
-                interfaceC10162.mo25817(c14395Mo25826.mo5308().mo34362(1).mo34363(1, false).mo34361());
-                c7409.f24613.m36395(1, c7409.getResources().getString(R.string.MT_Protector));
-                c7409.f24630.dismiss();
-            }
-        });
-    }
+public final /* synthetic */ class C22226 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private boolean m49349(C14395 c14395) {
-        for (int i = 0; i < this.f30337.size(); i++) {
-            if (c14395.f47176.containsKey(((C8115) this.f30337.get(i)).f28437.m5615())) {
-                return true;
-            }
-        }
-        return false;
-    }
+    public static final /* synthetic */ int[] f71606;
 
-    @Override // l.AbstractC8821
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo22957(String str) {
-        this.f72683.f24613.m36395(1, str);
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m49350(List list) {
-        this.f30337 = list;
-        C7409 c7409 = this.f72683;
-        InterfaceC10161 interfaceC10161 = c7409.f24662;
-        interfaceC10161.getClass();
-        C14395 c14395Mo25826 = interfaceC10161.mo25826();
-        if (((AbstractCollection) list).isEmpty()) {
-            c7409.f24613.m36395(1, c7409.getResources().getString(R.string.MT_Protector));
-            return;
+    static {
+        int[] iArr = new int[EnumC5072.values().length];
+        f71606 = iArr;
+        try {
+            iArr[EnumC5072.CLEAR.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (!m49349(c14395Mo25826)) {
-            c7409.f24613.m36395(1, c7409.getResources().getString(R.string.MT_Protector));
-            return;
+        try {
+            f71606[EnumC5072.SRC.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        for (int i = 0; i < list.size(); i++) {
-            C8115 c8115 = (C8115) list.get(i);
-            if (c8115.f28437.m5619(c8115.f28439)) {
-                c7409.f24613.m36395(1, c8115.f28438);
-                return;
-            }
+        try {
+            f71606[EnumC5072.DST.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f71606[EnumC5072.SRC_OVER.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f71606[EnumC5072.DST_OVER.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f71606[EnumC5072.SRC_IN.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f71606[EnumC5072.DST_IN.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f71606[EnumC5072.SRC_OUT.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f71606[EnumC5072.DST_OUT.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f71606[EnumC5072.SRC_ATOP.ordinal()] = 10;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f71606[EnumC5072.DST_ATOP.ordinal()] = 11;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f71606[EnumC5072.XOR.ordinal()] = 12;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f71606[EnumC5072.PLUS.ordinal()] = 13;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f71606[EnumC5072.MODULATE.ordinal()] = 14;
+        } catch (NoSuchFieldError unused14) {
+        }
+        try {
+            f71606[EnumC5072.SCREEN.ordinal()] = 15;
+        } catch (NoSuchFieldError unused15) {
+        }
+        try {
+            f71606[EnumC5072.OVERLAY.ordinal()] = 16;
+        } catch (NoSuchFieldError unused16) {
+        }
+        try {
+            f71606[EnumC5072.DARKEN.ordinal()] = 17;
+        } catch (NoSuchFieldError unused17) {
+        }
+        try {
+            f71606[EnumC5072.LIGHTEN.ordinal()] = 18;
+        } catch (NoSuchFieldError unused18) {
+        }
+        try {
+            f71606[EnumC5072.COLOR_DODGE.ordinal()] = 19;
+        } catch (NoSuchFieldError unused19) {
+        }
+        try {
+            f71606[EnumC5072.COLOR_BURN.ordinal()] = 20;
+        } catch (NoSuchFieldError unused20) {
+        }
+        try {
+            f71606[EnumC5072.HARD_LIGHT.ordinal()] = 21;
+        } catch (NoSuchFieldError unused21) {
+        }
+        try {
+            f71606[EnumC5072.SOFT_LIGHT.ordinal()] = 22;
+        } catch (NoSuchFieldError unused22) {
+        }
+        try {
+            f71606[EnumC5072.DIFFERENCE.ordinal()] = 23;
+        } catch (NoSuchFieldError unused23) {
+        }
+        try {
+            f71606[EnumC5072.EXCLUSION.ordinal()] = 24;
+        } catch (NoSuchFieldError unused24) {
+        }
+        try {
+            f71606[EnumC5072.MULTIPLY.ordinal()] = 25;
+        } catch (NoSuchFieldError unused25) {
+        }
+        try {
+            f71606[EnumC5072.HUE.ordinal()] = 26;
+        } catch (NoSuchFieldError unused26) {
+        }
+        try {
+            f71606[EnumC5072.SATURATION.ordinal()] = 27;
+        } catch (NoSuchFieldError unused27) {
+        }
+        try {
+            f71606[EnumC5072.COLOR.ordinal()] = 28;
+        } catch (NoSuchFieldError unused28) {
+        }
+        try {
+            f71606[EnumC5072.LUMINOSITY.ordinal()] = 29;
+        } catch (NoSuchFieldError unused29) {
         }
     }
 }

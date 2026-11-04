@@ -1,82 +1,93 @@
 package l;
 
-import java.util.Vector;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-/* JADX INFO: renamed from: l.۟ۘᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87YT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7224 implements InterfaceC10047 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Vector f24053 = new Vector();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC10047 f24054;
-
-    public C7224(InterfaceC10047 interfaceC10047) {
-        this.f24054 = interfaceC10047;
-    }
-
-    @Override // l.InterfaceC10047
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo19222(byte[] bArr) {
-        return this.f24054.mo19222(bArr);
-    }
-
-    @Override // l.InterfaceC10047
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo19225(byte[] bArr) {
-        return this.f24054.mo19225(bArr);
-    }
-
-    @Override // l.InterfaceC10047
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo19224() {
-        this.f24053.removeAllElements();
-        this.f24054.mo19224();
-    }
-
-    @Override // l.InterfaceC10047
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Vector mo19220() {
-        Vector vector = new Vector();
-        int i = 0;
-        while (true) {
-            Vector vector2 = this.f24053;
-            if (i >= vector2.size()) {
-                break;
-            }
-            vector.add((InterfaceC19219) vector2.elementAt(i));
-            i++;
-        }
-        Vector vectorMo19220 = this.f24054.mo19220();
-        for (int i2 = 0; i2 < vectorMo19220.size(); i2++) {
-            vector.add((InterfaceC19219) vectorMo19220.elementAt(i2));
-        }
-        return vector;
-    }
+/* JADX INFO: renamed from: l.ۜܶۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7224 implements InterfaceC15976 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19221(InterfaceC19219 interfaceC19219) {
-        if (!interfaceC19219.mo22442() && (interfaceC19219 instanceof C8636)) {
-            try {
-                this.f24054.mo19222(((C8636) interfaceC19219).m22439().mo7211());
-            } catch (C5813 unused) {
-            }
-        } else {
-            this.f24053.addElement(interfaceC19219);
+    public final AbstractC19728 f23823;
+
+    @Override // l.InterfaceC15976
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo10886(String str, EnumC17468 enumC17468) {
+        return true;
+    }
+
+    public C7224(AbstractC19728 abstractC19728) {
+        this.f23823 = abstractC19728;
+    }
+
+    @Override // l.InterfaceC11501
+    public final URI toUri() {
+        AbstractC19728 abstractC19728 = this.f23823;
+        try {
+            return new URI(null, abstractC19728.toString(), null);
+        } catch (URISyntaxException e) {
+            throw new C10996(abstractC19728.toString(), e);
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m19223() {
-        Vector vector = this.f24053;
-        if (vector.size() > 0) {
-            for (Object obj : vector.toArray()) {
-                InterfaceC19219 interfaceC19219 = (InterfaceC19219) obj;
-                vector.removeElement(interfaceC19219);
-                m19221(interfaceC19219);
-            }
+    @Override // l.InterfaceC11501
+    public final String getName() {
+        return this.f23823.toString();
+    }
+
+    @Override // l.InterfaceC15976
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC17468 mo10885() {
+        return AbstractC24643.m54974(this.f23823.toString());
+    }
+
+    @Override // l.InterfaceC11501
+    /* JADX INFO: renamed from: ᩷ */
+    public final InputStream mo10889() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.InterfaceC11501
+    /* JADX INFO: renamed from: ᩴ */
+    public final OutputStream mo10888() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.InterfaceC11501
+    /* JADX INFO: renamed from: ۙ */
+    public final CharSequence mo7621(boolean z) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.InterfaceC11501
+    /* JADX INFO: renamed from: ۤ */
+    public final Writer mo10887() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.InterfaceC11501
+    /* JADX INFO: renamed from: ᩸ */
+    public final long mo10890() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.InterfaceC11501
+    public final boolean delete() {
+        throw new UnsupportedOperationException();
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
+        return (obj instanceof C7224) && this.f23823.equals(((C7224) obj).f23823);
+    }
+
+    public final int hashCode() {
+        return this.f23823.hashCode();
     }
 }

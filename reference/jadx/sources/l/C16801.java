@@ -1,28 +1,38 @@
 package l;
 
-import java.net.ServerSocket;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܽᩳۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8538 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16801 extends Thread {
+/* JADX INFO: renamed from: l.ܺۧ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: W856 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C16801 implements Consumer {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public ServiceC7629 f53793;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f54213;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public ServerSocket f53794;
+    public final /* synthetic */ Object f54214;
 
-    @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() {
-        while (true) {
-            try {
-                C0572 c0572 = new C0572(this.f53794.accept(), new C20329());
-                c0572.start();
-                this.f53793.m20174(c0572);
-            } catch (Exception unused) {
-                return;
-            }
+    public /* synthetic */ C16801(int i, Object obj) {
+        this.f54213 = i;
+        this.f54214 = obj;
+    }
+
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f54213) {
+            case 0:
+                ((ArrayList) this.f54214).addAll(((InterfaceC23435) obj).mo1986());
+                break;
+            default:
+                ((C2551) this.f54214).m8502((C11785) obj);
+                break;
         }
     }
 }

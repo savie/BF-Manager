@@ -1,113 +1,107 @@
-.class public final Ll/᩵ۡᩴ;
-.super Ll/۫᩵ᩴ;
-.source "U5"
+.class public final synthetic Ll/᩵ۡᩴ;
+.super Ljava/lang/Object;
+.source "G7AW"
 
 # interfaces
-.implements Ll/ᩴۡᩴ;
-.implements Ll/᩺ۛᩴ;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x61c8864680b583e9L
+# instance fields
+.field public final synthetic ܰ:Ll/ۖۡᩴ;
+
+.field public final synthetic ᩶:Ll/ܽ֡֫;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۖۡᩴ;Ll/ܽ֡֫;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩵ۡᩴ;->ܰ:Ll/ۖۡᩴ;
+
+    iput-object p2, p0, Ll/᩵ۡᩴ;->᩶:Ll/ܽ֡֫;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final iterator()Ll/ۛ᩵ᩴ;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    .line 193
-    iget-object v0, p0, Ll/۫᩵ᩴ;->ܺ:Ll/֡᩵ᩴ;
+    const p1, 0x7f0d00cd
 
-    invoke-interface {v0}, Ll/֡᩵ᩴ;->iterator()Ll/ۛ᩵ᩴ;
+    .line 477
+    iget-object v0, p0, Ll/᩵ۡᩴ;->᩶:Ll/ܽ֡֫;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Ll/ܽ֡֫;->ۙ(I)Landroid/view/View;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public synthetic parallelStream()Ljava/util/stream/Stream;
-    .locals 1
+    const v1, 0x7f0a0681
 
-    .line 0
-    invoke-virtual {p0}, Ll/᩵ۡᩴ;->parallelStream()Ll/ۚ֫ᩴ;
+    .line 478
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Ll/ۖ֫ᩴ;->convert(Ll/ۚ֫ᩴ;)Ljava/util/stream/Stream;
+    check-cast v1, Landroid/widget/TextView;
 
-    move-result-object v0
+    const v2, 0x7f1209fd
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-.method public final parallelStream()Ll/ۚ֫ᩴ;
-    .locals 1
+    const v1, 0x7f0a0301
 
-    .line 208
-    iget-object v0, p0, Ll/۫᩵ᩴ;->ܺ:Ll/֡᩵ᩴ;
+    .line 479
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-static {v0}, Ll/ۡܿᩴ;->parallelStream(Ljava/util/Collection;)Ll/ۚ֫ᩴ;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Landroid/widget/ListView;
 
-    return-object v0
-.end method
+    .line 480
+    new-instance v2, Ll/֨ۡᩴ;
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {v2, v0}, Ll/֨ۡᩴ;-><init>(Ll/ܽ֡֫;)V
 
-    .line 190
-    iget-object v0, p0, Ll/۫᩵ᩴ;->᩶:Ljava/lang/Object;
+    .line 481
+    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    monitor-enter v0
+    .line 482
+    invoke-static {v1}, Ll/ܿ᩷ܺ;->ۙ(Landroid/widget/ListView;)V
 
-    .line 191
-    :try_start_0
-    iget-object v1, p0, Ll/۫᩵ᩴ;->ܺ:Ll/֡᩵ᩴ;
+    .line 483
+    new-instance v3, Ll/ۛۡᩴ;
 
-    invoke-interface {v1, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
+    iget-object v4, p0, Ll/᩵ۡᩴ;->ܰ:Ll/ۖۡᩴ;
 
-    move-result p1
+    invoke-direct {v3, v4, v2, v0}, Ll/ۛۡᩴ;-><init>(Ll/ۖۡᩴ;Ll/֨ۡᩴ;Ll/ܽ֡֫;)V
 
-    monitor-exit v0
+    invoke-virtual {v1, v3}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    return p1
-
-    :catchall_0
-    move-exception p1
+    .line 489
+    sget v1, Ll/۠ۖۧ;->᩶:I
 
     .line 192
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v1, Ll/ۖۖۧ;
 
-    throw p1
-.end method
+    invoke-direct {v1, v0}, Ll/ۖۖۧ;-><init>(Landroid/content/Context;)V
 
-.method public synthetic stream()Ljava/util/stream/Stream;
-    .locals 1
+    .line 490
+    invoke-virtual {v1, p1}, Ll/ۖۖۧ;->ۙ(Landroid/view/View;)V
 
-    .line 0
-    invoke-virtual {p0}, Ll/᩵ۡᩴ;->stream()Ll/ۚ֫ᩴ;
+    const p1, 0x7f12018c
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ll/ۖ֫ᩴ;->convert(Ll/ۚ֫ᩴ;)Ljava/util/stream/Stream;
+    .line 491
+    invoke-virtual {v1, p1, v0}, Ll/ۖۖۧ;->᩸(ILandroid/content/DialogInterface$OnClickListener;)V
 
-    move-result-object v0
+    .line 492
+    invoke-virtual {v1}, Ll/ۖۖۧ;->ۤ()Ll/۠ۖۧ;
 
-    return-object v0
-.end method
-
-.method public final stream()Ll/ۚ֫ᩴ;
-    .locals 1
-
-    .line 203
-    iget-object v0, p0, Ll/۫᩵ᩴ;->ܺ:Ll/֡᩵ᩴ;
-
-    invoke-static {v0}, Ll/ۡܿᩴ;->stream(Ljava/util/Collection;)Ll/ۚ֫ᩴ;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

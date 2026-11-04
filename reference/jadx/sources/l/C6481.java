@@ -1,70 +1,87 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import com.google.android.material.motion.MotionUtils;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import org.simpleframework.xml.strategy.Name;
 
-/* JADX INFO: renamed from: l.ۜۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P71B */
+/* JADX INFO: renamed from: l.ۛܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7AI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6481 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C6481 f21872 = new C6481(0, null);
+public final class C6481 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f21873;
+    public final int f21789;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22710 f21874;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f21790;
 
-    public final int length() {
-        C22710 c22710 = this.f21874;
-        if (c22710 == null) {
-            return 0;
-        }
-        return c22710.f73964;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f21791;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f21792;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f21793;
+
+    public C6481(ArrayList arrayList, int i, int i2) {
+        this.f21790 = arrayList;
+        this.f21791 = i;
+        this.f21789 = i2;
     }
 
-    public C6481(int i, C22710 c22710) {
-        this.f21873 = i;
-        this.f21874 = c22710;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C6481)) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m18317(C4243 c4243, InterfaceC2731 interfaceC2731, String str) {
+        int i = this.f21793;
+        this.f21793 = i + 1;
+        if (i < this.f21791) {
             return false;
         }
-        C6481 c6481 = (C6481) obj;
-        return this.f21873 == c6481.f21873 && C13638.equals(this.f21874, c6481.f21874);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f21874) + (this.f21873 * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f21873), this.f21874};
-        String[] strArrSplit = "offset;spans".length() == 0 ? new String[0] : "offset;spans".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C6481.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+        return m18314(i, new C24381(c4243.m13547(), C10208.m26337(interfaceC2731), "parent_reference", "parent=".concat(str), null, null, null));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m17676() {
-        return this.f21873;
+    public final boolean m18315(C2863 c2863, C4243 c4243, InterfaceC2731 interfaceC2731, InterfaceC5650 interfaceC5650, String str, HashSet hashSet) {
+        int i = this.f21793;
+        this.f21793 = i + 1;
+        if (i < this.f21791) {
+            return false;
+        }
+        String strM26337 = C10208.m26337(interfaceC2731);
+        C2795 c2795M21743 = C7972.m21743(c2863, interfaceC2731, interfaceC5650.mo16637());
+        String strM21714 = C7972.m21714(interfaceC5650, C7972.m21727(c2863, interfaceC5650, 300), (Set) hashSet);
+        C13192 c13192M13547 = c4243.m13547();
+        String str2 = c2795M21743.f9199;
+        return m18314(i, new C24381(c13192M13547, strM26337, Name.REFER, (str2 == null || str2.isEmpty() || str2.equals(str)) ? "item key=".concat(str) : C3188.m10404("item key=", str2, " (", str, MotionUtils.EASING_TYPE_FORMAT_END), c2795M21743.f9199, c2795M21743.f9200, strM21714));
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C22710 m17677() {
-        return this.f21874;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m18316(C2863 c2863, C4243 c4243, InterfaceC2731 interfaceC2731, InterfaceC5650 interfaceC5650, boolean z, String str, HashSet hashSet) {
+        int i = this.f21793;
+        this.f21793 = i + 1;
+        if (i < this.f21791) {
+            return false;
+        }
+        String strM26337 = C10208.m26337(interfaceC2731);
+        C2795 c2795M21743 = z ? C7972.m21743(c2863, interfaceC2731, interfaceC5650.mo16637()) : new C2795(null, 0);
+        C9506 c9506M21727 = C7972.m21727(c2863, interfaceC5650, 300);
+        String strM21714 = C7972.m21714(interfaceC5650, c9506M21727, (Set) hashSet);
+        C13192 c13192M13547 = c4243.m13547();
+        String str2 = c9506M21727.f30785;
+        String str3 = c9506M21727.f30789;
+        return m18314(i, new C24381(c13192M13547, strM26337, Name.REFER, (str2 != null || str3 == null || str3.isEmpty()) ? str : C1173.m4316(0, str3.length(), 300, str3), z ? c2795M21743.f9199 : null, z ? c2795M21743.f9200 : null, z ? strM21714 : null));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private boolean m18314(int i, C24381 c24381) {
+        ArrayList arrayList = this.f21790;
+        arrayList.add(c24381);
+        if (arrayList.size() < this.f21789) {
+            return false;
+        }
+        this.f21792 = i + 1;
+        return true;
     }
 }

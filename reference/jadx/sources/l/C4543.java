@@ -1,18 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۡۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.ۙ֡᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: H6V3 */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C4543 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC13717 m12682(InterfaceC13717 interfaceC13717, InterfaceC13717 interfaceC13718) {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9335(interfaceC13717, interfaceC13718, false);
-    }
+public final class C4543 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC13717 m12683(InterfaceC13717 interfaceC13717, InterfaceC13717 interfaceC13718) {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9337(interfaceC13717, interfaceC13718, false);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1339 f16152;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC1339 f16153;
+
+    public C4543(AbstractC1339 abstractC1339, AbstractC1339 abstractC13310) {
+        this.f16152 = abstractC1339;
+        this.f16153 = abstractC13310;
     }
 }

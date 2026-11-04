@@ -24,7 +24,7 @@
     .locals 1
 
     .line 62
-    sget v0, Ll/ᩴ۟ܶ;->֫᩻:I
+    sget v0, Ll/ۘ۬ܺ;->۠ۡ:I
 
     sput v0, Lcom/google/android/material/progressindicator/LinearProgressIndicator;->DEF_STYLE_RES:I
 
@@ -46,7 +46,7 @@
     .locals 1
 
     .line 79
-    sget v0, Ll/ۖ۟ܶ;->᩸ۤ:I
+    sget v0, Ll/ۧ۬ܺ;->ܽۛ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/progressindicator/LinearProgressIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -199,7 +199,7 @@
     if-eq p1, p3, :cond_2
 
     .line 103
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
@@ -446,7 +446,7 @@
     if-eq p1, v1, :cond_2
 
     .line 255
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I

@@ -1,47 +1,43 @@
-.class public final Ll/ۗ֨ᩴ;
-.super Ll/᩺۬ᩴ;
-.source "0JF"
+.class public final synthetic Ll/ۗ֨ᩴ;
+.super Ljava/lang/Object;
+.source "6AK0"
 
 # interfaces
-.implements Ll/ܰۡᩴ;
+.implements Ljava/util/function/Function;
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
     .locals 0
 
-    .line 1056
-    check-cast p1, Ll/ܳ۬ᩴ;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    .line 1081
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-object p1
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1066
-    invoke-virtual {p0}, Ll/᩺۬ᩴ;->ۙ()Ll/ۢ֨ᩴ;
+    .line 78
+    new-instance p1, Ll/ܰ֨ᩴ;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-direct {p1, v0}, Ll/ܰ֨ᩴ;-><init>(I)V
+
+    return-object p1
 .end method
 
-.method public final set(Ljava/lang/Object;)V
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
     .locals 0
 
-    .line 1056
-    check-cast p1, Ll/ܳ۬ᩴ;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    .line 1076
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-object p1
 .end method

@@ -4,7 +4,7 @@ import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECJPAKECurves {
     public static final ECJPAKECurve NIST_P256 = getCurve("P-256");
     public static final ECJPAKECurve NIST_P384 = getCurve("P-384");

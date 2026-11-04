@@ -15,7 +15,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.field.FiniteField;
 import org.bouncycastle.math.field.PolynomialExtensionField;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X9ECParameters extends ASN1Object implements X9ObjectIdentifiers {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public X9Curve curve;

@@ -1,197 +1,116 @@
-.class public final Ll/ᩴ᩹᩹;
-.super Ljava/io/BufferedInputStream;
-.source "27BS"
+.class public Ll/ᩴ᩹᩹;
+.super Ll/ۗܽ᩹;
+.source "1C7F"
 
 # interfaces
-.implements Ll/᩷ۤᩴ;
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public ܺ:J
+# static fields
+.field public static final serialVersionUID:J = -0x61c8864680b583e9L
 
-.field public ᩶:Z
+
+# direct methods
+.method private readResolve()Ljava/lang/Object;
+    .locals 1
+
+    .line 98
+    sget-object v0, Ll/۫᩹᩹;->ۙ:Ll/ᩴ᩹᩹;
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final declared-synchronized read()I
-    .locals 6
+.method public final clear()V
+    .locals 0
 
-    move-object v0, p0
+    return-void
+.end method
 
-    monitor-enter v0
+.method public clone()Ljava/lang/Object;
+    .locals 1
 
-    .line 641
-    :try_start_0
-    invoke-super {p0}, Ljava/io/BufferedInputStream;->read()I
+    .line 78
+    sget-object v0, Ll/۫᩹᩹;->ۙ:Ll/ᩴ᩹᩹;
 
-    move-result v1
+    return-object v0
+.end method
 
-    .line 642
-    iget-boolean v2, p0, Ll/ᩴ᩹᩹;->᩶:Z
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    if-eqz v2, :cond_0
+    .line 88
+    instance-of v0, p1, Ll/᩶ܺ᩹;
 
-    if-ltz v1, :cond_0
+    const/4 v1, 0x0
 
-    .line 643
-    iget-wide v2, p0, Ll/ᩴ᩹᩹;->ܺ:J
-
-    const-wide/16 v4, 0x1
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Ll/ᩴ᩹᩹;->ܺ:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 645
-    :cond_0
-    monitor-exit v0
+    if-nez v0, :cond_0
 
     return v1
 
-    :catchall_0
-    move-exception v1
+    .line 89
+    :cond_0
+    check-cast p1, Ll/᩶ܺ᩹;
 
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized read([BII)I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 653
-    :try_start_0
-    invoke-super {p0, p1, p2, p3}, Ljava/io/BufferedInputStream;->read([BII)I
+    invoke-interface {p1}, Ll/᩶ܺ᩹;->size()I
 
     move-result p1
 
-    .line 654
-    iget-boolean p2, p0, Ll/ᩴ᩹᩹;->᩶:Z
+    if-nez p1, :cond_1
 
-    if-eqz p2, :cond_0
-
-    if-lez p1, :cond_0
-
-    .line 655
-    iget-wide p2, p0, Ll/ᩴ᩹᩹;->ܺ:J
-
-    int-to-long v1, p1
-
-    add-long/2addr p2, v1
-
-    iput-wide p2, p0, Ll/ᩴ᩹᩹;->ܺ:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 657
-    :cond_0
-    monitor-exit v0
+    const/4 p1, 0x1
 
     return p1
 
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    :cond_1
+    return v1
 .end method
 
-.method public final declared-synchronized skip(J)J
-    .locals 4
+.method public hashCode()I
+    .locals 1
 
-    move-object v0, p0
+    const/4 v0, 0x0
 
-    .line 1
-    monitor-enter v0
-
-    .line 665
-    :try_start_0
-    invoke-super {p0, p1, p2}, Ljava/io/BufferedInputStream;->skip(J)J
-
-    move-result-wide p1
-
-    .line 666
-    iget-boolean v1, p0, Ll/ᩴ᩹᩹;->᩶:Z
-
-    if-eqz v1, :cond_0
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v3, p1, v1
-
-    if-lez v3, :cond_0
-
-    .line 667
-    iget-wide v1, p0, Ll/ᩴ᩹᩹;->ܺ:J
-
-    add-long/2addr v1, p1
-
-    iput-wide v1, p0, Ll/ᩴ᩹᩹;->ܺ:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 669
-    :cond_0
-    monitor-exit v0
-
-    return-wide p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return v0
 .end method
 
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
+.method public final size()I
+    .locals 1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    const/4 v0, 0x0
 
-    move-result-wide v0
-
-    return-wide v0
+    return v0
 .end method
 
-.method public final ۙ()J
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    .line 633
-    iget-wide v0, p0, Ll/ᩴ᩹᩹;->ܺ:J
+    const-string v0, "{}"
 
-    return-wide v0
+    return-object v0
 .end method
 
-.method public final ۨ()V
-    .locals 2
+.method public final ۙ(C)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x0
 
-    .line 625
-    iput-boolean v0, p0, Ll/ᩴ᩹᩹;->᩶:Z
+    return p1
+.end method
 
-    const-wide/16 v0, 0x0
+.method public final ᩷()Ljava/lang/Object;
+    .locals 1
 
-    .line 626
-    iput-wide v0, p0, Ll/ᩴ᩹᩹;->ܺ:J
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
+.end method
+
+.method public final ᩷(C)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

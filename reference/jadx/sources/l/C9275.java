@@ -1,51 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢ֫ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 37LB */
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.text.style.ReplacementSpan;
+
+/* JADX INFO: renamed from: l.ۡۡᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7AW */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9275 {
+public final class C9275 extends ReplacementSpan {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f31533;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f30169;
 
-    static {
-        int[] iArr = new int[EnumC18651.values().length];
-        f31533 = iArr;
-        try {
-            iArr[EnumC18651.f60464.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    @Override // android.text.style.ReplacementSpan
+    public final void draw(Canvas canvas, CharSequence charSequence, int i, int i2, float f, int i3, int i4, int i5, Paint paint) {
+    }
+
+    public C9275(int i) {
+        this.f30169 = i;
+    }
+
+    @Override // android.text.style.ReplacementSpan
+    public final int getSize(Paint paint, CharSequence charSequence, int i, int i2, Paint.FontMetricsInt fontMetricsInt) {
+        if (fontMetricsInt != null) {
+            Paint.FontMetricsInt fontMetricsInt2 = paint.getFontMetricsInt();
+            fontMetricsInt.ascent = fontMetricsInt2.ascent;
+            fontMetricsInt.descent = fontMetricsInt2.descent;
+            fontMetricsInt.top = fontMetricsInt2.top;
+            fontMetricsInt.bottom = fontMetricsInt2.bottom;
         }
-        try {
-            f31533[EnumC18651.f60551.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f31533[EnumC18651.f60561.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f31533[EnumC18651.f60568.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f31533[EnumC18651.f60497.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f31533[EnumC18651.f60553.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f31533[EnumC18651.f60509.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f31533[EnumC18651.f60550.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f31533[EnumC18651.f60480.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
+        return this.f30169;
     }
 }

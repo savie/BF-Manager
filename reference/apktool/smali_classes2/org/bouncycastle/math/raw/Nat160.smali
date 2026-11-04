@@ -3005,7 +3005,7 @@
 
     move-wide v12, v7
 
-    invoke-static/range {v10 .. v17}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v10 .. v17}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v10
 
@@ -3071,7 +3071,7 @@
 
     move-wide v12, v7
 
-    invoke-static/range {v10 .. v17}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v10 .. v17}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v9
 
@@ -3081,7 +3081,7 @@
 
     move-wide v15, v5
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v11
 
@@ -3149,7 +3149,7 @@
 
     move-wide v12, v7
 
-    invoke-static/range {v10 .. v17}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v10 .. v17}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v0
 
@@ -3159,7 +3159,7 @@
 
     move-wide v15, v5
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v3
 
@@ -3169,7 +3169,7 @@
 
     move-wide/from16 v27, v5
 
-    invoke-static/range {v23 .. v30}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v23 .. v30}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v5
 
@@ -3402,7 +3402,7 @@
 
     move-wide v15, v8
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v13
 
@@ -3474,7 +3474,7 @@
 
     move-wide v15, v8
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v6
 
@@ -3484,7 +3484,7 @@
 
     move-wide/from16 v17, v11
 
-    invoke-static/range {v15 .. v22}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v15 .. v22}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v13
 
@@ -3558,7 +3558,7 @@
 
     move-wide v15, v8
 
-    invoke-static/range {v13 .. v20}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v13 .. v20}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v2
 
@@ -3568,13 +3568,13 @@
 
     move-wide/from16 v17, v11
 
-    invoke-static/range {v15 .. v22}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v15 .. v22}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v7
 
     ushr-long v29, v7, v6
 
-    invoke-static/range {v25 .. v32}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v25 .. v32}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v9
 

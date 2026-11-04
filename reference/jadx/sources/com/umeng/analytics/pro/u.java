@@ -33,7 +33,7 @@ public class u implements y.a {
     public static long k = 0;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static boolean f77940l = true;
+    public static boolean f82056l = true;
     public static long m;
 
     public u() {
@@ -117,8 +117,8 @@ public class u implements y.a {
                     editorEdit.putInt("vers_code", i2);
                     editorEdit.putString("vers_name", string);
                     editorEdit.commit();
-                    if (f77940l) {
-                        f77940l = false;
+                    if (f82056l) {
+                        f82056l = false;
                     }
                     if (j) {
                         j = false;
@@ -130,8 +130,8 @@ public class u implements y.a {
                 }
                 if (j) {
                     j = false;
-                    if (f77940l) {
-                        f77940l = false;
+                    if (f82056l) {
+                        f82056l = false;
                     }
                     h = e(context);
                     MLog.d("创建新会话: " + h);
@@ -144,8 +144,8 @@ public class u implements y.a {
                 editorEdit.commit();
                 MLog.d("延续上一个会话: " + h);
                 UMRTLog.i(UMRTLog.RTLOG_TAG, "Extend current session: " + h);
-                if (f77940l) {
-                    f77940l = false;
+                if (f82056l) {
+                    f82056l = false;
                     if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
                         Context context2 = i;
                         UMWorkDispatch.sendEventEx(context2, o.a.D, CoreProtocol.getInstance(context2), null, 0L);

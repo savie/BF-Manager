@@ -4,7 +4,7 @@ import com.umeng.commonsdk.statistics.UMErrorCode;
 import java.math.BigInteger;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ConstraintUtils {
     public static int bitsOfSecurityFor(BigInteger bigInteger) {
         return bitsOfSecurityForFF(bigInteger.bitLength());

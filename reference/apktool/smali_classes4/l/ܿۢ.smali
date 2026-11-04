@@ -1,49 +1,42 @@
-.class public Ll/ܿۢ;
+.class public final Ll/ܿۢ;
 .super Ljava/lang/Object;
-.source "XAMH"
+.source "CB27"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# virtual methods
-.method public ۙ(I)V
+# instance fields
+.field public final synthetic ܰ:Ll/ܺᩳ;
+
+.field public final synthetic ᩶:Landroid/graphics/Typeface;
+
+
+# direct methods
+.method public constructor <init>(Ll/ܺᩳ;Landroid/graphics/Typeface;)V
     .locals 0
 
-    const/4 p1, 0x0
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    throw p1
-.end method
+    iput-object p1, p0, Ll/ܿۢ;->ܰ:Ll/ܺᩳ;
 
-.method public ۙ(Z)V
-    .locals 0
+    iput-object p2, p0, Ll/ܿۢ;->᩶:Landroid/graphics/Typeface;
 
     return-void
 .end method
 
-.method public ۙ()Z
-    .locals 1
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    return v0
-.end method
+    .line 58
+    iget-object v0, p0, Ll/ܿۢ;->ܰ:Ll/ܺᩳ;
 
-.method public ۨ(I)V
-    .locals 0
+    iget-object v1, p0, Ll/ܿۢ;->᩶:Landroid/graphics/Typeface;
 
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public ܰ(I)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public ܰ(Z)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ll/ܺᩳ;->ۙ(Landroid/graphics/Typeface;)V
 
     return-void
 .end method

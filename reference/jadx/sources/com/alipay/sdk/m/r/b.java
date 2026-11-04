@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import l.C15489;
+import l.C14483;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -118,7 +118,7 @@ public class b {
             } catch (Throwable th2) {
                 g.c("LocalWebPayManager", "readContentFromConfigJson fileContent error");
                 g.a(th2);
-                com.alipay.sdk.m.m.a.a(this.b, com.alipay.sdk.m.m.b.f77909l, "LocalWebPayManager.readContentFromConfigJsonError", th2);
+                com.alipay.sdk.m.m.a.a(this.b, com.alipay.sdk.m.m.b.f82025l, "LocalWebPayManager.readContentFromConfigJsonError", th2);
             }
         }
     }
@@ -148,15 +148,15 @@ public class b {
     public void a(com.alipay.sdk.m.w.a aVar) {
         if (this.b != null) {
             g.c(com.alipay.sdk.m.n.a.B, "LocalWebPayManager.init mBizContext not null");
-            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, "LocalWebPayManager.init", "mBizContext not null");
+            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, "LocalWebPayManager.init", "mBizContext not null");
             d();
         }
         this.b = aVar;
         String absolutePath = aVar.b().getFilesDir().getAbsolutePath();
-        this.c = C15489.m37076(absolutePath, "/localWebPay");
-        this.d = C15489.m37076(absolutePath, "/localWebPay/localWebFiles");
-        this.e = C15489.m37076(absolutePath, "/localWebPay/localWebFiles/sdkConfig.json");
-        this.f = C15489.m37076(absolutePath, "/localWebPay/localWebPayDownloadingFiles");
+        this.c = C14483.m34972(absolutePath, "/localWebPay");
+        this.d = C14483.m34972(absolutePath, "/localWebPay/localWebFiles");
+        this.e = C14483.m34972(absolutePath, "/localWebPay/localWebFiles/sdkConfig.json");
+        this.f = C14483.m34972(absolutePath, "/localWebPay/localWebPayDownloadingFiles");
         this.h = new HashMap();
         boolean zB = b();
         g.b(com.alipay.sdk.m.n.a.B, "LocalWebPayManager init checkConfigFile=" + zB);
@@ -192,7 +192,7 @@ public class b {
             }
         } catch (Throwable th) {
             g.a(th);
-            com.alipay.sdk.m.m.a.a(this.b, com.alipay.sdk.m.m.b.f77909l, "LocalWebPayManager.unzipAndCheckSHA256Error", th);
+            com.alipay.sdk.m.m.a.a(this.b, com.alipay.sdk.m.m.b.f82025l, "LocalWebPayManager.unzipAndCheckSHA256Error", th);
         }
     }
 

@@ -60,7 +60,7 @@
     .line 300
     new-instance p1, Landroid/graphics/drawable/RippleDrawable;
 
-    sget v0, Ll/ۖ۟ܶ;->ܺ᩹:I
+    sget v0, Ll/ۧ۬ܺ;->ܰܳ:I
 
     const/4 v1, 0x0
 

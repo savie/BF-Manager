@@ -1,26 +1,42 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ۛ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0AW3 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22096 extends C22802 {
+import java.util.Map;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final InterfaceC14771 f71568;
+/* JADX INFO: renamed from: l.᩷ܰۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VIU4 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22096 implements InterfaceC23283 {
 
-    public C22096(InterfaceC22386 interfaceC22386, InterfaceC8400 interfaceC8400) {
-        super(interfaceC22386, false);
-        this.f71568 = C20149.m45560(interfaceC8400, this, this);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C6434 f71238;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f71239;
+
+    public C22096(String str, Map map, Map map2) {
+        this.f71239 = str;
+        this.f71238 = C6434.m18209(map, map2);
     }
 
-    @Override // l.C2339
-    /* JADX INFO: renamed from: ܶ */
-    public final void mo7122() {
-        try {
-            C12032.m29931(C7321.f24318, C20149.m45561(this.f71568));
-        } catch (Throwable th) {
-            mo2097(C18610.m43014(th));
-            throw th;
-        }
+    @Override // l.InterfaceC23283
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo45712() {
+        return this.f71239;
+    }
+
+    @Override // l.InterfaceC23283
+    /* JADX INFO: renamed from: ۙ */
+    public final C6434 mo45711() {
+        return this.f71238;
+    }
+
+    @Override // l.InterfaceC23283
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo45713() {
+        return this.f71238 != InterfaceC25080.f81106;
+    }
+
+    public final String toString() {
+        return this.f71239;
     }
 }

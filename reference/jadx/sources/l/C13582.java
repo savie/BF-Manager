@@ -1,18 +1,12 @@
 package l;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ܰۙ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 770P */
+/* JADX INFO: renamed from: l.۬ۗ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6QI */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13582 implements BiFunction {
-    public /* synthetic */ BiFunction andThen(Function function) {
-        return C5689.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.BiFunction
-    public final Object apply(Object obj, Object obj2) {
-        return Integer.valueOf(((Integer) obj2).intValue() + ((Integer) obj).intValue());
+public final class C13582 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 49;
     }
 }

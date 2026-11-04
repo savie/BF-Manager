@@ -7,19 +7,19 @@
 
 
 # static fields
-.field public static final ᩹:Lcom/amazonaws/logging/Log;
+.field public static final ܳ:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public final ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
-
 .field public final ۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
-.field public final ۚ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
+.field public final ۤ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
 
-.field public final ۨ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
+.field public final ᩴ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
 
-.field public final ܰ:Lcom/amazonaws/services/s3/AmazonS3;
+.field public final ᩷:Lcom/amazonaws/services/s3/AmazonS3;
+
+.field public final ᩸:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩹:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ܳ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -45,20 +45,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩸:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
 
     .line 47
     new-instance p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
 
     invoke-direct {p1, p0, p2}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;-><init>(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;)V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۚ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ᩴ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
 
     .line 48
-    iput-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۨ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
+    iput-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۤ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
 
     .line 49
-    iput-object p4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ܰ:Lcom/amazonaws/services/s3/AmazonS3;
+    iput-object p4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩷:Lcom/amazonaws/services/s3/AmazonS3;
 
     .line 50
     iput-object p5, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 31
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩹:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ܳ:Lcom/amazonaws/logging/Log;
 
     return-object v0
 .end method
@@ -79,7 +79,7 @@
     .locals 0
 
     .line 31
-    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۨ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
+    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۤ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
 
     return-object p0
 .end method
@@ -92,18 +92,18 @@
     .line 58
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩹:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ܳ:Lcom/amazonaws/logging/Log;
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۟:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
+    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩸:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;
 
-    iput-object v2, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iput-object v2, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 59
-    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۨ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
+    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۤ:Lcom/amazonaws/services/s3/model/UploadPartRequest;
 
-    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۚ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
+    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ᩴ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;
 
     invoke-virtual {v2, v4}, Lcom/amazonaws/AmazonWebServiceRequest;->ۙ(Lcom/amazonaws/event/ProgressListener;)V
 
@@ -118,20 +118,20 @@
 
     .line 63
     :try_start_0
-    iget-object v10, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ܰ:Lcom/amazonaws/services/s3/AmazonS3;
+    iget-object v10, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->᩷:Lcom/amazonaws/services/s3/AmazonS3;
 
     invoke-interface {v10, v2}, Lcom/amazonaws/services/s3/AmazonS3;->ۙ(Lcom/amazonaws/services/s3/model/UploadPartRequest;)Lcom/amazonaws/services/s3/model/UploadPartResult;
 
     move-result-object v10
 
     .line 64
-    sget-object v11, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v11, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 111
-    iput-object v11, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iput-object v11, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 112
-    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩹()I
+    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ()I
 
     move-result v12
 
@@ -140,17 +140,17 @@
     invoke-static {v12, v11}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۙ(ILcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;)I
 
     .line 65
-    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩹()I
+    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ()I
 
     move-result v11
 
-    invoke-virtual {v10}, Lcom/amazonaws/services/s3/model/UploadPartResult;->ۖ()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/amazonaws/services/s3/model/UploadPartResult;->᩸()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v11, v10}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ܰ(ILjava/lang/String;)V
+    invoke-static {v11, v10}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩷(ILjava/lang/String;)V
 
     .line 66
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -191,10 +191,10 @@
 
     .line 78
     :try_start_1
-    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ܰ()Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->᩷()Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     .line 79
-    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->ܰ()Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
+    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;->᩷()Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkLossHandler;
 
     move-result-object v7
 
@@ -231,15 +231,15 @@
 
     move-result-object v7
 
-    invoke-interface {v1, v7}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v7}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 85
-    sget-object v7, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۨۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v7, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۤۙ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-    iput-object v7, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iput-object v7, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 86
-    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩹()I
+    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ()I
 
     move-result v8
 
@@ -250,7 +250,7 @@
     const-string v7, "Network Connection Interrupted: Moving the TransferState to WAITING_FOR_NETWORK"
 
     .line 87
-    invoke-interface {v1, v7}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v7}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 89
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -324,7 +324,7 @@
 
     move-result-object v9
 
-    invoke-interface {v1, v9}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v9}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 104
     sget-object v9, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -354,13 +354,13 @@
 
     .line 96
     :cond_1
-    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 111
-    iput-object v4, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iput-object v4, v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadPartTaskMetadata;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 112
-    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩹()I
+    invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܳ()I
 
     move-result v2
 
@@ -371,7 +371,7 @@
     const-string v0, "Encountered error uploading part "
 
     .line 97
-    invoke-interface {v1, v0, v10}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, v0, v10}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 98
     throw v10
@@ -380,7 +380,7 @@
     const-string v0, "Upload part aborted."
 
     .line 69
-    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 116
     new-instance v0, Lcom/amazonaws/event/ProgressEvent;

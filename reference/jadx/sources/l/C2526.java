@@ -1,51 +1,25 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۖ۫ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R5PD */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2526 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static List m7899(List list, Object obj) {
-        if (list == null) {
-            list = new ArrayList(1);
-        }
-        list.add(obj);
-        return list;
+/* JADX INFO: renamed from: l.ۖ۟᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2526 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m7898(Object[] objArr) {
-        if (objArr == null) {
-            return new ArrayList();
-        }
-        ArrayList arrayList = new ArrayList(objArr.length);
-        for (Object obj : objArr) {
-            arrayList.add(obj);
-        }
-        return arrayList;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m7897(int[] iArr) {
-        if (iArr == null) {
-            return new ArrayList();
-        }
-        ArrayList arrayList = new ArrayList(iArr.length);
-        for (int i : iArr) {
-            arrayList.add(Integer.valueOf(i));
-        }
-        return arrayList;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m7896(int i, Object[] objArr) {
-        ArrayList arrayList = new ArrayList(i);
-        for (int i2 = 0; i2 < i; i2++) {
-            arrayList.add(objArr[i2]);
-        }
-        return arrayList;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        C8820 c8820 = (C8820) obj;
+        return c8820.f28830 ? c8820.f28831.m55073(c8820.f28828) : c8820.f28828;
     }
 }

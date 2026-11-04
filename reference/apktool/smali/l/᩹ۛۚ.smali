@@ -1,66 +1,36 @@
-.class public final synthetic Ll/᩹ۛۚ;
+.class public final Ll/᩹ۛۚ;
 .super Ljava/lang/Object;
-.source "G7AW"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "87AO"
 
 
 # instance fields
-.field public final synthetic ֡:Landroid/widget/EditText;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ۫:Landroid/widget/EditText;
+.field public final ۤ:Ljava/lang/String;
 
-.field public final synthetic ܺ:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final ᩷:Ljava/lang/String;
 
-.field public final synthetic ܽ:Lcom/google/android/material/textfield/TextInputLayout;
-
-.field public final synthetic ܿ:Ll/᩵ۡۜ;
-
-.field public final synthetic ᩶:Landroid/widget/EditText;
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;Landroid/widget/EditText;Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;Ll/᩵ۡۜ;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
+    .line 793
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩹ۛۚ;->ܺ:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 794
+    iput-object p1, p0, Ll/᩹ۛۚ;->᩸:Ljava/lang/String;
 
-    iput-object p2, p0, Ll/᩹ۛۚ;->᩶:Landroid/widget/EditText;
+    .line 795
+    iput-object p2, p0, Ll/᩹ۛۚ;->ۙ:Ljava/lang/String;
 
-    iput-object p3, p0, Ll/᩹ۛۚ;->֡:Landroid/widget/EditText;
+    .line 796
+    iput-object p3, p0, Ll/᩹ۛۚ;->ۤ:Ljava/lang/String;
 
-    iput-object p4, p0, Ll/᩹ۛۚ;->ܽ:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iput-object p5, p0, Ll/᩹ۛۚ;->۫:Landroid/widget/EditText;
-
-    iput-object p6, p0, Ll/᩹ۛۚ;->ܿ:Ll/᩵ۡۜ;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
-
-    .line 0
-    iget-object v4, p0, Ll/᩹ۛۚ;->۫:Landroid/widget/EditText;
-
-    iget-object v5, p0, Ll/᩹ۛۚ;->ܿ:Ll/᩵ۡۜ;
-
-    iget-object v0, p0, Ll/᩹ۛۚ;->ܺ:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iget-object v1, p0, Ll/᩹ۛۚ;->᩶:Landroid/widget/EditText;
-
-    iget-object v2, p0, Ll/᩹ۛۚ;->֡:Landroid/widget/EditText;
-
-    iget-object v3, p0, Ll/᩹ۛۚ;->ܽ:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-static/range {v0 .. v5}, Ll/ܺۛۚ;->ۙ(Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;Landroid/widget/EditText;Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;Ll/᩵ۡۜ;)V
+    .line 797
+    iput-object p4, p0, Ll/᩹ۛۚ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

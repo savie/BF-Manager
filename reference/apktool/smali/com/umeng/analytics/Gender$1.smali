@@ -28,7 +28,7 @@
     const-string v1, "Male:"
 
     .line 0
-    invoke-static {v0, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

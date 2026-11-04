@@ -1,37 +1,74 @@
 package l;
 
-import android.view.WindowInsets;
+import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
+import org.checkerframework.dataflow.qual.Pure;
 
-/* JADX INFO: renamed from: l.᩷ۢ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4Z7 */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.᩵᩵ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8D9 */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C20782 {
+    @Pure
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m46772(int i) {
-        int iStatusBars;
-        int i2 = 0;
-        for (int i3 = 1; i3 <= 256; i3 <<= 1) {
-            if ((i & i3) != 0) {
-                if (i3 == 1) {
-                    iStatusBars = WindowInsets.Type.statusBars();
-                } else if (i3 == 2) {
-                    iStatusBars = WindowInsets.Type.navigationBars();
-                } else if (i3 == 4) {
-                    iStatusBars = WindowInsets.Type.captionBar();
-                } else if (i3 == 8) {
-                    iStatusBars = WindowInsets.Type.ime();
-                } else if (i3 == 16) {
-                    iStatusBars = WindowInsets.Type.systemGestures();
-                } else if (i3 == 32) {
-                    iStatusBars = WindowInsets.Type.mandatorySystemGestures();
-                } else if (i3 == 64) {
-                    iStatusBars = WindowInsets.Type.tappableElement();
-                } else if (i3 == 128) {
-                    iStatusBars = WindowInsets.Type.displayCutout();
-                }
-                i2 |= iStatusBars;
-            }
+    public static void m47565(boolean z) {
+        if (!z) {
+            throw new IllegalArgumentException();
         }
-        return i2;
+    }
+
+    @Pure
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m47564(String str, boolean z) {
+        if (!z) {
+            throw new IllegalArgumentException(String.valueOf(str));
+        }
+    }
+
+    @Pure
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m47561(int i, int i2) {
+        if (i < 0 || i >= i2) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    @Pure
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m47568(boolean z) {
+        if (!z) {
+            throw new IllegalStateException();
+        }
+    }
+
+    @Pure
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m47567(String str, boolean z) {
+        if (!z) {
+            throw new IllegalStateException(String.valueOf(str));
+        }
+    }
+
+    @EnsuresNonNull({"#1"})
+    @Pure
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m47566(Object obj) {
+        if (obj == null) {
+            throw new IllegalStateException();
+        }
+    }
+
+    @EnsuresNonNull({"#1"})
+    @Pure
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m47562(Object obj) {
+        obj.getClass();
+    }
+
+    @EnsuresNonNull({"#1"})
+    @Pure
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m47563(Object obj, String str) {
+        if (obj == null) {
+            throw new NullPointerException(str);
+        }
     }
 }

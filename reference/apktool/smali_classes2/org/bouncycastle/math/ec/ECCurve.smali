@@ -126,7 +126,7 @@
     const/16 p0, 0x7f
 
     .line 0
-    invoke-static {p1, p0, v3, v1}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p1, p0, v3, v1}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result p0
 
@@ -153,7 +153,7 @@
     :cond_4
     const/16 p0, 0x6f
 
-    invoke-static {p1, p0, v3, v4}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p1, p0, v3, v4}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result p0
 
@@ -180,7 +180,7 @@
     :cond_7
     const/16 v0, 0x63
 
-    invoke-static {p1, v0, v3, p0}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p1, v0, v3, p0}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result p0
 
@@ -196,7 +196,7 @@
     :cond_9
     const/16 v0, 0x4f
 
-    invoke-static {p1, v0, v3, p0}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p1, v0, v3, p0}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result p0
 

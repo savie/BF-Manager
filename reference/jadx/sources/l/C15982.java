@@ -1,50 +1,57 @@
 package l;
 
-import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicLong;
+/* JADX INFO: renamed from: l.ܶۡۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 764J */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15982 extends AbstractC24188 implements InterfaceC10015, InterfaceC21204 {
 
-/* JADX INFO: renamed from: l.ܺܰᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9FM */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15982 {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6288 f51895 = new C17474();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AtomicLong f51757 = new AtomicLong(0);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte f51896;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Semaphore f51756 = new Semaphore(1);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f51897;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long[] m37963(int i) {
-        Semaphore semaphore = this.f51756;
-        try {
-            if (!semaphore.tryAcquire(i, 5000L, TimeUnit.MILLISECONDS)) {
-                throw new C13865("Not enough credits (" + semaphore.availablePermits() + " available) to hand out " + i + " sequence numbers");
-            }
-            long j = i;
-            long andAdd = this.f51757.getAndAdd(j);
-            int i2 = (int) ((j + andAdd) - andAdd);
-            long[] jArr = new long[i2];
-            for (int i3 = 0; i3 < i2; i3++) {
-                jArr[i3] = ((long) i3) + andAdd;
-            }
-            return jArr;
-        } catch (InterruptedException unused) {
-            Thread.currentThread().interrupt();
-            StringBuilder sbM40153 = C17214.m40153(i, "Got interrupted waiting for ", " to be available. Credits available at this moment: ");
-            sbM40153.append(semaphore.availablePermits());
-            throw new C13865(sbM40153.toString());
+    public C15982(EnumC7779 enumC7779, short s, long j) {
+        super(enumC7779);
+        if (s >= 256) {
+            throw new RuntimeException("The register number must be less than v256");
         }
+        this.f51896 = (byte) s;
+        this.f51897 = j;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m37961() {
-        return this.f51756.availablePermits();
+    public C15982(EnumC7779 enumC7779, byte[] bArr, int i) {
+        super(enumC7779);
+        this.f51896 = (byte) (bArr[i + 1] & 255);
+        this.f51897 = (((long) bArr[i + 9]) << 56) | (((long) bArr[i + 2]) & 255) | ((((long) bArr[i + 3]) & 255) << 8) | ((((long) bArr[i + 4]) & 255) << 16) | ((((long) bArr[i + 5]) & 255) << 24) | ((((long) bArr[i + 6]) & 255) << 32) | ((((long) bArr[i + 7]) & 255) << 40) | ((((long) bArr[i + 8]) & 255) << 48);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m37962(int i) {
-        this.f51756.release(i);
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2086(C24166 c24166, int i) {
+        c24166.m54138(this.f78334.f25844);
+        c24166.m54138(this.f51896);
+        c24166.m54132(this.f51897);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ۧ */
+    public final EnumC7801 mo2083() {
+        return EnumC7801.Format51l;
+    }
+
+    @Override // l.InterfaceC10015
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo9996() {
+        return this.f51896 & 255;
+    }
+
+    @Override // l.InterfaceC21204
+    /* JADX INFO: renamed from: ᩴ */
+    public final long mo15898() {
+        return this.f51897;
     }
 }

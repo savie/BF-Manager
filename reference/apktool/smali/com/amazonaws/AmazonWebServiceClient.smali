@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static final ֨:Lcom/amazonaws/logging/Log;
+.field public static final ۫:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public final ۖ:Ljava/util/concurrent/CopyOnWriteArrayList;
-
 .field public ۙ:Lcom/amazonaws/http/AmazonHttpClient;
 
-.field public volatile ۚ:Ljava/lang/String;
+.field public volatile ۤ:Ljava/net/URI;
 
-.field public volatile ۨ:Ljava/net/URI;
+.field public volatile ܳ:Lcom/amazonaws/auth/Signer;
 
-.field public ܰ:Lcom/amazonaws/ClientConfiguration;
+.field public volatile ᩴ:Ljava/lang/String;
 
-.field public volatile ᩹:Lcom/amazonaws/auth/Signer;
+.field public ᩷:Lcom/amazonaws/ClientConfiguration;
+
+.field public final ᩸:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/AmazonWebServiceClient;->֨:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/AmazonWebServiceClient;->۫:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 149
-    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
     .line 150
     new-instance v0, Lcom/amazonaws/http/AmazonHttpClient;
@@ -59,7 +59,7 @@
 
     invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۖ:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩸:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method
@@ -84,16 +84,16 @@
     move-result-object p1
 
     .line 400
-    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
-    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->ۖ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->᩸()Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
     .line 402
-    invoke-static {v0, p1}, Lcom/amazonaws/auth/SignerFactory;->ܰ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
+    invoke-static {v0, p1}, Lcom/amazonaws/auth/SignerFactory;->᩷(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     .line 403
     :cond_0
-    invoke-static {v1, v0}, Lcom/amazonaws/auth/SignerFactory;->ۨ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
+    invoke-static {v1, v0}, Lcom/amazonaws/auth/SignerFactory;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
     throw p1
 .end method
 
-.method private ܰ()Ljava/lang/String;
+.method private ᩷()Ljava/lang/String;
     .locals 4
 
     .line 802
@@ -315,7 +315,7 @@
     .locals 2
 
     .line 771
-    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۚ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceClient;->ᩴ:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -326,19 +326,19 @@
 
     .line 773
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۚ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ᩴ:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     .line 774
-    invoke-direct {p0}, Lcom/amazonaws/AmazonWebServiceClient;->ܰ()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/amazonaws/AmazonWebServiceClient;->᩷()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۚ:Ljava/lang/String;
+    iput-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ᩴ:Ljava/lang/String;
 
     .line 775
-    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۚ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ᩴ:Ljava/lang/String;
 
     monitor-exit v0
 
@@ -362,7 +362,7 @@
     .line 779
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۚ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceClient;->ᩴ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -381,7 +381,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 687
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩷()Lcom/amazonaws/metrics/RequestMetricCollector;
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۘ()Lcom/amazonaws/metrics/RequestMetricCollector;
 
     return-void
 .end method
@@ -392,7 +392,7 @@
     .end annotation
 
     .line 737
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۟:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {p1, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
@@ -404,7 +404,7 @@
     invoke-virtual {p1}, Lcom/amazonaws/util/TimingInfo;->ۙ()V
 
     .line 698
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object p1
 
@@ -417,7 +417,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 704
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩷()Lcom/amazonaws/metrics/RequestMetricCollector;
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۘ()Lcom/amazonaws/metrics/RequestMetricCollector;
 
     move-result-object p1
 
@@ -444,9 +444,9 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iget-object v2, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
-    invoke-virtual {v2}, Lcom/amazonaws/ClientConfiguration;->ܰ()Lcom/amazonaws/Protocol;
+    invoke-virtual {v2}, Lcom/amazonaws/ClientConfiguration;->᩷()Lcom/amazonaws/Protocol;
 
     move-result-object v2
 
@@ -487,10 +487,10 @@
 
     .line 220
     :try_start_1
-    iput-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۨ:Ljava/net/URI;
+    iput-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۤ:Ljava/net/URI;
 
     .line 221
-    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩹:Lcom/amazonaws/auth/Signer;
+    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܳ:Lcom/amazonaws/auth/Signer;
 
     .line 222
     monitor-exit v0

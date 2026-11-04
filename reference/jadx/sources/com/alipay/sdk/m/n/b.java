@@ -16,7 +16,7 @@ public class b {
     public static final String k = "pa";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77911l = "android.app.intent.action.APP_EXCEPTION_OCCUR";
+    public static final String f82027l = "android.app.intent.action.APP_EXCEPTION_OCCUR";
     public static final String m = "alipaySdk";
     public static final String n = "bindServiceFail";
     public static final String o = "bindServiceTimeout";

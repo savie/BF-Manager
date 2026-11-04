@@ -1,71 +1,89 @@
 .class public final Ll/ܽۙܶ;
 .super Ljava/lang/Object;
-.source "0AV8"
+.source "461A"
 
-# interfaces
-.implements Ll/ۨܰܶ;
+
+# instance fields
+.field public ۙ:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 39
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    .line 26
+    iput v0, p0, Ll/ܽۙܶ;->ۙ:I
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 34
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 35
+    iput p1, p0, Ll/ܽۙܶ;->ۙ:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/᩻ۙܶ;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 26
-    iget-object p1, p1, Ll/᩻ۙܶ;->۬:Ll/۬ܰܶ;
+    const/4 v0, 0x0
 
-    .line 28
-    iget p3, p1, Ll/۬ܰܶ;->֡:I
+    const/4 v1, 0x1
 
-    sget-object p4, Ll/ۘܰܶ;->ۖۙ:Ll/ۘܰܶ;
+    .line 47
+    iget v2, p0, Ll/ܽۙܶ;->ۙ:I
 
-    iget p4, p4, Ll/ۘܰܶ;->ܺ:I
+    if-ltz v2, :cond_0
 
-    and-int/2addr p3, p4
+    .line 48
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz p3, :cond_1
+    move-result-object v2
 
-    .line 29
-    check-cast p2, Ljava/lang/Enum;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 31
-    invoke-virtual {p2}, Ljava/lang/Enum;->toString()Ljava/lang/String;
+    aput-object v2, v1, v0
 
-    move-result-object p2
+    const-string v0, "L%04x"
 
-    .line 32
-    iget p3, p1, Ll/۬ܰܶ;->֡:I
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    sget-object p4, Ll/ۘܰܶ;->ۙۙ:Ll/ۘܰܶ;
+    move-result-object v0
 
-    iget p4, p4, Ll/ۘܰܶ;->ܺ:I
+    return-object v0
 
-    and-int/2addr p3, p4
-
-    if-eqz p3, :cond_0
-
-    .line 35
-    invoke-virtual {p1, p2}, Ll/۬ܰܶ;->ܰ(Ljava/lang/String;)V
-
-    return-void
-
+    .line 50
     :cond_0
-    const/4 p3, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    .line 37
-    invoke-virtual {p1, p2, p3, p3}, Ll/۬ܰܶ;->ۙ(Ljava/lang/String;CZ)V
+    move-result v2
 
-    return-void
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 40
-    :cond_1
-    check-cast p2, Ljava/lang/Enum;
+    move-result-object v2
 
-    .line 41
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    new-array v1, v1, [Ljava/lang/Object;
 
-    move-result p2
+    aput-object v2, v1, v0
 
-    invoke-virtual {p1, p2}, Ll/۬ܰܶ;->writeInt(I)V
+    const-string v0, "L%08x"
 
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,13 +1,9 @@
 package l;
 
-import java.util.Locale;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ᩴۧ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O529 */
+/* JADX INFO: renamed from: l.ᩳ֡ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 473S */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18706 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m43240(Locale locale) {
-        return locale.getScript();
-    }
+public final class C18706 extends IOException {
 }

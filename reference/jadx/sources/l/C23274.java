@@ -1,188 +1,80 @@
 package l;
 
-import java.math.BigInteger;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.Principal;
-import java.security.Provider;
-import java.security.PublicKey;
-import java.security.SignatureException;
-import java.security.cert.CertificateException;
-import java.security.cert.CertificateExpiredException;
-import java.security.cert.CertificateNotYetValidException;
-import java.security.cert.X509Certificate;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
-import javax.security.auth.x500.X500Principal;
-
-/* JADX INFO: renamed from: l.᩺᩹ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: IB8N */
+/* JADX INFO: renamed from: l.᩹ۗᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: YAOM */
 /* JADX INFO: loaded from: classes.dex */
-public class C23274 extends X509Certificate {
-    public static final long serialVersionUID = 1;
+public final class C23274 implements InterfaceC5877 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final X509Certificate f75497;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18099 f75425;
 
-    public C23274(X509Certificate x509Certificate) {
-        this.f75497 = x509Certificate;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f75426;
+
+    @Override // l.InterfaceC5877
+    public final void afterFinish() {
     }
 
-    @Override // java.security.cert.X509Extension
-    public final Set getCriticalExtensionOIDs() {
-        return this.f75497.getCriticalExtensionOIDs();
+    @Override // l.InterfaceC5877
+    public final void beforeStart() {
     }
 
-    @Override // java.security.cert.X509Extension
-    public final byte[] getExtensionValue(String str) {
-        return this.f75497.getExtensionValue(str);
+    @Override // l.InterfaceC5877
+    public final boolean onError(Exception exc) {
+        return false;
     }
 
-    @Override // java.security.cert.X509Extension
-    public final Set getNonCriticalExtensionOIDs() {
-        return this.f75497.getNonCriticalExtensionOIDs();
+    @Override // l.InterfaceC5877
+    public final void onFinish() {
     }
 
-    @Override // java.security.cert.X509Extension
-    public final boolean hasUnsupportedCriticalExtension() {
-        return this.f75497.hasUnsupportedCriticalExtension();
+    @Override // l.InterfaceC5877
+    public final void onStart() {
     }
 
-    @Override // java.security.cert.X509Certificate
-    public final void checkValidity() throws CertificateNotYetValidException, CertificateExpiredException {
-        this.f75497.checkValidity();
+    public C23274(C18099 c18099, boolean z) {
+        this.f75425 = c18099;
+        this.f75426 = z;
     }
 
-    @Override // java.security.cert.X509Certificate
-    public final void checkValidity(Date date) throws CertificateNotYetValidException, CertificateExpiredException {
-        this.f75497.checkValidity(date);
+    @Override // l.InterfaceC5877
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo17103(String str) throws Throwable {
+        String strM20868;
+        String strM20869;
+        C18099 c18099 = this.f75425;
+        if (c18099 == null) {
+            return "???";
+        }
+        c18099.m42218();
+        String str2 = null;
+        for (C7658 c7658 : c18099.m42216()) {
+            if (this.f75426) {
+                strM20868 = c7658.m20869();
+                strM20869 = c7658.m20868();
+            } else {
+                strM20868 = c7658.m20868();
+                strM20869 = c7658.m20869();
+            }
+            if (strM20868.equalsIgnoreCase(str)) {
+                if (str2 == null) {
+                    str2 = strM20869;
+                }
+                if (strM20868.equals(str)) {
+                    return strM20869;
+                }
+            }
+        }
+        return str2 != null ? str2 : "???";
     }
 
-    @Override // java.security.cert.X509Certificate
-    public final int getVersion() {
-        return this.f75497.getVersion();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final BigInteger getSerialNumber() {
-        return this.f75497.getSerialNumber();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Principal getIssuerDN() {
-        return this.f75497.getIssuerDN();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Principal getSubjectDN() {
-        return this.f75497.getSubjectDN();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Date getNotBefore() {
-        return this.f75497.getNotBefore();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Date getNotAfter() {
-        return this.f75497.getNotAfter();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final byte[] getTBSCertificate() {
-        return this.f75497.getTBSCertificate();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final byte[] getSignature() {
-        return this.f75497.getSignature();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final String getSigAlgName() {
-        return this.f75497.getSigAlgName();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final String getSigAlgOID() {
-        return this.f75497.getSigAlgOID();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final byte[] getSigAlgParams() {
-        return this.f75497.getSigAlgParams();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final boolean[] getIssuerUniqueID() {
-        return this.f75497.getIssuerUniqueID();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final boolean[] getSubjectUniqueID() {
-        return this.f75497.getSubjectUniqueID();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final boolean[] getKeyUsage() {
-        return this.f75497.getKeyUsage();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final int getBasicConstraints() {
-        return this.f75497.getBasicConstraints();
-    }
-
-    @Override // java.security.cert.Certificate
-    public final void verify(PublicKey publicKey) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException, NoSuchProviderException {
-        this.f75497.verify(publicKey);
-    }
-
-    @Override // java.security.cert.Certificate
-    public final void verify(PublicKey publicKey, String str) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException, NoSuchProviderException {
-        this.f75497.verify(publicKey, str);
-    }
-
-    @Override // java.security.cert.Certificate
-    public final String toString() {
-        return this.f75497.toString();
-    }
-
-    @Override // java.security.cert.Certificate
-    public final PublicKey getPublicKey() {
-        return this.f75497.getPublicKey();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final X500Principal getIssuerX500Principal() {
-        return this.f75497.getIssuerX500Principal();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final X500Principal getSubjectX500Principal() {
-        return this.f75497.getSubjectX500Principal();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final List getExtendedKeyUsage() {
-        return this.f75497.getExtendedKeyUsage();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Collection getSubjectAlternativeNames() {
-        return this.f75497.getSubjectAlternativeNames();
-    }
-
-    @Override // java.security.cert.X509Certificate
-    public final Collection getIssuerAlternativeNames() {
-        return this.f75497.getIssuerAlternativeNames();
-    }
-
-    @Override // java.security.cert.X509Certificate, java.security.cert.Certificate
-    public final void verify(PublicKey publicKey, Provider provider) throws NoSuchAlgorithmException, SignatureException, InvalidKeyException, CertificateException {
-        this.f75497.verify(publicKey, provider);
+    @Override // l.InterfaceC5877
+    public final String getId() {
+        boolean z = this.f75426;
+        C18099 c18099 = this.f75425;
+        if (c18099 == null) {
+            return ":null:" + z;
+        }
+        return c18099.m42221() + ":" + z;
     }
 }

@@ -1,72 +1,84 @@
 .class public final Ll/ۤۖ;
 .super Ljava/lang/Object;
-.source "TB8W"
+.source "15CD"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public ۙ:I
+
+.field public ᩷:I
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 4
+.method public final ۙ()I
+    .locals 2
 
-    const-string v0, "inParcel"
+    .line 92
+    iget v0, p0, Ll/ۤۖ;->᩷:I
 
-    .line 0
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    iget v1, p0, Ll/ۤۖ;->ۙ:I
 
-    .line 168
-    new-instance v0, Ll/۟ۖ;
+    or-int/2addr v0, v1
 
-    .line 54
-    const-class v1, Landroid/content/IntentSender;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ll/ܰ֡۠;->ۙ(Ljava/lang/Object;)V
-
-    check-cast v1, Landroid/content/IntentSender;
-
-    .line 55
-    const-class v2, Landroid/content/Intent;
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/content/Intent;
-
-    .line 56
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v3
-
-    .line 57
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    .line 53
-    invoke-direct {v0, v1, v2, v3, p1}, Ll/۟ۖ;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
-
-    return-object v0
+    return v0
 .end method
 
-.method public final newArray(I)[Ljava/lang/Object;
+.method public final ۙ(I)V
     .locals 0
 
-    .line 172
-    new-array p1, p1, [Ll/۟ۖ;
+    .line 79
+    iput p1, p0, Ll/ۤۖ;->᩷:I
 
-    return-object p1
+    return-void
+.end method
+
+.method public final ۙ(II)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_0
+
+    .line 77
+    iput p1, p0, Ll/ۤۖ;->ۙ:I
+
+    return-void
+
+    .line 79
+    :cond_0
+    iput p1, p0, Ll/ۤۖ;->᩷:I
+
+    return-void
+.end method
+
+.method public final ᩷()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 117
+    iput v0, p0, Ll/ۤۖ;->᩷:I
+
+    return-void
+.end method
+
+.method public final ᩷(I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ne p1, v0, :cond_0
+
+    .line 115
+    iput v1, p0, Ll/ۤۖ;->ۙ:I
+
+    return-void
+
+    .line 117
+    :cond_0
+    iput v1, p0, Ll/ۤۖ;->᩷:I
+
+    return-void
 .end method

@@ -1,319 +1,681 @@
 .class public final Ll/۬۟ۚ;
-.super Ll/֡۫ܰ;
-.source "313O"
+.super Ll/ᩳܳۚ;
+.source "S6XE"
 
 
 # instance fields
-.field public ۙ:Ljava/lang/String;
+.field public ۙ:Lbin/mt/json/JSONObject;
 
-.field public final synthetic ۨ:Ll/ᩳ۟ۚ;
+.field public final ۤ:Ll/֡ܿۚ;
 
-.field public ܰ:Ljava/util/List;
+.field public ᩷:Lbin/mt/json/JSONObject;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳ۟ۚ;)V
+.method public constructor <init>(Ll/֡ܿۚ;)V
     .locals 0
 
-    .line 526
-    iput-object p1, p0, Ll/۬۟ۚ;->ۨ:Ll/ᩳ۟ۚ;
+    .line 47
+    invoke-direct {p0}, Ll/ᩳܳۚ;-><init>()V
 
-    invoke-direct {p0}, Ll/֡۫ܰ;-><init>()V
-
-    .line 528
-    invoke-static {p1}, Ll/ᩳ۟ۚ;->ۨ(Ll/ᩳ۟ۚ;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/۬۟ۚ;->ܰ:Ljava/util/List;
+    .line 48
+    iput-object p1, p0, Ll/۬۟ۚ;->ۤ:Ll/֡ܿۚ;
 
     return-void
+.end method
+
+.method public static ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .line 42
+    invoke-virtual {p0, p1}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 43
+    invoke-virtual {p0}, Lbin/mt/json/JSONValue;->isString()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 46
+    invoke-virtual {p0}, Lbin/mt/json/JSONValue;->asString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string v0, "Invalid string argument"
+
+    .line 44
+    invoke-static {p0, v0, p1}, Ll/۬۟ۚ;->ۙ(Lbin/mt/json/JSONValue;Ljava/lang/String;Ljava/lang/String;)Ll/ۢܳۚ;
+
+    move-result-object p0
+
+    throw p0
+.end method
+
+.method public static ۙ(Lbin/mt/json/JSONValue;Ljava/lang/String;Ljava/lang/String;)Ll/ۢܳۚ;
+    .locals 5
+
+    .line 213
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
+
+    move-result-object v0
+
+    const-string v1, "targetVersion"
+
+    const-string v2, "missing"
+
+    const-string v3, "path"
+
+    const-string v4, "file.bin"
+
+    .line 0
+    invoke-static {v3, v4, v1, v2}, Ll/᩷ܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v2, "hex"
+
+    const-string v3, "00FF"
+
+    .line 216
+    invoke-virtual {v1, v2, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    .line 213
+    invoke-static {p1, p2, p0, v0, v1}, Ll/ۢܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Lbin/mt/json/JSONValue;Lbin/mt/json/JSONArray;Lbin/mt/json/JSONObject;)Ll/ۢܳۚ;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final getItemCount()I
-    .locals 1
+.method public final ۙ()Lbin/mt/json/JSONObject;
+    .locals 4
 
-    .line 572
-    iget-object v0, p0, Ll/۬۟ۚ;->ܰ:Ljava/util/List;
+    const-string v0, "destructiveHint"
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/4 v1, 0x1
 
-    move-result v0
+    const-string v2, "readOnlyHint"
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method public final onBindViewHolder(Ll/۫ܿܰ;I)V
-    .locals 3
-
-    .line 526
-    check-cast p1, Ll/᩸۟ۚ;
-
-    .line 564
-    iget-object v0, p0, Ll/۬۟ۚ;->ܰ:Ljava/util/List;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ll/᩺۟ۚ;
-
-    .line 565
-    iput-object p2, p1, Ll/᩸۟ۚ;->ܺ:Ll/᩺۟ۚ;
-
-    .line 566
-    iget-object v0, p1, Ll/᩸۟ۚ;->ܽ:Landroid/widget/TextView;
-
-    iget-object v1, p2, Ll/᩺۟ۚ;->ۖ:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 567
-    iget-object p1, p1, Ll/᩸۟ۚ;->᩶:Landroid/widget/ImageView;
-
-    .line 600
-    iget-object v0, p2, Ll/᩺۟ۚ;->ۨ:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    .line 601
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-
-    .line 603
-    :cond_0
-    iget-object v0, p2, Ll/᩺۟ۚ;->ۙ:Ll/۫ۤۚ;
-
-    invoke-virtual {v0}, Ll/۫ۤۚ;->ۖ()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 604
-    invoke-static {}, Ll/ᩳ۟ۚ;->ۙ()Ll/ۤ۠;
+    .line 0
+    invoke-static {v2, v0, v3, v1}, Ll/᩺᩸ۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;ZZ)Lbin/mt/json/JSONObject;
 
     move-result-object v0
-
-    monitor-enter v0
-
-    .line 605
-    :try_start_0
-    invoke-static {}, Ll/ᩳ۟ۚ;->ۙ()Ll/ۤ۠;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ll/ۤ۠;->ۙ(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/Drawable;
-
-    iput-object v1, p2, Ll/᩺۟ۚ;->ۨ:Landroid/graphics/drawable/Drawable;
-
-    .line 606
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_1
-
-    .line 608
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-
-    .line 611
-    :cond_1
-    iget-object v0, p2, Ll/᩺۟ۚ;->ۙ:Ll/۫ۤۚ;
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 612
-    iget-object p2, p2, Ll/᩺۟ۚ;->᩹:Ll/ۜ۟ۚ;
-
-    iget-boolean v0, p2, Ll/ۜ۟ۚ;->ܺ:Z
-
-    if-eqz v0, :cond_2
-
-    return-void
-
-    :cond_2
-    const/4 v0, 0x1
-
-    .line 614
-    iput-boolean v0, p2, Ll/ۜ۟ۚ;->ܺ:Z
-
-    .line 615
-    iput-object p1, p2, Ll/ۜ۟ۚ;->᩶:Landroid/widget/ImageView;
-
-    .line 616
-    sget-object p1, Ll/ۙܳ᩺;->ܰ:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p1, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    .line 606
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final onCreateViewHolder(Landroid/view/ViewGroup;I)Ll/۫ܿܰ;
-    .locals 3
-
-    .line 558
-    iget-object p2, p0, Ll/۬۟ۚ;->ۨ:Ll/ᩳ۟ۚ;
-
-    invoke-static {p2}, Ll/ᩳ۟ۚ;->ܰ(Ll/ᩳ۟ۚ;)Ll/۫ܶۘ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0d00f0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    .line 559
-    new-instance v0, Ll/᩸۟ۚ;
-
-    invoke-direct {v0, p2, p1}, Ll/᩸۟ۚ;-><init>(Ll/ᩳ۟ۚ;Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public final ۙ()V
-    .locals 5
+.method public final ۙ(Ll/ۢܳۚ;)Lbin/mt/json/JSONObject;
+    .locals 1
 
-    .line 537
-    iget-object v0, p0, Ll/۬۟ۚ;->ۙ:Ljava/lang/String;
+    const-string v0, "mt_file_write_bytes"
 
-    .line 538
-    iget-object v1, p0, Ll/۬۟ۚ;->ۨ:Ll/ᩳ۟ۚ;
+    .line 98
+    invoke-static {v0, p1}, Ll/ۚۤ᩹;->ۙ(Ljava/lang/String;Ll/ۢܳۚ;)Lbin/mt/json/JSONObject;
 
-    if-eqz v0, :cond_4
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    return-object p1
+.end method
 
-    move-result v2
+.method public final ۙ(Lbin/mt/json/JSONObject;)Ll/֨ܳۚ;
+    .locals 12
 
-    if-eqz v2, :cond_0
+    .line 202
+    new-instance v0, Ll/ۜ۟ۚ;
 
-    goto :goto_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 543
-    :cond_0
-    new-instance v2, Ljava/util/ArrayList;
+    const-string v1, "path"
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    const-string v2, "targetVersion"
 
-    .line 544
-    invoke-static {v1}, Ll/ᩳ۟ۚ;->ۨ(Ll/ᩳ۟ۚ;)Ljava/util/List;
+    const-string v3, "hex"
 
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/᩺۟ۚ;
-
-    .line 545
-    iget-object v4, v3, Ll/᩺۟ۚ;->ۖ:Ljava/lang/String;
-
-    invoke-static {v4, v0}, Ll/ۜܶ᩵;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 546
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 547
-    :cond_2
-    iget-object v4, v3, Ll/᩺۟ۚ;->ۙ:Ll/۫ۤۚ;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Ll/۫ۤۚ;->ۚ()Ljava/lang/String;
+    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v4, v0}, Ll/ۜܶ᩵;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    const-string v5, "Invalid file byte write argument"
 
-    move-result v4
+    invoke-static {p1, v0, v5, v4}, Ll/ۢ֡ۚ;->ۙ(Lbin/mt/json/JSONObject;Ll/ᩳ֡ۚ;Ljava/lang/String;[Ljava/lang/String;)V
 
-    if-eqz v4, :cond_1
-
-    .line 548
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 551
-    :cond_3
-    iput-object v2, p0, Ll/۬۟ۚ;->ܰ:Ljava/util/List;
-
-    .line 552
-    invoke-virtual {p0}, Ll/֡۫ܰ;->notifyDataSetChanged()V
-
-    return-void
-
-    .line 539
-    :cond_4
-    :goto_1
-    invoke-static {v1}, Ll/ᩳ۟ۚ;->ۨ(Ll/ᩳ۟ۚ;)Ljava/util/List;
+    .line 105
+    invoke-static {p1, v1}, Ll/۬۟ۚ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Ll/۬۟ۚ;->ܰ:Ljava/util/List;
+    .line 106
+    invoke-static {p1, v2}, Ll/۬۟ۚ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 540
-    invoke-virtual {p0}, Ll/֡۫ܰ;->notifyDataSetChanged()V
+    move-result-object v4
 
-    return-void
+    .line 107
+    invoke-static {p1, v3}, Ll/۬۟ۚ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 108
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    const/high16 v5, 0x200000
+
+    const-string v6, "backendReason"
+
+    const-string v7, "parse_hex"
+
+    const-string v8, "operation"
+
+    const/4 v9, 0x0
+
+    const-string v10, "warning"
+
+    const-string v11, "FILE_INVALID_HEX"
+
+    if-gt v3, v5, :cond_0
+
+    .line 113
+    :try_start_0
+    invoke-static {p1}, Ll/ܺܽܺ;->ۙ(Ljava/lang/String;)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 117
+    new-instance v3, Ll/۬ۜ᩸;
+
+    invoke-direct {v3, p1}, Ll/۬ۜ᩸;-><init>(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ll/۬۟ۚ;->ۤ:Ll/֡ܿۚ;
+
+    invoke-virtual {p1, v0, v4, v3}, Ll/֡ܿۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ll/۫ܿۚ;)Ll/᩵ܿۚ;
+
+    move-result-object p1
+
+    iget-object v0, p1, Ll/᩵ܿۚ;->᩸:Ljava/lang/String;
+
+    iget-object v3, p1, Ll/᩵ܿۚ;->᩷:Ljava/lang/String;
+
+    .line 119
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
+
+    move-result-object v4
+
+    .line 0
+    invoke-static {v1, v3, v2, v0}, Ll/᩷ܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v5
+
+    const-string v6, "byteOffset"
+
+    const-wide/16 v7, 0x0
+
+    .line 198
+    invoke-virtual {v5, v6, v7, v8}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;J)Lbin/mt/json/JSONObject;
+
+    move-result-object v5
+
+    const-string v6, "maxBytes"
+
+    const/16 v7, 0x100
+
+    invoke-virtual {v5, v6, v7}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object v5
+
+    const-string v6, "mt_file_read_bytes"
+
+    const-string v7, "inspect"
+
+    const-string v8, "Read back the beginning of the written file using its new targetVersion."
+
+    .line 196
+    invoke-static {v5, v6, v7, v8}, Ll/ۖܳۚ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v5
+
+    .line 119
+    invoke-virtual {v4, v5}, Lbin/mt/json/JSONArray;->add(Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONArray;
+
+    move-result-object v4
+
+    .line 123
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
+
+    move-result-object v5
+
+    .line 124
+    invoke-virtual {v5, v1, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v3, "changed"
+
+    iget-boolean v5, p1, Ll/᩵ܿۚ;->ۙ:Z
+
+    .line 125
+    invoke-virtual {v1, v3, v5}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Z)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    new-instance v3, Lbin/mt/json/JSONArray;
+
+    iget-object v5, p1, Ll/᩵ܿۚ;->ᩴ:Lbin/mt/json/JSONArray;
+
+    invoke-direct {v3, v5}, Lbin/mt/json/JSONArray;-><init>(Lbin/mt/json/JSONArray;)V
+
+    const-string v5, "warnings"
+
+    .line 126
+    invoke-virtual {v1, v5, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v3, "size"
+
+    iget-wide v5, p1, Ll/᩵ܿۚ;->ۤ:J
+
+    .line 127
+    invoke-virtual {v1, v3, v5, v6}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;J)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    .line 128
+    invoke-virtual {p1, v2, v0}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    .line 129
+    new-instance v0, Ll/֨ܳۚ;
+
+    invoke-static {p1, v4}, Ll/ܳۧۤ;->ۙ(Lbin/mt/json/JSONObject;Lbin/mt/json/JSONArray;)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ll/֨ܳۚ;-><init>(Lbin/mt/json/JSONObject;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception p1
+
+    .line 115
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "invalid_hex"
+
+    .line 0
+    invoke-static {v8, v7, v6, v0}, Ll/᩷ܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    .line 133
+    invoke-static {v11, p1, v10, v9, v0}, Ll/ۢܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbin/mt/json/JSONArray;Lbin/mt/json/JSONObject;)Ll/ۢܳۚ;
+
+    move-result-object p1
+
+    .line 115
+    throw p1
+
+    .line 109
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    const-wide/16 v2, 0x2
+
+    div-long/2addr v0, v2
+
+    const-string p1, "hex_too_large"
+
+    .line 0
+    invoke-static {v8, v7, v6, p1}, Ll/᩷ܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    const-string v2, "limit"
+
+    const/high16 v3, 0x100000
+
+    .line 145
+    invoke-virtual {p1, v2, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    const-string v2, "actual"
+
+    .line 146
+    invoke-virtual {p1, v2, v0, v1}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;J)Lbin/mt/json/JSONObject;
+
+    move-result-object p1
+
+    const-string v0, "Hex input exceeds the 1048576-byte write limit."
+
+    .line 140
+    invoke-static {v11, v0, v10, v9, p1}, Ll/ۢܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbin/mt/json/JSONArray;Lbin/mt/json/JSONObject;)Ll/ۢܳۚ;
+
+    move-result-object p1
+
+    .line 109
+    throw p1
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
-    .locals 0
+.method public final ۤ()Lbin/mt/json/JSONObject;
+    .locals 5
 
-    .line 531
-    iput-object p1, p0, Ll/۬۟ۚ;->ۙ:Ljava/lang/String;
+    .line 78
+    iget-object v0, p0, Ll/۬۟ۚ;->ۙ:Lbin/mt/json/JSONObject;
 
-    .line 532
-    invoke-virtual {p0}, Ll/۬۟ۚ;->ۙ()V
+    if-nez v0, :cond_0
 
-    return-void
+    .line 150
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "string"
+
+    const-string v2, "Absolute path or path relative to the Home captured at call start."
+
+    .line 96
+    invoke-static {v1, v2}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "path"
+
+    .line 151
+    invoke-virtual {v0, v3, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v2, "Use missing for creation, otherwise the current 16-digit lowercase hex version token."
+
+    .line 96
+    invoke-static {v1, v2}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "targetVersion"
+
+    .line 153
+    invoke-virtual {v0, v3, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v2, "hex"
+
+    const-string v3, "Zero through 1048576 raw bytes as even-length hexadecimal without separators."
+
+    const-string v4, "Arguments for mt_file_write_bytes."
+
+    .line 0
+    invoke-static {v0, v1, v3, v2, v4}, Ll/᩸ۨۧ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    .line 79
+    iput-object v0, p0, Ll/۬۟ۚ;->ۙ:Lbin/mt/json/JSONObject;
+
+    .line 81
+    :cond_0
+    iget-object v0, p0, Ll/۬۟ۚ;->ۙ:Lbin/mt/json/JSONObject;
+
+    return-object v0
+.end method
+
+.method public final ܳ()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Write File Bytes"
+
+    return-object v0
+.end method
+
+.method public final ᩴ()Lbin/mt/json/JSONObject;
+    .locals 8
+
+    .line 86
+    iget-object v0, p0, Ll/۬۟ۚ;->᩷:Lbin/mt/json/JSONObject;
+
+    if-nez v0, :cond_0
+
+    .line 160
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "Normalized absolute target path fixed for this call."
+
+    const-string v2, "string"
+
+    .line 96
+    invoke-static {v2, v1}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v3, "path"
+
+    .line 161
+    invoke-virtual {v0, v3, v1}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "Whether target content changed."
+
+    const-string v4, "boolean"
+
+    .line 124
+    invoke-static {v4, v1}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v4, "changed"
+
+    .line 163
+    invoke-virtual {v0, v4, v1}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "description"
+
+    const-string v4, "Non-fatal metadata, cleanup, or notification degradation."
+
+    const-string v5, "type"
+
+    const-string v6, "array"
+
+    .line 0
+    invoke-static {v5, v6, v1, v4}, Ll/᩷ܳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v4, "One warning message."
+
+    .line 96
+    invoke-static {v2, v4}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v4
+
+    const-string v5, "items"
+
+    .line 175
+    invoke-virtual {v1, v5, v4}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v4, "warnings"
+
+    .line 165
+    invoke-virtual {v0, v4, v1}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "Final raw byte size."
+
+    const-string v4, "integer"
+
+    .line 110
+    invoke-static {v4, v1}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v5, "size"
+
+    .line 166
+    invoke-virtual {v0, v5, v1}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "Final whole-file version token of 16 lowercase hex digits."
+
+    const-string v5, "targetVersion"
+
+    const-string v6, "Successful complete binary file write."
+
+    .line 0
+    invoke-static {v0, v2, v1, v5, v6}, Ll/᩸ۨۧ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "mt_file_write_bytes"
+
+    .line 91
+    invoke-static {v1}, Ll/ۚۤ᩹;->᩷(Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    .line 186
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
+
+    move-result-object v6
+
+    const-string v7, "Normalized absolute file path."
+
+    .line 96
+    invoke-static {v2, v7}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v7
+
+    .line 187
+    invoke-virtual {v6, v3, v7}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v3
+
+    const-string v6, "Whole-file targetVersion returned by this write."
+
+    .line 96
+    invoke-static {v2, v6}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    .line 188
+    invoke-virtual {v3, v5, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "Zero-based byte offset."
+
+    .line 110
+    invoke-static {v4, v3}, Ll/ۤܳۚ;->ۤ(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v3
+
+    const-string v5, "byteOffset"
+
+    .line 190
+    invoke-virtual {v2, v5, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "maxBytes"
+
+    const-string v5, "See mt_file_read_bytes."
+
+    const-string v6, "Arguments for mt_file_read_bytes."
+
+    .line 0
+    invoke-static {v2, v4, v5, v3, v6}, Ll/᩸ۨۧ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "mt_file_read_bytes"
+
+    const-string v4, "inspect"
+
+    .line 181
+    invoke-static {v2, v3, v4}, Ll/ۤܳۚ;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Lbin/mt/json/JSONObject;
+
+    const/4 v4, 0x0
+
+    aput-object v2, v3, v4
+
+    const-string v2, "Success returns one read_bytes verification action."
+
+    .line 179
+    invoke-static {v2, v3}, Ll/ۤܳۚ;->ۙ(Ljava/lang/String;[Lbin/mt/json/JSONObject;)Lbin/mt/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "Result for mt_file_write_bytes."
+
+    .line 89
+    invoke-static {v3, v0, v1, v2}, Ll/ۤܳۚ;->ۙ(Ljava/lang/String;Lbin/mt/json/JSONObject;Lbin/mt/json/JSONObject;Lbin/mt/json/JSONObject;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/۬۟ۚ;->᩷:Lbin/mt/json/JSONObject;
+
+    .line 93
+    :cond_0
+    iget-object v0, p0, Ll/۬۟ۚ;->᩷:Lbin/mt/json/JSONObject;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Create or fully replace one regular local file from raw hexadecimal bytes. Use targetVersion=\"missing\" only to create a missing file; otherwise copy the current targetVersion from mt_file_stat or mt_file_read_bytes. hex is case-insensitive, contains no separators, may be empty, and is limited to 1048576 raw bytes. Paths may be absolute or relative to the Home captured at call start. Inspect the reported state after a failed write."
+
+    return-object v0
+.end method
+
+.method public final ᩸()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "mt_file_write_bytes"
+
+    return-object v0
 .end method

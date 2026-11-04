@@ -1,129 +1,317 @@
-.class public final enum Ll/ۖۡܶ;
-.super Ljava/lang/Enum;
-.source "SB7W"
+.class public final Ll/ۖۡܶ;
+.super Ljava/lang/Object;
+.source "48CR"
 
 
-# static fields
-.field public static final enum ֡:Ll/ۖۡܶ;
+# instance fields
+.field public ۙ:[Ll/֨ۡܶ;
 
-.field public static final synthetic ܺ:[Ll/ۖۡܶ;
+.field public ۤ:Ll/ᩴ֨ܶ;
 
-.field public static final enum ܽ:Ll/ۖۡܶ;
-
-.field public static final enum ᩶:Ll/ۖۡܶ;
+.field public ᩷:Ll/᩵ۡܶ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 3
 
-    .line 1260
-    new-instance v0, Ll/ۖۡܶ;
+    .line 258
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "auto"
+    const/16 v0, 0x10
 
-    const/4 v2, 0x0
+    new-array v0, v0, [Ll/֨ۡܶ;
 
-    invoke-direct {v0, v1, v2}, Ll/ۖۡܶ;-><init>(Ljava/lang/String;I)V
+    .line 259
+    iput-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
 
-    sput-object v0, Ll/ۖۡܶ;->᩶:Ll/ۖۡܶ;
+    const/4 v0, 0x0
 
-    .line 1261
-    new-instance v0, Ll/ۖۡܶ;
+    .line 260
+    :goto_0
+    iget-object v1, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
 
-    const-string v1, "optimizeQuality"
+    array-length v2, v1
 
-    const/4 v2, 0x1
+    if-ge v0, v2, :cond_0
 
-    invoke-direct {v0, v1, v2}, Ll/ۖۡܶ;-><init>(Ljava/lang/String;I)V
+    .line 261
+    new-instance v2, Ll/֨ۡܶ;
 
-    sput-object v0, Ll/ۖۡܶ;->֡:Ll/ۖۡܶ;
+    invoke-direct {v2, p0, v0}, Ll/֨ۡܶ;-><init>(Ll/ۖۡܶ;I)V
 
-    .line 1262
-    new-instance v0, Ll/ۖۡܶ;
+    aput-object v2, v1, v0
 
-    const-string v1, "optimizeSpeed"
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 v2, 0x2
+    goto :goto_0
 
-    invoke-direct {v0, v1, v2}, Ll/ۖۡܶ;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll/ۖۡܶ;->ܽ:Ll/ۖۡܶ;
-
-    .line 1258
-    invoke-static {}, Ll/ۖۡܶ;->ۙ()[Ll/ۖۡܶ;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۖۡܶ;->ܺ:[Ll/ۖۡܶ;
-
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public static synthetic ۙ(Ll/ۖۡܶ;)Ll/ᩴ֨ܶ;
     .locals 0
 
-    .line 1258
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll/ۖۡܶ;
-    .locals 1
-
-    .line 1258
-    const-class v0, Ll/ۖۡܶ;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/ۖۡܶ;
+    .line 52
+    iget-object p0, p0, Ll/ۖۡܶ;->ۤ:Ll/ᩴ֨ܶ;
 
     return-object p0
 .end method
 
-.method public static values()[Ll/ۖۡܶ;
+.method public static synthetic ᩷(Ll/ۖۡܶ;)Ll/᩵ۡܶ;
+    .locals 0
+
+    .line 52
+    iget-object p0, p0, Ll/ۖۡܶ;->᩷:Ll/᩵ۡܶ;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final ۙ()Ll/ۙۡܶ;
     .locals 1
 
-    .line 1258
-    sget-object v0, Ll/ۖۡܶ;->ܺ:[Ll/ۖۡܶ;
+    .line 423
+    iget-object v0, p0, Ll/ۖۡܶ;->᩷:Ll/᩵ۡܶ;
 
-    invoke-virtual {v0}, [Ll/ۖۡܶ;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/ۖۡܶ;
+    iget-object v0, v0, Ll/᩵ۡܶ;->ۚ:Ll/ۙۡܶ;
 
     return-object v0
 .end method
 
-.method public static synthetic ۙ()[Ll/ۖۡܶ;
+.method public final ۙ(ID)V
+    .locals 1
+
+    .line 378
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 379
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->ۙ(D)V
+
+    return-void
+.end method
+
+.method public final ۙ(II)V
+    .locals 1
+
+    .line 289
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 290
+    invoke-virtual {p1, p2}, Ll/֨ۡܶ;->᩷(I)V
+
+    return-void
+.end method
+
+.method public final ۙ(III)V
+    .locals 0
+
+    .line 313
+    iget-object p3, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, p3, p1
+
+    .line 314
+    invoke-virtual {p1, p2}, Ll/֨ۡܶ;->ۙ(I)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/ܶ֨ܶ;Ll/ۤۖܶ;)V
     .locals 3
 
-    const/4 v0, 0x3
+    .line 276
+    iput-object p1, p0, Ll/ۖۡܶ;->ۤ:Ll/ᩴ֨ܶ;
 
-    new-array v0, v0, [Ll/ۖۡܶ;
+    .line 277
+    iget-object v0, p0, Ll/ۖۡܶ;->᩷:Ll/᩵ۡܶ;
 
-    .line 1258
-    sget-object v1, Ll/ۖۡܶ;->᩶:Ll/ۖۡܶ;
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x0
+    .line 278
+    new-instance v0, Ll/᩵ۡܶ;
 
-    aput-object v1, v0, v2
+    .line 38
+    invoke-direct {v0}, Ll/ۘۡܶ;-><init>()V
 
-    sget-object v1, Ll/ۖۡܶ;->֡:Ll/ۖۡܶ;
+    .line 39
+    new-instance v1, Ll/۬֨ܶ;
 
-    const/4 v2, 0x1
+    const-string v2, "InputA"
 
-    aput-object v1, v0, v2
+    invoke-direct {v1, v2}, Ll/۬֨ܶ;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Ll/ۖۡܶ;->ܽ:Ll/ۖۡܶ;
+    iput-object v1, v0, Ll/᩵ۡܶ;->ܳ:Ll/۬֨ܶ;
 
-    const/4 v2, 0x2
+    invoke-virtual {v0, v1}, Ll/ۘۡܶ;->ۙ(Ll/᩷ۡܶ;)V
 
-    aput-object v1, v0, v2
+    .line 40
+    new-instance v1, Ll/۬֨ܶ;
 
-    return-object v0
+    const-string v2, "InputB"
+
+    invoke-direct {v1, v2}, Ll/۬֨ܶ;-><init>(Ljava/lang/String;)V
+
+    iput-object v1, v0, Ll/᩵ۡܶ;->۫:Ll/۬֨ܶ;
+
+    invoke-virtual {v0, v1}, Ll/ۘۡܶ;->ۙ(Ll/᩷ۡܶ;)V
+
+    .line 41
+    new-instance v1, Ll/ۙۡܶ;
+
+    const-string v2, "OutputB"
+
+    invoke-direct {v1, v2}, Ll/ۙۡܶ;-><init>(Ljava/lang/String;)V
+
+    iput-object v1, v0, Ll/᩵ۡܶ;->ۚ:Ll/ۙۡܶ;
+
+    invoke-virtual {v0, v1}, Ll/ۘۡܶ;->ۙ(Ll/᩷ۡܶ;)V
+
+    .line 278
+    iput-object v0, p0, Ll/ۖۡܶ;->᩷:Ll/᩵ۡܶ;
+
+    invoke-virtual {p1, v0}, Ll/ܶ֨ܶ;->ۙ(Ll/ۘۡܶ;)V
+
+    .line 281
+    :cond_0
+    new-instance p1, Ll/ۡۡܶ;
+
+    const/16 v0, 0x40
+
+    invoke-direct {p1, p0, v0, p2}, Ll/ۡۡܶ;-><init>(Ll/ۖۡܶ;ILl/ۤۖܶ;)V
+
+    const/4 p2, 0x0
+
+    :goto_0
+    const/16 v0, 0x10
+
+    if-ge p2, v0, :cond_1
+
+    .line 284
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object v0, v0, p2
+
+    invoke-virtual {v0, p1}, Ll/֨ۡܶ;->ۙ(Ll/ۡۡܶ;)V
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final ۤ(ID)V
+    .locals 1
+
+    .line 373
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 374
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->ۤ(D)V
+
+    return-void
+.end method
+
+.method public final ۫(ID)V
+    .locals 1
+
+    .line 404
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 405
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->۫(D)V
+
+    return-void
+.end method
+
+.method public final ܳ(ID)V
+    .locals 1
+
+    .line 388
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 389
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->ܳ(D)V
+
+    return-void
+.end method
+
+.method public final ᩴ(ID)V
+    .locals 1
+
+    .line 393
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 394
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->ᩴ(D)V
+
+    return-void
+.end method
+
+.method public final ᩷(ID)V
+    .locals 1
+
+    .line 415
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 416
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->᩷(D)V
+
+    return-void
+.end method
+
+.method public final ᩷(III)V
+    .locals 4
+
+    int-to-double v0, p3
+
+    const-wide v2, 0x3f80204081020408L    # 0.007874015748031496
+
+    mul-double v0, v0, v2
+
+    .line 361
+    iget-object p3, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, p3, p1
+
+    const-wide/high16 v2, 0x3fd0000000000000L    # 0.25
+
+    mul-double v0, v0, v2
+
+    .line 362
+    invoke-virtual {p1, p2, v0, v1}, Ll/֨ۡܶ;->ۙ(ID)V
+
+    return-void
+.end method
+
+.method public final ᩸(ID)V
+    .locals 1
+
+    .line 383
+    iget-object v0, p0, Ll/ۖۡܶ;->ۙ:[Ll/֨ۡܶ;
+
+    aget-object p1, v0, p1
+
+    .line 384
+    invoke-virtual {p1, p2, p3}, Ll/֨ۡܶ;->᩸(D)V
+
+    return-void
 .end method

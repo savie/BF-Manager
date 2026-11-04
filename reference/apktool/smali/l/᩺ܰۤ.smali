@@ -1,81 +1,44 @@
 .class public final synthetic Ll/᩺ܰۤ;
 .super Ljava/lang/Object;
-.source "P7DJ"
+.source "D77D"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
-
-
-# instance fields
-.field public final synthetic ֡:I
-
-.field public final synthetic ܺ:Ll/ܽܿۡ;
-
-.field public final synthetic ᩶:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ܽܿۡ;II)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩺ܰۤ;->ܺ:Ll/ܽܿۡ;
-
-    iput p2, p0, Ll/᩺ܰۤ;->᩶:I
-
-    iput p3, p0, Ll/᩺ܰۤ;->֡:I
-
-    return-void
-.end method
+.implements Ljava/util/function/Function;
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 215
-    iget-object v0, p0, Ll/᩺ܰۤ;->ܺ:Ll/ܽܿۡ;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    iget v1, p0, Ll/᩺ܰۤ;->᩶:I
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 2
+    check-cast p1, Ll/ۢۘۤ;
 
-    move-result-object v1
+    .line 94
+    new-instance p1, Ljava/util/ArrayList;
 
-    iget v2, p0, Ll/᩺ܰۤ;->֡:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object p1
+.end method
 
-    move-result-object v2
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    const/4 v3, 0x3
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result-object p1
 
-    const/4 v4, 0x0
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v1, v3, v0
-
-    const/4 v0, 0x2
-
-    aput-object v2, v3, v0
-
-    const-string v0, "CodeAttr:  %s: attrLength=%d num=%d"
-
-    .line 19
-    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -19,7 +19,7 @@
     .locals 1
 
     .line 983
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {p1}, Landroid/view/View;->getPaddingStart()I
@@ -63,7 +63,7 @@
     move-result v0
 
     .line 976
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2235
     invoke-virtual {p1}, Landroid/view/View;->getPaddingEnd()I

@@ -3,8 +3,8 @@ package org.bouncycastle.asn1;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import l.C12441;
-import l.C9013;
+import l.C11958;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
@@ -49,10 +49,10 @@ public abstract class ASN1OctetString extends ASN1Primitive implements ASN1Octet
             try {
                 return (ASN1OctetString) TYPE.fromByteArray((byte[]) obj);
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct OCTET STRING from byte[]: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct OCTET STRING from byte[]: ")));
             }
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 
     public static ASN1OctetString getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

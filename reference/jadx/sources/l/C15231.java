@@ -1,10 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ۫۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 075F */
+import android.os.Handler;
+
+/* JADX INFO: renamed from: l.ܳۡۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 38V0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15231 {
+public final class C15231 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21580 f49659;
+    public Handler f49699;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Object f49700;
 }

@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PBES2Parameters extends ASN1Object implements PKCSObjectIdentifiers {
     public KeyDerivationFunc func;
     public EncryptionScheme scheme;

@@ -1,82 +1,94 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.List;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.֨ۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1077 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List f4932;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f4933;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f4934;
+/* JADX INFO: renamed from: l.֨ۡ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: S24 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1077 implements InterfaceC10575, Map.Entry, InterfaceC0550 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C1693 f4935;
+    public int f3858;
 
-    public C1077() {
-        throw null;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7043 f3859;
+
+    @Override // l.InterfaceC0550
+    public final Object first() {
+        return mo2556();
     }
 
-    public C1077(C1693 c1693, List list, String str, int i) {
-        this.f4935 = c1693;
-        this.f4932 = list;
-        this.f4933 = str;
-        this.f4934 = i;
+    @Override // l.InterfaceC0550
+    /* JADX INFO: renamed from: ᩸ */
+    public final Object mo2558() {
+        return mo2557();
     }
 
+    public C1077(C7043 c7043) {
+        this.f3859 = c7043;
+    }
+
+    public C1077(C7043 c7043, int i) {
+        this.f3859 = c7043;
+        this.f3858 = i;
+    }
+
+    @Override // java.util.Map.Entry
+    public final Object getKey() {
+        return this.f3859.f23237[this.f3858];
+    }
+
+    @Override // l.InterfaceC0550
+    /* JADX INFO: renamed from: ۤ */
+    public final Object mo2556() {
+        return this.f3859.f23237[this.f3858];
+    }
+
+    @Override // java.util.Map.Entry
+    public final Object getValue() {
+        return this.f3859.f23233[this.f3858];
+    }
+
+    @Override // l.InterfaceC0550
+    /* JADX INFO: renamed from: ܳ */
+    public final Object mo2557() {
+        return this.f3859.f23233[this.f3858];
+    }
+
+    @Override // java.util.Map.Entry
+    public final Object setValue(Object obj) {
+        Object[] objArr = this.f3859.f23233;
+        int i = this.f3858;
+        Object obj2 = objArr[i];
+        objArr[i] = obj;
+        return obj2;
+    }
+
+    @Override // java.util.Map.Entry
     public final boolean equals(Object obj) {
-        if (!(obj instanceof C1077)) {
+        if (!(obj instanceof Map.Entry)) {
             return false;
         }
-        C1077 c1077 = (C1077) obj;
-        return this.f4934 == c1077.f4934 && C13638.equals(this.f4935, c1077.f4935) && C13638.equals(this.f4932, c1077.f4932) && C13638.equals(this.f4933, c1077.f4933);
+        Map.Entry entry = (Map.Entry) obj;
+        C7043 c7043 = this.f3859;
+        return C17359.equals(c7043.f23237[this.f3858], entry.getKey()) && C17359.equals(c7043.f23233[this.f3858], entry.getValue());
     }
 
+    @Override // java.util.Map.Entry
     public final int hashCode() {
-        return C13638.hashCode(this.f4933) + ((C13638.hashCode(this.f4932) + ((C13638.hashCode(this.f4935) + (this.f4934 * 31)) * 31)) * 31);
+        C7043 c7043 = this.f3859;
+        Object obj = c7043.f23237[this.f3858];
+        int iHashCode = obj == null ? 0 : obj.hashCode();
+        Object obj2 = c7043.f23233[this.f3858];
+        return iHashCode ^ (obj2 != null ? obj2.hashCode() : 0);
     }
 
     public final String toString() {
-        Object[] objArr = {this.f4935, this.f4932, this.f4933, Integer.valueOf(this.f4934)};
-        String[] strArrSplit = "group;supportedTrackIndices;displayName;logicalIndex".length() == 0 ? new String[0] : "group;supportedTrackIndices;displayName;logicalIndex".split(l.b);
         StringBuilder sb = new StringBuilder();
-        C17745.m41311(C1077.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
+        C7043 c7043 = this.f3859;
+        sb.append(c7043.f23237[this.f3858]);
+        sb.append("=>");
+        sb.append(c7043.f23233[this.f3858]);
         return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m4052() {
-        return this.f4934;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final CharSequence m4053() {
-        return this.f4933;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C1693 m4054() {
-        return this.f4935;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final List m4055() {
-        return this.f4932;
     }
 }

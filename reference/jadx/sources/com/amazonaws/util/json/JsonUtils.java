@@ -6,39 +6,39 @@ import java.io.StringReader;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class JsonUtils {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final AwsJsonFactory f867 = new GsonFactory();
+    public static final AwsJsonFactory f857 = new GsonFactory();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Map m811(String str) {
+    public static Map m805(String str) {
         if (str == null || str.isEmpty()) {
             return Collections.EMPTY_MAP;
         }
         StringReader stringReader = new StringReader(str);
-        ((GsonFactory) f867).getClass();
+        ((GsonFactory) f857).getClass();
         GsonFactory.GsonReader gsonReader = new GsonFactory.GsonReader(stringReader);
         try {
-            if (gsonReader.m808() == null) {
+            if (gsonReader.m798() == null) {
                 return Collections.EMPTY_MAP;
             }
             HashMap map = new HashMap();
-            gsonReader.m805();
-            while (gsonReader.m803()) {
-                String strM810 = gsonReader.m810();
-                if (gsonReader.m806()) {
-                    gsonReader.m804();
+            gsonReader.m797();
+            while (gsonReader.m804()) {
+                String strM801 = gsonReader.m801();
+                if (gsonReader.m802()) {
+                    gsonReader.m796();
                 } else {
-                    map.put(strM810, gsonReader.m802());
+                    map.put(strM801, gsonReader.m800());
                 }
             }
-            gsonReader.m807();
-            gsonReader.m809();
-            return C0561.unmodifiableMap(map);
+            gsonReader.m799();
+            gsonReader.m803();
+            return C4681.unmodifiableMap(map);
         } catch (IOException e) {
             throw new AmazonClientException("Unable to parse JSON String.", e);
         }

@@ -1,14 +1,12 @@
 package l;
 
-import org.bouncycastle.jcajce.spec.XDHParameterSpec;
-
-/* JADX INFO: renamed from: l.᩸۬ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J7Z8 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21604 extends AbstractC3695 {
-    public C21604() {
-        this.f13492 = "sha-512";
-        this.f13490 = XDHParameterSpec.X448;
-        this.f13491 = 56;
+/* JADX INFO: renamed from: l.᩶᩸ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O3K3 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21604 extends AbstractC19366 {
+    @Override // l.AbstractC19366
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo44782(Object obj, Object obj2) {
+        return obj2;
     }
 }

@@ -16,6 +16,6 @@ public class aq {
     public static final String k = "_re2";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77926l = "umeng_zcfg_flag";
+    public static final String f82042l = "umeng_zcfg_flag";
     public static final String m = "umeng_policy_result_flag";
 }

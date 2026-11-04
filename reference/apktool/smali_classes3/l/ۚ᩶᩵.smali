@@ -1,109 +1,270 @@
-.class public final Ll/ۚ᩶᩵;
-.super Ll/ۙ֡᩵;
-.source "05HL"
-
-# interfaces
-.implements Ll/ۘ֡᩵;
+.class public abstract Ll/ۚ᩶᩵;
+.super Ljava/lang/Object;
+.source "E9ZE"
 
 
 # static fields
-.field public static final ۖ:Ll/ۗ᩶᩵;
+.field public static final ۤ:[B
+
+.field public static final ᩷:[B
 
 
 # instance fields
-.field public ۨ:S
-
-.field public ܰ:B
+.field public ۙ:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
+    .locals 2
+
+    const/16 v0, 0x8
+
+    new-array v1, v0, [B
+
+    .line 36
+    fill-array-data v1, :array_0
+
+    sput-object v1, Ll/ۚ᩶᩵;->᩷:[B
+
+    new-array v0, v0, [B
+
+    .line 43
+    fill-array-data v0, :array_1
+
+    sput-object v0, Ll/ۚ᩶᩵;->ۤ:[B
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 1
+        0x4et
+        0x54t
+        0x4ct
+        0x4dt
+        0x53t
+        0x53t
+        0x50t
+        0x0t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x6t
+        0x1t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0xft
+    .end array-data
+.end method
+
+.method public static ۙ(II[B[B)I
     .locals 1
 
-    .line 39
-    new-instance v0, Ll/ۖ᩶᩵;
+    .line 148
+    invoke-static {p1, p0, p2}, Ll/ۚ᩶᩵;->ۙ(II[B)V
 
-    .line 83
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    .line 39
-    sput-object v0, Ll/ۚ᩶᩵;->ۖ:Ll/ۗ᩶᩵;
+    if-eqz p3, :cond_0
 
-    return-void
-.end method
+    .line 149
+    array-length v0, p3
 
-.method public constructor <init>(Ll/֨֡᩵;SI)V
-    .locals 0
+    if-lez v0, :cond_0
 
-    .line 44
-    invoke-direct {p0, p1}, Ll/ۙ֡᩵;-><init>(Ll/֨֡᩵;)V
+    .line 150
+    array-length v0, p3
 
-    const/16 p1, 0x100
+    invoke-static {p3, p1, p2, p0, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    if-ge p2, p1, :cond_1
+    .line 151
+    array-length p0, p3
 
-    const/high16 p1, 0x10000
+    return p0
 
-    if-ge p3, p1, :cond_0
-
-    int-to-byte p1, p2
-
-    .line 54
-    iput-byte p1, p0, Ll/ۚ᩶᩵;->ܰ:B
-
-    int-to-short p1, p3
-
-    .line 55
-    iput-short p1, p0, Ll/ۚ᩶᩵;->ۨ:S
-
-    return-void
-
-    .line 51
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "The register number must be less than v65536"
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 47
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "The register number must be less than v256"
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p1
 .end method
 
-.method public constructor <init>(Ll/֨֡᩵;[BI)V
-    .locals 0
+.method public static ۙ(I[B[B)I
+    .locals 2
 
-    .line 59
-    invoke-direct {p0, p1}, Ll/ۙ֡᩵;-><init>(Ll/֨֡᩵;)V
+    if-eqz p2, :cond_0
 
-    add-int/lit8 p1, p3, 0x1
+    .line 137
+    array-length p2, p2
 
-    .line 61
-    aget-byte p1, p2, p1
+    goto :goto_0
 
-    iput-byte p1, p0, Ll/ۚ᩶᩵;->ܰ:B
+    :cond_0
+    const/4 p2, 0x0
 
-    add-int/lit8 p3, p3, 0x2
+    :goto_0
+    if-nez p2, :cond_1
 
-    .line 62
-    invoke-static {p3, p2}, Ll/ܳܶܶ;->ۨ(I[B)I
+    :goto_1
+    add-int/lit8 p0, p0, 0x4
 
-    move-result p1
+    return p0
 
-    int-to-short p1, p1
+    :cond_1
+    and-int/lit16 v0, p2, 0xff
 
-    iput-short p1, p0, Ll/ۚ᩶᩵;->ۨ:S
+    int-to-byte v0, v0
+
+    .line 131
+    aput-byte v0, p1, p0
+
+    add-int/lit8 v1, p0, 0x1
+
+    shr-int/lit8 p2, p2, 0x8
+
+    and-int/lit16 p2, p2, 0xff
+
+    int-to-byte p2, p2
+
+    .line 132
+    aput-byte p2, p1, v1
+
+    add-int/lit8 v1, p0, 0x2
+
+    .line 131
+    aput-byte v0, p1, v1
+
+    add-int/lit8 v0, p0, 0x3
+
+    .line 132
+    aput-byte p2, p1, v0
+
+    goto :goto_1
+.end method
+
+.method public static ۙ(II[B)V
+    .locals 2
+
+    and-int/lit16 v0, p1, 0xff
+
+    int-to-byte v0, v0
+
+    .line 123
+    aput-byte v0, p2, p0
+
+    add-int/lit8 v0, p0, 0x1
+
+    shr-int/lit8 v1, p1, 0x8
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-byte v1, v1
+
+    .line 124
+    aput-byte v1, p2, v0
+
+    add-int/lit8 v0, p0, 0x2
+
+    shr-int/lit8 v1, p1, 0x10
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-byte v1, v1
+
+    .line 125
+    aput-byte v1, p2, v0
+
+    add-int/lit8 p0, p0, 0x3
+
+    shr-int/lit8 p1, p1, 0x18
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-byte p1, p1
+
+    .line 126
+    aput-byte p1, p2, p0
 
     return-void
+.end method
+
+.method public static ۙ(I[B)[B
+    .locals 3
+
+    .line 109
+    aget-byte v0, p1, p0
+
+    and-int/lit16 v0, v0, 0xff
+
+    add-int/lit8 v1, p0, 0x1
+
+    aget-byte v1, p1, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    add-int/lit8 p0, p0, 0x4
+
+    .line 115
+    invoke-static {p0, p1}, Ll/ۚ᩶᩵;->᩷(I[B)I
+
+    move-result p0
+
+    .line 116
+    new-array v1, v0, [B
+
+    const/4 v2, 0x0
+
+    .line 117
+    invoke-static {p1, p0, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v1
+.end method
+
+.method public static ᩷(I[B)I
+    .locals 2
+
+    .line 103
+    aget-byte v0, p1, p0
+
+    and-int/lit16 v0, v0, 0xff
+
+    add-int/lit8 v1, p0, 0x1
+
+    aget-byte v1, p1, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    add-int/lit8 v1, p0, 0x2
+
+    aget-byte v1, p1, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x10
+
+    or-int/2addr v0, v1
+
+    add-int/lit8 p0, p0, 0x3
+
+    aget-byte p0, p1, p0
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x18
+
+    or-int/2addr p0, v0
+
+    return p0
 .end method
 
 
@@ -111,55 +272,53 @@
 .method public final ۙ()I
     .locals 1
 
-    .line 76
-    iget-byte v0, p0, Ll/ۚ᩶᩵;->ܰ:B
-
-    and-int/lit16 v0, v0, 0xff
+    .line 64
+    iget v0, p0, Ll/ۚ᩶᩵;->ۙ:I
 
     return v0
 .end method
 
-.method public final ۜ()Ll/֨ܺ᩵;
+.method public final ۙ(I)Z
     .locals 1
 
-    .line 72
-    sget-object v0, Ll/֨ܺ᩵;->۬ۙ:Ll/֨ܺ᩵;
+    .line 64
+    iget v0, p0, Ll/ۚ᩶᩵;->ۙ:I
 
-    return-object v0
+    and-int/2addr p1, v0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final ܰ(Ll/ۙ۫᩵;I)V
-    .locals 0
+.method public final ᩷()V
+    .locals 2
 
-    .line 66
-    iget-object p2, p0, Ll/ۙ֡᩵;->ۙ:Ll/֨֡᩵;
+    const/high16 v0, 0x800000
 
-    iget-byte p2, p2, Ll/֨֡᩵;->۫:B
+    .line 64
+    iget v1, p0, Ll/ۚ᩶᩵;->ۙ:I
 
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
+    or-int/2addr v0, v1
 
-    .line 67
-    iget-byte p2, p0, Ll/ۚ᩶᩵;->ܰ:B
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ܰ(I)V
-
-    .line 68
-    iget-short p2, p0, Ll/ۚ᩶᩵;->ۨ:S
-
-    invoke-virtual {p1, p2}, Ll/ۙ۫᩵;->ۖ(I)V
+    .line 74
+    iput v0, p0, Ll/ۚ᩶᩵;->ۙ:I
 
     return-void
 .end method
 
-.method public final ᩺()I
-    .locals 2
+.method public final ᩷(I)V
+    .locals 0
 
-    .line 80
-    iget-short v0, p0, Ll/ۚ᩶᩵;->ۨ:S
+    .line 74
+    iput p1, p0, Ll/ۚ᩶᩵;->ۙ:I
 
-    const v1, 0xffff
-
-    and-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method

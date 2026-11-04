@@ -1,221 +1,490 @@
-.class public final synthetic Ll/ۘ᩵᩹;
+.class public Ll/ۘ᩵᩹;
 .super Ljava/lang/Object;
-.source "P98B"
+.source "4AQC"
 
 # interfaces
-.implements Ll/ᩴܶ᩹;
-.implements Ll/ۗ۬᩹;
+.implements Ll/ܶ᩵᩹;
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/Object;
+.field public ֡:I
 
-.field public final synthetic ܺ:Ljava/lang/Object;
+.field public ۟:J
 
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public final ܰ:I
+
+.field public final ܿ:Ll/᩶ۗ᩹;
+
+.field public ᩶:Ll/ܶ᩵᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Ll/᩶ۗ᩹;JI)V
+    .locals 1
 
-    .line 0
-    iput-object p1, p0, Ll/ۘ᩵᩹;->ܺ:Ljava/lang/Object;
-
-    iput-object p2, p0, Ll/ۘ᩵᩹;->᩶:Ljava/lang/Object;
-
-    iput-object p3, p0, Ll/ۘ᩵᩹;->֡:Ljava/lang/Object;
-
+    .line 1341
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x400
+
+    .line 1331
+    iput v0, p0, Ll/ۘ᩵᩹;->֡:I
+
+    const/4 v0, 0x0
+
+    .line 1333
+    iput-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    .line 1342
+    iput-object p1, p0, Ll/ۘ᩵᩹;->ܿ:Ll/᩶ۗ᩹;
+
+    .line 1344
+    iput-wide p2, p0, Ll/ۘ᩵᩹;->۟:J
+
+    and-int/lit16 p1, p4, 0x1000
+
+    if-eqz p1, :cond_0
+
+    or-int/lit16 p1, p4, 0x100
+
+    .line 1346
+    iput p1, p0, Ll/ۘ᩵᩹;->ܰ:I
+
+    return-void
+
+    :cond_0
+    or-int/lit16 p1, p4, 0x4140
+
+    .line 1348
+    iput p1, p0, Ll/ۘ᩵᩹;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ll/ۧۜ᩹;)V
-    .locals 13
+.method public final characteristics()I
+    .locals 1
 
-    iget-object v0, p0, Ll/ۘ᩵᩹;->ܺ:Ljava/lang/Object;
+    .line 1386
+    iget v0, p0, Ll/ۘ᩵᩹;->ܰ:I
 
-    check-cast v0, Ll/ۧۜ᩹;
+    return v0
+.end method
 
-    iget-object v1, p0, Ll/ۘ᩵᩹;->᩶:Ljava/lang/Object;
+.method public final estimateSize()J
+    .locals 5
 
-    check-cast v1, Ll/᩸ۜ᩹;
+    .line 1377
+    iget-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
 
-    iget-object v2, p0, Ll/ۘ᩵᩹;->֡:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v2, Ll/ۨۜ᩹;
+    invoke-interface {v0}, Ll/۠ۚۗ;->estimateSize()J
 
-    .line 49
-    invoke-virtual {p1}, Ll/ۧۜ᩹;->ۙ()V
+    move-result-wide v0
 
-    .line 50
-    invoke-virtual {v0}, Ll/ۧۜ᩹;->ܰ()Ll/᩷۠ۚ;
+    return-wide v0
 
-    move-result-object v3
+    .line 1378
+    :cond_0
+    iget-object v0, p0, Ll/ۘ᩵᩹;->ܿ:Ll/᩶ۗ᩹;
 
-    .line 51
-    invoke-virtual {p1}, Ll/ۧۜ᩹;->ܰ()Ll/᩷۠ۚ;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v4
+    move-result v0
 
-    .line 53
-    invoke-virtual {v1}, Ll/᩸ۜ᩹;->ۚ()Ll/ۨۜ᩹;
+    const-wide/16 v1, 0x0
 
-    move-result-object v5
+    if-nez v0, :cond_1
 
-    invoke-virtual {v5}, Ll/ۨۜ᩹;->֫()Z
+    return-wide v1
 
-    move-result v5
+    .line 1381
+    :cond_1
+    iget-wide v3, p0, Ll/ۘ᩵᩹;->۟:J
 
-    .line 54
-    invoke-virtual {v3}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
+    cmp-long v0, v3, v1
 
-    move-result-object v6
+    if-ltz v0, :cond_2
 
-    invoke-virtual {v4}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
+    return-wide v3
 
-    move-result-object v7
+    :cond_2
+    const-wide v0, 0x7fffffffffffffffL
 
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return-wide v0
+.end method
+
+.method public final forEachRemaining(Ljava/lang/Object;)V
+    .locals 2
+
+    .line 1318
+    check-cast p1, Ll/ۨۗ᩹;
+
+    .line 1367
+    iget-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    if-eqz v0, :cond_0
+
+    .line 1368
+    invoke-interface {v0, p1}, Ll/ۡۚۗ;->forEachRemaining(Ljava/lang/Object;)V
+
+    const/4 v0, 0x0
+
+    .line 1369
+    iput-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    .line 1371
+    :cond_0
+    iget-object v0, p0, Ll/ۘ᩵᩹;->ܿ:Ll/᩶ۗ᩹;
+
+    invoke-interface {v0, p1}, Ll/᩶ۗ᩹;->᩷(Ll/ۨۗ᩹;)V
+
+    const-wide/16 v0, 0x0
+
+    .line 1372
+    iput-wide v0, p0, Ll/ۘ᩵᩹;->۟:J
+
+    return-void
+.end method
+
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ᩵᩹;->ۙ(Ll/ܶ᩵᩹;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 29
+    invoke-interface {p0}, Ll/ܶ᩵᩹;->getComparator()Ll/ܺۗ᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getComparator()Ll/ܺۗ᩹;
+    .locals 1
+
+    .line 103
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
+    .locals 2
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final tryAdvance(Ljava/lang/Object;)Z
+    .locals 5
+
+    .line 1318
+    check-cast p1, Ll/ۨۗ᩹;
+
+    .line 1354
+    iget-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    if-eqz v0, :cond_1
+
+    .line 1355
+    invoke-interface {v0, p1}, Ll/ۡۚۗ;->tryAdvance(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 1356
+    iput-object v0, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    :cond_0
+    return p1
+
+    .line 1359
+    :cond_1
+    iget-object v0, p0, Ll/ۘ᩵᩹;->ܿ:Ll/᩶ۗ᩹;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 1360
+    :cond_2
+    iget-wide v1, p0, Ll/ۘ᩵᩹;->۟:J
+
+    const-wide/16 v3, 0x1
+
+    sub-long/2addr v1, v3
+
+    iput-wide v1, p0, Ll/ۘ᩵᩹;->۟:J
+
+    .line 1361
+    invoke-interface {v0}, Ll/᩶ۗ᩹;->᩵᩷()C
+
+    move-result v0
+
+    invoke-interface {p1, v0}, Ll/ۨۗ᩹;->ۤ(C)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ᩵᩹;->᩷(Ll/ܶ᩵᩹;Ljava/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 1318
+    invoke-virtual {p0}, Ll/ۘ᩵᩹;->trySplit()Ll/ܶ᩵᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/ۡۚۗ;
+    .locals 1
+
+    .line 1318
+    invoke-virtual {p0}, Ll/ۘ᩵᩹;->trySplit()Ll/ܶ᩵᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final trySplit()Ll/ܶ᩵᩹;
+    .locals 9
+
+    .line 1395
+    iget-object v0, p0, Ll/ۘ᩵᩹;->ܿ:Ll/᩶ۗ᩹;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 1396
+    :cond_0
+    iget-wide v1, p0, Ll/ۘ᩵᩹;->۟:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v5, v1, v3
+
+    if-lez v5, :cond_1
+
+    iget v3, p0, Ll/ۘ᩵᩹;->֡:I
+
+    int-to-long v3, v3
+
+    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v1
+
+    long-to-int v2, v1
+
+    goto :goto_0
+
+    :cond_1
+    iget v2, p0, Ll/ۘ᩵᩹;->֡:I
+
+    .line 1398
+    :goto_0
+    new-array v1, v2, [C
+
+    const/4 v3, 0x0
+
+    :goto_1
+    const-wide/16 v4, 0x1
+
+    if-ge v3, v2, :cond_2
+
+    .line 1400
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    const v6, 0x7f1201c0
+    add-int/lit8 v6, v3, 0x1
 
-    if-eqz v5, :cond_0
+    .line 1401
+    invoke-interface {v0}, Ll/᩶ۗ᩹;->᩵᩷()C
 
-    const v7, 0x7f1201bf
+    move-result v7
 
-    goto :goto_0
+    aput-char v7, v1, v3
 
-    :cond_0
-    const v7, 0x7f1201c0
+    .line 1402
+    iget-wide v7, p0, Ll/ۘ᩵᩹;->۟:J
 
-    .line 55
-    :goto_0
-    invoke-virtual {v3}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
+    sub-long/2addr v7, v4
 
-    move-result-object v3
+    iput-wide v7, p0, Ll/ۘ᩵᩹;->۟:J
 
-    const/4 v8, 0x1
-
-    new-array v9, v8, [Ljava/lang/Object;
-
-    const/4 v10, 0x0
-
-    aput-object v3, v9, v10
-
-    invoke-static {v7, v9}, Ll/ܽܺۘ;->ۙ(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v5, :cond_1
+    move v3, v6
 
     goto :goto_1
 
-    :cond_1
-    const v6, 0x7f1201bf
+    .line 1406
+    :cond_2
+    iget v6, p0, Ll/ۘ᩵᩹;->֡:I
 
-    .line 56
-    :goto_1
-    invoke-virtual {v4}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
+    if-ge v2, v6, :cond_3
 
-    move-result-object v4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-array v7, v8, [Ljava/lang/Object;
+    move-result v2
 
-    aput-object v4, v7, v10
+    if-eqz v2, :cond_3
 
-    invoke-static {v6, v7}, Ll/ܽܺۘ;->ۙ(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 1407
+    iget v2, p0, Ll/ۘ᩵᩹;->֡:I
 
-    move-result-object v4
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([CI)[C
+
+    move-result-object v1
+
+    .line 1408
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Ll/ۘ᩵᩹;->֡:I
+
+    if-ge v3, v2, :cond_3
+
+    add-int/lit8 v2, v3, 0x1
+
+    .line 1409
+    invoke-interface {v0}, Ll/᩶ۗ᩹;->᩵᩷()C
+
+    move-result v6
+
+    aput-char v6, v1, v3
+
+    .line 1410
+    iget-wide v6, p0, Ll/ۘ᩵᩹;->۟:J
+
+    sub-long/2addr v6, v4
+
+    iput-wide v6, p0, Ll/ۘ᩵᩹;->۟:J
+
+    move v3, v2
 
     goto :goto_2
 
-    .line 58
-    :cond_2
-    invoke-virtual {v3}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 59
-    invoke-virtual {v4}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_2
-    move-object v9, v3
-
-    move-object v10, v4
-
-    .line 61
-    new-instance v3, Ll/ۗ۬ۖ;
-
-    invoke-virtual {v0}, Ll/ۧۜ᩹;->ܰ()Ll/᩷۠ۚ;
-
-    move-result-object v7
-
-    invoke-virtual {p1}, Ll/ۧۜ᩹;->ܰ()Ll/᩷۠ۚ;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Ll/᩸ۜ᩹;->ۖ()Ll/ۨۘ᩹;
-
-    move-result-object v11
-
-    invoke-virtual {v2}, Ll/ۨۜ᩹;->ܶ()Ll/ۨۘ᩹;
-
-    move-result-object v12
-
-    move-object v6, v3
-
-    invoke-direct/range {v6 .. v12}, Ll/ۗ۬ۖ;-><init>(Ll/᩷۠ۚ;Ll/᩷۠ۚ;Ljava/lang/String;Ljava/lang/String;Ll/ۨۘ᩹;Ll/ۨۘ᩹;)V
-
-    if-nez v5, :cond_3
-
-    .line 63
-    invoke-virtual {v3}, Ll/ۗ۬ۖ;->ۨ()V
-
-    .line 65
+    .line 1413
     :cond_3
-    invoke-virtual {v1}, Ll/᩸ۜ᩹;->ۚ()Ll/ۨۜ᩹;
+    iget v2, p0, Ll/ۘ᩵᩹;->֡:I
 
-    move-result-object p1
+    add-int/lit16 v2, v2, 0x400
 
-    invoke-static {p1, v3}, Ll/ۗ۟ۨ;->ۙ(Ll/ۨۜ᩹;Ll/ۗ۬ۖ;)V
+    const/high16 v4, 0x2000000
 
-    return-void
+    invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    iput v2, p0, Ll/ۘ᩵᩹;->֡:I
+
+    .line 1415
+    invoke-virtual {p0, v1, v3}, Ll/ۘ᩵᩹;->ۙ([CI)Ll/ܶ᩵᩹;
+
+    move-result-object v1
+
+    .line 1416
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 1417
+    iput-object v1, p0, Ll/ۘ᩵᩹;->᩶:Ll/ܶ᩵᩹;
+
+    .line 1418
+    check-cast v1, Ll/ۗ᩵᩹;
+
+    invoke-virtual {v1}, Ll/ۗ᩵᩹;->trySplit()Ll/ܶ᩵᩹;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_4
+    return-object v1
 .end method
 
-.method public ܰ(Ll/᩷۠ۚ;)V
-    .locals 4
+.method public ۙ([CI)Ll/ܶ᩵᩹;
+    .locals 3
 
-    iget-object v0, p0, Ll/ۘ᩵᩹;->ܺ:Ljava/lang/Object;
+    .line 357
+    array-length v0, p1
 
-    check-cast v0, Ll/ۖ۬᩹;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Ll/ۘ᩵᩹;->᩶:Ljava/lang/Object;
+    invoke-static {v0, v1, p2}, Ll/ܿܺ᩺;->᩷(III)V
 
-    check-cast v1, Ll/᩻ۤۚ;
+    .line 362
+    new-instance v0, Ll/ۗ᩵᩹;
 
-    iget-object v2, p0, Ll/ۘ᩵᩹;->֡:Ljava/lang/Object;
+    iget v2, p0, Ll/ۘ᩵᩹;->ܰ:I
 
-    check-cast v2, Ll/᩻᩵ۚ;
+    invoke-direct {v0, v1, p2, p1, v2}, Ll/ۗ᩵᩹;-><init>(II[CI)V
 
-    const/16 v3, 0x1388
-
-    .line 91
-    invoke-static {v0, v3}, Ll/ۜᩳ᩹;->ۙ(Ll/ۖ۬᩹;I)V
-
-    const/4 v0, 0x0
-
-    .line 68
-    invoke-virtual {v1, v2, p1, v0}, Ll/᩻ۤۚ;->ۙ(Ll/᩻᩵ۚ;Ll/᩷۠ۚ;Z)V
-
-    return-void
+    return-object v0
 .end method

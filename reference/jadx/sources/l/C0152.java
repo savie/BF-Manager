@@ -1,31 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۗ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5AUH */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0152 {
+/* JADX INFO: renamed from: l.֡ۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 17QY */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C0152 extends EnumC0898 {
+    public /* synthetic */ C0152() {
+        this("TYPE", 1, true);
+    }
 
+    public C0152(String str, int i, boolean z) {
+        super(str, i, 0, z);
+    }
+
+    @Override // l.EnumC0898
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f1202;
-
-    static {
-        int[] iArr = new int[EnumC16381.values().length];
-        f1202 = iArr;
-        try {
-            iArr[EnumC16381.SnakeCase.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    public EnumC0898 mo1347(EnumC21035 enumC21035) {
+        int i = C14321.f45190[enumC21035.ordinal()];
+        if (i == 1 || i == 2 || i == 3) {
+            return EnumC0898.f3330;
         }
-        try {
-            f1202[EnumC16381.KebabCase.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        if (i == 4) {
+            return EnumC0898.f3332;
         }
-        try {
-            f1202[EnumC16381.PascalCase.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f1202[EnumC16381.CamelCase.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
+        throw new AssertionError();
     }
 }

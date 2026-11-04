@@ -1,30 +1,223 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ܺۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4BJX */
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.util.Arrays;
+
+/* JADX INFO: renamed from: l.֫۫ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 970R */
 /* JADX INFO: loaded from: classes3.dex */
-public class C1925 extends AbstractC8982 {
-    @Override // l.AbstractC8982
+public final class C1925 extends AbstractC0433 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo6259() {
-        return "nth-of-type";
+    public final int f6468;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long[] f6469;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f6470;
+
+    public C1925(int i, int i2, long[] jArr) {
+        this.f6468 = i;
+        this.f6469 = jArr;
+        this.f6470 = i2;
     }
 
-    @Override // l.AbstractC8982
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo6258(C0617 c0617) {
-        int i = 0;
-        if (c0617.mo2849() == null) {
-            return 0;
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo2248() {
+        return this.f6470;
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo2249(int i) {
+        if (i < 0 || i >= this.f6470) {
+            throw new IndexOutOfBoundsException(C13645.m33382(i, "Start ordinal "));
         }
-        for (C0617 c0618 : c0617.mo2849().m2846()) {
-            if (c0618.m2860().equals(c0617.m2860())) {
-                i++;
+        int i2 = 0;
+        while (true) {
+            long[] jArr = this.f6469;
+            if (i2 >= jArr.length) {
+                throw new AssertionError("Bitmap ordinal missing");
             }
-            if (c0618 == c0617) {
-                break;
+            int iBitCount = Long.bitCount(jArr[i2]);
+            if (i >= iBitCount) {
+                i -= iBitCount;
+                i2++;
+            } else {
+                long j = jArr[i2];
+                while (true) {
+                    int i3 = i - 1;
+                    if (i <= 0) {
+                        return Long.numberOfTrailingZeros(j) + this.f6468 + (i2 << 6);
+                    }
+                    j &= j - 1;
+                    i = i3;
+                }
             }
         }
-        return i;
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo2250(int i) {
+        long j = i;
+        int i2 = this.f6468;
+        long j2 = (j - ((long) i2)) + 1;
+        if (j2 < 0) {
+            j2 = 0;
+        }
+        long[] jArr = this.f6469;
+        if (j2 >= (((long) jArr.length) << 6)) {
+            throw new IndexOutOfBoundsException("No next start");
+        }
+        int i3 = (int) j2;
+        int i4 = i3 >>> 6;
+        long j3 = jArr[i4] & ((-1) << (i3 & 63));
+        while (j3 == 0) {
+            i4++;
+            if (i4 == jArr.length) {
+                throw new IndexOutOfBoundsException("No next start");
+            }
+            j3 = jArr[i4];
+        }
+        return Long.numberOfTrailingZeros(j3) + i2 + (i4 << 6);
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2246(int i) {
+        int i2 = Integer.MIN_VALUE;
+        int i3 = 0;
+        boolean z = true;
+        while (true) {
+            long[] jArr = this.f6469;
+            if (i3 >= jArr.length) {
+                return true;
+            }
+            long j = jArr[i3];
+            while (j != 0) {
+                int iNumberOfTrailingZeros = Long.numberOfTrailingZeros(j) + this.f6468 + (i3 << 6);
+                if (!z && ((long) i2) + ((long) i) > iNumberOfTrailingZeros) {
+                    return false;
+                }
+                j &= j - 1;
+                z = false;
+                i2 = iNumberOfTrailingZeros;
+            }
+            i3++;
+        }
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2247(AbstractC0433 abstractC0433) {
+        if (!(abstractC0433 instanceof C1925)) {
+            return false;
+        }
+        C1925 c1925 = (C1925) abstractC0433;
+        return this.f6468 == c1925.f6468 && this.f6470 == c1925.f6470 && Arrays.equals(this.f6469, c1925.f6469);
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2245(byte[] bArr, int i, int i2, byte b, int i3) {
+        int i4 = this.f6468;
+        long jMax = Math.max(0L, ((long) i) - ((long) i4));
+        long[] jArr = this.f6469;
+        long jMin = Math.min(((long) jArr.length) << 6, ((long) i2) - ((long) i4));
+        if (jMax >= jMin) {
+            return;
+        }
+        int i5 = (((int) jMin) - 1) >>> 6;
+        for (int i6 = ((int) jMax) >>> 6; i6 <= i5; i6++) {
+            for (long j = jArr[i6]; j != 0; j &= j - 1) {
+                int iNumberOfTrailingZeros = Long.numberOfTrailingZeros(j) + (i6 << 6) + i4;
+                if (iNumberOfTrailingZeros >= i && iNumberOfTrailingZeros < i2) {
+                    bArr[(i3 + iNumberOfTrailingZeros) - i] = b;
+                }
+            }
+        }
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2243(int i, int i2, InterfaceC25046 interfaceC25046) {
+        long j = i;
+        int i3 = this.f6468;
+        long j2 = i3;
+        long jMax = Math.max(0L, j - j2);
+        long[] jArr = this.f6469;
+        long jMin = Math.min(((long) jArr.length) << 6, ((long) i2) - j2);
+        if (jMax >= jMin) {
+            return;
+        }
+        int i4 = (int) jMax;
+        int i5 = (int) jMin;
+        int i6 = i4 >>> 6;
+        int iBitCount = 0;
+        for (int i7 = 0; i7 < i6; i7++) {
+            iBitCount += Long.bitCount(jArr[i7]);
+        }
+        int i8 = (i5 - 1) >>> 6;
+        while (i6 <= i8) {
+            int i9 = iBitCount;
+            for (long j3 = jArr[i6]; j3 != 0; j3 &= j3 - 1) {
+                int iNumberOfTrailingZeros = (i6 << 6) + Long.numberOfTrailingZeros(j3);
+                if (iNumberOfTrailingZeros >= i4 && iNumberOfTrailingZeros < i5) {
+                    interfaceC25046.mo16641(i9, iNumberOfTrailingZeros + i3);
+                }
+                i9++;
+            }
+            iBitCount += Long.bitCount(jArr[i6]);
+            i6++;
+        }
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo2240(int i, int i2) {
+        final int[] iArr = {0};
+        mo2243(i, i2, new InterfaceC25046() { // from class: l.ۚ۫ܳ
+            @Override // l.InterfaceC25046
+            /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+            public final void mo16641(int i3, int i4) {
+                int[] iArr2 = iArr;
+                iArr2[0] = iArr2[0] + 1;
+            }
+        });
+        return iArr[0];
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ᩷ */
+    public final long mo2251() {
+        return ((long) this.f6469.length) * 8;
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo2241() {
+        return (((long) this.f6469.length) * 8) + 64;
+    }
+
+    @Override // l.AbstractC0433
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2244(DataOutputStream dataOutputStream, int i) throws IOException {
+        dataOutputStream.writeByte(2);
+        long j = ((long) this.f6468) - ((long) i);
+        int i2 = (int) j;
+        if (j != i2) {
+            throw new ArithmeticException();
+        }
+        dataOutputStream.writeInt(i2);
+        long[] jArr = this.f6469;
+        dataOutputStream.writeInt(jArr.length);
+        dataOutputStream.writeInt(this.f6470);
+        for (long j2 : jArr) {
+            dataOutputStream.writeLong(j2);
+        }
     }
 }

@@ -37,7 +37,7 @@
     if-eqz v0, :cond_1
 
     .line 62
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ܰ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
     if-eqz v0, :cond_1
 
     .line 66
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ܰ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩷()Ljava/lang/String;
 
     move-result-object p1
 

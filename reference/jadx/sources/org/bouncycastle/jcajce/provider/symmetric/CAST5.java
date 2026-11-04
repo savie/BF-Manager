@@ -7,9 +7,9 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.IvParameterSpec;
-import l.C0280;
-import l.C23234;
-import l.C5800;
+import l.C12669;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.CipherKeyGenerator;
@@ -25,7 +25,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseBlockCipher;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CAST5 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -117,14 +117,12 @@ public final class CAST5 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new CAST5Engine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new CAST5Engine());
@@ -144,11 +142,11 @@ public final class CAST5 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.CAST5", sb, configurableProvider);
-            C5800.m15969(str, "$ECB", "Cipher.CAST5", C0280.m1793("AlgorithmParameterGenerator.CAST5", C23234.m51270("Alg.Alias.AlgorithmParameters.1.2.840.113533.7.66.10", "CAST5", str, "$AlgParamGen", configurableProvider), "Alg.Alias.AlgorithmParameterGenerator.1.2.840.113533.7.66.10", "CAST5", configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.CAST5", sb, configurableProvider);
+            C8947.m23913(str, "$ECB", "Cipher.CAST5", C12669.m31439("AlgorithmParameterGenerator.CAST5", C18176.m42346("Alg.Alias.AlgorithmParameters.1.2.840.113533.7.66.10", "CAST5", str, "$AlgParamGen", configurableProvider), "Alg.Alias.AlgorithmParameterGenerator.1.2.840.113533.7.66.10", "CAST5", configurableProvider), configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier = MiscObjectIdentifiers.cast5CBC;
             configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier, str + "$CBC");
-            C5800.m15969(str, "$KeyGen", "KeyGenerator.CAST5", new StringBuilder(), configurableProvider);
+            C8947.m23913(str, "$KeyGen", "KeyGenerator.CAST5", new StringBuilder(), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator", aSN1ObjectIdentifier, "CAST5");
         }
     }

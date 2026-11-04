@@ -1,72 +1,96 @@
 package l;
 
-import java.io.Closeable;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.security.MessageDigest;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۘۧ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 22T0 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3907 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m11362(AbstractC20745 abstractC20745, String str) throws Throwable {
-        Throwable th;
-        InputStream inputStreamMo33970;
-        InputStream inputStream = null;
-        if (!abstractC20745.mo33971()) {
-            return null;
-        }
-        byte[] bArr = new byte[1024];
+/* JADX INFO: renamed from: l.ۘۘ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3907 extends AbstractC2432 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7941 f13356;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C11555 f13357;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC18143 f13358;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C6806 f13359;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C15508 f13360;
+
+    public C3907(C7941 c7941, ActivityC18143 activityC18143) {
+        this.f13356 = c7941;
+        this.f13358 = activityC18143;
+        this.f13357 = C11555.m29068(c7941.getViewLifecycleOwner());
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        this.f13360 = this.f13356.f26387.m54021().mo15337();
+        m8190(this.f13358);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        C15508 c15508 = this.f13360;
         try {
-            MessageDigest messageDigest = MessageDigest.getInstance(str);
-            inputStreamMo33970 = abstractC20745.mo33970();
-            while (true) {
+            this.f13359 = C11650.m29284("", C13994.m34094(c15508.toString()), ApplicationC17729.f58258.mo7901((byte) 0, "dex_decompile_engine"));
+            c15508.close();
+        } catch (Throwable th) {
+            if (c15508 != null) {
                 try {
-                    int i = inputStreamMo33970.read(bArr, 0, 1024);
-                    if (i != -1) {
-                        messageDigest.update(bArr, 0, i);
-                    } else {
-                        String strM49424 = C22253.m49424(messageDigest.digest());
-                        C19431.m44468(inputStreamMo33970);
-                        return strM49424;
-                    }
-                } catch (Exception unused) {
-                    C19431.m44468(inputStreamMo33970);
-                    return null;
+                    c15508.close();
                 } catch (Throwable th2) {
-                    th = th2;
-                    inputStream = inputStreamMo33970;
-                    C19431.m44468(inputStream);
-                    throw th;
+                    th.addSuppressed(th2);
                 }
             }
-        } catch (Exception unused2) {
-            inputStreamMo33970 = null;
-        } catch (Throwable th3) {
-            th = th3;
+            throw th;
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m11363(File file) {
-        FileInputStream fileInputStream;
-        try {
-            int i = C15071.f49127;
-            fileInputStream = new FileInputStream(file);
-            try {
-                byte[] bArrM44470 = C19431.m44470(fileInputStream, 0);
-                C20010.m45299((Closeable) fileInputStream);
-                return bArrM44470;
-            } catch (Throwable th) {
-                th = th;
-                C20010.m45299((Closeable) fileInputStream);
-                throw th;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f13357.m29071()) {
+            C7941 c7941 = this.f13356;
+            if (!c7941.f26408 || c7941.isDetached() || c7941.m19927()) {
+                return;
             }
-        } catch (Throwable th2) {
-            th = th2;
-            fileInputStream = null;
+            if (!this.f13359.f22668.m33676()) {
+                C13778 c13778 = this.f13359.f22668;
+                c13778.getClass();
+                this.f13358.m40400(C1364.m5010(c13778, R.string.MT_Protector), false);
+                return;
+            }
+            ActivityC4300.m13681(c7941.f26398, this.f13359, c7941.m19934().m9059() + ".java");
         }
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f13357.m29071()) {
+            C7941 c7941 = this.f13356;
+            if (!c7941.f26408 || c7941.isDetached() || c7941.m19927()) {
+                return;
+            }
+            C7941.m21539(c7941, exc, this.f13358);
+        }
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        C15508 c15508 = this.f13360;
+        if (c15508 != null) {
+            c15508.close();
+        }
+        m8196();
     }
 }

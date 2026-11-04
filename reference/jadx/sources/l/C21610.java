@@ -1,86 +1,45 @@
 package l;
 
-import android.os.Bundle;
-import java.util.ArrayList;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩸ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E5FU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21610 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public Bundle f70087;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f70088;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public float f70089;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f70090;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f70091;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public int f70092;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public long f70093;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public long f70094;
+/* JADX INFO: renamed from: l.᩶᩸᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7FA */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21610 implements InterfaceC3359 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f70095;
+    public final int f69022;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public CharSequence f70096;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C7660 f69023;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public long f70097;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C7660 f69024;
 
-    public C21610() {
-        this.f70088 = new ArrayList();
-        this.f70095 = -1L;
+    @Override // l.InterfaceC3359
+    public final int getLength() {
+        return 6;
     }
 
-    public C21610(C8205 c8205) {
-        ArrayList arrayList = new ArrayList();
-        this.f70088 = arrayList;
-        this.f70095 = -1L;
-        this.f70092 = c8205.f28571;
-        this.f70094 = c8205.f28569;
-        this.f70089 = c8205.f28576;
-        this.f70097 = c8205.f28568;
-        this.f70093 = c8205.f28565;
-        this.f70090 = c8205.f28572;
-        this.f70091 = c8205.f28570;
-        this.f70096 = c8205.f28574;
-        ArrayList arrayList2 = c8205.f28573;
-        if (arrayList2 != null) {
-            arrayList.addAll(arrayList2);
-        }
-        this.f70095 = c8205.f28575;
-        this.f70087 = c8205.f28567;
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ᩸ */
+    public final /* synthetic */ boolean mo6416() {
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m48322(int i, long j, float f, long j2) {
-        this.f70092 = i;
-        this.f70094 = j;
-        this.f70097 = j2;
-        this.f70089 = f;
+    public C21610(C9346 c9346, C6694 c6694, C20864 c20864) {
+        this.f69024 = (C7660) c6694.apply(c9346);
+        this.f69023 = c9346.m15858() == null ? null : (C7660) c20864.apply(c9346.m15858());
+        this.f69022 = c9346.m4217();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m48323() {
-        this.f70090 = 822L;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C8205 m48321() {
-        return new C8205(this.f70092, this.f70094, this.f70093, this.f70089, this.f70090, this.f70091, this.f70096, this.f70097, this.f70088, this.f70095, this.f70087);
+    @Override // l.InterfaceC3359
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1599(InterfaceC9397 interfaceC9397) throws IOException {
+        C11388 c11388 = (C11388) interfaceC9397;
+        c11388.m28740(this.f69024.f67820);
+        c11388.m28740(this.f69022);
+        C7660 c7660 = this.f69023;
+        c11388.m28740(c7660 == null ? 0 : c7660.f67820);
     }
 }

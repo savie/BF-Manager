@@ -1,30 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗᩴۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3420 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+import com.google.android.material.tabs.TabLayout;
+
+/* JADX INFO: renamed from: l.ۗ۫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4AWI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3420 implements TabLayout.OnTabSelectedListener {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC5440 f11093;
+
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabReselected(TabLayout.Tab tab) {
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return Character.isIdeographic(i);
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabUnselected(TabLayout.Tab tab) {
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    public C3420(ActivityC5440 activityC5440) {
+        this.f11093 = activityC5440;
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
+    public final void onTabSelected(TabLayout.Tab tab) {
+        this.f11093.f19001.mo40353(Integer.valueOf(tab.getPosition()));
     }
 }

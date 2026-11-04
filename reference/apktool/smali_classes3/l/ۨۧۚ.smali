@@ -1,44 +1,25 @@
-.class public final synthetic Ll/ۨۧۚ;
-.super Ljava/lang/Object;
-.source "964K"
-
-# interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.class public final Ll/ۨۧۚ;
+.super Ljava/lang/RuntimeException;
+.source "P77N"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۠ۧۚ;
-
-.field public final synthetic ᩶:Ll/ۨۜ᩹;
+.field public final ܰ:Ljava/lang/RuntimeException;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۠ۧۚ;Ll/ۨۜ᩹;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۨۧۚ;->ܺ:Ll/۠ۧۚ;
-
-    iput-object p2, p0, Ll/ۨۧۚ;->᩶:Ll/ۨۜ᩹;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
+.method public constructor <init>(Ljava/lang/RuntimeException;)V
     .locals 1
 
-    .line 0
-    iget-object p1, p0, Ll/ۨۧۚ;->ܺ:Ll/۠ۧۚ;
+    .line 5751
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    iget-object v0, p0, Ll/ۨۧۚ;->᩶:Ll/ۨۜ᩹;
+    move-result-object v0
 
-    invoke-static {p1, v0}, Ll/۠ۧۚ;->ۙ(Ll/۠ۧۚ;Ll/ۨۜ᩹;)V
+    invoke-direct {p0, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 p1, 0x1
+    .line 5752
+    iput-object p1, p0, Ll/ۨۧۚ;->ܰ:Ljava/lang/RuntimeException;
 
-    return p1
+    return-void
 .end method

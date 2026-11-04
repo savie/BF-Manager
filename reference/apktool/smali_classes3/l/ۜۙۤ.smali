@@ -1,91 +1,61 @@
-.class public Ll/ۜۙۤ;
-.super Ll/ܳۨۤ;
-.source "C5BI"
+.class public final Ll/ۜۙۤ;
+.super Ljava/lang/Object;
+.source "FALT"
+
+
+# static fields
+.field public static final ۤ:Ll/ۜۙۤ;
+
+.field public static final ᩷:Ll/ۜۙۤ;
 
 
 # instance fields
-.field public ֨ܰ:Ll/ۗۛۡ;
+.field public final ۙ:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۗۛۡ;Ll/ܳۨۤ;)V
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 71
+    new-instance v0, Ll/ۜۙۤ;
+
+    const-string v1, "VERTICAL"
+
+    invoke-direct {v0, v1}, Ll/ۜۙۤ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/ۜۙۤ;->ۤ:Ll/ۜۙۤ;
+
+    .line 77
+    new-instance v0, Ll/ۜۙۤ;
+
+    const-string v1, "HORIZONTAL"
+
+    invoke-direct {v0, v1}, Ll/ۜۙۤ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/ۜۙۤ;->᩷:Ll/ۜۙۤ;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 153
-    invoke-direct {p0, p2}, Ll/ܳۨۤ;-><init>(Ll/ܳۨۤ;)V
+    .line 59
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
-    iput-object p1, p0, Ll/ۜۙۤ;->֨ܰ:Ll/ۗۛۡ;
-
-    const-string p1, "AnnotationValue"
-
-    .line 155
-    iput-object p1, p0, Ll/ܳۨۤ;->ۙܰ:Ljava/lang/String;
+    iput-object p1, p0, Ll/ۜۙۤ;->ۙ:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 5
-
-    .line 160
-    iget-object v0, p0, Ll/ܳۨۤ;->ۙܰ:Ljava/lang/String;
-
-    iget-object v1, p0, Ll/ۜۙۤ;->֨ܰ:Ll/ۗۛۡ;
-
-    invoke-virtual {v1}, Ll/ۗۛۡ;->ۙ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Ll/ۜۙۤ;->᩶()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "<"
-
-    const-string v4, " "
-
-    .line 0
-    invoke-static {v3, v0, v4, v1, v4}, Ll/۫۠ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ">"
-
-    invoke-static {v0, v2, v1}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public ܰ()V
-    .locals 2
-
-    .line 169
-    iget-object v0, p0, Ll/ۜۙۤ;->֨ܰ:Ll/ۗۛۡ;
-
-    invoke-virtual {v0}, Ll/ۗۛۡ;->ۚ()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0, v1, v0}, Ll/ۜۨۤ;->ܰ(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ll/ۜۨۤ;->ܰ(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public ᩶()Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, ""
+    .line 62
+    iget-object v0, p0, Ll/ۜۙۤ;->ۙ:Ljava/lang/String;
 
     return-object v0
 .end method

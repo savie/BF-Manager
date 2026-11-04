@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OldHMac implements Mac {
     public static final int BLOCK_LENGTH = 64;
     public static final byte IPAD = 54;

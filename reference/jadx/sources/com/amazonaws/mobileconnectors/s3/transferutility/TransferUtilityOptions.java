@@ -8,17 +8,17 @@ import java.io.Serializable;
 public class TransferUtilityOptions implements Serializable {
     public static final long serialVersionUID = 1;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final Log f379 = LogFactory.m302(TransferUtilityOptions.class);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final Log f369 = LogFactory.m296(TransferUtilityOptions.class);
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f380 = 0;
+    public static final /* synthetic */ int f370 = 0;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public TransferNetworkConnectionType f381;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public TransferNetworkConnectionType f371;
 
     public TransferUtilityOptions() {
         Runtime.getRuntime().availableProcessors();
-        this.f381 = TransferNetworkConnectionType.f298;
+        this.f371 = TransferNetworkConnectionType.f288;
     }
 }

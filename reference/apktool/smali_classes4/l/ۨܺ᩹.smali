@@ -1,98 +1,153 @@
 .class public final Ll/ۨܺ᩹;
-.super Ll/ۧܽܰ;
-.source "J7C4"
-
-
-# instance fields
-.field public final synthetic ۖ:Ll/ۖܺ᩹;
-
-.field public final synthetic ۚ:Ljava/util/ArrayList;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Ll/ۖܺ᩹;)V
-    .locals 0
-
-    .line 42
-    iput-object p1, p0, Ll/ۨܺ᩹;->ۚ:Ljava/util/ArrayList;
-
-    iput-object p2, p0, Ll/ۨܺ᩹;->ۖ:Ll/ۖܺ᩹;
-
-    invoke-direct {p0}, Ll/ۧܽܰ;-><init>()V
-
-    return-void
-.end method
+.super Ll/۫ܺ᩹;
+.source "J8X0"
 
 
 # virtual methods
-.method public final ۙ(Ll/ܿܿܰ;Ll/۫ܿܰ;Ll/۫ܿܰ;)Z
-    .locals 0
+.method public final ۙ()Ljava/util/Collection;
+    .locals 2
 
-    .line 50
-    invoke-virtual {p2}, Ll/۫ܿܰ;->getBindingAdapterPosition()I
+    const-string v0, "http"
 
-    move-result p1
+    const-string v1, "https"
+
+    .line 70
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ljava/lang/String;)Ll/۠᩻᩹;
+    .locals 4
+
+    const-string v0, "Bad response code: "
+
+    .line 47
+    :try_start_0
+    new-instance v1, Ljava/net/URL;
+
+    invoke-direct {v1, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    .line 48
+    invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/net/HttpURLConnection;
+
+    .line 49
+    invoke-virtual {v1}, Ljava/net/URLConnection;->connect()V
 
     .line 51
-    invoke-virtual {p3}, Ll/۫ܿܰ;->getBindingAdapterPosition()I
+    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
-    move-result p2
+    move-result v2
 
-    const/4 p3, -0x1
+    const/16 v3, 0xc8
 
-    if-eq p1, p3, :cond_1
+    if-lt v2, v3, :cond_2
 
-    if-ne p2, p3, :cond_0
+    const/16 v3, 0x12c
+
+    if-ge v2, v3, :cond_2
+
+    const-string v0, "Content-Type"
+
+    .line 53
+    invoke-virtual {v1, v0}, Ljava/net/URLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 55
     :cond_0
-    iget-object p3, p0, Ll/ۨܺ᩹;->ۚ:Ljava/util/ArrayList;
+    const/16 v2, 0x3b
 
-    invoke-static {p1, p2, p3}, Ll/᩻ۛ᩺;->ۙ(IILjava/util/List;)V
+    .line 80
+    invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
 
-    .line 56
-    iget-object p3, p0, Ll/ۨܺ᩹;->ۖ:Ll/ۖܺ᩹;
+    move-result v2
 
-    invoke-virtual {p3, p1, p2}, Ll/֡۫ܰ;->notifyItemMoved(II)V
+    const/4 v3, -0x1
 
-    const/4 p1, 0x1
+    if-le v2, v3, :cond_1
 
-    return p1
+    const/4 v3, 0x0
 
+    .line 82
+    invoke-virtual {v0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 54
     :cond_1
     :goto_0
-    const/4 p1, 0x0
+    new-instance v2, Ljava/io/BufferedInputStream;
 
-    return p1
-.end method
+    invoke-virtual {v1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
-.method public final ۨ(Ll/۫ܿܰ;)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-direct {v2, v1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-.method public final ۨ()Z
-    .locals 1
+    .line 55
+    invoke-static {v2, v0}, Ll/ۜ᩻᩹;->ۙ(Ljava/io/InputStream;Ljava/lang/String;)Ll/۠᩻᩹;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    return v0
-.end method
+    return-object p1
 
-.method public final ܰ(Ll/۫ܿܰ;)I
-    .locals 1
+    .line 57
+    :cond_2
+    new-instance v1, Ljava/io/IOException;
 
-    const/4 p1, 0x3
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 45
-    invoke-static {p1, v0}, Ll/ۧܽܰ;->ۨ(II)I
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result p1
+    const-string v0, ", url: "
 
-    return p1
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    .line 61
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Exception obtaining network resource: "
+
+    .line 0
+    invoke-static {v2, p1}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 61
+    invoke-direct {v1, p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

@@ -14,8 +14,9 @@ import com.alipay.sdk.m.y.b;
 import com.alipay.sdk.m.y.g;
 import com.alipay.sdk.m.y.q;
 import java.lang.ref.WeakReference;
-import l.C15844;
-import l.C5031;
+import l.C22666;
+import l.C3977;
+import l.C9706;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -34,7 +35,7 @@ public class H5PayActivity extends Activity {
         Context context = view.getContext();
         if (context != null && b.d(context)) {
             try {
-                C5031.m13989(view, new H5PayActivity$$ExternalSyntheticLambda0(view));
+                C22666.m51097(view, new C9706(view));
             } catch (Throwable unused) {
                 view.setPadding(0, b.b(context), 0, b.a(context));
             }
@@ -127,7 +128,7 @@ public class H5PayActivity extends Activity {
                     dVar.a(this.b);
                     this.a = dVar;
                 } catch (Throwable th) {
-                    com.alipay.sdk.m.m.a.a(aVarA, com.alipay.sdk.m.m.b.f77909l, "GetInstalledAppEx", th);
+                    com.alipay.sdk.m.m.a.a(aVarA, com.alipay.sdk.m.m.b.f82025l, "GetInstalledAppEx", th);
                     finish();
                 }
             } catch (Exception unused) {
@@ -153,15 +154,15 @@ public class H5PayActivity extends Activity {
             super.setRequestedOrientation(i);
         } catch (Throwable th) {
             try {
-                com.alipay.sdk.m.m.a.a((a) q.a(this.i), com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.B, th);
+                com.alipay.sdk.m.m.a.a((a) q.a(this.i), com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.B, th);
             } catch (Throwable unused) {
             }
         }
     }
 
-    public static /* synthetic */ C15844 a(View view, View view2, C15844 c15844) {
-        view.setPadding(0, c15844.m37681(), 0, c15844.m37670());
-        return c15844;
+    public static /* synthetic */ C3977 a(View view, View view2, C3977 c3977) {
+        view.setPadding(0, c3977.m12824(), 0, c3977.m12825());
+        return c3977;
     }
 
     public void a() {

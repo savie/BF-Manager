@@ -20,105 +20,105 @@ import java.util.concurrent.Callable;
 /* JADX INFO: loaded from: classes.dex */
 public class DownloadTask implements Callable {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Log f277 = LogFactory.m302(DownloadTask.class);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Log f267 = LogFactory.m296(DownloadTask.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TransferRecord f278;
+    public final TransferRecord f268;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final TransferStatusUpdater f279;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final TransferStatusUpdater f269;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AmazonS3 f280;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AmazonS3 f270;
 
     public DownloadTask(TransferRecord transferRecord, AmazonS3 amazonS3, TransferStatusUpdater transferStatusUpdater) {
-        this.f278 = transferRecord;
-        this.f280 = amazonS3;
-        this.f279 = transferStatusUpdater;
+        this.f268 = transferRecord;
+        this.f270 = amazonS3;
+        this.f269 = transferStatusUpdater;
     }
 
     @Override // java.util.concurrent.Callable
     public final Object call() throws Throwable {
-        Log log = f277;
-        TransferStatusUpdater transferStatusUpdater = this.f279;
-        TransferRecord transferRecord = this.f278;
+        Log log = f267;
+        TransferStatusUpdater transferStatusUpdater = this.f269;
+        TransferRecord transferRecord = this.f268;
         try {
-            TransferNetworkLossHandler.m381();
-            if (!TransferNetworkLossHandler.m381().m382()) {
-                log.mo296("Thread:[" + Thread.currentThread().getId() + "]: Network wasn't available.");
-                transferStatusUpdater.m395(transferRecord.f328, TransferState.WAITING_FOR_NETWORK);
+            TransferNetworkLossHandler.m375();
+            if (!TransferNetworkLossHandler.m375().m376()) {
+                log.mo288("Thread:[" + Thread.currentThread().getId() + "]: Network wasn't available.");
+                transferStatusUpdater.m389(transferRecord.f322, TransferState.WAITING_FOR_NETWORK);
                 return Boolean.FALSE;
             }
         } catch (TransferUtilityException e) {
-            log.mo292("TransferUtilityException: [" + e + "]");
+            log.mo285("TransferUtilityException: [" + e + "]");
         }
-        transferStatusUpdater.m395(transferRecord.f328, TransferState.IN_PROGRESS);
-        ProgressListener progressListenerM399 = transferStatusUpdater.m399(transferRecord.f328);
+        transferStatusUpdater.m389(transferRecord.f322, TransferState.IN_PROGRESS);
+        ProgressListener progressListenerM393 = transferStatusUpdater.m393(transferRecord.f322);
         try {
-            GetObjectRequest getObjectRequest = new GetObjectRequest(transferRecord.f310, transferRecord.f316);
-            TransferUtility.m405(getObjectRequest);
-            File file = new File(transferRecord.f333);
+            GetObjectRequest getObjectRequest = new GetObjectRequest(transferRecord.f301, transferRecord.f308);
+            TransferUtility.m399(getObjectRequest);
+            File file = new File(transferRecord.f311);
             long length = file.length();
             if (length > 0) {
                 try {
-                    log.mo298(String.format("Resume transfer %d from %d bytes", Integer.valueOf(transferRecord.f328), Long.valueOf(length)));
-                    getObjectRequest.m570(length, -1L);
+                    log.mo291(String.format("Resume transfer %d from %d bytes", Integer.valueOf(transferRecord.f322), Long.valueOf(length)));
+                    getObjectRequest.m563(length, -1L);
                 } catch (Exception e2) {
                     e = e2;
                     Exception exc = e;
-                    if (TransferState.PENDING_CANCEL.equals(transferRecord.f325)) {
-                        int i = transferRecord.f328;
+                    if (TransferState.PENDING_CANCEL.equals(transferRecord.f296)) {
+                        int i = transferRecord.f322;
                         TransferState transferState = TransferState.CANCELED;
-                        transferStatusUpdater.m395(i, transferState);
-                        log.mo296("Transfer is " + transferState);
+                        transferStatusUpdater.m389(i, transferState);
+                        log.mo288("Transfer is " + transferState);
                         return Boolean.FALSE;
                     }
-                    if (TransferState.PENDING_PAUSE.equals(transferRecord.f325)) {
-                        int i2 = transferRecord.f328;
+                    if (TransferState.PENDING_PAUSE.equals(transferRecord.f296)) {
+                        int i2 = transferRecord.f322;
                         TransferState transferState2 = TransferState.PAUSED;
-                        transferStatusUpdater.m395(i2, transferState2);
-                        log.mo296("Transfer is " + transferState2);
-                        new ProgressEvent(0L).m227(32);
-                        ((TransferStatusUpdater.TransferProgressListener) progressListenerM399).mo229(new ProgressEvent(0L));
+                        transferStatusUpdater.m389(i2, transferState2);
+                        log.mo288("Transfer is " + transferState2);
+                        new ProgressEvent(0L).m221(32);
+                        ((TransferStatusUpdater.TransferProgressListener) progressListenerM393).mo223(new ProgressEvent(0L));
                         return Boolean.FALSE;
                     }
                     try {
-                        TransferNetworkLossHandler.m381();
-                        if (!TransferNetworkLossHandler.m381().m382()) {
-                            log.mo296("Thread:[" + Thread.currentThread().getId() + "]: Network wasn't available.");
-                            transferStatusUpdater.m395(transferRecord.f328, TransferState.WAITING_FOR_NETWORK);
-                            log.mo298("Network Connection Interrupted: Moving the TransferState to WAITING_FOR_NETWORK");
-                            new ProgressEvent(0L).m227(32);
-                            ((TransferStatusUpdater.TransferProgressListener) progressListenerM399).mo229(new ProgressEvent(0L));
+                        TransferNetworkLossHandler.m375();
+                        if (!TransferNetworkLossHandler.m375().m376()) {
+                            log.mo288("Thread:[" + Thread.currentThread().getId() + "]: Network wasn't available.");
+                            transferStatusUpdater.m389(transferRecord.f322, TransferState.WAITING_FOR_NETWORK);
+                            log.mo291("Network Connection Interrupted: Moving the TransferState to WAITING_FOR_NETWORK");
+                            new ProgressEvent(0L).m221(32);
+                            ((TransferStatusUpdater.TransferProgressListener) progressListenerM393).mo223(new ProgressEvent(0L));
                             return Boolean.FALSE;
                         }
                     } catch (TransferUtilityException e3) {
-                        log.mo292("TransferUtilityException: [" + e3 + "]");
+                        log.mo285("TransferUtilityException: [" + e3 + "]");
                     }
-                    if (RetryUtils.m433(exc)) {
-                        log.mo296("Transfer is interrupted. " + exc);
-                        transferStatusUpdater.m395(transferRecord.f328, TransferState.FAILED);
+                    if (RetryUtils.m427(exc)) {
+                        log.mo288("Transfer is interrupted. " + exc);
+                        transferStatusUpdater.m389(transferRecord.f322, TransferState.FAILED);
                         return Boolean.FALSE;
                     }
-                    log.mo298("Failed to download: " + transferRecord.f328 + " due to " + exc.getMessage());
-                    transferStatusUpdater.m396(transferRecord.f328, exc);
-                    transferStatusUpdater.m395(transferRecord.f328, TransferState.FAILED);
+                    log.mo291("Failed to download: " + transferRecord.f322 + " due to " + exc.getMessage());
+                    transferStatusUpdater.m390(transferRecord.f322, exc);
+                    transferStatusUpdater.m389(transferRecord.f322, TransferState.FAILED);
                     return Boolean.FALSE;
                 }
             }
-            getObjectRequest.mo159(progressListenerM399);
-            S3Object s3ObjectMo437 = this.f280.mo437(getObjectRequest);
-            if (s3ObjectMo437 == null) {
-                transferStatusUpdater.m396(transferRecord.f328, new IllegalStateException("AmazonS3.getObject returns null"));
-                transferStatusUpdater.m395(transferRecord.f328, TransferState.FAILED);
+            getObjectRequest.mo153(progressListenerM393);
+            S3Object s3ObjectMo431 = this.f270.mo431(getObjectRequest);
+            if (s3ObjectMo431 == null) {
+                transferStatusUpdater.m390(transferRecord.f322, new IllegalStateException("AmazonS3.getObject returns null"));
+                transferStatusUpdater.m389(transferRecord.f322, TransferState.FAILED);
                 return Boolean.FALSE;
             }
-            long jM616 = s3ObjectMo437.m653().m616();
-            this.f279.m394(transferRecord.f328, length, jM616, true);
-            m352(s3ObjectMo437.m650(), file);
-            this.f279.m394(transferRecord.f328, jM616, jM616, true);
-            transferStatusUpdater.m395(transferRecord.f328, TransferState.COMPLETED);
+            long jM608 = s3ObjectMo431.m647().m608();
+            this.f269.m388(transferRecord.f322, length, jM608, true);
+            m346(s3ObjectMo431.m644(), file);
+            this.f269.m388(transferRecord.f322, jM608, jM608, true);
+            transferStatusUpdater.m389(transferRecord.f322, TransferState.COMPLETED);
             return Boolean.TRUE;
         } catch (Exception e4) {
             e = e4;
@@ -126,9 +126,9 @@ public class DownloadTask implements Callable {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m352(S3ObjectInputStream s3ObjectInputStream, File file) throws Throwable {
+    public static void m346(S3ObjectInputStream s3ObjectInputStream, File file) throws Throwable {
         BufferedOutputStream bufferedOutputStream;
-        Log log = f277;
+        Log log = f267;
         File parentFile = file.getParentFile();
         if (parentFile != null && !parentFile.exists()) {
             parentFile.mkdirs();
@@ -146,7 +146,7 @@ public class DownloadTask implements Callable {
                             try {
                                 break;
                             } catch (IOException e) {
-                                log.mo297("got exception", e);
+                                log.mo289("got exception", e);
                             }
                         }
                     }
@@ -154,12 +154,12 @@ public class DownloadTask implements Callable {
                     try {
                         s3ObjectInputStream.close();
                     } catch (IOException e2) {
-                        log.mo297("got exception", e2);
+                        log.mo289("got exception", e2);
                     }
                 } catch (SocketTimeoutException e3) {
                     e = e3;
                     String str = "SocketTimeoutException: Unable to retrieve contents over network: " + e.getMessage();
-                    log.mo292(str);
+                    log.mo285(str);
                     throw new AmazonClientException(str, e);
                 } catch (IOException e4) {
                     e = e4;
@@ -170,7 +170,7 @@ public class DownloadTask implements Callable {
                         try {
                             bufferedOutputStream.close();
                         } catch (IOException e5) {
-                            log.mo297("got exception", e5);
+                            log.mo289("got exception", e5);
                         }
                     }
                     if (s3ObjectInputStream != null) {
@@ -178,7 +178,7 @@ public class DownloadTask implements Callable {
                             s3ObjectInputStream.close();
                             throw th;
                         } catch (IOException e6) {
-                            log.mo297("got exception", e6);
+                            log.mo289("got exception", e6);
                             throw th;
                         }
                     }

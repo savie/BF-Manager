@@ -1,36 +1,45 @@
 package l;
 
-import java.util.function.DoublePredicate;
-import java.util.function.IntPredicate;
-import java.util.function.LongPredicate;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.۫ܰ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12447 implements Supplier {
-    public final /* synthetic */ int a;
-    public final /* synthetic */ EnumC0120 b;
-    public final /* synthetic */ Object c;
+/* JADX INFO: renamed from: l.ۨܶۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S4Y9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12447 {
 
-    public /* synthetic */ C12447(EnumC0120 enumC0120, Object obj, int i) {
-        this.a = i;
-        this.b = enumC0120;
-        this.c = obj;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f40010;
+
+    public C12447(ArrayList arrayList) {
+        this.f40010 = new int[arrayList.size()];
+        int iMo3033 = 0;
+        for (int i = 0; i < arrayList.size(); i++) {
+            this.f40010[i] = iMo3033;
+            iMo3033 += ((InterfaceC23331) arrayList.get(i)).mo3033();
+        }
     }
 
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        switch (this.a) {
-            case 0:
-                return new C16618(this.b, (LongPredicate) this.c);
-            case 1:
-                return new C18028(this.b, (IntPredicate) this.c);
-            case 2:
-                return new C13527(this.b, (DoublePredicate) this.c);
-            default:
-                return new C11679(this.b, (Predicate) this.c);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m30917(int i, boolean z) {
+        int iBinarySearch = Arrays.binarySearch(this.f40010, i);
+        if (iBinarySearch >= 0) {
+            return iBinarySearch;
         }
+        if (z) {
+            throw new C20652(null, "No instruction at offset %d", Integer.valueOf(i));
+        }
+        return (~iBinarySearch) - 1;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m30916(int i) {
+        if (i >= 0) {
+            int[] iArr = this.f40010;
+            if (i < iArr.length) {
+                return iArr[i];
+            }
+        }
+        throw new C3498(null, "Instruction index out of bounds: %d", Integer.valueOf(i));
     }
 }

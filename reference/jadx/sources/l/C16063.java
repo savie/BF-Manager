@@ -1,34 +1,46 @@
 package l;
 
-import java.util.function.Supplier;
+import java.util.function.LongConsumer;
+import java.util.function.LongPredicate;
 
-/* JADX INFO: renamed from: l.ܺܽܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X7LT */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16063 {
+/* JADX INFO: renamed from: l.ܶۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16063 extends AbstractC21857 implements InterfaceC1148 {
+    public final /* synthetic */ EnumC17381 c;
+    public final /* synthetic */ LongPredicate d;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC14592 f51965 = C11064.of(new C8721(2), new C9008(), new C10419(), new C21051(6), new EnumC23764[0]);
-
-    static {
-        C11064.of(new C18375(2), new C7596(), new C21001(), new C1533(6), new EnumC23764[0]);
-        final int i = 1;
-        C11064.of(new Supplier() { // from class: l.᩷ܳۘ
-            @Override // java.util.function.Supplier
-            public final Object get() {
-                switch (i) {
-                    case 0:
-                        return new C11018();
-                    default:
-                        int i2 = C17493.f55648;
-                        return new C16788();
-                }
-            }
-        }, new C8302(), new C19591(), new C8215(5), new EnumC23764[0]);
+    @Override // java.util.function.Consumer
+    public final /* bridge */ /* synthetic */ void accept(Object obj) {
+        l((Long) obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC14592 m38064() {
-        return f51965;
+    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
+        return C18279.$default$andThen(this, longConsumer);
+    }
+
+    @Override // l.InterfaceC1148
+    public final /* synthetic */ void l(Long l2) {
+        AbstractC13956.r(this, l2);
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C16063(EnumC17381 enumC17381, LongPredicate longPredicate) {
+        super(enumC17381);
+        this.c = enumC17381;
+        this.d = longPredicate;
+    }
+
+    @Override // l.AbstractC21857, l.InterfaceC15143
+    public final void accept(long j) {
+        if (this.a) {
+            return;
+        }
+        boolean zTest = this.d.test(j);
+        EnumC17381 enumC17381 = this.c;
+        if (zTest == enumC17381.a) {
+            this.a = true;
+            this.b = enumC17381.b;
+        }
     }
 }

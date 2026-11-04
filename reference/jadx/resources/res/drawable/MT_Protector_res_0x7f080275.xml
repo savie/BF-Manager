@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/MT_Protector_res_0x7f080274">
-    <set
-        android:interpolator="@interpolator/MT_Protector_res_0x7f0c0007"
-        android:shareInterpolator="true">
-        <target
-            android:name="@string/MT_Protector_res_0x7f120685"
-            android:animation="@drawable/MT_Protector_res_0x7f080025"/>
-        <target
-            android:name="@string/MT_Protector_res_0x7f120685"
-            android:animation="@drawable/MT_Protector_res_0x7f080026"/>
-    </set>
-</animated-vector>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:state_checked="true"
+        android:id="@+id/MT_Protector_res_0x7f0a0102"
+        android:drawable="@drawable/MT_Protector_res_0x7f080282"/>
+    <item
+        android:id="@+id/MT_Protector_res_0x7f0a02aa"
+        android:drawable="@drawable/MT_Protector_res_0x7f080286"
+        app:state_indeterminate="true"/>
+    <item
+        android:state_checked="false"
+        android:id="@+id/MT_Protector_res_0x7f0a06aa"
+        android:drawable="@android:color/transparent"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f080277"
+        android:toId="@+id/MT_Protector_res_0x7f0a06aa"
+        android:fromId="@+id/MT_Protector_res_0x7f0a0102"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f08027a"
+        android:toId="@+id/MT_Protector_res_0x7f0a0102"
+        android:fromId="@+id/MT_Protector_res_0x7f0a06aa"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f080279"
+        android:toId="@+id/MT_Protector_res_0x7f0a06aa"
+        android:fromId="@+id/MT_Protector_res_0x7f0a02aa"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f08027b"
+        android:toId="@+id/MT_Protector_res_0x7f0a02aa"
+        android:fromId="@+id/MT_Protector_res_0x7f0a06aa"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f080278"
+        android:toId="@+id/MT_Protector_res_0x7f0a0102"
+        android:fromId="@+id/MT_Protector_res_0x7f0a02aa"/>
+    <transition
+        android:drawable="@drawable/MT_Protector_res_0x7f080276"
+        android:toId="@+id/MT_Protector_res_0x7f0a02aa"
+        android:fromId="@+id/MT_Protector_res_0x7f0a0102"/>
+</animated-selector>

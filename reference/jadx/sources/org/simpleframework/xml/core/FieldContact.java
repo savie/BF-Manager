@@ -3,7 +3,7 @@ package org.simpleframework.xml.core;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import l.C7997;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.simpleframework.xml.util.Cache;
 import org.simpleframework.xml.util.ConcurrentCache;
 
@@ -99,6 +99,6 @@ public class FieldContact implements Contact {
 
     @Override // org.simpleframework.xml.core.Contact, org.simpleframework.xml.strategy.Type
     public String toString() {
-        return C7997.m21055("field '", getName(), "' ", this.field.toString());
+        return ExternalValue$$ExternalSyntheticOutline0.m("field '", getName(), "' ", this.field.toString());
     }
 }

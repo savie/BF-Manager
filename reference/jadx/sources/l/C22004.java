@@ -1,67 +1,63 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.TypedArray;
+import android.os.Build;
+import com.tencent.connect.common.AssistActivity;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-/* JADX INFO: renamed from: l.᩹ۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P71B */
+/* JADX INFO: renamed from: l.᩷ۤ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51RR */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22004 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f71344;
-
+public final class C22004 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f71345;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f71346;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f71347;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f71348;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long f71349;
-
-    public C22004(int i, int i2, int i3, long j, boolean z, boolean z2) {
-        this.f71347 = i;
-        this.f71346 = i2;
-        this.f71344 = i3;
-        this.f71349 = j;
-        this.f71345 = z;
-        this.f71348 = z2;
+    public static void m49740(AssistActivity assistActivity) {
+        if (Build.VERSION.SDK_INT == 26 && m49741(assistActivity)) {
+            boolean z = false;
+            try {
+                Field declaredField = Activity.class.getDeclaredField("mActivityInfo");
+                declaredField.setAccessible(true);
+                ((ActivityInfo) declaredField.get(assistActivity)).screenOrientation = -1;
+                declaredField.setAccessible(false);
+                z = true;
+            } catch (Throwable th) {
+                C21587.m49112("ActivityFixUtils", "fixOrientation exception", th);
+            }
+            C21587.m49113("ActivityFixUtils", "onCreate fixOrientation when Oreo, result = " + z);
+        }
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C22004)) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m49742(AssistActivity assistActivity) {
+        if (Build.VERSION.SDK_INT != 26 || !m49741(assistActivity)) {
             return false;
         }
-        C22004 c22004 = (C22004) obj;
-        return this.f71345 == c22004.f71345 && this.f71348 == c22004.f71348 && this.f71347 == c22004.f71347 && this.f71346 == c22004.f71346 && this.f71344 == c22004.f71344 && this.f71349 == c22004.f71349;
+        C21587.m49113("ActivityFixUtils", "avoid calling setRequestedOrientation when Oreo.");
+        return true;
     }
 
-    public final int hashCode() {
-        int i = (((((((((this.f71345 ? 1231 : 1237) * 31) + (this.f71348 ? 1231 : 1237)) * 31) + this.f71347) * 31) + this.f71346) * 31) + this.f71344) * 31;
-        long j = this.f71349;
-        return i + ((int) (j ^ (j >>> 32)));
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f71347), Integer.valueOf(this.f71346), Integer.valueOf(this.f71344), Long.valueOf(this.f71349), Boolean.valueOf(this.f71345), Boolean.valueOf(this.f71348)};
-        String[] strArrSplit = "height;length;leaves;patchBytes;allDelta;allMemory".length() == 0 ? new String[0] : "height;length;leaves;patchBytes;allDelta;allMemory".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C22004.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m49741(AssistActivity assistActivity) {
+        Throwable th;
+        boolean zBooleanValue;
+        try {
+            TypedArray typedArrayObtainStyledAttributes = assistActivity.obtainStyledAttributes((int[]) Class.forName("com.android.internal.R$styleable").getField("Window").get(null));
+            Method method = ActivityInfo.class.getMethod("isTranslucentOrFloating", TypedArray.class);
+            method.setAccessible(true);
+            zBooleanValue = ((Boolean) method.invoke(null, typedArrayObtainStyledAttributes)).booleanValue();
+            try {
+                method.setAccessible(false);
+                return zBooleanValue;
+            } catch (Throwable th2) {
+                th = th2;
+                C21587.m49112("ActivityFixUtils", "isTranslucentOrFloating exception", th);
+                return zBooleanValue;
             }
+        } catch (Throwable th3) {
+            th = th3;
+            zBooleanValue = false;
         }
-        sb.append("]");
-        return sb.toString();
     }
 }

@@ -197,13 +197,11 @@
     invoke-direct {v1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;-><init>()V
 
     .line 49
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Ll/֨᩷ۘ;
+    new-instance v2, Ll/ܽۚۧ;
 
-    const/4 v3, 0x5
-
-    invoke-direct {v2, v3, p1}, Ll/֨᩷ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, p1}, Ll/ܽۚۧ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -212,11 +210,9 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/ProgressDialog;->titleUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 50
-    new-instance p1, Ll/۫᩸᩹;
+    new-instance p1, Ll/۠ܺۧ;
 
-    const/4 v2, 0x5
-
-    invoke-direct {p1, v2, p0}, Ll/۫᩸᩹;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p0}, Ll/۠ܺۧ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v1, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -225,13 +221,11 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/ProgressDialog;->messageUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 64
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Ll/᩸᩵ۖ;
+    new-instance p1, Ll/ܿۛܳ;
 
-    const/4 v2, 0x6
-
-    invoke-direct {p1, v2, v0}, Ll/᩸᩵ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ll/ܿۛܳ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v1, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -240,11 +234,11 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/ProgressDialog;->progressUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 65
-    new-instance p1, Ll/ᩳ᩶ۨ;
+    new-instance p1, Ll/۬ۧۧ;
 
-    const/4 v2, 0x7
+    const/4 v2, 0x4
 
-    invoke-direct {p1, v2, v0}, Ll/ᩳ᩶ۨ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v2, v0}, Ll/۬ۧۧ;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v1, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -366,11 +360,11 @@
     .locals 2
 
     .line 196
-    new-instance v0, Ll/᩶᩷ۘ;
+    new-instance v0, Ll/᩹ۙ۫;
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Ll/᩶᩷ۘ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/᩹ۙ۫;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->runOnUiThread(Ljava/lang/Runnable;)V
 

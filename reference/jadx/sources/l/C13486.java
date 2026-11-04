@@ -1,171 +1,112 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import org.bouncycastle.crypto.engines.ThreefishEngine;
+import java.util.HashMap;
+import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
+import org.bouncycastle.crypto.params.Argon2Parameters;
 
-/* JADX INFO: renamed from: l.ܰ֨۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7L3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13486 {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m32995(String str) {
-        int i;
-        char cCharAt;
-        if (str == null || str.isEmpty()) {
-            return str;
-        }
-        ArrayList arrayListM32993 = m32993(str);
-        if (arrayListM32993.size() <= 1) {
-            return str.replaceAll("^[ \t]+", "");
-        }
-        Iterator it = arrayListM32993.iterator();
-        int iMin = Integer.MAX_VALUE;
-        while (true) {
-            i = 0;
-            if (!it.hasNext()) {
-                break;
-            }
-            String str2 = (String) it.next();
-            if (!str2.trim().isEmpty()) {
-                int i2 = 0;
-                while (i < str2.length() && ((cCharAt = str2.charAt(i)) == ' ' || cCharAt == '\t')) {
-                    i2++;
-                    i++;
-                }
-                iMin = Math.min(iMin, i2);
-            }
-        }
-        if (iMin == Integer.MAX_VALUE) {
-            return str;
-        }
-        StringBuilder sb = new StringBuilder();
-        while (i < arrayListM32993.size()) {
-            String str3 = (String) arrayListM32993.get(i);
-            if (str3.trim().isEmpty()) {
-                sb.append("");
-            } else if (str3.length() >= iMin) {
-                sb.append(str3.substring(iMin));
-            } else {
-                sb.append(str3);
-            }
-            if (i < arrayListM32993.size() - 1) {
-                sb.append("\n");
-            }
-            i++;
-        }
-        return sb.toString();
-    }
+/* JADX INFO: renamed from: l.۬֡ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7YJ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13486 implements InterfaceC3570 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m32993(String str) {
-        ArrayList arrayList = new ArrayList();
-        StringBuilder sb = new StringBuilder();
-        int i = 0;
-        while (i < str.length()) {
-            char cCharAt = str.charAt(i);
-            if (cCharAt == '\r') {
-                arrayList.add(sb.toString());
-                sb = new StringBuilder();
-                int i2 = i + 1;
-                if (i2 < str.length() && str.charAt(i2) == '\n') {
-                    i = i2;
-                }
-            } else if (cCharAt == '\n') {
-                arrayList.add(sb.toString());
-                sb = new StringBuilder();
-            } else {
-                sb.append(cCharAt);
-            }
-            i++;
-        }
-        if (sb.length() > 0) {
-            arrayList.add(sb.toString());
-        }
-        return arrayList;
+    public Argon2BytesGenerator f42902;
+
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11616(byte[] bArr) throws C2079 {
+        throw new C2079("initWithOpenSSHv1KDFOptions() not supported");
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String m32994(String str) {
-        if (str.isEmpty()) {
-            return "";
-        }
-        char[] charArray = str.toCharArray();
-        int length = charArray.length;
-        int i = 0;
-        int i2 = 0;
-        while (i < length) {
-            int i3 = i + 1;
-            char c = charArray[i];
-            if (c == '\\') {
-                if (i3 < length) {
-                    i += 2;
-                    c = charArray[i3];
-                } else {
-                    i = i3;
-                    c = 0;
-                }
-                if (c == '\n') {
-                    continue;
-                } else if (c != '\r') {
-                    if (c != '\"' && c != '\'' && c != '\\') {
-                        if (c == 'b') {
-                            c = '\b';
-                        } else if (c == 'f') {
-                            c = '\f';
-                        } else if (c != 'n') {
-                            switch (c) {
-                                case '0':
-                                case '1':
-                                case '2':
-                                case '3':
-                                case '4':
-                                case '5':
-                                case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
-                                case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
-                                    int iMin = Math.min((c > '3' ? 1 : 2) + i, length);
-                                    int i4 = c - '0';
-                                    while (i < iMin) {
-                                        char c2 = charArray[i];
-                                        if (c2 < '0' || '7' < c2) {
-                                            c = (char) i4;
-                                        } else {
-                                            i++;
-                                            i4 = (i4 << 3) | (c2 - '0');
-                                        }
-                                        break;
-                                    }
-                                    c = (char) i4;
-                                    break;
-                                default:
-                                    switch (c) {
-                                        case 'r':
-                                            c = '\r';
-                                            break;
-                                        case 's':
-                                            c = ' ';
-                                            break;
-                                        case 't':
-                                            c = '\t';
-                                            break;
-                                        default:
-                                            throw new IllegalArgumentException(String.format("Invalid escape sequence: \\%c \\\\u%04X", Character.valueOf(c), Integer.valueOf(c)));
-                                    }
-                                    break;
-                            }
-                        } else {
-                            c = '\n';
-                        }
-                    }
-                } else if (i < length && charArray[i] == '\n') {
-                    i++;
-                }
-            } else {
-                i = i3;
+    /* JADX WARN: Code duplicated, block: B:25:0x007e A[Catch: NumberFormatException -> 0x00d4, LOOP:0: B:24:0x007c->B:25:0x007e, LOOP_END, TryCatch #0 {NumberFormatException -> 0x00d4, blocks: (B:3:0x0002, B:6:0x0016, B:8:0x001e, B:14:0x0032, B:23:0x004f, B:25:0x007e, B:26:0x0092, B:28:0x00c8, B:29:0x00cd, B:17:0x003c, B:20:0x0046, B:30:0x00ce, B:31:0x00d3), top: B:35:0x0002 }] */
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11615(HashMap map) throws C2079 {
+        int i;
+        int length;
+        byte[] bArr;
+        int i2;
+        try {
+            String str = (String) map.get("Key-Derivation");
+            String str2 = (String) map.get("Argon2-Salt");
+            if (str == null || str2 == null || str2.length() % 2 != 0) {
+                throw new C2079("Invalid argon2 params.");
             }
-            charArray[i2] = c;
-            i2++;
+            int iHashCode = str.hashCode();
+            if (iHashCode == -1530598888) {
+                if (str.equals("Argon2id")) {
+                    i = 2;
+                    int i3 = Integer.parseInt((String) map.get("Argon2-Memory"));
+                    int i4 = Integer.parseInt((String) map.get("Argon2-Passes"));
+                    int i5 = Integer.parseInt((String) map.get("Argon2-Parallelism"));
+                    length = str2.length() / 2;
+                    bArr = new byte[length];
+                    for (i2 = 0; i2 < length; i2++) {
+                        int i6 = i2 * 2;
+                        bArr[i2] = (byte) Integer.parseInt(str2.substring(i6, i6 + 2), 16);
+                    }
+                    Argon2Parameters argon2ParametersBuild = new Argon2Parameters.Builder(i).withSalt(bArr).withAdditional(new byte[0]).withSecret(new byte[0]).withIterations(i4).withMemoryAsKB(i3).withParallelism(i5).withVersion(19).build();
+                    Argon2BytesGenerator argon2BytesGenerator = new Argon2BytesGenerator();
+                    this.f42902 = argon2BytesGenerator;
+                    argon2BytesGenerator.init(argon2ParametersBuild);
+                    return;
+                }
+                throw new C2079("Invalid argon2 params.");
+            }
+            if (iHashCode != 920457159) {
+                if (iHashCode == 920457164 && str.equals("Argon2i")) {
+                    i = 1;
+                    int i7 = Integer.parseInt((String) map.get("Argon2-Memory"));
+                    int i8 = Integer.parseInt((String) map.get("Argon2-Passes"));
+                    int i9 = Integer.parseInt((String) map.get("Argon2-Parallelism"));
+                    length = str2.length() / 2;
+                    bArr = new byte[length];
+                    while (i2 < length) {
+                        int i10 = i2 * 2;
+                        bArr[i2] = (byte) Integer.parseInt(str2.substring(i10, i10 + 2), 16);
+                    }
+                    Argon2Parameters argon2ParametersBuild2 = new Argon2Parameters.Builder(i).withSalt(bArr).withAdditional(new byte[0]).withSecret(new byte[0]).withIterations(i8).withMemoryAsKB(i7).withParallelism(i9).withVersion(19).build();
+                    Argon2BytesGenerator argon2BytesGenerator2 = new Argon2BytesGenerator();
+                    this.f42902 = argon2BytesGenerator2;
+                    argon2BytesGenerator2.init(argon2ParametersBuild2);
+                    return;
+                }
+                throw new C2079("Invalid argon2 params.");
+            }
+            if (str.equals("Argon2d")) {
+                i = 0;
+                int i11 = Integer.parseInt((String) map.get("Argon2-Memory"));
+                int i12 = Integer.parseInt((String) map.get("Argon2-Passes"));
+                int i13 = Integer.parseInt((String) map.get("Argon2-Parallelism"));
+                length = str2.length() / 2;
+                bArr = new byte[length];
+                while (i2 < length) {
+                    int i14 = i2 * 2;
+                    bArr[i2] = (byte) Integer.parseInt(str2.substring(i14, i14 + 2), 16);
+                }
+                Argon2Parameters argon2ParametersBuild3 = new Argon2Parameters.Builder(i).withSalt(bArr).withAdditional(new byte[0]).withSecret(new byte[0]).withIterations(i12).withMemoryAsKB(i11).withParallelism(i13).withVersion(19).build();
+                Argon2BytesGenerator argon2BytesGenerator3 = new Argon2BytesGenerator();
+                this.f42902 = argon2BytesGenerator3;
+                argon2BytesGenerator3.init(argon2ParametersBuild3);
+                return;
+            }
+            throw new C2079("Invalid argon2 params.");
+        } catch (NumberFormatException e) {
+            throw new C2079("Invalid argon2 params.", e);
         }
-        return new String(charArray, 0, i2);
+    }
+
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo11618(byte[] bArr) throws C2079 {
+        throw new C2079("initWithASN1() not supported");
+    }
+
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ۙ */
+    public final byte[] mo11617(int i, byte[] bArr) {
+        byte[] bArr2 = new byte[i];
+        this.f42902.generateBytes(bArr, bArr2);
+        return bArr2;
     }
 }

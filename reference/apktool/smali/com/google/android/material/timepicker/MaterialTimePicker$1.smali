@@ -60,7 +60,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$1;->this$0:Lcom/google/android/material/timepicker/MaterialTimePicker;
 
-    invoke-virtual {p1}, Ll/ۧ᩹ۙ;->dismiss()V
+    invoke-virtual {p1}, Ll/ᩳܳۙ;->dismiss()V
 
     return-void
 .end method

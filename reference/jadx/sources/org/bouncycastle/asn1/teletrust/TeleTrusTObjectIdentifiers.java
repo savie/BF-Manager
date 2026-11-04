@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.teletrust;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface TeleTrusTObjectIdentifiers {
     public static final ASN1ObjectIdentifier brainpoolP160r1;
     public static final ASN1ObjectIdentifier brainpoolP160t1;

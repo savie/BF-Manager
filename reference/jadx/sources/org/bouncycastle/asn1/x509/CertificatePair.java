@@ -1,8 +1,8 @@
 package org.bouncycastle.asn1.x509;
 
 import java.util.Enumeration;
-import l.C12441;
-import l.C8550;
+import l.C14483;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -11,14 +11,14 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertificatePair extends ASN1Object {
     public Certificate forward;
     public Certificate reverse;
 
     public CertificatePair(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 1 && aSN1Sequence.size() != 2) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         Enumeration objects = aSN1Sequence.getObjects();
         while (objects.hasMoreElements()) {
@@ -68,6 +68,6 @@ public class CertificatePair extends ASN1Object {
         if (obj instanceof ASN1Sequence) {
             return new CertificatePair((ASN1Sequence) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 }

@@ -1,38 +1,47 @@
 package l;
 
-import sun.misc.Unsafe;
+import java.io.Closeable;
+import java.io.IOException;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۨ۬۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: H6Q8 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11720 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final long f39393;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C11369 f39394 = new C11369();
+/* JADX INFO: renamed from: l.ۧܺۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7QT */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C11720 implements Consumer {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Unsafe f39395;
+    public final /* synthetic */ int f37923;
 
-    static {
-        Unsafe unsafe = C10309.f35350;
-        f39395 = unsafe;
-        try {
-            f39393 = unsafe.objectFieldOffset(C11369.class.getDeclaredField("ۙ"));
-        } catch (Exception e) {
-            throw new ExceptionInInitializerError(e);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f37924;
+
+    public /* synthetic */ C11720(int i, Object obj) {
+        this.f37923 = i;
+        this.f37924 = obj;
+    }
+
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        switch (this.f37923) {
+            case 0:
+                C18499 c18499 = (C18499) this.f37924;
+                try {
+                    ((Closeable) obj).close();
+                } catch (IOException e) {
+                    c18499.m43089(e);
+                }
+                break;
+            default:
+                String str = (String) this.f37924;
+                InterfaceC6238 interfaceC6238 = (AbstractC16481) obj;
+                if (interfaceC6238 instanceof InterfaceC3057) {
+                    ((InterfaceC3057) interfaceC6238).setName(str);
+                }
+                break;
         }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m29304() {
-        f39395.putOrderedInt(f39394, f39393, 0);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m29303() {
-        f39395.putIntVolatile(f39394, f39393, 0);
     }
 }

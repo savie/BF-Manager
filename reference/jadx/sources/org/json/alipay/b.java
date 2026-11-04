@@ -4,8 +4,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import l.C20630;
-import l.C9576;
+import l.C1402;
+import l.C4791;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
@@ -91,9 +91,9 @@ public class b {
             return string;
         }
         while (string.endsWith("0")) {
-            string = C20630.m46498(1, 0, string);
+            string = C1402.m5124(1, 0, string);
         }
-        return string.endsWith(".") ? C20630.m46498(1, 0, string) : string;
+        return string.endsWith(".") ? C1402.m5124(1, 0, string) : string;
     }
 
     public static void a(Object obj) throws JSONException {
@@ -226,8 +226,8 @@ public class b {
                                 break;
                             default:
                                 if (cCharAt < ' ' || ((cCharAt >= 128 && cCharAt < 160) || (cCharAt >= 8192 && cCharAt < 8448))) {
-                                    String strM24440 = C9576.m24440(new StringBuilder("000"), cCharAt);
-                                    str2 = "\\u" + strM24440.substring(strM24440.length() - 4);
+                                    String strM14766 = C4791.m14766(new StringBuilder("000"), cCharAt);
+                                    str2 = "\\u" + strM14766.substring(strM14766.length() - 4);
                                 }
                                 break;
                         }

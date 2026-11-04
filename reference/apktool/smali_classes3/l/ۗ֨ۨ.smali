@@ -1,65 +1,155 @@
 .class public final Ll/ۗ֨ۨ;
-.super Ll/ᩳۖۨ;
-.source "Z9R4"
+.super Ll/ܰۡۨ;
+.source "25GH"
+
+# interfaces
+.implements Ll/ۢۡۨ;
+
+
+# static fields
+.field public static final ᩴ:Ll/ۛۡۨ;
 
 
 # instance fields
-.field public final ֡:Ljava/util/ArrayList;
+.field public ۤ:B
+
+.field public ᩸:B
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻۬ۨ;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
-    const/16 v0, 0x100
+    .line 41
+    new-instance v0, Ll/᩹֨ۨ;
 
-    .line 12
-    invoke-virtual {p1, v0}, Ll/᩻۬ۨ;->ܰ(I)Ljava/lang/String;
+    .line 82
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    .line 41
+    sput-object v0, Ll/ۗ֨ۨ;->ᩴ:Ll/ۛۡۨ;
 
-    invoke-virtual {p1, v0}, Ll/᩻۬ۨ;->ܰ(I)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>(Ll/۟ۡۨ;BBLl/ۤ۠ۨ;)V
+    .locals 0
 
-    invoke-direct {p0, v1, p1}, Ll/ᩳۖۨ;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 46
+    invoke-direct {p0, p1, p4}, Ll/ܰۡۨ;-><init>(Ll/۟ۡۨ;Ll/ۤ۠ۨ;)V
 
-    .line 9
-    new-instance p1, Ljava/util/ArrayList;
+    const/16 p1, 0x10
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    if-ge p2, p1, :cond_0
 
-    iput-object p1, p0, Ll/ۗ֨ۨ;->֡:Ljava/util/ArrayList;
+    if-ge p3, p1, :cond_0
+
+    .line 53
+    iput-byte p2, p0, Ll/ۗ֨ۨ;->ۤ:B
+
+    .line 54
+    iput-byte p3, p0, Ll/ۗ֨ۨ;->᩸:B
+
+    return-void
+
+    .line 50
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string p2, "The register number must be less than v16"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)V
+    .locals 0
+
+    .line 58
+    invoke-direct {p0, p1, p2, p3, p4}, Ll/ܰۡۨ;-><init>(Ll/᩻ۖۨ;Ll/۟ۡۨ;[BI)V
+
+    add-int/lit8 p4, p4, 0x1
+
+    .line 60
+    aget-byte p1, p3, p4
+
+    and-int/lit8 p2, p1, 0xf
+
+    int-to-byte p2, p2
+
+    iput-byte p2, p0, Ll/ۗ֨ۨ;->ۤ:B
+
+    .line 61
+    invoke-static {p1}, Ll/ۨᩴۚ;->ۙ(B)B
+
+    move-result p1
+
+    iput-byte p1, p0, Ll/ۗ֨ۨ;->᩸:B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۟()I
+.method public final ۙ()I
     .locals 1
 
-    .line 17
-    iget-object v0, p0, Ll/ۗ֨ۨ;->֡:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
+    .line 75
+    iget-byte v0, p0, Ll/ۗ֨ۨ;->ۤ:B
 
     return v0
 .end method
 
-.method public final ᩳ(I)Ll/᩸֨ۨ;
+.method public final ۧ()Ll/۟ۢۨ;
     .locals 1
 
-    .line 22
-    iget-object v0, p0, Ll/ۗ֨ۨ;->֡:Ljava/util/ArrayList;
+    .line 71
+    sget-object v0, Ll/۟ۢۨ;->᩸ۙ:Ll/۟ۢۨ;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final ܺ()I
+    .locals 1
 
-    check-cast p1, Ll/ۙ۬ۨ;
+    .line 79
+    iget-byte v0, p0, Ll/ۗ֨ۨ;->᩸:B
 
-    return-object p1
+    return v0
+.end method
+
+.method public final ᩷(Ll/᩺۠ۨ;I)V
+    .locals 1
+
+    .line 65
+    iget-object p2, p0, Ll/᩺ۡۨ;->ۙ:Ll/۟ۡۨ;
+
+    iget-byte p2, p2, Ll/۟ۡۨ;->۟:B
+
+    invoke-virtual {p1, p2}, Ll/᩺۠ۨ;->᩷(I)V
+
+    .line 66
+    iget-byte p2, p0, Ll/ۗ֨ۨ;->᩸:B
+
+    shl-int/lit8 p2, p2, 0x4
+
+    iget-byte v0, p0, Ll/ۗ֨ۨ;->ۤ:B
+
+    or-int/2addr p2, v0
+
+    invoke-virtual {p1, p2}, Ll/᩺۠ۨ;->᩷(I)V
+
+    .line 67
+    invoke-virtual {p0}, Ll/ܰۡۨ;->᩻()Ll/ۤ۠ۨ;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll/ۤ۠ۨ;->ᩴ()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ll/᩺۠ۨ;->᩸(I)V
+
+    return-void
 .end method

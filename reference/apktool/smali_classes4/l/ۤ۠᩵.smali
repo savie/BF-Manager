@@ -1,472 +1,343 @@
-.class public final Ll/ۤ۠᩵;
-.super Ll/ܶۤ᩵;
-.source "Z90G"
+.class public Ll/ۤ۠᩵;
+.super Ll/ۙ۠᩵;
+.source "D94Y"
 
 
-# virtual methods
-.method public final ۙ(Ll/۠۠᩵;Ll/ᩴۤ᩵;)Ll/ۘ۠᩵;
-    .locals 13
+# direct methods
+.method public static synthetic ۙ(IILjava/lang/CharSequence;Ljava/lang/CharSequence;Z)I
+    .locals 6
 
-    .line 45
-    invoke-virtual {p1}, Ll/۠۠᩵;->ۨ()I
+    const/4 v5, 0x0
 
-    move-result v0
+    move-object v0, p2
 
-    const/4 v1, 0x4
+    move-object v1, p3
 
-    const/4 v2, 0x0
+    move v2, p0
 
-    if-lt v0, v1, :cond_0
+    move v3, p1
 
-    goto/16 :goto_b
+    move v4, p4
 
-    .line 49
+    .line 1008
+    invoke-static/range {v0 .. v5}, Ll/ۤ۠᩵;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;IIZZ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final ۙ(ILjava/lang/CharSequence;Ljava/lang/String;Z)I
+    .locals 6
+
+    const-string v0, "<this>"
+
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "string"
+
+    .line 10
+    invoke-static {p2, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p3, :cond_1
+
+    .line 1138
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    .line 1141
     :cond_0
-    invoke-virtual {p1}, Ll/۠۠᩵;->getLine()Ll/ۨۤ᩵;
+    check-cast p1, Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {p1, p2, p0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
-    .line 50
-    invoke-virtual {p1}, Ll/۠۠᩵;->ۖ()I
+    move-result p0
 
-    move-result p1
+    return p0
 
-    .line 51
-    invoke-virtual {v0}, Ll/ۨۤ᩵;->ۙ()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v1
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x23
-
-    if-ne v1, v5, :cond_c
-
-    .line 53
-    invoke-virtual {v0}, Ll/ۨۤ᩵;->ۙ()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    invoke-virtual {v0, p1, v1}, Ll/ۨۤ᩵;->ۙ(II)Ll/ۨۤ᩵;
-
-    move-result-object v1
-
-    .line 21
-    new-instance v6, Ll/ۖۤ᩵;
-
-    invoke-direct {v6}, Ll/ۖۤ᩵;-><init>()V
-
-    .line 22
-    invoke-virtual {v6, v1}, Ll/ۖۤ᩵;->ۙ(Ll/ۨۤ᩵;)V
-
-    .line 79
-    invoke-static {v6}, Ll/ۜۤ᩵;->ۙ(Ll/ۖۤ᩵;)Ll/ۜۤ᩵;
-
-    move-result-object v1
-
-    .line 80
-    invoke-virtual {v1, v5}, Ll/ۜۤ᩵;->ܰ(C)I
-
-    move-result v6
-
-    if-eqz v6, :cond_b
-
-    const/4 v7, 0x6
-
-    if-le v6, v7, :cond_1
-
-    goto/16 :goto_3
-
-    .line 86
+    .line 1139
     :cond_1
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ۙ()Z
-
-    move-result v7
-
-    if-nez v7, :cond_2
-
-    .line 88
-    new-instance v1, Ll/۟۠᩵;
-
-    .line 17
-    new-instance v5, Ll/ۖۤ᩵;
-
-    invoke-direct {v5}, Ll/ۖۤ᩵;-><init>()V
-
-    .line 88
-    invoke-direct {v1, v6, v5}, Ll/۟۠᩵;-><init>(ILl/ۖۤ᩵;)V
-
-    goto/16 :goto_4
-
-    .line 91
-    :cond_2
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ۨ()C
-
-    move-result v7
-
-    const/16 v8, 0x9
-
-    const/16 v9, 0x20
-
-    if-eq v7, v9, :cond_3
-
-    if-eq v7, v8, :cond_3
-
-    goto/16 :goto_3
-
-    .line 96
-    :cond_3
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->֨()I
-
-    .line 97
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->᩹()Ll/ۘۤ᩵;
-
-    move-result-object v7
-
-    move-object v10, v7
-
     :goto_0
-    const/4 v11, 0x1
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    .line 101
-    :goto_1
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ۙ()Z
+    move-result v3
 
-    move-result v12
+    const/4 v5, 0x0
 
-    if-eqz v12, :cond_9
+    move-object v0, p1
 
-    .line 102
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ۨ()C
+    move-object v1, p2
 
-    move-result v12
+    move v2, p0
 
-    if-eq v12, v8, :cond_8
+    move v4, p3
 
-    if-eq v12, v9, :cond_8
+    .line 1008
+    invoke-static/range {v0 .. v5}, Ll/ۤ۠᩵;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;IIZZ)I
 
-    if-eq v12, v5, :cond_4
+    move-result p0
 
-    .line 126
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ܰ()V
+    return p0
+.end method
 
-    .line 127
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->᩹()Ll/ۘۤ᩵;
+.method public static final ۙ(Ljava/lang/CharSequence;)I
+    .locals 1
 
-    move-result-object v10
+    const-string v0, "<this>"
 
-    goto :goto_2
+    .line 5
+    invoke-static {p0, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 389
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result p0
+
+    add-int/lit8 p0, p0, -0x1
+
+    return p0
+.end method
+
+.method public static final ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;IIZZ)I
+    .locals 7
+
+    const/4 v0, -0x1
+
+    if-nez p5, :cond_2
+
+    .line 1010
+    new-instance p5, Ll/֨ۡ᩵;
+
+    if-gez p2, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-le p3, v1, :cond_1
+
+    move p3, v1
+
+    :cond_1
+    const/4 v1, 0x1
+
+    .line 54
+    invoke-direct {p5, p2, p3, v1}, Ll/ᩳۡ᩵;-><init>(III)V
+
+    goto :goto_0
+
+    .line 1012
+    :cond_2
+    invoke-static {p0}, Ll/ۤ۠᩵;->ۙ(Ljava/lang/CharSequence;)I
+
+    move-result p5
+
+    if-le p2, p5, :cond_3
+
+    move p2, p5
+
+    :cond_3
+    if-gez p3, :cond_4
+
+    const/4 p3, 0x0
+
+    .line 134
     :cond_4
-    if-eqz v11, :cond_7
+    new-instance p5, Ll/ᩳۡ᩵;
 
-    .line 106
-    invoke-virtual {v1, v5}, Ll/ۜۤ᩵;->ܰ(C)I
+    invoke-direct {p5, p2, p3, v0}, Ll/ᩳۡ᩵;-><init>(III)V
 
-    .line 107
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->֨()I
+    .line 1014
+    :goto_0
+    instance-of p2, p0, Ljava/lang/String;
 
-    move-result v11
+    if-eqz p2, :cond_8
 
-    .line 110
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ۙ()Z
+    instance-of p2, p1, Ljava/lang/String;
 
-    move-result v12
+    if-eqz p2, :cond_8
 
-    if-eqz v12, :cond_5
+    .line 1015
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->getFirst()I
 
-    .line 111
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->᩹()Ll/ۘۤ᩵;
+    move-result p2
 
-    move-result-object v10
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->getLast()I
+
+    move-result p3
+
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->᩷()I
+
+    move-result p5
+
+    if-lez p5, :cond_5
+
+    if-le p2, p3, :cond_6
 
     :cond_5
-    if-lez v11, :cond_6
+    if-gez p5, :cond_f
 
-    goto :goto_0
+    if-gt p3, p2, :cond_f
 
+    .line 1016
     :cond_6
-    :goto_2
-    const/4 v11, 0x0
+    :goto_1
+    move-object v4, p1
 
-    goto :goto_1
+    check-cast v4, Ljava/lang/String;
 
-    .line 115
+    move-object v5, p0
+
+    check-cast v5, Ljava/lang/String;
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    const/4 v1, 0x0
+
+    move v2, p2
+
+    move v6, p4
+
+    invoke-static/range {v1 .. v6}, Ll/ۙ۠᩵;->ۙ(IIILjava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return p2
+
     :cond_7
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ܰ()V
+    if-eq p2, p3, :cond_f
 
-    .line 116
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->᩹()Ll/ۘۤ᩵;
-
-    move-result-object v10
+    add-int/2addr p2, p5
 
     goto :goto_1
 
-    .line 122
+    .line 1020
     :cond_8
-    invoke-virtual {v1}, Ll/ۜۤ᩵;->ܰ()V
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->getFirst()I
 
-    goto :goto_0
+    move-result p2
 
-    .line 131
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->getLast()I
+
+    move-result p3
+
+    invoke-virtual {p5}, Ll/ᩳۡ᩵;->᩷()I
+
+    move-result p5
+
+    if-lez p5, :cond_9
+
+    if-le p2, p3, :cond_a
+
     :cond_9
-    invoke-virtual {v1, v7, v10}, Ll/ۜۤ᩵;->ۙ(Ll/ۘۤ᩵;Ll/ۘۤ᩵;)Ll/ۖۤ᩵;
+    if-gez p5, :cond_f
 
-    move-result-object v1
+    if-gt p3, p2, :cond_f
 
-    .line 132
-    invoke-virtual {v1}, Ll/ۖۤ᩵;->ۙ()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 133
-    invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_a
-
-    .line 134
-    new-instance v1, Ll/۟۠᩵;
-
-    .line 17
-    new-instance v5, Ll/ۖۤ᩵;
-
-    invoke-direct {v5}, Ll/ۖۤ᩵;-><init>()V
-
-    .line 134
-    invoke-direct {v1, v6, v5}, Ll/۟۠᩵;-><init>(ILl/ۖۤ᩵;)V
-
-    goto :goto_4
-
-    .line 136
+    .line 1021
     :cond_a
-    new-instance v5, Ll/۟۠᩵;
+    :goto_2
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    invoke-direct {v5, v6, v1}, Ll/۟۠᩵;-><init>(ILl/ۖۤ᩵;)V
+    move-result v1
 
-    move-object v1, v5
+    const-string v2, "other"
+
+    invoke-static {p0, v2}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-ltz p2, :cond_e
+
+    .line 857
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    if-ltz v2, :cond_e
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    if-le p2, v2, :cond_b
 
     goto :goto_4
 
     :cond_b
+    const/4 v2, 0x0
+
     :goto_3
-    move-object v1, v2
+    if-ge v2, v1, :cond_d
 
-    :goto_4
-    if-eqz v1, :cond_c
+    .line 862
+    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
-    new-array p1, v3, [Ll/᩸ۤ᩵;
+    move-result v3
 
-    aput-object v1, p1, v4
+    add-int v4, p2, v2
 
-    .line 17
-    new-instance p2, Ll/ۘ۠᩵;
+    invoke-interface {p0, v4}, Ljava/lang/CharSequence;->charAt(I)C
 
-    invoke-direct {p2, p1}, Ll/ۘ۠᩵;-><init>([Ll/᩸ۤ᩵;)V
+    move-result v4
 
-    .line 55
-    invoke-virtual {v0}, Ll/ۨۤ᩵;->ۙ()Ljava/lang/CharSequence;
+    invoke-static {v3, v4, p4}, Ll/ܰۖ᩵;->ۙ(CCZ)Z
 
-    move-result-object p1
+    move-result v3
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    if-nez v3, :cond_c
 
-    move-result p1
+    goto :goto_4
 
-    invoke-virtual {p2, p1}, Ll/ۘ۠᩵;->ܰ(I)Ll/ۘ۠᩵;
-
-    return-object p2
-
-    .line 59
     :cond_c
-    invoke-virtual {v0}, Ll/ۨۤ᩵;->ۙ()Ljava/lang/CharSequence;
+    add-int/lit8 v2, v2, 0x1
 
-    move-result-object v1
-
-    .line 142
-    invoke-interface {v1, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v5
-
-    const/16 v6, 0x2d
-
-    if-eq v5, v6, :cond_10
-
-    const/16 v6, 0x3d
-
-    if-eq v5, v6, :cond_d
-
-    goto :goto_9
+    goto :goto_3
 
     :cond_d
-    add-int/2addr p1, v3
-
-    .line 158
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v5
-
-    :goto_5
-    if-ge p1, v5, :cond_f
-
-    .line 117
-    invoke-interface {v1, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v7
-
-    if-eq v7, v6, :cond_e
-
-    move v5, p1
-
-    goto :goto_6
+    return p2
 
     :cond_e
-    add-int/lit8 p1, p1, 0x1
+    :goto_4
+    if-eq p2, p3, :cond_f
 
-    goto :goto_5
+    add-int/2addr p2, p5
 
-    .line 159
+    goto :goto_2
+
     :cond_f
-    :goto_6
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    return v0
+.end method
 
-    move-result p1
+.method public static synthetic ᩷(ILjava/lang/CharSequence;Ljava/lang/String;Z)I
+    .locals 1
 
-    invoke-static {v5, p1, v1}, Ll/᩺۟ᩳ;->ۙ(IILjava/lang/CharSequence;)I
+    and-int/lit8 p0, p0, 0x4
 
-    move-result p1
+    const/4 v0, 0x0
 
-    .line 160
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    if-eqz p0, :cond_0
 
-    move-result v1
+    const/4 p3, 0x0
 
-    if-lt p1, v1, :cond_13
+    .line 1137
+    :cond_0
+    invoke-static {v0, p1, p2, p3}, Ll/ۤ۠᩵;->ۙ(ILjava/lang/CharSequence;Ljava/lang/String;Z)I
 
-    const/4 p1, 0x1
+    move-result p0
 
-    goto :goto_a
-
-    :cond_10
-    add-int/2addr p1, v3
-
-    .line 158
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v5
-
-    :goto_7
-    if-ge p1, v5, :cond_12
-
-    .line 117
-    invoke-interface {v1, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v7
-
-    if-eq v7, v6, :cond_11
-
-    move v5, p1
-
-    goto :goto_8
-
-    :cond_11
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_7
-
-    .line 159
-    :cond_12
-    :goto_8
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    invoke-static {v5, p1, v1}, Ll/᩺۟ᩳ;->ۙ(IILjava/lang/CharSequence;)I
-
-    move-result p1
-
-    .line 160
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-lt p1, v1, :cond_13
-
-    const/4 p1, 0x2
-
-    goto :goto_a
-
-    :cond_13
-    :goto_9
-    const/4 p1, 0x0
-
-    :goto_a
-    if-lez p1, :cond_14
-
-    .line 61
-    check-cast p2, Ll/ᩳ۠᩵;
-
-    invoke-virtual {p2}, Ll/ᩳ۠᩵;->ܰ()Ll/ۖۤ᩵;
-
-    move-result-object p2
-
-    .line 62
-    invoke-virtual {p2}, Ll/ۖۤ᩵;->ۖ()Z
-
-    move-result v1
-
-    if-nez v1, :cond_14
-
-    .line 63
-    new-instance v1, Ll/۟۠᩵;
-
-    invoke-direct {v1, p1, p2}, Ll/۟۠᩵;-><init>(ILl/ۖۤ᩵;)V
-
-    new-array p1, v3, [Ll/᩸ۤ᩵;
-
-    aput-object v1, p1, v4
-
-    .line 17
-    new-instance v1, Ll/ۘ۠᩵;
-
-    invoke-direct {v1, p1}, Ll/ۘ۠᩵;-><init>([Ll/᩸ۤ᩵;)V
-
-    .line 64
-    invoke-virtual {v0}, Ll/ۨۤ᩵;->ۙ()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Ll/ۘ۠᩵;->ܰ(I)Ll/ۘ۠᩵;
-
-    .line 65
-    invoke-virtual {p2}, Ll/ۖۤ᩵;->ܰ()Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Ll/ۘ۠᩵;->ۨ(I)Ll/ۘ۠᩵;
-
-    return-object v1
-
-    :cond_14
-    :goto_b
-    return-object v2
+    return p0
 .end method

@@ -2,7 +2,7 @@ package com.umeng.analytics.pro;
 
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
-import l.C0252;
+import l.C25272;
 
 /* JADX INFO: compiled from: G4R6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -33,7 +33,7 @@ public class be {
         try {
             return new String(a(avVar), str);
         } catch (UnsupportedEncodingException unused) {
-            throw new bb(C0252.m1693("JVM DOES NOT SUPPORT ENCODING: ", str));
+            throw new bb(C25272.m56409("JVM DOES NOT SUPPORT ENCODING: ", str));
         }
     }
 

@@ -1,14 +1,20 @@
 package l;
 
-import bin.mt.json.JSONValue;
-
-/* JADX INFO: renamed from: l.᩵ᩴ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: T6Y7 */
+/* JADX INFO: renamed from: l.ᩴۜܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB7W */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C19651 implements InterfaceC11163 {
-    @Override // l.InterfaceC11163
-    /* JADX INFO: renamed from: ۙ */
-    public final C12731 mo2806(JSONValue jSONValue, String str, String str2) {
-        return C10479.m26587(jSONValue, str, str2);
+public final class C19651 extends C18202 implements InterfaceC13726 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f63296;
+
+    @Override // l.InterfaceC13726
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC22635 mo8467() {
+        return null;
+    }
+
+    public final String toString() {
+        return C8947.m23910(new StringBuilder("TextChild: '"), this.f63296, "'");
     }
 }

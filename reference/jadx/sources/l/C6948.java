@@ -1,31 +1,22 @@
 package l;
 
-import java.util.EnumSet;
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.ۜᩴۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C7LA */
+/* JADX INFO: renamed from: l.ۜۛ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: TAIM */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6948 extends AbstractC21765 {
-
+public final /* synthetic */ class C6948 implements InterfaceC17649 {
+    @Override // l.InterfaceC17649
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Set f23370;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C19670 f23371;
-
-    public C6948(C19670 c19670, EnumSet enumSet) {
-        this.f23371 = c19670;
-        this.f23370 = enumSet;
-    }
-
-    public final String toString() {
-        return "Requires[" + this.f23370 + "," + this.f23371 + "]";
-    }
-
-    @Override // l.InterfaceC14044
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4647(InterfaceC2753 interfaceC2753) {
-        interfaceC2753.mo8401(this);
+    public final C9444 mo19233(C4688 c4688) {
+        C9444 c9444M14554 = c4688.m14554(c4688.m14558());
+        if (!c9444M14554.m24819()) {
+            return c9444M14554;
+        }
+        C1242 c1242 = new C1242();
+        c1242.m4485(c4688.m14558());
+        c1242.m4483(EnumC4225.HTTP_1_1);
+        c1242.m4480(403);
+        c1242.m4492("");
+        c1242.m4486(AbstractC8699.m23390());
+        return c1242.m4479();
     }
 }

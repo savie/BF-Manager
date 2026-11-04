@@ -1,314 +1,169 @@
 .class public final Ll/ܽۘۤ;
-.super Ljava/lang/Object;
-.source "T1SY"
-
-# interfaces
-.implements Ll/ۧۘۤ;
-
-
-# static fields
-.field public static final ܰ:[I
+.super Landroid/widget/BaseAdapter;
+.source "4646"
 
 
 # instance fields
-.field public ۙ:I
+.field public final synthetic ܰ:Ll/᩹ۘۤ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    const/16 v0, 0x20
-
-    new-array v0, v0, [I
-
-    .line 10
-    fill-array-data v0, :array_0
-
-    sput-object v0, Ll/ܽۘۤ;->ܰ:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x0
-        0x4
-        0x4
-        0x6
-        0x6
-        0x0
-        0x0
-        0x7
-        0x7
-        0x4
-        0x4
-        0x0
-        0x0
-        0x4
-        0x4
-        0x0
-        0x0
-    .end array-data
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Ll/᩹ۘۤ;)V
     .locals 0
 
-    .line 19
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 347
+    iput-object p1, p0, Ll/ܽۘۤ;->ܰ:Ll/᩹ۘۤ;
 
-    .line 21
-    iput p1, p0, Ll/ܽۘۤ;->ۙ:I
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(II[B)I
-    .locals 22
+.method public final getCount()I
+    .locals 2
 
-    move-object/from16 v0, p0
+    .line 351
+    iget-object v0, p0, Ll/ܽۘۤ;->ܰ:Ll/᩹ۘۤ;
 
-    add-int v1, p1, p2
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
 
-    add-int/lit8 v1, v1, -0x10
+    move-result-object v1
 
-    move/from16 v2, p1
+    iget-boolean v1, v1, Ll/ܶۘۤ;->֨:Z
 
-    :goto_0
-    if-gt v2, v1, :cond_5
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
 
-    .line 30
-    aget-byte v3, p3, v2
+    move-result-object v0
 
-    and-int/lit8 v3, v3, 0x1f
+    if-eqz v1, :cond_0
 
-    .line 31
-    sget-object v4, Ll/ܽۘۤ;->ܰ:[I
+    iget v0, v0, Ll/ܶۘۤ;->ۢ:I
 
-    aget v3, v4, v3
-
-    const/4 v4, 0x5
-
-    const/4 v5, 0x0
-
-    :goto_1
-    const/4 v6, 0x3
-
-    if-ge v5, v6, :cond_4
-
-    ushr-int v6, v3, v5
-
-    and-int/lit8 v6, v6, 0x1
-
-    if-nez v6, :cond_0
-
-    goto/16 :goto_4
+    return v0
 
     :cond_0
-    ushr-int/lit8 v6, v4, 0x3
+    iget-object v0, v0, Ll/ܶۘۤ;->ܿ:Ll/ܰ᩻ܺ;
 
-    and-int/lit8 v7, v4, 0x7
+    iget-object v0, v0, Ll/ܰ᩻ܺ;->ᩴ:Ll/ۨᩴۤ;
 
-    const-wide/16 v8, 0x0
+    invoke-virtual {v0}, Ll/ۨᩴۤ;->size()I
 
-    const/4 v10, 0x0
+    move-result v0
 
-    move-wide v11, v8
+    return v0
+.end method
 
-    :goto_2
-    const/4 v13, 0x6
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 0
 
-    if-ge v10, v13, :cond_1
+    const/4 p1, 0x0
 
-    add-int v13, v2, v6
+    return-object p1
+.end method
 
-    add-int/2addr v13, v10
+.method public final getItemId(I)J
+    .locals 2
 
-    .line 42
-    aget-byte v13, p3, v13
+    int-to-long v0, p1
 
-    int-to-long v13, v13
+    return-wide v0
+.end method
 
-    const-wide/16 v15, 0xff
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
-    and-long/2addr v13, v15
+    .line 367
+    iget-object v0, p0, Ll/ܽۘۤ;->ܰ:Ll/᩹ۘۤ;
 
-    mul-int/lit8 v15, v10, 0x8
+    if-nez p2, :cond_0
 
-    shl-long/2addr v13, v15
+    .line 368
+    invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    or-long/2addr v11, v13
+    move-result-object p2
 
-    add-int/lit8 v10, v10, 0x1
+    const v1, 0x7f0d014c
 
-    goto :goto_2
+    const/4 v2, 0x0
 
+    invoke-virtual {p2, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    const p3, 0x7f0a0634
+
+    .line 369
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/TextView;
+
+    .line 370
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 372
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/TextView;
+
+    .line 373
+    :goto_0
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
+
+    move-result-object v1
+
+    iget-boolean v1, v1, Ll/ܶۘۤ;->֨:Z
+
+    if-eqz v1, :cond_1
+
+    .line 374
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/ܶۘۤ;->ܿ:Ll/ܰ᩻ܺ;
+
+    iget-object v1, v1, Ll/ܰ᩻ܺ;->ᩴ:Ll/ۨᩴۤ;
+
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/ܶۘۤ;->ᩳ:[I
+
+    aget p1, v0, p1
+
+    invoke-virtual {v1, p1}, Ll/ۙᩴۤ;->᩷(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-object p2
+
+    .line 376
     :cond_1
-    ushr-long v14, v11, v7
+    invoke-static {v0}, Ll/᩹ۘۤ;->᩸(Ll/᩹ۘۤ;)Ll/ܶۘۤ;
 
-    const/16 v16, 0x25
+    move-result-object v0
 
-    ushr-long v16, v14, v16
+    iget-object v0, v0, Ll/ܶۘۤ;->ܿ:Ll/ܰ᩻ܺ;
 
-    const-wide/16 v18, 0xf
+    iget-object v0, v0, Ll/ܰ᩻ܺ;->ᩴ:Ll/ۨᩴۤ;
 
-    and-long v16, v16, v18
+    invoke-virtual {v0, p1}, Ll/ۙᩴۤ;->᩷(I)Ljava/lang/String;
 
-    const-wide/16 v18, 0x5
+    move-result-object p1
 
-    cmp-long v20, v16, v18
+    invoke-virtual {p3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    if-nez v20, :cond_3
-
-    const/16 v16, 0x9
-
-    ushr-long v16, v14, v16
-
-    const-wide/16 v18, 0x7
-
-    and-long v16, v16, v18
-
-    cmp-long v18, v16, v8
-
-    if-eqz v18, :cond_2
-
-    goto :goto_4
-
-    :cond_2
-    const/16 v8, 0xd
-
-    ushr-long v16, v14, v8
-
-    const-wide/32 v18, 0xfffff
-
-    move-wide/from16 v20, v11
-
-    and-long v10, v16, v18
-
-    long-to-int v9, v10
-
-    const/16 v10, 0x24
-
-    ushr-long v10, v14, v10
-
-    long-to-int v11, v10
-
-    and-int/lit8 v10, v11, 0x1
-
-    shl-int/lit8 v10, v10, 0x14
-
-    or-int/2addr v9, v10
-
-    shl-int/lit8 v9, v9, 0x4
-
-    .line 58
-    iget v10, v0, Ll/ܽۘۤ;->ۙ:I
-
-    add-int/2addr v10, v2
-
-    sub-int v10, v10, p1
-
-    sub-int/2addr v9, v10
-
-    ushr-int/lit8 v9, v9, 0x4
-
-    const-wide v10, -0x11ffffe001L
-
-    and-long/2addr v10, v14
-
-    int-to-long v14, v9
-
-    and-long v16, v14, v18
-
-    shl-long v8, v16, v8
-
-    or-long/2addr v8, v10
-
-    const-wide/32 v10, 0x100000
-
-    and-long/2addr v10, v14
-
-    const/16 v12, 0x10
-
-    shl-long/2addr v10, v12
-
-    or-long/2addr v8, v10
-
-    const-wide/16 v10, 0x1
-
-    shl-long v14, v10, v7
-
-    sub-long/2addr v14, v10
-
-    and-long v10, v20, v14
-
-    shl-long v7, v8, v7
-
-    or-long/2addr v7, v10
-
-    const/4 v9, 0x0
-
-    :goto_3
-    if-ge v9, v13, :cond_3
-
-    add-int v10, v2, v6
-
-    add-int/2addr v10, v9
-
-    mul-int/lit8 v11, v9, 0x8
-
-    ushr-long v11, v7, v11
-
-    long-to-int v12, v11
-
-    int-to-byte v11, v12
-
-    .line 70
-    aput-byte v11, p3, v10
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    :goto_4
-    add-int/lit8 v5, v5, 0x1
-
-    add-int/lit8 v4, v4, 0x29
-
-    goto/16 :goto_1
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x10
-
-    goto/16 :goto_0
-
-    :cond_5
-    sub-int v2, v2, p1
-
-    .line 75
-    iget v1, v0, Ll/ܽۘۤ;->ۙ:I
-
-    add-int/2addr v1, v2
-
-    iput v1, v0, Ll/ܽۘۤ;->ۙ:I
-
-    return v2
+    return-object p2
 .end method

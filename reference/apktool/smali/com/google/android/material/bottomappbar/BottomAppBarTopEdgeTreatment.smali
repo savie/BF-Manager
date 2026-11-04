@@ -126,7 +126,7 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    invoke-static {v5, v2, v12, v4}, Ll/֡۠ۖ;->ۙ(FFFF)F
+    invoke-static {v5, v2, v12, v4}, Ll/ᩴܿ֫;->ۙ(FFFF)F
 
     move-result v4
 

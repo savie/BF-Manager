@@ -1,32 +1,27 @@
 package l;
 
-import java.util.function.BiConsumer;
+import java.io.InputStream;
 
-/* JADX INFO: renamed from: l.۬᩷۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: L42O */
+/* JADX INFO: renamed from: l.۫᩶᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: NB3C */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13359 implements BiConsumer {
+public final /* synthetic */ class C13359 implements InterfaceC25138, InterfaceC11867 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f44284;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f42593;
 
-    public /* synthetic */ C13359(int i) {
-        this.f44284 = i;
+    public /* synthetic */ C13359(Object obj) {
+        this.f42593 = obj;
     }
 
-    public /* synthetic */ BiConsumer andThen(BiConsumer biConsumer) {
-        return C2866.$default$andThen(this, biConsumer);
+    @Override // l.InterfaceC25138
+    public Object apply(Object obj) {
+        return ((C16320) this.f42593).m38745();
     }
 
-    @Override // java.util.function.BiConsumer
-    public final void accept(Object obj, Object obj2) {
-        switch (this.f44284) {
-            case 0:
-                ((C19003) obj).m43723(obj2);
-                break;
-            default:
-                ((C8387) obj).add(obj2);
-                break;
-        }
+    @Override // l.InterfaceC11867
+    /* JADX INFO: renamed from: ᩷ */
+    public InputStream mo29732() {
+        return new C25173(0L, (C13961) this.f42593);
     }
 }

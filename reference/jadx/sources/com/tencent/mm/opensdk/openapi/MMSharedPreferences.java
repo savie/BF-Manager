@@ -14,7 +14,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import l.C23234;
+import l.C18011;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MMSharedPreferences implements SharedPreferences {
@@ -223,7 +223,7 @@ public class MMSharedPreferences implements SharedPreferences {
             cursorQuery.close();
             return this.values;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("getAll exception:"), TAG);
+            C18011.m41991(e, new StringBuilder("getAll exception:"), TAG);
             return this.values;
         }
     }
@@ -238,7 +238,7 @@ public class MMSharedPreferences implements SharedPreferences {
             cursorQuery.close();
             return objA;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("getValue exception:"), TAG);
+            C18011.m41991(e, new StringBuilder("getValue exception:"), TAG);
             return null;
         }
     }

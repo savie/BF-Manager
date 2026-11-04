@@ -1,45 +1,50 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.MaterialDynamicColors;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.۬ܿۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: KBGJ */
+/* JADX INFO: renamed from: l.۫ܿۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13256 implements Function {
+public final class C13256 extends AbstractC7378 implements InterfaceC13843 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f44024;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public boolean f42351;
 
-    public /* synthetic */ C13256(int i) {
-        this.f44024 = i;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f42352;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public boolean f42353;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public int f42354;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public C14769 f42355;
+
+    public C13256() {
+        throw null;
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1514(this);
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.SWITCH_EXPRESSION;
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f44024) {
-            case 0:
-                return ((C4082) obj).toString();
-            case 1:
-                return ((DynamicScheme) obj).neutralVariantPalette;
-            case 2:
-                return ((DynamicScheme) obj).tertiaryPalette;
-            case 3:
-                return MaterialDynamicColors.lambda$textPrimaryInverseDisableOnly$157((DynamicScheme) obj);
-            default:
-                return ((InterfaceC4164) obj).mo11809();
-        }
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5868(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68531;
     }
 }

@@ -1,86 +1,31 @@
 package l;
 
-import android.content.DialogInterface;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.PaintFlagsDrawFilter;
-import bin.mt.plus.R;
-import java.io.IOException;
-import java.io.OutputStream;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ۖ᩻ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7Z8 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2856 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ۖᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 422Y */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2856 implements InterfaceC22491 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f10789;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ LayoutInflaterFactory2C24354 f9429;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f10790;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5679 f10791;
-
-    public C2856(C5679 c5679, int i, int i2) {
-        this.f10791 = c5679;
-        this.f10790 = i;
-        this.f10789 = i2;
+    public C2856(LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354) {
+        this.f9429 = layoutInflaterFactory2C24354;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f10791.f19386.f73693, R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws IOException {
-        Bitmap.Config config = Bitmap.Config.ARGB_8888;
-        int i = this.f10790;
-        int i2 = this.f10789;
-        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(i, i2, config);
-        Canvas canvas = new Canvas(bitmapCreateBitmap);
-        canvas.setDrawFilter(new PaintFlagsDrawFilter(4, 131));
-        C22613 c22613 = this.f10791.f19386;
-        c22613.f73694.setBounds(0, 0, i, i2);
-        c22613.f73694.draw(canvas);
-        OutputStream outputStreamMo33976 = c22613.f73690.mo33976(false);
-        try {
-            bitmapCreateBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStreamMo33976);
-            if (outputStreamMo33976 != null) {
-                outputStreamMo33976.close();
-            }
-        } catch (Throwable th) {
-            if (outputStreamMo33976 != null) {
-                try {
-                    outputStreamMo33976.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-            }
-            throw th;
+    @Override // l.InterfaceC22491
+    public final C3977 onApplyWindowInsets(View view, C3977 c3977) {
+        int iM12824 = c3977.m12824();
+        int iM54411 = this.f9429.m54411(c3977);
+        if (iM12824 != iM54411) {
+            int iM12822 = c3977.m12822();
+            int iM12814 = c3977.m12814();
+            int iM12825 = c3977.m12825();
+            C15163 c15163 = new C15163(c3977);
+            c15163.m36480(C13275.m32819(iM12822, iM54411, iM12814, iM12825));
+            c3977 = c15163.m36477();
         }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C22613 c22613 = this.f10791.f19386;
-        c22613.f73692.m28787(c22613.f73690);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f10791.f19386.f73693.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
-        C21094.m47530();
+        return C22666.m51118(view, c3977);
     }
 }

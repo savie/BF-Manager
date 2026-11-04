@@ -4,8 +4,8 @@ import com.google.android.material.motion.MotionUtils;
 import java.lang.reflect.Array;
 import java.security.SecureRandom;
 import java.util.logging.Logger;
-import l.C0252;
-import l.C8479;
+import l.C12669;
+import l.C13645;
 import org.bouncycastle.crypto.Xof;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.math.raw.Bits;
@@ -1640,11 +1640,11 @@ public class PicnicEngine {
         byte[] bArr2 = signature.challengeBits;
         int iNumBytes = Utils.numBytes(this.numMPCRounds * 2) + 32;
         int i2 = this.numMPCRounds;
-        int iM1692 = C0252.m1692((this.seedSizeBytes * 2) + this.stateSizeBytes + this.andSizeBytes, this.digestSizeBytes, i2, iNumBytes);
+        int iM31441 = C12669.m31441((this.seedSizeBytes * 2) + this.stateSizeBytes + this.andSizeBytes, this.digestSizeBytes, i2, iNumBytes);
         if (this.transform == 1) {
-            iM1692 += this.UnruhGWithoutInputBytes * i2;
+            iM31441 += this.UnruhGWithoutInputBytes * i2;
         }
-        if (this.CRYPTO_BYTES < iM1692) {
+        if (this.CRYPTO_BYTES < iM31441) {
             return -1;
         }
         System.arraycopy(bArr2, 0, bArr, i, Utils.numBytes(i2 * 2));
@@ -2852,7 +2852,7 @@ public class PicnicEngine {
                 this.digest = sHAKEDigest;
                 return;
             default:
-                throw new IllegalArgumentException(C8479.m22141(i, "unknown parameter set "));
+                throw new IllegalArgumentException(C13645.m33382(i, "unknown parameter set "));
         }
     }
 }

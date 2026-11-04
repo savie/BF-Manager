@@ -1,43 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡ۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2571 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8742 {
+import bin.mt.plugin.api.ui.dialog.ProgressDialog;
+import bin.mt.plugin.api.util.Consumer;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f30036;
+/* JADX INFO: renamed from: l.۠ܺۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I1KV */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8742 implements Consumer, InterfaceC14722, InterfaceC1922 {
 
-    static {
-        int[] iArr = new int[EnumC10297.values().length];
-        f30036 = iArr;
-        try {
-            iArr[EnumC10297.f35101.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f30036[EnumC10297.f35207.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f30036[EnumC10297.f35183.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f30036[EnumC10297.f35077.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f30036[EnumC10297.f35109.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f30036[EnumC10297.f35060.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f30036[EnumC10297.f35093.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f28445;
+
+    public /* synthetic */ C8742(Object obj) {
+        this.f28445 = obj;
+    }
+
+    @Override // bin.mt.plugin.api.util.Consumer
+    public void accept(Object obj) {
+        ((ProgressDialog) this.f28445).lambda$new$0((CharSequence) obj);
+    }
+
+    @Override // l.InterfaceC14722
+    /* JADX INFO: renamed from: ۙ */
+    public void mo18051(C18452 c18452) {
+        ViewOnClickListenerC20698.m47359((ViewOnClickListenerC20698) this.f28445);
+    }
+
+    @Override // l.InterfaceC1922
+    /* JADX INFO: renamed from: ᩷ */
+    public String mo2305() {
+        C25350 c25350 = (C25350) this.f28445;
+        return c25350.m56678(c25350.f81831, c25350.f81857);
     }
 }

@@ -1,9 +1,9 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹᩶۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: V42A */
+/* JADX INFO: renamed from: l.᩸ۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: NJN */
 /* JADX INFO: loaded from: classes.dex */
-public interface InterfaceC22510 extends CharSequence {
+public interface InterfaceC22510 extends InterfaceC7767 {
     /* JADX INFO: renamed from: ۙ */
-    boolean mo28213(String str);
+    InterfaceC15224 mo2045();
 }

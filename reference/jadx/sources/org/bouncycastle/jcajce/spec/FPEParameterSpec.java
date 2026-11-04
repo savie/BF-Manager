@@ -4,7 +4,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.crypto.util.RadixConverter;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class FPEParameterSpec implements AlgorithmParameterSpec {
     public final RadixConverter radixConverter;
     public final byte[] tweak;

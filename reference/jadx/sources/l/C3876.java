@@ -1,18 +1,16 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘۤۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U4HR */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C3876 extends AbstractC22928 {
-    public final String toString() {
-        String str = this.f74530;
-        if (str == null) {
-            str = "[unset]";
-        }
-        return C16523.m38890("</", str, ">");
-    }
+import java.util.concurrent.TimeUnit;
 
-    public C3876() {
-        this.f69910 = EnumC15167.EndTag;
+/* JADX INFO: renamed from: l.ۘۗۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N33Q */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3876 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f13224 = 0;
+
+    static {
+        TimeUnit.MILLISECONDS.toNanos(1L);
     }
 }

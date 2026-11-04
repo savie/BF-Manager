@@ -1,56 +1,108 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import java.util.Map;
-import java.util.function.Function;
+import java.util.Comparator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۚ֡᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: IB3L */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5008 implements Function {
+/* JADX INFO: renamed from: l.ۙܺۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C5008 implements Spliterator.OfInt {
+    public final /* synthetic */ InterfaceC7664 a;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f17420;
-
-    public /* synthetic */ C5008(int i) {
-        this.f17420 = i;
+    public /* synthetic */ C5008(InterfaceC7664 interfaceC7664) {
+        this.a = interfaceC7664;
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f17420) {
-            case 0:
-                return ((InterfaceC2557) obj).getName() + "/";
-            case 1:
-                return (C19146) ((Map.Entry) obj).getValue();
-            case 2:
-                return ((C2565) obj).f10122;
-            case 3:
-                String str = (String) obj;
-                return str.startsWith("/") ? str.substring(1) : str;
-            case 4:
-                return ((DynamicScheme) obj).neutralPalette;
-            case 5:
-                return ((DynamicScheme) obj).secondaryPalette;
-            case 6:
-                return ((DynamicScheme) obj).errorPalette;
-            case 7:
-                return ((C6534) obj).toString();
-            case 8:
-                return String.format("#%d?", (Integer) obj);
-            default:
-                return ((EnumC4870) obj).toString();
+    public static /* synthetic */ Spliterator.OfInt a(InterfaceC7664 interfaceC7664) {
+        if (interfaceC7664 == null) {
+            return null;
         }
+        return interfaceC7664 instanceof C7487 ? ((C7487) interfaceC7664).a : new C5008(interfaceC7664);
+    }
+
+    @Override // java.util.Spliterator
+    public final /* synthetic */ int characteristics() {
+        return this.a.characteristics();
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        InterfaceC7664 interfaceC7664 = this.a;
+        if (obj instanceof C5008) {
+            obj = ((C5008) obj).a;
+        }
+        return interfaceC7664.equals(obj);
+    }
+
+    @Override // java.util.Spliterator
+    public final /* synthetic */ long estimateSize() {
+        return this.a.estimateSize();
+    }
+
+    @Override // java.util.Spliterator.OfPrimitive
+    public final /* synthetic */ void forEachRemaining(IntConsumer intConsumer) {
+        this.a.forEachRemaining((Object) intConsumer);
+    }
+
+    @Override // java.util.Spliterator.OfInt, java.util.Spliterator
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        this.a.forEachRemaining(consumer);
+    }
+
+    @Override // java.util.Spliterator.OfInt
+    /* JADX INFO: renamed from: forEachRemaining, reason: avoid collision after fix types in other method */
+    public final /* synthetic */ void forEachRemaining2(IntConsumer intConsumer) {
+        this.a.forEachRemaining(intConsumer);
+    }
+
+    @Override // java.util.Spliterator
+    public final /* synthetic */ Comparator getComparator() {
+        return this.a.getComparator();
+    }
+
+    @Override // java.util.Spliterator
+    public final /* synthetic */ long getExactSizeIfKnown() {
+        return this.a.getExactSizeIfKnown();
+    }
+
+    @Override // java.util.Spliterator
+    public final /* synthetic */ boolean hasCharacteristics(int i) {
+        return this.a.hasCharacteristics(i);
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // java.util.Spliterator.OfPrimitive
+    public final /* synthetic */ boolean tryAdvance(IntConsumer intConsumer) {
+        return this.a.tryAdvance((Object) intConsumer);
+    }
+
+    @Override // java.util.Spliterator.OfInt, java.util.Spliterator
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return this.a.tryAdvance(consumer);
+    }
+
+    @Override // java.util.Spliterator.OfInt
+    /* JADX INFO: renamed from: tryAdvance, reason: avoid collision after fix types in other method */
+    public final /* synthetic */ boolean tryAdvance2(IntConsumer intConsumer) {
+        return this.a.tryAdvance(intConsumer);
+    }
+
+    @Override // java.util.Spliterator.OfInt, java.util.Spliterator.OfPrimitive, java.util.Spliterator
+    public final /* synthetic */ Spliterator.OfInt trySplit() {
+        return a(this.a.trySplit());
+    }
+
+    @Override // java.util.Spliterator.OfInt, java.util.Spliterator.OfPrimitive, java.util.Spliterator
+    public final /* synthetic */ Spliterator.OfPrimitive trySplit() {
+        return C10602.a(this.a.trySplit());
+    }
+
+    @Override // java.util.Spliterator.OfInt, java.util.Spliterator.OfPrimitive, java.util.Spliterator
+    public final /* synthetic */ Spliterator trySplit() {
+        return C2443.convert(this.a.trySplit());
     }
 }

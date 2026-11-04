@@ -1,39 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۡ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import android.animation.TypeEvaluator;
+import android.graphics.Rect;
+
+/* JADX INFO: renamed from: l.۫ۡ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 55K6 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13007 extends AbstractC10495 implements InterfaceC1905 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f43378;
-
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return C3128.m9463(this.f35956);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo1265(this);
-    }
-
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1890(this, obj);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m32187(EnumC18651 enumC18651) {
-        this.f35956 = enumC18651;
-    }
-
-    @Override // l.AbstractC10495
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC5930 mo17996(EnumC9084 enumC9084) {
-        return this.f43378;
+public final class C13007 implements TypeEvaluator {
+    @Override // android.animation.TypeEvaluator
+    public final Object evaluate(float f, Object obj, Object obj2) {
+        Rect rect = (Rect) obj;
+        Rect rect2 = (Rect) obj2;
+        int i = rect.left;
+        int i2 = i + ((int) ((rect2.left - i) * f));
+        int i3 = rect.top;
+        int i4 = i3 + ((int) ((rect2.top - i3) * f));
+        int i5 = rect.right;
+        int i6 = i5 + ((int) ((rect2.right - i5) * f));
+        int i7 = rect.bottom;
+        return new Rect(i2, i4, i6, i7 + ((int) ((rect2.bottom - i7) * f)));
     }
 }

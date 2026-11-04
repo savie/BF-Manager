@@ -1,182 +1,128 @@
 .class public final Ll/ۧᩴۙ;
 .super Ljava/lang/Object;
-.source "78PS"
+.source "7B23"
 
 
 # instance fields
-.field public ۖ:F
+.field public final ۙ:Landroid/widget/EditText;
 
-.field public ۙ:J
-
-.field public ۚ:J
-
-.field public ۨ:J
-
-.field public ܰ:F
+.field public final ᩷:Ll/᩶ᩴۙ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1333
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 1334
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۚ:J
-
-    .line 1335
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۨ:J
-
-    .line 1336
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۙ:J
-
-    const v0, -0x800001
-
-    .line 1337
-    iput v0, p0, Ll/ۧᩴۙ;->ۖ:F
-
-    .line 1338
-    iput v0, p0, Ll/ۧᩴۙ;->ܰ:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/᩻ᩴۙ;)V
-    .locals 2
-
-    .line 1341
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1342
-    iget-wide v0, p1, Ll/᩻ᩴۙ;->ۚ:J
-
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۚ:J
-
-    .line 1343
-    iget-wide v0, p1, Ll/᩻ᩴۙ;->ۨ:J
-
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۨ:J
-
-    .line 1344
-    iget-wide v0, p1, Ll/᩻ᩴۙ;->ۙ:J
-
-    iput-wide v0, p0, Ll/ۧᩴۙ;->ۙ:J
-
-    .line 1345
-    iget v0, p1, Ll/᩻ᩴۙ;->ۖ:F
-
-    iput v0, p0, Ll/ۧᩴۙ;->ۖ:F
-
-    .line 1346
-    iget p1, p1, Ll/᩻ᩴۙ;->ܰ:F
-
-    iput p1, p0, Ll/ۧᩴۙ;->ܰ:F
-
-    return-void
-.end method
-
-.method public static bridge synthetic ۖ(Ll/ۧᩴۙ;)F
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/ۧᩴۙ;->ۖ:F
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۙ(Ll/ۧᩴۙ;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/ۧᩴۙ;->ۙ:J
-
-    return-wide v0
-.end method
-
-.method public static bridge synthetic ۚ(Ll/ۧᩴۙ;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/ۧᩴۙ;->ۚ:J
-
-    return-wide v0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/ۧᩴۙ;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/ۧᩴۙ;->ۨ:J
-
-    return-wide v0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/ۧᩴۙ;)F
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/ۧᩴۙ;->ܰ:F
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final ۙ()Ll/᩻ᩴۙ;
+.method public constructor <init>(Landroid/widget/EditText;)V
     .locals 1
 
-    .line 1412
-    new-instance v0, Ll/᩻ᩴۙ;
+    .line 104
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Ll/᩻ᩴۙ;-><init>(Ll/ۧᩴۙ;)V
+    .line 106
+    iput-object p1, p0, Ll/ۧᩴۙ;->ۙ:Landroid/widget/EditText;
+
+    .line 107
+    new-instance v0, Ll/᩶ᩴۙ;
+
+    invoke-direct {v0, p1}, Ll/᩶ᩴۙ;-><init>(Landroid/widget/EditText;)V
+
+    iput-object v0, p0, Ll/ۧᩴۙ;->᩷:Ll/᩶ᩴۙ;
+
+    .line 108
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    .line 109
+    invoke-static {}, Ll/᩻ᩴۙ;->getInstance()Landroid/text/Editable$Factory;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setEditableFactory(Landroid/text/Editable$Factory;)V
+
+    return-void
+.end method
+
+.method public static ۙ(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+    .locals 1
+
+    .line 153
+    instance-of v0, p0, Ll/᩵ᩴۙ;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 162
+    :cond_1
+    instance-of v0, p0, Landroid/text/method/NumberKeyListener;
+
+    if-eqz v0, :cond_2
+
+    return-object p0
+
+    .line 168
+    :cond_2
+    new-instance v0, Ll/᩵ᩴۙ;
+
+    invoke-direct {v0, p0}, Ll/᩵ᩴۙ;-><init>(Landroid/text/method/KeyListener;)V
 
     return-object v0
 .end method
 
-.method public final ۙ(F)V
-    .locals 0
 
-    .line 1406
-    iput p1, p0, Ll/ۧᩴۙ;->ܰ:F
+# virtual methods
+.method public final ۙ(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 187
+    :cond_0
+    instance-of v0, p1, Ll/ܽᩴۙ;
+
+    if-eqz v0, :cond_1
+
+    return-object p1
+
+    .line 192
+    :cond_1
+    new-instance v0, Ll/ܽᩴۙ;
+
+    iget-object v1, p0, Ll/ۧᩴۙ;->ۙ:Landroid/widget/EditText;
+
+    invoke-direct {v0, v1, p1, p2}, Ll/ܽᩴۙ;-><init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
+
+    return-object v0
+.end method
+
+.method public final ۙ(Z)V
+    .locals 1
+
+    .line 243
+    iget-object v0, p0, Ll/ۧᩴۙ;->᩷:Ll/᩶ᩴۙ;
+
+    invoke-virtual {v0, p1}, Ll/᩶ᩴۙ;->ۙ(Z)V
 
     return-void
 .end method
 
-.method public final ۙ(J)V
-    .locals 0
+.method public final ۙ()Z
+    .locals 1
 
-    .line 1384
-    iput-wide p1, p0, Ll/ۧᩴۙ;->ۙ:J
+    .line 230
+    iget-object v0, p0, Ll/ۧᩴۙ;->᩷:Ll/᩶ᩴۙ;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ll/᩶ᩴۙ;->ۙ()Z
 
-.method public final ۨ(J)V
-    .locals 0
+    move-result v0
 
-    .line 1358
-    iput-wide p1, p0, Ll/ۧᩴۙ;->ۚ:J
-
-    return-void
-.end method
-
-.method public final ܰ(F)V
-    .locals 0
-
-    .line 1395
-    iput p1, p0, Ll/ۧᩴۙ;->ۖ:F
-
-    return-void
-.end method
-
-.method public final ܰ(J)V
-    .locals 0
-
-    .line 1371
-    iput-wide p1, p0, Ll/ۧᩴۙ;->ۨ:J
-
-    return-void
+    return v0
 .end method

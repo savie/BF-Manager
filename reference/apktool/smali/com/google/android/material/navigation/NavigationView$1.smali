@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/navigation/NavigationView$1;
-.super Ll/֡ܰۙ;
+.super Ll/᩶᩷ۙ;
 .source "NavigationView.java"
 
 
@@ -14,7 +14,7 @@
     .line 158
     iput-object p1, p0, Lcom/google/android/material/navigation/NavigationView$1;->this$0:Lcom/google/android/material/navigation/NavigationView;
 
-    invoke-direct {p0}, Ll/֡ܰۙ;-><init>()V
+    invoke-direct {p0}, Ll/᩶᩷ۙ;-><init>()V
 
     return-void
 .end method
@@ -58,13 +58,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Ll/۟᩻ۖ;
+    new-instance v1, Ll/᩻֫᩸;
 
-    const/4 v2, 0x3
+    const/16 v2, 0x8
 
-    invoke-direct {v1, v2, v0}, Ll/۟᩻ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Ll/᩻֫᩸;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

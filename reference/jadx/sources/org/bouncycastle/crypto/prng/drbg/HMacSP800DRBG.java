@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.prng.EntropySource;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HMacSP800DRBG implements SP80090DRBG {
     public static final int MAX_BITS_REQUEST = 262144;
     public static final long RESEED_MAX = 140737488355328L;

@@ -1,34 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨܽܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5WF */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11829 {
+import java.util.function.LongConsumer;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f39724;
+/* JADX INFO: renamed from: l.ۧ᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11829 extends AbstractC4372 implements LongConsumer {
+    public final long[] c;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f39725;
+    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
+        return C18279.$default$andThen(this, longConsumer);
+    }
 
     public C11829(int i) {
-        int[] iArr = new int[i];
-        this.f39724 = iArr;
-        this.f39725 = iArr.length / 2;
+        this.c = new long[i];
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m29498(int i) {
-        return this.f39724[i + this.f39725];
+    @Override // l.AbstractC4372
+    public final void a(Object obj, long j) {
+        LongConsumer longConsumer = (LongConsumer) obj;
+        for (int i = 0; i < j; i++) {
+            longConsumer.accept(this.c[i]);
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] m29500() {
-        return this.f39724;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29499(int i, int i2) {
-        this.f39724[i + this.f39725] = i2;
+    @Override // java.util.function.LongConsumer
+    public final void accept(long j) {
+        int i = this.b;
+        this.b = i + 1;
+        this.c[i] = j;
     }
 }

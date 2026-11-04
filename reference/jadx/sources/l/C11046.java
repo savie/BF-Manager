@@ -1,33 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧܰ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17QY */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C11046 extends EnumC3283 {
-    public /* synthetic */ C11046() {
-        this("START", 0, false);
-    }
+/* JADX INFO: renamed from: l.ۤᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2571 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C11046 {
 
-    public C11046(String str, int i, boolean z) {
-        super(str, i, 0, z);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f34865;
 
-    @Override // l.EnumC3283
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC3283 mo6069(EnumC6106 enumC6106) {
-        int i = C17395.f55362[enumC6106.ordinal()];
-        if (i == 1) {
-            return EnumC3283.f12168;
+    static {
+        int[] iArr = new int[EnumC22631.values().length];
+        f34865 = iArr;
+        try {
+            iArr[EnumC22631.f73282.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (i == 2) {
-            return EnumC3283.f12170;
+        try {
+            f34865[EnumC22631.f73469.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        if (i == 3) {
-            return EnumC3283.f12172;
+        try {
+            f34865[EnumC22631.f73349.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        if (i == 4) {
-            return EnumC3283.f12169;
+        try {
+            f34865[EnumC22631.f73477.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
         }
-        throw new AssertionError();
+        try {
+            f34865[EnumC22631.f73445.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f34865[EnumC22631.f73373.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f34865[EnumC22631.f73249.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
     }
 }

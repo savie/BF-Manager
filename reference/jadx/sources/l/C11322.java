@@ -1,42 +1,49 @@
 package l;
 
-import android.app.Activity;
-import android.os.SystemClock;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۧ᩻ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W52J */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11322 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f38212;
+/* JADX INFO: renamed from: l.ۧۖ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F416 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C11322 implements Predicate {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f38213 = true;
+    public final /* synthetic */ int f35677;
 
-    public C11322(Activity activity) {
-        C13890.m33727();
-        activity.runOnUiThread(new RunnableC7228(3, this, activity));
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC25384 f35678;
+
+    public /* synthetic */ C11322(AbstractC25384 abstractC25384, int i) {
+        this.f35677 = i;
+        this.f35678 = abstractC25384;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m28380(C11322 c11322) {
-        c11322.f38213 = false;
-        c11322.f38212 = true;
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m28379(C11322 c11322) {
-        c11322.f38213 = false;
-        c11322.f38212 = false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m28381() {
-        C13890.m33727();
-        while (this.f38213) {
-            SystemClock.sleep(100L);
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f35677) {
+            case 0:
+                break;
         }
-        return this.f38212;
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f35677) {
+            case 0:
+                return ((AbstractC22664) obj) != ((AbstractC22664) this.f35678);
+            default:
+                return ((C12510) obj).f40164 == ((C5816) this.f35678).f38072;
+        }
     }
 }

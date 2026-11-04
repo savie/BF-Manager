@@ -2,14 +2,14 @@ package org.bouncycastle.jce.provider;
 
 import java.io.IOException;
 import java.io.InputStream;
-import l.C16523;
+import l.C14442;
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.util.encoders.Base64;
 import org.bouncycastle.util.io.pem.PemReader;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PEMUtil {
     public final String _footer1;
     public final String _footer2;
@@ -62,9 +62,9 @@ public class PEMUtil {
     }
 
     public PEMUtil(String str) {
-        this._header1 = C16523.m38890(PemReader.BEGIN, str, "-----");
-        this._header2 = C16523.m38890("-----BEGIN X509 ", str, "-----");
-        this._footer1 = C16523.m38890(PemReader.END, str, "-----");
-        this._footer2 = C16523.m38890("-----END X509 ", str, "-----");
+        this._header1 = C14442.m34865(PemReader.BEGIN, str, "-----");
+        this._header2 = C14442.m34865("-----BEGIN X509 ", str, "-----");
+        this._footer1 = C14442.m34865(PemReader.END, str, "-----");
+        this._footer2 = C14442.m34865("-----END X509 ", str, "-----");
     }
 }

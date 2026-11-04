@@ -34,11 +34,11 @@
     .line 483
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$10;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Ll/۬۫ܰ;
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Ll/֡֡᩷;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll/۬۫ܰ;->findLastVisibleItemPosition()I
+    invoke-virtual {p1}, Ll/֡֡᩷;->findLastVisibleItemPosition()I
 
     move-result p1
 

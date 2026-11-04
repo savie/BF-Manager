@@ -5,7 +5,7 @@ public class SnovaParameters {
     public final int alpha;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final int f77983l;
+    public final int f82099l;
     public final int lsq;
     public final String name;
     public final int o;
@@ -61,7 +61,7 @@ public class SnovaParameters {
         this.name = str;
         this.v = i;
         this.o = i2;
-        this.f77983l = i3;
+        this.f82099l = i3;
         int i4 = i3 * i3;
         this.lsq = i4;
         this.alpha = i4 + i3;
@@ -74,7 +74,7 @@ public class SnovaParameters {
     }
 
     public int getL() {
-        return this.f77983l;
+        return this.f82099l;
     }
 
     public int getLsq() {

@@ -1,34 +1,61 @@
 package l;
 
-import java.io.OutputStream;
+import org.bouncycastle.crypto.hpke.HPKE;
 
-/* JADX INFO: renamed from: l.ᩳۤ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: M9Q4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17980 extends OutputStream {
+/* JADX INFO: renamed from: l.ܿ֨ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 05HL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17980 extends AbstractC24188 implements InterfaceC10015 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public long f57496;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6288 f58914 = new C20964();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C1388 f57497;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public short f58915;
 
-    public C17980(long j, C1388 c1388) {
-        this.f57497 = c1388;
-        this.f57496 = j;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public byte f58916;
 
-    @Override // java.io.OutputStream
-    public final void write(int i) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) {
-        synchronized (this.f57497) {
-            this.f57497.seek(this.f57496);
-            this.f57497.write(bArr, i, i2);
-            this.f57496 += (long) i2;
+    public C17980(EnumC7779 enumC7779, short s, int i) {
+        super(enumC7779);
+        if (s >= 256) {
+            throw new RuntimeException("The register number must be less than v256");
         }
+        if (i >= 65536) {
+            throw new RuntimeException("The register number must be less than v65536");
+        }
+        this.f58916 = (byte) s;
+        this.f58915 = (short) i;
+    }
+
+    public C17980(EnumC7779 enumC7779, byte[] bArr, int i) {
+        super(enumC7779);
+        this.f58916 = bArr[i + 1];
+        this.f58915 = (short) C12556.m31238(i + 2, bArr);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2086(C24166 c24166, int i) {
+        c24166.m54138(this.f78334.f25844);
+        c24166.m54138(this.f58916);
+        c24166.m54139(this.f58915);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ۧ */
+    public final EnumC7801 mo2083() {
+        return EnumC7801.Format22x;
+    }
+
+    @Override // l.InterfaceC10015
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo9996() {
+        return this.f58916 & 255;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int m41956() {
+        return this.f58915 & HPKE.aead_EXPORT_ONLY;
     }
 }

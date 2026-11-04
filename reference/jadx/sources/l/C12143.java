@@ -1,45 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LCAX */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C12143 {
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Object m30216(AbstractC2450 abstractC2450, Character ch, Object obj) {
-        char cCharValue = ch.charValue();
-        boolean zMo15965 = abstractC2450.mo15965(cCharValue);
-        Object objMo7435 = abstractC2450.mo7435(cCharValue, obj);
-        if (zMo15965) {
-            return objMo7435;
-        }
-        return null;
-    }
+/* JADX INFO: renamed from: l.ۨۚۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M5I6 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12143 implements InterfaceC7669 {
 
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Object m30217(AbstractC2450 abstractC2450, Object obj) {
-        if (obj == null) {
-            return null;
-        }
-        char cCharValue = ((Character) obj).charValue();
-        Object objMo15966 = abstractC2450.mo15966(cCharValue);
-        if (objMo15966 != abstractC2450.mo7437() || abstractC2450.mo15965(cCharValue)) {
-            return objMo15966;
-        }
-        return null;
-    }
-
-    @Deprecated
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Object m30218(AbstractC2450 abstractC2450, Object obj) {
-        if (obj == null) {
-            return null;
-        }
-        char cCharValue = ((Character) obj).charValue();
-        if (abstractC2450.mo15965(cCharValue)) {
-            return abstractC2450.mo7436(cCharValue);
-        }
-        return null;
+    public final /* synthetic */ C6178 f39049;
+
+    public C12143(C6178 c6178) {
+        this.f39049 = c6178;
+    }
+
+    @Override // l.InterfaceC7669
+    public final void writeByte(int i) {
+        C6178 c6178 = this.f39049;
+        byte[] bArr = c6178.f21044;
+        int i2 = c6178.f21042;
+        c6178.f21042 = i2 + 1;
+        bArr[i2] = (byte) i;
     }
 }

@@ -25,7 +25,7 @@
     .locals 1
 
     .line 68
-    sget v0, Ll/ۖ۟ܶ;->ۗ۫:I
+    sget v0, Ll/ۧ۬ܺ;->۬۟:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/slider/RangeSlider;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -39,7 +39,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/slider/BaseSlider;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 73
-    sget-object v2, Ll/۠۟ܶ;->۠֨ۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->ۗ۫ۙ:[I
 
     sget v4, Lcom/google/android/material/slider/BaseSlider;->DEF_STYLE_RES:I
 
@@ -59,7 +59,7 @@
     move-result-object p1
 
     .line 76
-    sget p2, Ll/۠۟ܶ;->ۡ֨ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۨ۫ۙ:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -68,7 +68,7 @@
     if-eqz p2, :cond_0
 
     .line 77
-    sget p2, Ll/۠۟ܶ;->ۡ֨ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۨ۫ۙ:I
 
     invoke-virtual {p1, p2, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -92,7 +92,7 @@
 
     .line 82
     :cond_0
-    sget p2, Ll/۠۟ܶ;->᩵֨ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩵۫ۙ:I
 
     const/4 p3, 0x0
 

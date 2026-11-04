@@ -1,99 +1,78 @@
 package l;
 
-import android.content.DialogInterface;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import bin.mt.plus.R;
-import java.util.ArrayList;
+import com.google.android.material.tabs.TabLayout;
 
-/* JADX INFO: renamed from: l.۬ۚ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: H7FZ */
+/* JADX INFO: renamed from: l.۫ۚᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4AWI */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12897 extends AbstractC3492 {
+public final class C12897 extends AbstractC6274 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f42874;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC5440 f41247;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC12233 f42875;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21422 f42876;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final ArrayList f42877 = new ArrayList(2);
-
-    @Override // l.AbstractC3492
+    @Override // l.AbstractC6274
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
+    public final boolean mo2999(View view, Object obj) {
+        return view == obj;
     }
 
-    public C12897(C3723 c3723, C21422 c21422, AbstractC12233 abstractC12233, ArrayList arrayList) {
-        this.f42876 = c21422;
-        this.f42875 = abstractC12233;
-        this.f42874 = arrayList;
+    public C12897(ActivityC5440 activityC5440) {
+        this.f41247 = activityC5440;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f42876.m47980(), R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws Exception {
-        ArrayList arrayList = this.f42874;
-        InterfaceC2557 interfaceC2557 = (InterfaceC2557) arrayList.get(0);
-        InterfaceC2557 interfaceC2558 = (InterfaceC2557) arrayList.get(1);
-        String path = interfaceC2557.getPath();
-        String path2 = interfaceC2558.getPath();
-        String strM18162 = C6730.m18162(interfaceC2557.getParent(), System.currentTimeMillis() + ".tmp");
-        AbstractC12233 abstractC12233 = this.f42875;
-        String strMo10260 = abstractC12233.mo10260(strM18162);
-        abstractC12233.mo10265(path, strMo10260);
-        String strM18175 = C6730.m18175(strMo10260);
-        ArrayList arrayList2 = this.f42877;
-        arrayList2.add(strM18175);
-        try {
-            abstractC12233.mo10265(path2, path);
-            arrayList2.add(C6730.m18175(path));
-            try {
-                abstractC12233.mo10265(strMo10260, path2);
-                arrayList2.add(C6730.m18175(path2));
-                arrayList2.remove(C6730.m18175(strMo10260));
-            } catch (Exception e) {
-                if (abstractC12233.mo30347(path, path2)) {
-                    arrayList2.remove(C6730.m18175(path));
-                    if (abstractC12233.mo30347(strMo10260, path)) {
-                        arrayList2.remove(C6730.m18175(strMo10260));
-                    }
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final CharSequence mo2996(final int i) {
+        ActivityC5440 activityC5440 = this.f41247;
+        if (i == activityC5440.f19003.size()) {
+            C21576.m49068(new Runnable() { // from class: l.ܳۚᩴ
+                @Override // java.lang.Runnable
+                public final void run() {
+                    TabLayout.Tab tabAt = this.f49373.f41247.f19005.getTabAt(i);
+                    C17359.requireNonNull(tabAt);
+                    tabAt.setIcon(R.drawable.MT_Protector);
                 }
-                throw e;
-            }
-        } catch (Exception e2) {
-            if (abstractC12233.mo30347(strMo10260, path)) {
-                arrayList2.remove(C6730.m18175(strMo10260));
-            }
-            throw e2;
+            });
+            return null;
+        }
+        try {
+            return ((C8640) activityC5440.f19003.get(i)).m23287().m6082();
+        } catch (RuntimeException unused) {
+            return null;
         }
     }
 
-    @Override // l.AbstractC3492
+    @Override // l.AbstractC6274
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f42876.m47980().m31002(exc, (DialogInterface.OnDismissListener) null);
+    public final Object mo2997(C15179 c15179, int i) {
+        View view;
+        ActivityC5440 activityC5440 = this.f41247;
+        if (i == activityC5440.f19003.size()) {
+            view = activityC5440.f19002.f63205;
+        } else {
+            view = ((C8640) activityC5440.f19003.get(i)).f28226;
+        }
+        ViewParent parent = view.getParent();
+        if (parent instanceof ViewGroup) {
+            ((ViewGroup) parent).removeView(view);
+        }
+        c15179.addView(view);
+        return view;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
-        ArrayList arrayList = this.f42877;
-        if (!arrayList.isEmpty()) {
-            C21422 c21422 = this.f42876;
-            c21422.m47962();
-            c21422.m47964(arrayList);
-            c21422.m47969();
-        }
-        C21094.m47529(this.f42875.mo10276());
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2998(C15179 c15179, int i, Object obj) {
+        c15179.removeView((View) obj);
+    }
+
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo3000() {
+        return this.f41247.f19003.size() + 1;
     }
 }

@@ -1,11 +1,20 @@
 package l;
 
-import java.util.List;
+import android.net.Uri;
+import android.os.Bundle;
 
-/* JADX INFO: renamed from: l.ۨۚܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18UV */
+/* JADX INFO: renamed from: l.ۧۡ, reason: contains not printable characters */
+/* JADX INFO: compiled from: JB1Y */
 /* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC11498 {
+    C23433 build();
+
     /* JADX INFO: renamed from: ۙ */
-    List mo25273(int i, C17216 c17216, int[] iArr);
+    void mo6277(int i);
+
+    /* JADX INFO: renamed from: ۙ */
+    void mo6278(Uri uri);
+
+    /* JADX INFO: renamed from: ۙ */
+    void mo6279(Bundle bundle);
 }

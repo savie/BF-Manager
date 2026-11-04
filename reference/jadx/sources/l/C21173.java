@@ -1,26 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩹᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27BS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21173 extends Exception {
-    public static final long serialVersionUID = 6569838532917408380L;
+import android.graphics.Path;
+import android.view.animation.Interpolator;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final EnumC10591 f68956;
-
-    public C21173(EnumC10591 enumC10591, String str) {
-        super(str);
-        this.f68956 = enumC10591;
-    }
-
-    public C21173(EnumC10591 enumC10591, String str, Exception exc) {
-        super(str, exc);
-        this.f68956 = enumC10591;
-    }
+/* JADX INFO: renamed from: l.᩶۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: K582 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21173 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC10591 m47632() {
-        return this.f68956;
+    public static final Interpolator f67615;
+
+    static {
+        Path path = new Path();
+        path.moveTo(0.0f, 0.0f);
+        path.lineTo(0.3665f, 0.0f);
+        path.cubicTo(0.4725262f, 0.06240991f, 0.6154161f, 0.5f, 0.68325f, 0.5f);
+        path.cubicTo(0.7547506f, 0.5f, 0.7572583f, 0.8145101f, 1.0f, 1.0f);
+        f67615 = C6411.m18176(path);
     }
 }

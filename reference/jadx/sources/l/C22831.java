@@ -1,136 +1,74 @@
 package l;
 
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Spliterator;
+import android.content.Context;
+import android.os.Build;
+import android.util.Log;
+import java.io.File;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.᩺ۜᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N1QM */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22831 extends C16440 {
-    public static final long serialVersionUID = -3185226345314976296L;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15070 f74281;
-
-    @Override // l.C5856, l.AbstractC10796, l.AbstractC15735, java.util.Collection, java.lang.Iterable, java.util.List
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22831(C15070 c15070, int i, int i2) {
-        super(c15070, i, i2);
-        this.f74281 = c15070;
-    }
-
-    @Override // l.C5856, l.InterfaceC10609
-    public final int getInt(int i) {
-        m27090(i);
-        return this.f74281.f49125[i + this.f20000];
-    }
-
-    @Override // l.AbstractC10796, l.InterfaceC10609, java.util.List
-    public final ListIterator listIterator(int i) {
-        return new C3779(this, i);
-    }
-
-    @Override // l.C5856, l.AbstractC10796, l.InterfaceC10609, java.util.List
-    public final InterfaceC21191 listIterator(int i) {
-        return new C3779(this, i);
-    }
-
-    @Override // l.C5856, l.AbstractC10796, l.AbstractC15735, java.util.Collection, java.lang.Iterable, l.InterfaceC10131, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC11790 spliterator() {
-        return new C6602(this);
-    }
-
-    @Override // l.C5856, l.AbstractC10796, l.AbstractC15735, java.util.Collection, java.lang.Iterable, l.InterfaceC10131, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC20693 spliterator() {
-        return new C6602(this);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m50570(int i, int i2, int[] iArr) {
-        C15070 c15070 = this.f74281;
-        int[] iArr2 = c15070.f49125;
-        int i3 = this.f20000;
-        if (iArr2 == iArr && i3 == i && this.f19999 == i2) {
-            return true;
-        }
-        if (i2 - i != size()) {
-            return false;
-        }
-        while (i3 < this.f19999) {
-            int i4 = i3 + 1;
-            int i5 = c15070.f49125[i3];
-            int i6 = i + 1;
-            if (i5 != iArr[i]) {
-                return false;
+/* JADX INFO: renamed from: l.᩸۬ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V4HZ */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22831 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m51495(Context context) throws Throwable {
+        C15371 c15371 = new C15371();
+        if (context != null) {
+            if ("pl_droidsonroids_gif".length() == 0) {
+                throw new IllegalArgumentException("Given library is either null or empty");
             }
-            i = i6;
-            i3 = i4;
-        }
-        return true;
-    }
-
-    @Override // l.AbstractC10796, java.util.Collection, java.util.List
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj == null || !(obj instanceof List)) {
-            return false;
-        }
-        if (obj instanceof C15070) {
-            C15070 c15070 = (C15070) obj;
-            return m50570(0, c15070.f49126, c15070.f49125);
-        }
-        if (obj instanceof C22831) {
-            C22831 c22831 = (C22831) obj;
-            return m50570(c22831.f20000, c22831.f19999, c22831.f74281.f49125);
-        }
-        return super.equals(obj);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m50571(int i, int i2, int[] iArr) {
-        int i3;
-        C15070 c15070 = this.f74281;
-        int[] iArr2 = c15070.f49125;
-        int i4 = this.f20000;
-        if (iArr2 == iArr && i4 == i && this.f19999 == i2) {
-            return 0;
-        }
-        while (true) {
-            i3 = this.f19999;
-            if (i4 >= i3 || i4 >= i2) {
-                break;
+            C15371.m36802("Beginning load of %s...", "pl_droidsonroids_gif");
+            InterfaceC10896 interfaceC10896 = c15371.f50135;
+            HashSet hashSet = c15371.f50134;
+            if (hashSet.contains("pl_droidsonroids_gif")) {
+                C15371.m36802("%s already loaded previously!", "pl_droidsonroids_gif");
+                return;
             }
-            int iCompare = Integer.compare(c15070.f49125[i4], iArr[i]);
-            if (iCompare != 0) {
-                return iCompare;
+            try {
+                ((C13134) interfaceC10896).getClass();
+                System.loadLibrary("pl_droidsonroids_gif");
+                hashSet.add("pl_droidsonroids_gif");
+                C15371.m36802("%s (%s) was loaded normally!", "pl_droidsonroids_gif", null);
+                return;
+            } catch (UnsatisfiedLinkError e) {
+                C15371.m36802("Loading the library normally failed: %s", Log.getStackTraceString(e));
+                C15371.m36802("%s (%s) was not loaded normally, re-linking...", "pl_droidsonroids_gif", null);
+                File fileM36803 = c15371.m36803(context);
+                if (!fileM36803.exists()) {
+                    File dir = context.getDir("lib", 0);
+                    File fileM36804 = c15371.m36803(context);
+                    C13134 c13134 = (C13134) interfaceC10896;
+                    c13134.getClass();
+                    File[] fileArrListFiles = dir.listFiles(new C19847(System.mapLibraryName("pl_droidsonroids_gif")));
+                    if (fileArrListFiles != null) {
+                        for (File file : fileArrListFiles) {
+                            if (!file.getAbsolutePath().equals(fileM36804.getAbsolutePath())) {
+                                file.delete();
+                            }
+                        }
+                    }
+                    c13134.getClass();
+                    String[] strArr = Build.SUPPORTED_ABIS;
+                    if (strArr.length <= 0) {
+                        String str = Build.CPU_ABI2;
+                        if (str != null && str.length() != 0) {
+                            strArr = new String[]{Build.CPU_ABI, str};
+                        } else {
+                            strArr = new String[]{Build.CPU_ABI};
+                        }
+                    }
+                    String[] strArr2 = strArr;
+                    c13134.getClass();
+                    c15371.f50133.m15117(context, strArr2, System.mapLibraryName("pl_droidsonroids_gif"), fileM36803, c15371);
+                }
+                String absolutePath = fileM36803.getAbsolutePath();
+                ((C13134) interfaceC10896).getClass();
+                System.load(absolutePath);
+                hashSet.add("pl_droidsonroids_gif");
+                C15371.m36802("%s (%s) was re-linked!", "pl_droidsonroids_gif", null);
+                return;
             }
-            i4++;
-            i++;
         }
-        if (i4 < i2) {
-            return -1;
-        }
-        return i4 < i3 ? 1 : 0;
-    }
-
-    @Override // l.C5856, l.AbstractC10796, java.lang.Comparable
-    /* JADX INFO: renamed from: ۙ */
-    public final int compareTo(List list) {
-        if (list instanceof C15070) {
-            C15070 c15070 = (C15070) list;
-            return m50571(0, c15070.f49126, c15070.f49125);
-        }
-        if (list instanceof C22831) {
-            C22831 c22831 = (C22831) list;
-            return m50571(c22831.f20000, c22831.f19999, c22831.f74281.f49125);
-        }
-        return super.compareTo(list);
+        throw new IllegalArgumentException("Given context is null");
     }
 }

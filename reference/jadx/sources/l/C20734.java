@@ -1,19 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷۟ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20734 extends Thread {
+import android.graphics.Typeface;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15796 f67477;
-
-    public C20734(C15796 c15796) {
-        this.f67477 = c15796;
+/* JADX INFO: renamed from: l.᩵ᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H21F */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20734 extends C3580 {
+    @Override // l.C3580
+    /* JADX INFO: renamed from: ۙ */
+    public final Typeface mo11639(Object obj) {
+        try {
+            Object objNewInstance = Array.newInstance((Class<?>) this.f12264, 1);
+            Array.set(objNewInstance, 0, obj);
+            return (Typeface) this.f12262.invoke(null, objNewInstance, "sans-serif", -1, -1);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() {
-        this.f67477.m37564("create");
+    @Override // l.C3580
+    /* JADX INFO: renamed from: ۙ */
+    public final Method mo11640(Class cls) throws NoSuchMethodException {
+        Class cls2 = Integer.TYPE;
+        Method declaredMethod = Typeface.class.getDeclaredMethod("createFromFamiliesWithDefault", Array.newInstance((Class<?>) cls, 1).getClass(), String.class, cls2, cls2);
+        declaredMethod.setAccessible(true);
+        return declaredMethod;
     }
 }

@@ -1,286 +1,58 @@
-.class public Ll/֫ۘᩴ;
+.class public final Ll/֫ۘᩴ;
 .super Ljava/lang/Object;
-.source "X5U"
+.source "28BC"
 
 
-# instance fields
-.field public ֡:Ll/۟ۘᩴ;
-
-.field public final synthetic ۫:Ll/ۗۘᩴ;
-
-.field public ܺ:Ll/۟ۘᩴ;
-
-.field public ܽ:Ll/۟ۘᩴ;
-
-.field public ᩶:I
+# static fields
+.field public static final ۙ:Landroid/content/pm/IPackageManager;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۗۘᩴ;)V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 925
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "package"
 
-    iput-object p1, p0, Ll/֫ۘᩴ;->۫:Ll/ۗۘᩴ;
+    .line 148
+    invoke-static {v0}, Ll/᩹ۖۘ;->ۙ(Ljava/lang/String;)Landroid/os/IBinder;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    .line 923
-    iput v0, p0, Ll/֫ۘᩴ;->᩶:I
+    invoke-static {v0}, Lcom/rosan/dhizuku/api/Dhizuku;->binderWrapper(Landroid/os/IBinder;)Landroid/os/IBinder;
 
-    .line 926
-    iget-object p1, p1, Ll/ۗۘᩴ;->ܽ:Ll/۟ۘᩴ;
+    move-result-object v0
 
-    iput-object p1, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
+    invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
+
+    move-result-object v0
+
+    sput-object v0, Ll/֫ۘᩴ;->ۙ:Landroid/content/pm/IPackageManager;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final hasNext()Z
+.method public static ۙ()Landroid/content/pm/IPackageInstaller;
     .locals 1
 
-    .line 939
-    iget-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
+    .line 151
+    sget-object v0, Ll/֫ۘᩴ;->ۙ:Landroid/content/pm/IPackageManager;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Landroid/content/pm/IPackageManager;->getPackageInstaller()Landroid/content/pm/IPackageInstaller;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    return v0
+    .line 152
+    invoke-interface {v0}, Landroid/content/pm/IPackageInstaller;->asBinder()Landroid/os/IBinder;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v0
 
-    return v0
-.end method
+    invoke-static {v0}, Lcom/rosan/dhizuku/api/Dhizuku;->binderWrapper(Landroid/os/IBinder;)Landroid/os/IBinder;
 
-.method public final hasPrevious()Z
-    .locals 1
+    move-result-object v0
 
-    .line 943
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public next()Ljava/lang/Object;
-    .locals 1
-
-    .line 1019
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ۙ()Ll/۟ۘᩴ;
+    invoke-static {v0}, Landroid/content/pm/IPackageInstaller$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageInstaller;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    .line 971
-    iget v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    return v0
-.end method
-
-.method public previous()Ljava/lang/Object;
-    .locals 1
-
-    .line 1024
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ܰ()Ll/۟ۘᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    .line 975
-    iget v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    .line 979
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    if-eqz v0, :cond_1
-
-    .line 982
-    iget-object v1, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    if-ne v0, v1, :cond_0
-
-    iget v1, p0, Ll/֫ۘᩴ;->᩶:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Ll/֫ۘᩴ;->᩶:I
-
-    .line 983
-    :cond_0
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
-
-    .line 984
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ۖ()V
-
-    .line 985
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ۨ()V
-
-    .line 986
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    iget v0, v0, Ll/ۡۚᩴ;->ܺ:I
-
-    iget-object v1, p0, Ll/֫ۘᩴ;->۫:Ll/ۗۘᩴ;
-
-    invoke-virtual {v1, v0}, Ll/ۗۘᩴ;->remove(I)Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 987
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    return-void
-
-    .line 979
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public ۖ()V
-    .locals 1
-
-    .line 959
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    invoke-virtual {v0}, Ll/۟ۘᩴ;->᩸()Ll/۟ۘᩴ;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    return-void
-.end method
-
-.method public final ۙ()Ll/۟ۘᩴ;
-    .locals 1
-
-    .line 951
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 952
-    iget-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    .line 953
-    iget v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    .line 954
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ۨ()V
-
-    .line 955
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    return-object v0
-
-    .line 951
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public ۨ()V
-    .locals 1
-
-    .line 947
-    iget-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
-
-    invoke-virtual {v0}, Ll/۟ۘᩴ;->᩹()Ll/۟ۘᩴ;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
-
-    return-void
-.end method
-
-.method public final ܰ()Ll/۟ۘᩴ;
-    .locals 1
-
-    .line 963
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 964
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܽ:Ll/۟ۘᩴ;
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->֡:Ll/۟ۘᩴ;
-
-    iput-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    .line 965
-    iget v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ll/֫ۘᩴ;->᩶:I
-
-    .line 966
-    invoke-virtual {p0}, Ll/֫ۘᩴ;->ۖ()V
-
-    .line 967
-    iget-object v0, p0, Ll/֫ۘᩴ;->ܺ:Ll/۟ۘᩴ;
-
-    return-object v0
-
-    .line 963
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
 .end method

@@ -14,8 +14,8 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C0252;
-import l.C15489;
+import l.C14483;
+import l.C25272;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DataHelper {
@@ -25,11 +25,11 @@ public class DataHelper {
     public static String UMENG_PLUS = "umeng+0123456789";
 
     public static String assembleStatelessURL(String str) {
-        return C0252.m1693("https://", str);
+        return C25272.m56409("https://", str);
     }
 
     public static String assembleURL(String str) {
-        return C0252.m1693("https://", str);
+        return C25272.m56409("https://", str);
     }
 
     public static boolean largeThanMaxSize(long j, long j2) {
@@ -140,15 +140,15 @@ public class DataHelper {
     }
 
     public static String bytes2Hex(byte[] bArr) {
-        String strM37076 = "";
+        String strM34972 = "";
         for (byte b : bArr) {
             String hexString = Integer.toHexString(b & 255);
             if (hexString.length() == 1) {
-                strM37076 = C15489.m37076(strM37076, "0");
+                strM34972 = C14483.m34972(strM34972, "0");
             }
-            strM37076 = C15489.m37076(strM37076, hexString);
+            strM34972 = C14483.m34972(strM34972, hexString);
         }
-        return strM37076;
+        return strM34972;
     }
 
     public static String encryptEx(String str) {

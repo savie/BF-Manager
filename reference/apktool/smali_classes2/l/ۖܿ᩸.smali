@@ -1,581 +1,847 @@
 .class public final Ll/ۖܿ᩸;
 .super Ljava/lang/Object;
-.source "A4XC"
+.source "C8OA"
 
 # interfaces
-.implements Ll/᩵ܽ᩸;
+.implements Ljava/lang/Appendable;
+.implements Ljava/lang/CharSequence;
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final synthetic ۖ:I
+.field public ֡:I
 
-.field public ۙ:Ll/ۙܽ᩸;
+.field public ֨:Ll/ۢۢ᩸;
 
-.field public final synthetic ۚ:Ljava/util/ArrayList;
+.field public final ۟:Ll/᩺۬᩹;
 
-.field public final synthetic ۨ:Ljava/util/HashMap;
+.field public final ۡ:I
 
-.field public ܰ:[Ll/۬ܿ᩸;
+.field public ۢ:[C
+
+.field public ܰ:Ll/ܶܿ᩸;
+
+.field public ܿ:Z
+
+.field public ᩳ:Ljava/lang/StringBuilder;
+
+.field public final ᩶:Ll/֡ۢ᩸;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/ArrayList;Ljava/util/HashMap;)V
-    .locals 0
+.method public constructor <init>(Ll/᩺۬᩹;Ll/֡ۢ᩸;I)V
+    .locals 1
 
-    .line 273
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ll/ۖܿ᩸;->ۖ:I
+    .line 18
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p2, p0, Ll/ۖܿ᩸;->ۚ:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object p3, p0, Ll/ۖܿ᩸;->ۨ:Ljava/util/HashMap;
+    iput-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
 
-    .line 308
-    new-array p1, p1, [Ll/۬ܿ᩸;
+    if-ltz p3, :cond_0
 
-    .line 311
-    iput-object p1, p0, Ll/ۖܿ᩸;->ܰ:[Ll/۬ܿ᩸;
+    .line 28
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Ll/ۖܿ᩸;->۟:Ll/᩺۬᩹;
+
+    .line 29
+    invoke-static {p2}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p2, p0, Ll/ۖܿ᩸;->᩶:Ll/֡ۢ᩸;
+
+    .line 30
+    iput p3, p0, Ll/ۖܿ᩸;->ۡ:I
+
+    return-void
+
+    .line 27
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Negative output threshold"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method private flush()V
+    .locals 3
+
+    .line 145
+    iget v0, p0, Ll/ۖܿ᩸;->֡:I
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 146
+    :cond_0
+    iget-object v1, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    iget-object v2, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    invoke-virtual {v1, v2, v0}, Ll/ܶܿ᩸;->ۙ([CI)V
+
+    .line 147
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0}, Ll/ܶܿ᩸;->ۤ()V
+
+    const/4 v0, 0x0
+
+    .line 148
+    iput v0, p0, Ll/ۖܿ᩸;->֡:I
 
     return-void
 .end method
 
-.method private ۙ(Ll/۟֡᩸;)V
-    .locals 3
+.method private ۙ()V
+    .locals 5
 
-    .line 375
-    sget-object v0, Ll/᩹ܿ᩸;->ۙ:[I
+    .line 117
+    iget-object v0, p0, Ll/ۖܿ᩸;->۟:Ll/᩺۬᩹;
 
-    iget-object v1, p1, Ll/۟֡᩸;->ܺ:Ll/᩵᩶᩸;
+    iget-object v1, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-nez v1, :cond_0
 
-    move-result v1
+    return-void
 
-    aget v0, v0, v1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_1
-
-    .line 394
     :cond_0
-    invoke-virtual {p1}, Ll/۟֡᩸;->ۚ()[Ll/۟֡᩸;
-
-    move-result-object p1
-
-    array-length v0, p1
-
     const/4 v1, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_4
+    :try_start_0
+    new-array v2, v1, [Ll/۬۬᩹;
 
-    aget-object v2, p1, v1
+    .line 119
+    invoke-static {v0, v2}, Ll/ۗ۬᩹;->createDirectories(Ll/᩺۬᩹;[Ll/۬۬᩹;)Ll/᩺۬᩹;
 
-    .line 395
-    invoke-direct {p0, v2}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
+    const-string v2, "format-"
 
-    add-int/lit8 v1, v1, 0x1
+    const-string v3, ".pages"
 
-    goto :goto_0
+    new-array v4, v1, [Ll/۬۬᩹;
 
-    .line 390
-    :cond_1
-    invoke-virtual {p1}, Ll/۟֡᩸;->ۨ()Ll/۟֡᩸;
+    .line 120
+    invoke-static {v0, v2, v3, v4}, Ll/ۗ۬᩹;->createTempFile(Ll/᩺۬᩹;Ljava/lang/String;Ljava/lang/String;[Ll/۬۬᩹;)Ll/᩺۬᩹;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
+
+    .line 123
+    :try_start_1
+    new-instance v2, Ll/ۡܿ᩸;
+
+    invoke-direct {v2, v0}, Ll/ۡܿ᩸;-><init>(Ll/᩺۬᩹;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_5
+    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_4
+
+    .line 129
+    :try_start_2
+    iget-object v0, p0, Ll/ۖܿ᩸;->᩶:Ll/֡ۢ᩸;
+
+    invoke-static {v2, v0}, Ll/ۢۢ᩸;->ۙ(Ll/ۙ֨᩸;Ll/֡ۢ᩸;)Ll/ۢۢ᩸;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
+    iput-object v0, p0, Ll/ۖܿ᩸;->֨:Ll/ۢۢ᩸;
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 391
-    invoke-virtual {p1}, Ll/۟֡᩸;->ۖ()Ll/۟֡᩸;
+    .line 134
+    :try_start_3
+    new-instance v2, Ll/ܶܿ᩸;
 
-    move-result-object p1
+    invoke-direct {v2, v0}, Ll/ܶܿ᩸;-><init>(Ll/ۢۢ᩸;)V
 
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
+    iput-object v2, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    const/16 v0, 0x800
+
+    new-array v0, v0, [C
+
+    .line 135
+    iput-object v0, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    .line 136
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    const/4 v2, 0x0
+
+    .line 137
+    iput-object v2, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "null"
+
+    .line 64
+    :cond_1
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, v2}, Ll/ۖܿ᩸;->append(Ljava/lang/CharSequence;II)V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_7
 
     return-void
 
-    .line 387
-    :cond_2
-    invoke-virtual {p1}, Ll/۟֡᩸;->ۙ()Ll/۟֡᩸;
+    :catch_0
+    move-exception v0
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
+    :catch_1
+    move-exception v0
 
-    return-void
+    goto :goto_0
 
-    .line 377
-    :cond_3
-    iget-object v0, p1, Ll/۟֡᩸;->ܽ:Ll/ۤ֡᩸;
+    :catch_2
+    move-exception v0
 
-    sget-object v2, Ll/ۤ֡᩸;->ܺۙ:Ll/ۤ֡᩸;
+    .line 131
+    :goto_0
+    :try_start_4
+    invoke-virtual {v2}, Ll/ۡܿ᩸;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    if-ne v0, v2, :cond_4
+    goto :goto_1
 
-    .line 378
-    check-cast p1, Ll/ۖ֡᩸;
+    :catch_3
+    move-exception v1
 
-    .line 379
-    iget p1, p1, Ll/ۖ֡᩸;->۫:I
+    :try_start_5
+    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    if-ltz p1, :cond_4
-
-    .line 380
-    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:[Ll/۬ܿ᩸;
-
-    aget-object p1, v0, p1
-
-    .line 381
-    iget-object v0, p1, Ll/۬ܿ᩸;->ۙ:Ll/֨ܿ᩸;
-
-    iget-object v0, v0, Ll/֨ܿ᩸;->ۚ:Ljava/util/ArrayList;
-
-    iget-object v2, p0, Ll/ۖܿ᩸;->ۙ:Ll/ۙܽ᩸;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 382
-    iput-boolean v1, p1, Ll/۬ܿ᩸;->᩹:Z
-
-    :cond_4
+    .line 132
     :goto_1
-    return-void
+    throw v0
+
+    :catch_4
+    move-exception v1
+
+    goto :goto_2
+
+    :catch_5
+    move-exception v1
+
+    goto :goto_2
+
+    :catch_6
+    move-exception v1
+
+    .line 125
+    :goto_2
+    invoke-static {v0}, Ll/ۗ۬᩹;->deleteIfExists(Ll/᩺۬᩹;)Z
+
+    .line 126
+    throw v1
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_7
+
+    :catch_7
+    move-exception v0
+
+    .line 140
+    new-instance v1, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v1, v0}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ljava/lang/Object;
+.method public final bridge synthetic append(C)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 14
+    invoke-virtual {p0, p1}, Ll/ۖܿ᩸;->append(C)V
+
+    return-object p0
+.end method
+
+.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const-string p1, "null"
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 64
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    invoke-virtual {p0, p1, v0, v1}, Ll/ۖܿ᩸;->append(Ljava/lang/CharSequence;II)V
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 14
+    invoke-virtual {p0, p1, p2, p3}, Ll/ۖܿ᩸;->append(Ljava/lang/CharSequence;II)V
+
+    return-object p0
+.end method
+
+.method public final append(C)V
+    .locals 3
+
+    .line 51
+    invoke-virtual {p0}, Ll/ۖܿ᩸;->length()I
+
+    move-result v0
+
+    const v1, 0x7fffffff
+
+    if-eq v0, v1, :cond_2
+
+    .line 53
+    iget-object v1, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-eqz v1, :cond_0
+
+    iget v2, p0, Ll/ۖܿ᩸;->ۡ:I
+
+    if-ge v0, v2, :cond_0
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-void
+
+    .line 55
+    :cond_0
+    invoke-direct {p0}, Ll/ۖܿ᩸;->ۙ()V
+
+    .line 56
+    iget v0, p0, Ll/ۖܿ᩸;->֡:I
+
+    iget-object v1, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    array-length v1, v1
+
+    if-ne v0, v1, :cond_1
+
+    invoke-direct {p0}, Ll/ۖܿ᩸;->flush()V
+
+    .line 57
+    :cond_1
+    iget-object v0, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    iget v1, p0, Ll/ۖܿ᩸;->֡:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ll/ۖܿ᩸;->֡:I
+
+    aput-char p1, v0, v1
+
+    return-void
+
+    .line 52
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Output is too large"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final append(Ljava/lang/CharSequence;II)V
+    .locals 5
+
+    if-nez p1, :cond_0
+
+    const-string p1, "null"
+
+    .line 69
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    invoke-static {p2, p3, v0}, Ll/᩷֡᩸;->ۙ(III)V
+
+    sub-int v0, p3, p2
+
+    const v1, 0x7fffffff
+
+    .line 70
+    invoke-virtual {p0}, Ll/ۖܿ᩸;->length()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    if-gt v0, v1, :cond_7
+
+    .line 71
+    iget-object v1, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-eqz v1, :cond_1
+
+    iget v2, p0, Ll/ۖܿ᩸;->ۡ:I
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v1
+
+    sub-int/2addr v2, v1
+
+    if-gt v0, v2, :cond_1
+
+    .line 72
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
+
+    return-void
+
+    .line 75
+    :cond_1
+    invoke-direct {p0}, Ll/ۖܿ᩸;->ۙ()V
+
+    :goto_0
+    if-ge p2, p3, :cond_6
+
+    .line 77
+    iget v0, p0, Ll/ۖܿ᩸;->֡:I
+
+    iget-object v1, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    array-length v1, v1
+
+    if-ne v0, v1, :cond_2
+
+    invoke-direct {p0}, Ll/ۖܿ᩸;->flush()V
+
+    :cond_2
+    sub-int v0, p3, p2
+
+    .line 78
+    iget-object v1, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    array-length v1, v1
+
+    iget v2, p0, Ll/ۖܿ᩸;->֡:I
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    .line 79
+    instance-of v1, p1, Ll/۠ܿ᩸;
+
+    if-eqz v1, :cond_3
+
+    move-object v1, p1
+
+    check-cast v1, Ll/۠ܿ᩸;
+
+    add-int v2, p2, v0
+
+    iget-object v3, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    iget v4, p0, Ll/ۖܿ᩸;->֡:I
+
+    invoke-virtual {v1, p2, v2, v3, v4}, Ll/۠ܿ᩸;->getChars(II[CI)V
+
+    goto :goto_2
+
+    .line 80
+    :cond_3
+    instance-of v1, p1, Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    move-object v1, p1
+
+    check-cast v1, Ljava/lang/String;
+
+    add-int v2, p2, v0
+
+    iget-object v3, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    iget v4, p0, Ll/ۖܿ᩸;->֡:I
+
+    invoke-virtual {v1, p2, v2, v3, v4}, Ljava/lang/String;->getChars(II[CI)V
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v1, 0x0
+
+    :goto_1
+    if-ge v1, v0, :cond_5
+
+    .line 81
+    iget-object v2, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    iget v3, p0, Ll/ۖܿ᩸;->֡:I
+
+    add-int/2addr v3, v1
+
+    add-int v4, p2, v1
+
+    invoke-interface {p1, v4}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v4
+
+    aput-char v4, v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    .line 82
+    :cond_5
+    :goto_2
+    iget v1, p0, Ll/ۖܿ᩸;->֡:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Ll/ۖܿ᩸;->֡:I
+
+    add-int/2addr p2, v0
+
+    goto :goto_0
+
+    :cond_6
+    return-void
+
+    .line 70
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Output is too large"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final charAt(I)C
+    .locals 2
+
+    if-ltz p1, :cond_2
+
+    .line 39
+    invoke-virtual {p0}, Ll/ۖܿ᩸;->length()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_2
+
+    .line 40
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result p1
+
+    return p1
+
+    .line 41
+    :cond_0
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0}, Ll/ܶܿ᩸;->᩷()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_1
+
+    .line 42
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0, p1}, Ll/ܶܿ᩸;->ۙ(I)C
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    iget-object v1, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    sub-int/2addr p1, v0
+
+    aget-char p1, v1, p1
+
+    return p1
+
+    .line 39
+    :cond_2
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final close()V
     .locals 1
 
-    .line 308
-    iget v0, p0, Ll/ۖܿ᩸;->ۖ:I
+    .line 156
+    iget-boolean v0, p0, Ll/ۖܿ᩸;->ܿ:Z
 
-    new-array v0, v0, [Ll/۬ܿ᩸;
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 157
+    iput-boolean v0, p0, Ll/ۖܿ᩸;->ܿ:Z
+
+    const/4 v0, 0x0
+
+    .line 158
+    iput-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    .line 159
+    iput-object v0, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    .line 160
+    iput-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    .line 161
+    iget-object v0, p0, Ll/ۖܿ᩸;->֨:Ll/ۢۢ᩸;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ll/ۢۢ᩸;->close()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final finish()Ll/۠ܿ᩸;
+    .locals 3
+
+    .line 152
+    iget-boolean v0, p0, Ll/ۖܿ᩸;->ܿ:Z
+
+    if-nez v0, :cond_2
+
+    .line 103
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-eqz v0, :cond_1
+
+    .line 104
+    new-instance v0, Ll/ܶܿ᩸;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ll/ܶܿ᩸;-><init>(Ll/ۢۢ᩸;)V
+
+    iput-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    const/16 v0, 0x800
+
+    new-array v0, v0, [C
+
+    .line 105
+    iput-object v0, p0, Ll/ۖܿ᩸;->ۢ:[C
+
+    .line 106
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    .line 107
+    iput-object v1, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "null"
+
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 64
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, v2}, Ll/ۖܿ᩸;->append(Ljava/lang/CharSequence;II)V
+
+    .line 110
+    :cond_1
+    invoke-direct {p0}, Ll/ۖܿ᩸;->flush()V
+
+    .line 111
+    new-instance v0, Ll/۠ܿ᩸;
+
+    iget-object v1, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v1}, Ll/ܶܿ᩸;->ۙ()Ll/᩷֡᩸;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ll/۠ܿ᩸;-><init>(Ll/᩷֡᩸;)V
+
+    .line 112
+    invoke-virtual {p0}, Ll/ۖܿ᩸;->close()V
+
+    return-object v0
+
+    .line 152
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Text output is closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final length()I
+    .locals 2
+
+    .line 152
+    iget-boolean v0, p0, Ll/ۖܿ᩸;->ܿ:Z
+
+    if-nez v0, :cond_1
+
+    .line 35
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0}, Ll/ܶܿ᩸;->᩷()I
+
+    move-result v0
+
+    iget v1, p0, Ll/ۖܿ᩸;->֡:I
+
+    add-int/2addr v0, v1
+
+    return v0
+
+    .line 152
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Text output is closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final subSequence(II)Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 47
+    new-instance v0, Ll/ܿ۫ܺ;
+
+    invoke-direct {v0, p1, p2, p0}, Ll/ܿ۫ܺ;-><init>(IILjava/lang/CharSequence;)V
 
     return-object v0
 .end method
 
-.method public final ۙ(Ljava/lang/Object;Ljava/lang/Object;Ll/ۙܽ᩸;Ll/ۙܽ᩸;)Ljava/lang/Object;
-    .locals 3
+.method public final ᩷(I)V
+    .locals 1
 
-    .line 273
-    check-cast p1, [Ll/۬ܿ᩸;
+    if-ltz p1, :cond_2
 
-    check-cast p2, [Ll/۬ܿ᩸;
-
-    const/4 p3, 0x0
-
-    .line 278
-    iget p4, p0, Ll/ۖܿ᩸;->ۖ:I
-
-    if-nez p2, :cond_2
-
-    .line 279
-    new-array p2, p4, [Ll/۬ܿ᩸;
-
-    :goto_0
-    if-ge p3, p4, :cond_1
-
-    .line 281
-    aget-object v0, p1, p3
-
-    if-eqz v0, :cond_0
-
-    .line 283
-    new-instance v1, Ll/۬ܿ᩸;
-
-    iget-object v2, v0, Ll/۬ܿ᩸;->ܰ:Ll/ۖ֡᩸;
-
-    invoke-direct {v1, v2}, Ll/۬ܿ᩸;-><init>(Ll/ۖ֡᩸;)V
-
-    .line 284
-    iget-object v2, p0, Ll/ۖܿ᩸;->ۚ:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 285
-    iget-object v2, v0, Ll/۬ܿ᩸;->ۙ:Ll/֨ܿ᩸;
-
-    iput-object v2, v1, Ll/۬ܿ᩸;->ۙ:Ll/֨ܿ᩸;
-
-    .line 286
-    iput-object v0, v1, Ll/۬ܿ᩸;->ۖ:Ll/۬ܿ᩸;
-
-    .line 287
-    iget-object v0, v0, Ll/۬ܿ᩸;->ۚ:Ljava/util/BitSet;
-
-    invoke-virtual {v0}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/BitSet;
-
-    iput-object v0, v1, Ll/۬ܿ᩸;->ۚ:Ljava/util/BitSet;
-
-    .line 288
-    aput-object v1, p2, p3
-
-    :cond_0
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object p2
-
-    :cond_2
-    :goto_1
-    if-ge p3, p4, :cond_5
-
-    .line 293
-    aget-object v0, p1, p3
-
-    .line 294
-    aget-object v1, p2, p3
-
-    if-eqz v0, :cond_4
-
-    if-eqz v1, :cond_4
-
-    .line 296
-    iget-object v2, v1, Ll/۬ܿ᩸;->ۨ:Ljava/util/HashSet;
-
-    if-nez v2, :cond_3
-
-    .line 297
-    new-instance v2, Ljava/util/HashSet;
-
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v2, v1, Ll/۬ܿ᩸;->ۨ:Ljava/util/HashSet;
-
-    .line 299
-    :cond_3
-    iget-object v1, v1, Ll/۬ܿ᩸;->ۨ:Ljava/util/HashSet;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    return-object p2
-.end method
-
-.method public final ۙ(Ljava/lang/Object;Ll/ۙܽ᩸;)Ljava/lang/Object;
-    .locals 4
-
-    .line 273
-    check-cast p1, [Ll/۬ܿ᩸;
-
-    .line 316
-    iput-object p2, p0, Ll/ۖܿ᩸;->ۙ:Ll/ۙܽ᩸;
-
-    .line 317
-    iget v0, p0, Ll/ۖܿ᩸;->ۖ:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Ll/ۖܿ᩸;->ܰ:[Ll/۬ܿ᩸;
-
-    invoke-static {p1, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 318
-    iget-object p1, p2, Ll/ۙܽ᩸;->ۘ:Ll/ۗ֡᩸;
-
-    sget-object v0, Ll/ۗ֡᩸;->ܽ:Ll/ۗ֡᩸;
-
-    if-ne p1, v0, :cond_1
-
-    .line 319
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll/۟֡᩸;->ܽ:Ll/ۤ֡᩸;
-
-    sget-object v0, Ll/ۤ֡᩸;->ܺۙ:Ll/ۤ֡᩸;
-
-    if-ne p1, v0, :cond_0
-
-    .line 320
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    check-cast p1, Ll/ۖ֡᩸;
-
-    .line 321
-    iget p1, p1, Ll/ۖ֡᩸;->۫:I
-
-    if-ltz p1, :cond_6
-
-    .line 322
-    aget-object p1, v2, p1
-
-    .line 323
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۚ()Ll/۟֡᩸;
-
-    move-result-object p2
-
-    check-cast p2, Ll/ܳ᩶᩸;
-
-    .line 324
-    iget-object p2, p2, Ll/ܳ᩶᩸;->۫:Ljava/lang/Object;
-
-    invoke-static {p2}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
-
-    move-result p2
-
-    .line 325
-    iget-object p1, p1, Ll/۬ܿ᩸;->ۚ:Ljava/util/BitSet;
-
-    invoke-virtual {p1, v1, p2}, Ljava/util/BitSet;->set(II)V
-
-    return-object v2
-
-    .line 328
-    :cond_0
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    return-object v2
-
-    .line 330
-    :cond_1
-    sget-object v0, Ll/ۗ֡᩸;->֡:Ll/ۗ֡᩸;
-
-    if-ne p1, v0, :cond_4
-
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object v1
-
-    iget-object v1, v1, Ll/۟֡᩸;->ܽ:Ll/ۤ֡᩸;
-
-    sget-object v3, Ll/ۤ֡᩸;->ܿ:Ll/ۤ֡᩸;
-
-    if-ne v1, v3, :cond_4
-
-    .line 331
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۚ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    .line 332
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    check-cast p1, Ll/ۛ᩶᩸;
-
-    .line 113
-    iget-object p2, p1, Ll/᩵֡᩸;->۫:Ll/۟֡᩸;
-
-    .line 333
-    iget-object v0, p2, Ll/۟֡᩸;->ܽ:Ll/ۤ֡᩸;
-
-    sget-object v1, Ll/ۤ֡᩸;->ܺۙ:Ll/ۤ֡᩸;
-
-    if-ne v0, v1, :cond_3
-
-    .line 334
-    check-cast p2, Ll/ۖ֡᩸;
-
-    .line 335
-    iget v0, p2, Ll/ۖ֡᩸;->۫:I
-
-    if-ltz v0, :cond_2
-
-    .line 118
-    iget-object p1, p1, Ll/᩵֡᩸;->ܿ:Ll/۟֡᩸;
-
-    .line 336
-    check-cast p1, Ll/ܳ᩶᩸;
-
-    iget-object p1, p1, Ll/ܳ᩶᩸;->۫:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    .line 337
-    iget p2, p2, Ll/ۖ֡᩸;->۫:I
-
-    aget-object p2, v2, p2
-
-    .line 338
-    iget-object p2, p2, Ll/۬ܿ᩸;->ۚ:Ljava/util/BitSet;
-
-    invoke-virtual {p2, p1}, Ljava/util/BitSet;->set(I)V
-
-    return-object v2
-
-    .line 340
-    :cond_2
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    return-object v2
-
-    .line 343
-    :cond_3
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    return-object v2
-
-    :cond_4
-    if-ne p1, v0, :cond_5
-
-    .line 345
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll/۟֡᩸;->ܽ:Ll/ۤ֡᩸;
-
-    sget-object v0, Ll/ۤ֡᩸;->ܺۙ:Ll/ۤ֡᩸;
-
-    if-ne p1, v0, :cond_5
-
-    .line 346
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    check-cast p1, Ll/ۖ֡᩸;
-
-    .line 347
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۚ()Ll/۟֡᩸;
-
-    move-result-object p2
-
-    invoke-direct {p0, p2}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    .line 349
-    iget p2, p1, Ll/ۖ֡᩸;->۫:I
-
-    if-ltz p2, :cond_6
-
-    .line 350
-    new-instance p2, Ll/۬ܿ᩸;
-
-    invoke-direct {p2, p1}, Ll/۬ܿ᩸;-><init>(Ll/ۖ֡᩸;)V
-
-    .line 351
-    iget-object v0, p0, Ll/ۖܿ᩸;->ۨ:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll/֨ܿ᩸;
-
-    iput-object v0, p2, Ll/۬ܿ᩸;->ۙ:Ll/֨ܿ᩸;
-
-    .line 352
-    new-instance v0, Ljava/util/BitSet;
-
-    invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
-
-    iput-object v0, p2, Ll/۬ܿ᩸;->ۚ:Ljava/util/BitSet;
-
-    .line 353
-    iget-object v0, p0, Ll/ۖܿ᩸;->ۚ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 354
-    iget p1, p1, Ll/ۖ֡᩸;->۫:I
-
-    aput-object p2, v2, p1
-
-    return-object v2
-
-    .line 357
-    :cond_5
-    sget-object p1, Ll/᩹ܿ᩸;->ۙ:[I
-
-    iget-object v0, p2, Ll/ۙܽ᩸;->ܰ:Ll/᩵᩶᩸;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    .line 90
+    invoke-virtual {p0}, Ll/ۖܿ᩸;->length()I
 
     move-result v0
 
-    aget p1, p1, v0
+    if-gt p1, v0, :cond_2
 
-    const/4 v0, 0x2
+    .line 91
+    iget-object v0, p0, Ll/ۖܿ᩸;->ᩳ:Ljava/lang/StringBuilder;
 
-    if-eq p1, v0, :cond_9
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x3
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    if-eq p1, v0, :cond_8
+    return-void
 
-    const/4 p2, 0x4
+    .line 92
+    :cond_0
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
 
-    if-eq p1, p2, :cond_7
+    invoke-virtual {v0}, Ll/ܶܿ᩸;->᩷()I
 
-    :cond_6
-    return-object v2
+    move-result v0
 
-    .line 368
-    :cond_7
-    new-instance p1, Ljava/lang/RuntimeException;
+    if-lt p1, v0, :cond_1
 
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0}, Ll/ܶܿ᩸;->᩷()I
+
+    move-result v0
+
+    sub-int/2addr p1, v0
+
+    iput p1, p0, Ll/ۖܿ᩸;->֡:I
+
+    return-void
+
+    .line 94
+    :cond_1
+    iget-object v0, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {v0, p1}, Ll/ܶܿ᩸;->᩷(I)V
+
+    .line 95
+    iget-object p1, p0, Ll/ۖܿ᩸;->ܰ:Ll/ܶܿ᩸;
+
+    invoke-virtual {p1}, Ll/ܶܿ᩸;->ۤ()V
+
+    const/4 p1, 0x0
+
+    .line 96
+    iput p1, p0, Ll/ۖܿ᩸;->֡:I
+
+    return-void
+
+    .line 90
+    :cond_2
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw p1
-
-    .line 364
-    :cond_8
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۖ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    .line 365
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۚ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    return-object v2
-
-    .line 361
-    :cond_9
-    invoke-virtual {p2}, Ll/ۙܽ᩸;->ۨ()Ll/۟֡᩸;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ll/ۖܿ᩸;->ۙ(Ll/۟֡᩸;)V
-
-    return-object v2
 .end method

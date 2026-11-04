@@ -1,50 +1,95 @@
 package l;
 
-import android.R;
+import javax.crypto.Cipher;
+import javax.crypto.ShortBufferException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
-/* JADX INFO: renamed from: l.ۜ᩶ܰ, reason: contains not printable characters */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6993 {
+/* JADX INFO: renamed from: l.ۜ۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 07ZH */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6993 implements InterfaceC21360 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int[] f23525 = {R.attr.selectableItemBackground, bin.mt.plus.R.attr.MT_Protector};
+    public Cipher f23060;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int[] f23530 = {R.attr.summaryOn, R.attr.summaryOff, R.attr.disableDependentsState, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    public final int getBlockSize() {
+        return 32;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static int[] f23528 = {R.attr.dialogTitle, R.attr.dialogMessage, R.attr.dialogIcon, R.attr.positiveButtonText, R.attr.negativeButtonText, R.attr.dialogLayout, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3921(int i) {
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static int[] f23523 = {bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3924(byte[] bArr) {
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static int[] f23526 = {R.attr.entries, R.attr.entryValues, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo3925() {
+        return true;
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static int[] f23534 = {R.attr.entries, R.attr.entryValues, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۤ */
+    public final /* synthetic */ boolean mo3926() {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static int[] f23522 = {R.attr.icon, R.attr.persistent, R.attr.enabled, R.attr.layout, R.attr.title, R.attr.selectable, R.attr.key, R.attr.summary, R.attr.order, R.attr.widgetLayout, R.attr.dependency, R.attr.defaultValue, R.attr.shouldDisableView, R.attr.fragment, R.attr.singleLineTitle, R.attr.iconSpaceReserved, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩴ */
+    public final /* synthetic */ boolean mo3927() {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static int[] f23529 = {R.attr.layout, R.attr.divider, R.attr.dividerHeight, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ int mo3928() {
+        return 0;
+    }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static int[] f23524 = {R.attr.layout, R.attr.divider, R.attr.dividerHeight, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ void mo3929(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
+    }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static int[] f23527 = {R.attr.orderingFromXml, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo3930() {
+        return 16;
+    }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static int[] f23535 = {R.attr.maxWidth, R.attr.maxHeight, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3923(int i, byte[] bArr, byte[] bArr2) throws Exception {
+        if (bArr2.length > 16) {
+            byte[] bArr3 = new byte[16];
+            System.arraycopy(bArr2, 0, bArr3, 0, 16);
+            bArr2 = bArr3;
+        }
+        if (bArr.length > 32) {
+            byte[] bArr4 = new byte[32];
+            System.arraycopy(bArr, 0, bArr4, 0, 32);
+            bArr = bArr4;
+        }
+        try {
+            SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES");
+            Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
+            this.f23060 = cipher;
+            cipher.init(i == 0 ? 1 : 2, secretKeySpec, new IvParameterSpec(bArr2));
+        } catch (Exception e) {
+            this.f23060 = null;
+            throw e;
+        }
+    }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static int[] f23531 = {R.attr.layout, R.attr.max, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public static int[] f23533 = {R.attr.summaryOn, R.attr.summaryOff, R.attr.disableDependentsState, R.attr.switchTextOn, R.attr.switchTextOff, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static int[] f23532 = {R.attr.summaryOn, R.attr.summaryOff, R.attr.disableDependentsState, R.attr.switchTextOn, R.attr.switchTextOff, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector, bin.mt.plus.R.attr.MT_Protector};
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3922(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
+        this.f23060.update(bArr, i, i2, bArr2, i3);
+    }
 }

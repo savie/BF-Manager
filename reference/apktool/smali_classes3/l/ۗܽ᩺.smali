@@ -1,45 +1,34 @@
 .class public final Ll/ۗܽ᩺;
-.super Ll/᩹ܿ᩵;
-.source "51V0"
+.super Ljava/lang/Object;
+.source "TA0L"
+
+# interfaces
+.implements Ll/᩹ܽ᩺;
 
 
 # instance fields
-.field public final synthetic ֡:Ll/ۧۨۡ;
+.field public ۙ:[Ljava/lang/Object;
 
-.field public final synthetic ᩶:Ljava/lang/String;
+.field public ᩷:Ll/ۘܽ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll/ۧۨۡ;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 193
-    iput-object p1, p0, Ll/ۗܽ᩺;->᩶:Ljava/lang/String;
-
-    iput-object p2, p0, Ll/ۗܽ᩺;->֡:Ll/ۧۨۡ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
+.method public final ۙ()Ll/ۘܽ᩺;
     .locals 1
 
-    .line 197
-    iget-object v0, p0, Ll/ۗܽ᩺;->᩶:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ll/ۧۨۡ;
-    .locals 1
-
-    .line 203
-    iget-object v0, p0, Ll/ۗܽ᩺;->֡:Ll/ۧۨۡ;
+    .line 43
+    iget-object v0, p0, Ll/ۗܽ᩺;->᩷:Ll/ۘܽ᩺;
 
     return-object v0
 .end method

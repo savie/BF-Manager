@@ -13,10 +13,10 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import javax.security.auth.DestroyFailedException;
-import l.C0252;
-import l.C12441;
-import l.C16523;
-import l.C22697;
+import l.C14442;
+import l.C22783;
+import l.C25272;
+import l.C8947;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.SecretWithEncapsulation;
@@ -151,14 +151,14 @@ public class BIKECipherSpi extends CipherSpi {
             kEMParameterSpec = new KEMParameterSpec("AES-KWP");
         } else {
             if (!(algorithmParameterSpec instanceof KTSParameterSpec)) {
-                throw new InvalidAlgorithmParameterException(C22697.m50267(new StringBuilder(), this.algorithmName, " can only accept KTSParameterSpec"));
+                throw new InvalidAlgorithmParameterException(C8947.m23910(new StringBuilder(), this.algorithmName, " can only accept KTSParameterSpec"));
             }
             kEMParameterSpec = (KTSParameterSpec) algorithmParameterSpec;
         }
         this.kemParameterSpec = kEMParameterSpec;
         if (i == 3) {
             if (!(key instanceof BCBIKEPublicKey)) {
-                throw new InvalidKeyException(C22697.m50267(new StringBuilder("Only a "), this.algorithmName, " public key can be used for wrapping"));
+                throw new InvalidKeyException(C8947.m23910(new StringBuilder("Only a "), this.algorithmName, " public key can be used for wrapping"));
             }
             this.wrapKey = (BCBIKEPublicKey) key;
             this.kemGen = new BIKEKEMGenerator(CryptoServicesRegistrar.getSecureRandom(secureRandom));
@@ -167,7 +167,7 @@ public class BIKECipherSpi extends CipherSpi {
                 throw new InvalidParameterException("Cipher only valid for wrapping/unwrapping");
             }
             if (!(key instanceof BCBIKEPrivateKey)) {
-                throw new InvalidKeyException(C22697.m50267(new StringBuilder("Only a "), this.algorithmName, " private key can be used for unwrapping"));
+                throw new InvalidKeyException(C8947.m23910(new StringBuilder("Only a "), this.algorithmName, " private key can be used for unwrapping"));
             }
             this.unwrapKey = (BCBIKEPrivateKey) key;
         }
@@ -177,9 +177,9 @@ public class BIKECipherSpi extends CipherSpi {
             if (upperCase.equals(key.getAlgorithm())) {
                 return;
             }
-            StringBuilder sbM30914 = C12441.m30914("cipher locked to ", upperCase, " ");
-            sbM30914.append(key.getAlgorithm());
-            throw new InvalidKeyException(sbM30914.toString());
+            StringBuilder sbM51387 = C22783.m51387("cipher locked to ", upperCase, " ");
+            sbM51387.append(key.getAlgorithm());
+            throw new InvalidKeyException(sbM51387.toString());
         }
     }
 
@@ -240,11 +240,11 @@ public class BIKECipherSpi extends CipherSpi {
 
     @Override // javax.crypto.CipherSpi
     public void engineSetMode(String str) throws NoSuchAlgorithmException {
-        throw new NoSuchAlgorithmException(C0252.m1693("Cannot support mode ", str));
+        throw new NoSuchAlgorithmException(C25272.m56409("Cannot support mode ", str));
     }
 
     @Override // javax.crypto.CipherSpi
     public void engineSetPadding(String str) throws NoSuchPaddingException {
-        throw new NoSuchPaddingException(C16523.m38890("Padding ", str, " unknown"));
+        throw new NoSuchPaddingException(C14442.m34865("Padding ", str, " unknown"));
     }
 }

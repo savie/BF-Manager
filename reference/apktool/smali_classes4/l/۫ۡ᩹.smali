@@ -1,80 +1,53 @@
 .class public final Ll/۫ۡ᩹;
-.super Ll/ۙ۬᩹;
-.source "49OI"
+.super Ljava/lang/Object;
+.source "1CD2"
 
 
 # static fields
-.field public static final ۫:Ll/۫ۡ᩹;
+.field public static final ۙ:Ll/ܳۡ᩹;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    .line 8
-    new-instance v0, Ll/۫ۡ᩹;
+    .line 190
+    new-instance v0, Ll/ܳۡ᩹;
 
-    const v1, 0x7f1205f0
+    .line 34
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const v2, 0x7f080223
-
-    .line 15
-    invoke-direct {v0, v1, v2}, Ll/ۙ۬᩹;-><init>(II)V
-
-    .line 8
-    sput-object v0, Ll/۫ۡ᩹;->۫:Ll/۫ۡ᩹;
+    .line 190
+    sput-object v0, Ll/۫ۡ᩹;->ۙ:Ll/ܳۡ᩹;
 
     return-void
 .end method
 
-.method public static ֨()Ll/۫ۡ᩹;
+.method public static ۙ(Ll/ᩴۡ᩹;)Ll/ܳ۠᩹;
     .locals 1
 
-    .line 11
-    sget-object v0, Ll/۫ۡ᩹;->۫:Ll/۫ۡ᩹;
+    .line 44
+    invoke-interface {p0}, Ll/ᩴۡ᩹;->ۙۙ()Ll/۟۠᩹;
 
-    return-object v0
-.end method
+    move-result-object p0
 
+    .line 45
+    instance-of v0, p0, Ll/᩸ۡ᩹;
 
-# virtual methods
-.method public final ۖ(Ll/᩸ۜ᩹;)Z
-    .locals 0
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x0
+    check-cast p0, Ll/᩸ۡ᩹;
 
-    return p1
-.end method
+    invoke-interface {p0}, Ll/᩸ۡ᩹;->ۙ()Ll/ܳ۠᩹;
 
-.method public final ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
-    .locals 1
-
-    .line 20
-    sget-object v0, Ll/۫ۡ᩹;->۫:Ll/۫ۡ᩹;
-
-    if-eq p0, v0, :cond_0
-
-    .line 23
-    invoke-super {p0, p1}, Ll/ۙ۬᩹;->ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
+    move-result-object p0
 
     return-object p0
 
-    .line 21
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {p0}, Ll/۟۠᩹;->iterator()Ll/ܳ۠᩹;
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    move-result-object p0
 
-    throw p1
-.end method
-
-.method public final ۨ(Ll/᩸ۜ᩹;)V
-    .locals 0
-
-    .line 33
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-object p0
 .end method

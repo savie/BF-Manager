@@ -2,7 +2,7 @@ package com.google.android.material.animation;
 
 import android.animation.TypeEvaluator;
 import android.graphics.Matrix;
-import l.C0280;
+import l.C19967;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MatrixEvaluator implements TypeEvaluator {
@@ -18,7 +18,7 @@ public class MatrixEvaluator implements TypeEvaluator {
             float[] fArr = this.tempEndValues;
             float f2 = fArr[i];
             float f3 = this.tempStartValues[i];
-            fArr[i] = C0280.m1792(f2, f3, f, f3);
+            fArr[i] = C19967.m45884(f2, f3, f, f3);
         }
         this.tempMatrix.setValues(this.tempEndValues);
         return this.tempMatrix;

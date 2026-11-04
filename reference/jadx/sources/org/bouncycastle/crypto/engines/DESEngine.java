@@ -8,7 +8,7 @@ import com.umeng.analytics.pro.cb;
 import com.umeng.analytics.pro.i;
 import com.umeng.analytics.pro.o;
 import com.umeng.commonsdk.internal.a;
-import l.C0219;
+import l.C14483;
 import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -21,16 +21,16 @@ import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.encoders.Base32Encoder;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESEngine extends DESBase implements BlockCipher {
     public static final int BLOCK_SIZE = 8;
     public boolean forEncryption;
     public int[] workingKey = null;
     public static final short[] bytebit = {128, 64, 32, 16, 8, 4, 2, 1};
     public static final int[] bigbyte = {8388608, 4194304, 2097152, 1048576, 524288, 262144, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT, 65536, 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1};
-    public static final byte[] pc1 = {56, UTF8.S_P3A, 40, UTF8.S_CS3, 24, 16, 8, 0, 57, 49, 41, PublicSuffixDatabase.EXCEPTION_MARKER, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18, 10, 2, 59, 51, 43, 35, 62, 54, 46, 38, 30, 22, cb.f77931l, 6, Base32Encoder.DEFAULT_PADDING, 53, 45, 37, 29, 21, cb.k, 5, 60, 52, 44, 36, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 20, 12, 4, 27, 19, 11, 3};
-    public static final byte[] totrot = {1, 2, 4, 6, 8, 10, 12, cb.f77931l, 15, 17, 19, 21, 23, 25, 27, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB};
-    public static final byte[] pc2 = {cb.k, 16, 10, 23, 0, 4, 2, 27, cb.f77931l, 5, 20, 9, 22, 18, 11, 3, 25, 7, 15, 6, 26, 19, 12, 1, 40, 51, 30, 36, 46, 54, 29, 39, 50, 44, UTF8.S_CS3, 47, 43, UTF8.S_P3A, 38, 55, PublicSuffixDatabase.EXCEPTION_MARKER, 52, 45, 41, 49, 35, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, bo.j};
+    public static final byte[] pc1 = {56, UTF8.S_P3A, 40, UTF8.S_CS3, 24, 16, 8, 0, 57, 49, 41, PublicSuffixDatabase.EXCEPTION_MARKER, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18, 10, 2, 59, 51, 43, 35, 62, 54, 46, 38, 30, 22, cb.f82047l, 6, Base32Encoder.DEFAULT_PADDING, 53, 45, 37, 29, 21, cb.k, 5, 60, 52, 44, 36, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 20, 12, 4, 27, 19, 11, 3};
+    public static final byte[] totrot = {1, 2, 4, 6, 8, 10, 12, cb.f82047l, 15, 17, 19, 21, 23, 25, 27, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB};
+    public static final byte[] pc2 = {cb.k, 16, 10, 23, 0, 4, 2, 27, cb.f82047l, 5, 20, 9, 22, 18, 11, 3, 25, 7, 15, 6, 26, 19, 12, 1, 40, 51, 30, 36, 46, 54, 29, 39, 50, 44, UTF8.S_CS3, 47, 43, UTF8.S_P3A, 38, 55, PublicSuffixDatabase.EXCEPTION_MARKER, 52, 45, 41, 49, 35, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, bo.j};
     public static final int[] SP1 = {R.attr.transitionName, 0, 65536, R.attr.fillColor, R.attr.manageSpaceActivity, 66564, 4, 65536, 1024, R.attr.transitionName, R.attr.fillColor, 1024, 16778244, R.attr.manageSpaceActivity, 16777216, 4, 1028, 16778240, 16778240, 66560, 66560, R.attr.theme, R.attr.theme, 16778244, 65540, 16777220, 16777220, 65540, 0, 1028, 66564, 16777216, 65536, R.attr.fillColor, 4, R.attr.theme, R.attr.transitionName, 16777216, 16777216, 1024, R.attr.manageSpaceActivity, 65536, 66560, 16777220, 1024, 4, 16778244, 66564, R.attr.fillColor, 65540, R.attr.theme, 16778244, 16777220, 1028, 66564, R.attr.transitionName, 1028, 16778240, 16778240, 0, 65540, 66560, 0, R.attr.manageSpaceActivity};
     public static final int[] SP2 = {-2146402272, -2147450880, 32768, 1081376, 1048576, 32, -2146435040, -2147450848, -2147483616, -2146402272, -2146402304, Integer.MIN_VALUE, -2147450880, 1048576, 32, -2146435040, 1081344, 1048608, -2147450848, 0, Integer.MIN_VALUE, 32768, 1081376, -2146435072, 1048608, -2147483616, 0, 1081344, a.B, -2146402304, -2146435072, a.B, 0, 1081376, -2146435040, 1048576, -2147450848, -2146435072, -2146402304, 32768, -2146435072, -2147450880, 32, -2146402272, 1081376, 32, 32768, Integer.MIN_VALUE, a.B, -2146402304, 1048576, -2147483616, 1048608, -2147450848, -2147483616, 1048608, 1081344, 0, -2147450880, a.B, Integer.MIN_VALUE, -2146435040, -2146402272, 1081344};
     public static final int[] SP3 = {520, 134349312, 0, 134348808, 134218240, 0, 131592, 134218240, 131080, 134217736, 134217736, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT, 134349320, 131080, 134348800, 520, 134217728, 8, 134349312, 512, 131584, 134348800, 134348808, 131592, 134218248, 131584, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT, 134218248, 8, 134349320, 512, 134217728, 134349312, 134217728, 131080, 520, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT, 134349312, 134218240, 0, 512, 131080, 134349320, 134218240, 134217736, 512, 0, 134348808, 134218248, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT, 134217728, 134349320, 8, 131592, 131584, 134217736, 134348800, 134218248, 520, 134348800, 131592, 8, 134348808, 131584};
@@ -207,7 +207,7 @@ public class DESEngine extends DESBase implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to DES init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to DES init - ", cipherParameters));
         }
         KeyParameter keyParameter = (KeyParameter) cipherParameters;
         if (keyParameter.getKeyLength() > 8) {

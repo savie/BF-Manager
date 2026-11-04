@@ -1,13 +1,13 @@
 package org.bouncycastle.crypto.macs;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.digests.Blake3Digest;
 import org.bouncycastle.crypto.params.Blake3Parameters;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Blake3Mac implements Mac {
     public final Blake3Digest theDigest;
 
@@ -49,7 +49,7 @@ public class Blake3Mac implements Mac {
     public void init(CipherParameters cipherParameters) {
         CipherParameters cipherParametersKey = cipherParameters instanceof KeyParameter ? Blake3Parameters.key(((KeyParameter) cipherParameters).getKey()) : cipherParameters;
         if (!(cipherParametersKey instanceof Blake3Parameters)) {
-            throw new IllegalArgumentException(C0219.m1593("Invalid parameter passed to Blake3Mac init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("Invalid parameter passed to Blake3Mac init - ", cipherParameters));
         }
         Blake3Parameters blake3Parameters = (Blake3Parameters) cipherParametersKey;
         if (blake3Parameters.getKey() == null) {

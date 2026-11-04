@@ -1,49 +1,42 @@
 package l;
 
-import java.util.function.Predicate;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 
-/* JADX INFO: renamed from: l.ܶۚۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 44RQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15024 implements Predicate {
+/* JADX INFO: renamed from: l.ܳ֫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57JZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15024 extends AbstractC22484 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f48988;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C15024 f49062 = new C15024();
 
-    public /* synthetic */ C15024(int i) {
-        this.f48988 = i;
+    @Override // l.AbstractC22484
+    /* JADX INFO: renamed from: ۙ */
+    public final Drawable mo31673(Context context) {
+        return null;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // l.AbstractC22484
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo31674() {
+        return "divider:secondary";
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f48988) {
-            case 0:
-                break;
-            case 1:
-                break;
-        }
-        return C8512.$default$negate(this);
+    @Override // l.AbstractC22484
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo31675(C24132 c24132) {
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    @Override // l.AbstractC22484
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo30572(C24132 c24132, boolean z, boolean z2, int i, int i2) {
+        return false;
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f48988) {
-            case 0:
-                return C13638.nonNull((C18551) obj);
-            case 1:
-                return ((C22722) obj).m50365();
-            default:
-                return C3128.m9470((AbstractC8774) ((C18630) obj).f60400.f70876);
-        }
+    @Override // l.AbstractC22484
+    /* JADX INFO: renamed from: ᩷ */
+    public final C10549 mo31676() {
+        return null;
     }
 }

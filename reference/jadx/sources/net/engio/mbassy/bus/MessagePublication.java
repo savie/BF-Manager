@@ -7,7 +7,7 @@ import net.engio.mbassy.bus.common.FilteredMessage;
 import net.engio.mbassy.bus.error.PublicationError;
 import net.engio.mbassy.subscription.Subscription;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessagePublication implements IMessagePublication {
     public volatile boolean dispatched = false;
     public PublicationError error = null;

@@ -1,40 +1,26 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
+import java.math.BigInteger;
 
-/* JADX INFO: renamed from: l.֨᩸ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I764 */
+/* JADX INFO: renamed from: l.֨ᩴ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: D1W0 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1383 {
+@InterfaceC20862(type = EnumC9673.SEQUENCE)
+public class C1383 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m4845(String str) {
-        try {
-            return JSON.parse(str).asObject();
-        } catch (RuntimeException e) {
-            throw new C1901("Unable to parse radare2 native response", e);
-        }
+    @InterfaceC8183(index = 1, type = EnumC9673.INTEGER)
+    public BigInteger f4936;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    @InterfaceC8183(index = 0, type = EnumC9673.ANY)
+    public C19370 f4937;
+
+    public C1383() {
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m4844(JSONObject jSONObject, String str, long j) {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null) {
-            return j;
-        }
-        if (!jSONValue.isNumber()) {
-            return jSONValue.asLong();
-        }
-        String string = jSONValue.toString();
-        try {
-            return Long.parseLong(string, 10);
-        } catch (NumberFormatException e) {
-            try {
-                return C1694.m5621(string);
-            } catch (NumberFormatException unused) {
-                throw e;
-            }
-        }
+    public C1383(C19370 c19370, BigInteger bigInteger) {
+        this.f4937 = c19370;
+        this.f4936 = bigInteger;
     }
 }

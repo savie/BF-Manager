@@ -1,24 +1,22 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-
-/* JADX INFO: renamed from: l.᩸ۢۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C5GL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21492 extends AnimatorListenerAdapter {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC8793 f69841;
-
-    public C21492(ViewOnClickListenerC8793 viewOnClickListenerC8793) {
-        this.f69841 = viewOnClickListenerC8793;
+/* JADX INFO: renamed from: l.᩶ᩳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 67X5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21492 extends AbstractC11795 {
+    @Override // l.InterfaceC7299
+    public final int getBlockSize() {
+        return 32;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        ViewOnClickListenerC8793 viewOnClickListenerC8793 = this.f69841;
-        viewOnClickListenerC8793.f30243.setVisibility(0);
-        viewOnClickListenerC8793.f30262 = null;
+    public C21492() {
+        this.f38100 = 16;
+        this.f38097 = "HmacSHA256";
+    }
+
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2726() {
+        return this.f38098;
     }
 }

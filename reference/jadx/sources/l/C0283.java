@@ -1,12 +1,7 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡۠ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 66XX */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0283 extends AbstractC10868 {
-    @Override // l.AbstractC10868
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC16512 mo1799(EnumC17217 enumC17217) {
-        return EnumC16512.UNSUPPORTED;
-    }
+/* JADX INFO: renamed from: l.֡۟ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9Q9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0283 implements InterfaceC1818 {
 }

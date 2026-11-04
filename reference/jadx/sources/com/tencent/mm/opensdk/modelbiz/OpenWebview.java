@@ -3,7 +3,7 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import l.C17290;
+import l.C22837;
 
 /* JADX INFO: loaded from: classes.dex */
 public class OpenWebview {
@@ -32,7 +32,7 @@ public class OpenWebview {
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public void toBundle(Bundle bundle) {
             super.toBundle(bundle);
-            bundle.putString("_wxapi_jump_to_webview_url", C17290.encode(this.url));
+            bundle.putString("_wxapi_jump_to_webview_url", C22837.encode(this.url));
         }
     }
 

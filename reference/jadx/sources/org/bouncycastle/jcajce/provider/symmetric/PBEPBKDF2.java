@@ -10,12 +10,12 @@ import java.util.Map;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
-import l.C0280;
-import l.C12441;
-import l.C22697;
-import l.C22979;
-import l.C5800;
-import l.C9023;
+import l.C10732;
+import l.C12669;
+import l.C18063;
+import l.C20196;
+import l.C25272;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -36,7 +36,7 @@ import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.jcajce.spec.PBKDF2KeySpec;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PBEPBKDF2 {
     public static final Map prfCodes;
 
@@ -108,109 +108,95 @@ public class PBEPBKDF2 {
             configurableProvider.addAlgorithm("AlgorithmParameters.PBKDF2", sb.toString());
             StringBuilder sb2 = new StringBuilder("Alg.Alias.AlgorithmParameters.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = PKCSObjectIdentifiers.id_PBKDF2;
-            C12441.m30916(C22697.m50268("PBKDF2", str, sb2, aSN1ObjectIdentifier, configurableProvider), "$PBKDF2withUTF8", configurableProvider, "SecretKeyFactory.PBKDF2");
+            C10732.m27335(C25272.m56410("PBKDF2", str, sb2, aSN1ObjectIdentifier, configurableProvider), "$PBKDF2withUTF8", configurableProvider, "SecretKeyFactory.PBKDF2");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBKDF2WITHHMACSHA1", "PBKDF2");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBKDF2WITHHMACSHA1ANDUTF8", "PBKDF2");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory." + aSN1ObjectIdentifier, "PBKDF2");
             StringBuilder sb3 = new StringBuilder();
             sb3.append(str);
-            C12441.m30916(sb3, "$PBKDF2with8BIT", configurableProvider, "SecretKeyFactory.PBKDF2WITHASCII");
-            C5800.m15969(str, "$PBKDF2withSM3", "SecretKeyFactory.PBKDF2WITHHMACSM3", C9023.m23357(str, "$PBKDF2withGOST3411", "SecretKeyFactory.PBKDF2WITHHMACGOST3411", C9023.m23357(str, "$PBKDF2withSHA3_512", "SecretKeyFactory.PBKDF2WITHHMACSHA3-512", C9023.m23357(str, "$PBKDF2withSHA3_384", "SecretKeyFactory.PBKDF2WITHHMACSHA3-384", C9023.m23357(str, "$PBKDF2withSHA3_256", "SecretKeyFactory.PBKDF2WITHHMACSHA3-256", C9023.m23357(str, "$PBKDF2withSHA3_224", "SecretKeyFactory.PBKDF2WITHHMACSHA3-224", C9023.m23357(str, "$PBKDF2withSHA512_256", "SecretKeyFactory.PBKDF2WITHHMACSHA512-256", C9023.m23357(str, "$PBKDF2withSHA512_224", "SecretKeyFactory.PBKDF2WITHHMACSHA512-224", C9023.m23357(str, "$PBKDF2withSHA512", "SecretKeyFactory.PBKDF2WITHHMACSHA512", C9023.m23357(str, "$PBKDF2withSHA384", "SecretKeyFactory.PBKDF2WITHHMACSHA384", C9023.m23357(str, "$PBKDF2withSHA256", "SecretKeyFactory.PBKDF2WITHHMACSHA256", C9023.m23357(str, "$PBKDF2withSHA224", "SecretKeyFactory.PBKDF2WITHHMACSHA224", C0280.m1793("Alg.Alias.SecretKeyFactory.PBKDF2WITH8BIT", "PBKDF2WITHASCII", "Alg.Alias.SecretKeyFactory.PBKDF2WITHHMACSHA1AND8BIT", "PBKDF2WITHASCII", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C10732.m27335(sb3, "$PBKDF2with8BIT", configurableProvider, "SecretKeyFactory.PBKDF2WITHASCII");
+            C8947.m23913(str, "$PBKDF2withSM3", "SecretKeyFactory.PBKDF2WITHHMACSM3", C18063.m42089(str, "$PBKDF2withGOST3411", "SecretKeyFactory.PBKDF2WITHHMACGOST3411", C18063.m42089(str, "$PBKDF2withSHA3_512", "SecretKeyFactory.PBKDF2WITHHMACSHA3-512", C18063.m42089(str, "$PBKDF2withSHA3_384", "SecretKeyFactory.PBKDF2WITHHMACSHA3-384", C18063.m42089(str, "$PBKDF2withSHA3_256", "SecretKeyFactory.PBKDF2WITHHMACSHA3-256", C18063.m42089(str, "$PBKDF2withSHA3_224", "SecretKeyFactory.PBKDF2WITHHMACSHA3-224", C18063.m42089(str, "$PBKDF2withSHA512_256", "SecretKeyFactory.PBKDF2WITHHMACSHA512-256", C18063.m42089(str, "$PBKDF2withSHA512_224", "SecretKeyFactory.PBKDF2WITHHMACSHA512-224", C18063.m42089(str, "$PBKDF2withSHA512", "SecretKeyFactory.PBKDF2WITHHMACSHA512", C18063.m42089(str, "$PBKDF2withSHA384", "SecretKeyFactory.PBKDF2WITHHMACSHA384", C18063.m42089(str, "$PBKDF2withSHA256", "SecretKeyFactory.PBKDF2WITHHMACSHA256", C18063.m42089(str, "$PBKDF2withSHA224", "SecretKeyFactory.PBKDF2WITHHMACSHA224", C12669.m31439("Alg.Alias.SecretKeyFactory.PBKDF2WITH8BIT", "PBKDF2WITHASCII", "Alg.Alias.SecretKeyFactory.PBKDF2WITHHMACSHA1AND8BIT", "PBKDF2WITHASCII", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2with8BIT extends BasePBKDF2 {
         public PBKDF2with8BIT() {
             super("PBKDF2", 1);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withGOST3411 extends BasePBKDF2 {
         public PBKDF2withGOST3411() {
             super("PBKDF2", 5, 6);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA224 extends BasePBKDF2 {
         public PBKDF2withSHA224() {
             super("PBKDF2", 5, 7);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA256 extends BasePBKDF2 {
         public PBKDF2withSHA256() {
             super("PBKDF2", 5, 4);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA384 extends BasePBKDF2 {
         public PBKDF2withSHA384() {
             super("PBKDF2", 5, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA3_224 extends BasePBKDF2 {
         public PBKDF2withSHA3_224() {
             super("PBKDF2", 5, 10);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA3_256 extends BasePBKDF2 {
         public PBKDF2withSHA3_256() {
             super("PBKDF2", 5, 11);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA3_384 extends BasePBKDF2 {
         public PBKDF2withSHA3_384() {
             super("PBKDF2", 5, 12);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA3_512 extends BasePBKDF2 {
         public PBKDF2withSHA3_512() {
             super("PBKDF2", 5, 13);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA512 extends BasePBKDF2 {
         public PBKDF2withSHA512() {
             super("PBKDF2", 5, 9);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA512_224 extends BasePBKDF2 {
         public PBKDF2withSHA512_224() {
             super("PBKDF2", 5, 15);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSHA512_256 extends BasePBKDF2 {
         public PBKDF2withSHA512_256() {
             super("PBKDF2", 5, 16);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withSM3 extends BasePBKDF2 {
         public PBKDF2withSM3() {
             super("PBKDF2", 5, 14);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF2withUTF8 extends BasePBKDF2 {
         public PBKDF2withUTF8() {
             super("PBKDF2", 5);
@@ -236,7 +222,6 @@ public class PBEPBKDF2 {
         map.put(GMObjectIdentifiers.hmac_sm3, Integers.valueOf(14));
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BasePBKDF2 extends BaseSecretKeyFactory {
         public int defaultDigest;
         public int scheme;
@@ -284,7 +269,7 @@ public class PBEPBKDF2 {
             if (num != null) {
                 return num.intValue();
             }
-            throw new InvalidKeySpecException(C22979.m50820("Invalid KeySpec: unknown PRF algorithm ", aSN1ObjectIdentifier));
+            throw new InvalidKeySpecException(C20196.m46452("Invalid KeySpec: unknown PRF algorithm ", aSN1ObjectIdentifier));
         }
     }
 }

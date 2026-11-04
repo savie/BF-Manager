@@ -1,38 +1,48 @@
 .class public final synthetic Ll/ܰᩳ᩹;
 .super Ljava/lang/Object;
-.source "J26J"
-
-# interfaces
-.implements Ll/ۤ᩺ۙ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۜᩳ᩹;
+.source "AC8P"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۜᩳ᩹;)V
-    .locals 0
+.method public static ۙ(Ll/۠۟᩹;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p1, :cond_0
 
-    iput-object p1, p0, Ll/ܰᩳ᩹;->ܺ:Ll/ۜᩳ᩹;
+    goto :goto_0
 
-    return-void
-.end method
+    .line 137
+    :cond_0
+    check-cast p1, Ljava/lang/Long;
 
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 1
+    move-result-wide v0
 
-    .line 0
-    iget-object v0, p0, Ll/ܰᩳ᩹;->ܺ:Ll/ۜᩳ᩹;
+    .line 139
+    invoke-interface {p0, v0, v1}, Ll/᩶ᩳ᩹;->᩷(J)Ljava/lang/Object;
 
-    check-cast p1, Ll/ۢۡ᩺;
+    move-result-object p1
 
-    invoke-static {v0, p1}, Ll/ۜᩳ᩹;->ۙ(Ll/ۜᩳ᩹;Ll/ۢۡ᩺;)V
+    if-nez p1, :cond_2
 
-    return-void
+    invoke-interface {p0, v0, v1}, Ll/᩶ᩳ᩹;->ۙ(J)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_2
+    :goto_1
+    return-object p1
 .end method

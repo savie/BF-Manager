@@ -1,80 +1,63 @@
 .class public final Ll/᩻ۡ᩹;
-.super Ll/ۙ۬᩹;
-.source "D95H"
+.super Ll/᩵ۡ᩹;
+.source "H1MW"
+
+# interfaces
+.implements Ll/ܳ۠᩹;
+.implements Ll/ᩴۚۗ;
 
 
-# static fields
-.field public static final ۫:Ll/᩻ۡ᩹;
+# instance fields
+.field public final ۢ:Ll/᩹ۡ᩹;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ll/ۘۡ᩹;)V
+    .locals 1
 
-    .line 8
-    new-instance v0, Ll/᩻ۡ᩹;
+    .line 847
+    invoke-direct {p0, p1}, Ll/᩵ۡ᩹;-><init>(Ll/ۘۡ᩹;)V
 
-    const v1, 0x7f120a88
+    .line 848
+    new-instance v0, Ll/᩹ۡ᩹;
 
-    const v2, 0x7f0801e8
+    invoke-direct {v0, p1}, Ll/᩹ۡ᩹;-><init>(Ll/ۘۡ᩹;)V
 
-    .line 15
-    invoke-direct {v0, v1, v2}, Ll/ۙ۬᩹;-><init>(II)V
-
-    .line 8
-    sput-object v0, Ll/᩻ۡ᩹;->۫:Ll/᩻ۡ᩹;
+    iput-object v0, p0, Ll/᩻ۡ᩹;->ۢ:Ll/᩹ۡ᩹;
 
     return-void
 .end method
 
-.method public static ֨()Ll/᩻ۡ᩹;
-    .locals 1
-
-    .line 11
-    sget-object v0, Ll/᩻ۡ᩹;->۫:Ll/᩻ۡ᩹;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final ۖ(Ll/᩸ۜ᩹;)Z
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    const/4 p1, 0x0
+    .line 852
+    invoke-virtual {p0}, Ll/᩵ۡ᩹;->ۙ()I
 
-    return p1
+    move-result v0
+
+    iget-object v1, p0, Ll/᩻ۡ᩹;->ۢ:Ll/᩹ۡ᩹;
+
+    iput v0, v1, Ll/᩹ۡ᩹;->ܰ:I
+
+    return-object v1
 .end method
 
-.method public final ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
+.method public final ۙ(ILjava/lang/Object;)V
     .locals 1
 
-    .line 20
-    sget-object v0, Ll/᩻ۡ᩹;->۫:Ll/᩻ۡ᩹;
+    .line 847
+    check-cast p2, Ljava/util/function/Consumer;
 
-    if-eq p0, v0, :cond_0
+    .line 859
+    iget-object v0, p0, Ll/᩻ۡ᩹;->ۢ:Ll/᩹ۡ᩹;
 
-    .line 23
-    invoke-super {p0, p1}, Ll/ۙ۬᩹;->ۙ(Ll/ۙ۬᩹;)Ll/ۙ۬᩹;
+    iput p1, v0, Ll/᩹ۡ᩹;->ܰ:I
 
-    return-object p0
+    .line 860
+    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 21
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۨ(Ll/᩸ۜ᩹;)V
-    .locals 0
-
-    .line 33
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-void
 .end method

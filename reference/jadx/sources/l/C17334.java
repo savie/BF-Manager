@@ -1,118 +1,43 @@
 package l;
 
-import java.io.DataOutputStream;
+import com.alipay.sdk.m.n.a;
+import com.alipay.sdk.m.n.b;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Collection;
 
-/* JADX INFO: renamed from: l.ܿۨ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 970R */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17334 implements InterfaceC20157 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC13538 f55149;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f55150;
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo5918(int i, int i2) {
-        return mo5910();
-    }
-
-    public C17334(AbstractC13538 abstractC13538, byte[] bArr) {
-        if (abstractC13538.mo19949() != bArr.length || bArr.length == 0) {
-            throw new IllegalArgumentException("Invalid literal patch layer");
+/* JADX INFO: renamed from: l.ܽۘ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: A924 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17334 extends AbstractC13228 {
+    @Override // l.AbstractC13228
+    /* JADX INFO: renamed from: ۙ */
+    public final C8995 mo31020(String str) {
+        C0496 c0496 = new C0496();
+        c0496.m2394(C23302.f75464);
+        c0496.m2397(str);
+        try {
+            C9444 c9444Execute = C23302.f75465.m54450(c0496.m2389()).execute();
+            AbstractC8699 abstractC8699M24818 = c9444Execute.m24818();
+            String strSubstring = null;
+            InputStream inputStreamM23391 = abstractC8699M24818 != null ? abstractC8699M24818.m23391() : null;
+            if (inputStreamM23391 == null) {
+                throw new IllegalStateException("Response does not contain body: ".concat(str));
+            }
+            String strM24817 = c9444Execute.m24817("Content-Type");
+            if (strM24817 != null) {
+                int iIndexOf = strM24817.indexOf(59);
+                strSubstring = iIndexOf > -1 ? strM24817.substring(0, iIndexOf) : strM24817;
+            }
+            return AbstractC7504.m20557(inputStreamM23391, strSubstring);
+        } catch (Throwable th) {
+            throw new IllegalStateException("Exception obtaining network resource: ".concat(str), th);
         }
-        this.f55149 = abstractC13538;
-        this.f55150 = bArr;
     }
 
-    @Override // l.InterfaceC20157
+    @Override // l.AbstractC13228
     /* JADX INFO: renamed from: ۙ */
-    public final void mo5912(final int i, final byte[] bArr, int i2, final int i3) {
-        this.f55149.mo19944(i, i2, new InterfaceC15924() { // from class: l.۫ۨ᩹
-            @Override // l.InterfaceC15924
-            /* JADX INFO: renamed from: ۙ */
-            public final void mo2135(int i4, int i5) {
-                C17334.m40305(this.f41419, bArr, i3, i, i4, i5);
-            }
-        });
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m40305(C17334 c17334, byte[] bArr, int i, int i2, int i3, int i4) {
-        bArr[(i + i4) - i2] = c17334.f55150[i3];
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5914(final byte[] bArr, final int i, int i2, final long[] jArr) {
-        this.f55149.mo19944(i, i2, new InterfaceC15924() { // from class: l.֡ۨ᩹
-            @Override // l.InterfaceC15924
-            /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-            public final void mo2135(int i3, int i4) {
-                C17334.m40304(this.f1888, i, bArr, jArr, i3, i4);
-            }
-        });
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m40304(C17334 c17334, int i, byte[] bArr, long[] jArr, int i2, int i3) {
-        int i4 = i3 - i;
-        bArr[i4] = c17334.f55150[i2];
-        int i5 = i4 >>> 6;
-        jArr[i5] = jArr[i5] | (1 << (i4 & 63));
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5911(final int i, int i2, final long[] jArr) {
-        this.f55149.mo19944(i, i2, new InterfaceC15924() { // from class: l.ܽۨ᩹
-            @Override // l.InterfaceC15924
-            /* JADX INFO: renamed from: ۙ */
-            public final void mo2135(int i3, int i4) {
-                int i5 = i4 - i;
-                int i6 = i5 >>> 6;
-                long[] jArr2 = jArr;
-                jArr2[i6] = jArr2[i6] | (1 << (i5 & 63));
-            }
-        });
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo5915(int i, int i2) {
-        return this.f55149.mo19942(i, i2) != 0;
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۚ */
-    public final long mo5917() {
-        return this.f55149.mo19952() + ((long) this.f55150.length);
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo5910() {
-        return (((long) this.f55149.mo19949()) * 9) + 128;
-    }
-
-    @Override // l.InterfaceC20157
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo5916(InterfaceC20157 interfaceC20157) {
-        return (interfaceC20157 instanceof C17334) && this.f55149.mo19948(((C17334) interfaceC20157).f55149);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40306(DataOutputStream dataOutputStream, int i, int i2) {
-        AbstractC13538 abstractC13538 = this.f55149;
-        dataOutputStream.writeInt(abstractC13538.mo19942(i, i2));
-        for (int i3 = 0; i3 < abstractC13538.mo19949(); i3++) {
-            int iMo19950 = abstractC13538.mo19950(i3);
-            if (iMo19950 >= i && iMo19950 < i2) {
-                dataOutputStream.writeInt(iMo19950 - i);
-                dataOutputStream.writeByte(this.f55150[i3]);
-            }
-        }
+    public final Collection mo31019() {
+        return Arrays.asList(a.s, b.a);
     }
 }

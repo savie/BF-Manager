@@ -1,35 +1,44 @@
 package l;
 
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
-
-/* JADX INFO: renamed from: l.᩶ۘۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7NS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19913 extends Drawable {
+/* JADX INFO: renamed from: l.ᩴܶܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OAR3 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19913 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f63828;
+    public final int f64063;
 
-    @Override // android.graphics.drawable.Drawable
-    public final void draw(Canvas canvas) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f64064;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C19913 f64065;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C19913 f64066;
+
+    public /* synthetic */ C19913() {
+        this(0);
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final int getOpacity() {
-        return -3;
+    public C19913(int i) {
+        this.f64064 = -1;
+        this.f64063 = i;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final void setAlpha(int i) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19913 m45841() {
+        if (this.f64065 == null && this.f64064 == -1) {
+            this.f64065 = new C19913(this.f64063 + 1);
+        }
+        return this.f64065;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final void setColorFilter(ColorFilter colorFilter) {
-    }
-
-    public C19913(boolean z) {
-        this.f63828 = z;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C19913 m45842() {
+        if (this.f64066 == null && this.f64064 == -1) {
+            this.f64066 = new C19913(this.f64063 + 1);
+        }
+        return this.f64066;
     }
 }

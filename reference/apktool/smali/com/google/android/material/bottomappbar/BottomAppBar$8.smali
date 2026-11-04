@@ -9,7 +9,7 @@
 # instance fields
 .field public final synthetic this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-.field public final synthetic val$actionMenuView:Ll/᩺ۜ;
+.field public final synthetic val$actionMenuView:Ll/ܽۧ;
 
 .field public final synthetic val$fabAlignmentMode:I
 
@@ -17,13 +17,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZ)V
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZ)V
     .locals 0
 
     .line 1115
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Ll/᩺ۜ;
+    iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Ll/ܽۧ;
 
     iput p3, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$fabAlignmentMode:I
 
@@ -40,7 +40,7 @@
     .locals 4
 
     .line 1118
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Ll/᩺ۜ;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Ll/ܽۧ;
 
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
@@ -49,7 +49,7 @@
     iget-boolean v3, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$fabAttached:Z
 
     .line 1119
-    invoke-virtual {v1, v0, v2, v3}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuViewTranslationX(Ll/᩺ۜ;IZ)I
+    invoke-virtual {v1, v0, v2, v3}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuViewTranslationX(Ll/ܽۧ;IZ)I
 
     move-result v1
 

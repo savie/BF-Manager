@@ -1,27 +1,65 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳ᩷᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 44YS */
+import java.util.function.Supplier;
+
+/* JADX INFO: renamed from: l.ܿۨۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: IPI */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18308 extends AbstractC20521 {
+public final class C18308 extends Number implements Comparable, Supplier {
+    public static final long serialVersionUID = 512176391864L;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19014 f58398;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f59699;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C18308(C19014 c19014, AbstractC20521 abstractC20521) {
-        super(589824, abstractC20521);
-        this.f58398 = c19014;
+    @Override // java.lang.Comparable
+    public final int compareTo(Object obj) {
+        return Integer.compare(this.f59699, ((C18308) obj).f59699);
     }
 
-    @Override // l.AbstractC20521
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo33784(int i, String str, String str2, String str3, boolean z) {
-        if (!str.equals("res/Hex")) {
-            super.mo33784(i, str, str2, str3, z);
-        } else {
-            C19014 c19014 = this.f58398;
-            super.mo33784(i, c19014.f61525, C1694.m5622(new StringBuilder(), c19014.f61523, "$", str2), str3, z);
-        }
+    @Override // java.lang.Number
+    public final double doubleValue() {
+        return this.f59699;
+    }
+
+    public final boolean equals(Object obj) {
+        return (obj instanceof C18308) && this.f59699 == ((C18308) obj).f59699;
+    }
+
+    @Override // java.lang.Number
+    public final float floatValue() {
+        return this.f59699;
+    }
+
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return Integer.valueOf(this.f59699);
+    }
+
+    @Deprecated
+    public final Integer getValue() {
+        return Integer.valueOf(this.f59699);
+    }
+
+    public final int hashCode() {
+        return this.f59699;
+    }
+
+    @Override // java.lang.Number
+    public final int intValue() {
+        return this.f59699;
+    }
+
+    @Override // java.lang.Number
+    public final long longValue() {
+        return this.f59699;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m42695(int i) {
+        this.f59699 = i;
+    }
+
+    public final String toString() {
+        return String.valueOf(this.f59699);
     }
 }

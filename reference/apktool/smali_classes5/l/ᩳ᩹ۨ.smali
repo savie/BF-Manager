@@ -1,38 +1,14 @@
-.class public final Ll/ᩳ᩹ۨ;
-.super Ll/۠᩹ۨ;
-.source "W1FC"
+.class public interface abstract Ll/ᩳ᩹ۨ;
+.super Ljava/lang/Object;
+.source "I354"
 
 
 # virtual methods
-.method public final ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
-    .locals 2
+.method public abstract getChildCount()I
+.end method
 
-    .line 23
-    invoke-interface {p1}, Ll/ۤ֨ۨ;->᩸()I
+.method public abstract getText()Ljava/lang/String;
+.end method
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_0
-
-    .line 30
-    invoke-static {p1}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const-string p1, "path"
-
-    return-object p1
+.method public abstract ۙ(I)Ll/ᩳ᩹ۨ;
 .end method

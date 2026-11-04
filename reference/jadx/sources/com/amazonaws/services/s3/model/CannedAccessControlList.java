@@ -12,15 +12,15 @@ public enum CannedAccessControlList {
     AwsExecRead("aws-exec-read");
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f566;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f556;
 
     CannedAccessControlList(String str) {
-        this.f566 = str;
+        this.f556 = str;
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return this.f566;
+        return this.f556;
     }
 }

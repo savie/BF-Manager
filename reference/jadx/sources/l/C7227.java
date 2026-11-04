@@ -1,230 +1,159 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۘ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7227 extends AbstractC18245 implements InterfaceC18266 {
-    public static final long serialVersionUID = 0;
+/* JADX INFO: renamed from: l.ۜܶۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L5VZ */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C7227 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f24072;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final C7227 f24073;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public byte f24074;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f24075;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f24076;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C18599 f24077;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f24078;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f23827;
 
     static {
-        C3844.m11171(EnumC13018.PUBLIC, C7227.class.getName());
-        f24073 = new C7227();
-        f24072 = new C8639();
-    }
-
-    public C7227(C10050 c10050, int i) {
-        super(c10050);
-        this.f24075 = 0;
-        this.f24078 = 0;
-        this.f24074 = (byte) -1;
-    }
-
-    public C7227() {
-        this.f24075 = 0;
-        this.f24078 = 0;
-        this.f24074 = (byte) -1;
-    }
-
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46270;
-        c6956.m18696(C7227.class, C10050.class);
-        return c6956;
-    }
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean m19257() {
-        return (this.f24076 & 1) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final int m19254() {
-        return this.f24075;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m19258() {
-        return (this.f24076 & 2) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int m19255() {
-        return this.f24078;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean m19256() {
-        return (this.f24076 & 4) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C18599 m19253() {
-        C18599 c18599 = this.f24077;
-        return c18599 == null ? C18599.getDefaultInstance() : c18599;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f24074;
-        if (b == 1) {
-            return true;
+        int[] iArr = new int[EnumC7011.values().length];
+        f23827 = iArr;
+        try {
+            iArr[EnumC7011.Format10t.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (b == 0) {
-            return false;
+        try {
+            f23827[EnumC7011.Format10x.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        if (m19256() && !m19253().isInitialized()) {
-            this.f24074 = (byte) 0;
-            return false;
+        try {
+            f23827[EnumC7011.Format11n.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        this.f24074 = (byte) 1;
-        return true;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        if ((this.f24076 & 1) != 0) {
-            abstractC22044.mo14252(1, this.f24075);
+        try {
+            f23827[EnumC7011.Format11x.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
         }
-        if ((this.f24076 & 2) != 0) {
-            abstractC22044.mo14252(2, this.f24078);
+        try {
+            f23827[EnumC7011.Format12x.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
         }
-        if ((this.f24076 & 4) != 0) {
-            abstractC22044.mo14254(3, m19253());
+        try {
+            f23827[EnumC7011.Format20bc.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
         }
-        getUnknownFields().writeTo(abstractC22044);
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
+        try {
+            f23827[EnumC7011.Format20t.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
         }
-        int iM48974 = (this.f24076 & 1) != 0 ? AbstractC22044.m48974(1, this.f24075) : 0;
-        if ((this.f24076 & 2) != 0) {
-            iM48974 += AbstractC22044.m48974(2, this.f24078);
+        try {
+            f23827[EnumC7011.Format21c.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
         }
-        if ((this.f24076 & 4) != 0) {
-            iM48974 += AbstractC22044.m48963(3, m19253());
+        try {
+            f23827[EnumC7011.Format21ih.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
         }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM48974;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+        try {
+            f23827[EnumC7011.Format21lh.ordinal()] = 10;
+        } catch (NoSuchFieldError unused10) {
         }
-        if (!(obj instanceof C7227)) {
-            return super.equals(obj);
+        try {
+            f23827[EnumC7011.Format21s.ordinal()] = 11;
+        } catch (NoSuchFieldError unused11) {
         }
-        C7227 c7227 = (C7227) obj;
-        if (m19257() != c7227.m19257()) {
-            return false;
+        try {
+            f23827[EnumC7011.Format21t.ordinal()] = 12;
+        } catch (NoSuchFieldError unused12) {
         }
-        if ((m19257() && this.f24075 != c7227.f24075) || m19258() != c7227.m19258()) {
-            return false;
+        try {
+            f23827[EnumC7011.Format22b.ordinal()] = 13;
+        } catch (NoSuchFieldError unused13) {
         }
-        if ((!m19258() || this.f24078 == c7227.f24078) && m19256() == c7227.m19256()) {
-            return (!m19256() || m19253().equals(c7227.m19253())) && getUnknownFields().equals(c7227.getUnknownFields());
+        try {
+            f23827[EnumC7011.Format22c.ordinal()] = 14;
+        } catch (NoSuchFieldError unused14) {
         }
-        return false;
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
+        try {
+            f23827[EnumC7011.Format22cs.ordinal()] = 15;
+        } catch (NoSuchFieldError unused15) {
         }
-        int iHashCode = C14097.f46293.hashCode() + 779;
-        if (m19257()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + this.f24075;
+        try {
+            f23827[EnumC7011.Format22s.ordinal()] = 16;
+        } catch (NoSuchFieldError unused16) {
         }
-        if (m19258()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + this.f24078;
+        try {
+            f23827[EnumC7011.Format22t.ordinal()] = 17;
+        } catch (NoSuchFieldError unused17) {
         }
-        if (m19256()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + m19253().hashCode();
+        try {
+            f23827[EnumC7011.Format22x.ordinal()] = 18;
+        } catch (NoSuchFieldError unused18) {
         }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C10050 newBuilder() {
-        return f24073.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f24073.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f24073.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C10050 toBuilder() {
-        int i = 0;
-        if (this == f24073) {
-            return new C10050(i);
+        try {
+            f23827[EnumC7011.Format23x.ordinal()] = 19;
+        } catch (NoSuchFieldError unused19) {
         }
-        C10050 c10050 = new C10050(i);
-        c10050.m25443(this);
-        return c10050;
-    }
-
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C10050(interfaceC6790, 0);
-    }
-
-    public static C7227 getDefaultInstance() {
-        return f24073;
-    }
-
-    public static InterfaceC6271 parser() {
-        return f24072;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f24072;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f24073;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f24073;
+        try {
+            f23827[EnumC7011.Format30t.ordinal()] = 20;
+        } catch (NoSuchFieldError unused20) {
+        }
+        try {
+            f23827[EnumC7011.Format31c.ordinal()] = 21;
+        } catch (NoSuchFieldError unused21) {
+        }
+        try {
+            f23827[EnumC7011.Format31i.ordinal()] = 22;
+        } catch (NoSuchFieldError unused22) {
+        }
+        try {
+            f23827[EnumC7011.Format31t.ordinal()] = 23;
+        } catch (NoSuchFieldError unused23) {
+        }
+        try {
+            f23827[EnumC7011.Format32x.ordinal()] = 24;
+        } catch (NoSuchFieldError unused24) {
+        }
+        try {
+            f23827[EnumC7011.Format35c.ordinal()] = 25;
+        } catch (NoSuchFieldError unused25) {
+        }
+        try {
+            f23827[EnumC7011.Format35mi.ordinal()] = 26;
+        } catch (NoSuchFieldError unused26) {
+        }
+        try {
+            f23827[EnumC7011.Format35ms.ordinal()] = 27;
+        } catch (NoSuchFieldError unused27) {
+        }
+        try {
+            f23827[EnumC7011.Format3rc.ordinal()] = 28;
+        } catch (NoSuchFieldError unused28) {
+        }
+        try {
+            f23827[EnumC7011.Format3rmi.ordinal()] = 29;
+        } catch (NoSuchFieldError unused29) {
+        }
+        try {
+            f23827[EnumC7011.Format3rms.ordinal()] = 30;
+        } catch (NoSuchFieldError unused30) {
+        }
+        try {
+            f23827[EnumC7011.Format45cc.ordinal()] = 31;
+        } catch (NoSuchFieldError unused31) {
+        }
+        try {
+            f23827[EnumC7011.Format4rcc.ordinal()] = 32;
+        } catch (NoSuchFieldError unused32) {
+        }
+        try {
+            f23827[EnumC7011.Format51l.ordinal()] = 33;
+        } catch (NoSuchFieldError unused33) {
+        }
+        try {
+            f23827[EnumC7011.ArrayPayload.ordinal()] = 34;
+        } catch (NoSuchFieldError unused34) {
+        }
+        try {
+            f23827[EnumC7011.PackedSwitchPayload.ordinal()] = 35;
+        } catch (NoSuchFieldError unused35) {
+        }
+        try {
+            f23827[EnumC7011.SparseSwitchPayload.ordinal()] = 36;
+        } catch (NoSuchFieldError unused36) {
+        }
     }
 }

@@ -5,9 +5,9 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
-import l.C15489;
-import l.C22697;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -23,7 +23,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Noekeon {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -49,7 +49,6 @@ public final class Noekeon {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -57,7 +56,6 @@ public final class Noekeon {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.Noekeon.ECB.1
@@ -69,7 +67,6 @@ public final class Noekeon {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GMAC extends BaseMac {
         public GMAC() {
             super(new GMac(GCMBlockCipher.newInstance(new NoekeonEngine())));
@@ -82,7 +79,6 @@ public final class Noekeon {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = Noekeon.class.getName();
 
@@ -90,12 +86,11 @@ public final class Noekeon {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addGMacAlgorithm(configurableProvider, "NOEKEON", C22697.m50267(C9023.m23357(str, "$KeyGen", "KeyGenerator.NOEKEON", C9023.m23357(str, "$ECB", "Cipher.NOEKEON", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.NOEKEON", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.NOEKEON", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C15489.m37076(str, "$KeyGen"));
-            addPoly1305Algorithm(configurableProvider, "NOEKEON", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            addGMacAlgorithm(configurableProvider, "NOEKEON", C8947.m23910(C18063.m42089(str, "$KeyGen", "KeyGenerator.NOEKEON", C18063.m42089(str, "$ECB", "Cipher.NOEKEON", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.NOEKEON", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.NOEKEON", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C14483.m34972(str, "$KeyGen"));
+            addPoly1305Algorithm(configurableProvider, "NOEKEON", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Poly1305 extends BaseMac {
         public Poly1305() {
             super(new org.bouncycastle.crypto.macs.Poly1305(new NoekeonEngine()));

@@ -1,89 +1,76 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ᩸ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M701 */
+import android.util.Base64;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ۚۧ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: H8OG */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C5616 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean f19216;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public AbstractC13378 f19217;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f19218;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AbstractC13378[] f19219;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f19220;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f19221;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f19222;
-
-    public C5616(AbstractC13378 abstractC13378, boolean z) {
-        this.f19219 = new AbstractC13378[abstractC13378.f44318];
-        this.f19216 = z;
-        m15488(abstractC13378);
+    public static C19786 m16597(C21287 c21287, boolean z, boolean z2) throws C2970 {
+        if (z) {
+            m16598(3, c21287, false);
+        }
+        c21287.m48488((int) c21287.m48505(), StandardCharsets.UTF_8);
+        long jM48505 = c21287.m48505();
+        String[] strArr = new String[(int) jM48505];
+        for (int i = 0; i < jM48505; i++) {
+            strArr[i] = c21287.m48488((int) c21287.m48505(), StandardCharsets.UTF_8);
+        }
+        if (z2 && (c21287.m48493() & 1) == 0) {
+            throw C2970.m9688("framing bit expected to be set", (Throwable) null);
+        }
+        return new C19786(strArr);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15491() {
-        C14084 c14084 = (C14084) this.f19217;
-        int i = this.f19221;
-        this.f19221 = i + 1;
-        boolean z = this.f19216;
-        this.f19219[i] = z ? c14084.f46248 : c14084.f46249;
-        m15488(z ? c14084.f46249 : c14084.f46248);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m15493() {
-        int i = this.f19221;
-        if (i == 0) {
-            m15488((AbstractC13378) null);
-            return;
+    public static C19378 m16596(List list) {
+        ArrayList arrayList = new ArrayList();
+        for (int i = 0; i < list.size(); i++) {
+            String str = (String) list.get(i);
+            String str2 = C7116.f23455;
+            String[] strArrSplit = str.split("=", 2);
+            if (strArrSplit.length != 2) {
+                C1896.m6517("Failed to parse Vorbis comment: ".concat(str));
+            } else if (strArrSplit[0].equals("METADATA_BLOCK_PICTURE")) {
+                try {
+                    arrayList.add(C17943.m41885(new C21287(Base64.decode(strArrSplit[1], 0))));
+                } catch (RuntimeException e) {
+                    C1896.m6514("Failed to parse vorbis picture", e);
+                }
+            } else {
+                arrayList.add(new C16209(strArrSplit[0], strArrSplit[1]));
+            }
         }
-        int i2 = i - 1;
-        this.f19221 = i2;
-        AbstractC13378[] abstractC13378Arr = this.f19219;
-        AbstractC13378 abstractC13378 = abstractC13378Arr[i2];
-        abstractC13378Arr[i2] = null;
-        m15488(abstractC13378);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15492(int i) {
-        this.f19218 += i;
-        int i2 = this.f19222 - i;
-        this.f19222 = i2;
-        if (i2 != 0) {
-            return;
+        if (arrayList.isEmpty()) {
+            return null;
         }
-        C1382 c1382 = (C1382) this.f19217;
-        int i3 = this.f19220 + (this.f19216 ? -1 : 1);
-        this.f19220 = i3;
-        if (i3 < 0 || i3 == c1382.f44315) {
-            m15493();
-        } else {
-            this.f19222 = c1382.f5767[i3] & Integer.MAX_VALUE;
-        }
+        return new C19378(arrayList);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m15488(AbstractC13378 abstractC13378) {
-        this.f19217 = abstractC13378;
-        this.f19218 = 0;
-        if (abstractC13378 instanceof C1382) {
-            C1382 c1382 = (C1382) abstractC13378;
-            int i = this.f19216 ? c1382.f44315 - 1 : 0;
-            this.f19220 = i;
-            this.f19222 = c1382.f5767[i] & Integer.MAX_VALUE;
+    public static boolean m16598(int i, C21287 c21287, boolean z) throws C2970 {
+        if (c21287.m48486() < 7) {
+            if (z) {
+                return false;
+            }
+            throw C2970.m9688("too short header: " + c21287.m48486(), (Throwable) null);
         }
+        if (c21287.m48493() != i) {
+            if (z) {
+                return false;
+            }
+            throw C2970.m9688("expected header type " + Integer.toHexString(i), (Throwable) null);
+        }
+        if (c21287.m48493() == 118 && c21287.m48493() == 111 && c21287.m48493() == 114 && c21287.m48493() == 98 && c21287.m48493() == 105 && c21287.m48493() == 115) {
+            return true;
+        }
+        if (z) {
+            return false;
+        }
+        throw C2970.m9688("expected characters 'vorbis'", (Throwable) null);
     }
 }

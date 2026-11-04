@@ -2,17 +2,17 @@ package com.google.android.material.elevation;
 
 import android.content.Context;
 import com.google.android.material.color.MaterialColors;
-import l.C0976;
-import l.C2387;
+import l.C11642;
+import l.C17609;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum SurfaceColors {
-    SURFACE_0(C0976.f4511),
-    SURFACE_1(C0976.f4347),
-    SURFACE_2(C0976.f4488),
-    SURFACE_3(C0976.f3827),
-    SURFACE_4(C0976.f4370),
-    SURFACE_5(C0976.f4229);
+    SURFACE_0(C17609.f57278),
+    SURFACE_1(C17609.f57608),
+    SURFACE_2(C17609.f57821),
+    SURFACE_3(C17609.f57727),
+    SURFACE_4(C17609.f57161),
+    SURFACE_5(C17609.f57397);
 
     public final int elevationResId;
 
@@ -25,6 +25,6 @@ public enum SurfaceColors {
     }
 
     public static int getColorForElevation(Context context, float f) {
-        return new ElevationOverlayProvider(context).compositeOverlay(MaterialColors.getColor(context, C2387.f8699, 0), f);
+        return new ElevationOverlayProvider(context).compositeOverlay(MaterialColors.getColor(context, C11642.f36968, 0), f);
     }
 }

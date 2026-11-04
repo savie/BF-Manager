@@ -1,143 +1,76 @@
-.class public final Ll/᩻᩺ۚ;
+.class public final synthetic Ll/᩻᩺ۚ;
 .super Ljava/lang/Object;
-.source "R704"
+.source "N7AJ"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final ֨:I
-
-.field public final ۖ:I
-
-.field public final ۙ:Ll/᩹᩸ۚ;
-
-.field public final ۚ:J
-
-.field public final ۨ:Z
-
-.field public final ܰ:I
-
-.field public final ᩹:Ll/ܶ᩸ۚ;
+.field public final synthetic ܰ:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JIILl/ܶ᩸ۚ;ZILl/᩹᩸ۚ;)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 926
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 927
-    iput-wide p1, p0, Ll/᩻᩺ۚ;->ۚ:J
-
-    .line 929
-    iput p3, p0, Ll/᩻᩺ۚ;->ۖ:I
-
-    .line 930
-    iput p4, p0, Ll/᩻᩺ۚ;->֨:I
-
-    .line 931
-    iput-object p5, p0, Ll/᩻᩺ۚ;->᩹:Ll/ܶ᩸ۚ;
-
-    .line 933
-    iput-boolean p6, p0, Ll/᩻᩺ۚ;->ۨ:Z
-
-    .line 934
-    iput p7, p0, Ll/᩻᩺ۚ;->ܰ:I
-
-    .line 935
-    iput-object p8, p0, Ll/᩻᩺ۚ;->ۙ:Ll/᩹᩸ۚ;
+    iput-object p1, p0, Ll/᩻᩺ۚ;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static bridge synthetic ۖ(Ll/᩻᩺ۚ;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/᩻᩺ۚ;->֨:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۙ(Ll/᩻᩺ۚ;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/᩻᩺ۚ;->ۖ:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/᩻᩺ۚ;)Ll/ܶ᩸ۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩻᩺ۚ;->᩹:Ll/ܶ᩸ۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/᩻᩺ۚ;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/᩻᩺ۚ;->ۚ:J
-
-    return-wide v0
-.end method
-
 
 # virtual methods
-.method public final ۖ()Ll/ܶ᩸ۚ;
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic negate()Ljava/util/function/Predicate;
     .locals 1
 
-    .line 960
-    iget-object v0, p0, Ll/᩻᩺ۚ;->᩹:Ll/ܶ᩸ۚ;
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ()Ll/᩹᩸ۚ;
-    .locals 1
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 981
-    iget-object v0, p0, Ll/᩻᩺ۚ;->ۙ:Ll/᩹᩸ۚ;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final ۚ()I
+.method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 955
-    iget v0, p0, Ll/᩻᩺ۚ;->֨:I
+    .line 2
+    check-cast p1, Ll/ܶ᩺ۚ;
 
-    return v0
-.end method
+    .line 268
+    iget-object p1, p1, Ll/ܶ᩺ۚ;->ᩴ:Ljava/lang/String;
 
-.method public final ۨ()I
-    .locals 1
+    iget-object v0, p0, Ll/᩻᩺ۚ;->ܰ:Ljava/lang/String;
 
-    .line 950
-    iget v0, p0, Ll/᩻᩺ۚ;->ۖ:I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return v0
-.end method
+    move-result p1
 
-.method public final ܰ()I
-    .locals 1
-
-    .line 975
-    iget v0, p0, Ll/᩻᩺ۚ;->ܰ:I
-
-    return v0
-.end method
-
-.method public final ᩹()Z
-    .locals 1
-
-    .line 970
-    iget-boolean v0, p0, Ll/᩻᩺ۚ;->ۨ:Z
-
-    return v0
+    return p1
 .end method

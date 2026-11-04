@@ -1,69 +1,68 @@
 package l;
 
-import java.util.Map;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩷ܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20941 implements Map.Entry {
-    public final Map.Entry a;
+/* JADX INFO: renamed from: l.᩶֡ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F1PL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20941 extends AbstractC10190 {
 
-    public C20941(Map.Entry entry) {
-        this.a = (Map.Entry) C13638.requireNonNull(entry);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public InterfaceC6595 f67000;
 
-    @Override // java.util.Map.Entry
-    public final Object getKey() {
-        return this.a.getKey();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C3374 f67001;
 
-    @Override // java.util.Map.Entry
-    public final Object getValue() {
-        return this.a.getValue();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC22044 f67002;
 
-    @Override // java.util.Map.Entry
-    public final Object setValue(Object obj) {
-        throw new UnsupportedOperationException();
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f67003;
 
-    @Override // java.util.Map.Entry
-    public final int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // java.util.Map.Entry
-    public final boolean equals(Object obj) {
-        boolean zEquals;
-        boolean zEquals2;
-        if (this != obj) {
-            if (obj instanceof Map.Entry) {
-                Map.Entry entry = (Map.Entry) obj;
-                Object key = this.a.getKey();
-                Object key2 = entry.getKey();
-                if (key == null) {
-                    zEquals = key2 == null;
-                } else {
-                    zEquals = key.equals(key2);
-                }
-                if (zEquals) {
-                    Object value = this.a.getValue();
-                    Object value2 = entry.getValue();
-                    if (value == null) {
-                        zEquals2 = value2 == null;
-                    } else {
-                        zEquals2 = value.equals(value2);
-                    }
-                    if (zEquals2) {
-                    }
-                }
-            }
-            return false;
+    @Override // l.AbstractC10190
+    /* JADX INFO: renamed from: ᩷ */
+    public final C16157 mo26312() {
+        try {
+            return C16157.m38331("application/octet-stream");
+        } catch (IllegalArgumentException unused) {
+            return null;
         }
-        return true;
     }
 
-    public final String toString() {
-        return this.a.toString();
+    @Override // l.AbstractC10190
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo26310() {
+        return this.f67002.mo4285();
+    }
+
+    @Override // l.AbstractC10190
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo26311(InterfaceC11573 interfaceC11573) throws IOException {
+        InterfaceC13810 interfaceC13810M35107 = C14556.m35107(this.f67002.mo4290());
+        while (true) {
+            try {
+                long jMo4186 = interfaceC13810M35107.mo4186(interfaceC11573.mo29106(), 10240L);
+                if (jMo4186 == -1) {
+                    break;
+                }
+                interfaceC11573.flush();
+                this.f67001.m11079((int) jMo4186);
+            } catch (Throwable th) {
+                try {
+                    interfaceC13810M35107.close();
+                } catch (Throwable th2) {
+                    th.addSuppressed(th2);
+                }
+                throw th;
+            }
+        }
+        if (ServiceC18703.f60801.contains(this.f67003)) {
+            InterfaceC6595 interfaceC6595 = this.f67000;
+            if (interfaceC6595 != null) {
+                interfaceC6595.cancel();
+            }
+            throw new IOException();
+        }
+        interfaceC13810M35107.close();
     }
 }

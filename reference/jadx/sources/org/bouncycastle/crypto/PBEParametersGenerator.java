@@ -2,7 +2,7 @@ package org.bouncycastle.crypto;
 
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class PBEParametersGenerator {
     public int iterationCount;
     public byte[] password;

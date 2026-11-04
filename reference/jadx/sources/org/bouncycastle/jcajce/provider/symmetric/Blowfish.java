@@ -1,9 +1,9 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C12441;
-import l.C17214;
-import l.C5800;
-import l.C9023;
+import l.C10732;
+import l.C14087;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.BlowfishEngine;
@@ -17,10 +17,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Blowfish {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -28,21 +27,18 @@ public final class Blowfish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new BlowfishEngine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC extends BaseMac {
         public CMAC() {
             super(new CMac(new BlowfishEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlowfishEngine());
@@ -62,11 +58,11 @@ public final class Blowfish {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ECB", "Cipher.BLOWFISH", C9023.m23357(str, "$CMAC", "Mac.BLOWFISHCMAC", sb, configurableProvider), configurableProvider);
+            C8947.m23913(str, "$ECB", "Cipher.BLOWFISH", C18063.m42089(str, "$CMAC", "Mac.BLOWFISHCMAC", sb, configurableProvider), configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier = MiscObjectIdentifiers.cryptlib_algorithm_blowfish_CBC;
             configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier, str + "$CBC");
-            C5800.m15969(str, "$KeyGen", "KeyGenerator.BLOWFISH", new StringBuilder(), configurableProvider);
-            C12441.m30916(C17214.m40154(configurableProvider, "Alg.Alias.KeyGenerator", "BLOWFISH", str, aSN1ObjectIdentifier), "$AlgParams", configurableProvider, "AlgorithmParameters.BLOWFISH");
+            C8947.m23913(str, "$KeyGen", "KeyGenerator.BLOWFISH", new StringBuilder(), configurableProvider);
+            C10732.m27335(C14087.m34249(configurableProvider, "Alg.Alias.KeyGenerator", "BLOWFISH", str, aSN1ObjectIdentifier), "$AlgParams", configurableProvider, "AlgorithmParameters.BLOWFISH");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters", aSN1ObjectIdentifier, "BLOWFISH");
         }
     }

@@ -1,29 +1,67 @@
 package l;
 
-import java.util.AbstractCollection;
-import java.util.Iterator;
+import bin.mt.plus.R;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.۠ۘۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5EV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7924 extends AbstractCollection {
+/* JADX INFO: renamed from: l.۟ܰ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7JF */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C7924 implements InterfaceC6804 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19213 f26023;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19111 f26340;
 
-    public C7924(C19213 c19213) {
-        this.f26023 = c19213;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        C19213 c19213 = this.f26023;
-        return C16458.m38721(AbstractC22433.of(c19213.f62046.iterator(), c19213.f62042.iterator()), AbstractC10959.m27714());
+    @Override // l.InterfaceC21433, java.util.Map
+    public final /* synthetic */ boolean containsKey(Object obj) {
+        return true;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final int size() {
-        C19213 c19213 = this.f26023;
-        return c19213.f62042.size() + c19213.f62046.size();
+    @Override // l.InterfaceC21433, java.util.Map
+    public final /* synthetic */ Integer get(Object obj) {
+        return C8295.m22386(this, obj);
+    }
+
+    @Override // l.InterfaceC21433, java.util.Map
+    public final /* synthetic */ int size() {
+        return -1;
+    }
+
+    @Override // l.InterfaceC6804
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo7845(int i, Object obj) {
+        throw null;
+    }
+
+    @Override // l.InterfaceC6804
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo7846(Object obj) {
+        throw null;
+    }
+
+    @Override // l.InterfaceC6804
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo7848(Object obj) {
+        return this.f26340.f61851.size() + R.anim.MT_Protector;
+    }
+
+    @Override // java.util.function.ToIntFunction
+    public final int applyAsInt(Object obj) {
+        return mo7848(obj);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return get(obj);
+    }
+
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public final Function mo10608andThen(Function function) {
+        throw new NoSuchMethodError();
     }
 }

@@ -23,7 +23,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 import org.bouncycastle.x509.ExtendedPKIXBuilderParameters;
 import org.bouncycastle.x509.ExtendedPKIXParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCertPathBuilderSpi extends CertPathBuilderSpi {
     public Exception certPathException;
     public final boolean isForCRLCheck;

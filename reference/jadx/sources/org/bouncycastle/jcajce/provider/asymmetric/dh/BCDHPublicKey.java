@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import javax.crypto.interfaces.DHPublicKey;
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.DHPublicKeySpec;
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -26,7 +26,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.KeyUtil;
 import org.bouncycastle.jcajce.spec.DHDomainParameterSpec;
 import org.bouncycastle.jcajce.spec.DHExtendedPublicKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCDHPublicKey implements DHPublicKey {
     public static final long serialVersionUID = -216691575254424324L;
     public transient DHPublicKeyParameters dhPublicKey;
@@ -81,7 +81,7 @@ public class BCDHPublicKey implements DHPublicKey {
                 }
             }
             if (!algorithm.equals((ASN1Primitive) X9ObjectIdentifiers.dhpublicnumber)) {
-                throw new IllegalArgumentException(C22979.m50820("unknown algorithm type: ", algorithm));
+                throw new IllegalArgumentException(C20196.m46452("unknown algorithm type: ", algorithm));
             }
             DomainParameters domainParameters = DomainParameters.getInstance(aSN1Sequence);
             ValidationParams validationParams = domainParameters.getValidationParams();

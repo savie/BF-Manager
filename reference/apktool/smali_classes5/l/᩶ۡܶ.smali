@@ -1,13 +1,17 @@
-.class public final Ll/᩶ۡܶ;
-.super Ll/۠᩵ܶ;
-.source "SB7W"
+.class public interface abstract Ll/᩶ۡܶ;
+.super Ljava/lang/Object;
+.source "B8C0"
+
+# interfaces
+.implements Ll/ܰۡܶ;
 
 
 # virtual methods
-.method public final ֨()Ljava/lang/String;
-    .locals 1
+.method public abstract ۙ(DDLl/ۙ۬ܶ;)V
+.end method
 
-    const-string v0, "switch"
+.method public abstract ۙ(I)V
+.end method
 
-    return-object v0
+.method public abstract ۙ(Ll/ۙ۬ܶ;)V
 .end method

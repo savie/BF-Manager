@@ -1,59 +1,39 @@
 package l;
 
-import android.content.ClipDescription;
-import android.net.Uri;
-import android.os.Build;
+import java.io.EOFException;
 
-/* JADX INFO: renamed from: l.ܳۗ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 23DC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14246 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC23418 f46655;
-
-    public C14246(Uri uri, ClipDescription clipDescription, Uri uri2) {
-        if (Build.VERSION.SDK_INT >= 25) {
-            this.f46655 = new C5778(uri, clipDescription, uri2);
-        } else {
-            this.f46655 = new C10718(uri, clipDescription, uri2);
-        }
-    }
-
-    public C14246(C5778 c5778) {
-        this.f46655 = c5778;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Uri m34381() {
-        return this.f46655.mo15911();
-    }
+/* JADX INFO: renamed from: l.ܰ֨ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q8FL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14246 implements InterfaceC1278 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ClipDescription m34384() {
-        return this.f46655.getDescription();
+    public final C8351 f45028;
+
+    public C14246(C8351 c8351) {
+        this.f45028 = c8351;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Uri m34383() {
-        return this.f46655.mo15908();
+    @Override // l.InterfaceC1278
+    public final long length() {
+        return this.f45028.m22473();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C14246 m34379(Object obj) {
-        if (obj != null && Build.VERSION.SDK_INT >= 25) {
-            return new C14246(new C5778(obj));
+    @Override // l.InterfaceC1278
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo4667(long j, byte[] bArr, int i, int i2) throws EOFException {
+        int i3 = 0;
+        while (i3 < i2) {
+            int iM22472 = this.f45028.m22472(j + ((long) i3), bArr, i + i3, i2 - i3);
+            if (iM22472 <= 0) {
+                throw new EOFException("Unexpected end of metadata");
+            }
+            i3 += iM22472;
         }
-        return null;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Object m34382() {
-        return this.f46655.mo15909();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m34380() {
-        this.f46655.mo15910();
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        this.f45028.close();
     }
 }

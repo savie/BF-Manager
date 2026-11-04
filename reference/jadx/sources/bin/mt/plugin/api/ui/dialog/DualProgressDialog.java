@@ -11,12 +11,11 @@ import bin.mt.plugin.api.ui.builder.PluginTextViewBuilder;
 import bin.mt.plugin.api.util.ThreadUtil;
 import bin.mt.plugin.api.util.UIUpdater;
 import bin.mt.plugin.api.util.UIUpdaterGroup;
-import l.C1188;
-import l.C1359;
-import l.C13638;
-import l.C21778;
-import l.RunnableC18517;
-import l.RunnableC4537;
+import l.C17359;
+import l.C17365;
+import l.C18136;
+import l.C7256;
+import l.RunnableC6915;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DualProgressDialog extends BaseCancelableDialog {
@@ -40,13 +39,13 @@ public class DualProgressDialog extends BaseCancelableDialog {
         PluginProgressBar pluginProgressBar2 = (PluginProgressBar) pluginViewBuild.requireViewById("totalProgressBar");
         this.totalProgressBar = pluginProgressBar2;
         UIUpdaterGroup uIUpdaterGroup = new UIUpdaterGroup();
-        C13638.requireNonNull(pluginDialogCreate);
-        this.titleUpdater = uIUpdaterGroup.registerUpdater(new C1359(5, pluginDialogCreate));
-        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C1188(this));
-        C13638.requireNonNull(pluginProgressBar);
-        this.subProgressUpdater = uIUpdaterGroup.registerUpdater(new C21778(6, pluginProgressBar));
-        C13638.requireNonNull(pluginProgressBar2);
-        this.totalProgressUpdater = uIUpdaterGroup.registerUpdater(new C21778(6, pluginProgressBar2));
+        C17359.requireNonNull(pluginDialogCreate);
+        this.titleUpdater = uIUpdaterGroup.registerUpdater(new C17365(pluginDialogCreate));
+        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C7256(5, this));
+        C17359.requireNonNull(pluginProgressBar);
+        this.subProgressUpdater = uIUpdaterGroup.registerUpdater(new C18136(pluginProgressBar));
+        C17359.requireNonNull(pluginProgressBar2);
+        this.totalProgressUpdater = uIUpdaterGroup.registerUpdater(new C18136(pluginProgressBar2));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -88,8 +87,13 @@ public class DualProgressDialog extends BaseCancelableDialog {
         this.subProgressBar.setMaxProgress(i);
     }
 
-    public DualProgressDialog setMaxSubProgress(int i) {
-        ThreadUtil.runOnUiThread(new RunnableC4537(i, 1, this));
+    public DualProgressDialog setMaxSubProgress(final int i) {
+        ThreadUtil.runOnUiThread(new Runnable() { // from class: bin.mt.plugin.api.ui.dialog.DualProgressDialog$$ExternalSyntheticLambda4
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f$0.lambda$setMaxSubProgress$1(i);
+            }
+        });
         return this;
     }
 
@@ -137,7 +141,7 @@ public class DualProgressDialog extends BaseCancelableDialog {
 
     @Override // bin.mt.plugin.api.ui.dialog.BaseCancelableDialog
     public void dismiss() {
-        ThreadUtil.runOnUiThread(new RunnableC18517(4, this));
+        ThreadUtil.runOnUiThread(new RunnableC6915(4, this));
     }
 
     /* JADX INFO: Access modifiers changed from: private */

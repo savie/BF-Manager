@@ -112,7 +112,7 @@
 
     float-to-int p1, p1
 
-    invoke-static {p1, v1, v0}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {p1, v1, v0}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result p1
 
@@ -156,11 +156,11 @@
     return v0
 .end method
 
-.method public layoutChild(Ll/ۖ᩶;Landroid/view/View;I)V
+.method public layoutChild(Ll/᩻᩶;Landroid/view/View;I)V
     .locals 8
 
     .line 114
-    invoke-virtual {p1, p2}, Ll/ۖ᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Ll/᩻᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 
@@ -176,7 +176,7 @@
 
     move-result-object v1
 
-    check-cast v1, Ll/ۢܺ;
+    check-cast v1, Ll/ܳ᩶;
 
     .line 120
     iget-object v5, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->tempRect1:Landroid/graphics/Rect;
@@ -239,14 +239,14 @@
     invoke-virtual {v5, v2, v3, v4, v7}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 127
-    invoke-virtual {p1}, Ll/ۖ᩶;->getLastWindowInsets()Ll/ܺۢ;
+    invoke-virtual {p1}, Ll/᩻᩶;->getLastWindowInsets()Ll/ۘۜ;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 129
-    sget v3, Ll/ۚ֫;->ۙ:I
+    sget v3, Ll/᩸۠;->ۙ:I
 
     .line 2854
     invoke-virtual {p1}, Landroid/view/View;->getFitsSystemWindows()Z
@@ -264,7 +264,7 @@
     .line 134
     iget p1, v5, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Ll/ܺۢ;->۬()I
+    invoke-virtual {v2}, Ll/ۘۜ;->ۚ()I
 
     move-result v3
 
@@ -275,7 +275,7 @@
     .line 135
     iget p1, v5, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v2}, Ll/ܺۢ;->ۘ()I
+    invoke-virtual {v2}, Ll/ۘۜ;->֫()I
 
     move-result v2
 
@@ -288,7 +288,7 @@
     iget-object p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->tempRect2:Landroid/graphics/Rect;
 
     .line 139
-    iget v1, v1, Ll/ۢܺ;->ۨ:I
+    iget v1, v1, Ll/ܳ᩶;->ۤ:I
 
     .line 140
     invoke-static {v1}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->resolveGravity(I)I
@@ -347,7 +347,7 @@
 
     .line 153
     :cond_1
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->layoutChild(Ll/ۖ᩶;Landroid/view/View;I)V
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->layoutChild(Ll/᩻᩶;Landroid/view/View;I)V
 
     const/4 p1, 0x0
 
@@ -357,7 +357,7 @@
     return-void
 .end method
 
-.method public onMeasureChild(Ll/ۖ᩶;Landroid/view/View;IIII)Z
+.method public onMeasureChild(Ll/᩻᩶;Landroid/view/View;IIII)Z
     .locals 7
 
     .line 61
@@ -377,7 +377,7 @@
 
     .line 67
     :cond_0
-    invoke-virtual {p1, p2}, Ll/ۖ᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Ll/᩻᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v2
 
@@ -396,7 +396,7 @@
     if-lez p5, :cond_1
 
     .line 72
-    sget v3, Ll/ۚ֫;->ۙ:I
+    sget v3, Ll/᩸۠;->ۙ:I
 
     .line 2854
     invoke-virtual {v2}, Landroid/view/View;->getFitsSystemWindows()Z
@@ -406,19 +406,19 @@
     if-eqz v3, :cond_2
 
     .line 73
-    invoke-virtual {p1}, Ll/ۖ᩶;->getLastWindowInsets()Ll/ܺۢ;
+    invoke-virtual {p1}, Ll/᩻᩶;->getLastWindowInsets()Ll/ۘۜ;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 75
-    invoke-virtual {v3}, Ll/ܺۢ;->ۜ()I
+    invoke-virtual {v3}, Ll/ۘۜ;->ۧ()I
 
     move-result v4
 
     .line 76
-    invoke-virtual {v3}, Ll/ܺۢ;->֨()I
+    invoke-virtual {v3}, Ll/ۘۜ;->۫()I
 
     move-result v3
 
@@ -499,7 +499,7 @@
     move v6, p6
 
     .line 100
-    invoke-virtual/range {v1 .. v6}, Ll/ۖ᩶;->onMeasureChild(Landroid/view/View;IIII)V
+    invoke-virtual/range {v1 .. v6}, Ll/᩻᩶;->onMeasureChild(Landroid/view/View;IIII)V
 
     const/4 p1, 0x1
 

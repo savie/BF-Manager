@@ -1,83 +1,88 @@
-.class public final Ll/ۡܰ᩵;
-.super Ll/᩷ۗ۠;
-.source "I4F9"
+.class public final synthetic Ll/ۡܰ᩵;
+.super Ljava/lang/Object;
+.source "0A0C"
 
 
-# instance fields
-.field public final ֡:I
-
-.field public final synthetic ۫:Ll/᩶ܰ᩵;
-
-.field public final ܽ:Z
-
-.field public final ᩶:I
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/᩶ܰ᩵;II)V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 379
-    iput-object p1, p0, Ll/ۡܰ᩵;->۫:Ll/᩶ܰ᩵;
-
-    .line 380
-    iget-object p1, p1, Ll/᩶ܰ᩵;->ۧ:Ljava/lang/String;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 562
+    invoke-static {}, Ll/᩹᩵᩵;->values()[Ll/᩹᩵᩵;
 
     move-result-object v0
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    array-length v0, v0
 
-    move-result-object v1
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/ۡܰ᩵;->ۙ:[I
+
+    :try_start_0
+    sget-object v1, Ll/᩹᩵᩵;->֡:Ll/᩹᩵᩵;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۡܰ᩵;->ۙ:[I
+
+    sget-object v1, Ll/᩹᩵᩵;->۟:Ll/᩹᩵᩵;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۡܰ᩵;->ۙ:[I
+
+    sget-object v1, Ll/᩹᩵᩵;->᩶:Ll/᩹᩵᩵;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
 
     const/4 v2, 0x3
 
-    new-array v2, v2, [Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    const/4 v3, 0x0
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ۡܰ᩵;->ۙ:[I
 
-    aput-object p1, v2, v3
+    sget-object v1, Ll/᩹᩵᩵;->ܿ:Ll/᩹᩵᩵;
 
-    const/4 p1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    aput-object v0, v2, p1
+    move-result v1
 
-    const/4 v0, 0x2
+    const/4 v2, 0x4
 
-    aput-object v1, v2, v0
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    const-string v0, "OkHttp %s ping %08x%08x"
-
-    invoke-direct {p0, v0, v2}, Ll/᩷ۗ۠;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 381
-    iput-boolean p1, p0, Ll/ۡܰ᩵;->ܽ:Z
-
-    .line 382
-    iput p2, p0, Ll/ۡܰ᩵;->᩶:I
-
-    .line 383
-    iput p3, p0, Ll/ۡܰ᩵;->֡:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ()V
-    .locals 4
-
-    .line 387
-    iget v0, p0, Ll/ۡܰ᩵;->᩶:I
-
-    iget v1, p0, Ll/ۡܰ᩵;->֡:I
-
-    iget-object v2, p0, Ll/ۡܰ᩵;->۫:Ll/᩶ܰ᩵;
-
-    iget-boolean v3, p0, Ll/ۡܰ᩵;->ܽ:Z
-
-    invoke-virtual {v2, v0, v1, v3}, Ll/᩶ܰ᩵;->ۙ(IIZ)V
-
+    :catch_3
     return-void
 .end method

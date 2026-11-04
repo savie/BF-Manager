@@ -1,44 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫֨᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: UASO */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12084 implements InterfaceC18433 {
+/* JADX INFO: renamed from: l.ۨۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C7P7 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12084 implements Comparable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final EnumC24688 f38901;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 f38902;
+
+    @Override // java.lang.Comparable
+    public final int compareTo(Object obj) {
+        C12128.m30315(!m30260());
+        return this.f38901.compareTo(((C12084) obj).f38901);
+    }
+
+    public C12084(AbstractC1928 abstractC1928, EnumC24688 enumC24688) {
+        this.f38902 = abstractC1928;
+        this.f38901 = enumC24688;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean m30260() {
+        return this.f38902.isEmpty() || this.f38901 == null;
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final EnumC24688 m30257() {
+        return this.f38901;
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 m30263() {
+        return this.f38902;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final int m30259() {
+        return ((C6710) ((InterfaceC12455) this.f38902.get(0)).mo30930()).getPosition();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 m30261() {
+        return ((InterfaceC12455) this.f38902.get(0)).mo30932();
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f40441;
-
-    @Override // l.InterfaceC18433
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1029() {
-        return false;
+    public final int m30258() {
+        AbstractC1928 abstractC1928 = this.f38902;
+        return ((C6710) ((InterfaceC12455) C16625.m39339(abstractC1928)).mo30930()).getText().length() + ((C6710) ((InterfaceC12455) C16625.m39339(abstractC1928)).mo30930()).getPosition();
     }
 
-    public C12084(int i) {
-        this.f40441 = i;
-    }
-
-    public final int hashCode() {
-        return C4758.m13213(C4758.m13217(C4758.m13217(0, EnumC19139.TYPE.ordinal()), this.f40441), 2);
-    }
-
-    @Override // l.InterfaceC18433
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1028(AbstractC1415 abstractC1415) {
-        abstractC1415.f5850 = this.f40441;
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj instanceof C12084) {
-            return this.f40441 == ((C12084) obj).f40441;
-        }
-        return false;
-    }
-
-    public final String toString() {
-        return String.format("type(%d)", Integer.valueOf(this.f40441));
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 m30262() {
+        return ((InterfaceC12455) C16625.m39339(this.f38902)).mo30931();
     }
 }

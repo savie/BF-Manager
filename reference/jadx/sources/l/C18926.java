@@ -1,75 +1,93 @@
 package l;
 
-import java.util.ArrayList;
+import java.security.DigestException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-/* JADX INFO: renamed from: l.ᩴᩳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9BH0 */
+/* JADX INFO: renamed from: l.ᩳ۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L7X2 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18926 implements InterfaceC5520 {
+public final class C18926 implements InterfaceC3570 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21042 f61238;
+    public C7739 f61396;
 
-    public C18926(C21042 c21042) {
-        this.f61238 = c21042;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte[] f61397;
 
-    @Override // l.InterfaceC5520
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f61398;
+
+    @Override // l.InterfaceC3570
     /* JADX INFO: renamed from: ۙ */
-    public final void mo4612(C6330 c6330) {
-        m43600((AbstractC22454) c6330);
+    public final void mo11615(HashMap map) throws C2079 {
+        throw new C2079("initWithPPKv3Header() not supported");
     }
 
-    @Override // l.InterfaceC5520
+    @Override // l.InterfaceC3570
     /* JADX INFO: renamed from: ۙ */
-    public final void mo4613(C9859 c9859) {
-        m43600((AbstractC22454) c9859);
+    public final void mo11616(byte[] bArr) {
+        C9866 c9866 = new C9866(bArr);
+        this.f61397 = c9866.m25649();
+        this.f61398 = c9866.m25658();
+        this.f61396 = new C7739();
     }
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4614(C6330 c6330) {
-        m43600((AbstractC22454) c6330);
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo11618(byte[] bArr) throws C2079 {
+        throw new C2079("initWithASN1() not supported");
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m43600(AbstractC22454 abstractC22454) {
-        C16251 c16251Mo17432 = abstractC22454.mo17432();
-        C21042 c21042 = this.f61238;
-        if (c16251Mo17432 != null) {
-            C19073 c19073M38386 = c16251Mo17432.m38386();
-            ArrayList arrayList = (ArrayList) c21042.f68547.get(c19073M38386);
-            if (arrayList == null) {
-                arrayList = new ArrayList();
-                c21042.f68547.put(c19073M38386, arrayList);
-            }
-            arrayList.add(c16251Mo17432);
-        }
-        if (abstractC22454 instanceof C6330) {
-            if (abstractC22454.mo17426().m31572() == 56) {
-                c21042.f68553.add((C6330) abstractC22454);
-                return;
-            }
-            C1433 c1433M52814 = C23970.m52814();
-            C12723 c12723M37181 = abstractC22454.mo17428().m37181();
-            C0727 c0727Mo17429 = abstractC22454.mo17429();
-            c1433M52814.getClass();
-            if (c12723M37181.m31571()) {
-                int size = c0727Mo17429.size();
-                int iM38396 = 0;
-                for (int i = 0; i < size; i++) {
-                    iM38396 += c0727Mo17429.m15275get(i).m38396();
+    @Override // l.InterfaceC3570
+    /* JADX INFO: renamed from: ۙ */
+    public final byte[] mo11617(int i, byte[] bArr) {
+        byte[] bArr2 = new byte[i];
+        C7739 c7739 = this.f61396;
+        byte[] bArr3 = this.f61397;
+        int i2 = this.f61398;
+        c7739.getClass();
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance(XMSSKeyParameters.SHA_512);
+            int i3 = (i + 31) / 32;
+            byte[] bArrDigest = messageDigest.digest(bArr);
+            byte[] bArr4 = new byte[64];
+            byte[] bArr5 = new byte[32];
+            byte[] bArr6 = new byte[32];
+            int i4 = 1;
+            while (i4 <= i3) {
+                byte[] bArr7 = bArr2;
+                messageDigest.reset();
+                messageDigest.update(bArr3);
+                messageDigest.update(new byte[]{(byte) ((i4 >> 24) & 255), (byte) ((i4 >> 16) & 255), (byte) ((i4 >> 8) & 255), (byte) (i4 & 255)});
+                messageDigest.digest(bArr4, 0, 64);
+                c7739.m21067(bArrDigest, bArr4, bArr5);
+                System.arraycopy(bArr5, 0, bArr6, 0, 32);
+                for (int i5 = 1; i5 < i2; i5++) {
+                    messageDigest.reset();
+                    messageDigest.update(bArr6);
+                    messageDigest.digest(bArr4, 0, 64);
+                    c7739.m21067(bArrDigest, bArr4, bArr6);
+                    for (int i6 = 0; i6 < 32; i6++) {
+                        bArr5[i6] = (byte) (bArr5[i6] ^ bArr6[i6]);
+                    }
                 }
-                if (iM38396 >= 6) {
-                    c21042.f68551.add((C6330) abstractC22454);
-                    return;
+                for (int i7 = 0; i7 < 32; i7++) {
+                    int i8 = (i4 - 1) + (i7 * i3);
+                    if (i8 < i) {
+                        bArr7[i8] = bArr5[i7];
+                    }
                 }
-                return;
+                i4++;
+                bArr2 = bArr7;
             }
-            return;
-        }
-        if (abstractC22454 instanceof C9859) {
-            c21042.f68552.add((C9859) abstractC22454);
+            return bArr2;
+        } catch (DigestException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchAlgorithmException e2) {
+            throw new RuntimeException(e2);
         }
     }
 }

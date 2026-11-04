@@ -1,34 +1,25 @@
 package l;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import com.google.android.material.textfield.TextInputLayout;
+import java.util.ArrayList;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.ᩳ֨֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5AG9 */
+/* JADX INFO: renamed from: l.ܽܽۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: EIS7 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C17711 implements TextWatcher {
+public final class C17711 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ TextInputLayout f56236;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f58195;
 
-    @Override // android.text.TextWatcher
-    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f58196;
 
-    @Override // android.text.TextWatcher
-    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f58198;
 
-    public C17711(TextInputLayout textInputLayout) {
-        this.f56236 = textInputLayout;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashSet f58197 = new HashSet();
 
-    @Override // android.text.TextWatcher
-    public final void afterTextChanged(Editable editable) {
-        TextInputLayout textInputLayout = this.f56236;
-        if (textInputLayout.isErrorEnabled()) {
-            textInputLayout.setErrorEnabled(false);
-        }
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f58199 = new ArrayList();
 }

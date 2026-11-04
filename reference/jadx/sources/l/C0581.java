@@ -1,76 +1,79 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ᩳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 77W6 */
-/* JADX INFO: loaded from: classes2.dex */
-public class C0581 {
+/* JADX INFO: renamed from: l.֡ܿۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBJ4 */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C0581 extends EnumC15717 {
+    public /* synthetic */ C0581() {
+        this("InTableBody", 12);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public byte[] f2535;
+    public C0581(String str, int i) {
+        super(str, i, 0);
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C15400 f2536;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public byte[] f2537;
-
+    @Override // l.EnumC15717
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC4109 f2538 = new C1287();
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C7638 f2539;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public int f2540;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f2541;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f2542;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f2543;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public long f2544;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public String f2545;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public long f2546;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m2758() {
-        C15400 c15400 = this.f2536;
-        int i = c15400.f50180;
-        int i2 = this.f2541;
-        if (i > i2) {
-            i = i2;
-        }
-        if (i == 0) {
-            return;
-        }
-        byte[] bArr = c15400.f50154;
-        int length = bArr.length;
-        int i3 = c15400.f50192;
-        if (length > i3) {
-            byte[] bArr2 = this.f2537;
-            if (bArr2.length > this.f2540 && bArr.length >= i3 + i) {
-                int length2 = bArr2.length;
+    public boolean mo2666(AbstractC0802 abstractC0802, C4310 c4310) {
+        int i = C22431.f72630[abstractC0802.f2843.ordinal()];
+        if (i == 3) {
+            C7514 c7514 = (C7514) abstractC0802;
+            String str = c7514.f60787;
+            if (str.equals("tr")) {
+                c4310.m13785();
+                c4310.m13746(c7514);
+                c4310.m13765(EnumC15717.f51074);
+                return true;
             }
+            if (C0669.m2903(str, C17209.f56083)) {
+                c4310.m13755(this);
+                c4310.m20067("tr");
+                return c4310.mo13758((AbstractC0802) c7514);
+            }
+            if (C0669.m2903(str, C17209.f56068)) {
+                return m2664(abstractC0802, c4310);
+            }
+            return m2665(abstractC0802, c4310);
         }
-        System.arraycopy(bArr, i3, this.f2537, this.f2540, i);
-        this.f2540 += i;
-        C15400 c15401 = this.f2536;
-        c15401.f50192 += i;
-        this.f2544 += (long) i;
-        this.f2541 -= i;
-        int i4 = c15401.f50180 - i;
-        c15401.f50180 = i4;
-        if (i4 == 0) {
-            c15401.f50192 = 0;
+        if (i == 4) {
+            String str2 = ((C0056) abstractC0802).f60787;
+            if (C0669.m2903(str2, C17209.f56075)) {
+                if (!c4310.m13781(str2)) {
+                    c4310.m13755(this);
+                    return false;
+                }
+                c4310.m13785();
+                c4310.m13770();
+                c4310.m13765(EnumC15717.f51063);
+                return true;
+            }
+            if (str2.equals("table")) {
+                return m2664(abstractC0802, c4310);
+            }
+            if (C0669.m2903(str2, C17209.f56078)) {
+                c4310.m13755(this);
+                return false;
+            }
+            return m2665(abstractC0802, c4310);
         }
+        return m2665(abstractC0802, c4310);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private boolean m2664(AbstractC0802 abstractC0802, C4310 c4310) {
+        if (!c4310.m13781("tbody") && !c4310.m13781("thead") && !c4310.m13769("tfoot")) {
+            c4310.m13755(this);
+            return false;
+        }
+        c4310.m13785();
+        c4310.m20066(c4310.m20060().m37100());
+        return c4310.mo13758(abstractC0802);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private boolean m2665(AbstractC0802 abstractC0802, C4310 c4310) {
+        EnumC15717 enumC15717 = EnumC15717.f51063;
+        c4310.f24102 = abstractC0802;
+        return enumC15717.mo2666(abstractC0802, c4310);
     }
 }

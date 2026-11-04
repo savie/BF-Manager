@@ -7,16 +7,16 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.IvParameterSpec;
-import l.C12278;
-import l.C12441;
-import l.C13958;
-import l.C15489;
-import l.C17214;
-import l.C17922;
-import l.C19028;
-import l.C22697;
-import l.C23234;
-import l.C5800;
+import l.C0703;
+import l.C10732;
+import l.C14087;
+import l.C14483;
+import l.C18176;
+import l.C2458;
+import l.C25272;
+import l.C3188;
+import l.C7376;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.BufferedBlockCipher;
@@ -50,7 +50,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.GcmSpecUtil;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.spec.AEADParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ARIA {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -76,7 +76,6 @@ public final class ARIA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -208,28 +207,24 @@ public final class ARIA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new ARIAEngine()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CCM extends BaseBlockCipher {
         public CCM() {
             super((AEADBlockCipher) CCMBlockCipher.newInstance(new ARIAEngine()), false, 12);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB extends BaseBlockCipher {
         public CFB() {
             super(new BufferedBlockCipher(new CFBBlockCipher(new ARIAEngine(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.ARIA.ECB.1
@@ -241,21 +236,18 @@ public final class ARIA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCM extends BaseBlockCipher {
         public GCM() {
             super(GCMBlockCipher.newInstance(new ARIAEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GMAC extends BaseMac {
         public GMAC() {
             super(new GMac(GCMBlockCipher.newInstance(new ARIAEngine())));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyFactory extends BaseSecretKeyFactory {
         public KeyFactory() {
             super("ARIA", null);
@@ -272,35 +264,30 @@ public final class ARIA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen128 extends KeyGen {
         public KeyGen128() {
             super(128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen192 extends KeyGen {
         public KeyGen192() {
             super(192);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen256 extends KeyGen {
         public KeyGen256() {
             super(256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class OFB extends BaseBlockCipher {
         public OFB() {
             super(new BufferedBlockCipher(new OFBBlockCipher(new ARIAEngine(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Poly1305 extends BaseMac {
         public Poly1305() {
             super(new org.bouncycastle.crypto.macs.Poly1305(new ARIAEngine()));
@@ -313,28 +300,24 @@ public final class ARIA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class RFC3211Wrap extends BaseWrapCipher {
         public RFC3211Wrap() {
             super(new RFC3211WrapEngine(new ARIAEngine()), 16);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Wrap extends BaseWrapCipher {
         public Wrap() {
             super(new ARIAWrapEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class WrapPad extends BaseWrapCipher {
         public WrapPad() {
             super(new ARIAWrapPadEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = ARIA.class.getName();
 
@@ -342,13 +325,13 @@ public final class ARIA {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.ARIA", sb, configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.ARIA", sb, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier = NSRIObjectIdentifiers.id_aria128_cbc;
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters", aSN1ObjectIdentifier, "ARIA");
             ASN1ObjectIdentifier aSN1ObjectIdentifier2 = NSRIObjectIdentifiers.id_aria192_cbc;
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters", aSN1ObjectIdentifier2, "ARIA");
             ASN1ObjectIdentifier aSN1ObjectIdentifier3 = NSRIObjectIdentifiers.id_aria256_cbc;
-            C12441.m30916(C17214.m40154(configurableProvider, "Alg.Alias.AlgorithmParameters", "ARIA", str, aSN1ObjectIdentifier3), "$AlgParamGen", configurableProvider, "AlgorithmParameterGenerator.ARIA");
+            C10732.m27335(C14087.m34249(configurableProvider, "Alg.Alias.AlgorithmParameters", "ARIA", str, aSN1ObjectIdentifier3), "$AlgParamGen", configurableProvider, "AlgorithmParameterGenerator.ARIA");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator", aSN1ObjectIdentifier, "ARIA");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator", aSN1ObjectIdentifier2, "ARIA");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator", aSN1ObjectIdentifier3, "ARIA");
@@ -363,61 +346,61 @@ public final class ARIA {
             ASN1ObjectIdentifier aSN1ObjectIdentifier8 = NSRIObjectIdentifiers.id_aria192_cfb;
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator", aSN1ObjectIdentifier8, "ARIA");
             ASN1ObjectIdentifier aSN1ObjectIdentifier9 = NSRIObjectIdentifiers.id_aria256_cfb;
-            C12441.m30916(C17214.m40154(configurableProvider, "Alg.Alias.AlgorithmParameterGenerator", "ARIA", str, aSN1ObjectIdentifier9), "$ECB", configurableProvider, "Cipher.ARIA");
+            C10732.m27335(C14087.m34249(configurableProvider, "Alg.Alias.AlgorithmParameterGenerator", "ARIA", str, aSN1ObjectIdentifier9), "$ECB", configurableProvider, "Cipher.ARIA");
             ASN1ObjectIdentifier aSN1ObjectIdentifier10 = NSRIObjectIdentifiers.id_aria128_ecb;
-            C13958.m33814(configurableProvider, str, "$ECB", "Cipher", aSN1ObjectIdentifier10);
+            C3188.m10408(configurableProvider, str, "$ECB", "Cipher", aSN1ObjectIdentifier10);
             ASN1ObjectIdentifier aSN1ObjectIdentifier11 = NSRIObjectIdentifiers.id_aria192_ecb;
-            C13958.m33814(configurableProvider, str, "$ECB", "Cipher", aSN1ObjectIdentifier11);
+            C3188.m10408(configurableProvider, str, "$ECB", "Cipher", aSN1ObjectIdentifier11);
             ASN1ObjectIdentifier aSN1ObjectIdentifier12 = NSRIObjectIdentifiers.id_aria256_ecb;
             configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier12, str + "$ECB");
-            C12441.m30916(C12278.m30516("$RFC3211Wrap", "Cipher.ARIARFC3211WRAP", str, C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$OFB", "Cipher", C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$CFB", "Cipher", C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$CFB", "Cipher", C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$CBC", "Cipher", C17214.m40154(configurableProvider, "Cipher", C22697.m50267(new StringBuilder(), str, "$CBC"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier2, configurableProvider), str, "$CBC"), str, aSN1ObjectIdentifier3), aSN1ObjectIdentifier7, configurableProvider), str, "$CFB"), str, aSN1ObjectIdentifier8), aSN1ObjectIdentifier9, configurableProvider), str, "$OFB"), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$OFB"), str, aSN1ObjectIdentifier6), configurableProvider), "$Wrap", configurableProvider, "Cipher.ARIAWRAP");
+            C10732.m27335(C0703.m3019("$RFC3211Wrap", "Cipher.ARIARFC3211WRAP", str, C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$OFB", "Cipher", C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$CFB", "Cipher", C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$CFB", "Cipher", C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$CBC", "Cipher", C14087.m34249(configurableProvider, "Cipher", C8947.m23910(new StringBuilder(), str, "$CBC"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier2, configurableProvider), str, "$CBC"), str, aSN1ObjectIdentifier3), aSN1ObjectIdentifier7, configurableProvider), str, "$CFB"), str, aSN1ObjectIdentifier8), aSN1ObjectIdentifier9, configurableProvider), str, "$OFB"), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$OFB"), str, aSN1ObjectIdentifier6), configurableProvider), "$Wrap", configurableProvider, "Cipher.ARIAWRAP");
             ASN1ObjectIdentifier aSN1ObjectIdentifier13 = NSRIObjectIdentifiers.id_aria128_kw;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier13, "ARIAWRAP");
             ASN1ObjectIdentifier aSN1ObjectIdentifier14 = NSRIObjectIdentifiers.id_aria192_kw;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier14, "ARIAWRAP");
             ASN1ObjectIdentifier aSN1ObjectIdentifier15 = NSRIObjectIdentifiers.id_aria256_kw;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier15, "ARIAWRAP");
-            configurableProvider.addAlgorithm("Cipher.ARIAWRAPPAD", C23234.m51270("Alg.Alias.Cipher.ARIAKW", "ARIAWRAP", str, "$WrapPad", configurableProvider));
+            configurableProvider.addAlgorithm("Cipher.ARIAWRAPPAD", C18176.m42346("Alg.Alias.Cipher.ARIAKW", "ARIAWRAP", str, "$WrapPad", configurableProvider));
             ASN1ObjectIdentifier aSN1ObjectIdentifier16 = NSRIObjectIdentifiers.id_aria128_kwp;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier16, "ARIAWRAPPAD");
             ASN1ObjectIdentifier aSN1ObjectIdentifier17 = NSRIObjectIdentifiers.id_aria192_kwp;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier17, "ARIAWRAPPAD");
             ASN1ObjectIdentifier aSN1ObjectIdentifier18 = NSRIObjectIdentifiers.id_aria256_kwp;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier18, "ARIAWRAPPAD");
-            StringBuilder sbM40154 = C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C23234.m51270("KeyGenerator.ARIA", C23234.m51270("Alg.Alias.Cipher.ARIAKWP", "ARIAWRAPPAD", str, "$KeyGen", configurableProvider), str, "$KeyGen128", configurableProvider), str, aSN1ObjectIdentifier13), aSN1ObjectIdentifier14, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier15), aSN1ObjectIdentifier16, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier17), aSN1ObjectIdentifier18, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier10), aSN1ObjectIdentifier11, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier12), aSN1ObjectIdentifier, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier2), aSN1ObjectIdentifier3, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier7), aSN1ObjectIdentifier8, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier9), aSN1ObjectIdentifier4, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier5);
-            sbM40154.append("$KeyGen256");
-            configurableProvider.addAlgorithm("KeyGenerator", aSN1ObjectIdentifier6, sbM40154.toString());
+            StringBuilder sbM34249 = C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C18176.m42346("KeyGenerator.ARIA", C18176.m42346("Alg.Alias.Cipher.ARIAKWP", "ARIAWRAPPAD", str, "$KeyGen", configurableProvider), str, "$KeyGen128", configurableProvider), str, aSN1ObjectIdentifier13), aSN1ObjectIdentifier14, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier15), aSN1ObjectIdentifier16, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier17), aSN1ObjectIdentifier18, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier10), aSN1ObjectIdentifier11, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier12), aSN1ObjectIdentifier, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier2), aSN1ObjectIdentifier3, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier7), aSN1ObjectIdentifier8, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier9), aSN1ObjectIdentifier4, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier5);
+            sbM34249.append("$KeyGen256");
+            configurableProvider.addAlgorithm("KeyGenerator", aSN1ObjectIdentifier6, sbM34249.toString());
             ASN1ObjectIdentifier aSN1ObjectIdentifier19 = NSRIObjectIdentifiers.id_aria128_ccm;
-            C13958.m33814(configurableProvider, str, "$KeyGen128", "KeyGenerator", aSN1ObjectIdentifier19);
+            C3188.m10408(configurableProvider, str, "$KeyGen128", "KeyGenerator", aSN1ObjectIdentifier19);
             ASN1ObjectIdentifier aSN1ObjectIdentifier20 = NSRIObjectIdentifiers.id_aria192_ccm;
-            C13958.m33814(configurableProvider, str, "$KeyGen192", "KeyGenerator", aSN1ObjectIdentifier20);
+            C3188.m10408(configurableProvider, str, "$KeyGen192", "KeyGenerator", aSN1ObjectIdentifier20);
             ASN1ObjectIdentifier aSN1ObjectIdentifier21 = NSRIObjectIdentifiers.id_aria256_ccm;
-            C13958.m33814(configurableProvider, str, "$KeyGen256", "KeyGenerator", aSN1ObjectIdentifier21);
+            C3188.m10408(configurableProvider, str, "$KeyGen256", "KeyGenerator", aSN1ObjectIdentifier21);
             ASN1ObjectIdentifier aSN1ObjectIdentifier22 = NSRIObjectIdentifiers.id_aria128_gcm;
-            C13958.m33814(configurableProvider, str, "$KeyGen128", "KeyGenerator", aSN1ObjectIdentifier22);
+            C3188.m10408(configurableProvider, str, "$KeyGen128", "KeyGenerator", aSN1ObjectIdentifier22);
             ASN1ObjectIdentifier aSN1ObjectIdentifier23 = NSRIObjectIdentifiers.id_aria192_gcm;
-            C13958.m33814(configurableProvider, str, "$KeyGen192", "KeyGenerator", aSN1ObjectIdentifier23);
+            C3188.m10408(configurableProvider, str, "$KeyGen192", "KeyGenerator", aSN1ObjectIdentifier23);
             ASN1ObjectIdentifier aSN1ObjectIdentifier24 = NSRIObjectIdentifiers.id_aria256_gcm;
             configurableProvider.addAlgorithm("KeyGenerator", aSN1ObjectIdentifier24, str + "$KeyGen256");
-            C5800.m15969(str, "$KeyFactory", "SecretKeyFactory.ARIA", new StringBuilder(), configurableProvider);
+            C8947.m23913(str, "$KeyFactory", "SecretKeyFactory.ARIA", new StringBuilder(), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory", aSN1ObjectIdentifier, "ARIA");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory", aSN1ObjectIdentifier2, "ARIA");
-            StringBuilder sbM40155 = C17214.m40154(configurableProvider, "Alg.Alias.SecretKeyFactory", "ARIA", str, aSN1ObjectIdentifier3);
-            sbM40155.append("$AlgParamGen");
-            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.ARIACCM", sbM40155.toString());
-            C12441.m30916(C22697.m50268("ARIACCM", str, C19028.m43760("ARIACCM", "Alg.Alias.AlgorithmParameterGenerator.", C19028.m43760("ARIACCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier19, configurableProvider), aSN1ObjectIdentifier20, configurableProvider), aSN1ObjectIdentifier21, configurableProvider), "$CCM", configurableProvider, "Cipher.ARIACCM");
+            StringBuilder sbM342410 = C14087.m34249(configurableProvider, "Alg.Alias.SecretKeyFactory", "ARIA", str, aSN1ObjectIdentifier3);
+            sbM342410.append("$AlgParamGen");
+            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.ARIACCM", sbM342410.toString());
+            C10732.m27335(C25272.m56410("ARIACCM", str, C2458.m8290("ARIACCM", "Alg.Alias.AlgorithmParameterGenerator.", C2458.m8290("ARIACCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier19, configurableProvider), aSN1ObjectIdentifier20, configurableProvider), aSN1ObjectIdentifier21, configurableProvider), "$CCM", configurableProvider, "Cipher.ARIACCM");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier19, "CCM");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier20, "CCM");
-            StringBuilder sbM40156 = C17214.m40154(configurableProvider, "Alg.Alias.Cipher", "CCM", str, aSN1ObjectIdentifier21);
-            sbM40156.append("$AlgParamGen");
-            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.ARIAGCM", sbM40156.toString());
-            C12441.m30916(C22697.m50268("ARIAGCM", str, C19028.m43760("ARIAGCM", "Alg.Alias.AlgorithmParameterGenerator.", C19028.m43760("ARIAGCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier22, configurableProvider), aSN1ObjectIdentifier23, configurableProvider), aSN1ObjectIdentifier24, configurableProvider), "$GCM", configurableProvider, "Cipher.ARIAGCM");
+            StringBuilder sbM342411 = C14087.m34249(configurableProvider, "Alg.Alias.Cipher", "CCM", str, aSN1ObjectIdentifier21);
+            sbM342411.append("$AlgParamGen");
+            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.ARIAGCM", sbM342411.toString());
+            C10732.m27335(C25272.m56410("ARIAGCM", str, C2458.m8290("ARIAGCM", "Alg.Alias.AlgorithmParameterGenerator.", C2458.m8290("ARIAGCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier22, configurableProvider), aSN1ObjectIdentifier23, configurableProvider), aSN1ObjectIdentifier24, configurableProvider), "$GCM", configurableProvider, "Cipher.ARIAGCM");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier22, "ARIAGCM");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier23, "ARIAGCM");
-            StringBuilder sbM40157 = C17214.m40154(configurableProvider, "Alg.Alias.Cipher", "ARIAGCM", str, aSN1ObjectIdentifier24);
-            sbM40157.append("$GMAC");
-            addGMacAlgorithm(configurableProvider, "ARIA", sbM40157.toString(), C15489.m37076(str, "$KeyGen"));
-            addPoly1305Algorithm(configurableProvider, "ARIA", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            StringBuilder sbM342412 = C14087.m34249(configurableProvider, "Alg.Alias.Cipher", "ARIAGCM", str, aSN1ObjectIdentifier24);
+            sbM342412.append("$GMAC");
+            addGMacAlgorithm(configurableProvider, "ARIA", sbM342412.toString(), C14483.m34972(str, "$KeyGen"));
+            addPoly1305Algorithm(configurableProvider, "ARIA", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
     }
 }

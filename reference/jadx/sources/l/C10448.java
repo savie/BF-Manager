@@ -1,17 +1,32 @@
 package l;
 
-import java.lang.ref.WeakReference;
+/* JADX INFO: renamed from: l.ۢ᩺ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 37RB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10448 extends C8957 {
 
-/* JADX INFO: renamed from: l.ۤᩳۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G6SF */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10448 extends WeakReference {
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final AbstractC19728 f33253;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3800 f35673;
+    public C10448(EnumC7466 enumC7466, int i, int i2, AbstractC19728 abstractC19728, C14769 c14769) {
+        super(enumC7466, i, i2, c14769);
+        this.f33253 = abstractC19728;
+    }
 
-    public C10448(InterfaceC3800 interfaceC3800, C21030 c21030) {
-        super(c21030, C21030.f68486);
-        this.f35673 = interfaceC3800;
+    @Override // l.C8957
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5352() {
+        EnumC2991 enumC2991 = this.f29212.f24715;
+        EnumC2991 enumC2992 = EnumC2991.NAMED;
+        if (enumC2991 == enumC2992) {
+            return;
+        }
+        throw new AssertionError("Bad token kind - expected " + enumC2992);
+    }
+
+    @Override // l.C8957
+    /* JADX INFO: renamed from: ᩸ */
+    public final AbstractC19728 mo23945() {
+        return this.f33253;
     }
 }

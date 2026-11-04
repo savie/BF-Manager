@@ -3,7 +3,7 @@
 .source "SwipeDismissBehavior.java"
 
 # interfaces
-.implements Ll/ۡۗ;
+.implements Ll/᩵۬;
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Ll/ۜۗ;)Z
+.method public perform(Landroid/view/View;Ll/֫۬;)Z
     .locals 2
 
     .line 430
@@ -39,7 +39,7 @@
     if-eqz p2, :cond_5
 
     .line 432
-    sget p2, Ll/ۚ֫;->ۙ:I
+    sget p2, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
@@ -84,7 +84,7 @@
 
     .line 437
     :goto_0
-    invoke-static {p2, p1}, Ll/ۚ֫;->ܰ(ILandroid/view/View;)V
+    invoke-static {p2, p1}, Ll/᩸۠;->᩷(ILandroid/view/View;)V
 
     const/4 p2, 0x0
 

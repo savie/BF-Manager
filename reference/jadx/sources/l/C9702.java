@@ -1,28 +1,32 @@
 package l;
 
-import java.util.UUID;
+/* JADX INFO: renamed from: l.ۡ᩺ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 37RB */
+/* JADX INFO: loaded from: classes4.dex */
+public class C9702 extends C8957 {
 
-/* JADX INFO: renamed from: l.ۢܽۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6S3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9702 {
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f31330;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final UUID f32686;
+    public C9702(EnumC7466 enumC7466, int i, int i2, String str, C14769 c14769) {
+        super(enumC7466, i, i2, c14769);
+        this.f31330 = str;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final UUID f32687;
+    @Override // l.C8957
+    /* JADX INFO: renamed from: ۙ */
+    public void mo5352() {
+        EnumC2991 enumC2991 = this.f29212.f24715;
+        EnumC2991 enumC2992 = EnumC2991.STRING;
+        if (enumC2991 == enumC2992) {
+            return;
+        }
+        throw new AssertionError("Bad token kind - expected " + enumC2992);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f32688;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f32689;
-
-    public C9702(UUID uuid, UUID uuid2, long j, long j2) {
-        this.f32686 = uuid;
-        this.f32687 = uuid2;
-        this.f32689 = j;
-        this.f32688 = j2;
+    @Override // l.C8957
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo23943() {
+        return this.f31330;
     }
 }

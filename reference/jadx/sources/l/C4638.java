@@ -1,55 +1,38 @@
 package l;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.pm.PackageManager;
+/* JADX INFO: renamed from: l.ۙۘۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J7QN */
+/* JADX INFO: loaded from: classes3.dex */
+public class C4638 extends C10603 {
 
-/* JADX INFO: renamed from: l.ۙ۫ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAIU */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4638 {
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public int f16422;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f16386;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f16423;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public ComponentName f16387;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public ComponentName f16388;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ComponentName f16389;
-
-    public C4638(Context context) {
-        ComponentName componentName = new ComponentName(context, "bin.mt.plus.MainLightIcon");
-        this.f16389 = componentName;
-        ComponentName componentName2 = new ComponentName(context, "bin.mt.plus.MainDarkIcon");
-        this.f16387 = componentName2;
-        this.f16388 = new ComponentName(context, "bin.mt.plus.MainNoBgIcon");
-        PackageManager packageManagerM39292 = C16737.m39292();
-        int componentEnabledSetting = packageManagerM39292.getComponentEnabledSetting(componentName);
-        if (componentEnabledSetting == 0 || componentEnabledSetting == 1) {
-            this.f16386 = 0;
-        } else if (packageManagerM39292.getComponentEnabledSetting(componentName2) == 1) {
-            this.f16386 = 1;
-        } else {
-            this.f16386 = 2;
-        }
+    public C4638(C21637 c21637, char[] cArr, int i) {
+        super(c21637, cArr, cArr.length);
+        this.f16423 = i;
+        this.f16422 = 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ComponentName m12809() {
-        int i = this.f16386;
-        if (i == 0) {
-            return this.f16389;
+    @Override // l.C10603
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final char mo14465() {
+        super.mo14465();
+        if (m27060('\n') || m27060('\r') || m27060('\f')) {
+            this.f16422 = 0;
+        } else if (m27060('\t')) {
+            this.f16422 = ((this.f16422 / 8) * 8) + 8;
+        } else {
+            this.f16422++;
         }
-        if (i == 1) {
-            return this.f16387;
-        }
-        if (i == 2) {
-            return this.f16388;
-        }
-        throw new RuntimeException();
+        return m27054();
+    }
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int m14466() {
+        return m27053() + this.f16423;
     }
 }

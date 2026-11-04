@@ -1,122 +1,94 @@
-.class public final Ll/ܽۖ᩸;
-.super Ll/۟ۖ᩸;
-.source "P86L"
+.class public final synthetic Ll/ܽۖ᩸;
+.super Ljava/lang/Object;
+.source "R98O"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final synthetic ۖ:Z
+.field public final synthetic ܰ:I
 
-.field public volatile ۙ:Ll/۟ۖ᩸;
-
-.field public final synthetic ۚ:Z
-
-.field public final synthetic ۨ:Ll/ۛۨ᩸;
-
-.field public final synthetic ܰ:Ll/۫ۖ᩸;
-
-.field public final synthetic ᩹:Ll/ۨ۬᩸;
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/۫ۖ᩸;ZZLl/ۛۨ᩸;Ll/ۨ۬᩸;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 121
-    iput-object p1, p0, Ll/ܽۖ᩸;->ܰ:Ll/۫ۖ᩸;
+    .line 0
+    iput p1, p0, Ll/ܽۖ᩸;->ܰ:I
 
-    iput-boolean p2, p0, Ll/ܽۖ᩸;->ۖ:Z
+    iput-object p2, p0, Ll/ܽۖ᩸;->᩶:Ljava/lang/Object;
 
-    iput-boolean p3, p0, Ll/ܽۖ᩸;->ۚ:Z
-
-    iput-object p4, p0, Ll/ܽۖ᩸;->ۨ:Ll/ۛۨ᩸;
-
-    iput-object p5, p0, Ll/ܽۖ᩸;->᩹:Ll/ۨ۬᩸;
-
-    invoke-direct {p0}, Ll/۟ۖ᩸;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-    .locals 3
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
-    .line 130
-    iget-boolean v0, p0, Ll/ܽۖ᩸;->ۖ:Z
+    .line 2
+    iget p1, p0, Ll/ܽۖ᩸;->ܰ:I
 
-    if-eqz v0, :cond_0
+    .line 4
+    iget-object v0, p0, Ll/ܽۖ᩸;->᩶:Ljava/lang/Object;
 
-    .line 131
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->֫()V
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x0
+    .line 9
+    check-cast v0, Ll/᩶ᩳۤ;
 
-    return-object p1
+    .line 272
+    sget-object p1, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
 
-    .line 149
-    :cond_0
-    iget-object v0, p0, Ll/ܽۖ᩸;->ۙ:Ll/۟ۖ᩸;
-
-    if-nez v0, :cond_1
-
-    .line 151
-    iget-object v0, p0, Ll/ܽۖ᩸;->ۨ:Ll/ۛۨ᩸;
-
-    iget-object v1, p0, Ll/ܽۖ᩸;->ܰ:Ll/۫ۖ᩸;
-
-    iget-object v2, p0, Ll/ܽۖ᩸;->᩹:Ll/ۨ۬᩸;
-
-    invoke-virtual {v0, v1, v2}, Ll/ۛۨ᩸;->ۙ(Ll/᩷ۖ᩸;Ll/ۨ۬᩸;)Ll/۟ۖ᩸;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/ܽۖ᩸;->ۙ:Ll/۟ۖ᩸;
-
-    .line 134
-    :cond_1
-    invoke-virtual {v0, p1}, Ll/۟ۖ᩸;->ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
+    invoke-interface {p1}, Ll/ۢ֫ܺ;->edit()Ll/ᩳ֫ܺ;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    const-string v1, "apk_signature_info_add_colon"
 
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-    .locals 3
+    invoke-interface {p1, v1, p2}, Ll/ᩳ֫ܺ;->putBoolean(Ljava/lang/String;Z)Ll/ᩳ֫ܺ;
 
-    .line 139
-    iget-boolean v0, p0, Ll/ܽۖ᩸;->ۚ:Z
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1}, Ll/ᩳ֫ܺ;->apply()V
 
-    .line 140
-    invoke-virtual {p1}, Ll/֨۬᩸;->ᩳ()Ll/֨۬᩸;
+    .line 273
+    invoke-virtual {v0}, Ll/᩶ᩳۤ;->run()V
 
     return-void
 
-    .line 149
+    .line 0
+    :pswitch_0
+    check-cast v0, Ll/᩹ۖ᩸;
+
+    sget p1, Ll/᩹ۖ᩸;->۬ᩴ:I
+
+    if-eqz p2, :cond_0
+
+    const-string p1, "INTERNAL:Regex"
+
+    goto :goto_0
+
     :cond_0
-    iget-object v0, p0, Ll/ܽۖ᩸;->ۙ:Ll/۟ۖ᩸;
+    const/4 p1, 0x0
 
-    if-nez v0, :cond_1
+    :goto_0
+    const/4 p2, 0x1
 
-    .line 151
-    iget-object v0, p0, Ll/ܽۖ᩸;->ۨ:Ll/ۛۨ᩸;
-
-    iget-object v1, p0, Ll/ܽۖ᩸;->ܰ:Ll/۫ۖ᩸;
-
-    iget-object v2, p0, Ll/ܽۖ᩸;->᩹:Ll/ۨ۬᩸;
-
-    invoke-virtual {v0, v1, v2}, Ll/ۛۨ᩸;->ۙ(Ll/᩷ۖ᩸;Ll/ۨ۬᩸;)Ll/۟ۖ᩸;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/ܽۖ᩸;->ۙ:Ll/۟ۖ᩸;
-
-    .line 143
-    :cond_1
-    invoke-virtual {v0, p1, p2}, Ll/۟ۖ᩸;->ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
+    .line 2119
+    invoke-virtual {v0, p1, p2}, Ll/᩺ۜ᩸;->ۙ(Ljava/lang/String;Z)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

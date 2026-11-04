@@ -5,7 +5,7 @@ import javax.crypto.spec.DHParameterSpec;
 import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.crypto.params.DHValidationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHDomainParameterSpec extends DHParameterSpec {
     public final BigInteger j;
     public final int m;

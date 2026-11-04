@@ -1,20 +1,20 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬֨᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y7FY */
+/* JADX INFO: renamed from: l.۫֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12791 extends C4987 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f42614;
-
-    public C12791(int i, String str) {
-        super(str);
-        this.f42614 = i;
+public final enum C12791 extends EnumC13820 {
+    public /* synthetic */ C12791() {
+        this("RawtextEndTagName", 15);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m31773() {
-        return this.f42614;
+    public C12791(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        EnumC13820.m33733(c13646, c3952, EnumC13820.f43817);
     }
 }

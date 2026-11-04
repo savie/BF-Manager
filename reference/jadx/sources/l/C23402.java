@@ -1,65 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۖۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J7R3 */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23402 extends AbstractC17535 {
+import java.security.SignatureException;
+import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f75792;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f75793;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f75794;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C10946 f75795;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f75796;
-
-    public C23402() {
-        throw null;
+/* JADX INFO: renamed from: l.᩹۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7VS */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23402 extends AbstractC3264 {
+    @Override // l.AbstractC3264
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo10655() {
+        return EdDSAParameterSpec.Ed448;
     }
 
-    public C23402(String str, String str2, String str3, String str4, C10946 c10946) {
-        this.f75792 = str;
-        this.f75794 = str2;
-        this.f75793 = str3;
-        this.f75796 = str4;
-        this.f75795 = c10946;
+    @Override // l.AbstractC3264
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo10657() {
+        return "ssh-ed448";
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C23402)) {
-            return false;
+    @Override // l.InterfaceC11994
+    public final byte[] sign() throws SignatureException {
+        try {
+            return this.f10605.generateSignature();
+        } catch (Exception e) {
+            throw new SignatureException(e);
         }
-        C23402 c23402 = (C23402) obj;
-        return C13638.equals(this.f75792, c23402.f75792) && C13638.equals(this.f75794, c23402.f75794) && C13638.equals(this.f75793, c23402.f75793) && C13638.equals(this.f75796, c23402.f75796) && C13638.equals(this.f75795, c23402.f75795);
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f75795) + C0589.m2789(C0589.m2789(C0589.m2789(C13638.hashCode(this.f75792) * 31, 31, this.f75794), 31, this.f75793), 31, this.f75796);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C10946 m51544() {
-        return this.f75795;
-    }
-
-    public final String toString() {
-        return "[" + this.f75794 + "] " + this.f75796;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m51542() {
-        return this.f75792 + "/" + this.f75793;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m51543(String str, String str2) {
-        return this.f75792.equals(str) && this.f75793.equals(str2);
+    @Override // l.InterfaceC11994
+    public final void update(byte[] bArr) throws SignatureException {
+        try {
+            this.f10605.update(bArr, 0, bArr.length);
+        } catch (Exception e) {
+            throw new SignatureException(e);
+        }
     }
 }

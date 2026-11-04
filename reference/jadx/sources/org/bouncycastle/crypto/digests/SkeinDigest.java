@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.ExtendedDigest;
 import org.bouncycastle.crypto.params.SkeinParameters;
 import org.bouncycastle.util.Memoable;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SkeinDigest implements ExtendedDigest, Memoable {
     public static final int SKEIN_1024 = 1024;
     public static final int SKEIN_256 = 256;

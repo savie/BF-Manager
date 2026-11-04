@@ -1,8 +1,24 @@
 .class public interface abstract Ll/ۢۢۙ;
 .super Ljava/lang/Object;
-.source "D8R3"
+.source "68UW"
 
 
-# virtual methods
-.method public abstract ۙ(Ll/֫ۢۙ;)Ll/ܰۗۙ;
+# static fields
+.field public static final ۙ:Ll/۫֨ۙ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 161
+    new-instance v0, Ll/۫֨ۙ;
+
+    .line 192
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 244
+    sput-object v0, Ll/ۢۢۙ;->ۙ:Ll/۫֨ۙ;
+
+    return-void
 .end method

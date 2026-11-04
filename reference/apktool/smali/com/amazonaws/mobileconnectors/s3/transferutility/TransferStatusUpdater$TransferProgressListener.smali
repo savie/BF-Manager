@@ -9,9 +9,9 @@
 # instance fields
 .field public ۙ:J
 
-.field public final ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+.field public final ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
-.field public final synthetic ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+.field public final synthetic ᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     .line 390
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     .line 391
-    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     .line 396
     :try_start_0
-    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressEvent;->ܰ()I
+    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressEvent;->᩷()I
 
     move-result v1
 
@@ -50,13 +50,13 @@
     if-ne v2, v1, :cond_0
 
     .line 398
-    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ()Lcom/amazonaws/logging/Log;
+    invoke-static {}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷()Lcom/amazonaws/logging/Log;
 
     move-result-object p1
 
     const-string v1, "Reset Event triggered. Resetting the bytesCurrent to 0."
 
-    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     const-wide/16 v1, 0x0
 
@@ -78,23 +78,23 @@
     iput-wide v7, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ۙ:J
 
     .line 406
-    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
-    iget-wide v1, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ:J
+    iget-wide v1, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷:J
 
     cmp-long v3, v7, v1
 
     if-lez v3, :cond_1
 
     .line 407
-    iput-wide v7, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ:J
+    iput-wide v7, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷:J
 
     .line 408
-    iget-object v5, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    iget-object v5, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
-    iget v6, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v6, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
-    iget-wide v9, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iget-wide v9, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     const/4 v11, 0x1
 

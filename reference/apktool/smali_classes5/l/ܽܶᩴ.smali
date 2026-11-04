@@ -1,76 +1,158 @@
 .class public final Ll/ܽܶᩴ;
-.super Ll/֡ᩳᩴ;
-.source "UC70"
+.super Ll/֫ܶᩴ;
+.source "86ZM"
 
 
 # instance fields
-.field public final ܽ:Ll/᩸ᩳᩴ;
+.field public final ֫:[Ll/ۗܶᩴ;
+
+.field public final ۚ:[Ll/ۧ᩻ᩴ;
+
+.field public final ۤ:[Ll/ۙۧᩴ;
+
+.field public final ۧ:Ll/ܳ᩻ᩴ;
+
+.field public final ۫:Z
+
+.field public final ܳ:Ll/ܿܶۤ;
+
+.field public final ᩴ:Z
+
+.field public final ᩷:Ll/ۧ᩻ᩴ;
+
+.field public final ᩸:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/᩸ᩳᩴ;II)V
-    .locals 0
-
-    .line 200
-    invoke-direct {p0, p2, p3}, Ll/֡ᩳᩴ;-><init>(II)V
-
-    .line 201
-    iput-object p1, p0, Ll/ܽܶᩴ;->ܽ:Ll/᩸ᩳᩴ;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/᩻ܶᩴ;)V
+.method public constructor <init>(Ll/ܳ᩻ᩴ;[I[Ll/ۧ᩻ᩴ;[Ll/ۙۧᩴ;[Ll/ۗܶᩴ;ZLl/ۧ᩻ᩴ;)V
     .locals 1
 
-    const/4 v0, 0x0
+    .line 737
+    invoke-virtual {p1}, Ll/ܳ᩻ᩴ;->᩸()Ll/ᩳܶۤ;
 
-    .line 195
-    invoke-direct {p0, v0}, Ll/֡ᩳᩴ;-><init>(I)V
+    move-result-object v0
 
-    .line 196
-    iput-object p1, p0, Ll/ܽܶᩴ;->ܽ:Ll/᩸ᩳᩴ;
+    invoke-direct {p0, v0}, Ll/֫ܶᩴ;-><init>(Ll/ᩳܶۤ;)V
 
-    return-void
-.end method
+    .line 738
+    iput-object p1, p0, Ll/ܽܶᩴ;->ۧ:Ll/ܳ᩻ᩴ;
 
+    .line 739
+    invoke-virtual {p1}, Ll/ܳ᩻ᩴ;->ۤ()Ll/ܿܶۤ;
 
-# virtual methods
-.method public final ۙ(I)J
-    .locals 2
+    move-result-object p1
 
-    .line 211
-    iget-object v0, p0, Ll/ܽܶᩴ;->ܽ:Ll/᩸ᩳᩴ;
+    iput-object p1, p0, Ll/ܽܶᩴ;->ܳ:Ll/ܿܶۤ;
 
-    invoke-interface {v0, p1}, Ll/᩸ᩳᩴ;->getLong(I)J
+    .line 740
+    iput-object p2, p0, Ll/ܽܶᩴ;->᩸:[I
 
-    move-result-wide v0
+    .line 741
+    iput-object p3, p0, Ll/ܽܶᩴ;->ۚ:[Ll/ۧ᩻ᩴ;
 
-    return-wide v0
-.end method
+    .line 742
+    iput-object p4, p0, Ll/ܽܶᩴ;->ۤ:[Ll/ۙۧᩴ;
 
-.method public final ۙ(II)Ll/ۤᩳᩴ;
-    .locals 2
+    .line 743
+    iput-object p5, p0, Ll/ܽܶᩴ;->֫:[Ll/ۗܶᩴ;
 
-    .line 216
-    new-instance v0, Ll/ܽܶᩴ;
+    .line 744
+    iput-boolean p6, p0, Ll/ܽܶᩴ;->۫:Z
 
-    iget-object v1, p0, Ll/ܽܶᩴ;->ܽ:Ll/᩸ᩳᩴ;
+    .line 745
+    iput-object p7, p0, Ll/ܽܶᩴ;->᩷:Ll/ۧ᩻ᩴ;
 
-    invoke-direct {v0, v1, p1, p2}, Ll/ܽܶᩴ;-><init>(Ll/᩸ᩳᩴ;II)V
+    const/4 p3, 0x0
 
-    return-object v0
-.end method
+    const/4 p6, 0x0
 
-.method public final ܰ()I
-    .locals 1
+    .line 753
+    :goto_0
+    array-length p7, p2
 
-    .line 206
-    iget-object v0, p0, Ll/ܽܶᩴ;->ܽ:Ll/᩸ᩳᩴ;
+    if-ge p6, p7, :cond_2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    .line 754
+    aget p7, p2, p6
+
+    invoke-virtual {p1, p7}, Ll/ܿܶۤ;->ۙ(I)Z
+
+    move-result p7
+
+    if-eqz p7, :cond_0
+
+    goto :goto_2
+
+    .line 755
+    :cond_0
+    aget-object p7, p4, p6
+
+    if-eqz p7, :cond_1
+
+    .line 756
+    invoke-virtual {p7}, Ll/ۙۧᩴ;->ۤ()I
 
     move-result v0
 
-    return v0
+    invoke-virtual {p1, v0}, Ll/ܿܶۤ;->ۙ(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 757
+    invoke-virtual {p7}, Ll/ۙۧᩴ;->ۙ()I
+
+    move-result p7
+
+    invoke-virtual {p1, p7}, Ll/ܿܶۤ;->ۙ(I)Z
+
+    move-result p7
+
+    if-eqz p7, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 p6, p6, 0x1
+
+    goto :goto_0
+
+    .line 761
+    :cond_2
+    array-length p2, p5
+
+    const/4 p4, 0x0
+
+    :goto_1
+    if-ge p4, p2, :cond_5
+
+    aget-object p6, p5, p4
+
+    .line 762
+    iget p6, p6, Ll/ۗܶᩴ;->ۤ:I
+
+    invoke-virtual {p1, p6}, Ll/ܿܶۤ;->ۙ(I)Z
+
+    move-result p6
+
+    if-eqz p6, :cond_4
+
+    :cond_3
+    :goto_2
+    const/4 p3, 0x1
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 p4, p4, 0x1
+
+    goto :goto_1
+
+    .line 746
+    :cond_5
+    :goto_3
+    iput-boolean p3, p0, Ll/ܽܶᩴ;->ᩴ:Z
+
+    return-void
 .end method

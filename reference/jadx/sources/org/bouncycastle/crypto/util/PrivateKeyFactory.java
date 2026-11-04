@@ -46,7 +46,7 @@ import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PrivateKeyFactory {
     public static AsymmetricKeyParameter createKey(InputStream inputStream) {
         return createKey(PrivateKeyInfo.getInstance(new ASN1InputStream(inputStream).readObject()));

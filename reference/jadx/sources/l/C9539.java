@@ -1,25 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢۧۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 58TM */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9539 {
+import java.security.PrivilegedExceptionAction;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f32230;
+/* JADX INFO: renamed from: l.ۡܿ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: E9ZA */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C9539 implements PrivilegedExceptionAction {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f32231;
+    public final /* synthetic */ InterfaceC16998 f30888;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Object f32232;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ byte[] f30889;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f32233;
+    public C9539(InterfaceC16998 interfaceC16998, byte[] bArr) {
+        this.f30888 = interfaceC16998;
+        this.f30889 = bArr;
+    }
 
-    public C9539(long j, boolean z, long j2, Object obj) {
-        this.f32230 = j;
-        this.f32231 = z;
-        this.f32232 = obj;
+    @Override // java.security.PrivilegedExceptionAction
+    public final Object run() {
+        byte[] bArr = this.f30889;
+        return this.f30888.mo5497(bArr == null ? 0 : bArr.length, bArr);
     }
 }

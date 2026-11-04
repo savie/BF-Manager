@@ -1,148 +1,113 @@
-.class public final Ll/ܶܳ᩵;
-.super Ll/ۜܿ᩵;
-.source "M6BE"
+.class public final synthetic Ll/ܶܳ᩵;
+.super Ljava/lang/Object;
+.source "L6E6"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final ۙ:Ll/ܿ᩻᩵;
+.field public final synthetic ܰ:I
 
-.field public final ۨ:I
-
-.field public final ܰ:I
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ᩻᩵;II)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 37
+    .line 0
+    iput p1, p0, Ll/ܶܳ᩵;->ܰ:I
+
+    iput-object p2, p0, Ll/ܶܳ᩵;->᩶:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 51
-    iput-object p1, p0, Ll/ܶܳ᩵;->ۙ:Ll/ܿ᩻᩵;
-
-    .line 52
-    iput p2, p0, Ll/ܶܳ᩵;->ۨ:I
-
-    .line 53
-    iput p3, p0, Ll/ܶܳ᩵;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 2
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 58
-    iget-object v0, p0, Ll/ܶܳ᩵;->ۙ:Ll/ܿ᩻᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    move-result-object p1
 
-    move-result-object v0
-
-    iget v1, p0, Ll/ܶܳ᩵;->ۨ:I
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->۬(I)I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method
 
-.method public final ۨ()I
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 63
-    iget-object v0, p0, Ll/ܶܳ᩵;->ۙ:Ll/ܿ᩻᩵;
+    .line 2
+    iget v0, p0, Ll/ܶܳ᩵;->ܰ:I
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    .line 7
+    iget-object v0, p0, Ll/ܶܳ᩵;->᩶:Ljava/lang/Object;
 
-    iget v1, p0, Ll/ܶܳ᩵;->ۨ:I
+    .line 9
+    check-cast v0, Ll/᩻֨᩺;
 
-    add-int/lit8 v1, v1, 0x4
+    .line 11
+    check-cast p1, Ll/۠ۗۘ;
 
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۜ(I)I
+    .line 178
+    invoke-interface {p1, v0}, Ll/۬ۗۘ;->ۙ(Ll/᩻֨᩺;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p1
 
-    return v0
+    return-object p1
+
+    .line 0
+    :pswitch_0
+    iget-object v0, p0, Ll/ܶܳ᩵;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Lcom/google/android/material/color/utilities/MaterialDynamicColors;
+
+    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
+
+    invoke-static {v0, p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$d93-9kBrwV6vzgtr_qMcRO75U0U(Lcom/google/android/material/color/utilities/MaterialDynamicColors;Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/DynamicColor;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Ll/ܶܳ᩵;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/ۗܳ᩵;
+
+    check-cast p1, Ll/ۖۡۗ;
+
+    invoke-static {v0, p1}, Ll/ۗܳ᩵;->ܳ(Ll/ۗܳ᩵;Ll/ۖۡۗ;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final ܰ()Ljava/util/List;
-    .locals 9
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 69
-    iget-object v0, p0, Ll/ܶܳ᩵;->ۙ:Ll/ܿ᩻᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    move-result-object p1
 
-    move-result-object v1
-
-    .line 70
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
-
-    move-result-object v2
-
-    iget v3, p0, Ll/ܶܳ᩵;->ۨ:I
-
-    add-int/lit8 v3, v3, 0x6
-
-    invoke-virtual {v2, v3}, Ll/ᩳܳ᩵;->ۜ(I)I
-
-    move-result v2
-
-    iget v3, p0, Ll/ܶܳ᩵;->ܰ:I
-
-    add-int/2addr v2, v3
-
-    .line 69
-    invoke-virtual {v1, v2}, Ll/ᩳܳ᩵;->ܶ(I)Ll/ᩴܳ᩵;
-
-    move-result-object v1
-
-    .line 71
-    invoke-virtual {v1}, Ll/ᩴܳ᩵;->᩺()I
-
-    move-result v2
-
-    .line 72
-    invoke-virtual {v1}, Ll/ᩴܳ᩵;->ܰ()I
-
-    move-result v6
-
-    .line 73
-    invoke-virtual {v1}, Ll/ᩴܳ᩵;->ᩳ()V
-
-    if-lez v2, :cond_0
-
-    .line 77
-    new-instance v1, Ll/ۜܳ᩵;
-
-    invoke-direct {v1, p0, v0, v6, v2}, Ll/ۜܳ᩵;-><init>(Ll/ܶܳ᩵;Ll/ܿ᩻᩵;II)V
-
-    return-object v1
-
-    :cond_0
-    mul-int/lit8 v2, v2, -0x1
-
-    add-int/lit8 v8, v2, 0x1
-
-    .line 87
-    new-instance v0, Ll/᩺ܳ᩵;
-
-    iget-object v5, p0, Ll/ܶܳ᩵;->ۙ:Ll/ܿ᩻᩵;
-
-    move-object v3, v0
-
-    move-object v4, p0
-
-    move v7, v8
-
-    invoke-direct/range {v3 .. v8}, Ll/᩺ܳ᩵;-><init>(Ll/ܶܳ᩵;Ll/ܿ᩻᩵;III)V
-
-    return-object v0
+    return-object p1
 .end method

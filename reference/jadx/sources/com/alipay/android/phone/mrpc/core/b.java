@@ -15,7 +15,7 @@ import java.security.Security;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import javax.net.ssl.HttpsURLConnection;
-import l.C9023;
+import l.C10732;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpEntityEnclosingRequest;
@@ -180,12 +180,12 @@ public final class b implements HttpClient {
     public static String b(HttpUriRequest httpUriRequest, boolean z) throws IOException {
         HttpEntity entity;
         String str;
-        StringBuilder sbM23356 = C9023.m23356("curl ");
+        StringBuilder sbM27333 = C10732.m27333("curl ");
         for (Header header : httpUriRequest.getAllHeaders()) {
             if (z || (!header.getName().equals("Authorization") && !header.getName().equals("Cookie"))) {
-                sbM23356.append("--header \"");
-                sbM23356.append(header.toString().trim());
-                sbM23356.append("\" ");
+                sbM27333.append("--header \"");
+                sbM27333.append(header.toString().trim());
+                sbM27333.append("\" ");
             }
         }
         URI uri = httpUriRequest.getURI();
@@ -195,28 +195,28 @@ public final class b implements HttpClient {
                 uri = ((HttpUriRequest) original).getURI();
             }
         }
-        sbM23356.append("\"");
-        sbM23356.append(uri);
-        sbM23356.append("\"");
+        sbM27333.append("\"");
+        sbM27333.append(uri);
+        sbM27333.append("\"");
         if ((httpUriRequest instanceof HttpEntityEnclosingRequest) && (entity = ((HttpEntityEnclosingRequest) httpUriRequest).getEntity()) != null && entity.isRepeatable()) {
             if (entity.getContentLength() < ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS) {
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 entity.writeTo(byteArrayOutputStream);
                 if (a(httpUriRequest)) {
-                    sbM23356.insert(0, "echo '" + Base64.encodeToString(byteArrayOutputStream.toByteArray(), 2) + "' | base64 -d > /tmp/$$.bin; ");
+                    sbM27333.insert(0, "echo '" + Base64.encodeToString(byteArrayOutputStream.toByteArray(), 2) + "' | base64 -d > /tmp/$$.bin; ");
                     str = " --data-binary @/tmp/$$.bin";
                 } else {
                     String string = byteArrayOutputStream.toString();
-                    sbM23356.append(" --data-ascii \"");
-                    sbM23356.append(string);
-                    sbM23356.append("\"");
+                    sbM27333.append(" --data-ascii \"");
+                    sbM27333.append(string);
+                    sbM27333.append("\"");
                 }
             } else {
                 str = " [TOO MUCH DATA TO INCLUDE]";
             }
-            sbM23356.append(str);
+            sbM27333.append(str);
         }
-        return sbM23356.toString();
+        return sbM27333.toString();
     }
 
     public static void b() {

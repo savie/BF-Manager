@@ -51,7 +51,7 @@
     check-cast p1, Lcom/amazonaws/AmazonServiceException;
 
     .line 174
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result p2
 

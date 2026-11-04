@@ -1,23 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰ᩶ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4BJX */
+import java.io.Serializable;
+
+/* JADX INFO: renamed from: l.۬ᩴۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAMR */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14046 extends AbstractC4166 {
-    public final String toString() {
-        return ":matchText";
+public final class C14046 {
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static long[] m34209(Serializable serializable) {
+        if (serializable instanceof int[]) {
+            int[] iArr = (int[]) serializable;
+            long[] jArr = new long[iArr.length];
+            for (int i = 0; i < iArr.length; i++) {
+                jArr[i] = iArr[i];
+            }
+            return jArr;
+        }
+        if (serializable instanceof long[]) {
+            return (long[]) serializable;
+        }
+        return null;
     }
 
-    @Override // l.AbstractC4166
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2407(C0617 c0617, C0617 c0618) {
-        if (c0618 instanceof C9791) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m34208(byte[] bArr, byte[] bArr2) {
+        if (bArr2 != null && bArr.length >= bArr2.length) {
+            for (int i = 0; i < bArr2.length; i++) {
+                if (bArr[i] == bArr2[i]) {
+                }
+            }
             return true;
-        }
-        for (AbstractC14730 abstractC14730 : c0618.m2872()) {
-            C9791 c9791 = new C9791(C11639.m29046(c0618.m2837(), C4582.f16235), c0618.mo2853(), c0618.mo2839());
-            abstractC14730.m35263(c9791);
-            c9791.m2855(abstractC14730);
         }
         return false;
     }

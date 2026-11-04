@@ -42,7 +42,7 @@ public class H5OpenAuthActivity extends H5PayActivity {
             } catch (Throwable th) {
                 String string = (intent == null || intent.getData() == null) ? "null" : intent.getData().toString();
                 if (aVarA != null) {
-                    com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, b.p0, th, string);
+                    com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, b.p0, th, string);
                 }
                 this.j = true;
                 throw th;

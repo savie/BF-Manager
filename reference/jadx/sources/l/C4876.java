@@ -1,203 +1,302 @@
 package l;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.XmlResourceParser;
-import android.util.AttributeSet;
-import android.util.Xml;
-import android.view.InflateException;
-import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.util.HashMap;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
+import com.google.android.material.slider.BaseSlider;
+import com.umeng.commonsdk.statistics.UMErrorCode;
 
-/* JADX INFO: renamed from: l.ۙ᩶ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R52G */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4876 {
+/* JADX INFO: renamed from: l.ۙۨ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K3YG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4876 extends AbstractC6323 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C5582 f17152;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC10841 f16989;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object[] f17153 = new Object[2];
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String[] f17154 = {C4751.class.getPackage().getName() + ".", C19694.class.getPackage().getName() + "."};
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Context f17155;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final Class[] f17151 = {Context.class, AttributeSet.class};
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final HashMap f17150 = new HashMap();
-
-    public C4876(Context context, C5582 c5582) {
-        this.f17155 = context;
-        this.f17152 = c5582;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12514 m13587(int i, C13344 c13344) {
-        XmlResourceParser xml = this.f17155.getResources().getXml(i);
-        try {
-            return m13588(xml, c13344);
-        } finally {
-            xml.close();
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12514 m13588(XmlResourceParser xmlResourceParser, AbstractC12514 abstractC12514) {
-        int next;
-        synchronized (this.f17153) {
-            AttributeSet attributeSetAsAttributeSet = Xml.asAttributeSet(xmlResourceParser);
-            this.f17153[0] = this.f17155;
-            do {
-                try {
-                    try {
-                        try {
-                            next = xmlResourceParser.next();
-                            if (next == 2) {
-                                break;
-                            }
-                        } catch (XmlPullParserException e) {
-                            InflateException inflateException = new InflateException(e.getMessage());
-                            inflateException.initCause(e);
-                            throw inflateException;
-                        }
-                    } catch (InflateException e2) {
-                        throw e2;
-                    }
-                } catch (IOException e3) {
-                    InflateException inflateException2 = new InflateException(xmlResourceParser.getPositionDescription() + ": " + e3.getMessage());
-                    inflateException2.initCause(e3);
-                    throw inflateException2;
-                }
-            } while (next != 1);
-            if (next != 2) {
-                throw new InflateException(xmlResourceParser.getPositionDescription() + ": No start tag found!");
-            }
-            AbstractC12514 abstractC12515 = (AbstractC12514) m13584(xmlResourceParser.getName(), attributeSetAsAttributeSet);
-            if (abstractC12514 == null) {
-                abstractC12515.m13146(this.f17152);
-                abstractC12514 = abstractC12515;
-            }
-            m13586(xmlResourceParser, abstractC12514, attributeSetAsAttributeSet);
-        }
-        return abstractC12514;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C4751 m13585(String str, String[] strArr, AttributeSet attributeSet) throws ClassNotFoundException {
-        Class<?> cls;
-        HashMap map = f17150;
-        Constructor<?> constructor = (Constructor) map.get(str);
-        if (constructor == null) {
-            try {
-                try {
-                    ClassLoader classLoader = this.f17155.getClassLoader();
-                    if (strArr == null || strArr.length == 0) {
-                        cls = Class.forName(str, false, classLoader);
-                    } else {
-                        cls = null;
-                        ClassNotFoundException e = null;
-                        for (String str2 : strArr) {
-                            try {
-                                cls = Class.forName(str2 + str, false, classLoader);
-                                break;
-                            } catch (ClassNotFoundException e2) {
-                                e = e2;
-                            }
-                        }
-                        if (cls == null) {
-                            if (e == null) {
-                                throw new InflateException(attributeSet.getPositionDescription() + ": Error inflating class " + str);
-                            }
-                            throw e;
-                        }
-                    }
-                    constructor = cls.getConstructor(f17151);
-                    constructor.setAccessible(true);
-                    map.put(str, constructor);
-                } catch (ClassNotFoundException e3) {
-                    throw e3;
-                }
-            } catch (Exception e4) {
-                InflateException inflateException = new InflateException(attributeSet.getPositionDescription() + ": Error inflating class " + str);
-                inflateException.initCause(e4);
-                throw inflateException;
-            }
-        }
-        Object[] objArr = this.f17153;
-        objArr[1] = attributeSet;
-        return (C4751) constructor.newInstance(objArr);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C4751 m13584(String str, AttributeSet attributeSet) {
-        try {
-            if (-1 == str.indexOf(46)) {
-                return m13585(str, this.f17154, attributeSet);
-            }
-            return m13585(str, (String[]) null, attributeSet);
-        } catch (InflateException e) {
-            throw e;
-        } catch (ClassNotFoundException e2) {
-            InflateException inflateException = new InflateException(attributeSet.getPositionDescription() + ": Error inflating class (not found)" + str);
-            inflateException.initCause(e2);
-            throw inflateException;
-        } catch (Exception e3) {
-            InflateException inflateException2 = new InflateException(attributeSet.getPositionDescription() + ": Error inflating class " + str);
-            inflateException2.initCause(e3);
-            throw inflateException2;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m13586(XmlPullParser xmlPullParser, C4751 c4751, AttributeSet attributeSet) throws XmlPullParserException, IOException {
-        int depth = xmlPullParser.getDepth();
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4876(ActivityC10841 activityC10841) {
+        super(true);
+        int i = 898956197;
+        int i2 = C1542.f5343;
+        int i3 = C23916.f77426;
+        this.f16989 = activityC10841;
+        int iM2761 = C0619.m2761("ۤ᩻") ^ i2;
+        int i4 = ((iM2761 ^ i3) * (-19339)) ^ 1430563126;
+        int i5 = -373264838;
         while (true) {
-            int next = xmlPullParser.next();
-            if ((next == 3 && xmlPullParser.getDepth() <= depth) || next == 1) {
-                return;
-            }
-            if (next == 2) {
-                String name = xmlPullParser.getName();
-                boolean zEquals = "intent".equals(name);
-                Context context = this.f17155;
-                if (zEquals) {
-                    try {
-                        c4751.m13137(Intent.parseIntent(context.getResources(), xmlPullParser, attributeSet));
-                    } catch (IOException e) {
-                        XmlPullParserException xmlPullParserException = new XmlPullParserException("Error parsing preference");
-                        xmlPullParserException.initCause(e);
-                        throw xmlPullParserException;
+            i = ((((i ^ i3) * (-15177)) >> 31) & i4) ^ (iM2761 ^ i5);
+            switch (i) {
+                case -1720107580:
+                case -18841120:
+                    C11235.m28309();
+                    iM2761 = C0773.m3169("ܶ᩹") ^ i3;
+                    i4 = ((iM2761 ^ i2) * 5943) ^ (-951912188);
+                    i5 = 1807646923;
+                    break;
+                case -1680522524:
+                case 1100762551:
+                    if (C11235.m28309() != 0) {
+                        iM2761 = C0773.m3169("ܶ᩹") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 5943) ^ (-951912188);
+                        i5 = 1807646923;
+                    } else {
+                        iM2761 = C0773.m3169("ܳ᩵") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-107)) ^ (-538698788);
+                        i5 = -1216235410;
                     }
-                } else if ("extra".equals(name)) {
-                    context.getResources().parseBundleExtra("extra", attributeSet, c4751.m13165());
-                    try {
-                        int depth2 = xmlPullParser.getDepth();
-                        while (true) {
-                            int next2 = xmlPullParser.next();
-                            if (next2 == 1 || (next2 == 3 && xmlPullParser.getDepth() <= depth2)) {
-                                break;
-                            }
-                        }
-                    } catch (IOException e2) {
-                        XmlPullParserException xmlPullParserException2 = new XmlPullParserException("Error parsing preference");
-                        xmlPullParserException2.initCause(e2);
-                        throw xmlPullParserException2;
+                    break;
+                case -1600037375:
+                case -521812698:
+                    if (C2702.f8586 <= 0) {
+                        iM2761 = (C0773.m3169("֫ۗ") ^ i3) * UMErrorCode.E_UM_BE_EMPTY_URL_PATH;
+                        i4 = ((iM2761 ^ i2) * (-6115)) ^ (-1262250979);
+                        i5 = -1525631570;
+                    } else {
+                        iM2761 = C0619.m2761("ۘ᩷") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-29379)) ^ (-1338320098);
+                        i5 = -174732721;
                     }
-                } else {
-                    C4751 c4751M13584 = m13584(name, attributeSet);
-                    ((AbstractC12514) c4751).m31074(c4751M13584);
-                    m13586(xmlPullParser, c4751M13584, attributeSet);
-                }
+                    break;
+                case -1227441091:
+                case 1188726436:
+                    if (!C2878.f9462) {
+                        iM2761 = C0773.m3169("ܶ᩹") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 5943) ^ (-951912188);
+                        i5 = 1807646923;
+                    } else {
+                        iM2761 = (i3 - C0773.m3169("ܰۘ")) * (-71);
+                        i4 = ((iM2761 ^ i2) * 949) ^ 548977449;
+                        i5 = -357576887;
+                    }
+                    break;
+                case -1124801284:
+                case -349303501:
+                    return;
+                case 513508837:
+                case 1365059934:
+                    C4282.m13644();
+                    RunnableC0334.m2063();
+                    throw new RuntimeException();
+                default:
+                    C3734.m12152();
+                    if (C4282.f15546 > 0) {
+                        iM2761 = (i3 - C0773.m3169("ܰۘ")) * (-71);
+                        i4 = ((iM2761 ^ i2) * 949) ^ 548977449;
+                        i5 = -357576887;
+                    } else {
+                        iM2761 = (i2 - C0619.m2761("ۖ᩹")) * (-21);
+                        i4 = ((iM2761 ^ i3) * (-13769)) ^ 2077052698;
+                        i5 = 1306031806;
+                    }
+                    break;
             }
+        }
+    }
+
+    @Override // l.AbstractC6323
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2768() {
+        ActivityC10841 activityC10841 = null;
+        int i = -401671380;
+        int i2 = C1080.f3865;
+        int i3 = AbstractC0641.f2496;
+        int iM2761 = C0619.m2761("ܳᩴ") ^ i3;
+        int i4 = ((iM2761 ^ i2) * (-25617)) ^ 2115124950;
+        int i5 = 1178518426;
+        while (true) {
+            i = ((((i ^ i2) * 12507) >> 31) & i4) ^ (iM2761 ^ i5);
+            switch (i) {
+                case -2041918818:
+                case 961009462:
+                    if (C2485.f7950 != 0) {
+                        iM2761 = C0773.m3169("ܶ᩵") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 7105) ^ 1243982762;
+                        i5 = -1943742888;
+                    } else {
+                        iM2761 = (C0773.m3169("ۤۜ") ^ i2) * (-105);
+                        i4 = ((iM2761 ^ i3) * 28581) ^ (-1360099415);
+                        i5 = 1435707845;
+                    }
+                    break;
+                case -2030125700:
+                case -367650555:
+                    if (RunnableC0334.f1808 <= 0) {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    } else {
+                        iM2761 = C0619.m2761("ۡ֫") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 19603) ^ (-651894494);
+                        i5 = 1285311058;
+                    }
+                    break;
+                case -1999617429:
+                case -200573057:
+                    C2834.m9344();
+                    if (!C4282.m13644()) {
+                        iM2761 = (i3 - C0619.m2761("ۢۧ")) * (-83);
+                        i4 = ((iM2761 ^ i2) * (-15419)) ^ 1233727563;
+                        i5 = 84014062;
+                    } else {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    }
+                    break;
+                case -1808524667:
+                case 1180335615:
+                    if (C2485.f7950 != 0) {
+                        iM2761 = C0773.m3169("ܶ᩵") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 7105) ^ 1243982762;
+                        i5 = -1943742888;
+                    } else {
+                        iM2761 = (C0619.m2761("ۜ᩺") ^ i3) * 7;
+                        i4 = ((iM2761 ^ i2) * (-15933)) ^ (-883016273);
+                        i5 = -563074978;
+                    }
+                    break;
+                case -1745172912:
+                case 1532298146:
+                    if (AbstractC3624.f12429 <= 0) {
+                        iM2761 = C0619.m2761("᩹ۖ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 1267) ^ (-1778697707);
+                        i5 = -1511094078;
+                    } else {
+                        iM2761 = (C0619.m2761("ܰۢ") + i3) * (-15);
+                        i4 = ((iM2761 ^ i2) * (-2649)) ^ 773506556;
+                        i5 = 1529089018;
+                    }
+                    break;
+                case -1115424431:
+                case 363230250:
+                    if (activityC10841.f34333.m52817()) {
+                        iM2761 = (C0619.m2761("ܺۚ") + i3) * (-69);
+                        i4 = ((iM2761 ^ i2) * (-32117)) ^ 729037796;
+                        i5 = 1991977368;
+                    } else {
+                        iM2761 = (i2 - C0773.m3169("ܽۛ")) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
+                        i4 = ((iM2761 ^ i3) * (-25563)) ^ 817275316;
+                        i5 = -1620946940;
+                    }
+                    break;
+                case -957819099:
+                case 667466015:
+                    if (C0487.f2131 <= 0) {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    } else {
+                        iM2761 = (i3 - C0773.m3169("᩸ۨ")) * (-79);
+                        i4 = ((iM2761 ^ i2) * (-7471)) ^ 387082050;
+                        i5 = -760895003;
+                    }
+                    break;
+                case -918517725:
+                case 1225918638:
+                    C1826.m6301();
+                    C3690.m11987();
+                    iM2761 = (i3 - C0619.m2761("ۢۧ")) * (-83);
+                    i4 = ((iM2761 ^ i2) * (-15419)) ^ 1233727563;
+                    i5 = 84014062;
+                    break;
+                case -891801454:
+                case 1912503737:
+                    if (RunnableC0334.f1808 <= 0) {
+                        iM2761 = C0619.m2761("᩹ۖ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 1267) ^ (-1778697707);
+                        i5 = -1511094078;
+                    } else {
+                        iM2761 = C0773.m3169("֡ᩴ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 3661) ^ (-1130283729);
+                        i5 = -1390549986;
+                    }
+                    break;
+                case -856969271:
+                case 584162442:
+                    activityC10841 = this.f16989;
+                    if (C2419.f7754 >= 0) {
+                        iM2761 = C0619.m2761("ۡۖ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-24169)) ^ (-990118451);
+                        i5 = 1404487830;
+                    } else {
+                        iM2761 = C0773.m3169("ۤۚ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * (-7059)) ^ 1564226693;
+                        i5 = 1623412865;
+                    }
+                    break;
+                case -671202494:
+                case -633448266:
+                    C0950.m3790(activityC10841);
+                    break;
+                case -506810400:
+                case 701849201:
+                    if (AbstractC0641.m2813() <= 0) {
+                        iM2761 = (i3 - C0619.m2761("ۢۧ")) * (-83);
+                        i4 = ((iM2761 ^ i2) * (-15419)) ^ 1233727563;
+                        i5 = 84014062;
+                    } else {
+                        iM2761 = (C0773.m3169("۠ۘ") + i2) * (-83);
+                        i4 = ((iM2761 ^ i3) * (-19565)) ^ 1074168492;
+                        i5 = 1237228517;
+                    }
+                    break;
+                case -199329379:
+                case 792208973:
+                    C2023.m6964();
+                    if (!C4282.m13644()) {
+                        iM2761 = C0619.m2761("ۡۖ") ^ i2;
+                        i4 = ((iM2761 ^ i3) * (-24169)) ^ (-990118451);
+                        i5 = 1404487830;
+                    } else {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    }
+                    break;
+                case -152679799:
+                case -133808377:
+                    C13473.m33144();
+                    break;
+                case -72108025:
+                case 704056431:
+                    if (C2878.m9491() <= 0) {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    } else {
+                        iM2761 = C0619.m2761("᩻۬") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 1971) ^ 1033139040;
+                        i5 = 984597209;
+                    }
+                    break;
+                case 1460436694:
+                case 1466041141:
+                    if (RunnableC1848.m6360()) {
+                        iM2761 = C0773.m3169("ܶ᩵") ^ i2;
+                        i4 = ((iM2761 ^ i3) * 7105) ^ 1243982762;
+                        i5 = -1943742888;
+                    } else {
+                        iM2761 = (i2 - C0619.m2761("᩶ۢ")) * (-97);
+                        i4 = ((iM2761 ^ i3) * (-9013)) ^ (-195311623);
+                        i5 = -1366556547;
+                    }
+                    break;
+                case 1463974223:
+                case 1647468352:
+                    C2966.m9664();
+                    if (C2485.f7950 != 0) {
+                        iM2761 = C0619.m2761("᩹ۖ") ^ i3;
+                        i4 = ((iM2761 ^ i2) * 1267) ^ (-1778697707);
+                        i5 = -1511094078;
+                    } else {
+                        iM2761 = (C0773.m3169("ᩳᩳ") ^ i2) * 85;
+                        i4 = ((iM2761 ^ i3) * (-8969)) ^ 926251739;
+                        i5 = -1853674106;
+                    }
+                    break;
+                default:
+                    activityC10841.f34333.m52826();
+                    break;
+            }
+            return;
         }
     }
 }

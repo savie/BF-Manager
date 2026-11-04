@@ -25,13 +25,13 @@ public class d {
 
     public static boolean a(com.alipay.sdk.m.w.a aVar, Activity activity, int i, String str, String str2, a aVar2) {
         try {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.u0);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.u0);
             activity.startActivityForResult(new Intent(str2, Uri.parse(str)), i);
             b = aVar2;
             return true;
         } catch (Throwable th) {
             aVar2.a(false, null, "UNKNOWN_ERROR");
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.y0, th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.y0, th);
             return false;
         }
     }
@@ -46,12 +46,12 @@ public class d {
         }
         b = null;
         if (i2 == -1) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.x0, intent.toUri(1));
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.x0, intent.toUri(1));
             aVar2.a(true, q.a(intent), "OK");
         } else if (i2 != 0) {
-            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.w0, "" + i2);
+            com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.w0, "" + i2);
         } else {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.v0, intent.toUri(1));
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.v0, intent.toUri(1));
             aVar2.a(false, null, "CANCELED");
         }
         return true;

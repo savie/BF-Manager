@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Enumerated;
 import org.bouncycastle.asn1.ASN1InputStream;
@@ -421,7 +421,7 @@ public class CertPathValidatorUtilities {
         try {
             return new ASN1InputStream(((ASN1OctetString) new ASN1InputStream(bArr).readObject()).getOctets()).readObject();
         } catch (Exception e) {
-            throw new AnnotatedException(C0252.m1693("exception processing extension ", str), e);
+            throw new AnnotatedException(C25272.m56409("exception processing extension ", str), e);
         }
     }
 }

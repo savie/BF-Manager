@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1;
 
 import java.io.IOException;
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -64,7 +64,7 @@ public abstract class ASN1BMPString extends ASN1Primitive implements ASN1String 
             }
         }
         if (!(obj instanceof byte[])) {
-            throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+            throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
         }
         try {
             return (ASN1BMPString) TYPE.fromByteArray((byte[]) obj);

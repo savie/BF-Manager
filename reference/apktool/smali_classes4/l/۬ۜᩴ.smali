@@ -1,351 +1,249 @@
 .class public final Ll/۬ۜᩴ;
 .super Ljava/lang/Object;
-.source "N1QM"
-
-# interfaces
-.implements Ll/ۨܶᩴ;
+.source "44R4"
 
 
-# instance fields
-.field public ֡:I
-
-.field public ܺ:Z
-
-.field public final synthetic ܽ:Ll/ܶۜᩴ;
-
-.field public ᩶:I
+# static fields
+.field public static ۙ:Z = true
 
 
 # direct methods
-.method public constructor <init>(Ll/ܶۜᩴ;)V
-    .locals 2
+.method public static ۙ(Landroid/content/Context;Ljava/util/function/IntSupplier;Ljava/util/function/IntConsumer;)V
+    .locals 9
 
-    const/4 v0, 0x0
+    const v0, 0x7f0d00b9
 
-    .line 875
-    iget v1, p1, Ll/ܶۜᩴ;->᩶:I
-
-    invoke-direct {p0, p1, v0, v1, v0}, Ll/۬ۜᩴ;-><init>(Ll/ܶۜᩴ;IIZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ܶۜᩴ;IIZ)V
-    .locals 0
-
-    .line 878
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/۬ۜᩴ;->ܽ:Ll/ܶۜᩴ;
-
-    .line 880
-    iput p2, p0, Ll/۬ۜᩴ;->֡:I
-
-    .line 881
-    iput p3, p0, Ll/۬ۜᩴ;->᩶:I
-
-    .line 882
-    iput-boolean p4, p0, Ll/۬ۜᩴ;->ܺ:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final characteristics()I
-    .locals 1
-
-    const/16 v0, 0x4150
-
-    return v0
-.end method
-
-.method public final estimateSize()J
-    .locals 2
-
-    .line 886
-    iget-boolean v0, p0, Ll/۬ۜᩴ;->ܺ:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ll/۬ۜᩴ;->᩶:I
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ll/۬ۜᩴ;->ܽ:Ll/ܶۜᩴ;
-
-    iget v0, v0, Ll/ܶۜᩴ;->᩶:I
-
-    .line 896
-    :goto_0
-    iget v1, p0, Ll/۬ۜᩴ;->֡:I
-
-    sub-int/2addr v0, v1
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 867
-    check-cast p1, Ljava/util/function/IntConsumer;
-
-    invoke-virtual {p0, p1}, Ll/۬ۜᩴ;->forEachRemaining(Ljava/util/function/IntConsumer;)V
-
-    return-void
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ۙ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
-    .locals 3
-
-    .line 908
-    iget-object v0, p0, Ll/۬ۜᩴ;->ܽ:Ll/ܶۜᩴ;
-
-    iget-object v1, v0, Ll/ܶۜᩴ;->ܺ:[I
-
-    .line 886
-    iget-boolean v2, p0, Ll/۬ۜᩴ;->ܺ:Z
-
-    if-eqz v2, :cond_0
-
-    iget v0, p0, Ll/۬ۜᩴ;->᩶:I
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, v0, Ll/ܶۜᩴ;->᩶:I
-
-    .line 909
-    :goto_0
-    iget v2, p0, Ll/۬ۜᩴ;->֡:I
-
-    if-ge v2, v0, :cond_1
-
-    .line 910
-    aget v2, v1, v2
-
-    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    .line 909
-    iget v2, p0, Ll/۬ۜᩴ;->֡:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Ll/۬ۜᩴ;->֡:I
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final bridge synthetic getComparator()Ljava/util/Comparator;
-    .locals 1
+    const/4 v1, 0x0
 
     .line 29
-    invoke-virtual {p0}, Ll/۬ۜᩴ;->getComparator()Ll/ܽۜᩴ;
+    invoke-static {p0, v0, v1}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    throw v0
+    const v2, 0x7f0a0186
+
+    .line 30
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    check-cast v4, Ll/᩹ۖ᩸;
+
+    .line 31
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "0\u2026"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1}, Ljava/util/function/IntSupplier;->getAsInt()I
+
+    move-result v3
+
+    sget-boolean v5, Ll/۬ۜᩴ;->ۙ:Z
+
+    if-eqz v5, :cond_0
+
+    const/16 v5, 0x10
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v5, 0xa
+
+    :goto_0
+    invoke-static {v3, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ll/᩹ۖ᩸;->᩸(Ljava/lang/String;)V
+
+    const v2, 0x7f0a00e2
+
+    .line 32
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    move-object v5, v2
+
+    check-cast v5, Landroid/widget/CheckBox;
+
+    .line 33
+    sget-boolean v2, Ll/۬ۜᩴ;->ۙ:Z
+
+    invoke-virtual {v5, v2}, Landroid/widget/CompoundButton;->setChecked(Z)V
+
+    .line 34
+    sget v2, Ll/۠ۖۧ;->᩶:I
+
+    .line 192
+    new-instance v2, Ll/ۖۖۧ;
+
+    invoke-direct {v2, p0}, Ll/ۖۖۧ;-><init>(Landroid/content/Context;)V
+
+    .line 35
+    invoke-virtual {v2, v0}, Ll/ۖۖۧ;->ۙ(Landroid/view/View;)V
+
+    const p0, 0x7f1208c9
+
+    .line 36
+    invoke-virtual {v2, p0, v1}, Ll/ۖۖۧ;->᩸(ILandroid/content/DialogInterface$OnClickListener;)V
+
+    const p0, 0x7f120161
+
+    .line 37
+    invoke-virtual {v2, p0, v1}, Ll/ۖۖۧ;->᩷(ILandroid/content/DialogInterface$OnClickListener;)V
+
+    .line 38
+    invoke-virtual {v2}, Ll/ۖۖۧ;->ۤ()Ll/۠ۖۧ;
+
+    move-result-object v8
+
+    .line 39
+    invoke-static {v4}, Ll/᩶᩷ۧ;->᩷(Landroid/view/View;)V
+
+    .line 40
+    new-instance p0, Ll/۠ۜᩴ;
+
+    invoke-direct {p0, v4, p1}, Ll/۠ۜᩴ;-><init>(Ll/᩹ۖ᩸;Ljava/util/function/IntSupplier;)V
+
+    invoke-virtual {v5, p0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    .line 51
+    invoke-virtual {v8}, Ll/۠ۖۧ;->ᩴ()Landroid/widget/Button;
+
+    move-result-object p0
+
+    new-instance v0, Ll/ۜۜᩴ;
+
+    move-object v3, v0
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    invoke-direct/range {v3 .. v8}, Ll/ۜۜᩴ;-><init>(Ll/᩹ۖ᩸;Landroid/widget/CheckBox;Ljava/util/function/IntSupplier;Ljava/util/function/IntConsumer;Ll/۠ۖۧ;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
 .end method
 
-.method public final getComparator()Ll/ܽۜᩴ;
-    .locals 1
-
-    .line 158
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public synthetic getExactSizeIfKnown()J
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getExactSizeIfKnown(Ll/᩷ۛᩴ;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public synthetic hasCharacteristics(I)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۛᩴ;->$default$hasCharacteristics(Ll/᩷ۛᩴ;I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 867
-    check-cast p1, Ljava/util/function/IntConsumer;
-
-    invoke-virtual {p0, p1}, Ll/۬ۜᩴ;->tryAdvance(Ljava/util/function/IntConsumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ܰ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final tryAdvance(Ljava/util/function/IntConsumer;)Z
+.method public static synthetic ۙ(Ll/᩹ۖ᩸;Ljava/util/function/IntSupplier;Z)V
     .locals 3
 
-    .line 901
-    iget v0, p0, Ll/۬ۜᩴ;->֡:I
+    .line 41
+    sput-boolean p2, Ll/۬ۜᩴ;->ۙ:Z
 
-    .line 886
-    iget-boolean v1, p0, Ll/۬ۜᩴ;->ܺ:Z
+    const/16 v0, 0x10
 
-    iget-object v2, p0, Ll/۬ۜᩴ;->ܽ:Ll/ܶۜᩴ;
+    .line 43
+    :try_start_0
+    invoke-virtual {p0}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
 
-    iget v1, p0, Ll/۬ۜᩴ;->᩶:I
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    iget v1, v2, Ll/ܶۜᩴ;->᩶:I
+    if-eqz p2, :cond_0
 
-    :goto_0
-    if-lt v0, v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 902
-    :cond_1
-    iget-object v1, v2, Ll/ܶۜᩴ;->ܺ:[I
-
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Ll/۬ۜᩴ;->֡:I
-
-    aget v0, v1, v0
-
-    invoke-interface {p1, v0}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final bridge synthetic trySplit()Ll/ۤۛᩴ;
-    .locals 1
-
-    .line 867
-    invoke-virtual {p0}, Ll/۬ۜᩴ;->trySplit()Ll/ۨܶᩴ;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final trySplit()Ll/ۨܶᩴ;
-    .locals 5
-
-    .line 886
-    iget-boolean v0, p0, Ll/۬ۜᩴ;->ܺ:Z
-
-    iget-object v1, p0, Ll/۬ۜᩴ;->ܽ:Ll/ܶۜᩴ;
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ll/۬ۜᩴ;->᩶:I
+    const/16 v2, 0xa
 
     goto :goto_0
 
     :cond_0
-    iget v0, v1, Ll/ܶۜᩴ;->᩶:I
+    const/16 v2, 0x10
 
-    .line 932
     :goto_0
-    iget v2, p0, Ll/۬ۜᩴ;->֡:I
+    invoke-static {v1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
-    sub-int v3, v0, v2
+    move-result v1
 
-    const/4 v4, 0x1
+    if-eqz p2, :cond_1
 
-    shr-int/2addr v3, v4
+    const/16 v2, 0x10
 
-    if-gt v3, v4, :cond_1
+    goto :goto_1
 
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 935
     :cond_1
-    iput v0, p0, Ll/۬ۜᩴ;->᩶:I
+    const/16 v2, 0xa
 
-    add-int/2addr v3, v2
+    .line 44
+    :goto_1
+    invoke-static {v1, v2}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    .line 939
-    iput v3, p0, Ll/۬ۜᩴ;->֡:I
+    move-result-object v1
 
-    .line 940
-    iput-boolean v4, p0, Ll/۬ۜᩴ;->ܺ:Z
+    invoke-virtual {v1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    .line 941
-    new-instance v0, Ll/۬ۜᩴ;
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ll/۬ۜᩴ;-><init>(Ll/ܶۜᩴ;IIZ)V
+    invoke-virtual {p0, v1}, Ll/᩹ۖ᩸;->᩷(Ljava/lang/CharSequence;)V
 
-    return-object v0
-.end method
+    .line 45
+    invoke-virtual {p0}, Ll/᩺ۜ᩸;->᩹ۤ()I
 
-.method public final bridge synthetic trySplit()Ll/ᩴۛᩴ;
-    .locals 1
+    move-result v1
 
-    .line 867
-    invoke-virtual {p0}, Ll/۬ۜᩴ;->trySplit()Ll/ۨܶᩴ;
+    invoke-virtual {p0, v1}, Ll/᩹ۖ᩸;->᩹(I)V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    goto :goto_2
 
-    return-object v0
-.end method
+    :catch_0
+    nop
 
-.method public final bridge synthetic trySplit()Ll/᩷ۛᩴ;
-    .locals 1
+    .line 49
+    :goto_2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 867
-    invoke-virtual {p0}, Ll/۬ۜᩴ;->trySplit()Ll/ۨܶᩴ;
+    const-string v2, "0\u2026"
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    invoke-interface {p1}, Ljava/util/function/IntSupplier;->getAsInt()I
+
+    move-result p1
+
+    if-eqz p2, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    const/16 v0, 0xa
+
+    :goto_3
+    invoke-static {p1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ll/᩹ۖ᩸;->᩸(Ljava/lang/String;)V
+
+    return-void
 .end method

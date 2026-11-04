@@ -112,7 +112,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p0, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
     .locals 1
 
     .line 248
-    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->ܰ(Lcom/amazonaws/Request;)Z
+    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->᩷(Lcom/amazonaws/Request;)Z
 
     move-result v0
 
@@ -174,7 +174,7 @@
     .locals 2
 
     .line 317
-    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->ܰ(Lcom/amazonaws/Request;)Z
+    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->᩷(Lcom/amazonaws/Request;)Z
 
     move-result v0
 
@@ -288,7 +288,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -366,7 +366,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -399,7 +399,7 @@
     const-string v1, ":"
 
     .line 0
-    invoke-static {v0, v1}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -424,7 +424,7 @@
     .locals 1
 
     .line 234
-    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->ܰ(Lcom/amazonaws/Request;)Z
+    invoke-static {p1}, Lcom/amazonaws/util/HttpUtils;->᩷(Lcom/amazonaws/Request;)Z
 
     move-result v0
 
@@ -438,7 +438,7 @@
     :cond_0
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
@@ -803,7 +803,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -861,7 +861,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -900,7 +900,7 @@
     move-result-object v1
 
     .line 403
-    invoke-interface {p1}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -914,7 +914,7 @@
 
     check-cast v3, Lcom/amazonaws/auth/AWSSessionCredentials;
 
-    invoke-interface {v3}, Lcom/amazonaws/auth/AWSSessionCredentials;->ܰ()Ljava/lang/String;
+    invoke-interface {v3}, Lcom/amazonaws/auth/AWSSessionCredentials;->᩷()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1018,7 +1018,7 @@
     invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, p3}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, p3}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -1075,7 +1075,7 @@
     invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, p3}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, p3}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -1119,7 +1119,7 @@
     move-result-object p1
 
     .line 96
-    invoke-static {p1}, Lcom/amazonaws/util/Base64;->ۨ([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/amazonaws/util/Base64;->ۤ([B)Ljava/lang/String;
 
     move-result-object p1
     :try_end_0
@@ -1140,7 +1140,7 @@
     invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, p3}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, p3}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p3
 

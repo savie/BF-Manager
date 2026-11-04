@@ -42,21 +42,21 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.Shapeable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.util.List;
-import l.AbstractC2563;
-import l.C10646;
-import l.C12025;
-import l.C16465;
-import l.C17910;
-import l.C18616;
-import l.C22006;
-import l.C2249;
-import l.C2387;
-import l.C5031;
-import l.C8033;
-import l.C9494;
+import l.AbstractC11129;
+import l.C1004;
+import l.C10884;
+import l.C11642;
+import l.C14625;
+import l.C19023;
+import l.C19835;
+import l.C22666;
+import l.C22687;
+import l.C24323;
+import l.C4185;
+import l.C8451;
 
 /* JADX INFO: loaded from: classes.dex */
-public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, MaterialCheckable {
+public class Chip extends C19023 implements ChipDrawable.Delegate, Shapeable, MaterialCheckable {
     public static final String BUTTON_ACCESSIBILITY_CLASS_NAME = "android.widget.Button";
     public static final int CHIP_BODY_VIRTUAL_ID = 0;
     public static final int CLOSE_ICON_VIRTUAL_ID = 1;
@@ -84,7 +84,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
     public RippleDrawable ripple;
     public final ChipTouchHelper touchHelper;
     public boolean touchHelperEnabled;
-    public static final int DEF_STYLE_RES = C18616.f59646;
+    public static final int DEF_STYLE_RES = C4185.f14327;
     public static final Rect EMPTY_BOUNDS = new Rect();
     public static final int[] SELECTED_STATE = {R.attr.state_selected};
     public static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
@@ -93,7 +93,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
     public void setBackgroundColor(int i) {
     }
 
-    @Override // l.C16465, android.view.View
+    @Override // l.C19023, android.view.View
     public void setBackgroundResource(int i) {
     }
 
@@ -110,7 +110,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
     }
 
     public Chip(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9182);
+        this(context, attributeSet, C11642.f37181);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -137,12 +137,12 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         ChipDrawable chipDrawableCreateFromAttributes = ChipDrawable.createFromAttributes(context2, attributeSet, i, i2);
         initMinTouchTarget(context2, attributeSet, i);
         setChipDrawable(chipDrawableCreateFromAttributes);
-        chipDrawableCreateFromAttributes.setElevation(C5031.m14006(this));
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f27036, i, i2, new int[0]);
+        chipDrawableCreateFromAttributes.setElevation(C22666.m51105(this));
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f46564, i, i2, new int[0]);
         if (Build.VERSION.SDK_INT < 23) {
-            setTextColor(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f27974));
+            setTextColor(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f47338));
         }
-        boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(C8033.f28064);
+        boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(C14625.f47853);
         typedArrayObtainStyledAttributes.recycle();
         this.touchHelper = new ChipTouchHelper(this);
         updateAccessibilityDelegate();
@@ -163,7 +163,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
             setMinHeight(this.minTouchTargetSize);
         }
         this.lastLayoutDirection = getLayoutDirection();
-        super.setOnCheckedChangeListener(new C10646(1, this));
+        super.setOnCheckedChangeListener(new C1004(1, this));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -201,24 +201,24 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         accessibilityNodeInfo.setClickable(isClickable());
         if (getParent() instanceof ChipGroup) {
             ChipGroup chipGroup = (ChipGroup) getParent();
-            C22006.m48820(accessibilityNodeInfo).m48846(C2249.m6904(chipGroup.getRowIndex(this), 1, chipGroup.isSingleLine() ? chipGroup.getIndexOfChip(this) : -1, 1, false, isChecked()));
+            C19835.m45619(accessibilityNodeInfo).m45642(C10884.m27635(chipGroup.getRowIndex(this), 1, chipGroup.isSingleLine() ? chipGroup.getIndexOfChip(this) : -1, 1, false, isChecked()));
         }
     }
 
     private void updateAccessibilityDelegate() {
         if (hasCloseIcon() && isCloseIconVisible() && this.onCloseIconClickListener != null) {
-            C5031.m13990(this, this.touchHelper);
+            C22666.m51098(this, this.touchHelper);
             this.touchHelperEnabled = true;
         } else {
-            C5031.m13990(this, (C12025) null);
+            C22666.m51098(this, (C22687) null);
             this.touchHelperEnabled = false;
         }
     }
 
     private void initMinTouchTarget(Context context, AttributeSet attributeSet, int i) {
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f27036, i, DEF_STYLE_RES, new int[0]);
-        this.ensureMinTouchTargetSize = typedArrayObtainStyledAttributes.getBoolean(C8033.f28011, false);
-        this.minTouchTargetSize = (int) Math.ceil(typedArrayObtainStyledAttributes.getDimension(C8033.f26806, (float) Math.ceil(ViewUtils.dpToPx(getContext(), 48))));
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f46564, i, DEF_STYLE_RES, new int[0]);
+        this.ensureMinTouchTargetSize = typedArrayObtainStyledAttributes.getBoolean(C14625.f47161, false);
+        this.minTouchTargetSize = (int) Math.ceil(typedArrayObtainStyledAttributes.getDimension(C14625.f46806, (float) Math.ceil(ViewUtils.dpToPx(getContext(), 48))));
         typedArrayObtainStyledAttributes.recycle();
     }
 
@@ -237,7 +237,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         }
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         setPaddingRelative(textStartPadding, paddingTop, textEndPadding, paddingBottom);
     }
 
@@ -310,7 +310,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         }
         this.chipDrawable.setUseCompatRipple(true);
         Drawable backgroundDrawable = getBackgroundDrawable();
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         setBackground(backgroundDrawable);
         updatePaddingInternal();
         ensureChipDrawableHasCallback();
@@ -331,7 +331,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         this.ripple = new RippleDrawable(RippleUtils.sanitizeRippleDrawableColor(this.chipDrawable.getRippleColor()), getBackgroundDrawable(), null);
         this.chipDrawable.setUseCompatRipple(false);
         RippleDrawable rippleDrawable = this.ripple;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         setBackground(rippleDrawable);
         updatePaddingInternal();
     }
@@ -373,14 +373,14 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         }
     }
 
-    @Override // l.C16465, android.view.View
+    @Override // l.C19023, android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         if (drawable == getBackgroundDrawable() || drawable == this.ripple) {
             super.setBackgroundDrawable(drawable);
         }
     }
 
-    @Override // l.C16465, android.widget.TextView
+    @Override // l.C19023, android.widget.TextView
     public void setCompoundDrawables(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         if (drawable != null) {
             throw new UnsupportedOperationException("Please set start drawable using R.attr#chipIcon.");
@@ -413,7 +413,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         super.setCompoundDrawablesWithIntrinsicBounds(drawable, drawable2, drawable3, drawable4);
     }
 
-    @Override // l.C16465, android.widget.TextView
+    @Override // l.C19023, android.widget.TextView
     public void setCompoundDrawablesRelative(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         if (drawable != null) {
             throw new UnsupportedOperationException("Please set start drawable using R.attr#chipIcon.");
@@ -648,7 +648,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         }
     }
 
-    @Override // l.C16465, android.widget.CompoundButton, android.widget.TextView, android.view.View
+    @Override // l.C19023, android.widget.CompoundButton, android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
         ChipDrawable chipDrawable = this.chipDrawable;
@@ -737,17 +737,17 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
         this.onCheckedChangeListenerInternal = onCheckedChangeListener;
     }
 
-    public class ChipTouchHelper extends AbstractC2563 {
+    public class ChipTouchHelper extends AbstractC11129 {
         public ChipTouchHelper(Chip chip) {
             super(chip);
         }
 
-        @Override // l.AbstractC2563
+        @Override // l.AbstractC11129
         public int getVirtualViewAt(float f, float f2) {
             return (Chip.this.hasCloseIcon() && Chip.this.getCloseIconTouchBounds().contains(f, f2)) ? 1 : 0;
         }
 
-        @Override // l.AbstractC2563
+        @Override // l.AbstractC11129
         public void getVisibleVirtualViews(List list) {
             list.add(0);
             if (Chip.this.hasCloseIcon() && Chip.this.isCloseIconVisible() && Chip.this.onCloseIconClickListener != null) {
@@ -755,7 +755,7 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
             }
         }
 
-        @Override // l.AbstractC2563
+        @Override // l.AbstractC11129
         public void onVirtualViewKeyboardFocusChanged(int i, boolean z) {
             if (i == 1) {
                 Chip.this.closeIconFocused = z;
@@ -763,39 +763,39 @@ public class Chip extends C16465 implements ChipDrawable.Delegate, Shapeable, Ma
             }
         }
 
-        @Override // l.AbstractC2563
-        public void onPopulateNodeForVirtualView(int i, C22006 c22006) {
+        @Override // l.AbstractC11129
+        public void onPopulateNodeForVirtualView(int i, C19835 c19835) {
             if (i == 1) {
                 CharSequence closeIconContentDescription = Chip.this.getCloseIconContentDescription();
                 if (closeIconContentDescription != null) {
-                    c22006.m48874(closeIconContentDescription);
+                    c19835.m45682(closeIconContentDescription);
                 } else {
                     CharSequence text = Chip.this.getText();
-                    c22006.m48874((CharSequence) Chip.this.getContext().getString(C17910.f56823, TextUtils.isEmpty(text) ? "" : text).trim());
+                    c19835.m45682((CharSequence) Chip.this.getContext().getString(C24323.f78878, TextUtils.isEmpty(text) ? "" : text).trim());
                 }
-                c22006.m48863(Chip.this.getCloseIconTouchBoundsInt());
-                c22006.m48848(C9494.f32123);
-                c22006.m48890(Chip.this.isEnabled());
+                c19835.m45652(Chip.this.getCloseIconTouchBoundsInt());
+                c19835.m45641(C8451.f27630);
+                c19835.m45661(Chip.this.isEnabled());
                 return;
             }
-            c22006.m48874("");
-            c22006.m48863(Chip.EMPTY_BOUNDS);
+            c19835.m45682("");
+            c19835.m45652(Chip.EMPTY_BOUNDS);
         }
 
-        @Override // l.AbstractC2563
-        public void onPopulateNodeForHost(C22006 c22006) {
-            c22006.m48877(Chip.this.isCheckable());
-            c22006.m48834(Chip.this.isClickable());
-            c22006.m48844(Chip.this.getAccessibilityClassName());
+        @Override // l.AbstractC11129
+        public void onPopulateNodeForHost(C19835 c19835) {
+            c19835.m45684(Chip.this.isCheckable());
+            c19835.m45689(Chip.this.isClickable());
+            c19835.m45639(Chip.this.getAccessibilityClassName());
             CharSequence text = Chip.this.getText();
             if (Build.VERSION.SDK_INT >= 23) {
-                c22006.m48828(text);
+                c19835.m45646(text);
             } else {
-                c22006.m48874(text);
+                c19835.m45682(text);
             }
         }
 
-        @Override // l.AbstractC2563
+        @Override // l.AbstractC11129
         public boolean onPerformActionForVirtualView(int i, int i2, Bundle bundle) {
             if (i2 != 16) {
                 return false;

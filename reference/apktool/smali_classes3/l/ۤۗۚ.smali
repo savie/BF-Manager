@@ -1,71 +1,116 @@
-.class public final synthetic Ll/ۤۗۚ;
+.class public final Ll/ۤۗۚ;
 .super Ljava/lang/Object;
-.source "X4M8"
-
-# interfaces
-.implements Ll/ۚ᩸ۘ;
+.source "378D"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/۬ۢۚ;
+.field public final ֫:Ljava/util/ArrayList;
 
-.field public final synthetic ܺ:Ll/۟ۗۚ;
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ᩶:Ll/ܿۗۚ;
+.field public final ۚ:J
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ۧ:Ljava/lang/String;
+
+.field public final ۫:J
+
+.field public final ܳ:Ljava/lang/String;
+
+.field public final ܶ:Ljava/lang/String;
+
+.field public final ܺ:Ljava/lang/String;
+
+.field public final ܽ:I
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public final ᩷:Ljava/lang/String;
+
+.field public final ᩸:I
+
+.field public final ᩻:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۟ۗۚ;Ll/ܿۗۚ;Ll/۬ۢۚ;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/ArrayList;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+    .locals 3
 
-    .line 0
+    move-object v0, p0
+
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۤۗۚ;->ܺ:Ll/۟ۗۚ;
+    move-object v1, p1
 
-    iput-object p2, p0, Ll/ۤۗۚ;->᩶:Ll/ܿۗۚ;
+    .line 67
+    iput-object v1, v0, Ll/ۤۗۚ;->֫:Ljava/util/ArrayList;
 
-    iput-object p3, p0, Ll/ۤۗۚ;->֡:Ll/۬ۢۚ;
+    move v1, p2
+
+    .line 68
+    iput v1, v0, Ll/ۤۗۚ;->ܽ:I
+
+    move v1, p3
+
+    .line 69
+    iput v1, v0, Ll/ۤۗۚ;->᩸:I
+
+    move-object v1, p4
+
+    .line 70
+    iput-object v1, v0, Ll/ۤۗۚ;->ܳ:Ljava/lang/String;
+
+    move-object v1, p5
+
+    .line 71
+    iput-object v1, v0, Ll/ۤۗۚ;->᩻:Ljava/lang/String;
+
+    move-object v1, p6
+
+    .line 72
+    iput-object v1, v0, Ll/ۤۗۚ;->ܺ:Ljava/lang/String;
+
+    move-object v1, p7
+
+    .line 73
+    iput-object v1, v0, Ll/ۤۗۚ;->ۤ:Ljava/lang/String;
+
+    move-object v1, p8
+
+    .line 74
+    iput-object v1, v0, Ll/ۤۗۚ;->ۙ:Ljava/lang/String;
+
+    move-object v1, p9
+
+    .line 75
+    iput-object v1, v0, Ll/ۤۗۚ;->᩷:Ljava/lang/String;
+
+    move-object v1, p10
+
+    .line 76
+    iput-object v1, v0, Ll/ۤۗۚ;->ܶ:Ljava/lang/String;
+
+    move-object v1, p11
+
+    .line 77
+    iput-object v1, v0, Ll/ۤۗۚ;->ᩴ:Ljava/lang/String;
+
+    move-object v1, p12
+
+    .line 78
+    iput-object v1, v0, Ll/ۤۗۚ;->ۧ:Ljava/lang/String;
+
+    move-wide/from16 v1, p13
+
+    .line 79
+    iput-wide v1, v0, Ll/ۤۗۚ;->ۚ:J
+
+    move-wide/from16 v1, p15
+
+    .line 80
+    iput-wide v1, v0, Ll/ۤۗۚ;->۫:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final ֨()Z
-    .locals 2
-
-    .line 148
-    iget-object v0, p0, Ll/ۤۗۚ;->ܺ:Ll/۟ۗۚ;
-
-    iget-object v0, v0, Ll/۟ۗۚ;->ܺ:Ll/ܺۗۚ;
-
-    invoke-static {v0}, Ll/ܺۗۚ;->ۙ(Ll/ܺۗۚ;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Ll/ۤۗۚ;->᩶:Ll/ܿۗۚ;
-
-    iget-object v1, p0, Ll/ۤۗۚ;->֡:Ll/۬ۢۚ;
-
-    invoke-virtual {v0, v1}, Ll/ܿۗۚ;->ۙ(Ll/۬ۢۚ;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
 .end method

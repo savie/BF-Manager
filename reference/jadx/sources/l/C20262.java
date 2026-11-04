@@ -1,41 +1,53 @@
 package l;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.content.res.XmlResourceParser;
-import android.util.Xml;
-import java.util.ArrayList;
+/* JADX INFO: renamed from: l.᩵ۖۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J5VJ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20262 extends AbstractC14294 {
 
-/* JADX INFO: renamed from: l.᩶ܺ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 31AL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20262 {
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C20262 f65066 = new C20262(true);
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f65707;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public ArrayList f65708 = new ArrayList();
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final C20262 f65067 = new C20262(false);
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f65709;
+    public final boolean f65068;
 
-    public C20262(Context context, XmlResourceParser xmlResourceParser) {
-        this.f65707 = -1;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlResourceParser), C16029.f51892);
-        int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
-        for (int i = 0; i < indexCount; i++) {
-            int index = typedArrayObtainStyledAttributes.getIndex(i);
-            if (index == 0) {
-                this.f65709 = typedArrayObtainStyledAttributes.getResourceId(index, this.f65709);
-            } else if (index == 1) {
-                int resourceId = typedArrayObtainStyledAttributes.getResourceId(index, this.f65707);
-                this.f65707 = resourceId;
-                String resourceTypeName = context.getResources().getResourceTypeName(resourceId);
-                context.getResources().getResourceName(resourceId);
-                "layout".equals(resourceTypeName);
-            }
+    @Override // l.AbstractC14294
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1280(int i) {
+        return i + 1;
+    }
+
+    public C20262(boolean z) {
+        this.f65068 = z;
+    }
+
+    @Override // l.AbstractC14294
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1281(C24166 c24166) {
+        c24166.m54138(EnumC6837.VALUE_BOOLEAN.f22727 | ((this.f65068 ? 1 : 0) << 5));
+    }
+
+    @Override // l.AbstractC14294
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1283(AbstractC14294 abstractC14294) {
+        boolean z = ((C20262) abstractC14294).f65068;
+        boolean z2 = this.f65068;
+        if (z2 == z) {
+            return 0;
         }
-        typedArrayObtainStyledAttributes.recycle();
+        return z2 ? 1 : -1;
+    }
+
+    @Override // l.AbstractC14294
+    /* JADX INFO: renamed from: ܽ */
+    public final EnumC6837 mo1282() {
+        return EnumC6837.VALUE_BOOLEAN;
+    }
+
+    public final int hashCode() {
+        return this.f65068 ? 1 : 0;
     }
 }

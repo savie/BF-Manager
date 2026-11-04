@@ -1,0 +1,8 @@
+package l;
+
+/* JADX INFO: renamed from: l.᩸ۛܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X88U */
+/* JADX INFO: loaded from: classes.dex */
+public interface InterfaceC22615 {
+    Object construct();
+}

@@ -1,64 +1,72 @@
-.class public final synthetic Ll/ۚ᩻᩹;
-.super Ljava/lang/Object;
-.source "HAIH"
-
-# interfaces
-.implements Lnet/sf/sevenzipjbinding/ISequentialOutStream;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۖ᩻᩹;
-
-.field public final synthetic ᩶:Ll/ۧۨ᩵;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ۖ᩻᩹;Ll/ۧۨ᩵;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۚ᩻᩹;->ܺ:Ll/ۖ᩻᩹;
-
-    iput-object p2, p0, Ll/ۚ᩻᩹;->᩶:Ll/ۧۨ᩵;
-
-    return-void
-.end method
+.class public final Ll/ۚ᩻᩹;
+.super Ll/᩻᩻᩹;
+.source "G8XL"
 
 
 # virtual methods
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 3
+.method public final ۙ(Ll/ۢ᩸᩹;Ll/ܺᩴ᩹;Ll/۬۫᩹;)Ljava/lang/Object;
+    .locals 2
 
-    .line 2
-    iget-object v0, p0, Ll/ۚ᩻᩹;->ܺ:Ll/ۖ᩻᩹;
+    .line 23
+    invoke-interface {p3}, Ll/۬۫᩹;->attributes()Ljava/util/Map;
 
-    .line 4
-    iget-object v1, p0, Ll/ۚ᩻᩹;->᩶:Ll/ۧۨ᩵;
+    move-result-object p3
 
-    const/4 v2, 0x1
+    const-string v0, "href"
 
-    .line 265
-    :try_start_0
-    iput-boolean v2, v0, Ll/ۖ᩻᩹;->ۖ:Z
+    invoke-interface {p3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 266
-    invoke-interface {v1, p1}, Ljava/nio/channels/WritableByteChannel;->write(Ljava/nio/ByteBuffer;)I
+    move-result-object p3
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p3, Ljava/lang/String;
 
-    return p1
+    .line 24
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    :catch_0
-    move-exception p1
+    move-result v0
 
-    .line 268
-    new-instance v0, Lnet/sf/sevenzipjbinding/SevenZipException;
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, p1}, Lnet/sf/sevenzipjbinding/SevenZipException;-><init>(Ljava/lang/Throwable;)V
+    .line 25
+    invoke-virtual {p1}, Ll/ۢ᩸᩹;->ᩴ()Ll/ۜ᩸᩹;
 
-    throw v0
+    move-result-object v0
+
+    const-class v1, Ll/ۖܿۨ;
+
+    invoke-interface {v0, v1}, Ll/ۜ᩸᩹;->ۙ(Ljava/lang/Class;)Ll/ܶᩴ᩹;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 28
+    sget-object v1, Ll/᩸ܳ᩹;->᩸:Ll/ۧᩴ᩹;
+
+    invoke-virtual {v1, p2, p3}, Ll/ۧᩴ᩹;->ۙ(Ll/ܺᩴ᩹;Ljava/lang/Object;)V
+
+    .line 33
+    invoke-interface {v0, p1, p2}, Ll/ܶᩴ᩹;->ۙ(Ll/ۢ᩸᩹;Ll/ܺᩴ᩹;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final ۙ()Ljava/util/Collection;
+    .locals 1
+
+    const-string v0, "a"
+
+    .line 42
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
 .end method

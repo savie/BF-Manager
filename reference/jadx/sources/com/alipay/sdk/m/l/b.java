@@ -1,7 +1,7 @@
 package com.alipay.sdk.m.l;
 
 import com.alipay.sdk.m.y.l;
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -46,6 +46,6 @@ public class b {
         sb.append("};memo={");
         sb.append(str);
         sb.append("};result={");
-        return C22697.m50267(sb, str2, l.d);
+        return C8947.m23910(sb, str2, l.d);
     }
 }

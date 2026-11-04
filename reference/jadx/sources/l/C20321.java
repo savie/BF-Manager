@@ -1,81 +1,72 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ܿ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87AH */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20321 {
+import java.io.IOException;
+import java.nio.file.attribute.DosFileAttributeView;
+import java.nio.file.attribute.DosFileAttributes;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C20321 f65801 = new C20321(-1, 0);
+/* JADX INFO: renamed from: l.᩵ۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C20321 implements InterfaceC7174 {
+    public final /* synthetic */ DosFileAttributeView a;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f65802;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f65803;
-
-    public C20321(long j, long j2) {
-        this.f65802 = j < 0 ? -1L : j;
-        this.f65803 = j2 <= 0 ? 0L : j2;
+    public /* synthetic */ C20321(DosFileAttributeView dosFileAttributeView) {
+        this.a = dosFileAttributeView;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C20321 m45854(long j, long j2) {
-        C20321 c20321 = new C20321(j, j2);
-        return c20321.m45860() ? c20321 : f65801;
+    @Override // l.InterfaceC15845
+    public final /* synthetic */ void a(C21813 c21813, C21813 c21814, C21813 c21815) throws IOException {
+        this.a.setTimes(AbstractC1758.o(c21813), AbstractC1758.o(c21814), AbstractC1758.o(c21815));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C20321 m45855(InterfaceC2557 interfaceC2557) {
-        if (interfaceC2557 == null) {
-            return f65801;
+    public final /* synthetic */ boolean equals(Object obj) {
+        DosFileAttributeView dosFileAttributeView = this.a;
+        if (obj instanceof C20321) {
+            obj = ((C20321) obj).a;
         }
-        return m45854(interfaceC2557.mo7985() ? interfaceC2557.getSize() : -1L, interfaceC2557.getTime());
+        return dosFileAttributeView.equals(obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C20321 m45856(AbstractC20745 abstractC20745) {
-        long jMo33991;
-        if (abstractC20745 == null) {
-            return f65801;
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.InterfaceC1676
+    public final /* synthetic */ String name() {
+        return this.a.name();
+    }
+
+    @Override // l.InterfaceC7174, l.InterfaceC15845
+    public final /* synthetic */ C6151 readAttributes() throws IOException {
+        DosFileAttributes attributes = this.a.readAttributes();
+        if (attributes == null) {
+            return null;
         }
-        long jMo33964 = -1;
-        try {
-            if (abstractC20745.mo33971()) {
-                jMo33964 = abstractC20745.mo33964();
-            }
-        } catch (RuntimeException unused) {
-        }
-        try {
-            jMo33991 = abstractC20745.mo33991();
-        } catch (RuntimeException unused2) {
-            jMo33991 = 0;
-        }
-        return m45854(jMo33964, jMo33991);
+        return new C6151(attributes);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m45858() {
-        return this.f65802;
+    @Override // l.InterfaceC15845
+    public final /* synthetic */ InterfaceC8665 readAttributes() {
+        return C23305.a(this.a.readAttributes());
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m45861() {
-        return this.f65803;
+    @Override // l.InterfaceC7174
+    public final /* synthetic */ void setArchive(boolean z) throws IOException {
+        this.a.setArchive(z);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m45857() {
-        return this.f65802 >= 0;
+    @Override // l.InterfaceC7174
+    public final /* synthetic */ void setHidden(boolean z) throws IOException {
+        this.a.setHidden(z);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean m45859() {
-        return this.f65803 > 0;
+    @Override // l.InterfaceC7174
+    public final /* synthetic */ void setReadOnly(boolean z) throws IOException {
+        this.a.setReadOnly(z);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m45860() {
-        return m45857() || m45859();
+    @Override // l.InterfaceC7174
+    public final /* synthetic */ void setSystem(boolean z) throws IOException {
+        this.a.setSystem(z);
     }
 }

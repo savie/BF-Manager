@@ -1,22 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷۠ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07BV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20746 {
+/* JADX INFO: renamed from: l.᩵ᩳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7Y4 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C20746 extends AbstractC11795 {
+    public C20746() {
+        this.f38100 = 20;
+        this.f38097 = "HmacSHA1";
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f67499;
+    @Override // l.InterfaceC7299
+    public int getBlockSize() {
+        return this.f38100;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f67500;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public String f67501;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f67502;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f67503;
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2726() {
+        return this.f38098;
+    }
 }

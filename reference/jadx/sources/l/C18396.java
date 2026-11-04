@@ -1,213 +1,128 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import bin.mt.plus.Main;
+import bin.mt.plus.R;
+import com.google.android.material.motion.MotionUtils;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ᩴ֡֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: V8BV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18396 {
+/* JADX INFO: renamed from: l.ܿܳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E29Y */
+/* JADX INFO: loaded from: classes5.dex */
+public class C18396 extends AbstractC19594 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public AbstractC9677 f58641;
+    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
+    public String f59919 = "null";
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC17690 f58642;
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f59918 = new ArrayList();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f58643;
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ᩺ */
+    public final C11983 mo2534() {
+        return C14620.f46049;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C21026 f58644;
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ܶۙ */
+    public final CharSequence mo2532() {
+        return C21576.m49059(R.string.MT_Protector, this.f59919);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42675(AbstractC20745 abstractC20745, AbstractC9677 abstractC9677, String[] strArr, InterfaceC17690 interfaceC17690) throws IOException {
-        this.f58641 = abstractC9677;
-        this.f58642 = interfaceC17690;
-        boolean z = false;
-        if (strArr.length == 1 && !strArr[0].endsWith("/")) {
-            z = true;
-        }
-        this.f58643 = z;
-        C21026 c21026M47358 = C21026.m47358(new C6401(interfaceC17690));
-        this.f58644 = c21026M47358;
-        c21026M47358.m47379(strArr, abstractC9677);
-        C22918 c22918 = new C22918(abstractC20745);
-        try {
-            c22918.m50733(36);
-            if (abstractC9677.mo24621()) {
-                m42672(c22918);
-            } else {
-                Iterator it = this.f58644.m47385().iterator();
-                while (it.hasNext()) {
-                    m42673(c22918, (AbstractC10444) it.next());
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ֫ */
+    public final void mo2528() {
+        m43868(R.string.MT_Protector);
+        mo29447("...");
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۧ */
+    public final C12187 mo2531() throws Exception {
+        ArrayList arrayList;
+        AbstractC22044 abstractC22044M43860 = m43860("outputDir");
+        String[] strArrM43831 = m43831("ARG_PATHS");
+        String strM43865 = m43865("password");
+        int iM43854 = m43854("level");
+        boolean zM43847 = m43847("headerEncryption");
+        boolean zM43848 = m43847("deleteSources");
+        long jM43855 = m43855("splitSize");
+        int length = strArrM43831.length;
+        int i = 0;
+        int i2 = 0;
+        while (true) {
+            ArrayList arrayList2 = this.f59918;
+            if (i < length) {
+                StringBuilder sb = new StringBuilder();
+                sb.append(C21576.m49088(R.string.MT_Protector));
+                sb.append(MotionUtils.EASING_TYPE_FORMAT_START);
+                int i3 = i + 1;
+                sb.append(i3);
+                sb.append("/");
+                sb.append(length);
+                sb.append(MotionUtils.EASING_TYPE_FORMAT_END);
+                mo16837(sb.toString());
+                m43862(i3, length);
+                AbstractC22044 abstractC22044M35193 = C14584.m35193(strArrM43831[i], new String[0]);
+                AbstractC22044 abstractC22044M49839 = abstractC22044M43860.m49876((abstractC22044M35193.mo4281() ? abstractC22044M35193.getName() : abstractC22044M35193.m49874()) + ".7z").m49839(true);
+                this.f59919 = abstractC22044M49839.getName();
+                C13789 c13789M51419 = C22807.m51419((AbstractC18900) this, new String[]{strArrM43831[i]}, false);
+                int iM33697 = c13789M51419.m33697() + i2;
+                if (mo924()) {
+                    return C12187.m30469();
                 }
-            }
-            c22918.close();
-        } catch (Throwable th) {
-            try {
-                c22918.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m42671(C12107 c12107, AbstractC10444 abstractC10444) {
-        C20573 c20573 = new C20573();
-        if (abstractC10444.m26374()) {
-            c20573.m46416(abstractC10444.m26360());
-        }
-        C2399 c2399M26370 = abstractC10444.m26370();
-        if (c2399M26370 != null) {
-            c20573.m46415(Integer.valueOf(c2399M26370.f9657));
-        }
-        c12107.m30108(c20573);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m42673(C22918 c22918, AbstractC10444 abstractC10444) throws IOException {
-        if (this.f58642.mo2357()) {
-            return;
-        }
-        this.f58644.m10992();
-        InterfaceC17690 interfaceC17690 = this.f58642;
-        this.f58644.m10991();
-        this.f58644.getClass();
-        interfaceC17690.mo38357(abstractC10444);
-        if (!this.f58643) {
-            this.f58642.getClass();
-            this.f58642.setProgress(this.f58644.m10996());
-        }
-        if (abstractC10444.m26387()) {
-            C12107 c12107 = new C12107(abstractC10444.m26385() + "/");
-            c12107.setTime(abstractC10444.m26392());
-            m42671(c12107, abstractC10444);
-            c22918.m50727(c12107);
-        } else {
-            C12107 c12108 = new C12107(abstractC10444.m26385());
-            c12108.setTime(abstractC10444.m26392());
-            m42671(c12108, abstractC10444);
-            c22918.m50727(c12108);
-            InterfaceC2557 interfaceC2557M24620 = this.f58641.m24620(abstractC10444.m26362());
-            if (abstractC10444.m26374()) {
-                this.f58642.getClass();
-            } else if (!this.f58643) {
-                InputStream inputStreamMo15073 = this.f58641.mo15073((AbstractActivityC12483) null, interfaceC2557M24620);
+                C4234 c4234 = new C4234();
+                c4234.f15450 = c13789M51419.f43741.size();
+                c4234.f15449 = iM43854;
+                c4234.f15448 = zM43847;
+                ArrayList arrayList3 = new ArrayList();
                 try {
-                    if (inputStreamMo15073 == null) {
-                        this.f58642.mo38356();
-                        if (inputStreamMo15073 != null) {
-                            inputStreamMo15073.close();
-                            return;
+                    AbstractC22044 abstractC22044 = abstractC22044M43860;
+                    int i4 = iM43854;
+                    boolean z = zM43847;
+                    int i5 = length;
+                    try {
+                        C0505.m2472(c4234, new C21380(this, jM43855, abstractC22044M49839, arrayList3, strM43865, c13789M51419));
+                        if (mo924()) {
+                            C22807.m51420(arrayList3);
+                            return C12187.m30469();
                         }
-                        return;
+                        arrayList2.addAll(arrayList3);
+                        i = i3;
+                        i2 = iM33697;
+                        abstractC22044M43860 = abstractC22044;
+                        iM43854 = i4;
+                        zM43847 = z;
+                        length = i5;
+                    } catch (Exception e) {
+                        e = e;
+                        arrayList = arrayList3;
+                        C22807.m51420(arrayList);
+                        throw e;
                     }
-                    C22487.m49992(inputStreamMo15073, c22918.m50720(), ((C15404) interfaceC2557M24620).getSize(), new C22630(this));
-                    inputStreamMo15073.close();
-                } catch (Throwable th) {
-                    if (inputStreamMo15073 != null) {
-                        try {
-                            inputStreamMo15073.close();
-                        } catch (Throwable th2) {
-                            th.addSuppressed(th2);
-                        }
-                    }
-                    throw th;
+                } catch (Exception e2) {
+                    e = e2;
+                    arrayList = arrayList3;
                 }
             } else {
-                C8141 c8141Mo24616 = this.f58641.mo24616(interfaceC2557M24620);
-                try {
-                    if (c8141Mo24616 == null) {
-                        this.f58642.mo38356();
-                        if (c8141Mo24616 != null) {
-                            c8141Mo24616.close();
-                            return;
-                        }
-                        return;
-                    }
-                    C8516 c8516M21449 = c8141Mo24616.m21449();
-                    InterfaceC17690 interfaceC17691 = this.f58642;
-                    C13638.requireNonNull(interfaceC17691);
-                    c8516M21449.m22241(new C23340(interfaceC17691));
-                    OutputStream outputStreamM50720 = c22918.m50720();
-                    final InterfaceC17690 interfaceC17692 = this.f58642;
-                    C13638.requireNonNull(interfaceC17692);
-                    C22487.m49992(c8141Mo24616, outputStreamM50720, -1L, new InterfaceC8978() { // from class: l.ۘ֡֨
-                        @Override // l.InterfaceC5614
-                        /* JADX INFO: renamed from: ֨ */
-                        public final boolean mo2357() {
-                            return interfaceC17692.mo2357();
-                        }
-
-                        @Override // l.InterfaceC8978
-                        /* JADX INFO: renamed from: ۘۙ */
-                        public final /* synthetic */ void mo2885() {
-                            throw null;
-                        }
-                    });
-                    c8141Mo24616.close();
-                } catch (Throwable th3) {
-                    if (c8141Mo24616 != null) {
-                        try {
-                            c8141Mo24616.close();
-                        } catch (Throwable th4) {
-                            th3.addSuppressed(th4);
-                        }
-                    }
-                    throw th3;
+                if (!mo924() && zM43848) {
+                    C22807.m51423(this, strArrM43831, arrayList2, i2);
                 }
-            }
-            this.f58644.m10994(abstractC10444.mo23366().m26359());
-        }
-        if (!this.f58642.mo2357() && abstractC10444.m26387()) {
-            Iterator it = abstractC10444.mo23365().m44704().iterator();
-            while (it.hasNext()) {
-                m42673(c22918, (AbstractC10444) it.next());
+                return m43857();
             }
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m42672(C22918 c22918) throws IOException {
-        HashMap map = new HashMap();
-        ArrayList<C19616> arrayList = new ArrayList();
-        LinkedList linkedList = new LinkedList(this.f58644.m47385());
-        while (!linkedList.isEmpty()) {
-            AbstractC10444 abstractC10444 = (AbstractC10444) linkedList.removeFirst();
-            if (abstractC10444.m26387()) {
-                arrayList.add(abstractC10444.mo23365());
-                linkedList.addAll(0, abstractC10444.mo23365().m44704());
-            } else {
-                map.put(this.f58641.m24620(abstractC10444.m26362()), abstractC10444.mo23366());
-            }
-        }
-        for (C19616 c19616 : arrayList) {
-            this.f58644.m10992();
-            InterfaceC17690 interfaceC17690 = this.f58642;
-            this.f58644.m10991();
-            this.f58644.getClass();
-            interfaceC17690.mo38357(c19616);
-            C12107 c12107 = new C12107(c19616.m26385() + "/");
-            c12107.setTime(c19616.m26392());
-            m42671(c12107, c19616);
-            c22918.m50727(c12107);
-            if (this.f58642.mo2357()) {
-                return;
-            }
-        }
-        IOException[] iOExceptionArr = {null};
-        this.f58641.mo24617(map.keySet(), new C21218(this, map, c22918, iOExceptionArr));
-        IOException iOException = iOExceptionArr[0];
-        if (iOException != null) {
-            throw iOException;
-        }
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2529(Main main, C8614 c8614, C8614 c8615, C12187 c12187) {
+        boolean zM43847 = m43847("compressToAnother");
+        C22807.m51422(c12187, zM43847, zM43847 ? m43837(c8615) : m43863(c8614), c8614, c8615, C22807.m51418((List) this.f59918));
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2533(C12187 c12187) {
+        C6331.m18055();
     }
 }

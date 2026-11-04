@@ -1,44 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: renamed from: l.ۚܰۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: HIUL */
 /* JADX INFO: loaded from: classes3.dex */
-public final enum C5688 extends EnumC21210 {
-    public /* synthetic */ C5688() {
-        this("DoctypePublicIdentifier_doubleQuoted", 56);
+public final class C5688 extends AbstractC16700 {
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f19647 = C16980.m40037(C5688.class);
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC12509 f19648;
+
+    public C5688(InterfaceC12509 interfaceC12509) {
+        this.f19648 = interfaceC12509;
     }
 
-    public C5688(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC21210
+    @Override // l.AbstractC16700, l.InterfaceC13673
     /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        char cM32033 = c12931.m32033();
-        if (cM32033 == 0) {
-            c20692.m46542(this);
-            c20692.f67294.f56576.append((char) 65533);
-            return;
+    public final void mo8439(C1610 c1610) {
+        try {
+            this.f19648.m31061();
+        } catch (Exception e) {
+            f19647.mo13718("Error in prepare pass init: {}", this, e);
         }
-        if (cM32033 == '\"') {
-            c20692.m46532(EnumC21210.f69053);
-            return;
-        }
-        if (cM32033 == '>') {
-            c20692.m46542(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        if (cM32033 == 65535) {
-            c20692.m46544(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        c20692.f67294.f56576.append(cM32033);
+    }
+
+    @Override // l.AbstractC16700, l.InterfaceC13673
+    public final String getName() {
+        this.f19648.m41522();
+        throw null;
     }
 }

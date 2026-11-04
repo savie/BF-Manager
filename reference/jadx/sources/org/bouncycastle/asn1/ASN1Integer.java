@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1;
 
 import java.math.BigInteger;
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
@@ -50,7 +50,7 @@ public class ASN1Integer extends ASN1Primitive {
             return (ASN1Integer) obj;
         }
         if (!(obj instanceof byte[])) {
-            throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+            throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
         }
         try {
             return (ASN1Integer) TYPE.fromByteArray((byte[]) obj);

@@ -1,50 +1,156 @@
 package l;
 
-import android.view.Window;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Iterator;
+import java.util.Spliterator;
 
-/* JADX INFO: renamed from: l.᩵᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 422Y */
+/* JADX INFO: renamed from: l.ᩴۢ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7CAF */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19744 implements InterfaceC5092 {
+public final class C19744 extends AbstractC5837 implements Serializable {
+    public static final long serialVersionUID = 1;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ LayoutInflaterFactory2C9161 f63445;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public transient long[] f63566;
 
-    public C19744(LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161) {
-        this.f63445 = layoutInflaterFactory2C9161;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f63567;
+
+    @Override // l.AbstractC5837, l.AbstractC13711, java.util.Collection, java.lang.Iterable
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // l.InterfaceC5092
-    public final void onCloseMenu(C12418 c12418, boolean z) {
-        C12418 rootMenu = c12418.getRootMenu();
-        boolean z2 = rootMenu != c12418;
-        if (z2) {
-            c12418 = rootMenu;
-        }
-        LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161 = this.f63445;
-        C8455 c8455M23565 = layoutInflaterFactory2C9161.m23565(c12418);
-        if (c8455M23565 != null) {
-            if (z2) {
-                layoutInflaterFactory2C9161.m23546(c8455M23565.f29336, c8455M23565, rootMenu);
-                layoutInflaterFactory2C9161.m23552(c8455M23565, true);
-            } else {
-                layoutInflaterFactory2C9161.m23552(c8455M23565, z);
+    public C19744() {
+        this.f63566 = C15268.f49916;
+    }
+
+    public C19744(long[] jArr) {
+        this.f63566 = jArr;
+        this.f63567 = jArr.length;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private int m45506(long j) {
+        long[] jArr = this.f63566;
+        int i = this.f63567;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return -1;
             }
+            if (jArr[i2] == j) {
+                return i2;
+            }
+            i = i2;
         }
     }
 
-    @Override // l.InterfaceC5092
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return new C10793(this);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC5574, l.InterfaceC3336
+    public final InterfaceC12285 iterator() {
+        return new C10793(this);
+    }
+
+    @Override // l.AbstractC5837, l.AbstractC13711, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        return new C22728(this);
+    }
+
+    @Override // l.InterfaceC5574
+    /* JADX INFO: renamed from: ۧ */
+    public final boolean mo6352(long j) {
+        return m45506(j) != -1;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f63567;
+    }
+
+    @Override // l.AbstractC5837
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo3701(C12418 c12418) {
-        Window.Callback callback;
-        if (c12418 != c12418.getRootMenu()) {
-            return true;
+    public final boolean mo11667(long j) {
+        int iM45506 = m45506(j);
+        if (iM45506 == -1) {
+            return false;
         }
-        LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161 = this.f63445;
-        if (!layoutInflaterFactory2C9161.f31151 || (callback = layoutInflaterFactory2C9161.f31196.getCallback()) == null || layoutInflaterFactory2C9161.f31170) {
-            return true;
+        int i = (this.f63567 - iM45506) - 1;
+        for (int i2 = 0; i2 < i; i2++) {
+            long[] jArr = this.f63566;
+            int i3 = iM45506 + i2;
+            jArr[i3] = jArr[i3 + 1];
         }
-        callback.onMenuOpened(108, c12418);
+        this.f63567--;
         return true;
+    }
+
+    @Override // l.AbstractC13711, l.InterfaceC5574
+    public final boolean add(long j) {
+        if (m45506(j) != -1) {
+            return false;
+        }
+        int i = this.f63567;
+        if (i == this.f63566.length) {
+            long[] jArr = new long[i == 0 ? 2 : i * 2];
+            while (true) {
+                int i2 = i - 1;
+                if (i == 0) {
+                    break;
+                }
+                jArr[i2] = this.f63566[i2];
+                i = i2;
+            }
+            this.f63566 = jArr;
+        }
+        long[] jArr2 = this.f63566;
+        int i3 = this.f63567;
+        this.f63567 = i3 + 1;
+        jArr2[i3] = j;
+        return true;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f63567 = 0;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean isEmpty() {
+        return this.f63567 == 0;
+    }
+
+    public final Object clone() {
+        try {
+            C19744 c19744 = (C19744) super.clone();
+            c19744.f63566 = (long[]) this.f63566.clone();
+            return c19744;
+        } catch (CloneNotSupportedException unused) {
+            throw new InternalError();
+        }
+    }
+
+    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
+        objectOutputStream.defaultWriteObject();
+        long[] jArr = this.f63566;
+        for (int i = 0; i < this.f63567; i++) {
+            objectOutputStream.writeLong(jArr[i]);
+        }
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
+        objectInputStream.defaultReadObject();
+        long[] jArr = new long[this.f63567];
+        this.f63566 = jArr;
+        for (int i = 0; i < this.f63567; i++) {
+            jArr[i] = objectInputStream.readLong();
+        }
     }
 }

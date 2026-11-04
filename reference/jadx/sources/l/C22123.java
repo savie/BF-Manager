@@ -1,26 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: renamed from: l.᩷ܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 91FI */
 /* JADX INFO: loaded from: classes.dex */
-public final enum C22123 extends EnumC7306 {
-    public /* synthetic */ C22123() {
-        this("FORMAT_3RMI", 29);
-    }
-
-    public C22123(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC7306
+public final class C22123 extends C15409 {
+    @Override // l.C15409, l.InterfaceC8829
     /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        return EnumC7306.m19487(this, i, null);
-    }
-
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        EnumC7306.m19482(abstractC17806, (InterfaceC21334) null);
+    public final void mo2774(InterfaceC18525 interfaceC18525, InterfaceC8697 interfaceC8697, C2863 c2863, C1372 c1372) {
+        boolean z;
+        if (interfaceC8697.mo18155()) {
+            throw new RuntimeException();
+        }
+        InterfaceC5650 value = interfaceC8697.getValue();
+        if (value.mo16636() && !value.mo11710().mo8825() && value.mo11710().getValue().isEmpty()) {
+            z = true;
+        } else if (value.mo16635() != 18) {
+            super.mo2774(interfaceC18525, interfaceC8697, c2863, c1372);
+            return;
+        } else {
+            if (value.getValue() != 0) {
+                super.mo2774(interfaceC18525, interfaceC8697, c2863, c1372);
+                return;
+            }
+            z = false;
+        }
+        interfaceC18525.mo14234("id");
+        interfaceC18525.mo14233("name", interfaceC8697.mo18156());
+        if (z) {
+            interfaceC18525.mo14233("explicit", "true");
+        }
+        C14049.m34216(interfaceC18525, interfaceC8697, c1372);
+        interfaceC18525.mo14232("id");
     }
 }

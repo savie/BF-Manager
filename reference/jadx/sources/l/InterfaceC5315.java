@@ -1,31 +1,31 @@
 package l;
 
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import android.content.Context;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.ۚۧᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public interface InterfaceC5315 extends InterfaceC4464 {
-    @Override // l.InterfaceC4464
-    Object compute(Object obj, BiFunction biFunction);
+/* JADX INFO: renamed from: l.ۚ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 15V0 */
+/* JADX INFO: loaded from: classes2.dex */
+public interface InterfaceC5315 {
+    boolean collapseItemActionView(C9898 c9898, C8407 c8407);
 
-    @Override // l.InterfaceC4464
-    Object computeIfAbsent(Object obj, Function function);
+    boolean expandItemActionView(C9898 c9898, C8407 c8407);
 
-    @Override // l.InterfaceC4464
-    Object computeIfPresent(Object obj, BiFunction biFunction);
+    boolean flagActionItems();
 
-    @Override // l.InterfaceC4464
-    void forEach(BiConsumer biConsumer);
+    int getId();
 
-    @Override // l.InterfaceC4464
-    Object getOrDefault(Object obj, Object obj2);
+    void initForMenu(Context context, C9898 c9898);
 
-    @Override // l.InterfaceC4464
-    Object merge(Object obj, Object obj2, BiFunction biFunction);
+    void onCloseMenu(C9898 c9898, boolean z);
 
-    @Override // l.InterfaceC4464
-    void replaceAll(BiFunction biFunction);
+    void onRestoreInstanceState(Parcelable parcelable);
+
+    Parcelable onSaveInstanceState();
+
+    boolean onSubMenuSelected(SubMenuC12026 subMenuC12026);
+
+    void setCallback(InterfaceC12772 interfaceC12772);
+
+    void updateMenuView(boolean z);
 }

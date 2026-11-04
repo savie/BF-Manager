@@ -1,46 +1,55 @@
-.class public final Ll/ۨ᩹ۤ;
-.super Ll/᩺᩹ۤ;
-.source "34PY"
+.class public final synthetic Ll/ۨ᩹ۤ;
+.super Ljava/lang/Object;
+.source "G7I1"
 
-
-# instance fields
-.field public final ۙ:Ll/᩺᩹ۤ;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩺᩹ۤ;)V
-    .locals 0
-
-    .line 129
-    invoke-direct {p0}, Ll/᩺᩹ۤ;-><init>()V
-
-    .line 130
-    iput-object p1, p0, Ll/ۨ᩹ۤ;->ۙ:Ll/᩺᩹ۤ;
-
-    return-void
-.end method
+# interfaces
+.implements Ll/ۖ᩵ۤ;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final negate()Ll/֨ۗۤ;
+    .locals 1
 
-    .line 139
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ll/ۨ᩹ۤ;->ۙ:Ll/᩺᩹ۤ;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "[]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->ۙ(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p1}, Ljava/lang/Character;->isJavaIdentifierStart(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->᩷(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+
+    move-result-object p1
+
+    return-object p1
 .end method

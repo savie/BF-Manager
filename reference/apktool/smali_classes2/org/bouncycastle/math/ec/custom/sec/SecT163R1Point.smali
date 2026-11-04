@@ -231,7 +231,7 @@
     move-result-object v2
 
     .line 0
-    invoke-static {v2, v2, v1}, Ll/֨ۖᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
+    invoke-static {v2, v2, v1}, Ll/֨᩵ᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
 
     move-result-object v3
 
@@ -651,7 +651,7 @@
 
     .line 0
     :goto_2
-    invoke-static {v2, v6, v8}, Ll/֨ۖᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
+    invoke-static {v2, v6, v8}, Ll/֨᩵ᩴ;->ۙ(Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;Lorg/bouncycastle/math/ec/ECFieldElement;)Lorg/bouncycastle/math/ec/ECFieldElement;
 
     move-result-object v2
 

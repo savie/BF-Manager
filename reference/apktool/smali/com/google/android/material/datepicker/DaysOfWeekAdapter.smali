@@ -197,7 +197,7 @@
     move-result-object p2
 
     .line 88
-    sget v0, Ll/ܶ۟ܶ;->᩹ܰ:I
+    sget v0, Ll/ۨ۬ܺ;->ܳ᩷:I
 
     .line 89
     invoke-virtual {p2, v0, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -249,7 +249,7 @@
 
     move-result-object p1
 
-    sget p2, Ll/ᩳ۟ܶ;->ᩴۨ:I
+    sget p2, Ll/᩺۬ܺ;->᩹ۤ:I
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

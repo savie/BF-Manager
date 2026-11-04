@@ -1,121 +1,165 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ܰ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A451 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C12446 extends AbstractC22967 {
+import com.alipay.sdk.m.u0.b;
+import java.util.ArrayList;
+import java.util.HashSet;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public AbstractC16579 f41507;
+/* JADX INFO: renamed from: l.ۨܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7AI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12446 {
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20145 f41508;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C12446(C20145 c20145, C6966 c6966, AbstractC11242 abstractC11242, AbstractC16579 abstractC16579, C21825 c21825, C21825 c21826, EnumC11678 enumC11678) {
-        super(c20145.f65444.m52422(abstractC16579, true), enumC11678, c6966, c21825, c21826, abstractC11242);
-        this.f41508 = c20145;
-        this.f41507 = abstractC16579;
-    }
-
-    @Override // l.AbstractC10329
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC23903 mo5434(C4603 c4603, EnumC11678 enumC11678) {
-        AbstractC16579 abstractC16579 = this.f35427;
-        enumC11678.m29178();
-        return this.f41508.m45538(c4603, abstractC16579, this.f35430, this.f35428, this.f35429, enumC11678.m29179());
-    }
-
-    /* JADX WARN: Code restructure failed: missing block: B:9:0x0034, code lost:
-    
-        if (r0.m52400(r13.m44602((l.AbstractC16579) r9.f70876), r12.f41507, r0.f76946) != false) goto L10;
-     */
-    @Override // l.AbstractC22967
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public l.AbstractC22967 mo30921(l.C19524 r13) {
-        /*
-            r12 = this;
-            l.ۜ᩵۟ r2 = r12.f74647
-            l.ۛ۠۟ r0 = r2.f23408
-            l.᩶ۨ۟ r8 = r12.f41508
-            l.᩻᩷۟ r1 = r8.f65436
-            boolean r0 = l.C3128.m9451(r0, r1)
-            if (r0 == 0) goto L7e
-            l.᩸᩷۟ r9 = r12.f35428
-            boolean r0 = r9.m48595()
-            if (r0 == 0) goto L6c
-            java.lang.Object r0 = r9.f70876
-            l.ܽۤۤ r0 = (l.AbstractC16579) r0
-            l.ۜ۟ۤ r10 = l.EnumC6617.NONE
-            boolean r0 = r0.m39001(r10)
-            if (r0 != 0) goto L36
-            l.᩻ܺۤ r0 = r8.f65444
-            java.lang.Object r1 = r9.f70876
-            l.ܽۤۤ r1 = (l.AbstractC16579) r1
-            l.ܽۤۤ r13 = r13.m44602(r1)
-            l.ܽۤۤ r1 = r12.f41507
-            l.ۤܺ۟ r3 = r0.f76946
-            boolean r13 = r0.m52400(r13, r1, r3)
-            if (r13 == 0) goto L6c
-        L36:
-            l.᩷ۨ۟ r13 = new l.᩷ۨ۟
-            l.ۨۨ۟ r7 = r12.f35431
-            l.᩸᩷۟ r5 = r9.f70877
-            l.ۧ᩷۟ r3 = r12.f35430
-            l.ܽۤۤ r11 = r12.f41507
-            l.᩸᩷۟ r6 = r12.f35429
-            r0 = r13
-            r1 = r8
-            r4 = r11
-            r0.<init>(r1, r2, r3, r4, r5, r6, r7)
-            l.᩻ܺۤ r0 = r8.f65444
-            boolean r1 = r11.mo1936()
-            if (r1 == 0) goto L6b
-            java.lang.Object r1 = r9.f70876
-            l.ܽۤۤ r1 = (l.AbstractC16579) r1
-            boolean r1 = r1.m39001(r10)
-            if (r1 != 0) goto L6b
-            java.lang.Object r1 = r9.f70876
-            l.ܽۤۤ r1 = (l.AbstractC16579) r1
-            l.֡᩵ۤ r2 = r11.f53222
-            l.ܽۤۤ r1 = r0.m52423(r2, r1)
-            r2 = 1
-            l.ܽۤۤ r0 = r0.m52422(r1, r2)
-            r13.f35427 = r0
-        L6b:
-            return r13
-        L6c:
-            l.ܽܰ۟ r13 = new l.ܽܰ۟
-            l.ܽۤۤ r4 = r12.f35427
-            l.᩸᩷۟ r6 = r12.f35429
-            l.ۨۨ۟ r7 = r12.f35431
-            l.ۧ᩷۟ r3 = r12.f35430
-            l.᩸᩷۟ r5 = r12.f35428
-            r0 = r13
-            r1 = r12
-            r0.<init>(r1, r2, r3, r4, r5, r6, r7)
-            return r13
-        L7e:
-            r13 = 0
-            return r13
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C12446.mo30921(l.᩵ܳۤ):l.᩺ۨ۟");
+    public final C2863 f40002;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final HashSet f40003;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C13192 f40004;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C20871 f40005;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f40006;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C23131 f40007;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C1304 f40008;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C10671 f40009;
+
+    public C12446(C1304 c1304, C10671 c10671, String str, C13192 c13192, HashSet hashSet, C20871 c20871) {
+        this.f40008 = c1304;
+        this.f40002 = c1304.f4689;
+        this.f40009 = c10671;
+        this.f40006 = str;
+        this.f40004 = c13192;
+        this.f40003 = hashSet;
+        this.f40005 = c20871;
     }
 
-    @Override // l.AbstractC22967
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC4143 mo5433(AbstractC23903 abstractC23903) {
-        if (abstractC23903.mo22992()) {
-            return EnumC4143.f15152;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m30915(InterfaceC2731 interfaceC2731, InterfaceC8697 interfaceC8697) {
+        String str;
+        String str2;
+        String str3;
+        C0514 c0514M30913;
+        String strM26337 = C10208.m26337(interfaceC2731);
+        boolean zM21747 = C7972.m21747(interfaceC8697);
+        C0514 c0514M30914 = null;
+        HashSet hashSet = this.f40003;
+        C1304 c1304 = this.f40008;
+        String str4 = this.f40006;
+        if (zM21747) {
+            C3497 c3497M21721 = C7972.m21721(c1304, interfaceC8697.getValue(0), null, null, strM26337, 0, 0, hashSet, null, null);
+            String str5 = c3497M21721.f12061;
+            String str6 = c3497M21721.f12068;
+            if (!"resource_table_file_path".equals(str4)) {
+                C0514 c0514M30915 = "file_path".equals(str6) ? m30913(str5, "file_path", null) : null;
+                if (c0514M30915 == null && c3497M21721.f12051) {
+                    c0514M30915 = m30913(str5, "styledText", null);
+                }
+                c0514M30914 = c0514M30915;
+                if (c0514M30914 == null) {
+                    c0514M30914 = m30913(str5, b.d, null);
+                }
+            } else if ("file_path".equals(str6)) {
+                c0514M30914 = m30913(str5, "file_path", null);
+            }
+            return m30914(c3497M21721, c0514M30914);
         }
-        AbstractC11242 abstractC11242M9472 = C3128.m9472(this.f74647.f23408);
-        if (abstractC11242M9472 != null && abstractC11242M9472 == this.f41508.f65436.f77638) {
-            return EnumC4143.f15153;
+        ArrayList arrayList = new ArrayList();
+        int iMo18154 = interfaceC8697.mo18154();
+        C3497 c3497 = c3497;
+        String str7 = "file_path";
+        String str8 = "resource_table_file_path";
+        String str9 = str4;
+        String str10 = "styledText";
+        String str11 = b.d;
+        C3497 c3498 = new C3497(null, null, strM26337, "item_list", false, false, null, null, null, null, null, arrayList, false, iMo18154, null);
+        for (InterfaceC5650 interfaceC5650 : interfaceC8697.values()) {
+            C2795 c2795M21743 = C7972.m21743(this.f40002, interfaceC2731, interfaceC5650.mo16637());
+            C3497 c3497M21722 = C7972.m21721(c1304, interfaceC5650, c2795M21743.f9199, c2795M21743.f9200, strM26337, 0, 0, hashSet, null, null);
+            String str12 = c3497M21722.f12061;
+            String str13 = c3497M21722.f12068;
+            String str14 = str8;
+            String str15 = str9;
+            if (!str14.equals(str15)) {
+                str = str7;
+                C0514 c0514M30916 = str.equals(str13) ? m30913(str12, str, c3497M21722) : null;
+                if (c0514M30916 == null && c3497M21722.f12051) {
+                    str2 = str10;
+                    c0514M30916 = m30913(str12, str2, c3497M21722);
+                } else {
+                    str2 = str10;
+                }
+                if (c0514M30916 == null) {
+                    str3 = str11;
+                    c0514M30913 = m30913(str12, str3, c3497M21722);
+                } else {
+                    str3 = str11;
+                    c0514M30913 = c0514M30916;
+                }
+            } else {
+                str = str7;
+                c0514M30913 = str.equals(str13) ? m30913(str12, str, c3497M21722) : null;
+                str2 = str10;
+                str3 = str11;
+            }
+            if (m30914(c3497, c0514M30913)) {
+                return true;
+            }
+            c3497 = c3497;
+            str9 = str15;
+            str8 = str14;
+            str7 = str;
+            str10 = str2;
+            str11 = str3;
         }
-        return EnumC4143.f15154;
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private C0514 m30913(String str, String str2, C3497 c3497) {
+        C3717 c3717M47696;
+        if (str == null || str.isEmpty() || (c3717M47696 = this.f40005.m47696(str, "resource_table_value")) == null) {
+            return null;
+        }
+        return new C0514(str, c3717M47696, str2, c3497);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private boolean m30914(C3497 c3497, C0514 c0514) {
+        String strReplace;
+        C3717 c3717;
+        int i;
+        if (c0514 == null) {
+            return false;
+        }
+        String str = c0514.f2202;
+        C3717 c3718 = c0514.f2203;
+        int i2 = c3718.f12778;
+        String str2 = c0514.f2204;
+        C10671 c10671 = this.f40009;
+        if (!c10671.f33864 || (i = c10671.f33872) <= 0 || i2 < 0) {
+            strReplace = null;
+        } else {
+            int iMin = Math.min(i, 300);
+            strReplace = C1173.m4316(C1173.m4324(i2, -Math.max(0, iMin / 3), str2), str2.length(), iMin, str2).replace('\n', ' ');
+        }
+        C20651 c20651M47264 = C20651.m47264(c3497, c0514.f2201, str, strReplace);
+        if (c10671.f33865) {
+            c3718.m12102();
+            c3717 = c3718;
+        } else {
+            c3717 = null;
+        }
+        this.f40007 = new C23131("resource", this.f40006, str, c3717, null, this.f40004, c20651M47264, null, null, null);
+        return true;
     }
 }

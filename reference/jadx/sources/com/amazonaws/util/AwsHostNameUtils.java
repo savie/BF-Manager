@@ -6,18 +6,18 @@ import java.net.URI;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import l.C16523;
-import l.C20630;
+import l.C1402;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AwsHostNameUtils {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f822 = Pattern.compile("^(?:.+\\.)?s3[.-]([a-z0-9-]+)$");
+    public static final Pattern f812 = Pattern.compile("^(?:.+\\.)?s3[.-]([a-z0-9-]+)$");
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m738(String str) {
-        Matcher matcher = f822.matcher(str);
+    public static String m732(String str) {
+        Matcher matcher = f812.matcher(str);
         if (matcher.matches()) {
             return matcher.group(1);
         }
@@ -37,31 +37,31 @@ public class AwsHostNameUtils {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m739(String str, String str2) {
-        String strM284;
+    public static String m733(String str, String str2) {
+        String strM278;
         if (str == null) {
             throw new IllegalArgumentException("hostname cannot be null");
         }
-        Iterator it = InternalConfig.Factory.m289().m288().iterator();
+        Iterator it = InternalConfig.Factory.m283().m282().iterator();
         while (true) {
             if (!it.hasNext()) {
-                strM284 = null;
+                strM278 = null;
                 break;
             }
             HostRegexToRegionMapping hostRegexToRegionMapping = (HostRegexToRegionMapping) it.next();
-            if (str.matches(hostRegexToRegionMapping.m283())) {
-                strM284 = hostRegexToRegionMapping.m284();
+            if (str.matches(hostRegexToRegionMapping.m277())) {
+                strM278 = hostRegexToRegionMapping.m278();
                 break;
             }
         }
-        if (strM284 != null) {
-            return strM284;
+        if (strM278 != null) {
+            return strM278;
         }
         if (str.endsWith(".amazonaws.com")) {
-            return m738(C20630.m46498(14, 0, str));
+            return m732(C1402.m5124(14, 0, str));
         }
         if (str.endsWith(".amazonaws.com.cn")) {
-            return m738(C20630.m46498(17, 0, str));
+            return m732(C1402.m5124(17, 0, str));
         }
         if (str2 == null) {
             return "us-east-1";
@@ -72,13 +72,13 @@ public class AwsHostNameUtils {
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m740(URI uri) {
+    public static String m734(URI uri) {
         String host = uri.getHost();
         if (!host.endsWith(".amazonaws.com")) {
-            throw new IllegalArgumentException(C16523.m38890("Cannot parse a service name from an unrecognized endpoint (", host, ")."));
+            throw new IllegalArgumentException(C14442.m34865("Cannot parse a service name from an unrecognized endpoint (", host, ")."));
         }
         String strSubstring = host.substring(0, host.indexOf(".amazonaws.com"));
-        if (strSubstring.endsWith(".s3") || f822.matcher(strSubstring).matches()) {
+        if (strSubstring.endsWith(".s3") || f812.matcher(strSubstring).matches()) {
             return "s3";
         }
         return strSubstring.indexOf(46) == -1 ? strSubstring : strSubstring.substring(0, strSubstring.indexOf(46));

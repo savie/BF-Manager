@@ -1,15 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ֡ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N9BO */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14877 extends C7821 {
-    @Override // l.C7821
+/* JADX INFO: renamed from: l.ܰ᩸֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 075F */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14877 implements InterfaceC15670 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15670 f48612;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15670 f48613;
+
+    public C14877(InterfaceC15670 interfaceC15670, InterfaceC15670 interfaceC15671, C16281 c16281) {
+        this.f48612 = interfaceC15670;
+        this.f48613 = c16281 != null ? new C4437(c16281, interfaceC15671) : interfaceC15671;
+    }
+
+    @Override // l.InterfaceC15670
     /* JADX INFO: renamed from: ۙ */
-    public final void mo20638(int i, int i2, AbstractC16993 abstractC16993, C23344 c23344) {
-        super.mo20638(i, i2, abstractC16993, c23344);
-        C7821 c7821 = new C7821(null);
-        m20643(c23344, c7821, 0);
-        m20639(c7821);
+    public final InterfaceC13433 mo3996() {
+        return new C12640(this);
     }
 }

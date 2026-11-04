@@ -83,7 +83,7 @@
     const-string v2, "Cannot read. Remote side has closed. Tried to read "
 
     .line 0
-    invoke-static {v2, p3, p2, v1, v0}, Ll/۠ۜ᩵;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, p3, p2, v1, v0}, Ll/֡᩷᩸;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 

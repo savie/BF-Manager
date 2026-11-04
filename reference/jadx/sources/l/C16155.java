@@ -1,226 +1,105 @@
 package l;
 
-import java.util.function.Supplier;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ܺ᩶ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 26UL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16155 extends AbstractC0631 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean f52215;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C7605 f52216;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C13625 f52217;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f52218;
-
-    public C16155(Object obj, final int i, final char[] cArr, final int i2, final int i3, C16072 c16072) {
-        super(0, obj);
-        int i4 = 0;
-        boolean z = true;
-        for (int i5 = i2; i5 < i2 + i3; i5++) {
-            char c = cArr[i5];
-            i4 = c == '\n' ? i4 + 1 : i4;
-            if (c > 255) {
-                z = false;
+/* JADX INFO: renamed from: l.ܶܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 91EZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16155 implements InterfaceC6461 {
+    @Override // l.InterfaceC6461
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2387(C13304 c13304, C12426 c12426, C2008 c2008) throws C10254 {
+        boolean zM29458 = true;
+        c13304.m32860(true);
+        C5765 c5765 = new C5765();
+        C5737 c5737M6854 = c2008.m6854("parent");
+        if (c5737M6854 != null) {
+            String strM16798 = c5737M6854.m16798();
+            Integer numM38329 = m38329(strM16798);
+            if (numM38329 != null) {
+                c5765.f19813 = numM38329.intValue();
+                c5765.f19814 = 17;
+            } else {
+                zM29458 = C11730.m29458(strM16798, c5765);
             }
+            if (!zM29458) {
+                throw new C10254(C14442.m34865("Expected integer value: parent=\"", c5737M6854.m16798(), "\""), c5737M6854);
+            }
+            c13304.m32859(c5765.f19813);
         }
-        this.f52218 = i;
-        this.f52215 = z;
-        this.f2727 = i3;
-        this.f2726 = i4;
-        if (c16072 == null) {
-            this.f52216 = null;
-            this.f52217 = new C13625(i, cArr, i2, i3, i4, z);
+        Iterator itM6847 = C2008.m6847(c2008);
+        while (itM6847.hasNext()) {
+            C2008 c2009 = (C2008) itM6847.next();
+            m38330(c13304, c12426, c2009).m11711(m38328(c2009, c5765));
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m38328(C2008 c2008, C5765 c5765) throws C10254 {
+        boolean zM29458;
+        C5737 c5737M6854 = c2008.m6854("id");
+        if (c5737M6854 == null) {
+            return -1;
+        }
+        String strM16798 = c5737M6854.m16798();
+        Integer numM38329 = m38329(strM16798);
+        if (numM38329 != null) {
+            c5765.f19813 = numM38329.intValue();
+            c5765.f19814 = 17;
+            zM29458 = true;
         } else {
-            this.f52216 = c16072.m38091(i3, i4, z, new Supplier() { // from class: l.ۤ᩶ۖ
-                @Override // java.util.function.Supplier
-                public final Object get() {
-                    return C16155.m38240(this.f36007, i, cArr, i2, i3);
-                }
-            });
-            this.f52217 = null;
+            zM29458 = C11730.m29458(strM16798, c5765);
         }
+        if (zM29458) {
+            return c5765.f19813;
+        }
+        throw new C10254(C14442.m34865("Expected integer value: id=\"", c5737M6854.m16798(), "\""), c5737M6854);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ C13625 m38240(C16155 c16155, int i, char[] cArr, int i2, int i3) {
-        return new C13625(i, cArr, i2, i3, c16155.f2726, c16155.f52215);
-    }
-
-    public C16155(Object obj, C7605 c7605) {
-        super(0, obj);
-        this.f52216 = c7605;
-        this.f52217 = null;
-        this.f52218 = c7605.f25160;
-        this.f52215 = c7605.f25155;
-        this.f2727 = c7605.f25157;
-        this.f2726 = c7605.f25161;
-    }
-
-    public C16155(Object obj, C13625 c13625) {
-        super(0, obj);
-        this.f52216 = null;
-        this.f52217 = c13625;
-        this.f52218 = c13625.m33314();
-        this.f52215 = c13625.m33313();
-        this.f2727 = c13625.m33305();
-        this.f2726 = c13625.m33311();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m38243() {
-        return this.f52218;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m38249() {
-        return this.f52215;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Object m38241() {
-        C7605 c7605 = this.f52216;
-        return c7605 == null ? this.f52217 : c7605;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C21093 m38247() {
-        C13625 c13625 = this.f52217;
-        if (c13625 != null) {
-            return new C21093(c13625, null);
+    public static Integer m38329(String str) {
+        if (str.length() == 10 && str.regionMatches(true, 0, "0x", 0, 2)) {
+            str = str.substring(2);
         }
-        C7605 c7605 = this.f52216;
-        return new C21093(null, c7605.f25159.f51982.m26332(c7605));
+        if (str.length() == 8 && C11730.m29453(str)) {
+            return Integer.valueOf(C11730.m29456(str));
+        }
+        return null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final char m38242(int i) {
-        C13625 c13625 = this.f52217;
-        if (c13625 != null) {
-            return c13625.m33306(i);
-        }
-        C21093 c21093M38247 = m38247();
-        try {
-            char cM33306 = c21093M38247.f68721.m33306(i);
-            c21093M38247.close();
-            return cM33306;
-        } catch (Throwable th) {
-            try {
-                c21093M38247.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38245(char[] cArr, int i, int i2) {
-        C13625 c13625 = this.f52217;
-        if (c13625 != null) {
-            c13625.m33309(0, i, cArr, i2);
-            return;
-        }
-        C21093 c21093M38247 = m38247();
-        try {
-            c21093M38247.f68721.m33309(0, i, cArr, i2);
-            c21093M38247.close();
-        } catch (Throwable th) {
-            try {
-                c21093M38247.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16155 m38244(Object obj, final int i, final int i2, final char[] cArr, final int i3) {
-        C21093 c21093M38247 = m38247();
-        try {
-            final C13625 c13625 = c21093M38247.f68721;
-            C7605 c7605 = this.f52216;
-            if (c7605 != null) {
-                int iM33315 = this.f2726 - (c13625.m33315(i2) - c13625.m33315(i));
-                boolean z = this.f52215;
-                for (int i4 = 0; i4 < i3; i4++) {
-                    char c = cArr[i4];
-                    if (c == '\n') {
-                        iM33315++;
-                    }
-                    if (c > 255) {
-                        z = false;
-                    }
-                }
-                C16155 c16155 = new C16155(obj, c7605.f25159.m38091((this.f2727 - (i2 - i)) + i3, iM33315, z, new Supplier() { // from class: l.۟᩶ۖ
-                    @Override // java.util.function.Supplier
-                    public final Object get() {
-                        return c13625.m33316(i, i2, cArr, i3);
-                    }
-                }));
-                c21093M38247.close();
-                return c16155;
-            }
-            C16155 c16156 = new C16155(obj, c13625.m33316(i, i2, cArr, i3));
-            c21093M38247.close();
-            return c16156;
-        } catch (Throwable th) {
-            try {
-                c21093M38247.close();
-                throw th;
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-                throw th;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m38248(int i) {
-        C13625 c13625 = this.f52217;
-        if (c13625 != null) {
-            return c13625.m33315(i);
-        }
-        C21093 c21093M38247 = m38247();
-        try {
-            int iM33315 = c21093M38247.f68721.m33315(i);
-            c21093M38247.close();
-            return iM33315;
-        } catch (Throwable th) {
-            try {
-                c21093M38247.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m38246(int i) {
-        C13625 c13625 = this.f52217;
-        if (c13625 != null) {
-            return c13625.m33312(i);
-        }
-        C21093 c21093M38247 = m38247();
-        try {
-            int iM33312 = c21093M38247.f68721.m33312(i);
-            c21093M38247.close();
-            return iM33312;
-        } catch (Throwable th) {
-            try {
-                c21093M38247.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C3609 m38330(C13304 c13304, C12426 c12426, C2008 c2008) throws C10254 {
+        String strM6853 = c2008.m6853();
+        strM6853.getClass();
+        switch (strM6853) {
+            case "dynamic-attribute":
+                C3609 c3609M54435 = C24361.m54435(c13304, c12426, c2008);
+                c3609M54435.m11709(8);
+                return c3609M54435;
+            case "fraction":
+                return C24361.m54442(c13304, c12426, c2008);
+            case "reference":
+                return C24361.m54434(c13304, c2008, c12426, true);
+            case "string":
+                return C24361.m54439(c13304, c12426, c2008);
+            case "bool":
+                return C24361.m54444(c13304, c12426, c2008);
+            case "attribute":
+                return C24361.m54435(c13304, c12426, c2008);
+            case "color":
+                return C24361.m54440(c13304, c12426, c2008);
+            case "dimen":
+                return C24361.m54445(c13304, c12426, c2008);
+            case "float":
+                return C24361.m54443(c13304, c12426, c2008);
+            case "dynamic-reference":
+                C3609 c3609M54434 = C24361.m54434(c13304, c2008, c12426, false);
+                c3609M54434.m11709(7);
+                return c3609M54434;
+            case "integer":
+                return C24361.m54441(c13304, c12426, c2008);
+            default:
+                throw new C10254("Unknown tag <" + c2008.m6853() + ">", c2008);
         }
     }
 }

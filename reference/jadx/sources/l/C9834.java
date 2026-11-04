@@ -1,28 +1,43 @@
 package l;
 
-import java.util.function.Predicate;
+import java.util.function.BinaryOperator;
+import java.util.function.LongFunction;
 
-/* JADX INFO: renamed from: l.ۢ᩷ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9834 {
+/* JADX INFO: renamed from: l.ۢۗۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9834 extends C20034 {
+    public final /* synthetic */ int k;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f33605;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public /* synthetic */ C9834(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409, LongFunction longFunction, BinaryOperator binaryOperator, int i) {
+        super(abstractC13956, interfaceC8409, longFunction, binaryOperator);
+        this.k = i;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18258 f33606;
+    @Override // l.C20034, l.AbstractC19902
+    public final AbstractC19902 c(InterfaceC8409 interfaceC8409) {
+        switch (this.k) {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+        return new C20034(this, interfaceC8409);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Predicate f33607;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f33608;
-
-    public C9834(C18258 c18258, Predicate predicate, boolean z, int i) {
-        this.f33606 = c18258;
-        this.f33607 = predicate;
-        this.f33608 = z;
-        this.f33605 = i;
+    @Override // l.C20034, l.AbstractC19902
+    public final /* bridge */ /* synthetic */ Object a() {
+        switch (this.k) {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+        return a();
     }
 }

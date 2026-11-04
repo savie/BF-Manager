@@ -1,123 +1,106 @@
 package l;
 
-import java.io.IOException;
-import java.util.EnumSet;
-import java.util.Set;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۚۡᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G4EY */
-/* JADX INFO: loaded from: classes3.dex */
-public class C5253 extends AbstractC10872 {
+/* JADX INFO: renamed from: l.ۙ᩻ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E762 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5253 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public EnumC13015 f18217;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f18501;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public Set f18222;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final int f18502;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f18218 = 5;
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public final String f18503;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f18504;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public byte f18220 = 0;
+    public final long f18505;
+
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public final int f18506;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f18507;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String f18508;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final List f18509;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final long f18510;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final long f18511;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final long f18512;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final int f18513;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final int f18514;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final String f18515;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f18516;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final int f18517;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final String f18518;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f18519;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f18520;
 
     /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public byte[] f18224 = {16, 0, 0, 0};
+    public final int f18521;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public short f18221 = 16;
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public final String f18522;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public short f18219 = 0;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final String f18523;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f18223 = 0;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo14522(C21481 c21481) throws IOException {
-        if (this.f18217 != null) {
-            if (this.f18222 == null) {
-                throw new IllegalStateException("Invalid PFC flag(s): " + this.f18222);
-            }
-            c21481.m48094(this.f18218);
-            c21481.m48094(this.f18220);
-            c21481.m48094((byte) this.f18217.getValue());
-            c21481.m48094((byte) C20799.m46781(this.f18222));
-            c21481.m48097(this.f18224);
-            c21481.m48098(this.f18221);
-            c21481.m48098(0);
-            c21481.m48099(this.f18223);
-            return;
-        }
-        throw new IllegalStateException("Invalid PDU type: " + this.f18217);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final EnumC13015 m14524() {
-        return this.f18217;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Set m14517() {
-        return this.f18222;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m14525() {
-        return this.f18221;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m14518() {
-        return this.f18219;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m14520(EnumC13015 enumC13015) {
-        this.f18217 = enumC13015;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m14519(EnumSet enumSet) {
-        this.f18222 = enumSet;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m14523(short s) {
-        this.f18221 = s;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m14526(int i) {
-        this.f18223 = i;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo14521(C15132 c15132) throws IOException {
-        this.f18218 = c15132.m36282();
-        byte bM36282 = c15132.m36282();
-        this.f18220 = bM36282;
-        if (5 != this.f18218 || bM36282 != 0) {
-            throw new IOException(String.format("Version mismatch: %d.%d != 5.0", Byte.valueOf(this.f18218), Byte.valueOf(this.f18220)));
-        }
-        EnumC13015 enumC13015 = (EnumC13015) C20799.m46783(c15132.m36282(), EnumC13015.class, null);
-        if (enumC13015 != null) {
-            this.f18217 = enumC13015;
-            this.f18222 = C20799.m46782(c15132.m36282(), EnumC3841.class);
-            byte[] bArr = new byte[4];
-            c15132.m36286(bArr);
-            if (bArr[0] != 16) {
-                throw new IOException(String.format("Integer and Character representation mismatch: %d", Byte.valueOf(bArr[0])));
-            }
-            if (bArr[1] == 0) {
-                this.f18224 = bArr;
-                this.f18221 = c15132.m36281();
-                this.f18219 = c15132.m36281();
-                this.f18223 = c15132.m36288();
-                return;
-            }
-            throw new IOException(String.format("Floating-Point representation mismatch: %d", Byte.valueOf(bArr[1])));
-        }
-        throw new IOException(String.format("PDU type invalid: %d", enumC13015));
+    public C5253(String str, String str2, String str3, String str4, String str5, long j, String str6, String str7, String str8, List list, int i, int i2, int i3, int i4, long j2, int i5, long j3, long j4, long j5, String str9, int i6, String str10) {
+        this.f18518 = str;
+        this.f18501 = str2;
+        this.f18515 = str3;
+        this.f18508 = str4;
+        this.f18507 = str5;
+        this.f18504 = j;
+        this.f18519 = str6;
+        this.f18523 = str7;
+        C11972.m30028(str8);
+        this.f18503 = str8;
+        List listM24406 = C9225.m24406(C9225.m24404(list));
+        this.f18509 = listM24406;
+        this.f18517 = C9225.m24404(listM24406);
+        this.f18513 = i;
+        this.f18514 = i2;
+        this.f18521 = i3;
+        this.f18502 = i4;
+        this.f18512 = j2;
+        this.f18506 = i5;
+        this.f18505 = j3;
+        this.f18510 = j4;
+        this.f18511 = j5;
+        this.f18522 = str9;
+        this.f18516 = i6;
+        this.f18520 = str10;
     }
 }

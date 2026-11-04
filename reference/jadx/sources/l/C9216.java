@@ -1,58 +1,208 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.SortedSet;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۡ᩻ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5OR */
+/* JADX INFO: renamed from: l.ۡۜ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: E4FN */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C9216 extends C19799 implements SortedSet {
-    @Override // java.util.SortedSet
-    public final Comparator comparator() {
-        return ((SortedSet) this.f21057).comparator();
+public final /* synthetic */ class C9216 implements Consumer {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f30033;
+
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // java.util.SortedSet
-    public final SortedSet subSet(Object obj, Object obj2) {
-        return new C9216(((SortedSet) this.f21057).subSet(obj, obj2), this.f21056);
-    }
-
-    @Override // java.util.SortedSet
-    public final SortedSet headSet(Object obj) {
-        return new C9216(((SortedSet) this.f21057).headSet(obj), this.f21056);
-    }
-
-    @Override // java.util.SortedSet
-    public final SortedSet tailSet(Object obj) {
-        return new C9216(((SortedSet) this.f21057).tailSet(obj), this.f21056);
-    }
-
-    @Override // java.util.SortedSet
-    public final Object first() {
-        Iterator it = this.f21057.iterator();
-        it.getClass();
-        InterfaceC19010 interfaceC19010 = this.f21056;
-        interfaceC19010.getClass();
-        while (it.hasNext()) {
-            Object next = it.next();
-            if (interfaceC19010.apply(next)) {
-                return next;
-            }
-        }
-        throw new NoSuchElementException();
-    }
-
-    @Override // java.util.SortedSet
-    public final Object last() {
-        SortedSet sortedSetHeadSet = (SortedSet) this.f21057;
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        String str = null;
+        int i = 1234734440;
+        int i2 = AbstractC0116.f1064;
+        int i3 = C2310.f7472;
+        int iM3169 = C0773.m3169("ۜۧ") ^ i2;
+        int i4 = ((iM3169 ^ i3) * (-18285)) ^ (-1647661966);
+        int i5 = -1517332938;
         while (true) {
-            Object objLast = sortedSetHeadSet.last();
-            if (this.f21056.apply(objLast)) {
-                return objLast;
+            i = ((((i ^ i3) * 11579) >> 31) & i4) ^ (iM3169 ^ i5);
+            switch (i) {
+                case -2087017147:
+                case 62413445:
+                    if (C1783.f6087 > 0) {
+                        iM3169 = (i3 - C0619.m2761("۬۫")) * (-101);
+                        i4 = ((iM3169 ^ i2) * 8151) ^ 1234588818;
+                        i5 = -1684557730;
+                    } else {
+                        iM3169 = C0773.m3169("᩺ۜ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 24481) ^ 676878263;
+                        i5 = -1409400396;
+                    }
+                    break;
+                case -1883777956:
+                case -451979104:
+                    C0619.m2763();
+                    C1542.m5459();
+                    iM3169 = C0773.m3169("᩺ۜ") ^ i2;
+                    i4 = ((iM3169 ^ i3) * 24481) ^ 676878263;
+                    i5 = -1409400396;
+                    break;
+                case -1442834886:
+                case -714602990:
+                    if (!C2702.m8876()) {
+                        iM3169 = (i3 - C0619.m2761("۬۫")) * (-101);
+                        i4 = ((iM3169 ^ i2) * 8151) ^ 1234588818;
+                        i5 = -1684557730;
+                    } else {
+                        iM3169 = C0619.m2761("ۢ֨") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-4621)) ^ (-1112884777);
+                        i5 = 707808246;
+                    }
+                    break;
+                case -1425841694:
+                case 774794572:
+                    C3690.m11987();
+                    if (C1146.f4234 >= 0) {
+                        iM3169 = C0773.m3169("۠֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 14259) ^ (-230526537);
+                        i5 = -712340716;
+                    } else {
+                        iM3169 = (i3 - C0619.m2761("۬۫")) * (-101);
+                        i4 = ((iM3169 ^ i2) * 8151) ^ 1234588818;
+                        i5 = -1684557730;
+                    }
+                    break;
+                case -1354810256:
+                case -460119323:
+                    if (RunnableC1848.f6235) {
+                        iM3169 = C0619.m2761("ۢ֨") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-4621)) ^ (-1112884777);
+                        i5 = 707808246;
+                    } else {
+                        iM3169 = C0619.m2761("ܶܿ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 29255) ^ (-1026681466);
+                        i5 = -1437128798;
+                    }
+                    break;
+                case -1344405283:
+                case 2092129195:
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = (i3 - C0619.m2761("۬۫")) * (-101);
+                        i4 = ((iM3169 ^ i2) * 8151) ^ 1234588818;
+                        i5 = -1684557730;
+                    } else {
+                        iM3169 = C0619.m2761("ۡ᩹") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 3721) ^ (-210752852);
+                        i5 = -963064327;
+                    }
+                    break;
+                case -1344043094:
+                case 1787208378:
+                    C17202.m40372();
+                    C3033.m9845();
+                    break;
+                case -1312778605:
+                case -560385373:
+                    str = this.f30033;
+                    if (C2419.m8174() >= 0) {
+                        iM3169 = C0773.m3169("۟ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 11353) ^ (-674194933);
+                        i5 = -1373751368;
+                    } else {
+                        iM3169 = C0619.m2761("ܽ֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 27943) ^ (-618510106);
+                        i5 = -1901973218;
+                    }
+                    break;
+                case -987026549:
+                case 371671537:
+                    if (C3033.f9831 >= 0) {
+                        iM3169 = C0773.m3169("۟ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 11353) ^ (-674194933);
+                        i5 = -1373751368;
+                    } else {
+                        iM3169 = (i3 - C0773.m3169("᩶ܰ")) * 7;
+                        i4 = ((iM3169 ^ i2) * (-14737)) ^ (-1106282097);
+                        i5 = -2096255121;
+                    }
+                    break;
+                case 19311473:
+                case 279587096:
+                    if (C1564.m5509() <= 0) {
+                        iM3169 = C0773.m3169("۠֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 14259) ^ (-230526537);
+                        i5 = -712340716;
+                    } else {
+                        iM3169 = C0773.m3169("ܰۨ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 18319) ^ (-257671229);
+                        i5 = -1243705705;
+                    }
+                    break;
+                case 244548624:
+                case 872600581:
+                    if (C2419.f7754 >= 0) {
+                        iM3169 = C0773.m3169("᩺ۜ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 24481) ^ 676878263;
+                        i5 = -1409400396;
+                    } else {
+                        iM3169 = (i3 - C0619.m2761("ܶ֫")) * 15;
+                        i4 = ((iM3169 ^ i2) * 22481) ^ (-2009699019);
+                        i5 = 601751660;
+                    }
+                    break;
+                case 1011027782:
+                case 1709140730:
+                    if (C20932.f66974 <= 0) {
+                        iM3169 = C0773.m3169("۟ܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 11353) ^ (-674194933);
+                        i5 = -1373751368;
+                    } else {
+                        iM3169 = C0619.m2761("᩷᩸") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-15461)) ^ 929443098;
+                        i5 = -1413237888;
+                    }
+                    break;
+                case 1146715880:
+                case 1485888588:
+                    ((C1956) obj).f6562 = str;
+                    break;
+                case 1472711552:
+                case 2087045682:
+                    if (C3998.m12920()) {
+                        iM3169 = (i2 - C0773.m3169("ܿ᩵")) * (-11);
+                        i4 = ((iM3169 ^ i3) * (-12935)) ^ 1227562611;
+                        i5 = -1217755100;
+                    } else {
+                        iM3169 = C0773.m3169("۠֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 14259) ^ (-230526537);
+                        i5 = -712340716;
+                    }
+                    break;
+                case 1481244790:
+                case 2101611122:
+                    if (C2966.f9654 >= 0) {
+                        iM3169 = C0773.m3169("۠֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 14259) ^ (-230526537);
+                        i5 = -712340716;
+                    } else {
+                        iM3169 = (i2 - C0773.m3169("᩶ܶ")) * (-87);
+                        i4 = ((iM3169 ^ i3) * (-9569)) ^ 1376212558;
+                        i5 = -1811711604;
+                    }
+                    break;
+                default:
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = C0773.m3169("۠֨") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 14259) ^ (-230526537);
+                        i5 = -712340716;
+                    } else {
+                        iM3169 = (C0773.m3169("ܽ۟") + i2) * 29;
+                        i4 = ((iM3169 ^ i3) * (-2243)) ^ (-1932183655);
+                        i5 = 1639690551;
+                    }
+                    break;
             }
-            sortedSetHeadSet = sortedSetHeadSet.headSet(objLast);
+            return;
         }
     }
 }

@@ -1,151 +1,88 @@
 package l;
 
-import java.net.UnknownHostException;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import bin.mt.plus.R;
+import java.util.ArrayList;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ܶ᩵۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 09TZ */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15435 implements InterfaceC16950 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f50300;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f50301;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C11907 f50302;
+/* JADX INFO: renamed from: l.ܳܶܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W6DR */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15435 extends BaseAdapter {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f50303;
+    public final /* synthetic */ C2012 f50281;
 
-    public C15435(C11907 c11907, int i) {
-        this.f50302 = c11907;
-        this.f50301 = i;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f50282;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ArrayList f50283;
+
+    @Override // android.widget.Adapter
+    public final long getItemId(int i) {
+        return i;
     }
 
-    public C15435(C11907 c11907, int i, int i2) {
-        this.f50302 = c11907;
-        this.f50301 = i;
-        this.f50300 = true;
+    @Override // android.widget.BaseAdapter, android.widget.Adapter
+    public final int getViewTypeCount() {
+        return 2;
     }
 
-    @Override // l.InterfaceC18361
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18361 mo36919(Class cls) {
-        if (cls.isAssignableFrom(C15435.class)) {
-            return this;
+    public C15435(C2012 c2012, ArrayList arrayList, int i) {
+        this.f50281 = c2012;
+        this.f50283 = arrayList;
+        this.f50282 = i;
+    }
+
+    @Override // android.widget.Adapter
+    public final int getCount() {
+        return this.f50283.size() + 1;
+    }
+
+    @Override // android.widget.Adapter
+    public final Object getItem(int i) {
+        ArrayList arrayList = this.f50283;
+        if (i < arrayList.size()) {
+            return arrayList.get(i);
         }
         return null;
     }
 
-    @Override // l.InterfaceC18361
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String mo36916() {
-        String str = this.f50302.f39950;
-        this.f50303 = str;
-        int i = 0;
-        if (Character.isDigit(str.charAt(0))) {
-            int length = this.f50303.length();
-            char[] charArray = this.f50303.toCharArray();
-            int i2 = 0;
-            while (i < length) {
-                int i3 = i + 1;
-                if (!Character.isDigit(charArray[i])) {
-                    break;
-                }
-                if (i3 == length && i2 == 3) {
-                    this.f50303 = "*SMBSERVER     ";
-                    break;
-                }
-                if (i3 >= length || charArray[i3] != '.') {
-                    i = i3;
-                } else {
-                    i2++;
-                    i += 2;
-                }
-            }
-        } else {
-            switch (this.f50302.f39951) {
-                case 27:
-                case 28:
-                case 29:
-                    this.f50303 = "*SMBSERVER     ";
-                    break;
-            }
+    @Override // android.widget.BaseAdapter, android.widget.Adapter
+    public final int getItemViewType(int i) {
+        return i < this.f50283.size() ? 0 : 1;
+    }
+
+    @Override // android.widget.Adapter
+    public final View getView(int i, View view, ViewGroup viewGroup) {
+        ArrayList arrayList = this.f50283;
+        int size = arrayList.size();
+        C2012 c2012 = this.f50281;
+        if (i != size) {
+            C5741 c5741 = view instanceof C5741 ? (C5741) view : new C5741(c2012);
+            c5741.m16801((Map.Entry) arrayList.get(i));
+            return c5741;
         }
-        return this.f50303;
-    }
-
-    @Override // l.InterfaceC18361
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo36918(InterfaceC19067 interfaceC19067) {
-        String str = this.f50303;
-        if (str == this.f50302.f39950) {
-            this.f50303 = "*SMBSERVER     ";
-        } else if ("*SMBSERVER     ".equals(str)) {
-            try {
-                C15435[] c15435ArrM18732 = ((RunnableC6967) interfaceC19067.mo29450()).m18732(this);
-                if (this.f50302.f39951 == 29) {
-                    for (C15435 c15435 : c15435ArrM18732) {
-                        if (c15435.f50302.f39951 == 32) {
-                            return c15435.mo36921();
-                        }
-                    }
-                    return null;
-                }
-                if (this.f50300) {
-                    this.f50303 = null;
-                    return mo36921();
-                }
-            } catch (UnknownHostException unused) {
-                this.f50303 = null;
+        if (view != null) {
+            return view;
+        }
+        LinearLayout linearLayout = new LinearLayout(c2012.getContext());
+        C17717 c17717 = c2012.f6700;
+        int i2 = c2012.f6716 ? R.string.MT_Protector : R.string.MT_Protector;
+        final int i3 = this.f50282;
+        c17717.m41489(linearLayout, i2, new Runnable() { // from class: l.ᩴܶܳ
+            @Override // java.lang.Runnable
+            public final void run() {
+                C2012 c2013 = this.f64061.f50281;
+                c2013.f6716 = !c2013.f6716;
+                c2013.m6913(i3);
             }
-        } else {
-            this.f50303 = null;
-        }
-        return this.f50303;
-    }
-
-    @Override // l.InterfaceC18361
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String mo36921() {
-        if (this.f50302.m29701()) {
-            return mo36917();
-        }
-        return this.f50302.f39950;
-    }
-
-    @Override // l.InterfaceC18361
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo36917() {
-        StringBuilder sb = new StringBuilder();
-        int i = this.f50301;
-        sb.append((i >>> 24) & 255);
-        sb.append(".");
-        sb.append((i >>> 16) & 255);
-        sb.append(".");
-        sb.append((i >>> 8) & 255);
-        sb.append(".");
-        sb.append(i & 255);
-        return sb.toString();
-    }
-
-    @Override // l.InterfaceC16950
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo36920() {
-        return this.f50302.f39951;
-    }
-
-    public final int hashCode() {
-        return this.f50301;
-    }
-
-    public final boolean equals(Object obj) {
-        return obj != null && (obj instanceof C15435) && ((C15435) obj).f50301 == this.f50301;
-    }
-
-    public final String toString() {
-        return this.f50302.toString() + "/" + mo36917();
+        });
+        c2012.f6700.m41489(linearLayout, R.string.MT_Protector, new RunnableC13815(2, arrayList));
+        return linearLayout;
     }
 }

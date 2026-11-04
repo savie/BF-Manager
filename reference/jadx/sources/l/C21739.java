@@ -1,31 +1,19 @@
 package l;
 
-import android.text.TextPaint;
-import android.text.style.CharacterStyle;
-import android.text.style.UpdateAppearance;
+import java.io.Closeable;
 
-/* JADX INFO: renamed from: l.᩸ᩳۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q983 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21739 extends CharacterStyle implements UpdateAppearance {
+/* JADX INFO: renamed from: l.᩷֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3IWR */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21739 implements Closeable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f70465;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f69344;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f70466;
-
-    public C21739(int i, int i2) {
-        this.f70466 = i;
-        this.f70465 = i2;
-    }
-
-    @Override // android.text.style.CharacterStyle
-    public final void updateDrawState(TextPaint textPaint) {
-        textPaint.setColor(this.f70466);
-        int i = this.f70465;
-        if (((-16777216) & i) != 0) {
-            textPaint.bgColor = i;
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final synchronized void close() {
+        if (!this.f69344) {
+            this.f69344 = true;
         }
     }
 }

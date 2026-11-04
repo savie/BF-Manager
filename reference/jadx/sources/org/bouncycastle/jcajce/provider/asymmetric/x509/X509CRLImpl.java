@@ -23,8 +23,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C0561;
-import l.C9013;
+import l.C11958;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -46,7 +46,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.jce.X509Principal;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class X509CRLImpl extends X509CRL {
     public JcaJceHelper bcHelper;
     public CertificateList c;
@@ -180,7 +180,7 @@ public abstract class X509CRLImpl extends X509CRL {
         if (setLoadCRLEntries.isEmpty()) {
             return null;
         }
-        return C0561.unmodifiableSet(setLoadCRLEntries);
+        return C4681.unmodifiableSet(setLoadCRLEntries);
     }
 
     @Override // java.security.cert.X509CRL
@@ -391,7 +391,7 @@ public abstract class X509CRLImpl extends X509CRL {
                 checkSignature(publicKey, signatureCreateSignature, ASN1Primitive.fromByteArray(bArr), getSignature());
                 return;
             } catch (IOException e2) {
-                throw new SignatureException(C9013.m23329(e2, new StringBuilder("cannot decode signature parameters: ")));
+                throw new SignatureException(C11958.m29932(e2, new StringBuilder("cannot decode signature parameters: ")));
             }
         }
         ASN1Sequence aSN1Sequence3 = ASN1Sequence.getInstance(this.c.getSignatureAlgorithm().getParameters());

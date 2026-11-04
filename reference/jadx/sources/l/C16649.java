@@ -1,42 +1,46 @@
 package l;
 
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ܽ۫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: X4HD */
+/* JADX INFO: renamed from: l.ܺۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: EA1R */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16649 implements InterfaceC17379 {
+public final class C16649 implements InterfaceC4145 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20164 f53374;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f53794;
 
-    public C16649(C20164 c20164) {
-        this.f53374 = c20164;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public long f53795;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public long f53796;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f53797;
+
+    @Override // l.InterfaceC4145
+    /* JADX INFO: renamed from: ᩸ */
+    public final long mo13272() {
+        return this.f53795 * ((long) this.f53794) * ((long) this.f53797);
     }
 
-    @Override // l.InterfaceC17379
-    /* JADX INFO: renamed from: ܽ */
-    public final void mo2650() {
-        this.f53374.m45588(C16737.m39264(R.string.MT_Protector, "V1"));
-    }
-
-    @Override // l.InterfaceC17379
+    @Override // l.InterfaceC2149
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2647(boolean z, boolean z2) {
-        this.f53374.m45588(C12441.m30913(z, z2));
+    public final int mo6138(int i, int i2, byte[] bArr) {
+        this.f53795 = C0481.m2320(i, bArr);
+        this.f53796 = C0481.m2320(i + 8, bArr);
+        this.f53794 = C0481.m2322(i + 16, bArr);
+        this.f53797 = C0481.m2322(i + 20, bArr);
+        return (i + 24) - i;
     }
 
-    @Override // l.InterfaceC17379
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2646(int i, int i2) {
-        C20164 c20164 = this.f53374;
-        c20164.m45591(i);
-        c20164.m45599(i2);
-    }
-
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f53374.m5824();
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbInfoAllocation[alloc=");
+        sb.append(this.f53795);
+        sb.append(",free=");
+        sb.append(this.f53796);
+        sb.append(",sectPerAlloc=");
+        sb.append(this.f53794);
+        sb.append(",bytesPerSect=");
+        return new String(C12669.m31437(this.f53797, "]", sb));
     }
 }

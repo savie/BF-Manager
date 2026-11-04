@@ -1,20 +1,21 @@
 package l;
 
-import android.content.Context;
-import android.graphics.Rect;
-import android.util.AttributeSet;
-import android.widget.FrameLayout;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۧܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 14HU */
+/* JADX INFO: renamed from: l.ۤᩴ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: HAIH */
 /* JADX INFO: loaded from: classes3.dex */
-public class C11069 extends FrameLayout {
-    public C11069(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-    }
+public final class C11069 {
 
-    @Override // android.view.View
-    public final boolean fitSystemWindows(Rect rect) {
-        return super.fitSystemWindows(rect);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f34913;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f34914;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public IOException f34915;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public volatile boolean f34916;
 }

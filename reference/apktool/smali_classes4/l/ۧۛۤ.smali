@@ -1,41 +1,14 @@
-.class public final synthetic Ll/ۧۛۤ;
-.super Ljava/lang/Object;
-.source "S424"
-
-# interfaces
-.implements Ljava/util/function/Supplier;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/᩹᩵ۤ;
+.class public final Ll/ۧۛۤ;
+.super Ll/ۚۛۤ;
+.source "Z6QT"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩹᩵ۤ;)V
+.method public constructor <init>([I)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۧۛۤ;->ܺ:Ll/᩹᩵ۤ;
+    .line 1810
+    invoke-direct {p0, p1}, Ll/ۚۛۤ;-><init>([I)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Ll/ۧۛۤ;->ܺ:Ll/᩹᩵ۤ;
-
-    .line 460
-    iget-object v0, v0, Ll/᩻᩵ۤ;->ۛ:Ll/᩻᩵ۤ;
-
-    invoke-virtual {v0}, Ll/᩻᩵ۤ;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

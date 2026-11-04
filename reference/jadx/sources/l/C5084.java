@@ -1,26 +1,35 @@
 package l;
 
-import android.view.View;
-
-/* JADX INFO: renamed from: l.ۚۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F1OQ */
+/* JADX INFO: renamed from: l.ۙᩳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L7VN */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5084 implements InterfaceC8601 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0850 f17737;
-
-    public C5084(C0850 c0850) {
-        this.f17737 = c0850;
+public final class C5084 extends AbstractC22238 {
+    @Override // l.InterfaceC21360
+    public final int getBlockSize() {
+        return 32;
     }
 
-    @Override // l.InterfaceC8601
-    public final boolean perform(View view, AbstractC6483 abstractC6483) {
-        int i = ((C21312) view).f69354 - 1;
-        C21312 c21312 = this.f17737.f3495;
-        if (c21312.m47805()) {
-            c21312.m47803(i, true);
-        }
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ boolean mo3925() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩴ */
+    public final /* bridge */ /* synthetic */ boolean mo3927() {
         return true;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* bridge */ /* synthetic */ int mo3928() {
+        return 16;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩸ */
+    public final /* bridge */ /* synthetic */ int mo3930() {
+        return 16;
     }
 }

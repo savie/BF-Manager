@@ -1,50 +1,70 @@
 package l;
 
-import com.umeng.commonsdk.statistics.UMErrorCode;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۛ֡ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T6PH */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5701 {
+/* JADX INFO: renamed from: l.ۚܰᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 313O */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5701 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C5701 f19439 = new C5701("", "");
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1972 f19683;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f19440;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public ArrayList f19684;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f19441;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f19442;
+    public C5701(C1972 c1972) {
+        this.f19683 = c1972;
+    }
 
-    public C5701(String str, String str2) {
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) != ' ' && str.charAt(i) != '\t') {
-                throw new IllegalArgumentException("Base indent must contain only spaces or tabs");
-            }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        C1972 c1972 = this.f19683;
+        this.f19684 = C25093.m55913(c1972.f6619, c1972.f6614, c1972.f6618);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        C1972 c1972 = this.f19683;
+        C4955 c4955 = c1972.f6615;
+        C25093 c25093 = c1972.f6619;
+        if (c25093.f81151 || !c25093.f81140.m22434()) {
+            return;
         }
-        if (!str2.isEmpty() && !str2.equals("\n") && !str2.equals("\r\n") && !str2.equals("\r")) {
-            throw new IllegalArgumentException("Unsupported line ending");
+        c1972.f6621 = false;
+        c1972.f6623 = true;
+        c4955.f17245 = this.f19684;
+        c4955.m15157();
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        C1972 c1972 = this.f19683;
+        C25093 c25093 = c1972.f6619;
+        if (c25093.f81151 || !c25093.f81140.m22434()) {
+            return;
         }
-        this.f19441 = UMErrorCode.E_UM_BE_NOT_MAINPROCESS;
-        this.f19440 = str;
-        this.f19442 = str2;
+        c1972.f6621 = false;
+        c1972.f6617 = true;
+        c1972.m6792();
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m15728() {
-        return this.f19441;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m15727() {
-        return this.f19440;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m15729() {
-        return this.f19442;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        C1972 c1972 = this.f19683;
+        C25093 c25093 = c1972.f6619;
+        if (c25093.f81146 == c1972) {
+            c25093.f81146 = null;
+        }
+        C25093.m55929(c25093);
     }
 }

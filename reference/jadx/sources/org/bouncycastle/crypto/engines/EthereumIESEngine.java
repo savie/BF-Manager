@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.engines;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.crypto.BasicAgreement;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -29,7 +29,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EthereumIESEngine {
     public byte[] IV;
     public byte[] V;
@@ -368,7 +368,7 @@ public class EthereumIESEngine {
                 this.pubParam = this.keyParser.readKey(byteArrayInputStream);
                 this.V = Arrays.copyOfRange(bArr, i, (i2 - byteArrayInputStream.available()) + i);
             } catch (IOException e) {
-                throw new InvalidCipherTextException(C9013.m23329(e, new StringBuilder("unable to recover ephemeral public key: ")), e);
+                throw new InvalidCipherTextException(C11958.m29932(e, new StringBuilder("unable to recover ephemeral public key: ")), e);
             } catch (IllegalArgumentException e2) {
                 throw new InvalidCipherTextException("unable to recover ephemeral public key: " + e2.getMessage(), e2);
             }

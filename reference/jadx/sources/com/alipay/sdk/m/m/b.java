@@ -13,11 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
-import l.C12278;
-import l.C15489;
-import l.C1679;
-import l.C22697;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C20196;
+import l.C24770;
+import l.C3188;
+import l.C4794;
+import l.C8947;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -67,7 +67,7 @@ public class b {
     public static final String k0 = "LogHkLoginByIntent";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77909l = "biz";
+    public static final String f82025l = "biz";
     public static final String l0 = "SchemePayWrongHashEx";
     public static final String m = "cp";
     public static final String m0 = "LogAppFetchConfigTimeout";
@@ -192,11 +192,11 @@ public class b {
     }
 
     public void a(String str, String str2, Throwable th, String str3) {
-        d(str, str2, C1679.m5594(str3, ": ", a(th)));
+        d(str, str2, C20196.m46451(str3, ": ", a(th)));
     }
 
     public void a(String str, String str2, String str3) {
-        b("", str, C1679.m5594(str2, "|", str3));
+        b("", str, C20196.m46451(str2, "|", str3));
     }
 
     public void a(String str, String str2) {
@@ -242,15 +242,15 @@ public class b {
         String strC = c(this.h);
         String strC2 = c(this.i);
         String str8 = this.j;
-        StringBuilder sbM30515 = C12278.m30515("[(", str2, "),(", strA, "),(");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sbM30515, str3, "),(", str4, "),(");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sbM30515, str5, "),(", str6, "),(");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sbM30515, str7, "),(", strC, "),(");
-        sbM30515.append(strC2);
-        sbM30515.append("),(");
-        sbM30515.append(str8);
-        sbM30515.append(")]");
-        return sbM30515.toString();
+        StringBuilder sbM10406 = C3188.m10406("[(", str2, "),(", strA, "),(");
+        C4794.m14774(sbM10406, str3, "),(", str4, "),(");
+        C4794.m14774(sbM10406, str5, "),(", str6, "),(");
+        C4794.m14774(sbM10406, str7, "),(", strC, "),(");
+        sbM10406.append(strC2);
+        sbM10406.append("),(");
+        sbM10406.append(str8);
+        sbM10406.append(")]");
+        return sbM10406.toString();
     }
 
     public static String a(String str) {
@@ -300,7 +300,7 @@ public class b {
     }
 
     public static String b() {
-        return C1679.m5594(e(), ",", new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new Date()));
+        return C20196.m46451(e(), ",", new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new Date()));
     }
 
     public static String b(Context context) {
@@ -315,7 +315,7 @@ public class b {
         sb.append(strB2);
         sb.append(",");
         sb.append(strB3);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ",-,0,", strB4, ",gw,", strB5);
+        C4794.m14774(sb, ",-,0,", strB4, ",gw,", strB5);
         sb.append(",-");
         return sb.toString();
     }
@@ -370,7 +370,7 @@ public class b {
     public static String a(long j) {
         String strB = b("15.8.40");
         String strB2 = b("h.a.3.8.40");
-        return C22697.m50267(C12278.m30515("android,3,", strB, ",", strB2, ",com.alipay.mcpay,5.0,-,"), C15489.m37074(j, "~"), ",-");
+        return C8947.m23910(C3188.m10406("android,3,", strB, ",", strB2, ",com.alipay.mcpay,5.0,-,"), C24770.m55292(j, "~"), ",-");
     }
 
     public static String a() {

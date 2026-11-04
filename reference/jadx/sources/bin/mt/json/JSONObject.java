@@ -9,22 +9,22 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C0561;
-import l.C13958;
-import l.C2122;
-import l.C4323;
-import l.C6356;
-import l.C9885;
+import l.C12351;
+import l.C1486;
+import l.C14909;
+import l.C19385;
+import l.C4681;
+import l.C8198;
 
 /* JADX INFO: loaded from: classes.dex */
 public class JSONObject extends JSONValue implements Iterable {
     public final List names;
-    public transient C9885 table;
+    public transient C19385 table;
     public final List values;
 
     private synchronized void readObject(ObjectInputStream objectInputStream) {
         objectInputStream.defaultReadObject();
-        this.table = new C9885();
+        this.table = new C19385();
         updateHashIndex();
     }
 
@@ -41,7 +41,7 @@ public class JSONObject extends JSONValue implements Iterable {
     public JSONObject() {
         this.names = new ArrayList();
         this.values = new ArrayList();
-        this.table = new C9885();
+        this.table = new C19385();
     }
 
     public JSONObject(String str) {
@@ -49,7 +49,7 @@ public class JSONObject extends JSONValue implements Iterable {
         if (str == null) {
             throw new NullPointerException("source is null");
         }
-        new JSONParser(new C6356()).parseObject(this, str);
+        new JSONParser(new C14909()).parseObject(this, str);
     }
 
     public JSONObject(JSONObject jSONObject) {
@@ -61,13 +61,13 @@ public class JSONObject extends JSONValue implements Iterable {
             throw new NullPointerException("object is null");
         }
         if (z) {
-            this.names = C0561.unmodifiableList(jSONObject.names);
-            this.values = C0561.unmodifiableList(jSONObject.values);
+            this.names = C4681.unmodifiableList(jSONObject.names);
+            this.values = C4681.unmodifiableList(jSONObject.values);
         } else {
             this.names = new ArrayList(jSONObject.names);
             this.values = new ArrayList(jSONObject.values);
         }
-        this.table = new C9885();
+        this.table = new C19385();
         updateHashIndex();
     }
 
@@ -112,7 +112,7 @@ public class JSONObject extends JSONValue implements Iterable {
         if (jSONValue == null) {
             throw new NullPointerException("value is null");
         }
-        this.table.m24977(str, this.names.size());
+        this.table.m44829(str, this.names.size());
         this.names.add(str);
         this.values.add(jSONValue);
         return this;
@@ -185,7 +185,7 @@ public class JSONObject extends JSONValue implements Iterable {
             this.values.set(iIndexOf, jSONValue);
             return this;
         }
-        this.table.m24977(str, this.names.size());
+        this.table.m44829(str, this.names.size());
         this.names.add(str);
         this.values.add(jSONValue);
         return this;
@@ -197,7 +197,7 @@ public class JSONObject extends JSONValue implements Iterable {
         }
         int iIndexOf = indexOf(str);
         if (iIndexOf != -1) {
-            this.table.m24976(iIndexOf);
+            this.table.m44828(iIndexOf);
             this.names.remove(iIndexOf);
             this.values.remove(iIndexOf);
         }
@@ -350,31 +350,31 @@ public class JSONObject extends JSONValue implements Iterable {
     }
 
     public List names() {
-        return C0561.unmodifiableList(this.names);
+        return C4681.unmodifiableList(this.names);
     }
 
     @Override // java.lang.Iterable
     public Iterator iterator() {
-        return new C2122(this, this.names.iterator(), this.values.iterator());
+        return new C8198(this, this.names.iterator(), this.values.iterator());
     }
 
     @Override // bin.mt.json.JSONValue
-    public void write(C4323 c4323) throws IOException {
-        c4323.mo12160();
+    public void write(C1486 c1486) throws IOException {
+        c1486.mo5302();
         Iterator it = this.names.iterator();
         Iterator it2 = this.values.iterator();
         if (it.hasNext()) {
-            c4323.m12157((String) it.next());
-            c4323.mo12150();
-            ((JSONValue) it2.next()).write(c4323);
+            c1486.m5300((String) it.next());
+            c1486.mo5307();
+            ((JSONValue) it2.next()).write(c1486);
             while (it.hasNext()) {
-                c4323.mo12149();
-                c4323.m12157((String) it.next());
-                c4323.mo12150();
-                ((JSONValue) it2.next()).write(c4323);
+                c1486.mo5301();
+                c1486.m5300((String) it.next());
+                c1486.mo5307();
+                ((JSONValue) it2.next()).write(c1486);
             }
         }
-        c4323.mo12154();
+        c1486.mo5303();
     }
 
     @Override // bin.mt.json.JSONValue
@@ -395,14 +395,14 @@ public class JSONObject extends JSONValue implements Iterable {
     }
 
     public int indexOf(String str) {
-        int iM24975 = this.table.m24975(str);
-        return (iM24975 == -1 || !str.equals(this.names.get(iM24975))) ? this.names.lastIndexOf(str) : iM24975;
+        int iM44827 = this.table.m44827(str);
+        return (iM44827 == -1 || !str.equals(this.names.get(iM44827))) ? this.names.lastIndexOf(str) : iM44827;
     }
 
     private void updateHashIndex() {
         int size = this.names.size();
         for (int i = 0; i < size; i++) {
-            this.table.m24977((String) this.names.get(i), i);
+            this.table.m44829((String) this.names.get(i), i);
         }
     }
 
@@ -424,7 +424,7 @@ public class JSONObject extends JSONValue implements Iterable {
         }
 
         public int hashCode() {
-            return this.value.hashCode() + C13958.m33812(31, 31, this.name);
+            return this.value.hashCode() + C12351.m30817(31, 31, this.name);
         }
 
         public boolean equals(Object obj) {

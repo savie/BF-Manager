@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.RawAgreement;
 import org.bouncycastle.crypto.params.XDHUPrivateParameters;
 import org.bouncycastle.crypto.params.XDHUPublicParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class XDHUnifiedAgreement implements RawAgreement {
     public XDHUPrivateParameters privParams;
     public final RawAgreement xAgreement;

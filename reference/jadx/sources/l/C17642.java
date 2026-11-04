@@ -1,159 +1,80 @@
 package l;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ܿ᩹ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 246 */
+/* JADX INFO: renamed from: l.ܽܳۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17642 extends C21170 implements InterfaceC12704, InterfaceC4464 {
-    public static final long serialVersionUID = -7046029254386353129L;
+public final class C17642 implements InterfaceC9437 {
+    public final /* synthetic */ InterfaceC17116 a;
+    public final /* synthetic */ InterfaceC9437 b;
+    public final /* synthetic */ InterfaceC8912 c;
+    public final /* synthetic */ AbstractC22338 d;
 
-    @Override // java.util.Map
-    @Deprecated
-    public final boolean containsValue(Object obj) {
-        return false;
+    @Override // l.InterfaceC9437
+    public final /* synthetic */ int i(InterfaceC16831 interfaceC16831) {
+        return AbstractC17577.a(this, interfaceC16831);
     }
 
-    @Override // l.C21170, java.util.Map
-    public final int hashCode() {
-        return 0;
+    public C17642(InterfaceC17116 interfaceC17116, InterfaceC9437 interfaceC9437, InterfaceC8912 interfaceC8912, AbstractC22338 abstractC22338) {
+        this.a = interfaceC17116;
+        this.b = interfaceC9437;
+        this.c = interfaceC8912;
+        this.d = abstractC22338;
     }
 
-    @Override // java.util.Map
-    public final boolean isEmpty() {
-        return true;
+    @Override // l.InterfaceC9437
+    public final boolean d(InterfaceC16831 interfaceC16831) {
+        InterfaceC17116 interfaceC17116 = this.a;
+        if (interfaceC17116 != null && interfaceC16831.isDateBased()) {
+            return interfaceC17116.d(interfaceC16831);
+        }
+        return this.b.d(interfaceC16831);
     }
 
-    @Override // java.util.Map, l.InterfaceC4464
-    public /* synthetic */ void replaceAll(BiFunction biFunction) {
-        C1972.$default$replaceAll(this, biFunction);
+    @Override // l.InterfaceC9437
+    public final C23545 k(InterfaceC16831 interfaceC16831) {
+        InterfaceC17116 interfaceC17116 = this.a;
+        if (interfaceC17116 != null && interfaceC16831.isDateBased()) {
+            return interfaceC17116.k(interfaceC16831);
+        }
+        return this.b.k(interfaceC16831);
     }
 
-    @Override // l.C21170
+    @Override // l.InterfaceC9437
+    public final long C(InterfaceC16831 interfaceC16831) {
+        InterfaceC17116 interfaceC17116 = this.a;
+        if (interfaceC17116 != null && interfaceC16831.isDateBased()) {
+            return interfaceC17116.C(interfaceC16831);
+        }
+        return this.b.C(interfaceC16831);
+    }
+
+    @Override // l.InterfaceC9437
+    public final Object P(C14435 c14435) {
+        if (c14435 == AbstractC17577.b) {
+            return this.c;
+        }
+        if (c14435 == AbstractC17577.a) {
+            return this.d;
+        }
+        if (c14435 == AbstractC17577.c) {
+            return this.b.P(c14435);
+        }
+        return c14435.g(this);
+    }
+
     public final String toString() {
-        return "{}";
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object compute(Object obj, BiFunction biFunction) {
-        return (Float) C1972.$default$compute(this, (Integer) obj, biFunction);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object computeIfAbsent(Object obj, Function function) {
-        return (Float) C1972.$default$computeIfAbsent(this, (Integer) obj, function);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object computeIfPresent(Object obj, BiFunction biFunction) {
-        return (Float) C1972.$default$computeIfPresent(this, (Integer) obj, biFunction);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object merge(Object obj, Object obj2, BiFunction biFunction) {
-        return (Float) C1972.$default$merge(this, (Integer) obj, (Float) obj2, biFunction);
-    }
-
-    @Override // java.util.Map
-    public final Object put(Object obj, Object obj2) {
-        return C10588.m26762(this, (Integer) obj, (Float) obj2);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object putIfAbsent(Object obj, Object obj2) {
-        return (Float) C1972.$default$putIfAbsent(this, (Integer) obj, (Float) obj2);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object replace(Object obj, Object obj2) {
-        return (Float) C1972.$default$replace(this, (Integer) obj, (Float) obj2);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final boolean replace(Object obj, Object obj2, Object obj3) {
-        return C1972.$default$replace(this, (Integer) obj, (Float) obj2, (Float) obj3);
-    }
-
-    @Override // l.InterfaceC12704
-    /* JADX INFO: renamed from: ܳ */
-    public final InterfaceC18660 mo10715() {
-        return C8783.f30203;
-    }
-
-    @Override // java.util.Map
-    public final Set keySet() {
-        return C3551.f13068;
-    }
-
-    @Override // java.util.Map
-    public final Collection values() {
-        return C4444.f15833;
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    @Deprecated
-    public final Object getOrDefault(Object obj, Object obj2) {
-        return (Float) obj2;
-    }
-
-    @Override // java.util.Map
-    public final void putAll(Map map) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map
-    public final Set entrySet() {
-        return mo10715();
-    }
-
-    @Override // l.C21170
-    public final Object clone() {
-        return C11293.f38131;
-    }
-
-    @Override // l.AbstractC21378, l.InterfaceC7765, l.InterfaceC6456
-    public final Float get(Object obj) {
-        return C10588.m26763(this, obj);
-    }
-
-    @Override // l.AbstractC21378, l.InterfaceC6456
-    public final Object get(Object obj) {
-        return C10588.m26763(this, obj);
-    }
-
-    @Override // l.C21170, java.util.Map
-    public final boolean equals(Object obj) {
-        if (obj instanceof Map) {
-            return ((Map) obj).isEmpty();
+        String str;
+        String str2 = "";
+        InterfaceC8912 interfaceC8912 = this.c;
+        if (interfaceC8912 != null) {
+            str = " with chronology " + interfaceC8912;
+        } else {
+            str = "";
         }
-        return false;
-    }
-
-    @Override // l.AbstractC21378, l.InterfaceC6456
-    public final boolean containsKey(Object obj) {
-        if (obj == null) {
-            return false;
+        AbstractC22338 abstractC22338 = this.d;
+        if (abstractC22338 != null) {
+            str2 = " with zone " + abstractC22338;
         }
-        return false;
-    }
-
-    @Override // java.util.Map
-    public final Object remove(Object obj) {
-        return C10588.m26764(this, obj);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final void forEach(BiConsumer biConsumer) {
-        C1972.$default$forEach(this, biConsumer);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final boolean remove(Object obj, Object obj2) {
-        return C1972.$default$remove(this, obj, obj2);
+        return this.b + str + str2;
     }
 }

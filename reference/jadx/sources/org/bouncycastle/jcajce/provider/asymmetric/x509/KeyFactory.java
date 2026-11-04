@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyFactory extends KeyFactorySpi {
     @Override // java.security.KeyFactorySpi
     public PrivateKey engineGeneratePrivate(KeySpec keySpec) throws InvalidKeySpecException {

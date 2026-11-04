@@ -1,178 +1,93 @@
 .class public final Ll/۟ܽ᩵;
 .super Ljava/lang/Object;
-.source "55O1"
+.source "H6Q8"
+
+
+# static fields
+.field public static final ۙ:J
+
+.field public static final ۤ:Ll/۟ܺ᩵;
+
+.field public static final ᩷:Lsun/misc/Unsafe;
 
 
 # direct methods
-.method public static ۙ(Ll/۫֡᩵;Ll/᩷ܽ᩵;)Ll/ۡܽ᩵;
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 33
-    sget-object v0, Ll/ۤܽ᩵;->ۙ:[I
+    .line 2609
+    new-instance v0, Ll/۟ܺ᩵;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0}, Ll/۟ܺ᩵;-><init>()V
 
-    move-result p1
+    sput-object v0, Ll/۟ܽ᩵;->ۤ:Ll/۟ܺ᩵;
 
-    aget p1, v0, p1
+    .line 2625
+    sget-object v0, Ll/ۚܶ᩵;->ۙ:Lsun/misc/Unsafe;
 
-    packed-switch p1, :pswitch_data_0
+    sput-object v0, Ll/۟ܽ᩵;->᩷:Lsun/misc/Unsafe;
 
-    const/4 p0, 0x0
+    .line 2629
+    :try_start_0
+    const-class v1, Ll/۟ܺ᩵;
 
-    return-object p0
+    const-string v2, "\u06d9"
 
-    .line 65
-    :pswitch_0
-    new-instance p1, Ll/۫᩷᩵;
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-direct {p1, p0}, Ll/۫᩷᩵;-><init>(Ll/۫֡᩵;)V
+    move-result-object v1
 
-    return-object p1
+    invoke-virtual {v0, v1}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
-    .line 63
-    :pswitch_1
-    new-instance p1, Ll/ܿ֡᩵;
+    move-result-wide v0
 
-    invoke-direct {p1, p0}, Ll/ܿ֡᩵;-><init>(Ll/۫֡᩵;)V
+    sput-wide v0, Ll/۟ܽ᩵;->ۙ:J
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-void
 
-    .line 61
-    :pswitch_2
-    new-instance p1, Ll/ܿ᩷᩵;
+    :catch_0
+    move-exception v0
 
-    invoke-direct {p1, p0}, Ll/ܿ᩷᩵;-><init>(Ll/۫֡᩵;)V
+    .line 2631
+    new-instance v1, Ljava/lang/ExceptionInInitializerError;
 
-    return-object p1
+    invoke-direct {v1, v0}, Ljava/lang/ExceptionInInitializerError;-><init>(Ljava/lang/Throwable;)V
 
-    .line 59
-    :pswitch_3
-    new-instance p1, Ll/ܺ֡᩵;
+    throw v1
+.end method
 
-    invoke-direct {p1, p0}, Ll/ܺ֡᩵;-><init>(Ll/۫֡᩵;)V
+.method public static ۙ()V
+    .locals 5
 
-    return-object p1
+    .line 2618
+    sget-object v0, Ll/۟ܽ᩵;->᩷:Lsun/misc/Unsafe;
 
-    .line 57
-    :pswitch_4
-    new-instance p1, Ll/᩻ܽ᩵;
+    sget-wide v1, Ll/۟ܽ᩵;->ۙ:J
 
-    invoke-direct {p1, p0}, Ll/᩻ܽ᩵;-><init>(Ll/۫֡᩵;)V
+    const/4 v3, 0x0
 
-    return-object p1
+    sget-object v4, Ll/۟ܽ᩵;->ۤ:Ll/۟ܺ᩵;
 
-    .line 55
-    :pswitch_5
-    new-instance p1, Ll/ᩳ֡᩵;
+    invoke-virtual {v0, v4, v1, v2, v3}, Lsun/misc/Unsafe;->putIntVolatile(Ljava/lang/Object;JI)V
 
-    .line 76
-    invoke-direct {p1, p0}, Ll/ۡܽ᩵;-><init>(Ll/۫֡᩵;)V
+    return-void
+.end method
 
-    return-object p1
+.method public static ᩷()V
+    .locals 5
 
-    .line 53
-    :pswitch_6
-    new-instance p1, Ll/ۗ᩷᩵;
+    .line 2615
+    sget-object v0, Ll/۟ܽ᩵;->᩷:Lsun/misc/Unsafe;
 
-    invoke-direct {p1, p0}, Ll/ۗ᩷᩵;-><init>(Ll/۫֡᩵;)V
+    sget-wide v1, Ll/۟ܽ᩵;->ۙ:J
 
-    return-object p1
+    const/4 v3, 0x0
 
-    .line 51
-    :pswitch_7
-    new-instance p1, Ll/ۧ᩷᩵;
+    sget-object v4, Ll/۟ܽ᩵;->ۤ:Ll/۟ܺ᩵;
 
-    invoke-direct {p1, p0}, Ll/ۧ᩷᩵;-><init>(Ll/۫֡᩵;)V
+    invoke-virtual {v0, v4, v1, v2, v3}, Lsun/misc/Unsafe;->putOrderedInt(Ljava/lang/Object;JI)V
 
-    return-object p1
-
-    .line 49
-    :pswitch_8
-    new-instance p1, Ll/᩻᩷᩵;
-
-    invoke-direct {p1, p0}, Ll/᩻᩷᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 47
-    :pswitch_9
-    new-instance p1, Ll/ۢܽ᩵;
-
-    invoke-direct {p1, p0}, Ll/ۢܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 45
-    :pswitch_a
-    new-instance p1, Ll/ܰܺ᩵;
-
-    .line 60
-    invoke-direct {p1, p0}, Ll/ۡܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 43
-    :pswitch_b
-    new-instance p1, Ll/᩶ܽ᩵;
-
-    invoke-direct {p1, p0}, Ll/᩶ܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 41
-    :pswitch_c
-    new-instance p1, Ll/ᩴܽ᩵;
-
-    invoke-direct {p1, p0}, Ll/ᩴܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 39
-    :pswitch_d
-    new-instance p1, Ll/ܿܽ᩵;
-
-    invoke-direct {p1, p0}, Ll/ܿܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 37
-    :pswitch_e
-    new-instance p1, Ll/֫ܽ᩵;
-
-    .line 43
-    invoke-direct {p1, p0}, Ll/ۡܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    .line 35
-    :pswitch_f
-    new-instance p1, Ll/ܳܽ᩵;
-
-    .line 44
-    invoke-direct {p1, p0}, Ll/ۡܽ᩵;-><init>(Ll/۫֡᩵;)V
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

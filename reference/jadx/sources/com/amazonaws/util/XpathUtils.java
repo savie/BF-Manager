@@ -14,22 +14,22 @@ import org.xml.sax.SAXException;
 /* JADX INFO: loaded from: classes.dex */
 public class XpathUtils {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Log f853 = LogFactory.m302(XpathUtils.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Log f843 = LogFactory.m296(XpathUtils.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static DocumentBuilderFactory f852 = DocumentBuilderFactory.newInstance();
+    public static DocumentBuilderFactory f842 = DocumentBuilderFactory.newInstance();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Document m801(String str) throws SAXException, IOException {
-        NamespaceRemovingInputStream namespaceRemovingInputStream = new NamespaceRemovingInputStream(new ByteArrayInputStream(str.getBytes(StringUtils.f844)));
-        Document document = f852.newDocumentBuilder().parse(namespaceRemovingInputStream);
+    public static Document m795(String str) throws SAXException, IOException {
+        NamespaceRemovingInputStream namespaceRemovingInputStream = new NamespaceRemovingInputStream(new ByteArrayInputStream(str.getBytes(StringUtils.f834)));
+        Document document = f842.newDocumentBuilder().parse(namespaceRemovingInputStream);
         namespaceRemovingInputStream.close();
         return document;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m800(String str, Document document) {
+    public static String m794(String str, Document document) {
         if (document == null) {
             return null;
         }

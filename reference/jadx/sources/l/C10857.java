@@ -1,72 +1,64 @@
 package l;
 
-import android.os.SystemClock;
-import com.tencent.connect.auth.a;
-import org.json.JSONObject;
-
-/* JADX INFO: renamed from: l.ۧ۟ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10857 extends C21812 {
+/* JADX INFO: renamed from: l.ۤۨ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 38SD */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10857 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f36928;
+    public final int f34396;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public InterfaceC18284 f36929;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f34397;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ a f36930;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f34398;
 
-    public C10857(a aVar, String str, InterfaceC18284 interfaceC18284) {
-        this.f36930 = aVar;
-        this.f36928 = str;
-        this.f36929 = interfaceC18284;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f34399;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f34400;
+
+    public C10857(int i, int i2) {
+        this(Integer.MIN_VALUE, i, i2);
     }
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16215(JSONObject jSONObject) {
-        C2636 c2636M8126 = C2636.m8126();
-        long jElapsedRealtime = SystemClock.elapsedRealtime();
-        int iOptInt = jSONObject.optInt("ret", -6);
-        c2636M8126.getClass();
-        C2636.m8125("action_login_H5", jElapsedRealtime, 0L, 0L, iOptInt, this.f36928);
-        InterfaceC18284 interfaceC18284 = this.f36929;
-        if (interfaceC18284 != null) {
-            interfaceC18284.mo16215(jSONObject);
-            this.f36929 = null;
+    public C10857(int i, int i2, int i3) {
+        String str;
+        if (i != Integer.MIN_VALUE) {
+            str = i + "/";
+        } else {
+            str = "";
         }
+        this.f34397 = str;
+        this.f34396 = i2;
+        this.f34398 = i3;
+        this.f34400 = Integer.MIN_VALUE;
+        this.f34399 = "";
     }
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16214(C8407 c8407) {
-        String str = c8407.f29155;
-        String strM37076 = this.f36928;
-        if (str != null) {
-            strM37076 = C15489.m37076(str, strM37076);
-        }
-        C2636 c2636M8126 = C2636.m8126();
-        long jElapsedRealtime = SystemClock.elapsedRealtime();
-        int i = c8407.f29154;
-        c2636M8126.getClass();
-        C2636.m8125("action_login_H5", jElapsedRealtime, 0L, 0L, i, strM37076);
-        a.m901(this.f36930, strM37076);
-        InterfaceC18284 interfaceC18284 = this.f36929;
-        if (interfaceC18284 != null) {
-            interfaceC18284.mo16214(c8407);
-            this.f36929 = null;
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m27594() {
+        int i = this.f34400;
+        this.f34400 = i == Integer.MIN_VALUE ? this.f34396 : i + this.f34398;
+        this.f34399 = this.f34397 + this.f34400;
     }
 
-    @Override // l.InterfaceC18284
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16213() {
-        InterfaceC18284 interfaceC18284 = this.f36929;
-        if (interfaceC18284 != null) {
-            interfaceC18284.mo16213();
-            this.f36929 = null;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m27595() {
+        int i = this.f34400;
+        if (i != Integer.MIN_VALUE) {
+            return i;
         }
+        throw new IllegalStateException("generateNewId() must be called before retrieving ids.");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m27596() {
+        if (this.f34400 != Integer.MIN_VALUE) {
+            return this.f34399;
+        }
+        throw new IllegalStateException("generateNewId() must be called before retrieving ids.");
     }
 }

@@ -1,31 +1,108 @@
-.class public final Ll/۬֨᩹;
-.super Ll/ۙ᩻᩺;
-.source "Y7FY"
+.class public Ll/۬֨᩹;
+.super Ll/᩸֨᩹;
+.source "RC4X"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public final ܺ:I
+# static fields
+.field public static final serialVersionUID:J = -0x61c8864680b583e9L
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
+.method private readResolve()Ljava/lang/Object;
+    .locals 1
 
-    .line 16
-    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    .line 98
+    sget-object v0, Ll/ۙۡ᩹;->ۙ:Ll/۬֨᩹;
 
-    iput p1, p0, Ll/۬֨᩹;->ܺ:I
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
+.method public final clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public clone()Ljava/lang/Object;
     .locals 1
 
-    .line 23
-    iget v0, p0, Ll/۬֨᩹;->ܺ:I
+    .line 78
+    sget-object v0, Ll/ۙۡ᩹;->ۙ:Ll/۬֨᩹;
+
+    return-object v0
+.end method
+
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    .line 88
+    instance-of v0, p1, Ll/᩶ܺ᩹;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 89
+    :cond_0
+    check-cast p1, Ll/᩶ܺ᩹;
+
+    invoke-interface {p1}, Ll/᩶ܺ᩹;->size()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "{}"
+
+    return-object v0
+.end method
+
+.method public final ᩷(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

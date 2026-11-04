@@ -1,56 +1,17 @@
 .class public interface abstract Ll/֨֡ܶ;
 .super Ljava/lang/Object;
-.source "R2GD"
+.source "L60G"
 
 
 # virtual methods
-.method public abstract getHash()I
+.method public abstract getPassword()Ljava/lang/String;
 .end method
 
-.method public abstract getKey()Ljava/lang/Object;
+.method public abstract ۙ()Ljava/lang/String;
 .end method
 
-.method public abstract getNext()Ll/֨֡ܶ;
+.method public abstract ۤ()Z
 .end method
 
-.method public abstract ֨()Ll/֨֡ܶ;
-.end method
-
-.method public abstract ۖ(Ll/֨֡ܶ;)V
-.end method
-
-.method public abstract ۘ()Ll/֨֡ܶ;
-.end method
-
-.method public abstract ۙ()Ll/֨֡ܶ;
-.end method
-
-.method public abstract ۙ(J)V
-.end method
-
-.method public abstract ۙ(Ll/֨֡ܶ;)V
-.end method
-
-.method public abstract ۙ(Ll/۫᩶ܶ;)V
-.end method
-
-.method public abstract ۚ()Ll/۫᩶ܶ;
-.end method
-
-.method public abstract ۜ()J
-.end method
-
-.method public abstract ۨ(J)V
-.end method
-
-.method public abstract ۨ(Ll/֨֡ܶ;)V
-.end method
-
-.method public abstract ܰ()Ll/֨֡ܶ;
-.end method
-
-.method public abstract ܰ(Ll/֨֡ܶ;)V
-.end method
-
-.method public abstract ᩺()J
+.method public abstract ᩷()Z
 .end method

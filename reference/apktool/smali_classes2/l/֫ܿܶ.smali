@@ -1,27 +1,27 @@
-.class public final Ll/֫ܿܶ;
-.super Ljava/lang/Object;
-.source "C3A0"
+.class public Ll/֫ܿܶ;
+.super Ljava/io/IOException;
+.source "47V8"
 
 
 # static fields
-.field public static final ۙ:Ll/᩸᩻ܶ;
+.field public static final serialVersionUID:J = -0x1L
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    .line 685
-    const-class v0, Ll/ۢܿܶ;
+    .line 39
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "emptySet"
+    return-void
+.end method
 
-    .line 686
-    invoke-static {v0, v1}, Ll/ᩳ᩻ܶ;->ۙ(Ljava/lang/Class;Ljava/lang/String;)Ll/᩸᩻ܶ;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    move-result-object v0
-
-    sput-object v0, Ll/֫ܿܶ;->ۙ:Ll/᩸᩻ܶ;
+    .line 43
+    invoke-direct {p0, p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

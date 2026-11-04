@@ -67,7 +67,7 @@
 .method public abstract invalidateSpecValues()V
 .end method
 
-.method public abstract registerAnimatorsCompleteCallback(Ll/ۖ֫ܰ;)V
+.method public abstract registerAnimatorsCompleteCallback(Ll/۟ۖ᩷;)V
 .end method
 
 .method public registerDrawable(Lcom/google/android/material/progressindicator/IndeterminateDrawable;)V

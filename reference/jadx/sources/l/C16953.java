@@ -1,18 +1,48 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ᩺ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5YJ */
+/* JADX INFO: renamed from: l.ܺܺᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V702 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16953 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) {
-        C14277 c14277 = new C14277();
-        try {
-            c14277.m34463(Integer.parseInt(((C14277) c15313.m36673()).m34493()));
-        } catch (NumberFormatException unused) {
-            c14277.m34463(0);
-        }
-        c15313.m36672(c14277);
+public final class C16953 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int f55374;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f55375;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public long f55376;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C16953[] f55377;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public Object f55378;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C2038 f55379;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f55380;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public int[] f55381;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f55382;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C2038[] f55383;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C2038 f55384;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public long f55385;
+
+    public C16953(int i, int i2) {
+        this.f55380 = i;
+        this.f55374 = i2;
     }
 }

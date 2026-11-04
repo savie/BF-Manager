@@ -1,326 +1,266 @@
 package l;
 
-import moe.shizuku.server.IShizukuApplication;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EdgeEffect;
+import android.widget.OverScroller;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.᩻ۜ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23539 extends AbstractC6229 {
-    public static final long serialVersionUID = 0;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public static final C23539 f76219;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f76220;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f76221 = 0;
+/* JADX INFO: renamed from: l.᩹ۨ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: GAP9 */
+/* JADX INFO: loaded from: classes.dex */
+public class C23539 extends ViewGroup {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f76222;
+    public final EdgeEffect f76044;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public int f76223;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public ArrayList f76045;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public int f76224;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f76225;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f76226;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final EdgeEffect f76046;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public byte f76227;
+    public final OverScroller f76047;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f76228;
+    public int f76048;
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f76229;
+    public C23539(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
+    }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        C17518 c17518 = new C17518(this);
-        if ((this.f76228 & 1) != 0) {
-            abstractC22044.mo14252(1, this.f76226);
+    public C23539(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f76045 = new ArrayList();
+        this.f76044 = new EdgeEffect(context);
+        this.f76046 = new EdgeEffect(context);
+        this.f76047 = new OverScroller(context);
+    }
+
+    @Override // android.view.View
+    public final void onMeasure(int i, int i2) {
+        ArrayList<View> arrayList;
+        int iMin;
+        int i3;
+        int i4;
+        int i5;
+        int size = View.MeasureSpec.getSize(i);
+        int paddingLeft = (size - getPaddingLeft()) - getPaddingRight();
+        int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
+        int iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(paddingLeft, Integer.MIN_VALUE);
+        int childCount = getChildCount();
+        int i6 = 1;
+        int i7 = 0;
+        int i8 = 0;
+        int i9 = 0;
+        int iMax = 0;
+        int i10 = 0;
+        while (true) {
+            arrayList = this.f76045;
+            if (i7 >= childCount) {
+                break;
+            }
+            View childAt = getChildAt(i7);
+            if (childAt.getVisibility() != 8) {
+                childAt.measure(iMakeMeasureSpec2, iMakeMeasureSpec);
+                iMax = Math.max(iMax, childAt.getMeasuredHeight());
+                int measuredWidth = childAt.getMeasuredWidth();
+                if (i8 <= 0 || i8 + measuredWidth <= paddingLeft) {
+                    i3 = iMakeMeasureSpec;
+                    i4 = iMakeMeasureSpec2;
+                    i5 = childCount;
+                } else {
+                    int size2 = (paddingLeft - i8) / arrayList.size();
+                    i10 += size2;
+                    i9++;
+                    if (size2 > 0) {
+                        for (View view : arrayList) {
+                            int i11 = iMakeMeasureSpec;
+                            int i12 = iMakeMeasureSpec2;
+                            int i13 = childCount;
+                            view.measure(View.MeasureSpec.makeMeasureSpec(view.getMeasuredWidth() + size2, 1073741824), View.MeasureSpec.makeMeasureSpec(view.getMeasuredHeight(), 1073741824));
+                            iMakeMeasureSpec = i11;
+                            iMakeMeasureSpec2 = i12;
+                            childCount = i13;
+                            size2 = size2;
+                        }
+                    }
+                    i3 = iMakeMeasureSpec;
+                    i4 = iMakeMeasureSpec2;
+                    i5 = childCount;
+                    arrayList.clear();
+                    i6++;
+                    i8 = 0;
+                }
+                i8 += measuredWidth;
+                arrayList.add(childAt);
+            } else {
+                i3 = iMakeMeasureSpec;
+                i4 = iMakeMeasureSpec2;
+                i5 = childCount;
+            }
+            i7++;
+            iMakeMeasureSpec = i3;
+            iMakeMeasureSpec2 = i4;
+            childCount = i5;
         }
-        if ((this.f76228 & 2) != 0) {
-            abstractC22044.mo14252(2, this.f76222);
+        if (!arrayList.isEmpty()) {
+            int size3 = (paddingLeft - i8) / arrayList.size();
+            if (i9 > 0) {
+                iMin = Math.min(size3, i10 / i9);
+            } else {
+                iMin = Math.min(size3, C6907.m19160(12.0f));
+            }
+            if (iMin > 0) {
+                for (View view2 : arrayList) {
+                    view2.measure(View.MeasureSpec.makeMeasureSpec(view2.getMeasuredWidth() + iMin, 1073741824), View.MeasureSpec.makeMeasureSpec(view2.getMeasuredHeight(), 1073741824));
+                }
+            }
+            arrayList.clear();
         }
-        if ((this.f76228 & 4) != 0) {
-            abstractC22044.mo14252(3, this.f76224);
-        }
-        if ((this.f76228 & 8) != 0) {
-            abstractC22044.mo14252(4, this.f76229);
-        }
-        if ((this.f76228 & 16) != 0) {
-            abstractC22044.mo14252(5, this.f76223);
-        }
-        if ((this.f76228 & 32) != 0) {
-            abstractC22044.mo14252(6, this.f76225);
-        }
-        c17518.m40779(IShizukuApplication.Stub.TRANSACTION_showPermissionConfirmation, abstractC22044);
-        getUnknownFields().writeTo(abstractC22044);
-    }
-
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C23539.class.getName());
-        f76219 = new C23539();
-        f76220 = new C8016();
-    }
-
-    public C23539(C19305 c19305) {
-        super(c19305);
-        this.f76226 = 0;
-        this.f76222 = 0;
-        this.f76224 = 0;
-        this.f76229 = 0;
-        this.f76223 = 0;
-        this.f76225 = 0;
-        this.f76227 = (byte) -1;
-    }
-
-    public C23539() {
-        this.f76227 = (byte) -1;
-        this.f76226 = 0;
-        this.f76222 = 0;
-        this.f76224 = 0;
-        this.f76229 = 0;
-        this.f76223 = 0;
-        this.f76225 = 0;
-    }
-
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46279;
-        c6956.m18696(C23539.class, C19305.class);
-        return c6956;
-    }
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final boolean m51873() {
-        return (this.f76228 & 1) != 0;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final EnumC20716 m51875() {
-        EnumC20716 enumC20716M46566 = EnumC20716.m46566(this.f76226);
-        return enumC20716M46566 == null ? EnumC20716.FIELD_PRESENCE_UNKNOWN : enumC20716M46566;
-    }
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final boolean m51879() {
-        return (this.f76228 & 2) != 0;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final EnumC10133 m51882() {
-        EnumC10133 enumC10133M25756 = EnumC10133.m25756(this.f76222);
-        return enumC10133M25756 == null ? EnumC10133.ENUM_TYPE_UNKNOWN : enumC10133M25756;
+        int paddingTop = getPaddingTop();
+        int paddingBottom = getPaddingBottom();
+        this.f76048 = iMax;
+        setMeasuredDimension(size, paddingBottom + paddingTop + (i6 * iMax));
     }
 
     /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public final boolean m51880() {
-        return (this.f76228 & 4) != 0;
+    public final int m52746() {
+        return this.f76048;
     }
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final EnumC17188 m51878() {
-        EnumC17188 enumC17188M40106 = EnumC17188.m40106(this.f76224);
-        return enumC17188M40106 == null ? EnumC17188.REPEATED_FIELD_ENCODING_UNKNOWN : enumC17188M40106;
+    @Override // android.view.ViewGroup, android.view.View
+    public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
+        int paddingRight = (i3 - i) - getPaddingRight();
+        int paddingLeft = getPaddingLeft();
+        int paddingTop = getPaddingTop();
+        int childCount = getChildCount();
+        int i5 = paddingLeft;
+        for (int i6 = 0; i6 < childCount; i6++) {
+            View childAt = getChildAt(i6);
+            if (childAt.getVisibility() != 8) {
+                int measuredWidth = childAt.getMeasuredWidth();
+                int measuredHeight = childAt.getMeasuredHeight();
+                if (i5 != paddingLeft && i5 + measuredWidth > paddingRight) {
+                    paddingTop += this.f76048;
+                    i5 = paddingLeft;
+                }
+                int i7 = measuredWidth + i5;
+                childAt.layout(i5, paddingTop, i7, measuredHeight + paddingTop);
+                i5 = i7;
+            }
+        }
     }
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final boolean m51876() {
-        return (this.f76228 & 8) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final EnumC10839 m51872() {
-        EnumC10839 enumC10839M27163 = EnumC10839.m27163(this.f76229);
-        return enumC10839M27163 == null ? EnumC10839.UTF8_VALIDATION_UNKNOWN : enumC10839M27163;
-    }
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public final boolean m51871() {
-        return (this.f76228 & 16) != 0;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final EnumC16483 m51877() {
-        EnumC16483 enumC16483M38745 = EnumC16483.m38745(this.f76223);
-        return enumC16483M38745 == null ? EnumC16483.MESSAGE_ENCODING_UNKNOWN : enumC16483M38745;
+    @Override // android.view.ViewGroup, android.view.View
+    public final void dispatchDraw(Canvas canvas) {
+        boolean zDraw;
+        super.dispatchDraw(canvas);
+        EdgeEffect edgeEffect = this.f76044;
+        if (edgeEffect == null || edgeEffect.isFinished()) {
+            zDraw = false;
+        } else {
+            int iSave = canvas.save();
+            canvas.translate(getScrollX(), 0.0f);
+            edgeEffect.setSize(getWidth(), getHeight());
+            zDraw = edgeEffect.draw(canvas);
+            canvas.restoreToCount(iSave);
+        }
+        EdgeEffect edgeEffect2 = this.f76046;
+        if (edgeEffect2 != null && !edgeEffect2.isFinished()) {
+            int iSave2 = canvas.save();
+            canvas.rotate(180.0f);
+            canvas.translate((-getWidth()) - getScrollX(), -getHeight());
+            edgeEffect2.setSize(getWidth(), getHeight());
+            zDraw |= edgeEffect2.draw(canvas);
+            canvas.restoreToCount(iSave2);
+        }
+        if (zDraw) {
+            postInvalidateOnAnimation();
+        }
     }
 
     /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final boolean m51874() {
-        return (this.f76228 & 32) != 0;
+    public final void m52745() {
+        boolean z;
+        EdgeEffect edgeEffect = this.f76044;
+        boolean z2 = true;
+        if (edgeEffect.isFinished()) {
+            z = false;
+        } else {
+            edgeEffect.onRelease();
+            z = true;
+        }
+        EdgeEffect edgeEffect2 = this.f76046;
+        if (edgeEffect2.isFinished()) {
+            z2 = z;
+        } else {
+            edgeEffect2.onRelease();
+        }
+        if (z2) {
+            postInvalidateOnAnimation();
+        }
     }
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final EnumC20011 m51881() {
-        EnumC20011 enumC20011M45309 = EnumC20011.m45309(this.f76225);
-        return enumC20011M45309 == null ? EnumC20011.JSON_FORMAT_UNKNOWN : enumC20011M45309;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f76227;
-        if (b == 1) {
-            return true;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m52747(float f, float f2) {
+        C19577.m45178(this.f76044, f, f2);
+        EdgeEffect edgeEffect = this.f76046;
+        if (!edgeEffect.isFinished()) {
+            edgeEffect.onRelease();
         }
-        if (b == 0) {
-            return false;
-        }
-        if (!m17285()) {
-            this.f76227 = (byte) 0;
-            return false;
-        }
-        this.f76227 = (byte) 1;
-        return true;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM48966 = (this.f76228 & 1) != 0 ? AbstractC22044.m48966(1, this.f76226) : 0;
-        if ((this.f76228 & 2) != 0) {
-            iM48966 += AbstractC22044.m48966(2, this.f76222);
-        }
-        if ((this.f76228 & 4) != 0) {
-            iM48966 += AbstractC22044.m48966(3, this.f76224);
-        }
-        if ((this.f76228 & 8) != 0) {
-            iM48966 += AbstractC22044.m48966(4, this.f76229);
-        }
-        if ((this.f76228 & 16) != 0) {
-            iM48966 += AbstractC22044.m48966(5, this.f76223);
-        }
-        if ((this.f76228 & 32) != 0) {
-            iM48966 += AbstractC22044.m48966(6, this.f76225);
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM48966 + m17282();
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof C23539)) {
-            return super.equals(obj);
-        }
-        C23539 c23539 = (C23539) obj;
-        if (m51873() != c23539.m51873()) {
-            return false;
-        }
-        if ((m51873() && this.f76226 != c23539.f76226) || m51879() != c23539.m51879()) {
-            return false;
-        }
-        if ((m51879() && this.f76222 != c23539.f76222) || m51880() != c23539.m51880()) {
-            return false;
-        }
-        if ((m51880() && this.f76224 != c23539.f76224) || m51876() != c23539.m51876()) {
-            return false;
-        }
-        if ((m51876() && this.f76229 != c23539.f76229) || m51871() != c23539.m51871()) {
-            return false;
-        }
-        if ((!m51871() || this.f76223 == c23539.f76223) && m51874() == c23539.m51874()) {
-            return (!m51874() || this.f76225 == c23539.f76225) && getUnknownFields().equals(c23539.getUnknownFields()) && m17283().equals(c23539.m17283());
-        }
-        return false;
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
-        }
-        int iHashCode = C14097.f46308.hashCode() + 779;
-        if (m51873()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + this.f76226;
-        }
-        if (m51879()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + this.f76222;
-        }
-        if (m51880()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + this.f76224;
-        }
-        if (m51876()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 4, 53) + this.f76229;
-        }
-        if (m51871()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 5, 53) + this.f76223;
-        }
-        if (m51874()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 6, 53) + this.f76225;
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (AbstractC23019.m50911(iHashCode, m17283()) * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
+        postInvalidateOnAnimation();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C23539 m51865(AbstractC23725 abstractC23725, C4818 c4818) {
-        return (C23539) ((C8016) f76220).parseFrom(abstractC23725, (C2701) c4818);
-    }
-
-    public static C19305 newBuilder() {
-        return f76219.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f76219.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f76219.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C19305 toBuilder() {
-        int i = 0;
-        if (this == f76219) {
-            return new C19305(i);
+    public final void m52743(float f, float f2) {
+        C19577.m45178(this.f76046, f, f2);
+        EdgeEffect edgeEffect = this.f76044;
+        if (!edgeEffect.isFinished()) {
+            edgeEffect.onRelease();
         }
-        C19305 c19305 = new C19305(i);
-        c19305.m44291(this);
-        return c19305;
+        postInvalidateOnAnimation();
     }
 
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C19305(interfaceC6790, 0);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m52744(int i, int i2) {
+        this.f76047.fling(0, getScrollY(), 0, i, 0, 0, 0, i2);
+        invalidate();
     }
 
-    public static C23539 getDefaultInstance() {
-        return f76219;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m52742() {
+        OverScroller overScroller = this.f76047;
+        if (overScroller.isFinished()) {
+            return;
+        }
+        overScroller.abortAnimation();
     }
 
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f76220;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f76219;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f76219;
+    @Override // android.view.View
+    public final void computeScroll() {
+        OverScroller overScroller = this.f76047;
+        if (overScroller.computeScrollOffset()) {
+            int scrollY = getScrollY();
+            int currY = overScroller.getCurrY();
+            if (scrollY != currY) {
+                setScrollY(currY);
+                if (scrollY > 0 && currY <= 0) {
+                    this.f76044.onAbsorb((int) overScroller.getCurrVelocity());
+                    overScroller.abortAnimation();
+                } else {
+                    int finalY = overScroller.getFinalY();
+                    if (scrollY < finalY && currY >= finalY) {
+                        this.f76046.onAbsorb((int) overScroller.getCurrVelocity());
+                        overScroller.abortAnimation();
+                    }
+                }
+            }
+            invalidate();
+        }
     }
 }

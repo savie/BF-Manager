@@ -80,7 +80,7 @@
     .line 337
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     move-result-object v0
 
     .line 338
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -102,12 +102,12 @@
     const-string v1, ":"
 
     .line 0
-    invoke-static {v0, v1}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     .line 339
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -134,7 +134,7 @@
     .locals 1
 
     .line 180
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->ܰ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->᩷()Ljava/lang/String;
 
     move-result-object p2
 
@@ -209,7 +209,7 @@
     .line 296
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -218,7 +218,7 @@
     move-result-object v0
 
     .line 297
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -268,7 +268,7 @@
 
     invoke-direct {p4, p5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p6}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {p6}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object p5
 
@@ -286,7 +286,7 @@
     move-result-object p4
 
     .line 307
-    sget-object p6, Lcom/amazonaws/auth/SigningAlgorithm;->֡:Lcom/amazonaws/auth/SigningAlgorithm;
+    sget-object p6, Lcom/amazonaws/auth/SigningAlgorithm;->ܿ:Lcom/amazonaws/auth/SigningAlgorithm;
 
     invoke-virtual {p0, p2, p4, p6}, Lcom/amazonaws/auth/AbstractAWSSigner;->sign(Ljava/lang/String;[BLcom/amazonaws/auth/SigningAlgorithm;)[B
 
@@ -381,7 +381,7 @@
 
     check-cast v0, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -390,7 +390,7 @@
     move-result-object v1
 
     .line 259
-    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object v2
 
@@ -407,7 +407,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 263
-    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->ۖ()Lcom/amazonaws/http/HttpMethodName;
+    invoke-virtual {v0}, Lcom/amazonaws/DefaultRequest;->᩸()Lcom/amazonaws/http/HttpMethodName;
 
     move-result-object v0
 
@@ -456,7 +456,7 @@
     move-result-object p1
 
     .line 0
-    invoke-static {v2, p1, v0, p2}, Ll/֫۠ۚ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0, p2}, Ll/ۨ᩹ۧ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -479,7 +479,7 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p2, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -495,7 +495,7 @@
     .line 212
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -555,7 +555,7 @@
     move-result-object v3
 
     .line 219
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v6
 
@@ -650,7 +650,7 @@
     .line 346
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -659,7 +659,7 @@
     move-result-object v0
 
     .line 347
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object p1
 
@@ -706,7 +706,7 @@
     .line 235
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -839,7 +839,7 @@
 
     move-result-object p3
 
-    invoke-interface {p2, p3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p2, p3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -982,7 +982,7 @@
     check-cast p2, Lcom/amazonaws/auth/AWSSessionCredentials;
 
     .line 451
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->ܰ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->᩷()Ljava/lang/String;
 
     move-result-object p2
 
@@ -993,7 +993,7 @@
 
     const-string v0, "X-Amz-Security-Token"
 
-    invoke-virtual {p3, v0, p2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p3, v0, p2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 454
     :cond_1
@@ -1044,12 +1044,12 @@
 
     const-string p3, "AWS4-HMAC-SHA256"
 
-    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "X-Amz-Date"
 
     .line 465
-    invoke-virtual {p1, p2, v8}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v8}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "X-Amz-SignedHeaders"
 
@@ -1059,7 +1059,7 @@
     move-result-object p3
 
     .line 466
-    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "X-Amz-Expires"
 
@@ -1069,12 +1069,12 @@
     move-result-object p3
 
     .line 468
-    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, p3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "X-Amz-Credential"
 
     .line 470
-    invoke-virtual {p1, p2, v0}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v0}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 472
     invoke-virtual {p0, p1}, Lcom/amazonaws/auth/AWS4Signer;->calculateContentHashPresign(Lcom/amazonaws/Request;)Ljava/lang/String;
@@ -1093,7 +1093,7 @@
     move-result-object p2
 
     .line 478
-    invoke-virtual {p2}, Lcom/amazonaws/auth/AWS4Signer$HeaderSigningResult;->ۖ()[B
+    invoke-virtual {p2}, Lcom/amazonaws/auth/AWS4Signer$HeaderSigningResult;->᩸()[B
 
     move-result-object p2
 
@@ -1104,7 +1104,7 @@
     const-string p3, "X-Amz-Signature"
 
     .line 477
-    invoke-virtual {p1, p3, p2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p3, p2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1130,7 +1130,7 @@
     const-string v0, "] has exceeded this limit."
 
     .line 0
-    invoke-static {p2, p3, v0}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p3, v0}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1222,7 +1222,7 @@
     invoke-virtual {p1, v0, v3}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -1235,7 +1235,7 @@
     if-eqz v0, :cond_1
 
     .line 119
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -1290,7 +1290,7 @@
     const-string v1, "Credential="
 
     .line 0
-    invoke-static {v1, p2}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1320,7 +1320,7 @@
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 138
-    invoke-virtual {v0}, Lcom/amazonaws/auth/AWS4Signer$HeaderSigningResult;->ۖ()[B
+    invoke-virtual {v0}, Lcom/amazonaws/auth/AWS4Signer$HeaderSigningResult;->᩸()[B
 
     move-result-object v3
 
@@ -1339,7 +1339,7 @@
     const-string v4, ", "
 
     .line 0
-    invoke-static {v3, p2, v4, v1, v4}, Ll/۫۠ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, p2, v4, v1, v4}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 

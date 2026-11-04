@@ -1,28 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ֨۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: I6PU */
+/* JADX INFO: renamed from: l.ܶ᩵ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 45YI */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16308 extends AbstractC9958 {
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public InterfaceC7486 f52515;
-
-    @Override // l.AbstractRunnableC17718
+public final class C16308 extends AbstractC13567 {
+    @Override // l.AbstractC13567
     /* JADX INFO: renamed from: ۙ */
-    public final FutureC12075 mo1013(int i) {
-        Object obj;
-        FutureC12075 futureC12075;
-        InterfaceC7486 interfaceC7486;
-        FutureC12075 futureC12076 = this.f34027;
-        if (futureC12076 != null && (obj = futureC12076.f40418) != null && (futureC12075 = this.f34029) != null && (interfaceC7486 = this.f52515) != null) {
-            if (futureC12075.m30023(obj, interfaceC7486, i > 0 ? null : this)) {
-                this.f34027 = null;
-                this.f34029 = null;
-                this.f52515 = null;
-                return futureC12075.m30017(futureC12076, i);
-            }
-        }
-        return null;
+    public final int mo3618(int i, Object obj) {
+        C3630 c3630 = (C3630) obj;
+        int i2 = c3630.f12442;
+        c3630.f12442 = i;
+        return i2;
+    }
+
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3619(Object obj) {
+        return ((C3630) obj).f12442;
     }
 }

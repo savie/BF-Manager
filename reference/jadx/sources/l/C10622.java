@@ -1,10 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤ᩻ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K3OA */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10622 extends C21204 {
-    public C10622(C15187 c15187, C15187 c15188) {
-        super(EnumC13776.f45398, c15187, c15188);
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: renamed from: l.ۤۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 757I */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10622 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C19573(parcel.readFloat(), parcel.readInt());
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C19573[i];
     }
 }

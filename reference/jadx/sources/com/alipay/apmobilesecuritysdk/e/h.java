@@ -2,7 +2,7 @@ package com.alipay.apmobilesecuritysdk.e;
 
 import android.content.Context;
 import java.util.UUID;
-import l.C0252;
+import l.C25272;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -25,7 +25,7 @@ public class h {
     }
 
     public static void a(Context context, String str, long j) {
-        com.alipay.sdk.m.g0.a.a(context, "vkeyid_settings", C0252.m1693("vkey_valid", str), j + "");
+        com.alipay.sdk.m.g0.a.a(context, "vkeyid_settings", C25272.m56409("vkey_valid", str), j + "");
     }
 
     public static void a(Context context, String str, String str2) {

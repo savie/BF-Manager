@@ -1,30 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡۟ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 532I */
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.֡۟ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A6F5 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0271 extends AbstractC15795 {
+public final class C0271 implements InterfaceC11851 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final char f1562;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f1565 = new ArrayList();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final char f1563;
-
-    public C0271(char c, char c2) {
-        this.f1562 = c;
-        this.f1563 = c2;
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean mo1794() {
+        return false;
     }
 
-    @Override // l.AbstractC14384
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* bridge */ /* synthetic */ InterfaceC2157 mo1791() {
+        return C11457.f36026;
+    }
+
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final String mo1790() {
+        return toString();
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo1772(char c) {
-        return c == this.f1562 || c == this.f1563;
+    public final ArrayList m1792() {
+        return this.f1565;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m1793(C11260 c11260) {
+        this.f1565.add(c11260);
     }
 
     public final String toString() {
-        StringBuilder sb = new StringBuilder("CharMatcher.anyOf(\"");
-        sb.append(AbstractC14384.m34619(this.f1562));
-        return C22697.m50267(sb, AbstractC14384.m34619(this.f1563), "\")");
+        return "DECL_VAR: " + C4123.m13221(this.f1565, ", ");
     }
 }

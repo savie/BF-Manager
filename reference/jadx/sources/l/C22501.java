@@ -1,94 +1,128 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹᩵᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: N12S */
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.TextView;
+import bin.mt.plus.R;
+import java.util.Iterator;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.᩸ۖ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8F2 */
 /* JADX INFO: loaded from: classes.dex */
 public final class C22501 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f73452;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f73453;
+    public final C5304 f72798;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f73454;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C2559 f72799;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f73455;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f72800;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f73456;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C8614 f72801;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f73457;
-
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Code duplicated, block: B:24:0x0056  */
-    /* JADX WARN: Code duplicated, block: B:29:0x005f  */
-    /* JADX WARN: Code duplicated, block: B:52:0x00a0  */
-    /* JADX WARN: Code duplicated, block: B:56:0x00a7  */
-    public C22501(long j, long j2, String str, String str2) {
-        String str3;
-        String str4 = "zip";
-        if (!str.equals("folder")) {
-            String strM48172 = C21512.m48172(".".concat(str));
-            strM48172.getClass();
-            switch (strM48172) {
-                case "application/vnd.android.package-archives":
-                case "application/x-jar":
-                case "application/zip":
-                    str3 = "zip";
-                    break;
-                case "application/vnd.android.package-archive":
-                    str3 = "apk";
-                    break;
-                default:
-                    str3 = str;
-                    break;
-            }
-        } else {
-            str3 = str;
-        }
-        this.f73454 = str3;
-        if (!str2.equals("folder")) {
-            String strM48173 = C21512.m48172(".".concat(str2));
-            strM48173.getClass();
-            switch (strM48173) {
-                case "application/vnd.android.package-archives":
-                case "application/x-jar":
-                case "application/zip":
-                    break;
-                case "application/vnd.android.package-archive":
-                    str4 = "apk";
-                    break;
-                default:
-                    str4 = str2;
-                    break;
-            }
-        } else {
-            str4 = str2;
-        }
-        this.f73457 = str4;
-        this.f73453 = str;
-        this.f73456 = str2;
-        this.f73455 = j;
-        this.f73452 = j2;
+    public C22501(C8614 c8614, List list) {
+        this.f72801 = c8614;
+        this.f72800 = list;
+        C5304 c5304 = new C5304(c8614.m23233());
+        c5304.m15924();
+        this.f72798 = c5304;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m50018(String str) {
-        return str.equals(this.f73454) && str.equals(this.f73457);
+    public final void m50741(InterfaceC2386 interfaceC2386) {
+        if (interfaceC2386.isDirectory() || !(interfaceC2386 instanceof C2559)) {
+            throw new IllegalArgumentException();
+        }
+        C2559 c2559 = (C2559) interfaceC2386;
+        this.f72799 = c2559;
+        C5304 c5304 = this.f72798;
+        c5304.m15919(c2559);
+        c5304.m15913(c2559.mo8107() ? R.string.MT_Protector : R.string.MT_Protector);
+        c5304.m15922(c2559.getSize());
+        c5304.m15929(c2559.getTime());
+        C9097 c9097Mo5155 = c2559.mo5155();
+        if (c9097Mo5155 != null) {
+            c5304.m15906(new C24159(c9097Mo5155)).m36104(6);
+            String strM24241 = c9097Mo5155.m24241();
+            String strM24237 = c9097Mo5155.m24237();
+            if (!TextUtils.isEmpty(strM24241) || !TextUtils.isEmpty(strM24237)) {
+                c5304.m15911(new C3745(strM24241, strM24237)).m50629();
+            }
+        }
+        if (c2559.mo8107()) {
+            c5304.m15910(c2559.mo8112(), (View.OnClickListener) null).m49281(6);
+        }
+        c5304.m15926();
+        c5304.m15920();
+        C10060.m26010(c5304.m15927(), this.f72801, c2559);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m50742(InterfaceC2386 interfaceC2386) {
+        if (interfaceC2386.mo8090() || !(interfaceC2386 instanceof C2559)) {
+            throw new IllegalArgumentException();
+        }
+        C2559 c2559 = (C2559) interfaceC2386;
+        this.f72799 = c2559;
+        C5304 c5304 = this.f72798;
+        c5304.m15919(c2559);
+        c5304.m15913(c2559.mo8107() ? R.string.MT_Protector : R.string.MT_Protector);
+        c5304.m15922(c2559.getSize());
+        c5304.m15929(c2559.getTime());
+        C9097 c9097Mo5155 = c2559.mo5155();
+        if (c9097Mo5155 != null) {
+            c5304.m15906(new C19301(c9097Mo5155)).m36104(6);
+            String strM24241 = c9097Mo5155.m24241();
+            String strM24237 = c9097Mo5155.m24237();
+            if (!TextUtils.isEmpty(strM24241) || !TextUtils.isEmpty(strM24237)) {
+                c5304.m15911(new C4601(strM24241, strM24237)).m50629();
+            }
+        }
+        if (c2559.mo8107()) {
+            c5304.m15910(c2559.mo8112(), (View.OnClickListener) null).m49281(6);
+        }
+        c5304.m15908(R.string.MT_Protector, new C6259(this)).m49281(8);
+        c5304.m15920();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m50017() {
-        String str = this.f73454;
-        boolean zEquals = "zip".equals(str);
-        String str2 = this.f73457;
-        if (zEquals && "apk".equals(str2)) {
-            return true;
+    public final void m50740(String str) {
+        C5304 c5304 = this.f72798;
+        List list = this.f72800;
+        c5304.m15917(list);
+        c5304.m15915(str, new View.OnLongClickListener() { // from class: l.۠ۡ۫
+            @Override // android.view.View.OnLongClickListener
+            public final boolean onLongClick(View view) {
+                C22501.m50735(this.f27854);
+                return true;
+            }
+        });
+        Iterator it = list.iterator();
+        long size = 0;
+        while (it.hasNext()) {
+            size += ((InterfaceC2386) it.next()).getSize();
         }
-        return "apk".equals(str) && "zip".equals(str2);
+        c5304.m15922(size);
+        c5304.m15908(R.string.MT_Protector, new C8114(this)).m49281(8);
+        c5304.m15920();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m50734(AbstractC7629 abstractC7629, List list, TextView textView, TextView textView2) {
+        textView.setText("...");
+        textView2.setText("...");
+        C5261.f18540.submit(new RunnableC20928(list, textView, textView2, abstractC7629, 1));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m50735(C22501 c22501) {
+        C2559 c2559 = c22501.f72799;
+        if (c2559 != null) {
+            C21576.m49061(R.string.MT_Protector, c2559.getPath());
+        }
     }
 }

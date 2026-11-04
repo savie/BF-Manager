@@ -1,54 +1,39 @@
 package l;
 
-import android.os.Bundle;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩻᩵ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M8N6 */
+/* JADX INFO: renamed from: l.᩹᩻ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F43P */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23897 implements InterfaceC6257 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final String f77439;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final String f77440;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final String f77441;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f77442;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f77443;
+public final class C23897 extends Thread {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f77444;
+    public final /* synthetic */ C2026 f77382;
 
-    static {
-        String str = C17983.f57504;
-        f77440 = Integer.toString(0, 36);
-        f77439 = Integer.toString(1, 36);
-        f77441 = Integer.toString(2, 36);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23897(C2026 c2026, String str) {
+        super(str);
+        this.f77382 = c2026;
     }
 
-    public C23897(int i, int i2, int i3) {
-        this.f77444 = i;
-        this.f77442 = i2;
-        this.f77443 = i3;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Bundle m52692() {
-        Bundle bundle = new Bundle();
-        bundle.putInt(f77440, this.f77444);
-        bundle.putInt(f77439, this.f77442);
-        bundle.putInt(f77441, this.f77443);
-        return bundle;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C23897 m52691(Bundle bundle) {
-        return new C23897(bundle.getInt(f77440), bundle.getInt(f77439), bundle.getInt(f77441));
+    @Override // java.lang.Thread, java.lang.Runnable
+    public final void run() {
+        try {
+            synchronized (this.f77382) {
+                long jCurrentTimeMillis = System.currentTimeMillis();
+                while (true) {
+                    long j = this.f77382.f79775;
+                    C2026 c2026 = this.f77382;
+                    if (jCurrentTimeMillis < j + c2026.f79784) {
+                        c2026.wait((c2026.f79775 + this.f77382.f79784) - jCurrentTimeMillis);
+                        jCurrentTimeMillis = System.currentTimeMillis();
+                    } else {
+                        c2026.f79784 = 0L;
+                        c2026.close();
+                    }
+                }
+            }
+        } catch (IOException | InterruptedException unused) {
+        }
     }
 }

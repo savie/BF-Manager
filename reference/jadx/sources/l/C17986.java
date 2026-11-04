@@ -1,23 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳۤ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: M445 */
+/* JADX INFO: renamed from: l.ܿ֨ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6AK0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C17986 {
+public final class C17986 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f57521;
+    public AbstractC20970 f58924;
 
-    static {
-        int[] iArr = new int[EnumC17198.values().length];
-        f57521 = iArr;
-        try {
-            iArr[EnumC17198.FRAGMENT.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f57521[EnumC17198.ERROR.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC20970 f58925;
+
+    public C17986(AbstractC20970 abstractC20970, AbstractC20970 abstractC20971) {
+        this.f58924 = abstractC20970;
+        this.f58925 = abstractC20971;
     }
 }

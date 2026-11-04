@@ -1,48 +1,63 @@
 .class public final Ll/᩺ۙ᩹;
 .super Ljava/lang/Object;
-.source "J57U"
+.source "51RR"
 
 
-# instance fields
-.field public final ۙ:Z
+# static fields
+.field public static ۙ:Ljava/lang/String;
 
-.field public final ۨ:I
+.field public static ۤ:Ljava/lang/String;
 
-.field public final ܰ:J
+.field public static ᩷:Ljava/lang/String;
+
+.field public static ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JIZ)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 829
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 528
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 830
-    iput-wide p1, p0, Ll/᩺ۙ᩹;->ܰ:J
+    const-string v1, "tencent"
 
-    .line 831
-    iput p3, p0, Ll/᩺ۙ᩹;->ۨ:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 832
-    iput-boolean p4, p0, Ll/᩺ۙ᩹;->ۙ:Z
+    sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "mobileqq"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "opensdk"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll/᩺ۙ᩹;->ۙ:Ljava/lang/String;
+
+    const-string v0, "key_restore_landscape"
+
+    .line 533
+    sput-object v0, Ll/᩺ۙ᩹;->᩸:Ljava/lang/String;
+
+    const-string v0, "key_pass_report_via_param"
+
+    .line 541
+    sput-object v0, Ll/᩺ۙ᩹;->᩷:Ljava/lang/String;
+
+    const-string v0, "key_pass_report_via_timely"
+
+    .line 542
+    sput-object v0, Ll/᩺ۙ᩹;->ۤ:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static ۙ()Ll/᩺ۙ᩹;
-    .locals 5
-
-    .line 842
-    new-instance v0, Ll/᩺ۙ᩹;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x0
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ll/᩺ۙ᩹;-><init>(JIZ)V
-
-    return-object v0
 .end method

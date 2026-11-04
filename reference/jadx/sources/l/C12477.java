@@ -1,22 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ܳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 29ER */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12477 extends C11771 {
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo3384(C19240 c19240) {
-        c19240.m27396(this.f39515);
-        c19240.m44196();
-        c19240.m44195();
-        throw null;
+/* JADX INFO: renamed from: l.ۨܺܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F3BK */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12477 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m30973(long j, String str) {
+        if (j >= 0) {
+            return;
+        }
+        throw new IllegalArgumentException(str + " (" + j + ") must be >= 0");
     }
 
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2356(C19240 c19240) throws C17271 {
-        c19240.m27375();
-        c19240.m27389(2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m30974(boolean z) {
+        if (!z) {
+            throw new ArithmeticException("mode was UNNECESSARY, but rounding was necessary");
+        }
     }
 }

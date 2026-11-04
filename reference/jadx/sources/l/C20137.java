@@ -1,39 +1,35 @@
 package l;
 
-import android.view.MenuItem;
+import android.text.Layout;
+import android.text.SpannableStringBuilder;
 
-/* JADX INFO: renamed from: l.᩶ۧ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: S1JO */
+/* JADX INFO: renamed from: l.ᩴ᩹᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8UR */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C20137 implements InterfaceC10597 {
+public final class C20137 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f65371;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C23121 f64715 = new C23121();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f65372;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C2137 f64716;
 
-    public /* synthetic */ C20137(int i, Object obj) {
-        this.f65371 = i;
-        this.f65372 = obj;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f64717;
 
-    @Override // l.InterfaceC10597
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1473(Object obj) {
-        switch (this.f65371) {
-            case 0:
-                C16609.m39050((InterfaceC0380) this.f65372, (Object[]) obj);
-                break;
-            case 1:
-                ((MenuItem) this.f65372).setChecked(((Boolean) obj).booleanValue());
-                break;
-            case 2:
-                C0906.m3606((C0906) this.f65372);
-                break;
-            default:
-                C20890.m46979((C20890) this.f65372, (C6094) obj);
-                break;
+    public C20137(SpannableStringBuilder spannableStringBuilder, Layout.Alignment alignment, float f, int i, float f2, int i2, boolean z, int i3, int i4) {
+        C5866 c5866 = new C5866();
+        c5866.m17079(spannableStringBuilder);
+        c5866.m17089(alignment);
+        c5866.m17075(f, 0);
+        c5866.m17076(i);
+        c5866.m17086(f2);
+        c5866.m17088(i2);
+        c5866.m17091(-3.4028235E38f);
+        if (z) {
+            c5866.m17092(i3);
         }
+        this.f64716 = c5866.m17073();
+        this.f64717 = i4;
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.iso;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ISOIECObjectIdentifiers {
     public static final ASN1ObjectIdentifier hash_algorithms;
     public static final ASN1ObjectIdentifier id_ac_generic_hybrid;

@@ -1,36 +1,33 @@
 package l;
 
-import java.util.function.Predicate;
+/* JADX INFO: renamed from: l.֡ۗܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OBBJ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0151 extends AbstractC5875 {
 
-/* JADX INFO: renamed from: l.֡ۗ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18AW */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0151 implements Predicate {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC2519 f1146;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11465 f1201;
-
-    public /* synthetic */ C0151(C11465 c11465) {
-        this.f1201 = c11465;
+    @Override // l.InterfaceC1159
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo1345() {
+        return 8;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    public C0151(AbstractC2519 abstractC2519) {
+        super("ConstantValue");
+        if ((abstractC2519 instanceof C9976) || (abstractC2519 instanceof C15943) || (abstractC2519 instanceof C4011) || (abstractC2519 instanceof C17435) || (abstractC2519 instanceof C11468)) {
+            this.f1146 = abstractC2519;
+        } else {
+            if (abstractC2519 == null) {
+                throw new NullPointerException("constantValue == null");
+            }
+            throw new IllegalArgumentException("bad type for constantValue");
+        }
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        return this.f1201.m28649((AbstractC20745) obj);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC2519 m1346() {
+        return this.f1146;
     }
 }

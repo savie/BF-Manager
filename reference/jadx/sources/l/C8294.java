@@ -1,50 +1,70 @@
 package l;
 
-import com.umeng.commonsdk.statistics.UMErrorCode;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 
-/* JADX INFO: renamed from: l.۠ܽۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X6OE */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8294 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C8294 f28808 = new C8294("", "");
+/* JADX INFO: renamed from: l.۠֨᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28WH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8294 implements InterfaceC14499 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f28809;
+    public final /* synthetic */ C24943 f27254;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f28810;
+    public C8294(C24943 c24943) {
+        this.f27254 = c24943;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f28811;
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo7842() {
+        C24943 c24943 = this.f27254;
+        return !c24943.f80757 || c24943.f80725.m53888();
+    }
 
-    public C8294(String str, String str2) {
-        if (!str2.isEmpty() && !str2.equals("\n") && !str2.equals("\r\n") && !str2.equals("\r")) {
-            throw new IllegalArgumentException("Unsupported line ending");
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7836() {
+        C24943 c24943 = this.f27254;
+        if (c24943.f80757) {
+            c24943.f80725.invalidate();
         }
-        this.f28811 = str2;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) != ' ' && str.charAt(i) != '\t') {
-                throw new IllegalArgumentException("Base indent must contain only spaces or tabs");
-            }
-        }
-        this.f28810 = UMErrorCode.E_UM_BE_NOT_MAINPROCESS;
-        this.f28809 = str;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m21731() {
-        return this.f28811;
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo7841() {
+        C19721 c19721 = this.f27254.f80740;
+        c19721.f63471 = false;
+        c19721.f63472 = null;
+        c19721.f63475 = null;
+        c19721.f63470 = null;
+        c19721.f63474 = null;
+        c19721.f63469.clear();
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m21730() {
-        return this.f28810;
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7840(boolean z) {
+        C24943 c24943 = this.f27254;
+        C24943.m55638(c24943, c24943.f80740, z);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m21729() {
-        return this.f28809;
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7839(C6909 c6909, int i, int i2, int i3, Canvas canvas, Paint paint, C14540 c14540) {
+        C24943.m55642(this.f27254, false, c6909, i, i2, i3, canvas, paint, c14540);
+    }
+
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7838(C6909 c6909, int i, int i2, float f, float f2, boolean z, Canvas canvas, C10232 c10232, InterfaceC7829 interfaceC7829, C14540 c14540) {
+        C24943.m55641(this.f27254, false, c6909, i, i2, f, f2, z, canvas, (Paint) c10232, interfaceC7829, c14540);
+    }
+
+    @Override // l.InterfaceC14499
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7837(C6909 c6909, float f, float f2, float f3, float f4, Canvas canvas, C10232 c10232, C14540 c14540) {
+        C24943.m55640(this.f27254, false, c6909, f, f2, f3, f4, canvas, c10232, c14540);
     }
 }

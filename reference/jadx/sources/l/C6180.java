@@ -1,37 +1,120 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛܽۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F416 */
+import java.io.IOException;
+import java.util.Locale;
+import org.bouncycastle.util.encoders.UTF8;
+
+/* JADX INFO: renamed from: l.ۛۚۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 54EI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6180 extends C4748 {
+public final class C6180 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6761 f21050;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C16794 f21052 = C16794.m39651("PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n");
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1768(C0309 c0309, Object obj) {
-        if (c0309 instanceof C23594) {
-            c0309 = (C23594) c0309;
-            C23800 c23800 = this.f21050.f22802;
-            C19003 c19003 = new C19003();
-            C19003 c19004 = new C19003();
-            for (AbstractC16579 abstractC16579 : c0309.f1658) {
-                if (abstractC16579.mo1942()) {
-                    c19003.m43725(abstractC16579.f53222.f77449.mo1943());
-                }
-                c19004.m43723(abstractC16579.f53222.f77449);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final String[] f21053 = {"DATA", "HEADERS", "PRIORITY", "RST_STREAM", "SETTINGS", "PUSH_PROMISE", "PING", "GOAWAY", "WINDOW_UPDATE", "CONTINUATION"};
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final String[] f21051 = new String[64];
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final String[] f21050 = new String[256];
+
+    static {
+        int i = 0;
+        int i2 = 0;
+        while (true) {
+            String[] strArr = f21050;
+            if (i2 >= strArr.length) {
+                break;
             }
-            C23594 c23594M52442 = c23800.m52442(c19004.m43726());
-            c23594M52442.f1659 = c19003.m43726();
-            AbstractC0618 abstractC0618 = c23594M52442.f53222;
-            abstractC0618.f77447 |= 512;
-            c23800.m52385(abstractC0618);
+            Object[] objArr = {Integer.toBinaryString(i2)};
+            byte[] bArr = C19822.f63715;
+            strArr[i2] = String.format(Locale.US, "%8s", objArr).replace(' ', '0');
+            i2++;
         }
-        return c0309;
+        String[] strArr2 = f21051;
+        strArr2[0] = "";
+        strArr2[1] = "END_STREAM";
+        int[] iArr = {1};
+        strArr2[8] = "PADDED";
+        int i3 = iArr[0];
+        strArr2[i3 | 8] = C8947.m23910(new StringBuilder(), strArr2[i3], "|PADDED");
+        strArr2[4] = "END_HEADERS";
+        strArr2[32] = "PRIORITY";
+        strArr2[36] = "END_HEADERS|PRIORITY";
+        int[] iArr2 = {4, 32, 36};
+        for (int i4 = 0; i4 < 3; i4++) {
+            int i5 = iArr2[i4];
+            int i6 = iArr[0];
+            String[] strArr3 = f21051;
+            int i7 = i6 | i5;
+            strArr3[i7] = strArr3[i6] + '|' + strArr3[i5];
+            StringBuilder sb = new StringBuilder();
+            sb.append(strArr3[i6]);
+            sb.append('|');
+            strArr3[i7 | 8] = C8947.m23910(sb, strArr3[i5], "|PADDED");
+        }
+        while (true) {
+            String[] strArr4 = f21051;
+            if (i >= strArr4.length) {
+                return;
+            }
+            if (strArr4[i] == null) {
+                strArr4[i] = f21050[i];
+            }
+            i++;
+        }
     }
 
-    public C6180(C6761 c6761) {
-        this.f21050 = c6761;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m17814(String str, Object... objArr) {
+        byte[] bArr = C19822.f63715;
+        throw new IllegalArgumentException(String.format(Locale.US, str, objArr));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m17815(String str, Object... objArr) throws IOException {
+        byte[] bArr = C19822.f63715;
+        throw new IOException(String.format(Locale.US, str, objArr));
+    }
+
+    /* JADX WARN: Code duplicated, block: B:35:0x0069  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m17813(boolean z, int i, int i2, byte b, byte b2) {
+        String str;
+        String strReplace;
+        String[] strArr = f21053;
+        if (b < strArr.length) {
+            str = strArr[b];
+        } else {
+            Object[] objArr = {Byte.valueOf(b)};
+            byte[] bArr = C19822.f63715;
+            str = String.format(Locale.US, "0x%02x", objArr);
+        }
+        if (b2 == 0) {
+            strReplace = "";
+        } else {
+            String[] strArr2 = f21050;
+            if (b == 2 || b == 3) {
+                strReplace = strArr2[b2];
+            } else if (b == 4 || b == 6) {
+                strReplace = b2 == 1 ? "ACK" : strArr2[b2];
+            } else if (b == 7 || b == 8) {
+                strReplace = strArr2[b2];
+            } else {
+                String[] strArr3 = f21051;
+                String str2 = b2 < strArr3.length ? strArr3[b2] : strArr2[b2];
+                if (b == 5 && (b2 & 4) != 0) {
+                    strReplace = str2.replace("HEADERS", "PUSH_PROMISE");
+                } else {
+                    strReplace = (b != 0 || (b2 & UTF8.S_CS3) == 0) ? str2 : str2.replace("PRIORITY", "COMPRESSED");
+                }
+            }
+        }
+        Object[] objArr2 = {z ? "<<" : ">>", Integer.valueOf(i), Integer.valueOf(i2), str, strReplace};
+        byte[] bArr2 = C19822.f63715;
+        return String.format(Locale.US, "%s 0x%08x %5d %-13s %s", objArr2);
     }
 }

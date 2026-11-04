@@ -1,31 +1,65 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Set;
+import android.content.Context;
+import android.media.AudioManager;
+import android.os.Build;
+import android.os.Looper;
 
-/* JADX INFO: renamed from: l.۠ᩳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8345 extends AbstractC2098 implements InterfaceC18928, Serializable, Cloneable, InterfaceC22810 {
-    public static final long serialVersionUID = -7046029254386353129L;
+/* JADX INFO: renamed from: l.۠ۗۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E7TV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C8345 {
 
-    @Override // l.InterfaceC14800
-    @Deprecated
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean mo21796(long j) {
-        return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static AudioManager f27338;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static synchronized AudioManager m22450(Context context) {
+        Context applicationContext = context.getApplicationContext();
+        if (applicationContext != null) {
+            f27338 = null;
+        }
+        AudioManager audioManager = f27338;
+        if (audioManager != null) {
+            return audioManager;
+        }
+        Looper looperMyLooper = Looper.myLooper();
+        if (looperMyLooper != null && looperMyLooper != Looper.getMainLooper()) {
+            C0645 c0645 = new C0645();
+            C15300.m36732().execute(new RunnableC11879(1, applicationContext, c0645));
+            c0645.m2834();
+            AudioManager audioManager2 = f27338;
+            audioManager2.getClass();
+            return audioManager2;
+        }
+        AudioManager audioManager3 = (AudioManager) applicationContext.getSystemService("audio");
+        f27338 = audioManager3;
+        audioManager3.getClass();
+        return audioManager3;
     }
 
-    public final Object clone() {
-        return C19634.f63036;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m22451(Context context, C0645 c0645) {
+        f27338 = (AudioManager) context.getSystemService("audio");
+        c0645.m2833();
     }
 
-    @Override // java.util.Collection, java.util.Set
-    public final boolean equals(Object obj) {
-        return (obj instanceof Set) && ((Set) obj).isEmpty();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static int m22453(AudioManager audioManager, C2379 c2379) {
+        if (Build.VERSION.SDK_INT >= 26) {
+            return audioManager.requestAudioFocus(c2379.m8080());
+        }
+        AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListenerM8082 = c2379.m8082();
+        c2379.m8084().getClass();
+        return audioManager.requestAudioFocus(onAudioFocusChangeListenerM8082, 3, c2379.m8083());
     }
 
-    private Object readResolve() {
-        return C19634.f63036;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m22452(AudioManager audioManager, C2379 c2379) {
+        if (Build.VERSION.SDK_INT >= 26) {
+            audioManager.abandonAudioFocusRequest(c2379.m8080());
+        } else {
+            audioManager.abandonAudioFocus(c2379.m8082());
+        }
     }
 }

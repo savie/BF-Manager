@@ -11,7 +11,7 @@ public class BIKEParameters implements KEMParameters {
     public final int defaultKeySize;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77977l;
+    public int f82093l;
     public String name;
     public int nbIter;
     public int r;
@@ -24,7 +24,7 @@ public class BIKEParameters implements KEMParameters {
         this.r = i;
         this.w = i2;
         this.t = i3;
-        this.f77977l = i4;
+        this.f82093l = i4;
         this.nbIter = i5;
         this.tau = i6;
         this.defaultKeySize = i7;
@@ -36,11 +36,11 @@ public class BIKEParameters implements KEMParameters {
     }
 
     public int getL() {
-        return this.f77977l;
+        return this.f82093l;
     }
 
     public int getLByte() {
-        return this.f77977l / 8;
+        return this.f82093l / 8;
     }
 
     public String getName() {

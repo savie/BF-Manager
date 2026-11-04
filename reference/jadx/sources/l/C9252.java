@@ -1,32 +1,55 @@
 package l;
 
-import java.util.EnumSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۢ֨۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: renamed from: l.ۡ۠ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V9PU */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9252 extends AbstractC3956 {
+public final class C9252 implements Iterator {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0429 f31465;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Iterator f30109;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C9252(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
-        super(c0429, abstractC11242, enumC11368, enumSet);
-        this.f31465 = c0429;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22636 f30110;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f30111;
+
+    public C9252(C22636 c22636) {
+        this.f30110 = c22636;
+        this.f30111 = c22636.f73528.size();
     }
 
-    @Override // l.AbstractC3956
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        C0429 c0429 = this.f31465;
-        char cM2248 = c0429.m2248();
-        C21825 c21825M48588 = C21825.m48588();
-        for (int i2 = 0; i2 < cM2248; i2++) {
-            c21825M48588 = c21825M48588.m48597(c0429.f1983.m1627(c0429.m2248()).f77449);
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        int i = this.f30111;
+        return (i > 0 && i <= this.f30110.f73528.size()) || m24436().hasNext();
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!m24436().hasNext()) {
+            List list = this.f30110.f73528;
+            int i = this.f30111 - 1;
+            this.f30111 = i;
+            return (Map.Entry) list.get(i);
         }
-        if (abstractC23903.f77449.mo33524().isEmpty()) {
-            abstractC23903.f77449.mo27295().f45366 = c21825M48588.m48589();
+        return (Map.Entry) m24436().next();
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private Iterator m24436() {
+        if (this.f30109 == null) {
+            this.f30109 = this.f30110.f73527.entrySet().iterator();
         }
+        return this.f30109;
     }
 }

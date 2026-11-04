@@ -1,78 +1,98 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
+import com.google.android.material.motion.MotionUtils;
 
-/* JADX INFO: renamed from: l.᩺᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T4Z8 */
+/* JADX INFO: renamed from: l.᩹ۗۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O44L */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23262 {
+public final class C23262 extends AbstractC17294 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public InputStream f75475;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public AbstractC11781 f75374;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f75474 = 16777215;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6108 f75375;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f75473 = true;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f75376;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int[] f75476 = new int[256];
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo5781() {
+        return 1;
+    }
 
-    public C23262(InputStream inputStream) {
-        this.f75475 = inputStream;
-        for (int i = 0; i < 256; i++) {
-            int i2 = i;
-            for (int i3 = 0; i3 < 8; i3++) {
-                int i4 = i2 & 1;
-                i2 >>= 1;
-                if (i4 != 0) {
-                    i2 ^= -306675152;
-                }
-            }
-            this.f75476[i] = i2;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23262(C6108 c6108, AbstractC11781 abstractC11781, boolean z) {
+        super(c6108, C8935.m23847(abstractC11781.mo29576(c6108.f20853)));
+        this.f75375 = c6108;
+        this.f75374 = abstractC11781;
+        this.f75376 = z;
+    }
+
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ᩸ */
+    public final AbstractC17294 mo5785() {
+        C6108 c6108 = this.f75375;
+        C8935 c8935 = c6108.f20850;
+        C20035 c20035 = c8935.f29132.f50605;
+        AbstractC11781 abstractC11781 = this.f75374;
+        c8935.m23870(180, C20035.m46076(c20035, abstractC11781), abstractC11781);
+        return c6108.f20855[this.f56323];
+    }
+
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ܳ */
+    public final void mo28618() {
+        C8935 c8935 = this.f75375.f20850;
+        C20035 c20035 = c8935.f29132.f50605;
+        AbstractC11781 abstractC11781 = this.f75374;
+        c8935.m23870(181, C20035.m46076(c20035, abstractC11781), abstractC11781);
+    }
+
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ۤ */
+    public final AbstractC17294 mo28617() {
+        C6108 c6108 = this.f75375;
+        C24705 c24705 = c6108.f20853;
+        C8935 c8935 = c6108.f20850;
+        AbstractC11781 abstractC11781 = this.f75374;
+        C23191 c23191 = (C23191) abstractC11781.m29598(c24705);
+        int iM23847 = C8935.m23847(c23191.f75156);
+        long jMo29591 = abstractC11781.f38069.mo29591() & 512;
+        boolean z = this.f75376;
+        if (jMo29591 != 0 && !z) {
+            c8935.m23876(abstractC11781, c23191);
+        } else if (z) {
+            c8935.m23896(abstractC11781, c23191);
+        } else {
+            c8935.m23898(abstractC11781, c23191);
         }
+        return c6108.f20855[iM23847];
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m51340() {
-        return this.f75474;
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo5783() {
+        this.f75375.f20855[4].mo5783();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m51341() {
-        return m51345() == this.f75474;
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5778() {
+        this.f75375.f20855[4].mo5778();
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final void m51339() {
-        this.f75474 = 16777215;
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo5784(int i) {
+        this.f75375.f20855[4].mo5784(i);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m51342() throws IOException {
-        int i = this.f75475.read();
-        if (this.f75473 && i != -1) {
-            i = (~i) & 255;
-        }
-        int i2 = this.f75474;
-        this.f75474 = (i2 >> 8) ^ this.f75476[(i2 ^ i) & 255];
-        return i;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m51343() {
-        this.f75473 = false;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m51344() throws IOException {
-        this.f75475.close();
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m51345() {
-        return (m51342() & 255) | ((m51342() & 255) << 8) | ((m51342() & 255) << 16) | ((m51342() & 255) << 24);
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("member(");
+        sb.append(this.f75374);
+        sb.append(this.f75376 ? " nonvirtual)" : MotionUtils.EASING_TYPE_FORMAT_END);
+        return sb.toString();
     }
 }

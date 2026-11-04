@@ -1,82 +1,47 @@
 package l;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.util.AttributeSet;
-import android.widget.Button;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ܶܽۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z11M */
+/* JADX INFO: renamed from: l.ܳ۫۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: I254 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C15347 extends AbstractC18168 {
+public final class C15347 implements InterfaceC24457 {
 
-    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
-    public AbstractDialogInterfaceOnClickListenerC17341 f49959;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5653 f50103;
 
-    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
-    public C23566 f49960;
-
-    public C15347(Context context) {
-        super(context);
-        m36744();
+    public C15347(C5653 c5653) {
+        this.f50103 = c5653;
     }
 
-    public C15347(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        m36744();
-    }
-
-    public C15347(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        m36744();
-    }
-
-    public C15347(Context context, AttributeSet attributeSet, int i, int i2) {
-        super(context, attributeSet, i, i2);
-        m36744();
-    }
-
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    private void m36744() {
-        AbstractActivityC12483 abstractActivityC12483 = (AbstractActivityC12483) C8703.m22527(m13133());
-        if (abstractActivityC12483 != null) {
-            this.f49960 = ViewOnClickListenerC8374.m21926(abstractActivityC12483, new C2544(this));
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m36743(C15347 c15347, String str) {
-        if (c15347.f49959 != null) {
-            if (str.length() > 1 && str.endsWith("/")) {
-                str = C20630.m46498(1, 0, str);
-            }
-            c15347.f49959.m40346((CharSequence) str);
-            c15347.f49959.m40371();
-        }
-    }
-
-    @Override // l.AbstractC18168
+    @Override // l.InterfaceC24457
     /* JADX INFO: renamed from: ۙ */
-    public final void mo950(AbstractActivityC12483 abstractActivityC12483) {
-        C23108 c23108 = new C23108(this, abstractActivityC12483);
-        c23108.m40366((CharSequence) m13158().toString());
-        c23108.m40375(1000);
-        c23108.m40346((CharSequence) m42292().getString(m13157(), "/sdcard/MT2"));
-        c23108.m40336(6);
-        c23108.m40340();
-        c23108.m40371();
-        this.f49959 = c23108;
-        if (this.f49960 != null) {
-            Button buttonM40349 = c23108.m40349();
-            buttonM40349.setVisibility(0);
-            buttonM40349.setOnClickListener(new ViewOnClickListenerC4450(3, this));
-        }
-        this.f49959.m40368(true);
+    public final void mo12170(long j, long j2, long j3, long j4) {
+        C5653 c5653 = this.f50103;
+        c5653.f19529.m6378(j);
+        c5653.mo16842(c5653.f19529);
+        c5653.mo16838(j4);
+        c5653.mo16839(c5653.f19529.m6380());
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m36742(C15347 c15347) {
-        c15347.f49960.m46684(0, R.string.MT_Protector, c15347.f49959.m40352(), (String) null, (String[]) null, (Bundle) null);
+    @Override // l.InterfaceC24457
+    /* JADX INFO: renamed from: ܺۙ */
+    public final C12919 mo12171() {
+        return this.f50103.f19534;
+    }
+
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ */
+    public final void mo3465() {
+        C5653 c5653 = this.f50103;
+        String str = (String) c5653.f19524.get();
+        if (str != null) {
+            c5653.mo16841(str);
+        }
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        C5653 c5653 = this.f50103;
+        return c5653.mo924() || c5653.f19528.get() != null;
     }
 }

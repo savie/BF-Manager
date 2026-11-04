@@ -2,7 +2,7 @@ package org.bouncycastle.jce.spec;
 
 import java.security.spec.KeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECKeySpec implements KeySpec {
     public ECParameterSpec spec;
 

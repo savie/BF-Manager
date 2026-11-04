@@ -2,7 +2,7 @@ package com.umeng.analytics.pro;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
-import l.C8479;
+import l.C13645;
 
 /* JADX INFO: compiled from: S60M */
 /* JADX INFO: loaded from: classes.dex */
@@ -19,7 +19,7 @@ public class bn extends bu {
     public byte[] k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public byte[] f77928l;
+    public byte[] f82044l;
     public byte[] m;
     public byte[] n;
     public byte[] o;
@@ -118,7 +118,7 @@ public class bn extends bu {
         this.i = new byte[1];
         this.j = new byte[2];
         this.k = new byte[4];
-        this.f77928l = new byte[8];
+        this.f82044l = new byte[8];
         this.m = new byte[1];
         this.n = new byte[2];
         this.o = new byte[4];
@@ -202,7 +202,7 @@ public class bn extends bu {
 
     @Override // com.umeng.analytics.pro.bu
     public void a(long j) {
-        byte[] bArr = this.f77928l;
+        byte[] bArr = this.f82044l;
         bArr[0] = (byte) ((j >> 56) & 255);
         bArr[1] = (byte) ((j >> 48) & 255);
         bArr[2] = (byte) ((j >> 40) & 255);
@@ -396,13 +396,13 @@ public class bn extends bu {
 
     public void d(int i) throws bv {
         if (i < 0) {
-            throw new bv(C8479.m22141(i, "Negative length: "));
+            throw new bv(C13645.m33382(i, "Negative length: "));
         }
         if (this.f) {
             int i2 = this.e - i;
             this.e = i2;
             if (i2 < 0) {
-                throw new bv(C8479.m22141(i, "Message length exceeded: "));
+                throw new bv(C13645.m33382(i, "Message length exceeded: "));
             }
         }
     }

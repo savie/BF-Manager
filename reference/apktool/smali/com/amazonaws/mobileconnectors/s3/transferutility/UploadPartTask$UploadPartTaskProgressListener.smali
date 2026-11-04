@@ -9,9 +9,9 @@
 # instance fields
 .field public ۙ:J
 
-.field public final ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
+.field public final ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
 
-.field public final synthetic ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
+.field public final synthetic ᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
 
     .line 131
-    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
+    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
 
     return-void
 .end method
@@ -37,7 +37,7 @@
     const/16 v0, 0x20
 
     .line 136
-    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressEvent;->ܰ()I
+    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressEvent;->᩷()I
 
     move-result v1
 
@@ -50,7 +50,7 @@
 
     const-string v0, "Reset Event triggered. Resetting the bytesCurrent to 0."
 
-    invoke-interface {p1, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -73,21 +73,21 @@
 
     .line 144
     :goto_0
-    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
+    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;
 
     .line 145
     invoke-static {p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;->ۙ(Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask;)Lcom/amazonaws/services/s3/model/UploadPartRequest;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۜ()I
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۧ()I
 
     move-result p1
 
     iget-wide v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ۙ:J
 
     .line 144
-    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
+    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadPartTask$UploadPartTaskProgressListener;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;
 
     invoke-virtual {v2, p1, v0, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/UploadTask$UploadTaskProgressListener;->ۙ(IJ)V
 

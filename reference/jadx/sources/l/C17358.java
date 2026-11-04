@@ -1,216 +1,151 @@
 package l;
 
-import com.github.luben.zstd.Zstd;
-import com.github.luben.zstd.ZstdCompressCtx;
-import com.github.luben.zstd.ZstdDecompressCtx;
-import java.io.IOException;
-import java.io.OutputStream;
-import org.bouncycastle.crypto.prng.X931RNG;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ܿ۬ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6WV */
+/* JADX INFO: renamed from: l.ܽۚ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: O7FP */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C17358 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f55223;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f55225;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f55227;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C19805 f55221 = new C19805(3);
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final C19805 f55220 = new C19805(3);
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C19551 f55228 = new C19551();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final OutputStream f55226 = new C12420(this);
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final byte[] f55222 = new byte[65536];
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public byte[] f55224 = new byte[0];
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C9856 m40393() {
-        this.f55228.m44640();
-        this.f55225 = 0;
-        this.f55227 = 0;
-        this.f55223 = false;
-        return new C9856(new C12678(this.f55222, this.f55226));
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m40390() {
-        return this.f55223 || this.f55228.f62830 > 8388608;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m40386(C17358 c17358) {
-        c17358.f55223 = true;
-        C19551 c19551 = c17358.f55228;
-        c19551.m44640();
-        c19551.f62829 = new byte[0];
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static ZstdCompressCtx m40387() {
-        ZstdCompressCtx zstdCompressCtx = (ZstdCompressCtx) f55221.m45009();
-        if (zstdCompressCtx != null) {
-            return zstdCompressCtx;
+    public static void m40785(String str, C11391 c11391) {
+        C24818 c24818;
+        C11391 c11391M40787 = m40787(c11391);
+        if (str.isEmpty() || c11391M40787 == null) {
+            m40788(str);
+            return;
         }
-        ZstdCompressCtx zstdCompressCtx2 = new ZstdCompressCtx();
-        try {
-            return zstdCompressCtx2.setLevel(3).setChecksum(true).setContentSize(true).loadDict(C6069.m16473());
-        } catch (IOException | RuntimeException e) {
-            C19431.m44468(zstdCompressCtx2);
-            throw new IllegalStateException("Unable to initialize smali cache compressor", e);
+        ArrayList arrayListM40782 = m40782();
+        Iterator it = arrayListM40782.iterator();
+        do {
+            if (!it.hasNext()) {
+                c24818 = null;
+                break;
+            }
+            c24818 = (C24818) it.next();
+        } while (!c24818.f80299.equals(str));
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        if (c24818 != null) {
+            c24818.f80298 = c11391M40787;
+            c24818.f80297 = jCurrentTimeMillis;
+        } else {
+            arrayListM40782.add(new C24818(str, c11391M40787, jCurrentTimeMillis));
         }
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static ZstdDecompressCtx m40383() {
-        ZstdDecompressCtx zstdDecompressCtx = (ZstdDecompressCtx) f55220.m45009();
-        if (zstdDecompressCtx != null) {
-            return zstdDecompressCtx;
+        if (arrayListM40782.size() > 100) {
+            Collections.sort(arrayListM40782, new C5426());
+            while (arrayListM40782.size() > 100) {
+                C2764.m9138(arrayListM40782, 1);
+            }
         }
-        ZstdDecompressCtx zstdDecompressCtx2 = new ZstdDecompressCtx();
-        try {
-            return zstdDecompressCtx2.loadDict(C6069.m16473());
-        } catch (IOException | RuntimeException e) {
-            C19431.m44468(zstdDecompressCtx2);
-            throw new IllegalStateException("Unable to initialize smali cache decompressor", e);
-        }
+        m40786(arrayListM40782);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m40384(C19805 c19805, AutoCloseable autoCloseable, boolean z) {
-        if (autoCloseable != null) {
-            if (z && c19805.m45011(autoCloseable)) {
+    public static C11391 m40783(String str) {
+        if (str.isEmpty()) {
+            return null;
+        }
+        ArrayList<C24818> arrayListM40782 = m40782();
+        for (C24818 c24818 : arrayListM40782) {
+            if (c24818.f80299.equals(str)) {
+                C11391 c11391M40787 = m40787(c24818.f80298);
+                if (c11391M40787 == null) {
+                    return null;
+                }
+                c24818.f80297 = System.currentTimeMillis();
+                m40786(arrayListM40782);
+                return c11391M40787;
+            }
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m40788(String str) {
+        if (str.isEmpty()) {
+            return;
+        }
+        ArrayList arrayListM40782 = m40782();
+        for (int i = 0; i < arrayListM40782.size(); i++) {
+            if (((C24818) arrayListM40782.get(i)).f80299.equals(str)) {
+                arrayListM40782.remove(i);
+                m40786(arrayListM40782);
                 return;
             }
-            C19431.m44468(autoCloseable);
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40391() throws IOException {
-        C19805 c19805 = f55221;
-        C19551 c19551 = this.f55228;
-        int i = c19551.f62830;
-        this.f55225 = i;
-        this.f55227 = 0;
-        if (this.f55223 || i > 8388608) {
-            throw new IOException("Smali cache content is too large");
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C11391 m40787(C11391 c11391) {
+        int i = C1697.f5829[c11391.m28746().ordinal()];
+        if (i == 1) {
+            return new C11391(EnumC16612.OFF, -1, null);
         }
+        if (i != 2) {
+            if (i != 3) {
+                throw new IncompatibleClassChangeError();
+            }
+            if (c11391.m28747() != null && !c11391.m28747().isEmpty()) {
+                return new C11391(EnumC16612.FILE, -1, c11391.m28747());
+            }
+        } else if (c11391.m28745() >= 0) {
+            return new C11391(EnumC16612.TRACK, c11391.m28745(), null);
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static ArrayList m40782() {
+        byte[] bArrMo7903;
+        ArrayList arrayList = new ArrayList();
         try {
-            try {
-                long jCompressBound = Zstd.compressBound(i);
-                if (jCompressBound < 0 || jCompressBound > 2147483639) {
-                    throw new IOException("Smali cache compressed buffer is too large");
+            InterfaceC9801 interfaceC9801 = ApplicationC17729.f58258;
+            if (interfaceC9801 != null && (bArrMo7903 = interfaceC9801.mo7903("vsts", (byte[]) null)) != null && bArrMo7903.length != 0) {
+                C20348 c20348M46740 = C20348.m46740(bArrMo7903);
+                c20348M46740.m46746(1699025495);
+                int i = c20348M46740.readByte() & 255;
+                for (int i2 = 0; i2 < i; i2++) {
+                    arrayList.add(C24818.m55335(c20348M46740));
                 }
-                if (this.f55224.length < jCompressBound) {
-                    this.f55224 = new byte[(int) jCompressBound];
-                }
-                ZstdCompressCtx zstdCompressCtxM40387 = m40387();
-                byte[] bArr = this.f55224;
-                int iCompressByteArray = zstdCompressCtxM40387.compressByteArray(bArr, 0, bArr.length, c19551.f62829, 0, this.f55225);
-                this.f55227 = iCompressByteArray;
-                byte[] bArr2 = this.f55224;
-                if (!(iCompressByteArray >= 5 && (4 & bArr2[4]) != 0) || Zstd.getDictIdFromFrame(bArr2) != 1773473561 || Zstd.getFrameContentSize(this.f55224, 0, this.f55227) != this.f55225 || Zstd.findFrameCompressedSize(this.f55224, 0, this.f55227) != this.f55227) {
-                    throw new IOException("Invalid compressed smali cache frame");
-                }
-                m40384(c19805, (AutoCloseable) zstdCompressCtxM40387, true);
-            } catch (RuntimeException e) {
-                throw new IOException("Failed to compress smali cache", e);
             }
-        } catch (Throwable th) {
-            m40384(c19805, (AutoCloseable) null, false);
-            throw th;
+            return arrayList;
+        } catch (Exception unused) {
+            arrayList.clear();
+            return arrayList;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40392(int i, int i2, byte[] bArr) throws Throwable {
-        C19805 c19805 = f55220;
-        C19551 c19551 = this.f55228;
-        c19551.m44640();
-        this.f55225 = 0;
-        this.f55223 = false;
-        if (i >= 0 && i2 > 0) {
-            long j = i2;
-            if (((long) i) + j <= bArr.length) {
-                if (i2 < 5 || (bArr[i + 4] & 4) == 0) {
-                    throw new IOException("Smali cache frame checksum is missing");
-                }
-                ZstdDecompressCtx zstdDecompressCtx = null;
-                try {
-                    try {
-                        long jFindFrameCompressedSize = Zstd.findFrameCompressedSize(bArr, i, i2);
-                        if (Zstd.isError(jFindFrameCompressedSize) || jFindFrameCompressedSize != j) {
-                            throw new IOException("Smali cache frame length is invalid");
-                        }
-                        long frameContentSize = Zstd.getFrameContentSize(bArr, i, i2);
-                        if (frameContentSize < 0 || frameContentSize > X931RNG.BLOCK128_RESEED_MAX) {
-                            throw new IOException("Smali cache content size is invalid");
-                        }
-                        int i3 = (int) frameContentSize;
-                        if (c19551.f62829.length < i3) {
-                            c19551.f62829 = new byte[i3];
-                        }
-                        ZstdDecompressCtx zstdDecompressCtxM40383 = m40383();
-                        try {
-                            if (zstdDecompressCtxM40383.decompressByteArray(c19551.f62829, 0, i3, bArr, i, i2) != i3) {
-                                throw new IOException("Smali cache decompressed length is invalid");
-                            }
-                            this.f55225 = i3;
-                            m40384(c19805, (AutoCloseable) zstdDecompressCtxM40383, true);
-                            return;
-                        } catch (RuntimeException e) {
-                            e = e;
-                            throw new IOException("Failed to decompress smali cache", e);
-                        } catch (Throwable th) {
-                            th = th;
-                            zstdDecompressCtx = zstdDecompressCtxM40383;
-                            m40384(c19805, (AutoCloseable) zstdDecompressCtx, false);
-                            throw th;
-                        }
-                    } catch (RuntimeException e2) {
-                        e = e2;
+    public static void m40786(ArrayList arrayList) {
+        InterfaceC9801 interfaceC9801 = ApplicationC17729.f58258;
+        if (interfaceC9801 == null) {
+            return;
+        }
+        C6178 c6178M34975 = C14483.m34975(1699025495);
+        c6178M34975.writeByte(arrayList.size());
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            C24818 c24818 = (C24818) it.next();
+            c6178M34975.m17800(c24818.f80299);
+            int i = C1697.f5829[c24818.f80298.m28746().ordinal()];
+            int i2 = 1;
+            if (i != 1) {
+                i2 = 2;
+                if (i != 2) {
+                    i2 = 3;
+                    if (i != 3) {
+                        throw new IncompatibleClassChangeError();
                     }
-                } catch (Throwable th2) {
-                    th = th2;
+                } else {
+                    continue;
                 }
             }
+            c6178M34975.writeByte(i2);
+            c6178M34975.writeInt(c24818.f80298.m28745());
+            c6178M34975.m17787(c24818.f80298.m28747());
+            c6178M34975.m17803(c24818.f80297);
         }
-        throw new IOException("Smali cache frame range is invalid");
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final byte[] m40396() {
-        return this.f55228.f62829;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m40389() {
-        return this.f55225;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] m40395() {
-        return this.f55224;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m40394() {
-        return this.f55227;
+        interfaceC9801.edit().mo3488("vsts", c6178M34975.m17799()).apply();
     }
 }

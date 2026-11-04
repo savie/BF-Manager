@@ -1,168 +1,91 @@
-.class public final Ll/᩹᩹ܶ;
+.class public abstract Ll/᩹᩹ܶ;
 .super Ljava/lang/Object;
-.source "4BFQ"
+.source "99JQ"
+
+# interfaces
+.implements Ll/ۜܶܶ;
 
 
 # instance fields
-.field public final ۙ:Ll/֨᩹ܶ;
-
-.field public ܰ:Ljava/util/ArrayList;
+.field public ۙ:Lorg/bouncycastle/crypto/engines/RC4Engine;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜۚܶ;IIII)V
-    .locals 1
+.method public constructor <init>(Lorg/bouncycastle/crypto/engines/RC4Engine;)V
+    .locals 0
 
-    .line 55
+    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
-    new-instance v0, Ll/֨᩹ܶ;
-
-    invoke-direct {v0, p1, p2, p4, p5}, Ll/֨᩹ܶ;-><init>(Ll/ۜۚܶ;III)V
-
-    iput-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
-
-    .line 57
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object p1, p0, Ll/᩹᩹ܶ;->ܰ:Ljava/util/ArrayList;
+    .line 108
+    iput-object p1, p0, Ll/᩹᩹ܶ;->ۙ:Lorg/bouncycastle/crypto/engines/RC4Engine;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/֨᩹ܶ;
-    .locals 4
+.method public final doFinal([BI)I
+    .locals 0
 
-    .line 113
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ܰ:Ljava/util/ArrayList;
+    .line 125
+    iget-object p1, p0, Ll/᩹᩹ܶ;->ۙ:Lorg/bouncycastle/crypto/engines/RC4Engine;
 
-    if-eqz v0, :cond_1
+    invoke-interface {p1}, Lorg/bouncycastle/crypto/StreamCipher;->reset()V
 
-    .line 126
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    .line 128
-    :goto_0
-    iget-object v2, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
-
-    if-ge v1, v0, :cond_0
-
-    .line 129
-    iget-object v3, p0, Ll/᩹᩹ܶ;->ܰ:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ܽۚܶ;
-
-    invoke-virtual {v2, v3}, Ll/֨᩹ܶ;->ۙ(Ll/ܽۚܶ;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 132
-    iput-object v0, p0, Ll/᩹᩹ܶ;->ܰ:Ljava/util/ArrayList;
-
-    return-object v2
-
-    .line 114
-    :cond_1
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "already processed"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final ۙ(I)Ll/ܽۚܶ;
-    .locals 2
-
-    .line 70
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
-
-    invoke-virtual {v0}, Ll/֨᩹ܶ;->ۚ()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_1
-
-    if-gez p1, :cond_0
-
-    goto :goto_0
-
-    .line 73
-    :cond_0
-    invoke-virtual {v0, p1}, Ll/֨᩹ܶ;->ۙ(I)Ll/ܽۚܶ;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    :goto_0
     const/4 p1, 0x0
 
-    return-object p1
+    return p1
 .end method
 
-.method public final ۙ(Ll/ܽۚܶ;)V
-    .locals 1
+.method public final ۙ(I[B[B)I
+    .locals 6
 
-    .line 66
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, p1}, Ll/֨᩹ܶ;->ۙ(Ll/ܽۚܶ;)V
+    .line 120
+    iget-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Lorg/bouncycastle/crypto/engines/RC4Engine;
 
-    return-void
+    const/4 v2, 0x0
+
+    move-object v1, p2
+
+    move v3, p1
+
+    move-object v4, p3
+
+    invoke-interface/range {v0 .. v5}, Lorg/bouncycastle/crypto/StreamCipher;->processBytes([BII[BI)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final ۙ(Ll/᩷ۚܶ;)V
+.method public final ۙ(Ll/۠ܶܶ;[B)V
     .locals 1
 
-    .line 92
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
+    .line 113
+    sget-object v0, Ll/۠ܶܶ;->ܿ:Ll/۠ܶܶ;
 
-    invoke-virtual {v0, p1}, Ll/֨᩹ܶ;->ۙ(Ll/᩷ۚܶ;)V
+    if-ne p1, v0, :cond_0
 
-    return-void
-.end method
+    const/4 p1, 0x1
 
-.method public final ܰ()I
-    .locals 1
+    goto :goto_0
 
-    .line 78
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ۙ:Ll/֨᩹ܶ;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ll/֨᩹ܶ;->ۚ()I
+    .line 55
+    :goto_0
+    new-instance v0, Lorg/bouncycastle/crypto/params/KeyParameter;
 
-    move-result v0
+    invoke-direct {v0, p2}, Lorg/bouncycastle/crypto/params/KeyParameter;-><init>([B)V
 
-    return v0
-.end method
+    .line 113
+    iget-object p2, p0, Ll/᩹᩹ܶ;->ۙ:Lorg/bouncycastle/crypto/engines/RC4Engine;
 
-.method public final ܰ(Ll/ܽۚܶ;)V
-    .locals 1
-
-    .line 101
-    iget-object v0, p0, Ll/᩹᩹ܶ;->ܰ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1, v0}, Lorg/bouncycastle/crypto/StreamCipher;->init(ZLorg/bouncycastle/crypto/CipherParameters;)V
 
     return-void
 .end method

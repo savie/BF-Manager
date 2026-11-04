@@ -1,35 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶܶۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 956A */
+import android.widget.TextView;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ܳۧ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: U8VQ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15311 extends C17926 {
+public final /* synthetic */ class C15311 implements InterfaceC16438 {
 
-    /* JADX INFO: renamed from: ᩶ܶ, reason: not valid java name and contains not printable characters */
-    public C1198 f49889;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f50050;
 
-    public C15311(C7974 c7974) {
-        super(c7974);
-        this.f49889 = null;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f50051;
+
+    public /* synthetic */ C15311(int i, Object obj) {
+        this.f50050 = i;
+        this.f50051 = obj;
     }
 
-    /* JADX INFO: renamed from: ۠ۨ, reason: not valid java name and contains not printable characters */
-    public final C22085 m36670() {
-        return this.f49889;
-    }
-
-    @Override // l.AbstractC19886
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo36669(C22085 c22085, String[] strArr) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(m30313());
-        sb.append("[");
-        sb.append(c22085.f71538);
-        sb.append(",");
-        String strM5594 = C1679.m5594(C12441.m30911(c22085.f71540, "]", sb), " ", mo30315(c22085, strArr));
-        System.err.println(strM5594);
-        if (this.f49889 == null) {
-            this.f49889 = new C1198(strM5594, c22085);
+    @Override // l.InterfaceC16438
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1486(Object obj) {
+        switch (this.f50050) {
+            case 0:
+                ((TextView) this.f50051).setTextColor(((Integer) obj).intValue());
+                break;
+            default:
+                C19206.m44511((C19206) this.f50051, (List) obj);
+                break;
         }
     }
 }

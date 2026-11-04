@@ -1,190 +1,86 @@
 package l;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۘ۬ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A1RE */
+/* JADX INFO: renamed from: l.ۘۛۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8SC */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3959 extends AbstractC23366 {
+public final class C3959 {
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final byte[] f14710;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int f13506;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC23366 f14711;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C17720 f14712;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final DataOutputStream f14714;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f14716 = 0;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f14715 = true;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public boolean f14713 = false;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public IOException f14708 = null;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final byte[] f14709 = new byte[1];
-
-    public C3959(AbstractC23366 abstractC23366, C17720 c17720) {
-        abstractC23366.getClass();
-        this.f14711 = abstractC23366;
-        this.f14714 = new DataOutputStream(abstractC23366);
-        this.f14712 = c17720;
-        this.f14710 = c17720.mo25183(65536);
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(int i) throws IOException {
-        byte[] bArr = this.f14709;
-        bArr[0] = (byte) i;
-        write(bArr, 0, 1);
-    }
-
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        int i3;
-        byte[] bArr2 = this.f14710;
-        if (i < 0 || i2 < 0 || (i3 = i + i2) < 0 || i3 > bArr.length) {
-            throw new IndexOutOfBoundsException();
-        }
-        IOException iOException = this.f14708;
-        if (iOException != null) {
-            throw iOException;
-        }
-        if (this.f14713) {
-            throw new C21599("Stream finished or closed");
-        }
-        while (i2 > 0) {
-            try {
-                int iMin = Math.min(65536 - this.f14716, i2);
-                DataOutputStream dataOutputStream = this.f14714;
-                if (iMin != 65536) {
-                    System.arraycopy(bArr, i, bArr2, this.f14716, iMin);
-                    int i4 = this.f14716 + iMin;
-                    this.f14716 = i4;
-                    if (i4 == 65536) {
-                        dataOutputStream.writeByte(this.f14715 ? 1 : 2);
-                        dataOutputStream.writeShort(i4 - 1);
-                        dataOutputStream.write(bArr2, 0, i4);
-                        this.f14715 = false;
-                        this.f14716 = 0;
-                    }
-                } else {
-                    dataOutputStream.writeByte(this.f14715 ? 1 : 2);
-                    dataOutputStream.writeShort(iMin - 1);
-                    dataOutputStream.write(bArr, i, iMin);
-                    this.f14715 = false;
-                }
-                i += iMin;
-                i2 -= iMin;
-            } catch (IOException e) {
-                this.f14708 = e;
-                throw e;
-            }
-        }
-    }
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final int f13507;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m11443() throws IOException {
-        IOException iOException = this.f14708;
-        if (iOException != null) {
-            throw iOException;
-        }
-        if (this.f14713) {
-            throw new C21599("Stream finished or closed");
-        }
-        try {
-            int i = this.f14716;
-            byte[] bArr = this.f14710;
-            if (i > 0) {
-                DataOutputStream dataOutputStream = this.f14714;
-                dataOutputStream.writeByte(this.f14715 ? 1 : 2);
-                dataOutputStream.writeShort(i - 1);
-                dataOutputStream.write(bArr, 0, i);
-                this.f14715 = false;
-                this.f14716 = 0;
-            }
-            this.f14711.write(0);
-            this.f14713 = true;
-            this.f14712.mo25181(bArr);
-        } catch (IOException e) {
-            this.f14708 = e;
-            throw e;
-        }
-    }
+    public final int f13508;
 
-    @Override // java.io.OutputStream, java.io.Flushable
-    public final void flush() throws IOException {
-        IOException iOException = this.f14708;
-        if (iOException != null) {
-            throw iOException;
-        }
-        if (this.f14713) {
-            throw new C21599("Stream finished or closed");
-        }
-        try {
-            int i = this.f14716;
-            if (i > 0) {
-                byte[] bArr = this.f14710;
-                DataOutputStream dataOutputStream = this.f14714;
-                dataOutputStream.writeByte(this.f14715 ? 1 : 2);
-                dataOutputStream.writeShort(i - 1);
-                dataOutputStream.write(bArr, 0, i);
-                this.f14715 = false;
-                this.f14716 = 0;
-            }
-            this.f14711.flush();
-        } catch (IOException e) {
-            this.f14708 = e;
-            throw e;
-        }
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final boolean f13509;
 
-    @Override // l.AbstractC23366
-    public final void finish() throws IOException {
-        if (this.f14713) {
-            return;
-        }
-        m11443();
-        try {
-            this.f14711.finish();
-        } catch (IOException e) {
-            this.f14708 = e;
-            throw e;
-        }
-    }
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public final int f13510;
 
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        if (this.f14711 != null) {
-            if (!this.f14713) {
-                try {
-                    m11443();
-                } catch (IOException unused) {
-                }
-            }
-            try {
-                this.f14711.close();
-            } catch (IOException e) {
-                if (this.f14708 == null) {
-                    this.f14708 = e;
-                }
-            }
-            this.f14711 = null;
-        }
-        IOException iOException = this.f14708;
-        if (iOException != null) {
-            throw iOException;
-        }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f13511;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final int f13512;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final int f13513;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean f13514;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f13515;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final int f13516;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final int f13517;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final int f13518;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f13519;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final boolean f13520;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f13521;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f13522;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final float f13523;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f13524;
+
+    public C3959(int i, int i2, int i3, int i4, int i5, int i6, float f, int i7, int i8, boolean z, boolean z2, int i9, int i10, int i11, boolean z3, int i12, int i13, int i14, int i15) {
+        this.f13507 = i;
+        this.f13515 = i2;
+        this.f13524 = i3;
+        this.f13513 = i4;
+        this.f13510 = i5;
+        this.f13512 = i6;
+        this.f13523 = f;
+        this.f13521 = i7;
+        this.f13508 = i8;
+        this.f13520 = z;
+        this.f13509 = z2;
+        this.f13506 = i9;
+        this.f13516 = i10;
+        this.f13518 = i11;
+        this.f13514 = z3;
+        this.f13522 = i12;
+        this.f13511 = i13;
+        this.f13519 = i14;
+        this.f13517 = i15;
     }
 }

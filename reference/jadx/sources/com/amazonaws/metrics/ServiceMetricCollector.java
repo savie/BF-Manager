@@ -4,6 +4,6 @@ package com.amazonaws.metrics;
 public abstract class ServiceMetricCollector {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final ServiceMetricCollector f276 = new ServiceMetricCollector() { // from class: com.amazonaws.metrics.ServiceMetricCollector.1
+    public static final ServiceMetricCollector f266 = new ServiceMetricCollector() { // from class: com.amazonaws.metrics.ServiceMetricCollector.1
     };
 }

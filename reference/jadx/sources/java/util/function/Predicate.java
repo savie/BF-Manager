@@ -6,7 +6,7 @@ public interface Predicate<T> {
     Predicate<T> and(Predicate<? super T> predicate);
 
     /* JADX INFO: renamed from: negate */
-    Predicate<T> mo9645negate();
+    Predicate<T> mo7134negate();
 
     boolean test(T t);
 }

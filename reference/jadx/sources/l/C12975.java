@@ -1,119 +1,74 @@
 package l;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-/* JADX INFO: renamed from: l.۬۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57RJ */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۫۠ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 492R */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C12975 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f43277;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f41600;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int[][] f43278;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f41603;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final byte[] f43279;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f41604;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4507 f43280;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f43281;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int[][] f43282;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int[] f43283 = new int[6];
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[][] f43284;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f43285;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f41605;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m32099() throws IOException {
-        int i = this.f43277 + 1;
-        this.f43277 = i;
-        if (i % 50 == 0) {
-            int i2 = this.f43285 + 1;
-            this.f43285 = i2;
-            byte[] bArr = this.f43279;
-            if (i2 == bArr.length) {
-                throw new C0979("Error decoding BZip2 block");
-            }
-            this.f43281 = bArr[i2] & 255;
-        }
-        int i3 = this.f43281;
-        int[] iArr = this.f43282[i3];
-        int i4 = this.f43283[i3];
-        C4507 c4507 = this.f43280;
-        int iM12543 = c4507.m12543(i4);
-        while (i4 <= 23) {
-            if (iM12543 <= iArr[i4]) {
-                return this.f43278[i3][iM12543 - this.f43284[i3][i4]];
-            }
-            iM12543 = (iM12543 << 1) | c4507.m12543(1);
-            i4++;
-        }
-        throw new C0979("Error decoding BZip2 block");
+    public C22629 f41599 = new C22629();
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C22629 f41602 = new C22629();
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C22629 f41601 = new C22629();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m32386(C12975 c12975) {
+        this.f41599.m50978(c12975.f41599);
+        this.f41602.m50978(c12975.f41602);
+        this.f41601.m50978(c12975.f41601);
+        this.f41604 = c12975.f41604;
+        this.f41605 = c12975.f41605;
+        this.f41600 = c12975.f41600;
+        this.f41603 = c12975.f41603;
     }
 
-    public C12975(C4507 c4507, int i, byte[][] bArr, byte[] bArr2) {
-        Class cls = Integer.TYPE;
-        this.f43284 = (int[][]) Array.newInstance((Class<?>) cls, 6, 25);
-        this.f43282 = (int[][]) Array.newInstance((Class<?>) cls, 6, 24);
-        this.f43278 = (int[][]) Array.newInstance((Class<?>) cls, 6, 258);
-        this.f43285 = -1;
-        this.f43277 = -1;
-        this.f43280 = c4507;
-        this.f43279 = bArr2;
-        this.f43281 = bArr2[0];
-        for (int i2 = 0; i2 < bArr.length; i2++) {
-            int[] iArr = this.f43284[i2];
-            int[] iArr2 = this.f43282[i2];
-            int[] iArr3 = this.f43278[i2];
-            byte[] bArr3 = bArr[i2];
-            int iMin = 23;
-            int iMax = 0;
-            for (int i3 = 0; i3 < i; i3++) {
-                iMax = Math.max((int) bArr3[i3], iMax);
-                iMin = Math.min((int) bArr3[i3], iMin);
-            }
-            this.f43283[i2] = iMin;
-            for (int i4 = 0; i4 < i; i4++) {
-                int i5 = bArr3[i4] + 1;
-                iArr[i5] = iArr[i5] + 1;
-            }
-            for (int i6 = 1; i6 < 25; i6++) {
-                iArr[i6] = iArr[i6] + iArr[i6 - 1];
-            }
-            int i7 = 0;
-            int i8 = iMin;
-            while (i8 <= iMax) {
-                int i9 = i8 + 1;
-                int i10 = iArr[i9];
-                int i11 = iArr[i8];
-                int i12 = (i10 - i11) + i7;
-                iArr[i8] = i7 - i11;
-                iArr2[i8] = i12 - 1;
-                i7 = i12 << 1;
-                i8 = i9;
-            }
-            int i13 = 0;
-            while (iMin <= iMax) {
-                for (int i14 = 0; i14 < i; i14++) {
-                    if (bArr3[i14] == iMin) {
-                        iArr3[i13] = i14;
-                        i13++;
-                    }
-                }
-                iMin++;
-            }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m32385() {
+        return this.f41599 + "->" + this.f41602 + ":" + this.f41601;
+    }
+
+    /* JADX WARN: Type inference fix 'apply assigned field type' failed
+    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
+    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
+    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
+    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
+     */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final JSONObject m32387() {
+        try {
+            JSONObject jSONObject = new JSONObject();
+            this.f41599.m50983(jSONObject, 'a');
+            this.f41601.m50983(jSONObject, 'd');
+            this.f41602.m50983(jSONObject, 'g');
+            jSONObject.put("j", this.f41604 ? 1 : 0);
+            jSONObject.put("k", this.f41605 ? 1 : 0);
+            jSONObject.put("l", this.f41600 ? 1 : 0);
+            jSONObject.put("m", this.f41603 ? 1 : 0);
+            return jSONObject;
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -2,8 +2,8 @@ package bin.mt.json;
 
 import java.io.Writer;
 import java.util.Arrays;
-import l.C11380;
-import l.C4323;
+import l.C1486;
+import l.C2977;
 
 /* JADX INFO: loaded from: classes.dex */
 public class PrettyPrint extends WriterConfig {
@@ -31,7 +31,7 @@ public class PrettyPrint extends WriterConfig {
     }
 
     @Override // bin.mt.json.WriterConfig
-    public C4323 createWriter(Writer writer) {
-        return new C11380(writer, this.indentChars);
+    public C1486 createWriter(Writer writer) {
+        return new C2977(writer, this.indentChars);
     }
 }

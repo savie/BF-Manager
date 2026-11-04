@@ -1,80 +1,63 @@
 .class public final Ll/ᩳ᩺ۨ;
 .super Ljava/lang/Object;
-.source "A63D"
+.source "SAHW"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final ܰ:Ljava/lang/ref/WeakReference;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/ref/WeakReference;)V
+    .locals 0
+
+    .line 105
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 106
+    iput-object p1, p0, Ll/ᩳ᩺ۨ;->ܰ:Ljava/lang/ref/WeakReference;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 6
+.method public final run()V
+    .locals 2
 
-    .line 162
-    new-instance v0, Ll/ܳۘۨ;
+    .line 111
+    iget-object v0, p0, Ll/ᩳ᩺ۨ;->ܰ:Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
-
-    .line 164
-    :try_start_0
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ll/ܳۘۨ;
+    check-cast v1, Ljava/lang/Runnable;
 
-    invoke-virtual {v1}, Ll/ܳۘۨ;->۬()I
+    if-eqz v1, :cond_0
 
-    move-result v1
+    .line 113
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 165
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    return-void
 
-    move-result-object v2
-
-    check-cast v2, Ll/ܳۘۨ;
-
-    invoke-virtual {v2}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/᩺᩸ۨ;
-
-    .line 166
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 62
-    new-array v3, v1, [B
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v1, :cond_0
-
-    .line 64
-    invoke-virtual {v2}, Ll/᩺᩸ۨ;->ۚ()I
-
-    move-result v5
-
-    and-int/lit16 v5, v5, 0xff
-
-    int-to-byte v5, v5
-
-    aput-byte v5, v3, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 166
+    .line 115
     :cond_0
-    invoke-virtual {v0, v3}, Ll/ܳۘۨ;->ۙ(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {}, Ll/ۢ᩺ۨ;->᩷()Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    .line 169
-    :catch_0
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->remove(Ljava/lang/Runnable;)Z
+
+    .line 116
+    invoke-static {}, Ll/ۢ᩺ۨ;->ۙ()Ljava/util/HashMap;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

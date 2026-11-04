@@ -1,470 +1,430 @@
 package l;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Writer;
-import java.util.List;
-import java.util.Set;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.RectF;
+import android.os.Build;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
+import android.text.method.TransformationMethod;
+import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.widget.TextView;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
-/* JADX INFO: renamed from: l.ܿ᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B5S9 */
-/* JADX INFO: loaded from: classes.dex */
-public class C17684 implements InterfaceC15001 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f56151;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC18119 f56152;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C19805 f56153;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C2867 f56154;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f56155;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final C19805 f56156;
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public int f56157;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public int f56158;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public boolean f56159;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public int f56160;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f56161;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f56162;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f56163;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public int f56164;
+/* JADX INFO: renamed from: l.ܽܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K51P */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17684 {
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f56165;
+    public static final RectF f58104 = new RectF();
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public int f56166;
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    @SuppressLint({"BanConcurrentHashMap"})
+    public static ConcurrentMapC17249 f58105 = new ConcurrentMapC17249();
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C16938 f58108;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public TextPaint f58110;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final Context f58112;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final TextView f58116;
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final C7474 f56167;
+    public int f58113 = 0;
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public int f56168;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public boolean f58106 = false;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f56169;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f58109 = -1.0f;
 
     /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public Object f56170;
+    public float f58114 = -1.0f;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public float f58107 = -1.0f;
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public int f56171;
+    public int[] f58115 = new int[0];
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f56172;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f58111 = false;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final C19805 f56173;
-
-    static {
-        ApplicationC6132.m17119(141);
-    }
-
-    public native C17684(C7474 c7474, AbstractC18119 abstractC18119, boolean z, boolean z2);
-
-    public native C17684(AbstractC18119 abstractC18119, C7474 c7474);
-
-    public C17684(byte[] bArr, int i, boolean z) {
-        this(null, new C1788(bArr, i), z, false);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17684 m41160(InputStream inputStream) {
-        if (!inputStream.markSupported()) {
-            inputStream = new BufferedInputStream(inputStream);
-        }
-        C10665.m26865(inputStream);
-        return new C17684(C2221.m6841(inputStream), 0, false);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17684 m41161(byte[] bArr) {
-        return new C17684(bArr, 0, true);
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int m41188() {
-        return this.f56162;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC18119 m41166() {
-        return this.f56152;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C1788 m41181() {
-        AbstractC18119 abstractC18119 = this.f56152;
-        if (abstractC18119 instanceof C1788) {
-            return (C1788) abstractC18119;
-        }
-        throw new RuntimeException();
-    }
-
-    @Override // l.InterfaceC15001
-    /* JADX INFO: renamed from: ۙ */
-    public final C7474 mo34147() {
-        return this.f56167;
-    }
-
-    @Override // l.InterfaceC15001
-    /* JADX INFO: renamed from: ܰ */
-    public final Set mo34148() {
-        return new C21212(this);
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final int m41197(int i) {
-        int i2 = this.f56162;
-        if (i2 == 0) {
-            return 0;
-        }
-        int iMo5859 = this.f56152.mo5859((i * 4) + i2 + 4);
-        if (iMo5859 == 0) {
-            return 0;
-        }
-        return this.f56162 + iMo5859;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m41187() {
-        this.f56155 = false;
-        this.f56154.m8630();
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final int m41182(int i) {
-        if (i < 0 || i >= this.f56160) {
-            throw new C16979(null, "String index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 4) + this.f56157;
-    }
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final int m41199(int i) {
-        if (i < 0 || i >= this.f56165) {
-            throw new C16979(null, "Type index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 4) + this.f56169;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m41190(int i) {
-        if (i < 0 || i >= this.f56172) {
-            throw new C16979(null, "Field index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 8) + this.f56151;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m41180(int i) {
-        if (i < 0 || i >= this.f56171) {
-            throw new C16979(null, "Method index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 8) + this.f56166;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int m41189(int i) {
-        if (i < 0 || i >= this.f56158) {
-            throw new C16979(null, "Proto index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 12) + this.f56168;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m41169(int i) {
-        if (i < 0 || i >= this.f56163) {
-            throw new C16979(null, "Class index out of bounds: %d", Integer.valueOf(i));
-        }
-        return (i * 32) + this.f56161;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m41201() {
-        return this.f56163;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int m41194() {
-        return this.f56160;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final int m41196() {
-        return this.f56165;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final int m41203() {
-        return this.f56158;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m41163() {
-        return this.f56172;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int m41167() {
-        return this.f56171;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String m41168(int i) {
-        boolean z = this.f56155;
-        String strM8628 = z ? this.f56154.m8628(i) : null;
-        if (strM8628 != null) {
-            return strM8628;
-        }
-        int iM41182 = m41182(i);
-        AbstractC18119 abstractC18119 = this.f56152;
-        C18825 c18825M42184 = abstractC18119.m42184(abstractC18119.mo9809(iM41182));
-        String strM43446 = c18825M42184.m43446(c18825M42184.m43449());
-        c18825M42184.m43450();
-        if (z) {
-            this.f56154.m8631(i, strM43446);
-        }
-        return strM43446;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m41192(int i, Writer writer, boolean z) throws IOException {
-        if (this.f56155 && !z) {
-            writer.write(m41168(i));
+    public C17684(TextView textView) {
+        this.f58116 = textView;
+        this.f58112 = textView.getContext();
+        int i = Build.VERSION.SDK_INT;
+        if (i >= 29) {
+            this.f58108 = new C25144();
+        } else if (i >= 23) {
+            this.f58108 = new C11717();
         } else {
-            m41171(i, writer, z);
+            this.f58108 = new C16938();
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41171(int i, Writer writer, boolean z) {
-        int iM41182 = m41182(i);
-        AbstractC18119 abstractC18119 = this.f56152;
-        C18825 c18825M42184 = abstractC18119.m42184(abstractC18119.mo9809(iM41182));
-        c18825M42184.m43438(c18825M42184.m43449(), writer, z);
-        c18825M42184.m43450();
+    public final void m41370(AttributeSet attributeSet, int i) {
+        int resourceId;
+        Context context = this.f58112;
+        int[] iArr = C10401.f33068;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, i, 0);
+        TextView textView = this.f58116;
+        C22666.m51088(textView, textView.getContext(), iArr, attributeSet, typedArrayObtainStyledAttributes, i);
+        if (typedArrayObtainStyledAttributes.hasValue(5)) {
+            this.f58113 = typedArrayObtainStyledAttributes.getInt(5, 0);
+        }
+        float dimension = typedArrayObtainStyledAttributes.hasValue(4) ? typedArrayObtainStyledAttributes.getDimension(4, -1.0f) : -1.0f;
+        float dimension2 = typedArrayObtainStyledAttributes.hasValue(2) ? typedArrayObtainStyledAttributes.getDimension(2, -1.0f) : -1.0f;
+        float dimension3 = typedArrayObtainStyledAttributes.hasValue(1) ? typedArrayObtainStyledAttributes.getDimension(1, -1.0f) : -1.0f;
+        if (typedArrayObtainStyledAttributes.hasValue(3) && (resourceId = typedArrayObtainStyledAttributes.getResourceId(3, 0)) > 0) {
+            TypedArray typedArrayObtainTypedArray = typedArrayObtainStyledAttributes.getResources().obtainTypedArray(resourceId);
+            int length = typedArrayObtainTypedArray.length();
+            int[] iArr2 = new int[length];
+            if (length > 0) {
+                for (int i2 = 0; i2 < length; i2++) {
+                    iArr2[i2] = typedArrayObtainTypedArray.getDimensionPixelSize(i2, -1);
+                }
+                this.f58115 = m41363(iArr2);
+                m41358();
+            }
+            typedArrayObtainTypedArray.recycle();
+        }
+        typedArrayObtainStyledAttributes.recycle();
+        if (m41365()) {
+            if (this.f58113 == 1) {
+                if (!this.f58111) {
+                    DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+                    if (dimension2 == -1.0f) {
+                        dimension2 = TypedValue.applyDimension(2, 12.0f, displayMetrics);
+                    }
+                    if (dimension3 == -1.0f) {
+                        dimension3 = TypedValue.applyDimension(2, 112.0f, displayMetrics);
+                    }
+                    if (dimension == -1.0f) {
+                        dimension = 1.0f;
+                    }
+                    m41362(dimension2, dimension3, dimension);
+                }
+                m41364();
+                return;
+            }
+            return;
+        }
+        this.f58113 = 0;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m41178(int i, int i2, int i3, String str) {
-        if (i2 >= 0 && i3 >= 0 && i2 + i3 <= str.length()) {
-            String strM8628 = this.f56155 ? this.f56154.m8628(i) : null;
-            if (strM8628 != null) {
-                if (strM8628.length() == i3 && str.regionMatches(i2, strM8628, 0, i3)) {
-                    return true;
+    public final void m41368(int i) {
+        if (m41365()) {
+            if (i == 0) {
+                this.f58113 = 0;
+                this.f58114 = -1.0f;
+                this.f58107 = -1.0f;
+                this.f58109 = -1.0f;
+                this.f58115 = new int[0];
+                this.f58106 = false;
+                return;
+            }
+            if (i != 1) {
+                throw new IllegalArgumentException(C13645.m33382(i, "Unknown auto-size text type: "));
+            }
+            DisplayMetrics displayMetrics = this.f58112.getResources().getDisplayMetrics();
+            m41362(TypedValue.applyDimension(2, 12.0f, displayMetrics), TypedValue.applyDimension(2, 112.0f, displayMetrics), 1.0f);
+            if (m41364()) {
+                m41366();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41369(int i, int i2, int i3, int i4) {
+        if (m41365()) {
+            DisplayMetrics displayMetrics = this.f58112.getResources().getDisplayMetrics();
+            m41362(TypedValue.applyDimension(i4, i, displayMetrics), TypedValue.applyDimension(i4, i2, displayMetrics), TypedValue.applyDimension(i4, i3, displayMetrics));
+            if (m41364()) {
+                m41366();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41371(int[] iArr, int i) {
+        if (m41365()) {
+            int length = iArr.length;
+            if (length > 0) {
+                int[] iArrCopyOf = new int[length];
+                if (i == 0) {
+                    iArrCopyOf = Arrays.copyOf(iArr, length);
+                } else {
+                    DisplayMetrics displayMetrics = this.f58112.getResources().getDisplayMetrics();
+                    for (int i2 = 0; i2 < length; i2++) {
+                        iArrCopyOf[i2] = Math.round(TypedValue.applyDimension(i, iArr[i2], displayMetrics));
+                    }
+                }
+                this.f58115 = m41363(iArrCopyOf);
+                if (!m41358()) {
+                    throw new IllegalArgumentException("None of the preset sizes is valid: " + Arrays.toString(iArr));
                 }
             } else {
-                int iM41182 = m41182(i);
-                AbstractC18119 abstractC18119 = this.f56152;
-                C18825 c18825M42184 = abstractC18119.m42184(abstractC18119.mo9809(iM41182));
-                try {
-                    return C3109.m9326(this.f56152, c18825M42184.m43447(), c18825M42184.m43449(), str, i2, i3);
-                } finally {
-                    c18825M42184.m43450();
-                }
+                this.f58111 = false;
+            }
+            if (m41364()) {
+                m41366();
             }
         }
-        return false;
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m41164(int i) {
-        if (i == -1) {
-            return null;
-        }
-        return m41168(i);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int m41374() {
+        return this.f58113;
     }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final String m41204(int i) {
-        boolean z = this.f56155;
-        String strM8632 = z ? this.f56154.m8632(i) : null;
-        if (strM8632 != null) {
-            return strM8632;
-        }
-        String strM41168 = m41168(this.f56152.mo9809(m41199(i)));
-        if (z) {
-            this.f56154.m8634(i, strM41168);
-        }
-        return strM41168;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m41377() {
+        return Math.round(this.f58109);
     }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final String m41195(int i) {
-        return m41204(this.f56152.mo9809(i));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m41372() {
+        return Math.round(this.f58114);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41172(Writer writer, int i) {
-        if (this.f56155) {
-            writer.write(m41204(i));
-        } else {
-            m41192(this.f56152.mo9809(m41199(i)), writer, false);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m41193(int i, int i2, int i3, String str) {
-        String strM8632 = this.f56155 ? this.f56154.m8632(i) : null;
-        if (strM8632 != null) {
-            return i2 >= 0 && i3 >= 0 && i2 + i3 <= str.length() && strM8632.length() == i3 && str.regionMatches(i2, strM8632, 0, i3);
-        }
-        return m41178(this.f56152.mo9809(m41199(i)), i2, i3, str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m41179(int i, String str) {
-        String strM8632 = this.f56155 ? this.f56154.m8632(i) : null;
-        int i2 = 0;
-        if (strM8632 != null) {
-            int i3 = 0;
-            while (i3 < strM8632.length() && strM8632.charAt(i3) == '[') {
-                i3++;
-            }
-            return strM8632.length() - i3 == str.length() && strM8632.regionMatches(i3, str, 0, str.length());
-        }
-        int iM41199 = m41199(i);
-        AbstractC18119 abstractC18119 = this.f56152;
-        C18825 c18825M42184 = abstractC18119.m42184(abstractC18119.mo9809(m41182(abstractC18119.mo9809(iM41199))));
-        try {
-            int iM43449 = c18825M42184.m43449();
-            int iM43447 = c18825M42184.m43447();
-            while (i2 < iM43449 && abstractC18119.m42181(iM43447 + i2) == 91) {
-                i2++;
-            }
-            return C3109.m9326(this.f56152, iM43447 + i2, iM43449 - i2, str, 0, str.length());
-        } finally {
-            c18825M42184.m43450();
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m41376() {
+        return Math.round(this.f58107);
     }
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final List m41198() {
-        return new C16274(this);
+    public final int[] m41375() {
+        return this.f58115;
     }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final List m41183() {
-        return new C20507(this);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C12332 m41202(int i) {
-        if (this.f56155) {
-            return this.f56154.m8633(this, i);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    private boolean m41358() {
+        int[] iArr = this.f58115;
+        int length = iArr.length;
+        boolean z = length > 0;
+        this.f58111 = z;
+        if (z) {
+            this.f58113 = 1;
+            this.f58114 = iArr[0];
+            this.f58107 = iArr[length - 1];
+            this.f58109 = -1.0f;
         }
-        return new C12332(this, i);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C20798 m41186(int i) {
-        if (this.f56155) {
-            return this.f56154.m8629(this, i);
-        }
-        return new C20798(this, i);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C4569 m41185(int i, EnumC10297 enumC10297) {
-        C4569 c4569 = (C4569) this.f56173.m45009();
-        if (c4569 != null) {
-            c4569.f22551 = enumC10297;
-            c4569.f22553 = i;
-            return c4569;
-        }
-        return new C4569(this, enumC10297, i);
+        return z;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41175(C4569 c4569) {
-        this.f56173.m45011(c4569);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C0108 m41191(int i, EnumC10297 enumC10297) {
-        C0108 c0108 = (C0108) this.f56156.m45009();
-        if (c0108 != null) {
-            c0108.f22551 = enumC10297;
-            c0108.f22553 = i;
-            return c0108;
-        }
-        return new C0108(this, enumC10297, i);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41174(C0108 c0108) {
-        this.f56156.m45011(c0108);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21275 m41170(int i, EnumC10297 enumC10297) {
-        C21275 c21275 = (C21275) this.f56153.m45009();
-        if (c21275 == null) {
-            return new C21275(this, enumC10297, i);
-        }
-        c21275.f22551 = enumC10297;
-        c21275.f22553 = i;
-        return c21275;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41176(C21275 c21275) {
-        this.f56153.m45011(c21275);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C10215 m41165(int i) {
-        for (C10215 c10215 : new C0750(this, this.f56152.mo9809(this.f56164))) {
-            if (c10215.m25998() == i) {
-                return c10215;
+    public static int[] m41363(int[] iArr) {
+        int length = iArr.length;
+        if (length != 0) {
+            Arrays.sort(iArr);
+            ArrayList arrayList = new ArrayList();
+            for (int i : iArr) {
+                if (i > 0 && Collections.binarySearch(arrayList, Integer.valueOf(i)) < 0) {
+                    arrayList.add(Integer.valueOf(i));
+                }
+            }
+            if (length != arrayList.size()) {
+                int size = arrayList.size();
+                int[] iArr2 = new int[size];
+                for (int i2 = 0; i2 < size; i2++) {
+                    iArr2[i2] = ((Integer) arrayList.get(i2)).intValue();
+                }
+                return iArr2;
             }
         }
-        return null;
+        return iArr;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41173(Object obj) {
-        this.f56170 = obj;
+    private void m41362(float f, float f2, float f3) {
+        if (f <= 0.0f) {
+            throw new IllegalArgumentException("Minimum auto-size text size (" + f + "px) is less or equal to (0px)");
+        }
+        if (f2 <= f) {
+            throw new IllegalArgumentException("Maximum auto-size text size (" + f2 + "px) is less or equal to minimum auto-size text size (" + f + "px)");
+        }
+        if (f3 <= 0.0f) {
+            throw new IllegalArgumentException("The auto-size step granularity (" + f3 + "px) is less or equal to (0px)");
+        }
+        this.f58113 = 1;
+        this.f58114 = f;
+        this.f58107 = f2;
+        this.f58109 = f3;
+        this.f58111 = false;
     }
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final Object m41200() {
-        return this.f56170;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    private boolean m41364() {
+        if (m41365() && this.f58113 == 1) {
+            if (!this.f58111 || this.f58115.length == 0) {
+                int iFloor = ((int) Math.floor((this.f58107 - this.f58114) / this.f58109)) + 1;
+                int[] iArr = new int[iFloor];
+                for (int i = 0; i < iFloor; i++) {
+                    iArr[i] = Math.round((i * this.f58109) + this.f58114);
+                }
+                this.f58115 = m41363(iArr);
+            }
+            this.f58106 = true;
+        } else {
+            this.f58106 = false;
+        }
+        return this.f58106;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41177(boolean z) {
-        this.f56159 = z;
+    public final void m41366() {
+        if (m41373()) {
+            if (this.f58106) {
+                if (this.f58116.getMeasuredHeight() <= 0 || this.f58116.getMeasuredWidth() <= 0) {
+                    return;
+                }
+                int measuredWidth = this.f58108.mo39915(this.f58116) ? 1048576 : (this.f58116.getMeasuredWidth() - this.f58116.getTotalPaddingLeft()) - this.f58116.getTotalPaddingRight();
+                int height = (this.f58116.getHeight() - this.f58116.getCompoundPaddingBottom()) - this.f58116.getCompoundPaddingTop();
+                if (measuredWidth <= 0 || height <= 0) {
+                    return;
+                }
+                RectF rectF = f58104;
+                synchronized (rectF) {
+                    rectF.setEmpty();
+                    rectF.right = measuredWidth;
+                    rectF.bottom = height;
+                    float fM41359 = m41359(rectF);
+                    if (fM41359 != this.f58116.getTextSize()) {
+                        m41367(fM41359, 0);
+                    }
+                }
+            }
+            this.f58106 = true;
+        }
     }
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final boolean m41184() {
-        return this.f56159;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41367(float f, int i) {
+        Resources resources;
+        Context context = this.f58112;
+        if (context == null) {
+            resources = Resources.getSystem();
+        } else {
+            resources = context.getResources();
+        }
+        float fApplyDimension = TypedValue.applyDimension(i, f, resources.getDisplayMetrics());
+        TextView textView = this.f58116;
+        if (fApplyDimension != textView.getPaint().getTextSize()) {
+            textView.getPaint().setTextSize(fApplyDimension);
+            boolean zIsInLayout = textView.isInLayout();
+            if (textView.getLayout() != null) {
+                this.f58106 = false;
+                try {
+                    Method methodM41361 = m41361("nullLayouts");
+                    if (methodM41361 != null) {
+                        methodM41361.invoke(textView, null);
+                    }
+                } catch (Exception unused) {
+                }
+                if (!zIsInLayout) {
+                    textView.requestLayout();
+                } else {
+                    textView.forceLayout();
+                }
+                textView.invalidate();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private int m41359(RectF rectF) {
+        StaticLayout staticLayout;
+        CharSequence transformation;
+        int length = this.f58115.length;
+        if (length == 0) {
+            throw new IllegalStateException("No available text sizes to choose from.");
+        }
+        int i = length - 1;
+        int i2 = 1;
+        int i3 = 0;
+        while (i2 <= i) {
+            int i4 = (i2 + i) / 2;
+            int i5 = this.f58115[i4];
+            TextView textView = this.f58116;
+            CharSequence text = textView.getText();
+            TransformationMethod transformationMethod = textView.getTransformationMethod();
+            CharSequence charSequence = (transformationMethod == null || (transformation = transformationMethod.getTransformation(text, textView)) == null) ? text : transformation;
+            int maxLines = textView.getMaxLines();
+            TextPaint textPaint = this.f58110;
+            if (textPaint == null) {
+                this.f58110 = new TextPaint();
+            } else {
+                textPaint.reset();
+            }
+            this.f58110.set(textView.getPaint());
+            this.f58110.setTextSize(i5);
+            Layout.Alignment alignment = (Layout.Alignment) m41360("getLayoutAlignment", textView, Layout.Alignment.ALIGN_NORMAL);
+            int iRound = Math.round(rectF.right);
+            if (Build.VERSION.SDK_INT >= 23) {
+                staticLayout = C2023.m6950(charSequence, alignment, iRound, maxLines, textView, this.f58110, this.f58108);
+            } else {
+                staticLayout = new StaticLayout(charSequence, this.f58110, iRound, alignment, textView.getLineSpacingMultiplier(), textView.getLineSpacingExtra(), textView.getIncludeFontPadding());
+            }
+            if ((maxLines == -1 || (staticLayout.getLineCount() <= maxLines && staticLayout.getLineEnd(staticLayout.getLineCount() - 1) == charSequence.length())) && staticLayout.getHeight() <= rectF.bottom) {
+                int i6 = i4 + 1;
+                i3 = i2;
+                i2 = i6;
+            } else {
+                i3 = i4 - 1;
+                i = i3;
+            }
+        }
+        return this.f58115[i3];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Object m41360(String str, Object obj, Object obj2) {
+        try {
+            return m41361(str).invoke(obj, null);
+        } catch (Exception unused) {
+            return obj2;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Method m41361(String str) {
+        try {
+            ConcurrentMapC17249 concurrentMapC17249 = f58105;
+            Method declaredMethod = (Method) concurrentMapC17249.get(str);
+            if (declaredMethod == null && (declaredMethod = TextView.class.getDeclaredMethod(str, null)) != null) {
+                declaredMethod.setAccessible(true);
+                concurrentMapC17249.put(str, declaredMethod);
+            }
+            return declaredMethod;
+        } catch (Exception unused) {
+            return null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean m41373() {
+        return m41365() && this.f58113 != 0;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    private boolean m41365() {
+        return !(this.f58116 instanceof C13801);
     }
 }

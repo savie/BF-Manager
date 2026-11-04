@@ -1,29 +1,62 @@
-.class public final Ll/ܿܿ᩸;
-.super Ll/ܳܿ᩸;
-.source "U9KG"
+.class public final synthetic Ll/ܿܿ᩸;
+.super Ljava/lang/Object;
+.source "26UL"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
+
+
+# instance fields
+.field public final synthetic ֡:I
+
+.field public final synthetic ۟:I
+
+.field public final synthetic ܰ:Ll/ᩳܿ᩸;
+
+.field public final synthetic ܿ:[C
+
+.field public final synthetic ᩶:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ᩳܿ᩸;I[CII)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܿܿ᩸;->ܰ:Ll/ᩳܿ᩸;
+
+    iput p2, p0, Ll/ܿܿ᩸;->᩶:I
+
+    iput-object p3, p0, Ll/ܿܿ᩸;->ܿ:[C
+
+    iput p4, p0, Ll/ܿܿ᩸;->֡:I
+
+    iput p5, p0, Ll/ܿܿ᩸;->۟:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۢ᩻᩺;)Ll/ᩳܿ᩸;
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    .line 96
-    new-instance v0, Ll/۟ۛ᩸;
+    .line 0
+    iget v0, p0, Ll/ܿܿ᩸;->֡:I
 
-    .line 58
-    invoke-direct {v0, p1}, Ll/ᩳܿ᩸;-><init>(Ll/ۢ᩻᩺;)V
+    iget v1, p0, Ll/ܿܿ᩸;->۟:I
 
-    return-object v0
-.end method
+    iget-object v2, p0, Ll/ܿܿ᩸;->ܰ:Ll/ᩳܿ᩸;
 
-.method public final ۙ(Ll/۟۠ۡ;)Ll/ᩴܿ᩸;
-    .locals 1
+    iget v3, p0, Ll/ܿܿ᩸;->᩶:I
 
-    .line 101
-    new-instance v0, Ll/᩷ۛ᩸;
+    iget-object v4, p0, Ll/ܿܿ᩸;->ܿ:[C
 
-    .line 88
-    invoke-direct {v0, p1}, Ll/ᩴܿ᩸;-><init>(Ll/۟۠ۡ;)V
+    invoke-static {v2, v3, v4, v0, v1}, Ll/ᩳܿ᩸;->ۙ(Ll/ᩳܿ᩸;I[CII)Ll/ۚ֨᩸;
+
+    move-result-object v0
 
     return-object v0
 .end method

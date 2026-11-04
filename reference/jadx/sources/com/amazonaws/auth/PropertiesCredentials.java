@@ -11,10 +11,10 @@ import java.util.Properties;
 public class PropertiesCredentials implements AWSCredentials {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f156;
+    public final String f146;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f157;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f147;
 
     public PropertiesCredentials(File file) throws FileNotFoundException {
         if (!file.exists()) {
@@ -27,8 +27,8 @@ public class PropertiesCredentials implements AWSCredentials {
             if (properties.getProperty("accessKey") == null || properties.getProperty("secretKey") == null) {
                 throw new IllegalArgumentException("The specified file (" + file.getAbsolutePath() + ") doesn't contain the expected properties 'accessKey' and 'secretKey'.");
             }
-            this.f156 = properties.getProperty("accessKey");
-            this.f157 = properties.getProperty("secretKey");
+            this.f146 = properties.getProperty("accessKey");
+            this.f147 = properties.getProperty("secretKey");
             try {
                 fileInputStream.close();
             } catch (IOException unused) {
@@ -53,8 +53,8 @@ public class PropertiesCredentials implements AWSCredentials {
             if (properties.getProperty("accessKey") == null || properties.getProperty("secretKey") == null) {
                 throw new IllegalArgumentException("The specified properties data doesn't contain the expected properties 'accessKey' and 'secretKey'.");
             }
-            this.f156 = properties.getProperty("accessKey");
-            this.f157 = properties.getProperty("secretKey");
+            this.f146 = properties.getProperty("accessKey");
+            this.f147 = properties.getProperty("secretKey");
         } catch (Throwable th) {
             try {
                 inputStream.close();
@@ -66,13 +66,13 @@ public class PropertiesCredentials implements AWSCredentials {
 
     @Override // com.amazonaws.auth.AWSCredentials
     /* JADX INFO: renamed from: ۙ */
-    public final String mo206() {
-        return this.f156;
+    public final String mo200() {
+        return this.f146;
     }
 
     @Override // com.amazonaws.auth.AWSCredentials
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo207() {
-        return this.f157;
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo201() {
+        return this.f147;
     }
 }

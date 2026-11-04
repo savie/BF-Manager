@@ -1,335 +1,275 @@
 package l;
 
-import android.app.Application;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Handler;
-import android.os.SystemClock;
-import java.util.List;
+import com.alipay.sdk.m.y.l;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.۬֡۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: K5ZN */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12763 {
+/* JADX INFO: renamed from: l.۫֨ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 45V6 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C12763 extends C20222 implements InterfaceC6052 {
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static final Object f42562 = new Object();
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Object[] f40834;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public boolean f42563;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f42564;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8530 f42565;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f42566;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C2758 f42567;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C13689 f42568;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C0767 f42569;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f42571;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public boolean f42572;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final AbstractC9677 f42573;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f42574;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final long f42570 = C3589.f13221.incrementAndGet();
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public int f42575 = -1;
-
-    public C12763(AbstractC9677 abstractC9677, List list, int i, boolean z) {
-        InterfaceC8530 c7677;
-        this.f42573 = abstractC9677;
-        this.f42564 = z;
-        C2758 c2758 = new C2758(this, list, i);
-        this.f42567 = c2758;
-        C21935 c21935 = new C21935(this);
-        if (Build.VERSION.SDK_INT >= 23) {
-            c7677 = new C15439(abstractC9677, c2758, c21935);
-        } else {
-            C11601 c11601 = new C11601(null, abstractC9677, c2758, EnumC13718.NORMAL, null);
-            c11601.m28926(new C18966(c21935));
-            c7677 = new C7677(abstractC9677, c11601, c21935);
+    public C12763(int i) {
+        super(i != 0);
+        try {
+            this.f40834 = new Object[i];
+        } catch (NegativeArraySizeException unused) {
+            throw new IllegalArgumentException("size < 0");
         }
-        this.f42565 = c7677;
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public InterfaceC8616 m31612get(int i) {
+        return (InterfaceC8616) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public InterfaceC9361 m31613get(int i) {
+        return (InterfaceC9361) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public AbstractC17216 m31617get(int i) {
+        return (AbstractC17216) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C25267 m31622get(int i) {
+        return (C25267) m31593(i);
+    }
+
+    public C3637 get(int i) {
+        return (C3637) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public AbstractC13487 m31615get(int i) {
+        return (AbstractC13487) m31593(i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m31721(C12763 c12763, C0767 c0767, C13689 c13689) {
-        InterfaceC8530 interfaceC8530 = c12763.f42565;
-        if (c12763.f42569 == c0767 && C3589.f13211 == c12763 && !interfaceC8530.mo20296() && c12763.f42567.mo7413() == c13689) {
-            c12763.f42569 = null;
-            if (!c12763.f42574 || interfaceC8530.isPlaying() || c12763.m31718()) {
-                return;
-            }
-            interfaceC8530.start();
-        }
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public boolean m31718() {
-        C0767 c0767 = this.f42569;
-        return c0767 != null && c0767.m3297() == this.f42567.mo7413();
+    public void m31598(int i, C4714 c4714) {
+        m31596(i, (Object) c4714);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m31720(C12763 c12763, int i, C13689 c13689, C7573 c7573) {
-        if (i == c12763.f42566 && C3589.f13211 == c12763 && !c12763.f42565.mo20296() && c12763.f42567.mo7413() == c13689) {
-            m31731(c7573.m20099());
-            m31729(c7573.m20098());
-            long jM20098 = c7573.m20098();
-            int i2 = c12763.f42575;
-            if (i2 <= 0) {
-                i2 = 0;
-            } else if (jM20098 > 0 && i2 >= jM20098) {
-                c12763.f42575 = 0;
-                if (c12763.f42564) {
-                    C7118.m19005(c12763.f42573);
-                }
-                i2 = 0;
-            }
-            m31732(i2);
-        }
+    public void m31605(int i, C22614 c22614) {
+        m31596(i, (Object) c22614);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m31731(C20979 c20979) {
-        C3589.f13213.mo23642(c20979.f68325);
-        C9186 c9186 = C3589.f13209;
-        String str = c20979.f68324;
-        c9186.mo23642(str);
-        C3589.f13210.mo23642(str);
-        C3589.f13220.mo23642(c20979.f68320);
-        C3589.f13215.mo23642(c20979.f68321);
-        C3589.f13217.mo23642(c20979.f68322);
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C3968 m31608get(int i) {
+        return (C3968) m31593(i);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m31729(long j) {
-        if (j == -9223372036854775807L) {
-            j = 0;
-        }
-        C3589.f13218.mo23642(Integer.valueOf((int) (j / 50)));
-        C3589.f13214.mo23642(Integer.valueOf(C3589.m10635(j)));
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public void m31725() {
-        InterfaceC8530 interfaceC8530 = this.f42565;
-        if (interfaceC8530.mo20302()) {
-            return;
-        }
-        this.f42566++;
-        if (!this.f42563) {
-            Application applicationM39277 = C16737.m39277();
-            int i = ServiceC17701.f56205;
-            C10405.m26303(applicationM39277, new Intent(applicationM39277, (Class<?>) ServiceC17701.class).putExtra("playbackSessionId", this.f42570));
-            this.f42563 = true;
-        }
-        C13689 c13689Mo7413 = this.f42567.mo7413();
-        C0767 c0767 = this.f42569;
-        if (c0767 != null && c0767.m3297() != c13689Mo7413) {
-            this.f42569 = null;
-        }
-        if (!interfaceC8530.mo20303() || this.f42568 != c13689Mo7413) {
-            this.f42568 = null;
-            Handler handlerM39278 = C16737.m39278();
-            Object obj = f42562;
-            handlerM39278.removeCallbacksAndMessages(obj);
-            C16737.m39278().postAtTime(new RunnableC13469(0, c13689Mo7413), obj, SystemClock.uptimeMillis() + 400);
-            interfaceC8530.mo20301(c13689Mo7413);
-            return;
-        }
-        if (m31718()) {
-            return;
-        }
-        interfaceC8530.start();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m31727(C12763 c12763) {
-        if (c12763.m31718()) {
-            return;
-        }
-        c12763.f42565.start();
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C6206 m31611get(int i) {
+        return (C6206) m31593(i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m31735(int i) {
-        this.f42572 = false;
-        int iM31724 = m31724(i);
-        InterfaceC8530 interfaceC8530 = this.f42565;
-        boolean zMo20303 = interfaceC8530.mo20303();
-        AbstractC9677 abstractC9677 = this.f42573;
-        boolean z = this.f42564;
-        C2758 c2758 = this.f42567;
-        if (!zMo20303) {
-            if (interfaceC8530.mo20302() || this.f42575 < 0) {
-                return;
-            }
-            this.f42575 = iM31724;
-            m31732(iM31724);
-            if (this.f42571 && z) {
-                C7118.m19007(abstractC9677, c2758.mo7403(), iM31724);
-                return;
-            }
-            return;
-        }
-        C13689 c13689Mo7413 = c2758.mo7413();
-        C0767 c0767 = new C0767(c13689Mo7413, iM31724);
-        this.f42569 = c0767;
-        interfaceC8530.mo20300(iM31724, new RunnableC11352(this, c0767, c13689Mo7413));
-        m31732(iM31724);
-        if (this.f42571) {
-            this.f42575 = iM31724;
-            if (z) {
-                C7118.m19007(abstractC9677, c2758.mo7403(), iM31724);
-            }
-        }
+    public void m31603(int i, AbstractC17216 abstractC17216) {
+        m31596(i, (Object) abstractC17216);
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static void m31732(int i) {
-        int i2 = i / 50;
-        C9186 c9186 = C3589.f13222;
-        Integer num = (Integer) c9186.m44956();
-        C13638.requireNonNull(num);
-        if (i2 != num.intValue()) {
-            c9186.mo23642(Integer.valueOf(i2));
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        int iM10635 = C3589.m10635(i);
-        C9186 c9187 = C3589.f13216;
-        Integer num2 = (Integer) c9187.m44956();
-        C13638.requireNonNull(num2);
-        if (iM10635 != num2.intValue()) {
-            c9187.mo23642(Integer.valueOf(iM10635));
-        }
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static int m31724(int i) {
-        int iMax = Math.max(i, 0);
-        Integer num = (Integer) C3589.f13218.m44956();
-        return (num == null || num.intValue() <= 0) ? iMax : Math.min(iMax, num.intValue() * 50);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m31736(boolean z) {
-        InterfaceC8530 interfaceC8530 = this.f42565;
-        if (interfaceC8530.mo20296()) {
-            return;
-        }
-        C16737.m39278().removeCallbacksAndMessages(f42562);
-        this.f42566++;
-        this.f42569 = null;
-        interfaceC8530.mo20298();
-        C3589.m10648(this);
-        if (z) {
-            C21843.m48614(C16737.m39277()).m48618(new Intent("bin.mt.media.ACTION_MUSIC_PLAYER_STATE_RELEASED"));
-        }
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    private boolean m31728() {
-        InterfaceC8530 interfaceC8530 = this.f42565;
-        return interfaceC8530.isPlaying() || interfaceC8530.mo20302() || m31718();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m31733() {
-        this.f42574 = true;
-        InterfaceC8530 interfaceC8530 = this.f42565;
-        if (interfaceC8530.mo20302() || interfaceC8530.isPlaying()) {
-            return;
-        }
-        m31725();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m31734() {
-        if (this.f42574 && m31728()) {
-            this.f42574 = false;
-            this.f42565.pause();
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m31738() {
-        if (this.f42574 && m31728()) {
-            m31739();
-        } else {
-            m31733();
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m31739() {
-        int currentPosition;
-        if (this.f42574 && m31728()) {
-            this.f42574 = false;
-            InterfaceC8530 interfaceC8530 = this.f42565;
-            interfaceC8530.pause();
-            this.f42571 = true;
-            if (m31718()) {
-                currentPosition = this.f42569.position();
-            } else {
-                currentPosition = interfaceC8530.mo20303() ? interfaceC8530.getCurrentPosition() : Math.max(this.f42575, 0);
-            }
-            this.f42575 = currentPosition;
-            if (this.f42564) {
-                C7118.m19007(this.f42573, this.f42567.mo7403(), currentPosition);
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m31740(int i) {
-        C2758 c2758 = this.f42567;
-        if (c2758.mo7403() == i || this.f42565.mo20302()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        this.f42574 = true;
-        c2758.m7407(i);
-        m31725();
-        return true;
+        return Arrays.equals(this.f40834, ((C12763) obj).f40834);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m31737() {
-        if (this.f42565.mo20302()) {
-            return;
-        }
-        this.f42574 = true;
-        this.f42567.mo7411();
-        m31725();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m31597(int i, C3968 c3968) {
+        m31596(i, (Object) c3968);
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final void m31741() {
-        if (this.f42565.mo20302()) {
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C24521 m31621get(int i) {
+        return (C24521) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C5239 m31610get(int i) {
+        return (C5239) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C22438 m31620get(int i) {
+        return (C22438) m31593(i);
+    }
+
+    public final int hashCode() {
+        return Arrays.hashCode(this.f40834);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m31600(int i, C5239 c5239) {
+        m31596(i, (Object) c5239);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C14011 m31616get(int i) {
+        return (C14011) m31593(i);
+    }
+
+    public final String toString() {
+        String name = getClass().getName();
+        return m31592(name.substring(name.lastIndexOf(46) + 1) + '{', l.d, false);
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public AbstractC18884 m31618get(int i) {
+        return (AbstractC18884) m31593(i);
+    }
+
+    @Override // l.InterfaceC6052
+    /* JADX INFO: renamed from: ۙ */
+    public String mo1843() {
+        String name = getClass().getName();
+        return m31592(name.substring(name.lastIndexOf(46) + 1) + '{', l.d, true);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m31594(String str) {
+        return m31592(str, l.d, false);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m31601(int i, AbstractC5875 abstractC5875) {
+        m31596(i, (Object) abstractC5875);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m31595(String str, String str2) {
+        return m31592(str, str2, true);
+    }
+
+    public final int size() {
+        return this.f40834.length;
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C11950 m31614get(int i) {
+        return (C11950) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public void mo31606() {
+        int length = this.f40834.length;
+        int i = 0;
+        for (int i2 = 0; i2 < length; i2++) {
+            if (this.f40834[i2] != null) {
+                i++;
+            }
+        }
+        if (length == i) {
             return;
         }
-        this.f42574 = true;
-        this.f42567.mo7405();
-        m31725();
+        m46490();
+        Object[] objArr = new Object[i];
+        int i3 = 0;
+        for (int i4 = 0; i4 < length; i4++) {
+            Object obj = this.f40834[i4];
+            if (obj != null) {
+                objArr[i3] = obj;
+                i3++;
+            }
+        }
+        this.f40834 = objArr;
+        if (i == 0) {
+            mo15005();
+        }
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C20946 m31619get(int i) {
+        return (C20946) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void mo31602(int i, AbstractC13487 abstractC13487) {
+        m31596(i, (Object) abstractC13487);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m31593(int i) {
+        try {
+            Object obj = this.f40834[i];
+            if (obj != null) {
+                return obj;
+            }
+            throw new NullPointerException("unset: " + i);
+        } catch (ArrayIndexOutOfBoundsException unused) {
+            if (i < 0) {
+                throw new IndexOutOfBoundsException("n < 0");
+            }
+            throw new IndexOutOfBoundsException("n >= size()");
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m31604(int i, C20946 c20946) {
+        m31596(i, (Object) c20946);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m31607(int i) {
+        return this.f40834[i];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m31596(int i, Object obj) {
+        m46490();
+        try {
+            this.f40834[i] = obj;
+        } catch (ArrayIndexOutOfBoundsException unused) {
+            if (i < 0) {
+                throw new IndexOutOfBoundsException("n < 0");
+            }
+            throw new IndexOutOfBoundsException("n >= size()");
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private String m31592(String str, String str2, boolean z) {
+        int length = this.f40834.length;
+        StringBuilder sb = new StringBuilder((length * 10) + 10);
+        if (str != null) {
+            sb.append(str);
+        }
+        for (int i = 0; i < length; i++) {
+            if (i != 0) {
+                sb.append(", ");
+            }
+            if (z) {
+                sb.append(((InterfaceC6052) this.f40834[i]).mo1843());
+            } else {
+                sb.append(this.f40834[i]);
+            }
+        }
+        if (str2 != null) {
+            sb.append(str2);
+        }
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: get, reason: collision with other method in class */
+    public C5085 m31609get(int i) {
+        return (C5085) m31593(i);
+    }
+
+    public C5085 getType(int i) {
+        return (C5085) m31593(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m31599(int i, C5085 c5085) {
+        m31596(i, (Object) c5085);
     }
 }

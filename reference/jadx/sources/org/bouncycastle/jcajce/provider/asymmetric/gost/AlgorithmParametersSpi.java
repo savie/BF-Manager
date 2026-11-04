@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.cryptopro.GOST3410PublicKeyAlgParameters;
 import org.bouncycastle.jce.spec.GOST3410ParameterSpec;
 import org.bouncycastle.jce.spec.GOST3410PublicKeyParameterSetSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
     public GOST3410ParameterSpec currentSpec;
 

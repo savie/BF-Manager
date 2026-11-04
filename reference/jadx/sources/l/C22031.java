@@ -1,51 +1,52 @@
 package l;
 
-import java.util.HashMap;
+import java.util.function.LongConsumer;
 
-/* JADX INFO: renamed from: l.᩹ۘۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B4S2 */
-/* JADX INFO: loaded from: classes.dex */
-public final class C22031 {
+/* JADX INFO: renamed from: l.᩷ۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C22031 extends AbstractC18301 implements InterfaceC1148 {
+    public final LongConsumer b;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C3249 f71397;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f71398;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final HashMap f71399;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f71400;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashMap f71401;
-
-    public /* synthetic */ C22031(int i) {
-        this();
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        l((Long) obj);
     }
 
-    public C22031(C5097 c5097) {
-        this.f71397 = new C3249();
-        HashMap map = new HashMap();
-        this.f71401 = map;
-        HashMap map2 = new HashMap();
-        this.f71398 = map2;
-        HashMap map3 = new HashMap();
-        this.f71399 = map3;
-        this.f71400 = new HashMap();
-        this.f71397 = c5097.f17769;
-        map.putAll(c5097.f17768);
-        map2.putAll(c5097.f17764);
-        map3.putAll(c5097.f17767);
+    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
+        return C18279.$default$andThen(this, longConsumer);
     }
 
-    public C22031() {
-        this.f71397 = new C3249();
-        this.f71401 = new HashMap();
-        this.f71398 = new HashMap();
-        this.f71399 = new HashMap();
-        this.f71400 = new HashMap();
+    @Override // java.util.function.Supplier
+    public final /* bridge */ /* synthetic */ Object get() {
+        return null;
+    }
+
+    @Override // l.InterfaceC1148
+    public final /* synthetic */ void l(Long l2) {
+        AbstractC13956.r(this, l2);
+    }
+
+    @Override // l.InterfaceC8605
+    public final Object b(AbstractC15470 abstractC15470, InterfaceC8409 interfaceC8409) {
+        abstractC15470.f0(interfaceC8409, this);
+        return null;
+    }
+
+    @Override // l.InterfaceC8605
+    public final /* bridge */ /* synthetic */ Object e(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409) {
+        a(abstractC13956, interfaceC8409);
+        return null;
+    }
+
+    public C22031(LongConsumer longConsumer, boolean z) {
+        super(z);
+        this.b = longConsumer;
+    }
+
+    @Override // l.AbstractC18301, l.InterfaceC15143
+    public final void accept(long j) {
+        this.b.accept(j);
     }
 }

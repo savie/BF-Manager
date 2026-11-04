@@ -1,26 +1,59 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳ۠ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6AY4 */
+/* JADX INFO: renamed from: l.ܽ᩺᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: F9ZZ */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C17920 implements InterfaceC16602, InterfaceC7728 {
+public final class C17920 extends AbstractC3971 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC12483 f56917;
+    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
+    public long f58704;
 
-    public /* synthetic */ C17920(AbstractActivityC12483 abstractActivityC12483) {
-        this.f56917 = abstractActivityC12483;
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public int f58705;
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo1722(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // l.InterfaceC7728
-    /* JADX INFO: renamed from: ۙ */
-    public void mo11010(C16195 c16195) {
-        ActivityC10181.m25939((ActivityC10181) this.f56917, c16195);
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1725(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // l.InterfaceC16602
-    /* JADX INFO: renamed from: ۖ */
-    public void mo2119() {
-        ViewOnClickListenerC8374.m21944((ViewOnClickListenerC8374) this.f56917, false, (InterfaceC4871) null, 2);
+    public C17920(InterfaceC5878 interfaceC5878, String str, int i, long j) {
+        super(interfaceC5878, (byte) 9, str);
+        this.f58705 = i;
+        this.f58704 = j;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo1723(int i, byte[] bArr) {
+        C0481.m2319(this.f58705, i, bArr);
+        C0481.m2323(this.f58704 / 1000, i + 2, bArr);
+        return (i + 16) - i;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo1724(int i, byte[] bArr) {
+        int i2 = i + 1;
+        bArr[i] = 4;
+        return (i2 + m12758(this.f13608, i2, bArr)) - i;
+    }
+
+    @Override // l.AbstractC3971
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbComSetInformation[");
+        sb.append(super.toString());
+        sb.append(",filename=");
+        sb.append(this.f13608);
+        sb.append(",fileAttributes=");
+        sb.append(this.f58705);
+        sb.append(",lastWriteTime=");
+        return new String(C2764.m9137(sb, this.f58704, "]"));
     }
 }

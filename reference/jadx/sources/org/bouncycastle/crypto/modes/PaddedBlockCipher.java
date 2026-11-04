@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.DefaultBufferedBlockCipher;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.OutputLengthException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PaddedBlockCipher extends DefaultBufferedBlockCipher {
     public PaddedBlockCipher(BlockCipher blockCipher) {
         ((DefaultBufferedBlockCipher) this).cipher = blockCipher;

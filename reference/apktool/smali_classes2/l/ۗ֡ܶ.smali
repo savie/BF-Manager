@@ -1,537 +1,432 @@
-.class public Ll/ۗ֡ܶ;
-.super Ljava/util/AbstractCollection;
-.source "O3K3"
+.class public final Ll/ۗ֡ܶ;
+.super Ljava/lang/Object;
+.source "A7X2"
 
 
-# instance fields
-.field public ֡:Ljava/util/Collection;
-
-.field public final synthetic ۫:Ll/ۨܽܶ;
-
-.field public final ܺ:Ll/ۗ֡ܶ;
-
-.field public final ܽ:Ljava/lang/Object;
-
-.field public final ᩶:Ljava/util/Collection;
+# static fields
+.field public static final ۙ:[[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۨܽܶ;Ljava/lang/Object;Ljava/util/List;Ll/ۗ֡ܶ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 337
-    iput-object p1, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
+    const/16 v0, 0x20
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-array v0, v0, [[Ljava/lang/String;
 
-    .line 338
-    iput-object p2, p0, Ll/ۗ֡ܶ;->ܽ:Ljava/lang/Object;
+    const-string v1, "SSH_FX_OK"
 
-    .line 339
-    iput-object p3, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
+    const-string v2, "Indicates successful completion of the operation."
 
-    .line 340
-    iput-object p4, p0, Ll/ۗ֡ܶ;->ܺ:Ll/ۗ֡ܶ;
+    .line 46
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    if-nez p4, :cond_0
+    move-result-object v1
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_EOF"
+
+    const-string v2, "An attempt to read past the end-of-file was made; or, there are no more directory entries to return."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_SUCH_FILE"
+
+    const-string v2, "A reference was made to a file which does not exist."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_PERMISSION_DENIED"
+
+    const-string v2, "The user does not have sufficient permissions to perform the operation."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_FAILURE"
+
+    const-string v2, "An error occurred, but no specific error code exists to describe the failure."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_BAD_MESSAGE"
+
+    const-string v2, "A badly formatted packet or other SFTP protocol incompatibility was detected."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_CONNECTION"
+
+    const-string v2, "There is no connection to the server."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_CONNECTION_LOST"
+
+    const-string v2, "The connection to the server was lost."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x7
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_OP_UNSUPPORTED"
+
+    const-string v2, "An attempted operation could not be completed by the server because the server does not support the operation."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x8
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_INVALID_HANDLE"
+
+    const-string v2, "The handle value was invalid."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_SUCH_PATH"
+
+    const-string v2, "The file path does not exist or is invalid."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xa
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_FILE_ALREADY_EXISTS"
+
+    const-string v2, "The file already exists."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xb
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_WRITE_PROTECT"
+
+    const-string v2, "The file is on read-only media, or the media is write protected."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xc
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_MEDIA"
+
+    const-string v2, "The requested operation cannot be completed because there is no media available in the drive."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xd
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_SPACE_ON_FILESYSTEM"
+
+    const-string v2, "The requested operation cannot be completed because there is insufficient free space on the filesystem."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xe
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_QUOTA_EXCEEDED"
+
+    const-string v2, "The operation cannot be completed because it would exceed the user\'s storage quota."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0xf
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_UNKNOWN_PRINCIPAL"
+
+    const-string v2, "A principal referenced by the request (either the \'owner\', \'group\', or \'who\' field of an ACL), was unknown. The error specific data contains the problematic names."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x10
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_LOCK_CONFLICT"
+
+    const-string v2, "The file could not be opened because it is locked by another process."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x11
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_DIR_NOT_EMPTY"
+
+    const-string v2, "The directory is not empty."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x12
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NOT_A_DIRECTORY"
+
+    const-string v2, "The specified file is not a directory."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x13
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_INVALID_FILENAME"
+
+    const-string v2, "The filename is not valid."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x14
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_LINK_LOOP"
+
+    const-string v2, "Too many symbolic links encountered or, an SSH_FXF_NOFOLLOW open encountered a symbolic link as the final component."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x15
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_CANNOT_DELETE"
+
+    const-string v2, "The file cannot be deleted. One possible reason is that the advisory READONLY attribute-bit is set."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x16
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_INVALID_PARAMETER"
+
+    const-string v2, "One of the parameters was out of range, or the parameters specified cannot be used together."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x17
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_FILE_IS_A_DIRECTORY"
+
+    const-string v2, "The specified file was a directory in a context where a directory cannot be used."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x18
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_BYTE_RANGE_LOCK_CONFLICT"
+
+    const-string v2, " A read or write operation failed because another process\'s mandatory byte-range lock overlaps with the request."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x19
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_BYTE_RANGE_LOCK_REFUSED"
+
+    const-string v2, "A request for a byte range lock was refused."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1a
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_DELETE_PENDING"
+
+    const-string v2, "An operation was attempted on a file for which a delete operation is pending."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1b
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_FILE_CORRUPT"
+
+    const-string v2, "The file is corrupt; an filesystem integrity check should be run."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1c
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_OWNER_INVALID"
+
+    const-string v2, "The principal specified can not be assigned as an owner of a file."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1d
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_GROUP_INVALID"
+
+    const-string v2, "The principal specified can not be assigned as the primary group of a file."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1e
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SSH_FX_NO_MATCHING_BYTE_RANGE_LOCK"
+
+    const-string v2, "The requested operation could not be completed because the\tspecifed byte range lock has not been granted."
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1f
+
+    aput-object v1, v0, v2
+
+    sput-object v0, Ll/ۗ֡ܶ;->ۙ:[[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static final ۙ(I)[Ljava/lang/String;
+    .locals 1
+
+    if-ltz p0, :cond_1
+
+    const/16 v0, 0x20
+
+    if-lt p0, v0, :cond_0
 
     goto :goto_0
 
-    .line 431
+    .line 101
     :cond_0
-    iget-object p1, p4, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
+    sget-object v0, Ll/ۗ֡ܶ;->ۙ:[[Ljava/lang/String;
 
-    .line 341
+    aget-object p0, v0, p0
+
+    return-object p0
+
+    :cond_1
     :goto_0
-    iput-object p1, p0, Ll/ۗ֡ܶ;->᩶:Ljava/util/Collection;
+    const/4 p0, 0x0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 2
-
-    .line 491
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 492
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    .line 493
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 495
-    iget-object v1, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v1}, Ll/ۨܽܶ;->ܰ(Ll/ۨܽܶ;)V
-
-    if-eqz v0, :cond_0
-
-    .line 497
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ܰ()V
-
-    :cond_0
-    return p1
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    .line 511
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 514
-    :cond_0
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->size()I
-
-    move-result v0
-
-    .line 515
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 517
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    .line 518
-    iget-object v2, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    sub-int/2addr v1, v0
-
-    invoke-static {v2, v1}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;I)V
-
-    if-nez v0, :cond_1
-
-    .line 520
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ܰ()V
-
-    :cond_1
-    return p1
-.end method
-
-.method public final clear()V
-    .locals 2
-
-    .line 540
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 544
-    :cond_0
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->clear()V
-
-    .line 545
-    iget-object v1, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v1, v0}, Ll/ۨܽܶ;->ܰ(Ll/ۨܽܶ;I)V
-
-    .line 546
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۖ()V
-
-    return-void
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 528
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 529
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 534
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 535
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 414
-    :cond_0
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 415
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 420
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 421
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 436
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 437
-    new-instance v0, Ll/ۢ֡ܶ;
-
-    invoke-direct {v0, p0}, Ll/ۢ֡ܶ;-><init>(Ll/ۗ֡ܶ;)V
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 551
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 552
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 554
-    iget-object v0, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v0}, Ll/ۨܽܶ;->ۨ(Ll/ۨܽܶ;)V
-
-    .line 555
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۖ()V
-
-    :cond_0
-    return p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    .line 562
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 565
-    :cond_0
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->size()I
-
-    move-result v0
-
-    .line 566
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1, p1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 568
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    .line 569
-    iget-object v2, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    sub-int/2addr v1, v0
-
-    invoke-static {v2, v1}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;I)V
-
-    .line 570
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۖ()V
-
-    :cond_1
-    return p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    .line 902
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 578
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->size()I
-
-    move-result v0
-
-    .line 579
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1, p1}, Ljava/util/Collection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 581
-    iget-object v1, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    .line 582
-    iget-object v2, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    sub-int/2addr v1, v0
-
-    invoke-static {v2, v1}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;I)V
-
-    .line 583
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۖ()V
-
-    :cond_0
-    return p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 398
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 399
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    .line 426
-    invoke-virtual {p0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 427
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۖ()V
-    .locals 2
-
-    .line 370
-    iget-object v0, p0, Ll/ۗ֡ܶ;->ܺ:Ll/ۗ֡ܶ;
-
-    if-eqz v0, :cond_0
-
-    .line 371
-    invoke-virtual {v0}, Ll/ۗ֡ܶ;->ۖ()V
-
-    return-void
-
-    .line 372
-    :cond_0
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 373
-    iget-object v0, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v0}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/ۗ֡ܶ;->ܽ:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final ۨ()V
-    .locals 2
-
-    .line 352
-    iget-object v0, p0, Ll/ۗ֡ܶ;->ܺ:Ll/ۗ֡ܶ;
-
-    if-eqz v0, :cond_1
-
-    .line 353
-    invoke-virtual {v0}, Ll/ۗ֡ܶ;->ۨ()V
-
-    .line 431
-    iget-object v0, v0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    .line 354
-    iget-object v1, p0, Ll/ۗ֡ܶ;->᩶:Ljava/util/Collection;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 355
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    throw v0
-
-    .line 357
-    :cond_1
-    iget-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 358
-    iget-object v0, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v0}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/ۗ֡ܶ;->ܽ:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Collection;
-
-    if-eqz v0, :cond_2
-
-    .line 360
-    iput-object v0, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final ܰ()V
-    .locals 3
-
-    .line 389
-    iget-object v0, p0, Ll/ۗ֡ܶ;->ܺ:Ll/ۗ֡ܶ;
-
-    if-eqz v0, :cond_0
-
-    .line 390
-    invoke-virtual {v0}, Ll/ۗ֡ܶ;->ܰ()V
-
-    return-void
-
-    .line 392
-    :cond_0
-    iget-object v0, p0, Ll/ۗ֡ܶ;->۫:Ll/ۨܽܶ;
-
-    invoke-static {v0}, Ll/ۨܽܶ;->ۙ(Ll/ۨܽܶ;)Ljava/util/Map;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll/ۗ֡ܶ;->ܽ:Ljava/lang/Object;
-
-    iget-object v2, p0, Ll/ۗ֡ܶ;->֡:Ljava/util/Collection;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-object p0
 .end method

@@ -1,31 +1,45 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import java.util.Iterator;
-import org.simpleframework.xml.core.AnnotationHandler;
+/* JADX INFO: renamed from: l.ܿ۫᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: F6PC */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18342 extends C12472 {
+    @Override // l.C12472
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo29438(AbstractC0540 abstractC0540) {
+    }
 
-/* JADX INFO: renamed from: l.ᩳ᩹ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2B5C */
-/* JADX INFO: loaded from: classes4.dex */
-public class C18342 {
+    @Override // l.C12472
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC8743 mo29436(AbstractC0540 abstractC0540) {
+        throw new C24407(abstractC0540);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean f58510;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean f58511;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m42597(String str) {
-        JSONObject jSONObject = new JSONObject(str);
-        JSONObject jSONObjectAdd = JSON.object().add("type", "object").add("additionalProperties", false).add("properties", jSONObject);
-        JSONArray jSONArrayArray = JSON.array();
-        Iterator it = jSONObject.names().iterator();
-        while (it.hasNext()) {
-            jSONArrayArray.add((String) it.next());
+    @Override // l.C12472
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo29437(AbstractC0540 abstractC0540, C10234 c10234) {
+        int i = 0;
+        while (abstractC0540.m2520().getType() != -1) {
+            int type = abstractC0540.m2520().getType();
+            if (i != 0 || (type != 93 && type != 92)) {
+                if (type == 87 || type == 89 || type == 91) {
+                    i++;
+                }
+                if (type == 88 || type == 90 || type == 92) {
+                    if (i == 0) {
+                        return;
+                    } else {
+                        i--;
+                    }
+                }
+                abstractC0540.mo2527();
+            } else {
+                if (abstractC0540.m2522().f9157 == null) {
+                    abstractC0540.mo2527();
+                    return;
+                }
+                return;
+            }
         }
-        return jSONObjectAdd.add(AnnotationHandler.REQUIRED, jSONArrayArray);
     }
 }

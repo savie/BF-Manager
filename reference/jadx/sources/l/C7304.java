@@ -1,21 +1,73 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONObject;
-import com.google.android.material.motion.MotionUtils;
-import org.simpleframework.xml.transform.ClassTransform;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.۟ۜ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 56XR */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7304 {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m19456() {
-        return C3184.m9603("type", "array", "description", "Non-fatal metadata, cleanup, or notification degradation.").add("items", C4969.m13786("string", "One warning message."));
+/* JADX INFO: renamed from: l.ۜܿ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: R5DS */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7304 implements InterfaceC4015 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f24040;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f24041;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int[] f24042;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f24043;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m19988(C25227 c25227, boolean z) {
+        this.f24040 = 0;
+        int[] iArr = this.f24042;
+        if (iArr != null) {
+            Arrays.fill(iArr, -1);
+        }
+        AbstractC21169 abstractC21169 = c25227.mLayout;
+        if (c25227.mAdapter == null || abstractC21169 == null || !abstractC21169.isItemPrefetchEnabled()) {
+            return;
+        }
+        if (z) {
+            if (!c25227.mAdapterHelper.m50272()) {
+                abstractC21169.collectInitialPrefetchPositions(c25227.mAdapter.getItemCount(), this);
+            }
+        } else if (!c25227.hasPendingAdapterUpdates()) {
+            abstractC21169.collectAdjacentPrefetchPositions(this.f24041, this.f24043, c25227.mState, this);
+        }
+        int i = this.f24040;
+        if (i > abstractC21169.mPrefetchMaxCountObserved) {
+            abstractC21169.mPrefetchMaxCountObserved = i;
+            abstractC21169.mPrefetchMaxObservedInInitialPrefetch = z;
+            c25227.mRecycler.m8423();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m19455() {
-        return C4969.m13780("Result for mt_apk_copy_entry. data identifies the copied raw payload, the normalized local path, and any warnings. For workspace_to_local, nextActions checks destination file metadata; for local_to_edit_session, it reads up to the first 256 bytes. Neither action verifies the complete copied content; a corrupt workspace may return mt_apk_workspace_open for retry.", C18828.m43457(JSON.object().add("direction", C4969.m13784("Completed copy direction.", "workspace_to_local", "local_to_edit_session")).add("workspaceId", C4969.m13786("string", "Workspace containing the source or destination entry.")).add("editSessionId", C4969.m13786("string", "Empty for a base workspace read; otherwise the observed or modified edit session.")).add("locator", C4969.m13786("string", "Copied ordinary zip_entry locator.")).add("localPath", C4969.m13786("string", "Normalized absolute local source or destination path fixed for this call.")).add("warnings", m19456()), "integer", "Number of bytes copied.", "size", "Successful workspace entry payload copy."), C4969.m13787(C4969.m13777(JSON.object().add("direction", C4969.m13789("string", "Requested direction, or null when it could not be parsed.")).add("workspaceId", C4969.m13789("string", "Workspace id, or null for an argument error.")).add("editSessionId", C4969.m13789("string", "Edit session id, including an empty base sentinel, or null.")).add("locator", C4969.m13789("string", "Normalized zip_entry locator, or null when unavailable.")).add("localPath", C4969.m13789("string", "Normalized absolute local path, or null before path resolution.")).add("changed", C4969.m13786(ClassTransform.BOOLEAN, "Whether the logical destination may already have changed.")).add("operationMode", C4969.m13789("string", "atomic or best_effort when a publication guarantee was selected.")).add("stateKnown", C4969.m13786(ClassTransform.BOOLEAN, "Whether the final destination state is known.")).add("warnings", m19456()).add("bytesCopied", C4969.m13789("integer", "Bytes copied before failure; this does not mean those bytes reached the destination. Null when unknown.")).add("safeToRetry", C4969.m13786(ClassTransform.BOOLEAN, "Whether retrying the same copy arguments is safe.")), "Stable workspace entry copy failure context; unavailable values are null.")), C4969.m13783("Success returns mt_file_stat for the local destination or mt_apk_read_bytes for up to the first 256 entry bytes. Neither checks complete content equality. A corrupt workspace whose source APK remains accessible may return mt_apk_workspace_open for retry.", C4969.m13778(C18828.m43457(JSON.object(), "string", "Normalized absolute copied local destination path.", MotionUtils.EASING_TYPE_PATH, "Arguments for mt_file_stat."), "mt_file_stat", "inspect"), C4969.m13778(C13530.m33073(), "mt_apk_read_bytes", "inspect"), C4969.m13778(C13530.m33076(), "mt_apk_workspace_open", "retry")));
+    public final void m19987(int i, int i2) {
+        if (i < 0) {
+            throw new IllegalArgumentException("Layout positions must be non-negative");
+        }
+        if (i2 < 0) {
+            throw new IllegalArgumentException("Pixel distance must be non-negative");
+        }
+        int i3 = this.f24040;
+        int i4 = i3 * 2;
+        int[] iArr = this.f24042;
+        if (iArr == null) {
+            int[] iArr2 = new int[4];
+            this.f24042 = iArr2;
+            Arrays.fill(iArr2, -1);
+        } else if (i4 >= iArr.length) {
+            int[] iArr3 = new int[i3 * 4];
+            this.f24042 = iArr3;
+            System.arraycopy(iArr, 0, iArr3, 0, iArr.length);
+        }
+        int[] iArr4 = this.f24042;
+        iArr4[i4] = i;
+        iArr4[i4 + 1] = i2;
+        this.f24040++;
     }
 }

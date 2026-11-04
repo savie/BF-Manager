@@ -1,138 +1,90 @@
 .class public final Ll/᩶֨ۚ;
-.super Ll/ۧ֨ۚ;
-.source "A7IB"
+.super Ljava/lang/Object;
+.source "Q8FL"
 
 
 # instance fields
-.field public ۙ:Landroid/widget/TextView;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ll/ۖۗܳ;
+
+.field public final ᩷:Ll/ۢ֨ۚ;
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻֨ۚ;Landroid/view/ViewGroup;)V
-    .locals 2
+.method public constructor <init>(Ll/ۢ֨ۚ;Ll/ۖۗܳ;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 180
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    .line 1544
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    .line 1545
+    iput-object p1, p0, Ll/᩶֨ۚ;->᩷:Ll/ۢ֨ۚ;
 
-    const v0, 0x7f0d0157
+    .line 1546
+    iput-object p2, p0, Ll/᩶֨ۚ;->ۤ:Ll/ۖۗܳ;
 
-    const/4 v1, 0x0
+    .line 1547
+    iput-object p3, p0, Ll/᩶֨ۚ;->ۙ:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    .line 170
-    invoke-direct {p0, p1}, Ll/۫ܿܰ;-><init>(Landroid/view/View;)V
-
-    .line 181
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    const p2, 0x7f0a0216
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 183
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    const v0, 0x7f0a0163
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    const v0, 0x7f080202
-
-    .line 184
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 186
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setFocusable(Z)V
-
-    .line 187
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
-
-    .line 188
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    const v0, 0x7f0a0217
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iput-object p1, p0, Ll/᩶֨ۚ;->ۙ:Landroid/widget/TextView;
-
-    .line 189
-    invoke-virtual {p1, v1, v1, v1, v1}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    const/high16 v0, 0x41900000    # 18.0f
-
-    .line 190
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextSize(F)V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    .line 191
-    invoke-virtual {p1, v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    .line 192
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
-
-    const v0, 0x7f0a050b
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    .line 1548
+    iput-object p4, p0, Ll/᩶֨ۚ;->᩸:Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ(Ll/֡֨ۚ;)V
-    .locals 1
-
-    .line 196
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public static bridge synthetic ۙ(Ll/᩶֨ۚ;)Ll/ۖۗܳ;
+    .locals 0
 
     .line 0
-    instance-of v0, p1, Ll/ܺ֨ۚ;
+    iget-object p0, p0, Ll/᩶֨ۚ;->ۤ:Ll/ۖۗܳ;
 
-    if-eqz v0, :cond_0
+    return-object p0
+.end method
 
-    .line 197
-    invoke-virtual {p1}, Ll/֡֨ۚ;->ۙ()Ll/ܺ֨ۚ;
 
-    move-result-object p1
+# virtual methods
+.method public final ۙ()Ljava/lang/String;
+    .locals 1
 
-    .line 198
-    iget-object v0, p0, Ll/᩶֨ۚ;->ۙ:Landroid/widget/TextView;
+    .line 1572
+    iget-object v0, p0, Ll/᩶֨ۚ;->᩸:Ljava/lang/String;
 
-    iget p1, p1, Ll/ܺ֨ۚ;->ܰ:I
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+.method public final ۤ()Ll/֨ܺ֫;
+    .locals 3
 
-    :cond_0
-    return-void
+    .line 1564
+    iget-object v0, p0, Ll/᩶֨ۚ;->ۤ:Ll/ۖۗܳ;
+
+    iget-object v1, p0, Ll/᩶֨ۚ;->ۙ:Ljava/lang/String;
+
+    iget-object v2, p0, Ll/᩶֨ۚ;->᩷:Ll/ۢ֨ۚ;
+
+    invoke-virtual {v2, v0, v1}, Ll/ۢ֨ۚ;->᩷(Ll/ۖۗܳ;Ljava/lang/String;)Ll/֨ܺ֫;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ll/ܿ֨ۚ;
+    .locals 3
+
+    .line 1556
+    iget-object v0, p0, Ll/᩶֨ۚ;->ۤ:Ll/ۖۗܳ;
+
+    iget-object v1, p0, Ll/᩶֨ۚ;->ۙ:Ljava/lang/String;
+
+    iget-object v2, p0, Ll/᩶֨ۚ;->᩷:Ll/ۢ֨ۚ;
+
+    invoke-virtual {v2, v0, v1}, Ll/ۢ֨ۚ;->ۙ(Ll/ۖۗܳ;Ljava/lang/String;)Ll/ܿ֨ۚ;
+
+    move-result-object v0
+
+    return-object v0
 .end method

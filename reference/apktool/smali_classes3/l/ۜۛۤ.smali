@@ -1,33 +1,17 @@
 .class public final Ll/ۜۛۤ;
-.super Ll/᩹ۤ۟;
-.source "W7SR"
+.super Ll/֡ۨۤ;
+.source "Z6QT"
 
 
-# instance fields
-.field public ۙ:Z
+# direct methods
+.method public constructor <init>(Ll/֡ۨۤ;)V
+    .locals 0
 
-.field public ܰ:Ll/۫۟۟;
+    .line 696
+    invoke-direct {p0}, Ll/֡ۨۤ;-><init>()V
 
-
-# virtual methods
-.method public final ܰ(Ll/ۡۡ۟;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    .line 527
-    iget-object v0, p0, Ll/ۜۛۤ;->ܰ:Ll/۫۟۟;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 528
-    iput-boolean v0, p0, Ll/ۜۛۤ;->ۙ:Z
-
-    .line 530
-    :cond_0
-    invoke-super {p0, p1}, Ll/᩹ۤ۟;->ܰ(Ll/ۡۡ۟;)V
+    .line 697
+    iput-object p1, p0, Ll/֡ۨۤ;->ۙ:Ll/֡ۨۤ;
 
     return-void
 .end method

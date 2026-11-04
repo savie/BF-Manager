@@ -1,51 +1,87 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿۨܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K8M4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17328 implements InterfaceC18739 {
+import android.content.ComponentName;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
+
+/* JADX INFO: renamed from: l.ܽۘᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W14G */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17328 implements InterfaceC16648 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18739 f55134;
+    public final String f56423;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f55135;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ResolveInfo f56424;
 
-    public C17328(InterfaceC18739 interfaceC18739, long j) {
-        this.f55134 = interfaceC18739;
-        this.f55135 = j;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f56425;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f56426;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f56427;
+
+    public C17328(ResolveInfo resolveInfo) {
+        this.f56424 = resolveInfo;
+        ActivityInfo activityInfo = resolveInfo.activityInfo;
+        this.f56426 = activityInfo.packageName;
+        this.f56423 = activityInfo.name;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC18739 m40290() {
-        return this.f55134;
+    @Override // l.InterfaceC16648
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo39359() {
+        return this.f56425;
     }
 
-    @Override // l.InterfaceC18739
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo12778() {
-        return this.f55134.mo12778();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final void m40674() {
+        this.f56425 = true;
     }
 
-    @Override // l.InterfaceC18739
+    @Override // l.InterfaceC16648
     /* JADX INFO: renamed from: ۙ */
-    public final void mo12777() {
-        this.f55134.mo12777();
+    public final boolean mo39357() {
+        return this.f56427;
     }
 
-    @Override // l.InterfaceC18739
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo12776(C12526 c12526, C16033 c16033, int i) {
-        int iMo12776 = this.f55134.mo12776(c12526, c16033, i);
-        if (iMo12776 == -4) {
-            c16033.f51910 += this.f55135;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final void m40675() {
+        this.f56427 = true;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m40677(PackageManager packageManager) {
+        CharSequence charSequenceLoadLabel = this.f56424.loadLabel(packageManager);
+        if (charSequenceLoadLabel == null) {
+            return this.f56423;
         }
-        return iMo12776;
+        return charSequenceLoadLabel.toString();
     }
 
-    @Override // l.InterfaceC18739
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo12775(long j) {
-        return this.f55134.mo12775(j - this.f55135);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Drawable m40673(PackageManager packageManager) {
+        return this.f56424.loadIcon(packageManager);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String m40676() {
+        return this.f56426;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String m40678() {
+        return this.f56426 + "/" + this.f56423;
+    }
+
+    @Override // l.InterfaceC16648
+    /* JADX INFO: renamed from: ۤ */
+    public final ComponentName mo39358() {
+        return new ComponentName(this.f56426, this.f56423);
     }
 }

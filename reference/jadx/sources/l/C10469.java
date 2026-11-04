@@ -1,41 +1,65 @@
 package l;
 
-import android.os.Bundle;
+import java.util.ListIterator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۤᩴۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 76RQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10469 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12175 m26449(Bundle bundle, C12175 c12175, int i) {
-        if (!bundle.getBoolean("initialSmoothPending")) {
-            return c12175;
-        }
-        int i2 = SharedPreferencesOnSharedPreferenceChangeListenerC15618.f50785;
-        C12175 c12175M30269 = c12175.m30269(i, C16737.f53615.getInt("smooth_mode_threshold", 200000));
-        bundle.remove("initialSmoothPending");
-        return c12175M30269;
+/* JADX INFO: renamed from: l.ۢ᩻ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10469 implements ListIterator, InterfaceC19597 {
+    public final ListIterator a;
+
+    public C10469(C9723 c9723, int i) {
+        this.a = c9723.b.listIterator(i);
     }
 
-    /* JADX WARN: Bottom block not found for handler: all -> 0x01a3 */
-    /* JADX WARN: Bottom block not found for handler: all -> 0x01b5 */
-    /*  JADX ERROR: Type inference failed
-        jadx.core.utils.exceptions.JadxOverflowException: Type inference error: updates count limit reached with updateSeq = 7841. Try increasing type updates limit count.
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:79)
-        */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public static l.C14393 m26450(l.InterfaceC3800 r23, android.os.Bundle r24, l.C12175 r25, byte[] r26, byte[] r27, l.C13914 r28, l.C13312 r29, l.InterfaceC5614 r30) throws java.lang.Throwable {
-        /*
-            Method dump skipped, instruction units count: 784
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C10469.m26450(l.ۘ۟ᩴ, android.os.Bundle, l.۫ۙۚ, byte[], byte[], l.ܰܺۖ, l.۬᩵ۖ, l.ۚ᩸ۘ):l.ܳ۠ۖ");
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final boolean hasNext() {
+        return this.a.hasNext();
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final Object next() {
+        return this.a.next();
+    }
+
+    @Override // java.util.ListIterator
+    public final boolean hasPrevious() {
+        return this.a.hasPrevious();
+    }
+
+    @Override // java.util.ListIterator
+    public final Object previous() {
+        return this.a.previous();
+    }
+
+    @Override // java.util.ListIterator
+    public final int nextIndex() {
+        return this.a.nextIndex();
+    }
+
+    @Override // java.util.ListIterator
+    public final int previousIndex() {
+        return this.a.previousIndex();
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.ListIterator
+    public final void set(Object obj) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.ListIterator
+    public final void add(Object obj) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.Iterator, l.InterfaceC19597
+    public final void forEachRemaining(Consumer consumer) {
+        C22581.forEachRemaining(this.a, consumer);
     }
 }

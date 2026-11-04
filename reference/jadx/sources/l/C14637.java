@@ -1,15 +1,37 @@
 package l;
 
-import android.content.Intent;
-import bin.mt.plus.Main;
+/* JADX INFO: renamed from: l.ܰܰۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14637 extends AbstractC19969 implements InterfaceC12593 {
 
-/* JADX INFO: renamed from: l.ܳܺ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 164Z */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14637 implements InterfaceC17295 {
-    @Override // l.InterfaceC17295
-    public final void accept(Object obj) {
-        Main main = (Main) obj;
-        main.startActivity(new Intent(main, (Class<?>) ActivityC20904.class));
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public AbstractC19728 f47895;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public AbstractC8036 f47896;
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1515(this);
+    }
+
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.BREAK;
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5870(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68543;
     }
 }

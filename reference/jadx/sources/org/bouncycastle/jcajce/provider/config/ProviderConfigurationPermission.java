@@ -5,7 +5,7 @@ import java.security.Permission;
 import java.util.StringTokenizer;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ProviderConfigurationPermission extends BasicPermission {
     public static final int ACCEPTABLE_EC_CURVES = 16;
     public static final String ACCEPTABLE_EC_CURVES_STR = "acceptableeccurves";

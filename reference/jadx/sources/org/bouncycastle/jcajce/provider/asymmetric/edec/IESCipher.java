@@ -10,8 +10,8 @@ import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.NoSuchPaddingException;
-import l.C0252;
-import l.C12441;
+import l.C12669;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
 import org.bouncycastle.crypto.BlockCipher;
@@ -51,7 +51,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.jce.spec.IESParameterSpec;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IESCipher extends BaseCipherSpi {
     public ByteArrayOutputStream buffer;
     public boolean dhaesMode;
@@ -65,7 +65,6 @@ public class IESCipher extends BaseCipherSpi {
     public SecureRandom random;
     public int state;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIES extends IESCipher {
         public XIES() {
             this(DigestFactory.createSHA1(), DigestFactory.createSHA1());
@@ -76,14 +75,12 @@ public class IESCipher extends BaseCipherSpi {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithAESCBC extends XIESwithCipher {
         public XIESwithAESCBC() {
             super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 16);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithCipher extends IESCipher {
         public XIESwithCipher(BlockCipher blockCipher, int i) {
             this(blockCipher, i, DigestFactory.createSHA1(), DigestFactory.createSHA1());
@@ -94,70 +91,60 @@ public class IESCipher extends BaseCipherSpi {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithDESedeCBC extends XIESwithCipher {
         public XIESwithDESedeCBC() {
             super(CBCBlockCipher.newInstance(new DESedeEngine()), 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA256 extends XIES {
         public XIESwithSHA256() {
             super(DigestFactory.createSHA256(), DigestFactory.createSHA256());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA256andAESCBC extends XIESwithCipher {
         public XIESwithSHA256andAESCBC() {
             super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 16, DigestFactory.createSHA256(), DigestFactory.createSHA256());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA256andDESedeCBC extends XIESwithCipher {
         public XIESwithSHA256andDESedeCBC() {
             super(CBCBlockCipher.newInstance(new DESedeEngine()), 8, DigestFactory.createSHA256(), DigestFactory.createSHA256());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA384 extends XIES {
         public XIESwithSHA384() {
             super(DigestFactory.createSHA384(), DigestFactory.createSHA384());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA384andAESCBC extends XIESwithCipher {
         public XIESwithSHA384andAESCBC() {
             super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 16, DigestFactory.createSHA384(), DigestFactory.createSHA384());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA384andDESedeCBC extends XIESwithCipher {
         public XIESwithSHA384andDESedeCBC() {
             super(CBCBlockCipher.newInstance(new DESedeEngine()), 8, DigestFactory.createSHA384(), DigestFactory.createSHA384());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA512 extends XIES {
         public XIESwithSHA512() {
             super(DigestFactory.createSHA512(), DigestFactory.createSHA512());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA512andAESCBC extends XIESwithCipher {
         public XIESwithSHA512andAESCBC() {
             super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 16, DigestFactory.createSHA512(), DigestFactory.createSHA512());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class XIESwithSHA512andDESedeCBC extends XIESwithCipher {
         public XIESwithSHA512andDESedeCBC() {
             super(CBCBlockCipher.newInstance(new DESedeEngine()), 8, DigestFactory.createSHA512(), DigestFactory.createSHA512());
@@ -363,7 +350,7 @@ public class IESCipher extends BaseCipherSpi {
         byte[] nonce = this.engineSpec.getNonce();
         int i2 = this.ivLength;
         if (i2 != 0 && (nonce == null || nonce.length != i2)) {
-            throw new InvalidAlgorithmParameterException(C12441.m30911(this.ivLength, " bytes long", new StringBuilder("NONCE in IES Parameters needs to be ")));
+            throw new InvalidAlgorithmParameterException(C12669.m31437(this.ivLength, " bytes long", new StringBuilder("NONCE in IES Parameters needs to be ")));
         }
         if (i == 1 || i == 3) {
             if (!(key instanceof PublicKey)) {
@@ -417,7 +404,7 @@ public class IESCipher extends BaseCipherSpi {
         if (XDHParameterSpec.X448.equalsIgnoreCase(algorithm)) {
             return 448;
         }
-        throw new IllegalArgumentException(C0252.m1693("unknown XDH key algorithm ", algorithm));
+        throw new IllegalArgumentException(C25272.m56409("unknown XDH key algorithm ", algorithm));
     }
 
     @Override // org.bouncycastle.jcajce.provider.asymmetric.util.BaseCipherSpi, javax.crypto.CipherSpi
@@ -428,7 +415,7 @@ public class IESCipher extends BaseCipherSpi {
             z = false;
         } else {
             if (!upperCase.equals("DHAES")) {
-                throw new IllegalArgumentException(C0252.m1693("can't support mode ", str));
+                throw new IllegalArgumentException(C25272.m56409("can't support mode ", str));
             }
             z = true;
         }

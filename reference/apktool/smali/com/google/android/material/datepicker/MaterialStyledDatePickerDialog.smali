@@ -20,7 +20,7 @@
     .locals 1
 
     .line 52
-    sget v0, Ll/ᩴ۟ܶ;->֫۬:I
+    sget v0, Ll/ۘ۬ܺ;->۠ۚ:I
 
     sput v0, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;->DEF_STYLE_RES:I
 
@@ -77,7 +77,7 @@
 
     move-result-object p2
 
-    sget p3, Ll/ۖ۟ܶ;->ۛ֨:I
+    sget p3, Ll/ۧ۬ܺ;->ۢ۫:I
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

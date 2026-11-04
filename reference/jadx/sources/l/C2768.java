@@ -1,28 +1,20 @@
 package l;
 
-import java.io.IOException;
+import android.content.Context;
+import android.graphics.Rect;
+import android.util.AttributeSet;
+import android.widget.FrameLayout;
 
-/* JADX INFO: renamed from: l.ۖ᩷֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: C9PC */
-/* JADX INFO: loaded from: classes3.dex */
-public class C2768 extends AbstractC18785 {
-    @Override // l.InterfaceC6271
-    public C22525 parsePartialFrom(AbstractC3262 abstractC3262, C2701 c2701) throws C4529 {
-        C5591 c5591NewBuilder = C22525.newBuilder();
-        try {
-            c5591NewBuilder.mergeFrom(abstractC3262, c2701);
-            return c5591NewBuilder.buildPartial();
-        } catch (C2474 e) {
-            C4529 c4529M7587 = e.m7587();
-            c4529M7587.m12651(c5591NewBuilder.buildPartial());
-            throw c4529M7587;
-        } catch (C4529 e2) {
-            e2.m12651(c5591NewBuilder.buildPartial());
-            throw e2;
-        } catch (IOException e3) {
-            C4529 c4529 = new C4529(e3.getMessage(), e3);
-            c4529.m12651(c5591NewBuilder.buildPartial());
-            throw c4529;
-        }
+/* JADX INFO: renamed from: l.ۖܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 14HU */
+/* JADX INFO: loaded from: classes2.dex */
+public class C2768 extends FrameLayout {
+    public C2768(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
+
+    @Override // android.view.View
+    public final boolean fitSystemWindows(Rect rect) {
+        return super.fitSystemWindows(rect);
     }
 }

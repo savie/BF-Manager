@@ -1,101 +1,114 @@
 package l;
 
-import java.math.BigInteger;
-import java.text.Collator;
+/* JADX INFO: renamed from: l.᩹᩸᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6OI */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23849 extends AbstractC3711 {
 
-/* JADX INFO: renamed from: l.᩻ܿ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: M2AR */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23849 implements Comparable {
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public static final C25351[] f77227;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f77097;
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public static final C11002 f77228;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public String f77098;
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public static final C6485 f77226 = new C6485();
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public Collator f77099;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public static final C22191 f77225 = new C22191(new String[]{null, null, null, null, "'<!--'", "'-->'", null, null, null, null, null, null, null, null, null, "'{'", "'}'", "'['", "']'", "'('", "')'", "':'", "';'", "','"}, new String[]{null, "Url", "Comment", "Whitespace", "Cdo", "Cdc", "StringLiteral", "BadString", "Function", "AtKeyword", "Hash", "Dimension", "Percentage", "Number", "Ident", "LBrace", "RBrace", "LBracket", "RBracket", "LParen", "RParen", "Colon", "Semicolon", "Comma", "Delim"}, null);
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public BigInteger f77100;
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    @Deprecated
+    public static final String[] f77229 = new String[25];
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public String f77101;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f77102;
-
-    public C23849(Collator collator, String str, boolean z) {
-        this.f77099 = collator;
-        if (str.isEmpty() || str.charAt(0) < 128) {
-            this.f77097 = 0;
-        } else {
-            this.f77097 = 1;
-        }
-        this.f77102 = z;
-        if (z) {
-            try {
-                this.f77100 = new BigInteger(str);
-            } catch (NumberFormatException unused) {
-                this.f77100 = BigInteger.ZERO;
-            }
-        }
-        this.f77098 = str;
-        this.f77101 = str.toLowerCase();
+    public C23849(C18870 c18870) {
+        super(c18870);
+        this.f30727 = new C1308(this, f77228, f77227, f77226);
     }
 
-    /* JADX WARN: Code duplicated, block: B:38:0x0074 A[RETURN] */
-    /* JADX WARN: Code duplicated, block: B:39:0x0075  */
-    @Override // java.lang.Comparable
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
-    public final int compareTo(C23849 c23849) {
-        int iCompare;
-        int iCompareTo;
-        int i = c23849.f77097;
-        int i2 = this.f77097;
-        if (i2 != i) {
-            return i2 - i;
+    static {
+        int i = 0;
+        int i2 = 0;
+        while (true) {
+            String[] strArr = f77229;
+            if (i2 >= strArr.length) {
+                break;
+            }
+            C22191 c22191 = f77225;
+            String strM50200 = c22191.m50200(i2);
+            strArr[i2] = strM50200;
+            if (strM50200 == null) {
+                strArr[i2] = c22191.m50199(i2);
+            }
+            if (strArr[i2] == null) {
+                strArr[i2] = "<INVALID>";
+            }
+            i2++;
         }
-        if (this.f77102 && c23849.f77102 && (iCompareTo = this.f77100.compareTo(c23849.f77100)) != 0) {
-            return iCompareTo;
+        C11002 c11002M56094 = new C25175().m56094("\u0004\u0000\u0018Ę\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007\u0012\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007\u0015\u0002\u0016\u0007\u0016\u0002\u0017\u0007\u0017\u0002\u0018\u0007\u0018\u0002\u0019\u0007\u0019\u0002\u001a\u0007\u001a\u0002\u001b\u0007\u001b\u0002\u001c\u0007\u001c\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0005\u0000@\b\u0000\n\u0000\f\u0000C\t\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0003\u0000H\b\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0004\u0001M\b\u0001\u000b\u0001\f\u0001N\u0001\u0001\u0001\u0001\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0003\u0004a\b\u0004\u0001\u0004\u0005\u0004d\b\u0004\n\u0004\f\u0004g\t\u0004\u0001\u0004\u0003\u0004j\b\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0003\u0004q\b\u0004\u0001\u0004\u0005\u0004t\b\u0004\n\u0004\f\u0004w\t\u0004\u0001\u0004\u0003\u0004z\b\u0004\u0003\u0004|\b\u0004\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0003\u0005\u0083\b\u0005\u0001\u0005\u0005\u0005\u0086\b\u0005\n\u0005\f\u0005\u0089\t\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0003\u0005\u0090\b\u0005\u0001\u0005\u0005\u0005\u0093\b\u0005\n\u0005\f\u0005\u0096\t\u0005\u0003\u0005\u0098\b\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0001\b\u0001\b\u0004\b£\b\b\u000b\b\f\b¤\u0001\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\u000b\u0001\u000b\u0001\f\u0001\f\u0001\r\u0001\r\u0001\u000e\u0001\u000e\u0001\u000f\u0001\u000f\u0001\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0001\u0012\u0001\u0012\u0001\u0013\u0001\u0013\u0001\u0014\u0001\u0014\u0001\u0015\u0001\u0015\u0001\u0016\u0001\u0016\u0001\u0017\u0003\u0017Æ\b\u0017\u0001\u0017\u0004\u0017É\b\u0017\u000b\u0017\f\u0017Ê\u0001\u0017\u0001\u0017\u0004\u0017Ï\b\u0017\u000b\u0017\f\u0017Ð\u0003\u0017Ó\b\u0017\u0001\u0017\u0001\u0017\u0004\u0017×\b\u0017\u000b\u0017\f\u0017Ø\u0003\u0017Û\b\u0017\u0001\u0017\u0001\u0017\u0003\u0017ß\b\u0017\u0001\u0017\u0004\u0017â\b\u0017\u000b\u0017\f\u0017ã\u0003\u0017æ\b\u0017\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0003\u0018ì\b\u0018\u0003\u0018î\b\u0018\u0001\u0018\u0005\u0018ñ\b\u0018\n\u0018\f\u0018ô\t\u0018\u0001\u0019\u0001\u0019\u0003\u0019ø\b\u0019\u0001\u001a\u0001\u001a\u0003\u001aü\b\u001a\u0001\u001b\u0001\u001b\u0001\u001b\u0003\u001bā\b\u001b\u0001\u001b\u0003\u001bĄ\b\u001b\u0001\u001b\u0003\u001bć\b\u001b\u0001\u001b\u0003\u001bĊ\b\u001b\u0001\u001b\u0003\u001bč\b\u001b\u0001\u001b\u0001\u001b\u0001\u001b\u0003\u001bĒ\b\u001b\u0001\u001b\u0003\u001bĕ\b\u001b\u0001\u001c\u0001\u001c\u0001A\u0000\u001d\u0001\u0002\u0003\u0003\u0005\u0004\u0007\u0005\t\u0006\u000b\u0007\r\b\u000f\t\u0011\n\u0013\u000b\u0015\f\u0017\r\u0019\u000e\u001b\u000f\u001d\u0010\u001f\u0011!\u0012#\u0013%\u0014'\u0015)\u0016+\u0017-\u0018/\u00001\u00003\u00005\u00007\u00009\u0000\u0001\u0000\f\u0003\u0000\t\n\f\r  \u0004\u0000\n\n\f\r\"\"\\\\\u0001\u0001\"\"\u0004\u0000\n\n\f\r''\\\\\u0001\u0001''\u0002\u0000++--\u0001\u000009\u0002\u0000EEee\u0004\u0000AZ__az\u0080耀\uffff\u0002\u0000--09\u0005\u0000\n\n\f\r09AFaf\u0003\u000009AFafĹ\u0000\u0001\u0001\u0000\u0000\u0000\u0000\u0003\u0001\u0000\u0000\u0000\u0000\u0005\u0001\u0000\u0000\u0000\u0000\u0007\u0001\u0000\u0000\u0000\u0000\t\u0001\u0000\u0000\u0000\u0000\u000b\u0001\u0000\u0000\u0000\u0000\r\u0001\u0000\u0000\u0000\u0000\u000f\u0001\u0000\u0000\u0000\u0000\u0011\u0001\u0000\u0000\u0000\u0000\u0013\u0001\u0000\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u0000\u0017\u0001\u0000\u0000\u0000\u0000\u0019\u0001\u0000\u0000\u0000\u0000\u001b\u0001\u0000\u0000\u0000\u0000\u001d\u0001\u0000\u0000\u0000\u0000\u001f\u0001\u0000\u0000\u0000\u0000!\u0001\u0000\u0000\u0000\u0000#\u0001\u0000\u0000\u0000\u0000%\u0001\u0000\u0000\u0000\u0000'\u0001\u0000\u0000\u0000\u0000)\u0001\u0000\u0000\u0000\u0000+\u0001\u0000\u0000\u0000\u0000-\u0001\u0000\u0000\u0000\u0001;\u0001\u0000\u0000\u0000\u0003L\u0001\u0000\u0000\u0000\u0005R\u0001\u0000\u0000\u0000\u0007W\u0001\u0000\u0000\u0000\t{\u0001\u0000\u0000\u0000\u000b\u0097\u0001\u0000\u0000\u0000\r\u0099\u0001\u0000\u0000\u0000\u000f\u009d\u0001\u0000\u0000\u0000\u0011 \u0001\u0000\u0000\u0000\u0013¦\u0001\u0000\u0000\u0000\u0015©\u0001\u0000\u0000\u0000\u0017¬\u0001\u0000\u0000\u0000\u0019®\u0001\u0000\u0000\u0000\u001b°\u0001\u0000\u0000\u0000\u001d²\u0001\u0000\u0000\u0000\u001f´\u0001\u0000\u0000\u0000!¶\u0001\u0000\u0000\u0000#¸\u0001\u0000\u0000\u0000%º\u0001\u0000\u0000\u0000'¼\u0001\u0000\u0000\u0000)¾\u0001\u0000\u0000\u0000+À\u0001\u0000\u0000\u0000-Â\u0001\u0000\u0000\u0000/Å\u0001\u0000\u0000\u00001í\u0001\u0000\u0000\u00003÷\u0001\u0000\u0000\u00005û\u0001\u0000\u0000\u00007ý\u0001\u0000\u0000\u00009Ė\u0001\u0000\u0000\u0000;<\u0005/\u0000\u0000<=\u0005*\u0000\u0000=A\u0001\u0000\u0000\u0000>@\t\u0000\u0000\u0000?>\u0001\u0000\u0000\u0000@C\u0001\u0000\u0000\u0000AB\u0001\u0000\u0000\u0000A?\u0001\u0000\u0000\u0000BG\u0001\u0000\u0000\u0000CA\u0001\u0000\u0000\u0000DE\u0005*\u0000\u0000EH\u0005/\u0000\u0000FH\u0005\u0000\u0000\u0001GD\u0001\u0000\u0000\u0000GF\u0001\u0000\u0000\u0000HI\u0001\u0000\u0000\u0000IJ\u0006\u0000\u0000\u0000J\u0002\u0001\u0000\u0000\u0000KM\u0007\u0000\u0000\u0000LK\u0001\u0000\u0000\u0000MN\u0001\u0000\u0000\u0000NL\u0001\u0000\u0000\u0000NO\u0001\u0000\u0000\u0000OP\u0001\u0000\u0000\u0000PQ\u0006\u0001\u0000\u0000Q\u0004\u0001\u0000\u0000\u0000RS\u0005<\u0000\u0000ST\u0005!\u0000\u0000TU\u0005-\u0000\u0000UV\u0005-\u0000\u0000V\u0006\u0001\u0000\u0000\u0000WX\u0005-\u0000\u0000XY\u0005-\u0000\u0000YZ\u0005>\u0000\u0000Z\b\u0001\u0000\u0000\u0000[e\u0005\"\u0000\u0000\\`\u0005\\\u0000\u0000]^\u0005\r\u0000\u0000^a\u0005\n\u0000\u0000_a\t\u0000\u0000\u0000`]\u0001\u0000\u0000\u0000`_\u0001\u0000\u0000\u0000ad\u0001\u0000\u0000\u0000bd\b\u0001\u0000\u0000c\\\u0001\u0000\u0000\u0000cb\u0001\u0000\u0000\u0000dg\u0001\u0000\u0000\u0000ec\u0001\u0000\u0000\u0000ef\u0001\u0000\u0000\u0000fi\u0001\u0000\u0000\u0000ge\u0001\u0000\u0000\u0000hj\u0007\u0002\u0000\u0000ih\u0001\u0000\u0000\u0000j|\u0001\u0000\u0000\u0000ku\u0005'\u0000\u0000lp\u0005\\\u0000\u0000mn\u0005\r\u0000\u0000nq\u0005\n\u0000\u0000oq\t\u0000\u0000\u0000pm\u0001\u0000\u0000\u0000po\u0001\u0000\u0000\u0000qt\u0001\u0000\u0000\u0000rt\b\u0003\u0000\u0000sl\u0001\u0000\u0000\u0000sr\u0001\u0000\u0000\u0000tw\u0001\u0000\u0000\u0000us\u0001\u0000\u0000\u0000uv\u0001\u0000\u0000\u0000vy\u0001\u0000\u0000\u0000wu\u0001\u0000\u0000\u0000xz\u0007\u0004\u0000\u0000yx\u0001\u0000\u0000\u0000z|\u0001\u0000\u0000\u0000{[\u0001\u0000\u0000\u0000{k\u0001\u0000\u0000\u0000|\n\u0001\u0000\u0000\u0000}\u0087\u0005\"\u0000\u0000~\u0082\u0005\\\u0000\u0000\u007f\u0080\u0005\r\u0000\u0000\u0080\u0083\u0005\n\u0000\u0000\u0081\u0083\t\u0000\u0000\u0000\u0082\u007f\u0001\u0000\u0000\u0000\u0082\u0081\u0001\u0000\u0000\u0000\u0083\u0086\u0001\u0000\u0000\u0000\u0084\u0086\b\u0001\u0000\u0000\u0085~\u0001\u0000\u0000\u0000\u0085\u0084\u0001\u0000\u0000\u0000\u0086\u0089\u0001\u0000\u0000\u0000\u0087\u0085\u0001\u0000\u0000\u0000\u0087\u0088\u0001\u0000\u0000\u0000\u0088\u0098\u0001\u0000\u0000\u0000\u0089\u0087\u0001\u0000\u0000\u0000\u008a\u0094\u0005'\u0000\u0000\u008b\u008f\u0005\\\u0000\u0000\u008c\u008d\u0005\r\u0000\u0000\u008d\u0090\u0005\n\u0000\u0000\u008e\u0090\t\u0000\u0000\u0000\u008f\u008c\u0001\u0000\u0000\u0000\u008f\u008e\u0001\u0000\u0000\u0000\u0090\u0093\u0001\u0000\u0000\u0000\u0091\u0093\b\u0003\u0000\u0000\u0092\u008b\u0001\u0000\u0000\u0000\u0092\u0091\u0001\u0000\u0000\u0000\u0093\u0096\u0001\u0000\u0000\u0000\u0094\u0092\u0001\u0000\u0000\u0000\u0094\u0095\u0001\u0000\u0000\u0000\u0095\u0098\u0001\u0000\u0000\u0000\u0096\u0094\u0001\u0000\u0000\u0000\u0097}\u0001\u0000\u0000\u0000\u0097\u008a\u0001\u0000\u0000\u0000\u0098\f\u0001\u0000\u0000\u0000\u0099\u009a\u00031\u0018\u0000\u009a\u009b\u0005(\u0000\u0000\u009b\u009c\u0006\u0006\u0001\u0000\u009c\u000e\u0001\u0000\u0000\u0000\u009d\u009e\u0005@\u0000\u0000\u009e\u009f\u00031\u0018\u0000\u009f\u0010\u0001\u0000\u0000\u0000 ¢\u0005#\u0000\u0000¡£\u00035\u001a\u0000¢¡\u0001\u0000\u0000\u0000£¤\u0001\u0000\u0000\u0000¤¢\u0001\u0000\u0000\u0000¤¥\u0001\u0000\u0000\u0000¥\u0012\u0001\u0000\u0000\u0000¦§\u0003/\u0017\u0000§¨\u00031\u0018\u0000¨\u0014\u0001\u0000\u0000\u0000©ª\u0003/\u0017\u0000ª«\u0005%\u0000\u0000«\u0016\u0001\u0000\u0000\u0000¬\u00ad\u0003/\u0017\u0000\u00ad\u0018\u0001\u0000\u0000\u0000®¯\u00031\u0018\u0000¯\u001a\u0001\u0000\u0000\u0000°±\u0005{\u0000\u0000±\u001c\u0001\u0000\u0000\u0000²³\u0005}\u0000\u0000³\u001e\u0001\u0000\u0000\u0000´µ\u0005[\u0000\u0000µ \u0001\u0000\u0000\u0000¶·\u0005]\u0000\u0000·\"\u0001\u0000\u0000\u0000¸¹\u0005(\u0000\u0000¹$\u0001\u0000\u0000\u0000º»\u0005)\u0000\u0000»&\u0001\u0000\u0000\u0000¼½\u0005:\u0000\u0000½(\u0001\u0000\u0000\u0000¾¿\u0005;\u0000\u0000¿*\u0001\u0000\u0000\u0000ÀÁ\u0005,\u0000\u0000Á,\u0001\u0000\u0000\u0000ÂÃ\t\u0000\u0000\u0000Ã.\u0001\u0000\u0000\u0000ÄÆ\u0007\u0005\u0000\u0000ÅÄ\u0001\u0000\u0000\u0000ÅÆ\u0001\u0000\u0000\u0000ÆÚ\u0001\u0000\u0000\u0000ÇÉ\u0007\u0006\u0000\u0000ÈÇ\u0001\u0000\u0000\u0000ÉÊ\u0001\u0000\u0000\u0000ÊÈ\u0001\u0000\u0000\u0000ÊË\u0001\u0000\u0000\u0000ËÒ\u0001\u0000\u0000\u0000ÌÎ\u0005.\u0000\u0000ÍÏ\u0007\u0006\u0000\u0000ÎÍ\u0001\u0000\u0000\u0000ÏÐ\u0001\u0000\u0000\u0000ÐÎ\u0001\u0000\u0000\u0000ÐÑ\u0001\u0000\u0000\u0000ÑÓ\u0001\u0000\u0000\u0000ÒÌ\u0001\u0000\u0000\u0000ÒÓ\u0001\u0000\u0000\u0000ÓÛ\u0001\u0000\u0000\u0000ÔÖ\u0005.\u0000\u0000Õ×\u0007\u0006\u0000\u0000ÖÕ\u0001\u0000\u0000\u0000×Ø\u0001\u0000\u0000\u0000ØÖ\u0001\u0000\u0000\u0000ØÙ\u0001\u0000\u0000\u0000ÙÛ\u0001\u0000\u0000\u0000ÚÈ\u0001\u0000\u0000\u0000ÚÔ\u0001\u0000\u0000\u0000Ûå\u0001\u0000\u0000\u0000ÜÞ\u0007\u0007\u0000\u0000Ýß\u0007\u0005\u0000\u0000ÞÝ\u0001\u0000\u0000\u0000Þß\u0001\u0000\u0000\u0000ßá\u0001\u0000\u0000\u0000àâ\u0007\u0006\u0000\u0000áà\u0001\u0000\u0000\u0000âã\u0001\u0000\u0000\u0000ãá\u0001\u0000\u0000\u0000ãä\u0001\u0000\u0000\u0000äæ\u0001\u0000\u0000\u0000åÜ\u0001\u0000\u0000\u0000åæ\u0001\u0000\u0000\u0000æ0\u0001\u0000\u0000\u0000çî\u00033\u0019\u0000èë\u0005-\u0000\u0000éì\u00033\u0019\u0000êì\u0005-\u0000\u0000ëé\u0001\u0000\u0000\u0000ëê\u0001\u0000\u0000\u0000ìî\u0001\u0000\u0000\u0000íç\u0001\u0000\u0000\u0000íè\u0001\u0000\u0000\u0000îò\u0001\u0000\u0000\u0000ïñ\u00035\u001a\u0000ðï\u0001\u0000\u0000\u0000ñô\u0001\u0000\u0000\u0000òð\u0001\u0000\u0000\u0000òó\u0001\u0000\u0000\u0000ó2\u0001\u0000\u0000\u0000ôò\u0001\u0000\u0000\u0000õø\u0007\b\u0000\u0000öø\u00037\u001b\u0000÷õ\u0001\u0000\u0000\u0000÷ö\u0001\u0000\u0000\u0000ø4\u0001\u0000\u0000\u0000ùü\u00033\u0019\u0000úü\u0007\t\u0000\u0000ûù\u0001\u0000\u0000\u0000ûú\u0001\u0000\u0000\u0000ü6\u0001\u0000\u0000\u0000ýĔ\u0005\\\u0000\u0000þĀ\u00039\u001c\u0000ÿā\u00039\u001c\u0000Āÿ\u0001\u0000\u0000\u0000Āā\u0001\u0000\u0000\u0000āă\u0001\u0000\u0000\u0000ĂĄ\u00039\u001c\u0000ăĂ\u0001\u0000\u0000\u0000ăĄ\u0001\u0000\u0000\u0000ĄĆ\u0001\u0000\u0000\u0000ąć\u00039\u001c\u0000Ćą\u0001\u0000\u0000\u0000Ćć\u0001\u0000\u0000\u0000ćĉ\u0001\u0000\u0000\u0000ĈĊ\u00039\u001c\u0000ĉĈ\u0001\u0000\u0000\u0000ĉĊ\u0001\u0000\u0000\u0000ĊČ\u0001\u0000\u0000\u0000ċč\u00039\u001c\u0000Čċ\u0001\u0000\u0000\u0000Čč\u0001\u0000\u0000\u0000čđ\u0001\u0000\u0000\u0000Ďď\u0005\r\u0000\u0000ďĒ\u0005\n\u0000\u0000ĐĒ\u0007\u0000\u0000\u0000đĎ\u0001\u0000\u0000\u0000đĐ\u0001\u0000\u0000\u0000đĒ\u0001\u0000\u0000\u0000Ēĕ\u0001\u0000\u0000\u0000ēĕ\b\n\u0000\u0000Ĕþ\u0001\u0000\u0000\u0000Ĕē\u0001\u0000\u0000\u0000ĕ8\u0001\u0000\u0000\u0000Ėė\u0007\u000b\u0000\u0000ė:\u0001\u0000\u0000\u0000*\u0000AGN`ceipsuy{\u0082\u0085\u0087\u008f\u0092\u0094\u0097¤ÅÊÐÒØÚÞãåëíò÷ûĀăĆĉČđĔ\u0002\u0000\u0001\u0000\u0001\u0006\u0000".toCharArray());
+        f77228 = c11002M56094;
+        f77227 = new C25351[c11002M56094.f34749.size()];
+        while (true) {
+            C11002 c11002 = f77228;
+            if (i >= c11002.f34749.size()) {
+                return;
+            }
+            f77227[i] = new C25351(c11002.m27846(i), i);
+            i++;
         }
-        String str = c23849.f77101;
-        int i3 = C3386.f12507;
-        String str2 = this.f77101;
-        int length = str2.length();
-        int length2 = str.length();
-        int iMin = Math.min(str2.length(), length2);
-        for (int i4 = 0; i4 < iMin; i4++) {
-            char cCharAt = str2.charAt(i4);
-            char cCharAt2 = str.charAt(i4);
-            if (cCharAt != cCharAt2) {
-                iCompare = 1;
-                boolean z = cCharAt <= 127;
-                boolean z2 = cCharAt2 <= 127;
-                if (z && z2) {
-                    iCompare = cCharAt - cCharAt2;
-                } else if (z) {
-                    iCompare = -1;
-                } else if (!z2) {
-                    iCompare = this.f77099.compare(String.valueOf(cCharAt), String.valueOf(cCharAt2));
-                    if (iCompare != 0) {
+    }
+
+    @Override // l.AbstractC9488
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15472(int i, int i2) {
+        if (i == 6 && i2 == 0 && AbstractC3711.m12070(AbstractC3711.m12072(C1402.m5124(1, 0, m35379()))).equals("url")) {
+            loop0: while (true) {
+                int i3 = 0;
+                while (true) {
+                    InterfaceC17693 interfaceC17693 = this.f48057;
+                    if (interfaceC17693.mo11537(1) == -1) {
+                        m24873().mo2202(this, (Object) null, this.f48059, this.f48061, "Unterminated CSS URL", (C10234) null);
+                        break loop0;
+                    }
+                    int iMo11537 = interfaceC17693.mo11537(1);
+                    ((C1308) m24871()).m4769(interfaceC17693);
+                    if (iMo11537 == 92 && interfaceC17693.mo11537(1) != -1) {
+                        int iMo11538 = interfaceC17693.mo11537(1);
+                        ((C1308) m24871()).m4769(interfaceC17693);
+                        if (iMo11538 == 13 && interfaceC17693.mo11537(1) == 10) {
+                            ((C1308) m24871()).m4769(interfaceC17693);
+                        }
+                    } else if (i3 != 0) {
+                        if (iMo11537 == i3) {
+                            break;
+                        }
+                    } else if (iMo11537 == 39 || iMo11537 == 34) {
+                        i3 = iMo11537;
+                    } else if (iMo11537 == 41) {
+                        break loop0;
                     }
                 }
-                if (iCompare != 0) {
-                    return iCompare;
-                }
-                return this.f77098.compareTo(c23849.f77098);
             }
+            this.f48064 = 1;
         }
-        iCompare = Integer.compare(length, length2);
-        if (iCompare != 0) {
-            return iCompare;
-        }
-        return this.f77098.compareTo(c23849.f77098);
     }
 
-    public final String toString() {
-        return this.f77101;
+    @Override // l.AbstractC9488
+    @Deprecated
+    /* JADX INFO: renamed from: ۚ */
+    public final String[] mo6653() {
+        return f77229;
+    }
+
+    @Override // l.AbstractC9488
+    /* JADX INFO: renamed from: ֫ */
+    public final C22191 mo6640() {
+        return f77225;
+    }
+
+    @Override // l.AbstractC9488
+    /* JADX INFO: renamed from: ۤ */
+    public final C11002 mo6669() {
+        return f77228;
     }
 }

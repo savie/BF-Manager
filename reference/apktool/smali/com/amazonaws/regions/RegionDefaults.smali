@@ -4121,7 +4121,7 @@
     .locals 2
 
     .line 866
-    invoke-virtual {p0}, Lcom/amazonaws/regions/Region;->ۚ()Ljava/util/HashMap;
+    invoke-virtual {p0}, Lcom/amazonaws/regions/Region;->ᩴ()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -4131,7 +4131,7 @@
     move-result-object v1
 
     .line 868
-    invoke-virtual {p0}, Lcom/amazonaws/regions/Region;->ܰ()Ljava/util/HashMap;
+    invoke-virtual {p0}, Lcom/amazonaws/regions/Region;->᩷()Ljava/util/HashMap;
 
     move-result-object p0
 

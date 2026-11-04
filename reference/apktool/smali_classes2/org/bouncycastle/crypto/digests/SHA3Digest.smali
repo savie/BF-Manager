@@ -106,7 +106,7 @@
     const-string v2, " not supported for SHA-3"
 
     .line 0
-    invoke-static {p0, v1, v2}, Ll/ۖۘۖ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1, v2}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

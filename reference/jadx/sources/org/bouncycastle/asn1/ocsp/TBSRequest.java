@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.Extensions;
 import org.bouncycastle.asn1.x509.GeneralName;
 import org.bouncycastle.asn1.x509.X509Extensions;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TBSRequest extends ASN1Object {
     public static final ASN1Integer V1 = new ASN1Integer(0);
     public Extensions requestExtensions;

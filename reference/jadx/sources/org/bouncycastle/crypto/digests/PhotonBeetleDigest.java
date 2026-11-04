@@ -12,7 +12,6 @@ public class PhotonBeetleDigest extends BufferBaseDigest {
     public int blockCount;
     public final byte[] state;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
     }

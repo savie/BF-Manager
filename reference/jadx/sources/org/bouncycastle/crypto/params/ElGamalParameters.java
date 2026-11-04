@@ -3,12 +3,12 @@ package org.bouncycastle.crypto.params;
 import java.math.BigInteger;
 import org.bouncycastle.crypto.CipherParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalParameters implements CipherParameters {
     public BigInteger g;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77972l;
+    public int f82088l;
     public BigInteger p;
 
     public ElGamalParameters(BigInteger bigInteger, BigInteger bigInteger2) {
@@ -18,7 +18,7 @@ public class ElGamalParameters implements CipherParameters {
     public ElGamalParameters(BigInteger bigInteger, BigInteger bigInteger2, int i) {
         this.g = bigInteger2;
         this.p = bigInteger;
-        this.f77972l = i;
+        this.f82088l = i;
     }
 
     public boolean equals(Object obj) {
@@ -26,7 +26,7 @@ public class ElGamalParameters implements CipherParameters {
             return false;
         }
         ElGamalParameters elGamalParameters = (ElGamalParameters) obj;
-        return elGamalParameters.getP().equals(this.p) && elGamalParameters.getG().equals(this.g) && elGamalParameters.getL() == this.f77972l;
+        return elGamalParameters.getP().equals(this.p) && elGamalParameters.getG().equals(this.g) && elGamalParameters.getL() == this.f82088l;
     }
 
     public BigInteger getG() {
@@ -34,7 +34,7 @@ public class ElGamalParameters implements CipherParameters {
     }
 
     public int getL() {
-        return this.f77972l;
+        return this.f82088l;
     }
 
     public BigInteger getP() {
@@ -42,6 +42,6 @@ public class ElGamalParameters implements CipherParameters {
     }
 
     public int hashCode() {
-        return (getP().hashCode() ^ getG().hashCode()) + this.f77972l;
+        return (getP().hashCode() ^ getG().hashCode()) + this.f82088l;
     }
 }

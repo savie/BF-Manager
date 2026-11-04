@@ -6,13 +6,13 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/Protocol;
 
-.field public static final enum ܽ:Lcom/amazonaws/Protocol;
+.field public static final enum ܿ:Lcom/amazonaws/Protocol;
 
 .field public static final synthetic ᩶:[Lcom/amazonaws/Protocol;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Lcom/amazonaws/Protocol;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/Protocol;->֡:Lcom/amazonaws/Protocol;
+    sput-object v0, Lcom/amazonaws/Protocol;->ܿ:Lcom/amazonaws/Protocol;
 
     .line 40
     new-instance v1, Lcom/amazonaws/Protocol;
@@ -43,7 +43,7 @@
 
     invoke-direct {v1, v4, v5, v2}, Lcom/amazonaws/Protocol;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v1, Lcom/amazonaws/Protocol;->ܽ:Lcom/amazonaws/Protocol;
+    sput-object v1, Lcom/amazonaws/Protocol;->֡:Lcom/amazonaws/Protocol;
 
     const/4 v2, 0x2
 
@@ -66,7 +66,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 45
-    iput-object p3, p0, Lcom/amazonaws/Protocol;->ܺ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/Protocol;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     .locals 1
 
     .line 54
-    iget-object v0, p0, Lcom/amazonaws/Protocol;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/Protocol;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

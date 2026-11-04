@@ -6,11 +6,11 @@ import android.graphics.ColorFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import l.AbstractC2220;
-import l.C12972;
-import l.C19861;
-import l.C3012;
-import l.C7603;
+import l.AbstractC7591;
+import l.C0597;
+import l.C16117;
+import l.C24920;
+import l.C7750;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityChange {
@@ -54,8 +54,8 @@ public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityC
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
-    public /* bridge */ /* synthetic */ void registerAnimationCallback(AbstractC2220 abstractC2220) {
-        super.registerAnimationCallback(abstractC2220);
+    public /* bridge */ /* synthetic */ void registerAnimationCallback(AbstractC7591 abstractC7591) {
+        super.registerAnimationCallback(abstractC7591);
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
@@ -89,8 +89,8 @@ public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityC
     }
 
     @Override // com.google.android.material.progressindicator.DrawableWithAnimatedVisibilityChange
-    public /* bridge */ /* synthetic */ boolean unregisterAnimationCallback(AbstractC2220 abstractC2220) {
-        return super.unregisterAnimationCallback(abstractC2220);
+    public /* bridge */ /* synthetic */ boolean unregisterAnimationCallback(AbstractC7591 abstractC7591) {
+        return super.unregisterAnimationCallback(abstractC7591);
     }
 
     public IndeterminateDrawable(Context context, BaseProgressIndicatorSpec baseProgressIndicatorSpec, DrawingDelegate drawingDelegate, IndeterminateAnimatorDelegate indeterminateAnimatorDelegate) {
@@ -119,7 +119,7 @@ public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityC
 
     public static IndeterminateDrawable createCircularDrawable(Context context, CircularProgressIndicatorSpec circularProgressIndicatorSpec, CircularDrawingDelegate circularDrawingDelegate) {
         IndeterminateDrawable indeterminateDrawable = new IndeterminateDrawable(context, circularProgressIndicatorSpec, circularDrawingDelegate, new CircularIndeterminateAnimatorDelegate(circularProgressIndicatorSpec));
-        indeterminateDrawable.setStaticDummyDrawable(C19861.m45105(context.getResources(), C12972.f43269, null));
+        indeterminateDrawable.setStaticDummyDrawable(C24920.m55517(context.getResources(), C16117.f52388, null));
         return indeterminateDrawable;
     }
 
@@ -156,7 +156,7 @@ public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityC
         if (!getBounds().isEmpty() && isVisible() && canvas.getClipBounds(rect)) {
             if (isSystemAnimatorDisabled() && (drawable = this.staticDummyDrawable) != null) {
                 drawable.setBounds(getBounds());
-                C7603.m20138(this.staticDummyDrawable, this.baseSpec.indicatorColors[0]);
+                C0597.m2700(this.staticDummyDrawable, this.baseSpec.indicatorColors[0]);
                 this.staticDummyDrawable.draw(canvas);
                 return;
             }
@@ -168,7 +168,7 @@ public final class IndeterminateDrawable extends DrawableWithAnimatedVisibilityC
                 this.drawingDelegate.fillTrack(canvas, this.paint, 0.0f, 1.0f, this.baseSpec.trackColor, alpha, 0);
             } else {
                 DrawingDelegate.ActiveIndicator activeIndicator = (DrawingDelegate.ActiveIndicator) this.animatorDelegate.activeIndicators.get(0);
-                DrawingDelegate.ActiveIndicator activeIndicator2 = (DrawingDelegate.ActiveIndicator) C3012.m8974(1, this.animatorDelegate.activeIndicators);
+                DrawingDelegate.ActiveIndicator activeIndicator2 = (DrawingDelegate.ActiveIndicator) C7750.m21093(1, this.animatorDelegate.activeIndicators);
                 DrawingDelegate drawingDelegate = this.drawingDelegate;
                 if (drawingDelegate instanceof LinearDrawingDelegate) {
                     drawingDelegate.fillTrack(canvas, this.paint, 0.0f, activeIndicator.startFraction, this.baseSpec.trackColor, alpha, i);

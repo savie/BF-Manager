@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LoggingConstraint extends ServicesConstraint {
     public LoggingConstraint(Set set) {
         super(set);

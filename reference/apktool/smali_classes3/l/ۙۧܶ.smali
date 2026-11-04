@@ -1,19 +1,32 @@
 .class public final Ll/ۙۧܶ;
-.super Ll/ۜܳܶ;
-.source "067E"
+.super Ljava/lang/Object;
+.source "19KT"
+
+# interfaces
+.implements Ll/۠֫ܶ;
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final ۙ()Ll/ۛ֫ܶ;
+    .locals 1
+
+    .line 177
+    sget-object v0, Ll/ۛ֫ܶ;->ܶۙ:Ll/ۛ֫ܶ;
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ll/᩻ܶܶ;)Ll/۬֫ܶ;
     .locals 0
 
-    .line 121
-    check-cast p1, Ljava/util/Map$Entry;
+    .line 491
+    invoke-virtual {p1}, Ll/᩻ܶܶ;->ܳ()J
 
-    .line 125
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    .line 492
+    new-instance p1, Ll/ᩳۚۤ;
 
-    move-result-object p1
+    .line 21
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     return-object p1
 .end method

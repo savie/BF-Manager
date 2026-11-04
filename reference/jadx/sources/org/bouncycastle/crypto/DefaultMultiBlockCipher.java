@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DefaultMultiBlockCipher implements MultiBlockCipher {
     @Override // org.bouncycastle.crypto.MultiBlockCipher
     public int getMultiBlockSize() {

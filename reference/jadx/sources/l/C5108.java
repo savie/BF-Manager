@@ -1,57 +1,70 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
+import java.util.Collection;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
-/* JADX INFO: renamed from: l.ۚۘᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: WKX */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5108 extends AbstractC21336 implements InterfaceC7371 {
+/* JADX INFO: renamed from: l.ۙᩴܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O3K3 */
+/* JADX INFO: loaded from: classes2.dex */
+public class C5108 implements Iterator {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7931 f17799;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Iterator f17810;
 
-    @Override // l.InterfaceC20693
-    public /* synthetic */ Comparator getComparator() {
-        return C21398.$default$getComparator(this);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22262 f17811;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final Collection f17812;
+
+    public C5108(C22262 c22262) {
+        Iterator it;
+        this.f17811 = c22262;
+        Collection collection = c22262.f71734;
+        this.f17812 = collection;
+        if (collection instanceof List) {
+            it = ((List) collection).listIterator();
+        } else {
+            it = collection.iterator();
+        }
+        this.f17810 = it;
     }
 
-    @Override // l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
+    public C5108(C23008 c23008, ListIterator listIterator) {
+        this.f17811 = c23008;
+        this.f17812 = c23008.f71734;
+        this.f17810 = listIterator;
     }
 
-    @Override // l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m15453() {
+        C22262 c22262 = this.f17811;
+        c22262.m50313();
+        if (c22262.f71734 != this.f17812) {
+            throw new ConcurrentModificationException();
+        }
     }
 
-    @Override // l.AbstractC21336
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10865(int i, Object obj) {
-        ((Consumer) obj).accept(new C6519(this.f17799, i));
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        m15453();
+        return this.f17810.hasNext();
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C5108(C7931 c7931) {
-        super(c7931);
-        this.f17799 = c7931;
+    @Override // java.util.Iterator
+    public final Object next() {
+        m15453();
+        return this.f17810.next();
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C5108(C7931 c7931, int i, int i2, boolean z) {
-        super(c7931, i, i2, z);
-        this.f17799 = c7931;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.f69445 ? 1 : 65;
-    }
-
-    @Override // l.AbstractC21336
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC21336 mo10864(int i, int i2, boolean z) {
-        return new C5108(this.f17799, i, i2, z);
+    @Override // java.util.Iterator
+    public final void remove() {
+        this.f17810.remove();
+        C22262 c22262 = this.f17811;
+        AbstractC20024.m46060(c22262.f71732);
+        c22262.m50315();
     }
 }

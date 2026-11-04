@@ -1,27 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۚۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4AWI */
+/* JADX INFO: renamed from: l.ۨۜ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: F1OQ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12196 extends AbstractC19432 {
+public final class C12196 extends AbstractC21147 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC19749 f40798;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6976 f39205;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C12196(ActivityC19749 activityC19749) {
-        super(true);
-        this.f40798 = activityC19749;
+    public C12196(C6976 c6976) {
+        this.f39205 = c6976;
     }
 
-    @Override // l.AbstractC19432
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4707() {
-        ActivityC19749 activityC19749 = this.f40798;
-        if (activityC19749.f63459) {
-            activityC19749.m44944(true);
-        } else {
-            activityC19749.finish();
+    @Override // l.AbstractC21147
+    public final void onPageSelected(int i) {
+        C6976 c6976 = this.f39205;
+        c6976.clearFocus();
+        if (c6976.hasFocus()) {
+            c6976.f23017.requestFocus(2);
         }
     }
 }

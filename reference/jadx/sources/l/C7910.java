@@ -1,37 +1,44 @@
 package l;
 
-import java.util.function.IntConsumer;
+import java.util.AbstractSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۠ۗᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7910 extends AbstractC18527 implements InterfaceC10974 {
-    public static final C5980 c;
-    public static final C5980 d;
+/* JADX INFO: renamed from: l.۟۬ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 02RL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7910 extends AbstractSet {
 
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC19097 f26272;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9400 f26273;
+
+    public C7910(AbstractC19097 abstractC19097, C9400 c9400) {
+        this.f26272 = abstractC19097;
+        this.f26273 = c9400;
     }
 
-    @Override // l.AbstractC18527, l.InterfaceC19171
-    public final void accept(int i) {
-        n(Integer.valueOf(i));
-    }
-
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        if (this.a) {
-            return new C2347(((Integer) this.b).intValue());
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean add(Object obj) {
+        AbstractC14621 abstractC14621 = (AbstractC14621) obj;
+        boolean zM35263 = abstractC14621.m35263();
+        AbstractC19097 abstractC19097 = this.f26272;
+        if (!zM35263) {
+            abstractC14621.f46061 = this.f26273;
+            AbstractC19097.m44213(abstractC19097, abstractC14621);
+            return true;
         }
-        return null;
+        throw new IllegalArgumentException(abstractC19097.mo26260());
     }
 
-    static {
-        EnumC22761 enumC22761 = EnumC22761.INT_VALUE;
-        C13858 c13858 = new C13858(16);
-        C17821 c17821 = new C17821(11);
-        C2347 c2347 = C2347.c;
-        c = new C5980(true, enumC22761, c2347, c13858, c17821);
-        d = new C5980(false, enumC22761, c2347, new C13858(16), new C17821(11));
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return new C0452(AbstractC19097.m44212(this.f26272).iterator());
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return AbstractC19097.m44212(this.f26272).size();
     }
 }

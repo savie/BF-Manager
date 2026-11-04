@@ -1,82 +1,49 @@
-.class public final Ll/ܿۢ᩵;
-.super Ll/᩵ܿ᩵;
-.source "65VW"
-
-
-# instance fields
-.field public final ܺ:Ll/ܿ᩻᩵;
-
-.field public final ᩶:I
+.class public abstract Ll/ܿۢ᩵;
+.super Ll/᩵ۢ᩵;
+.source "CANR"
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ᩻᩵;I)V
-    .locals 0
+.method public constructor <init>(Ll/ۙۢ᩵;)V
+    .locals 1
 
-    .line 36
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 80
+    invoke-direct {p0, p1}, Ll/᩵ۢ᩵;-><init>(Ll/ۙۢ᩵;)V
 
-    .line 51
-    iput-object p1, p0, Ll/ܿۢ᩵;->ܺ:Ll/ܿ᩻᩵;
+    if-eqz p1, :cond_1
 
-    .line 52
-    iput p2, p0, Ll/ܿۢ᩵;->᩶:I
+    .line 87
+    invoke-interface {p1}, Ll/ۙۢ᩵;->getContext()Ll/ۧۢ᩵;
 
+    move-result-object p1
+
+    sget-object v0, Ll/᩻ۢ᩵;->ܰ:Ll/᩻ۢ᩵;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Coroutines with restricted suspension must have EmptyCoroutineContext"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final getString()Ljava/lang/String;
-    .locals 2
+.method public final getContext()Ll/ۧۢ᩵;
+    .locals 1
 
-    .line 57
-    iget-object v0, p0, Ll/ܿۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    iget v1, p0, Ll/ܿۢ᩵;->᩶:I
-
-    invoke-virtual {v0, v1}, Ll/ܿ᩻᩵;->ۘ(I)Ljava/lang/String;
-
-    move-result-object v0
+    .line 94
+    sget-object v0, Ll/᩻ۢ᩵;->ܰ:Ll/᩻ۢ᩵;
 
     return-object v0
-.end method
-
-.method public final ۚ()V
-    .locals 4
-
-    .line 97
-    iget v0, p0, Ll/ܿۢ᩵;->᩶:I
-
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Ll/ܿۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v1}, Ll/ܿ᩻᩵;->ܶ()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    return-void
-
-    .line 98
-    :cond_0
-    new-instance v1, Ll/ۤۨۡ;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "string@"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ll/ۤۨۡ;-><init>(Ljava/lang/String;)V
-
-    throw v1
 .end method

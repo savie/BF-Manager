@@ -19,19 +19,19 @@ import com.google.android.material.color.MaterialColors;
 import com.google.android.material.resources.MaterialAttributes;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import l.C18540;
-import l.C18616;
-import l.C2387;
-import l.C5031;
-import l.C5716;
-import l.C8033;
-import l.DialogInterfaceC7957;
+import l.C11642;
+import l.C14625;
+import l.C20756;
+import l.C22666;
+import l.C4185;
+import l.C9370;
+import l.DialogInterfaceC12551;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialAlertDialogBuilder extends C18540 {
-    public static final int DEF_STYLE_ATTR = C2387.f9044;
-    public static final int DEF_STYLE_RES = C18616.f59763;
-    public static final int MATERIAL_ALERT_DIALOG_THEME_OVERLAY = C2387.f8673;
+public class MaterialAlertDialogBuilder extends C20756 {
+    public static final int DEF_STYLE_ATTR = C11642.f36753;
+    public static final int DEF_STYLE_RES = C4185.f14224;
+    public static final int MATERIAL_ALERT_DIALOG_THEME_OVERLAY = C11642.f37426;
     public Drawable background;
     public final Rect backgroundInsets;
 
@@ -46,7 +46,7 @@ public class MaterialAlertDialogBuilder extends C18540 {
     public static Context createMaterialAlertDialogThemedContext(Context context) {
         int materialAlertDialogThemeOverlay = getMaterialAlertDialogThemeOverlay(context);
         Context contextWrap = MaterialThemeOverlay.wrap(context, null, DEF_STYLE_ATTR, DEF_STYLE_RES);
-        return materialAlertDialogThemeOverlay == 0 ? contextWrap : new C5716(contextWrap, materialAlertDialogThemeOverlay);
+        return materialAlertDialogThemeOverlay == 0 ? contextWrap : new C9370(contextWrap, materialAlertDialogThemeOverlay);
     }
 
     public static int getOverridingThemeResId(Context context, int i) {
@@ -64,9 +64,9 @@ public class MaterialAlertDialogBuilder extends C18540 {
         int i2 = DEF_STYLE_ATTR;
         int i3 = DEF_STYLE_RES;
         this.backgroundInsets = MaterialDialogs.getDialogBackgroundInsets(context2, i2, i3);
-        int color = MaterialColors.getColor(context2, C2387.f8699, getClass().getCanonicalName());
-        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(null, C8033.f27451, i2, i3);
-        int color2 = typedArrayObtainStyledAttributes.getColor(C8033.f26333, color);
+        int color = MaterialColors.getColor(context2, C11642.f36968, getClass().getCanonicalName());
+        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(null, C14625.f47250, i2, i3);
+        int color2 = typedArrayObtainStyledAttributes.getColor(C14625.f47356, color);
         typedArrayObtainStyledAttributes.recycle();
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context2, null, i2, i3);
         materialShapeDrawable.initializeElevationOverlay(context2);
@@ -82,18 +82,18 @@ public class MaterialAlertDialogBuilder extends C18540 {
         this.background = materialShapeDrawable;
     }
 
-    @Override // l.C18540
-    public DialogInterfaceC7957 create() {
-        DialogInterfaceC7957 dialogInterfaceC7957Create = super.create();
-        Window window = dialogInterfaceC7957Create.getWindow();
+    @Override // l.C20756
+    public DialogInterfaceC12551 create() {
+        DialogInterfaceC12551 dialogInterfaceC12551Create = super.create();
+        Window window = dialogInterfaceC12551Create.getWindow();
         View decorView = window.getDecorView();
         Drawable drawable = this.background;
         if (drawable instanceof MaterialShapeDrawable) {
-            ((MaterialShapeDrawable) drawable).setElevation(C5031.m14006(decorView));
+            ((MaterialShapeDrawable) drawable).setElevation(C22666.m51105(decorView));
         }
         window.setBackgroundDrawable(MaterialDialogs.insetDrawable(this.background, this.backgroundInsets));
-        decorView.setOnTouchListener(new InsetDialogOnTouchListener(dialogInterfaceC7957Create, this.backgroundInsets));
-        return dialogInterfaceC7957Create;
+        decorView.setOnTouchListener(new InsetDialogOnTouchListener(dialogInterfaceC12551Create, this.backgroundInsets));
+        return dialogInterfaceC12551Create;
     }
 
     public Drawable getBackground() {
@@ -133,177 +133,177 @@ public class MaterialAlertDialogBuilder extends C18540 {
         return this;
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setTitle(int i) {
         return (MaterialAlertDialogBuilder) super.setTitle(i);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setTitle(CharSequence charSequence) {
         return (MaterialAlertDialogBuilder) super.setTitle(charSequence);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setCustomTitle(View view) {
         return (MaterialAlertDialogBuilder) super.setCustomTitle(view);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setMessage(int i) {
         return (MaterialAlertDialogBuilder) super.setMessage(i);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setMessage(CharSequence charSequence) {
         return (MaterialAlertDialogBuilder) super.setMessage(charSequence);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setIcon(int i) {
         return (MaterialAlertDialogBuilder) super.setIcon(i);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setIcon(Drawable drawable) {
         return (MaterialAlertDialogBuilder) super.setIcon(drawable);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setIconAttribute(int i) {
         return (MaterialAlertDialogBuilder) super.setIconAttribute(i);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setPositiveButton(int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setPositiveButton(i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setPositiveButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setPositiveButton(charSequence, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setPositiveButtonIcon(Drawable drawable) {
         return (MaterialAlertDialogBuilder) super.setPositiveButtonIcon(drawable);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNegativeButton(int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setNegativeButton(i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNegativeButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setNegativeButton(charSequence, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNegativeButtonIcon(Drawable drawable) {
         return (MaterialAlertDialogBuilder) super.setNegativeButtonIcon(drawable);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNeutralButton(int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setNeutralButton(i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNeutralButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setNeutralButton(charSequence, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setNeutralButtonIcon(Drawable drawable) {
         return (MaterialAlertDialogBuilder) super.setNeutralButtonIcon(drawable);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setCancelable(boolean z) {
         return (MaterialAlertDialogBuilder) super.setCancelable(z);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setOnCancelListener(DialogInterface.OnCancelListener onCancelListener) {
         return (MaterialAlertDialogBuilder) super.setOnCancelListener(onCancelListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
         return (MaterialAlertDialogBuilder) super.setOnDismissListener(onDismissListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setOnKeyListener(DialogInterface.OnKeyListener onKeyListener) {
         return (MaterialAlertDialogBuilder) super.setOnKeyListener(onKeyListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setItems(int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setItems(i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setItems(CharSequence[] charSequenceArr, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setItems(charSequenceArr, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setAdapter(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setAdapter(listAdapter, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setCursor(Cursor cursor, DialogInterface.OnClickListener onClickListener, String str) {
         return (MaterialAlertDialogBuilder) super.setCursor(cursor, onClickListener, str);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setMultiChoiceItems(int i, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
         return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(i, zArr, onMultiChoiceClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setMultiChoiceItems(CharSequence[] charSequenceArr, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
         return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(charSequenceArr, zArr, onMultiChoiceClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setMultiChoiceItems(Cursor cursor, String str, String str2, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
         return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(cursor, str, str2, onMultiChoiceClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setSingleChoiceItems(int i, int i2, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(i, i2, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setSingleChoiceItems(Cursor cursor, int i, String str, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(cursor, i, str, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setSingleChoiceItems(CharSequence[] charSequenceArr, int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(charSequenceArr, i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setSingleChoiceItems(ListAdapter listAdapter, int i, DialogInterface.OnClickListener onClickListener) {
         return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(listAdapter, i, onClickListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setOnItemSelectedListener(AdapterView.OnItemSelectedListener onItemSelectedListener) {
         return (MaterialAlertDialogBuilder) super.setOnItemSelectedListener(onItemSelectedListener);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setView(int i) {
         return (MaterialAlertDialogBuilder) super.setView(i);
     }
 
-    @Override // l.C18540
+    @Override // l.C20756
     public MaterialAlertDialogBuilder setView(View view) {
         return (MaterialAlertDialogBuilder) super.setView(view);
     }

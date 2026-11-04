@@ -1,35 +1,88 @@
-.class public final Ll/ۖۘ᩸;
-.super Ljava/io/IOException;
-.source "39NU"
+.class public final synthetic Ll/ۖۘ᩸;
+.super Ljava/lang/Object;
+.source "3B3L"
 
 
 # static fields
-.field public static final serialVersionUID:J = -0x606a6e83ad3191dbL
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/IndexOutOfBoundsException;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const-string v0, "CodedOutputStream was writing to a flat byte array and ran out of space."
+    .line 2880
+    invoke-static {}, Ll/ܽܶ᩸;->values()[Ll/ܽܶ᩸;
 
-    .line 945
-    invoke-direct {p0, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/IndexOutOfBoundsException;)V
-    .locals 1
+    new-array v0, v0, [I
 
-    const-string v0, "CodedOutputStream was writing to a flat byte array and ran out of space.: "
+    sput-object v0, Ll/ۖۘ᩸;->ۙ:[I
 
-    .line 949
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    sget-object v1, Ll/ܽܶ᩸;->᩶:Ll/ܽܶ᩸;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {p0, p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v1
 
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۖۘ᩸;->ۙ:[I
+
+    sget-object v1, Ll/ܽܶ᩸;->ܿ:Ll/ܽܶ᩸;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۖۘ᩸;->ۙ:[I
+
+    sget-object v1, Ll/ܽܶ᩸;->֡:Ll/ܽܶ᩸;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ۖۘ᩸;->ۙ:[I
+
+    sget-object v1, Ll/ܽܶ᩸;->۟:Ll/ܽܶ᩸;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
 .end method

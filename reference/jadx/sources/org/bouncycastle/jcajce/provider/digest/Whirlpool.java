@@ -1,8 +1,7 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C15489;
-import l.C22697;
-import l.C5800;
+import l.C14483;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.digests.WhirlpoolDigest;
 import org.bouncycastle.crypto.macs.HMac;
@@ -11,7 +10,7 @@ import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Whirlpool {
 
     public class Digest extends BCMessageDigest implements Cloneable {
@@ -27,7 +26,6 @@ public class Whirlpool {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac extends BaseMac {
         public HashMac() {
             super(new HMac(new WhirlpoolDigest()));
@@ -40,7 +38,6 @@ public class Whirlpool {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = Whirlpool.class.getName();
 
@@ -48,9 +45,9 @@ public class Whirlpool {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$Digest", "MessageDigest.WHIRLPOOL", sb, configurableProvider);
+            C8947.m23913(str, "$Digest", "MessageDigest.WHIRLPOOL", sb, configurableProvider);
             configurableProvider.addAlgorithm("MessageDigest", ISOIECObjectIdentifiers.whirlpool, str + "$Digest");
-            addHMACAlgorithm(configurableProvider, "WHIRLPOOL", C22697.m50267(new StringBuilder(), str, "$HashMac"), C15489.m37076(str, "$KeyGenerator"));
+            addHMACAlgorithm(configurableProvider, "WHIRLPOOL", C8947.m23910(new StringBuilder(), str, "$HashMac"), C14483.m34972(str, "$KeyGenerator"));
         }
     }
 }

@@ -1,44 +1,26 @@
 package l;
 
-import java.util.function.IntPredicate;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.֫֫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: RAPC */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C1517 {
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m5287(InterfaceC9280 interfaceC9280, int i) {
-        return interfaceC9280.mo15848(C21273.m47735(i));
+/* JADX INFO: renamed from: l.֨᩺᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: P7M1 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C1517 implements Consumer {
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m5288(InterfaceC9280 interfaceC9280, Byte b) {
-        return interfaceC9280.mo15848(b.byteValue());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC9280 m5286(InterfaceC9280 interfaceC9280, IntPredicate intPredicate) {
-        InterfaceC9280 c10691;
-        if (intPredicate instanceof InterfaceC9280) {
-            c10691 = (InterfaceC9280) intPredicate;
-        } else {
-            C13638.requireNonNull(intPredicate);
-            c10691 = new C10691(intPredicate);
-        }
-        return interfaceC9280.mo15846(c10691);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC9280 m5289(InterfaceC9280 interfaceC9280, IntPredicate intPredicate) {
-        InterfaceC9280 c10691;
-        if (intPredicate instanceof InterfaceC9280) {
-            c10691 = (InterfaceC9280) intPredicate;
-        } else {
-            C13638.requireNonNull(intPredicate);
-            c10691 = new C10691(intPredicate);
-        }
-        return interfaceC9280.mo15847(c10691);
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        AbstractC11781 abstractC11781 = (AbstractC11781) obj;
+        C24550 c24550 = (C24550) abstractC11781;
+        C14106 c14106M29564 = abstractC11781.m29564();
+        c24550.f38069 = c14106M29564;
+        c14106M29564.mo29590();
+        c14106M29564.f44616.mo7481(abstractC11781);
+        c24550.f79577 = abstractC11781.mo29575();
+        c24550.f38072 = C21901.m49594(abstractC11781.mo29575());
+        c24550.m54833();
     }
 }

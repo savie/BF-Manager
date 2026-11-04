@@ -1,106 +1,134 @@
 package l;
 
-import java.util.ArrayList;
+import java.util.AbstractQueue;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 
-/* JADX INFO: renamed from: l.᩺ۙۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B1KC */
+/* JADX INFO: renamed from: l.᩸ۧۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X426 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22756 {
+public final class C22756 extends AbstractQueue {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f74107;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C17078 f74108;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C17078 f74111;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C17078 f74112;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public static final C13477 f73828 = new C13477();
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f74114;
+    public LinkedList f73829;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C17078 f74115;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public HashMap f73830;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public ArrayList f74113 = new ArrayList();
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public LinkedList f73831;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public ArrayList f74109 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f74110 = -1;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50420(C11018 c11018) {
-        c11018.writeByte(this.f74107);
-        ArrayList<C17078> arrayList = this.f74113;
-        c11018.mo24508(arrayList.size());
-        for (C17078 c17078 : arrayList) {
-            c11018.writeInt(c17078.f52692);
-            c11018.writeInt(c17078.f52691);
+    @Override // java.util.Queue
+    public final boolean offer(Object obj) {
+        C3168 c3168 = (C3168) obj;
+        if (!this.f73829.add(c3168)) {
+            return false;
         }
-        ArrayList<C17078> arrayList2 = this.f74109;
-        c11018.mo24508(arrayList2.size());
-        for (C17078 c17079 : arrayList2) {
-            c11018.writeInt(c17079.f52692);
-            c11018.writeInt(c17079.f52691);
+        if (this.f73831 == null) {
+            return true;
         }
-        if (this.f74112 != null) {
-            c11018.m27784(true);
-            c11018.writeInt(this.f74112.f52692);
-            c11018.writeInt(this.f74112.f52691);
-            c11018.writeInt(this.f74108.f52692);
-            c11018.writeInt(this.f74108.f52691);
-        } else {
-            c11018.writeByte(0);
-        }
-        if (this.f74111 != null) {
-            c11018.m27784(true);
-            c11018.writeInt(this.f74111.f52692);
-            c11018.writeInt(this.f74111.f52691);
-            c11018.writeInt(this.f74115.f52692);
-            c11018.writeInt(this.f74115.f52691);
-        } else {
-            c11018.writeByte(0);
-        }
-        c11018.mo24508(this.f74110 + 1);
-        c11018.writeInt(this.f74114);
+        m51292(c3168);
+        return true;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50421(C17367 c17367) {
-        this.f74107 = c17367.readByte();
-        int iM40462 = c17367.m40462();
-        ArrayList arrayList = this.f74113;
-        arrayList.clear();
-        for (int i = 0; i < iM40462; i++) {
-            arrayList.add(new C17078(c17367.readInt(), c17367.readInt(), false));
+    public static C22756 m51291(C4747 c4747) {
+        C13477 c13477 = f73828;
+        C22756 c22756 = (C22756) c4747.m14643(c13477);
+        if (c22756 != null) {
+            return c22756;
         }
-        int iM40463 = c17367.m40462();
-        ArrayList arrayList2 = this.f74109;
-        arrayList2.clear();
-        for (int i2 = 0; i2 < iM40463; i2++) {
-            arrayList2.add(new C17078(c17367.readInt(), c17367.readInt(), true));
+        C22756 c22757 = new C22756();
+        c22757.f73829 = new LinkedList();
+        c4747.m14646(c13477, c22757);
+        return c22757;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
+    public final Iterator iterator() {
+        return this.f73829.iterator();
+    }
+
+    @Override // java.util.Queue
+    public final Object peek() {
+        LinkedList linkedList = this.f73829;
+        if (linkedList.size() == 0) {
+            return null;
         }
-        if (c17367.m40461()) {
-            this.f74112 = new C17078(c17367.readInt(), c17367.readInt(), false);
-            this.f74108 = new C17078(c17367.readInt(), c17367.readInt(), true);
-        } else {
-            this.f74108 = null;
-            this.f74112 = null;
+        return (C3168) linkedList.get(0);
+    }
+
+    @Override // java.util.Queue
+    public final Object poll() {
+        LinkedList linkedList = this.f73829;
+        if (linkedList.size() == 0) {
+            return null;
         }
-        if (c17367.m40461()) {
-            this.f74111 = new C17078(c17367.readInt(), c17367.readInt(), false);
-            this.f74115 = new C17078(c17367.readInt(), c17367.readInt(), true);
-        } else {
-            this.f74115 = null;
-            this.f74111 = null;
+        C3168 c3168 = (C3168) linkedList.remove(0);
+        if (this.f73831 != null) {
+            m51293(c3168);
         }
-        this.f74110 = c17367.m40462() - 1;
-        this.f74114 = c17367.readInt();
+        return c3168;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f73829.size();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m51294(HashSet hashSet) {
+        Iterator it = this.f73829.iterator();
+        while (it.hasNext()) {
+            C3168 c3168 = (C3168) it.next();
+            if (!hashSet.contains(c3168.f10275.f61856)) {
+                if (this.f73831 != null) {
+                    m51293(c3168);
+                }
+                it.remove();
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final LinkedList m51295() {
+        if (this.f73831 == null) {
+            this.f73831 = new LinkedList();
+            Iterator it = this.f73829.iterator();
+            while (it.hasNext()) {
+                m51292((C3168) it.next());
+            }
+        }
+        return this.f73831;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m51292(C3168 c3168) {
+        InterfaceC15976 interfaceC15976 = c3168.f10275.f61856;
+        if (this.f73830 == null) {
+            this.f73830 = new HashMap();
+        }
+        C10821 c10821 = (C10821) this.f73830.get(interfaceC15976);
+        if (c10821 == null) {
+            c10821 = new C10821(this);
+            this.f73830.put(interfaceC15976, c10821);
+            this.f73831.add(c10821);
+        }
+        c10821.f34303.add(c3168);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private void m51293(C3168 c3168) {
+        InterfaceC15976 interfaceC15976 = c3168.f10275.f61856;
+        C10821 c10821 = (C10821) this.f73830.get(interfaceC15976);
+        if (c10821 != null && c10821.f34303.remove(c3168) && c10821.isEmpty()) {
+            this.f73830.remove(interfaceC15976);
+            this.f73831.remove(c10821);
+        }
     }
 }

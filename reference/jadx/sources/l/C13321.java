@@ -1,30 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬᩵ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+/* JADX INFO: renamed from: l.۫᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13321 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+public final class C13321 extends AbstractC23128 implements InterfaceC18873 {
+    public final /* synthetic */ Supplier b;
+    public final /* synthetic */ BiConsumer c;
+    public final /* synthetic */ BinaryOperator d;
+
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final /* synthetic */ void accept(double d) {
+        AbstractC13956.m();
+        throw null;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return i != 10;
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(int i) {
+        AbstractC13956.t();
+        throw null;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(long j) {
+        AbstractC13956.u();
+        throw null;
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void end() {
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    @Override // l.InterfaceC18873
+    public final void i(InterfaceC18873 interfaceC18873) {
+        this.a = this.d.apply(this.a, ((C13321) interfaceC18873).a);
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        this.a = this.b.get();
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        this.c.accept(this.a, obj);
+    }
+
+    public C13321(Supplier supplier, BiConsumer biConsumer, BinaryOperator binaryOperator) {
+        this.b = supplier;
+        this.c = biConsumer;
+        this.d = binaryOperator;
     }
 }

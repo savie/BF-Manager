@@ -1,240 +1,313 @@
-.class public final synthetic Ll/ۙ᩹ۚ;
-.super Ljava/lang/Object;
-.source "4AWI"
-
-# interfaces
-.implements Ll/᩷᩸;
+.class public final Ll/ۙ᩹ۚ;
+.super Ll/ᩴ᩸ۤ;
+.source "W6LU"
 
 
 # instance fields
-.field public final synthetic ֡:I
+.field public final ܿ:Ljava/util/ArrayList;
 
-.field public final synthetic ܺ:Ll/᩹᩹ۚ;
-
-.field public final synthetic ᩶:Landroid/view/View;
+.field public final ᩶:Ll/ۜܳۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩹᩹ۚ;Landroid/view/View;I)V
-    .locals 0
+.method public constructor <init>(Ll/ۜܳۤ;Ljava/util/ArrayList;)V
+    .locals 11
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 32
+    invoke-direct {p0}, Ll/ᩴ᩸ۤ;-><init>()V
 
-    iput-object p1, p0, Ll/ۙ᩹ۚ;->ܺ:Ll/᩹᩹ۚ;
+    .line 30
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Ll/ۙ᩹ۚ;->᩶:Landroid/view/View;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput p3, p0, Ll/ۙ᩹ۚ;->֡:I
+    iput-object v0, p0, Ll/ۙ᩹ۚ;->ܿ:Ljava/util/ArrayList;
 
-    return-void
-.end method
+    .line 33
+    iput-object p1, p0, Ll/ۙ᩹ۚ;->᩶:Ll/ۜܳۤ;
 
+    .line 34
+    new-instance v0, Ljava/util/HashMap;
 
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 7
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1130
-    iget-object v0, p0, Ll/ۙ᩹ۚ;->ܺ:Ll/᩹᩹ۚ;
+    .line 35
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, v0, Ll/᩹᩹ۚ;->ܽ:Ll/֨᩹ۚ;
+    move-result-object p2
 
-    iget-object v2, v1, Ll/֨᩹ۚ;->ۜ:Ll/᩵᩹ۚ;
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    move-result v1
 
-    move-result p1
+    if-eqz v1, :cond_a
 
-    const v3, 0x7f1202dd
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v4, 0x1
+    move-result-object v1
 
-    if-ne p1, v3, :cond_0
+    check-cast v1, Ll/֨ܶۚ;
 
-    .line 1132
-    iget-object p1, p0, Ll/ۙ᩹ۚ;->᩶:Landroid/view/View;
+    .line 36
+    invoke-virtual {v1}, Ll/֨ܶۚ;->ۙ()Z
 
-    invoke-virtual {v0, p1}, Ll/᩹᩹ۚ;->onClick(Landroid/view/View;)V
+    move-result v2
 
-    return v4
+    iget v3, v1, Ll/֨ܶۚ;->۫:I
 
-    .line 1133
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Ll/֨ܶۚ;->᩷()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    iget v3, p0, Ll/ۙ᩹ۚ;->֡:I
+    ushr-int/lit8 v2, v3, 0x10
 
-    const v5, 0x7f1205ad
+    and-int/lit16 v2, v2, 0xff
 
-    if-ne p1, v5, :cond_1
+    .line 40
+    invoke-interface {p1}, Ll/ۜܳۤ;->۠()Ljava/lang/Iterable;
 
-    .line 1134
-    invoke-static {v2}, Ll/᩵᩹ۚ;->ۖ(Ll/᩵᩹ۚ;)Ljava/util/ArrayList;
+    move-result-object v4
 
-    move-result-object p1
+    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v2}, Ll/᩵᩹ۚ;->֨(Ll/᩵᩹ۚ;)Ll/۬᩺᩺;
+    move-result-object v4
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Ll/᩵ۢܰ;->ۨ()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll/֨᩹ۚ;
-
-    .line 1135
-    invoke-virtual {p1}, Ll/֨᩹ۚ;->ܰ()Ll/ۡ᩹ۚ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/ۡ᩹ۚ;->ۙ()Ljava/util/List;
-
-    move-result-object v0
-
-    .line 1136
-    new-instance v1, Ll/᩷᩹ۚ;
-
-    invoke-direct {v1}, Ll/᩷᩹ۚ;-><init>()V
-
-    new-instance v6, Ll/ۨ᩹ۚ;
-
-    invoke-direct {v6, v0, v3, p1}, Ll/ۨ᩹ۚ;-><init>(Ljava/util/List;ILl/֨᩹ۚ;)V
-
-    invoke-static {v2, v1, v5, v4, v6}, Ll/᩵᩹ۚ;->ۙ(Ll/᩵᩹ۚ;Ll/᩷᩹ۚ;IZLl/ܿۧ;)V
-
-    return v4
+    move-object v6, v5
 
     :cond_1
-    const v5, 0x7f1205ca
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    if-ne p1, v5, :cond_2
+    move-result v7
 
-    .line 1143
-    invoke-virtual {v2}, Ll/۫ܶۘ;->buildDialog()Ll/۠ۡۜ;
+    const-string v8, "RESOURCE_PATCH_CORRUPT"
 
-    move-result-object p1
+    if-eqz v7, :cond_6
 
-    const v1, 0x7f120b7b
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Ll/۠ۡۜ;->ܰ(I)V
+    move-result-object v7
 
-    iget-object v1, v0, Ll/᩹᩹ۚ;->۫:Landroid/widget/TextView;
+    check-cast v7, Ll/ۤ۫ۤ;
 
-    .line 1144
-    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    .line 41
+    invoke-interface {v7}, Ll/ۤ۫ۤ;->۫()I
 
-    move-result-object v1
+    move-result v9
 
-    new-array v5, v4, [Ljava/lang/Object;
+    ushr-int/lit8 v10, v3, 0x18
 
-    const/4 v6, 0x0
+    if-eq v9, v10, :cond_2
 
-    aput-object v1, v5, v6
-
-    const v1, 0x7f120870
-
-    invoke-virtual {v2, v1, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ll/۠ۡۜ;->ۙ(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Ll/ۖ᩹ۚ;
-
-    invoke-direct {v1, v0, v3}, Ll/ۖ᩹ۚ;-><init>(Ll/᩹᩹ۚ;I)V
-
-    const v0, 0x7f12070a
-
-    .line 1145
-    invoke-virtual {p1, v0, v1}, Ll/۠ۡۜ;->ۖ(ILandroid/content/DialogInterface$OnClickListener;)V
-
-    const v0, 0x7f12015e
-
-    const/4 v1, 0x0
-
-    .line 1150
-    invoke-virtual {p1, v0, v1}, Ll/۠ۡۜ;->ܰ(ILandroid/content/DialogInterface$OnClickListener;)V
-
-    .line 1151
-    invoke-virtual {p1}, Ll/۠ۡۜ;->ۨ()Ll/᩵ۡۜ;
-
-    return v4
+    goto :goto_1
 
     :cond_2
-    const v0, 0x7f1205c2
+    if-nez v6, :cond_3
 
-    if-ne p1, v0, :cond_3
+    move-object v6, v7
 
-    .line 1153
-    invoke-static {v2}, Ll/᩵᩹ۚ;->ۖ(Ll/᩵᩹ۚ;)Ljava/util/ArrayList;
+    .line 43
+    :cond_3
+    invoke-interface {v7}, Ll/ۤ۫ۤ;->ܽ᩷()Ljava/lang/Iterable;
+
+    move-result-object v9
+
+    invoke-interface {v9}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    :goto_2
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_1
+
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ll/ܳ۫ۤ;
+
+    .line 44
+    invoke-interface {v10}, Ll/ܳ۫ۤ;->ܶۙ()I
+
+    move-result v10
+
+    if-eq v10, v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    if-nez v5, :cond_5
+
+    move-object v5, v7
+
+    goto :goto_2
+
+    :cond_5
+    const-string p1, "Resource patch type identity is ambiguous."
+
+    .line 264
+    invoke-static {v8, p1}, Ll/ۢܳۚ;->᩷(Ljava/lang/String;Ljava/lang/String;)Ll/ۢܳۚ;
 
     move-result-object p1
 
-    invoke-static {v2}, Ll/᩵᩹ۚ;->֨(Ll/᩵᩹ۚ;)Ll/۬᩺᩺;
+    .line 45
+    throw p1
 
-    move-result-object v5
+    :cond_6
+    if-nez v5, :cond_7
 
-    invoke-virtual {v5}, Ll/᩵ۢܰ;->ۨ()I
+    move-object v5, v6
 
-    move-result v5
+    :cond_7
+    if-eqz v5, :cond_9
 
-    invoke-virtual {p1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 51
+    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    if-nez v2, :cond_8
+
+    .line 52
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0, v5, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 53
+    :cond_8
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_0
+
+    :cond_9
+    const-string p1, "Resource patch package is missing."
+
+    .line 264
+    invoke-static {v8, p1}, Ll/ۢܳۚ;->᩷(Ljava/lang/String;Ljava/lang/String;)Ll/ۢܳۚ;
 
     move-result-object p1
 
-    check-cast p1, Ll/֨᩹ۚ;
+    .line 50
+    throw p1
 
-    .line 1154
-    invoke-virtual {p1}, Ll/֨᩹ۚ;->ܰ()Ll/ۡ᩹ۚ;
+    .line 55
+    :cond_a
+    invoke-interface {p1}, Ll/ۜܳۤ;->۠()Ljava/lang/Iterable;
 
-    move-result-object v5
+    move-result-object p1
 
-    invoke-virtual {v5}, Ll/ۡ᩹ۚ;->ۙ()Ljava/util/List;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v5
+    move-result-object p1
 
-    .line 1155
-    invoke-virtual {v1}, Ll/֨᩹ۚ;->ۙ()Ljava/util/List;
+    :goto_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_c
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ll/ۤ۫ۤ;
+
+    .line 56
+    invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 57
+    iget-object v2, p0, Ll/ۙ᩹ۚ;->ܿ:Ljava/util/ArrayList;
 
-    move-result-object v1
+    if-nez v1, :cond_b
 
-    check-cast v1, Ll/᩷᩹ۚ;
+    goto :goto_4
 
-    invoke-virtual {v1}, Ll/᩷᩹ۚ;->ۚ()Lbin/mt/json/JSONObject;
+    :cond_b
+    new-instance v3, Ll/ۜܶۚ;
 
-    move-result-object v1
+    invoke-direct {v3, p0, p2, v1}, Ll/ۜܶۚ;-><init>(Ll/ۜܳۤ;Ll/ۤ۫ۤ;Ljava/util/ArrayList;)V
 
-    invoke-static {v1}, Ll/᩷᩹ۚ;->ۙ(Lbin/mt/json/JSONObject;)Ll/᩷᩹ۚ;
+    move-object p2, v3
 
-    move-result-object v1
+    :goto_4
+    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1156
-    new-instance v6, Ll/ۚ᩹ۚ;
+    goto :goto_3
 
-    invoke-direct {v6, v5, v3, p1}, Ll/ۚ᩹ۚ;-><init>(Ljava/util/List;ILl/֨᩹ۚ;)V
+    :cond_c
+    return-void
+.end method
 
-    invoke-static {v2, v1, v0, v4, v6}, Ll/᩵᩹ۚ;->ۙ(Ll/᩵᩹ۚ;Ll/᩷᩹ۚ;IZLl/ܿۧ;)V
 
-    return v4
+# virtual methods
+.method public final ۠()Ljava/lang/Iterable;
+    .locals 1
 
-    :cond_3
-    const v0, 0x7f12011f
+    .line 64
+    iget-object v0, p0, Ll/ۙ᩹ۚ;->ܿ:Ljava/util/ArrayList;
 
-    if-ne p1, v0, :cond_4
+    return-object v0
+.end method
 
-    .line 1163
-    invoke-static {v2, v3}, Ll/᩵᩹ۚ;->ܰ(Ll/᩵᩹ۚ;I)V
+.method public final ۧ(I)Ll/ۤ۫ۤ;
+    .locals 1
 
-    :cond_4
-    return v4
+    .line 63
+    iget-object v0, p0, Ll/ۙ᩹ۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۤ۫ۤ;
+
+    return-object p1
+.end method
+
+.method public final ۨ()I
+    .locals 1
+
+    .line 62
+    iget-object v0, p0, Ll/ۙ᩹ۚ;->ܿ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final ۫᩷()Ll/ۗ۫ۤ;
+    .locals 1
+
+    .line 61
+    iget-object v0, p0, Ll/ۙ᩹ۚ;->᩶:Ll/ۜܳۤ;
+
+    invoke-interface {v0}, Ll/ۜܳۤ;->۫᩷()Ll/ۗ۫ۤ;
+
+    move-result-object v0
+
+    return-object v0
 .end method

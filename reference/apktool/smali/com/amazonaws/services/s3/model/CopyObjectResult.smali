@@ -10,17 +10,17 @@
 
 
 # instance fields
-.field public ۛ:Z
+.field public ֡:Ljava/lang/String;
 
-.field public ۧ:Ljava/util/Date;
+.field public ֨:Ljava/util/Date;
 
-.field public ۫:Ljava/util/Date;
+.field public ۟:Ljava/util/Date;
 
-.field public ܽ:Ljava/lang/String;
+.field public ۡ:Ljava/lang/String;
 
-.field public ܿ:Ljava/lang/String;
+.field public ۢ:Z
 
-.field public ᩻:Ljava/lang/String;
+.field public ᩳ:Ljava/lang/String;
 
 
 # direct methods
@@ -35,29 +35,11 @@
 
 
 # virtual methods
-.method public final ֨()Ljava/util/Date;
-    .locals 1
-
-    .line 96
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۧ:Ljava/util/Date;
-
-    return-object v0
-.end method
-
-.method public final ۖ()Ljava/lang/String;
-    .locals 1
-
-    .line 75
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܽ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۘ()Z
+.method public final ֫()Z
     .locals 1
 
     .line 175
-    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۛ:Z
+    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۢ:Z
 
     return v0
 .end method
@@ -66,7 +48,7 @@
     .locals 0
 
     .line 131
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩻:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۡ:Ljava/lang/String;
 
     return-void
 .end method
@@ -75,7 +57,7 @@
     .locals 0
 
     .line 150
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۫:Ljava/util/Date;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۟:Ljava/util/Date;
 
     return-void
 .end method
@@ -84,61 +66,79 @@
     .locals 0
 
     .line 180
-    iput-boolean p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۛ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۢ:Z
 
     return-void
 .end method
 
-.method public final ۚ()Ljava/util/Date;
-    .locals 1
-
-    .line 140
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۫:Ljava/util/Date;
-
-    return-object v0
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 170
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܿ:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final ۬()Ljava/lang/String;
+.method public final ۚ()Ljava/lang/String;
     .locals 1
 
     .line 120
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩻:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۡ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/util/Date;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 0
 
-    .line 107
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۧ:Ljava/util/Date;
+    .line 170
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ᩳ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ᩹()Ljava/lang/String;
+.method public final ۫()Ljava/util/Date;
+    .locals 1
+
+    .line 96
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֨:Ljava/util/Date;
+
+    return-object v0
+.end method
+
+.method public final ܳ()Ljava/lang/String;
     .locals 1
 
     .line 159
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܿ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ᩳ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 0
 
     .line 86
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܽ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֡:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public final ᩴ()Ljava/util/Date;
+    .locals 1
+
+    .line 140
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->۟:Ljava/util/Date;
+
+    return-object v0
+.end method
+
+.method public final ᩷(Ljava/util/Date;)V
+    .locals 0
+
+    .line 107
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֨:Ljava/util/Date;
+
+    return-void
+.end method
+
+.method public final ᩸()Ljava/lang/String;
+    .locals 1
+
+    .line 75
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/CopyObjectResult;->֡:Ljava/lang/String;
+
+    return-object v0
 .end method

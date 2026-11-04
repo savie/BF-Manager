@@ -54,7 +54,7 @@
     .line 54
     invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/PartETag;->ܰ()I
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/PartETag;->᩷()I
 
     move-result v2
 
@@ -62,7 +62,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
@@ -89,7 +89,7 @@
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
     .line 61
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ()[B
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷()[B
 
     move-result-object p0
 

@@ -1,59 +1,62 @@
-.class public final Ll/ۛۗۤ;
-.super Ll/۫ۗۤ;
-.source "57L9"
+.class public final synthetic Ll/ۛۗۤ;
+.super Ljava/lang/Object;
+.source "G7I1"
 
-
-# instance fields
-.field public final synthetic ܿ:Ll/ۧۗۤ;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
-    .locals 0
-
-    .line 391
-    iput-object p1, p0, Ll/ۛۗۤ;->ܿ:Ll/ۧۗۤ;
-
-    .line 392
-    invoke-direct {p0, p1, p2}, Ll/۫ۗۤ;-><init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/ۖ᩵ۤ;
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final negate()Ll/֨ۗۤ;
+    .locals 1
+
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
+
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
     .locals 0
 
-    .line 389
-    check-cast p1, Ll/ܽۤۤ;
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->ۙ(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
-    .line 397
-    invoke-virtual {p1}, Ll/ܽۤۤ;->ܶۙ()Z
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(I)Z
+    .locals 0
+
+    .line 121
+    invoke-static {p1}, Ll/ܿܺ᩵;->ۙ(I)I
 
     move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final ۙ(Ll/ܽۤۤ;)Ll/ۤ᩵ۤ;
-    .locals 1
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
 
-    .line 402
-    iget-object p1, p0, Ll/ۛۗۤ;->ܿ:Ll/ۧۗۤ;
-
-    invoke-static {p1}, Ll/ۧۗۤ;->ۙ(Ll/ۧۗۤ;)Ll/ۘۡۤ;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll/ۘۡۤ;->ܺۙ:Ll/ܽۤۤ;
-
-    .line 322
-    new-instance v0, Ll/ܽۗۤ;
-
-    invoke-direct {v0, p0, p1}, Ll/ܽۗۤ;-><init>(Ll/۫ۗۤ;Ll/ܽۤۤ;)V
-
-    invoke-virtual {p0, v0}, Ll/ܶۗۤ;->ۙ(Ljava/util/function/Predicate;)Ll/ۤ᩵ۤ;
+    .line 0
+    invoke-static {p0, p1}, Ll/ۡ᩵ۤ;->᩷(Ll/ۖ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 

@@ -27,9 +27,9 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C15037;
-import l.C2271;
+import l.C14442;
+import l.C2764;
+import l.C4681;
 
 /* JADX INFO: compiled from: Q5XW */
 /* JADX INFO: loaded from: classes.dex */
@@ -43,7 +43,7 @@ public class a implements av, Serializable, Cloneable {
     public static final bp k = new bp("ts", (byte) 10, 4);
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final Map f77954l;
+    public static final Map f82070l;
     public static final int m = 0;
     public String a;
     public String b;
@@ -54,7 +54,7 @@ public class a implements av, Serializable, Cloneable {
 
     static {
         HashMap map = new HashMap();
-        f77954l = map;
+        f82070l = map;
         map.put(ce.class, new b());
         map.put(cf.class, new d());
         EnumMap enumMap = new EnumMap(e.class);
@@ -62,7 +62,7 @@ public class a implements av, Serializable, Cloneable {
         enumMap.put(e.OLD_ID, new bh("old_id", (byte) 2, new bi((byte) 11)));
         enumMap.put(e.NEW_ID, new bh("new_id", (byte) 1, new bi((byte) 11)));
         enumMap.put(e.TS, new bh("ts", (byte) 1, new bi((byte) 10)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         e = mapUnmodifiableMap;
         bh.a(a.class, mapUnmodifiableMap);
     }
@@ -105,7 +105,7 @@ public class a implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {
@@ -274,12 +274,12 @@ public class a implements av, Serializable, Cloneable {
 
     @Override // com.umeng.analytics.pro.av
     public void read(bu buVar) {
-        ((cd) f77954l.get(buVar.D())).b().b(buVar, this);
+        ((cd) f82070l.get(buVar.D())).b().b(buVar, this);
     }
 
     @Override // com.umeng.analytics.pro.av
     public void write(bu buVar) {
-        ((cd) f77954l.get(buVar.D())).b().a(buVar, this);
+        ((cd) f82070l.get(buVar.D())).b().a(buVar, this);
     }
 
     public String toString() {
@@ -310,7 +310,7 @@ public class a implements av, Serializable, Cloneable {
         }
         sb.append(", ");
         sb.append("ts:");
-        return C15037.m36023(sb, this.d, MotionUtils.EASING_TYPE_FORMAT_END);
+        return C2764.m9137(sb, this.d, MotionUtils.EASING_TYPE_FORMAT_END);
     }
 
     public void n() throws bv {

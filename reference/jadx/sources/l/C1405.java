@@ -1,155 +1,106 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import android.os.Bundle;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.CRC32;
 
-/* JADX INFO: renamed from: l.֨᩹۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1405 extends C7756 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20456 f5825;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C18339 f5826;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1405(C20456 c20456, EnumC3584 enumC3584, EnumC19730... enumC19730Arr) {
-        super(c20456, enumC3584, enumC19730Arr);
-        this.f5825 = c20456;
-    }
-
-    @Override // l.C7756, l.AbstractC14107
+/* JADX INFO: renamed from: l.֨᩵᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6RT */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C1405 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo4921(EnumC19730 enumC19730, String str) {
-        if (!this.f31746.contains(enumC19730)) {
-            return false;
-        }
-        mo4918(str == null ? null : C20456.m46263(this.f5825, str));
-        return true;
+    public static long m5136(Bundle bundle) {
+        String string = bundle.getString("filePath");
+        String string2 = bundle.getString("remark");
+        return (((string == null ? 0L : ((long) string.length()) * 2) + 256 + (string2 != null ? ((long) Math.min(string2.length(), 512)) * 2 : 0L)) * 4) + 8192;
     }
 
-    @Override // l.AbstractC14107
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4290 mo4917(String str) {
-        m4916();
-        return this.f5826.m42588(str);
-    }
-
-    @Override // l.AbstractC14107
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4290 mo4922(InterfaceC3800 interfaceC3800) {
-        m4916();
-        return this.f5826.m42594(interfaceC3800);
-    }
-
-    /* JADX WARN: Type inference failed for: r1v2, types: [l.ۖ᩹۟] */
-    @Override // l.AbstractC14107
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Iterable mo4923() {
-        final List listSingletonList;
-        C18339 c18339 = this.f5826;
-        Set setM42593 = c18339 != null ? c18339.m42593() : Collections.EMPTY_SET;
-        if (!setM42593.isEmpty()) {
-            listSingletonList = Collections.singletonList(setM42593);
-        } else {
-            listSingletonList = Collections.EMPTY_LIST;
-        }
-        if (this.f25610 == null) {
-            return listSingletonList;
-        }
-        final ?? r1 = new Iterable() { // from class: l.ۖ᩹۟
-            @Override // java.lang.Iterable
-            public final Iterator iterator() {
-                return new C22573(this.f10696);
+    public static void m5138(InterfaceC24329 interfaceC24329, Bundle bundle) throws IOException {
+        Bundle bundle2 = new Bundle();
+        bundle2.putString("filePath", bundle.getString("filePath"));
+        bundle2.putBoolean("changed", bundle.getBoolean("changed"));
+        bundle2.putBoolean("temp", bundle.getBoolean("temp"));
+        bundle2.putInt("sideIconType", bundle.getInt("sideIconType"));
+        String string = bundle.getString("remark");
+        if (string != null) {
+            int iMin = Math.min(string.length(), 512);
+            if (iMin > 0 && iMin < string.length() && Character.isHighSurrogate(string.charAt(iMin - 1))) {
+                iMin--;
             }
-        };
-        return new Iterable() { // from class: l.ۚ᩹۟
-            @Override // java.lang.Iterable
-            public final Iterator iterator() {
-                return C20021.m45348(Arrays.asList(listSingletonList, r1), new C7497(9));
-            }
-        };
-    }
-
-    @Override // l.C7756, l.AbstractC14107
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo4920(InterfaceC3800 interfaceC3800) {
-        if (this.f5826 == null) {
-            m4916();
+            bundle2.putString("remark", string.substring(0, iMin));
         }
-        return this.f5826.m42591(interfaceC3800);
+        byte[] bArrM11508 = C3510.m11505(65520, bundle2).m11508(65520);
+        C6178 c6178 = new C6178(bArrM11508.length + 16);
+        c6178.writeInt(843666245);
+        c6178.writeInt(1);
+        c6178.m17806(bArrM11508);
+        CRC32 crc32 = new CRC32();
+        crc32.update(c6178.m17808(), 0, c6178.size());
+        c6178.writeInt((int) crc32.getValue());
+        InterfaceC24329 interfaceC24329Resolve = interfaceC24329.resolve("app-index.tmp");
+        InterfaceC24329 interfaceC24329Resolve2 = interfaceC24329.resolve("app-index");
+        if (C3445.exists(interfaceC24329Resolve, EnumC20599.NOFOLLOW_LINKS)) {
+            C1273.m4659(interfaceC24329Resolve);
+            C3445.delete(interfaceC24329Resolve);
+        }
+        C7985.m21773(interfaceC24329Resolve, c6178.m17796());
+        C3445.move(interfaceC24329Resolve, interfaceC24329Resolve2, EnumC18361.ATOMIC_MOVE, EnumC18361.REPLACE_EXISTING);
+        InterfaceC22465.f72702.mo26981(interfaceC24329);
     }
 
-    @Override // l.C7756, l.AbstractC14107
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo4918(Iterable iterable) {
-        if (iterable != null) {
-            Iterator it = iterable.iterator();
-            while (it.hasNext()) {
-                InterfaceC3800 interfaceC3800 = (InterfaceC3800) it.next();
-                if (C5212.exists(interfaceC3800, new EnumC22146[0]) && !C5212.isDirectory(interfaceC3800, new EnumC22146[0])) {
-                    String string = interfaceC3800.getFileName().toString();
-                    int iLastIndexOf = string.lastIndexOf(".");
-                    if (iLastIndexOf > 0) {
-                        String strSubstring = string.substring(iLastIndexOf);
-                        strSubstring.getClass();
-                        if (strSubstring.equals(".jar") || strSubstring.equals(".jmod")) {
-                        }
-                    }
-                    throw new IllegalArgumentException(interfaceC3800.toString());
+    public static Bundle m5137(InterfaceC24329 interfaceC24329) throws IOException {
+        int i;
+        InterfaceC24329 interfaceC24329Resolve = interfaceC24329.resolve("app-index");
+        EnumC20599 enumC20599 = EnumC20599.NOFOLLOW_LINKS;
+        if (!C3445.isRegularFile(interfaceC24329Resolve, enumC20599)) {
+            throw new IOException("Session startup index is missing");
+        }
+        long size = C3445.size(interfaceC24329Resolve);
+        if (size < 16 || size > 65536) {
+            throw new IOException("Invalid session startup index length");
+        }
+        int i2 = (int) size;
+        byte[] bArr = new byte[i2];
+        InputStream inputStreamNewInputStream = C3445.newInputStream(interfaceC24329Resolve, enumC20599);
+        int i3 = 0;
+        while (i3 < i2) {
+            try {
+                int i4 = inputStreamNewInputStream.read(bArr, i3, i2 - i3);
+                if (i4 <= 0) {
+                    throw new IOException("Truncated session startup index");
                 }
-            }
-        }
-        super.mo4918(iterable);
-        this.f5826 = null;
-    }
-
-    @Override // l.AbstractC9376, l.AbstractC14107
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo4919(Iterable iterable, String str) {
-        C13638.requireNonNull(iterable);
-        ArrayList arrayList = new ArrayList();
-        Iterator it = iterable.iterator();
-        while (it.hasNext()) {
-            InterfaceC3800 interfaceC3800 = (InterfaceC3800) it.next();
-            AbstractC9376.m24052(interfaceC3800);
-            arrayList.add(interfaceC3800);
-        }
-        m4916();
-        C11990 c11990M42588 = this.f5826.m42588(str);
-        if (c11990M42588 == null) {
-            c11990M42588 = new C11990(this.f5825, this, this.f31747.getName() + "[" + str + "]", str, arrayList, true);
-            this.f5826.m42590(c11990M42588);
-        } else {
-            c11990M42588.f40189 = arrayList;
-            this.f5826.m42595(c11990M42588);
-        }
-        c11990M42588.f40187 = true;
-        this.f31745 = true;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    private void m4916() {
-        if (this.f5826 != null) {
-            return;
-        }
-        this.f5826 = new C18339(this.f5825);
-        Iterator it = mo4923().iterator();
-        while (it.hasNext()) {
-            for (InterfaceC4290 interfaceC4290 : (Set) it.next()) {
-                if (interfaceC4290 instanceof C11990) {
-                    C11990 c11990 = (C11990) interfaceC4290;
-                    if (!this.f5826.f58506.containsKey(c11990.f40190)) {
-                        this.f5826.m42590(c11990);
+                i3 += i4;
+            } catch (Throwable th) {
+                if (inputStreamNewInputStream != null) {
+                    try {
+                        inputStreamNewInputStream.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
                     }
                 }
+                throw th;
             }
         }
+        if (inputStreamNewInputStream.read() != -1) {
+            throw new IOException("Trailing session startup index bytes");
+        }
+        inputStreamNewInputStream.close();
+        C20348 c20348 = new C20348(bArr);
+        CRC32 crc32 = new CRC32();
+        int i5 = i2 - 4;
+        crc32.update(bArr, 0, i5);
+        c20348.seek(i5);
+        if (c20348.readInt() != ((int) crc32.getValue())) {
+            throw new IOException("Invalid session startup index checksum");
+        }
+        c20348.seek(0L);
+        if (c20348.readInt() != 843666245 || c20348.readInt() != 1 || c20348.readInt() != (i = i2 - 16)) {
+            throw new IOException("Unsupported session startup index");
+        }
+        return C3510.m11504(65536, i, new ByteArrayInputStream(bArr, 12, i)).m11509();
     }
 }

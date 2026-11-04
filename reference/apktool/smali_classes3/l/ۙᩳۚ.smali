@@ -1,234 +1,212 @@
 .class public final Ll/ۙᩳۚ;
-.super Ll/ܿᩴܶ;
-.source "36ZX"
+.super Ljava/lang/Object;
+.source "56G1"
+
+# interfaces
+.implements Ll/᩺ܿۚ;
 
 
 # instance fields
-.field public final ۙ:I
+.field public final synthetic ۙ:Ll/᩸ᩳۚ;
 
-.field public final ۨ:Ll/ۨᩳۚ;
+.field public final synthetic ۤ:Ll/۫ᩳۚ;
 
-.field public final ܰ:I
+.field public final synthetic ᩷:Ll/ܳᩳۚ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۨᩳۚ;II)V
+.method public constructor <init>(Ll/᩸ᩳۚ;Ll/۫ᩳۚ;Ll/ܳᩳۚ;)V
     .locals 0
 
-    .line 161
+    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
+    iput-object p1, p0, Ll/ۙᩳۚ;->ۙ:Ll/᩸ᩳۚ;
 
-    iput p2, p0, Ll/ۙᩳۚ;->ܰ:I
+    iput-object p2, p0, Ll/ۙᩳۚ;->ۤ:Ll/۫ᩳۚ;
 
-    iput p3, p0, Ll/ۙᩳۚ;->ۙ:I
+    iput-object p3, p0, Ll/ۙᩳۚ;->᩷:Ll/ܳᩳۚ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final ۙ(Ljava/io/BufferedOutputStream;)Ljava/lang/Object;
+    .locals 13
 
-    .line 161
-    instance-of v0, p1, Ll/ۙᩳۚ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ll/ۙᩳۚ;
-
-    iget v0, p0, Ll/ۙᩳۚ;->ܰ:I
-
-    iget v1, p1, Ll/ۙᩳۚ;->ܰ:I
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Ll/ۙᩳۚ;->ۙ:I
-
-    iget v1, p1, Ll/ۙᩳۚ;->ۙ:I
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
-
-    iget-object p1, p1, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
-
-    invoke-static {v0, p1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/16 v0, 0x1f
-
-    .line 161
-    iget v1, p0, Ll/ۙᩳۚ;->ܰ:I
-
-    iget v2, p0, Ll/ۙᩳۚ;->ۙ:I
-
-    invoke-static {v1, v0, v2, v0}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
-
-    move-result v0
-
-    iget-object v1, p0, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
-
-    invoke-static {v1}, Ll/ܰۛᩴ;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    .line 161
-    iget v0, p0, Ll/ۙᩳۚ;->ܰ:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 80
+    invoke-static {}, Ll/ܳ֫ܺ;->ۤ()Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    iget v1, p0, Ll/ۙᩳۚ;->ۙ:I
+    const/high16 v1, 0x10000
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v1, [B
 
-    move-result-object v1
+    .line 82
+    iget-object v3, p0, Ll/ۙᩳۚ;->ۤ:Ll/۫ᩳۚ;
 
-    const/4 v2, 0x3
+    iget-wide v4, v3, Ll/۫ᩳۚ;->ܶ:J
 
-    new-array v2, v2, [Ljava/lang/Object;
+    iget-object v3, v3, Ll/۫ᩳۚ;->۫:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    .line 83
+    iget-object v6, p0, Ll/ۙᩳۚ;->᩷:Ll/ܳᩳۚ;
 
-    iget-object v4, p0, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
+    iget-object v7, v6, Ll/ܳᩳۚ;->ۤ:Ll/ۗ᩻ܳ;
 
-    aput-object v4, v2, v3
+    invoke-virtual {v7}, Ll/ۗ᩻ܳ;->ܳ()Ljava/io/InputStream;
 
-    const/4 v4, 0x1
+    move-result-object v7
 
-    aput-object v0, v2, v4
+    :goto_0
+    const-wide/16 v8, 0x0
 
-    const/4 v0, 0x2
+    cmp-long v10, v4, v8
 
-    aput-object v1, v2, v0
+    if-lez v10, :cond_1
 
-    const-string v0, "restarts;oldStart;oldEnd"
+    .line 85
+    iget-object v8, p0, Ll/ۙᩳۚ;->ۙ:Ll/᩸ᩳۚ;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-static {v8}, Ll/᩸ᩳۚ;->ۙ(Ll/᩸ᩳۚ;)Ll/ۚᩳۚ;
 
-    move-result v1
+    move-result-object v9
 
-    if-nez v1, :cond_0
+    invoke-virtual {v9, v6}, Ll/ۚᩳۚ;->ۙ(Ll/ܳᩳۚ;)V
 
-    new-array v0, v3, [Ljava/lang/String;
+    int-to-long v9, v1
+
+    .line 86
+    invoke-static {v9, v10, v4, v5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v9
+
+    long-to-int v10, v9
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v7, v2, v9, v10}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v10
+
+    if-lez v10, :cond_0
+
+    .line 88
+    invoke-virtual {p1, v2, v9, v10}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 89
+    invoke-virtual {v0, v2, v9, v10}, Ljava/security/MessageDigest;->update([BII)V
+
+    int-to-long v11, v10
+
+    sub-long/2addr v4, v11
+
+    .line 91
+    invoke-static {v8}, Ll/᩸ᩳۚ;->ۙ(Ll/᩸ᩳۚ;)Ll/ۚᩳۚ;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v6, v10}, Ll/ۚᩳۚ;->ۙ(Ll/ܳᩳۚ;I)V
 
     goto :goto_0
 
+    .line 87
     :cond_0
-    const-string v1, ";"
+    new-instance p1, Ljava/io/IOException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    const-string v0, "Upload ended before Content-Length"
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    throw p1
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "["
-
-    .line 0
-    const-class v6, Ll/ۙᩳۚ;
-
-    invoke-static {v6, v1, v5}, Ll/ᩳ֫ᩳ;->ۙ(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 161
-    :goto_1
-    array-length v5, v0
-
-    if-ge v3, v5, :cond_2
-
-    aget-object v5, v0, v3
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "="
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v5, v2, v3
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    array-length v5, v0
-
-    sub-int/2addr v5, v4
-
-    if-eq v3, v5, :cond_1
-
-    const-string v5, ", "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    .line 93
     :cond_1
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ܳ֫ܺ;->᩷([B)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 94
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 95
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const-string v0, "]"
+    const-string p1, "TRANSFER_DIGEST_MISMATCH"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "The uploaded content does not match the expected SHA-256."
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 96
+    invoke-static {p1, v0}, Ll/ۚᩳۚ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ll/ۢܳۚ;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    throw p1
+
+    :cond_3
+    :goto_1
+    return-object p1
 .end method
 
-.method public final ۖ()Ll/ۨᩳۚ;
-    .locals 1
+.method public final ۙ()V
+    .locals 3
 
-    .line 161
-    iget-object v0, p0, Ll/ۙᩳۚ;->ۨ:Ll/ۨᩳۚ;
+    .line 103
+    iget-object v0, p0, Ll/ۙᩳۚ;->ۙ:Ll/᩸ᩳۚ;
 
-    return-object v0
-.end method
+    invoke-static {v0}, Ll/᩸ᩳۚ;->ۙ(Ll/᩸ᩳۚ;)Ll/ۚᩳۚ;
 
-.method public final ۙ()I
-    .locals 1
+    move-result-object v1
 
-    .line 161
-    iget v0, p0, Ll/ۙᩳۚ;->ۙ:I
+    iget-object v2, p0, Ll/ۙᩳۚ;->᩷:Ll/ܳᩳۚ;
 
-    return v0
-.end method
+    move-object v0, v1
 
-.method public final ۨ()I
-    .locals 1
+    .line 0
+    monitor-enter v0
 
-    .line 161
-    iget v0, p0, Ll/ۙᩳۚ;->ܰ:I
+    .line 211
+    :try_start_0
+    invoke-virtual {v1, v2}, Ll/ۚᩳۚ;->ۙ(Ll/ܳᩳۚ;)V
 
-    return v0
+    .line 212
+    iget-object v1, v2, Ll/ܳᩳۚ;->ᩴ:Ll/۫ᩳۚ;
+
+    const-string v2, "publishing"
+
+    iput-object v2, v1, Ll/۫ᩳۚ;->᩹:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 213
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

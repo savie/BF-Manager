@@ -1,150 +1,76 @@
-.class public final synthetic Ll/ܿ֨ۚ;
+.class public final Ll/ܿ֨ۚ;
 .super Ljava/lang/Object;
-.source "A7IB"
+.source "Q8FL"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۛ֨ۚ;
+.field public ܰ:Z
 
-.field public final synthetic ᩶:Ll/ᩳ֨ۚ;
+.field public final ᩶:Landroid/media/MediaDataSource;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۛ֨ۚ;Ll/ᩳ֨ۚ;)V
+.method public constructor <init>(Landroid/media/MediaDataSource;)V
     .locals 0
 
-    .line 0
+    .line 1583
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܿ֨ۚ;->ܺ:Ll/ۛ֨ۚ;
-
-    iput-object p2, p0, Ll/ܿ֨ۚ;->᩶:Ll/ᩳ֨ۚ;
+    .line 1584
+    iput-object p1, p0, Ll/ܿ֨ۚ;->᩶:Landroid/media/MediaDataSource;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 6
+.method public final close()V
+    .locals 1
 
-    .line 244
-    iget-object p1, p0, Ll/ܿ֨ۚ;->᩶:Ll/ᩳ֨ۚ;
-
-    invoke-virtual {p1}, Ll/ᩳ֨ۚ;->᩹()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/ܿۚۘ;->ۨ(Ljava/lang/String;)Ll/ۨ᩹ۘ;
-
-    move-result-object v0
+    .line 1601
+    iget-boolean v0, p0, Ll/ܿ֨ۚ;->ܰ:Z
 
     if-eqz v0, :cond_0
 
-    .line 247
-    invoke-virtual {v0}, Ll/ۨ᩹ۘ;->᩺()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const v0, 0x7f120758
+    const/4 v0, 0x1
 
-    .line 249
-    invoke-static {v0}, Ll/ܽܺۘ;->ܰ(I)Ljava/lang/String;
+    .line 1604
+    iput-boolean v0, p0, Ll/ܿ֨ۚ;->ܰ:Z
 
-    move-result-object v0
+    .line 1605
+    iget-object v0, p0, Ll/ܿ֨ۚ;->᩶:Landroid/media/MediaDataSource;
 
-    .line 251
-    :goto_0
-    new-instance v1, Landroid/text/SpannableStringBuilder;
+    invoke-virtual {v0}, Landroid/media/MediaDataSource;->close()V
 
-    invoke-direct {v1}, Landroid/text/SpannableStringBuilder;-><init>()V
+    return-void
+.end method
 
-    .line 252
-    invoke-virtual {p1}, Ll/ᩳ֨ۚ;->᩹()Ljava/lang/String;
+.method public final ۙ(Landroid/media/MediaMetadataRetriever;)V
+    .locals 1
 
-    move-result-object v2
+    .line 1590
+    iget-object v0, p0, Ll/ܿ֨ۚ;->᩶:Landroid/media/MediaDataSource;
 
-    invoke-virtual {v1, v2}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+    invoke-virtual {p1, v0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/media/MediaDataSource;)V
 
-    move-result-object v2
+    .line 1591
+    iget-object p1, p0, Ll/ܿ֨ۚ;->᩶:Landroid/media/MediaDataSource;
 
-    const-string v3, "\n"
+    instance-of v0, p1, Ll/ۤۤ֫;
 
-    invoke-virtual {v2, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+    if-eqz v0, :cond_0
 
-    .line 253
-    invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
+    check-cast p1, Ll/ۤۤ֫;
 
-    move-result v2
+    .line 1592
+    invoke-virtual {p1}, Ll/ۤۤ֫;->ۙ()V
 
-    .line 254
-    invoke-virtual {p1}, Ll/ᩳ֨ۚ;->ۚ()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    .line 255
-    invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
-
-    move-result p1
-
-    .line 256
-    new-instance v3, Landroid/text/style/ForegroundColorSpan;
-
-    sget v4, Ll/᩶᩵ۘ;->۬ۙ:I
-
-    invoke-direct {v3, v4}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
-
-    const/16 v4, 0x12
-
-    invoke-virtual {v1, v3, v2, p1, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
-
-    .line 257
-    new-instance v3, Landroid/text/style/RelativeSizeSpan;
-
-    const v5, 0x3f4ccccd    # 0.8f
-
-    invoke-direct {v3, v5}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
-
-    invoke-virtual {v1, v3, v2, p1, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
-
-    .line 258
-    iget-object p1, p0, Ll/ܿ֨ۚ;->ܺ:Ll/ۛ֨ۚ;
-
-    iget-object p1, p1, Ll/ۛ֨ۚ;->֡:Ll/᩻֨ۚ;
-
-    invoke-virtual {p1}, Ll/۫ܶۘ;->buildDialog()Ll/۠ۡۜ;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ll/۠ۡۜ;->ܰ(Ljava/lang/CharSequence;)V
-
-    .line 259
-    invoke-virtual {p1, v1}, Ll/۠ۡۜ;->ۙ(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f120189
-
-    const/4 v1, 0x0
-
-    .line 260
-    invoke-virtual {p1, v0, v1}, Ll/۠ۡۜ;->ۖ(ILandroid/content/DialogInterface$OnClickListener;)V
-
-    .line 261
-    invoke-virtual {p1}, Ll/۠ۡۜ;->ۨ()Ll/᩵ۡۜ;
-
-    move-result-object p1
-
-    .line 262
-    invoke-static {p1}, Ll/᩺᩷᩺;->ۙ(Ll/᩵ۡۜ;)V
-
-    const/4 p1, 0x1
-
-    return p1
+    :cond_0
+    return-void
 .end method

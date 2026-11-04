@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/bottomappbar/BottomAppBar;
-.super Ll/ۜᩴ;
+.super Ll/ܶ᩹;
 .source "BottomAppBar.java"
 
 # interfaces
-.implements Ll/ۧܺ;
+.implements Ll/᩷᩶;
 
 
 # static fields
@@ -106,17 +106,17 @@
     .locals 1
 
     .line 127
-    sget v0, Ll/ᩴ۟ܶ;->ܿۧ:I
+    sget v0, Ll/ۘ۬ܺ;->ᩳ֨:I
 
     sput v0, Lcom/google/android/material/bottomappbar/BottomAppBar;->DEF_STYLE_RES:I
 
     .line 130
-    sget v0, Ll/ۖ۟ܶ;->᩸ܺ:I
+    sget v0, Ll/ۧ۬ܺ;->ܽܰ:I
 
     sput v0, Lcom/google/android/material/bottomappbar/BottomAppBar;->FAB_ALIGNMENT_ANIM_DURATION_ATTR:I
 
     .line 131
-    sget v0, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget v0, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sput v0, Lcom/google/android/material/bottomappbar/BottomAppBar;->FAB_ALIGNMENT_ANIM_EASING_ATTR:I
 
@@ -138,7 +138,7 @@
     .locals 1
 
     .line 306
-    sget v0, Ll/ۖ۟ܶ;->ܶۨ:I
+    sget v0, Ll/ۧ۬ܺ;->ܺۤ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomappbar/BottomAppBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -155,7 +155,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Ll/ۜᩴ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ll/ܶ᩹;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 191
     new-instance p1, Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -200,7 +200,7 @@
     move-result-object v9
 
     .line 314
-    sget-object v2, Ll/۠۟ܶ;->۫۬:[I
+    sget-object v2, Ll/ܰ۬ܺ;->۟ۚ:[I
 
     new-array v5, v7, [I
 
@@ -218,7 +218,7 @@
     move-result-object v0
 
     .line 318
-    sget v1, Ll/۠۟ܶ;->ۛ۬:I
+    sget v1, Ll/ܰ۬ܺ;->ۢۚ:I
 
     .line 319
     invoke-static {v9, v0, v1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -226,7 +226,7 @@
     move-result-object v1
 
     .line 321
-    sget v2, Ll/۠۟ܶ;->ۚۘ:I
+    sget v2, Ll/ܰ۬ܺ;->ᩴ֫:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -237,7 +237,7 @@
     if-eqz v2, :cond_0
 
     .line 322
-    sget v2, Ll/۠۟ܶ;->ۚۘ:I
+    sget v2, Ll/ܰ۬ܺ;->ᩴ֫:I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -247,14 +247,14 @@
 
     .line 325
     :cond_0
-    sget v2, Ll/۠۟ܶ;->ۧ۬:I
+    sget v2, Ll/ܰ۬ܺ;->֨ۚ:I
 
     invoke-virtual {v0, v2, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
     .line 326
-    sget v4, Ll/۠۟ܶ;->ۗ۬:I
+    sget v4, Ll/ܰ۬ܺ;->۬ۚ:I
 
     invoke-virtual {v0, v4, v7}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -263,7 +263,7 @@
     int-to-float v4, v4
 
     .line 327
-    sget v5, Ll/۠۟ܶ;->ۙۘ:I
+    sget v5, Ll/ܰ۬ܺ;->ۙ֫:I
 
     .line 328
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
@@ -273,7 +273,7 @@
     int-to-float v5, v5
 
     .line 329
-    sget v10, Ll/۠۟ܶ;->ܰۘ:I
+    sget v10, Ll/ܰ۬ܺ;->᩷֫:I
 
     .line 330
     invoke-virtual {v0, v10, v7}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
@@ -283,7 +283,7 @@
     int-to-float v10, v10
 
     .line 331
-    sget v11, Ll/۠۟ܶ;->᩻۬:I
+    sget v11, Ll/ܰ۬ܺ;->ۡۚ:I
 
     .line 332
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -293,7 +293,7 @@
     iput v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAlignmentMode:I
 
     .line 333
-    sget v11, Ll/۠۟ܶ;->ۢ۬:I
+    sget v11, Ll/ܰ۬ܺ;->ۜۚ:I
 
     .line 334
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -303,7 +303,7 @@
     iput v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAnimationMode:I
 
     .line 335
-    sget v11, Ll/۠۟ܶ;->֫۬:I
+    sget v11, Ll/ܰ۬ܺ;->۠ۚ:I
 
     invoke-virtual {v0, v11, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -312,7 +312,7 @@
     iput v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAnchorMode:I
 
     .line 336
-    sget v11, Ll/۠۟ܶ;->ۘۘ:I
+    sget v11, Ll/ܰ۬ܺ;->֫֫:I
 
     .line 337
     invoke-virtual {v0, v11, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -322,7 +322,7 @@
     iput-boolean v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->removeEmbeddedFabElevation:Z
 
     .line 339
-    sget v11, Ll/۠۟ܶ;->ۖۘ:I
+    sget v11, Ll/ܰ۬ܺ;->᩸֫:I
 
     .line 340
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -332,7 +332,7 @@
     iput v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->menuAlignmentMode:I
 
     .line 341
-    sget v11, Ll/۠۟ܶ;->ۨۘ:I
+    sget v11, Ll/ܰ۬ܺ;->ۤ֫:I
 
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -341,7 +341,7 @@
     iput-boolean v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->hideOnScroll:Z
 
     .line 343
-    sget v11, Ll/۠۟ܶ;->᩹ۘ:I
+    sget v11, Ll/ܰ۬ܺ;->ܳ֫:I
 
     .line 344
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -351,7 +351,7 @@
     iput-boolean v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->paddingBottomSystemWindowInsets:Z
 
     .line 345
-    sget v11, Ll/۠۟ܶ;->֨ۘ:I
+    sget v11, Ll/ܰ۬ܺ;->۫֫:I
 
     .line 346
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -361,7 +361,7 @@
     iput-boolean v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->paddingLeftSystemWindowInsets:Z
 
     .line 347
-    sget v11, Ll/۠۟ܶ;->۬ۘ:I
+    sget v11, Ll/ܰ۬ܺ;->ۚ֫:I
 
     .line 348
     invoke-virtual {v0, v11, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -371,7 +371,7 @@
     iput-boolean v11, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->paddingRightSystemWindowInsets:Z
 
     .line 349
-    sget v11, Ll/۠۟ܶ;->ܳ۬:I
+    sget v11, Ll/ܰ۬ܺ;->ۖۚ:I
 
     .line 350
     invoke-virtual {v0, v11, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
@@ -381,7 +381,7 @@
     iput v3, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAlignmentModeEndMargin:I
 
     .line 353
-    sget v3, Ll/۠۟ܶ;->ܿ۬:I
+    sget v3, Ll/ܰ۬ܺ;->ᩳۚ:I
 
     invoke-virtual {v0, v3, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -395,7 +395,7 @@
 
     move-result-object v0
 
-    sget v11, Ll/֨۟ܶ;->ۡ᩵:I
+    sget v11, Ll/ܽ۬ܺ;->ۨ᩵:I
 
     invoke-virtual {v0, v11}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -466,10 +466,10 @@
     invoke-virtual {p0, v0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->setElevation(F)V
 
     .line 377
-    invoke-static {p1, v1}, Ll/۟ܿ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1}, Ll/֡ᩳ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 378
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 3370
     invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -648,11 +648,11 @@
     return p0
 .end method
 
-.method public static synthetic access$2200(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZZ)V
+.method public static synthetic access$2200(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZZ)V
     .locals 0
 
     .line 125
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/᩺ۜ;IZZ)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/ܽۧ;IZZ)V
 
     return-void
 .end method
@@ -916,7 +916,7 @@
     .locals 9
 
     .line 994
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/᩺ۜ;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/ܽۧ;
 
     move-result-object v0
 
@@ -964,7 +964,7 @@
     move-result v7
 
     .line 1007
-    invoke-virtual {p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuViewTranslationX(Ll/᩺ۜ;IZ)I
+    invoke-virtual {p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuViewTranslationX(Ll/ܽۧ;IZ)I
 
     move-result v8
 
@@ -1004,7 +1004,7 @@
     .line 1015
     new-instance v1, Lcom/google/android/material/bottomappbar/BottomAppBar$7;
 
-    invoke-direct {v1, p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomAppBar$7;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZ)V
+    invoke-direct {v1, p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomAppBar$7;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZ)V
 
     invoke-virtual {v5, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1164,7 +1164,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Ll/ۖ᩶;
+    instance-of v0, v0, Ll/᩻᩶;
 
     const/4 v1, 0x0
 
@@ -1178,9 +1178,9 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/ۖ᩶;
+    check-cast v0, Ll/᩻᩶;
 
-    invoke-virtual {v0, p0}, Ll/ۖ᩶;->getDependents(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {v0, p0}, Ll/᩻᩶;->getDependents(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1218,7 +1218,7 @@
     return-object v1
 .end method
 
-.method private getActionMenuView()Ll/᩺ۜ;
+.method private getActionMenuView()Ll/ܽۧ;
     .locals 3
 
     const/4 v0, 0x0
@@ -1237,12 +1237,12 @@
     move-result-object v1
 
     .line 1084
-    instance-of v2, v1, Ll/᩺ۜ;
+    instance-of v2, v1, Ll/ܽۧ;
 
     if-eqz v2, :cond_0
 
     .line 1085
-    check-cast v1, Ll/᩺ۜ;
+    check-cast v1, Ll/ܽۧ;
 
     return-object v1
 
@@ -1523,7 +1523,7 @@
     .locals 2
 
     .line 947
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
@@ -1608,7 +1608,7 @@
 
     if-eq v0, p1, :cond_3
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
@@ -1711,7 +1711,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ll/۟ܿ;->᩹(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Ll/֡ᩳ;->ܳ(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1722,7 +1722,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Ll/۟ܿ;->ܰ(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Ll/֡ᩳ;->᩷(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
     return-object p1
@@ -1732,7 +1732,7 @@
     .locals 3
 
     .line 1234
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/᩺ۜ;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/ܽۧ;
 
     move-result-object v0
 
@@ -1758,7 +1758,7 @@
     const/4 v1, 0x0
 
     .line 1240
-    invoke-direct {p0, v0, v1, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/᩺ۜ;IZ)V
+    invoke-direct {p0, v0, v1, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/ܽۧ;IZ)V
 
     return-void
 
@@ -1768,7 +1768,7 @@
 
     iget-boolean v2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAttached:Z
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/᩺ۜ;IZ)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/ܽۧ;IZ)V
 
     :cond_1
     return-void
@@ -1844,24 +1844,24 @@
     return-void
 .end method
 
-.method private translateActionMenuView(Ll/᩺ۜ;IZ)V
+.method private translateActionMenuView(Ll/ܽۧ;IZ)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 1096
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/᩺ۜ;IZZ)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/ܽۧ;IZZ)V
 
     return-void
 .end method
 
-.method private translateActionMenuView(Ll/᩺ۜ;IZZ)V
+.method private translateActionMenuView(Ll/ܽۧ;IZZ)V
     .locals 1
 
     .line 1114
     new-instance v0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomAppBar$8;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZ)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomAppBar$8;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZ)V
 
     if-eqz p4, :cond_0
 
@@ -1885,12 +1885,12 @@
 
     move-result-object p1
 
-    check-cast p1, Ll/ۢܺ;
+    check-cast p1, Ll/ܳ᩶;
 
     const/16 v0, 0x11
 
     .line 511
-    iput v0, p1, Ll/ۢܺ;->ۙ:I
+    iput v0, p1, Ll/ܳ᩶;->ۙ:I
 
     .line 512
     iget p0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->fabAnchorMode:I
@@ -1902,17 +1902,17 @@
     or-int/lit8 v0, v0, 0x30
 
     .line 513
-    iput v0, p1, Ll/ۢܺ;->ۙ:I
+    iput v0, p1, Ll/ܳ᩶;->ۙ:I
 
     :cond_0
     if-nez p0, :cond_1
 
     .line 516
-    iget p0, p1, Ll/ۢܺ;->ۙ:I
+    iget p0, p1, Ll/ܳ᩶;->ۙ:I
 
     or-int/lit8 p0, p0, 0x50
 
-    iput p0, p1, Ll/ۢܺ;->ۙ:I
+    iput p0, p1, Ll/ܳ᩶;->ۙ:I
 
     :cond_1
     return-void
@@ -2005,7 +2005,7 @@
     return-void
 .end method
 
-.method public getActionMenuViewTranslationX(Ll/᩺ۜ;IZ)I
+.method public getActionMenuViewTranslationX(Ll/ܽۧ;IZ)I
     .locals 5
 
     .line 1141
@@ -2063,7 +2063,7 @@
 
     move-result-object v3
 
-    instance-of v3, v3, Ll/᩹ᩴ;
+    instance-of v3, v3, Ll/ۧ᩹;
 
     if-eqz v3, :cond_4
 
@@ -2072,9 +2072,9 @@
 
     move-result-object v3
 
-    check-cast v3, Ll/᩹ᩴ;
+    check-cast v3, Ll/ۧ᩹;
 
-    iget v3, v3, Ll/ܿۖ;->ۙ:I
+    iget v3, v3, Ll/֨᩸;->ۙ:I
 
     const v4, 0x800007
 
@@ -2143,7 +2143,7 @@
 
     .line 1170
     :goto_4
-    invoke-virtual {p0}, Ll/ۜᩴ;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -2154,7 +2154,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->ۢۚ:I
+    sget v2, Ll/ܽ۬ܺ;->ۜᩴ:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2213,7 +2213,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic getBehavior()Ll/᩻ܺ;
+.method public bridge synthetic getBehavior()Ll/ۤ᩶;
     .locals 1
 
     .line 125
@@ -2357,7 +2357,7 @@
     .locals 2
 
     .line 1304
-    invoke-super {p0}, Ll/ۜᩴ;->onAttachedToWindow()V
+    invoke-super {p0}, Ll/ܶ᩹;->onAttachedToWindow()V
 
     .line 1306
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -2392,7 +2392,7 @@
     .locals 0
 
     .line 1191
-    invoke-super/range {p0 .. p5}, Ll/ۜᩴ;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Ll/ܶ᩹;->onLayout(ZIIII)V
 
     if-eqz p1, :cond_0
 
@@ -2410,7 +2410,7 @@
     if-eqz p1, :cond_0
 
     .line 1204
-    sget p2, Ll/ۚ֫;->ۙ:I
+    sget p2, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {p1}, Landroid/view/View;->isLaidOut()Z
@@ -2420,11 +2420,11 @@
     if-eqz p2, :cond_0
 
     .line 1205
-    new-instance p2, Ll/ۤ۟ۖ;
+    new-instance p2, Ll/۟۠ᩴ;
 
-    const/4 p3, 0x4
+    const/4 p3, 0x1
 
-    invoke-direct {p2, p3, p1}, Ll/ۤ۟ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p1}, Ll/۟۠ᩴ;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -2444,7 +2444,7 @@
     if-nez v0, :cond_0
 
     .line 1487
-    invoke-super {p0, p1}, Ll/ۜᩴ;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
@@ -2453,11 +2453,11 @@
     check-cast p1, Lcom/google/android/material/bottomappbar/BottomAppBar$SavedState;
 
     .line 1491
-    invoke-virtual {p1}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Ll/ۜᩴ;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v0}, Ll/ܶ᩹;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 1492
     iget v0, p1, Lcom/google/android/material/bottomappbar/BottomAppBar$SavedState;->fabAlignmentMode:I
@@ -2476,7 +2476,7 @@
     .locals 2
 
     .line 1477
-    invoke-super {p0}, Ll/ۜᩴ;->onSaveInstanceState()Landroid/os/Parcelable;
+    invoke-super {p0}, Ll/ܶ᩹;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -2587,14 +2587,14 @@
     iput v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->pendingMenuResId:I
 
     .line 763
-    invoke-virtual {p0}, Ll/ۜᩴ;->getMenu()Landroid/view/Menu;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
     invoke-interface {v0}, Landroid/view/Menu;->clear()V
 
     .line 764
-    invoke-virtual {p0, p1}, Ll/ۜᩴ;->inflateMenu(I)V
+    invoke-virtual {p0, p1}, Ll/ܶ᩹;->inflateMenu(I)V
 
     :cond_0
     return-void
@@ -2606,7 +2606,7 @@
     .line 566
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v0, p1}, Ll/۟ܿ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Ll/֡ᩳ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -2919,7 +2919,7 @@
     iput p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->menuAlignmentMode:I
 
     .line 549
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/᩺ۜ;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuView()Ll/ܽۧ;
 
     move-result-object p1
 
@@ -2932,7 +2932,7 @@
 
     move-result v1
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/᩺ۜ;IZ)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->translateActionMenuView(Ll/ܽۧ;IZ)V
 
     :cond_0
     return-void
@@ -2946,7 +2946,7 @@
 
     move-result-object p1
 
-    invoke-super {p0, p1}, Ll/ۜᩴ;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Ll/ܶ᩹;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -2962,7 +2962,7 @@
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->navigationIconTint:Ljava/lang/Integer;
 
     .line 434
-    invoke-virtual {p0}, Ll/ۜᩴ;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Ll/ܶ᩹;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

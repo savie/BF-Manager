@@ -1,50 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢۖܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: BBHG */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C9300 extends C5541 {
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final int m23872() {
-        int size = size();
-        int iMo2281 = 2;
-        for (int i = 0; i < size; i++) {
-            iMo2281 += ((InterfaceC5771) m15249(i)).mo2281();
-        }
-        return iMo2281;
-    }
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: renamed from: l.ۡۢ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6UJ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C9300 implements AutoCloseable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC5771 m23873(String str) {
-        int size = size();
-        for (int i = 0; i < size; i++) {
-            InterfaceC5771 interfaceC5771 = (InterfaceC5771) m15249(i);
-            if (interfaceC5771.getName().equals(str)) {
-                return interfaceC5771;
-            }
-        }
-        return null;
+    public boolean f30234;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2589 f30235;
+
+    public C9300(C2589 c2589) {
+        this.f30235 = c2589;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC5771 m23871(AbstractC1100 abstractC1100) {
-        InterfaceC5771 interfaceC5771;
-        int size = size();
-        int i = 0;
-        while (i < size) {
-            if (((InterfaceC5771) m15249(i)) == abstractC1100) {
-                String name = abstractC1100.getName();
-                do {
-                    i++;
-                    if (i >= size) {
-                        return null;
-                    }
-                    interfaceC5771 = (InterfaceC5771) m15249(i);
-                } while (!interfaceC5771.getName().equals(name));
-                return interfaceC5771;
+    public final ScheduledFuture m24528(RunnableC18932 runnableC18932, long j) {
+        ScheduledFuture<?> scheduledFutureSchedule;
+        synchronized (this.f30235) {
+            if (this.f30234 || this.f30235.f8311) {
+                throw new RejectedExecutionException("Persistence scheduler slot is closed");
             }
-            i++;
+            scheduledFutureSchedule = this.f30235.f8313.schedule(runnableC18932, j, TimeUnit.NANOSECONDS);
         }
-        return null;
+        return scheduledFutureSchedule;
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        synchronized (this.f30235) {
+            if (this.f30234) {
+                return;
+            }
+            this.f30234 = true;
+            this.f30235.f8312--;
+        }
     }
 }

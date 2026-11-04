@@ -1,74 +1,26 @@
 package l;
 
-import android.util.Base64;
-import com.umeng.commonsdk.statistics.UMErrorCode;
-import org.bouncycastle.crypto.params.DHParameters;
-import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
+import android.graphics.Canvas;
 
-/* JADX INFO: renamed from: l.᩺ۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DAO9 */
+/* JADX INFO: renamed from: l.᩸ܿ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: J5HS */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22971 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f74654;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public double f74655;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f74656;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public float f74657;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte[] f74658;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public String f74659;
+public final class C22971 extends C6389 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f74660;
+    public final /* synthetic */ C19987 f74609;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f74661;
-
-    public /* synthetic */ C22971(int i) {
-        this();
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C22971(C19987 c19987) {
+        super(C17423.m40909());
+        this.f74609 = c19987;
+        c19987.getContext();
     }
 
-    public C22971() {
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m50813() {
-        switch (this.f74660) {
-            case 32:
-            case 48:
-                return this.f74659;
-            case 64:
-                return C15210.m36414(this.f74658);
-            case 80:
-                return Base64.encodeToString(this.f74658, 2);
-            case 96:
-                return Integer.toString(this.f74661);
-            case UMErrorCode.E_UM_BE_DEFLATE_FAILED /* 112 */:
-                return Integer.toString(this.f74661, 16);
-            case 128:
-                return Long.toString(this.f74654);
-            case 144:
-                return Long.toString(this.f74654, 16);
-            case DHParameters.DEFAULT_MINIMUM_LENGTH /* 160 */:
-                return Float.toString(this.f74657);
-            case PicnicEngine.MAX_AUX_BYTES /* 176 */:
-                return Double.toString(this.f74655);
-            case 192:
-                return "true";
-            case 208:
-                return "false";
-            default:
-                return null;
+    @Override // l.C6389, android.graphics.drawable.Drawable
+    public final void draw(Canvas canvas) {
+        if (C19987.m45945(this.f74609)) {
+            super.draw(canvas);
         }
     }
 }

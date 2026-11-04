@@ -1,43 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ֡۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: JAJQ */
+import android.text.SpannableString;
+import android.text.TextUtils;
+import java.util.Comparator;
+
+/* JADX INFO: renamed from: l.ܶᩴۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 84S9 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16287 extends C19815 {
+public final /* synthetic */ class C16287 implements Comparator {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final C16287 f52462 = new C16287(1, 0, 1);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f52889;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f52463 = 0;
-
-    @Override // l.C19815
-    public final boolean isEmpty() {
-        return getFirst() > getLast();
+    public /* synthetic */ C16287(int i) {
+        this.f52889 = i;
     }
 
-    @Override // l.C19815
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C16287)) {
-            return false;
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        switch (this.f52889) {
+            case 0:
+                return ((C20017) obj).mo9073().m47020(((C20017) obj2).mo9073());
+            default:
+                SpannableString spannableString = (SpannableString) obj;
+                SpannableString spannableString2 = (SpannableString) obj2;
+                boolean z = TextUtils.indexOf((CharSequence) spannableString, ':') != -1;
+                if (z == (TextUtils.indexOf((CharSequence) spannableString2, ':') != -1)) {
+                    return spannableString.toString().compareTo(spannableString2.toString());
+                }
+                return z ? 1 : -1;
         }
-        if (isEmpty() && ((C16287) obj).isEmpty()) {
-            return true;
-        }
-        C16287 c16287 = (C16287) obj;
-        return getFirst() == c16287.getFirst() && getLast() == c16287.getLast();
-    }
-
-    @Override // l.C19815
-    public final int hashCode() {
-        if (isEmpty()) {
-            return -1;
-        }
-        return getLast() + (getFirst() * 31);
-    }
-
-    @Override // l.C19815
-    public final String toString() {
-        return getFirst() + ".." + getLast();
     }
 }

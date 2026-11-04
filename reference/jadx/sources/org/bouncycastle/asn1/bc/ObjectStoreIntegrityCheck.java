@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ObjectStoreIntegrityCheck extends ASN1Object implements ASN1Choice {
     public static final int PBKD_MAC_CHECK = 0;
     public static final int SIG_CHECK = 1;

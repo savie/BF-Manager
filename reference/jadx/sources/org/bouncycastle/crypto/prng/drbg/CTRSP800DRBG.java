@@ -12,7 +12,7 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.encoders.Hex;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CTRSP800DRBG implements SP80090DRBG {
     public static final int AES_MAX_BITS_REQUEST = 262144;
     public static final long AES_RESEED_MAX = 140737488355328L;

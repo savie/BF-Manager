@@ -1,155 +1,207 @@
 package l;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.os.Parcelable;
+import android.util.AttributeSet;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import com.umeng.analytics.pro.d;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.᩺ۜᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S7V8 */
+/* JADX INFO: renamed from: l.᩸۬ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L7JV */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class AbstractC22830 extends AbstractC2367 {
+public abstract class AbstractC22830 extends FrameLayout {
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f73994 = 0;
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public float f73995;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public float f73996;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public C4184 f73997;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f73998;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f73999;
 
     /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public byte[] f74279;
+    public float f74000;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f74001;
+
+    /* JADX INFO: renamed from: ۙ */
+    public abstract AbstractC11641 mo16691();
+
+    /* JADX INFO: renamed from: ۙ */
+    public abstract void mo16692(int i);
+
+    /* JADX INFO: renamed from: ۚ */
+    public abstract EnumC10895 mo16693();
+
+    /* JADX INFO: renamed from: ᩷ */
+    public abstract void mo16695(int i);
+
+    /* JADX INFO: renamed from: ᩻ */
+    public abstract void mo16696();
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    public AbstractC22830(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
+        C15243.m36590(context, d.R);
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public AbstractC22830(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        C15243.m36590(context, d.R);
+        this.f73998 = new ArrayList();
+        this.f74001 = true;
+        this.f73999 = -16711681;
+        float fM51485 = m51485(mo16693().m27646());
+        this.f73996 = fM51485;
+        float f = fM51485 / 2.0f;
+        this.f73995 = f;
+        float fM51486 = m51485(mo16693().m27651());
+        this.f74000 = fM51486;
+        if (attributeSet != null) {
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, mo16693().m27649(), 0, 0);
+            this.f73999 = typedArrayObtainStyledAttributes.getColor(mo16693().m27648(), -16711681);
+            m51489();
+            this.f73996 = typedArrayObtainStyledAttributes.getDimension(mo16693().m27647(), fM51485);
+            this.f73995 = typedArrayObtainStyledAttributes.getDimension(mo16693().m27645(), f);
+            this.f74000 = typedArrayObtainStyledAttributes.getDimension(mo16693().m27652(), fM51486);
+            this.f74001 = typedArrayObtainStyledAttributes.getBoolean(mo16693().m27650(), true);
+            typedArrayObtainStyledAttributes.recycle();
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m51493() {
+        return this.f74001;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m51488() {
+        return this.f73999;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final float m51492() {
+        return this.f73996;
+    }
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public byte[] f74280;
-
-    /* JADX INFO: renamed from: ֨ */
-    public abstract String mo11022();
-
-    /* JADX INFO: renamed from: ᩹ */
-    public abstract String mo11023();
-
-    public AbstractC22830(C19925 c19925, byte[] bArr, byte[] bArr2) {
-        super(c19925);
-        this.f74279 = bArr;
-        this.f74280 = bArr2;
+    public final float m51494() {
+        return this.f73995;
     }
 
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ۨ */
-    public final boolean mo7210(byte[] bArr) {
-        int i = this.f8371;
-        C19925 c19925 = this.f8365;
-        if (i == 2 || i == 5) {
-            C14904 c14904 = new C14904(bArr);
-            c14904.m35639(bArr.length);
-            try {
-                this.f74280 = c14904.m35635(1, "")[0];
-                return true;
-            } catch (C5813 unused) {
-                c19925.getClass();
-                C0168.f1257.getClass();
-                return false;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final float m51491() {
+        return this.f74000;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m51487(C4184 c4184) {
+        this.f73997 = c4184;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22084 m51490() {
+        return this.f73997;
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public final void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        post(new RunnableC15052(6, this));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m51483(AbstractC22830 abstractC22830) {
+        C4184 c4184 = abstractC22830.f73997;
+        C15243.m36586(c4184);
+        int iM13362 = c4184.m13362();
+        ArrayList arrayList = abstractC22830.f73998;
+        if (arrayList.size() < iM13362) {
+            abstractC22830.m51486(arrayList.size(), iM13362 - arrayList.size());
+        } else if (arrayList.size() > iM13362) {
+            int size = arrayList.size() - iM13362;
+            for (int i = 0; i < size; i++) {
+                abstractC22830.mo16696();
             }
         }
-        if (i == 4) {
-            try {
-                C14904 c14905 = new C14904(bArr);
-                if (c14905.m35638() != c14905.m35638()) {
-                    throw new C5813("check failed");
-                }
-                C8491.m22171(c14905.m35628());
-                this.f74279 = c14905.m35628();
-                this.f74280 = Arrays.copyOf(c14905.m35628(), mo7209());
-                byte[] bArrM35628 = c14905.m35628();
-                this.f8368 = new String(bArrM35628, 0, bArrM35628.length, StandardCharsets.UTF_8);
-                return true;
-            } catch (Exception unused2) {
-                c19925.getClass();
-                C0168.f1257.getClass();
-                return false;
-            }
+        abstractC22830.m51489();
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            C1947.m6728((int) abstractC22830.f73996, (ImageView) it.next());
         }
-        if (i != 3) {
-            c19925.getClass();
-            C0168.f1257.getClass();
-            return false;
-        }
-        try {
-            InterfaceC15069 interfaceC15069 = (InterfaceC15069) Class.forName(C0168.m1327("keypairgen_fromprivate.eddsa")).asSubclass(InterfaceC15069.class).getDeclaredConstructor(null).newInstance(null);
-            interfaceC15069.mo36098(mo11023(), bArr);
-            this.f74279 = interfaceC15069.mo36099();
-            this.f74280 = interfaceC15069.mo36100();
-            return true;
-        } catch (Exception | LinkageError unused3) {
-            c19925.getClass();
-            C0168.f1257.getClass();
-            return false;
+        C4184 c4185 = abstractC22830.f73997;
+        C15243.m36586(c4185);
+        if (c4185.m13368()) {
+            C4184 c4186 = abstractC22830.f73997;
+            C15243.m36586(c4186);
+            c4186.m13366();
+            AbstractC11641 abstractC11641Mo16691 = abstractC22830.mo16691();
+            C4184 c4187 = abstractC22830.f73997;
+            C15243.m36586(c4187);
+            c4187.m13364(abstractC11641Mo16691);
+            C4184 c4188 = abstractC22830.f73997;
+            C15243.m36586(c4188);
+            abstractC11641Mo16691.m29248(0.0f, c4188.m13367());
         }
     }
 
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ۚ */
-    public final byte[] mo7208() {
-        byte[] bArrMo7208 = super.mo7208();
-        if (bArrMo7208 != null) {
-            return bArrMo7208;
-        }
-        if (this.f74279 == null) {
-            return null;
-        }
-        return C14904.m35624(new byte[][]{mo7202(), this.f74279}).f48679;
-    }
-
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ۖ */
-    public final byte[] mo7202() {
-        String strMo11022 = mo11022();
-        byte[] bArr = C8491.f29422;
-        return strMo11022.getBytes(StandardCharsets.UTF_8);
-    }
-
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ܰ */
-    public final byte[] mo7212(byte[] bArr) {
-        return mo7206(mo11022(), bArr);
-    }
-
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ۙ */
-    public final byte[] mo7206(String str, byte[] bArr) {
-        try {
-            InterfaceC1434 interfaceC1434 = (InterfaceC1434) Class.forName(C0168.m1327(str)).asSubclass(InterfaceC1434.class).getDeclaredConstructor(null).newInstance(null);
-            interfaceC1434.init();
-            interfaceC1434.mo5009(this.f74280);
-            interfaceC1434.update(bArr);
-            byte[] bArrSign = interfaceC1434.sign();
-            byte[] bArr2 = C8491.f29422;
-            return C14904.m35624(new byte[][]{str.getBytes(StandardCharsets.UTF_8), bArrSign}).f48679;
-        } catch (Exception | LinkageError unused) {
-            this.f8365.getClass();
-            C0168.f1257.getClass();
-            return null;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final void m51489() {
+        int size = this.f73998.size();
+        for (int i = 0; i < size; i++) {
+            mo16695(i);
         }
     }
 
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo7203() {
-        C8491.m22182(this.f74280);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final float m51485(float f) {
+        return getContext().getResources().getDisplayMetrics().density * f;
     }
 
-    @Override // l.AbstractC2367
-    /* JADX INFO: renamed from: ܰ */
-    public final byte[] mo7211() throws C5813 {
-        if (this.f8367) {
-            throw new C5813("key is encrypted.");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m51486(int i, int i2) {
+        for (int i3 = 0; i3 < i2; i3++) {
+            mo16692(i + i3);
         }
-        C14904 c14904 = new C14904();
-        c14904.m35627(mo7202());
-        c14904.m35627(this.f74279);
-        byte[] bArr = this.f74280;
-        int length = bArr.length + this.f74279.length;
-        byte[] bArr2 = new byte[length];
-        System.arraycopy(bArr, 0, bArr2, 0, bArr.length);
-        byte[] bArr3 = this.f74279;
-        System.arraycopy(bArr3, 0, bArr2, this.f74280.length, bArr3.length);
-        c14904.m35640(0, length, bArr2);
-        c14904.m35627(C8491.m22175(this.f8368, StandardCharsets.UTF_8));
-        int iM35626 = c14904.m35626();
-        byte[] bArr4 = new byte[iM35626];
-        c14904.m35632(0, iM35626, bArr4);
-        return bArr4;
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void m51484() {
+        if (this.f73997 == null) {
+            return;
+        }
+        post(new RunnableC22358(5, this));
+    }
+
+    @Override // android.widget.FrameLayout, android.view.ViewGroup, android.view.View
+    public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
+        super.onLayout(z, i, i2, i3, i4);
+        if (getLayoutDirection() == 1) {
+            setLayoutDirection(0);
+            setRotation(180.0f);
+            requestLayout();
+        }
+    }
+
+    @Override // android.view.View
+    public final void onRestoreInstanceState(Parcelable parcelable) {
+        super.onRestoreInstanceState(parcelable);
+        post(new RunnableC8143(4, this));
     }
 }

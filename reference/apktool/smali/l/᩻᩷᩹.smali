@@ -1,81 +1,92 @@
-.class public final synthetic Ll/᩻᩷᩹;
+.class public final Ll/᩻᩷᩹;
 .super Ljava/lang/Object;
-.source "17CG"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "51RR"
 
 
-# instance fields
-.field public final synthetic ܺ:I
+# static fields
+.field public static ۙ:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public static ۙ(Landroid/content/Context;)Ljava/lang/String;
+    .locals 2
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 33
+    sget-object v0, Ll/᩻᩷᩹;->ۙ:Ljava/lang/String;
 
-    iput p1, p0, Ll/᩻᩷᩹;->ܺ:I
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    return-void
-.end method
+    move-result v0
 
+    if-nez v0, :cond_0
 
-# virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+    .line 34
+    sget-object p0, Ll/᩻᩷᩹;->ۙ:Ljava/lang/String;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    return-object p0
 
-    move-result-object p1
+    :cond_0
+    const-string v0, ""
 
-    return-object p1
-.end method
+    if-nez p0, :cond_1
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    return-object v0
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 39
+    :cond_1
+    sput-object v0, Ll/᩻᩷᩹;->ۙ:Ljava/lang/String;
+
+    const-string v0, "window"
+
+    .line 40
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/WindowManager;
+
+    if-eqz p0, :cond_2
+
+    .line 42
+    invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+    move-result v0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 43
+    invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
-.end method
+    invoke-virtual {p0}, Landroid/view/Display;->getHeight()I
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
+    move-result p0
 
-    .line 2
-    check-cast p1, Ll/ۢ᩷᩹;
+    .line 44
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 157
-    iget p1, p1, Ll/ۢ᩷᩹;->ۙ:I
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v0, p0, Ll/᩻᩷᩹;->ܺ:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-ne p1, v0, :cond_0
+    const-string v0, "x"
 
-    const/4 p1, 0x1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p1
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return p1
+    move-result-object p0
+
+    sput-object p0, Ll/᩻᩷᩹;->ۙ:Ljava/lang/String;
+
+    .line 47
+    :cond_2
+    sget-object p0, Ll/᩻᩷᩹;->ۙ:Ljava/lang/String;
+
+    return-object p0
 .end method

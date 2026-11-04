@@ -1,31 +1,12 @@
 package l;
 
-import android.widget.EditText;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.ۖ᩸֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: H88G */
+/* JADX INFO: renamed from: l.ۖܺ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: N6PY */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2789 extends AbstractC7023 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC9141 f10626;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ EditText f10627;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ EditText f10628;
-
-    @Override // l.InterfaceC23252
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List mo8481() {
-        return this.f10626.mo11851(this.f10628.getText().toString(), this.f10627.getText().toString());
-    }
-
-    public C2789(AbstractC9141 abstractC9141, EditText editText, EditText editText2) {
-        this.f10626 = abstractC9141;
-        this.f10628 = editText;
-        this.f10627 = editText2;
+public final class C2789 extends C25153 {
+    @Override // l.InterfaceC2032
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2202(AbstractC9488 abstractC9488, Object obj, int i, int i2, String str, C10234 c10234) {
+        throw new C11014(EnumC19965.SYNTAX, i, i2, str);
     }
 }

@@ -19,7 +19,7 @@ import org.bouncycastle.asn1.x9.X9ObjectIdentifiers;
 import org.bouncycastle.crypto.params.DSAPublicKeyParameters;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JDKDSAPublicKey implements DSAPublicKey {
     public static final long serialVersionUID = 1752452449903495175L;
     public DSAParams dsaSpec;

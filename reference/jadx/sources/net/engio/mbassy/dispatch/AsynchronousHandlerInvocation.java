@@ -5,7 +5,7 @@ import net.engio.mbassy.bus.MessagePublication;
 import net.engio.mbassy.bus.config.IBusConfiguration;
 import net.engio.mbassy.subscription.AbstractSubscriptionContextAware;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AsynchronousHandlerInvocation extends AbstractSubscriptionContextAware implements IHandlerInvocation {
     public final IHandlerInvocation delegate;
     public final ExecutorService executor;

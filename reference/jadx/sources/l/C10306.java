@@ -1,42 +1,50 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.view.MenuItem;
 
-/* JADX INFO: renamed from: l.ۤ۬ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5ATX */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10306 extends C15818 {
+/* JADX INFO: renamed from: l.ۢᩳᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L9CC */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10306 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m26121() {
-        ArrayList arrayList = new ArrayList(values());
-        Collections.sort(arrayList);
-        if (arrayList.isEmpty()) {
-            return "";
+    public final int f32882;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Drawable f32883;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f32884;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f32885;
+
+    public C10306(int i, int i2, CharSequence charSequence, Drawable drawable) {
+        this.f32884 = i;
+        this.f32882 = i2;
+        this.f32885 = charSequence == null ? null : charSequence.toString();
+        this.f32883 = drawable;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C10306 m26554(MenuItem menuItem) {
+        return new C10306(menuItem.getItemId(), menuItem.getGroupId(), menuItem.getTitle(), menuItem.getIcon());
+    }
+
+    public final int hashCode() {
+        return C17359.hash(Integer.valueOf(this.f32884), Integer.valueOf(this.f32882), this.f32885, this.f32883);
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
         }
-        if (arrayList.size() == 1) {
-            return ((C8895) arrayList.get(0)).m23145();
+        if (!(obj instanceof C10306)) {
+            return false;
         }
-        StringBuilder sb = new StringBuilder("(?:");
-        Iterator it = arrayList.iterator();
-        boolean z = false;
-        boolean z2 = true;
-        while (it.hasNext()) {
-            String strM23145 = ((C8895) it.next()).m23145();
-            if (strM23145.isEmpty()) {
-                z = true;
-            } else {
-                if (z2) {
-                    z2 = false;
-                } else {
-                    sb.append('|');
-                }
-                sb.append(strM23145);
-            }
-        }
-        sb.append(z ? ")?" : MotionUtils.EASING_TYPE_FORMAT_END);
-        return sb.toString();
+        C10306 c10306 = (C10306) obj;
+        return this.f32884 == c10306.f32884 && this.f32882 == c10306.f32882 && TextUtils.equals(this.f32885, c10306.f32885) && C17359.equals(this.f32883, c10306.f32883);
     }
 }

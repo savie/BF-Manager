@@ -5,7 +5,7 @@ import android.content.ContextWrapper;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import java.io.File;
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: compiled from: D59P */
 /* JADX INFO: loaded from: classes.dex */
@@ -29,7 +29,7 @@ public class c extends ContextWrapper {
 
     @Override // android.content.ContextWrapper, android.content.Context
     public File getDatabasePath(String str) {
-        File file = new File(C22697.m50267(new StringBuilder(), this.a, str));
+        File file = new File(C8947.m23910(new StringBuilder(), this.a, str));
         if (!file.getParentFile().exists() && !file.getParentFile().isDirectory()) {
             file.getParentFile().mkdirs();
         }

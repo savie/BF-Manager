@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final ֡:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
+.field public ֡:Ljava/lang/String;
 
-.field public ۫:Ljava/util/HashMap;
+.field public ۟:Ljava/util/HashMap;
 
-.field public ܽ:Ljava/lang/String;
+.field public final ܿ:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
 
-.field public ܿ:Ljava/lang/String;
+.field public ᩳ:Ljava/lang/String;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
 
     return-void
 .end method
@@ -62,13 +62,13 @@
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۫:Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۟:Ljava/util/HashMap;
 
     :cond_0
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 5
 
     const-string v0, "Tagging"
@@ -96,7 +96,7 @@
     if-eqz p1, :cond_4
 
     .line 2325
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;
 
     invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/BucketTaggingConfiguration;->ۙ()Ljava/util/ArrayList;
 
@@ -104,7 +104,7 @@
 
     new-instance v0, Lcom/amazonaws/services/s3/model/TagSet;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۫:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۟:Ljava/util/HashMap;
 
     invoke-direct {v0, v1}, Lcom/amazonaws/services/s3/model/TagSet;-><init>(Ljava/util/HashMap;)V
 
@@ -112,7 +112,7 @@
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 2327
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۫:Ljava/util/HashMap;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۟:Ljava/util/HashMap;
 
     return-void
 
@@ -138,25 +138,25 @@
     if-eqz p1, :cond_4
 
     .line 2333
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܽ:Ljava/lang/String;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->֡:Ljava/lang/String;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܿ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ᩳ:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
     .line 2334
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۫:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->۟:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2336
     :cond_1
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܽ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->֡:Ljava/lang/String;
 
     .line 2337
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܿ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ᩳ:Ljava/lang/String;
 
     return-void
 
@@ -182,11 +182,11 @@
     if-eqz v0, :cond_3
 
     .line 2343
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܽ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->֡:Ljava/lang/String;
 
     return-void
 
@@ -201,11 +201,11 @@
     if-eqz p1, :cond_4
 
     .line 2345
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ܿ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketTaggingConfigurationHandler;->ᩳ:Ljava/lang/String;
 
     :cond_4
     return-void

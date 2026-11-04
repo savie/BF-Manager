@@ -1,162 +1,159 @@
 package l;
 
+import android.content.DialogInterface;
+import android.view.View;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import bin.mt.plus.Main;
 import bin.mt.plus.R;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.֫ۢ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21XP */
+/* JADX INFO: renamed from: l.֫ۜ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: J1YX */
 /* JADX INFO: loaded from: classes3.dex */
-public class C1749 extends AbstractC23941 {
+public final class C1749 extends AbstractViewOnClickListenerC23950 {
 
-    /* JADX INFO: renamed from: ᩳۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f6874 = 0;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f5959;
 
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f6875;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12915 f5960;
 
-    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f6876;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Main f5961;
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۟ */
-    public final C14600 mo3078() {
-        return C1362.f5727;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ArrayList f5962;
+
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15102 f5963;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f5964;
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC22044 f5965;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C1749(C17410 c17410, Main main, ArrayList arrayList, C12915 c12915, ArrayList arrayList2, Main main2, C15102 c15102, boolean z, String str, AbstractC22044 abstractC22044) {
+        super(main, arrayList, false, false);
+        this.f5960 = c12915;
+        this.f5962 = arrayList2;
+        this.f5961 = main2;
+        this.f5963 = c15102;
+        this.f5959 = z;
+        this.f5964 = str;
+        this.f5965 = abstractC22044;
     }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۘ */
-    public final void mo3075() {
-        m41591(R.string.MT_Protector);
-        m41562(R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۜ */
-    public final C5202 mo3077() throws IOException {
-        List<AbstractC20745> list = (List) C20318.stream(m41566("ARG_PATHS")).map(new C11739(1)).collect(C1890.toList());
-        C7474 c7474M19963 = C7474.m19963(15);
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            BufferedInputStream bufferedInputStreamM46719 = ((AbstractC20745) it.next()).m46719();
-            try {
-                C7474 c7474M19961 = C7474.m19961(C10665.m26865(bufferedInputStreamM46719));
-                bufferedInputStreamM46719.close();
-                if (c7474M19963.f24881 < c7474M19961.f24881) {
-                    c7474M19963 = c7474M19961;
-                }
-            } catch (Throwable th) {
-                try {
-                    bufferedInputStreamM46719.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-                throw th;
+    @Override // l.AbstractViewOnClickListenerC23950
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void mo6150() {
+        String strM53486 = m53486();
+        String strM53487 = m53487();
+        String strM53489 = m53489();
+        final C12915 c12915 = this.f5960;
+        List<InterfaceC2386> listM31985 = c12915.m31985();
+        C3700 c3700 = new C3700(listM31985.size(), true);
+        for (InterfaceC2386 interfaceC2386 : listM31985) {
+            if (!interfaceC2386.mo8106()) {
+                c3700.m12021(interfaceC2386.getName());
             }
         }
-        boolean z = ApplicationC0716.f2992.getBoolean("delete_dex_files_after_merged", false);
-        C8485 c8485 = new C8485(c7474M19963);
-        for (AbstractC20745 abstractC20745 : list) {
-            mo21455(0);
-            mo41554(C16737.m39264(R.string.MT_Protector, abstractC20745.getName()));
-            InputStream inputStreamMo33970 = abstractC20745.mo33970();
-            try {
-                C17684 c17684M41160 = C17684.m41160(inputStreamMo33970);
-                int iM41201 = c17684M41160.m41201();
-                int i = 0;
-                for (C7807 c7807 : (AbstractC18494) c17684M41160.mo34148()) {
-                    if (mo2357()) {
-                        C5202 c5202M14378 = C5202.m14378();
-                        inputStreamMo33970.close();
-                        return c5202M14378;
-                    }
-                    mo21455(i / iM41201);
-                    c8485.m22160((InterfaceC22762) c7807);
-                    i += 100;
-                    if (c8485.f51694.getItemCount() > 65536) {
-                        throw new C4987(R.string.MT_Protector);
-                    }
-                    if (c8485.f51680.getItemCount() > 65536) {
-                        throw new C4987(R.string.MT_Protector);
-                    }
-                    if (c8485.f51666.getItemCount() > 65536) {
-                        throw new C4987("Merge failed, too many type references in Dex, you can try to merge fewer dex files.");
-                    }
-                }
-                inputStreamMo33970.close();
-            } catch (Throwable th3) {
-                if (inputStreamMo33970 != null) {
-                    try {
-                        inputStreamMo33970.close();
-                    } catch (Throwable th4) {
-                        th3.addSuppressed(th4);
-                    }
-                }
-                throw th3;
+        boolean zM53485 = m53485();
+        Map map = Collections.EMPTY_MAP;
+        final ArrayList arrayList = this.f5962;
+        ArrayList<C13395> arrayListM17253 = C5938.m17253(arrayList, strM53486, strM53487, strM53489, zM53485, map);
+        final ArrayList arrayListM17252 = C5938.m17252(arrayListM17253);
+        C5938.m17254(c3700, arrayListM17252);
+        ArrayList arrayList2 = new ArrayList(arrayListM17253.size());
+        boolean z = false;
+        for (C13395 c13395 : arrayListM17253) {
+            if (!c13395.m33028()) {
+                z = true;
             }
+            arrayList2.add(c13395.m33023());
         }
-        m41562(R.string.MT_Protector);
-        AbstractC20745 abstractC20745M15313 = C5553.m15313(m41585("outputPath"), new String[0]);
-        this.f6875 = abstractC20745M15313;
-        if (!z || !abstractC20745M15313.mo33975()) {
-            c8485.m37937(this.f6875);
-            if (z) {
-                m5795(list);
-            }
+        Main main = this.f5961;
+        View viewM40395 = main.m40395(R.layout.MT_Protector);
+        ((TextView) viewM40395.findViewById(R.id.title)).setText(R.string.MT_Protector);
+        ListView listView = (ListView) viewM40395.findViewById(R.id.MT_Protector);
+        C18597.m43179(listView);
+        listView.setAdapter((ListAdapter) new C19131(R.layout.MT_Protector, main, arrayList2));
+        C2361 c2361BuildDialog = main.buildDialog();
+        c2361BuildDialog.m8005(viewM40395);
+        if (strM53486.equals("{P}{S}") && m53487().isEmpty()) {
+            c2361BuildDialog.m8026(R.string.MT_Protector, null);
+        } else if (z) {
+            m53484();
+            ((TextView) viewM40395.findViewById(R.id.title)).setText(R.string.MT_Protector);
+            c2361BuildDialog.m8026(R.string.MT_Protector, null);
         } else {
-            AbstractC20745 abstractC20745M46733 = this.f6875.m46733(".tmp");
-            this.f6876 = abstractC20745M46733;
-            c8485.m37937(abstractC20745M46733);
-            m5795(list);
-            this.f6876.m46699(this.f6875, (Runnable) null);
+            m53484();
+            final C15102 c15102 = this.f5963;
+            final boolean z2 = this.f5959;
+            final String str = this.f5964;
+            final AbstractC22044 abstractC22044 = this.f5965;
+            c2361BuildDialog.m8026(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.۫ۜ۫
+                @Override // android.content.DialogInterface.OnClickListener
+                public final void onClick(DialogInterface dialogInterface, int i) {
+                    this.f41433.m6148(arrayList, arrayListM17252, c15102, z2, c12915, str, abstractC22044);
+                }
+            });
+            c2361BuildDialog.m8022(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
         }
-        return C5202.m14379();
+        c2361BuildDialog.m8018(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
+        c2361BuildDialog.m8016().m22440().setOnClickListener(new ViewOnClickListenerC8679(2, arrayList2));
     }
 
+    /* JADX INFO: Access modifiers changed from: private */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m5795(List list) {
-        boolean z = list.size() > 1;
-        if (z) {
-            m41591(R.string.MT_Protector);
-            mo21455(0);
-        }
-        Iterator it = list.iterator();
+    public /* synthetic */ void m6148(ArrayList arrayList, ArrayList arrayList2, C15102 c15102, boolean z, final C12915 c12915, String str, final AbstractC22044 abstractC22044) {
+        HashMap map = new HashMap();
+        Iterator it = arrayList.iterator();
         while (it.hasNext()) {
-            AbstractC20745 abstractC20745 = (AbstractC20745) it.next();
-            if (z) {
-                mo41554(abstractC20745.getName());
-            }
-            abstractC20745.mo24647();
+            InterfaceC2386 interfaceC2386 = (InterfaceC2386) it.next();
+            map.put(interfaceC2386.getName(), Boolean.valueOf(interfaceC2386.isDirectory()));
         }
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3076(Main main, C11545 c11545, C11545 c11546, C5202 c5202) {
-        if (c5202.m14380() && m41579(c11545)) {
-            c11545.m28831();
-            c11545.m28763(this.f6875.getName());
-            c11545.m28830();
+        final ArrayList arrayList3 = new ArrayList(arrayList2.size());
+        Iterator it2 = arrayList2.iterator();
+        while (it2.hasNext()) {
+            C13395 c13395 = (C13395) it2.next();
+            arrayList3.add(new C11443(c13395.m33026(), c13395.m33027(), map.get(c13395.m33026()) == Boolean.TRUE, true));
         }
-    }
+        m53481();
+        final String strSubstring = c15102.m20218().substring(1);
+        if (z) {
+            C0938.m3749(new InterfaceC18837() { // from class: l.ۚۜ۫
+                @Override // l.InterfaceC18837
+                /* JADX INFO: renamed from: ۙ */
+                public final /* synthetic */ void mo1268() {
+                }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3079(C5202 c5202) {
-        AbstractC20745 abstractC20745 = this.f6876;
-        if (abstractC20745 != null) {
-            abstractC20745.mo24647();
+                @Override // l.InterfaceC18837
+                /* JADX INFO: renamed from: ۙ */
+                public final /* synthetic */ boolean mo1270(Exception exc) {
+                    return false;
+                }
+
+                @Override // l.InterfaceC18837
+                /* JADX INFO: renamed from: ۙ */
+                public final void mo1269(C9651 c9651, boolean z2) {
+                    this.f19079.m53482();
+                    List list = Collections.EMPTY_LIST;
+                    C17410.m40882(c12915, abstractC22044, strSubstring, arrayList3, Collections.EMPTY_LIST, c9651, z2);
+                }
+            }, c12915.m31979(), str);
+            return;
         }
-        C21094.m47530();
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ᩳۙ */
-    public final CharSequence mo3080() {
-        return C16737.m39288(R.string.MT_Protector);
+        m53482();
+        List list = Collections.EMPTY_LIST;
+        C17410.m40882(c12915, abstractC22044, strSubstring, arrayList3, Collections.EMPTY_LIST, null, false);
     }
 }

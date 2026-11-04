@@ -24,7 +24,7 @@
     const-string v2, "KeyFactory.LMS"
 
     .line 0
-    invoke-static {p1, v2, v0, v1}, Ll/ᩴᩳۚ;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v2, v0, v1}, Ll/᩷ܳۚ;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -32,7 +32,7 @@
 
     const-string v2, "LMS"
 
-    invoke-static {v0, v1, p1, v2}, Ll/۠ۛ᩺;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1, v2}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/StringBuilder;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;)V
 
     const-string v0, "org.bouncycastle.pqc.jcajce.provider.lms.LMSKeyPairGeneratorSpi"
 
@@ -40,7 +40,7 @@
 
     const-string v4, "KeyPairGenerator.LMS"
 
-    invoke-static {p1, v4, v0, v3, v1}, Ll/ܺ᩹᩺;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
+    invoke-static {p1, v4, v0, v3, v1}, Ll/᩷ۖ᩹;->ۙ(Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/MT_Protector_res_0x7f080266">
-    <target
-        android:name="@string/MT_Protector_res_0x7f120654"
-        android:animation="@drawable/MT_Protector_res_0x7f08001d"/>
-    <target
-        android:name="@string/MT_Protector_res_0x7f120654"
-        android:animation="@drawable/MT_Protector_res_0x7f08001e"/>
-    <target
-        android:name="@string/MT_Protector_res_0x7f120655"
-        android:animation="@drawable/MT_Protector_res_0x7f08001f"/>
-</animated-vector>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="?attr/MT_Protector_res_0x7f040101"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#fff"
+        android:pathData="M3,18h6v-2L3,16v2zM3,6v2h18L21,6L3,6zM3,13h12v-2L3,11v2z"/>
+</vector>

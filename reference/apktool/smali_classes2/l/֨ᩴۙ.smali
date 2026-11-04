@@ -1,76 +1,59 @@
 .class public final Ll/֨ᩴۙ;
 .super Ljava/lang/Object;
-.source "S8TZ"
+.source "057Y"
 
 
-# static fields
-.field public static final ۖ:Ljava/util/UUID;
+# instance fields
+.field public final ۙ:Ljava/lang/String;
 
-.field public static final ۙ:Ljava/util/UUID;
+.field public final ۤ:I
 
-.field public static final ۚ:Ljava/util/UUID;
+.field public final ᩷:I
 
-.field public static final ۨ:Ljava/util/UUID;
-
-.field public static final ܰ:Ljava/util/UUID;
+.field public final ᩸:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    .line 1101
-    new-instance v0, Ljava/util/UUID;
+    .line 3614
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0x0
+    .line 3615
+    iput-object p1, p0, Ll/֨ᩴۙ;->ۙ:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+    .line 3616
+    iput p2, p0, Ll/֨ᩴۙ;->᩷:I
 
-    sput-object v0, Ll/֨ᩴۙ;->ۖ:Ljava/util/UUID;
+    .line 3617
+    iput p3, p0, Ll/֨ᩴۙ;->ۤ:I
 
-    .line 1108
-    new-instance v0, Ljava/util/UUID;
+    const/4 p1, -0x1
 
-    const-wide v1, 0x1077efecc0b24d02L
+    .line 3618
+    iput p1, p0, Ll/֨ᩴۙ;->᩸:I
 
-    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
+    return-void
+.end method
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+.method public constructor <init>(Ljava/lang/String;III)V
+    .locals 0
 
-    sput-object v0, Ll/֨ᩴۙ;->ܰ:Ljava/util/UUID;
+    .line 3621
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1115
-    new-instance v0, Ljava/util/UUID;
+    .line 3622
+    iput-object p1, p0, Ll/֨ᩴۙ;->ۙ:Ljava/lang/String;
 
-    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
+    .line 3623
+    iput p2, p0, Ll/֨ᩴۙ;->᩷:I
 
-    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
+    .line 3624
+    iput p3, p0, Ll/֨ᩴۙ;->ۤ:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ll/֨ᩴۙ;->ۙ:Ljava/util/UUID;
-
-    .line 1122
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
-
-    const-wide v3, -0x5c37d8232ae2de13L
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ll/֨ᩴۙ;->ۚ:Ljava/util/UUID;
-
-    .line 1130
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x65fb0f8667bfbd7aL
-
-    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ll/֨ᩴۙ;->ۨ:Ljava/util/UUID;
+    .line 3625
+    iput p4, p0, Ll/֨ᩴۙ;->᩸:I
 
     return-void
 .end method

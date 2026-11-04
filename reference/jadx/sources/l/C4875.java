@@ -1,10 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩶۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: O8UQ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4875 {
+import android.view.View;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractDialogInterfaceOnClickListenerC17341 f17149;
+/* JADX INFO: renamed from: l.ۙۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 71DP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4875 extends AbstractC17553 {
+    @Override // l.AbstractC17553
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo6509(float f, View view) {
+        view.setElevation(m41207(f));
+    }
 }

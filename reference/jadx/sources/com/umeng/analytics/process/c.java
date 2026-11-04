@@ -5,13 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.umeng.commonsdk.service.UMGlobalContext;
 import java.util.concurrent.atomic.AtomicInteger;
-import l.ConcurrentMapC13783;
+import l.ConcurrentMapC17249;
 
 /* JADX INFO: compiled from: EBML */
 /* JADX INFO: loaded from: classes.dex */
 public class c {
     public static c a;
-    public ConcurrentMapC13783 b = new ConcurrentMapC13783();
+    public ConcurrentMapC17249 b = new ConcurrentMapC17249();
     public Context c;
 
     public synchronized void b(String str) {

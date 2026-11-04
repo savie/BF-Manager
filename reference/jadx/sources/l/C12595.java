@@ -1,14 +1,19 @@
 package l;
 
-import bin.mt.json.JSONValue;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import java.lang.reflect.InvocationTargetException;
 
-/* JADX INFO: renamed from: l.۫ᩴ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 06WR */
+/* JADX INFO: renamed from: l.ۨ᩶, reason: contains not printable characters */
+/* JADX INFO: compiled from: U5Z7 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12595 implements InterfaceC11163 {
-    @Override // l.InterfaceC11163
-    /* JADX INFO: renamed from: ۙ */
-    public final C12731 mo2806(JSONValue jSONValue, String str, String str2) {
-        return C17533.m40808(jSONValue, str, str2);
+public final class C12595 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m31303(Activity activity, String str) {
+        try {
+            return ((Boolean) PackageManager.class.getMethod("shouldShowRequestPermissionRationale", String.class).invoke(activity.getApplication().getPackageManager(), str)).booleanValue();
+        } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException unused) {
+            return activity.shouldShowRequestPermissionRationale(str);
+        }
     }
 }

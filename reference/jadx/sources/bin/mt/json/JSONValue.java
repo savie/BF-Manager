@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.io.StringWriter;
 import java.io.Writer;
-import l.C4323;
-import l.C5029;
+import l.C1486;
+import l.C7452;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class JSONValue implements Serializable {
@@ -41,7 +41,7 @@ public abstract class JSONValue implements Serializable {
         return false;
     }
 
-    public abstract void write(C4323 c4323);
+    public abstract void write(C1486 c1486);
 
     public JSONObject asObject() {
         throw new UnsupportedOperationException("Not an object: " + this);
@@ -86,9 +86,9 @@ public abstract class JSONValue implements Serializable {
         if (writerConfig == null) {
             throw new NullPointerException("config is null");
         }
-        C5029 c5029 = new C5029(writer, 128);
-        write(writerConfig.createWriter(c5029));
-        c5029.flush();
+        C7452 c7452 = new C7452(writer, 128);
+        write(writerConfig.createWriter(c7452));
+        c7452.flush();
     }
 
     public String toString() {

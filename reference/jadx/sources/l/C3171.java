@@ -1,31 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗۤۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes2.dex */
-public final enum C3171 extends EnumC8422 {
-    public /* synthetic */ C3171() {
-        this("ScriptDataEscapedEndTagOpen", 25);
+/* JADX INFO: renamed from: l.ۗۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y4NV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3171 extends AbstractC12384 implements InterfaceC8413 {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f10288 = EnumC7011.Format11x;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f10289;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " v" + mo1542();
     }
 
-    public C3171(String str, int i) {
-        super(str, i, 0);
+    public C3171(int i, EnumC22631 enumC22631) {
+        super(enumC22631);
+        C6544.m18435(i);
+        this.f10289 = i;
     }
 
-    @Override // l.EnumC8422
+    @Override // l.InterfaceC12142
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        if (c2424.m7379()) {
-            c8111.m21355(false);
-            AbstractC22928 abstractC22928 = c8111.f28411;
-            char cM7392 = c2424.m7392();
-            abstractC22928.getClass();
-            abstractC22928.m50750(String.valueOf(cM7392));
-            c8111.f28405.append(c2424.m7392());
-            c8111.m21360(EnumC8422.f29248);
-            return;
-        }
-        c8111.m21357("</");
-        c8111.m21353(EnumC8422.f29235);
+    public final int mo1542() {
+        return this.f10289;
+    }
+
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f10288;
     }
 }

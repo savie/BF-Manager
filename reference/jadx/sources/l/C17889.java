@@ -1,27 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: renamed from: l.ܽ᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
 /* JADX INFO: loaded from: classes5.dex */
-public final enum C17889 extends EnumC7306 {
-    public /* synthetic */ C17889() {
-        this("FORMAT_11N", 3);
-    }
-
-    public C17889(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC7306
+public final /* synthetic */ class C17889 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        return new C20007(this, EnumC7306.m19496(i), 0, 0, (EnumC7306.m19492(i) << 28) >> 28, EnumC7306.m19495(i));
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    @Override // l.EnumC7306
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        EnumC7306.m19460(abstractC17806.m41391(), EnumC7306.m19472(abstractC17806.mo16133(), abstractC17806.m41386()));
-        interfaceC21334.m47859();
+    public final boolean mo1303(int i) {
+        if (i >= 48 && i <= 57) {
+            return true;
+        }
+        if (i >= 65 && i <= 70) {
+            return true;
+        }
+        if (i >= 97 && i <= 102) {
+            return true;
+        }
+        if (i >= 65296 && i <= 65305) {
+            return true;
+        }
+        if (i < 65313 || i > 65318) {
+            return i >= 65345 && i <= 65350;
+        }
+        return true;
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

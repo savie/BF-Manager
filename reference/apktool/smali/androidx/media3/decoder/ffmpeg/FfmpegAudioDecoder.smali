@@ -1,56 +1,56 @@
 .class public final Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;
-.super Ll/۫ܺۙ;
+.super Ll/ܺܰۙ;
 .source "FfmpegAudioDecoder.java"
 
 
 # instance fields
-.field public final ۟:Ll/ۗܺۙ;
+.field public final ۗ:Ljava/lang/String;
 
-.field public final ۠:Ljava/lang/String;
+.field public ۘ:J
 
-.field public final ۡ:[B
+.field public ۛ:Z
 
-.field public ۤ:Z
+.field public final ۨ:[B
 
-.field public ܺ:I
-
-.field public volatile ᩴ:I
+.field public ܰ:I
 
 .field public final ᩵:I
 
 .field public volatile ᩶:I
 
-.field public ᩷:J
+.field public volatile ᩹:I
+
+.field public final ᩺:Ll/᩺ܰۙ;
 
 
 # direct methods
-.method public constructor <init>(ILl/۟ᩴۙ;Z)V
+.method public constructor <init>(ILl/ܳ᩹ۙ;Z)V
     .locals 10
 
     const/16 v0, 0x10
 
-    new-array v1, v0, [Ll/ܺܺۙ;
+    new-array v1, v0, [Ll/ۚܰۙ;
 
     new-array v0, v0, [Landroidx/media3/decoder/SimpleDecoderOutputBuffer;
 
     .line 68
-    invoke-direct {p0, v1, v0}, Ll/۫ܺۙ;-><init>([Ll/ܺܺۙ;[Ll/֡ܺۙ;)V
+    invoke-direct {p0, v1, v0}, Ll/ܺܰۙ;-><init>([Ll/ۚܰۙ;[Ll/ۧܰۙ;)V
 
     .line 69
-    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۨ()Z
+    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۤ()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
     .line 72
-    iget-object v0, p2, Ll/۟ᩴۙ;->ܰۙ:Ljava/lang/String;
+    iget-object v0, p2, Ll/ܳ᩹ۙ;->᩷ۙ:Ljava/lang/String;
 
     .line 155
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 73
-    invoke-static {p2}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ(Ll/۟ᩴۙ;)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ(Ll/ܳ᩹ۙ;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -58,10 +58,10 @@
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 73
-    iput-object v2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۠:Ljava/lang/String;
+    iput-object v2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۗ:Ljava/lang/String;
 
     .line 74
-    iget-object v1, p2, Ll/۟ᩴۙ;->ܺ:Ljava/util/List;
+    iget-object v1, p2, Ll/ܳ᩹ۙ;->ܰ:Ljava/util/List;
 
     .line 218
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -307,10 +307,10 @@
 
     .line 74
     :goto_2
-    iput-object v8, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۡ:[B
+    iput-object v8, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۨ:[B
 
-    .line 179
-    iget-object v1, p2, Ll/۟ᩴۙ;->۬:Ljava/lang/String;
+    .line 214
+    iget-object v1, p2, Ll/ܳ᩹ۙ;->ۚ:Ljava/lang/String;
 
     const-string v4, "audio/mpeg"
 
@@ -322,7 +322,7 @@
 
     const-string v0, "video/mp4"
 
-    .line 180
+    .line 215
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -331,7 +331,7 @@
 
     const-string v0, "audio/mp4"
 
-    .line 181
+    .line 216
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -340,7 +340,7 @@
 
     const-string v0, "application/mp4"
 
-    .line 182
+    .line 217
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -349,17 +349,17 @@
 
     .line 77
     :cond_4
-    new-instance v3, Ll/ۗܺۙ;
+    new-instance v3, Ll/᩺ܰۙ;
 
     invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ()I
 
     move-result v0
 
-    invoke-direct {v3, v0}, Ll/ۗܺۙ;-><init>(I)V
+    invoke-direct {v3, v0}, Ll/᩺ܰۙ;-><init>(I)V
 
     .line 78
     :cond_5
-    iput-object v3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۟:Ll/ۗܺۙ;
+    iput-object v3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩺:Ll/᩺ܰۙ;
 
     if-eqz p3, :cond_6
 
@@ -380,12 +380,12 @@
 
     .line 81
     :goto_3
-    iput v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܺ:I
+    iput v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܰ:I
 
     .line 82
-    iget v5, p2, Ll/۟ᩴۙ;->ۨۙ:I
+    iget v5, p2, Ll/ܳ᩹ۙ;->ۤۙ:I
 
-    iget v6, p2, Ll/۟ᩴۙ;->ۚ:I
+    iget v6, p2, Ll/ܳ᩹ۙ;->ᩴ:I
 
     move-object v1, p0
 
@@ -398,7 +398,7 @@
 
     move-result-wide p2
 
-    iput-wide p2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iput-wide p2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     const-wide/16 v0, 0x0
 
@@ -407,13 +407,13 @@
     if-eqz v2, :cond_8
 
     .line 87
-    invoke-virtual {p0, p1}, Ll/۫ܺۙ;->ۙ(I)V
+    invoke-virtual {p0, p1}, Ll/ܺܰۙ;->ۙ(I)V
 
     return-void
 
     .line 85
     :cond_8
-    new-instance p1, Ll/ܳܺۙ;
+    new-instance p1, Ll/᩵ܰۙ;
 
     const-string p2, "Initialization failed."
 
@@ -425,7 +425,7 @@
 
     .line 70
     :cond_9
-    new-instance p1, Ll/ܳܺۙ;
+    new-instance p1, Ll/᩵ܰۙ;
 
     const-string p2, "Failed to load decoder native libraries."
 
@@ -474,10 +474,10 @@
     .locals 4
 
     .line 180
-    iput p2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܺ:I
+    iput p2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܰ:I
 
     .line 62
-    iget-object v0, p1, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۫:Ljava/nio/ByteBuffer;
+    iget-object v0, p1, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۟:Ljava/nio/ByteBuffer;
 
     .line 155
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -499,7 +499,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {v1}, Ll/֫᩵ۙ;->ۙ(Z)V
+    invoke-static {v1}, Ll/᩵᩵ۙ;->ۙ(Z)V
 
     .line 64
     invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
@@ -532,7 +532,7 @@
     invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     .line 70
-    iput-object v1, p1, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۫:Ljava/nio/ByteBuffer;
+    iput-object v1, p1, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۟:Ljava/nio/ByteBuffer;
 
     return-object v1
 .end method
@@ -541,7 +541,7 @@
     .locals 0
 
     .line 104
-    invoke-virtual {p0, p1}, Ll/۫ܺۙ;->ۙ(Ll/֡ܺۙ;)V
+    invoke-virtual {p0, p1}, Ll/ܺܰۙ;->ۙ(Ll/ۧܰۙ;)V
 
     return-void
 .end method
@@ -558,7 +558,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ܰ()Ljava/lang/String;
+    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->᩷()Ljava/lang/String;
 
     move-result-object v1
 
@@ -568,7 +568,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۠:Ljava/lang/String;
+    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۗ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -579,38 +579,11 @@
     return-object v0
 .end method
 
-.method public final ֨()I
-    .locals 1
-
-    .line 209
-    iget v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩵:I
-
-    return v0
-.end method
-
-.method public final ۖ()Ll/ܺܺۙ;
-    .locals 3
-
-    .line 97
-    new-instance v0, Ll/ܺܺۙ;
-
-    const/4 v1, 0x2
-
-    .line 99
-    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ()I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Ll/ܺܺۙ;-><init>(II)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ljava/lang/Throwable;)Ll/۟ܺۙ;
+.method public final ۙ(Ljava/lang/Throwable;)Ll/ܳܰۙ;
     .locals 2
 
     .line 109
-    new-instance v0, Ll/ܳܺۙ;
+    new-instance v0, Ll/᩵ܰۙ;
 
     const-string v1, "Unexpected decode error"
 
@@ -620,7 +593,7 @@
     return-object v0
 .end method
 
-.method public final ۙ(Ll/ܺܺۙ;Ll/֡ܺۙ;Z)Ll/۟ܺۙ;
+.method public final ۙ(Ll/ۚܰۙ;Ll/ۧܰۙ;Z)Ll/ܳܰۙ;
     .locals 9
 
     .line 38
@@ -629,15 +602,15 @@
     if-eqz p3, :cond_1
 
     .line 117
-    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
-    iget-object p3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۡ:[B
+    iget-object p3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۨ:[B
 
     invoke-direct {p0, v0, v1, p3}, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ffmpegReset(J[B)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iput-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     const-wide/16 v2, 0x0
 
@@ -646,7 +619,7 @@
     if-nez p3, :cond_0
 
     .line 119
-    new-instance p1, Ll/ܳܺۙ;
+    new-instance p1, Ll/᩵ܰۙ;
 
     const-string p2, "Error resetting (see logcat)."
 
@@ -657,38 +630,38 @@
 
     .line 121
     :cond_0
-    iget-object p3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۟:Ll/ۗܺۙ;
+    iget-object p3, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩺:Ll/᩺ܰۙ;
 
     if-eqz p3, :cond_1
 
     .line 123
-    invoke-virtual {p3}, Ll/ۗܺۙ;->ۙ()V
+    invoke-virtual {p3}, Ll/᩺ܰۙ;->ۙ()V
 
     .line 126
     :cond_1
-    iget-object p3, p1, Ll/ܺܺۙ;->ܽ:Ljava/nio/ByteBuffer;
+    iget-object p3, p1, Ll/ۚܰۙ;->֡:Ljava/nio/ByteBuffer;
 
-    sget-object v0, Ll/ᩳۤۙ;->ۖ:Ljava/lang/String;
+    sget-object v0, Ll/ۜۨۙ;->᩸:Ljava/lang/String;
 
     .line 127
-    iget-wide v0, p1, Ll/ܺܺۙ;->ۧ:J
+    iget-wide v0, p1, Ll/ۚܰۙ;->֨:J
 
     .line 128
-    iget-object v2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۟:Ll/ۗܺۙ;
+    iget-object v2, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩺:Ll/᩺ܰۙ;
 
     if-eqz v2, :cond_2
 
     .line 129
-    invoke-virtual {v2, v0, v1, p3}, Ll/ۗܺۙ;->ۙ(JLjava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-virtual {v2, v0, v1, p3}, Ll/᩺ܰۙ;->ۙ(JLjava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p3
 
     .line 130
-    iget-object v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۟:Ll/ۗܺۙ;
+    iget-object v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩺:Ll/᩺ܰۙ;
 
-    iget-wide v1, p1, Ll/ܺܺۙ;->ۧ:J
+    iget-wide v1, p1, Ll/ۚܰۙ;->֨:J
 
-    invoke-virtual {v0, v1, v2}, Ll/ۗܺۙ;->ۙ(J)J
+    invoke-virtual {v0, v1, v2}, Ll/᩺ܰۙ;->ۙ(J)J
 
     move-result-wide v0
 
@@ -701,14 +674,14 @@
     move-result v4
 
     .line 133
-    iget p1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܺ:I
+    iget p1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܰ:I
 
-    invoke-virtual {p2, p1, v0, v1}, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->ܰ(IJ)Ljava/nio/ByteBuffer;
+    invoke-virtual {p2, p1, v0, v1}, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->᩷(IJ)Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
     .line 134
-    iget-object p1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۟:Ll/ۗܺۙ;
+    iget-object p1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩺:Ll/᩺ܰۙ;
 
     const/4 p3, 0x0
 
@@ -719,15 +692,15 @@
     if-nez v4, :cond_3
 
     .line 136
-    iput-boolean v8, p2, Ll/֡ܺۙ;->᩶:Z
+    iput-boolean v8, p2, Ll/ۧܰۙ;->᩶:Z
 
     return-object p3
 
     .line 139
     :cond_3
-    iget-wide v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iget-wide v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
-    iget v7, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܺ:I
+    iget v7, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ܰ:I
 
     move-object v0, p0
 
@@ -743,7 +716,7 @@
     if-ne p1, v0, :cond_4
 
     .line 143
-    new-instance p1, Ll/ܳܺۙ;
+    new-instance p1, Ll/᩵ܰۙ;
 
     const-string p2, "Error decoding (see logcat)."
 
@@ -758,7 +731,7 @@
     if-ne p1, v0, :cond_5
 
     .line 148
-    iput-boolean v8, p2, Ll/֡ܺۙ;->᩶:Z
+    iput-boolean v8, p2, Ll/ۧܰۙ;->᩶:Z
 
     return-object p3
 
@@ -766,27 +739,27 @@
     if-nez p1, :cond_6
 
     .line 152
-    iput-boolean v8, p2, Ll/֡ܺۙ;->᩶:Z
+    iput-boolean v8, p2, Ll/ۧܰۙ;->᩶:Z
 
     return-object p3
 
     .line 155
     :cond_6
-    iget-boolean v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۤ:Z
+    iget-boolean v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۛ:Z
 
     if-nez v0, :cond_8
 
     .line 156
-    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     invoke-direct {p0, v0, v1}, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ffmpegGetChannelCount(J)I
 
     move-result v0
 
-    iput v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ᩴ:I
+    iput v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩹:I
 
     .line 157
-    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     invoke-direct {p0, v0, v1}, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ffmpegGetSampleRate(J)I
 
@@ -801,7 +774,7 @@
 
     const-string v0, "alac"
 
-    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->۠:Ljava/lang/String;
+    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۗ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -810,29 +783,29 @@
     if-eqz v0, :cond_7
 
     .line 159
-    iget-object v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۡ:[B
+    iget-object v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۨ:[B
 
     .line 155
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 162
-    new-instance v0, Ll/ۖۤۙ;
+    new-instance v0, Ll/᩶ۨۙ;
 
-    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۡ:[B
+    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۨ:[B
 
-    invoke-direct {v0, v1}, Ll/ۖۤۙ;-><init>([B)V
+    invoke-direct {v0, v1}, Ll/᩶ۨۙ;-><init>([B)V
 
     .line 163
-    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۡ:[B
+    iget-object v1, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۨ:[B
 
     array-length v1, v1
 
     add-int/lit8 v1, v1, -0x4
 
-    invoke-virtual {v0, v1}, Ll/ۖۤۙ;->ۚ(I)V
+    invoke-virtual {v0, v1}, Ll/᩶ۨۙ;->ᩴ(I)V
 
     .line 164
-    invoke-virtual {v0}, Ll/ۖۤۙ;->᩶()I
+    invoke-virtual {v0}, Ll/᩶ۨۙ;->᩶()I
 
     move-result v0
 
@@ -840,11 +813,11 @@
 
     .line 166
     :cond_7
-    iput-boolean v8, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۤ:Z
+    iput-boolean v8, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۛ:Z
 
     .line 170
     :cond_8
-    iget-object p2, p2, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۫:Ljava/nio/ByteBuffer;
+    iget-object p2, p2, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;->۟:Ljava/nio/ByteBuffer;
 
     .line 155
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -864,37 +837,22 @@
     .locals 2
 
     .line 186
-    invoke-super {p0}, Ll/۫ܺۙ;->ۙ()V
+    invoke-super {p0}, Ll/ܺܰۙ;->ۙ()V
 
     .line 187
-    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iget-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     invoke-direct {p0, v0, v1}, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ffmpegRelease(J)V
 
     const-wide/16 v0, 0x0
 
     .line 188
-    iput-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩷:J
+    iput-wide v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ۘ:J
 
     return-void
 .end method
 
-.method public final ۚ()Ll/֡ܺۙ;
-    .locals 2
-
-    .line 104
-    new-instance v0, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;
-
-    new-instance v1, Ll/ۧܺۙ;
-
-    invoke-direct {v1, p0}, Ll/ۧܺۙ;-><init>(Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;)V
-
-    invoke-direct {v0, v1}, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;-><init>(Ll/᩶ܺۙ;)V
-
-    return-object v0
-.end method
-
-.method public final ۬()I
+.method public final ۚ()I
     .locals 1
 
     .line 202
@@ -903,11 +861,53 @@
     return v0
 .end method
 
-.method public final ᩹()I
+.method public final ۫()I
+    .locals 1
+
+    .line 209
+    iget v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩵:I
+
+    return v0
+.end method
+
+.method public final ܳ()I
     .locals 1
 
     .line 195
-    iget v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->ᩴ:I
+    iget v0, p0, Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;->᩹:I
 
     return v0
+.end method
+
+.method public final ᩴ()Ll/ۧܰۙ;
+    .locals 2
+
+    .line 104
+    new-instance v0, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;
+
+    new-instance v1, Ll/᩹ܰۙ;
+
+    invoke-direct {v1, p0}, Ll/᩹ܰۙ;-><init>(Landroidx/media3/decoder/ffmpeg/FfmpegAudioDecoder;)V
+
+    invoke-direct {v0, v1}, Landroidx/media3/decoder/SimpleDecoderOutputBuffer;-><init>(Ll/֫ܰۙ;)V
+
+    return-object v0
+.end method
+
+.method public final ᩸()Ll/ۚܰۙ;
+    .locals 3
+
+    .line 97
+    new-instance v0, Ll/ۚܰۙ;
+
+    const/4 v1, 0x2
+
+    .line 99
+    invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ()I
+
+    move-result v2
+
+    invoke-direct {v0, v1, v2}, Ll/ۚܰۙ;-><init>(II)V
+
+    return-object v0
 .end method

@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.digests;
 
-import l.C2271;
+import l.C14442;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 import org.bouncycastle.crypto.SavableDigest;
 import org.bouncycastle.util.Memoable;
@@ -78,6 +78,6 @@ public class SHA3Digest extends KeccakDigest implements SavableDigest {
         if (i == 224 || i == 256 || i == 384 || i == 512) {
             return i;
         }
-        throw new IllegalArgumentException(C2271.m6966(i, "'bitLength' ", " not supported for SHA-3"));
+        throw new IllegalArgumentException(C14442.m34864(i, "'bitLength' ", " not supported for SHA-3"));
     }
 }

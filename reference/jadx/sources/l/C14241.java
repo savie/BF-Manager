@@ -1,44 +1,80 @@
 package l;
 
-import java.util.function.DoublePredicate;
+import android.os.Build;
+import android.text.Spannable;
+import android.text.style.MetricAffectingSpan;
 
-/* JADX INFO: renamed from: l.ܳۖᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: JAPJ */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C14241 {
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m34371(InterfaceC1539 interfaceC1539, double d) {
-        return interfaceC1539.mo5315(C21273.m47736(d));
-    }
-
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m34372(InterfaceC1539 interfaceC1539, Float f) {
-        return interfaceC1539.mo5315(f.floatValue());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC1539 m34370(InterfaceC1539 interfaceC1539, DoublePredicate doublePredicate) {
-        InterfaceC1539 c5773;
-        if (doublePredicate instanceof InterfaceC1539) {
-            c5773 = (InterfaceC1539) doublePredicate;
-        } else {
-            C13638.requireNonNull(doublePredicate);
-            c5773 = new C5773(doublePredicate);
+/* JADX INFO: renamed from: l.ܰ֨, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z21V */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14241 implements Spannable {
+    @Override // android.text.Spannable
+    public final void setSpan(Object obj, int i, int i2, int i3) {
+        if (obj instanceof MetricAffectingSpan) {
+            throw new IllegalArgumentException("MetricAffectingSpan can not be set to PrecomputedText.");
         }
-        return interfaceC1539.mo5316(c5773);
+        if (Build.VERSION.SDK_INT >= 29) {
+            throw null;
+        }
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC1539 m34373(InterfaceC1539 interfaceC1539, DoublePredicate doublePredicate) {
-        InterfaceC1539 c5773;
-        if (doublePredicate instanceof InterfaceC1539) {
-            c5773 = (InterfaceC1539) doublePredicate;
-        } else {
-            C13638.requireNonNull(doublePredicate);
-            c5773 = new C5773(doublePredicate);
+    @Override // android.text.Spannable
+    public final void removeSpan(Object obj) {
+        if (obj instanceof MetricAffectingSpan) {
+            throw new IllegalArgumentException("MetricAffectingSpan can not be removed from PrecomputedText.");
         }
-        return interfaceC1539.mo5314(c5773);
+        if (Build.VERSION.SDK_INT >= 29) {
+            throw null;
+        }
+        throw null;
+    }
+
+    @Override // android.text.Spanned
+    public final Object[] getSpans(int i, int i2, Class cls) {
+        if (Build.VERSION.SDK_INT >= 29) {
+            throw null;
+        }
+        throw null;
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanStart(Object obj) {
+        throw null;
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanEnd(Object obj) {
+        throw null;
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanFlags(Object obj) {
+        throw null;
+    }
+
+    @Override // android.text.Spanned
+    public final int nextSpanTransition(int i, int i2, Class cls) {
+        throw null;
+    }
+
+    @Override // java.lang.CharSequence
+    public final int length() {
+        throw null;
+    }
+
+    @Override // java.lang.CharSequence
+    public final char charAt(int i) {
+        throw null;
+    }
+
+    @Override // java.lang.CharSequence
+    public final CharSequence subSequence(int i, int i2) {
+        throw null;
+    }
+
+    @Override // java.lang.CharSequence
+    public final String toString() {
+        throw null;
     }
 }

@@ -1,139 +1,174 @@
 .class public final Ll/ܽۗۙ;
 .super Ljava/lang/Object;
-.source "R8QD"
+.source "68PN"
 
-# interfaces
-.implements Ll/ۢۢۙ;
+
+# instance fields
+.field public final ۙ:Ll/ܺۗۙ;
+
+.field public final ᩷:Ll/֫۫ܽ;
 
 
 # direct methods
-.method public static ܰ(Ll/֫ۢۙ;)Landroid/media/MediaCodec;
+.method public static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 55
+    invoke-static {v0}, Ll/ۜۨۙ;->۫(I)V
+
+    const/4 v0, 0x1
+
+    .line 56
+    invoke-static {v0}, Ll/ۜۨۙ;->۫(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ܺۗۙ;Ljava/util/List;)V
     .locals 2
 
-    .line 77
-    iget-object p0, p0, Ll/֫ۢۙ;->ۙ:Ll/ۚۗۙ;
+    .line 74
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
-    iget-object p0, p0, Ll/ۚۗۙ;->᩺:Ljava/lang/String;
+    .line 75
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
-    .line 79
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, "createCodec:"
+    if-nez v0, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 76
+    invoke-static {p2}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 38
-    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    invoke-static {p2}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iget v1, p1, Ll/ܺۗۙ;->᩸:I
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_0
+
+    .line 77
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
 
     .line 80
-    invoke-static {p0}, Landroid/media/MediaCodec;->createByCodecName(Ljava/lang/String;)Landroid/media/MediaCodec;
+    :cond_1
+    :goto_0
+    iput-object p1, p0, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
 
-    move-result-object p0
+    .line 81
+    invoke-static {p2}, Ll/֫۫ܽ;->copyOf(Ljava/util/Collection;)Ll/֫۫ܽ;
 
-    .line 49
-    invoke-static {}, Landroid/os/Trace;->endSection()V
+    move-result-object p1
 
-    return-object p0
+    iput-object p1, p0, Ll/ܽۗۙ;->᩷:Ll/֫۫ܽ;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/֫ۢۙ;)Ll/ܰۗۙ;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 52
-    :try_start_0
-    invoke-static {p1}, Ll/ܽۗۙ;->ܰ(Ll/֫ۢۙ;)Landroid/media/MediaCodec;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    const-string v1, "configureCodec"
+    :cond_0
+    const/4 v1, 0x0
 
-    .line 38
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    if-eqz p1, :cond_2
 
-    .line 55
-    iget-object v1, p1, Ll/֫ۢۙ;->᩹:Landroid/view/Surface;
+    .line 94
+    const-class v2, Ll/ܽۗۙ;
 
-    if-nez v1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v2, p1, Ll/֫ۢۙ;->ۙ:Ll/ۚۗۙ;
+    move-result-object v3
 
-    iget-boolean v2, v2, Ll/ۚۗۙ;->ۖ:Z
-
-    if-eqz v2, :cond_0
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x23
-
-    if-lt v2, v3, :cond_0
-
-    const/16 v2, 0x8
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 60
-    :goto_0
-    iget-object v3, p1, Ll/֫ۢۙ;->ۚ:Landroid/media/MediaFormat;
-
-    iget-object v4, p1, Ll/֫ۢۙ;->ܰ:Landroid/media/MediaCrypto;
-
-    invoke-virtual {v0, v3, v1, v4, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
-
-    .line 49
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    const-string v1, "startCodec"
-
-    .line 38
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
-
-    .line 64
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
-
-    .line 49
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    .line 66
-    new-instance v1, Ll/۫ۗۙ;
-
-    iget-object p1, p1, Ll/֫ۢۙ;->ۖ:Ll/ܳۢۙ;
-
-    invoke-direct {v1, v0, p1}, Ll/۫ۗۙ;-><init>(Landroid/media/MediaCodec;Ll/ܳۢۙ;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    :goto_1
-    if-eqz v0, :cond_1
-
-    .line 69
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
-
-    .line 71
+    .line 97
     :cond_1
-    throw p1
+    check-cast p1, Ll/ܽۗۙ;
+
+    .line 98
+    iget-object v2, p0, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
+
+    iget-object v3, p1, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
+
+    invoke-virtual {v2, v3}, Ll/ܺۗۙ;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Ll/ܽۗۙ;->᩷:Ll/֫۫ܽ;
+
+    iget-object p1, p1, Ll/ܽۗۙ;->᩷:Ll/֫۫ܽ;
+
+    invoke-virtual {v2, p1}, Ll/֫۫ܽ;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 103
+    iget-object v0, p0, Ll/ܽۗۙ;->ۙ:Ll/ܺۗۙ;
+
+    invoke-virtual {v0}, Ll/ܺۗۙ;->hashCode()I
+
+    move-result v0
+
+    iget-object v1, p0, Ll/ܽۗۙ;->᩷:Ll/֫۫ܽ;
+
+    invoke-virtual {v1}, Ll/֫۫ܽ;->hashCode()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

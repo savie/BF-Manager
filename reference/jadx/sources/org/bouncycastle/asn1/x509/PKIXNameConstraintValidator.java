@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import l.C8479;
-import l.C9023;
+import l.C10732;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1IA5String;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -23,7 +23,7 @@ import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXNameConstraintValidator implements NameConstraintValidator {
     public Set permittedSubtreesDN;
     public Set permittedSubtreesDNS;
@@ -650,36 +650,36 @@ public class PKIXNameConstraintValidator implements NameConstraintValidator {
     }
 
     private String stringifyIPCollection(Set set) {
-        StringBuilder sbM23356 = C9023.m23356("[");
+        StringBuilder sbM27333 = C10732.m27333("[");
         Iterator it = set.iterator();
         while (it.hasNext()) {
-            if (sbM23356.length() > 1) {
-                sbM23356.append(",");
+            if (sbM27333.length() > 1) {
+                sbM27333.append(",");
             }
-            sbM23356.append(stringifyIP((byte[]) it.next()));
+            sbM27333.append(stringifyIP((byte[]) it.next()));
         }
-        sbM23356.append("]");
-        return sbM23356.toString();
+        sbM27333.append("]");
+        return sbM27333.toString();
     }
 
     private String stringifyOtherNameCollection(Set set) {
-        StringBuilder sbM23356 = C9023.m23356("[");
+        StringBuilder sbM27333 = C10732.m27333("[");
         Iterator it = set.iterator();
         while (it.hasNext()) {
-            if (sbM23356.length() > 1) {
-                sbM23356.append(",");
+            if (sbM27333.length() > 1) {
+                sbM27333.append(",");
             }
             OtherName otherName = OtherName.getInstance(it.next());
-            sbM23356.append(otherName.getTypeID().getId());
-            sbM23356.append(":");
+            sbM27333.append(otherName.getTypeID().getId());
+            sbM27333.append(":");
             try {
-                sbM23356.append(Hex.toHexString(otherName.getValue().toASN1Primitive().getEncoded()));
+                sbM27333.append(Hex.toHexString(otherName.getValue().toASN1Primitive().getEncoded()));
             } catch (IOException e) {
-                sbM23356.append(e.toString());
+                sbM27333.append(e.toString());
             }
         }
-        sbM23356.append("]");
-        return sbM23356.toString();
+        sbM27333.append("]");
+        return sbM27333.toString();
     }
 
     private Set unionDN(Set set, ASN1Sequence aSN1Sequence) {
@@ -1147,7 +1147,7 @@ public class PKIXNameConstraintValidator implements NameConstraintValidator {
                 this.permittedSubtreesURI = intersectURI(this.permittedSubtreesURI, (Set) entry.getValue());
             } else {
                 if (iIntValue != 7) {
-                    throw new IllegalStateException(C8479.m22141(iIntValue, "Unknown tag encountered: "));
+                    throw new IllegalStateException(C13645.m33382(iIntValue, "Unknown tag encountered: "));
                 }
                 this.permittedSubtreesIP = intersectIP(this.permittedSubtreesIP, (Set) entry.getValue());
             }
@@ -1229,7 +1229,7 @@ public class PKIXNameConstraintValidator implements NameConstraintValidator {
             this.permittedSubtreesURI = new HashSet();
         } else {
             if (i != 7) {
-                throw new IllegalStateException(C8479.m22141(i, "Unknown tag encountered: "));
+                throw new IllegalStateException(C13645.m33382(i, "Unknown tag encountered: "));
             }
             this.permittedSubtreesIP = new HashSet();
         }

@@ -8,8 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import java.util.TreeMap;
-import l.C12557;
-import l.C9023;
+import l.C10646;
+import l.C10732;
 
 /* JADX INFO: loaded from: classes.dex */
 public class QueryStringSigner extends AbstractAWSSigner implements Signer {
@@ -24,21 +24,21 @@ public class QueryStringSigner extends AbstractAWSSigner implements Signer {
         String strCalculateStringToSignV2;
         AWSCredentials aWSCredentialsSanitizeCredentials = sanitizeCredentials(aWSCredentials);
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        defaultRequest.m194("AWSAccessKeyId", aWSCredentialsSanitizeCredentials.mo206());
-        defaultRequest.m194("SignatureVersion", signatureVersion.toString());
-        defaultRequest.m194("Timestamp", getFormattedTimestamp(getTimeOffset(defaultRequest)));
+        defaultRequest.m188("AWSAccessKeyId", aWSCredentialsSanitizeCredentials.mo200());
+        defaultRequest.m188("SignatureVersion", signatureVersion.toString());
+        defaultRequest.m188("Timestamp", getFormattedTimestamp(getTimeOffset(defaultRequest)));
         if (aWSCredentialsSanitizeCredentials instanceof AWSSessionCredentials) {
             addSessionCredentials(defaultRequest, (AWSSessionCredentials) aWSCredentialsSanitizeCredentials);
         }
         if (signatureVersion.equals(SignatureVersion.V1)) {
-            strCalculateStringToSignV2 = calculateStringToSignV1(defaultRequest.m195());
+            strCalculateStringToSignV2 = calculateStringToSignV1(defaultRequest.m185());
         } else if (signatureVersion.equals(SignatureVersion.V2)) {
-            defaultRequest.m194("SignatureMethod", signingAlgorithm.toString());
+            defaultRequest.m188("SignatureMethod", signingAlgorithm.toString());
             strCalculateStringToSignV2 = calculateStringToSignV2(defaultRequest);
         } else {
             throw new AmazonClientException("Invalid Signature Version specified");
         }
-        defaultRequest.m194("Signature", signAndBase64Encode(strCalculateStringToSignV2, aWSCredentialsSanitizeCredentials.mo207(), signingAlgorithm));
+        defaultRequest.m188("Signature", signAndBase64Encode(strCalculateStringToSignV2, aWSCredentialsSanitizeCredentials.mo201(), signingAlgorithm));
     }
 
     private String calculateStringToSignV1(Map map) {
@@ -54,22 +54,22 @@ public class QueryStringSigner extends AbstractAWSSigner implements Signer {
 
     private String calculateStringToSignV2(Request request) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        return "POST\n" + getCanonicalizedEndpoint(defaultRequest.m193()) + "\n" + getCanonicalizedResourcePath(defaultRequest) + "\n" + getCanonicalizedQueryString(defaultRequest.m195());
+        return "POST\n" + getCanonicalizedEndpoint(defaultRequest.m187()) + "\n" + getCanonicalizedResourcePath(defaultRequest) + "\n" + getCanonicalizedQueryString(defaultRequest.m185());
     }
 
     private String getCanonicalizedResourcePath(Request request) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
         String strConcat = "";
-        if (defaultRequest.m193().getPath() != null) {
-            strConcat = "" + defaultRequest.m193().getPath();
+        if (defaultRequest.m187().getPath() != null) {
+            strConcat = "" + defaultRequest.m187().getPath();
         }
-        if (defaultRequest.m177() != null) {
-            if (strConcat.length() > 0 && !strConcat.endsWith("/") && !defaultRequest.m177().startsWith("/")) {
+        if (defaultRequest.m184() != null) {
+            if (strConcat.length() > 0 && !strConcat.endsWith("/") && !defaultRequest.m184().startsWith("/")) {
                 strConcat = strConcat.concat("/");
             }
-            StringBuilder sbM23356 = C9023.m23356(strConcat);
-            sbM23356.append(defaultRequest.m177());
-            strConcat = sbM23356.toString();
+            StringBuilder sbM27333 = C10732.m27333(strConcat);
+            sbM27333.append(defaultRequest.m184());
+            strConcat = sbM27333.toString();
         } else if (!strConcat.endsWith("/")) {
             strConcat = strConcat.concat("/");
         }
@@ -81,7 +81,7 @@ public class QueryStringSigner extends AbstractAWSSigner implements Signer {
 
     private String getFormattedTimestamp(long j) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        simpleDateFormat.setTimeZone(C12557.getTimeZone(UtcDates.UTC));
+        simpleDateFormat.setTimeZone(C10646.getTimeZone(UtcDates.UTC));
         Date date = this.overriddenDate;
         if (date != null) {
             return simpleDateFormat.format(date);
@@ -95,6 +95,6 @@ public class QueryStringSigner extends AbstractAWSSigner implements Signer {
 
     @Override // com.amazonaws.auth.AbstractAWSSigner
     public void addSessionCredentials(Request request, AWSSessionCredentials aWSSessionCredentials) {
-        ((DefaultRequest) request).m194("SecurityToken", aWSSessionCredentials.mo209());
+        ((DefaultRequest) request).m188("SecurityToken", aWSSessionCredentials.mo203());
     }
 }

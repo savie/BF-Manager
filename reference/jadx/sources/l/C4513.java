@@ -1,74 +1,33 @@
 package l;
 
-import java.io.Closeable;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.io.FilterOutputStream;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۙ۠ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A6S3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4513 implements InterfaceC5614 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final HashSet f16033 = new HashSet();
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f16034;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f16035;
-
-    public final synchronized void cancel() {
-        this.f16034 = true;
-        Iterator it = this.f16033.iterator();
-        while (it.hasNext()) {
-            ((C3411) it.next()).m10112();
-        }
+/* JADX INFO: renamed from: l.ۘ᩻ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 27BS */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4513 extends FilterOutputStream {
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public final void write(int i) throws IOException {
+        write(new byte[]{(byte) i}, 0, 1);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m12550() {
-        return this.f16033.isEmpty();
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public final void write(byte[] bArr) throws IOException {
+        write(bArr, 0, bArr.length);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m12551() {
-        if (this.f16034) {
-            throw new IllegalStateException("Canceled input cannot be handed off");
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public final void write(byte[] bArr, int i, int i2) throws IOException {
+        if (i2 == 0) {
+            return;
         }
-        this.f16035 = true;
-        this.f16033.clear();
+        ((FilterOutputStream) this).out.write(String.format("%x\r\n", Integer.valueOf(i2)).getBytes());
+        ((FilterOutputStream) this).out.write(bArr, i, i2);
+        ((FilterOutputStream) this).out.write("\r\n".getBytes());
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f16034;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m12549(C4513 c4513, C3411 c3411) {
-        synchronized (c4513) {
-            c4513.f16033.remove(c3411);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Closeable m12548(Closeable closeable, InterfaceC5614 interfaceC5614) {
-        if (!(interfaceC5614 instanceof C4513)) {
-            return closeable;
-        }
-        C4513 c4513 = (C4513) interfaceC5614;
-        C3411 c3411 = new C3411(c4513, closeable);
-        synchronized (c4513) {
-            if (c4513.f16035) {
-                return c3411;
-            }
-            c4513.f16033.add(c3411);
-            if (c4513.f16034) {
-                c3411.m10112();
-            }
-            return c3411;
-        }
+    public final void finish() throws IOException {
+        ((FilterOutputStream) this).out.write("0\r\n\r\n".getBytes());
     }
 }

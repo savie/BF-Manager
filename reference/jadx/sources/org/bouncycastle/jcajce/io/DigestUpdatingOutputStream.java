@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.io;
 import java.io.OutputStream;
 import java.security.MessageDigest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DigestUpdatingOutputStream extends OutputStream {
     public MessageDigest digest;
 

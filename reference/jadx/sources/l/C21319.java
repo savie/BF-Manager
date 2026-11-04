@@ -1,49 +1,43 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.zip.ZipException;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩸ۗ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: R8BB */
+/* JADX INFO: renamed from: l.᩶۫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V5XH */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21319 extends C8233 {
+public final class C21319 extends C7894 {
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final C12107 f69368;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7894 f67928;
 
-    public C21319(C12107 c12107, InputStream inputStream) {
-        super(inputStream);
-        this.f69368 = c12107;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2346 f67929;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C21319(AbstractC1928 abstractC1928, AbstractC1928 abstractC1929, C2346 c2346, C7894 c7894) {
+        super(abstractC1928, abstractC1929);
+        this.f67929 = c2346;
+        this.f67928 = c7894;
     }
 
-    @Override // l.C8233, java.io.FilterInputStream, java.io.InputStream
-    public final int read() throws ZipException {
-        try {
-            return super.read();
-        } catch (IOException e) {
-            C21506.m48152(e, this.f69368);
-            throw null;
-        }
+    @Override // l.C7894, l.InterfaceC8312
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ Map mo21437() {
+        return mo21437();
     }
 
-    @Override // l.C8233, java.io.FilterInputStream, java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) throws ZipException {
-        try {
-            return super.read(bArr, i, i2);
-        } catch (IOException e) {
-            C21506.m48152(e, this.f69368);
-            throw null;
+    @Override // l.C7894
+    /* JADX INFO: renamed from: ۙ */
+    public final C7894 mo21438(C2346 c2346) {
+        C2346 c2347 = this.f67929;
+        if (c2347.m7921(c2346)) {
+            return this.f67928.mo21438(c2346.m7923(c2347));
         }
+        return C7894.m21435();
     }
 
-    @Override // l.C8233, java.io.FilterInputStream, java.io.InputStream
-    public final long skip(long j) throws ZipException {
-        try {
-            return super.skip(j);
-        } catch (IOException e) {
-            C21506.m48152(e, this.f69368);
-            throw null;
-        }
+    @Override // l.C7894
+    public Object writeReplace() {
+        return super.writeReplace();
     }
 }

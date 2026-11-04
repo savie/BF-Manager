@@ -8,7 +8,6 @@ public abstract class AsconBaseDigest extends BufferBaseDigest {
     public int ASCON_PB_ROUNDS;
     public AsconPermutationFriend.AsconPermutation p;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
     }

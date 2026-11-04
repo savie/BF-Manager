@@ -8,9 +8,9 @@ import android.view.View;
 import com.google.android.material.color.utilities.Blend;
 import com.google.android.material.color.utilities.Hct;
 import com.google.android.material.resources.MaterialAttributes;
-import l.C10405;
-import l.C2387;
-import l.C3224;
+import l.C11642;
+import l.C19988;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialColors {
@@ -71,7 +71,7 @@ public class MaterialColors {
         }
         int i2 = typedValueResolve.resourceId;
         if (i2 != 0) {
-            return C10405.m26305(context, i2);
+            return C7508.m20564(context, i2);
         }
         int i3 = typedValueResolve.data;
         if (i3 != 0) {
@@ -83,7 +83,7 @@ public class MaterialColors {
     public static int resolveColor(Context context, TypedValue typedValue) {
         int i = typedValue.resourceId;
         if (i != 0) {
-            return C10405.m26299(context, i);
+            return C7508.m20558(context, i);
         }
         return typedValue.data;
     }
@@ -91,7 +91,7 @@ public class MaterialColors {
     public static ColorStateList resolveColorStateList(Context context, TypedValue typedValue) {
         int i = typedValue.resourceId;
         if (i != 0) {
-            return C10405.m26305(context, i);
+            return C7508.m20564(context, i);
         }
         return ColorStateList.valueOf(typedValue.data);
     }
@@ -105,23 +105,23 @@ public class MaterialColors {
     }
 
     public static int layer(int i, int i2, float f) {
-        return layer(i, C3224.m9668(i2, Math.round(Color.alpha(i2) * f)));
+        return layer(i, C19988.m45964(i2, Math.round(Color.alpha(i2) * f)));
     }
 
     public static int layer(int i, int i2) {
-        return C3224.m9670(i2, i);
+        return C19988.m45966(i2, i);
     }
 
     public static int compositeARGBWithAlpha(int i, int i2) {
-        return C3224.m9668(i, (Color.alpha(i) * i2) / 255);
+        return C19988.m45964(i, (Color.alpha(i) * i2) / 255);
     }
 
     public static boolean isColorLight(int i) {
-        return i != 0 && C3224.m9657(i) > 0.5d;
+        return i != 0 && C19988.m45953(i) > 0.5d;
     }
 
     public static int harmonizeWithPrimary(Context context, int i) {
-        return harmonize(i, getColor(context, C2387.f9313, MaterialColors.class.getCanonicalName()));
+        return harmonize(i, getColor(context, C11642.f37584, MaterialColors.class.getCanonicalName()));
     }
 
     public static int harmonize(int i, int i2) {
@@ -148,7 +148,7 @@ public class MaterialColors {
     }
 
     public static boolean isLightTheme(Context context) {
-        return MaterialAttributes.resolveBoolean(context, C2387.f8893, true);
+        return MaterialAttributes.resolveBoolean(context, C11642.f36845, true);
     }
 
     public static int getColorRole(int i, int i2) {

@@ -6,7 +6,7 @@ import org.bouncycastle.asn1.ASN1UTCTime;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class V1TBSCertificateGenerator {
     public Time endDate;
     public X500Name issuer;

@@ -18,7 +18,7 @@ import org.bouncycastle.internal.asn1.misc.MiscObjectIdentifiers;
 import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 import org.bouncycastle.jce.spec.ECNamedCurveGenParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CompositeIndex {
     public static Map pairings = new HashMap();
     public static Map kpgInitSpecs = new HashMap();

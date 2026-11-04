@@ -28,7 +28,7 @@
     invoke-direct {p0, p1}, Lcom/google/android/material/textfield/EndIconDelegate;-><init>(Lcom/google/android/material/textfield/EndCompoundLayout;)V
 
     .line 32
-    sget p1, Ll/۬۟ܶ;->ܽܰ:I
+    sget p1, Ll/ܶ۬ܺ;->֡᩷:I
 
     iput p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->iconResId:I
 
@@ -199,7 +199,7 @@
     .locals 1
 
     .line 88
-    sget v0, Ll/ᩳ۟ܶ;->ۡۖ:I
+    sget v0, Ll/᩺۬ܺ;->ۨ᩸:I
 
     return v0
 .end method

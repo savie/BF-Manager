@@ -2,9 +2,9 @@ package org.bouncycastle.asn1;
 
 import java.io.IOException;
 import java.io.InputStream;
-import l.C9013;
+import l.C11958;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 @Deprecated
 public class DEROctetStringParser implements ASN1OctetStringParser {
     public DefiniteLengthInputStream stream;
@@ -28,7 +28,7 @@ public class DEROctetStringParser implements ASN1OctetStringParser {
         try {
             return getLoadedObject();
         } catch (IOException e) {
-            throw new ASN1ParsingException(C9013.m23329(e, new StringBuilder("IOException converting stream to byte array: ")), e);
+            throw new ASN1ParsingException(C11958.m29932(e, new StringBuilder("IOException converting stream to byte array: ")), e);
         }
     }
 }

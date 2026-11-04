@@ -1,23 +1,8 @@
-.class public final Ll/᩻᩹;
+.class public interface abstract Ll/᩻᩹;
 .super Ljava/lang/Object;
-.source "A5FO"
-
-# interfaces
-.implements Ll/ۙ᩹;
+.source "V659"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/ܳ᩹;
-
-
-# direct methods
-.method public constructor <init>(Ll/ܳ᩹;)V
-    .locals 0
-
-    .line 519
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩻᩹;->ۙ:Ll/ܳ᩹;
-
-    return-void
+# virtual methods
+.method public abstract onMenuItemClick(Landroid/view/MenuItem;)Z
 .end method

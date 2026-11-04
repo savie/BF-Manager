@@ -1,115 +1,79 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۗ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: OAR3 */
+import java.util.Locale;
+import org.bouncycastle.i18n.TextBundle;
+
+/* JADX INFO: renamed from: l.۫ۘᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6G1 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12853 extends AbstractC22025 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final EnumC14970 f42755;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte[] f42756 = C8574.f29651;
+public final class C12853 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5091 f42757;
+    public final String f41155;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f42758;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f41156;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C5091 f42759;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22731 f42760;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f42761;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f42762;
-
-    public C12853(C22731 c22731, EnumC14970 enumC14970, int[] iArr, int[] iArr2) {
-        this.f42760 = c22731;
-        this.f42755 = enumC14970;
-        this.f42759 = C22731.m50398(iArr);
-        this.f42757 = C22731.m50398(iArr2);
+    public C12853(String str, String str2) {
+        this.f41155 = str;
+        this.f41156 = str2;
     }
 
-    @Override // l.AbstractC22025
-    /* JADX INFO: renamed from: ۨ */
-    public final EnumC14970 mo10851() {
-        return this.f42761 ? EnumC14970.INITIAL : this.f42755;
-    }
-
-    @Override // l.AbstractC22025
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo10850(byte[] bArr, int i, int i2) {
-        int iMin;
-        int iMin2;
-        if (i2 == 0) {
-            return 0;
+    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Code duplicated, block: B:68:0x0100  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C12853 m31892(String str, String str2, String str3) {
+        String strConcat = "";
+        if ("built-in".equals(str3)) {
+            return new C12853("", "");
         }
-        if (this.f42761) {
-            return -1;
+        String lowerCase = str == null ? "" : str.toLowerCase(Locale.ROOT);
+        String lowerCase2 = str2 == null ? "" : str2.trim().toLowerCase(Locale.ROOT);
+        int iIndexOf = lowerCase2.indexOf(59);
+        if (iIndexOf >= 0) {
+            lowerCase2 = lowerCase2.substring(0, iIndexOf).trim();
         }
-        int i3 = this.f42758 - this.f42762;
-        if (i3 > 0) {
-            iMin = Math.min(i2, i3);
-            System.arraycopy(this.f42756, this.f42762, bArr, i, iMin);
-            this.f42762 += iMin;
-        } else {
-            iMin = 0;
+        int iIndexOf2 = lowerCase2.indexOf(47);
+        if (iIndexOf2 <= 0 || iIndexOf2 == lowerCase2.length() - 1 || lowerCase2.indexOf(47, iIndexOf2 + 1) >= 0 || lowerCase2.indexOf(32) >= 0 || lowerCase2.equals("*/*") || lowerCase2.equals("application/octet-stream") || lowerCase2.equals("binary/octet-stream") || lowerCase2.equals("application/unknown") || lowerCase2.equals("application/x-unknown") || lowerCase2.equals("unknown/unknown")) {
+            lowerCase2 = "";
         }
-        while (iMin < i2) {
-            C22731 c22731 = this.f42760;
-            int iM50401 = C22731.m50401(c22731.f74056, this.f42759);
-            if (iM50401 >= 256) {
-                if (iM50401 > 256) {
-                    short s = C22731.f74050[iM50401 - 257];
-                    int iM6950 = C2268.m6950(s >>> 5, C22731.m50395(c22731, s & 31));
-                    int i4 = C22731.f74048[C22731.m50401(c22731.f74056, this.f42757)];
-                    int iM6951 = C2268.m6950(i4 >>> 4, C22731.m50395(c22731, i4 & 15));
-                    if (this.f42756.length < iM6950) {
-                        this.f42756 = new byte[iM6950];
-                    }
-                    this.f42758 = iM6950;
-                    this.f42762 = 0;
-                    c22731.f74053.m3469(iM6951, iM6950, this.f42756);
-                    int i5 = i + iMin;
-                    int i6 = i2 - iMin;
-                    int i7 = this.f42758 - this.f42762;
-                    if (i7 > 0) {
-                        iMin2 = Math.min(i6, i7);
-                        System.arraycopy(this.f42756, this.f42762, bArr, i5, iMin2);
-                        this.f42762 += iMin2;
-                    } else {
-                        iMin2 = 0;
-                    }
-                    iMin += iMin2;
-                } else {
-                    this.f42761 = true;
-                    break;
-                }
-            } else {
-                byte b = (byte) iM50401;
-                c22731.f74053.m3468(b);
-                bArr[iMin + i] = b;
-                iMin++;
+        String str4 = TextBundle.TEXT_ENTRY;
+        String[] strArr = {TextBundle.TEXT_ENTRY, "image", "video", "audio"};
+        String str5 = "";
+        for (int i = 0; i < 4; i++) {
+            String str6 = strArr[i];
+            if (lowerCase2.startsWith(str6 + '/')) {
+                str5 = str6;
             }
         }
-        return iMin;
-    }
-
-    @Override // l.AbstractC22025
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo10852() {
-        return !this.f42761;
-    }
-
-    @Override // l.AbstractC22025
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo10849() {
-        return this.f42758 - this.f42762;
+        if (str5.isEmpty() && lowerCase2.indexOf(42) < 0) {
+            str5 = lowerCase2;
+        }
+        if (lowerCase2.indexOf(42) >= 0) {
+            lowerCase2 = "";
+        }
+        str3.getClass();
+        switch (str3) {
+            case "text/*":
+                break;
+            case "audio/*":
+                str4 = "audio";
+                break;
+            case "video/*":
+                str4 = "video";
+                break;
+            case "image/*":
+                str4 = "image";
+                break;
+            default:
+                str4 = str5;
+                break;
+        }
+        if (!lowerCase.isEmpty()) {
+            strConcat = "ext:".concat(lowerCase);
+        } else if (!lowerCase2.isEmpty()) {
+            strConcat = "mime:".concat(lowerCase2);
+        }
+        return new C12853(strConcat, str4);
     }
 }

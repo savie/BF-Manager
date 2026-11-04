@@ -1,50 +1,43 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.۟۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S24 */
+/* JADX INFO: renamed from: l.ۜᩴ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: T91K */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7350 extends AbstractC0315 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20756 f24413;
-
-    @Override // l.AbstractC20777, l.InterfaceC20693
-    public final int characteristics() {
-        return 16464;
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C7350(C20756 c20756, int i, int i2) {
-        super(i, i2);
-        this.f24413 = c20756;
-    }
-
-    @Override // l.AbstractC20777
+public final class C7350 implements InterfaceC23013 {
+    @Override // l.InterfaceC23013
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo13685(int i) {
-        return this.f24413.f67554.f51191[i];
-    }
-
-    @Override // l.AbstractC20777
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC7371 mo13686(int i, int i2) {
-        return new C7350(this.f24413, i, i2);
-    }
-
-    @Override // l.AbstractC20777, l.AbstractC1309, l.InterfaceC20693
-    public final void forEachRemaining(Consumer consumer) {
-        C15818 c15818 = this.f24413.f67554;
-        Object[] objArr = c15818.f51191;
-        int i = c15818.f51193;
-        while (true) {
-            int i2 = this.f67579;
-            if (i2 >= i) {
-                return;
+    public final void mo2807(InterfaceC20029 interfaceC20029, AbstractC4534 abstractC4534) {
+        C14007 c14007 = (C14007) abstractC4534;
+        int length = interfaceC20029.length();
+        interfaceC20029.mo7364(c14007);
+        AbstractC23705 abstractC23705Mo14267 = c14007.mo14267();
+        if (abstractC23705Mo14267 instanceof C19450) {
+            final C19450 c19450 = (C19450) abstractC23705Mo14267;
+            AbstractC22881.f74344.m29674(interfaceC20029.mo7334(), EnumC22135.ORDERED);
+            AbstractC22881.f74343.m29674(interfaceC20029.mo7334(), Integer.valueOf(c19450.m44936()));
+            AbstractC22881.f74342.m29674(interfaceC20029.mo7334(), new InterfaceC10946() { // from class: l.۠ᩴ᩹
+                @Override // l.InterfaceC10946
+                /* JADX INFO: renamed from: ۙ */
+                public final int mo7733() {
+                    return c19450.m44936() - 1;
+                }
+            });
+            c19450.m44932(c19450.m44936() + 1);
+        } else {
+            AbstractC22881.f74344.m29674(interfaceC20029.mo7334(), EnumC22135.BULLET);
+            C11824 c11824 = AbstractC22881.f74339;
+            InterfaceC17045 interfaceC17045Mo7334 = interfaceC20029.mo7334();
+            int i = 0;
+            for (AbstractC4534 abstractC4534Mo14267 = c14007.mo14267(); abstractC4534Mo14267 != null; abstractC4534Mo14267 = abstractC4534Mo14267.mo14267()) {
+                if (abstractC4534Mo14267 instanceof C14007) {
+                    i++;
+                }
             }
-            this.f67579 = i2 + 1;
-            consumer.accept(objArr[i2]);
+            c11824.m29674(interfaceC17045Mo7334, Integer.valueOf(i));
+        }
+        interfaceC20029.mo7340(c14007, length);
+        if (interfaceC20029.mo7361(c14007)) {
+            interfaceC20029.mo7362();
         }
     }
 }

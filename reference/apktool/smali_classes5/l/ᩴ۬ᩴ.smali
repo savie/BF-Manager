@@ -1,219 +1,384 @@
 .class public final Ll/ᩴ۬ᩴ;
 .super Ljava/lang/Object;
-.source "VZ3"
+.source "P70J"
 
 # interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Ljava/io/DataInput;
 
 
 # instance fields
-.field public ֡:I
+.field public final ܰ:Ll/۟֡֫;
 
-.field public ܺ:I
-
-.field public final synthetic ܽ:Ll/᩵۬ᩴ;
-
-.field public ᩶:Ll/᩷۬ᩴ;
+.field public final ᩶:Ljava/io/DataInputStream;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩵۬ᩴ;)V
-    .locals 1
+.method public constructor <init>(Ljava/io/DataInputStream;Ll/۟֡֫;)V
+    .locals 0
 
-    .line 276
+    .line 577
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ᩴ۬ᩴ;->ܽ:Ll/᩵۬ᩴ;
+    .line 578
+    iput-object p1, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    .line 277
-    new-instance v0, Ll/᩷۬ᩴ;
-
-    iget-object p1, p1, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
-
-    invoke-direct {v0, p1}, Ll/᩷۬ᩴ;-><init>(Ll/ܽ۬ᩴ;)V
-
-    iput-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ll/᩷۬ᩴ;
-
-    const/4 p1, 0x0
-
-    .line 278
-    iput p1, p0, Ll/ᩴ۬ᩴ;->֡:I
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ll/ᩴ۬ᩴ;->ܺ:I
+    .line 579
+    iput-object p2, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 3
+.method public final readBoolean()Z
+    .locals 1
 
-    .line 316
-    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܽ:Ll/᩵۬ᩴ;
+    .line 622
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    iget-object v0, v0, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    iget v0, v0, Ll/ܽ۬ᩴ;->ܽ:I
+    .line 623
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    .line 317
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readBoolean()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readByte()B
+    .locals 1
+
+    .line 628
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 629
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readByte()B
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readChar()C
+    .locals 1
+
+    .line 652
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 653
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readChar()C
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readDouble()D
+    .locals 2
+
+    .line 676
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 677
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readDouble()D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final readFloat()F
+    .locals 1
+
+    .line 670
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 671
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readFloat()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readFully([B)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 584
+    array-length v1, p1
+
+    invoke-virtual {p0, p1, v0, v1}, Ll/ᩴ۬ᩴ;->readFully([BII)V
+
+    return-void
+.end method
+
+.method public final readFully([BII)V
+    .locals 5
+
+    if-ltz p2, :cond_1
+
+    if-ltz p3, :cond_1
+
+    int-to-long v0, p2
+
+    int-to-long v2, p3
+
+    add-long/2addr v0, v2
+
+    .line 589
+    array-length v2, p1
+
+    int-to-long v2, v2
+
+    cmp-long v4, v0, v2
+
+    if-gtz v4, :cond_1
+
+    .line 592
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    add-int/2addr p3, p2
+
     :goto_0
-    iget v1, p0, Ll/ᩴ۬ᩴ;->֡:I
+    if-ge p2, p3, :cond_0
 
-    if-ge v1, v0, :cond_0
+    const/high16 v1, 0x10000
 
-    add-int/lit8 v2, v1, 0x1
+    sub-int v2, p3, p2
 
-    .line 318
-    iput v2, p0, Ll/ᩴ۬ᩴ;->֡:I
+    .line 595
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    iput v1, p0, Ll/ᩴ۬ᩴ;->ܺ:I
+    move-result v1
 
-    iget-object v2, p0, Ll/ᩴ۬ᩴ;->᩶:Ll/᩷۬ᩴ;
+    .line 596
+    iget-object v2, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    iput v1, v2, Ll/᩷۬ᩴ;->ܺ:I
+    invoke-virtual {v2, p1, p2, v1}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 319
-    invoke-interface {p1, v2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    add-int/2addr p2, v1
+
+    .line 598
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
     goto :goto_0
 
     :cond_0
     return-void
+
+    .line 590
+    :cond_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string p2, "Invalid checkpoint input range"
+
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final hasNext()Z
-    .locals 2
+.method public final readInt()I
+    .locals 1
 
-    .line 282
-    iget v0, p0, Ll/ᩴ۬ᩴ;->֡:I
+    .line 658
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    iget-object v1, p0, Ll/ᩴ۬ᩴ;->ܽ:Ll/᩵۬ᩴ;
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    iget-object v1, v1, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
+    .line 659
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    iget v1, v1, Ll/ܽ۬ᩴ;->ܽ:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    .line 288
-    invoke-virtual {p0}, Ll/ᩴ۬ᩴ;->hasNext()Z
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    .line 289
-    iget v0, p0, Ll/ᩴ۬ᩴ;->֡:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Ll/ᩴ۬ᩴ;->֡:I
-
-    iput v0, p0, Ll/ᩴ۬ᩴ;->ܺ:I
-
-    iget-object v1, p0, Ll/ᩴ۬ᩴ;->᩶:Ll/᩷۬ᩴ;
-
-    iput v0, v1, Ll/᩷۬ᩴ;->ܺ:I
-
-    return-object v1
-
-    .line 288
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return v0
 .end method
 
-.method public final remove()V
-    .locals 6
+.method public final readLine()Ljava/lang/String;
+    .locals 2
 
-    .line 295
-    iget v0, p0, Ll/ᩴ۬ᩴ;->ܺ:I
+    .line 682
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    const/4 v1, -0x1
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    if-eq v0, v1, :cond_0
+    .line 683
+    iget-object v1, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    .line 296
-    iput v1, p0, Ll/ᩴ۬ᩴ;->ܺ:I
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLine()Ljava/lang/String;
 
-    .line 297
-    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܽ:Ll/᩵۬ᩴ;
+    move-result-object v1
 
-    iget-object v2, v0, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
+    .line 684
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    iget v3, v2, Ll/ܽ۬ᩴ;->ܽ:I
+    return-object v1
+.end method
 
-    add-int/lit8 v4, v3, -0x1
+.method public final readLong()J
+    .locals 2
 
-    iput v4, v2, Ll/ܽ۬ᩴ;->ܽ:I
+    .line 664
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    iget v4, p0, Ll/ᩴ۬ᩴ;->֡:I
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    add-int/lit8 v5, v4, -0x1
+    .line 665
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    iput v5, p0, Ll/ᩴ۬ᩴ;->֡:I
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
 
-    sub-int/2addr v3, v4
+    move-result-wide v0
 
-    .line 298
-    iget-object v2, v2, Ll/ܽ۬ᩴ;->᩶:[I
+    return-wide v0
+.end method
 
-    invoke-static {v2, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+.method public final readShort()S
+    .locals 1
 
-    .line 299
-    iget-object v2, v0, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
+    .line 640
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    iget-object v2, v2, Ll/ܽ۬ᩴ;->۫:[Ljava/lang/Object;
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    iget v4, p0, Ll/ᩴ۬ᩴ;->֡:I
+    .line 641
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    add-int/lit8 v5, v4, 0x1
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readShort()S
 
-    invoke-static {v2, v5, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    move-result v0
 
-    .line 300
-    iget-object v2, p0, Ll/ᩴ۬ᩴ;->᩶:Ll/᩷۬ᩴ;
+    return v0
+.end method
 
-    iput v1, v2, Ll/᩷۬ᩴ;->ܺ:I
+.method public final readUTF()Ljava/lang/String;
+    .locals 2
 
-    .line 301
-    iget-object v0, v0, Ll/᩵۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
+    .line 690
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    iget-object v1, v0, Ll/ܽ۬ᩴ;->۫:[Ljava/lang/Object;
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    iget v0, v0, Ll/ܽ۬ᩴ;->ܽ:I
+    .line 691
+    iget-object v1, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
-    aput-object v2, v1, v0
+    move-result-object v1
 
-    return-void
+    .line 692
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
 
-    .line 295
+    return-object v1
+.end method
+
+.method public final readUnsignedByte()I
+    .locals 1
+
+    .line 634
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 635
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readUnsignedShort()I
+    .locals 1
+
+    .line 646
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
+
+    invoke-static {v0}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    .line 647
+    iget-object v0, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedShort()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final skipBytes(I)I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-gez p1, :cond_0
+
+    return v0
+
+    .line 608
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :goto_0
+    iget-object v1, p0, Ll/ᩴ۬ᩴ;->ܰ:Ll/۟֡֫;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    if-ge v0, p1, :cond_2
 
-    throw v0
+    .line 609
+    invoke-static {v1}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    const/high16 v2, 0x10000
+
+    sub-int v3, p1, v0
+
+    .line 610
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    iget-object v3, p0, Ll/ᩴ۬ᩴ;->᩶:Ljava/io/DataInputStream;
+
+    invoke-virtual {v3, v2}, Ljava/io/DataInputStream;->skipBytes(I)I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/2addr v0, v2
+
+    goto :goto_0
+
+    .line 616
+    :cond_2
+    :goto_1
+    invoke-static {v1}, Ll/ۧ۬ᩴ;->ۙ(Ll/۟֡֫;)V
+
+    return v0
 .end method

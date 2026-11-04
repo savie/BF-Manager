@@ -1,26 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ۛᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U4HR */
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+
+/* JADX INFO: renamed from: l.᩶ܶۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7AI */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21397 extends AbstractC7286 {
+public final class C21397 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final StringBuilder f69573;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final LinkedHashSet f68159 = new LinkedHashSet();
 
-    @Override // l.AbstractC7286
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7286 mo19432() {
-        AbstractC7286.m19431(this.f69573);
-        return this;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final LinkedHashSet f68160 = new LinkedHashSet();
 
-    public C21397() {
-        super(EnumC10109.Comment);
-        this.f69573 = new StringBuilder();
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f68158 = new ArrayList();
 
-    public final String toString() {
-        return "<!--" + this.f69573.toString() + "-->";
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m48648() {
+        ArrayList arrayList = new ArrayList(this.f68159);
+        C12884.sort(arrayList, new C13981());
+        return arrayList;
     }
 }

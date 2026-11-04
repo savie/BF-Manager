@@ -1,45 +1,59 @@
 .class public final Ll/ۡۙۙ;
 .super Ljava/lang/Object;
-.source "Y68P"
+.source "G9NZ"
+
+
+# instance fields
+.field public final ۙ:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public static ۙ(Landroid/widget/PopupWindow;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 216
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
+    .line 124
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 125
+    new-instance v0, Ljava/util/ArrayList;
 
-.method public static ۙ(Landroid/widget/PopupWindow;Z)V
-    .locals 0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 206
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
+    iput-object v0, p0, Ll/ۡۙۙ;->ۙ:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method public static ۙ(Landroid/widget/PopupWindow;)Z
-    .locals 0
 
-    .line 211
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getOverlapAnchor()Z
+# virtual methods
+.method public final ۙ()V
+    .locals 3
 
-    move-result p0
+    .line 136
+    iget-object v0, p0, Ll/ۡۙۙ;->ۙ:Ljava/util/ArrayList;
 
-    return p0
-.end method
+    invoke-static {v0}, Ll/۟۟᩵;->ۙ(Ljava/util/List;)I
 
-.method public static ܰ(Landroid/widget/PopupWindow;)I
-    .locals 0
+    move-result v1
 
-    .line 221
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getWindowLayoutType()I
+    :goto_0
+    const/4 v2, -0x1
 
-    move-result p0
+    if-ge v2, v1, :cond_0
 
-    return p0
+    .line 137
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ll/֨ۙۙ;
+
+    invoke-interface {v2}, Ll/֨ۙۙ;->ۙ()V
+
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

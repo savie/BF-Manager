@@ -1,82 +1,109 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۚ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B7AT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13614 {
+/* JADX INFO: renamed from: l.۬ۙۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: GAN8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13614 extends AbstractC6317 implements InterfaceC3174 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C6222 f44918;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11536 f43244;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11497 f44919;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public InterfaceC11536 f43245;
 
-    public C13614(C11497 c11497, C6222 c6222) {
-        this.f44919 = c11497;
-        this.f44918 = c6222;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final int f43246;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public AbstractC6317 f43247;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC3174 f43248;
+
+    @Override // l.AbstractC20487
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final StackTraceElement mo33360() {
+        return null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4440 m33293(CharSequence charSequence, String str) {
-        C6222 c6222 = this.f44918;
-        c6222.m17276reset(charSequence);
-        boolean zMatches = "exact".equals(this.f44919.f38671) ? c6222.matches() : c6222.find();
-        m33295();
-        if (zMatches) {
-            return new C4440(str, c6222.start(), c6222.end(), charSequence);
+    public C13614(InterfaceC3174 interfaceC3174, InterfaceC11536 interfaceC11536) {
+        super(C2428.f7769, C24963.f80840);
+        this.f43248 = interfaceC3174;
+        this.f43244 = interfaceC11536;
+        this.f43246 = ((Number) interfaceC11536.mo5004(0, C6903.f22888)).intValue();
+    }
+
+    @Override // l.AbstractC20487, l.InterfaceC24217
+    /* JADX INFO: renamed from: ᩷ */
+    public final InterfaceC24217 mo5178() {
+        AbstractC6317 abstractC6317 = this.f43247;
+        if (C1402.m5130(abstractC6317)) {
+            return abstractC6317;
         }
         return null;
     }
 
+    @Override // l.AbstractC6317, l.InterfaceC4825
+    public final InterfaceC11536 getContext() {
+        InterfaceC11536 interfaceC11536 = this.f43245;
+        return interfaceC11536 == null ? C24963.f80840 : interfaceC11536;
+    }
+
+    @Override // l.AbstractC20487
+    /* JADX INFO: renamed from: ᩷ */
+    public final Object mo10983(Object obj) {
+        Throwable thM51055 = C22660.m51055(obj);
+        if (thM51055 != null) {
+            this.f43245 = new C9139(thM51055, getContext());
+        }
+        AbstractC6317 abstractC6317 = this.f43247;
+        if (abstractC6317 != null) {
+            abstractC6317.mo8188(obj);
+        }
+        return EnumC16757.COROUTINE_SUSPENDED;
+    }
+
+    @Override // l.AbstractC6317, l.AbstractC20487
+    /* JADX INFO: renamed from: ۫ */
+    public final void mo18033() {
+        super.mo18033();
+    }
+
+    @Override // l.InterfaceC3174
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo10365(Object obj, AbstractC6317 abstractC6317) {
+        try {
+            Object objM33359 = m33359(abstractC6317, obj);
+            return objM33359 == EnumC16757.COROUTINE_SUSPENDED ? objM33359 : C11471.f36082;
+        } catch (Throwable th) {
+            this.f43245 = new C9139(th, abstractC6317.getContext());
+            throw th;
+        }
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m33296(CharSequence charSequence, C6557 c6557) throws C12731 {
-        C6222 c6222 = this.f44918;
-        c6222.m17276reset(charSequence);
-        if ("exact".equals(this.f44919.f38671)) {
-            boolean zMatches = c6222.matches();
-            m33295();
-            if (zMatches) {
-                c6557.m17782(new C4440("dexString", c6222.start(), c6222.end(), charSequence));
-                return;
+    private final Object m33359(AbstractC6317 abstractC6317, Object obj) {
+        InterfaceC11536 context = abstractC6317.getContext();
+        C13686.m33477(context);
+        InterfaceC11536 interfaceC11536 = this.f43245;
+        if (interfaceC11536 != context) {
+            if (!(interfaceC11536 instanceof C9139)) {
+                if (((Number) context.mo5004(0, new C11134(this))).intValue() != this.f43246) {
+                    throw new IllegalStateException(("Flow invariant is violated:\n\t\tFlow was collected in " + this.f43244 + ",\n\t\tbut emission happened in " + context + ".\n\t\tPlease refer to 'flow' documentation or use 'flowOn' instead").toString());
+                }
+                this.f43245 = context;
+            } else {
+                throw new IllegalStateException(C0878.m3582("\n            Flow exception transparency is violated:\n                Previous 'emit' call has thrown exception " + ((C9139) interfaceC11536).f29706 + ", but then emission attempt of value '" + obj + "' has been detected.\n                Emissions from 'catch' blocks are prohibited in order to avoid unspecified behaviour, 'Flow.catch' operator can be used instead.\n                For a more detailed explanation, please refer to Flow documentation.\n            ").toString());
             }
-            return;
         }
-        while (c6222.find()) {
-            m33295();
-            c6557.m17782(new C4440("dexString", c6222.start(), c6222.end(), charSequence));
+        this.f43247 = abstractC6317;
+        InterfaceC3817 interfaceC3817 = C22323.f72259;
+        InterfaceC3174 interfaceC3174 = this.f43248;
+        C15243.m36587((Object) interfaceC3174, "null cannot be cast to non-null type kotlinx.coroutines.flow.FlowCollector<kotlin.Any?>");
+        Object objMo12355 = interfaceC3817.mo12355(interfaceC3174, obj, this);
+        if (!C15243.m36589(objMo12355, EnumC16757.COROUTINE_SUSPENDED)) {
+            this.f43247 = null;
         }
-        m33295();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4440 m33292(int i, int i2, CharSequence charSequence) throws C12731 {
-        C6222 c6222 = this.f44918;
-        c6222.m17276reset(charSequence);
-        while (c6222.find()) {
-            m33295();
-            if (c6222.start() < i2 && c6222.end() > i) {
-                return new C4440("dexClassName", c6222.start(), c6222.end(), charSequence);
-            }
-        }
-        m33295();
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m33295() throws C12731 {
-        C6222 c6222 = this.f44918;
-        if (c6222.m17270()) {
-            throw C12731.m31629(null, "REGEX_TIMEOUT", "Regex matching timed out.", "fatal");
-        }
-        if (c6222.m17258()) {
-            throw C12731.m31629(null, "REGEX_RESOURCE_LIMIT", "Regex matching exceeded its execution memory limit.", "fatal");
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C6222 m33294(C14795 c14795) {
-        C6222 c6222 = this.f44918;
-        c6222.m17276reset((CharSequence) c14795);
-        return c6222;
+        return objMo12355;
     }
 }

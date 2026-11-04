@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.params.AEADParameters;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KCCMBlockCipher implements AEADBlockCipher {
     public static final int BITS_IN_BYTE = 8;
     public static final int BYTES_IN_INT = 4;

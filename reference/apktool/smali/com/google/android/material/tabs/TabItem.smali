@@ -30,44 +30,44 @@
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 54
-    sget-object v0, Ll/۠۟ܶ;->ۛܶۙ:[I
+    sget-object v0, Ll/ܰ۬ܺ;->ۢܺۙ:[I
 
     .line 55
-    invoke-static {p1, p2, v0}, Ll/֫ᩳ;->ۙ(Landroid/content/Context;Landroid/util/AttributeSet;[I)Ll/֫ᩳ;
+    invoke-static {p1, p2, v0}, Ll/ۙ᩹;->ۙ(Landroid/content/Context;Landroid/util/AttributeSet;[I)Ll/ۙ᩹;
 
     move-result-object p1
 
     .line 56
-    sget p2, Ll/۠۟ܶ;->ܳܶۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۖܺۙ:I
 
-    invoke-virtual {p1, p2}, Ll/֫ᩳ;->֨(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Ll/ۙ᩹;->۫(I)Ljava/lang/CharSequence;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/android/material/tabs/TabItem;->text:Ljava/lang/CharSequence;
 
     .line 57
-    sget p2, Ll/۠۟ܶ;->ۧܶۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֨ܺۙ:I
 
-    invoke-virtual {p1, p2}, Ll/֫ᩳ;->ۖ(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Ll/ۙ᩹;->᩸(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/android/material/tabs/TabItem;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 58
-    sget p2, Ll/۠۟ܶ;->᩻ܶۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۡܺۙ:I
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {p1, p2, v0}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/tabs/TabItem;->customLayout:I
 
     .line 59
-    invoke-virtual {p1}, Ll/֫ᩳ;->ۚ()V
+    invoke-virtual {p1}, Ll/ۙ᩹;->ᩴ()V
 
     return-void
 .end method

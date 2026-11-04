@@ -1,66 +1,39 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۛۙ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۚᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T4KR */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5827 implements InterfaceC8616 {
-    public final Collection a;
+public final class C5827 extends AbstractC13284 {
 
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.F(this, j, j2, intFunction);
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final C15258 f20044;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22585 f20045;
+
+    public C5827(int i, C15258 c15258, InterfaceC22585 interfaceC22585) {
+        super(i, -1);
+        this.f20045 = interfaceC22585;
+        this.f20044 = c15258;
     }
 
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ int o() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC8616 a(int i) {
-        throw new IndexOutOfBoundsException();
-    }
-
-    public C5827(Collection collection) {
-        this.a = collection;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC20693 spliterator() {
-        return C9030.stream(this.a).spliterator();
-    }
-
-    @Override // l.InterfaceC8616
-    public final void k(Object[] objArr, int i) {
-        Iterator it = this.a.iterator();
-        while (it.hasNext()) {
-            objArr[i] = it.next();
-            i++;
+    @Override // l.AbstractC19734
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo4982(C2161 c2161) throws IOException {
+        c2161.getClass();
+        c2161.write(".end local ", 0, 11);
+        InterfaceC22585 interfaceC22585 = this.f20045;
+        this.f20044.m36610(c2161, interfaceC22585.mo26041());
+        String name = interfaceC22585.getName();
+        String type = interfaceC22585.getType();
+        String signature = interfaceC22585.getSignature();
+        if (name == null && type == null && signature == null) {
+            return true;
         }
-    }
-
-    @Override // l.InterfaceC8616
-    public final Object[] m(IntFunction intFunction) {
-        Collection collection = this.a;
-        return collection.toArray((Object[]) intFunction.apply(collection.size()));
-    }
-
-    @Override // l.InterfaceC8616
-    public final long count() {
-        return this.a.size();
-    }
-
-    @Override // l.InterfaceC8616
-    public final void forEach(Consumer consumer) {
-        C9030.a(this.a, consumer);
-    }
-
-    public final String toString() {
-        return String.format("CollectionNode[%d][%s]", Integer.valueOf(this.a.size()), this.a);
+        c2161.write("  # ", 0, 4);
+        C25219.m56227(c2161, name, type, signature);
+        return true;
     }
 }

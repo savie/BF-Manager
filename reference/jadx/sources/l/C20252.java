@@ -1,9 +1,12 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.᩶ܶۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 05G9 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20252 extends IOException {
+/* JADX INFO: renamed from: l.᩵֫᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: O6OB */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20252 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 11;
+    }
 }

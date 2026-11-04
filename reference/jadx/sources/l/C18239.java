@@ -1,16 +1,17 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONValue;
-import com.google.android.material.motion.MotionUtils;
-
-/* JADX INFO: renamed from: l.ᩳᩴ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6Y2 */
+/* JADX INFO: renamed from: l.ܿۢۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BJX */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C18239 implements InterfaceC11163 {
-    @Override // l.InterfaceC11163
+public final class C18239 extends AbstractC24207 {
+    public final String toString() {
+        return C3188.m10404("[", this.f78447, "$=", this.f78448, "]");
+    }
+
+    @Override // l.AbstractC0078
     /* JADX INFO: renamed from: ۙ */
-    public final C12731 mo2806(JSONValue jSONValue, String str, String str2) {
-        return C12731.m31626(str, str2, jSONValue, JSON.array(), C3184.m9603(MotionUtils.EASING_TYPE_PATH, "file.bin", "targetVersion", "").add("byteOffset", 0).add("maxBytes", 256));
+    public final boolean mo1133(C15496 c15496, C15496 c15497) {
+        String str = this.f78447;
+        return c15497.mo41539(str) && C15300.m36731(c15497.mo41538(str)).endsWith(this.f78448);
     }
 }

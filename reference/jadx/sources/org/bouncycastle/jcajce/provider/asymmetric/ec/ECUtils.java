@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.provider.config.ProviderConfiguration;
 import org.bouncycastle.jce.spec.ECNamedCurveSpec;
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECUtils {
     public static AsymmetricKeyParameter generatePrivateKeyParameter(PrivateKey privateKey) {
         return privateKey instanceof BCECPrivateKey ? ((BCECPrivateKey) privateKey).engineGetKeyParameters() : ECUtil.generatePrivateKeyParameter(privateKey);

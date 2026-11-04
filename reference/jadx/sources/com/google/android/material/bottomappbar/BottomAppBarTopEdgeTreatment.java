@@ -2,7 +2,7 @@ package com.google.android.material.bottomappbar;
 
 import com.google.android.material.shape.EdgeTreatment;
 import com.google.android.material.shape.ShapePath;
-import l.C0280;
+import l.C19967;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BottomAppBarTopEdgeTreatment extends EdgeTreatment implements Cloneable {
@@ -37,8 +37,8 @@ public class BottomAppBarTopEdgeTreatment extends EdgeTreatment implements Clone
         float f7 = ((this.fabMargin * 2.0f) + f6) / 2.0f;
         float f8 = f3 * this.roundedCornerRadius;
         float f9 = f2 + this.horizontalOffset;
-        float fM1792 = C0280.m1792(1.0f, f3, f7, this.cradleVerticalOffset * f3);
-        if (fM1792 / f7 >= 1.0f) {
+        float fM45884 = C19967.m45884(1.0f, f3, f7, this.cradleVerticalOffset * f3);
+        if (fM45884 / f7 >= 1.0f) {
             shapePath.lineTo(f, 0.0f);
             return;
         }
@@ -47,7 +47,7 @@ public class BottomAppBarTopEdgeTreatment extends EdgeTreatment implements Clone
         boolean z = f10 == -1.0f || Math.abs((f10 * 2.0f) - f6) < 0.1f;
         if (z) {
             f4 = 0.0f;
-            f5 = fM1792;
+            f5 = fM45884;
         } else {
             f4 = 1.75f;
             f5 = 0.0f;

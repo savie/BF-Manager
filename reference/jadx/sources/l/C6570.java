@@ -1,16 +1,20 @@
 package l;
 
-import android.media.AudioDeviceInfo;
+/* JADX INFO: renamed from: l.ۛᩳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C6570 extends EnumC8806 {
+    public /* synthetic */ C6570() {
+        this("Rawtext", 4);
+    }
 
-/* JADX INFO: renamed from: l.ۜۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A8PK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6570 {
+    public C6570(String str, int i) {
+        super(str, i, 0);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AudioDeviceInfo f22122;
-
-    public C6570(AudioDeviceInfo audioDeviceInfo) {
-        this.f22122 = audioDeviceInfo;
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        EnumC8806.m23641(c8260, c24448, this, EnumC8806.f28715);
     }
 }

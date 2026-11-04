@@ -1,45 +1,49 @@
 package l;
 
-import java.util.function.Predicate;
+import android.content.Context;
+import android.util.AttributeSet;
 
-/* JADX INFO: renamed from: l.ۨܳۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51FV */
+/* JADX INFO: renamed from: l.ۧܽ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5NF */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C11757 implements Predicate {
+public class C11757 extends C18277 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f39483;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f38006;
 
-    public /* synthetic */ C11757(int i) {
-        this.f39483 = i;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f38007;
+
+    public C11757(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f38006 = true;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    public C11757(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f38006 = true;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f39483) {
-            case 0:
-                break;
+    @Override // android.widget.AutoCompleteTextView
+    public final boolean enoughToFilter() {
+        return this.f38006;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29524(boolean z) {
+        this.f38006 = z;
+    }
+
+    @Override // android.widget.AutoCompleteTextView
+    public final void setThreshold(int i) {
+        if (i < 0) {
+            i = 0;
         }
-        return C8512.$default$negate(this);
+        this.f38007 = i;
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f39483) {
-            case 0:
-                return ((C0787) obj).f3371 == 1;
-            default:
-                return ((AbstractC8047) obj) instanceof AbstractC5930;
-        }
+    @Override // android.widget.AutoCompleteTextView
+    public final int getThreshold() {
+        return this.f38007;
     }
 }

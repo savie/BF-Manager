@@ -1,20 +1,19 @@
 package l;
 
-import java.util.ArrayList;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.ۖ֨۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: E78W */
+/* JADX INFO: renamed from: l.֫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: FB8V */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2199 {
+public final class C2199 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C11893(parcel);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7949;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f7950;
-
-    public C2199(ArrayList arrayList, boolean z) {
-        this.f7950 = z;
-        this.f7949 = arrayList;
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C11893[i];
     }
 }

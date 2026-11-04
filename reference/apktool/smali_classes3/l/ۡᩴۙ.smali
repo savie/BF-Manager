@@ -1,245 +1,72 @@
 .class public final Ll/ۡᩴۙ;
 .super Ljava/lang/Object;
-.source "28K4"
+.source "057Y"
 
 
 # instance fields
-.field public final ۙ:Landroid/util/SparseBooleanArray;
+.field public final ۙ:J
+
+.field public final ᩷:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/SparseBooleanArray;)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 3
 
-    .line 170
+    .line 3190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
-    iput-object p1, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p3, v0
+
+    if-nez v2, :cond_0
+
+    .line 3193
+    iput-wide v0, p0, Ll/ۡᩴۙ;->᩷:J
+
+    const-wide/16 p1, 0x1
+
+    .line 3194
+    iput-wide p1, p0, Ll/ۡᩴۙ;->ۙ:J
+
+    return-void
+
+    .line 3197
+    :cond_0
+    iput-wide p1, p0, Ll/ۡᩴۙ;->᩷:J
+
+    .line 3198
+    iput-wide p3, p0, Ll/ۡᩴۙ;->ۙ:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x1
+    .line 3239
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return v0
+    iget-wide v1, p0, Ll/ۡᩴۙ;->᩷:J
 
-    .line 221
-    :cond_0
-    instance-of v1, p1, Ll/ۡᩴۙ;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string v1, "/"
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    iget-wide v1, p0, Ll/ۡᩴۙ;->ۙ:J
 
-    .line 224
-    :cond_1
-    check-cast p1, Ll/ۡᩴۙ;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 225
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v0
 
-    const/16 v4, 0x18
-
-    iget-object v5, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    if-ge v3, v4, :cond_5
-
-    .line 201
-    invoke-virtual {v5}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v1
-
-    if-eq v3, v1, :cond_2
-
-    return v2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v5}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_4
-
-    .line 231
-    invoke-virtual {p0, v1}, Ll/ۡᩴۙ;->ܰ(I)I
-
-    move-result v3
-
-    invoke-virtual {p1, v1}, Ll/ۡᩴۙ;->ܰ(I)I
-
-    move-result v4
-
-    if-eq v3, v4, :cond_3
-
-    return v2
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v0
-
-    .line 237
-    :cond_5
-    invoke-virtual {v5, v1}, Landroid/util/SparseBooleanArray;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    .line 243
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x18
-
-    iget-object v2, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    if-ge v0, v1, :cond_1
-
-    .line 201
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 247
-    invoke-virtual {p0, v1}, Ll/ۡᩴۙ;->ܰ(I)I
-
-    move-result v3
-
-    add-int/2addr v0, v3
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-
-    .line 251
-    :cond_1
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ۙ()I
-    .locals 1
-
-    .line 201
-    iget-object v0, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ۙ(I)Z
-    .locals 1
-
-    .line 181
-    iget-object v0, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final varargs ۙ([I)Z
-    .locals 5
-
-    .line 191
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_1
-
-    aget v3, p1, v2
-
-    .line 181
-    iget-object v4, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v4, v3}, Landroid/util/SparseBooleanArray;->get(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v1
-.end method
-
-.method public final ܰ(I)I
-    .locals 2
-
-    .line 201
-    iget-object v0, p0, Ll/ۡᩴۙ;->ۙ:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v1
-
-    .line 212
-    invoke-static {p1, v1}, Ll/֫᩵ۙ;->ۙ(II)V
-
-    .line 213
-    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method

@@ -29,7 +29,7 @@
 
 .field public ignoreCallbacks:Z
 
-.field public internalAnimationCallback:Ll/ۖ֫ܰ;
+.field public internalAnimationCallback:Ll/۟ۖ᩷;
 
 .field public mockGrowFraction:F
 
@@ -164,12 +164,12 @@
     .locals 2
 
     .line 181
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/۟ۖ᩷;
 
     if-eqz v0, :cond_0
 
     .line 182
-    invoke-virtual {v0, p0}, Ll/ۖ֫ܰ;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p0}, Ll/۟ۖ᩷;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     .line 184
     :cond_0
@@ -197,10 +197,10 @@
 
     move-result-object v1
 
-    check-cast v1, Ll/ۖ֫ܰ;
+    check-cast v1, Ll/۟ۖ᩷;
 
     .line 186
-    invoke-virtual {v1, p0}, Ll/ۖ֫ܰ;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p0}, Ll/۟ۖ᩷;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -212,12 +212,12 @@
     .locals 2
 
     .line 169
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/۟ۖ᩷;
 
     if-eqz v0, :cond_0
 
     .line 170
-    invoke-virtual {v0, p0}, Ll/ۖ֫ܰ;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p0}, Ll/۟ۖ᩷;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
 
     .line 172
     :cond_0
@@ -245,10 +245,10 @@
 
     move-result-object v1
 
-    check-cast v1, Ll/ۖ֫ܰ;
+    check-cast v1, Ll/۟ۖ᩷;
 
     .line 174
-    invoke-virtual {v1, p0}, Ll/ۖ֫ܰ;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p0}, Ll/۟ۖ᩷;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -660,7 +660,7 @@
     return v0
 .end method
 
-.method public registerAnimationCallback(Ll/ۖ֫ܰ;)V
+.method public registerAnimationCallback(Ll/۟ۖ᩷;)V
     .locals 1
 
     .line 125
@@ -740,11 +740,11 @@
     return-void
 .end method
 
-.method public setInternalAnimationCallback(Ll/ۖ֫ܰ;)V
+.method public setInternalAnimationCallback(Ll/۟ۖ᩷;)V
     .locals 0
 
     .line 164
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/ۖ֫ܰ;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Ll/۟ۖ᩷;
 
     return-void
 .end method
@@ -1030,7 +1030,7 @@
     return-void
 .end method
 
-.method public unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+.method public unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
     .locals 1
 
     .line 141

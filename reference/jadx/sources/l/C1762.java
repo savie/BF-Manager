@@ -1,13 +1,20 @@
 package l;
 
-import java.util.Comparator;
-
-/* JADX INFO: renamed from: l.֫ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.֫۟֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAJI */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C1762 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        return Integer.compare(((int[]) obj)[0], ((int[]) obj2)[0]);
+public final class C1762 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f6000;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C8002 f6001;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C8002 f6002;
+
+    public C1762(String str) {
+        this.f6000 = str;
     }
 }

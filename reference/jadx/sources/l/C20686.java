@@ -1,24 +1,14 @@
 package l;
 
-import java.util.function.Function;
+import java.lang.reflect.Method;
 
-/* JADX INFO: renamed from: l.᩷ۛۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: FBFP */
+/* JADX INFO: renamed from: l.᩵ܺ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: MAK5 */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C20686 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return ((C22345) obj).m49553();
+public final /* synthetic */ class C20686 implements InterfaceC23439 {
+    @Override // l.InterfaceC23439
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo11559(Method method, Object[] objArr) {
+        return C12481.f40081;
     }
 }

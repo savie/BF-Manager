@@ -5,9 +5,9 @@ import android.os.Bundle;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
 import java.io.ByteArrayOutputStream;
-import l.C0242;
-import l.C12441;
-import l.C23234;
+import l.C18011;
+import l.C22783;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class WXMediaMessage {
@@ -81,7 +81,7 @@ public final class WXMediaMessage {
                     iMediaObject.unserialize(bundle);
                     return wXMediaMessage;
                 } catch (Exception e) {
-                    C23234.m51271(e, C12441.m30914("get media object from bundle failed: unknown ident ", strPathOldToNew, ", ex = "), WXMediaMessage.TAG);
+                    C18011.m41991(e, C22783.m51387("get media object from bundle failed: unknown ident ", strPathOldToNew, ", ex = "), WXMediaMessage.TAG);
                 }
             }
             return wXMediaMessage;
@@ -95,7 +95,7 @@ public final class WXMediaMessage {
             }
             int iLastIndexOf = str.lastIndexOf(46);
             if (iLastIndexOf != -1) {
-                return C0242.m1616(iLastIndexOf, str, new StringBuilder("com.tencent.mm.opensdk.modelmsg"));
+                return ExternalValue$$ExternalSyntheticOutline0.m(iLastIndexOf, str, new StringBuilder("com.tencent.mm.opensdk.modelmsg"));
             }
             Log.e(WXMediaMessage.TAG, "pathOldToNew fail, invalid pos, oldPath = ".concat(str));
             return str;
@@ -221,7 +221,7 @@ public final class WXMediaMessage {
             this.thumbData = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("setThumbImage exception:"), TAG);
+            C18011.m41991(e, new StringBuilder("setThumbImage exception:"), TAG);
         }
     }
 }

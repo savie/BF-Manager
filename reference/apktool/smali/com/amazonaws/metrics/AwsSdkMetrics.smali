@@ -4,65 +4,65 @@
 
 
 # static fields
-.field public static final ֡:Ljava/lang/String; = "cloudwatchRegion"
+.field public static final ֡:Z
 
-.field public static ֨ۙ:Z = false
+.field public static final ֨:Ljava/lang/String; = "hostMetricName"
 
-.field public static final ֫:Ljava/lang/String; = "com.amazonaws.management:type=AwsSdkMetrics"
+.field public static volatile ֫ۙ:Ljava/lang/String; = null
 
-.field public static final ۖۙ:Ljava/lang/String; = "useSingleMetricNamespace"
+.field public static final ۖ:Ljava/lang/String; = "jvmMetricName"
 
-.field public static final ۗ:Ljava/lang/String; = "metricQueueSize"
-
-.field public static volatile ۘۙ:Ljava/lang/String; = null
+.field public static volatile ۗۙ:Lcom/amazonaws/regions/Regions; = null
 
 .field public static final ۙۙ:Ljava/lang/String; = "getQueuePollTimeoutMilli"
 
 .field public static volatile ۚۙ:Ljava/lang/String; = null
 
-.field public static final ۛ:Ljava/lang/String; = "excludeMachineMetrics"
+.field public static final ۜ:Ljava/lang/String; = "metricNameSpace"
 
-.field public static volatile ۜۙ:Z = false
+.field public static final ۟:Ljava/lang/String; = "com.amazonaws.metrics.internal.cloudwatch.DefaultMetricCollectorFactory"
 
-.field public static volatile ۠ۙ:Lcom/amazonaws/regions/Regions; = null
+.field public static final ۠:Ljava/lang/String; = "com.amazonaws.management:type=AwsSdkMetrics"
 
-.field public static final ۢ:Ljava/lang/String; = "metricNameSpace"
+.field public static final ۡ:Ljava/lang/String; = "includePerHostMetrics"
 
-.field public static final ۧ:Ljava/lang/String; = "hostMetricName"
+.field public static final ۢ:Ljava/lang/String; = "excludeMachineMetrics"
 
-.field public static final ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+.field public static final ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
 
-.field public static final ۫:Ljava/lang/String; = "com.amazonaws.metrics.internal.cloudwatch.DefaultMetricCollectorFactory"
+.field public static volatile ۧۙ:Z = false
 
-.field public static volatile ۬ۙ:Ljava/lang/String; = null
+.field public static ۫ۙ:Z = false
 
-.field public static final ܰۙ:I = 0x3e8
+.field public static final ۬:Ljava/lang/String; = "metricQueueSize"
 
-.field public static final ܳ:Ljava/lang/String; = "jvmMetricName"
+.field public static final synthetic ܰ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
 
-.field public static volatile ܶۙ:Ljava/lang/String; = "AWSSDK/Java"
+.field public static volatile ܳۙ:Lcom/amazonaws/auth/AWSCredentialsProvider; = null
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
+.field public static volatile ܶۙ:Z = false
 
-.field public static final ܽ:Z
+.field public static volatile ܺۙ:Ljava/lang/String; = "AWSSDK/Java"
 
-.field public static final ܿ:Ljava/lang/String; = "AWSSDK/Java"
+.field public static volatile ܽۙ:Ljava/lang/Integer; = null
 
-.field public static volatile ᩳۙ:Z = false
+.field public static final ܿ:Ljava/lang/String; = "cloudwatchRegion"
 
-.field public static volatile ᩴۙ:Ljava/lang/Long; = null
+.field public static final ᩳ:Ljava/lang/String; = "AWSSDK/Java"
+
+.field public static volatile ᩴۙ:Ljava/lang/String; = null
 
 .field public static volatile ᩵ۙ:Z = false
 
 .field public static final ᩶:Ljava/lang/String; = "credentialFile"
 
-.field public static volatile ᩸ۙ:Ljava/lang/Integer; = null
+.field public static final ᩷ۙ:I = 0x3e8
 
-.field public static volatile ᩹ۙ:Lcom/amazonaws/auth/AWSCredentialsProvider; = null
+.field public static final ᩸ۙ:Ljava/lang/String; = "useSingleMetricNamespace"
 
-.field public static volatile ᩺ۙ:Lcom/amazonaws/metrics/MetricCollector; = null
+.field public static volatile ᩹ۙ:Ljava/lang/Long;
 
-.field public static final ᩻:Ljava/lang/String; = "includePerHostMetrics"
+.field public static volatile ᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
 
 # direct methods
@@ -76,7 +76,7 @@
 
     new-array v2, v1, [Lcom/amazonaws/metrics/AwsSdkMetrics;
 
-    sput-object v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܺ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
+    sput-object v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
 
     const-string v2, "com.amazonaws.sdk.enableDefaultMetrics"
 
@@ -98,7 +98,7 @@
 
     .line 244
     :goto_0
-    sput-boolean v4, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽ:Z
+    sput-boolean v4, Lcom/amazonaws/metrics/AwsSdkMetrics;->֡:Z
 
     if-eqz v4, :cond_f
 
@@ -217,7 +217,7 @@
     if-eqz v12, :cond_4
 
     .line 265
-    invoke-static {v10}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ(Ljava/lang/String;)V
+    invoke-static {v10}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩷(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -236,7 +236,7 @@
 
     move-result-object v9
 
-    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->۠ۙ:Lcom/amazonaws/regions/Regions;
+    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۗۙ:Lcom/amazonaws/regions/Regions;
 
     goto/16 :goto_2
 
@@ -263,7 +263,7 @@
     if-lt v10, v3, :cond_6
 
     .line 273
-    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸ۙ:Ljava/lang/Integer;
+    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽۙ:Ljava/lang/Integer;
 
     goto :goto_2
 
@@ -302,7 +302,7 @@
     if-lt v10, v11, :cond_8
 
     .line 279
-    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩴۙ:Ljava/lang/Long;
+    sput-object v9, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Ljava/lang/Long;
 
     goto :goto_2
 
@@ -327,7 +327,7 @@
     if-eqz v12, :cond_a
 
     .line 281
-    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Ljava/lang/String;
+    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܺۙ:Ljava/lang/String;
 
     goto :goto_2
 
@@ -342,7 +342,7 @@
     if-eqz v12, :cond_b
 
     .line 283
-    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۘۙ:Ljava/lang/String;
+    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->֫ۙ:Ljava/lang/String;
 
     goto :goto_2
 
@@ -357,7 +357,7 @@
     if-eqz v11, :cond_c
 
     .line 285
-    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->۬ۙ:Ljava/lang/String;
+    sput-object v10, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
 
     goto :goto_2
 
@@ -381,7 +381,7 @@
 
     move-result-object v9
 
-    invoke-interface {v10, v9}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v10, v9}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -407,10 +407,10 @@
 
     .line 296
     :cond_e
-    sput-boolean v6, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۜۙ:Z
+    sput-boolean v6, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۧۙ:Z
 
     .line 297
-    sput-boolean v7, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩳۙ:Z
+    sput-boolean v7, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Z
 
     .line 298
     sput-boolean v8, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩵ۙ:Z
@@ -421,7 +421,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+    sput-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
 
     return-void
 .end method
@@ -454,7 +454,7 @@
     .locals 1
 
     .line 70
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܺ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ:[Lcom/amazonaws/metrics/AwsSdkMetrics;
 
     invoke-virtual {v0}, [Lcom/amazonaws/metrics/AwsSdkMetrics;->clone()Ljava/lang/Object;
 
@@ -468,13 +468,333 @@
 .method public static ֡()Z
     .locals 1
 
-    .line 453
-    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۜۙ:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public static ֨()Lcom/amazonaws/auth/AWSCredentialsProvider;
+.method public static ֫()Ljava/lang/String;
+    .locals 1
+
+    .line 736
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static ۘ()Lcom/amazonaws/metrics/RequestMetricCollector;
+    .locals 1
+
+    .line 320
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    if-nez v0, :cond_0
+
+    .line 321
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 322
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸()Z
+
+    .line 325
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/amazonaws/metrics/RequestMetricCollector;->ۙ:Lcom/amazonaws/metrics/RequestMetricCollector;
+
+    return-object v0
+
+    :cond_1
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    check-cast v0, Lcom/amazonaws/metrics/MetricCollector$1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 80
+    sget-object v0, Lcom/amazonaws/metrics/RequestMetricCollector;->ۙ:Lcom/amazonaws/metrics/RequestMetricCollector;
+
+    return-object v0
+.end method
+
+.method public static ۙ()V
+    .locals 1
+
+    .line 509
+    sget-object v0, Lcom/amazonaws/metrics/MetricCollector;->ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    invoke-static {v0}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۙ(Lcom/amazonaws/metrics/MetricCollector;)V
+
+    return-void
+.end method
+
+.method public static declared-synchronized ۙ(Lcom/amazonaws/auth/AWSCredentialsProvider;)V
+    .locals 1
+
+    .line 2
+    const-class v0, Lcom/amazonaws/metrics/AwsSdkMetrics;
+
+    .line 3
+    monitor-enter v0
+
+    .line 595
+    :try_start_0
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܳۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 596
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static declared-synchronized ۙ(Lcom/amazonaws/metrics/MetricCollector;)V
+    .locals 1
+
+    .line 2
+    const-class v0, Lcom/amazonaws/metrics/AwsSdkMetrics;
+
+    .line 3
+    monitor-enter v0
+
+    .line 383
+    :try_start_0
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 387
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static ۙ(Lcom/amazonaws/regions/Regions;)V
+    .locals 0
+
+    .line 612
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۗۙ:Lcom/amazonaws/regions/Regions;
+
+    return-void
+.end method
+
+.method public static ۙ(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 669
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽۙ:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public static ۙ(Ljava/lang/Long;)V
+    .locals 0
+
+    .line 687
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Ljava/lang/Long;
+
+    return-void
+.end method
+
+.method public static ۙ(Ljava/lang/String;)V
+    .locals 0
+
+    .line 630
+    invoke-static {p0}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩷(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static ۙ(Z)V
+    .locals 0
+
+    .line 396
+    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۧۙ:Z
+
+    return-void
+.end method
+
+.method public static ۙ(Lcom/amazonaws/metrics/MetricType;)Z
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 520
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+
+    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ(Lcom/amazonaws/metrics/MetricType;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ۙ(Ljava/util/Collection;)Z
+    .locals 1
+
+    if-eqz p0, :cond_1
+
+    .line 532
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+
+    .line 534
+    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ(Ljava/util/Collection;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static ۛ()Ljava/lang/Long;
+    .locals 1
+
+    .line 678
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Ljava/lang/Long;
+
+    return-object v0
+.end method
+
+.method public static ۟()Z
+    .locals 2
+
+    .line 467
+    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 469
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
+
+    if-nez v0, :cond_1
+
+    const-string v0, ""
+
+    goto :goto_0
+
+    .line 470
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 471
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    return v1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static ۢ()Z
+    .locals 1
+
+    .line 424
+    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩵ۙ:Z
+
+    return v0
+.end method
+
+.method public static ۤ(Ljava/lang/String;)V
+    .locals 0
+
+    .line 747
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static ۤ(Z)V
+    .locals 0
+
+    .line 436
+    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩵ۙ:Z
+
+    return-void
+.end method
+
+.method public static ۧ()Lcom/amazonaws/metrics/MetricCollector;
+    .locals 1
+
+    .line 348
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    return-object v0
+.end method
+
+.method public static ۨ()Ljava/util/Set;
+    .locals 1
+
+    .line 562
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+
+    invoke-virtual {v0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static ۫()Lcom/amazonaws/auth/AWSCredentialsProvider;
     .locals 4
 
     .line 574
@@ -510,7 +830,7 @@
     if-eqz v2, :cond_0
 
     .line 577
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܳۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
     return-object v0
 
@@ -534,209 +854,115 @@
 
     const-string v2, "Illegal attempt to access the credential provider"
 
-    invoke-interface {v1, v2, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, v2, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 583
     throw v0
 .end method
 
-.method public static ۖ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 727
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۘۙ:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static ۘ()Ljava/lang/String;
+.method public static ܰ()Lcom/amazonaws/metrics/ServiceMetricCollector;
     .locals 1
 
-    .line 736
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->۬ۙ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static ۙ()V
-    .locals 1
-
-    .line 509
-    sget-object v0, Lcom/amazonaws/metrics/MetricCollector;->ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    invoke-static {v0}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۙ(Lcom/amazonaws/metrics/MetricCollector;)V
-
-    return-void
-.end method
-
-.method public static declared-synchronized ۙ(Lcom/amazonaws/auth/AWSCredentialsProvider;)V
-    .locals 1
-
-    .line 2
-    const-class v0, Lcom/amazonaws/metrics/AwsSdkMetrics;
-
-    .line 3
-    monitor-enter v0
-
-    .line 595
-    :try_start_0
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 596
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method public static declared-synchronized ۙ(Lcom/amazonaws/metrics/MetricCollector;)V
-    .locals 1
-
-    .line 2
-    const-class v0, Lcom/amazonaws/metrics/AwsSdkMetrics;
-
-    .line 3
-    monitor-enter v0
-
-    .line 383
-    :try_start_0
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 387
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method public static ۙ(Lcom/amazonaws/regions/Regions;)V
-    .locals 0
-
-    .line 612
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->۠ۙ:Lcom/amazonaws/regions/Regions;
-
-    return-void
-.end method
-
-.method public static ۙ(Ljava/lang/Integer;)V
-    .locals 0
-
-    .line 669
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸ۙ:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public static ۙ(Ljava/lang/Long;)V
-    .locals 0
-
-    .line 687
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩴۙ:Ljava/lang/Long;
-
-    return-void
-.end method
-
-.method public static ۙ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 630
-    invoke-static {p0}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static ۙ(Z)V
-    .locals 0
-
-    .line 396
-    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۜۙ:Z
-
-    return-void
-.end method
-
-.method public static ۙ(Lcom/amazonaws/metrics/MetricType;)Z
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 520
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
-
-    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ(Lcom/amazonaws/metrics/MetricType;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static ۙ(Ljava/util/Collection;)Z
-    .locals 1
-
-    if-eqz p0, :cond_1
-
-    .line 532
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result v0
+    .line 334
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    .line 335
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 336
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸()Z
+
+    .line 339
     :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
-    .line 534
-    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ(Ljava/util/Collection;)Z
+    if-nez v0, :cond_1
 
-    move-result p0
+    sget-object v0, Lcom/amazonaws/metrics/ServiceMetricCollector;->ۙ:Lcom/amazonaws/metrics/ServiceMetricCollector;
 
-    return p0
+    return-object v0
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
-    return p0
-.end method
+    check-cast v0, Lcom/amazonaws/metrics/MetricCollector$1;
 
-.method public static ۚ()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 619
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
+    .line 85
+    sget-object v0, Lcom/amazonaws/metrics/ServiceMetricCollector;->ۙ:Lcom/amazonaws/metrics/ServiceMetricCollector;
 
     return-object v0
 .end method
 
-.method public static ۚ(Ljava/lang/String;)V
+.method public static ܺ()Lcom/amazonaws/metrics/MetricCollector;
+    .locals 1
+
+    .line 356
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    if-nez v0, :cond_0
+
+    .line 357
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 358
+    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸()Z
+
+    .line 361
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/amazonaws/metrics/MetricCollector;->ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    return-object v0
+
+    :cond_1
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
+
+    return-object v0
+.end method
+
+.method public static ܿ()Z
+    .locals 1
+
+    .line 453
+    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۧۙ:Z
+
+    return v0
+.end method
+
+.method public static ᩳ()Z
+    .locals 1
+
+    .line 460
+    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Z
+
+    return v0
+.end method
+
+.method public static ᩴ()Ljava/lang/String;
+    .locals 1
+
+    .line 619
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩴۙ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static ᩴ(Ljava/lang/String;)V
     .locals 1
 
     if-eqz p0, :cond_0
@@ -753,7 +979,7 @@
     if-eqz v0, :cond_0
 
     .line 708
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Ljava/lang/String;
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܺۙ:Ljava/lang/String;
 
     return-void
 
@@ -766,118 +992,25 @@
     throw p0
 .end method
 
-.method public static ۛ()Z
+.method public static ᩵()Ljava/lang/Integer;
     .locals 1
 
-    .line 424
-    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩵ۙ:Z
+    .line 660
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽۙ:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public static ᩶()Z
+    .locals 1
+
+    .line 415
+    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->֡:Z
 
     return v0
 .end method
 
-.method public static ۜ()Lcom/amazonaws/metrics/MetricCollector;
-    .locals 1
-
-    .line 348
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    return-object v0
-.end method
-
-.method public static ۟()Lcom/amazonaws/regions/Regions;
-    .locals 1
-
-    .line 603
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->۠ۙ:Lcom/amazonaws/regions/Regions;
-
-    return-object v0
-.end method
-
-.method public static ۡ()Ljava/util/Set;
-    .locals 1
-
-    .line 562
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
-
-    invoke-virtual {v0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ۙ()Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static ۤ()Ljava/lang/Long;
-    .locals 1
-
-    .line 678
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩴۙ:Ljava/lang/Long;
-
-    return-object v0
-.end method
-
-.method public static ۨ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 747
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->۬ۙ:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static ۨ(Z)V
-    .locals 0
-
-    .line 436
-    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩵ۙ:Z
-
-    return-void
-.end method
-
-.method public static ۫()Z
-    .locals 2
-
-    .line 467
-    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩳۙ:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    .line 469
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->۬ۙ:Ljava/lang/String;
-
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
-    goto :goto_0
-
-    .line 470
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 471
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static ܰ(Ljava/lang/String;)V
+.method public static ᩷(Ljava/lang/String;)V
     .locals 3
 
     .line 638
@@ -900,10 +1033,10 @@
 
     invoke-direct {v2, v1}, Lcom/amazonaws/metrics/AwsSdkMetrics$1;-><init>(Lcom/amazonaws/auth/PropertiesCredentials;)V
 
-    sput-object v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩹ۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    sput-object v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܳۙ:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
     .line 651
-    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۚۙ:Ljava/lang/String;
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩴۙ:Ljava/lang/String;
 
     .line 652
     monitor-exit v0
@@ -920,27 +1053,56 @@
     throw p0
 .end method
 
-.method public static ܰ(Ljava/util/Collection;)V
+.method public static ᩷(Ljava/util/Collection;)V
     .locals 1
 
     .line 544
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
 
-    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ܰ(Ljava/util/Collection;)V
+    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->᩷(Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method public static ܰ(Z)V
+.method public static ᩷(Z)V
     .locals 0
 
     .line 406
-    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩳۙ:Z
+    sput-boolean p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Z
 
     return-void
 .end method
 
-.method public static declared-synchronized ܰ()Z
+.method public static ᩷(Lcom/amazonaws/metrics/MetricType;)Z
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 555
+    :cond_0
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۤۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
+
+    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->᩷(Lcom/amazonaws/metrics/MetricType;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ᩸(Ljava/lang/String;)V
+    .locals 0
+
+    .line 727
+    sput-object p0, Lcom/amazonaws/metrics/AwsSdkMetrics;->֫ۙ:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static declared-synchronized ᩸()Z
     .locals 5
 
     .line 2
@@ -951,24 +1113,24 @@
 
     .line 482
     :try_start_0
-    sget-object v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
+    sget-object v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
+    sget-object v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩻ۙ:Lcom/amazonaws/metrics/MetricCollector;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 483
     :cond_0
-    sget-boolean v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->֨ۙ:Z
+    sget-boolean v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->۫ۙ:Z
 
     if-nez v1, :cond_2
 
     const/4 v1, 0x1
 
     .line 486
-    sput-boolean v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->֨ۙ:Z
+    sput-boolean v1, Lcom/amazonaws/metrics/AwsSdkMetrics;->۫ۙ:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -1004,7 +1166,7 @@
 
     .line 499
     :try_start_2
-    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->֨ۙ:Z
+    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->۫ۙ:Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1032,14 +1194,14 @@
     const-string v4, "Failed to enable the default metrics"
 
     .line 497
-    invoke-interface {v3, v4, v1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v3, v4, v1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 499
     :cond_1
     :try_start_4
-    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->֨ۙ:Z
+    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->۫ۙ:Z
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -1051,7 +1213,7 @@
     .line 499
     :goto_0
     :try_start_5
-    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->֨ۙ:Z
+    sput-boolean v2, Lcom/amazonaws/metrics/AwsSdkMetrics;->۫ۙ:Z
 
     .line 500
     throw v1
@@ -1077,191 +1239,29 @@
     throw v1
 .end method
 
-.method public static ܰ(Lcom/amazonaws/metrics/MetricType;)Z
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 555
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۨۙ:Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;
-
-    invoke-virtual {v0, p0}, Lcom/amazonaws/metrics/AwsSdkMetrics$MetricRegistry;->ܰ(Lcom/amazonaws/metrics/MetricType;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static ܶ()Lcom/amazonaws/metrics/MetricCollector;
-    .locals 1
-
-    .line 356
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_0
-
-    .line 357
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 358
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ()Z
-
-    .line 361
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcom/amazonaws/metrics/MetricCollector;->ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    return-object v0
-
-    :cond_1
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    return-object v0
-.end method
-
-.method public static ܺ()Lcom/amazonaws/metrics/ServiceMetricCollector;
-    .locals 1
-
-    .line 334
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_0
-
-    .line 335
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 336
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ()Z
-
-    .line 339
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcom/amazonaws/metrics/ServiceMetricCollector;->ۙ:Lcom/amazonaws/metrics/ServiceMetricCollector;
-
-    return-object v0
-
-    :cond_1
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    check-cast v0, Lcom/amazonaws/metrics/MetricCollector$1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 85
-    sget-object v0, Lcom/amazonaws/metrics/ServiceMetricCollector;->ۙ:Lcom/amazonaws/metrics/ServiceMetricCollector;
-
-    return-object v0
-.end method
-
-.method public static ܽ()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static ܿ()Z
-    .locals 1
-
-    .line 460
-    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ᩳۙ:Z
-
-    return v0
-.end method
-
-.method public static ᩴ()Ljava/lang/String;
+.method public static ᩹()Ljava/lang/String;
     .locals 1
 
     .line 694
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܶۙ:Ljava/lang/String;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܺۙ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static ᩵()Ljava/lang/Integer;
+.method public static ᩺()Lcom/amazonaws/regions/Regions;
     .locals 1
 
-    .line 660
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩸ۙ:Ljava/lang/Integer;
+    .line 603
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۗۙ:Lcom/amazonaws/regions/Regions;
 
     return-object v0
 .end method
 
-.method public static ᩶()Z
-    .locals 1
-
-    .line 415
-    sget-boolean v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܽ:Z
-
-    return v0
-.end method
-
-.method public static ᩷()Lcom/amazonaws/metrics/RequestMetricCollector;
-    .locals 1
-
-    .line 320
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_0
-
-    .line 321
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩶()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 322
-    invoke-static {}, Lcom/amazonaws/metrics/AwsSdkMetrics;->ܰ()Z
-
-    .line 325
-    :cond_0
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcom/amazonaws/metrics/RequestMetricCollector;->ۙ:Lcom/amazonaws/metrics/RequestMetricCollector;
-
-    return-object v0
-
-    :cond_1
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->᩺ۙ:Lcom/amazonaws/metrics/MetricCollector;
-
-    check-cast v0, Lcom/amazonaws/metrics/MetricCollector$1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 80
-    sget-object v0, Lcom/amazonaws/metrics/RequestMetricCollector;->ۙ:Lcom/amazonaws/metrics/RequestMetricCollector;
-
-    return-object v0
-.end method
-
-.method public static ᩺()Ljava/lang/String;
+.method public static ᩻()Ljava/lang/String;
     .locals 1
 
     .line 716
-    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->ۘۙ:Ljava/lang/String;
+    sget-object v0, Lcom/amazonaws/metrics/AwsSdkMetrics;->֫ۙ:Ljava/lang/String;
 
     return-object v0
 .end method

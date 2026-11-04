@@ -4,7 +4,7 @@ import com.google.android.material.color.ColorResourcesTableCreator;
 import com.umeng.analytics.pro.bo;
 import com.umeng.analytics.pro.cb;
 import java.util.Arrays;
-import l.C22697;
+import l.C8947;
 import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
@@ -16,7 +16,7 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.encoders.Base32Encoder;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElephantEngine extends AEADBaseEngine {
     public byte[] ad;
     public int adOff;
@@ -154,7 +154,7 @@ public class ElephantEngine extends AEADBaseEngine {
         public final int nBits;
         public final int nRounds;
         public final int nSBox;
-        public final byte[] sBoxLayer = {-18, -19, -21, bo.k, -30, GCMSIVBlockCipher.ADD, -28, -17, -25, -22, -24, -27, -23, -20, -29, -26, -34, -35, -37, -48, -46, -47, -44, -33, -41, -38, -40, -43, -39, -36, -45, -42, -66, -67, -69, -80, -78, -79, -76, -65, -73, -70, -72, -75, -71, PSSSigner.TRAILER_IMPLICIT, -77, -74, cb.f77931l, cb.k, 11, 0, 2, 1, 4, 15, 7, 10, 8, 5, 9, 12, 3, 6, 46, 45, 43, UTF8.S_CS3, 34, PublicSuffixDatabase.EXCEPTION_MARKER, 36, 47, 39, 42, 40, 37, 41, 44, 35, 38, 30, 29, 27, 16, 18, 17, 20, bo.j, 23, 26, 24, 21, 25, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 19, 22, 78, 77, 75, 64, 66, 65, 68, 79, 71, 74, 72, 69, 73, 76, 67, 70, -2, -3, -5, -16, -14, -15, -12, -1, -9, -6, -8, -11, -7, -4, -13, -10, 126, 125, 123, KeyFactorySpi.Ed25519_type, 114, KeyFactorySpi.Ed448_type, 116, ColorResourcesTableCreator.APPLICATION_PACKAGE_ID, 119, 122, 120, 117, 121, 124, 115, 118, -82, -83, -85, -96, -94, -95, -92, -81, -89, -86, -88, -91, -87, -84, -93, -90, -114, -115, -117, GCMSIVBlockCipher.MASK, bo.h, -127, -124, -113, -121, -118, -120, -123, -119, -116, -125, -122, 94, 93, 91, UTF8.S_P4A, 82, 81, 84, 95, 87, 90, 88, 85, 89, 92, 83, 86, -98, -99, -101, -112, -110, -111, -108, -97, -105, -102, -104, -107, -103, -100, -109, -106, -50, -51, -53, -64, -62, -63, -60, -49, -57, -54, -56, -59, -55, -52, -61, -58, 62, Base32Encoder.DEFAULT_PADDING, 59, UTF8.S_P3A, 50, 49, 52, 63, 55, 58, 56, 53, 57, 60, 51, 54, KeyFactorySpi.x25519_type, 109, 107, UTF8.S_P4B, 98, 97, 100, KeyFactorySpi.x448_type, 103, 106, 104, 101, 105, 108, 99, 102};
+        public final byte[] sBoxLayer = {-18, -19, -21, bo.k, -30, GCMSIVBlockCipher.ADD, -28, -17, -25, -22, -24, -27, -23, -20, -29, -26, -34, -35, -37, -48, -46, -47, -44, -33, -41, -38, -40, -43, -39, -36, -45, -42, -66, -67, -69, -80, -78, -79, -76, -65, -73, -70, -72, -75, -71, PSSSigner.TRAILER_IMPLICIT, -77, -74, cb.f82047l, cb.k, 11, 0, 2, 1, 4, 15, 7, 10, 8, 5, 9, 12, 3, 6, 46, 45, 43, UTF8.S_CS3, 34, PublicSuffixDatabase.EXCEPTION_MARKER, 36, 47, 39, 42, 40, 37, 41, 44, 35, 38, 30, 29, 27, 16, 18, 17, 20, bo.j, 23, 26, 24, 21, 25, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 19, 22, 78, 77, 75, 64, 66, 65, 68, 79, 71, 74, 72, 69, 73, 76, 67, 70, -2, -3, -5, -16, -14, -15, -12, -1, -9, -6, -8, -11, -7, -4, -13, -10, 126, 125, 123, KeyFactorySpi.Ed25519_type, 114, KeyFactorySpi.Ed448_type, 116, ColorResourcesTableCreator.APPLICATION_PACKAGE_ID, 119, 122, 120, 117, 121, 124, 115, 118, -82, -83, -85, -96, -94, -95, -92, -81, -89, -86, -88, -91, -87, -84, -93, -90, -114, -115, -117, GCMSIVBlockCipher.MASK, bo.h, -127, -124, -113, -121, -118, -120, -123, -119, -116, -125, -122, 94, 93, 91, UTF8.S_P4A, 82, 81, 84, 95, 87, 90, 88, 85, 89, 92, 83, 86, -98, -99, -101, -112, -110, -111, -108, -97, -105, -102, -104, -107, -103, -100, -109, -106, -50, -51, -53, -64, -62, -63, -60, -49, -57, -54, -56, -59, -55, -52, -61, -58, 62, Base32Encoder.DEFAULT_PADDING, 59, UTF8.S_P3A, 50, 49, 52, 63, 55, 58, 56, 53, 57, 60, 51, 54, KeyFactorySpi.x25519_type, 109, 107, UTF8.S_P4B, 98, 97, 100, KeyFactorySpi.x448_type, 103, 106, 104, 101, 105, 108, 99, 102};
 
         public Spongent(int i, int i2, int i3, byte b) {
             this.nRounds = i3;
@@ -587,13 +587,13 @@ public class ElephantEngine extends AEADBaseEngine {
     public void checkAAD() {
         int i = this.m_state.ord;
         if (i == 3) {
-            throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " cannot process AAD when the length of the ciphertext to be processed exceeds the a block size"));
+            throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " cannot process AAD when the length of the ciphertext to be processed exceeds the a block size"));
         }
         if (i == 4) {
-            throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " cannot be reused for encryption"));
+            throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " cannot be reused for encryption"));
         }
         if (i == 7) {
-            throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " cannot process AAD when the length of the plaintext to be processed exceeds the a block size"));
+            throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " cannot process AAD when the length of the plaintext to be processed exceeds the a block size"));
         }
     }
 
@@ -601,7 +601,7 @@ public class ElephantEngine extends AEADBaseEngine {
     public int getOutputSize(int i) {
         int i2 = this.m_state.ord;
         if (i2 == 0) {
-            throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " needs call init function before getUpdateOutputSize"));
+            throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " needs call init function before getUpdateOutputSize"));
         }
         if (i2 == 1 || i2 == 2 || i2 == 3) {
             return i + this.m_bufPos + this.MAC_SIZE;
@@ -616,7 +616,7 @@ public class ElephantEngine extends AEADBaseEngine {
     public int getUpdateOutputSize(int i) {
         switch (this.m_state.ord) {
             case 0:
-                throw new IllegalArgumentException(C22697.m50267(new StringBuilder(), this.algorithmName, " needs call init function before getUpdateOutputSize"));
+                throw new IllegalArgumentException(C8947.m23910(new StringBuilder(), this.algorithmName, " needs call init function before getUpdateOutputSize"));
             case 1:
             case 2:
             case 3:

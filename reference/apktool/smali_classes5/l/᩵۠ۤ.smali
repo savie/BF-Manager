@@ -1,34 +1,44 @@
-.class public final Ll/᩵۠ۤ;
+.class public final synthetic Ll/᩵۠ۤ;
 .super Ljava/lang/Object;
-.source "R450"
+.source "Y184"
 
 # interfaces
-.implements Ll/᩻۠ۤ;
+.implements Ll/᩶ܽ;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۖ۠ۤ;
+
+.field public final synthetic ᩶:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۖ۠ۤ;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩵۠ۤ;->ܰ:Ll/ۖ۠ۤ;
+
+    iput p2, p0, Ll/᩵۠ۤ;->᩶:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۗ۠ۤ;Ll/᩻᩵ۤ;)V
-    .locals 0
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
-    const-string p1, "The scope is sealed."
+    .line 0
+    iget-object v0, p0, Ll/᩵۠ۤ;->ܰ:Ll/ۖ۠ۤ;
 
-    .line 768
-    invoke-static {p1}, Ll/ۛܽ;->ۙ(Ljava/lang/String;)V
+    iget v1, p0, Ll/᩵۠ۤ;->᩶:I
 
-    const/4 p1, 0x0
+    invoke-static {v0, v1, p1}, Ll/ۖ۠ۤ;->ۙ(Ll/ۖ۠ۤ;ILandroid/view/MenuItem;)V
 
-    throw p1
-.end method
+    const/4 p1, 0x1
 
-.method public final ܰ(Ll/ۗ۠ۤ;Ll/᩻᩵ۤ;)V
-    .locals 0
-
-    const-string p1, "The scope is sealed."
-
-    .line 773
-    invoke-static {p1}, Ll/ۛܽ;->ۙ(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    throw p1
+    return p1
 .end method

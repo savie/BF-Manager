@@ -1,25 +1,14 @@
 package l;
 
-import java.util.function.IntPredicate;
+import android.widget.CompoundButton;
 
-/* JADX INFO: renamed from: l.۬ۙۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 19LE */
+/* JADX INFO: renamed from: l.۫ۙ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9R5 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12878 implements IntPredicate {
-    public /* synthetic */ IntPredicate and(IntPredicate intPredicate) {
-        return C23329.$default$and(this, intPredicate);
-    }
-
-    public /* synthetic */ IntPredicate negate() {
-        return C23329.$default$negate(this);
-    }
-
-    public /* synthetic */ IntPredicate or(IntPredicate intPredicate) {
-        return C23329.$default$or(this, intPredicate);
-    }
-
-    @Override // java.util.function.IntPredicate
-    public final boolean test(int i) {
-        return i == -65536;
+public final /* synthetic */ class C12878 implements CompoundButton.OnCheckedChangeListener {
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        int i = ActivityC6167.f21005;
+        C6421.m18184(ApplicationC17729.f58258, "arsc_translation_keep", z);
     }
 }

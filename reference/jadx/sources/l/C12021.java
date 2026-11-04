@@ -1,72 +1,100 @@
 package l;
 
-import java.io.IOException;
-import java.util.function.UnaryOperator;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Path;
+import android.util.AttributeSet;
+import com.google.android.material.chip.Chip;
+import org.xmlpull.v1.XmlPullParser;
 
-/* JADX INFO: renamed from: l.ۨ᩺᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B7IH */
+/* JADX INFO: renamed from: l.ۨ֨᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 83AT */
 /* JADX INFO: loaded from: classes4.dex */
-public class C12021 extends AbstractC13432 {
+public class C12021 extends AbstractC19720 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f40264 = 0;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final float f38753 = (float) Math.tan(Math.toRadians(35.0d));
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final UnaryOperator f40265;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public float f38754;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC9427 f40266;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f38755;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C21898 f40267;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public float f38756;
 
-    public C12021(C14138 c14138) {
-        super(c14138);
-        this.f40266 = c14138.m13761();
-        c14138.getClass();
-        this.f40267 = c14138.m13762();
-        this.f40265 = c14138.m13765();
-    }
-
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof C12021) {
-            return C13638.equals(this.f40266, ((C12021) obj).f40266);
-        }
-        return false;
+    public C12021(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f38756 = 0.0f;
+        this.f38755 = 0.0f;
+        this.f38754 = f38753;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C1821.f6172);
+        XmlPullParser xmlPullParser = (XmlPullParser) attributeSet;
+        this.f38755 = m30215(!C2506.m8390(xmlPullParser, "minimumVerticalAngle") ? 0.0f : typedArrayObtainStyledAttributes.getFloat(1, 0.0f));
+        this.f38756 = m30215(xmlPullParser.getAttributeValue(Chip.NAMESPACE_ANDROID, "minimumHorizontalAngle") != null ? typedArrayObtainStyledAttributes.getFloat(0, 0.0f) : 0.0f);
+        this.f38754 = m30215(xmlPullParser.getAttributeValue(Chip.NAMESPACE_ANDROID, "maximumAngle") != null ? typedArrayObtainStyledAttributes.getFloat(2, 70.0f) : 70.0f);
+        typedArrayObtainStyledAttributes.recycle();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC9427 m29920() {
-        return this.f40266;
+    public static float m30215(float f) {
+        if (f < 0.0f || f > 90.0f) {
+            throw new IllegalArgumentException("Arc must be between 0 and 90 degrees");
+        }
+        return (float) Math.tan(Math.toRadians(f / 2.0f));
     }
 
-    public int hashCode() {
-        return C13638.hash(this.f40266);
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public void mo15561(InterfaceC3800 interfaceC3800, IOException iOException) {
-        ((C10838) this.f40266).mo24187().mo34603();
-        EnumC11563 enumC11563 = EnumC11563.CONTINUE;
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC11563 mo15560(InterfaceC3800 interfaceC3800, InterfaceC20735 interfaceC20735) {
-        this.f40267.getClass();
-        return EnumC11563.CONTINUE;
-    }
-
-    public final String toString() {
-        return this.f40266.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29921(InterfaceC20735 interfaceC20735) {
-        C10838 c10838 = (C10838) this.f40266;
-        c10838.mo24188().mo34603();
-        c10838.m27161().add(interfaceC20735.size());
+    @Override // l.AbstractC19720
+    public final Path getPath(float f, float f2, float f3, float f4) {
+        float fM45884;
+        float fM45885;
+        float f5;
+        Path path = new Path();
+        path.moveTo(f, f2);
+        float f6 = f3 - f;
+        float f7 = f4 - f2;
+        float f8 = (f7 * f7) + (f6 * f6);
+        float f9 = (f + f3) / 2.0f;
+        float f10 = (f2 + f4) / 2.0f;
+        float f11 = 0.25f * f8;
+        boolean z = f2 > f4;
+        if (Math.abs(f6) < Math.abs(f7)) {
+            float fAbs = Math.abs(f8 / (f7 * 2.0f));
+            if (z) {
+                fM45885 = fAbs + f4;
+                fM45884 = f3;
+            } else {
+                fM45885 = fAbs + f2;
+                fM45884 = f;
+            }
+            f5 = this.f38755;
+        } else {
+            float f12 = f8 / (f6 * 2.0f);
+            if (z) {
+                fM45885 = f2;
+                fM45884 = f12 + f;
+            } else {
+                fM45884 = f3 - f12;
+                fM45885 = f4;
+            }
+            f5 = this.f38756;
+        }
+        float f13 = f11 * f5 * f5;
+        float f14 = f9 - fM45884;
+        float f15 = f10 - fM45885;
+        float f16 = (f15 * f15) + (f14 * f14);
+        float f17 = this.f38754;
+        float f18 = f11 * f17 * f17;
+        if (f16 >= f13) {
+            f13 = f16 > f18 ? f18 : 0.0f;
+        }
+        if (f13 != 0.0f) {
+            float fSqrt = (float) Math.sqrt(f13 / f16);
+            fM45884 = C19967.m45884(fM45884, f9, fSqrt, f9);
+            fM45885 = C19967.m45884(fM45885, f10, fSqrt, f10);
+        }
+        path.cubicTo((f + fM45884) / 2.0f, (f2 + fM45885) / 2.0f, (fM45884 + f3) / 2.0f, (fM45885 + f4) / 2.0f, f3, f4);
+        return path;
     }
 }

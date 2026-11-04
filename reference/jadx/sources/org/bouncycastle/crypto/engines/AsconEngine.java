@@ -9,7 +9,6 @@ public class AsconEngine extends AsconBaseEngine {
     public long K2;
     public final AsconParameters asconParameters;
 
-    /* JADX INFO: loaded from: classes.dex */
     public enum AsconParameters {
         ascon80pq,
         ascon128a,

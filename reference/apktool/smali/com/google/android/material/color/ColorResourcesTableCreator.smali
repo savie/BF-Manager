@@ -399,7 +399,7 @@
     and-int/lit16 v0, v0, 0xff
 
     .line 0
-    invoke-static {p1, v0}, Ll/ۢ۫;->ۙ(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ۙۡۙ;->ۙ(Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,25 +1,53 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.ܰ᩻᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAIH */
+/* JADX INFO: renamed from: l.۬᩹ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0BM3 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14160 implements Consumer {
+public final class C14160 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15571 f46469;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f44769;
 
-    public /* synthetic */ C14160(C15571 c15571) {
-        this.f46469 = c15571;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f44770;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f44771;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f44772;
+
+    public C14160() {
     }
 
-    @Override // java.util.function.Consumer
-    public final void accept(Object obj) {
-        this.f46469.m37208((AbstractC20745) obj);
+    public C14160(String str, String str2) {
+        this.f44772 = str;
+        this.f44771 = str2;
+        this.f44770 = 0;
+        this.f44769 = 0;
     }
 
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m34388() {
+        return this.f44771;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String m34389() {
+        return this.f44772;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m34387() {
+        return this.f44770;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m34386() {
+        return this.f44769;
+    }
+
+    public final String toString() {
+        return this.f44772;
     }
 }

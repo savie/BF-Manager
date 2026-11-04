@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.engines.Zuc128CoreEngine;
 import org.bouncycastle.crypto.engines.Zuc256CoreEngine;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Zuc256Mac implements Mac {
     public static final int TOPBIT = 128;
     public int theByteIndex;
@@ -16,7 +16,6 @@ public final class Zuc256Mac implements Mac {
     public Zuc256CoreEngine theState;
     public int theWordIndex;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class InternalZuc256Engine extends Zuc256CoreEngine {
         public InternalZuc256Engine(int i) {
             super(i);

@@ -1,42 +1,28 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ۚ۠ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 77BV */
+/* JADX INFO: renamed from: l.ۙ᩹᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5SO */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5223 implements Predicate {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f18118;
-
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+public final class C5223 extends C13951 implements InterfaceC15970 {
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void add(Object obj) {
+        C18063.m42090();
+        throw null;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f18118) {
-            case 0:
-                break;
-        }
-        return C8512.$default$negate(this);
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void set(Object obj) {
+        C18063.m42091();
+        throw null;
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    @Override // l.C13951, java.util.ListIterator, java.util.Iterator
+    public final Object next() {
+        return m34022().f66378;
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f18118) {
-            case 0:
-                String str = (String) obj;
-                return str != null && str.startsWith("/data/app/");
-            default:
-                return ((C16142) obj).m38212();
-        }
+    @Override // l.C13951, java.util.ListIterator, l.InterfaceC6847
+    public final Object previous() {
+        return m34023().f66378;
     }
 }

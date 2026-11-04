@@ -4,7 +4,7 @@ import org.bouncycastle.crypto.CharToByteConverter;
 import org.bouncycastle.crypto.PasswordConverter;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Argon2Parameters {
     public static final int ARGON2_VERSION_10 = 16;
     public static final int ARGON2_VERSION_13 = 19;

@@ -1,65 +1,119 @@
 package l;
 
-import android.graphics.Bitmap;
+import android.os.Build;
+import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import java.util.stream.IntStream;
 
-/* JADX INFO: renamed from: l.ܶ᩺ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 31PG */
+/* JADX INFO: renamed from: l.ܳᩴۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1AMY */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15538 extends AbstractC0414 {
+public final class C15538 implements Spannable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Spannable f50547;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f50548 = false;
+
+    @Override // java.lang.CharSequence
+    public /* synthetic */ IntStream chars() {
+        return C16940.convert(chars());
+    }
+
+    @Override // java.lang.CharSequence
+    public /* synthetic */ IntStream codePoints() {
+        return C16940.convert(codePoints());
+    }
+
+    public C15538(Spannable spannable) {
+        this.f50547 = spannable;
+    }
+
+    public C15538(CharSequence charSequence) {
+        this.f50547 = new SpannableString(charSequence);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private void m37220() {
+        Spannable spannable = this.f50547;
+        if (!this.f50548) {
+            if ((Build.VERSION.SDK_INT < 28 ? new C22998() : new C20014()).mo46047(spannable)) {
+                this.f50547 = new SpannableString(spannable);
+            }
+        }
+        this.f50548 = true;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC3541 f50574;
-
-    public C15538(ActivityC3541 activityC3541) {
-        this.f50574 = activityC3541;
+    public final Spannable m37221() {
+        return this.f50547;
     }
 
-    @Override // l.AbstractC0414
-    public final void onBindViewHolder(AbstractC12554 abstractC12554, int i) {
-        C11780 c11780;
-        ViewOnClickListenerC9893 viewOnClickListenerC9893 = (ViewOnClickListenerC9893) abstractC12554;
-        ActivityC3541 activityC3541 = this.f50574;
-        if (i >= activityC3541.f13040.size()) {
-            c11780 = (C11780) activityC3541.f13045.get(i - activityC3541.f13040.size());
-        } else {
-            c11780 = (C11780) activityC3541.f13040.get(i);
-        }
-        viewOnClickListenerC9893.f33772 = c11780;
-        TextView textView = viewOnClickListenerC9893.f33774;
-        ImageView imageView = viewOnClickListenerC9893.f33776;
-        Bitmap bitmap = c11780.f39564;
-        if (bitmap == null) {
-            imageView.setImageResource(R.drawable.MT_Protector);
-        } else {
-            imageView.setImageBitmap(bitmap);
-        }
-        SpannableString spannableString = new SpannableString(c11780.f39570 + EnumC19730.f63352 + c11780.f39565);
-        int length = c11780.f39570.length() + 2;
-        int length2 = spannableString.length();
-        spannableString.setSpan(new ForegroundColorSpan(C20368.f65988), length, length2, 17);
-        spannableString.setSpan(new RelativeSizeSpan(0.8f), length, length2, 17);
-        viewOnClickListenerC9893.f33773.setText(spannableString);
-        viewOnClickListenerC9893.f33770.setText(c11780.f39572);
-        viewOnClickListenerC9893.f33771.setText(C5422.m14997(c11780.f39574));
-        ActivityC3541.m10450(activityC3541, c11780, textView);
-        textView.setTag(c11780.f39567);
+    @Override // android.text.Spannable
+    public final void setSpan(Object obj, int i, int i2, int i3) {
+        m37220();
+        this.f50547.setSpan(obj, i, i2, i3);
     }
 
-    @Override // l.AbstractC0414
-    public final AbstractC12554 onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new ViewOnClickListenerC9893(this.f50574, viewGroup);
+    @Override // android.text.Spannable
+    public final void removeSpan(Object obj) {
+        m37220();
+        this.f50547.removeSpan(obj);
     }
 
-    @Override // l.AbstractC0414
-    public final int getItemCount() {
-        ActivityC3541 activityC3541 = this.f50574;
-        return activityC3541.f13045.size() + activityC3541.f13040.size();
+    @Override // android.text.Spanned
+    public final Object[] getSpans(int i, int i2, Class cls) {
+        return this.f50547.getSpans(i, i2, cls);
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanStart(Object obj) {
+        return this.f50547.getSpanStart(obj);
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanEnd(Object obj) {
+        return this.f50547.getSpanEnd(obj);
+    }
+
+    @Override // android.text.Spanned
+    public final int getSpanFlags(Object obj) {
+        return this.f50547.getSpanFlags(obj);
+    }
+
+    @Override // android.text.Spanned
+    public final int nextSpanTransition(int i, int i2, Class cls) {
+        return this.f50547.nextSpanTransition(i, i2, cls);
+    }
+
+    @Override // java.lang.CharSequence
+    public final int length() {
+        return this.f50547.length();
+    }
+
+    @Override // java.lang.CharSequence
+    public final char charAt(int i) {
+        return this.f50547.charAt(i);
+    }
+
+    @Override // java.lang.CharSequence
+    public final CharSequence subSequence(int i, int i2) {
+        return this.f50547.subSequence(i, i2);
+    }
+
+    @Override // java.lang.CharSequence
+    public final String toString() {
+        return this.f50547.toString();
+    }
+
+    @Override // java.lang.CharSequence
+    public final InterfaceC17686 chars() {
+        return C11063.m27949(this.f50547);
+    }
+
+    @Override // java.lang.CharSequence
+    public final InterfaceC17686 codePoints() {
+        return C11063.m27950(this.f50547);
     }
 }

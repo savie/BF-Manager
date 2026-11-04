@@ -1,118 +1,64 @@
 package l;
 
-import com.umeng.analytics.pro.o;
+import java.util.HashSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۚۡܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y8QO */
+/* JADX INFO: renamed from: l.ۙ᩻ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7KX */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5251 implements InterfaceC19363 {
+public final class C5251 extends AbstractC9329 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f18207;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17929 f18500;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f18208;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f18209;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C2460 f18210 = new C2460(32);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC2428 f18211;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f18212;
-
-    public C5251(InterfaceC2428 interfaceC2428) {
-        this.f18211 = interfaceC2428;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C5251(C17929 c17929) {
+        super(c17929, EnumC10712.HEADER_PHASE, new C17183(c17929));
+        this.f18500 = c17929;
     }
 
-    @Override // l.InterfaceC19363
+    @Override // l.AbstractC11962
     /* JADX INFO: renamed from: ۙ */
-    public final void mo6528(C6694 c6694, InterfaceC15690 interfaceC15690, C8074 c8074) {
-        this.f18211.mo7415(c6694, interfaceC15690, c8074);
-        this.f18212 = true;
-    }
-
-    @Override // l.InterfaceC19363
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6526() {
-        this.f18212 = true;
-    }
-
-    @Override // l.InterfaceC19363
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6527(int i, C2460 c2460) {
-        int iM7500;
-        boolean z = (i & 1) != 0;
-        if (z) {
-            iM7500 = c2460.m7500() + c2460.m7516();
-        } else {
-            iM7500 = -1;
+    public final void mo7699(C3168 c3168) {
+        C7926 c7926 = c3168.f10279;
+        C24550 c24550 = c7926.f26345;
+        C3168 c3168M24575 = AbstractC9329.m24575(c3168, c7926);
+        AbstractC22295 abstractC22295 = c7926.f26348;
+        C17929 c17929 = this.f18500;
+        if (abstractC22295 != null) {
+            c17929.f58734.m28996(c7926.f26348, c3168M24575, c24550, c7926);
         }
-        if (this.f18212) {
-            if (!z) {
-                return;
-            }
-            this.f18212 = false;
-            c2460.m7510(iM7500);
-            this.f18208 = 0;
+        Iterator it = c7926.f26347.iterator();
+        while (it.hasNext()) {
+            c17929.f58734.m28996((AbstractC22295) it.next(), c3168M24575, c24550, c7926);
         }
-        while (c2460.m7503() > 0) {
-            int i2 = this.f18208;
-            C2460 c2461 = this.f18210;
-            if (i2 < 3) {
-                if (i2 == 0) {
-                    int iM7516 = c2460.m7516();
-                    c2460.m7510(c2460.m7500() - 1);
-                    if (iM7516 == 255) {
-                        this.f18212 = true;
-                        return;
-                    }
-                }
-                int iMin = Math.min(c2460.m7503(), 3 - this.f18208);
-                c2460.m7507(this.f18208, iMin, c2461.m7518());
-                int i3 = this.f18208 + iMin;
-                this.f18208 = i3;
-                if (i3 == 3) {
-                    c2461.m7510(0);
-                    c2461.m7501(3);
-                    c2461.m7535(1);
-                    int iM7517 = c2461.m7516();
-                    int iM7518 = c2461.m7516();
-                    this.f18207 = (iM7517 & 128) != 0;
-                    this.f18209 = (((iM7517 & 15) << 8) | iM7518) + 3;
-                    int iM7521 = c2461.m7521();
-                    int i4 = this.f18209;
-                    if (iM7521 < i4) {
-                        c2461.m7506(Math.min(o.a.b, Math.max(i4, c2461.m7521() * 2)));
-                    }
-                }
-            } else {
-                int iMin2 = Math.min(c2460.m7503(), this.f18209 - this.f18208);
-                c2460.m7507(this.f18208, iMin2, c2461.m7518());
-                int i5 = this.f18208 + iMin2;
-                this.f18208 = i5;
-                int i6 = this.f18209;
-                if (i5 != i6) {
-                    continue;
-                } else {
-                    if (this.f18207) {
-                        if (C17983.m41818(0, c2461.m7518(), this.f18209, -1) != 0) {
-                            this.f18212 = true;
-                            return;
-                        }
-                        c2461.m7501(this.f18209 - 4);
-                    } else {
-                        c2461.m7501(i6);
-                    }
-                    c2461.m7510(0);
-                    this.f18211.mo7414(c2461);
-                    this.f18208 = 0;
-                }
+        c17929.f58734.m29000();
+        m24577(c3168, c3168M24575);
+        HashSet hashSet = new HashSet();
+        for (AbstractC22295 abstractC22296 : c7926.f26347) {
+            AbstractC22664 abstractC22664 = abstractC22296.f26659;
+            if (abstractC22664.m51067(EnumC21172.CLASS)) {
+                c17929.f58725.m50013(abstractC22296, c17929.f58720.m55132(abstractC22664), hashSet);
             }
+        }
+        c17929.f58734.m28997(c7926.f26341.f15824, c3168M24575, c24550, c7926);
+        c17929.f58718.m1959(c7926.f26343, c3168M24575, false);
+        Iterator it2 = c7926.f26343.iterator();
+        while (it2.hasNext()) {
+            c17929.f58734.m28996((C16239) it2.next(), c3168M24575, c24550, c7926);
+        }
+        AbstractC11781 abstractC11781 = c24550.f38069;
+        EnumC13603 enumC13603 = abstractC11781.f38066;
+        EnumC13603 enumC13604 = EnumC13603.f43219;
+        if (enumC13603 == enumC13604 && abstractC11781 != c3168.f10275.f61859.f9550 && c17929.f58739.m35525(c3168.f10275.f61859, c24550.f79577)) {
+            C7312 c7312 = c17929.f58731;
+            int i = c7926.f26658;
+            EnumC4960 enumC4960M27726 = C10925.m27726(c24550);
+            C11040 c11040 = C22843.f74058;
+            c7312.m34517(i, new C11040("compiler", "clash.with.pkg.of.same.name", enumC4960M27726, c24550));
+        }
+        if (c24550.f38069.f38066 == enumC13604 && (c24550.f38071 & 1) == 0 && !c3168.f10275.f61856.mo10886(c24550.f38072.toString(), EnumC17468.SOURCE)) {
+            c24550.f38071 |= 17592186044416L;
         }
     }
 }

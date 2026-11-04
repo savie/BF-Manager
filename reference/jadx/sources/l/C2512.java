@@ -1,18 +1,37 @@
 package l;
 
-import net.engio.mbassy.bus.error.IPublicationErrorHandler;
-import net.engio.mbassy.bus.error.PublicationError;
+/* JADX INFO: renamed from: l.ۖ۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C2512 extends EnumC8806 {
+    public /* synthetic */ C2512() {
+        this("Rcdata", 2);
+    }
 
-/* JADX INFO: renamed from: l.ۖۨᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V9DJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2512 implements IPublicationErrorHandler {
-    @Override // net.engio.mbassy.bus.error.IPublicationErrorHandler
-    public final void handleError(PublicationError publicationError) {
-        if (publicationError.getCause() != null) {
-            C5335.f18403.mo12138(publicationError.toString(), publicationError.getCause());
+    public C2512(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        char cM54678 = c24448.m54678();
+        if (cM54678 == 0) {
+            c8260.m22262(this);
+            c24448.m54665();
+            c8260.m22253((char) 65533);
         } else {
-            C5335.f18403.mo12119(publicationError.toString());
+            if (cM54678 == '&') {
+                c8260.m22258(EnumC8806.f28722);
+                return;
+            }
+            if (cM54678 == '<') {
+                c8260.m22258(EnumC8806.f28729);
+            } else if (cM54678 == 65535) {
+                c8260.m22257(new C17955());
+            } else {
+                c8260.m22254(c24448.m54689());
+            }
         }
     }
 }

@@ -1,35 +1,31 @@
 .class public final Ll/ۡ۫ܶ;
-.super Ll/ܺ۫ܶ;
-.source "X4RA"
-
-
-# instance fields
-.field public final synthetic ᩶:Ljava/lang/Iterable;
+.super Ljava/lang/RuntimeException;
+.source "C9FX"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
+.method public varargs constructor <init>(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
 
-    .line 146
-    iput-object p2, p0, Ll/ۡ۫ܶ;->᩶:Ljava/lang/Iterable;
+    .line 24
+    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ll/ܺ۫ܶ;-><init>(Ljava/lang/Iterable;)V
+    move-result-object p2
+
+    invoke-direct {p0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
+.method public varargs constructor <init>(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
 
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+    .line 28
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 149
-    iget-object v0, p0, Ll/ۡ۫ܶ;->᩶:Ljava/lang/Iterable;
+    move-result-object p1
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

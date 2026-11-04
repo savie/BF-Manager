@@ -1,46 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۙۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I59Q */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12884 {
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.UnaryOperator;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ConcurrentMapC13783 f42845 = new ConcurrentMapC13783();
+/* JADX INFO: renamed from: l.۫ۚۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C12884 {
+    public static /* synthetic */ void replaceAll(List list, UnaryOperator unaryOperator) {
+        if (list instanceof InterfaceC5427) {
+            ((InterfaceC5427) list).replaceAll(unaryOperator);
+        } else {
+            C15121.$default$replaceAll(list, unaryOperator);
+        }
+    }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Code duplicated, block: B:42:0x0075  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m31942(String str) {
-        if (str.length() == 1) {
-            switch (str) {
-                case "B":
-                    return -3;
-                case "C":
-                    return -5;
-                case "D":
-                    return -9;
-                case "F":
-                    return -7;
-                case "I":
-                    return -6;
-                case "J":
-                    return -8;
-                case "S":
-                    return -4;
-                case "V":
-                    return -1;
-                case "Z":
-                    return -2;
-            }
+    public static /* synthetic */ void sort(List list, Comparator comparator) {
+        if (list instanceof InterfaceC5427) {
+            ((InterfaceC5427) list).sort(comparator);
+        } else {
+            C15121.$default$sort(list, comparator);
         }
-        Integer numValueOf = (Integer) this.f42845.get(str);
-        if (numValueOf == null) {
-            synchronized (this.f42845) {
-                numValueOf = Integer.valueOf(this.f42845.size());
-                this.f42845.put(str, numValueOf);
-            }
-        }
-        return numValueOf.intValue();
+    }
+
+    public static /* synthetic */ InterfaceC8409 spliterator(List list) {
+        return list instanceof InterfaceC5427 ? ((InterfaceC5427) list).spliterator() : C15121.$default$spliterator(list);
     }
 }

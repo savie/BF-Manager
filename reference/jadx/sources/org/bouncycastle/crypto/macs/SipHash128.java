@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.macs;
 
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SipHash128 extends SipHash {
     public SipHash128() {
     }

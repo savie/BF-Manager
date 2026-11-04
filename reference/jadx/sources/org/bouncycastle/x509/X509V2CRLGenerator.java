@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C15489;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1GeneralizedTime;
@@ -193,7 +193,7 @@ public class X509V2CRLGenerator {
         try {
             this.tbsGen.setIssuer(new X509Principal(x500Principal.getEncoded()));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("can't process principal: ", e));
+            throw new IllegalArgumentException(C13645.m33383("can't process principal: ", e));
         }
     }
 

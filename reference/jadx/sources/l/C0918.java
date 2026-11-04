@@ -1,385 +1,170 @@
 package l;
 
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.util.AbstractMap;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Set;
+import java.io.OutputStream;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
 
-/* JADX INFO: renamed from: l.֨ۚ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1AZL */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0918 extends AbstractMap implements Serializable {
+/* JADX INFO: renamed from: l.֨ۘܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2BMB */
+/* JADX INFO: loaded from: classes3.dex */
+public class C0918 extends PipedInputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public static final Comparator f3675 = new C2952();
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public C13620 f3676;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C22086 f3677;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public int f3678;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C2329 f3679;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final boolean f3680;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C22086 f3681;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public int f3682;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f3426;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Comparator f3683;
+    public int f3427;
 
-    public C0918() {
-        this(true);
-    }
-
-    public C0918(boolean z) {
-        this.f3678 = 0;
-        this.f3682 = 0;
-        this.f3683 = f3675;
-        this.f3680 = z;
-        this.f3681 = new C22086(z);
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final int size() {
-        return this.f3678;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Object put(Object obj, Object obj2) {
-        if (obj == null) {
-            throw new NullPointerException("key == null");
-        }
-        if (obj2 == null && !this.f3680) {
-            throw new NullPointerException("value == null");
-        }
-        C22086 c22086M3643 = m3643(obj, true);
-        Object obj3 = c22086M3643.f71549;
-        c22086M3643.f71549 = obj2;
-        return obj3;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final void clear() {
-        this.f3677 = null;
-        this.f3678 = 0;
-        this.f3682++;
-        C22086 c22086 = this.f3681;
-        c22086.f71542 = c22086;
-        c22086.f71544 = c22086;
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22086 m3643(Object obj, boolean z) {
-        int iCompare;
-        C22086 c22086;
-        C22086 c22087 = this.f3677;
-        Comparator comparator = f3675;
-        Comparator comparator2 = this.f3683;
-        if (c22087 != null) {
-            Comparable comparable = comparator2 == comparator ? (Comparable) obj : null;
-            while (true) {
-                Object obj2 = c22087.f71541;
-                if (comparable != null) {
-                    iCompare = comparable.compareTo(obj2);
-                } else {
-                    iCompare = comparator2.compare(obj, obj2);
-                }
-                if (iCompare == 0) {
-                    return c22087;
-                }
-                C22086 c22088 = iCompare < 0 ? c22087.f71546 : c22087.f71543;
-                if (c22088 == null) {
-                    break;
-                }
-                c22087 = c22088;
-            }
-        } else {
-            iCompare = 0;
-        }
-        if (!z) {
-            return null;
-        }
-        C22086 c22089 = this.f3681;
-        if (c22087 == null) {
-            if (comparator2 == comparator && !(obj instanceof Comparable)) {
-                throw new ClassCastException(obj.getClass().getName().concat(" is not Comparable"));
-            }
-            c22086 = new C22086(this.f3680, c22087, obj, c22089, c22089.f71542);
-            this.f3677 = c22086;
-        } else {
-            c22086 = new C22086(this.f3680, c22087, obj, c22089, c22089.f71542);
-            if (iCompare < 0) {
-                c22087.f71546 = c22086;
-            } else {
-                c22087.f71543 = c22086;
-            }
-            m3642(c22087, true);
-        }
-        this.f3678++;
-        this.f3682++;
-        return c22086;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final boolean containsKey(Object obj) {
-        C22086 c22086M3643 = null;
-        if (obj != null) {
-            try {
-                c22086M3643 = m3643(obj, false);
-            } catch (ClassCastException unused) {
-            }
-        }
-        return c22086M3643 != null;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Object get(Object obj) {
-        C22086 c22086M3643;
-        if (obj != null) {
-            try {
-                c22086M3643 = m3643(obj, false);
-            } catch (ClassCastException unused) {
-                c22086M3643 = null;
-            }
-        } else {
-            c22086M3643 = null;
-        }
-        if (c22086M3643 != null) {
-            return c22086M3643.f71549;
-        }
-        return null;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Object remove(Object obj) {
-        C22086 c22086M3643;
-        if (obj != null) {
-            try {
-                c22086M3643 = m3643(obj, false);
-            } catch (ClassCastException unused) {
-                c22086M3643 = null;
-            }
-        } else {
-            c22086M3643 = null;
-        }
-        if (c22086M3643 != null) {
-            m3644(c22086M3643, true);
-        }
-        if (c22086M3643 != null) {
-            return c22086M3643.f71549;
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m3644(C22086 c22086, boolean z) {
-        int i;
-        if (z) {
-            C22086 c22087 = c22086.f71542;
-            c22087.f71544 = c22086.f71544;
-            c22086.f71544.f71542 = c22087;
-        }
-        C22086 c22088 = c22086.f71546;
-        C22086 c22089 = c22086.f71543;
-        C22086 c220810 = c22086.f71547;
-        int i2 = 0;
-        if (c22088 != null && c22089 != null) {
-            if (c22088.f71548 <= c22089.f71548) {
-                for (C22086 c220811 = c22089.f71546; c220811 != null; c220811 = c220811.f71546) {
-                    c22089 = c220811;
-                }
-            } else {
-                C22086 c220812 = c22088.f71543;
-                while (true) {
-                    C22086 c220813 = c220812;
-                    c22089 = c22088;
-                    c22088 = c220813;
-                    if (c22088 == null) {
-                        break;
-                    } else {
-                        c220812 = c22088.f71543;
-                    }
-                }
-            }
-            m3644(c22089, false);
-            C22086 c220814 = c22086.f71546;
-            if (c220814 != null) {
-                i = c220814.f71548;
-                c22089.f71546 = c220814;
-                c220814.f71547 = c22089;
-                c22086.f71546 = null;
-            } else {
-                i = 0;
-            }
-            C22086 c220815 = c22086.f71543;
-            if (c220815 != null) {
-                i2 = c220815.f71548;
-                c22089.f71543 = c220815;
-                c220815.f71547 = c22089;
-                c22086.f71543 = null;
-            }
-            c22089.f71548 = Math.max(i, i2) + 1;
-            m3640(c22086, c22089);
+    public final synchronized void m3715() {
+        if (available() != 0) {
             return;
         }
-        if (c22088 != null) {
-            m3640(c22086, c22088);
-            c22086.f71546 = null;
-        } else if (c22089 != null) {
-            m3640(c22086, c22089);
-            c22086.f71543 = null;
-        } else {
-            m3640(c22086, (C22086) null);
-        }
-        m3642(c220810, false);
-        this.f3678--;
-        this.f3682++;
+        ((PipedInputStream) this).out = 0;
+        byte[] bArr = ((PipedInputStream) this).buffer;
+        ((PipedInputStream) this).in = 1;
+        bArr[0] = 0;
+        read();
     }
 
+    /* JADX WARN: Code duplicated, block: B:13:0x001b A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:16:0x0024 A[Catch: all -> 0x0087, LOOP:0: B:14:0x0020->B:16:0x0024, LOOP_END, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:19:0x002b  */
+    /* JADX WARN: Code duplicated, block: B:22:0x0030 A[DONT_GENERATE] */
+    /* JADX WARN: Code duplicated, block: B:24:0x0032 A[Catch: all -> 0x0087, TRY_ENTER, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:26:0x003a A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:27:0x0041 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:28:0x0043 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:29:0x0045  */
+    /* JADX WARN: Code duplicated, block: B:30:0x0046 A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:31:0x0062 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:32:0x0064 A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:34:0x0072 A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:4:0x0002, B:6:0x000a, B:10:0x0016, B:13:0x001b, B:14:0x0020, B:16:0x0024, B:17:0x0027, B:24:0x0032, B:26:0x003a, B:33:0x006f, B:30:0x0046, B:32:0x0064, B:34:0x0072, B:36:0x0077, B:38:0x007b, B:42:0x0081, B:9:0x0012), top: B:48:0x0002 }] */
+    /* JADX WARN: Code duplicated, block: B:40:0x007f  */
+    /* JADX WARN: Code duplicated, block: B:41:0x0080  */
+    /* JADX WARN: Instruction removed from duplicated block: B:22:0x0030, please report this as an issue */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m3640(C22086 c22086, C22086 c22087) {
-        C22086 c22088 = c22086.f71547;
-        c22086.f71547 = null;
-        if (c22087 != null) {
-            c22087.f71547 = c22088;
-        }
-        if (c22088 != null) {
-            if (c22088.f71546 == c22086) {
-                c22088.f71546 = c22087;
-                return;
-            } else {
-                c22088.f71543 = c22087;
-                return;
+    public final synchronized void m3716(int i) {
+        int length;
+        int i2;
+        int i3;
+        int length2;
+        int length3;
+        int i4;
+        byte[] bArr;
+        int i5;
+        int i6;
+        int length4 = ((PipedInputStream) this).out;
+        int i7 = ((PipedInputStream) this).in;
+        if (length4 >= i7) {
+            if (i7 >= length4) {
+                length = 0;
+            } else if (i7 == -1) {
+                length = ((PipedInputStream) this).buffer.length;
+            }
+            if (length < i) {
+                byte[] bArr2 = ((PipedInputStream) this).buffer;
+                length2 = bArr2.length - length;
+                length3 = bArr2.length;
+                while (length3 - length2 < i) {
+                    length3 *= 2;
+                }
+                i4 = this.f3427;
+                if (length3 > i4) {
+                    length3 = i4;
+                }
+                if (length3 - length2 < i) {
+                    return;
+                }
+                bArr = new byte[length3];
+                i5 = ((PipedInputStream) this).out;
+                i6 = ((PipedInputStream) this).in;
+                if (i5 < i6) {
+                    byte[] bArr3 = ((PipedInputStream) this).buffer;
+                    System.arraycopy(bArr3, 0, bArr, 0, bArr3.length);
+                } else if (i6 < i5) {
+                    if (i6 == -1) {
+                        System.arraycopy(((PipedInputStream) this).buffer, 0, bArr, 0, i6);
+                        byte[] bArr4 = ((PipedInputStream) this).buffer;
+                        int i8 = ((PipedInputStream) this).out;
+                        System.arraycopy(bArr4, i8, bArr, length3 - (bArr4.length - i8), bArr4.length - i8);
+                        ((PipedInputStream) this).out = length3 - (((PipedInputStream) this).buffer.length - ((PipedInputStream) this).out);
+                    }
+                } else if (i6 == i5) {
+                    byte[] bArr5 = ((PipedInputStream) this).buffer;
+                    System.arraycopy(bArr5, 0, bArr, 0, bArr5.length);
+                    ((PipedInputStream) this).in = ((PipedInputStream) this).buffer.length;
+                }
+                ((PipedInputStream) this).buffer = bArr;
+            } else if (((PipedInputStream) this).buffer.length == length && length > (i2 = this.f3426)) {
+                i3 = length / 2;
+                if (i3 < i2) {
+                    i2 = i3;
+                }
+                ((PipedInputStream) this).buffer = new byte[i2];
             }
         }
-        this.f3677 = c22087;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m3642(C22086 c22086, boolean z) {
-        while (c22086 != null) {
-            C22086 c22087 = c22086.f71546;
-            C22086 c22088 = c22086.f71543;
-            int i = c22087 != null ? c22087.f71548 : 0;
-            int i2 = c22088 != null ? c22088.f71548 : 0;
-            int i3 = i - i2;
-            if (i3 == -2) {
-                C22086 c22089 = c22088.f71546;
-                C22086 c220810 = c22088.f71543;
-                int i4 = (c22089 != null ? c22089.f71548 : 0) - (c220810 != null ? c220810.f71548 : 0);
-                if (i4 == -1 || (i4 == 0 && !z)) {
-                    m3639(c22086);
-                } else {
-                    m3641(c22088);
-                    m3639(c22086);
-                }
-                if (z) {
-                    return;
-                }
-            } else if (i3 == 2) {
-                C22086 c220811 = c22087.f71546;
-                C22086 c220812 = c22087.f71543;
-                int i5 = (c220811 != null ? c220811.f71548 : 0) - (c220812 != null ? c220812.f71548 : 0);
-                if (i5 == 1 || (i5 == 0 && !z)) {
-                    m3641(c22086);
-                } else {
-                    m3639(c22087);
-                    m3641(c22086);
-                }
-                if (z) {
-                    return;
-                }
-            } else if (i3 == 0) {
-                c22086.f71548 = i + 1;
-                if (z) {
-                    return;
-                }
-            } else {
-                c22086.f71548 = Math.max(i, i2) + 1;
-                if (!z) {
-                    return;
-                }
+        length4 = ((PipedInputStream) this).buffer.length;
+        length = length4 - i7;
+        if (length < i) {
+            byte[] bArr6 = ((PipedInputStream) this).buffer;
+            length2 = bArr6.length - length;
+            length3 = bArr6.length;
+            while (length3 - length2 < i) {
+                length3 *= 2;
             }
-            c22086 = c22086.f71547;
+            i4 = this.f3427;
+            if (length3 > i4) {
+                length3 = i4;
+            }
+            if (length3 - length2 < i) {
+                return;
+            }
+            bArr = new byte[length3];
+            i5 = ((PipedInputStream) this).out;
+            i6 = ((PipedInputStream) this).in;
+            if (i5 < i6) {
+                byte[] bArr7 = ((PipedInputStream) this).buffer;
+                System.arraycopy(bArr7, 0, bArr, 0, bArr7.length);
+            } else if (i6 < i5) {
+                if (i6 == -1) {
+                    System.arraycopy(((PipedInputStream) this).buffer, 0, bArr, 0, i6);
+                    byte[] bArr8 = ((PipedInputStream) this).buffer;
+                    int i9 = ((PipedInputStream) this).out;
+                    System.arraycopy(bArr8, i9, bArr, length3 - (bArr8.length - i9), bArr8.length - i9);
+                    ((PipedInputStream) this).out = length3 - (((PipedInputStream) this).buffer.length - ((PipedInputStream) this).out);
+                }
+            } else if (i6 == i5) {
+                byte[] bArr9 = ((PipedInputStream) this).buffer;
+                System.arraycopy(bArr9, 0, bArr, 0, bArr9.length);
+                ((PipedInputStream) this).in = ((PipedInputStream) this).buffer.length;
+            }
+            ((PipedInputStream) this).buffer = bArr;
+        } else if (((PipedInputStream) this).buffer.length == length) {
+            i3 = length / 2;
+            if (i3 < i2) {
+                i2 = i3;
+            }
+            ((PipedInputStream) this).buffer = new byte[i2];
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m3639(C22086 c22086) {
-        C22086 c22087 = c22086.f71546;
-        C22086 c22088 = c22086.f71543;
-        C22086 c22089 = c22088.f71546;
-        C22086 c220810 = c22088.f71543;
-        c22086.f71543 = c22089;
-        if (c22089 != null) {
-            c22089.f71547 = c22086;
-        }
-        m3640(c22086, c22088);
-        c22088.f71546 = c22086;
-        c22086.f71547 = c22088;
-        int iMax = Math.max(c22087 != null ? c22087.f71548 : 0, c22089 != null ? c22089.f71548 : 0) + 1;
-        c22086.f71548 = iMax;
-        c22088.f71548 = Math.max(iMax, c220810 != null ? c220810.f71548 : 0) + 1;
+    public C0918(int i) {
+        ((PipedInputStream) this).buffer = new byte[32768];
+        this.f3426 = 32768;
+        this.f3427 = i;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m3641(C22086 c22086) {
-        C22086 c22087 = c22086.f71546;
-        C22086 c22088 = c22086.f71543;
-        C22086 c22089 = c22087.f71546;
-        C22086 c220810 = c22087.f71543;
-        c22086.f71546 = c220810;
-        if (c220810 != null) {
-            c220810.f71547 = c22086;
-        }
-        m3640(c22086, c22087);
-        c22087.f71543 = c22086;
-        c22086.f71547 = c22087;
-        int iMax = Math.max(c22088 != null ? c22088.f71548 : 0, c220810 != null ? c220810.f71548 : 0) + 1;
-        c22086.f71548 = iMax;
-        c22087.f71548 = Math.max(iMax, c22089 != null ? c22089.f71548 : 0) + 1;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Set entrySet() {
-        C13620 c13620 = this.f3676;
-        if (c13620 != null) {
-            return c13620;
-        }
-        C13620 c13621 = new C13620(this);
-        this.f3676 = c13621;
-        return c13621;
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final Set keySet() {
-        C2329 c2329 = this.f3679;
-        if (c2329 != null) {
-            return c2329;
-        }
-        C2329 c23210 = new C2329(this);
-        this.f3679 = c23210;
-        return c23210;
-    }
-
-    private Object writeReplace() {
-        return new LinkedHashMap(this);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Deserialization is unsupported");
+    public C0918(PipedOutputStream pipedOutputStream, int i) {
+        super(pipedOutputStream);
+        this.f3426 = 1024;
+        this.f3427 = 1024;
+        ((PipedInputStream) this).buffer = new byte[i];
+        this.f3426 = i;
     }
 }

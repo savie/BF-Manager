@@ -5,7 +5,7 @@ import org.bouncycastle.asn1.ASN1Enumerated;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OCSPResponseStatus extends ASN1Object {
     public static final int INTERNAL_ERROR = 2;
     public static final int MALFORMED_REQUEST = 1;

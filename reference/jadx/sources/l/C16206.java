@@ -1,34 +1,49 @@
 package l;
 
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.math.RoundingMode;
 
-/* JADX INFO: renamed from: l.ܺ᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17JK */
+/* JADX INFO: renamed from: l.ܶܺܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 53F5 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16206 extends LinkedHashMap {
+public final /* synthetic */ class C16206 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0682 f52311;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f52599;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C16206(C0682 c0682) {
-        super(6, 0.75f, true);
-        this.f52311 = c0682;
-    }
-
-    @Override // java.util.LinkedHashMap
-    public final boolean removeEldestEntry(Map.Entry entry) {
-        if (size() <= 5) {
-            return false;
+    static {
+        int[] iArr = new int[RoundingMode.values().length];
+        f52599 = iArr;
+        try {
+            iArr[RoundingMode.UNNECESSARY.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
         try {
-            ((InterfaceC21850) entry.getValue()).close();
-            return true;
-        } catch (IOException e) {
-            this.f52311.f2857 = e;
-            return true;
+            f52599[RoundingMode.DOWN.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f52599[RoundingMode.FLOOR.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f52599[RoundingMode.UP.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f52599[RoundingMode.CEILING.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f52599[RoundingMode.HALF_DOWN.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f52599[RoundingMode.HALF_UP.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f52599[RoundingMode.HALF_EVEN.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
         }
     }
 }

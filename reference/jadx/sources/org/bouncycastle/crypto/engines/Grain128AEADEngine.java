@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Grain128AEADEngine extends AEADBaseEngine {
     public static final int STATE_SIZE = 4;
     public final int[] authAcc;

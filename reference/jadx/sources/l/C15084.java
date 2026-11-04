@@ -1,70 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C15084 extends EnumC8422 {
-    public /* synthetic */ C15084() {
-        this("BeforeAttributeValue", 36);
+/* JADX INFO: renamed from: l.ܳۘۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: YAH1 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15084 extends AbstractC19560 {
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1661 f49229;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C15084(C1661 c1661) {
+        super(c1661);
+        this.f49229 = c1661;
     }
 
-    public C15084(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC8422
+    @Override // l.AbstractC19560
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7382 = c2424.m7382();
-        if (cM7382 == 0) {
-            c8111.m21365(this);
-            c8111.f28411.m50751((char) 65533);
-            c8111.m21353(EnumC8422.f29217);
-            return;
-        }
-        if (cM7382 != ' ') {
-            if (cM7382 == '\"') {
-                c8111.m21353(EnumC8422.f29232);
-                return;
-            }
-            if (cM7382 != '`') {
-                if (cM7382 == 65535) {
-                    c8111.m21368(this);
-                    c8111.m21369();
-                    c8111.m21353(EnumC8422.f29249);
-                    return;
-                }
-                if (cM7382 == '\t' || cM7382 == '\n' || cM7382 == '\f' || cM7382 == '\r') {
-                    return;
-                }
-                if (cM7382 == '&') {
-                    c2424.m7397();
-                    c8111.m21353(EnumC8422.f29217);
-                    return;
-                }
-                if (cM7382 == '\'') {
-                    c8111.m21353(EnumC8422.f29195);
-                    return;
-                }
-                switch (cM7382) {
-                    case '<':
-                    case '=':
-                        break;
-                    case '>':
-                        c8111.m21365(this);
-                        c8111.m21369();
-                        c8111.m21353(EnumC8422.f29249);
-                        break;
-                    default:
-                        c2424.m7397();
-                        c8111.m21353(EnumC8422.f29217);
-                        break;
-                }
-                return;
-            }
-            c8111.m21365(this);
-            c8111.f28411.m50751(cM7382);
-            c8111.m21353(EnumC8422.f29217);
-        }
+    public final C5390 mo31889() {
+        return this.f49229.f5746;
+    }
+
+    @Override // l.AbstractC19560
+    /* JADX INFO: renamed from: ۙ */
+    public final C5390 mo31890(C5390 c5390) {
+        return c5390.f18880;
     }
 }

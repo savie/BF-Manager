@@ -89,20 +89,20 @@
 
 
 # virtual methods
-.method public bridge synthetic onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+.method public bridge synthetic onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
     .locals 0
 
     .line 1319
     check-cast p2, Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior;->onLayoutChild(Ll/ۖ᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;I)Z
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior;->onLayoutChild(Ll/᩻᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;I)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public onLayoutChild(Ll/ۖ᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;I)Z
+.method public onLayoutChild(Ll/᩻᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;I)Z
     .locals 3
 
     .line 1413
@@ -120,7 +120,7 @@
     if-eqz v0, :cond_4
 
     .line 1416
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
@@ -137,7 +137,7 @@
 
     move-result-object v1
 
-    check-cast v1, Ll/ۢܺ;
+    check-cast v1, Ll/ܳ᩶;
 
     .line 1425
     iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
@@ -170,7 +170,7 @@
     const/4 v2, 0x0
 
     .line 1430
-    invoke-static {v1, v2}, Ll/ۚ֫;->ۙ(Landroid/view/View;F)V
+    invoke-static {v1, v2}, Ll/᩸۠;->ۙ(Landroid/view/View;F)V
 
     .line 1431
     invoke-virtual {v1, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setCompatElevation(F)V
@@ -184,7 +184,7 @@
     if-nez v2, :cond_1
 
     .line 1438
-    sget v2, Ll/ۨ۟ܶ;->֫:I
+    sget v2, Ll/֫۬ܺ;->۠:I
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setShowMotionSpecResource(I)V
 
@@ -197,7 +197,7 @@
     if-nez v2, :cond_2
 
     .line 1441
-    sget v2, Ll/ۨ۟ܶ;->ܳ:I
+    sget v2, Ll/֫۬ܺ;->ۖ:I
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setHideMotionSpecResource(I)V
 
@@ -216,30 +216,30 @@
 
     .line 1455
     :cond_4
-    invoke-virtual {p1, p2, p3}, Ll/ۖ᩶;->onLayoutChild(Landroid/view/View;I)V
+    invoke-virtual {p1, p2, p3}, Ll/᩻᩶;->onLayoutChild(Landroid/view/View;I)V
 
     .line 1456
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public bridge synthetic onStartNestedScroll(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+.method public bridge synthetic onStartNestedScroll(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
     .line 1319
     check-cast p2, Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    invoke-virtual/range {p0 .. p6}, Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior;->onStartNestedScroll(Ll/ۖ᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;Landroid/view/View;Landroid/view/View;II)Z
+    invoke-virtual/range {p0 .. p6}, Lcom/google/android/material/bottomappbar/BottomAppBar$Behavior;->onStartNestedScroll(Ll/᩻᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;Landroid/view/View;Landroid/view/View;II)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public onStartNestedScroll(Ll/ۖ᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;Landroid/view/View;Landroid/view/View;II)Z
+.method public onStartNestedScroll(Ll/᩻᩶;Lcom/google/android/material/bottomappbar/BottomAppBar;Landroid/view/View;Landroid/view/View;II)Z
     .locals 1
 
     .line 1468
@@ -250,7 +250,7 @@
     if-eqz v0, :cond_0
 
     .line 1469
-    invoke-super/range {p0 .. p6}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->onStartNestedScroll(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+    invoke-super/range {p0 .. p6}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->onStartNestedScroll(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
 
     move-result p1
 

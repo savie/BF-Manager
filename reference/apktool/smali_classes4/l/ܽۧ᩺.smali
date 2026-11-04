@@ -1,187 +1,136 @@
-.class public final Ll/ܽۧ᩺;
+.class public final synthetic Ll/ܽۧ᩺;
 .super Ljava/lang/Object;
-.source "S1JO"
+.source "I7DX"
 
 
 # static fields
-.field public static final ۨ:Ljava/lang/Object;
-
-
-# instance fields
-.field public ۙ:Ll/ۡ᩺ۙ;
-
-.field public ܰ:Ljava/lang/ref/WeakReference;
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    .line 11
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll/ܽۧ᩺;->ۨ:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 12
-    new-instance v0, Ll/ۡ᩺ۙ;
-
-    invoke-direct {v0}, Ll/ۡ᩺ۙ;-><init>()V
-
-    iput-object v0, p0, Ll/ܽۧ᩺;->ۙ:Ll/ۡ᩺ۙ;
-
-    .line 13
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Ll/ܽۧ᩺;->ܰ:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public static synthetic ۙ(Ll/֡ۧ᩺;[Ljava/lang/Object;)V
     .locals 3
 
-    const/4 v0, 0x0
+    .line 89
+    invoke-static {}, Ll/۫۬ۛ;->values()[Ll/۫۬ۛ;
 
-    .line 27
-    aget-object v1, p1, v0
+    move-result-object v0
 
-    .line 28
-    sget-object v2, Ll/ܽۧ᩺;->ۨ:Ljava/lang/Object;
+    array-length v0, v0
 
-    if-eq v1, v2, :cond_0
+    new-array v0, v0, [I
 
-    .line 29
-    aput-object v2, p1, v0
+    sput-object v0, Ll/ܽۧ᩺;->ۙ:[I
 
-    .line 31
-    invoke-interface {p0, v1}, Ll/֡ۧ᩺;->ۙ(Ljava/lang/Object;)V
+    :try_start_0
+    sget-object v1, Ll/۫۬ۛ;->֨:Ll/۫۬ۛ;
 
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    aput-object p1, v0, v1
-
-    .line 39
-    iget-object p1, p0, Ll/ܽۧ᩺;->ۙ:Ll/ۡ᩺ۙ;
-
-    invoke-virtual {p1, v0}, Ll/ۡ᩺ۙ;->ܰ(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/֨᩺ۙ;Ll/֡ۧ᩺;)V
-    .locals 3
-
-    .line 16
-    iget-object v0, p0, Ll/ܽۧ᩺;->ۙ:Ll/ۡ᩺ۙ;
-
-    invoke-virtual {v0}, Ll/᩵᩺ۙ;->ܰ()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    const/4 v2, 0x1
 
-    .line 17
-    iget-object v1, p0, Ll/ܽۧ᩺;->ܰ:Ljava/lang/ref/WeakReference;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
 
-    move-result-object v1
+    sget-object v1, Ll/۫۬ۛ;->᩺ۙ:Ll/۫۬ۛ;
 
-    check-cast v1, Ll/ۤ᩺ۙ;
-
-    if-eqz v1, :cond_0
-
-    .line 19
-    invoke-virtual {v0, v1}, Ll/᩵᩺ۙ;->ܰ(Ll/ۤ᩺ۙ;)V
-
-    .line 20
-    iget-object v1, p0, Ll/ܽۧ᩺;->ܰ:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->clear()V
-
-    .line 22
-    :cond_0
-    invoke-virtual {v0}, Ll/᩵᩺ۙ;->ܰ()Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-nez v1, :cond_1
+    const/4 v2, 0x2
 
-    goto :goto_0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 23
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
 
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+    sget-object v1, Ll/۫۬ۛ;->ۜ:Ll/۫۬ۛ;
 
-    throw p1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 26
-    :cond_2
-    :goto_0
-    new-instance v1, Ll/᩶ۧ᩺;
+    move-result v1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x3
 
-    invoke-direct {v1, v2, p2}, Ll/᩶ۧ᩺;-><init>(ILjava/lang/Object;)V
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 34
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
 
-    invoke-direct {p2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    sget-object v1, Ll/۫۬ۛ;->ܳۙ:Ll/۫۬ۛ;
 
-    iput-object p2, p0, Ll/ܽۧ᩺;->ܰ:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 35
-    invoke-virtual {v0, p1, v1}, Ll/᩵᩺ۙ;->ۙ(Ll/֨᩺ۙ;Ll/ۤ᩺ۙ;)V
+    move-result v1
 
-    return-void
-.end method
+    const/4 v2, 0x4
 
-.method public final ۙ(Ll/᩺ۚۨ;)V
-    .locals 2
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    const/4 v0, 0x1
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    sget-object v1, Ll/۫۬ۛ;->ۨۙ:Ll/۫۬ۛ;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    aput-object p1, v0, v1
+    move-result v1
 
-    .line 43
-    iget-object p1, p0, Ll/ܽۧ᩺;->ۙ:Ll/ۡ᩺ۙ;
+    const/4 v2, 0x5
 
-    invoke-virtual {p1, v0}, Ll/ۡ᩺ۙ;->ۙ(Ljava/lang/Object;)V
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
+    :catch_4
+    :try_start_5
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
+
+    sget-object v1, Ll/۫۬ۛ;->᩹ۙ:Ll/۫۬ۛ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Ll/ܽۧ᩺;->ۙ:[I
+
+    sget-object v1, Ll/۫۬ۛ;->ᩳ:Ll/۫۬ۛ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
     return-void
 .end method

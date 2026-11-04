@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PBMAC1Params extends ASN1Object implements PKCSObjectIdentifiers {
     public AlgorithmIdentifier func;
     public AlgorithmIdentifier scheme;

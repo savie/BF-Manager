@@ -1,50 +1,26 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import java.util.function.Function;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
-/* JADX INFO: renamed from: l.۫᩻ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5BW */
+/* JADX INFO: renamed from: l.۫֡ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 47VB */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12740 implements Function {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f42495;
-
-    public /* synthetic */ C12740(int i) {
-        this.f42495 = i;
-    }
-
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f42495) {
-            case 0:
-                return ((EnumC7501) obj).f24977;
-            case 1:
-                return ((C6148) obj).m17153();
-            case 2:
-                return ((DynamicScheme) obj).errorPalette;
-            case 3:
-                return ((DynamicScheme) obj).primaryPalette;
-            case 4:
-                return ((DynamicScheme) obj).neutralVariantPalette;
-            case 5:
-                return Boolean.valueOf(((String) obj).contains("package-info."));
-            case 6:
-                return "#" + ((Integer) obj);
-            default:
-                return C9030.stream(((C18630) obj).f60400);
-        }
+public final class C12740 extends AbstractC22437 {
+    @Override // l.AbstractC22437
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15880(C15723 c15723, AbstractC8375 abstractC8375) {
+        super.mo15880(c15723, abstractC8375);
+        C9866 c9866 = new C9866();
+        C14010 c14010 = new C14010(c9866);
+        c14010.m34100();
+        c9866.m25651((byte) 98);
+        c9866.m25669(abstractC8375.f27478);
+        byte[] bArr = C9011.f29358;
+        Charset charset = StandardCharsets.UTF_8;
+        c9866.m25673("subsystem".getBytes(charset));
+        c9866.m25651(m50588() ? (byte) 1 : (byte) 0);
+        c9866.m25673("sftp".getBytes(charset));
+        m50586(c14010);
     }
 }

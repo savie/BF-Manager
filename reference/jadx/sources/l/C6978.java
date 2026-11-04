@@ -1,33 +1,43 @@
 package l;
 
-import bin.mt.plus.R;
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ۜ᩵᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P98B */
+/* JADX INFO: renamed from: l.ۜۜ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6978 extends AbstractC4674 {
-    public C6978() {
-        super(R.string.MT_Protector, R.drawable.MT_Protector);
+public final class C6978 implements Iterator {
+    public final BufferedReader a;
+    public String b = null;
+
+    public C6978(BufferedReader bufferedReader) {
+        this.a = bufferedReader;
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        if (!C1709.m5693()) {
-            C15829.m37611(R.string.MT_Protector);
-            return;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        if (this.b != null) {
+            return true;
         }
-        if (c21422.m47975() == 2) {
-            ArrayList arrayList = new ArrayList(2);
-            Iterator it = c21422.m47979().iterator();
-            while (it.hasNext()) {
-                arrayList.add(new C10840((InterfaceC2557) it.next()));
-            }
-            c21422.m47960().mo13033(c21422.m47965(), arrayList, new RunnableC2749(1, arrayList, c21422));
-            return;
+        try {
+            String line = this.a.readLine();
+            this.b = line;
+            return line != null;
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
         }
-        c21422.m47960().m28625(c21422.m47965(), c21422.m47981(), new C13329(c21422.m47970(), c21422));
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (this.b != null || hasNext()) {
+            String str = this.b;
+            this.b = null;
+            return str;
+        }
+        throw new NoSuchElementException();
     }
 }

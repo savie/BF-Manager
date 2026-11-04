@@ -1,23 +1,244 @@
 package l;
 
-import android.graphics.Rect;
-import android.os.Build;
-import android.view.DisplayCutout;
-import android.view.WindowInsets;
-import android.widget.FrameLayout;
-import java.util.List;
+import org.bouncycastle.asn1.BERTags;
 
-/* JADX INFO: renamed from: l.ۘܺᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
+/* JADX INFO: renamed from: l.ۘۡۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 75U0 */
 /* JADX INFO: loaded from: classes2.dex */
-public class C4047 extends FrameLayout {
-    @Override // android.view.View
-    public final WindowInsets onApplyWindowInsets(WindowInsets windowInsets) {
-        DisplayCutout displayCutout;
-        List<Rect> boundingRects;
-        if (Build.VERSION.SDK_INT >= 28 && windowInsets != null && (displayCutout = windowInsets.getDisplayCutout()) != null && (boundingRects = displayCutout.getBoundingRects()) != null && !boundingRects.isEmpty()) {
-            setPadding(Math.max(displayCutout.getSafeInsetLeft(), 0), Math.max(displayCutout.getSafeInsetTop(), 0), Math.max(displayCutout.getSafeInsetRight(), 0), Math.max(displayCutout.getSafeInsetBottom(), 0));
+public final class C4047 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public byte[] f13787 = new byte[64];
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f13788;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13014(int i) {
+        int i2 = this.f13788;
+        int i3 = i2 + 1;
+        if (i3 > this.f13787.length) {
+            m13013(1);
         }
-        return super.onApplyWindowInsets(windowInsets);
+        this.f13787[i2] = (byte) i;
+        this.f13788 = i3;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13015(int i, int i2) {
+        int i3 = this.f13788;
+        int i4 = i3 + 2;
+        if (i4 > this.f13787.length) {
+            m13013(2);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i3] = (byte) i;
+        bArr[i3 + 1] = (byte) i2;
+        this.f13788 = i4;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m13021(int i) {
+        int i2 = this.f13788;
+        int i3 = i2 + 2;
+        if (i3 > this.f13787.length) {
+            m13013(2);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i2] = (byte) (i >>> 8);
+        bArr[i2 + 1] = (byte) i;
+        this.f13788 = i3;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m13022(int i, int i2) {
+        int i3 = this.f13788;
+        int i4 = i3 + 3;
+        if (i4 > this.f13787.length) {
+            m13013(3);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i3] = (byte) i;
+        bArr[i3 + 1] = (byte) (i2 >>> 8);
+        bArr[i3 + 2] = (byte) i2;
+        this.f13788 = i4;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m13024(int i, int i2) {
+        int i3 = this.f13788;
+        int i4 = i3 + 4;
+        if (i4 > this.f13787.length) {
+            m13013(4);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i3] = (byte) 15;
+        bArr[i3 + 1] = (byte) i;
+        bArr[i3 + 2] = (byte) (i2 >>> 8);
+        bArr[i3 + 3] = (byte) i2;
+        this.f13788 = i4;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m13023(int i) {
+        int i2 = this.f13788;
+        int i3 = i2 + 4;
+        if (i3 > this.f13787.length) {
+            m13013(4);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i2] = (byte) (i >>> 24);
+        bArr[i2 + 1] = (byte) (i >>> 16);
+        bArr[i2 + 2] = (byte) (i >>> 8);
+        bArr[i2 + 3] = (byte) i;
+        this.f13788 = i3;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13016(int i, int i2, int i3) {
+        int i4 = this.f13788;
+        int i5 = i4 + 5;
+        if (i5 > this.f13787.length) {
+            m13013(5);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i4] = (byte) i;
+        bArr[i4 + 1] = (byte) (i2 >>> 8);
+        bArr[i4 + 2] = (byte) i2;
+        bArr[i4 + 3] = (byte) (i3 >>> 8);
+        bArr[i4 + 4] = (byte) i3;
+        this.f13788 = i5;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13019(long j) {
+        int i = this.f13788;
+        int i2 = i + 8;
+        if (i2 > this.f13787.length) {
+            m13013(8);
+        }
+        byte[] bArr = this.f13787;
+        int i3 = (int) (j >>> 32);
+        bArr[i] = (byte) (i3 >>> 24);
+        bArr[i + 1] = (byte) (i3 >>> 16);
+        bArr[i + 2] = (byte) (i3 >>> 8);
+        bArr[i + 3] = (byte) i3;
+        int i4 = (int) j;
+        bArr[i + 4] = (byte) (i4 >>> 24);
+        bArr[i + 5] = (byte) (i4 >>> 16);
+        bArr[i + 6] = (byte) (i4 >>> 8);
+        bArr[i + 7] = (byte) i4;
+        this.f13788 = i2;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13020(String str) {
+        int length = str.length();
+        if (length > 65535) {
+            throw new IllegalArgumentException("UTF8 string too large");
+        }
+        int i = this.f13788;
+        int i2 = i + 2;
+        if (i2 + length > this.f13787.length) {
+            m13013(length + 2);
+        }
+        byte[] bArr = this.f13787;
+        bArr[i] = (byte) (length >>> 8);
+        bArr[i + 1] = (byte) length;
+        int i3 = 0;
+        while (i3 < length) {
+            char cCharAt = str.charAt(i3);
+            if (cCharAt >= 1 && cCharAt <= 127) {
+                bArr[i2] = (byte) cCharAt;
+                i3++;
+                i2++;
+            } else {
+                this.f13788 = i2;
+                m13017(i3, 65535, str);
+                return;
+            }
+        }
+        this.f13788 = i2;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13017(int i, int i2, String str) {
+        int length = str.length();
+        int i3 = i;
+        int i4 = i3;
+        while (i3 < length) {
+            char cCharAt = str.charAt(i3);
+            if (cCharAt < 1 || cCharAt > 127) {
+                i4 = cCharAt <= 2047 ? i4 + 2 : i4 + 3;
+            } else {
+                i4++;
+            }
+            i3++;
+        }
+        if (i4 > i2) {
+            throw new IllegalArgumentException("UTF8 string too large");
+        }
+        int i5 = this.f13788;
+        int i6 = i5 - i;
+        int i7 = i6 - 2;
+        if (i7 >= 0) {
+            byte[] bArr = this.f13787;
+            bArr[i7] = (byte) (i4 >>> 8);
+            bArr[i6 - 1] = (byte) i4;
+        }
+        if ((i5 + i4) - i > this.f13787.length) {
+            m13013(i4 - i);
+        }
+        int i8 = this.f13788;
+        while (i < length) {
+            char cCharAt2 = str.charAt(i);
+            if (cCharAt2 >= 1 && cCharAt2 <= 127) {
+                this.f13787[i8] = (byte) cCharAt2;
+                i8++;
+            } else if (cCharAt2 <= 2047) {
+                byte[] bArr2 = this.f13787;
+                int i9 = i8 + 1;
+                bArr2[i8] = (byte) (((cCharAt2 >> 6) & 31) | 192);
+                i8 += 2;
+                bArr2[i9] = (byte) ((cCharAt2 & '?') | 128);
+            } else {
+                byte[] bArr3 = this.f13787;
+                bArr3[i8] = (byte) (((cCharAt2 >> '\f') & 15) | BERTags.FLAGS);
+                int i10 = i8 + 2;
+                bArr3[i8 + 1] = (byte) (((cCharAt2 >> 6) & 63) | 128);
+                i8 += 3;
+                bArr3[i10] = (byte) ((cCharAt2 & '?') | 128);
+            }
+            i++;
+        }
+        this.f13788 = i8;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13018(int i, int i2, byte[] bArr) {
+        if (this.f13788 + i2 > this.f13787.length) {
+            m13013(i2);
+        }
+        if (bArr != null) {
+            System.arraycopy(bArr, i, this.f13787, this.f13788, i2);
+        }
+        this.f13788 += i2;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private void m13013(int i) {
+        int i2 = this.f13788;
+        byte[] bArr = this.f13787;
+        if (i2 > bArr.length) {
+            throw new AssertionError("Internal error");
+        }
+        int length = bArr.length * 2;
+        int i3 = i + i2;
+        if (length <= i3) {
+            length = i3;
+        }
+        byte[] bArr2 = new byte[length];
+        System.arraycopy(bArr, 0, bArr2, 0, i2);
+        this.f13787 = bArr2;
     }
 }

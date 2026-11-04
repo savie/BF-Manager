@@ -1,9 +1,9 @@
 package net.sf.sevenzipjbinding;
 
 import java.io.Closeable;
-import l.InterfaceC19856;
+import l.InterfaceC20019;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IInArchive extends Closeable {
     void addAutoCloseable(Closeable closeable);
 
@@ -50,7 +50,7 @@ public interface IInArchive extends Closeable {
 
     PropertyInfo getPropertyInfo(int i);
 
-    InterfaceC19856 getSimpleInterface();
+    InterfaceC20019 getSimpleInterface();
 
     String getStringArchiveProperty(PropID propID);
 

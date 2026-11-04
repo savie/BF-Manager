@@ -6,136 +6,136 @@ import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DefaultRequest implements Request {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InputStream f102;
+    public InputStream f90;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public AWSRequestMetrics f103;
+    public String f91;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public String f106;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final AmazonWebServiceRequest f95;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public URI f107;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public AWSRequestMetrics f96;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final AmazonWebServiceRequest f108;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public URI f97;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public boolean f104 = false;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public boolean f93 = false;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final LinkedHashMap f99 = new LinkedHashMap();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final LinkedHashMap f94 = new LinkedHashMap();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f105 = new HashMap();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f92 = new HashMap();
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public HttpMethodName f100 = HttpMethodName.POST;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public HttpMethodName f98 = HttpMethodName.POST;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public String f101 = "Amazon S3";
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public String f89 = "Amazon S3";
 
     public DefaultRequest(AmazonWebServiceRequest amazonWebServiceRequest) {
-        this.f108 = amazonWebServiceRequest;
+        this.f95 = amazonWebServiceRequest;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final AmazonWebServiceRequest m186() {
+        return this.f95;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m177(String str, String str2) {
+        this.f92.put(str, str2);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap m182() {
+        return this.f92;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m176(String str) {
+        this.f91 = str;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String m184() {
+        return this.f91;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m188(String str, String str2) {
+        this.f94.put(str, str2);
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final LinkedHashMap m185() {
+        return this.f94;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HttpMethodName m189() {
+        return this.f98;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m173(HttpMethodName httpMethodName) {
+        this.f98 = httpMethodName;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m178(URI uri) {
+        this.f97 = uri;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final URI m187() {
+        return this.f97;
     }
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AmazonWebServiceRequest m189() {
-        return this.f108;
+    public final String m181() {
+        return this.f89;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m185(String str, String str2) {
-        this.f105.put(str, str2);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap m191() {
-        return this.f105;
+    public final InputStream m172() {
+        return this.f90;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m184(String str) {
-        this.f106 = str;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m177() {
-        return this.f106;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m194(String str, String str2) {
-        this.f99.put(str, str2);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final LinkedHashMap m195() {
-        return this.f99;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final HttpMethodName m178() {
-        return this.f100;
+    public final void m175(InputStream inputStream) {
+        this.f90 = inputStream;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m181(HttpMethodName httpMethodName) {
-        this.f100 = httpMethodName;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m186(URI uri) {
-        this.f107 = uri;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final URI m193() {
-        return this.f107;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m192() {
-        return this.f101;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InputStream m180() {
-        return this.f102;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m183(InputStream inputStream) {
-        this.f102 = inputStream;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m187(HashMap map) {
-        HashMap map2 = this.f105;
+    public final void m179(HashMap map) {
+        HashMap map2 = this.f92;
         map2.clear();
         map2.putAll(map);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m188(LinkedHashMap linkedHashMap) {
-        LinkedHashMap linkedHashMap2 = this.f99;
+    public final void m180(LinkedHashMap linkedHashMap) {
+        LinkedHashMap linkedHashMap2 = this.f94;
         linkedHashMap2.clear();
         linkedHashMap2.putAll(linkedHashMap);
     }
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.f100);
+        sb.append(this.f98);
         sb.append(" ");
-        sb.append(this.f107);
+        sb.append(this.f97);
         sb.append(" ");
-        String str = this.f106;
+        String str = this.f91;
         if (str == null) {
             sb.append("/");
         } else {
@@ -145,19 +145,19 @@ public class DefaultRequest implements Request {
             sb.append(str);
         }
         sb.append(" ");
-        LinkedHashMap linkedHashMap = this.f99;
+        LinkedHashMap linkedHashMap = this.f94;
         if (!linkedHashMap.isEmpty()) {
             sb.append("Parameters: (");
             for (String str2 : linkedHashMap.keySet()) {
-                ASN1BMPString$$ExternalSyntheticOutline0.m(sb, str2, ": ", (String) linkedHashMap.get(str2), ", ");
+                C4794.m14774(sb, str2, ": ", (String) linkedHashMap.get(str2), ", ");
             }
             sb.append(") ");
         }
-        HashMap map = this.f105;
+        HashMap map = this.f92;
         if (!map.isEmpty()) {
             sb.append("Headers: (");
             for (String str3 : map.keySet()) {
-                ASN1BMPString$$ExternalSyntheticOutline0.m(sb, str3, ": ", (String) map.get(str3), ", ");
+                C4794.m14774(sb, str3, ": ", (String) map.get(str3), ", ");
             }
             sb.append(") ");
         }
@@ -166,21 +166,21 @@ public class DefaultRequest implements Request {
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m182(AWSRequestMetrics aWSRequestMetrics) {
-        if (this.f103 == null) {
-            this.f103 = aWSRequestMetrics;
+    public final void m174(AWSRequestMetrics aWSRequestMetrics) {
+        if (this.f96 == null) {
+            this.f96 = aWSRequestMetrics;
             return;
         }
         throw new IllegalStateException("AWSRequestMetrics has already been set on this request");
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean m179() {
-        return this.f104;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final boolean m171() {
+        return this.f93;
     }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final void m190() {
-        this.f104 = true;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final void m183() {
+        this.f93 = true;
     }
 }

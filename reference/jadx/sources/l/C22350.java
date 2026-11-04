@@ -1,50 +1,21 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.᩹ܳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: TUG */
+/* JADX INFO: renamed from: l.᩷᩸ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E3QI */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22350 extends AbstractC13178 implements Consumer {
+public final class C22350 extends C0370 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Object f73020;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f72346;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4328 f73021;
-
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    public C22350(int i, Object obj) {
+        super(obj);
+        this.f72346 = i;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22350(InterfaceC20693 interfaceC20693, long j, C4328 c4328) {
-        super(interfaceC20693, j);
-        this.f73021 = c4328;
-    }
-
-    @Override // java.util.function.Consumer
-    public final void accept(Object obj) {
-        this.f73020 = obj;
-    }
-
-    @Override // l.InterfaceC20693
-    public final boolean tryAdvance(Consumer consumer) {
-        if (!this.f43873.tryAdvance(this)) {
-            return false;
-        }
-        try {
-            C4328 c4328 = this.f73021;
-            Object obj = this.f73020;
-            long j = this.f43874;
-            this.f43874 = 1 + j;
-            if (!((C12188) c4328.f15523).apply(obj)) {
-                j = -1;
-            }
-            consumer.accept(Long.valueOf(j));
-            return true;
-        } finally {
-            this.f73020 = null;
-        }
+    @Override // l.C0370, l.InterfaceC10064
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo2148() {
+        return this.f72346;
     }
 }

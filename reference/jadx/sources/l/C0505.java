@@ -1,74 +1,85 @@
 package l;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.content.res.XmlResourceParser;
-import android.util.Xml;
+import android.text.TextUtils;
+import net.sf.sevenzipjbinding.IOutCreateArchive7z;
+import net.sf.sevenzipjbinding.SevenZip;
+import net.sf.sevenzipjbinding.SevenZipException;
 
-/* JADX INFO: renamed from: l.֡ܺ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 31AL */
+/* JADX INFO: renamed from: l.֡ܳ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4B3Z */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C0505 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public float f2194;
-
+    /* JADX WARN: Code duplicated, block: B:34:0x006f  */
+    /* JADX WARN: Code duplicated, block: B:37:0x0078  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f2195;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public float f2196;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f2197;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public float f2198;
-
-    public C0505(Context context, XmlResourceParser xmlResourceParser) {
-        this.f2196 = Float.NaN;
-        this.f2194 = Float.NaN;
-        this.f2197 = Float.NaN;
-        this.f2198 = Float.NaN;
-        this.f2195 = -1;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlResourceParser), C16029.f51888);
-        int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
-        for (int i = 0; i < indexCount; i++) {
-            int index = typedArrayObtainStyledAttributes.getIndex(i);
-            if (index == 0) {
-                int resourceId = typedArrayObtainStyledAttributes.getResourceId(index, this.f2195);
-                this.f2195 = resourceId;
-                String resourceTypeName = context.getResources().getResourceTypeName(resourceId);
-                context.getResources().getResourceName(resourceId);
-                "layout".equals(resourceTypeName);
-            } else if (index == 1) {
-                this.f2198 = typedArrayObtainStyledAttributes.getDimension(index, this.f2198);
-            } else if (index == 2) {
-                this.f2194 = typedArrayObtainStyledAttributes.getDimension(index, this.f2194);
-            } else if (index == 3) {
-                this.f2197 = typedArrayObtainStyledAttributes.getDimension(index, this.f2197);
-            } else if (index == 4) {
-                this.f2196 = typedArrayObtainStyledAttributes.getDimension(index, this.f2196);
+    public static void m2472(C4234 c4234, InterfaceC21388 interfaceC21388) throws Throwable {
+        C8919 c8919;
+        C24372 c6472;
+        String strMo2401 = interfaceC21388.mo2401();
+        IOutCreateArchive7z iOutCreateArchive7z = null;
+        c8919Mo2400 = null;
+        C8919 c8919Mo2400 = null;
+        iOutCreateArchive7z = null;
+        try {
+            if (!C25053.m55879()) {
+                throw new SevenZipException(C25053.m55880());
             }
+            IOutCreateArchive7z iOutCreateArchive7zM56788 = SevenZip.m56788();
+            try {
+                iOutCreateArchive7zM56788.setLevel(c4234.f15449);
+                iOutCreateArchive7zM56788.setHeaderEncryption(c4234.f15448);
+                iOutCreateArchive7zM56788.setThreadCount(-1);
+                c8919Mo2400 = interfaceC21388.mo2400();
+                if (TextUtils.isEmpty(strMo2401)) {
+                    c6472 = new C24372(interfaceC21388);
+                } else {
+                    c6472 = new C6472(interfaceC21388, strMo2401);
+                }
+                iOutCreateArchive7zM56788.createArchive(c8919Mo2400, c4234.f15450, c6472);
+                C20244.m46520(iOutCreateArchive7zM56788);
+                C20244.m46520(c8919Mo2400);
+            } catch (SevenZipException e) {
+                e = e;
+                c8919 = c8919Mo2400;
+                iOutCreateArchive7z = iOutCreateArchive7zM56788;
+                try {
+                    if (!interfaceC21388.mo924()) {
+                        throw e;
+                    }
+                    if (iOutCreateArchive7z != null) {
+                        C20244.m46520(iOutCreateArchive7z);
+                    }
+                    if (C1402.m5130(c8919)) {
+                        C20244.m46520(c8919);
+                    }
+                } catch (Throwable th) {
+                    th = th;
+                    if (iOutCreateArchive7z != null) {
+                        C20244.m46520(iOutCreateArchive7z);
+                    }
+                    if (C1402.m5130(c8919)) {
+                        C20244.m46520(c8919);
+                    }
+                    throw th;
+                }
+            } catch (Throwable th2) {
+                th = th2;
+                c8919 = c8919Mo2400;
+                iOutCreateArchive7z = iOutCreateArchive7zM56788;
+                if (iOutCreateArchive7z != null) {
+                    C20244.m46520(iOutCreateArchive7z);
+                }
+                if (C1402.m5130(c8919)) {
+                    C20244.m46520(c8919);
+                }
+                throw th;
+            }
+        } catch (SevenZipException e2) {
+            e = e2;
+            c8919 = null;
+        } catch (Throwable th3) {
+            th = th3;
+            c8919 = null;
         }
-        typedArrayObtainStyledAttributes.recycle();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m2393(float f, float f2) {
-        float f3 = this.f2196;
-        if (!Float.isNaN(f3) && f < f3) {
-            return false;
-        }
-        float f4 = this.f2194;
-        if (!Float.isNaN(f4) && f2 < f4) {
-            return false;
-        }
-        float f5 = this.f2197;
-        if (!Float.isNaN(f5) && f > f5) {
-            return false;
-        }
-        float f6 = this.f2198;
-        return Float.isNaN(f6) || f2 <= f6;
     }
 }

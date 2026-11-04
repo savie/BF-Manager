@@ -1,50 +1,36 @@
 package l;
 
-import java.util.concurrent.CountedCompleter;
-import java.util.function.BinaryOperator;
-import java.util.function.LongFunction;
+import android.net.Uri;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.۠ܰ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public class C8213 extends AbstractC17269 {
-    public final AbstractC22686 h;
-    public final LongFunction i;
-    public final BinaryOperator j;
+/* JADX INFO: renamed from: l.۟᩺ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W8NJ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8213 extends C18654 {
 
-    @Override // l.AbstractC17269, java.util.concurrent.CountedCompleter
-    public final void onCompletion(CountedCompleter countedCompleter) {
-        AbstractC17269 abstractC17269 = this.d;
-        if (abstractC17269 != null) {
-            this.f = (InterfaceC8616) this.j.apply((InterfaceC8616) ((C8213) abstractC17269).f, (InterfaceC8616) ((C8213) this.e).f);
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final Map f27041;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final Uri f27042;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final int f27043;
+
+    public C8213(int i, C5976 c5976, Map map, byte[] bArr, Uri uri) throws CloneNotSupportedException {
+        super(2004, c5976, C13645.m33382(i, "Response code: "));
+        this.f27043 = i;
+        HashMap map2 = new HashMap();
+        for (Map.Entry entry : map.entrySet()) {
+            List list = (List) entry.getValue();
+            map2.put((String) entry.getKey(), list == null ? Collections.EMPTY_LIST : C4681.unmodifiableList(new ArrayList(list)));
         }
-        super.onCompletion(countedCompleter);
-    }
-
-    public C8213(AbstractC22686 abstractC22686, InterfaceC20693 interfaceC20693, LongFunction longFunction, BinaryOperator binaryOperator) {
-        super(abstractC22686, interfaceC20693);
-        this.h = abstractC22686;
-        this.i = longFunction;
-        this.j = binaryOperator;
-    }
-
-    public C8213(C8213 c8213, InterfaceC20693 interfaceC20693) {
-        super(c8213, interfaceC20693);
-        this.h = c8213.h;
-        this.i = c8213.i;
-        this.j = c8213.j;
-    }
-
-    @Override // l.AbstractC17269
-    public AbstractC17269 c(InterfaceC20693 interfaceC20693) {
-        return new C8213(this, interfaceC20693);
-    }
-
-    @Override // l.AbstractC17269
-    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
-    public final InterfaceC8616 a() {
-        InterfaceC23280 interfaceC23280 = (InterfaceC23280) this.i.apply(this.h.R(this.b));
-        this.h.f0(this.b, interfaceC23280);
-        return interfaceC23280.build();
+        this.f27041 = C4681.unmodifiableMap(map2);
+        bArr.clone();
+        this.f27042 = uri;
     }
 }

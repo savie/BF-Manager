@@ -1,7 +1,7 @@
 package com.google.android.material.animation;
 
 import android.animation.TypeEvaluator;
-import l.C0280;
+import l.C19967;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ArgbEvaluatorCompat implements TypeEvaluator {
@@ -23,12 +23,12 @@ public class ArgbEvaluatorCompat implements TypeEvaluator {
         float fPow4 = (float) Math.pow(((iIntValue2 >> 16) & 255) / 255.0f, 2.2d);
         float fPow5 = (float) Math.pow(((iIntValue2 >> 8) & 255) / 255.0f, 2.2d);
         float fPow6 = (float) Math.pow((iIntValue2 & 255) / 255.0f, 2.2d);
-        float fM1792 = C0280.m1792(f3, f2, f, f2);
-        float fM1793 = C0280.m1792(fPow4, fPow, f, fPow);
-        float fM1794 = C0280.m1792(fPow5, fPow2, f, fPow2);
-        float fM1795 = C0280.m1792(fPow6, fPow3, f, fPow3);
-        float fPow7 = ((float) Math.pow(fM1793, 0.45454545454545453d)) * 255.0f;
-        float fPow8 = ((float) Math.pow(fM1794, 0.45454545454545453d)) * 255.0f;
-        return Integer.valueOf(Math.round(((float) Math.pow(fM1795, 0.45454545454545453d)) * 255.0f) | (Math.round(fPow7) << 16) | (Math.round(fM1792 * 255.0f) << 24) | (Math.round(fPow8) << 8));
+        float fM45884 = C19967.m45884(f3, f2, f, f2);
+        float fM45885 = C19967.m45884(fPow4, fPow, f, fPow);
+        float fM45886 = C19967.m45884(fPow5, fPow2, f, fPow2);
+        float fM45887 = C19967.m45884(fPow6, fPow3, f, fPow3);
+        float fPow7 = ((float) Math.pow(fM45885, 0.45454545454545453d)) * 255.0f;
+        float fPow8 = ((float) Math.pow(fM45886, 0.45454545454545453d)) * 255.0f;
+        return Integer.valueOf(Math.round(((float) Math.pow(fM45887, 0.45454545454545453d)) * 255.0f) | (Math.round(fPow7) << 16) | (Math.round(fM45884 * 255.0f) << 24) | (Math.round(fPow8) << 8));
     }
 }

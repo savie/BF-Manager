@@ -1,55 +1,87 @@
-.class public final synthetic Ll/᩻ᩴۨ;
-.super Ljava/lang/Object;
-.source "G7I1"
+.class public final Ll/᩻ᩴۨ;
+.super Ll/ܽۧۨ;
+.source "V4E2"
 
-# interfaces
-.implements Ll/ܰۡۨ;
+
+# instance fields
+.field public final synthetic ܿ:Ll/ܶ۫ۨ;
+
+.field public final synthetic ᩶:Ll/ܺᩴۨ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ܺᩴۨ;Ll/ۜۧۨ;Ll/ܶ۫ۨ;)V
+    .locals 0
+
+    .line 443
+    iput-object p1, p0, Ll/᩻ᩴۨ;->᩶:Ll/ܺᩴۨ;
+
+    iput-object p3, p0, Ll/᩻ᩴۨ;->ܿ:Ll/ܶ۫ۨ;
+
+    invoke-direct {p0, p2}, Ll/ܽۧۨ;-><init>(Ll/ۜۧۨ;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
+.method public final close()V
+    .locals 3
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+    .line 445
+    iget-object v0, p0, Ll/᩻ᩴۨ;->᩶:Ll/ܺᩴۨ;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
+    iget-object v0, v0, Ll/ܺᩴۨ;->ᩴ:Ll/ۗᩴۨ;
 
-    move-result-object v0
+    monitor-enter v0
 
-    return-object v0
-.end method
+    .line 446
+    :try_start_0
+    iget-object v1, p0, Ll/᩻ᩴۨ;->᩶:Ll/ܺᩴۨ;
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+    iget-boolean v2, v1, Ll/ܺᩴۨ;->ۤ:Z
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    if-eqz v2, :cond_0
 
-    move-result-object p1
+    .line 447
+    monitor-exit v0
 
-    return-object p1
-.end method
+    return-void
 
-.method public final ۙ(I)Z
-    .locals 0
+    :cond_0
+    const/4 v2, 0x1
 
-    .line 0
-    invoke-static {p1}, Ljava/lang/Character;->isWhitespace(I)Z
+    .line 449
+    iput-boolean v2, v1, Ll/ܺᩴۨ;->ۤ:Z
 
-    move-result p1
+    .line 450
+    iget-object v1, v1, Ll/ܺᩴۨ;->ᩴ:Ll/ۗᩴۨ;
 
-    return p1
-.end method
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+    .line 451
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    .line 452
+    invoke-super {p0}, Ll/ܽۧۨ;->close()V
 
-    move-result-object p1
+    .line 453
+    iget-object v0, p0, Ll/᩻ᩴۨ;->ܿ:Ll/ܶ۫ۨ;
 
-    return-object p1
+    invoke-virtual {v0}, Ll/ܶ۫ۨ;->᩷()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 451
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

@@ -8,7 +8,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.dh.KeyFactorySpi;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DH {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.asymmetric.dh.";
     public static final Map generalDhAttributes;

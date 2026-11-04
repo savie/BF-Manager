@@ -1,1111 +1,663 @@
-.class public final synthetic Ll/֡۫ۨ;
+.class public final Ll/֡۫ۨ;
 .super Ljava/lang/Object;
-.source "P4ND"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.source "F4DQ"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/String;
+.field public final ۙ:Ll/۫ᩴۨ;
 
-.field public final synthetic ܺ:Ll/ۧ۫ۨ;
+.field public final ۚ:Ll/ܽۙ᩹;
 
-.field public final synthetic ᩶:Ll/ۨۜ᩹;
+.field public final ۤ:Ll/ᩴܳۨ;
+
+.field public ۫:Ljava/util/List;
+
+.field public final ܳ:Ljava/util/ArrayList;
+
+.field public ᩴ:I
+
+.field public final ᩷:Ll/ۛᩴۨ;
+
+.field public ᩸:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۧ۫ۨ;Ll/ۨۜ᩹;Ljava/lang/String;)V
-    .locals 6
+.method public constructor <init>(Ll/۫ᩴۨ;Ll/ܽۙ᩹;Ll/ۛᩴۨ;Ll/ᩴܳۨ;)V
+    .locals 1
 
-    const v0, 0x14b7c0a3
-
-    sget v1, Ll/ۧ;->֫۠ᩴ:I
-
-    sget v2, Ll/ۘ֡;->ܰ֡ܽ:I
-
-    .line 0
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v3, "\u05ab\u0733"
+    .line 47
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    iput-object v0, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
 
-    move-result v3
+    .line 51
+    iput-object v0, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
 
-    xor-int/2addr v3, v1
+    .line 54
+    new-instance v0, Ljava/util/ArrayList;
 
-    xor-int v4, v3, v2
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    mul-int/lit16 v4, v4, -0x3d21
+    iput-object v0, p0, Ll/֡۫ۨ;->ܳ:Ljava/util/ArrayList;
 
-    const v5, -0x75277324
+    .line 58
+    iput-object p1, p0, Ll/֡۫ۨ;->ۙ:Ll/۫ᩴۨ;
 
-    xor-int/2addr v4, v5
+    .line 59
+    iput-object p2, p0, Ll/֡۫ۨ;->ۚ:Ll/ܽۙ᩹;
 
-    const v5, -0x4cea315d
+    .line 60
+    iput-object p3, p0, Ll/֡۫ۨ;->᩷:Ll/ۛᩴۨ;
 
-    :goto_0
-    xor-int/2addr v3, v5
+    .line 61
+    iput-object p4, p0, Ll/֡۫ۨ;->ۤ:Ll/ᩴܳۨ;
 
-    xor-int/2addr v0, v2
+    .line 63
+    invoke-virtual {p1}, Ll/۫ᩴۨ;->᩻()Ll/ܺܳۨ;
 
-    mul-int/lit16 v0, v0, 0x57e7
+    move-result-object p2
 
-    shr-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p1}, Ll/۫ᩴۨ;->ܳ()Ljava/net/Proxy;
 
-    and-int/2addr v0, v4
+    move-result-object p3
 
-    xor-int/2addr v0, v3
+    const/4 p4, 0x0
 
-    sparse-switch v0, :sswitch_data_0
+    if-eqz p3, :cond_0
 
-    .line 3
-    invoke-static {}, Ll/ۗܳ;->᩵ܽ۟()I
+    .line 126
+    invoke-static {p3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-static {}, Ll/֨᩸;->۬۟᩶()I
+    move-result-object p1
 
-    goto/16 :goto_2
-
-    :sswitch_0
-    invoke-static {}, Ll/֡֡;->᩹᩻ۚ()I
-
-    move-result v3
-
-    if-lez v3, :cond_4
-
-    goto/16 :goto_4
-
-    .line 1
-    :sswitch_1
-    invoke-static {}, Ll/֫ᩳ;->۠ۧۨ()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    goto/16 :goto_2
-
-    :sswitch_2
-    sget v3, Ll/֡֡;->᩶ۤ۠:I
-
-    if-gtz v3, :cond_b
-
-    goto/16 :goto_2
-
-    :sswitch_3
-    invoke-static {}, Ll/ۗ᩺;->᩺᩺ۖ()I
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw p1
-
-    .line 0
-    :sswitch_4
-    iput-object p3, p0, Ll/֡۫ۨ;->֡:Ljava/lang/String;
-
-    return-void
-
-    .line 1
-    :sswitch_5
-    sget v3, Ll/֫ۚ;->ܽ۠᩹:I
-
-    if-ltz v3, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    const-string v3, "\u05a1\u06dc"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, -0x51c5
-
-    const v5, -0x5eb06b93
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x2d4c391b
-
-    goto :goto_0
-
-    :sswitch_6
-    invoke-static {}, Ll/֡֡;->᩹᩻ۚ()I
-
-    move-result v3
-
-    if-gtz v3, :cond_1
-
-    goto/16 :goto_1
-
-    :cond_1
-    const-string v3, "\u06db\u06d9"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    mul-int/lit8 v3, v3, -0x49
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, 0x1aff
-
-    const v5, 0x59479d44
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x78f08d4c
-
-    goto :goto_0
-
-    .line 0
-    :sswitch_7
-    sget-boolean v3, Ll/֨᩸;->ۚۢۧ:Z
-
-    if-nez v3, :cond_2
+    iput-object p1, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
 
     goto :goto_1
 
-    :cond_2
-    const-string v3, "\u073d\u06e7"
+    .line 129
+    :cond_0
+    invoke-virtual {p1}, Ll/۫ᩴۨ;->ۚ()Ljava/net/ProxySelector;
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    move-result-object p1
 
-    move-result v3
+    invoke-virtual {p2}, Ll/ܺܳۨ;->᩹()Ljava/net/URI;
 
-    xor-int/2addr v3, v1
+    move-result-object p2
 
-    xor-int v4, v3, v2
+    invoke-virtual {p1, p2}, Ljava/net/ProxySelector;->select(Ljava/net/URI;)Ljava/util/List;
 
-    mul-int/lit16 v4, v4, -0x47ad
+    move-result-object p1
 
-    const v5, -0x9ac40d7
+    if-eqz p1, :cond_1
 
-    xor-int/2addr v4, v5
+    .line 130
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    const v5, 0x96bf5d0
+    move-result p2
 
-    goto/16 :goto_0
+    if-nez p2, :cond_1
 
-    :sswitch_8
-    sget v3, Ll/ۖۧ;->ܺۚۖ:I
+    .line 131
+    invoke-static {p1}, Ll/ᩴ۫ۨ;->ۙ(Ljava/util/List;)Ljava/util/List;
 
-    if-gtz v3, :cond_3
+    move-result-object p1
 
-    goto/16 :goto_4
+    goto :goto_0
 
-    :cond_3
-    const-string v3, "\u073f\u06d7"
+    :cond_1
+    const/4 p1, 0x1
 
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    new-array p1, p1, [Ljava/net/Proxy;
 
-    move-result v3
+    .line 132
+    sget-object p2, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
-    xor-int/2addr v3, v2
+    aput-object p2, p1, p4
 
-    mul-int/lit8 v3, v3, -0x27
+    invoke-static {p1}, Ll/ᩴ۫ۨ;->ۙ([Ljava/lang/Object;)Ljava/util/List;
 
-    xor-int v4, v3, v1
+    move-result-object p1
 
-    mul-int/lit16 v4, v4, 0x3d13
+    :goto_0
+    iput-object p1, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
 
-    const v5, -0x48a687da
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x22a7eacb
-
-    goto/16 :goto_0
-
-    .line 3
-    :sswitch_9
-    invoke-static {}, Ll/֨ۢ;->ܽۚۛ()I
-
-    move-result v3
-
-    if-gtz v3, :cond_5
-
-    :cond_4
-    const-string v3, "\u1a75\u05ab"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/lit8 v3, v3, -0x3b
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, -0x7b4d
-
-    const v5, 0x3e33d549
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x5c6df3af    # 2.6791001E17f
-
-    goto/16 :goto_0
-
-    :cond_5
-    const-string v3, "\u1a77\u06e2"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, 0x3afb
-
-    const v5, -0x39a9a397
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x585cba33
-
-    goto/16 :goto_0
-
-    .line 4
-    :sswitch_a
-    sget v3, Ll/ۖۗ;->᩶۫ۗ:I
-
-    if-ltz v3, :cond_7
-
-    :cond_6
+    .line 134
     :goto_1
-    const-string v3, "\u073f\u06e8"
+    iput p4, p0, Ll/֡۫ۨ;->ᩴ:I
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, -0x4bd5
-
-    const v5, 0x68338cce
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x1281867c
-
-    goto/16 :goto_0
-
-    :cond_7
-    const-string v3, "\u073a\u0736"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, -0x234f
-
-    const v5, -0x169b56bb
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x6353150e
-
-    goto/16 :goto_0
-
-    .line 3
-    :sswitch_b
-    sget v3, Ll/֨ܶ;->ۛۛۛ:I
-
-    if-gtz v3, :cond_8
-
-    goto/16 :goto_4
-
-    :cond_8
-    const-string v3, "\u1a75\u05a1"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    sub-int v3, v2, v3
-
-    mul-int/lit8 v3, v3, -0xd
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, -0x1355
-
-    const v5, -0x12b6dca9
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x179e0955
-
-    goto/16 :goto_0
-
-    .line 0
-    :sswitch_c
-    sget v3, Ll/֨ܰ;->ۢ᩷۟:I
-
-    if-gtz v3, :cond_9
-
-    :goto_2
-    const-string v3, "\u073f\u06db"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, -0x6615
-
-    const v5, 0x5c260ea8
-
-    xor-int/2addr v4, v5
-
-    const v5, -0xc11ed1b
-
-    goto/16 :goto_0
-
-    :cond_9
-    const-string v3, "\u06e4\u06d9"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    mul-int/lit8 v3, v3, -0x67
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x249
-
-    const v5, -0x6b55d5b
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x3d00befa
-
-    goto/16 :goto_0
-
-    :sswitch_d
-    invoke-static {}, Ll/ۗᩳ;->ᩳۘۘ()Z
-
-    move-result v3
-
-    if-nez v3, :cond_a
-
-    :goto_3
-    const-string v3, "\u06e1\u06d9"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/lit8 v3, v3, 0xf
-
-    xor-int v4, v3, v2
-
-    mul-int/lit8 v4, v4, -0x3f
-
-    const v5, -0x79c66959
-
-    xor-int/2addr v4, v5
-
-    const v5, -0xdd21f7b
-
-    goto/16 :goto_0
-
-    :cond_a
-    const-string v3, "\u06df\u073d"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, -0x315b
-
-    const v5, 0x33cc4a0d
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x7a7e9128
-
-    goto/16 :goto_0
-
-    :sswitch_e
-    iput-object p1, p0, Ll/֡۫ۨ;->ܺ:Ll/ۧ۫ۨ;
-
-    iput-object p2, p0, Ll/֡۫ۨ;->᩶:Ll/ۨۜ᩹;
-
-    sget v3, Ll/֡ۛ;->۬᩸ܶ:I
-
-    if-eqz v3, :cond_c
-
-    :cond_b
-    :goto_4
-    const-string v3, "\u073a\u1a7b"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, -0x1871
-
-    const v5, -0x273dd
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x254729e3
-
-    goto/16 :goto_0
-
-    :cond_c
-    const-string v3, "\u1a75\u06d6"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/lit8 v3, v3, 0x33
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, -0x7069
-
-    const v5, 0x6ac0c6ea
-
-    xor-int/2addr v4, v5
-
-    const v5, 0xb900a50
-
-    goto/16 :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7e63480f -> :sswitch_0
-        -0x7ca80d97 -> :sswitch_4
-        -0x77b3dc5a -> :sswitch_2
-        -0x6dad9d3f -> :sswitch_1
-        -0x66529358 -> :sswitch_7
-        -0x5a897356 -> :sswitch_1
-        -0x4eea3611 -> :sswitch_d
-        -0x4990110f -> :sswitch_6
-        -0x480c3cba -> :sswitch_7
-        -0x43d96dca -> :sswitch_3
-        -0x40caba34 -> :sswitch_e
-        -0x3d6d3cd5 -> :sswitch_8
-        -0x3c85b0d8 -> :sswitch_0
-        -0x2927bb6a -> :sswitch_c
-        -0x23a8f1a7 -> :sswitch_9
-        -0x20dc41d2 -> :sswitch_6
-        -0x1f4cf0bb -> :sswitch_c
-        -0x15c4afc3 -> :sswitch_a
-        -0x14f7857d -> :sswitch_8
-        -0x57da328 -> :sswitch_9
-        0x53300d4 -> :sswitch_d
-        0xc118420 -> :sswitch_e
-        0x1857ad14 -> :sswitch_b
-        0x34239870 -> :sswitch_a
-        0x36b9c754 -> :sswitch_b
-        0x43530c5b -> :sswitch_5
-        0x4cea09f2 -> :sswitch_3
-        0x5c5029ff -> :sswitch_5
-        0x6db78fd5 -> :sswitch_4
-        0x724e2bd3 -> :sswitch_2
-    .end sparse-switch
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 6
+.method public final ۙ(Ll/ۜܳۨ;Ljava/io/IOException;)V
+    .locals 3
 
-    const/4 p1, 0x0
+    .line 113
+    invoke-virtual {p1}, Ll/ۜܳۨ;->᩷()Ljava/net/Proxy;
 
-    const/4 p2, 0x0
+    move-result-object v0
 
-    const v0, -0x6ea6d434
+    invoke-virtual {v0}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
 
-    sget v1, Ll/ۗ۬;->ۤᩴ᩻:I
+    move-result-object v0
 
-    sget v2, Ll/ۘ֡;->ܰ֡ܽ:I
+    sget-object v1, Ljava/net/Proxy$Type;->DIRECT:Ljava/net/Proxy$Type;
 
-    const-string v3, "\u1a78\u0733"
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    iget-object v0, p0, Ll/֡۫ۨ;->ۙ:Ll/۫ᩴۨ;
 
-    move-result v3
+    invoke-virtual {v0}, Ll/۫ᩴۨ;->ۚ()Ljava/net/ProxySelector;
 
-    xor-int/2addr v3, v1
+    move-result-object v1
 
-    xor-int v4, v3, v2
+    if-eqz v1, :cond_0
 
-    mul-int/lit16 v4, v4, 0x2d1b
+    .line 115
+    invoke-virtual {v0}, Ll/۫ᩴۨ;->ۚ()Ljava/net/ProxySelector;
 
-    const v5, 0x2adbc730
+    move-result-object v1
 
-    xor-int/2addr v4, v5
+    .line 116
+    invoke-virtual {v0}, Ll/۫ᩴۨ;->᩻()Ll/ܺܳۨ;
 
-    const v5, -0x3f511cec
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/ܺܳۨ;->᩹()Ljava/net/URI;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ll/ۜܳۨ;->᩷()Ljava/net/Proxy;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/net/Proxy;->address()Ljava/net/SocketAddress;
+
+    move-result-object v2
+
+    .line 115
+    invoke-virtual {v1, v0, v2, p2}, Ljava/net/ProxySelector;->connectFailed(Ljava/net/URI;Ljava/net/SocketAddress;Ljava/io/IOException;)V
+
+    .line 119
+    :cond_0
+    iget-object p2, p0, Ll/֡۫ۨ;->ۚ:Ll/ܽۙ᩹;
+
+    invoke-virtual {p2, p1}, Ll/ܽۙ᩹;->᩷(Ll/ۜܳۨ;)V
+
+    return-void
+.end method
+
+.method public final ۙ()Z
+    .locals 2
+
+    .line 139
+    iget v0, p0, Ll/֡۫ۨ;->ᩴ:I
+
+    iget-object v1, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_0
+
+    .line 70
+    :cond_0
+    iget-object v0, p0, Ll/֡۫ۨ;->ܳ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     :goto_0
-    xor-int/2addr v3, v5
+    const/4 v0, 0x1
 
-    xor-int/2addr v0, v2
+    return v0
 
-    mul-int/lit16 v0, v0, 0x455b
+    :cond_1
+    const/4 v0, 0x0
 
-    shr-int/lit8 v0, v0, 0x1f
+    return v0
+.end method
 
-    and-int/2addr v0, v4
+.method public final ᩷()Ll/ܿ۫ۨ;
+    .locals 12
 
-    xor-int/2addr v0, v3
+    .line 74
+    invoke-virtual {p0}, Ll/֡۫ۨ;->ۙ()Z
 
-    sparse-switch v0, :sswitch_data_0
+    move-result v0
 
-    .line 3
-    invoke-static {}, Ll/֫ܺ;->۠ܰᩴ()I
+    if-eqz v0, :cond_e
 
-    move-result v3
+    .line 79
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-eqz v3, :cond_6
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    goto/16 :goto_3
-
-    .line 46
-    :sswitch_0
-    sget v3, Ll/֨᩺;->۬᩺ܰ:I
-
-    if-gez v3, :cond_7
-
-    goto :goto_1
-
-    .line 64
-    :sswitch_1
-    invoke-static {}, Ll/ۖ᩸;->۫᩻ܽ()I
-
-    move-result v3
-
-    if-nez v3, :cond_9
-
-    goto/16 :goto_5
-
-    .line 60
-    :sswitch_2
-    sget v3, Ll/֨᩹;->᩻ᩳ֨:I
-
-    if-lez v3, :cond_b
-
-    goto :goto_1
-
-    .line 27
-    :sswitch_3
-    invoke-static {}, Ll/ۖ᩸;->۫᩻ܽ()I
-
-    invoke-static {}, Ll/֫ۛ;->ۖ᩻ܿ()I
-
-    :goto_1
-    const-string v3, "\u05a8\u0733"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    sub-int v3, v1, v3
-
-    mul-int/lit8 v3, v3, -0xd
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x1717
-
-    const v5, -0x4c86c0fd
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x20599cab
-
-    goto :goto_0
-
-    :sswitch_4
-    invoke-static {}, Ll/ۖۛ;->ۢ۠ۗ()I
-
-    return-void
-
-    .line 67
-    :sswitch_5
-    iget-object v0, p0, Ll/֡۫ۨ;->֡:Ljava/lang/String;
-
-    invoke-static {p2, p1, v0}, Ll/ۧ۫᩹;->ۙ(Ll/ܿ۫᩹;Ll/۫ܶۘ;Ljava/lang/String;)V
-
-    return-void
-
-    :sswitch_6
-    new-instance p2, Ll/ܽ۫ۨ;
-
-    iget-object v3, p0, Ll/֡۫ۨ;->ܺ:Ll/ۧ۫ۨ;
-
-    invoke-direct {p2, v3}, Ll/ܽ۫ۨ;-><init>(Ll/ۧ۫ۨ;)V
-
-    invoke-static {}, Ll/ۘۧ;->ۘۤ᩶()I
-
-    move-result v3
-
-    if-gtz v3, :cond_0
-
-    goto/16 :goto_2
-
+    .line 139
     :cond_0
-    const-string v3, "\u1a76\u0733"
+    iget v1, p0, Ll/֡۫ۨ;->ᩴ:I
 
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    iget-object v2, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
 
-    move-result v3
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    xor-int/2addr v3, v1
+    move-result v2
 
-    mul-int/lit8 v3, v3, 0x31
+    iget-object v3, p0, Ll/֡۫ۨ;->ܳ:Ljava/util/ArrayList;
 
-    xor-int v4, v3, v2
+    if-ge v1, v2, :cond_c
 
-    mul-int/lit16 v4, v4, -0x5c1
+    iget v1, p0, Ll/֡۫ۨ;->ᩴ:I
 
-    const v5, 0x1c32276c
+    iget-object v2, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
 
-    xor-int/2addr v4, v5
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    const v5, 0x5a5c27b1
+    move-result v2
+
+    iget-object v4, p0, Ll/֡۫ۨ;->ۙ:Ll/۫ᩴۨ;
+
+    const-string v5, "No route to "
+
+    if-ge v1, v2, :cond_b
+
+    .line 148
+    iget v1, p0, Ll/֡۫ۨ;->ᩴ:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ll/֡۫ۨ;->ᩴ:I
+
+    iget-object v2, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/net/Proxy;
+
+    .line 156
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
+
+    .line 160
+    invoke-virtual {v1}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
+
+    move-result-object v2
+
+    sget-object v6, Ljava/net/Proxy$Type;->DIRECT:Ljava/net/Proxy$Type;
+
+    if-eq v2, v6, :cond_4
+
+    invoke-virtual {v1}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
+
+    move-result-object v2
+
+    sget-object v6, Ljava/net/Proxy$Type;->SOCKS:Ljava/net/Proxy$Type;
+
+    if-ne v2, v6, :cond_1
+
+    goto :goto_1
+
+    .line 164
+    :cond_1
+    invoke-virtual {v1}, Ljava/net/Proxy;->address()Ljava/net/SocketAddress;
+
+    move-result-object v2
+
+    .line 165
+    instance-of v6, v2, Ljava/net/InetSocketAddress;
+
+    if-eqz v6, :cond_3
+
+    .line 169
+    check-cast v2, Ljava/net/InetSocketAddress;
+
+    .line 205
+    invoke-virtual {v2}, Ljava/net/InetSocketAddress;->getAddress()Ljava/net/InetAddress;
+
+    move-result-object v6
+
+    if-nez v6, :cond_2
+
+    .line 210
+    invoke-virtual {v2}, Ljava/net/InetSocketAddress;->getHostName()Ljava/lang/String;
+
+    move-result-object v6
 
     goto :goto_0
 
-    :sswitch_7
-    iget-object p1, p0, Ll/֡۫ۨ;->᩶:Ll/ۨۜ᩹;
+    .line 214
+    :cond_2
+    invoke-virtual {v6}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
-    invoke-static {p1}, Ll/ۖۧ;->ۗ᩵ܺ(Ljava/lang/Object;)Lbin/mt/plus/Main;
+    move-result-object v6
 
-    move-result-object p1
+    .line 171
+    :goto_0
+    invoke-virtual {v2}, Ljava/net/InetSocketAddress;->getPort()I
 
-    .line 48
-    sget v3, Ll/ۖۗ;->᩶۫ۗ:I
-
-    if-ltz v3, :cond_1
+    move-result v2
 
     goto :goto_2
 
-    :cond_1
-    const-string v3, "\u06e2\u06da"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    mul-int/lit8 v3, v3, -0x39
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, 0x34c7
-
-    const v5, 0x60e2d365
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x2ee7e570
-
-    goto/16 :goto_0
-
-    .line 15
-    :sswitch_8
-    sget v3, Ll/֡ۛ;->۬᩸ܶ:I
-
-    if-eqz v3, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    const-string v3, "\u06e8\u1a75"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, -0x4ac9
-
-    const v5, -0x71a4ad0e
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x2a392057
-
-    goto/16 :goto_0
-
-    :sswitch_9
-    sget v3, Ll/ۗ;->֨۬ۖ:I
-
-    if-ltz v3, :cond_3
-
-    goto/16 :goto_5
-
+    .line 166
     :cond_3
-    const-string v3, "\u1a73\u1a78"
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string v3, "Proxy.address() is not an InetSocketAddress: "
 
-    xor-int/2addr v3, v1
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    mul-int/lit8 v3, v3, -0x4b
+    .line 167
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    xor-int v4, v3, v2
+    move-result-object v2
 
-    mul-int/lit16 v4, v4, -0x5587
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const v5, -0x5ce1f049
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    xor-int/2addr v4, v5
+    move-result-object v1
 
-    const v5, -0x55111464
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto/16 :goto_0
+    throw v0
 
-    .line 28
-    :sswitch_a
-    invoke-static {}, Ll/ۘۛ;->᩺᩷ܿ()I
+    .line 161
+    :cond_4
+    :goto_1
+    invoke-virtual {v4}, Ll/۫ᩴۨ;->᩻()Ll/ܺܳۨ;
 
-    move-result v3
+    move-result-object v2
 
-    if-gtz v3, :cond_4
+    invoke-virtual {v2}, Ll/ܺܳۨ;->ܳ()Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 162
+    invoke-virtual {v4}, Ll/۫ᩴۨ;->᩻()Ll/ܺܳۨ;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ll/ܺܳۨ;->᩻()I
+
+    move-result v2
 
     :goto_2
-    const-string v3, "\u06e4\u05a8"
+    const/4 v7, 0x1
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    if-lt v2, v7, :cond_a
 
-    move-result v3
+    const v7, 0xffff
 
-    xor-int/2addr v3, v1
+    if-gt v2, v7, :cond_a
 
-    xor-int v4, v3, v2
+    .line 179
+    invoke-virtual {v1}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
 
-    mul-int/lit16 v4, v4, -0x1293
+    move-result-object v5
 
-    const v5, -0x7d49e4e0
+    sget-object v7, Ljava/net/Proxy$Type;->SOCKS:Ljava/net/Proxy$Type;
 
-    xor-int/2addr v4, v5
+    const/4 v8, 0x0
 
-    const v5, -0x1f9cf518
+    if-ne v5, v7, :cond_5
 
-    goto/16 :goto_0
+    .line 180
+    iget-object v5, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
 
-    :cond_4
-    const-string v3, "\u1a77\u06e2"
+    invoke-static {v6, v2}, Ljava/net/InetSocketAddress;->createUnresolved(Ljava/lang/String;I)Ljava/net/InetSocketAddress;
 
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    move-result-object v2
 
-    move-result v3
+    invoke-interface {v5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/2addr v3, v2
+    goto :goto_4
 
-    mul-int/lit8 v3, v3, 0x57
+    .line 182
+    :cond_5
+    iget-object v5, p0, Ll/֡۫ۨ;->ۤ:Ll/ᩴܳۨ;
 
-    xor-int v4, v3, v1
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    mul-int/lit16 v4, v4, -0x661b
+    .line 185
+    invoke-virtual {v4}, Ll/۫ᩴۨ;->ۤ()Ll/ۙܳۨ;
 
-    const v5, 0x61c02fac
+    move-result-object v5
 
-    xor-int/2addr v4, v5
+    invoke-interface {v5, v6}, Ll/ۙܳۨ;->ۙ(Ljava/lang/String;)Ljava/util/List;
 
-    const v5, -0xde1539f
+    move-result-object v5
 
-    goto/16 :goto_0
+    .line 186
+    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
-    .line 32
-    :sswitch_b
-    sget v3, Ll/֡۠;->ۛ᩻ۧ:I
+    move-result v7
 
-    if-gtz v3, :cond_5
+    if-nez v7, :cond_9
+
+    .line 192
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    :goto_3
+    if-ge v7, v6, :cond_6
+
+    .line 193
+    invoke-interface {v5, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/net/InetAddress;
+
+    .line 194
+    iget-object v10, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
+
+    new-instance v11, Ljava/net/InetSocketAddress;
+
+    invoke-direct {v11, v9, v2}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    invoke-interface {v10, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    :cond_5
-    const-string v3, "\u06eb\u1a77"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    mul-int/lit8 v3, v3, 0x19
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x239b
-
-    const v5, -0x33a970b0    # -5.624557E7f
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x24d6aac3
-
-    goto/16 :goto_0
-
+    .line 85
     :cond_6
-    const-string v3, "\u06e1\u06d6"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    mul-int/lit8 v3, v3, -0x39
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, 0x4cc5
-
-    const v5, 0x57d9e4df
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x40833bcb
-
-    goto/16 :goto_0
-
-    :sswitch_c
-    sget v3, Ll/֫۟;->᩸ᩴܿ:I
-
-    if-ltz v3, :cond_8
-
-    :cond_7
-    :goto_3
-    const-string v3, "\u06d7\u1a77"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    mul-int/lit8 v3, v3, -0x7f
-
-    xor-int v4, v3, v1
-
-    mul-int/lit16 v4, v4, 0x3655
-
-    const v5, -0x3dc4d4be
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x2c1b96d9
-
-    goto/16 :goto_0
-
-    :cond_8
-    const-string v3, "\u06d8\u06e2"
-
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x72ab
-
-    const v5, -0x3c995ba7
-
-    xor-int/2addr v4, v5
-
-    const v5, -0x48d7107c
-
-    goto/16 :goto_0
-
-    .line 41
-    :sswitch_d
-    invoke-static {}, Ll/ۧ;->ۨ᩻ۨ()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_a
-
-    :cond_9
     :goto_4
-    const-string v3, "\u06db\u06d7"
+    iget-object v2, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v2
 
-    sub-int v3, v1, v3
-
-    mul-int/lit8 v3, v3, -0x7
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x75fd
-
-    const v5, -0x182d0882
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x66a75833
-
-    goto/16 :goto_0
-
-    :cond_a
-    const-string v3, "\u06dc\u06e4"
-
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    xor-int v4, v3, v2
-
-    mul-int/lit16 v4, v4, 0x4c0b
-
-    const v5, -0x97a7502
-
-    xor-int/2addr v4, v5
-
-    const v5, 0x2457e9be
-
-    goto/16 :goto_0
-
-    .line 36
-    :sswitch_e
-    sget v3, Ll/ۖܽ;->ܳ۠᩹:I
-
-    if-gtz v3, :cond_c
-
-    :cond_b
     :goto_5
-    const-string v3, "\u06d6\u06e4"
+    if-ge v8, v2, :cond_8
 
-    invoke-static {v3}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    .line 86
+    new-instance v5, Ll/ۜܳۨ;
 
-    move-result v3
+    iget-object v6, p0, Ll/֡۫ۨ;->᩸:Ljava/util/List;
 
-    add-int/2addr v3, v2
+    invoke-interface {v6, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    mul-int/lit8 v3, v3, -0x45
+    move-result-object v6
 
-    xor-int v4, v3, v1
+    check-cast v6, Ljava/net/InetSocketAddress;
 
-    mul-int/lit16 v4, v4, 0xea9
+    invoke-direct {v5, v4, v1, v6}, Ll/ۜܳۨ;-><init>(Ll/۫ᩴۨ;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
 
-    const v5, 0x55406d97
+    .line 87
+    iget-object v6, p0, Ll/֡۫ۨ;->ۚ:Ll/ܽۙ᩹;
 
-    xor-int/2addr v4, v5
+    invoke-virtual {v6, v5}, Ll/ܽۙ᩹;->ۤ(Ll/ۜܳۨ;)Z
 
-    const v5, 0xc993714
+    move-result v6
 
-    goto/16 :goto_0
+    if-eqz v6, :cond_7
 
+    .line 88
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_6
+
+    .line 90
+    :cond_7
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_6
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_5
+
+    .line 94
+    :cond_8
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_7
+
+    .line 187
+    :cond_9
+    new-instance v0, Ljava/net/UnknownHostException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4}, Ll/۫ᩴۨ;->ۤ()Ll/ۙܳۨ;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " returned no addresses for "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/UnknownHostException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 175
+    :cond_a
+    new-instance v0, Ljava/net/SocketException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ":"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "; port is out of range"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 145
+    :cond_b
+    new-instance v0, Ljava/net/SocketException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ll/۫ᩴۨ;->᩻()Ll/ܺܳۨ;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ll/ܺܳۨ;->ܳ()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "; exhausted proxy configurations: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ll/֡۫ۨ;->۫:Ljava/util/List;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 99
     :cond_c
-    const-string v3, "\u06d6\u06df"
+    :goto_7
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-static {v3}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    move-result v1
 
-    move-result v3
+    if-eqz v1, :cond_d
 
-    xor-int/2addr v3, v2
+    .line 101
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    mul-int/lit8 v3, v3, -0x5d
+    .line 102
+    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    xor-int v4, v3, v1
+    .line 105
+    :cond_d
+    new-instance v1, Ll/ܿ۫ۨ;
 
-    mul-int/lit16 v4, v4, 0x5a69
+    invoke-direct {v1, v0}, Ll/ܿ۫ۨ;-><init>(Ljava/util/ArrayList;)V
 
-    const v5, 0x3c7ef446
+    return-object v1
 
-    xor-int/2addr v4, v5
+    .line 75
+    :cond_e
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    const v5, -0x260721fb
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    goto/16 :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7ac86e59 -> :sswitch_b
-        -0x7aaad87f -> :sswitch_c
-        -0x749a2ce5 -> :sswitch_5
-        -0x561e0f7e -> :sswitch_1
-        -0x4f0b6d77 -> :sswitch_7
-        -0x4bf8a754 -> :sswitch_d
-        -0x3767feed -> :sswitch_b
-        -0x33c720e5 -> :sswitch_0
-        -0x20c259a2 -> :sswitch_2
-        -0x1fecd58c -> :sswitch_1
-        -0x17a28003 -> :sswitch_4
-        -0xd484991 -> :sswitch_4
-        -0xbb107ec -> :sswitch_3
-        -0x1afc050 -> :sswitch_2
-        0x183ba81e -> :sswitch_a
-        0x1ab74e0b -> :sswitch_d
-        0x2762a906 -> :sswitch_9
-        0x378b186e -> :sswitch_6
-        0x3d3ef4f4 -> :sswitch_7
-        0x4161c41b -> :sswitch_0
-        0x4aeb110f -> :sswitch_3
-        0x5903299d -> :sswitch_6
-        0x5c4bb5db -> :sswitch_c
-        0x61afcd18 -> :sswitch_e
-        0x626130de -> :sswitch_a
-        0x63b8c530 -> :sswitch_5
-        0x6ec41cd3 -> :sswitch_9
-        0x73c0ad30 -> :sswitch_8
-        0x76e82b2d -> :sswitch_e
-        0x7e74f2e6 -> :sswitch_8
-    .end sparse-switch
+    throw v0
 .end method

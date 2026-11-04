@@ -1,29 +1,81 @@
-.class public final Ll/۬ܶۨ;
-.super Ljava/lang/Object;
-.source "N53S"
+.class public Ll/۬ܶۨ;
+.super Ll/ۚ᩹ۨ;
+.source "6ASE"
 
-# interfaces
-.implements Ll/᩸ۜۨ;
+
+# instance fields
+.field public final ۤ:Ll/ܰ᩹ۨ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ܽܽۨ;Ll/ܰ᩹ۨ;)V
+    .locals 1
+
+    .line 18
+    invoke-direct {p0, p1}, Ll/ۚ᩹ۨ;-><init>(Ll/ܽܽۨ;)V
+
+    if-nez p2, :cond_0
+
+    .line 70
+    new-instance p2, Ll/ܰ᩹ۨ;
+
+    const/4 p1, 0x0
+
+    new-array v0, p1, [I
+
+    invoke-direct {p2, v0}, Ll/ܰ᩹ۨ;-><init>([I)V
+
+    .line 71
+    invoke-virtual {p2, p1}, Ll/ܰ᩹ۨ;->ۙ(I)V
+
+    .line 20
+    :cond_0
+    iput-object p2, p0, Ll/۬ܶۨ;->ۤ:Ll/ܰ᩹ۨ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    .line 97
-    new-instance v0, Ll/ܳۘۨ;
+    .line 40
+    iget-object v0, p0, Ll/۬ܶۨ;->ۤ:Ll/ܰ᩹ۨ;
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+    invoke-virtual {v0}, Ll/ܰ᩹ۨ;->toString()Ljava/lang/String;
 
-    .line 98
-    invoke-static {}, Ll/֫۠᩺;->ܶ()Z
+    move-result-object v0
 
-    move-result v1
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(Z)V
+.method public ۙ()I
+    .locals 1
 
-    .line 99
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    const/4 v0, 0x7
 
-    return-void
+    return v0
+.end method
+
+.method public ۙ(II)Z
+    .locals 0
+
+    .line 34
+    iget-object p2, p0, Ll/۬ܶۨ;->ۤ:Ll/ܰ᩹ۨ;
+
+    invoke-virtual {p2, p1}, Ll/ܰ᩹ۨ;->᩷(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۤ()Ll/ܰ᩹ۨ;
+    .locals 1
+
+    .line 30
+    iget-object v0, p0, Ll/۬ܶۨ;->ۤ:Ll/ܰ᩹ۨ;
+
+    return-object v0
 .end method

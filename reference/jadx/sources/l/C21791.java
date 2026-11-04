@@ -1,20 +1,20 @@
 package l;
 
-import android.view.View;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.᩸᩵ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21WY */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21791 extends AbstractC2034 {
-    @Override // l.AbstractC3445
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo4726(Object obj) {
-        return Float.valueOf(C3115.m9345((View) obj).m9351());
+/* JADX INFO: renamed from: l.᩷ۘۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes2.dex */
+public class C21791 extends C8233 implements Set, InterfaceC14375 {
+    public static final long serialVersionUID = -9215047833775013803L;
+
+    @Override // java.util.Collection, java.util.Set
+    public boolean equals(Object obj) {
+        return obj == this || this.a.equals(obj);
     }
 
-    @Override // l.AbstractC2034
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6531(Object obj, float f) {
-        C3115.m9345((View) obj).m9363(f);
+    @Override // java.util.Collection, java.util.Set
+    public final int hashCode() {
+        return this.a.hashCode();
     }
 }

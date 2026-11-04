@@ -1,95 +1,68 @@
-.class public Ll/ܺۚ᩸;
+.class public final Ll/ܺۚ᩸;
 .super Ljava/lang/Object;
-.source "8827"
+.source "T5WJ"
 
-# interfaces
-.implements Ll/᩷ۖ᩸;
+
+# instance fields
+.field public final ۙ:Ll/ᩴᩴۤ;
+
+.field public ᩷:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ll/ᩴᩴۤ;)V
+    .locals 1
 
-    .line 36
+    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 243
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/ܺۚ᩸;->᩷:Ljava/util/ArrayList;
+
+    .line 247
+    iput-object p1, p0, Ll/ܺۚ᩸;->ۙ:Ll/ᩴᩴۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۛۨ᩸;Ll/ۨ۬᩸;)Ll/۟ۖ᩸;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 39
-    invoke-virtual {p2}, Ll/ۨ۬᩸;->ܰ()Ljava/lang/reflect/Type;
+    .line 253
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 40
-    instance-of v0, p2, Ljava/lang/reflect/GenericArrayType;
+    iget-object v1, p0, Ll/ܺۚ᩸;->ۙ:Ll/ᩴᩴۤ;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v1}, Ll/᩷᩸ۤ;->᩷᩷()Ljava/lang/String;
 
-    instance-of v1, p2, Ljava/lang/Class;
+    move-result-object v1
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v1, p2
+    const-string v1, ": "
 
-    check-cast v1, Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 41
-    invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
+    iget-object v1, p0, Ll/ܺۚ᩸;->᩷:Ljava/util/ArrayList;
+
+    .line 254
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    .line 301
-    check-cast p2, Ljava/lang/reflect/GenericArrayType;
-
-    invoke-interface {p2}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    .line 302
-    :cond_2
-    check-cast p2, Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p2
-
-    .line 46
-    :goto_0
-    invoke-static {p2}, Ll/ۨ۬᩸;->ۙ(Ljava/lang/reflect/Type;)Ll/ۨ۬᩸;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ll/ۛۨ᩸;->ۙ(Ll/ۨ۬᩸;)Ll/۟ۖ᩸;
-
-    move-result-object v0
-
-    .line 49
-    new-instance v1, Ll/᩶ۚ᩸;
-
-    .line 50
-    invoke-static {p2}, Ll/᩻ۖ᩸;->ۨ(Ljava/lang/reflect/Type;)Ljava/lang/Class;
-
-    move-result-object p2
-
-    invoke-direct {v1, p1, v0, p2}, Ll/᩶ۚ᩸;-><init>(Ll/ۛۨ᩸;Ll/۟ۖ᩸;Ljava/lang/Class;)V
-
-    return-object v1
+    return-object v0
 .end method

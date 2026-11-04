@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.eac;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface EACObjectIdentifiers {
     public static final ASN1ObjectIdentifier bsi_de;
     public static final ASN1ObjectIdentifier id_CA;

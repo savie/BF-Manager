@@ -1,23 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘᩴ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 640U */
+/* JADX INFO: renamed from: l.ۘۧᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B4S2 */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C4122 {
+public final class C4122 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f15095;
+    public final String f13989;
 
-    static {
-        int[] iArr = new int[EnumC23921.values().length];
-        f15095 = iArr;
-        try {
-            iArr[EnumC23921.WARNING.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f15095[EnumC23921.ERROR.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C16800 f13990;
+
+    public C4122(C16800 c16800, String str) {
+        this.f13990 = c16800;
+        this.f13989 = str;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C4122 m13218(C16800 c16800) {
+        return new C4122(c16800, null);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C4122 m13217(String str) {
+        return new C4122(null, str);
     }
 }

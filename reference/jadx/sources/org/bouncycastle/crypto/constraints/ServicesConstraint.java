@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import org.bouncycastle.crypto.CryptoServicesConstraints;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ServicesConstraint implements CryptoServicesConstraints {
     public static final Logger LOG = Logger.getLogger(ServicesConstraint.class.getName());
     public final Set exceptions;

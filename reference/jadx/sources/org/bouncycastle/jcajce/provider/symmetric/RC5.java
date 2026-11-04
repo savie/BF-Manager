@@ -5,10 +5,10 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
-import l.C0280;
-import l.C23234;
-import l.C5800;
-import l.C9023;
+import l.C12669;
+import l.C18063;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.engines.RC532Engine;
@@ -24,7 +24,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RC5 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -50,7 +50,6 @@ public final class RC5 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -58,28 +57,24 @@ public final class RC5 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC32 extends BaseBlockCipher {
         public CBC32() {
             super(new CBCBlockCipher(new RC532Engine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB8Mac32 extends BaseMac {
         public CFB8Mac32() {
             super(new CFBBlockCipherMac(new RC532Engine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB32 extends BaseBlockCipher {
         public ECB32() {
             super(new RC532Engine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB64 extends BaseBlockCipher {
         public ECB64() {
             super(new RC564Engine());
@@ -98,7 +93,6 @@ public final class RC5 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac32 extends BaseMac {
         public Mac32() {
             super(new CBCBlockCipherMac(new RC532Engine()));
@@ -112,9 +106,9 @@ public final class RC5 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ECB32", "Cipher.RC5", sb, configurableProvider);
-            C5800.m15969(str, "$Mac32", "Mac.RC5MAC", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.RC5-64", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.RC5", C9023.m23357(str, "$KeyGen64", "KeyGenerator.RC5-64", C0280.m1793("KeyGenerator.RC5", C23234.m51270("Cipher.RC5-64", C23234.m51270("Alg.Alias.Cipher.RC5-32", "RC5", str, "$ECB64", configurableProvider), str, "$KeyGen32", configurableProvider), "Alg.Alias.KeyGenerator.RC5-32", "RC5", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
-            configurableProvider.addAlgorithm("Mac.RC5MAC/CFB8", C23234.m51270("Alg.Alias.Mac.RC5", "RC5MAC", str, "$CFB8Mac32", configurableProvider));
+            C8947.m23913(str, "$ECB32", "Cipher.RC5", sb, configurableProvider);
+            C8947.m23913(str, "$Mac32", "Mac.RC5MAC", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.RC5-64", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.RC5", C18063.m42089(str, "$KeyGen64", "KeyGenerator.RC5-64", C12669.m31439("KeyGenerator.RC5", C18176.m42346("Cipher.RC5-64", C18176.m42346("Alg.Alias.Cipher.RC5-32", "RC5", str, "$ECB64", configurableProvider), str, "$KeyGen32", configurableProvider), "Alg.Alias.KeyGenerator.RC5-32", "RC5", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            configurableProvider.addAlgorithm("Mac.RC5MAC/CFB8", C18176.m42346("Alg.Alias.Mac.RC5", "RC5MAC", str, "$CFB8Mac32", configurableProvider));
             configurableProvider.addAlgorithm("Alg.Alias.Mac.RC5/CFB8", "RC5MAC/CFB8");
         }
     }

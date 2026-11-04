@@ -1,7 +1,7 @@
 package com.tencent.mm.opensdk.utils;
 
 import android.os.Bundle;
-import l.C23234;
+import l.C18011;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class a {
@@ -12,7 +12,7 @@ public final class a {
         try {
             return bundle.getInt(str, -1);
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("getIntExtra exception:"), "MicroMsg.IntentUtil");
+            C18011.m41991(e, new StringBuilder("getIntExtra exception:"), "MicroMsg.IntentUtil");
             return -1;
         }
     }
@@ -24,7 +24,7 @@ public final class a {
         try {
             return bundle.getString(str);
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("getStringExtra exception:"), "MicroMsg.IntentUtil");
+            C18011.m41991(e, new StringBuilder("getStringExtra exception:"), "MicroMsg.IntentUtil");
             return null;
         }
     }

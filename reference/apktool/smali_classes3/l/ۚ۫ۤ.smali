@@ -1,100 +1,72 @@
-.class public final Ll/ۚ۫ۤ;
-.super Ll/ۤܿۤ;
-.source "F416"
+.class public interface abstract Ll/ۚ۫ۤ;
+.super Ljava/lang/Object;
+.source "X4W4"
+
+# interfaces
+.implements Ll/֫۫ۤ;
 
 
-# instance fields
-.field public final synthetic ۖ:Ll/ۜ۫ۤ;
-
-.field public final synthetic ۨ:Ll/ܽۤۤ;
-
-.field public final synthetic ܰ:Ll/۬ۛۤ;
+# static fields
+.field public static final ܳ:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳܿۤ;Ll/ۜ۫ۤ;Ll/۬ۛۤ;Ll/ܽۤۤ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 6
 
-    .line 605
-    iput-object p2, p0, Ll/ۚ۫ۤ;->ۖ:Ll/ۜ۫ۤ;
+    const-string v4, "few"
 
-    iput-object p3, p0, Ll/ۚ۫ۤ;->ܰ:Ll/۬ۛۤ;
+    const-string v5, "many"
 
-    iput-object p4, p0, Ll/ۚ۫ۤ;->ۨ:Ll/ܽۤۤ;
+    const-string v0, "other"
 
-    invoke-direct {p0, p1}, Ll/ۤܿۤ;-><init>(Ll/ᩳܿۤ;)V
+    const-string v1, "zero"
+
+    const-string v2, "one"
+
+    const-string v3, "two"
+
+    .line 34
+    filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۚ۫ۤ;->ܳ:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۫۟۟;Ll/ۨ᩷۟;)V
-    .locals 2
-
-    .line 616
-    iget-object v0, p0, Ll/ۚ۫ۤ;->ۨ:Ll/ܽۤۤ;
-
-    sget-object v1, Ll/ܽۤۤ;->۫:Ll/ܳۡۤ;
-
-    if-eq v0, v1, :cond_1
-
-    .line 617
-    invoke-virtual {p2}, Ll/ۨ᩷۟;->ۖ()Ll/۫۟۟;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 618
-    invoke-virtual {p2}, Ll/ۨ᩷۟;->ۖ()Ll/۫۟۟;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ll/۫۟۟;->ۗ()Ll/ۡۡ۟;
-
-    move-result-object v0
-
-    sget-object v1, Ll/ᩴۡ۟;->ۧۙ:Ll/ᩴۡ۟;
-
-    invoke-virtual {v0, v1}, Ll/ۡۡ۟;->ۙ(Ll/ᩴۡ۟;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    .line 620
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Ll/ۚ۫ۤ;->ۖ:Ll/ۜ۫ۤ;
-
-    iget-object v0, v0, Ll/ۜ۫ۤ;->᩸:Ll/᩷ܿۤ;
-
-    iget-object v0, v0, Ll/᩷ܿۤ;->ۖ:Ll/ᩳܿۤ;
-
-    invoke-interface {v0, p1, p2}, Ll/ᩳܿۤ;->ۙ(Ll/۫۟۟;Ll/ۨ᩷۟;)V
-
-    return-void
+.method public abstract getEntry()Ll/۠ܳۤ;
 .end method
 
-.method public final ۙ(Ll/ܽۤۤ;Ll/ܽۤۤ;Ll/ۤܺ۟;)Z
-    .locals 0
-
-    const/4 p1, 0x1
-
-    return p1
+.method public abstract getValue()I
 .end method
 
-.method public final ܰ()Ll/۬ۛۤ;
-    .locals 1
+.method public abstract ֨()Z
+.end method
 
-    .line 608
-    iget-object v0, p0, Ll/ۚ۫ۤ;->ܰ:Ll/۬ۛۤ;
+.method public abstract ֫ۙ()I
+.end method
 
-    return-object v0
+.method public abstract ۗ᩷()Z
+.end method
+
+.method public abstract ۤ()Ll/ۤ۫ۤ;
+.end method
+
+.method public abstract ܶ()Z
+.end method
+
+.method public abstract ܽ()I
+.end method
+
+.method public abstract ᩴ᩷()Ll/ܶ۫ۤ;
+.end method
+
+.method public abstract ᩸ۙ()Z
+.end method
+
+.method public abstract ᩻ۙ()I
 .end method

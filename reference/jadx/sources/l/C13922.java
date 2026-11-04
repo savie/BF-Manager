@@ -1,30 +1,28 @@
 package l;
 
-import java.util.function.Predicate;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ܰܺۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
+/* JADX INFO: renamed from: l.۬ܳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K608 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13922 extends C5227 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C5227 f45851;
-
-    @Override // l.C5227, l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ */
-    public final Iterable mo3802(Predicate predicate, EnumC10167 enumC10167) {
-        return this.f45851.mo3802(new C17389(2, predicate), enumC10167);
+public final enum C13922 extends EnumC10874 {
+    public /* synthetic */ C13922() {
+        this("R_arrayRoots", 3);
     }
 
-    @Override // l.C5227, l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ */
-    public final Iterable mo3803(AbstractC11242 abstractC11242, Predicate predicate, EnumC10167 enumC10167) {
-        return this.f45851.mo3803(abstractC11242, new C17389(2, predicate), enumC10167);
+    public C13922(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // l.C5227
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo14412() {
-        return this.f45851.mo14412();
+    @Override // l.EnumC10874
+    /* JADX INFO: renamed from: ۙ */
+    public Set mo9085(C19825 c19825) {
+        return c19825.f63734;
+    }
+
+    @Override // l.EnumC10874
+    /* JADX INFO: renamed from: ۙ */
+    public void mo9086(C19825 c19825, Set set) {
+        c19825.f63734 = set;
     }
 }

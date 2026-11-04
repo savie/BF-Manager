@@ -72,22 +72,6 @@
 
 
 # virtual methods
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 153
-    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
-
-    .line 108
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->᩻:Lcom/amazonaws/logging/LogFactory$Level;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p1, v1}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
 .method public final ۙ(Ljava/lang/String;)V
     .locals 2
 
@@ -95,7 +79,7 @@
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
     .line 122
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->۫:Lcom/amazonaws/logging/LogFactory$Level;
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->۟:Lcom/amazonaws/logging/LogFactory$Level;
 
     const/4 v1, 0x0
 
@@ -111,7 +95,7 @@
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
     .line 87
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ܽ:Lcom/amazonaws/logging/LogFactory$Level;
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->֡:Lcom/amazonaws/logging/LogFactory$Level;
 
     invoke-direct {p0, v0, p1, p2}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -129,30 +113,14 @@
     return v0
 .end method
 
-.method public final ۚ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 153
-    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
-
-    .line 66
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ۧ:Lcom/amazonaws/logging/LogFactory$Level;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p1, v1}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 2
 
     .line 153
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
     .line 94
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ܿ:Lcom/amazonaws/logging/LogFactory$Level;
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ᩳ:Lcom/amazonaws/logging/LogFactory$Level;
 
     const/4 v1, 0x0
 
@@ -161,28 +129,28 @@
     return-void
 .end method
 
-.method public final ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public final ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 1
 
     .line 153
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
     .line 115
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->᩻:Lcom/amazonaws/logging/LogFactory$Level;
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ۡ:Lcom/amazonaws/logging/LogFactory$Level;
 
     invoke-direct {p0, v0, p1, p2}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩴ(Ljava/lang/String;)V
     .locals 2
 
     .line 153
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
-    .line 80
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ܽ:Lcom/amazonaws/logging/LogFactory$Level;
+    .line 66
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->֨:Lcom/amazonaws/logging/LogFactory$Level;
 
     const/4 v1, 0x0
 
@@ -191,21 +159,37 @@
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public final ᩷(Ljava/lang/String;)V
+    .locals 2
+
+    .line 153
+    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
+
+    .line 80
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->֡:Lcom/amazonaws/logging/LogFactory$Level;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, p1, v1}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
+
+    return-void
+.end method
+
+.method public final ᩷(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 1
 
     .line 153
     sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
 
     .line 129
-    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->۫:Lcom/amazonaws/logging/LogFactory$Level;
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->۟:Lcom/amazonaws/logging/LogFactory$Level;
 
     invoke-direct {p0, v0, p1, p2}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method public final ܰ()Z
+.method public final ᩷()Z
     .locals 1
 
     .line 153
@@ -214,4 +198,20 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 2
+
+    .line 153
+    sget v0, Lcom/amazonaws/logging/LogFactory;->ۙ:I
+
+    .line 108
+    sget-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ۡ:Lcom/amazonaws/logging/LogFactory$Level;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, p1, v1}, Lcom/amazonaws/logging/ConsoleLog;->ۙ(Lcom/amazonaws/logging/LogFactory$Level;Ljava/lang/Object;Ljava/lang/Exception;)V
+
+    return-void
 .end method

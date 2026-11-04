@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:Ljava/lang/String;
 
-.field public ܰ:I
+.field public ᩷:I
 
 
 # direct methods
@@ -17,7 +17,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
-    iput p1, p0, Lcom/amazonaws/services/s3/model/PartETag;->ܰ:I
+    iput p1, p0, Lcom/amazonaws/services/s3/model/PartETag;->᩷:I
 
     .line 39
     iput-object p2, p0, Lcom/amazonaws/services/s3/model/PartETag;->ۙ:Ljava/lang/String;
@@ -36,11 +36,11 @@
     return-object v0
 .end method
 
-.method public final ܰ()I
+.method public final ᩷()I
     .locals 1
 
     .line 48
-    iget v0, p0, Lcom/amazonaws/services/s3/model/PartETag;->ܰ:I
+    iget v0, p0, Lcom/amazonaws/services/s3/model/PartETag;->᩷:I
 
     return v0
 .end method

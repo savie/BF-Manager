@@ -1,51 +1,17 @@
-.class public final Ll/ۧ᩺ۨ;
-.super Ljava/lang/Object;
-.source "T5YJ"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.class public abstract Ll/ۧ᩺ۨ;
+.super Ll/᩻᩺ۨ;
+.source "9AH4"
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 3
+.method public abstract ۙ(Ljava/lang/Object;)Ljava/lang/Object;
+.end method
 
-    .line 137
-    new-instance v0, Ll/ܳۘۨ;
+.method public abstract ۙ(Ljava/lang/Object;Ll/ܽ᩺ۨ;)V
+.end method
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+.method public abstract ᩷(Ljava/lang/Object;)Ll/ܽ᩺ۨ;
+.end method
 
-    .line 138
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ܳۘۨ;
-
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ۚ()C
-
-    move-result v1
-
-    .line 139
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ܳۘۨ;
-
-    invoke-virtual {v2}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 140
-    invoke-virtual {v2, v1}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(I)V
-
-    .line 141
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
-
-    return-void
+.method public abstract ᩷(Ljava/lang/Object;Ll/ܽ᩺ۨ;)Z
 .end method

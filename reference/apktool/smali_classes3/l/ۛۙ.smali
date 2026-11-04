@@ -1,186 +1,155 @@
 .class public Ll/ۛۙ;
 .super Ljava/lang/Object;
-.source "U6BF"
-
-# interfaces
-.implements Ll/۫ۙ;
+.source "N5R1"
 
 
 # instance fields
-.field public ֨:Ll/ܺᩳۙ;
+.field public ۙ:Ljava/util/HashMap;
 
-.field public final ۖ:Ljava/lang/Object;
+.field public final ۤ:Ljava/lang/Object;
 
-.field public final ۘ:Ll/᩹ܰ;
+.field public final ᩴ:Ll/ܳ᩷;
 
-.field public ۙ:Ll/ܽۙ;
+.field public final ᩷:Landroid/media/session/MediaController;
 
-.field public ۚ:Ll/ܰۙ;
-
-.field public final ۨ:Ll/ܿۙ;
-
-.field public final ۬:Landroid/media/session/MediaSession;
-
-.field public final ܰ:Landroid/os/RemoteCallbackList;
-
-.field public ᩹:Ll/۠ܰ;
+.field public final ᩸:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳ֡۬;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Ll/ܳ᩷;)V
+    .locals 2
 
-    .line 3943
+    .line 2007
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3920
+    .line 1996
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Ll/ۛۙ;->ۖ:Ljava/lang/Object;
+    iput-object v0, p0, Ll/ۛۙ;->ۤ:Ljava/lang/Object;
 
-    .line 3924
-    new-instance v0, Landroid/os/RemoteCallbackList;
+    .line 1998
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Ll/ۛۙ;->ܰ:Landroid/os/RemoteCallbackList;
+    iput-object v0, p0, Ll/ۛۙ;->᩸:Ljava/util/ArrayList;
 
-    .line 3944
-    invoke-virtual {p0, p1}, Ll/ۛۙ;->ۙ(Ll/ᩳ֡۬;)Landroid/media/session/MediaSession;
+    .line 2001
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ll/ۛۙ;->ۙ:Ljava/util/HashMap;
+
+    .line 2008
+    iput-object p2, p0, Ll/ۛۙ;->ᩴ:Ll/ܳ᩷;
+
+    .line 2009
+    new-instance v0, Landroid/media/session/MediaController;
+
+    .line 2010
+    invoke-virtual {p2}, Ll/ܳ᩷;->ۤ()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/media/session/MediaSession$Token;
+
+    invoke-direct {v0, p1, v1}, Landroid/media/session/MediaController;-><init>(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V
+
+    iput-object v0, p0, Ll/ۛۙ;->᩷:Landroid/media/session/MediaController;
+
+    .line 2011
+    invoke-virtual {p2}, Ll/ܳ᩷;->ۙ()Ll/ܽۙ;
 
     move-result-object p1
 
-    iput-object p1, p0, Ll/ۛۙ;->۬:Landroid/media/session/MediaSession;
+    if-nez p1, :cond_0
 
-    .line 3945
-    new-instance v0, Ll/ܿۙ;
+    .line 2269
+    new-instance p1, Ll/᩵ۙ;
 
-    invoke-direct {v0, p0}, Ll/ܿۙ;-><init>(Ll/ۛۙ;)V
+    invoke-direct {p1, p0}, Ll/᩵ۙ;-><init>(Ll/ۛۙ;)V
 
-    iput-object v0, p0, Ll/ۛۙ;->ۨ:Ll/ܿۙ;
+    const-string p2, "android.support.v4.media.session.command.GET_EXTRA_BINDER"
 
-    .line 3946
-    new-instance v1, Ll/᩹ܰ;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
+    .line 2231
+    invoke-virtual {v0, p2, v1, p1}, Landroid/media/session/MediaController;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Ll/᩹ܰ;-><init>(Ljava/lang/Object;Ll/᩸ۙ;)V
-
-    iput-object v1, p0, Ll/ۛۙ;->ۘ:Ll/᩹ܰ;
-
-    const/4 v0, 0x3
-
-    .line 4000
-    invoke-virtual {p1, v0}, Landroid/media/session/MediaSession;->setFlags(I)V
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()Ll/۠ܰ;
-    .locals 1
+.method public final ۙ()V
+    .locals 6
 
-    .line 4094
-    iget-object v0, p0, Ll/ۛۙ;->᩹:Ll/۠ܰ;
+    .line 2274
+    iget-object v0, p0, Ll/ۛۙ;->ᩴ:Ll/ܳ᩷;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ll/ܳ᩷;->ۙ()Ll/ܽۙ;
 
-.method public ۙ(Ll/ᩳ֡۬;)Landroid/media/session/MediaSession;
-    .locals 2
+    move-result-object v1
 
-    .line 3966
-    new-instance v0, Landroid/media/session/MediaSession;
-
-    const-string v1, "MusicService"
-
-    invoke-direct {v0, p1, v1}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ()Ll/ܽۙ;
-    .locals 2
-
-    .line 4241
-    iget-object v0, p0, Ll/ۛۙ;->ۖ:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 4242
-    :try_start_0
-    iget-object v1, p0, Ll/ۛۙ;->ۙ:Ll/ܽۙ;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 4243
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public ۙ(Ll/ܺᩳۙ;)V
-    .locals 1
-
-    .line 4211
-    iget-object v0, p0, Ll/ۛۙ;->ۖ:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 4212
-    :try_start_0
-    iput-object p1, p0, Ll/ۛۙ;->֨:Ll/ܺᩳۙ;
-
-    .line 4213
-    monitor-exit v0
+    if-nez v1, :cond_0
 
     return-void
 
-    :catchall_0
-    move-exception p1
+    .line 2277
+    :cond_0
+    iget-object v1, p0, Ll/ۛۙ;->᩸:Ljava/util/ArrayList;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    throw p1
-.end method
+    move-result-object v2
 
-.method public ܰ()Ll/ܺᩳۙ;
-    .locals 2
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 4234
-    iget-object v0, p0, Ll/ۛۙ;->ۖ:Ljava/lang/Object;
+    move-result v3
 
-    monitor-enter v0
+    if-eqz v3, :cond_1
 
-    .line 4235
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll/ۗۙ;
+
+    .line 2278
+    new-instance v4, Ll/ۨۙ;
+
+    .line 2342
+    invoke-direct {v4, v3}, Ll/᩹ۙ;-><init>(Ll/ۗۙ;)V
+
+    .line 2279
+    iget-object v5, p0, Ll/ۛۙ;->ۙ:Ljava/util/HashMap;
+
+    invoke-virtual {v5, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2280
+    iput-object v4, v3, Ll/ۗۙ;->ۙ:Ll/֫ۙ;
+
+    .line 2282
     :try_start_0
-    iget-object v1, p0, Ll/ۛۙ;->֨:Ll/ܺᩳۙ;
+    invoke-virtual {v0}, Ll/ܳ᩷;->ۙ()Ll/ܽۙ;
 
-    monitor-exit v0
+    move-result-object v3
 
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 4236
-    monitor-exit v0
+    invoke-interface {v3, v4}, Ll/ܽۙ;->ۙ(Ll/֫ۙ;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw v1
+    goto :goto_0
+
+    .line 2289
+    :catch_0
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    return-void
 .end method

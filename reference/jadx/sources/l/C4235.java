@@ -1,57 +1,19 @@
 package l;
 
-import java.util.Iterator;
+import android.text.TextPaint;
+import android.text.style.MetricAffectingSpan;
 
-/* JADX INFO: renamed from: l.ۘ᩹ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T1L1 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4235 implements InterfaceC13409 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4941 f15322;
-
-    public C4235(InterfaceC4941 interfaceC4941) {
-        this.f15322 = interfaceC4941;
+/* JADX INFO: renamed from: l.ۘܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28XZ */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4235 extends MetricAffectingSpan {
+    @Override // android.text.style.MetricAffectingSpan
+    public final void updateMeasureState(TextPaint textPaint) {
+        textPaint.setTextSkewX(-0.25f);
     }
 
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int mo11887() {
-        return this.f15322.mo11887();
-    }
-
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int mo11885() {
-        return this.f15322.mo11885();
-    }
-
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C9384 mo11886() {
-        return new C9384(this);
-    }
-
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Iterator mo11890() {
-        return this.f15322.mo11890();
-    }
-
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Iterable mo11889() {
-        return new Iterable() { // from class: l.ۗۚᩳ
-            @Override // java.lang.Iterable
-            public final Iterator iterator() {
-                return this.mo11888();
-            }
-        };
-    }
-
-    @Override // l.InterfaceC4941
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Iterator mo11888() {
-        return this.f15322.mo11888();
+    @Override // android.text.style.CharacterStyle
+    public final void updateDrawState(TextPaint textPaint) {
+        textPaint.setTextSkewX(-0.25f);
     }
 }

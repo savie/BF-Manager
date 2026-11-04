@@ -1,31 +1,35 @@
 package l;
 
-import android.graphics.Bitmap;
+/* JADX INFO: renamed from: l.᩷᩷ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6428 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C22317 extends C14354 {
 
-/* JADX INFO: renamed from: l.᩹ܰ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: I23M */
-/* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22317 implements InterfaceC16464 {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f72243;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f72882;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f72883;
-
-    public /* synthetic */ C22317(AbstractC20745 abstractC20745, int i) {
-        this.f72882 = i;
-        this.f72883 = abstractC20745;
+    @Override // l.C14354, l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1505(C7926 c7926) {
     }
 
-    @Override // l.InterfaceC16464
+    @Override // l.C14354, l.C23174, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final Bitmap mo947() {
-        switch (this.f72882) {
-            case 0:
-                return C5443.m15052(this.f72883);
-            default:
-                return C5443.m15049(this.f72883);
+    public final void mo1510(C11018 c11018) {
+        m8184(new C9133(c11018));
+    }
+
+    @Override // l.C14354, l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1518(C16327 c16327) {
+        if (this.f72243 || c16327.m38748() == EnumC25033.EXPRESSION) {
+            return;
+        }
+        this.f72243 = true;
+        try {
+            super.mo1518(c16327);
+        } finally {
+            this.f72243 = false;
         }
     }
 }

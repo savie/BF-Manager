@@ -1,18 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ۬۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18774 {
+/* JADX INFO: renamed from: l.ᩳۖܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB7W */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18774 extends AbstractC12235 implements InterfaceC9823 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21825 f60861;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public Boolean f60978;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC11242 f60862;
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public C18028 f60979;
 
-    public C18774(AbstractC11242 abstractC11242, C21825 c21825) {
-        this.f60862 = abstractC11242;
-        this.f60861 = c21825;
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public C18028 f60980;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public Boolean f60981;
+
+    @Override // l.C18202
+    /* JADX INFO: renamed from: ۫ */
+    public final String mo1286() {
+        return "mask";
     }
 }

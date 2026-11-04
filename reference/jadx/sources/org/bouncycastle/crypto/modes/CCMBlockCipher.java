@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.modes;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
@@ -26,7 +26,6 @@ public class CCMBlockCipher implements CCMModeCipher {
     public ExposedByteArrayOutputStream associatedText = new ExposedByteArrayOutputStream();
     public ExposedByteArrayOutputStream data = new ExposedByteArrayOutputStream();
 
-    /* JADX INFO: loaded from: classes.dex */
     public class ExposedByteArrayOutputStream extends ByteArrayOutputStream {
         public byte[] getBuffer() {
             return ((ByteArrayOutputStream) this).buf;
@@ -313,7 +312,7 @@ public class CCMBlockCipher implements CCMModeCipher {
             parameters = aEADParameters.getKey();
         } else {
             if (!(cipherParameters instanceof ParametersWithIV)) {
-                throw new IllegalArgumentException(C0219.m1593("invalid parameters passed to CCM: ", cipherParameters));
+                throw new IllegalArgumentException(C14483.m34973("invalid parameters passed to CCM: ", cipherParameters));
             }
             ParametersWithIV parametersWithIV = (ParametersWithIV) cipherParameters;
             this.nonce = parametersWithIV.getIV();

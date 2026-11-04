@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X9FieldID extends ASN1Object implements X9ObjectIdentifiers {
     public ASN1ObjectIdentifier id;
     public ASN1Primitive parameters;

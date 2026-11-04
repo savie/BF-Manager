@@ -1,30 +1,10 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ᩴ۠ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A186 */
+/* JADX INFO: renamed from: l.ܿ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5CD */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18628 extends AbstractC3810 {
-    @Override // l.AbstractC3810
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo11096() {
-        return -1L;
-    }
+public final class C18628 extends C19900 {
 
-    @Override // l.AbstractC3810
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11097(int i) {
-    }
-
-    @Override // l.AbstractC3810
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11098(long j) {
-    }
-
-    @Override // l.AbstractC3810
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo11100() throws IOException {
-        throw new IOException("Unsupported");
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f60549 = 0;
 }

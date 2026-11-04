@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECIESPublicKeyParser implements KeyParser {
     public ECDomainParameters ecParams;
 

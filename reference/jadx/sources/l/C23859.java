@@ -1,52 +1,52 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: JA0W */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23859 extends AbstractC11264 {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
-    public long f77128;
+/* JADX INFO: renamed from: l.᩹᩹ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZARU */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23859 implements Iterator {
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3721 f77242;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Object[] f77243;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f77245 = 0;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f77244 = true;
+
+    public C23859(C3721 c3721, Object[] objArr) {
+        this.f77242 = c3721;
+        this.f77243 = objArr;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        return 0;
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f77245 < this.f77243.length;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        this.f77244 = false;
+        int i = this.f77245;
+        this.f77245 = i + 1;
+        return this.f77243[i];
     }
 
-    public C23859(InterfaceC10601 interfaceC10601) {
-        super(interfaceC10601);
-    }
-
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public final long m52588() {
-        return this.f77128;
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        this.f77128 = ((long) C4850.m13545(i, bArr)) & 65535;
-        return 8;
-    }
-
-    @Override // l.AbstractC11264, l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("SmbComWriteAndXResponse[");
-        sb.append(super.toString());
-        sb.append(",count=");
-        return new String(C15037.m36023(sb, this.f77128, "]"));
+    @Override // java.util.Iterator
+    public final void remove() {
+        if (this.f77244) {
+            throw new IllegalStateException();
+        }
+        this.f77242.remove(this.f77243[this.f77245 - 1]);
+        this.f77244 = true;
     }
 }

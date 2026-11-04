@@ -1,45 +1,52 @@
 package l;
 
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
-/* JADX INFO: renamed from: l.۫֫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q28R */
+/* JADX INFO: renamed from: l.ۨۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12106 extends AbstractC7713 {
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f40488;
-
-    @Override // l.AbstractC7713
+public final class C12106 extends AbstractC10919 {
+    @Override // l.AbstractC10919
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2077(View view) {
-        return true;
+    public final long[] mo15749(Object obj) {
+        Calendar calendar = (Calendar) obj;
+        return new long[]{calendar.get(1), calendar.get(2), calendar.get(5), calendar.get(11), calendar.get(12), calendar.get(13)};
     }
 
-    public C12106(AbstractC20745 abstractC20745) {
-        this.f40488 = abstractC20745;
-    }
-
-    @Override // l.AbstractC7713
+    @Override // l.AbstractC10919
     /* JADX INFO: renamed from: ۙ */
-    public final View mo2074(Main main) {
-        View viewM30995 = main.m30995(R.layout.MT_Protector);
-        TextView textView = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-        String[] strArr = {this.f40488.getName()};
-        int i = C17044.f54427;
-        textView.setText(C16737.m39264(R.string.MT_Protector, strArr));
-        return viewM30995;
-    }
-
-    @Override // l.AbstractC7713
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2076(DialogInterfaceC19356 dialogInterfaceC19356) {
-        Button buttonM44373 = dialogInterfaceC19356.m44373();
-        buttonM44373.setEnabled(false);
-        C16737.m39267(800L, new RunnableC13043(3, buttonM44373));
+    public final Object mo15748(long[] jArr) {
+        long j = jArr[0];
+        int i = (int) j;
+        if (j != i) {
+            throw new ArithmeticException();
+        }
+        long j2 = jArr[1];
+        int i2 = (int) j2;
+        if (j2 != i2) {
+            throw new ArithmeticException();
+        }
+        long j3 = jArr[2];
+        int i3 = (int) j3;
+        if (j3 != i3) {
+            throw new ArithmeticException();
+        }
+        long j4 = jArr[3];
+        int i4 = (int) j4;
+        if (j4 != i4) {
+            throw new ArithmeticException();
+        }
+        long j5 = jArr[4];
+        int i5 = (int) j5;
+        if (j5 != i5) {
+            throw new ArithmeticException();
+        }
+        long j6 = jArr[5];
+        int i6 = (int) j6;
+        if (j6 == i6) {
+            return new GregorianCalendar(i, i2, i3, i4, i5, i6);
+        }
+        throw new ArithmeticException();
     }
 }

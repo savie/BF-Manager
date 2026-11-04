@@ -1,7 +1,7 @@
 package net.sf.sevenzipjbinding.impl;
 
 import java.util.Date;
-import l.C15623;
+import l.C23003;
 import net.sf.sevenzipjbinding.IInArchive;
 import net.sf.sevenzipjbinding.IOutArchive;
 import net.sf.sevenzipjbinding.IOutItem7z;
@@ -12,7 +12,7 @@ import net.sf.sevenzipjbinding.IOutItemTar;
 import net.sf.sevenzipjbinding.IOutItemZip;
 import net.sf.sevenzipjbinding.PropID;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OutItemFactory {
     public static final Long ZERO = 0L;
     public int index;
@@ -48,7 +48,7 @@ public class OutItemFactory {
         }
         outItem.setDataSize(ZERO);
         outItem.setPropertyLastModificationTime(new Date());
-        int i = C15623.f50802[outItem.getArchiveFormat().ordinal()];
+        int i = C23003.f74661[outItem.getArchiveFormat().ordinal()];
         if (i == 1) {
             fillDefaultValues7z(outItem);
             return;

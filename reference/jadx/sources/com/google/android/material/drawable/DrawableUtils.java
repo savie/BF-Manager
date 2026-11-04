@@ -21,8 +21,8 @@ import android.util.Xml;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
-import l.C7603;
-import l.C9576;
+import l.C0597;
+import l.C4791;
 import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -43,9 +43,9 @@ public final class DrawableUtils {
             }
         }
         if (z) {
-            C7603.m20138(drawable, i);
+            C0597.m2700(drawable, i);
         } else {
-            C7603.m20129(drawable, (ColorStateList) null);
+            C0597.m2690(drawable, (ColorStateList) null);
         }
     }
 
@@ -74,7 +74,7 @@ public final class DrawableUtils {
             }
             throw new XmlPullParserException("Must have a <" + ((Object) charSequence) + "> start tag");
         } catch (IOException | XmlPullParserException e) {
-            Resources.NotFoundException notFoundException = new Resources.NotFoundException(C9576.m24440(new StringBuilder("Can't load badge resource ID #0x"), i));
+            Resources.NotFoundException notFoundException = new Resources.NotFoundException(C4791.m14766(new StringBuilder("Can't load badge resource ID #0x"), i));
             notFoundException.initCause(e);
             throw notFoundException;
         }
@@ -111,9 +111,9 @@ public final class DrawableUtils {
             }
             return drawable;
         }
-        Drawable drawableMutate = C7603.m20139(drawable).mutate();
+        Drawable drawableMutate = C0597.m2697(drawable).mutate();
         if (mode != null) {
-            C7603.m20132(drawableMutate, mode);
+            C0597.m2693(drawableMutate, mode);
         }
         return drawableMutate;
     }

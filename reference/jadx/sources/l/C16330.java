@@ -1,179 +1,94 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ֫ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8459 */
+/* JADX INFO: renamed from: l.ܶ᩶ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 54VR */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16330 {
+public final class C16330 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52607;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Object f53013 = new Object();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52608;
+    public int[] f53014;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52609;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Object[] f53015;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52610;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f53016 = 0;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52611;
+    public C16330(int i) {
+        this.f53014 = new int[i];
+        this.f53015 = new Object[i];
+    }
 
-    static {
-        int[] iArr = new int[EnumC8441.values().length];
-        f52607 = iArr;
-        try {
-            iArr[EnumC8441.ALWAYS.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m38761(int i, int i2, int[] iArr) {
+        int i3 = -1;
+        int i4 = i;
+        while (i4 - i3 > 1) {
+            int i5 = (i4 + i3) / 2;
+            if (iArr[i5] < i2) {
+                i3 = i5;
+            } else {
+                i4 = i5;
+            }
         }
-        try {
-            f52607[EnumC8441.LEGACY.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        if (i4 == i) {
+            return ~i;
         }
-        try {
-            f52607[EnumC8441.NONEMPTY.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
+        return iArr[i4] == i2 ? i4 : ~i4;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m38762(int i) {
+        Object obj;
+        int iM38761 = m38761(this.f53016, i, this.f53014);
+        if (iM38761 < 0 || (obj = this.f53015[iM38761]) == f53013) {
+            return null;
         }
-        int[] iArr2 = new int[EnumC18651.values().length];
-        f52609 = iArr2;
-        try {
-            iArr2[EnumC18651.f60472.ordinal()] = 1;
-        } catch (NoSuchFieldError unused4) {
+        return obj;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38763(int i, Comparable comparable) {
+        int iM38761 = m38761(this.f53016, i, this.f53014);
+        if (iM38761 >= 0) {
+            this.f53015[iM38761] = comparable;
+            return;
         }
-        try {
-            f52609[EnumC18651.f60465.ordinal()] = 2;
-        } catch (NoSuchFieldError unused5) {
+        int i2 = ~iM38761;
+        int i3 = this.f53016;
+        if (i2 < i3) {
+            Object[] objArr = this.f53015;
+            if (objArr[i2] == f53013) {
+                this.f53014[i2] = i;
+                objArr[i2] = comparable;
+                return;
+            }
         }
-        try {
-            f52609[EnumC18651.f60473.ordinal()] = 3;
-        } catch (NoSuchFieldError unused6) {
+        int[] iArr = this.f53014;
+        if (i3 >= iArr.length) {
+            int iMax = Math.max(i3 + 1, iArr.length * 2);
+            int[] iArr2 = new int[iMax];
+            Object[] objArr2 = new Object[iMax];
+            int[] iArr3 = this.f53014;
+            System.arraycopy(iArr3, 0, iArr2, 0, iArr3.length);
+            Object[] objArr3 = this.f53015;
+            System.arraycopy(objArr3, 0, objArr2, 0, objArr3.length);
+            this.f53014 = iArr2;
+            this.f53015 = objArr2;
         }
-        try {
-            f52609[EnumC18651.f60540.ordinal()] = 4;
-        } catch (NoSuchFieldError unused7) {
+        int i4 = this.f53016 - i2;
+        if (i4 != 0) {
+            int[] iArr4 = this.f53014;
+            int i5 = i2 + 1;
+            System.arraycopy(iArr4, i2, iArr4, i5, i4);
+            Object[] objArr4 = this.f53015;
+            System.arraycopy(objArr4, i2, objArr4, i5, this.f53016 - i2);
         }
-        try {
-            f52609[EnumC18651.f60560.ordinal()] = 5;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f52609[EnumC18651.f60546.ordinal()] = 6;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f52609[EnumC18651.f60482.ordinal()] = 7;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f52609[EnumC18651.f60542.ordinal()] = 8;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f52609[EnumC18651.f60519.ordinal()] = 9;
-        } catch (NoSuchFieldError unused12) {
-        }
-        try {
-            f52609[EnumC18651.f60538.ordinal()] = 10;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f52609[EnumC18651.f60467.ordinal()] = 11;
-        } catch (NoSuchFieldError unused14) {
-        }
-        try {
-            f52609[EnumC18651.f60551.ordinal()] = 12;
-        } catch (NoSuchFieldError unused15) {
-        }
-        try {
-            f52609[EnumC18651.f60464.ordinal()] = 13;
-        } catch (NoSuchFieldError unused16) {
-        }
-        int[] iArr3 = new int[EnumC6617.values().length];
-        f52610 = iArr3;
-        try {
-            iArr3[EnumC6617.BYTE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused17) {
-        }
-        try {
-            f52610[EnumC6617.SHORT.ordinal()] = 2;
-        } catch (NoSuchFieldError unused18) {
-        }
-        try {
-            f52610[EnumC6617.CHAR.ordinal()] = 3;
-        } catch (NoSuchFieldError unused19) {
-        }
-        try {
-            f52610[EnumC6617.INT.ordinal()] = 4;
-        } catch (NoSuchFieldError unused20) {
-        }
-        try {
-            f52610[EnumC6617.LONG.ordinal()] = 5;
-        } catch (NoSuchFieldError unused21) {
-        }
-        try {
-            f52610[EnumC6617.FLOAT.ordinal()] = 6;
-        } catch (NoSuchFieldError unused22) {
-        }
-        try {
-            f52610[EnumC6617.DOUBLE.ordinal()] = 7;
-        } catch (NoSuchFieldError unused23) {
-        }
-        try {
-            f52610[EnumC6617.BOOLEAN.ordinal()] = 8;
-        } catch (NoSuchFieldError unused24) {
-        }
-        try {
-            f52610[EnumC6617.VOID.ordinal()] = 9;
-        } catch (NoSuchFieldError unused25) {
-        }
-        try {
-            f52610[EnumC6617.CLASS.ordinal()] = 10;
-        } catch (NoSuchFieldError unused26) {
-        }
-        try {
-            f52610[EnumC6617.ARRAY.ordinal()] = 11;
-        } catch (NoSuchFieldError unused27) {
-        }
-        int[] iArr4 = new int[EnumC9087.values().length];
-        f52611 = iArr4;
-        try {
-            iArr4[EnumC9087.f30968.ordinal()] = 1;
-        } catch (NoSuchFieldError unused28) {
-        }
-        try {
-            f52611[EnumC9087.f30970.ordinal()] = 2;
-        } catch (NoSuchFieldError unused29) {
-        }
-        try {
-            f52611[EnumC9087.f30969.ordinal()] = 3;
-        } catch (NoSuchFieldError unused30) {
-        }
-        try {
-            f52611[EnumC9087.f30967.ordinal()] = 4;
-        } catch (NoSuchFieldError unused31) {
-        }
-        try {
-            f52611[EnumC9087.f30972.ordinal()] = 5;
-        } catch (NoSuchFieldError unused32) {
-        }
-        try {
-            f52611[EnumC9087.f30965.ordinal()] = 6;
-        } catch (NoSuchFieldError unused33) {
-        }
-        int[] iArr5 = new int[EnumC10477.values().length];
-        f52608 = iArr5;
-        try {
-            iArr5[EnumC10477.f35878.ordinal()] = 1;
-        } catch (NoSuchFieldError unused34) {
-        }
-        try {
-            f52608[EnumC10477.f35879.ordinal()] = 2;
-        } catch (NoSuchFieldError unused35) {
-        }
-        try {
-            f52608[EnumC10477.f35865.ordinal()] = 3;
-        } catch (NoSuchFieldError unused36) {
-        }
+        this.f53014[i2] = i;
+        this.f53015[i2] = comparable;
+        this.f53016++;
     }
 }

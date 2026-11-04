@@ -8,7 +8,7 @@ import org.bouncycastle.jcajce.PKIXCertRevocationChecker;
 import org.bouncycastle.jcajce.PKIXCertRevocationCheckerParameters;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ProvCrlRevocationChecker implements PKIXCertRevocationChecker {
     public Date currentDate = null;
     public final JcaJceHelper helper;

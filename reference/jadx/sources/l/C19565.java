@@ -1,26 +1,30 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩵ܺۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4BJX */
+/* JADX INFO: renamed from: l.ᩴۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19565 extends AbstractC4166 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f62868;
-
-    public final String toString() {
-        return C16523.m38890(":containsWholeText(", this.f62868, MotionUtils.EASING_TYPE_FORMAT_END);
-    }
-
-    public C19565(String str) {
-        this.f62868 = str;
-    }
-
-    @Override // l.AbstractC4166
+public class C19565 extends AbstractC17567 {
+    @Override // l.AbstractC17567
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2407(C0617 c0617, C0617 c0618) {
-        return c0618.m2865().contains(this.f62868);
+    public final void mo3723(C21362 c21362, Object obj) throws IOException {
+        Character ch = (Character) obj;
+        c21362.m48602(ch == null ? null : String.valueOf(ch));
+    }
+
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        if (c4208.m13438() == EnumC14648.NULL) {
+            c4208.m13444();
+            return null;
+        }
+        String strM13453 = c4208.m13453();
+        int length = strM13453.length();
+        if (length != 1) {
+            throw new C7367("Expecting single character, got: '" + strM13453 + "' (length " + length + "); at path " + c4208.m13451());
+        }
+        return Character.valueOf(strM13453.charAt(0));
     }
 }

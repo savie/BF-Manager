@@ -1,67 +1,81 @@
 package l;
 
-import java.util.List;
-import java.util.Set;
+import android.content.DialogInterface;
+import android.os.SystemClock;
+import android.webkit.JsPromptResult;
+import android.webkit.JsResult;
+import android.widget.CheckBox;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ܽ۠᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: O8YC */
+/* JADX INFO: renamed from: l.ܺۖ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E72G */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C16524 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Set f53085;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22874 f53086;
+    public boolean f53492;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final List f53087;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final JsResult f53493;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final List f53088;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC3846 f53494;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final List f53089;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final CheckBox f53495;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f53090;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public DialogInterfaceC8327 f53496;
 
-    public C16524(List list, List list2, List list3, Set set, int i, C22874 c22874) {
-        this.f53088 = list;
-        this.f53089 = list2;
-        this.f53087 = list3;
-        this.f53085 = set;
-        this.f53090 = i;
-        this.f53086 = c22874;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C17270 f53497;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final List m38899() {
-        return this.f53088;
+    public C16524(ActivityC3846 activityC3846, C17270 c17270, JsResult jsResult) {
+        this.f53494 = activityC3846;
+        this.f53497 = c17270;
+        this.f53493 = jsResult;
+        this.f53495 = c17270.f56260 >= 3 ? (CheckBox) activityC3846.m40395(R.layout.MT_Protector) : null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m38896() {
-        return this.f53089;
+    public static void m39152(final C16524 c16524, DialogInterfaceC8327 dialogInterfaceC8327) {
+        c16524.f53496 = dialogInterfaceC8327;
+        dialogInterfaceC8327.m22426(new DialogInterface.OnDismissListener() { // from class: l.᩻ۖ֫
+            @Override // android.content.DialogInterface.OnDismissListener
+            public final void onDismiss(DialogInterface dialogInterface) {
+                this.f80043.m39150(null, false, true);
+            }
+        });
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List m38894() {
-        return this.f53087;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Set m38898() {
-        return this.f53085;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m38897() {
-        return this.f53090;
-    }
-
+    /* JADX INFO: Access modifiers changed from: private */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m38895(String str) {
-        return this.f53086.m50616(str);
+    public void m39150(String str, boolean z, boolean z2) {
+        CheckBox checkBox;
+        if (this.f53492) {
+            return;
+        }
+        this.f53492 = true;
+        C17270 c17270 = this.f53497;
+        if (z2 && (checkBox = this.f53495) != null && checkBox.isChecked()) {
+            c17270.f56258 = true;
+        }
+        c17270.f56259 = SystemClock.elapsedRealtime();
+        ActivityC3846 activityC3846 = this.f53494;
+        if (activityC3846.f13146 == this) {
+            activityC3846.f13146 = null;
+        }
+        DialogInterfaceC8327 dialogInterfaceC8327 = this.f53496;
+        if (dialogInterfaceC8327 != null) {
+            dialogInterfaceC8327.dismiss();
+        }
+        JsResult jsResult = this.f53493;
+        if (!z) {
+            jsResult.cancel();
+        } else if (jsResult instanceof JsPromptResult) {
+            ((JsPromptResult) jsResult).confirm(str);
+        } else {
+            jsResult.confirm();
+        }
     }
 }

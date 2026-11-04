@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.digests.PhotonBeetleDigest;
 import org.bouncycastle.util.Bytes;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PhotonBeetleEngine extends AEADBaseEngine {
     public static final int D = 8;
     public byte[] K;
@@ -17,9 +17,9 @@ public class PhotonBeetleEngine extends AEADBaseEngine {
     public final int STATE_INBYTES;
     public boolean input_empty;
     public byte[] state;
-    public static final byte[][] RC = {new byte[]{1, 3, 7, cb.f77931l, cb.k, 11, 6, 12, 9, 2, 5, 10}, new byte[]{0, 2, 6, 15, 12, 10, 7, cb.k, 8, 3, 4, 11}, new byte[]{2, 0, 4, cb.k, cb.f77931l, 8, 5, 15, 10, 1, 6, 9}, new byte[]{6, 4, 0, 9, 10, 12, 1, 11, cb.f77931l, 5, 2, cb.k}, new byte[]{cb.f77931l, 12, 8, 1, 2, 4, 9, 3, 6, cb.k, 10, 5}, new byte[]{15, cb.k, 9, 0, 3, 5, 8, 2, 7, 12, 11, 4}, new byte[]{cb.k, 15, 11, 2, 1, 7, 10, 0, 5, cb.f77931l, 9, 6}, new byte[]{9, 11, 15, 6, 5, 3, cb.f77931l, 4, 1, 10, cb.k, 2}};
-    public static final byte[][] MixColMatrix = {new byte[]{2, 4, 2, 11, 2, 8, 5, 6}, new byte[]{12, 9, 8, cb.k, 7, 7, 5, 2}, new byte[]{4, 4, cb.k, cb.k, 9, 4, cb.k, 9}, new byte[]{1, 6, 5, 1, 12, cb.k, 15, cb.f77931l}, new byte[]{15, 12, 9, cb.k, cb.f77931l, 5, cb.f77931l, cb.k}, new byte[]{9, cb.f77931l, 5, 15, 4, 12, 9, 6}, new byte[]{12, 2, 2, 10, 3, 1, 1, cb.f77931l}, new byte[]{15, 1, cb.k, 10, 5, 10, 2, 3}};
-    public static final byte[] sbox = {12, 5, 6, 11, 9, 0, 10, cb.k, 3, cb.f77931l, 15, 8, 4, 7, 1, 2};
+    public static final byte[][] RC = {new byte[]{1, 3, 7, cb.f82047l, cb.k, 11, 6, 12, 9, 2, 5, 10}, new byte[]{0, 2, 6, 15, 12, 10, 7, cb.k, 8, 3, 4, 11}, new byte[]{2, 0, 4, cb.k, cb.f82047l, 8, 5, 15, 10, 1, 6, 9}, new byte[]{6, 4, 0, 9, 10, 12, 1, 11, cb.f82047l, 5, 2, cb.k}, new byte[]{cb.f82047l, 12, 8, 1, 2, 4, 9, 3, 6, cb.k, 10, 5}, new byte[]{15, cb.k, 9, 0, 3, 5, 8, 2, 7, 12, 11, 4}, new byte[]{cb.k, 15, 11, 2, 1, 7, 10, 0, 5, cb.f82047l, 9, 6}, new byte[]{9, 11, 15, 6, 5, 3, cb.f82047l, 4, 1, 10, cb.k, 2}};
+    public static final byte[][] MixColMatrix = {new byte[]{2, 4, 2, 11, 2, 8, 5, 6}, new byte[]{12, 9, 8, cb.k, 7, 7, 5, 2}, new byte[]{4, 4, cb.k, cb.k, 9, 4, cb.k, 9}, new byte[]{1, 6, 5, 1, 12, cb.k, 15, cb.f82047l}, new byte[]{15, 12, 9, cb.k, cb.f82047l, 5, cb.f82047l, cb.k}, new byte[]{9, cb.f82047l, 5, 15, 4, 12, 9, 6}, new byte[]{12, 2, 2, 10, 3, 1, 1, cb.f82047l}, new byte[]{15, 1, cb.k, 10, 5, 10, 2, 3}};
+    public static final byte[] sbox = {12, 5, 6, 11, 9, 0, 10, cb.k, 3, cb.f82047l, 15, 8, 4, 7, 1, 2};
 
     public enum PhotonBeetleParameters {
         pb32,

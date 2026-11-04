@@ -1,29 +1,52 @@
 package l;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Iterator;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.۫ܽ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N4OR */
+/* JADX INFO: renamed from: l.ۨᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5UK */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12538 extends AbstractC11127 {
-    @Override // l.AbstractC11127
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo28061(C13825 c13825, C6187 c6187) {
-        ArrayList arrayList = this.f37761;
-        int size = arrayList.size();
-        int i = 0;
-        while (true) {
-            EnumC21004 enumC21004 = this.f37762;
-            if (i < size) {
-                c13825.m33640(enumC21004.f68396);
-                AbstractC9011 abstractC9011M20123 = C7599.m20123(this.f37759, enumC21004);
-                arrayList.set(i, abstractC9011M20123);
-                abstractC9011M20123.m23324(c13825, i, c6187);
-                i++;
+public final class C12538 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m31153(C5564 c5564, C2161 c2161, InterfaceC2665 interfaceC2665, InterfaceC16791 interfaceC16791, boolean z) throws IOException {
+        int iMo8823 = interfaceC2665.mo8823();
+        if (z && EnumC2536.STATIC.m8459(iMo8823) && EnumC2536.FINAL.m8459(iMo8823) && interfaceC16791 != null) {
+            if (C16922.m39905(interfaceC16791)) {
+                interfaceC16791 = null;
             } else {
-                c6187.m17185(enumC21004, arrayList);
-                return;
+                c2161.getClass();
+                c2161.write("# The value of this static final field might be set in the static constructor\n", 0, 78);
             }
+        }
+        c2161.getClass();
+        c2161.write(".field ", 0, 7);
+        int iMo8824 = interfaceC2665.mo8823();
+        Set setMo8821 = interfaceC2665.mo8821();
+        for (EnumC2536 enumC2536 : EnumC2536.m8453(iMo8824)) {
+            c2161.write(enumC2536.toString());
+            c2161.write(32);
+        }
+        Iterator it = setMo8821.iterator();
+        while (it.hasNext()) {
+            c2161.write(((EnumC13722) it.next()).toString());
+            c2161.write(32);
+        }
+        C14684.m35311((Writer) c2161, (InterfaceC8304) interfaceC2665, true);
+        if (interfaceC16791 != null) {
+            c2161.write(" = ", 0, 3);
+            c5564.getClass();
+            AbstractC3589.m11645(c2161, interfaceC16791);
+        }
+        c2161.write(10);
+        Set annotations = interfaceC2665.getAnnotations();
+        if (annotations.size() > 0) {
+            c2161.m7439();
+            c5564.getClass();
+            C13701.m33494(c2161, annotations);
+            c2161.m7435();
+            c2161.write(".end field\n", 0, 11);
         }
     }
 }

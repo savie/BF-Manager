@@ -38,7 +38,7 @@ public class e extends com.alipay.sdk.m.t.e {
     public String a(com.alipay.sdk.m.w.a aVar) {
         HashMap map = new HashMap();
         map.put(com.alipay.sdk.m.t.e.k, "/sdk/log");
-        map.put(com.alipay.sdk.m.t.e.f77915l, "1.0.0");
+        map.put(com.alipay.sdk.m.t.e.f82031l, "1.0.0");
         HashMap map2 = new HashMap();
         map2.put(t, "1.0");
         return a(aVar, map, map2);

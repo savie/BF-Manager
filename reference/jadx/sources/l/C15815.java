@@ -1,69 +1,97 @@
 package l;
 
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.util.zip.Inflater;
+import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-/* JADX INFO: renamed from: l.ܺ۠ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97TY */
+/* JADX INFO: renamed from: l.ܶۗ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 39WK */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15815 implements InterfaceC6951 {
+public final class C15815 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Pattern f51456 = Pattern.compile("^((.*)\\._)?_?(.*)\\._sub\\._([^.]*)\\._([^.]*)\\.(.*)\\.?$");
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C20753 f51182;
+    public static final Pattern f51455 = Pattern.compile("^((.*)?\\._)?([^.]*)\\._([^.]*)\\.(.*)\\.?$");
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public Inflater f51183;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C2460 f51181 = new C2460();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2460 f51184 = new C2460();
-
-    @Override // l.InterfaceC6951
-    public final /* synthetic */ void reset() {
-    }
-
-    @Override // l.InterfaceC6951
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC9753 mo11108(int i, int i2, byte[] bArr) {
-        return C22474.m49977(this, bArr, i2);
-    }
-
-    public C15815(List list) {
-        C20753 c20753 = new C20753();
-        this.f51182 = c20753;
-        c20753.m46757(new String((byte[]) list.get(0), StandardCharsets.UTF_8));
-    }
-
-    @Override // l.InterfaceC6951
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11109(byte[] bArr, int i, int i2, C4128 c4128, InterfaceC1008 interfaceC1008) {
-        C0612 c0612M46755;
-        C2460 c2460 = this.f51181;
-        c2460.m7508(i2 + i, bArr);
-        c2460.m7510(i);
-        if (this.f51183 == null) {
-            this.f51183 = new Inflater();
-        }
-        Inflater inflater = this.f51183;
-        String str = C17983.f57504;
-        if (c2460.m7503() > 0 && c2460.m7534() == 120) {
-            C2460 c2461 = this.f51184;
-            if (C17983.m41843(c2460, c2461, inflater)) {
-                c2460.m7508(c2461.m7509(), c2461.m7518());
-            }
-        }
-        C20753 c20753 = this.f51182;
-        c20753.m46756();
-        int iM7503 = c2460.m7503();
-        if (iM7503 < 2 || c2460.m7519() != iM7503) {
-            c0612M46755 = null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static HashMap m37743(String str) {
+        String strM40633;
+        String strSubstring;
+        String str2;
+        String strM37742;
+        String str3;
+        String strM37743;
+        String strM37744;
+        String strM37745;
+        String lowerCase = str.toLowerCase();
+        String strM37746 = "";
+        if (lowerCase.contains("in-addr.arpa") || lowerCase.contains("ip6.arpa")) {
+            int iIndexOf = lowerCase.contains("in-addr.arpa") ? lowerCase.indexOf("in-addr.arpa") : lowerCase.indexOf("ip6.arpa");
+            strM40633 = C17307.m40633(str.substring(0, iIndexOf));
+            strSubstring = str.substring(iIndexOf);
         } else {
-            c20753.m46758(c2460);
-            c0612M46755 = c20753.m46755(c2460);
+            if (!lowerCase.contains("_") && lowerCase.contains(".")) {
+                int iIndexOf2 = lowerCase.indexOf(46);
+                strM40633 = C17307.m40633(str.substring(0, iIndexOf2));
+                strSubstring = C17307.m40633(str.substring(iIndexOf2));
+            } else {
+                Matcher matcher = f51456.matcher(lowerCase);
+                if (matcher.matches()) {
+                    strM37743 = m37742(str, matcher, 2);
+                    strM37746 = m37742(str, matcher, 3);
+                    strM37744 = m37742(str, matcher, 4);
+                    strM37742 = m37742(str, matcher, 5);
+                    strM37745 = m37742(str, matcher, 6);
+                } else {
+                    Matcher matcher2 = f51455.matcher(lowerCase);
+                    if (matcher2.matches()) {
+                        strM37743 = m37742(str, matcher2, 2);
+                        strM37744 = m37742(str, matcher2, 3);
+                        strM37742 = m37742(str, matcher2, 4);
+                        strM37745 = m37742(str, matcher2, 5);
+                    } else {
+                        str2 = "";
+                        str3 = str2;
+                        strM37742 = str3;
+                    }
+                }
+                String str4 = strM37745;
+                str2 = strM37743;
+                lowerCase = strM37744;
+                String str5 = strM37746;
+                strM37746 = str4;
+                str3 = str5;
+            }
+            String strM40634 = C17307.m40633(lowerCase);
+            String strM40635 = C17307.m40633(strM37746);
+            HashMap map = new HashMap(5);
+            map.put(EnumC20662.Instance, str2);
+            map.put(EnumC20662.Application, strM40634);
+            map.put(EnumC20662.Protocol, strM37742);
+            map.put(EnumC20662.Domain, strM40635);
+            map.put(EnumC20662.Subtype, str3);
+            return map;
         }
-        interfaceC1008.accept(new C17513(-9223372036854775807L, 5000000L, c0612M46755 != null ? AbstractC22433.of((Object) c0612M46755) : AbstractC22433.of()));
+        lowerCase = "";
+        strM37742 = lowerCase;
+        strM37746 = strSubstring;
+        str2 = strM40633;
+        str3 = strM37742;
+        String strM40636 = C17307.m40633(lowerCase);
+        String strM40637 = C17307.m40633(strM37746);
+        HashMap map2 = new HashMap(5);
+        map2.put(EnumC20662.Instance, str2);
+        map2.put(EnumC20662.Application, strM40636);
+        map2.put(EnumC20662.Protocol, strM37742);
+        map2.put(EnumC20662.Domain, strM40637);
+        map2.put(EnumC20662.Subtype, str3);
+        return map2;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m37742(String str, Matcher matcher, int i) {
+        return matcher.start(i) != -1 ? str.substring(matcher.start(i), matcher.end(i)) : "";
     }
 }

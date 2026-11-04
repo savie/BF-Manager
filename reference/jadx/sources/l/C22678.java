@@ -1,37 +1,25 @@
 package l;
 
-import net.sf.sevenzipjbinding.PropID;
+import java.util.Collections;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩺֫۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: YB6A */
+/* JADX INFO: renamed from: l.᩸۠ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB7W */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22678 {
+public final class C22678 extends AbstractC14472 implements InterfaceC24170 {
+    @Override // l.InterfaceC24170
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14635(C18202 c18202) {
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f73837;
+    @Override // l.C18202
+    /* JADX INFO: renamed from: ۫ */
+    public final String mo1286() {
+        return "solidColor";
+    }
 
-    static {
-        int[] iArr = new int[PropID.values().length];
-        f73837 = iArr;
-        try {
-            iArr[PropID.SIZE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f73837[PropID.PACKED_SIZE.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f73837[PropID.IS_FOLDER.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f73837[PropID.ENCRYPTED.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f73837[PropID.TIME_TYPE.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
+    @Override // l.InterfaceC24170
+    public final List getChildren() {
+        return Collections.EMPTY_LIST;
     }
 }

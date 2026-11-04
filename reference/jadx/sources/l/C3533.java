@@ -1,51 +1,53 @@
 package l;
 
-import bin.mt.json.JSONValue;
+import android.graphics.drawable.Drawable;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
-/* JADX INFO: renamed from: l.ۗ᩹᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAGN */
-/* JADX INFO: loaded from: classes2.dex */
-public class C3533 extends JSONValue {
+/* JADX INFO: renamed from: l.ۗܺ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8YW */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3533 extends AbstractC15465 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f13019;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f12132 = true;
 
-    @Override // bin.mt.json.JSONValue
-    public boolean isString() {
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C3533 m11560() {
+        return new C3533();
     }
 
-    public C3533(String str) {
-        if (str == null) {
-            throw new NullPointerException("string is null");
+    public C3533() {
+        if (!AbstractC20687.m47325()) {
+            throw new IllegalStateException("`pl.droidsonroids.gif:android-gif-drawable:*` dependency is missing, please add to your project explicitly if you wish to use GIF media-decoder");
         }
-        this.f13019 = str;
     }
 
-    @Override // bin.mt.json.JSONValue
-    public void write(C4323 c4323) throws IOException {
-        c4323.m12155(this.f13019);
-    }
-
-    @Override // bin.mt.json.JSONValue
-    public String asString() {
-        return this.f13019;
-    }
-
-    @Override // bin.mt.json.JSONValue
-    public int hashCode() {
-        return this.f13019.hashCode();
-    }
-
-    @Override // bin.mt.json.JSONValue
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    @Override // l.AbstractC15465
+    /* JADX INFO: renamed from: ۙ */
+    public final Drawable mo9838(InputStream inputStream) {
+        try {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            byte[] bArr = new byte[8192];
+            while (true) {
+                int i = inputStream.read(bArr, 0, 8192);
+                if (i == -1) {
+                    break;
+                }
+                byteArrayOutputStream.write(bArr, 0, i);
+            }
+            try {
+                C17311 c17311 = new C17311(byteArrayOutputStream.toByteArray());
+                if (!this.f12132) {
+                    c17311.stop();
+                }
+                return c17311;
+            } catch (IOException e) {
+                throw new IllegalStateException("Exception creating GifDrawable", e);
+            }
+        } catch (IOException e2) {
+            throw new IllegalStateException("Cannot read GIF input-stream", e2);
         }
-        if (obj != null && getClass() == obj.getClass()) {
-            return this.f13019.equals(((C3533) obj).f13019);
-        }
-        return false;
     }
 }

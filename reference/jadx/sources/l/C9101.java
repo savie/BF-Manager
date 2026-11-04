@@ -1,31 +1,32 @@
 package l;
 
-import android.content.Intent;
+import android.database.DataSetObserver;
 
-/* JADX INFO: renamed from: l.ۡ᩶ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: FB8V */
+/* JADX INFO: renamed from: l.ۡۗᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N15M */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9101 {
+public final class C9101 extends DataSetObserver {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC6462 f31026;
+    public final /* synthetic */ DialogInterfaceC8327 f29571;
 
-    public C9101(AbstractC6462 abstractC6462) {
-        this.f31026 = abstractC6462;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6865 f29572;
+
+    public C9101(C6865 c6865, DialogInterfaceC8327 dialogInterfaceC8327) {
+        this.f29572 = c6865;
+        this.f29571 = dialogInterfaceC8327;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m23450(Intent intent) {
-        this.f31026.mo17659(intent);
+    @Override // android.database.DataSetObserver
+    public final void onChanged() {
+        if (this.f29572.f22796.isEmpty()) {
+            this.f29571.dismiss();
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m23451(Class cls) {
-        this.f31026.mo17659(cls);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m23449() {
-        this.f31026.mo17658();
+    @Override // android.database.DataSetObserver
+    public final void onInvalidated() {
+        this.f29571.dismiss();
     }
 }

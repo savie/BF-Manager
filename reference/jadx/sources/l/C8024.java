@@ -1,71 +1,61 @@
 package l;
 
-import android.content.pm.PackageInfo;
-import android.os.Environment;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.۠۟ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAOC */
+/* JADX INFO: renamed from: l.۟ܽܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44G0 */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C8024 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21124(C17196 c17196) {
-        return m21125(c17196, "Android/data/");
-    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final int[] f26636 = new int[256];
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21122() {
-        return m21123("Android/data/");
-    }
+    public final int[] f26637 = new int[3];
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21128(C17196 c17196) {
-        return m21125(c17196, "Android/obb/");
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21126() {
-        return m21123("Android/obb/");
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21125(C17196 c17196, String str) {
-        ArrayList arrayListM21127 = m21127(str);
-        for (int i = 0; i < arrayListM21127.size(); i++) {
-            C18607 c18607 = (C18607) arrayListM21127.get(i);
-            File file = new File(c17196.mo33986(), c18607.f59217);
-            StringBuilder sbM23356 = C9023.m23356(str);
-            sbM23356.append(c18607.f59217);
-            String string = sbM23356.toString();
-            arrayListM21127.set(i, new C17196(file, string, string, new C16491(-1L, c18607.f59216, true)));
-        }
-        return arrayListM21127;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21123(String str) {
-        ArrayList arrayList = new ArrayList();
-        Iterator it = m21127(str).iterator();
-        while (it.hasNext()) {
-            arrayList.add(((C18607) it.next()).f59217);
-        }
-        return arrayList;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m21127(String str) {
-        ArrayList arrayList = new ArrayList();
-        File externalStorageDirectory = Environment.getExternalStorageDirectory();
-        for (PackageInfo packageInfo : C16737.m39292().getInstalledPackages(0)) {
-            StringBuilder sbM23356 = C9023.m23356(str);
-            sbM23356.append(packageInfo.packageName);
-            File file = new File(externalStorageDirectory, sbM23356.toString());
-            if (file.isDirectory()) {
-                arrayList.add(new C18607(file.lastModified(), packageInfo.packageName));
+    static {
+        for (int i = 0; i < 256; i++) {
+            int i2 = i;
+            for (int i3 = 0; i3 < 8; i3++) {
+                int i4 = i2 & 1;
+                i2 >>>= 1;
+                if (i4 == 1) {
+                    i2 ^= -306674912;
+                }
             }
+            f26636[i] = i2;
         }
-        return arrayList;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m21891(byte[] bArr) {
+        int[] iArr = this.f26637;
+        iArr[0] = 305419896;
+        iArr[1] = 591751049;
+        iArr[2] = 878082192;
+        for (byte b : bArr) {
+            m21890(b);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m21890(byte b) {
+        int[] iArr = this.f26637;
+        int i = iArr[0];
+        int i2 = i >>> 8;
+        int i3 = (b ^ i) & 255;
+        int[] iArr2 = f26636;
+        int i4 = iArr2[i3] ^ i2;
+        iArr[0] = i4;
+        int i5 = iArr[1] + (i4 & 255);
+        iArr[1] = i5;
+        int i6 = (i5 * 134775813) + 1;
+        iArr[1] = i6;
+        int i7 = iArr[2];
+        iArr[2] = iArr2[(i7 ^ ((byte) (i6 >> 24))) & 255] ^ (i7 >>> 8);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte m21889() {
+        int i = this.f26637[2] | 2;
+        return (byte) ((i * (i ^ 1)) >>> 8);
     }
 }

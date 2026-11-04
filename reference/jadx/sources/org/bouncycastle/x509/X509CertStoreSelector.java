@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.security.cert.Certificate;
 import java.security.cert.X509CertSelector;
 import java.security.cert.X509Certificate;
-import l.C15489;
+import l.C13645;
 import org.bouncycastle.util.Selector;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -53,7 +53,7 @@ public class X509CertStoreSelector extends X509CertSelector implements Selector 
             x509CertStoreSelector.setSubjectPublicKey(x509CertSelector.getSubjectPublicKey());
             return x509CertStoreSelector;
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("error in passed in selector: ", e));
+            throw new IllegalArgumentException(C13645.m33383("error in passed in selector: ", e));
         }
     }
 }

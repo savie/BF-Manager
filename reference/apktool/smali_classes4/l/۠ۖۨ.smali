@@ -1,150 +1,166 @@
-.class public final synthetic Ll/۠ۖۨ;
-.super Ljava/lang/Object;
-.source "B53K"
-
-# interfaces
-.implements Ll/ܿ۬ᩴ;
+.class public final Ll/۠ۖۨ;
+.super Ll/ܰۖۨ;
+.source "L5UY"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۟ۖۨ;
+.field public final ܰ:Ll/᩵۠ۨ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۟ۖۨ;)V
+.method public constructor <init>(Ll/᩵۠ۨ;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 59
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
 
-    iput-object p1, p0, Ll/۠ۖۨ;->ܺ:Ll/۟ۖۨ;
+    .line 60
+    iput-object p1, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/᩻ۖۨ;Ll/ۘ۠ۨ;B)V
+    .locals 0
+
+    .line 49
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
+
+    add-int/lit8 p3, p3, 0x1
+
+    .line 50
+    invoke-virtual {p2, p3}, Ll/ۘ۠ۨ;->᩷(I)[B
+
+    move-result-object p2
+
+    invoke-static {p2}, Ll/ۗۖۘ;->ۤ([B)J
+
+    move-result-wide p2
+
+    long-to-int p3, p2
+
+    .line 51
+    iget-object p1, p1, Ll/᩻ۖۨ;->᩵:Ll/᩷۠ۨ;
+
+    invoke-virtual {p1, p3}, Ll/᩷۠ۨ;->᩷(I)Ll/ۤ۠ۨ;
+
+    move-result-object p1
+
+    check-cast p1, Ll/᩵۠ۨ;
+
+    iput-object p1, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(I)Ljava/lang/Object;
-    .locals 0
-
-    .line 60
-    invoke-virtual {p0, p1}, Ll/۠ۖۨ;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 93
-    invoke-virtual {p0, p1}, Ll/۠ۖۨ;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 230
-    new-instance p1, Ljava/lang/NoSuchMethodError;
-
-    invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
-
-    throw p1
-.end method
-
-.method public final synthetic containsKey(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۫۬ᩴ;->ۙ(Ll/ܿ۬ᩴ;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/۠ۖۨ;->ܺ:Ll/۟ۖۨ;
+    .line 103
+    iget-object v0, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
 
-    invoke-interface {v0, p1}, Ll/ᩳ֨ۨ;->getType(I)Ll/᩵֨ۨ;
+    invoke-virtual {v0}, Ll/᩵۠ۨ;->hashCode()I
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۫۬ᩴ;->ܰ(Ll/ܿ۬ᩴ;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 0
-
-    .line 111
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final synthetic size()I
-    .locals 1
-
-    const/4 v0, -0x1
+    move-result v0
 
     return v0
 .end method
 
-.method public final ۙ(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final ۙ(I)I
+    .locals 2
 
-    .line 73
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 82
+    iget-object v0, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-virtual {v0}, Ll/ۤ۠ۨ;->ᩴ()I
 
-    throw p1
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->ܳ(J)B
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
 .end method
 
-.method public final synthetic ۙ(I)Z
-    .locals 0
+.method public final ۙ(Ll/᩺۠ۨ;)V
+    .locals 3
 
-    const/4 p1, 0x1
+    .line 67
+    iget-object v0, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
 
-    return p1
+    invoke-virtual {v0}, Ll/ۤ۠ۨ;->ᩴ()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->ۤ(J)[B
+
+    move-result-object v0
+
+    .line 74
+    sget-object v1, Ll/ۜۖۨ;->ᩴۙ:Ll/ۜۖۨ;
+
+    iget-byte v1, v1, Ll/ۜۖۨ;->ܰ:B
+
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    shl-int/lit8 v2, v2, 0x5
+
+    or-int/2addr v1, v2
+
+    invoke-virtual {p1, v1}, Ll/᩺۠ۨ;->᩷(I)V
+
+    const/4 v1, 0x0
+
+    .line 347
+    array-length v2, v0
+
+    invoke-virtual {p1, v0, v1, v2}, Ll/᩺۠ۨ;->ۙ([BII)V
+
+    return-void
 .end method
 
-.method public final synthetic ۨ()Ljava/lang/Object;
+.method public final ܽ()Ll/ۜۖۨ;
     .locals 1
 
-    const/4 v0, 0x0
+    .line 98
+    sget-object v0, Ll/ۜۖۨ;->ᩴۙ:Ll/ۜۖۨ;
 
     return-object v0
+.end method
+
+.method public final ᩷(Ll/ܰۖۨ;)I
+    .locals 1
+
+    .line 89
+    check-cast p1, Ll/۠ۖۨ;
+
+    .line 91
+    iget-object v0, p0, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
+
+    invoke-virtual {v0}, Ll/ۤ۠ۨ;->ᩴ()I
+
+    move-result v0
+
+    iget-object p1, p1, Ll/۠ۖۨ;->ܰ:Ll/᩵۠ۨ;
+
+    invoke-virtual {p1}, Ll/ۤ۠ۨ;->ᩴ()I
+
+    move-result p1
+
+    sub-int/2addr v0, p1
+
+    return v0
 .end method

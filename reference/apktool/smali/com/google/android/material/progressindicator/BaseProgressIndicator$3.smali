@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;
-.super Ll/ۖ֫ܰ;
+.super Ll/۟ۖ᩷;
 .source "BaseProgressIndicator.java"
 
 
@@ -14,7 +14,7 @@
     .line 839
     iput-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;
 
-    invoke-direct {p0}, Ll/ۖ֫ܰ;-><init>()V
+    invoke-direct {p0}, Ll/۟ۖ᩷;-><init>()V
 
     return-void
 .end method

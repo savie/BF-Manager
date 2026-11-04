@@ -1,66 +1,69 @@
-.class public final synthetic Ll/ۚ᩹ۚ;
-.super Ljava/lang/Object;
-.source "4AWI"
-
-# interfaces
-.implements Ll/ܿۧ;
+.class public final Ll/ۚ᩹ۚ;
+.super Ll/ۖᩴۤ;
+.source "S776"
 
 
 # instance fields
-.field public final synthetic ۙ:Ljava/util/List;
-
-.field public final synthetic ۨ:Ll/֨᩹ۚ;
-
-.field public final synthetic ܰ:I
+.field public final ᩸:Ll/ᩳܶۚ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;ILl/֨᩹ۚ;)V
+.method public constructor <init>(Ll/ۜܳۤ;Ll/ᩳܶۚ;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1018
+    invoke-direct {p0, p1}, Ll/ۖᩴۤ;-><init>(Ll/ۜܳۤ;)V
 
-    iput-object p1, p0, Ll/ۚ᩹ۚ;->ۙ:Ljava/util/List;
-
-    iput p2, p0, Ll/ۚ᩹ۚ;->ܰ:I
-
-    iput-object p3, p0, Ll/ۚ᩹ۚ;->ۨ:Ll/֨᩹ۚ;
+    .line 1019
+    iput-object p2, p0, Ll/ۚ᩹ۚ;->᩸:Ll/ᩳܶۚ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final ᩷(II)Ljava/lang/String;
     .locals 2
 
-    .line 2
-    check-cast p1, Ll/᩷᩹ۚ;
+    ushr-int/lit8 v0, p2, 0x18
 
-    .line 1157
-    iget v0, p0, Ll/ۚ᩹ۚ;->ܰ:I
+    and-int/lit16 v0, v0, 0xff
 
-    add-int/lit8 v0, v0, 0x1
+    .line 1025
+    iget-object v1, p0, Ll/ۚ᩹ۚ;->᩸:Ll/ᩳܶۚ;
 
-    iget-object v1, p0, Ll/ۚ᩹ۚ;->ۙ:Ljava/util/List;
+    iget-boolean v1, v1, Ll/ᩳܶۚ;->ۙ:Z
 
-    invoke-interface {v1, v0, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    .line 1158
-    iget-object p1, p0, Ll/ۚ᩹ۚ;->ۨ:Ll/֨᩹ۚ;
+    const/4 v1, 0x1
 
-    iget-object v1, p1, Ll/֨᩹ۚ;->ۙ:Ll/ۗۚۚ;
+    if-eq v0, v1, :cond_0
 
-    invoke-virtual {v1, v0}, Ll/֡۫ܰ;->notifyItemInserted(I)V
+    .line 1026
+    invoke-static {p2}, Ll/ܶ᩹ۚ;->ۙ(I)Ljava/lang/String;
 
-    .line 1159
-    iget-object p1, p1, Ll/֨᩹ۚ;->ۘ:Ll/ܿܿܰ;
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Ll/ܿܿܰ;->smoothScrollToPosition(I)V
+    return-object p1
 
-    .line 1160
-    invoke-static {}, Ll/۟᩹ۚ;->ۚ()V
+    .line 1028
+    :cond_0
+    invoke-super {p0, p1, p2}, Ll/ۖᩴۤ;->᩷(II)Ljava/lang/String;
 
-    return-void
+    move-result-object p1
+
+    .line 1029
+    invoke-static {p1}, Ll/ܶ᩹ۚ;->ۙ(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p2}, Ll/ܶ᩹ۚ;->ۙ(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_1
+    return-object p1
 .end method

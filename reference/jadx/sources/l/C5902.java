@@ -1,66 +1,61 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: D1JP */
-/* JADX INFO: loaded from: classes2.dex */
+import java.util.ArrayList;
+import java.util.HashMap;
+
+/* JADX INFO: renamed from: l.ۚ᩶᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: NB3C */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C5902 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean[] f20140 = new boolean[3];
+    public final String f20204;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final boolean m16170(int i, int i2) {
-        return (i & i2) == i2;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C23056 f20205;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f20206;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final CharSequence f20207;
+
+    public C5902() {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m16169(C15781 c15781, C5196 c5196, C20719 c20719) {
-        c20719.f67424 = -1;
-        C8725 c8725 = c20719.f67404;
-        C8725 c8726 = c20719.f67387;
-        C8725 c8727 = c20719.f67392;
-        C8725 c8728 = c20719.f67421;
-        C8725 c8729 = c20719.f67385;
-        c20719.f67390 = -1;
-        EnumC7313 enumC7313 = c15781.f67434[0];
-        EnumC7313 enumC7314 = EnumC7313.WRAP_CONTENT;
-        if (enumC7313 != enumC7314 && c20719.f67434[0] == EnumC7313.MATCH_PARENT) {
-            int i = c8729.f29979;
-            int iM46640 = c15781.m46640() - c8728.f29979;
-            c8729.f29975 = c5196.m14364(c8729);
-            c8728.f29975 = c5196.m14364(c8728);
-            c5196.m14367(c8729.f29975, i);
-            c5196.m14367(c8728.f29975, iM46640);
-            c20719.f67424 = 2;
-            c20719.f67372 = i;
-            int i2 = iM46640 - i;
-            c20719.f67425 = i2;
-            int i3 = c20719.f67380;
-            if (i2 < i3) {
-                c20719.f67425 = i3;
-            }
-        }
-        if (c15781.f67434[1] == enumC7314 || c20719.f67434[1] != EnumC7313.MATCH_PARENT) {
-            return;
-        }
-        int i4 = c8727.f29979;
-        int iM46619 = c15781.m46619() - c8726.f29979;
-        c8727.f29975 = c5196.m14364(c8727);
-        c8726.f29975 = c5196.m14364(c8726);
-        c5196.m14367(c8727.f29975, i4);
-        c5196.m14367(c8726.f29975, iM46619);
-        if (c20719.f67379 > 0 || c20719.m46606() == 8) {
-            C15075 c15075M14364 = c5196.m14364(c8725);
-            c8725.f29975 = c15075M14364;
-            c5196.m14367(c15075M14364, c20719.f67379 + i4);
-        }
-        c20719.f67390 = 2;
-        c20719.f67415 = i4;
-        int i5 = iM46619 - i4;
-        c20719.f67396 = i5;
-        int i6 = c20719.f67405;
-        if (i5 < i6) {
-            c20719.f67396 = i6;
-        }
+    public C5902(String str, String str2, C23056 c23056) {
+        this.f20207 = str;
+        this.f20204 = str2;
+        this.f20205 = c23056;
+        this.f20206 = null;
+    }
+
+    public C5902(String str, CharSequence charSequence, int i) {
+        this.f20207 = charSequence;
+        this.f20204 = str;
+        this.f20205 = new C23056(0, i, false, 0, null, null, null);
+        this.f20206 = null;
+    }
+
+    public C5902(CharSequence charSequence, String str, ArrayList arrayList, int i) {
+        this.f20207 = charSequence;
+        this.f20204 = str;
+        this.f20205 = new C23056(0, i, false, 0, null, null, null);
+        this.f20206 = arrayList;
+    }
+
+    public C5902(String str, boolean z, int i, AbstractC22044 abstractC22044, C21246 c21246, HashMap map) {
+        this.f20207 = str;
+        this.f20204 = "\n";
+        this.f20205 = new C23056(255, 0, z, i, abstractC22044, c21246, map);
+        this.f20206 = null;
+    }
+
+    public C5902(String str, int i) {
+        this.f20207 = str;
+        this.f20204 = "\n";
+        this.f20205 = new C23056(i, 0, false, 0, null, null, null);
+        this.f20206 = null;
     }
 }

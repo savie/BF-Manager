@@ -1,159 +1,154 @@
-.class public abstract Ll/᩺ۖۨ;
-.super Ljava/lang/Object;
-.source "64N8"
-
-# interfaces
-.implements Ll/ۜ֨ۨ;
+.class public final Ll/᩺ۖۨ;
+.super Ll/ܰۖۨ;
+.source "J5X9"
 
 
 # instance fields
-.field public ܺ:Ll/ۧۨۨ;
+.field public final ܰ:D
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(D)V
+    .locals 0
 
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 56
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
 
-    .line 10
-    sget-object v0, Ll/ۧۨۨ;->ܽ:Ll/ۧۨۨ;
+    .line 57
+    iput-wide p1, p0, Ll/᩺ۖۨ;->ܰ:D
 
-    iput-object v0, p0, Ll/᩺ۖۨ;->ܺ:Ll/ۧۨۨ;
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۘ۠ۨ;B)V
+    .locals 0
+
+    .line 46
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
+
+    add-int/lit8 p2, p2, 0x1
+
+    .line 47
+    invoke-virtual {p1, p2}, Ll/ۘ۠ۨ;->᩷(I)[B
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۗۖۘ;->ۙ([B)J
+
+    move-result-wide p1
+
+    .line 48
+    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ll/᩺ۖۨ;->ܰ:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ֫()Ljava/lang/Iterable;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    .line 287
-    invoke-virtual {p0}, Ll/᩺ۖۨ;->ۨ()Ljava/lang/Iterable;
+    .line 101
+    iget-wide v0, p0, Ll/᩺ۖۨ;->ܰ:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide v0
+
+    long-to-int v1, v0
+
+    return v1
+.end method
+
+.method public final ۙ(I)I
+    .locals 2
+
+    add-int/lit8 p1, p1, 0x1
+
+    .line 79
+    iget-wide v0, p0, Ll/᩺ۖۨ;->ܰ:D
+
+    .line 80
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide v0
+
+    .line 79
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->᩸(J)I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    return v0
+.end method
+
+.method public final ۙ(Ll/᩺۠ۨ;)V
+    .locals 3
+
+    .line 64
+    iget-wide v0, p0, Ll/᩺ۖۨ;->ܰ:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->ۙ(J)[B
 
     move-result-object v0
 
-    return-object v0
-.end method
+    .line 71
+    sget-object v1, Ll/ۜۖۨ;->֨:Ll/ۜۖۨ;
 
-.method public final ۙ(Ll/۟֨ۨ;)V
-    .locals 4
+    iget-byte v1, v1, Ll/ۜۖۨ;->ܰ:B
 
-    .line 40
-    check-cast p1, Ll/ۜ֨ۨ;
+    array-length v2, v0
 
-    .line 41
-    move-object v0, p0
+    add-int/lit8 v2, v2, -0x1
 
-    check-cast v0, Ll/᩺ۚۨ;
+    shl-int/lit8 v2, v2, 0x5
 
-    invoke-virtual {v0}, Ll/᩺ۚۨ;->ۡ()I
+    or-int/2addr v1, v2
 
-    move-result v1
-
-    invoke-interface {p1}, Ll/ۜ֨ۨ;->ۡ()I
-
-    move-result v2
-
-    if-ne v1, v2, :cond_1
+    invoke-virtual {p1, v1}, Ll/᩺۠ۨ;->᩷(I)V
 
     const/4 v1, 0x0
 
-    .line 43
-    :goto_0
-    invoke-virtual {v0}, Ll/᩺ۚۨ;->ۡ()I
+    .line 347
+    array-length v2, v0
 
-    move-result v2
+    invoke-virtual {p1, v0, v1, v2}, Ll/᩺۠ۨ;->ۙ([BII)V
 
-    if-ge v1, v2, :cond_0
-
-    .line 38
-    invoke-virtual {v0, v1}, Ll/᩺ۚۨ;->ۜ(I)Ll/۟ۚۨ;
-
-    move-result-object v2
-
-    .line 44
-    invoke-interface {p1, v1}, Ll/ۜ֨ۨ;->ۜ(I)Ll/ᩳ֨ۨ;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ll/۟ۖۨ;->ۙ(Ll/۟֨ۨ;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
-
-    .line 42
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw p1
 .end method
 
-.method public final ۨ()Ljava/lang/Iterable;
-    .locals 3
+.method public final ܽ()Ll/ۜۖۨ;
+    .locals 1
 
-    .line 18
-    new-instance v0, Ll/ܳۖۨ;
-
-    invoke-interface {p0}, Ll/ۜ֨ۨ;->ۡ()I
-
-    move-result v1
-
-    new-instance v2, Ll/ۜۖۨ;
-
-    invoke-direct {v2, p0}, Ll/ۜۖۨ;-><init>(Ll/᩺ۖۨ;)V
-
-    invoke-direct {v0, v1, v2}, Ll/ܳۖۨ;-><init>(ILl/ܿ۬ᩴ;)V
+    .line 96
+    sget-object v0, Ll/ۜۖۨ;->֨:Ll/ۜۖۨ;
 
     return-object v0
 .end method
 
-.method public final ܽ()Z
-    .locals 3
+.method public final ᩷(Ll/ܰۖۨ;)I
+    .locals 4
 
-    .line 31
-    invoke-interface {p0}, Ll/ۜ֨ۨ;->֫()Ljava/lang/Iterable;
+    .line 87
+    check-cast p1, Ll/᩺ۖۨ;
 
-    move-result-object v0
+    .line 89
+    iget-wide v0, p0, Ll/᩺ۖۨ;->ܰ:D
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-wide v2, p1, Ll/᩺ۖۨ;->ܰ:D
 
-    move-result-object v0
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result p1
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ᩳ֨ۨ;
-
-    .line 32
-    invoke-interface {v1}, Ll/ᩳ֨ۨ;->֨()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    return v2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
+    return p1
 .end method

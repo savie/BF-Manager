@@ -1,87 +1,44 @@
 package l;
 
-import android.content.Context;
-import android.text.TextUtils;
-import android.util.AttributeSet;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import bin.mt.plus.R;
+import com.umeng.commonsdk.statistics.UMErrorCode;
 
-/* JADX INFO: renamed from: l.ۖ᩷ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I69B */
+/* JADX INFO: renamed from: l.ۖܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 09F6 */
 /* JADX INFO: loaded from: classes3.dex */
-public class C2780 extends C8426 {
+public final class C2780 extends C6752 {
 
-    /* JADX INFO: renamed from: ֨ܰ, reason: not valid java name and contains not printable characters */
-    public Spinner f10608;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C25398 f9164;
 
-    /* JADX INFO: renamed from: ۚܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayAdapter f10609;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C0653 f9165;
 
-    /* JADX INFO: renamed from: ᩹ܰ, reason: not valid java name and contains not printable characters */
-    public final AdapterView.OnItemSelectedListener f10610;
-
-    public C2780(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.MT_Protector);
+    public C2780(EnumC15700 enumC15700, C25398 c25398, long j, long j2, C0653 c0653, int i) {
+        super(49, enumC15700, EnumC23906.SMB2_WRITE, j, j2, Math.min(i, c0653.mo2855()));
+        this.f9164 = c25398;
+        this.f9165 = c0653;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2780(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i, 0);
-        this.f10610 = new C11954(this);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item);
-        this.f10609 = arrayAdapter;
-        arrayAdapter.clear();
-        if (m22074() != null) {
-            for (CharSequence charSequence : m22074()) {
-                arrayAdapter.add(charSequence.toString());
-            }
-        }
+    @Override // l.C24652
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo7006(C7453 c7453) {
+        c7453.m56023(this.f79801);
+        c7453.m56023(UMErrorCode.E_UM_BE_DEFLATE_FAILED);
+        c7453.m56025(m18853());
+        C0653 c0653 = this.f9165;
+        c7453.m56014(c0653.m21991());
+        this.f9164.m56760(c7453);
+        c7453.m56025(0L);
+        c7453.m56025(Math.max(0, c0653.mo2855() - m18853()));
+        c7453.m56023(0);
+        c7453.m56023(0);
+        c7453.m56025(0L);
+        c0653.m21990(c7453, ((C18684) mo3632()).m43470());
     }
 
-    @Override // l.AbstractC14071, l.C4751
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final void mo8454() {
-        this.f10608.performClick();
-    }
-
-    @Override // l.C4751
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final void mo8453() {
-        super.mo8453();
-        ArrayAdapter arrayAdapter = this.f10609;
-        if (arrayAdapter != null) {
-            arrayAdapter.notifyDataSetChanged();
-        }
-    }
-
-    @Override // l.C4751
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo8452(C4170 c4170) {
-        int length;
-        Spinner spinner = (Spinner) c4170.itemView.findViewById(R.id.spinner);
-        this.f10608 = spinner;
-        spinner.setAdapter((SpinnerAdapter) this.f10609);
-        this.f10608.setOnItemSelectedListener(this.f10610);
-        Spinner spinner2 = this.f10608;
-        String value = getValue();
-        CharSequence[] charSequenceArrM22075 = m22075();
-        if (value != null && charSequenceArrM22075 != null) {
-            length = charSequenceArrM22075.length;
-            do {
-                length--;
-                if (length < 0) {
-                    length = -1;
-                    break;
-                }
-            } while (!TextUtils.equals(charSequenceArrM22075[length].toString(), value));
-        } else {
-            length = -1;
-            break;
-        }
-        spinner2.setSelection(length);
-        super.mo8452(c4170);
+    @Override // l.AbstractC4625
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo3628() {
+        return m18853() + UMErrorCode.E_UM_BE_DEFLATE_FAILED;
     }
 }

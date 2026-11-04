@@ -1,835 +1,384 @@
 .class public final Ll/ۡ۠;
 .super Ljava/lang/Object;
-.source "75UL"
+.source "R9NW"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
-
-
-# static fields
-.field public static final ۫:Ljava/lang/Object;
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public ֡:I
+.field public final ۙ:Ll/۟۠;
 
-.field public ܺ:Z
-
-.field public ܽ:[Ljava/lang/Object;
-
-.field public ᩶:[J
+.field public ᩷:Ll/ۘۜ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Ll/۟۠;)V
+    .locals 0
 
-    .line 51
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll/ۡ۠;->۫:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 3
-
-    .line 72
+    .line 745
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    .line 746
+    iput-object p2, p0, Ll/ۡ۠;->ۙ:Ll/۟۠;
 
-    .line 52
-    iput-boolean v0, p0, Ll/ۡ۠;->ܺ:Z
+    .line 747
+    invoke-static {p1}, Ll/᩸۠;->֫(Landroid/view/View;)Ll/ۘۜ;
 
-    const/4 v0, 0x4
+    move-result-object p1
 
-    :goto_0
-    const/16 v1, 0x20
+    if-eqz p1, :cond_0
 
-    const/16 v2, 0x50
+    .line 751
+    new-instance p2, Ll/ܳۜ;
 
-    if-ge v0, v1, :cond_1
+    invoke-direct {p2, p1}, Ll/ܳۜ;-><init>(Ll/ۘۜ;)V
 
-    const/4 v1, 0x1
+    invoke-virtual {p2}, Ll/ܳۜ;->ۙ()Ll/ۘۜ;
 
-    shl-int/2addr v1, v0
-
-    add-int/lit8 v1, v1, -0xc
-
-    if-gt v2, v1, :cond_0
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
+    move-result-object p1
 
     goto :goto_0
 
-    .line 29
-    :cond_1
-    :goto_1
-    div-int/lit8 v2, v2, 0x8
-
-    .line 78
-    new-array v0, v2, [J
-
-    iput-object v0, p0, Ll/ۡ۠;->᩶:[J
-
-    .line 79
-    new-array v0, v2, [Ljava/lang/Object;
-
-    iput-object v0, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method private ۖ()V
-    .locals 9
-
-    .line 217
-    iget v0, p0, Ll/ۡ۠;->֡:I
-
-    .line 219
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    .line 220
-    iget-object v2, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    :goto_0
-    if-ge v4, v0, :cond_2
-
-    .line 223
-    aget-object v6, v2, v4
-
-    .line 225
-    sget-object v7, Ll/ۡ۠;->۫:Ljava/lang/Object;
-
-    if-eq v6, v7, :cond_1
-
-    if-eq v4, v5, :cond_0
-
-    .line 227
-    aget-wide v7, v1, v4
-
-    aput-wide v7, v1, v5
-
-    .line 228
-    aput-object v6, v2, v5
-
-    const/4 v6, 0x0
-
-    .line 229
-    aput-object v6, v2, v4
-
     :cond_0
-    add-int/lit8 v5, v5, 0x1
+    const/4 p1, 0x0
 
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 236
-    :cond_2
-    iput-boolean v3, p0, Ll/ۡ۠;->ܺ:Z
-
-    .line 237
-    iput v5, p0, Ll/ۡ۠;->֡:I
+    .line 752
+    :goto_0
+    iput-object p1, p0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 19
 
-    .line 50
-    invoke-virtual {p0}, Ll/ۡ۠;->clone()Ll/ۡ۠;
+    move-object/from16 v0, p0
 
-    move-result-object v0
+    move-object/from16 v7, p1
 
-    return-object v0
-.end method
+    move-object/from16 v8, p2
 
-.method public final clone()Ll/ۡ۠;
-    .locals 2
+    .line 758
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isLaidOut()Z
 
-    .line 88
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    if-nez v1, :cond_0
 
-    check-cast v0, Ll/ۡ۠;
-
-    .line 89
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    invoke-virtual {v1}, [J->clone()Ljava/lang/Object;
+    .line 759
+    invoke-static/range {p1 .. p2}, Ll/ۘۜ;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Ll/ۘۜ;
 
     move-result-object v1
 
-    check-cast v1, [J
+    iput-object v1, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    iput-object v1, v0, Ll/ۡ۠;->᩶:[J
-
-    .line 90
-    iget-object v1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    invoke-virtual {v1}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 760
+    invoke-static/range {p1 .. p2}, Ll/ۖ۠;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object v1
 
-    check-cast v1, [Ljava/lang/Object;
+    return-object v1
 
-    iput-object v1, v0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    .line 92
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .line 494
-    invoke-virtual {p0}, Ll/ۡ۠;->ۨ()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const-string v0, "{}"
-
-    return-object v0
-
-    .line 498
+    .line 763
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static/range {p1 .. p2}, Ll/ۘۜ;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Ll/ۘۜ;
 
-    iget v1, p0, Ll/ۡ۠;->֡:I
+    move-result-object v9
 
-    mul-int/lit8 v1, v1, 0x1c
+    .line 765
+    iget-object v1, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    if-nez v1, :cond_1
 
-    const/16 v1, 0x7b
+    .line 766
+    invoke-static/range {p1 .. p1}, Ll/᩸۠;->֫(Landroid/view/View;)Ll/ۘۜ;
 
-    .line 499
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    iput-object v1, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    .line 500
-    :goto_0
-    iget v2, p0, Ll/ۡ۠;->֡:I
-
-    if-ge v1, v2, :cond_3
-
-    if-lez v1, :cond_1
-
-    const-string v2, ", "
-
-    .line 502
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 504
+    .line 769
     :cond_1
-    invoke-virtual {p0, v1}, Ll/ۡ۠;->ۙ(I)J
+    iget-object v1, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    move-result-wide v2
+    if-nez v1, :cond_2
 
-    .line 505
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    .line 773
+    iput-object v9, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    const/16 v2, 0x3d
+    .line 774
+    invoke-static/range {p1 .. p2}, Ll/ۖ۠;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    .line 506
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    .line 507
-    invoke-virtual {p0, v1}, Ll/ۡ۠;->ۖ(I)Ljava/lang/Object;
+    return-object v1
 
-    move-result-object v2
-
-    if-eq v2, p0, :cond_2
-
-    .line 509
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
+    .line 787
     :cond_2
-    const-string v2, "(this Map)"
+    invoke-static/range {p1 .. p1}, Ll/ۖ۠;->ۙ(Landroid/view/View;)Ll/۟۠;
 
-    .line 511
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    if-eqz v1, :cond_3
 
-    goto :goto_0
+    .line 788
+    iget-object v1, v1, Ll/۟۠;->mDispachedInsets:Landroid/view/WindowInsets;
 
+    invoke-static {v1, v8}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 789
+    invoke-static/range {p1 .. p2}, Ll/ۖ۠;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object v1
+
+    return-object v1
+
+    .line 793
     :cond_3
-    const/16 v1, 0x7d
-
-    .line 514
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 515
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۖ(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 373
-    iget-boolean v0, p0, Ll/ۡ۠;->ܺ:Z
-
-    if-eqz v0, :cond_0
-
-    .line 374
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
-
-    .line 377
-    :cond_0
-    iget-object v0, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(J)I
-    .locals 2
-
-    .line 399
-    iget-boolean v0, p0, Ll/ۡ۠;->ܺ:Z
-
-    if-eqz v0, :cond_0
-
-    .line 400
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
-
-    .line 403
-    :cond_0
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
-
-    iget v1, p0, Ll/ۡ۠;->֡:I
-
-    invoke-static {p1, p2, v0, v1}, Ll/᩵۠;->ۙ(J[JI)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ۙ(I)J
-    .locals 3
-
-    .line 353
-    iget-boolean v0, p0, Ll/ۡ۠;->ܺ:Z
-
-    if-eqz v0, :cond_0
-
-    .line 354
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
-
-    .line 357
-    :cond_0
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
-
-    aget-wide v1, v0, p1
-
-    return-wide v1
-.end method
-
-.method public final ۙ()V
-    .locals 5
-
-    .line 440
-    iget v0, p0, Ll/ۡ۠;->֡:I
-
-    .line 441
-    iget-object v1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v0, :cond_0
-
-    const/4 v4, 0x0
-
-    .line 444
-    aput-object v4, v1, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 447
-    :cond_0
-    iput v2, p0, Ll/ۡ۠;->֡:I
-
-    .line 448
-    iput-boolean v2, p0, Ll/ۡ۠;->ܺ:Z
-
-    return-void
-.end method
-
-.method public final ۙ(JLjava/lang/Long;)V
-    .locals 7
-
-    .line 456
-    iget v0, p0, Ll/ۡ۠;->֡:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    add-int/lit8 v2, v0, -0x1
-
-    aget-wide v2, v1, v2
-
-    cmp-long v1, p1, v2
-
-    if-gtz v1, :cond_0
-
-    .line 457
-    invoke-virtual {p0, p1, p2, p3}, Ll/ۡ۠;->ۙ(JLjava/lang/Object;)V
-
-    return-void
-
-    .line 461
-    :cond_0
-    iget-boolean v1, p0, Ll/ۡ۠;->ܺ:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v1, v1
-
-    if-lt v0, v1, :cond_1
-
-    .line 462
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
-
-    .line 465
-    :cond_1
-    iget v0, p0, Ll/ۡ۠;->֡:I
-
-    .line 466
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v1, v1
+    iget-object v1, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
     const/4 v2, 0x1
 
-    if-lt v0, v1, :cond_4
+    const/4 v3, 0x0
 
-    add-int/lit8 v1, v0, 0x1
-
-    mul-int/lit8 v1, v1, 0x8
-
-    const/4 v3, 0x4
+    const/4 v5, 0x0
 
     :goto_0
-    const/16 v4, 0x20
+    const/16 v3, 0x100
 
-    if-ge v3, v4, :cond_3
+    if-gt v2, v3, :cond_5
 
-    shl-int v4, v2, v3
+    .line 674
+    invoke-virtual {v9, v2}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
-    add-int/lit8 v4, v4, -0xc
+    move-result-object v3
 
-    if-gt v1, v4, :cond_2
+    invoke-virtual {v1, v2}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
-    move v1, v4
+    move-result-object v4
 
-    goto :goto_1
+    invoke-virtual {v3, v4}, Ll/۫ᩳ;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    or-int/2addr v5, v2
+
+    :cond_4
+    shl-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 29
-    :cond_3
-    :goto_1
-    div-int/lit8 v1, v1, 0x8
-
-    .line 469
-    new-array v3, v1, [J
-
-    .line 470
-    new-array v1, v1, [Ljava/lang/Object;
-
-    .line 473
-    iget-object v4, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v5, v4
-
-    const/4 v6, 0x0
-
-    invoke-static {v4, v6, v3, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 474
-    iget-object v4, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    array-length v5, v4
-
-    invoke-static {v4, v6, v1, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 476
-    iput-object v3, p0, Ll/ۡ۠;->᩶:[J
-
-    .line 477
-    iput-object v1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    .line 480
-    :cond_4
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    aput-wide p1, v1, v0
-
-    .line 481
-    iget-object p1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    aput-object p3, p1, v0
-
-    add-int/2addr v0, v2
-
-    .line 482
-    iput v0, p0, Ll/ۡ۠;->֡:I
-
-    return-void
-.end method
-
-.method public final ۙ(JLjava/lang/Object;)V
-    .locals 7
-
-    .line 248
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
-
-    iget v1, p0, Ll/ۡ۠;->֡:I
-
-    invoke-static {p1, p2, v0, v1}, Ll/᩵۠;->ۙ(J[JI)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    .line 251
-    iget-object p1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    aput-object p3, p1, v0
-
-    return-void
-
-    :cond_0
-    not-int v0, v0
-
-    .line 255
-    iget v1, p0, Ll/ۡ۠;->֡:I
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v2, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    aget-object v3, v2, v0
-
-    sget-object v4, Ll/ۡ۠;->۫:Ljava/lang/Object;
-
-    if-ne v3, v4, :cond_1
-
-    .line 256
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
-
-    aput-wide p1, v1, v0
-
-    .line 257
-    aput-object p3, v2, v0
-
-    return-void
-
-    .line 261
-    :cond_1
-    iget-boolean v2, p0, Ll/ۡ۠;->ܺ:Z
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v2, v2
-
-    if-lt v1, v2, :cond_2
-
-    .line 262
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
-
-    .line 265
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
-
-    iget v1, p0, Ll/ۡ۠;->֡:I
-
-    invoke-static {p1, p2, v0, v1}, Ll/᩵۠;->ۙ(J[JI)I
-
-    move-result v0
-
-    not-int v0, v0
-
-    .line 268
-    :cond_2
-    iget v1, p0, Ll/ۡ۠;->֡:I
-
-    iget-object v2, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v2, v2
-
-    const/4 v3, 0x1
-
-    if-lt v1, v2, :cond_5
-
-    add-int/2addr v1, v3
-
-    mul-int/lit8 v1, v1, 0x8
-
-    const/4 v2, 0x4
-
-    :goto_0
-    const/16 v4, 0x20
-
-    if-ge v2, v4, :cond_4
-
-    shl-int v4, v3, v2
-
-    add-int/lit8 v4, v4, -0xc
-
-    if-gt v1, v4, :cond_3
-
-    move v1, v4
-
-    goto :goto_1
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 29
-    :cond_4
-    :goto_1
-    div-int/lit8 v1, v1, 0x8
-
-    .line 271
-    new-array v2, v1, [J
-
-    .line 272
-    new-array v1, v1, [Ljava/lang/Object;
-
-    .line 275
-    iget-object v4, p0, Ll/ۡ۠;->᩶:[J
-
-    array-length v5, v4
-
-    const/4 v6, 0x0
-
-    invoke-static {v4, v6, v2, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 276
-    iget-object v4, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    array-length v5, v4
-
-    invoke-static {v4, v6, v1, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 278
-    iput-object v2, p0, Ll/ۡ۠;->᩶:[J
-
-    .line 279
-    iput-object v1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    .line 282
     :cond_5
-    iget v1, p0, Ll/ۡ۠;->֡:I
+    if-nez v5, :cond_6
 
-    sub-int/2addr v1, v0
+    .line 798
+    invoke-static/range {p1 .. p2}, Ll/ۖ۠;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    if-eqz v1, :cond_6
+    move-result-object v1
 
-    .line 284
-    iget-object v2, p0, Ll/ۡ۠;->᩶:[J
+    return-object v1
 
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-static {v2, v0, v2, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 285
-    iget-object v1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
-
-    iget v2, p0, Ll/ۡ۠;->֡:I
-
-    sub-int/2addr v2, v0
-
-    invoke-static {v1, v0, v1, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 288
+    .line 801
     :cond_6
-    iget-object v1, p0, Ll/ۡ۠;->᩶:[J
+    iget-object v4, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
 
-    aput-wide p1, v1, v0
+    .line 804
+    invoke-static {v5, v9, v4}, Ll/ۖ۠;->ۙ(ILl/ۘۜ;Ll/ۘۜ;)Landroid/view/animation/Interpolator;
 
-    .line 289
-    iget-object p1, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
+    move-result-object v1
 
-    aput-object p3, p1, v0
+    .line 806
+    new-instance v10, Ll/᩸ۜ;
 
-    .line 290
-    iget p1, p0, Ll/ۡ۠;->֡:I
+    const-wide/16 v2, 0xa0
 
-    add-int/2addr p1, v3
+    invoke-direct {v10, v5, v1, v2, v3}, Ll/᩸ۜ;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    iput p1, p0, Ll/ۡ۠;->֡:I
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    .line 809
+    invoke-virtual {v10, v1}, Ll/᩸ۜ;->ۙ(F)V
 
-.method public final ۨ()I
-    .locals 1
+    const/4 v1, 0x2
 
-    .line 327
-    iget-boolean v0, p0, Ll/ۡ۠;->ܺ:Z
+    new-array v1, v1, [F
 
-    if-eqz v0, :cond_0
+    .line 811
+    fill-array-data v1, :array_0
 
-    .line 328
-    invoke-direct {p0}, Ll/ۡ۠;->ۖ()V
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    .line 331
-    :cond_0
-    iget v0, p0, Ll/ۡ۠;->֡:I
+    move-result-object v1
 
-    return v0
-.end method
+    .line 812
+    invoke-virtual {v10}, Ll/᩸ۜ;->ۙ()J
 
-.method public final ۨ(I)V
-    .locals 3
+    move-result-wide v2
 
-    .line 171
-    iget-object v0, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
+    .line 811
+    invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    aget-object v1, v0, p1
+    move-result-object v11
 
-    sget-object v2, Ll/ۡ۠;->۫:Ljava/lang/Object;
+    .line 651
+    invoke-virtual {v9, v5}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
-    if-eq v1, v2, :cond_0
+    move-result-object v1
 
-    .line 172
-    aput-object v2, v0, p1
+    .line 652
+    invoke-virtual {v4, v5}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
-    const/4 p1, 0x1
+    move-result-object v2
 
-    .line 173
-    iput-boolean p1, p0, Ll/ۡ۠;->ܺ:Z
+    .line 653
+    iget v3, v1, Ll/۫ᩳ;->᩷:I
 
-    :cond_0
-    return-void
-.end method
+    iget v6, v2, Ll/۫ᩳ;->᩷:I
 
-.method public final ܰ(JLjava/lang/Long;)Ljava/lang/Object;
-    .locals 2
+    .line 654
+    invoke-static {v3, v6}, Ljava/lang/Math;->min(II)I
 
-    .line 118
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
+    move-result v3
 
-    iget v1, p0, Ll/ۡ۠;->֡:I
+    iget v6, v1, Ll/۫ᩳ;->᩸:I
 
-    invoke-static {p1, p2, v0, v1}, Ll/᩵۠;->ۙ(J[JI)I
+    iget v12, v2, Ll/۫ᩳ;->᩸:I
 
-    move-result p1
+    .line 655
+    invoke-static {v6, v12}, Ljava/lang/Math;->min(II)I
 
-    if-ltz p1, :cond_1
+    move-result v13
 
-    .line 120
-    iget-object p2, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
+    iget v14, v1, Ll/۫ᩳ;->ۤ:I
 
-    aget-object p1, p2, p1
+    iget v15, v2, Ll/۫ᩳ;->ۤ:I
 
-    sget-object p2, Ll/ۡ۠;->۫:Ljava/lang/Object;
+    .line 656
+    invoke-static {v14, v15}, Ljava/lang/Math;->min(II)I
 
-    if-ne p1, p2, :cond_0
+    move-result v0
 
-    goto :goto_0
+    move-object/from16 v16, v11
 
-    :cond_0
-    return-object p1
+    iget v11, v1, Ll/۫ᩳ;->ۙ:I
 
-    :cond_1
-    :goto_0
-    return-object p3
-.end method
+    move/from16 v17, v5
 
-.method public final ܰ(J)V
-    .locals 2
+    iget v5, v2, Ll/۫ᩳ;->ۙ:I
 
-    .line 139
-    iget-object v0, p0, Ll/ۡ۠;->᩶:[J
+    move-object/from16 v18, v4
 
-    iget v1, p0, Ll/ۡ۠;->֡:I
+    .line 657
+    invoke-static {v11, v5}, Ljava/lang/Math;->min(II)I
 
-    invoke-static {p1, p2, v0, v1}, Ll/᩵۠;->ۙ(J[JI)I
+    move-result v4
 
-    move-result p1
+    .line 653
+    invoke-static {v3, v13, v0, v4}, Ll/۫ᩳ;->ۙ(IIII)Ll/۫ᩳ;
 
-    if-ltz p1, :cond_0
+    move-result-object v0
 
-    .line 142
-    iget-object p2, p0, Ll/ۡ۠;->ܽ:[Ljava/lang/Object;
+    .line 659
+    iget v1, v1, Ll/۫ᩳ;->᩷:I
 
-    aget-object v0, p2, p1
+    iget v2, v2, Ll/۫ᩳ;->᩷:I
 
-    sget-object v1, Ll/ۡ۠;->۫:Ljava/lang/Object;
+    .line 660
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
-    if-eq v0, v1, :cond_0
+    move-result v1
 
-    .line 143
-    aput-object v1, p2, p1
+    .line 661
+    invoke-static {v6, v12}, Ljava/lang/Math;->max(II)I
 
-    const/4 p1, 0x1
+    move-result v2
 
-    .line 144
-    iput-boolean p1, p0, Ll/ۡ۠;->ܺ:Z
+    .line 662
+    invoke-static {v14, v15}, Ljava/lang/Math;->max(II)I
 
-    :cond_0
-    return-void
+    move-result v3
+
+    .line 663
+    invoke-static {v11, v5}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    .line 659
+    invoke-static {v1, v2, v3, v4}, Ll/۫ᩳ;->ۙ(IIII)Ll/۫ᩳ;
+
+    move-result-object v1
+
+    .line 665
+    new-instance v11, Ll/֡۠;
+
+    invoke-direct {v11, v0, v1}, Ll/֡۠;-><init>(Ll/۫ᩳ;Ll/۫ᩳ;)V
+
+    const/4 v0, 0x0
+
+    .line 819
+    invoke-static {v7, v10, v8, v0}, Ll/ۖ۠;->ۙ(Landroid/view/View;Ll/᩸ۜ;Landroid/view/WindowInsets;Z)V
+
+    .line 821
+    new-instance v0, Ll/ᩳ۠;
+
+    move-object v1, v0
+
+    move-object v2, v10
+
+    move-object v3, v9
+
+    move-object/from16 v4, v18
+
+    move/from16 v5, v17
+
+    move-object/from16 v6, p1
+
+    invoke-direct/range {v1 .. v6}, Ll/ᩳ۠;-><init>(Ll/᩸ۜ;Ll/ۘۜ;Ll/ۘۜ;ILandroid/view/View;)V
+
+    move-object/from16 v1, v16
+
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 836
+    new-instance v0, Ll/ۢ۠;
+
+    invoke-direct {v0, v7, v10}, Ll/ۢ۠;-><init>(Landroid/view/View;Ll/᩸ۜ;)V
+
+    invoke-virtual {v1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 848
+    new-instance v0, Ll/֨۠;
+
+    invoke-direct {v0, v7, v10, v11, v1}, Ll/֨۠;-><init>(Landroid/view/View;Ll/᩸ۜ;Ll/֡۠;Landroid/animation/ValueAnimator;)V
+
+    invoke-static {v7, v0}, Ll/۫ۖ;->ۙ(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    move-object/from16 v0, p0
+
+    .line 855
+    iput-object v9, v0, Ll/ۡ۠;->᩷:Ll/ۘۜ;
+
+    .line 857
+    invoke-static/range {p1 .. p2}, Ll/ۖ۠;->ۙ(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object v1
+
+    return-object v1
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

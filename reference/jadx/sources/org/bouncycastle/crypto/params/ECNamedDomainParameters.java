@@ -9,7 +9,7 @@ import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECNamedDomainParameters extends ECDomainParameters {
     public ASN1ObjectIdentifier name;
 

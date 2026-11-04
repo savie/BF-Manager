@@ -35,9 +35,9 @@
 
     sput-object v0, Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;->TYPE:Lorg/bouncycastle/asn1/ASN1UniversalType;
 
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
     sput-object v0, Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;->pool:Ljava/util/concurrent/ConcurrentMap;
 
@@ -132,7 +132,7 @@
     const-string v2, " not a valid OID"
 
     .line 0
-    invoke-static {v1, p0, v2}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -303,7 +303,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p0, v1}, Ll/ۡܽ᩹;->ۙ(Ljava/io/IOException;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v1}, Ll/ۧ᩺᩻;->ۙ(Ljava/io/IOException;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -316,7 +316,7 @@
 
     const-string v1, "illegal object in getInstance: "
 
-    invoke-static {p0, v1}, Ll/۫ܰۖ;->ۙ(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Ll/ܰۡۗ;->ۙ(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -979,7 +979,7 @@
     const-string v2, "."
 
     .line 0
-    invoke-static {v1, v2, p1}, Ll/֫۟ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, p1}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
-import l.C17922;
+import l.C14483;
+import l.C18176;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RC6Engine implements BlockCipher {
     public static final int LGW = 5;
     public static final int P32 = -1209970333;
@@ -39,8 +39,8 @@ public class RC6Engine implements BlockCipher {
         int iRotateRight = iBytesToWord - iArr[42];
         int i4 = 20;
         while (i4 >= 1) {
-            int iRotateLeft = rotateLeft(C17922.m41614(iRotateRight, 2, 1, iRotateRight), 5);
-            int iRotateLeft2 = rotateLeft(C17922.m41614(i3, 2, 1, i3), 5);
+            int iRotateLeft = rotateLeft(C18176.m42345(iRotateRight, 2, 1, iRotateRight), 5);
+            int iRotateLeft2 = rotateLeft(C18176.m42345(i3, 2, 1, i3), 5);
             int i5 = i4 * 2;
             int iRotateRight2 = rotateRight(iBytesToWord2 - this._S[i5 + 1], iRotateLeft) ^ iRotateLeft2;
             i4--;
@@ -70,8 +70,8 @@ public class RC6Engine implements BlockCipher {
         int i4 = iBytesToWord4 + iArr[1];
         int i5 = 1;
         while (i5 <= 20) {
-            int iRotateLeft = rotateLeft(C17922.m41614(i3, 2, 1, i3), 5);
-            int iRotateLeft2 = rotateLeft(C17922.m41614(i4, 2, 1, i4), 5);
+            int iRotateLeft = rotateLeft(C18176.m42345(i3, 2, 1, i3), 5);
+            int iRotateLeft2 = rotateLeft(C18176.m42345(i4, 2, 1, i4), 5);
             int i6 = i5 * 2;
             int iRotateLeft3 = rotateLeft(iBytesToWord ^ iRotateLeft, iRotateLeft2) + this._S[i6];
             int iRotateLeft4 = rotateLeft(iBytesToWord3 ^ iRotateLeft2, iRotateLeft) + this._S[i6 + 1];
@@ -175,7 +175,7 @@ public class RC6Engine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to RC6 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to RC6 init - ", cipherParameters));
         }
         this.forEncryption = z;
         byte[] key = ((KeyParameter) cipherParameters).getKey();

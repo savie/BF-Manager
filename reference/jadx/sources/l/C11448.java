@@ -1,20 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۘۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B4S2 */
+import java.util.zip.CRC32;
+
+/* JADX INFO: renamed from: l.ۧۜᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 964V */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11448 extends C23497 {
+public final class C11448 extends AbstractC24129 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f38526;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ CRC32 f35969;
 
-    public C11448(String str) {
-        this.f38526 = str;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C11448(InterfaceC7509 interfaceC7509, CRC32 crc32) {
+        super(interfaceC7509);
+        this.f35969 = crc32;
     }
 
-    @Override // l.InterfaceC5857
+    @Override // l.AbstractC24129
     /* JADX INFO: renamed from: ۙ */
-    public final void mo11174(AbstractC19055 abstractC19055, Object obj, int i, int i2, String str, C21877 c21877) {
-        throw new C18066(this.f38526, i, i2, str);
+    public final void mo6198(byte[] bArr, int i, int i2) {
+        this.f35969.update(bArr, i, i2);
     }
 }

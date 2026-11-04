@@ -1,43 +1,42 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶۬۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87AO */
+/* JADX INFO: renamed from: l.᩵֡ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N8KR */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20191 extends AbstractC21803 {
+public final class C20191 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f65536;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f64819;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f65537;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final float f64820;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String f65538;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f64821;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f65539;
+    public C20191(C3037 c3037) {
+        this.f64821 = c3037.f9843;
+        this.f64820 = c3037.f9842;
+        this.f64819 = c3037.f9841;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f65540;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3037 m46433() {
+        return new C3037(this);
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C2550 f65541;
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof C20191)) {
+            return false;
+        }
+        C20191 c20191 = (C20191) obj;
+        return this.f64821 == c20191.f64821 && this.f64820 == c20191.f64820 && this.f64819 == c20191.f64819;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f65542;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f65543;
-
-    public C20191(String str, C2550 c2550, byte[] bArr, int i, int i2, long j, int i3, boolean z) {
-        super(1);
-        this.f65538 = str;
-        this.f65541 = c2550;
-        this.f65542 = bArr;
-        this.f65539 = i;
-        this.f65543 = i2;
-        this.f65540 = j;
-        this.f65536 = i3;
-        this.f65537 = z;
+    public final int hashCode() {
+        return C17359.hash(Long.valueOf(this.f64821), Float.valueOf(this.f64820), Long.valueOf(this.f64819));
     }
 }

@@ -1,44 +1,59 @@
 package l;
 
-import android.animation.Animator;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-/* JADX INFO: renamed from: l.᩸ۢۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21490 implements Animator.AnimatorListener {
+/* JADX INFO: renamed from: l.᩶ᩳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: N7UA */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21490 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ FloatingActionButton f69837;
+    public final String f68700;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ FloatingActionButton f69838;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f68701;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ FloatingActionButton f69839;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f68702;
 
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationCancel(Animator animator) {
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f68703;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f68704;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f68705;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C21490 m48894(int i, AbstractC0148 abstractC0148) {
+        if (abstractC0148 instanceof C6574) {
+            return new C21490(i, (C6574) abstractC0148);
+        }
+        throw new RuntimeException();
     }
 
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationRepeat(Animator animator) {
+    public C21490(int i, C6574 c6574) {
+        this.f68702 = i;
+        this.f68705 = c6574.f22053;
+        this.f68703 = c6574.f22051;
+        this.f68700 = c6574.f22049;
+        this.f68701 = c6574.f22050;
+        this.f68704 = c6574.f22052;
     }
 
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationStart(Animator animator) {
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && C21490.class == obj.getClass()) {
+            C21490 c21490 = (C21490) obj;
+            if (this.f68702 == c21490.f68702 && this.f68704 == c21490.f68704 && this.f68705.equals(c21490.f68705) && this.f68703.equals(c21490.f68703) && this.f68700.equals(c21490.f68700) && this.f68701.equals(c21490.f68701)) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public C21490(FloatingActionButton floatingActionButton, FloatingActionButton floatingActionButton2, FloatingActionButton floatingActionButton3) {
-        this.f69837 = floatingActionButton;
-        this.f69839 = floatingActionButton2;
-        this.f69838 = floatingActionButton3;
-    }
-
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        this.f69837.setVisibility(4);
-        this.f69839.setVisibility(4);
-        this.f69838.setVisibility(4);
+    public final int hashCode() {
+        return C12351.m30817(C12351.m30817(C12351.m30817(C12351.m30817(this.f68702 * 31, 31, this.f68705), 31, this.f68703), 31, this.f68700), 31, this.f68701) + (this.f68704 ? 1231 : 1237);
     }
 }

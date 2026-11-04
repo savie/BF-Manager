@@ -34,7 +34,7 @@
 
 .field public final delayedShow:Ljava/lang/Runnable;
 
-.field public final hideAnimationCallback:Ll/ۖ֫ܰ;
+.field public final hideAnimationCallback:Ll/۟ۖ᩷;
 
 .field public isIndeterminateModeChangeRequested:Z
 
@@ -52,7 +52,7 @@
 
 .field public storedProgressAnimated:Z
 
-.field public final switchIndeterminateModeCallback:Ll/ۖ֫ܰ;
+.field public final switchIndeterminateModeCallback:Ll/۟ۖ᩷;
 
 .field public visibilityAfterHide:I
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 81
-    sget v0, Ll/ᩴ۟ܶ;->ۙ֫:I
+    sget v0, Ll/ۘ۬ܺ;->ۙ۠:I
 
     sput v0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->DEF_STYLE_RES:I
 
@@ -115,14 +115,14 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;-><init>(Lcom/google/android/material/progressindicator/BaseProgressIndicator;)V
 
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/ۖ֫ܰ;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/۟ۖ᩷;
 
     .line 853
     new-instance v0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;
 
     invoke-direct {v0, p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;-><init>(Lcom/google/android/material/progressindicator/BaseProgressIndicator;)V
 
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/ۖ֫ܰ;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/۟ۖ᩷;
 
     .line 142
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -137,7 +137,7 @@
     iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     .line 147
-    sget-object v3, Ll/۠۟ܶ;->ᩴ۬:[I
+    sget-object v3, Ll/ܰ۬ܺ;->᩹ۚ:[I
 
     new-array v6, p1, [I
 
@@ -153,7 +153,7 @@
     move-result-object p1
 
     .line 150
-    sget p2, Ll/۠۟ܶ;->ܺ۬:I
+    sget p2, Ll/ܰ۬ܺ;->ܰۚ:I
 
     const/4 p3, -0x1
 
@@ -164,7 +164,7 @@
     iput p2, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->showDelay:I
 
     .line 151
-    sget p2, Ll/۠۟ܶ;->۟۬:I
+    sget p2, Ll/ܰ۬ܺ;->᩺ۚ:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -450,10 +450,10 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/ۖ֫ܰ;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/۟ۖ᩷;
 
     .line 169
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->registerAnimatorsCompleteCallback(Ll/ۖ֫ܰ;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->registerAnimatorsCompleteCallback(Ll/۟ۖ᩷;)V
 
     .line 173
     :cond_0
@@ -468,9 +468,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/۟ۖ᩷;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->registerAnimationCallback(Ll/ۖ֫ܰ;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->registerAnimationCallback(Ll/۟ۖ᩷;)V
 
     .line 177
     :cond_1
@@ -485,9 +485,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/۟ۖ᩷;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->registerAnimationCallback(Ll/ۖ֫ܰ;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->registerAnimationCallback(Ll/۟ۖ᩷;)V
 
     :cond_2
     return-void
@@ -508,9 +508,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/۟ۖ᩷;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
 
     .line 185
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getIndeterminateDrawable()Lcom/google/android/material/progressindicator/IndeterminateDrawable;
@@ -536,9 +536,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/ۖ֫ܰ;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Ll/۟ۖ᩷;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->unregisterAnimationCallback(Ll/ۖ֫ܰ;)Z
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->unregisterAnimationCallback(Ll/۟ۖ᩷;)Z
 
     :cond_1
     return-void
@@ -1416,7 +1416,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/ۖ۟ܶ;->ᩴ֨:I
+    sget v1, Ll/ۧ۬ܺ;->᩹۫:I
 
     const/4 v2, -0x1
 
@@ -1614,13 +1614,13 @@
     .line 759
     :cond_1
     :goto_0
-    iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/ۖ֫ܰ;
+    iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Ll/۟ۖ᩷;
 
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getIndeterminateDrawable()Lcom/google/android/material/progressindicator/IndeterminateDrawable;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Ll/ۖ֫ܰ;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Ll/۟ۖ᩷;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
@@ -1857,7 +1857,7 @@
     .locals 1
 
     .line 438
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 4137
     invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z

@@ -1,44 +1,32 @@
 package l;
 
-import android.text.TextUtils;
+import android.graphics.Typeface;
 
-/* JADX INFO: renamed from: l.ܿ֡᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1UX */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17004 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public CharSequence f54355;
-
-    public C17004(String str) {
-        this.f54355 = str;
-    }
+/* JADX INFO: renamed from: l.ܺᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 857F */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17004 extends C24685 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m39783(StringBuilder sb) {
-        this.f54355 = sb;
+    public AbstractC7727 f55556;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40075(Typeface typeface) {
+        AbstractC7727 abstractC7727 = this.f55556;
+        if (abstractC7727 != null) {
+            abstractC7727.m21012(typeface);
+        }
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40074(int i) {
+        AbstractC7727 abstractC7727 = this.f55556;
+        if (abstractC7727 != null) {
+            abstractC7727.m21011(i);
         }
-        if (obj == null || C17004.class != obj.getClass()) {
-            return false;
-        }
-        return TextUtils.equals(this.f54355, ((C17004) obj).f54355);
     }
 
-    public final int hashCode() {
-        CharSequence charSequence = this.f54355;
-        if (charSequence instanceof String) {
-            return charSequence.hashCode();
-        }
-        int length = charSequence.length();
-        int iCharAt = 0;
-        for (int i = 0; i < length; i++) {
-            iCharAt = (iCharAt * 31) + this.f54355.charAt(i);
-        }
-        return iCharAt;
+    public C17004(AbstractC7727 abstractC7727) {
+        this.f55556 = abstractC7727;
     }
 }

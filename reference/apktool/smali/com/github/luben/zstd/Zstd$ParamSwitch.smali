@@ -21,7 +21,7 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 24
+    .line 41
     new-instance v0, Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     const-string v1, "AUTO"
@@ -32,7 +32,7 @@
 
     sput-object v0, Lcom/github/luben/zstd/Zstd$ParamSwitch;->AUTO:Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
-    .line 28
+    .line 45
     new-instance v1, Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     const-string v3, "ENABLE"
@@ -43,7 +43,7 @@
 
     sput-object v1, Lcom/github/luben/zstd/Zstd$ParamSwitch;->ENABLE:Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
-    .line 32
+    .line 49
     new-instance v3, Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     const-string v5, "DISABLE"
@@ -64,7 +64,7 @@
 
     aput-object v3, v5, v6
 
-    .line 20
+    .line 37
     sput-object v5, Lcom/github/luben/zstd/Zstd$ParamSwitch;->$VALUES:[Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     return-void
@@ -73,10 +73,10 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 35
+    .line 52
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 36
+    .line 53
     iput p3, p0, Lcom/github/luben/zstd/Zstd$ParamSwitch;->val:I
 
     return-void
@@ -85,7 +85,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/github/luben/zstd/Zstd$ParamSwitch;
     .locals 1
 
-    .line 20
+    .line 37
     const-class v0, Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -100,7 +100,7 @@
 .method public static values()[Lcom/github/luben/zstd/Zstd$ParamSwitch;
     .locals 1
 
-    .line 20
+    .line 37
     sget-object v0, Lcom/github/luben/zstd/Zstd$ParamSwitch;->$VALUES:[Lcom/github/luben/zstd/Zstd$ParamSwitch;
 
     invoke-virtual {v0}, [Lcom/github/luben/zstd/Zstd$ParamSwitch;->clone()Ljava/lang/Object;
@@ -117,7 +117,7 @@
 .method public getValue()I
     .locals 1
 
-    .line 40
+    .line 57
     iget v0, p0, Lcom/github/luben/zstd/Zstd$ParamSwitch;->val:I
 
     return v0

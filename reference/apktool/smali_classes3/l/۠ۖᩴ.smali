@@ -1,35 +1,45 @@
 .class public final synthetic Ll/۠ۖᩴ;
 .super Ljava/lang/Object;
-.source "SBW1"
+.source "I4HH"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۤ۠ᩴ;
+
+.field public final synthetic ᩶:Z
 
 
 # direct methods
-.method public static ۙ(Ll/ܰۖᩴ;Ljava/util/function/Consumer;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public synthetic constructor <init>(Ll/ۤ۠ᩴ;Z)V
+    .locals 0
 
-    .line 149
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
-    instance-of v0, p1, Ll/ᩳۖᩴ;
+    iput-object p1, p0, Ll/۠ۖᩴ;->ܰ:Ll/ۤ۠ᩴ;
 
-    if-eqz v0, :cond_0
+    iput-boolean p2, p0, Ll/۠ۖᩴ;->᩶:Z
 
-    check-cast p1, Ll/ᩳۖᩴ;
+    return-void
+.end method
 
-    goto :goto_0
 
-    :cond_0
-    new-instance v0, Ll/ᩴۖᩴ;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    invoke-direct {v0, p1}, Ll/ᩴۖᩴ;-><init>(Ljava/util/function/Consumer;)V
+    .line 2
+    iget-boolean v0, p0, Ll/۠ۖᩴ;->᩶:Z
 
-    move-object p1, v0
+    .line 199
+    iget-object v1, p0, Ll/۠ۖᩴ;->ܰ:Ll/ۤ۠ᩴ;
 
-    :goto_0
-    invoke-interface {p0, p1}, Ll/᩵ۖᩴ;->ܰ(Ll/ᩳۖᩴ;)V
+    iget-object v1, v1, Ll/ۤ۠ᩴ;->ۚ:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
     return-void
 .end method

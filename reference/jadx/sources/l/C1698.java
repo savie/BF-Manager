@@ -1,104 +1,132 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫۠ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F4XQ */
+import java.util.ConcurrentModificationException;
+import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.֫ۚۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1698 {
+public final /* synthetic */ class C1698 {
+    public static Object $default$getOrDefault(Map map, Object obj, Object obj2) {
+        Object obj3 = map.get(obj);
+        return (obj3 != null || map.containsKey(obj)) ? obj3 : obj2;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int[] f6719 = new int[10];
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f6720 = new int[10];
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f6721 = 0;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m5639(int i, int i2, int[] iArr) {
-        int i3 = -1;
-        int i4 = i;
-        while (i4 - i3 > 1) {
-            int i5 = (i4 + i3) / 2;
-            if (iArr[i5] < i2) {
-                i3 = i5;
-            } else {
-                i4 = i5;
+    public static void $default$forEach(Map map, BiConsumer biConsumer) {
+        C17359.requireNonNull(biConsumer);
+        for (Map.Entry entry : map.entrySet()) {
+            try {
+                biConsumer.accept(entry.getKey(), entry.getValue());
+            } catch (IllegalStateException e) {
+                throw new ConcurrentModificationException(e);
             }
         }
-        if (i4 == i) {
-            return ~i;
-        }
-        return iArr[i4] == i2 ? i4 : ~i4;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m5640(int i) {
-        int iM5639 = m5639(this.f6721, i, this.f6719);
-        if (iM5639 < 0) {
-            return -1;
-        }
-        return this.f6720[iM5639];
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m5641() {
-        this.f6721 = 0;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m5642(int i, int i2) {
-        int i3 = this.f6721;
-        if (i3 != 0) {
-            int[] iArr = this.f6719;
-            if (i <= iArr[i3 - 1]) {
-                int iM5639 = m5639(i3, i, iArr);
-                if (iM5639 >= 0) {
-                    this.f6720[iM5639] = i2;
-                    return;
+    public static void $default$replaceAll(Map map, BiFunction biFunction) {
+        C17359.requireNonNull(biFunction);
+        for (Map.Entry entry : map.entrySet()) {
+            try {
+                try {
+                    entry.setValue(biFunction.apply(entry.getKey(), entry.getValue()));
+                } catch (IllegalStateException e) {
+                    throw new ConcurrentModificationException(e);
                 }
-                int i4 = ~iM5639;
-                int i5 = this.f6721;
-                int[] iArr2 = this.f6719;
-                if (i5 >= iArr2.length) {
-                    int iMax = Math.max(i5 + 1, iArr2.length * 2);
-                    int[] iArr3 = new int[iMax];
-                    int[] iArr4 = new int[iMax];
-                    int[] iArr5 = this.f6719;
-                    System.arraycopy(iArr5, 0, iArr3, 0, iArr5.length);
-                    int[] iArr6 = this.f6720;
-                    System.arraycopy(iArr6, 0, iArr4, 0, iArr6.length);
-                    this.f6719 = iArr3;
-                    this.f6720 = iArr4;
-                }
-                int i6 = this.f6721 - i4;
-                if (i6 != 0) {
-                    int[] iArr7 = this.f6719;
-                    int i7 = i4 + 1;
-                    System.arraycopy(iArr7, i4, iArr7, i7, i6);
-                    int[] iArr8 = this.f6720;
-                    System.arraycopy(iArr8, i4, iArr8, i7, this.f6721 - i4);
-                }
-                this.f6719[i4] = i;
-                this.f6720[i4] = i2;
-                this.f6721++;
-                return;
+            } catch (IllegalStateException e2) {
+                throw new ConcurrentModificationException(e2);
             }
         }
-        int[] iArr9 = this.f6719;
-        if (i3 >= iArr9.length) {
-            int iMax2 = Math.max(i3 + 1, iArr9.length * 2);
-            int[] iArr10 = new int[iMax2];
-            int[] iArr11 = new int[iMax2];
-            int[] iArr12 = this.f6719;
-            System.arraycopy(iArr12, 0, iArr10, 0, iArr12.length);
-            int[] iArr13 = this.f6720;
-            System.arraycopy(iArr13, 0, iArr11, 0, iArr13.length);
-            this.f6719 = iArr10;
-            this.f6720 = iArr11;
+    }
+
+    public static Object $default$putIfAbsent(Map map, Object obj, Object obj2) {
+        Object obj3 = map.get(obj);
+        return obj3 == null ? map.put(obj, obj2) : obj3;
+    }
+
+    public static boolean $default$remove(Map map, Object obj, Object obj2) {
+        Object obj3 = map.get(obj);
+        if (!C17359.equals(obj3, obj2)) {
+            return false;
         }
-        this.f6719[i3] = i;
-        this.f6720[i3] = i2;
-        this.f6721 = i3 + 1;
+        if (obj3 == null && !map.containsKey(obj)) {
+            return false;
+        }
+        map.remove(obj);
+        return true;
+    }
+
+    public static boolean $default$replace(Map map, Object obj, Object obj2, Object obj3) {
+        Object obj4 = map.get(obj);
+        if (!C17359.equals(obj4, obj2)) {
+            return false;
+        }
+        if (obj4 == null && !map.containsKey(obj)) {
+            return false;
+        }
+        map.put(obj, obj3);
+        return true;
+    }
+
+    public static Object $default$replace(Map map, Object obj, Object obj2) {
+        Object obj3 = map.get(obj);
+        return (obj3 != null || map.containsKey(obj)) ? map.put(obj, obj2) : obj3;
+    }
+
+    public static Object $default$computeIfAbsent(Map map, Object obj, Function function) {
+        Object objApply;
+        C17359.requireNonNull(function);
+        Object obj2 = map.get(obj);
+        if (obj2 != null || (objApply = function.apply(obj)) == null) {
+            return obj2;
+        }
+        map.put(obj, objApply);
+        return objApply;
+    }
+
+    public static Object $default$computeIfPresent(Map map, Object obj, BiFunction biFunction) {
+        C17359.requireNonNull(biFunction);
+        Object obj2 = map.get(obj);
+        if (obj2 != null) {
+            Object objApply = biFunction.apply(obj, obj2);
+            if (objApply != null) {
+                map.put(obj, objApply);
+                return objApply;
+            }
+            map.remove(obj);
+        }
+        return null;
+    }
+
+    public static Object $default$compute(Map map, Object obj, BiFunction biFunction) {
+        C17359.requireNonNull(biFunction);
+        Object obj2 = map.get(obj);
+        Object objApply = biFunction.apply(obj, obj2);
+        if (objApply == null) {
+            if (obj2 == null && !map.containsKey(obj)) {
+                return null;
+            }
+            map.remove(obj);
+            return null;
+        }
+        map.put(obj, objApply);
+        return objApply;
+    }
+
+    public static Object $default$merge(Map map, Object obj, Object obj2, BiFunction biFunction) {
+        C17359.requireNonNull(biFunction);
+        C17359.requireNonNull(obj2);
+        Object obj3 = map.get(obj);
+        if (obj3 != null) {
+            obj2 = biFunction.apply(obj3, obj2);
+        }
+        if (obj2 == null) {
+            map.remove(obj);
+            return obj2;
+        }
+        map.put(obj, obj2);
+        return obj2;
     }
 }

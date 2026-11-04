@@ -5,7 +5,7 @@ import java.io.PrintStream;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Vector;
-import l.C17214;
+import l.C3769;
 import moe.shizuku.server.IShizukuService;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
@@ -21,7 +21,7 @@ import org.bouncycastle.crypto.params.NaccacheSternPrivateKeyParameters;
 import org.bouncycastle.math.Primes;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NaccacheSternKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public NaccacheSternKeyGenerationParameters param;
     public static int[] smallPrimes = {3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, IShizukuService.Stub.TRANSACTION_dispatchPackageChanged, IShizukuService.Stub.TRANSACTION_updateFlagsForUid, 109, UMErrorCode.E_UM_BE_RAW_OVERSIZE, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, Primes.SMALL_FACTOR_LIMIT, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557};
@@ -167,9 +167,9 @@ public class NaccacheSternKeyPairGenerator implements AsymmetricCipherKeyPairGen
                     if (zIsDebug) {
                         PrintStream printStream3 = System.out;
                         i2 = i4;
-                        StringBuilder sbM40153 = C17214.m40153(i2, "key size too small. Should be ", " but is actually ");
-                        sbM40153.append(bigIntegerAdd.multiply(bigIntegerAdd2).bitLength());
-                        printStream3.println(sbM40153.toString());
+                        StringBuilder sbM12235 = C3769.m12235(i2, "key size too small. Should be ", " but is actually ");
+                        sbM12235.append(bigIntegerAdd.multiply(bigIntegerAdd2).bitLength());
+                        printStream3.println(sbM12235.toString());
                     } else {
                         i2 = i4;
                     }

@@ -1,110 +1,82 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ۛᩳܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I8HK */
+/* JADX INFO: renamed from: l.ۛۜ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8BV */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6224 implements InterfaceC9753 {
+public final class C6224 implements InterfaceC0171 {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final AbstractC10959 f21143 = AbstractC10959.m27714().m27720(new C17745(6));
+    public final /* synthetic */ C25179 f21146;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f21144;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3986 f21147;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ HashMap f21148;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final long[] f21145;
+    public final /* synthetic */ IOException[] f21149;
 
-    /* JADX WARN: Code duplicated, block: B:29:0x00b0  */
-    public C6224(List list) {
-        if (list.size() == 1) {
-            C17513 c17513 = (C17513) C22808.m50467((Collection) list);
-            long j = c17513.f55685;
-            AbstractC22433 abstractC22433 = c17513.f55686;
-            long j2 = c17513.f55688;
-            j = j == -9223372036854775807L ? 0L : j;
-            if (j2 == -9223372036854775807L) {
-                this.f21144 = AbstractC22433.of((Object) abstractC22433);
-                this.f21145 = new long[]{j};
+    public C6224(C3986 c3986, HashMap map, C25179 c25179, IOException[] iOExceptionArr) {
+        this.f21147 = c3986;
+        this.f21148 = map;
+        this.f21146 = c25179;
+        this.f21149 = iOExceptionArr;
+    }
+
+    @Override // l.InterfaceC0171
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1452(InterfaceC2386 interfaceC2386, InputStream inputStream) throws IOException {
+        C3986 c3986 = this.f21147;
+        c3986.f13636.m6376();
+        if (inputStream == null) {
+            return;
+        }
+        C12627 c12627 = (C12627) this.f21148.get(interfaceC2386);
+        C17359.requireNonNull(c12627);
+        InterfaceC24124 interfaceC24124 = c3986.f13634;
+        c3986.f13636.m6385();
+        c3986.f13636.getClass();
+        interfaceC24124.mo43420(c12627);
+        c3986.f13634.getClass();
+        c3986.f13634.setProgress(c3986.f13636.m6380());
+        C8002 c8002 = new C8002(c12627.m18626());
+        c8002.setTime(c12627.m18627());
+        C3986.m12839(c8002, c12627);
+        C25179 c25179 = this.f21146;
+        c25179.m56125(c8002);
+        try {
+            C21298.m48534(inputStream, c25179.m56119(), interfaceC2386.getSize(), new C12189(this));
+            inputStream.close();
+            if (c3986.f13634.mo924()) {
                 return;
-            } else {
-                this.f21144 = AbstractC22433.of((Object) abstractC22433, (Object) AbstractC22433.of());
-                this.f21145 = new long[]{j, j2 + j};
-                return;
             }
-        }
-        long[] jArr = new long[list.size() * 2];
-        this.f21145 = jArr;
-        Arrays.fill(jArr, C17492.FOREVER_NS);
-        ArrayList arrayList = new ArrayList();
-        AbstractC22433 abstractC22433M49798 = AbstractC22433.m49798(f21143, list);
-        int i = 0;
-        for (int i2 = 0; i2 < abstractC22433M49798.size(); i2++) {
-            C17513 c17514 = (C17513) abstractC22433M49798.get(i2);
-            long j3 = c17514.f55685;
-            long j4 = c17514.f55688;
-            AbstractC22433 abstractC22434 = c17514.f55686;
-            j3 = j3 == -9223372036854775807L ? 0L : j3;
-            long j5 = j3 + j4;
-            if (i != 0) {
-                int i3 = i - 1;
-                long j6 = this.f21145[i3];
-                if (j6 < j3) {
-                    this.f21145[i] = j3;
-                    arrayList.add(abstractC22434);
-                    i++;
-                } else if (j6 == j3 && ((AbstractC22433) arrayList.get(i3)).isEmpty()) {
-                    arrayList.set(i3, abstractC22434);
-                } else {
-                    C0303.m1848("Truncating unsupported overlapping cues.");
-                    this.f21145[i3] = j3;
-                    arrayList.set(i3, abstractC22434);
-                }
-            } else {
-                this.f21145[i] = j3;
-                arrayList.add(abstractC22434);
-                i++;
+            c3986.f13636.m6378(c12627.m18622());
+        } catch (Throwable th) {
+            try {
+                inputStream.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
             }
-            if (j4 != -9223372036854775807L) {
-                this.f21145[i] = j5;
-                arrayList.add(AbstractC22433.of());
-                i++;
-            }
+            throw th;
         }
-        this.f21144 = AbstractC22433.copyOf((Collection) arrayList);
     }
 
-    @Override // l.InterfaceC9753
+    @Override // l.InterfaceC0171
     /* JADX INFO: renamed from: ۙ */
-    public final int mo15244(long j) {
-        int iM41825 = C17983.m41825(this.f21145, j, false);
-        if (iM41825 < this.f21144.size()) {
-            return iM41825;
-        }
-        return -1;
+    public final boolean mo1453(IOException iOException) {
+        System.out.println("onError");
+        this.f21149[0] = iOException;
+        return false;
     }
 
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo15243() {
-        return this.f21144.size();
-    }
-
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo15245(int i) {
-        C2023.m6507(i < this.f21144.size());
-        return this.f21145[i];
-    }
-
-    @Override // l.InterfaceC9753
-    /* JADX INFO: renamed from: ۨ */
-    public final List mo15247(long j) {
-        int iM41855 = C17983.m41855(this.f21145, j, false);
-        return iM41855 == -1 ? AbstractC22433.of() : (AbstractC22433) this.f21144.get(iM41855);
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f21147.f13634.mo924();
     }
 }

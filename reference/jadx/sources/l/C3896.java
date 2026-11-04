@@ -1,20 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘۧۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 77E4 */
-/* JADX INFO: loaded from: classes2.dex */
-public class C3896 extends C13173 {
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public String f14565;
+/* JADX INFO: renamed from: l.ۘۘۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: MB7O */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C3896 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f14566 = false;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f14564 = false;
-
-    public C3896(String str) {
-        this.f14565 = str;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        int i = C14336.f45216;
+        return new C24034();
     }
 }

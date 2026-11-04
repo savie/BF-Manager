@@ -1,48 +1,55 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ܰۛۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R7DV */
+/* JADX INFO: renamed from: l.۬ۚۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M5GJ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13631 implements InterfaceC6387 {
+public final class C13631 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C15187 f44967;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f43283;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public InterfaceC4705 f44968;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f43284;
 
-    @Override // l.InterfaceC4705
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ boolean mo2342() {
-        return true;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f43285;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f43286;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public EnumC2619 f43287;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f43288;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public ComponentCallbacksC11612 f43289;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public EnumC2619 f43290;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f43291;
+
+    public C13631() {
     }
 
-    public C13631(C15187 c15187, InterfaceC6387 interfaceC6387) {
-        this.f44967 = c15187;
-        this.f44968 = interfaceC6387;
+    public C13631(ComponentCallbacksC11612 componentCallbacksC11612, int i) {
+        this.f43284 = i;
+        this.f43289 = componentCallbacksC11612;
+        this.f43288 = false;
+        EnumC2619 enumC2619 = EnumC2619.RESUMED;
+        this.f43287 = enumC2619;
+        this.f43290 = enumC2619;
     }
 
-    @Override // l.InterfaceC4705
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2341(InterfaceC19275 interfaceC19275) throws IOException {
-        this.f44967.mo2341(interfaceC19275);
-        this.f44968.mo2341(interfaceC19275);
-    }
-
-    @Override // l.InterfaceC4705
-    public final int getLength() {
-        return this.f44968.getLength() + 2;
-    }
-
-    @Override // l.InterfaceC6387
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC4705 mo15810(C12738 c12738) {
-        C15187 c15187 = this.f44967;
-        C17676.m41157(c15187, c12738);
-        this.f44967 = c15187;
-        this.f44968 = C17676.m41156(this.f44968, c12738);
-        return this;
+    public C13631(int i, ComponentCallbacksC11612 componentCallbacksC11612, int i2) {
+        this.f43284 = i;
+        this.f43289 = componentCallbacksC11612;
+        this.f43288 = true;
+        EnumC2619 enumC2619 = EnumC2619.RESUMED;
+        this.f43287 = enumC2619;
+        this.f43290 = enumC2619;
     }
 }

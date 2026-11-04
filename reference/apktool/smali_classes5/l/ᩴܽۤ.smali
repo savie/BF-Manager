@@ -1,37 +1,45 @@
 .class public final synthetic Ll/ᩴܽۤ;
 .super Ljava/lang/Object;
-.source "F416"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
+.source "W4H2"
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+# direct methods
+.method public static ۙ(Ll/ܳܽۤ;JJ)Ll/ܳܽۤ;
+    .locals 7
 
-    .line 2
-    check-cast p1, Ll/ۚ᩵ۤ;
+    .line 51
+    new-instance v6, Ll/᩷ܽۤ;
 
-    .line 1889
-    iget-wide v0, p1, Ll/᩻᩵ۤ;->֡:J
+    move-object v0, v6
 
-    const-wide/high16 v2, 0x1000000000000000L
+    move-object v1, p0
 
-    or-long/2addr v0, v2
+    move-wide v2, p1
 
-    iput-wide v0, p1, Ll/᩻᩵ۤ;->֡:J
+    move-wide v4, p3
 
-    return-void
+    invoke-direct/range {v0 .. v5}, Ll/᩷ܽۤ;-><init>(Ll/ܳܽۤ;JJ)V
+
+    return-object v6
 .end method
 
-.method public synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-    .locals 0
+.method public static ᩷(Ll/ܳܽۤ;JJ)Ll/ܳܽۤ;
+    .locals 7
 
-    .line 0
-    invoke-static {p0, p1}, Ll/֨᩻ᩴ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    .line 47
+    new-instance v6, Ll/᩷ܽۤ;
 
-    move-result-object p1
+    invoke-interface {p0}, Ll/ܳܽۤ;->᩻()Ll/ܳܽۤ;
 
-    return-object p1
+    move-result-object v1
+
+    move-object v0, v6
+
+    move-wide v2, p1
+
+    move-wide v4, p3
+
+    invoke-direct/range {v0 .. v5}, Ll/᩷ܽۤ;-><init>(Ll/ܳܽۤ;JJ)V
+
+    return-object v6
 .end method

@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field public final propertyValues:Ll/۫۠;
+.field public final propertyValues:Ll/ۡۗ;
 
-.field public final timings:Ll/۫۠;
+.field public final timings:Ll/ۡۗ;
 
 
 # direct methods
@@ -21,18 +21,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 70
-    new-instance v0, Ll/۫۠;
+    new-instance v0, Ll/ۡۗ;
 
-    invoke-direct {v0}, Ll/۫۠;-><init>()V
+    invoke-direct {v0}, Ll/ۡۗ;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
     .line 71
-    new-instance v0, Ll/۫۠;
+    new-instance v0, Ll/ۡۗ;
 
-    invoke-direct {v0}, Ll/۫۠;-><init>()V
+    invoke-direct {v0}, Ll/ۡۗ;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/۫۠;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/ۡۗ;
 
     return-void
 .end method
@@ -279,11 +279,11 @@
     check-cast p1, Lcom/google/android/material/animation/MotionSpec;
 
     .line 235
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    invoke-virtual {v0, p1}, Ll/۫۠;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -316,7 +316,7 @@
 .end method
 
 .method public getPropertyValues(Ljava/lang/String;)[Landroid/animation/PropertyValuesHolder;
-    .locals 2
+    .locals 1
 
     .line 110
     invoke-virtual {p0, p1}, Lcom/google/android/material/animation/MotionSpec;->hasPropertyValues(Ljava/lang/String;)Z
@@ -326,16 +326,12 @@
     if-eqz v0, :cond_0
 
     .line 113
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/ۡۗ;
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 113
     check-cast p1, [Landroid/animation/PropertyValuesHolder;
 
     invoke-direct {p0, p1}, Lcom/google/android/material/animation/MotionSpec;->clonePropertyValuesHolder([Landroid/animation/PropertyValuesHolder;)[Landroid/animation/PropertyValuesHolder;
@@ -354,7 +350,7 @@
 .end method
 
 .method public getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
-    .locals 2
+    .locals 1
 
     .line 84
     invoke-virtual {p0, p1}, Lcom/google/android/material/animation/MotionSpec;->hasTiming(Ljava/lang/String;)Z
@@ -364,16 +360,12 @@
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 87
     check-cast p1, Lcom/google/android/material/animation/MotionTiming;
 
     return-object p1
@@ -391,9 +383,9 @@
     .locals 9
 
     .line 161
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    invoke-virtual {v0}, Ll/۫۠;->size()I
+    invoke-virtual {v0}, Ll/ۡۗ;->size()I
 
     move-result v0
 
@@ -405,9 +397,9 @@
     if-ge v3, v0, :cond_0
 
     .line 162
-    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    invoke-virtual {v4, v3}, Ll/۫۠;->᩹(I)Ljava/lang/Object;
+    invoke-virtual {v4, v3}, Ll/ۡۗ;->ܳ(I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -437,15 +429,12 @@
 .end method
 
 .method public hasPropertyValues(Ljava/lang/String;)Z
-    .locals 2
+    .locals 1
 
     .line 99
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/ۡۗ;
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -462,15 +451,12 @@
 .end method
 
 .method public hasTiming(Ljava/lang/String;)Z
-    .locals 2
+    .locals 1
 
     .line 76
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -490,9 +476,9 @@
     .locals 1
 
     .line 240
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    invoke-virtual {v0}, Ll/۫۠;->hashCode()I
+    invoke-virtual {v0}, Ll/ۡۗ;->hashCode()I
 
     move-result v0
 
@@ -503,9 +489,9 @@
     .locals 1
 
     .line 123
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Ll/ۡۗ;
 
-    invoke-virtual {v0, p1, p2}, Ll/۫۠;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Ll/ۡۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -514,9 +500,9 @@
     .locals 1
 
     .line 92
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
-    invoke-virtual {v0, p1, p2}, Ll/۫۠;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Ll/ۡۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -564,7 +550,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 252
-    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/۫۠;
+    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Ll/ۡۗ;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

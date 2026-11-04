@@ -1,38 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜܽ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q4SY */
+import android.content.Intent;
+
+/* JADX INFO: renamed from: l.ۜۘ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 98W2 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6893 extends AbstractC11833 {
+public final class C6893 extends AbstractC10926 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final C6893 f23199 = new C6893();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f22868;
 
-    public final int hashCode() {
-        return 1;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] f22869;
+
+    public C6893(C20348 c20348) {
+        super(4);
+        this.f22868 = c20348.m46758();
+        this.f22869 = C15768.m37705(c20348.m46758());
     }
 
-    @Override // l.AbstractC11833
+    @Override // l.AbstractC10926
     /* JADX INFO: renamed from: ۙ */
-    public final int mo4462(int i) {
-        return i + 1;
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo4464(AbstractC11833 abstractC11833) {
-        return 0;
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4463(C4651 c4651) {
-        c4651.m12841(EnumC18182.VALUE_NULL.f58128);
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ᩸ */
-    public final EnumC18182 mo4465() {
-        return EnumC18182.VALUE_NULL;
+    public final void mo1477(AbstractActivityC17204 abstractActivityC17204) {
+        Intent intent = new Intent(abstractActivityC17204, (Class<?>) ActivityC16147.class);
+        intent.putExtra("title", this.f22868);
+        intent.putExtra("markdown", this.f22869);
+        abstractActivityC17204.startActivity(intent);
     }
 }

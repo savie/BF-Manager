@@ -1,34 +1,81 @@
-.class public final synthetic Ll/᩹ᩳᩴ;
+.class public final Ll/᩹ᩳᩴ;
 .super Ljava/lang/Object;
-.source "GBZW"
+.source "L9CC"
+
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/ۖᩳᩴ;
 
 
 # direct methods
-.method public static ۙ(Ll/֨ᩳᩴ;Ljava/util/function/Consumer;)V
+.method public constructor <init>(Ll/ۖᩳᩴ;)V
+    .locals 0
+
+    .line 1395
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩹ᩳᩴ;->ۙ:Ll/ۖᩳᩴ;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    .line 88
-    instance-of v0, p1, Ljava/util/function/LongConsumer;
+    .line 1411
+    iget-object p1, p0, Ll/᩹ᩳᩴ;->ۙ:Ll/ۖᩳᩴ;
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Ll/ۖᩳᩴ;->ۙ(Ll/ۖᩳᩴ;)Landroid/view/ViewGroup;
 
-    check-cast p1, Ljava/util/function/LongConsumer;
+    move-result-object p1
 
-    goto :goto_0
+    new-instance v0, Ll/ܶᩳᩴ;
 
-    :cond_0
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p0}, Ll/ܶᩳᩴ;-><init>(Ll/᩹ᩳᩴ;)V
 
-    new-instance v0, Ll/ۖᩳᩴ;
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {v0, p1}, Ll/ۖᩳᩴ;-><init>(Ljava/util/function/Consumer;)V
+    return-void
+.end method
 
-    move-object p1, v0
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    :goto_0
-    invoke-interface {p0, p1}, Ll/۬ۛᩴ;->forEachRemaining(Ljava/util/function/LongConsumer;)V
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
+
+    .line 1400
+    iget-object p1, p0, Ll/᩹ᩳᩴ;->ۙ:Ll/ۖᩳᩴ;
+
+    invoke-static {p1}, Ll/ۖᩳᩴ;->ۚ(Ll/ۖᩳᩴ;)Landroid/widget/ImageButton;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+
+    .line 1403
+    invoke-static {p1}, Ll/ۖᩳᩴ;->ۤ(Ll/ۖᩳᩴ;)Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1404
+    invoke-static {p1}, Ll/ۖᩳᩴ;->ۧ(Ll/ۖᩳᩴ;)Ll/֨ᩳᩴ;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method

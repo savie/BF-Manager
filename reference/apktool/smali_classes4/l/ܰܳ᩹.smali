@@ -1,264 +1,178 @@
 .class public final Ll/ܰܳ᩹;
-.super Ljava/io/InputStream;
-.source "672L"
+.super Landroid/text/style/MetricAffectingSpan;
+.source "08Y1"
 
 # interfaces
-.implements Ll/᩷ۤᩴ;
+.implements Landroid/text/style/LeadingMarginSpan;
 
 
 # instance fields
-.field public final ֡:Ljava/io/BufferedInputStream;
+.field public final ֡:Ll/ܳܳ᩹;
 
-.field public ܺ:Ll/ۜ۟᩵;
+.field public final ܰ:I
 
-.field public ᩶:Z
+.field public final ܿ:Landroid/graphics/Rect;
+
+.field public final ᩶:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 2
+.method public constructor <init>(Ll/ܳܳ᩹;I)V
+    .locals 1
+
+    .line 24
+    invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
     .line 20
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    invoke-static {}, Ll/֡ܳ᩹;->᩷()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ܰܳ᩹;->ܿ:Landroid/graphics/Rect;
 
     .line 21
-    instance-of v0, p1, Ljava/io/BufferedInputStream;
+    invoke-static {}, Ll/֡ܳ᩹;->ۙ()Landroid/graphics/Paint;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 22
-    check-cast p1, Ljava/io/BufferedInputStream;
+    iput-object v0, p0, Ll/ܰܳ᩹;->᩶:Landroid/graphics/Paint;
 
-    goto :goto_0
+    .line 25
+    iput-object p1, p0, Ll/ܰܳ᩹;->֡:Ll/ܳܳ᩹;
 
-    :cond_0
-    new-instance v0, Ljava/io/BufferedInputStream;
-
-    const/high16 v1, 0x10000
-
-    invoke-direct {v0, p1, v1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
-
-    move-object p1, v0
-
-    :goto_0
-    iput-object p1, p0, Ll/ܰܳ᩹;->֡:Ljava/io/BufferedInputStream;
-
-    .line 23
-    new-instance v0, Ll/ۜ۟᩵;
-
-    invoke-direct {v0, p1}, Ll/ۜ۟᩵;-><init>(Ljava/io/InputStream;)V
-
-    iput-object v0, p0, Ll/ܰܳ᩹;->ܺ:Ll/ۜ۟᩵;
+    .line 26
+    iput p2, p0, Ll/ܰܳ᩹;->ܰ:I
 
     return-void
-.end method
-
-.method private ۙ()Z
-    .locals 7
-
-    .line 59
-    iget-object v0, p0, Ll/ܰܳ᩹;->֡:Ljava/io/BufferedInputStream;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Ljava/io/BufferedInputStream;->mark(I)V
-
-    new-array v2, v1, [B
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v1, :cond_1
-
-    rsub-int/lit8 v5, v4, 0x4
-
-    .line 63
-    invoke-virtual {v0, v2, v4, v5}, Ljava/io/BufferedInputStream;->read([BII)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-ne v5, v6, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    add-int/2addr v4, v5
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    const/4 v5, 0x1
-
-    if-nez v4, :cond_2
-
-    .line 70
-    iput-boolean v5, p0, Ll/ܰܳ᩹;->᩶:Z
-
-    return v3
-
-    :cond_2
-    if-ne v4, v1, :cond_3
-
-    .line 73
-    aget-byte v1, v2, v3
-
-    const/16 v3, 0x42
-
-    if-ne v1, v3, :cond_3
-
-    aget-byte v1, v2, v5
-
-    const/16 v3, 0x5a
-
-    if-ne v1, v3, :cond_3
-
-    const/4 v1, 0x2
-
-    aget-byte v1, v2, v1
-
-    const/16 v3, 0x68
-
-    if-ne v1, v3, :cond_3
-
-    const/4 v1, 0x3
-
-    aget-byte v1, v2, v1
-
-    const/16 v2, 0x31
-
-    if-lt v1, v2, :cond_3
-
-    const/16 v2, 0x39
-
-    if-gt v1, v2, :cond_3
-
-    .line 77
-    invoke-virtual {v0}, Ljava/io/BufferedInputStream;->reset()V
-
-    .line 78
-    new-instance v1, Ll/ۜ۟᩵;
-
-    invoke-direct {v1, v0}, Ll/ۜ۟᩵;-><init>(Ljava/io/InputStream;)V
-
-    iput-object v1, p0, Ll/ܰܳ᩹;->ܺ:Ll/ۜ۟᩵;
-
-    return v5
-
-    .line 75
-    :cond_3
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Invalid trailing BZIP2 member"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final drawLeadingMargin(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;IIZLandroid/text/Layout;)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 p5, 0x1
 
-    .line 84
-    iput-boolean v0, p0, Ll/ܰܳ᩹;->᩶:Z
+    .line 52
+    iget p6, p0, Ll/ܰܳ᩹;->ܰ:I
 
-    .line 85
-    iget-object v0, p0, Ll/ܰܳ᩹;->֡:Ljava/io/BufferedInputStream;
+    if-eq p6, p5, :cond_0
 
-    invoke-virtual {v0}, Ljava/io/BufferedInputStream;->close()V
+    const/4 p5, 0x2
 
+    if-ne p6, p5, :cond_2
+
+    .line 12
+    :cond_0
+    instance-of p5, p8, Landroid/text/Spanned;
+
+    if-eqz p5, :cond_2
+
+    check-cast p8, Landroid/text/Spanned;
+
+    invoke-interface {p8, p0}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result p5
+
+    if-ne p5, p10, :cond_2
+
+    .line 55
+    iget-object p5, p0, Ll/ܰܳ᩹;->᩶:Landroid/graphics/Paint;
+
+    invoke-virtual {p5, p2}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+
+    .line 57
+    iget-object p2, p0, Ll/ܰܳ᩹;->֡:Ll/ܳܳ᩹;
+
+    invoke-virtual {p2, p5}, Ll/ܳܳ᩹;->ۙ(Landroid/graphics/Paint;)V
+
+    .line 59
+    invoke-virtual {p5}, Landroid/graphics/Paint;->getStrokeWidth()F
+
+    move-result p2
+
+    const/4 p6, 0x0
+
+    cmpl-float p6, p2, p6
+
+    if-lez p6, :cond_2
+
+    int-to-float p6, p7
+
+    sub-float/2addr p6, p2
+
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    add-float/2addr p6, p2
+
+    float-to-int p2, p6
+
+    if-lez p4, :cond_1
+
+    .line 69
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+
+    move-result p4
+
+    goto :goto_0
+
+    .line 71
+    :cond_1
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+
+    move-result p4
+
+    sub-int p4, p3, p4
+
+    move v0, p4
+
+    move p4, p3
+
+    move p3, v0
+
+    .line 75
+    :goto_0
+    iget-object p6, p0, Ll/ܰܳ᩹;->ܿ:Landroid/graphics/Rect;
+
+    invoke-virtual {p6, p3, p2, p4, p7}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 76
+    invoke-virtual {p1, p6, p5}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    :cond_2
     return-void
 .end method
 
-.method public final read()I
-    .locals 2
-
-    .line 28
-    :cond_0
-    iget-boolean v0, p0, Ll/ܰܳ᩹;->᩶:Z
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_2
-
-    .line 29
-    iget-object v0, p0, Ll/ܰܳ᩹;->ܺ:Ll/ۜ۟᩵;
-
-    invoke-virtual {v0}, Ll/ۜ۟᩵;->read()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    return v0
-
-    .line 33
-    :cond_1
-    invoke-direct {p0}, Ll/ܰܳ᩹;->ۙ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final read([BII)I
-    .locals 2
-
-    if-nez p3, :cond_0
+.method public final getLeadingMargin(Z)I
+    .locals 0
 
     const/4 p1, 0x0
 
     return p1
-
-    .line 45
-    :cond_0
-    iget-boolean v0, p0, Ll/ܰܳ᩹;->᩶:Z
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_2
-
-    .line 46
-    iget-object v0, p0, Ll/ܰܳ᩹;->ܺ:Ll/ۜ۟᩵;
-
-    invoke-virtual {v0, p1, p2, p3}, Ll/ۜ۟᩵;->read([BII)I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    return v0
-
-    .line 50
-    :cond_1
-    invoke-direct {p0}, Ll/ܰܳ᩹;->ۙ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    return v1
 .end method
 
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
+.method public final updateDrawState(Landroid/text/TextPaint;)V
     .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .line 40
+    iget-object v0, p0, Ll/ܰܳ᩹;->֡:Ll/ܳܳ᩹;
 
-    move-result-wide v0
+    iget v1, p0, Ll/ܰܳ᩹;->ܰ:I
 
-    return-wide v0
+    invoke-virtual {v0, p1, v1}, Ll/ܳܳ᩹;->ۙ(Landroid/text/TextPaint;I)V
+
+    return-void
+.end method
+
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 2
+
+    .line 40
+    iget-object v0, p0, Ll/ܰܳ᩹;->֡:Ll/ܳܳ᩹;
+
+    iget v1, p0, Ll/ܰܳ᩹;->ܰ:I
+
+    invoke-virtual {v0, p1, v1}, Ll/ܳܳ᩹;->ۙ(Landroid/text/TextPaint;I)V
+
+    return-void
 .end method

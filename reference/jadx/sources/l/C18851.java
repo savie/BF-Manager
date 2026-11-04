@@ -1,43 +1,39 @@
 package l;
 
-import java.util.HashSet;
+import java.util.function.Consumer;
+import java.util.function.LongConsumer;
 
-/* JADX INFO: renamed from: l.ᩴܺ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: G97V */
-/* JADX INFO: loaded from: classes5.dex */
-public class C18851 extends C11441 {
-    @Override // l.C11441, l.AbstractC17902
-    /* JADX INFO: renamed from: ۜ */
-    public final C5202 mo3077() {
-        HashSet hashSet;
-        int length;
-        C23791 c23791M35096;
-        C23791 c23791M35097;
-        int i = 0;
-        try {
-            C5202 c5202Mo3077 = super.mo3077();
-            String[] strArrM41566 = m41566("ARG_PATHS");
-            hashSet = new HashSet();
-            length = strArrM41566.length;
-            while (i < length) {
-                String str = strArrM41566[i];
-                if (str.startsWith("$RECYCLE.BIN$/") && (c23791M35097 = C14619.m35096(str.substring(14))) != null) {
-                    hashSet.add(c23791M35097.m52328());
-                }
+/* JADX INFO: renamed from: l.ᩳۚۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C18851 {
+    public static void $default$forEachRemaining(InterfaceC9900 interfaceC9900, LongConsumer longConsumer) {
+        while (interfaceC9900.tryAdvance(longConsumer)) {
+        }
+    }
+
+    public static boolean b(InterfaceC9900 interfaceC9900, Consumer consumer) {
+        if (consumer instanceof LongConsumer) {
+            return interfaceC9900.tryAdvance((LongConsumer) consumer);
+        }
+        if (AbstractC21658.a) {
+            AbstractC21658.a(interfaceC9900.getClass(), "{0} calling Spliterator.OfLong.tryAdvance((LongConsumer) action::accept)");
+            throw null;
+        }
+        C17359.requireNonNull(consumer);
+        return interfaceC9900.tryAdvance((LongConsumer) new C3758(consumer, 0));
+    }
+
+    public static void a(InterfaceC9900 interfaceC9900, Consumer consumer) {
+        if (consumer instanceof LongConsumer) {
+            interfaceC9900.forEachRemaining((LongConsumer) consumer);
+        } else {
+            if (AbstractC21658.a) {
+                AbstractC21658.a(interfaceC9900.getClass(), "{0} calling Spliterator.OfLong.forEachRemaining((LongConsumer) action::accept)");
+                throw null;
             }
-            return c5202Mo3077;
-        } finally {
-            String[] strArrM41567 = m41566("ARG_PATHS");
-            hashSet = new HashSet();
-            length = strArrM41567.length;
-            while (i < length) {
-                String str2 = strArrM41567[i];
-                if (str2.startsWith("$RECYCLE.BIN$/") && (c23791M35096 = C14619.m35096(str2.substring(14))) != null) {
-                    hashSet.add(c23791M35096.m52328());
-                }
-                i++;
-            }
-            C20370.m46019(hashSet);
+            C17359.requireNonNull(consumer);
+            interfaceC9900.forEachRemaining((LongConsumer) new C3758(consumer, 0));
         }
     }
 }

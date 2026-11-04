@@ -23,12 +23,12 @@ import com.google.android.material.motion.MotionUtils;
 import com.google.android.material.resources.MaterialResources;
 import java.util.ArrayList;
 import java.util.List;
-import l.C0976;
-import l.C16407;
-import l.C22357;
-import l.C2387;
-import l.C3798;
-import l.C5031;
+import l.C11642;
+import l.C17609;
+import l.C18085;
+import l.C22666;
+import l.C23577;
+import l.C5752;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class IndicatorViewController {
@@ -77,15 +77,15 @@ public final class IndicatorViewController {
         Context context = textInputLayout.getContext();
         this.context = context;
         this.textInputView = textInputLayout;
-        this.captionTranslationYPx = context.getResources().getDimensionPixelSize(C0976.f4545);
-        this.captionTranslationYAnimationDuration = MotionUtils.resolveThemeDuration(context, C2387.f9401, DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION);
-        this.captionFadeInAnimationDuration = MotionUtils.resolveThemeDuration(context, C2387.f8923, 167);
-        this.captionFadeOutAnimationDuration = MotionUtils.resolveThemeDuration(context, C2387.f9401, 167);
-        this.captionTranslationYAnimationInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f8719, AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR);
-        int i = C2387.f8719;
+        this.captionTranslationYPx = context.getResources().getDimensionPixelSize(C17609.f57638);
+        this.captionTranslationYAnimationDuration = MotionUtils.resolveThemeDuration(context, C11642.f37481, DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION);
+        this.captionFadeInAnimationDuration = MotionUtils.resolveThemeDuration(context, C11642.f36799, 167);
+        this.captionFadeOutAnimationDuration = MotionUtils.resolveThemeDuration(context, C11642.f37481, 167);
+        this.captionTranslationYAnimationInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36969, AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR);
+        int i = C11642.f36969;
         TimeInterpolator timeInterpolator = AnimationUtils.LINEAR_INTERPOLATOR;
         this.captionFadeInAnimationInterpolator = MotionUtils.resolveThemeInterpolator(context, i, timeInterpolator);
-        this.captionFadeOutAnimationInterpolator = MotionUtils.resolveThemeInterpolator(context, C2387.f9129, timeInterpolator);
+        this.captionFadeOutAnimationInterpolator = MotionUtils.resolveThemeInterpolator(context, C11642.f36628, timeInterpolator);
     }
 
     public void showHelper(CharSequence charSequence) {
@@ -134,7 +134,7 @@ public final class IndicatorViewController {
 
     private boolean shouldAnimateCaptionView(TextView textView, CharSequence charSequence) {
         TextInputLayout textInputLayout = this.textInputView;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         if (textInputLayout.isLaidOut() && this.textInputView.isEnabled()) {
             return (this.captionToShow == this.captionDisplayed && textView != null && TextUtils.equals(textView.getText(), charSequence)) ? false : true;
         }
@@ -277,9 +277,9 @@ public final class IndicatorViewController {
             EditText editText = this.textInputView.getEditText();
             boolean zIsFontScaleAtLeast1_3 = MaterialResources.isFontScaleAtLeast1_3(this.context);
             LinearLayout linearLayout = this.indicatorArea;
-            int i = C0976.f4292;
-            int i2 = C5031.f17539;
-            linearLayout.setPaddingRelative(getIndicatorPadding(zIsFontScaleAtLeast1_3, i, editText.getPaddingStart()), getIndicatorPadding(zIsFontScaleAtLeast1_3, C0976.f3866, this.context.getResources().getDimensionPixelSize(C0976.f4599)), getIndicatorPadding(zIsFontScaleAtLeast1_3, C0976.f4292, editText.getPaddingEnd()), 0);
+            int i = C17609.f57220;
+            int i2 = C22666.f73603;
+            linearLayout.setPaddingRelative(getIndicatorPadding(zIsFontScaleAtLeast1_3, i, editText.getPaddingStart()), getIndicatorPadding(zIsFontScaleAtLeast1_3, C17609.f57409, this.context.getResources().getDimensionPixelSize(C17609.f57432)), getIndicatorPadding(zIsFontScaleAtLeast1_3, C17609.f57220, editText.getPaddingEnd()), 0);
         }
     }
 
@@ -340,9 +340,9 @@ public final class IndicatorViewController {
         }
         cancelCaptionAnimator();
         if (z) {
-            C22357 c22357 = new C22357(this.context);
-            this.errorView = c22357;
-            c22357.setId(C3798.f13983);
+            C5752 c5752 = new C5752(this.context);
+            this.errorView = c5752;
+            c5752.setId(C23577.f76150);
             this.errorView.setTextAlignment(5);
             Typeface typeface = this.typeface;
             if (typeface != null) {
@@ -378,9 +378,9 @@ public final class IndicatorViewController {
         }
         cancelCaptionAnimator();
         if (z) {
-            C22357 c22357 = new C22357(this.context);
-            this.helperTextView = c22357;
-            c22357.setId(C3798.f13912);
+            C5752 c5752 = new C5752(this.context);
+            this.helperTextView = c5752;
+            c5752.setId(C23577.f76267);
             this.helperTextView.setTextAlignment(5);
             Typeface typeface = this.typeface;
             if (typeface != null) {
@@ -388,7 +388,7 @@ public final class IndicatorViewController {
             }
             this.helperTextView.setVisibility(4);
             TextView textView = this.helperTextView;
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             textView.setAccessibilityLiveRegion(1);
             setHelperTextAppearance(this.helperTextTextAppearance);
             setHelperTextViewTextColor(this.helperTextViewTextColor);
@@ -508,7 +508,7 @@ public final class IndicatorViewController {
         this.errorViewAccessibilityLiveRegion = i;
         TextView textView = this.errorView;
         if (textView != null) {
-            int i2 = C5031.f17539;
+            int i2 = C22666.f73603;
             textView.setAccessibilityLiveRegion(i);
         }
     }
@@ -550,7 +550,7 @@ public final class IndicatorViewController {
         this.helperTextTextAppearance = i;
         TextView textView = this.helperTextView;
         if (textView != null) {
-            C16407.m38617(textView, i);
+            C18085.m42126(textView, i);
         }
     }
 }

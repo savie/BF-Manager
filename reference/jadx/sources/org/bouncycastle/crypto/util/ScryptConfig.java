@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.util;
 
 import org.bouncycastle.internal.asn1.misc.MiscObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ScryptConfig extends PBKDFConfig {
     public final int blockSize;
     public final int costParameter;

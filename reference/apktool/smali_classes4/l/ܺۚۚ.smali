@@ -1,39 +1,26 @@
-.class public final synthetic Ll/ܺۚۚ;
+.class public final Ll/ܺۚۚ;
 .super Ljava/lang/Object;
-.source "4AWI"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnMultiChoiceClickListener;
+.source "R78M"
 
 
 # instance fields
-.field public final synthetic ۙ:[Z
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ᩷:Ll/ۗ᩹ۚ;
 
 
 # direct methods
-.method public synthetic constructor <init>([Z)V
+.method public constructor <init>(Ljava/lang/String;Ll/ۗ᩹ۚ;)V
     .locals 0
 
-    .line 0
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܺۚۚ;->ۙ:[Z
+    .line 133
+    iput-object p1, p0, Ll/ܺۚۚ;->ۙ:Ljava/lang/String;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;IZ)V
-    .locals 0
-
-    .line 2
-    sget p1, Ll/᩵᩹ۚ;->ۤܰ:I
-
-    .line 603
-    iget-object p1, p0, Ll/ܺۚۚ;->ۙ:[Z
-
-    aput-boolean p3, p1, p2
+    .line 134
+    iput-object p2, p0, Ll/ܺۚۚ;->᩷:Ll/ۗ᩹ۚ;
 
     return-void
 .end method

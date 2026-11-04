@@ -10,7 +10,7 @@ import javax.crypto.interfaces.DHPrivateKey;
 import javax.crypto.interfaces.DHPublicKey;
 import javax.crypto.spec.DHPrivateKeySpec;
 import javax.crypto.spec.DHPublicKeySpec;
-import l.C17114;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
@@ -84,7 +84,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (algorithm.equals((ASN1Primitive) OIWObjectIdentifiers.elGamalAlgorithm)) {
             return new BCElGamalPrivateKey(privateKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 
     @Override // org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter
@@ -99,6 +99,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (algorithm.equals((ASN1Primitive) OIWObjectIdentifiers.elGamalAlgorithm)) {
             return new BCElGamalPublicKey(subjectPublicKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 }

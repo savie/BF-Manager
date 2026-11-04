@@ -395,7 +395,7 @@
 
     shr-int/lit8 v4, v4, 0x1c
 
-    invoke-static {v5, v0, v6, v4}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {v5, v0, v6, v4}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result v4
 

@@ -1,42 +1,33 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.֫ᩴᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1MW */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2014 extends AbstractC22167 implements InterfaceC6269, InterfaceC6206 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C2410 f7527;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6644 f7528;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2014(C6644 c6644) {
-        super(c6644);
-        this.f7528 = c6644;
-    }
-
-    @Override // l.AbstractC22167
+/* JADX INFO: renamed from: l.֫ܶܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OAR3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2014 extends AbstractC15437 {
+    @Override // l.AbstractC15437
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo6482(int i, Object obj) {
-        C2410 c2410 = new C2410(this.f7528, i);
-        this.f7527 = c2410;
-        ((Consumer) obj).accept(c2410);
+    public final int mo6926() {
+        return 0;
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        C2410 c2410 = new C2410(this.f7528, m49177());
-        this.f7527 = c2410;
-        return c2410;
+    @Override // l.AbstractC15437
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean mo6929() {
+        return false;
     }
 
-    @Override // l.AbstractC22167, java.util.Iterator
-    public final void remove() {
-        super.remove();
-        this.f7527.f9686 = -1;
+    @Override // l.AbstractC15437
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final EnumC16929 mo6928() {
+        return EnumC16929.INITIAL;
+    }
+
+    @Override // l.AbstractC15437
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo6927(byte[] bArr, int i, int i2) {
+        if (i2 == 0) {
+            return 0;
+        }
+        throw new IllegalStateException("Cannot read in this state");
     }
 }

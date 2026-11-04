@@ -1,305 +1,355 @@
 .class public final Ll/ᩴܰᩴ;
 .super Ljava/lang/Object;
-.source "TCH0"
-
-# interfaces
-.implements Ll/᩷ܰᩴ;
-.implements Ll/ۛܿᩴ;
+.source "313O"
 
 
-# instance fields
-.field public final ֡:I
+# static fields
+.field public static final ۙ:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public final ܺ:[C
+.field public static final ۤ:Ljava/util/HashMap;
 
-.field public ᩶:I
+.field public static final ᩷:Ll/֨ۗ;
 
 
 # direct methods
-.method public constructor <init>([CI)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 8
 
-    .line 206
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 767
+    new-instance v0, Ll/֨ۗ;
 
-    .line 207
-    iput-object p1, p0, Ll/ᩴܰᩴ;->ܺ:[C
+    const/16 v1, 0x19
 
-    .line 209
-    iput p2, p0, Ll/ᩴܰᩴ;->֡:I
+    invoke-direct {v0, v1}, Ll/֨ۗ;-><init>(I)V
+
+    sput-object v0, Ll/ᩴܰᩴ;->᩷:Ll/֨ۗ;
+
+    .line 768
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Ll/ᩴܰᩴ;->ۤ:Ljava/util/HashMap;
+
+    .line 769
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x2
+
+    const-wide/16 v4, 0xa
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+
+    sput-object v0, Ll/ᩴܰᩴ;->ۙ:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const/4 v1, 0x1
+
+    .line 773
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܰᩴ;->ۙ(Ll/᩷ܰᩴ;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 201
-    check-cast p1, Ll/֨ܰᩴ;
-
-    invoke-virtual {p0, p1}, Ll/ᩴܰᩴ;->ܰ(Ll/֨ܰᩴ;)V
-
-    return-void
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩺ܰᩴ;->ۙ(Ll/ܶܰᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 2
-
-    .line 214
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    iget v1, p0, Ll/ᩴܰᩴ;->֡:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPrevious()Z
+.method public static bridge synthetic ۙ()Ll/֨ۗ;
     .locals 1
 
-    .line 219
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    .line 103
-    invoke-static {p0}, Ll/᩺ܰᩴ;->ۙ(Ll/᩷ܰᩴ;)Ljava/lang/Character;
-
-    move-result-object v0
+    .line 0
+    sget-object v0, Ll/ᩴܰᩴ;->᩷:Ll/֨ۗ;
 
     return-object v0
 .end method
 
-.method public final nextIndex()I
-    .locals 1
+.method public static ۙ(Landroid/widget/ImageView;)V
+    .locals 4
 
-    .line 269
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    .line 44
-    invoke-virtual {p0}, Ll/ᩴܰᩴ;->֫ۙ()C
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    .line 814
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public final previousIndex()I
-    .locals 1
+    .line 815
+    invoke-virtual {p0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 274
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
+    .line 816
+    instance-of v2, v0, Ll/᩸ܰᩴ;
 
-    add-int/lit8 v0, v0, -0x1
+    if-eqz v2, :cond_0
 
-    return v0
-.end method
+    check-cast v0, Ll/᩸ܰᩴ;
 
-.method public final remove()V
-    .locals 1
+    iget-object v2, v0, Ll/᩸ܰᩴ;->᩶:Ljava/lang/String;
 
-    .line 70
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-object v3, v0, Ll/᩸ܰᩴ;->֡:Ljava/util/WeakHashMap;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    .line 817
+    invoke-virtual {v3, p0}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
-.end method
+    .line 818
+    invoke-virtual {v0, v1}, Ll/᩸ܰᩴ;->ۙ(Ll/᩻ܰᩴ;)V
 
-.method public final bridge synthetic set(Ljava/lang/Object;)V
-    .locals 0
+    .line 819
+    invoke-virtual {v3}, Ljava/util/WeakHashMap;->isEmpty()Z
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܰᩴ;->ܰ(Ll/᩷ܰᩴ;Ljava/lang/Object;)V
+    move-result p0
 
-    return-void
-.end method
+    if-eqz p0, :cond_0
 
-.method public final ֫ۙ()C
-    .locals 2
+    sget-object p0, Ll/ᩴܰᩴ;->ۤ:Ljava/util/HashMap;
 
-    .line 230
-    invoke-virtual {p0}, Ll/ᩴܰᩴ;->hasPrevious()Z
+    invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v0, :cond_0
+
+    sget-object v1, Ll/ᩴܰᩴ;->ۙ:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->remove(Ljava/lang/Runnable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 231
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
+    .line 820
+    invoke-virtual {p0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    iget-object v1, p0, Ll/ᩴܰᩴ;->ܺ:[C
-
-    aget-char v0, v1, v0
-
-    return v0
-
-    .line 230
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final ۖ(C)V
-    .locals 0
-
-    .line 43
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final synthetic ۙ(Ljava/lang/Character;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܰᩴ;->ۙ(Ll/᩷ܰᩴ;Ljava/lang/Character;)V
-
     return-void
 .end method
 
-.method public final synthetic ۨ(Ljava/lang/Character;)V
-    .locals 0
+.method public static ۙ(Ll/ܽۘᩴ;Landroid/widget/ImageView;Ll/᩻ܰᩴ;)V
+    .locals 6
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܰᩴ;->ܰ(Ll/᩷ܰᩴ;Ljava/lang/Character;)V
+    .line 778
+    invoke-static {p2}, Ll/᩻ܰᩴ;->֫(Ll/᩻ܰᩴ;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    invoke-static {p2}, Ll/᩻ܰᩴ;->ۚ(Ll/᩻ܰᩴ;)Ll/۠ۖۧ;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/۠ۖۧ;->۫()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/high16 v0, 0x42480000    # 50.0f
+
+    .line 782
+    invoke-static {v0}, Ll/ۜۙܺ;->ۙ(F)I
+
+    move-result v0
+
+    .line 783
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ll/ܽۘᩴ;->᩸()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x3a
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 784
+    sget-object v2, Ll/ᩴܰᩴ;->᩷:Ll/֨ۗ;
+
+    invoke-virtual {v2, v1}, Ll/֨ۗ;->ۙ(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/Drawable;
+
+    if-eqz v2, :cond_1
+
+    .line 786
+    invoke-static {p1}, Ll/ᩴܰᩴ;->ۙ(Landroid/widget/ImageView;)V
+
+    .line 787
+    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
-.end method
 
-.method public final ܰ(C)V
-    .locals 0
+    .line 790
+    :cond_1
+    sget-object v2, Ll/ᩴܰᩴ;->ۤ:Ljava/util/HashMap;
 
-    .line 56
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    move-result-object v3
 
-    throw p1
-.end method
+    check-cast v3, Ll/᩸ܰᩴ;
 
-.method public final ܰ(Ll/֨ܰᩴ;)V
-    .locals 2
+    if-eqz v3, :cond_2
 
-    .line 236
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 792
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    .line 238
-    :goto_0
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
+    move-result-object v4
 
-    iget v1, p0, Ll/ᩴܰᩴ;->֡:I
+    if-eq v4, v3, :cond_3
 
-    if-ge v0, v1, :cond_0
+    :cond_2
+    invoke-static {p1}, Ll/ᩴܰᩴ;->ۙ(Landroid/widget/ImageView;)V
 
-    .line 239
-    iget-object v1, p0, Ll/ᩴܰᩴ;->ܺ:[C
+    :cond_3
+    const/4 v4, 0x0
 
-    aget-char v0, v1, v0
+    .line 793
+    invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-interface {p1, v0}, Ll/֨ܰᩴ;->ۨ(C)V
+    if-nez v3, :cond_4
 
-    .line 238
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ll/ᩴܰᩴ;->᩶:I
+    const/4 v5, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_4
+    const/4 v5, 0x0
+
+    :goto_0
+    if-eqz v5, :cond_5
+
+    .line 796
+    new-instance v3, Ll/᩸ܰᩴ;
+
+    invoke-direct {v3, v1, p0, v0}, Ll/᩸ܰᩴ;-><init>(Ljava/lang/String;Ll/ܽۘᩴ;I)V
+
+    .line 797
+    invoke-virtual {v2, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 799
+    :cond_5
+    iget-object p0, v3, Ll/᩸ܰᩴ;->֡:Ljava/util/WeakHashMap;
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p0, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 800
+    invoke-virtual {p1, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    if-eqz v5, :cond_6
+
+    .line 803
+    :try_start_0
+    sget-object p0, Ll/ᩴܰᩴ;->ۙ:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {p0, v3}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    .line 806
+    :catch_0
+    invoke-virtual {v3, v4}, Ll/᩸ܰᩴ;->ۙ(Landroid/graphics/drawable/BitmapDrawable;)V
+
+    :cond_6
+    return-void
+
+    .line 779
+    :cond_7
+    :goto_1
+    invoke-static {p1}, Ll/ᩴܰᩴ;->ۙ(Landroid/widget/ImageView;)V
+
     return-void
 .end method
 
-.method public final ᩵ܰ()C
-    .locals 2
+.method public static ۙ(Ll/᩻ܰᩴ;)V
+    .locals 3
 
-    .line 224
-    invoke-virtual {p0}, Ll/ᩴܰᩴ;->hasNext()Z
+    .line 826
+    sget-object v0, Ll/ᩴܰᩴ;->ۤ:Ljava/util/HashMap;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 225
-    iget v0, p0, Ll/ᩴܰᩴ;->᩶:I
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    add-int/lit8 v1, v0, 0x1
+    move-result-object v0
 
-    iput v1, p0, Ll/ᩴܰᩴ;->᩶:I
-
-    iget-object v1, p0, Ll/ᩴܰᩴ;->ܺ:[C
-
-    aget-char v0, v1, v0
-
-    return v0
-
-    .line 224
+    .line 827
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result v1
 
-    throw v0
+    if-eqz v1, :cond_1
+
+    .line 828
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩸ܰᩴ;
+
+    .line 829
+    invoke-virtual {v1, p0}, Ll/᩸ܰᩴ;->ۙ(Ll/᩻ܰᩴ;)V
+
+    .line 831
+    iget-object v2, v1, Ll/᩸ܰᩴ;->֡:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v2}, Ljava/util/WeakHashMap;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Ll/ᩴܰᩴ;->ۙ:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->remove(Ljava/lang/Runnable;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public static bridge synthetic ᩷()Ljava/util/HashMap;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/ᩴܰᩴ;->ۤ:Ljava/util/HashMap;
+
+    return-object v0
 .end method

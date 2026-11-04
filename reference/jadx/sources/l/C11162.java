@@ -1,153 +1,156 @@
 package l;
 
-import bin.mt.plugin.api.regex.MatcherSnapshot;
+import java.util.concurrent.CancellationException;
+import java.util.function.Supplier;
+import java.util.regex.PatternSyntaxException;
 
-/* JADX INFO: renamed from: l.ۧᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97NX */
+/* JADX INFO: renamed from: l.ۤ᩸ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44TS */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11162 implements MatcherSnapshot, InterfaceC1988 {
+public final class C11162 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C14690 f37838;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Runnable f37839;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC24329 f35145;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public String f37840;
+    public final /* synthetic */ boolean f35146;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f37841;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC19106 f35147;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f37842;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11908 f35148;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C18360 f35149;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20837 f35150;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f35151;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7919 f35152;
 
     /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public CharSequence f37843;
+    public final /* synthetic */ int f35153;
 
-    public C11162() {
-        this.f37841 = new int[2];
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18415 f35154;
+
+    public C11162(C11908 c11908, C7919 c7919, InterfaceC19106 interfaceC19106, int i, C18415 c18415, C20837 c20837, String str, boolean z, InterfaceC24329 interfaceC24329) {
+        this.f35148 = c11908;
+        this.f35152 = c7919;
+        this.f35147 = interfaceC19106;
+        this.f35153 = i;
+        this.f35154 = c18415;
+        this.f35150 = c20837;
+        this.f35151 = str;
+        this.f35146 = z;
+        this.f35145 = interfaceC24329;
     }
 
-    public C11162(C6222 c6222) {
-        this.f37841 = new int[2];
-        this.f37838 = c6222.pattern();
-        this.f37843 = c6222.getText();
-        this.f37839 = c6222.m17272();
-        int iGroupCount = c6222.groupCount();
-        this.f37842 = iGroupCount;
-        int i = iGroupCount + 1;
-        int i2 = i * 2;
-        if (this.f37841.length < i2) {
-            this.f37841 = new int[i2];
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        C11908.m29816(this.f35148);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        C7919 c7919 = this.f35152;
+        c7919.m21468();
+        RunnableC1953 runnableC1953 = new RunnableC1953(c7919);
+        C15508 c15508Mo15337 = this.f35147.mo15337();
+        try {
+            c15508Mo15337.m37180(runnableC1953);
+            c7919.m21468();
+            if (c15508Mo15337.m37177() != this.f35153) {
+                throw new CancellationException();
+            }
+            C4245 c4245Matcher = this.f35154.matcher((CharSequence) c15508Mo15337);
+            c4245Matcher.m13565(false);
+            c4245Matcher.m13553(runnableC1953);
+            C20837 c20837 = this.f35150;
+            if (c20837 != null) {
+                c4245Matcher.m13567region(c20837.f66719, c20837.f66718);
+            }
+            String str = this.f35151;
+            boolean z = this.f35146;
+            final InterfaceC24329 interfaceC24329 = this.f35145;
+            this.f35149 = C18360.m42816(c15508Mo15337, c4245Matcher, str, z, 0, false, runnableC1953, new Supplier() { // from class: l.᩷᩸ᩴ
+                @Override // java.util.function.Supplier
+                public final Object get() {
+                    return new C2830(interfaceC24329, C19304.m44676(), 0);
+                }
+            });
+            c7919.m21468();
+            c15508Mo15337.close();
+        } catch (Throwable th) {
+            try {
+                c15508Mo15337.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
+            }
+            throw th;
         }
-        int i3 = 0;
-        for (int i4 = 0; i4 < i; i4++) {
-            int i5 = i3 + 1;
-            this.f37841[i3] = c6222.start(i4);
-            i3 += 2;
-            this.f37841[i5] = c6222.end(i4);
-        }
-        this.f37840 = null;
     }
 
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot, l.InterfaceC1988
-    public final CharSequence getText() {
-        return this.f37843;
-    }
-
-    @Override // l.InterfaceC1988
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ۙ */
-    public final void mo6401() {
-        Runnable runnable = this.f37839;
-        if (runnable != null) {
-            runnable.run();
-        }
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final int start() {
-        return this.f37841[0];
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final int end() {
-        return this.f37841[1];
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final String group() {
-        return group(0);
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot, l.InterfaceC1988
-    public final String group(int i) {
-        if (i >= 0 && i <= this.f37842) {
-            int i2 = i * 2;
-            int[] iArr = this.f37841;
-            int i3 = iArr[i2];
-            int i4 = iArr[i2 + 1];
-            if (i3 != -1 && i4 != -1) {
-                return this.f37843.subSequence(i3, i4).toString();
+    public final void mo1134() {
+        if (this.f35152.m21462()) {
+            int iCount = this.f35149.count();
+            C11908 c11908 = this.f35148;
+            if (iCount != 0) {
+                this.f35149.m42829(c11908.f38370, this.f35147, false);
+                C11908.m29794(c11908, this.f35149.count());
+            } else {
+                c11908.m29815(true);
             }
         }
-        return "";
     }
 
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot, l.InterfaceC1988
-    public final int groupCount() {
-        return this.f37842;
-    }
-
-    @Override // l.InterfaceC1988
-    public final C14690 pattern() {
-        return this.f37838;
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final String expandReplacement(String str) {
-        StringBuilder sb = new StringBuilder();
-        C9751.m24731(this, sb, str);
-        return sb.toString();
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final void expandReplacementInto(StringBuilder sb, String str) {
-        C9751.m24731(this, sb, str);
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final void prepareReplacement(String str) {
-        this.f37840 = expandReplacement(str);
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final String getComputedReplacement() {
-        String str = this.f37840;
-        if (str != null) {
-            return str;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f35152.m21467()) {
+            boolean z = exc instanceof RuntimeException;
+            C11908 c11908 = this.f35148;
+            if (z) {
+                if (c11908.f38370.m53943(this.f35147, (RuntimeException) exc)) {
+                    return;
+                }
+            }
+            if (exc instanceof CancellationException) {
+                return;
+            }
+            if (exc instanceof C13464) {
+                C22673.m51160(exc.getMessage());
+            } else if (exc instanceof PatternSyntaxException) {
+                c11908.m29793((PatternSyntaxException) exc);
+            }
         }
-        throw new IllegalStateException("Please call prepareReplacement() first");
     }
 
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot
-    public final void clearComputedReplacement() {
-        this.f37840 = null;
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot, l.InterfaceC1988
-    public final int end(int i) {
-        if (i < 0 || i > this.f37842) {
-            throw new IndexOutOfBoundsException(C8479.m22141(i, "No group "));
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        C7919 c7919 = this.f35152;
+        C11908 c11908 = this.f35148;
+        try {
+            C18360 c18360 = this.f35149;
+            if (c18360 != null) {
+                c18360.close();
+            }
+        } finally {
+            c7919.m21466();
+            if (c11908.f38355 == c7919) {
+                c11908.f38355 = null;
+            }
+            C11908.m29818(c11908);
         }
-        return this.f37841[(i * 2) + 1];
-    }
-
-    @Override // bin.mt.plugin.api.regex.MatcherSnapshot, l.InterfaceC1988
-    public final int start(int i) {
-        if (i < 0 || i > this.f37842) {
-            throw new IndexOutOfBoundsException(C8479.m22141(i, "No group "));
-        }
-        return this.f37841[i * 2];
     }
 }

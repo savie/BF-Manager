@@ -1,39 +1,24 @@
 package l;
 
-import java.util.Iterator;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.᩻ܿᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I8ZW */
+/* JADX INFO: renamed from: l.᩹᩸᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 18UV */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23845 implements InterfaceC16789 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1971 f77095;
+public final class C23845 implements Comparable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC12061 f77096;
+    public final boolean f77222;
 
-    public C23845(C1971 c1971, InterfaceC12061 interfaceC12061) {
-        this.f77095 = c1971;
-        this.f77096 = interfaceC12061;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final boolean f77223;
+
+    public C23845(C15648 c15648, int i) {
+        this.f77222 = (c15648.f50850 & 1) != 0;
+        this.f77223 = C14442.m34867(i, false);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52574(List list) {
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            InterfaceC10440 interfaceC10440 = (InterfaceC10440) it.next();
-            if (interfaceC10440.isClosed()) {
-                String strName = interfaceC10440.name();
-                AbstractC4332 abstractC4332 = this.f77095;
-                AbstractC3382 abstractC3382Mo6344 = abstractC4332.mo6344(strName);
-                if (abstractC3382Mo6344 != null) {
-                    abstractC3382Mo6344.mo3244(this.f77096, abstractC4332, (InterfaceC21022) interfaceC10440);
-                } else {
-                    m52574(interfaceC10440.mo26355());
-                }
-            }
-        }
+    @Override // java.lang.Comparable
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
+    public final int compareTo(C23845 c23845) {
+        return AbstractC25114.m55993().mo6828(this.f77223, c23845.f77223).mo6828(this.f77222, c23845.f77222).mo6824();
     }
 }

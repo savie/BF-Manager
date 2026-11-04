@@ -1,46 +1,57 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C17200 extends EnumC8422 {
-    public /* synthetic */ C17200() {
-        this("CommentEndBang", 49);
+import java.io.DataInputStream;
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.ܺ᩻᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: J7CR */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17200 extends AbstractC1890 {
+
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f56028;
+
+    /* JADX INFO: renamed from: ۫᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f56029;
+
+    public C17200(C3381 c3381, boolean z) {
+        super(c3381);
+        this.f56029 = null;
+        this.f56028 = z;
     }
 
-    public C17200(String str, int i) {
-        super(str, i, 0);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int m40364() {
+        ArrayList arrayList = this.f56029;
+        if (arrayList == null) {
+            return 0;
+        }
+        return arrayList.size();
     }
 
-    @Override // l.EnumC8422
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7382 = c2424.m7382();
-        if (cM7382 == 0) {
-            c8111.m21365(this);
-            C22222 c22222 = c8111.f28423;
-            c22222.m49337("--!");
-            c22222.m49336((char) 65533);
-            c8111.m21353(EnumC8422.f29260);
-            return;
-        }
-        if (cM7382 == '-') {
-            c8111.f28423.m49337("--!");
-            c8111.m21353(EnumC8422.f29245);
-            return;
-        }
-        if (cM7382 == '>') {
-            c8111.m21352();
-            c8111.m21353(EnumC8422.f29249);
-        } else if (cM7382 == 65535) {
-            c8111.m21368(this);
-            c8111.m21352();
-            c8111.m21353(EnumC8422.f29249);
-        } else {
-            C22222 c22223 = c8111.f28423;
-            c22223.m49337("--!");
-            c22223.m49336(cM7382);
-            c8111.m21353(EnumC8422.f29260);
+    public final ArrayList get(int i) {
+        return (ArrayList) this.f56029.get(i);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m40365(DataInputStream dataInputStream) {
+        byte b = dataInputStream.readByte();
+        this.f6369.m32315("ParameterAnnotationData[%d]:", Integer.valueOf(b));
+        this.f56029 = new ArrayList(b);
+        for (int i = 0; i < b; i++) {
+            short s = dataInputStream.readShort();
+            this.f6369.m32315(" Param#[%d]: numAnnotations= %d", Integer.valueOf(i), Integer.valueOf(s));
+            if (s > 0) {
+                ArrayList arrayList = new ArrayList(s);
+                for (int i2 = 0; i2 < s; i2++) {
+                    C0442 c0442 = new C0442(this.f6363, this.f56028);
+                    c0442.mo2258(dataInputStream);
+                    arrayList.add(c0442);
+                }
+                this.f56029.add(i, arrayList);
+            } else {
+                this.f56029.add(i, null);
+            }
         }
     }
 }

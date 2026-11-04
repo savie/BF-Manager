@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.digests;
 
-import l.C8015;
+import l.C24579;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -40,15 +40,15 @@ public class RIPEMD128Digest extends GeneralDigest {
     }
 
     private int F2(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f2(i2, i3, i4), i5, SHA1Digest.Y1), i6);
+        return RL(C24579.m54897(i, f2(i2, i3, i4), i5, SHA1Digest.Y1), i6);
     }
 
     private int F3(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f3(i2, i3, i4), i5, SHA1Digest.Y2), i6);
+        return RL(C24579.m54897(i, f3(i2, i3, i4), i5, SHA1Digest.Y2), i6);
     }
 
     private int F4(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f4(i2, i3, i4), i5, SHA1Digest.Y3), i6);
+        return RL(C24579.m54897(i, f4(i2, i3, i4), i5, SHA1Digest.Y3), i6);
     }
 
     private int FF1(int i, int i2, int i3, int i4, int i5, int i6) {
@@ -56,15 +56,15 @@ public class RIPEMD128Digest extends GeneralDigest {
     }
 
     private int FF2(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f2(i2, i3, i4), i5, 1836072691), i6);
+        return RL(C24579.m54897(i, f2(i2, i3, i4), i5, 1836072691), i6);
     }
 
     private int FF3(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f3(i2, i3, i4), i5, 1548603684), i6);
+        return RL(C24579.m54897(i, f3(i2, i3, i4), i5, 1548603684), i6);
     }
 
     private int FF4(int i, int i2, int i3, int i4, int i5, int i6) {
-        return RL(C8015.m21118(i, f4(i2, i3, i4), i5, 1352829926), i6);
+        return RL(C24579.m54897(i, f4(i2, i3, i4), i5, 1352829926), i6);
     }
 
     private int RL(int i, int i2) {

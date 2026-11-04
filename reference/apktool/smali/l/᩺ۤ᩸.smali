@@ -1,1015 +1,644 @@
-.class public final Ll/᩺ۤ᩸;
+.class public abstract Ll/᩺ۤ᩸;
 .super Ljava/lang/Object;
-.source "49PE"
+.source "B1VV"
 
 
 # static fields
-.field public static final ᩹:Ll/᩺ۤ᩸;
+.field public static final ۤ:Ljava/util/HashMap;
 
 
 # instance fields
-.field public ۖ:[Ljava/lang/Object;
+.field public ۙ:[B
 
-.field public ۙ:I
-
-.field public ۚ:[I
-
-.field public ۨ:I
-
-.field public ܰ:Z
+.field public ᩷:[B
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .line 29
-    new-instance v0, Ll/᩺ۤ᩸;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    new-array v2, v1, [I
+    sput-object v0, Ll/᩺ۤ᩸;->ۤ:Ljava/util/HashMap;
 
-    new-array v3, v1, [Ljava/lang/Object;
+    const/16 v1, 0x101
 
-    invoke-direct {v0, v1, v2, v3, v1}, Ll/᩺ۤ᩸;-><init>(I[I[Ljava/lang/Object;Z)V
+    .line 35
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput-object v0, Ll/᩺ۤ᩸;->᩹:Ll/᩺ۤ᩸;
+    move-result-object v1
+
+    new-instance v2, Ll/۫ۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x102
+
+    .line 36
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ۚۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x103
+
+    .line 37
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/֫ۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x104
+
+    .line 38
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ۧۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x201
+
+    .line 39
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/᩻ۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x202
+
+    .line 40
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ܺۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x301
+
+    .line 41
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ܽۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x421
+
+    .line 42
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ܶۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x423
+
+    .line 43
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/᩹ۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x425
+
+    .line 44
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ۗۤ᩸;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 4
+    .locals 0
 
-    const/16 v0, 0x8
-
-    new-array v1, v0, [I
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    .line 76
-    invoke-direct {p0, v3, v1, v0, v2}, Ll/᩺ۤ᩸;-><init>(I[I[Ljava/lang/Object;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I[I[Ljava/lang/Object;Z)V
-    .locals 1
-
-    .line 80
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
-
-    .line 69
-    iput v0, p0, Ll/᩺ۤ᩸;->ۨ:I
-
-    .line 81
-    iput p1, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    .line 82
-    iput-object p2, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    .line 83
-    iput-object p3, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    .line 84
-    iput-boolean p4, p0, Ll/᩺ۤ᩸;->ܰ:Z
-
     return-void
 .end method
 
-.method public static ۖ()Ll/᩺ۤ᩸;
-    .locals 1
+.method public static ۙ(J)I
+    .locals 2
 
-    .line 38
-    sget-object v0, Ll/᩺ۤ᩸;->᩹:Ll/᩺ۤ᩸;
+    const-wide/32 v0, 0xfffff
 
-    return-object v0
+    add-long/2addr p0, v0
+
+    const-wide/32 v0, 0x100000
+
+    .line 132
+    div-long/2addr p0, v0
+
+    long-to-int p1, p0
+
+    return p1
 .end method
 
-.method public static ۙ(Ll/᩺ۤ᩸;Ll/᩺ۤ᩸;)Ll/᩺ۤ᩸;
-    .locals 6
+.method public static ۙ(I)Ll/᩺ۤ᩸;
+    .locals 1
 
-    .line 51
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
+    .line 60
+    sget-object v0, Ll/᩺ۤ᩸;->ۤ:Ljava/util/HashMap;
 
-    iget v1, p1, Ll/᩺ۤ᩸;->ۙ:I
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/2addr v0, v1
+    move-result-object p0
 
-    .line 52
-    iget-object v1, p0, Ll/᩺ۤ᩸;->ۚ:[I
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    move-result-object p0
 
-    move-result-object v1
+    check-cast p0, Ljava/util/function/Supplier;
 
-    .line 53
-    iget-object v2, p1, Ll/᩺ۤ᩸;->ۚ:[I
+    if-nez p0, :cond_0
 
-    iget v3, p0, Ll/᩺ۤ᩸;->ۙ:I
+    const/4 p0, 0x0
 
-    iget v4, p1, Ll/᩺ۤ᩸;->ۙ:I
+    return-object p0
 
-    const/4 v5, 0x0
+    .line 64
+    :cond_0
+    invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
-    invoke-static {v2, v5, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    move-result-object p0
 
-    .line 54
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    invoke-static {v2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v2
-
-    .line 55
-    iget-object v3, p1, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget p0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    iget p1, p1, Ll/᩺ۤ᩸;->ۙ:I
-
-    invoke-static {v3, v5, v2, p0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 56
-    new-instance p0, Ll/᩺ۤ᩸;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, v0, v1, v2, p1}, Ll/᩺ۤ᩸;-><init>(I[I[Ljava/lang/Object;Z)V
+    check-cast p0, Ll/᩺ۤ᩸;
 
     return-object p0
 .end method
 
-.method private ۙ(I)V
-    .locals 3
+.method public static ۙ(Ljava/security/MessageDigest;Ll/ܺᩴ᩸;Ljava/io/OutputStream;Ll/۟֡֫;)V
+    .locals 12
 
-    .line 379
-    iget-object v0, p0, Ll/᩺ۤ᩸;->ۚ:[I
+    .line 111
+    invoke-interface {p1}, Ll/ܺᩴ᩸;->size()J
 
-    array-length v1, v0
+    move-result-wide v0
 
-    if-le p1, v1, :cond_2
+    const-wide/32 v2, 0xfffff
 
-    .line 381
-    iget v1, p0, Ll/᩺ۤ᩸;->ۙ:I
+    add-long/2addr v0, v2
 
-    div-int/lit8 v2, v1, 0x2
+    const-wide/32 v2, 0x100000
 
-    add-int/2addr v2, v1
+    .line 132
+    div-long/2addr v0, v2
 
-    if-ge v2, p1, :cond_0
+    long-to-int v1, v0
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [B
+
+    const/16 v4, -0x5b
+
+    const/4 v5, 0x0
+
+    aput-byte v4, v0, v5
+
+    :goto_0
+    if-ge v5, v1, :cond_1
+
+    .line 116
+    invoke-interface {p1}, Ll/ܺᩴ᩸;->ۙ()J
+
+    move-result-wide v6
+
+    add-long v8, v6, v2
+
+    .line 117
+    invoke-interface {p1}, Ll/ܺᩴ᩸;->size()J
+
+    move-result-wide v10
+
+    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v8
+
+    sub-long/2addr v8, v6
+
+    long-to-int v4, v8
+
+    const/4 v6, 0x1
+
+    .line 119
+    invoke-static {v4, v6, v0}, Ll/ۖ᩷᩸;->ۙ(II[B)V
+
+    .line 121
+    invoke-virtual {p0, v0}, Ljava/security/MessageDigest;->update([B)V
+
+    int-to-long v6, v4
+
+    .line 122
+    invoke-interface {p1, p0, v6, v7}, Ll/ܺᩴ᩸;->ۙ(Ljava/security/MessageDigest;J)V
+
+    .line 124
+    invoke-virtual {p0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object v4
+
+    .line 126
+    invoke-virtual {p2, v4}, Ljava/io/OutputStream;->write([B)V
+
+    .line 127
+    invoke-interface {p3}, Ll/۟֡֫;->۫()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_0
-    move p1, v2
-
-    :goto_0
-    const/16 v1, 0x8
-
-    if-ge p1, v1, :cond_1
-
-    const/16 p1, 0x8
-
-    .line 393
     :cond_1
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    .line 394
-    iget-object v0, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    :cond_2
+    :goto_1
     return-void
 .end method
 
-.method public static ۚ()Ll/᩺ۤ᩸;
-    .locals 1
+.method public static ᩷(I)Ll/᩺ۤ᩸;
+    .locals 3
 
-    .line 43
-    new-instance v0, Ll/᩺ۤ᩸;
+    .line 52
+    sget-object v0, Ll/᩺ۤ᩸;->ۤ:Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ll/᩺ۤ᩸;-><init>()V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/function/Supplier;
+
+    if-eqz v0, :cond_0
+
+    .line 56
+    invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ll/᩺ۤ᩸;
+
+    return-object p0
+
+    .line 54
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Unsupported signature algorithm id: 0x"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 0
+    invoke-static {v1, p0}, Ll/ۙۡۙ;->ۙ(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 54
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-nez p1, :cond_1
-
-    return v1
-
-    .line 311
-    :cond_1
-    instance-of v2, p1, Ll/᩺ۤ᩸;
-
-    if-nez v2, :cond_2
-
-    return v1
-
-    .line 315
-    :cond_2
-    check-cast p1, Ll/᩺ۤ᩸;
-
-    .line 316
-    iget v2, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    iget v3, p1, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-ne v2, v3, :cond_7
-
-    iget-object v3, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    iget-object v4, p1, Ll/᩺ۤ᩸;->ۚ:[I
-
-    const/4 v5, 0x0
-
-    :goto_0
-    if-ge v5, v2, :cond_4
-
-    .line 285
-    aget v6, v3, v5
-
-    aget v7, v4, v5
-
-    if-eq v6, v7, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    .line 317
-    :cond_4
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget-object p1, p1, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget v3, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    const/4 v4, 0x0
-
-    :goto_1
-    if-ge v4, v3, :cond_6
-
-    .line 294
-    aget-object v5, v2, v4
-
-    aget-object v6, p1, v4
-
-    invoke-virtual {v5, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_6
-    return v0
-
-    :cond_7
-    :goto_2
-    return v1
+.method public abstract ۙ()I
 .end method
 
-.method public final hashCode()I
-    .locals 8
-
-    .line 345
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    add-int/lit16 v1, v0, 0x20f
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 346
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    const/16 v3, 0x11
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x11
-
-    :goto_0
-    if-ge v5, v0, :cond_0
-
-    mul-int/lit8 v6, v6, 0x1f
-
-    .line 328
-    aget v7, v2, v5
-
-    add-int/2addr v6, v7
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    add-int/2addr v1, v6
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 347
-    iget-object v0, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget v2, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    :goto_1
-    if-ge v4, v2, :cond_1
-
-    mul-int/lit8 v3, v3, 0x1f
-
-    .line 336
-    aget-object v5, v0, v4
-
-    invoke-virtual {v5}, Ljava/lang/Object;->hashCode()I
-
-    move-result v5
-
-    add-int/2addr v3, v5
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    add-int/2addr v1, v3
-
-    return v1
-.end method
-
-.method public final ۙ()I
+.method public final ۙ(Ljava/security/PrivateKey;Ljava/security/PublicKey;[B)V
     .locals 6
 
-    .line 246
-    iget v0, p0, Ll/᩺ۤ᩸;->ۨ:I
+    const-string v0, "Failed to sign using "
 
-    const/4 v1, -0x1
+    const-string v1, " signature using public key from certificate"
 
-    if-eq v0, v1, :cond_0
+    const-string v2, "Failed to verify generated "
 
-    return v0
+    .line 171
+    invoke-virtual {p0}, Ll/᩺ۤ᩸;->᩸()Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v3
 
-    const/4 v1, 0x0
+    .line 172
+    invoke-virtual {p0}, Ll/᩺ۤ᩸;->ᩴ()Ljava/security/spec/AlgorithmParameterSpec;
 
-    .line 252
-    :goto_0
-    iget v2, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-ge v0, v2, :cond_6
-
-    .line 253
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    aget v2, v2, v0
-
-    ushr-int/lit8 v3, v2, 0x3
-
-    and-int/lit8 v2, v2, 0x7
-
-    if-eqz v2, :cond_5
-
-    const/4 v4, 0x1
-
-    if-eq v2, v4, :cond_4
-
-    const/4 v4, 0x2
-
-    if-eq v2, v4, :cond_3
-
-    const/4 v4, 0x3
-
-    if-eq v2, v4, :cond_2
-
-    const/4 v4, 0x5
-
-    if-ne v2, v4, :cond_1
-
-    .line 260
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v3}, Ll/᩹ۘ᩸;->ۚ(I)I
-
-    move-result v2
-
-    goto :goto_1
-
-    .line 274
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-static {}, Ll/ۙ۠᩸;->ۚ()Ll/ۗᩴ᩸;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    .line 270
-    :cond_2
-    invoke-static {v3}, Ll/᩹ۘ᩸;->᩹(I)I
-
-    move-result v2
-
-    mul-int/lit8 v2, v2, 0x2
-
-    iget-object v3, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v3, v3, v0
-
-    check-cast v3, Ll/᩺ۤ᩸;
-
-    .line 271
-    invoke-virtual {v3}, Ll/᩺ۤ᩸;->ۙ()I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    add-int/2addr v3, v1
-
-    move v1, v3
-
-    goto :goto_2
-
-    .line 266
-    :cond_3
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    check-cast v2, Ll/᩻۬᩸;
-
-    invoke-static {v3, v2}, Ll/᩹ۘ᩸;->ۨ(ILl/᩻۬᩸;)I
-
-    move-result v2
-
-    goto :goto_1
-
-    .line 263
-    :cond_4
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    check-cast v2, Ljava/lang/Long;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 552
-    invoke-static {v3}, Ll/᩹ۘ᩸;->᩹(I)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x8
-
-    goto :goto_1
-
-    .line 257
-    :cond_5
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    check-cast v2, Ljava/lang/Long;
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    invoke-static {v3, v4, v5}, Ll/᩹ۘ᩸;->ۖ(IJ)I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v2, v1
-
-    move v1, v2
-
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 278
-    :cond_6
-    iput v1, p0, Ll/᩺ۤ᩸;->ۨ:I
-
-    return v1
-.end method
-
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 2
-
-    .line 100
-    iget-boolean v0, p0, Ll/᩺ۤ᩸;->ܰ:Z
-
-    if-eqz v0, :cond_0
-
-    .line 370
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-direct {p0, v0}, Ll/᩺ۤ᩸;->ۙ(I)V
-
-    .line 372
-    iget-object v0, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    iget v1, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    aput p1, v0, v1
-
-    .line 373
-    iget-object p1, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aput-object p2, p1, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    .line 374
-    iput v1, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    return-void
-
-    .line 101
-    :cond_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۙ(Ljava/lang/StringBuilder;I)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 361
-    :goto_0
-    iget v1, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-ge v0, v1, :cond_0
-
-    .line 362
-    iget-object v1, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    aget v1, v1, v0
-
-    ushr-int/lit8 v1, v1, 0x3
-
-    .line 363
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    invoke-static {p1, p2, v1, v2}, Ll/᩸᩵᩸;->ۙ(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/Object;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final ۙ(Ll/۬۟᩸;)V
-    .locals 4
-
-    .line 152
-    move-object v0, p1
-
-    check-cast v0, Ll/֨ۘ᩸;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 38
-    sget-object v0, Ll/֨۟᩸;->᩶:Ll/֨۟᩸;
-
-    .line 152
-    sget-object v1, Ll/֨۟᩸;->֡:Ll/֨۟᩸;
-
-    if-ne v0, v1, :cond_0
-
-    .line 154
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    :goto_0
-    add-int/lit8 v0, v0, -0x1
-
-    if-ltz v0, :cond_1
-
-    .line 155
-    iget-object v1, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    aget v1, v1, v0
-
-    ushr-int/lit8 v1, v1, 0x3
-
-    .line 156
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    move-object v3, p1
-
-    check-cast v3, Ll/֨ۘ᩸;
-
-    invoke-virtual {v3, v1, v2}, Ll/֨ۘ᩸;->ۨ(ILjava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 160
-    :goto_1
-    iget v1, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-ge v0, v1, :cond_1
-
-    .line 161
-    iget-object v1, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    aget v1, v1, v0
-
-    ushr-int/lit8 v1, v1, 0x3
-
-    .line 162
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v2, v2, v0
-
-    move-object v3, p1
-
-    check-cast v3, Ll/֨ۘ᩸;
-
-    invoke-virtual {v3, v1, v2}, Ll/֨ۘ᩸;->ۨ(ILjava/lang/Object;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    return-void
-.end method
-
-.method public final ۙ(Ll/᩺ۤ᩸;)V
-    .locals 6
-
-    .line 482
-    sget-object v0, Ll/᩺ۤ᩸;->᩹:Ll/᩺ۤ᩸;
-
-    invoke-virtual {p1, v0}, Ll/᩺ۤ᩸;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 100
-    :cond_0
-    iget-boolean v0, p0, Ll/᩺ۤ᩸;->ܰ:Z
-
-    if-eqz v0, :cond_1
-
-    .line 487
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    iget v1, p1, Ll/᩺ۤ᩸;->ۙ:I
-
-    add-int/2addr v0, v1
-
-    .line 488
-    invoke-direct {p0, v0}, Ll/᩺ۤ᩸;->ۙ(I)V
-
-    .line 489
-    iget-object v1, p1, Ll/᩺ۤ᩸;->ۚ:[I
-
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    iget v3, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    iget v4, p1, Ll/᩺ۤ᩸;->ۙ:I
-
-    const/4 v5, 0x0
-
-    invoke-static {v1, v5, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 490
-    iget-object v1, p1, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    iget v3, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    iget p1, p1, Ll/᩺ۤ᩸;->ۙ:I
-
-    invoke-static {v1, v5, v2, v3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 491
-    iput v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    return-void
-
-    .line 101
-    :cond_1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۨ()V
-    .locals 1
-
-    .line 93
-    iget-boolean v0, p0, Ll/᩺ۤ᩸;->ܰ:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 94
-    iput-boolean v0, p0, Ll/᩺ۤ᩸;->ܰ:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final ܰ()I
-    .locals 7
-
-    .line 222
-    iget v0, p0, Ll/᩺ۤ᩸;->ۨ:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 228
-    :goto_0
-    iget v2, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-ge v0, v2, :cond_1
-
-    .line 229
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۚ:[I
-
-    aget v2, v2, v0
-
-    const/4 v3, 0x3
-
-    ushr-int/2addr v2, v3
-
-    .line 231
-    iget-object v4, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
-
-    aget-object v4, v4, v0
-
-    check-cast v4, Ll/᩻۬᩸;
-
-    const/4 v5, 0x1
-
-    .line 668
-    invoke-static {v5}, Ll/᩹ۘ᩸;->᩹(I)I
-
-    move-result v5
-
-    const/4 v6, 0x2
-
-    mul-int/lit8 v5, v5, 0x2
-
-    .line 669
-    invoke-static {v6, v2}, Ll/᩹ۘ᩸;->֨(II)I
-
-    move-result v2
-
-    add-int/2addr v2, v5
-
-    .line 670
-    invoke-static {v3, v4}, Ll/᩹ۘ᩸;->ۨ(ILl/᩻۬᩸;)I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    add-int/2addr v1, v3
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 235
-    :cond_1
-    iput v1, p0, Ll/᩺ۤ᩸;->ۨ:I
-
-    return v1
-.end method
-
-.method public final ܰ(Ll/۬۟᩸;)V
-    .locals 6
-
-    .line 169
-    iget v0, p0, Ll/᩺ۤ᩸;->ۙ:I
-
-    if-nez v0, :cond_0
-
-    goto :goto_2
-
-    .line 174
-    :cond_0
-    move-object v0, p1
-
-    check-cast v0, Ll/֨ۘ᩸;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 38
-    sget-object v1, Ll/֨۟᩸;->᩶:Ll/֨۟᩸;
-
-    const/4 v1, 0x0
+    move-result-object v4
 
     .line 175
-    :goto_0
-    iget v2, p0, Ll/᩺ۤ᩸;->ۙ:I
+    :try_start_0
+    invoke-static {v3}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
-    if-ge v1, v2, :cond_6
+    move-result-object v5
 
     .line 176
-    iget-object v2, p0, Ll/᩺ۤ᩸;->ۚ:[I
+    invoke-virtual {v5, p1}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
 
-    aget v2, v2, v1
+    if-eqz v4, :cond_0
 
-    iget-object v3, p0, Ll/᩺ۤ᩸;->ۖ:[Ljava/lang/Object;
+    .line 178
+    invoke-virtual {v5, v4}, Ljava/security/Signature;->setParameter(Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    aget-object v3, v3, v1
+    .line 180
+    :cond_0
+    invoke-virtual {v5, p3}, Ljava/security/Signature;->update([B)V
 
-    ushr-int/lit8 v4, v2, 0x3
+    .line 181
+    invoke-virtual {v5}, Ljava/security/Signature;->sign()[B
 
-    and-int/lit8 v2, v2, 0x7
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/SignatureException; {:try_start_0 .. :try_end_0} :catch_3
 
-    if-eqz v2, :cond_5
-
-    const/4 v5, 0x1
-
-    if-eq v2, v5, :cond_4
-
-    const/4 v5, 0x2
-
-    if-eq v2, v5, :cond_3
-
-    const/4 v5, 0x3
-
-    if-eq v2, v5, :cond_2
-
-    const/4 v5, 0x5
-
-    if-ne v2, v5, :cond_1
-
-    .line 192
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    invoke-virtual {v0, v4, v2}, Ll/֨ۘ᩸;->ܰ(II)V
-
-    goto :goto_1
-
-    .line 213
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-static {}, Ll/ۙ۠᩸;->ۚ()Ll/ۗᩴ᩸;
+    .line 188
+    :try_start_1
+    invoke-static {v3}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    .line 189
+    invoke-virtual {v0, p2}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
-    throw p1
+    if-eqz v4, :cond_1
 
-    .line 201
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 191
+    invoke-virtual {v0, v4}, Ljava/security/Signature;->setParameter(Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 38
-    sget-object v2, Ll/֨۟᩸;->᩶:Ll/֨۟᩸;
+    .line 193
+    :cond_1
+    invoke-virtual {v0, p3}, Ljava/security/Signature;->update([B)V
 
-    .line 202
-    invoke-virtual {v0, v4}, Ll/֨ۘ᩸;->ܰ(I)V
+    .line 194
+    invoke-virtual {v0, p1}, Ljava/security/Signature;->verify([B)Z
 
-    .line 203
-    check-cast v3, Ll/᩺ۤ᩸;
+    move-result p2
+    :try_end_1
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/security/SignatureException; {:try_start_1 .. :try_end_1} :catch_0
 
-    invoke-virtual {v3, p1}, Ll/᩺ۤ᩸;->ܰ(Ll/۬۟᩸;)V
+    if-eqz p2, :cond_2
 
-    .line 204
-    invoke-virtual {v0, v4}, Ll/֨ۘ᩸;->ۙ(I)V
+    .line 208
+    iput-object p1, p0, Ll/᩺ۤ᩸;->᩷:[B
 
-    goto :goto_1
-
-    .line 198
-    :cond_3
-    check-cast v3, Ll/᩻۬᩸;
-
-    invoke-virtual {v0, v4, v3}, Ll/֨ۘ᩸;->ۙ(ILl/᩻۬᩸;)V
-
-    goto :goto_1
+    return-void
 
     .line 195
-    :cond_4
-    check-cast v3, Ljava/lang/Long;
+    :cond_2
+    :try_start_2
+    new-instance p1, Ljava/security/SignatureException;
 
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    move-result-wide v2
+    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4, v2, v3}, Ll/֨ۘ᩸;->ۙ(IJ)V
+    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
-    :cond_5
-    check-cast v3, Ljava/lang/Long;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+    move-result-object p2
 
-    move-result-wide v2
+    invoke-direct {p1, p2}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4, v2, v3}, Ll/֨ۘ᩸;->ܰ(IJ)V
+    throw p1
+    :try_end_2
+    .catch Ljava/security/InvalidKeyException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/security/SignatureException; {:try_start_2 .. :try_end_2} :catch_0
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_6
-    :goto_2
-    return-void
+    :catch_1
+    move-exception p1
+
+    .line 204
+    :goto_0
+    new-instance p2, Ljava/security/SignatureException;
+
+    .line 0
+    invoke-static {v2, v3, v1}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 204
+    invoke-direct {p2, p3, p1}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :catch_2
+    move-exception p1
+
+    .line 200
+    new-instance p2, Ljava/security/InvalidKeyException;
+
+    .line 0
+    invoke-static {v2, v3, v1}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 200
+    invoke-direct {p2, p3, p1}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_4
+    move-exception p1
+
+    .line 185
+    :goto_1
+    new-instance p2, Ljava/security/SignatureException;
+
+    .line 0
+    invoke-static {v0, v3}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 185
+    invoke-direct {p2, p3, p1}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :catch_5
+    move-exception p1
+
+    .line 183
+    new-instance p2, Ljava/security/InvalidKeyException;
+
+    .line 0
+    invoke-static {v0, v3}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 183
+    invoke-direct {p2, p3, p1}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+.method public abstract ۙ(Ll/ܺᩴ᩸;Ll/ܺᩴ᩸;Ll/ܺᩴ᩸;Ll/۟֡֫;)V
+.end method
+
+.method public final ۙ(Ljava/security/PublicKey;[B[B)Z
+    .locals 5
+
+    const-string v0, " signature using public key from certificate"
+
+    const-string v1, "Failed to verify generated "
+
+    .line 149
+    invoke-virtual {p0}, Ll/᩺ۤ᩸;->᩸()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 150
+    invoke-virtual {p0}, Ll/᩺ۤ᩸;->ᩴ()Ljava/security/spec/AlgorithmParameterSpec;
+
+    move-result-object v3
+
+    .line 152
+    :try_start_0
+    invoke-static {v2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object v4
+
+    .line 153
+    invoke-virtual {v4, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
+
+    if-eqz v3, :cond_0
+
+    .line 155
+    invoke-virtual {v4, v3}, Ljava/security/Signature;->setParameter(Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    .line 157
+    :cond_0
+    invoke-virtual {v4, p2}, Ljava/security/Signature;->update([B)V
+
+    .line 158
+    invoke-virtual {v4, p3}, Ljava/security/Signature;->verify([B)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/security/SignatureException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 164
+    :goto_0
+    new-instance p2, Ljava/security/SignatureException;
+
+    .line 0
+    invoke-static {v1, v2, v0}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 164
+    invoke-direct {p2, p3, p1}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :catch_2
+    move-exception p1
+
+    .line 160
+    new-instance p2, Ljava/security/InvalidKeyException;
+
+    .line 0
+    invoke-static {v1, v2, v0}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 160
+    invoke-direct {p2, p3, p1}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+.method public abstract ۤ()I
+.end method
+
+.method public abstract ᩴ()Ljava/security/spec/AlgorithmParameterSpec;
+.end method
+
+.method public abstract ᩷()Ljava/lang/String;
+.end method
+
+.method public abstract ᩸()Ljava/lang/String;
 .end method

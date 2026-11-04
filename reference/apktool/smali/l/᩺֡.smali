@@ -1,20 +1,36 @@
-.class public abstract Ll/᩺֡;
+.class public interface abstract Ll/᩺֡;
 .super Ljava/lang/Object;
-.source "N5WY"
+.source "5B1T"
+
+# interfaces
+.implements Landroid/os/IInterface;
 
 
-# instance fields
-.field public ۙ:Ll/ۘ֡;
+# static fields
+.field public static final ᩸:Ljava/lang/String;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
+
+    const/16 v0, 0x24
+
+    const/16 v1, 0x2e
+
+    const-string v2, "androidx$core$app$unusedapprestrictions$IUnusedAppRestrictionsBackportService"
+
+    .line 127
+    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll/᩺֡;->᩸:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public ۙ()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract ۙ(Ll/ۚ֡;)V
+.method public abstract ۙ(Ll/ۨ֡;)V
 .end method

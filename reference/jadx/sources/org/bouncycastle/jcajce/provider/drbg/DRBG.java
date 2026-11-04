@@ -12,8 +12,8 @@ import java.security.Security;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.digests.SHA512Digest;
 import org.bouncycastle.crypto.macs.HMac;
 import org.bouncycastle.crypto.prng.EntropySource;
@@ -28,7 +28,7 @@ import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.Properties;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DRBG {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.drbg.DRBG";
     public static EntropyDaemon entropyDaemon;
@@ -68,7 +68,6 @@ public class DRBG {
         public final AtomicInteger samples;
         public final AtomicBoolean seedAvailable;
 
-        /* JADX INFO: loaded from: classes2.dex */
         public class SignallingEntropySource implements IncrementalEntropySource {
             public final int byteLength;
             public final EntropyDaemon entropyDaemon;
@@ -165,11 +164,10 @@ public class DRBG {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends AsymmetricAlgorithmProvider {
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {
-            C5800.m15969(DRBG.PREFIX, "$NonceAndIV", "SecureRandom.NONCEANDIV", C9023.m23357(DRBG.PREFIX, "$Default", "SecureRandom.DEFAULT", new StringBuilder(), configurableProvider), configurableProvider);
+            C8947.m23913(DRBG.PREFIX, "$NonceAndIV", "SecureRandom.NONCEANDIV", C18063.m42089(DRBG.PREFIX, "$Default", "SecureRandom.DEFAULT", new StringBuilder(), configurableProvider), configurableProvider);
         }
     }
 
@@ -200,7 +198,6 @@ public class DRBG {
         public final AtomicInteger samples;
         public final AtomicBoolean seedAvailable;
 
-        /* JADX INFO: loaded from: classes2.dex */
         public class OneShotSignallingEntropySource implements IncrementalEntropySource {
             public final int byteLength;
             public final IncrementalEntropySource entropySource;

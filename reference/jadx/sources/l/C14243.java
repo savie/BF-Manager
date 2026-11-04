@@ -1,48 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳۖ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: JGV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14243 {
+import java.util.HashMap;
+import java.util.function.Predicate;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int f46654;
+/* JADX INFO: renamed from: l.ܰ֨ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J6I0 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C14243 implements Predicate {
 
-    static {
-        int i;
-        String property = System.getProperty("java.version");
-        try {
-            String[] strArrSplit = property.split("[._]", 3);
-            i = Integer.parseInt(strArrSplit[0]);
-            if (i == 1 && strArrSplit.length > 1) {
-                i = Integer.parseInt(strArrSplit[1]);
-            }
-        } catch (NumberFormatException unused) {
-            i = -1;
-        }
-        if (i == -1) {
-            try {
-                StringBuilder sb = new StringBuilder();
-                for (int i2 = 0; i2 < property.length(); i2++) {
-                    char cCharAt = property.charAt(i2);
-                    if (!Character.isDigit(cCharAt)) {
-                        break;
-                    }
-                    sb.append(cCharAt);
-                }
-                i = Integer.parseInt(sb.toString());
-            } catch (NumberFormatException unused2) {
-                i = -1;
-            }
-        }
-        if (i == -1) {
-            i = 6;
-        }
-        f46654 = i;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f45002;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f45003;
+
+    public /* synthetic */ C14243(int i, Object obj) {
+        this.f45002 = i;
+        this.f45003 = obj;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m34377() {
-        return f46654 >= 9;
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f45002) {
+            case 0:
+                break;
+        }
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f45002) {
+            case 0:
+                return ((C6041) obj) == ((C6041) this.f45003);
+            default:
+                return C19518.m45052((HashMap) this.f45003, (InterfaceC18078) obj);
+        }
     }
 }

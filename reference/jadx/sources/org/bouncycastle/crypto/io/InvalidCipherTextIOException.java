@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.io;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class InvalidCipherTextIOException extends CipherIOException {
     public static final long serialVersionUID = 1;
 

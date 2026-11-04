@@ -1,71 +1,124 @@
 .class public final Ll/ۢ᩷ۨ;
 .super Ljava/lang/Object;
-.source "D77D"
+.source "YAMC"
 
 
 # instance fields
-.field public final ۖ:Ll/ۖܺۨ;
-
-.field public final ۙ:J
-
-.field public final ۚ:I
-
-.field public final ۨ:I
-
-.field public final ܰ:I
+.field public volatile array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
 
 # direct methods
-.method public constructor <init>(IIJILl/ۖܺۨ;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    .line 270
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 271
-    iput p1, p0, Ll/ۢ᩷ۨ;->ۚ:I
+    .line 11
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    .line 272
-    iput p2, p0, Ll/ۢ᩷ۨ;->ܰ:I
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
-    .line 273
-    iput-wide p3, p0, Ll/ۢ᩷ۨ;->ۙ:J
-
-    .line 274
-    iput p5, p0, Ll/ۢ᩷ۨ;->ۨ:I
-
-    .line 275
-    iput-object p6, p0, Ll/ۢ᩷ۨ;->ۖ:Ll/ۖܺۨ;
+    iput-object v0, p0, Ll/ۢ᩷ۨ;->array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()V
+.method public final ۙ()I
     .locals 1
 
-    .line 282
-    iget-object v0, p0, Ll/ۢ᩷ۨ;->ۖ:Ll/ۖܺۨ;
+    .line 14
+    iget-object v0, p0, Ll/ۢ᩷ۨ;->array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    .line 730
-    iget-object v0, v0, Ll/ۖܺۨ;->ۙ:Ll/ۚܺۨ;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
 
-    invoke-virtual {v0}, Ll/ۚܺۨ;->ۙ()V
+    move-result v0
 
-    return-void
+    return v0
 .end method
 
-.method public final ܰ()V
-    .locals 1
+.method public final ۙ(I)Ljava/lang/Object;
+    .locals 2
 
-    .line 289
-    iget-object v0, p0, Ll/ۢ᩷ۨ;->ۖ:Ll/ۖܺۨ;
+    .line 17
+    iget-object v0, p0, Ll/ۢ᩷ۨ;->array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    .line 735
-    iget-object v0, v0, Ll/ۖܺۨ;->ۙ:Ll/ۚܺۨ;
+    .line 18
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
 
-    invoke-virtual {v0}, Ll/ۚܺۨ;->ܰ()V
+    move-result v1
+
+    if-ge p1, v1, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final ۙ(ILl/ۧۤۨ;)V
+    .locals 5
+
+    .line 23
+    iget-object v0, p0, Ll/ۢ᩷ۨ;->array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 24
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    if-ge p1, v1, :cond_0
+
+    .line 26
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    return-void
+
+    .line 30
+    :cond_0
+    new-instance v2, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    add-int/lit8 v3, p1, 0x1
+
+    mul-int/lit8 v4, v1, 0x2
+
+    if-ge v3, v4, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    invoke-direct {v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v1, :cond_2
+
+    .line 31
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 32
+    :cond_2
+    invoke-virtual {v2, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    .line 33
+    iput-object v2, p0, Ll/ۢ᩷ۨ;->array:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method

@@ -10,7 +10,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HKDF {
     public static final byte[] VERSION_LABEL = getBytes("HPKE-v1");
     public final int hashLength;

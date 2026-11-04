@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -19,8 +19,8 @@ public class XMSSMTPublicKey extends ASN1Object {
         if (!ASN1Integer.getInstance(aSN1Sequence.getObjectAt(0)).hasValue(0)) {
             throw new IllegalArgumentException("unknown version of sequence");
         }
-        this.publicSeed = C15489.m37078(aSN1Sequence, 1);
-        this.root = C15489.m37078(aSN1Sequence, 2);
+        this.publicSeed = C20551.m47118(aSN1Sequence, 1);
+        this.root = C20551.m47118(aSN1Sequence, 2);
     }
 
     public XMSSMTPublicKey(byte[] bArr, byte[] bArr2) {

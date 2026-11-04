@@ -1,18 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟֨۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 079R */
-/* JADX INFO: loaded from: classes2.dex */
+import java.util.LinkedHashSet;
+
+/* JADX INFO: renamed from: l.ۜ۫ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N78D */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C7139 {
 
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public String f23602;
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f23859;
+    public String f23603;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f23860;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public String f23604;
 
-    public C7139(String str, String str2) {
-        this.f23860 = str;
-        this.f23859 = str2;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f23605;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public String f23606;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public String f23607;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f23608;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final LinkedHashSet f23609 = new LinkedHashSet();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f23610;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f23611;
 }

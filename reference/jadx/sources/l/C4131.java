@@ -1,87 +1,56 @@
 package l;
 
-import java.util.NoSuchElementException;
 import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۘᩴᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W1E0 */
+/* JADX INFO: renamed from: l.ۘۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4131 implements InterfaceC6269, InterfaceC6206 {
+public final class C4131 extends AbstractC14812 implements Consumer {
+    public Object b;
+    public C17664 c;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15422 f15135;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public C8366 f15136;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f15134 = -1;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f15133 = 0;
-
-    public C4131(C15422 c15422) {
-        this.f15135 = c15422;
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f15133 < this.f15135.f50268.f25321;
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
-        }
-        C7660 c7660 = this.f15135.f50268;
-        int i = this.f15133;
-        this.f15133 = i + 1;
-        this.f15134 = i;
-        C8366 c8366 = new C8366(c7660, i);
-        this.f15136 = c8366;
-        return c8366;
-    }
-
-    @Override // java.util.Iterator
-    public final void remove() {
-        if (this.f15134 == -1) {
-            throw new IllegalStateException();
-        }
-        this.f15134 = -1;
-        C15422 c15422 = this.f15135;
-        C7660 c7660 = c15422.f50268;
-        int i = c7660.f25321;
-        c7660.f25321 = i - 1;
-        int i2 = this.f15133;
-        int i3 = i2 - 1;
-        this.f15133 = i3;
-        int i4 = i - i2;
-        Object[] objArr = c7660.f25323;
-        System.arraycopy(objArr, i2, objArr, i3, i4);
-        int[] iArr = c15422.f50268.f25319;
-        int i5 = this.f15133;
-        System.arraycopy(iArr, i5 + 1, iArr, i5, i4);
-        this.f15136.f29028 = -1;
-        C7660 c7661 = c15422.f50268;
-        c7661.f25323[c7661.f25321] = null;
-    }
-
-    @Override // java.util.Iterator, l.InterfaceC6206
-    public final void forEachRemaining(Consumer consumer) {
-        C15422 c15422 = this.f15135;
-        int i = c15422.f50268.f25321;
-        while (true) {
-            int i2 = this.f15133;
-            if (i2 >= i) {
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        int i = this.a;
+        if (i == 0) {
+            this.b = obj;
+            this.a = i + 1;
+        } else {
+            if (i > 0) {
+                if (this.c == null) {
+                    C17664 c17664 = new C17664();
+                    this.c = c17664;
+                    c17664.accept(this.b);
+                    this.a++;
+                }
+                this.c.accept(obj);
                 return;
             }
-            C7660 c7660 = c15422.f50268;
-            this.f15133 = i2 + 1;
-            this.f15134 = i2;
-            C8366 c8366 = new C8366(c7660, i2);
-            this.f15136 = c8366;
-            consumer.accept(c8366);
+            throw new IllegalStateException();
+        }
+    }
+
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final boolean tryAdvance(Consumer consumer) {
+        C17359.requireNonNull(consumer);
+        if (this.a != -2) {
+            return false;
+        }
+        consumer.accept(this.b);
+        this.a = -1;
+        return true;
+    }
+
+    @Override // l.InterfaceC8409
+    public final void forEachRemaining(Consumer consumer) {
+        C17359.requireNonNull(consumer);
+        if (this.a == -2) {
+            consumer.accept(this.b);
+            this.a = -1;
         }
     }
 }

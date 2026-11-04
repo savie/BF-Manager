@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1.x509;
 
 import java.util.Enumeration;
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Object;
@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SubjectPublicKeyInfo extends ASN1Object {
     public AlgorithmIdentifier algId;
     public ASN1BitString keyData;
@@ -19,7 +19,7 @@ public class SubjectPublicKeyInfo extends ASN1Object {
     @Deprecated
     public SubjectPublicKeyInfo(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 2) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         Enumeration objects = aSN1Sequence.getObjects();
         this.algId = AlgorithmIdentifier.getInstance(objects.nextElement());

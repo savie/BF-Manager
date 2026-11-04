@@ -1,59 +1,141 @@
 .class public final Ll/ᩳܿ᩺;
-.super Ljava/lang/Object;
-.source "G1U3"
-
-# interfaces
-.implements Ll/᩺ܿ᩺;
-
-
-# instance fields
-.field public ۙ:I
-
-.field public ܰ:[Ll/᩺ܿ᩺;
-
-
-# direct methods
-.method public varargs constructor <init>([Ll/᩺ܿ᩺;)V
-    .locals 0
-
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    iput-object p1, p0, Ll/ᩳܿ᩺;->ܰ:[Ll/᩺ܿ᩺;
-
-    .line 18
-    array-length p1, p1
-
-    iput p1, p0, Ll/ᩳܿ᩺;->ۙ:I
-
-    return-void
-.end method
+.super Ll/ܰ֡᩺;
+.source "34PY"
 
 
 # virtual methods
-.method public final ۙ(Ll/۫۫᩺;)V
-    .locals 2
+.method public final ۙ(Ll/ۖܿ᩺;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 379
+    check-cast p2, Ljava/lang/Void;
 
-    .line 42
-    :goto_0
-    iget v1, p0, Ll/ᩳܿ᩺;->ۙ:I
+    .line 387
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
 
-    if-ge v0, v1, :cond_0
+    move-result-object p1
 
-    .line 43
-    iget-object v1, p0, Ll/ᩳܿ᩺;->ܰ:[Ll/᩺ܿ᩺;
+    check-cast p1, Ll/ۖܿ᩺;
 
-    aget-object v1, v1, v0
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۖܿ᩺;Ljava/lang/Object;)Ll/ۖܿ᩺;
 
-    invoke-interface {v1, p1}, Ll/᩺ܿ᩺;->ۙ(Ll/۫۫᩺;)V
+    move-result-object p1
 
-    add-int/lit8 v0, v0, 0x1
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public final ۙ(Ll/ۤ֡᩺;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :cond_0
-    return-void
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 382
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۤ֡᩺;
+
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۤ֡᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ۤ۟᩺;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 397
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۤ۟᩺;
+
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۤ۟᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ܿ֡᩺;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 392
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ܿ֡᩺;
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ۖܿ᩺;Ljava/lang/Object;)Ll/ۖܿ᩺;
+    .locals 0
+
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 387
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۖܿ᩺;
+
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۖܿ᩺;Ljava/lang/Object;)Ll/ۖܿ᩺;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ۤ֡᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+    .locals 0
+
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 382
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۤ֡᩺;
+
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۤ֡᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ۤ۟᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+    .locals 0
+
+    .line 379
+    check-cast p2, Ljava/lang/Void;
+
+    .line 397
+    invoke-virtual {p1}, Ll/᩸۟᩺;->ᩳۙ()Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۤ۟᩺;
+
+    invoke-super {p0, p1, p2}, Ll/ܰ֡᩺;->ۙ(Ll/ۤ۟᩺;Ljava/lang/Object;)Ll/᩸۟᩺;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,5 +1,5 @@
 package bin.mt.plugin.api.ui.builder;
 
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface PluginBaseButtonBuilder extends PluginBaseTextViewBuilder {
 }

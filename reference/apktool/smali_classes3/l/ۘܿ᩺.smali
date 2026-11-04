@@ -1,49 +1,45 @@
 .class public final Ll/ۘܿ᩺;
-.super Ljava/lang/Object;
-.source "L1U8"
-
-# interfaces
-.implements Ll/᩺ܿ᩺;
+.super Ll/۬᩶᩺;
+.source "843X"
 
 
 # instance fields
-.field public final ۙ:Ll/ۜܿ᩺;
+.field public final synthetic ۙۙ:Ll/ܰܿ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜܿ᩺;)V
+.method public constructor <init>(Ll/ܰܿ᩺;Ll/ᩴۢۘ;Ll/ۤܿ᩺;)V
     .locals 0
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 802
+    iput-object p1, p0, Ll/ۘܿ᩺;->ۙۙ:Ll/ܰܿ᩺;
 
-    .line 27
-    iput-object p1, p0, Ll/ۘܿ᩺;->ۙ:Ll/ۜܿ᩺;
+    invoke-direct {p0, p2, p3}, Ll/۬᩶᩺;-><init>(Ll/ᩴۢۘ;Ll/ۧܿ᩺;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۫۫᩺;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 34
-    invoke-virtual {p1}, Ll/֡۫᩺;->ܰ()I
+    .line 805
+    iget-object v0, p0, Ll/ۘܿ᩺;->ۙۙ:Ll/ܰܿ᩺;
 
-    move-result v0
+    invoke-static {v0}, Ll/ܰܿ᩺;->᩷(Ll/ܰܿ᩺;)Ll/᩹ᩳۘ;
 
-    not-int v0, v0
+    move-result-object v0
 
-    and-int/lit16 v0, v0, 0x400
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 35
-    iget-object v0, p0, Ll/ۘܿ᩺;->ۙ:Ll/ۜܿ᩺;
+    const-string v2, "compiler.misc.unnamed.package"
 
-    invoke-virtual {v0, p1}, Ll/ۜܿ᩺;->ۙ(Ll/۫۫᩺;)V
+    invoke-virtual {v0, v2, v1}, Ll/᩹ᩳۘ;->ۙ(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_0
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

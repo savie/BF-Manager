@@ -1,90 +1,70 @@
-.class public final synthetic Ll/᩺ܺ᩹;
-.super Ljava/lang/Object;
-.source "94PF"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.class public final Ll/᩺ܺ᩹;
+.super Ll/᩺᩸᩹;
+.source "78YF"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/Object;
-
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public final ۙ:Ll/۬ܳ᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Ll/۬ܳ᩹;)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/᩺ܺ᩹;->ܺ:I
-
-    iput-object p2, p0, Ll/᩺ܺ᩹;->᩶:Ljava/lang/Object;
-
-    iput-object p3, p0, Ll/᩺ܺ᩹;->֡:Ljava/lang/Object;
-
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 65
+    iput-object p1, p0, Ll/᩺ܺ᩹;->ۙ:Ll/۬ܳ᩹;
 
     return-void
 .end method
 
+.method public static ۙ(Ll/۬ܳ᩹;)Ll/᩺ܺ᩹;
+    .locals 1
+
+    .line 54
+    new-instance v0, Ll/᩺ܺ᩹;
+
+    invoke-direct {v0, p0}, Ll/᩺ܺ᩹;-><init>(Ll/۬ܳ᩹;)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public final ۙ(Landroid/widget/TextView;Landroid/text/SpannableStringBuilder;)V
+    .locals 1
+
+    .line 77
+    invoke-virtual {p1}, Landroid/widget/TextView;->getMovementMethod()Landroid/text/method/MovementMethod;
+
+    move-result-object p2
+
+    .line 78
+    iget-object v0, p0, Ll/᩺ܺ᩹;->ۙ:Ll/۬ܳ᩹;
+
+    if-eq p2, v0, :cond_0
+
+    .line 79
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final ۙ(Ll/ۡ᩸᩹;)V
     .locals 0
 
-    .line 2
-    iget p1, p0, Ll/᩺ܺ᩹;->ܺ:I
+    .line 70
+    invoke-interface {p1}, Ll/ۡ᩸᩹;->ۙ()Ll/ۖ᩸᩹;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object p1
 
-    .line 7
-    iget-object p1, p0, Ll/᩺ܺ᩹;->᩶:Ljava/lang/Object;
+    check-cast p1, Ll/ۙܳ᩹;
 
-    .line 9
-    check-cast p1, Ll/ܰ᩷ۚ;
-
-    .line 11
-    iget-object p2, p0, Ll/᩺ܺ᩹;->֡:Ljava/lang/Object;
-
-    .line 13
-    check-cast p2, Ljava/lang/String;
-
-    .line 16
-    invoke-static {p1, p2}, Ll/ܰ᩷ۚ;->ܰ(Ll/ܰ᩷ۚ;Ljava/lang/String;)V
+    .line 71
+    invoke-virtual {p1}, Ll/ۙܳ᩹;->ۙ()V
 
     return-void
-
-    .line 19
-    :pswitch_0
-    iget-object p1, p0, Ll/᩺ܺ᩹;->᩶:Ljava/lang/Object;
-
-    .line 21
-    check-cast p1, Ll/᩵ܺ᩹;
-
-    .line 23
-    iget-object p2, p0, Ll/᩺ܺ᩹;->֡:Ljava/lang/Object;
-
-    .line 25
-    check-cast p2, Ll/۠ܺ᩹;
-
-    .line 228
-    iget-object p1, p1, Ll/ۛ᩷᩹;->᩶:Ll/۫᩷᩹;
-
-    invoke-virtual {p2}, Ll/۫ܿܰ;->getBindingAdapterPosition()I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Ll/֡۫ܰ;->notifyItemChanged(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

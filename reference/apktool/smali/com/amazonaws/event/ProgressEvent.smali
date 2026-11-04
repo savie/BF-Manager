@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:J
 
-.field public ܰ:I
+.field public ᩷:I
 
 
 # direct methods
@@ -37,16 +37,16 @@
     .locals 0
 
     .line 123
-    iput p1, p0, Lcom/amazonaws/event/ProgressEvent;->ܰ:I
+    iput p1, p0, Lcom/amazonaws/event/ProgressEvent;->᩷:I
 
     return-void
 .end method
 
-.method public final ܰ()I
+.method public final ᩷()I
     .locals 1
 
     .line 112
-    iget v0, p0, Lcom/amazonaws/event/ProgressEvent;->ܰ:I
+    iget v0, p0, Lcom/amazonaws/event/ProgressEvent;->᩷:I
 
     return v0
 .end method

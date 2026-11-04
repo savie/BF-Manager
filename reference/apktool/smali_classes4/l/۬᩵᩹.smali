@@ -1,85 +1,81 @@
-.class public final synthetic Ll/۬᩵᩹;
+.class public abstract Ll/۬᩵᩹;
 .super Ljava/lang/Object;
-.source "P98B"
+.source "HAP5"
 
 # interfaces
-.implements Ll/۟۬۠;
-.implements Ll/ۗ۬᩹;
-
-
-# instance fields
-.field public final synthetic ܺ:Ljava/lang/Object;
-
-.field public final synthetic ᩶:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Ll/۬᩵᩹;->ܺ:Ljava/lang/Object;
-
-    iput-object p2, p0, Ll/۬᩵᩹;->᩶:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ll/ܶۛ᩹;
 
 
 # virtual methods
-.method public ۙ(Ll/ۧۜ᩹;)V
-    .locals 5
+.method public synthetic forEachRemaining(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 2
-    iget-object v0, p0, Ll/۬᩵᩹;->ܺ:Ljava/lang/Object;
-
-    .line 4
-    check-cast v0, Ll/ۨۜ᩹;
-
-    .line 6
-    iget-object v1, p0, Ll/۬᩵᩹;->᩶:Ljava/lang/Object;
-
-    .line 8
-    check-cast v1, Ll/᩸ۜ᩹;
-
-    .line 47
-    invoke-virtual {p1}, Ll/ۧۜ᩹;->ۙ()V
-
-    .line 48
-    invoke-virtual {v0}, Ll/ۨۜ᩹;->ܶ()Ll/ۨۘ᩹;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ll/ۨۜ᩹;->۟()Ll/ۖ۬᩹;
-
-    move-result-object v3
-
-    new-instance v4, Ll/ۘ᩵᩹;
-
-    invoke-direct {v4, p1, v1, v0}, Ll/ۘ᩵᩹;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v2, v0, v3, v4}, Ll/ۨۘ᩹;->ۙ(Ll/ۨۜ᩹;Ll/ۖ۬᩹;Ll/ۗ۬᩹;)V
+    .line 0
+    invoke-static {p0, p1}, Ll/֨ۚۗ;->$default$forEachRemaining(Ll/ۡۚۗ;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public ܰ(Ljava/lang/Object;Ljava/lang/Throwable;)V
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽۛ᩹;->ۙ(Ll/ܶۛ᩹;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public final getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 103
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
     .locals 2
 
     .line 0
-    iget-object v0, p0, Ll/۬᩵᩹;->ܺ:Ljava/lang/Object;
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
 
-    check-cast v0, Ll/᩶ᩴۖ;
+    move-result-wide v0
 
-    iget-object v1, p0, Ll/۬᩵᩹;->᩶:Ljava/lang/Object;
+    return-wide v0
+.end method
 
-    check-cast v1, Ljava/lang/Throwable;
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
 
-    check-cast p1, Ljava/lang/Void;
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
 
-    invoke-static {v0, v1, p2}, Ll/᩶ᩴۖ;->ۙ(Ll/᩶ᩴۖ;Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    move-result p1
 
-    return-void
+    return p1
+.end method
+
+.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽۛ᩹;->᩷(Ll/ܶۛ᩹;Ljava/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic trySplit()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Ll/֨ۚۗ;->$default$trySplit(Ll/ۡۚۗ;)Ll/۠ۚۗ;
+
+    move-result-object v0
+
+    return-object v0
 .end method

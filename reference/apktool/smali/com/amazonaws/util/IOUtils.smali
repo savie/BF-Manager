@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final ֡:Lcom/amazonaws/logging/Log;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/IOUtils;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/IOUtils;
+.field public static final ܿ:Lcom/amazonaws/logging/Log;
 
 .field public static final ᩶:I = 0x1000
 
@@ -20,7 +20,7 @@
     new-array v0, v0, [Lcom/amazonaws/util/IOUtils;
 
     .line 30
-    sput-object v0, Lcom/amazonaws/util/IOUtils;->ܺ:[Lcom/amazonaws/util/IOUtils;
+    sput-object v0, Lcom/amazonaws/util/IOUtils;->ܰ:[Lcom/amazonaws/util/IOUtils;
 
     .line 34
     const-class v0, Lcom/amazonaws/util/IOUtils;
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/util/IOUtils;->֡:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/util/IOUtils;->ܿ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 30
-    sget-object v0, Lcom/amazonaws/util/IOUtils;->ܺ:[Lcom/amazonaws/util/IOUtils;
+    sget-object v0, Lcom/amazonaws/util/IOUtils;->ܰ:[Lcom/amazonaws/util/IOUtils;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/IOUtils;->clone()Ljava/lang/Object;
 
@@ -124,7 +124,7 @@
     move-exception p0
 
     .line 78
-    sget-object p1, Lcom/amazonaws/util/IOUtils;->֡:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/util/IOUtils;->ܿ:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p1}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -133,7 +133,7 @@
     if-eqz p1, :cond_0
 
     .line 79
-    sget-object p1, Lcom/amazonaws/util/IOUtils;->֡:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/util/IOUtils;->ܿ:Lcom/amazonaws/logging/Log;
 
     const-string v0, "Ignore failure in closing the Closeable"
 
@@ -195,7 +195,7 @@
     throw p0
 .end method
 
-.method public static ܰ(Ljava/io/InputStream;)Ljava/lang/String;
+.method public static ᩷(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 2
 
     .line 64
@@ -212,7 +212,7 @@
     return-object v0
 .end method
 
-.method public static ܰ(Ljava/io/Closeable;Lcom/amazonaws/logging/Log;)V
+.method public static ᩷(Ljava/io/Closeable;Lcom/amazonaws/logging/Log;)V
     .locals 0
 
     .line 103

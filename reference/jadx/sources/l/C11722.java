@@ -1,241 +1,143 @@
 package l;
 
-import java.io.IOException;
-import org.bouncycastle.asn1.BERTags;
-import org.bouncycastle.crypto.params.DHParameters;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.ۨ۬ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A1SM */
+/* JADX INFO: renamed from: l.ۧܺۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C75V */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11722 extends AbstractC23366 {
+public final class C11722 extends AbstractC19137 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public AbstractC21330 f39400;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C5033 f37925;
 
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public C20625 f39401;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C25391 f37926;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public AbstractC23366 f39402;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C1897 f37927;
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final int f39404;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public JSONObject f37928;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C17720 f39405;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public JSONObject f37929;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public AbstractC9606 f39407;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f39396 = true;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public boolean f39398 = true;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public boolean f39397 = true;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f39409 = 0;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f39403 = false;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public IOException f39406 = null;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final byte[] f39408 = new byte[6];
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f39399 = new byte[1];
-
-    public C11722(AbstractC23366 abstractC23366, C13839 c13839, C17720 c17720) {
-        abstractC23366.getClass();
-        this.f39405 = c17720;
-        this.f39402 = abstractC23366;
-        this.f39401 = new C20625(c17720);
-        int iM33666 = c13839.m33666();
-        AbstractC21330 abstractC21330M47843 = AbstractC21330.m47843(this.f39401, c13839.m33660(), c13839.m33661(), c13839.m33669(), iM33666, 65536 > iM33666 ? 65536 - iM33666 : 0, c13839.m33668(), c13839.m33665(), c13839.m33662(), c17720);
-        this.f39400 = abstractC21330M47843;
-        this.f39407 = abstractC21330M47843.m47853();
-        this.f39404 = c13839.m33660() + (c13839.m33661() * 45);
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo1809() {
+        return "Patch Native Instructions";
     }
 
-    @Override // java.io.OutputStream
-    public final void write(int i) throws IOException {
-        byte[] bArr = this.f39399;
-        bArr[0] = (byte) i;
-        write(bArr, 0, 1);
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1811() {
+        return "Patch executable ELF instructions using assembly source with a non-empty editSessionId. Prefer this to hand-encoding bytes for mt_apk_patch_bytes. Copy expectedHex from current mt_apk_read_bytes or mt_apk_native_disassemble output for the same editSessionId and locator; it both guards against stale reads and defines the equal-length patch window. file_offset is inside the SO entry, not the APK. Only loaded executable file-backed mappings can be patched. Alignment, instruction mode, assembly, length, and expected bytes are checked; a failure leaves the entry unchanged. Success returns assembledHex and afterHex including optional NOP padding, with nextActions to verify the result. This only validates local machine-code replacement, not control flow, stack balance, register conventions, relocations, or function semantics.";
     }
 
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        int i3;
-        if (i < 0 || i2 < 0 || (i3 = i + i2) < 0 || i3 > bArr.length) {
-            throw new IndexOutOfBoundsException();
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩸ */
+    public final String mo1812() {
+        return "mt_apk_native_patch_instructions";
+    }
+
+    public C11722(C1897 c1897) {
+        C5033 c5033 = new C5033();
+        C25391 c25391 = new C25391();
+        this.f37927 = c1897;
+        this.f37925 = c5033;
+        this.f37926 = c25391;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1805() {
+        return JSON.object().add("readOnlyHint", false);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۤ */
+    public final JSONObject mo1808() {
+        JSONObject jSONObject = this.f37928;
+        if (jSONObject != null) {
+            return jSONObject;
         }
-        IOException iOException = this.f39406;
-        if (iOException != null) {
-            throw iOException;
+        JSONObject jSONObjectM19209 = C6929.m19209("{\n  \"workspaceId\": {\n    \"type\": \"string\",\n    \"description\": \"Workspace id returned by mt_apk_workspace_open.\"\n  },\n  \"editSessionId\": {\n    \"type\": \"string\",\n    \"description\": \"Non-empty edit session id returned by mt_apk_session_create. The base workspace cannot be modified.\"\n  },\n  \"locator\": {\n    \"type\": \"string\",\n    \"description\": \"ZIP entry locator string such as zip_entry:lib/arm64-v8a/libexample.so. Only zip_entry: ELF entries are accepted.\"\n  },\n  \"addressKind\": {\n    \"type\": \"string\",\n    \"enum\": [\"virtual\", \"file_offset\"],\n    \"description\": \"Address kind. Use virtual for ELF virtual addresses or file_offset for ELF file offsets within the zip_entry bytes.\"\n  },\n  \"address\": {\n    \"type\": \"string\",\n    \"description\": \"Unsigned virtual address or ELF file offset string. Accepts decimal or 0x/0X hexadecimal in the non-negative signed 64-bit range 0..9223372036854775807. The mapped effective virtual address must be 4-byte aligned for AArch64/ARM or 2-byte aligned for Thumb after clearing the virtual-address T-bit; x86 has no additional alignment requirement.\"\n  },\n  \"instructionMode\": {\n    \"type\": \"string\",\n    \"enum\": [\"auto\", \"arm\", \"thumb\"],\n    \"description\": \"Instruction mode. Use exactly auto, arm, or thumb. Non-ARM ELF requires auto. ARM32 auto only infers Thumb from odd virtual addresses; otherwise retry errors may offer explicit thumb and arm calls.\"\n  },\n  \"expectedHex\": {\n    \"type\": \"string\",\n    \"description\": \"Stale-view guard bytes currently present at the patch address. Copy from mt_apk_read_bytes or mt_apk_native_disassemble for the same editSessionId and locator; do not invent it. For disassembly output, concatenate the byte columns of contiguous selected lines. Use non-empty even-length hex without spaces. This defines the equal-length patch window; runtime accepts at most 256 bytes.\"\n  },\n  \"replacementAssembly\": {\n    \"type\": \"string\",\n    \"description\": \"Assembly source text containing instructions and labels only, assembled at the effective virtual address. This is not a tool command. Assembler directives such as .arm, .bits, .hex, .fill, and .incbin are rejected before assembly; do not include wa, seek commands, patch commands, or file paths. Runtime accepts 1..4096 characters.\"\n  },\n  \"paddingMode\": {\n    \"type\": \"string\",\n    \"enum\": [\"none\", \"nop\"],\n    \"description\": \"Use none to require exact assembled length, or nop to fill a shorter assembled result with architecture NOP bytes.\"\n  }\n}\n");
+        this.f37928 = jSONObjectM19209;
+        return jSONObjectM19209;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩴ */
+    public final JSONObject mo1810() {
+        JSONObject jSONObject = this.f37929;
+        if (jSONObject != null) {
+            return jSONObject;
         }
-        if (this.f39403) {
-            throw new C21599("Stream finished or closed");
-        }
-        while (i2 > 0) {
+        JSONObject jSONObjectM36991 = C15451.m36991();
+        this.f37929 = jSONObjectM36991;
+        return jSONObjectM36991;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1806(C10186 c10186) {
+        return C15451.m36976(c10186);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final C1238 mo1807(JSONObject jSONObject) {
+        C1897 c1897 = this.f37927;
+        final C8586 c8586M28276 = null;
+        try {
+            C16834.m39750();
+            c8586M28276 = C11218.m28276(jSONObject);
+            String str = c8586M28276.f28074;
+            InterfaceC18854 interfaceC18854M6559 = c1897.m6559();
             try {
-                int iM24489 = this.f39407.m24489(i, i2, bArr);
-                i += iM24489;
-                i2 -= iM24489;
-                this.f39409 += iM24489;
-                if (this.f39400.m47855()) {
-                    m29305();
+                JSONObject jSONObject2 = (JSONObject) c1897.m6533(str, new InterfaceC15320() { // from class: l.ۚܺۚ
+                    @Override // l.InterfaceC15320
+                    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+                    public final JSONObject mo16829(C14069 c14069, C18282 c18282) {
+                        return C11722.m29435(c18282, c8586M28276, this.f19800, c14069);
+                    }
+                });
+                int i = C24294.f78630;
+                C1238 c1238 = new C1238(jSONObject2);
+                interfaceC18854M6559.close();
+                c1897.m6556(str);
+                return c1238;
+            } catch (Throwable th) {
+                try {
+                    interfaceC18854M6559.close();
+                } catch (Throwable th2) {
+                    th.addSuppressed(th2);
                 }
-            } catch (IOException e) {
-                this.f39406 = e;
-                throw e;
+                throw th;
             }
+        } catch (Throwable th3) {
+            if (c8586M28276 != null) {
+                c1897.m6556(c8586M28276.f28074);
+            }
+            int i2 = C24294.f78630;
+            throw th3;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m29305() throws IOException {
-        int i;
-        int iM46488 = this.f39401.m46488();
-        int iM47856 = this.f39400.m47856();
-        int i2 = iM46488 + 2;
-        byte[] bArr = this.f39408;
-        if (i2 >= iM47856) {
-            this.f39400.mo10858();
-            iM47856 = this.f39400.m47856();
-            int i3 = iM47856;
-            while (i3 > 0) {
-                int iMin = Math.min(i3, 65536);
-                bArr[0] = (byte) (this.f39396 ? 1 : 2);
-                int i4 = iMin - 1;
-                bArr[1] = (byte) (i4 >>> 8);
-                bArr[2] = (byte) i4;
-                this.f39402.write(bArr, 0, 3);
-                this.f39407.m24490(this.f39402, i3, iMin);
-                i3 -= iMin;
-                this.f39396 = false;
+    public static /* synthetic */ JSONObject m29435(final C18282 c18282, final C8586 c8586, final C11722 c11722, final C14069 c14069) {
+        C25391 c25391 = c11722.f37926;
+        String str = c8586.f28077;
+        String str2 = c8586.f28075;
+        InterfaceC11964 interfaceC11964 = new InterfaceC11964() { // from class: l.֫ܺۚ
+            @Override // l.InterfaceC11964
+            /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+            public final Object mo7002(C17185 c17185) {
+                return C15451.m36977(C13214.m32728(c14069, c18282, c11722.f37925, c17185, c8586));
             }
-            this.f39398 = true;
-        } else {
-            boolean z = this.f39397;
-            if (z) {
-                i = this.f39396 ? BERTags.FLAGS : 192;
-            } else {
-                i = this.f39398 ? DHParameters.DEFAULT_MINIMUM_LENGTH : 128;
-            }
-            int i5 = iM47856 - 1;
-            bArr[0] = (byte) (i | (i5 >>> 16));
-            bArr[1] = (byte) (i5 >>> 8);
-            bArr[2] = (byte) i5;
-            int i6 = iM46488 - 1;
-            bArr[3] = (byte) (i6 >>> 8);
-            bArr[4] = (byte) i6;
-            if (z) {
-                bArr[5] = (byte) this.f39404;
-                this.f39402.write(bArr, 0, 6);
-            } else {
-                this.f39402.write(bArr, 0, 5);
-            }
-            this.f39401.m46489(this.f39402);
-            this.f39397 = false;
-            this.f39398 = false;
-            this.f39396 = false;
-        }
-        this.f39409 -= iM47856;
-        this.f39400.m47846();
-        this.f39401.m46493();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private void m29306() throws IOException {
-        IOException iOException = this.f39406;
-        if (iOException != null) {
-            throw iOException;
-        }
-        this.f39407.m24492();
-        while (this.f39409 > 0) {
-            try {
-                this.f39400.m47855();
-                m29305();
-            } catch (IOException e) {
-                this.f39406 = e;
-                throw e;
-            }
-        }
-        this.f39402.write(0);
-        this.f39403 = true;
-        AbstractC21330 abstractC21330 = this.f39400;
-        C17720 c17720 = this.f39405;
-        abstractC21330.m47852(c17720);
-        this.f39400 = null;
-        this.f39407 = null;
-        this.f39401.m46490(c17720);
-        this.f39401 = null;
-    }
-
-    @Override // java.io.OutputStream, java.io.Flushable
-    public final void flush() throws IOException {
-        IOException iOException = this.f39406;
-        if (iOException != null) {
-            throw iOException;
-        }
-        if (this.f39403) {
-            throw new C21599("Stream finished or closed");
-        }
-        try {
-            this.f39407.m24498();
-            while (this.f39409 > 0) {
-                this.f39400.m47855();
-                m29305();
-            }
-            this.f39402.flush();
-        } catch (IOException e) {
-            this.f39406 = e;
-            throw e;
-        }
-    }
-
-    @Override // l.AbstractC23366
-    public final void finish() throws IOException {
-        if (this.f39403) {
-            return;
-        }
-        m29306();
-        try {
-            this.f39402.finish();
-        } catch (IOException e) {
-            this.f39406 = e;
-            throw e;
-        }
-    }
-
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        if (this.f39402 != null) {
-            if (!this.f39403) {
-                try {
-                    m29306();
-                } catch (IOException unused) {
-                }
-            }
-            try {
-                this.f39402.close();
-            } catch (IOException e) {
-                if (this.f39406 == null) {
-                    this.f39406 = e;
-                }
-            }
-            this.f39402 = null;
-        }
-        IOException iOException = this.f39406;
-        if (iOException != null) {
-            throw iOException;
-        }
+        };
+        c25391.getClass();
+        return (JSONObject) C25391.m56749(c14069, c18282, str, str2, interfaceC11964);
     }
 }

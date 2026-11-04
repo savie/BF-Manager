@@ -1,83 +1,84 @@
 package l;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
+import com.alipay.sdk.m.y.l;
+import java.util.ArrayList;
+import java.util.List;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ܽᩴܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G54L */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16830 {
+/* JADX INFO: renamed from: l.ܺ۫֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16830 extends AbstractC2323 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m39476(Context context) throws Throwable {
-        int i;
-        String strM31370 = C12597.m31370("ro.miui.ui.version.name");
-        if (strM31370 != null) {
-            try {
-                i = Integer.parseInt(strM31370.substring(1));
-            } catch (Exception e) {
-                C17874.m41461(e);
-                i = -1;
+    public final C20279 f54288;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C15648 f54289;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f54290;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f54291;
+
+    public C16830() {
+        throw null;
+    }
+
+    public C16830(C20279 c20279, ArrayList arrayList, C15648 c15648, int i) {
+        this.f54288 = c20279;
+        this.f54291 = arrayList;
+        this.f54289 = c15648;
+        this.f54290 = i;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C16830)) {
+            return false;
+        }
+        C16830 c16830 = (C16830) obj;
+        return this.f54290 == c16830.f54290 && C17359.equals(this.f54288, c16830.f54288) && C17359.equals(this.f54291, c16830.f54291) && C17359.equals(this.f54289, c16830.f54289);
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f54289) + ((C17359.hashCode(this.f54291) + ((C17359.hashCode(this.f54288) + (this.f54290 * 31)) * 31)) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f54288, this.f54291, this.f54289, Integer.valueOf(this.f54290)};
+        String[] strArrSplit = "group;supportedTrackIndices;representativeFormat;logicalIndex".length() == 0 ? new String[0] : "group;supportedTrackIndices;representativeFormat;logicalIndex".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C16830.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
             }
-        } else {
-            i = -1;
         }
-        if (i == 5) {
-            String packageName = context.getPackageName();
-            Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
-            intent.setData(Uri.fromParts("package", packageName, null));
-            intent.setFlags(268435456);
-            if (!m39477(context, intent)) {
-                throw new RuntimeException("intent is not available!");
-            }
-            context.startActivity(intent);
-            return;
-        }
-        if (i == 6) {
-            Intent intent2 = new Intent("miui.intent.action.APP_PERM_EDITOR");
-            intent2.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
-            intent2.putExtra("extra_pkgname", context.getPackageName());
-            intent2.setFlags(268435456);
-            if (!m39477(context, intent2)) {
-                throw new RuntimeException("intent is not available!");
-            }
-            context.startActivity(intent2);
-            return;
-        }
-        if (i == 7) {
-            Intent intent3 = new Intent("miui.intent.action.APP_PERM_EDITOR");
-            intent3.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
-            intent3.putExtra("extra_pkgname", context.getPackageName());
-            intent3.setFlags(268435456);
-            if (!m39477(context, intent3)) {
-                throw new RuntimeException("intent is not available!");
-            }
-            context.startActivity(intent3);
-            return;
-        }
-        if (i != 8) {
-            throw new IllegalStateException(C8479.m22141(i, "Unsupported MIUI version: "));
-        }
-        Intent intent4 = new Intent("miui.intent.action.APP_PERM_EDITOR");
-        intent4.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.PermissionsEditorActivity");
-        intent4.putExtra("extra_pkgname", context.getPackageName());
-        intent4.setFlags(268435456);
-        if (m39477(context, intent4)) {
-            context.startActivity(intent4);
-            return;
-        }
-        Intent intent5 = new Intent("miui.intent.action.APP_PERM_EDITOR");
-        intent5.setPackage("com.miui.securitycenter");
-        intent5.putExtra("extra_pkgname", context.getPackageName());
-        intent5.setFlags(268435456);
-        if (!m39477(context, intent5)) {
-            throw new RuntimeException("intent is not available!");
-        }
-        context.startActivity(intent5);
+        sb.append("]");
+        return sb.toString();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m39477(Context context, Intent intent) {
-        return context.getPackageManager().queryIntentActivities(intent, 65536).size() > 0;
+    public final C20279 m39746() {
+        return this.f54288;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C15648 m39747() {
+        return this.f54289;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final List m39748() {
+        return this.f54291;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m39749() {
+        return this.f54290;
     }
 }

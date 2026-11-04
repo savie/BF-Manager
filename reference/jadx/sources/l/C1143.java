@@ -1,41 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨۬ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0JF */
-/* JADX INFO: loaded from: classes2.dex */
-public class C1143 extends C23017 {
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6788 f5134;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1143(C6788 c6788) {
-        super(c6788.f22917);
-        this.f5134 = c6788;
-        this.f74802 = c6788.firstEntry();
+/* JADX INFO: renamed from: l.֨ۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C1143 extends EnumC13820 {
+    public /* synthetic */ C1143() {
+        this("CdataSection", 66);
     }
 
-    @Override // l.C23017
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void mo4174() {
-        C9261 c9261M23791 = this.f74805.m23791();
-        this.f74805 = c9261M23791;
-        C6788 c6788 = this.f5134;
-        if (c6788.f22918 || c9261M23791 == null || Integer.compare(c9261M23791.f29881, c6788.f22914) >= 0) {
-            return;
-        }
-        this.f74805 = null;
+    public C1143(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // l.C23017
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo4175() {
-        C9261 c9261M23785 = this.f74802.m23785();
-        this.f74802 = c9261M23785;
-        C6788 c6788 = this.f5134;
-        if (c6788.f22915 || c9261M23785 == null || Integer.compare(c9261M23785.f29881, c6788.f22920) < 0) {
-            return;
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        c13646.f43325.append(c3952.m12671());
+        if (c3952.m12676("]]>") || c3952.m12696()) {
+            String string = c13646.f43325.toString();
+            C18122 c18122 = new C18122();
+            c18122.m1679(string);
+            c13646.m33390(c18122);
+            c13646.m33401(EnumC13820.f43874);
         }
-        this.f74802 = null;
     }
 }

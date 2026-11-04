@@ -12,8 +12,8 @@
     <style name="APKTOOL_RENAMED_0x7f130141" parent="@style/APKTOOL_RENAMED_0x7f13013f">
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
-    <style name="APKTOOL_RENAMED_0x7f130142" parent="@style/APKTOOL_RENAMED_0x7f13028c">
-        <item name="android:navigationBarColor">@color/APKTOOL_RENAMED_0x7f060350</item>
+    <style name="APKTOOL_RENAMED_0x7f130142" parent="@style/APKTOOL_RENAMED_0x7f130290">
+        <item name="android:navigationBarColor">@color/APKTOOL_RENAMED_0x7f060358</item>
         <item name="android:windowLightNavigationBar">@bool/APKTOOL_RENAMED_0x7f050004</item>
     </style>
 </resources>

@@ -1,18 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۘᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X5U */
+/* JADX INFO: renamed from: l.᩵ܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D1E0 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20631 extends C1580 implements InterfaceC13722 {
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final /* synthetic */ void add(Object obj) {
-        C17745.m41310();
-        throw null;
-    }
-
-    @Override // l.InterfaceC13722, java.util.ListIterator
-    public final /* synthetic */ void set(Object obj) {
-        C17745.m41312();
-        throw null;
+public final class C20631 implements InterfaceC6461 {
+    @Override // l.InterfaceC6461
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2387(C13304 c13304, C12426 c12426, C2008 c2008) {
+        c13304.m32860(false);
+        C24361.m54434(c13304, c2008, c12426, false).m11709(7);
     }
 }

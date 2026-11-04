@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DigestInfo extends ASN1Object {
     public AlgorithmIdentifier algId;
     public byte[] digest;

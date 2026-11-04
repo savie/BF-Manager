@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final ۙ:Ll/ܰۧᩴ;
+.field public static final ۙ:Ll/ܽ֫ۗ;
 
 
 # direct methods
@@ -12,32 +12,32 @@
     .locals 3
 
     .line 31
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܰۧᩴ;
+    sput-object v0, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܽ֫ۗ;
 
     const-string v1, "QueryStringSignerType"
 
     .line 35
     const-class v2, Lcom/amazonaws/auth/QueryStringSigner;
 
-    invoke-virtual {v0, v1, v2}, Ll/ܰۧᩴ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ll/ܽ֫ۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "AWS4SignerType"
 
     .line 36
     const-class v2, Lcom/amazonaws/auth/AWS4Signer;
 
-    invoke-virtual {v0, v1, v2}, Ll/ܰۧᩴ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ll/ܽ֫ۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "NoOpSignerType"
 
     .line 37
     const-class v2, Lcom/amazonaws/auth/NoOpSigner;
 
-    invoke-virtual {v0, v1, v2}, Ll/ܰۧᩴ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ll/ܽ֫ۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -48,9 +48,9 @@
     const-string v0, "Cannot create an instance of "
 
     .line 111
-    sget-object v1, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܰۧᩴ;
+    sget-object v1, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v1, p0}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -135,14 +135,14 @@
     .locals 1
 
     .line 63
-    sget-object v0, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܰۧᩴ;
+    sget-object v0, Lcom/amazonaws/auth/SignerFactory;->ۙ:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v0, p1, p0}, Ll/ܰۧᩴ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p0}, Ll/ܽ֫ۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static ۨ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
+.method public static ۤ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
     .locals 0
 
     .line 90
@@ -153,7 +153,7 @@
     return-object p0
 .end method
 
-.method public static ܰ(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
+.method public static ᩷(Ljava/lang/String;Ljava/lang/String;)Lcom/amazonaws/auth/Signer;
     .locals 1
 
     .line 98

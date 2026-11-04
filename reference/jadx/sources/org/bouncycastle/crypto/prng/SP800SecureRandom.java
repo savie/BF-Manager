@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.prng;
 import java.security.SecureRandom;
 import org.bouncycastle.crypto.prng.drbg.SP80090DRBG;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SP800SecureRandom extends SecureRandom {
     public SP80090DRBG drbg;
     public final DRBGProvider drbgProvider;

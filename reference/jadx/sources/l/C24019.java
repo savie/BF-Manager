@@ -1,65 +1,53 @@
 package l;
 
-import android.content.res.ColorStateList;
-import android.graphics.PorterDuff;
-import android.os.Build;
-import android.view.MenuItem;
-
-/* JADX INFO: renamed from: l.᩻᩻, reason: contains not printable characters */
-/* JADX INFO: compiled from: A60Y */
+/* JADX INFO: renamed from: l.᩺ۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S7O7 */
 /* JADX INFO: loaded from: classes.dex */
 public final class C24019 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52859(MenuItem menuItem, CharSequence charSequence) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setContentDescription(charSequence);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28368(menuItem, charSequence);
-        }
+    public final C2346 f77673;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f77674;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C24019 m53573(int i, int i2, String str) {
+        C12128.m30308("startPosition must be non-negative", i >= 0);
+        C12128.m30308("startPosition cannot be after endPosition", i <= i2);
+        return new C24019(C2346.m7914(Integer.valueOf(i), Integer.valueOf(i2)), str);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m52861(MenuItem menuItem, CharSequence charSequence) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setTooltipText(charSequence);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28372(menuItem, charSequence);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m52860(MenuItem menuItem, char c, int i) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setNumericShortcut(c, i);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28371(menuItem, c, i);
-        }
+    public C24019(C2346 c2346, String str) {
+        this.f77673 = c2346;
+        C12128.m30305(str, "Null replacementString");
+        this.f77674 = str;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52856(MenuItem menuItem, char c, int i) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setAlphabeticShortcut(c, i);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28365(menuItem, c, i);
-        }
+    public final C2346 m53574() {
+        return this.f77673;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52857(MenuItem menuItem, ColorStateList colorStateList) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setIconTintList(colorStateList);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28366(menuItem, colorStateList);
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m53575() {
+        return this.f77674;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52858(MenuItem menuItem, PorterDuff.Mode mode) {
-        if (menuItem instanceof InterfaceMenuItemC9720) {
-            ((InterfaceMenuItemC9720) menuItem).setIconTintMode(mode);
-        } else if (Build.VERSION.SDK_INT >= 26) {
-            C11319.m28367(menuItem, mode);
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
         }
+        if (obj instanceof C24019) {
+            C24019 c24019 = (C24019) obj;
+            if (this.f77673.equals(c24019.f77673) && this.f77674.equals(c24019.f77674)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return C17359.hash(this.f77673, this.f77674);
     }
 }

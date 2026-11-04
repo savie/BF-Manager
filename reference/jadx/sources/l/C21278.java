@@ -1,35 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸֫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07T7 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21278 implements InterfaceC22685 {
-    @Override // l.InterfaceC22685
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3246(Object obj) {
-        CharSequence charSequence = (CharSequence) obj;
-        int length = charSequence.length();
-        if (length < 100) {
-            return charSequence.hashCode();
-        }
-        return charSequence.charAt(length / 2) | (length << 16);
-    }
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
 
-    @Override // l.InterfaceC22685
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo3247(Object obj, Object obj2) {
-        CharSequence charSequence = (CharSequence) obj;
-        CharSequence charSequence2 = (CharSequence) obj2;
-        if (charSequence instanceof C16277) {
-            C16277 c16277 = (C16277) charSequence;
-            if (charSequence2 instanceof C16277) {
-                return c16277.equals((C16277) charSequence2);
-            }
-            return c16277.m38434(charSequence2);
+/* JADX INFO: renamed from: l.᩶ۧ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: G8K7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21278 extends AbstractC0221 {
+    public C21278(C23232 c23232, int i, long j, long j2) {
+        long j3;
+        long j4;
+        C17359.requireNonNull(c23232);
+        int i2 = c23232.f75251;
+        C17277 c17277 = new C17277(c23232);
+        C14564 c14564 = new C14564(c23232, i);
+        long jM52211 = c23232.m52211();
+        long j5 = c23232.f75256;
+        int i3 = c23232.f75257;
+        if (i3 > 0) {
+            j3 = (((long) i3) + ((long) i2)) / 2;
+            j4 = 1;
+        } else {
+            int i4 = c23232.f75254;
+            j3 = ((((i4 != c23232.f75259 || i4 <= 0) ? ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF : i4) * ((long) c23232.f75252)) * ((long) c23232.f75250)) / 8;
+            j4 = 64;
         }
-        if (charSequence2 instanceof C16277) {
-            return ((C16277) charSequence2).m38434(charSequence);
-        }
-        return charSequence.equals(charSequence2);
+        super(c17277, c14564, jM52211, j5, j, j2, j3 + j4, Math.max(6, i2));
     }
 }

@@ -1,12 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽܳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8YF */
+import android.widget.CompoundButton;
+
+/* JADX INFO: renamed from: l.ܺ۠۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 35GV */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16707 implements InterfaceC4774 {
-    @Override // l.InterfaceC4774
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6311(C18410 c18410, InterfaceC9239 interfaceC9239) {
-        return new C19529(c18410.m42692(), new C5417((String) AbstractC20940.f68255.m34277(interfaceC9239), c18410.m42694(), c18410.m42696(), (C20235) AbstractC20940.f68257.m34275(interfaceC9239)), ((Boolean) AbstractC20940.f68256.m34278(interfaceC9239)).booleanValue());
+public final /* synthetic */ class C16707 implements CompoundButton.OnCheckedChangeListener {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f53974;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f53975;
+
+    public /* synthetic */ C16707(int i, Object obj) {
+        this.f53974 = i;
+        this.f53975 = obj;
+    }
+
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        switch (this.f53974) {
+            case 0:
+                ((AbstractViewOnClickListenerC20437) this.f53975).m46868();
+                break;
+            default:
+                ActivityC2534.m8446((ActivityC2534) this.f53975, compoundButton, z);
+                break;
+        }
     }
 }

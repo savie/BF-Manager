@@ -1,71 +1,144 @@
 .class public final synthetic Ll/ۤ᩶᩹;
 .super Ljava/lang/Object;
-.source "164Z"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/۟᩶᩹;
-
-.field public final synthetic ᩶:Ll/᩵ۡۜ;
+.source "OBP8"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۟᩶᩹;Ll/᩵ۡۜ;)V
-    .locals 0
+.method public static ۙ(Ll/᩸᩶᩹;Ljava/lang/Integer;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 122
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iput-object p1, p0, Ll/ۤ᩶᩹;->ܺ:Ll/۟᩶᩹;
+    move-result p1
 
-    iput-object p2, p0, Ll/ۤ᩶᩹;->᩶:Ll/᩵ۡۜ;
+    .line 123
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->ۙ(I)Z
 
-    return-void
+    move-result v0
+
+    .line 124
+    invoke-interface {p0, p1, p2}, Ll/᩸᩶᩹;->ۙ(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
+.method public static ۙ(Ll/᩸᩶᩹;Ljava/lang/Object;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    if-nez p1, :cond_0
 
-    .line 271
-    iget-object p1, p0, Ll/ۤ᩶᩹;->ܺ:Ll/۟᩶᩹;
+    const/4 p0, 0x0
 
-    iget-object p1, p1, Ll/۟᩶᩹;->ۙ:Ll/۠᩷ۘ;
+    return p0
 
-    const-string p2, "ad_hide_obj"
+    .line 192
+    :cond_0
+    check-cast p1, Ljava/lang/Integer;
 
-    const-string v0, ""
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p1, p2, v0}, Ll/۠᩷ۘ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object p1
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->ۙ(I)Z
 
-    .line 272
-    sget-object p2, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
+    move-result p0
 
-    invoke-interface {p2}, Ll/ۛۧ᩺;->edit()Ll/ܿۧ᩺;
+    return p0
+.end method
 
-    move-result-object p2
+.method public static ۤ(Ll/᩸᩶᩹;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    const-string v0, "show_ad_in_tools"
+    const/4 v0, 0x0
 
-    invoke-interface {p2, v0, p1}, Ll/ܿۧ᩺;->putString(Ljava/lang/String;Ljava/lang/String;)Ll/ܿۧ᩺;
+    if-nez p1, :cond_0
 
-    move-result-object p1
+    return-object v0
 
-    invoke-interface {p1}, Ll/ܿۧ᩺;->apply()V
+    .line 165
+    :cond_0
+    check-cast p1, Ljava/lang/Integer;
 
-    .line 273
-    iget-object p1, p0, Ll/ۤ᩶᩹;->᩶:Ll/᩵ۡۜ;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->dismiss()V
+    move-result p1
 
-    .line 274
-    invoke-static {}, Ll/ۨ֡᩹;->ۘ()V
+    .line 166
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->ۙ(I)Z
 
-    return-void
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->remove(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public static ᩷(Ll/᩸᩶᩹;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    .line 137
+    :cond_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    .line 139
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p0}, Ll/᩸᩶᩹;->᩷()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p0, p1}, Ll/᩸᩶᩹;->ۙ(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_2
+    :goto_1
+    return-object v0
 .end method

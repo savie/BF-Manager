@@ -7,7 +7,7 @@ import net.engio.mbassy.common.IPredicate;
 import net.engio.mbassy.common.ReflectionUtils;
 import net.engio.mbassy.subscription.MessageEnvelope;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MetadataReader {
     public static final IPredicate AllMessageHandlers = new IPredicate() { // from class: net.engio.mbassy.listener.MetadataReader.1
         @Override // net.engio.mbassy.common.IPredicate

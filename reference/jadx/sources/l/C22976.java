@@ -1,34 +1,49 @@
 package l;
 
-import java.util.Comparator;
+import android.util.SparseArray;
 
-/* JADX INFO: renamed from: l.᩺ۨᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4AQC */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22976 extends C6747 {
+/* JADX INFO: renamed from: l.᩸ᩳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 78R7 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22976 {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4692 f74678;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final SparseArray f74613;
 
-    @Override // l.C6747
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC11687 mo18245(char[] cArr, int i) {
-        C7000.m18807(cArr.length, 0, i);
-        return new C22270(cArr, 0, i, this.f22728, this.f74678);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C23108 f74614;
+
+    public C22976(C23108 c23108, SparseArray sparseArray) {
+        this.f74614 = c23108;
+        SparseArray sparseArray2 = new SparseArray(c23108.m52010());
+        for (int i = 0; i < c23108.m52010(); i++) {
+            int iM52013 = c23108.m52013(i);
+            C11041 c11041 = (C11041) sparseArray.get(iM52013);
+            c11041.getClass();
+            sparseArray2.append(iM52013, c11041);
+        }
+        this.f74613 = sparseArray2;
     }
 
-    public C22976(InterfaceC20921 interfaceC20921, long j, InterfaceC4692 interfaceC4692) {
-        super(interfaceC20921, j, 341);
-        this.f74678 = interfaceC4692;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C11041 m51851(int i) {
+        C11041 c11041 = (C11041) this.f74613.get(i);
+        c11041.getClass();
+        return c11041;
     }
 
-    @Override // l.C6747, l.InterfaceC20693
-    public final Comparator getComparator() {
-        return this.f74678;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m51850(int i) {
+        return this.f74614.m52011(i);
     }
 
-    @Override // l.C6747, l.InterfaceC11687, l.InterfaceC20693
-    public final InterfaceC4692 getComparator() {
-        return this.f74678;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m51849() {
+        return this.f74614.m52010();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m51852(int i) {
+        return this.f74614.m52013(i);
     }
 }

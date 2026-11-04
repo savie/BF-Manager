@@ -1,364 +1,130 @@
-.class public final Ll/ۧۢۘ;
-.super Ll/ۢ᩹᩺;
-.source "E1KB"
+.class public Ll/ۧۢۘ;
+.super Ljava/lang/Object;
+.source "O3Z6"
+
+# interfaces
+.implements Ll/֫ۢۘ;
 
 
 # instance fields
-.field public final synthetic ᩺ۙ:Ll/ۢۢۘ;
+.field public ۙ:I
+
+.field public ۤ:[I
+
+.field public ᩷:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۢۢۘ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 143
-    iput-object p1, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
+    .line 151
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "<>"
+    const/4 v0, 0x0
 
-    .line 90
-    invoke-static {p1}, Ll/ۢ᩹᩺;->ۖ(Ljava/lang/String;)[Landroid/graphics/drawable/Drawable;
+    .line 195
+    iput v0, p0, Ll/ۧۢۘ;->᩷:I
 
-    move-result-object p1
+    const/4 v0, 0x1
 
-    .line 144
-    invoke-direct {p0, p1}, Ll/ۢ᩹᩺;-><init>([Landroid/graphics/drawable/Drawable;)V
+    .line 196
+    iput v0, p0, Ll/ۧۢۘ;->ۙ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemCount()I
-    .locals 3
+.method public ۙ(I)I
+    .locals 4
 
-    .line 221
-    invoke-super {p0}, Ll/ۢ᩹᩺;->getItemCount()I
+    .line 199
+    iget v0, p0, Ll/ۧۢۘ;->᩷:I
 
-    move-result v0
+    if-ne p1, v0, :cond_0
 
-    if-lez v0, :cond_0
+    .line 200
+    iget p1, p0, Ll/ۧۢۘ;->ۙ:I
 
-    add-int/lit8 v0, v0, 0x1
+    return p1
 
-    .line 225
+    .line 202
     :cond_0
-    iget-object v1, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
+    iput p1, p0, Ll/ۧۢۘ;->᩷:I
 
-    invoke-static {v1}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
+    .line 205
+    iget-object v0, p0, Ll/ۧۢۘ;->ۤ:[I
 
-    move-result-object v2
+    array-length v0, v0
 
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 226
-    invoke-static {v1}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemViewType(I)I
-    .locals 2
-
-    .line 149
-    iget-object v0, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
-
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    add-int/lit8 p1, p1, -0x1
-
-    .line 154
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 157
-    :cond_1
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    sub-int/2addr p1, v0
-
-    :cond_2
-    if-nez p1, :cond_3
-
-    const/4 p1, 0x2
-
-    return p1
-
-    :cond_3
-    add-int/lit8 p1, p1, -0x1
-
-    .line 163
-    invoke-super {p0, p1}, Ll/ۢ᩹᩺;->getItemViewType(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final onBindViewHolder(Ll/۫ܿܰ;I)V
-    .locals 2
-
-    .line 203
-    iget-object v0, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
-
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    add-int/lit8 p2, p2, -0x1
-
-    .line 208
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge p2, v1, :cond_1
-
-    .line 209
-    check-cast p1, Ll/֫ۢۘ;
-
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Ll/֫ۢۘ;->ۙ(Ljava/lang/String;)V
-
-    return-void
-
-    .line 212
-    :cond_1
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    sub-int/2addr p2, v0
-
-    :cond_2
-    if-lez p2, :cond_3
-
-    add-int/lit8 p2, p2, -0x1
-
-    .line 215
-    invoke-super {p0, p1, p2}, Ll/ۢ᩹᩺;->onBindViewHolder(Ll/۫ܿܰ;I)V
-
-    :cond_3
-    :goto_0
-    return-void
-.end method
-
-.method public final onCreateViewHolder(Landroid/view/ViewGroup;I)Ll/۫ܿܰ;
-    .locals 3
-
-    const v0, 0x7f0a05e2
+    add-int/lit8 v0, v0, -0x1
 
     const/4 v1, 0x0
 
-    if-eqz p2, :cond_2
+    :goto_0
+    if-gt v1, v0, :cond_3
 
-    const/4 v2, 0x1
+    add-int v2, v1, v0
 
-    if-eq p2, v2, :cond_1
+    shr-int/lit8 v2, v2, 0x1
 
-    const/4 v2, 0x2
+    .line 208
+    iget-object v3, p0, Ll/ۧۢۘ;->ۤ:[I
 
-    if-eq p2, v2, :cond_0
+    aget v3, v3, v2
 
-    .line 197
-    invoke-super {p0, p1, p2}, Ll/ۢ᩹᩺;->onCreateViewHolder(Landroid/view/ViewGroup;I)Ll/۫ܿܰ;
+    if-ge v3, p1, :cond_1
 
-    move-result-object p1
+    add-int/lit8 v1, v2, 0x1
 
-    return-object p1
-
-    :cond_0
-    const p2, 0x7f0d015a
-
-    .line 0
-    invoke-static {p1, p2, p1, v1}, Ll/ۢ۫;->ۙ(Landroid/view/ViewGroup;ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    .line 193
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    const v0, 0x7f12062d
-
-    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
-
-    .line 194
-    new-instance p2, Ll/۫ۢۘ;
-
-    .line 330
-    invoke-direct {p2, p1}, Ll/۫ܿܰ;-><init>(Landroid/view/View;)V
-
-    return-object p2
+    goto :goto_0
 
     :cond_1
-    const p2, 0x7f0d014b
+    if-le v3, p1, :cond_2
 
-    .line 0
-    invoke-static {p1, p2, p1, v1}, Ll/ۢ۫;->ۙ(Landroid/view/ViewGroup;ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    add-int/lit8 v0, v2, -0x1
 
-    move-result-object p1
-
-    .line 188
-    new-instance p2, Ll/֫ۢۘ;
-
-    iget-object v0, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
-
-    invoke-direct {p2, v0, p1}, Ll/֫ۢۘ;-><init>(Ll/ۢۢۘ;Landroid/view/View;)V
-
-    return-object p2
+    goto :goto_0
 
     :cond_2
-    const p2, 0x7f0d015b
+    add-int/lit8 v2, v2, 0x1
 
-    .line 0
-    invoke-static {p1, p2, p1, v1}, Ll/ۢ۫;->ۙ(Landroid/view/ViewGroup;ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    .line 215
+    iput v2, p0, Ll/ۧۢۘ;->ۙ:I
 
-    move-result-object p1
+    return v2
 
-    .line 173
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 219
+    :cond_3
+    iput v1, p0, Ll/ۧۢۘ;->ۙ:I
 
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    const v0, 0x7f1207dc
-
-    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
-
-    const p2, 0x7f0a03ae
-
-    .line 174
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    new-instance v0, Ll/ܿۢۘ;
-
-    invoke-direct {v0, p0}, Ll/ܿۢۘ;-><init>(Ll/ۧۢۘ;)V
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 183
-    new-instance p2, Ll/۫ۢۘ;
-
-    .line 330
-    invoke-direct {p2, p1}, Ll/۫ܿܰ;-><init>(Landroid/view/View;)V
-
-    return-object p2
+    return v1
 .end method
 
-.method public final ۬()I
+.method public ۤ(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public ᩷(I)I
     .locals 2
 
-    .line 233
-    iget-object v0, p0, Ll/ۧۢۘ;->᩺ۙ:Ll/ۢۢۘ;
+    .line 229
+    iget-object v0, p0, Ll/ۧۢۘ;->ۤ:[I
 
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    invoke-virtual {p0, p1}, Ll/ۧۢۘ;->ۙ(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/lit8 v1, v1, -0x1
 
-    const/4 v0, 0x1
+    aget v0, v0, v1
 
-    return v0
+    sub-int/2addr p1, v0
 
-    :cond_0
-    invoke-static {v0}, Ll/ۢۢۘ;->ۖ(Ll/ۢۢۘ;)Ljava/util/List;
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x2
-
-    return v0
+    return p1
 .end method

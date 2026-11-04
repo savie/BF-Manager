@@ -1,23 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰᩴܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 88N4 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14008 implements Comparable {
+/* JADX INFO: renamed from: l.۬ܿ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: R8AK */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C14008 implements InterfaceC24673 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final byte[] f46028;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0060 f44373;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final long f46029;
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return Long.compare(this.f46029, ((C14008) obj).f46029);
+    public /* synthetic */ C14008(C0060 c0060) {
+        this.f44373 = c0060;
     }
 
-    public C14008(long j, byte[] bArr) {
-        this.f46029 = j;
-        this.f46028 = bArr;
+    @Override // l.InterfaceC24673
+    public final void run() {
+        this.f44373.m992();
     }
 }

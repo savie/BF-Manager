@@ -1,150 +1,170 @@
 .class public final Ll/ۛ۟᩹;
-.super Ll/᩹᩷᩹;
-.source "M5NX"
+.super Ljava/lang/Object;
+.source "AAP5"
+
+# interfaces
+.implements Ll/ܶ۟᩹;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public ۧ:Ll/ܿ۟᩹;
-
-.field public final ᩻:Ll/᩻۟᩹;
+# static fields
+.field public static final serialVersionUID:J = 0x744911981e291cdcL
 
 
 # direct methods
-.method public constructor <init>(Lbin/mt/plus/Main;Landroid/view/View;Ll/᩻۟᩹;)V
-    .locals 0
-
-    .line 188
-    invoke-direct {p0, p1, p2}, Ll/᩹᩷᩹;-><init>(Ll/۫ܶۘ;Landroid/view/View;)V
-
-    .line 189
-    iput-object p3, p0, Ll/ۛ۟᩹;->᩻:Ll/᩻۟᩹;
-
-    return-void
-.end method
-
-.method public static synthetic ۙ(Ll/ۛ۟᩹;)V
+.method private readResolve()Ljava/lang/Object;
     .locals 1
 
-    .line 211
-    iget-object v0, p0, Ll/ۛ۟᩹;->᩻:Ll/᩻۟᩹;
+    .line 98
+    sget-object v0, Ll/ܿ۟᩹;->ۙ:Ll/ۛ۟᩹;
 
-    invoke-static {v0, p0}, Ll/᩻۟᩹;->ۙ(Ll/᩻۟᩹;Ll/ۛ۟᩹;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic ۙ(Ll/ۛ۟᩹;Ll/ܿ۟᩹;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Ll/ۛ۟᩹;->ۧ:Ll/ܿ۟᩹;
-
-    return-void
-.end method
-
-.method public static bridge synthetic ܰ(Ll/ۛ۟᩹;)Ll/ܿ۟᩹;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۛ۟᩹;->ۧ:Ll/ܿ۟᩹;
-
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 4
+.method public final characteristics()I
+    .locals 1
 
-    .line 199
-    iget-object p1, p0, Ll/ۛ۟᩹;->᩻:Ll/᩻۟᩹;
+    const/16 v0, 0x4040
 
-    iget-object v0, p1, Ll/ۛ᩷᩹;->᩶:Ll/۫᩷᩹;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ll/۫᩷᩹;->ۨ()Z
+.method public final clone()Ljava/lang/Object;
+    .locals 1
 
-    move-result v0
+    .line 94
+    sget-object v0, Ll/ܿ۟᩹;->ۙ:Ll/ۛ۟᩹;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final estimateSize()J
+    .locals 2
 
-    goto :goto_0
+    const-wide/16 v0, 0x0
 
-    .line 202
-    :cond_0
-    iget-object v0, p0, Ll/ۛ۟᩹;->ۧ:Ll/ܿ۟᩹;
+    return-wide v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 223
-    iget-object p1, p1, Ll/ܳ۟᩹;->ܺ:Lbin/mt/plus/Main;
+    .line 50
+    check-cast p1, Ljava/util/function/IntConsumer;
 
-    invoke-virtual {p1}, Lbin/mt/plus/Main;->ۚۙ()Ll/ۜᩳ᩹;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    if-eqz p1, :cond_1
+    return-void
+.end method
 
-    .line 224
-    invoke-virtual {v0}, Ll/ܿ۟᩹;->ۙ()I
+.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
+    .locals 0
 
-    move-result v0
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Ll/ۜᩳ᩹;->ܰ(I)Z
+.method public final bridge synthetic getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 29
+    invoke-virtual {p0}, Ll/ۛ۟᩹;->getComparator()Ll/ۙ֡᩹;
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public final getComparator()Ll/ۙ֡᩹;
+    .locals 1
+
+    .line 158
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
+    .locals 2
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    return p1
+.end method
 
-    .line 205
-    new-instance p1, Ll/ܺ᩸;
+.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
+    .locals 0
 
-    iget-object v0, p0, Ll/᩹᩷᩹;->ܺ:Ll/۫ܶۘ;
+    .line 50
+    check-cast p1, Ljava/util/function/IntConsumer;
 
-    const v2, 0x800003
-
-    iget-object v3, p0, Ll/᩹᩷᩹;->ۛ:Landroid/view/View;
-
-    invoke-direct {p1, v0, v3, v2}, Ll/ܺ᩸;-><init>(Landroid/content/Context;Landroid/view/View;I)V
-
-    .line 206
-    invoke-static {v3}, Ll/ۗۘ᩺;->ۘ(Landroid/view/View;)V
-
-    .line 207
-    invoke-virtual {p1}, Ll/ܺ᩸;->ۖ()V
-
-    .line 208
-    invoke-virtual {p1}, Ll/ܺ᩸;->ۨ()Ll/۫۬;
-
-    move-result-object v0
-
-    const v2, 0x7f120189
-
-    .line 209
-    invoke-interface {v0, v1, v2, v1, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    const v1, 0x7f0801dd
-
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
-
-    .line 210
-    new-instance v0, Ll/᩺۠ۚ;
-
-    invoke-direct {v0, p0}, Ll/᩺۠ۚ;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Ll/ܺ᩸;->ۙ(Ll/᩷᩸;)V
-
-    .line 214
-    invoke-virtual {p1}, Ll/ܺ᩸;->ۚ()V
-
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
+.end method
 
-    :cond_1
-    :goto_0
-    return v1
+.method public final tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final tryAdvance(Ljava/util/function/IntConsumer;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۟ۚۗ;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۠ۚۗ;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/ۡۚۗ;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

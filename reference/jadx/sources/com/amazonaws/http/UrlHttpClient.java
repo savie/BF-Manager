@@ -14,32 +14,32 @@ import javax.net.ssl.HttpsURLConnection;
 /* JADX INFO: loaded from: classes.dex */
 public class UrlHttpClient {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Log f209 = LogFactory.m302(UrlHttpClient.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Log f199 = LogFactory.m296(UrlHttpClient.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ClientConfiguration f210;
+    public final ClientConfiguration f200;
 
     public UrlHttpClient(ClientConfiguration clientConfiguration) {
-        this.f210 = clientConfiguration;
-        int i = TLS12SocketFactory.f207;
+        this.f200 = clientConfiguration;
+        int i = TLS12SocketFactory.f197;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HttpResponse m278(HttpRequest httpRequest) throws IOException {
-        HttpURLConnection httpURLConnection = (HttpURLConnection) httpRequest.m261().toURL().openConnection();
-        ClientConfiguration clientConfiguration = this.f210;
-        httpURLConnection.setConnectTimeout(clientConfiguration.m170());
-        httpURLConnection.setReadTimeout(clientConfiguration.m172());
+    public final HttpResponse m272(HttpRequest httpRequest) throws IOException {
+        HttpURLConnection httpURLConnection = (HttpURLConnection) httpRequest.m256().toURL().openConnection();
+        ClientConfiguration clientConfiguration = this.f200;
+        httpURLConnection.setConnectTimeout(clientConfiguration.m162());
+        httpURLConnection.setReadTimeout(clientConfiguration.m168());
         httpURLConnection.setInstanceFollowRedirects(false);
         httpURLConnection.setUseCaches(false);
-        if (httpRequest.m264()) {
+        if (httpRequest.m255()) {
             httpURLConnection.setChunkedStreamingMode(0);
         }
         if (httpURLConnection instanceof HttpsURLConnection) {
         }
-        if (httpRequest.m262() != null && !httpRequest.m262().isEmpty()) {
-            for (Map.Entry entry : httpRequest.m262().entrySet()) {
+        if (httpRequest.m254() != null && !httpRequest.m254().isEmpty()) {
+            for (Map.Entry entry : httpRequest.m254().entrySet()) {
                 String str = (String) entry.getKey();
                 if (!str.equals("Content-Length") && !str.equals("Host")) {
                     str.equals("Expect");
@@ -48,16 +48,16 @@ public class UrlHttpClient {
             }
         }
         httpURLConnection.setRequestMethod(httpRequest.m258());
-        if (httpRequest.m259() != null && httpRequest.m263() >= 0) {
+        if (httpRequest.m252() != null && httpRequest.m257() >= 0) {
             httpURLConnection.setDoOutput(true);
-            if (!httpRequest.m264()) {
-                httpURLConnection.setFixedLengthStreamingMode((int) httpRequest.m263());
+            if (!httpRequest.m255()) {
+                httpURLConnection.setFixedLengthStreamingMode((int) httpRequest.m257());
             }
             OutputStream outputStream = httpURLConnection.getOutputStream();
-            InputStream inputStreamM259 = httpRequest.m259();
+            InputStream inputStreamM252 = httpRequest.m252();
             byte[] bArr = new byte[8192];
             while (true) {
-                int i = inputStreamM259.read(bArr);
+                int i = inputStreamM252.read(bArr);
                 if (i == -1) {
                     break;
                 }
@@ -76,14 +76,14 @@ public class UrlHttpClient {
             }
         }
         HttpResponse.Builder builder = new HttpResponse.Builder();
-        builder.m272(responseCode);
-        builder.m274(responseMessage);
-        builder.m273(errorStream);
+        builder.m266(responseCode);
+        builder.m268(responseMessage);
+        builder.m267(errorStream);
         for (Map.Entry<String, List<String>> entry2 : httpURLConnection.getHeaderFields().entrySet()) {
             if (entry2.getKey() != null) {
-                builder.m275(entry2.getKey(), entry2.getValue().get(0));
+                builder.m269(entry2.getKey(), entry2.getValue().get(0));
             }
         }
-        return builder.m271();
+        return builder.m265();
     }
 }

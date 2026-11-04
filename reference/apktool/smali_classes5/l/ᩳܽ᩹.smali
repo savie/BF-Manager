@@ -1,41 +1,76 @@
-.class public final synthetic Ll/ᩳܽ᩹;
-.super Ljava/lang/Object;
-.source "L73L"
-
-# interfaces
-.implements Ll/۟ܽ᩹;
+.class public final Ll/ᩳܽ᩹;
+.super Ll/᩺᩵᩹;
+.source "QUZ"
 
 
 # instance fields
-.field public final synthetic ۙ:Ljava/lang/String;
+.field public final ֡:Ll/ۡۗ᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ll/ۡۗ᩹;II)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 200
+    invoke-direct {p0, p2, p3}, Ll/᩺᩵᩹;-><init>(II)V
 
-    iput-object p1, p0, Ll/ᩳܽ᩹;->ۙ:Ljava/lang/String;
+    .line 201
+    iput-object p1, p0, Ll/ᩳܽ᩹;->֡:Ll/ۡۗ᩹;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۢܽ᩹;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 195
+    invoke-direct {p0, v0}, Ll/᩺᩵᩹;-><init>(I)V
+
+    .line 196
+    iput-object p1, p0, Ll/ᩳܽ᩹;->֡:Ll/ۡۗ᩹;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/String;)Z
-    .locals 2
+.method public final ۙ(I)C
+    .locals 1
 
-    .line 2
-    iget-object v0, p0, Ll/ᩳܽ᩹;->ۙ:Ljava/lang/String;
+    .line 211
+    iget-object v0, p0, Ll/ᩳܽ᩹;->֡:Ll/ۡۗ᩹;
 
-    const/4 v1, 0x0
-
-    .line 27
-    invoke-static {v1, p1, v0}, Ll/ۡܽ᩹;->ۙ(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, p1}, Ll/ۡۗ᩹;->getChar(I)C
 
     move-result p1
 
     return p1
+.end method
+
+.method public final ۙ(II)Ll/ܶ᩵᩹;
+    .locals 2
+
+    .line 216
+    new-instance v0, Ll/ᩳܽ᩹;
+
+    iget-object v1, p0, Ll/ᩳܽ᩹;->֡:Ll/ۡۗ᩹;
+
+    invoke-direct {v0, v1, p1, p2}, Ll/ᩳܽ᩹;-><init>(Ll/ۡۗ᩹;II)V
+
+    return-object v0
+.end method
+
+.method public final ᩷()I
+    .locals 1
+
+    .line 206
+    iget-object v0, p0, Ll/ᩳܽ᩹;->֡:Ll/ۡۗ᩹;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
 .end method

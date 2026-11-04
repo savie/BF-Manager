@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/ClassLoaderHelper;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/ClassLoaderHelper;
 
 
 # direct methods
@@ -16,7 +16,7 @@
     new-array v0, v0, [Lcom/amazonaws/util/ClassLoaderHelper;
 
     .line 25
-    sput-object v0, Lcom/amazonaws/util/ClassLoaderHelper;->ܺ:[Lcom/amazonaws/util/ClassLoaderHelper;
+    sput-object v0, Lcom/amazonaws/util/ClassLoaderHelper;->ܰ:[Lcom/amazonaws/util/ClassLoaderHelper;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 25
-    sget-object v0, Lcom/amazonaws/util/ClassLoaderHelper;->ܺ:[Lcom/amazonaws/util/ClassLoaderHelper;
+    sget-object v0, Lcom/amazonaws/util/ClassLoaderHelper;->ܰ:[Lcom/amazonaws/util/ClassLoaderHelper;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/ClassLoaderHelper;->clone()Ljava/lang/Object;
 
@@ -58,19 +58,6 @@
     check-cast v0, [Lcom/amazonaws/util/ClassLoaderHelper;
 
     return-object v0
-.end method
-
-.method public static varargs ۖ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 132
-    invoke-static {p0, v0, p1}, Lcom/amazonaws/util/ClassLoaderHelper;->ۨ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static ۙ(Ljava/lang/String;)Ljava/net/URL;
@@ -106,7 +93,7 @@
     if-eqz p1, :cond_0
 
     .line 65
-    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۨ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
+    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۤ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
 
     move-result-object p1
 
@@ -128,7 +115,7 @@
     if-nez p1, :cond_1
 
     .line 72
-    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۨ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
+    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۤ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
 
     move-result-object p1
 
@@ -162,7 +149,89 @@
     return-object p0
 .end method
 
-.method public static ۚ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
+.method public static varargs ۤ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/lang/Class;
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 158
+    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ᩴ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    .line 160
+    invoke-static {p0}, Lcom/amazonaws/util/ClassLoaderHelper;->᩷(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 163
+    :cond_0
+    invoke-static {p0}, Lcom/amazonaws/util/ClassLoaderHelper;->᩷(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    .line 165
+    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ᩴ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_0
+    if-nez p1, :cond_2
+
+    .line 168
+    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    return-object p1
+.end method
+
+.method public static ۤ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
+    .locals 3
+
+    if-eqz p1, :cond_1
+
+    .line 80
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget-object v2, p1, v1
+
+    .line 81
+    invoke-virtual {v2, p0}, Ljava/lang/Class;->getResource(Ljava/lang/String;)Ljava/net/URL;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    return-object v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static ᩴ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
     .locals 3
 
     if-eqz p1, :cond_1
@@ -206,89 +275,7 @@
     return-object p0
 .end method
 
-.method public static varargs ۨ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/lang/Class;
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    .line 158
-    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۚ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    if-nez p1, :cond_1
-
-    .line 160
-    invoke-static {p0}, Lcom/amazonaws/util/ClassLoaderHelper;->ܰ(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 163
-    :cond_0
-    invoke-static {p0}, Lcom/amazonaws/util/ClassLoaderHelper;->ܰ(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    if-nez p1, :cond_1
-
-    .line 165
-    invoke-static {p0, p2}, Lcom/amazonaws/util/ClassLoaderHelper;->ۚ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    :cond_1
-    :goto_0
-    if-nez p1, :cond_2
-
-    .line 168
-    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    return-object p1
-.end method
-
-.method public static ۨ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/net/URL;
-    .locals 3
-
-    if-eqz p1, :cond_1
-
-    .line 80
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p1, v1
-
-    .line 81
-    invoke-virtual {v2, p0}, Ljava/lang/Class;->getResource(Ljava/lang/String;)Ljava/net/URL;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    return-object v2
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static varargs ܰ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/io/InputStream;
+.method public static varargs ᩷(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/io/InputStream;
     .locals 0
 
     .line 209
@@ -315,20 +302,20 @@
     return-object p1
 .end method
 
-.method public static varargs ܰ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/io/InputStream;
+.method public static varargs ᩷(Ljava/lang/String;[Ljava/lang/Class;)Ljava/io/InputStream;
     .locals 1
 
     const/4 v0, 0x0
 
     .line 184
-    invoke-static {p0, v0, p1}, Lcom/amazonaws/util/ClassLoaderHelper;->ܰ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/io/InputStream;
+    invoke-static {p0, v0, p1}, Lcom/amazonaws/util/ClassLoaderHelper;->᩷(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/io/InputStream;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static ܰ(Ljava/lang/String;)Ljava/lang/Class;
+.method public static ᩷(Ljava/lang/String;)Ljava/lang/Class;
     .locals 2
 
     .line 111
@@ -359,4 +346,17 @@
 
     :catch_0
     return-object v1
+.end method
+
+.method public static varargs ᩸(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 132
+    invoke-static {p0, v0, p1}, Lcom/amazonaws/util/ClassLoaderHelper;->ۤ(Ljava/lang/String;Z[Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,70 +1,44 @@
 package l;
 
-import android.graphics.Canvas;
-import android.graphics.Paint;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.᩷ۛۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28WH */
+/* JADX INFO: renamed from: l.᩵ܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 29H6 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20680 implements InterfaceC18708 {
+public final class C20680 extends C6752 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3040 f67267;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f66299;
 
-    public C20680(C3040 c3040) {
-        this.f67267 = c3040;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final Set f66300;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public EnumC6073 f66301;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C25398 f66302;
+
+    public C20680(EnumC15700 enumC15700, long j, long j2, C25398 c25398, EnumC6073 enumC6073, Set set, int i) {
+        super(33, enumC15700, EnumC23906.SMB2_QUERY_DIRECTORY, j, j2, i);
+        this.f66301 = enumC6073;
+        this.f66300 = set;
+        this.f66302 = c25398;
+        this.f66299 = "*";
     }
 
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo19410() {
-        C3040 c3040 = this.f67267;
-        return !c3040.f11371 || c3040.f11381.m16926();
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19404() {
-        C3040 c3040 = this.f67267;
-        if (c3040.f11371) {
-            c3040.f11381.invalidate();
-        }
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo19409() {
-        C5863 c5863 = this.f67267.f11365;
-        c5863.f20014 = false;
-        c5863.f20009 = null;
-        c5863.f20016 = null;
-        c5863.f20015 = null;
-        c5863.f20013 = null;
-        c5863.f20012.clear();
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19408(boolean z) {
-        C3040 c3040 = this.f67267;
-        C3040.m9064(c3040, c3040.f11365, z);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19407(C3662 c3662, int i, int i2, int i3, Canvas canvas, Paint paint, C1590 c1590) {
-        C3040.m9069(this.f67267, false, c3662, i, i2, i3, canvas, paint, c1590);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19406(C3662 c3662, int i, int i2, float f, float f2, boolean z, Canvas canvas, C4916 c4916, InterfaceC13855 interfaceC13855, C1590 c1590) {
-        C3040.m9068(this.f67267, false, c3662, i, i2, f, f2, z, canvas, (Paint) c4916, interfaceC13855, c1590);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19405(C3662 c3662, float f, float f2, float f3, float f4, Canvas canvas, C4916 c4916, C1590 c1590) {
-        C3040.m9067(this.f67267, false, c3662, f, f2, f3, f4, canvas, c4916, c1590);
+    @Override // l.C24652
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo7006(C7453 c7453) {
+        c7453.m56023(this.f79801);
+        c7453.m56005((byte) this.f66301.getValue());
+        c7453.m56005((byte) C10961.m27791(this.f66300));
+        c7453.m56025(0L);
+        this.f66302.m56760(c7453);
+        c7453.m56023(96);
+        String str = this.f66299;
+        c7453.m56023(str.length() * 2);
+        c7453.m56025(Math.min(mo3631(), ((C18684) mo3632()).m43470() * 65536));
+        c7453.m56026(str, C22150.f71349);
     }
 }

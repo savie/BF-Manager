@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -15,7 +15,7 @@ public class CMCEPublicKey extends ASN1Object {
 
     @Deprecated
     public CMCEPublicKey(ASN1Sequence aSN1Sequence) {
-        this.T = C15489.m37078(aSN1Sequence, 0);
+        this.T = C20551.m47118(aSN1Sequence, 0);
     }
 
     public CMCEPublicKey(byte[] bArr) {

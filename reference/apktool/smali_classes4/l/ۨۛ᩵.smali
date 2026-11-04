@@ -1,150 +1,140 @@
 .class public final Ll/ۨۛ᩵;
-.super Ll/ۜܿ᩵;
-.source "S515"
+.super Ljava/lang/Object;
+.source "I9WL"
+
+# interfaces
+.implements Ll/ۘۨ᩵;
 
 
 # instance fields
-.field public final ۙ:Ll/ۚۛ᩵;
+.field public ֡:I
 
-.field public final ۨ:Ll/ۚۛ᩵;
+.field public ܰ:J
 
-.field public final ܰ:Ll/ۢܿ᩵;
+.field public ܿ:J
 
-
-# direct methods
-.method public constructor <init>(Ll/ۚۛ᩵;Ll/ۚۛ᩵;Ll/ۚۛ᩵;)V
-    .locals 0
-
-    .line 37
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 70
-    iput-object p1, p0, Ll/ۨۛ᩵;->ۨ:Ll/ۚۛ᩵;
-
-    .line 71
-    iput-object p2, p0, Ll/ۨۛ᩵;->ۙ:Ll/ۚۛ᩵;
-
-    .line 74
-    new-instance p1, Ll/֫ܿ᩵;
-
-    invoke-direct {p1, p3}, Ll/ۢܿ᩵;-><init>(Ll/ۚۛ᩵;)V
-
-    .line 72
-    iput-object p1, p0, Ll/ۨۛ᩵;->ܰ:Ll/ۢܿ᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۚۛ᩵;Ll/ۚۛ᩵;Ll/ۢܿ᩵;)V
-    .locals 0
-
-    .line 37
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 76
-    iput-object p1, p0, Ll/ۨۛ᩵;->ۨ:Ll/ۚۛ᩵;
-
-    .line 77
-    iput-object p2, p0, Ll/ۨۛ᩵;->ۙ:Ll/ۚۛ᩵;
-
-    .line 78
-    iput-object p3, p0, Ll/ۨۛ᩵;->ܰ:Ll/ۢܿ᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۚۛ᩵;Ll/ۚۛ᩵;Ll/ܺۨۡ;Ll/ۚۛ᩵;)V
-    .locals 0
-
-    .line 37
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 64
-    iput-object p1, p0, Ll/ۨۛ᩵;->ۨ:Ll/ۚۛ᩵;
-
-    .line 65
-    iput-object p2, p0, Ll/ۨۛ᩵;->ۙ:Ll/ۚۛ᩵;
-
-    if-nez p3, :cond_0
-
-    .line 74
-    new-instance p1, Ll/֫ܿ᩵;
-
-    invoke-direct {p1, p4}, Ll/ۢܿ᩵;-><init>(Ll/ۚۛ᩵;)V
-
-    goto :goto_0
-
-    .line 53
-    :cond_0
-    new-instance p1, Ll/ܳܿ᩵;
-
-    invoke-direct {p1, p4, p3}, Ll/ܳܿ᩵;-><init>(Ll/ۚۛ᩵;Ll/ܺۨۡ;)V
-
-    .line 66
-    :goto_0
-    iput-object p1, p0, Ll/ۨۛ᩵;->ܰ:Ll/ۢܿ᩵;
-
-    return-void
-.end method
+.field public ᩶:I
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
-
-    .line 83
-    iget-object v0, p0, Ll/ۨۛ᩵;->ۨ:Ll/ۚۛ᩵;
-
-    .line 46
-    invoke-virtual {v0}, Ll/ۚۛ᩵;->᩹()Ll/ܶۛ᩵;
-
-    move-result-object v0
-
-    .line 80
-    iget v0, v0, Ll/ܶۛ᩵;->ۙ:I
-
-    return v0
-.end method
-
-.method public final ۨ()I
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
     .line 88
-    iget-object v0, p0, Ll/ۨۛ᩵;->ۙ:Ll/ۚۛ᩵;
+    new-instance v0, Ljava/lang/String;
 
-    .line 46
-    invoke-virtual {v0}, Ll/ۚۛ᩵;->᩹()Ll/ܶۛ᩵;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v2, "SmbInfoAllocation[alloc="
 
-    .line 80
-    iget v0, v0, Ll/ܶۛ᩵;->ۙ:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 88
-    iget-object v1, p0, Ll/ۨۛ᩵;->ۨ:Ll/ۚۛ᩵;
+    iget-wide v2, p0, Ll/ۨۛ᩵;->ܰ:J
 
-    .line 46
-    invoke-virtual {v1}, Ll/ۚۛ᩵;->᩹()Ll/ܶۛ᩵;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ",free="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Ll/ۨۛ᩵;->ܿ:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ",sectPerAlloc="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ll/ۨۛ᩵;->֡:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ",bytesPerSect="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ll/ۨۛ᩵;->᩶:I
+
+    const-string v3, "]"
+
+    .line 0
+    invoke-static {v2, v3, v1}, Ll/ۨ᩹ۧ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 80
-    iget v1, v1, Ll/ܶۛ᩵;->ۙ:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final ܰ()Ljava/util/List;
-    .locals 1
-
-    .line 94
-    iget-object v0, p0, Ll/ۨۛ᩵;->ܰ:Ll/ۢܿ᩵;
-
-    invoke-static {v0}, Ll/᩹ܿܶ;->of(Ljava/lang/Object;)Ll/᩹ܿܶ;
-
-    move-result-object v0
+    .line 88
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     return-object v0
+.end method
+
+.method public final ۙ(II[B)I
+    .locals 2
+
+    add-int/lit8 p2, p1, 0x4
+
+    .line 70
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result p2
+
+    iput p2, p0, Ll/ۨۛ᩵;->֡:I
+
+    add-int/lit8 p2, p1, 0x8
+
+    .line 73
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result p2
+
+    int-to-long v0, p2
+
+    iput-wide v0, p0, Ll/ۨۛ᩵;->ܰ:J
+
+    add-int/lit8 p2, p1, 0xc
+
+    .line 76
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result p2
+
+    int-to-long v0, p2
+
+    iput-wide v0, p0, Ll/ۨۛ᩵;->ܿ:J
+
+    add-int/lit8 p2, p1, 0x10
+
+    .line 79
+    invoke-static {p2, p3}, Ll/֡ܰ᩵;->ۙ(I[B)I
+
+    move-result p2
+
+    iput p2, p0, Ll/ۨۛ᩵;->᩶:I
+
+    add-int/lit8 p2, p1, 0x14
+
+    sub-int/2addr p2, p1
+
+    return p2
+.end method
+
+.method public final ᩸()J
+    .locals 4
+
+    .line 50
+    iget-wide v0, p0, Ll/ۨۛ᩵;->ܰ:J
+
+    iget v2, p0, Ll/ۨۛ᩵;->֡:I
+
+    int-to-long v2, v2
+
+    mul-long v0, v0, v2
+
+    iget v2, p0, Ll/ۨۛ᩵;->᩶:I
+
+    int-to-long v2, v2
+
+    mul-long v0, v0, v2
+
+    return-wide v0
 .end method

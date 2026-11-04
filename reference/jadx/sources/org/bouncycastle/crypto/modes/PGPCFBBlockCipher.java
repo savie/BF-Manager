@@ -1,14 +1,14 @@
 package org.bouncycastle.crypto.modes;
 
-import l.C1694;
-import l.C8015;
+import l.C12669;
+import l.C24579;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
 import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PGPCFBBlockCipher implements BlockCipher {
     public byte[] FR;
     public byte[] FRE;
@@ -164,7 +164,7 @@ public class PGPCFBBlockCipher implements BlockCipher {
             }
             return this.blockSize;
         }
-        if (C1694.m5620(i5, 2, i2, 2) > bArr2.length) {
+        if (C12669.m31436(i5, 2, i2, 2) > bArr2.length) {
             throw new OutputLengthException("output buffer too short");
         }
         this.cipher.processBlock(this.FR, 0, this.FRE, 0);
@@ -192,10 +192,10 @@ public class PGPCFBBlockCipher implements BlockCipher {
                 System.arraycopy(bArr2, i2 + i12 + 2, this.FR, 0, i12);
                 int i13 = this.count;
                 int i14 = this.blockSize;
-                this.count = C1694.m5620(i14, 2, 2, i13);
+                this.count = C12669.m31436(i14, 2, 2, i13);
                 return (i14 * 2) + 2;
             }
-            bArr2[C8015.m21118(i2, i12, 2, i11)] = encryptByte(bArr[i + i11], i11);
+            bArr2[C24579.m54897(i2, i12, 2, i11)] = encryptByte(bArr[i + i11], i11);
             i11++;
         }
     }

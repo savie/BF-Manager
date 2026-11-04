@@ -1,58 +1,34 @@
 package l;
 
-import java.util.Set;
-import java.util.function.Predicate;
+/* JADX INFO: renamed from: l.ۨۜ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: X68P */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12197 {
 
-/* JADX INFO: renamed from: l.۫ۚۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5G5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12197 implements Predicate {
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f39206;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f40799;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f39207;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f40800;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f39208;
 
-    public /* synthetic */ C12197(int i, Object obj) {
-        this.f40799 = i;
-        this.f40800 = obj;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f39209;
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public InterfaceC19106 f39210;
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f40799) {
-            case 0:
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-        }
-        return C8512.$default$negate(this);
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public long f39211;
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f39212;
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f40799) {
-            case 0:
-                return ((Set) this.f40800).contains((String) obj);
-            case 1:
-                return C3128.m9440((AbstractC23903) this.f40800, (AbstractC5930) obj, true) != null;
-            case 2:
-                return C21017.m47232((C21017) this.f40800, (C11867) obj);
-            default:
-                return !((C21825) this.f40800).contains((AbstractC16579) obj);
-        }
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f39213;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C16800 f39214;
 }

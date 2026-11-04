@@ -3,7 +3,7 @@ package org.bouncycastle.internal.asn1.nsri;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface NSRIObjectIdentifiers {
     public static final ASN1ObjectIdentifier id_algorithm;
     public static final ASN1ObjectIdentifier id_aria128_cbc;

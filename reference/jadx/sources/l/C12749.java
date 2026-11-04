@@ -1,35 +1,21 @@
 package l;
 
-import java.util.HashSet;
+import android.content.Context;
+import android.util.AttributeSet;
 
-/* JADX INFO: renamed from: l.۫᩻᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: N7I4 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12749 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashSet f42501 = new HashSet();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m31688(String str) {
-        synchronized (this.f42501) {
-            while (this.f42501.contains(str)) {
-                try {
-                    this.f42501.wait();
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    throw new RuntimeException("线程被中断", e);
-                }
-            }
-            this.f42501.add(str);
-        }
+/* JADX INFO: renamed from: l.۫֡᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 84GU */
+/* JADX INFO: loaded from: classes4.dex */
+public class C12749 extends C0067 {
+    public C12749(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m31689(String str) {
-        synchronized (this.f42501) {
-            this.f42501.remove(str);
-            this.f42501.notifyAll();
+    @Override // l.C0067, l.AbstractC21169
+    public final void onLayoutChildren(C2523 c2523, C15529 c15529) {
+        try {
+            super.onLayoutChildren(c2523, c15529);
+        } catch (IndexOutOfBoundsException unused) {
         }
     }
 }

@@ -26,8 +26,8 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C2271;
+import l.C14442;
+import l.C4681;
 
 /* JADX INFO: compiled from: 351Q */
 /* JADX INFO: loaded from: classes.dex */
@@ -45,7 +45,7 @@ public class e implements av, Serializable, Cloneable {
     public String c;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public byte f77957l;
+    public byte f82073l;
     public EnumC0047e[] m;
 
     public void k() {
@@ -60,7 +60,7 @@ public class e implements av, Serializable, Cloneable {
         enumMap.put(EnumC0047e.VALUE, new bh(com.alipay.sdk.m.u0.b.d, (byte) 2, new bi((byte) 11)));
         enumMap.put(EnumC0047e.TS, new bh("ts", (byte) 2, new bi((byte) 10)));
         enumMap.put(EnumC0047e.GUID, new bh("guid", (byte) 2, new bi((byte) 11)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         d = mapUnmodifiableMap;
         bh.a(e.class, mapUnmodifiableMap);
     }
@@ -100,7 +100,7 @@ public class e implements av, Serializable, Cloneable {
             if (enumC0047eA != null) {
                 return enumC0047eA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static EnumC0047e a(String str) {
@@ -124,7 +124,7 @@ public class e implements av, Serializable, Cloneable {
     }
 
     public e() {
-        this.f77957l = (byte) 0;
+        this.f82073l = (byte) 0;
         this.m = new EnumC0047e[]{EnumC0047e.VALUE, EnumC0047e.TS, EnumC0047e.GUID};
     }
 
@@ -136,9 +136,9 @@ public class e implements av, Serializable, Cloneable {
     }
 
     public e(e eVar) {
-        this.f77957l = (byte) 0;
+        this.f82073l = (byte) 0;
         this.m = new EnumC0047e[]{EnumC0047e.VALUE, EnumC0047e.TS, EnumC0047e.GUID};
-        this.f77957l = eVar.f77957l;
+        this.f82073l = eVar.f82073l;
         if (eVar.d()) {
             this.a = eVar.a;
         }
@@ -197,15 +197,15 @@ public class e implements av, Serializable, Cloneable {
     }
 
     public void f() {
-        this.f77957l = as.b(this.f77957l, 0);
+        this.f82073l = as.b(this.f82073l, 0);
     }
 
     public boolean g() {
-        return as.a(this.f77957l, 0);
+        return as.a(this.f82073l, 0);
     }
 
     public void b(boolean z) {
-        this.f77957l = as.a(this.f77957l, 0, z);
+        this.f82073l = as.a(this.f82073l, 0, z);
     }
 
     public String h() {
@@ -284,7 +284,7 @@ public class e implements av, Serializable, Cloneable {
 
     private void a(ObjectInputStream objectInputStream) throws IOException {
         try {
-            this.f77957l = (byte) 0;
+            this.f82073l = (byte) 0;
             read(new bo(new cg(objectInputStream)));
         } catch (bb e2) {
             throw new IOException(e2.getMessage());

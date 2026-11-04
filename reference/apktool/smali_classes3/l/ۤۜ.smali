@@ -1,52 +1,86 @@
 .class public Ll/ۤۜ;
-.super Landroid/widget/LinearLayout;
-.source "S696"
+.super Ljava/lang/Object;
+.source "R9NW"
 
 
-# static fields
-.field public static final ܺ:[I
+# instance fields
+.field public final ۙ:J
+
+.field public final ۤ:Landroid/view/animation/Interpolator;
+
+.field public ᩷:F
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 0
 
-    const v0, 0x10100d4
+    .line 542
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 868
-    filled-new-array {v0}, [I
+    .line 543
+    iput p1, p0, Ll/ۤۜ;->᩸:I
 
-    move-result-object v0
+    .line 544
+    iput-object p2, p0, Ll/ۤۜ;->ۤ:Landroid/view/animation/Interpolator;
 
-    sput-object v0, Ll/ۤۜ;->ܺ:[I
+    .line 545
+    iput-wide p3, p0, Ll/ۤۜ;->ۙ:J
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
 
-    .line 873
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+# virtual methods
+.method public ۙ()J
+    .locals 2
 
-    .line 874
-    sget-object v0, Ll/ۤۜ;->ܺ:[I
+    .line 569
+    iget-wide v0, p0, Ll/ۤۜ;->ۙ:J
 
-    invoke-static {p1, p2, v0}, Ll/֫ᩳ;->ۙ(Landroid/content/Context;Landroid/util/AttributeSet;[I)Ll/֫ᩳ;
+    return-wide v0
+.end method
 
-    move-result-object p1
+.method public ۙ(F)V
+    .locals 0
 
-    const/4 p2, 0x0
-
-    .line 875
-    invoke-virtual {p1, p2}, Ll/֫ᩳ;->ۖ(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 876
-    invoke-virtual {p1}, Ll/֫ᩳ;->ۚ()V
+    .line 577
+    iput p1, p0, Ll/ۤۜ;->᩷:F
 
     return-void
+.end method
+
+.method public ۤ()I
+    .locals 1
+
+    .line 549
+    iget v0, p0, Ll/ۤۜ;->᩸:I
+
+    return v0
+.end method
+
+.method public ᩷()F
+    .locals 2
+
+    .line 557
+    iget-object v0, p0, Ll/ۤۜ;->ۤ:Landroid/view/animation/Interpolator;
+
+    if-eqz v0, :cond_0
+
+    .line 558
+    iget v1, p0, Ll/ۤۜ;->᩷:F
+
+    invoke-interface {v0, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+
+    move-result v0
+
+    return v0
+
+    .line 560
+    :cond_0
+    iget v0, p0, Ll/ۤۜ;->᩷:F
+
+    return v0
 .end method

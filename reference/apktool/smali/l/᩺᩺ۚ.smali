@@ -1,94 +1,174 @@
 .class public final Ll/᩺᩺ۚ;
 .super Ljava/lang/Object;
-.source "C6VW"
+.source "D76O"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-.implements Ljava/lang/AutoCloseable;
+.implements Ll/ۛۤۛ;
 
 
 # instance fields
-.field public final ܺ:Ljava/util/concurrent/ThreadPoolExecutor;
+.field public ۙ:Ll/ۘۤۛ;
 
-.field public final ᩶:I
+.field public ۤ:Ll/ۙۛۚ;
 
+.field public ᩴ:J
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 10
+.field public ᩷:Ljava/util/ArrayList;
 
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x4
-
-    .line 15
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    iput v3, p0, Ll/᩺᩺ۚ;->᩶:I
-
-    .line 16
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
-    .line 17
-    new-instance v9, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    new-instance v8, Ll/ۜ᩺ۚ;
-
-    invoke-direct {v8, p1}, Ll/ۜ᩺ۚ;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;)V
-
-    const-wide/16 v4, 0x1e
-
-    move-object v1, v9
-
-    move v2, v3
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    iput-object v9, p0, Ll/᩺᩺ۚ;->ܺ:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 20
-    invoke-virtual {v9, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
-
-    return-void
-.end method
+.field public ᩸:Ljava/lang/String;
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public final ۙ(Ll/ۙۛۚ;Ljava/util/ArrayList;Ll/ۘۤۛ;J)V
+    .locals 0
 
-    .line 31
-    iget-object v0, p0, Ll/᩺᩺ۚ;->ܺ:Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 181
+    iput-object p1, p0, Ll/᩺᩺ۚ;->ۤ:Ll/ۙۛۚ;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+    .line 182
+    iput-object p2, p0, Ll/᩺᩺ۚ;->᩷:Ljava/util/ArrayList;
+
+    .line 183
+    iput-object p3, p0, Ll/᩺᩺ۚ;->ۙ:Ll/ۘۤۛ;
+
+    .line 184
+    iput-wide p4, p0, Ll/᩺᩺ۚ;->ᩴ:J
+
+    const/4 p1, 0x0
+
+    .line 185
+    iput-object p1, p0, Ll/᩺᩺ۚ;->᩸:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final ۙ(Ll/᩸ۜۨ;J)Z
+    .locals 12
 
-    .line 25
-    iget-object v0, p0, Ll/᩺᩺ۚ;->ܺ:Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 190
+    iget-wide v0, p0, Ll/᩺᩺ۚ;->ᩴ:J
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    cmp-long v2, p2, v0
 
-    return-void
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    .line 193
+    :cond_0
+    iget-object p2, p0, Ll/᩺᩺ۚ;->᩸:Ljava/lang/String;
+
+    if-nez p2, :cond_1
+
+    .line 194
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object p3, p0, Ll/᩺᩺ۚ;->ۙ:Ll/ۘۤۛ;
+
+    .line 183
+    iget-object p3, p3, Ll/ۘۤۛ;->᩶:Ll/᩸ۤۛ;
+
+    invoke-virtual {p3}, Ll/᩸ۤۛ;->getType()Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 194
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, "->"
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p3, p0, Ll/᩺᩺ۚ;->ۙ:Ll/ۘۤۛ;
+
+    invoke-static {p3}, Ll/۫֫ۚ;->ۙ(Ll/۠۫ۛ;)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ll/᩺᩺ۚ;->᩸:Ljava/lang/String;
+
+    .line 196
+    :cond_1
+    iget-object p2, p0, Ll/᩺᩺ۚ;->᩷:Ljava/util/ArrayList;
+
+    new-instance p3, Ll/ۙ᩺ۚ;
+
+    iget-object v4, p0, Ll/᩺᩺ۚ;->᩸:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object p1, p1, Ll/᩸ۜۨ;->۟:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Ll/᩺᩺ۚ;->ۤ:Ll/ۙۛۚ;
+
+    iget-object p1, p1, Ll/ۙۛۚ;->ᩴ:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const-string v1, "dex"
+
+    const-string v2, "resource_id"
+
+    const-string v3, "dex_method"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v0, p3
+
+    invoke-direct/range {v0 .. v11}, Ll/ۙ᩺ۚ;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 200
+    iget-object p1, p0, Ll/᩺᩺ۚ;->᩷:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    iget-object p2, p0, Ll/᩺᩺ۚ;->ۤ:Ll/ۙۛۚ;
+
+    iget p2, p2, Ll/ۙۛۚ;->᩷:I
+
+    if-ge p1, p2, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method

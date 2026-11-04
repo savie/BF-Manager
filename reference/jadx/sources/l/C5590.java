@@ -1,140 +1,67 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.net.URL;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۚ᩷, reason: contains not printable characters */
-/* JADX INFO: compiled from: 81CV */
-/* JADX INFO: loaded from: classes3.dex */
-public class C5590 implements InterfaceC14058 {
+/* JADX INFO: renamed from: l.ۚۤܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E971 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5590 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f19193;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Set f19408;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public AbstractC7707 f19194;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public int f19196;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public AbstractC7707 f19198 = null;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C18415 f19410 = C18415.m42925("^\\w+\\S+(\\.\\S+)+$");
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f19190 = false;
+    public static final C18415 f19407 = C18415.m42925("\\w+://.+");
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f19197 = false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C18415 f19409 = C18415.m42924(2, "\\.([a-z][a-z0-9]*)$");
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public EnumC2767 f19192 = EnumC2767.UNKNOWN;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f19191 = 1;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C22524 f19188 = null;
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public boolean f19187 = false;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ArrayList f19195 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public ArrayList f19189 = new ArrayList();
-
-    public C5590(AbstractC7707 abstractC7707) {
-        this.f19194 = abstractC7707;
-    }
-
-    public final String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.f19194.f25504.m46643());
-        sb.append(":");
-        sb.append(this.f19192);
-        sb.append(MotionUtils.EASING_TYPE_FORMAT_START);
-        sb.append(this.f19187 ? Integer.valueOf(this.f19196) : "unresolved");
-        sb.append(") <t=");
-        sb.append(this.f19189.size());
-        sb.append(":d=");
-        sb.append(this.f19195.size());
-        sb.append(">");
-        return sb.toString();
+    static {
+        String[] strArrSplit = "ac ad ae af ag ai al am ao aq ar as at au aw ax az ba bb bd be bf bg bh bi bj bm bn bo bq br bs bt bw by bz ca cc cd cf cg ch ci ck cl cm cn co cr cu cv cw cx cy cz de dj dk dm do dz ec ee eg er es et eu fi fj fk fm fo fr ga gd ge gf gg gh gi gl gm gn gp gq gr gs gt gu gw gy hk hm hn hr ht hu id ie il im in io iq ir is it je jm jo jp ke kg kh ki km kn kp kr kw ky kz la lb lc li lk lr ls lt lu lv ly ma mc md me mg mh mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nc ne nf ng ni nl no np nr nu nz om pa pe pf pg ph pk pl pm pn pr ps pt pw py qa re ro rs ru rw sa sb sc sd se sg sh si sj sk sl sm sn so sr st sv sy sz tc td tf tg th tj tk tl tm tn to tr tt tv tw tz ua ug uk us uy uz va vc ve vg vi vn vu wf ws ye yt za zm zw app art bar bet bid bio biz car cat ceo com dev dog eat eco edu fan fly foo geo gov how ice ink int kim lol ltd mba men mil net now org pro pub red run sex ski tax tel top uno vet web win wtf xxx aero army arpa asia auto baby band bank beer best bike blog blue book buzz cafe camp care cars casa cash chat city club cool coop fail farm fast fish food fund game gift gold golf guru hair haus help host info jobs land lgbt life limo link live loan love mail menu mobi moda name news pics pink plus porn post real rent rich sale save sexy shop show site taxi team tech tips town toys vote wiki wine work yoga zone actor adult autos bingo black boats build cheap click cloud coach codes dance deals earth email faith forex forum gifts gives glass green gripe group guide homes horse hotel house irish jetzt lease legal loans media miami money movie music ninja parts party photo pizza place poker press rehab rocks salon shoes solar space sport store style sucks tires today tools tours trade vegas video vodka watch works world africa agency beauty berlin boston camera career casino center church claims clinic coffee condos credit cruise dating degree dental design direct doctor energy estate events expert family flight futbol garden global gratis health hiphop hockey kaufen lawyer london luxury maison market mobile museum online photos racing reisen repair report review school soccer social sports studio supply tennis travel villas vision voyage academy auction capital college company cooking country coupons courses cricket digital domains exposed express fashion finance fitness flights florist flowers forsale gallery guitars hamburg holiday hosting jewelry kitchen limited markets medical network organic recipes rentals reviews science singles support surgery systems theater theatre website wedding airforce attorney bargains boutique builders business catering cleaning clothing computer creative delivery diamonds discount download engineer exchange feedback football gambling graphics holdings hospital lighting memorial mortgage partners pictures plumbing property services shopping software supplies training ventures amsterdam community directory education equipment financial furniture institute insurance marketing solutions vacations accountant apartments associates consulting foundation healthcare industries management properties republican restaurant technology university advertising contractors engineering enterprises investments photography productions construction international".split(" ");
+        HashSet hashSet = new HashSet(strArrSplit.length);
+        Collections.addAll(hashSet, strArrSplit);
+        f19408 = C4681.unmodifiableSet(hashSet);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo15463(int i) {
-        if (this.f19187) {
-            return;
+    public static boolean m16564(C15508 c15508, int i, int i2) {
+        if (i2 - i > 2048) {
+            return false;
         }
-        this.f19187 = true;
-        this.f19196 = i;
-        for (InterfaceC14058 interfaceC14058 : this.f19195) {
-            interfaceC14058.mo11822(interfaceC14058);
+        C4245 c4245Matcher = f19410.matcher((CharSequence) c15508);
+        c4245Matcher.m13567region(i, i2);
+        if (!c4245Matcher.matches()) {
+            return false;
         }
-    }
-
-    @Override // l.InterfaceC14058
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11822(InterfaceC14058 interfaceC14058) {
-        ArrayList<C5590> arrayList = this.f19189;
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            if (!((C5590) it.next()).f19187) {
-                return;
-            }
-        }
-        this.f19197 = true;
-        AbstractC7707 abstractC7707 = this.f19198;
-        if (abstractC7707 != null) {
-            abstractC7707.mo11822(this);
-        }
-        if (this.f19190) {
-            this.f19194.mo11822(this);
-            return;
-        }
-        C5590 c5590 = null;
-        int i = 0;
-        for (C5590 c5591 : arrayList) {
-            if (!(c5591 instanceof C22524)) {
-                i++;
-                c5590 = c5591;
-            }
-        }
-        if (c5590 != null && i == 1 && c5590.f19187) {
-            C22524 c22524 = this.f19188;
-            if (c22524 != null) {
-                if (!c22524.f19187) {
-                    return;
-                } else {
-                    this.f19193 = this.f19191 * c22524.f19196;
+        String string = c15508.subSequence(i, i2).toString();
+        try {
+            String host = new URL(m16563(string)).getHost();
+            if (!host.startsWith(".") && !host.startsWith("-")) {
+                String lowerCase = string.toLowerCase();
+                if (!lowerCase.startsWith("http://") && !lowerCase.startsWith("https://")) {
+                    C4245 c4245Matcher2 = f19409.matcher((CharSequence) host);
+                    if (c4245Matcher2.find()) {
+                        String strGroup = c4245Matcher2.group(1);
+                        C17359.requireNonNull(strGroup);
+                        return f19408.contains(strGroup.toLowerCase());
+                    }
                 }
+                return true;
             }
-            mo15463(c5590.f19196 + this.f19193);
-        }
-        AbstractC7707 abstractC7708 = this.f19198;
-        if (abstractC7708 != null) {
-            abstractC7708.mo11822(this);
+            return false;
+        } catch (Exception unused) {
+            return false;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15464(AbstractC7707 abstractC7707) {
-        this.f19195.add(abstractC7707);
-        if (this.f19187) {
-            abstractC7707.mo11822(abstractC7707);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m15462() {
-        this.f19189.clear();
-        this.f19195.clear();
-        this.f19187 = false;
-        this.f19196 = 0;
-        this.f19197 = false;
-        this.f19190 = false;
+    public static String m16563(String str) {
+        return !f19407.matcher((CharSequence) str).matches() ? C25272.m56409("http://", str) : str;
     }
 }

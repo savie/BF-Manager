@@ -1,53 +1,63 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.۬ܰᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2C5O */
+/* JADX INFO: renamed from: l.۫ܰ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5JQ */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13160 implements InterfaceC1164 {
+public final class C13160 extends AbstractC1778 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Consumer f43832;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC12964 f42084;
 
-    public /* synthetic */ C13160(Consumer consumer) {
-        this.f43832 = consumer;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C25227 f42085;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f42086;
+
+    public C13160(AbstractC12964 abstractC12964, C25227 c25227, String str) {
+        this.f42084 = abstractC12964;
+        this.f42085 = c25227;
+        this.f42086 = str;
     }
 
-    @Override // java.util.function.IntConsumer
-    public final /* synthetic */ void accept(int i) {
-        C22332.m49498(this, i);
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m32685() {
+        AbstractC12964 abstractC12964 = this.f42084;
+        abstractC12964.unregisterAdapterDataObserver(this);
+        int iMo6797 = ((InterfaceC1974) abstractC12964).mo6797(this.f42086);
+        if (iMo6797 != -1) {
+            this.f42085.scrollToPosition(iMo6797);
+        }
     }
 
-    @Override // java.util.function.Consumer
-    public final /* bridge */ /* synthetic */ void accept(Object obj) {
-        mo4298((Character) obj);
+    @Override // l.AbstractC1778
+    public final void onChanged() {
+        m32685();
     }
 
-    @Override // l.InterfaceC1164
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo4297(char c) {
-        this.f43832.accept(Character.valueOf(c));
+    @Override // l.AbstractC1778
+    public final void onItemRangeChanged(int i, int i2) {
+        m32685();
     }
 
-    @Override // l.InterfaceC1164
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo4298(Character ch) {
-        C22332.m49499((InterfaceC1164) this, ch);
+    @Override // l.AbstractC1778
+    public final void onItemRangeChanged(int i, int i2, Object obj) {
+        m32685();
     }
 
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C22332.m49497((InterfaceC1164) this, intConsumer);
+    @Override // l.AbstractC1778
+    public final void onItemRangeInserted(int i, int i2) {
+        m32685();
     }
 
-    @Override // l.InterfaceC1164
-    /* JADX INFO: renamed from: ۨ */
-    public final C5398 mo4296(InterfaceC1164 interfaceC1164) {
-        return new C5398(this, interfaceC1164);
+    @Override // l.AbstractC1778
+    public final void onItemRangeRemoved(int i, int i2) {
+        m32685();
     }
 
-    public final Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // l.AbstractC1778
+    public final void onItemRangeMoved(int i, int i2, int i3) {
+        m32685();
     }
 }

@@ -854,7 +854,7 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    invoke-static {v1, v0, v2, v0}, Ll/֡۠ۖ;->ۙ(FFFF)F
+    invoke-static {v1, v0, v2, v0}, Ll/ᩴܿ֫;->ۙ(FFFF)F
 
     move-result v0
 
@@ -1207,7 +1207,7 @@
     :cond_4
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -1901,7 +1901,7 @@
     const/4 v3, 0x1
 
     .line 0
-    invoke-static {v3, v12, v2}, Ll/᩷ۘᩳ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v12, v2}, Ll/֨᩵ᩴ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2535,7 +2535,7 @@
     .line 970
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
@@ -2560,13 +2560,13 @@
     if-eqz p2, :cond_0
 
     .line 975
-    sget-object p2, Ll/۫ۧ;->ܰ:Ll/᩷ۧ;
+    sget-object p2, Ll/ۢ֨;->᩷:Ll/᩶֨;
 
     goto :goto_0
 
     .line 976
     :cond_0
-    sget-object p2, Ll/۫ۧ;->ۙ:Ll/᩷ۧ;
+    sget-object p2, Ll/ۢ֨;->ۙ:Ll/᩶֨;
 
     .line 977
     :goto_0
@@ -2574,7 +2574,7 @@
 
     move-result v0
 
-    invoke-interface {p2, v0, p1}, Ll/᩷ۧ;->ۙ(ILjava/lang/CharSequence;)Z
+    invoke-interface {p2, v0, p1}, Ll/᩶֨;->ۙ(ILjava/lang/CharSequence;)Z
 
     move-result p1
 
@@ -2656,7 +2656,7 @@
     .line 838
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -2734,7 +2734,7 @@
     .line 843
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -2841,7 +2841,7 @@
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -4093,7 +4093,7 @@
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 554
-    invoke-static {p1, v0, v1}, Ll/ۙۛ;->ۙ(FFF)F
+    invoke-static {p1, v0, v1}, Ll/ܺܽܺ;->ۙ(FFF)F
 
     move-result p1
 

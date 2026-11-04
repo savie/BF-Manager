@@ -1,27 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ܰ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17QY */
-/* JADX INFO: loaded from: classes.dex */
-public final enum C23746 extends EnumC3283 {
-    public /* synthetic */ C23746() {
-        this("TYPE", 1, true);
+/* JADX INFO: renamed from: l.᩹ᩴۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5KB */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23746 extends AbstractC19270 implements InterfaceC3083 {
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
     }
 
-    public C23746(String str, int i, boolean z) {
-        super(str, i, 0, z);
-    }
-
-    @Override // l.EnumC3283
+    @Override // l.InterfaceC12142
     /* JADX INFO: renamed from: ۙ */
-    public EnumC3283 mo6069(EnumC6106 enumC6106) {
-        int i = C17395.f55362[enumC6106.ordinal()];
-        if (i == 1 || i == 2 || i == 3) {
-            return EnumC3283.f12171;
-        }
-        if (i == 4) {
-            return EnumC3283.f12169;
-        }
-        throw new AssertionError();
+    public final int mo1542() {
+        return this.f62313.m55818().m8716(this.f62315 + 1);
+    }
+
+    @Override // l.InterfaceC3193
+    /* JADX INFO: renamed from: ᩻ */
+    public final int mo1546() {
+        return this.f62313.m55818().mo8725(this.f62315 + 2);
+    }
+
+    @Override // l.InterfaceC18855
+    /* JADX INFO: renamed from: ܰ */
+    public final long mo1545() {
+        return mo1546();
     }
 }

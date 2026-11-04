@@ -1,155 +1,120 @@
 .class public final Ll/ۗ۬ۚ;
 .super Ljava/lang/Object;
-.source "B4S2"
+.source "H74N"
+
+
+# static fields
+.field public static final ۤ:Ll/ۗ۬ۚ;
+
+.field public static final ᩸:Ll/ۗ۬ۚ;
 
 
 # instance fields
-.field public ֨:I
+.field public final ۙ:Landroid/graphics/Bitmap;
 
-.field public ۖ:Ll/ܺۘۚ;
-
-.field public final ۙ:Ljava/util/HashMap;
-
-.field public final ۚ:Ll/ܽۘۚ;
-
-.field public ۨ:Z
-
-.field public ܰ:I
-
-.field public ᩹:Z
+.field public final ᩷:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 50
+    new-instance v0, Ll/ۗ۬ۚ;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Ll/ۗ۬ۚ;-><init>(Landroid/graphics/Bitmap;Z)V
+
+    sput-object v0, Ll/ۗ۬ۚ;->ۤ:Ll/ۗ۬ۚ;
+
+    .line 51
+    new-instance v0, Ll/ۗ۬ۚ;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v2, v1}, Ll/ۗ۬ۚ;-><init>(Landroid/graphics/Bitmap;Z)V
+
+    sput-object v0, Ll/ۗ۬ۚ;->᩸:Ll/ۗ۬ۚ;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 106
+    const/4 v0, 0x0
+
+    .line 0
+    invoke-direct {p0, p1, v0}, Ll/ۗ۬ۚ;-><init>(Landroid/graphics/Bitmap;Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/graphics/Bitmap;Z)V
+    .locals 0
+
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 108
-    new-instance v0, Ll/ܽۘۚ;
+    .line 57
+    iput-object p1, p0, Ll/ۗ۬ۚ;->ۙ:Landroid/graphics/Bitmap;
 
-    invoke-direct {v0}, Ll/ܽۘۚ;-><init>()V
-
-    iput-object v0, p0, Ll/ۗ۬ۚ;->ۚ:Ll/ܽۘۚ;
-
-    .line 109
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll/ۗ۬ۚ;->ۙ:Ljava/util/HashMap;
+    .line 58
+    iput-boolean p2, p0, Ll/ۗ۬ۚ;->᩷:Z
 
     return-void
 .end method
 
-.method public static ۖ(Ll/ۗ۬ۚ;)I
-    .locals 2
+.method public static bridge synthetic ۤ()Ll/ۗ۬ۚ;
+    .locals 1
 
-    .line 129
-    iget-boolean v0, p0, Ll/ۗ۬ۚ;->᩹:Z
+    .line 0
+    sget-object v0, Ll/ۗ۬ۚ;->ۤ:Ll/ۗ۬ۚ;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic ᩸()Ll/ۗ۬ۚ;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/ۗ۬ۚ;->᩸:Ll/ۗ۬ۚ;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final ۙ()Landroid/graphics/Bitmap;
+    .locals 1
+
+    .line 64
+    iget-object v0, p0, Ll/ۗ۬ۚ;->ۙ:Landroid/graphics/Bitmap;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Z
+    .locals 1
+
+    .line 69
+    iget-object v0, p0, Ll/ۗ۬ۚ;->ۙ:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Ll/ۗ۬ۚ;->᩷:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Ll/ۗ۬ۚ;->ۨ:Z
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    return v0
 
-    const v0, 0x1f0f8
-
-    .line 133
-    iget v1, p0, Ll/ۗ۬ۚ;->֨:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 134
-    iget p0, p0, Ll/ۗ۬ۚ;->ܰ:I
-
-    add-int/2addr v1, p0
-
-    return v1
-
-    .line 130
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "Syntax dependencies are not fully loaded"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static bridge synthetic ۙ(Ll/ۗ۬ۚ;)Ljava/util/HashMap;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۗ۬ۚ;->ۙ:Ljava/util/HashMap;
-
-    return-object p0
-.end method
-
-.method public static ۙ(Ll/ۗ۬ۚ;Ljava/lang/String;)V
-    .locals 0
-
-    .line 123
-    invoke-static {p1}, Ll/۬ۘۚ;->ۙ(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Ll/ۗ۬ۚ;->ܰ:I
-
-    const/4 p1, 0x1
-
-    .line 124
-    iput-boolean p1, p0, Ll/ۗ۬ۚ;->ۨ:Z
-
-    return-void
-.end method
-
-.method public static bridge synthetic ۙ(Ll/ۗ۬ۚ;Ll/ܺۘۚ;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Ll/ۗ۬ۚ;->ۖ:Ll/ܺۘۚ;
-
-    return-void
-.end method
-
-.method public static bridge synthetic ۨ(Ll/ۗ۬ۚ;)Ll/ܽۘۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۗ۬ۚ;->ۚ:Ll/ܽۘۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/ۗ۬ۚ;)Ll/ܺۘۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۗ۬ۚ;->ۖ:Ll/ܺۘۚ;
-
-    return-object p0
-.end method
-
-.method public static ܰ(Ll/ۗ۬ۚ;Ljava/lang/String;)V
-    .locals 0
-
-    .line 117
-    invoke-static {p1}, Ll/۬ۘۚ;->ۙ(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Ll/ۗ۬ۚ;->֨:I
-
-    const/4 p1, 0x1
-
-    .line 118
-    iput-boolean p1, p0, Ll/ۗ۬ۚ;->᩹:Z
-
-    return-void
+    return v0
 .end method

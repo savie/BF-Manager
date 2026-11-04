@@ -1,6 +1,6 @@
 package org.bouncycastle.jcajce.provider.asymmetric.edec;
 
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.crypto.params.AsymmetricKeyParameter;
 import org.bouncycastle.crypto.params.Ed25519PublicKeyParameters;
 import org.bouncycastle.crypto.params.Ed448PublicKeyParameters;
@@ -10,7 +10,7 @@ import org.bouncycastle.util.Fingerprint;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Utils {
     public static String generateKeyFingerprint(byte[] bArr) {
         return new Fingerprint(bArr).toString();
@@ -38,8 +38,8 @@ public class Utils {
         } else {
             encoded = asymmetricKeyParameter instanceof X25519PublicKeyParameters ? ((X25519PublicKeyParameters) asymmetricKeyParameter).getEncoded() : ((Ed25519PublicKeyParameters) asymmetricKeyParameter).getEncoded();
         }
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, str2, " ", str, " [");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, generateKeyFingerprint(encoded), "]", strLineSeparator, "    public data: ");
+        C4794.m14774(sb, str2, " ", str, " [");
+        C4794.m14774(sb, generateKeyFingerprint(encoded), "]", strLineSeparator, "    public data: ");
         sb.append(Hex.toHexString(encoded));
         sb.append(strLineSeparator);
         return sb.toString();

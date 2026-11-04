@@ -4,29 +4,29 @@
         android:state_enabled="true"
         android:state_hovered="true">
         <objectAnimator
-            android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-            android:duration="?attr/MT_Protector_res_0x7f040364"
+            android:interpolator="?attr/MT_Protector_res_0x7f040370"
+            android:duration="?attr/MT_Protector_res_0x7f040366"
             android:valueTo="@dimen/MT_Protector_res_0x7f070120"
             android:valueType="floatType"
             android:propertyName="translationZ"
-            android:startDelay="?attr/MT_Protector_res_0x7f040361"/>
+            android:startDelay="?attr/MT_Protector_res_0x7f040363"/>
     </item>
     <item
         android:state_enabled="true"
         app:state_dragged="true">
         <objectAnimator
-            android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-            android:duration="?attr/MT_Protector_res_0x7f040364"
+            android:interpolator="?attr/MT_Protector_res_0x7f040370"
+            android:duration="?attr/MT_Protector_res_0x7f040366"
             android:valueTo="@dimen/MT_Protector_res_0x7f07011e"
             android:valueType="floatType"
             android:propertyName="translationZ"
-            android:startDelay="?attr/MT_Protector_res_0x7f040361"/>
+            android:startDelay="?attr/MT_Protector_res_0x7f040363"/>
     </item>
     <item>
         <set>
             <objectAnimator
-                android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-                android:duration="?attr/MT_Protector_res_0x7f04035e"
+                android:interpolator="?attr/MT_Protector_res_0x7f040370"
+                android:duration="?attr/MT_Protector_res_0x7f040360"
                 android:valueTo="0dp"
                 android:valueType="floatType"
                 android:propertyName="translationZ"/>

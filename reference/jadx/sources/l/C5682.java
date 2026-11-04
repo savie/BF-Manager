@@ -1,42 +1,36 @@
 package l;
 
-import java.io.IOException;
+import android.text.Editable;
+import android.text.TextWatcher;
 
-/* JADX INFO: renamed from: l.ۚ᩻ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K3OA */
-/* JADX INFO: loaded from: classes3.dex */
-public class C5682 extends AbstractC21536 {
-    public C5682() {
-        throw null;
+/* JADX INFO: renamed from: l.ۚ۬᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: G4ML */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5682 implements TextWatcher {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23582 f19639;
+
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.AbstractC21536
-    public final String toString() {
-        return C0242.m1617("[", this.f69952.toString(), " ", ((C15187) this.f69953).toString(), "]");
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.AbstractC21536
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3209(InterfaceC19275 interfaceC19275) throws IOException {
-        super.mo3209(interfaceC19275);
-        ((C15187) this.f69953).mo2341(interfaceC19275);
+    public C5682(C23582 c23582) {
+        this.f19639 = c23582;
     }
 
-    @Override // l.AbstractC21536
-    public final int hashCode() {
-        Object obj = this.f69953;
-        return this.f69952.hashCode() + ((obj != null ? ((C15187) obj).hashCode() : 0) * 31);
-    }
-
-    @Override // l.AbstractC21536
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        C23582 c23582 = this.f19639;
+        c23582.m52795();
+        if (c23582.m52817()) {
+            c23582.f76573.m29835();
+            c23582.f76561.removeMessages(0);
+            c23582.f76561.sendEmptyMessageDelayed(0, 100L);
         }
-        if (!(obj instanceof C5682)) {
-            return false;
-        }
-        C5682 c5682 = (C5682) obj;
-        return C13638.equals(this.f69953, c5682.f69953) && this.f69952 == c5682.f69952;
     }
 }

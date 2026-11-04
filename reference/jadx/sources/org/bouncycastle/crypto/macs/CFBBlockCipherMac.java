@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.crypto.paddings.BlockCipherPadding;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CFBBlockCipherMac implements Mac {
     public byte[] buf;
     public int bufOff;

@@ -11,17 +11,17 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C0280;
-import l.C12278;
-import l.C12441;
-import l.C13958;
-import l.C17214;
-import l.C19028;
-import l.C22697;
-import l.C23234;
-import l.C5800;
-import l.C7997;
-import l.C9023;
+import l.C0703;
+import l.C10732;
+import l.C12669;
+import l.C14087;
+import l.C18011;
+import l.C18063;
+import l.C18176;
+import l.C2458;
+import l.C25272;
+import l.C3188;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.crypto.CipherParameters;
@@ -53,7 +53,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseWrapCipher;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBE;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DES {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -79,63 +79,54 @@ public final class DES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new DESEngine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBCMAC extends BaseMac {
         public CBCMAC() {
             super(new CBCBlockCipherMac(new DESEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC extends BaseMac {
         public CMAC() {
             super(new CMac(new DESEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DES64 extends BaseMac {
         public DES64() {
             super(new CBCBlockCipherMac(new DESEngine(), 64));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DES64with7816d4 extends BaseMac {
         public DES64with7816d4() {
             super(new CBCBlockCipherMac(new DESEngine(), 64, new ISO7816d4Padding()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DES9797Alg3 extends BaseMac {
         public DES9797Alg3() {
             super(new ISO9797Alg3Mac(new DESEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DES9797Alg3with7816d4 extends BaseMac {
         public DES9797Alg3with7816d4() {
             super(new ISO9797Alg3Mac(new DESEngine(), new ISO7816d4Padding()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DESCFB8 extends BaseMac {
         public DESCFB8() {
             super(new CFBBlockCipherMac(new DESEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class DESPBEKeyFactory extends BaseSecretKeyFactory {
         public int digest;
         public boolean forCipher;
@@ -171,14 +162,12 @@ public final class DES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new DESEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyFactory extends BaseSecretKeyFactory {
         public KeyFactory() {
             super("DES", null);
@@ -244,25 +233,25 @@ public final class DES {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ECB", "Cipher.DES", sb, configurableProvider);
+            C8947.m23913(str, "$ECB", "Cipher.DES", sb, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier = OIWObjectIdentifiers.desCBC;
-            C13958.m33814(configurableProvider, str, "$CBC", "Cipher", aSN1ObjectIdentifier);
+            C3188.m10408(configurableProvider, str, "$CBC", "Cipher", aSN1ObjectIdentifier);
             addAlias(configurableProvider, aSN1ObjectIdentifier, "DES");
             configurableProvider.addAlgorithm("Cipher.DESRFC3211WRAP", str + "$RFC3211");
             StringBuilder sb2 = new StringBuilder();
             sb2.append(str);
-            C12441.m30916(C12278.m30516("$CMAC", "Mac.DESCMAC", str, C12278.m30516("$KeyFactory", "SecretKeyFactory.DES", str, C12278.m30516("$KeyGenerator", "KeyGenerator.DES", str, sb2, configurableProvider), configurableProvider), configurableProvider), "$CBCMAC", configurableProvider, "Mac.DESMAC");
-            C5800.m15969(str, "$DES64", "Mac.DESMAC64", C0280.m1793("Mac.DESMAC/CFB8", C23234.m51270("Alg.Alias.Mac.DES", "DESMAC", str, "$DESCFB8", configurableProvider), "Alg.Alias.Mac.DES/CFB8", "DESMAC/CFB8", configurableProvider), configurableProvider);
-            configurableProvider.addAlgorithm("Mac.DESMAC64WITHISO7816-4PADDING", C23234.m51270("Alg.Alias.Mac.DES64", "DESMAC64", str, "$DES64with7816d4", configurableProvider));
+            C10732.m27335(C0703.m3019("$CMAC", "Mac.DESCMAC", str, C0703.m3019("$KeyFactory", "SecretKeyFactory.DES", str, C0703.m3019("$KeyGenerator", "KeyGenerator.DES", str, sb2, configurableProvider), configurableProvider), configurableProvider), "$CBCMAC", configurableProvider, "Mac.DESMAC");
+            C8947.m23913(str, "$DES64", "Mac.DESMAC64", C12669.m31439("Mac.DESMAC/CFB8", C18176.m42346("Alg.Alias.Mac.DES", "DESMAC", str, "$DESCFB8", configurableProvider), "Alg.Alias.Mac.DES/CFB8", "DESMAC/CFB8", configurableProvider), configurableProvider);
+            configurableProvider.addAlgorithm("Mac.DESMAC64WITHISO7816-4PADDING", C18176.m42346("Alg.Alias.Mac.DES64", "DESMAC64", str, "$DES64with7816d4", configurableProvider));
             configurableProvider.addAlgorithm("Alg.Alias.Mac.DES64WITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING");
-            C5800.m15969(str, "$DES9797Alg3", "Mac.DESWITHISO9797", C0280.m1793("Alg.Alias.Mac.DESISO9797ALG1MACWITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING", "Alg.Alias.Mac.DESISO9797ALG1WITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING", configurableProvider), configurableProvider);
-            C5800.m15969(str, "$DES9797Alg3with7816d4", "Mac.ISO9797ALG3WITHISO7816-4PADDING", C0280.m1793("Mac.ISO9797ALG3MAC", C23234.m51270("Alg.Alias.Mac.DESISO9797MAC", "DESWITHISO9797", str, "$DES9797Alg3", configurableProvider), "Alg.Alias.Mac.ISO9797ALG3", "ISO9797ALG3MAC", configurableProvider), configurableProvider);
+            C8947.m23913(str, "$DES9797Alg3", "Mac.DESWITHISO9797", C12669.m31439("Alg.Alias.Mac.DESISO9797ALG1MACWITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING", "Alg.Alias.Mac.DESISO9797ALG1WITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING", configurableProvider), configurableProvider);
+            C8947.m23913(str, "$DES9797Alg3with7816d4", "Mac.ISO9797ALG3WITHISO7816-4PADDING", C12669.m31439("Mac.ISO9797ALG3MAC", C18176.m42346("Alg.Alias.Mac.DESISO9797MAC", "DESWITHISO9797", str, "$DES9797Alg3", configurableProvider), "Alg.Alias.Mac.ISO9797ALG3", "ISO9797ALG3MAC", configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.Mac.ISO9797ALG3MACWITHISO7816-4PADDING", "ISO9797ALG3WITHISO7816-4PADDING");
             configurableProvider.addAlgorithm("AlgorithmParameters.DES", "org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters");
-            StringBuilder sbM40154 = C17214.m40154(configurableProvider, "Alg.Alias.AlgorithmParameters", "DES", str, aSN1ObjectIdentifier);
-            sbM40154.append("$AlgParamGen");
-            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.DES", sbM40154.toString());
-            C12441.m30916(C12278.m30516("$PBEWithMD5", "Cipher.PBEWITHMD5ANDDES", str, C12278.m30516("$PBEWithMD2", "Cipher.PBEWITHMD2ANDDES", str, C22697.m50268("DES", str, new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier, configurableProvider), configurableProvider), configurableProvider), "$PBEWithSHA1", configurableProvider, "Cipher.PBEWITHSHA1ANDDES");
+            StringBuilder sbM34249 = C14087.m34249(configurableProvider, "Alg.Alias.AlgorithmParameters", "DES", str, aSN1ObjectIdentifier);
+            sbM34249.append("$AlgParamGen");
+            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.DES", sbM34249.toString());
+            C10732.m27335(C0703.m3019("$PBEWithMD5", "Cipher.PBEWITHMD5ANDDES", str, C0703.m3019("$PBEWithMD2", "Cipher.PBEWITHMD2ANDDES", str, C25272.m56410("DES", str, new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier, configurableProvider), configurableProvider), configurableProvider), "$PBEWithSHA1", configurableProvider, "Cipher.PBEWITHSHA1ANDDES");
             ASN1ObjectIdentifier aSN1ObjectIdentifier2 = PKCSObjectIdentifiers.pbeWithMD2AndDES_CBC;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier2, "PBEWITHMD2ANDDES");
             ASN1ObjectIdentifier aSN1ObjectIdentifier3 = PKCSObjectIdentifiers.pbeWithMD5AndDES_CBC;
@@ -270,58 +259,51 @@ public final class DES {
             ASN1ObjectIdentifier aSN1ObjectIdentifier4 = PKCSObjectIdentifiers.pbeWithSHA1AndDES_CBC;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier4, "PBEWITHSHA1ANDDES");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHMD2ANDDES-CBC", "PBEWITHMD2ANDDES");
-            C5800.m15969(str, "$PBEWithSHA1KeyFactory", "SecretKeyFactory.PBEWITHSHA1ANDDES", C9023.m23357(str, "$PBEWithMD5KeyFactory", "SecretKeyFactory.PBEWITHMD5ANDDES", C9023.m23357(str, "$PBEWithMD2KeyFactory", "SecretKeyFactory.PBEWITHMD2ANDDES", C0280.m1793("Alg.Alias.Cipher.PBEWITHMD5ANDDES-CBC", "PBEWITHMD5ANDDES", "Alg.Alias.Cipher.PBEWITHSHA1ANDDES-CBC", "PBEWITHSHA1ANDDES", configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$PBEWithSHA1KeyFactory", "SecretKeyFactory.PBEWITHSHA1ANDDES", C18063.m42089(str, "$PBEWithMD5KeyFactory", "SecretKeyFactory.PBEWITHMD5ANDDES", C18063.m42089(str, "$PBEWithMD2KeyFactory", "SecretKeyFactory.PBEWITHMD2ANDDES", C12669.m31439("Alg.Alias.Cipher.PBEWITHMD5ANDDES-CBC", "PBEWITHMD5ANDDES", "Alg.Alias.Cipher.PBEWITHSHA1ANDDES-CBC", "PBEWITHSHA1ANDDES", configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHMD2ANDDES-CBC", "PBEWITHMD2ANDDES");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHMD5ANDDES-CBC", "PBEWITHMD5ANDDES");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHSHA1ANDDES-CBC", "PBEWITHSHA1ANDDES");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory." + aSN1ObjectIdentifier2, "PBEWITHMD2ANDDES");
-            C7997.m21058(C19028.m43760("PBEWITHMD5ANDDES", "Alg.Alias.SecretKeyFactory.", new StringBuilder("Alg.Alias.SecretKeyFactory."), aSN1ObjectIdentifier3, configurableProvider), aSN1ObjectIdentifier4, configurableProvider, "PBEWITHSHA1ANDDES");
+            C18011.m41992(C2458.m8290("PBEWITHMD5ANDDES", "Alg.Alias.SecretKeyFactory.", new StringBuilder("Alg.Alias.SecretKeyFactory."), aSN1ObjectIdentifier3, configurableProvider), aSN1ObjectIdentifier4, configurableProvider, "PBEWITHSHA1ANDDES");
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD2 extends BaseBlockCipher {
         public PBEWithMD2() {
             super(new CBCBlockCipher(new DESEngine()), 0, 5, 64, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD2KeyFactory extends DESPBEKeyFactory {
         public PBEWithMD2KeyFactory() {
             super("PBEwithMD2andDES", PKCSObjectIdentifiers.pbeWithMD2AndDES_CBC, true, 0, 5, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD5 extends BaseBlockCipher {
         public PBEWithMD5() {
             super(new CBCBlockCipher(new DESEngine()), 0, 0, 64, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMD5KeyFactory extends DESPBEKeyFactory {
         public PBEWithMD5KeyFactory() {
             super("PBEwithMD5andDES", PKCSObjectIdentifiers.pbeWithMD5AndDES_CBC, true, 0, 0, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHA1 extends BaseBlockCipher {
         public PBEWithSHA1() {
             super(new CBCBlockCipher(new DESEngine()), 0, 1, 64, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHA1KeyFactory extends DESPBEKeyFactory {
         public PBEWithSHA1KeyFactory() {
             super("PBEwithSHA1andDES", PKCSObjectIdentifiers.pbeWithSHA1AndDES_CBC, true, 0, 1, 64, 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class RFC3211 extends BaseWrapCipher {
         public RFC3211() {
             super(new RFC3211WrapEngine(new DESEngine()), 8);

@@ -12,7 +12,7 @@ import org.bouncycastle.crypto.params.ElGamalPublicKeyParameters;
 import org.bouncycastle.jce.interfaces.ElGamalPrivateKey;
 import org.bouncycastle.jce.interfaces.ElGamalPublicKey;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalUtil {
     public static AsymmetricKeyParameter generatePrivateKeyParameter(PrivateKey privateKey) throws InvalidKeyException {
         if (privateKey instanceof ElGamalPrivateKey) {

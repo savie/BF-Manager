@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
 import org.bouncycastle.crypto.OutputLengthException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NullEngine implements BlockCipher {
     public static final int DEFAULT_BLOCK_SIZE = 1;
     public final int blockSize;

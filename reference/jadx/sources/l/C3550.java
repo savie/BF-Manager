@@ -1,40 +1,47 @@
 package l;
 
-import java.security.SignatureException;
-import org.bouncycastle.crypto.util.OpenSSHPublicKeyUtil;
-import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
+import java.util.concurrent.Executor;
+import java.util.concurrent.RejectedExecutionException;
 
-/* JADX INFO: renamed from: l.ۗ᩺ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F7VV */
+/* JADX INFO: renamed from: l.ۗܽܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 43Q0 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3550 extends AbstractC13906 {
-    @Override // l.AbstractC13906
+public final class C3550 extends AbstractC12499 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo10469() {
-        return EdDSAParameterSpec.Ed25519;
-    }
-
-    @Override // l.AbstractC13906
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String mo10470() {
-        return OpenSSHPublicKeyUtil.ED_25519;
-    }
-
-    @Override // l.InterfaceC2845
-    public final byte[] sign() throws SignatureException {
-        try {
-            return this.f45811.generateSignature();
-        } catch (Exception e) {
-            throw new SignatureException(e);
+    public static InterfaceFutureC14736 m11571(Object obj) {
+        if (obj == null) {
+            return C24434.f79315;
         }
+        return new C24434(obj);
     }
 
-    @Override // l.InterfaceC2845
-    public final void update(byte[] bArr) throws SignatureException {
-        try {
-            this.f45811.update(bArr, 0, bArr.length);
-        } catch (Exception e) {
-            throw new SignatureException(e);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceFutureC14736 m11572(Throwable th) {
+        C6534 c6534 = new C6534();
+        c6534.mo2584(th);
+        return c6534;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceFutureC14736 m11573(InterfaceFutureC14736 interfaceFutureC14736, C5591 c5591, final Executor executor) {
+        int i = AbstractRunnableC25180.f81389;
+        final C11753 c11753 = new C11753();
+        c11753.f81391 = interfaceFutureC14736;
+        c11753.f81390 = c5591;
+        executor.getClass();
+        if (executor != EnumC16974.INSTANCE) {
+            executor = new Executor() { // from class: l.᩶ܽܽ
+                @Override // java.util.concurrent.Executor
+                public final void execute(Runnable runnable) {
+                    try {
+                        executor.execute(runnable);
+                    } catch (RejectedExecutionException e) {
+                        c11753.mo2584((Throwable) e);
+                    }
+                }
+            };
         }
+        ((C24434) interfaceFutureC14736).mo7375(c11753, executor);
+        return c11753;
     }
 }

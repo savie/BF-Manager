@@ -1,72 +1,20 @@
 .class public final Ll/ۡܽۘ;
-.super Ll/ۢܽܰ;
-.source "657B"
+.super Ll/ܰܶۘ;
+.source "Z5U8"
 
 
 # virtual methods
-.method public final ۙ(Ll/ܿܿܰ;Ll/۫ܿܰ;Ll/۫ܿܰ;)Z
+.method public final ۙ(ILl/ۧܿ᩺;)V
     .locals 4
 
-    .line 96
-    invoke-virtual {p2}, Ll/۫ܿܰ;->getBindingAdapterPosition()I
+    .line 1020
+    iget-wide v0, p2, Ll/ۧܿ᩺;->ܿ:J
 
-    move-result p2
+    const-wide v2, 0x80000000L
 
-    .line 97
-    invoke-virtual {p3}, Ll/۫ܿܰ;->getBindingAdapterPosition()I
+    or-long/2addr v0, v2
 
-    move-result p3
-
-    .line 98
-    invoke-static {}, Ll/᩷ܽۘ;->ۜۙ()[I
-
-    move-result-object v0
-
-    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [I
-
-    .line 99
-    invoke-static {}, Ll/᩷ܽۘ;->ۜۙ()[I
-
-    move-result-object v1
-
-    .line 389
-    aget v2, v1, p2
-
-    .line 390
-    aget v3, v1, p3
-
-    aput v3, v1, p2
-
-    .line 391
-    aput v2, v1, p3
-
-    .line 101
-    new-instance p2, Ll/᩵ܽۘ;
-
-    invoke-direct {p2, v0}, Ll/᩵ܽۘ;-><init>([I)V
-
-    invoke-static {p2}, Ll/ۘܽܰ;->ۙ(Ll/ܰܽܰ;)Ll/ۚܽܰ;
-
-    move-result-object p2
-
-    .line 121
-    invoke-virtual {p1}, Ll/ܿܿܰ;->getAdapter()Ll/֡۫ܰ;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ll/ۚܽܰ;->ۙ(Ll/֡۫ܰ;)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final ۨ(Ll/۫ܿܰ;)V
-    .locals 0
+    iput-wide v0, p2, Ll/ۧܿ᩺;->ܿ:J
 
     return-void
 .end method

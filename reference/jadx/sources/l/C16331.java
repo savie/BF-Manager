@@ -1,127 +1,74 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ֫ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y184 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16331 extends AbstractDialogInterfaceOnClickListenerC17341 {
+import android.content.DialogInterface;
+import android.content.Intent;
+import bin.mt.plus.R;
+import com.alipay.sdk.m.t.e;
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17036 f52612;
+/* JADX INFO: renamed from: l.ܶ᩶ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P676 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16331 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17036 f52613;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC22957 f53017;
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17036 f52614;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C6806 f53018;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C16331(AbstractActivityC12483 abstractActivityC12483, C17036 c17036, C17036 c17037, C17036 c17038) {
-        super(abstractActivityC12483, -1);
-        this.f52612 = c17036;
-        this.f52613 = c17037;
-        this.f52614 = c17038;
+    public C16331(ActivityC22957 activityC22957) {
+        this.f53017 = activityC22957;
     }
 
-    /* JADX WARN: Code duplicated, block: B:24:0x0054  */
-    /* JADX WARN: Code duplicated, block: B:7:0x0017  */
-    /* JADX WARN: Code restructure failed: missing block: B:22:0x0051, code lost:
-    
-        if (r1.matches("\\[*([VCZBISJDF]|L[^;:()\\r\\n]+;)") == false) goto L25;
-     */
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8190(this.f53017);
+    }
+
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ᩴ */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final void mo1069() {
-        /*
-            r7 = this;
-            java.lang.String r0 = r7.m40352()
-            java.lang.String r0 = r0.trim()
-            r1 = 0
-            r2 = 0
-            if (r0 != 0) goto Ld
-            goto L17
-        Ld:
-            java.lang.String r3 = "->"
-            java.lang.String[] r0 = r0.split(r3)
-            int r3 = r0.length
-            r4 = 2
-            if (r3 == r4) goto L1a
-        L17:
-            r0 = r1
-            r4 = r0
-            goto L57
-        L1a:
-            r3 = r0[r2]
-            int r5 = r3.length()
-            if (r5 <= r4) goto L54
-            java.lang.String r5 = "L"
-            boolean r5 = r3.startsWith(r5)
-            if (r5 == 0) goto L54
-            java.lang.String r5 = ";"
-            boolean r5 = r3.endsWith(r5)
-            if (r5 != 0) goto L33
-            goto L54
-        L33:
-            r5 = 1
-            r0 = r0[r5]
-            java.lang.String r6 = ":"
-            java.lang.String[] r0 = r0.split(r6)
-            int r6 = r0.length
-            if (r6 == r4) goto L40
-            goto L54
-        L40:
-            r4 = r0[r2]
-            boolean r6 = r4.isEmpty()
-            if (r6 == 0) goto L49
-            goto L55
-        L49:
-            r1 = r0[r5]
-            java.lang.String r0 = "\\[*([VCZBISJDF]|L[^;:()\\r\\n]+;)"
-            boolean r0 = r1.matches(r0)
-            if (r0 != 0) goto L5a
-            goto L55
-        L54:
-            r4 = r1
-        L55:
-            r0 = r1
-            r1 = r3
-        L57:
-            r5 = 0
-            r3 = r1
-            r1 = r0
-        L5a:
-            if (r5 != 0) goto L63
-            r0 = 2131886994(0x7f120392, float:1.9408583E38)
-            l.C15829.m37611(r0)
-            return
-        L63:
-            l.ܿ֫ۨ r0 = r7.f52612
-            android.widget.EditText r5 = r0.f54424
-            r5.setText(r3)
-            l.ܿ֫ۨ r3 = r7.f52613
-            android.widget.EditText r5 = r3.f54424
-            r5.setText(r4)
-            l.ܿ֫ۨ r4 = r7.f52614
-            android.widget.EditText r5 = r4.f54424
-            r5.setText(r1)
-            android.widget.CheckBox r1 = r0.f54421
-            r1.setChecked(r2)
-            android.widget.CheckBox r0 = r0.f54423
-            r0.setChecked(r2)
-            android.widget.CheckBox r0 = r3.f54421
-            r0.setChecked(r2)
-            android.widget.CheckBox r0 = r3.f54423
-            r0.setChecked(r2)
-            android.widget.CheckBox r0 = r4.f54421
-            r0.setChecked(r2)
-            android.widget.CheckBox r0 = r4.f54423
-            r0.setChecked(r2)
-            r7.m40364()
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C16331.mo1069():void");
+    public final void mo1136() {
+        C24738 c24738 = new C24738();
+        this.f53017.f74569.f24319.m13152(c24738);
+        c24738.m55244();
+        byte[] bArr = new byte[c24738.m55243()];
+        c24738.m55242(new C24166(bArr));
+        this.f53018 = C11650.m29284("", bArr, ApplicationC17729.f58258.mo7901((byte) 0, "dex_decompile_engine"));
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        boolean zM33676 = this.f53018.f22668.m33676();
+        ActivityC22957 activityC22957 = this.f53017;
+        if (!zM33676) {
+            C13778 c13778 = this.f53018.f22668;
+            c13778.getClass();
+            activityC22957.m40400(C1364.m5010(c13778, R.string.MT_Protector), false);
+            return;
+        }
+        C3347 c3347 = activityC22957.f74571;
+        C6806 c6806 = this.f53018;
+        String strM23910 = C8947.m23910(new StringBuilder(), activityC22957.f74569.f24298, ".java");
+        int i = ActivityC4300.f15587;
+        C23391.m52569(ActivityC22957.class, c6806, "textViewer_dec");
+        Intent intent = new Intent(C21576.m49084(), (Class<?>) ActivityC4300.class);
+        intent.putExtra(e.s, 2);
+        intent.putExtra("title", strM23910);
+        intent.putExtra("saveStateOnResult", true);
+        c3347.m10999(intent);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f53017.m40401(exc, (DialogInterface.OnDismissListener) null);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

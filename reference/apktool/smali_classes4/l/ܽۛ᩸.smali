@@ -1,42 +1,54 @@
-.class public final Ll/ܽۛ᩸;
-.super Ll/ᩴܿ᩸;
-.source "39IB"
+.class public final synthetic Ll/ܽۛ᩸;
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ܶۛ᩸;
+
+.field public final synthetic ᩶:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܶۛ᩸;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܽۛ᩸;->ܰ:Ll/ܶۛ᩸;
+
+    iput p2, p0, Ll/ܽۛ᩸;->᩶:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۡܿ᩸;)I
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    .line 156
-    check-cast p1, Ll/۫ۛ᩸;
+    .line 999
+    iget-object v0, p0, Ll/ܽۛ᩸;->ܰ:Ll/ܶۛ᩸;
 
-    .line 163
-    iget-object p1, p1, Ll/᩻ۛ᩸;->᩶:[B
+    iget-object v1, v0, Ll/ܶۛ᩸;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    array-length p1, p1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    add-int/lit8 p1, p1, 0x1
+    move-result v1
 
-    return p1
-.end method
+    iget v2, p0, Ll/ܽۛ᩸;->᩶:I
 
-.method public final ۙ(Ll/ۡܿ᩸;Ll/ܶܿ᩸;)V
-    .locals 1
+    if-ne v2, v1, :cond_0
 
-    .line 156
-    check-cast p1, Ll/۫ۛ᩸;
+    .line 1000
+    iget-object v0, v0, Ll/ܶۛ᩸;->ᩴ:Ll/ܿۛ᩸;
 
-    .line 168
-    invoke-static {p1}, Ll/۫ۛ᩸;->ۙ(Ll/۫ۛ᩸;)I
+    invoke-static {v0}, Ll/ܿۛ᩸;->ܶ(Ll/ܿۛ᩸;)V
 
-    move-result v0
-
-    invoke-virtual {p2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    .line 169
-    iget-object p1, p1, Ll/᩻ۛ᩸;->᩶:[B
-
-    invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
-
+    :cond_0
     return-void
 .end method

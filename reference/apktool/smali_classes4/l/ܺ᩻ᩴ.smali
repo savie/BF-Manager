@@ -1,215 +1,176 @@
-.class public final synthetic Ll/ܺ᩻ᩴ;
+.class public final Ll/ܺ᩻ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/function/Function;
-.implements Ljava/util/function/BiConsumer;
+.source "N97D"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public final synthetic b:Ljava/util/function/Function;
-
-.field public final synthetic c:Ljava/util/function/Function;
+.field public final ᩷:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/function/Function;Ljava/util/function/Function;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p3, p0, Ll/ܺ᩻ᩴ;->a:I
-
-    iput-object p1, p0, Ll/ܺ᩻ᩴ;->b:Ljava/util/function/Function;
-
-    iput-object p2, p0, Ll/ܺ᩻ᩴ;->c:Ljava/util/function/Function;
-
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/ܺ᩻ᩴ;->ۙ:Ljava/util/ArrayList;
+
+    .line 13
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ll/ܺ᩻ᩴ;->᩷:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final ۙ(Ll/ۧ᩻ᩴ;)I
+    .locals 1
 
-    check-cast p1, Ljava/util/Map;
+    .line 23
+    iget-object v0, p0, Ll/ܺ᩻ᩴ;->᩷:Ljava/util/HashMap;
 
-    sget-object v0, Ll/֫ܳᩴ;->a:Ljava/util/Set;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
-    iget-object v0, p0, Ll/ܺ᩻ᩴ;->b:Ljava/util/function/Function;
+    move-result-object p1
 
-    invoke-interface {v0, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۙ(I)Ll/ۧ᩻ᩴ;
+    .locals 1
+
+    .line 51
+    iget-object v0, p0, Ll/ܺ᩻ᩴ;->ۙ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۧ᩻ᩴ;
+
+    return-object p1
+.end method
+
+.method public final ۙ(Ll/ۛۚۤ;)V
+    .locals 2
+
+    .line 27
+    iget-object v0, p0, Ll/ܺ᩻ᩴ;->ۙ:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ll/ۛۚۤ;->᩸(I)V
+
+    .line 28
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 178
-    iget-object v1, p0, Ll/ܺ᩻ᩴ;->c:Ljava/util/function/Function;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v1, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object p2
+    if-eqz v1, :cond_0
 
-    invoke-static {p2}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v1
 
-    .line 179
-    invoke-static {p1, v0, p2}, Ll/ۢܿᩴ;->putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Ll/ۧ᩻ᩴ;
 
-    move-result-object p1
+    .line 29
+    invoke-virtual {v1, p1}, Ll/ۧ᩻ᩴ;->ۙ(Ll/ۛۚۤ;)V
 
-    if-nez p1, :cond_0
+    goto :goto_0
 
-    return-void
-
-    .line 133
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x1
-
-    aput-object p1, v2, v0
-
-    const/4 p1, 0x2
-
-    aput-object p2, v2, p1
-
-    const-string p1, "Duplicate key %s (attempted merging values %s and %s)"
-
-    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 180
-    throw v1
+    return-void
 .end method
 
-.method public synthetic andThen(Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
-    .locals 0
+.method public final ۙ(Ll/᩵ۚۤ;)V
+    .locals 4
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۖ᩻ᩴ;->$default$andThen(Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
+    .line 38
+    invoke-virtual {p1}, Ll/᩵ۚۤ;->֡()I
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    .line 40
+    iget-object v1, p0, Ll/ܺ᩻ᩴ;->ۙ:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->ensureCapacity(I)V
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    .line 43
+    invoke-static {p1}, Ll/ۧ᩻ᩴ;->ۙ(Ll/᩵ۚۤ;)Ll/ۧ᩻ᩴ;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 1
-
-    iget v0, p0, Ll/ܺ᩻ᩴ;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final ᩷(Ll/ۧ᩻ᩴ;)V
     .locals 2
 
-    iget v0, p0, Ll/ܺ᩻ᩴ;->a:I
+    .line 16
+    iget-object v0, p0, Ll/ܺ᩻ᩴ;->᩷:Ljava/util/HashMap;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Ll/ܺ᩻ᩴ;->c:Ljava/util/function/Function;
+    move-result v1
 
-    .line 68
-    invoke-interface {v0, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_0
 
-    move-result-object p1
+    .line 17
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
-    iget-object v0, p0, Ll/ܺ᩻ᩴ;->b:Ljava/util/function/Function;
+    move-result v1
 
-    invoke-interface {v0, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/ܺ᩻ᩴ;->c:Ljava/util/function/Function;
+    .line 18
+    iget-object v0, p0, Ll/ܺ᩻ᩴ;->ۙ:Ljava/util/ArrayList;
 
-    .line 88
-    iget-object v1, p0, Ll/ܺ᩻ᩴ;->b:Ljava/util/function/Function;
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v1, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 1
-
-    iget v0, p0, Ll/ܺ᩻ᩴ;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

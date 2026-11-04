@@ -1,251 +1,159 @@
 .class public final Ll/۬ۢ᩹;
 .super Ljava/lang/Object;
-.source "A1YB"
+.source "DAOW"
 
 # interfaces
-.implements Ll/ۘ֨ۖ;
+.implements Ll/ۡۢ᩹;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public final synthetic ֡:Ll/᩷۠ۚ;
-
-.field public final synthetic ۫:Ljava/util/List;
-
-.field public final synthetic ܺ:Ll/ܶۢ᩹;
-
-.field public final synthetic ܽ:I
-
-.field public final synthetic ᩶:Ll/᩷۠ۚ;
+# static fields
+.field public static final serialVersionUID:J = 0x744911981e291cdcL
 
 
 # direct methods
-.method public constructor <init>(Ll/ܶۢ᩹;Ljava/util/ArrayList;Ll/᩷۠ۚ;ILl/᩷۠ۚ;)V
-    .locals 0
+.method private readResolve()Ljava/lang/Object;
+    .locals 1
 
-    .line 677
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 98
+    sget-object v0, Ll/ۤ֨᩹;->ۙ:Ll/۬ۢ᩹;
 
-    iput-object p1, p0, Ll/۬ۢ᩹;->ܺ:Ll/ܶۢ᩹;
-
-    iput-object p2, p0, Ll/۬ۢ᩹;->۫:Ljava/util/List;
-
-    iput-object p3, p0, Ll/۬ۢ᩹;->᩶:Ll/᩷۠ۚ;
-
-    iput p4, p0, Ll/۬ۢ᩹;->ܽ:I
-
-    iput-object p5, p0, Ll/۬ۢ᩹;->֡:Ll/᩷۠ۚ;
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final ֨()Z
+.method public final characteristics()I
     .locals 1
 
-    .line 719
-    iget-object v0, p0, Ll/۬ۢ᩹;->ܺ:Ll/ܶۢ᩹;
-
-    .line 301
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->֨()Z
-
-    move-result v0
+    const/16 v0, 0x4040
 
     return v0
 .end method
 
-.method public final ۙ(Ll/᩷۠ۚ;)V
+.method public final clone()Ljava/lang/Object;
+    .locals 1
+
+    .line 94
+    sget-object v0, Ll/ۤ֨᩹;->ۙ:Ll/۬ۢ᩹;
+
+    return-object v0
+.end method
+
+.method public final estimateSize()J
     .locals 2
 
-    .line 680
-    iget-object v0, p0, Ll/۬ۢ᩹;->ܺ:Ll/ܶۢ᩹;
+    const-wide/16 v0, 0x0
 
-    iget-object v0, v0, Ll/ܶۢ᩹;->᩶ۙ:Ll/ۨۙ֨;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, p1}, Ll/ۨۙ֨;->ۙ(Ll/᩷۠ۚ;)V
+.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 681
-    iget-object v0, p0, Ll/۬ۢ᩹;->۫:Ljava/util/List;
+    .line 50
+    check-cast p1, Ljava/util/function/LongConsumer;
 
-    if-eqz v0, :cond_0
-
-    .line 682
-    new-instance v1, Ll/᩺ۢ᩹;
-
-    invoke-direct {v1, p1}, Ll/᩺ۢ᩹;-><init>(Ll/᩷۠ۚ;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
     return-void
 .end method
 
-.method public final ۙ(Lnet/sf/sevenzipjbinding/IInArchive;)V
-    .locals 11
-
-    .line 689
-    iget-object v0, p0, Ll/۬ۢ᩹;->ܺ:Ll/ܶۢ᩹;
-
-    iget-object v1, p0, Ll/۬ۢ᩹;->᩶:Ll/᩷۠ۚ;
-
-    :try_start_0
-    invoke-interface {p1}, Lnet/sf/sevenzipjbinding/IInArchive;->getNumberOfItems()I
-
-    move-result v2
-
-    .line 690
-    new-array v5, v2, [Ljava/lang/String;
-
-    .line 691
-    new-array v6, v2, [Ll/ۜۢ᩹;
-
-    .line 692
-    sget v3, Ll/ܶۢ᩹;->֡ۙ:I
-
-    .line 959
-    invoke-virtual {v1}, Ll/᩷۠ۚ;->ܶۙ()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 960
-    invoke-static {v3}, Ll/ۚ᩵ۚ;->ۖ(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    invoke-static {v3}, Ll/ۚ᩵ۚ;->ܰ(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const/4 v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    const/4 v4, 0x0
-
-    :goto_1
-    if-ge v4, v2, :cond_4
-
-    .line 694
-    invoke-static {p1, v4}, Ll/ᩳ᩹ۖ;->ۙ(Lnet/sf/sevenzipjbinding/IInArchive;I)Ll/ᩳ᩹ۖ;
-
-    move-result-object v7
-
-    if-eqz v3, :cond_1
-
-    .line 695
-    invoke-virtual {v7}, Ll/ᩳ᩹ۖ;->ۖ()Ljava/lang/String;
-
-    move-result-object v8
-
-    if-eqz v8, :cond_1
-
-    const/4 v8, 0x1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v8, 0x0
-
-    .line 696
-    :goto_2
-    invoke-virtual {v7}, Ll/ᩳ᩹ۖ;->ۚ()Ljava/lang/String;
-
-    move-result-object v9
-
-    if-eqz v8, :cond_2
-
-    const/4 v10, 0x0
-
-    goto :goto_3
-
-    .line 697
-    :cond_2
-    invoke-virtual {v7}, Ll/ᩳ᩹ۖ;->ۜ()Z
-
-    move-result v10
-
-    .line 696
-    :goto_3
-    invoke-static {v9, v10}, Ll/ۚ᩵ۚ;->ۙ(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 698
-    aput-object v9, v5, v4
-
-    if-eqz v8, :cond_3
-
-    .line 700
-    new-instance v8, Ll/ۜۢ᩹;
-
-    .line 701
-    invoke-virtual {v7}, Ll/ᩳ᩹ۖ;->ۖ()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v9, v10}, Ll/ۚ᩵ۚ;->ۨ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 702
-    invoke-virtual {v7}, Ll/ᩳ᩹ۖ;->ۜ()Z
-
-    move-result v7
-
-    invoke-direct {v8, v9, v10, v7}, Ll/ۜۢ᩹;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    aput-object v8, v6, v4
-
-    :cond_3
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    .line 705
-    :cond_4
-    invoke-static {v0, v1}, Ll/ܶۢ᩹;->ܰ(Ll/ܶۢ᩹;Ll/᩷۠ۚ;)V
-
-    .line 706
-    iget v2, p0, Ll/۬ۢ᩹;->ܽ:I
-
-    iget-object v4, p0, Ll/۬ۢ᩹;->֡:Ll/᩷۠ۚ;
-
-    move-object v3, p1
-
-    invoke-static/range {v0 .. v6}, Ll/ܶۢ᩹;->ۙ(Ll/ܶۢ᩹;Ll/᩷۠ۚ;ILnet/sf/sevenzipjbinding/IInArchive;Ll/᩷۠ۚ;[Ljava/lang/String;[Ll/ۜۢ᩹;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 708
-    invoke-static {p1}, Ll/᩵ۧ᩺;->ۙ(Ljava/lang/AutoCloseable;)V
+.method public final forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final forEachRemaining(Ljava/util/function/LongConsumer;)V
+    .locals 0
 
-    invoke-static {p1}, Ll/᩵ۧ᩺;->ۙ(Ljava/lang/AutoCloseable;)V
+    return-void
+.end method
 
-    .line 709
+.method public final getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 158
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
     throw v0
 .end method
 
-.method public final ۨ()V
+.method public synthetic getExactSizeIfKnown()J
+    .locals 2
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 50
+    check-cast p1, Ljava/util/function/LongConsumer;
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final tryAdvance(Ljava/util/function/LongConsumer;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۠ۚۗ;
     .locals 1
 
-    .line 714
-    iget-object v0, p0, Ll/۬ۢ᩹;->ܺ:Ll/ܶۢ᩹;
+    const/4 v0, 0x0
 
-    .line 288
-    invoke-virtual {v0}, Ll/ᩳ۟ۜ;->cancel()V
+    return-object v0
+.end method
 
-    return-void
+.method public final bridge synthetic trySplit()Ll/ۡۚۗ;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/ۢۚۗ;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

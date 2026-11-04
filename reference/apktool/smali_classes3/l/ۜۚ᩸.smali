@@ -1,65 +1,89 @@
-.class public final Ll/ۜۚ᩸;
-.super Ll/ܶۚ᩸;
-.source "U87V"
+.class public final synthetic Ll/ۜۚ᩸;
+.super Ljava/lang/Object;
+.source "61L9"
 
-
-# instance fields
-.field public final synthetic ܰ:Ljava/lang/reflect/Method;
+# interfaces
+.implements Ll/ᩴۨۙ;
+.implements Ll/᩻ܶ᩵;
+.implements Ll/۬᩺ۤ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Method;)V
-    .locals 0
+.method public static ۙ(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    .line 80
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 91
-    iput-object p1, p0, Ll/ۜۚ᩸;->ܰ:Ljava/lang/reflect/Method;
+    .line 1
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 4
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;Ljava/lang/reflect/AccessibleObject;)Z
-    .locals 3
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 95
-    :try_start_0
-    iget-object v0, p0, Ll/ۜۚ᩸;->ܰ:Ljava/lang/reflect/Method;
+    .line 2
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/4 v1, 0x1
+    .line 4
+    sget v0, Ll/ۖ֫᩸;->۟᩷:I
 
-    new-array v1, v1, [Ljava/lang/Object;
+    .line 1249
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x0
 
-    aput-object p1, v1, v2
+    return-object p1
+.end method
 
-    invoke-virtual {v0, p2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+.method public invoke(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object p1
+    .line 2
+    check-cast p1, Ll/ᩴᩳۙ;
 
-    check-cast p1, Ljava/lang/Boolean;
+    .line 268
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-void
+.end method
+
+.method public ۙ(II)I
+    .locals 1
+
+    const p1, -0xb8b8b9
+
+    if-ne p2, p1, :cond_0
+
+    .line 638
+    sget p1, Ll/ۗۡ֫;->ۧ:I
+
+    const v0, 0x3f59999a    # 0.85f
+
+    invoke-static {p1, p2, v0}, Ll/ᩴᩳ;->ۙ(IIF)I
 
     move-result p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return p1
 
-    :catch_0
-    move-exception p1
-
-    .line 97
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    const-string v0, "Failed invoking canAccess"
-
-    invoke-direct {p2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
+    :cond_0
+    return p2
 .end method

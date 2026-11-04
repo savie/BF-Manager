@@ -1,30 +1,62 @@
 package l;
 
-import java.io.FilterInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.util.Map;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ᩳᩳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6V7 */
+/* JADX INFO: renamed from: l.ܿۡۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5BW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18218 extends FilterInputStream implements InterfaceC20818 {
+public final /* synthetic */ class C18218 implements Predicate {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9047 f58185;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f59476;
 
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    public /* synthetic */ C18218(int i) {
+        this.f59476 = i;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C18218(InputStream inputStream, C9047 c9047) {
-        super(inputStream);
-        this.f58185 = c9047;
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        this.f58185.close();
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f59476) {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f59476) {
+            case 0:
+                return ((AbstractC14806) obj) != C3620.m11750();
+            case 1:
+                return C17359.nonNull((String) obj);
+            case 2:
+                return ((C8002) obj).isDirectory();
+            case 3:
+                return ((int[]) ((Map.Entry) obj).getValue())[1] != -1;
+            case 4:
+                return (C11239.m28344((AbstractC8036) ((InterfaceC19637) obj)) & 16777216) == 0;
+            default:
+                return ((C21943) obj).mo17865(EnumC1763.REMOVE);
+        }
     }
 }

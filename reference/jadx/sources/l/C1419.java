@@ -1,115 +1,73 @@
 package l;
 
-import android.content.Intent;
-import android.graphics.drawable.LayerDrawable;
-import android.os.SystemClock;
-import android.view.View;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
+import com.alipay.sdk.m.y.q;
 
-/* JADX INFO: renamed from: l.֨᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5X2 */
-/* JADX INFO: loaded from: classes.dex */
-public final class C1419 {
+/* JADX INFO: renamed from: l.֨᩶۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6AF6 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1419 extends AbstractC20042 {
 
-    /* JADX INFO: renamed from: ۬᩺ܰ, reason: not valid java name and contains not printable characters */
-    public static int f5860;
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public C9097 f5006;
 
-    /* JADX INFO: renamed from: ֨ۘۗ, reason: not valid java name and contains not printable characters */
-    public static void m4962(Object obj, Object obj2) {
-        ((C19722) obj).m44846((String[]) obj2);
-    }
-
-    /* JADX INFO: renamed from: ۖۤܳ, reason: not valid java name and contains not printable characters */
-    public static void m4963(Object obj, Object obj2) {
-        ((C6938) obj).setSubtitle((CharSequence) obj2);
-    }
-
-    /* JADX INFO: renamed from: ۗ᩷ۛ, reason: not valid java name and contains not printable characters */
-    public static boolean m4964(Object obj) {
-        return ((ArrayList) obj).isEmpty();
-    }
-
-    /* JADX INFO: renamed from: ۟ۙ۬, reason: not valid java name and contains not printable characters */
-    public static C3040 m4966(Object obj) {
-        return ((ActivityC4471) obj).f15887;
-    }
-
-    /* JADX INFO: renamed from: ۠᩸ܿ, reason: not valid java name and contains not printable characters */
-    public static Object m4967(Object obj, int i) {
-        return ((ArrayList) obj).get(i);
-    }
-
-    /* JADX INFO: renamed from: ۡܽۗ, reason: not valid java name and contains not printable characters */
-    public static void m4968(Object obj, Object obj2) {
-        ((C6111) obj).mo16989((CharSequence) obj2);
-    }
-
-    /* JADX INFO: renamed from: ۧۖܿ, reason: not valid java name and contains not printable characters */
-    public static String m4969(short[] sArr, int i, int i2, int i3) {
-        char[] cArr = new char[i2];
-        for (int i4 = 0; i4 < i2; i4++) {
-            cArr[i4] = (char) (sArr[i + i4] ^ i3);
+    public C1419(C17630 c17630, String str) {
+        super(c17630.m41279(), str, c17630.m41278(), c17630.m41272(), c17630.m41276(), !c17630.m41280());
+        if ((c17630.m41273().m52101() & 4) != 0) {
+            String[] strArrSplit = c17630.m41277().split("\\s+", 5);
+            if (strArrSplit.length == 5) {
+                int i = 0;
+                String str2 = strArrSplit[0];
+                String str3 = strArrSplit[2];
+                String str4 = strArrSplit[3];
+                if (str2.length() != 10) {
+                    return;
+                }
+                try {
+                    int iM18957 = C6790.m18957(str2.substring(1));
+                    char cCharAt = str2.charAt(0);
+                    if (cCharAt == '-') {
+                        i = 32768;
+                    } else if (cCharAt == 'l') {
+                        i = 40960;
+                    } else if (cCharAt == 'p') {
+                        i = 4096;
+                    } else if (cCharAt != 's') {
+                        switch (cCharAt) {
+                            case 'b':
+                                i = 24576;
+                                break;
+                            case q.f /* 99 */:
+                                i = 8192;
+                                break;
+                            case 'd':
+                                i = 16384;
+                                break;
+                        }
+                    } else {
+                        i = 49152;
+                    }
+                    if (i == 0) {
+                        return;
+                    }
+                    this.f5006 = new C9097(i | iM18957, str3, str4);
+                } catch (IllegalArgumentException unused) {
+                }
+            }
         }
-        return new String(cArr);
     }
 
-    /* JADX INFO: renamed from: ۧ۫۫, reason: not valid java name and contains not printable characters */
-    public static Object m4970(Object obj) {
-        return C13638.requireNonNull(obj);
+    @Override // l.C13352, l.InterfaceC2386
+    /* JADX INFO: renamed from: ۛ᩷, reason: not valid java name and contains not printable characters */
+    public final C9097 mo5155() {
+        return this.f5006;
     }
 
-    /* JADX INFO: renamed from: ۨۛܿ, reason: not valid java name and contains not printable characters */
-    public static int m4971(Object obj) {
-        return ((InterfaceC4685) obj).mo1140();
-    }
-
-    /* JADX INFO: renamed from: ۬ܽ᩻, reason: not valid java name and contains not printable characters */
-    public static long m4972() {
-        return SystemClock.uptimeMillis();
-    }
-
-    /* JADX INFO: renamed from: ܳۤۖ, reason: not valid java name and contains not printable characters */
-    public static boolean m4973() {
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ܳ᩵ܳ, reason: not valid java name and contains not printable characters */
-    public static boolean m4974(Object obj) {
-        return ((AbstractC20745) obj).mo33974();
-    }
-
-    /* JADX INFO: renamed from: ᩴ֡֫, reason: not valid java name and contains not printable characters */
-    public static void m4975(Object obj) throws IOException {
-        ((OutputStream) obj).close();
-    }
-
-    /* JADX INFO: renamed from: ᩴ֨᩷, reason: not valid java name and contains not printable characters */
-    public static View m4976(Object obj, int i) {
-        return ((AbstractActivityC12483) obj).m30995(i);
-    }
-
-    /* JADX INFO: renamed from: ᩷ܽᩴ, reason: not valid java name and contains not printable characters */
-    public static void m4977(Object obj, Object obj2) {
-        ((InterfaceC17421) obj).startActivity((Intent) obj2);
-    }
-
-    /* JADX INFO: renamed from: ᩹ܽۧ, reason: not valid java name and contains not printable characters */
-    public static void m4978(Object obj) {
-        ((C17485) obj).m40694();
-    }
-
+    @Override // l.AbstractC20042
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m4965(LayerDrawable layerDrawable, LayerDrawable layerDrawable2, int i) {
-        layerDrawable2.setLayerGravity(i, layerDrawable.getLayerGravity(i));
-        layerDrawable2.setLayerWidth(i, layerDrawable.getLayerWidth(i));
-        layerDrawable2.setLayerHeight(i, layerDrawable.getLayerHeight(i));
-        layerDrawable2.setLayerInsetLeft(i, layerDrawable.getLayerInsetLeft(i));
-        layerDrawable2.setLayerInsetRight(i, layerDrawable.getLayerInsetRight(i));
-        layerDrawable2.setLayerInsetTop(i, layerDrawable.getLayerInsetTop(i));
-        layerDrawable2.setLayerInsetBottom(i, layerDrawable.getLayerInsetBottom(i));
-        layerDrawable2.setLayerInsetStart(i, layerDrawable.getLayerInsetStart(i));
-        layerDrawable2.setLayerInsetEnd(i, layerDrawable.getLayerInsetEnd(i));
+    public final void mo5154(C9097 c9097) {
+        if (this.f5006 == null) {
+            throw new UnsupportedOperationException();
+        }
+        this.f5006 = c9097;
     }
 }

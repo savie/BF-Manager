@@ -1,25 +1,21 @@
 package l;
 
-import java.util.function.BiPredicate;
-
-/* JADX INFO: renamed from: l.ܶ᩻ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M43N */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15562 implements BiPredicate {
-    public /* synthetic */ BiPredicate and(BiPredicate biPredicate) {
-        return C22623.$default$and(this, biPredicate);
+/* JADX INFO: renamed from: l.ܳ᩵ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 35MO */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15562 extends AbstractC13567 {
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3618(int i, Object obj) {
+        C11833 c11833 = (C11833) obj;
+        int i2 = c11833.f38162;
+        c11833.f38162 = i;
+        return i2;
     }
 
-    public /* synthetic */ BiPredicate negate() {
-        return C22623.$default$negate(this);
-    }
-
-    public /* synthetic */ BiPredicate or(BiPredicate biPredicate) {
-        return C22623.$default$or(this, biPredicate);
-    }
-
-    @Override // java.util.function.BiPredicate
-    public final boolean test(Object obj, Object obj2) {
-        return ((AbstractC16579) obj2).m39005(((C19524) obj).f62771);
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3619(Object obj) {
+        return ((C11833) obj).f38162;
     }
 }

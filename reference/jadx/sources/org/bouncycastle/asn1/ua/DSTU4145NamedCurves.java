@@ -7,7 +7,7 @@ import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.WNafUtil;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU4145NamedCurves {
     public static final BigInteger ONE;
     public static final BigInteger ZERO;

@@ -7,7 +7,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.pkcs.IssuerAndSerialNumber;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PrivateKeyPossessionStatement extends ASN1Object {
     public final Certificate cert;
     public final IssuerAndSerialNumber signer;

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import org.simpleframework.xml.core.AnnotationHandler;
 
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AWSS3V4Signer extends AWS4Signer {
     @Override // com.amazonaws.auth.AWS4Signer
     public final String calculateContentHashPresign(Request request) {
@@ -27,35 +27,35 @@ public class AWSS3V4Signer extends AWS4Signer {
     public final String calculateContentHash(Request request) {
         long j;
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        defaultRequest.m185("x-amz-content-sha256", AnnotationHandler.REQUIRED);
-        if ((defaultRequest.m189() instanceof PutObjectRequest) || (defaultRequest.m189() instanceof UploadPartRequest)) {
-            String str = (String) defaultRequest.m191().get("Content-Length");
+        defaultRequest.m177("x-amz-content-sha256", AnnotationHandler.REQUIRED);
+        if ((defaultRequest.m186() instanceof PutObjectRequest) || (defaultRequest.m186() instanceof UploadPartRequest)) {
+            String str = (String) defaultRequest.m182().get("Content-Length");
             if (str != null) {
                 j = Long.parseLong(str);
             } else {
                 try {
-                    InputStream inputStreamM180 = defaultRequest.m180();
-                    if (!inputStreamM180.markSupported()) {
+                    InputStream inputStreamM172 = defaultRequest.m172();
+                    if (!inputStreamM172.markSupported()) {
                         throw new AmazonClientException("Failed to get content length");
                     }
                     byte[] bArr = new byte[4096];
-                    inputStreamM180.mark(-1);
+                    inputStreamM172.mark(-1);
                     long j2 = 0;
                     while (true) {
-                        int i = inputStreamM180.read(bArr);
+                        int i = inputStreamM172.read(bArr);
                         if (i == -1) {
                             break;
                         }
                         j2 += (long) i;
                     }
-                    inputStreamM180.reset();
+                    inputStreamM172.reset();
                     j = j2;
                 } catch (IOException e) {
                     throw new AmazonClientException("Cannot get the content-lenght of the request content.", e);
                 }
             }
-            defaultRequest.m185("x-amz-decoded-content-length", Long.toString(j));
-            defaultRequest.m185("Content-Length", Long.toString(AwsChunkedEncodingInputStream.m212(j)));
+            defaultRequest.m177("x-amz-decoded-content-length", Long.toString(j));
+            defaultRequest.m177("Content-Length", Long.toString(AwsChunkedEncodingInputStream.m208(j)));
             return "STREAMING-AWS4-HMAC-SHA256-PAYLOAD";
         }
         return super.calculateContentHash(defaultRequest);
@@ -64,8 +64,8 @@ public class AWSS3V4Signer extends AWS4Signer {
     @Override // com.amazonaws.auth.AWS4Signer
     public final void processRequestPayload(Request request, AWS4Signer.HeaderSigningResult headerSigningResult) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        if ((defaultRequest.m189() instanceof PutObjectRequest) || (defaultRequest.m189() instanceof UploadPartRequest)) {
-            defaultRequest.m183(new AwsChunkedEncodingInputStream(defaultRequest.m180(), headerSigningResult.m205(), headerSigningResult.m203(), headerSigningResult.m204(), BinaryUtils.m750(headerSigningResult.m202()), this));
+        if ((defaultRequest.m186() instanceof PutObjectRequest) || (defaultRequest.m186() instanceof UploadPartRequest)) {
+            defaultRequest.m175(new AwsChunkedEncodingInputStream(defaultRequest.m172(), headerSigningResult.m198(), headerSigningResult.m196(), headerSigningResult.m197(), BinaryUtils.m744(headerSigningResult.m199()), this));
         }
     }
 }

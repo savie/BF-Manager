@@ -1,29 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۜ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: F70I */
+/* JADX INFO: renamed from: l.ۧۢ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6U1 */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C11538 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13655 f38772;
+    public final char[] f36289;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final EnumC2364 f38773;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f36290;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C11538 f38771 = new C11538(EnumC2364.NOT_FOUND, null);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C21170 f36291;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C11538 f38770 = new C11538(EnumC2364.UNAVAILABLE, null);
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C14784 f36292;
 
-    public C11538(EnumC2364 enumC2364, C13655 c13655) {
-        this.f38773 = enumC2364;
-        this.f38772 = c13655;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f36293;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f36294;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C11538 m28712(C13655 c13655) {
-        return new C11538(EnumC2364.FOUND, c13655);
+    public final char[] m29040() {
+        return this.f36289;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m29041() {
+        return this.f36294;
+    }
+
+    public C11538(C14784 c14784, char[] cArr, int i, C21170 c21170, int i2) {
+        this.f36292 = c14784;
+        this.f36289 = cArr;
+        this.f36294 = i;
+        this.f36291 = c21170;
+        this.f36290 = i2;
     }
 }

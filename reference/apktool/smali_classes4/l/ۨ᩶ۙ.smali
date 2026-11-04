@@ -1,3 +1,3 @@
-.class public final Ll/ۨ᩶ۙ;
-.super Ll/۟ܺۙ;
-.source "C8DT"
+.class public interface abstract Ll/ۨ᩶ۙ;
+.super Ljava/lang/Object;
+.source "E8KH"

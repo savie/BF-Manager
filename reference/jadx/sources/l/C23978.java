@@ -1,18 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻᩹֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: FAG9 */
+/* JADX INFO: renamed from: l.᩺֫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: W8IL */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23978 extends C19635 {
-    public C23978() {
-        m44736();
-        int i = C5464.f18831;
-        m44744(i);
-        m44739(i);
-        m44740(C21813.ofMinutes(2L));
-        m44748(C21813.ofMinutes(1L));
-        m44745(C21813.ofSeconds(30L));
-        m44742();
-        m44746();
+public final class C23978 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f77596;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f77597;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f77598;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f77599;
+
+    public C23978(int i, int i2, int i3, boolean z) {
+        this.f77597 = i;
+        this.f77596 = i2;
+        this.f77598 = i3;
+        this.f77599 = z;
     }
 }

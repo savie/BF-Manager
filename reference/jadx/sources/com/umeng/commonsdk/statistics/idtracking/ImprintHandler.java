@@ -34,7 +34,7 @@ public class ImprintHandler implements FileLockCallback {
     public static Context k = null;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static FileLockUtil f77953l = null;
+    public static FileLockUtil f82069l = null;
     public static final int m = 0;
     public static final int n = 1;
     public com.umeng.commonsdk.statistics.internal.d e;
@@ -61,8 +61,8 @@ public class ImprintHandler implements FileLockCallback {
     public static synchronized ImprintHandler getImprintService(Context context) {
         if (j == null) {
             j = new ImprintHandler(context);
-            f77953l = new FileLockUtil();
-            f77953l.doFileOperateion(new File(k.getFilesDir(), c), j, 0);
+            f82069l = new FileLockUtil();
+            f82069l.doFileOperateion(new File(k.getFilesDir(), c), j, 0);
         }
         return j;
     }
@@ -509,7 +509,7 @@ public class ImprintHandler implements FileLockCallback {
     }
 
     public void d() {
-        if (this.i == null || f77953l == null) {
+        if (this.i == null || f82069l == null) {
             return;
         }
         File file = new File(k.getFilesDir(), c);
@@ -524,7 +524,7 @@ public class ImprintHandler implements FileLockCallback {
                 file.createNewFile();
             }
         }
-        f77953l.doFileOperateion(file, j, 1);
+        f82069l.doFileOperateion(file, j, 1);
     }
 
     public class a {

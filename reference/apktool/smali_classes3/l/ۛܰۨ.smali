@@ -1,24 +1,32 @@
 .class public final Ll/ۛܰۨ;
-.super Ljava/lang/Object;
-.source "NAO7"
-
-# interfaces
-.implements Ll/ۢۙۨ;
+.super Ll/᩺ܿۨ;
+.source "K6LD"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/᩻ܰۨ;
+.field public final ۫:Z
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ܰۨ;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    .line 137
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 6
+    invoke-direct {p0}, Ll/ۙ֡ۨ;-><init>()V
 
-    .line 138
-    iput-object p1, p0, Ll/ۛܰۨ;->ۙ:Ll/᩻ܰۨ;
+    .line 11
+    iput-boolean p1, p0, Ll/ۛܰۨ;->۫:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final ֫()Z
+    .locals 1
+
+    .line 15
+    iget-boolean v0, p0, Ll/ۛܰۨ;->۫:Z
+
+    return v0
 .end method

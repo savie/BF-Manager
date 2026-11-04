@@ -7,11 +7,11 @@ import com.amazonaws.Response;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class RequestHandler2 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public abstract void mo241(DefaultRequest defaultRequest);
+    public abstract void mo235(DefaultRequest defaultRequest);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public abstract void mo242(DefaultRequest defaultRequest, AmazonClientException amazonClientException);
+    public abstract void mo236(DefaultRequest defaultRequest, AmazonClientException amazonClientException);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public abstract void mo243(DefaultRequest defaultRequest, Response response);
+    public abstract void mo237(DefaultRequest defaultRequest, Response response);
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.math.ec.custom.sec;
 
-import l.C0833;
+import l.C1402;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECFieldElement;
@@ -180,15 +180,15 @@ public class SecT283R1Point extends ECPoint.AbstractF2m {
         boolean zIsOne = eCFieldElement2.isOne();
         ECFieldElement eCFieldElementMultiply2 = zIsOne ? eCFieldElement : eCFieldElement.multiply(eCFieldElement2);
         ECFieldElement eCFieldElementSquare = zIsOne ? eCFieldElement2 : eCFieldElement2.square();
-        ECFieldElement eCFieldElementM3430 = C0833.m3430(eCFieldElement, eCFieldElementMultiply2, eCFieldElementSquare);
-        if (eCFieldElementM3430.isZero()) {
-            return new SecT283R1Point(curve, eCFieldElementM3430, curve.getB().sqrt());
+        ECFieldElement eCFieldElementM5128 = C1402.m5128(eCFieldElement, eCFieldElementMultiply2, eCFieldElementSquare);
+        if (eCFieldElementM5128.isZero()) {
+            return new SecT283R1Point(curve, eCFieldElementM5128, curve.getB().sqrt());
         }
-        ECFieldElement eCFieldElementSquare2 = eCFieldElementM3430.square();
-        ECFieldElement eCFieldElementMultiply3 = zIsOne ? eCFieldElementM3430 : eCFieldElementM3430.multiply(eCFieldElementSquare);
+        ECFieldElement eCFieldElementSquare2 = eCFieldElementM5128.square();
+        ECFieldElement eCFieldElementMultiply3 = zIsOne ? eCFieldElementM5128 : eCFieldElementM5128.multiply(eCFieldElementSquare);
         if (!zIsOne) {
             eCFieldElementMultiply = eCFieldElementMultiply.multiply(eCFieldElement2);
         }
-        return new SecT283R1Point(curve, eCFieldElementSquare2, eCFieldElementMultiply.squarePlusProduct(eCFieldElementM3430, eCFieldElementMultiply2).add(eCFieldElementSquare2).add(eCFieldElementMultiply3), new ECFieldElement[]{eCFieldElementMultiply3});
+        return new SecT283R1Point(curve, eCFieldElementSquare2, eCFieldElementMultiply.squarePlusProduct(eCFieldElementM5128, eCFieldElementMultiply2).add(eCFieldElementSquare2).add(eCFieldElementMultiply3), new ECFieldElement[]{eCFieldElementMultiply3});
     }
 }

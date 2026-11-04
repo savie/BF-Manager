@@ -5,7 +5,7 @@ import net.engio.mbassy.bus.error.PublicationError;
 import net.engio.mbassy.subscription.AbstractSubscriptionContextAware;
 import net.engio.mbassy.subscription.SubscriptionContext;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class HandlerInvocation extends AbstractSubscriptionContextAware implements IHandlerInvocation {
     public HandlerInvocation(SubscriptionContext subscriptionContext) {
         super(subscriptionContext);

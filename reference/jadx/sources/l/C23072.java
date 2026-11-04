@@ -1,35 +1,48 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ܶۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V5JI */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23072 extends C9770 {
+import java.io.IOException;
+import java.util.zip.ZipEntry;
 
-    /* JADX INFO: renamed from: ۧ᩵, reason: not valid java name and contains not printable characters */
-    public C1198 f74958;
+/* JADX INFO: renamed from: l.᩸᩷ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S50A */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23072 extends AbstractC18217 {
 
-    public C23072(C17063 c17063) {
-        super(c17063);
-        this.f74958 = null;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20088 f74847;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17850 f74848;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0318 f74849;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23072(C20088 c20088, C17850 c17850, C17850 c17851, C0318 c0318) {
+        super(c17850);
+        this.f74847 = c20088;
+        this.f74848 = c17851;
+        this.f74849 = c0318;
     }
 
-    /* JADX INFO: renamed from: ᩳۨ, reason: not valid java name and contains not printable characters */
-    public final C22085 m51049() {
-        return this.f74958;
-    }
-
-    @Override // l.AbstractC19886
+    @Override // l.AbstractC18217
     /* JADX INFO: renamed from: ۙ */
-    public final void mo36669(C22085 c22085, String[] strArr) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.f8256.m39848());
-        sb.append("[");
-        sb.append(c22085.f71538);
-        sb.append(",");
-        String strM5594 = C1679.m5594(C12441.m30911(c22085.f71540, "]", sb), " ", mo30315(c22085, strArr));
-        System.err.println(strM5594);
-        if (this.f74958 == null) {
-            this.f74958 = new C1198(strM5594, c22085);
+    public final void mo2000() {
+        super.mo2000();
+        String strM41698 = this.f74848.m41698();
+        try {
+            byte[] bArrM2010 = this.f74849.m2010();
+            try {
+                synchronized (this.f74847.f64565) {
+                    this.f74847.f64565.putNextEntry(new ZipEntry(strM41698 + ".class"));
+                    this.f74847.f64565.write(bArrM2010);
+                    this.f74847.f64565.closeEntry();
+                }
+            } catch (IOException e) {
+                throw new C16601(e);
+            }
+        } catch (Throwable th) {
+            throw new C16601(C25272.m56409("ASM fail to generate .class file: ", strM41698), th);
         }
     }
 }

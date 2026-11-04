@@ -1,13 +1,13 @@
 package org.bouncycastle.crypto.util;
 
 import java.io.IOException;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DerUtil {
     public static ASN1OctetString getOctetString(byte[] bArr) {
         return bArr == null ? new DEROctetString(new byte[0]) : new DEROctetString(Arrays.clone(bArr));
@@ -17,7 +17,7 @@ public class DerUtil {
         try {
             return aSN1Primitive.getEncoded();
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("Cannot get encoding: "))) { // from class: org.bouncycastle.crypto.util.DerUtil.1
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("Cannot get encoding: "))) { // from class: org.bouncycastle.crypto.util.DerUtil.1
                 @Override // java.lang.Throwable
                 public Throwable getCause() {
                     return e;

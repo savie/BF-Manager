@@ -102,7 +102,7 @@
     const-string v2, "alter table "
 
     .line 0
-    invoke-static {v2, p1, v0, p2, v1}, Ll/۫۠ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p1, v0, p2, v1}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

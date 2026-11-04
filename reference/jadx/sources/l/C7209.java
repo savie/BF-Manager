@@ -1,68 +1,40 @@
 package l;
 
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.Outline;
-import android.graphics.drawable.Drawable;
+/* JADX INFO: renamed from: l.ۜܳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E29Y */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7209 implements InterfaceC3573 {
 
-/* JADX INFO: renamed from: l.۟ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9649 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7209 extends Drawable {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13920 f23788;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C20615 f24018;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10872 f23789;
 
-    @Override // android.graphics.drawable.Drawable
-    public final int getOpacity() {
-        return 0;
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ */
+    public final /* synthetic */ void mo3465() {
+        throw null;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final void setAlpha(int i) {
+    public C7209(C13920 c13920, C10872 c10872) {
+        this.f23788 = c13920;
+        this.f23789 = c10872;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final void setColorFilter(ColorFilter colorFilter) {
+    @Override // l.InterfaceC3573
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3466(long j, long j2, long j3) {
+        C10872 c10872 = this.f23789;
+        c10872.m27612(j);
+        C13920 c13920 = this.f23788;
+        c13920.m45193(j2, j3);
+        c13920.m43862(c10872.m27615(), c10872.m27616());
     }
 
-    public C7209(C20615 c20615) {
-        this.f24018 = c20615;
-    }
-
-    @Override // android.graphics.drawable.Drawable
-    public final void draw(Canvas canvas) {
-        C20615 c20615 = this.f24018;
-        if (c20615.f67155) {
-            Drawable drawable = c20615.f67154;
-            if (drawable != null) {
-                drawable.draw(canvas);
-                return;
-            }
-            return;
-        }
-        Drawable drawable2 = c20615.f67159;
-        if (drawable2 != null) {
-            drawable2.draw(canvas);
-        }
-        Drawable drawable3 = c20615.f67160;
-        if (drawable3 == null || !c20615.f67158) {
-            return;
-        }
-        drawable3.draw(canvas);
-    }
-
-    @Override // android.graphics.drawable.Drawable
-    public final void getOutline(Outline outline) {
-        C20615 c20615 = this.f24018;
-        boolean z = c20615.f67155;
-        Drawable drawable = c20615.f67159;
-        if (z) {
-            if (c20615.f67154 != null) {
-                drawable.getOutline(outline);
-            }
-        } else if (drawable != null) {
-            drawable.getOutline(outline);
-        }
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f23788.mo924();
     }
 }

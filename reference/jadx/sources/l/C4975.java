@@ -1,23 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩻۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: JAW9 */
+/* JADX INFO: renamed from: l.ۙܳܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51V0 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4975 implements InterfaceC14522 {
+public final class C4975 extends AbstractC18155 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22386 f17350;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC16791 f17300;
 
-    public C4975(InterfaceC22386 interfaceC22386) {
-        this.f17350 = interfaceC22386;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f17301;
+
+    public C4975(String str, InterfaceC16791 interfaceC16791) {
+        this.f17301 = str;
+        this.f17300 = interfaceC16791;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22386 m13803() {
-        return this.f17350;
+    @Override // l.InterfaceC19073
+    public final String getName() {
+        return this.f17301;
     }
 
-    public final String toString() {
-        return "CoroutineScope(coroutineContext=" + this.f17350 + ')';
+    @Override // l.InterfaceC19073
+    public final InterfaceC16791 getValue() {
+        return this.f17300;
     }
 }

@@ -1067,7 +1067,7 @@
     move-wide/from16 v33, v7
 
     .line 602
-    invoke-static/range {v27 .. v34}, Ll/ᩳ֫ᩳ;->ۙ(DDDD)D
+    invoke-static/range {v27 .. v34}, Ll/᩸ᩳ;->ۙ(DDDD)D
 
     move-result-wide v27
 

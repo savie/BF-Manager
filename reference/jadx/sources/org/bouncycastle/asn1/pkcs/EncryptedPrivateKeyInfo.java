@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EncryptedPrivateKeyInfo extends ASN1Object {
     public AlgorithmIdentifier algId;
     public ASN1OctetString data;

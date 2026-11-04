@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C18917;
-import l.C7997;
+import l.C18011;
+import l.C22121;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
@@ -19,9 +19,9 @@ public class CMCE {
             configurableProvider.addAlgorithm("KeyPairGenerator.CMCE", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCEKeyPairGeneratorSpi");
             configurableProvider.addAlgorithm("KeyGenerator.CMCE", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCEKeyGeneratorSpi");
             CMCEKeyFactorySpi cMCEKeyFactorySpi = new CMCEKeyFactorySpi();
-            StringBuilder sbM43575 = C18917.m43575(configurableProvider, "Cipher.CMCE", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCECipherSpi$Base", "Alg.Alias.Cipher.");
+            StringBuilder sbM50077 = C22121.m50077(configurableProvider, "Cipher.CMCE", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCECipherSpi$Base", "Alg.Alias.Cipher.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = BCObjectIdentifiers.pqc_kem_mceliece;
-            C7997.m21058(sbM43575, aSN1ObjectIdentifier, configurableProvider, "CMCE");
+            C18011.m41992(sbM50077, aSN1ObjectIdentifier, configurableProvider, "CMCE");
             addCipherAlgorithm(configurableProvider, "mceliece348864", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCECipherSpi$MCE348864", BCObjectIdentifiers.mceliece348864_r3);
             addCipherAlgorithm(configurableProvider, "mceliece460896", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCECipherSpi$MCE460896", BCObjectIdentifiers.mceliece460896_r3);
             addCipherAlgorithm(configurableProvider, "mceliece6688128", "org.bouncycastle.pqc.jcajce.provider.cmce.CMCECipherSpi$MCE6688128", BCObjectIdentifiers.mceliece6688128_r3);

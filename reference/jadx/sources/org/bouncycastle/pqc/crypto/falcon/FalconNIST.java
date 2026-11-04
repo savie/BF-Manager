@@ -1,8 +1,8 @@
 package org.bouncycastle.pqc.crypto.falcon;
 
 import java.security.SecureRandom;
-import l.C0833;
-import l.C1694;
+import l.C12669;
+import l.C7376;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.util.Arrays;
 
@@ -22,7 +22,7 @@ public class FalconNIST {
         this.NONCELEN = i2;
         int i3 = 1 << i;
         this.N = i3;
-        this.CRYPTO_PUBLICKEYBYTES = C0833.m3428(i3, 14, 8, 1);
+        this.CRYPTO_PUBLICKEYBYTES = C7376.m20246(i3, 14, 8, 1);
         if (i == 10) {
             this.CRYPTO_SECRETKEYBYTES = 2305;
             this.CRYPTO_BYTES = 1330;
@@ -35,7 +35,7 @@ public class FalconNIST {
             this.CRYPTO_SECRETKEYBYTES = ((i3 * 14) / 8) + 1 + i3;
             this.CRYPTO_BYTES = 690;
         } else {
-            this.CRYPTO_SECRETKEYBYTES = C1694.m5620(i3, 2, 1, i3);
+            this.CRYPTO_SECRETKEYBYTES = C12669.m31436(i3, 2, 1, i3);
             this.CRYPTO_BYTES = 690;
         }
     }

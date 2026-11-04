@@ -1,18 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ۫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: W5DU */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C6063 implements InterfaceC1594 {
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۜ */
-    public final EnumC10297 mo5435() {
-        throw null;
-    }
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.LongUnaryOperator;
 
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۡ */
-    public final int mo5436() {
-        throw null;
+/* JADX INFO: renamed from: l.ۛ֫ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public class C6063 {
+    public static long updateAndGet(AtomicLong atomicLong, LongUnaryOperator longUnaryOperator) {
+        long j;
+        long jApplyAsLong;
+        do {
+            j = atomicLong.get();
+            jApplyAsLong = longUnaryOperator.applyAsLong(j);
+        } while (!atomicLong.compareAndSet(j, jApplyAsLong));
+        return jApplyAsLong;
     }
 }

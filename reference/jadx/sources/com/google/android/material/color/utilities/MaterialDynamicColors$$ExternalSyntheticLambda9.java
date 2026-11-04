@@ -1,29 +1,36 @@
 package com.google.android.material.color.utilities;
 
 import java.util.function.Function;
-import l.C4277;
+import l.C24247;
 
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class MaterialDynamicColors$$ExternalSyntheticLambda9 implements Function {
+    public final /* synthetic */ int $r8$classId;
     public final /* synthetic */ MaterialDynamicColors f$0;
 
-    public /* synthetic */ MaterialDynamicColors$$ExternalSyntheticLambda9(MaterialDynamicColors materialDynamicColors) {
+    public /* synthetic */ MaterialDynamicColors$$ExternalSyntheticLambda9(MaterialDynamicColors materialDynamicColors, int i) {
+        this.$r8$classId = i;
         this.f$0 = materialDynamicColors;
     }
 
     @Override // java.util.function.Function
     /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
     @Override // java.util.function.Function
     public final Object apply(Object obj) {
-        return this.f$0.highestSurface((DynamicScheme) obj);
+        switch (this.$r8$classId) {
+            case 0:
+                return this.f$0.highestSurface((DynamicScheme) obj);
+            default:
+                return this.f$0.lambda$secondary$69((DynamicScheme) obj);
+        }
     }
 
     @Override // java.util.function.Function
     public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+        return C24247.$default$compose(this, function);
     }
 }

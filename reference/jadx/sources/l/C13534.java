@@ -1,54 +1,62 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.concurrent.Future;
+import com.google.android.material.motion.MotionUtils;
+import com.umeng.commonsdk.UMConfigure;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.regex.Pattern;
+import net.engio.mbassy.listener.MessageHandler;
+import org.simpleframework.xml.strategy.Name;
+import org.simpleframework.xml.transform.ClassTransform;
 
-/* JADX INFO: renamed from: l.ܰۖᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L9E4 */
+/* JADX INFO: renamed from: l.۬֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: EIWH */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13534 extends AbstractC17535 {
+public final class C13534 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Future f44691;
+    public static final HashSet f43003;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f44692;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Pattern f43004;
 
-    public C13534() {
-        throw null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Pattern f43005;
+
+    static {
+        Pattern patternCompile = Pattern.compile("\\p{javaJavaIdentifierStart}\\p{javaJavaIdentifierPart}*");
+        f43004 = patternCompile;
+        f43005 = Pattern.compile(MotionUtils.EASING_TYPE_FORMAT_START + patternCompile + "\\.)*" + patternCompile);
+        f43003 = new HashSet(Arrays.asList("_", "abstract", "assert", ClassTransform.BOOLEAN, "break", ClassTransform.BYTE, "case", "catch", ClassTransform.CHARACTER, Name.LABEL, "const", "continue", "default", "do", ClassTransform.DOUBLE, "else", "enum", "extends", "false", "final", "finally", ClassTransform.FLOAT, "for", "goto", "if", "implements", "import", "instanceof", ClassTransform.INTEGER, "interface", ClassTransform.LONG, UMConfigure.WRAPER_TYPE_NATIVE, "new", "null", "package", "private", "protected", "public", "return", ClassTransform.SHORT, "static", "strictfp", "super", "switch", MessageHandler.Properties.IsSynchronized, "this", "throw", "throws", "transient", "true", "try", ClassTransform.VOID, "volatile", "while"));
     }
 
-    public C13534(C13557 c13557, int i) {
-        this.f44691 = c13557;
-        this.f44692 = i;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C13534)) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m33239(String str) {
+        int i = C12326.f39603;
+        if (str == null || str.isEmpty() || f43003.contains(str) || !f43004.matcher(str).matches()) {
             return false;
         }
-        C13534 c13534 = (C13534) obj;
-        return this.f44692 == c13534.f44692 && C13638.equals(this.f44691, c13534.f44691);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f44691) + (this.f44692 * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f44691, Integer.valueOf(this.f44692)};
-        String[] strArrSplit = "future;length".length() == 0 ? new String[0] : "future;length".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C13534.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+        int length = str.length();
+        int iCharCount = 0;
+        while (iCharCount < length) {
+            int iCodePointAt = str.codePointAt(iCharCount);
+            if (32 > iCodePointAt || iCodePointAt > 126) {
+                return false;
             }
+            iCharCount += Character.charCount(iCodePointAt);
         }
-        sb.append("]");
-        return sb.toString();
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m33240(String str) {
+        int i = C12326.f39603;
+        return (str == null || str.isEmpty() || f43003.contains(str) || !f43004.matcher(str).matches()) ? false : true;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m33241(String str) {
+        int i = C12326.f39603;
+        return (str == null || str.isEmpty() || f43003.contains(str) || !f43005.matcher(str).matches()) ? false : true;
     }
 }

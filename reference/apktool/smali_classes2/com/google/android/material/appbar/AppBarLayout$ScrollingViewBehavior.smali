@@ -20,7 +20,7 @@
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2372
-    sget-object v0, Ll/۠۟ܶ;->ۨ۬ۙ:[I
+    sget-object v0, Ll/ܰ۬ܺ;->ۤۚۙ:[I
 
     .line 2373
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -28,7 +28,7 @@
     move-result-object p1
 
     .line 2374
-    sget p2, Ll/۠۟ܶ;->ۖ۬ۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩸ۚۙ:I
 
     const/4 v0, 0x0
 
@@ -54,9 +54,9 @@
 
     move-result-object p0
 
-    check-cast p0, Ll/ۢܺ;
+    check-cast p0, Ll/ܳ᩶;
 
-    invoke-virtual {p0}, Ll/ۢܺ;->ۨ()Ll/᩻ܺ;
+    invoke-virtual {p0}, Ll/ܳ᩶;->ۤ()Ll/ۤ᩶;
 
     move-result-object p0
 
@@ -88,9 +88,9 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/ۢܺ;
+    check-cast v0, Ll/ܳ᩶;
 
-    invoke-virtual {v0}, Ll/ۢܺ;->ۨ()Ll/᩻ܺ;
+    invoke-virtual {v0}, Ll/ܳ᩶;->ۤ()Ll/ۤ᩶;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
     sub-int/2addr v1, p2
 
     .line 2433
-    invoke-static {v1, p1}, Ll/ۚ֫;->ۨ(ILandroid/view/View;)V
+    invoke-static {v1, p1}, Ll/᩸۠;->ۤ(ILandroid/view/View;)V
 
     :cond_0
     return-void
@@ -351,7 +351,7 @@
     return v0
 .end method
 
-.method public layoutDependsOn(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;)Z
+.method public layoutDependsOn(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     .line 2382
@@ -360,7 +360,7 @@
     return p1
 .end method
 
-.method public onDependentViewChanged(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;)Z
+.method public onDependentViewChanged(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     .line 2388
@@ -374,7 +374,7 @@
     return p1
 .end method
 
-.method public onDependentViewRemoved(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;)V
+.method public onDependentViewRemoved(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
     .line 2396
@@ -385,39 +385,39 @@
     const/4 p2, 0x0
 
     .line 2397
-    invoke-static {p1, p2}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p1, p2}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     :cond_0
     return-void
 .end method
 
-.method public bridge synthetic onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+.method public bridge synthetic onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
     .locals 0
 
     .line 2365
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public bridge synthetic onMeasureChild(Ll/ۖ᩶;Landroid/view/View;IIII)Z
+.method public bridge synthetic onMeasureChild(Ll/᩻᩶;Landroid/view/View;IIII)Z
     .locals 0
 
     .line 2365
-    invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->onMeasureChild(Ll/ۖ᩶;Landroid/view/View;IIII)Z
+    invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->onMeasureChild(Ll/᩻᩶;Landroid/view/View;IIII)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public onRequestChildRectangleOnScreen(Ll/ۖ᩶;Landroid/view/View;Landroid/graphics/Rect;Z)Z
+.method public onRequestChildRectangleOnScreen(Ll/᩻᩶;Landroid/view/View;Landroid/graphics/Rect;Z)Z
     .locals 3
 
     .line 2407
-    invoke-virtual {p1, p2}, Ll/ۖ᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Ll/᩻᩶;->getDependencies(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 

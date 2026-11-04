@@ -1,24 +1,102 @@
 package l;
 
-import java.util.function.Function;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PushbackInputStream;
+import java.nio.charset.StandardCharsets;
 
-/* JADX INFO: renamed from: l.᩹ܺۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G1PO */
+/* JADX INFO: renamed from: l.᩷᩺ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H4SF */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22389 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C22389 extends PushbackInputStream implements InterfaceC8469 {
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final boolean f72488 = System.lineSeparator().equals("\r\n");
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final byte[] f72489 = System.lineSeparator().getBytes(StandardCharsets.US_ASCII);
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f72490;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return new C11806((String) obj);
+    public C22389(BufferedInputStream bufferedInputStream) {
+        super(bufferedInputStream, f72489.length + 1);
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    @Override // java.io.PushbackInputStream, java.io.FilterInputStream, java.io.InputStream
+    public final int available() throws IOException {
+        if (((PushbackInputStream) this).in == null) {
+            throw new IOException("Stream closed");
+        }
+        return ((PushbackInputStream) this).in.available() + (((PushbackInputStream) this).buf.length - ((PushbackInputStream) this).pos);
+    }
+
+    @Override // java.io.PushbackInputStream, java.io.FilterInputStream, java.io.InputStream
+    public final int read() {
+        if (f72488) {
+            return super.read();
+        }
+        return readInt();
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr) {
+        return read(bArr, 0, bArr.length);
+    }
+
+    @Override // java.io.PushbackInputStream, java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int i3;
+        if (f72488) {
+            return super.read(bArr, i, i2);
+        }
+        if (i2 < 1) {
+            return 0;
+        }
+        int iMin = Math.min(i2, available());
+        this.f72490 = iMin;
+        if (iMin < 1) {
+            this.f72490 = 1;
+        }
+        int i4 = readInt();
+        if (i4 == -1) {
+            return -1;
+        }
+        int i5 = i;
+        while (true) {
+            i3 = i5 + 1;
+            bArr[i5] = (byte) i4;
+            int i6 = this.f72490 - 1;
+            this.f72490 = i6;
+            if (i6 <= 0 || (i4 = readInt()) == -1) {
+                break;
+            }
+            i5 = i3;
+        }
+        return i3 - i;
+    }
+
+    private int readInt() throws IOException {
+        int i = super.read();
+        if (i != 13) {
+            return i;
+        }
+        int i2 = super.read();
+        if (i2 != 10) {
+            if (i2 != -1) {
+                unread(i2);
+            }
+            return 13;
+        }
+        unread(f72489);
+        int i3 = super.read();
+        this.f72490--;
+        return i3;
     }
 }

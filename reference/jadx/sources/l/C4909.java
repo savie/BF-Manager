@@ -1,37 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩸ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: KALN */
+import java.util.Set;
+
+/* JADX INFO: renamed from: l.ۙ۫ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K608 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4909 implements InterfaceC20950 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2792[] f17207;
-
-    public C4909(C2792... c2792Arr) {
-        C13465.m32966(c2792Arr, "initializers");
-        this.f17207 = c2792Arr;
+public final enum C4909 extends EnumC10874 {
+    public /* synthetic */ C4909() {
+        this("R_parents", 4);
     }
 
-    @Override // l.InterfaceC20950
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC8956 mo4842(Class cls) {
-        throw new UnsupportedOperationException("Factory.create(String) is unsupported.  This Factory requires `CreationExtras` to be passed into `create` method.");
+    public C4909(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // l.InterfaceC20950
+    @Override // l.EnumC10874
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC8956 mo4843(Class cls, C11966 c11966) {
-        AbstractC8956 abstractC8956 = null;
-        for (C2792 c2792 : this.f17207) {
-            if (C13465.m32965(c2792.m8482(), cls)) {
-                Object objInvoke = c2792.m8483().invoke(c11966);
-                abstractC8956 = objInvoke instanceof AbstractC8956 ? (AbstractC8956) objInvoke : null;
-            }
-        }
-        if (abstractC8956 != null) {
-            return abstractC8956;
-        }
-        throw new IllegalArgumentException("No initializer set for given class ".concat(cls.getName()));
+    public Set mo9085(C19825 c19825) {
+        return c19825.f63739;
+    }
+
+    @Override // l.EnumC10874
+    /* JADX INFO: renamed from: ۙ */
+    public void mo9086(C19825 c19825, Set set) {
+        c19825.f63739 = set;
     }
 }

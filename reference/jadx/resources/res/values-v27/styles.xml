@@ -14,8 +14,8 @@
     <style name="MT_Protector_res_0x7f130141" parent="@style/MT_Protector_res_0x7f13013f">
         <item name="android:windowLayoutInDisplayCutoutMode">1</item>
     </style>
-    <style name="MT_Protector_res_0x7f130142" parent="@style/MT_Protector_res_0x7f13028c">
-        <item name="android:navigationBarColor">@color/MT_Protector_res_0x7f060350</item>
+    <style name="MT_Protector_res_0x7f130142" parent="@style/MT_Protector_res_0x7f130290">
+        <item name="android:navigationBarColor">@color/MT_Protector_res_0x7f060358</item>
         <item name="android:windowLightNavigationBar">@bool/MT_Protector_res_0x7f050004</item>
     </style>
 </resources>

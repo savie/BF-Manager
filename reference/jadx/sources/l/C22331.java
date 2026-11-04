@@ -2,37 +2,38 @@ package l;
 
 import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩹ܰᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 84DG */
+/* JADX INFO: renamed from: l.᩷᩷᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q8T9 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22331 implements InterfaceC6500 {
+public final /* synthetic */ class C22331 implements InterfaceC8103 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC6500[] f72912;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ IOException f72297;
 
-    public C22331(InterfaceC6500... interfaceC6500Arr) {
-        this.f72912 = interfaceC6500Arr;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f72298;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15617 f72299;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9893 f72300;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C14368 f72301;
+
+    public /* synthetic */ C22331(C15617 c15617, C14368 c14368, C9893 c9893, IOException iOException, boolean z) {
+        this.f72299 = c15617;
+        this.f72301 = c14368;
+        this.f72300 = c9893;
+        this.f72297 = iOException;
+        this.f72298 = z;
     }
 
-    @Override // l.InterfaceC6500
-    public final InterfaceC8805 read(byte[] bArr) throws IOException {
-        for (int i = 0; i < 4; i++) {
-            InterfaceC6500 interfaceC6500 = this.f72912[i];
-            if (interfaceC6500.mo14995(bArr)) {
-                return (AbstractC7245) interfaceC6500.read(bArr);
-            }
-        }
-        throw new IOException("Unknown packet format received.");
-    }
-
-    @Override // l.InterfaceC6500
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo14995(byte[] bArr) {
-        for (int i = 0; i < 4; i++) {
-            if (this.f72912[i].mo14995(bArr)) {
-                return true;
-            }
-        }
-        return false;
+    @Override // l.InterfaceC8103
+    public final void accept(Object obj) {
+        InterfaceC13380 interfaceC13380 = (InterfaceC13380) obj;
+        C15617 c15617 = this.f72299;
+        interfaceC13380.mo7210(c15617.f50742, c15617.f50743, this.f72301, this.f72300, this.f72297, this.f72298);
     }
 }

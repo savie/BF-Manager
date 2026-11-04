@@ -1,136 +1,129 @@
 package l;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.NavigableMap;
+import java.lang.reflect.Type;
+import java.util.IdentityHashMap;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۡܳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O5F3 */
+/* JADX INFO: renamed from: l.۠᩹ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: CAUY */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8945 extends AbstractC13241 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final NavigableMap f30667;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C9548 f30668;
-
-    @Override // java.util.SortedMap
-    public final Comparator comparator() {
-        return C17308.f55088;
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableMap headMap(Object obj, boolean z) {
-        return m23244(C9548.m24400((AbstractC18054) obj, EnumC18179.m42305(z)));
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableMap subMap(Object obj, boolean z, Object obj2, boolean z2) {
-        return m23244(C9548.m24394((AbstractC18054) obj, EnumC18179.m42305(z), (AbstractC18054) obj2, EnumC18179.m42305(z2)));
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableMap tailMap(Object obj, boolean z) {
-        return m23244(C9548.m24393((AbstractC18054) obj, EnumC18179.m42305(z)));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private NavigableMap m23244(C9548 c9548) {
-        C9548 c9549 = this.f30668;
-        if (c9548.m24408(c9549)) {
-            return new C8945(this.f30667, c9548.m24410(c9549));
-        }
-        return C2345.of();
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final boolean containsKey(Object obj) {
-        return get(obj) != null;
-    }
-
-    @Override // l.AbstractC6724
+public final class C8945 implements InterfaceC10591 {
+    @Override // l.InterfaceC10591
     /* JADX INFO: renamed from: ۙ */
-    public final Iterator mo18156() {
-        Iterator it;
-        Map.Entry entryLowerEntry;
-        C9548 c9548 = this.f30668;
-        AbstractC18054 abstractC18054 = c9548.f32247;
-        AbstractC18054 abstractC18055 = c9548.f32247;
-        C15233 c15233 = C15233.f49660;
-        NavigableMap navigableMap = this.f30667;
-        if (abstractC18054 == c15233 || (entryLowerEntry = navigableMap.lowerEntry((AbstractC18054) abstractC18055.mo18342())) == null) {
-            it = navigableMap.values().iterator();
-        } else if (abstractC18055.mo18344((Comparable) ((C9548) entryLowerEntry.getValue()).f32248)) {
-            it = navigableMap.tailMap((AbstractC18054) entryLowerEntry.getKey(), true).values().iterator();
-        } else {
-            it = navigableMap.tailMap((AbstractC18054) abstractC18055.mo18342(), true).values().iterator();
-        }
-        return new C8239(this, it);
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final C9548 get(Object obj) {
-        Map.Entry entryLowerEntry;
-        if (obj instanceof AbstractC18054) {
-            try {
-                AbstractC18054 abstractC18054 = (AbstractC18054) obj;
-                if (this.f30668.m24405(abstractC18054) && (entryLowerEntry = this.f30667.lowerEntry(abstractC18054)) != null && ((C9548) entryLowerEntry.getValue()).f32248.equals(abstractC18054)) {
-                    return (C9548) entryLowerEntry.getValue();
-                }
-            } catch (ClassCastException unused) {
+    public final void mo3063(C9690 c9690, Object obj, Object obj2, Type type) {
+        C5372 c5372 = c9690.f31276;
+        C12829 c12829 = c9690.f31277;
+        boolean z = (c5372.f18847 & EnumC1643.WriteClassName.f5702) != 0;
+        Type typeM10240 = z ? C3134.m10240(type) : null;
+        if (obj == null) {
+            if ((c5372.f18847 & EnumC1643.WriteNullListAsEmpty.f5702) != 0) {
+                c5372.write("[]");
+                return;
+            } else {
+                c5372.m16046();
+                return;
             }
         }
-        return null;
-    }
-
-    @Override // l.AbstractC13241
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Iterator mo23246() {
-        Collection collectionValues;
-        C9548 c9548 = this.f30668;
-        AbstractC18054 abstractC18054 = c9548.f32248;
-        AbstractC18054 abstractC18055 = c9548.f32248;
-        C6765 c6765 = C6765.f22852;
-        NavigableMap navigableMap = this.f30667;
-        if (abstractC18054 != c6765) {
-            collectionValues = navigableMap.headMap((AbstractC18054) abstractC18055.mo18342(), false).descendingMap().values();
-        } else {
-            collectionValues = navigableMap.descendingMap().values();
+        List list = (List) obj;
+        int size = list.size();
+        if (size == 0) {
+            c5372.append((CharSequence) "[]");
+            return;
         }
-        InterfaceC23659 interfaceC23659M38722 = C16458.m38722(collectionValues.iterator());
-        C19986 c19986 = (C19986) interfaceC23659M38722;
-        if (c19986.hasNext() && abstractC18055.mo18344((Comparable) ((C9548) c19986.peek()).f32248)) {
-            c19986.next();
+        C15066 c15066 = c9690.f31285;
+        if ((c5372.f18847 & EnumC1643.DisableCircularReferenceDetect.f5702) == 0) {
+            c9690.f31285 = new C15066(c15066, obj, obj2, 0);
+            if (c9690.f31286 == null) {
+                c9690.f31286 = new IdentityHashMap();
+            }
+            c9690.f31286.put(obj, c9690.f31285);
         }
-        return new C19528(this, interfaceC23659M38722);
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final int size() {
-        if (this.f30668.equals(C9548.m24392())) {
-            return this.f30667.size();
+        try {
+            if ((c5372.f18847 & EnumC1643.PrettyFormat.f5702) != 0) {
+                c5372.write(91);
+                c9690.m25280();
+                for (int i = 0; i < size; i++) {
+                    Object obj3 = list.get(i);
+                    if (i != 0) {
+                        c5372.write(44);
+                    }
+                    c9690.m25283();
+                    if (obj3 != null) {
+                        IdentityHashMap identityHashMap = c9690.f31286;
+                        if (identityHashMap != null && identityHashMap.containsKey(obj3)) {
+                            c9690.m25282(obj3);
+                        } else {
+                            InterfaceC10591 interfaceC10591M31835 = c12829.m31835(obj3.getClass());
+                            c9690.f31285 = new C15066(c15066, obj, obj2, 0);
+                            interfaceC10591M31835.mo3063(c9690, obj3, Integer.valueOf(i), typeM10240);
+                        }
+                    } else {
+                        c5372.m16046();
+                    }
+                }
+                c9690.m25276();
+                c9690.m25283();
+                c5372.write(93);
+                return;
+            }
+            int i2 = c5372.f18848 + 1;
+            if (i2 > c5372.f18846.length) {
+                c5372.m16050(i2);
+            }
+            c5372.f18846[c5372.f18848] = '[';
+            c5372.f18848 = i2;
+            for (int i3 = 0; i3 < list.size(); i3++) {
+                Object obj4 = list.get(i3);
+                if (i3 != 0) {
+                    int i4 = c5372.f18848 + 1;
+                    if (i4 > c5372.f18846.length) {
+                        c5372.m16050(i4);
+                    }
+                    c5372.f18846[c5372.f18848] = ',';
+                    c5372.f18848 = i4;
+                }
+                if (obj4 == null) {
+                    c5372.append((CharSequence) "null");
+                } else {
+                    Class<?> cls = obj4.getClass();
+                    if (cls == Integer.class) {
+                        c5372.writeInt(((Integer) obj4).intValue());
+                    } else if (cls == Long.class) {
+                        long jLongValue = ((Long) obj4).longValue();
+                        if (z) {
+                            c5372.m16051(jLongValue);
+                            c5372.write(76);
+                        } else {
+                            c5372.m16051(jLongValue);
+                        }
+                    } else if (cls == String.class) {
+                        String str = (String) obj4;
+                        if ((c5372.f18847 & EnumC1643.UseSingleQuotes.f5702) != 0) {
+                            c5372.m16052(str);
+                        } else {
+                            c5372.m16048(str, (char) 0, true);
+                        }
+                    } else {
+                        if ((c5372.f18847 & EnumC1643.DisableCircularReferenceDetect.f5702) == 0) {
+                            c9690.f31285 = new C15066(c15066, obj, obj2, 0);
+                        }
+                        IdentityHashMap identityHashMap2 = c9690.f31286;
+                        if (identityHashMap2 != null && identityHashMap2.containsKey(obj4)) {
+                            c9690.m25282(obj4);
+                        } else {
+                            c12829.m31835(obj4.getClass()).mo3063(c9690, obj4, Integer.valueOf(i3), typeM10240);
+                        }
+                    }
+                }
+            }
+            int i5 = c5372.f18848 + 1;
+            if (i5 > c5372.f18846.length) {
+                c5372.m16050(i5);
+            }
+            c5372.f18846[c5372.f18848] = ']';
+            c5372.f18848 = i5;
+        } finally {
+            c9690.f31285 = c15066;
         }
-        return C16458.m38724(mo18156());
-    }
-
-    @Override // java.util.AbstractMap, java.util.Map
-    public final boolean isEmpty() {
-        if (this.f30668.equals(C9548.m24392())) {
-            return this.f30667.isEmpty();
-        }
-        return !((AbstractC9943) mo18156()).hasNext();
-    }
-
-    public C8945(NavigableMap navigableMap) {
-        this.f30667 = navigableMap;
-        this.f30668 = C9548.m24392();
-    }
-
-    public C8945(NavigableMap navigableMap, C9548 c9548) {
-        this.f30667 = navigableMap;
-        this.f30668 = c9548;
     }
 }

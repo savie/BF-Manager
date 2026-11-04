@@ -13,7 +13,6 @@ public class XoodyakDigest extends BufferBaseDigest {
     public int phase;
     public final byte[] state;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
     }

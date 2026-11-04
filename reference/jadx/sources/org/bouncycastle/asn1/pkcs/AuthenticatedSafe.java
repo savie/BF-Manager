@@ -6,7 +6,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.BERSequence;
 import org.bouncycastle.asn1.DLSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AuthenticatedSafe extends ASN1Object {
     public ContentInfo[] info;
     public boolean isBer;

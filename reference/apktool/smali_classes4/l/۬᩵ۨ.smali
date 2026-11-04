@@ -1,61 +1,94 @@
-.class public final synthetic Ll/۬᩵ۨ;
-.super Ljava/lang/Object;
-.source "Z6QT"
-
-# interfaces
-.implements Ll/ܰۡۨ;
+.class public abstract Ll/۬᩵ۨ;
+.super Ll/᩸ۨۨ;
+.source "L2QA"
 
 
-# virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
+# instance fields
+.field public ۚ:Z
 
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
+.field public ۫:Ll/۬ܳܳ;
 
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
+.field public ܳ:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 61
+    invoke-direct {p0}, Ll/۫᩵ۨ;-><init>()V
+
+    const-wide/16 v0, -0x1
+
+    .line 103
+    iput-wide v0, p0, Ll/۬᩵ۨ;->ܳ:J
+
+    .line 105
+    invoke-static {}, Ll/۟᩵ۨ;->ۙ()Ll/۬ܳܳ;
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Ll/۬᩵ۨ;->۫:Ll/۬ܳܳ;
+
+    const/4 v0, 0x1
+
+    .line 108
+    iput-boolean v0, p0, Ll/۬᩵ۨ;->ۚ:Z
+
+    return-void
 .end method
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+# virtual methods
+.method public ۙ(J)V
+    .locals 2
 
-    move-result-object p1
+    const-wide/16 v0, -0x1
 
-    return-object p1
+    .line 153
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ll/۬᩵ۨ;->ܳ:J
+
+    return-void
 .end method
 
-.method public final ۙ(I)Z
+.method public final ۧ()J
+    .locals 2
+
+    .line 115
+    iget-wide v0, p0, Ll/۬᩵ۨ;->ܳ:J
+
+    return-wide v0
+.end method
+
+.method public final ܺ()Z
     .locals 1
 
-    const/16 v0, 0xa
+    .line 123
+    iget-boolean v0, p0, Ll/۬᩵ۨ;->ۚ:Z
 
-    if-eq p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
+.method public ܽ()V
+    .locals 1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    .line 188
+    iput-boolean v0, p0, Ll/۬᩵ۨ;->ۚ:Z
 
-    return-object p1
+    return-void
+.end method
+
+.method public final ᩻()Ll/۬ܳܳ;
+    .locals 1
+
+    .line 119
+    iget-object v0, p0, Ll/۬᩵ۨ;->۫:Ll/۬ܳܳ;
+
+    return-object v0
 .end method

@@ -1,3 +1,6 @@
-.class public final Ll/ۧ֨᩵;
-.super Ll/֡᩹᩵;
-.source "7ASY"
+.class public interface abstract Ll/ۧ֨᩵;
+.super Ljava/lang/Object;
+.source "Z531"
+
+# interfaces
+.implements Ll/ᩳ֡᩵;

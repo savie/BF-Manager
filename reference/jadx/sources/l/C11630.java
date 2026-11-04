@@ -1,14 +1,7 @@
 package l;
 
-import android.view.View;
-
-/* JADX INFO: renamed from: l.ۨۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1CY */
+/* JADX INFO: renamed from: l.ۧ۬, reason: contains not printable characters */
+/* JADX INFO: compiled from: O21N */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11630 extends AbstractC8102 {
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3906(float f, View view) {
-        view.setElevation(m21316(f));
-    }
+public final class C11630 extends AbstractC1936 {
 }

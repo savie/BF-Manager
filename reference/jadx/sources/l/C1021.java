@@ -1,12 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۡ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28XJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1021 extends AbstractC19367 {
-    @Override // l.AbstractC19367
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo3851(InterfaceC10901 interfaceC10901) {
-        interfaceC10901.mo27305(this);
+/* JADX INFO: renamed from: l.֨۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C1021 extends EnumC8806 {
+    public /* synthetic */ C1021() {
+        this("AttributeValue_doubleQuoted", 37);
+    }
+
+    public C1021(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        String strM54663 = c24448.m54663(false);
+        if (strM54663.length() > 0) {
+            c8260.f27184.m43496(strM54663);
+        } else {
+            c8260.f27184.m43494();
+        }
+        char cM54669 = c24448.m54669();
+        if (cM54669 == 0) {
+            c8260.m22262(this);
+            c8260.f27184.m43495((char) 65533);
+            return;
+        }
+        if (cM54669 == '\"') {
+            c8260.m22269(EnumC8806.f28741);
+            return;
+        }
+        if (cM54669 != '&') {
+            if (cM54669 == 65535) {
+                c8260.m22267(this);
+                c8260.m22269(EnumC8806.f28749);
+                return;
+            } else {
+                c8260.f27184.m43495(cM54669);
+                return;
+            }
+        }
+        int[] iArrM22259 = c8260.m22259((Character) '\"', true);
+        if (iArrM22259 != null) {
+            c8260.f27184.m43490(iArrM22259);
+        } else {
+            c8260.f27184.m43495('&');
+        }
     }
 }

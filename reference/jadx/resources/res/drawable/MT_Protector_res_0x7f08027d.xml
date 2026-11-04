@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:tint="?android:attr/textColorPrimary"
-    android:height="24dp"
-    android:width="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-    <path
-        android:fillColor="#fff"
-        android:pathData="M6,18l8.5,-6L6,6v12zM16,6v12h2V6h-2z"/>
-</vector>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/MT_Protector_res_0x7f070051"
+    android:insetRight="@dimen/MT_Protector_res_0x7f070051"
+    android:insetTop="@dimen/MT_Protector_res_0x7f070051"
+    android:insetBottom="@dimen/MT_Protector_res_0x7f070051">
+    <shape android:shape="rectangle">
+        <corners android:radius="@dimen/MT_Protector_res_0x7f07031b"/>
+        <solid android:color="?attr/MT_Protector_res_0x7f040128"/>
+    </shape>
+</inset>

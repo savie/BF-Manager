@@ -1,46 +1,26 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ۚۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7LF */
+/* JADX INFO: renamed from: l.ۙ᩻᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 97F2 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5268 implements Predicate {
+public class C5268 extends C1144 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f18252;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public String f18566;
 
-    public /* synthetic */ C5268(int i) {
-        this.f18252 = i;
+    public C5268(int i, String str, int i2, EnumC19840 enumC19840, String str2) {
+        super(i, str, i2, enumC19840);
+        this.f18566 = (str2 == null || str2.isEmpty()) ? null : str2;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String m15858() {
+        return this.f18566;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f18252) {
-            case 0:
-                break;
-        }
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f18252) {
-            case 0:
-                return ((C19670) obj).f63144.contains(EnumC8381.WARN_INCUBATING);
-            default:
-                AbstractC23903 abstractC23903 = (AbstractC23903) obj;
-                return abstractC23903.m52717() && abstractC23903.f77452 == EnumC10477.f35878;
-        }
+    @Override // l.C1144, l.C7110, l.C18941
+    public final int hashCode() {
+        String str = this.f18566;
+        return (str == null ? 0 : str.hashCode()) + super.hashCode();
     }
 }

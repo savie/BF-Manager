@@ -1,68 +1,105 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ImageView;
 
-/* JADX INFO: renamed from: l.ۛ۬᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 969A */
+/* JADX INFO: renamed from: l.ۛۖۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 75EB */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6086 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0690 f20599;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f20600;
+public class C6086 extends C15688 implements InterfaceC12051 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f20601;
+    public ViewOnTouchListenerC18018 f20806;
 
-    public C6086(String str, String str2, C0690 c0690) {
-        this.f20600 = str;
-        this.f20601 = str2;
-        this.f20599 = c0690;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public ImageView.ScaleType f20807;
+
+    public C6086(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C6086)) {
-            return false;
+    public C6086(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        super.setScaleType(ImageView.ScaleType.MATRIX);
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 == null || viewOnTouchListenerC18018.m42022() == null) {
+            this.f20806 = new ViewOnTouchListenerC18018(this);
         }
-        C6086 c6086 = (C6086) obj;
-        return C13638.equals(this.f20600, c6086.f20600) && C13638.equals(this.f20601, c6086.f20601) && C13638.equals(this.f20599, c6086.f20599);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f20599) + C0589.m2789(C13638.hashCode(this.f20600) * 31, 31, this.f20601);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f20600, this.f20601, this.f20599};
-        String[] strArrSplit = "title;path;icon".length() == 0 ? new String[0] : "title;path;icon".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C6086.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+        ImageView.ScaleType scaleType = this.f20807;
+        if (scaleType != null) {
+            setScaleType(scaleType);
+            this.f20807 = null;
         }
-        sb.append("]");
-        return sb.toString();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m16495() {
-        return this.f20600;
+    @Override // android.widget.ImageView, android.view.View
+    public final void onAttachedToWindow() {
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 == null || viewOnTouchListenerC18018.m42022() == null) {
+            this.f20806 = new ViewOnTouchListenerC18018(this);
+        }
+        ImageView.ScaleType scaleType = this.f20807;
+        if (scaleType != null) {
+            setScaleType(scaleType);
+            this.f20807 = null;
+        }
+        super.onAttachedToWindow();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0690 m16496() {
-        return this.f20599;
+    @Override // android.widget.ImageView
+    public final ImageView.ScaleType getScaleType() {
+        return this.f20806.m42017();
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m16497() {
-        return this.f20601;
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageDrawable(Drawable drawable) {
+        super.setImageDrawable(drawable);
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 != null) {
+            viewOnTouchListenerC18018.m42016();
+        }
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageResource(int i) {
+        super.setImageResource(i);
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 != null) {
+            viewOnTouchListenerC18018.m42016();
+        }
+    }
+
+    @Override // l.C15688, android.widget.ImageView
+    public final void setImageURI(Uri uri) {
+        super.setImageURI(uri);
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 != null) {
+            viewOnTouchListenerC18018.m42016();
+        }
+    }
+
+    @Override // android.view.View
+    public final void setOnLongClickListener(View.OnLongClickListener onLongClickListener) {
+        this.f20806.m42013(onLongClickListener);
+    }
+
+    @Override // android.widget.ImageView
+    public final void setScaleType(ImageView.ScaleType scaleType) {
+        ViewOnTouchListenerC18018 viewOnTouchListenerC18018 = this.f20806;
+        if (viewOnTouchListenerC18018 != null) {
+            viewOnTouchListenerC18018.m42014(scaleType);
+        } else {
+            this.f20807 = scaleType;
+        }
+    }
+
+    @Override // android.widget.ImageView, android.view.View
+    public final void onDetachedFromWindow() {
+        this.f20806.m42010();
+        super.onDetachedFromWindow();
     }
 }

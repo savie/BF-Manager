@@ -2,18 +2,18 @@ package org.bouncycastle.util.io.pem;
 
 import java.util.ArrayList;
 import java.util.List;
-import l.C0561;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class PemObject implements PemObjectGenerator {
-    public static final List EMPTY_LIST = C0561.unmodifiableList(new ArrayList());
+    public static final List EMPTY_LIST = C4681.unmodifiableList(new ArrayList());
     public byte[] content;
     public List headers;
     public String type;
 
     public PemObject(String str, List list, byte[] bArr) {
         this.type = str;
-        this.headers = C0561.unmodifiableList(list);
+        this.headers = C4681.unmodifiableList(list);
         this.content = bArr;
     }
 

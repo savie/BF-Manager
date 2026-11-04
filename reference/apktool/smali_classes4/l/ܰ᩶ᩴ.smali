@@ -1,103 +1,44 @@
-.class public final Ll/ܰ᩶ᩴ;
+.class public final synthetic Ll/ܰ᩶ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "49SV"
 
 # interfaces
-.implements Ljava/nio/file/DirectoryStream;
-.implements Ll/ܽۤᩴ;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final a:Ljava/nio/file/DirectoryStream;
+.field public final synthetic ۙ:Ll/֡᩶ᩴ;
+
+.field public final synthetic ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/nio/file/DirectoryStream;)V
+.method public synthetic constructor <init>(Ll/֡᩶ᩴ;Ljava/lang/String;)V
     .locals 0
 
-    .line 113
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
-    iput-object p1, p0, Ll/ܰ᩶ᩴ;->a:Ljava/nio/file/DirectoryStream;
+    iput-object p1, p0, Ll/ܰ᩶ᩴ;->ۙ:Ll/֡᩶ᩴ;
+
+    iput-object p2, p0, Ll/ܰ᩶ᩴ;->᩷:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
-
-    .line 129
-    iget-object v0, p0, Ll/ܰ᩶ᩴ;->a:Ljava/nio/file/DirectoryStream;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-.end method
-
-.method public final forEach(Ljava/util/function/Consumer;)V
-    .locals 3
-
-    .line 124
-    iget-object v0, p0, Ll/ܰ᩶ᩴ;->a:Ljava/nio/file/DirectoryStream;
-
-    new-instance v1, Ll/ۙ᩶ᩴ;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Ll/ۙ᩶ᩴ;-><init>(Ljava/util/function/Consumer;I)V
-
-    invoke-static {v0, v1}, Ll/֡ۤᩴ;->forEach(Ljava/lang/Iterable;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
+.method public final call()Ljava/lang/Object;
     .locals 2
 
-    .line 119
-    new-instance v0, Ll/ۤ۟ᩴ;
+    .line 0
+    iget-object v0, p0, Ll/ܰ᩶ᩴ;->ۙ:Ll/֡᩶ᩴ;
 
-    iget-object v1, p0, Ll/ܰ᩶ᩴ;->a:Ljava/nio/file/DirectoryStream;
+    iget-object v1, p0, Ll/ܰ᩶ᩴ;->᩷:Ljava/lang/String;
 
-    invoke-interface {v1}, Ljava/nio/file/DirectoryStream;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v1}, Ll/֡᩶ᩴ;->ۙ(Ll/֡᩶ᩴ;Ljava/lang/String;)V
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/ۤ۟ᩴ;-><init>(Ljava/util/Iterator;)V
-
-    return-object v0
-.end method
-
-.method public final synthetic spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    invoke-virtual {p0}, Ll/ܰ᩶ᩴ;->spliterator()Ll/᩷ۛᩴ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/۟ۛᩴ;->convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final spliterator()Ll/᩷ۛᩴ;
-    .locals 2
-
-    .line 101
-    invoke-virtual {p0}, Ll/ܰ᩶ᩴ;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Ll/᩶ۛᩴ;->b(Ljava/util/Iterator;I)Ll/᩹ܳᩴ;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

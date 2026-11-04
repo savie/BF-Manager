@@ -1,66 +1,106 @@
-.class public final Ll/ۘ֫ۙ;
-.super Ljava/lang/Object;
-.source "J7MO"
+.class public final enum Ll/ۘ֫ۙ;
+.super Ljava/lang/Enum;
+.source "VB94"
 
 
-# instance fields
-.field public final ۙ:Landroid/util/SparseArray;
+# static fields
+.field public static final enum ֡:Ll/ۘ֫ۙ;
+
+.field public static final synthetic ܰ:[Ll/ۘ֫ۙ;
+
+.field public static final enum ܿ:Ll/ۘ֫ۙ;
+
+.field public static final enum ᩶:Ll/ۘ֫ۙ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 7
 
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 506
+    new-instance v0, Ll/ۘ֫ۙ;
 
-    .line 34
-    new-instance v0, Landroid/util/SparseArray;
+    const-string v1, "NONE"
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Ll/ۘ֫ۙ;->ۙ:Landroid/util/SparseArray;
+    invoke-direct {v0, v1, v2}, Ll/ۘ֫ۙ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۘ֫ۙ;->ܿ:Ll/ۘ֫ۙ;
+
+    .line 510
+    new-instance v1, Ll/ۘ֫ۙ;
+
+    const-string v3, "ADDING"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4}, Ll/ۘ֫ۙ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ll/ۘ֫ۙ;->᩶:Ll/ۘ֫ۙ;
+
+    .line 514
+    new-instance v3, Ll/ۘ֫ۙ;
+
+    const-string v5, "REMOVING"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v3, v5, v6}, Ll/ۘ֫ۙ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ll/ۘ֫ۙ;->֡:Ll/ۘ֫ۙ;
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Ll/ۘ֫ۙ;
+
+    aput-object v0, v5, v2
+
+    aput-object v1, v5, v4
+
+    aput-object v3, v5, v6
+
+    .line 502
+    sput-object v5, Ll/ۘ֫ۙ;->ܰ:[Ll/ۘ֫ۙ;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final ۙ(I)Ll/ۜۤۙ;
-    .locals 4
-
-    .line 45
-    iget-object v0, p0, Ll/ۘ֫ۙ;->ۙ:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ۜۤۙ;
-
-    if-nez v1, :cond_0
-
-    .line 47
-    new-instance v1, Ll/ۜۤۙ;
-
-    const-wide v2, 0x7ffffffffffffffeL
-
-    invoke-direct {v1, v2, v3}, Ll/ۜۤۙ;-><init>(J)V
-
-    .line 48
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final ۙ()V
-    .locals 1
-
-    .line 55
-    iget-object v0, p0, Ll/ۘ֫ۙ;->ۙ:Landroid/util/SparseArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+    .line 502
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/ۘ֫ۙ;
+    .locals 1
+
+    .line 502
+    const-class v0, Ll/ۘ֫ۙ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ۘ֫ۙ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ۘ֫ۙ;
+    .locals 1
+
+    .line 502
+    sget-object v0, Ll/ۘ֫ۙ;->ܰ:[Ll/ۘ֫ۙ;
+
+    invoke-virtual {v0}, [Ll/ۘ֫ۙ;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۘ֫ۙ;
+
+    return-object v0
 .end method

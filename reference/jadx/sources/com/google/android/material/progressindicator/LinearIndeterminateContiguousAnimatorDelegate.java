@@ -4,8 +4,8 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.util.Property;
-import l.AbstractC2220;
-import l.C22819;
+import l.AbstractC7591;
+import l.C1874;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class LinearIndeterminateContiguousAnimatorDelegate extends IndeterminateAnimatorDelegate {
@@ -26,11 +26,11 @@ public final class LinearIndeterminateContiguousAnimatorDelegate extends Indeter
     public ObjectAnimator animator;
     public final BaseProgressIndicatorSpec baseSpec;
     public boolean dirtyColors;
-    public C22819 interpolator;
+    public C1874 interpolator;
     public int newIndicatorColorIndex;
 
     @Override // com.google.android.material.progressindicator.IndeterminateAnimatorDelegate
-    public void registerAnimatorsCompleteCallback(AbstractC2220 abstractC2220) {
+    public void registerAnimatorsCompleteCallback(AbstractC7591 abstractC7591) {
     }
 
     @Override // com.google.android.material.progressindicator.IndeterminateAnimatorDelegate
@@ -45,7 +45,7 @@ public final class LinearIndeterminateContiguousAnimatorDelegate extends Indeter
         super(3);
         this.newIndicatorColorIndex = 1;
         this.baseSpec = linearProgressIndicatorSpec;
-        this.interpolator = new C22819();
+        this.interpolator = new C1874();
     }
 
     @Override // com.google.android.material.progressindicator.IndeterminateAnimatorDelegate

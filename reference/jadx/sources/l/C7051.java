@@ -1,58 +1,52 @@
 package l;
 
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.ۜ᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۜۢۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H8BL */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7051 extends AbstractC23392 {
-    @Override // l.AbstractC5752, l.InterfaceC6124, l.InterfaceC19386
-    public final InterfaceC13514 sequential() {
-        this.h.r = false;
-        return this;
+public final class C7051 extends C18585 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C4552 f23257;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C7051(C4552 c4552, InterfaceC21569 interfaceC21569) {
+        super(interfaceC21569);
+        this.f23257 = c4552;
     }
 
-    @Override // l.AbstractC5752, l.InterfaceC6124, l.InterfaceC19386
-    public final InterfaceC13514 parallel() {
-        this.h.r = true;
-        return this;
-    }
-
-    @Override // l.AbstractC23392, l.InterfaceC13514
-    public final void forEach(IntConsumer intConsumer) {
-        if (this.h.r) {
-            super.forEach(intConsumer);
-        } else {
-            AbstractC23392.u0(s0()).forEachRemaining(intConsumer);
+    @Override // l.C18585, l.InterfaceC21569
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo19390(C14902 c14902, Exception exc) {
+        boolean zM49278 = C21706.m49278(exc);
+        C4552 c4552 = this.f23257;
+        if (!zM49278 && c4552.f16168 && !c4552.mo2982()) {
+            C4552.m14292(c4552, c14902, c4552.f16169, c4552.f16174, c4552.f16170);
+            return;
         }
+        c4552.f16164 = false;
+        c4552.f16165 = false;
+        super.mo19390(c14902, exc);
     }
 
-    @Override // l.AbstractC23392, l.InterfaceC13514
-    public final void forEachOrdered(IntConsumer intConsumer) {
-        if (this.h.r) {
-            super.forEachOrdered(intConsumer);
-        } else {
-            AbstractC23392.u0(s0()).forEachRemaining(intConsumer);
+    @Override // l.C18585, l.InterfaceC21569
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo19388(C14902 c14902, Exception exc) {
+        C4552 c4552 = this.f23257;
+        if (c4552.f16168 && !c4552.mo2982()) {
+            C4552.m14292(c4552, c14902, c4552.f16169, c4552.f16174, c4552.f16170);
+            return;
         }
+        c4552.f16164 = false;
+        c4552.f16165 = false;
+        super.mo19388(c14902, exc);
     }
 
-    @Override // l.InterfaceC6124
-    public final InterfaceC6124 unordered() {
-        return !EnumC2970.ORDERED.s(this.m) ? this : new C9294(this, EnumC2970.r, 1);
-    }
-
-    @Override // l.AbstractC5752, l.InterfaceC6124
-    public final /* bridge */ /* synthetic */ InterfaceC20693 spliterator() {
-        return spliterator();
-    }
-
-    @Override // l.AbstractC5752
-    public final boolean p0() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC5752
-    public final InterfaceC19171 q0(int i, InterfaceC19171 interfaceC19171) {
-        throw new UnsupportedOperationException();
+    @Override // l.C18585, l.InterfaceC21569
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo19389(C14902 c14902, C19093 c19093, long j) {
+        C4552 c4552 = this.f23257;
+        c4552.f16164 = false;
+        c4552.f16165 = true;
+        super.mo19389(c14902, c19093, j);
     }
 }

@@ -1,15 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜ᩵ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SB7W */
+import java.lang.reflect.Field;
+import java.security.PrivilegedExceptionAction;
+import sun.misc.Unsafe;
+
+/* JADX INFO: renamed from: l.ۜۜܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 59PE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6973 extends AbstractC10192 {
+public final class C6973 implements PrivilegedExceptionAction {
+    @Override // java.security.PrivilegedExceptionAction
+    public final /* bridge */ /* synthetic */ Object run() {
+        return run();
+    }
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static C6973 f23466 = new C6973();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6973 m18752() {
-        return f23466;
+    public static Unsafe run() throws IllegalAccessException {
+        for (Field field : Unsafe.class.getDeclaredFields()) {
+            field.setAccessible(true);
+            Object obj = field.get(null);
+            if (Unsafe.class.isInstance(obj)) {
+                return (Unsafe) Unsafe.class.cast(obj);
+            }
+        }
+        return null;
     }
 }

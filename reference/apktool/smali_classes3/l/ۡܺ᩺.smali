@@ -1,48 +1,97 @@
-.class public final synthetic Ll/ۡܺ᩺;
+.class public final Ll/ۡܺ᩺;
 .super Ljava/lang/Object;
-.source "X53D"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic ֡:Landroid/view/View;
-
-.field public final synthetic ܺ:Ll/ܿܿܰ;
-
-.field public final synthetic ᩶:Landroid/view/View;
+# static fields
+.field public static ۙ:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܿܿܰ;Landroid/view/View;Landroid/view/View;)V
-    .locals 0
+.method public static ۙ(Landroid/content/Context;)Ljava/lang/String;
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ll/۬ܺ᩺;->ۙ()Ll/۬ܺ᩺;
 
-    iput-object p1, p0, Ll/ۡܺ᩺;->ܺ:Ll/ܿܿܰ;
+    move-result-object v0
 
-    iput-object p2, p0, Ll/ۡܺ᩺;->᩶:Landroid/view/View;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iput-object p3, p0, Ll/ۡܺ᩺;->֡:Landroid/view/View;
+    move-result-object p0
 
-    return-void
+    iget-object v1, v0, Ll/۬ܺ᩺;->᩷:Ll/֨ܺ᩺;
+
+    invoke-virtual {v0, p0, v1}, Ll/۬ܺ᩺;->ۙ(Landroid/content/Context;Ll/֨ܺ᩺;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static final ۙ()Z
     .locals 3
 
+    const/4 v0, 0x0
+
     .line 0
-    iget-object v0, p0, Ll/ۡܺ᩺;->᩶:Landroid/view/View;
+    :try_start_0
+    sget-object v1, Ll/ۡܺ᩺;->ۙ:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Ll/ۡܺ᩺;->֡:Landroid/view/View;
+    if-nez v1, :cond_0
 
-    iget-object v2, p0, Ll/ۡܺ᩺;->ܺ:Ll/ܿܿܰ;
+    const-string v1, "android.app.ActivityThread"
 
-    invoke-static {v2, v0, v1}, Ll/ܽܺ᩺;->ۙ(Ll/ܿܿܰ;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    return-void
+    move-result-object v1
+
+    const-string v2, "currentApplication"
+
+    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    sput-object v1, Ll/ۡܺ᩺;->ۙ:Ljava/lang/reflect/Method;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    :cond_0
+    sget-object v1, Ll/ۡܺ᩺;->ۙ:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v1, v0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    invoke-static {}, Ll/۬ܺ᩺;->ۙ()Ll/۬ܺ᩺;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Ll/۬ܺ᩺;->ۙ(Landroid/content/Context;Z)Z
+
+    move-result v0
+
+    return v0
 .end method

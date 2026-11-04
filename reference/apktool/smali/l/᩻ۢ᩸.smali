@@ -1,242 +1,652 @@
 .class public final Ll/᩻ۢ᩸;
-.super Ll/֫ۢ᩸;
-.source "V9HU"
+.super Ljava/lang/Object;
+.source "I6U1"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
+
+
+# instance fields
+.field public ֡:Ll/᩹ᩳ᩸;
+
+.field public final ۟:Ll/ۢۢ᩸;
+
+.field public ܰ:Ll/ᩴᩳ᩸;
+
+.field public final ܿ:Ll/ۡۢ᩸;
+
+.field public final ᩶:Ll/ۗᩳ᩸;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۢۢ᩸;Ll/ۗᩳ᩸;Ll/᩹ᩳ᩸;Ll/ۡۢ᩸;)V
+    .locals 0
+
+    .line 1265
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1266
+    iput-object p1, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
+
+    .line 1267
+    iput-object p2, p0, Ll/᩻ۢ᩸;->᩶:Ll/ۗᩳ᩸;
+
+    .line 1268
+    iput-object p3, p0, Ll/᩻ۢ᩸;->֡:Ll/᩹ᩳ᩸;
+
+    .line 1269
+    iput-object p4, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/᩻ۢ᩸;Ll/ᩴᩳ᩸;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+
+    return-void
+.end method
+
+.method private ۚ()Ll/᩹ᩳ᩸;
+    .locals 2
+
+    .line 1313
+    iget-object v0, p0, Ll/᩻ۢ᩸;->֡:Ll/᩹ᩳ᩸;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Recovery handle is closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final declared-synchronized close()V
+    .locals 4
 
-    const-string v0, "big endian"
+    move-object v0, p0
 
-    return-object v0
-.end method
+    .line 1
+    monitor-enter v0
 
-.method public final ۙ(Ll/ۧۢ᩸;)J
-    .locals 6
+    .line 1319
+    :try_start_0
+    iget-object v1, p0, Ll/᩻ۢ᩸;->֡:Ll/᩹ᩳ᩸;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_7
 
-    .line 142
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v1, :cond_0
 
-    const/16 v0, 0x8
+    monitor-exit v0
 
-    new-array v1, v0, [B
+    return-void
 
-    .line 293
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
+    :cond_0
+    const/4 v2, 0x0
 
-    const-wide/16 v2, 0x0
+    .line 1321
+    :try_start_1
+    iput-object v2, p0, Ll/᩻ۢ᩸;->֡:Ll/᩹ᩳ᩸;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_7
 
-    const/4 p1, 0x0
+    .line 1322
+    :try_start_2
+    invoke-virtual {v1}, Ll/᩹ᩳ᩸;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    :goto_0
-    if-ge p1, v0, :cond_0
+    .line 1323
+    :try_start_3
+    iget-object v1, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
 
-    shl-long/2addr v2, v0
+    if-eqz v1, :cond_1
 
-    .line 145
-    aget-byte v4, v1, p1
+    invoke-virtual {v1}, Ll/ۢۢ᩸;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    and-int/lit16 v4, v4, 0xff
+    .line 1325
+    :cond_1
+    :try_start_4
+    iget-object v1, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
 
-    int-to-long v4, v4
+    if-eqz v1, :cond_2
 
-    or-long/2addr v2, v4
+    .line 1327
+    iput-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    add-int/lit8 p1, p1, 0x1
+    .line 1328
+    :try_start_5
+    invoke-virtual {v1}, Ll/ᩴᩳ᩸;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_0
 
+    :catch_0
+    move-exception v1
+
+    .line 1329
+    :try_start_6
+    new-instance v2, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v2, v1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v2
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    .line 1331
+    :cond_2
+    :goto_0
+    :try_start_7
+    iget-object v1, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v1}, Ll/ۡۢ᩸;->close()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_7
+
+    .line 1334
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 1331
+    :try_start_8
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    throw v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_7
+
+    :catchall_1
+    move-exception v1
+
+    .line 1325
+    :try_start_9
+    iget-object v3, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+
+    if-eqz v3, :cond_3
+
+    .line 1327
+    iput-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    .line 1328
+    :try_start_a
+    invoke-virtual {v3}, Ll/ᩴᩳ᩸;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    .line 1329
+    :try_start_b
+    new-instance v2, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v2, v1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v2
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
+
+    .line 1331
+    :cond_3
+    :goto_1
+    :try_start_c
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    .line 1332
+    throw v1
+
+    :catchall_2
+    move-exception v1
+
+    .line 1331
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    throw v1
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_7
+
+    :catchall_3
+    move-exception v1
+
+    .line 1323
+    :try_start_d
+    iget-object v3, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
+
+    if-eqz v3, :cond_4
+
+    iget-object v3, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
+
+    invoke-virtual {v3}, Ll/ۢۢ᩸;->close()V
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_5
+
+    .line 1325
+    :cond_4
+    :try_start_e
+    iget-object v3, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+
+    if-eqz v3, :cond_5
+
+    .line 1327
+    iput-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_4
+
+    .line 1328
+    :try_start_f
+    invoke-virtual {v3}, Ll/ᩴᩳ᩸;->close()V
+    :try_end_f
+    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_2
+    .catchall {:try_start_f .. :try_end_f} :catchall_4
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v1
+
+    .line 1329
+    :try_start_10
+    new-instance v2, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v2, v1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v2
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_4
+
+    .line 1331
+    :cond_5
+    :goto_2
+    :try_start_11
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    .line 1333
+    throw v1
+
+    :catchall_4
+    move-exception v1
+
+    .line 1331
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    throw v1
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_7
+
+    :catchall_5
+    move-exception v1
+
+    .line 1325
+    :try_start_12
+    iget-object v3, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+
+    if-eqz v3, :cond_6
+
+    .line 1327
+    iput-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_6
+
+    .line 1328
+    :try_start_13
+    invoke-virtual {v3}, Ll/ᩴᩳ᩸;->close()V
+    :try_end_13
+    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_3
+    .catchall {:try_start_13 .. :try_end_13} :catchall_6
+
+    goto :goto_3
+
+    :catch_3
+    move-exception v1
+
+    .line 1329
+    :try_start_14
+    new-instance v2, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v2, v1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
+
+    throw v2
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_6
+
+    .line 1331
+    :cond_6
+    :goto_3
+    :try_start_15
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    .line 1332
+    throw v1
+
+    :catchall_6
+    move-exception v1
+
+    .line 1331
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
+
+    invoke-virtual {v2}, Ll/ۡۢ᩸;->close()V
+
+    throw v1
+
+    :catchall_7
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_7
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۙ()[B
+    .locals 2
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 1277
+    :try_start_0
+    invoke-direct {p0}, Ll/᩻ۢ᩸;->ۚ()Ll/᩹ᩳ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/᩹ᩳ᩸;->ۖ:[B
+
+    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۤ()J
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 1272
+    :try_start_0
+    invoke-direct {p0}, Ll/᩻ۢ᩸;->ۚ()Ll/᩹ᩳ᩸;
+
+    move-result-object v1
+
+    iget-wide v1, v1, Ll/᩹ᩳ᩸;->ۡ:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-wide v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۫()Ll/ۜܿ᩸;
+    .locals 6
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 1284
+    :try_start_0
+    invoke-direct {p0}, Ll/᩻ۢ᩸;->ۚ()Ll/᩹ᩳ᩸;
+
+    move-result-object v1
+
+    .line 1285
+    new-instance v2, Ll/ۜܿ᩸;
+
+    iget-object v3, v1, Ll/᩹ᩳ᩸;->ۜ:Ll/᩷֡᩸;
+
+    iget-wide v4, v1, Ll/᩹ᩳ᩸;->۠:J
+
+    invoke-direct {v2, v3, v4, v5}, Ll/ۜܿ᩸;-><init>(Ll/᩷֡᩸;J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ܳ()Ljava/util/UUID;
+    .locals 2
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 1279
+    :try_start_0
+    invoke-direct {p0}, Ll/᩻ۢ᩸;->ۚ()Ll/᩹ᩳ᩸;
+
+    iget-object v1, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
+
+    iget-object v1, v1, Ll/ۢۢ᩸;->᩷ۙ:Ljava/util/UUID;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ᩷()Ll/ܽۢ᩸;
+    .locals 14
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 1290
+    :try_start_0
+    invoke-direct {p0}, Ll/᩻ۢ᩸;->ۚ()Ll/᩹ᩳ᩸;
+
+    move-result-object v1
+
+    .line 1291
+    new-instance v11, Ll/ۛܿ᩸;
+
+    iget-object v2, v1, Ll/᩹ᩳ᩸;->ۜ:Ll/᩷֡᩸;
+
+    iget-wide v3, v1, Ll/᩹ᩳ᩸;->۠:J
+
+    invoke-direct {v11, v2, v3, v4}, Ll/ۛܿ᩸;-><init>(Ll/᩷֡᩸;J)V
+
+    .line 1292
+    invoke-virtual {v1}, Ll/᩹ᩳ᩸;->ۙ()Ll/ۨᩳ᩸;
+
+    move-result-object v12
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 1295
+    :try_start_1
+    iget-object v2, p0, Ll/᩻ۢ᩸;->᩶:Ll/ۗᩳ᩸;
+
+    invoke-virtual {v2, v1}, Ll/ۗᩳ᩸;->ۙ(Ll/᩹ᩳ᩸;)V
+
+    .line 1296
+    new-instance v13, Ll/ܽۢ᩸;
+
+    iget-object v3, p0, Ll/᩻ۢ᩸;->۟:Ll/ۢۢ᩸;
+
+    iget-object v2, v1, Ll/᩹ᩳ᩸;->ܿ:Ll/ۨ۟᩸;
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ll/ۨ۟᩸;
+
+    invoke-direct {v2}, Ll/ۨ۟᩸;-><init>()V
+
     :cond_0
-    return-wide v2
-.end method
+    move-object v6, v2
 
-.method public final ۙ(Ll/ۧۢ᩸;J)V
-    .locals 9
+    iget-object v7, p0, Ll/᩻ۢ᩸;->᩶:Ll/ۗᩳ᩸;
 
-    const/16 v0, 0x38
+    iget-object v8, p0, Ll/᩻ۢ᩸;->ܿ:Ll/ۡۢ᩸;
 
-    shr-long v0, p2, v0
+    sget-object v9, Ll/۠۟᩸;->ᩴ:Ll/۠۟᩸;
 
-    long-to-int v1, v0
+    const/4 v10, 0x0
 
-    int-to-byte v0, v1
+    move-object v2, v13
 
-    const/16 v1, 0x30
+    move-object v4, v11
 
-    shr-long v1, p2, v1
+    move-object v5, v12
 
-    long-to-int v2, v1
+    invoke-direct/range {v2 .. v10}, Ll/ܽۢ᩸;-><init>(Ll/ۢۢ᩸;Ll/ۛܿ᩸;Ll/ۨᩳ᩸;Ll/ۨ۟᩸;Ll/ۗᩳ᩸;Ll/ۡۢ᩸;Ll/۠۟᩸;I)V
 
-    int-to-byte v1, v2
+    .line 1298
+    iget-object v2, v1, Ll/᩹ᩳ᩸;->֡:Ll/᩶۟᩸;
 
-    const/16 v2, 0x28
+    invoke-static {v13, v2}, Ll/ܽۢ᩸;->ۙ(Ll/ܽۢ᩸;Ll/᩶۟᩸;)V
 
-    shr-long v2, p2, v2
+    .line 1299
+    iget-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
 
-    long-to-int v3, v2
+    invoke-static {v13, v2}, Ll/ܽۢ᩸;->ۙ(Ll/ܽۢ᩸;Ll/ᩴᩳ᩸;)V
 
-    int-to-byte v2, v3
+    const/4 v2, 0x0
 
-    const/16 v3, 0x20
+    .line 1300
+    iput-object v2, p0, Ll/᩻ۢ᩸;->ܰ:Ll/ᩴᩳ᩸;
 
-    shr-long v3, p2, v3
+    .line 1301
+    iput-object v2, p0, Ll/᩻ۢ᩸;->֡:Ll/᩹ᩳ᩸;
 
-    long-to-int v4, v3
+    .line 1302
+    invoke-virtual {v1}, Ll/᩹ᩳ᩸;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    int-to-byte v3, v4
+    .line 1304
+    monitor-exit v0
 
-    const/16 v4, 0x18
+    return-object v13
 
-    shr-long v4, p2, v4
+    :catchall_0
+    move-exception v1
 
-    long-to-int v5, v4
+    .line 1307
+    :try_start_2
+    invoke-virtual {v11}, Ll/ۛܿ᩸;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    int-to-byte v4, v5
+    :try_start_3
+    invoke-virtual {v12}, Ll/ۨᩳ᩸;->close()V
 
-    const/16 v5, 0x10
+    .line 1309
+    throw v1
 
-    shr-long v5, p2, v5
+    :catchall_1
+    move-exception v1
 
-    long-to-int v6, v5
+    .line 1307
+    invoke-virtual {v12}, Ll/ۨᩳ᩸;->close()V
 
-    int-to-byte v5, v6
+    throw v1
 
-    const/16 v6, 0x8
+    :catchall_2
+    move-exception v1
 
-    shr-long v7, p2, v6
+    .line 1309
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    long-to-int v8, v7
-
-    int-to-byte v7, v8
-
-    long-to-int p3, p2
-
-    int-to-byte p2, p3
-
-    new-array p3, v6, [B
-
-    const/4 v8, 0x0
-
-    aput-byte v0, p3, v8
-
-    const/4 v0, 0x1
-
-    aput-byte v1, p3, v0
-
-    const/4 v0, 0x2
-
-    aput-byte v2, p3, v0
-
-    const/4 v0, 0x3
-
-    aput-byte v3, p3, v0
-
-    const/4 v0, 0x4
-
-    aput-byte v4, p3, v0
-
-    const/4 v0, 0x5
-
-    aput-byte v5, p3, v0
-
-    const/4 v0, 0x6
-
-    aput-byte v7, p3, v0
-
-    const/4 v0, 0x7
-
-    aput-byte p2, p3, v0
-
-    .line 318
-    invoke-virtual {p1, v6, p3}, Ll/ۧۢ᩸;->ۙ(I[B)V
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/ۧۢ᩸;Ljava/lang/String;)V
-    .locals 1
-
-    .line 162
-    sget-object v0, Ll/۟ۢ᩸;->ۨ:Ljava/nio/charset/Charset;
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p2
-
-    .line 163
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 318
-    array-length v0, p2
-
-    invoke-virtual {p1, v0, p2}, Ll/ۧۢ᩸;->ۙ(I[B)V
-
-    return-void
-.end method
-
-.method public final ܰ(Ll/ۧۢ᩸;)J
-    .locals 8
-
-    const/4 v0, 0x4
-
-    new-array v1, v0, [B
-
-    .line 293
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
-
-    const/4 p1, 0x0
-
-    .line 103
-    aget-byte p1, v1, p1
-
-    shl-int/lit8 p1, p1, 0x18
-
-    int-to-long v2, p1
-
-    const-wide v4, 0xff000000L
-
-    and-long/2addr v2, v4
-
-    const/4 p1, 0x1
-
-    aget-byte p1, v1, p1
-
-    shl-int/lit8 p1, p1, 0x10
-
-    int-to-long v4, p1
-
-    const-wide/32 v6, 0xff0000
-
-    and-long/2addr v4, v6
-
-    or-long/2addr v2, v4
-
-    const/4 p1, 0x2
-
-    aget-byte p1, v1, p1
-
-    shl-int/lit8 p1, p1, 0x8
-
-    int-to-long v4, p1
-
-    const-wide/32 v6, 0xff00
-
-    and-long/2addr v4, v6
-
-    or-long/2addr v2, v4
-
-    const/4 p1, 0x3
-
-    aget-byte p1, v1, p1
-
-    int-to-long v0, p1
-
-    const-wide/16 v4, 0xff
-
-    and-long/2addr v0, v4
-
-    or-long/2addr v0, v2
-
-    return-wide v0
+    throw v1
 .end method

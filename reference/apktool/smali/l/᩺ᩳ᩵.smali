@@ -1,26 +1,69 @@
-.class public final synthetic Ll/᩺ᩳ᩵;
-.super Ljava/lang/Object;
-.source "6AIE"
+.class public final Ll/᩺ᩳ᩵;
+.super Ll/ۛᩳ᩵;
+.source "S6IE"
 
 # interfaces
-.implements Ljava/util/function/ToIntFunction;
+.implements Ljava/util/Iterator;
 
 
 # virtual methods
-.method public final applyAsInt(Ljava/lang/Object;)I
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    .line 2
-    check-cast p1, Ll/ᩴᩳ᩵;
+    .line 523
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->ۙ()V
 
-    .line 1185
-    invoke-virtual {p1}, Ll/ᩴᩳ᩵;->ۨ()Ll/֡ᩳ᩵;
+    .line 524
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->᩷()I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p1}, Ll/֡ᩳ᩵;->size()I
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->᩸()Ll/ܰᩳ᩵;
 
-    move-result p1
+    move-result-object v1
 
-    return p1
+    invoke-static {v1}, Ll/ܰᩳ᩵;->ۤ(Ll/ܰᩳ᩵;)I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 525
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->᩷()I
+
+    move-result v0
+
+    add-int/lit8 v1, v0, 0x1
+
+    invoke-virtual {p0, v1}, Ll/ۛᩳ᩵;->᩷(I)V
+
+    invoke-virtual {p0, v0}, Ll/ۛᩳ᩵;->ۤ(I)V
+
+    .line 526
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->᩸()Ll/ܰᩳ᩵;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/ܰᩳ᩵;->᩷(Ll/ܰᩳ᩵;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->ۤ()I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    .line 527
+    invoke-virtual {p0}, Ll/ۛᩳ᩵;->ᩴ()V
+
+    return-object v0
+
+    .line 524
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method

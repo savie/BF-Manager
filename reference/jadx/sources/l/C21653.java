@@ -1,297 +1,109 @@
 package l;
 
-import android.os.IBinder;
-import android.os.Parcel;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩸ܶۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 71WO */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21653 implements InterfaceC18831 {
+/* JADX INFO: renamed from: l.᩶᩺᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1N3 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21653 implements InterfaceC17923, Map.Entry, InterfaceC0550 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public IBinder f70197;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f69122;
 
-    public C21653(IBinder iBinder) {
-        this.f70197 = iBinder;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1516 f69123;
+
+    @Override // java.util.Map.Entry
+    @Deprecated
+    public final Object setValue(Object obj) {
+        byte bByteValue = ((Byte) obj).byteValue();
+        byte[] bArr = this.f69123.f5289;
+        int i = this.f69122;
+        byte b = bArr[i];
+        bArr[i] = bByteValue;
+        return Byte.valueOf(b);
     }
 
-    @Override // android.os.IInterface
-    public final IBinder asBinder() {
-        return this.f70197;
+    public C21653(C1516 c1516, int i) {
+        this.f69123 = c1516;
+        this.f69122 = i;
     }
 
-    @Override // l.InterfaceC18831
+    public C21653(C1516 c1516) {
+        this.f69123 = c1516;
+    }
+
+    @Override // l.InterfaceC17923
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo32596(String str, boolean z, boolean z2, boolean z3) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeInt(z ? 1 : 0);
-            parcelObtain.writeInt(z2 ? 1 : 0);
-            parcelObtain.writeInt(z3 ? 1 : 0);
-            this.f70197.transact(1, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readInt() != 0;
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
+    public final int mo41837() {
+        return this.f69123.f5295[this.f69122];
     }
 
-    @Override // l.InterfaceC18831
-    public final void exit() {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            this.f70197.transact(2, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
+    @Override // l.InterfaceC0550
+    public final Object first() {
+        return Integer.valueOf(this.f69123.f5295[this.f69122]);
     }
 
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۡ */
-    public final String[] mo32601() {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            this.f70197.transact(3, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createStringArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۖ */
-    public final String mo32594(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(4, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readString();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo32608(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(5, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readString();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ܰ */
-    public final byte[] mo32606(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(6, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createByteArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۚ */
-    public final int[] mo32600(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(7, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۨ */
-    public final int[] mo32604(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(8, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۙ */
-    public final int[] mo32598(byte[] bArr) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeByteArray(bArr);
-            this.f70197.transact(9, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo32605(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(10, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readInt();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo32607(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(11, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readString();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۙ */
-    public final int[] mo32597(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(12, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۖ */
-    public final int[] mo32595(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(13, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۨ */
-    public final int[] mo32603(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(14, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.createIntArray();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo32599(String str, String str2) {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            this.f70197.transact(15, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-        }
-    }
-
-    @Override // l.InterfaceC18831
+    @Override // l.InterfaceC0550
     /* JADX INFO: renamed from: ۤ */
-    public final int mo32602() {
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("bin.mt.dstr.ipc.IDecryptorAidlInterface");
-            this.f70197.transact(16, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            return parcelObtain2.readInt();
-        } finally {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
+    public final Object mo2556() {
+        return Integer.valueOf(this.f69123.f5295[this.f69122]);
+    }
+
+    @Override // l.InterfaceC17923
+    /* JADX INFO: renamed from: ۘ */
+    public final byte mo41836() {
+        return this.f69123.f5289[this.f69122];
+    }
+
+    @Override // l.InterfaceC0550
+    /* JADX INFO: renamed from: ܳ */
+    public final Object mo2557() {
+        return Byte.valueOf(this.f69123.f5289[this.f69122]);
+    }
+
+    @Override // l.InterfaceC0550
+    /* JADX INFO: renamed from: ᩸ */
+    public final Object mo2558() {
+        return Byte.valueOf(this.f69123.f5289[this.f69122]);
+    }
+
+    @Override // java.util.Map.Entry
+    @Deprecated
+    public final Object getKey() {
+        return Integer.valueOf(this.f69123.f5295[this.f69122]);
+    }
+
+    @Override // java.util.Map.Entry
+    @Deprecated
+    public final Object getValue() {
+        return Byte.valueOf(this.f69123.f5289[this.f69122]);
+    }
+
+    @Override // java.util.Map.Entry
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof Map.Entry)) {
+            return false;
         }
+        Map.Entry entry = (Map.Entry) obj;
+        C1516 c1516 = this.f69123;
+        return c1516.f5295[this.f69122] == ((Integer) entry.getKey()).intValue() && c1516.f5289[this.f69122] == ((Byte) entry.getValue()).byteValue();
+    }
+
+    @Override // java.util.Map.Entry
+    public final int hashCode() {
+        C1516 c1516 = this.f69123;
+        int[] iArr = c1516.f5295;
+        int i = this.f69122;
+        return c1516.f5289[i] ^ iArr[i];
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        C1516 c1516 = this.f69123;
+        sb.append(c1516.f5295[this.f69122]);
+        sb.append("=>");
+        sb.append((int) c1516.f5289[this.f69122]);
+        return sb.toString();
     }
 }

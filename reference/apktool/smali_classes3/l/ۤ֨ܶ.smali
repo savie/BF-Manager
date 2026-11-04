@@ -1,600 +1,1738 @@
 .class public final Ll/ۤ֨ܶ;
 .super Ljava/lang/Object;
-.source "IC7P"
+.source "76BA"
 
 
 # static fields
-.field public static final ֨:Ll/ܿܶܶ;
+.field public static final ֫:[I
 
-.field public static final ۖ:Ll/ۛܶܶ;
+.field public static final ۚ:[B
 
-.field public static final ۘ:Ll/ۛܶܶ;
+.field public static final ۧ:[I
 
-.field public static final ۙ:Ll/ܿܶܶ;
+.field public static final ۫:[I
 
-.field public static final ۚ:Ll/ۛܶܶ;
+.field public static final ܳ:[I
 
-.field public static final ۜ:Ll/ۛܶܶ;
+.field public static final ᩴ:[B
 
-.field public static final ۨ:Ll/ۛܶܶ;
+.field public static final ᩸:[B
 
-.field public static final ۬:Ll/ۛܶܶ;
+.field public static final ᩻:[I
 
-.field public static final ܰ:Ll/ۛܶܶ;
 
-.field public static final ᩹:Ll/ۛܶܶ;
+# instance fields
+.field public ۙ:[S
 
-.field public static final ᩺:Ll/ܿܶܶ;
+.field public ۤ:Ll/᩷֨ܶ;
+
+.field public ᩷:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "Ldalvik/annotation/AnnotationDefault;"
+    const/16 v0, 0x1d
 
-    .line 45
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
+    new-array v1, v0, [I
 
-    move-result-object v0
+    .line 58
+    fill-array-data v1, :array_0
 
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->᩻:[I
 
-    move-result-object v0
+    const/16 v1, 0x1e
 
-    sput-object v0, Ll/ۤ֨ܶ;->ܰ:Ll/ۛܶܶ;
+    new-array v1, v1, [I
 
-    const-string v0, "Ldalvik/annotation/EnclosingClass;"
+    .line 62
+    fill-array-data v1, :array_1
 
-    .line 51
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->ۧ:[I
 
-    move-result-object v0
+    const/16 v1, 0x13
 
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    new-array v1, v1, [I
 
-    move-result-object v0
+    .line 66
+    fill-array-data v1, :array_2
 
-    sput-object v0, Ll/ۤ֨ܶ;->ۨ:Ll/ۛܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->֫:[I
 
-    const-string v0, "Ldalvik/annotation/EnclosingMethod;"
+    const/16 v1, 0x13
 
-    .line 57
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
+    new-array v1, v1, [B
 
-    move-result-object v0
+    .line 68
+    fill-array-data v1, :array_3
 
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->ۚ:[B
 
-    move-result-object v0
+    const/16 v1, 0x200
 
-    sput-object v0, Ll/ۤ֨ܶ;->ۖ:Ll/ۛܶܶ;
+    new-array v1, v1, [B
 
-    const-string v0, "Ldalvik/annotation/InnerClass;"
+    .line 79
+    fill-array-data v1, :array_4
 
-    .line 63
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->᩸:[B
 
-    move-result-object v0
+    const/16 v1, 0x100
 
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    new-array v1, v1, [B
 
-    move-result-object v0
+    .line 103
+    fill-array-data v1, :array_5
 
-    sput-object v0, Ll/ۤ֨ܶ;->ۚ:Ll/ۛܶܶ;
+    sput-object v1, Ll/ۤ֨ܶ;->ᩴ:[B
 
-    const-string v0, "Ldalvik/annotation/MemberClasses;"
+    new-array v0, v0, [I
 
-    .line 69
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
+    .line 116
+    fill-array-data v0, :array_6
 
-    move-result-object v0
+    sput-object v0, Ll/ۤ֨ܶ;->۫:[I
 
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    const/16 v0, 0x1e
 
-    move-result-object v0
+    new-array v0, v0, [I
 
-    sput-object v0, Ll/ۤ֨ܶ;->᩹:Ll/ۛܶܶ;
+    .line 119
+    fill-array-data v0, :array_7
 
-    const-string v0, "Ldalvik/annotation/Signature;"
-
-    .line 75
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۤ֨ܶ;->۬:Ll/ۛܶܶ;
-
-    const-string v0, "Ldalvik/annotation/SourceDebugExtension;"
-
-    .line 81
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۤ֨ܶ;->ۘ:Ll/ۛܶܶ;
-
-    const-string v0, "Ldalvik/annotation/Throws;"
-
-    .line 87
-    invoke-static {v0}, Ll/ۗܶܶ;->ۙ(Ljava/lang/String;)Ll/ۗܶܶ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۤ֨ܶ;->ۜ:Ll/ۛܶܶ;
-
-    .line 92
-    new-instance v0, Ll/ܿܶܶ;
-
-    const-string v1, "accessFlags"
-
-    invoke-direct {v0, v1}, Ll/ܿܶܶ;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Ll/ۤ֨ܶ;->ۙ:Ll/ܿܶܶ;
-
-    .line 97
-    new-instance v0, Ll/ܿܶܶ;
-
-    const-string v1, "name"
-
-    invoke-direct {v0, v1}, Ll/ܿܶܶ;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Ll/ۤ֨ܶ;->֨:Ll/ܿܶܶ;
-
-    .line 102
-    new-instance v0, Ll/ܿܶܶ;
-
-    const-string v1, "value"
-
-    invoke-direct {v0, v1}, Ll/ܿܶܶ;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
+    sput-object v0, Ll/ۤ֨ܶ;->ܳ:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x1
+        0x1
+        0x1
+        0x1
+        0x2
+        0x2
+        0x2
+        0x2
+        0x3
+        0x3
+        0x3
+        0x3
+        0x4
+        0x4
+        0x4
+        0x4
+        0x5
+        0x5
+        0x5
+        0x5
+        0x0
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x1
+        0x1
+        0x2
+        0x2
+        0x3
+        0x3
+        0x4
+        0x4
+        0x5
+        0x5
+        0x6
+        0x6
+        0x7
+        0x7
+        0x8
+        0x8
+        0x9
+        0x9
+        0xa
+        0xa
+        0xb
+        0xb
+        0xc
+        0xc
+        0xd
+        0xd
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x2
+        0x3
+        0x7
+    .end array-data
+
+    :array_3
+    .array-data 1
+        0x10t
+        0x11t
+        0x12t
+        0x0t
+        0x8t
+        0x7t
+        0x9t
+        0x6t
+        0xat
+        0x5t
+        0xbt
+        0x4t
+        0xct
+        0x3t
+        0xdt
+        0x2t
+        0xet
+        0x1t
+        0xft
+    .end array-data
+
+    :array_4
+    .array-data 1
+        0x0t
+        0x1t
+        0x2t
+        0x3t
+        0x4t
+        0x4t
+        0x5t
+        0x5t
+        0x6t
+        0x6t
+        0x6t
+        0x6t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x8t
+        0x8t
+        0x8t
+        0x8t
+        0x8t
+        0x8t
+        0x8t
+        0x8t
+        0x9t
+        0x9t
+        0x9t
+        0x9t
+        0x9t
+        0x9t
+        0x9t
+        0x9t
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xat
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xbt
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xct
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xet
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0xft
+        0x0t
+        0x0t
+        0x10t
+        0x11t
+        0x12t
+        0x12t
+        0x13t
+        0x13t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+        0x1dt
+    .end array-data
+
+    :array_5
+    .array-data 1
+        0x0t
+        0x1t
+        0x2t
+        0x3t
+        0x4t
+        0x5t
+        0x6t
+        0x7t
+        0x8t
+        0x8t
+        0x9t
+        0x9t
+        0xat
+        0xat
+        0xbt
+        0xbt
+        0xct
+        0xct
+        0xct
+        0xct
+        0xdt
+        0xdt
+        0xdt
+        0xdt
+        0xet
+        0xet
+        0xet
+        0xet
+        0xft
+        0xft
+        0xft
+        0xft
+        0x10t
+        0x10t
+        0x10t
+        0x10t
+        0x10t
+        0x10t
+        0x10t
+        0x10t
+        0x11t
+        0x11t
+        0x11t
+        0x11t
+        0x11t
+        0x11t
+        0x11t
+        0x11t
+        0x12t
+        0x12t
+        0x12t
+        0x12t
+        0x12t
+        0x12t
+        0x12t
+        0x12t
+        0x13t
+        0x13t
+        0x13t
+        0x13t
+        0x13t
+        0x13t
+        0x13t
+        0x13t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x14t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x15t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x16t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x18t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x19t
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1at
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1ct
+    .end array-data
+
+    :array_6
+    .array-data 4
+        0x0
+        0x1
+        0x2
+        0x3
+        0x4
+        0x5
+        0x6
+        0x7
+        0x8
+        0xa
+        0xc
+        0xe
+        0x10
+        0x14
+        0x18
+        0x1c
+        0x20
+        0x28
+        0x30
+        0x38
+        0x40
+        0x50
+        0x60
+        0x70
+        0x80
+        0xa0
+        0xc0
+        0xe0
+        0x0
+    .end array-data
+
+    :array_7
+    .array-data 4
+        0x0
+        0x1
+        0x2
+        0x3
+        0x4
+        0x6
+        0x8
+        0xc
+        0x10
+        0x18
+        0x20
+        0x30
+        0x40
+        0x60
+        0x80
+        0xc0
+        0x100
+        0x180
+        0x200
+        0x300
+        0x400
+        0x600
+        0x800
+        0xc00
+        0x1000
+        0x1800
+        0x2000
+        0x3000
+        0x4000
+        0x6000
+    .end array-data
 .end method
 
-.method public static ۙ(Ll/ܰ᩸ܶ;)Ll/ܰܶܶ;
-    .locals 4
 
-    .line 283
-    invoke-interface {p0}, Ll/ܰ᩸ܶ;->size()I
+# virtual methods
+.method public final ۙ(Ll/۟ۢܶ;)V
+    .locals 19
 
-    move-result v0
+    move-object/from16 v0, p0
 
-    .line 284
-    new-instance v1, Ll/ۙܶܶ;
+    move-object/from16 v1, p1
 
-    .line 126
-    invoke-direct {v1, v0}, Ll/ۚᩴܶ;-><init>(I)V
+    .line 222
+    iget-object v2, v0, Ll/ۤ֨ܶ;->ۙ:[S
 
-    const/4 v2, 0x0
+    .line 223
+    iget-object v3, v0, Ll/ۤ֨ܶ;->ۤ:Ll/᩷֨ܶ;
+
+    iget-object v4, v3, Ll/᩷֨ܶ;->ᩴ:[S
+
+    .line 224
+    iget v3, v3, Ll/᩷֨ܶ;->ۙ:I
+
+    const/4 v5, 0x0
+
+    .line 232
+    iput v5, v1, Ll/۟ۢܶ;->۫ۙ:I
+
+    const/16 v6, 0x23d
+
+    .line 233
+    iput v6, v1, Ll/۟ۢܶ;->ۚۙ:I
+
+    const/4 v7, 0x0
+
+    const/4 v8, -0x1
 
     :goto_0
-    if-ge v2, v0, :cond_0
+    const/4 v9, 0x1
 
-    .line 287
-    invoke-interface {p0, v2}, Ll/ܰ᩸ܶ;->getType(I)Ll/ۗܶܶ;
+    if-ge v7, v3, :cond_1
 
-    move-result-object v3
+    mul-int/lit8 v10, v7, 0x2
 
-    invoke-static {v3}, Ll/ۛܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/ۛܶܶ;
+    .line 236
+    aget-short v11, v2, v10
 
-    move-result-object v3
+    if-eqz v11, :cond_0
 
-    invoke-virtual {v1, v2, v3}, Ll/ۚᩴܶ;->ۙ(ILl/ۢ᩺ܶ;)V
+    .line 237
+    iget-object v8, v1, Ll/۟ۢܶ;->ܳۙ:[I
 
-    add-int/lit8 v2, v2, 0x1
+    iget v10, v1, Ll/۟ۢܶ;->۫ۙ:I
 
-    goto :goto_0
+    add-int/2addr v10, v9
 
-    .line 290
-    :cond_0
-    invoke-virtual {v1}, Ll/ᩴᩴܶ;->ܶ()V
+    iput v10, v1, Ll/۟ۢܶ;->۫ۙ:I
 
-    .line 291
-    new-instance p0, Ll/ܰܶܶ;
+    aput v7, v8, v10
 
-    invoke-direct {p0, v1}, Ll/ܰܶܶ;-><init>(Ll/ۙܶܶ;)V
+    .line 238
+    iget-object v8, v1, Ll/۟ۢܶ;->ۖ:[B
 
-    return-object p0
-.end method
+    aput-byte v5, v8, v7
 
-.method public static ۙ(Ll/ۛܶܶ;)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 132
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ۨ:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    .line 134
-    new-instance v1, Ll/ۗۜܶ;
-
-    sget-object v2, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 135
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Ll/ۢܶܶ;)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 179
-    invoke-static {p0}, Ll/ۤ֨ܶ;->ۙ(Ll/ܰ᩸ܶ;)Ll/ܰܶܶ;
-
-    move-result-object p0
-
-    .line 180
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->᩹:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    .line 181
-    new-instance v1, Ll/ۗۜܶ;
-
-    sget-object v2, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 182
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Ll/ܿܶܶ;)Ll/᩻ۜܶ;
-    .locals 8
-
-    .line 193
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->۬:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    .line 200
-    invoke-virtual {p0}, Ll/ܿܶܶ;->getString()Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 201
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    .line 202
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v1, :cond_5
-
-    .line 205
-    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v5
-
-    add-int/lit8 v6, v4, 0x1
-
-    const/16 v7, 0x4c
-
-    if-ne v5, v7, :cond_2
-
-    :goto_1
-    if-ge v6, v1, :cond_4
-
-    .line 210
-    invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
-
-    move-result v5
-
-    const/16 v7, 0x3b
-
-    if-ne v5, v7, :cond_0
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_3
-
-    :cond_0
-    const/16 v7, 0x3c
-
-    if-ne v5, v7, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    add-int/lit8 v6, v6, 0x1
+    move v8, v7
 
     goto :goto_1
 
-    :cond_2
+    :cond_0
+    add-int/lit8 v10, v10, 0x1
+
+    .line 240
+    aput-short v5, v2, v10
+
+    :goto_1
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    .line 248
+    :cond_1
     :goto_2
-    if-ge v6, v1, :cond_4
+    iget v7, v1, Ll/۟ۢܶ;->۫ۙ:I
 
-    .line 222
-    invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
+    const/4 v10, 0x2
 
-    move-result v5
+    if-ge v7, v10, :cond_4
 
-    if-ne v5, v7, :cond_3
+    .line 249
+    iget-object v11, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    add-int/lit8 v7, v7, 0x1
+
+    iput v7, v1, Ll/۟ۢܶ;->۫ۙ:I
+
+    if-ge v8, v10, :cond_2
+
+    add-int/lit8 v8, v8, 0x1
+
+    move v10, v8
 
     goto :goto_3
 
+    :cond_2
+    const/4 v10, 0x0
+
+    move v10, v8
+
+    const/4 v8, 0x0
+
+    :goto_3
+    aput v8, v11, v7
+
+    mul-int/lit8 v7, v8, 0x2
+
+    .line 250
+    aput-short v9, v2, v7
+
+    .line 251
+    iget-object v11, v1, Ll/۟ۢܶ;->ۖ:[B
+
+    aput-byte v5, v11, v8
+
+    .line 252
+    iget v8, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    sub-int/2addr v8, v9
+
+    iput v8, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    if-eqz v4, :cond_3
+
+    .line 254
+    iget v8, v1, Ll/۟ۢܶ;->۬ۙ:I
+
+    add-int/lit8 v7, v7, 0x1
+
+    aget-short v7, v4, v7
+
+    sub-int/2addr v8, v7
+
+    iput v8, v1, Ll/۟ۢܶ;->۬ۙ:I
+
     :cond_3
-    add-int/lit8 v6, v6, 0x1
+    move v8, v10
 
     goto :goto_2
 
-    .line 230
+    .line 257
     :cond_4
-    :goto_3
-    invoke-virtual {p0, v4, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    iput v8, v0, Ll/ۤ֨ܶ;->᩷:I
 
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v4, v6
-
-    goto :goto_0
-
-    .line 234
-    :cond_5
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result p0
-
-    .line 235
-    new-instance v1, Ll/ۙܶܶ;
-
-    .line 126
-    invoke-direct {v1, p0}, Ll/ۚᩴܶ;-><init>(I)V
+    .line 262
+    div-int/2addr v7, v10
 
     :goto_4
-    if-ge v3, p0, :cond_6
+    if-lt v7, v9, :cond_5
 
-    .line 238
-    new-instance v4, Ll/ܿܶܶ;
+    .line 263
+    invoke-virtual {v1, v2, v7}, Ll/۟ۢܶ;->ۙ([SI)V
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-direct {v4, v5}, Ll/ܿܶܶ;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3, v4}, Ll/ۚᩴܶ;->ۙ(ILl/ۢ᩺ܶ;)V
-
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v7, v7, -0x1
 
     goto :goto_4
 
-    .line 241
-    :cond_6
-    invoke-virtual {v1}, Ll/ᩴᩴܶ;->ܶ()V
-
-    .line 243
-    new-instance p0, Ll/ۗۜܶ;
-
-    new-instance v2, Ll/ܰܶܶ;
-
-    invoke-direct {v2, v1}, Ll/ܰܶܶ;-><init>(Ll/ۙܶܶ;)V
-
-    sget-object v1, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {p0, v1, v2}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, p0}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 244
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Ll/ܿܶܶ;I)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 162
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ۚ:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    .line 163
-    :cond_0
-    sget-object p0, Ll/۠ܶܶ;->ܺ:Ll/۠ܶܶ;
-
-    .line 165
-    :goto_0
-    new-instance v1, Ll/ۗۜܶ;
-
-    sget-object v2, Ll/ۤ֨ܶ;->֨:Ll/ܿܶܶ;
-
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 166
-    new-instance p0, Ll/ۗۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ۙ:Ll/ܿܶܶ;
-
-    .line 167
-    invoke-static {p1}, Ll/᩸ܶܶ;->ۙ(I)Ll/᩸ܶܶ;
-
-    move-result-object p1
-
-    invoke-direct {p0, v1, p1}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    .line 166
-    invoke-virtual {v0, p0}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 168
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Ll/᩶ܶܶ;)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 146
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ۖ:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    .line 148
-    new-instance v1, Ll/ۗۜܶ;
-
-    sget-object v2, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 149
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Ll/᩻ۜܶ;)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 118
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ܰ:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
-    .line 120
-    new-instance v1, Ll/ۗۜܶ;
-
-    new-instance v2, Ll/ۗ᩺ܶ;
-
-    invoke-direct {v2, p0}, Ll/ۗ᩺ܶ;-><init>(Ll/᩻ۜܶ;)V
-
-    sget-object p0, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {v1, p0, v2}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
-
-    .line 121
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
-
-    return-object v0
-.end method
-
-.method public static ܰ(Ll/ܰ᩸ܶ;)Ll/᩻ۜܶ;
-    .locals 3
-
-    .line 269
-    invoke-static {p0}, Ll/ۤ֨ܶ;->ۙ(Ll/ܰ᩸ܶ;)Ll/ܰܶܶ;
-
-    move-result-object p0
-
-    .line 270
-    new-instance v0, Ll/᩻ۜܶ;
-
-    sget-object v1, Ll/ۤ֨ܶ;->ۜ:Ll/ۛܶܶ;
-
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
-
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
-
     .line 271
-    new-instance v1, Ll/ۗۜܶ;
+    :cond_5
+    :goto_5
+    iget-object v4, v1, Ll/۟ۢܶ;->ܳۙ:[I
 
-    sget-object v2, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
-
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
-
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
+    aget v7, v4, v9
 
     .line 272
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
+    iget v11, v1, Ll/۟ۢܶ;->۫ۙ:I
 
-    return-object v0
-.end method
+    add-int/lit8 v12, v11, -0x1
 
-.method public static ܰ(Ll/ܿܶܶ;)Ll/᩻ۜܶ;
-    .locals 3
+    iput v12, v1, Ll/۟ۢܶ;->۫ۙ:I
 
-    .line 255
-    new-instance v0, Ll/᩻ۜܶ;
+    aget v11, v4, v11
 
-    sget-object v1, Ll/ۤ֨ܶ;->ۘ:Ll/ۛܶܶ;
+    aput v11, v4, v9
 
-    sget-object v2, Ll/ܳۜܶ;->ܿ:Ll/ܳۜܶ;
+    .line 273
+    invoke-virtual {v1, v2, v9}, Ll/۟ۢܶ;->ۙ([SI)V
 
-    invoke-direct {v0, v1, v2}, Ll/᩻ۜܶ;-><init>(Ll/ۛܶܶ;Ll/ܳۜܶ;)V
+    .line 274
+    iget-object v4, v1, Ll/۟ۢܶ;->ܳۙ:[I
 
-    .line 257
-    new-instance v1, Ll/ۗۜܶ;
+    aget v11, v4, v9
 
-    sget-object v2, Ll/ۤ֨ܶ;->᩺:Ll/ܿܶܶ;
+    .line 276
+    iget v12, v1, Ll/۟ۢܶ;->ۚۙ:I
 
-    invoke-direct {v1, v2, p0}, Ll/ۗۜܶ;-><init>(Ll/ܿܶܶ;Ll/ۢ᩺ܶ;)V
+    add-int/lit8 v13, v12, -0x1
 
-    invoke-virtual {v0, v1}, Ll/᩻ۜܶ;->ܰ(Ll/ۗۜܶ;)V
+    iput v13, v1, Ll/۟ۢܶ;->ۚۙ:I
 
-    .line 258
-    invoke-virtual {v0}, Ll/ᩴᩴܶ;->ܶ()V
+    aput v7, v4, v13
 
-    return-object v0
+    sub-int/2addr v12, v10
+
+    .line 277
+    iput v12, v1, Ll/۟ۢܶ;->ۚۙ:I
+
+    aput v11, v4, v12
+
+    mul-int/lit8 v4, v3, 0x2
+
+    mul-int/lit8 v12, v7, 0x2
+
+    .line 280
+    aget-short v13, v2, v12
+
+    mul-int/lit8 v14, v11, 0x2
+
+    aget-short v15, v2, v14
+
+    add-int/2addr v13, v15
+
+    int-to-short v13, v13
+
+    aput-short v13, v2, v4
+
+    .line 281
+    iget-object v4, v1, Ll/۟ۢܶ;->ۖ:[B
+
+    aget-byte v7, v4, v7
+
+    aget-byte v11, v4, v11
+
+    invoke-static {v7, v11}, Ljava/lang/Math;->max(II)I
+
+    move-result v7
+
+    add-int/2addr v7, v9
+
+    int-to-byte v7, v7
+
+    aput-byte v7, v4, v3
+
+    add-int/2addr v12, v9
+
+    add-int/2addr v14, v9
+
+    int-to-short v4, v3
+
+    .line 282
+    aput-short v4, v2, v14
+
+    aput-short v4, v2, v12
+
+    .line 285
+    iget-object v4, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    add-int/lit8 v7, v3, 0x1
+
+    aput v3, v4, v9
+
+    .line 286
+    invoke-virtual {v1, v2, v9}, Ll/۟ۢܶ;->ۙ([SI)V
+
+    .line 287
+    iget v3, v1, Ll/۟ۢܶ;->۫ۙ:I
+
+    if-ge v3, v10, :cond_16
+
+    .line 289
+    iget-object v3, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    iget v4, v1, Ll/۟ۢܶ;->ۚۙ:I
+
+    sub-int/2addr v4, v9
+
+    iput v4, v1, Ll/۟ۢܶ;->ۚۙ:I
+
+    aget v7, v3, v9
+
+    aput v7, v3, v4
+
+    .line 142
+    iget-object v3, v0, Ll/ۤ֨ܶ;->ۙ:[S
+
+    .line 143
+    iget-object v4, v0, Ll/ۤ֨ܶ;->ۤ:Ll/᩷֨ܶ;
+
+    iget-object v7, v4, Ll/᩷֨ܶ;->ᩴ:[S
+
+    .line 144
+    iget-object v10, v4, Ll/᩷֨ܶ;->ۤ:[I
+
+    .line 145
+    iget v11, v4, Ll/᩷֨ܶ;->᩷:I
+
+    .line 146
+    iget v4, v4, Ll/᩷֨ܶ;->᩸:I
+
+    const/4 v12, 0x0
+
+    :goto_6
+    const/16 v13, 0xf
+
+    if-gt v12, v13, :cond_6
+
+    .line 155
+    iget-object v13, v1, Ll/۟ۢܶ;->ܿ:[S
+
+    aput-short v5, v13, v12
+
+    add-int/lit8 v12, v12, 0x1
+
+    goto :goto_6
+
+    .line 159
+    :cond_6
+    iget-object v5, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    const/4 v12, 0x0
+
+    iget v14, v1, Ll/۟ۢܶ;->ۚۙ:I
+
+    aget v5, v5, v14
+
+    mul-int/lit8 v5, v5, 0x2
+
+    add-int/2addr v5, v9
+
+    aput-short v12, v3, v5
+
+    add-int/2addr v14, v9
+
+    const/4 v5, 0x0
+
+    :goto_7
+    if-ge v14, v6, :cond_b
+
+    .line 162
+    iget-object v6, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    aget v6, v6, v14
+
+    mul-int/lit8 v9, v6, 0x2
+
+    add-int/lit8 v15, v9, 0x1
+
+    .line 163
+    aget-short v16, v3, v15
+
+    mul-int/lit8 v16, v16, 0x2
+
+    add-int/lit8 v16, v16, 0x1
+
+    aget-short v16, v3, v16
+
+    add-int/lit8 v13, v16, 0x1
+
+    if-le v13, v4, :cond_7
+
+    add-int/lit8 v5, v5, 0x1
+
+    move v13, v4
+
+    :cond_7
+    int-to-short v12, v13
+
+    .line 168
+    aput-short v12, v3, v15
+
+    .line 171
+    iget v12, v0, Ll/ۤ֨ܶ;->᩷:I
+
+    if-le v6, v12, :cond_8
+
+    move/from16 v18, v5
+
+    goto :goto_9
+
+    .line 174
+    :cond_8
+    iget-object v12, v1, Ll/۟ۢܶ;->ܿ:[S
+
+    aget-short v17, v12, v13
+
+    move/from16 v18, v5
+
+    add-int/lit8 v5, v17, 0x1
+
+    int-to-short v5, v5
+
+    aput-short v5, v12, v13
+
+    if-lt v6, v11, :cond_9
+
+    sub-int/2addr v6, v11
+
+    .line 177
+    aget v5, v10, v6
+
+    goto :goto_8
+
+    :cond_9
+    const/4 v5, 0x0
+
+    .line 178
+    :goto_8
+    aget-short v6, v3, v9
+
+    .line 179
+    iget v9, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    invoke-static {v13, v5, v6, v9}, Ll/ۨ᩹ۧ;->᩷(IIII)I
+
+    move-result v9
+
+    iput v9, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    if-eqz v7, :cond_a
+
+    .line 181
+    iget v9, v1, Ll/۟ۢܶ;->۬ۙ:I
+
+    aget-short v12, v7, v15
+
+    invoke-static {v12, v5, v6, v9}, Ll/ۨ᩹ۧ;->᩷(IIII)I
+
+    move-result v5
+
+    iput v5, v1, Ll/۟ۢܶ;->۬ۙ:I
+
+    :cond_a
+    :goto_9
+    add-int/lit8 v14, v14, 0x1
+
+    const/16 v6, 0x23d
+
+    move/from16 v5, v18
+
+    const/4 v12, 0x0
+
+    const/16 v13, 0xf
+
+    goto :goto_7
+
+    :cond_b
+    if-nez v5, :cond_c
+
+    goto :goto_e
+
+    :cond_c
+    add-int/lit8 v6, v4, -0x1
+
+    .line 190
+    :goto_a
+    iget-object v7, v1, Ll/۟ۢܶ;->ܿ:[S
+
+    aget-short v9, v7, v6
+
+    if-nez v9, :cond_d
+
+    add-int/lit8 v6, v6, -0x1
+
+    goto :goto_a
+
+    :cond_d
+    add-int/lit8 v9, v9, -0x1
+
+    int-to-short v9, v9
+
+    .line 192
+    aput-short v9, v7, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    .line 193
+    aget-short v9, v7, v6
+
+    add-int/lit8 v9, v9, 0x2
+
+    int-to-short v9, v9
+
+    aput-short v9, v7, v6
+
+    .line 194
+    aget-short v6, v7, v4
+
+    add-int/lit8 v6, v6, -0x1
+
+    int-to-short v6, v6
+
+    aput-short v6, v7, v4
+
+    add-int/lit8 v5, v5, -0x2
+
+    if-gtz v5, :cond_c
+
+    :goto_b
+    if-eqz v4, :cond_11
+
+    .line 201
+    iget-object v5, v1, Ll/۟ۢܶ;->ܿ:[S
+
+    aget-short v5, v5, v4
+
+    :goto_c
+    if-eqz v5, :cond_10
+
+    .line 203
+    iget-object v6, v1, Ll/۟ۢܶ;->ܳۙ:[I
+
+    add-int/lit8 v14, v14, -0x1
+
+    aget v6, v6, v14
+
+    .line 204
+    iget v7, v0, Ll/ۤ֨ܶ;->᩷:I
+
+    if-le v6, v7, :cond_e
+
+    goto :goto_c
+
+    :cond_e
+    mul-int/lit8 v6, v6, 0x2
+
+    add-int/lit8 v7, v6, 0x1
+
+    .line 206
+    aget-short v9, v3, v7
+
+    if-eq v9, v4, :cond_f
+
+    .line 207
+    iget v10, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    int-to-long v11, v4
+
+    move v15, v14
+
+    int-to-long v13, v9
+
+    sub-long/2addr v11, v13
+
+    aget-short v6, v3, v6
+
+    int-to-long v13, v6
+
+    mul-long v11, v11, v13
+
+    long-to-int v6, v11
+
+    add-int/2addr v10, v6
+
+    iput v10, v1, Ll/۟ۢܶ;->۟ۙ:I
+
+    int-to-short v6, v4
+
+    .line 208
+    aput-short v6, v3, v7
+
+    goto :goto_d
+
+    :cond_f
+    move v15, v14
+
+    :goto_d
+    add-int/lit8 v5, v5, -0x1
+
+    move v14, v15
+
+    goto :goto_c
+
+    :cond_10
+    add-int/lit8 v4, v4, -0x1
+
+    goto :goto_b
+
+    .line 297
+    :cond_11
+    :goto_e
+    iget-object v3, v1, Ll/۟ۢܶ;->ܿ:[S
+
+    iget-object v1, v1, Ll/۟ۢܶ;->ܿۙ:[S
+
+    const/4 v11, 0x0
+
+    .line 316
+    aput-short v11, v1, v11
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/16 v12, 0xf
+
+    :goto_f
+    if-gt v4, v12, :cond_12
+
+    add-int/lit8 v6, v4, -0x1
+
+    .line 318
+    aget-short v6, v3, v6
+
+    add-int/2addr v5, v6
+
+    shl-int/lit8 v5, v5, 0x1
+
+    int-to-short v5, v5
+
+    aput-short v5, v1, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_f
+
+    :cond_12
+    const/4 v3, 0x0
+
+    :goto_10
+    if-gt v3, v8, :cond_15
+
+    mul-int/lit8 v4, v3, 0x2
+
+    add-int/lit8 v5, v4, 0x1
+
+    .line 328
+    aget-short v5, v2, v5
+
+    if-nez v5, :cond_13
+
+    goto :goto_11
+
+    .line 332
+    :cond_13
+    aget-short v6, v1, v5
+
+    add-int/lit8 v7, v6, 0x1
+
+    int-to-short v7, v7
+
+    aput-short v7, v1, v5
+
+    const/4 v7, 0x0
+
+    :cond_14
+    and-int/lit8 v9, v6, 0x1
+
+    or-int/2addr v7, v9
+
+    ushr-int/lit8 v6, v6, 0x1
+
+    shl-int/lit8 v7, v7, 0x1
+
+    add-int/lit8 v5, v5, -0x1
+
+    if-gtz v5, :cond_14
+
+    ushr-int/lit8 v5, v7, 0x1
+
+    int-to-short v5, v5
+
+    aput-short v5, v2, v4
+
+    :goto_11
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_10
+
+    :cond_15
+    return-void
+
+    :cond_16
+    move v3, v7
+
+    goto/16 :goto_5
 .end method

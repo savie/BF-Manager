@@ -1,47 +1,79 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
-import java.util.List;
-import java.util.Map;
-
-/* JADX INFO: renamed from: l.᩺֫ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P1EM */
+/* JADX INFO: renamed from: l.᩸۠ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 55O1 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22674 {
+public final /* synthetic */ class C22674 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C8229 f73833;
+    public static final /* synthetic */ int[] f73640;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public Map f73834;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f73835;
-
-    public C22674(C8229 c8229, boolean z) {
-        this.f73833 = c8229;
-        this.f73835 = z;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m50206(String str) {
-        return (List) this.f73834.get(str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50207(ActivityC5677 activityC5677, Exception exc) {
-        activityC5677.m31002(exc, (DialogInterface.OnDismissListener) null);
-        boolean z = exc instanceof C8563;
-        if (z) {
-            C8563 c8563 = (C8563) exc;
-            C8500 c8500M22223 = C8500.m22223(c8563.f29593, c8563.f29592);
-            c8500M22223.f29474 = false;
-            activityC5677.m15674(c8563.m22321(), c8500M22223);
-            this.f73833.m21575(c8563.m22321());
+    static {
+        int[] iArr = new int[EnumC15214.values().length];
+        f73640 = iArr;
+        try {
+            iArr[EnumC15214.TYPE_STRING_ID_ITEM.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (z || (exc instanceof C4811)) {
-            C15829.m37611(R.string.MT_Protector);
+        try {
+            f73640[EnumC15214.TYPE_TYPE_ID_ITEM.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_PROTO_ID_ITEM.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_FIELD_ID_ITEM.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_METHOD_ID_ITEM.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_CLASS_DEF_ITEM.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_TYPE_LIST.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_ANNOTATION_SET_REF_LIST.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_ANNOTATION_SET_ITEM.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_CLASS_DATA_ITEM.ordinal()] = 10;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_CODE_ITEM.ordinal()] = 11;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_STRING_DATA_ITEM.ordinal()] = 12;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_DEBUG_INFO_ITEM.ordinal()] = 13;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_ANNOTATION_ITEM.ordinal()] = 14;
+        } catch (NoSuchFieldError unused14) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_ENCODED_ARRAY_ITEM.ordinal()] = 15;
+        } catch (NoSuchFieldError unused15) {
+        }
+        try {
+            f73640[EnumC15214.TYPE_ANNOTATIONS_DIRECTORY_ITEM.ordinal()] = 16;
+        } catch (NoSuchFieldError unused16) {
         }
     }
 }

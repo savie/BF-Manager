@@ -1,93 +1,55 @@
-.class public final synthetic Ll/ۡܺᩴ;
+.class public final Ll/ۡܺᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "O700"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public ֡:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public ֫:I
 
+.field public ۗ:Ll/᩵ܽᩴ;
 
-# direct methods
-.method public synthetic constructor <init>(Ljava/nio/file/DirectoryStream;)V
-    .locals 1
+.field public ۘ:I
 
-    const/4 v0, 0x0
+.field public ۙ:I
 
-    iput v0, p0, Ll/ۡܺᩴ;->a:I
+.field public ۚ:I
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public ۛ:Z
 
-    iput-object p1, p0, Ll/ۡܺᩴ;->b:Ljava/lang/Object;
+.field public ۤ:I
 
-    return-void
-.end method
+.field public ۧ:I
 
-.method public synthetic constructor <init>(Ll/᩹ܺᩴ;)V
-    .locals 1
+.field public ۨ:Ll/ۘܽᩴ;
 
-    const/4 v0, 0x1
+.field public ۫:Ll/ۡ᩶᩸;
 
-    iput v0, p0, Ll/ۡܺᩴ;->a:I
+.field public ܰ:I
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public ܳ:I
 
-    iput-object p1, p0, Ll/ۡܺᩴ;->b:Ljava/lang/Object;
+.field public ܶ:I
 
-    return-void
-.end method
+.field public ܺ:Z
 
+.field public ܽ:I
 
-# virtual methods
-.method public final run()V
-    .locals 2
+.field public ܿ:Ll/ۡ᩶᩸;
 
-    iget v0, p0, Ll/ۡܺᩴ;->a:I
+.field public ᩴ:I
 
-    packed-switch v0, :pswitch_data_0
+.field public ᩵:Ll/ۡ᩶᩸;
 
-    .line 0
-    iget-object v0, p0, Ll/ۡܺᩴ;->b:Ljava/lang/Object;
+.field public ᩶:I
 
-    check-cast v0, Ll/᩹ܺᩴ;
+.field public ᩷:Ll/ۡ᩶᩸;
 
-    invoke-virtual {v0}, Ll/᩹ܺᩴ;->close()V
+.field public ᩸:I
 
-    return-void
+.field public ᩹:Z
 
-    :pswitch_0
-    iget-object v0, p0, Ll/ۡܺᩴ;->b:Ljava/lang/Object;
+.field public ᩺:Ll/ۡ᩶᩸;
 
-    check-cast v0, Ljava/nio/file/DirectoryStream;
-
-    sget-object v1, Ll/ۚ۟ᩴ;->a:Ljava/util/Set;
-
-    .line 109
-    :try_start_0
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    .line 111
-    new-instance v1, Ljava/io/UncheckedIOException;
-
-    invoke-direct {v1, v0}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public ᩻:I

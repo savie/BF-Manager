@@ -26,7 +26,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.x509.ExtendedPKIXBuilderParameters;
 import org.bouncycastle.x509.ExtendedPKIXParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCertPathBuilderSpi_8 extends CertPathBuilderSpi {
     public Exception certPathException;
     public final JcaJceHelper helper;

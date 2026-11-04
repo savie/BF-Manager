@@ -1,12 +1,10 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۢۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T6QI */
+/* JADX INFO: renamed from: l.ۤܰۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6B2 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10911 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 23;
-    }
+public final class C10911 extends C24649 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9730 f34542;
 }

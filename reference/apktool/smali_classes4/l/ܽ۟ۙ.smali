@@ -1,247 +1,1116 @@
 .class public final Ll/ܽ۟ۙ;
 .super Ljava/lang/Object;
-.source "L8KW"
+.source "J8M0"
+
+
+# static fields
+.field public static final ۘ:Ll/۠ۙ᩷;
 
 
 # instance fields
-.field public ֨:J
+.field public final ֫:Ll/ۜ᩹ۙ;
 
-.field public ۖ:Ljava/util/Map;
+.field public final ۗ:Ljava/util/List;
 
-.field public ۘ:J
+.field public volatile ۙ:J
 
-.field public ۙ:I
+.field public final ۚ:Ll/ܿ᩶ۙ;
 
-.field public ۚ:Ljava/lang/String;
+.field public final ۛ:Ll/ۗۤ᩷;
 
-.field public ۨ:I
+.field public final ۤ:Z
 
-.field public ۬:Landroid/net/Uri;
+.field public final ۧ:I
 
-.field public ܰ:[B
+.field public volatile ۨ:J
 
-.field public ᩹:J
+.field public final ۫:I
+
+.field public final ܳ:Z
+
+.field public final ܶ:J
+
+.field public volatile ܺ:J
+
+.field public volatile ܽ:J
+
+.field public final ᩴ:Ll/۠ۙ᩷;
+
+.field public final ᩵:Ll/᩻ۗۙ;
+
+.field public final ᩷:J
+
+.field public final ᩸:Ll/۠ۙ᩷;
+
+.field public final ᩹:Z
+
+.field public final ᩺:Ll/᩸ᩴ᩷;
+
+.field public final ᩻:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 64
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 41
+    new-instance v0, Ll/۠ۙ᩷;
 
-    const/4 v0, 0x1
+    new-instance v1, Ljava/lang/Object;
 
-    .line 65
-    iput v0, p0, Ll/ܽ۟ۙ;->ۨ:I
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    .line 66
-    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    invoke-direct {v0, v1}, Ll/۠ۙ᩷;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Ll/ܽ۟ۙ;->ۖ:Ljava/util/Map;
-
-    const-wide/16 v0, -0x1
-
-    .line 67
-    iput-wide v0, p0, Ll/ܽ۟ۙ;->᩹:J
+    sput-object v0, Ll/ܽ۟ۙ;->ۘ:Ll/۠ۙ᩷;
 
     return-void
 .end method
 
-.method public constructor <init>(Ll/۫۟ۙ;)V
-    .locals 2
+.method public constructor <init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+    .locals 3
 
-    .line 75
+    move-object v0, p0
+
+    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
-    iget-object v0, p1, Ll/۫۟ۙ;->۬:Landroid/net/Uri;
+    move-object v1, p1
 
-    iput-object v0, p0, Ll/ܽ۟ۙ;->۬:Landroid/net/Uri;
+    .line 199
+    iput-object v1, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
 
-    .line 77
-    iget-wide v0, p1, Ll/۫۟ۙ;->ۘ:J
+    move-object v1, p2
 
-    iput-wide v0, p0, Ll/ܽ۟ۙ;->ۘ:J
+    .line 200
+    iput-object v1, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
 
-    .line 78
-    iget v0, p1, Ll/۫۟ۙ;->ۨ:I
+    move-wide v1, p3
 
-    iput v0, p0, Ll/ܽ۟ۙ;->ۨ:I
+    .line 201
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->ܶ:J
 
-    .line 79
-    iget-object v0, p1, Ll/۫۟ۙ;->ܰ:[B
+    move-wide v1, p5
 
-    iput-object v0, p0, Ll/ܽ۟ۙ;->ܰ:[B
+    .line 202
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->᩷:J
 
-    .line 80
-    iget-object v0, p1, Ll/۫۟ۙ;->ۖ:Ljava/util/Map;
+    move v1, p7
 
-    iput-object v0, p0, Ll/ܽ۟ۙ;->ۖ:Ljava/util/Map;
+    .line 203
+    iput v1, v0, Ll/ܽ۟ۙ;->ۧ:I
 
-    .line 81
-    iget-wide v0, p1, Ll/۫۟ۙ;->֨:J
+    move-object v1, p8
 
-    iput-wide v0, p0, Ll/ܽ۟ۙ;->֨:J
+    .line 204
+    iput-object v1, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
 
-    .line 82
-    iget-wide v0, p1, Ll/۫۟ۙ;->᩹:J
+    move v1, p9
 
-    iput-wide v0, p0, Ll/ܽ۟ۙ;->᩹:J
+    .line 205
+    iput-boolean v1, v0, Ll/ܽ۟ۙ;->ۤ:Z
 
-    .line 83
-    iget-object v0, p1, Ll/۫۟ۙ;->ۚ:Ljava/lang/String;
+    move-object v1, p10
 
-    iput-object v0, p0, Ll/ܽ۟ۙ;->ۚ:Ljava/lang/String;
+    .line 206
+    iput-object v1, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
 
-    .line 84
-    iget p1, p1, Ll/۫۟ۙ;->ۙ:I
+    move-object v1, p11
 
-    iput p1, p0, Ll/ܽ۟ۙ;->ۙ:I
+    .line 207
+    iput-object v1, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    move-object v1, p12
+
+    .line 208
+    iput-object v1, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    move-object/from16 v1, p13
+
+    .line 209
+    iput-object v1, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    move/from16 v1, p14
+
+    .line 210
+    iput-boolean v1, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move/from16 v1, p15
+
+    .line 211
+    iput v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v1, p16
+
+    .line 212
+    iput v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move-object/from16 v1, p17
+
+    .line 213
+    iput-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-wide/from16 v1, p18
+
+    .line 214
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v1, p20
+
+    .line 215
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v1, p22
+
+    .line 216
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v1, p24
+
+    .line 217
+    iput-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move/from16 v1, p26
+
+    .line 218
+    iput-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
 
     return-void
+.end method
+
+.method public static ۙ(Ll/᩸ᩴ᩷;)Ll/ܽ۟ۙ;
+    .locals 28
+
+    move-object/from16 v11, p0
+
+    .line 132
+    new-instance v27, Ll/ܽ۟ۙ;
+
+    move-object/from16 v0, v27
+
+    sget-object v1, Ll/᩻ۗۙ;->ۙ:Ll/᩻ۗۙ;
+
+    sget-object v10, Ll/ۗۤ᩷;->᩸:Ll/ۗۤ᩷;
+
+    .line 142
+    invoke-static {}, Ll/֫۫ܽ;->of()Ll/֫۫ܽ;
+
+    move-result-object v12
+
+    sget-object v17, Ll/ۜ᩹ۙ;->᩸:Ll/ۜ᩹ۙ;
+
+    const-wide/16 v24, 0x0
+
+    const/16 v26, 0x0
+
+    sget-object v13, Ll/ܽ۟ۙ;->ۘ:Ll/۠ۙ᩷;
+
+    move-object v2, v13
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v5, 0x0
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x1
+
+    const/16 v16, 0x0
+
+    const-wide/16 v18, 0x0
+
+    const-wide/16 v20, 0x0
+
+    const-wide/16 v22, 0x0
+
+    invoke-direct/range {v0 .. v26}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v27
+.end method
+
+.method public static ᩸()Ll/۠ۙ᩷;
+    .locals 1
+
+    .line 223
+    sget-object v0, Ll/ܽ۟ۙ;->ۘ:Ll/۠ۙ᩷;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/۫۟ۙ;
-    .locals 15
+.method public final ۙ()Ll/ܽ۟ۙ;
+    .locals 31
 
-    .line 231
-    iget-object v0, p0, Ll/ܽ۟ۙ;->۬:Landroid/net/Uri;
+    move-object/from16 v0, p0
+
+    .line 539
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 v29, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v30, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    .line 557
+    invoke-virtual/range {p0 .. p0}, Ll/ܽ۟ۙ;->᩷()J
+
+    move-result-wide v23
+
+    .line 558
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v25
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, v29
+
+    move-object/from16 v2, v30
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(I)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move/from16 v8, p1
+
+    .line 313
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(IIZ)Ll/ܽ۟ۙ;
+    .locals 29
+
+    move-object/from16 v0, p0
+
+    move/from16 v16, p1
+
+    move/from16 v17, p2
+
+    move/from16 v15, p3
+
+    .line 444
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    move-object/from16 p1, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 p2, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Ll/ۜ᩹ۙ;)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v18, p1
+
+    .line 475
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Ll/۠ۙ᩷;)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v14, p1
+
+    .line 406
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Ll/۠ۙ᩷;JJJJLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;)Ll/ܽ۟ۙ;
+    .locals 29
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v3, p1
+
+    move-wide/from16 v23, p2
+
+    move-wide/from16 v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v21, p8
+
+    move-object/from16 v11, p10
+
+    move-object/from16 v12, p11
+
+    move-object/from16 v13, p12
+
+    .line 251
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 p2, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    .line 270
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v25
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Ll/ܿ᩶ۙ;)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, p1
+
+    .line 344
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Ll/᩻ۗۙ;)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v2, p1
+
+    .line 282
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۙ(Z)Ll/ܽ۟ۙ;
+    .locals 30
+
+    move-object/from16 v0, p0
+
+    move/from16 v10, p1
+
+    .line 375
+    new-instance v28, Ll/ܽ۟ۙ;
+
+    move-object/from16 v1, v28
+
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
+
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
+
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
+
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
+
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
+
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
+
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
+
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
+
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
+
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
+
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
+
+    move-object/from16 p1, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
+
+    move/from16 v16, v1
+
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
+
+    move/from16 v17, v1
+
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    move-object/from16 v18, v1
+
+    move-object/from16 v29, v2
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    iget-boolean v1, v0, Ll/ܽ۟ۙ;->᩹:Z
+
+    move/from16 v27, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
+.end method
+
+.method public final ۤ()Z
+    .locals 2
+
+    .line 617
+    iget v0, p0, Ll/ܽ۟ۙ;->ۧ:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p0, Ll/ܽ۟ۙ;->ܳ:Z
 
     if-eqz v0, :cond_0
 
-    .line 232
-    new-instance v0, Ll/۫۟ۙ;
+    iget v0, p0, Ll/ܽ۟ۙ;->᩻:I
 
-    iget-object v2, p0, Ll/ܽ۟ۙ;->۬:Landroid/net/Uri;
+    if-nez v0, :cond_0
 
-    iget-wide v3, p0, Ll/ܽ۟ۙ;->ۘ:J
+    const/4 v0, 0x1
 
-    iget v5, p0, Ll/ܽ۟ۙ;->ۨ:I
+    return v0
 
-    iget-object v6, p0, Ll/ܽ۟ۙ;->ܰ:[B
-
-    iget-object v7, p0, Ll/ܽ۟ۙ;->ۖ:Ljava/util/Map;
-
-    iget-wide v8, p0, Ll/ܽ۟ۙ;->֨:J
-
-    iget-wide v10, p0, Ll/ܽ۟ۙ;->᩹:J
-
-    iget-object v12, p0, Ll/ܽ۟ۙ;->ۚ:Ljava/lang/String;
-
-    iget v13, p0, Ll/ܽ۟ۙ;->ۙ:I
-
-    const/4 v14, 0x0
-
-    move-object v1, v0
-
-    invoke-direct/range {v1 .. v14}, Ll/۫۟ۙ;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;II)V
-
-    return-object v0
-
-    .line 137
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v1, "The uri must be set."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method
 
-.method public final ۙ(I)V
-    .locals 0
+.method public final ᩷()J
+    .locals 7
 
-    .line 208
-    iput p1, p0, Ll/ܽ۟ۙ;->ۙ:I
+    .line 584
+    invoke-virtual {p0}, Ll/ܽ۟ۙ;->ۤ()Z
 
-    return-void
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 585
+    iget-wide v0, p0, Ll/ܽ۟ۙ;->ܽ:J
+
+    return-wide v0
+
+    .line 593
+    :cond_0
+    iget-wide v0, p0, Ll/ܽ۟ۙ;->ܺ:J
+
+    .line 594
+    iget-wide v2, p0, Ll/ܽ۟ۙ;->ܽ:J
+
+    .line 595
+    iget-wide v4, p0, Ll/ܽ۟ۙ;->ܺ:J
+
+    cmp-long v6, v0, v4
+
+    if-nez v6, :cond_0
+
+    .line 597
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v0
+
+    .line 599
+    invoke-static {v2, v3}, Ll/ۜۨۙ;->᩷(J)J
+
+    move-result-wide v0
+
+    long-to-float v2, v4
+
+    iget-object v3, p0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
+
+    iget v3, v3, Ll/ۜ᩹ۙ;->ۤ:F
+
+    mul-float v2, v2, v3
+
+    float-to-long v2, v2
+
+    add-long/2addr v0, v2
+
+    .line 600
+    invoke-static {v0, v1}, Ll/ۜۨۙ;->ۙ(J)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
-.method public final ۙ(J)V
-    .locals 0
+.method public final ᩷(Z)Ll/ܽ۟ۙ;
+    .locals 30
 
-    .line 184
-    iput-wide p1, p0, Ll/ܽ۟ۙ;->᩹:J
+    move-object/from16 v0, p0
 
-    return-void
-.end method
+    move/from16 v27, p1
 
-.method public final ۙ(Landroid/net/Uri;)V
-    .locals 0
+    .line 506
+    new-instance v28, Ll/ܽ۟ۙ;
 
-    .line 108
-    iput-object p1, p0, Ll/ܽ۟ۙ;->۬:Landroid/net/Uri;
+    move-object/from16 v1, v28
 
-    return-void
-.end method
+    iget-object v2, v0, Ll/ܽ۟ۙ;->᩵:Ll/᩻ۗۙ;
 
-.method public final ۙ(Ljava/lang/String;)V
-    .locals 0
+    iget-object v3, v0, Ll/ܽ۟ۙ;->ᩴ:Ll/۠ۙ᩷;
 
-    .line 196
-    iput-object p1, p0, Ll/ܽ۟ۙ;->ۚ:Ljava/lang/String;
+    iget-wide v4, v0, Ll/ܽ۟ۙ;->ܶ:J
 
-    return-void
-.end method
+    iget-wide v6, v0, Ll/ܽ۟ۙ;->᩷:J
 
-.method public final ۙ(Ljava/util/Map;)V
-    .locals 0
+    iget v8, v0, Ll/ܽ۟ۙ;->ۧ:I
 
-    .line 160
-    iput-object p1, p0, Ll/ܽ۟ۙ;->ۖ:Ljava/util/Map;
+    iget-object v9, v0, Ll/ܽ۟ۙ;->ۚ:Ll/ܿ᩶ۙ;
 
-    return-void
-.end method
+    iget-boolean v10, v0, Ll/ܽ۟ۙ;->ۤ:Z
 
-.method public final ۙ([B)V
-    .locals 0
+    iget-object v11, v0, Ll/ܽ۟ۙ;->ۛ:Ll/ۗۤ᩷;
 
-    .line 144
-    iput-object p1, p0, Ll/ܽ۟ۙ;->ܰ:[B
+    iget-object v12, v0, Ll/ܽ۟ۙ;->᩺:Ll/᩸ᩴ᩷;
 
-    return-void
-.end method
+    iget-object v13, v0, Ll/ܽ۟ۙ;->ۗ:Ljava/util/List;
 
-.method public final ۨ(J)V
-    .locals 0
+    iget-object v14, v0, Ll/ܽ۟ۙ;->᩸:Ll/۠ۙ᩷;
 
-    .line 120
-    iput-wide p1, p0, Ll/ܽ۟ۙ;->ۘ:J
+    iget-boolean v15, v0, Ll/ܽ۟ۙ;->ܳ:Z
 
-    return-void
-.end method
+    move-object/from16 p1, v1
 
-.method public final ܰ(I)V
-    .locals 0
+    iget v1, v0, Ll/ܽ۟ۙ;->۫:I
 
-    .line 132
-    iput p1, p0, Ll/ܽ۟ۙ;->ۨ:I
+    move/from16 v16, v1
 
-    return-void
-.end method
+    iget v1, v0, Ll/ܽ۟ۙ;->᩻:I
 
-.method public final ܰ(J)V
-    .locals 0
+    move/from16 v17, v1
 
-    .line 172
-    iput-wide p1, p0, Ll/ܽ۟ۙ;->֨:J
+    iget-object v1, v0, Ll/ܽ۟ۙ;->֫:Ll/ۜ᩹ۙ;
 
-    return-void
-.end method
+    move-object/from16 v18, v1
 
-.method public final ܰ(Ljava/lang/String;)V
-    .locals 0
+    move-object/from16 v29, v2
 
-    .line 96
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۙ:J
 
-    move-result-object p1
+    move-wide/from16 v19, v1
 
-    iput-object p1, p0, Ll/ܽ۟ۙ;->۬:Landroid/net/Uri;
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ۨ:J
 
-    return-void
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܽ:J
+
+    move-wide/from16 v23, v1
+
+    iget-wide v1, v0, Ll/ܽ۟ۙ;->ܺ:J
+
+    move-wide/from16 v25, v1
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, v29
+
+    invoke-direct/range {v1 .. v27}, Ll/ܽ۟ۙ;-><init>(Ll/᩻ۗۙ;Ll/۠ۙ᩷;JJILl/ܿ᩶ۙ;ZLl/ۗۤ᩷;Ll/᩸ᩴ᩷;Ljava/util/List;Ll/۠ۙ᩷;ZIILl/ۜ᩹ۙ;JJJJZ)V
+
+    return-object v28
 .end method

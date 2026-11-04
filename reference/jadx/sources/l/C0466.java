@@ -1,28 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ܳۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X68P */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0466 {
+import android.content.Context;
+import android.view.View;
+import bin.mt.plugin.api.ui.PluginUI;
+import bin.mt.plugin.api.ui.PluginViewGroup;
+import bin.mt.plugin.api.ui.builder.PluginViewBuilder;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C16408 f2103;
-
+/* JADX INFO: renamed from: l.֡ܰ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7P3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0466 extends AbstractC0907 implements PluginViewBuilder {
+    @Override // l.AbstractC0907
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f2104;
+    public final C6128 mo2280(PluginUI pluginUI, PluginViewGroup pluginViewGroup) {
+        return new C6128(pluginUI, pluginViewGroup);
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f2105;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12359 f2106;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final FutureC12075 f2107 = new FutureC12075();
-
-    public C0466(C16408 c16408, AbstractC12359 abstractC12359, int i) {
-        this.f2103 = c16408;
-        this.f2106 = abstractC12359;
-        this.f2105 = i;
+    @Override // l.AbstractC0907
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final View mo2279(Context context) {
+        return new View(context);
     }
 }

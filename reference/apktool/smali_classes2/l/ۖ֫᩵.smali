@@ -1,34 +1,88 @@
-.class public abstract Ll/ۖ֫᩵;
-.super Ll/᩸ۗ᩵;
-.source "F64Z"
+.class public final synthetic Ll/ۖ֫᩵;
+.super Ljava/lang/Object;
+.source "4IX4"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/۬֫᩵;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/۬֫᩵;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 80
-    iput-object p1, p0, Ll/ۖ֫᩵;->ܺ:Ll/۬֫᩵;
+    .line 191
+    invoke-static {}, Ll/᩺ۢۗ;->values()[Ll/᩺ۢۗ;
 
-    .line 43
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/ۖ֫᩵;->ۙ:[I
+
+    :try_start_0
+    sget-object v1, Ll/᩺ۢۗ;->۠:Ll/᩺ۢۗ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۖ֫᩵;->ۙ:[I
+
+    sget-object v1, Ll/᩺ۢۗ;->ۙۙ:Ll/᩺ۢۗ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۖ֫᩵;->ۙ:[I
+
+    sget-object v1, Ll/᩺ۢۗ;->۬:Ll/᩺ۢۗ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ۖ֫᩵;->ۙ:[I
+
+    sget-object v1, Ll/᩺ۢۗ;->֨ۙ:Ll/᩺ۢۗ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
-.end method
-
-
-# virtual methods
-.method public final size()I
-    .locals 1
-
-    .line 83
-    iget-object v0, p0, Ll/ۖ֫᩵;->ܺ:Ll/۬֫᩵;
-
-    iget v0, v0, Ll/۬֫᩵;->ܽ:I
-
-    return v0
 .end method

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static ۙ:Ll/ܰۧᩴ;
+.field public static ۙ:Ll/ܽ֫ۗ;
 
 
 # direct methods
@@ -12,11 +12,11 @@
     .locals 1
 
     .line 31
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܰۧᩴ;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܽ֫ۗ;
 
     return-void
 .end method
@@ -25,9 +25,9 @@
     .locals 1
 
     .line 52
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܰۧᩴ;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v0, p0}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -36,13 +36,13 @@
     return-object p0
 .end method
 
-.method public static ܰ(Ljava/lang/Integer;)V
+.method public static ᩷(Ljava/lang/Integer;)V
     .locals 1
 
     .line 61
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܰۧᩴ;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ۙ:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v0, p0}, Ll/ܰۧᩴ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Ll/ܽ֫ۗ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

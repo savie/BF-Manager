@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1.pkcs;
 
 import java.util.Enumeration;
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -15,7 +15,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignerInfo extends ASN1Object {
     public ASN1Set authenticatedAttributes;
     public AlgorithmIdentifier digAlgorithm;
@@ -110,6 +110,6 @@ public class SignerInfo extends ASN1Object {
         if (obj instanceof ASN1Sequence) {
             return new SignerInfo((ASN1Sequence) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in factory: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in factory: "));
     }
 }

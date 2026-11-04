@@ -20,7 +20,7 @@ public class a {
     public static final String k = "15.8.40";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77910l = "478258c-clean";
+    public static final String f82026l = "478258c-clean";
     public static final String m = "b6cbad6cbd5ed0d209afc69ad3b7a617efaae9b3c47eabe0be42d924936fa78c8001b1fd74b079e5ff9690061dacfa4768e981a526b9ca77156ca36251cf2f906d105481374998a7e6e6e18f75ca98b8ed2eaf86ff402c874cca0a263053f22237858206867d210020daa38c48b20cc9dfd82b44a51aeb5db459b22794e2d649";
     public static final String n = "DF:EB:19:0B:BC:A8:7E:F9:EC:8D:6A:D8:FF:17:59:2F:66:17:B4:8B:6C:3B:A4:9A:14:F7:E7:9D:09:88:5A:B3";
     public static final String o = "alipays://platformapi/startApp?";

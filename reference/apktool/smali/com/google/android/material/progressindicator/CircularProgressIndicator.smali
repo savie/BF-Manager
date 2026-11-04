@@ -16,7 +16,7 @@
     .locals 1
 
     .line 60
-    sget v0, Ll/ᩴ۟ܶ;->۟᩻:I
+    sget v0, Ll/ۘ۬ܺ;->᩺ۡ:I
 
     sput v0, Lcom/google/android/material/progressindicator/CircularProgressIndicator;->DEF_STYLE_RES:I
 
@@ -38,7 +38,7 @@
     .locals 1
 
     .line 73
-    sget v0, Ll/ۖ۟ܶ;->ܽۚ:I
+    sget v0, Ll/ۧ۬ܺ;->֡ᩴ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/progressindicator/CircularProgressIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 

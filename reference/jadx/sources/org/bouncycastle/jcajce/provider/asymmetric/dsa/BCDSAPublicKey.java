@@ -8,7 +8,7 @@ import java.security.interfaces.DSAParams;
 import java.security.interfaces.DSAPublicKey;
 import java.security.spec.DSAParameterSpec;
 import java.security.spec.DSAPublicKeySpec;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.DERNull;
@@ -20,7 +20,7 @@ import org.bouncycastle.crypto.params.DSAPublicKeyParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.KeyUtil;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCDSAPublicKey implements DSAPublicKey {
     public static BigInteger ZERO = BigInteger.valueOf(0);
     public static final long serialVersionUID = 1752452449903495175L;
@@ -138,7 +138,7 @@ public class BCDSAPublicKey implements DSAPublicKey {
     public String toString() {
         StringBuilder sb = new StringBuilder("DSA Public Key [");
         String strLineSeparator = Strings.lineSeparator();
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, DSAUtil.generateKeyFingerprint(this.y, getParams()), "]", strLineSeparator, "            Y: ");
+        C4794.m14774(sb, DSAUtil.generateKeyFingerprint(this.y, getParams()), "]", strLineSeparator, "            Y: ");
         sb.append(getY().toString(16));
         sb.append(strLineSeparator);
         return sb.toString();

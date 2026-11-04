@@ -1,42 +1,62 @@
 package l;
 
-import android.view.View;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.ExecutorService;
 
-/* JADX INFO: renamed from: l.۫ۤ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: E4GI */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12355 extends AbstractC7713 {
+/* JADX INFO: renamed from: l.ۨ۫֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12355 {
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AtomicInteger f41269;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f39684;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ CharSequence[] f41270;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Thread f39685;
 
-    @Override // l.AbstractC7713
-    /* JADX INFO: renamed from: ۙ */
-    public final View mo2074(Main main) {
-        return null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C20560 f39686;
+
+    public C12355(C20560 c20560) {
+        this.f39686 = c20560;
     }
 
-    public C12355(CharSequence[] charSequenceArr, AtomicInteger atomicInteger) {
-        this.f41270 = charSequenceArr;
-        this.f41269 = atomicInteger;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m30830(C12355 c12355, Thread thread) {
+        boolean z;
+        synchronized (c12355) {
+            c12355.f39685 = thread;
+            z = !c12355.f39684;
+        }
+        return z;
     }
 
-    @Override // l.AbstractC7713
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2075(C8067 c8067) {
-        c8067.m21274(R.string.MT_Protector);
-        c8067.m21266(this.f41270, -1, new DialogInterfaceOnClickListenerC16588(0, this.f41269));
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m30832(C12355 c12355) {
+        synchronized (c12355) {
+            Thread.interrupted();
+            c12355.f39685 = null;
+        }
     }
 
-    @Override // l.AbstractC7713
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2077(View view) {
-        return this.f41269.get() >= 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m30829(C12355 c12355) {
+        synchronized (c12355) {
+            if (c12355.f39684) {
+                return;
+            }
+            c12355.f39684 = true;
+            Thread thread = c12355.f39685;
+            if (thread != null) {
+                thread.interrupt();
+            }
+            C5516 c5516M47134 = c12355.f39686.m47134();
+            ExecutorService executorService = C5261.f18541;
+            c5516M47134.m16429();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C20560 m30831(C12355 c12355) {
+        return c12355.f39686;
     }
 }

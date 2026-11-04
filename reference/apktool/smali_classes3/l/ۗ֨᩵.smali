@@ -1,13 +1,11 @@
-.class public final Ll/ۗ֨᩵;
-.super Ll/۬֨᩵;
-.source "LATI"
+.class public interface abstract Ll/ۗ֨᩵;
+.super Ljava/lang/Object;
+.source "Z531"
+
+# interfaces
+.implements Ll/ᩳ֡᩵;
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
-
-    const/16 v0, 0xb
-
-    return v0
+.method public abstract invoke(Ljava/lang/Object;)Ljava/lang/Object;
 .end method

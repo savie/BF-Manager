@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/resources/TextAppearance$1;
-.super Ll/᩷۫;
+.super Ll/۟۟;
 .source "TextAppearance.java"
 
 
@@ -18,7 +18,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/resources/TextAppearance$1;->val$callback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-    invoke-direct {p0}, Ll/᩷۫;-><init>()V
+    invoke-direct {p0}, Ll/۟۟;-><init>()V
 
     return-void
 .end method

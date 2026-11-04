@@ -8,7 +8,7 @@ import java.util.Enumeration;
 import javax.crypto.interfaces.DHPrivateKey;
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.DHPrivateKeySpec;
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -25,7 +25,7 @@ import org.bouncycastle.crypto.params.DHPrivateKeyParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.PKCS12BagAttributeCarrierImpl;
 import org.bouncycastle.jce.interfaces.PKCS12BagAttributeCarrier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JCEDHPrivateKey implements DHPrivateKey, PKCS12BagAttributeCarrier {
     public static final long serialVersionUID = 311058815616901812L;
     public PKCS12BagAttributeCarrier attrCarrier = new PKCS12BagAttributeCarrierImpl();
@@ -58,7 +58,7 @@ public class JCEDHPrivateKey implements DHPrivateKey, PKCS12BagAttributeCarrier 
             dHParameterSpec = dHParameter.getL() != null ? new DHParameterSpec(dHParameter.getP(), dHParameter.getG(), dHParameter.getL().intValue()) : new DHParameterSpec(dHParameter.getP(), dHParameter.getG());
         } else {
             if (!algorithm.equals((ASN1Primitive) X9ObjectIdentifiers.dhpublicnumber)) {
-                throw new IllegalArgumentException(C22979.m50820("unknown algorithm type: ", algorithm));
+                throw new IllegalArgumentException(C20196.m46452("unknown algorithm type: ", algorithm));
             }
             DomainParameters domainParameters = DomainParameters.getInstance(aSN1Sequence);
             dHParameterSpec = new DHParameterSpec(domainParameters.getP(), domainParameters.getG());

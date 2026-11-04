@@ -1,26 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚܳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 54FB */
-/* JADX INFO: loaded from: classes3.dex */
-public class C5410 extends AbstractC21015 {
+import android.os.Build;
+import android.webkit.WebView;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public ExecutorC3563 f18686;
-
-    public C5410(int i, int i2, long j) {
-        this.f18686 = new ExecutorC3563(i, i2, j);
+/* JADX INFO: renamed from: l.ۚۙۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W73L */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5410 {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static InterfaceC11375 m16137() {
+        return C12867.f41194;
     }
 
-    @Override // l.AbstractC12405
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo8623(InterfaceC22386 interfaceC22386, Runnable runnable) {
-        C21203 c21203 = ExecutorC3563.f13121;
-        this.f18686.m10549(runnable, C6821.f22988);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C23271 m16135() {
+        return C15104.f49295;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m14986(Runnable runnable, InterfaceC1176 interfaceC1176) {
-        this.f18686.m10549(runnable, interfaceC1176);
+    public static InterfaceC11375 m16134() {
+        try {
+            return new C24802((WebViewProviderFactoryBoundaryInterface) C8372.m22531(WebViewProviderFactoryBoundaryInterface.class, m16136()));
+        } catch (ClassNotFoundException unused) {
+            return new C0460();
+        } catch (IllegalAccessException e) {
+            e = e;
+            throw new RuntimeException(e);
+        } catch (NoSuchMethodException e2) {
+            e = e2;
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e3) {
+            e = e3;
+            throw new RuntimeException(e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InvocationHandler m16136() {
+        ClassLoader classLoader;
+        if (Build.VERSION.SDK_INT >= 28) {
+            classLoader = C14629.m35267();
+        } else {
+            try {
+                Method declaredMethod = WebView.class.getDeclaredMethod("getFactory", null);
+                declaredMethod.setAccessible(true);
+                classLoader = declaredMethod.invoke(null, null).getClass().getClassLoader();
+            } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return (InvocationHandler) Class.forName("org.chromium.support_lib_glue.SupportLibReflectionUtil", false, classLoader).getDeclaredMethod("createWebViewProviderFactory", null).invoke(null, null);
     }
 }

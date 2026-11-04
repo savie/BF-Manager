@@ -1,155 +1,62 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
+/* JADX INFO: renamed from: l.᩹᩶ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23787 extends AbstractC22295 implements InterfaceC17573 {
 
-/* JADX INFO: renamed from: l.᩻ܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23787 extends AbstractC18785 {
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream) {
-        return super.parseDelimitedFrom(inputStream);
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public EnumC21172 f77042;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public Object f77043;
+
+    @Override // l.AbstractC22295
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC22295 mo38749(AbstractC22664 abstractC22664) {
+        this.f26659 = abstractC22664;
+        return this;
     }
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseDelimitedFrom(inputStream, c2701);
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1970(this);
     }
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream) {
-        return super.parseFrom(inputStream);
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return this.f77042.m48306();
     }
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer) {
-        return super.parseFrom(byteBuffer);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer, C2701 c2701) {
-        return super.parseFrom(byteBuffer, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262) {
-        return super.parseFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        return super.parseFrom(abstractC3262, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725) {
-        return super.parseFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parseFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr) {
-        return super.parseFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2) {
-        return super.parseFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parseFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, C2701 c2701) {
-        return super.parseFrom(bArr, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream) {
-        return super.parsePartialDelimitedFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialDelimitedFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream) {
-        return super.parsePartialFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC3262 abstractC3262) {
-        return super.parsePartialFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725) {
-        return super.parsePartialFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parsePartialFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr) {
-        return super.parsePartialFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2) {
-        return super.parsePartialFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parsePartialFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, C2701 c2701) {
-        return super.parsePartialFrom(bArr, c2701);
-    }
-
-    @Override // l.InterfaceC6271
-    public final Object parsePartialFrom(AbstractC3262 abstractC3262, C2701 c2701) throws C4529 {
-        C14615 c14615NewBuilder = C4923.newBuilder();
-        try {
-            c14615NewBuilder.m35092(abstractC3262, c2701);
-            return c14615NewBuilder.buildPartial();
-        } catch (C2474 e) {
-            C4529 c4529M7587 = e.m7587();
-            c4529M7587.m12651(c14615NewBuilder.buildPartial());
-            throw c4529M7587;
-        } catch (C4529 e2) {
-            e2.m12651(c14615NewBuilder.buildPartial());
-            throw e2;
-        } catch (IOException e3) {
-            C4529 c4529 = new C4529(e3.getMessage(), e3);
-            c4529.m12651(c14615NewBuilder.buildPartial());
-            throw c4529;
+    /* JADX INFO: renamed from: ֫ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m53058() {
+        Object obj = this.f77043;
+        int i = C25081.f81108[this.f77042.ordinal()];
+        if (i == 1) {
+            return Boolean.valueOf(((Integer) obj).intValue() != 0);
         }
+        if (i != 2) {
+            return obj;
+        }
+        int iIntValue = ((Integer) obj).intValue();
+        char c = (char) iIntValue;
+        if (c != iIntValue) {
+            throw new AssertionError("bad value for char literal");
+        }
+        return Character.valueOf(c);
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5894(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68484;
     }
 }

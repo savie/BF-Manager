@@ -1,83 +1,72 @@
 .class public final Ll/ܳ᩹ᩴ;
-.super Ll/ۚ֨ᩴ;
-.source "K9H"
-
-# interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.super Ljava/lang/Object;
+.source "N6VA"
 
 
 # instance fields
-.field public ۛ:Ll/ۨ֨ᩴ;
+.field public final ۙ:Ll/۟᩻ᩴ;
 
-.field public final synthetic ۧ:Ll/ۘ֨ᩴ;
+.field public final ۤ:I
+
+.field public final ۫:Ljava/util/List;
+
+.field public final ܳ:Ll/֨ܶᩴ;
+
+.field public final ᩴ:I
+
+.field public final ᩷:Ll/۫ۗᩴ;
+
+.field public final ᩸:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۘ֨ᩴ;)V
-    .locals 0
-
-    .line 852
-    iput-object p1, p0, Ll/ܳ᩹ᩴ;->ۧ:Ll/ۘ֨ᩴ;
-
-    invoke-direct {p0, p1}, Ll/ۚ֨ᩴ;-><init>(Ll/ۘ֨ᩴ;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
-
-    .line 857
-    new-instance v0, Ll/ۨ֨ᩴ;
-
-    iget-object v1, p0, Ll/ܳ᩹ᩴ;->ۧ:Ll/ۘ֨ᩴ;
-
-    invoke-virtual {p0}, Ll/ۚ֨ᩴ;->ۙ()I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Ll/ۨ֨ᩴ;-><init>(Ll/ۘ֨ᩴ;I)V
-
-    iput-object v0, p0, Ll/ܳ᩹ᩴ;->ۛ:Ll/ۨ֨ᩴ;
-
-    return-object v0
-.end method
-
-.method public final remove()V
+.method public constructor <init>(IILl/֨ܶᩴ;Ll/۟᩻ᩴ;Ll/۫ۗᩴ;Ljava/util/List;Ljava/util/List;)V
     .locals 2
 
-    .line 868
-    invoke-super {p0}, Ll/ۚ֨ᩴ;->remove()V
+    .line 255
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 869
-    iget-object v0, p0, Ll/ܳ᩹ᩴ;->ۛ:Ll/ۨ֨ᩴ;
+    if-le p2, p1, :cond_0
 
-    const/4 v1, -0x1
+    .line 256
+    invoke-virtual {p3}, Ll/֨ܶᩴ;->ۙ()I
 
-    iput v1, v0, Ll/ۨ֨ᩴ;->ܺ:I
+    move-result v0
+
+    sub-int v1, p2, p1
+
+    if-ne v0, v1, :cond_0
+
+    .line 259
+    iput p1, p0, Ll/ܳ᩹ᩴ;->ᩴ:I
+
+    .line 260
+    iput p2, p0, Ll/ܳ᩹ᩴ;->ۤ:I
+
+    .line 261
+    iput-object p3, p0, Ll/ܳ᩹ᩴ;->ܳ:Ll/֨ܶᩴ;
+
+    .line 262
+    iput-object p4, p0, Ll/ܳ᩹ᩴ;->ۙ:Ll/۟᩻ᩴ;
+
+    .line 263
+    iput-object p5, p0, Ll/ܳ᩹ᩴ;->᩷:Ll/۫ۗᩴ;
+
+    .line 264
+    iput-object p6, p0, Ll/ܳ᩹ᩴ;->᩸:Ljava/util/List;
+
+    .line 265
+    iput-object p7, p0, Ll/ܳ᩹ᩴ;->۫:Ljava/util/List;
 
     return-void
-.end method
 
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 2
+    .line 257
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    .line 852
-    check-cast p2, Ljava/util/function/Consumer;
+    const-string p2, "Invalid speculative syntax fragment coverage"
 
-    .line 863
-    new-instance v0, Ll/ۨ֨ᩴ;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ll/ܳ᩹ᩴ;->ۧ:Ll/ۘ֨ᩴ;
-
-    invoke-direct {v0, v1, p1}, Ll/ۨ֨ᩴ;-><init>(Ll/ۘ֨ᩴ;I)V
-
-    iput-object v0, p0, Ll/ܳ᩹ᩴ;->ۛ:Ll/ۨ֨ᩴ;
-
-    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
+    throw p1
 .end method

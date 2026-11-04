@@ -1,82 +1,31 @@
-.class public final synthetic Ll/ܺܿۚ;
+.class public final Ll/ܺܿۚ;
 .super Ljava/lang/Object;
-.source "55FS"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "D6X3"
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final ۙ:Ll/᩷ۨᩴ;
 
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public final ۤ:Ll/᩷ۨᩴ;
+
+.field public final ᩷:Ll/ۧۨᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ll/᩷ۨᩴ;Ll/᩷ۨᩴ;Ll/ۧۨᩴ;)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/ܺܿۚ;->ܺ:I
-
-    iput-object p2, p0, Ll/ܺܿۚ;->᩶:Ljava/lang/Object;
-
+    .line 2067
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 2068
+    iput-object p1, p0, Ll/ܺܿۚ;->ۤ:Ll/᩷ۨᩴ;
 
+    .line 2069
+    iput-object p2, p0, Ll/ܺܿۚ;->ۙ:Ll/᩷ۨᩴ;
 
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget v0, p0, Ll/ܺܿۚ;->ܺ:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ll/ܺܿۚ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/ۢ֨֨;
-
-    invoke-static {v0}, Ll/ۢ֨֨;->ۙ(Ll/ۢ֨֨;)V
+    .line 2070
+    iput-object p3, p0, Ll/ܺܿۚ;->᩷:Ll/ۧۨᩴ;
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ll/ܺܿۚ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/۫ܳۚ;
-
-    invoke-static {v0}, Ll/۫ܳۚ;->֨(Ll/۫ܳۚ;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ll/ܺܿۚ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/۬ۨ;
-
-    invoke-static {v0}, Ll/۬ۨ;->ۙ(Ll/۬ۨ;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ll/ܺܿۚ;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/ܿܿۚ;
-
-    invoke-static {v0}, Ll/ܿܿۚ;->ۙ(Ll/ܿܿۚ;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

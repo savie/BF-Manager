@@ -1,28 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚۛ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAYQ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5162 {
+import java.nio.file.attribute.GroupPrincipal;
+import java.nio.file.attribute.UserPrincipal;
+import javax.security.auth.Subject;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C21203 f17916 = new C21203("COMPLETING_ALREADY");
+/* JADX INFO: renamed from: l.ۙ᩷ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5162 implements InterfaceC5405 {
+    public final /* synthetic */ UserPrincipal a;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C21203 f17918 = new C21203("COMPLETING_WAITING_CHILDREN");
+    public /* synthetic */ C5162(UserPrincipal userPrincipal) {
+        this.a = userPrincipal;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C21203 f17919 = new C21203("COMPLETING_RETRY");
+    public static /* synthetic */ InterfaceC5405 a(UserPrincipal userPrincipal) {
+        if (userPrincipal == null) {
+            return null;
+        }
+        if (userPrincipal instanceof C15099) {
+            return ((C15099) userPrincipal).a;
+        }
+        return userPrincipal instanceof GroupPrincipal ? C9132.a((GroupPrincipal) userPrincipal) : new C5162(userPrincipal);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C21203 f17914 = new C21203("TOO_LATE_TO_CANCEL");
+    @Override // java.security.Principal
+    public final /* synthetic */ boolean equals(Object obj) {
+        UserPrincipal userPrincipal = this.a;
+        if (obj instanceof C5162) {
+            obj = ((C5162) obj).a;
+        }
+        return userPrincipal.equals(obj);
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C21203 f17920 = new C21203("SEALED");
+    @Override // java.security.Principal
+    public final /* synthetic */ String getName() {
+        return this.a.getName();
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C15372 f17917 = new C15372(false);
+    @Override // java.security.Principal
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C15372 f17915 = new C15372(true);
+    @Override // java.security.Principal
+    public final /* synthetic */ boolean implies(Subject subject) {
+        return this.a.implies(subject);
+    }
+
+    @Override // java.security.Principal
+    public final /* synthetic */ String toString() {
+        return this.a.toString();
+    }
 }

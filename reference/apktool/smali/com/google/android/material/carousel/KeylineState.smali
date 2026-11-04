@@ -24,7 +24,7 @@
     iput p1, p0, Lcom/google/android/material/carousel/KeylineState;->itemSize:F
 
     .line 65
-    invoke-static {p2}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Ll/ۙۚۗ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
@@ -474,7 +474,7 @@
     const/4 v1, 0x1
 
     .line 0
-    invoke-static {v1, v0}, Ll/ۗۙᩴ;->ۙ(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v1, v0}, Ll/۟۠֫;->ۙ(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 

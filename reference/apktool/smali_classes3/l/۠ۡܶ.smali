@@ -1,56 +1,65 @@
-.class public abstract Ll/۠ۡܶ;
-.super Ll/ۡۡܶ;
-.source "SB7W"
+.class public final Ll/۠ۡܶ;
+.super Ljava/lang/Object;
+.source "48BN"
 
 
 # instance fields
-.field public ֨:Ll/ۘۡܶ;
-
-.field public ۖ:Ljava/util/ArrayList;
-
-.field public ۚ:Ljava/lang/String;
-
-.field public ۨ:Ll/ۘۡܶ;
-
-.field public ᩹:Ljava/lang/Boolean;
+.field public ۙ:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    .line 1578
-    invoke-direct {p0}, Ll/ۡۡܶ;-><init>()V
+    .line 40
+    new-instance v0, Ljava/util/Random;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    .line 1580
-    iput-object v0, p0, Ll/۠ۡܶ;->ۚ:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
-    .line 1581
-    iput-object v0, p0, Ll/۠ۡܶ;->᩹:Ljava/lang/Boolean;
+    move-result v0
 
-    .line 1582
-    iput-object v0, p0, Ll/۠ۡܶ;->ۨ:Ll/ۘۡܶ;
+    .line 46
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1583
-    iput-object v0, p0, Ll/۠ۡܶ;->֨:Ll/ۘۡܶ;
+    int-to-long v0, v0
 
-    .line 1584
-    iput-object v0, p0, Ll/۠ۡܶ;->ۖ:Ljava/util/ArrayList;
+    .line 51
+    iput-wide v0, p0, Ll/۠ۡܶ;->ۙ:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final ۙ()D
+    .locals 4
 
-    .line 1588
-    invoke-virtual {p0}, Ll/ۡۡܶ;->֨()Ljava/lang/String;
+    .line 80
+    iget-wide v0, p0, Ll/۠ۡܶ;->ۙ:J
 
-    move-result-object v0
+    const-wide v2, 0x5851f42d4c957f2dL    # 2.8296655102636685E117
 
-    return-object v0
+    mul-long v0, v0, v2
+
+    const-wide v2, 0x14057b7ef767814fL    # 3.190626645921225E-212
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ll/۠ۡܶ;->ۙ:J
+
+    const/16 v2, 0x20
+
+    shr-long/2addr v0, v2
+
+    long-to-int v1, v0
+
+    int-to-double v0, v1
+
+    const-wide/high16 v2, 0x3e00000000000000L    # 4.656612873077393E-10
+
+    mul-double v0, v0, v2
+
+    return-wide v0
 .end method

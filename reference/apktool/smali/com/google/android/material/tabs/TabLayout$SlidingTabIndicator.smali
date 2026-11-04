@@ -234,7 +234,7 @@
 
     .line 3375
     :goto_0
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V

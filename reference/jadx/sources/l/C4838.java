@@ -1,23 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙᩴ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 62DG */
+import android.graphics.Rect;
+
+/* JADX INFO: renamed from: l.ۙۤۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAML */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4838 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final String f16995;
+    public final C17342 f16898;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final char[] f16996;
+    public C4838(Rect rect) {
+        this.f16898 = new C17342(rect);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final String f16997;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Rect m14868() {
+        return this.f16898.m40722();
+    }
 
-    static {
-        String strValueOf = String.valueOf('\"');
-        f16997 = strValueOf;
-        f16995 = C15489.m37076(strValueOf, strValueOf);
-        f16996 = new char[]{',', '\"', '\r', '\n'};
+    public final String toString() {
+        return "WindowMetrics { bounds: " + this.f16898.m40722() + " }";
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !C4838.class.equals(obj.getClass())) {
+            return false;
+        }
+        return C15243.m36589(this.f16898, ((C4838) obj).f16898);
+    }
+
+    public final int hashCode() {
+        return this.f16898.hashCode();
     }
 }

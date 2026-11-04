@@ -2,7 +2,7 @@ package com.alipay.sdk.m.t;
 
 import android.text.TextUtils;
 import com.alipay.sdk.m.y.l;
-import l.C20630;
+import l.C1402;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -47,7 +47,7 @@ public class a {
             sb.append("app_userid=" + strC + l.b);
         }
         String string = sb.toString();
-        return string.endsWith(l.b) ? C20630.m46498(1, 0, string) : string;
+        return string.endsWith(l.b) ? C1402.m5124(1, 0, string) : string;
     }
 
     public static String b(String str) {

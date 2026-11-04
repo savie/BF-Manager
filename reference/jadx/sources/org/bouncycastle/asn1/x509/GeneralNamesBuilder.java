@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.x509;
 
 import java.util.Vector;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GeneralNamesBuilder {
     public Vector names = new Vector();
 

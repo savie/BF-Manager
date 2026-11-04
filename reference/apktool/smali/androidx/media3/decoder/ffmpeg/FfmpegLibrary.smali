@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final ۙ:Ll/᩵ۡۙ;
+.field public static final ۙ:Ll/ۨܰۙ;
 
-.field public static ۨ:Ljava/lang/String;
+.field public static ۤ:Ljava/lang/String;
 
-.field public static ܰ:I
+.field public static ᩷:I
 
 
 # direct methods
@@ -17,28 +17,28 @@
 
     const-string v0, "media3.decoder.ffmpeg"
 
-    .line 34
-    invoke-static {v0}, Ll/ۨ۠ۙ;->ۙ(Ljava/lang/String;)V
+    .line 36
+    invoke-static {v0}, Ll/᩶᩹ۙ;->ۙ(Ljava/lang/String;)V
 
-    .line 39
-    new-instance v0, Ll/֫ܺۙ;
+    .line 41
+    new-instance v0, Ll/ۨܰۙ;
 
     const-string v1, "ffmpegJNI"
 
+    .line 74
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 40
-    invoke-direct {v0, v1}, Ll/᩵ۡۙ;-><init>([Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ll/᩷ۨۙ;-><init>([Ljava/lang/String;)V
 
-    .line 39
-    sput-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/᩵ۡۙ;
+    .line 41
+    sput-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
 
     const/4 v0, -0x1
 
-    .line 48
-    sput v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ܰ:I
+    .line 44
+    sput v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->᩷:I
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 50
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,10 +64,10 @@
 .method public static ۙ()I
     .locals 2
 
-    .line 69
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/᩵ۡۙ;
+    .line 104
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
 
-    invoke-virtual {v0}, Ll/᩵ۡۙ;->ۙ()Z
+    invoke-virtual {v0}, Ll/᩷ۨۙ;->ۙ()Z
 
     move-result v0
 
@@ -77,31 +77,31 @@
 
     return v1
 
-    .line 94
+    .line 129
     :cond_0
-    sget v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ܰ:I
+    sget v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->᩷:I
 
     if-ne v0, v1, :cond_1
 
-    .line 95
+    .line 130
     invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ffmpegGetInputBufferPaddingSize()I
 
     move-result v0
 
-    sput v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ܰ:I
+    sput v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->᩷:I
 
-    .line 97
+    .line 132
     :cond_1
-    sget v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ܰ:I
+    sget v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->᩷:I
 
     return v0
 .end method
 
-.method public static ۙ(Ll/۟ᩴۙ;)Ljava/lang/String;
+.method public static ۙ(Ll/ܳ᩹ۙ;)Ljava/lang/String;
     .locals 3
 
-    .line 173
-    iget-object p0, p0, Ll/۟ᩴۙ;->ܰۙ:Ljava/lang/String;
+    .line 208
+    iget-object p0, p0, Ll/ܳ᩹ۙ;->᩷ۙ:Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -109,7 +109,7 @@
 
     return-object v0
 
-    .line 128
+    .line 163
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -575,26 +575,37 @@
     .end packed-switch
 .end method
 
-.method public static ۨ()Z
+.method public static ۙ(Ll/ۙܿ֫;)V
     .locals 1
 
-    .line 69
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/᩵ۡۙ;
+    .line 66
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
 
-    invoke-virtual {v0}, Ll/᩵ۡۙ;->ۙ()Z
+    invoke-virtual {v0, p0}, Ll/ۨܰۙ;->ۙ(Ll/ۙܿ֫;)V
+
+    return-void
+.end method
+
+.method public static ۤ()Z
+    .locals 1
+
+    .line 104
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
+
+    invoke-virtual {v0}, Ll/᩷ۨۙ;->ۙ()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static ܰ()Ljava/lang/String;
+.method public static ᩷()Ljava/lang/String;
     .locals 1
 
-    .line 69
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/᩵ۡۙ;
+    .line 104
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
 
-    invoke-virtual {v0}, Ll/᩵ۡۙ;->ۙ()Z
+    invoke-virtual {v0}, Ll/᩷ۨۙ;->ۙ()Z
 
     move-result v0
 
@@ -604,33 +615,33 @@
 
     return-object v0
 
-    .line 80
+    .line 115
     :cond_0
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۨ:Ljava/lang/String;
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۤ:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 81
+    .line 116
     invoke-static {}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ffmpegGetVersion()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۨ:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۤ:Ljava/lang/String;
 
-    .line 83
+    .line 118
     :cond_1
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۨ:Ljava/lang/String;
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static ܰ(Ll/۟ᩴۙ;)Z
+.method public static ᩷(Ll/ܳ᩹ۙ;)Z
     .locals 3
 
-    .line 69
-    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/᩵ۡۙ;
+    .line 104
+    sget-object v0, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ:Ll/ۨܰۙ;
 
-    invoke-virtual {v0}, Ll/᩵ۡۙ;->ۙ()Z
+    invoke-virtual {v0}, Ll/᩷ۨۙ;->ۙ()Z
 
     move-result v0
 
@@ -640,9 +651,9 @@
 
     goto :goto_0
 
-    .line 118
+    .line 153
     :cond_0
-    invoke-static {p0}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ(Ll/۟ᩴۙ;)Ljava/lang/String;
+    invoke-static {p0}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ۙ(Ll/ܳ᩹ۙ;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -651,7 +662,7 @@
     :goto_0
     return v1
 
-    .line 190
+    .line 225
     :cond_1
     invoke-static {p0}, Landroidx/media3/decoder/ffmpeg/FfmpegLibrary;->ffmpegHasDecoder(Ljava/lang/String;)Z
 
@@ -659,7 +670,7 @@
 
     if-nez v0, :cond_2
 
-    .line 191
+    .line 226
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v2, "No "
@@ -676,7 +687,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Ll/֡ۡۙ;->ۖ(Ljava/lang/String;)V
+    invoke-static {p0}, Ll/֫ۨۙ;->᩸(Ljava/lang/String;)V
 
     return v1
 

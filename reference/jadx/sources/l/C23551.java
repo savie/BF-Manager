@@ -1,48 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+import android.view.View;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.᩹۫ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z1JW */
 /* JADX INFO: loaded from: classes.dex */
-public final enum C23551 extends EnumC8422 {
-    public /* synthetic */ C23551() {
-        this("DoctypeName", 52);
-    }
+public final class C23551 {
 
-    public C23551(String str, int i) {
-        super(str, i, 0);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f76076 = new ArrayList();
 
-    @Override // l.EnumC8422
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        if (c2424.m7380()) {
-            c8111.f28416.f4892.append(c2424.m7365());
-            return;
-        }
-        char cM7382 = c2424.m7382();
-        if (cM7382 != 0) {
-            if (cM7382 != ' ') {
-                if (cM7382 == '>') {
-                    c8111.m21363();
-                    c8111.m21353(EnumC8422.f29249);
-                    return;
-                }
-                if (cM7382 == 65535) {
-                    c8111.m21368(this);
-                    c8111.f28416.f4891 = true;
-                    c8111.m21363();
-                    c8111.m21353(EnumC8422.f29249);
-                    return;
-                }
-                if (cM7382 != '\t' && cM7382 != '\n' && cM7382 != '\f' && cM7382 != '\r') {
-                    c8111.f28416.f4892.append(cM7382);
-                    return;
-                }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m52754(AbstractActivityC17204 abstractActivityC17204, int i) {
+        C16091 c16091;
+        ArrayList arrayList = this.f76076;
+        Iterator it = arrayList.iterator();
+        do {
+            if (!it.hasNext()) {
+                c16091 = null;
+                break;
             }
-            c8111.m21353(EnumC8422.f29239);
-            return;
+            c16091 = (C16091) it.next();
+        } while (c16091.f52131 != i);
+        if (c16091 == null) {
+            c16091 = new C16091(i);
+            arrayList.add(c16091);
         }
-        c8111.m21365(this);
-        c8111.f28416.f4892.append((char) 65533);
+        if (c16091.f52132 == null) {
+            c16091.f52132 = abstractActivityC17204.m40395(i);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final View m52753(int i) {
+        for (C16091 c16091 : this.f76076) {
+            if (c16091.f52131 == i) {
+                View view = c16091.f52132;
+                if (view == null) {
+                    break;
+                }
+                c16091.f52132 = null;
+                return view;
+            }
+        }
+        return null;
     }
 }

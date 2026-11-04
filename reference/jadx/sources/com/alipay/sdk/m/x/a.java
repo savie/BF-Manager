@@ -7,7 +7,7 @@ import com.alipay.sdk.app.OpenAuthTask;
 import com.alipay.sdk.m.p.e;
 import com.alipay.sdk.m.y.g;
 import java.util.Random;
-import l.C9023;
+import l.C10732;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -20,7 +20,7 @@ public class a {
     public static final String k = "timestamp";
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f77919l = "vimei";
+    public static final String f82035l = "vimei";
     public static final String m = "vimsi";
     public static Context n;
     public static a o;
@@ -50,9 +50,9 @@ public class a {
     public final String d() {
         String hexString = Long.toHexString(System.currentTimeMillis());
         Random random = new Random();
-        StringBuilder sbM23356 = C9023.m23356(hexString);
-        sbM23356.append(random.nextInt(OpenAuthTask.OK) + 1000);
-        return sbM23356.toString();
+        StringBuilder sbM27333 = C10732.m27333(hexString);
+        sbM27333.append(random.nextInt(OpenAuthTask.OK) + 1000);
+        return sbM27333.toString();
     }
 
     public String e() {
@@ -105,7 +105,7 @@ public class a {
                     strOptString2 = jSONObject.optString(j, "");
                     try {
                         lValueOf = Long.valueOf(jSONObject.optLong(k, System.currentTimeMillis()));
-                        strOptString3 = jSONObject.optString(f77919l, "");
+                        strOptString3 = jSONObject.optString(f82035l, "");
                         try {
                             strOptString4 = jSONObject.optString(m, "");
                         } catch (Exception e) {
@@ -168,7 +168,7 @@ public class a {
             jSONObject.put("tid", this.a);
             jSONObject.put(j, this.b);
             jSONObject.put(k, this.c);
-            jSONObject.put(f77919l, this.d);
+            jSONObject.put(f82035l, this.d);
             jSONObject.put(m, this.e);
             C0030a.a(g, h, jSONObject.toString(), true);
         } catch (Exception e) {

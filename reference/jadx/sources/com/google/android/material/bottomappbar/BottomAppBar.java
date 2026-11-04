@@ -36,25 +36,25 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.AbstractC3000;
-import l.C0976;
-import l.C11561;
-import l.C15844;
-import l.C18616;
-import l.C22461;
-import l.C22815;
-import l.C2387;
-import l.C2746;
-import l.C5031;
-import l.C6938;
-import l.C7603;
-import l.C8033;
-import l.C9679;
-import l.InterfaceC11090;
-import l.RunnableC10138;
+import l.AbstractC6898;
+import l.C0597;
+import l.C11642;
+import l.C11915;
+import l.C14625;
+import l.C15578;
+import l.C16390;
+import l.C17531;
+import l.C17609;
+import l.C1948;
+import l.C22666;
+import l.C25276;
+import l.C3977;
+import l.C4185;
+import l.InterfaceC22292;
+import l.RunnableC7763;
 
 /* JADX INFO: loaded from: classes.dex */
-public class BottomAppBar extends C6938 implements InterfaceC11090 {
+public class BottomAppBar extends C16390 implements InterfaceC22292 {
     public static final int FAB_ALIGNMENT_ANIM_DURATION_DEFAULT = 300;
     public static final float FAB_ALIGNMENT_ANIM_EASING_MIDPOINT = 0.2f;
     public static final int FAB_ALIGNMENT_MODE_CENTER = 0;
@@ -93,9 +93,9 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     public int pendingMenuResId;
     public final boolean removeEmbeddedFabElevation;
     public int rightInset;
-    public static final int DEF_STYLE_RES = C18616.f60059;
-    public static final int FAB_ALIGNMENT_ANIM_DURATION_ATTR = C2387.f9469;
-    public static final int FAB_ALIGNMENT_ANIM_EASING_ATTR = C2387.f8957;
+    public static final int DEF_STYLE_RES = C4185.f15012;
+    public static final int FAB_ALIGNMENT_ANIM_DURATION_ATTR = C11642.f37310;
+    public static final int FAB_ALIGNMENT_ANIM_EASING_ATTR = C11642.f36560;
 
     public interface AnimationListener {
         void onAnimationEnd(BottomAppBar bottomAppBar);
@@ -119,11 +119,11 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     public @interface MenuAlignmentMode {
     }
 
-    @Override // l.C6938
+    @Override // l.C16390
     public void setSubtitle(CharSequence charSequence) {
     }
 
-    @Override // l.C6938
+    @Override // l.C16390
     public void setTitle(CharSequence charSequence) {
     }
 
@@ -132,7 +132,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     }
 
     public BottomAppBar(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9157);
+        this(context, attributeSet, C11642.f37272);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -180,28 +180,28 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
             }
         };
         Context context2 = getContext();
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f27262, i, i2, new int[0]);
-        ColorStateList colorStateList = MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f26784);
-        if (typedArrayObtainStyledAttributes.hasValue(C8033.f26710)) {
-            setNavigationIconTint(typedArrayObtainStyledAttributes.getColor(C8033.f26710, -1));
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f46607, i, i2, new int[0]);
+        ColorStateList colorStateList = MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f46766);
+        if (typedArrayObtainStyledAttributes.hasValue(C14625.f47449)) {
+            setNavigationIconTint(typedArrayObtainStyledAttributes.getColor(C14625.f47449, -1));
         }
-        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27155, 0);
-        float dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f26570, 0);
-        float dimensionPixelOffset2 = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f26656, 0);
-        float dimensionPixelOffset3 = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27348, 0);
-        this.fabAlignmentMode = typedArrayObtainStyledAttributes.getInt(C8033.f28112, 0);
-        this.fabAnimationMode = typedArrayObtainStyledAttributes.getInt(C8033.f27049, 0);
-        this.fabAnchorMode = typedArrayObtainStyledAttributes.getInt(C8033.f26463, 1);
-        this.removeEmbeddedFabElevation = typedArrayObtainStyledAttributes.getBoolean(C8033.f26603, true);
-        this.menuAlignmentMode = typedArrayObtainStyledAttributes.getInt(C8033.f26496, 0);
-        this.hideOnScroll = typedArrayObtainStyledAttributes.getBoolean(C8033.f27188, false);
-        this.paddingBottomSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C8033.f27985, false);
-        this.paddingLeftSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C8033.f26390, false);
-        this.paddingRightSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C8033.f27295, false);
-        this.fabAlignmentModeEndMargin = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27422, -1);
-        boolean z = typedArrayObtainStyledAttributes.getBoolean(C8033.f27634, true);
+        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46129, 0);
+        float dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47032, 0);
+        float dimensionPixelOffset2 = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f46386, 0);
+        float dimensionPixelOffset3 = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47609, 0);
+        this.fabAlignmentMode = typedArrayObtainStyledAttributes.getInt(C14625.f46713, 0);
+        this.fabAnimationMode = typedArrayObtainStyledAttributes.getInt(C14625.f46554, 0);
+        this.fabAnchorMode = typedArrayObtainStyledAttributes.getInt(C14625.f46660, 1);
+        this.removeEmbeddedFabElevation = typedArrayObtainStyledAttributes.getBoolean(C14625.f46174, true);
+        this.menuAlignmentMode = typedArrayObtainStyledAttributes.getInt(C14625.f47663, 0);
+        this.hideOnScroll = typedArrayObtainStyledAttributes.getBoolean(C14625.f46811, false);
+        this.paddingBottomSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C14625.f47130, false);
+        this.paddingLeftSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C14625.f46971, false);
+        this.paddingRightSystemWindowInsets = typedArrayObtainStyledAttributes.getBoolean(C14625.f46440, false);
+        this.fabAlignmentModeEndMargin = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f46235, -1);
+        boolean z = typedArrayObtainStyledAttributes.getBoolean(C14625.f47404, true);
         typedArrayObtainStyledAttributes.recycle();
-        this.fabOffsetEndMode = getResources().getDimensionPixelOffset(C0976.f4113);
+        this.fabOffsetEndMode = getResources().getDimensionPixelOffset(C17609.f57541);
         materialShapeDrawable.setShapeAppearanceModel(ShapeAppearanceModel.builder().setTopEdge(new BottomAppBarTopEdgeTreatment(dimensionPixelOffset, dimensionPixelOffset2, dimensionPixelOffset3)).build());
         if (z) {
             materialShapeDrawable.setShadowCompatibilityMode(2);
@@ -215,40 +215,40 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         materialShapeDrawable.setPaintStyle(Paint.Style.FILL);
         materialShapeDrawable.initializeElevationOverlay(context2);
         setElevation(dimensionPixelSize);
-        C7603.m20129(materialShapeDrawable, colorStateList);
-        int i3 = C5031.f17539;
+        C0597.m2690(materialShapeDrawable, colorStateList);
+        int i3 = C22666.f73603;
         setBackground(materialShapeDrawable);
         ViewUtils.doOnApplyWindowInsets(this, attributeSet, i, i2, new ViewUtils.OnApplyWindowInsetsListener() { // from class: com.google.android.material.bottomappbar.BottomAppBar.3
             @Override // com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener
-            public C15844 onApplyWindowInsets(View view, C15844 c15844, ViewUtils.RelativePadding relativePadding) {
+            public C3977 onApplyWindowInsets(View view, C3977 c3977, ViewUtils.RelativePadding relativePadding) {
                 boolean z2;
                 if (BottomAppBar.this.paddingBottomSystemWindowInsets) {
-                    BottomAppBar.this.bottomInset = c15844.m37670();
+                    BottomAppBar.this.bottomInset = c3977.m12825();
                 }
                 boolean z3 = false;
                 if (BottomAppBar.this.paddingLeftSystemWindowInsets) {
-                    z2 = BottomAppBar.this.leftInset != c15844.m37683();
-                    BottomAppBar.this.leftInset = c15844.m37683();
+                    z2 = BottomAppBar.this.leftInset != c3977.m12822();
+                    BottomAppBar.this.leftInset = c3977.m12822();
                 } else {
                     z2 = false;
                 }
                 if (BottomAppBar.this.paddingRightSystemWindowInsets) {
-                    boolean z4 = BottomAppBar.this.rightInset != c15844.m37672();
-                    BottomAppBar.this.rightInset = c15844.m37672();
+                    boolean z4 = BottomAppBar.this.rightInset != c3977.m12814();
+                    BottomAppBar.this.rightInset = c3977.m12814();
                     z3 = z4;
                 }
                 if (!z2 && !z3) {
-                    return c15844;
+                    return c3977;
                 }
                 BottomAppBar.this.cancelAnimations();
                 BottomAppBar.this.setCutoutStateAndTranslateFab();
                 BottomAppBar.this.setActionMenuViewPosition();
-                return c15844;
+                return c3977;
             }
         });
     }
 
-    @Override // l.C6938
+    @Override // l.C16390
     public void setNavigationIcon(Drawable drawable) {
         super.setNavigationIcon(maybeTintNavigationIcon(drawable));
     }
@@ -293,14 +293,14 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     }
 
     public static void updateFabAnchorGravity(BottomAppBar bottomAppBar, View view) {
-        C9679 c9679 = (C9679) view.getLayoutParams();
-        c9679.f32627 = 17;
+        C15578 c15578 = (C15578) view.getLayoutParams();
+        c15578.f50659 = 17;
         int i = bottomAppBar.fabAnchorMode;
         if (i == 1) {
-            c9679.f32627 = 17 | 48;
+            c15578.f50659 = 17 | 48;
         }
         if (i == 0) {
-            c9679.f32627 |= 80;
+            c15578.f50659 |= 80;
         }
     }
 
@@ -315,7 +315,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     public void setMenuAlignmentMode(int i) {
         if (this.menuAlignmentMode != i) {
             this.menuAlignmentMode = i;
-            C22815 actionMenuView = getActionMenuView();
+            C17531 actionMenuView = getActionMenuView();
             if (actionMenuView != null) {
                 translateActionMenuView(actionMenuView, this.fabAlignmentMode, isFabVisibleOrWillBeShown());
             }
@@ -327,7 +327,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     }
 
     public void setBackgroundTint(ColorStateList colorStateList) {
-        C7603.m20129(this.materialShapeDrawable, colorStateList);
+        C0597.m2690(this.materialShapeDrawable, colorStateList);
     }
 
     public ColorStateList getBackgroundTint() {
@@ -499,7 +499,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
 
     private void maybeAnimateModeChange(int i) {
         if (this.fabAlignmentMode != i) {
-            int i2 = C5031.f17539;
+            int i2 = C22666.f73603;
             if (isLaidOut()) {
                 Animator animator = this.modeAnimator;
                 if (animator != null) {
@@ -543,10 +543,10 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
 
     /* JADX INFO: Access modifiers changed from: private */
     public View findDependentView() {
-        if (!(getParent() instanceof C2746)) {
+        if (!(getParent() instanceof C25276)) {
             return null;
         }
-        for (View view : ((C2746) getParent()).getDependents(this)) {
+        for (View view : ((C25276) getParent()).getDependents(this)) {
             if ((view instanceof FloatingActionButton) || (view instanceof ExtendedFloatingActionButton)) {
                 return view;
             }
@@ -593,14 +593,14 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         if (drawable == null || this.navigationIconTint == null) {
             return drawable;
         }
-        Drawable drawableM20139 = C7603.m20139(drawable.mutate());
-        C7603.m20138(drawableM20139, this.navigationIconTint.intValue());
-        return drawableM20139;
+        Drawable drawableM2697 = C0597.m2697(drawable.mutate());
+        C0597.m2700(drawableM2697, this.navigationIconTint.intValue());
+        return drawableM2697;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void maybeAnimateMenuView(int i, boolean z) {
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         if (!isLaidOut()) {
             this.menuAnimatingWithFabAlignmentMode = false;
             replaceMenu(this.pendingMenuResId);
@@ -636,7 +636,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
     }
 
     private void createMenuViewTranslationAnimation(final int i, final boolean z, List list) {
-        final C22815 actionMenuView = getActionMenuView();
+        final C17531 actionMenuView = getActionMenuView();
         if (actionMenuView == null) {
             return;
         }
@@ -705,37 +705,37 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         return getFabTranslationX(this.fabAlignmentMode);
     }
 
-    private C22815 getActionMenuView() {
+    private C17531 getActionMenuView() {
         for (int i = 0; i < getChildCount(); i++) {
             View childAt = getChildAt(i);
-            if (childAt instanceof C22815) {
-                return (C22815) childAt;
+            if (childAt instanceof C17531) {
+                return (C17531) childAt;
             }
         }
         return null;
     }
 
-    private void translateActionMenuView(C22815 c22815, int i, boolean z) {
-        translateActionMenuView(c22815, i, z, false);
+    private void translateActionMenuView(C17531 c17531, int i, boolean z) {
+        translateActionMenuView(c17531, i, z, false);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void translateActionMenuView(final C22815 c22815, final int i, final boolean z, boolean z2) {
+    public void translateActionMenuView(final C17531 c17531, final int i, final boolean z, boolean z2) {
         Runnable runnable = new Runnable() { // from class: com.google.android.material.bottomappbar.BottomAppBar.8
             @Override // java.lang.Runnable
             public void run() {
-                C22815 c22816 = c22815;
-                c22816.setTranslationX(BottomAppBar.this.getActionMenuViewTranslationX(c22816, i, z));
+                C17531 c17532 = c17531;
+                c17532.setTranslationX(BottomAppBar.this.getActionMenuViewTranslationX(c17532, i, z));
             }
         };
         if (z2) {
-            c22815.post(runnable);
+            c17531.post(runnable);
         } else {
             runnable.run();
         }
     }
 
-    public int getActionMenuViewTranslationX(C22815 c22815, int i, boolean z) {
+    public int getActionMenuViewTranslationX(C17531 c17531, int i, boolean z) {
         int dimensionPixelOffset = 0;
         if (this.menuAlignmentMode != 1 && (i != 1 || !z)) {
             return 0;
@@ -744,7 +744,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         int measuredWidth = zIsLayoutRtl ? getMeasuredWidth() : 0;
         for (int i2 = 0; i2 < getChildCount(); i2++) {
             View childAt = getChildAt(i2);
-            if ((childAt.getLayoutParams() instanceof C22461) && (((C22461) childAt.getLayoutParams()).f54436 & 8388615) == 8388611) {
+            if ((childAt.getLayoutParams() instanceof C11915) && (((C11915) childAt.getLayoutParams()).f5085 & 8388615) == 8388611) {
                 if (zIsLayoutRtl) {
                     measuredWidth = Math.min(measuredWidth, childAt.getLeft());
                 } else {
@@ -752,10 +752,10 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
                 }
             }
         }
-        int right = zIsLayoutRtl ? c22815.getRight() : c22815.getLeft();
+        int right = zIsLayoutRtl ? c17531.getRight() : c17531.getLeft();
         int i3 = zIsLayoutRtl ? this.rightInset : -this.leftInset;
         if (getNavigationIcon() == null) {
-            dimensionPixelOffset = getResources().getDimensionPixelOffset(C0976.f4124);
+            dimensionPixelOffset = getResources().getDimensionPixelOffset(C17609.f57377);
             if (!zIsLayoutRtl) {
                 dimensionPixelOffset = -dimensionPixelOffset;
             }
@@ -775,7 +775,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         }
     }
 
-    @Override // l.C6938, android.view.ViewGroup, android.view.View
+    @Override // l.C16390, android.view.ViewGroup, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         super.onLayout(z, i, i2, i3, i4);
         if (z) {
@@ -783,9 +783,9 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
             setCutoutStateAndTranslateFab();
             View viewFindDependentView = findDependentView();
             if (viewFindDependentView != null) {
-                int i5 = C5031.f17539;
+                int i5 = C22666.f73603;
                 if (viewFindDependentView.isLaidOut()) {
-                    viewFindDependentView.post(new RunnableC10138(4, viewFindDependentView));
+                    viewFindDependentView.post(new RunnableC7763(1, viewFindDependentView));
                 }
             }
         }
@@ -810,7 +810,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void setActionMenuViewPosition() {
-        C22815 actionMenuView = getActionMenuView();
+        C17531 actionMenuView = getActionMenuView();
         if (actionMenuView == null || this.menuAnimator != null) {
             return;
         }
@@ -853,7 +853,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         return this.leftInset;
     }
 
-    @Override // l.InterfaceC11090
+    @Override // l.InterfaceC22292
     public Behavior getBehavior() {
         if (this.behavior == null) {
             this.behavior = new Behavior();
@@ -861,7 +861,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         return this.behavior;
     }
 
-    @Override // l.C6938, android.view.ViewGroup, android.view.View
+    @Override // l.C16390, android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         MaterialShapeUtils.setParentAbsoluteElevation(this, this.materialShapeDrawable);
@@ -894,17 +894,17 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
                         bottomAppBar.setFabCornerSize(floatingActionButton.getShapeAppearanceModel().getTopLeftCornerSize().getCornerSize(new RectF(Behavior.this.fabContentRect)));
                         height = iHeight;
                     }
-                    C9679 c9679 = (C9679) view.getLayoutParams();
+                    C15578 c15578 = (C15578) view.getLayoutParams();
                     if (Behavior.this.originalBottomMargin == 0) {
                         if (bottomAppBar.fabAnchorMode == 1) {
-                            ((ViewGroup.MarginLayoutParams) c9679).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(C0976.f4160) - ((view.getMeasuredHeight() - height) / 2));
+                            ((ViewGroup.MarginLayoutParams) c15578).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(C17609.f57354) - ((view.getMeasuredHeight() - height) / 2));
                         }
-                        ((ViewGroup.MarginLayoutParams) c9679).leftMargin = bottomAppBar.getLeftInset();
-                        ((ViewGroup.MarginLayoutParams) c9679).rightMargin = bottomAppBar.getRightInset();
+                        ((ViewGroup.MarginLayoutParams) c15578).leftMargin = bottomAppBar.getLeftInset();
+                        ((ViewGroup.MarginLayoutParams) c15578).rightMargin = bottomAppBar.getRightInset();
                         if (ViewUtils.isLayoutRtl(view)) {
-                            ((ViewGroup.MarginLayoutParams) c9679).leftMargin += bottomAppBar.fabOffsetEndMode;
+                            ((ViewGroup.MarginLayoutParams) c15578).leftMargin += bottomAppBar.fabOffsetEndMode;
                         } else {
-                            ((ViewGroup.MarginLayoutParams) c9679).rightMargin += bottomAppBar.fabOffsetEndMode;
+                            ((ViewGroup.MarginLayoutParams) c15578).rightMargin += bottomAppBar.fabOffsetEndMode;
                         }
                     }
                     bottomAppBar.setCutoutStateAndTranslateFab();
@@ -932,17 +932,17 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
                         bottomAppBar.setFabCornerSize(floatingActionButton.getShapeAppearanceModel().getTopLeftCornerSize().getCornerSize(new RectF(Behavior.this.fabContentRect)));
                         height = iHeight;
                     }
-                    C9679 c9679 = (C9679) view.getLayoutParams();
+                    C15578 c15578 = (C15578) view.getLayoutParams();
                     if (Behavior.this.originalBottomMargin == 0) {
                         if (bottomAppBar.fabAnchorMode == 1) {
-                            ((ViewGroup.MarginLayoutParams) c9679).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(C0976.f4160) - ((view.getMeasuredHeight() - height) / 2));
+                            ((ViewGroup.MarginLayoutParams) c15578).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(C17609.f57354) - ((view.getMeasuredHeight() - height) / 2));
                         }
-                        ((ViewGroup.MarginLayoutParams) c9679).leftMargin = bottomAppBar.getLeftInset();
-                        ((ViewGroup.MarginLayoutParams) c9679).rightMargin = bottomAppBar.getRightInset();
+                        ((ViewGroup.MarginLayoutParams) c15578).leftMargin = bottomAppBar.getLeftInset();
+                        ((ViewGroup.MarginLayoutParams) c15578).rightMargin = bottomAppBar.getRightInset();
                         if (ViewUtils.isLayoutRtl(view)) {
-                            ((ViewGroup.MarginLayoutParams) c9679).leftMargin += bottomAppBar.fabOffsetEndMode;
+                            ((ViewGroup.MarginLayoutParams) c15578).leftMargin += bottomAppBar.fabOffsetEndMode;
                         } else {
-                            ((ViewGroup.MarginLayoutParams) c9679).rightMargin += bottomAppBar.fabOffsetEndMode;
+                            ((ViewGroup.MarginLayoutParams) c15578).rightMargin += bottomAppBar.fabOffsetEndMode;
                         }
                     }
                     bottomAppBar.setCutoutStateAndTranslateFab();
@@ -951,26 +951,26 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
             this.fabContentRect = new Rect();
         }
 
-        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, l.AbstractC23790
-        public boolean onLayoutChild(C2746 c2746, BottomAppBar bottomAppBar, int i) {
+        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, l.AbstractC11103
+        public boolean onLayoutChild(C25276 c25276, BottomAppBar bottomAppBar, int i) {
             this.viewRef = new WeakReference(bottomAppBar);
             View viewFindDependentView = bottomAppBar.findDependentView();
             if (viewFindDependentView != null) {
-                int i2 = C5031.f17539;
+                int i2 = C22666.f73603;
                 if (!viewFindDependentView.isLaidOut()) {
                     BottomAppBar.updateFabAnchorGravity(bottomAppBar, viewFindDependentView);
-                    this.originalBottomMargin = ((ViewGroup.MarginLayoutParams) ((C9679) viewFindDependentView.getLayoutParams())).bottomMargin;
+                    this.originalBottomMargin = ((ViewGroup.MarginLayoutParams) ((C15578) viewFindDependentView.getLayoutParams())).bottomMargin;
                     if (viewFindDependentView instanceof FloatingActionButton) {
                         FloatingActionButton floatingActionButton = (FloatingActionButton) viewFindDependentView;
                         if (bottomAppBar.fabAnchorMode == 0 && bottomAppBar.removeEmbeddedFabElevation) {
-                            C5031.m13982(floatingActionButton, 0.0f);
+                            C22666.m51087(floatingActionButton, 0.0f);
                             floatingActionButton.setCompatElevation(0.0f);
                         }
                         if (floatingActionButton.getShowMotionSpec() == null) {
-                            floatingActionButton.setShowMotionSpecResource(C11561.f38863);
+                            floatingActionButton.setShowMotionSpecResource(C1948.f6523);
                         }
                         if (floatingActionButton.getHideMotionSpec() == null) {
-                            floatingActionButton.setHideMotionSpecResource(C11561.f38881);
+                            floatingActionButton.setHideMotionSpecResource(C1948.f6515);
                         }
                         bottomAppBar.addFabAnimationListeners(floatingActionButton);
                     }
@@ -978,17 +978,17 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
                     bottomAppBar.setCutoutStateAndTranslateFab();
                 }
             }
-            c2746.onLayoutChild(bottomAppBar, i);
-            return super.onLayoutChild(c2746, (View) bottomAppBar, i);
+            c25276.onLayoutChild(bottomAppBar, i);
+            return super.onLayoutChild(c25276, (View) bottomAppBar, i);
         }
 
-        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, l.AbstractC23790
-        public boolean onStartNestedScroll(C2746 c2746, BottomAppBar bottomAppBar, View view, View view2, int i, int i2) {
-            return bottomAppBar.getHideOnScroll() && super.onStartNestedScroll(c2746, (View) bottomAppBar, view, view2, i, i2);
+        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, l.AbstractC11103
+        public boolean onStartNestedScroll(C25276 c25276, BottomAppBar bottomAppBar, View view, View view2, int i, int i2) {
+            return bottomAppBar.getHideOnScroll() && super.onStartNestedScroll(c25276, (View) bottomAppBar, view, view2, i, i2);
         }
     }
 
-    @Override // l.C6938, android.view.View
+    @Override // l.C16390, android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
         savedState.fabAlignmentMode = this.fabAlignmentMode;
@@ -996,7 +996,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         return savedState;
     }
 
-    @Override // l.C6938, android.view.View
+    @Override // l.C16390, android.view.View
     public void onRestoreInstanceState(Parcelable parcelable) {
         if (!(parcelable instanceof SavedState)) {
             super.onRestoreInstanceState(parcelable);
@@ -1008,7 +1008,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
         this.fabAttached = savedState.fabAttached;
     }
 
-    public class SavedState extends AbstractC3000 {
+    public class SavedState extends AbstractC6898 {
         public static final Parcelable.Creator CREATOR = new Parcelable.ClassLoaderCreator() { // from class: com.google.android.material.bottomappbar.BottomAppBar.SavedState.1
             @Override // android.os.Parcelable.ClassLoaderCreator
             public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
@@ -1038,7 +1038,7 @@ public class BottomAppBar extends C6938 implements InterfaceC11090 {
             this.fabAttached = parcel.readInt() != 0;
         }
 
-        @Override // l.AbstractC3000, android.os.Parcelable
+        @Override // l.AbstractC6898, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
             parcel.writeInt(this.fabAlignmentMode);

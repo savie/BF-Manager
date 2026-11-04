@@ -1,45 +1,35 @@
 package l;
 
-import java.io.OutputStream;
-
-/* JADX INFO: renamed from: l.᩵ۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: R70I */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19182 {
+/* JADX INFO: renamed from: l.ᩳܺۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P2S7 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C19182 implements InterfaceC4288 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22710 f61955;
+    public final C24404 f62035;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m44036() {
-        C22710 c22710 = this.f61955;
-        if (c22710 == null) {
-            return 0;
+    public C19182(C24404 c24404) {
+        this.f62035 = c24404;
+    }
+
+    @Override // l.InterfaceC4288
+    /* JADX INFO: renamed from: ۙ, reason: merged with bridge method [inline-methods] */
+    public InterfaceC16791 mo2798(InterfaceC16791 interfaceC16791) {
+        switch (interfaceC16791.mo5414()) {
+            case 24:
+                return new C7995(this, (InterfaceC21267) interfaceC16791);
+            case 25:
+                return new C18436(this, (InterfaceC16045) interfaceC16791);
+            case 26:
+                return new C0537(this, (InterfaceC12316) interfaceC16791);
+            case 27:
+                return new C21420(this, (InterfaceC17537) interfaceC16791);
+            case 28:
+                return new C14706(this, (InterfaceC13062) interfaceC16791);
+            case 29:
+                return new C4266(this, (InterfaceC15299) interfaceC16791);
+            default:
+                return interfaceC16791;
         }
-        return c22710.f73964;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44038(OutputStream outputStream, int i) {
-        C22979.m50823(m44036(), 0, i);
-        int iMin = Math.min(1048576, Math.max(1, i));
-        byte[] bArr = new byte[iMin];
-        int i2 = 0;
-        while (i > 0) {
-            int iMin2 = Math.min(iMin, i);
-            m44037(i2, iMin2, bArr);
-            outputStream.write(bArr, 0, iMin2);
-            i2 += iMin2;
-            i -= iMin2;
-        }
-    }
-
-    public C19182(C22710 c22710) {
-        this.f61955 = c22710;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44037(int i, int i2, byte[] bArr) {
-        C7893.m20871(i, 0, i2, this.f61955, bArr);
     }
 }

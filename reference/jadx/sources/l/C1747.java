@@ -1,11 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5Z9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1747 implements InterfaceC9510 {
-    @Override // l.InterfaceC9510
-    public final int seekTo(int i) {
-        return 0;
+import java.util.function.ToIntFunction;
+
+/* JADX INFO: renamed from: l.֫ۜۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 85H5 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C1747 implements ToIntFunction {
+    @Override // java.util.function.ToIntFunction
+    public final int applyAsInt(Object obj) {
+        return ((C11441) obj).f35958;
     }
 }

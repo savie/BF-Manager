@@ -476,7 +476,7 @@
     const-string v0, "curl "
 
     .line 0
-    invoke-static {v0}, Ll/ۡܿۡ;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ll/ۤ۠֫;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

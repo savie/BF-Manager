@@ -1,32 +1,23 @@
 package l;
 
-import android.os.Handler;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
-/* JADX INFO: renamed from: l.᩷ۛ, reason: contains not printable characters */
-/* JADX INFO: compiled from: CB27 */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.᩵ܺ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 29SR */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C20678 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C1252 f67263;
+    public TextView f66294;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Handler f67264;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public TextView f66295;
 
-    public C20678(C1252 c1252, Handler handler) {
-        this.f67263 = c1252;
-        this.f67264 = handler;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ImageView f66296;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m46518(C13768 c13768) {
-        int i = c13768.f45380;
-        Handler handler = this.f67264;
-        C1252 c1252 = this.f67263;
-        if (i == 0) {
-            handler.post(new RunnableC10095(c1252, c13768.f45381));
-        } else {
-            handler.post(new RunnableC7272(c1252, i));
-        }
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public RadioButton f66297;
 }

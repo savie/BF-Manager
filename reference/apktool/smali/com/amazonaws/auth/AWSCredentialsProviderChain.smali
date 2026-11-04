@@ -7,15 +7,15 @@
 
 
 # static fields
-.field public static final ۖ:Lcom/amazonaws/logging/Log;
+.field public static final ᩸:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
 .field public ۙ:Ljava/util/LinkedList;
 
-.field public ۨ:Z
+.field public ۤ:Z
 
-.field public ܰ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+.field public ᩷:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۖ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->᩸:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     const/4 v0, 0x1
 
     .line 48
-    iput-boolean v0, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۨ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۤ:Z
 
     .line 60
     array-length v0, p1
@@ -96,13 +96,13 @@
     .locals 6
 
     .line 95
-    sget-object v0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->᩸:Lcom/amazonaws/logging/Log;
 
-    iget-boolean v1, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۨ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ۤ:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ܰ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    iget-object v1, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->᩷:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
     if-eqz v1, :cond_0
 
@@ -149,7 +149,7 @@
     if-eqz v4, :cond_1
 
     .line 104
-    invoke-interface {v3}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {v3}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -174,10 +174,10 @@
 
     move-result-object v4
 
-    invoke-interface {v0, v4}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v4}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 107
-    iput-object v2, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->ܰ:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    iput-object v2, p0, Lcom/amazonaws/auth/AWSCredentialsProviderChain;->᩷:Lcom/amazonaws/auth/AWSCredentialsProvider;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -215,7 +215,7 @@
     move-result-object v2
 
     .line 112
-    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     goto :goto_0
 

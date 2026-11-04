@@ -1,62 +1,39 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ܳ᩷ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H38Z */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14777 implements InterfaceC23949, Serializable {
-    public static final long serialVersionUID = 0;
+/* JADX INFO: renamed from: l.ܰᩳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X1Y9 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14777 extends AbstractC9843 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public transient Object f48309 = new Object();
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final C14777 f48353 = new C14777(R.string.MT_Protector, R.drawable.MT_Protector);
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC23949 f48310;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public transient Object f48311;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public volatile transient boolean f48312;
-
-    public C14777(InterfaceC23949 interfaceC23949) {
-        this.f48310 = interfaceC23949;
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ᩸ */
+    public final boolean mo2481(C12915 c12915) {
+        return false;
     }
 
-    @Override // l.InterfaceC23949
-    public final Object get() {
-        if (!this.f48312) {
-            synchronized (this.f48309) {
-                if (!this.f48312) {
-                    Object obj = this.f48310.get();
-                    this.f48311 = obj;
-                    this.f48312 = true;
-                    return obj;
-                }
-            }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static C14777 m35587() {
+        return f48353;
+    }
+
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC9843 mo2725(AbstractC9843 abstractC9843) {
+        if (this == f48353) {
+            throw new IllegalStateException();
         }
-        return this.f48311;
+        super.mo2725(abstractC9843);
+        return this;
     }
 
-    public final String toString() {
-        Object obj;
-        StringBuilder sb = new StringBuilder("Suppliers.memoize(");
-        if (this.f48312) {
-            obj = "<supplier that returned " + this.f48311 + ">";
-        } else {
-            obj = this.f48310;
-        }
-        sb.append(obj);
-        sb.append(MotionUtils.EASING_TYPE_FORMAT_END);
-        return sb.toString();
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
-        objectInputStream.defaultReadObject();
-        this.f48309 = new Object();
+    @Override // l.AbstractC9843
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2016(C12915 c12915) {
+        throw new UnsupportedOperationException();
     }
 }

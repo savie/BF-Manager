@@ -1,99 +1,95 @@
 package l;
 
-import android.net.Uri;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import javax.crypto.Cipher;
+import javax.crypto.ShortBufferException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
-/* JADX INFO: renamed from: l.ۤ֫ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7MS */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9975 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final long f34084;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f34085;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String f34086;
+/* JADX INFO: renamed from: l.ۢ۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7YS */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9975 implements InterfaceC21360 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Uri f34087;
+    public Cipher f32075;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final List f34088;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final long f34089;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final String f34090;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f34091;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final boolean f34092;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Uri f34093;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f34094;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f34095;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final long f34096;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final String f34097;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final long f34098;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long f34099;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final long f34100;
-
-    public C9975(String str, Uri uri, Uri uri2, long j, long j2, long j3, long j4, ArrayList arrayList, boolean z, long j5, long j6, ArrayList arrayList2, ArrayList arrayList3, ArrayList arrayList4, boolean z2, String str2, String str3) {
-        C2023.m6507((uri == null || uri2 == null) && !(uri == null && uri2 == null));
-        this.f34086 = str;
-        this.f34093 = uri;
-        this.f34087 = uri2;
-        this.f34096 = j;
-        this.f34084 = j2;
-        this.f34099 = j3;
-        this.f34089 = j4;
-        this.f34088 = arrayList;
-        this.f34092 = z;
-        this.f34098 = j5;
-        this.f34100 = j6;
-        this.f34095 = AbstractC22433.copyOf((Collection) arrayList2);
-        this.f34094 = AbstractC22433.copyOf((Collection) arrayList3);
-        this.f34091 = AbstractC22433.m49798(new C14168(1), arrayList4);
-        this.f34085 = z2;
-        this.f34090 = str2;
-        this.f34097 = str3;
+    @Override // l.InterfaceC21360
+    public final int getBlockSize() {
+        return 16;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof C9975)) {
-            return false;
-        }
-        C9975 c9975 = (C9975) obj;
-        return this.f34096 == c9975.f34096 && this.f34084 == c9975.f34084 && this.f34099 == c9975.f34099 && this.f34089 == c9975.f34089 && this.f34092 == c9975.f34092 && this.f34098 == c9975.f34098 && this.f34100 == c9975.f34100 && this.f34085 == c9975.f34085 && C13638.equals(this.f34086, c9975.f34086) && C13638.equals(this.f34093, c9975.f34093) && C13638.equals(this.f34087, c9975.f34087) && C13638.equals(this.f34088, c9975.f34088) && C13638.equals(this.f34095, c9975.f34095) && C13638.equals(this.f34094, c9975.f34094) && C13638.equals(this.f34091, c9975.f34091) && C13638.equals(this.f34090, c9975.f34090) && C13638.equals(this.f34097, c9975.f34097);
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3921(int i) {
     }
 
-    public final int hashCode() {
-        return C13638.hash(this.f34086, this.f34093, this.f34087, Long.valueOf(this.f34096), Long.valueOf(this.f34084), Long.valueOf(this.f34099), Long.valueOf(this.f34089), this.f34088, Boolean.valueOf(this.f34092), Long.valueOf(this.f34098), Long.valueOf(this.f34100), this.f34095, this.f34094, this.f34091, Boolean.valueOf(this.f34085), this.f34090, this.f34097);
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3924(byte[] bArr) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo3925() {
+        return true;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۤ */
+    public final /* synthetic */ boolean mo3926() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩴ */
+    public final /* synthetic */ boolean mo3927() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ int mo3928() {
+        return 0;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ void mo3929(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo3930() {
+        return 16;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3923(int i, byte[] bArr, byte[] bArr2) throws Exception {
+        if (bArr2.length > 16) {
+            byte[] bArr3 = new byte[16];
+            System.arraycopy(bArr2, 0, bArr3, 0, 16);
+            bArr2 = bArr3;
+        }
+        if (bArr.length > 16) {
+            byte[] bArr4 = new byte[16];
+            System.arraycopy(bArr, 0, bArr4, 0, 16);
+            bArr = bArr4;
+        }
+        try {
+            SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES");
+            Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
+            this.f32075 = cipher;
+            cipher.init(i == 0 ? 1 : 2, secretKeySpec, new IvParameterSpec(bArr2));
+        } catch (Exception e) {
+            this.f32075 = null;
+            throw e;
+        }
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3922(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
+        this.f32075.update(bArr, i, i2, bArr2, i3);
     }
 }

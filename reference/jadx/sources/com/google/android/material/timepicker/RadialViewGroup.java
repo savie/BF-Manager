@@ -16,15 +16,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import l.C15089;
-import l.C18144;
-import l.C3798;
-import l.C5031;
-import l.C5444;
-import l.C8033;
+import l.C12388;
+import l.C14625;
+import l.C16872;
+import l.C22666;
+import l.C23577;
+import l.C4194;
 
 /* JADX INFO: loaded from: classes.dex */
-public class RadialViewGroup extends C5444 {
+public class RadialViewGroup extends C16872 {
     public static final int LEVEL_1 = 1;
     public static final int LEVEL_2 = 2;
     public static final float LEVEL_RADIUS_RATIO = 0.66f;
@@ -43,12 +43,12 @@ public class RadialViewGroup extends C5444 {
 
     public RadialViewGroup(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(C15089.f49250, this);
+        LayoutInflater.from(context).inflate(C12388.f39764, this);
         Drawable drawableCreateBackground = createBackground();
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         setBackground(drawableCreateBackground);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8033.f27662, i, 0);
-        this.radius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27715, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C14625.f47207, i, 0);
+        this.radius = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f47740, 0);
         this.updateLayoutParametersRunnable = new Runnable() { // from class: com.google.android.material.timepicker.RadialViewGroup$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
             public final void run() {
@@ -71,17 +71,17 @@ public class RadialViewGroup extends C5444 {
         this.background.setFillColor(ColorStateList.valueOf(i));
     }
 
-    @Override // l.C5444, android.view.ViewGroup
+    @Override // l.C16872, android.view.ViewGroup
     public void addView(View view, int i, ViewGroup.LayoutParams layoutParams) {
         super.addView(view, i, layoutParams);
         if (view.getId() == -1) {
-            int i2 = C5031.f17539;
+            int i2 = C22666.f73603;
             view.setId(View.generateViewId());
         }
         updateLayoutParamsAsync();
     }
 
-    @Override // l.C5444, android.view.ViewGroup
+    @Override // l.C16872, android.view.ViewGroup
     public void onViewRemoved(View view) {
         super.onViewRemoved(view);
         updateLayoutParamsAsync();
@@ -102,13 +102,13 @@ public class RadialViewGroup extends C5444 {
     }
 
     public void updateLayoutParams() {
-        C18144 c18144 = new C18144();
-        c18144.m42253(this);
+        C4194 c4194 = new C4194();
+        c4194.m13397(this);
         HashMap map = new HashMap();
         for (int i = 0; i < getChildCount(); i++) {
             View childAt = getChildAt(i);
-            if (childAt.getId() != C3798.f13880 && !shouldSkipView(childAt)) {
-                int i2 = (Integer) childAt.getTag(C3798.f13853);
+            if (childAt.getId() != C23577.f76248 && !shouldSkipView(childAt)) {
+                int i2 = (Integer) childAt.getTag(C23577.f76339);
                 if (i2 == null) {
                     i2 = 1;
                 }
@@ -119,16 +119,16 @@ public class RadialViewGroup extends C5444 {
             }
         }
         for (Map.Entry entry : map.entrySet()) {
-            addConstraints((List) entry.getValue(), c18144, getLeveledRadius(((Integer) entry.getKey()).intValue()));
+            addConstraints((List) entry.getValue(), c4194, getLeveledRadius(((Integer) entry.getKey()).intValue()));
         }
-        c18144.m42246(this);
+        c4194.m13392(this);
     }
 
-    private void addConstraints(List list, C18144 c18144, int i) {
+    private void addConstraints(List list, C4194 c4194, int i) {
         Iterator it = list.iterator();
         float size = 0.0f;
         while (it.hasNext()) {
-            c18144.m42241(((View) it.next()).getId(), C3798.f13880, i, size);
+            c4194.m13386(((View) it.next()).getId(), C23577.f76248, i, size);
             size += 360.0f / list.size();
         }
     }

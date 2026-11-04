@@ -1,18 +1,23 @@
 package l;
 
-import android.content.Context;
-import android.util.AttributeSet;
-
-/* JADX INFO: renamed from: l.᩹ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V659 */
+/* JADX INFO: renamed from: l.᩸֨ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X93U */
 /* JADX INFO: loaded from: classes.dex */
-public class C22461 extends C17046 {
+public final /* synthetic */ class C22461 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f73320;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f72690;
 
-    public C22461(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        this.f73320 = 0;
+    static {
+        int[] iArr = new int[EnumC2848.values().length];
+        f72690 = iArr;
+        try {
+            iArr[EnumC2848.MESSAGE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f72690[EnumC2848.ENUM.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
     }
 }

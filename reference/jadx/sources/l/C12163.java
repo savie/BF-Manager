@@ -1,32 +1,64 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۘܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBIK */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C12163 extends EnumC7306 {
-    public /* synthetic */ C12163() {
-        this("FORMAT_22C", 17);
-    }
+import java.util.ArrayList;
 
-    public C12163(String str, int i) {
-        super(str, i, 0);
-    }
+/* JADX INFO: renamed from: l.ۨۛۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87AO */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12163 {
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
-        int iM19496 = EnumC7306.m19496(i);
-        int iM19495 = EnumC7306.m19495(i);
-        int iM19492 = EnumC7306.m19492(i);
-        int i2 = interfaceC14985.read();
-        C6517.m17725(iM19496);
-        return new C5895(this, iM19496, i2, 0, 0L, iM19495, iM19492);
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final int f39091;
 
-    @Override // l.EnumC7306
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
-        EnumC7306.m19460(abstractC17806.m41390(), EnumC7306.m19472(abstractC17806.mo16133(), abstractC17806.mo16134()));
-        interfaceC21334.m47864();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f39092;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final String f39093;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f39094;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f39095;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final ArrayList f39096;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f39097;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final boolean f39098;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final String f39099;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f39100;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f39101;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f39102;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f39103;
+
+    public C12163(String str, String str2, boolean z, int i, int i2, ArrayList arrayList, String str3, ArrayList arrayList2, int i3, int i4, ArrayList arrayList3, ArrayList arrayList4, ArrayList arrayList5) {
+        this.f39099 = str;
+        this.f39093 = str2;
+        this.f39098 = z;
+        this.f39103 = i;
+        this.f39091 = i2;
+        this.f39095 = arrayList;
+        this.f39101 = str3;
+        this.f39102 = arrayList2;
+        this.f39094 = i3;
+        this.f39097 = i4;
+        this.f39092 = arrayList3;
+        this.f39100 = arrayList4;
+        this.f39096 = arrayList5;
     }
 }

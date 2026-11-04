@@ -1,38 +1,21 @@
 package l;
 
-import java.util.function.LongConsumer;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩳ᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18340 extends AbstractC19864 implements InterfaceC21993 {
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        l((Long) obj);
+/* JADX INFO: renamed from: l.ܿ۫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 491A */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18340 implements Iterable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f59809;
+
+    public C18340(String str) {
+        this.f59809 = str;
     }
 
-    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
-        return C21917.$default$andThen(this, longConsumer);
-    }
-
-    @Override // l.InterfaceC21993
-    public final /* synthetic */ void l(Long l2) {
-        AbstractC22686.r(this, l2);
-    }
-
-    @Override // l.AbstractC18548, java.util.function.Supplier
-    public final Object get() {
-        return Long.valueOf(this.b);
-    }
-
-    @Override // l.InterfaceC2319
-    public final void i(InterfaceC2319 interfaceC2319) {
-        this.b += ((AbstractC19864) interfaceC2319).b;
-    }
-
-    @Override // l.AbstractC19864, l.InterfaceC19171
-    public final void accept(long j) {
-        this.b++;
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C21324(this);
     }
 }

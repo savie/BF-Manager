@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERSet;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class V2AttributeCertificateInfoGenerator {
     public ASN1GeneralizedTime endDate;
     public Extensions extensions;

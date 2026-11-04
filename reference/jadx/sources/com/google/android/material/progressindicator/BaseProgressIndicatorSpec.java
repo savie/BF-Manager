@@ -7,9 +7,9 @@ import android.util.AttributeSet;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
-import l.C0976;
-import l.C2387;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C17609;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseProgressIndicatorSpec {
@@ -22,28 +22,28 @@ public abstract class BaseProgressIndicatorSpec {
     public int trackThickness;
 
     public BaseProgressIndicatorSpec(Context context, AttributeSet attributeSet, int i, int i2) {
-        int dimensionPixelSize = context.getResources().getDimensionPixelSize(C0976.f3830);
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f27740, i, i2, new int[0]);
-        this.trackThickness = MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C8033.f27581, dimensionPixelSize);
-        this.trackCornerRadius = Math.min(MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C8033.f26357, 0), this.trackThickness / 2);
-        this.showAnimationBehavior = typedArrayObtainStyledAttributes.getInt(C8033.f27899, 0);
-        this.hideAnimationBehavior = typedArrayObtainStyledAttributes.getInt(C8033.f27793, 0);
-        this.indicatorTrackGapSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27102, 0);
+        int dimensionPixelSize = context.getResources().getDimensionPixelSize(C17609.f57717);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f47725, i, i2, new int[0]);
+        this.trackThickness = MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C14625.f46076, dimensionPixelSize);
+        this.trackCornerRadius = Math.min(MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C14625.f47351, 0), this.trackThickness / 2);
+        this.showAnimationBehavior = typedArrayObtainStyledAttributes.getInt(C14625.f46341, 0);
+        this.hideAnimationBehavior = typedArrayObtainStyledAttributes.getInt(C14625.f47511, 0);
+        this.indicatorTrackGapSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46501, 0);
         loadIndicatorColors(context, typedArrayObtainStyledAttributes);
         loadTrackColor(context, typedArrayObtainStyledAttributes);
         typedArrayObtainStyledAttributes.recycle();
     }
 
     private void loadIndicatorColors(Context context, TypedArray typedArray) {
-        if (!typedArray.hasValue(C8033.f26996)) {
-            this.indicatorColors = new int[]{MaterialColors.getColor(context, C2387.f9313, -1)};
+        if (!typedArray.hasValue(C14625.f46926)) {
+            this.indicatorColors = new int[]{MaterialColors.getColor(context, C11642.f37584, -1)};
             return;
         }
-        if (typedArray.peekValue(C8033.f26996).type != 1) {
-            this.indicatorColors = new int[]{typedArray.getColor(C8033.f26996, -1)};
+        if (typedArray.peekValue(C14625.f46926).type != 1) {
+            this.indicatorColors = new int[]{typedArray.getColor(C14625.f46926, -1)};
             return;
         }
-        int[] intArray = context.getResources().getIntArray(typedArray.getResourceId(C8033.f26996, -1));
+        int[] intArray = context.getResources().getIntArray(typedArray.getResourceId(C14625.f46926, -1));
         this.indicatorColors = intArray;
         if (intArray.length == 0) {
             throw new IllegalArgumentException("indicatorColors cannot be empty when indicatorColor is not used.");
@@ -51,8 +51,8 @@ public abstract class BaseProgressIndicatorSpec {
     }
 
     private void loadTrackColor(Context context, TypedArray typedArray) {
-        if (typedArray.hasValue(C8033.f27846)) {
-            this.trackColor = typedArray.getColor(C8033.f27846, -1);
+        if (typedArray.hasValue(C14625.f47564)) {
+            this.trackColor = typedArray.getColor(C14625.f47564, -1);
             return;
         }
         this.trackColor = this.indicatorColors[0];

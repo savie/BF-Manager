@@ -1,72 +1,97 @@
 .class public final synthetic Ll/ۧܽ᩹;
 .super Ljava/lang/Object;
-.source "1B34"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic ֡:Ll/ۙ۫᩹;
-
-.field public final synthetic ۛ:Ll/ۖ۫᩹;
-
-.field public final synthetic ۫:Ll/ۢܶ᩹;
-
-.field public final synthetic ܺ:Ll/ۚ۫᩹;
-
-.field public final synthetic ܽ:Ll/ۛܽ᩹;
-
-.field public final synthetic ܿ:Ljava/util/Set;
-
-.field public final synthetic ᩶:Ll/ۖ۬᩹;
+.source "RAPC"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۚ۫᩹;Ll/ۖ۬᩹;Ll/ۙ۫᩹;Ll/ۛܽ᩹;Ll/ۢܶ᩹;Ljava/util/Set;Ll/ۖ۫᩹;)V
-    .locals 0
+.method public static ۙ(Ll/᩻ܽ᩹;Ljava/util/function/IntPredicate;)Ll/᩻ܽ᩹;
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 92
+    instance-of v0, p1, Ll/᩻ܽ᩹;
 
-    iput-object p1, p0, Ll/ۧܽ᩹;->ܺ:Ll/ۚ۫᩹;
+    if-eqz v0, :cond_0
 
-    iput-object p2, p0, Ll/ۧܽ᩹;->᩶:Ll/ۖ۬᩹;
+    check-cast p1, Ll/᩻ܽ᩹;
 
-    iput-object p3, p0, Ll/ۧܽ᩹;->֡:Ll/ۙ۫᩹;
+    goto :goto_0
 
-    iput-object p4, p0, Ll/ۧܽ᩹;->ܽ:Ll/ۛܽ᩹;
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p5, p0, Ll/ۧܽ᩹;->۫:Ll/ۢܶ᩹;
+    new-instance v0, Ll/۫ܽ᩹;
 
-    iput-object p6, p0, Ll/ۧܽ᩹;->ܿ:Ljava/util/Set;
+    invoke-direct {v0, p1}, Ll/۫ܽ᩹;-><init>(Ljava/util/function/IntPredicate;)V
 
-    iput-object p7, p0, Ll/ۧܽ᩹;->ۛ:Ll/ۖ۫᩹;
+    move-object p1, v0
 
-    return-void
+    :goto_0
+    invoke-interface {p0, p1}, Ll/᩻ܽ᩹;->ۙ(Ll/᩻ܽ᩹;)Ll/֫ܽ᩹;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static ۙ(Ll/᩻ܽ᩹;I)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-# virtual methods
-.method public final run()V
-    .locals 7
+    .line 53
+    invoke-static {p1}, Ll/۠۟ܺ;->ۙ(I)B
 
-    .line 0
-    iget-object v5, p0, Ll/ۧܽ᩹;->ܿ:Ljava/util/Set;
+    move-result p1
 
-    iget-object v6, p0, Ll/ۧܽ᩹;->ۛ:Ll/ۖ۫᩹;
+    invoke-interface {p0, p1}, Ll/᩻ܽ᩹;->᩷(B)Z
 
-    iget-object v0, p0, Ll/ۧܽ᩹;->ܺ:Ll/ۚ۫᩹;
+    move-result p0
 
-    iget-object v1, p0, Ll/ۧܽ᩹;->᩶:Ll/ۖ۬᩹;
+    return p0
+.end method
 
-    iget-object v2, p0, Ll/ۧܽ᩹;->֡:Ll/ۙ۫᩹;
+.method public static ۙ(Ll/᩻ܽ᩹;Ljava/lang/Byte;)Z
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    iget-object v3, p0, Ll/ۧܽ᩹;->ܽ:Ll/ۛܽ᩹;
+    .line 64
+    invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
 
-    iget-object v4, p0, Ll/ۧܽ᩹;->۫:Ll/ۢܶ᩹;
+    move-result p1
 
-    invoke-static/range {v0 .. v6}, Ll/ۚ۫᩹;->ۙ(Ll/ۚ۫᩹;Ll/ۖ۬᩹;Ll/ۙ۫᩹;Ll/ۛܽ᩹;Ll/ۢܶ᩹;Ljava/util/Set;Ll/ۖ۫᩹;)V
+    invoke-interface {p0, p1}, Ll/᩻ܽ᩹;->᩷(B)Z
 
-    return-void
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ᩷(Ll/᩻ܽ᩹;Ljava/util/function/IntPredicate;)Ll/᩻ܽ᩹;
+    .locals 1
+
+    .line 137
+    instance-of v0, p1, Ll/᩻ܽ᩹;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/᩻ܽ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ll/۫ܽ᩹;
+
+    invoke-direct {v0, p1}, Ll/۫ܽ᩹;-><init>(Ljava/util/function/IntPredicate;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/᩻ܽ᩹;->᩷(Ll/᩻ܽ᩹;)Ll/ۚܽ᩹;
+
+    move-result-object p0
+
+    return-object p0
 .end method

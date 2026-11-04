@@ -1,14 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۚᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97S */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4444 {
+import android.content.Context;
+import android.content.Intent;
+import android.util.AttributeSet;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C2950 f15833 = new C2950();
+/* JADX INFO: renamed from: l.ۘ᩸ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H1XU */
+/* JADX INFO: loaded from: classes3.dex */
+public class C4444 extends AbstractC11813 {
+    public C4444(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+    }
 
-    static {
-        new C1808(C9571.f32283);
+    public C4444(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+    }
+
+    public C4444(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
+
+    public C4444(Context context) {
+        super(context);
+    }
+
+    @Override // l.AbstractC11813
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        abstractActivityC17204.startActivity(new Intent(abstractActivityC17204, (Class<?>) ActivityC8867.class));
     }
 }

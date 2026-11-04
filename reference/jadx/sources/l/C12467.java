@@ -1,109 +1,73 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ܳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 48CI */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12467 extends AbstractC21803 {
+import android.os.Bundle;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC21803 f41575 = new C12467(5);
+/* JADX INFO: renamed from: l.ۨܺۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: KIV4 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12467 {
 
-    @Override // l.AbstractC21803
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final LinkedHashMap f40047;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final LinkedHashMap f40044 = new LinkedHashMap();
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo30971(int i, int i2, byte[] bArr, byte[] bArr2) {
-        int i3;
-        int i4;
-        int i5;
-        int i6;
-        C23805.m52453(0, i, bArr);
-        C23805.m52453(0, i2, bArr2);
-        if (i2 == 0) {
-            if (i == 1 && bArr[0] == 0) {
-                return 0;
-            }
-            throw new C18110("Output buffer too small");
+    public final LinkedHashMap f40043 = new LinkedHashMap();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final LinkedHashMap f40046 = new LinkedHashMap();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C20672 f40045 = new C20672(this);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m30963(Object obj, String str) {
+        C15243.m36590(str, "key");
+        this.f40047.put(str, obj);
+        InterfaceC3920 interfaceC3920 = (InterfaceC3920) this.f40043.get(str);
+        if (interfaceC3920 != null) {
+            interfaceC3920.setValue(obj);
         }
-        int i7 = 0;
-        int i8 = 0;
-        while (true) {
-            byte b = bArr[i7];
-            i3 = i7 + 1;
-            i4 = (b & 255) >>> 4;
-            if (i4 == 15) {
-                byte b2 = -1;
-                while (i3 < i) {
-                    int i9 = i3 + 1;
-                    byte b3 = bArr[i3];
-                    if (b3 != -1) {
-                        b2 = b3;
-                        i3 = i9;
-                        break;
-                    }
-                    i4 += 255;
-                    b2 = b3;
-                    i3 = i9;
-                }
-                i4 += b2 & 255;
-            }
-            i5 = i8 + i4;
-            int i10 = i2 - 8;
-            if (i5 > i10 || (i6 = i3 + i4) > i - 8) {
-                break;
-            }
-            C17405.m40570(i3, bArr, i8, bArr2, i4);
-            int i11 = (bArr[i6] & 255) | ((bArr[i6 + 1] & 255) << 8);
-            int i12 = i6 + 2;
-            int i13 = i5 - i11;
-            if (i13 < 0) {
-                throw new C18110(C8479.m22141(i12, "Malformed input at "));
-            }
-            int i14 = b & 15;
-            if (i14 == 15) {
-                byte b4 = -1;
-                while (i12 < i) {
-                    int i15 = i12 + 1;
-                    byte b5 = bArr[i12];
-                    if (b5 != -1) {
-                        i12 = i15;
-                        b4 = b5;
-                        break;
-                    }
-                    i14 += 255;
-                    i12 = i15;
-                    b4 = b5;
-                }
-                i14 += b4 & 255;
-            }
-            int i16 = i14;
-            int i17 = i12;
-            int i18 = i16 + 4;
-            int i19 = i5 + i18;
-            if (i19 <= i10) {
-                do {
-                    for (int i20 = 0; i20 < 8; i20++) {
-                        bArr2[i5 + i20] = bArr2[i13 + i20];
-                    }
-                    i13 += 8;
-                    i5 += 8;
-                } while (i5 < i19);
-            } else {
-                if (i19 > i2) {
-                    throw new C18110(C8479.m22141(i17, "Malformed input at "));
-                }
-                for (int i21 = 0; i21 < i18; i21++) {
-                    bArr2[i5 + i21] = bArr2[i13 + i21];
-                }
-            }
-            i7 = i17;
-            i8 = i19;
+        InterfaceC3920 interfaceC3921 = (InterfaceC3920) this.f40046.get(str);
+        if (interfaceC3921 != null) {
+            interfaceC3921.setValue(obj);
         }
-        if (i5 > i2) {
-            throw new C18110();
+    }
+
+    public C12467(Map map) {
+        this.f40047 = new LinkedHashMap(map);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C20672 m30962() {
+        return this.f40045;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Bundle m30961(C12467 c12467) {
+        C21914[] c21914Arr;
+        for (Map.Entry entry : C5834.m17023(c12467.f40046).entrySet()) {
+            c12467.m30963(((InterfaceC3920) entry.getValue()).getValue(), (String) entry.getKey());
         }
-        if (i3 + i4 != i) {
-            throw new C18110(C8479.m22141(i3, "Malformed input at "));
+        for (Map.Entry entry2 : C5834.m17023(c12467.f40044).entrySet()) {
+            c12467.m30963(((InterfaceC19742) entry2.getValue()).mo14860(), (String) entry2.getKey());
         }
-        System.arraycopy(bArr, i3, bArr2, i8, i4);
-        return i5;
+        LinkedHashMap linkedHashMap = c12467.f40047;
+        if (linkedHashMap.isEmpty()) {
+            c21914Arr = new C21914[0];
+        } else {
+            ArrayList arrayList = new ArrayList(linkedHashMap.size());
+            for (Map.Entry entry3 : linkedHashMap.entrySet()) {
+                arrayList.add(new C21914((String) entry3.getKey(), entry3.getValue()));
+            }
+            c21914Arr = (C21914[]) arrayList.toArray(new C21914[0]);
+        }
+        return C1826.m6304((C21914[]) Arrays.copyOf(c21914Arr, c21914Arr.length));
     }
 }

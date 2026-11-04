@@ -3,7 +3,7 @@ package org.bouncycastle.jce;
 import java.security.cert.CertStoreParameters;
 import java.util.Collection;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MultiCertStoreParameters implements CertStoreParameters {
     public Collection certStores;
     public boolean searchAllStores;

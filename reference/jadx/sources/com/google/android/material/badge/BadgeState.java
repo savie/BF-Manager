@@ -12,11 +12,11 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.resources.TextAppearance;
 import java.util.Locale;
-import l.C0976;
-import l.C17910;
-import l.C18616;
-import l.C21438;
-import l.C8033;
+import l.C14625;
+import l.C17609;
+import l.C24323;
+import l.C4185;
+import l.C6423;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class BadgeState {
@@ -63,20 +63,20 @@ public final class BadgeState {
         }
         TypedArray typedArrayGenerateTypedArray = generateTypedArray(context, state.badgeResId, i2, i3);
         Resources resources = context.getResources();
-        this.badgeRadius = typedArrayGenerateTypedArray.getDimensionPixelSize(C8033.f27236, -1);
-        this.horizontalInset = context.getResources().getDimensionPixelSize(C0976.f4041);
-        this.horizontalInsetWithText = context.getResources().getDimensionPixelSize(C0976.f4537);
-        this.badgeWithTextRadius = typedArrayGenerateTypedArray.getDimensionPixelSize(C8033.f27369, -1);
-        this.badgeWidth = typedArrayGenerateTypedArray.getDimension(C8033.f26544, resources.getDimension(C0976.f4312));
-        this.badgeWithTextWidth = typedArrayGenerateTypedArray.getDimension(C8033.f26731, resources.getDimension(C0976.f4076));
-        this.badgeHeight = typedArrayGenerateTypedArray.getDimension(C8033.f27555, resources.getDimension(C0976.f4312));
-        this.badgeWithTextHeight = typedArrayGenerateTypedArray.getDimension(C8033.f26677, resources.getDimension(C0976.f4076));
+        this.badgeRadius = typedArrayGenerateTypedArray.getDimensionPixelSize(C14625.f46621, -1);
+        this.horizontalInset = context.getResources().getDimensionPixelSize(C17609.f57517);
+        this.horizontalInsetWithText = context.getResources().getDimensionPixelSize(C17609.f57707);
+        this.badgeWithTextRadius = typedArrayGenerateTypedArray.getDimensionPixelSize(C14625.f47617, -1);
+        this.badgeWidth = typedArrayGenerateTypedArray.getDimension(C14625.f47046, resources.getDimension(C17609.f57682));
+        this.badgeWithTextWidth = typedArrayGenerateTypedArray.getDimension(C14625.f47457, resources.getDimension(C17609.f57257));
+        this.badgeHeight = typedArrayGenerateTypedArray.getDimension(C14625.f46090, resources.getDimension(C17609.f57682));
+        this.badgeWithTextHeight = typedArrayGenerateTypedArray.getDimension(C14625.f46394, resources.getDimension(C17609.f57257));
         boolean z = true;
-        this.offsetAlignmentMode = typedArrayGenerateTypedArray.getInt(C8033.f27475, 1);
+        this.offsetAlignmentMode = typedArrayGenerateTypedArray.getInt(C14625.f47245, 1);
         state2.alpha = state.alpha == -2 ? 255 : state.alpha;
         if (state.number == -2) {
-            if (typedArrayGenerateTypedArray.hasValue(C8033.f28059)) {
-                state2.number = typedArrayGenerateTypedArray.getInt(C8033.f28059, 0);
+            if (typedArrayGenerateTypedArray.hasValue(C14625.f47831)) {
+                state2.number = typedArrayGenerateTypedArray.getInt(C14625.f47831, 0);
             } else {
                 state2.number = -1;
             }
@@ -84,27 +84,27 @@ public final class BadgeState {
             state2.number = state.number;
         }
         if (state.text == null) {
-            if (typedArrayGenerateTypedArray.hasValue(C8033.f27129)) {
-                state2.text = typedArrayGenerateTypedArray.getString(C8033.f27129);
+            if (typedArrayGenerateTypedArray.hasValue(C14625.f46143)) {
+                state2.text = typedArrayGenerateTypedArray.getString(C14625.f46143);
             }
         } else {
             state2.text = state.text;
         }
         state2.contentDescriptionForText = state.contentDescriptionForText;
         if (state.contentDescriptionNumberless == null) {
-            string = context.getString(C17910.f56732);
+            string = context.getString(C24323.f78854);
         } else {
             string = state.contentDescriptionNumberless;
         }
         state2.contentDescriptionNumberless = string;
         if (state.contentDescriptionQuantityStrings == 0) {
-            i4 = C21438.f69705;
+            i4 = C6423.f21644;
         } else {
             i4 = state.contentDescriptionQuantityStrings;
         }
         state2.contentDescriptionQuantityStrings = i4;
         if (state.contentDescriptionExceedsMaxBadgeNumberRes == 0) {
-            i5 = C17910.f56808;
+            i5 = C24323.f78804;
         } else {
             i5 = state.contentDescriptionExceedsMaxBadgeNumberRes;
         }
@@ -114,56 +114,56 @@ public final class BadgeState {
         }
         state2.isVisible = Boolean.valueOf(z);
         if (state.maxCharacterCount == -2) {
-            i6 = typedArrayGenerateTypedArray.getInt(C8033.f26623, -2);
+            i6 = typedArrayGenerateTypedArray.getInt(C14625.f46182, -2);
         } else {
             i6 = state.maxCharacterCount;
         }
         state2.maxCharacterCount = i6;
         if (state.maxNumber == -2) {
-            i7 = typedArrayGenerateTypedArray.getInt(C8033.f26837, -2);
+            i7 = typedArrayGenerateTypedArray.getInt(C14625.f46873, -2);
         } else {
             i7 = state.maxNumber;
         }
         state2.maxNumber = i7;
         if (state.badgeShapeAppearanceResId == null) {
-            iIntValue = typedArrayGenerateTypedArray.getResourceId(C8033.f27608, C18616.f59313);
+            iIntValue = typedArrayGenerateTypedArray.getResourceId(C14625.f47418, C4185.f14778);
         } else {
             iIntValue = state.badgeShapeAppearanceResId.intValue();
         }
         state2.badgeShapeAppearanceResId = Integer.valueOf(iIntValue);
         if (state.badgeShapeAppearanceOverlayResId == null) {
-            iIntValue2 = typedArrayGenerateTypedArray.getResourceId(C8033.f26758, 0);
+            iIntValue2 = typedArrayGenerateTypedArray.getResourceId(C14625.f46780, 0);
         } else {
             iIntValue2 = state.badgeShapeAppearanceOverlayResId.intValue();
         }
         state2.badgeShapeAppearanceOverlayResId = Integer.valueOf(iIntValue2);
         if (state.badgeWithTextShapeAppearanceResId == null) {
-            iIntValue3 = typedArrayGenerateTypedArray.getResourceId(C8033.f27209, C18616.f59313);
+            iIntValue3 = typedArrayGenerateTypedArray.getResourceId(C14625.f46819, C4185.f14778);
         } else {
             iIntValue3 = state.badgeWithTextShapeAppearanceResId.intValue();
         }
         state2.badgeWithTextShapeAppearanceResId = Integer.valueOf(iIntValue3);
         if (state.badgeWithTextShapeAppearanceOverlayResId == null) {
-            iIntValue4 = typedArrayGenerateTypedArray.getResourceId(C8033.f26517, 0);
+            iIntValue4 = typedArrayGenerateTypedArray.getResourceId(C14625.f47671, 0);
         } else {
             iIntValue4 = state.badgeWithTextShapeAppearanceOverlayResId.intValue();
         }
         state2.badgeWithTextShapeAppearanceOverlayResId = Integer.valueOf(iIntValue4);
         if (state.backgroundColor == null) {
-            iIntValue5 = readColorFromAttributes(context, typedArrayGenerateTypedArray, C8033.f27820);
+            iIntValue5 = readColorFromAttributes(context, typedArrayGenerateTypedArray, C14625.f47578);
         } else {
             iIntValue5 = state.backgroundColor.intValue();
         }
         state2.backgroundColor = Integer.valueOf(iIntValue5);
         if (state.badgeTextAppearanceResId == null) {
-            iIntValue6 = typedArrayGenerateTypedArray.getResourceId(C8033.f28086, C18616.f59539);
+            iIntValue6 = typedArrayGenerateTypedArray.getResourceId(C14625.f46727, C4185.f14633);
         } else {
             iIntValue6 = state.badgeTextAppearanceResId.intValue();
         }
         state2.badgeTextAppearanceResId = Integer.valueOf(iIntValue6);
         if (state.badgeTextColor == null) {
-            if (typedArrayGenerateTypedArray.hasValue(C8033.f27396)) {
-                state2.badgeTextColor = Integer.valueOf(readColorFromAttributes(context, typedArrayGenerateTypedArray, C8033.f27396));
+            if (typedArrayGenerateTypedArray.hasValue(C14625.f46249)) {
+                state2.badgeTextColor = Integer.valueOf(readColorFromAttributes(context, typedArrayGenerateTypedArray, C14625.f46249));
             } else {
                 state2.badgeTextColor = Integer.valueOf(new TextAppearance(context, state2.badgeTextAppearanceResId.intValue()).getTextColor().getDefaultColor());
             }
@@ -171,49 +171,49 @@ public final class BadgeState {
             state2.badgeTextColor = state.badgeTextColor;
         }
         if (state.badgeGravity == null) {
-            iIntValue7 = typedArrayGenerateTypedArray.getInt(C8033.f26331, 8388661);
+            iIntValue7 = typedArrayGenerateTypedArray.getInt(C14625.f47365, 8388661);
         } else {
             iIntValue7 = state.badgeGravity.intValue();
         }
         state2.badgeGravity = Integer.valueOf(iIntValue7);
         if (state.badgeHorizontalPadding == null) {
-            iIntValue8 = typedArrayGenerateTypedArray.getDimensionPixelSize(C8033.f27023, resources.getDimensionPixelSize(C0976.f4585));
+            iIntValue8 = typedArrayGenerateTypedArray.getDimensionPixelSize(C14625.f46568, resources.getDimensionPixelSize(C17609.f57944));
         } else {
             iIntValue8 = state.badgeHorizontalPadding.intValue();
         }
         state2.badgeHorizontalPadding = Integer.valueOf(iIntValue8);
         if (state.badgeVerticalPadding == null) {
-            iIntValue9 = typedArrayGenerateTypedArray.getDimensionPixelSize(C8033.f26437, resources.getDimensionPixelSize(C0976.f4100));
+            iIntValue9 = typedArrayGenerateTypedArray.getDimensionPixelSize(C14625.f46674, resources.getDimensionPixelSize(C17609.f57540));
         } else {
             iIntValue9 = state.badgeVerticalPadding.intValue();
         }
         state2.badgeVerticalPadding = Integer.valueOf(iIntValue9);
         if (state.horizontalOffsetWithoutText == null) {
-            iIntValue10 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C8033.f28006, 0);
+            iIntValue10 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C14625.f47138, 0);
         } else {
             iIntValue10 = state.horizontalOffsetWithoutText.intValue();
         }
         state2.horizontalOffsetWithoutText = Integer.valueOf(iIntValue10);
         if (state.verticalOffsetWithoutText == null) {
-            iIntValue11 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C8033.f27952, 0);
+            iIntValue11 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C14625.f47298, 0);
         } else {
             iIntValue11 = state.verticalOffsetWithoutText.intValue();
         }
         state2.verticalOffsetWithoutText = Integer.valueOf(iIntValue11);
         if (state.horizontalOffsetWithText == null) {
-            iIntValue12 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C8033.f26410, state2.horizontalOffsetWithoutText.intValue());
+            iIntValue12 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C14625.f46979, state2.horizontalOffsetWithoutText.intValue());
         } else {
             iIntValue12 = state.horizontalOffsetWithText.intValue();
         }
         state2.horizontalOffsetWithText = Integer.valueOf(iIntValue12);
         if (state.verticalOffsetWithText == null) {
-            iIntValue13 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C8033.f27687, state2.verticalOffsetWithoutText.intValue());
+            iIntValue13 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C14625.f47192, state2.verticalOffsetWithoutText.intValue());
         } else {
             iIntValue13 = state.verticalOffsetWithText.intValue();
         }
         state2.verticalOffsetWithText = Integer.valueOf(iIntValue13);
         if (state.largeFontVerticalOffsetAdjustment == null) {
-            iIntValue14 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C8033.f27315, 0);
+            iIntValue14 = typedArrayGenerateTypedArray.getDimensionPixelOffset(C14625.f46448, 0);
         } else {
             iIntValue14 = state.largeFontVerticalOffsetAdjustment.intValue();
         }
@@ -221,7 +221,7 @@ public final class BadgeState {
         state2.additionalHorizontalOffset = Integer.valueOf(state.additionalHorizontalOffset == null ? 0 : state.additionalHorizontalOffset.intValue());
         state2.additionalVerticalOffset = Integer.valueOf(state.additionalVerticalOffset == null ? 0 : state.additionalVerticalOffset.intValue());
         if (state.autoAdjustToWithinGrandparentBounds == null) {
-            zBooleanValue = typedArrayGenerateTypedArray.getBoolean(C8033.f27502, false);
+            zBooleanValue = typedArrayGenerateTypedArray.getBoolean(C14625.f47099, false);
         } else {
             zBooleanValue = state.autoAdjustToWithinGrandparentBounds.booleanValue();
         }
@@ -250,7 +250,7 @@ public final class BadgeState {
             drawableXml = null;
             styleAttribute = 0;
         }
-        return ThemeEnforcement.obtainStyledAttributes(context, drawableXml, C8033.f27873, i2, styleAttribute == 0 ? i3 : styleAttribute, new int[0]);
+        return ThemeEnforcement.obtainStyledAttributes(context, drawableXml, C14625.f46355, i2, styleAttribute == 0 ? i3 : styleAttribute, new int[0]);
     }
 
     public State getOverridingState() {

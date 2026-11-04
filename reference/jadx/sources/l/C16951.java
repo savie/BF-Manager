@@ -1,19 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ᩺ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P5I3 */
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.ܺܺܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 07T7 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16951 extends AbstractC16791 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17656 f54246;
-
-    public C16951(C17656 c17656) {
-        this.f54246 = c17656;
+public final /* synthetic */ class C16951 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.InterfaceC13528
-    public final InterfaceC8152 getValue() {
-        return this.f54246.f56113.mo19719();
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return ((AbstractC16205) obj).mo11547();
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 }

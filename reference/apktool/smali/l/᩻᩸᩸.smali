@@ -1,36 +1,39 @@
-.class public abstract Ll/᩻᩸᩸;
-.super Ll/ܳ᩸᩸;
-.source "14W6"
+.class public final synthetic Ll/᩻᩸᩸;
+.super Ljava/lang/Object;
+.source "MB8H"
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public abstract ۙ(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-.method public abstract ۙ(Ll/᩹۠᩸;)Ljava/lang/Object;
-.end method
+    .line 2
+    check-cast p1, Ll/ܽ᩸᩸;
 
-.method public final ۙ()Z
-    .locals 1
+    .line 4
+    check-cast p2, Ll/ܽ᩸᩸;
 
-    const/4 v0, 0x0
+    .line 203
+    invoke-virtual {p1}, Ll/ܽ᩸᩸;->ۙ()Ll/۟᩸᩸;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public abstract ۨ()Ll/֨᩵᩸;
-.end method
+    invoke-interface {p1}, Ll/۟᩸᩸;->index()I
 
-.method public abstract ܰ()Ll/᩵᩸᩸;
+    move-result p1
+
+    invoke-virtual {p2}, Ll/ܽ᩸᩸;->ۙ()Ll/۟᩸᩸;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ll/۟᩸᩸;->index()I
+
+    move-result p2
+
+    sub-int/2addr p1, p2
+
+    return p1
 .end method

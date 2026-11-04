@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.DHParameterSpec;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.pkcs.DHParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi {
     public DHParameterSpec currentSpec;
 
@@ -60,7 +60,7 @@ public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi
     @Override // java.security.AlgorithmParametersSpi
     public void engineInit(byte[] bArr, String str) throws IOException {
         if (!isASN1FormatString(str)) {
-            throw new IOException(C0252.m1693("Unknown parameter format ", str));
+            throw new IOException(C25272.m56409("Unknown parameter format ", str));
         }
         engineInit(bArr);
     }

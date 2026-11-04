@@ -1,51 +1,84 @@
 package l;
 
-import android.media.AudioDeviceInfo;
-import android.media.AudioRouting;
-import android.media.AudioTrack;
-import android.os.Handler;
-import android.os.Looper;
+import android.net.Uri;
+import com.alipay.sdk.m.n.b;
+import java.util.ArrayDeque;
 
-/* JADX INFO: renamed from: l.ᩳۧۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 68UW */
+/* JADX INFO: renamed from: l.ܿ֫ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y739 */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C18004 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AudioTrack f57594;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C21532 f57595 = new AudioRouting.OnRoutingChangedListener() { // from class: l.᩸ۧۙ
-        @Override // android.media.AudioRouting.OnRoutingChangedListener
-        public final void onRoutingChanged(AudioRouting audioRouting) {
-            C18004.m41952(this.f69948, audioRouting);
+    public static String m41985(String str) {
+        if (str != null) {
+            int i = 0;
+            if (str.indexOf(0) == -1 && str.indexOf(92) == -1) {
+                ArrayDeque<String> arrayDeque = new ArrayDeque();
+                int length = str.length();
+                while (i <= length) {
+                    int iIndexOf = str.indexOf(47, i);
+                    if (iIndexOf == -1) {
+                        iIndexOf = length;
+                    }
+                    String strSubstring = str.substring(i, iIndexOf);
+                    if (!strSubstring.isEmpty() && !strSubstring.equals(".")) {
+                        if (strSubstring.equals("..")) {
+                            if (arrayDeque.isEmpty()) {
+                                return null;
+                            }
+                            arrayDeque.removeLast();
+                        } else {
+                            arrayDeque.addLast(strSubstring);
+                        }
+                    }
+                    if (iIndexOf == length) {
+                        break;
+                    }
+                    i = iIndexOf + 1;
+                }
+                StringBuilder sb = new StringBuilder(str.length());
+                for (String str2 : arrayDeque) {
+                    if (sb.length() != 0) {
+                        sb.append('/');
+                    }
+                    sb.append(str2);
+                }
+                return sb.toString();
+            }
         }
-    };
+        return null;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C3747 f57596;
-
-    /* JADX WARN: Type inference failed for: r3v1, types: [l.᩸ۧۙ] */
-    public C18004(AudioTrack audioTrack, C3747 c3747) {
-        this.f57594 = audioTrack;
-        this.f57596 = c3747;
-        audioTrack.addOnRoutingChangedListener(this.f57595, new Handler(Looper.myLooper()));
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m41987(String str, String str2) {
+        String strM41985;
+        if (str.startsWith("/") && str.endsWith("/") && str.indexOf(0) == -1 && str.indexOf(92) == -1 && (strM41985 = m41985(str2)) != null && !strM41985.isEmpty()) {
+            return str.concat(strM41985);
+        }
+        return null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m41953() {
-        C21532 c21532 = this.f57595;
-        c21532.getClass();
-        this.f57594.removeOnRoutingChangedListener(c21532);
-        this.f57595 = null;
+    public static Uri m41984(String str, String str2) {
+        String strM41985 = m41985(str2);
+        if (strM41985 == null || strM41985.isEmpty()) {
+            throw new IllegalArgumentException("Invalid HTML preview path");
+        }
+        Uri.Builder builderAuthority = new Uri.Builder().scheme(b.a).authority(str);
+        int i = 0;
+        while (i < strM41985.length()) {
+            int iIndexOf = strM41985.indexOf(47, i);
+            if (iIndexOf == -1) {
+                iIndexOf = strM41985.length();
+            }
+            builderAuthority.appendPath(strM41985.substring(i, iIndexOf));
+            i = iIndexOf + 1;
+        }
+        return builderAuthority.build();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m41952(C18004 c18004, AudioRouting audioRouting) {
-        AudioDeviceInfo routedDevice;
-        if (c18004.f57595 == null || (routedDevice = audioRouting.getRoutedDevice()) == null) {
-            return;
-        }
-        c18004.f57596.m10974(routedDevice);
+    public static boolean m41986(Uri uri, String str) {
+        return uri != null && b.a.equalsIgnoreCase(uri.getScheme()) && str.equalsIgnoreCase(uri.getAuthority());
     }
 }

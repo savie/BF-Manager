@@ -1,90 +1,68 @@
 .class public final Ll/ۨܰۙ;
-.super Ll/ۘۗ;
-.source "83VO"
+.super Ll/᩷ۨۙ;
+.source "E8FE"
 
 
 # instance fields
-.field public final synthetic ܰ:Ll/ۖܰۙ;
+.field public ᩸:Ll/ۙܿ֫;
 
 
-# direct methods
-.method public constructor <init>(Ll/ۖܰۙ;)V
-    .locals 0
+# virtual methods
+.method public final ۙ(Ljava/lang/String;)V
+    .locals 1
 
-    .line 1245
-    iput-object p1, p0, Ll/ۨܰۙ;->ܰ:Ll/ۖܰۙ;
+    .line 92
+    iget-object v0, p0, Ll/ۨܰۙ;->᩸:Ll/ۙܿ֫;
 
-    invoke-direct {p0}, Ll/ۘۗ;-><init>()V
+    if-nez v0, :cond_0
+
+    .line 93
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    return-void
+
+    .line 95
+    :cond_0
+    invoke-static {}, Ll/᩻֨ۚ;->᩸()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ(I)Ll/᩹ۗ;
-    .locals 1
-
-    .line 1252
-    iget-object v0, p0, Ll/ۨܰۙ;->ܰ:Ll/ۖܰۙ;
-
-    .line 1253
-    invoke-virtual {v0, p1}, Ll/ۖܰۙ;->obtainAccessibilityNodeInfo(I)Ll/᩹ۗ;
-
-    move-result-object p1
-
-    .line 1254
-    invoke-static {p1}, Ll/᩹ۗ;->ۙ(Ll/᩹ۗ;)Ll/᩹ۗ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(IILandroid/os/Bundle;)Z
-    .locals 1
-
-    .line 1259
-    iget-object v0, p0, Ll/ۨܰۙ;->ܰ:Ll/ۖܰۙ;
-
-    invoke-virtual {v0, p1, p2, p3}, Ll/ۖܰۙ;->performAction(IILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ܰ(I)Ll/᩹ۗ;
+.method public final declared-synchronized ۙ(Ll/ۙܿ֫;)V
     .locals 2
 
-    const/4 v0, 0x2
+    move-object v0, p0
 
-    .line 1264
-    iget-object v1, p0, Ll/ۨܰۙ;->ܰ:Ll/ۖܰۙ;
+    .line 1
+    monitor-enter v0
 
-    if-ne p1, v0, :cond_0
+    :try_start_0
+    const-string v1, "ffmpegJNI"
 
-    .line 1265
-    iget p1, v1, Ll/ۖܰۙ;->mAccessibilityFocusedVirtualViewId:I
+    .line 80
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    iget p1, v1, Ll/ۖܰۙ;->mKeyboardFocusedVirtualViewId:I
+    invoke-virtual {p0, v1}, Ll/᩷ۨۙ;->ۙ([Ljava/lang/String;)V
 
-    :goto_0
-    const/high16 v0, -0x80000000
+    .line 81
+    iput-object p1, p0, Ll/ۨܰۙ;->᩸:Ll/ۙܿ֫;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ne p1, v0, :cond_1
+    .line 82
+    monitor-exit v0
 
-    const/4 p1, 0x0
+    return-void
 
-    return-object p1
+    :catchall_0
+    move-exception p1
 
-    .line 1269
-    :cond_1
-    invoke-virtual {p0, p1}, Ll/ۨܰۙ;->ۙ(I)Ll/᩹ۗ;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method

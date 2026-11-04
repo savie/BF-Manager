@@ -1,39 +1,61 @@
 package l;
 
-import java.nio.charset.Charset;
-import java.nio.charset.UnsupportedCharsetException;
+/* JADX INFO: renamed from: l.᩶ܽۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B2S3 */
+/* JADX INFO: loaded from: classes.dex */
+public class C21442 {
+    /* JADX INFO: renamed from: ۤ */
+    public InterfaceC4288 mo16787(C24404 c24404) {
+        return new C17690(c24404);
+    }
 
-/* JADX INFO: renamed from: l.᩸۟᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 74MB */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21442 {
+    /* JADX INFO: renamed from: ܳ */
+    public InterfaceC4288 mo34851(C24404 c24404) {
+        return new C7249(c24404);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Charset f69711 = Charset.defaultCharset();
+    /* JADX INFO: renamed from: ۚ */
+    public InterfaceC4288 mo16786(C24404 c24404) {
+        return new C17712(c24404);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Charset f69712;
+    /* JADX INFO: renamed from: ۫ */
+    public InterfaceC4288 mo34850(C24404 c24404) {
+        return new C25172(c24404);
+    }
 
-    static {
-        Charset charsetForName;
-        Charset charsetForName2 = null;
-        try {
-            charsetForName = Charset.forName("SJIS");
-        } catch (UnsupportedCharsetException unused) {
-            charsetForName = null;
-        }
-        f69712 = charsetForName;
-        try {
-            Charset.forName("GB2312");
-        } catch (UnsupportedCharsetException unused2) {
-        }
-        try {
-            charsetForName2 = Charset.forName("EUC_JP");
-        } catch (UnsupportedCharsetException unused3) {
-        }
-        Charset charset = f69712;
-        if ((charset == null || !charset.equals(f69711)) && charsetForName2 != null) {
-            charsetForName2.equals(f69711);
-        }
+    /* JADX INFO: renamed from: ᩷ */
+    public InterfaceC4288 mo16789() {
+        return new C5736();
+    }
+
+    /* JADX INFO: renamed from: ᩴ */
+    public InterfaceC4288 mo16788(C24404 c24404) {
+        return new C2774(c24404);
+    }
+
+    /* JADX INFO: renamed from: ֫ */
+    public InterfaceC4288 mo16784(C24404 c24404) {
+        return new C12491(c24404);
+    }
+
+    /* JADX INFO: renamed from: ᩷ */
+    public InterfaceC4288 mo16790(C24404 c24404) {
+        return new C15452(c24404);
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public C22912 mo16785(C24404 c24404) {
+        return new C22912(c24404);
+    }
+
+    /* JADX INFO: renamed from: ᩸ */
+    public InterfaceC4288 mo16791(C24404 c24404) {
+        return new C19182(c24404);
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public InterfaceC4288 mo35032() {
+        return new C14728();
     }
 }

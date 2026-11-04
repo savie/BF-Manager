@@ -1,6 +1,6 @@
 package org.bouncycastle.math.ec.custom.sec;
 
-import l.C0833;
+import l.C1402;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECFieldElement;
@@ -141,7 +141,7 @@ public class SecT163R1Point extends ECPoint.AbstractF2m {
             ECFieldElement xCoord = eCPointNormalize.getXCoord();
             ECFieldElement yCoord = eCPointNormalize.getYCoord();
             ECFieldElement eCFieldElementDivide = yCoord.add(rawYCoord).divide(xCoord);
-            eCFieldElementAdd = C0833.m3430(eCFieldElementDivide, eCFieldElementDivide, xCoord).add(curve.getA());
+            eCFieldElementAdd = C1402.m5128(eCFieldElementDivide, eCFieldElementDivide, xCoord).add(curve.getA());
             if (eCFieldElementAdd.isZero()) {
                 return new SecT163R1Point(curve, eCFieldElementAdd, curve.getB().sqrt());
             }
@@ -185,15 +185,15 @@ public class SecT163R1Point extends ECPoint.AbstractF2m {
         if (!zIsOne) {
             a = a.multiply(eCFieldElementSquare);
         }
-        ECFieldElement eCFieldElementM3430 = C0833.m3430(eCFieldElement, eCFieldElementMultiply2, a);
-        if (eCFieldElementM3430.isZero()) {
-            return new SecT163R1Point(curve, eCFieldElementM3430, curve.getB().sqrt());
+        ECFieldElement eCFieldElementM5128 = C1402.m5128(eCFieldElement, eCFieldElementMultiply2, a);
+        if (eCFieldElementM5128.isZero()) {
+            return new SecT163R1Point(curve, eCFieldElementM5128, curve.getB().sqrt());
         }
-        ECFieldElement eCFieldElementSquare2 = eCFieldElementM3430.square();
-        ECFieldElement eCFieldElementMultiply3 = zIsOne ? eCFieldElementM3430 : eCFieldElementM3430.multiply(eCFieldElementSquare);
+        ECFieldElement eCFieldElementSquare2 = eCFieldElementM5128.square();
+        ECFieldElement eCFieldElementMultiply3 = zIsOne ? eCFieldElementM5128 : eCFieldElementM5128.multiply(eCFieldElementSquare);
         if (!zIsOne) {
             eCFieldElementMultiply = eCFieldElementMultiply.multiply(eCFieldElement2);
         }
-        return new SecT163R1Point(curve, eCFieldElementSquare2, eCFieldElementMultiply.squarePlusProduct(eCFieldElementM3430, eCFieldElementMultiply2).add(eCFieldElementSquare2).add(eCFieldElementMultiply3), new ECFieldElement[]{eCFieldElementMultiply3});
+        return new SecT163R1Point(curve, eCFieldElementSquare2, eCFieldElementMultiply.squarePlusProduct(eCFieldElementM5128, eCFieldElementMultiply2).add(eCFieldElementSquare2).add(eCFieldElementMultiply3), new ECFieldElement[]{eCFieldElementMultiply3});
     }
 }

@@ -1,50 +1,18 @@
 package l;
 
-import bin.mt.plus.Main;
-
-/* JADX INFO: renamed from: l.ۜ۟ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VAJH */
+/* JADX INFO: renamed from: l.ۛ᩵ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J79S */
 /* JADX INFO: loaded from: classes3.dex */
-public class C6613 extends AbstractC17902 {
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۟ */
-    public final C14600 mo3078() {
-        return C1362.f5717;
-    }
+public final class C6613 {
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ᩳۙ */
-    public final CharSequence mo3080() {
-        throw new UnsupportedOperationException();
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f22101;
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۘ */
-    public final void mo3075() {
-        throw new UnsupportedOperationException();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f22102;
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۜ */
-    public final C5202 mo3077() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3076(Main main, C11545 c11545, C11545 c11546, C5202 c5202) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3079(C5202 c5202) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ܰ */
-    public final DialogInterfaceC19356 mo2981(AbstractActivityC12483 abstractActivityC12483) {
-        throw new UnsupportedOperationException();
+    public C6613(String str, String str2) {
+        this.f22101 = str;
+        this.f22102 = str2;
     }
 }

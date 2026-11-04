@@ -1,83 +1,88 @@
 .class public final Ll/ۧۚ;
-.super Ljava/lang/Object;
-.source "422Y"
-
-# interfaces
-.implements Ll/ۨܳ;
+.super Ll/ۙܽ;
+.source "U50M"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۡ᩹;
+.field public final synthetic ۖ:Ll/ܺۚ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۡ᩹;)V
+.method public constructor <init>(Ll/ܺۚ;)V
     .locals 0
 
-    .line 997
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 303
+    iput-object p1, p0, Ll/ۧۚ;->ۖ:Ll/ܺۚ;
 
-    iput-object p1, p0, Ll/ۧۚ;->ܺ:Ll/ۡ᩹;
+    .line 304
+    invoke-direct {p0, p1}, Ll/ۙܽ;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
-    .locals 5
+.method public final ۙ()Ll/ܺ֫;
+    .locals 1
 
-    .line 1001
-    invoke-virtual {p2}, Ll/ܺۢ;->ۜ()I
+    .line 309
+    iget-object v0, p0, Ll/ۧۚ;->ۖ:Ll/ܺۚ;
 
-    move-result v0
+    iget-object v0, v0, Ll/ܺۚ;->֨:Ll/᩻ۚ;
 
-    .line 1002
-    iget-object v1, p0, Ll/ۧۚ;->ܺ:Ll/ۡ᩹;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, p2}, Ll/ۡ᩹;->ۙ(Ll/ܺۢ;)I
+    .line 310
+    invoke-virtual {v0}, Ll/᩻ۚ;->ۙ()Ll/ܺ֫;
 
-    move-result v1
+    move-result-object v0
 
-    if-eq v0, v1, :cond_0
+    return-object v0
 
-    .line 1006
-    invoke-virtual {p2}, Ll/ܺۢ;->۬()I
-
-    move-result v0
-
-    .line 1008
-    invoke-virtual {p2}, Ll/ܺۢ;->ۘ()I
-
-    move-result v2
-
-    .line 1009
-    invoke-virtual {p2}, Ll/ܺۢ;->֨()I
-
-    move-result v3
-
-    .line 339
-    new-instance v4, Ll/֨ۢ;
-
-    invoke-direct {v4, p2}, Ll/֨ۢ;-><init>(Ll/ܺۢ;)V
-
-    .line 340
-    invoke-static {v0, v1, v2, v3}, Ll/ܰܿ;->ۙ(IIII)Ll/ܰܿ;
-
-    move-result-object p2
-
-    invoke-virtual {v4, p2}, Ll/֨ۢ;->ܰ(Ll/ܰܿ;)V
-
-    .line 341
-    invoke-virtual {v4}, Ll/֨ۢ;->ۙ()Ll/ܺۢ;
-
-    move-result-object p2
-
-    .line 1013
     :cond_0
-    invoke-static {p1, p2}, Ll/ۚ֫;->ܰ(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    return-object p1
+.method public final ᩷()Z
+    .locals 2
+
+    .line 318
+    iget-object v0, p0, Ll/ۧۚ;->ۖ:Ll/ܺۚ;
+
+    iget-object v1, v0, Ll/ܺۚ;->۟:Ll/ᩳۚ;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Ll/ܺۚ;->֡:Ll/۠ۚ;
+
+    invoke-interface {v1, v0}, Ll/ᩳۚ;->ۙ(Ll/۠ۚ;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 319
+    invoke-virtual {p0}, Ll/ۧۚ;->ۙ()Ll/ܺ֫;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 320
+    invoke-interface {v0}, Ll/ܺ֫;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,53 +1,48 @@
 package l;
 
-import android.content.Context;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import java.lang.reflect.Method;
+import java.util.EnumSet;
 
-/* JADX INFO: renamed from: l.۬ܺᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
-/* JADX INFO: loaded from: classes3.dex */
-public class C13221 extends WebView {
-    public C13221(Context context) {
-        super(context);
-        removeJavascriptInterface("searchBoxJavaBridge_");
-        removeJavascriptInterface("accessibility");
-        removeJavascriptInterface("accessibilityTraversal");
-        C23099.m51113("openSDK_LOG.OpenWebView", "removeJSInterface");
+/* JADX INFO: renamed from: l.۫ܺܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F9GX */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13221 extends C24652 {
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C25398 f42205;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public EnumSet f42206;
+
+    @Override // l.C24652
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo4684(C7453 c7453) throws C2013 {
+        c7453.m56017();
+        c7453.m56020();
+        c7453.m56020();
+        C3089.m10063(c7453);
+        C3089.m10063(c7453);
+        C3089.m10063(c7453);
+        C3089.m10063(c7453);
+        c7453.m56015(8);
+        c7453.m56015(8);
+        this.f42206 = C10961.m27792(c7453.m56012(), EnumC12038.class);
+        c7453.m56021(4);
+        byte[] bArr = new byte[8];
+        c7453.m56024(8, bArr);
+        byte[] bArr2 = new byte[8];
+        c7453.m56024(8, bArr2);
+        this.f42205 = new C25398(bArr, bArr2);
+        c7453.m56012();
+        c7453.m56012();
     }
 
-    @Override // android.webkit.WebView, android.view.ViewGroup, android.view.View
-    public final void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        WebSettings settings = getSettings();
-        if (settings == null) {
-            return;
-        }
-        settings.setSavePassword(false);
-        try {
-            Method method = settings.getClass().getMethod("removeJavascriptInterface", String.class);
-            if (method != null) {
-                method.invoke(this, "searchBoxJavaBridge_");
-                method.invoke(this, "accessibility");
-                method.invoke(this, "accessibilityTraversal");
-                C23099.m51113("openSDK_LOG.OpenWebView", "remove js interface");
-            }
-        } catch (Exception e) {
-            C23099.m51115("openSDK_LOG.OpenWebView", "remove js interface.e:" + e.toString());
-        }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final EnumSet m32767() {
+        return this.f42206;
     }
 
-    @Override // android.webkit.WebView
-    public final void destroy() {
-        try {
-            getSettings().setBuiltInZoomControls(true);
-            getSettings().setDisplayZoomControls(false);
-            setVisibility(8);
-            C23099.m51113("openSDK_LOG.OpenWebView", "-->OpenWebView.destroy setBuiltInZoomControls");
-        } catch (Exception e) {
-            C23099.m51111("openSDK_LOG.OpenWebView", "-->OpenWebView.destroy setBuiltInZoomControls", e);
-        }
-        super.destroy();
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final C25398 m32766() {
+        return this.f42205;
     }
 }

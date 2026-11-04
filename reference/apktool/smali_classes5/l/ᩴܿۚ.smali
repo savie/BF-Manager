@@ -1,82 +1,104 @@
 .class public final synthetic Ll/ᩴܿۚ;
 .super Ljava/lang/Object;
-.source "6AK0"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "D6X3"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ۤܿۚ;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۤܿۚ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 834
+    invoke-static {}, Ll/۫ۨᩴ;->values()[Ll/۫ۨᩴ;
 
-    iput-object p1, p0, Ll/ᩴܿۚ;->ܺ:Ll/ۤܿۚ;
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll/ᩴܿۚ;->ۙ:[I
+
+    :try_start_0
+    sget-object v1, Ll/۫ۨᩴ;->֡:Ll/۫ۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ᩴܿۚ;->ۙ:[I
+
+    sget-object v1, Ll/۫ۨᩴ;->ᩳ:Ll/۫ۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ᩴܿۚ;->ۙ:[I
+
+    sget-object v1, Ll/۫ۨᩴ;->᩶:Ll/۫ۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ᩴܿۚ;->ۙ:[I
+
+    sget-object v1, Ll/۫ۨᩴ;->ܿ:Ll/۫ۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll/ᩴܿۚ;->ۙ:[I
+
+    sget-object v1, Ll/۫ۨᩴ;->۟:Ll/۫ۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
     return-void
-.end method
-
-
-# virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
-    .locals 2
-
-    .line 2
-    check-cast p1, Ljava/util/Map$Entry;
-
-    .line 306
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v1, p0, Ll/ᩴܿۚ;->ܺ:Ll/ۤܿۚ;
-
-    invoke-interface {v1, v0, p1}, Ll/ۤܿۚ;->test(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
 .end method

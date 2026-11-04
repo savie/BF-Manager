@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.constraints;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DefaultServiceProperties implements CryptoServiceProperties {
     public final String algorithm;
     public final int bitsOfSecurity;

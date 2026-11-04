@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.prng;
 
 import java.security.SecureRandom;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X931SecureRandom extends SecureRandom {
     public final X931RNG drbg;
     public final boolean predictionResistant;

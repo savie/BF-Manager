@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.internal.asn1.edec.EdECObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class XDHParameterSpec implements AlgorithmParameterSpec {
     public static final String X25519 = "X25519";
     public static final String X448 = "X448";

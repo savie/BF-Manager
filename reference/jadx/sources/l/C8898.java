@@ -1,163 +1,110 @@
 package l;
 
-import java.security.AccessControlContext;
-import java.security.AccessController;
-import java.security.SecureRandom;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
-import sun.misc.Unsafe;
+import java.util.Comparator;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ۡ۬۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: G6PO */
+/* JADX INFO: renamed from: l.۠᩷۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: M2AR */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8898 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final ThreadLocal f30528;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final boolean f30529;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final AtomicLong f30530;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final long f30531;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final long f30532;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final long f30533;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final AtomicInteger f30534;
+public final class C8898 implements Comparator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final long f30535;
+    public final HashMap f29077;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final Unsafe f30536;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final boolean f29078;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final void m23155() {
-        int iAddAndGet = f30534.addAndGet(-1640531527);
-        if (iAddAndGet == 0) {
-            iAddAndGet = 1;
-        }
-        ((C19481) f30528.get()).f62701 = iAddAndGet;
+    /* JADX WARN: Code restructure failed: missing block: B:21:0x0034, code lost:
+    
+        if (r8.isDirectory() == false) goto L22;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:24:0x003b, code lost:
+    
+        if (r8.isDirectory() != false) goto L25;
+     */
+    @Override // java.util.Comparator
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final int compare(java.lang.Object r7, java.lang.Object r8) {
+        /*
+            r6 = this;
+            l.ۖۗܳ r7 = (l.InterfaceC2386) r7
+            l.ۖۗܳ r8 = (l.InterfaceC2386) r8
+            if (r7 != r8) goto L8
+            r7 = 0
+            return r7
+        L8:
+            boolean r0 = r7.mo8092()
+            r1 = -1000000000(0xffffffffc4653600, float:-916.84375)
+            if (r0 == 0) goto L12
+            goto L36
+        L12:
+            boolean r0 = r8.mo8092()
+            r2 = 1000000000(0x3b9aca00, float:0.0047237873)
+            if (r0 == 0) goto L1c
+            goto L3d
+        L1c:
+            boolean r0 = r7.mo8116()
+            if (r0 == 0) goto L23
+            goto L3d
+        L23:
+            boolean r0 = r8.mo8116()
+            if (r0 == 0) goto L2a
+            goto L36
+        L2a:
+            boolean r0 = r7.isDirectory()
+            if (r0 == 0) goto L37
+            boolean r0 = r8.isDirectory()
+            if (r0 != 0) goto L3e
+        L36:
+            return r1
+        L37:
+            boolean r0 = r8.isDirectory()
+            if (r0 == 0) goto L3e
+        L3d:
+            return r2
+        L3e:
+            long r2 = r7.getSize()
+            long r4 = r8.getSize()
+            long r2 = r2 - r4
+            int r0 = l.C14118.f44640
+            r4 = 1000000000(0x3b9aca00, double:4.94065646E-315)
+            int r0 = (r2 > r4 ? 1 : (r2 == r4 ? 0 : -1))
+            if (r0 <= 0) goto L54
+            r1 = 1000000000(0x3b9aca00, float:0.0047237873)
+            goto L5d
+        L54:
+            r4 = -1000000000(0xffffffffc4653600, double:NaN)
+            int r0 = (r2 > r4 ? 1 : (r2 == r4 ? 0 : -1))
+            if (r0 >= 0) goto L5c
+            goto L5d
+        L5c:
+            int r1 = (int) r2
+        L5d:
+            if (r1 != 0) goto L79
+            java.lang.String r7 = r7.getName()
+            java.util.HashMap r0 = r6.f29077
+            java.lang.Object r7 = r0.get(r7)
+            l.֨᩷۫ r7 = (l.C1441) r7
+            java.lang.String r8 = r8.getName()
+            java.lang.Object r8 = r0.get(r8)
+            l.֨᩷۫ r8 = (l.C1441) r8
+            int r1 = r7.compareTo(r8)
+        L79:
+            boolean r7 = r6.f29078
+            if (r7 == 0) goto L7f
+            int r7 = -r1
+            return r7
+        L7f:
+            return r1
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C8898.compare(java.lang.Object, java.lang.Object):int");
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int m23148() {
-        return ((C19481) f30528.get()).f62701;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int m23149(int i) {
-        int i2 = i ^ (i << 13);
-        int i3 = i2 ^ (i2 >>> 17);
-        int i4 = i3 ^ (i3 << 5);
-        ((C19481) f30528.get()).f62701 = i4;
-        return i4;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final int m23154() {
-        int i;
-        ThreadLocal threadLocal = f30528;
-        int i2 = ((C19481) threadLocal.get()).f62702;
-        if (i2 != 0) {
-            int i3 = i2 ^ (i2 << 13);
-            int i4 = i3 ^ (i3 >>> 17);
-            i = i4 ^ (i4 << 5);
-        } else {
-            long andAdd = f30530.getAndAdd(-4942790177534073029L);
-            long j = (andAdd ^ (andAdd >>> 33)) * (-49064778989728563L);
-            i = (int) (((j ^ (j >>> 33)) * (-4265267296055464877L)) >>> 32);
-            if (i == 0) {
-                i = 1;
-            }
-        }
-        ((C19481) threadLocal.get()).f62702 = i;
-        return i;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final void m23150(Thread thread) {
-        if (f30529) {
-            return;
-        }
-        Unsafe unsafe = f30536;
-        unsafe.putObject(thread, f30532, (Object) null);
-        unsafe.putObject(thread, f30535, (Object) null);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final void m23152(Thread thread, AccessControlContext accessControlContext) {
-        if (f30529) {
-            return;
-        }
-        f30536.putOrderedObject(thread, f30533, accessControlContext);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final void m23151(Thread thread, ClassLoader classLoader) {
-        if (f30529) {
-            return;
-        }
-        f30536.putObject(thread, f30531, classLoader);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m23153(String str) {
-        Class<?> cls;
-        try {
-            cls = Class.forName(str, false, C8898.class.getClassLoader());
-        } catch (Throwable unused) {
-            cls = null;
-        }
-        return cls != null;
-    }
-
-    static {
-        String property;
-        Unsafe unsafe = C10309.f35350;
-        f30536 = unsafe;
-        try {
-            boolean z = m23153("com.ibm.misc.JarVersion") && (property = System.getProperty("java.class.version", "45")) != null && property.length() >= 2 && "52".compareTo(property.substring(0, 2)) > 0;
-            boolean zM23153 = m23153("android.util.DisplayMetrics") ? true : m23153("org.robovm.rt.bro.Bro");
-            f30529 = zM23153;
-            if (!zM23153) {
-                f30532 = unsafe.objectFieldOffset(Thread.class.getDeclaredField("threadLocals"));
-                f30535 = unsafe.objectFieldOffset(Thread.class.getDeclaredField("inheritableThreadLocals"));
-                f30533 = unsafe.objectFieldOffset(Thread.class.getDeclaredField(z ? "accessControlContext" : "inheritedAccessControlContext"));
-                f30531 = unsafe.objectFieldOffset(Thread.class.getDeclaredField("contextClassLoader"));
-            } else {
-                f30532 = 0L;
-                f30535 = 0L;
-                f30533 = 0L;
-                f30531 = 0L;
-            }
-            f30528 = new C18775();
-            f30534 = new AtomicInteger();
-            long jCurrentTimeMillis = System.currentTimeMillis();
-            long j = (jCurrentTimeMillis ^ (jCurrentTimeMillis >>> 33)) * (-49064778989728563L);
-            long j2 = (j ^ (j >>> 33)) * (-4265267296055464877L);
-            long jNanoTime = System.nanoTime();
-            long j3 = (jNanoTime ^ (jNanoTime >>> 33)) * (-49064778989728563L);
-            long j4 = ((j3 >>> 33) ^ j3) * (-4265267296055464877L);
-            f30530 = new AtomicLong((j2 ^ (j2 >>> 33)) ^ (j4 ^ (j4 >>> 33)));
-            if (((Boolean) AccessController.doPrivileged(new C8192())).booleanValue()) {
-                byte[] seed = SecureRandom.getSeed(8);
-                long j5 = ((long) seed[0]) & 255;
-                for (int i = 1; i < 8; i++) {
-                    j5 = (j5 << 8) | (((long) seed[i]) & 255);
-                }
-                f30530.set(j5);
-            }
-        } catch (Exception e) {
-            throw new ExceptionInInitializerError(e);
-        }
+    public C8898(HashMap map, boolean z) {
+        this.f29077 = map;
+        this.f29078 = z;
     }
 }

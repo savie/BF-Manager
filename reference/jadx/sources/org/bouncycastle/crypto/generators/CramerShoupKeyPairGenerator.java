@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.params.CramerShoupPrivateKeyParameters;
 import org.bouncycastle.crypto.params.CramerShoupPublicKeyParameters;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CramerShoupKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public CramerShoupKeyGenerationParameters param;

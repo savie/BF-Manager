@@ -1,7 +1,7 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ܳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C7N9 */
-/* JADX INFO: loaded from: classes4.dex */
-public interface InterfaceC20225 {
+/* JADX INFO: renamed from: l.᩵֨᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z531 */
+/* JADX INFO: loaded from: classes5.dex */
+public interface InterfaceC20225 extends InterfaceC18711 {
 }

@@ -1,38 +1,55 @@
 package l;
 
-import android.view.KeyEvent;
-import android.view.inputmethod.InputConnection;
-import android.view.inputmethod.InputConnectionWrapper;
+import java.util.BitSet;
 
-/* JADX INFO: renamed from: l.ۤ᩺᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: E7F1 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10613 extends InputConnectionWrapper {
+/* JADX INFO: renamed from: l.ۤۘܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: YB9D */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10613 extends AbstractC6951 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21195 f36275;
+    public static final C10613 f33698 = new C10613();
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C10613(C21195 c21195, InputConnection inputConnection) {
-        super(inputConnection, false);
-        this.f36275 = c21195;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3133() {
+        return 2;
     }
 
-    @Override // android.view.inputmethod.InputConnectionWrapper, android.view.inputmethod.InputConnection
-    public final boolean performEditorAction(int i) {
-        InterfaceC7790 interfaceC7790 = this.f36275.f68990;
-        if (interfaceC7790 == null || !C1439.m5018((C1439) ((C3078) interfaceC7790).f11653, i)) {
-            return super.performEditorAction(i);
-        }
-        return true;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo3137(AbstractC2476 abstractC2476) {
+        return "";
     }
 
-    @Override // android.view.inputmethod.InputConnectionWrapper, android.view.inputmethod.InputConnection
-    public final boolean sendKeyEvent(KeyEvent keyEvent) {
-        InterfaceC7790 interfaceC7790 = this.f36275.f68990;
-        if (interfaceC7790 != null && keyEvent.getAction() == 0 && keyEvent.getKeyCode() == 66 && C1439.m5018((C1439) ((C3078) interfaceC7790).f11653, 0)) {
-            return true;
-        }
-        return super.sendKeyEvent(keyEvent);
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo3134(AbstractC2476 abstractC2476) {
+        C0063 c0063M43795 = abstractC2476.m43795();
+        return c0063M43795.m31619get(0).m47904() + ", " + c0063M43795.m31619get(1).m47904();
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo3138(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        return (abstractC18884 instanceof C20901) && c0063M43795.size() == 2 && AbstractC6951.m19242(c0063M43795.m31619get(0).m47903()) && AbstractC6951.m19246(c0063M43795.m31619get(1).m47903());
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final BitSet mo3135(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        BitSet bitSet = new BitSet(2);
+        bitSet.set(0, AbstractC6951.m19242(c0063M43795.m31619get(0).m47903()));
+        bitSet.set(1, AbstractC6951.m19246(c0063M43795.m31619get(1).m47903()));
+        return bitSet;
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3136(C15000 c15000, AbstractC2476 abstractC2476) {
+        C0063 c0063M43795 = abstractC2476.m43795();
+        AbstractC6951.m19240((InterfaceC8550) c15000, AbstractC6951.m19239(abstractC2476, c0063M43795.m31619get(0).m47903()), (short) c0063M43795.m31619get(1).m47903());
     }
 }

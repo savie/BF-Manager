@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.params;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECDHUPrivateParameters implements CipherParameters {
     public ECPrivateKeyParameters ephemeralPrivateKey;
     public ECPublicKeyParameters ephemeralPublicKey;

@@ -33,7 +33,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.jce.exception.ExtCertPathValidatorException;
 import org.bouncycastle.x509.ExtendedPKIXParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCertPathValidatorSpi_8 extends CertPathValidatorSpi {
     public final JcaJceHelper helper;
     public final boolean isForCRLCheck;

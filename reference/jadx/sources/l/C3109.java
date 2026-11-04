@@ -1,305 +1,236 @@
 package l;
 
-import com.umeng.analytics.pro.bo;
+import android.view.View;
+import bin.mt.plus.R;
 import java.io.IOException;
-import java.io.Writer;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۗ۠ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D52R */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3109 {
+/* JADX INFO: renamed from: l.ۗۖ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: X8F2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3109 extends AbstractC7364 implements InterfaceC0454 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final AtomicReference f11717 = new AtomicReference();
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public static final HashMap f10069 = new HashMap();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m9324(AbstractC18119 abstractC18119, int i, int i2, int[] iArr) {
-        char c;
-        int i3 = i2;
-        AtomicReference atomicReference = f11717;
-        char[] cArr = (char[]) atomicReference.getAndSet(null);
-        if (cArr == null || cArr.length < i3) {
-            cArr = new char[i3];
-        }
-        int i4 = 0;
-        int i5 = i;
-        while (i3 > 0) {
-            byte bMo5855 = abstractC18119.mo5855(i5);
-            int i6 = bMo5855 & 255;
-            switch (i6 >> 4) {
-                case 0:
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    if (i6 == 0) {
-                        m9325(i6, i5);
-                        throw null;
-                    }
-                    c = (char) i6;
-                    i5++;
-                    break;
-                    break;
-                case 8:
-                case 9:
-                case 10:
-                case 11:
-                default:
-                    m9325(i6, i5);
-                    throw null;
-                case 12:
-                case 13:
-                    int i7 = i5 + 1;
-                    byte bMo5856 = abstractC18119.mo5855(i7);
-                    int i8 = bMo5856 & 255;
-                    if ((bMo5856 & 192) != 128) {
-                        m9325(i8, i7);
-                        throw null;
-                    }
-                    int i9 = ((bMo5855 & bo.j) << 6) | (bMo5856 & 63);
-                    if (i9 != 0 && i9 < 128) {
-                        m9325(i8, i7);
-                        throw null;
-                    }
-                    c = (char) i9;
-                    i5 += 2;
-                    break;
-                    break;
-                case 14:
-                    int i10 = i5 + 1;
-                    byte bMo5857 = abstractC18119.mo5855(i10);
-                    int i11 = bMo5857 & 255;
-                    if ((bMo5857 & 192) != 128) {
-                        m9325(i11, i10);
-                        throw null;
-                    }
-                    int i12 = i5 + 2;
-                    byte bMo5858 = abstractC18119.mo5855(i12);
-                    int i13 = bMo5858 & 255;
-                    if ((bMo5858 & 192) != 128) {
-                        m9325(i13, i12);
-                        throw null;
-                    }
-                    int i14 = ((bMo5855 & 15) << 12) | ((bMo5857 & 63) << 6) | (bMo5858 & 63);
-                    if (i14 < 2048) {
-                        m9325(i13, i12);
-                        throw null;
-                    }
-                    c = (char) i14;
-                    i5 += 3;
-                    break;
-                    break;
-            }
-            cArr[i4] = c;
-            i4++;
-            i3--;
-        }
-        if (iArr.length > 0) {
-            iArr[0] = i5 - i;
-        }
-        String str = new String(cArr, 0, i4);
-        if (cArr.length <= 4096) {
-            while (!atomicReference.compareAndSet(null, cArr)) {
-                if (atomicReference.get() != null) {
-                    char[] cArr2 = (char[]) atomicReference.get();
-                    if (cArr2 == null || cArr2.length < cArr.length) {
-                        atomicReference.set(cArr);
-                    }
-                }
-            }
-        }
-        return str;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f10070 = 0;
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final String f10071;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C22829 f10072;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AbstractC18551 f10073;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C17411 f10074;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final C11312 f10075;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C16665 f10076;
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final String mo10164() {
+        return "tar";
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m9326(AbstractC18119 abstractC18119, int i, int i2, String str, int i3, int i4) {
-        char c;
-        if (i3 >= 0 && i4 >= 0 && i3 + i4 <= str.length() && i2 == i4) {
-            int i5 = 0;
-            while (i2 > 0) {
-                byte bMo5855 = abstractC18119.mo5855(i);
-                int i6 = bMo5855 & 255;
-                switch (i6 >> 4) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                    case 7:
-                        if (i6 == 0) {
-                            m9325(i6, i);
-                            throw null;
-                        }
-                        c = (char) i6;
-                        i++;
-                        break;
-                        break;
-                    case 8:
-                    case 9:
-                    case 10:
-                    case 11:
-                    default:
-                        m9325(i6, i);
-                        throw null;
-                    case 12:
-                    case 13:
-                        int i7 = i + 1;
-                        byte bMo5856 = abstractC18119.mo5855(i7);
-                        int i8 = bMo5856 & 255;
-                        if ((bMo5856 & 192) != 128) {
-                            m9325(i8, i7);
-                            throw null;
-                        }
-                        int i9 = ((bMo5855 & bo.j) << 6) | (bMo5856 & 63);
-                        if (i9 != 0 && i9 < 128) {
-                            m9325(i8, i7);
-                            throw null;
-                        }
-                        c = (char) i9;
-                        i += 2;
-                        break;
-                        break;
-                    case 14:
-                        int i10 = i + 1;
-                        byte bMo5857 = abstractC18119.mo5855(i10);
-                        int i11 = bMo5857 & 255;
-                        if ((bMo5857 & 192) != 128) {
-                            m9325(i11, i10);
-                            throw null;
-                        }
-                        int i12 = i + 2;
-                        byte bMo5858 = abstractC18119.mo5855(i12);
-                        int i13 = bMo5858 & 255;
-                        if ((bMo5858 & 192) != 128) {
-                            m9325(i13, i12);
-                            throw null;
-                        }
-                        int i14 = ((bMo5855 & 15) << 12) | ((bMo5857 & 63) << 6) | (bMo5858 & 63);
-                        if (i14 < 2048) {
-                            m9325(i13, i12);
-                            throw null;
-                        }
-                        c = (char) i14;
-                        i += 3;
-                        break;
-                        break;
-                }
-                if (c == str.charAt(i3 + i5)) {
-                    i2--;
-                    i5++;
-                }
-            }
-            return true;
-        }
-        return false;
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo10178() {
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m9323(Writer writer, AbstractC18119 abstractC18119, int i, int i2, boolean z) throws IOException {
-        char c;
-        int i3 = i;
-        while (i2 > 0) {
-            byte bMo5855 = abstractC18119.mo5855(i3);
-            int i4 = bMo5855 & 255;
-            switch (i4 >> 4) {
-                case 0:
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    if (i4 == 0) {
-                        m9325(i4, i3);
-                        throw null;
-                    }
-                    c = (char) i4;
-                    i3++;
-                    break;
-                    break;
-                case 8:
-                case 9:
-                case 10:
-                case 11:
-                default:
-                    m9325(i4, i3);
-                    throw null;
-                case 12:
-                case 13:
-                    int i5 = i3 + 1;
-                    byte bMo5856 = abstractC18119.mo5855(i5);
-                    int i6 = bMo5856 & 255;
-                    if ((bMo5856 & 192) != 128) {
-                        m9325(i6, i5);
-                        throw null;
-                    }
-                    int i7 = ((bMo5855 & bo.j) << 6) | (bMo5856 & 63);
-                    if (i7 != 0 && i7 < 128) {
-                        m9325(i6, i5);
-                        throw null;
-                    }
-                    c = (char) i7;
-                    i3 += 2;
-                    break;
-                    break;
-                case 14:
-                    int i8 = i3 + 1;
-                    byte bMo5857 = abstractC18119.mo5855(i8);
-                    int i9 = bMo5857 & 255;
-                    if ((bMo5857 & 192) != 128) {
-                        m9325(i9, i8);
-                        throw null;
-                    }
-                    int i10 = i3 + 2;
-                    byte bMo5858 = abstractC18119.mo5855(i10);
-                    int i11 = bMo5858 & 255;
-                    if ((bMo5858 & 192) != 128) {
-                        m9325(i11, i10);
-                        throw null;
-                    }
-                    int i12 = ((bMo5855 & 15) << 12) | ((bMo5857 & 63) << 6) | (bMo5858 & 63);
-                    if (i12 < 2048) {
-                        m9325(i11, i10);
-                        throw null;
-                    }
-                    c = (char) i12;
-                    i3 += 3;
-                    break;
-                    break;
-            }
-            if (z) {
-                C9461.m24218(writer, c);
-            } else {
-                writer.write(c);
-            }
-            i2--;
-        }
-        return i3 - i;
+    static {
+        C1398.m5108("tar");
+        C19540.m45072("tar", "local", new C24739());
     }
 
+    public C3109(int i, String str, String str2) throws C3090 {
+        super(i, "/");
+        this.f10072 = new C22829("tar", null);
+        this.f10076 = new C16665(this);
+        this.f10074 = new C17411(this);
+        this.f10073 = new C23247(this);
+        C11312 c11312 = new C11312(str, str2);
+        this.f10075 = c11312;
+        String str3 = (String) f10069.get(str);
+        if (str3 != null && !str3.isEmpty()) {
+            c11312.m28597(str3);
+        }
+        this.f10071 = c11312.m28593().getName();
+        m20217(str2);
+        try {
+            mo20214(false);
+        } catch (IOException e) {
+            C3090 c3090 = new C3090(C21576.m49088(R.string.MT_Protector));
+            c3090.initCause((Throwable) e);
+            throw c3090;
+        }
+    }
+
+    public C3109(C20348 c20348) {
+        super(c20348);
+        this.f10072 = new C22829("tar", null);
+        this.f10076 = new C16665(this);
+        this.f10074 = new C17411(this);
+        this.f10073 = new C23247(this);
+        C11312 c11312M28585 = C11312.m28585(c20348);
+        this.f10075 = c11312M28585;
+        this.f10071 = c11312M28585.m28593().getName();
+    }
+
+    @Override // l.AbstractC7364
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m9325(int i, int i2) {
-        StringBuilder sb = new StringBuilder("bad utf-8 byte ");
-        char[] cArr = new char[2];
-        for (int i3 = 0; i3 < 2; i3++) {
-            cArr[1 - i3] = Character.forDigit(i & 15, 16);
-            i >>= 4;
+    public final void mo10161(C6178 c6178) {
+        super.mo10161(c6178);
+        this.f10075.mo20835(c6178);
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final String mo10159() {
+        return this.f10071 + super.mo10159();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final AbstractC7629 mo10174() {
+        return this.f10075;
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ܿ */
+    public final C11312 mo10174() {
+        return this.f10075;
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final List mo10160() {
+        C11312 c11312 = this.f10075;
+        if (c11312.m28594() == null) {
+            mo20214(false);
         }
-        sb.append(new String(cArr));
-        sb.append(" at offset ");
-        char[] cArr2 = new char[8];
-        for (int i4 = 0; i4 < 8; i4++) {
-            cArr2[7 - i4] = Character.forDigit(i2 & 15, 16);
-            i2 >>= 4;
+        ArrayList arrayListMo20830 = c11312.mo20830(m20218(), true);
+        arrayListMo20830.add(0, C13352.f42573);
+        return arrayListMo20830;
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final AbstractC9843 mo10173() {
+        return new C0322(R.string.MT_Protector, R.drawable.MT_Protector);
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final InterfaceC0895 mo10169() {
+        return C9270.m24461();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C21535 mo10171() {
+        return new C21535(this.f10071, this.f10075.m28592(), C20613.f66099);
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final boolean mo10170() {
+        return this.f10075.m28591();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final boolean mo10167() {
+        return this.f10075.m28589();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo10163(C8614 c8614, C8614 c8615) {
+        c8615.m23230(this.f10071);
+        c8615.m23226(this.f10075.m28593().m49881(), true);
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean mo10177(String str) {
+        C7450 entry = this.f10075.getEntry(str.substring(1));
+        return (entry == null || entry.m20450()) ? false : true;
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo10168(C8614 c8614) {
+        m20199(c8614);
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 mo10176(InterfaceC2386 interfaceC2386) {
+        AbstractC22044 abstractC22044M49876 = C14584.m35193(this.f24222.mo4294(), C1112.m4125(m20218())).m49876(interfaceC2386.getName());
+        abstractC22044M49876.mo4283();
+        return abstractC22044M49876;
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo10162(C8614 c8614, List list, Runnable runnable) {
+        new C17279(this, c8614, list, runnable).m8197();
+    }
+
+    /* JADX INFO: renamed from: ܳۙ, reason: not valid java name and contains not printable characters */
+    public final String m10172() {
+        return this.f10075.m28588();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final void mo10165() {
+        C11312 c11312 = this.f10075;
+        if (c11312.m28592().equals(c11312.m28588()) || !c11312.m28588().endsWith("._tar")) {
+            return;
         }
-        sb.append(new String(cArr2));
-        throw new IllegalArgumentException(sb.toString());
+        c11312.m28595().mo4296();
+        C6331.m18055();
+    }
+
+    /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
+    public final String m10175() {
+        return this.f10075.m28592();
+    }
+
+    @Override // l.AbstractC7364
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final List mo10166() {
+        return Arrays.asList(AbstractC7364.f24216, this.f10076, this.f10074, AbstractC7364.f24209, AbstractC7364.f24214, new C23729(), AbstractC7364.f24215, this.f10073, m20205(), AbstractC7364.m20186(), AbstractC7364.m20183(R.string.MT_Protector, true));
+    }
+
+    @Override // l.InterfaceC0454
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2272(C22829 c22829) {
+        this.f10072 = c22829;
+    }
+
+    @Override // l.InterfaceC0454
+    /* JADX INFO: renamed from: ۙ */
+    public final C22829 mo2270() {
+        return this.f10072;
+    }
+
+    @Override // l.InterfaceC0454
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2271(C8614 c8614, View view, C22829 c22829, InterfaceC19845 interfaceC19845) {
+        new C13132(c8614, this).m32647(c22829.f73990, new RunnableC9263(2, interfaceC19845));
     }
 }

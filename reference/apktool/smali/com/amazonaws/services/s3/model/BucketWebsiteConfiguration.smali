@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/LinkedList;
+.field public ܰ:Ljava/util/LinkedList;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketWebsiteConfiguration;->ܺ:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketWebsiteConfiguration;->ܰ:Ljava/util/LinkedList;
 
     return-void
 .end method
@@ -33,7 +33,7 @@
     .locals 1
 
     .line 217
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketWebsiteConfiguration;->ܺ:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketWebsiteConfiguration;->ܰ:Ljava/util/LinkedList;
 
     return-object v0
 .end method

@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.KeyStore;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCLoadStoreParameter implements KeyStore.LoadStoreParameter {
     public final InputStream in;
     public final OutputStream out;

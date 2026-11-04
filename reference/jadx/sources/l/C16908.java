@@ -1,54 +1,55 @@
 package l;
 
-import java.nio.charset.StandardCharsets;
+import com.google.android.material.motion.MotionUtils;
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.ܽ᩸۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: FA1X */
+/* JADX INFO: renamed from: l.ܺܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 13LV */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16908 implements InterfaceC20436 {
+public final class C16908 extends AbstractC18753 implements Serializable {
+    public static final long serialVersionUID = 0;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f54076;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Comparator[] f55292;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f54077 = false;
-
-    @Override // l.InterfaceC20436
-    /* JADX INFO: renamed from: ܰ */
-    public final byte mo3043() {
-        return (byte) 10;
+    public C16908(AbstractC18753 abstractC18753, Comparator comparator) {
+        this.f55292 = new Comparator[]{abstractC18753, comparator};
     }
 
-    public C16908(String str) {
-        this.f54076 = str;
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        int i = 0;
+        while (true) {
+            Comparator[] comparatorArr = this.f55292;
+            if (i >= comparatorArr.length) {
+                return 0;
+            }
+            int iCompare = comparatorArr[i].compare(obj, obj2);
+            if (iCompare != 0) {
+                return iCompare;
+            }
+            i++;
+        }
     }
 
-    @Override // l.InterfaceC7778
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo1805(int i, int i2, byte[] bArr) {
-        this.f54077 = bArr[i] != 0;
-        int iM13549 = C4850.m13549(i + 16, bArr);
-        int i3 = i + 20;
-        byte[] bArr2 = new byte[iM13549];
-        System.arraycopy(bArr, i3, bArr2, 0, iM13549);
-        int i4 = i3 + iM13549;
-        this.f54076 = new String(bArr2, StandardCharsets.UTF_16LE);
-        return i4 - i;
+    @Override // java.util.Comparator
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof C16908) {
+            return Arrays.equals(this.f55292, ((C16908) obj).f55292);
+        }
+        return false;
     }
 
-    @Override // l.InterfaceC20478
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo1806(int i, byte[] bArr) {
-        bArr[i] = this.f54077 ? (byte) 1 : (byte) 0;
-        byte[] bytes = this.f54076.getBytes(StandardCharsets.UTF_16LE);
-        C4850.m13550(bytes.length, i + 16, bArr);
-        int i2 = i + 20;
-        System.arraycopy(bytes, 0, bArr, i2, bytes.length);
-        return (i2 + bytes.length) - i;
+    public final int hashCode() {
+        return Arrays.hashCode(this.f55292);
     }
 
-    @Override // l.InterfaceC20478
-    public final int size() {
-        return (this.f54076.length() * 2) + 20;
+    public final String toString() {
+        return C8947.m23910(new StringBuilder("Ordering.compound("), Arrays.toString(this.f55292), MotionUtils.EASING_TYPE_FORMAT_END);
     }
 }

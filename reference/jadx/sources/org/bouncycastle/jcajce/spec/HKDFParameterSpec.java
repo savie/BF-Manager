@@ -4,7 +4,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.KeySpec;
 import org.bouncycastle.crypto.params.HKDFParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HKDFParameterSpec implements KeySpec, AlgorithmParameterSpec {
     public final HKDFParameters hkdfParameters;
     public final int outputLength;

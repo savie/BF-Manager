@@ -1,41 +1,31 @@
-.class public final synthetic Ll/֫֡ۙ;
+.class public final Ll/֫֡ۙ;
 .super Ljava/lang/Object;
-.source "M8TF"
-
-# interfaces
-.implements Ll/۟ۡۙ;
+.source "V8T2"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܿ۫ۙ;
+.field public final ۙ:Ll/᩻ۗۙ;
+
+.field public final ۤ:J
+
+.field public final ᩷:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܿ۫ۙ;)V
+.method public constructor <init>(Ll/᩻ۗۙ;IJ)V
     .locals 0
 
-    .line 0
+    .line 3907
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֫֡ۙ;->ܺ:Ll/ܿ۫ۙ;
+    .line 3908
+    iput-object p1, p0, Ll/֫֡ۙ;->ۙ:Ll/᩻ۗۙ;
 
-    return-void
-.end method
+    .line 3909
+    iput p2, p0, Ll/֫֡ۙ;->᩷:I
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 1
-
-    .line 2
-    check-cast p1, Ll/᩵۠ۙ;
-
-    .line 2239
-    iget-object v0, p0, Ll/֫֡ۙ;->ܺ:Ll/ܿ۫ۙ;
-
-    iget-object v0, v0, Ll/ܿ۫ۙ;->ۘ:Ll/᩸۠ۙ;
-
-    invoke-interface {p1, v0}, Ll/᩵۠ۙ;->ۙ(Ll/᩸۠ۙ;)V
+    .line 3910
+    iput-wide p3, p0, Ll/֫֡ۙ;->ۤ:J
 
     return-void
 .end method

@@ -4,12 +4,12 @@ import android.graphics.drawable.Drawable;
 import bin.mt.plugin.api.PluginContext;
 import bin.mt.plugin.api.util.ServiceLoader;
 import java.io.InputStream;
-import l.InterfaceC17629;
+import l.InterfaceC23348;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class VectorDrawableLoader {
     public static Drawable fromVectorXml(InputStream inputStream) {
-        return ((InterfaceC17629) ServiceLoader.get(InterfaceC17629.class)).fromVectorXml(inputStream);
+        return ((InterfaceC23348) ServiceLoader.get(InterfaceC23348.class)).fromVectorXml(inputStream);
     }
 
     public static Drawable fromVectorXml(PluginContext pluginContext, String str) {
@@ -39,7 +39,7 @@ public abstract class VectorDrawableLoader {
     }
 
     public static Drawable fromSvg(InputStream inputStream) {
-        return ((InterfaceC17629) ServiceLoader.get(InterfaceC17629.class)).fromSvg(inputStream);
+        return ((InterfaceC23348) ServiceLoader.get(InterfaceC23348.class)).fromSvg(inputStream);
     }
 
     public static Drawable fromSvg(PluginContext pluginContext, String str) {

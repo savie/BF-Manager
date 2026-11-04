@@ -16,10 +16,10 @@ import com.google.android.material.ripple.RippleUtils;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.Shapeable;
-import l.C2387;
-import l.C5031;
-import l.C7603;
-import l.C8033;
+import l.C0597;
+import l.C11642;
+import l.C14625;
+import l.C22666;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialButtonHelper {
@@ -58,31 +58,31 @@ public class MaterialButtonHelper {
     }
 
     public void loadFromAttributes(TypedArray typedArray) {
-        this.insetLeft = typedArray.getDimensionPixelOffset(C8033.f27309, 0);
-        this.insetRight = typedArray.getDimensionPixelOffset(C8033.f26617, 0);
-        this.insetTop = typedArray.getDimensionPixelOffset(C8033.f26831, 0);
-        this.insetBottom = typedArray.getDimensionPixelOffset(C8033.f26404, 0);
-        if (typedArray.hasValue(C8033.f27946)) {
-            int dimensionPixelSize = typedArray.getDimensionPixelSize(C8033.f27946, -1);
+        this.insetLeft = typedArray.getDimensionPixelOffset(C14625.f46451, 0);
+        this.insetRight = typedArray.getDimensionPixelOffset(C14625.f46185, 0);
+        this.insetTop = typedArray.getDimensionPixelOffset(C14625.f46876, 0);
+        this.insetBottom = typedArray.getDimensionPixelOffset(C14625.f46982, 0);
+        if (typedArray.hasValue(C14625.f47301)) {
+            int dimensionPixelSize = typedArray.getDimensionPixelSize(C14625.f47301, -1);
             this.cornerRadius = dimensionPixelSize;
             setShapeAppearanceModel(this.shapeAppearanceModel.withCornerSize(dimensionPixelSize));
             this.cornerRadiusSet = true;
         }
-        this.strokeWidth = typedArray.getDimensionPixelSize(C8033.f27575, 0);
-        this.backgroundTintMode = ViewUtils.parseTintMode(typedArray.getInt(C8033.f27469, -1), PorterDuff.Mode.SRC_IN);
-        this.backgroundTint = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C8033.f28053);
-        this.strokeColor = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C8033.f26351);
-        this.rippleColor = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C8033.f27893);
-        this.checkable = typedArray.getBoolean(C8033.f27999, false);
-        this.elevation = typedArray.getDimensionPixelSize(C8033.f27681, 0);
-        this.toggleCheckedStateOnClick = typedArray.getBoolean(C8033.f27256, true);
+        this.strokeWidth = typedArray.getDimensionPixelSize(C14625.f46079, 0);
+        this.backgroundTintMode = ViewUtils.parseTintMode(typedArray.getInt(C14625.f47248, -1), PorterDuff.Mode.SRC_IN);
+        this.backgroundTint = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C14625.f47834);
+        this.strokeColor = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C14625.f47354);
+        this.rippleColor = MaterialResources.getColorStateList(this.materialButton.getContext(), typedArray, C14625.f46344);
+        this.checkable = typedArray.getBoolean(C14625.f47142, false);
+        this.elevation = typedArray.getDimensionPixelSize(C14625.f47195, 0);
+        this.toggleCheckedStateOnClick = typedArray.getBoolean(C14625.f46610, true);
         MaterialButton materialButton = this.materialButton;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         int paddingStart = materialButton.getPaddingStart();
         int paddingTop = this.materialButton.getPaddingTop();
         int paddingEnd = this.materialButton.getPaddingEnd();
         int paddingBottom = this.materialButton.getPaddingBottom();
-        if (typedArray.hasValue(C8033.f26724)) {
+        if (typedArray.hasValue(C14625.f47461)) {
             setBackgroundOverwritten();
         } else {
             updateBackground();
@@ -117,7 +117,7 @@ public class MaterialButtonHelper {
         if (this.backgroundTint != colorStateList) {
             this.backgroundTint = colorStateList;
             if (getMaterialShapeDrawable() != null) {
-                C7603.m20129(getMaterialShapeDrawable(), this.backgroundTint);
+                C0597.m2690(getMaterialShapeDrawable(), this.backgroundTint);
             }
         }
     }
@@ -132,7 +132,7 @@ public class MaterialButtonHelper {
             if (getMaterialShapeDrawable() == null || this.backgroundTintMode == null) {
                 return;
             }
-            C7603.m20132(getMaterialShapeDrawable(), this.backgroundTintMode);
+            C0597.m2693(getMaterialShapeDrawable(), this.backgroundTintMode);
         }
     }
 
@@ -148,26 +148,26 @@ public class MaterialButtonHelper {
     private Drawable createBackground() {
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(this.shapeAppearanceModel);
         materialShapeDrawable.initializeElevationOverlay(this.materialButton.getContext());
-        C7603.m20129(materialShapeDrawable, this.backgroundTint);
+        C0597.m2690(materialShapeDrawable, this.backgroundTint);
         PorterDuff.Mode mode = this.backgroundTintMode;
         if (mode != null) {
-            C7603.m20132(materialShapeDrawable, mode);
+            C0597.m2693(materialShapeDrawable, mode);
         }
         materialShapeDrawable.setStroke(this.strokeWidth, this.strokeColor);
         MaterialShapeDrawable materialShapeDrawable2 = new MaterialShapeDrawable(this.shapeAppearanceModel);
         materialShapeDrawable2.setTint(0);
-        materialShapeDrawable2.setStroke(this.strokeWidth, this.shouldDrawSurfaceColorStroke ? MaterialColors.getColor(this.materialButton, C2387.f8699) : 0);
+        materialShapeDrawable2.setStroke(this.strokeWidth, this.shouldDrawSurfaceColorStroke ? MaterialColors.getColor(this.materialButton, C11642.f36968) : 0);
         if (IS_MIN_LOLLIPOP) {
             MaterialShapeDrawable materialShapeDrawable3 = new MaterialShapeDrawable(this.shapeAppearanceModel);
             this.maskDrawable = materialShapeDrawable3;
-            C7603.m20138(materialShapeDrawable3, -1);
+            C0597.m2700(materialShapeDrawable3, -1);
             RippleDrawable rippleDrawable = new RippleDrawable(RippleUtils.sanitizeRippleDrawableColor(this.rippleColor), wrapDrawableWithInset(new LayerDrawable(new Drawable[]{materialShapeDrawable2, materialShapeDrawable})), this.maskDrawable);
             this.rippleDrawable = rippleDrawable;
             return rippleDrawable;
         }
         RippleDrawableCompat rippleDrawableCompat = new RippleDrawableCompat(this.shapeAppearanceModel);
         this.maskDrawable = rippleDrawableCompat;
-        C7603.m20129(rippleDrawableCompat, RippleUtils.sanitizeRippleDrawableColor(this.rippleColor));
+        C0597.m2690(rippleDrawableCompat, RippleUtils.sanitizeRippleDrawableColor(this.rippleColor));
         LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{materialShapeDrawable2, materialShapeDrawable, this.maskDrawable});
         this.rippleDrawable = layerDrawable;
         return wrapDrawableWithInset(layerDrawable);
@@ -233,7 +233,7 @@ public class MaterialButtonHelper {
         if (materialShapeDrawable != null) {
             materialShapeDrawable.setStroke(this.strokeWidth, this.strokeColor);
             if (surfaceColorStrokeDrawable != null) {
-                surfaceColorStrokeDrawable.setStroke(this.strokeWidth, this.shouldDrawSurfaceColorStroke ? MaterialColors.getColor(this.materialButton, C2387.f8699) : 0);
+                surfaceColorStrokeDrawable.setStroke(this.strokeWidth, this.shouldDrawSurfaceColorStroke ? MaterialColors.getColor(this.materialButton, C11642.f36968) : 0);
             }
         }
     }
@@ -289,7 +289,7 @@ public class MaterialButtonHelper {
     private void updateButtonShape(ShapeAppearanceModel shapeAppearanceModel) {
         if (IS_LOLLIPOP && !this.backgroundOverwritten) {
             MaterialButton materialButton = this.materialButton;
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             int paddingStart = materialButton.getPaddingStart();
             int paddingTop = this.materialButton.getPaddingTop();
             int paddingEnd = this.materialButton.getPaddingEnd();
@@ -343,7 +343,7 @@ public class MaterialButtonHelper {
 
     private void setVerticalInsets(int i, int i2) {
         MaterialButton materialButton = this.materialButton;
-        int i3 = C5031.f17539;
+        int i3 = C22666.f73603;
         int paddingStart = materialButton.getPaddingStart();
         int paddingTop = this.materialButton.getPaddingTop();
         int paddingEnd = this.materialButton.getPaddingEnd();

@@ -1,83 +1,115 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ۗ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N4U4 */
-/* JADX INFO: loaded from: classes.dex */
-public final class C22728 extends AbstractC14967 {
+import java.util.Comparator;
+import java.util.function.Consumer;
+import java.util.function.LongConsumer;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C18825 f74040;
+/* JADX INFO: renamed from: l.᩸ۢ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7CAF */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C22728 implements InterfaceC9301 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f74041;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f74042 = 0;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19744 f73767;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C17684 f74043;
+    public boolean f73768;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f74044;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f73769;
 
-    public C22728(C17684 c17684, int i) {
-        this.f74041 = -1;
-        this.f74043 = c17684;
-        C18825 c18825M42184 = c17684.m41166().m42184(i);
-        this.f74040 = c18825M42184;
-        int iM43449 = c18825M42184.m43449();
-        this.f74044 = iM43449;
-        if (this.f74042 >= iM43449) {
-            this.f74041 = c18825M42184.m43447();
-            c18825M42184.m43450();
-        }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f73770;
+
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return 16721;
     }
 
-    @Override // l.AbstractC14967
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC10975 mo17703() {
-        int i = this.f74042;
-        int i2 = this.f74044;
-        if (i >= i2) {
+    @Override // l.InterfaceC9900, l.InterfaceC8409
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        C1099.m4100(this, consumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.InterfaceC9900, l.InterfaceC8409, l.InterfaceC7664
+    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
+        return C1099.m4101(this, consumer);
+    }
+
+    @Override // l.InterfaceC8409
+    public final Comparator getComparator() {
+        throw new IllegalStateException();
+    }
+
+    public C22728(C19744 c19744) {
+        this(c19744, 0, c19744.f63567, false);
+    }
+
+    public C22728(C19744 c19744, int i, int i2, boolean z) {
+        this.f73767 = c19744;
+        this.f73769 = i;
+        this.f73770 = i2;
+        this.f73768 = z;
+    }
+
+    @Override // l.InterfaceC8409
+    public final long estimateSize() {
+        return (this.f73768 ? this.f73770 : this.f73767.f63567) - this.f73769;
+    }
+
+    @Override // l.InterfaceC9900, l.InterfaceC9154, l.InterfaceC8409
+    public final InterfaceC9301 trySplit() {
+        boolean z = this.f73768;
+        C19744 c19744 = this.f73767;
+        int i = z ? this.f73770 : c19744.f63567;
+        int i2 = this.f73769;
+        int i3 = (i - i2) >> 1;
+        if (i3 <= 1) {
             return null;
         }
-        this.f74042 = i + 1;
-        C17684 c17684 = this.f74043;
-        C18825 c18825 = this.f74040;
-        InterfaceC10975 interfaceC10975M27239 = AbstractC10872.m27239(c17684, c18825);
-        if (this.f74042 >= i2) {
-            this.f74041 = c18825.m43447();
-            c18825.m43450();
-        }
-        return interfaceC10975M27239;
+        this.f73770 = i;
+        int i4 = i3 + i2;
+        this.f73769 = i4;
+        this.f73768 = true;
+        return new C22728(c19744, i2, i4, true);
     }
 
-    @Override // l.AbstractC14967
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo17700() {
-        int i = this.f74042;
-        int i2 = this.f74044;
-        if (i < i2) {
-            this.f74042 = i + 1;
-            C18825 c18825 = this.f74040;
-            AbstractC10872.m27240(c18825);
-            if (this.f74042 >= i2) {
-                this.f74041 = c18825.m43447();
-                c18825.m43450();
+    @Override // l.InterfaceC9154
+    public final boolean tryAdvance(LongConsumer longConsumer) {
+        int i = this.f73769;
+        boolean z = this.f73768;
+        C19744 c19744 = this.f73767;
+        if (i >= (z ? this.f73770 : c19744.f63567)) {
+            return false;
+        }
+        long[] jArr = c19744.f63566;
+        this.f73769 = i + 1;
+        longConsumer.accept(jArr[i]);
+        return true;
+    }
+
+    @Override // l.InterfaceC9154
+    public final void forEachRemaining(LongConsumer longConsumer) {
+        C19744 c19744 = this.f73767;
+        long[] jArr = c19744.f63566;
+        int i = this.f73768 ? this.f73770 : c19744.f63567;
+        while (true) {
+            int i2 = this.f73769;
+            if (i2 >= i) {
+                return;
             }
+            longConsumer.accept(jArr[i2]);
+            this.f73769++;
         }
-    }
-
-    @Override // l.AbstractC14967
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo17702() {
-        int i = this.f74041;
-        return i == -1 ? this.f74040.m43447() : i;
-    }
-
-    @Override // l.AbstractC14967
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo17701() {
-        return this.f74044;
     }
 }

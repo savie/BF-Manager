@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.asn1.x509.Certificate;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureCheck extends ASN1Object {
     public final ASN1Sequence certificates;
     public final AlgorithmIdentifier signatureAlgorithm;

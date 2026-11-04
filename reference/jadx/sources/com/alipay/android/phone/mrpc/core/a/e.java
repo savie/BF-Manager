@@ -2,7 +2,7 @@ package com.alipay.android.phone.mrpc.core.a;
 
 import com.alipay.android.phone.mrpc.core.RpcException;
 import java.util.ArrayList;
-import l.C13638;
+import l.C17359;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
@@ -31,7 +31,7 @@ public class e extends b {
             }
             arrayList.add(new BasicNameValuePair("operationType", this.a));
             arrayList.add(new BasicNameValuePair("id", this.c + ""));
-            C13638.toString(this.b);
+            C17359.toString(this.b);
             Object obj = this.b;
             arrayList.add(new BasicNameValuePair("requestData", obj == null ? "[]" : com.alipay.sdk.m.f.a.a(obj)));
             return URLEncodedUtils.format(arrayList, "utf-8").getBytes();

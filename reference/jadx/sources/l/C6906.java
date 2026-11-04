@@ -1,55 +1,63 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import java.util.Iterator;
+import java.util.HashSet;
 
-/* JADX INFO: renamed from: l.ۜܿۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 542M */
+/* JADX INFO: renamed from: l.ۜۙܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44YS */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6906 extends AbstractC18154 {
-    @Override // l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ Object mo1767(Object obj, AbstractC16579 abstractC16579) {
-        return Boolean.TRUE;
+public final class C6906 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f22894;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C3177 f22895;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f22896;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public HashSet f22897 = null;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C6906 f22898;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f22899;
+
+    public C6906(String str) {
+        this.f22896 = str;
     }
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1768(C0309 c0309, Object obj) {
-        Void r3 = (Void) obj;
-        if ((c0309 instanceof C7406) || (c0309 instanceof C23594)) {
-            return Boolean.FALSE;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m19159(C6906 c6906) {
+        if (this.f22897 == null) {
+            this.f22897 = new HashSet();
         }
-        Iterator it = c0309.mo1943().iterator();
-        while (it.hasNext()) {
-            if (!((Boolean) ((AbstractC16579) it.next()).mo1928(this, r3)).booleanValue()) {
-                return Boolean.FALSE;
-            }
+        this.f22897.add(c6906);
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        return Boolean.TRUE;
+        if (obj == null || C6906.class != obj.getClass()) {
+            return false;
+        }
+        String str = ((C6906) obj).f22896;
+        String str2 = this.f22896;
+        if (str2 == null) {
+            return str == null;
+        }
+        return str2.equals(str);
     }
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo4811(C0350 c0350, Object obj) {
-        return (Boolean) c0350.f1774.mo1928(this, (Void) obj);
+    public final int hashCode() {
+        String str = this.f22896;
+        return (str == null ? 0 : str.hashCode()) + 31;
     }
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6580(C8777 c8777, Object obj) {
-        return (Boolean) c8777.f30194.mo1928(this, (Void) obj);
-    }
-
-    @Override // l.AbstractC18154, l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ Object mo11014(C20771 c20771, Object obj) {
-        return Boolean.FALSE;
-    }
-
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1769(C22929 c22929, Object obj) {
-        return Boolean.valueOf((c22929.f53222.mo20276() & ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF) == 0);
+    public final String toString() {
+        return "" + this.f22896;
     }
 }

@@ -1,20 +1,33 @@
 package l;
 
-import android.view.View;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ۖۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9BJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2228 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final void m6854(View view, InterfaceC1792 interfaceC1792) {
-        C13465.m32966(view, "<this>");
-        view.setTag(R.id.MT_Protector, interfaceC1792);
+/* JADX INFO: renamed from: l.֫᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2228 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC1792 m6853(View view) {
-        return (InterfaceC1792) C4061.m11590(new C11824(new C9002(C4061.m11592(view, C13519.f44641), C11402.f38406), new C18879()));
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        if ((i & 65534) != 65534) {
+            return i >= 64976 && i <= 65007;
+        }
+        return true;
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

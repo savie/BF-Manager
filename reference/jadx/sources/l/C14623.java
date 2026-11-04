@@ -1,71 +1,113 @@
 package l;
 
-import java.io.IOException;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ܳܺۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F99O */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14623 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public volatile IOException f47849;
+/* JADX INFO: renamed from: l.ܰ۬ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B73K */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14623 implements InterfaceC4183 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public volatile InterfaceC16739 f47850;
+    public final int[] f46063;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public volatile RuntimeException f47851;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public volatile C7817 f47852;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f47853;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public volatile Error f47854;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m35133() {
-        this.f47853 = true;
-        if (this.f47852 != null) {
-            this.f47852.m20577();
-            return;
-        }
-        if (this.f47850 != null) {
-            C19431.m44468(this.f47850);
-            this.f47850 = null;
-        }
+    public C14623(int[] iArr) {
+        this.f46063 = iArr;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m35134(IOException iOException) {
-        if (!this.f47853) {
-            this.f47849 = iOException;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C14623 m35264(String str) {
+        int i;
+        if (str.isEmpty()) {
+            return new C14623(new int[]{-1});
         }
+        int[] iArr = new int[str.codePointCount(0, str.length()) + 1];
+        int iCharCount = 0;
+        boolean z = false;
+        int i2 = 0;
+        boolean z2 = false;
+        while (iCharCount < str.length()) {
+            int iCodePointAt = str.codePointAt(iCharCount);
+            iCharCount += Character.charCount(iCodePointAt);
+            if (z) {
+                iArr[i2] = iCodePointAt;
+                i2++;
+                z = false;
+            } else if (iCodePointAt == 92) {
+                z = true;
+            } else {
+                if (iCodePointAt == 42) {
+                    if (i2 == 0 || iArr[i2 - 1] != -1) {
+                        i = i2 + 1;
+                        iArr[i2] = -1;
+                    }
+                    z2 = true;
+                } else if (iCodePointAt == 63) {
+                    i = i2 + 1;
+                    iArr[i2] = -2;
+                } else {
+                    iArr[i2] = iCodePointAt;
+                    i2++;
+                }
+                i2 = i;
+                z2 = true;
+            }
+        }
+        if (z) {
+            iArr[i2] = 92;
+            i2++;
+        }
+        if (!z2) {
+            int[] iArr2 = new int[i2 + 2];
+            iArr2[0] = -1;
+            System.arraycopy(iArr, 0, iArr2, 1, i2);
+            iArr2[i2 + 1] = -1;
+            return new C14623(iArr2);
+        }
+        return new C14623(Arrays.copyOf(iArr, i2));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m35135(Error error) {
-        if (!this.f47853) {
-            this.f47854 = error;
+    @Override // l.InterfaceC4183
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo11206(String str) {
+        int upperCase;
+        int upperCase2;
+        int iCharCount = 0;
+        int i = 0;
+        int i2 = -1;
+        int iCharCount2 = -1;
+        while (true) {
+            int length = str.length();
+            int[] iArr = this.f46063;
+            if (iCharCount < length) {
+                if (i < iArr.length) {
+                    int i3 = iArr[i];
+                    if (i3 == -1) {
+                        iCharCount2 = iCharCount;
+                        i2 = i;
+                        i++;
+                    } else {
+                        int iCodePointAt = str.codePointAt(iCharCount);
+                        if (i3 == -2 || i3 == iCodePointAt || (upperCase = Character.toUpperCase(i3)) == (upperCase2 = Character.toUpperCase(iCodePointAt)) || Character.toLowerCase(upperCase) == Character.toLowerCase(upperCase2)) {
+                            i++;
+                            iCharCount += Character.charCount(iCodePointAt);
+                        }
+                    }
+                }
+                if (i2 == -1 || iCharCount2 >= str.length()) {
+                    break;
+                }
+                iCharCount2 += Character.charCount(str.codePointAt(iCharCount2));
+                i = i2 + 1;
+                iCharCount = iCharCount2;
+            } else {
+                while (i < iArr.length && iArr[i] == -1) {
+                    i++;
+                }
+                if (i == iArr.length) {
+                    return true;
+                }
+            }
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m35136(RuntimeException runtimeException) {
-        if (!this.f47853) {
-            this.f47851 = runtimeException;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m35137(C7817 c7817) {
-        this.f47850 = null;
-        if (this.f47853) {
-            c7817.m20577();
-        } else {
-            this.f47852 = c7817;
-        }
+        return false;
     }
 }

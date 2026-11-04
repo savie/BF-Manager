@@ -1,25 +1,61 @@
 package l;
 
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.ۨܽ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: NAWS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11824 implements InterfaceC22407 {
+/* JADX INFO: renamed from: l.ۧᩴ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: AA3Y */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11824 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18879 f39714;
+    public final String f38151;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C9002 f39715;
-
-    public C11824(C9002 c9002, C18879 c18879) {
-        this.f39715 = c9002;
-        this.f39714 = c18879;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C11824 m29672(String str) {
+        return new C11824(str);
     }
 
-    @Override // l.InterfaceC22407
-    public final Iterator iterator() {
-        return new C13941(this);
+    public C11824(String str) {
+        this.f38151 = str;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m29673(InterfaceC17045 interfaceC17045) {
+        return ((C17791) interfaceC17045).m41640(this);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object m29675(InterfaceC17045 interfaceC17045) {
+        Object objM41640 = ((C17791) interfaceC17045).m41640(this);
+        if (objM41640 != null) {
+            return objM41640;
+        }
+        throw new NullPointerException(this.f38151);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m29676(InterfaceC17045 interfaceC17045) {
+        return ((C17791) interfaceC17045).m41642(this);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29674(InterfaceC17045 interfaceC17045, Object obj) {
+        ((C17791) interfaceC17045).m41641(this, obj);
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || C11824.class != obj.getClass()) {
+            return false;
+        }
+        return this.f38151.equals(((C11824) obj).f38151);
+    }
+
+    public final int hashCode() {
+        return this.f38151.hashCode();
+    }
+
+    public final String toString() {
+        return C8947.m23910(new StringBuilder("Prop{name='"), this.f38151, "'}");
     }
 }

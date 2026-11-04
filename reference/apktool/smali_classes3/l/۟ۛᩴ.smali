@@ -1,196 +1,69 @@
 .class public final synthetic Ll/۟ۛᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "LAQJ"
 
 # interfaces
-.implements Ljava/util/Spliterator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ll/᩷ۛᩴ;
+.field public final synthetic ܰ:Ll/ۢۛᩴ;
+
+.field public final synthetic ᩶:Ll/۬᩺ᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩷ۛᩴ;)V
+.method public synthetic constructor <init>(Ll/ۢۛᩴ;Ll/۬᩺ᩴ;)V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
+    iput-object p1, p0, Ll/۟ۛᩴ;->ܰ:Ll/ۢۛᩴ;
+
+    iput-object p2, p0, Ll/۟ۛᩴ;->᩶:Ll/۬᩺ᩴ;
 
     return-void
-.end method
-
-.method public static synthetic convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ll/۫᩹۠;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ll/۫᩹۠;
-
-    iget-object p0, p0, Ll/۫᩹۠;->a:Ljava/util/Spliterator;
-
-    return-object p0
-
-    :cond_1
-    instance-of v0, p0, Ll/ۤۛᩴ;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Ll/ۤۛᩴ;
-
-    invoke-static {p0}, Ll/֡᩹۠;->a(Ll/ۤۛᩴ;)Ljava/util/Spliterator$OfPrimitive;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ll/۟ۛᩴ;
-
-    invoke-direct {v0, p0}, Ll/۟ۛᩴ;-><init>(Ll/᩷ۛᩴ;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final synthetic characteristics()I
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
+    .line 2
+    iget-object v0, p0, Ll/۟ۛᩴ;->ܰ:Ll/ۢۛᩴ;
 
-    invoke-interface {v0}, Ll/᩷ۛᩴ;->characteristics()I
+    .line 4
+    iget-object v1, p0, Ll/۟ۛᩴ;->᩶:Ll/۬᩺ᩴ;
 
-    move-result v0
+    .line 352
+    iget-object v0, v0, Ll/ۢۛᩴ;->۫:Ll/᩶᩺ᩴ;
 
-    return v0
-.end method
+    const/4 v2, 0x1
 
-.method public final synthetic equals(Ljava/lang/Object;)Z
-    .locals 2
+    iput-boolean v2, v0, Ll/᩶᩺ᩴ;->᩷:Z
 
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
+    move-object v0, v1
 
-    instance-of v1, p1, Ll/۟ۛᩴ;
+    .line 353
+    monitor-enter v0
 
-    if-eqz v1, :cond_0
+    .line 354
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    check-cast p1, Ll/۟ۛᩴ;
-
-    iget-object p1, p1, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic estimateSize()J
-    .locals 2
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0}, Ll/᩷ۛᩴ;->estimateSize()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 1
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0, p1}, Ll/᩷ۛᩴ;->forEachRemaining(Ljava/util/function/Consumer;)V
+    .line 355
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final synthetic getComparator()Ljava/util/Comparator;
-    .locals 1
+    :catchall_0
+    move-exception v1
 
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {v0}, Ll/᩷ۛᩴ;->getComparator()Ljava/util/Comparator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic getExactSizeIfKnown()J
-    .locals 2
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0}, Ll/᩷ۛᩴ;->getExactSizeIfKnown()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final synthetic hasCharacteristics(I)Z
-    .locals 1
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0, p1}, Ll/᩷ۛᩴ;->hasCharacteristics(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
-    .locals 1
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0, p1}, Ll/᩷ۛᩴ;->tryAdvance(Ljava/util/function/Consumer;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic trySplit()Ljava/util/Spliterator;
-    .locals 1
-
-    iget-object v0, p0, Ll/۟ۛᩴ;->a:Ll/᩷ۛᩴ;
-
-    invoke-interface {v0}, Ll/᩷ۛᩴ;->trySplit()Ll/᩷ۛᩴ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/۟ۛᩴ;->convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
+    throw v1
 .end method

@@ -1,120 +1,61 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34PY */
-/* JADX INFO: loaded from: classes3.dex */
-public class C3131 extends AbstractC16579 {
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public EnumC6617 f11789;
+/* JADX INFO: renamed from: l.ۗۗ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5AG9 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3131 {
 
-    public /* synthetic */ C3131(EnumC6617 enumC6617, AbstractC0618 abstractC0618, C3794 c3794, int i) {
-        this(enumC6617, abstractC0618, c3794);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Object f10140;
 
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۠ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9481() {
-        return true;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final TextView f10141;
 
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9482() {
-        return true;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final TextView f10142;
 
-    public C3131(EnumC6617 enumC6617) {
-        this(enumC6617, null, C3794.f13674);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ViewGroup f10143;
 
-    public C3131(EnumC6617 enumC6617, AbstractC0618 abstractC0618, C3794 c3794) {
-        super(abstractC0618, c3794);
-        this.f11789 = enumC6617;
-        C6171.m17176(enumC6617.f22297);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C1255 f10144;
 
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۙ */
-    public AbstractC16579 mo1929(C3794 c3794) {
-        return new C1720(this, this.f11789, this.f53222, c3794);
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9484() {
-        return this.f11789 != EnumC6617.BOOLEAN;
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9480() {
-        int i = C18654.f60578[this.f11789.ordinal()];
-        return i == 1 || i == 2 || i == 3 || i == 4 || i == 5;
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۙۙ */
-    public final EnumC6617 mo1933() {
-        return this.f11789;
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16579 mo1930(Object obj) {
-        return new C9483(this.f11789, this.f53222, this.f53221, obj);
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo9478() {
-        Object objMo24292 = mo24292();
-        C6171.m17171(objMo24292);
-        EnumC6617 enumC6617 = EnumC6617.BOOLEAN;
-        EnumC6617 enumC6618 = this.f11789;
-        if (enumC6618 == enumC6617) {
-            return ((Integer) objMo24292).intValue() == 0 ? "false" : "true";
+    public C3131(View view) {
+        ViewGroup viewGroup = (ViewGroup) view;
+        this.f10143 = viewGroup;
+        ViewGroup viewGroup2 = (ViewGroup) viewGroup.getChildAt(0);
+        this.f10142 = (TextView) viewGroup2.getChildAt(0);
+        this.f10141 = viewGroup2.getChildCount() > 1 ? (TextView) viewGroup2.getChildAt(1) : null;
+        C1255 c1255 = viewGroup.getChildCount() > 1 ? (C1255) viewGroup.getChildAt(1) : null;
+        this.f10144 = c1255;
+        if (c1255 != null) {
+            view.setOnClickListener(new View.OnClickListener() { // from class: l.᩹ۗ۫
+                @Override // android.view.View.OnClickListener
+                public final void onClick(View view2) {
+                    C1255 c1256 = this.f75413.f10144;
+                    c1256.setChecked(!c1256.isChecked());
+                }
+            });
         }
-        if (enumC6618 == EnumC6617.CHAR) {
-            return String.valueOf((char) ((Integer) objMo24292).intValue());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m10211(boolean z) {
+        ViewGroup viewGroup = this.f10143;
+        viewGroup.setFocusable(z);
+        viewGroup.setClickable(z);
+        this.f10142.setEnabled(z);
+        TextView textView = this.f10141;
+        if (textView != null) {
+            textView.setAlpha(z ? 1.0f : 0.3f);
         }
-        return objMo24292.toString();
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9479() {
-        return this.f11789 == EnumC6617.BOOLEAN && mo24292() != null && ((Integer) mo24292()).intValue() == 0;
-    }
-
-    @Override // l.AbstractC16579
-    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo9483() {
-        return (this.f11789 != EnumC6617.BOOLEAN || mo24292() == null || ((Integer) mo24292()).intValue() == 0) ? false : true;
-    }
-
-    @Override // l.AbstractC16579, l.InterfaceC9105
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC19688 mo1931() {
-        switch (C18654.f60578[this.f11789.ordinal()]) {
-            case 1:
-                return EnumC19688.CHAR;
-            case 2:
-                return EnumC19688.BYTE;
-            case 3:
-                return EnumC19688.SHORT;
-            case 4:
-                return EnumC19688.INT;
-            case 5:
-                return EnumC19688.LONG;
-            case 6:
-                return EnumC19688.FLOAT;
-            case 7:
-                return EnumC19688.DOUBLE;
-            case 8:
-                return EnumC19688.BOOLEAN;
-            default:
-                throw new AssertionError();
+        C1255 c1255 = this.f10144;
+        if (c1255 != null) {
+            c1255.setEnabled(z);
         }
     }
 }

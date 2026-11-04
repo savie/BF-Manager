@@ -165,7 +165,7 @@
 
     const/16 v1, 0x39
 
-    invoke-static {p2, v3, v1, v3}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p2, v3, v1, v3}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result v1
 

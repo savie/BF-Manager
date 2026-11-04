@@ -1,30 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: I4HU */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5275 extends AbstractC6686 implements InterfaceC22263 {
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۤ */
-    public final /* synthetic */ String mo1142() {
-        throw null;
-    }
+/* JADX INFO: renamed from: l.ۚ֡ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V8T2 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5275 {
 
-    @Override // l.InterfaceC13153
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2107() {
-        return this.f22552.m41166().m42181(this.f22553 + 1);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f18580;
 
-    @Override // l.InterfaceC11742
-    /* JADX INFO: renamed from: ᩴ */
-    public final int mo2109() {
-        return this.f22552.m41166().m42183(this.f22553 + 4);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C8402 f18581;
 
-    @Override // l.InterfaceC14296
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final int mo14567() {
-        return this.f22552.m41166().m42183(this.f22553 + 2);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean f18582;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f18583;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f18584;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f18585;
+
+    public C5275(C8402 c8402, long j, long j2, boolean z, boolean z2, boolean z3) {
+        this.f18581 = c8402;
+        this.f18585 = j;
+        this.f18583 = j2;
+        this.f18584 = z;
+        this.f18580 = z2;
+        this.f18582 = z3;
     }
 }

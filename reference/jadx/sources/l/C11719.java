@@ -1,14 +1,20 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
+/* JADX INFO: renamed from: l.ۧܺۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C11719 {
+    public static InterfaceC17686 range(int i, int i2) {
+        if (i >= i2) {
+            return C12465.a(C13629.b);
+        }
+        return C12465.a(new C11588(i, i2));
+    }
 
-/* JADX INFO: renamed from: l.ۨ۬۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11719 extends AbstractC3956 {
-    @Override // l.AbstractC3956
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        abstractC23903.f77447 |= ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF;
+    public static InterfaceC17686 of(int i) {
+        C7355 c7355 = new C7355();
+        c7355.b = i;
+        c7355.a = -2;
+        return C12465.a(c7355);
     }
 }

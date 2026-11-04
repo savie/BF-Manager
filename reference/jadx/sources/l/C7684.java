@@ -1,24 +1,15 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.۟᩵᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: XAJ9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7684 extends AbstractC19603 {
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final IOException f25449;
-
-    public C7684(String str, IOException iOException) {
-        super(str, 0L, new Object());
-        this.f25449 = iOException;
-    }
-
-    @Override // l.AbstractC19603
-    /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo2898() throws IOException {
-        throw this.f25449;
+/* JADX INFO: renamed from: l.۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V1D4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7684 extends AbstractC11191 {
+    @Override // l.AbstractC11191
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo1701(float f, long j, View view, C10335 c10335) {
+        view.setElevation(m28197(f, j, view, c10335));
+        return this.f35301;
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.engines;
 
 import org.bouncycastle.util.Memoable;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Zuc128Engine extends Zuc128CoreEngine {
     public Zuc128Engine() {
     }

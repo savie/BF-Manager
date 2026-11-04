@@ -8,7 +8,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SAKKEPublicKeyParameters extends AsymmetricKeyParameter {
     public static final ECPoint P;
     public static final BigInteger Px;

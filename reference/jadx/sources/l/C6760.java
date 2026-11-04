@@ -1,27 +1,33 @@
 package l;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import com.alipay.sdk.m.y.l;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۜ۫ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 74MB */
+/* JADX INFO: renamed from: l.ۛ᩻᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q7CU */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C6760 implements BiFunction {
-    public /* synthetic */ BiFunction andThen(Function function) {
-        return C5689.$default$andThen(this, function);
-    }
+public final class C6760 extends AbstractC20997 {
 
-    @Override // java.util.function.BiFunction
-    public final Object apply(Object obj, Object obj2) {
-        String str = (String) obj;
-        Iterator it = ((List) obj2).iterator();
-        while (it.hasNext()) {
-            if (str.contains((String) it.next())) {
-                return Boolean.TRUE;
+    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
+    public ArrayList f22559;
+
+    @Override // l.AbstractC20997, l.InterfaceC16454
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1688() {
+        m48013(EnumC5202.f18164.m15637() + " {");
+        m48012(1);
+        C4937.forEach(this.f22559, new Consumer() { // from class: l.ۨ᩻᩺
+            public /* synthetic */ Consumer andThen(Consumer consumer) {
+                return C12312.$default$andThen(this, consumer);
             }
-        }
-        return Boolean.FALSE;
+
+            @Override // java.util.function.Consumer
+            public final void accept(Object obj) {
+                this.f40753.m48013((String) obj);
+            }
+        });
+        m48008(1);
+        m48013(l.d);
     }
 }

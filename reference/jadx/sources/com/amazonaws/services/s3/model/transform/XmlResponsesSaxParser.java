@@ -92,8 +92,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
-import l.AbstractC11766;
-import l.C12352;
+import l.AbstractC0329;
+import l.C10902;
+import l.C24966;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -104,23 +105,23 @@ import org.xml.sax.helpers.XMLReaderFactory;
 /* JADX INFO: loaded from: classes.dex */
 public class XmlResponsesSaxParser {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Log f689 = LogFactory.m302(XmlResponsesSaxParser.class);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Log f679 = LogFactory.m296(XmlResponsesSaxParser.class);
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f690 = 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f680 = 0;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public XMLReader f691;
+    public XMLReader f681;
 
     public XmlResponsesSaxParser() {
-        this.f691 = null;
+        this.f681 = null;
         try {
-            this.f691 = XMLReaderFactory.createXMLReader();
+            this.f681 = XMLReaderFactory.createXMLReader();
         } catch (SAXException e) {
             System.setProperty("org.xml.sax.driver", "org.xmlpull.v1.sax2.Driver");
             try {
-                this.f691 = XMLReaderFactory.createXMLReader();
+                this.f681 = XMLReaderFactory.createXMLReader();
             } catch (SAXException unused) {
                 throw new AmazonClientException("Couldn't initialize a sax driver for the XMLReader", e);
             }
@@ -128,12 +129,12 @@ public class XmlResponsesSaxParser {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m713(DefaultHandler defaultHandler, InputStream inputStream) throws IOException {
-        XMLReader xMLReader = this.f691;
-        Log log = f689;
+    public final void m707(DefaultHandler defaultHandler, InputStream inputStream) throws IOException {
+        XMLReader xMLReader = this.f681;
+        Log log = f679;
         try {
-            if (log.mo294()) {
-                log.mo298("Parsing XML response document with handler: " + defaultHandler.getClass());
+            if (log.mo287()) {
+                log.mo291("Parsing XML response document with handler: " + defaultHandler.getClass());
             }
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, a.D));
             xMLReader.setContentHandler(defaultHandler);
@@ -145,8 +146,8 @@ public class XmlResponsesSaxParser {
             try {
                 inputStream.close();
             } catch (IOException e2) {
-                if (log.mo300()) {
-                    log.mo299("Unable to close response InputStream up after XML parse failure", e2);
+                if (log.mo293()) {
+                    log.mo292("Unable to close response InputStream up after XML parse failure", e2);
                 }
             }
             throw new AmazonClientException("Failed to parse XML document with handler " + defaultHandler.getClass(), th);
@@ -154,54 +155,54 @@ public class XmlResponsesSaxParser {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m708(String str) {
+    public static String m702(String str) {
         if (str == null || str.length() == 0) {
             return null;
         }
         return str;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m711(String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m705(String str) {
         try {
             Integer.parseInt(str);
         } catch (NumberFormatException e) {
-            f689.mo299("Unable to parse integer value '" + str + "'", e);
+            f679.mo292("Unable to parse integer value '" + str + "'", e);
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static long m710(String str) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static long m704(String str) {
         try {
             return Long.parseLong(str);
         } catch (NumberFormatException e) {
-            f689.mo299("Unable to parse long value '" + str + "'", e);
+            f679.mo292("Unable to parse long value '" + str + "'", e);
             return -1L;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m709(String str, boolean z) {
+    public static String m703(String str, boolean z) {
         if (!z) {
             return str;
         }
-        int i = S3HttpUtils.f500;
+        int i = S3HttpUtils.f490;
         if (str == null) {
             return null;
         }
         try {
-            return C12352.decode(str, a.D);
+            return C10902.decode(str, a.D);
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ListBucketHandler m712(InputStream inputStream, boolean z) throws IOException {
+    public final ListBucketHandler m706(InputStream inputStream, boolean z) throws IOException {
         ListBucketHandler listBucketHandler = new ListBucketHandler(z);
-        Log log = f689;
-        if (log.mo294()) {
-            log.mo298("Sanitizing XML document destined for handler " + ListBucketHandler.class);
+        Log log = f679;
+        if (log.mo287()) {
+            log.mo291("Sanitizing XML document destined for handler " + ListBucketHandler.class);
         }
         try {
             StringBuilder sb = new StringBuilder();
@@ -209,13 +210,12 @@ public class XmlResponsesSaxParser {
             char[] cArr = new char[8192];
             while (true) {
                 int i = bufferedReader.read(cArr);
-                if (i != -1) {
-                    sb.append(cArr, 0, i);
-                } else {
+                if (i == -1) {
                     bufferedReader.close();
-                    m713(listBucketHandler, new ByteArrayInputStream(sb.toString().replaceAll("\r", "&#013;").getBytes(StringUtils.f844)));
+                    m707(listBucketHandler, new ByteArrayInputStream(sb.toString().replaceAll("\r", "&#013;").getBytes(StringUtils.f834)));
                     return listBucketHandler;
                 }
+                sb.append(cArr, 0, i);
             }
         } catch (IOException e) {
             throw e;
@@ -223,182 +223,182 @@ public class XmlResponsesSaxParser {
             try {
                 inputStream.close();
             } catch (IOException e2) {
-                if (log.mo300()) {
-                    log.mo299("Unable to close response InputStream after failure sanitizing XML document", e2);
+                if (log.mo293()) {
+                    log.mo292("Unable to close response InputStream after failure sanitizing XML document", e2);
                 }
             }
-            throw new AmazonClientException("Failed to sanitize XML document destined for handler " + ListBucketHandler.class, th);
+            throw new AmazonClientException(C24966.m55772(ListBucketHandler.class, "Failed to sanitize XML document destined for handler "), th);
         }
     }
 
     public class ListBucketHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public final boolean f770;
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public final boolean f760;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public final ObjectListing f768 = new ObjectListing();
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public final ObjectListing f758 = new ObjectListing();
+
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public S3ObjectSummary f759 = null;
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public S3ObjectSummary f767 = null;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public Owner f769 = null;
+        public Owner f757 = null;
 
         public ListBucketHandler(boolean z) {
-            this.f770 = z;
+            this.f760 = z;
         }
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final ObjectListing m728() {
-            return this.f768;
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final ObjectListing m722() {
+            return this.f758;
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListBucketResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListBucketResult")) {
                 if (str.equals("Contents")) {
                     S3ObjectSummary s3ObjectSummary = new S3ObjectSummary();
-                    this.f767 = s3ObjectSummary;
-                    s3ObjectSummary.m663(this.f768.m607());
+                    this.f759 = s3ObjectSummary;
+                    s3ObjectSummary.m656(this.f758.m600());
                     return;
                 }
                 return;
             }
-            if (m698("ListBucketResult", "Contents") && str.equals("Owner")) {
-                this.f769 = new Owner();
+            if (m692("ListBucketResult", "Contents") && str.equals("Owner")) {
+                this.f757 = new Owner();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            boolean zM697 = m697();
-            String strM660 = null;
-            ObjectListing objectListing = this.f768;
-            if (zM697) {
-                if (str.equals("ListBucketResult") && objectListing.m610() && objectListing.m611() == null) {
-                    if (!objectListing.m606().isEmpty()) {
-                        strM660 = ((S3ObjectSummary) objectListing.m606().get(objectListing.m606().size() - 1)).m660();
-                    } else if (objectListing.m612().isEmpty()) {
-                        XmlResponsesSaxParser.f689.mo292("S3 response indicates truncated results, but contains no object summaries or common prefixes.");
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            boolean zM691 = m691();
+            String strM653 = null;
+            ObjectListing objectListing = this.f758;
+            if (zM691) {
+                if (str.equals("ListBucketResult") && objectListing.m604() && objectListing.m603() == null) {
+                    if (!objectListing.m607().isEmpty()) {
+                        strM653 = ((S3ObjectSummary) objectListing.m607().get(objectListing.m607().size() - 1)).m653();
+                    } else if (objectListing.m605().isEmpty()) {
+                        XmlResponsesSaxParser.f679.mo285("S3 response indicates truncated results, but contains no object summaries or common prefixes.");
                     } else {
-                        strM660 = (String) objectListing.m612().get(objectListing.m612().size() - 1);
+                        strM653 = (String) objectListing.m605().get(objectListing.m605().size() - 1);
                     }
-                    objectListing.m613(strM660);
+                    objectListing.m606(strM653);
                     return;
                 }
                 return;
             }
-            boolean zM698 = m698("ListBucketResult");
-            boolean z = this.f770;
-            if (zM698) {
+            boolean zM692 = m692("ListBucketResult");
+            boolean z = this.f760;
+            if (zM692) {
                 if (str.equals("Name")) {
-                    objectListing.m608(m699());
-                    if (XmlResponsesSaxParser.f689.mo294()) {
-                        XmlResponsesSaxParser.f689.mo298("Examining listing for bucket: " + objectListing.m607());
+                    objectListing.m601(m694());
+                    if (XmlResponsesSaxParser.f679.mo287()) {
+                        XmlResponsesSaxParser.f679.mo291("Examining listing for bucket: " + objectListing.m600());
                         return;
                     }
                     return;
                 }
                 if (str.equals("Prefix")) {
-                    XmlResponsesSaxParser.m709(XmlResponsesSaxParser.m708(m699()), z);
+                    XmlResponsesSaxParser.m703(XmlResponsesSaxParser.m702(m694()), z);
                     objectListing.getClass();
                     return;
                 }
                 if (str.equals("Marker")) {
-                    XmlResponsesSaxParser.m709(XmlResponsesSaxParser.m708(m699()), z);
+                    XmlResponsesSaxParser.m703(XmlResponsesSaxParser.m702(m694()), z);
                     objectListing.getClass();
                     return;
                 }
                 if (str.equals("NextMarker")) {
-                    objectListing.m613(XmlResponsesSaxParser.m709(m699(), z));
+                    objectListing.m606(XmlResponsesSaxParser.m703(m694(), z));
                     return;
                 }
                 if (str.equals("MaxKeys")) {
-                    XmlResponsesSaxParser.m711(m699());
+                    XmlResponsesSaxParser.m705(m694());
                     objectListing.getClass();
                     return;
                 }
                 if (str.equals("Delimiter")) {
-                    XmlResponsesSaxParser.m709(XmlResponsesSaxParser.m708(m699()), z);
+                    XmlResponsesSaxParser.m703(XmlResponsesSaxParser.m702(m694()), z);
                     objectListing.getClass();
                     return;
                 }
                 if (str.equals("EncodingType")) {
-                    m699();
-                    int i = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i = XmlResponsesSaxParser.f680;
                     objectListing.getClass();
                     return;
                 } else {
                     if (str.equals("IsTruncated")) {
-                        String strM789 = StringUtils.m789(m699());
-                        if (strM789.startsWith("false")) {
-                            objectListing.m609(false);
+                        String strM783 = StringUtils.m783(m694());
+                        if (strM783.startsWith("false")) {
+                            objectListing.m602(false);
                             return;
                         } else {
-                            if (strM789.startsWith("true")) {
-                                objectListing.m609(true);
+                            if (strM783.startsWith("true")) {
+                                objectListing.m602(true);
                                 return;
                             }
-                            throw new IllegalStateException("Invalid value for IsTruncated field: ".concat(strM789));
+                            throw new IllegalStateException("Invalid value for IsTruncated field: ".concat(strM783));
                         }
                     }
                     if (str.equals("Contents")) {
-                        objectListing.m606().add(this.f767);
-                        this.f767 = null;
+                        objectListing.m607().add(this.f759);
+                        this.f759 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketResult", "Contents")) {
+            if (m692("ListBucketResult", "Contents")) {
                 if (str.equals("Key")) {
-                    this.f767.m666(XmlResponsesSaxParser.m709(m699(), z));
+                    this.f759.m659(XmlResponsesSaxParser.m703(m694(), z));
                     return;
                 }
                 if (str.equals("LastModified")) {
-                    S3ObjectSummary s3ObjectSummary = this.f767;
-                    String strM699 = m699();
-                    int i2 = ServiceUtils.f512;
-                    s3ObjectSummary.m664(DateUtils.m772(strM699));
+                    S3ObjectSummary s3ObjectSummary = this.f759;
+                    String strM694 = m694();
+                    int i2 = ServiceUtils.f502;
+                    s3ObjectSummary.m657(DateUtils.m766(strM694));
                     return;
                 }
                 if (str.equals("ETag")) {
-                    this.f767.m668(ServiceUtils.m486(m699()));
+                    this.f759.m661(ServiceUtils.m480(m694()));
                     return;
                 }
                 if (str.equals("Size")) {
-                    this.f767.m661(XmlResponsesSaxParser.m710(m699()));
+                    this.f759.m654(XmlResponsesSaxParser.m704(m694()));
                     return;
                 }
                 if (str.equals("StorageClass")) {
-                    this.f767.m659(m699());
+                    this.f759.m662(m694());
                     return;
                 } else {
                     if (str.equals("Owner")) {
-                        this.f767.m662(this.f769);
-                        this.f769 = null;
+                        this.f759.m655(this.f757);
+                        this.f757 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketResult", "Contents", "Owner")) {
+            if (m692("ListBucketResult", "Contents", "Owner")) {
                 if (str.equals("ID")) {
-                    this.f769.m642(m699());
+                    this.f757.m636(m694());
                     return;
                 } else {
                     if (str.equals("DisplayName")) {
-                        this.f769.m641(m699());
+                        this.f757.m635(m694());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketResult", "CommonPrefixes") && str.equals("Prefix")) {
-                objectListing.m612().add(XmlResponsesSaxParser.m709(m699(), z));
+            if (m692("ListBucketResult", "CommonPrefixes") && str.equals("Prefix")) {
+                objectListing.m605().add(XmlResponsesSaxParser.m703(m694(), z));
             }
         }
     }
@@ -406,134 +406,134 @@ public class XmlResponsesSaxParser {
     public class ListObjectsV2Handler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public S3ObjectSummary f785;
+        public Owner f775;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public Owner f786;
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public S3ObjectSummary f776;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListBucketResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListBucketResult")) {
                 if (str.equals("Contents")) {
-                    this.f785 = new S3ObjectSummary();
+                    this.f776 = new S3ObjectSummary();
                     throw null;
                 }
-            } else if (m698("ListBucketResult", "Contents") && str.equals("Owner")) {
-                this.f786 = new Owner();
+            } else if (m692("ListBucketResult", "Contents") && str.equals("Owner")) {
+                this.f775 = new Owner();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m697()) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m691()) {
                 if (str.equals("ListBucketResult")) {
                     throw null;
                 }
                 return;
             }
-            if (m698("ListBucketResult")) {
+            if (m692("ListBucketResult")) {
                 if (str.equals("Name")) {
-                    m699();
+                    m694();
                     throw null;
                 }
                 if (str.equals("Prefix")) {
-                    m699();
-                    int i = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("MaxKeys")) {
-                    XmlResponsesSaxParser.m711(m699());
+                    XmlResponsesSaxParser.m705(m694());
                     throw null;
                 }
                 if (str.equals("NextContinuationToken")) {
-                    m699();
+                    m694();
                     throw null;
                 }
                 if (str.equals("ContinuationToken")) {
-                    m699();
+                    m694();
                     throw null;
                 }
                 if (str.equals("StartAfter")) {
-                    m699();
-                    int i2 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i2 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("KeyCount")) {
-                    XmlResponsesSaxParser.m711(m699());
+                    XmlResponsesSaxParser.m705(m694());
                     throw null;
                 }
                 if (str.equals("Delimiter")) {
-                    m699();
-                    int i3 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i3 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("EncodingType")) {
-                    m699();
-                    int i4 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i4 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("IsTruncated")) {
-                    String strM789 = StringUtils.m789(m699());
-                    if (strM789.startsWith("false") || strM789.startsWith("true")) {
+                    String strM783 = StringUtils.m783(m694());
+                    if (strM783.startsWith("false") || strM783.startsWith("true")) {
                         throw null;
                     }
-                    throw new IllegalStateException("Invalid value for IsTruncated field: ".concat(strM789));
+                    throw new IllegalStateException("Invalid value for IsTruncated field: ".concat(strM783));
                 }
                 if (str.equals("Contents")) {
                     throw null;
                 }
                 return;
             }
-            if (m698("ListBucketResult", "Contents")) {
+            if (m692("ListBucketResult", "Contents")) {
                 if (str.equals("Key")) {
-                    String strM699 = m699();
-                    S3ObjectSummary s3ObjectSummary = this.f785;
-                    int i5 = XmlResponsesSaxParser.f690;
-                    s3ObjectSummary.m666(strM699);
+                    String strM694 = m694();
+                    S3ObjectSummary s3ObjectSummary = this.f776;
+                    int i5 = XmlResponsesSaxParser.f680;
+                    s3ObjectSummary.m659(strM694);
                     return;
                 }
                 if (str.equals("LastModified")) {
-                    S3ObjectSummary s3ObjectSummary2 = this.f785;
-                    String strM6910 = m699();
-                    int i6 = ServiceUtils.f512;
-                    s3ObjectSummary2.m664(DateUtils.m772(strM6910));
+                    S3ObjectSummary s3ObjectSummary2 = this.f776;
+                    String strM695 = m694();
+                    int i6 = ServiceUtils.f502;
+                    s3ObjectSummary2.m657(DateUtils.m766(strM695));
                     return;
                 }
                 if (str.equals("ETag")) {
-                    this.f785.m668(ServiceUtils.m486(m699()));
+                    this.f776.m661(ServiceUtils.m480(m694()));
                     return;
                 }
                 if (str.equals("Size")) {
-                    this.f785.m661(XmlResponsesSaxParser.m710(m699()));
+                    this.f776.m654(XmlResponsesSaxParser.m704(m694()));
                     return;
                 }
                 if (str.equals("StorageClass")) {
-                    this.f785.m659(m699());
+                    this.f776.m662(m694());
                     return;
                 } else {
                     if (str.equals("Owner")) {
-                        this.f785.m662(this.f786);
-                        this.f786 = null;
+                        this.f776.m655(this.f775);
+                        this.f775 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketResult", "Contents", "Owner")) {
+            if (m692("ListBucketResult", "Contents", "Owner")) {
                 if (str.equals("ID")) {
-                    this.f786.m642(m699());
+                    this.f775.m636(m694());
                     return;
                 } else {
                     if (str.equals("DisplayName")) {
-                        this.f786.m641(m699());
+                        this.f775.m635(m694());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketResult", "CommonPrefixes") && str.equals("Prefix")) {
+            if (m692("ListBucketResult", "CommonPrefixes") && str.equals("Prefix")) {
                 throw null;
             }
         }
@@ -541,57 +541,57 @@ public class XmlResponsesSaxParser {
 
     public class ListAllMyBucketsHandler extends AbstractHandler {
 
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final ArrayList f748 = new ArrayList();
+
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final ArrayList f756 = new ArrayList();
+        public Owner f746 = null;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public Owner f758 = null;
-
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public Bucket f757 = null;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public Bucket f747 = null;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListAllMyBucketsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListAllMyBucketsResult")) {
                 if (str.equals("Owner")) {
-                    this.f758 = new Owner();
+                    this.f746 = new Owner();
                 }
-            } else if (m698("ListAllMyBucketsResult", "Buckets") && str.equals("Bucket")) {
+            } else if (m692("ListAllMyBucketsResult", "Buckets") && str.equals("Bucket")) {
                 Bucket bucket = new Bucket();
-                this.f757 = bucket;
-                bucket.m526(this.f758);
+                this.f747 = bucket;
+                bucket.m520(this.f746);
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListAllMyBucketsResult", "Owner")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListAllMyBucketsResult", "Owner")) {
                 if (str.equals("ID")) {
-                    this.f758.m642(m699());
+                    this.f746.m636(m694());
                     return;
                 } else {
                     if (str.equals("DisplayName")) {
-                        this.f758.m641(m699());
+                        this.f746.m635(m694());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListAllMyBucketsResult", "Buckets")) {
+            if (m692("ListAllMyBucketsResult", "Buckets")) {
                 if (str.equals("Bucket")) {
-                    this.f756.add(this.f757);
-                    this.f757 = null;
+                    this.f748.add(this.f747);
+                    this.f747 = null;
                     return;
                 }
                 return;
             }
-            if (m698("ListAllMyBucketsResult", "Buckets", "Bucket")) {
+            if (m692("ListAllMyBucketsResult", "Buckets", "Bucket")) {
                 if (str.equals("Name")) {
-                    this.f757.m527(m699());
+                    this.f747.m521(m694());
                 } else if (str.equals("CreationDate")) {
-                    this.f757.m528(DateUtils.m772(m699()));
+                    this.f747.m522(DateUtils.m766(m694()));
                 }
             }
         }
@@ -599,29 +599,29 @@ public class XmlResponsesSaxParser {
 
     public class AccessControlListHandler extends AbstractHandler {
 
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final AccessControlList f684 = new AccessControlList();
+
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final AccessControlList f692 = new AccessControlList();
+        public Grantee f682 = null;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public Grantee f694 = null;
-
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public Permission f693 = null;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public Permission f683 = null;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
             String value;
-            if (m698("AccessControlPolicy")) {
+            if (m692("AccessControlPolicy")) {
                 if (str.equals("Owner")) {
-                    this.f692.m521(new Owner());
+                    this.f684.m515(new Owner());
                     return;
                 }
                 return;
             }
-            if (m698("AccessControlPolicy", "AccessControlList", "Grant") && str.equals("Grantee")) {
-                int i = XmlResponsesSaxParser.f690;
-                Charset charset = StringUtils.f844;
+            if (m692("AccessControlPolicy", "AccessControlList", "Grant") && str.equals("Grantee")) {
+                int i = XmlResponsesSaxParser.f680;
+                Charset charset = StringUtils.f834;
                 int i2 = 0;
                 int i3 = 0;
                 while (true) {
@@ -647,9 +647,9 @@ public class XmlResponsesSaxParser {
                     break;
                 }
                 if ("AmazonCustomerByEmail".equals(value)) {
-                    this.f694 = new EmailAddressGrantee();
+                    this.f682 = new EmailAddressGrantee();
                 } else if ("CanonicalUser".equals(value)) {
-                    this.f694 = new CanonicalGrantee();
+                    this.f682 = new CanonicalGrantee();
                 } else {
                     "Group".equals(value);
                 }
@@ -657,54 +657,54 @@ public class XmlResponsesSaxParser {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            boolean zM698 = m698("AccessControlPolicy", "Owner");
-            AccessControlList accessControlList = this.f692;
-            if (zM698) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            boolean zM692 = m692("AccessControlPolicy", "Owner");
+            AccessControlList accessControlList = this.f684;
+            if (zM692) {
                 if (str.equals("ID")) {
-                    accessControlList.m522().m642(m699());
+                    accessControlList.m516().m636(m694());
                     return;
                 } else {
                     if (str.equals("DisplayName")) {
-                        accessControlList.m522().m641(m699());
+                        accessControlList.m516().m635(m694());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AccessControlPolicy", "AccessControlList")) {
+            if (m692("AccessControlPolicy", "AccessControlList")) {
                 if (str.equals("Grant")) {
-                    Grantee grantee = this.f694;
-                    Permission permission = this.f693;
-                    ((LinkedList) accessControlList.m520()).add(new Grant(grantee, permission));
-                    this.f694 = null;
-                    this.f693 = null;
+                    Grantee grantee = this.f682;
+                    Permission permission = this.f683;
+                    ((LinkedList) accessControlList.m514()).add(new Grant(grantee, permission));
+                    this.f682 = null;
+                    this.f683 = null;
                     return;
                 }
                 return;
             }
-            if (m698("AccessControlPolicy", "AccessControlList", "Grant")) {
+            if (m692("AccessControlPolicy", "AccessControlList", "Grant")) {
                 if (str.equals("Permission")) {
-                    this.f693 = Permission.m646(m699());
+                    this.f683 = Permission.m640(m694());
                     return;
                 }
                 return;
             }
-            if (m698("AccessControlPolicy", "AccessControlList", "Grant", "Grantee")) {
+            if (m692("AccessControlPolicy", "AccessControlList", "Grant", "Grantee")) {
                 if (str.equals("ID")) {
-                    this.f694.mo539(m699());
+                    this.f682.mo533(m694());
                     return;
                 }
                 if (str.equals("EmailAddress")) {
-                    this.f694.mo539(m699());
+                    this.f682.mo533(m694());
                     return;
                 }
                 if (str.equals("URI")) {
-                    this.f694 = GroupGrantee.m575(m699());
+                    this.f682 = GroupGrantee.m569(m694());
                 } else if (str.equals("DisplayName")) {
-                    CanonicalGrantee canonicalGrantee = (CanonicalGrantee) this.f694;
-                    m699();
+                    CanonicalGrantee canonicalGrantee = (CanonicalGrantee) this.f682;
+                    m694();
                     canonicalGrantee.getClass();
                 }
             }
@@ -713,24 +713,24 @@ public class XmlResponsesSaxParser {
 
     public class BucketLoggingConfigurationHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketLoggingConfiguration f709 = new BucketLoggingConfiguration();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final BucketLoggingConfiguration f699 = new BucketLoggingConfiguration();
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("BucketLoggingStatus", "LoggingEnabled")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("BucketLoggingStatus", "LoggingEnabled")) {
                 boolean zEquals = str.equals("TargetBucket");
-                BucketLoggingConfiguration bucketLoggingConfiguration = this.f709;
+                BucketLoggingConfiguration bucketLoggingConfiguration = this.f699;
                 if (zEquals) {
-                    bucketLoggingConfiguration.m533(m699());
+                    bucketLoggingConfiguration.m527(m694());
                 } else if (str.equals("TargetPrefix")) {
-                    bucketLoggingConfiguration.m534(m699());
+                    bucketLoggingConfiguration.m528(m694());
                 }
             }
         }
@@ -739,154 +739,154 @@ public class XmlResponsesSaxParser {
     public class BucketLocationHandler extends AbstractHandler {
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m697() && str.equals("LocationConstraint")) {
-                m699().getClass();
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m691() && str.equals("LocationConstraint")) {
+                m694().getClass();
             }
         }
     }
 
     public class CopyObjectResultHandler extends AbstractSSEHandler implements ObjectExpirationResult, S3RequesterChargedResult, S3VersionResult {
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public final CopyObjectResult f729 = new CopyObjectResult();
-
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public String f728 = null;
-
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public String f730 = null;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public final CopyObjectResult f720 = new CopyObjectResult();
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public String f732 = null;
+        public String f721 = null;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public String f731 = null;
-
-        @Override // com.amazonaws.services.s3.model.transform.AbstractSSEHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final ServerSideEncryptionResult mo704() {
-            return this.f729;
-        }
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public String f719 = null;
 
         /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-        public final Date m722() {
-            return this.f729.m550();
+        public String f722 = null;
+
+        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+        public String f718 = null;
+
+        @Override // com.amazonaws.services.s3.model.transform.AbstractSSEHandler
+        /* JADX INFO: renamed from: ܳ */
+        public final ServerSideEncryptionResult mo696() {
+            return this.f720;
         }
 
-        /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-        public final String m723() {
-            return this.f729.m554();
+        /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+        public final Date m715() {
+            return this.f720.m546();
+        }
+
+        /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+        public final String m718() {
+            return this.f720.m545();
         }
 
         @Override // com.amazonaws.services.s3.internal.S3VersionResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo478(String str) {
-            this.f729.mo478(str);
+        public final void mo472(String str) {
+            this.f720.mo472(str);
         }
 
-        /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-        public final Date m721() {
-            return this.f729.m553();
+        /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+        public final Date m716() {
+            return this.f720.m549();
         }
 
         @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo468(Date date) {
-            this.f729.mo468(date);
+        public final void mo462(Date date) {
+            this.f720.mo462(date);
         }
 
-        /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-        public final String m724() {
-            return this.f729.m556();
+        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+        public final String m717() {
+            return this.f720.m547();
         }
 
         @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
-        /* JADX INFO: renamed from: ۨ */
-        public final void mo469(String str) {
-            this.f729.mo469(str);
+        /* JADX INFO: renamed from: ۤ */
+        public final void mo463(String str) {
+            this.f720.mo463(str);
         }
 
-        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-        public final String m716() {
-            return this.f729.m551();
+        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+        public final String m714() {
+            return this.f720.m551();
         }
 
-        /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-        public final String m720() {
-            return this.f728;
+        /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+        public final String m712() {
+            return this.f721;
         }
 
-        /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-        public final String m717() {
-            return this.f731;
+        /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+        public final String m710() {
+            return this.f718;
         }
 
-        /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-        public final String m718() {
-            return this.f730;
+        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+        public final String m713() {
+            return this.f719;
         }
 
-        /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-        public final String m725() {
-            return this.f732;
+        /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+        public final String m719() {
+            return this.f722;
         }
 
-        /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-        public final boolean m719() {
-            return this.f729.m552();
+        /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+        public final boolean m711() {
+            return this.f720.m544();
         }
 
         @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo465(boolean z) {
-            this.f729.mo465(z);
+        public final void mo459(boolean z) {
+            this.f720.mo459(z);
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (!m697() || str.equals("CopyObjectResult") || str.equals("CopyPartResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (!m691() || str.equals("CopyObjectResult") || str.equals("CopyPartResult")) {
                 return;
             }
             str.equals("Error");
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("CopyObjectResult") || m698("CopyPartResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("CopyObjectResult") || m692("CopyPartResult")) {
                 boolean zEquals = str.equals("LastModified");
-                CopyObjectResult copyObjectResult = this.f729;
+                CopyObjectResult copyObjectResult = this.f720;
                 if (zEquals) {
-                    String strM699 = m699();
-                    int i = ServiceUtils.f512;
-                    copyObjectResult.m555(DateUtils.m772(strM699));
+                    String strM694 = m694();
+                    int i = ServiceUtils.f502;
+                    copyObjectResult.m550(DateUtils.m766(strM694));
                     return;
                 } else {
                     if (str.equals("ETag")) {
-                        copyObjectResult.m557(ServiceUtils.m486(m699()));
+                        copyObjectResult.m548(ServiceUtils.m480(m694()));
                         return;
                     }
                     return;
                 }
             }
-            if (m698("Error")) {
+            if (m692("Error")) {
                 if (str.equals("Code")) {
-                    this.f728 = m699();
+                    this.f721 = m694();
                     return;
                 }
                 if (str.equals("Message")) {
-                    this.f730 = m699();
+                    this.f719 = m694();
                 } else if (str.equals("RequestId")) {
-                    this.f732 = m699();
+                    this.f722 = m694();
                 } else if (str.equals("HostId")) {
-                    this.f731 = m699();
+                    this.f718 = m694();
                 }
             }
         }
@@ -895,27 +895,27 @@ public class XmlResponsesSaxParser {
     public class RequestPaymentConfigurationHandler extends AbstractHandler {
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("RequestPaymentConfiguration") && str.equals("Payer")) {
-                m699();
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("RequestPaymentConfiguration") && str.equals("Payer")) {
+                m694();
             }
         }
     }
 
     public class ListVersionsHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public Owner f790;
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public Owner f780;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListVersionsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListVersionsResult")) {
                 if (str.equals(e.g)) {
                     new S3VersionSummary();
                     throw null;
@@ -926,59 +926,59 @@ public class XmlResponsesSaxParser {
                 }
                 return;
             }
-            if ((m698("ListVersionsResult", e.g) || m698("ListVersionsResult", "DeleteMarker")) && str.equals("Owner")) {
-                this.f790 = new Owner();
+            if ((m692("ListVersionsResult", e.g) || m692("ListVersionsResult", "DeleteMarker")) && str.equals("Owner")) {
+                this.f780 = new Owner();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListVersionsResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListVersionsResult")) {
                 if (str.equals("Name")) {
-                    m699();
+                    m694();
                     throw null;
                 }
                 if (str.equals("Prefix")) {
-                    m699();
-                    int i = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("KeyMarker")) {
-                    m699();
-                    int i2 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i2 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("VersionIdMarker")) {
-                    m699();
-                    int i3 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i3 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("MaxKeys")) {
-                    Integer.parseInt(m699());
+                    Integer.parseInt(m694());
                     throw null;
                 }
                 if (str.equals("Delimiter")) {
-                    m699();
-                    int i4 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i4 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("EncodingType")) {
-                    m699();
-                    int i5 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i5 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("NextKeyMarker")) {
-                    m699();
-                    int i6 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i6 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 if (str.equals("NextVersionIdMarker")) {
-                    m699();
+                    m694();
                     throw null;
                 }
                 if (str.equals("IsTruncated")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     throw null;
                 }
                 if (str.equals(e.g) || str.equals("DeleteMarker")) {
@@ -986,58 +986,58 @@ public class XmlResponsesSaxParser {
                 }
                 return;
             }
-            if (m698("ListVersionsResult", "CommonPrefixes")) {
+            if (m692("ListVersionsResult", "CommonPrefixes")) {
                 if (str.equals("Prefix")) {
-                    m699();
-                    int i7 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i7 = XmlResponsesSaxParser.f680;
                     throw null;
                 }
                 return;
             }
-            if (m698("ListVersionsResult", e.g) || m698("ListVersionsResult", "DeleteMarker")) {
+            if (m692("ListVersionsResult", e.g) || m692("ListVersionsResult", "DeleteMarker")) {
                 if (str.equals("Key")) {
-                    m699();
-                    int i8 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i8 = XmlResponsesSaxParser.f680;
                     return;
                 }
                 if (str.equals("VersionId")) {
-                    m699();
+                    m694();
                     return;
                 }
                 if (str.equals("IsLatest")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     return;
                 }
                 if (str.equals("LastModified")) {
-                    String strM699 = m699();
-                    int i9 = ServiceUtils.f512;
-                    DateUtils.m772(strM699);
+                    String strM694 = m694();
+                    int i9 = ServiceUtils.f502;
+                    DateUtils.m766(strM694);
                     return;
                 } else {
                     if (str.equals("ETag")) {
-                        ServiceUtils.m486(m699());
+                        ServiceUtils.m480(m694());
                         return;
                     }
                     if (str.equals("Size")) {
-                        Long.parseLong(m699());
+                        Long.parseLong(m694());
                         return;
                     } else if (str.equals("Owner")) {
-                        this.f790 = null;
+                        this.f780 = null;
                         return;
                     } else {
                         if (str.equals("StorageClass")) {
-                            m699();
+                            m694();
                             return;
                         }
                         return;
                     }
                 }
             }
-            if (m698("ListVersionsResult", e.g, "Owner") || m698("ListVersionsResult", "DeleteMarker", "Owner")) {
+            if (m692("ListVersionsResult", e.g, "Owner") || m692("ListVersionsResult", "DeleteMarker", "Owner")) {
                 if (str.equals("ID")) {
-                    this.f790.m642(m699());
+                    this.f780.m636(m694());
                 } else if (str.equals("DisplayName")) {
-                    this.f790.m641(m699());
+                    this.f780.m635(m694());
                 }
             }
         }
@@ -1045,129 +1045,129 @@ public class XmlResponsesSaxParser {
 
     public class BucketWebsiteConfigurationHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketWebsiteConfiguration f719 = new BucketWebsiteConfiguration();
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public RoutingRuleCondition f721 = null;
-
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public RedirectRule f720 = null;
-
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public RoutingRule f722 = null;
+        public final BucketWebsiteConfiguration f711 = new BucketWebsiteConfiguration();
+
+        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+        public RoutingRuleCondition f709 = null;
+
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public RedirectRule f710 = null;
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public RoutingRule f712 = null;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("WebsiteConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("WebsiteConfiguration")) {
                 if (str.equals("RedirectAllRequestsTo")) {
-                    this.f720 = new RedirectRule();
+                    this.f710 = new RedirectRule();
                 }
-            } else if (m698("WebsiteConfiguration", "RoutingRules")) {
+            } else if (m692("WebsiteConfiguration", "RoutingRules")) {
                 if (str.equals("RoutingRule")) {
-                    this.f722 = new RoutingRule();
+                    this.f712 = new RoutingRule();
                 }
-            } else if (m698("WebsiteConfiguration", "RoutingRules", "RoutingRule")) {
+            } else if (m692("WebsiteConfiguration", "RoutingRules", "RoutingRule")) {
                 if (str.equals("Condition")) {
-                    this.f721 = new RoutingRuleCondition();
+                    this.f709 = new RoutingRuleCondition();
                 } else if (str.equals("Redirect")) {
-                    this.f720 = new RedirectRule();
+                    this.f710 = new RedirectRule();
                 }
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            boolean zM698 = m698("WebsiteConfiguration");
-            BucketWebsiteConfiguration bucketWebsiteConfiguration = this.f719;
-            if (zM698) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            boolean zM692 = m692("WebsiteConfiguration");
+            BucketWebsiteConfiguration bucketWebsiteConfiguration = this.f711;
+            if (zM692) {
                 if (str.equals("RedirectAllRequestsTo")) {
                     bucketWebsiteConfiguration.getClass();
-                    this.f720 = null;
+                    this.f710 = null;
                     return;
                 }
                 return;
             }
-            if (m698("WebsiteConfiguration", "IndexDocument")) {
+            if (m692("WebsiteConfiguration", "IndexDocument")) {
                 if (str.equals("Suffix")) {
-                    m699();
+                    m694();
                     bucketWebsiteConfiguration.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("WebsiteConfiguration", "ErrorDocument")) {
+            if (m692("WebsiteConfiguration", "ErrorDocument")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     bucketWebsiteConfiguration.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("WebsiteConfiguration", "RoutingRules")) {
+            if (m692("WebsiteConfiguration", "RoutingRules")) {
                 if (str.equals("RoutingRule")) {
-                    bucketWebsiteConfiguration.m537().add(this.f722);
-                    this.f722 = null;
+                    bucketWebsiteConfiguration.m531().add(this.f712);
+                    this.f712 = null;
                     return;
                 }
                 return;
             }
-            if (m698("WebsiteConfiguration", "RoutingRules", "RoutingRule")) {
+            if (m692("WebsiteConfiguration", "RoutingRules", "RoutingRule")) {
                 if (str.equals("Condition")) {
-                    this.f722.getClass();
-                    this.f721 = null;
+                    this.f712.getClass();
+                    this.f709 = null;
                     return;
                 } else {
                     if (str.equals("Redirect")) {
-                        this.f722.getClass();
-                        this.f720 = null;
+                        this.f712.getClass();
+                        this.f710 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("WebsiteConfiguration", "RoutingRules", "RoutingRule", "Condition")) {
+            if (m692("WebsiteConfiguration", "RoutingRules", "RoutingRule", "Condition")) {
                 if (str.equals("KeyPrefixEquals")) {
-                    RoutingRuleCondition routingRuleCondition = this.f721;
-                    m699();
+                    RoutingRuleCondition routingRuleCondition = this.f709;
+                    m694();
                     routingRuleCondition.getClass();
                     return;
                 } else {
                     if (str.equals("HttpErrorCodeReturnedEquals")) {
-                        RoutingRuleCondition routingRuleCondition2 = this.f721;
-                        m699();
+                        RoutingRuleCondition routingRuleCondition2 = this.f709;
+                        m694();
                         routingRuleCondition2.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("WebsiteConfiguration", "RedirectAllRequestsTo") || m698("WebsiteConfiguration", "RoutingRules", "RoutingRule", "Redirect")) {
+            if (m692("WebsiteConfiguration", "RedirectAllRequestsTo") || m692("WebsiteConfiguration", "RoutingRules", "RoutingRule", "Redirect")) {
                 if (str.equals("Protocol")) {
-                    RedirectRule redirectRule = this.f720;
-                    m699();
+                    RedirectRule redirectRule = this.f710;
+                    m694();
                     redirectRule.getClass();
                     return;
                 }
                 if (str.equals("HostName")) {
-                    RedirectRule redirectRule2 = this.f720;
-                    m699();
+                    RedirectRule redirectRule2 = this.f710;
+                    m694();
                     redirectRule2.getClass();
                     return;
                 }
                 if (str.equals("ReplaceKeyPrefixWith")) {
-                    RedirectRule redirectRule3 = this.f720;
-                    m699();
+                    RedirectRule redirectRule3 = this.f710;
+                    m694();
                     redirectRule3.getClass();
                 } else if (str.equals("ReplaceKeyWith")) {
-                    RedirectRule redirectRule4 = this.f720;
-                    m699();
+                    RedirectRule redirectRule4 = this.f710;
+                    m694();
                     redirectRule4.getClass();
                 } else if (str.equals("HttpRedirectCode")) {
-                    RedirectRule redirectRule5 = this.f720;
-                    m699();
+                    RedirectRule redirectRule5 = this.f710;
+                    m694();
                     redirectRule5.getClass();
                 }
             }
@@ -1176,28 +1176,28 @@ public class XmlResponsesSaxParser {
 
     public class BucketVersioningConfigurationHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketVersioningConfiguration f718 = new BucketVersioningConfiguration();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final BucketVersioningConfiguration f708 = new BucketVersioningConfiguration();
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("VersioningConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("VersioningConfiguration")) {
                 boolean zEquals = str.equals("Status");
-                BucketVersioningConfiguration bucketVersioningConfiguration = this.f718;
+                BucketVersioningConfiguration bucketVersioningConfiguration = this.f708;
                 if (zEquals) {
-                    m699();
+                    m694();
                     bucketVersioningConfiguration.getClass();
                 } else if (str.equals("MfaDelete")) {
-                    String strM699 = m699();
-                    if (strM699.equals("Disabled")) {
+                    String strM694 = m694();
+                    if (strM694.equals("Disabled")) {
                         bucketVersioningConfiguration.getClass();
-                    } else if (strM699.equals("Enabled")) {
+                    } else if (strM694.equals("Enabled")) {
                         bucketVersioningConfiguration.getClass();
                     } else {
                         bucketVersioningConfiguration.getClass();
@@ -1209,20 +1209,20 @@ public class XmlResponsesSaxParser {
 
     public class BucketAccelerateConfigurationHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketAccelerateConfiguration f695 = new BucketAccelerateConfiguration();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final BucketAccelerateConfiguration f685 = new BucketAccelerateConfiguration();
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("AccelerateConfiguration") && str.equals("Status")) {
-                m699();
-                this.f695.getClass();
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("AccelerateConfiguration") && str.equals("Status")) {
+                m694();
+                this.f685.getClass();
             }
         }
     }
@@ -1230,39 +1230,39 @@ public class XmlResponsesSaxParser {
     public class CompleteMultipartUploadHandler extends AbstractSSEHandler implements ObjectExpirationResult, S3VersionResult, S3RequesterChargedResult {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public AmazonS3Exception f723;
+        public String f713;
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public CompleteMultipartUploadResult f724;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public String f714;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public String f725;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public String f726;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public CompleteMultipartUploadResult f715;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public String f727;
+        public AmazonS3Exception f716;
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public String f717;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractSSEHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final ServerSideEncryptionResult mo704() {
-            return this.f724;
+        /* JADX INFO: renamed from: ܳ */
+        public final ServerSideEncryptionResult mo696() {
+            return this.f715;
         }
 
         @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo468(Date date) {
-            CompleteMultipartUploadResult completeMultipartUploadResult = this.f724;
+        public final void mo462(Date date) {
+            CompleteMultipartUploadResult completeMultipartUploadResult = this.f715;
             if (completeMultipartUploadResult != null) {
                 completeMultipartUploadResult.getClass();
             }
         }
 
         @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
-        /* JADX INFO: renamed from: ۨ */
-        public final void mo469(String str) {
-            CompleteMultipartUploadResult completeMultipartUploadResult = this.f724;
+        /* JADX INFO: renamed from: ۤ */
+        public final void mo463(String str) {
+            CompleteMultipartUploadResult completeMultipartUploadResult = this.f715;
             if (completeMultipartUploadResult != null) {
                 completeMultipartUploadResult.getClass();
             }
@@ -1270,8 +1270,8 @@ public class XmlResponsesSaxParser {
 
         @Override // com.amazonaws.services.s3.internal.S3VersionResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo478(String str) {
-            CompleteMultipartUploadResult completeMultipartUploadResult = this.f724;
+        public final void mo472(String str) {
+            CompleteMultipartUploadResult completeMultipartUploadResult = this.f715;
             if (completeMultipartUploadResult != null) {
                 completeMultipartUploadResult.getClass();
             }
@@ -1279,82 +1279,82 @@ public class XmlResponsesSaxParser {
 
         @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
         /* JADX INFO: renamed from: ۙ */
-        public final void mo465(boolean z) {
-            CompleteMultipartUploadResult completeMultipartUploadResult = this.f724;
+        public final void mo459(boolean z) {
+            CompleteMultipartUploadResult completeMultipartUploadResult = this.f715;
             if (completeMultipartUploadResult != null) {
                 completeMultipartUploadResult.getClass();
             }
         }
 
-        /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-        public final CompleteMultipartUploadResult m715() {
-            return this.f724;
+        /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+        public final CompleteMultipartUploadResult m708() {
+            return this.f715;
         }
 
-        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-        public final AmazonS3Exception m714() {
-            return this.f723;
+        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+        public final AmazonS3Exception m709() {
+            return this.f716;
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m697() && str.equals("CompleteMultipartUploadResult")) {
-                this.f724 = new CompleteMultipartUploadResult();
+        public final void mo690(String str, Attributes attributes) {
+            if (m691() && str.equals("CompleteMultipartUploadResult")) {
+                this.f715 = new CompleteMultipartUploadResult();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
             AmazonS3Exception amazonS3Exception;
-            if (m697()) {
-                if (!str.equals("Error") || (amazonS3Exception = this.f723) == null) {
+            if (m691()) {
+                if (!str.equals("Error") || (amazonS3Exception = this.f716) == null) {
                     return;
                 }
-                amazonS3Exception.m146(this.f726);
-                this.f723.m148(this.f727);
-                this.f723.m525(this.f725);
+                amazonS3Exception.m138(this.f713);
+                this.f716.m140(this.f717);
+                this.f716.m519(this.f714);
                 return;
             }
-            if (m698("CompleteMultipartUploadResult")) {
+            if (m692("CompleteMultipartUploadResult")) {
                 if (str.equals("Location")) {
-                    CompleteMultipartUploadResult completeMultipartUploadResult = this.f724;
-                    m699();
+                    CompleteMultipartUploadResult completeMultipartUploadResult = this.f715;
+                    m694();
                     completeMultipartUploadResult.getClass();
                     return;
                 }
                 if (str.equals("Bucket")) {
-                    CompleteMultipartUploadResult completeMultipartUploadResult2 = this.f724;
-                    m699();
+                    CompleteMultipartUploadResult completeMultipartUploadResult2 = this.f715;
+                    m694();
                     completeMultipartUploadResult2.getClass();
                     return;
                 } else if (str.equals("Key")) {
-                    CompleteMultipartUploadResult completeMultipartUploadResult3 = this.f724;
-                    m699();
+                    CompleteMultipartUploadResult completeMultipartUploadResult3 = this.f715;
+                    m694();
                     completeMultipartUploadResult3.getClass();
                     return;
                 } else {
                     if (str.equals("ETag")) {
-                        CompleteMultipartUploadResult completeMultipartUploadResult4 = this.f724;
-                        ServiceUtils.m486(m699());
+                        CompleteMultipartUploadResult completeMultipartUploadResult4 = this.f715;
+                        ServiceUtils.m480(m694());
                         completeMultipartUploadResult4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("Error")) {
+            if (m692("Error")) {
                 if (str.equals("Code")) {
-                    this.f726 = m699();
+                    this.f713 = m694();
                     return;
                 }
                 if (str.equals("Message")) {
-                    this.f723 = new AmazonS3Exception(m699());
+                    this.f716 = new AmazonS3Exception(m694());
                 } else if (str.equals("RequestId")) {
-                    this.f727 = m699();
+                    this.f717 = m694();
                 } else if (str.equals("HostId")) {
-                    this.f725 = m699();
+                    this.f714 = m694();
                 }
             }
         }
@@ -1362,33 +1362,33 @@ public class XmlResponsesSaxParser {
 
     public class InitiateMultipartUploadHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final InitiateMultipartUploadResult f755 = new InitiateMultipartUploadResult();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public final InitiateMultipartUploadResult f745 = new InitiateMultipartUploadResult();
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
+        public final void mo690(String str, Attributes attributes) {
         }
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final InitiateMultipartUploadResult m727() {
-            return this.f755;
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final InitiateMultipartUploadResult m721() {
+            return this.f745;
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("InitiateMultipartUploadResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("InitiateMultipartUploadResult")) {
                 boolean zEquals = str.equals("Bucket");
-                InitiateMultipartUploadResult initiateMultipartUploadResult = this.f755;
+                InitiateMultipartUploadResult initiateMultipartUploadResult = this.f745;
                 if (zEquals) {
-                    m699();
+                    m694();
                     initiateMultipartUploadResult.getClass();
                 } else if (str.equals("Key")) {
-                    m699();
+                    m694();
                     initiateMultipartUploadResult.getClass();
                 } else if (str.equals("UploadId")) {
-                    initiateMultipartUploadResult.m589(m699());
+                    initiateMultipartUploadResult.m582(m694());
                 }
             }
         }
@@ -1397,150 +1397,150 @@ public class XmlResponsesSaxParser {
     public class ListMultipartUploadsHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public MultipartUpload f782;
+        public Owner f772;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public final MultipartUploadListing f783 = new MultipartUploadListing();
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public final MultipartUploadListing f773 = new MultipartUploadListing();
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public Owner f784;
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public MultipartUpload f774;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListMultipartUploadsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListMultipartUploadsResult")) {
                 if (str.equals("Upload")) {
-                    this.f782 = new MultipartUpload();
+                    this.f774 = new MultipartUpload();
                 }
-            } else if (m698("ListMultipartUploadsResult", "Upload")) {
+            } else if (m692("ListMultipartUploadsResult", "Upload")) {
                 if (str.equals("Owner") || str.equals("Initiator")) {
-                    this.f784 = new Owner();
+                    this.f772 = new Owner();
                 }
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            boolean zM698 = m698("ListMultipartUploadsResult");
-            MultipartUploadListing multipartUploadListing = this.f783;
-            if (zM698) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            boolean zM692 = m692("ListMultipartUploadsResult");
+            MultipartUploadListing multipartUploadListing = this.f773;
+            if (zM692) {
                 if (str.equals("Bucket")) {
-                    m699();
+                    m694();
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("KeyMarker")) {
-                    m699();
-                    int i = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("Delimiter")) {
-                    m699();
-                    int i2 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i2 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("Prefix")) {
-                    m699();
-                    int i3 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i3 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("UploadIdMarker")) {
-                    m699();
-                    int i4 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i4 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("NextKeyMarker")) {
-                    m699();
-                    int i5 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i5 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("NextUploadIdMarker")) {
-                    m699();
-                    int i6 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i6 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("MaxUploads")) {
-                    Integer.parseInt(m699());
+                    Integer.parseInt(m694());
                     multipartUploadListing.getClass();
                     return;
                 }
                 if (str.equals("EncodingType")) {
-                    m699();
-                    int i7 = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i7 = XmlResponsesSaxParser.f680;
                     multipartUploadListing.getClass();
                     return;
                 } else if (str.equals("IsTruncated")) {
-                    Boolean.parseBoolean(m699());
+                    Boolean.parseBoolean(m694());
                     multipartUploadListing.getClass();
                     return;
                 } else {
                     if (str.equals("Upload")) {
-                        ((ArrayList) multipartUploadListing.m605()).add(this.f782);
-                        this.f782 = null;
+                        ((ArrayList) multipartUploadListing.m599()).add(this.f774);
+                        this.f774 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMultipartUploadsResult", "CommonPrefixes")) {
+            if (m692("ListMultipartUploadsResult", "CommonPrefixes")) {
                 if (str.equals("Prefix")) {
-                    multipartUploadListing.m604().add(m699());
+                    multipartUploadListing.m598().add(m694());
                     return;
                 }
                 return;
             }
-            if (m698("ListMultipartUploadsResult", "Upload")) {
+            if (m692("ListMultipartUploadsResult", "Upload")) {
                 if (str.equals("Key")) {
-                    MultipartUpload multipartUpload = this.f782;
-                    m699();
+                    MultipartUpload multipartUpload = this.f774;
+                    m694();
                     multipartUpload.getClass();
                     return;
                 }
                 if (str.equals("UploadId")) {
-                    MultipartUpload multipartUpload2 = this.f782;
-                    m699();
+                    MultipartUpload multipartUpload2 = this.f774;
+                    m694();
                     multipartUpload2.getClass();
                     return;
                 }
                 if (str.equals("Owner")) {
-                    this.f782.getClass();
-                    this.f784 = null;
+                    this.f774.getClass();
+                    this.f772 = null;
                     return;
                 }
                 if (str.equals("Initiator")) {
-                    this.f782.getClass();
-                    this.f784 = null;
+                    this.f774.getClass();
+                    this.f772 = null;
                     return;
                 }
                 if (str.equals("StorageClass")) {
-                    MultipartUpload multipartUpload3 = this.f782;
-                    m699();
+                    MultipartUpload multipartUpload3 = this.f774;
+                    m694();
                     multipartUpload3.getClass();
                     return;
                 } else {
                     if (str.equals("Initiated")) {
-                        MultipartUpload multipartUpload4 = this.f782;
-                        String strM699 = m699();
-                        int i8 = ServiceUtils.f512;
-                        DateUtils.m772(strM699);
+                        MultipartUpload multipartUpload4 = this.f774;
+                        String strM694 = m694();
+                        int i8 = ServiceUtils.f502;
+                        DateUtils.m766(strM694);
                         multipartUpload4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMultipartUploadsResult", "Upload", "Owner") || m698("ListMultipartUploadsResult", "Upload", "Initiator")) {
+            if (m692("ListMultipartUploadsResult", "Upload", "Owner") || m692("ListMultipartUploadsResult", "Upload", "Initiator")) {
                 if (str.equals("ID")) {
-                    this.f784.m642(XmlResponsesSaxParser.m708(m699()));
+                    this.f772.m636(XmlResponsesSaxParser.m702(m694()));
                 } else if (str.equals("DisplayName")) {
-                    this.f784.m641(XmlResponsesSaxParser.m708(m699()));
+                    this.f772.m635(XmlResponsesSaxParser.m702(m694()));
                 }
             }
         }
@@ -1549,136 +1549,136 @@ public class XmlResponsesSaxParser {
     public class ListPartsHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public Owner f787;
+        public PartSummary f777;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public final PartListing f788 = new PartListing();
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public final PartListing f778 = new PartListing();
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public PartSummary f789;
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public Owner f779;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListPartsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListPartsResult")) {
                 if (str.equals("Part")) {
-                    this.f789 = new PartSummary();
+                    this.f777 = new PartSummary();
                 } else if (str.equals("Owner") || str.equals("Initiator")) {
-                    this.f787 = new Owner();
+                    this.f779 = new Owner();
                 }
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListPartsResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListPartsResult")) {
                 boolean zEquals = str.equals("Bucket");
-                PartListing partListing = this.f788;
+                PartListing partListing = this.f778;
                 if (zEquals) {
-                    m699();
+                    m694();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("UploadId")) {
-                    m699();
+                    m694();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("Owner")) {
                     partListing.getClass();
-                    this.f787 = null;
+                    this.f779 = null;
                     return;
                 }
                 if (str.equals("Initiator")) {
                     partListing.getClass();
-                    this.f787 = null;
+                    this.f779 = null;
                     return;
                 }
                 if (str.equals("StorageClass")) {
-                    m699();
+                    m694();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("PartNumberMarker")) {
-                    m699();
-                    String strM708 = XmlResponsesSaxParser.m708(m699());
-                    (strM708 != null ? Integer.valueOf(Integer.parseInt(strM708)) : null).getClass();
+                    m694();
+                    String strM702 = XmlResponsesSaxParser.m702(m694());
+                    (strM702 != null ? Integer.valueOf(Integer.parseInt(strM702)) : null).getClass();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("NextPartNumberMarker")) {
-                    m699();
-                    String strM709 = XmlResponsesSaxParser.m708(m699());
-                    (strM709 != null ? Integer.valueOf(Integer.parseInt(strM709)) : null).getClass();
+                    m694();
+                    String strM703 = XmlResponsesSaxParser.m702(m694());
+                    (strM703 != null ? Integer.valueOf(Integer.parseInt(strM703)) : null).getClass();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("MaxParts")) {
-                    m699();
-                    String strM7010 = XmlResponsesSaxParser.m708(m699());
-                    (strM7010 != null ? Integer.valueOf(Integer.parseInt(strM7010)) : null).getClass();
+                    m694();
+                    String strM704 = XmlResponsesSaxParser.m702(m694());
+                    (strM704 != null ? Integer.valueOf(Integer.parseInt(strM704)) : null).getClass();
                     partListing.getClass();
                     return;
                 }
                 if (str.equals("EncodingType")) {
-                    m699();
-                    int i = XmlResponsesSaxParser.f690;
+                    m694();
+                    int i = XmlResponsesSaxParser.f680;
                     partListing.getClass();
                     return;
                 } else if (str.equals("IsTruncated")) {
-                    Boolean.parseBoolean(m699());
+                    Boolean.parseBoolean(m694());
                     partListing.getClass();
                     return;
                 } else {
                     if (str.equals("Part")) {
-                        ((ArrayList) partListing.m645()).add(this.f789);
-                        this.f789 = null;
+                        ((ArrayList) partListing.m639()).add(this.f777);
+                        this.f777 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListPartsResult", "Part")) {
+            if (m692("ListPartsResult", "Part")) {
                 if (str.equals("PartNumber")) {
-                    PartSummary partSummary = this.f789;
-                    Integer.parseInt(m699());
+                    PartSummary partSummary = this.f777;
+                    Integer.parseInt(m694());
                     partSummary.getClass();
                     return;
                 }
                 if (str.equals("LastModified")) {
-                    PartSummary partSummary2 = this.f789;
-                    String strM699 = m699();
-                    int i2 = ServiceUtils.f512;
-                    DateUtils.m772(strM699);
+                    PartSummary partSummary2 = this.f777;
+                    String strM694 = m694();
+                    int i2 = ServiceUtils.f502;
+                    DateUtils.m766(strM694);
                     partSummary2.getClass();
                     return;
                 }
                 if (str.equals("ETag")) {
-                    PartSummary partSummary3 = this.f789;
-                    ServiceUtils.m486(m699());
+                    PartSummary partSummary3 = this.f777;
+                    ServiceUtils.m480(m694());
                     partSummary3.getClass();
                     return;
                 } else {
                     if (str.equals("Size")) {
-                        PartSummary partSummary4 = this.f789;
-                        Long.parseLong(m699());
+                        PartSummary partSummary4 = this.f777;
+                        Long.parseLong(m694());
                         partSummary4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListPartsResult", "Owner") || m698("ListPartsResult", "Initiator")) {
+            if (m692("ListPartsResult", "Owner") || m692("ListPartsResult", "Initiator")) {
                 if (str.equals("ID")) {
-                    this.f787.m642(XmlResponsesSaxParser.m708(m699()));
+                    this.f779.m636(XmlResponsesSaxParser.m702(m694()));
                 } else if (str.equals("DisplayName")) {
-                    this.f787.m641(XmlResponsesSaxParser.m708(m699()));
+                    this.f779.m635(XmlResponsesSaxParser.m702(m694()));
                 }
             }
         }
@@ -1687,72 +1687,72 @@ public class XmlResponsesSaxParser {
     public class BucketReplicationConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketReplicationConfiguration f710 = new BucketReplicationConfiguration();
+        public ReplicationRule f700;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public String f711;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public ReplicationRule f712;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public String f701;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public ReplicationDestinationConfig f713;
+        public final BucketReplicationConfiguration f702 = new BucketReplicationConfiguration();
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public ReplicationDestinationConfig f703;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ReplicationConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ReplicationConfiguration")) {
                 if (str.equals("Rule")) {
-                    this.f712 = new ReplicationRule();
+                    this.f700 = new ReplicationRule();
                 }
-            } else if (m698("ReplicationConfiguration", "Rule") && str.equals("Destination")) {
-                this.f713 = new ReplicationDestinationConfig();
+            } else if (m692("ReplicationConfiguration", "Rule") && str.equals("Destination")) {
+                this.f703 = new ReplicationDestinationConfig();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ReplicationConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ReplicationConfiguration")) {
                 boolean zEquals = str.equals("Rule");
-                BucketReplicationConfiguration bucketReplicationConfiguration = this.f710;
+                BucketReplicationConfiguration bucketReplicationConfiguration = this.f702;
                 if (zEquals) {
-                    bucketReplicationConfiguration.m535(this.f711, this.f712);
-                    this.f712 = null;
-                    this.f711 = null;
-                    this.f713 = null;
+                    bucketReplicationConfiguration.m529(this.f701, this.f700);
+                    this.f700 = null;
+                    this.f701 = null;
+                    this.f703 = null;
                     return;
                 }
                 if (str.equals("Role")) {
-                    m699();
+                    m694();
                     bucketReplicationConfiguration.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("ReplicationConfiguration", "Rule")) {
+            if (m692("ReplicationConfiguration", "Rule")) {
                 if (str.equals("ID")) {
-                    this.f711 = m699();
+                    this.f701 = m694();
                     return;
                 }
                 if (str.equals("Prefix")) {
-                    ReplicationRule replicationRule = this.f712;
-                    String strM699 = m699();
+                    ReplicationRule replicationRule = this.f700;
+                    String strM694 = m694();
                     replicationRule.getClass();
-                    if (strM699 == null) {
+                    if (strM694 == null) {
                         throw new IllegalArgumentException("Prefix cannot be null for a replication rule");
                     }
                     return;
                 }
                 if (str.equals("Status")) {
-                    ReplicationRule replicationRule2 = this.f712;
-                    m699();
+                    ReplicationRule replicationRule2 = this.f700;
+                    m694();
                     replicationRule2.getClass();
                     return;
                 } else {
                     if (str.equals("Destination")) {
-                        ReplicationRule replicationRule3 = this.f712;
-                        ReplicationDestinationConfig replicationDestinationConfig = this.f713;
+                        ReplicationRule replicationRule3 = this.f700;
+                        ReplicationDestinationConfig replicationDestinationConfig = this.f703;
                         replicationRule3.getClass();
                         if (replicationDestinationConfig == null) {
                             throw new IllegalArgumentException("Destination cannot be null in the replication rule");
@@ -1762,19 +1762,19 @@ public class XmlResponsesSaxParser {
                     return;
                 }
             }
-            if (m698("ReplicationConfiguration", "Rule", "Destination")) {
+            if (m692("ReplicationConfiguration", "Rule", "Destination")) {
                 if (str.equals("Bucket")) {
-                    ReplicationDestinationConfig replicationDestinationConfig2 = this.f713;
-                    String strM6910 = m699();
+                    ReplicationDestinationConfig replicationDestinationConfig2 = this.f703;
+                    String strM695 = m694();
                     replicationDestinationConfig2.getClass();
-                    if (strM6910 == null) {
+                    if (strM695 == null) {
                         throw new IllegalArgumentException("Bucket name cannot be null");
                     }
                     return;
                 }
                 if (str.equals("StorageClass")) {
-                    ReplicationDestinationConfig replicationDestinationConfig3 = this.f713;
-                    m699();
+                    ReplicationDestinationConfig replicationDestinationConfig3 = this.f703;
+                    m694();
                     replicationDestinationConfig3.getClass();
                 }
             }
@@ -1784,54 +1784,54 @@ public class XmlResponsesSaxParser {
     public class BucketTaggingConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final BucketTaggingConfiguration f714 = new BucketTaggingConfiguration();
+        public String f704;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public HashMap f715;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public String f716;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public HashMap f705;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public String f717;
+        public final BucketTaggingConfiguration f706 = new BucketTaggingConfiguration();
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public String f707;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("Tagging") && str.equals("TagSet")) {
-                this.f715 = new HashMap();
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("Tagging") && str.equals("TagSet")) {
+                this.f705 = new HashMap();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
             String str2;
-            if (m698("Tagging")) {
+            if (m692("Tagging")) {
                 if (str.equals("TagSet")) {
-                    this.f714.m536().add(new TagSet(this.f715));
-                    this.f715 = null;
+                    this.f706.m530().add(new TagSet(this.f705));
+                    this.f705 = null;
                     return;
                 }
                 return;
             }
-            if (m698("Tagging", "TagSet")) {
+            if (m692("Tagging", "TagSet")) {
                 if (str.equals("Tag")) {
-                    String str3 = this.f716;
-                    if (str3 != null && (str2 = this.f717) != null) {
-                        this.f715.put(str3, str2);
+                    String str3 = this.f704;
+                    if (str3 != null && (str2 = this.f707) != null) {
+                        this.f705.put(str3, str2);
                     }
-                    this.f716 = null;
-                    this.f717 = null;
+                    this.f704 = null;
+                    this.f707 = null;
                     return;
                 }
                 return;
             }
-            if (m698("Tagging", "TagSet", "Tag")) {
+            if (m692("Tagging", "TagSet", "Tag")) {
                 if (str.equals("Key")) {
-                    this.f716 = m699();
+                    this.f704 = m694();
                 } else if (str.equals("Value")) {
-                    this.f717 = m699();
+                    this.f707 = m694();
                 }
             }
         }
@@ -1840,42 +1840,42 @@ public class XmlResponsesSaxParser {
     public class GetObjectTaggingHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public String f752;
+        public String f742;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public ArrayList f753;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public ArrayList f743;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public String f754;
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public String f744;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("Tagging") && str.equals("TagSet")) {
-                this.f753 = new ArrayList();
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("Tagging") && str.equals("TagSet")) {
+                this.f743 = new ArrayList();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("Tagging") && str.equals("TagSet")) {
-                this.f753 = null;
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("Tagging") && str.equals("TagSet")) {
+                this.f743 = null;
             }
-            if (m698("Tagging", "TagSet")) {
+            if (m692("Tagging", "TagSet")) {
                 if (str.equals("Tag")) {
-                    this.f753.add(new Tag(this.f752, this.f754));
-                    this.f752 = null;
-                    this.f754 = null;
+                    this.f743.add(new Tag(this.f744, this.f742));
+                    this.f744 = null;
+                    this.f742 = null;
                     return;
                 }
                 return;
             }
-            if (m698("Tagging", "TagSet", "Tag")) {
+            if (m692("Tagging", "TagSet", "Tag")) {
                 if (str.equals("Key")) {
-                    this.f752 = m699();
+                    this.f744 = m694();
                 } else if (str.equals("Value")) {
-                    this.f754 = m699();
+                    this.f742 = m694();
                 }
             }
         }
@@ -1883,93 +1883,93 @@ public class XmlResponsesSaxParser {
 
     public class DeleteObjectsHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public final DeleteObjectsResponse f734 = new DeleteObjectsResponse();
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public final DeleteObjectsResponse f724 = new DeleteObjectsResponse();
+
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public DeleteObjectsResult.DeletedObject f725 = null;
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public DeleteObjectsResult.DeletedObject f733 = null;
+        public MultiObjectDeleteException.DeleteError f723 = null;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public MultiObjectDeleteException.DeleteError f735 = null;
-
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final DeleteObjectsResponse m726() {
-            return this.f734;
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final DeleteObjectsResponse m720() {
+            return this.f724;
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("DeleteResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("DeleteResult")) {
                 if (str.equals("Deleted")) {
-                    this.f733 = new DeleteObjectsResult.DeletedObject();
+                    this.f725 = new DeleteObjectsResult.DeletedObject();
                 } else if (str.equals("Error")) {
-                    this.f735 = new MultiObjectDeleteException.DeleteError();
+                    this.f723 = new MultiObjectDeleteException.DeleteError();
                 }
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("DeleteResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("DeleteResult")) {
                 boolean zEquals = str.equals("Deleted");
-                DeleteObjectsResponse deleteObjectsResponse = this.f734;
+                DeleteObjectsResponse deleteObjectsResponse = this.f724;
                 if (zEquals) {
-                    ((ArrayList) deleteObjectsResponse.m464()).add(this.f733);
-                    this.f733 = null;
+                    ((ArrayList) deleteObjectsResponse.m458()).add(this.f725);
+                    this.f725 = null;
                     return;
                 }
                 if (str.equals("Error")) {
-                    ((ArrayList) deleteObjectsResponse.m466()).add(this.f735);
-                    this.f735 = null;
+                    ((ArrayList) deleteObjectsResponse.m460()).add(this.f723);
+                    this.f723 = null;
                     return;
                 }
                 return;
             }
-            if (m698("DeleteResult", "Deleted")) {
+            if (m692("DeleteResult", "Deleted")) {
                 if (str.equals("Key")) {
-                    DeleteObjectsResult.DeletedObject deletedObject = this.f733;
-                    m699();
+                    DeleteObjectsResult.DeletedObject deletedObject = this.f725;
+                    m694();
                     deletedObject.getClass();
                     return;
                 }
                 if (str.equals("VersionId")) {
-                    DeleteObjectsResult.DeletedObject deletedObject2 = this.f733;
-                    m699();
+                    DeleteObjectsResult.DeletedObject deletedObject2 = this.f725;
+                    m694();
                     deletedObject2.getClass();
                     return;
                 } else if (str.equals("DeleteMarker")) {
-                    DeleteObjectsResult.DeletedObject deletedObject3 = this.f733;
-                    m699().equals("true");
+                    DeleteObjectsResult.DeletedObject deletedObject3 = this.f725;
+                    m694().equals("true");
                     deletedObject3.getClass();
                     return;
                 } else {
                     if (str.equals("DeleteMarkerVersionId")) {
-                        DeleteObjectsResult.DeletedObject deletedObject4 = this.f733;
-                        m699();
+                        DeleteObjectsResult.DeletedObject deletedObject4 = this.f725;
+                        m694();
                         deletedObject4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("DeleteResult", "Error")) {
+            if (m692("DeleteResult", "Error")) {
                 if (str.equals("Key")) {
-                    this.f735.m603(m699());
+                    this.f723.m597(m694());
                     return;
                 }
                 if (str.equals("VersionId")) {
-                    MultiObjectDeleteException.DeleteError deleteError = this.f735;
-                    m699();
+                    MultiObjectDeleteException.DeleteError deleteError = this.f723;
+                    m694();
                     deleteError.getClass();
                 } else if (str.equals("Code")) {
-                    MultiObjectDeleteException.DeleteError deleteError2 = this.f735;
-                    m699();
+                    MultiObjectDeleteException.DeleteError deleteError2 = this.f723;
+                    m694();
                     deleteError2.getClass();
                 } else if (str.equals("Message")) {
-                    MultiObjectDeleteException.DeleteError deleteError3 = this.f735;
-                    m699();
+                    MultiObjectDeleteException.DeleteError deleteError3 = this.f723;
+                    m694();
                     deleteError3.getClass();
                 }
             }
@@ -1979,245 +1979,245 @@ public class XmlResponsesSaxParser {
     public class BucketLifecycleConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public AbortIncompleteMultipartUpload f702;
+        public ArrayList f692;
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public BucketLifecycleConfiguration.NoncurrentVersionTransition f703;
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public BucketLifecycleConfiguration.Rule f693;
 
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public BucketLifecycleConfiguration.Rule f704;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public final BucketLifecycleConfiguration f694 = new BucketLifecycleConfiguration(new ArrayList());
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public final BucketLifecycleConfiguration f705 = new BucketLifecycleConfiguration(new ArrayList());
+        /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+        public BucketLifecycleConfiguration.Transition f695;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public ArrayList f706;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public BucketLifecycleConfiguration.NoncurrentVersionTransition f696;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public LifecycleFilter f707;
+        public AbortIncompleteMultipartUpload f697;
 
-        /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-        public BucketLifecycleConfiguration.Transition f708;
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public LifecycleFilter f698;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("LifecycleConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("LifecycleConfiguration")) {
                 if (str.equals("Rule")) {
-                    this.f704 = new BucketLifecycleConfiguration.Rule();
+                    this.f693 = new BucketLifecycleConfiguration.Rule();
                     return;
                 }
                 return;
             }
-            if (m698("LifecycleConfiguration", "Rule")) {
-                if (str.equals(AbstractC11766.LOG_TAG)) {
-                    this.f708 = new BucketLifecycleConfiguration.Transition();
+            if (m692("LifecycleConfiguration", "Rule")) {
+                if (str.equals(AbstractC0329.LOG_TAG)) {
+                    this.f695 = new BucketLifecycleConfiguration.Transition();
                     return;
                 }
                 if (str.equals("NoncurrentVersionTransition")) {
-                    this.f703 = new BucketLifecycleConfiguration.NoncurrentVersionTransition();
+                    this.f696 = new BucketLifecycleConfiguration.NoncurrentVersionTransition();
                     return;
                 } else if (str.equals("AbortIncompleteMultipartUpload")) {
-                    this.f702 = new AbortIncompleteMultipartUpload();
+                    this.f697 = new AbortIncompleteMultipartUpload();
                     return;
                 } else {
                     if (str.equals("Filter")) {
-                        this.f707 = new LifecycleFilter();
+                        this.f698 = new LifecycleFilter();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "Filter") && str.equals("And")) {
-                this.f706 = new ArrayList();
+            if (m692("LifecycleConfiguration", "Rule", "Filter") && str.equals("And")) {
+                this.f692 = new ArrayList();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("LifecycleConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("LifecycleConfiguration")) {
                 if (str.equals("Rule")) {
-                    ((ArrayList) this.f705.m530()).add(this.f704);
-                    this.f704 = null;
+                    ((ArrayList) this.f694.m524()).add(this.f693);
+                    this.f693 = null;
                     return;
                 }
                 return;
             }
-            if (m698("LifecycleConfiguration", "Rule")) {
+            if (m692("LifecycleConfiguration", "Rule")) {
                 if (str.equals("ID")) {
-                    BucketLifecycleConfiguration.Rule rule = this.f704;
-                    m699();
+                    BucketLifecycleConfiguration.Rule rule = this.f693;
+                    m694();
                     rule.getClass();
                     return;
                 }
                 if (str.equals("Prefix")) {
-                    BucketLifecycleConfiguration.Rule rule2 = this.f704;
-                    m699();
+                    BucketLifecycleConfiguration.Rule rule2 = this.f693;
+                    m694();
                     rule2.getClass();
                     return;
                 }
                 if (str.equals("Status")) {
-                    BucketLifecycleConfiguration.Rule rule3 = this.f704;
-                    m699();
+                    BucketLifecycleConfiguration.Rule rule3 = this.f693;
+                    m694();
                     rule3.getClass();
                     return;
                 }
-                if (str.equals(AbstractC11766.LOG_TAG)) {
-                    this.f704.m532(this.f708);
-                    this.f708 = null;
+                if (str.equals(AbstractC0329.LOG_TAG)) {
+                    this.f693.m526(this.f695);
+                    this.f695 = null;
                     return;
                 }
                 if (str.equals("NoncurrentVersionTransition")) {
-                    this.f704.m531(this.f703);
-                    this.f703 = null;
+                    this.f693.m525(this.f696);
+                    this.f696 = null;
                     return;
                 } else if (str.equals("AbortIncompleteMultipartUpload")) {
-                    this.f704.getClass();
-                    this.f702 = null;
+                    this.f693.getClass();
+                    this.f697 = null;
                     return;
                 } else {
                     if (str.equals("Filter")) {
-                        this.f704.getClass();
-                        this.f707 = null;
+                        this.f693.getClass();
+                        this.f698 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "Expiration")) {
+            if (m692("LifecycleConfiguration", "Rule", "Expiration")) {
                 if (str.equals("Date")) {
-                    BucketLifecycleConfiguration.Rule rule4 = this.f704;
-                    String strM699 = m699();
-                    int i = ServiceUtils.f512;
-                    DateUtils.m772(strM699);
+                    BucketLifecycleConfiguration.Rule rule4 = this.f693;
+                    String strM694 = m694();
+                    int i = ServiceUtils.f502;
+                    DateUtils.m766(strM694);
                     rule4.getClass();
                     return;
                 }
                 if (str.equals("Days")) {
-                    BucketLifecycleConfiguration.Rule rule5 = this.f704;
-                    Integer.parseInt(m699());
+                    BucketLifecycleConfiguration.Rule rule5 = this.f693;
+                    Integer.parseInt(m694());
                     rule5.getClass();
                     return;
                 } else {
-                    if (str.equals("ExpiredObjectDeleteMarker") && "true".equals(m699())) {
-                        this.f704.getClass();
+                    if (str.equals("ExpiredObjectDeleteMarker") && "true".equals(m694())) {
+                        this.f693.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", AbstractC11766.LOG_TAG)) {
+            if (m692("LifecycleConfiguration", "Rule", AbstractC0329.LOG_TAG)) {
                 if (str.equals("StorageClass")) {
-                    BucketLifecycleConfiguration.Transition transition = this.f708;
-                    m699();
+                    BucketLifecycleConfiguration.Transition transition = this.f695;
+                    m694();
                     transition.getClass();
                     return;
                 } else {
                     if (str.equals("Date")) {
-                        BucketLifecycleConfiguration.Transition transition2 = this.f708;
-                        String strM6910 = m699();
-                        int i2 = ServiceUtils.f512;
-                        DateUtils.m772(strM6910);
+                        BucketLifecycleConfiguration.Transition transition2 = this.f695;
+                        String strM695 = m694();
+                        int i2 = ServiceUtils.f502;
+                        DateUtils.m766(strM695);
                         transition2.getClass();
                         return;
                     }
                     if (str.equals("Days")) {
-                        BucketLifecycleConfiguration.Transition transition3 = this.f708;
-                        Integer.parseInt(m699());
+                        BucketLifecycleConfiguration.Transition transition3 = this.f695;
+                        Integer.parseInt(m694());
                         transition3.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "NoncurrentVersionExpiration")) {
+            if (m692("LifecycleConfiguration", "Rule", "NoncurrentVersionExpiration")) {
                 if (str.equals("NoncurrentDays")) {
-                    BucketLifecycleConfiguration.Rule rule6 = this.f704;
-                    Integer.parseInt(m699());
+                    BucketLifecycleConfiguration.Rule rule6 = this.f693;
+                    Integer.parseInt(m694());
                     rule6.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("LifecycleConfiguration", "Rule", "NoncurrentVersionTransition")) {
+            if (m692("LifecycleConfiguration", "Rule", "NoncurrentVersionTransition")) {
                 if (str.equals("StorageClass")) {
-                    BucketLifecycleConfiguration.NoncurrentVersionTransition noncurrentVersionTransition = this.f703;
-                    m699();
+                    BucketLifecycleConfiguration.NoncurrentVersionTransition noncurrentVersionTransition = this.f696;
+                    m694();
                     noncurrentVersionTransition.getClass();
                     return;
                 } else {
                     if (str.equals("NoncurrentDays")) {
-                        BucketLifecycleConfiguration.NoncurrentVersionTransition noncurrentVersionTransition2 = this.f703;
-                        Integer.parseInt(m699());
+                        BucketLifecycleConfiguration.NoncurrentVersionTransition noncurrentVersionTransition2 = this.f696;
+                        Integer.parseInt(m694());
                         noncurrentVersionTransition2.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "AbortIncompleteMultipartUpload")) {
+            if (m692("LifecycleConfiguration", "Rule", "AbortIncompleteMultipartUpload")) {
                 if (str.equals("DaysAfterInitiation")) {
-                    this.f702.m493(Integer.parseInt(m699()));
+                    this.f697.m487(Integer.parseInt(m694()));
                     return;
                 }
                 return;
             }
-            if (m698("LifecycleConfiguration", "Rule", "Filter")) {
+            if (m692("LifecycleConfiguration", "Rule", "Filter")) {
                 if (str.equals("Prefix")) {
-                    LifecycleFilter lifecycleFilter = this.f707;
-                    m699();
+                    LifecycleFilter lifecycleFilter = this.f698;
+                    m694();
                     new LifecyclePrefixPredicate();
                     lifecycleFilter.getClass();
                     return;
                 }
                 if (str.equals("Tag")) {
-                    LifecycleFilter lifecycleFilter2 = this.f707;
+                    LifecycleFilter lifecycleFilter2 = this.f698;
                     new LifecycleTagPredicate();
                     lifecycleFilter2.getClass();
                     return;
                 } else {
                     if (str.equals("And")) {
-                        LifecycleFilter lifecycleFilter3 = this.f707;
-                        new LifecycleAndOperator(this.f706);
+                        LifecycleFilter lifecycleFilter3 = this.f698;
+                        new LifecycleAndOperator(this.f692);
                         lifecycleFilter3.getClass();
-                        this.f706 = null;
+                        this.f692 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "Filter", "Tag")) {
+            if (m692("LifecycleConfiguration", "Rule", "Filter", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "Filter", "And")) {
+            if (m692("LifecycleConfiguration", "Rule", "Filter", "And")) {
                 if (str.equals("Prefix")) {
-                    ArrayList arrayList = this.f706;
-                    m699();
+                    ArrayList arrayList = this.f692;
+                    m694();
                     arrayList.add(new LifecyclePrefixPredicate());
                     return;
                 } else {
                     if (str.equals("Tag")) {
-                        this.f706.add(new LifecycleTagPredicate());
+                        this.f692.add(new LifecycleTagPredicate());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("LifecycleConfiguration", "Rule", "Filter", "And", "Tag")) {
+            if (m692("LifecycleConfiguration", "Rule", "Filter", "And", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                 } else if (str.equals("Value")) {
-                    m699();
+                    m694();
                 }
             }
         }
@@ -2225,95 +2225,95 @@ public class XmlResponsesSaxParser {
 
     public class BucketCrossOriginConfigurationHandler extends AbstractHandler {
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public CORSRule f697;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public CORSRule f689;
 
-        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public final BucketCrossOriginConfiguration f701 = new BucketCrossOriginConfiguration(new ArrayList());
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public ArrayList f700 = null;
-
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public ArrayList f699 = null;
-
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public ArrayList f698 = null;
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public final BucketCrossOriginConfiguration f691 = new BucketCrossOriginConfiguration(new ArrayList());
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public LinkedList f696 = null;
+        public ArrayList f686 = null;
+
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public ArrayList f688 = null;
+
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public ArrayList f687 = null;
+
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public LinkedList f690 = null;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("CORSConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("CORSConfiguration")) {
                 if (str.equals("CORSRule")) {
-                    this.f697 = new CORSRule();
+                    this.f689 = new CORSRule();
                     return;
                 }
                 return;
             }
-            if (m698("CORSConfiguration", "CORSRule")) {
+            if (m692("CORSConfiguration", "CORSRule")) {
                 if (str.equals("AllowedOrigin")) {
-                    if (this.f699 == null) {
-                        this.f699 = new ArrayList();
+                    if (this.f688 == null) {
+                        this.f688 = new ArrayList();
                     }
                 } else if (str.equals("AllowedMethod")) {
-                    if (this.f700 == null) {
-                        this.f700 = new ArrayList();
+                    if (this.f686 == null) {
+                        this.f686 = new ArrayList();
                     }
                 } else if (str.equals("ExposeHeader")) {
-                    if (this.f698 == null) {
-                        this.f698 = new ArrayList();
+                    if (this.f687 == null) {
+                        this.f687 = new ArrayList();
                     }
-                } else if (str.equals("AllowedHeader") && this.f696 == null) {
-                    this.f696 = new LinkedList();
+                } else if (str.equals("AllowedHeader") && this.f690 == null) {
+                    this.f690 = new LinkedList();
                 }
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("CORSConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("CORSConfiguration")) {
                 if (str.equals("CORSRule")) {
-                    this.f697.getClass();
-                    this.f697.getClass();
-                    this.f697.getClass();
-                    this.f697.getClass();
-                    this.f696 = null;
-                    this.f700 = null;
-                    this.f699 = null;
-                    this.f698 = null;
-                    ((ArrayList) this.f701.m529()).add(this.f697);
-                    this.f697 = null;
+                    this.f689.getClass();
+                    this.f689.getClass();
+                    this.f689.getClass();
+                    this.f689.getClass();
+                    this.f690 = null;
+                    this.f686 = null;
+                    this.f688 = null;
+                    this.f687 = null;
+                    ((ArrayList) this.f691.m523()).add(this.f689);
+                    this.f689 = null;
                     return;
                 }
                 return;
             }
-            if (m698("CORSConfiguration", "CORSRule")) {
+            if (m692("CORSConfiguration", "CORSRule")) {
                 if (str.equals("ID")) {
-                    CORSRule cORSRule = this.f697;
-                    m699();
+                    CORSRule cORSRule = this.f689;
+                    m694();
                     cORSRule.getClass();
                     return;
                 }
                 if (str.equals("AllowedOrigin")) {
-                    this.f699.add(m699());
+                    this.f688.add(m694());
                     return;
                 }
                 if (str.equals("AllowedMethod")) {
-                    this.f700.add(CORSRule.AllowedMethods.m538(m699()));
+                    this.f686.add(CORSRule.AllowedMethods.m532(m694()));
                     return;
                 }
                 if (str.equals("MaxAgeSeconds")) {
-                    CORSRule cORSRule2 = this.f697;
-                    Integer.parseInt(m699());
+                    CORSRule cORSRule2 = this.f689;
+                    Integer.parseInt(m694());
                     cORSRule2.getClass();
                 } else if (str.equals("ExposeHeader")) {
-                    this.f698.add(m699());
+                    this.f687.add(m694());
                 } else if (str.equals("AllowedHeader")) {
-                    this.f696.add(m699());
+                    this.f690.add(m694());
                 }
             }
         }
@@ -2322,100 +2322,100 @@ public class XmlResponsesSaxParser {
     public class GetBucketMetricsConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public ArrayList f749;
+        public final MetricsConfiguration f739 = new MetricsConfiguration();
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public MetricsFilter f750;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public MetricsFilter f740;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public final MetricsConfiguration f751 = new MetricsConfiguration();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public ArrayList f741;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("MetricsConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("MetricsConfiguration")) {
                 if (str.equals("Filter")) {
-                    this.f750 = new MetricsFilter();
+                    this.f740 = new MetricsFilter();
                 }
-            } else if (m698("MetricsConfiguration", "Filter") && str.equals("And")) {
-                this.f749 = new ArrayList();
+            } else if (m692("MetricsConfiguration", "Filter") && str.equals("And")) {
+                this.f741 = new ArrayList();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("MetricsConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("MetricsConfiguration")) {
                 boolean zEquals = str.equals("Id");
-                MetricsConfiguration metricsConfiguration = this.f751;
+                MetricsConfiguration metricsConfiguration = this.f739;
                 if (zEquals) {
-                    m699();
+                    m694();
                     metricsConfiguration.getClass();
                     return;
                 } else {
                     if (str.equals("Filter")) {
                         metricsConfiguration.getClass();
-                        this.f750 = null;
+                        this.f740 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("MetricsConfiguration", "Filter")) {
+            if (m692("MetricsConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    MetricsFilter metricsFilter = this.f750;
-                    m699();
+                    MetricsFilter metricsFilter = this.f740;
+                    m694();
                     new MetricsPrefixPredicate();
                     metricsFilter.getClass();
                     return;
                 }
                 if (str.equals("Tag")) {
-                    MetricsFilter metricsFilter2 = this.f750;
+                    MetricsFilter metricsFilter2 = this.f740;
                     new MetricsTagPredicate();
                     metricsFilter2.getClass();
                     return;
                 } else {
                     if (str.equals("And")) {
-                        MetricsFilter metricsFilter3 = this.f750;
-                        new MetricsAndOperator(this.f749);
+                        MetricsFilter metricsFilter3 = this.f740;
+                        new MetricsAndOperator(this.f741);
                         metricsFilter3.getClass();
-                        this.f749 = null;
+                        this.f741 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("MetricsConfiguration", "Filter", "Tag")) {
+            if (m692("MetricsConfiguration", "Filter", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("MetricsConfiguration", "Filter", "And")) {
+            if (m692("MetricsConfiguration", "Filter", "And")) {
                 if (str.equals("Prefix")) {
-                    ArrayList arrayList = this.f749;
-                    m699();
+                    ArrayList arrayList = this.f741;
+                    m694();
                     arrayList.add(new MetricsPrefixPredicate());
                     return;
                 } else {
                     if (str.equals("Tag")) {
-                        this.f749.add(new MetricsTagPredicate());
+                        this.f741.add(new MetricsTagPredicate());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("MetricsConfiguration", "Filter", "And", "Tag")) {
+            if (m692("MetricsConfiguration", "Filter", "And", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                 } else if (str.equals("Value")) {
-                    m699();
+                    m694();
                 }
             }
         }
@@ -2424,134 +2424,134 @@ public class XmlResponsesSaxParser {
     public class ListBucketMetricsConfigurationsHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public ArrayList f778;
+        public MetricsConfiguration f768;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public MetricsFilter f779;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public MetricsConfiguration f780;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public MetricsFilter f769;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public final ListBucketMetricsConfigurationsResult f781 = new ListBucketMetricsConfigurationsResult();
+        public ArrayList f770;
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public final ListBucketMetricsConfigurationsResult f771 = new ListBucketMetricsConfigurationsResult();
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListMetricsConfigurationsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListMetricsConfigurationsResult")) {
                 if (str.equals("MetricsConfiguration")) {
-                    this.f780 = new MetricsConfiguration();
+                    this.f768 = new MetricsConfiguration();
                 }
-            } else if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration")) {
+            } else if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration")) {
                 if (str.equals("Filter")) {
-                    this.f779 = new MetricsFilter();
+                    this.f769 = new MetricsFilter();
                 }
-            } else if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter") && str.equals("And")) {
-                this.f778 = new ArrayList();
+            } else if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter") && str.equals("And")) {
+                this.f770 = new ArrayList();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListMetricsConfigurationsResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListMetricsConfigurationsResult")) {
                 boolean zEquals = str.equals("MetricsConfiguration");
-                ListBucketMetricsConfigurationsResult listBucketMetricsConfigurationsResult = this.f781;
+                ListBucketMetricsConfigurationsResult listBucketMetricsConfigurationsResult = this.f771;
                 if (zEquals) {
-                    if (listBucketMetricsConfigurationsResult.m594() == null) {
-                        listBucketMetricsConfigurationsResult.m595(new ArrayList());
+                    if (listBucketMetricsConfigurationsResult.m588() == null) {
+                        listBucketMetricsConfigurationsResult.m589(new ArrayList());
                     }
-                    ((ArrayList) listBucketMetricsConfigurationsResult.m594()).add(this.f780);
-                    this.f780 = null;
+                    ((ArrayList) listBucketMetricsConfigurationsResult.m588()).add(this.f768);
+                    this.f768 = null;
                     return;
                 }
                 if (str.equals("IsTruncated")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     listBucketMetricsConfigurationsResult.getClass();
                     return;
                 } else if (str.equals("ContinuationToken")) {
-                    m699();
+                    m694();
                     listBucketMetricsConfigurationsResult.getClass();
                     return;
                 } else {
                     if (str.equals("NextContinuationToken")) {
-                        m699();
+                        m694();
                         listBucketMetricsConfigurationsResult.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration")) {
+            if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration")) {
                 if (str.equals("Id")) {
-                    MetricsConfiguration metricsConfiguration = this.f780;
-                    m699();
+                    MetricsConfiguration metricsConfiguration = this.f768;
+                    m694();
                     metricsConfiguration.getClass();
                     return;
                 } else {
                     if (str.equals("Filter")) {
-                        this.f780.getClass();
-                        this.f779 = null;
+                        this.f768.getClass();
+                        this.f769 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter")) {
+            if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    MetricsFilter metricsFilter = this.f779;
-                    m699();
+                    MetricsFilter metricsFilter = this.f769;
+                    m694();
                     new MetricsPrefixPredicate();
                     metricsFilter.getClass();
                     return;
                 }
                 if (str.equals("Tag")) {
-                    MetricsFilter metricsFilter2 = this.f779;
+                    MetricsFilter metricsFilter2 = this.f769;
                     new MetricsTagPredicate();
                     metricsFilter2.getClass();
                     return;
                 } else {
                     if (str.equals("And")) {
-                        MetricsFilter metricsFilter3 = this.f779;
-                        new MetricsAndOperator(this.f778);
+                        MetricsFilter metricsFilter3 = this.f769;
+                        new MetricsAndOperator(this.f770);
                         metricsFilter3.getClass();
-                        this.f778 = null;
+                        this.f770 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "Tag")) {
+            if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "And")) {
+            if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "And")) {
                 if (str.equals("Prefix")) {
-                    ArrayList arrayList = this.f778;
-                    m699();
+                    ArrayList arrayList = this.f770;
+                    m694();
                     arrayList.add(new MetricsPrefixPredicate());
                     return;
                 } else {
                     if (str.equals("Tag")) {
-                        this.f778.add(new MetricsTagPredicate());
+                        this.f770.add(new MetricsTagPredicate());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "And", "Tag")) {
+            if (m692("ListMetricsConfigurationsResult", "MetricsConfiguration", "Filter", "And", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                 } else if (str.equals("Value")) {
-                    m699();
+                    m694();
                 }
             }
         }
@@ -2560,66 +2560,66 @@ public class XmlResponsesSaxParser {
     public class GetBucketAnalyticsConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public ArrayList f736;
+        public final AnalyticsConfiguration f726 = new AnalyticsConfiguration();
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public AnalyticsFilter f737;
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public AnalyticsS3BucketDestination f727;
 
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public AnalyticsS3BucketDestination f738;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public StorageClassAnalysisDataExport f728;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public StorageClassAnalysisDataExport f739;
+        /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+        public StorageClassAnalysis f729;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public final AnalyticsConfiguration f740 = new AnalyticsConfiguration();
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public AnalyticsFilter f730;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public AnalyticsExportDestination f741;
+        public ArrayList f731;
 
-        /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-        public StorageClassAnalysis f742;
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public AnalyticsExportDestination f732;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("AnalyticsConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("AnalyticsConfiguration")) {
                 if (str.equals("Filter")) {
-                    this.f737 = new AnalyticsFilter();
+                    this.f730 = new AnalyticsFilter();
                     return;
                 } else {
                     if (str.equals("StorageClassAnalysis")) {
-                        this.f742 = new StorageClassAnalysis();
+                        this.f729 = new StorageClassAnalysis();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "Filter")) {
+            if (m692("AnalyticsConfiguration", "Filter")) {
                 if (str.equals("And")) {
-                    this.f736 = new ArrayList();
+                    this.f731 = new ArrayList();
                 }
-            } else if (m698("AnalyticsConfiguration", "StorageClassAnalysis")) {
+            } else if (m692("AnalyticsConfiguration", "StorageClassAnalysis")) {
                 if (str.equals("DataExport")) {
-                    this.f739 = new StorageClassAnalysisDataExport();
+                    this.f728 = new StorageClassAnalysisDataExport();
                 }
-            } else if (m698("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
+            } else if (m692("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
                 if (str.equals("Destination")) {
-                    this.f741 = new AnalyticsExportDestination();
+                    this.f732 = new AnalyticsExportDestination();
                 }
-            } else if (m698("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination") && str.equals("S3BucketDestination")) {
-                this.f738 = new AnalyticsS3BucketDestination();
+            } else if (m692("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination") && str.equals("S3BucketDestination")) {
+                this.f727 = new AnalyticsS3BucketDestination();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("AnalyticsConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("AnalyticsConfiguration")) {
                 boolean zEquals = str.equals("Id");
-                AnalyticsConfiguration analyticsConfiguration = this.f740;
+                AnalyticsConfiguration analyticsConfiguration = this.f726;
                 if (zEquals) {
-                    m699();
+                    m694();
                     analyticsConfiguration.getClass();
                     return;
                 } else if (str.equals("Filter")) {
@@ -2633,114 +2633,114 @@ public class XmlResponsesSaxParser {
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "Filter")) {
+            if (m692("AnalyticsConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    AnalyticsFilter analyticsFilter = this.f737;
-                    m699();
+                    AnalyticsFilter analyticsFilter = this.f730;
+                    m694();
                     new AnalyticsPrefixPredicate();
                     analyticsFilter.getClass();
                     return;
                 }
                 if (str.equals("Tag")) {
-                    AnalyticsFilter analyticsFilter2 = this.f737;
+                    AnalyticsFilter analyticsFilter2 = this.f730;
                     new AnalyticsTagPredicate();
                     analyticsFilter2.getClass();
                     return;
                 } else {
                     if (str.equals("And")) {
-                        AnalyticsFilter analyticsFilter3 = this.f737;
-                        new AnalyticsAndOperator(this.f736);
+                        AnalyticsFilter analyticsFilter3 = this.f730;
+                        new AnalyticsAndOperator(this.f731);
                         analyticsFilter3.getClass();
-                        this.f736 = null;
+                        this.f731 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "Filter", "Tag")) {
+            if (m692("AnalyticsConfiguration", "Filter", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "Filter", "And")) {
+            if (m692("AnalyticsConfiguration", "Filter", "And")) {
                 if (str.equals("Prefix")) {
-                    ArrayList arrayList = this.f736;
-                    m699();
+                    ArrayList arrayList = this.f731;
+                    m694();
                     arrayList.add(new AnalyticsPrefixPredicate());
                     return;
                 } else {
                     if (str.equals("Tag")) {
-                        this.f736.add(new AnalyticsTagPredicate());
+                        this.f731.add(new AnalyticsTagPredicate());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "Filter", "And", "Tag")) {
+            if (m692("AnalyticsConfiguration", "Filter", "And", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "StorageClassAnalysis")) {
+            if (m692("AnalyticsConfiguration", "StorageClassAnalysis")) {
                 if (str.equals("DataExport")) {
-                    this.f742.getClass();
+                    this.f729.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
+            if (m692("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
                 if (str.equals("OutputSchemaVersion")) {
-                    StorageClassAnalysisDataExport storageClassAnalysisDataExport = this.f739;
-                    m699();
+                    StorageClassAnalysisDataExport storageClassAnalysisDataExport = this.f728;
+                    m694();
                     storageClassAnalysisDataExport.getClass();
                     return;
                 } else {
                     if (str.equals("Destination")) {
-                        this.f739.getClass();
+                        this.f728.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination")) {
+            if (m692("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination")) {
                 if (str.equals("S3BucketDestination")) {
-                    this.f741.getClass();
+                    this.f732.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination", "S3BucketDestination")) {
+            if (m692("AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination", "S3BucketDestination")) {
                 if (str.equals("Format")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination = this.f738;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination = this.f727;
+                    m694();
                     analyticsS3BucketDestination.getClass();
                     return;
                 }
                 if (str.equals("BucketAccountId")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination2 = this.f738;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination2 = this.f727;
+                    m694();
                     analyticsS3BucketDestination2.getClass();
                 } else if (str.equals("Bucket")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination3 = this.f738;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination3 = this.f727;
+                    m694();
                     analyticsS3BucketDestination3.getClass();
                 } else if (str.equals("Prefix")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination4 = this.f738;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination4 = this.f727;
+                    m694();
                     analyticsS3BucketDestination4.getClass();
                 }
             }
@@ -2750,224 +2750,224 @@ public class XmlResponsesSaxParser {
     public class ListBucketAnalyticsConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public ArrayList f759;
+        public AnalyticsConfiguration f749;
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public AnalyticsExportDestination f760;
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public final ListBucketAnalyticsConfigurationsResult f750 = new ListBucketAnalyticsConfigurationsResult();
 
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public final ListBucketAnalyticsConfigurationsResult f761 = new ListBucketAnalyticsConfigurationsResult();
+        /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+        public StorageClassAnalysis f751;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public AnalyticsFilter f762;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public AnalyticsFilter f752;
 
-        /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-        public StorageClassAnalysis f763;
+        /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+        public AnalyticsS3BucketDestination f753;
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public AnalyticsConfiguration f764;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public AnalyticsExportDestination f754;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public StorageClassAnalysisDataExport f765;
+        public ArrayList f755;
 
-        /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-        public AnalyticsS3BucketDestination f766;
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public StorageClassAnalysisDataExport f756;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListBucketAnalyticsConfigurationsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListBucketAnalyticsConfigurationsResult")) {
                 if (str.equals("AnalyticsConfiguration")) {
-                    this.f764 = new AnalyticsConfiguration();
+                    this.f749 = new AnalyticsConfiguration();
                     return;
                 }
                 return;
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration")) {
                 if (str.equals("Filter")) {
-                    this.f762 = new AnalyticsFilter();
+                    this.f752 = new AnalyticsFilter();
                     return;
                 } else {
                     if (str.equals("StorageClassAnalysis")) {
-                        this.f763 = new StorageClassAnalysis();
+                        this.f751 = new StorageClassAnalysis();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter")) {
                 if (str.equals("And")) {
-                    this.f759 = new ArrayList();
+                    this.f755 = new ArrayList();
                 }
-            } else if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis")) {
+            } else if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis")) {
                 if (str.equals("DataExport")) {
-                    this.f765 = new StorageClassAnalysisDataExport();
+                    this.f756 = new StorageClassAnalysisDataExport();
                 }
-            } else if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
+            } else if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
                 if (str.equals("Destination")) {
-                    this.f760 = new AnalyticsExportDestination();
+                    this.f754 = new AnalyticsExportDestination();
                 }
-            } else if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination") && str.equals("S3BucketDestination")) {
-                this.f766 = new AnalyticsS3BucketDestination();
+            } else if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination") && str.equals("S3BucketDestination")) {
+                this.f753 = new AnalyticsS3BucketDestination();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListBucketAnalyticsConfigurationsResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListBucketAnalyticsConfigurationsResult")) {
                 boolean zEquals = str.equals("AnalyticsConfiguration");
-                ListBucketAnalyticsConfigurationsResult listBucketAnalyticsConfigurationsResult = this.f761;
+                ListBucketAnalyticsConfigurationsResult listBucketAnalyticsConfigurationsResult = this.f750;
                 if (zEquals) {
-                    if (listBucketAnalyticsConfigurationsResult.m590() == null) {
-                        listBucketAnalyticsConfigurationsResult.m591(new ArrayList());
+                    if (listBucketAnalyticsConfigurationsResult.m584() == null) {
+                        listBucketAnalyticsConfigurationsResult.m585(new ArrayList());
                     }
-                    ((ArrayList) listBucketAnalyticsConfigurationsResult.m590()).add(this.f764);
-                    this.f764 = null;
+                    ((ArrayList) listBucketAnalyticsConfigurationsResult.m584()).add(this.f749);
+                    this.f749 = null;
                     return;
                 }
                 if (str.equals("IsTruncated")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     listBucketAnalyticsConfigurationsResult.getClass();
                     return;
                 } else if (str.equals("ContinuationToken")) {
-                    m699();
+                    m694();
                     listBucketAnalyticsConfigurationsResult.getClass();
                     return;
                 } else {
                     if (str.equals("NextContinuationToken")) {
-                        m699();
+                        m694();
                         listBucketAnalyticsConfigurationsResult.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration")) {
                 if (str.equals("Id")) {
-                    AnalyticsConfiguration analyticsConfiguration = this.f764;
-                    m699();
+                    AnalyticsConfiguration analyticsConfiguration = this.f749;
+                    m694();
                     analyticsConfiguration.getClass();
                     return;
                 } else if (str.equals("Filter")) {
-                    this.f764.getClass();
+                    this.f749.getClass();
                     return;
                 } else {
                     if (str.equals("StorageClassAnalysis")) {
-                        this.f764.getClass();
+                        this.f749.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    AnalyticsFilter analyticsFilter = this.f762;
-                    m699();
+                    AnalyticsFilter analyticsFilter = this.f752;
+                    m694();
                     new AnalyticsPrefixPredicate();
                     analyticsFilter.getClass();
                     return;
                 }
                 if (str.equals("Tag")) {
-                    AnalyticsFilter analyticsFilter2 = this.f762;
+                    AnalyticsFilter analyticsFilter2 = this.f752;
                     new AnalyticsTagPredicate();
                     analyticsFilter2.getClass();
                     return;
                 } else {
                     if (str.equals("And")) {
-                        AnalyticsFilter analyticsFilter3 = this.f762;
-                        new AnalyticsAndOperator(this.f759);
+                        AnalyticsFilter analyticsFilter3 = this.f752;
+                        new AnalyticsAndOperator(this.f755);
                         analyticsFilter3.getClass();
-                        this.f759 = null;
+                        this.f755 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "Tag")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "And")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "And")) {
                 if (str.equals("Prefix")) {
-                    ArrayList arrayList = this.f759;
-                    m699();
+                    ArrayList arrayList = this.f755;
+                    m694();
                     arrayList.add(new AnalyticsPrefixPredicate());
                     return;
                 } else {
                     if (str.equals("Tag")) {
-                        this.f759.add(new AnalyticsTagPredicate());
+                        this.f755.add(new AnalyticsTagPredicate());
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "And", "Tag")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "Filter", "And", "Tag")) {
                 if (str.equals("Key")) {
-                    m699();
+                    m694();
                     return;
                 } else {
                     if (str.equals("Value")) {
-                        m699();
+                        m694();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis")) {
                 if (str.equals("DataExport")) {
-                    this.f763.getClass();
+                    this.f751.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport")) {
                 if (str.equals("OutputSchemaVersion")) {
-                    StorageClassAnalysisDataExport storageClassAnalysisDataExport = this.f765;
-                    m699();
+                    StorageClassAnalysisDataExport storageClassAnalysisDataExport = this.f756;
+                    m694();
                     storageClassAnalysisDataExport.getClass();
                     return;
                 } else {
                     if (str.equals("Destination")) {
-                        this.f765.getClass();
+                        this.f756.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination")) {
                 if (str.equals("S3BucketDestination")) {
-                    this.f760.getClass();
+                    this.f754.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination", "S3BucketDestination")) {
+            if (m692("ListBucketAnalyticsConfigurationsResult", "AnalyticsConfiguration", "StorageClassAnalysis", "DataExport", "Destination", "S3BucketDestination")) {
                 if (str.equals("Format")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination = this.f766;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination = this.f753;
+                    m694();
                     analyticsS3BucketDestination.getClass();
                     return;
                 }
                 if (str.equals("BucketAccountId")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination2 = this.f766;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination2 = this.f753;
+                    m694();
                     analyticsS3BucketDestination2.getClass();
                 } else if (str.equals("Bucket")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination3 = this.f766;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination3 = this.f753;
+                    m694();
                     analyticsS3BucketDestination3.getClass();
                 } else if (str.equals("Prefix")) {
-                    AnalyticsS3BucketDestination analyticsS3BucketDestination4 = this.f766;
-                    m699();
+                    AnalyticsS3BucketDestination analyticsS3BucketDestination4 = this.f753;
+                    m694();
                     analyticsS3BucketDestination4.getClass();
                 }
             }
@@ -2977,154 +2977,154 @@ public class XmlResponsesSaxParser {
     public class GetBucketInventoryConfigurationHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public final InventoryConfiguration f743;
+        public InventoryFilter f733;
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public ArrayList f744;
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public InventoryS3BucketDestination f734;
 
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public InventoryS3BucketDestination f745;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public InventoryDestination f735;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public InventoryDestination f746;
-
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public InventoryFilter f747;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public ArrayList f736;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public InventorySchedule f748;
+        public final InventoryConfiguration f737;
+
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public InventorySchedule f738;
 
         public GetBucketInventoryConfigurationHandler() {
             new GetBucketInventoryConfigurationResult();
-            this.f743 = new InventoryConfiguration();
+            this.f737 = new InventoryConfiguration();
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("InventoryConfiguration")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("InventoryConfiguration")) {
                 if (str.equals("Destination")) {
-                    this.f746 = new InventoryDestination();
+                    this.f735 = new InventoryDestination();
                     return;
                 }
                 if (str.equals("Filter")) {
-                    this.f747 = new InventoryFilter();
+                    this.f733 = new InventoryFilter();
                     return;
                 } else if (str.equals("Schedule")) {
-                    this.f748 = new InventorySchedule();
+                    this.f738 = new InventorySchedule();
                     return;
                 } else {
                     if (str.equals("OptionalFields")) {
-                        this.f744 = new ArrayList();
+                        this.f736 = new ArrayList();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("InventoryConfiguration", "Destination") && str.equals("S3BucketDestination")) {
-                this.f745 = new InventoryS3BucketDestination();
+            if (m692("InventoryConfiguration", "Destination") && str.equals("S3BucketDestination")) {
+                this.f734 = new InventoryS3BucketDestination();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("InventoryConfiguration")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("InventoryConfiguration")) {
                 boolean zEquals = str.equals("Id");
-                InventoryConfiguration inventoryConfiguration = this.f743;
+                InventoryConfiguration inventoryConfiguration = this.f737;
                 if (zEquals) {
-                    m699();
+                    m694();
                     inventoryConfiguration.getClass();
                     return;
                 }
                 if (str.equals("Destination")) {
                     inventoryConfiguration.getClass();
-                    this.f746 = null;
+                    this.f735 = null;
                     return;
                 }
                 if (str.equals("IsEnabled")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     inventoryConfiguration.getClass();
                     return;
                 }
                 if (str.equals("Filter")) {
                     inventoryConfiguration.getClass();
-                    this.f747 = null;
+                    this.f733 = null;
                     return;
                 }
                 if (str.equals("IncludedObjectVersions")) {
-                    m699();
+                    m694();
                     inventoryConfiguration.getClass();
                     return;
                 } else if (str.equals("Schedule")) {
                     inventoryConfiguration.getClass();
-                    this.f748 = null;
+                    this.f738 = null;
                     return;
                 } else {
                     if (str.equals("OptionalFields")) {
                         inventoryConfiguration.getClass();
-                        this.f744 = null;
+                        this.f736 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("InventoryConfiguration", "Destination")) {
+            if (m692("InventoryConfiguration", "Destination")) {
                 if (str.equals("S3BucketDestination")) {
-                    this.f746.getClass();
-                    this.f745 = null;
+                    this.f735.getClass();
+                    this.f734 = null;
                     return;
                 }
                 return;
             }
-            if (m698("InventoryConfiguration", "Destination", "S3BucketDestination")) {
+            if (m692("InventoryConfiguration", "Destination", "S3BucketDestination")) {
                 if (str.equals("AccountId")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination = this.f745;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination = this.f734;
+                    m694();
                     inventoryS3BucketDestination.getClass();
                     return;
                 }
                 if (str.equals("Bucket")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination2 = this.f745;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination2 = this.f734;
+                    m694();
                     inventoryS3BucketDestination2.getClass();
                     return;
                 } else if (str.equals("Format")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination3 = this.f745;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination3 = this.f734;
+                    m694();
                     inventoryS3BucketDestination3.getClass();
                     return;
                 } else {
                     if (str.equals("Prefix")) {
-                        InventoryS3BucketDestination inventoryS3BucketDestination4 = this.f745;
-                        m699();
+                        InventoryS3BucketDestination inventoryS3BucketDestination4 = this.f734;
+                        m694();
                         inventoryS3BucketDestination4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("InventoryConfiguration", "Filter")) {
+            if (m692("InventoryConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    InventoryFilter inventoryFilter = this.f747;
-                    m699();
+                    InventoryFilter inventoryFilter = this.f733;
+                    m694();
                     new InventoryPrefixPredicate();
                     inventoryFilter.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("InventoryConfiguration", "Schedule")) {
+            if (m692("InventoryConfiguration", "Schedule")) {
                 if (str.equals("Frequency")) {
-                    InventorySchedule inventorySchedule = this.f748;
-                    m699();
+                    InventorySchedule inventorySchedule = this.f738;
+                    m694();
                     inventorySchedule.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("InventoryConfiguration", "OptionalFields") && str.equals("Field")) {
-                this.f744.add(m699());
+            if (m692("InventoryConfiguration", "OptionalFields") && str.equals("Field")) {
+                this.f736.add(m694());
             }
         }
     }
@@ -3132,188 +3132,188 @@ public class XmlResponsesSaxParser {
     public class ListBucketInventoryConfigurationsHandler extends AbstractHandler {
 
         /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public InventoryConfiguration f771;
+        public InventoryDestination f761;
 
-        /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-        public InventoryS3BucketDestination f772;
+        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+        public InventorySchedule f762;
 
-        /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-        public InventorySchedule f773;
+        /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+        public InventoryFilter f763;
 
-        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-        public InventoryFilter f774;
+        /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+        public final ListBucketInventoryConfigurationsResult f764 = new ListBucketInventoryConfigurationsResult();
 
-        /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-        public InventoryDestination f775;
+        /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+        public InventoryS3BucketDestination f765;
 
         /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-        public ArrayList f776;
+        public InventoryConfiguration f766;
 
-        /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-        public final ListBucketInventoryConfigurationsResult f777 = new ListBucketInventoryConfigurationsResult();
+        /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+        public ArrayList f767;
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
         /* JADX INFO: renamed from: ۙ */
-        public final void mo696(String str, Attributes attributes) {
-            if (m698("ListInventoryConfigurationsResult")) {
+        public final void mo690(String str, Attributes attributes) {
+            if (m692("ListInventoryConfigurationsResult")) {
                 if (str.equals("InventoryConfiguration")) {
-                    this.f771 = new InventoryConfiguration();
+                    this.f766 = new InventoryConfiguration();
                     return;
                 }
                 return;
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration")) {
                 if (str.equals("Destination")) {
-                    this.f775 = new InventoryDestination();
+                    this.f761 = new InventoryDestination();
                     return;
                 }
                 if (str.equals("Filter")) {
-                    this.f774 = new InventoryFilter();
+                    this.f763 = new InventoryFilter();
                     return;
                 } else if (str.equals("Schedule")) {
-                    this.f773 = new InventorySchedule();
+                    this.f762 = new InventorySchedule();
                     return;
                 } else {
                     if (str.equals("OptionalFields")) {
-                        this.f776 = new ArrayList();
+                        this.f767 = new ArrayList();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination") && str.equals("S3BucketDestination")) {
-                this.f772 = new InventoryS3BucketDestination();
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination") && str.equals("S3BucketDestination")) {
+                this.f765 = new InventoryS3BucketDestination();
             }
         }
 
         @Override // com.amazonaws.services.s3.model.transform.AbstractHandler
-        /* JADX INFO: renamed from: ᩹ */
-        public final void mo700(String str) {
-            if (m698("ListInventoryConfigurationsResult")) {
+        /* JADX INFO: renamed from: ܳ */
+        public final void mo693(String str) {
+            if (m692("ListInventoryConfigurationsResult")) {
                 boolean zEquals = str.equals("InventoryConfiguration");
-                ListBucketInventoryConfigurationsResult listBucketInventoryConfigurationsResult = this.f777;
+                ListBucketInventoryConfigurationsResult listBucketInventoryConfigurationsResult = this.f764;
                 if (zEquals) {
-                    if (listBucketInventoryConfigurationsResult.m592() == null) {
-                        listBucketInventoryConfigurationsResult.m593(new ArrayList());
+                    if (listBucketInventoryConfigurationsResult.m586() == null) {
+                        listBucketInventoryConfigurationsResult.m587(new ArrayList());
                     }
-                    ((ArrayList) listBucketInventoryConfigurationsResult.m592()).add(this.f771);
-                    this.f771 = null;
+                    ((ArrayList) listBucketInventoryConfigurationsResult.m586()).add(this.f766);
+                    this.f766 = null;
                     return;
                 }
                 if (str.equals("IsTruncated")) {
-                    "true".equals(m699());
+                    "true".equals(m694());
                     listBucketInventoryConfigurationsResult.getClass();
                     return;
                 } else if (str.equals("ContinuationToken")) {
-                    m699();
+                    m694();
                     listBucketInventoryConfigurationsResult.getClass();
                     return;
                 } else {
                     if (str.equals("NextContinuationToken")) {
-                        m699();
+                        m694();
                         listBucketInventoryConfigurationsResult.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration")) {
                 if (str.equals("Id")) {
-                    InventoryConfiguration inventoryConfiguration = this.f771;
-                    m699();
+                    InventoryConfiguration inventoryConfiguration = this.f766;
+                    m694();
                     inventoryConfiguration.getClass();
                     return;
                 }
                 if (str.equals("Destination")) {
-                    this.f771.getClass();
-                    this.f775 = null;
+                    this.f766.getClass();
+                    this.f761 = null;
                     return;
                 }
                 if (str.equals("IsEnabled")) {
-                    InventoryConfiguration inventoryConfiguration2 = this.f771;
-                    "true".equals(m699());
+                    InventoryConfiguration inventoryConfiguration2 = this.f766;
+                    "true".equals(m694());
                     inventoryConfiguration2.getClass();
                     return;
                 }
                 if (str.equals("Filter")) {
-                    this.f771.getClass();
-                    this.f774 = null;
+                    this.f766.getClass();
+                    this.f763 = null;
                     return;
                 }
                 if (str.equals("IncludedObjectVersions")) {
-                    InventoryConfiguration inventoryConfiguration3 = this.f771;
-                    m699();
+                    InventoryConfiguration inventoryConfiguration3 = this.f766;
+                    m694();
                     inventoryConfiguration3.getClass();
                     return;
                 } else if (str.equals("Schedule")) {
-                    this.f771.getClass();
-                    this.f773 = null;
+                    this.f766.getClass();
+                    this.f762 = null;
                     return;
                 } else {
                     if (str.equals("OptionalFields")) {
-                        this.f771.getClass();
-                        this.f776 = null;
+                        this.f766.getClass();
+                        this.f767 = null;
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination")) {
                 if (str.equals("S3BucketDestination")) {
-                    this.f775.getClass();
-                    this.f772 = null;
+                    this.f761.getClass();
+                    this.f765 = null;
                     return;
                 }
                 return;
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination", "S3BucketDestination")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "Destination", "S3BucketDestination")) {
                 if (str.equals("AccountId")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination = this.f772;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination = this.f765;
+                    m694();
                     inventoryS3BucketDestination.getClass();
                     return;
                 }
                 if (str.equals("Bucket")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination2 = this.f772;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination2 = this.f765;
+                    m694();
                     inventoryS3BucketDestination2.getClass();
                     return;
                 } else if (str.equals("Format")) {
-                    InventoryS3BucketDestination inventoryS3BucketDestination3 = this.f772;
-                    m699();
+                    InventoryS3BucketDestination inventoryS3BucketDestination3 = this.f765;
+                    m694();
                     inventoryS3BucketDestination3.getClass();
                     return;
                 } else {
                     if (str.equals("Prefix")) {
-                        InventoryS3BucketDestination inventoryS3BucketDestination4 = this.f772;
-                        m699();
+                        InventoryS3BucketDestination inventoryS3BucketDestination4 = this.f765;
+                        m694();
                         inventoryS3BucketDestination4.getClass();
                         return;
                     }
                     return;
                 }
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "Filter")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "Filter")) {
                 if (str.equals("Prefix")) {
-                    InventoryFilter inventoryFilter = this.f774;
-                    m699();
+                    InventoryFilter inventoryFilter = this.f763;
+                    m694();
                     new InventoryPrefixPredicate();
                     inventoryFilter.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "Schedule")) {
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "Schedule")) {
                 if (str.equals("Frequency")) {
-                    InventorySchedule inventorySchedule = this.f773;
-                    m699();
+                    InventorySchedule inventorySchedule = this.f762;
+                    m694();
                     inventorySchedule.getClass();
                     return;
                 }
                 return;
             }
-            if (m698("ListInventoryConfigurationsResult", "InventoryConfiguration", "OptionalFields") && str.equals("Field")) {
-                this.f776.add(m699());
+            if (m692("ListInventoryConfigurationsResult", "InventoryConfiguration", "OptionalFields") && str.equals("Field")) {
+                this.f767.add(m694());
             }
         }
     }

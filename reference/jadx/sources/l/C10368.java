@@ -1,38 +1,23 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import bin.mt.json.JSONArray;
 
-/* JADX INFO: renamed from: l.ۤܶۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 86ZM */
+/* JADX INFO: renamed from: l.ۢ᩶ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OAYY */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C10368 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List f35528;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f35529;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C20889 f35530;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC6839 f35531;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C20951 f35532;
-
-    public C10368(C20889 c20889, AbstractC6839 abstractC6839, List list, C20951 c20951) {
-        this.f35530 = c20889;
-        this.f35531 = abstractC6839;
-        ArrayList arrayList = new ArrayList(list.size());
-        for (Object obj : list) {
-            C13638.requireNonNull(obj);
-            arrayList.add(obj);
+    public static C9622 m26672(C20348 c20348) {
+        C9622 c9622 = new C9622(c20348.m46758(), c20348.m46758());
+        long position = c20348.getPosition();
+        if (c20348.available() > 10 && c20348.m46760(0)) {
+            String strM46758 = c20348.m46758();
+            if (strM46758.startsWith("[") && C0878.m3579(strM46758, "]", false)) {
+                c9622.m25109(new C8877(new JSONArray(strM46758)));
+                return c9622;
+            }
+            c20348.seek(position);
         }
-        this.f35528 = C0561.unmodifiableList(arrayList);
-        this.f35529 = new int[list.size()];
-        this.f35532 = c20951;
+        return c9622;
     }
 }

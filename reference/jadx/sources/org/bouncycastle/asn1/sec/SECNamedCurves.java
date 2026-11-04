@@ -18,7 +18,7 @@ import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SECNamedCurves {
     public static X9ECParametersHolder secp112r1 = new X9ECParametersHolder() { // from class: org.bouncycastle.asn1.sec.SECNamedCurves.1
         @Override // org.bouncycastle.asn1.x9.X9ECParametersHolder

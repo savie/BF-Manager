@@ -1,32 +1,28 @@
-.class public final synthetic Ll/֨ᩴ᩹;
+.class public final Ll/֨ᩴ᩹;
 .super Ljava/lang/Object;
-.source "OAYY"
+.source "T91K"
 
 # interfaces
-.implements Ll/ܶ᩶۠;
+.implements Ll/᩸ᩴ᩹;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final ۙ(Ll/ᩴᩴ᩹;Ll/ۙ֡ۨ;)V
+    .locals 2
 
-    .line 2
-    check-cast p1, Ll/ۨᩴ᩹;
+    .line 290
+    check-cast p2, Ll/ܿܿۨ;
 
-    const-string v0, "it"
+    .line 293
+    invoke-virtual {p2}, Ll/ܿܿۨ;->ۧ()Ljava/lang/String;
 
-    .line 0
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 676
-    invoke-virtual {p1}, Ll/ۨᩴ᩹;->ۙ()Z
+    invoke-virtual {p2}, Ll/ܿܿۨ;->᩻()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v1
 
-    .line 0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1, v0, v1, p2}, Ll/ۙܳ᩹;->ۙ(Ll/ᩴᩴ᩹;Ljava/lang/String;Ljava/lang/String;Ll/᩹ܿۨ;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

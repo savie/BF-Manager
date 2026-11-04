@@ -1,29 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳܿ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0APD */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14678 implements CharSequence {
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.alipay.sdk.m.y.l;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f47983;
+/* JADX INFO: renamed from: l.ܰܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5JQ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14678 extends AbstractC6898 {
+    public static final Parcelable.Creator CREATOR = new C4238();
 
-    public C14678(CharSequence charSequence) {
-        this.f47983 = charSequence;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f47982;
+
+    public C14678(Parcelable parcelable) {
+        super(parcelable);
     }
 
-    @Override // java.lang.CharSequence
-    public final int length() {
-        return this.f47983.length();
+    public C14678(Parcel parcel, ClassLoader classLoader) {
+        super(parcel, classLoader);
+        this.f47982 = ((Boolean) parcel.readValue(null)).booleanValue();
     }
 
-    @Override // java.lang.CharSequence
-    public final char charAt(int i) {
-        return Character.toLowerCase(this.f47983.charAt(i));
+    @Override // l.AbstractC6898, android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeValue(Boolean.valueOf(this.f47982));
     }
 
-    @Override // java.lang.CharSequence
-    public final CharSequence subSequence(int i, int i2) {
-        return new C14678(this.f47983.subSequence(i, i2));
+    public final String toString() {
+        return "SearchView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " isIconified=" + this.f47982 + l.d;
     }
 }

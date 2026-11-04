@@ -1,30 +1,35 @@
 package l;
 
-import java.io.FilterInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
+import java.lang.reflect.Constructor;
+import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 
-/* JADX INFO: renamed from: l.᩹ۜ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: J71B */
+/* JADX INFO: renamed from: l.᩷ܳۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 76WC */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22121 extends FilterInputStream implements InterfaceC20818 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18485 f71616;
-
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+public final /* synthetic */ class C22121 implements InterfaceC8424 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static JSONObject m50076(String str, String str2, String str3, String str4) {
+        return JSON.object().add(str, str2).add(str3, str4);
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22121(InputStream inputStream, C18485 c18485) {
-        super(inputStream);
-        this.f71616 = c18485;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static StringBuilder m50077(ConfigurableProvider configurableProvider, String str, String str2, String str3) {
+        configurableProvider.addAlgorithm(str, str2);
+        return new StringBuilder(str3);
     }
 
-    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        this.f71616.close();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m50078(StringBuilder sb, String str, String str2, String str3) {
+        sb.append(str);
+        sb.append(str2);
+        sb.append(str3);
+    }
+
+    @Override // l.InterfaceC8424
+    /* JADX INFO: renamed from: ۙ */
+    public Constructor mo8291() {
+        return C0469.class.asSubclass(InterfaceC22486.class).getConstructor(null);
     }
 }

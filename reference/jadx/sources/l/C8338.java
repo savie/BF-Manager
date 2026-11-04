@@ -1,15 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ᩳۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6B2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8338 extends C5151 {
+import java.lang.reflect.Array;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C18557 f28873;
+/* JADX INFO: renamed from: l.۠ۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 64NM */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C8338 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Object[] f27328 = new Object[0];
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m21771() {
-        return this.f28873;
+    public static final Object[] f27327 = new Object[0];
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Object[] m22444(int i, int i2, Object[] objArr) {
+        Object[] objArr2;
+        Class<?> cls = objArr.getClass();
+        if (cls == Object[].class) {
+            objArr2 = i == 0 ? f27328 : new Object[i];
+        } else {
+            objArr2 = (Object[]) Array.newInstance(cls.getComponentType(), i);
+        }
+        System.arraycopy(objArr, 0, objArr2, 0, i2);
+        return objArr2;
     }
 }

@@ -1,211 +1,146 @@
-.class public final enum Ll/۬ۜܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/۬ۜܶ;
+.super Ljava/lang/Object;
+.source "E8BO"
+
+
+# instance fields
+.field public final ۙ:Ljava/util/TreeMap;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const-string v0, "FORMAT_45CC"
-
-    const/16 v1, 0x1f
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/۬ۜܶ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
+    .line 30
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 672
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    .line 31
+    new-instance v0, Ljava/util/TreeMap;
+
+    invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
+
+    iput-object v0, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 8
+.method public final declared-synchronized ۙ(Ll/ۙ۬ܶ;)Ljava/util/List;
+    .locals 2
 
-    .line 676
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    move-object v0, p0
 
-    move-result v2
+    .line 1
+    monitor-enter v0
 
-    const/16 v0, 0xfa
+    .line 49
+    :try_start_0
+    iget-object v1, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
 
-    if-ne v2, v0, :cond_1
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    .line 682
-    invoke-static {p1}, Ll/۟ۜܶ;->֨(I)I
+    move-result v1
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    .line 683
-    invoke-static {p1}, Ll/۟ۜܶ;->۬(I)I
+    .line 50
+    iget-object v1, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
+
+    invoke-virtual {v1}, Ljava/util/TreeMap;->firstKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/ۙ۬ܶ;
+
+    .line 52
+    invoke-virtual {v1, p1}, Ll/ۙ۬ܶ;->ۙ(Ll/ۙ۬ܶ;)I
 
     move-result p1
 
-    .line 684
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
+    if-gtz p1, :cond_0
 
-    move-result v3
+    .line 53
+    iget-object p1, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
 
-    .line 685
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
+    invoke-virtual {p1, v1}, Ljava/util/TreeMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    .line 686
-    invoke-static {v1}, Ll/۟ۜܶ;->ۚ(I)I
+    check-cast p1, Ljava/util/List;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v4
+    goto :goto_0
 
-    .line 687
-    invoke-static {v1}, Ll/۟ۜܶ;->᩹(I)I
+    :cond_0
+    const/4 p1, 0x0
 
-    move-result v5
-
-    .line 688
-    invoke-static {v1}, Ll/۟ۜܶ;->֨(I)I
-
-    move-result v6
-
-    .line 689
-    invoke-static {v1}, Ll/۟ۜܶ;->۬(I)I
-
-    move-result v1
-
-    .line 690
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
-
-    move-result p2
-
-    .line 691
-    invoke-static {v2}, Ll/ۜۘܶ;->ܰ(I)Ll/۬ۘܶ;
-
-    const/4 v7, 0x1
-
-    if-lt p1, v7, :cond_0
-
-    const/4 v7, 0x5
-
-    if-gt p1, v7, :cond_0
-
-    .line 696
-    filled-new-array {v4, v5, v6, v1, v0}, [I
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 697
-    invoke-static {v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([III)[I
-
-    move-result-object v5
-
-    .line 699
-    new-instance p1, Ll/᩷ۜܶ;
-
-    move-object v0, p1
-
-    move-object v1, p0
-
-    move v4, p2
-
-    invoke-direct/range {v0 .. v5}, Ll/᩷ۜܶ;-><init>(Ll/۟ۜܶ;III[I)V
+    .line 56
+    :goto_0
+    monitor-exit v0
 
     return-object p1
 
-    .line 694
-    :cond_0
-    new-instance p2, Ll/᩵ܰܶ;
+    :catchall_0
+    move-exception p1
 
-    invoke-static {p1}, Ll/᩹ᩴܶ;->ۚ(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "bogus registerCount: "
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    .line 60
-    invoke-direct {p2, p1, v0}, Ll/۟ܰܶ;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    .line 694
-    throw p2
-
-    .line 680
-    :cond_1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p1
 .end method
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
+.method public final declared-synchronized ۙ(Ll/ۙ۬ܶ;Ll/ۜۜܶ;)V
     .locals 3
 
-    .line 705
-    check-cast p1, Ll/᩷ۜܶ;
+    move-object v0, p0
 
-    .line 707
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    .line 1
+    monitor-enter v0
 
-    move-result v0
+    .line 39
+    :try_start_0
+    iget-object v1, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
 
-    .line 708
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->᩵()I
+    invoke-virtual {v1, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v1
 
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->ᩴ()I
+    check-cast v1, Ljava/util/List;
 
-    move-result v2
+    if-nez v1, :cond_0
 
-    invoke-static {v1, v2}, Ll/۟ۜܶ;->ۨ(II)I
+    .line 41
+    new-instance v1, Ljava/util/LinkedList;
 
-    move-result v1
+    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 707
-    invoke-static {v0, v1}, Ll/۟ۜܶ;->ܰ(II)S
+    .line 42
+    iget-object v2, p0, Ll/۬ۜܶ;->ۙ:Ljava/util/TreeMap;
 
-    .line 710
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->ۨ()I
+    invoke-virtual {v2, p1, v1}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    .line 44
+    :cond_0
+    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->ۖ()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->ۚ()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Ll/᩷ۜܶ;->۠()I
-
-    move-result p1
-
-    invoke-static {v0, v1, v2, p1}, Ll/۟ۜܶ;->ۙ(IIII)S
-
-    .line 707
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ۨ()V
+    .line 45
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

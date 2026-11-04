@@ -10,11 +10,11 @@
 # instance fields
 .field public ֡:Ljava/lang/String;
 
-.field public ۫:I
+.field public ۟:I
 
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
-.field public ܽ:Ljava/lang/String;
+.field public ܿ:Ljava/lang/String;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -56,7 +56,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 162
-    iget-object v1, p0, Lcom/amazonaws/AmazonServiceException;->ܽ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/AmazonServiceException;->֡:Ljava/lang/String;
 
     .line 238
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -66,7 +66,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 232
-    iget v1, p0, Lcom/amazonaws/AmazonServiceException;->۫:I
+    iget v1, p0, Lcom/amazonaws/AmazonServiceException;->۟:I
 
     .line 239
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -87,41 +87,23 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 144
-    iget-object v1, p0, Lcom/amazonaws/AmazonServiceException;->֡:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/AmazonServiceException;->ܿ:Ljava/lang/String;
 
     const-string v2, ")"
 
     .line 0
-    invoke-static {v0, v1, v2}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۖ()I
-    .locals 1
-
-    .line 232
-    iget v0, p0, Lcom/amazonaws/AmazonServiceException;->۫:I
-
-    return v0
-.end method
-
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 0
-
-    .line 153
-    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->ܽ:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public ۙ()Ljava/lang/String;
     .locals 1
 
     .line 180
-    iget-object v0, p0, Lcom/amazonaws/AmazonServiceException;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/AmazonServiceException;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -130,7 +112,7 @@
     .locals 0
 
     .line 221
-    iput p1, p0, Lcom/amazonaws/AmazonServiceException;->۫:I
+    iput p1, p0, Lcom/amazonaws/AmazonServiceException;->۟:I
 
     return-void
 .end method
@@ -139,30 +121,30 @@
     .locals 0
 
     .line 171
-    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->ܺ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ۨ()Ljava/lang/String;
+.method public final ۤ()Ljava/lang/String;
     .locals 1
 
     .line 144
-    iget-object v0, p0, Lcom/amazonaws/AmazonServiceException;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/AmazonServiceException;->ܿ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 0
 
     .line 133
-    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->ܿ:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final ܰ()Ljava/lang/String;
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
     .line 211
@@ -171,11 +153,29 @@
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     .line 248
     iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->᩶:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final ᩸()I
+    .locals 1
+
+    .line 232
+    iget v0, p0, Lcom/amazonaws/AmazonServiceException;->۟:I
+
+    return v0
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 0
+
+    .line 153
+    iput-object p1, p0, Lcom/amazonaws/AmazonServiceException;->֡:Ljava/lang/String;
 
     return-void
 .end method

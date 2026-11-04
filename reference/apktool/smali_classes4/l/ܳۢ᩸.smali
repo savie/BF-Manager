@@ -1,239 +1,473 @@
 .class public final Ll/ܳۢ᩸;
-.super Ll/֫ۢ᩸;
-.source "V9HU"
+.super Ljava/lang/Object;
+.source "I6U1"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
+
+
+# instance fields
+.field public final synthetic ֡:Ll/ܽۢ᩸;
+
+.field public ܰ:Ll/۟۟᩸;
+
+.field public final ܿ:Ljava/util/UUID;
+
+.field public final ᩶:J
+
+
+# direct methods
+.method public constructor <init>(Ll/ܽۢ᩸;Ll/۟۟᩸;Ljava/util/UUID;J)V
+    .locals 0
+
+    .line 748
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    .line 749
+    iput-object p2, p0, Ll/ܳۢ᩸;->ܰ:Ll/۟۟᩸;
+
+    iput-object p3, p0, Ll/ܳۢ᩸;->ܿ:Ljava/util/UUID;
+
+    iput-wide p4, p0, Ll/ܳۢ᩸;->᩶:J
+
+    return-void
+.end method
+
+.method private ۫()Ll/۟۟᩸;
+    .locals 2
+
+    .line 797
+    iget-object v0, p0, Ll/ܳۢ᩸;->ܰ:Ll/۟۟᩸;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Checkpoint is closed or already published"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final close()V
+    .locals 3
 
-    const-string v0, "little endian"
+    .line 802
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    return-object v0
+    monitor-enter v0
+
+    .line 803
+    :try_start_0
+    iget-object v1, p0, Ll/ܳۢ᩸;->ܰ:Ll/۟۟᩸;
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Ll/ܳۢ᩸;->ܰ:Ll/۟۟᩸;
+
+    if-eqz v1, :cond_0
+
+    .line 804
+    invoke-virtual {v1}, Ll/۟۟᩸;->close()V
+
+    .line 805
+    :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final ۙ(Ll/ۧۢ᩸;)J
+.method public final ۙ()[B
+    .locals 2
+
+    .line 754
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Ll/ܳۢ᩸;->۫()Ll/۟۟᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/۟۟᩸;->֡:Ll/ۨᩳ᩸;
+
+    iget-object v1, v1, Ll/ۨᩳ᩸;->ܰ:[B
+
+    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [B
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ۤ()Ljava/util/UUID;
+    .locals 2
+
+    .line 753
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Ll/ܳۢ᩸;->۫()Ll/۟۟᩸;
+
+    iget-object v1, p0, Ll/ܳۢ᩸;->ܿ:Ljava/util/UUID;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ܳ()Ll/ۜܿ᩸;
     .locals 6
 
-    const/16 v0, 0x8
+    .line 758
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    new-array v1, v0, [B
+    monitor-enter v0
 
-    .line 293
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
+    .line 759
+    :try_start_0
+    invoke-direct {p0}, Ll/ܳۢ᩸;->۫()Ll/۟۟᩸;
 
-    const-wide/16 v2, 0x0
+    move-result-object v1
 
-    const/4 p1, 0x7
+    iget-object v1, v1, Ll/۟۟᩸;->۟:Ll/ۜܿ᩸;
 
-    :goto_0
-    if-ltz p1, :cond_0
+    .line 760
+    new-instance v2, Ll/ۜܿ᩸;
 
-    shl-long/2addr v2, v0
+    invoke-virtual {v1}, Ll/۠ܿ᩸;->ܳ()Ll/᩷֡᩸;
 
-    .line 269
-    aget-byte v4, v1, p1
+    move-result-object v3
 
-    and-int/lit16 v4, v4, 0xff
+    invoke-virtual {v1}, Ll/ۜܿ᩸;->۫()J
 
-    int-to-long v4, v4
+    move-result-wide v4
 
-    or-long/2addr v2, v4
+    invoke-direct {v2, v3, v4, v5}, Ll/ۜܿ᩸;-><init>(Ll/᩷֡᩸;J)V
 
-    add-int/lit8 p1, p1, -0x1
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    .line 761
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ᩷()J
+    .locals 3
+
+    .line 752
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Ll/ܳۢ᩸;->۫()Ll/۟۟᩸;
+
+    move-result-object v1
+
+    iget-wide v1, v1, Ll/۟۟᩸;->ܿ:J
+
+    monitor-exit v0
+
+    return-wide v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ᩷([B)J
+    .locals 12
+
+    .line 769
+    iget-object v0, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    monitor-enter v0
+
+    .line 770
+    :try_start_0
+    iget-object v1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    invoke-static {v1}, Ll/ܽۢ᩸;->ۚ(Ll/ܽۢ᩸;)V
+
+    iget-object v1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    invoke-static {v1}, Ll/ܽۢ᩸;->۫(Ll/ܽۢ᩸;)V
+
+    .line 771
+    invoke-direct {p0}, Ll/ܳۢ᩸;->۫()Ll/۟۟᩸;
+
+    move-result-object v1
+
+    .line 772
+    iget-wide v2, v1, Ll/۟۟᩸;->ܿ:J
+
+    iget-object v4, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    invoke-static {v4}, Ll/ܽۢ᩸;->ۙ(Ll/ܽۢ᩸;)J
+
+    move-result-wide v4
+
+    cmp-long v6, v2, v4
+
+    if-lez v6, :cond_2
+
+    .line 773
+    iget-object v2, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
+
+    invoke-static {v2}, Ll/ܽۢ᩸;->ᩴ(Ll/ܽۢ᩸;)Ll/ۢۢ᩸;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    return-wide v2
-.end method
+    iget-object v2, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-.method public final ۙ(Ll/ۧۢ᩸;J)V
-    .locals 9
+    invoke-static {v2}, Ll/ܽۢ᩸;->ᩴ(Ll/ܽۢ᩸;)Ll/ۢۢ᩸;
 
-    long-to-int v0, p2
+    move-result-object v2
 
-    int-to-byte v0, v0
+    iget-object v2, v2, Ll/ۢۢ᩸;->֡:Ll/֡ۢ᩸;
 
-    const/16 v1, 0x8
+    :goto_0
+    invoke-static {v2, p1}, Ll/ۨᩳ᩸;->ۙ(Ll/֡ۢ᩸;[B)Ll/ۨᩳ᩸;
 
-    shr-long v2, p2, v1
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    long-to-int v3, v2
+    .line 775
+    :try_start_1
+    new-instance v10, Ll/ۜܿ᩸;
 
-    int-to-byte v2, v3
+    iget-object v3, v1, Ll/۟۟᩸;->۟:Ll/ۜܿ᩸;
 
-    const/16 v3, 0x10
+    invoke-virtual {v3}, Ll/۠ܿ᩸;->ܳ()Ll/᩷֡᩸;
 
-    shr-long v3, p2, v3
+    move-result-object v3
 
-    long-to-int v4, v3
+    iget-object v4, v1, Ll/۟۟᩸;->۟:Ll/ۜܿ᩸;
 
-    int-to-byte v3, v4
+    invoke-virtual {v4}, Ll/ۜܿ᩸;->۫()J
 
-    const/16 v4, 0x18
+    move-result-wide v4
 
-    shr-long v4, p2, v4
+    invoke-direct {v10, v3, v4, v5}, Ll/ۜܿ᩸;-><init>(Ll/᩷֡᩸;J)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    long-to-int v5, v4
+    .line 777
+    :try_start_2
+    new-instance v11, Ll/۟۟᩸;
 
-    int-to-byte v4, v5
+    iget-object v6, v1, Ll/۟۟᩸;->ܰ:Ll/ۨ۟᩸;
 
-    const/16 v5, 0x20
+    iget-object v7, v1, Ll/۟۟᩸;->᩶:Ll/᩶۟᩸;
 
-    shr-long v5, p2, v5
+    iget-wide v8, v1, Ll/۟۟᩸;->ܿ:J
 
-    long-to-int v6, v5
+    move-object v3, v11
 
-    int-to-byte v5, v6
+    move-object v4, v10
 
-    const/16 v6, 0x28
+    move-object v5, v2
 
-    shr-long v6, p2, v6
+    invoke-direct/range {v3 .. v9}, Ll/۟۟᩸;-><init>(Ll/ۜܿ᩸;Ll/ۨᩳ᩸;Ll/ۨ۟᩸;Ll/᩶۟᩸;J)V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    long-to-int v7, v6
+    .line 779
+    :try_start_3
+    iget-object v3, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    int-to-byte v6, v7
+    invoke-static {v3}, Ll/ܽۢ᩸;->ۤ(Ll/ܽۢ᩸;)Ll/۬۟᩸;
 
-    const/16 v7, 0x30
+    move-result-object v3
 
-    shr-long v7, p2, v7
+    iget-wide v4, p0, Ll/ܳۢ᩸;->᩶:J
 
-    long-to-int v8, v7
+    array-length p1, p1
 
-    int-to-byte v7, v8
+    int-to-long v6, p1
 
-    const/16 v8, 0x38
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
-    shr-long/2addr p2, v8
+    move-result-wide v4
 
-    long-to-int p3, p2
+    const-wide/16 v6, 0x1
 
-    int-to-byte p2, p3
+    invoke-static {v6, v7, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    new-array p3, v1, [B
+    move-result-wide v4
 
-    const/4 v8, 0x0
+    invoke-virtual {v3, v11, v4, v5}, Ll/۬۟᩸;->ۙ(Ll/۟۟᩸;J)V
 
-    aput-byte v0, p3, v8
+    .line 780
+    iget-object p1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    const/4 v0, 0x1
+    iget-wide v3, v1, Ll/۟۟᩸;->ܿ:J
 
-    aput-byte v2, p3, v0
+    invoke-static {p1, v3, v4}, Ll/ܽۢ᩸;->ۙ(Ll/ܽۢ᩸;J)V
 
-    const/4 v0, 0x2
+    .line 782
+    iget-object p1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    aput-byte v3, p3, v0
+    invoke-static {p1}, Ll/ܽۢ᩸;->᩸(Ll/ܽۢ᩸;)J
 
-    const/4 v0, 0x3
+    move-result-wide v3
 
-    aput-byte v4, p3, v0
+    iget-wide v5, v1, Ll/۟۟᩸;->ܿ:J
 
-    const/4 v0, 0x4
+    cmp-long p1, v3, v5
 
-    aput-byte v5, p3, v0
+    if-nez p1, :cond_1
 
-    const/4 v0, 0x5
+    .line 783
+    iget-object p1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    aput-byte v6, p3, v0
+    invoke-static {p1}, Ll/ܽۢ᩸;->᩷(Ll/ܽۢ᩸;)Ll/ۨᩳ᩸;
 
-    const/4 v0, 0x6
+    move-result-object p1
 
-    aput-byte v7, p3, v0
+    .line 784
+    iget-object v3, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-    const/4 v0, 0x7
+    invoke-virtual {v2}, Ll/ۨᩳ᩸;->۠᩷()V
 
-    aput-byte p2, p3, v0
+    invoke-static {v3, v2}, Ll/ܽۢ᩸;->ۙ(Ll/ܽۢ᩸;Ll/ۨᩳ᩸;)V
 
-    .line 318
-    invoke-virtual {p1, v1, p3}, Ll/ۧۢ᩸;->ۙ(I[B)V
+    .line 785
+    invoke-virtual {p1}, Ll/ۨᩳ᩸;->close()V
 
-    return-void
-.end method
+    .line 787
+    iget-object p1, p0, Ll/ܳۢ᩸;->֡:Ll/ܽۢ᩸;
 
-.method public final ۙ(Ll/ۧۢ᩸;Ljava/lang/String;)V
-    .locals 1
+    invoke-static {p1}, Ll/ܽۢ᩸;->ܳ(Ll/ܽۢ᩸;)V
 
-    .line 287
-    sget-object v0, Ll/۟ۢ᩸;->ۖ:Ljava/nio/charset/Charset;
+    .line 789
+    :cond_1
+    iget-wide v3, v1, Ll/۟۟᩸;->ܿ:J
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    .line 790
+    invoke-virtual {p0}, Ll/ܳۢ᩸;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    move-result-object p2
+    .line 792
+    :try_start_4
+    invoke-virtual {v2}, Ll/ۨᩳ᩸;->close()V
 
-    .line 288
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 318
-    array-length v0, p2
+    return-wide v3
 
-    invoke-virtual {p1, v0, p2}, Ll/ۧۢ᩸;->ۙ(I[B)V
+    :catch_0
+    move-exception p1
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public final ܰ(Ll/ۧۢ᩸;)J
-    .locals 8
+    :catch_1
+    move-exception p1
 
-    const/4 v0, 0x4
+    .line 778
+    :goto_1
+    :try_start_5
+    invoke-virtual {v10}, Ll/۠ܿ᩸;->close()V
 
-    new-array v1, v0, [B
+    throw p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 293
-    invoke-virtual {p1, v0, v1}, Ll/ۧۢ᩸;->ܰ(I[B)V
+    :catchall_0
+    move-exception p1
 
-    const/4 p1, 0x0
+    .line 792
+    :try_start_6
+    invoke-virtual {v2}, Ll/ۨᩳ᩸;->close()V
 
-    .line 227
-    aget-byte p1, v1, p1
+    throw p1
 
-    int-to-long v2, p1
+    .line 772
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-wide/16 v4, 0xff
+    const-string v1, "Checkpoint has been superseded"
 
-    and-long/2addr v2, v4
+    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x1
+    throw p1
 
-    aget-byte p1, v1, p1
+    :catchall_1
+    move-exception p1
 
-    shl-int/lit8 p1, p1, 0x8
+    .line 793
+    monitor-exit v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    int-to-long v4, p1
-
-    const-wide/32 v6, 0xff00
-
-    and-long/2addr v4, v6
-
-    or-long/2addr v2, v4
-
-    const/4 p1, 0x2
-
-    aget-byte p1, v1, p1
-
-    shl-int/lit8 p1, p1, 0x10
-
-    int-to-long v4, p1
-
-    const-wide/32 v6, 0xff0000
-
-    and-long/2addr v4, v6
-
-    or-long/2addr v2, v4
-
-    const/4 p1, 0x3
-
-    aget-byte p1, v1, p1
-
-    shl-int/lit8 p1, p1, 0x18
-
-    int-to-long v0, p1
-
-    const-wide v4, 0xff000000L
-
-    and-long/2addr v0, v4
-
-    or-long/2addr v0, v2
-
-    return-wide v0
+    throw p1
 .end method

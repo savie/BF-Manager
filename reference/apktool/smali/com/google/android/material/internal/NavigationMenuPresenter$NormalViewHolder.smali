@@ -8,7 +8,7 @@
     .locals 2
 
     .line 473
-    sget v0, Ll/ܶ۟ܶ;->ۨۙ:I
+    sget v0, Ll/ۨ۬ܺ;->ۤۙ:I
 
     const/4 v1, 0x0
 
@@ -19,7 +19,7 @@
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 474
-    iget-object p1, p0, Ll/۫ܿܰ;->itemView:Landroid/view/View;
+    iget-object p1, p0, Ll/ۧᩳ᩷;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

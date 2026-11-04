@@ -1,68 +1,82 @@
 package l;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.security.InvalidParameterException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۖᩴ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F2DJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2721 extends AbstractC14696 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final HashSet f10463;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f10464;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f10465;
+/* JADX INFO: renamed from: l.ۖܰ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: VZ3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2721 extends AbstractC13448 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f10466;
+    public final /* synthetic */ C22311 f9080;
 
-    public C2721(Map map) {
-        if (map == null) {
-            throw new InvalidParameterException("lookupMap cannot be null");
-        }
-        this.f10465 = new HashMap();
-        this.f10463 = new HashSet();
-        int i = Integer.MAX_VALUE;
-        int i2 = 0;
-        for (Map.Entry entry : map.entrySet()) {
-            this.f10465.put(((CharSequence) entry.getKey()).toString(), ((CharSequence) entry.getValue()).toString());
-            this.f10463.add(Character.valueOf(((CharSequence) entry.getKey()).charAt(0)));
-            int length = ((CharSequence) entry.getKey()).length();
-            i = length < i ? length : i;
-            if (length > i2) {
-                i2 = length;
-            }
-        }
-        this.f10464 = i;
-        this.f10466 = i2;
+    @Override // l.AbstractC13448, l.AbstractC6957, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // l.AbstractC14696
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4663(CharSequence charSequence, int i, StringWriter stringWriter) throws IOException {
-        if (!this.f10463.contains(Character.valueOf(charSequence.charAt(i)))) {
-            return 0;
+    public C2721(C22311 c22311) {
+        this.f9080 = c22311;
+    }
+
+    @Override // l.InterfaceC1340
+    public final boolean contains(int i) {
+        return this.f9080.m50372(i) != -1;
+    }
+
+    @Override // l.AbstractC13448
+    public final boolean remove(int i) {
+        C22311 c22311 = this.f9080;
+        int iM50372 = c22311.m50372(i);
+        if (iM50372 == -1) {
+            return false;
         }
-        int length = this.f10466;
-        if (i + length > charSequence.length()) {
-            length = charSequence.length() - i;
+        int i2 = (c22311.f72228 - iM50372) - 1;
+        int[] iArr = c22311.f72233;
+        int i3 = iM50372 + 1;
+        System.arraycopy(iArr, i3, iArr, iM50372, i2);
+        Object[] objArr = c22311.f72229;
+        System.arraycopy(objArr, i3, objArr, iM50372, i2);
+        int i4 = c22311.f72228 - 1;
+        c22311.f72228 = i4;
+        c22311.f72229[i4] = null;
+        return true;
+    }
+
+    @Override // l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return new C1230(this);
+    }
+
+    @Override // l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC6036 iterator() {
+        return new C1230(this);
+    }
+
+    @Override // l.AbstractC13448, l.AbstractC6957, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC15949 spliterator() {
+        return new C9432(this, 0, this.f9080.f72228);
+    }
+
+    @Override // l.AbstractC6957, l.InterfaceC20206
+    public final void forEach(IntConsumer intConsumer) {
+        C22311 c22311 = this.f9080;
+        int[] iArr = c22311.f72233;
+        int i = c22311.f72228;
+        for (int i2 = 0; i2 < i; i2++) {
+            intConsumer.accept(iArr[i2]);
         }
-        while (length >= this.f10464) {
-            String str = (String) this.f10465.get(charSequence.subSequence(i, i + length).toString());
-            if (str != null) {
-                stringWriter.write(str);
-                return length;
-            }
-            length--;
-        }
-        return 0;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f9080.f72228;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f9080.clear();
     }
 }

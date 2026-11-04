@@ -1,40 +1,64 @@
-.class public final synthetic Ll/᩵ܽ᩹;
+.class public Ll/᩵ܽ᩹;
 .super Ljava/lang/Object;
-.source "L73L"
+.source "J1DS"
 
 # interfaces
-.implements Ll/۟ܽ᩹;
+.implements Ll/ۚ᩹᩹;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ۛᩳۨ;
+.field public ܰ:C
+
+.field public ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۛᩳۨ;)V
+.method public constructor <init>(CLjava/lang/Object;)V
     .locals 0
 
-    .line 0
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩵ܽ᩹;->ۙ:Ll/ۛᩳۨ;
+    .line 114
+    iput-char p1, p0, Ll/᩵ܽ᩹;->ܰ:C
+
+    .line 115
+    iput-object p2, p0, Ll/᩵ܽ᩹;->᩶:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/String;)Z
+.method public final getKey()Ljava/lang/Object;
     .locals 1
 
-    .line 47
-    iget-object v0, p0, Ll/᩵ܽ᩹;->ۙ:Ll/ۛᩳۨ;
+    .line 619
+    invoke-virtual {p0}, Ll/᩵ܽ᩹;->ᩴ()C
 
-    invoke-virtual {v0, p1}, Ll/ۛᩳۨ;->reset(Ljava/lang/CharSequence;)V
+    move-result v0
 
-    invoke-virtual {v0}, Ll/ۛᩳۨ;->matches()Z
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 125
+    iget-object v0, p0, Ll/᩵ܽ᩹;->᩶:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final ᩴ()C
+    .locals 1
+
+    .line 120
+    iget-char v0, p0, Ll/᩵ܽ᩹;->ܰ:C
+
+    return v0
 .end method

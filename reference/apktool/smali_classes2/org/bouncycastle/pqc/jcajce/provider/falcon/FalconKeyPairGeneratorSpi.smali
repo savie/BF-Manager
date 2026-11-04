@@ -339,7 +339,7 @@
     const-string v0, "invalid ParameterSpec: "
 
     .line 0
-    invoke-static {v0, p1}, Ll/ۨ᩹ܰ;->ۙ(Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;)Ljava/lang/String;
+    invoke-static {v0, p1}, Ll/ۨۨ᩹;->ۙ(Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;)Ljava/lang/String;
 
     move-result-object p1
 

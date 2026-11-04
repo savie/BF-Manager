@@ -1,99 +1,45 @@
 package l;
 
-import java.util.Map;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۤۡ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: V9PU */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10196 implements Map.Entry, Comparable {
+/* JADX INFO: renamed from: l.ۢܳᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4AWI */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C10196 implements InterfaceC0818 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Object f34826;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ List f32619;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Comparable f34827;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C8640 f32620;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15841 f34828;
-
-    public C10196() {
-        throw null;
+    public /* synthetic */ C10196(List list, C8640 c8640) {
+        this.f32619 = list;
+        this.f32620 = c8640;
     }
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return this.f34827.compareTo(((C10196) obj).f34827);
-    }
-
-    public C10196(C15841 c15841, Comparable comparable, Object obj) {
-        this.f34828 = c15841;
-        this.f34827 = comparable;
-        this.f34826 = obj;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Comparable getKey() {
-        return this.f34827;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object getKey() {
-        return this.f34827;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object getValue() {
-        return this.f34826;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object setValue(Object obj) {
-        this.f34828.m37651();
-        Object obj2 = this.f34826;
-        this.f34826 = obj;
-        return obj2;
-    }
-
-    @Override // java.util.Map.Entry
-    public final boolean equals(Object obj) {
-        boolean zEquals;
-        boolean zEquals2;
-        if (obj != this) {
-            if (obj instanceof Map.Entry) {
-                Map.Entry entry = (Map.Entry) obj;
-                Object key = entry.getKey();
-                Comparable comparable = this.f34827;
-                if (comparable == null) {
-                    zEquals = key == null;
-                } else {
-                    zEquals = comparable.equals(key);
-                }
-                if (zEquals) {
-                    Object obj2 = this.f34826;
-                    Object value = entry.getValue();
-                    if (obj2 == null) {
-                        zEquals2 = value == null;
-                    } else {
-                        zEquals2 = obj2.equals(value);
-                    }
-                    if (zEquals2) {
-                    }
-                }
+    /* JADX WARN: Code duplicated, block: B:11:0x002d  */
+    @Override // l.InterfaceC0818
+    public final void accept(Object obj) {
+        int size;
+        C19147 c19147;
+        C16626 c16626 = (C16626) obj;
+        int i = ActivityC5440.f18993;
+        List list = this.f32619;
+        if (list.isEmpty()) {
+            size = list.size();
+        } else {
+            C16626 c16627 = (C16626) C7750.m21093(1, list);
+            if (c16627.f53761.m44387() == 22 || ((c19147 = c16627.f53759) != null && c19147.m44387() == 22)) {
+                size = list.size() - 1;
+            } else {
+                size = list.size();
             }
-            return false;
         }
-        return true;
-    }
-
-    @Override // java.util.Map.Entry
-    public final int hashCode() {
-        Comparable comparable = this.f34827;
-        int iHashCode = comparable == null ? 0 : comparable.hashCode();
-        Object obj = this.f34826;
-        return (obj != null ? obj.hashCode() : 0) ^ iHashCode;
-    }
-
-    public final String toString() {
-        return this.f34827 + "=" + this.f34826;
+        list.add(size, c16626);
+        C8640 c8640 = this.f32620;
+        c8640.f28227.notifyItemInserted(size);
+        c8640.f28226.smoothScrollToPosition(size);
+        C24832.m55356();
     }
 }

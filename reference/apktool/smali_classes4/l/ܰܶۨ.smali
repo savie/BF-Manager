@@ -1,278 +1,794 @@
-.class public final Ll/ܰܶۨ;
-.super Ljava/lang/Object;
-.source "N53S"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.class public final enum Ll/ܰܶۨ;
+.super Ljava/lang/Enum;
+.source "D971"
 
 
-# virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 17
+# static fields
+.field public static final enum ֡:Ll/ܰܶۨ;
 
-    .line 107
-    invoke-virtual/range {p1 .. p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+.field public static final synthetic ܰ:[Ll/ܰܶۨ;
+
+.field public static final enum ܿ:Ll/ܰܶۨ;
+
+.field public static final enum ᩶:Ll/ܰܶۨ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 46
+    new-instance v0, Ll/ܰܶۨ;
+
+    const-string v1, "SLL"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ll/ܰܶۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܰܶۨ;->֡:Ll/ܰܶۨ;
+
+    .line 65
+    new-instance v0, Ll/ܰܶۨ;
+
+    const-string v1, "LL"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ܰܶۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܰܶۨ;->᩶:Ll/ܰܶۨ;
+
+    .line 83
+    new-instance v0, Ll/ܰܶۨ;
+
+    const-string v1, "LL_EXACT_AMBIG_DETECTION"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ܰܶۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܰܶۨ;->ܿ:Ll/ܰܶۨ;
+
+    .line 24
+    invoke-static {}, Ll/ܰܶۨ;->ۙ()[Ll/ܰܶۨ;
 
     move-result-object v0
 
-    check-cast v0, Ll/ܳۘۨ;
+    sput-object v0, Ll/ܰܶۨ;->ܰ:[Ll/ܰܶۨ;
 
-    invoke-virtual {v0}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 24
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/ܰܶۨ;
+    .locals 1
+
+    .line 24
+    const-class v0, Ll/ܰܶۨ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ܰܶۨ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ܰܶۨ;
+    .locals 1
+
+    .line 24
+    sget-object v0, Ll/ܰܶۨ;->ܰ:[Ll/ܰܶۨ;
+
+    invoke-virtual {v0}, [Ll/ܰܶۨ;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [I
+    check-cast v0, [Ll/ܰܶۨ;
 
-    .line 108
-    invoke-virtual/range {p1 .. p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public static ۙ(Ljava/util/Collection;)Z
+    .locals 0
 
-    check-cast v1, Ll/ܳۘۨ;
+    .line 441
+    invoke-static {p0}, Ll/ܰܶۨ;->۫(Ljava/util/Collection;)Z
 
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
+    move-result p0
 
-    move-result-object v1
+    xor-int/lit8 p0, p0, 0x1
 
-    check-cast v1, [B
+    return p0
+.end method
 
-    .line 110
-    new-instance v2, Ll/ܳۘۨ;
+.method public static ۙ(Ll/ۚܽۨ;)Z
+    .locals 1
 
-    invoke-direct {v2}, Ll/ܳۘۨ;-><init>()V
+    .line 359
+    iget-object p0, p0, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
 
-    .line 116
-    array-length v3, v1
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    const/4 v4, 0x2
+    move-result-object p0
 
-    shr-int/2addr v3, v4
-
-    new-array v5, v3, [I
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    :goto_0
-    if-ge v7, v3, :cond_0
-
-    add-int/lit8 v9, v8, 0x1
-
-    .line 118
-    aget-byte v10, v1, v8
-
-    and-int/lit16 v10, v10, 0xff
-
-    add-int/lit8 v11, v8, 0x2
-
-    aget-byte v9, v1, v9
-
-    not-int v9, v9
-
-    and-int/lit16 v9, v9, 0xff
-
-    shl-int/lit8 v9, v9, 0x8
-
-    or-int/2addr v9, v10
-
-    add-int/lit8 v10, v8, 0x3
-
-    aget-byte v11, v1, v11
-
-    and-int/lit16 v11, v11, 0xff
-
-    shl-int/lit8 v11, v11, 0x10
-
-    or-int/2addr v9, v11
-
-    add-int/lit8 v8, v8, 0x4
-
-    aget-byte v10, v1, v10
-
-    not-int v10, v10
-
-    and-int/lit16 v10, v10, 0xff
-
-    shl-int/lit8 v10, v10, 0x18
-
-    or-int/2addr v9, v10
-
-    aput v9, v5, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    .line 122
+    .line 278
     :cond_0
-    aget v1, v0, v6
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v6, 0x1
+    move-result v0
 
-    aget v7, v0, v6
+    if-eqz v0, :cond_1
 
-    aget v4, v0, v4
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v8, 0x3
+    move-result-object v0
 
-    aget v0, v0, v8
+    check-cast v0, Ll/᩸ܽۨ;
 
-    const/4 v8, 0x0
+    .line 279
+    iget-object v0, v0, Ll/᩸ܽۨ;->ᩴ:Ll/ܽܽۨ;
 
-    :goto_1
-    const v10, 0x61c88647
+    instance-of v0, v0, Ll/֡ܶۨ;
 
-    if-ge v8, v3, :cond_2
+    if-nez v0, :cond_0
 
-    .line 124
-    aget v11, v5, v8
+    const/4 p0, 0x0
 
-    add-int/lit8 v12, v8, 0x1
+    return p0
 
-    .line 125
-    aget v13, v5, v12
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    :goto_2
-    const/16 v9, 0x40
-
-    if-ge v14, v9, :cond_1
-
-    sub-int/2addr v15, v10
-
-    shl-int/lit8 v9, v13, 0x4
-
-    add-int/2addr v9, v1
-
-    add-int v16, v13, v15
-
-    xor-int v9, v9, v16
-
-    shr-int/lit8 v16, v13, 0x5
-
-    add-int v16, v16, v7
-
-    xor-int v9, v9, v16
-
-    add-int/2addr v11, v9
-
-    shl-int/lit8 v9, v11, 0x4
-
-    add-int/2addr v9, v4
-
-    add-int v16, v11, v15
-
-    xor-int v9, v9, v16
-
-    shr-int/lit8 v16, v11, 0x5
-
-    add-int v16, v16, v0
-
-    xor-int v9, v9, v16
-
-    add-int/2addr v13, v9
-
-    add-int/lit8 v14, v14, 0x1
-
-    goto :goto_2
-
-    .line 132
     :cond_1
-    aput v11, v5, v8
+    const/4 p0, 0x1
 
-    .line 133
-    aput v13, v5, v12
+    return p0
+.end method
 
-    add-int/lit8 v8, v8, 0x2
+.method public static ۙ(Ll/ܰܶۨ;Ll/ۚܽۨ;)Z
+    .locals 5
+
+    .line 218
+    invoke-static {p1}, Ll/ܰܶۨ;->ۙ(Ll/ۚܽۨ;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_1
 
+    .line 223
+    :cond_0
+    sget-object v0, Ll/ܰܶۨ;->֡:Ll/ܰܶۨ;
+
+    if-ne p0, v0, :cond_2
+
+    .line 227
+    iget-boolean p0, p1, Ll/ۚܽۨ;->֨:Z
+
+    if-eqz p0, :cond_2
+
+    .line 229
+    new-instance p0, Ll/ۚܽۨ;
+
+    invoke-direct {p0}, Ll/ۚܽۨ;-><init>()V
+
+    .line 359
+    iget-object p1, p1, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    .line 230
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/᩸ܽۨ;
+
+    .line 231
+    new-instance v1, Ll/᩸ܽۨ;
+
+    sget-object v2, Ll/ۢܶۨ;->ۙ:Ll/ۢܶۨ;
+
+    .line 109
+    iget-object v3, v0, Ll/᩸ܽۨ;->ᩴ:Ll/ܽܽۨ;
+
+    iget-object v4, v0, Ll/᩸ܽۨ;->᩷:Ll/ۨܶۨ;
+
+    invoke-direct {v1, v0, v3, v4, v2}, Ll/᩸ܽۨ;-><init>(Ll/᩸ܽۨ;Ll/ܽܽۨ;Ll/ۨܶۨ;Ll/ۜܶۨ;)V
+
+    const/4 v0, 0x0
+
+    .line 132
+    invoke-virtual {p0, v1, v0}, Ll/ۚܽۨ;->ۙ(Ll/᩸ܽۨ;Ll/᩵᩹ۨ;)V
+
+    goto :goto_0
+
+    :cond_1
+    move-object p1, p0
+
+    .line 241
     :cond_2
-    sub-int/2addr v3, v6
+    invoke-static {p1}, Ll/ܰܶۨ;->ۤ(Ll/ۚܽۨ;)Ljava/util/Collection;
 
-    const/4 v6, 0x0
+    move-result-object p0
 
-    :goto_3
-    if-ge v6, v3, :cond_4
+    .line 243
+    invoke-static {p0}, Ll/ܰܶۨ;->ܳ(Ljava/util/Collection;)Z
 
-    .line 137
-    aget v8, v5, v6
+    move-result p0
 
-    .line 138
-    aget v9, v5, v3
+    if-eqz p0, :cond_3
 
-    const/4 v11, 0x0
+    invoke-static {p1}, Ll/ܰܶۨ;->ܳ(Ll/ۚܽۨ;)Z
 
-    const/4 v12, 0x0
+    move-result p0
 
-    const/16 v13, 0x10
+    if-nez p0, :cond_3
 
-    :goto_4
-    if-ge v11, v13, :cond_3
+    :goto_1
+    const/4 p0, 0x1
 
-    sub-int/2addr v12, v10
+    return p0
 
-    shl-int/lit8 v14, v9, 0x4
-
-    add-int/2addr v14, v1
-
-    add-int v15, v9, v12
-
-    xor-int/2addr v14, v15
-
-    shr-int/lit8 v15, v9, 0x5
-
-    add-int/2addr v15, v7
-
-    xor-int/2addr v14, v15
-
-    add-int/2addr v8, v14
-
-    shl-int/lit8 v14, v8, 0x4
-
-    add-int/2addr v14, v4
-
-    add-int v15, v8, v12
-
-    xor-int/2addr v14, v15
-
-    shr-int/lit8 v15, v8, 0x5
-
-    add-int/2addr v15, v0
-
-    xor-int/2addr v14, v15
-
-    add-int/2addr v9, v14
-
-    add-int/lit8 v11, v11, 0x1
-
-    goto :goto_4
-
-    .line 145
     :cond_3
-    aput v8, v5, v6
+    const/4 p0, 0x0
 
-    .line 146
-    aput v9, v5, v3
+    return p0
+.end method
 
-    add-int/lit8 v6, v6, 0x1
+.method public static synthetic ۙ()[Ll/ܰܶۨ;
+    .locals 3
 
-    goto :goto_3
+    const/4 v0, 0x3
 
-    .line 111
-    :cond_4
-    invoke-virtual {v2, v5}, Ll/ܳۘۨ;->ۙ(Ljava/lang/Object;)V
+    new-array v0, v0, [Ll/ܰܶۨ;
 
-    move-object/from16 v0, p1
+    .line 24
+    sget-object v1, Ll/ܰܶۨ;->֡:Ll/ܰܶۨ;
 
-    .line 112
-    invoke-virtual {v0, v2}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+    const/4 v2, 0x0
 
-    return-void
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ܰܶۨ;->᩶:Ll/ܰܶۨ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ܰܶۨ;->ܿ:Ll/ܰܶۨ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static ۚ(Ljava/util/Collection;)I
+    .locals 0
+
+    .line 429
+    invoke-static {p0}, Ll/ܰܶۨ;->᩸(Ljava/util/Collection;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ۤ(Ljava/util/Collection;)Ljava/util/BitSet;
+    .locals 2
+
+    .line 517
+    new-instance v0, Ljava/util/BitSet;
+
+    invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
+
+    .line 518
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/BitSet;
+
+    .line 519
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->or(Ljava/util/BitSet;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static ۤ(Ll/ۚܽۨ;)Ljava/util/Collection;
+    .locals 3
+
+    .line 547
+    new-instance v0, Ll/ۘܶۨ;
+
+    .line 88
+    sget-object v1, Ll/᩺ܶۨ;->ۙ:Ll/᩺ܶۨ;
+
+    invoke-direct {v0, v1}, Ll/ۛ᩹ۨ;-><init>(Ll/ۘܺ᩹;)V
+
+    .line 359
+    iget-object p0, p0, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    .line 548
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩸ܽۨ;
+
+    .line 549
+    invoke-virtual {v0, v1}, Ll/ۛ᩹ۨ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/BitSet;
+
+    if-nez v2, :cond_0
+
+    .line 551
+    new-instance v2, Ljava/util/BitSet;
+
+    invoke-direct {v2}, Ljava/util/BitSet;-><init>()V
+
+    .line 552
+    invoke-virtual {v0, v1, v2}, Ll/ۛ᩹ۨ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 554
+    :cond_0
+    iget v1, v1, Ll/᩸ܽۨ;->ۙ:I
+
+    invoke-virtual {v2, v1}, Ljava/util/BitSet;->set(I)V
+
+    goto :goto_0
+
+    .line 556
+    :cond_1
+    invoke-virtual {v0}, Ll/ۛ᩹ۨ;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۫(Ljava/util/Collection;)Z
+    .locals 2
+
+    .line 453
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/BitSet;
+
+    .line 454
+    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    return v1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static ܳ(Ljava/util/Collection;)Z
+    .locals 2
+
+    .line 470
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/BitSet;
+
+    .line 471
+    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    return v1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static ܳ(Ll/ۚܽۨ;)Z
+    .locals 2
+
+    .line 581
+    invoke-static {p0}, Ll/ܰܶۨ;->᩸(Ll/ۚܽۨ;)Ljava/util/Map;
+
+    move-result-object p0
+
+    .line 582
+    invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/BitSet;
+
+    .line 583
+    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    return v1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static ᩴ(Ljava/util/Collection;)I
+    .locals 3
+
+    .line 503
+    invoke-static {p0}, Ll/ܰܶۨ;->ۤ(Ljava/util/Collection;)Ljava/util/BitSet;
+
+    move-result-object p0
+
+    .line 504
+    invoke-virtual {p0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p0, v2}, Ljava/util/BitSet;->nextSetBit(I)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    return v2
+.end method
+
+.method public static ᩴ(Ll/ۚܽۨ;)Z
+    .locals 1
+
+    .line 359
+    iget-object p0, p0, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    .line 258
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/᩸ܽۨ;
+
+    .line 259
+    iget-object v0, v0, Ll/᩸ܽۨ;->ᩴ:Ll/ܽܽۨ;
+
+    instance-of v0, v0, Ll/֡ܶۨ;
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static ᩷(Ll/ۚܽۨ;)Ljava/util/BitSet;
+    .locals 2
+
+    .line 530
+    new-instance v0, Ljava/util/BitSet;
+
+    invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
+
+    .line 359
+    iget-object p0, p0, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    .line 531
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩸ܽۨ;
+
+    .line 532
+    iget v1, v1, Ll/᩸ܽۨ;->ۙ:I
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->set(I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static ᩷(Ljava/util/Collection;)Z
+    .locals 2
+
+    .line 486
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    .line 487
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/BitSet;
+
+    .line 488
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 489
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/BitSet;
+
+    .line 490
+    invoke-virtual {v1, v0}, Ljava/util/BitSet;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static ᩸(Ljava/util/Collection;)I
+    .locals 4
+
+    .line 589
+    new-instance v0, Ljava/util/BitSet;
+
+    invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
+
+    .line 590
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/BitSet;
+
+    .line 591
+    invoke-virtual {v1, v2}, Ljava/util/BitSet;->nextSetBit(I)I
+
+    move-result v1
+
+    .line 592
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->set(I)V
+
+    .line 593
+    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-le v1, v3, :cond_0
+
+    return v2
+
+    .line 597
+    :cond_1
+    invoke-virtual {v0, v2}, Ljava/util/BitSet;->nextSetBit(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ᩸(Ll/ۚܽۨ;)Ljava/util/Map;
+    .locals 4
+
+    .line 568
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 359
+    iget-object p0, p0, Ll/ۚܽۨ;->֡:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    .line 569
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩸ܽۨ;
+
+    .line 570
+    iget-object v2, v1, Ll/᩸ܽۨ;->ᩴ:Ll/ܽܽۨ;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/BitSet;
+
+    if-nez v2, :cond_0
+
+    .line 572
+    new-instance v2, Ljava/util/BitSet;
+
+    invoke-direct {v2}, Ljava/util/BitSet;-><init>()V
+
+    .line 573
+    iget-object v3, v1, Ll/᩸ܽۨ;->ᩴ:Ll/ܽܽۨ;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 575
+    :cond_0
+    iget v1, v1, Ll/᩸ܽۨ;->ۙ:I
+
+    invoke-virtual {v2, v1}, Ljava/util/BitSet;->set(I)V
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
 .end method

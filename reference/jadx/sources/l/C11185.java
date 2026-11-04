@@ -1,26 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧᩴܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8V3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11185 {
+import java.util.HashSet;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final byte[] f37879;
+/* JADX INFO: renamed from: l.ۤ᩹᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7A22 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11185 extends C23120 {
+    @Override // l.C23120
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo9133(C14168 c14168, HashSet hashSet) {
+        m52052(c14168, hashSet, (C17307) ((ConcurrentMapC17249) c14168.m34445()).get(m35359().toLowerCase()));
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f37880;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f37881;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f37882;
-
-    public C11185(byte[] bArr, byte[] bArr2, int i, boolean z) {
-        this.f37882 = i;
-        this.f37881 = z;
-        this.f37879 = bArr;
-        this.f37880 = bArr2;
+    @Override // l.C23120
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo9134(C14168 c14168) {
+        String lowerCase = m35359().toLowerCase();
+        return c14168.m34408().f69056.equals(lowerCase) || ((ConcurrentMapC17249) c14168.m34445()).containsKey(lowerCase);
     }
 }

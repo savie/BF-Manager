@@ -3,8 +3,8 @@ package org.bouncycastle.jcajce.provider.symmetric;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import javax.crypto.SecretKey;
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.crypto.Digest;
@@ -20,10 +20,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseSecretKeyFactory;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.jcajce.spec.HKDFParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HKDF {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HKDFBase extends BaseSecretKeyFactory {
         public String algName;
         public HKDFBytesGenerator hkdf;
@@ -48,21 +47,18 @@ public class HKDF {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HKDFwithSHA256 extends HKDFBase {
         public HKDFwithSHA256() {
             super("HKDF-SHA256", new SHA256Digest(), PKCSObjectIdentifiers.id_alg_hkdf_with_sha256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HKDFwithSHA384 extends HKDFBase {
         public HKDFwithSHA384() {
             super("HKDF-SHA384", new SHA384Digest(), PKCSObjectIdentifiers.id_alg_hkdf_with_sha384);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HKDFwithSHA512 extends HKDFBase {
         public HKDFwithSHA512() {
             super("HKDF-SHA512", new SHA512Digest(), PKCSObjectIdentifiers.id_alg_hkdf_with_sha512);
@@ -76,7 +72,7 @@ public class HKDF {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$HKDFwithSHA512", "SecretKeyFactory.HKDF-SHA512", C9023.m23357(str, "$HKDFwithSHA384", "SecretKeyFactory.HKDF-SHA384", C9023.m23357(str, "$HKDFwithSHA256", "SecretKeyFactory.HKDF-SHA256", sb, configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$HKDFwithSHA512", "SecretKeyFactory.HKDF-SHA512", C18063.m42089(str, "$HKDFwithSHA384", "SecretKeyFactory.HKDF-SHA384", C18063.m42089(str, "$HKDFwithSHA256", "SecretKeyFactory.HKDF-SHA256", sb, configurableProvider), configurableProvider), configurableProvider);
         }
     }
 }

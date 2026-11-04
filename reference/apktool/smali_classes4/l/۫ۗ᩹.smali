@@ -1,48 +1,52 @@
-.class public final synthetic Ll/۫ۗ᩹;
+.class public interface abstract Ll/۫ۗ᩹;
 .super Ljava/lang/Object;
-.source "18AW"
+.source "SBNY"
 
 # interfaces
-.implements Ll/ۡܺۚ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ܳۗ᩹;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ܳۗ᩹;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/۫ۗ᩹;->ܺ:Ll/ܳۗ᩹;
-
-    return-void
-.end method
+.implements Ljava/util/Collection;
+.implements Ll/ۘۗ᩹;
 
 
 # virtual methods
-.method public final ֨()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Ll/۫ۗ᩹;->ܺ:Ll/ܳۗ᩹;
-
-    check-cast v0, Ll/ۧ֫᩹;
-
-    invoke-virtual {v0}, Ll/ۧ֫᩹;->֨()Z
-
-    move-result v0
-
-    return v0
+.method public abstract contains(Ljava/lang/Object;)Z
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
-.method public final synthetic ۘۙ()V
-    .locals 1
+.method public abstract iterator()Ll/᩶ۗ᩹;
+.end method
 
-    const/4 v0, 0x0
+.method public abstract parallelStream()Ll/᩵ܺۗ;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
 
-    throw v0
+.method public abstract remove(Ljava/lang/Object;)Z
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract spliterator()Ll/ܶ᩵᩹;
+.end method
+
+.method public abstract stream()Ll/᩵ܺۗ;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract ۙ(C)Z
+.end method
+
+.method public abstract ۙ(Ljava/lang/Character;)Z
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract ۙ(Ll/۫᩵᩹;)Z
+.end method
+
+.method public abstract ۫(C)Z
+.end method
+
+.method public abstract ᩴ(C)Z
 .end method

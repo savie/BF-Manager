@@ -35,7 +35,7 @@
     const-string v0, "iconPadding"
 
     .line 26
-    sget v1, Ll/ۖ۟ܶ;->۠ᩴ:I
+    sget v1, Ll/ۧ۬ܺ;->ۗ᩹:I
 
     invoke-interface {p1, v0, v1}, Landroid/view/inspector/PropertyMapper;->mapInt(Ljava/lang/String;I)I
 

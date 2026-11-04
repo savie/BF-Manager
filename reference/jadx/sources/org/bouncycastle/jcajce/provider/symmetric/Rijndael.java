@@ -1,7 +1,7 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.RijndaelEngine;
@@ -12,10 +12,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Rijndael {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -23,7 +22,6 @@ public final class Rijndael {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.Rijndael.ECB.1
@@ -48,7 +46,7 @@ public final class Rijndael {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.RIJNDAEL", C9023.m23357(str, "$KeyGen", "KeyGenerator.RIJNDAEL", C9023.m23357(str, "$ECB", "Cipher.RIJNDAEL", sb, configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.RIJNDAEL", C18063.m42089(str, "$KeyGen", "KeyGenerator.RIJNDAEL", C18063.m42089(str, "$ECB", "Cipher.RIJNDAEL", sb, configurableProvider), configurableProvider), configurableProvider);
         }
     }
 }

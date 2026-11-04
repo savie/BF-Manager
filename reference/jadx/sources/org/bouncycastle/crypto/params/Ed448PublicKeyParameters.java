@@ -5,7 +5,7 @@ import java.io.InputStream;
 import org.bouncycastle.math.ec.rfc8032.Ed448;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Ed448PublicKeyParameters extends AsymmetricKeyParameter {
     public static final int KEY_SIZE = 57;
     public final Ed448.PublicPoint publicPoint;

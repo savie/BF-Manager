@@ -9,48 +9,48 @@ import java.util.ArrayList;
 public class GetObjectRequest extends AmazonWebServiceRequest implements Serializable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public ProgressListener f593;
+    public ArrayList f583;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public S3ObjectIdBuilder f594;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public ArrayList f584;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public ArrayList f595;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public ArrayList f596;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public S3ObjectIdBuilder f585;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public long[] f597;
+    public ProgressListener f586;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public long[] f587;
 
     public GetObjectRequest(String str, String str2) {
         S3ObjectIdBuilder s3ObjectIdBuilder = new S3ObjectIdBuilder();
-        this.f594 = s3ObjectIdBuilder;
-        this.f596 = new ArrayList();
-        this.f595 = new ArrayList();
-        s3ObjectIdBuilder.m656(str);
-        s3ObjectIdBuilder.m658(str2);
+        this.f585 = s3ObjectIdBuilder;
+        this.f583 = new ArrayList();
+        this.f584 = new ArrayList();
+        s3ObjectIdBuilder.m650(str);
+        s3ObjectIdBuilder.m652(str2);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m565() {
+        return this.f585.m649();
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
     public final String m568() {
-        return this.f594.m655();
+        return this.f585.m651();
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m571() {
-        return this.f594.m657();
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String m572() {
-        this.f594.getClass();
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String m566() {
+        this.f585.getClass();
         return null;
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final long[] m569() {
-        long[] jArr = this.f597;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final long[] m562() {
+        long[] jArr = this.f587;
         if (jArr == null) {
             return null;
         }
@@ -58,29 +58,29 @@ public class GetObjectRequest extends AmazonWebServiceRequest implements Seriali
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m570(long j, long j2) {
-        this.f597 = new long[]{j, j2};
+    public final void m563(long j, long j2) {
+        this.f587 = new long[]{j, j2};
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final ArrayList m574() {
-        return this.f596;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m567() {
+        return this.f583;
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final ArrayList m573() {
-        return this.f595;
-    }
-
-    @Override // com.amazonaws.AmazonWebServiceRequest
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo159(ProgressListener progressListener) {
-        this.f593 = progressListener;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m564() {
+        return this.f584;
     }
 
     @Override // com.amazonaws.AmazonWebServiceRequest
     /* JADX INFO: renamed from: ۙ */
-    public final ProgressListener mo158() {
-        return this.f593;
+    public final void mo153(ProgressListener progressListener) {
+        this.f586 = progressListener;
+    }
+
+    @Override // com.amazonaws.AmazonWebServiceRequest
+    /* JADX INFO: renamed from: ۙ */
+    public final ProgressListener mo152() {
+        return this.f586;
     }
 }

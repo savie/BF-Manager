@@ -1,15 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟᩸ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6B2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7737 extends C5151 {
+import java.io.IOException;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C18557 f25574;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m20387() {
-        return this.f25574;
+/* JADX INFO: renamed from: l.۟۟۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: N9ZJ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C7737 extends IOException {
+    public C7737() {
+        super("SMB protocol context is stale");
     }
 }

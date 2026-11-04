@@ -1,38 +1,27 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ۡܰ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A451 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8918 implements Predicate {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f30601;
-
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+/* JADX INFO: renamed from: l.۠᩸ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T12U */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8918 extends AbstractC3050 {
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo9677(AbstractC11800 abstractC11800) {
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        AbstractC23903 abstractC23903 = (AbstractC23903) obj;
-        long jMo20276 = abstractC23903.mo20276();
-        if (abstractC23903.f77452 == EnumC10477.f35879 && (ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF & jMo20276) == 0) {
-            return this.f30601 || (8796093022208L & jMo20276) != 0 || (jMo20276 & ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS) == 0;
+    @Override // l.AbstractC16474
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo9676(C25227 c25227, AbstractC11800 abstractC11800, AbstractC11800 abstractC11801) {
+        int adapterPosition = abstractC11800.getAdapterPosition();
+        int adapterPosition2 = abstractC11801.getAdapterPosition();
+        int i = DialogInterfaceOnDismissListenerC5102.f17804[adapterPosition];
+        if (adapterPosition > adapterPosition2) {
+            System.arraycopy(DialogInterfaceOnDismissListenerC5102.f17804, adapterPosition2, DialogInterfaceOnDismissListenerC5102.f17804, adapterPosition2 + 1, adapterPosition - adapterPosition2);
+        } else {
+            System.arraycopy(DialogInterfaceOnDismissListenerC5102.f17804, adapterPosition + 1, DialogInterfaceOnDismissListenerC5102.f17804, adapterPosition, adapterPosition2 - adapterPosition);
         }
-        return false;
+        DialogInterfaceOnDismissListenerC5102.f17804[adapterPosition2] = i;
+        c25227.getAdapter().notifyItemMoved(adapterPosition, adapterPosition2);
+        return true;
     }
 }

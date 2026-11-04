@@ -1,61 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۢ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 44G0 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12335 {
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final int[] f41227 = new int[256];
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f41228 = new int[3];
-
-    static {
-        for (int i = 0; i < 256; i++) {
-            int i2 = i;
-            for (int i3 = 0; i3 < 8; i3++) {
-                int i4 = i2 & 1;
-                i2 >>>= 1;
-                if (i4 == 1) {
-                    i2 ^= -306674912;
-                }
-            }
-            f41227[i] = i2;
-        }
+/* JADX INFO: renamed from: l.ۨۨۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H7RN */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C12335 extends EnumC7687 {
+    public /* synthetic */ C12335(EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        this("HELP", 43, "--help -help -?", "opt.help", enumC18128, enumC21112);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30647(byte[] bArr) {
-        int[] iArr = this.f41228;
-        iArr[0] = 305419896;
-        iArr[1] = 591751049;
-        iArr[2] = 878082192;
-        for (byte b : bArr) {
-            m30646(b);
-        }
+    public C12335(String str, int i, String str2, String str3, EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        super(str, i, str2, str3, enumC18128, enumC21112, 0);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m30646(byte b) {
-        int[] iArr = this.f41228;
-        int i = iArr[0];
-        int i2 = i >>> 8;
-        int i3 = (b ^ i) & 255;
-        int[] iArr2 = f41227;
-        int i4 = iArr2[i3] ^ i2;
-        iArr[0] = i4;
-        int i5 = iArr[1] + (i4 & 255);
-        iArr[1] = i5;
-        int i6 = (i5 * 134775813) + 1;
-        iArr[1] = i6;
-        int i7 = iArr[2];
-        iArr[2] = iArr2[(i7 ^ ((byte) (i6 >> 24))) & 255] ^ (i7 >>> 8);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte m30645() {
-        int i = this.f41228[2] | 2;
-        return (byte) ((i * (i ^ 1)) >>> 8);
+    @Override // l.EnumC7687
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2207(AbstractC9923 abstractC9923, String str) {
+        C7312 c7312Mo25754 = abstractC9923.mo25754();
+        String strMo25758 = abstractC9923.mo25758();
+        EnumC8803 enumC8803 = EnumC8803.STDOUT;
+        C7312.m20024(c7312Mo25754.m20031(enumC8803), c7312Mo25754.m20032(EnumC2837.JAVAC, "msg.usage.header", strMo25758));
+        EnumC7687.m20945(c7312Mo25754, EnumC18128.STANDARD);
+        c7312Mo25754.m20031(enumC8803).println();
+        super.mo2207(abstractC9923, str);
     }
 }

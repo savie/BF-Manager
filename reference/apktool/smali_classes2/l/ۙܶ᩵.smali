@@ -1,44 +1,43 @@
 .class public final Ll/ۙܶ᩵;
-.super Ljava/io/OutputStream;
-.source "62JJ"
+.super Ljava/lang/Object;
+.source "86PR"
 
-
-# static fields
-.field public static final ܺ:Ll/ۙܶ᩵;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 35
-    new-instance v0, Ll/ۙܶ᩵;
-
-    .line 54
-    invoke-direct {v0}, Ljava/io/OutputStream;-><init>()V
-
-    .line 35
-    sput-object v0, Ll/ۙܶ᩵;->ܺ:Ll/ۙܶ᩵;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/security/PrivilegedAction;
 
 
 # virtual methods
-.method public final write(I)V
-    .locals 0
+.method public final run()Ljava/lang/Object;
+    .locals 3
 
-    return-void
-.end method
+    .line 157
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-.method public final write([B)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/Thread;->getThreadGroup()Ljava/lang/ThreadGroup;
 
-.method public final write([BII)V
-    .locals 0
+    move-result-object v0
 
-    return-void
+    .line 158
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/ThreadGroup;->getParent()Ljava/lang/ThreadGroup;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    .line 160
+    :cond_0
+    new-instance v1, Ljava/lang/ThreadGroup;
+
+    const-string v2, "InnocuousFJWorkerThreadGroup"
+
+    invoke-direct {v1, v0, v2}, Ljava/lang/ThreadGroup;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
+
+    return-object v1
 .end method

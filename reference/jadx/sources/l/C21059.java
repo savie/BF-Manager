@@ -1,124 +1,78 @@
 package l;
 
-import java.util.EnumSet;
+import com.google.android.material.motion.MotionUtils;
 
-/* JADX INFO: renamed from: l.᩷ᩴۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O416 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21059 {
+/* JADX INFO: renamed from: l.᩶ۘ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: J9VO */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21059 extends AbstractC20313 implements InterfaceC23297 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68583;
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f67298 = C16980.m40037(C21059.class);
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68584;
+    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
+    public int f67299;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68585;
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public final String f67300;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68586;
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public byte[] f67301;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68587;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68588;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68589;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68590;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68591;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68592;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68593;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68594 = new C21059(0);
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static final C21059 f68595;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte f68596;
-
-    static {
-        C21059 c21059 = new C21059(1);
-        f68583 = c21059;
-        C21059 c210510 = new C21059(2);
-        f68585 = c210510;
-        f68592 = new C21059(4);
-        C21059 c210511 = new C21059(12);
-        f68595 = c210511;
-        C21059 c210512 = new C21059(16);
-        f68586 = c210512;
-        C21059 c210513 = new C21059(32);
-        f68589 = c210513;
-        f68584 = new C21059(64);
-        f68588 = new C21059(127);
-        f68590 = new C21059(132);
-        f68587 = m47465(c210510, c21059);
-        f68591 = m47465(c210511, c210512);
-        m47465(c210511, c210513);
-        f68593 = m47465(c210511, c210510);
-        m47465(c210511, c210510, c21059);
+    @Override // l.AbstractC3159
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1470(int i, byte[] bArr) {
+        return 0;
     }
 
-    public C21059(int i) {
-        this.f68596 = (byte) i;
+    public C21059(InterfaceC5878 interfaceC5878, byte[] bArr, String str) {
+        super(interfaceC5878, 6);
+        this.f67301 = bArr;
+        this.f67300 = str;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C21059 m47465(C21059... c21059Arr) {
-        byte b = 0;
-        for (C21059 c21059 : c21059Arr) {
-            b = (byte) (b | c21059.f68596);
-        }
-        return new C21059(b);
+    public C21059(InterfaceC5878 interfaceC5878, byte[] bArr) {
+        this(interfaceC5878, bArr, "");
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m47468(C21059 c21059) {
-        return ((~c21059.f68596) & this.f68596) == 0;
+    @Override // l.InterfaceC23297
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3727(byte[] bArr) {
+        this.f67301 = bArr;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m47467(C21059 c21059) {
-        return (c21059.f68596 & this.f68596) != 0;
+    public C21059(String str, InterfaceC5878 interfaceC5878) {
+        this(interfaceC5878, C6143.f20968, str);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumSet m47466() {
-        EnumSet enumSetNoneOf = EnumSet.noneOf(EnumC7654.class);
-        byte b = f68595.f68596;
-        byte b2 = this.f68596;
-        int i = b & b2;
-        if (i != 0) {
-            if (i == f68592.f68596) {
-                enumSetNoneOf.add(EnumC7654.VAR);
-            } else {
-                enumSetNoneOf.add(EnumC7654.VAL);
-            }
+    @Override // l.AbstractC20313
+    /* JADX INFO: renamed from: ۤ */
+    public final AbstractC12108 mo1465(InterfaceC23032 interfaceC23032) {
+        return new C18075(interfaceC23032.mo2875(), this.f67301, this.f67300);
+    }
+
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public final void m48132() {
+        this.f67299 = 1;
+    }
+
+    @Override // l.InterfaceC21299
+    public final int size() {
+        return AbstractC3159.m10300(88);
+    }
+
+    @Override // l.AbstractC3159
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo1472(int i, byte[] bArr) {
+        C0481.m2319(24L, i, bArr);
+        C0481.m2319(this.f67299, i + 2, bArr);
+        System.arraycopy(this.f67301, 0, bArr, i + 8, 16);
+        int i2 = i + 24;
+        InterfaceC25186 interfaceC25186 = f67298;
+        if (interfaceC25186.mo13707()) {
+            byte[] bArr2 = this.f67301;
+            interfaceC25186.mo13721(C3188.m10404("Closing ", C6033.m17504(bArr2, 0, bArr2.length), " (", this.f67300, MotionUtils.EASING_TYPE_FORMAT_END));
         }
-        if ((f68586.f68596 & b2) != 0) {
-            enumSetNoneOf.add(EnumC7654.METHOD);
-        }
-        if ((f68585.f68596 & b2) != 0) {
-            enumSetNoneOf.add(EnumC7654.CLASS);
-        }
-        if ((f68583.f68596 & b2) != 0) {
-            enumSetNoneOf.add(EnumC7654.PACKAGE);
-        }
-        if ((f68584.f68596 & b2) != 0) {
-            enumSetNoneOf.add(EnumC7654.MODULE);
-        }
-        return enumSetNoneOf;
+        return i2 - i;
     }
 }

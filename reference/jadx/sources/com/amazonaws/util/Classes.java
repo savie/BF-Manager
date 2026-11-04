@@ -10,7 +10,7 @@ public enum Classes {
     ;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Class m761(Class cls, Object obj) {
+    public static Class m755(Class cls, Object obj) {
         if (obj == null || obj == Object.class) {
             return null;
         }
@@ -31,7 +31,7 @@ public enum Classes {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JarFile m762(Class cls) {
+    public static JarFile m756(Class cls) {
         URL resource = cls.getResource("/" + cls.getName().replace('.', '/') + ".class");
         if (resource == null) {
             return null;

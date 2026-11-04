@@ -4,35 +4,35 @@
 
 
 # static fields
-.field public static final ۗ:[B
-
 .field public static final ۙۙ:Lcom/amazonaws/logging/Log;
+
+.field public static final ۬:[B
 
 
 # instance fields
-.field public final ֡:Ljava/lang/String;
+.field public ֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
-.field public final ֫:I
+.field public ֨:Z
 
-.field public ۛ:Z
+.field public final ۖ:Ljava/lang/String;
 
-.field public ۢ:Ljava/lang/String;
+.field public ۜ:Ljava/lang/String;
 
-.field public ۧ:Z
+.field public final ۟:Ljava/lang/String;
 
-.field public final ۫:Ljava/lang/String;
+.field public final ۠:I
 
-.field public final ܳ:Ljava/lang/String;
+.field public final ۡ:[B
 
-.field public final ܺ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
+.field public ۢ:Z
 
-.field public ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+.field public final ܰ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
 
-.field public ܿ:Ljava/io/InputStream;
+.field public final ܿ:Ljava/lang/String;
+
+.field public ᩳ:Ljava/io/InputStream;
 
 .field public ᩶:Lcom/amazonaws/auth/ChunkContentIterator;
-
-.field public final ᩻:[B
 
 
 # direct methods
@@ -44,7 +44,7 @@
     new-array v0, v0, [B
 
     .line 45
-    sput-object v0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۗ:[B
+    sput-object v0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۬:[B
 
     .line 69
     const-class v0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;
@@ -67,17 +67,17 @@
     const/4 v0, 0x0
 
     .line 47
-    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     const/4 v1, 0x1
 
     .line 66
-    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۛ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Z
 
     const/4 v1, 0x0
 
     .line 67
-    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۧ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֨:Z
 
     .line 117
     instance-of v1, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;
@@ -90,30 +90,30 @@
     check-cast p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;
 
     .line 121
-    iget v0, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֫:I
+    iget v0, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۠:I
 
     invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     .line 122
-    iget-object v0, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object v0, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
-    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     .line 123
-    iget-object p1, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iget-object p1, p1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
-    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
     goto :goto_0
 
     .line 125
     :cond_0
-    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     .line 126
-    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iput-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
     :goto_0
     const/high16 p1, 0x20000
@@ -121,25 +121,25 @@
     if-lt v2, p1, :cond_1
 
     .line 133
-    iput v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֫:I
+    iput v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۠:I
 
     .line 134
-    iput-object p2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩻:[B
+    iput-object p2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۡ:[B
 
     .line 135
-    iput-object p3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/lang/String;
 
     .line 136
-    iput-object p4, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܳ:Ljava/lang/String;
+    iput-object p4, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۖ:Ljava/lang/String;
 
     .line 137
-    iput-object p5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۫:Ljava/lang/String;
+    iput-object p5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۟:Ljava/lang/String;
 
     .line 138
-    iput-object p5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Ljava/lang/String;
+    iput-object p5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۜ:Ljava/lang/String;
 
     .line 139
-    iput-object p6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܺ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
+    iput-object p6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
 
     return-void
 
@@ -154,68 +154,7 @@
     throw p1
 .end method
 
-.method public static ۖ(J)J
-    .locals 6
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p0, v0
-
-    if-ltz v2, :cond_1
-
-    const-wide/32 v2, 0x20000
-
-    .line 285
-    div-long v4, p0, v2
-
-    .line 286
-    rem-long/2addr p0, v2
-
-    .line 287
-    invoke-static {v2, v3}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ(J)J
-
-    move-result-wide v2
-
-    mul-long v4, v4, v2
-
-    cmp-long v2, p0, v0
-
-    if-lez v2, :cond_0
-
-    .line 288
-    invoke-static {p0, p1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ(J)J
-
-    move-result-wide p0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide p0, v0
-
-    :goto_0
-    add-long/2addr v4, p0
-
-    .line 289
-    invoke-static {v0, v1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ(J)J
-
-    move-result-wide p0
-
-    add-long/2addr v4, p0
-
-    return-wide v4
-
-    .line 282
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Nonnegative content length expected."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static ܰ(J)J
+.method public static ᩷(J)J
     .locals 2
 
     .line 293
@@ -242,7 +181,7 @@
     return-wide v0
 .end method
 
-.method private ܰ([B)[B
+.method private ᩷([B)[B
     .locals 6
 
     .line 347
@@ -266,7 +205,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Ljava/lang/String;
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,13 +213,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܳ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۖ:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۜ:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -289,7 +228,7 @@
     const-string v3, ""
 
     .line 357
-    iget-object v4, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܺ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
+    iget-object v4, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ:Lcom/amazonaws/services/s3/internal/AWSS3V4Signer;
 
     invoke-virtual {v4, v3}, Lcom/amazonaws/auth/AbstractAWSSigner;->hash(Ljava/lang/String;)[B
 
@@ -319,9 +258,9 @@
     move-result-object v1
 
     .line 359
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩻:[B
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۡ:[B
 
-    sget-object v3, Lcom/amazonaws/auth/SigningAlgorithm;->֡:Lcom/amazonaws/auth/SigningAlgorithm;
+    sget-object v3, Lcom/amazonaws/auth/SigningAlgorithm;->ܿ:Lcom/amazonaws/auth/SigningAlgorithm;
 
     invoke-virtual {v4, v1, v2, v3}, Lcom/amazonaws/auth/AbstractAWSSigner;->sign(Ljava/lang/String;[BLcom/amazonaws/auth/SigningAlgorithm;)[B
 
@@ -332,7 +271,7 @@
     move-result-object v1
 
     .line 361
-    iput-object v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Ljava/lang/String;
+    iput-object v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۜ:Ljava/lang/String;
 
     .line 362
     new-instance v2, Ljava/lang/StringBuilder;
@@ -426,7 +365,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -435,6 +374,67 @@
 
     .line 376
     throw v0
+.end method
+
+.method public static ᩸(J)J
+    .locals 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p0, v0
+
+    if-ltz v2, :cond_1
+
+    const-wide/32 v2, 0x20000
+
+    .line 285
+    div-long v4, p0, v2
+
+    .line 286
+    rem-long/2addr p0, v2
+
+    .line 287
+    invoke-static {v2, v3}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩷(J)J
+
+    move-result-wide v2
+
+    mul-long v4, v4, v2
+
+    cmp-long v2, p0, v0
+
+    if-lez v2, :cond_0
+
+    .line 288
+    invoke-static {p0, p1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩷(J)J
+
+    move-result-wide p0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide p0, v0
+
+    :goto_0
+    add-long/2addr v4, p0
+
+    .line 289
+    invoke-static {v0, v1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩷(J)J
+
+    move-result-wide p0
+
+    add-long/2addr v4, p0
+
+    return-wide v4
+
+    .line 282
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Nonnegative content length expected."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
@@ -449,15 +449,15 @@
 
     .line 220
     :try_start_0
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 221
-    iget-boolean p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۛ:Z
+    iget-boolean p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Z
 
     if-eqz p1, :cond_3
 
     .line 225
-    iget-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
 
@@ -477,11 +477,11 @@
     const-string v1, "AwsChunkedEncodingInputStream marked at the start of the stream (will directly mark the wrapped stream since it\'s mark-supported)."
 
     .line 227
-    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 230
     :cond_0
-    iget-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     const v1, 0x7fffffff
 
@@ -502,17 +502,17 @@
     const-string v1, "AwsChunkedEncodingInputStream marked at the start of the stream (initializing the buffer since the wrapped stream is not mark-supported)."
 
     .line 233
-    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 236
     :cond_2
     new-instance p1, Lcom/amazonaws/auth/DecodedStreamBuffer;
 
-    iget v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֫:I
+    iget v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۠:I
 
     invoke-direct {p1, v1}, Lcom/amazonaws/auth/DecodedStreamBuffer;-><init>(I)V
 
-    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iput-object p1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -582,7 +582,7 @@
     const-string v3, "One byte read from the stream."
 
     .line 148
-    invoke-interface {v0, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 150
     :cond_0
@@ -598,7 +598,7 @@
     .locals 7
 
     .line 159
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     .line 161
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -635,7 +635,7 @@
 
     .line 170
     :cond_1
-    iget-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۧ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֨:Z
 
     const/4 v2, -0x1
 
@@ -654,7 +654,7 @@
     if-ge v4, v1, :cond_5
 
     .line 312
-    iget-object v5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iget-object v5, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
     if-eqz v5, :cond_3
 
@@ -668,9 +668,9 @@
     add-int/lit8 v5, v4, 0x1
 
     .line 314
-    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
-    invoke-virtual {v6}, Lcom/amazonaws/auth/DecodedStreamBuffer;->ܰ()B
+    invoke-virtual {v6}, Lcom/amazonaws/auth/DecodedStreamBuffer;->᩷()B
 
     move-result v6
 
@@ -684,7 +684,7 @@
     sub-int v5, v1, v4
 
     .line 319
-    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     invoke-virtual {v6, v3, v4, v5}, Ljava/io/InputStream;->read([BII)I
 
@@ -693,7 +693,7 @@
     if-eq v5, v2, :cond_5
 
     .line 321
-    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iget-object v6, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
     if-eqz v6, :cond_4
 
@@ -709,9 +709,9 @@
     if-nez v4, :cond_6
 
     .line 331
-    sget-object v1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۗ:[B
+    sget-object v1, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۬:[B
 
-    invoke-direct {p0, v1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ([B)[B
+    invoke-direct {p0, v1}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩷([B)[B
 
     move-result-object v1
 
@@ -739,7 +739,7 @@
 
     .line 340
     :cond_7
-    invoke-direct {p0, v3}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܰ([B)[B
+    invoke-direct {p0, v3}, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩷([B)[B
 
     move-result-object v1
 
@@ -754,7 +754,7 @@
 
     .line 173
     :goto_1
-    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۧ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֨:Z
 
     .line 177
     :cond_8
@@ -767,7 +767,7 @@
     if-lez p1, :cond_9
 
     .line 179
-    iput-boolean v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۛ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Z
 
     .line 180
     sget-object p2, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۙۙ:Lcom/amazonaws/logging/Log;
@@ -793,7 +793,7 @@
 
     move-result-object p3
 
-    invoke-interface {p2, p3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p2, p3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_9
     return p1
@@ -817,7 +817,7 @@
 
     .line 246
     :try_start_0
-    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->ۨ()V
+    invoke-virtual {p0}, Lcom/amazonaws/internal/SdkInputStream;->᩷()V
 
     const/4 v1, 0x0
 
@@ -825,12 +825,12 @@
     iput-object v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->᩶:Lcom/amazonaws/auth/ChunkContentIterator;
 
     .line 249
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۫:Ljava/lang/String;
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->۟:Ljava/lang/String;
 
-    iput-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۜ:Ljava/lang/String;
 
     .line 252
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     invoke-virtual {v2}, Ljava/io/InputStream;->markSupported()Z
 
@@ -850,11 +850,11 @@
     const-string v3, "AwsChunkedEncodingInputStream reset (will reset the wrapped stream because it is mark-supported)."
 
     .line 254
-    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 257
     :cond_0
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     invoke-virtual {v2}, Ljava/io/InputStream;->reset()V
 
@@ -873,16 +873,16 @@
     const-string v3, "AwsChunkedEncodingInputStream reset (will use the buffer of the decoded stream)."
 
     .line 260
-    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 263
     :cond_2
-    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܽ:Lcom/amazonaws/auth/DecodedStreamBuffer;
+    iget-object v2, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֡:Lcom/amazonaws/auth/DecodedStreamBuffer;
 
     if-eqz v2, :cond_3
 
     .line 266
-    invoke-virtual {v2}, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۨ()V
+    invoke-virtual {v2}, Lcom/amazonaws/auth/DecodedStreamBuffer;->ۤ()V
 
     .line 269
     :goto_0
@@ -891,12 +891,12 @@
     const/4 v1, 0x1
 
     .line 270
-    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۛ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۢ:Z
 
     const/4 v1, 0x0
 
     .line 271
-    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ۧ:Z
+    iput-boolean v1, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->֨:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -983,11 +983,11 @@
     return-wide p1
 .end method
 
-.method public final ۖ()Ljava/io/InputStream;
+.method public final ۤ()Ljava/io/InputStream;
     .locals 1
 
     .line 383
-    iget-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ܿ:Ljava/io/InputStream;
+    iget-object v0, p0, Lcom/amazonaws/auth/AwsChunkedEncodingInputStream;->ᩳ:Ljava/io/InputStream;
 
     return-object v0
 .end method

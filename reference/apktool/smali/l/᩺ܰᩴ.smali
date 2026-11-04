@@ -1,78 +1,72 @@
 .class public final synthetic Ll/᩺ܰᩴ;
 .super Ljava/lang/Object;
-.source "C6L"
+.source "WB05"
+
+# interfaces
+.implements Ll/ۗ֨᩵;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ܶ֡֫;
+
+.field public final synthetic ᩶:Ll/ۛۤᩴ;
 
 
 # direct methods
-.method public static ۙ(Ll/᩷ܰᩴ;)Ljava/lang/Character;
+.method public synthetic constructor <init>(Ll/ܶ֡֫;Ll/ۛۤᩴ;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    .line 46
-    invoke-interface {p0}, Ll/ܶܰᩴ;->᩵ܰ()C
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Ll/᩺ܰᩴ;->ܰ:Ll/ܶ֡֫;
 
-    invoke-static {p0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ۙ(Ll/ܶܰᩴ;Ljava/util/function/Consumer;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 94
-    instance-of v0, p1, Ll/֨ܰᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ll/֨ܰᩴ;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ll/۬ܰᩴ;
-
-    invoke-direct {v0, p1}, Ll/۬ܰᩴ;-><init>(Ljava/util/function/Consumer;)V
-
-    move-object p1, v0
-
-    :goto_0
-    invoke-interface {p0, p1}, Ll/ܶܰᩴ;->ܰ(Ll/֨ܰᩴ;)V
+    iput-object p2, p0, Ll/᩺ܰᩴ;->᩶:Ll/ۛۤᩴ;
 
     return-void
 .end method
 
-.method public static ۙ(Ll/ܶܰᩴ;Ll/֨ܰᩴ;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 62
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 63
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz p1, :cond_1
 
-    move-result v0
+    const/4 v0, 0x0
+
+    .line 826
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    if-eqz p1, :cond_1
+
+    .line 828
+    iget-object v0, p0, Ll/᩺ܰᩴ;->ܰ:Ll/ܶ֡֫;
 
     if-eqz v0, :cond_0
 
-    .line 64
-    invoke-interface {p0}, Ll/ܶܰᩴ;->᩵ܰ()C
+    invoke-interface {v0}, Ll/ܶ֡֫;->᩻()Z
 
     move-result v0
 
-    invoke-interface {p1, v0}, Ll/֨ܰᩴ;->ۨ(C)V
+    if-nez v0, :cond_1
 
-    goto :goto_0
-
+    .line 829
     :cond_0
-    return-void
+    iget-object v0, p0, Ll/᩺ܰᩴ;->᩶:Ll/ۛۤᩴ;
+
+    invoke-virtual {v0, p1}, Ll/ۛۤᩴ;->ۙ(Ljava/lang/Object;)V
+
+    .line 833
+    :cond_1
+    sget-object p1, Ll/ۧ۟᩵;->ۙ:Ll/ۧ۟᩵;
+
+    return-object p1
 .end method

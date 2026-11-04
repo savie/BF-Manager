@@ -1,68 +1,25 @@
 package l;
 
-import java.nio.file.Path;
-import java.nio.file.WatchKey;
-import java.nio.file.Watchable;
-import java.util.List;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.᩸ܺᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C21688 implements InterfaceC19324 {
-    public final /* synthetic */ WatchKey a;
+/* JADX INFO: renamed from: l.᩷֡ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q18Y */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21688 implements Iterable {
 
-    public /* synthetic */ C21688(WatchKey watchKey) {
-        this.a = watchKey;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4534 f69219;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final AbstractC4534 f69220;
+
+    public C21688(AbstractC4534 abstractC4534, AbstractC4534 abstractC4535) {
+        this.f69220 = abstractC4534;
+        this.f69219 = abstractC4535;
     }
 
-    public static /* synthetic */ InterfaceC19324 a(WatchKey watchKey) {
-        if (watchKey == null) {
-            return null;
-        }
-        return watchKey instanceof C18866 ? ((C18866) watchKey).a : new C21688(watchKey);
-    }
-
-    @Override // l.InterfaceC19324
-    public final /* synthetic */ void cancel() {
-        this.a.cancel();
-    }
-
-    public final /* synthetic */ boolean equals(Object obj) {
-        WatchKey watchKey = this.a;
-        if (obj instanceof C21688) {
-            obj = ((C21688) obj).a;
-        }
-        return watchKey.equals(obj);
-    }
-
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // l.InterfaceC19324
-    public final /* synthetic */ boolean isValid() {
-        return this.a.isValid();
-    }
-
-    @Override // l.InterfaceC19324
-    public final /* synthetic */ List pollEvents() {
-        return AbstractC1726.w(this.a.pollEvents());
-    }
-
-    @Override // l.InterfaceC19324
-    public final /* synthetic */ boolean reset() {
-        return this.a.reset();
-    }
-
-    @Override // l.InterfaceC19324
-    public final /* synthetic */ InterfaceC16750 watchable() {
-        Watchable watchable = this.a.watchable();
-        if (watchable == null) {
-            return null;
-        }
-        if (watchable instanceof C20278) {
-            return ((C20278) watchable).a;
-        }
-        return watchable instanceof Path ? C9695.l((Path) watchable) : new C20983(watchable);
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C10499(this.f69220, this.f69219);
     }
 }

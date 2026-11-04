@@ -1,15 +1,25 @@
 package l;
 
-import bin.mt.plus.R;
+import java.io.InputStream;
 
-/* JADX INFO: renamed from: l.֡ܽ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z202 */
+/* JADX INFO: renamed from: l.֡ܶ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 06TX */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0527 implements InterfaceC6440 {
-    @Override // l.InterfaceC6440
-    public final AbstractC4674 create() {
-        C0630 c0630 = new C0630(R.string.MT_Protector, R.drawable.MT_Protector);
-        c0630.m12944();
-        return c0630;
+public final /* synthetic */ class C0527 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC24329 f2226;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f2227;
+
+    public /* synthetic */ C0527(String str, InterfaceC24329 interfaceC24329) {
+        this.f2226 = interfaceC24329;
+        this.f2227 = str;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InputStream m2496(int i) {
+        return C1273.m4648(this.f2226, this.f2227, i);
     }
 }

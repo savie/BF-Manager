@@ -1,14 +1,19 @@
 package l;
 
-import android.os.Handler;
-import android.os.Looper;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.֨֡ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 79M1 */
+/* JADX INFO: renamed from: l.֡᩺᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: C682 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0768 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Handler m3298(Looper looper) {
-        return Handler.createAsync(looper);
+public final class C0768 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C8226(parcel);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C8226[i];
     }
 }

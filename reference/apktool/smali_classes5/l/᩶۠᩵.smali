@@ -1,72 +1,67 @@
 .class public final Ll/᩶۠᩵;
-.super Ll/ܶۤ᩵;
-.source "C8XW"
+.super Ll/۫ۡ᩵;
+.source "ZB07"
+
+# interfaces
+.implements Ll/᩺֨᩵;
+
+
+# static fields
+.field public static final ᩶:Ll/᩶۠᩵;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 2
+    new-instance v0, Ll/᩶۠᩵;
+
+    const/4 v1, 0x2
+
+    .line 0
+    invoke-direct {v0, v1}, Ll/۫ۡ᩵;-><init>(I)V
+
+    sput-object v0, Ll/᩶۠᩵;->᩶:Ll/᩶۠᩵;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۠۠᩵;Ll/ᩴۤ᩵;)Ll/ۘ۠᩵;
-    .locals 3
+.method public final ۙ(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 64
-    invoke-virtual {p1}, Ll/۠۠᩵;->ۨ()I
+    .line 36
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result p2
-
-    const/4 v0, 0x4
-
-    if-lt p2, v0, :cond_0
-
-    .line 65
-    invoke-virtual {p1}, Ll/۠۠᩵;->ۙ()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    .line 66
-    invoke-virtual {p1}, Ll/۠۠᩵;->ۚ()Ll/᩸ۤ᩵;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Ll/᩸ۤ᩵;->ۚ()Ll/ܳ᩵᩵;
-
-    move-result-object p2
-
-    instance-of p2, p2, Ll/ܺۡ᩵;
-
-    if-nez p2, :cond_0
-
-    .line 67
-    new-instance p2, Ll/֡۠᩵;
-
-    invoke-direct {p2}, Ll/֡۠᩵;-><init>()V
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ll/᩸ۤ᩵;
-
-    const/4 v2, 0x0
-
-    aput-object p2, v1, v2
-
-    .line 17
-    new-instance p2, Ll/ۘ۠᩵;
-
-    invoke-direct {p2, v1}, Ll/ۘ۠᩵;-><init>([Ll/᩸ۤ᩵;)V
-
-    .line 68
-    invoke-virtual {p1}, Ll/۠۠᩵;->ܰ()I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    add-int/2addr p1, v0
+    check-cast p2, Ll/ۚۢ᩵;
 
-    invoke-virtual {p2, p1}, Ll/ۘ۠᩵;->ۙ(I)Ll/ۘ۠᩵;
+    if-nez p1, :cond_1
 
-    return-object p2
+    instance-of p1, p2, Ll/᩺۠᩵;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
 .end method

@@ -1,25 +1,18 @@
 package l;
 
-import java.io.InputStream;
-
-/* JADX INFO: renamed from: l.ܽᩳۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 06TX */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16797 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC3800 f53783;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f53784;
-
-    public /* synthetic */ C16797(String str, InterfaceC3800 interfaceC3800) {
-        this.f53783 = interfaceC3800;
-        this.f53784 = str;
+/* JADX INFO: renamed from: l.ܺۧܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 19KT */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16797 implements InterfaceC6819 {
+    @Override // l.InterfaceC6819
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11074(InterfaceC10084 interfaceC10084, C7453 c7453) {
+        C21273.m48449((C19035) interfaceC10084, c7453);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InputStream m39445(int i) {
-        return C11153.m28073(this.f53783, this.f53784, i);
+    @Override // l.InterfaceC6819, l.InterfaceC8310
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC6073 mo6458() {
+        return EnumC6073.FileRenameInformation;
     }
 }

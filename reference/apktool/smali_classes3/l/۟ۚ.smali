@@ -1,14 +1,11 @@
 .class public interface abstract Ll/۟ۚ;
 .super Ljava/lang/Object;
-.source "14TY"
+.source "G5Q6"
 
 
 # virtual methods
-.method public abstract onSupportActionModeFinished(Ll/۫֨;)V
+.method public abstract onMenuItemSelected(Ll/ۢۚ;Landroid/view/MenuItem;)Z
 .end method
 
-.method public abstract onSupportActionModeStarted(Ll/۫֨;)V
-.end method
-
-.method public abstract onWindowStartingSupportActionMode(Ll/ܽ֨;)Ll/۫֨;
+.method public abstract onMenuModeChange(Ll/ۢۚ;)V
 .end method

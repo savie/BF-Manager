@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.threshold;
 
 import org.bouncycastle.crypto.digests.WhirlpoolDigest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PolynomialNative extends Polynomial {
     public final int IRREDUCIBLE;
 

@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.crypto.params.DHValidationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHParametersGenerator {
     public static final BigInteger TWO = BigInteger.valueOf(2);
     public int certainty;

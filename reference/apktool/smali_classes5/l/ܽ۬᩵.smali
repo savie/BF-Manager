@@ -1,24 +1,20 @@
-.class public final Ll/ܽ۬᩵;
-.super Ll/۬֨᩵;
-.source "MAS4"
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 10
-    invoke-direct {p0}, Ll/۬֨᩵;-><init>()V
-
-    return-void
-.end method
+.class public Ll/ܽ۬᩵;
+.super Ll/ᩴ۠᩵;
+.source "0AW3"
 
 
 # virtual methods
-.method public final ܰ()I
+.method public final ᩷(Ljava/lang/Throwable;)Z
     .locals 1
 
-    const/4 v0, 0x6
+    .line 190
+    invoke-virtual {p0}, Ll/ᩴ۠᩵;->getContext()Ll/ۧۢ᩵;
 
-    return v0
+    move-result-object v0
+
+    invoke-static {p1, v0}, Ll/ۡ۠᩵;->ۙ(Ljava/lang/Throwable;Ll/ۧۢ᩵;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

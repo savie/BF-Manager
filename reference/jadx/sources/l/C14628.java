@@ -1,22 +1,18 @@
 package l;
 
-import java.util.function.Supplier;
+import android.os.Looper;
 
-/* JADX INFO: renamed from: l.ܳܺۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T57T */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14628 implements Supplier {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6990 f47857;
-
-    public /* synthetic */ C14628(C6990 c6990) {
-        this.f47857 = c6990;
-    }
-
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        C6990 c6990 = this.f47857;
-        return new C9126(c6990.f23512.f58321, new C8569(1, c6990));
+/* JADX INFO: renamed from: l.ܰ۬᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: UAXR */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14628 implements InterfaceC21577 {
+    @Override // l.InterfaceC21577
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C18358 mo35266() {
+        Looper mainLooper = Looper.getMainLooper();
+        if (mainLooper == null) {
+            throw new IllegalStateException("The main looper is not available");
+        }
+        return new C18358(C7917.m21457(mainLooper));
     }
 }

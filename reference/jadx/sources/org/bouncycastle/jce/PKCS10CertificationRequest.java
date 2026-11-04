@@ -19,8 +19,8 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C22697;
-import l.C9013;
+import l.C11958;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1InputStream;
@@ -383,7 +383,7 @@ public class PKCS10CertificationRequest extends CertificationRequest {
         if (parameters == null || DERNull.INSTANCE.equals(parameters) || !algorithmIdentifier.getAlgorithm().equals((ASN1Primitive) PKCSObjectIdentifiers.id_RSASSA_PSS)) {
             return algorithmIdentifier.getAlgorithm().getId();
         }
-        return C22697.m50267(new StringBuilder(), getDigestAlgName(RSASSAPSSparams.getInstance(parameters).getHashAlgorithm().getAlgorithm()), "withRSAandMGF1");
+        return C8947.m23910(new StringBuilder(), getDigestAlgName(RSASSAPSSparams.getInstance(parameters).getHashAlgorithm().getAlgorithm()), "withRSAandMGF1");
     }
 
     private void setSignatureParameters(Signature signature, ASN1Encodable aSN1Encodable) throws NoSuchAlgorithmException, SignatureException {
@@ -401,7 +401,7 @@ public class PKCS10CertificationRequest extends CertificationRequest {
                 }
             }
         } catch (IOException e2) {
-            throw new SignatureException(C9013.m23329(e2, new StringBuilder("IOException decoding parameters: ")));
+            throw new SignatureException(C11958.m29932(e2, new StringBuilder("IOException decoding parameters: ")));
         }
     }
 }

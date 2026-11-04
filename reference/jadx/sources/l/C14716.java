@@ -1,68 +1,115 @@
 package l;
 
-import java.util.Spliterator;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.ܳᩴᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1MW */
+/* JADX INFO: renamed from: l.ܰܺ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: FIRW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C14716 extends AbstractC15735 {
+public final class C14716 implements InterfaceC9415 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6644 f48133;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f48091;
 
-    @Override // l.AbstractC15735, java.util.Collection, java.lang.Iterable, java.util.List
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f48092;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f48093;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f48094;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f48095;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f48096;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f48097;
+
+    public C14716(C12479 c12479, int i, int i2, int i3, int i4) {
+        this(c12479.m30998(i2), i, c12479.m30997(i3), c12479.m30998(i4));
     }
 
-    public C14716(C6644 c6644) {
-        this.f48133 = c6644;
+    public C14716(String str, int i, String str2, String str3) {
+        this.f48097 = i;
+        this.f48092 = str;
+        this.f48093 = str2;
+        this.f48095 = str3;
     }
 
-    @Override // l.AbstractC15735, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
-    public final InterfaceC13431 iterator() {
-        return new C12995(this.f48133);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m35405(int i) {
+        this.f48096 = false;
+        this.f48094 = i;
     }
 
-    @Override // l.AbstractC15735, java.util.Collection, java.lang.Iterable, l.InterfaceC10131, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC11790 spliterator() {
-        return new C3821(this.f48133);
-    }
-
-    @Override // l.AbstractC15735, l.InterfaceC22603
-    public final void forEach(IntConsumer intConsumer) {
-        C6644 c6644 = this.f48133;
-        Object[] objArr = c6644.f22442;
-        int[] iArr = c6644.f22435;
-        if (c6644.f22441) {
-            intConsumer.accept(iArr[c6644.f22445]);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m35403(int i) {
+        if (this.f48096) {
+            return false;
         }
-        int i = c6644.f22445;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return;
-            }
-            if (objArr[i2] != null) {
-                intConsumer.accept(iArr[i2]);
-            }
-            i = i2;
-        }
+        this.f48096 = true;
+        this.f48091 = i;
+        return true;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final int size() {
-        return this.f48133.f22440;
+    @Override // l.InterfaceC9415
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo24789() {
+        return this.f48097;
     }
 
-    @Override // l.InterfaceC10131
-    public final boolean contains(int i) {
-        return this.f48133.mo17316(i);
+    @Override // l.InterfaceC9415
+    public final String getName() {
+        return this.f48092;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final void clear() {
-        this.f48133.clear();
+    @Override // l.InterfaceC9415
+    public final String getType() {
+        return this.f48093;
+    }
+
+    @Override // l.InterfaceC9415
+    public final String getSignature() {
+        return this.f48095;
+    }
+
+    @Override // l.InterfaceC9415
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo24790() {
+        return this.f48094;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final void m35404() {
+        this.f48094 = -1;
+    }
+
+    @Override // l.InterfaceC9415
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo24788() {
+        return this.f48091;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m35406() {
+        return this.f48096;
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        int i = this.f48094;
+        sb.append(i == -1 ? "-1 " : String.format("0x%04x", Integer.valueOf(i)));
+        sb.append('-');
+        sb.append(this.f48096 ? String.format("0x%04x", Integer.valueOf(this.f48091)) : "      ");
+        sb.append(": r");
+        sb.append(this.f48097);
+        sb.append(" '");
+        sb.append(this.f48092);
+        sb.append("' ");
+        sb.append(this.f48093);
+        String str = this.f48095;
+        sb.append(str != null ? ", signature: ".concat(str) : "");
+        return sb.toString();
     }
 }

@@ -1,41 +1,19 @@
-.class public final enum Ll/۬ۖ᩸;
-.super Ll/ۘۖ᩸;
-.source "3858"
+.class public final synthetic Ll/۬ۖ᩸;
+.super Ljava/lang/Object;
+.source "X68P"
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 50
-    invoke-direct {p0, p1, p2, v0}, Ll/ۘۖ᩸;-><init>(Ljava/lang/String;ILl/֨ۖ᩸;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/۟֡֫;
 
 
 # virtual methods
-.method public ۙ(Ljava/lang/Long;)Ll/֫ۨ᩸;
+.method public final ۫()Z
     .locals 1
 
-    if-nez p1, :cond_0
+    .line 0
+    sget-object v0, Ll/᩺ۜ᩸;->ۧᩴ:Landroid/text/method/TextKeyListener;
 
-    .line 54
-    sget-object p1, Ll/ۗۨ᩸;->ۙ:Ll/ۗۨ᩸;
+    const/4 v0, 0x0
 
-    return-object p1
-
-    .line 56
-    :cond_0
-    new-instance v0, Ll/ۖۖ᩸;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ll/ۖۖ᩸;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return v0
 .end method

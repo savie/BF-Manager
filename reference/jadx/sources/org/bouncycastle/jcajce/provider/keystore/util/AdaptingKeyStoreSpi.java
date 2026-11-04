@@ -17,7 +17,7 @@ import org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AdaptingKeyStoreSpi extends KeyStoreSpi {
     public static final String COMPAT_OVERRIDE = "keystore.type.compat";
     public final JKSKeyStoreSpi jksStore;

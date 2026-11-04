@@ -1,77 +1,47 @@
 package l;
 
-import com.google.android.material.color.ColorResourcesTableCreator;
-import java.util.Arrays;
-import org.checkerframework.checker.nullness.qual.EnsuresNonNullIf;
+import java.util.Map;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.᩸ᩳܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C8R0 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21747 extends AbstractC21041 {
+/* JADX INFO: renamed from: l.᩷ۖۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 36DM */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class C21747 implements Consumer {
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public C15398 f70485;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f69357;
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public C23451 f70486;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC16678 f69358;
 
-    @Override // l.AbstractC21041
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo23376(boolean z) {
-        super.mo23376(z);
-        if (z) {
-            this.f70486 = null;
-            this.f70485 = null;
-        }
+    public /* synthetic */ C21747(AbstractC16678 abstractC16678, int i) {
+        this.f69357 = i;
+        this.f69358 = abstractC16678;
     }
 
-    @Override // l.AbstractC21041
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo23375(C2460 c2460) {
-        if (c2460.m7518()[0] != -1) {
-            return -1L;
-        }
-        int i = (c2460.m7518()[2] & 255) >> 4;
-        if (i == 6 || i == 7) {
-            c2460.m7535(4);
-            c2460.m7527();
-        }
-        int iM30249 = C12162.m30249(i, c2460);
-        c2460.m7510(0);
-        return iM30249;
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // l.AbstractC21041
-    @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo23377(C2460 c2460, long j, C10459 c10459) {
-        byte[] bArrM7518 = c2460.m7518();
-        C23451 c23451 = this.f70486;
-        if (c23451 == null) {
-            C23451 c23452 = new C23451(bArrM7518, 17);
-            this.f70486 = c23452;
-            C10471 c10471M20201 = c23452.m51686(Arrays.copyOfRange(bArrM7518, 9, c2460.m7509()), null).m20201();
-            c10471M20201.m26521("audio/ogg");
-            c10459.f35698 = c10471M20201.m26497();
-            return true;
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f69357) {
+            case 0:
+                C1610.m5661((C1610) this.f69358, (Map.Entry) obj);
+                break;
+            default:
+                C21943 c21943 = (C21943) this.f69358;
+                C21943 c21944 = (C21943) obj;
+                if (c21943.m49651().get(c21944.getId()) || c21943 == c21944) {
+                    c21944.mo17866(EnumC1763.LOOP_START);
+                    c21943.mo17866(EnumC1763.LOOP_END);
+                    C11785 c11785 = new C11785(c21944, c21943, C23231.m52150(c21944, c21943));
+                    C11457 c11457 = C11457.f36019;
+                    c21944.mo17863(c11457, c11785);
+                    c21943.mo17863(c11457, c11785);
+                }
+                break;
         }
-        byte b = bArrM7518[0];
-        if ((b & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) == 3) {
-            C10751 c10751M39921 = C17100.m39921(c2460);
-            C23451 c23451M51688 = c23451.m51688(c10751M39921);
-            this.f70486 = c23451M51688;
-            this.f70485 = new C15398(c23451M51688, c10751M39921);
-            return true;
-        }
-        if (b != -1) {
-            return true;
-        }
-        C15398 c15398 = this.f70485;
-        if (c15398 != null) {
-            c15398.m36832(j);
-            c10459.f35699 = this.f70485;
-        }
-        c10459.f35698.getClass();
-        return false;
     }
 }

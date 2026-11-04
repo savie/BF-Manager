@@ -1,18 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: T6Y0 */
+/* JADX INFO: renamed from: l.ܺۡۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G1JT */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16725 {
+public class C16725 {
+    public static int s;
+    public static int t;
+    public int i;
+    public int j;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f53559;
+    public static void a() {
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f53560;
-
-    public C16725(byte[] bArr, String str) {
-        this.f53559 = bArr;
-        this.f53560 = str;
+    public static void b() {
     }
 }

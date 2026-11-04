@@ -1,48 +1,56 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸ܽ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: L5UY */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21710 extends AbstractC11833 {
+/* JADX INFO: renamed from: l.᩷֨ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 55LT */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21710 extends AbstractC24188 implements InterfaceC10015 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C1953 f70398;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6288 f69284 = new C4556();
 
-    public C21710(C12063 c12063, C13825 c13825, byte b) {
-        this.f70398 = (C1953) c12063.f40367.m44688((int) C12076.m30047(c13825.m33646(b + 1)));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f69285;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f69286;
+
+    public C21710(EnumC7779 enumC7779, byte b, byte b2) {
+        super(enumC7779);
+        if (b >= 16 || b2 >= 16) {
+            throw new RuntimeException("The register number must be less than v16");
+        }
+        this.f69286 = b;
+        this.f69285 = b2;
     }
 
-    public C21710(C1953 c1953) {
-        this.f70398 = c1953;
+    public C21710(EnumC7779 enumC7779, byte[] bArr, int i) {
+        super(enumC7779);
+        byte b = bArr[i + 1];
+        this.f69286 = (byte) (b & 15);
+        this.f69285 = C12556.m31232(b);
     }
 
-    @Override // l.AbstractC11833
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2086(C24166 c24166, int i) {
+        c24166.m54138(this.f78334.f25844);
+        c24166.m54138((this.f69285 << 4) | this.f69286);
+    }
+
+    @Override // l.AbstractC24188
+    /* JADX INFO: renamed from: ۧ */
+    public final EnumC7801 mo2083() {
+        return EnumC7801.Format12x;
+    }
+
+    @Override // l.InterfaceC10015
     /* JADX INFO: renamed from: ۙ */
-    public final void mo4463(C4651 c4651) {
-        byte[] bArrM30048 = C12076.m30048(this.f70398.m23325());
-        c4651.m12841(EnumC18182.VALUE_TYPE.f58128 | ((bArrM30048.length - 1) << 5));
-        c4651.m12837(bArrM30048, 0, bArrM30048.length);
+    public final int mo9996() {
+        return this.f69286;
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4462(int i) {
-        return C12076.m30051(this.f70398.m23325()) + i + 1;
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo4464(AbstractC11833 abstractC11833) {
-        return this.f70398.m23325() - ((C21710) abstractC11833).f70398.m23325();
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ᩸ */
-    public final EnumC18182 mo4465() {
-        return EnumC18182.VALUE_TYPE;
-    }
-
-    public final int hashCode() {
-        return this.f70398.hashCode();
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int m49280() {
+        return this.f69285;
     }
 }

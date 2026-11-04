@@ -1,43 +1,22 @@
-.class public final synthetic Ll/ܳ֡ۙ;
+.class public final Ll/ܳ֡ۙ;
 .super Ljava/lang/Object;
-.source "M8TF"
+.source "V8T2"
 
 # interfaces
-.implements Ll/۟ۡۙ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ܿ۫ۙ;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ܿ۫ۙ;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ܳ֡ۙ;->ܺ:Ll/ܿ۫ۙ;
-
-    return-void
-.end method
+.implements Ljava/lang/Comparable;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-    .line 2
-    check-cast p1, Ll/᩵۠ۙ;
+    .line 3938
+    check-cast p1, Ll/ܳ֡ۙ;
 
-    .line 2234
-    iget-object v0, p0, Ll/ܳ֡ۙ;->ܺ:Ll/ܿ۫ۙ;
+    .line 3958
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ll/ܿ۫ۙ;->ۨ()Z
+    const/4 p1, 0x0
 
-    move-result v0
-
-    invoke-interface {p1, v0}, Ll/᩵۠ۙ;->ܰ(Z)V
-
-    return-void
+    return p1
 .end method

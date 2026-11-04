@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
@@ -36,7 +36,7 @@ public abstract class ASN1GraphicString extends ASN1Primitive implements ASN1Str
             }
         }
         if (!(obj instanceof byte[])) {
-            throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+            throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
         }
         try {
             return (ASN1GraphicString) TYPE.fromByteArray((byte[]) obj);

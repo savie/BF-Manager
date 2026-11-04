@@ -1,95 +1,107 @@
 .class public final Ll/֡֫ۤ;
-.super Ll/᩹ۤ۟;
-.source "8459"
+.super Ljava/lang/Object;
+.source "86A1"
 
-
-# instance fields
-.field public final synthetic ۙ:Ll/ۡۡ۟;
-
-.field public final synthetic ܰ:Ll/ۡۡ۟;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۡۡ۟;Ll/ۡۡ۟;)V
-    .locals 0
-
-    .line 3437
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3445
-    iput-object p1, p0, Ll/֡֫ۤ;->ܰ:Ll/ۡۡ۟;
-
-    iput-object p2, p0, Ll/֡֫ۤ;->ۙ:Ll/ۡۡ۟;
-
-    return-void
-.end method
+# interfaces
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public final ۙ(Ll/ۡ۠۟;)V
-    .locals 0
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 6
 
-    return-void
-.end method
+    .line 222
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-.method public final ۙ(Ll/ᩳ۠۟;)V
-    .locals 2
+    move-result-object v0
 
-    .line 3447
-    iget-object v0, p1, Ll/ᩳ۠۟;->ܿ:Ll/ۡۡ۟;
+    check-cast v0, Ll/ܰ֫ۤ;
 
-    iget-object v1, p0, Ll/֡֫ۤ;->ܰ:Ll/ۡۡ۟;
+    invoke-virtual {v0}, Ll/ܰ֫ۤ;->ۚ()I
 
-    if-ne v0, v1, :cond_0
+    move-result v0
 
-    .line 3448
-    iget-object v0, p0, Ll/֡֫ۤ;->ۙ:Ll/ۡۡ۟;
+    .line 223
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-    iput-object v0, p1, Ll/ᩳ۠۟;->ܿ:Ll/ۡۡ۟;
+    move-result-object v1
+
+    check-cast v1, Ll/ܰ֫ۤ;
+
+    invoke-virtual {v1}, Ll/ܰ֫ۤ;->ۧ()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [B
+
+    .line 224
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ܰ֫ۤ;
+
+    invoke-virtual {p1}, Ll/ܰ֫ۤ;->ۧ()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [I
+
+    mul-int/lit8 v2, v0, 0x4
+
+    .line 225
+    :goto_0
+    array-length v3, p1
+
+    if-ge v0, v3, :cond_0
+
+    add-int/lit8 v3, v2, 0x1
+
+    .line 226
+    aget-byte v4, v1, v2
+
+    not-int v4, v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    add-int/lit8 v5, v2, 0x2
+
+    aget-byte v3, v1, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v2, 0x3
+
+    aget-byte v5, v1, v5
+
+    not-int v5, v5
+
+    and-int/lit16 v5, v5, 0xff
+
+    shl-int/lit8 v5, v5, 0x10
+
+    or-int/2addr v3, v5
+
+    add-int/lit8 v2, v2, 0x4
+
+    aget-byte v4, v1, v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    aput v3, p1, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
-
-.method public final ۙ(Ll/᩷۠۟;)V
-    .locals 2
-
-    .line 3456
-    iget-object v0, p1, Ll/᩷۠۟;->ܿ:Ll/ۡۡ۟;
-
-    iget-object v1, p0, Ll/֡֫ۤ;->ܰ:Ll/ۡۡ۟;
-
-    if-ne v0, v1, :cond_0
-
-    .line 3457
-    iget-object v0, p0, Ll/֡֫ۤ;->ۙ:Ll/ۡۡ۟;
-
-    iput-object v0, p1, Ll/᩷۠۟;->ܿ:Ll/ۡۡ۟;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final ۙ(Ll/᩸ۡ۟;)V
-    .locals 2
-
-    .line 3451
-    iget-object v0, p1, Ll/᩸ۡ۟;->۫:Ll/ۡۡ۟;
-
-    iget-object v1, p0, Ll/֡֫ۤ;->ܰ:Ll/ۡۡ۟;
-
-    if-ne v0, v1, :cond_0
-
-    .line 3452
-    iget-object v0, p0, Ll/֡֫ۤ;->ۙ:Ll/ۡۡ۟;
-
-    iput-object v0, p1, Ll/᩸ۡ۟;->۫:Ll/ۡۡ۟;
-
-    .line 3453
-    :cond_0
-    iget-object p1, p1, Ll/᩸ۡ۟;->ܿ:Ll/ۛ۠۟;
-
-    invoke-virtual {p0, p1}, Ll/᩹ۤ۟;->ܰ(Ll/ۡۡ۟;)V
-
     return-void
 .end method

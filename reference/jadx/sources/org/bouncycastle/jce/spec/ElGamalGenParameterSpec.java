@@ -2,7 +2,7 @@ package org.bouncycastle.jce.spec;
 
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalGenParameterSpec implements AlgorithmParameterSpec {
     public int primeSize;
 

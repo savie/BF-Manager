@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.agreement.kdf;
 
 import java.io.IOException;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHKEKGenerator implements DerivationFunction {
     public ASN1ObjectIdentifier algorithm;
     public final Digest digest;
@@ -88,7 +88,7 @@ public class DHKEKGenerator implements DerivationFunction {
                 i5++;
                 i4 = 0;
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("unable to encode parameter info: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("unable to encode parameter info: ")));
             }
         }
         this.digest.reset();

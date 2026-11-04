@@ -4,5 +4,5 @@ package com.amazonaws.internal;
 @Deprecated
 public interface MetricAware {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    boolean mo279();
+    boolean mo273();
 }

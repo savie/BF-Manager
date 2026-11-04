@@ -2,7 +2,7 @@ package org.bouncycastle.util.encoders;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.util.Strings;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public class Base64 {
         try {
             return encoder.decode(bArr, i, i2, outputStream);
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("unable to decode base64 data: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("unable to decode base64 data: ")), e);
         }
     }
 
@@ -27,7 +27,7 @@ public class Base64 {
             encoder.decode(str, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("unable to decode base64 string: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("unable to decode base64 string: ")), e);
         }
     }
 
@@ -41,7 +41,7 @@ public class Base64 {
             encoder.decode(bArr, i, i2, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("unable to decode base64 data: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("unable to decode base64 data: ")), e);
         }
     }
 
@@ -74,7 +74,7 @@ public class Base64 {
             encoder2.encode(bArr, i, i2, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new EncoderException(C8479.m22142(e, new StringBuilder("exception encoding base64 string: ")), e);
+            throw new EncoderException(C16076.m38224(e, new StringBuilder("exception encoding base64 string: ")), e);
         }
     }
 

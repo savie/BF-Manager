@@ -1,43 +1,26 @@
-.class public final synthetic Ll/۠᩵ۚ;
+.class public final Ll/۠᩵ۚ;
 .super Ljava/lang/Object;
-.source "097P"
-
-# interfaces
-.implements Ljava/util/function/Function;
+.source "E78W"
 
 
-# virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+# instance fields
+.field public final ۙ:Ljava/util/ArrayList;
+
+.field public final ᩷:Z
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/ArrayList;Z)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    .line 16
+    iput-boolean p2, p0, Ll/۠᩵ۚ;->᩷:Z
 
-    return-object p1
-.end method
+    .line 17
+    iput-object p1, p0, Ll/۠᩵ۚ;->ۙ:Ljava/util/ArrayList;
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 0
-    check-cast p1, Ll/᩷۠ۚ;
-
-    invoke-static {p1}, Ll/ܺ᩵ۚ;->ۙ(Ll/᩷۠ۚ;)Ll/ܺ᩵ۚ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

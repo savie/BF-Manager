@@ -1,25 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶܽ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: K5RM */
+import android.media.MediaCodecInfo;
+import android.media.MediaCodecList;
+
+/* JADX INFO: renamed from: l.ܳ۬ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8RW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15362 implements InterfaceC7600 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C2184 f50037;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractC7124 f50038;
-
-    @Override // l.InterfaceC9012
+public final class C15362 implements InterfaceC19838 {
+    @Override // l.InterfaceC19838
     /* JADX INFO: renamed from: ۙ */
-    public final C2184 mo4153(C2184 c2184, C15592 c15592) {
-        return c2184;
+    public final boolean mo32600(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        return false;
     }
 
-    @Override // l.InterfaceC10423
+    @Override // l.InterfaceC19838
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo32602() {
+        return false;
+    }
+
+    @Override // l.InterfaceC19838
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7124 mo4154(C2184 c2184) {
-        return c2184 == this.f50037 ? this.f50038 : c2184;
+    public final int mo32598() {
+        return MediaCodecList.getCodecCount();
+    }
+
+    @Override // l.InterfaceC19838
+    /* JADX INFO: renamed from: ۙ */
+    public final MediaCodecInfo mo32599(int i) {
+        return MediaCodecList.getCodecInfoAt(i);
+    }
+
+    @Override // l.InterfaceC19838
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo32601(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        return "secure-playback".equals(str) && "video/avc".equals(str2);
     }
 }

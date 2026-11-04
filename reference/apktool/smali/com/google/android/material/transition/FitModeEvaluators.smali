@@ -64,7 +64,7 @@
     const-string p2, "Invalid fit mode: "
 
     .line 0
-    invoke-static {p0, p2}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p2}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

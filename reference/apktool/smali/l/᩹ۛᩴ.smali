@@ -1,20 +1,85 @@
-.class public interface abstract Ll/᩹ۛᩴ;
+.class public final synthetic Ll/᩹ۛᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "LAQJ"
 
 # interfaces
-.implements Ll/ۘۛᩴ;
+.implements Landroid/content/DialogInterface$OnMultiChoiceClickListener;
+
+
+# instance fields
+.field public final synthetic ۙ:Ljava/util/ArrayList;
+
+.field public final synthetic ᩷:[Z
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/ArrayList;[Z)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩹ۛᩴ;->ۙ:Ljava/util/ArrayList;
+
+    iput-object p2, p0, Ll/᩹ۛᩴ;->᩷:[Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract forEachRemaining(Ljava/util/function/Consumer;)V
-.end method
+.method public final onClick(Landroid/content/DialogInterface;IZ)V
+    .locals 2
 
-.method public abstract forEachRemaining(Ljava/util/function/IntConsumer;)V
-.end method
+    .line 209
+    iget-object v0, p0, Ll/᩹ۛᩴ;->ۙ:Ljava/util/ArrayList;
 
-.method public abstract next()Ljava/lang/Integer;
-.end method
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-.method public abstract nextInt()I
+    move-result-object v0
+
+    check-cast v0, Ll/᩵ۙܺ;
+
+    .line 210
+    iget-object v1, p0, Ll/᩹ۛᩴ;->᩷:[Z
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {v0}, Ll/᩵ۙܺ;->᩷()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p3, 0x1
+
+    .line 211
+    aput-boolean p3, v1, p2
+
+    .line 213
+    check-cast p1, Ll/ۨᩴ;
+
+    invoke-virtual {p1}, Ll/ۨᩴ;->ۙ()Ll/᩹ᩴ;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 215
+    new-instance p3, Ll/ۨۛᩴ;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p1, p2, v0}, Ll/ۨۛᩴ;-><init>(Landroid/view/KeyEvent$Callback;II)V
+
+    invoke-virtual {p1, p3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+
+    .line 219
+    :cond_1
+    aput-boolean p3, v1, p2
+
+    return-void
 .end method

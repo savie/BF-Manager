@@ -1,80 +1,96 @@
-.class public final Ll/֡֫ۘ;
-.super Ljava/lang/Object;
-.source "F1FR"
-
-# interfaces
-.implements Lcom/google/android/material/tabs/TabLayout$OnTabSelectedListener;
+.class public abstract Ll/֡֫ۘ;
+.super Ll/۠ۚۘ;
+.source "A451"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ܽ֫ۘ;
+.field public ܳ:Ll/ۨ᩶ۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܽ֫ۘ;)V
-    .locals 0
+.method public constructor <init>(Ll/᩸۟᩺;Ll/᩵֫ۘ;Ll/ۨ᩶ۘ;Ll/ܰᩳۘ;Ll/ܰᩳۘ;Ll/ᩴۢۘ;)V
+    .locals 6
 
-    .line 157
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
 
-    iput-object p1, p0, Ll/֡֫ۘ;->ۙ:Ll/ܽ֫ۘ;
+    move-object v1, p6
+
+    move-object v2, p1
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p2
+
+    .line 3492
+    invoke-direct/range {v0 .. v5}, Ll/۠ۚۘ;-><init>(Ll/ᩴۢۘ;Ll/᩸۟᩺;Ll/ܰᩳۘ;Ll/ܰᩳۘ;Ll/᩵֫ۘ;)V
+
+    .line 3493
+    iput-object p3, p0, Ll/֡֫ۘ;->ܳ:Ll/ۨ᩶ۘ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTabReselected(Lcom/google/android/material/tabs/TabLayout$Tab;)V
-    .locals 3
+.method public ۙ(Ll/ۖۤۘ;)Ll/֡֫ۘ;
+    .locals 0
 
-    .line 170
-    iget-object v0, p0, Ll/֡֫ۘ;->ۙ:Ll/ܽ֫ۘ;
+    const/4 p1, 0x0
 
-    invoke-static {v0}, Ll/ܽ֫ۘ;->ܰ(Ll/ܽ֫ۘ;)Ll/᩵ۢܰ;
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public final ۙ(Ll/ۗۙۘ;Ll/ۙᩳۘ;Ll/ۧܿ᩺;Ll/ۧܿ᩺;)Ll/ۧܿ᩺;
+    .locals 1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 3510
+    iget-object p1, p4, Ll/ۧܿ᩺;->֡:Ll/۬ۘ᩺;
 
-    const-string v2, "RecyclerView"
+    sget-object p2, Ll/۬ۘ᩺;->ۡ:Ll/۬ۘ᩺;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {p1}, Lcom/google/android/material/tabs/TabLayout$Tab;->getPosition()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 3511
+    invoke-virtual {p4}, Ll/ۧܿ᩺;->᩶()Ll/ۧܿ᩺;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    check-cast p1, Ll/ۧۚۘ;
+
+    .line 3512
+    iget-object p2, p0, Ll/۠ۚۘ;->᩸:Ll/᩸۟᩺;
+
+    .line 4604
+    iget-object p3, p1, Ll/ۧۚۘ;->۠:Ll/ܰᩳۘ;
+
+    invoke-virtual {p3}, Ll/ܰᩳۘ;->᩸()Ll/ܰᩳۘ;
+
+    move-result-object p3
+
+    .line 4605
+    iget-object p4, p1, Ll/ۧۚۘ;->ۜ:Ll/᩷ۧۘ;
+
+    iget-object p4, p4, Ll/᩷ۧۘ;->ܳۙ:Ll/᩻֨᩺;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p4, p3, p2, v0}, Ll/᩻֨᩺;->ۙ(Ll/ܰᩳۘ;Ll/᩸۟᩺;Z)Ll/ܶۚۗ;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ll/ܶۚۗ;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ll/ܿܿܰ;
+    check-cast p1, Ll/ۧܿ᩺;
 
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 172
-    invoke-virtual {p1, v0}, Ll/ܿܿܰ;->scrollToPosition(I)V
+    return-object p1
 
     :cond_0
-    return-void
+    return-object p4
 .end method
 
-.method public final onTabSelected(Lcom/google/android/material/tabs/TabLayout$Tab;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTabUnselected(Lcom/google/android/material/tabs/TabLayout$Tab;)V
-    .locals 0
-
-    return-void
+.method public abstract ۙ(Ll/ۧܿ᩺;)Ll/᩵᩶ۘ;
 .end method

@@ -1,82 +1,102 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
+import java.util.Arrays;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۧۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۤۢܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 99PI */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10788 extends AbstractC15706 implements InterfaceC19282 {
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C7993.a(this, consumer);
+public final class C10788 extends AbstractC4823 {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f34242;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final int f34243;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C7323[] f34244;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public C9231 f34245;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final String f34246;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C24478 f34247;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final C14034 f34248;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ int m27496(C10788 c10788) {
+        int i = c10788.f34242;
+        c10788.f34242 = i + 1;
+        return i;
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C7993.b(this, consumer);
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final int m27501() {
+        return this.f34243;
     }
 
-    @Override // l.AbstractC15706
-    public final AbstractC15706 e(InterfaceC20693 interfaceC20693) {
-        return new C10788(this.b, interfaceC20693, this.a);
+    @Override // l.AbstractC4823
+    public final String getName() {
+        return this.f34245.getName();
     }
 
-    @Override // l.AbstractC15706
-    public final void d() {
-        C16336 c16336 = new C16336();
-        this.h = c16336;
-        C13638.requireNonNull(c16336);
-        this.e = this.b.g0(new C8671(c16336, 1));
-        this.f = new C5295(18, this);
+    @Override // l.AbstractC4823
+    /* JADX INFO: renamed from: ᩸ */
+    public final C14034 mo5003() {
+        return this.f34248;
     }
 
-    @Override // l.AbstractC15706, l.InterfaceC20693
-    public final InterfaceC10110 trySplit() {
-        return (InterfaceC19282) super.trySplit();
+    @Override // l.AbstractC4823
+    /* JADX INFO: renamed from: ᩴ */
+    public final String mo5002() {
+        return this.f34246;
     }
 
-    @Override // l.AbstractC15706, l.InterfaceC20693
-    public final InterfaceC19282 trySplit() {
-        return (InterfaceC19282) super.trySplit();
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final C24478 m27500() {
+        return this.f34247;
     }
 
-    @Override // l.AbstractC15706, l.InterfaceC20693
-    public final InterfaceC20693 trySplit() {
-        return (InterfaceC19282) super.trySplit();
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int m27502() {
+        return this.f34242;
     }
 
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(LongConsumer longConsumer) {
-        long j;
-        C13638.requireNonNull(longConsumer);
-        boolean zA = a();
-        if (zA) {
-            C16336 c16336 = (C16336) this.h;
-            long j2 = this.g;
-            int iR = c16336.r(j2);
-            if (c16336.c == 0 && iR == 0) {
-                j = ((long[]) c16336.e)[(int) j2];
-            } else {
-                j = ((long[][]) c16336.f)[iR][(int) (j2 - c16336.d[iR])];
-            }
-            longConsumer.accept(j);
-        }
-        return zA;
+    public final List getFields() {
+        return C4681.unmodifiableList(Arrays.asList(this.f34244));
     }
 
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(LongConsumer longConsumer) {
-        if (this.h == null && !this.i) {
-            C13638.requireNonNull(longConsumer);
-            c();
-            C13638.requireNonNull(longConsumer);
-            C8671 c8671 = new C8671(longConsumer, 0);
-            this.b.f0(this.d, c8671);
-            this.i = true;
-            return;
-        }
-        while (tryAdvance(longConsumer)) {
-        }
+    @Override // l.AbstractC4823
+    /* JADX INFO: renamed from: ۧ */
+    public final InterfaceC21013 mo5000() {
+        return this.f34245;
+    }
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final boolean m27499() {
+        C7323[] c7323Arr = this.f34244;
+        return c7323Arr.length == 1 && c7323Arr[0].f24125;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static void m27498(C10788 c10788) {
+        c10788.m14855(c10788.f34245.m24421().m19316());
+    }
+
+    public C10788(C9231 c9231, C14034 c14034, C24478 c24478, int i) {
+        super(0);
+        this.f16869 = c24478;
+        this.f34245 = c9231;
+        this.f34246 = C19739.m45480(c14034, c24478, c9231.getName());
+        this.f34248 = c14034;
+        this.f34243 = i;
+        this.f34247 = c24478;
+        this.f34242 = 0;
     }
 }

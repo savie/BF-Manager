@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -16,8 +16,8 @@ public class SPHINCSPLUSPublicKey extends ASN1Object {
 
     @Deprecated
     public SPHINCSPLUSPublicKey(ASN1Sequence aSN1Sequence) {
-        this.pkseed = C15489.m37078(aSN1Sequence, 0);
-        this.pkroot = C15489.m37078(aSN1Sequence, 1);
+        this.pkseed = C20551.m47118(aSN1Sequence, 0);
+        this.pkroot = C20551.m47118(aSN1Sequence, 1);
     }
 
     public SPHINCSPLUSPublicKey(byte[] bArr, byte[] bArr2) {

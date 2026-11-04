@@ -1,27 +1,36 @@
-.class public Ll/᩻ܶ;
-.super Landroid/widget/LinearLayout;
-.source "W4WY"
+.class public final Ll/᩻ܶ;
+.super Ljava/lang/Object;
+.source "N5JQ"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/۟ܶ;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public constructor <init>(Ll/۟ܶ;)V
     .locals 0
 
-    .line 42
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 190
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩻ܶ;->ܰ:Ll/۟ܶ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fitSystemWindows(Landroid/graphics/Rect;)Z
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    .line 55
-    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
+    .line 193
+    iget-object v0, p0, Ll/᩻ܶ;->ܰ:Ll/۟ܶ;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p1
+    return-void
 .end method

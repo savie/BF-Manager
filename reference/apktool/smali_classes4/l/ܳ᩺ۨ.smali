@@ -1,62 +1,96 @@
 .class public final Ll/ܳ᩺ۨ;
 .super Ljava/lang/Object;
-.source "T5YJ"
+.source "K4X2"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Iterable;
+
+
+# static fields
+.field public static final serialVersionUID:J = -0x1ad7c1c2f00eb0f5L
+
+
+# instance fields
+.field public final ܰ:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 44
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 45
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/ܳ᩺ۨ;->ܰ:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    return-void
+.end method
+
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+
+    .line 95
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Serialization is not supported"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method private writeObject(Ljava/io/ObjectOutputStream;)V
+    .locals 1
+
+    .line 116
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Serialization is not supported"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 4
+.method public final isEmpty()Z
+    .locals 1
 
-    .line 90
-    new-instance v0, Ll/ܳۘۨ;
+    .line 65
+    iget-object v0, p0, Ll/ܳ᩺ۨ;->ܰ:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
 
-    .line 91
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    check-cast v1, Ll/ܳۘۨ;
+    const/4 v0, 0x1
 
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 92
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v2
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    check-cast v2, Ll/ܳۘۨ;
+    .line 86
+    iget-object v0, p0, Ll/ܳ᩺ۨ;->ܰ:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v2}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 93
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ܳۘۨ;
-
-    invoke-virtual {v3}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 94
-    invoke-virtual {v3, v2, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(Ljava/lang/String;)V
-
-    .line 95
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
-
-    return-void
+    return-object v0
 .end method

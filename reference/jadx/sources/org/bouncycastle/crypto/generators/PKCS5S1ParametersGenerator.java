@@ -1,13 +1,13 @@
 package org.bouncycastle.crypto.generators;
 
-import l.C2271;
+import l.C14442;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.PBEParametersGenerator;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS5S1ParametersGenerator extends PBEParametersGenerator {
     public Digest digest;
 
@@ -43,7 +43,7 @@ public class PKCS5S1ParametersGenerator extends PBEParametersGenerator {
         if (i2 <= this.digest.getDigestSize()) {
             return new KeyParameter(generateDerivedKey(), 0, i2);
         }
-        throw new IllegalArgumentException(C2271.m6966(i2, "Can't generate a derived key ", " bytes long."));
+        throw new IllegalArgumentException(C14442.m34864(i2, "Can't generate a derived key ", " bytes long."));
     }
 
     @Override // org.bouncycastle.crypto.PBEParametersGenerator
@@ -52,7 +52,7 @@ public class PKCS5S1ParametersGenerator extends PBEParametersGenerator {
         int i4 = i2 / 8;
         int i5 = i3 + i4;
         if (i5 > this.digest.getDigestSize()) {
-            throw new IllegalArgumentException(C2271.m6966(i5, "Can't generate a derived key ", " bytes long."));
+            throw new IllegalArgumentException(C14442.m34864(i5, "Can't generate a derived key ", " bytes long."));
         }
         byte[] bArrGenerateDerivedKey = generateDerivedKey();
         return new ParametersWithIV(new KeyParameter(bArrGenerateDerivedKey, 0, i3), bArrGenerateDerivedKey, i3, i4);

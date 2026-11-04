@@ -1,232 +1,220 @@
 .class public final Ll/ۖܰ᩹;
-.super Ljava/lang/Object;
-.source "D70T"
-
-# interfaces
-.implements Ll/֡ۙ᩹;
+.super Ll/۫᩺᩹;
+.source "VZ3"
 
 
 # instance fields
-.field public final ܺ:[B
-
-.field public volatile ᩶:I
+.field public final synthetic ܰ:Ll/᩷᩶᩹;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ll/᩷᩶᩹;)V
     .locals 0
 
-    .line 5834
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 498
+    iput-object p1, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
 
-    .line 5835
-    new-array p1, p1, [B
-
-    iput-object p1, p0, Ll/ۖܰ᩹;->ܺ:[B
+    .line 35
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic close()V
-    .locals 0
+.method public final clear()V
+    .locals 1
+
+    .line 610
+    iget-object v0, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
+
+    invoke-virtual {v0}, Ll/᩷᩶᩹;->clear()V
 
     return-void
 .end method
 
-.method public final length()I
+.method public final contains(I)Z
     .locals 1
 
-    .line 5861
-    iget v0, p0, Ll/ۖܰ᩹;->᩶:I
+    .line 501
+    iget-object v0, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
+
+    invoke-static {v0, p1}, Ll/᩷᩶᩹;->ۙ(Ll/᩷᩶᩹;I)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final forEach(Ljava/util/function/IntConsumer;)V
+    .locals 4
+
+    .line 597
+    iget-object v0, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
+
+    iget-object v1, v0, Ll/᩷᩶᩹;->᩶:[I
+
+    .line 598
+    iget v0, v0, Ll/᩷᩶᩹;->֡:I
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    .line 599
+    aget v3, v1, v2
+
+    invoke-interface {p1, v3}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    .line 518
+    new-instance v0, Ll/֨ܰ᩹;
+
+    invoke-direct {v0, p0}, Ll/֨ܰ᩹;-><init>(Ll/ۖܰ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final iterator()Ll/ۛ֡᩹;
+    .locals 1
+
+    .line 518
+    new-instance v0, Ll/֨ܰ᩹;
+
+    invoke-direct {v0, p0}, Ll/֨ܰ᩹;-><init>(Ll/ۖܰ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final remove(I)Z
+    .locals 5
+
+    .line 506
+    iget-object v0, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
+
+    invoke-static {v0, p1}, Ll/᩷᩶᩹;->ۙ(Ll/᩷᩶᩹;I)I
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    if-ne p1, v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 508
+    :cond_0
+    iget v1, v0, Ll/᩷᩶᩹;->֡:I
+
+    sub-int/2addr v1, p1
+
+    const/4 v2, 0x1
+
+    sub-int/2addr v1, v2
+
+    .line 509
+    iget-object v3, v0, Ll/᩷᩶᩹;->᩶:[I
+
+    add-int/lit8 v4, p1, 0x1
+
+    invoke-static {v3, v4, v3, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 510
+    iget-object v3, v0, Ll/᩷᩶᩹;->۟:[Ljava/lang/Object;
+
+    invoke-static {v3, v4, v3, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 511
+    iget p1, v0, Ll/᩷᩶᩹;->֡:I
+
+    sub-int/2addr p1, v2
+
+    iput p1, v0, Ll/᩷᩶᩹;->֡:I
+
+    .line 512
+    iget-object v0, v0, Ll/᩷᩶᩹;->۟:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    aput-object v1, v0, p1
+
+    return v2
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 605
+    iget-object v0, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
+
+    iget v0, v0, Ll/᩷᩶᩹;->֡:I
 
     return v0
 .end method
 
-.method public final ֫ܰ()Ll/ᩴۨ᩹;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final ۙ()Ljava/lang/Object;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final declared-synchronized ۙ(I)V
-    .locals 2
-
-    move-object v0, p0
-
-    .line 1
-    monitor-enter v0
-
-    if-ltz p1, :cond_0
-
-    .line 5849
-    :try_start_0
-    iget v1, p0, Ll/ۖܰ᩹;->᩶:I
-
-    if-gt p1, v1, :cond_0
-
-    .line 5852
-    iput p1, p0, Ll/ۖܰ᩹;->᩶:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5853
-    monitor-exit v0
-
-    return-void
-
-    .line 5850
-    :cond_0
-    :try_start_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Invalid arena rollback"
-
-    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final ۙ(I[BII)V
+.method public synthetic spliterator()Ljava/util/Spliterator;
     .locals 1
 
-    .line 5872
-    iget v0, p0, Ll/ۖܰ᩹;->᩶:I
+    .line 0
+    invoke-virtual {p0}, Ll/ۖܰ᩹;->spliterator()Ll/۠ۚۗ;
 
-    invoke-static {v0, p1, p4}, Ll/᩺ۨ᩹;->ۨ(III)V
+    move-result-object v0
 
-    .line 5873
-    array-length v0, p2
+    invoke-static {v0}, Ll/ۖۚۗ;->convert(Ll/۠ۚۗ;)Ljava/util/Spliterator;
 
-    invoke-static {v0, p3, p4}, Ll/᩺ۨ᩹;->ܰ(III)V
+    move-result-object v0
 
-    .line 5874
-    iget-object v0, p0, Ll/ۖܰ᩹;->ܺ:[B
-
-    invoke-static {v0, p1, p2, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final declared-synchronized ۚ(II[B)I
+.method public final bridge synthetic spliterator()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 498
+    invoke-virtual {p0}, Ll/ۖܰ᩹;->spliterator()Ll/ܶ۟᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final spliterator()Ll/ܶ۟᩹;
     .locals 3
 
-    move-object v0, p0
+    .line 591
+    new-instance v0, Ll/ۡܰ᩹;
 
-    .line 1
-    monitor-enter v0
+    iget-object v1, p0, Ll/ۖܰ᩹;->ܰ:Ll/᩷᩶᩹;
 
-    .line 5839
-    :try_start_0
-    invoke-virtual {p0}, Ll/ۖܰ᩹;->᩹()I
+    iget v1, v1, Ll/᩷᩶᩹;->֡:I
 
-    move-result v1
+    const/4 v2, 0x0
 
-    if-gt p2, v1, :cond_0
+    invoke-direct {v0, p0, v2, v1}, Ll/ۡܰ᩹;-><init>(Ll/ۖܰ᩹;II)V
 
-    .line 5842
-    iget v1, p0, Ll/ۖܰ᩹;->᩶:I
-
-    .line 5843
-    iget-object v2, p0, Ll/ۖܰ᩹;->ܺ:[B
-
-    invoke-static {p3, p1, v2, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 5844
-    iget p1, p0, Ll/ۖܰ᩹;->᩶:I
-
-    add-int/2addr p1, p2
-
-    iput p1, p0, Ll/ۖܰ᩹;->᩶:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5845
-    monitor-exit v0
-
-    return v1
-
-    .line 5840
-    :cond_0
-    :try_start_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Arena block overflow"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catchall_0
-    move-exception p1
-
-    .line 5845
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final ۚ()J
-    .locals 2
-
-    .line 5867
-    iget-object v0, p0, Ll/ۖܰ᩹;->ܺ:[B
-
-    array-length v0, v0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final synthetic ۛ()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final ۨ()J
-    .locals 2
-
-    .line 84
-    invoke-virtual {p0}, Ll/ۖܰ᩹;->ۚ()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final ᩹()I
-    .locals 2
-
-    .line 5856
-    iget-object v0, p0, Ll/ۖܰ᩹;->ܺ:[B
-
-    array-length v0, v0
-
-    iget v1, p0, Ll/ۖܰ᩹;->᩶:I
-
-    sub-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method

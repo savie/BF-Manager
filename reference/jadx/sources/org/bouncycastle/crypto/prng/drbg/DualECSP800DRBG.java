@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.prng.drbg;
 
 import java.math.BigInteger;
-import l.C2271;
+import l.C14442;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.prng.EntropySource;
@@ -12,7 +12,7 @@ import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DualECSP800DRBG implements SP80090DRBG {
     public static final int MAX_ADDITIONAL_INPUT = 4096;
     public static final int MAX_ENTROPY_LENGTH = 4096;
@@ -84,7 +84,7 @@ public class DualECSP800DRBG implements SP80090DRBG {
             throw new IllegalArgumentException("Personalization string too large");
         }
         if (entropySource.entropySize() < i || entropySource.entropySize() > 4096) {
-            throw new IllegalArgumentException(C2271.m6966(i, "EntropySource must provide between ", " and 4096 bits"));
+            throw new IllegalArgumentException(C14442.m34864(i, "EntropySource must provide between ", " and 4096 bits"));
         }
         byte[] bArrConcatenate = Arrays.concatenate(getEntropy(), bArr2, bArr);
         for (int i2 = 0; i2 != dualECPointsArr.length; i2++) {

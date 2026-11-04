@@ -1,29 +1,44 @@
 package l;
 
-import java.util.function.Predicate;
+import java.util.BitSet;
+import java.util.HashMap;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܿۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57L9 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C17263 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+/* JADX INFO: renamed from: l.ܽ֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6GT */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17263 implements Consumer {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f56240;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f56241;
+
+    public /* synthetic */ C17263(int i, Object obj) {
+        this.f56240 = i;
+        this.f56241 = obj;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        AbstractC16579 abstractC16579 = (AbstractC16579) obj;
-        return abstractC16579.mo1926() || abstractC16579.m39001(EnumC6617.NONE);
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        switch (this.f56240) {
+            case 0:
+                BitSet bitSet = (BitSet) this.f56241;
+                C21943 c21943M49642 = ((C21943) obj).m49642();
+                if (c21943M49642 != null) {
+                    bitSet.andNot(c21943M49642.m49651());
+                    bitSet.clear(c21943M49642.getId());
+                }
+                break;
+            default:
+                C8002 c8002 = (C8002) obj;
+                ((HashMap) this.f56241).put(c8002.m21848(), c8002);
+                break;
+        }
     }
 }

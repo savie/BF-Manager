@@ -1,37 +1,57 @@
 package l;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.os.Build;
+import java.util.Comparator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.᩻᩺ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 763R */
+/* JADX INFO: renamed from: l.᩺ۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: DD2 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C24002 {
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52832(Activity activity, EnumC1651 enumC1651) {
-        C13465.m32966(enumC1651, "event");
-        if (activity instanceof InterfaceC7068) {
-            ((InterfaceC7068) activity).getLifecycle().m11902(enumC1651);
-        } else if (activity instanceof InterfaceC1423) {
-            AbstractC3062 lifecycle = ((InterfaceC1423) activity).getLifecycle();
-            if (lifecycle instanceof C4245) {
-                ((C4245) lifecycle).m11902(enumC1651);
-            }
-        }
+public final class C24002 extends AbstractC12067 implements InterfaceC2546 {
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3864 f77652;
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ Comparator getComparator() {
+        return C18105.$default$getComparator(this);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52831(Activity activity) {
-        if (Build.VERSION.SDK_INT >= 29) {
-            C2128.f7794.getClass();
-            C14830.m35509(activity);
-        }
-        FragmentManager fragmentManager = activity.getFragmentManager();
-        if (fragmentManager.findFragmentByTag("androidx.lifecycle.LifecycleDispatcher.report_fragment_tag") == null) {
-            fragmentManager.beginTransaction().add(new FragmentC9891(), "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag").commit();
-            fragmentManager.executePendingTransactions();
-        }
+    @Override // l.InterfaceC8409
+    public /* synthetic */ long getExactSizeIfKnown() {
+        return C18105.$default$getExactSizeIfKnown(this);
+    }
+
+    @Override // l.InterfaceC8409
+    public /* synthetic */ boolean hasCharacteristics(int i) {
+        return C18105.$default$hasCharacteristics(this, i);
+    }
+
+    @Override // l.AbstractC12067
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo28612(int i, Object obj) {
+        ((Consumer) obj).accept(this.f77652.f13184[i]);
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C24002(C3864 c3864) {
+        super(c3864);
+        this.f77652 = c3864;
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C24002(C3864 c3864, int i, int i2, boolean z) {
+        super(c3864, i, i2, z);
+        this.f77652 = c3864;
+    }
+
+    @Override // l.InterfaceC8409
+    public final int characteristics() {
+        return this.f38864 ? 0 : 64;
+    }
+
+    @Override // l.AbstractC12067
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC12067 mo28611(int i, int i2, boolean z) {
+        return new C24002(this.f77652, i, i2, z);
     }
 }

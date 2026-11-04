@@ -6,13 +6,13 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
-.field public static final enum ܽ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+.field public static final enum ܿ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
 .field public static final synthetic ᩶:[Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {v0, v1, v2, v1}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sput-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܿ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     .line 22
     new-instance v1, Lcom/amazonaws/services/s3/model/SSEAlgorithm;
@@ -41,7 +41,7 @@
 
     invoke-direct {v1, v4, v5, v3}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v1, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܽ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sput-object v1, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     const/4 v3, 0x2
 
@@ -64,7 +64,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 32
-    iput-object p3, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܺ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     .locals 1
 
     .line 61
-    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܿ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     return-object v0
 .end method
@@ -171,7 +171,7 @@
     .locals 1
 
     .line 28
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -180,7 +180,7 @@
     .locals 1
 
     .line 37
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

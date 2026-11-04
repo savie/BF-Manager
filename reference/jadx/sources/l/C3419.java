@@ -1,36 +1,30 @@
 package l;
 
-import java.util.function.Predicate;
+/* JADX INFO: renamed from: l.ۗ۫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z3PG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3419 extends AbstractC4516 {
 
-/* JADX INFO: renamed from: l.ۗᩴۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R450 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3419 implements Predicate {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4516 f11091;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC23903 f12620;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public AbstractC4516 f11092 = C12150.f39059;
 
-    public /* synthetic */ C3419(AbstractC23903 abstractC23903) {
-        this.f12620 = abstractC23903;
+    public C3419(AbstractC6403 abstractC6403) {
+        this.f11091 = abstractC6403.f21604.values().iterator();
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f11092.hasNext() || this.f11091.hasNext();
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        return ((AbstractC23903) obj) == this.f12620;
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (!this.f11092.hasNext()) {
+            this.f11092 = ((AbstractC4911) this.f11091.next()).iterator();
+        }
+        return this.f11092.next();
     }
 }

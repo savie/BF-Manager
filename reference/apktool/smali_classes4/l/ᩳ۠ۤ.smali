@@ -1,137 +1,126 @@
-.class public abstract Ll/ᩳ۠ۤ;
-.super Ljava/lang/Object;
-.source "R450"
+.class public final Ll/ᩳ۠ۤ;
+.super Landroid/widget/BaseAdapter;
+.source "Y184"
 
 
 # instance fields
-.field public final ۙ:Z
-
-.field public final synthetic ۨ:Ll/ᩴ۠ۤ;
-
-.field public ܰ:Ljava/util/HashSet;
+.field public final synthetic ܰ:Ll/ۖ۠ۤ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩴ۠ۤ;Z)V
+.method public constructor <init>(Ll/ۖ۠ۤ;)V
     .locals 0
 
-    .line 996
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 687
+    iput-object p1, p0, Ll/ᩳ۠ۤ;->ܰ:Ll/ۖ۠ۤ;
 
-    iput-object p1, p0, Ll/ᩳ۠ۤ;->ۨ:Ll/ᩴ۠ۤ;
-
-    .line 993
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Ll/ᩳ۠ۤ;->ܰ:Ljava/util/HashSet;
-
-    .line 994
-    sget p1, Ll/᩸᩷۟;->֡:I
-
-    .line 997
-    iput-boolean p2, p0, Ll/ᩳ۠ۤ;->ۙ:Z
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract ۙ(Ll/֡᩵ۤ;)Ljava/lang/Iterable;
-.end method
+.method public final getCount()I
+    .locals 1
 
-.method public final ۙ(Ll/֡᩵ۤ;Ll/᩸᩷۟;)Ll/᩸᩷۟;
-    .locals 3
+    .line 691
+    iget-object v0, p0, Ll/ᩳ۠ۤ;->ܰ:Ll/ۖ۠ۤ;
 
-    if-eqz p1, :cond_2
+    invoke-static {v0}, Ll/ۖ۠ۤ;->ۙ(Ll/ۖ۠ۤ;)Ll/᩻۠ۤ;
 
-    .line 1000
-    iget-object v0, p0, Ll/ᩳ۠ۤ;->ܰ:Ljava/util/HashSet;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    iget-object v0, v0, Ll/᩻۠ۤ;->᩸:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    goto :goto_1
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 0
 
-    .line 1004
-    :cond_0
-    iget-boolean v0, p0, Ll/ᩳ۠ۤ;->ۙ:Z
+    const/4 p1, 0x0
 
-    if-eqz v0, :cond_1
+    return-object p1
+.end method
 
-    .line 1006
-    iget-object v0, p0, Ll/ᩳ۠ۤ;->ۨ:Ll/ᩴ۠ۤ;
+.method public final getItemId(I)J
+    .locals 2
 
-    invoke-static {v0}, Ll/ᩴ۠ۤ;->ۖ(Ll/ᩴ۠ۤ;)Ll/᩻ܺۤ;
+    const-wide/16 v0, 0x0
 
-    move-result-object v1
+    return-wide v0
+.end method
 
-    iget-object v2, p1, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
-    invoke-virtual {v1, v2}, Ll/᩻ܺۤ;->ܺ(Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    .line 707
+    iget-object v0, p0, Ll/ᩳ۠ۤ;->ܰ:Ll/ۖ۠ۤ;
 
-    move-result-object v1
+    if-nez p2, :cond_0
 
-    iget-object v1, v1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
+    .line 708
+    invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    invoke-virtual {p0, v1, p2}, Ll/ᩳ۠ۤ;->ۙ(Ll/֡᩵ۤ;Ll/᩸᩷۟;)Ll/᩸᩷۟;
+    move-result-object p2
+
+    const v1, 0x7f0d0157
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
-    .line 1007
-    invoke-static {v0}, Ll/ᩴ۠ۤ;->ۖ(Ll/ᩴ۠ۤ;)Ll/᩻ܺۤ;
+    .line 709
+    invoke-static {p2}, Ll/᩸ۤܺ;->ۙ(Landroid/view/View;)V
 
-    move-result-object v0
+    const p3, 0x7f0a0634
 
-    iget-object v1, p1, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
+    .line 710
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ll/᩻ܺۤ;->᩸(Ll/ܽۤۤ;)Ll/᩸᩷۟;
+    move-result-object p3
 
-    move-result-object v0
+    check-cast p3, Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Ll/᩸᩷۟;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ܽۤۤ;
-
-    .line 1008
-    iget-object v1, v1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
-
-    invoke-virtual {p0, v1, p2}, Ll/ᩳ۠ۤ;->ۙ(Ll/֡᩵ۤ;Ll/᩸᩷۟;)Ll/᩸᩷۟;
-
-    move-result-object p2
+    .line 711
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1011
-    :cond_1
-    invoke-virtual {p0, p1}, Ll/ᩳ۠ۤ;->ۙ(Ll/֡᩵ۤ;)Ljava/lang/Iterable;
+    .line 713
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/TextView;
+
+    .line 714
+    :goto_0
+    invoke-static {v0}, Ll/ۖ۠ۤ;->ۙ(Ll/ۖ۠ۤ;)Ll/᩻۠ۤ;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/᩻۠ۤ;->᩸:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Ll/᩸᩷۟;->ܰ(Ljava/lang/Object;)Ll/᩸᩷۟;
+    check-cast p1, Ll/֫۠ۤ;
+
+    invoke-virtual {p1}, Ll/֫۠ۤ;->ۙ()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_2
-    :goto_1
     return-object p2
 .end method

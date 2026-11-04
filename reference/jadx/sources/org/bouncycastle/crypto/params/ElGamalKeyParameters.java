@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.params;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalKeyParameters extends AsymmetricKeyParameter {
     public ElGamalParameters params;
 

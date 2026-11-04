@@ -7,7 +7,7 @@ import com.tencent.mm.opensdk.constants.Build;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.utils.Log;
 import com.tencent.mm.opensdk.utils.d;
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class a {
@@ -27,7 +27,7 @@ public final class a {
             str = "send fail, invalid argument";
         } else {
             if (!d.b(c0031a.action)) {
-                String strM50267 = !d.b(c0031a.a) ? C22697.m50267(new StringBuilder(), c0031a.a, ".permission.MM_MESSAGE") : null;
+                String strM23910 = !d.b(c0031a.a) ? C8947.m23910(new StringBuilder(), c0031a.a, ".permission.MM_MESSAGE") : null;
                 Intent intent = new Intent(c0031a.action);
                 Bundle bundle = c0031a.bundle;
                 if (bundle != null) {
@@ -39,8 +39,8 @@ public final class a {
                 intent.putExtra(ConstantsAPI.CONTENT, c0031a.content);
                 intent.putExtra(ConstantsAPI.APP_SUPORT_CONTENT_TYPE, c0031a.b);
                 intent.putExtra(ConstantsAPI.CHECK_SUM, b.a(c0031a.content, Build.SDK_INT, packageName));
-                context.sendBroadcast(intent, strM50267);
-                Log.d("MicroMsg.SDK.MMessage", "send mm message, intent=" + intent + ", perm=" + strM50267);
+                context.sendBroadcast(intent, strM23910);
+                Log.d("MicroMsg.SDK.MMessage", "send mm message, intent=" + intent + ", perm=" + strM23910);
                 return true;
             }
             str = "send fail, action is null";

@@ -1,113 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢᩴ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: E7LN */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ۢ֨ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: EIXC */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C9768 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32832;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32835;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32838;
-
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32839;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32840;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32841;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32842;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32844;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32846;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32847;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32848;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32849;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32850;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32851;
-
-    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32852;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32853;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32855;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32836 = new C14065("compiler", "addopens.ignored", new Object[0]);
+    public static C14505 m25438(C2551 c2551, InterfaceC7377 interfaceC7377, boolean z, List list) {
+        InterfaceC8670 interfaceC8670 = (InterfaceC8670) ((C15580) list.get(0)).m37318();
+        String str = (String) ((C15580) list.get(1)).m37318();
+        InterfaceC7179 interfaceC7179 = (InterfaceC7179) ((C15580) list.get(2)).m37318();
+        int size = list.size();
+        ArrayList arrayList = new ArrayList(size);
+        C1610 c1610Mo8527 = c2551.mo8527();
+        arrayList.add(C6077.m17591(c1610Mo8527));
+        for (int i = 1; i < size; i++) {
+            C15580 c15580 = (C15580) list.get(i);
+            try {
+                arrayList.add(C6077.m17590(c1610Mo8527, c15580));
+            } catch (Exception e) {
+                c2551.m31134("Failed to build arg in invoke-custom insn: " + c15580, e);
+                arrayList.add(AbstractC16481.m39112(new C5557(c15580.toString())));
+            }
+        }
+        if (interfaceC8670.getType().m50355()) {
+            throw new C8597("Field handle not yet supported");
+        }
+        C1610 c1610Mo8528 = c2551.mo8527();
+        final C21219 c21219 = new C21219(C21965.m49693(c1610Mo8528, interfaceC8670.mo5148()), C9023.m24075(interfaceC8670.getType()), arrayList.size());
+        C4937.forEach(arrayList, new Consumer() { // from class: l.ᩳ֨ۗ
+            @Override // java.util.function.Consumer
+            /* JADX INFO: renamed from: accept */
+            public final void n(Object obj) {
+                c21219.mo44014((AbstractC16481) obj);
+            }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32845 = new C14065("compiler", "attempt.to.synchronize.on.instance.of.value.based.class", new Object[0]);
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32843 = new C14065("compiler", "diamond.redundant.args", new Object[0]);
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32834 = new C14065("compiler", "div.zero", new Object[0]);
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32837 = new C14065("compiler", "doclint.not.available", new Object[0]);
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32854 = new C14065("compiler", "empty.if", new Object[0]);
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C14065 f32833 = new C14065("compiler", "finally.cannot.complete", new Object[0]);
-
-    static {
-        new C14065("compiler", "illegal.char.for.encoding", new Object[0]);
-        f32844 = new C14065("compiler", "inconsistent.white.space.indentation", new Object[0]);
-        f32835 = new C14065("compiler", "invalid.yield", new Object[0]);
-        f32838 = new C14065("compiler", "local.redundant.type", new Object[0]);
-        f32855 = new C14065("compiler", "method.redundant.typeargs", new Object[0]);
-        f32846 = new C14065("compiler", "missing.deprecated.annotation", new Object[0]);
-        f32853 = new C14065("compiler", "option.obsolete.suppression", new Object[0]);
-        f32848 = new C14065("compiler", "possible.fall-through.into.case", new Object[0]);
-        f32849 = new C14065("compiler", "potential.lambda.found", new Object[0]);
-        f32840 = new C14065("compiler", "proc.proc-only.requested.no.procs", new Object[0]);
-        f32850 = new C14065("compiler", "proc.use.implicit", new Object[0]);
-        f32841 = new C14065("compiler", "proc.use.proc.or.implicit", new Object[0]);
-        f32842 = new C14065("compiler", "requires.automatic", new Object[0]);
-        f32839 = new C14065("compiler", "requires.transitive.automatic", new Object[0]);
-        f32852 = new C14065("compiler", "strictfp", new Object[0]);
-        f32847 = new C14065("compiler", "trailing.white.space.will.be.removed", new Object[0]);
-        f32851 = new C14065("compiler", "try.explicit.close.call", new Object[0]);
-        new C14065("compiler", "unchecked.assign", new Object[0]);
-        new C14065("compiler", "unchecked.cast.to.type", new Object[0]);
-        f32832 = new C14065("compiler", "underscore.as.identifier", new Object[0]);
-        new C14065("compiler", "warning", new Object[0]);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C14065 m24750(EnumC19730 enumC19730, String str) {
-        return new C14065("compiler", "bad.name.for.option", enumC19730, str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C14065 m24751(EnumC19730 enumC19730, C19670 c19670) {
-        return new C14065("compiler", "module.for.option.not.found", enumC19730, c19670);
+            public /* synthetic */ Consumer andThen(Consumer consumer) {
+                return C12312.$default$andThen(this, consumer);
+            }
+        });
+        C14505 c14505 = new C14505(c21219, C21965.m49692(c1610Mo8528, C1345.m4955(c1610Mo8528, AbstractC1566.f5426), str, interfaceC7179), interfaceC7377, z);
+        c14505.m35016(list);
+        return c14505;
     }
 }

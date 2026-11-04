@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.signers;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface DSAKCalculator {
     void init(BigInteger bigInteger, BigInteger bigInteger2, byte[] bArr);
 

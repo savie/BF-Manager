@@ -1,560 +1,314 @@
 .class public final Ll/ۤۗ᩺;
-.super Ll/ۡۗ᩺;
-.source "LAUN"
+.super Ljava/lang/Object;
+.source "T1SY"
 
 # interfaces
-.implements Ljava/util/List;
-.implements Ljava/lang/Cloneable;
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
+.implements Ll/۫ۗ᩺;
+
+
+# static fields
+.field public static final ᩷:[I
 
 
 # instance fields
-.field public final ۛ:Ljava/util/ArrayList;
-
-.field public transient ۧ:Ljava/lang/Object;
-
-.field public transient ܿ:Ljava/lang/reflect/Type;
+.field public ۙ:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 54
-    invoke-direct {p0}, Ll/ۡۗ᩺;-><init>()V
+    const/16 v0, 0x20
 
-    .line 55
-    new-instance v0, Ljava/util/ArrayList;
+    new-array v0, v0, [I
 
-    const/16 v1, 0xa
+    .line 10
+    fill-array-data v0, :array_0
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    sput-object v0, Ll/ۤۗ᩺;->᩷:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x4
+        0x4
+        0x6
+        0x6
+        0x0
+        0x0
+        0x7
+        0x7
+        0x4
+        0x4
+        0x0
+        0x0
+        0x4
+        0x4
+        0x0
+        0x0
+    .end array-data
 .end method
 
 .method public constructor <init>(I)V
-    .locals 1
-
-    .line 62
-    invoke-direct {p0}, Ll/ۡۗ᩺;-><init>()V
-
-    .line 63
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 58
-    invoke-direct {p0}, Ll/ۡۗ᩺;-><init>()V
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
-    iput-object p1, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    .line 21
+    iput p1, p0, Ll/ۤۗ᩺;->ۙ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(ILjava/lang/Object;)V
-    .locals 1
+.method public final ۙ(II[B)I
+    .locals 22
 
-    .line 147
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    add-int v1, p1, p2
 
-    return-void
-.end method
+    add-int/lit8 v1, v1, -0x10
 
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+    move/from16 v2, p1
 
-    .line 111
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    :goto_0
+    if-gt v2, v1, :cond_5
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 30
+    aget-byte v3, p3, v2
 
-    move-result p1
+    and-int/lit8 v3, v3, 0x1f
 
-    return p1
-.end method
+    .line 31
+    sget-object v4, Ll/ۤۗ᩺;->᩷:[I
 
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 1
+    aget v3, v4, v3
 
-    .line 127
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    const/4 v4, 0x5
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->addAll(ILjava/util/Collection;)Z
+    const/4 v5, 0x0
 
-    move-result p1
+    :goto_1
+    const/4 v6, 0x3
 
-    return p1
-.end method
+    if-ge v5, v6, :cond_4
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
+    ushr-int v6, v3, v5
 
-    .line 123
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    and-int/lit8 v6, v6, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    if-nez v6, :cond_0
 
-    move-result p1
+    goto/16 :goto_4
 
-    return p1
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    .line 139
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    return-void
-.end method
-
-.method public final clone()Ljava/lang/Object;
-    .locals 3
-
-    .line 345
-    new-instance v0, Ll/ۤۗ᩺;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    iget-object v2, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-direct {v0, v1}, Ll/ۤۗ᩺;-><init>(Ljava/util/ArrayList;)V
-
-    return-object v0
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 95
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 119
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 349
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 175
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 353
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final indexOf(Ljava/lang/Object;)I
-    .locals 1
-
-    .line 155
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    .line 91
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 99
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final lastIndexOf(Ljava/lang/Object;)I
-    .locals 1
-
-    .line 159
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->lastIndexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final listIterator()Ljava/util/ListIterator;
-    .locals 1
-
-    .line 163
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 1
-
-    .line 167
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 151
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 115
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 131
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    .line 135
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 143
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 87
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final subList(II)Ljava/util/List;
-    .locals 1
-
-    .line 171
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 103
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 1
-
-    .line 107
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۘ()Ljava/lang/Object;
-    .locals 1
-
-    .line 71
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۧ:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ljava/lang/reflect/Type;)V
-    .locals 0
-
-    .line 83
-    iput-object p1, p0, Ll/ۤۗ᩺;->ܿ:Ljava/lang/reflect/Type;
-
-    return-void
-.end method
-
-.method public final ۚ(I)I
-    .locals 1
-
-    .line 175
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 268
     :cond_0
-    invoke-static {p1}, Ll/۠ܰܶ;->۬(Ljava/lang/Object;)Ljava/lang/Integer;
+    ushr-int/lit8 v6, v4, 0x3
 
-    move-result-object p1
+    and-int/lit8 v7, v4, 0x7
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    const-wide/16 v8, 0x0
 
-    move-result p1
+    const/4 v10, 0x0
 
-    return p1
-.end method
+    move-wide v11, v8
 
-.method public final ۚ()Ljava/lang/reflect/Type;
-    .locals 1
+    :goto_2
+    const/4 v13, 0x6
 
-    .line 79
-    iget-object v0, p0, Ll/ۤۗ᩺;->ܿ:Ljava/lang/reflect/Type;
+    if-ge v10, v13, :cond_1
 
-    return-object v0
-.end method
+    add-int v13, v2, v6
 
-.method public final ۟(I)Ljava/lang/String;
-    .locals 1
+    add-int/2addr v13, v10
 
-    .line 175
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    .line 42
+    aget-byte v13, p3, v13
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    int-to-long v13, v13
 
-    move-result-object p1
+    const-wide/16 v15, 0xff
 
-    .line 334
-    sget v0, Ll/۠ܰܶ;->ۙ:I
+    and-long/2addr v13, v15
 
-    if-nez p1, :cond_0
+    mul-int/lit8 v15, v10, 0x8
 
-    const/4 p1, 0x0
+    shl-long/2addr v13, v15
 
-    return-object p1
+    or-long/2addr v11, v13
 
-    .line 174
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    add-int/lit8 v10, v10, 0x1
 
-    move-result-object p1
+    goto :goto_2
 
-    return-object p1
-.end method
+    :cond_1
+    ushr-long v14, v11, v7
 
-.method public final ۡ(I)Ll/ۤۗ᩺;
-    .locals 1
+    const/16 v16, 0x25
 
-    .line 189
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    ushr-long v16, v14, v16
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const-wide/16 v18, 0xf
 
-    move-result-object p1
+    and-long v16, v16, v18
 
-    .line 191
-    instance-of v0, p1, Ll/ۤۗ᩺;
+    const-wide/16 v18, 0x5
 
-    if-eqz v0, :cond_0
+    cmp-long v20, v16, v18
 
-    .line 192
-    check-cast p1, Ll/ۤۗ᩺;
+    if-nez v20, :cond_3
 
-    return-object p1
+    const/16 v16, 0x9
 
-    .line 195
-    :cond_0
-    invoke-static {p1}, Ll/ۡۗ᩺;->ۙ(Ljava/lang/Object;)Ljava/lang/Object;
+    ushr-long v16, v14, v16
 
-    move-result-object p1
+    const-wide/16 v18, 0x7
 
-    check-cast p1, Ll/ۤۗ᩺;
+    and-long v16, v16, v18
 
-    return-object p1
-.end method
+    cmp-long v18, v16, v8
 
-.method public final ۤ(I)Ll/ܺۗ᩺;
-    .locals 1
+    if-eqz v18, :cond_2
 
-    .line 179
-    iget-object v0, p0, Ll/ۤۗ᩺;->ۛ:Ljava/util/ArrayList;
+    goto :goto_4
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :cond_2
+    const/16 v8, 0xd
 
-    move-result-object p1
+    ushr-long v16, v14, v8
 
-    .line 181
-    instance-of v0, p1, Ll/ܺۗ᩺;
+    const-wide/32 v18, 0xfffff
 
-    if-eqz v0, :cond_0
+    move-wide/from16 v20, v11
 
-    .line 182
-    check-cast p1, Ll/ܺۗ᩺;
+    and-long v10, v16, v18
 
-    return-object p1
+    long-to-int v9, v10
 
-    .line 185
-    :cond_0
-    invoke-static {p1}, Ll/ۡۗ᩺;->ۙ(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v10, 0x24
 
-    move-result-object p1
+    ushr-long v10, v14, v10
 
-    check-cast p1, Ll/ܺۗ᩺;
+    long-to-int v11, v10
 
-    return-object p1
-.end method
+    and-int/lit8 v10, v11, 0x1
 
-.method public final ۨ(Ljava/lang/Object;)V
-    .locals 0
+    shl-int/lit8 v10, v10, 0x14
+
+    or-int/2addr v9, v10
+
+    shl-int/lit8 v9, v9, 0x4
+
+    .line 58
+    iget v10, v0, Ll/ۤۗ᩺;->ۙ:I
+
+    add-int/2addr v10, v2
+
+    sub-int v10, v10, p1
+
+    sub-int/2addr v9, v10
+
+    ushr-int/lit8 v9, v9, 0x4
+
+    const-wide v10, -0x11ffffe001L
+
+    and-long/2addr v10, v14
+
+    int-to-long v14, v9
+
+    and-long v16, v14, v18
+
+    shl-long v8, v16, v8
+
+    or-long/2addr v8, v10
+
+    const-wide/32 v10, 0x100000
+
+    and-long/2addr v10, v14
+
+    const/16 v12, 0x10
+
+    shl-long/2addr v10, v12
+
+    or-long/2addr v8, v10
+
+    const-wide/16 v10, 0x1
+
+    shl-long v14, v10, v7
+
+    sub-long/2addr v14, v10
+
+    and-long v10, v20, v14
+
+    shl-long v7, v8, v7
+
+    or-long/2addr v7, v10
+
+    const/4 v9, 0x0
+
+    :goto_3
+    if-ge v9, v13, :cond_3
+
+    add-int v10, v2, v6
+
+    add-int/2addr v10, v9
+
+    mul-int/lit8 v11, v9, 0x8
+
+    ushr-long v11, v7, v11
+
+    long-to-int v12, v11
+
+    int-to-byte v11, v12
+
+    .line 70
+    aput-byte v11, p3, v10
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    :goto_4
+    add-int/lit8 v5, v5, 0x1
+
+    add-int/lit8 v4, v4, 0x29
+
+    goto/16 :goto_1
+
+    :cond_4
+    add-int/lit8 v2, v2, 0x10
+
+    goto/16 :goto_0
+
+    :cond_5
+    sub-int v2, v2, p1
 
     .line 75
-    iput-object p1, p0, Ll/ۤۗ᩺;->ۧ:Ljava/lang/Object;
+    iget v1, v0, Ll/ۤۗ᩺;->ۙ:I
 
-    return-void
+    add-int/2addr v1, v2
+
+    iput v1, v0, Ll/ۤۗ᩺;->ۙ:I
+
+    return v2
 .end method

@@ -1,65 +1,105 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۖۖ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4DP */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2245 implements InterfaceC10008 {
+/* JADX INFO: renamed from: l.֫᩺ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2245 extends AbstractC24620 implements Consumer {
+    public final Predicate e;
+    public Object f;
+    public final /* synthetic */ int g;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InputStream f8045;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20591 f8046;
-
-    public C2245(C20591 c20591, InputStream inputStream) {
-        this.f8046 = c20591;
-        this.f8045 = inputStream;
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // l.InterfaceC10008
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo2293(C6043 c6043, long j) throws IOException {
-        if (j < 0) {
-            throw new IllegalArgumentException(C15489.m37074(j, "byteCount < 0: "));
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2245(InterfaceC8409 interfaceC8409, Predicate predicate, int i) {
+        super(interfaceC8409);
+        this.g = i;
+        this.e = predicate;
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2245(InterfaceC8409 interfaceC8409, C2245 c2245, int i) {
+        super(interfaceC8409, c2245);
+        this.g = i;
+        this.e = c2245.e;
+    }
+
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        this.d = (this.d + 1) & 63;
+        this.f = obj;
+    }
+
+    @Override // l.InterfaceC8409, l.InterfaceC7664
+    public final boolean tryAdvance(Consumer consumer) {
+        boolean zTryAdvance;
+        boolean zTest;
+        switch (this.g) {
+            case 0:
+                boolean z = this.c;
+                InterfaceC8409 interfaceC8409 = this.a;
+                if (z) {
+                    boolean z2 = false;
+                    this.c = false;
+                    while (true) {
+                        zTryAdvance = interfaceC8409.tryAdvance(this);
+                        if (zTryAdvance && a() && this.e.test(this.f)) {
+                            z2 = true;
+                        }
+                    }
+                    if (!zTryAdvance) {
+                        return zTryAdvance;
+                    }
+                    if (z2) {
+                        this.b.set(true);
+                    }
+                    consumer.accept(this.f);
+                    return zTryAdvance;
+                }
+                return interfaceC8409.tryAdvance(consumer);
+            default:
+                if (this.c && a() && this.a.tryAdvance(this)) {
+                    zTest = this.e.test(this.f);
+                    if (zTest) {
+                        consumer.accept(this.f);
+                        return true;
+                    }
+                } else {
+                    zTest = true;
+                }
+                this.c = false;
+                if (!zTest) {
+                    this.b.set(true);
+                }
+                return false;
         }
-        if (j == 0) {
-            return 0L;
-        }
-        try {
-            this.f8046.mo9650();
-            C18474 c18474M16406 = c6043.m16406(1);
-            int i = this.f8045.read(c18474M16406.f58874, c18474M16406.f58877, (int) Math.min(j, 8192 - c18474M16406.f58877));
-            if (i == -1) {
-                return -1L;
-            }
-            c18474M16406.f58877 += i;
-            long j2 = i;
-            c6043.f20522 += j2;
-            return j2;
-        } catch (AssertionError e) {
-            if (e.getCause() == null || e.getMessage() == null || !e.getMessage().contains("getsockname failed")) {
-                throw e;
-            }
-            throw new IOException(e);
+    }
+
+    @Override // l.AbstractC24620, l.InterfaceC8409
+    public InterfaceC8409 trySplit() {
+        switch (this.g) {
+            case 1:
+                if (this.b.get()) {
+                    return null;
+                }
+                return super.trySplit();
+            default:
+                return super.trySplit();
         }
     }
 
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f8045.close();
-    }
-
-    @Override // l.InterfaceC10008
-    /* JADX INFO: renamed from: ۜ */
-    public final C20591 mo2292() {
-        return this.f8046;
-    }
-
-    public final String toString() {
-        return "source(" + this.f8045 + MotionUtils.EASING_TYPE_FORMAT_END;
+    @Override // l.AbstractC24620
+    public final InterfaceC8409 b(InterfaceC8409 interfaceC8409) {
+        switch (this.g) {
+            case 0:
+                return new C2245(interfaceC8409, this, 0);
+            default:
+                return new C2245(interfaceC8409, this, 1);
+        }
     }
 }

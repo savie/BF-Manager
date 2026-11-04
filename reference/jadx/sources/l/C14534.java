@@ -1,35 +1,52 @@
 package l;
 
-import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.ܳ۫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: E1V9 */
-/* JADX INFO: loaded from: classes5.dex */
-public class C14534 extends AbstractC2679 {
+/* JADX INFO: renamed from: l.ܰۤۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LAYC */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14534 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C11992 f47595;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6332 f45722;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public InterfaceC3710 f47596;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static C3348 f45723;
 
-    @Override // l.InterfaceC3710
-    public final int getVisibility() {
-        return this.f47596.getVisibility();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final String f45724;
 
-    @Override // l.InterfaceC3710
-    public final String getType() {
-        return (String) this.f47595.m29872().mo1014(this.f47596.getType());
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final long f45725;
 
-    @Override // l.InterfaceC3710
-    public Set getElements() {
-        return C15604.m37271(this.f47596.getElements(), this.f47595.m29862());
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC6332 f45726;
 
-    public C14534(C11992 c11992, InterfaceC3710 interfaceC3710) {
-        this.f47595 = c11992;
-        this.f47596 = interfaceC3710;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final int f45727;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final int f45728;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final long f45729;
+
+    static {
+        String strM34276 = C14117.m34276("kotlinx.coroutines.scheduler.default.name");
+        if (strM34276 == null) {
+            strM34276 = "DefaultDispatcher";
+        }
+        f45724 = strM34276;
+        f45725 = C14117.m34275("kotlinx.coroutines.scheduler.resolution.ns", 100000L, 1L, C25227.FOREVER_NS);
+        int iM34279 = C14117.m34279();
+        if (iM34279 < 2) {
+            iM34279 = 2;
+        }
+        f45728 = C14117.m34274(iM34279, 8, "kotlinx.coroutines.scheduler.core.pool.size");
+        f45727 = C14117.m34274(2097150, 4, "kotlinx.coroutines.scheduler.max.pool.size");
+        f45729 = TimeUnit.SECONDS.toNanos(C14117.m34275("kotlinx.coroutines.scheduler.keep.alive.sec", 60L, 1L, C25227.FOREVER_NS));
+        f45723 = C3348.f10934;
+        f45726 = new C24232(0);
+        f45722 = new C24232(1);
     }
 }

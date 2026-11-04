@@ -1,24 +1,30 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-
-/* JADX INFO: renamed from: l.ᩳۢۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C5GL */
+/* JADX INFO: renamed from: l.ܿ֡ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N17O */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C17964 extends AnimatorListenerAdapter {
+public final /* synthetic */ class C17964 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC8793 f57457;
+    public final /* synthetic */ C15945 f58879;
 
-    public C17964(ViewOnClickListenerC8793 viewOnClickListenerC8793) {
-        this.f57457 = viewOnClickListenerC8793;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f58880;
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        ViewOnClickListenerC8793 viewOnClickListenerC8793 = this.f57457;
-        viewOnClickListenerC8793.f30253.setVisibility(8);
-        viewOnClickListenerC8793.f30262 = null;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ byte[] f58881;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f58882;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f58883;
+
+    public /* synthetic */ C17964(C15945 c15945, int i, int i2, int i3, byte[] bArr) {
+        this.f58879 = c15945;
+        this.f58882 = i;
+        this.f58880 = i2;
+        this.f58883 = i3;
+        this.f58881 = bArr;
     }
 }

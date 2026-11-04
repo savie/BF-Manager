@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto.rainbow;
 
 import java.lang.reflect.Array;
 import java.security.SecureRandom;
-import l.C1694;
+import l.C12669;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.Arrays;
 
@@ -208,7 +208,7 @@ public class RainbowUtil {
         int length2 = sArr[0].length;
         for (int i2 = 0; i2 < length2; i2++) {
             for (int i3 = 0; i3 < length; i3++) {
-                sArr[i3][i2] = (short) (bArr[C1694.m5620(i2, length, i, i3)] & 255);
+                sArr[i3][i2] = (short) (bArr[C12669.m31436(i2, length, i, i3)] & 255);
             }
         }
         return length * length2;

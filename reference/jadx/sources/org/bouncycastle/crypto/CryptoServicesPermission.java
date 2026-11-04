@@ -4,7 +4,7 @@ import java.security.Permission;
 import java.util.HashSet;
 import java.util.Set;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CryptoServicesPermission extends Permission {
     public static final String CONSTRAINTS = "constraints";
     public static final String DEFAULT_RANDOM = "defaultRandomConfig";

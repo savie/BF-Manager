@@ -1,63 +1,42 @@
-.class public final Ll/ۖۤᩴ;
-.super Ljava/nio/channels/FileLock;
-.source "N673"
+.class public final synthetic Ll/ۖۤᩴ;
+.super Ljava/lang/Object;
+.source "44TS"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/nio/channels/FileLock;
+.field public final synthetic ܰ:Ll/ۧ᩸ᩴ;
+
+.field public final synthetic ᩶:Ll/֫᩸ᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/nio/channels/FileLock;Ll/ۨۤᩴ;)V
-    .locals 7
+.method public synthetic constructor <init>(Ll/ۧ᩸ᩴ;Ll/֫᩸ᩴ;)V
+    .locals 0
 
-    .line 275
-    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->position()J
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v2
+    iput-object p1, p0, Ll/ۖۤᩴ;->ܰ:Ll/ۧ᩸ᩴ;
 
-    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->size()J
-
-    move-result-wide v4
-
-    invoke-virtual {p1}, Ljava/nio/channels/FileLock;->isShared()Z
-
-    move-result v6
-
-    move-object v0, p0
-
-    move-object v1, p2
-
-    invoke-direct/range {v0 .. v6}, Ljava/nio/channels/FileLock;-><init>(Ljava/nio/channels/FileChannel;JJZ)V
-
-    .line 276
-    iput-object p1, p0, Ll/ۖۤᩴ;->a:Ljava/nio/channels/FileLock;
+    iput-object p2, p0, Ll/ۖۤᩴ;->᩶:Ll/֫᩸ᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final isValid()Z
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    .line 281
-    iget-object v0, p0, Ll/ۖۤᩴ;->a:Ljava/nio/channels/FileLock;
+    .line 0
+    iget-object v0, p0, Ll/ۖۤᩴ;->ܰ:Ll/ۧ᩸ᩴ;
 
-    invoke-virtual {v0}, Ljava/nio/channels/FileLock;->isValid()Z
+    iget-object v1, p0, Ll/ۖۤᩴ;->᩶:Ll/֫᩸ᩴ;
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final release()V
-    .locals 1
-
-    .line 286
-    iget-object v0, p0, Ll/ۖۤᩴ;->a:Ljava/nio/channels/FileLock;
-
-    invoke-virtual {v0}, Ljava/nio/channels/FileLock;->release()V
+    invoke-static {v0, v1}, Ll/ۧ᩸ᩴ;->ۙ(Ll/ۧ᩸ᩴ;Ll/֫᩸ᩴ;)V
 
     return-void
 .end method

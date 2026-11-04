@@ -1,39 +1,48 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗܳ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: E29Y */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C3304 implements InterfaceC10389 {
+import java.util.Iterator;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4343 f12214;
+/* JADX INFO: renamed from: l.ۗۡۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 04TC */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3304 implements Iterator {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12253 f10805;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f10807;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f10806 = 0;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4612 f12215;
+    public C20458 f10808 = new C20458();
 
-    @Override // l.InterfaceC8978
-    /* JADX INFO: renamed from: ۘۙ */
-    public final /* synthetic */ void mo2885() {
-        throw null;
+    @Override // java.util.Iterator
+    public final void remove() {
     }
 
-    public C3304(C4343 c4343, C4612 c4612) {
-        this.f12214 = c4343;
-        this.f12215 = c4612;
+    public C3304(C12253 c12253) {
+        this.f10805 = c12253;
+        this.f10807 = c12253.m30631();
     }
 
-    @Override // l.InterfaceC10389
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2886(long j, long j2, long j3) {
-        C4343 c4343 = this.f12214;
-        c4343.m46156(j2, j3);
-        C4612 c4612 = this.f12215;
-        c4343.m41578(c4612.m12761() + j2, c4612.m12754());
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f10806 < this.f10807;
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f12214.mo2357();
+    @Override // java.util.Iterator
+    public final Object next() {
+        C12253 c12253 = this.f10805;
+        int i = c12253.f39415[this.f10806];
+        C20458 c20458 = this.f10808;
+        c20458.f65550 = i;
+        int[] iArr = c12253.f39414;
+        int i2 = this.f10806;
+        c20458.f65551 = iArr[i2];
+        this.f10806 = i2 + 1;
+        return c20458;
     }
 }

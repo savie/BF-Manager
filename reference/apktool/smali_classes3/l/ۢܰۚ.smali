@@ -1,42 +1,34 @@
-.class public final synthetic Ll/ۢܰۚ;
+.class public final Ll/ۢܰۚ;
 .super Ljava/lang/Object;
-.source "35OM"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "L6Y6"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܰۨۚ;
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public final synthetic ᩶:Ljava/lang/Throwable;
+.field public final ᩷:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܰۨۚ;Ljava/lang/Throwable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ll/ۢܰۚ;->ܺ:Ll/ܰۨۚ;
-
-    iput-object p2, p0, Ll/ۢܰۚ;->᩶:Ljava/lang/Throwable;
-
-    return-void
+    throw v0
 .end method
 
+.method public constructor <init>(Ljava/util/ArrayList;J)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    .line 528
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 0
-    iget-object v0, p0, Ll/ۢܰۚ;->ܺ:Ll/ܰۨۚ;
+    .line 529
+    iput-object p1, p0, Ll/ۢܰۚ;->ۙ:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Ll/ۢܰۚ;->᩶:Ljava/lang/Throwable;
-
-    invoke-static {v0, v1}, Ll/ܰۨۚ;->ۙ(Ll/ܰۨۚ;Ljava/lang/Throwable;)V
+    .line 530
+    iput-wide p2, p0, Ll/ۢܰۚ;->᩷:J
 
     return-void
 .end method

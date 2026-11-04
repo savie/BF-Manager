@@ -1,52 +1,30 @@
-.class public Ll/۫ܶᩴ;
-.super Ll/ۧܶᩴ;
-.source "UC70"
-
-# interfaces
-.implements Ljava/util/RandomAccess;
+.class public final Ll/۫ܶᩴ;
+.super Ljava/lang/Object;
+.source "86ZM"
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x17c644f4f4567f9L
+# instance fields
+.field public final ۙ:I
+
+.field public ۤ:Ll/ᩳܶۤ;
+
+.field public ᩷:I
 
 
-# virtual methods
-.method public final subList(II)Ljava/util/List;
-    .locals 4
+# direct methods
+.method public constructor <init>(I)V
+    .locals 1
 
-    .line 841
-    invoke-virtual {p0, p1}, Ll/᩻ܶᩴ;->ۙ(I)V
+    .line 852
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 842
-    invoke-virtual {p0, p2}, Ll/᩻ܶᩴ;->ۙ(I)V
+    .line 850
+    sget-object v0, Ll/ᩳܶۤ;->۫:Ll/ᩳܶۤ;
 
-    if-gt p1, p2, :cond_0
+    iput-object v0, p0, Ll/۫ܶᩴ;->ۤ:Ll/ᩳܶۤ;
 
-    .line 846
-    new-instance v0, Ll/۫ܶᩴ;
+    .line 853
+    iput p1, p0, Ll/۫ܶᩴ;->ۙ:I
 
-    .line 836
-    invoke-direct {v0, p0, p1, p2}, Ll/ۧܶᩴ;-><init>(Ll/᩻ܶᩴ;II)V
-
-    return-object v0
-
-    .line 843
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, ") is greater than end index ("
-
-    const-string v2, ")"
-
-    const-string v3, "Start index ("
-
-    .line 0
-    invoke-static {v3, p1, v1, v2, p2}, Ll/۠ۜ᩵;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 843
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

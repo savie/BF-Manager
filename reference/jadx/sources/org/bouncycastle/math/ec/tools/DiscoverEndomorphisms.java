@@ -9,7 +9,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
-import l.EnumC19730;
+import l.EnumC7687;
 import org.bouncycastle.asn1.x9.ECNamedCurveTable;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
@@ -319,7 +319,7 @@ public class DiscoverEndomorphisms {
     }
 
     public static void printProperty(String str, Object obj) {
-        StringBuilder sb = new StringBuilder(EnumC19730.f63352);
+        StringBuilder sb = new StringBuilder(EnumC7687.f25319);
         sb.append(str);
         while (sb.length() < 20) {
             sb.append(' ');

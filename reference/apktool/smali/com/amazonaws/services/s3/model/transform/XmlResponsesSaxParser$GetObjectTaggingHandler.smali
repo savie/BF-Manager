@@ -6,9 +6,9 @@
 # instance fields
 .field public ֡:Ljava/lang/String;
 
-.field public ۫:Ljava/util/ArrayList;
+.field public ۟:Ljava/util/ArrayList;
 
-.field public ܽ:Ljava/lang/String;
+.field public ܿ:Ljava/lang/String;
 
 
 # direct methods
@@ -53,13 +53,13 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۫:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۟:Ljava/util/ArrayList;
 
     :cond_0
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 5
 
     const-string v0, "Tagging"
@@ -87,7 +87,7 @@
     if-eqz v1, :cond_0
 
     .line 2395
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۫:Ljava/util/ArrayList;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۟:Ljava/util/ArrayList;
 
     .line 2398
     :cond_0
@@ -111,23 +111,23 @@
     if-eqz p1, :cond_3
 
     .line 2400
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۫:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->۟:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/amazonaws/services/s3/model/Tag;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܿ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܽ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
 
     invoke-direct {v0, v1, v3}, Lcom/amazonaws/services/s3/model/Tag;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 2401
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܿ:Ljava/lang/String;
 
     .line 2402
-    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܽ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
 
     return-void
 
@@ -153,11 +153,11 @@
     if-eqz v0, :cond_2
 
     .line 2406
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܿ:Ljava/lang/String;
 
     return-void
 
@@ -172,11 +172,11 @@
     if-eqz p1, :cond_3
 
     .line 2408
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->ܽ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetObjectTaggingHandler;->֡:Ljava/lang/String;
 
     :cond_3
     return-void

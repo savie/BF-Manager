@@ -9,17 +9,17 @@ import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import l.C17180;
-import l.EnumC2362;
+import l.C20052;
+import l.EnumC3141;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class GifInfoHandle {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f77903 = 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f82019 = 0;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public volatile long f77904;
+    public volatile long f82020;
 
     public static native void bindSurface(long j, Surface surface, long[] jArr);
 
@@ -107,34 +107,34 @@ public final class GifInfoHandle {
 
     public static native void stopDecoderThread(long j);
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m52919() {
-        return this.f77904 == 0;
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final synchronized void m56816() {
+        free(this.f82020);
+        this.f82020 = 0L;
     }
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final synchronized void m52920() {
-        free(this.f77904);
-        this.f77904 = 0L;
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m56819() {
+        return this.f82020 == 0;
     }
 
     static {
-        C17180.m40102();
+        C20052.m46110();
     }
 
     public GifInfoHandle() {
     }
 
     public GifInfoHandle(byte[] bArr) {
-        this.f77904 = openByteArray(bArr);
+        this.f82020 = openByteArray(bArr);
     }
 
     public GifInfoHandle(String str) {
-        this.f77904 = openFile(str);
+        this.f82020 = openFile(str);
     }
 
     public GifInfoHandle(InputStream inputStream) {
-        this.f77904 = openStream(inputStream);
+        this.f82020 = openStream(inputStream);
     }
 
     public GifInfoHandle(AssetFileDescriptor assetFileDescriptor) {
@@ -152,11 +152,11 @@ public final class GifInfoHandle {
                     try {
                         throw th;
                     } catch (Exception e) {
-                        throw new GifIOException(EnumC2362.OPEN_FAILED.f8352, e.getMessage());
+                        throw new GifIOException(EnumC3141.OPEN_FAILED.f10200, e.getMessage());
                     }
                 }
             }
-            this.f77904 = openNativeFileDescriptor(iCreateTempNativeFileDescriptor, startOffset);
+            this.f82020 = openNativeFileDescriptor(iCreateTempNativeFileDescriptor, startOffset);
             try {
                 assetFileDescriptor.close();
             } catch (IOException unused) {
@@ -171,52 +171,52 @@ public final class GifInfoHandle {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized long m52902(Bitmap bitmap) {
-        return renderFrame(this.f77904, bitmap);
+    public final synchronized long m56799(Bitmap bitmap) {
+        return renderFrame(this.f82020, bitmap);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52906(Surface surface, long[] jArr) {
-        bindSurface(this.f77904, surface, jArr);
+    public final void m56803(Surface surface, long[] jArr) {
+        bindSurface(this.f82020, surface, jArr);
     }
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public final synchronized long m52913() {
-        return restoreRemainder(this.f77904);
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public final synchronized long m56806() {
+        return restoreRemainder(this.f82020);
     }
 
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m52912() {
-        return reset(this.f77904);
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m56809() {
+        return reset(this.f82020);
     }
 
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public final synchronized void m52910() {
-        saveRemainder(this.f77904);
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public final synchronized void m56820() {
+        saveRemainder(this.f82020);
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52897() {
-        return getLoopCount(this.f77904);
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56810() {
+        return getLoopCount(this.f82020);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52904(int i) {
+    public final void m56801(int i) {
         if (i < 0 || i > 65535) {
             throw new IllegalArgumentException("Loop count of range <0, 65535>");
         }
         synchronized (this) {
-            setLoopCount(this.f77904, (char) i);
+            setLoopCount(this.f82020, (char) i);
         }
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52899() {
-        return getNativeErrorCode(this.f77904);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56795() {
+        return getNativeErrorCode(this.f82020);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52903(float f) {
+    public final void m56800(float f) {
         if (f <= 0.0f || Float.isNaN(f)) {
             throw new IllegalArgumentException("Speed factor is not positive");
         }
@@ -224,95 +224,95 @@ public final class GifInfoHandle {
             f = 4.656613E-10f;
         }
         synchronized (this) {
-            setSpeedFactor(this.f77904, f);
+            setSpeedFactor(this.f82020, f);
         }
     }
 
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56815() {
+        return getDuration(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56818() {
+        return getCurrentPosition(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56817() {
+        return getCurrentFrameIndex(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56807() {
+        return getCurrentLoop(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m56802(int i, Bitmap bitmap) {
+        seekToTime(this.f82020, i, bitmap);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized long m56798() {
+        return getAllocationByteCount(this.f82020);
+    }
+
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52908() {
-        return getDuration(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52898() {
-        return getCurrentPosition(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52916() {
-        return getCurrentFrameIndex(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52914() {
-        return getCurrentLoop(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m52905(int i, Bitmap bitmap) {
-        seekToTime(this.f77904, i, bitmap);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized long m52901() {
-        return getAllocationByteCount(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final synchronized long m52915() {
-        return getMetadataByteCount(this.f77904);
+    public final synchronized long m56805() {
+        return getMetadataByteCount(this.f82020);
     }
 
     public final void finalize() throws Throwable {
         try {
-            m52920();
+            m56816();
         } finally {
             super.finalize();
         }
     }
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final synchronized void m52911() {
-        postUnbindSurface(this.f77904);
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m56796() {
+        postUnbindSurface(this.f82020);
     }
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m52921() {
-        return isAnimationCompleted(this.f77904);
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m56814() {
+        return isAnimationCompleted(this.f82020);
     }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final synchronized long[] m52923() {
-        return getSavedState(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52900(long[] jArr, Bitmap bitmap) {
-        return restoreSavedState(this.f77904, jArr, bitmap);
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final synchronized long[] m56821() {
+        return getSavedState(this.f82020);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52907(boolean z, char c) {
-        setOptions(this.f77904, c, z);
+    public final synchronized int m56797(long[] jArr, Bitmap bitmap) {
+        return restoreSavedState(this.f82020, jArr, bitmap);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m56804(boolean z, char c) {
+        setOptions(this.f82020, c, z);
+    }
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56813() {
+        return getWidth(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56811() {
+        return getHeight(this.f82020);
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final synchronized int m56808() {
+        return getNumberOfFrames(this.f82020);
     }
 
     /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52917() {
-        return getWidth(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52922() {
-        return getHeight(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final synchronized int m52909() {
-        return getNumberOfFrames(this.f77904);
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m52918() {
-        return isOpaque(this.f77904);
+    public final synchronized boolean m56812() {
+        return isOpaque(this.f82020);
     }
 }

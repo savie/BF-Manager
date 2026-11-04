@@ -1,368 +1,434 @@
 package l;
 
-import android.content.Context;
-import android.content.res.Configuration;
-import android.graphics.Point;
-import android.graphics.PointF;
-import android.os.Build;
-import android.util.AttributeSet;
-import android.view.Display;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
-import android.view.ViewConfiguration;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.EnumMap;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۟ۜ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21RX */
-/* JADX INFO: loaded from: classes3.dex */
-public class C7312 extends FrameLayout {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public InterfaceC19307 f24282;
+/* JADX INFO: renamed from: l.ۜᩳۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 93Z4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7312 extends AbstractC14222 {
 
     /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public boolean f24283;
-
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public Point f24284;
+    public AbstractC1346 f24069;
 
     /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public InterfaceC8724 f24285;
+    public int f24070;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public boolean f24286;
-
-    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public float f24287;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public float f24288;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final PointF f24289;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public float f24290;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public WindowManager.LayoutParams f24291;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f24292;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC10135 f24293;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public boolean f24294;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f24295;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f24296;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public float f24297;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public RunnableC8018 f24298;
-
-    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public WindowManager f24299;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public float f24300;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m19508(float f, int i) {
-        if (f < 0.0f) {
-            f = 0.0f;
-        } else {
-            float f2 = i;
-            if (f > f2) {
-                f = f2;
-            }
-        }
-        return (int) f;
-    }
-
-    public C7312(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        this.f24284 = new Point();
-        VelocityTracker.obtain();
-        this.f24289 = new PointF();
-        m19509(context);
-    }
-
-    public C7312(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f24284 = new Point();
-        VelocityTracker.obtain();
-        this.f24289 = new PointF();
-        m19509(context);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m19509(Context context) {
-        setFocusable(true);
-        setFocusableInTouchMode(true);
-        int i = Build.VERSION.SDK_INT;
-        if (i >= 29) {
-            setForceDarkAllowed(false);
-        }
-        float scaledTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-        this.f24287 = scaledTouchSlop * scaledTouchSlop;
-        this.f24295 = false;
-        WindowManager windowManager = (WindowManager) context.getApplicationContext().getSystemService("window");
-        this.f24299 = windowManager;
-        windowManager.getDefaultDisplay().getSize(this.f24284);
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        this.f24291 = layoutParams;
-        if (i >= 26) {
-            layoutParams.type = 2038;
-        } else {
-            layoutParams.type = 2003;
-        }
-        layoutParams.format = 1;
-        layoutParams.gravity = 8388659;
-        layoutParams.flags = 40;
-        layoutParams.width = -2;
-        layoutParams.height = -2;
-    }
-
-    /* JADX WARN: Code duplicated, block: B:38:0x00b2  */
-    /* JADX WARN: Code duplicated, block: B:40:0x00b6  */
-    /* JADX WARN: Code duplicated, block: B:43:0x00c0  */
-    /* JADX WARN: Code duplicated, block: B:45:0x00c3  */
-    @Override // android.view.View
-    public final boolean onTouchEvent(MotionEvent motionEvent) {
-        RunnableC8018 runnableC8018;
-        if (!this.f24295) {
-            return super.onTouchEvent(motionEvent);
-        }
-        int action = motionEvent.getAction() & 255;
-        if (action == 0) {
-            setPressed(true);
-            this.f24290 = motionEvent.getX();
-            this.f24300 = motionEvent.getY();
-            this.f24297 = motionEvent.getRawX();
-            this.f24288 = motionEvent.getRawY();
-            this.f24283 = false;
-            WindowManager.LayoutParams layoutParams = this.f24291;
-            this.f24296 = layoutParams.x;
-            this.f24292 = layoutParams.y;
-            this.f24286 = false;
-            if (isLongClickable()) {
-                if (this.f24298 == null) {
-                    this.f24298 = new RunnableC8018(this);
-                }
-                this.f24298.m21120();
-                this.f24298.m21121();
-                postDelayed(this.f24298, ViewConfiguration.getLongPressTimeout());
-            }
-        } else if (action == 1) {
-            runnableC8018 = this.f24298;
-            if (runnableC8018 != null) {
-                removeCallbacks(runnableC8018);
-            }
-            setPressed(false);
-            if (this.f24283) {
-                this.f24283 = false;
-                return true;
-            }
-            if (!this.f24286 && isClickable() && action == 1) {
-                performClick();
-                return true;
-            }
-        } else if (action != 2) {
-            if (action == 3) {
-                runnableC8018 = this.f24298;
-                if (runnableC8018 != null) {
-                    removeCallbacks(runnableC8018);
-                }
-                setPressed(false);
-                if (this.f24283) {
-                    this.f24283 = false;
-                    return true;
-                }
-                if (!this.f24286) {
-                    performClick();
-                    return true;
-                }
-            }
-        } else if (!this.f24286) {
-            float rawX = motionEvent.getRawX();
-            float rawY = motionEvent.getRawY();
-            float f = this.f24297 - rawX;
-            float f2 = this.f24288 - rawY;
-            if (!this.f24283) {
-                float fAbs = Math.abs(f);
-                float fAbs2 = Math.abs(f2);
-                if ((fAbs2 * fAbs2) + (fAbs * fAbs) > this.f24287) {
-                    this.f24283 = true;
-                    if (this.f24294) {
-                        this.f24297 = rawX;
-                        this.f24288 = rawY;
-                        f = 0.0f;
-                        f2 = 0.0f;
-                    }
-                    RunnableC8018 runnableC8019 = this.f24298;
-                    if (runnableC8019 != null) {
-                        removeCallbacks(runnableC8019);
-                    }
-                    InterfaceC8724 interfaceC8724 = this.f24285;
-                    if (interfaceC8724 != null) {
-                        interfaceC8724.mo2338();
-                    }
-                }
-            }
-            if (this.f24283) {
-                WindowManager.LayoutParams layoutParams2 = this.f24291;
-                float f3 = layoutParams2.x;
-                PointF pointF = this.f24289;
-                pointF.x = f3;
-                pointF.y = layoutParams2.y;
-                int i = this.f24296;
-                int i2 = this.f24292;
-                float f4 = -f;
-                float f5 = -f2;
-                InterfaceC19307 interfaceC19307 = this.f24282;
-                if (interfaceC19307 != null) {
-                    interfaceC19307.mo22938(pointF, i, i2, f4, f5);
-                    return true;
-                }
-                float f6 = i + f4;
-                pointF.x = f6;
-                pointF.y = i2 + f5;
-                Point point = this.f24284;
-                layoutParams2.x = m19508(f6, point.x - getWidth());
-                this.f24291.y = m19508(pointF.y, point.y - getHeight());
-                this.f24299.updateViewLayout(this, this.f24291);
-                return true;
-            }
-        }
-        return true;
-    }
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public boolean f24071;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m19520() {
-        this.f24294 = true;
-    }
+    public InterfaceC1807 f24072;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final float m19522() {
-        return this.f24290;
-    }
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public HashSet f24073;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public boolean f24074;
 
     /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final float m19521() {
-        return this.f24300;
+    public boolean f24075;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public InterfaceC20162 f24076;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final EnumMap f24077;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f24078;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public int f24079;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public HashSet f24080;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public C23721 f24081;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f24082;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public int f24083;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f24084;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public int f24085;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public HashSet f24086;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public boolean f24087;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C13477 f24067 = new C13477();
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public static final C13477 f24066 = new C13477();
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final C13477 f24068 = new C13477();
+
+    public C7312() {
+        throw null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19519(int[] iArr) {
-        WindowManager.LayoutParams layoutParams = this.f24291;
-        iArr[0] = layoutParams.x;
-        iArr[1] = layoutParams.y;
+    public static C7312 m20023(C4747 c4747) {
+        C7312 c7312 = (C7312) c4747.m14643(f24067);
+        return c7312 == null ? new C7312(c4747) : c7312;
+    }
+
+    public C7312(C4747 c4747) {
+        EnumMap enumMapM20021;
+        PrintWriter printWriter = (PrintWriter) c4747.m14643(f24066);
+        PrintWriter printWriter2 = (PrintWriter) c4747.m14643(f24068);
+        if (printWriter == null && printWriter2 == null) {
+            enumMapM20021 = m20021(new PrintWriter((OutputStream) System.out, true), new PrintWriter((OutputStream) System.err, true));
+        } else if (printWriter == null || printWriter2 == null) {
+            printWriter = printWriter == null ? printWriter2 : printWriter;
+            enumMapM20021 = m20021(printWriter, printWriter);
+        } else {
+            enumMapM20021 = m20021(printWriter, printWriter2);
+        }
+        this.f44939 = C19991.m45972(c4747);
+        this.f44940 = new HashMap();
+        this.f24079 = 0;
+        this.f24083 = 0;
+        this.f24085 = 0;
+        this.f24070 = 0;
+        this.f24073 = new HashSet();
+        this.f24086 = new HashSet();
+        c4747.m14646(f24067, this);
+        this.f24077 = enumMapM20021;
+        this.f24072 = (InterfaceC1807) c4747.m14642(InterfaceC1807.class);
+        this.f24069 = new C19245(this);
+        C23721 c23721M52973 = C23721.m52973(c4747);
+        this.f24081 = c23721M52973;
+        c23721M52973.m52980("com.sun.tools.javac.resources.javac");
+        final C13015 c13015M32421 = C13015.m32421(c4747);
+        m20027(c13015M32421);
+        c13015M32421.m32425(new Runnable() { // from class: l.֡ᩳۘ
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f2394.m20027(c13015M32421);
+            }
+        });
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19517(InterfaceC19307 interfaceC19307) {
-        this.f24282 = interfaceC19307;
+    public static EnumMap m20021(PrintWriter printWriter, PrintWriter printWriter2) {
+        EnumMap enumMap = new EnumMap(EnumC8803.class);
+        enumMap.put(EnumC8803.ERROR, printWriter2);
+        enumMap.put(EnumC8803.WARNING, printWriter2);
+        enumMap.put(EnumC8803.NOTICE, printWriter2);
+        enumMap.put(EnumC8803.STDOUT, printWriter);
+        enumMap.put(EnumC8803.STDERR, printWriter2);
+        return enumMap;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void m20027(C13015 c13015) {
+        int i;
+        InterfaceC20162 c18698;
+        this.f24074 = c13015.m32433(EnumC7687.f25288);
+        this.f24075 = c13015.m32433(EnumC7687.f25333);
+        this.f24087 = c13015.m32434(EnumC7687.f25329, "none");
+        this.f24071 = c13015.m32432("suppressNotes");
+        String strM32423 = c13015.m32423(EnumC7687.f25321);
+        int i2 = Integer.MAX_VALUE;
+        if (strM32423 != null) {
+            try {
+                i = Integer.parseInt(strM32423);
+                if (i <= 0) {
+                    i = Integer.MAX_VALUE;
+                }
+            } catch (NumberFormatException unused) {
+                i = 100;
+            }
+        } else {
+            i = 100;
+        }
+        this.f24084 = i;
+        String strM32424 = c13015.m32423(EnumC7687.f25296);
+        if (strM32424 != null) {
+            try {
+                int i3 = Integer.parseInt(strM32424);
+                if (i3 > 0) {
+                    i2 = i3;
+                }
+            } catch (NumberFormatException unused2) {
+                i2 = 100;
+            }
+        } else {
+            i2 = 100;
+        }
+        this.f24082 = i2;
+        if (c13015.m32432("rawDiagnostics")) {
+            c18698 = new C23458(c13015);
+        } else {
+            c18698 = new C18698(c13015, this.f24081);
+        }
+        this.f24076 = c18698;
+        String strM32422 = c13015.m32422("expectKeys");
+        if (strM32422 != null) {
+            this.f24080 = new HashSet(Arrays.asList(strM32422.split(", *")));
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean m20045() {
+        return this.f24072 != null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19516(InterfaceC8724 interfaceC8724) {
-        this.f24285 = interfaceC8724;
+    public final void m20038(InterfaceC15976 interfaceC15976, InterfaceC1960 interfaceC1960) {
+        C11972.m30021(interfaceC15976);
+        C23393 c23393M34515 = m34515(interfaceC15976);
+        InterfaceC1960 interfaceC1961 = c23393M34515.f75732;
+        if (interfaceC1961 != null && interfaceC1961 != interfaceC1960) {
+            throw new IllegalStateException("endPosTable already set");
+        }
+        c23393M34515.f75732 = interfaceC1960;
     }
 
-    @Override // android.widget.FrameLayout, android.view.ViewGroup, android.view.View
-    public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
-        super.onLayout(z, i, i2, i3, i4);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15976 m20046() {
+        C23393 c23393 = this.f44941;
+        if (c23393 == null) {
+            return null;
+        }
+        return c23393.f75737;
     }
 
-    @Override // android.view.View
-    public final void onConfigurationChanged(Configuration configuration) {
-        WindowManager.LayoutParams layoutParams;
-        Display defaultDisplay = this.f24299.getDefaultDisplay();
-        Point point = this.f24284;
-        defaultDisplay.getSize(point);
-        if (!this.f24295 || (layoutParams = this.f24291) == null) {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final InterfaceC20162 m20051() {
+        return this.f24076;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20040(C21220 c21220) {
+        this.f24076 = c21220;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final PrintWriter m20031(EnumC8803 enumC8803) {
+        return (PrintWriter) this.f24077.get(enumC8803);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20034(PrintWriter printWriter) {
+        for (EnumC8803 enumC8803 : EnumC8803.values()) {
+            this.f24077.put(enumC8803, printWriter);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20036(AbstractC1346 abstractC1346) {
+        C11972.m30026(this.f24069 == abstractC1346);
+        this.f24069 = abstractC1346.f4810;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m20043() {
+        Iterator it = this.f24077.values().iterator();
+        while (it.hasNext()) {
+            ((PrintWriter) it.next()).flush();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m20029(C7312 c7312, C17007 c17007) {
+        HashSet hashSet = c7312.f24086;
+        InterfaceC15976 interfaceC15976M40086 = c17007.m40086();
+        if (interfaceC15976M40086 == null) {
+            return true;
+        }
+        int iM40087 = c17007.m40087();
+        HashSet hashSet2 = c7312.f24073;
+        C5558 c5558 = new C5558(interfaceC15976M40086, Integer.valueOf(iM40087));
+        boolean zContains = hashSet2.contains(c5558);
+        if (!zContains) {
+            hashSet2.add(c5558);
+        }
+        if (zContains) {
+            return false;
+        }
+        if (!c17007.m40083(EnumC6984.SOURCE_LEVEL)) {
+            return true;
+        }
+        C18499 c18499 = new C18499();
+        m20028(c18499, c17007);
+        C5558 c5559 = new C5558(interfaceC15976M40086, c18499.m43093());
+        boolean zContains2 = hashSet.contains(c5559);
+        boolean z = !zContains2;
+        if (!zContains2) {
+            hashSet.add(c5559);
+        }
+        return z;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m20028(C18499 c18499, C17007 c17007) {
+        c18499.m43089(c17007.mo32405());
+        for (Object obj : c17007.m40085()) {
+            if (obj instanceof C17007) {
+                m20028(c18499, (C17007) obj);
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m20042(AbstractC8036 abstractC8036) {
+        C23393 c23393 = this.f44941;
+        InterfaceC15976 interfaceC15976 = c23393 != null ? c23393.f75737 : null;
+        if (interfaceC15976 != null) {
+            return this.f24073.contains(new C5558(interfaceC15976, Integer.valueOf(abstractC8036.f26658)));
+        }
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m20047(String str, Object... objArr) {
+        m20024((PrintWriter) this.f24077.get(EnumC8803.NOTICE), m20032(EnumC2837.COMPILER_MISC, str, objArr));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m20049(AbstractC13695 abstractC13695) {
+        m20024((PrintWriter) this.f24077.get(EnumC8803.NOTICE), this.f24081.m52977(abstractC13695));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m20048(EnumC2837 enumC2837, String str, Object... objArr) {
+        m20024((PrintWriter) this.f24077.get(EnumC8803.NOTICE), m20032(enumC2837, str, objArr));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20035(String str) {
+        m20024((PrintWriter) this.f24077.get(EnumC8803.NOTICE), str);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m20037(EnumC8803 enumC8803, String str) {
+        m20024(m20031(enumC8803), str);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m20024(PrintWriter printWriter, String str) {
+        while (true) {
+            int iIndexOf = str.indexOf(10);
+            if (iIndexOf == -1) {
+                break;
+            }
+            printWriter.println(str.substring(0, iIndexOf));
+            str = str.substring(iIndexOf + 1);
+        }
+        if (str.length() != 0) {
+            printWriter.println(str);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m20044(String str, Object... objArr) {
+        m20024((PrintWriter) this.f24077.get(EnumC8803.NOTICE), m20032(EnumC2837.COMPILER_MISC, "verbose.".concat(str), objArr));
+    }
+
+    @Override // l.AbstractC14222
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo20041(Object... objArr) {
+        PrintWriter printWriter = (PrintWriter) this.f24077.get(EnumC8803.ERROR);
+        m20024(printWriter, m20032(EnumC2837.COMPILER_MISC, "source.unavailable", objArr));
+        printWriter.flush();
+    }
+
+    @Override // l.AbstractC14222
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo20039(C17007 c17007) {
+        this.f24069.mo4974(c17007);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m20050(C17007 c17007) {
+        PrintWriter printWriter;
+        int i;
+        InterfaceC1807 interfaceC1807 = this.f24072;
+        if (interfaceC1807 != null) {
+            interfaceC1807.mo6284(c17007);
             return;
         }
-        if (layoutParams.x > 0) {
-            layoutParams.x = point.x - getWidth();
-        }
-        if (this.f24291.y > point.y - getHeight()) {
-            this.f24291.y = point.y - getHeight();
-        }
-        this.f24299.updateViewLayout(this, this.f24291);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19514() {
-        if (this.f24295 || !C6696.m18094(getContext()) || this.f24295) {
+        EnumC22229 enumC22229M40089 = c17007.m40089();
+        int[] iArr = C8058.f26685;
+        int i2 = iArr[enumC22229M40089.ordinal()];
+        if (i2 != 1) {
+            EnumMap enumMap = this.f24077;
+            if (i2 == 2) {
+                printWriter = (PrintWriter) enumMap.get(EnumC8803.NOTICE);
+            } else if (i2 == 3) {
+                printWriter = (PrintWriter) enumMap.get(EnumC8803.WARNING);
+            } else if (i2 == 4) {
+                printWriter = (PrintWriter) enumMap.get(EnumC8803.ERROR);
+            } else {
+                throw new Error();
+            }
+            m20024(printWriter, this.f24076.mo12290(c17007, this.f24081.m52978()));
+            if (this.f24075 && (((i = iArr[c17007.m40089().ordinal()]) == 3 || i == 4) && this.f24075)) {
+                System.err.println(m20032(EnumC2837.COMPILER_MISC, "resume.abort", new Object[0]));
+                while (true) {
+                    try {
+                        int i3 = System.in.read();
+                        if (i3 != 65) {
+                            if (i3 == 82) {
+                                break;
+                            }
+                            if (i3 != 88) {
+                                if (i3 != 97) {
+                                    if (i3 == 114) {
+                                        break;
+                                    } else if (i3 != 120) {
+                                    }
+                                }
+                            }
+                            throw new AssertionError("user abort");
+                        }
+                        System.exit(-1);
+                        break;
+                    } catch (IOException unused) {
+                    }
+                }
+            }
+            if (this.f24074) {
+                new RuntimeException().printStackTrace(printWriter);
+            }
+            printWriter.flush();
             return;
         }
-        WindowManager.LayoutParams layoutParams = this.f24291;
-        float f = layoutParams.x;
-        Point point = this.f24284;
-        layoutParams.x = m19508(f, point.x - getWidth());
-        WindowManager.LayoutParams layoutParams2 = this.f24291;
-        layoutParams2.y = m19508(layoutParams2.y, point.y - getHeight());
-        this.f24299.addView(this, this.f24291);
+        throw new IllegalArgumentException();
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m19513() {
-        boolean z = this.f24295;
-        if (z && z) {
-            this.f24299.removeView(this);
-        }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static String m20030(String str, Object... objArr) {
+        return C23721.m52974(EnumC2837.COMPILER_MISC.m9351(str), objArr);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19515(int i, int i2) {
-        WindowManager.LayoutParams layoutParams = this.f24291;
-        if (layoutParams.x == i && layoutParams.y == i2) {
-            return;
-        }
-        layoutParams.x = i;
-        layoutParams.y = i2;
-        if (this.f24295) {
-            this.f24299.updateViewLayout(this, layoutParams);
-        }
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    public final void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        this.f24295 = true;
-        InterfaceC10135 interfaceC10135 = this.f24293;
-        if (interfaceC10135 != null) {
-            ((C19520) interfaceC10135).m44578();
-        }
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    public final void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        this.f24295 = false;
-        RunnableC8018 runnableC8018 = this.f24298;
-        if (runnableC8018 != null) {
-            removeCallbacks(runnableC8018);
-        }
+    public final String m20033(AbstractC13695 abstractC13695) {
+        return this.f24081.m52977(abstractC13695);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m19518(C19520 c19520) {
-        this.f24293 = c19520;
-    }
-
-    @Override // android.view.View
-    public final boolean isAttachedToWindow() {
-        return this.f24295;
+    public final String m20032(EnumC2837 enumC2837, String str, Object... objArr) {
+        return this.f24081.m52975(enumC2837.m9351(str), objArr);
     }
 }

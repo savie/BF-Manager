@@ -1,124 +1,56 @@
 .class public final synthetic Ll/ۤ᩵ۘ;
 .super Ljava/lang/Object;
-.source "C5P7"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "07LE"
 
 
-# instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    iput p1, p0, Ll/ۤ᩵ۘ;->ܺ:I
-
-    iput-object p2, p0, Ll/ۤ᩵ۘ;->᩶:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .line 2
-    iget p1, p0, Ll/ۤ᩵ۘ;->ܺ:I
-
-    .line 4
-    iget-object v0, p0, Ll/ۤ᩵ۘ;->᩶:Ljava/lang/Object;
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 9
-    check-cast v0, Ll/ۘ᩶ۘ;
-
-    .line 12
-    invoke-static {v0}, Ll/ۘ᩶ۘ;->ۙ(Ll/ۘ᩶ۘ;)V
-
-    return-void
-
-    .line 15
-    :pswitch_0
-    check-cast v0, Ll/ܶ᩷ۘ;
-
-    .line 17
-    sget p1, Ll/ܶ᩷ۘ;->ۡܰ:I
-
-    .line 67
-    invoke-virtual {v0}, Ll/֨ۨ;->getOnBackPressedDispatcher()Ll/ܳۨ;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll/ܳۨ;->ۙ()V
-
-    return-void
-
-    .line 0
-    :pswitch_1
-    check-cast v0, Ll/۠᩸ۘ;
-
-    .line 262
-    iget-object p1, v0, Ll/۠᩸ۘ;->᩹:Ll/᩶᩸ۘ;
-
-    invoke-virtual {p1}, Ll/۫ܶۘ;->buildDialog()Ll/۠ۡۜ;
+    .line 290
+    invoke-static {}, Ll/᩶۟᩺;->values()[Ll/᩶۟᩺;
 
     move-result-object v0
 
-    iget-object v1, p1, Ll/۫ܶۘ;->᩻ۙ:Ll/ۜᩴ;
+    array-length v0, v0
 
-    .line 263
-    invoke-virtual {v1}, Ll/ۜᩴ;->getTitle()Ljava/lang/CharSequence;
+    new-array v0, v0, [I
 
-    move-result-object v1
+    sput-object v0, Ll/ۤ᩵ۘ;->ۙ:[I
 
-    invoke-virtual {v0, v1}, Ll/۠ۡۜ;->ܰ(Ljava/lang/CharSequence;)V
+    :try_start_0
+    sget-object v1, Ll/᩶۟᩺;->ܽۙ:Ll/᩶۟᩺;
 
-    iget-object p1, p1, Ll/۫ܶۘ;->᩻ۙ:Ll/ۜᩴ;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 264
-    invoke-virtual {p1}, Ll/ۜᩴ;->getSubtitle()Ljava/lang/CharSequence;
+    move-result v1
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, p1}, Ll/۠ۡۜ;->ۙ(Ljava/lang/CharSequence;)V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const p1, 0x7f120189
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۤ᩵ۘ;->ۙ:[I
 
-    const/4 v1, 0x0
+    sget-object v1, Ll/᩶۟᩺;->ܺۙ:Ll/᩶۟᩺;
 
-    .line 265
-    invoke-virtual {v0, p1, v1}, Ll/۠ۡۜ;->ۖ(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 266
-    invoke-virtual {v0}, Ll/۠ۡۜ;->ۨ()Ll/᩵ۡۜ;
+    move-result v1
 
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
     return-void
-
-    .line 0
-    :pswitch_2
-    check-cast v0, Ll/᩷᩵ۘ;
-
-    sget p1, Ll/᩷᩵ۘ;->۬ܰ:I
-
-    .line 73
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

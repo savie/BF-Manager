@@ -1,55 +1,44 @@
 package l;
 
-import java.nio.file.attribute.GroupPrincipal;
-import java.nio.file.attribute.UserPrincipal;
-import javax.security.auth.Subject;
+/* JADX INFO: renamed from: l.֡᩶ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0666 extends AbstractC2705 implements InterfaceC18319 {
 
-/* JADX INFO: renamed from: l.֡᩷ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0666 implements InterfaceC14386 {
-    public final /* synthetic */ UserPrincipal a;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C14349 f2535;
 
-    public /* synthetic */ C0666(UserPrincipal userPrincipal) {
-        this.a = userPrincipal;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f2536;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public C14769 f2537;
+
+    public C0666() {
+        throw null;
     }
 
-    public static /* synthetic */ InterfaceC14386 a(UserPrincipal userPrincipal) {
-        if (userPrincipal == null) {
-            return null;
-        }
-        if (userPrincipal instanceof C10858) {
-            return ((C10858) userPrincipal).a;
-        }
-        return userPrincipal instanceof GroupPrincipal ? C10546.a((GroupPrincipal) userPrincipal) : new C0666(userPrincipal);
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo2602(this);
     }
 
-    @Override // java.security.Principal
-    public final /* synthetic */ boolean equals(Object obj) {
-        UserPrincipal userPrincipal = this.a;
-        if (obj instanceof C0666) {
-            obj = ((C0666) obj).a;
-        }
-        return userPrincipal.equals(obj);
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.OPENS;
     }
 
-    @Override // java.security.Principal
-    public final /* synthetic */ String getName() {
-        return this.a.getName();
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5840(this, obj);
     }
 
-    @Override // java.security.Principal
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // java.security.Principal
-    public final /* synthetic */ boolean implies(Subject subject) {
-        return this.a.implies(subject);
-    }
-
-    @Override // java.security.Principal
-    public final /* synthetic */ String toString() {
-        return this.a.toString();
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68463;
     }
 }

@@ -1,85 +1,215 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.io.IOException;
+import android.text.TextUtils;
+import bin.mt.plus.Main;
+import java.io.Closeable;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.function.BooleanSupplier;
+import java.util.function.Consumer;
+import net.sf.sevenzipjbinding.IInArchive;
+import net.sf.sevenzipjbinding.IInStream;
+import net.sf.sevenzipjbinding.SevenZip;
+import net.sf.sevenzipjbinding.SevenZipException;
 
-/* JADX INFO: renamed from: l.ۚ᩺۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 19WG */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5661 extends AbstractC2838 {
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C0244 f19341;
-
-    public C5661(C22823 c22823, C0244 c0244) {
-        super(c22823);
-        this.f19341 = c0244;
-        c0244.m1649(m13745());
-        m13745().m50540(c0244, C18506.m42898(c0244.mo1670(), EnumC14357.TYPE_ANY, EnumC23529.CLASS_IN, false));
-    }
-
-    @Override // l.AbstractC4955
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo4999() {
-        return C22697.m50267(new StringBuilder("ServiceInfoResolver("), m13745() != null ? m13745().getName() : "", MotionUtils.EASING_TYPE_FORMAT_END);
-    }
-
-    @Override // java.util.TimerTask
-    public final boolean cancel() {
-        boolean zCancel = super.cancel();
-        C0244 c0244 = this.f19341;
-        if (!c0244.mo1672()) {
-            m13745().m50543((InterfaceC11451) c0244);
+/* JADX INFO: renamed from: l.ۚ۫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB38 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5661 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static IInArchive m16647(AbstractC22044 abstractC22044, Consumer consumer) throws Throwable {
+        IInStream c2953;
+        if (!C25053.m55879()) {
+            throw new SevenZipException(C25053.m55880());
         }
-        return zCancel;
+        C19831 c19831 = new C19831(C21054.m48109(abstractC22044.mo4294()), consumer);
+        IInArchive iInArchiveM56782 = null;
+        try {
+            C16912 c16912M41323 = C17658.m41323(abstractC22044.getName());
+            if (c16912M41323 != null && c16912M41323.m39898() == EnumC25118.SEVEN_ZIP) {
+                c2953 = m16649(abstractC22044, consumer);
+            } else if (abstractC22044.getName().matches(".*\\.part[0-9]+\\.rar")) {
+                String name = abstractC22044.getName();
+                if (!name.toLowerCase().endsWith(".part1.rar")) {
+                    AbstractC22044 abstractC22044M49868 = abstractC22044.m49868(name.substring(0, name.toLowerCase().lastIndexOf(".part")) + ".part1.rar");
+                    if (abstractC22044M49868.mo2934()) {
+                        abstractC22044 = abstractC22044M49868;
+                    }
+                }
+                c2953 = c19831.getStream(abstractC22044.mo4294());
+            } else {
+                consumer.n(abstractC22044);
+                c2953 = new C2953(abstractC22044);
+            }
+            try {
+                iInArchiveM56782 = SevenZip.m56782((C2953) c2953, c19831);
+                iInArchiveM56782.addAutoCloseable(c2953);
+                iInArchiveM56782.addAutoCloseable(c19831);
+                iInArchiveM56782.setFileName(abstractC22044.getName());
+                iInArchiveM56782.setFileSize(abstractC22044.mo4285());
+                iInArchiveM56782.setFileTime(abstractC22044.mo4286());
+                return iInArchiveM56782;
+            } catch (Throwable th) {
+                th = th;
+                C20244.m46520(iInArchiveM56782);
+                C20244.m46520(c2953);
+                C20244.m46520(c19831);
+                throw th;
+            }
+        } catch (Throwable th2) {
+            th = th2;
+            c2953 = null;
+        }
     }
 
-    @Override // l.AbstractC2838
-    /* JADX INFO: renamed from: ۙ */
-    public final C22034 mo8593(C22034 c22034) throws IOException {
-        C0244 c0244 = this.f19341;
-        if (!c0244.mo1673()) {
-            long jCurrentTimeMillis = System.currentTimeMillis();
-            C1841 c1841M50566 = m13745().m50566();
-            String strMo1670 = c0244.mo1670();
-            EnumC14357 enumC14357 = EnumC14357.TYPE_SRV;
-            EnumC23529 enumC23529 = EnumC23529.CLASS_IN;
-            c22034 = m13744(m13744(c22034, (AbstractC19918) c1841M50566.m5990(strMo1670, enumC14357, enumC23529), jCurrentTimeMillis), (AbstractC19918) m13745().m50566().m5990(c0244.mo1670(), EnumC14357.TYPE_TXT, enumC23529), jCurrentTimeMillis);
-            if (c0244.mo1657().length() > 0) {
-                Iterator it = m13745().m50566().m5994(c0244.mo1657(), EnumC14357.TYPE_A, enumC23529).iterator();
-                while (it.hasNext()) {
-                    c22034 = m13744(c22034, (AbstractC19918) ((AbstractC9604) it.next()), jCurrentTimeMillis);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m16648(Main main, AbstractC22044 abstractC22044, final InterfaceC13118 interfaceC13118) {
+        Closeable c2953;
+        if (!C25053.m55879()) {
+            throw new SevenZipException(C25053.m55880());
+        }
+        C15355 c15355 = new C15355(main, interfaceC13118);
+        c15355.m47258(C21054.m48109(abstractC22044.mo4294()));
+        c15355.m47256(new BooleanSupplier() { // from class: l.ۤ۫᩸
+            @Override // java.util.function.BooleanSupplier
+            public final boolean getAsBoolean() {
+                return interfaceC13118.mo924();
+            }
+        });
+        while (true) {
+            try {
+                C16912 c16912M41323 = C17658.m41323(abstractC22044.getName());
+                if (c16912M41323 != null && c16912M41323.m39898() == EnumC25118.SEVEN_ZIP) {
+                    c2953 = m16649(abstractC22044, new C22815(0, interfaceC13118));
+                } else if (abstractC22044.getName().matches(".*\\.part[0-9]+\\.rar")) {
+                    String name = abstractC22044.getName();
+                    if (!name.toLowerCase().endsWith(".part1.rar")) {
+                        AbstractC22044 abstractC22044M49868 = abstractC22044.m49868(name.substring(0, name.toLowerCase().lastIndexOf(".part")) + ".part1.rar");
+                        if (abstractC22044M49868.mo2934()) {
+                            abstractC22044 = abstractC22044M49868;
+                        }
+                    }
+                    c2953 = c15355.getStream(abstractC22044.mo4294());
+                } else {
+                    interfaceC13118.mo20515(abstractC22044);
+                    c2953 = new C2953(abstractC22044);
                 }
-                Iterator it2 = m13745().m50566().m5994(c0244.mo1657(), EnumC14357.TYPE_AAAA, EnumC23529.CLASS_IN).iterator();
-                while (it2.hasNext()) {
-                    c22034 = m13744(c22034, (AbstractC19918) ((AbstractC9604) it2.next()), jCurrentTimeMillis);
+                try {
+                    try {
+                        IInArchive iInArchiveM56782 = SevenZip.m56782((C2953) c2953, c15355);
+                        iInArchiveM56782.setFileName(abstractC22044.getName());
+                        iInArchiveM56782.setFileSize(abstractC22044.mo4285());
+                        iInArchiveM56782.setFileTime(abstractC22044.mo4286());
+                        iInArchiveM56782.addAutoCloseable(c2953);
+                        iInArchiveM56782.addAutoCloseable(c15355);
+                        if (c15355.m47260()) {
+                            String strM47255 = c15355.m47255();
+                            if (!TextUtils.isEmpty(strM47255)) {
+                                C21054.m48119(abstractC22044.mo4294(), strM47255);
+                            }
+                        }
+                        if (c15355.m47257()) {
+                            C18902.m43875(c15355.m47255(), abstractC22044.mo4294());
+                        }
+                        interfaceC13118.mo20516(iInArchiveM56782);
+                        return;
+                    } catch (SevenZipException e) {
+                        if (c15355.mo4531()) {
+                            interfaceC13118.mo20517();
+                            C20244.m46520(c2953);
+                            c15355.m38347();
+                            c15355.close();
+                            return;
+                        }
+                        if (interfaceC13118.mo924()) {
+                            throw e;
+                        }
+                        if (c15355.m47260()) {
+                            if (c15355.m47259()) {
+                                C18902.m43874();
+                            }
+                            c15355.m47258(null);
+                            try {
+                                C20244.m46520(c2953);
+                                c15355.m38347();
+                            } catch (Throwable th) {
+                                c15355.close();
+                                throw th;
+                            }
+                        } else {
+                            throw e;
+                        }
+                    }
+                } catch (Throwable th2) {
+                    th = th2;
+                    if (0 != 0) {
+                        C20244.m46520(null);
+                    } else {
+                        C20244.m46520(c2953);
+                        c15355.m38347();
+                    }
+                    throw th;
                 }
+            } catch (Throwable th3) {
+                th = th3;
+                c2953 = null;
             }
         }
-        return c22034;
     }
 
-    @Override // l.AbstractC2838
-    /* JADX INFO: renamed from: ܰ */
-    public final C22034 mo8595(C22034 c22034) throws IOException {
-        C0244 c0244 = this.f19341;
-        if (c0244.mo1673()) {
-            return c22034;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static List m16646(AbstractC22044 abstractC22044) {
+        C16912 c16912M41323 = C17658.m41323(abstractC22044.getName());
+        if (c16912M41323 == null || c16912M41323.m39898() != EnumC25118.SEVEN_ZIP) {
+            return null;
         }
-        String strMo1670 = c0244.mo1670();
-        EnumC14357 enumC14357 = EnumC14357.TYPE_SRV;
-        EnumC23529 enumC23529 = EnumC23529.CLASS_IN;
-        C22034 c22034M13742 = m13742(m13742(c22034, C18506.m42898(strMo1670, enumC14357, enumC23529, false)), C18506.m42898(c0244.mo1670(), EnumC14357.TYPE_TXT, enumC23529, false));
-        return c0244.mo1657().length() > 0 ? m13742(m13742(c22034M13742, C18506.m42898(c0244.mo1657(), EnumC14357.TYPE_A, enumC23529, false)), C18506.m42898(c0244.mo1657(), EnumC14357.TYPE_AAAA, enumC23529, false)) : c22034M13742;
+        AbstractC22044 abstractC22044M49858 = abstractC22044.m49858();
+        if (abstractC22044M49858 == null) {
+            return Collections.singletonList(abstractC22044);
+        }
+        ArrayList arrayList = new ArrayList();
+        String name = abstractC22044.getName();
+        int i = Integer.parseInt(name.substring(name.length() - 3));
+        String strM5124 = C1402.m5124(3, 0, name);
+        for (int i2 = 1; i2 <= 999; i2++) {
+            if (i2 != i) {
+                AbstractC22044 abstractC22044M49876 = abstractC22044M49858.m49876(String.format(Locale.ENGLISH, "%s%03d", strM5124, Integer.valueOf(i2)));
+                if (!abstractC22044M49876.mo4304()) {
+                    if (i2 >= i) {
+                        break;
+                    }
+                    arrayList.clear();
+                    break;
+                }
+                arrayList.add(abstractC22044M49876);
+            } else {
+                arrayList.add(abstractC22044);
+            }
+        }
+        return arrayList.size() > 1 ? arrayList : Collections.singletonList(abstractC22044);
     }
 
-    @Override // l.AbstractC2838
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo8594() {
-        StringBuilder sb = new StringBuilder("querying service info: ");
-        C0244 c0244 = this.f19341;
-        sb.append(c0244 != null ? c0244.mo1670() : "null");
-        return sb.toString();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C2953 m16649(AbstractC22044 abstractC22044, Consumer consumer) {
+        List listM16646 = m16646(abstractC22044);
+        if (listM16646 == null) {
+            throw new IllegalArgumentException("Not a split 7z file");
+        }
+        Iterator it = listM16646.iterator();
+        while (it.hasNext()) {
+            consumer.n((AbstractC22044) it.next());
+        }
+        if (listM16646.size() == 1) {
+            return new C2953(abstractC22044);
+        }
+        C21982 c21982 = new C21982(listM16646.size());
+        Iterator it2 = listM16646.iterator();
+        while (it2.hasNext()) {
+            c21982.add(((AbstractC22044) it2.next()).mo4285());
+        }
+        return new C2953(C11746.m29495(C20697.m47332(abstractC22044.getName(), c21982.m32835(), new C21151(listM16646))));
     }
 }

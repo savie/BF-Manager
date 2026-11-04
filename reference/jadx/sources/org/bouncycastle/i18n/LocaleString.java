@@ -2,7 +2,7 @@ package org.bouncycastle.i18n;
 
 import java.util.Locale;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LocaleString extends LocalizedMessage {
     public LocaleString(String str, String str2) {
         super(str, str2);

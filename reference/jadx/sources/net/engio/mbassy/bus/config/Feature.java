@@ -14,7 +14,7 @@ import net.engio.mbassy.subscription.ISubscriptionManagerProvider;
 import net.engio.mbassy.subscription.SubscriptionFactory;
 import net.engio.mbassy.subscription.SubscriptionManagerProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface Feature {
 
     public class SyncPubSub implements Feature {

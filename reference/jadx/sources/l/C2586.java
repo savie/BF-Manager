@@ -1,29 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖܳۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H6OO */
+import android.text.Editable;
+import android.text.TextWatcher;
+
+/* JADX INFO: renamed from: l.ۖۢᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S5F9 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2586 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f10165;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f10166;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f10167;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f10168;
+public final class C2586 implements TextWatcher {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f10169;
+    public final /* synthetic */ AbstractDialogInterfaceOnClickListenerC8552 f8308;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f10170;
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    }
 
-    public C2586(int i) {
-        this.f10170 = i;
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    }
+
+    public C2586(AbstractDialogInterfaceOnClickListenerC8552 abstractDialogInterfaceOnClickListenerC8552) {
+        this.f8308 = abstractDialogInterfaceOnClickListenerC8552;
+    }
+
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        AbstractDialogInterfaceOnClickListenerC8552 abstractDialogInterfaceOnClickListenerC8552 = this.f8308;
+        if (abstractDialogInterfaceOnClickListenerC8552.m22936()) {
+            abstractDialogInterfaceOnClickListenerC8552.m22925((String) null);
+        }
     }
 }

@@ -1,34 +1,28 @@
-.class public final Ll/ܶ᩵ܶ;
-.super Ll/ᩴ᩵ܶ;
-.source "SB7W"
-
-
-# instance fields
-.field public ۠:Ll/ۤ᩵ܶ;
-
-.field public ۡ:Ll/ۤ᩵ܶ;
-
-.field public ᩴ:Ll/ۤ᩵ܶ;
-
-.field public ᩵:Ll/ۤ᩵ܶ;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1810
-    invoke-direct {p0}, Ll/ᩴ᩵ܶ;-><init>()V
-
-    return-void
-.end method
+.class public abstract Ll/ܶ᩵ܶ;
+.super Ll/۫᩵ܶ;
+.source "U9ER"
 
 
 # virtual methods
-.method public final ֨()Ljava/lang/String;
-    .locals 1
+.method public abstract ۙ(Ll/ۘ᩻ܶ;)V
+.end method
 
-    const-string v0, "ellipse"
+.method public ۙ(Ll/᩷ۗܶ;)Z
+    .locals 0
 
-    return-object v0
+    .line 26
+    instance-of p1, p1, Ll/ۘ᩻ܶ;
+
+    return p1
+.end method
+
+.method public final ᩷(Ll/᩷ۗܶ;)V
+    .locals 0
+
+    .line 31
+    check-cast p1, Ll/ۘ᩻ܶ;
+
+    invoke-virtual {p0, p1}, Ll/ܶ᩵ܶ;->ۙ(Ll/ۘ᩻ܶ;)V
+
+    return-void
 .end method

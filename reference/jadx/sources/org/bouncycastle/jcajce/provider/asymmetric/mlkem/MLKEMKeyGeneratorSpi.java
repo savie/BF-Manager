@@ -18,7 +18,7 @@ import org.bouncycastle.pqc.crypto.mlkem.MLKEMParameters;
 import org.bouncycastle.pqc.jcajce.provider.util.KdfUtil;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MLKEMKeyGeneratorSpi extends KeyGeneratorSpi {
     public KEMExtractSpec extSpec;
     public KEMGenerateSpec genSpec;

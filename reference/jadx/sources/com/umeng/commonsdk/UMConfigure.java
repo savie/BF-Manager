@@ -32,7 +32,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
-import l.C22697;
+import l.C8947;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -522,14 +522,14 @@ public class UMConfigure {
         File filesDir = context.getFilesDir();
         StringBuilder sb = new StringBuilder();
         sb.append(filesDir.getAbsolutePath());
-        return !new File(C22697.m50267(sb, File.separator, aq.f77926l)).exists();
+        return !new File(C8947.m23910(sb, File.separator, aq.f82042l)).exists();
     }
 
     public static boolean needCheckPolicyResult(Context context) {
         File filesDir = context.getFilesDir();
         StringBuilder sb = new StringBuilder();
         sb.append(filesDir.getAbsolutePath());
-        return !new File(C22697.m50267(sb, File.separator, aq.m)).exists();
+        return !new File(C8947.m23910(sb, File.separator, aq.m)).exists();
     }
 
     public static boolean isSilentMode() {

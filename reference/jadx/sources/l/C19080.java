@@ -1,137 +1,34 @@
 package l;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.os.Build;
-import android.view.InputDevice;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
-import android.view.ViewConfiguration;
+import com.alipay.sdk.app.OpenAuthTask;
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
 
-/* JADX INFO: renamed from: l.ᩴ᩻, reason: contains not printable characters */
-/* JADX INFO: compiled from: I96L */
+/* JADX INFO: renamed from: l.ᩳ۫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W96C */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C19080 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8497 f61654;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Context f61656;
+    public static final /* synthetic */ int f61794 = 0;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f61658;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C12966 f61795;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public VelocityTracker f61659;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f61655 = -1;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f61661 = -1;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f61657 = -1;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] f61660 = {Integer.MAX_VALUE, 0};
-
-    public C19080(Context context, InterfaceC8497 interfaceC8497) {
-        this.f61656 = context;
-        this.f61654 = interfaceC8497;
+    static {
+        int[] iArr = {169, 170, 174, HideBottomViewOnScrollBehavior.DEFAULT_EXIT_ANIMATION_DURATION_MS, 8252, 8253, 8265, 8266, 8482, 8483, 8505, 8506, 8596, 8602, 8617, 8619, 8986, 8988, OpenAuthTask.OK, 9001, 9167, 9168, 9193, 9204, 9208, 9211, 9410, 9411, 9642, 9644, 9654, 9655, 9664, 9665, 9723, 9727, 9728, 9733, 9742, 9743, 9745, 9746, 9748, 9750, 9752, 9753, 9757, 9758, 9760, 9761, 9762, 9764, 9766, 9767, 9770, 9771, 9774, 9776, 9784, 9787, 9792, 9793, 9794, 9795, 9800, 9812, 9823, 9825, 9827, 9828, 9829, 9831, 9832, 9833, 9851, 9852, 9854, 9856, 9874, 9880, 9881, 9882, 9883, 9885, 9888, 9890, 9895, 9896, 9898, 9900, 9904, 9906, 9917, 9919, 9924, 9926, 9928, 9929, 9934, 9936, 9937, 9938, 9939, 9941, 9961, 9963, 9968, 9974, 9975, 9979, 9981, 9982, 9986, 9987, 9989, 9990, 9992, 9998, 9999, 10000, 10002, 10003, 10004, 10005, 10006, 10007, 10013, 10014, 10017, 10018, 10024, 10025, 10035, 10037, 10052, 10053, 10055, 10056, 10060, 10061, 10062, 10063, 10067, 10070, 10071, 10072, 10083, 10085, 10133, 10136, 10145, 10146, 10160, 10161, 10175, 10176, 10548, 10550, 11013, 11016, 11035, 11037, 11088, 11089, 11093, 11094, 12336, 12337, 12349, 12350, 12951, 12952, 12953, 12954, 126980, 126981, 127183, 127184, 127344, 127346, 127358, 127360, 127374, 127375, 127377, 127387, 127489, 127491, 127514, 127515, 127535, 127536, 127538, 127547, 127568, 127570, 127744, 127778, 127780, 127892, 127894, 127896, 127897, 127900, 127902, 127985, 127987, 127990, 127991, 127995, 128000, 128254, 128255, 128318, 128329, 128335, 128336, 128360, 128367, 128369, 128371, 128379, 128391, 128392, 128394, 128398, 128400, 128401, 128405, 128407, 128420, 128422, 128424, 128425, 128433, 128435, 128444, 128445, 128450, 128453, 128465, 128468, 128476, 128479, 128481, 128482, 128483, 128484, 128488, 128489, 128495, 128496, 128499, 128500, 128506, 128592, 128640, 128710, 128715, 128723, 128725, 128728, 128732, 128742, 128745, 128746, 128747, 128749, 128752, 128753, 128755, 128765, 128992, 129004, 129008, 129009, 129292, 129339, 129340, 129350, 129351, 129536, 129648, 129661, 129664, 129673, 129680, 129726, 129727, 129734, 129742, 129756, 129760, 129769, 129776, 129785};
+        C12966 c12966 = new C12966();
+        for (int i = 0; i < 296; i += 2) {
+            int i2 = iArr[i + 1];
+            for (int i3 = iArr[i]; i3 < i2; i3++) {
+                c12966.add(i3);
+            }
+        }
+        c12966.m32359();
+        f61795 = c12966;
     }
 
-    /* JADX WARN: Code duplicated, block: B:31:0x0074  */
-    /* JADX WARN: Code duplicated, block: B:52:0x00b9  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43852(MotionEvent motionEvent, int i) {
-        int scaledMinimumFlingVelocity;
-        int scaledMaximumFlingVelocity;
-        boolean z;
-        int source = motionEvent.getSource();
-        int deviceId = motionEvent.getDeviceId();
-        int i2 = this.f61661;
-        int[] iArr = this.f61660;
-        if (i2 == source && this.f61657 == deviceId && this.f61655 == i) {
-            z = false;
-        } else {
-            Context context = this.f61656;
-            ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
-            int deviceId2 = motionEvent.getDeviceId();
-            int source2 = motionEvent.getSource();
-            int i3 = C3619.f13296;
-            int i4 = Build.VERSION.SDK_INT;
-            if (i4 >= 34) {
-                scaledMinimumFlingVelocity = C12793.m31776(viewConfiguration, deviceId2, i, source2);
-            } else {
-                InputDevice device = InputDevice.getDevice(deviceId2);
-                if (device == null || device.getMotionRange(i, source2) == null) {
-                    scaledMinimumFlingVelocity = Integer.MAX_VALUE;
-                } else {
-                    Resources resources = context.getResources();
-                    int identifier = (source2 == 4194304 && i == 26) ? resources.getIdentifier("config_viewMinRotaryEncoderFlingVelocity", "dimen", "android") : -1;
-                    C13638.requireNonNull(viewConfiguration);
-                    if (identifier == -1) {
-                        scaledMinimumFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();
-                    } else if (identifier == 0 || (scaledMinimumFlingVelocity = resources.getDimensionPixelSize(identifier)) < 0) {
-                        scaledMinimumFlingVelocity = Integer.MAX_VALUE;
-                    }
-                }
-            }
-            iArr[0] = scaledMinimumFlingVelocity;
-            int deviceId3 = motionEvent.getDeviceId();
-            int source3 = motionEvent.getSource();
-            if (i4 >= 34) {
-                scaledMaximumFlingVelocity = C12793.m31775(viewConfiguration, deviceId3, i, source3);
-            } else {
-                InputDevice device2 = InputDevice.getDevice(deviceId3);
-                if (device2 == null || device2.getMotionRange(i, source3) == null) {
-                    scaledMaximumFlingVelocity = Integer.MIN_VALUE;
-                } else {
-                    Resources resources2 = context.getResources();
-                    int identifier2 = (source3 == 4194304 && i == 26) ? resources2.getIdentifier("config_viewMaxRotaryEncoderFlingVelocity", "dimen", "android") : -1;
-                    C13638.requireNonNull(viewConfiguration);
-                    if (identifier2 == -1) {
-                        scaledMaximumFlingVelocity = viewConfiguration.getScaledMaximumFlingVelocity();
-                    } else if (identifier2 == 0 || (scaledMaximumFlingVelocity = resources2.getDimensionPixelSize(identifier2)) < 0) {
-                        scaledMaximumFlingVelocity = Integer.MIN_VALUE;
-                    }
-                }
-            }
-            iArr[1] = scaledMaximumFlingVelocity;
-            this.f61661 = source;
-            this.f61657 = deviceId;
-            this.f61655 = i;
-            z = true;
-        }
-        if (iArr[0] == Integer.MAX_VALUE) {
-            VelocityTracker velocityTracker = this.f61659;
-            if (velocityTracker != null) {
-                velocityTracker.recycle();
-                this.f61659 = null;
-                return;
-            }
-            return;
-        }
-        if (this.f61659 == null) {
-            this.f61659 = VelocityTracker.obtain();
-        }
-        VelocityTracker velocityTracker2 = this.f61659;
-        C8226.m21541(velocityTracker2, motionEvent);
-        C8226.m21540(velocityTracker2);
-        float fM21539 = C8226.m21539(velocityTracker2, i);
-        InterfaceC8497 interfaceC8497 = this.f61654;
-        float fMo22203 = interfaceC8497.mo22203() * fM21539;
-        float fSignum = Math.signum(fMo22203);
-        if (z || (fSignum != Math.signum(this.f61658) && fSignum != 0.0f)) {
-            interfaceC8497.mo22205();
-        }
-        if (Math.abs(fMo22203) < iArr[0]) {
-            return;
-        }
-        int i5 = iArr[1];
-        float fMax = Math.max(-i5, Math.min(fMo22203, i5));
-        this.f61658 = interfaceC8497.mo22204(fMax) ? fMax : 0.0f;
+    public static boolean m44193(int i) {
+        return f61795.contains(i);
     }
 }

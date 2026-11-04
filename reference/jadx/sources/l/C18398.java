@@ -1,29 +1,29 @@
 package l;
 
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ᩴ֡ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 892H */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18398 {
+/* JADX INFO: renamed from: l.ܿܳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I4PY */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18398 implements InterfaceC10939 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m42681(AbstractActivityC12483 abstractActivityC12483) {
-        View viewM30995 = abstractActivityC12483.m30995(R.layout.MT_Protector);
-        TextView textView = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-        C17492 c17492 = (C17492) viewM30995.findViewById(R.id.MT_Protector);
-        TextView textView2 = (TextView) viewM30995.findViewById(R.id.MT_Protector);
-        textView2.setText("-- " + ((Object) textView2.getText()) + " --");
-        viewM30995.findViewById(R.id.MT_Protector).setOnClickListener(new ViewOnClickListenerC22999(abstractActivityC12483, 2));
-        textView.setText(((Object) textView.getText()) + " ↓↓");
-        C21220 c21220 = new C21220(abstractActivityC12483);
-        c21220.registerAdapterDataObserver(new C6403(c21220, c17492, textView2));
-        c21220.notifyDataSetChanged();
-        c17492.setAdapter(c21220);
-        C8067 c8067BuildDialog = abstractActivityC12483.buildDialog();
-        c8067BuildDialog.m21258(viewM30995);
-        c8067BuildDialog.m21251(R.string.MT_Protector, null);
-        c8067BuildDialog.m21269();
+    public final /* synthetic */ HashMap f59936;
+
+    @Override // l.InterfaceC4974
+    /* JADX INFO: renamed from: ۙ */
+    public final C4448 mo5056(C4448 c4448, C20022 c20022) {
+        return c4448;
+    }
+
+    public C18398(HashMap map) {
+        this.f59936 = map;
+    }
+
+    @Override // l.InterfaceC22128
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC11071 mo5057(C4448 c4448) {
+        AbstractC11071 abstractC11071 = (AbstractC11071) this.f59936.get(c4448);
+        return abstractC11071 == null ? c4448 : abstractC11071.clone();
     }
 }

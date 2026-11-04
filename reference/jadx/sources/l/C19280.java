@@ -1,24 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۛܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5ZF */
+/* JADX INFO: renamed from: l.ᩳᩴ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: V6HT */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19280 extends AbstractC19115 {
+public final /* synthetic */ class C19280 {
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC16706 f62237 = new C19280(new Object[0]);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f62336;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final Object[] f62238;
-
-    public C19280(Object[] objArr) {
-        super(objArr.length, 0);
-        this.f62238 = objArr;
-    }
-
-    @Override // l.AbstractC19115
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo19960(int i) {
-        return this.f62238[i];
+    static {
+        int[] iArr = new int[EnumC24203.values().length];
+        f62336 = iArr;
+        try {
+            iArr[EnumC24203.CAST.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f62336[EnumC24203.CHECK_CAST.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
     }
 }

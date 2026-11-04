@@ -1,57 +1,39 @@
 package l;
 
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.ۡ֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F5QL */
+/* JADX INFO: renamed from: l.۠ۡ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: I7LP */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8535 extends C18412 {
+public final class C8535 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15591 f29542;
+    public int f27884;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f29543;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C23393 f27885;
 
-    @Override // l.C18412
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19018(int i, int i2, int i3, boolean z) {
-        C12063 c12063 = this.f29542.f30808;
-        ArrayList arrayList = this.f29543;
-        if (i2 != -1) {
-            arrayList.add(c12063.f40354.m44688(i2));
-        }
-        if (i3 != -1) {
-            arrayList.add(c12063.f40367.m44688(i3));
-        }
+    public C8535(C7044 c7044, AbstractC8036 abstractC8036) {
+        this.f27884 = abstractC8036.f26658;
+        this.f27885 = c7044.f23243.m34514();
     }
 
-    @Override // l.C18412
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19017(int i, int i2, int i3, int i4, boolean z) {
-        C12063 c12063 = this.f29542.f30808;
-        ArrayList arrayList = this.f29543;
-        if (i2 != -1) {
-            arrayList.add(c12063.f40354.m44688(i2));
-        }
-        if (i3 != -1) {
-            arrayList.add(c12063.f40367.m44688(i3));
-        }
-        if (i4 != -1) {
-            arrayList.add(c12063.f40354.m44688(i4));
-        }
+    public final int hashCode() {
+        return this.f27884 << (this.f27885.hashCode() + 16);
     }
 
-    @Override // l.C18412
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo19015(int i) {
-        if (i != -1) {
-            this.f29543.add(this.f29542.f30808.f40354.m44688(i));
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C8535)) {
+            return false;
         }
+        C8535 c8535 = (C8535) obj;
+        return this.f27884 == c8535.f27884 && this.f27885 == c8535.f27885;
     }
 
-    public C8535(C15591 c15591, ArrayList arrayList) {
-        this.f29542 = c15591;
-        this.f29543 = arrayList;
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        C23393 c23393 = this.f27885;
+        sb.append(c23393.m52573().getName());
+        sb.append(" @ ");
+        sb.append(c23393.m52574(this.f27884));
+        return sb.toString();
     }
 }

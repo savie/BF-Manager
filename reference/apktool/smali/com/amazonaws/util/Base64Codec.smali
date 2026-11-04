@@ -288,7 +288,7 @@
     if-ne v2, v0, :cond_6
 
     .line 182
-    invoke-static {v7, v8}, Lcom/amazonaws/util/CodecUtils;->ܰ(II)V
+    invoke-static {v7, v8}, Lcom/amazonaws/util/CodecUtils;->᩷(II)V
 
     return-object v5
 
@@ -322,7 +322,7 @@
     if-ne v2, v3, :cond_7
 
     .line 192
-    invoke-static {v7, v4}, Lcom/amazonaws/util/CodecUtils;->ܰ(II)V
+    invoke-static {v7, v4}, Lcom/amazonaws/util/CodecUtils;->᩷(II)V
 
     return-object v5
 
@@ -355,7 +355,7 @@
     const-string v0, "Input is expected to be encoded in multiple of 4 bytes but found: "
 
     .line 0
-    invoke-static {p0, v0}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.x509;
 
 import java.util.Enumeration;
 import java.util.NoSuchElementException;
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1GeneralizedTime;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -15,7 +15,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TBSCertList extends ASN1Object {
     public Extensions crlExtensions;
     public X500Name issuer;
@@ -187,7 +187,7 @@ public class TBSCertList extends ASN1Object {
 
         public CRLEntry(ASN1Sequence aSN1Sequence) {
             if (aSN1Sequence.size() < 2 || aSN1Sequence.size() > 3) {
-                throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+                throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
             }
             this.seq = aSN1Sequence;
         }
@@ -195,7 +195,7 @@ public class TBSCertList extends ASN1Object {
 
     public TBSCertList(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() < 3 || aSN1Sequence.size() > 7) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         int i = 0;
         if (aSN1Sequence.getObjectAt(0) instanceof ASN1Integer) {

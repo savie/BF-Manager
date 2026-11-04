@@ -1,52 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫۠֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 99YG */
+/* JADX INFO: renamed from: l.ۨۢۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E5GV */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C12275 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f41047;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f41048;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f41049;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f41050;
+public final class C12275 implements Comparable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f41051;
+    public final int f39462;
 
-    public C12275(InterfaceC11306 interfaceC11306) {
-        String name = interfaceC11306.getName();
-        this.f41049 = name.endsWith("/") ? C20630.m46498(1, 0, name) : name;
-        this.f41050 = interfaceC11306.mo28308();
-        boolean zIsDirectory = interfaceC11306.isDirectory();
-        this.f41051 = zIsDirectory;
-        this.f41048 = interfaceC11306.mo28310();
-        this.f41047 = zIsDirectory ? -1L : interfaceC11306.length();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C5520 f39463;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C7033 f39464;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m30653(C12275 c12275, C24166 c24166, C12275 c12276) {
+        c12275.getClass();
+        c24166.m54135(c12275.f39463.f34104 - (c12276 == null ? 0 : c12276.f39463.f34104));
+        c24166.m54135(c12275.f39462);
+        C7033 c7033 = c12275.f39464;
+        c24166.m54135(c7033 != null ? c7033.f34103 : 0);
     }
 
-    public C12275(C17248 c17248) {
-        String strM40208 = c17248.m40208();
-        this.f41049 = strM40208;
-        this.f41050 = -1L;
-        this.f41047 = -1L;
-        this.f41051 = true;
-        this.f41048 = strM40208.startsWith("$");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m30652(C12275 c12275, int i, C12275 c12276) {
+        int i2;
+        if (c12276 == null) {
+            i2 = 0;
+        } else {
+            c12275.getClass();
+            i2 = c12276.f39463.f34104;
+        }
+        int iM19213 = C6929.m19213(c12275.f39462) + C6929.m19213(c12275.f39463.f34104 - i2) + i;
+        C7033 c7033 = c12275.f39464;
+        return iM19213 + (c7033 == null ? 1 : C6929.m19213(c7033.f34103));
     }
 
-    public C12275(C21545 c21545) {
-        this.f41049 = c21545.m11356();
-        this.f41047 = c21545.m48264();
-        C1644 c1644M48267 = c21545.m48267();
-        c1644M48267 = c1644M48267 == null ? c21545.m48266() : c1644M48267;
-        this.f41050 = c1644M48267 != null ? c1644M48267.m5535() : -1L;
-        long jM48265 = c21545.m48265();
-        this.f41051 = C20799.m46784(jM48265, EnumC4611.FILE_ATTRIBUTE_DIRECTORY);
-        this.f41048 = C20799.m46784(jM48265, EnumC4611.FILE_ATTRIBUTE_HIDDEN);
+    @Override // java.lang.Comparable
+    public final int compareTo(Object obj) {
+        return this.f39463.compareTo(((C12275) obj).f39463);
+    }
+
+    public C12275(C5520 c5520, int i, C7033 c7033) {
+        this.f39463 = c5520;
+        this.f39462 = i;
+        this.f39464 = c7033;
+        if (c7033 != null) {
+            c7033.m19359(this);
+        }
+    }
+
+    public C12275(C24738 c24738, C17452 c17452, C4028 c4028, C12275 c12275) {
+        this.f39463 = (C5520) c24738.f80108.m49623(c4028.m12998() + (c12275 == null ? 0 : c12275.f39463.f34104));
+        this.f39462 = c4028.m12998();
+        C7033 c7033 = (C7033) c17452.m40955(EnumC15214.TYPE_CODE_ITEM, c4028.m12998());
+        this.f39464 = c7033;
+        if (c7033 != null) {
+            c7033.m19359(this);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m30654() {
+        return (((EnumC6266.STATIC.getValue() | EnumC6266.PRIVATE.getValue()) | EnumC6266.CONSTRUCTOR.getValue()) & this.f39462) != 0;
     }
 }

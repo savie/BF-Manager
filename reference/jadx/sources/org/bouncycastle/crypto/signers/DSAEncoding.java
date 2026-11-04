@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.signers;
 
 import java.math.BigInteger;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface DSAEncoding {
     BigInteger[] decode(BigInteger bigInteger, byte[] bArr);
 

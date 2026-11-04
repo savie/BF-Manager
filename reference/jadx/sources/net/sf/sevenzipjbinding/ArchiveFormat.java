@@ -1,25 +1,25 @@
 package net.sf.sevenzipjbinding;
 
-import l.C19150;
-import l.C20561;
-import l.C7155;
-import l.C8567;
-import l.C9978;
+import l.C11068;
+import l.C14139;
+import l.C22257;
+import l.C5103;
+import l.C7428;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public enum ArchiveFormat {
-    ZIP("Zip", C20561.class, true),
-    TAR("Tar", C7155.class, true),
+    ZIP("Zip", C11068.class, true),
+    TAR("Tar", C22257.class, true),
     SPLIT("Split", true),
     RAR("Rar", true),
     RAR5("Rar5", true),
     LZMA("Lzma", false),
     ISO("Iso", true),
     HFS("HFS", true),
-    GZIP("GZip", C9978.class, false),
+    GZIP("GZip", C5103.class, false),
     CPIO("Cpio", true),
-    BZIP2("BZip2", C8567.class, false),
-    SEVEN_ZIP("7z", C19150.class, true),
+    BZIP2("BZip2", C14139.class, false),
+    SEVEN_ZIP("7z", C7428.class, true),
     Z("Z", false),
     ARJ("Arj", true),
     CAB("Cab", true),

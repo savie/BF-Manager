@@ -1,59 +1,95 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import java.util.Iterator;
+import org.simpleframework.xml.core.AnnotationHandler;
 
-/* JADX INFO: renamed from: l.ۜᩳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: X6VB */
+/* JADX INFO: renamed from: l.ۜۚܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BSC */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6929 extends AbstractC17535 {
-
+public final class C6929 implements InterfaceC13530 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f23299;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f23300;
-
-    public C6929(String str, int i) {
-        this.f23300 = str;
-        this.f23299 = i;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C6929)) {
-            return false;
-        }
-        C6929 c6929 = (C6929) obj;
-        return this.f23299 == c6929.f23299 && C13638.equals(this.f23300, c6929.f23300);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f23300) + (this.f23299 * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f23300, Integer.valueOf(this.f23299)};
-        String[] strArrSplit = "text;replacements".length() == 0 ? new String[0] : "text;replacements".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C6929.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public static int m19207(int i) {
+        int i2 = i >> 7;
+        int i3 = (Integer.MIN_VALUE & i) == 0 ? 0 : -1;
+        boolean z = true;
+        int i4 = 0;
+        while (true) {
+            int i5 = i2;
+            int i6 = i;
+            i = i5;
+            if (!z) {
+                return i4;
             }
+            z = (i == i3 && (i & 1) == ((i6 >> 6) & 1)) ? false : true;
+            i2 = i >> 7;
+            i4++;
         }
-        sb.append("]");
-        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static int m19213(int i) {
+        int i2 = i >>> 7;
+        int i3 = 0;
+        while (i2 != 0) {
+            i2 >>>= 7;
+            i3++;
+        }
+        return i3 + 1;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static int m19212(int i, byte[] bArr) {
+        return (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m18586() {
-        return this.f23299;
+    public static int m19208(int i, byte[] bArr) {
+        return (bArr[i] & 255) | (bArr[i + 3] << 24) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 1] & 255) << 8);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m18587() {
-        return this.f23300;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static JSONObject m19209(String str) {
+        JSONObject jSONObject = new JSONObject(str);
+        JSONObject jSONObjectAdd = JSON.object().add("type", "object").add("additionalProperties", false).add("properties", jSONObject);
+        JSONArray jSONArrayArray = JSON.array();
+        Iterator it = jSONObject.names().iterator();
+        while (it.hasNext()) {
+            jSONArrayArray.add((String) it.next());
+        }
+        return jSONObjectAdd.add(AnnotationHandler.REQUIRED, jSONArrayArray);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static long m19214(int i, byte[] bArr) {
+        return (((long) bArr[i]) & 255) | (((long) bArr[i + 7]) << 56) | ((((long) bArr[i + 6]) & 255) << 48) | ((((long) bArr[i + 5]) & 255) << 40) | ((((long) bArr[i + 4]) & 255) << 32) | ((((long) bArr[i + 3]) & 255) << 24) | ((((long) bArr[i + 2]) & 255) << 16) | ((((long) bArr[i + 1]) & 255) << 8);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m19215(int i, int i2, byte[] bArr) {
+        bArr[i] = (byte) (i2 & 255);
+        bArr[i + 1] = (byte) ((i2 >>> 8) & 255);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m19210(int i, int i2, byte[] bArr) {
+        bArr[i] = (byte) (i2 & 255);
+        bArr[i + 1] = (byte) ((i2 >>> 8) & 255);
+        bArr[i + 2] = (byte) ((i2 >>> 16) & 255);
+        bArr[i + 3] = (byte) ((i2 >>> 24) & 255);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m19211(long j, int i, byte[] bArr) {
+        bArr[i] = (byte) (j & 255);
+        bArr[i + 1] = (byte) ((j >>> 8) & 255);
+        bArr[i + 2] = (byte) ((j >>> 16) & 255);
+        bArr[i + 3] = (byte) ((j >>> 24) & 255);
+        bArr[i + 4] = (byte) ((j >>> 32) & 255);
+        bArr[i + 5] = (byte) ((j >>> 40) & 255);
+        bArr[i + 6] = (byte) ((j >>> 48) & 255);
+        bArr[i + 7] = (byte) ((j >>> 56) & 255);
     }
 }

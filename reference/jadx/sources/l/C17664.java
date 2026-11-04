@@ -1,138 +1,151 @@
 package l;
 
-import java.io.Reader;
-import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܿ᩺᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B2YE */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17664 extends Reader implements Serializable {
-    public static final long serialVersionUID = 3724187752191401220L;
+/* JADX INFO: renamed from: l.ܽܶۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C17664 extends AbstractC10249 implements Consumer, Iterable, InterfaceC22091 {
+    public Object[] e = new Object[1 << 4];
+    public Object[][] f;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f56125;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f56126;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f56127;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Integer f56128;
-
-    @Override // java.io.Reader
-    public final boolean markSupported() {
-        return true;
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    public C17664(String str) {
-        this.f56126 = str == null ? "" : str;
-        this.f56128 = Integer.MAX_VALUE;
-        this.f56125 = 0;
-        this.f56127 = 0;
+    @Override // java.lang.Iterable
+    public final /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // java.io.Reader, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        this.f56125 = 0;
-        this.f56127 = 0;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private int m41144() {
-        int length = this.f56126.length();
-        Integer num = this.f56128;
-        return Math.min(length, num == null ? Integer.MAX_VALUE : num.intValue());
-    }
-
-    @Override // java.io.Reader
-    public final void mark(int i) {
-        this.f56127 = this.f56125;
-    }
-
-    @Override // java.io.Reader
-    public final int read() {
-        if (this.f56125 >= m41144()) {
-            return -1;
+    public final void p(long j) {
+        long length;
+        int i = this.c;
+        if (i == 0) {
+            length = this.e.length;
+        } else {
+            length = this.d[i] + ((long) this.f[i].length);
         }
-        int i = this.f56125;
-        this.f56125 = i + 1;
-        return this.f56126.charAt(i);
-    }
-
-    @Override // java.io.Reader
-    public final int read(char[] cArr, int i, int i2) {
-        if (this.f56125 >= m41144()) {
-            return -1;
-        }
-        C13638.requireNonNull(cArr, "array");
-        if (i2 < 0 || i < 0 || i + i2 > cArr.length) {
-            StringBuilder sb = new StringBuilder("Array Size=");
-            C23821.m52500(sb, cArr.length, ", offset=", i, ", length=");
-            sb.append(i2);
-            throw new IndexOutOfBoundsException(sb.toString());
-        }
-        CharSequence charSequence = this.f56126;
-        if (charSequence instanceof String) {
-            int iMin = Math.min(i2, m41144() - this.f56125);
-            int i3 = this.f56125;
-            ((String) charSequence).getChars(i3, i3 + iMin, cArr, i);
-            this.f56125 += iMin;
-            return iMin;
-        }
-        if (charSequence instanceof StringBuilder) {
-            int iMin2 = Math.min(i2, m41144() - this.f56125);
-            int i4 = this.f56125;
-            ((StringBuilder) charSequence).getChars(i4, i4 + iMin2, cArr, i);
-            this.f56125 += iMin2;
-            return iMin2;
-        }
-        if (charSequence instanceof StringBuffer) {
-            int iMin3 = Math.min(i2, m41144() - this.f56125);
-            int i5 = this.f56125;
-            ((StringBuffer) charSequence).getChars(i5, i5 + iMin3, cArr, i);
-            this.f56125 += iMin3;
-            return iMin3;
-        }
-        int i6 = 0;
-        for (int i7 = 0; i7 < i2; i7++) {
-            int i8 = read();
-            if (i8 == -1) {
-                break;
+        if (j > length) {
+            if (this.f == null) {
+                Object[][] objArr = new Object[8][];
+                this.f = objArr;
+                this.d = new long[8];
+                objArr[0] = this.e;
             }
-            cArr[i + i7] = (char) i8;
-            i6++;
+            int i2 = i + 1;
+            while (j > length) {
+                Object[][] objArr2 = this.f;
+                if (i2 >= objArr2.length) {
+                    int length2 = objArr2.length * 2;
+                    this.f = (Object[][]) Arrays.copyOf(objArr2, length2);
+                    this.d = Arrays.copyOf(this.d, length2);
+                }
+                int iMin = this.a;
+                if (i2 != 0 && i2 != 1) {
+                    iMin = Math.min((iMin + i2) - 1, 30);
+                }
+                int i3 = 1 << iMin;
+                Object[][] objArr3 = this.f;
+                objArr3[i2] = new Object[i3];
+                long[] jArr = this.d;
+                int i4 = i2 - 1;
+                jArr[i2] = jArr[i4] + ((long) objArr3[i4].length);
+                length += (long) i3;
+                i2++;
+            }
         }
-        return i6;
     }
 
-    @Override // java.io.Reader
-    public final boolean ready() {
-        return this.f56125 < m41144();
+    @Override // l.AbstractC10249
+    public final void clear() {
+        Object[][] objArr = this.f;
+        if (objArr != null) {
+            this.e = objArr[0];
+            int i = 0;
+            while (true) {
+                Object[] objArr2 = this.e;
+                if (i >= objArr2.length) {
+                    break;
+                }
+                objArr2[i] = null;
+                i++;
+            }
+            this.f = null;
+            this.d = null;
+        } else {
+            for (int i2 = 0; i2 < this.b; i2++) {
+                this.e[i2] = null;
+            }
+        }
+        this.b = 0;
+        this.c = 0;
     }
 
-    @Override // java.io.Reader
-    public final void reset() {
-        this.f56125 = this.f56127;
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return C13629.iterator(spliterator());
     }
 
-    @Override // java.io.Reader
-    public final long skip(long j) {
-        if (j < 0) {
-            throw new IllegalArgumentException(C15489.m37074(j, "Number of characters to skip is less than zero: "));
+    @Override // java.lang.Iterable, l.InterfaceC22091
+    public void forEach(Consumer consumer) {
+        for (int i = 0; i < this.c; i++) {
+            for (Object obj : this.f[i]) {
+                consumer.accept(obj);
+            }
         }
-        if (this.f56125 >= m41144()) {
-            return 0L;
+        for (int i2 = 0; i2 < this.b; i2++) {
+            consumer.accept(this.e[i2]);
         }
-        int iMin = (int) Math.min(m41144(), ((long) this.f56125) + j);
-        int i = iMin - this.f56125;
-        this.f56125 = iMin;
-        return i;
+    }
+
+    @Override // java.util.function.Consumer
+    public void accept(Object obj) {
+        long length;
+        int i = this.b;
+        Object[] objArr = this.e;
+        if (i == objArr.length) {
+            if (this.f == null) {
+                Object[][] objArr2 = new Object[8][];
+                this.f = objArr2;
+                this.d = new long[8];
+                objArr2[0] = objArr;
+            }
+            int i2 = this.c;
+            int i3 = i2 + 1;
+            Object[][] objArr3 = this.f;
+            if (i3 >= objArr3.length || objArr3[i3] == null) {
+                if (i2 == 0) {
+                    length = objArr.length;
+                } else {
+                    length = ((long) objArr3[i2].length) + this.d[i2];
+                }
+                p(length + 1);
+            }
+            this.b = 0;
+            int i4 = this.c + 1;
+            this.c = i4;
+            this.e = this.f[i4];
+        }
+        Object[] objArr4 = this.e;
+        int i5 = this.b;
+        this.b = i5 + 1;
+        objArr4[i5] = obj;
     }
 
     public final String toString() {
-        CharSequence charSequence = this.f56126;
-        return charSequence.subSequence(Math.min(charSequence.length(), 0), m41144()).toString();
+        ArrayList arrayList = new ArrayList();
+        C17359.requireNonNull(arrayList);
+        forEach(new C3249(15, arrayList));
+        return "SpinedBuffer:" + arrayList.toString();
+    }
+
+    @Override // java.lang.Iterable, l.InterfaceC22091, l.InterfaceC13409
+    public InterfaceC8409 spliterator() {
+        return new C0974(this, 0, this.c, 0, this.b);
     }
 }

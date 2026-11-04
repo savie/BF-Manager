@@ -1,94 +1,21 @@
 package l;
 
-import javax.crypto.Cipher;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.ShortBufferException;
-import javax.crypto.spec.DESedeKeySpec;
-import javax.crypto.spec.IvParameterSpec;
+import java.util.function.Supplier;
 
-/* JADX INFO: renamed from: l.ۖᩳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7Y6 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2698 implements InterfaceC1142 {
+/* JADX INFO: renamed from: l.ۖ۬᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q5YY */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2698 implements Supplier {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Cipher f10395;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22572 f8576;
 
-    @Override // l.InterfaceC1142
-    public final int getBlockSize() {
-        return 24;
+    public /* synthetic */ C2698(C22572 c22572) {
+        this.f8576 = c22572;
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo2383() {
-        return 8;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2384(int i) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2387(byte[] bArr) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2388() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۚ */
-    public final /* synthetic */ boolean mo2389() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۨ */
-    public final /* synthetic */ boolean mo2390() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ int mo2391() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo2392(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2386(int i, byte[] bArr, byte[] bArr2) throws Exception {
-        if (bArr2.length > 8) {
-            byte[] bArr3 = new byte[8];
-            System.arraycopy(bArr2, 0, bArr3, 0, 8);
-            bArr2 = bArr3;
-        }
-        if (bArr.length > 24) {
-            byte[] bArr4 = new byte[24];
-            System.arraycopy(bArr, 0, bArr4, 0, 24);
-            bArr = bArr4;
-        }
-        try {
-            this.f10395 = Cipher.getInstance("DESede/CBC/NoPadding");
-            this.f10395.init(i == 0 ? 1 : 2, SecretKeyFactory.getInstance("DESede").generateSecret(new DESedeKeySpec(bArr)), new IvParameterSpec(bArr2));
-        } catch (Exception e) {
-            this.f10395 = null;
-            throw e;
-        }
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2385(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
-        this.f10395.update(bArr, i, i2, bArr2, i3);
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return this.f8576.m33642();
     }
 }

@@ -121,13 +121,13 @@
 .method public static native getDeviceCount()I
 .end method
 
-.method public static native getDeviceInfo(ILl/ۙۡᩳ;)V
+.method public static native getDeviceInfo(ILl/ܶ۠ܶ;)V
 .end method
 
 .method public static native getHostApiCount()I
 .end method
 
-.method public static native getHostApiInfo(ILl/ܰۡᩳ;)V
+.method public static native getHostApiInfo(ILl/᩹۠ܶ;)V
 .end method
 
 .method public static native getVersion()I
@@ -145,10 +145,10 @@
 .method public static native initialize()V
 .end method
 
-.method public static native isFormatSupported(Ll/ۖۡᩳ;Ll/ۖۡᩳ;I)I
+.method public static native isFormatSupported(Ll/᩵۠ܶ;Ll/᩵۠ܶ;I)I
 .end method
 
-.method public static native openStream(Lcom/portaudio/BlockingStream;Ll/ۖۡᩳ;Ll/ۖۡᩳ;III)V
+.method public static native openStream(Lcom/portaudio/BlockingStream;Ll/᩵۠ܶ;Ll/᩵۠ܶ;III)V
 .end method
 
 .method public static native terminate()V

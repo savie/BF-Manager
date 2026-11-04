@@ -1,43 +1,33 @@
 package l;
 
-import android.widget.SeekBar;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ܽᩴ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 715M */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16835 implements SeekBar.OnSeekBarChangeListener {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22046 f53873;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f53874;
+/* JADX INFO: renamed from: l.ܺ۫ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R4MA */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16835 extends AbstractC22827 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceC19356 f53875;
+    public final C24975 f54295;
 
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onStartTrackingTouch(SeekBar seekBar) {
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f54296;
 
-    public C16835(DialogInterfaceC19356 dialogInterfaceC19356, String str, C22046 c22046) {
-        this.f53875 = dialogInterfaceC19356;
-        this.f53874 = str;
-        this.f53873 = c22046;
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f54297;
 
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onProgressChanged(SeekBar seekBar, int i, boolean z) {
-        if (i < 20) {
-            seekBar.setProgress(20);
-            return;
+    public C16835(C24975 c24975, C8565 c8565) {
+        this.f54295 = c24975;
+        int iM22996 = c8565.m22996();
+        this.f54297 = iM22996;
+        this.f54296 = c8565.m23001();
+        for (int i = 0; i < iM22996; i++) {
+            AbstractC21976.m49711(c8565);
         }
-        this.f53875.m44377(this.f53874 + i + "%)");
-        this.f53873.m48982(((float) i) / 100.0f);
     }
 
-    @Override // android.widget.SeekBar.OnSeekBarChangeListener
-    public final void onStopTrackingTouch(SeekBar seekBar) {
-        ApplicationC0716.f2992.edit().mo4065((int) (this.f53873.m48980() * 100.0f), "bottom_content_view_ratio_int").apply();
+    @Override // l.InterfaceC13062
+    public final List getValue() {
+        return new C25041(this, this.f54295, this.f54296, this.f54297);
     }
 }

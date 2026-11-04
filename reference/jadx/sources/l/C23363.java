@@ -1,34 +1,54 @@
 package l;
 
-import java.util.EnumSet;
+import java.nio.charset.StandardCharsets;
 
-/* JADX INFO: renamed from: l.᩻֨۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: renamed from: l.᩹ۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: FA1X */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23363 extends AbstractC3956 {
+public final class C23363 implements InterfaceC17395 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0429 f75685;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public String f75648;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C23363(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
-        super(c0429, abstractC11242, enumC11368, enumSet);
-        this.f75685 = c0429;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f75649 = false;
+
+    @Override // l.InterfaceC17395
+    /* JADX INFO: renamed from: ᩷ */
+    public final byte mo10574() {
+        return (byte) 10;
     }
 
-    @Override // l.AbstractC3956
+    public C23363(String str) {
+        this.f75648 = str;
+    }
+
+    @Override // l.InterfaceC2149
     /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        C0429 c0429 = this.f75685;
-        if (!c0429.f1953) {
-            c0429.f1990 += i;
-            return;
-        }
-        c0429.m2248();
-        c0429.m2248();
-        c0429.f1990 += c0429.m2245();
-        c0429.f1990 = (c0429.m2248() * '\b') + c0429.f1990;
-        c0429.m2240(abstractC23903, EnumC13130.MEMBER);
-        ((C18258) abstractC23903).f58261 = null;
+    public final int mo6138(int i, int i2, byte[] bArr) {
+        this.f75649 = bArr[i] != 0;
+        int iM2322 = C0481.m2322(i + 16, bArr);
+        int i3 = i + 20;
+        byte[] bArr2 = new byte[iM2322];
+        System.arraycopy(bArr, i3, bArr2, 0, iM2322);
+        int i4 = i3 + iM2322;
+        this.f75648 = new String(bArr2, StandardCharsets.UTF_16LE);
+        return i4 - i;
+    }
+
+    @Override // l.InterfaceC17064
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo10573(int i, byte[] bArr) {
+        bArr[i] = this.f75649 ? (byte) 1 : (byte) 0;
+        byte[] bytes = this.f75648.getBytes(StandardCharsets.UTF_16LE);
+        C0481.m2323(bytes.length, i + 16, bArr);
+        int i2 = i + 20;
+        System.arraycopy(bytes, 0, bArr, i2, bytes.length);
+        return (i2 + bytes.length) - i;
+    }
+
+    @Override // l.InterfaceC17064
+    public final int size() {
+        return (this.f75648.length() * 2) + 20;
     }
 }

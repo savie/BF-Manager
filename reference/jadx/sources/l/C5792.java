@@ -1,54 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1C7F */
+import android.text.Editable;
+import android.text.Spannable;
+import android.text.TextWatcher;
+import android.text.style.UpdateAppearance;
+
+/* JADX INFO: renamed from: l.ۚܽ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: U5MD */
 /* JADX INFO: loaded from: classes3.dex */
-public class C5792 extends AbstractC2450 implements Cloneable {
-    public static final long serialVersionUID = -7046029254386353129L;
-
-    public final void clear() {
+public final class C5792 implements TextWatcher {
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
     }
 
-    public int hashCode() {
-        return 0;
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.AbstractC2450, l.InterfaceC6456
-    public final int size() {
-        return 0;
-    }
-
-    public String toString() {
-        return "{}";
-    }
-
-    @Override // l.InterfaceC17081
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo15965(char c) {
-        return false;
-    }
-
-    @Override // l.AbstractC2450, l.InterfaceC17081
-    /* JADX INFO: renamed from: ۨ */
-    public final Object mo7437() {
-        return null;
-    }
-
-    @Override // l.InterfaceC17081
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Object mo15966(char c) {
-        return null;
-    }
-
-    public Object clone() {
-        return C23432.f75859;
-    }
-
-    public boolean equals(Object obj) {
-        return (obj instanceof InterfaceC6456) && ((InterfaceC6456) obj).size() == 0;
-    }
-
-    private Object readResolve() {
-        return C23432.f75859;
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+        if (charSequence instanceof Spannable) {
+            Spannable spannable = (Spannable) charSequence;
+            UpdateAppearance[] updateAppearanceArr = (UpdateAppearance[]) spannable.getSpans(i, i3 + i, UpdateAppearance.class);
+            if (updateAppearanceArr == null || updateAppearanceArr.length <= 0) {
+                return;
+            }
+            for (UpdateAppearance updateAppearance : updateAppearanceArr) {
+                spannable.removeSpan(updateAppearance);
+            }
+        }
     }
 }

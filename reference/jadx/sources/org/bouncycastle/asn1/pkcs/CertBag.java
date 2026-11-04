@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertBag extends ASN1Object {
     public ASN1ObjectIdentifier certId;
     public ASN1Encodable certValue;

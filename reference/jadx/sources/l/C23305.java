@@ -1,27 +1,90 @@
 package l;
 
-import bin.mt.json.JSON;
-import com.google.android.material.motion.MotionUtils;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.DosFileAttributes;
+import java.nio.file.attribute.PosixFileAttributes;
 
-/* JADX INFO: renamed from: l.᩺᩺۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 46X2 */
+/* JADX INFO: renamed from: l.᩹ۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C23305 implements InterfaceC11974 {
+public final /* synthetic */ class C23305 implements InterfaceC8665 {
+    public final /* synthetic */ BasicFileAttributes a;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f75557;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f75558;
-
-    public /* synthetic */ C23305(String str, String str2) {
-        this.f75557 = str;
-        this.f75558 = str2;
+    public /* synthetic */ C23305(BasicFileAttributes basicFileAttributes) {
+        this.a = basicFileAttributes;
     }
 
-    @Override // l.InterfaceC11974
-    /* JADX INFO: renamed from: ۙ */
-    public final C12731 mo15512(String str, String str2, String str3) {
-        return C12731.m31631(str, str2, "fatal", null, C3184.m9603(MotionUtils.EASING_TYPE_PATH, this.f75557, "policyRevision", this.f75558).add("operation", "check_parent_links").add("backendReason", str3).add("changed", false).add("stateKnown", true).add("warnings", JSON.array()));
+    public static /* synthetic */ InterfaceC8665 a(BasicFileAttributes basicFileAttributes) {
+        if (basicFileAttributes == null) {
+            return null;
+        }
+        if (basicFileAttributes instanceof C3167) {
+            return ((C3167) basicFileAttributes).a;
+        }
+        if (basicFileAttributes instanceof DosFileAttributes) {
+            return new C6151((DosFileAttributes) basicFileAttributes);
+        }
+        if (!(basicFileAttributes instanceof PosixFileAttributes)) {
+            return new C23305(basicFileAttributes);
+        }
+        PosixFileAttributes posixFileAttributes = (PosixFileAttributes) basicFileAttributes;
+        return posixFileAttributes instanceof C6896 ? ((C6896) posixFileAttributes).a : new C8387(posixFileAttributes);
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ C21813 creationTime() {
+        return AbstractC1758.m(this.a.creationTime());
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        BasicFileAttributes basicFileAttributes = this.a;
+        if (obj instanceof C23305) {
+            obj = ((C23305) obj).a;
+        }
+        return basicFileAttributes.equals(obj);
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ Object fileKey() {
+        return this.a.fileKey();
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ boolean isDirectory() {
+        return this.a.isDirectory();
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ boolean isOther() {
+        return this.a.isOther();
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ boolean isRegularFile() {
+        return this.a.isRegularFile();
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ boolean isSymbolicLink() {
+        return this.a.isSymbolicLink();
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ C21813 lastAccessTime() {
+        return AbstractC1758.m(this.a.lastAccessTime());
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ C21813 lastModifiedTime() {
+        return AbstractC1758.m(this.a.lastModifiedTime());
+    }
+
+    @Override // l.InterfaceC8665
+    public final /* synthetic */ long size() {
+        return this.a.size();
     }
 }

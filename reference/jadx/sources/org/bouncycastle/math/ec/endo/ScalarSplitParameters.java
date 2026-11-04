@@ -2,7 +2,7 @@ package org.bouncycastle.math.ec.endo;
 
 import com.alipay.sdk.m.c0.c;
 import java.math.BigInteger;
-import l.C16523;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class ScalarSplitParameters {
@@ -56,7 +56,7 @@ public class ScalarSplitParameters {
 
     public static void checkVector(BigInteger[] bigIntegerArr, String str) {
         if (bigIntegerArr == null || bigIntegerArr.length != 2 || bigIntegerArr[0] == null || bigIntegerArr[1] == null) {
-            throw new IllegalArgumentException(C16523.m38890("'", str, "' must consist of exactly 2 (non-null) values"));
+            throw new IllegalArgumentException(C14442.m34865("'", str, "' must consist of exactly 2 (non-null) values"));
         }
     }
 }

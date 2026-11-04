@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.modes.gcm;
 import java.util.ArrayList;
 import java.util.List;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Tables1kGCMExponentiator implements GCMExponentiator {
     public List lookupPowX2;
 

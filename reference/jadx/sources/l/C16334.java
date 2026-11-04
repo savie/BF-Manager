@@ -1,92 +1,108 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Arrays;
+import android.content.DialogInterface;
+import bin.mt.plus.R;
+import java.io.IOException;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-/* JADX INFO: renamed from: l.ܽ֫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D2QB */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16334 implements Serializable {
+/* JADX INFO: renamed from: l.ܶ᩶۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 27JL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16334 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f52619 = 0;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23794 f53051;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final C16334 f52620 = new C16334(new int[0]);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f53052;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int[] f52621;
+    public C16334(AbstractActivityC17204 abstractActivityC17204, C23794 c23794) {
+        this.f53052 = abstractActivityC17204;
+        this.f53051 = c23794;
+    }
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f52622;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8191(this.f53052, R.string.MT_Protector);
+        C13511 c13511 = this.f7780;
+        C17359.requireNonNull(c13511);
+        c13511.m33188(new RunnableC22836(5, c13511));
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws Throwable {
+        C23794 c23794 = this.f53051;
+        final AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+        C15723 c15723 = null;
+        try {
+            C15723 c15723M45895 = new C19978().m45895(c23794.f77076, c23794.f77075, c23794.f77073);
+            C25198.m56177(c15723M45895);
+            try {
+                if (c23794.f77079) {
+                    c15723M45895.m37610(c23794.f77078, c23794.m53076());
+                } else {
+                    c15723M45895.m37619(c23794.f77077);
+                }
+                c15723M45895.m37609(new Runnable() { // from class: l.ܽ᩶۫
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        C16334.m38823(this.f58484, atomicBoolean);
+                    }
+                });
+                try {
+                    c15723M45895.m37608();
+                    c15723M45895.m37625();
+                } catch (IOException e) {
+                    if (!atomicBoolean.get()) {
+                        throw new Exception(C21576.m49088(R.string.MT_Protector) + ": " + e.getMessage(), e);
+                    }
+                    throw new Exception(C21576.m49088(R.string.MT_Protector) + ": " + e.getMessage(), e);
+                }
+            } catch (Throwable th) {
+                th = th;
+                c15723 = c15723M45895;
+                if (c15723 != null) {
+                    c15723.m37625();
+                }
+                throw th;
+            }
+        } catch (Throwable th2) {
+            th = th2;
+        }
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m38508(int[] iArr) {
-        if (iArr.length == 0) {
+    public static /* synthetic */ void m38823(C16334 c16334, AtomicBoolean atomicBoolean) {
+        c16334.f7780.m33186(R.string.MT_Protector);
+        atomicBoolean.set(true);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f7780.m33196()) {
             return;
         }
-        new C16334(Arrays.copyOf(iArr, iArr.length));
+        C22673.m51152(R.string.MT_Protector);
     }
 
-    public C16334(int[] iArr) {
-        int length = iArr.length;
-        this.f52621 = iArr;
-        this.f52622 = length;
-    }
-
-    public Object readResolve() {
-        return this.f52622 == 0 ? f52620 : this;
-    }
-
-    public final String toString() {
-        int i = this.f52622;
-        if (i == 0) {
-            return "[]";
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f7780.m33196()) {
+            return;
         }
-        StringBuilder sb = new StringBuilder(i * 5);
-        sb.append('[');
-        int[] iArr = this.f52621;
-        sb.append(iArr[0]);
-        for (int i2 = 1; i2 < i; i2++) {
-            sb.append(", ");
-            sb.append(iArr[i2]);
-        }
-        sb.append(']');
-        return sb.toString();
+        this.f53052.m40401(exc, (DialogInterface.OnDismissListener) null);
     }
 
-    public final boolean equals(Object obj) {
-        C16334 c16334;
-        int i;
-        int i2;
-        if (obj == this) {
-            return true;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        if (this.f7780.m33196()) {
+            return;
         }
-        if ((obj instanceof C16334) && (i2 = this.f52622) == (i = (c16334 = (C16334) obj).f52622)) {
-            for (int i3 = 0; i3 < i2; i3++) {
-                C18304.m42510(i3, i2);
-                int i4 = this.f52621[i3];
-                C18304.m42510(i3, i);
-                if (i4 == c16334.f52621[i3]) {
-                }
-            }
-            return true;
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        int i = 1;
-        for (int i2 = 0; i2 < this.f52622; i2++) {
-            i = (i * 31) + this.f52621[i2];
-        }
-        return i;
-    }
-
-    public Object writeReplace() {
-        int[] iArr = this.f52621;
-        int length = iArr.length;
-        int i = this.f52622;
-        return i < length ? new C16334(Arrays.copyOfRange(iArr, 0, i)) : this;
+        m8196();
     }
 }

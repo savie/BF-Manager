@@ -1,67 +1,90 @@
 package l;
 
+import android.os.Bundle;
+import bin.mt.plugin.api.util.ResultCallback;
 import bin.mt.plus.R;
-import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.᩹ۜۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7JF */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C22112 implements InterfaceC16127 {
+/* JADX INFO: renamed from: l.᩷ܰ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22112 extends C9959 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0944 f71593;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7941 f71262;
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    public C22112(C7941 c7941) {
+        this.f71262 = c7941;
     }
 
-    @Override // l.InterfaceC6456
-    public final /* synthetic */ boolean containsKey(Object obj) {
-        return true;
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo4583() {
+        String string = this.f71262.f23990.getString("filePath");
+        return string == null ? "untitled" : C11293.m28558(string);
     }
 
-    @Override // l.InterfaceC6456
-    public final /* synthetic */ Integer get(Object obj) {
-        return C21065.m47474(this, obj);
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ۤ */
+    public final String mo10079() {
+        String string = this.f71262.f23990.getString("filePath");
+        if (string == null || !string.equals("untitled")) {
+            return string;
+        }
+        return null;
     }
 
-    @Override // l.InterfaceC6456
-    public final /* synthetic */ int size() {
-        return -1;
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ܳ */
+    public final boolean mo25792() {
+        return this.f71262.m21577();
     }
 
-    @Override // l.InterfaceC16127
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo25793() {
+        C7941 c7941 = this.f71262;
+        if (c7941.m21577()) {
+            return c7941.f26374.f52982.m34016();
+        }
+        return 0;
+    }
+
+    @Override // l.C9959
     /* JADX INFO: renamed from: ۙ */
-    public final int mo18019(int i, Object obj) {
-        throw null;
+    public final int mo25790() {
+        C7941 c7941 = this.f71262;
+        if (c7941.m21577()) {
+            return c7941.f26374.f52991;
+        }
+        return 0;
     }
 
-    @Override // l.InterfaceC16127
+    @Override // l.C9959
     /* JADX INFO: renamed from: ۙ */
-    public final int mo18020(Object obj) {
-        throw null;
+    public final void mo25791(int i, ResultCallback resultCallback) {
+        C7941 c7941 = this.f71262;
+        if (c7941.m21577()) {
+            c7941.m21523(i, (Runnable) null).m52931((InterfaceC2017) new C0156(2, resultCallback));
+        } else if (resultCallback != null) {
+            resultCallback.onFailure(ResultCallback.ERROR_UNSUPPORTED_OPERATION);
+        }
     }
 
-    @Override // l.InterfaceC16127
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo18022(Object obj) {
-        return this.f71593.f3753.size() + R.anim.MT_Protector;
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ᩴ */
+    public final boolean mo4582() {
+        return this.f71262.m19933();
     }
 
-    @Override // java.util.function.ToIntFunction
-    public final int applyAsInt(Object obj) {
-        return mo18022(obj);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return get(obj);
-    }
-
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public final Function mo33696andThen(Function function) {
-        throw new NoSuchMethodError();
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo4581(ResultCallback resultCallback) {
+        C7941 c7941 = this.f71262;
+        if (c7941.m19941() && c7941.f26399 != null) {
+            c7941.f26401 = resultCallback;
+            c7941.f26399.m53470(null, R.string.MT_Protector, c7941.m19934().f30601.getName(), Bundle.EMPTY);
+            return;
+        }
+        c7941.m21628((ActivityC18143) c7941.requireActivity(), resultCallback);
     }
 }

@@ -1,14 +1,8 @@
 .class public interface abstract Ll/᩻ܶ᩵;
 .super Ljava/lang/Object;
-.source "664N"
+.source "H5AJ"
 
 
 # virtual methods
-.method public abstract ۙ(Ljava/io/BufferedReader;)Ljava/lang/String;
-.end method
-
-.method public abstract ۙ(Ljava/util/LinkedList;)Ljava/util/List;
-.end method
-
-.method public abstract ۙ(Ljava/lang/String;)Ll/ۧܶ᩵;
+.method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
 .end method

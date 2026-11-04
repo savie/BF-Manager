@@ -1,23 +1,51 @@
 .class public final Ll/ܿ۬;
 .super Ljava/lang/Object;
-.source "495M"
+.source "33S4"
 
 
 # direct methods
-.method public static ۙ(Ll/۫۬;I)V
-    .locals 0
+.method public static ۙ(Ll/۬ۧ;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 2
 
-    .line 5
-    invoke-virtual {p0, p1}, Ll/۫۬;->setHeaderTitleInt(I)Ll/۫۬;
+    .line 362
+    new-instance v0, Ll/ۙᩳᩴ;
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public static ۙ(Ll/۫۬;Ljava/lang/CharSequence;)V
-    .locals 0
+    invoke-direct {v0, v1, p0}, Ll/ۙᩳᩴ;-><init>(ILjava/lang/Object;)V
 
-    .line 10
-    invoke-virtual {p0, p1}, Ll/۫۬;->setHeaderTitleInt(Ljava/lang/CharSequence;)Ll/۫۬;
+    .line 278
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return-void
+    const/16 v1, 0x19
+
+    if-lt p0, v1, :cond_0
+
+    .line 280
+    new-instance p0, Ll/ܰ۬;
+
+    invoke-direct {p0, p1, v0}, Ll/ܰ۬;-><init>(Landroid/view/inputmethod/InputConnection;Ll/ۙᩳᩴ;)V
+
+    return-object p0
+
+    .line 293
+    :cond_0
+    invoke-static {p2}, Ll/ۘ۬;->ۙ(Landroid/view/inputmethod/EditorInfo;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 294
+    array-length p0, p0
+
+    if-nez p0, :cond_1
+
+    return-object p1
+
+    .line 298
+    :cond_1
+    new-instance p0, Ll/᩶۬;
+
+    invoke-direct {p0, p1, v0}, Ll/᩶۬;-><init>(Landroid/view/inputmethod/InputConnection;Ll/ۙᩳᩴ;)V
+
+    return-object p0
 .end method

@@ -1,36 +1,39 @@
 .class public final Ll/ۗۢ;
 .super Ljava/lang/Object;
-.source "44RH"
+.source "S3QK"
 
 
 # direct methods
-.method public static ۙ(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 297
+    new-instance v0, Ljava/util/Locale;
+
+    const-string v1, "en"
+
+    const-string v2, "XA"
+
+    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/Locale;
+
+    const-string v1, "ar"
+
+    const-string v2, "XB"
+
+    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static ۙ(Ljava/lang/String;)Ljava/util/Locale;
     .locals 0
 
-    .line 5194
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getStateDescription()Ljava/lang/CharSequence;
+    .line 311
+    invoke-static {p0}, Ljava/util/Locale;->forLanguageTag(Ljava/lang/String;)Ljava/util/Locale;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public static ۙ(IFFF)Ljava/lang/Object;
-    .locals 1
-
-    .line 5199
-    new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;-><init>(IFFF)V
-
-    return-object v0
-.end method
-
-.method public static ۙ(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    .line 5189
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setStateDescription(Ljava/lang/CharSequence;)V
-
-    return-void
 .end method

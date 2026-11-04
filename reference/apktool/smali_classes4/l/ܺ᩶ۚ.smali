@@ -1,50 +1,26 @@
 .class public final synthetic Ll/ܺ᩶ۚ;
 .super Ljava/lang/Object;
-.source "N17O"
+.source "P6V4"
 
 # interfaces
-.implements Ll/۬᩶ۚ;
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/۠֡ۚ;
-
-.field public final synthetic ۨ:Ljava/lang/String;
-
-.field public final synthetic ܰ:Ljava/lang/String;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/۠֡ۚ;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ܺ᩶ۚ;->ۙ:Ll/۠֡ۚ;
-
-    iput-object p2, p0, Ll/ܺ᩶ۚ;->ܰ:Ljava/lang/String;
-
-    iput-object p3, p0, Ll/ܺ᩶ۚ;->ۨ:Ljava/lang/String;
-
-    return-void
-.end method
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
 
-    .line 0
-    iget-object v0, p0, Ll/ܺ᩶ۚ;->ܰ:Ljava/lang/String;
+    .line 275
+    new-instance v0, Ljava/lang/Thread;
 
-    iget-object v1, p0, Ll/ܺ᩶ۚ;->ۨ:Ljava/lang/String;
+    const-string v1, "mcp-text-search-cache"
 
-    iget-object v2, p0, Ll/ܺ᩶ۚ;->ۙ:Ll/۠֡ۚ;
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    invoke-static {v2, v0, v1}, Ll/۠֡ۚ;->ۙ(Ll/۠֡ۚ;Ljava/lang/String;Ljava/lang/String;)Ll/ۡ֡ۚ;
+    const/4 p1, 0x1
 
-    move-result-object v0
+    .line 276
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
 
     return-object v0
 .end method

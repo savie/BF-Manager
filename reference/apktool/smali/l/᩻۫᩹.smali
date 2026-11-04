@@ -1,13 +1,19 @@
-.class public final synthetic Ll/᩻۫᩹;
+.class public abstract Ll/᩻۫᩹;
 .super Ljava/lang/Object;
-.source "Y5PI"
+.source "G90S"
 
 # interfaces
-.implements Ll/ۜܿ᩹;
+.implements Landroid/graphics/drawable/Drawable$Callback;
 
 
 # virtual methods
-.method public final call()V
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 0
 
     return-void

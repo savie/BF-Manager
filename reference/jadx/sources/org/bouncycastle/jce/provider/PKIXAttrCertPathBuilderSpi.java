@@ -29,7 +29,7 @@ import org.bouncycastle.x509.ExtendedPKIXParameters;
 import org.bouncycastle.x509.X509AttributeCertStoreSelector;
 import org.bouncycastle.x509.X509AttributeCertificate;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXAttrCertPathBuilderSpi extends CertPathBuilderSpi {
     public Exception certPathException;
 

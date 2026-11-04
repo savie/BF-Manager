@@ -1,63 +1,62 @@
 package l;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ۢۚۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5HP */
+/* JADX INFO: renamed from: l.ۡ۫ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z76C */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9375 implements Predicate {
+public final class C9375 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f31743;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C18459 f30450;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f31744;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f30451;
 
-    public /* synthetic */ C9375(int i, Object obj) {
-        this.f31743 = i;
-        this.f31744 = obj;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24691(C18459 c18459) {
+        this.f30450 = c18459;
+        this.f30451 = false;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f31743) {
-            case 0:
-                break;
-            case 1:
-                break;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24689(char c) {
+        C18459 c18459 = this.f30450;
+        if (c18459 == null) {
+            throw new IllegalStateException("Output builder is not set");
         }
-        return C8512.$default$negate(this);
+        if (this.f30451) {
+            c18459.append('\n');
+            this.f30451 = false;
+            if (c == '\n') {
+                return;
+            }
+        }
+        if (c == '\r') {
+            this.f30451 = true;
+        } else {
+            this.f30450.append(c);
+        }
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24690(CharSequence charSequence, int i, int i2) {
+        if (charSequence == null) {
+            charSequence = "null";
+        }
+        while (i < i2) {
+            m24689(charSequence.charAt(i));
+            i++;
+        }
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f31743) {
-            case 0:
-                String str = (String) obj;
-                Iterator it = ((List) this.f31744).iterator();
-                while (it.hasNext()) {
-                    if (str.startsWith((String) it.next())) {
-                        return false;
-                    }
-                }
-                return true;
-            case 1:
-                AbstractC23903 abstractC23903 = (AbstractC23903) obj;
-                return (abstractC23903 == ((AbstractC23903) this.f31744) || abstractC23903.f77449.mo1926()) ? false : true;
-            default:
-                return C12325.m30624((C12325) this.f31744, (C19670) obj);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24688() {
+        C18459 c18459 = this.f30450;
+        if (c18459 == null) {
+            throw new IllegalStateException("Output builder is not set");
+        }
+        if (this.f30451) {
+            c18459.append('\n');
+            this.f30451 = false;
         }
     }
 }

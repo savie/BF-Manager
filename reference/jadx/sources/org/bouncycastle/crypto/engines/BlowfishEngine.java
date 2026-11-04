@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicePurpose;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BlowfishEngine implements BlockCipher {
     public static final int BLOCK_SIZE = 8;
     public static final int[] KP = {608135816, -2052912941, 320440878, 57701188, -1542899678, 698298832, 137296536, -330404727, 1160258022, 953160567, -1101764913, 887688300, -1062458953, -914599715, 1065670069, -1253635817, -1843997223, -1988494565};
@@ -173,7 +173,7 @@ public final class BlowfishEngine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to Blowfish init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to Blowfish init - ", cipherParameters));
         }
         this.encrypting = z;
         byte[] key = ((KeyParameter) cipherParameters).getKey();

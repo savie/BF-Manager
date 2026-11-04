@@ -42,7 +42,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0}, Ll/᩺ۖۜ;->ۙ(Landroid/content/res/Configuration;)I
+    invoke-static {p0}, Ll/᩵ۨܽ;->ۙ(Landroid/content/res/Configuration;)I
 
     move-result v0
 
@@ -59,7 +59,7 @@
 
     move-result v0
 
-    invoke-static {p0}, Ll/᩺ۖۜ;->ۙ(Landroid/content/res/Configuration;)I
+    invoke-static {p0}, Ll/᩵ۨܽ;->ۙ(Landroid/content/res/Configuration;)I
 
     move-result p0
 
@@ -70,7 +70,7 @@
     const/16 v1, 0x3e8
 
     .line 57
-    invoke-static {v0, p0, v1}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {v0, p0, v1}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result p0
 

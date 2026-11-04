@@ -107,7 +107,7 @@ public class s {
                 UMWorkDispatch.sendEvent(context, o.a.a, CoreProtocol.getInstance(context), jSONObject);
                 return;
             }
-            UMLog.aq(j.f77936l, 0, "\\|");
+            UMLog.aq(j.f82052l, 0, "\\|");
         } catch (Throwable unused2) {
         }
     }

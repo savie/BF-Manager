@@ -1,435 +1,159 @@
 package l;
 
-import com.alipay.sdk.m.y.q;
-import com.google.android.material.color.MaterialColors;
-import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.umeng.analytics.pro.am;
-import java.io.Closeable;
-import java.io.IOException;
-import org.bouncycastle.crypto.engines.ThreefishEngine;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۗܺ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: ZAX9 */
+/* JADX INFO: renamed from: l.ۗۢ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46TC */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C3335 {
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m9936(C6707 c6707) {
-        while (c6707.m18132()) {
-            switch (c6707.m18135()) {
-                case '[':
-                    return false;
-                case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
-                    c6707.m18138();
-                    char cM18135 = c6707.m18135();
-                    switch (cM18135) {
-                        case '!':
-                        case '\"':
-                        case '#':
-                        case '$':
-                        case '%':
-                        case '&':
-                        case '\'':
-                        case '(':
-                        case ')':
-                        case '*':
-                        case '+':
-                        case ',':
-                        case WXMediaMessage.IMediaObject.TYPE_BUSINESS_CARD /* 45 */:
-                        case '.':
-                        case '/':
-                            c6707.m18138();
-                            break;
-                        default:
-                            switch (cM18135) {
-                                case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
-                                case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
-                                case '<':
-                                case '=':
-                                case '>':
-                                case '?':
-                                case '@':
-                                    c6707.m18138();
-                                    break;
-                                default:
-                                    switch (cM18135) {
-                                        case '[':
-                                        case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
-                                        case ']':
-                                        case MaterialColors.TONE_SURFACE_CONTAINER_LIGHT /* 94 */:
-                                        case '_':
-                                        case '`':
-                                            c6707.m18138();
-                                            break;
-                                        default:
-                                            switch (cM18135) {
-                                                case '{':
-                                                case '|':
-                                                case q.h /* 125 */:
-                                                case '~':
-                                                    break;
-                                                default:
-                                                    continue;
-                                            }
-                                            c6707.m18138();
-                                            break;
-                                    }
-                                    break;
-                            }
-                            break;
-                    }
-                    break;
-                case ']':
-                    return true;
-                default:
-                    c6707.m18138();
-                    break;
-            }
-        }
-        return true;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f10905;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C20424 f10906;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f10907;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C20424 f10908;
+
+    public C3335() {
+        this(new C20424(), new C20424(), 1L, false);
     }
 
-    /* JADX WARN: Code duplicated, block: B:53:0x0097 A[FALL_THROUGH] */
+    public C3335(C20424 c20424, C20424 c20425, long j, boolean z) {
+        if (j <= 0) {
+            throw new IllegalArgumentException("Invalid next history identity");
+        }
+        this.f10908 = c20424;
+        this.f10906 = c20425;
+        this.f10907 = j;
+        this.f10905 = z;
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m9933(C6707 c6707) {
-        char cM18135;
-        if (c6707.m18132()) {
-            if (c6707.m18136('<')) {
-                while (c6707.m18132() && (cM18135 = c6707.m18135()) != '\n' && cM18135 != '<') {
-                    if (cM18135 == '>') {
-                        c6707.m18138();
-                        return true;
-                    }
-                    if (cM18135 == '\\') {
-                        c6707.m18138();
-                        char cM18136 = c6707.m18135();
-                        switch (cM18136) {
-                            case '!':
-                            case '\"':
-                            case '#':
-                            case '$':
-                            case '%':
-                            case '&':
-                            case '\'':
-                            case '(':
-                            case ')':
-                            case '*':
-                            case '+':
-                            case ',':
-                            case WXMediaMessage.IMediaObject.TYPE_BUSINESS_CARD /* 45 */:
-                            case '.':
-                            case '/':
-                                c6707.m18138();
-                                break;
-                            default:
-                                switch (cM18136) {
-                                    case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
-                                    case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
-                                    case '<':
-                                    case '=':
-                                    case '>':
-                                    case '?':
-                                    case '@':
-                                        c6707.m18138();
-                                        break;
-                                    default:
-                                        switch (cM18136) {
-                                            case '[':
-                                            case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
-                                            case ']':
-                                            case MaterialColors.TONE_SURFACE_CONTAINER_LIGHT /* 94 */:
-                                            case '_':
-                                            case '`':
-                                                c6707.m18138();
-                                                break;
-                                            default:
-                                                switch (cM18136) {
-                                                    case '{':
-                                                    case '|':
-                                                    case q.h /* 125 */:
-                                                    case '~':
-                                                        break;
-                                                    default:
-                                                        continue;
-                                                }
-                                                c6707.m18138();
-                                                break;
-                                        }
-                                        break;
-                                }
-                                break;
-                        }
-                    } else {
-                        c6707.m18138();
-                    }
+    public final boolean m10990() {
+        return !this.f10908.isEmpty();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C20489 m10991() {
+        if (m10990()) {
+            return (C20489) this.f10908.last();
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3335 m10987(C10727 c10727, long j) {
+        if (!this.f10905 && m10990()) {
+            C20424 c20424 = this.f10908;
+            C20489 c20489 = (C20489) c20424.last();
+            EnumC22662 enumC22662 = EnumC22662.USER;
+            C20424 c20425 = c20489.f65630;
+            if (c20489.f65631 == enumC22662) {
+                long j2 = c20489.f65632;
+                long j3 = j >= j2 ? j - j2 : j2 - j;
+                if (j3 >= 0 && j3 < 250 && (c20425.m46836() <= 1 || !((C10727) c20425.last()).m27316())) {
+                    C20489 c204810 = (C20489) c20424.last();
+                    C20424 c20426 = c204810.f65630;
+                    C10727 c10728 = (C10727) c20426.last();
+                    long j4 = c10728.f34065;
+                    C21697 c21697 = c10728.f34064;
+                    long jM49259 = j4 + ((long) c21697.m49259());
+                    boolean zM27316 = c10727.m27316();
+                    C21498 c21498 = c10727.f34067;
+                    C10727 c10729 = (!zM27316 && c10728.f34070 == c10727.f34066 && ((long) c10727.f34065) == jM49259 && ((long) c21498.m48908()) == jM49259 && ((long) c21498.m48906()) == jM49259 && c10727.f34068.m49259() == 0) ? new C10727(c10728.f34065, c10728.f34066, c10727.f34070, c10728.f34067, c10728.f34068, c21697.m49257(c10727.f34064)) : null;
+                    return new C3335(c20424.m46837(new C20489(c204810.f65634, j, c204810.f65631, c10729 == null ? c20426.m46834(c10727) : c20426.m46837(c10729))), new C20424(), this.f10907, false);
                 }
+            }
+        }
+        return m10986(new C20424().m46834(c10727), j, EnumC22662.USER);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3335 m10988(C20424 c20424, long j) {
+        return m10986(c20424, j, EnumC22662.BATCH);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private C3335 m10986(C20424 c20424, long j, EnumC22662 enumC22662) {
+        if (c20424.isEmpty()) {
+            return this;
+        }
+        long j2 = this.f10907;
+        if (j2 == C25227.FOREVER_NS) {
+            throw new IllegalStateException("History identity exhausted");
+        }
+        return new C3335(this.f10908.m46834(new C20489(j2, j, enumC22662, c20424)), new C20424(), this.f10907 + 1, false);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3335 m10989(C24900 c24900, long j, boolean z) {
+        C20489 c20489;
+        long jM10985 = 0;
+        if (j < 0) {
+            throw new IllegalArgumentException("Invalid history budget");
+        }
+        C20424 c20424 = this.f10908;
+        C20424 c20425 = this.f10906;
+        c24900.m55482(c20424, c20425);
+        boolean z2 = z && j > 0;
+        if (z2 && c24900.m55481() > j) {
+            jM10985 = m10985(c20424) + m10985(c20425);
+        }
+        C20424 c20424RemoveFirst = c20424;
+        C20424 c20424RemoveFirst2 = c20425;
+        while (c24900.m55481() > j && (!z2 || (jM10985 != 1 && ((long) c20424RemoveFirst.m46836()) + ((long) c20424RemoveFirst2.m46836()) != 1))) {
+            if (!c20424RemoveFirst.isEmpty()) {
+                c20489 = (C20489) c20424RemoveFirst.get(0);
+                c20424RemoveFirst = c20424RemoveFirst.removeFirst();
+            } else if (!c20424RemoveFirst2.isEmpty()) {
+                c20489 = (C20489) c20424RemoveFirst2.get(0);
+                c20424RemoveFirst2 = c20424RemoveFirst2.removeFirst();
             } else {
-                boolean z = true;
-                int i = 0;
-                while (c6707.m18132()) {
-                    char cM18137 = c6707.m18135();
-                    if (cM18137 != ' ') {
-                        if (cM18137 == '\\') {
-                            c6707.m18138();
-                            char cM18138 = c6707.m18135();
-                            switch (cM18138) {
-                                default:
-                                    switch (cM18138) {
-                                        default:
-                                            switch (cM18138) {
-                                                case '[':
-                                                case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
-                                                case ']':
-                                                case MaterialColors.TONE_SURFACE_CONTAINER_LIGHT /* 94 */:
-                                                case '_':
-                                                case '`':
-                                                    break;
-                                                default:
-                                                    switch (cM18138) {
-                                                        case '{':
-                                                        case '|':
-                                                        case q.h /* 125 */:
-                                                        case '~':
-                                                            break;
-                                                        default:
-                                                            continue;
-                                                    }
-                                                    break;
-                                            }
-                                        case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
-                                        case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
-                                        case '<':
-                                        case '=':
-                                        case '>':
-                                        case '?':
-                                        case '@':
-                                            c6707.m18138();
-                                            break;
-                                    }
-                                case '!':
-                                case '\"':
-                                case '#':
-                                case '$':
-                                case '%':
-                                case '&':
-                                case '\'':
-                                case '(':
-                                case ')':
-                                case '*':
-                                case '+':
-                                case ',':
-                                case WXMediaMessage.IMediaObject.TYPE_BUSINESS_CARD /* 45 */:
-                                case '.':
-                                case '/':
-                                    c6707.m18138();
-                                    break;
-                            }
-                        } else if (cM18137 == '(') {
-                            i++;
-                            if (i <= 32) {
-                                c6707.m18138();
-                            }
-                        } else if (cM18137 != ')') {
-                            if (!Character.isISOControl(cM18137)) {
-                                c6707.m18138();
-                            }
-                        } else {
-                            if (i == 0) {
-                                return true;
-                            }
-                            i--;
-                            c6707.m18138();
-                        }
-                        z = false;
+                throw new IllegalStateException("Nonempty budget without history roots");
+            }
+            if (z2) {
+                Iterator it = c20489.f65630.iterator();
+                while (true) {
+                    C15948 c15948 = (C15948) it;
+                    if (!c15948.hasNext()) {
+                        break;
                     }
-                    return !z;
-                }
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final void m9932(Closeable closeable, Throwable th) throws IOException {
-        if (closeable != null) {
-            if (th == null) {
-                closeable.close();
-                return;
-            }
-            try {
-                closeable.close();
-            } catch (Throwable th2) {
-                C13672.m33380(th, th2);
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m9930(InterfaceC10768 interfaceC10768) {
-        StringBuilder sb = new StringBuilder("{");
-        int iMo2107 = interfaceC10768.mo2107();
-        if (iMo2107 == 1) {
-            sb.append(am.aE);
-            sb.append(interfaceC10768.mo3085());
-        } else if (iMo2107 == 2) {
-            sb.append(am.aE);
-            sb.append(interfaceC10768.mo3085());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3087());
-        } else if (iMo2107 == 3) {
-            sb.append(am.aE);
-            sb.append(interfaceC10768.mo3085());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3087());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3089());
-        } else if (iMo2107 == 4) {
-            sb.append(am.aE);
-            sb.append(interfaceC10768.mo3085());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3087());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3089());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3086());
-        } else if (iMo2107 == 5) {
-            sb.append(am.aE);
-            sb.append(interfaceC10768.mo3085());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3087());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3089());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3086());
-            sb.append(", v");
-            sb.append(interfaceC10768.mo3088());
-        }
-        sb.append('}');
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m9935(C6707 c6707) {
-        if (!c6707.m18132()) {
-            return false;
-        }
-        char cM18135 = c6707.m18135();
-        char c = '\"';
-        if (cM18135 != '\"') {
-            c = '\'';
-            if (cM18135 != '\'') {
-                if (cM18135 != '(') {
-                    return false;
-                }
-                c = ')';
-            }
-        }
-        c6707.m18138();
-        if (!m9934(c6707, c) || !c6707.m18132()) {
-            return false;
-        }
-        c6707.m18138();
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m9931(InterfaceC11742 interfaceC11742) {
-        int iMo2107 = interfaceC11742.mo2107();
-        if (iMo2107 == 0) {
-            return "{}";
-        }
-        StringBuilder sb = new StringBuilder("{v");
-        int iMo2109 = interfaceC11742.mo2109();
-        sb.append(iMo2109);
-        sb.append(" .. v");
-        sb.append((iMo2109 + iMo2107) - 1);
-        sb.append('}');
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m9934(C6707 c6707, char c) {
-        while (c6707.m18132()) {
-            char cM18135 = c6707.m18135();
-            if (cM18135 == '\\') {
-                c6707.m18138();
-                char cM18136 = c6707.m18135();
-                switch (cM18136) {
-                    case '!':
-                    case '\"':
-                    case '#':
-                    case '$':
-                    case '%':
-                    case '&':
-                    case '\'':
-                    case '(':
-                    case ')':
-                    case '*':
-                    case '+':
-                    case ',':
-                    case WXMediaMessage.IMediaObject.TYPE_BUSINESS_CARD /* 45 */:
-                    case '.':
-                    case '/':
-                        c6707.m18138();
+                    if (!((C10727) c15948.next()).m27316()) {
+                        jM10985--;
                         break;
-                    default:
-                        switch (cM18136) {
-                            case ThreefishEngine.Threefish256Cipher.ROTATION_6_0 /* 58 */:
-                            case ThreefishEngine.Threefish1024Cipher.ROTATION_2_6 /* 59 */:
-                            case '<':
-                            case '=':
-                            case '>':
-                            case '?':
-                            case '@':
-                                c6707.m18138();
-                                break;
-                            default:
-                                switch (cM18136) {
-                                    case '[':
-                                    case MaterialColors.TONE_SURFACE_CONTAINER_HIGH_LIGHT /* 92 */:
-                                    case ']':
-                                    case MaterialColors.TONE_SURFACE_CONTAINER_LIGHT /* 94 */:
-                                    case '_':
-                                    case '`':
-                                        c6707.m18138();
-                                        break;
-                                    default:
-                                        switch (cM18136) {
-                                            case '{':
-                                            case '|':
-                                            case q.h /* 125 */:
-                                            case '~':
-                                                break;
-                                            default:
-                                                continue;
-                                        }
-                                        c6707.m18138();
-                                        break;
-                                }
-                                break;
-                        }
-                        break;
+                    }
                 }
-            } else {
-                if (cM18135 == c) {
-                    return true;
-                }
-                if (c == ')' && cM18135 == '(') {
-                    return false;
-                }
-                c6707.m18138();
             }
+            c24900.m55482(c20424RemoveFirst, c20424RemoveFirst2);
         }
-        return true;
+        return (c20424RemoveFirst == c20424 && c20424RemoveFirst2 == c20425) ? this : new C3335(c20424RemoveFirst, c20424RemoveFirst2, this.f10907, this.f10905);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m9929(int i) {
-        char[] cArr = new char[2];
-        for (int i2 = 0; i2 < 2; i2++) {
-            cArr[1 - i2] = Character.forDigit(i & 15, 16);
-            i >>= 4;
+    public static long m10985(C20424 c20424) {
+        Iterator it = c20424.iterator();
+        long j = 0;
+        while (true) {
+            C15948 c15948 = (C15948) it;
+            if (!c15948.hasNext()) {
+                return j;
+            }
+            Iterator it2 = ((C20489) c15948.next()).f65630.iterator();
+            while (true) {
+                C15948 c15949 = (C15948) it2;
+                if (!c15949.hasNext()) {
+                    break;
+                }
+                if (!((C10727) c15949.next()).m27316()) {
+                    j++;
+                    break;
+                }
+            }
         }
-        return new String(cArr);
     }
 }

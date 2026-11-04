@@ -6,7 +6,7 @@
 # static fields
 .field public static final ۙ:Lcom/amazonaws/logging/Log;
 
-.field public static ܰ:Ljava/util/ArrayList;
+.field public static ᩷:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     .line 47
     :try_start_0
-    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
 
     if-nez v1, :cond_0
 
@@ -44,7 +44,7 @@
 
     .line 51
     :cond_0
-    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -69,7 +69,7 @@
     check-cast v1, Lcom/amazonaws/regions/Region;
 
     .line 78
-    invoke-virtual {v1}, Lcom/amazonaws/regions/Region;->ۨ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/regions/Region;->ۤ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -121,7 +121,7 @@
 
     .line 127
     :try_start_1
-    invoke-static {}, Lcom/amazonaws/regions/RegionUtils;->ܰ()V
+    invoke-static {}, Lcom/amazonaws/regions/RegionUtils;->᩷()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -144,7 +144,7 @@
     .line 134
     :cond_0
     :goto_0
-    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
 
     if-nez v1, :cond_2
 
@@ -160,7 +160,7 @@
     const-string v2, "Initializing the regions with default regions"
 
     .line 176
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 178
     :cond_1
@@ -168,11 +168,11 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sput-object v1, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
 
     .line 138
     :cond_2
-    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sget-object v1, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -205,7 +205,7 @@
     throw v1
 .end method
 
-.method public static ܰ()V
+.method public static ᩷()V
     .locals 4
 
     const-string v0, "com.amazonaws.regions.RegionUtils.fileOverride"
@@ -241,7 +241,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 150
     :cond_0
@@ -265,7 +265,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/regions/RegionUtils;->ܰ:Ljava/util/ArrayList;
+    sput-object v0, Lcom/amazonaws/regions/RegionUtils;->᩷:Ljava/util/ArrayList;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -277,7 +277,7 @@
     const-string v2, "Failed to parse regional endpoints"
 
     .line 166
-    invoke-interface {v1, v2, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, v2, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
 .end method

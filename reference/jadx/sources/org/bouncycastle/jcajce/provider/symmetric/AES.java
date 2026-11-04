@@ -9,21 +9,21 @@ import java.security.spec.InvalidParameterSpecException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.crypto.spec.IvParameterSpec;
-import l.C0252;
-import l.C0280;
-import l.C12278;
-import l.C12441;
-import l.C13958;
-import l.C15489;
-import l.C16236;
-import l.C17214;
-import l.C17922;
-import l.C19028;
-import l.C22697;
-import l.C23234;
-import l.C5800;
-import l.C7997;
-import l.C9023;
+import l.C0703;
+import l.C10732;
+import l.C12669;
+import l.C14087;
+import l.C14483;
+import l.C18011;
+import l.C18063;
+import l.C18176;
+import l.C21764;
+import l.C2458;
+import l.C25272;
+import l.C3188;
+import l.C4794;
+import l.C7376;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -65,46 +65,40 @@ import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 import org.bouncycastle.jcajce.spec.AEADParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AES {
     public static final Map generalAesAttributes;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESCCMMAC extends BaseMac {
         public AESCCMMAC() {
             super(new CCMMac());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESCCMMAC128 extends BaseMac {
         public AESCCMMAC128() {
             super(128, new CCMMac());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESCCMMAC192 extends BaseMac {
         public AESCCMMAC192() {
             super(192, new CCMMac());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESCCMMAC256 extends BaseMac {
         public AESCCMMAC256() {
             super(256, new CCMMac());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESCMAC extends BaseMac {
         public AESCMAC() {
             super(new CMac(AESEngine.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AESGMAC extends BaseMac {
         public AESGMAC() {
             super(new GMac(GCMBlockCipher.newInstance(AESEngine.newInstance())));
@@ -180,7 +174,6 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -312,56 +305,48 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC128 extends BaseBlockCipher {
         public CBC128() {
             super(128, CBCBlockCipher.newInstance(AESEngine.newInstance()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC192 extends BaseBlockCipher {
         public CBC192() {
             super(192, CBCBlockCipher.newInstance(AESEngine.newInstance()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC256 extends BaseBlockCipher {
         public CBC256() {
             super(192, CBCBlockCipher.newInstance(AESEngine.newInstance()), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CCM extends BaseBlockCipher {
         public CCM() {
             super((AEADBlockCipher) CCMBlockCipher.newInstance(AESEngine.newInstance()), false, 12);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CCM128 extends BaseBlockCipher {
         public CCM128() {
             super(128, CCMBlockCipher.newInstance(AESEngine.newInstance()), false, 12);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CCM192 extends BaseBlockCipher {
         public CCM192() {
             super(192, CCMBlockCipher.newInstance(AESEngine.newInstance()), false, 12);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CCM256 extends BaseBlockCipher {
         public CCM256() {
             super(256, CCMBlockCipher.newInstance(AESEngine.newInstance()), false, 12);
@@ -413,35 +398,30 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB extends BaseBlockCipher {
         public CFB() {
             super(new DefaultBufferedBlockCipher(CFBBlockCipher.newInstance(AESEngine.newInstance(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB128 extends BaseBlockCipher {
         public CFB128() {
             super(128, new DefaultBufferedBlockCipher(CFBBlockCipher.newInstance(AESEngine.newInstance(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB192 extends BaseBlockCipher {
         public CFB192() {
             super(192, new DefaultBufferedBlockCipher(CFBBlockCipher.newInstance(AESEngine.newInstance(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB256 extends BaseBlockCipher {
         public CFB256() {
             super(256, new DefaultBufferedBlockCipher(CFBBlockCipher.newInstance(AESEngine.newInstance(), 128)), 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.AES.ECB.1
@@ -453,7 +433,6 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB128 extends BaseBlockCipher {
         public ECB128() {
             super(128, new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.AES.ECB128.1
@@ -465,7 +444,6 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB192 extends BaseBlockCipher {
         public ECB192() {
             super(192, new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.AES.ECB192.1
@@ -477,7 +455,6 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB256 extends BaseBlockCipher {
         public ECB256() {
             super(256, new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.AES.ECB256.1
@@ -489,35 +466,30 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCM extends BaseBlockCipher {
         public GCM() {
             super(GCMBlockCipher.newInstance(AESEngine.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCM128 extends BaseBlockCipher {
         public GCM128() {
             super(128, GCMBlockCipher.newInstance(AESEngine.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCM192 extends BaseBlockCipher {
         public GCM192() {
             super(192, GCMBlockCipher.newInstance(AESEngine.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCM256 extends BaseBlockCipher {
         public GCM256() {
             super(256, GCMBlockCipher.newInstance(AESEngine.newInstance()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyFactory extends BaseSecretKeyFactory {
         public KeyFactory() {
             super("AES", null);
@@ -534,28 +506,223 @@ public final class AES {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen128 extends KeyGen {
         public KeyGen128() {
             super(128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen192 extends KeyGen {
         public KeyGen192() {
             super(192);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KeyGen256 extends KeyGen {
         public KeyGen256() {
             super(256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
+    public class OFB extends BaseBlockCipher {
+        public OFB() {
+            super(new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
+        }
+    }
+
+    public class OFB128 extends BaseBlockCipher {
+        public OFB128() {
+            super(128, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
+        }
+    }
+
+    public class OFB192 extends BaseBlockCipher {
+        public OFB192() {
+            super(192, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
+        }
+    }
+
+    public class OFB256 extends BaseBlockCipher {
+        public OFB256() {
+            super(256, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
+        }
+    }
+
+    public class PBEWithAESCBC extends BaseBlockCipher {
+        public PBEWithAESCBC() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()));
+        }
+    }
+
+    public class PBEWithMD5And128BitAESCBCOpenSSL extends PBESecretKeyFactory {
+        public PBEWithMD5And128BitAESCBCOpenSSL() {
+            super("PBEWithMD5And128BitAES-CBC-OpenSSL", null, true, 3, 0, 128, 128);
+        }
+    }
+
+    public class PBEWithMD5And192BitAESCBCOpenSSL extends PBESecretKeyFactory {
+        public PBEWithMD5And192BitAESCBCOpenSSL() {
+            super("PBEWithMD5And192BitAES-CBC-OpenSSL", null, true, 3, 0, 192, 128);
+        }
+    }
+
+    public class PBEWithMD5And256BitAESCBCOpenSSL extends PBESecretKeyFactory {
+        public PBEWithMD5And256BitAESCBCOpenSSL() {
+            super("PBEWithMD5And256BitAES-CBC-OpenSSL", null, true, 3, 0, 256, 128);
+        }
+    }
+
+    public class PBEWithSHA1AESCBC128 extends BaseBlockCipher {
+        public PBEWithSHA1AESCBC128() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 128, 16);
+        }
+    }
+
+    public class PBEWithSHA1AESCBC192 extends BaseBlockCipher {
+        public PBEWithSHA1AESCBC192() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 192, 16);
+        }
+    }
+
+    public class PBEWithSHA1AESCBC256 extends BaseBlockCipher {
+        public PBEWithSHA1AESCBC256() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 256, 16);
+        }
+    }
+
+    public class PBEWithSHA256AESCBC128 extends BaseBlockCipher {
+        public PBEWithSHA256AESCBC128() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 128, 16);
+        }
+    }
+
+    public class PBEWithSHA256AESCBC192 extends BaseBlockCipher {
+        public PBEWithSHA256AESCBC192() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 192, 16);
+        }
+    }
+
+    public class PBEWithSHA256AESCBC256 extends BaseBlockCipher {
+        public PBEWithSHA256AESCBC256() {
+            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 256, 16);
+        }
+    }
+
+    public class PBEWithSHA256And128BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHA256And128BitAESBC() {
+            super("PBEWithSHA256And128BitAES-CBC-BC", null, true, 2, 4, 128, 128);
+        }
+    }
+
+    public class PBEWithSHA256And192BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHA256And192BitAESBC() {
+            super("PBEWithSHA256And192BitAES-CBC-BC", null, true, 2, 4, 192, 128);
+        }
+    }
+
+    public class PBEWithSHA256And256BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHA256And256BitAESBC() {
+            super("PBEWithSHA256And256BitAES-CBC-BC", null, true, 2, 4, 256, 128);
+        }
+    }
+
+    public class PBEWithSHAAnd128BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHAAnd128BitAESBC() {
+            super("PBEWithSHA1And128BitAES-CBC-BC", null, true, 2, 1, 128, 128);
+        }
+    }
+
+    public class PBEWithSHAAnd192BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHAAnd192BitAESBC() {
+            super("PBEWithSHA1And192BitAES-CBC-BC", null, true, 2, 1, 192, 128);
+        }
+    }
+
+    public class PBEWithSHAAnd256BitAESBC extends PBESecretKeyFactory {
+        public PBEWithSHAAnd256BitAESBC() {
+            super("PBEWithSHA1And256BitAES-CBC-BC", null, true, 2, 1, 256, 128);
+        }
+    }
+
+    public class Poly1305 extends BaseMac {
+        public Poly1305() {
+            super(new org.bouncycastle.crypto.macs.Poly1305(AESEngine.newInstance()));
+        }
+    }
+
+    public class Poly1305KeyGen extends BaseKeyGenerator {
+        public Poly1305KeyGen() {
+            super("Poly1305-AES", 256, new Poly1305KeyGenerator());
+        }
+    }
+
+    public class RFC3211Wrap extends BaseWrapCipher {
+        public RFC3211Wrap() {
+            super(new RFC3211WrapEngine(AESEngine.newInstance()), 16);
+        }
+    }
+
+    public class RFC5649Wrap extends BaseWrapCipher {
+        public RFC5649Wrap() {
+            super(new RFC5649WrapEngine(AESEngine.newInstance()));
+        }
+    }
+
+    public class Wrap extends BaseWrapCipher {
+        public Wrap() {
+            super(new AESWrapEngine());
+        }
+    }
+
+    public class Wrap128 extends BaseWrapCipher {
+        public Wrap128() {
+            super(new AESWrapEngine());
+        }
+    }
+
+    public class Wrap192 extends BaseWrapCipher {
+        public Wrap192() {
+            super(new AESWrapEngine());
+        }
+    }
+
+    public class Wrap256 extends BaseWrapCipher {
+        public Wrap256() {
+            super(new AESWrapEngine());
+        }
+    }
+
+    public class WrapPad extends BaseWrapCipher {
+        public WrapPad() {
+            super(new AESWrapPadEngine());
+        }
+    }
+
+    public class WrapPad128 extends BaseWrapCipher {
+        public WrapPad128() {
+            super(new AESWrapPadEngine());
+        }
+    }
+
+    public class WrapPad192 extends BaseWrapCipher {
+        public WrapPad192() {
+            super(new AESWrapPadEngine());
+        }
+    }
+
+    public class WrapPad256 extends BaseWrapCipher {
+        public WrapPad256() {
+            super(new AESWrapPadEngine());
+        }
+    }
+
+    static {
+        HashMap map = new HashMap();
+        generalAesAttributes = map;
+        map.put("SupportedKeyClasses", "javax.crypto.SecretKey");
+        map.put("SupportedKeyFormats", "RAW");
+    }
+
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = AES.class.getName();
         public static final String wrongAES128 = "2.16.840.1.101.3.4.2";
@@ -566,96 +733,96 @@ public final class AES {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.AES", sb, configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.AES", sb, configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.2.16.840.1.101.3.4.2", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.2.16.840.1.101.3.4.22", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters.2.16.840.1.101.3.4.42", "AES");
             StringBuilder sb2 = new StringBuilder("Alg.Alias.AlgorithmParameters.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = NISTObjectIdentifiers.id_aes128_CBC;
-            StringBuilder sbM43760 = C19028.m43760("AES", "Alg.Alias.AlgorithmParameters.", sb2, aSN1ObjectIdentifier, configurableProvider);
+            StringBuilder sbM8290 = C2458.m8290("AES", "Alg.Alias.AlgorithmParameters.", sb2, aSN1ObjectIdentifier, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier2 = NISTObjectIdentifiers.id_aes192_CBC;
-            StringBuilder sbM43761 = C19028.m43760("AES", "Alg.Alias.AlgorithmParameters.", sbM43760, aSN1ObjectIdentifier2, configurableProvider);
+            StringBuilder sbM8291 = C2458.m8290("AES", "Alg.Alias.AlgorithmParameters.", sbM8290, aSN1ObjectIdentifier2, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier3 = NISTObjectIdentifiers.id_aes256_CBC;
-            StringBuilder sbM50268 = C22697.m50268("AES", str, sbM43761, aSN1ObjectIdentifier3, configurableProvider);
-            sbM50268.append("$AlgParamsGCM");
-            configurableProvider.addAlgorithm("AlgorithmParameters.GCM", sbM50268.toString());
+            StringBuilder sbM56410 = C25272.m56410("AES", str, sbM8291, aSN1ObjectIdentifier3, configurableProvider);
+            sbM56410.append("$AlgParamsGCM");
+            configurableProvider.addAlgorithm("AlgorithmParameters.GCM", sbM56410.toString());
             StringBuilder sb3 = new StringBuilder("Alg.Alias.AlgorithmParameters.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier4 = NISTObjectIdentifiers.id_aes128_GCM;
-            StringBuilder sbM43762 = C19028.m43760("GCM", "Alg.Alias.AlgorithmParameters.", sb3, aSN1ObjectIdentifier4, configurableProvider);
+            StringBuilder sbM8292 = C2458.m8290("GCM", "Alg.Alias.AlgorithmParameters.", sb3, aSN1ObjectIdentifier4, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier5 = NISTObjectIdentifiers.id_aes192_GCM;
-            StringBuilder sbM43763 = C19028.m43760("GCM", "Alg.Alias.AlgorithmParameters.", sbM43762, aSN1ObjectIdentifier5, configurableProvider);
+            StringBuilder sbM8293 = C2458.m8290("GCM", "Alg.Alias.AlgorithmParameters.", sbM8292, aSN1ObjectIdentifier5, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier6 = NISTObjectIdentifiers.id_aes256_GCM;
-            StringBuilder sbM50269 = C22697.m50268("GCM", str, sbM43763, aSN1ObjectIdentifier6, configurableProvider);
-            sbM50269.append("$AlgParamsCCM");
-            configurableProvider.addAlgorithm("AlgorithmParameters.CCM", sbM50269.toString());
+            StringBuilder sbM56411 = C25272.m56410("GCM", str, sbM8293, aSN1ObjectIdentifier6, configurableProvider);
+            sbM56411.append("$AlgParamsCCM");
+            configurableProvider.addAlgorithm("AlgorithmParameters.CCM", sbM56411.toString());
             StringBuilder sb4 = new StringBuilder("Alg.Alias.AlgorithmParameters.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier7 = NISTObjectIdentifiers.id_aes128_CCM;
-            StringBuilder sbM43764 = C19028.m43760("CCM", "Alg.Alias.AlgorithmParameters.", sb4, aSN1ObjectIdentifier7, configurableProvider);
+            StringBuilder sbM8294 = C2458.m8290("CCM", "Alg.Alias.AlgorithmParameters.", sb4, aSN1ObjectIdentifier7, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier8 = NISTObjectIdentifiers.id_aes192_CCM;
-            StringBuilder sbM43765 = C19028.m43760("CCM", "Alg.Alias.AlgorithmParameters.", sbM43764, aSN1ObjectIdentifier8, configurableProvider);
+            StringBuilder sbM8295 = C2458.m8290("CCM", "Alg.Alias.AlgorithmParameters.", sbM8294, aSN1ObjectIdentifier8, configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier9 = NISTObjectIdentifiers.id_aes256_CCM;
-            C12441.m30916(C22697.m50268("CCM", str, sbM43765, aSN1ObjectIdentifier9, configurableProvider), "$AlgParamGen", configurableProvider, "AlgorithmParameterGenerator.AES");
+            C10732.m27335(C25272.m56410("CCM", str, sbM8295, aSN1ObjectIdentifier9, configurableProvider), "$AlgParamGen", configurableProvider, "AlgorithmParameterGenerator.AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator.2.16.840.1.101.3.4.2", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator.2.16.840.1.101.3.4.22", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator.2.16.840.1.101.3.4.42", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameterGenerator." + aSN1ObjectIdentifier, "AES");
-            C7997.m21058(C19028.m43760("AES", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier3, configurableProvider, "AES");
+            C18011.m41992(C2458.m8290("AES", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier3, configurableProvider, "AES");
             configurableProvider.addAttributes("Cipher.AES", AES.generalAesAttributes);
             configurableProvider.addAlgorithm("Cipher.AES", str + "$ECB");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.2.16.840.1.101.3.4.2", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.2.16.840.1.101.3.4.22", "AES");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.2.16.840.1.101.3.4.42", "AES");
             ASN1ObjectIdentifier aSN1ObjectIdentifier10 = NISTObjectIdentifiers.id_aes128_ECB;
-            C13958.m33814(configurableProvider, str, "$ECB128", "Cipher", aSN1ObjectIdentifier10);
+            C3188.m10408(configurableProvider, str, "$ECB128", "Cipher", aSN1ObjectIdentifier10);
             ASN1ObjectIdentifier aSN1ObjectIdentifier11 = NISTObjectIdentifiers.id_aes192_ECB;
-            C13958.m33814(configurableProvider, str, "$ECB192", "Cipher", aSN1ObjectIdentifier11);
+            C3188.m10408(configurableProvider, str, "$ECB192", "Cipher", aSN1ObjectIdentifier11);
             ASN1ObjectIdentifier aSN1ObjectIdentifier12 = NISTObjectIdentifiers.id_aes256_ECB;
             configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier12, str + "$ECB256");
-            configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier3, C22697.m50267(C17922.m41616("$CBC192", "Cipher", C17214.m40154(configurableProvider, "Cipher", C22697.m50267(new StringBuilder(), str, "$CBC128"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier2, configurableProvider), str, "$CBC256"));
+            configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier3, C8947.m23910(C7376.m20249("$CBC192", "Cipher", C14087.m34249(configurableProvider, "Cipher", C8947.m23910(new StringBuilder(), str, "$CBC128"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier2, configurableProvider), str, "$CBC256"));
             ASN1ObjectIdentifier aSN1ObjectIdentifier13 = NISTObjectIdentifiers.id_aes128_OFB;
-            C13958.m33814(configurableProvider, str, "$OFB128", "Cipher", aSN1ObjectIdentifier13);
+            C3188.m10408(configurableProvider, str, "$OFB128", "Cipher", aSN1ObjectIdentifier13);
             ASN1ObjectIdentifier aSN1ObjectIdentifier14 = NISTObjectIdentifiers.id_aes192_OFB;
-            C13958.m33814(configurableProvider, str, "$OFB192", "Cipher", aSN1ObjectIdentifier14);
+            C3188.m10408(configurableProvider, str, "$OFB192", "Cipher", aSN1ObjectIdentifier14);
             ASN1ObjectIdentifier aSN1ObjectIdentifier15 = NISTObjectIdentifiers.id_aes256_OFB;
-            C13958.m33814(configurableProvider, str, "$OFB256", "Cipher", aSN1ObjectIdentifier15);
+            C3188.m10408(configurableProvider, str, "$OFB256", "Cipher", aSN1ObjectIdentifier15);
             ASN1ObjectIdentifier aSN1ObjectIdentifier16 = NISTObjectIdentifiers.id_aes128_CFB;
-            C13958.m33814(configurableProvider, str, "$CFB128", "Cipher", aSN1ObjectIdentifier16);
+            C3188.m10408(configurableProvider, str, "$CFB128", "Cipher", aSN1ObjectIdentifier16);
             ASN1ObjectIdentifier aSN1ObjectIdentifier17 = NISTObjectIdentifiers.id_aes192_CFB;
-            C13958.m33814(configurableProvider, str, "$CFB192", "Cipher", aSN1ObjectIdentifier17);
+            C3188.m10408(configurableProvider, str, "$CFB192", "Cipher", aSN1ObjectIdentifier17);
             ASN1ObjectIdentifier aSN1ObjectIdentifier18 = NISTObjectIdentifiers.id_aes256_CFB;
-            C13958.m33814(configurableProvider, str, "$CFB256", "Cipher", aSN1ObjectIdentifier18);
+            C3188.m10408(configurableProvider, str, "$CFB256", "Cipher", aSN1ObjectIdentifier18);
             configurableProvider.addAttributes("Cipher.AESWRAP", AES.generalAesAttributes);
             configurableProvider.addAlgorithm("Cipher.AESWRAP", str + "$Wrap");
             ASN1ObjectIdentifier aSN1ObjectIdentifier19 = NISTObjectIdentifiers.id_aes128_wrap;
-            C13958.m33814(configurableProvider, str, "$Wrap128", "Cipher", aSN1ObjectIdentifier19);
+            C3188.m10408(configurableProvider, str, "$Wrap128", "Cipher", aSN1ObjectIdentifier19);
             ASN1ObjectIdentifier aSN1ObjectIdentifier20 = NISTObjectIdentifiers.id_aes192_wrap;
-            C13958.m33814(configurableProvider, str, "$Wrap192", "Cipher", aSN1ObjectIdentifier20);
+            C3188.m10408(configurableProvider, str, "$Wrap192", "Cipher", aSN1ObjectIdentifier20);
             ASN1ObjectIdentifier aSN1ObjectIdentifier21 = NISTObjectIdentifiers.id_aes256_wrap;
-            C13958.m33814(configurableProvider, str, "$Wrap256", "Cipher", aSN1ObjectIdentifier21);
+            C3188.m10408(configurableProvider, str, "$Wrap256", "Cipher", aSN1ObjectIdentifier21);
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.AESKW", "AESWRAP");
             configurableProvider.addAttributes("Cipher.AESWRAPPAD", AES.generalAesAttributes);
             configurableProvider.addAlgorithm("Cipher.AESWRAPPAD", str + "$WrapPad");
             ASN1ObjectIdentifier aSN1ObjectIdentifier22 = NISTObjectIdentifiers.id_aes128_wrap_pad;
-            C13958.m33814(configurableProvider, str, "$WrapPad128", "Cipher", aSN1ObjectIdentifier22);
+            C3188.m10408(configurableProvider, str, "$WrapPad128", "Cipher", aSN1ObjectIdentifier22);
             ASN1ObjectIdentifier aSN1ObjectIdentifier23 = NISTObjectIdentifiers.id_aes192_wrap_pad;
-            C13958.m33814(configurableProvider, str, "$WrapPad192", "Cipher", aSN1ObjectIdentifier23);
+            C3188.m10408(configurableProvider, str, "$WrapPad192", "Cipher", aSN1ObjectIdentifier23);
             ASN1ObjectIdentifier aSN1ObjectIdentifier24 = NISTObjectIdentifiers.id_aes256_wrap_pad;
-            C13958.m33814(configurableProvider, str, "$WrapPad256", "Cipher", aSN1ObjectIdentifier24);
-            configurableProvider.addAlgorithm(C16236.m38349(configurableProvider, C16236.m38349(configurableProvider, C16236.m38349(configurableProvider, "AlgorithmParameterGenerator.CCM", C23234.m51270("Cipher.AESRFC5649WRAP", C23234.m51270("Cipher.AESRFC3211WRAP", C23234.m51270("Alg.Alias.Cipher.AESKWP", "AESWRAPPAD", str, "$RFC3211Wrap", configurableProvider), str, "$RFC5649Wrap", configurableProvider), str, "$AlgParamGenCCM", configurableProvider), "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier7), "CCM", "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier8), "CCM", "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier9), "CCM");
+            C3188.m10408(configurableProvider, str, "$WrapPad256", "Cipher", aSN1ObjectIdentifier24);
+            configurableProvider.addAlgorithm(C21764.m49330(configurableProvider, C21764.m49330(configurableProvider, C21764.m49330(configurableProvider, "AlgorithmParameterGenerator.CCM", C18176.m42346("Cipher.AESRFC5649WRAP", C18176.m42346("Cipher.AESRFC3211WRAP", C18176.m42346("Alg.Alias.Cipher.AESKWP", "AESWRAPPAD", str, "$RFC3211Wrap", configurableProvider), str, "$RFC5649Wrap", configurableProvider), str, "$AlgParamGenCCM", configurableProvider), "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier7), "CCM", "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier8), "CCM", "Alg.Alias.AlgorithmParameterGenerator.", aSN1ObjectIdentifier9), "CCM");
             configurableProvider.addAttributes("Cipher.CCM", AES.generalAesAttributes);
-            StringBuilder sbM40154 = C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$CCM192", "Cipher", C17214.m40154(configurableProvider, "Cipher", C23234.m51270("Cipher.CCM", str + "$CCM", str, "$CCM128", configurableProvider), str, aSN1ObjectIdentifier7), aSN1ObjectIdentifier8, configurableProvider), str, "$CCM256"), str, aSN1ObjectIdentifier9);
-            sbM40154.append("$AlgParamGenGCM");
-            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.GCM", sbM40154.toString());
-            C7997.m21058(C19028.m43760("GCM", "Alg.Alias.AlgorithmParameterGenerator.", C19028.m43760("GCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier4, configurableProvider), aSN1ObjectIdentifier5, configurableProvider), aSN1ObjectIdentifier6, configurableProvider, "GCM");
+            StringBuilder sbM34249 = C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$CCM192", "Cipher", C14087.m34249(configurableProvider, "Cipher", C18176.m42346("Cipher.CCM", str + "$CCM", str, "$CCM128", configurableProvider), str, aSN1ObjectIdentifier7), aSN1ObjectIdentifier8, configurableProvider), str, "$CCM256"), str, aSN1ObjectIdentifier9);
+            sbM34249.append("$AlgParamGenGCM");
+            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.GCM", sbM34249.toString());
+            C18011.m41992(C2458.m8290("GCM", "Alg.Alias.AlgorithmParameterGenerator.", C2458.m8290("GCM", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameterGenerator."), aSN1ObjectIdentifier4, configurableProvider), aSN1ObjectIdentifier5, configurableProvider), aSN1ObjectIdentifier6, configurableProvider, "GCM");
             configurableProvider.addAttributes("Cipher.GCM", AES.generalAesAttributes);
-            StringBuilder sbM30516 = C12278.m30516("$AESCMAC", "Mac.AESCMAC", str, C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C9023.m23357(str, "$KeyGen", "KeyGenerator.AESWRAPPAD", C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C12278.m30516("$KeyGen", "KeyGenerator.AESWRAP", str, C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen256", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen192", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C17922.m41616("$KeyGen128", "KeyGenerator", C12278.m30516("$KeyGen256", "KeyGenerator.2.16.840.1.101.3.4.42", str, C12278.m30516("$KeyGen192", "KeyGenerator.2.16.840.1.101.3.4.22", str, C12278.m30516("$KeyGen128", "KeyGenerator.2.16.840.1.101.3.4.2", str, C12278.m30516("$KeyGen", "KeyGenerator.AES", str, C17214.m40154(configurableProvider, "Cipher", C22697.m50267(C17922.m41616("$GCM192", "Cipher", C17214.m40154(configurableProvider, "Cipher", C23234.m51270("Cipher.GCM", str + "$GCM", str, "$GCM128", configurableProvider), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$GCM256"), str, aSN1ObjectIdentifier6), configurableProvider), configurableProvider), configurableProvider), configurableProvider), aSN1ObjectIdentifier10, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier13, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier16), aSN1ObjectIdentifier11, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier2), aSN1ObjectIdentifier14, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier17), aSN1ObjectIdentifier12, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier3), aSN1ObjectIdentifier15, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier18), configurableProvider), aSN1ObjectIdentifier19, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier20), aSN1ObjectIdentifier21, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier6), aSN1ObjectIdentifier7, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier8), aSN1ObjectIdentifier9, configurableProvider), configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier22), aSN1ObjectIdentifier23, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier24), configurableProvider);
-            sbM30516.append("$AESCCMMAC");
-            configurableProvider.addAlgorithm("Mac.AESCCMMAC", sbM30516.toString());
-            StringBuilder sbM1694 = C0252.m1694(str, "$AESCCMMAC128", "Mac." + aSN1ObjectIdentifier7.getId(), "Mac.", configurableProvider);
-            sbM1694.append(aSN1ObjectIdentifier8.getId());
-            StringBuilder sbM1695 = C0252.m1694(str, "$AESCCMMAC192", sbM1694.toString(), "Mac.", configurableProvider);
-            sbM1695.append(aSN1ObjectIdentifier9.getId());
-            configurableProvider.addAlgorithm(sbM1695.toString(), str + "$AESCCMMAC256");
+            StringBuilder sbM3019 = C0703.m3019("$AESCMAC", "Mac.AESCMAC", str, C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C18063.m42089(str, "$KeyGen", "KeyGenerator.AESWRAPPAD", C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C0703.m3019("$KeyGen", "KeyGenerator.AESWRAP", str, C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen256", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen192", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C7376.m20249("$KeyGen128", "KeyGenerator", C0703.m3019("$KeyGen256", "KeyGenerator.2.16.840.1.101.3.4.42", str, C0703.m3019("$KeyGen192", "KeyGenerator.2.16.840.1.101.3.4.22", str, C0703.m3019("$KeyGen128", "KeyGenerator.2.16.840.1.101.3.4.2", str, C0703.m3019("$KeyGen", "KeyGenerator.AES", str, C14087.m34249(configurableProvider, "Cipher", C8947.m23910(C7376.m20249("$GCM192", "Cipher", C14087.m34249(configurableProvider, "Cipher", C18176.m42346("Cipher.GCM", str + "$GCM", str, "$GCM128", configurableProvider), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$GCM256"), str, aSN1ObjectIdentifier6), configurableProvider), configurableProvider), configurableProvider), configurableProvider), aSN1ObjectIdentifier10, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier), aSN1ObjectIdentifier13, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier16), aSN1ObjectIdentifier11, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier2), aSN1ObjectIdentifier14, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier17), aSN1ObjectIdentifier12, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier3), aSN1ObjectIdentifier15, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier18), configurableProvider), aSN1ObjectIdentifier19, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier20), aSN1ObjectIdentifier21, configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier4), aSN1ObjectIdentifier5, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier6), aSN1ObjectIdentifier7, configurableProvider), str, "$KeyGen192"), str, aSN1ObjectIdentifier8), aSN1ObjectIdentifier9, configurableProvider), configurableProvider), str, "$KeyGen128"), str, aSN1ObjectIdentifier22), aSN1ObjectIdentifier23, configurableProvider), str, "$KeyGen256"), str, aSN1ObjectIdentifier24), configurableProvider);
+            sbM3019.append("$AESCCMMAC");
+            configurableProvider.addAlgorithm("Mac.AESCCMMAC", sbM3019.toString());
+            StringBuilder sbM14772 = C4794.m14772(str, "$AESCCMMAC128", "Mac." + aSN1ObjectIdentifier7.getId(), "Mac.", configurableProvider);
+            sbM14772.append(aSN1ObjectIdentifier8.getId());
+            StringBuilder sbM14773 = C4794.m14772(str, "$AESCCMMAC192", sbM14772.toString(), "Mac.", configurableProvider);
+            sbM14773.append(aSN1ObjectIdentifier9.getId());
+            configurableProvider.addAlgorithm(sbM14773.toString(), str + "$AESCCMMAC256");
             ASN1ObjectIdentifier aSN1ObjectIdentifier25 = BCObjectIdentifiers.bc_pbe_sha1_pkcs12_aes128_cbc;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier25, "PBEWITHSHAAND128BITAES-CBC-BC");
             ASN1ObjectIdentifier aSN1ObjectIdentifier26 = BCObjectIdentifiers.bc_pbe_sha1_pkcs12_aes192_cbc;
@@ -667,7 +834,7 @@ public final class AES {
             ASN1ObjectIdentifier aSN1ObjectIdentifier29 = BCObjectIdentifiers.bc_pbe_sha256_pkcs12_aes192_cbc;
             configurableProvider.addAlgorithm("Alg.Alias.Cipher", aSN1ObjectIdentifier29, "PBEWITHSHA256AND192BITAES-CBC-BC");
             ASN1ObjectIdentifier aSN1ObjectIdentifier30 = BCObjectIdentifiers.bc_pbe_sha256_pkcs12_aes256_cbc;
-            C12441.m30916(C12278.m30516("$PBEWithSHA256AESCBC192", "Cipher.PBEWITHSHA256AND192BITAES-CBC-BC", str, C12278.m30516("$PBEWithSHA256AESCBC128", "Cipher.PBEWITHSHA256AND128BITAES-CBC-BC", str, C12278.m30516("$PBEWithSHA1AESCBC256", "Cipher.PBEWITHSHAAND256BITAES-CBC-BC", str, C12278.m30516("$PBEWithSHA1AESCBC192", "Cipher.PBEWITHSHAAND192BITAES-CBC-BC", str, C12278.m30516("$PBEWithSHA1AESCBC128", "Cipher.PBEWITHSHAAND128BITAES-CBC-BC", str, C17214.m40154(configurableProvider, "Alg.Alias.Cipher", "PBEWITHSHA256AND256BITAES-CBC-BC", str, aSN1ObjectIdentifier30), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), "$PBEWithSHA256AESCBC256", configurableProvider, "Cipher.PBEWITHSHA256AND256BITAES-CBC-BC");
+            C10732.m27335(C0703.m3019("$PBEWithSHA256AESCBC192", "Cipher.PBEWITHSHA256AND192BITAES-CBC-BC", str, C0703.m3019("$PBEWithSHA256AESCBC128", "Cipher.PBEWITHSHA256AND128BITAES-CBC-BC", str, C0703.m3019("$PBEWithSHA1AESCBC256", "Cipher.PBEWITHSHAAND256BITAES-CBC-BC", str, C0703.m3019("$PBEWithSHA1AESCBC192", "Cipher.PBEWITHSHAAND192BITAES-CBC-BC", str, C0703.m3019("$PBEWithSHA1AESCBC128", "Cipher.PBEWITHSHAAND128BITAES-CBC-BC", str, C14087.m34249(configurableProvider, "Alg.Alias.Cipher", "PBEWITHSHA256AND256BITAES-CBC-BC", str, aSN1ObjectIdentifier30), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), "$PBEWithSHA256AESCBC256", configurableProvider, "Cipher.PBEWITHSHA256AND256BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA1AND128BITAES-CBC-BC", "PBEWITHSHAAND128BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA1AND192BITAES-CBC-BC", "PBEWITHSHAAND192BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA1AND256BITAES-CBC-BC", "PBEWITHSHAAND256BITAES-CBC-BC");
@@ -690,9 +857,9 @@ public final class AES {
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA256AND192BITAES-BC", "PBEWITHSHA256AND192BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA256AND256BITAES-BC", "PBEWITHSHA256AND256BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.PBEWITHSHA-256AND128BITAES-BC", "PBEWITHSHA256AND128BITAES-CBC-BC");
-            C5800.m15969(str, "$KeyFactory", "SecretKeyFactory.AES", C9023.m23357(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND256BITAES-CBC-OPENSSL", C9023.m23357(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND192BITAES-CBC-OPENSSL", C9023.m23357(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND128BITAES-CBC-OPENSSL", C0280.m1793("Alg.Alias.Cipher.PBEWITHSHA-256AND192BITAES-BC", "PBEWITHSHA256AND192BITAES-CBC-BC", "Alg.Alias.Cipher.PBEWITHSHA-256AND256BITAES-BC", "PBEWITHSHA256AND256BITAES-CBC-BC", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$KeyFactory", "SecretKeyFactory.AES", C18063.m42089(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND256BITAES-CBC-OPENSSL", C18063.m42089(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND192BITAES-CBC-OPENSSL", C18063.m42089(str, "$PBEWithAESCBC", "Cipher.PBEWITHMD5AND128BITAES-CBC-OPENSSL", C12669.m31439("Alg.Alias.Cipher.PBEWITHSHA-256AND192BITAES-BC", "PBEWITHSHA256AND192BITAES-CBC-BC", "Alg.Alias.Cipher.PBEWITHSHA-256AND256BITAES-BC", "PBEWITHSHA256AND256BITAES-CBC-BC", configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("SecretKeyFactory", NISTObjectIdentifiers.aes, str + "$KeyFactory");
-            C5800.m15969(str, "$PBEWithSHA256And256BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND256BITAES-CBC-BC", C9023.m23357(str, "$PBEWithSHA256And192BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND192BITAES-CBC-BC", C9023.m23357(str, "$PBEWithSHA256And128BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND128BITAES-CBC-BC", C9023.m23357(str, "$PBEWithSHAAnd256BitAESBC", "SecretKeyFactory.PBEWITHSHAAND256BITAES-CBC-BC", C9023.m23357(str, "$PBEWithSHAAnd192BitAESBC", "SecretKeyFactory.PBEWITHSHAAND192BITAES-CBC-BC", C9023.m23357(str, "$PBEWithSHAAnd128BitAESBC", "SecretKeyFactory.PBEWITHSHAAND128BITAES-CBC-BC", C9023.m23357(str, "$PBEWithMD5And256BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND256BITAES-CBC-OPENSSL", C9023.m23357(str, "$PBEWithMD5And192BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND192BITAES-CBC-OPENSSL", C9023.m23357(str, "$PBEWithMD5And128BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND128BITAES-CBC-OPENSSL", new StringBuilder(), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$PBEWithSHA256And256BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND256BITAES-CBC-BC", C18063.m42089(str, "$PBEWithSHA256And192BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND192BITAES-CBC-BC", C18063.m42089(str, "$PBEWithSHA256And128BitAESBC", "SecretKeyFactory.PBEWITHSHA256AND128BITAES-CBC-BC", C18063.m42089(str, "$PBEWithSHAAnd256BitAESBC", "SecretKeyFactory.PBEWITHSHAAND256BITAES-CBC-BC", C18063.m42089(str, "$PBEWithSHAAnd192BitAESBC", "SecretKeyFactory.PBEWITHSHAAND192BITAES-CBC-BC", C18063.m42089(str, "$PBEWithSHAAnd128BitAESBC", "SecretKeyFactory.PBEWITHSHAAND128BITAES-CBC-BC", C18063.m42089(str, "$PBEWithMD5And256BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND256BITAES-CBC-OPENSSL", C18063.m42089(str, "$PBEWithMD5And192BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND192BITAES-CBC-OPENSSL", C18063.m42089(str, "$PBEWithMD5And128BitAESCBCOpenSSL", "SecretKeyFactory.PBEWITHMD5AND128BITAES-CBC-OPENSSL", new StringBuilder(), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHSHA1AND128BITAES-CBC-BC", "PBEWITHSHAAND128BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHSHA1AND192BITAES-CBC-BC", "PBEWITHSHAAND192BITAES-CBC-BC");
             configurableProvider.addAlgorithm("Alg.Alias.SecretKeyFactory.PBEWITHSHA1AND256BITAES-CBC-BC", "PBEWITHSHAAND256BITAES-CBC-BC");
@@ -732,238 +899,8 @@ public final class AES {
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters." + aSN1ObjectIdentifier28.getId(), "PKCS12PBE");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters." + aSN1ObjectIdentifier29.getId(), "PKCS12PBE");
             configurableProvider.addAlgorithm("Alg.Alias.AlgorithmParameters." + aSN1ObjectIdentifier30.getId(), "PKCS12PBE");
-            addGMacAlgorithm(configurableProvider, "AES", str + "$AESGMAC", C15489.m37076(str, "$KeyGen128"));
-            addPoly1305Algorithm(configurableProvider, "AES", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            addGMacAlgorithm(configurableProvider, "AES", str + "$AESGMAC", C14483.m34972(str, "$KeyGen128"));
+            addPoly1305Algorithm(configurableProvider, "AES", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class OFB extends BaseBlockCipher {
-        public OFB() {
-            super(new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class OFB128 extends BaseBlockCipher {
-        public OFB128() {
-            super(128, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class OFB192 extends BaseBlockCipher {
-        public OFB192() {
-            super(192, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class OFB256 extends BaseBlockCipher {
-        public OFB256() {
-            super(256, new DefaultBufferedBlockCipher(new OFBBlockCipher(AESEngine.newInstance(), 128)), 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithAESCBC extends BaseBlockCipher {
-        public PBEWithAESCBC() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()));
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithMD5And128BitAESCBCOpenSSL extends PBESecretKeyFactory {
-        public PBEWithMD5And128BitAESCBCOpenSSL() {
-            super("PBEWithMD5And128BitAES-CBC-OpenSSL", null, true, 3, 0, 128, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithMD5And192BitAESCBCOpenSSL extends PBESecretKeyFactory {
-        public PBEWithMD5And192BitAESCBCOpenSSL() {
-            super("PBEWithMD5And192BitAES-CBC-OpenSSL", null, true, 3, 0, 192, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithMD5And256BitAESCBCOpenSSL extends PBESecretKeyFactory {
-        public PBEWithMD5And256BitAESCBCOpenSSL() {
-            super("PBEWithMD5And256BitAES-CBC-OpenSSL", null, true, 3, 0, 256, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA1AESCBC128 extends BaseBlockCipher {
-        public PBEWithSHA1AESCBC128() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 128, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA1AESCBC192 extends BaseBlockCipher {
-        public PBEWithSHA1AESCBC192() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 192, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA1AESCBC256 extends BaseBlockCipher {
-        public PBEWithSHA1AESCBC256() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 1, 256, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256AESCBC128 extends BaseBlockCipher {
-        public PBEWithSHA256AESCBC128() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 128, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256AESCBC192 extends BaseBlockCipher {
-        public PBEWithSHA256AESCBC192() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 192, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256AESCBC256 extends BaseBlockCipher {
-        public PBEWithSHA256AESCBC256() {
-            super(CBCBlockCipher.newInstance(AESEngine.newInstance()), 2, 4, 256, 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256And128BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHA256And128BitAESBC() {
-            super("PBEWithSHA256And128BitAES-CBC-BC", null, true, 2, 4, 128, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256And192BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHA256And192BitAESBC() {
-            super("PBEWithSHA256And192BitAES-CBC-BC", null, true, 2, 4, 192, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHA256And256BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHA256And256BitAESBC() {
-            super("PBEWithSHA256And256BitAES-CBC-BC", null, true, 2, 4, 256, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHAAnd128BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHAAnd128BitAESBC() {
-            super("PBEWithSHA1And128BitAES-CBC-BC", null, true, 2, 1, 128, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHAAnd192BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHAAnd192BitAESBC() {
-            super("PBEWithSHA1And192BitAES-CBC-BC", null, true, 2, 1, 192, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class PBEWithSHAAnd256BitAESBC extends PBESecretKeyFactory {
-        public PBEWithSHAAnd256BitAESBC() {
-            super("PBEWithSHA1And256BitAES-CBC-BC", null, true, 2, 1, 256, 128);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class Poly1305 extends BaseMac {
-        public Poly1305() {
-            super(new org.bouncycastle.crypto.macs.Poly1305(AESEngine.newInstance()));
-        }
-    }
-
-    public class Poly1305KeyGen extends BaseKeyGenerator {
-        public Poly1305KeyGen() {
-            super("Poly1305-AES", 256, new Poly1305KeyGenerator());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class RFC3211Wrap extends BaseWrapCipher {
-        public RFC3211Wrap() {
-            super(new RFC3211WrapEngine(AESEngine.newInstance()), 16);
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class RFC5649Wrap extends BaseWrapCipher {
-        public RFC5649Wrap() {
-            super(new RFC5649WrapEngine(AESEngine.newInstance()));
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class Wrap extends BaseWrapCipher {
-        public Wrap() {
-            super(new AESWrapEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class Wrap128 extends BaseWrapCipher {
-        public Wrap128() {
-            super(new AESWrapEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class Wrap192 extends BaseWrapCipher {
-        public Wrap192() {
-            super(new AESWrapEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class Wrap256 extends BaseWrapCipher {
-        public Wrap256() {
-            super(new AESWrapEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class WrapPad extends BaseWrapCipher {
-        public WrapPad() {
-            super(new AESWrapPadEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class WrapPad128 extends BaseWrapCipher {
-        public WrapPad128() {
-            super(new AESWrapPadEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class WrapPad192 extends BaseWrapCipher {
-        public WrapPad192() {
-            super(new AESWrapPadEngine());
-        }
-    }
-
-    /* JADX INFO: loaded from: classes2.dex */
-    public class WrapPad256 extends BaseWrapCipher {
-        public WrapPad256() {
-            super(new AESWrapPadEngine());
-        }
-    }
-
-    static {
-        HashMap map = new HashMap();
-        generalAesAttributes = map;
-        map.put("SupportedKeyClasses", "javax.crypto.SecretKey");
-        map.put("SupportedKeyFormats", "RAW");
     }
 }

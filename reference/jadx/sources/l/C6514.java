@@ -1,103 +1,189 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D1QK */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.ۛܺ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: RIV5 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6514 implements InterfaceC17803 {
+public final class C6514 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C6514 f21939 = new C6514();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C12479 f21862;
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3481(int i, byte[] bArr) {
-        int i2;
-        int i3;
-        byte b;
-        long j;
-        int i4;
-        int i5;
-        byte b2;
-        long j2;
-        int[][] iArr = C2280.f8142;
-        int[][] iArr2 = C2280.f8143;
-        int i6 = 0;
-        long j3 = 0;
-        long j4 = 1;
-        int i7 = 1;
-        int i8 = 1;
-        while (i6 < i - 1) {
-            byte b3 = 27;
-            if (bArr[i6] == 27 && (i2 = i6 + 3) < i) {
-                byte b4 = bArr[i6 + 1];
-                if (b4 != 36 || bArr[i6 + 2] != 41 || bArr[i2] != 65) {
-                    if (i2 < i && b4 == 36 && bArr[i6 + 2] == 41 && bArr[i2] == 71) {
-                        i6 += 4;
-                        while (true) {
-                            byte b5 = bArr[i6];
-                            if (b5 == 27) {
-                                break;
-                            }
-                            i8++;
-                            if (33 <= b5 && b5 <= 126 && 33 <= (b = bArr[(i3 = i6 + 1)]) && b <= 126) {
-                                i7++;
-                                j4 += 500;
-                                int i9 = b5 - 33;
-                                int i10 = iArr2[i9][b - 33];
-                                if (i10 != 0) {
-                                    j = i10;
-                                } else {
-                                    if (35 <= i9 && i9 <= 92) {
-                                        j = 150;
-                                    }
-                                    i6 = i3;
-                                }
-                                j3 += j;
-                                i6 = i3;
-                            }
-                            i6++;
-                        }
-                    }
-                } else {
-                    i6 += 4;
-                    while (true) {
-                        byte b6 = bArr[i6];
-                        if (b6 == b3) {
-                            break;
-                        }
-                        i8++;
-                        if (33 <= b6 && b6 <= 119 && 33 <= (b2 = bArr[(i5 = i6 + 1)]) && b2 <= 119) {
-                            i7++;
-                            int i11 = b6 - 33;
-                            j4 += 500;
-                            int i12 = iArr[i11][b2 - 33];
-                            if (i12 != 0) {
-                                j2 = i12;
-                            } else {
-                                if (15 <= i11 && i11 < 55) {
-                                    j2 = 200;
-                                }
-                                i6 = i5;
-                            }
-                            j3 += j2;
-                            i6 = i5;
-                        }
-                        i6++;
-                        b3 = 27;
-                    }
-                }
-                if (bArr[i6] == 27 && (i4 = i6 + 2) < i && bArr[i6 + 1] == 40 && bArr[i4] == 66) {
-                    i6 = i4;
-                }
-            }
-            i6++;
-        }
-        return (int) (((j3 / j4) * 50.0f) + ((i7 / i8) * 50.0f));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C12479 f21863;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f21864;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f21865;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f21866;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f21867;
+
+    public C6514(C12479 c12479, C12479 c124710) {
+        this.f21863 = c12479;
+        this.f21862 = c124710;
     }
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3480() {
-        return C22037.f71418;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C6514 m18380() {
+        return new C6514(this.f21863.m30987(), this.f21862.m30987());
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m18382(int i) {
+        this.f21865 = i;
+        if (i == 0) {
+            this.f21866 = 0;
+            this.f21867 = 0;
+            this.f21864 = 0;
+        } else {
+            C12479 c12479 = this.f21863;
+            c12479.m30995(i);
+            c12479.m30991(4);
+            this.f21866 = c12479.m30990();
+            this.f21867 = c12479.m30990();
+            this.f21864 = c12479.m30990();
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m18384() {
+        int i = this.f21865;
+        if (i == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        C12479 c12479 = this.f21863;
+        c12479.m30988(i);
+        return m18379(c12479.m30990());
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Map m18381() {
+        if (this.f21866 == 0) {
+            return Collections.EMPTY_MAP;
+        }
+        C12479 c12479 = this.f21863;
+        c12479.m30991(16);
+        HashMap map = new HashMap(this.f21866);
+        for (int i = 0; i < this.f21866; i++) {
+            map.put(Integer.valueOf(c12479.m30990()), Integer.valueOf(c12479.m30990()));
+        }
+        return map;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Map m18383() {
+        if (this.f21867 == 0) {
+            return Collections.EMPTY_MAP;
+        }
+        int i = (this.f21866 * 8) + 16;
+        C12479 c12479 = this.f21863;
+        c12479.m30991(i);
+        HashMap map = new HashMap(this.f21867);
+        for (int i2 = 0; i2 < this.f21867; i2++) {
+            map.put(Integer.valueOf(c12479.m30990()), Integer.valueOf(c12479.m30990()));
+        }
+        return map;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final Map m18386() {
+        if (this.f21864 == 0) {
+            return Collections.EMPTY_MAP;
+        }
+        int i = (this.f21867 * 8) + (this.f21866 * 8) + 16;
+        C12479 c12479 = this.f21863;
+        c12479.m30991(i);
+        HashMap map = new HashMap(this.f21864);
+        for (int i2 = 0; i2 < this.f21864; i2++) {
+            map.put(Integer.valueOf(c12479.m30990()), Integer.valueOf(c12479.m30990()));
+        }
+        return map;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List m18379(int i) {
+        if (i == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        C12479 c12479 = this.f21863;
+        c12479.m30988(i);
+        int iM30990 = c12479.m30990();
+        if (iM30990 == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        ArrayList arrayList = new ArrayList(iM30990);
+        int iM31005 = c12479.m31005();
+        for (int i2 = 0; i2 < iM30990; i2++) {
+            c12479.m30988((i2 * 4) + iM31005);
+            c12479.m30988(c12479.m30990());
+            arrayList.add(m18377(c12479, this.f21862, true));
+        }
+        return arrayList;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m18385(int i) {
+        if (i == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        C12479 c12479 = this.f21863;
+        c12479.m30988(i);
+        int iM30990 = c12479.m30990();
+        if (iM30990 == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        ArrayList arrayList = new ArrayList(iM30990);
+        for (int i2 = 0; i2 < iM30990; i2++) {
+            int iM30991 = c12479.m30990();
+            int iM31005 = c12479.m31005();
+            arrayList.add(m18379(iM30991));
+            c12479.m30988(iM31005);
+        }
+        return arrayList;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C5886 m18377(C12479 c12479, C12479 c124710, boolean z) {
+        EnumC11105 enumC11105;
+        if (z) {
+            int iM31002 = c12479.m31002();
+            if (iM31002 == 0) {
+                enumC11105 = EnumC11105.BUILD;
+            } else if (iM31002 == 1) {
+                enumC11105 = EnumC11105.RUNTIME;
+            } else {
+                if (iM31002 != 2) {
+                    throw new C13817(C13645.m33382(iM31002, "Unknown annotation visibility value: "));
+                }
+                enumC11105 = EnumC11105.SYSTEM;
+            }
+        } else {
+            enumC11105 = null;
+        }
+        c12479.getClass();
+        int iM50647 = C22463.m50647(c12479);
+        int iM50648 = C22463.m50647(c12479);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(iM50648);
+        for (int i = 0; i < iM50648; i++) {
+            linkedHashMap.put(c124710.m30998(C22463.m50647(c12479)), C24414.m54617(c12479, c124710));
+        }
+        return new C5886(enumC11105, c124710.m30997(iM50647), linkedHashMap);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m18378(C12479 c12479) {
+        return C24414.m54616(c12479, this.f21862);
     }
 }

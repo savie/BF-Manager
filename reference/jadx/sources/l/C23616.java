@@ -1,57 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۢ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B6MI */
+/* JADX INFO: renamed from: l.᩹ܳۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z3WS */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23616 {
+public final class C23616 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f76519;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ DialogInterfaceC8327 f76643;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final double f76520;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6462 f76644;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final double f76521;
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f76645;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f76522;
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1079 f76646;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final double f76523;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final float f76524;
-
-    public C23616(int i, int i2, double d, double d2, double d3, float f) {
-        this.f76519 = i;
-        this.f76522 = i2;
-        this.f76521 = d;
-        this.f76520 = d2;
-        this.f76523 = d3;
-        this.f76524 = f;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23616(C6462 c6462, AbstractActivityC17204 abstractActivityC17204, C1079 c1079, AbstractActivityC17204 abstractActivityC17205, DialogInterfaceC8327 dialogInterfaceC8327) {
+        super(abstractActivityC17204, -1);
+        this.f76644 = c6462;
+        this.f76646 = c1079;
+        this.f76645 = abstractActivityC17205;
+        this.f76643 = dialogInterfaceC8327;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m52087() {
-        int i;
-        int i2 = this.f76519;
-        if (i2 <= 0 || (i = this.f76522) <= 0) {
-            return false;
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        String strTrim = m22914().trim();
+        if (strTrim.equals(this.f76646.m4041())) {
+            m22951();
+        } else {
+            new C16156(this, strTrim).m8197();
         }
-        double d = this.f76521;
-        if (d <= 0.0d || Double.isNaN(d) || Double.isInfinite(d)) {
-            return false;
-        }
-        double d2 = this.f76520 * ((double) i2) * 8.0d * 2.0d;
-        if (Double.isNaN(d2) || Double.isInfinite(d2)) {
-            return false;
-        }
-        double d3 = this.f76523 * ((double) i) * 8.0d * 2.0d;
-        if (Double.isNaN(d3) || Double.isInfinite(d3)) {
-            return false;
-        }
-        float f = this.f76524;
-        return f >= -180.0f && f < 180.0f;
     }
 }

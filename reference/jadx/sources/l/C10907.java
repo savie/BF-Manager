@@ -1,176 +1,199 @@
 package l;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.ۧۢۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6T5 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10907 implements AutoCloseable {
+/* JADX INFO: renamed from: l.ۤܰۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6BT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10907 extends C15382 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f37098;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public Map f34535;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final boolean f37099;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f34536;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C19103 f37101;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C6276 f37103;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f37104;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final boolean[] f37102 = new boolean[261];
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public int f34537;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C23607 f37100 = new C23607();
+    public Map f34538;
 
-    public C10907(C6276 c6276, int i, int i2, int i3) {
-        if (i3 < 0) {
-            throw new IllegalArgumentException("Invalid app state limit");
-        }
-        this.f37103 = c6276;
-        this.f37098 = i3;
-        this.f37101 = new C19103(c6276, i, i2);
-        this.f37099 = i == 0 && i2 == c6276.length();
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ InterfaceC3145 mo10271(String str) {
+        m27681(str);
+        return this;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ C15382 mo10271(String str) {
+        m27681(str);
+        return this;
+    }
+
+    public C10907(C6129 c6129) {
+        super(c6129);
+        this.f34536 = 1;
+        Map map = Collections.EMPTY_MAP;
+        this.f34538 = map;
+        this.f34535 = map;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m27338(int i, long j, InputStream inputStream) {
-        if (i != 1 && i != 2 && i != 4 && i != 7 && i != 259 && i != 260) {
-            m27336();
+    public final void m27681(String str) {
+        int i;
+        String str2 = this.f50164;
+        if (!str.contains(str2)) {
+            this.f50160.append(str);
             return;
         }
-        try {
-            try {
-                m27336();
-                boolean[] zArr = this.f37102;
-                if (!zArr[i] && j >= 0) {
-                    int i2 = this.f37098;
-                    if (j <= i2) {
-                        zArr[i] = true;
-                        C5967 c5967 = new C5967(inputStream);
-                        if (i == 4) {
-                            this.f37100.f76477 = new byte[(int) j];
-                            int i3 = 0;
-                            while (true) {
-                                C23607 c23607 = this.f37100;
-                                byte[] bArr = c23607.f76477;
-                                if (i3 >= bArr.length) {
-                                    c23607.f76481 = C17256.m40217(new ByteArrayInputStream(this.f37100.f76477), j, i2);
-                                    break;
-                                }
-                                int i4 = c5967.read(bArr, i3, bArr.length - i3);
-                                if (i4 <= 0) {
-                                    throw new IOException("Truncated legacy text config");
-                                }
-                                i3 += i4;
-                            }
-                        } else {
-                            C19103 c19103 = this.f37101;
-                            if (i == 259 || i == 260) {
-                                ArrayList arrayList = new ArrayList();
-                                c19103.m43868(c5967, j, new C16471(this, arrayList));
-                                if (i == 259) {
-                                    this.f37100.f76483 = arrayList;
-                                } else {
-                                    this.f37100.f76489 = arrayList;
-                                }
-                            } else {
-                                C0757 c0757M3260 = C0757.m3260(j, c5967);
-                                try {
-                                    if (i == 1) {
-                                        this.f37100.f76490 = c0757M3260.readInt();
-                                        this.f37100.f76485 = c0757M3260.readInt();
-                                        this.f37100.f76474 = c0757M3260.readInt();
-                                        C23607 c23608 = this.f37100;
-                                        if (Integer.compare(c23608.f76474 ^ Integer.MIN_VALUE, c23608.f76490 ^ Integer.MIN_VALUE) > 0) {
-                                            throw new IOException("Invalid legacy edit marks");
-                                        }
-                                        this.f37100.f76473 = true;
-                                    } else if (i == 2) {
-                                        C23607 c23609 = this.f37100;
-                                        c19103.m43867(c0757M3260.readInt());
-                                        c23609.getClass();
-                                        C23607 c236010 = this.f37100;
-                                        c19103.m43867(c0757M3260.readInt());
-                                        c236010.getClass();
-                                        this.f37100.f76486 = c0757M3260.readInt();
-                                        this.f37100.f76479 = c0757M3260.readInt();
-                                        this.f37100.f76480 = c0757M3260.readByte();
-                                        this.f37100.f76487 = c0757M3260.m3267();
-                                        this.f37100.f76476 = c0757M3260.m3267();
-                                        this.f37100.f76478 = c0757M3260.m3267();
-                                        this.f37100.f76482 = true;
-                                    } else {
-                                        this.f37100.f76488 = c19103.m43867(c0757M3260.readInt());
-                                        this.f37100.f76484 = c19103.m43867(c0757M3260.readInt());
-                                        this.f37100.f76475 = true;
-                                    }
-                                    c0757M3260.m3263();
-                                    c0757M3260.close();
-                                } catch (Throwable th) {
-                                    try {
-                                        c0757M3260.close();
-                                    } catch (Throwable th2) {
-                                        th.addSuppressed(th2);
-                                    }
-                                    throw th;
-                                }
-                            }
-                        }
-                        inputStream.close();
-                        return;
-                    }
+        StringBuilder sb = this.f50160;
+        StringBuilder sbM27333 = C10732.m27333(str2);
+        sbM27333.append(this.f50161);
+        sb.append(str.replace(str2, sbM27333.toString()));
+        int i2 = this.f34536;
+        int i3 = C12326.f39603;
+        if (!str.isEmpty() && str2 != null && !str2.isEmpty()) {
+            int length = str2.length();
+            int i4 = 0;
+            i = 0;
+            while (true) {
+                int iIndexOf = str.indexOf(str2, i4);
+                if (iIndexOf == -1) {
+                    break;
                 }
-                throw new IOException("Invalid or repeated legacy view field");
-            } catch (Throwable th3) {
-                try {
-                    inputStream.close();
-                } catch (Throwable th4) {
-                    th3.addSuppressed(th4);
-                }
-                throw th3;
+                i++;
+                i4 = iIndexOf + length;
             }
-        } catch (IOException | Error | RuntimeException e) {
-            this.f37104 = true;
-            throw e;
+        } else {
+            i = 0;
         }
+        this.f34536 = i2 + i;
+        this.f34537 = 0;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    public final InterfaceC3145 add(String str) {
+        this.f50160.append(str);
+        this.f34537 = str.length() + this.f34537;
+        return this;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    public final C15382 add(String str) {
+        this.f50160.append(str);
+        this.f34537 = str.length() + this.f34537;
+        return this;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC3145 mo10270(char c) {
+        this.f50160.append(c);
+        this.f34537++;
+        return this;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final C15382 mo10270(char c) {
+        this.f50160.append(c);
+        this.f34537++;
+        return this;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC3145 mo10272(C10907 c10907) {
+        this.f34536--;
+        int length = this.f50160.length();
+        for (Map.Entry entry : c10907.f34538.entrySet()) {
+            m27679((InterfaceC11653) entry.getValue(), ((Integer) entry.getKey()).intValue() + length);
+        }
+        for (Map.Entry entry2 : c10907.f34535.entrySet()) {
+            int iIntValue = ((Integer) entry2.getKey()).intValue() + this.f34536;
+            Integer num = (Integer) entry2.getValue();
+            num.intValue();
+            if (this.f34535.isEmpty()) {
+                this.f34535 = new TreeMap();
+            }
+            this.f34535.put(Integer.valueOf(iIntValue), num);
+        }
+        this.f34536 += c10907.f34536;
+        this.f34537 = c10907.f34537;
+        this.f50160.append((CharSequence) c10907.f50160);
+        return this;
+    }
+
+    @Override // l.C15382
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void mo27682() {
+        this.f50160.append(this.f50164);
+        this.f34536++;
+        this.f34537 = 0;
+    }
+
+    @Override // l.C15382
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo27680() {
+        this.f50160.append(this.f50161);
+        this.f34537 = this.f50161.length() + this.f34537;
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo10275(InterfaceC16874 interfaceC16874) {
+        if (interfaceC16874 == null) {
+            return;
+        }
+        mo10274(new C16128(interfaceC16874, -1));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m27337(C10907 c10907, ArrayList arrayList, int i, int i2, int i3) {
-        C6276 c6276 = c10907.f37103;
-        if (!c10907.f37099 && i3 >= 0) {
-            i = c6276.m40839(i3);
-            i2 = i3 - c6276.m40837(i);
+    private void m27679(InterfaceC11653 interfaceC11653, int i) {
+        if (this.f34538.isEmpty()) {
+            this.f34538 = new HashMap();
         }
-        arrayList.add(new C15659(i, i2));
+        this.f34538.put(Integer.valueOf(i), interfaceC11653);
     }
 
-    public final C23607 finish() {
-        m27336();
-        C23607 c23607 = this.f37100;
-        close();
-        return c23607;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m27336() {
-        if (this.f37100 == null || this.f37104) {
-            throw new IllegalStateException("Legacy view reader is closed or failed");
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo10284(int i) {
+        if (i == 0) {
+            return;
         }
+        int i2 = this.f34536;
+        if (this.f34535.isEmpty()) {
+            this.f34535 = new TreeMap();
+        }
+        this.f34535.put(Integer.valueOf(i2), Integer.valueOf(i));
     }
 
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        this.f37100 = null;
-        this.f37101.close();
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final InterfaceC23283 m27683() {
+        String string = this.f50160.toString();
+        this.f50160 = null;
+        return new C22096(string, this.f34535, this.f34538);
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo10274(InterfaceC11653 interfaceC11653) {
+        if (interfaceC11653 == null) {
+            return;
+        }
+        m27679(interfaceC11653, this.f50160.length());
+    }
+
+    @Override // l.C15382, l.InterfaceC3145
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo10276(C17620 c17620) {
+        m27679(c17620, this.f50160.length() - this.f34537);
     }
 }

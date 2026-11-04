@@ -1,156 +1,196 @@
-.class public final enum Ll/᩹֫᩸;
-.super Ljava/lang/Enum;
-.source "C9FL"
-
-# interfaces
-.implements Ll/ܺۢ᩸;
-
-
-# static fields
-.field public static final enum ֡:Ll/᩹֫᩸;
-
-.field public static final enum ۫:Ll/᩹֫᩸;
-
-.field public static final enum ܽ:Ll/᩹֫᩸;
-
-.field public static final synthetic ᩶:[Ll/᩹֫᩸;
+.class public final Ll/᩹֫᩸;
+.super Ll/ۢۜ᩸;
+.source "61L9"
 
 
 # instance fields
-.field public ܺ:J
+.field public final synthetic ۤ:Ll/ۖ֫᩸;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
-
-    .line 119
-    new-instance v0, Ll/᩹֫᩸;
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x1
-
-    const-string v4, "SMB2_SESSION_FLAG_IS_GUEST"
-
-    invoke-direct {v0, v4, v1, v2, v3}, Ll/᩹֫᩸;-><init>(Ljava/lang/String;IJ)V
-
-    sput-object v0, Ll/᩹֫᩸;->ܽ:Ll/᩹֫᩸;
-
-    .line 120
-    new-instance v0, Ll/᩹֫᩸;
-
-    const/4 v1, 0x1
-
-    const-wide/16 v2, 0x2
-
-    const-string v4, "SMB2_SESSION_FLAG_IS_NULL"
-
-    invoke-direct {v0, v4, v1, v2, v3}, Ll/᩹֫᩸;-><init>(Ljava/lang/String;IJ)V
-
-    sput-object v0, Ll/᩹֫᩸;->۫:Ll/᩹֫᩸;
-
-    .line 121
-    new-instance v0, Ll/᩹֫᩸;
-
-    const/4 v1, 0x2
-
-    const-wide/16 v2, 0x4
-
-    const-string v4, "SMB2_SESSION_FLAG_ENCRYPT_DATA"
-
-    invoke-direct {v0, v4, v1, v2, v3}, Ll/᩹֫᩸;-><init>(Ljava/lang/String;IJ)V
-
-    sput-object v0, Ll/᩹֫᩸;->֡:Ll/᩹֫᩸;
-
-    .line 118
-    invoke-static {}, Ll/᩹֫᩸;->ۙ()[Ll/᩹֫᩸;
-
-    move-result-object v0
-
-    sput-object v0, Ll/᩹֫᩸;->᩶:[Ll/᩹֫᩸;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IJ)V
+.method public constructor <init>(Ll/ۖ֫᩸;)V
     .locals 0
 
-    .line 125
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 13
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 126
-    iput-wide p3, p0, Ll/᩹֫᩸;->ܺ:J
+    .line 307
+    iput-object p1, p0, Ll/᩹֫᩸;->ۤ:Ll/ۖ֫᩸;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll/᩹֫᩸;
-    .locals 1
-
-    .line 118
-    const-class v0, Ll/᩹֫᩸;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll/᩹֫᩸;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll/᩹֫᩸;
-    .locals 1
-
-    .line 118
-    sget-object v0, Ll/᩹֫᩸;->᩶:[Ll/᩹֫᩸;
-
-    invoke-virtual {v0}, [Ll/᩹֫᩸;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll/᩹֫᩸;
-
-    return-object v0
-.end method
-
-.method public static synthetic ۙ()[Ll/᩹֫᩸;
-    .locals 3
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Ll/᩹֫᩸;
-
-    .line 118
-    sget-object v1, Ll/᩹֫᩸;->ܽ:Ll/᩹֫᩸;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩹֫᩸;->۫:Ll/᩹֫᩸;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Ll/᩹֫᩸;->֡:Ll/᩹֫᩸;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public getValue()J
+.method public final ۙ(Lbin/mt/plugin/api/util/ResultCallback;)V
+    .locals 3
+
+    .line 310
+    iget-object v0, p0, Ll/᩹֫᩸;->ۤ:Ll/ۖ֫᩸;
+
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->ᩴ:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 311
+    invoke-super {p0, p1}, Ll/ۢۜ᩸;->ۙ(Lbin/mt/plugin/api/util/ResultCallback;)V
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 313
+    invoke-static {v0, v1, v2, p1}, Ll/ۖ֫᩸;->ۙ(Ll/ۖ֫᩸;ZZLbin/mt/plugin/api/util/ResultCallback;)V
+
+    return-void
+.end method
+
+.method public final ۤ()Ljava/lang/String;
+    .locals 3
+
+    .line 325
+    iget-object v0, p0, Ll/᩹֫᩸;->ۤ:Ll/ۖ֫᩸;
+
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->ۙ:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    return-object v2
+
+    .line 327
+    :cond_0
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->᩸:Ll/᩷ۨᩴ;
+
+    if-eqz v1, :cond_1
+
+    .line 328
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/֨ۚ᩸;->᩸:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->ܺۙ()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    return-object v2
+.end method
+
+.method public final ᩴ()Z
     .locals 2
 
-    .line 130
-    iget-wide v0, p0, Ll/᩹֫᩸;->ܺ:J
+    .line 319
+    iget-object v0, p0, Ll/᩹֫᩸;->ۤ:Ll/ۖ֫᩸;
 
-    return-wide v0
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->ᩴ:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {v0}, Ll/ۖ֫᩸;->֫(Ll/ۖ֫᩸;)Ll/᩻ۡ᩸;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/᩻ۡ᩸;->۫()Ll/᩺ۜ᩸;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ۘ᩷()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩷()Ljava/lang/String;
+    .locals 2
+
+    .line 337
+    iget-object v0, p0, Ll/᩹֫᩸;->ۤ:Ll/ۖ֫᩸;
+
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->ۙ:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 338
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/֨ۚ᩸;->ۙ:Ljava/lang/String;
+
+    return-object v0
+
+    .line 339
+    :cond_0
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ll/֨ۚ᩸;->᩸:Ll/᩷ۨᩴ;
+
+    if-eqz v1, :cond_1
+
+    .line 340
+    invoke-static {v0}, Ll/ۖ֫᩸;->۫(Ll/ۖ֫᩸;)Ll/֨ۚ᩸;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll/֨ۚ᩸;->᩸:Ll/᩷ۨᩴ;
+
+    invoke-virtual {v0}, Ll/᩷ۨᩴ;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    const-string v0, ""
+
+    return-object v0
 .end method

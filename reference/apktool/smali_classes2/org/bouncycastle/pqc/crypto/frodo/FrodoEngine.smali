@@ -133,7 +133,7 @@
 
     div-int/2addr p3, v3
 
-    invoke-static {p2, v0, v3, p3}, Ll/֨ۖᩴ;->ۙ(IIII)I
+    invoke-static {p2, v0, v3, p3}, Ll/ۜ᩶֫;->ۙ(IIII)I
 
     move-result p2
 
@@ -147,7 +147,7 @@
 
     add-int/2addr v1, p3
 
-    invoke-static {p1, p2, v2, v1}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {p1, p2, v2, v1}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result p1
 
@@ -1121,7 +1121,7 @@
 
     const/16 v4, 0x40
 
-    invoke-static {v3, v4, v8, v2}, Ll/֨ۖᩴ;->ۙ(IIII)I
+    invoke-static {v3, v4, v8, v2}, Ll/ۜ᩶֫;->ۙ(IIII)I
 
     move-result v3
 
@@ -1161,7 +1161,7 @@
 
     const/16 v3, 0x80
 
-    invoke-static {v2, v3, v8, v0}, Ll/֨ۖᩴ;->ۙ(IIII)I
+    invoke-static {v2, v3, v8, v0}, Ll/ۜ᩶֫;->ۙ(IIII)I
 
     move-result v2
 
@@ -1321,7 +1321,7 @@
 
     const/16 v4, 0x40
 
-    invoke-static {v1, v2, v4, v3}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
+    invoke-static {v1, v2, v4, v3}, Ll/ܿ۟ۧ;->ۙ(IIII)I
 
     move-result v1
 
@@ -1620,7 +1620,7 @@
 
     const/4 v5, 0x2
 
-    invoke-static {v0, v1, v4, v5}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
+    invoke-static {v0, v1, v4, v5}, Ll/ܿ۟ۧ;->ۙ(IIII)I
 
     move-result v0
 

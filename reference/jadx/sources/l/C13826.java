@@ -1,63 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰ۫᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 75QI */
+import java.util.regex.Pattern;
+
+/* JADX INFO: renamed from: l.۬ۨۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H7RN */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13826 extends C16171 {
-    @Override // l.C16171
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo33648(AbstractC4777 abstractC4777) {
-        if (abstractC4777.f16795 == EnumC2890.FILL_ARRAY_DATA && C22292.m49457(abstractC4777.mo13244())) {
-            throw C22292.f72826;
-        }
-        super.mo33648(abstractC4777);
+public final enum C13826 extends EnumC7687 {
+    public /* synthetic */ C13826(EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        this("ADD_EXPORTS", 72, "--add-exports", "opt.arg.addExports", "opt.addExports", enumC18128, enumC21112);
     }
 
-    @Override // l.C16171
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo33649(AbstractC7124 abstractC7124) {
-        switch (C2535.f10042[abstractC7124.f23823.ordinal()]) {
-            case 1:
-            case 2:
-            case 3:
-                if (C22292.m49457(abstractC7124.mo19023()[0])) {
-                    throw C22292.f72826;
-                }
-                return;
-            case 4:
-                if (C22292.m49457(abstractC7124.mo19024())) {
-                    throw C22292.f72826;
-                }
-                return;
-            case 5:
-                if (C22292.m49457(abstractC7124.mo19020())) {
-                    throw C22292.f72826;
-                }
-                return;
-            case 6:
-                if (abstractC7124.mo19019().f23823 == EnumC9947.CONSTANT && ((Number) ((C14760) abstractC7124.mo19019()).f48276).intValue() == 0) {
-                    throw C22292.f72825;
-                }
-                return;
-            case 7:
-                if (abstractC7124.mo19019().f23823 == EnumC9947.CONSTANT && ((Number) ((C14760) abstractC7124.mo19019()).f48276).longValue() == 0) {
-                    throw C22292.f72825;
-                }
-                return;
-            case 8:
-                if (abstractC7124.mo19020().f23823 == EnumC9947.CONSTANT && ((Number) ((C14760) abstractC7124.mo19020()).f48276).intValue() < 0) {
-                    throw C22292.f72827;
-                }
-                return;
-            case 9:
-                for (AbstractC7124 abstractC7125 : abstractC7124.mo19023()) {
-                    if (abstractC7125.f23823 == EnumC9947.CONSTANT && ((Number) ((C14760) abstractC7125).f48276).intValue() < 0) {
-                        throw C22292.f72827;
-                    }
-                }
-                return;
-            default:
-                return;
+    public C13826(String str, int i, String str2, String str3, String str4, EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        super(str, i, str2, str3, str4, enumC18128, enumC21112, 0);
+    }
+
+    @Override // l.EnumC7687
+    /* JADX INFO: renamed from: ۙ */
+    public void mo4242(AbstractC9923 abstractC9923, String str, String str2) throws C14398 {
+        if (str2.isEmpty()) {
+            throw abstractC9923.m25755(C22843.m51546(str));
         }
+        if (!mo10552().matcher(str2).matches()) {
+            throw abstractC9923.m25755(C22843.m51547(str, str2));
+        }
+        EnumC7687 enumC7687 = EnumC7687.f25300;
+        String strMo12199 = abstractC9923.mo12199(enumC7687);
+        String str3 = enumC7687.f25368;
+        if (strMo12199 != null) {
+            str2 = C8008.m21875((char) 0, strMo12199, str2);
+        }
+        abstractC9923.mo12200(str3, str2);
+    }
+
+    @Override // l.EnumC7687
+    /* JADX INFO: renamed from: ᩴ */
+    public Pattern mo10552() {
+        return Pattern.compile("([^/]+)/([^=]+)=(,*[^,].*)");
     }
 }

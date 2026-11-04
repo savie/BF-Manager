@@ -1,43 +1,44 @@
 package l;
 
-import android.view.View;
-
-/* JADX INFO: renamed from: l.᩵۠᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 715M */
-/* JADX INFO: loaded from: classes4.dex */
-public class C19348 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f62385;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final View[] f62386;
+/* JADX INFO: renamed from: l.ᩳ᩷᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81VV */
+/* JADX INFO: loaded from: classes5.dex */
+public class C19348 implements InterfaceC8161 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f62387;
+    public boolean f62521;
 
-    public C19348(View... viewArr) {
-        this.f62386 = viewArr;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC8161 f62522;
+
+    public C19348(InterfaceC8161 interfaceC8161) {
+        this.f62522 = interfaceC8161;
     }
 
-    @InterfaceC16341
-    public void setAlpha(float f) {
-        for (View view : this.f62386) {
-            view.setAlpha(f);
-        }
-        if (f == 0.0f) {
-            if (this.f62385) {
-                m44354(8);
-            } else if (this.f62387) {
-                m44354(4);
-            }
-        }
+    @Override // l.InterfaceC8161
+    /* JADX INFO: renamed from: ֡ */
+    public void mo1551() {
+        this.f62521 = false;
+        this.f62522.mo1551();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44354(int i) {
-        for (View view : this.f62386) {
-            view.setVisibility(i);
-        }
+    @Override // l.InterfaceC8161
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1553(boolean z, boolean z2) {
+        this.f62521 = true;
+        this.f62522.mo1553(z, z2);
+    }
+
+    @Override // l.InterfaceC8161
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1552(int i, int i2) {
+        float f = i2;
+        this.f62522.mo1552(i, (int) (this.f62521 ? (f * 0.3f) + 70.0f : f * 0.7f));
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f62522.mo924();
     }
 }

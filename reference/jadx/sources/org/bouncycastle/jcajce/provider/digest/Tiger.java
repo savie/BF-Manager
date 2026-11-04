@@ -1,8 +1,8 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C15489;
-import l.C22697;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.digests.TigerDigest;
 import org.bouncycastle.crypto.macs.HMac;
@@ -12,7 +12,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Tiger {
 
     public class Digest extends BCMessageDigest implements Cloneable {
@@ -28,7 +28,6 @@ public class Tiger {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac extends BaseMac {
         public HashMac() {
             super(new HMac(new TigerDigest()));
@@ -41,7 +40,6 @@ public class Tiger {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = Tiger.class.getName();
 
@@ -49,27 +47,24 @@ public class Tiger {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addHMACAlgorithm(configurableProvider, "TIGER", C22697.m50267(C9023.m23357(str, "$Digest", "MessageDigest.Tiger", C9023.m23357(str, "$Digest", "MessageDigest.TIGER", sb, configurableProvider), configurableProvider), str, "$HashMac"), C15489.m37076(str, "$KeyGenerator"));
+            addHMACAlgorithm(configurableProvider, "TIGER", C8947.m23910(C18063.m42089(str, "$Digest", "MessageDigest.Tiger", C18063.m42089(str, "$Digest", "MessageDigest.TIGER", sb, configurableProvider), configurableProvider), str, "$HashMac"), C14483.m34972(str, "$KeyGenerator"));
             addHMACAlias(configurableProvider, "TIGER", IANAObjectIdentifiers.hmacTIGER);
             configurableProvider.addAlgorithm("SecretKeyFactory.PBEWITHHMACTIGER", str + "$PBEWithMacKeyFactory");
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithHashMac extends BaseMac {
         public PBEWithHashMac() {
             super(new HMac(new TigerDigest()), 2, 3, 192);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMacKeyFactory extends PBESecretKeyFactory {
         public PBEWithMacKeyFactory() {
             super("PBEwithHmacTiger", null, false, 2, 3, 192, 0);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class TigerHmac extends BaseMac {
         public TigerHmac() {
             super(new HMac(new TigerDigest()));

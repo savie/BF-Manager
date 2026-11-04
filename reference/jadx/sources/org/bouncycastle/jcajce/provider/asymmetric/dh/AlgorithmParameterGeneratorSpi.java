@@ -12,13 +12,13 @@ import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.BaseAlgorithmParameterGeneratorSpi;
 import org.bouncycastle.jcajce.provider.asymmetric.util.PrimeCertaintyCalculator;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParameterGeneratorSpi extends BaseAlgorithmParameterGeneratorSpi {
     public SecureRandom random;
     public int strength = 2048;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77974l = 0;
+    public int f82090l = 0;
 
     @Override // java.security.AlgorithmParameterGeneratorSpi
     public AlgorithmParameters engineGenerateParameters() {
@@ -27,7 +27,7 @@ public class AlgorithmParameterGeneratorSpi extends BaseAlgorithmParameterGenera
         DHParameters dHParametersGenerateParameters = dHParametersGenerator.generateParameters();
         try {
             AlgorithmParameters algorithmParametersCreateParametersInstance = createParametersInstance("DH");
-            algorithmParametersCreateParametersInstance.init(new DHParameterSpec(dHParametersGenerateParameters.getP(), dHParametersGenerateParameters.getG(), this.f77974l));
+            algorithmParametersCreateParametersInstance.init(new DHParameterSpec(dHParametersGenerateParameters.getP(), dHParametersGenerateParameters.getG(), this.f82090l));
             return algorithmParametersCreateParametersInstance;
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
@@ -47,7 +47,7 @@ public class AlgorithmParameterGeneratorSpi extends BaseAlgorithmParameterGenera
         }
         DHGenParameterSpec dHGenParameterSpec = (DHGenParameterSpec) algorithmParameterSpec;
         this.strength = dHGenParameterSpec.getPrimeSize();
-        this.f77974l = dHGenParameterSpec.getExponentSize();
+        this.f82090l = dHGenParameterSpec.getExponentSize();
         this.random = secureRandom;
     }
 }

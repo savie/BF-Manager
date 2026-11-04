@@ -1,68 +1,54 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
-/* JADX INFO: renamed from: l.᩸ۖ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34CP */
+/* JADX INFO: renamed from: l.᩶ۨܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: CBF0 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21296 extends InputStream implements InterfaceC20818 {
+public final class C21296 implements InterfaceC11050 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C17768 f69306;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C22460 f67904;
 
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f67905;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C9230 f67906;
+
+    @Override // l.InterfaceC11050
+    /* JADX INFO: renamed from: ᩸ */
+    public final boolean mo27936() {
+        return false;
     }
 
-    public C21296(C17768 c17768) {
-        this.f69306 = c17768;
-    }
-
-    @Override // java.io.InputStream
-    public final int read() throws IOException {
-        C17768 c17768 = this.f69306;
-        C6043 c6043 = c17768.f56358;
-        if (c17768.f56359) {
-            throw new IOException("closed");
+    public C21296(C22460 c22460, int i, int i2, C9230 c9230) {
+        if (i2 < 0) {
+            throw new IllegalArgumentException("size < 0");
         }
-        if (c6043.f20522 == 0 && c17768.f56357.mo2293(c6043, 8192L) == -1) {
-            return -1;
+        C22460 c22460M50638 = c22460.m50638(i, (i2 * 2) + i);
+        this.f67904 = c22460M50638;
+        this.f67905 = i2;
+        this.f67906 = c9230;
+        for (int i3 = 0; i3 < i2; i3++) {
+            try {
+            } catch (ClassCastException e) {
+                throw new RuntimeException("bogus class cpi", e);
+            }
         }
-        return c6043.readByte() & 255;
     }
 
-    @Override // java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) throws IOException {
-        C17768 c17768 = this.f69306;
-        C6043 c6043 = c17768.f56358;
-        if (c17768.f56359) {
-            throw new IOException("closed");
-        }
-        C15653.m37329(bArr.length, i, i2);
-        if (c6043.f20522 == 0 && c17768.f56357.mo2293(c6043, 8192L) == -1) {
-            return -1;
-        }
-        return c6043.read(bArr, i, i2);
+    @Override // l.InterfaceC11050
+    public final int size() {
+        return this.f67905;
     }
 
-    @Override // java.io.InputStream
-    public final int available() throws IOException {
-        C17768 c17768 = this.f69306;
-        if (c17768.f56359) {
-            throw new IOException("closed");
-        }
-        return (int) Math.min(c17768.f56358.f20522, 2147483647L);
+    @Override // l.InterfaceC11050
+    public final C5085 getType(int i) {
+        return ((C1028) this.f67906.get(this.f67904.m50641(i * 2))).m3933();
     }
 
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f69306.close();
-    }
-
-    public final String toString() {
-        return this.f69306 + ".inputStream()";
+    @Override // l.InterfaceC11050
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC11050 mo1038(C5085 c5085) {
+        throw new UnsupportedOperationException("unsupported");
     }
 }

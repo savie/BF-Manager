@@ -3,21 +3,21 @@ package com.google.android.material.animation;
 import android.animation.TimeInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
-import l.C0280;
-import l.C15058;
-import l.C22819;
-import l.C6590;
+import l.C11568;
+import l.C1874;
+import l.C19967;
+import l.C5603;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AnimationUtils {
     public static final TimeInterpolator LINEAR_INTERPOLATOR = new LinearInterpolator();
-    public static final TimeInterpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new C22819();
-    public static final TimeInterpolator FAST_OUT_LINEAR_IN_INTERPOLATOR = new C6590();
-    public static final TimeInterpolator LINEAR_OUT_SLOW_IN_INTERPOLATOR = new C15058();
+    public static final TimeInterpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new C1874();
+    public static final TimeInterpolator FAST_OUT_LINEAR_IN_INTERPOLATOR = new C5603();
+    public static final TimeInterpolator LINEAR_OUT_SLOW_IN_INTERPOLATOR = new C11568();
     public static final TimeInterpolator DECELERATE_INTERPOLATOR = new DecelerateInterpolator();
 
     public static float lerp(float f, float f2, float f3) {
-        return C0280.m1792(f2, f, f3, f);
+        return C19967.m45884(f2, f, f3, f);
     }
 
     public static int lerp(int i, int i2, float f) {

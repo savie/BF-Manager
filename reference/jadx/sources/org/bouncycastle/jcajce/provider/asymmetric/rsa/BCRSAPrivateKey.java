@@ -8,7 +8,7 @@ import java.math.BigInteger;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.spec.RSAPrivateKeySpec;
 import java.util.Enumeration;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -21,7 +21,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.PKCS12BagAttributeCarrie
 import org.bouncycastle.jce.interfaces.PKCS12BagAttributeCarrier;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCRSAPrivateKey implements RSAPrivateKey, PKCS12BagAttributeCarrier, BCKey {
     public static BigInteger ZERO = BigInteger.valueOf(0);
     public static final long serialVersionUID = 5110188922551353628L;
@@ -185,7 +185,7 @@ public class BCRSAPrivateKey implements RSAPrivateKey, PKCS12BagAttributeCarrier
     public String toString() {
         StringBuilder sb = new StringBuilder("RSA Private Key [");
         String strLineSeparator = Strings.lineSeparator();
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, RSAUtil.generateKeyFingerprint(getModulus()), "],[]", strLineSeparator, "            modulus: ");
+        C4794.m14774(sb, RSAUtil.generateKeyFingerprint(getModulus()), "],[]", strLineSeparator, "            modulus: ");
         sb.append(getModulus().toString(16));
         sb.append(strLineSeparator);
         return sb.toString();

@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView$2;
-.super Ll/ۨ᩻;
+.super Ll/᩸ۡ;
 .source "BottomSheetDragHandleView.java"
 
 
@@ -14,7 +14,7 @@
     .line 103
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;
 
-    invoke-direct {p0}, Ll/ۨ᩻;-><init>()V
+    invoke-direct {p0}, Ll/᩸ۡ;-><init>()V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .locals 0
 
     .line 106
-    invoke-super {p0, p1, p2}, Ll/ۨ᩻;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Ll/᩸ۡ;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 107
     invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I

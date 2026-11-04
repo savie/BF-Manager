@@ -1,44 +1,35 @@
-.class public final synthetic Ll/ܽۢۘ;
-.super Ljava/lang/Object;
-.source "E1KB"
-
-# interfaces
-.implements Ll/᩷᩸;
+.class public final Ll/ܽۢۘ;
+.super Ljava/lang/RuntimeException;
+.source "J3ZG"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ۢۢۘ;
-
-.field public final synthetic ᩶:Ll/ۨ֨᩺;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ۢۢۘ;Ll/ۨ֨᩺;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ܽۢۘ;->ܺ:Ll/ۢۢۘ;
-
-    iput-object p2, p0, Ll/ܽۢۘ;->᩶:Ll/ۨ֨᩺;
-
-    return-void
-.end method
+# static fields
+.field public static final serialVersionUID:J = -0x542c4eb590edf0c7L
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public final getCause()Ljava/lang/RuntimeException;
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/ܽۢۘ;->ܺ:Ll/ۢۢۘ;
+    .line 48
+    invoke-super {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
-    iget-object v1, p0, Ll/ܽۢۘ;->᩶:Ll/ۨ֨᩺;
+    move-result-object v0
 
-    invoke-static {v0, v1, p1}, Ll/ۢۢۘ;->ۙ(Ll/ۢۢۘ;Ll/ۨ֨᩺;Landroid/view/MenuItem;)V
+    check-cast v0, Ljava/lang/RuntimeException;
 
-    const/4 p1, 0x1
+    return-object v0
+.end method
 
-    return p1
+.method public final getCause()Ljava/lang/Throwable;
+    .locals 1
+
+    .line 48
+    invoke-super {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/RuntimeException;
+
+    return-object v0
 .end method

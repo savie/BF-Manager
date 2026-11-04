@@ -3,7 +3,7 @@
 .source "CollapsingToolbarLayout.java"
 
 # interfaces
-.implements Ll/ۨܳ;
+.implements Ll/᩸ۖ;
 
 
 # instance fields
@@ -24,13 +24,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
+.method public onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;)Ll/ۘۜ;
     .locals 0
 
     .line 349
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$1;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->onWindowInsetChanged(Ll/ܺۢ;)Ll/ܺۢ;
+    invoke-virtual {p1, p2}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->onWindowInsetChanged(Ll/ۘۜ;)Ll/ۘۜ;
 
     move-result-object p1
 

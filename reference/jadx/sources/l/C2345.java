@@ -1,315 +1,281 @@
 package l;
 
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.NavigableMap;
-import java.util.NavigableSet;
-import java.util.Set;
-import java.util.SortedMap;
+import com.alipay.sdk.m.p.a;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.zip.CRC32;
 
-/* JADX INFO: renamed from: l.ۖۛܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F4NW */
+/* JADX INFO: renamed from: l.ۖ֫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7TV */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2345 extends AbstractC6910 implements NavigableMap, InterfaceC4464 {
-    public static final long serialVersionUID = 0;
+public final class C2345 implements InterfaceC9801 {
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public static final C2345 f8281;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final C9056 f7560 = new C9056(0, null);
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final transient AbstractC22433 f8282;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public volatile CRC32 f7561;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final transient C2345 f8283;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final File f7562;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final transient C7098 f8284;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f7563;
 
-    static {
-        C7098 c7098M3685 = AbstractC0934.m3685(C17308.f55088);
-        int i = AbstractC22433.f73217;
-        f8281 = new C2345(c7098M3685, C12038.f40301, null);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ConcurrentMapC17249 f7564;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f7565;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private synchronized CRC32 m7898() {
+        if (this.f7561 == null) {
+            return new CRC32();
+        }
+        CRC32 crc32 = this.f7561;
+        this.f7561 = null;
+        return crc32;
     }
 
-    public static C2345 of() {
-        return f8281;
+    public C2345(File file) {
+        int iHashCode = file.getName().hashCode() ^ C21576.m49056().uid;
+        this.f7563 = new HashMap();
+        this.f7564 = new ConcurrentMapC17249();
+        this.f7561 = new CRC32();
+        this.f7562 = file;
+        this.f7565 = iHashCode;
+    }
+
+    @Override // l.InterfaceC9801
+    public final boolean contains(String str) {
+        C9056 c9056 = (C9056) this.f7564.get(str);
+        if (c9056 == null) {
+            synchronized (this) {
+                c9056 = (C9056) this.f7564.get(str);
+                if (c9056 == null) {
+                    if (m7899(str).m53641()) {
+                        return true;
+                    }
+                    this.f7564.putIfAbsent(str, f7560);
+                    return false;
+                }
+            }
+        }
+        return c9056 != f7560;
+    }
+
+    @Override // l.InterfaceC9801
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo7902(int i, String str) {
+        return m7900(i, str) != null;
+    }
+
+    @Override // l.InterfaceC9801
+    public final InterfaceC18752 edit() {
+        return new C0853(this);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C24084 m7899(String str) {
+        HashMap map = this.f7563;
+        C24084 c24084 = (C24084) map.get(str);
+        if (c24084 != null) {
+            return c24084;
+        }
+        byte[] bytes = str.getBytes();
+        int length = this.f7565 ^ bytes.length;
+        for (int i = 0; i < bytes.length; i++) {
+            bytes[i] = (byte) (bytes[i] ^ ((byte) (i ^ length)));
+        }
+        String strReplace = AbstractC7499.m20548().m20550(bytes).replace(a.h, '1');
+        if (strReplace.length() > 255) {
+            throw new RuntimeException("Key too long: ".concat(strReplace));
+        }
+        C24084 c24085 = new C24084(new File(this.f7562, strReplace));
+        map.put(strReplace, c24085);
+        return c24085;
+    }
+
+    @Override // l.InterfaceC9801
+    public final boolean getBoolean(String str, boolean z) {
+        byte[] bArrM7900 = m7900(17, str);
+        if (bArrM7900 != null && bArrM7900.length == 1) {
+            z = false;
+            if (bArrM7900[0] != 0) {
+                return true;
+            }
+        }
+        return z;
+    }
+
+    @Override // l.InterfaceC9801
+    public final float getFloat(String str, float f) {
+        byte[] bArrM7900 = m7900(23, str);
+        return (bArrM7900 == null || bArrM7900.length != 4) ? f : Float.intBitsToFloat(C6929.m19208(0, bArrM7900));
+    }
+
+    @Override // l.InterfaceC9801
+    public final int getInt(String str, int i) {
+        byte[] bArrM7900 = m7900(21, str);
+        return (bArrM7900 == null || bArrM7900.length != 4) ? i : C6929.m19208(0, bArrM7900);
+    }
+
+    @Override // l.InterfaceC9801
+    public final long getLong(String str, long j) {
+        byte[] bArrM7900 = m7900(22, str);
+        return (bArrM7900 == null || bArrM7900.length != 8) ? j : C6929.m19214(0, bArrM7900);
+    }
+
+    @Override // l.InterfaceC9801
+    public final String getString(String str, String str2) {
+        byte[] bArrM7900 = m7900(16, str);
+        return bArrM7900 == null ? str2 : new String(bArrM7900, Charset.defaultCharset());
+    }
+
+    @Override // l.InterfaceC9801
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte mo7901(byte b, String str) {
+        byte[] bArrM7900 = m7900(18, str);
+        return (bArrM7900 == null || bArrM7900.length != 1) ? b : bArrM7900[0];
+    }
+
+    @Override // l.InterfaceC9801
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] mo7903(String str, byte[] bArr) {
+        byte[] bArrM7900 = m7900(25, str);
+        return bArrM7900 == null ? bArr : (byte[]) bArrM7900.clone();
+    }
+
+    @Override // l.InterfaceC9801
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] mo7904(String str) {
+        byte[] bArrM7900 = m7900(26, str);
+        if (bArrM7900 == null || bArrM7900.length % 4 != 0) {
+            return null;
+        }
+        int length = bArrM7900.length / 4;
+        int[] iArr = new int[length];
+        for (int i = 0; i < length; i++) {
+            iArr[i] = C6929.m19208(i * 4, bArrM7900);
+        }
+        return iArr;
+    }
+
+    @Override // l.InterfaceC9801
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String[] mo7905(String str, String[] strArr) {
+        byte[] bArrM7900 = m7900(27, str);
+        if (bArrM7900 == null) {
+            return strArr;
+        }
+        C20348 c20348 = new C20348(bArrM7900);
+        int iM46749 = c20348.m46749();
+        String[] strArr2 = new String[iM46749];
+        for (int i = 0; i < iM46749; i++) {
+            strArr2[i] = c20348.m46758();
+        }
+        return strArr2;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private byte[] m7900(int i, String str) {
+        C9056 c9056 = (C9056) this.f7564.get(str);
+        if (c9056 == null) {
+            synchronized (this) {
+                c9056 = (C9056) this.f7564.get(str);
+                if (c9056 == null) {
+                    return m7896(i, str);
+                }
+            }
+        }
+        if (c9056 != f7560 && c9056.f29454 == i) {
+            return c9056.f29453;
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private byte[] m7896(int i, String str) {
+        int iHashCode = this.f7565 ^ str.hashCode();
+        try {
+            byte[] bArrM53637 = m7899(str).m53637();
+            if (bArrM53637.length < 3) {
+                return null;
+            }
+            int i2 = (bArrM53637[2] ^ iHashCode) & 255;
+            int length = bArrM53637.length - 3;
+            byte[] bArr = new byte[length];
+            for (int i3 = 0; i3 < length; i3++) {
+                bArr[i3] = (byte) (bArrM53637[i3 + 3] ^ iHashCode);
+            }
+            int iM19212 = C6929.m19212(0, bArrM53637);
+            CRC32 crc32M7898 = m7898();
+            crc32M7898.update(i2);
+            crc32M7898.update(bArr);
+            int value = (int) (crc32M7898.getValue() & 255);
+            synchronized (this) {
+                if (this.f7561 == null) {
+                    crc32M7898.reset();
+                    this.f7561 = crc32M7898;
+                }
+            }
+            if (iM19212 != value) {
+                return null;
+            }
+            if (length < 10240) {
+                this.f7564.putIfAbsent(str, new C9056(i2, bArr));
+            }
+            if (i2 == i) {
+                return bArr;
+            }
+            return null;
+        } catch (FileNotFoundException unused) {
+            this.f7564.putIfAbsent(str, f7560);
+            return null;
+        } catch (Throwable unused2) {
+            return null;
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2345 m7127(Comparator comparator) {
-        if (C17308.f55088.equals(comparator)) {
-            return f8281;
+    public static void m7895(C2345 c2345, String str, C9056 c9056, byte[] bArr, CRC32 crc32) throws Exception {
+        FileOutputStream fileOutputStreamM53636;
+        int i = c9056.f29454;
+        byte[] bArr2 = c9056.f29453;
+        int length = bArr2.length + 3;
+        if (bArr.length < length) {
+            bArr = new byte[length];
         }
-        return new C2345(AbstractC0934.m3685(comparator), C12038.f40301, null);
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableSet descendingKeySet() {
-        C7098 c7098 = this.f8284;
-        AbstractC0934 abstractC0934 = c7098.f3734;
-        if (abstractC0934 != null) {
-            return abstractC0934;
+        int iHashCode = c2345.f7565 ^ str.hashCode();
+        crc32.reset();
+        crc32.update(i);
+        crc32.update(bArr2);
+        int value = (int) (crc32.getValue() & 255);
+        bArr[2] = (byte) (i ^ iHashCode);
+        for (int i2 = 0; i2 < bArr2.length; i2++) {
+            bArr[i2 + 3] = (byte) (bArr2[i2] ^ iHashCode);
         }
-        AbstractC0934 abstractC0934Mo3688 = c7098.mo3688();
-        c7098.f3734 = abstractC0934Mo3688;
-        abstractC0934Mo3688.f3734 = c7098;
-        return abstractC0934Mo3688;
-    }
-
-    public C2345(C7098 c7098, AbstractC22433 abstractC22433, C2345 c2345) {
-        this.f8284 = c7098;
-        this.f8282 = abstractC22433;
-        this.f8283 = c2345;
-    }
-
-    @Override // java.util.Map
-    public final int size() {
-        return this.f8282.size();
-    }
-
-    /* JADX WARN: Code duplicated, block: B:8:0x0014  */
-    @Override // l.AbstractC6910, java.util.Map
-    public final Object get(Object obj) {
-        int iBinarySearch;
-        C7098 c7098 = this.f8284;
-        c7098.getClass();
-        if (obj == null) {
-            iBinarySearch = -1;
-        } else {
+        C6929.m19215(0, value, bArr);
+        C24084 c24084M7899 = c2345.m7899(str);
+        try {
+            fileOutputStreamM53636 = c24084M7899.m53636();
             try {
-                iBinarySearch = Collections.binarySearch(c7098.f23786, obj, c7098.f3735);
-                if (iBinarySearch < 0) {
-                    iBinarySearch = -1;
-                }
-            } catch (ClassCastException unused) {
+                fileOutputStreamM53636.write(bArr, 0, length);
+                fileOutputStreamM53636.flush();
+                c24084M7899.m53639(fileOutputStreamM53636);
+            } catch (Exception e) {
+                e = e;
+                c24084M7899.m53634(fileOutputStreamM53636);
+                throw e;
             }
+        } catch (Exception e2) {
+            e = e2;
+            fileOutputStreamM53636 = null;
         }
-        if (iBinarySearch == -1) {
-            return null;
-        }
-        return this.f8282.get(iBinarySearch);
-    }
-
-    @Override // l.AbstractC6910
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean mo7131() {
-        return this.f8284.f23786.mo5042() || this.f8282.mo5042();
-    }
-
-    @Override // l.AbstractC6910, java.util.Map, java.util.SortedMap
-    public final Set entrySet() {
-        return super.entrySet();
-    }
-
-    @Override // java.util.NavigableMap
-    public final C2345 headMap(Object obj, boolean z) {
-        obj.getClass();
-        return m7126(0, this.f8284.m18974(obj, z));
-    }
-
-    @Override // java.util.NavigableMap
-    public final C2345 subMap(Object obj, boolean z, Object obj2, boolean z2) {
-        obj.getClass();
-        obj2.getClass();
-        C18304.m42518(this.f8284.f3735.compare(obj, obj2) <= 0, "expected fromKey <= toKey but %s > %s", obj, obj2);
-        return headMap(obj2, z2).tailMap(obj, z);
-    }
-
-    @Override // java.util.NavigableMap
-    public final C2345 tailMap(Object obj, boolean z) {
-        obj.getClass();
-        return m7126(this.f8284.m18973(obj, z), this.f8282.size());
-    }
-
-    @Override // l.AbstractC6910
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC23844 mo7130() {
-        if (isEmpty()) {
-            int i = AbstractC23844.f77093;
-            return C4275.f15410;
-        }
-        return new C4462(this);
-    }
-
-    @Override // java.util.SortedMap
-    public final Comparator comparator() {
-        return this.f8284.f3735;
-    }
-
-    @Override // java.util.SortedMap
-    public final Object firstKey() {
-        return this.f8284.first();
-    }
-
-    @Override // l.AbstractC6910, java.util.Map, java.util.SortedMap
-    public final Set keySet() {
-        return this.f8284;
-    }
-
-    @Override // l.AbstractC6910, java.util.Map, java.util.SortedMap
-    public final AbstractC23844 keySet() {
-        return this.f8284;
-    }
-
-    @Override // java.util.SortedMap
-    public final Object lastKey() {
-        return this.f8284.last();
-    }
-
-    @Override // l.AbstractC6910
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC23844 mo7133() {
-        throw new AssertionError("should never be called");
-    }
-
-    @Override // l.AbstractC6910, java.util.Map, java.util.SortedMap
-    public final Collection values() {
-        return this.f8282;
-    }
-
-    @Override // l.AbstractC6910, java.util.Map, java.util.SortedMap
-    public final AbstractC1826 values() {
-        return this.f8282;
-    }
-
-    @Override // l.AbstractC6910
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC1826 mo7132() {
-        throw new AssertionError("should never be called");
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C2345 m7126(int i, int i2) {
-        AbstractC22433 abstractC22433 = this.f8282;
-        if (i == 0 && i2 == abstractC22433.size()) {
-            return this;
-        }
-        C7098 c7098 = this.f8284;
-        if (i != i2) {
-            return new C2345(c7098.m18975(i, i2), abstractC22433.subList(i, i2), null);
-        }
-        return m7127(c7098.f3735);
-    }
-
-    @Override // java.util.NavigableMap, java.util.SortedMap
-    public final SortedMap headMap(Object obj) {
-        return headMap(obj, false);
-    }
-
-    @Override // java.util.NavigableMap, java.util.SortedMap
-    public final SortedMap subMap(Object obj, Object obj2) {
-        return subMap(obj, true, obj2, false);
-    }
-
-    @Override // java.util.NavigableMap, java.util.SortedMap
-    public final SortedMap tailMap(Object obj) {
-        return tailMap(obj, true);
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry lowerEntry(Object obj) {
-        return headMap(obj, false).lastEntry();
-    }
-
-    @Override // java.util.NavigableMap
-    public final Object lowerKey(Object obj) {
-        return C8136.m21446(lowerEntry(obj));
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry floorEntry(Object obj) {
-        return headMap(obj, true).lastEntry();
-    }
-
-    @Override // java.util.NavigableMap
-    public final Object floorKey(Object obj) {
-        return C8136.m21446(floorEntry(obj));
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry ceilingEntry(Object obj) {
-        return tailMap(obj, true).firstEntry();
-    }
-
-    @Override // java.util.NavigableMap
-    public final Object ceilingKey(Object obj) {
-        return C8136.m21446(ceilingEntry(obj));
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry higherEntry(Object obj) {
-        return tailMap(obj, false).firstEntry();
-    }
-
-    @Override // java.util.NavigableMap
-    public final Object higherKey(Object obj) {
-        return C8136.m21446(higherEntry(obj));
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry firstEntry() {
-        if (isEmpty()) {
-            return null;
-        }
-        return (Map.Entry) super.entrySet().mo5971().get(0);
-    }
-
-    @Override // java.util.NavigableMap
-    public final Map.Entry lastEntry() {
-        if (isEmpty()) {
-            return null;
-        }
-        return (Map.Entry) super.entrySet().mo5971().get(this.f8282.size() - 1);
-    }
-
-    @Override // java.util.NavigableMap
-    @Deprecated
-    public final Map.Entry pollFirstEntry() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.NavigableMap
-    @Deprecated
-    public final Map.Entry pollLastEntry() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableMap descendingMap() {
-        C2345 c2345 = this.f8283;
-        if (c2345 == null) {
-            boolean zIsEmpty = isEmpty();
-            C7098 c7098 = this.f8284;
-            if (!zIsEmpty) {
-                AbstractC0934 abstractC0934Mo3688 = c7098.f3734;
-                if (abstractC0934Mo3688 == null) {
-                    abstractC0934Mo3688 = c7098.mo3688();
-                    c7098.f3734 = abstractC0934Mo3688;
-                    abstractC0934Mo3688.f3734 = c7098;
-                }
-                c2345 = new C2345((C7098) abstractC0934Mo3688, this.f8282.mo29543(), this);
-            } else {
-                return m7127(AbstractC10959.m27715(c7098.f3735).mo27718());
-            }
-        }
-        return c2345;
-    }
-
-    @Override // java.util.NavigableMap
-    public final NavigableSet navigableKeySet() {
-        return this.f8284;
-    }
-
-    @Override // l.AbstractC6910
-    public Object writeReplace() {
-        return new C11519(this);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Use SerializedForm");
     }
 }

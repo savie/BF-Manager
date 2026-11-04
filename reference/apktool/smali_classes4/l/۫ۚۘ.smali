@@ -1,20 +1,7 @@
-.class public interface abstract Ll/۫ۚۘ;
-.super Ljava/lang/Object;
-.source "Z43S"
-
-# interfaces
-.implements Ll/ۚ᩸ۘ;
+.class public final Ll/۫ۚۘ;
+.super Ll/᩺ۚۘ;
+.source "A451"
 
 
-# virtual methods
-.method public abstract ֡()V
-.end method
-
-.method public abstract ֨(Ljava/lang/String;)V
-.end method
-
-.method public abstract ۠ۙ()V
-.end method
-
-.method public abstract ۨ(I)V
-.end method
+# static fields
+.field public static final serialVersionUID:J

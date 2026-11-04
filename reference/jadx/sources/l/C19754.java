@@ -1,122 +1,283 @@
 package l;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.os.Parcel;
-import android.text.TextUtils;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import android.util.Base64;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.Iterator;
+import org.simpleframework.xml.transform.ClassTransform;
 
-/* JADX INFO: renamed from: l.᩵᩹ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0BLU */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.ᩴۤۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: CAOD */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C19754 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC9171 f63477 = null;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f63480 = null;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f63479 = null;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Object f63476 = new Object();
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public ServiceConnectionC19048 f63478 = new ServiceConnectionC19048(this);
-
-    /* JADX WARN: Code restructure failed: missing block: B:13:0x0023, code lost:
-    
-        if (r6.versionCode >= 1) goto L14;
-     */
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public static boolean m44945(android.content.Context r6) {
-        /*
-            r0 = 0
-            android.content.pm.PackageManager r6 = r6.getPackageManager()     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L26
-            java.lang.String r1 = "com.heytap.openid"
-            android.content.pm.PackageInfo r6 = r6.getPackageInfo(r1, r0)     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L26
-            int r1 = android.os.Build.VERSION.SDK_INT     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L26
-            r2 = 28
-            r3 = 1
-            if (r1 < r2) goto L1f
-            if (r6 == 0) goto L26
-            long r1 = r6.getLongVersionCode()     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L26
-            r4 = 1
-            int r6 = (r1 > r4 ? 1 : (r1 == r4 ? 0 : -1))
-            if (r6 < 0) goto L26
-            goto L25
-        L1f:
-            if (r6 == 0) goto L26
-            int r6 = r6.versionCode     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L26
-            if (r6 < r3) goto L26
-        L25:
-            return r3
-        L26:
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C19754.m44945(android.content.Context):boolean");
+    public static int m45507(char c) {
+        if (c >= '0' && c <= '9') {
+            return c - '0';
+        }
+        if (c >= 'A' && c <= 'F') {
+            return c - '7';
+        }
+        if (c < 'a' || c > 'f') {
+            return -1;
+        }
+        return c - 'W';
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m44946(Context context) {
-        Signature[] signatureArr;
-        if (TextUtils.isEmpty(this.f63480)) {
-            this.f63480 = context.getPackageName();
+    public static byte[] m45509(String str) throws C10254, IOException {
+        C5584 c5584 = new C5584();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        c5584.setOutput(byteArrayOutputStream, "utf-8");
+        c5584.startDocument("utf-8", Boolean.TRUE);
+        int i = C25129.f81255;
+        C19205 c19205 = new C19205();
+        c19205.m44493(new StringReader(str));
+        Iterator<E> it = C25129.m55999(c19205, true).iterator();
+        while (it.hasNext()) {
+            m45508(c5584, (C2008) it.next());
         }
-        if (TextUtils.isEmpty(this.f63479)) {
-            String string = null;
-            try {
-                signatureArr = context.getPackageManager().getPackageInfo(this.f63480, 64).signatures;
-            } catch (PackageManager.NameNotFoundException unused) {
-                signatureArr = null;
+        c5584.endDocument();
+        return byteArrayOutputStream.toByteArray();
+    }
+
+    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Code duplicated, block: B:160:0x02b4  */
+    /* JADX WARN: Code duplicated, block: B:54:0x00c8  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m45508(C5584 c5584, AbstractC22891 abstractC22891) throws C10254, IOException {
+        String strSubstring;
+        String strSubstring2;
+        int i;
+        int i2;
+        if (!abstractC22891.mo6861()) {
+            if (abstractC22891.mo6861()) {
+                throw new UnsupportedOperationException();
             }
-            if (signatureArr != null && signatureArr.length > 0) {
-                byte[] byteArray = signatureArr[0].toByteArray();
-                try {
-                    MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
-                    if (messageDigest != null) {
-                        byte[] bArrDigest = messageDigest.digest(byteArray);
-                        StringBuilder sb = new StringBuilder();
-                        for (byte b : bArrDigest) {
-                            sb.append(Integer.toHexString((b & 255) | 256).substring(1, 3));
+            c5584.text(((C16923) abstractC22891).m39906());
+            return;
+        }
+        C2008 c2008M51622 = abstractC22891.m51622();
+        c5584.startTag(null, c2008M51622.m6853());
+        Iterator it = c2008M51622.m6860().iterator();
+        while (it.hasNext()) {
+            C5737 c5737 = (C5737) it.next();
+            String strM16796 = c5737.m16796();
+            int iLastIndexOf = strM16796.lastIndexOf(45);
+            if (iLastIndexOf > 0) {
+                strSubstring = strM16796.substring(0, iLastIndexOf);
+                strSubstring2 = strM16796.substring(iLastIndexOf + 1);
+            } else {
+                strSubstring = strM16796;
+                strSubstring2 = "";
+            }
+            strSubstring2.getClass();
+            Iterator it2 = it;
+            switch (strSubstring2) {
+                case "base64":
+                case "double":
+                case "hex":
+                case "int":
+                case "str":
+                case "bool":
+                case "long":
+                case "null":
+                case "float":
+                case "interned":
+                    break;
+                default:
+                    strSubstring = strM16796;
+                    strSubstring2 = "";
+                    break;
+            }
+            C2008 c2008 = c2008M51622;
+            switch (strSubstring2.hashCode()) {
+                case -1396204209:
+                    if (strSubstring2.equals("base64")) {
+                        try {
+                            c5584.m16554(strSubstring, Base64.decode(c5737.m16798(), 2));
+                        } catch (Exception e) {
+                            C10254 c10254 = new C10254(e.getMessage(), c5737);
+                            c10254.initCause((Throwable) e);
+                            throw c10254;
                         }
-                        string = sb.toString();
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
                     }
-                } catch (NoSuchAlgorithmException unused2) {
-                }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case -1325958191:
+                    if (strSubstring2.equals(ClassTransform.DOUBLE)) {
+                        try {
+                            c5584.m16550(strSubstring, Double.parseDouble(c5737.m16798()));
+                        } catch (Exception e2) {
+                            C10254 c10255 = new C10254(e2.getMessage(), c5737);
+                            c10255.initCause((Throwable) e2);
+                            throw c10255;
+                        }
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 103195:
+                    if (strSubstring2.equals("hex")) {
+                        String strM16798 = c5737.m16798();
+                        int length = strM16798.length();
+                        if (length % 2 != 0) {
+                            throw new C10254("Invalid length for hex text", c5737);
+                        }
+                        byte[] bArr = new byte[length / 2];
+                        for (int i3 = 0; i3 < length; i3 += 2) {
+                            int iM45507 = m45507(strM16798.charAt(i3));
+                            int iM45508 = m45507(strM16798.charAt(i3 + 1));
+                            if (iM45507 == -1 || iM45508 == -1) {
+                                throw new C10254("Invalid characters for hex text", c5737);
+                            }
+                            bArr[i3 / 2] = (byte) ((iM45507 * 16) + iM45508);
+                        }
+                        c5584.m16557(strSubstring, bArr);
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 104431:
+                    if (strSubstring2.equals(ClassTransform.INTEGER)) {
+                        String lowerCase = c5737.m16798().toLowerCase();
+                        if (lowerCase.startsWith("0x") || lowerCase.startsWith("-0x")) {
+                            String strM16799 = c5737.m16798();
+                            try {
+                                if (strM16799.startsWith("-")) {
+                                    strM16799 = strM16799.substring(1);
+                                    i = -1;
+                                } else {
+                                    i = 1;
+                                }
+                                c5584.m16555(Integer.parseInt(strM16799.substring(2), 16) * i, strSubstring);
+                            } catch (Exception e3) {
+                                C10254 c10256 = new C10254(e3.getMessage(), c5737);
+                                c10256.initCause((Throwable) e3);
+                                throw c10256;
+                            }
+                        } else {
+                            try {
+                                c5584.m16548(Integer.parseInt(c5737.m16798()), strSubstring);
+                            } catch (Exception e4) {
+                                C10254 c10257 = new C10254(e4.getMessage(), c5737);
+                                c10257.initCause((Throwable) e4);
+                                throw c10257;
+                            }
+                        }
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 114225:
+                    strSubstring2.equals("str");
+                    c5584.attribute(null, strSubstring, c5737.m16798());
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 3029738:
+                    if (strSubstring2.equals("bool")) {
+                        try {
+                            c5584.m16553(strSubstring, Boolean.parseBoolean(c5737.m16798()));
+                        } catch (Exception e5) {
+                            C10254 c10258 = new C10254(e5.getMessage(), c5737);
+                            c10258.initCause((Throwable) e5);
+                            throw c10258;
+                        }
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 3327612:
+                    if (strSubstring2.equals(ClassTransform.LONG)) {
+                        String lowerCase2 = c5737.m16798().toLowerCase();
+                        if (lowerCase2.startsWith("0x") || lowerCase2.startsWith("-0x")) {
+                            String strM167910 = c5737.m16798();
+                            try {
+                                if (strM167910.startsWith("-")) {
+                                    strM167910 = strM167910.substring(1);
+                                    i2 = -1;
+                                } else {
+                                    i2 = 1;
+                                }
+                                c5584.m16556(Long.parseLong(strM167910.substring(2), 16) * ((long) i2), strSubstring);
+                            } catch (Exception e6) {
+                                C10254 c10259 = new C10254(e6.getMessage(), c5737);
+                                c10259.initCause((Throwable) e6);
+                                throw c10259;
+                            }
+                        } else {
+                            try {
+                                c5584.m16549(Long.parseLong(c5737.m16798()), strSubstring);
+                            } catch (Exception e7) {
+                                C10254 c102510 = new C10254(e7.getMessage(), c5737);
+                                c102510.initCause((Throwable) e7);
+                                throw c102510;
+                            }
+                        }
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 3392903:
+                    if (strSubstring2.equals("null")) {
+                        c5584.attribute(null, strSubstring, null);
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 97526364:
+                    if (strSubstring2.equals(ClassTransform.FLOAT)) {
+                        try {
+                            c5584.m16551(strSubstring, Float.parseFloat(c5737.m16798()));
+                        } catch (Exception e8) {
+                            C10254 c102511 = new C10254(e8.getMessage(), c5737);
+                            c102511.initCause((Throwable) e8);
+                            throw c102511;
+                        }
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                case 570410801:
+                    if (strSubstring2.equals("interned")) {
+                        c5584.m16552(strSubstring, c5737.m16798());
+                    } else {
+                        c5584.attribute(null, strSubstring, c5737.m16798());
+                    }
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
+                default:
+                    c5584.attribute(null, strSubstring, c5737.m16798());
+                    it = it2;
+                    c2008M51622 = c2008;
+                    break;
             }
-            this.f63479 = string;
         }
-        InterfaceC9171 interfaceC9171 = this.f63477;
-        String str = this.f63480;
-        String str2 = this.f63479;
-        C15521 c15521 = (C15521) interfaceC9171;
-        c15521.getClass();
-        Parcel parcelObtain = Parcel.obtain();
-        Parcel parcelObtain2 = Parcel.obtain();
-        try {
-            parcelObtain.writeInterfaceToken("com.heytap.openid.IOpenID");
-            parcelObtain.writeString(str);
-            parcelObtain.writeString(str2);
-            parcelObtain.writeString("OUID");
-            c15521.f50531.transact(1, parcelObtain, parcelObtain2, 0);
-            parcelObtain2.readException();
-            String string2 = parcelObtain2.readString();
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-            return TextUtils.isEmpty(string2) ? "" : string2;
-        } catch (Throwable th) {
-            parcelObtain2.recycle();
-            parcelObtain.recycle();
-            throw th;
+        C2008 c2009 = c2008M51622;
+        Iterator it3 = c2009.m6858().iterator();
+        while (it3.hasNext()) {
+            m45508(c5584, (AbstractC22891) it3.next());
         }
+        c5584.endTag(null, c2009.m6853());
     }
 }

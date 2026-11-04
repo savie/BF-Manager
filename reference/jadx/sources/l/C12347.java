@@ -1,28 +1,13 @@
 package l;
 
-import java.util.Arrays;
-
-/* JADX INFO: renamed from: l.۫ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12347 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int[] f41255;
-
-    static {
-        int[] iArrCopyOf = new int[1024];
-        int i = 0;
-        for (int i2 = 65536; i2 <= 1114111; i2++) {
-            int upperCase = Character.toUpperCase(i2);
-            if (upperCase != i2 || Character.toLowerCase(upperCase) != i2) {
-                if (i == iArrCopyOf.length) {
-                    iArrCopyOf = Arrays.copyOf(iArrCopyOf, i * 2);
-                }
-                iArrCopyOf[i] = i2;
-                i++;
-            }
-        }
-        f41255 = Arrays.copyOf(iArrCopyOf, i);
+/* JADX INFO: renamed from: l.ۨۨᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D18B */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C12347 implements InterfaceC7509 {
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        AbstractC22044 abstractC22044 = C6382.f21566;
+        return false;
     }
 }

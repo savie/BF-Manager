@@ -1,463 +1,189 @@
 package l;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.RandomAccess;
 
-/* JADX INFO: renamed from: l.֨ۧۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V6OB */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1072 implements CharSequence {
+/* JADX INFO: renamed from: l.֨ۡܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9OP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1072 extends AbstractC8682 implements InterfaceC9274, RandomAccess {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final CharSequence f4923;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f4924 = new ArrayList();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C1072 f3848 = new C1072();
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f4925;
+    public final List f3849;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m4045(char c) {
-        if (c == '_') {
-            return true;
-        }
-        if (c < 'a' || c > 'z') {
-            return (c >= 'A' && c <= 'Z') || c >= 128;
-        }
-        return true;
+    public C1072(ArrayList arrayList) {
+        super(true);
+        this.f3849 = arrayList;
     }
 
-    /* JADX WARN: Code duplicated, block: B:145:0x0220  */
-    /* JADX WARN: Code duplicated, block: B:171:0x0286  */
-    /* JADX WARN: Code duplicated, block: B:175:0x0299  */
-    /* JADX WARN: Code duplicated, block: B:179:0x02a2  */
-    /* JADX WARN: Code duplicated, block: B:189:0x02c1  */
-    /* JADX WARN: Code duplicated, block: B:194:0x02cf  */
-    /* JADX WARN: Code duplicated, block: B:208:0x02b7 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:209:0x0274 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:240:0x02ac A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:241:0x029d A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:242:0x029f A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:243:0x02a6 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:244:0x0291 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:247:0x027e A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:250:? A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:33:0x008d  */
-    /* JADX WARN: Code duplicated, block: B:36:0x009c  */
-    /* JADX WARN: Code duplicated, block: B:39:0x00af  */
-    /* JADX WARN: Code duplicated, block: B:41:0x00b3  */
-    public C1072(CharSequence charSequence) {
-        CharSequence charSequence2;
-        int i;
-        int length;
-        char cCharAt;
-        int length2;
-        int iMin;
-        char cCharAt2;
-        int i2;
-        int length3;
-        int i3;
-        this.f4923 = charSequence;
-        boolean z = false;
-        int i4 = 0;
-        while (i4 < charSequence.length()) {
-            m4044();
-            int i5 = 2;
-            if (C21460.m48082(charSequence, z, i4, "<?", 2)) {
-                CharSequence charSequence3 = this.f4923;
-                int i6 = i4 + 5;
-                if (C21460.m48082(charSequence3, true, i4, "<?xml", 5) && i6 < charSequence3.length() && AbstractC5867.m16077(charSequence3.charAt(i6))) {
-                    while (i6 < charSequence3.length() && AbstractC5867.m16077(charSequence3.charAt(i6))) {
-                        m4044();
-                        i6++;
-                    }
-                    if (C21460.m48082(this.f4923, z, i6, "version", 7)) {
-                        int i7 = i6 + 7;
-                        while (i7 < charSequence3.length() && AbstractC5867.m16077(charSequence3.charAt(i7))) {
-                            m4044();
-                            i7++;
-                        }
-                        if (i7 >= charSequence3.length() || charSequence3.charAt(i7) != '=') {
-                            int i8 = i4 + 2;
-                            charSequence2 = this.f4923;
-                            i = i8;
-                            while (true) {
-                                if (i < charSequence2.length()) {
-                                    m4044();
-                                    cCharAt = charSequence2.charAt(i);
-                                    if (!C21460.m48082(this.f4923, z, i, "?>", i5)) {
-                                        if (cCharAt != '\'') {
-                                            while (true) {
-                                                i++;
-                                                if (i < charSequence2.length()) {
-                                                    m4044();
-                                                    cCharAt2 = charSequence2.charAt(i);
-                                                    if (cCharAt2 == '\\') {
-                                                        int i9 = i + 1;
-                                                        if (i9 < charSequence2.length()) {
-                                                        }
-                                                    } else if (cCharAt2 == cCharAt) {
-                                                        length2 = i + 1;
-                                                        break;
-                                                    } else if (cCharAt != '\'') {
-                                                        continue;
-                                                    }
-                                                }
-                                                length2 = charSequence2.length();
-                                                break;
-                                            }
-                                            iMin = length2 - 1;
-                                        } else {
-                                            while (true) {
-                                                i++;
-                                                if (i < charSequence2.length()) {
-                                                    m4044();
-                                                    cCharAt2 = charSequence2.charAt(i);
-                                                    if (cCharAt2 == '\\') {
-                                                        int i10 = i + 1;
-                                                        if (i10 < charSequence2.length()) {
-                                                        }
-                                                    } else if (cCharAt2 == cCharAt) {
-                                                        length2 = i + 1;
-                                                        break;
-                                                    } else if (cCharAt != '\'') {
-                                                        continue;
-                                                    }
-                                                }
-                                                length2 = charSequence2.length();
-                                                break;
-                                            }
-                                            iMin = length2 - 1;
-                                        }
-                                        i = iMin + 1;
-                                        z = false;
-                                    }
-                                    length = i + 2;
-                                    if (length < charSequence.length()) {
-                                        length++;
-                                    }
-                                    if (length < charSequence.length()) {
-                                        length++;
-                                    }
-                                    this.f4924.add(new C22240(i4, length));
-                                    i4 = length - 1;
-                                }
-                                length = charSequence2.length();
-                                if (length < charSequence.length()) {
-                                    length++;
-                                }
-                                if (length < charSequence.length()) {
-                                    length++;
-                                }
-                                this.f4924.add(new C22240(i4, length));
-                                i4 = length - 1;
-                            }
-                        }
-                    } else {
-                        int i11 = i4 + 2;
-                        charSequence2 = this.f4923;
-                        i = i11;
-                        while (true) {
-                            if (i < charSequence2.length()) {
-                                m4044();
-                                cCharAt = charSequence2.charAt(i);
-                                if (!C21460.m48082(this.f4923, z, i, "?>", i5)) {
-                                    if (cCharAt != '\'') {
-                                        while (true) {
-                                            i++;
-                                            if (i < charSequence2.length()) {
-                                                m4044();
-                                                cCharAt2 = charSequence2.charAt(i);
-                                                if (cCharAt2 == '\\') {
-                                                    int i12 = i + 1;
-                                                    if (i12 < charSequence2.length()) {
-                                                    }
-                                                } else if (cCharAt2 == cCharAt) {
-                                                    length2 = i + 1;
-                                                    break;
-                                                } else if (cCharAt != '\'') {
-                                                    continue;
-                                                }
-                                            }
-                                            length2 = charSequence2.length();
-                                            break;
-                                        }
-                                        iMin = length2 - 1;
-                                    } else {
-                                        while (true) {
-                                            i++;
-                                            if (i < charSequence2.length()) {
-                                                m4044();
-                                                cCharAt2 = charSequence2.charAt(i);
-                                                if (cCharAt2 == '\\') {
-                                                    int i13 = i + 1;
-                                                    if (i13 < charSequence2.length()) {
-                                                    }
-                                                } else if (cCharAt2 == cCharAt) {
-                                                    length2 = i + 1;
-                                                    break;
-                                                } else if (cCharAt != '\'') {
-                                                    continue;
-                                                }
-                                            }
-                                            length2 = charSequence2.length();
-                                            break;
-                                        }
-                                        iMin = length2 - 1;
-                                    }
-                                    i = iMin + 1;
-                                    z = false;
-                                }
-                                length = i + 2;
-                                if (length < charSequence.length()) {
-                                    length++;
-                                }
-                                if (length < charSequence.length()) {
-                                    length++;
-                                }
-                                this.f4924.add(new C22240(i4, length));
-                                i4 = length - 1;
-                            }
-                            length = charSequence2.length();
-                            if (length < charSequence.length()) {
-                                length++;
-                            }
-                            if (length < charSequence.length()) {
-                                length++;
-                            }
-                            this.f4924.add(new C22240(i4, length));
-                            i4 = length - 1;
-                        }
-                    }
-                } else {
-                    int i14 = i4 + 2;
-                    charSequence2 = this.f4923;
-                    i = i14;
-                    while (true) {
-                        if (i < charSequence2.length()) {
-                            m4044();
-                            cCharAt = charSequence2.charAt(i);
-                            if (!C21460.m48082(this.f4923, z, i, "?>", i5)) {
-                                if (cCharAt != '\'' || cCharAt == '\"' || cCharAt == '`') {
-                                    while (true) {
-                                        i++;
-                                        if (i < charSequence2.length()) {
-                                            m4044();
-                                            cCharAt2 = charSequence2.charAt(i);
-                                            if (cCharAt2 == '\\') {
-                                                int i15 = i + 1;
-                                                i = i15 < charSequence2.length() ? i15 : i;
-                                            } else if (cCharAt2 == cCharAt) {
-                                                length2 = i + 1;
-                                                break;
-                                            } else if (cCharAt != '\'' || !m4046(i)) {
-                                            }
-                                        }
-                                        length2 = charSequence2.length();
-                                        break;
-                                    }
-                                    iMin = length2 - 1;
-                                } else if (C21460.m48082(this.f4923, z, i, "/*", i5)) {
-                                    int i16 = i + 2;
-                                    while (i16 < charSequence2.length() && !C21460.m48082(this.f4923, z, i16, "*/", i5)) {
-                                        m4044();
-                                        i16++;
-                                    }
-                                    iMin = Math.min(charSequence2.length(), i16 + 2) - 1;
-                                } else {
-                                    if (C21460.m48082(this.f4923, z, i, "//", i5) || (cCharAt == '#' && !C21460.m48082(this.f4923, z, i, "#[", i5))) {
-                                        while (true) {
-                                            if (i < charSequence2.length() && charSequence2.charAt(i) != '\r' && charSequence2.charAt(i) != '\n') {
-                                                m4044();
-                                                if (!C21460.m48082(this.f4923, false, i, "?>", 2)) {
-                                                    i++;
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        if (C21460.m48082(this.f4923, z, i, "<<<", 3)) {
-                                            int iM4043 = m4043(i + 3);
-                                            char cCharAt3 = iM4043 < charSequence2.length() ? charSequence2.charAt(iM4043) : (char) 0;
-                                            boolean z2 = cCharAt3 == '\'' || cCharAt3 == '\"';
-                                            iM4043 = z2 ? iM4043 + 1 : iM4043;
-                                            if (iM4043 == charSequence2.length() || !m4045(charSequence2.charAt(iM4043))) {
-                                                length3 = charSequence2.length();
-                                            } else {
-                                                int i17 = iM4043;
-                                                while (i17 < charSequence2.length() && m4042(charSequence2.charAt(i17))) {
-                                                    m4044();
-                                                    i17++;
-                                                }
-                                                if (z2) {
-                                                    if (i17 != charSequence2.length()) {
-                                                        i3 = i17 + 1;
-                                                        if (charSequence2.charAt(i17) != cCharAt3) {
-                                                        }
-                                                    }
-                                                    length3 = charSequence2.length();
-                                                } else {
-                                                    i3 = i17;
-                                                }
-                                                int iM4044 = m4043(i3);
-                                                if (iM4044 == charSequence2.length() || !(charSequence2.charAt(iM4044) == '\r' || charSequence2.charAt(iM4044) == '\n')) {
-                                                    length3 = charSequence2.length();
-                                                } else {
-                                                    int i18 = iM4044 + 1;
-                                                    if (charSequence2.charAt(iM4044) == '\r' && i18 < charSequence2.length() && charSequence2.charAt(i18) == '\n') {
-                                                        i18 = iM4044 + 2;
-                                                    }
-                                                    while (true) {
-                                                        if (i18 < charSequence2.length()) {
-                                                            m4044();
-                                                            int iM4045 = m4043(i18);
-                                                            int i19 = (iM4045 + i17) - iM4043;
-                                                            if (i19 <= charSequence2.length()) {
-                                                                int i20 = iM4043;
-                                                                while (true) {
-                                                                    if (i20 < i17) {
-                                                                        m4044();
-                                                                        int i21 = iM4045 + 1;
-                                                                        if (charSequence2.charAt(iM4045) == charSequence2.charAt(i20)) {
-                                                                            i20++;
-                                                                            iM4045 = i21;
-                                                                        }
-                                                                    } else {
-                                                                        length3 = (i19 == charSequence2.length() || !m4042(charSequence2.charAt(i19))) ? i19 : length3;
-                                                                    }
-                                                                }
-                                                            }
-                                                            while (true) {
-                                                                if (i18 < charSequence2.length() && charSequence2.charAt(i18) != '\r' && charSequence2.charAt(i18) != '\n') {
-                                                                    m4044();
-                                                                    if (cCharAt3 == '\'' || !m4046(i18)) {
-                                                                        i18++;
-                                                                    }
-                                                                } else if (i18 < charSequence2.length()) {
-                                                                    int i22 = i18 + 1;
-                                                                    i18 = (charSequence2.charAt(i18) == '\r' && i22 < charSequence2.length() && charSequence2.charAt(i22) == '\n') ? i18 + 2 : i22;
-                                                                }
-                                                            }
-                                                        }
-                                                        length3 = charSequence2.length();
-                                                    }
-                                                }
-                                            }
-                                            iMin = length3 - 1;
-                                        } else if ((i == i14 || !m4042(charSequence2.charAt(i - 1))) && C21460.m48082(this.f4923, true, i, "__halt_compiler", 15) && ((i2 = i + 15) == charSequence2.length() || !m4042(charSequence2.charAt(i2)))) {
-                                        }
-                                        i5 = 2;
-                                    }
-                                    iMin = i;
-                                    i5 = 2;
-                                }
-                                i = iMin + 1;
-                                z = false;
-                            }
-                            length = i + 2;
-                            if (length < charSequence.length() && charSequence.charAt(length) == '\r') {
-                                length++;
-                            }
-                            if (length < charSequence.length() && charSequence.charAt(length) == '\n') {
-                                length++;
-                            }
-                            this.f4924.add(new C22240(i4, length));
-                            i4 = length - 1;
-                        }
-                        length = charSequence2.length();
-                        if (length < charSequence.length()) {
-                            length++;
-                        }
-                        if (length < charSequence.length()) {
-                            length++;
-                        }
-                        this.f4924.add(new C22240(i4, length));
-                        i4 = length - 1;
-                    }
-                }
+    public C1072(InterfaceC9274 interfaceC9274) {
+        super(true);
+        this.f3849 = new ArrayList(interfaceC9274.size());
+        addAll(interfaceC9274);
+    }
+
+    @Override // java.util.AbstractList, java.util.List
+    public final void add(int i, Object obj) {
+        m23373();
+        this.f3849.add(i, (String) obj);
+        ((AbstractList) this).modCount++;
+    }
+
+    @Override // l.InterfaceC9274
+    /* JADX INFO: renamed from: ۬᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC9274 mo4030() {
+        return super.mo23371() ? new C8464(this) : this;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C1072 m4023() {
+        return f3848;
+    }
+
+    public C1072() {
+        super(false);
+        this.f3849 = Collections.EMPTY_LIST;
+    }
+
+    public C1072(int i) {
+        this(new ArrayList(i));
+    }
+
+    @Override // java.util.AbstractList, java.util.List
+    public final String get(int i) {
+        List list = this.f3849;
+        Object obj = list.get(i);
+        if (obj instanceof String) {
+            return (String) obj;
+        }
+        if (obj instanceof AbstractC17084) {
+            AbstractC17084 abstractC17084 = (AbstractC17084) obj;
+            String strM40221 = abstractC17084.m40221();
+            if (abstractC17084.mo29729()) {
+                list.set(i, strM40221);
             }
-            i4++;
-            z = false;
+            return strM40221;
         }
+        byte[] bArr = (byte[]) obj;
+        String str = new String(bArr, C23447.f75888);
+        if (C11643.m29258(bArr)) {
+            list.set(i, str);
+        }
+        return str;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private boolean m4046(int i) {
-        CharSequence charSequence = this.f4923;
-        return C21460.m48082(charSequence, false, i, "{$", 2) || C21460.m48082(charSequence, false, i, "${", 2);
+    @Override // l.AbstractC8682, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean addAll(Collection collection) {
+        return addAll(this.f3849.size(), collection);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.f3849.size();
+    }
+
+    @Override // l.InterfaceC15987
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15987 mo4024(int i) {
+        List list = this.f3849;
+        if (i < list.size()) {
+            throw new IllegalArgumentException();
+        }
+        ArrayList arrayList = new ArrayList(i);
+        arrayList.addAll(list);
+        return new C1072(arrayList);
+    }
+
+    @Override // java.util.AbstractList, java.util.List
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
+    public final String set(int i, String str) {
+        m23373();
+        Object obj = this.f3849.set(i, str);
+        if (obj instanceof String) {
+            return (String) obj;
+        }
+        if (!(obj instanceof AbstractC17084)) {
+            return new String((byte[]) obj, C23447.f75888);
+        }
+        return ((AbstractC17084) obj).m40221();
+    }
+
+    @Override // l.AbstractC8682, java.util.AbstractList, java.util.List
+    public final boolean addAll(int i, Collection collection) {
+        m23373();
+        if (collection instanceof InterfaceC9274) {
+            collection = ((InterfaceC9274) collection).mo4029();
+        }
+        boolean zAddAll = this.f3849.addAll(i, collection);
+        ((AbstractList) this).modCount++;
+        return zAddAll;
+    }
+
+    @Override // l.AbstractC8682, java.util.AbstractList, java.util.List
+    public final Object remove(int i) {
+        m23373();
+        Object objRemove = this.f3849.remove(i);
+        ((AbstractList) this).modCount++;
+        if (objRemove instanceof String) {
+            return (String) objRemove;
+        }
+        if (!(objRemove instanceof AbstractC17084)) {
+            return new String((byte[]) objRemove, C23447.f75888);
+        }
+        return ((AbstractC17084) objRemove).m40221();
+    }
+
+    @Override // l.AbstractC8682, java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final void clear() {
+        m23373();
+        this.f3849.clear();
+        ((AbstractList) this).modCount++;
+    }
+
+    @Override // l.InterfaceC9274
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo4028(AbstractC17084 abstractC17084) {
+        m23373();
+        this.f3849.add(abstractC17084);
+        ((AbstractList) this).modCount++;
+    }
+
+    @Override // l.InterfaceC9274
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final Object mo4025(int i) {
+        return this.f3849.get(i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final CharSequence m4047() {
-        return this.f4924.isEmpty() ? this.f4923 : this;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m4048(int i, int i2) {
-        ArrayList arrayList = this.f4924;
-        int size = arrayList.size();
-        int i3 = 0;
-        while (i3 < size) {
-            int i4 = (i3 + size) >>> 1;
-            if (((C22240) arrayList.get(i4)).f72705 <= i) {
-                i3 = i4 + 1;
-            } else {
-                size = i4;
-            }
+    public final AbstractC17084 m4027(int i) {
+        AbstractC17084 abstractC17084M40218;
+        List list = this.f3849;
+        Object obj = list.get(i);
+        if (obj instanceof AbstractC17084) {
+            abstractC17084M40218 = (AbstractC17084) obj;
+        } else if (obj instanceof String) {
+            abstractC17084M40218 = AbstractC17084.m40219((String) obj);
+        } else {
+            byte[] bArr = (byte[]) obj;
+            AbstractC17084 abstractC17084 = AbstractC17084.f55772;
+            abstractC17084M40218 = AbstractC17084.m40218(0, bArr.length, bArr);
         }
-        return i3 < arrayList.size() && ((C22240) arrayList.get(i3)).f72706 < i2;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private int m4043(int i) {
-        while (true) {
-            CharSequence charSequence = this.f4923;
-            if (i >= charSequence.length() || !(charSequence.charAt(i) == ' ' || charSequence.charAt(i) == '\t')) {
-                break;
-            }
-            m4044();
-            i++;
+        if (abstractC17084M40218 != obj) {
+            list.set(i, abstractC17084M40218);
         }
-        return i;
+        return abstractC17084M40218;
     }
 
-    @Override // java.lang.CharSequence
-    public final char charAt(int i) {
-        if (i >= 0) {
-            CharSequence charSequence = this.f4923;
-            if (i < charSequence.length()) {
-                if (m4048(i, i + 1)) {
-                    return 'x';
-                }
-                return charSequence.charAt(i);
-            }
-        }
-        throw new IndexOutOfBoundsException();
-    }
-
-    @Override // java.lang.CharSequence
-    public final int length() {
-        return this.f4923.length();
-    }
-
-    @Override // java.lang.CharSequence
-    public final CharSequence subSequence(int i, int i2) {
-        return new C17499(i, i2, this);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m4042(char c) {
-        if (m4045(c)) {
-            return true;
-        }
-        return c >= '0' && c <= '9';
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private void m4044() {
-        int i = this.f4925 + 1;
-        this.f4925 = i;
-        if ((i & 1023) == 0) {
-            C3894.m11326();
-        }
+    @Override // l.InterfaceC9274
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final List mo4029() {
+        return C4681.unmodifiableList(this.f3849);
     }
 }

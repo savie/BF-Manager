@@ -1,78 +1,133 @@
 package l;
 
-import android.os.PowerManager;
-import bin.mt.plus.R;
+import java.util.Locale;
+import org.bouncycastle.crypto.prng.X931RNG;
 
-/* JADX INFO: renamed from: l.ܰ᩹ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5HP */
+/* JADX INFO: renamed from: l.۬᩶᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 643O */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14106 implements InterfaceC16966 {
+public class C14106 extends AbstractC22970 implements InterfaceC6042 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC11989 f46342;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public AbstractC17836 f44616;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ PowerManager.WakeLock f46343;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public C24550 f44617;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1777 f46344;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public C2920 f44618;
 
-    public C14106(ViewOnClickListenerC11989 viewOnClickListenerC11989, C1777 c1777, PowerManager.WakeLock wakeLock) {
-        this.f46342 = viewOnClickListenerC11989;
-        this.f46344 = c1777;
-        this.f46343 = wakeLock;
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public AbstractC19728 f44619;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public InterfaceC15976 f44620;
+
+    @Override // l.AbstractC11781, l.InterfaceC13564
+    /* JADX INFO: renamed from: ܶ */
+    public final int mo2973() {
+        return 20;
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo16477() {
-        return this.f46344.m5824();
+    public C14106(AbstractC19728 abstractC19728, AbstractC11781 abstractC11781) {
+        super(EnumC13603.f43219, 0L, abstractC19728, null, abstractC11781);
+        this.f44616 = null;
+        this.f44619 = AbstractC22970.m51843(abstractC19728, abstractC11781);
+        this.f38067 = new C20207(this, C14458.f45498);
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۨ */
-    public final ActivityC5677 mo16479() {
-        return this.f46342.f40178;
+    @Override // l.AbstractC11781
+    public String toString() {
+        return this.f44619.toString();
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo16481(int i) {
-        this.f46344.m5840(i);
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۬ */
+    public final AbstractC19728 mo29582() {
+        return this.f44619;
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16475(int i) {
-        this.f46344.m5832(C16737.m39264(R.string.MT_Protector, Integer.valueOf(i)));
+    @Override // l.InterfaceC6042
+    /* JADX INFO: renamed from: ᩷ */
+    public final AbstractC19728 mo9562() {
+        return this.f44619;
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo16476(C10617 c10617) {
-        ViewOnClickListenerC11989 viewOnClickListenerC11989 = this.f46342;
-        viewOnClickListenerC11989.f40182.m42654(c10617, viewOnClickListenerC11989.f40169);
+    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m34259() {
+        return this.f38072.isEmpty() && this.f38069 != null;
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo16480() {
-        this.f46344.m5825();
-        PowerManager.WakeLock wakeLock = this.f46343;
-        if (wakeLock.isHeld()) {
-            wakeLock.release();
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۛۙ */
+    public final AbstractC17836 mo29571() {
+        mo29590();
+        return this.f44616;
+    }
+
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ᩳ */
+    public final long mo29591() {
+        mo29590();
+        return this.f38071;
+    }
+
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۙۙ */
+    public final C14769 mo29568() {
+        mo29590();
+        C24550 c24550 = this.f44617;
+        if (c24550 != null) {
+            c24550.mo29590();
+            if (this.f38068 == null && this.f44617.f38068 != null) {
+                C25208 c25208 = new C25208(this);
+                this.f38068 = c25208;
+                c25208.m56192(this.f44617.f38068);
+            }
         }
+        return super.mo29568();
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo16478() {
-        return new C11322(this.f46342.f40178).m28381();
+    @Override // l.AbstractC11781
+    /* JADX INFO: renamed from: ۟ */
+    public final boolean mo7873() {
+        return (this.f38071 & X931RNG.BLOCK128_RESEED_MAX) != 0;
     }
 
-    @Override // l.InterfaceC16966
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo16474() {
-        C15829.m37618(R.string.MT_Protector);
+    @Override // l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC5296 mo9558() {
+        return EnumC5296.PACKAGE;
+    }
+
+    @Override // l.AbstractC22970, l.AbstractC11781, l.InterfaceC12753
+    /* JADX INFO: renamed from: ֫ */
+    public final AbstractC11781 mo16951() {
+        C2920 c2920 = this.f44618;
+        if (c2920 == null) {
+            return null;
+        }
+        c2920.getClass();
+        if (c2920 instanceof C6562) {
+            return null;
+        }
+        return this.f44618;
+    }
+
+    @Override // l.InterfaceC12753
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo7871(AbstractC9024 abstractC9024, Object obj) {
+        return abstractC9024.mo24077(this, obj);
+    }
+
+    @Override // l.AbstractC22970, l.AbstractC11781
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo16953(InterfaceC2087 interfaceC2087, Locale locale) {
+        return interfaceC2087.mo7181(this, (Object) locale);
+    }
+
+    /* JADX INFO: renamed from: ۟ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34260() {
+        this.f38068 = null;
     }
 }

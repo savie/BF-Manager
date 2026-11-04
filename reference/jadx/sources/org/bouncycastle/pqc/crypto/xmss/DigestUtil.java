@@ -2,8 +2,8 @@ package org.bouncycastle.pqc.crypto.xmss;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0252;
-import l.C22979;
+import l.C20196;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -49,7 +49,7 @@ public class DigestUtil {
         if (aSN1ObjectIdentifier.equals((ASN1Primitive) NISTObjectIdentifiers.id_shake256)) {
             return new SHAKEDigest(256);
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest OID: ", aSN1ObjectIdentifier));
     }
 
     public static String getDigestName(ASN1ObjectIdentifier aSN1ObjectIdentifier) {
@@ -57,7 +57,7 @@ public class DigestUtil {
         if (str != null) {
             return str;
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest oid: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest oid: ", aSN1ObjectIdentifier));
     }
 
     public static ASN1ObjectIdentifier getDigestOID(String str) {
@@ -65,6 +65,6 @@ public class DigestUtil {
         if (aSN1ObjectIdentifier != null) {
             return aSN1ObjectIdentifier;
         }
-        throw new IllegalArgumentException(C0252.m1693("unrecognized digest name: ", str));
+        throw new IllegalArgumentException(C25272.m56409("unrecognized digest name: ", str));
     }
 }

@@ -1,16 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ᩻ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6OB */
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.ۨ֫ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P77N */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12031 extends C23289 {
+public final /* synthetic */ class C12031 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C4268 f40293;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
 
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 16;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return ((C15298) obj).f50009;
     }
 }

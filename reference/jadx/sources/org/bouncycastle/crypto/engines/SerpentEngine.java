@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.engines;
 
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SerpentEngine extends SerpentEngineBase {
     @Override // org.bouncycastle.crypto.engines.SerpentEngineBase
     public void decryptBlock(byte[] bArr, int i, byte[] bArr2, int i2) {

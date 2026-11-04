@@ -1,28 +1,37 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ܽܰۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K3OA */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16682 extends AbstractC12449 {
-    @Override // l.AbstractC12449
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo2278() {
-        return C18755.m43307((String) this.f41511, "\"");
+/* JADX INFO: renamed from: l.ܺ۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C16682 extends EnumC8806 {
+    public /* synthetic */ C16682() {
+        this("ScriptDataEscaped", 21);
     }
 
-    @Override // l.AbstractC12449
+    public C16682(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC8806
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2277(InterfaceC10434 interfaceC10434, int i) {
-        super.mo2277(interfaceC10434, i);
-        interfaceC10434.mo18527(mo2278() + l.b);
-    }
-
-    @Override // l.AbstractC12449
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2280(InterfaceC10434 interfaceC10434, int i) {
-        super.mo2280(interfaceC10434, i);
-        interfaceC10434.mo18527(mo2278() + l.b);
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        if (c24448.m54677()) {
+            c8260.m22267(this);
+            c8260.m22269(EnumC8806.f28749);
+            return;
+        }
+        char cM54678 = c24448.m54678();
+        if (cM54678 == 0) {
+            c8260.m22262(this);
+            c24448.m54665();
+            c8260.m22253((char) 65533);
+        } else if (cM54678 == '-') {
+            c8260.m22253('-');
+            c8260.m22258(EnumC8806.f28740);
+        } else if (cM54678 == '<') {
+            c8260.m22258(EnumC8806.f28750);
+        } else {
+            c8260.m22254(c24448.m54664('-', '<', 0));
+        }
     }
 }

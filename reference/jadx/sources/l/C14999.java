@@ -1,69 +1,54 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۙ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A451 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14999 {
+/* JADX INFO: renamed from: l.ܳ֨ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H8DH */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14999 extends AbstractC8909 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f48926;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f49005;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f48927;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public short[] f49006;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f48928;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f49007;
 
-    static {
-        int[] iArr = new int[EnumC7654.values().length];
-        f48928 = iArr;
-        try {
-            iArr[EnumC7654.METHOD.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f48928[EnumC7654.CONSTRUCTOR.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        int[] iArr2 = new int[EnumC18651.values().length];
-        f48927 = iArr2;
-        try {
-            iArr2[EnumC18651.f60511.ordinal()] = 1;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f48927[EnumC18651.f60512.ordinal()] = 2;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f48927[EnumC18651.f60480.ordinal()] = 3;
-        } catch (NoSuchFieldError unused5) {
-        }
-        int[] iArr3 = new int[EnumC10477.values().length];
-        f48926 = iArr3;
-        try {
-            iArr3[EnumC10477.f35881.ordinal()] = 1;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f48926[EnumC10477.f35874.ordinal()] = 2;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f48926[EnumC10477.f35869.ordinal()] = 3;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f48926[EnumC10477.f35879.ordinal()] = 4;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f48926[EnumC10477.f35883.ordinal()] = 5;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f48926[EnumC10477.f35873.ordinal()] = 6;
-        } catch (NoSuchFieldError unused11) {
-        }
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ۙ */
+    public final double mo1151(int i, double d) {
+        return 1.0d;
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C14999(short[] sArr) {
+        super(3);
+        int length = sArr.length;
+        this.f49005 = 1;
+        short[] sArr2 = new short[length];
+        this.f49006 = sArr2;
+        this.f49007 = length;
+        this.f49005 = 1;
+        System.arraycopy(sArr, 0, sArr2, 0, sArr.length);
+    }
+
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo23821() {
+        return this.f49007;
+    }
+
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1152() {
+        return this.f49005;
+    }
+
+    @Override // l.AbstractC8909
+    /* JADX INFO: renamed from: ۙ */
+    public final double mo1150(int i) {
+        short s = this.f49006[i];
+        int i2 = C15745.f51194;
+        return ((double) s) * 3.051850947599719E-5d;
     }
 }

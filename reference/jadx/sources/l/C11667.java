@@ -1,63 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۧ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 65QR */
+/* JADX INFO: renamed from: l.ۧܰ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6A28 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11667 extends AbstractC3384 implements InterfaceC7508 {
+public final class C11667 extends AbstractC12108 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final EnumC18057 f39207 = EnumC18057.Format21ih;
+    /* JADX INFO: renamed from: ۗۙ, reason: not valid java name and contains not printable characters */
+    public byte f37809;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f39208;
+    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
+    public byte[] f37810;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final int f39209;
-
-    @Override // l.InterfaceC1594
-    /* JADX INFO: renamed from: ۤ */
-    public final String mo1142() {
-        return mo5435().f35326 + " v" + mo1140() + ", " + mo4062();
+    @Override // l.AbstractC3159
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo1472(int i, byte[] bArr) {
+        return 0;
     }
 
-    public C11667(EnumC10297 enumC10297, int i, int i2) {
-        super(enumC10297);
-        C13530.m33075(i);
-        this.f39209 = i;
-        if ((65535 & i2) == 0) {
-            this.f39208 = i2;
-            return;
+    @Override // l.AbstractC3159
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1470(int i, byte[] bArr) throws C19061 {
+        if (C0481.m2318(i, bArr) != 24) {
+            throw new C19061("Expected structureSize = 24");
         }
-        throw new IllegalArgumentException(String.format("Invalid literal value: %d. Low 16 bits must be zeroed out.", Integer.valueOf(i2)));
+        this.f37809 = bArr[i + 2];
+        byte[] bArr2 = new byte[16];
+        this.f37810 = bArr2;
+        System.arraycopy(bArr, i + 8, bArr2, 0, 16);
+        return (i + 24) - i;
     }
 
-    @Override // l.InterfaceC4685
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo1140() {
-        return this.f39209;
-    }
-
-    @Override // l.InterfaceC9357
-    /* JADX INFO: renamed from: ᩺ */
-    public final int mo4063() {
-        return this.f39208;
-    }
-
-    @Override // l.InterfaceC6802
-    /* JADX INFO: renamed from: ܺ */
-    public final long mo4062() {
-        return this.f39208;
-    }
-
-    @Override // l.InterfaceC23468
-    /* JADX INFO: renamed from: ۫ */
-    public final short mo7625() {
-        return (short) (this.f39208 >>> 16);
-    }
-
-    @Override // l.AbstractC3384
-    /* JADX INFO: renamed from: ۛ */
-    public final EnumC18057 mo2108() {
-        return f39207;
+    @Override // l.AbstractC3159
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("Smb2OpblockBreakNotification[oplockLevel=");
+        sb.append((int) this.f37809);
+        sb.append(",fileId=");
+        byte[] bArr = this.f37810;
+        sb.append(C6033.m17504(bArr, 0, bArr.length));
+        sb.append("]");
+        return sb.toString();
     }
 }

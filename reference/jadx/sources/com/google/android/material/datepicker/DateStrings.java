@@ -7,8 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import l.C10946;
-import l.C17910;
+import l.C2310;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DateStrings {
@@ -41,15 +41,15 @@ public class DateStrings {
         return UtcDates.getMediumNoYear(locale).format(new Date(j));
     }
 
-    public static C10946 getDateRangeString(Long l2, Long l3, SimpleDateFormat simpleDateFormat) {
+    public static C2310 getDateRangeString(Long l2, Long l3, SimpleDateFormat simpleDateFormat) {
         if (l2 == null && l3 == null) {
-            return new C10946(null, null);
+            return new C2310(null, null);
         }
         if (l2 == null) {
-            return new C10946(null, getDateString(l3.longValue(), simpleDateFormat));
+            return new C2310(null, getDateString(l3.longValue(), simpleDateFormat));
         }
         if (l3 == null) {
-            return new C10946(getDateString(l2.longValue(), simpleDateFormat), null);
+            return new C2310(getDateString(l2.longValue(), simpleDateFormat), null);
         }
         Calendar todayCalendar = UtcDates.getTodayCalendar();
         Calendar utcCalendar = UtcDates.getUtcCalendar();
@@ -57,12 +57,12 @@ public class DateStrings {
         Calendar utcCalendar2 = UtcDates.getUtcCalendar();
         utcCalendar2.setTimeInMillis(l3.longValue());
         if (simpleDateFormat != null) {
-            return new C10946(simpleDateFormat.format(new Date(l2.longValue())), simpleDateFormat.format(new Date(l3.longValue())));
+            return new C2310(simpleDateFormat.format(new Date(l2.longValue())), simpleDateFormat.format(new Date(l3.longValue())));
         }
         if (utcCalendar.get(1) == utcCalendar2.get(1)) {
-            return utcCalendar.get(1) == todayCalendar.get(1) ? new C10946(getMonthDay(l2.longValue(), Locale.getDefault()), getMonthDay(l3.longValue(), Locale.getDefault())) : new C10946(getMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
+            return utcCalendar.get(1) == todayCalendar.get(1) ? new C2310(getMonthDay(l2.longValue(), Locale.getDefault()), getMonthDay(l3.longValue(), Locale.getDefault())) : new C2310(getMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
         }
-        return new C10946(getYearMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
+        return new C2310(getYearMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
     }
 
     public static String getMonthDayOfWeekDay(long j) {
@@ -115,25 +115,25 @@ public class DateStrings {
         return todayCalendar.get(1) == utcCalendar.get(1);
     }
 
-    public static C10946 getDateRangeString(Long l2, Long l3) {
+    public static C2310 getDateRangeString(Long l2, Long l3) {
         return getDateRangeString(l2, l3, null);
     }
 
     public static String getDayContentDescription(Context context, long j, boolean z, boolean z2, boolean z3) {
         String optionalYearMonthDayOfWeekDay = getOptionalYearMonthDayOfWeekDay(j);
         if (z) {
-            optionalYearMonthDayOfWeekDay = String.format(context.getString(C17910.f56806), optionalYearMonthDayOfWeekDay);
+            optionalYearMonthDayOfWeekDay = String.format(context.getString(C24323.f78806), optionalYearMonthDayOfWeekDay);
         }
         if (z2) {
-            return String.format(context.getString(C17910.f56891), optionalYearMonthDayOfWeekDay);
+            return String.format(context.getString(C24323.f78795), optionalYearMonthDayOfWeekDay);
         }
-        return z3 ? String.format(context.getString(C17910.f56784), optionalYearMonthDayOfWeekDay) : optionalYearMonthDayOfWeekDay;
+        return z3 ? String.format(context.getString(C24323.f78757), optionalYearMonthDayOfWeekDay) : optionalYearMonthDayOfWeekDay;
     }
 
     public static String getYearContentDescription(Context context, int i) {
         if (UtcDates.getTodayCalendar().get(1) == i) {
-            return String.format(context.getString(C17910.f56872), Integer.valueOf(i));
+            return String.format(context.getString(C24323.f78762), Integer.valueOf(i));
         }
-        return String.format(context.getString(C17910.f56837), Integer.valueOf(i));
+        return String.format(context.getString(C24323.f78828), Integer.valueOf(i));
     }
 }

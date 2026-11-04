@@ -3,8 +3,8 @@ package com.amazonaws.util.json;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.StringReader;
-import l.C5379;
-import l.EnumC22313;
+import l.C4208;
+import l.EnumC14648;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class GsonFactory implements AwsJsonFactory {
@@ -12,65 +12,65 @@ public final class GsonFactory implements AwsJsonFactory {
     public final class GsonReader {
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final C5379 f866;
+        public final C4208 f856;
 
         public GsonReader(StringReader stringReader) {
-            this.f866 = new C5379(stringReader);
+            this.f856 = new C4208(stringReader);
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final void m805() throws IOException {
-            this.f866.m14917();
+        public final void m797() throws IOException {
+            this.f856.m13456();
         }
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final void m807() throws IOException {
-            this.f866.m14910();
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final void m799() throws IOException {
+            this.f856.m13447();
+        }
+
+        /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+        public final boolean m802() throws IOException {
+            EnumC14648 enumC14648M13438 = this.f856.m13438();
+            return EnumC14648.BEGIN_ARRAY.equals(enumC14648M13438) || EnumC14648.BEGIN_OBJECT.equals(enumC14648M13438);
+        }
+
+        /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+        public final boolean m804() {
+            return this.f856.m13457();
+        }
+
+        /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+        public final String m801() {
+            return this.f856.m13437();
+        }
+
+        /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+        public final String m800() throws IOException {
+            C4208 c4208 = this.f856;
+            EnumC14648 enumC14648M13438 = c4208.m13438();
+            if (EnumC14648.NULL.equals(enumC14648M13438)) {
+                c4208.m13444();
+                return null;
+            }
+            if (EnumC14648.BOOLEAN.equals(enumC14648M13438)) {
+                return c4208.m13440() ? "true" : "false";
+            }
+            return c4208.m13453();
+        }
+
+        /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+        public final void m796() throws IOException {
+            this.f856.m13445();
         }
 
         /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-        public final boolean m806() throws IOException {
-            EnumC22313 enumC22313M14916 = this.f866.m14916();
-            return EnumC22313.BEGIN_ARRAY.equals(enumC22313M14916) || EnumC22313.BEGIN_OBJECT.equals(enumC22313M14916);
-        }
-
-        /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-        public final boolean m803() {
-            return this.f866.m14924();
-        }
-
-        /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-        public final String m810() {
-            return this.f866.m14921();
-        }
-
-        /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-        public final String m802() throws IOException {
-            C5379 c5379 = this.f866;
-            EnumC22313 enumC22313M14916 = c5379.m14916();
-            if (EnumC22313.NULL.equals(enumC22313M14916)) {
-                c5379.m14918();
-                return null;
-            }
-            if (EnumC22313.BOOLEAN.equals(enumC22313M14916)) {
-                return c5379.m14927() ? "true" : "false";
-            }
-            return c5379.m14922();
-        }
-
-        /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-        public final void m804() throws IOException {
-            this.f866.m14911();
-        }
-
-        /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-        public final AwsJsonToken m808() throws IOException {
+        public final AwsJsonToken m798() throws IOException {
             try {
-                EnumC22313 enumC22313M14916 = this.f866.m14916();
-                if (enumC22313M14916 == null) {
+                EnumC14648 enumC14648M13438 = this.f856.m13438();
+                if (enumC14648M13438 == null) {
                     return null;
                 }
-                switch (AnonymousClass1.f865[enumC22313M14916.ordinal()]) {
+                switch (AnonymousClass1.f855[enumC14648M13438.ordinal()]) {
                     case 1:
                         return AwsJsonToken.BEGIN_ARRAY;
                     case 2:
@@ -99,9 +99,9 @@ public final class GsonFactory implements AwsJsonFactory {
             }
         }
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final void m809() throws IOException {
-            this.f866.close();
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final void m803() throws IOException {
+            this.f856.close();
         }
     }
 
@@ -109,49 +109,49 @@ public final class GsonFactory implements AwsJsonFactory {
     public /* synthetic */ class AnonymousClass1 {
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public static final /* synthetic */ int[] f865;
+        public static final /* synthetic */ int[] f855;
 
         static {
-            int[] iArr = new int[EnumC22313.values().length];
-            f865 = iArr;
+            int[] iArr = new int[EnumC14648.values().length];
+            f855 = iArr;
             try {
-                iArr[EnumC22313.BEGIN_ARRAY.ordinal()] = 1;
+                iArr[EnumC14648.BEGIN_ARRAY.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f865[EnumC22313.END_ARRAY.ordinal()] = 2;
+                f855[EnumC14648.END_ARRAY.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f865[EnumC22313.BEGIN_OBJECT.ordinal()] = 3;
+                f855[EnumC14648.BEGIN_OBJECT.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f865[EnumC22313.END_OBJECT.ordinal()] = 4;
+                f855[EnumC14648.END_OBJECT.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f865[EnumC22313.NAME.ordinal()] = 5;
+                f855[EnumC14648.NAME.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f865[EnumC22313.BOOLEAN.ordinal()] = 6;
+                f855[EnumC14648.BOOLEAN.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f865[EnumC22313.NUMBER.ordinal()] = 7;
+                f855[EnumC14648.NUMBER.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f865[EnumC22313.NULL.ordinal()] = 8;
+                f855[EnumC14648.NULL.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f865[EnumC22313.STRING.ordinal()] = 9;
+                f855[EnumC14648.STRING.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
             try {
-                f865[EnumC22313.END_DOCUMENT.ordinal()] = 10;
+                f855[EnumC14648.END_DOCUMENT.ordinal()] = 10;
             } catch (NoSuchFieldError unused10) {
             }
         }

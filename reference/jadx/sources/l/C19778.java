@@ -1,33 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵᩺ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z8II */
+/* JADX INFO: renamed from: l.ᩴۧۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H4EU */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19778 extends C1577 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC6599 f63530;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9195 f63531;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C19778(C9195 c9195, InterfaceC6599 interfaceC6599, InterfaceC6599 interfaceC65910) {
-        super(interfaceC6599);
-        this.f63531 = c9195;
-        this.f63530 = interfaceC65910;
-    }
-
-    @Override // l.C1577, l.InterfaceC6599
-    /* JADX INFO: renamed from: ۙ */
-    public final C12950 mo5381(long j) {
-        C12950 c12950Mo5381 = this.f63530.mo5381(j);
-        C22828 c22828 = c12950Mo5381.f43052;
-        long j2 = c22828.f74278;
-        long j3 = c22828.f74277;
-        C9195 c9195 = this.f63531;
-        C22828 c22829 = new C22828(j2, j3 + c9195.f31272);
-        C22828 c228210 = c12950Mo5381.f43053;
-        return new C12950(c22829, new C22828(c228210.f74278, c228210.f74277 + c9195.f31272));
+public final class C19778 extends Thread {
+    /* JADX WARN: Code restructure failed: missing block: B:14:0x0015, code lost:
+    
+        r1.mo5606();
+     */
+    @Override // java.lang.Thread, java.lang.Runnable
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final void run() {
+        /*
+            r3 = this;
+        L0:
+            java.lang.Class<l.ܳۧۨ> r0 = l.C15302.class
+            monitor-enter(r0)     // Catch: java.lang.InterruptedException -> L0
+            l.ܳۧۨ r1 = l.C15302.m36746()     // Catch: java.lang.Throwable -> L19
+            if (r1 != 0) goto Lb
+            monitor-exit(r0)     // Catch: java.lang.Throwable -> L19
+            goto L0
+        Lb:
+            l.ܳۧۨ r2 = l.C15302.f50025     // Catch: java.lang.Throwable -> L19
+            if (r1 != r2) goto L14
+            r1 = 0
+            l.C15302.f50025 = r1     // Catch: java.lang.Throwable -> L19
+            monitor-exit(r0)     // Catch: java.lang.Throwable -> L19
+            return
+        L14:
+            monitor-exit(r0)     // Catch: java.lang.Throwable -> L19
+            r1.mo5606()     // Catch: java.lang.InterruptedException -> L0
+            goto L0
+        L19:
+            r1 = move-exception
+            monitor-exit(r0)     // Catch: java.lang.Throwable -> L19
+            throw r1     // Catch: java.lang.InterruptedException -> L0
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C19778.run():void");
     }
 }

@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C8479;
-import l.C8550;
+import l.C13645;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -27,7 +27,7 @@ public class ParSet extends ASN1Object {
 
     public ParSet(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 4) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("sie of seqOfParams = ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("sie of seqOfParams = ")));
         }
         this.t = checkBigIntegerInIntRangeAndPositive(aSN1Sequence.getObjectAt(0));
         ASN1Sequence aSN1Sequence2 = (ASN1Sequence) aSN1Sequence.getObjectAt(1);
@@ -95,6 +95,6 @@ public class ParSet extends ASN1Object {
         if (iIntValueExact > 0) {
             return iIntValueExact;
         }
-        throw new IllegalArgumentException(C8479.m22141(iIntValueExact, "BigInteger not in Range: "));
+        throw new IllegalArgumentException(C13645.m33382(iIntValueExact, "BigInteger not in Range: "));
     }
 }

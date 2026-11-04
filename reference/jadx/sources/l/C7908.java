@@ -1,55 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۗܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O7R4 */
+import android.widget.TextView;
+
+/* JADX INFO: renamed from: l.۟۬ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q62Z */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C7908 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f25990;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f25991;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f25992;
+    /* JADX INFO: renamed from: ֫ܰۢ, reason: not valid java name and contains not printable characters */
+    private static final short[] f26264 = {4499, -3078, 490, -2244, 6849, -1211, -16290, -6298, -1929, -6682, -2182, -5304, 2022, -1993, -2038, 985, 555, -13648, -14518, -3434, -2788, 1873, -6000, -6193, 3025};
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C7908 m20923(String str) {
-        return new C7908(-1, -1, str);
-    }
+    public final DialogInterfaceC8327 f26265;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C7908 m20922(int i, int i2, String str) {
-        C18304.m42517(i >= 0);
-        C18304.m42517(i2 >= 0);
-        str.getClass();
-        return new C7908(i, i2, str);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C23255 f26266;
 
-    public C7908(int i, int i2, String str) {
-        this.f25992 = i;
-        this.f25990 = i2;
-        this.f25991 = str;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final TextView f26267;
 
-    public final String toString() {
-        StringBuilder sb = new StringBuilder();
-        int i = this.f25992;
-        if (i >= 0) {
-            sb.append(i);
-            sb.append(':');
-        }
-        int i2 = this.f25990;
-        if (i2 >= 0) {
-            sb.append(i2);
-            sb.append(':');
-        }
-        if (i >= 0 || i2 >= 0) {
-            sb.append(' ');
-        }
-        sb.append("error: ");
-        sb.append(this.f25991);
-        return sb.toString();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C23255 f26268;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC10144 f26269;
+
+    /* JADX WARN: Code restructure failed: missing block: B:21:0x0118, code lost:
+    
+        if (l.C0950.f3488 >= 0) goto L14;
+     */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public C7908(l.AbstractActivityC10144 r38) {
+        /*
+            Method dump skipped, instruction units count: 1696
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C7908.<init>(l.ۢ۬ۤ):void");
     }
 }

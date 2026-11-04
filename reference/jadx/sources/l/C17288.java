@@ -1,87 +1,76 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܿۤܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V8GS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17288 extends C11644 {
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m40251(String str) {
-        return EnumC20111.m45474(str) != EnumC20111.UNSUPPORTED;
+/* JADX INFO: renamed from: l.ܽۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: DD2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17288 extends AbstractC3074 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3864 f56315;
+
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m40248(String str, List list) {
-        if (str != null) {
-            list.add(C11644.m29082(str));
+    public C17288(C3864 c3864) {
+        this.f56315 = c3864;
+    }
+
+    @Override // l.AbstractC5312, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC15224 iterator() {
+        return new C16542(this.f56315);
+    }
+
+    @Override // l.AbstractC5312, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC2546 spliterator() {
+        return new C15796(this.f56315);
+    }
+
+    @Override // l.AbstractC5312, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        C3864 c3864 = this.f56315;
+        Object[] objArr = c3864.f13181;
+        if (c3864.f13190) {
+            consumer.accept(objArr[c3864.f13187]);
         }
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static String m40250(String str) {
-        return C11644.m29082(str);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static boolean m40246(String str) {
-        return new C3114().m9343(0, str.length(), 0, str) < 1.0f;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m40247(String str, String str2, ArrayList arrayList) {
-        C3840 c3840;
-        if ("style".equals(str)) {
-            C8385 c8385 = new C8385();
-            C12350.m30682((AbstractC8075) c8385, str2, true);
-            c3840 = c8385.f28297;
-        } else {
-            if (!str2.startsWith("url(") || !C12350.m30707(str)) {
+        int i = c3864.f13187;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
                 return;
             }
-            C3840 c3841 = new C3840();
-            C12350.m30680(c3841, str, str2);
-            c3840 = c3841;
+            Object obj = objArr[i2];
+            if (obj != null) {
+                consumer.accept(obj);
+            }
+            i = i2;
         }
-        if (c3840 == null) {
-            return;
-        }
-        AbstractC10192 abstractC10192 = c3840.f14332;
-        if (abstractC10192 instanceof C0622) {
-            m40248(((C0622) abstractC10192).f2710, arrayList);
-        }
-        AbstractC10192 abstractC10193 = c3840.f14358;
-        if (abstractC10193 instanceof C0622) {
-            m40248(((C0622) abstractC10193).f2710, arrayList);
-        }
-        m40248(c3840.f14355, arrayList);
-        m40248(c3840.f14331, arrayList);
-        m40248(c3840.f14327, arrayList);
-        m40248(c3840.f14340, arrayList);
-        m40248(c3840.f14344, arrayList);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m40249(C11644 c11644) {
-        C6663 c6663M29094 = c11644.m29094();
-        if (c6663M29094.f49442.size() >= 50) {
-            return true;
-        }
-        int iM31403 = 0;
-        for (C8781 c8781 : c6663M29094.f49442) {
-            if (c8781 instanceof C16851) {
-                C12618 c12618 = ((C16851) c8781).f53918;
-                if (c12618 != null) {
-                    iM31403 += c12618.m31403();
-                }
-            } else {
-                iM31403++;
-            }
-            if (iM31403 >= 500) {
-                return true;
-            }
-        }
-        return false;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f56315.f13183;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.f56315.containsKey(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean remove(Object obj) {
+        C3864 c3864 = this.f56315;
+        int i = c3864.f13183;
+        c3864.remove(obj);
+        return c3864.f13183 != i;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f56315.clear();
     }
 }

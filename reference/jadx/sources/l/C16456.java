@@ -1,27 +1,41 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۛ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
+import android.media.browse.MediaBrowser;
+
+/* JADX INFO: renamed from: l.ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95XT */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16456 extends AbstractC19432 {
+public final class C16456 extends MediaBrowser.ConnectionCallback {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC10957 f52916;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17202 f53349;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C16456(ActivityC10957 activityC10957) {
-        super(true);
-        this.f52916 = activityC10957;
+    public C16456(C17202 c17202) {
+        this.f53349 = c17202;
     }
 
-    @Override // l.AbstractC19432
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4707() {
-        ActivityC10957 activityC10957 = this.f52916;
-        if (activityC10957.f37304.getVisibility() == 0) {
-            ActivityC10957.m27702(activityC10957);
-        } else {
-            activityC10957.finish();
+    @Override // android.media.browse.MediaBrowser.ConnectionCallback
+    public final void onConnected() {
+        C17202 c17202 = this.f53349;
+        C3032 c3032 = c17202.f56032;
+        if (c3032 != null) {
+            c3032.m9844();
         }
+        c17202.mo11493();
+    }
+
+    @Override // android.media.browse.MediaBrowser.ConnectionCallback
+    public final void onConnectionSuspended() {
+        C17202 c17202 = this.f53349;
+        C3032 c3032 = c17202.f56032;
+        if (c3032 != null) {
+            c3032.m9842();
+        }
+        c17202.mo11495();
+    }
+
+    @Override // android.media.browse.MediaBrowser.ConnectionCallback
+    public final void onConnectionFailed() {
+        this.f53349.mo11496();
     }
 }

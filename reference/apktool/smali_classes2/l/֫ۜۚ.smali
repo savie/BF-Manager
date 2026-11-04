@@ -1,114 +1,74 @@
-.class public final Ll/֫ۜۚ;
+.class public final synthetic Ll/֫ۜۚ;
 .super Ljava/lang/Object;
-.source "P708"
+.source "X8B6"
 
-
-# static fields
-.field public static final ۨ:Ll/֫ۜۚ;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final ۙ:Ll/᩷۬ۚ;
+.field public final synthetic ܰ:I
 
-.field public final ܰ:Ll/֫ܶۚ;
+.field public final synthetic ܿ:Ljava/lang/Object;
+
+.field public final synthetic ᩶:Ll/ܽ֡֫;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 17
-    new-instance v0, Ll/֫ۜۚ;
-
-    sget-object v1, Ll/ܳۜۚ;->ܽ:Ll/ܳۜۚ;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Ll/֫ۜۚ;-><init>(Ll/᩷۬ۚ;Ll/֫ܶۚ;)V
-
-    sput-object v0, Ll/֫ۜۚ;->ۨ:Ll/֫ۜۚ;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/᩷۬ۚ;Ll/֫ܶۚ;)V
+.method public synthetic constructor <init>(Ll/ܽ֡֫;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 31
+    .line 0
+    iput p3, p0, Ll/֫ۜۚ;->ܰ:I
+
+    iput-object p1, p0, Ll/֫ۜۚ;->᩶:Ll/ܽ֡֫;
+
+    iput-object p2, p0, Ll/֫ۜۚ;->ܿ:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
-    iput-object p1, p0, Ll/֫ۜۚ;->ۙ:Ll/᩷۬ۚ;
-
-    .line 34
-    iput-object p2, p0, Ll/֫ۜۚ;->ܰ:Ll/֫ܶۚ;
-
     return-void
-.end method
-
-.method public static ۙ(Ll/᩷۬ۚ;)Ll/֫ۜۚ;
-    .locals 3
-
-    if-nez p0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 44
-    :cond_0
-    :try_start_0
-    invoke-static {p0}, Ll/֫ܶۚ;->ܰ(Ll/᩷۬ۚ;)Ll/֫ܶۚ;
-
-    move-result-object v0
-
-    :goto_0
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    .line 47
-    :cond_1
-    sget v1, Ll/ܽۘۚ;->ܰ:I
-
-    invoke-virtual {p0, v1}, Ll/᩷۬ۚ;->ۙ(I)Ll/ܺۘۚ;
-
-    .line 48
-    :goto_1
-    new-instance v1, Ll/֫ۜۚ;
-
-    .line 49
-    sget-object v2, Ll/ܳۜۚ;->ܽ:Ll/ܳۜۚ;
-
-    invoke-direct {v1, p0, v0}, Ll/֫ۜۚ;-><init>(Ll/᩷۬ۚ;Ll/֫ܶۚ;)V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    .line 52
-    :catch_0
-    sget-object p0, Ll/֫ۜۚ;->ۨ:Ll/֫ۜۚ;
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/᩷۬ۚ;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    .line 64
-    iget-object v0, p0, Ll/֫ۜۚ;->ۙ:Ll/᩷۬ۚ;
+    .line 0
+    iget v0, p0, Ll/֫ۜۚ;->ܰ:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final ܰ()Ll/֫ܶۚ;
-    .locals 1
+    iget-object v0, p0, Ll/֫ۜۚ;->᩶:Ll/ܽ֡֫;
 
-    .line 70
-    iget-object v0, p0, Ll/֫ۜۚ;->ܰ:Ll/֫ܶۚ;
+    check-cast v0, Ll/ۜ۫֫;
 
-    return-object v0
+    iget-object v1, p0, Ll/֫ۜۚ;->ܿ:Ljava/lang/Object;
+
+    check-cast v1, Ll/ܿ۫֫;
+
+    invoke-static {v0, v1}, Ll/ۜ۫֫;->ۙ(Ll/ۜ۫֫;Ll/ܿ۫֫;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll/֫ۜۚ;->᩶:Ll/ܽ֡֫;
+
+    check-cast v0, Ll/ܶۜۚ;
+
+    iget-object v1, p0, Ll/֫ۜۚ;->ܿ:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-static {v0, v1}, Ll/ܶۜۚ;->᩷(Ll/ܶۜۚ;Ljava/util/concurrent/atomic/AtomicBoolean;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

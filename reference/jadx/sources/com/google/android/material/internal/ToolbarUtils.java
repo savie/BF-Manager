@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import l.C22815;
-import l.C6938;
-import l.ViewOnClickListenerC6772;
+import l.C16390;
+import l.C17531;
+import l.ViewOnClickListenerC16611;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ToolbarUtils {
@@ -23,26 +23,26 @@ public class ToolbarUtils {
         }
     };
 
-    public static TextView getTitleTextView(C6938 c6938) {
-        List textViewsWithText = getTextViewsWithText(c6938, c6938.getTitle());
+    public static TextView getTitleTextView(C16390 c16390) {
+        List textViewsWithText = getTextViewsWithText(c16390, c16390.getTitle());
         if (textViewsWithText.isEmpty()) {
             return null;
         }
         return (TextView) Collections.min(textViewsWithText, VIEW_TOP_COMPARATOR);
     }
 
-    public static TextView getSubtitleTextView(C6938 c6938) {
-        List textViewsWithText = getTextViewsWithText(c6938, c6938.getSubtitle());
+    public static TextView getSubtitleTextView(C16390 c16390) {
+        List textViewsWithText = getTextViewsWithText(c16390, c16390.getSubtitle());
         if (textViewsWithText.isEmpty()) {
             return null;
         }
         return (TextView) Collections.max(textViewsWithText, VIEW_TOP_COMPARATOR);
     }
 
-    public static List getTextViewsWithText(C6938 c6938, CharSequence charSequence) {
+    public static List getTextViewsWithText(C16390 c16390, CharSequence charSequence) {
         ArrayList arrayList = new ArrayList();
-        for (int i = 0; i < c6938.getChildCount(); i++) {
-            View childAt = c6938.getChildAt(i);
+        for (int i = 0; i < c16390.getChildCount(); i++) {
+            View childAt = c16390.getChildAt(i);
             if (childAt instanceof TextView) {
                 TextView textView = (TextView) childAt;
                 if (TextUtils.equals(textView.getText(), charSequence)) {
@@ -53,18 +53,18 @@ public class ToolbarUtils {
         return arrayList;
     }
 
-    public static ImageView getLogoImageView(C6938 c6938) {
-        return getImageView(c6938, c6938.getLogo());
+    public static ImageView getLogoImageView(C16390 c16390) {
+        return getImageView(c16390, c16390.getLogo());
     }
 
-    public static ImageView getImageView(C6938 c6938, Drawable drawable) {
+    public static ImageView getImageView(C16390 c16390, Drawable drawable) {
         ImageView imageView;
         Drawable drawable2;
         if (drawable == null) {
             return null;
         }
-        for (int i = 0; i < c6938.getChildCount(); i++) {
-            View childAt = c6938.getChildAt(i);
+        for (int i = 0; i < c16390.getChildCount(); i++) {
+            View childAt = c16390.getChildAt(i);
             if ((childAt instanceof ImageView) && (drawable2 = (imageView = (ImageView) childAt).getDrawable()) != null && drawable2.getConstantState() != null && drawable2.getConstantState().equals(drawable.getConstantState())) {
                 return imageView;
             }
@@ -72,31 +72,31 @@ public class ToolbarUtils {
         return null;
     }
 
-    public static View getSecondaryActionMenuItemView(C6938 c6938) {
-        C22815 actionMenuView = getActionMenuView(c6938);
+    public static View getSecondaryActionMenuItemView(C16390 c16390) {
+        C17531 actionMenuView = getActionMenuView(c16390);
         if (actionMenuView == null || actionMenuView.getChildCount() <= 1) {
             return null;
         }
         return actionMenuView.getChildAt(0);
     }
 
-    public static C22815 getActionMenuView(C6938 c6938) {
-        for (int i = 0; i < c6938.getChildCount(); i++) {
-            View childAt = c6938.getChildAt(i);
-            if (childAt instanceof C22815) {
-                return (C22815) childAt;
+    public static C17531 getActionMenuView(C16390 c16390) {
+        for (int i = 0; i < c16390.getChildCount(); i++) {
+            View childAt = c16390.getChildAt(i);
+            if (childAt instanceof C17531) {
+                return (C17531) childAt;
             }
         }
         return null;
     }
 
-    public static ImageButton getNavigationIconButton(C6938 c6938) {
-        Drawable navigationIcon = c6938.getNavigationIcon();
+    public static ImageButton getNavigationIconButton(C16390 c16390) {
+        Drawable navigationIcon = c16390.getNavigationIcon();
         if (navigationIcon == null) {
             return null;
         }
-        for (int i = 0; i < c6938.getChildCount(); i++) {
-            View childAt = c6938.getChildAt(i);
+        for (int i = 0; i < c16390.getChildCount(); i++) {
+            View childAt = c16390.getChildAt(i);
             if (childAt instanceof ImageButton) {
                 ImageButton imageButton = (ImageButton) childAt;
                 if (imageButton.getDrawable() == navigationIcon) {
@@ -107,17 +107,17 @@ public class ToolbarUtils {
         return null;
     }
 
-    public static ViewOnClickListenerC6772 getActionMenuItemView(C6938 c6938, int i) {
-        C22815 actionMenuView = getActionMenuView(c6938);
+    public static ViewOnClickListenerC16611 getActionMenuItemView(C16390 c16390, int i) {
+        C17531 actionMenuView = getActionMenuView(c16390);
         if (actionMenuView == null) {
             return null;
         }
         for (int i2 = 0; i2 < actionMenuView.getChildCount(); i2++) {
             View childAt = actionMenuView.getChildAt(i2);
-            if (childAt instanceof ViewOnClickListenerC6772) {
-                ViewOnClickListenerC6772 viewOnClickListenerC6772 = (ViewOnClickListenerC6772) childAt;
-                if (viewOnClickListenerC6772.getItemData().getItemId() == i) {
-                    return viewOnClickListenerC6772;
+            if (childAt instanceof ViewOnClickListenerC16611) {
+                ViewOnClickListenerC16611 viewOnClickListenerC16611 = (ViewOnClickListenerC16611) childAt;
+                if (viewOnClickListenerC16611.getItemData().getItemId() == i) {
+                    return viewOnClickListenerC16611;
                 }
             }
         }

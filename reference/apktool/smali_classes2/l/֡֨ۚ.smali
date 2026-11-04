@@ -1,50 +1,167 @@
-.class public abstract Ll/֡֨ۚ;
-.super Ljava/lang/Object;
-.source "A7IB"
+.class public final enum Ll/֡֨ۚ;
+.super Ljava/lang/Enum;
+.source "Q8FL"
+
+
+# static fields
+.field public static final enum ֡:Ll/֡֨ۚ;
+
+.field public static final enum ۟:Ll/֡֨ۚ;
+
+.field public static final synthetic ܰ:[Ll/֡֨ۚ;
+
+.field public static final enum ܿ:Ll/֡֨ۚ;
+
+.field public static final enum ᩳ:Ll/֡֨ۚ;
+
+.field public static final enum ᩶:Ll/֡֨ۚ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 281
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1613
+    new-instance v0, Ll/֡֨ۚ;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ll/֡֨ۚ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֡֨ۚ;->ᩳ:Ll/֡֨ۚ;
+
+    .line 1614
+    new-instance v0, Ll/֡֨ۚ;
+
+    const-string v1, "PROBING"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/֡֨ۚ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֡֨ۚ;->ܿ:Ll/֡֨ۚ;
+
+    .line 1615
+    new-instance v0, Ll/֡֨ۚ;
+
+    const-string v1, "RANGE_SUPPORTED"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/֡֨ۚ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֡֨ۚ;->֡:Ll/֡֨ۚ;
+
+    .line 1616
+    new-instance v0, Ll/֡֨ۚ;
+
+    const-string v1, "RANGE_UNSUPPORTED"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/֡֨ۚ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֡֨ۚ;->۟:Ll/֡֨ۚ;
+
+    .line 1617
+    new-instance v0, Ll/֡֨ۚ;
+
+    const-string v1, "ERROR"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Ll/֡֨ۚ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֡֨ۚ;->᩶:Ll/֡֨ۚ;
+
+    .line 1612
+    invoke-static {}, Ll/֡֨ۚ;->ۙ()[Ll/֡֨ۚ;
+
+    move-result-object v0
+
+    sput-object v0, Ll/֡֨ۚ;->ܰ:[Ll/֡֨ۚ;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ll/֡֨ۚ;-><init>()V
+    .line 1612
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public ۙ()Ll/ܺ֨ۚ;
+.method public static valueOf(Ljava/lang/String;)Ll/֡֨ۚ;
     .locals 1
 
-    .line 288
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 1612
+    const-class v0, Ll/֡֨ۚ;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    throw v0
+    move-result-object p0
+
+    check-cast p0, Ll/֡֨ۚ;
+
+    return-object p0
 .end method
 
-.method public abstract ۨ()I
-.end method
-
-.method public ܰ()Ll/ܽ֨ۚ;
+.method public static values()[Ll/֡֨ۚ;
     .locals 1
 
-    .line 296
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 1612
+    sget-object v0, Ll/֡֨ۚ;->ܰ:[Ll/֡֨ۚ;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-virtual {v0}, [Ll/֡֨ۚ;->clone()Ljava/lang/Object;
 
-    throw v0
+    move-result-object v0
+
+    check-cast v0, [Ll/֡֨ۚ;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/֡֨ۚ;
+    .locals 3
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Ll/֡֨ۚ;
+
+    .line 1612
+    sget-object v1, Ll/֡֨ۚ;->ᩳ:Ll/֡֨ۚ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֡֨ۚ;->ܿ:Ll/֡֨ۚ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֡֨ۚ;->֡:Ll/֡֨ۚ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֡֨ۚ;->۟:Ll/֡֨ۚ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֡֨ۚ;->᩶:Ll/֡֨ۚ;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

@@ -1,82 +1,161 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ܰܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5BEJ */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C20214 extends AbstractC1100 {
+import android.net.Uri;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C16624 f65588;
+/* JADX INFO: renamed from: l.᩵֨ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q8FL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20214 extends AbstractC8433 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public Uri f64892;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f65589;
+    public final /* synthetic */ C9771 f64893;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C7451 f65590;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f64894;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C9300 f65591;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public InputStream f64895;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f65592;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public long f64896;
 
-    public C20214(int i, int i2, C16624 c16624, C7451 c7451, C9300 c9300) {
-        super("Code");
-        if (i < 0) {
-            throw new IllegalArgumentException("maxStack < 0");
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C20214(C9771 c9771) {
+        super(c9771.f31502 instanceof AbstractC18881);
+        this.f64893 = c9771;
+    }
+
+    @Override // l.InterfaceC13433
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo8326(C25368 c25368) throws IOException {
+        Uri uri = c25368.f81907;
+        long j = c25368.f81909;
+        this.f64892 = uri;
+        m22621(c25368);
+        Uri uri2 = this.f64892;
+        C9771 c9771 = this.f64893;
+        InterfaceC2386 interfaceC2386M25478 = c9771.m25478(uri2);
+        long size = interfaceC2386M25478.getSize();
+        if (size >= 0 && j > size) {
+            throw new C5976(null, null, 2008);
         }
-        if (i2 < 0) {
-            throw new IllegalArgumentException("maxLocals < 0");
+        long j2 = c25368.f81910;
+        this.f64896 = j2;
+        if (j2 == -1 && size >= 0) {
+            this.f64896 = size - j;
         }
         try {
-            if (c7451.m43640()) {
-                throw new C8364("catches.isMutable()", null);
+            if (size >= 0 && j == size) {
+                this.f64895 = new ByteArrayInputStream(new byte[0]);
+                this.f64894 = true;
+                m22619(c25368);
+                return this.f64896;
             }
-            try {
-                if (c9300.m43640()) {
-                    throw new C8364("attributes.isMutable()", null);
+            AbstractC7629 abstractC7629 = c9771.f31502;
+            if (abstractC7629 instanceof AbstractC18881) {
+                AbstractC18881 abstractC18881 = (AbstractC18881) abstractC7629;
+                C9771.m25450(c9771, interfaceC2386M25478);
+                if (c9771.f31503) {
+                    throw new C10517(interfaceC2386M25478.getName());
                 }
-                this.f65592 = i;
-                this.f65589 = i2;
-                this.f65588 = c16624;
-                this.f65590 = c7451;
-                this.f65591 = c9300;
-            } catch (NullPointerException unused) {
-                throw new NullPointerException("attributes == null");
+                long j3 = c25368.f81910;
+                this.f64895 = j3 == -1 ? abstractC18881.mo35570(j, interfaceC2386M25478.getPath()) : abstractC18881.mo43786(interfaceC2386M25478.getPath(), c25368.f81909, j3);
+            } else {
+                if (!(c9771.f31502 instanceof C11969)) {
+                    throw new IOException("HLS direct reading requires a local or network visitor");
+                }
+                if (c9771.f31503) {
+                    throw new C10517(interfaceC2386M25478.getName());
+                }
+                InputStream inputStreamMo4290 = interfaceC2386M25478.mo8093().mo4290();
+                this.f64895 = inputStreamMo4290;
+                while (j > 0) {
+                    long jSkip = inputStreamMo4290.skip(j);
+                    if (jSkip <= 0) {
+                        if (inputStreamMo4290.read() == -1) {
+                            throw new C5976(null, null, 2008);
+                        }
+                        jSkip = 1;
+                    }
+                    j -= jSkip;
+                }
             }
-        } catch (NullPointerException unused2) {
-            throw new NullPointerException("catches == null");
+            if (!c9771.f31503) {
+                this.f64894 = true;
+                m22619(c25368);
+                return this.f64896;
+            }
+            InputStream inputStream = this.f64895;
+            this.f64895 = null;
+            if (inputStream != null) {
+                inputStream.close();
+            }
+            throw new C10517(interfaceC2386M25478.getName());
+        } catch (IOException e) {
+            throw C9771.m25439(c9771, e);
         }
     }
 
-    @Override // l.InterfaceC5771
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo2281() {
-        return this.f65591.m23872() + (this.f65590.size() * 8) + 2 + this.f65588.m39088() + 10;
+    @Override // l.InterfaceC9461
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        if (i2 == 0) {
+            return 0;
+        }
+        long j = this.f64896;
+        if (j == 0) {
+            return -1;
+        }
+        InputStream inputStream = this.f64895;
+        if (inputStream == null) {
+            throw new IOException("Data source is not open");
+        }
+        if (j != -1) {
+            i2 = (int) Math.min(j, i2);
+        }
+        try {
+            int i3 = inputStream.read(bArr, i, i2);
+            if (i3 == -1) {
+                this.f64896 = 0L;
+                return -1;
+            }
+            long j2 = this.f64896;
+            if (j2 != -1) {
+                this.f64896 = j2 - ((long) i3);
+            }
+            m22622(i3);
+            return i3;
+        } catch (IOException e) {
+            throw C9771.m25439(this.f64893, e);
+        }
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m45671() {
-        return this.f65592;
+    @Override // l.InterfaceC13433
+    /* JADX INFO: renamed from: ᩴ */
+    public final Uri mo8327() {
+        return this.f64892;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m45668() {
-        return this.f65589;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C16624 m45667() {
-        return this.f65588;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C7451 m45669() {
-        return this.f65590;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C9300 m45670() {
-        return this.f65591;
+    @Override // l.InterfaceC13433
+    public final void close() {
+        this.f64892 = null;
+        try {
+            InputStream inputStream = this.f64895;
+            if (inputStream != null) {
+                inputStream.close();
+            }
+        } finally {
+            this.f64895 = null;
+            this.f64896 = 0L;
+            if (this.f64894) {
+                this.f64894 = false;
+                m22620();
+            }
+        }
     }
 }

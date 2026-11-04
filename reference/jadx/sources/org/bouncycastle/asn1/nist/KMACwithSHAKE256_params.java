@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.nist;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KMACwithSHAKE256_params extends ASN1Object {
     public static final int DEF_LENGTH = 512;
     public static final byte[] EMPTY_STRING = new byte[0];
@@ -33,7 +33,7 @@ public class KMACwithSHAKE256_params extends ASN1Object {
         }
         if (aSN1Sequence.size() == 2) {
             this.outputLength = ASN1Integer.getInstance(aSN1Sequence.getObjectAt(0)).intValueExact();
-            this.customizationString = C15489.m37078(aSN1Sequence, 1);
+            this.customizationString = C20551.m47118(aSN1Sequence, 1);
         } else if (aSN1Sequence.size() != 1) {
             this.outputLength = 512;
             this.customizationString = EMPTY_STRING;
@@ -42,7 +42,7 @@ public class KMACwithSHAKE256_params extends ASN1Object {
             this.customizationString = EMPTY_STRING;
         } else {
             this.outputLength = 512;
-            this.customizationString = C15489.m37078(aSN1Sequence, 0);
+            this.customizationString = C20551.m47118(aSN1Sequence, 0);
         }
     }
 

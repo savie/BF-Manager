@@ -4,7 +4,7 @@ package java.util.function;
 /* JADX INFO: loaded from: classes.dex */
 public interface Function<T, R> {
     /* JADX INFO: renamed from: andThen */
-    <V> Function<T, V> mo33696andThen(Function<? super R, ? extends V> function);
+    <V> Function<T, V> mo10608andThen(Function<? super R, ? extends V> function);
 
     R apply(T t);
 

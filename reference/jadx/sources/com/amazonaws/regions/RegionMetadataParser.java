@@ -18,7 +18,7 @@ public class RegionMetadataParser {
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m422(FileInputStream fileInputStream) {
+    public static ArrayList m416(FileInputStream fileInputStream) {
         try {
             try {
                 Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(fileInputStream);
@@ -32,19 +32,19 @@ public class RegionMetadataParser {
                     Node nodeItem = elementsByTagName.item(i);
                     if (nodeItem.getNodeType() == 1) {
                         Element element = (Element) nodeItem;
-                        String strM421 = m421("Name", element);
-                        m421("Domain", element);
-                        Region region = new Region(strM421);
+                        String strM415 = m415("Name", element);
+                        m415("Domain", element);
+                        Region region = new Region(strM415);
                         NodeList elementsByTagName2 = element.getElementsByTagName("Endpoint");
                         for (int i2 = 0; i2 < elementsByTagName2.getLength(); i2++) {
                             Element element2 = (Element) elementsByTagName2.item(i2);
-                            String strM422 = m421("ServiceName", element2);
-                            String strM423 = m421("Hostname", element2);
-                            String strM424 = m421("Http", element2);
-                            String strM425 = m421("Https", element2);
-                            region.m416().put(strM422, strM423);
-                            region.m415().put(strM422, Boolean.valueOf("true".equals(strM424)));
-                            region.m418().put(strM422, Boolean.valueOf("true".equals(strM425)));
+                            String strM416 = m415("ServiceName", element2);
+                            String strM417 = m415("Hostname", element2);
+                            String strM418 = m415("Http", element2);
+                            String strM419 = m415("Https", element2);
+                            region.m410().put(strM416, strM417);
+                            region.m408().put(strM416, Boolean.valueOf("true".equals(strM418)));
+                            region.m411().put(strM416, Boolean.valueOf("true".equals(strM419)));
                         }
                         arrayList.add(region);
                     }
@@ -65,7 +65,7 @@ public class RegionMetadataParser {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m421(String str, Element element) {
+    public static String m415(String str, Element element) {
         Node nodeItem = element.getElementsByTagName(str).item(0);
         if (nodeItem == null) {
             return null;

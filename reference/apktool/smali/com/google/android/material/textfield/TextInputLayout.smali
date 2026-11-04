@@ -163,9 +163,9 @@
 
 .field public placeholderEnabled:Z
 
-.field public placeholderFadeIn:Ll/ۘ᩻ܰ;
+.field public placeholderFadeIn:Ll/ۖ֨᩷;
 
-.field public placeholderFadeOut:Ll/ۘ᩻ܰ;
+.field public placeholderFadeOut:Ll/ۖ֨᩷;
 
 .field public placeholderText:Ljava/lang/CharSequence;
 
@@ -221,7 +221,7 @@
     .locals 4
 
     .line 203
-    sget v0, Ll/ᩴ۟ܶ;->ܶ֡:I
+    sget v0, Ll/ۘ۬ܺ;->ܺܿ:I
 
     sput v0, Lcom/google/android/material/textfield/TextInputLayout;->DEF_STYLE_RES:I
 
@@ -266,7 +266,7 @@
     .locals 1
 
     .line 465
-    sget v0, Ll/ۖ۟ܶ;->ܳ᩻:I
+    sget v0, Ll/ۧ۬ܺ;->ۖۡ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/textfield/TextInputLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -307,7 +307,7 @@
     iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->indicatorViewController:Lcom/google/android/material/textfield/IndicatorViewController;
 
     .line 250
-    new-instance v0, Ll/᩺ۖۜ;
+    new-instance v0, Ll/ۚܽۤ;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -393,17 +393,17 @@
     invoke-virtual {v0, v1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedTextGravity(I)V
 
     .line 485
-    sget-object v2, Ll/۠۟ܶ;->᩺ᩳۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->᩻ܶۙ:[I
 
-    sget v0, Ll/۠۟ܶ;->ۗᩳۙ:I
+    sget v0, Ll/ܰ۬ܺ;->۬ܶۙ:I
 
-    sget v1, Ll/۠۟ܶ;->֫ᩳۙ:I
+    sget v1, Ll/ܰ۬ܺ;->۠ܶۙ:I
 
-    sget v3, Ll/۠۟ܶ;->ۡᩴۙ:I
+    sget v3, Ll/ܰ۬ܺ;->ۨ᩹ۙ:I
 
-    sget v4, Ll/۠۟ܶ;->᩶ᩴۙ:I
+    sget v4, Ll/ܰ۬ܺ;->᩶᩹ۙ:I
 
-    sget v5, Ll/۠۟ܶ;->ܿᩴۙ:I
+    sget v5, Ll/ܰ۬ܺ;->ᩳ᩹ۙ:I
 
     filled-new-array {v0, v1, v3, v4, v5}, [I
 
@@ -418,66 +418,66 @@
     move v4, v6
 
     .line 486
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/֫ᩳ;
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/ۙ᩹;
 
     move-result-object v0
 
     .line 498
     new-instance v1, Lcom/google/android/material/textfield/StartCompoundLayout;
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/material/textfield/StartCompoundLayout;-><init>(Lcom/google/android/material/textfield/TextInputLayout;Ll/֫ᩳ;)V
+    invoke-direct {v1, p0, v0}, Lcom/google/android/material/textfield/StartCompoundLayout;-><init>(Lcom/google/android/material/textfield/TextInputLayout;Ll/ۙ᩹;)V
 
     iput-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->startLayout:Lcom/google/android/material/textfield/StartCompoundLayout;
 
     .line 500
-    sget v2, Ll/۠۟ܶ;->۫ᩴۙ:I
+    sget v2, Ll/ܰ۬ܺ;->۟᩹ۙ:I
 
-    invoke-virtual {v0, v2, v9}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v2, v9}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/google/android/material/textfield/TextInputLayout;->hintEnabled:Z
 
     .line 501
-    sget v2, Ll/۠۟ܶ;->᩸ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ܽܶۙ:I
 
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->֨(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->۫(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Lcom/google/android/material/textfield/TextInputLayout;->setHint(Ljava/lang/CharSequence;)V
 
     .line 502
-    sget v2, Ll/۠۟ܶ;->ܽᩴۙ:I
+    sget v2, Ll/ܰ۬ܺ;->֡᩹ۙ:I
 
-    invoke-virtual {v0, v2, v9}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v2, v9}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/google/android/material/textfield/TextInputLayout;->hintAnimationEnabled:Z
 
     .line 503
-    sget v2, Ll/۠۟ܶ;->۟ᩴۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩺᩹ۙ:I
 
-    invoke-virtual {v0, v2, v9}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v2, v9}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/google/android/material/textfield/TextInputLayout;->expandedHintEnabled:Z
 
     .line 505
-    sget v2, Ll/۠۟ܶ;->۠ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ۗܶۙ:I
 
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 506
-    sget v2, Ll/۠۟ܶ;->۠ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ۗܶۙ:I
 
-    invoke-virtual {v0, v2, p1}, Ll/֫ᩳ;->ۨ(II)I
+    invoke-virtual {v0, v2, p1}, Ll/ۙ᩹;->ۤ(II)I
 
     move-result v2
 
@@ -487,18 +487,18 @@
 
     .line 507
     :cond_0
-    sget v2, Ll/۠۟ܶ;->᩵ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩵ܶۙ:I
 
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 508
-    sget v2, Ll/۠۟ܶ;->᩵ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩵ܶۙ:I
 
-    invoke-virtual {v0, v2, p1}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, v2, p1}, Ll/ۙ᩹;->᩷(II)I
 
     move-result v2
 
@@ -507,18 +507,18 @@
     .line 510
     :cond_1
     :goto_0
-    sget v2, Ll/۠۟ܶ;->ᩳᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ܶܶۙ:I
 
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 511
-    sget v2, Ll/۠۟ܶ;->ᩳᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ܶܶۙ:I
 
-    invoke-virtual {v0, v2, p1}, Ll/֫ᩳ;->ۨ(II)I
+    invoke-virtual {v0, v2, p1}, Ll/ۙ᩹;->ۤ(II)I
 
     move-result v2
 
@@ -528,18 +528,18 @@
 
     .line 512
     :cond_2
-    sget v2, Ll/۠۟ܶ;->ᩴᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩹ܶۙ:I
 
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 513
-    sget v2, Ll/۠۟ܶ;->ᩴᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩹ܶۙ:I
 
-    invoke-virtual {v0, v2, p1}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, v2, p1}, Ll/ۙ᩹;->᩷(II)I
 
     move-result v2
 
@@ -563,7 +563,7 @@
 
     move-result-object p2
 
-    sget p3, Ll/֨۟ܶ;->ۤܺ:I
+    sget p3, Ll/ܽ۬ܺ;->ۛܰ:I
 
     .line 522
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -573,24 +573,24 @@
     iput p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->boxLabelCutoutPaddingPx:I
 
     .line 523
-    sget p2, Ll/۠۟ܶ;->᩷ᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۘܶۙ:I
 
     .line 524
-    invoke-virtual {v0, p2, v7}, Ll/֫ᩳ;->ۙ(II)I
+    invoke-virtual {v0, p2, v7}, Ll/ۙ᩹;->ۙ(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->boxCollapsedPaddingTopPx:I
 
     .line 526
-    sget p2, Ll/۠۟ܶ;->ۛᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۢܶۙ:I
 
     .line 530
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    sget v2, Ll/֨۟ܶ;->۟ܺ:I
+    sget v2, Ll/ܽ۬ܺ;->᩺ܰ:I
 
     .line 531
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -598,21 +598,21 @@
     move-result p3
 
     .line 527
-    invoke-virtual {v0, p2, p3}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p2, p3}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->boxStrokeWidthDefaultPx:I
 
     .line 532
-    sget p2, Ll/۠۟ܶ;->ۧᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֨ܶۙ:I
 
     .line 536
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    sget v2, Ll/֨۟ܶ;->᩷ܺ:I
+    sget v2, Ll/ܽ۬ܺ;->ۘܰ:I
 
     .line 537
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -620,7 +620,7 @@
     move-result p3
 
     .line 533
-    invoke-virtual {v0, p2, p3}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {v0, p2, p3}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p2
 
@@ -632,34 +632,34 @@
     iput p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->boxStrokeWidthPx:I
 
     .line 540
-    sget p2, Ll/۠۟ܶ;->ܽᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->֡ܶۙ:I
 
     .line 541
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->ۨ(I)F
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->ۤ(I)F
 
     move-result p2
 
     .line 542
-    sget p3, Ll/۠۟ܶ;->֡ᩳۙ:I
+    sget p3, Ll/ܰ۬ܺ;->ܿܶۙ:I
 
     .line 543
-    invoke-virtual {v0, p3}, Ll/֫ᩳ;->ۨ(I)F
+    invoke-virtual {v0, p3}, Ll/ۙ᩹;->ۤ(I)F
 
     move-result p3
 
     .line 544
-    sget v2, Ll/۠۟ܶ;->ܺᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ܰܶۙ:I
 
     .line 545
-    invoke-virtual {v0, v2}, Ll/֫ᩳ;->ۨ(I)F
+    invoke-virtual {v0, v2}, Ll/ۙ᩹;->ۤ(I)F
 
     move-result v2
 
     .line 546
-    sget v3, Ll/۠۟ܶ;->᩶ᩳۙ:I
+    sget v3, Ll/ܰ۬ܺ;->᩶ܶۙ:I
 
     .line 547
-    invoke-virtual {v0, v3}, Ll/֫ᩳ;->ۨ(I)F
+    invoke-virtual {v0, v3}, Ll/ۙ᩹;->ۤ(I)F
 
     move-result v3
 
@@ -712,10 +712,10 @@
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->shapeAppearanceModel:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     .line 563
-    sget p2, Ll/۠۟ܶ;->ۤᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۛܶۙ:I
 
     .line 564
-    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/֫ᩳ;I)Landroid/content/res/ColorStateList;
+    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/ۙ᩹;I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
@@ -791,7 +791,7 @@
     iput p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->focusedFilledBackgroundColor:I
 
     .line 581
-    sget p2, Ll/᩹۟ܶ;->ۖ᩷:I
+    sget p2, Ll/ܺ۬ܺ;->᩸ۘ:I
 
     .line 508
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -802,7 +802,7 @@
 
     move-result-object v4
 
-    invoke-static {p3, p2, v4}, Ll/ܽ۫;->ܰ(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-static {p3, p2, v4}, Ll/ۡ۟;->᩷(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
@@ -850,19 +850,19 @@
 
     .line 598
     :goto_2
-    sget p2, Ll/۠۟ܶ;->ۡᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۨܶۙ:I
 
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_a
 
     .line 599
-    sget p2, Ll/۠۟ܶ;->ۡᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۨܶۙ:I
 
     .line 600
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
@@ -872,46 +872,46 @@
 
     .line 603
     :cond_a
-    sget p2, Ll/۠۟ܶ;->۫ᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->۟ܶۙ:I
 
     .line 604
-    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/֫ᩳ;I)Landroid/content/res/ColorStateList;
+    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/ۙ᩹;I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     .line 606
-    sget p3, Ll/۠۟ܶ;->۫ᩳۙ:I
+    sget p3, Ll/ܰ۬ܺ;->۟ܶۙ:I
 
-    invoke-virtual {v0, p3}, Ll/֫ᩳ;->ۙ(I)I
+    invoke-virtual {v0, p3}, Ll/ۙ᩹;->ۙ(I)I
 
     move-result p3
 
     iput p3, p0, Lcom/google/android/material/textfield/TextInputLayout;->focusedStrokeColor:I
 
     .line 607
-    sget p3, Ll/᩹۟ܶ;->ܳ᩷:I
+    sget p3, Ll/ܺ۬ܺ;->ۖۘ:I
 
     .line 608
-    invoke-static {v8, p3}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {v8, p3}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p3
 
     iput p3, p0, Lcom/google/android/material/textfield/TextInputLayout;->defaultStrokeColor:I
 
     .line 609
-    sget p3, Ll/᩹۟ܶ;->֫᩷:I
+    sget p3, Ll/ܺ۬ܺ;->۠ۘ:I
 
-    invoke-static {v8, p3}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {v8, p3}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p3
 
     iput p3, p0, Lcom/google/android/material/textfield/TextInputLayout;->disabledColor:I
 
     .line 610
-    sget p3, Ll/᩹۟ܶ;->ۙܺ:I
+    sget p3, Ll/ܺ۬ܺ;->ۙܰ:I
 
     .line 611
-    invoke-static {v8, p3}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {v8, p3}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p3
 
@@ -924,19 +924,19 @@
 
     .line 616
     :cond_b
-    sget p2, Ll/۠۟ܶ;->ܿᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩳܶۙ:I
 
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_c
 
     .line 617
-    sget p2, Ll/۠۟ܶ;->ܿᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩳܶۙ:I
 
     .line 618
-    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/֫ᩳ;I)Landroid/content/res/ColorStateList;
+    invoke-static {v8, v0, p2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Ll/ۙ᩹;I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
@@ -945,18 +945,18 @@
 
     .line 622
     :cond_c
-    sget p2, Ll/۠۟ܶ;->ܿᩴۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩳ᩹ۙ:I
 
-    invoke-virtual {v0, p2, p1}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p2, p1}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p2
 
     if-eq p2, p1, :cond_d
 
     .line 624
-    sget p2, Ll/۠۟ܶ;->ܿᩴۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ᩳ᩹ۙ:I
 
-    invoke-virtual {v0, p2, v7}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p2, v7}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p2
 
@@ -964,134 +964,134 @@
 
     .line 627
     :cond_d
-    sget p2, Ll/۠۟ܶ;->ܰᩴۙ:I
+    sget p2, Ll/ܰ۬ܺ;->᩷᩹ۙ:I
 
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->cursorColor:Landroid/content/res/ColorStateList;
 
     .line 628
-    sget p2, Ll/۠۟ܶ;->ۨᩴۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۤ᩹ۙ:I
 
-    invoke-virtual {v0, p2}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p2}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->cursorErrorColor:Landroid/content/res/ColorStateList;
 
     .line 630
-    sget p2, Ll/۠۟ܶ;->ۡᩴۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ۨ᩹ۙ:I
 
     .line 631
-    invoke-virtual {v0, p2, v7}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p2, v7}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p2
 
     .line 632
-    sget p3, Ll/۠۟ܶ;->᩸ᩴۙ:I
+    sget p3, Ll/ܰ۬ܺ;->ܽ᩹ۙ:I
 
     .line 633
-    invoke-virtual {v0, p3}, Ll/֫ᩳ;->֨(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p3}, Ll/ۙ᩹;->۫(I)Ljava/lang/CharSequence;
 
     move-result-object p3
 
     .line 634
-    sget v2, Ll/۠۟ܶ;->ܶᩴۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ܺ᩹ۙ:I
 
     .line 635
-    invoke-virtual {v0, v2, v9}, Ll/֫ᩳ;->ۨ(II)I
+    invoke-virtual {v0, v2, v9}, Ll/ۙ᩹;->ۤ(II)I
 
     move-result v2
 
     .line 638
-    sget v3, Ll/۠۟ܶ;->ᩳᩴۙ:I
+    sget v3, Ll/ܰ۬ܺ;->ܶ᩹ۙ:I
 
-    invoke-virtual {v0, v3, v7}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v3, v7}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v3
 
     .line 640
-    sget v4, Ll/۠۟ܶ;->᩶ᩴۙ:I
+    sget v4, Ll/ܰ۬ܺ;->᩶᩹ۙ:I
 
     .line 641
-    invoke-virtual {v0, v4, v7}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, v4, v7}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result v4
 
     .line 642
-    sget v5, Ll/۠۟ܶ;->ܺᩴۙ:I
+    sget v5, Ll/ܰ۬ܺ;->ܰ᩹ۙ:I
 
     .line 643
-    invoke-virtual {v0, v5, v7}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v5, v7}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v5
 
     .line 644
-    sget v6, Ll/۠۟ܶ;->᩷ᩴۙ:I
+    sget v6, Ll/ܰ۬ܺ;->ۘ᩹ۙ:I
 
-    invoke-virtual {v0, v6}, Ll/֫ᩳ;->֨(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v6}, Ll/ۙ᩹;->۫(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     .line 646
-    sget v8, Ll/۠۟ܶ;->ۙ۠ۙ:I
+    sget v8, Ll/ܰ۬ܺ;->ۙۗۙ:I
 
     .line 647
-    invoke-virtual {v0, v8, v7}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, v8, v7}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result v8
 
     .line 648
-    sget v9, Ll/۠۟ܶ;->ۗᩴۙ:I
+    sget v9, Ll/ܰ۬ܺ;->۬᩹ۙ:I
 
-    invoke-virtual {v0, v9}, Ll/֫ᩳ;->֨(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9}, Ll/ۙ᩹;->۫(I)Ljava/lang/CharSequence;
 
     move-result-object v9
 
     .line 650
-    sget v11, Ll/۠۟ܶ;->᩻ᩳۙ:I
+    sget v11, Ll/ܰ۬ܺ;->ۡܶۙ:I
 
-    invoke-virtual {v0, v11, v7}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, v11, v7}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result v7
 
     .line 651
-    sget v11, Ll/۠۟ܶ;->ܳᩳۙ:I
+    sget v11, Ll/ܰ۬ܺ;->ۖܶۙ:I
 
-    invoke-virtual {v0, v11, p1}, Ll/֫ᩳ;->ۨ(II)I
+    invoke-virtual {v0, v11, p1}, Ll/ۙ᩹;->ۤ(II)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setCounterMaxLength(I)V
 
     .line 652
-    sget p1, Ll/۠۟ܶ;->ۗᩳۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۬ܶۙ:I
 
     const/4 v11, 0x0
 
-    invoke-virtual {v0, p1, v11}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v11}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/textfield/TextInputLayout;->counterTextAppearance:I
 
     .line 653
-    sget p1, Ll/۠۟ܶ;->֫ᩳۙ:I
+    sget p1, Ll/ܰ۬ܺ;->۠ܶۙ:I
 
     .line 654
-    invoke-virtual {v0, p1, v11}, Ll/֫ᩳ;->᩹(II)I
+    invoke-virtual {v0, p1, v11}, Ll/ۙ᩹;->ܳ(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/textfield/TextInputLayout;->counterOverflowTextAppearance:I
 
     .line 656
-    sget p1, Ll/۠۟ܶ;->۟ᩳۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩺ܶۙ:I
 
     .line 657
-    invoke-virtual {v0, p1, v11}, Ll/֫ᩳ;->ۨ(II)I
+    invoke-virtual {v0, p1, v11}, Ll/ۙ᩹;->ۤ(II)I
 
     move-result p1
 
@@ -1127,18 +1127,18 @@
     invoke-virtual {p0, v8}, Lcom/google/android/material/textfield/TextInputLayout;->setPlaceholderTextAppearance(I)V
 
     .line 669
-    sget p1, Ll/۠۟ܶ;->ۤᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۛ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_e
 
     .line 670
-    sget p1, Ll/۠۟ܶ;->ۤᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۛ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1146,18 +1146,18 @@
 
     .line 672
     :cond_e
-    sget p1, Ll/۠۟ܶ;->֡ᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ܿ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_f
 
     .line 673
-    sget p1, Ll/۠۟ܶ;->֡ᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ܿ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1165,18 +1165,18 @@
 
     .line 675
     :cond_f
-    sget p1, Ll/۠۟ܶ;->ۛᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۢ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_10
 
     .line 676
-    sget p1, Ll/۠۟ܶ;->ۛᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۢ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1184,18 +1184,18 @@
 
     .line 678
     :cond_10
-    sget p1, Ll/۠۟ܶ;->ۙᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۙ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_11
 
     .line 679
-    sget p1, Ll/۠۟ܶ;->ۙᩴۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۙ᩹ۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1203,19 +1203,19 @@
 
     .line 681
     :cond_11
-    sget p1, Ll/۠۟ܶ;->ۢᩳۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۜܶۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_12
 
     .line 682
-    sget p1, Ll/۠۟ܶ;->ۢᩳۙ:I
+    sget p1, Ll/ܰ۬ܺ;->ۜܶۙ:I
 
     .line 683
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1224,19 +1224,19 @@
 
     .line 685
     :cond_12
-    sget p1, Ll/۠۟ܶ;->ܰ۠ۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩷ۗۙ:I
 
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_13
 
     .line 686
-    sget p1, Ll/۠۟ܶ;->ܰ۠ۙ:I
+    sget p1, Ll/ܰ۬ܺ;->᩷ۗۙ:I
 
     .line 687
-    invoke-virtual {v0, p1}, Ll/֫ᩳ;->ܰ(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Ll/ۙ᩹;->᩷(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1247,24 +1247,24 @@
     :cond_13
     new-instance p1, Lcom/google/android/material/textfield/EndCompoundLayout;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/material/textfield/EndCompoundLayout;-><init>(Lcom/google/android/material/textfield/TextInputLayout;Ll/֫ᩳ;)V
+    invoke-direct {p1, p0, v0}, Lcom/google/android/material/textfield/EndCompoundLayout;-><init>(Lcom/google/android/material/textfield/TextInputLayout;Ll/ۙ᩹;)V
 
     iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout;->endLayout:Lcom/google/android/material/textfield/EndCompoundLayout;
 
     .line 692
-    sget p2, Ll/۠۟ܶ;->ܶᩳۙ:I
+    sget p2, Ll/ܰ۬ܺ;->ܺܶۙ:I
 
     const/4 p3, 0x1
 
-    invoke-virtual {v0, p2, p3}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {v0, p2, p3}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result p2
 
     .line 694
-    invoke-virtual {v0}, Ll/֫ᩳ;->ۚ()V
+    invoke-virtual {v0}, Ll/ۙ᩹;->ᩴ()V
 
     .line 698
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     const/4 v0, 0x2
 
@@ -1279,7 +1279,7 @@
     if-lt v0, v2, :cond_14
 
     .line 703
-    invoke-static {p0, p3}, Ll/ۚ֫;->ۙ(Landroid/view/ViewGroup;I)V
+    invoke-static {p0, p3}, Ll/᩸۠;->ۙ(Landroid/view/ViewGroup;I)V
 
     .line 706
     :cond_14
@@ -1419,7 +1419,7 @@
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;
 
     .line 1034
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
@@ -1431,7 +1431,7 @@
 
     move-result-object v2
 
-    sget v3, Ll/֨۟ܶ;->ܿ۠:I
+    sget v3, Ll/ܽ۬ܺ;->ᩳۗ:I
 
     .line 1036
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1450,7 +1450,7 @@
 
     move-result-object v4
 
-    sget v5, Ll/֨۟ܶ;->۫۠:I
+    sget v5, Ll/ܽ۬ܺ;->۟ۗ:I
 
     .line 1039
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1478,7 +1478,7 @@
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;
 
     .line 1043
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
@@ -1490,7 +1490,7 @@
 
     move-result-object v2
 
-    sget v3, Ll/֨۟ܶ;->ܽ۠:I
+    sget v3, Ll/ܽ۬ܺ;->֡ۗ:I
 
     .line 1045
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1509,7 +1509,7 @@
 
     move-result-object v4
 
-    sget v5, Ll/֨۟ܶ;->֡۠:I
+    sget v5, Ll/ܽ۬ܺ;->ܿۗ:I
 
     .line 1048
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1767,7 +1767,7 @@
     const-string v3, " is illegal; only @BoxBackgroundMode constants are supported."
 
     .line 0
-    invoke-static {v2, v3, v1}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v3, v1}, Ll/ۨ᩹ۧ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1829,7 +1829,7 @@
     if-ne v1, v2, :cond_0
 
     .line 3005
-    sget v0, Ll/ۖ۟ܶ;->ۛ֨:I
+    sget v0, Ll/ۧ۬ܺ;->ۢ۫:I
 
     const/4 v1, 0x0
 
@@ -2329,21 +2329,21 @@
     return-void
 .end method
 
-.method private createPlaceholderFadeTransition()Ll/ۘ᩻ܰ;
+.method private createPlaceholderFadeTransition()Ll/ۖ֨᩷;
     .locals 4
 
     .line 2508
-    new-instance v0, Ll/ۘ᩻ܰ;
+    new-instance v0, Ll/ۖ֨᩷;
 
     .line 97
-    invoke-direct {v0}, Ll/ۙ֫ܰ;-><init>()V
+    invoke-direct {v0}, Ll/᩶ۖ᩷;-><init>()V
 
     .line 2509
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Ll/ۖ۟ܶ;->᩷ܺ:I
+    sget v2, Ll/ۧ۬ܺ;->ۘܰ:I
 
     const/16 v3, 0x57
 
@@ -2353,14 +2353,14 @@
 
     int-to-long v1, v1
 
-    invoke-virtual {v0, v1, v2}, Ll/ۨܳܰ;->setDuration(J)Ll/ۨܳܰ;
+    invoke-virtual {v0, v1, v2}, Ll/֡ۡ᩷;->setDuration(J)Ll/֡ۡ᩷;
 
     .line 2511
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Ll/ۖ۟ܶ;->ܳܺ:I
+    sget v2, Ll/ۧ۬ܺ;->ۖܰ:I
 
     sget-object v3, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -2368,7 +2368,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ll/ۨܳܰ;->setInterpolator(Landroid/animation/TimeInterpolator;)Ll/ۨܳܰ;
+    invoke-virtual {v0, v1}, Ll/֡ۡ᩷;->setInterpolator(Landroid/animation/TimeInterpolator;)Ll/֡ۡ᩷;
 
     return-object v0
 .end method
@@ -2624,7 +2624,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/֨۟ܶ;->ܿ᩷:I
+    sget v1, Ll/ܽ۬ܺ;->ᩳۘ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2664,7 +2664,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->ۛۘ:I
+    sget v2, Ll/ܽ۬ܺ;->ۢ֫:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2678,7 +2678,7 @@
 
     move-result-object v2
 
-    sget v3, Ll/֨۟ܶ;->֫ۤ:I
+    sget v3, Ll/ܽ۬ܺ;->۠ۛ:I
 
     .line 989
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -2779,7 +2779,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;
 
-    sget v1, Ll/ۖ۟ܶ;->ܺ᩹:I
+    sget v1, Ll/ۧ۬ܺ;->ܰܳ:I
 
     invoke-static {v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
@@ -3055,7 +3055,7 @@
     .locals 4
 
     .line 896
-    sget v0, Ll/ۖ۟ܶ;->ۛ֨:I
+    sget v0, Ll/ۧ۬ܺ;->ۢ۫:I
 
     const-string v1, "TextInputLayout"
 
@@ -3165,9 +3165,9 @@
     .line 2544
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->inputFrame:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeOut:Ll/ۘ᩻ܰ;
+    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeOut:Ll/ۖ֨᩷;
 
-    invoke-static {v0, v1}, Ll/֨ܳܰ;->ۙ(Landroid/view/ViewGroup;Ll/ۨܳܰ;)V
+    invoke-static {v0, v1}, Ll/֨ۡ᩷;->ۙ(Landroid/view/ViewGroup;Ll/֡ۡ᩷;)V
 
     .line 2545
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextView:Landroid/widget/TextView;
@@ -3671,7 +3671,7 @@
     invoke-virtual {v3, v2}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpandedTextGravity(I)V
 
     .line 1567
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 2393
     invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
@@ -4021,9 +4021,9 @@
     .line 2532
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->inputFrame:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeIn:Ll/ۘ᩻ܰ;
+    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeIn:Ll/ۖ֨᩷;
 
-    invoke-static {v0, v1}, Ll/֨ܳܰ;->ۙ(Landroid/view/ViewGroup;Ll/ۨܳܰ;)V
+    invoke-static {v0, v1}, Ll/֨ۡ᩷;->ۙ(Landroid/view/ViewGroup;Ll/֡ۡ᩷;)V
 
     .line 2533
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextView:Landroid/widget/TextView;
@@ -4072,7 +4072,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/֨۟ܶ;->ۧ۠:I
+    sget v1, Ll/ܽ۬ܺ;->֨ۗ:I
 
     .line 1017
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4100,7 +4100,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/֨۟ܶ;->ۛ۠:I
+    sget v1, Ll/ܽ۬ܺ;->ۢۗ:I
 
     .line 1021
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4194,13 +4194,13 @@
     if-eqz p4, :cond_0
 
     .line 2438
-    sget p4, Ll/ᩳ۟ܶ;->ۘۙ:I
+    sget p4, Ll/᩺۬ܺ;->֫ۙ:I
 
     goto :goto_0
 
     .line 2439
     :cond_0
-    sget p4, Ll/ᩳ۟ܶ;->۬ۙ:I
+    sget p4, Ll/᩺۬ܺ;->ۚۙ:I
 
     .line 2440
     :goto_0
@@ -4309,7 +4309,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/ۖ۟ܶ;->᩷᩹:I
+    sget v1, Ll/ۧ۬ܺ;->ۘܳ:I
 
     invoke-static {v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColorStateListOrNull(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
@@ -4337,7 +4337,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ll/۟ܿ;->᩹(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Ll/֡ᩳ;->ܳ(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -4360,7 +4360,7 @@
 
     .line 4481
     :cond_2
-    invoke-static {v1, v0}, Ll/۟ܿ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v1, v0}, Ll/֡ᩳ;->ۙ(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_3
     :goto_1
@@ -4378,7 +4378,7 @@
     .line 871
     iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;
 
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 3370
     invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -4979,7 +4979,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget v2, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sget-object v3, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -4998,7 +4998,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/ۖ۟ܶ;->ۤܺ:I
+    sget v2, Ll/ۧ۬ܺ;->ۛܰ:I
 
     const/16 v3, 0xa7
 
@@ -5327,7 +5327,7 @@
     if-eqz v2, :cond_3
 
     .line 4359
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
@@ -6484,11 +6484,11 @@
     :goto_0
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;
 
-    new-instance v1, Ll/۟᩻ۖ;
+    new-instance v1, Ll/ۜۙ᩻;
 
-    const/4 v2, 0x4
+    const/4 v2, 0x7
 
-    invoke-direct {v1, v2, p0}, Ll/۟᩻ۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ll/ۜۙ᩻;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -6648,7 +6648,7 @@
     check-cast p1, Lcom/google/android/material/textfield/TextInputLayout$SavedState;
 
     .line 3167
-    invoke-virtual {p1}, Ll/ۗۙۙ;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Ll/ۜۙۙ;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -6990,7 +6990,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {v0, p1}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -7567,18 +7567,18 @@
     if-eqz p1, :cond_1
 
     .line 2261
-    new-instance v1, Ll/᩹ܶ;
+    new-instance v1, Ll/ۚܺ;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Ll/᩹ܶ;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Ll/ۚܺ;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->counterView:Landroid/widget/TextView;
 
     .line 2262
-    sget v2, Ll/ۘ۟ܶ;->֡ۜ:I
+    sget v2, Ll/᩹۬ܺ;->ܿۧ:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -7622,7 +7622,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->ܺܺ:I
+    sget v2, Ll/ܽ۬ܺ;->ܰܰ:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -8739,25 +8739,25 @@
     if-nez v0, :cond_0
 
     .line 2454
-    new-instance v0, Ll/᩹ܶ;
+    new-instance v0, Ll/ۚܺ;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ll/᩹ܶ;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ll/ۚܺ;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextView:Landroid/widget/TextView;
 
     .line 2455
-    sget v1, Ll/ۘ۟ܶ;->ܿۜ:I
+    sget v1, Ll/᩹۬ܺ;->ᩳۧ:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
     .line 2456
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextView:Landroid/widget/TextView;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     const/4 v1, 0x2
 
@@ -8765,23 +8765,23 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     .line 2459
-    invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputLayout;->createPlaceholderFadeTransition()Ll/ۘ᩻ܰ;
+    invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputLayout;->createPlaceholderFadeTransition()Ll/ۖ֨᩷;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeIn:Ll/ۘ᩻ܰ;
+    iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeIn:Ll/ۖ֨᩷;
 
     const-wide/16 v1, 0x43
 
     .line 2460
-    invoke-virtual {v0, v1, v2}, Ll/ۨܳܰ;->setStartDelay(J)Ll/ۨܳܰ;
+    invoke-virtual {v0, v1, v2}, Ll/֡ۡ᩷;->setStartDelay(J)Ll/֡ۡ᩷;
 
     .line 2461
-    invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputLayout;->createPlaceholderFadeTransition()Ll/ۘ᩻ܰ;
+    invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputLayout;->createPlaceholderFadeTransition()Ll/ۖ֨᩷;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeOut:Ll/ۘ᩻ܰ;
+    iput-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderFadeOut:Ll/ۖ֨᩷;
 
     .line 2463
     iget v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextAppearance:I
@@ -8842,7 +8842,7 @@
     if-eqz v0, :cond_0
 
     .line 2595
-    invoke-static {v0, p1}, Ll/ܽۙۙ;->ۖ(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Ll/ܿۙۙ;->ᩴ(Landroid/widget/TextView;I)V
 
     :cond_0
     return-void
@@ -8987,7 +8987,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Ll/ܺ۫᩺;->ۙ(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Ll/֡ۧۤ;->ۙ(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -9128,7 +9128,7 @@
 
     .line 2868
     :try_start_0
-    invoke-static {p1, p2}, Ll/ܽۙۙ;->ۖ(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Ll/ܿۙۙ;->ᩴ(Landroid/widget/TextView;I)V
 
     .line 2870
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -9160,18 +9160,18 @@
     .line 2885
     :catch_0
     :goto_0
-    sget p2, Ll/ᩴ۟ܶ;->ۗ᩺:I
+    sget p2, Ll/ۘ۬ܺ;->۬᩻:I
 
-    invoke-static {p1, p2}, Ll/ܽۙۙ;->ۖ(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Ll/ܿۙۙ;->ᩴ(Landroid/widget/TextView;I)V
 
     .line 2886
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    sget v0, Ll/᩹۟ܶ;->۬ܰ:I
+    sget v0, Ll/ܺ۬ܺ;->ۚ᩷:I
 
-    invoke-static {p2, v0}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {p2, v0}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p2
 
@@ -9189,7 +9189,7 @@
     if-eqz v0, :cond_0
 
     .line 4079
-    invoke-static {v0, p1}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {v0, p1}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     :cond_0
     return-void
@@ -9324,14 +9324,14 @@
 
     .line 2416
     :cond_2
-    sget v1, Ll/ᩳۧ;->ۖ:I
+    sget v1, Ll/ۛ֨;->᩸:I
 
     .line 236
-    new-instance v1, Ll/ܶۧ;
+    new-instance v1, Ll/᩵֨;
 
-    invoke-direct {v1}, Ll/ܶۧ;-><init>()V
+    invoke-direct {v1}, Ll/᩵֨;-><init>()V
 
-    invoke-virtual {v1}, Ll/ܶۧ;->ۙ()Ll/ᩳۧ;
+    invoke-virtual {v1}, Ll/᩵֨;->ۙ()Ll/ۛ֨;
 
     move-result-object v1
 
@@ -9343,7 +9343,7 @@
 
     move-result-object v5
 
-    sget v6, Ll/ᩳ۟ܶ;->ۜۙ:I
+    sget v6, Ll/᩺۬ܺ;->ۧۙ:I
 
     .line 2420
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -9369,7 +9369,7 @@
     move-result-object p1
 
     .line 2418
-    invoke-virtual {v1, p1}, Ll/ᩳۧ;->ۙ(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ll/ۛ֨;->ۙ(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -9744,7 +9744,7 @@
 
     .line 3069
     :cond_1
-    sget-object v1, Ll/᩷ܶ;->ۨ:Landroid/graphics/Rect;
+    sget-object v1, Ll/᩶ܺ;->ۤ:Landroid/graphics/Rect;
 
     .line 3070
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -9766,7 +9766,7 @@
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     .line 3076
-    invoke-static {v1, v2}, Ll/᩻ۜ;->ۙ(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {v1, v2}, Ll/۠ۧ;->ۙ(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
@@ -9793,7 +9793,7 @@
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     .line 3081
-    invoke-static {v1, v2}, Ll/᩻ۜ;->ۙ(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {v1, v2}, Ll/۠ۧ;->ۙ(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
@@ -9804,7 +9804,7 @@
 
     .line 3086
     :cond_3
-    invoke-static {v0}, Ll/۟ܿ;->ܰ(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Ll/֡ᩳ;->᩷(Landroid/graphics/drawable/Drawable;)V
 
     .line 3087
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->editText:Landroid/widget/EditText;

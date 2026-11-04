@@ -1,61 +1,52 @@
 package l;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.content.ContextWrapper;
 
-/* JADX INFO: renamed from: l.ۢۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 43T5 */
+/* JADX INFO: renamed from: l.ۡۢۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 68UW */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9286 implements InterfaceC14225 {
+public final class C9286 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C8541 f30187;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final ContextWrapper f30188;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f30189;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C21221 f30191;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f31544;
+    public C14770 f30186 = C14770.f48339;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C6938 f31545;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C12754 f30192 = InterfaceC10032.f32162;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Drawable f31546;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C5297 f30190 = InterfaceC1084.f3878;
 
-    @Override // l.InterfaceC14225
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo8984() {
-        return true;
+    public C9286(ContextWrapper contextWrapper) {
+        this.f30188 = contextWrapper;
     }
 
-    public C9286(C6938 c6938) {
-        this.f31545 = c6938;
-        this.f31546 = c6938.getNavigationIcon();
-        this.f31544 = c6938.getNavigationContentDescription();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24498(InterfaceC22274[] interfaceC22274Arr) {
+        this.f30187 = new C8541(interfaceC22274Arr);
     }
 
-    @Override // l.InterfaceC14225
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo8982(Drawable drawable, int i) {
-        this.f31545.setNavigationIcon(drawable);
-        mo8981(i);
-    }
-
-    @Override // l.InterfaceC14225
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo8981(int i) {
-        C6938 c6938 = this.f31545;
-        if (i == 0) {
-            c6938.setNavigationContentDescription(this.f31544);
-        } else {
-            c6938.setNavigationContentDescription(i);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C14991 m24497() {
+        C20782.m47568(!this.f30189);
+        this.f30189 = true;
+        if (this.f30187 == null) {
+            this.f30187 = new C8541(new InterfaceC22274[0]);
         }
-    }
-
-    @Override // l.InterfaceC14225
-    /* JADX INFO: renamed from: ۨ */
-    public final Drawable mo8983() {
-        return this.f31546;
-    }
-
-    @Override // l.InterfaceC14225
-    /* JADX INFO: renamed from: ۙ */
-    public final Context mo8980() {
-        return this.f31545.getContext();
+        if (this.f30191 == null) {
+            this.f30191 = new C21221(this.f30188);
+        }
+        return new C14991(this);
     }
 }

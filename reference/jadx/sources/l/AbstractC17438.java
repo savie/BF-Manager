@@ -1,52 +1,101 @@
 package l;
 
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.Paint;
+import java.util.Collection;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ܿܶ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: H4IH */
-/* JADX INFO: loaded from: classes5.dex */
-public abstract class AbstractC17438 extends AbstractC16733 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public Paint f55538;
-
-    @Override // android.graphics.drawable.Drawable
-    public final /* bridge */ /* synthetic */ int getOpacity() {
-        return -3;
+/* JADX INFO: renamed from: l.ܽ۟᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9A4 */
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class AbstractC17438 implements Collection {
+    @Override // java.util.Collection
+    public final boolean add(Object obj) {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    /* JADX INFO: renamed from: ۙ */
-    public abstract void mo27979(Canvas canvas, Paint paint, int i, int i2);
+    @Override // java.util.Collection
+    public final boolean addAll(Collection collection) {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
 
-    @Override // l.AbstractC16733
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo39248(Canvas canvas, int i, int i2) {
-        if (this.f55538 == null) {
-            Paint paint = new Paint();
-            this.f55538 = paint;
-            paint.setAntiAlias(true);
-            this.f55538.setColor(-16777216);
-            this.f55538.setStyle(Paint.Style.FILL);
+    @Override // java.util.Collection
+    public final void clear() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    @Override // java.util.Collection
+    public final boolean remove(Object obj) {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    @Override // java.util.Collection
+    public final boolean removeAll(Collection collection) {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    @Override // java.util.Collection
+    public final boolean retainAll(Collection collection) {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    /* JADX INFO: renamed from: ᩷ */
+    public abstract int mo4094();
+
+    @Override // java.util.Collection
+    public final boolean containsAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        if (collection.isEmpty()) {
+            return true;
         }
-        this.f55538.setAlpha(this.f53591);
-        Paint paint2 = this.f55538;
-        ColorFilter colorFilter = this.f53594;
-        if (colorFilter == null) {
-            colorFilter = this.f53592;
+        Iterator it = collection.iterator();
+        while (it.hasNext()) {
+            if (!contains(it.next())) {
+                return false;
+            }
         }
-        paint2.setColorFilter(colorFilter);
-        mo27979(canvas, this.f55538, i, i2);
+        return true;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final int getAlpha() {
-        return this.f53591;
+    @Override // java.util.Collection
+    public final boolean isEmpty() {
+        return mo4094() == 0;
     }
 
-    @Override // android.graphics.drawable.Drawable
-    public final ColorFilter getColorFilter() {
-        return this.f53594;
+    @Override // java.util.Collection
+    public final /* bridge */ int size() {
+        return mo4094();
+    }
+
+    public final String toString() {
+        return C7743.m21086(this, ", ", "[", "]", new InterfaceC3071() { // from class: l.ܺ۟᩵
+            @Override // l.InterfaceC3071
+            public final Object invoke(Object obj) {
+                return obj == this.f53933 ? "(this Collection)" : String.valueOf(obj);
+            }
+        }, 24);
+    }
+
+    @Override // java.util.Collection
+    public final Object[] toArray() {
+        return C4803.m14827(this);
+    }
+
+    @Override // java.util.Collection
+    public final Object[] toArray(Object[] objArr) {
+        C15243.m36590(objArr, "array");
+        return C4803.m14828(this, objArr);
+    }
+
+    @Override // java.util.Collection, java.util.List
+    public boolean contains(Object obj) {
+        if (isEmpty()) {
+            return false;
+        }
+        Iterator<E> it = iterator();
+        while (it.hasNext()) {
+            if (C15243.m36589(it.next(), obj)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

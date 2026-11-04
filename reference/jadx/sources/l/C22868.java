@@ -1,30 +1,66 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺۠ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
-/* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22868 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+import java.io.Writer;
+
+/* JADX INFO: renamed from: l.᩸ܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q4IO */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C22868 extends AbstractC9204 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C24975 f74326;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f74327;
+
+    public C22868(C24975 c24975, int i) {
+        this.f74326 = c24975;
+        this.f74327 = i;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    @Override // l.InterfaceC8304
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo4500() {
+        C24975 c24975 = this.f74326;
+        return c24975.m55822(c24975.m55818().m8721(c24975.m55814(this.f74327)));
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return C4312.m12113(i) == 15;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m51588(Writer writer) {
+        C24975 c24975 = this.f74326;
+        c24975.m55787(writer, c24975.m55818().m8721(c24975.m55814(this.f74327)));
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    @Override // l.InterfaceC8304
+    public final String getName() {
+        C24975 c24975 = this.f74326;
+        return c24975.m55782(c24975.m55818().mo8719(c24975.m55814(this.f74327) + 4));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m51590(Writer writer) {
+        C24975 c24975 = this.f74326;
+        c24975.m55816(c24975.m55818().mo8719(c24975.m55814(this.f74327) + 4), writer, false);
+    }
+
+    @Override // l.InterfaceC8304
+    public final String getType() {
+        C24975 c24975 = this.f74326;
+        return c24975.m55822(c24975.m55818().m8721(c24975.m55814(this.f74327) + 2));
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m51589(Writer writer) {
+        C24975 c24975 = this.f74326;
+        c24975.m55787(writer, c24975.m55818().m8721(c24975.m55814(this.f74327) + 2));
+    }
+
+    @Override // l.AbstractC13679, l.InterfaceC10824
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo6806() throws C22013 {
+        int i = this.f74327;
+        if (i < 0 || i >= this.f74326.m55802()) {
+            throw new C22013("field@" + i);
+        }
     }
 }

@@ -3046,19 +3046,19 @@
     const/4 v1, 0x2
 
     .line 0
-    invoke-static {p0, v0, v1, v0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v0, v1, v0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v0
 
-    invoke-static {p0, v0, v1, v0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v0, v1, v0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v0
 
-    invoke-static {p0, v0, v1, v0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v0, v1, v0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result v0
 
-    invoke-static {p0, v0, v1, v0}, Ll/ܺ᩹᩺;->ۙ(IIII)I
+    invoke-static {p0, v0, v1, v0}, Ll/᩻ۢ᩹;->ۙ(IIII)I
 
     move-result p0
 
@@ -8166,7 +8166,7 @@
 
     move-wide/from16 v9, v18
 
-    invoke-static/range {v5 .. v12}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v5 .. v12}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v5
 
@@ -8180,7 +8180,7 @@
 
     move-wide/from16 v12, v18
 
-    invoke-static/range {v8 .. v15}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v8 .. v15}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v8
 
@@ -8279,7 +8279,7 @@
 
     long-to-int v13, v4
 
-    invoke-static {v12, v13, v11, v1}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
+    invoke-static {v12, v13, v11, v1}, Ll/ܿ۟ۧ;->ۙ(IIII)I
 
     move-result v11
 
@@ -8293,7 +8293,7 @@
 
     long-to-int v14, v8
 
-    invoke-static {v12, v14, v10, v1}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
+    invoke-static {v12, v14, v10, v1}, Ll/ܿ۟ۧ;->ۙ(IIII)I
 
     move-result v1
 
@@ -8356,7 +8356,7 @@
 
     move-wide/from16 v18, v2
 
-    invoke-static/range {v12 .. v19}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v12 .. v19}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v2
 
@@ -8380,7 +8380,7 @@
 
     move-wide/from16 v22, v27
 
-    invoke-static/range {v16 .. v23}, Ll/۟ۜ᩵;->ۙ(JJJJ)J
+    invoke-static/range {v16 .. v23}, Ll/ۧ᩺᩻;->ۙ(JJJJ)J
 
     move-result-wide v0
 

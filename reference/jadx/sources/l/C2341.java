@@ -1,27 +1,26 @@
 package l;
 
-import java.util.HashSet;
-import java.util.function.Function;
+import java.io.IOException;
+import java.net.Proxy;
+import java.net.ProxySelector;
+import java.net.SocketAddress;
+import java.net.URI;
+import java.util.Collections;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۖۛۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W7SR */
+/* JADX INFO: renamed from: l.ۖ֫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H4DX */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C2341 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C2341 extends ProxySelector {
+    @Override // java.net.ProxySelector
+    public final void connectFailed(URI uri, SocketAddress socketAddress, IOException iOException) {
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        C0930 c0930 = new C0930((C18570) obj);
-        c0930.f3728 = new HashSet();
-        return c0930;
+    @Override // java.net.ProxySelector
+    public final List select(URI uri) {
+        if (uri == null) {
+            throw new IllegalArgumentException("uri must not be null");
+        }
+        return Collections.singletonList(Proxy.NO_PROXY);
     }
 }

@@ -1,13 +1,13 @@
 package com.umeng.analytics.pro;
 
 import android.content.Context;
-import l.C9876;
+import l.C2065;
 
 /* JADX INFO: compiled from: TBKN */
 /* JADX INFO: loaded from: classes.dex */
 public class ae implements z {
     public static final int a = 1;
-    public C9876 b;
+    public C2065 b;
     public boolean c = false;
     public boolean d = false;
 
@@ -17,14 +17,14 @@ public class ae implements z {
             return null;
         }
         if (!this.c) {
-            C9876 c9876 = new C9876();
-            this.b = c9876;
-            this.d = c9876.m24968(context) == 1;
+            C2065 c2065 = new C2065();
+            this.b = c2065;
+            this.d = c2065.m7136(context) == 1;
             this.c = true;
         }
         al.a("getOAID", "isSupported", Boolean.valueOf(this.d));
-        if (this.d && this.b.m24970()) {
-            return this.b.m24969();
+        if (this.d && this.b.m7138()) {
+            return this.b.m7137();
         }
         return null;
     }

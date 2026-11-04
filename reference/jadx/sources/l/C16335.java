@@ -1,49 +1,39 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+/* JADX INFO: renamed from: l.ܶ᩶ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D14B */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16335 {
 
-/* JADX INFO: renamed from: l.ܽ֫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: OCI7 */
-/* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C16335 implements InterfaceC0106 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC2386 f53053;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Consumer f52623;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f53054;
 
-    @Override // java.util.function.IntConsumer
-    public final /* synthetic */ void accept(int i) {
-        C19863.m45116(this, i);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C11983 f53055;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C20613 f53056;
+
+    public C16335(C20613 c20613, C11983 c11983) {
+        this(null, c20613, c11983, 0);
     }
 
-    @Override // java.util.function.Consumer
-    public final /* bridge */ /* synthetic */ void accept(Object obj) {
-        mo1139((Byte) obj);
+    public C16335(C6004 c6004, C20613 c20613, C11983 c11983, int i) {
+        this.f53053 = c6004;
+        this.f53056 = c20613;
+        this.f53055 = c11983;
+        this.f53054 = i;
     }
 
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1138(byte b) {
-        this.f52623.accept(Byte.valueOf(b));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m38828() {
+        return (this.f53053 == null || this.f53054 == 0) ? false : true;
     }
 
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo1139(Byte b) {
-        C19863.m45117((InterfaceC0106) this, b);
-    }
-
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C19863.m45115((InterfaceC0106) this, intConsumer);
-    }
-
-    @Override // l.InterfaceC0106
-    /* JADX INFO: renamed from: ۙ */
-    public final C15630 mo1137(InterfaceC0106 interfaceC0106) {
-        return new C15630(this, interfaceC0106);
-    }
-
-    public final Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    public C16335(C6004 c6004, C20613 c20613, int i) {
+        this(c6004, c20613, c20613.f66114, i);
     }
 }

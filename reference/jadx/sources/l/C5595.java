@@ -1,16 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ᩷ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O99Y */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5595 extends RuntimeException {
+import com.alipay.sdk.m.p.d;
+import java.security.spec.MGF1ParameterSpec;
+import java.security.spec.PSSParameterSpec;
+import java.util.function.Supplier;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final C5595 f19203 = new C5595("Permission denied");
-
-    @Override // java.lang.Throwable
-    public final synchronized Throwable fillInStackTrace() {
-        setStackTrace(new StackTraceElement[0]);
-        return this;
+/* JADX INFO: renamed from: l.ۚۤ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1VV */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5595 implements Supplier {
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return new C12306(258, XMSSKeyParameters.SHA_512, d.a, "SHA512withRSA/PSS", new PSSParameterSpec(XMSSKeyParameters.SHA_512, "MGF1", MGF1ParameterSpec.SHA512, 64, 1));
     }
 }

@@ -1,28 +1,18 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ܿۨۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L19N */
+/* JADX INFO: renamed from: l.ܽۘۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W72A */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C17317 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
+public final class C17317 {
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f56404;
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f56405;
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        return C12379.m30796(((C12107) obj).m30135());
+    public C17317(long j, long j2) {
+        this.f56405 = j;
+        this.f56404 = j2;
     }
 }

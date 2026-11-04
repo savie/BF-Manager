@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
-import l.C12441;
+import l.C12669;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -12,7 +12,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.TweakableBlockCipherParameters;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ThreefishEngine implements BlockCipher {
     public static final int BLOCKSIZE_1024 = 1024;
     public static final int BLOCKSIZE_256 = 256;
@@ -1228,7 +1228,7 @@ public class ThreefishEngine implements BlockCipher {
 
     private void setKey(long[] jArr) {
         if (jArr.length != this.blocksizeWords) {
-            throw new IllegalArgumentException(C12441.m30911(this.blocksizeWords, " words)", new StringBuilder("Threefish key must be same size as block (")));
+            throw new IllegalArgumentException(C12669.m31437(this.blocksizeWords, " words)", new StringBuilder("Threefish key must be same size as block (")));
         }
         long j = C_240;
         int i = 0;
@@ -1294,7 +1294,7 @@ public class ThreefishEngine implements BlockCipher {
             tweak = tweakableBlockCipherParameters.getTweak();
         } else {
             if (!(cipherParameters instanceof KeyParameter)) {
-                throw new IllegalArgumentException(C0219.m1593("Invalid parameter passed to Threefish init - ", cipherParameters));
+                throw new IllegalArgumentException(C14483.m34973("Invalid parameter passed to Threefish init - ", cipherParameters));
             }
             key = ((KeyParameter) cipherParameters).getKey();
             tweak = null;
@@ -1303,7 +1303,7 @@ public class ThreefishEngine implements BlockCipher {
             jArr = null;
         } else {
             if (key.length != this.blocksizeBytes) {
-                throw new IllegalArgumentException(C12441.m30911(this.blocksizeBytes, " bytes)", new StringBuilder("Threefish key must be same size as block (")));
+                throw new IllegalArgumentException(C12669.m31437(this.blocksizeBytes, " bytes)", new StringBuilder("Threefish key must be same size as block (")));
             }
             jArr = new long[this.blocksizeWords];
             Pack.littleEndianToLong(key, 0, jArr);

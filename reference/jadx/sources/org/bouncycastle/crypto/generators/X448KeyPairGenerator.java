@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.AsymmetricKeyParameter;
 import org.bouncycastle.crypto.params.X448PrivateKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X448KeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public SecureRandom random;
 

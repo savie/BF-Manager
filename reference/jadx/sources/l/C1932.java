@@ -1,31 +1,63 @@
 package l;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import android.app.ActivityManager;
+import android.os.Build;
+import android.os.Process;
+import bin.mt.plus.Features;
+import net.sf.sevenzipjbinding.SevenZip;
+import org.bouncycastle.crypto.digests.Blake2xsDigest;
 
-/* JADX INFO: renamed from: l.֫ܺᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1932 implements Iterator {
-    public int a = 0;
-    public final /* synthetic */ C15174 b;
+/* JADX INFO: renamed from: l.֫۫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: T731 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1932 implements SevenZip.ExtractMemoryUsageProvider {
 
-    public C1932(C15174 c15174) {
-        this.b = c15174;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C1932 f6485 = new C1932();
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.a < this.b.c.size();
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (this.a < this.b.c.size()) {
-            C15174 name = this.b.getName(this.a);
-            this.a++;
-            return name;
+    @Override // net.sf.sevenzipjbinding.SevenZip.ExtractMemoryUsageProvider
+    public final long getExtractMemoryUsage() {
+        boolean zIs64Bit;
+        long j;
+        ActivityManager activityManager = (ActivityManager) C21576.f68934.getSystemService("activity");
+        if (activityManager == null) {
+            return 268435456L;
         }
-        throw new NoSuchElementException();
+        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+        activityManager.getMemoryInfo(memoryInfo);
+        boolean zIsLowRamDevice = activityManager.isLowRamDevice();
+        if (Build.VERSION.SDK_INT >= 23) {
+            zIs64Bit = Process.is64Bit();
+        } else {
+            String abi = Features.getABI();
+            zIs64Bit = "arm64-v8a".equals(abi) || "x86_64".equals(abi);
+        }
+        long j2 = memoryInfo.totalMem;
+        long j3 = memoryInfo.availMem;
+        long j4 = memoryInfo.threshold;
+        boolean z = memoryInfo.lowMemory;
+        long jMax = Math.max(0L, j2);
+        long jMax2 = Math.max(0L, j3);
+        long jMax3 = Math.max(0L, j4);
+        long j5 = zIsLowRamDevice ? 268435456L : 134217728L;
+        long j6 = jMax2 > jMax3 ? jMax2 - jMax3 : 0L;
+        long j7 = j6 > j5 ? j6 - j5 : 0L;
+        long jMin = Math.min(j7, Math.min(jMax / 8, 1073741824L));
+        long j8 = C25227.FOREVER_NS;
+        if (j7 <= C25227.FOREVER_NS - jMin) {
+            j8 = j7 + jMin;
+        }
+        if (zIsLowRamDevice) {
+            j = 536870912;
+        } else if (jMax <= Blake2xsDigest.MAX_NUMBER_BLOCKS) {
+            j = 805306368;
+        } else {
+            j = jMax <= 6442450944L ? 1342177280L : 2415919104L;
+        }
+        long jMin2 = Math.min(j8, Math.min(j, zIs64Bit ? 2415919104L : 805306368L));
+        if (z) {
+            jMin2 = Math.min(jMin2, 268435456L);
+        }
+        return (jMin2 / 1048576) * 1048576;
     }
 }

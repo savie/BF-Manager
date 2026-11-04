@@ -1,106 +1,134 @@
 package l;
 
-import android.content.DialogInterface;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.ۚܽۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28VT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5476 extends AbstractC3492 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C5478 f18848;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public List f18849;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC20293 f18850;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public List f18851;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public ArrayList f18852;
-
-    public C5476(ActivityC20293 activityC20293) {
-        this.f18850 = activityC20293;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        this.f18850.f65761.m16335(true);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        this.f18849 = C23053.m51002();
-        this.f18851 = (List) C9030.stream(C11904.m29695().m46690("keystore").mo33983(true)).filter(new C11827()).sorted(new C8984(1)).collect(C1890.toUnmodifiableList());
-        ActivityC20293 activityC20293 = this.f18850;
-        List list = activityC20293.f65757;
-        ArrayList arrayList = new ArrayList();
-        arrayList.add("h1");
-        if (this.f18849.isEmpty()) {
-            arrayList.add("e1");
-        } else {
-            for (AbstractC17131 abstractC17131 : this.f18849) {
-                if (abstractC17131.mo1453().equals(activityC20293.f65754)) {
-                    arrayList.add("k" + abstractC17131.mo1456() + "/" + System.currentTimeMillis());
-                } else {
-                    arrayList.add("k" + abstractC17131.mo1456());
-                }
+/* JADX INFO: renamed from: l.ۚۜۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9B2 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5476 {
+    /* JADX WARN: Code duplicated, block: B:30:0x0053  */
+    /* JADX WARN: Code duplicated, block: B:32:0x0057 A[Catch: all -> 0x0042, TRY_ENTER, TryCatch #0 {all -> 0x0042, blocks: (B:19:0x003e, B:32:0x0057, B:33:0x006a, B:36:0x0071, B:39:0x0078, B:42:0x0082, B:45:0x0093, B:23:0x0044, B:26:0x004b), top: B:52:0x003e, inners: #1 }] */
+    /* JADX WARN: Code duplicated, block: B:36:0x0071 A[Catch: all -> 0x0042, TryCatch #0 {all -> 0x0042, blocks: (B:19:0x003e, B:32:0x0057, B:33:0x006a, B:36:0x0071, B:39:0x0078, B:42:0x0082, B:45:0x0093, B:23:0x0044, B:26:0x004b), top: B:52:0x003e, inners: #1 }] */
+    /* JADX WARN: Code duplicated, block: B:39:0x0078 A[Catch: all -> 0x0042, TryCatch #0 {all -> 0x0042, blocks: (B:19:0x003e, B:32:0x0057, B:33:0x006a, B:36:0x0071, B:39:0x0078, B:42:0x0082, B:45:0x0093, B:23:0x0044, B:26:0x004b), top: B:52:0x003e, inners: #1 }] */
+    /* JADX WARN: Code duplicated, block: B:42:0x0082 A[Catch: all -> 0x0042, TryCatch #0 {all -> 0x0042, blocks: (B:19:0x003e, B:32:0x0057, B:33:0x006a, B:36:0x0071, B:39:0x0078, B:42:0x0082, B:45:0x0093, B:23:0x0044, B:26:0x004b), top: B:52:0x003e, inners: #1 }] */
+    /* JADX WARN: Code duplicated, block: B:58:0x0077 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:59:0x0080 A[EDGE_INSN: B:59:0x0080->B:41:0x0080 BREAK  A[LOOP:0: B:33:0x006a->B:62:?], SYNTHETIC] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m16301(boolean z, C14467 c14467) {
+        boolean zM16302;
+        boolean z2;
+        long jMax;
+        long millis;
+        boolean z3 = false;
+        if (!C12797.m31698()) {
+            if (c14467 != null && z) {
+                C7756.m21100(c14467.f45526, EnumC15170.WAITING_BINDER);
             }
-        }
-        arrayList.add("h2");
-        if (this.f18851.isEmpty()) {
-            arrayList.add("e2");
-        } else {
-            for (AbstractC20745 abstractC20745 : this.f18851) {
-                if (abstractC20745.getName().equals(activityC20293.f65759)) {
-                    arrayList.add("f" + abstractC20745.getName() + "/" + System.currentTimeMillis());
-                } else {
-                    arrayList.add("f" + abstractC20745.getName());
-                }
-            }
-        }
-        this.f18852 = arrayList;
-        if (activityC20293.f65755 == null || list.isEmpty()) {
-            return;
-        }
-        this.f18848 = C4066.m11593(new C2653(list, arrayList));
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        List list = this.f18849;
-        ActivityC20293 activityC20293 = this.f18850;
-        activityC20293.f65762 = list;
-        activityC20293.f65760 = this.f18851;
-        activityC20293.f65757 = this.f18852;
-        if (activityC20293.f65755 != null) {
-            activityC20293.f65755.m4459();
-            C5478 c5478 = this.f18848;
-            if (c5478 != null) {
-                c5478.m15146(activityC20293.f65755);
+            if (!z) {
+                zM16302 = C12797.m31697();
             } else {
-                activityC20293.f65755.notifyDataSetChanged();
+                zM16302 = m16302();
             }
+            if (zM16302) {
+                if (c14467 != null) {
+                    C7756.m21100(c14467.f45526, EnumC15170.WAITING_PERMISSION_OR_SERVICE);
+                }
+                if (m16300() == EnumC19646.GRANTED) {
+                    return true;
+                }
+                C22630 c22630 = new C22630();
+                C12797.m31690(c22630);
+                try {
+                    try {
+                        C12797.m31695(21320);
+                    } catch (RuntimeException unused) {
+                        if (m16302()) {
+                            try {
+                                C12797.m31695(21320);
+                            } catch (RuntimeException unused2) {
+                                z2 = false;
+                            }
+                        }
+                        z2 = false;
+                        if (!z2) {
+                            C12797.m31703(c22630);
+                            return false;
+                        }
+                        jMax = Math.max(0L, 10000L) + TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+                        while (!c22630.m50986()) {
+                            if (!c22630.m50984()) {
+                                if (m16300() == EnumC19646.GRANTED) {
+                                    break;
+                                }
+                                millis = jMax - TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+                                if (millis <= 0) {
+                                }
+                            }
+                            C12797.m31703(c22630);
+                            return z3;
+                        }
+                        z3 = true;
+                        C12797.m31703(c22630);
+                        return z3;
+                    }
+                    z2 = true;
+                    if (!z2) {
+                        C12797.m31703(c22630);
+                        return false;
+                    }
+                    jMax = Math.max(0L, 10000L) + TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+                    while (!c22630.m50986()) {
+                        if (!c22630.m50984()) {
+                            if (m16300() == EnumC19646.GRANTED) {
+                                break;
+                                break;
+                            }
+                            millis = jMax - TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+                            if (millis <= 0 && c22630.m50985(Math.min(Math.max(1L, 200L), millis))) {
+                            }
+                        }
+                        C12797.m31703(c22630);
+                        return z3;
+                    }
+                    z3 = true;
+                    C12797.m31703(c22630);
+                    return z3;
+                } catch (Throwable th) {
+                    C12797.m31703(c22630);
+                    throw th;
+                }
+            }
+        }
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static EnumC19646 m16300() {
+        try {
+            if (C12797.m31700() == 0) {
+                return EnumC19646.GRANTED;
+            }
+            return EnumC19646.REQUESTABLE;
+        } catch (RuntimeException unused) {
+            return C12797.m31697() ? EnumC19646.REQUESTABLE : EnumC19646.NOT_READY;
         }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f18850.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f18850.f65761.m16335(false);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m16302() {
+        long jMax = Math.max(0L, 5000L) + TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+        while (!C12797.m31697()) {
+            long millis = jMax - TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+            if (millis <= 0) {
+                return false;
+            }
+            try {
+                Thread.sleep(Math.min(Math.max(1L, 200L), millis));
+            } catch (InterruptedException unused) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+        return true;
     }
 }

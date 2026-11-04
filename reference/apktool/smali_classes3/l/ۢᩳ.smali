@@ -1,23 +1,57 @@
 .class public final Ll/ۢᩳ;
 .super Ljava/lang/Object;
-.source "V659"
-
-# interfaces
-.implements Ll/ۜۜ;
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/ۜᩴ;
+.source "X2Z7"
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜᩴ;)V
+.method public static ۙ(Ljava/lang/Object;)I
     .locals 0
 
-    .line 217
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1063
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    iput-object p1, p0, Ll/ۢᩳ;->ۙ:Ll/ۜᩴ;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
 
-    return-void
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ۤ(Ljava/lang/Object;)I
+    .locals 0
+
+    .line 1058
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ᩷(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    .line 1053
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ᩸(Ljava/lang/Object;)Landroid/net/Uri;
+    .locals 0
+
+    .line 1068
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 .end method

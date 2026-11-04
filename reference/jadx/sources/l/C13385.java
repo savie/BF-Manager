@@ -1,35 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬᩸۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6X3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C13385 {
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArraySet;
+
+/* JADX INFO: renamed from: l.۫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: DB8V */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13385 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f44331;
+    public volatile ActivityC5577 f42670;
 
-    static {
-        int[] iArr = new int[EnumC12279.values().length];
-        f44331 = iArr;
-        try {
-            iArr[EnumC12279.MISSING.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final CopyOnWriteArraySet f42671 = new CopyOnWriteArraySet();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m33009(InterfaceC5928 interfaceC5928) {
+        ActivityC5577 activityC5577 = this.f42670;
+        if (activityC5577 != null) {
+            interfaceC5928.mo5165(activityC5577);
         }
-        try {
-            f44331[EnumC12279.REGULAR.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+        this.f42671.add(interfaceC5928);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m33008(ActivityC5577 activityC5577) {
+        this.f42670 = activityC5577;
+        Iterator it = this.f42671.iterator();
+        while (it.hasNext()) {
+            ((InterfaceC5928) it.next()).mo5165(activityC5577);
         }
-        try {
-            f44331[EnumC12279.DIRECTORY.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f44331[EnumC12279.LINK.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f44331[EnumC12279.OTHER.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m33007() {
+        this.f42670 = null;
     }
 }

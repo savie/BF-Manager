@@ -19,10 +19,10 @@ import com.google.android.material.shape.AbsoluteCornerSize;
 import com.google.android.material.shape.CornerSize;
 import com.google.android.material.shape.RelativeCornerSize;
 import com.google.android.material.shape.ShapeAppearanceModel;
-import l.C0280;
-import l.C15489;
-import l.C22420;
-import l.C8479;
+import l.C13645;
+import l.C14483;
+import l.C19967;
+import l.C25210;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TransitionUtils {
@@ -74,7 +74,7 @@ public class TransitionUtils {
         int i2 = typedValue.type;
         if (i2 != 16) {
             if (i2 == 3) {
-                return new PatternPathMotion(C22420.m49743(String.valueOf(typedValue.string)));
+                return new PatternPathMotion(C25210.m56212(String.valueOf(typedValue.string)));
             }
             throw new IllegalArgumentException("Motion path theme attribute must either be an enum value or path data string");
         }
@@ -85,7 +85,7 @@ public class TransitionUtils {
         if (i3 == 1) {
             return new MaterialArcMotion();
         }
-        throw new IllegalArgumentException(C8479.m22141(i3, "Invalid motion path type: "));
+        throw new IllegalArgumentException(C13645.m33382(i3, "Invalid motion path type: "));
     }
 
     public static ShapeAppearanceModel convertToRelativeCornerSizes(ShapeAppearanceModel shapeAppearanceModel, final RectF rectF) {
@@ -106,7 +106,7 @@ public class TransitionUtils {
     }
 
     public static float lerp(float f, float f2, float f3) {
-        return C0280.m1792(f2, f, f3, f);
+        return C19967.m45884(f2, f, f3, f);
     }
 
     public static float lerp(float f, float f2, float f3, float f4, float f5) {
@@ -164,7 +164,7 @@ public class TransitionUtils {
                 return view;
             }
         }
-        throw new IllegalArgumentException(C15489.m37076(resourceName, " is not a valid ancestor"));
+        throw new IllegalArgumentException(C14483.m34972(resourceName, " is not a valid ancestor"));
     }
 
     public static RectF getRelativeBounds(View view) {

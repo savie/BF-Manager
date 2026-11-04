@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.prng.drbg;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SP80090DRBG {
     int generate(byte[] bArr, byte[] bArr2, boolean z);
 

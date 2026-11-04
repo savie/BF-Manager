@@ -1,200 +1,88 @@
 package l;
 
-import java.util.Comparator;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.view.View;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۡᩳۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C2R7 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9038 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        C16819 c16819 = null;
-        C16819 c168110 = null;
-        int i = -843272098;
-        int i2 = C3660.f13403;
-        int i3 = C1937.f7317;
-        int iM45029 = C19806.m45029("ۧۜ") ^ i2;
-        int i4 = ((iM45029 ^ i3) * 11663) ^ (-1770165726);
-        int i5 = 649115042;
-        while (true) {
-            i = ((((i ^ i3) * 10639) >> 31) & i4) ^ (iM45029 ^ i5);
-            switch (i) {
-                case -2088219835:
-                case 893426584:
-                    if (MenuItemOnMenuItemClickListenerC3244.m9701() >= 0) {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    } else {
-                        iM45029 = C19806.m45029("ᩳۨ") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-22057)) ^ 1668255166;
-                        i5 = 284472724;
-                    }
-                    break;
-                case -1998944613:
-                case 187371608:
-                    C2249.m6915();
-                    C19806.m45024();
-                    return 0;
-                case -1838802566:
-                case 316274089:
-                    if (C0629.f2722 <= 0) {
-                        iM45029 = C19806.m45029("ۗ۟") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-26257)) ^ 1894069514;
-                        i5 = 1661268889;
-                    } else {
-                        iM45029 = C19806.m45029("ۙܺ") ^ i3;
-                        i4 = ((iM45029 ^ i2) * 15813) ^ 380495789;
-                        i5 = 666027213;
-                    }
-                    break;
-                case -1694260870:
-                case 1535180729:
-                    if (C1398.f5802 <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("ܺ᩸") ^ i3;
-                        i4 = ((iM45029 ^ i2) * (-20173)) ^ 1881120563;
-                        i5 = 1667631496;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("ܿۙ") ^ i3;
-                        i4 = ((iM45029 ^ i2) * (-20625)) ^ 1642185151;
-                        i5 = -110794818;
-                    }
-                    break;
-                case -1691289726:
-                case 1376980190:
-                    C1461.m5080();
-                    iM45029 = ThreadFactoryC3888.m11306("ܺ᩸") ^ i3;
-                    i4 = ((iM45029 ^ i2) * (-20173)) ^ 1881120563;
-                    i5 = 1667631496;
-                    break;
-                case -1671129334:
-                case 1316637558:
-                    int i6 = ViewOnClickListenerC4514.f16038;
-                    return c16819.f53838.compareToIgnoreCase(c168110.f53838);
-                case -1323415500:
-                case -1223851741:
-                    if (C0050.f912 <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("ܺ᩸") ^ i3;
-                        i4 = ((iM45029 ^ i2) * (-20173)) ^ 1881120563;
-                        i5 = 1667631496;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("ܶ۠") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-7865)) ^ (-451253729);
-                        i5 = -869386096;
-                    }
-                    break;
-                case -1036111145:
-                case 1776794517:
-                    if (RunnableC1564.f6300) {
-                        iM45029 = (C19806.m45029("ۡ᩷") + i2) * 79;
-                        i4 = ((iM45029 ^ i3) * 11831) ^ (-1805207126);
-                        i5 = -1659555831;
-                    } else {
-                        iM45029 = (C19806.m45029("ۘ۬") + i3) * 33;
-                        i4 = ((iM45029 ^ i2) * 18119) ^ (-423701901);
-                        i5 = -521196572;
-                    }
-                    break;
-                case -871470559:
-                case 1009174823:
-                    if (ViewTreeObserverOnPreDrawListenerC3327.f12317 <= 0) {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    } else {
-                        iM45029 = C19806.m45029("᩵ۤ") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-22113)) ^ (-1982445763);
-                        i5 = 1435707547;
-                    }
-                    break;
-                case -807333910:
-                case 134982822:
-                    if (C2788.f10625 >= 0) {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    } else {
-                        iM45029 = (ThreadFactoryC3888.m11306("ۖܽ") + i2) * (-101);
-                        i4 = ((iM45029 ^ i3) * (-27629)) ^ (-527585085);
-                        i5 = -939555713;
-                    }
-                    break;
-                case -791346974:
-                case -190183374:
-                    C2788.m8472();
-                    if (C3535.f13026 <= 0) {
-                        iM45029 = (i3 - ThreadFactoryC3888.m11306("۟ܰ")) * (-121);
-                        i4 = ((iM45029 ^ i2) * 24313) ^ 792422975;
-                        i5 = 1970648594;
-                    } else {
-                        iM45029 = (C19806.m45029("ۡ᩷") + i2) * 79;
-                        i4 = ((iM45029 ^ i3) * 11831) ^ (-1805207126);
-                        i5 = -1659555831;
-                    }
-                    break;
-                case -536220079:
-                case -455847061:
-                    if (C2871.f10837 >= 0) {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("֫ۛ") ^ i3;
-                        i4 = ((iM45029 ^ i2) * 16589) ^ 1178444434;
-                        i5 = -999127059;
-                    }
-                    break;
-                case -517921610:
-                case 587039526:
-                    if (!RunnableC1564.m5345()) {
-                        iM45029 = ThreadFactoryC3888.m11306("ܺ᩸") ^ i3;
-                        i4 = ((iM45029 ^ i2) * (-20173)) ^ 1881120563;
-                        i5 = 1667631496;
-                    } else {
-                        iM45029 = (C19806.m45029("ۡ᩷") + i2) * 79;
-                        i4 = ((iM45029 ^ i3) * 11831) ^ (-1805207126);
-                        i5 = -1659555831;
-                    }
-                    break;
-                case -313249086:
-                case 389308507:
-                    C1066.m4023();
-                    if (RunnableC1606.f6488 < 0) {
-                        iM45029 = C19806.m45029("ۗ۟") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-26257)) ^ 1894069514;
-                        i5 = 1661268889;
-                    } else {
-                        iM45029 = (i3 - ThreadFactoryC3888.m11306("۟ܰ")) * (-121);
-                        i4 = ((iM45029 ^ i2) * 24313) ^ 792422975;
-                        i5 = 1970648594;
-                    }
-                    break;
-                case 802046992:
-                case 2050815140:
-                    c16819 = (C16819) obj;
-                    c168110 = (C16819) obj2;
-                    if (C0797.m3359()) {
-                        iM45029 = C19806.m45029("ۘۚ") ^ i2;
-                        i4 = ((iM45029 ^ i3) * 9979) ^ (-1251199912);
-                        i5 = -640372425;
-                    } else {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    }
-                    break;
-                default:
-                    if (C19806.f63586) {
-                        iM45029 = C19806.m45029("᩺᩷") ^ i2;
-                        i4 = ((iM45029 ^ i3) * (-11735)) ^ 834649746;
-                        i5 = -2137453019;
-                    } else {
-                        iM45029 = (i3 - ThreadFactoryC3888.m11306("ܽܿ")) * 75;
-                        i4 = ((iM45029 ^ i2) * (-31173)) ^ 875262226;
-                        i5 = -1072462445;
-                    }
-                    break;
-            }
+/* JADX INFO: renamed from: l.ۡ֨᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5CY */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9038 extends AnimatorListenerAdapter implements InterfaceC12261 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f29400 = false;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View f29401;
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionCancel(AbstractC0329 abstractC0329) {
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionEnd(AbstractC0329 abstractC0329) {
+        throw null;
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionEnd(AbstractC0329 abstractC0329, boolean z) {
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionStart(AbstractC0329 abstractC0329) {
+        throw null;
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionStart(AbstractC0329 abstractC0329, boolean z) {
+    }
+
+    public C9038(View view) {
+        this.f29401 = view;
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationStart(Animator animator) {
+        View view = this.f29401;
+        if (view.hasOverlappingRendering() && view.getLayerType() == 0) {
+            this.f29400 = true;
+            view.setLayerType(2, null);
         }
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator) {
+        onAnimationEnd(animator, false);
+    }
+
+    @Override // android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator, boolean z) {
+        boolean z2 = this.f29400;
+        View view = this.f29401;
+        if (z2) {
+            view.setLayerType(0, null);
+        }
+        if (z) {
+            return;
+        }
+        C11319.m28605(view, 1.0f);
+        C11319.m28604();
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationCancel(Animator animator) {
+        C11319.m28605(this.f29401, 1.0f);
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionPause(AbstractC0329 abstractC0329) {
+        View view = this.f29401;
+        view.setTag(R.id.MT_Protector, Float.valueOf(view.getVisibility() == 0 ? C11319.m28603(view) : 0.0f));
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionResume(AbstractC0329 abstractC0329) {
+        this.f29401.setTag(R.id.MT_Protector, null);
     }
 }

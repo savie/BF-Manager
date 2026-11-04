@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܰ:I
+.field public static final synthetic ᩷:I
 
 
 # instance fields
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 25
-    invoke-static {}, Ll/ܿۜۤ;->ۙ()V
+    invoke-static {}, Ll/ᩴ᩵᩺;->ۙ()V
 
     return-void
 .end method
@@ -85,9 +85,9 @@
     :try_start_3
     new-instance v1, Lpl/droidsonroids/gif/GifIOException;
 
-    sget-object v2, Ll/ۖۜۤ;->֨ۙ:Ll/ۖۜۤ;
+    sget-object v2, Ll/ۗۗ᩺;->۫ۙ:Ll/ۗۗ᩺;
 
-    iget v2, v2, Ll/ۖۜۤ;->᩶:I
+    iget v2, v2, Ll/ۗۗ᩺;->᩶:I
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
@@ -340,71 +340,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized ֨()I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 225
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getLoopCount(J)I
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۖ()I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 262
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentPosition(J)I
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۘ()I
+.method public final declared-synchronized ֫()I
     .locals 3
 
     move-object v0, p0
@@ -424,6 +360,37 @@
     monitor-exit v0
 
     return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۗ()V
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 304
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->postUnbindSurface(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 305
+    monitor-exit v0
+
+    return-void
 
     :catchall_0
     move-exception v1
@@ -693,229 +660,7 @@
     return-void
 .end method
 
-.method public final declared-synchronized ۚ()I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 258
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getDuration(J)I
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۜ()I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 337
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getNumberOfFrames(J)I
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۟()V
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 217
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->saveRemainder(J)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 218
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۠()V
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 304
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->postUnbindSurface(J)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 305
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۡ()Z
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 213
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->reset(J)Z
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۤ()J
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 209
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->restoreRemainder(J)J
-
-    move-result-wide v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-wide v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۨ()I
-    .locals 3
-
-    move-object v0, p0
-
-    monitor-enter v0
-
-    .line 270
-    :try_start_0
-    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
-
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentLoop(J)I
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final declared-synchronized ۬()J
+.method public final declared-synchronized ۚ()J
     .locals 3
 
     move-object v0, p0
@@ -947,18 +692,50 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ܰ()I
+.method public final declared-synchronized ۛ()J
     .locals 3
 
     move-object v0, p0
 
     monitor-enter v0
 
-    .line 266
+    .line 209
     :try_start_0
     iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
 
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentFrameIndex(J)I
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->restoreRemainder(J)J
+
+    move-result-wide v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-wide v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۤ()I
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 270
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentLoop(J)I
 
     move-result v1
     :try_end_0
@@ -979,18 +756,18 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ܶ()I
+.method public final declared-synchronized ۧ()I
     .locals 3
 
     move-object v0, p0
 
     monitor-enter v0
 
-    .line 329
+    .line 337
     :try_start_0
     iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
 
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getWidth(J)I
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getNumberOfFrames(J)I
 
     move-result v1
     :try_end_0
@@ -1011,7 +788,103 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ᩳ()Z
+.method public final declared-synchronized ۨ()Z
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 213
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->reset(J)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۫()I
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 225
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getLoopCount(J)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ܳ()I
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 333
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getHeight(J)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ܶ()Z
     .locals 3
 
     move-object v0, p0
@@ -1043,34 +916,87 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ᩴ()Z
-    .locals 6
+.method public final declared-synchronized ܺ()I
+    .locals 3
 
     move-object v0, p0
 
-    .line 1
     monitor-enter v0
 
-    .line 291
+    .line 329
     :try_start_0
     iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getWidth(J)I
+
+    move-result v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-wide/16 v3, 0x0
+    monitor-exit v0
 
-    cmp-long v5, v1, v3
+    return v1
 
-    if-nez v5, :cond_0
+    :catchall_0
+    move-exception v1
 
-    const/4 v1, 0x1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    throw v1
+.end method
 
-    :cond_0
-    const/4 v1, 0x0
+.method public final declared-synchronized ܽ()Z
+    .locals 3
 
-    :goto_0
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 308
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->isAnimationCompleted(J)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ᩴ()I
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 258
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getDuration(J)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     monitor-exit v0
 
     return v1
@@ -1123,18 +1049,18 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ᩸()Z
+.method public final declared-synchronized ᩷()I
     .locals 3
 
     move-object v0, p0
 
     monitor-enter v0
 
-    .line 308
+    .line 266
     :try_start_0
     iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
 
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->isAnimationCompleted(J)Z
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentFrameIndex(J)I
 
     move-result v1
     :try_end_0
@@ -1155,18 +1081,18 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ᩹()I
+.method public final declared-synchronized ᩸()I
     .locals 3
 
     move-object v0, p0
 
     monitor-enter v0
 
-    .line 333
+    .line 262
     :try_start_0
     iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
 
-    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getHeight(J)I
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentPosition(J)I
 
     move-result v1
     :try_end_0
@@ -1187,7 +1113,81 @@
     throw v1
 .end method
 
-.method public final declared-synchronized ᩺()[J
+.method public final declared-synchronized ᩹()Z
+    .locals 6
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 291
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v5, v1, v3
+
+    if-nez v5, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ᩺()V
+    .locals 3
+
+    move-object v0, p0
+
+    monitor-enter v0
+
+    .line 217
+    :try_start_0
+    iget-wide v1, p0, Lpl/droidsonroids/gif/GifInfoHandle;->ۙ:J
+
+    invoke-static {v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->saveRemainder(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 218
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ᩻()[J
     .locals 3
 
     move-object v0, p0

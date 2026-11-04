@@ -1,16 +1,12 @@
-.class public final Ll/۫᩵᩵;
-.super Ll/ۡ᩵᩵;
-.source "E8Z3"
+.class public interface abstract Ll/۫᩵᩵;
+.super Ljava/lang/Object;
+.source "RA1T"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Ljava/lang/AutoCloseable;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/16 v0, 0x5f
-
-    .line 6
-    invoke-direct {p0, v0}, Ll/ۡ᩵᩵;-><init>(C)V
-
-    return-void
+# virtual methods
+.method public abstract close()V
 .end method

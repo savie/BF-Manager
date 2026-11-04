@@ -1,14 +1,23 @@
-.class public abstract Ll/ܳܽ;
+.class public final Ll/ܳܽ;
 .super Ljava/lang/Object;
-.source "1949"
+.source "25PA"
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static ۙ(Landroid/widget/PopupWindow;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1468
+    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setEpicenterBounds(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public static ۙ(Landroid/widget/PopupWindow;Z)V
+    .locals 0
+
+    .line 1473
+    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setIsClippedToScreen(Z)V
 
     return-void
 .end method

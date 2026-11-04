@@ -6,9 +6,9 @@ import android.content.Context;
 import android.os.Build;
 import android.view.Window;
 import com.google.android.material.color.MaterialColors;
-import l.C16321;
-import l.C3224;
-import l.C5965;
+import l.C18190;
+import l.C18893;
+import l.C19988;
 
 /* JADX INFO: loaded from: classes.dex */
 public class EdgeToEdgeUtils {
@@ -30,7 +30,7 @@ public class EdgeToEdgeUtils {
                 num2 = Integer.valueOf(color);
             }
         }
-        C16321.m38489(window, !z);
+        C18190.m42352(window, !z);
         int statusBarColor = getStatusBarColor(window.getContext(), z);
         int navigationBarColor = getNavigationBarColor(window.getContext(), z);
         window.setStatusBarColor(statusBarColor);
@@ -40,17 +40,17 @@ public class EdgeToEdgeUtils {
     }
 
     public static void setLightStatusBar(Window window, boolean z) {
-        new C5965(window, window.getDecorView()).m16258(z);
+        new C18893(window, window.getDecorView()).m43816(z);
     }
 
     public static void setLightNavigationBar(Window window, boolean z) {
-        new C5965(window, window.getDecorView()).m16254(z);
+        new C18893(window, window.getDecorView()).m43812(z);
     }
 
     @TargetApi(21)
     public static int getStatusBarColor(Context context, boolean z) {
         if (z && Build.VERSION.SDK_INT < 23) {
-            return C3224.m9668(MaterialColors.getColor(context, R.attr.statusBarColor, -16777216), 128);
+            return C19988.m45964(MaterialColors.getColor(context, R.attr.statusBarColor, -16777216), 128);
         }
         if (z) {
             return 0;
@@ -61,7 +61,7 @@ public class EdgeToEdgeUtils {
     @TargetApi(21)
     public static int getNavigationBarColor(Context context, boolean z) {
         if (z && Build.VERSION.SDK_INT < 27) {
-            return C3224.m9668(MaterialColors.getColor(context, R.attr.navigationBarColor, -16777216), 128);
+            return C19988.m45964(MaterialColors.getColor(context, R.attr.navigationBarColor, -16777216), 128);
         }
         if (z) {
             return 0;

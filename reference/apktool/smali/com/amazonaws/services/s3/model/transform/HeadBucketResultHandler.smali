@@ -29,7 +29,7 @@
     invoke-direct {v1}, Lcom/amazonaws/services/s3/model/HeadBucketResult;-><init>()V
 
     .line 31
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p1
 

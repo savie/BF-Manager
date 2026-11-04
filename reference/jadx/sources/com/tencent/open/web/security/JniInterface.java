@@ -5,17 +5,17 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import l.C1791;
-import l.C23099;
-import l.C23805;
-import l.C7328;
+import l.C1867;
+import l.C21587;
+import l.C5596;
+import l.C8658;
 
 /* JADX INFO: compiled from: 51RR */
 /* JADX INFO: loaded from: classes.dex */
 public class JniInterface {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean f907;
+    public static boolean f897;
 
     public static native boolean BackSpaceChar(boolean z, int i);
 
@@ -30,56 +30,56 @@ public class JniInterface {
     public static native boolean insetTextToArray(int i, String str, int i2);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m925() {
-        if (f907) {
+    public static void m919() {
+        if (f897) {
             return;
         }
         try {
-            Context contextM5862 = C1791.m5862();
-            if (contextM5862 == null) {
-                C23099.m51113("openSDK_LOG.JniInterface", "-->load lib fail, because context is null:" + C7328.f24362);
+            Context contextM16575 = C5596.m16575();
+            if (contextM16575 == null) {
+                C21587.m49113("openSDK_LOG.JniInterface", "-->load lib fail, because context is null:" + C8658.f28264);
                 return;
             }
             StringBuilder sb = new StringBuilder();
-            sb.append(contextM5862.getFilesDir().toString());
+            sb.append(contextM16575.getFilesDir().toString());
             sb.append("/");
-            String str = C7328.f24362;
+            String str = C8658.f28264;
             sb.append(str);
             File file = new File(sb.toString());
             if (!file.exists()) {
-                C23099.m51113("openSDK_LOG.JniInterface", "-->fail, because so is not exists:" + str);
+                C21587.m49113("openSDK_LOG.JniInterface", "-->fail, because so is not exists:" + str);
             } else {
-                if (!m926(contextM5862, file)) {
-                    C23099.m51113("openSDK_LOG.JniInterface", "-->fail, because checkMD5 fail:" + str);
+                if (!m920(contextM16575, file)) {
+                    C21587.m49113("openSDK_LOG.JniInterface", "-->fail, because checkMD5 fail:" + str);
                     return;
                 }
-                System.load(contextM5862.getFilesDir().toString() + "/" + str);
-                f907 = true;
+                System.load(contextM16575.getFilesDir().toString() + "/" + str);
+                f897 = true;
                 StringBuilder sb2 = new StringBuilder("-->load lib success:");
                 sb2.append(str);
-                C23099.m51113("openSDK_LOG.JniInterface", sb2.toString());
+                C21587.m49113("openSDK_LOG.JniInterface", sb2.toString());
             }
         } catch (Throwable th) {
-            C23099.m51111("openSDK_LOG.JniInterface", "-->load lib error:" + C7328.f24362, th);
+            C21587.m49112("openSDK_LOG.JniInterface", "-->load lib error:" + C8658.f28264, th);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:70:0x004e A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Code duplicated, block: B:81:0x0059 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m926(Context context, File file) {
+    public static boolean m920(Context context, File file) {
         Throwable th;
         FileInputStream fileInputStream;
         InputStream inputStream = null;
-        strM52452 = null;
-        strM52452 = null;
-        String strM52452 = null;
+        strM6413 = null;
+        strM6413 = null;
+        String strM6413 = null;
         try {
-            InputStream inputStreamOpen = context.getAssets().open(C7328.f24361);
+            InputStream inputStreamOpen = context.getAssets().open(C8658.f28263);
             try {
-                String strM52453 = C23805.m52452(inputStreamOpen);
-                if (strM52453 == null || strM52453.isEmpty()) {
-                    C23099.m51113("openSDK_LOG.JniInterface", "checkMD5 assets md5 is null");
+                String strM6414 = C1867.m6413(inputStreamOpen);
+                if (strM6414 == null || strM6414.isEmpty()) {
+                    C21587.m49113("openSDK_LOG.JniInterface", "checkMD5 assets md5 is null");
                     if (inputStreamOpen != null) {
                         try {
                             inputStreamOpen.close();
@@ -91,15 +91,15 @@ public class JniInterface {
                         try {
                             fileInputStream = new FileInputStream(file);
                             try {
-                                strM52452 = C23805.m52452(fileInputStream);
+                                strM6413 = C1867.m6413(fileInputStream);
                             } catch (Throwable th2) {
                                 th = th2;
                                 try {
-                                    C23099.m51111("MD5Utils", "md5 file error", th);
+                                    C21587.m49112("MD5Utils", "md5 file error", th);
                                     if (fileInputStream != null) {
                                     }
-                                    if (strM52452 != null) {
-                                        boolean zEquals = strM52453.equals(strM52452);
+                                    if (strM6413 != null) {
+                                        boolean zEquals = strM6414.equals(strM6413);
                                         if (inputStreamOpen != null) {
                                             try {
                                                 inputStreamOpen.close();
@@ -108,7 +108,7 @@ public class JniInterface {
                                         }
                                         return zEquals;
                                     }
-                                    C23099.m51113("openSDK_LOG.JniInterface", "checkMD5 file md5 is null");
+                                    C21587.m49113("openSDK_LOG.JniInterface", "checkMD5 file md5 is null");
                                     if (inputStreamOpen != null) {
                                         inputStreamOpen.close();
                                     }
@@ -132,14 +132,14 @@ public class JniInterface {
                         } catch (Throwable unused4) {
                         }
                     }
-                    if (strM52452 != null && !strM52452.isEmpty()) {
-                        boolean zEquals2 = strM52453.equals(strM52452);
+                    if (strM6413 != null && !strM6413.isEmpty()) {
+                        boolean zEquals2 = strM6414.equals(strM6413);
                         if (inputStreamOpen != null) {
                             inputStreamOpen.close();
                         }
                         return zEquals2;
                     }
-                    C23099.m51113("openSDK_LOG.JniInterface", "checkMD5 file md5 is null");
+                    C21587.m49113("openSDK_LOG.JniInterface", "checkMD5 file md5 is null");
                     if (inputStreamOpen != null) {
                         inputStreamOpen.close();
                     }
@@ -149,14 +149,14 @@ public class JniInterface {
                 th = th5;
                 inputStream = inputStreamOpen;
                 try {
-                    C23099.m51111("openSDK_LOG.JniInterface", "checkMD5 exception", th);
+                    C21587.m49112("openSDK_LOG.JniInterface", "checkMD5 exception", th);
                     if (inputStream != null) {
                         try {
                             inputStream.close();
                         } catch (IOException unused5) {
                         }
                     }
-                    C23099.m51115("openSDK_LOG.JniInterface", "checkMD5 return false");
+                    C21587.m49116("openSDK_LOG.JniInterface", "checkMD5 return false");
                     return false;
                 } catch (Throwable th6) {
                     if (inputStream != null) {

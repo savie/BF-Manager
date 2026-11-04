@@ -1,276 +1,148 @@
-.class public final Ll/᩹᩵᩵;
-.super Ll/᩺ۤ᩵;
-.source "M8XG"
+.class public final enum Ll/᩹᩵᩵;
+.super Ljava/lang/Enum;
+.source "FA2I"
 
 
-# instance fields
-.field public final ۙ:Ll/ܺۡ᩵;
+# static fields
+.field public static final enum ֡:Ll/᩹᩵᩵;
 
-.field public final ܰ:Ll/ۗ۠᩵;
+.field public static final enum ۟:Ll/᩹᩵᩵;
+
+.field public static final synthetic ܰ:[Ll/᩹᩵᩵;
+
+.field public static final enum ܿ:Ll/᩹᩵᩵;
+
+.field public static final enum ᩶:Ll/᩹᩵᩵;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 14
-    new-instance v0, Ll/ܺۡ᩵;
-
-    invoke-direct {v0}, Ll/ܺۡ᩵;-><init>()V
-
-    iput-object v0, p0, Ll/᩹᩵᩵;->ۙ:Ll/ܺۡ᩵;
-
-    .line 15
-    new-instance v0, Ll/ۗ۠᩵;
-
-    invoke-direct {v0}, Ll/ۗ۠᩵;-><init>()V
-
-    iput-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۘ()Ljava/util/List;
-    .locals 4
-
-    .line 51
-    new-instance v0, Ll/ۨۡ᩵;
-
-    invoke-direct {v0}, Ll/ۨۡ᩵;-><init>()V
-
-    .line 52
-    iget-object v1, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
-
-    invoke-virtual {v1}, Ll/ۗ۠᩵;->ۙ()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ᩳۡ᩵;
-
-    .line 53
-    invoke-virtual {v2}, Ll/ᩳۡ᩵;->ۜ()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v2}, Ll/ۨۡ᩵;->ۙ(Ljava/lang/String;Ll/ᩳۡ᩵;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    .line 0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    aget-object v1, v2, v3
-
-    invoke-static {v1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(I)Ljava/util/List;
-    .locals 1
-
-    .line 84
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
-
-    invoke-virtual {v0, p1}, Ll/ۗ۠᩵;->ۙ(I)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ()Ll/ۖۤ᩵;
-    .locals 1
-
-    .line 80
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
-
-    invoke-virtual {v0}, Ll/ۗ۠᩵;->ܰ()Ll/ۖۤ᩵;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/۠ۤ᩵;)Ll/᩹۠᩵;
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 30
-    invoke-interface {p1}, Ll/۠ۤ᩵;->ۙ()Z
+    new-instance v0, Ll/᩹᩵᩵;
 
-    move-result v0
+    const-string v1, "RESOLVER_WINS"
 
-    if-nez v0, :cond_0
+    const/4 v2, 0x0
 
-    .line 31
-    invoke-interface {p1}, Ll/۠ۤ᩵;->getIndex()I
+    invoke-direct {v0, v1, v2}, Ll/᩹᩵᩵;-><init>(Ljava/lang/String;I)V
 
-    move-result p1
+    sput-object v0, Ll/᩹᩵᩵;->۟:Ll/᩹᩵᩵;
 
-    invoke-static {p1}, Ll/᩹۠᩵;->ۙ(I)Ll/᩹۠᩵;
+    .line 35
+    new-instance v0, Ll/᩹᩵᩵;
 
-    move-result-object p1
+    const-string v1, "RESOLVER_BCAST"
 
-    return-object p1
+    const/4 v2, 0x1
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-direct {v0, v1, v2}, Ll/᩹᩵᩵;-><init>(Ljava/lang/String;I)V
 
-    return-object p1
-.end method
+    sput-object v0, Ll/᩹᩵᩵;->᩶:Ll/᩹᩵᩵;
 
-.method public final ۙ(Ll/֡ۡ᩵;)V
-    .locals 1
+    .line 40
+    new-instance v0, Ll/᩹᩵᩵;
 
-    .line 46
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
+    const-string v1, "RESOLVER_DNS"
 
-    invoke-virtual {v0, p1}, Ll/ۗ۠᩵;->ۙ(Ll/֡ۡ᩵;)V
+    const/4 v2, 0x2
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Ll/᩹᩵᩵;-><init>(Ljava/lang/String;I)V
 
-.method public final ۙ(Ll/ۨۤ᩵;)V
-    .locals 1
+    sput-object v0, Ll/᩹᩵᩵;->ܿ:Ll/᩹᩵᩵;
 
-    .line 39
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
+    .line 45
+    new-instance v0, Ll/᩹᩵᩵;
 
-    invoke-virtual {v0, p1}, Ll/ۗ۠᩵;->ۙ(Ll/ۨۤ᩵;)V
+    const-string v1, "RESOLVER_LMHOSTS"
 
-    return-void
-.end method
+    const/4 v2, 0x3
 
-.method public final ۙ(Ll/ܳۡ᩵;)V
-    .locals 2
+    invoke-direct {v0, v1, v2}, Ll/᩹᩵᩵;-><init>(Ljava/lang/String;I)V
 
-    .line 73
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
+    sput-object v0, Ll/᩹᩵᩵;->֡:Ll/᩹᩵᩵;
 
-    invoke-virtual {v0}, Ll/ۗ۠᩵;->ܰ()Ll/ۖۤ᩵;
+    .line 26
+    invoke-static {}, Ll/᩹᩵᩵;->ۙ()[Ll/᩹᩵᩵;
 
     move-result-object v0
 
-    .line 74
-    invoke-virtual {v0}, Ll/ۖۤ᩵;->ۖ()Z
+    sput-object v0, Ll/᩹᩵᩵;->ܰ:[Ll/᩹᩵᩵;
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 75
-    iget-object v1, p0, Ll/᩹᩵᩵;->ۙ:Ll/ܺۡ᩵;
-
-    invoke-interface {p1, v0, v1}, Ll/ܳۡ᩵;->ۙ(Ll/ۖۤ᩵;Ll/᩵ۡ᩵;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final ۚ()Ll/ܳ᩵᩵;
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 26
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/᩹᩵᩵;
     .locals 1
 
-    .line 25
-    iget-object v0, p0, Ll/᩹᩵᩵;->ۙ:Ll/ܺۡ᩵;
+    .line 26
+    const-class v0, Ll/᩹᩵᩵;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/᩹᩵᩵;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/᩹᩵᩵;
+    .locals 1
+
+    .line 26
+    sget-object v0, Ll/᩹᩵᩵;->ܰ:[Ll/᩹᩵᩵;
+
+    invoke-virtual {v0}, [Ll/᩹᩵᩵;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/᩹᩵᩵;
 
     return-object v0
 .end method
 
-.method public final ۬()V
-    .locals 4
+.method public static synthetic ۙ()[Ll/᩹᩵᩵;
+    .locals 3
 
-    .line 60
-    iget-object v0, p0, Ll/᩹᩵᩵;->ܰ:Ll/ۗ۠᩵;
+    const/4 v0, 0x4
 
-    invoke-virtual {v0}, Ll/ۗ۠᩵;->ۙ()Ljava/util/ArrayList;
+    new-array v0, v0, [Ll/᩹᩵᩵;
 
-    move-result-object v1
+    .line 26
+    sget-object v1, Ll/᩹᩵᩵;->۟:Ll/᩹᩵᩵;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    aput-object v1, v0, v2
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v1, Ll/᩹᩵᩵;->᩶:Ll/᩹᩵᩵;
 
-    move-result v2
+    const/4 v2, 0x1
 
-    iget-object v3, p0, Ll/᩹᩵᩵;->ۙ:Ll/ܺۡ᩵;
+    aput-object v1, v0, v2
 
-    if-eqz v2, :cond_0
+    sget-object v1, Ll/᩹᩵᩵;->ܿ:Ll/᩹᩵᩵;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    move-result-object v2
+    aput-object v1, v0, v2
 
-    check-cast v2, Ll/ᩳۡ᩵;
+    sget-object v1, Ll/᩹᩵᩵;->֡:Ll/᩹᩵᩵;
 
-    .line 61
-    invoke-virtual {v3, v2}, Ll/᩵ۡ᩵;->ۙ(Ll/ᩳۡ᩵;)V
+    const/4 v2, 0x3
 
-    goto :goto_0
+    aput-object v1, v0, v2
 
-    .line 64
-    :cond_0
-    invoke-virtual {v0}, Ll/ۗ۠᩵;->ܰ()Ll/ۖۤ᩵;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ll/ۖۤ᩵;->ۖ()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 65
-    invoke-virtual {v3}, Ll/᩵ۡ᩵;->۬()V
-
-    return-void
-
-    .line 67
-    :cond_1
-    invoke-virtual {v0}, Ll/ۗ۠᩵;->ۨ()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ll/᩵ۡ᩵;->ۙ(Ljava/util/List;)V
-
-    return-void
+    return-object v0
 .end method

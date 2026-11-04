@@ -1,49 +1,33 @@
 package l;
 
-import android.content.ClipData;
-import android.net.Uri;
-import android.os.Bundle;
-
-/* JADX INFO: renamed from: l.ۜ᩻, reason: contains not printable characters */
-/* JADX INFO: compiled from: JB1Y */
+/* JADX INFO: renamed from: l.ۜۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q8SE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7085 implements InterfaceC4262 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public Uri f23758;
+public final class C7085 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public ClipData f23759;
+    public final long f23353;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f23760;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f23354;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f23761;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Bundle f23762;
-
-    @Override // l.InterfaceC4262
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo12056(int i) {
-        this.f23761 = i;
+    public C7085(long j, long j2) {
+        this.f23354 = j;
+        this.f23353 = j2;
     }
 
-    @Override // l.InterfaceC4262
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo12057(Uri uri) {
-        this.f23758 = uri;
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof C7085)) {
+            return false;
+        }
+        C7085 c7085 = (C7085) obj;
+        return this.f23354 == c7085.f23354 && this.f23353 == c7085.f23353;
     }
 
-    @Override // l.InterfaceC4262
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo12058(Bundle bundle) {
-        this.f23762 = bundle;
-    }
-
-    @Override // l.InterfaceC4262
-    public final C18374 build() {
-        return new C18374(new C21902(this));
+    public final int hashCode() {
+        return (((int) this.f23354) * 31) + ((int) this.f23353);
     }
 }

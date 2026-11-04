@@ -1,98 +1,36 @@
 package l;
 
-import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.DoubleConsumer;
-
-/* JADX INFO: renamed from: l.ܽۖ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܶ᩷ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M43N */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16349 extends C17759 implements InterfaceC15021 {
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(int i) {
-        AbstractC22686.t();
-        throw null;
+public final class C16349 extends AbstractC3671 {
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C14528 f53087;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C16349(C14528 c14528) {
+        super(c14528);
+        this.f53087 = c14528;
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
-    }
-
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        n((Double) obj);
-    }
-
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
-
-    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
-        return AbstractC14884.a(this, doubleConsumer);
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC8857
-    public final /* synthetic */ void n(Double d) {
-        AbstractC22686.n(this, d);
-    }
-
-    @Override // l.InterfaceC23280
-    public final /* bridge */ /* synthetic */ InterfaceC8616 build() {
-        build();
-        return this;
-    }
-
-    @Override // l.InterfaceC15021, l.InterfaceC23280
-    public final InterfaceC7163 build() {
-        int i = this.b;
-        double[] dArr = this.a;
-        if (i >= dArr.length) {
-            return this;
+    @Override // l.AbstractC3671
+    /* JADX INFO: renamed from: ᩷ */
+    public final C14769 mo11963(C8274 c8274, EnumC0816 enumC0816, AbstractC22664 abstractC22664, boolean z) {
+        C18499 c18499 = new C18499();
+        AbstractC22664 abstractC22664M22338 = c8274.m22338();
+        C14528 c14528 = this.f53087;
+        if (abstractC22664M22338 != null) {
+            c18499.m43089(new C4417(c14528, c8274, enumC0816, new EnumC0816[0]));
         }
-        throw new IllegalStateException(String.format("Current size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(dArr.length)));
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        double[] dArr = this.a;
-        if (j != dArr.length) {
-            throw new IllegalStateException(String.format("Begin size %d is not equal to fixed size %d", Long.valueOf(j), Integer.valueOf(dArr.length)));
+        c18499.m43089(new C24555(c14528, c8274, abstractC22664, enumC0816));
+        if (z) {
+            return c18499.m43093();
         }
-        this.b = 0;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void accept(double d) {
-        int i = this.b;
-        double[] dArr = this.a;
-        if (i < dArr.length) {
-            this.b = i + 1;
-            dArr[i] = d;
-            return;
+        if (enumC0816 == EnumC0816.f3091) {
+            c18499.m43089(new C21571(c14528, c8274, abstractC22664));
         }
-        throw new IllegalStateException(String.format("Accept exceeded fixed size of %d", Integer.valueOf(dArr.length)));
-    }
-
-    @Override // l.InterfaceC19171
-    public final void end() {
-        int i = this.b;
-        double[] dArr = this.a;
-        if (i < dArr.length) {
-            throw new IllegalStateException(String.format("End size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(dArr.length)));
-        }
-    }
-
-    @Override // l.C17759
-    public final String toString() {
-        double[] dArr = this.a;
-        return String.format("DoubleFixedNodeBuilder[%d][%s]", Integer.valueOf(dArr.length - this.b), Arrays.toString(dArr));
+        c18499.m43089(new C24226(c14528, c8274, abstractC22664, enumC0816));
+        return c18499.m43093();
     }
 }

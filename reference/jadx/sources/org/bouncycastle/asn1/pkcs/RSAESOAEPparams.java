@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAESOAEPparams extends ASN1Object {
     public static final AlgorithmIdentifier DEFAULT_HASH_ALGORITHM;
     public static final AlgorithmIdentifier DEFAULT_MASK_GEN_FUNCTION;

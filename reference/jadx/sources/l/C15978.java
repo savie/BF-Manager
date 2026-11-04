@@ -1,47 +1,58 @@
 package l;
 
-import android.app.Activity;
-import java.util.WeakHashMap;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.ArrayDeque;
 
-/* JADX INFO: renamed from: l.ܺܰۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: OANW */
+/* JADX INFO: renamed from: l.ܶۡۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B75R */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15978 implements InterfaceC9359 {
+public final class C15978 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C6099 f51751;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ReentrantLock f51750 = new ReentrantLock();
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int f51862;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final WeakHashMap f51749 = new WeakHashMap();
+    public InterfaceC1278 f51863;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m37957(Activity activity, C5331 c5331) {
-        WeakHashMap weakHashMap = this.f51749;
-        C13465.m32966(activity, "activity");
-        ReentrantLock reentrantLock = this.f51750;
-        reentrantLock.lock();
-        try {
-            if (c5331.equals((C5331) weakHashMap.get(activity))) {
-                reentrantLock.unlock();
-                return;
-            }
-            reentrantLock.unlock();
-            for (C11039 c11039 : this.f51751.f20665.m52270()) {
-                if (C13465.m32965(c11039.m27832(), activity)) {
-                    c11039.m27833(c5331);
-                }
-            }
-        } catch (Throwable th) {
-            reentrantLock.unlock();
-            throw th;
-        }
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public C12995 f51864;
 
-    public C15978(C6099 c6099) {
-        this.f51751 = c6099;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public InterfaceC24930 f51865;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public int f51866;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f51867;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C17707 f51868;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public C17470 f51869;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f51870 = new ArrayDeque();
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public boolean f51871;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f51872;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C13101 f51873;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f51874;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public C16724 f51875;
+
+    public C15978(InterfaceC24930 interfaceC24930, int i, C13101 c13101) {
+        this.f51865 = interfaceC24930;
+        this.f51872 = ((C21750) interfaceC24930).m49307();
+        this.f51867 = i;
+        this.f51873 = c13101;
     }
 }

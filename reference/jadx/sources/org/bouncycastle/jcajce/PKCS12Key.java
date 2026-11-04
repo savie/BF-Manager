@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce;
 
 import org.bouncycastle.crypto.PBEParametersGenerator;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12Key implements PBKDFKey {
     public final char[] password;
     public final boolean useWrongZeroLengthConversion;

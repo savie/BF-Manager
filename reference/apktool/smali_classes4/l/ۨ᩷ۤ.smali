@@ -1,257 +1,219 @@
 .class public final Ll/ۨ᩷ۤ;
-.super Ll/ᩳܺۤ;
-.source "X43L"
+.super Ljava/lang/Object;
+.source "OANW"
+
+# interfaces
+.implements Landroidx/window/sidecar/SidecarInterface$SidecarCallback;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/᩻ܺۤ;
+.field public final ۙ:Landroidx/window/sidecar/SidecarInterface$SidecarCallback;
+
+.field public final ۤ:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field public final ᩴ:Ll/᩹᩷ۤ;
+
+.field public ᩷:Landroidx/window/sidecar/SidecarDeviceState;
+
+.field public final ᩸:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ܺۤ;)V
-    .locals 0
+.method public constructor <init>(Ll/᩹᩷ۤ;Landroidx/window/sidecar/SidecarInterface$SidecarCallback;)V
+    .locals 1
 
-    .line 4899
+    const-string v0, "sidecarAdapter"
+
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 408
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 543
-    iput-object p1, p0, Ll/ۨ᩷ۤ;->ܺ:Ll/᩻ܺۤ;
+    .line 409
+    iput-object p1, p0, Ll/ۨ᩷ۤ;->ᩴ:Ll/᩹᩷ۤ;
+
+    .line 410
+    iput-object p2, p0, Ll/ۨ᩷ۤ;->ۙ:Landroidx/window/sidecar/SidecarInterface$SidecarCallback;
+
+    .line 412
+    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    iput-object p1, p0, Ll/ۨ᩷ۤ;->ۤ:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 422
+    new-instance p1, Ljava/util/WeakHashMap;
+
+    invoke-direct {p1}, Ljava/util/WeakHashMap;-><init>()V
+
+    iput-object p1, p0, Ll/ۨ᩷ۤ;->᩸:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic ۙ(Ljava/lang/Object;Ll/ܽۤۤ;)Ljava/lang/Object;
-    .locals 0
+.method public ۙ(Landroid/os/IBinder;Landroidx/window/sidecar/SidecarWindowLayoutInfo;)V
+    .locals 3
 
-    .line 543
-    check-cast p1, Ll/᩻᩵ۤ;
+    const-string v0, "token"
 
-    const/4 p1, 0x0
+    .line 6
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    const-string v0, "newLayout"
+
+    .line 11
+    invoke-static {p2, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 437
+    iget-object v0, p0, Ll/ۨ᩷ۤ;->ۤ:Ljava/util/concurrent/locks/ReentrantLock;
+
+    monitor-enter v0
+
+    .line 438
+    :try_start_0
+    iget-object v1, p0, Ll/ۨ᩷ۤ;->᩸:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/window/sidecar/SidecarWindowLayoutInfo;
+
+    .line 439
+    iget-object v2, p0, Ll/ۨ᩷ۤ;->ᩴ:Ll/᩹᩷ۤ;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1, p2}, Ll/᩹᩷ۤ;->ۙ(Landroidx/window/sidecar/SidecarWindowLayoutInfo;Landroidx/window/sidecar/SidecarWindowLayoutInfo;)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    .line 440
+    monitor-exit v0
+
+    return-void
+
+    .line 442
+    :cond_0
+    :try_start_1
+    iget-object v1, p0, Ll/ۨ᩷ۤ;->᩸:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/window/sidecar/SidecarWindowLayoutInfo;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 437
+    monitor-exit v0
+
+    .line 444
+    iget-object v0, p0, Ll/ۨ᩷ۤ;->ۙ:Landroidx/window/sidecar/SidecarInterface$SidecarCallback;
+
+    invoke-interface {v0, p1, p2}, Landroidx/window/sidecar/SidecarInterface$SidecarCallback;->onWindowLayoutChanged(Landroid/os/IBinder;Landroidx/window/sidecar/SidecarWindowLayoutInfo;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 437
+    monitor-exit v0
+
+    throw p1
 .end method
 
-.method public final ۙ(Ll/֡ۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public ۙ(Landroidx/window/sidecar/SidecarDeviceState;)V
+    .locals 3
 
-    .line 543
-    check-cast p2, Ll/᩻᩵ۤ;
+    const-string v0, "newDeviceState"
 
-    .line 551
-    iget-object v0, p1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
+    .line 5
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ne v0, p2, :cond_0
+    .line 424
+    iget-object v0, p0, Ll/ۨ᩷ۤ;->ۤ:Ljava/util/concurrent/locks/ReentrantLock;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 553
-    :cond_0
-    iget-object v1, p2, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
+    .line 425
+    :try_start_0
+    iget-object v1, p0, Ll/ۨ᩷ۤ;->ᩴ:Ll/᩹᩷ۤ;
 
-    iget-object v2, p0, Ll/ۨ᩷ۤ;->ܺ:Ll/᩻ܺۤ;
+    iget-object v2, p0, Ll/ۨ᩷ۤ;->᩷:Landroidx/window/sidecar/SidecarDeviceState;
 
-    invoke-virtual {v2, v0, v1}, Ll/᩻ܺۤ;->ܰ(Ll/᩻᩵ۤ;Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    .line 70
+    invoke-static {v2, p1}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v1, 0x0
+    move-result v1
 
-    if-nez v0, :cond_1
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    .line 556
-    :cond_1
-    new-instance v3, Ll/ᩴ᩷۟;
-
-    invoke-direct {v3}, Ll/ᩴ᩷۟;-><init>()V
-
-    .line 557
-    new-instance v4, Ll/ᩴ᩷۟;
-
-    invoke-direct {v4}, Ll/ᩴ᩷۟;-><init>()V
-
-    .line 559
-    :try_start_0
-    invoke-virtual {v2, v0, p1, v3, v4}, Ll/᩻ܺۤ;->ۙ(Ll/ܽۤۤ;Ll/ܽۤۤ;Ll/ᩴ᩷۟;Ll/ᩴ᩷۟;)V
-    :try_end_0
-    .catch Ll/᩺᩷ۤ; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 563
-    iget-object v0, p2, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
-
-    invoke-virtual {v3}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
-
-    move-result-object v3
-
-    invoke-virtual {v4}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v0, v3, v4}, Ll/᩻ܺۤ;->ۙ(Ll/ܽۤۤ;Ll/᩸᩷۟;Ll/᩸᩷۟;)Ll/ܽۤۤ;
-
-    move-result-object v0
-
-    const/4 v3, 0x1
-
-    .line 1071
-    invoke-virtual {v2, v0, p1, v3}, Ll/᩻ܺۤ;->ۨ(Ll/ܽۤۤ;Ll/ܽۤۤ;Z)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    :goto_0
-    return-object v1
-
-    .line 566
-    :cond_2
-    new-instance v1, Ll/ᩴ᩷۟;
-
-    invoke-direct {v1}, Ll/ᩴ᩷۟;-><init>()V
-
-    .line 567
-    iget-object p2, p2, Ll/᩻᩵ۤ;->ۧ:Ll/ܽۤۤ;
-
-    invoke-virtual {p2}, Ll/ܽۤۤ;->᩷()Ll/᩸᩷۟;
-
-    move-result-object p2
-
-    .line 568
-    :goto_1
-    invoke-virtual {p2}, Ll/᩸᩷۟;->ۨ()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    .line 569
-    iget-object v3, p2, Ll/᩸᩷۟;->ܺ:Ljava/lang/Object;
-
-    check-cast v3, Ll/ܽۤۤ;
-
-    invoke-virtual {v0, v3}, Ll/ܽۤۤ;->ۙ(Ll/ܽۤۤ;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget-object v3, p2, Ll/᩸᩷۟;->ܺ:Ljava/lang/Object;
-
-    check-cast v3, Ll/ܽۤۤ;
-
-    invoke-virtual {p1, v3}, Ll/֡ۡۤ;->ۙ(Ll/ܽۤۤ;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    .line 570
-    iget-object v3, p2, Ll/᩸᩷۟;->ܺ:Ljava/lang/Object;
-
-    check-cast v3, Ll/ܽۤۤ;
-
-    invoke-virtual {v1, v3}, Ll/ᩴ᩷۟;->ۙ(Ljava/lang/Object;)V
-
-    .line 568
-    :cond_3
-    iget-object p2, p2, Ll/᩸᩷۟;->᩶:Ll/᩸᩷۟;
+    :cond_0
+    if-nez v2, :cond_1
 
     goto :goto_1
 
-    .line 571
-    :cond_4
-    invoke-virtual {v1}, Ll/ᩴ᩷۟;->ۖ()Z
+    .line 79
+    :cond_1
+    invoke-static {v2}, Ll/ۧ᩷ۤ;->᩷(Landroidx/window/sidecar/SidecarDeviceState;)I
 
-    move-result p2
+    move-result v1
 
-    if-eqz p2, :cond_7
+    .line 80
+    invoke-static {p1}, Ll/ۧ᩷ۤ;->᩷(Landroidx/window/sidecar/SidecarDeviceState;)I
 
-    .line 572
-    invoke-virtual {p1}, Ll/֡ۡۤ;->ۡۙ()Z
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result p1
+    if-ne v1, v2, :cond_2
 
-    if-eqz p1, :cond_5
+    .line 426
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 574
-    invoke-virtual {v2, v0}, Ll/᩻ܺۤ;->ۜ(Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    return-void
 
-    move-result-object p1
+    .line 428
+    :cond_2
+    :goto_1
+    :try_start_1
+    iput-object p1, p0, Ll/ۨ᩷ۤ;->᩷:Landroidx/window/sidecar/SidecarDeviceState;
 
-    return-object p1
+    .line 429
+    iget-object v1, p0, Ll/ۨ᩷ۤ;->ۙ:Landroidx/window/sidecar/SidecarInterface$SidecarCallback;
 
-    .line 577
-    :cond_5
-    invoke-virtual {v1}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
+    invoke-interface {v1, p1}, Landroidx/window/sidecar/SidecarInterface$SidecarCallback;->onDeviceStateChanged(Landroidx/window/sidecar/SidecarDeviceState;)V
 
-    move-result-object p1
+    .line 430
+    sget-object p1, Ll/ۧ۟᩵;->ۙ:Ll/ۧ۟᩵;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 578
-    new-instance p2, Ll/ᩴ᩷۟;
+    .line 424
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {p2}, Ll/ᩴ᩷۟;-><init>()V
+    return-void
 
-    move-object v1, p1
+    :catchall_0
+    move-exception p1
 
-    .line 579
-    :goto_2
-    invoke-virtual {v1}, Ll/᩸᩷۟;->ۨ()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    .line 580
-    new-instance v3, Ll/֡ۤۤ;
-
-    iget-object v4, v2, Ll/᩻ܺۤ;->֨ۙ:Ll/ۘۡۤ;
-
-    iget-object v5, v4, Ll/ۘۡۤ;->ܺۙ:Ll/ܽۤۤ;
-
-    sget-object v6, Ll/ܶᩳۤ;->۫:Ll/ܶᩳۤ;
-
-    iget-object v4, v4, Ll/ۘۡۤ;->ۜ:Ll/᩹᩵ۤ;
-
-    iget-object v7, v1, Ll/᩸᩷۟;->ܺ:Ljava/lang/Object;
-
-    check-cast v7, Ll/᩺ۤۤ;
-
-    invoke-direct {v3, v5, v6, v4, v7}, Ll/֡ۤۤ;-><init>(Ll/ܽۤۤ;Ll/ܶᩳۤ;Ll/֡᩵ۤ;Ll/᩺ۤۤ;)V
-
-    invoke-virtual {p2, v3}, Ll/ᩴ᩷۟;->ۙ(Ljava/lang/Object;)V
-
-    .line 579
-    iget-object v1, v1, Ll/᩸᩷۟;->᩶:Ll/᩸᩷۟;
-
-    goto :goto_2
-
-    .line 583
-    :cond_6
-    invoke-virtual {p2}, Ll/ᩴ᩷۟;->ۚ()Ll/᩸᩷۟;
-
-    move-result-object p2
-
-    invoke-virtual {v2, v0, p1, p2}, Ll/᩻ܺۤ;->ۙ(Ll/ܽۤۤ;Ll/᩸᩷۟;Ll/᩸᩷۟;)Ll/ܽۤۤ;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_7
-    return-object v0
-
-    :catch_0
-    return-object v1
-.end method
-
-.method public final ۙ(Ll/ۛۡۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 543
-    check-cast p2, Ll/᩻᩵ۤ;
-
-    return-object p1
+    throw p1
 .end method

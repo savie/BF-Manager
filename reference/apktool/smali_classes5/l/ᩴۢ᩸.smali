@@ -1,95 +1,79 @@
 .class public final enum Ll/ᩴۢ᩸;
 .super Ljava/lang/Enum;
-.source "S9I7"
-
-# interfaces
-.implements Ll/ܺۢ᩸;
+.source "I6U1"
 
 
 # static fields
 .field public static final enum ֡:Ll/ᩴۢ᩸;
 
-.field public static final enum ۫:Ll/ᩴۢ᩸;
+.field public static final enum ۟:Ll/ᩴۢ᩸;
 
-.field public static final enum ܽ:Ll/ᩴۢ᩸;
+.field public static final synthetic ܰ:[Ll/ᩴۢ᩸;
 
 .field public static final enum ܿ:Ll/ᩴۢ᩸;
 
-.field public static final synthetic ᩶:[Ll/ᩴۢ᩸;
-
-
-# instance fields
-.field public ܺ:J
+.field public static final enum ᩶:Ll/ᩴۢ᩸;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 46
+    .line 890
     new-instance v0, Ll/ᩴۢ᩸;
 
-    const-string v1, "WINDOWS_MINOR_VERSION_0"
+    const-string v1, "SKIPPED"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Ll/ᩴۢ᩸;->֡:Ll/ᩴۢ᩸;
+    sput-object v0, Ll/ᩴۢ᩸;->۟:Ll/ᩴۢ᩸;
 
-    .line 47
     new-instance v0, Ll/ᩴۢ᩸;
 
-    const-string v1, "WINDOWS_MINOR_VERSION_1"
+    const-string v1, "COMPACTED"
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Ll/ᩴۢ᩸;->ܽ:Ll/ᩴۢ᩸;
-
-    .line 48
-    new-instance v0, Ll/ᩴۢ᩸;
-
-    const-string v1, "WINDOWS_MINOR_VERSION_2"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Ll/ᩴۢ᩸;->۫:Ll/ᩴۢ᩸;
-
-    .line 49
-    new-instance v0, Ll/ᩴۢ᩸;
-
-    const-string v1, "WINDOWS_MINOR_VERSION_3"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Ll/ᩴۢ᩸;->ܿ:Ll/ᩴۢ᩸;
 
-    .line 45
+    new-instance v0, Ll/ᩴۢ᩸;
+
+    const-string v1, "LOW_GAIN"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ᩴۢ᩸;->֡:Ll/ᩴۢ᩸;
+
+    new-instance v0, Ll/ᩴۢ᩸;
+
+    const-string v1, "BUDGET_EXHAUSTED"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/ᩴۢ᩸;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ᩴۢ᩸;->᩶:Ll/ᩴۢ᩸;
+
     invoke-static {}, Ll/ᩴۢ᩸;->ۙ()[Ll/ᩴۢ᩸;
 
     move-result-object v0
 
-    sput-object v0, Ll/ᩴۢ᩸;->᩶:[Ll/ᩴۢ᩸;
+    sput-object v0, Ll/ᩴۢ᩸;->ܰ:[Ll/ᩴۢ᩸;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 52
+    .line 890
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    int-to-long p1, p3
-
-    .line 53
-    iput-wide p1, p0, Ll/ᩴۢ᩸;->ܺ:J
 
     return-void
 .end method
@@ -97,7 +81,7 @@
 .method public static valueOf(Ljava/lang/String;)Ll/ᩴۢ᩸;
     .locals 1
 
-    .line 45
+    .line 890
     const-class v0, Ll/ᩴۢ᩸;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,8 +96,8 @@
 .method public static values()[Ll/ᩴۢ᩸;
     .locals 1
 
-    .line 45
-    sget-object v0, Ll/ᩴۢ᩸;->᩶:[Ll/ᩴۢ᩸;
+    .line 890
+    sget-object v0, Ll/ᩴۢ᩸;->ܰ:[Ll/ᩴۢ᩸;
 
     invoke-virtual {v0}, [Ll/ᩴۢ᩸;->clone()Ljava/lang/Object;
 
@@ -124,15 +108,6 @@
     return-object v0
 .end method
 
-.method public static bridge synthetic ۙ(Ll/ᩴۢ᩸;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/ᩴۢ᩸;->ܺ:J
-
-    return-wide v0
-.end method
-
 .method public static synthetic ۙ()[Ll/ᩴۢ᩸;
     .locals 3
 
@@ -140,41 +115,30 @@
 
     new-array v0, v0, [Ll/ᩴۢ᩸;
 
-    .line 45
-    sget-object v1, Ll/ᩴۢ᩸;->֡:Ll/ᩴۢ᩸;
+    .line 890
+    sget-object v1, Ll/ᩴۢ᩸;->۟:Ll/ᩴۢ᩸;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Ll/ᩴۢ᩸;->ܽ:Ll/ᩴۢ᩸;
+    sget-object v1, Ll/ᩴۢ᩸;->ܿ:Ll/ᩴۢ᩸;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Ll/ᩴۢ᩸;->۫:Ll/ᩴۢ᩸;
+    sget-object v1, Ll/ᩴۢ᩸;->֡:Ll/ᩴۢ᩸;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sget-object v1, Ll/ᩴۢ᩸;->ܿ:Ll/ᩴۢ᩸;
+    sget-object v1, Ll/ᩴۢ᩸;->᩶:Ll/ᩴۢ᩸;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
     return-object v0
-.end method
-
-
-# virtual methods
-.method public getValue()J
-    .locals 2
-
-    .line 58
-    iget-wide v0, p0, Ll/ᩴۢ᩸;->ܺ:J
-
-    return-wide v0
 .end method

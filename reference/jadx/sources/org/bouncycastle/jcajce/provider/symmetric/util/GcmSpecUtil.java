@@ -8,14 +8,14 @@ import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.crypto.params.AEADParameters;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.internal.asn1.cms.GCMParameters;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GcmSpecUtil {
     public static final Constructor constructor;
     public static final Class gcmSpecClass;
@@ -112,7 +112,7 @@ public class GcmSpecUtil {
             GCMParameters gCMParameters = GCMParameters.getInstance(aSN1Primitive);
             return (AlgorithmParameterSpec) constructor.newInstance(Integers.valueOf(gCMParameters.getIcvLen() * 8), gCMParameters.getNonce());
         } catch (Exception e) {
-            throw new InvalidParameterSpecException(C8479.m22142(e, new StringBuilder("Construction failed: ")));
+            throw new InvalidParameterSpecException(C16076.m38224(e, new StringBuilder("Construction failed: ")));
         }
     }
 }

@@ -1,23 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬᩹᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: J84Z */
+/* JADX INFO: renamed from: l.۫᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S776 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13412 implements InterfaceC20592 {
+public final class C13412 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC8598 f44372;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f42724;
 
-    public C13412(InterfaceC8598 interfaceC8598) {
-        this.f44372 = interfaceC8598;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f42725;
 
-    @Override // l.InterfaceC20592
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7186 mo5183(C6044 c6044, C11730 c11730) {
-        if (c11730.m29316() == Object.class) {
-            return new C7061(c6044, this.f44372);
-        }
-        return null;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f42726;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f42727;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f42728;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] f42729;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f42730;
+
+    public C13412(int i, String str, String str2, String str3, String str4, String str5, byte[] bArr) {
+        this.f42725 = i;
+        this.f42727 = str;
+        this.f42726 = str2;
+        this.f42728 = str3;
+        this.f42730 = str4;
+        this.f42724 = str5;
+        this.f42729 = bArr;
     }
 }

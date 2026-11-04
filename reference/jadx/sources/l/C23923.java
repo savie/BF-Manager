@@ -1,12 +1,11 @@
 package l;
 
-import java.util.HashSet;
-
-/* JADX INFO: renamed from: l.᩻᩶ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G1JT */
+/* JADX INFO: renamed from: l.᩺֡ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U4HR */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23923 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final HashSet f77497 = new HashSet();
+public final class C23923 extends C3785 {
+    @Override // l.C3785
+    public final String toString() {
+        return C14442.m34865("<![CDATA[", m12293(), "]]>");
+    }
 }

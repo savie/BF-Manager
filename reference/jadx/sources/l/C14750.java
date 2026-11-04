@@ -1,107 +1,55 @@
 package l;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܳ᩶۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: GAXC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14750 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Object[] f48248 = new Object[0];
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Object[] m35367(Collection collection) {
-        int size = collection.size();
-        if (size != 0) {
-            Iterator it = collection.iterator();
-            if (it.hasNext()) {
-                Object[] objArrCopyOf = new Object[size];
-                int i = 0;
-                while (true) {
-                    int i2 = i + 1;
-                    objArrCopyOf[i] = it.next();
-                    if (i2 >= objArrCopyOf.length) {
-                        if (!it.hasNext()) {
-                            return objArrCopyOf;
-                        }
-                        int i3 = ((i2 * 3) + 1) >>> 1;
-                        if (i3 <= i2) {
-                            i3 = 2147483645;
-                            if (i2 >= 2147483645) {
-                                throw new OutOfMemoryError();
-                            }
-                        }
-                        objArrCopyOf = Arrays.copyOf(objArrCopyOf, i3);
-                        C13465.m32967(objArrCopyOf, "copyOf(...)");
-                    } else if (!it.hasNext()) {
-                        Object[] objArrCopyOf2 = Arrays.copyOf(objArrCopyOf, i2);
-                        C13465.m32967(objArrCopyOf2, "copyOf(...)");
-                        return objArrCopyOf2;
-                    }
-                    i = i2;
-                }
-            }
-        }
-        return f48248;
+/* JADX INFO: renamed from: l.ܰܿۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBJ4 */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C14750 extends EnumC15717 {
+    public /* synthetic */ C14750() {
+        this("InTableText", 9);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Object[] m35368(Collection collection, Object[] objArr) {
-        Object[] objArrCopyOf;
-        int size = collection.size();
-        int i = 0;
-        if (size == 0) {
-            if (objArr.length > 0) {
-                objArr[0] = null;
-                return objArr;
+    public C14750(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC15717
+    /* JADX INFO: renamed from: ۙ */
+    public boolean mo2666(AbstractC0802 abstractC0802, C4310 c4310) {
+        if (abstractC0802.f2843 == EnumC9750.Character) {
+            C3785 c3785 = (C3785) abstractC0802;
+            if (c3785.m12293().equals(EnumC15717.f51068)) {
+                c4310.m13755(this);
+                return false;
             }
-        } else {
-            Iterator it = collection.iterator();
-            if (!it.hasNext()) {
-                if (objArr.length > 0) {
-                    objArr[0] = null;
-                }
-            } else {
-                if (size <= objArr.length) {
-                    objArrCopyOf = objArr;
-                } else {
-                    Object objNewInstance = Array.newInstance(objArr.getClass().getComponentType(), size);
-                    C13465.m32963(objNewInstance, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
-                    objArrCopyOf = (Object[]) objNewInstance;
-                }
-                while (true) {
-                    int i2 = i + 1;
-                    objArrCopyOf[i] = it.next();
-                    if (i2 >= objArrCopyOf.length) {
-                        if (!it.hasNext()) {
-                            return objArrCopyOf;
-                        }
-                        int i3 = ((i2 * 3) + 1) >>> 1;
-                        if (i3 <= i2) {
-                            i3 = 2147483645;
-                            if (i2 >= 2147483645) {
-                                throw new OutOfMemoryError();
-                            }
-                        }
-                        objArrCopyOf = Arrays.copyOf(objArrCopyOf, i3);
-                        C13465.m32967(objArrCopyOf, "copyOf(...)");
-                    } else if (!it.hasNext()) {
-                        if (objArrCopyOf == objArr) {
-                            objArr[i2] = null;
-                            return objArr;
-                        }
-                        Object[] objArrCopyOf2 = Arrays.copyOf(objArrCopyOf, i2);
-                        C13465.m32967(objArrCopyOf2, "copyOf(...)");
-                        return objArrCopyOf2;
-                    }
-                    i = i2;
-                }
-            }
+            ((ArrayList) c4310.m13780()).add(c3785.m12293());
+            return true;
         }
-        return objArr;
+        if (((ArrayList) c4310.m13780()).size() > 0) {
+            for (String str : (ArrayList) c4310.m13780()) {
+                if (!EnumC15717.m37585(str)) {
+                    c4310.m13755(this);
+                    if (C0669.m2903(c4310.m20060().m37100(), C17209.f56085)) {
+                        c4310.m13766(true);
+                        C3785 c3786 = new C3785();
+                        c3786.m12294(str);
+                        c4310.m13749(c3786, EnumC15717.f51053);
+                        c4310.m13766(false);
+                    } else {
+                        C3785 c3787 = new C3785();
+                        c3787.m12294(str);
+                        c4310.m13749(c3787, EnumC15717.f51053);
+                    }
+                } else {
+                    C3785 c3788 = new C3785();
+                    c3788.m12294(str);
+                    c4310.m13750(c3788);
+                }
+            }
+            c4310.m13743();
+        }
+        c4310.m13765(c4310.m13788());
+        return c4310.mo13758(abstractC0802);
     }
 }

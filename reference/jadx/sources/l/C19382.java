@@ -1,52 +1,52 @@
 package l;
 
-import android.graphics.Matrix;
-import android.os.SystemClock;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.᩵ۢ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6MQ */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.ᩳ᩹ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y1KK */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C19382 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f62457;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final Comparator f62618 = C2661.comparing(new C18061(3));
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public int f62459;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final Comparator f62619 = C8627.thenComparing(C2661.comparing(new C7620(4)), new C8195(0));
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f62460;
+    public int f62620;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public InterfaceC12471 f62462;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f62621;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f62463;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f62622;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f62464;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C9378 f62623;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f62465;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C9378 f62624;
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public long f62468;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f62625;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public long f62458 = SystemClock.uptimeMillis();
+    public C19382(String str) {
+        C17359.requireNonNull(str);
+        this.f62622 = str;
+    }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final C14444 f62466 = new C14444();
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || C19382.class != obj.getClass()) {
+            return false;
+        }
+        return this.f62622.equals(((C19382) obj).f62622);
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Matrix f62467 = new Matrix();
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final float[] f62461 = new float[9];
-
-    public C19382(long j, int i, long j2) {
-        this.f62457 = i;
-        this.f62463 = j;
-        this.f62468 = j2;
+    public final int hashCode() {
+        return this.f62622.hashCode();
     }
 }

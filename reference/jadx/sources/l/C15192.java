@@ -1,88 +1,57 @@
 package l;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.NavigableMap;
-import java.util.NavigableSet;
-import java.util.SortedSet;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.ܶۧܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 067E */
+/* JADX INFO: renamed from: l.ܳ۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V75H */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C15192 extends C21541 implements NavigableSet {
-    @Override // java.util.NavigableSet
-    public final Object ceiling(Object obj) {
-        return ((NavigableMap) this.f74624).ceilingKey(obj);
+public final class C15192 implements InterfaceC21906 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final long f49594;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long f49595;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final long f49596;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f49597;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final long f49598;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final long f49599;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f49600;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f49601;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f49602;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f49603;
+
+    public C15192(JSONObject jSONObject) {
+        this.f49600 = jSONObject.getString("name", "");
+        this.f49597 = jSONObject.getString("demangledName", "");
+        this.f49601 = jSONObject.getString("library", "");
+        this.f49594 = C21160.m48263(jSONObject, "type", 0L);
+        this.f49599 = C21160.m48263(jSONObject, "numericType", 0L);
+        this.f49598 = C21160.m48263(jSONObject, "vaddr", 0L);
+        this.f49596 = C21160.m48263(jSONObject, "paddr", 0L);
+        this.f49595 = C21160.m48263(jSONObject, "addend", 0L);
+        this.f49602 = jSONObject.getBoolean("additive", false);
+        this.f49603 = jSONObject.getBoolean("ifunc", false);
     }
 
-    @Override // java.util.NavigableSet
-    public final NavigableSet descendingSet() {
-        return ((NavigableMap) this.f74624).descendingKeySet();
-    }
-
-    @Override // java.util.NavigableSet
-    public final Object floor(Object obj) {
-        return ((NavigableMap) this.f74624).floorKey(obj);
-    }
-
-    @Override // java.util.NavigableSet
-    public final NavigableSet headSet(Object obj, boolean z) {
-        return ((NavigableMap) this.f74624).headMap(obj, z).navigableKeySet();
-    }
-
-    @Override // java.util.NavigableSet
-    public final Object higher(Object obj) {
-        return ((NavigableMap) this.f74624).higherKey(obj);
-    }
-
-    @Override // java.util.NavigableSet
-    public final Object lower(Object obj) {
-        return ((NavigableMap) this.f74624).lowerKey(obj);
-    }
-
-    @Override // java.util.NavigableSet
-    public final Object pollFirst() {
-        return C8136.m21446(((NavigableMap) this.f74624).pollFirstEntry());
-    }
-
-    @Override // java.util.NavigableSet
-    public final Object pollLast() {
-        return C8136.m21446(((NavigableMap) this.f74624).pollLastEntry());
-    }
-
-    @Override // java.util.NavigableSet
-    public final NavigableSet subSet(Object obj, boolean z, Object obj2, boolean z2) {
-        return ((NavigableMap) this.f74624).subMap(obj, z, obj2, z2).navigableKeySet();
-    }
-
-    @Override // java.util.NavigableSet
-    public final NavigableSet tailSet(Object obj, boolean z) {
-        return ((NavigableMap) this.f74624).tailMap(obj, z).navigableKeySet();
-    }
-
-    @Override // l.C22953
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Map mo36411() {
-        return (NavigableMap) this.f74624;
-    }
-
-    @Override // java.util.NavigableSet
-    public final Iterator descendingIterator() {
-        return descendingSet().iterator();
-    }
-
-    @Override // java.util.SortedSet, java.util.NavigableSet
-    public final SortedSet subSet(Object obj, Object obj2) {
-        return subSet(obj, true, obj2, false);
-    }
-
-    @Override // java.util.SortedSet, java.util.NavigableSet
-    public final SortedSet headSet(Object obj) {
-        return headSet(obj, false);
-    }
-
-    @Override // java.util.SortedSet, java.util.NavigableSet
-    public final SortedSet tailSet(Object obj) {
-        return tailSet(obj, true);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C15192 m36542(JSONObject jSONObject) {
+        return new C15192(jSONObject);
     }
 }

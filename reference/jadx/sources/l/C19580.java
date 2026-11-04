@@ -1,38 +1,115 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ܽۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 657B */
+/* JADX INFO: renamed from: l.ᩴۙۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F6YU */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19580 extends AbstractC13946 {
+public final class C19580 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63136;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int[] f62903;
+    public static final C6427 f63137;
 
-    @Override // l.AbstractC13946
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo7139() {
-        return this.f62903.length;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63138;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63139;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63140;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63141;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C12392 f63142;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63143;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C16121 f63144;
+
+    static {
+        new C16867("VISUAL_STATE_CALLBACK", "VISUAL_STATE_CALLBACK");
+        new C16867("OFF_SCREEN_PRERASTER", "OFF_SCREEN_PRERASTER");
+        new C23581("SAFE_BROWSING_ENABLE", "SAFE_BROWSING_ENABLE");
+        new C17613("DISABLED_ACTION_MODE_MENU_ITEMS", "DISABLED_ACTION_MODE_MENU_ITEMS");
+        new C3443("START_SAFE_BROWSING", "START_SAFE_BROWSING");
+        new C3443("SAFE_BROWSING_WHITELIST", "SAFE_BROWSING_WHITELIST");
+        new C3443("SAFE_BROWSING_WHITELIST", "SAFE_BROWSING_ALLOWLIST");
+        new C3443("SAFE_BROWSING_ALLOWLIST", "SAFE_BROWSING_WHITELIST");
+        new C3443("SAFE_BROWSING_ALLOWLIST", "SAFE_BROWSING_ALLOWLIST");
+        new C3443("SAFE_BROWSING_PRIVACY_POLICY_URL", "SAFE_BROWSING_PRIVACY_POLICY_URL");
+        new C17613("SERVICE_WORKER_BASIC_USAGE", "SERVICE_WORKER_BASIC_USAGE");
+        new C17613("SERVICE_WORKER_CACHE_MODE", "SERVICE_WORKER_CACHE_MODE");
+        new C17613("SERVICE_WORKER_CONTENT_ACCESS", "SERVICE_WORKER_CONTENT_ACCESS");
+        new C17613("SERVICE_WORKER_FILE_ACCESS", "SERVICE_WORKER_FILE_ACCESS");
+        new C17613("SERVICE_WORKER_BLOCK_NETWORK_LOADS", "SERVICE_WORKER_BLOCK_NETWORK_LOADS");
+        new C17613("SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST", "SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST");
+        new C16867("RECEIVE_WEB_RESOURCE_ERROR", "RECEIVE_WEB_RESOURCE_ERROR");
+        new C16867("RECEIVE_HTTP_ERROR", "RECEIVE_HTTP_ERROR");
+        new C17613("SHOULD_OVERRIDE_WITH_REDIRECTS", "SHOULD_OVERRIDE_WITH_REDIRECTS");
+        new C3443("SAFE_BROWSING_HIT", "SAFE_BROWSING_HIT");
+        new C17613("WEB_RESOURCE_REQUEST_IS_REDIRECT", "WEB_RESOURCE_REQUEST_IS_REDIRECT");
+        new C16867("WEB_RESOURCE_ERROR_GET_DESCRIPTION", "WEB_RESOURCE_ERROR_GET_DESCRIPTION");
+        new C16867("WEB_RESOURCE_ERROR_GET_CODE", "WEB_RESOURCE_ERROR_GET_CODE");
+        new C3443("SAFE_BROWSING_RESPONSE_BACK_TO_SAFETY", "SAFE_BROWSING_RESPONSE_BACK_TO_SAFETY");
+        new C3443("SAFE_BROWSING_RESPONSE_PROCEED", "SAFE_BROWSING_RESPONSE_PROCEED");
+        new C3443("SAFE_BROWSING_RESPONSE_SHOW_INTERSTITIAL", "SAFE_BROWSING_RESPONSE_SHOW_INTERSTITIAL");
+        new C16867("WEB_MESSAGE_PORT_POST_MESSAGE", "WEB_MESSAGE_PORT_POST_MESSAGE");
+        new C16867("WEB_MESSAGE_PORT_CLOSE", "WEB_MESSAGE_PORT_CLOSE");
+        f63138 = new C16121("WEB_MESSAGE_ARRAY_BUFFER", "WEB_MESSAGE_ARRAY_BUFFER");
+        new C16867("WEB_MESSAGE_PORT_SET_MESSAGE_CALLBACK", "WEB_MESSAGE_PORT_SET_MESSAGE_CALLBACK");
+        new C16867("CREATE_WEB_MESSAGE_CHANNEL", "CREATE_WEB_MESSAGE_CHANNEL");
+        new C16867("POST_WEB_MESSAGE", "POST_WEB_MESSAGE");
+        new C16867("WEB_MESSAGE_CALLBACK_ON_MESSAGE", "WEB_MESSAGE_CALLBACK_ON_MESSAGE");
+        new C23581("GET_WEB_VIEW_CLIENT", "GET_WEB_VIEW_CLIENT");
+        new C23581("GET_WEB_CHROME_CLIENT", "GET_WEB_CHROME_CLIENT");
+        new C12392("GET_WEB_VIEW_RENDERER", "GET_WEB_VIEW_RENDERER");
+        new C12392("WEB_VIEW_RENDERER_TERMINATE", "WEB_VIEW_RENDERER_TERMINATE");
+        new C20597("TRACING_CONTROLLER_BASIC_USAGE", "TRACING_CONTROLLER_BASIC_USAGE");
+        new C1206();
+        new C10154();
+        new C10154();
+        new C12392("WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE", "WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE");
+        f63137 = new C21818();
+        new C16121("PROXY_OVERRIDE", "PROXY_OVERRIDE:3");
+        f63140 = new C16121("MULTI_PROCESS", "MULTI_PROCESS_QUERY");
+        f63142 = new C12392("FORCE_DARK", "FORCE_DARK");
+        f63141 = new C16121("FORCE_DARK_STRATEGY", "FORCE_DARK_BEHAVIOR");
+        f63136 = new C16121("WEB_MESSAGE_LISTENER", "WEB_MESSAGE_LISTENER");
+        f63144 = new C16121("DOCUMENT_START_SCRIPT", "DOCUMENT_START_SCRIPT:1");
+        new C16121("PROXY_OVERRIDE_REVERSE_BYPASS", "PROXY_OVERRIDE_REVERSE_BYPASS");
+        new C16121("GET_VARIATIONS_HEADER", "GET_VARIATIONS_HEADER");
+        new C16121("ENTERPRISE_AUTHENTICATION_APP_LINK_POLICY", "ENTERPRISE_AUTHENTICATION_APP_LINK_POLICY");
+        new C16121("GET_COOKIE_INFO", "GET_COOKIE_INFO");
+        new C16121("REQUESTED_WITH_HEADER_ALLOW_LIST", "REQUESTED_WITH_HEADER_ALLOW_LIST");
+        new C16121("USER_AGENT_METADATA", "USER_AGENT_METADATA");
+        new C10629("MULTI_PROFILE", "MULTI_PROFILE");
+        new C16121("ATTRIBUTION_REGISTRATION_BEHAVIOR", "ATTRIBUTION_BEHAVIOR");
+        new C16121("WEBVIEW_MEDIA_INTEGRITY_API_STATUS", "WEBVIEW_INTEGRITY_API_STATUS");
+        new C16121("MUTE_AUDIO", "MUTE_AUDIO");
+        new C16121("WEB_AUTHENTICATION", "WEB_AUTHENTICATION");
+        new C16121("SPECULATIVE_LOADING_STATUS", "SPECULATIVE_LOADING");
+        new C16121("BACK_FORWARD_CACHE", "BACK_FORWARD_CACHE");
+        f63139 = new C16121("DELETE_BROWSING_DATA", "WEB_STORAGE_DELETE_BROWSING_DATA");
+        new C22564("PREFETCH_URL_V4", "PREFETCH_URL_V4");
+        new C16121("IMPLEMENTATION_ONLY_FEATURE", "ASYNC_WEBVIEW_STARTUP");
+        new C16121("DEFAULT_TRAFFICSTATS_TAGGING", "DEFAULT_TRAFFICSTATS_TAGGING");
+        new C16121("PRERENDER_URL_V2", "PRERENDER_URL_V2");
+        new C16121("SPECULATIVE_LOADING_CONFIG_V2", "SPECULATIVE_LOADING_CONFIG_V2");
+        new C16121("SAVE_STATE", "SAVE_STATE");
+        new C16121("WEB_VIEW_NAVIGATION_CLIENT_BASIC_USAGE", "WEB_VIEW_NAVIGATION_CLIENT_BASIC_USAGE");
+        f63143 = new C16121("CACHE_PROVIDER", "PROVIDER_WEAKLY_REF_WEBVIEW");
+        new C16121("PAYMENT_REQUEST", "PAYMENT_REQUEST");
+        new C16121("WEBVIEW_BUILDER", "WEBVIEW_BUILDER");
     }
 
-    @Override // l.AbstractC13946
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo7137() {
-        return DialogInterfaceOnDismissListenerC20991.f68353.length;
-    }
-
-    @Override // l.AbstractC13946
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo7140(int i, int i2) {
-        return this.f62903[i] == DialogInterfaceOnDismissListenerC20991.f68353[i2];
-    }
-
-    @Override // l.AbstractC13946
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo7138(int i, int i2) {
-        return this.f62903[i] == DialogInterfaceOnDismissListenerC20991.f68353[i2];
-    }
-
-    public C19580(int[] iArr) {
-        this.f62903 = iArr;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static UnsupportedOperationException m45180() {
+        return new UnsupportedOperationException("This method is not supported by the current version of the framework and the current WebView APK");
     }
 }

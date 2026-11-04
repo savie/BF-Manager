@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final ۨ:Lcom/amazonaws/logging/Log;
+.field public static final ۤ:Lcom/amazonaws/logging/Log;
 
-.field public static final synthetic ܰ:I
+.field public static final synthetic ᩷:I
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     .locals 1
 
     .line 141
-    sget-object v0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
     return-object v0
 .end method
@@ -137,7 +137,7 @@
     const-string p1, "UTF-8"
 
     .line 132
-    invoke-static {p0, p1}, Ll/۫ۤᩴ;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Ll/ۤ۬᩹;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
@@ -159,7 +159,7 @@
     return-object p0
 .end method
 
-.method public static ۨ(Ljava/lang/String;)J
+.method public static ۤ(Ljava/lang/String;)J
     .locals 3
 
     .line 322
@@ -192,16 +192,16 @@
 
     move-result-object p0
 
-    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
-    invoke-interface {v1, p0, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, p0, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 
     const-wide/16 v0, -0x1
 
     return-wide v0
 .end method
 
-.method public static ܰ(Ljava/lang/String;)V
+.method public static ᩷(Ljava/lang/String;)V
     .locals 3
 
     .line 303
@@ -232,9 +232,9 @@
 
     move-result-object p0
 
-    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
-    invoke-interface {v1, p0, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, p0, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
 .end method
@@ -250,7 +250,7 @@
     invoke-direct {v0, p2}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$ListBucketHandler;-><init>(Z)V
 
     .line 216
-    sget-object p2, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object p2, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p2}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -273,7 +273,7 @@
 
     move-result-object v1
 
-    invoke-interface {p2, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p2, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 229
     :cond_0
@@ -366,7 +366,7 @@
     move-exception p1
 
     .line 258
-    invoke-interface {p2}, Lcom/amazonaws/logging/Log;->ܰ()Z
+    invoke-interface {p2}, Lcom/amazonaws/logging/Log;->᩷()Z
 
     move-result v1
 
@@ -375,23 +375,17 @@
     const-string v1, "Unable to close response InputStream after failure sanitizing XML document"
 
     .line 259
-    invoke-interface {p2, v1, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {p2, v1, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 264
     :cond_2
     :goto_1
     new-instance p1, Lcom/amazonaws/AmazonClientException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string p2, "Failed to sanitize XML document destined for handler "
 
-    const-string v1, "Failed to sanitize XML document destined for handler "
-
-    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 266
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 0
+    invoke-static {v2, p2}, Ll/᩻ۢ᩹;->ۙ(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -414,7 +408,7 @@
     .line 182
     iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۙ:Lorg/xml/sax/XMLReader;
 
-    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۤ:Lcom/amazonaws/logging/Log;
 
     const-string v2, "Parsing XML response document with handler: "
 
@@ -440,7 +434,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 186
     :cond_0
@@ -487,7 +481,7 @@
     move-exception p2
 
     .line 199
-    invoke-interface {v1}, Lcom/amazonaws/logging/Log;->ܰ()Z
+    invoke-interface {v1}, Lcom/amazonaws/logging/Log;->᩷()Z
 
     move-result v2
 
@@ -496,7 +490,7 @@
     const-string v2, "Unable to close response InputStream up after XML parse failure"
 
     .line 200
-    invoke-interface {v1, v2, p2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, v2, p2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 203
     :cond_1

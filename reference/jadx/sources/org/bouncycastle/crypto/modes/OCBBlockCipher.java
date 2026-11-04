@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.modes;
 
 import java.util.Vector;
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
@@ -14,7 +14,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.Longs;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OCBBlockCipher implements AEADBlockCipher {
     public static final int BLOCK_SIZE = 16;
     public byte[] Checksum;
@@ -400,7 +400,7 @@ public class OCBBlockCipher implements AEADBlockCipher {
             this.initialAssociatedText = aEADParameters.getAssociatedText();
             int macSize = aEADParameters.getMacSize();
             if (macSize < 64 || macSize > 128 || macSize % 8 != 0) {
-                throw new IllegalArgumentException(C8479.m22141(macSize, "Invalid value for MAC size: "));
+                throw new IllegalArgumentException(C13645.m33382(macSize, "Invalid value for MAC size: "));
             }
             this.macSize = macSize / 8;
             key = aEADParameters.getKey();

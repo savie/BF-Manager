@@ -1,32 +1,48 @@
 package l;
 
-import java.util.function.IntFunction;
-import java.util.function.IntPredicate;
-
-/* JADX INFO: renamed from: l.֨᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֨᩵᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: H32 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1406 extends AbstractC12808 {
-    public final /* synthetic */ IntPredicate s;
+public final class C1406 extends AbstractC8622 {
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C9608 f4982;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1406(AbstractC23392 abstractC23392, int i, IntPredicate intPredicate) {
-        super(abstractC23392, i);
-        this.s = intPredicate;
+    public C1406(C9608 c9608, int i) {
+        super(i);
+        this.f4982 = c9608;
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC20693 o0(AbstractC5752 abstractC5752, InterfaceC20693 interfaceC20693) {
-        return EnumC2970.ORDERED.s(abstractC5752.m) ? n0(abstractC5752, interfaceC20693, new C1040(25)).spliterator() : new C9563((InterfaceC18576) abstractC5752.h0(interfaceC20693), this.s);
+    @Override // l.AbstractC2656
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final float mo5142(int i) {
+        C9608 c9608 = this.f4982;
+        return c9608.f31090.getFloat(c9608.f31088 + i);
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC8616 n0(AbstractC22686 abstractC22686, InterfaceC20693 interfaceC20693, IntFunction intFunction) {
-        return (InterfaceC8616) new C15269(this, abstractC22686, interfaceC20693, intFunction).invoke();
+    @Override // l.AbstractC8622
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo5140(float f, int i) {
+        this.f4982.mo25096(f, i);
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC19171 q0(int i, InterfaceC19171 interfaceC19171) {
-        return new C23488(this, interfaceC19171);
+    @Override // l.AbstractC8622
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo5143(float f, int i) {
+        this.f4982.mo25091(f, i);
+    }
+
+    @Override // l.AbstractC2656
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo5141(int i) {
+        this.f4982.mo25095(i);
+    }
+
+    @Override // l.AbstractC2656
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo5139() {
+        C9608 c9608 = this.f4982;
+        return c9608.f31089 - c9608.f31088;
     }
 }

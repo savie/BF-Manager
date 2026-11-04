@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static ֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+.field public static final ۤ:Ljava/util/Map;
 
-.field public static final ۖ:Lcom/amazonaws/logging/Log;
+.field public static ۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
-.field public static final ۚ:Ljava/util/HashSet;
+.field public static ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
-.field public static final ۨ:Ljava/util/Map;
+.field public static final ᩴ:Ljava/util/HashSet;
 
-.field public static ᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+.field public static final ᩸:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
 .field public final ۙ:Landroid/os/Handler;
 
-.field public final ܰ:Ll/ܰۧᩴ;
+.field public final ᩷:Ll/ܽ֫ۗ;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     .line 48
     new-instance v0, Ljava/util/HashSet;
@@ -41,25 +41,25 @@
 
     new-array v1, v1, [Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۧ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۖ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     const/4 v3, 0x1
 
     aput-object v2, v1, v3
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۢ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ۜ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     const/4 v3, 0x2
 
     aput-object v2, v1, v3
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->۠:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     const/4 v3, 0x3
 
@@ -72,14 +72,14 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۚ:Ljava/util/HashSet;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ᩴ:Ljava/util/HashSet;
 
     .line 57
     new-instance v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$1;
 
     invoke-direct {v0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$1;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۨ:Ljava/util/Map;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۤ:Ljava/util/Map;
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 99
-    sput-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sput-object p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     .line 101
     new-instance p1, Landroid/os/Handler;
@@ -105,11 +105,11 @@
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۙ:Landroid/os/Handler;
 
     .line 102
-    new-instance p1, Ll/ܰۧᩴ;
+    new-instance p1, Ll/ܽ֫ۗ;
 
-    invoke-direct {p1}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {p1}, Ll/ܽ֫ۗ;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     .line 112
     :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     if-nez v1, :cond_0
 
@@ -134,18 +134,18 @@
 
     invoke-direct {v1, p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;-><init>(Landroid/content/Context;)V
 
-    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sput-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     .line 114
     new-instance p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     invoke-direct {p0, v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;-><init>(Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;)V
 
-    sput-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    sput-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
 
     .line 116
     :cond_0
-    sget-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->֨:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
+    sget-object p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->۫:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -164,11 +164,11 @@
     throw p0
 .end method
 
-.method public static synthetic ܰ()Lcom/amazonaws/logging/Log;
+.method public static synthetic ᩷()Lcom/amazonaws/logging/Log;
     .locals 1
 
     .line 43
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     return-object v0
 .end method
@@ -185,13 +185,13 @@
 
     .line 144
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -224,9 +224,9 @@
 
     .line 125
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
-    invoke-static {v1}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
     :try_end_0
@@ -259,13 +259,13 @@
 
     .line 263
     :try_start_0
-    iget-object v0, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iget-object v0, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -276,12 +276,12 @@
     move-wide/from16 v9, p2
 
     .line 265
-    iput-wide v9, v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܰ:J
+    iput-wide v9, v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩷:J
 
     move-wide/from16 v11, p4
 
     .line 266
-    iput-wide v11, v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۨ:J
+    iput-wide v11, v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ۤ:J
 
     goto :goto_0
 
@@ -292,7 +292,7 @@
 
     .line 271
     :goto_0
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -310,7 +310,7 @@
     .line 278
     :cond_1
     :try_start_1
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۨ:Ljava/util/Map;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۤ:Ljava/util/Map;
 
     move-object/from16 v16, v0
 
@@ -324,9 +324,9 @@
 
     move-result-object v2
 
-    check-cast v0, Ll/ܰۧᩴ;
+    check-cast v0, Ll/ܽ֫ۗ;
 
-    invoke-virtual {v0, v2}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -442,20 +442,20 @@
 
     .line 195
     :try_start_0
-    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۚ:Ljava/util/HashSet;
+    sget-object v3, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ᩴ:Ljava/util/HashSet;
 
     invoke-virtual {v3, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     .line 196
-    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -464,7 +464,7 @@
     if-nez v4, :cond_0
 
     .line 199
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -475,7 +475,7 @@
     if-nez v1, :cond_1
 
     .line 200
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -487,13 +487,13 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 203
     :cond_0
-    iget-object v2, v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iget-object v2, v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {p2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -502,10 +502,10 @@
     or-int/2addr v3, v2
 
     .line 204
-    iput-object p2, v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܽ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    iput-object p2, v4, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     .line 206
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -516,7 +516,7 @@
     if-nez v2, :cond_1
 
     .line 207
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -528,7 +528,7 @@
 
     move-result-object v1
 
-    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -544,7 +544,7 @@
     .line 217
     :cond_2
     :try_start_1
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->֡:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;->ܿ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
 
     invoke-virtual {v1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -553,11 +553,11 @@
     if-eqz v1, :cond_3
 
     .line 218
-    invoke-virtual {p0, p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۨ(I)V
+    invoke-virtual {p0, p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۤ(I)V
 
     .line 221
     :cond_3
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۨ:Ljava/util/Map;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۤ:Ljava/util/Map;
 
     move-object v1, v2
 
@@ -571,9 +571,9 @@
 
     move-result-object v3
 
-    check-cast v2, Ll/ܰۧᩴ;
+    check-cast v2, Ll/ܽ֫ۗ;
 
-    invoke-virtual {v2, v3}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -665,7 +665,7 @@
     .locals 5
 
     .line 305
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۨ:Ljava/util/Map;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۤ:Ljava/util/Map;
 
     move-object v0, v1
 
@@ -677,9 +677,9 @@
 
     move-result-object v2
 
-    check-cast v1, Ll/ܰۧᩴ;
+    check-cast v1, Ll/ܽ֫ۗ;
 
-    invoke-virtual {v1, v2}, Ll/ܰۧᩴ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -760,15 +760,15 @@
 
     .line 134
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܰ:Ll/ܰۧᩴ;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩷:Ll/ܽ֫ۗ;
 
-    iget v2, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ᩴ:I
+    iget v2, p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, p1}, Ll/ܰۧᩴ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, p1}, Ll/ܽ֫ۗ;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -788,7 +788,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized ۨ(I)V
+.method public final declared-synchronized ۤ(I)V
     .locals 4
 
     move-object v0, p0
@@ -798,18 +798,18 @@
 
     .line 166
     :try_start_0
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->ۖ(I)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
+    invoke-static {p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;->᩸(I)Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 168
-    iget-object v1, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->᩹:Ljava/lang/String;
+    iget-object v1, v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferRecord;->ܳ:Ljava/lang/String;
 
     .line 169
     new-instance v2, Ljava/io/File;
@@ -842,10 +842,10 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->ܰ(Ljava/lang/Integer;)V
+    invoke-static {v1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/S3ClientReference;->᩷(Ljava/lang/Integer;)V
 
     .line 175
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩹:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ܳ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBUtil;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -869,7 +869,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized ܰ(I)Lcom/amazonaws/event/ProgressListener;
+.method public final declared-synchronized ᩷(I)Lcom/amazonaws/event/ProgressListener;
     .locals 5
 
     const-string v1, "Creating a new progress listener for transfer: "
@@ -892,7 +892,7 @@
     if-eqz v4, :cond_0
 
     .line 430
-    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -904,7 +904,7 @@
 
     move-result-object p1
 
-    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 431
     new-instance p1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater$TransferProgressListener;
@@ -920,7 +920,7 @@
     .line 427
     :cond_0
     :try_start_1
-    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferStatusUpdater;->᩸:Lcom/amazonaws/logging/Log;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -932,7 +932,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v3}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;)V
+    invoke-interface {v1, v3}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;)V
 
     .line 428
     new-instance v1, Ljava/lang/IllegalArgumentException;

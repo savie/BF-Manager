@@ -1,216 +1,110 @@
 package l;
 
-import java.io.Closeable;
-import java.io.DataOutput;
-import java.io.Flushable;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩴۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SAOU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18737 implements DataOutput, Flushable, Closeable {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f60785;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public HashMap f60786 = new HashMap();
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final byte[] f60787;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final OutputStream f60788;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f60789;
-
-    public C18737(OutputStream outputStream) {
-        C13638.requireNonNull(outputStream);
-        this.f60788 = outputStream;
-        this.f60787 = new byte[32768];
-        this.f60789 = 32768;
-    }
+/* JADX INFO: renamed from: l.ᩳ֨᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: T57T */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18737 extends C23174 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m43289() throws IOException {
-        int i = this.f60785;
-        if (i > 0) {
-            this.f60788.write(this.f60787, 0, i);
-            this.f60785 = 0;
-        }
+    public C3168 f60895;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C18499 f60896 = new C18499();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC8036 f60897;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0838 f60898;
+
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1496(C4197 c4197) {
     }
 
-    @Override // java.io.Flushable
-    public final void flush() throws IOException {
-        m43289();
-        this.f60788.flush();
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1503(C6633 c6633) {
     }
 
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f60788.close();
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1505(C7926 c7926) {
     }
 
-    @Override // java.io.DataOutput
-    public final void write(int i) throws IOException {
-        writeByte(i);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1518(C16327 c16327) {
     }
 
-    @Override // java.io.DataOutput
-    public final void write(byte[] bArr) throws IOException {
-        write(bArr, 0, bArr.length);
-    }
-
-    @Override // java.io.DataOutput
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        int i3 = this.f60789;
-        if (i3 < i2) {
-            m43289();
-            this.f60788.write(bArr, i, i2);
-        } else {
-            if (i3 - this.f60785 < i2) {
-                m43289();
+    @Override // l.C23174
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo5474(AbstractC8036 abstractC8036) {
+        if (abstractC8036 != null) {
+            for (AbstractC7550 abstractC7550 : this.f60898.f3150) {
+                if (abstractC7550.f24903.f3156.contains(abstractC7550.f24902) && abstractC8036.m21911(abstractC7550.f24904) && abstractC7550.mo12357(abstractC8036)) {
+                    Iterator it = abstractC7550.mo12358(abstractC8036).iterator();
+                    while (it.hasNext()) {
+                        this.f60896.m43089(new C0092(this.f60898, this.f60897, abstractC8036, (AbstractC8036) it.next(), abstractC7550, this.f60895));
+                    }
+                    break;
+                }
             }
-            System.arraycopy(bArr, i, this.f60787, this.f60785, i2);
-            this.f60785 += i2;
         }
+        super.mo5474(abstractC8036);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeUTF(String str) throws IOException {
-        if (this.f60789 - this.f60785 < str.length() + 2) {
-            m43289();
-        }
-        byte[] bytes = str.getBytes(StandardCharsets.UTF_8);
-        if (bytes.length > 65535) {
-            throw new IOException("Modified UTF-8 length too large: " + bytes.length);
-        }
-        writeShort(bytes.length);
-        write(bytes, 0, bytes.length);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1507(C8671 c8671) {
+        mo5474(c8671.f28314);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43290(String str) throws IOException {
-        HashMap map = this.f60786;
-        Short sh = (Short) map.get(str);
-        if (sh != null) {
-            writeShort(sh.shortValue());
-            return;
-        }
-        writeShort(65535);
-        writeUTF(str);
-        map.put(str, Short.valueOf((short) map.size()));
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1502(C6545 c6545) {
+        mo5474(c6545.f21979);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeBoolean(boolean z) throws IOException {
-        writeByte(z ? 1 : 0);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1522(C20057 c20057) {
+        mo5474(c20057.f64458);
+        m52092(c20057.f64455);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeByte(int i) throws IOException {
-        if (this.f60789 - this.f60785 < 1) {
-            m43289();
-        }
-        int i2 = this.f60785;
-        this.f60785 = i2 + 1;
-        this.f60787[i2] = (byte) (i & 255);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1504(C7180 c7180) {
+        mo5474(c7180.f23711);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeShort(int i) throws IOException {
-        if (this.f60789 - this.f60785 < 2) {
-            m43289();
-        }
-        int i2 = this.f60785;
-        int i3 = i2 + 1;
-        this.f60785 = i3;
-        byte[] bArr = this.f60787;
-        bArr[i2] = (byte) ((i >> 8) & 255);
-        this.f60785 = i2 + 2;
-        bArr[i3] = (byte) (i & 255);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1517(C15493 c15493) {
+        mo5474(c15493.f50422);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeChar(int i) throws IOException {
-        writeShort((short) i);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1511(C11764 c11764) {
+        mo5474(c11764.f38022);
+        m52092(c11764.f38025);
+        mo5474(c11764.f38024);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeInt(int i) throws IOException {
-        if (this.f60789 - this.f60785 < 4) {
-            m43289();
-        }
-        int i2 = this.f60785;
-        int i3 = i2 + 1;
-        this.f60785 = i3;
-        byte[] bArr = this.f60787;
-        bArr[i2] = (byte) ((i >> 24) & 255);
-        int i4 = i2 + 2;
-        this.f60785 = i4;
-        bArr[i3] = (byte) ((i >> 16) & 255);
-        int i5 = i2 + 3;
-        this.f60785 = i5;
-        bArr[i4] = (byte) ((i >> 8) & 255);
-        this.f60785 = i2 + 4;
-        bArr[i5] = (byte) (i & 255);
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1492(C2158 c2158) {
+        mo5474(c2158.f7114);
     }
 
-    @Override // java.io.DataOutput
-    public final void writeLong(long j) throws IOException {
-        if (this.f60789 - this.f60785 < 8) {
-            m43289();
-        }
-        int i = (int) (j >> 32);
-        int i2 = this.f60785;
-        int i3 = i2 + 1;
-        this.f60785 = i3;
-        byte[] bArr = this.f60787;
-        bArr[i2] = (byte) ((i >> 24) & 255);
-        int i4 = i2 + 2;
-        this.f60785 = i4;
-        bArr[i3] = (byte) ((i >> 16) & 255);
-        int i5 = i2 + 3;
-        this.f60785 = i5;
-        bArr[i4] = (byte) ((i >> 8) & 255);
-        int i6 = i2 + 4;
-        this.f60785 = i6;
-        bArr[i5] = (byte) (i & 255);
-        int i7 = (int) j;
-        int i8 = i2 + 5;
-        this.f60785 = i8;
-        bArr[i6] = (byte) ((i7 >> 24) & 255);
-        int i9 = i2 + 6;
-        this.f60785 = i9;
-        bArr[i8] = (byte) ((i7 >> 16) & 255);
-        int i10 = i2 + 7;
-        this.f60785 = i10;
-        bArr[i9] = (byte) ((i7 >> 8) & 255);
-        this.f60785 = i2 + 8;
-        bArr[i10] = (byte) (i7 & 255);
-    }
-
-    @Override // java.io.DataOutput
-    public final void writeFloat(float f) throws IOException {
-        writeInt(Float.floatToIntBits(f));
-    }
-
-    @Override // java.io.DataOutput
-    public final void writeDouble(double d) throws IOException {
-        writeLong(Double.doubleToLongBits(d));
-    }
-
-    @Override // java.io.DataOutput
-    public final void writeBytes(String str) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.io.DataOutput
-    public final void writeChars(String str) {
-        throw new UnsupportedOperationException();
+    public C18737(C0838 c0838, AbstractC8036 abstractC8036, C3168 c3168) {
+        this.f60898 = c0838;
+        this.f60897 = abstractC8036;
+        c0838.f3155.getClass();
+        this.f60895 = C0310.m1922(c3168);
     }
 }

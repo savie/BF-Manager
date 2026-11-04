@@ -2,8 +2,8 @@ package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
 import com.tencent.mm.opensdk.utils.Log;
-import l.C12441;
-import l.C23234;
+import l.C18011;
+import l.C22783;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WXStateSceneDataObject implements SendMessageToWX.IWXSceneDataObject {
@@ -88,7 +88,7 @@ public class WXStateSceneDataObject implements SendMessageToWX.IWXSceneDataObjec
                 this.stateJumpInfo = iWXStateJumpInfo;
                 iWXStateJumpInfo.unserialize(bundle);
             } catch (Exception e) {
-                C23234.m51271(e, C12441.m30914("get WXSceneDataObject from bundle failed: unknown ident ", string, ", ex = "), TAG);
+                C18011.m41991(e, C22783.m51387("get WXSceneDataObject from bundle failed: unknown ident ", string, ", ex = "), TAG);
             }
         }
     }

@@ -1,69 +1,66 @@
-.class public final synthetic Ll/֨ܺᩴ;
+.class public final Ll/֨ܺᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ll/۠۟ᩴ;
+.source "O700"
 
 
 # instance fields
-.field public final synthetic a:Ljava/nio/file/WatchEvent$Modifier;
+.field public final ۙ:I
+
+.field public final ۤ:Ll/֨ܶᩴ;
+
+.field public final ᩴ:Ll/ᩳ۬᩸;
+
+.field public final ᩷:Ll/᩵ܶᩴ;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/nio/file/WatchEvent$Modifier;)V
+.method public constructor <init>(Ll/ᩳ۬᩸;Ll/᩵ܶᩴ;Ll/֨ܶᩴ;)V
     .locals 0
 
+    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֨ܺᩴ;->a:Ljava/nio/file/WatchEvent$Modifier;
+    .line 85
+    iput-object p1, p0, Ll/֨ܺᩴ;->ᩴ:Ll/ᩳ۬᩸;
 
-    return-void
-.end method
+    .line 86
+    iput-object p2, p0, Ll/֨ܺᩴ;->᩷:Ll/᩵ܶᩴ;
 
+    .line 87
+    iput-object p3, p0, Ll/֨ܺᩴ;->ۤ:Ll/֨ܶᩴ;
 
-# virtual methods
-.method public final synthetic equals(Ljava/lang/Object;)Z
-    .locals 2
+    .line 88
+    invoke-interface {p1}, Ll/ۡ᩶᩸;->ۛ᩷()I
 
-    iget-object v0, p0, Ll/֨ܺᩴ;->a:Ljava/nio/file/WatchEvent$Modifier;
+    move-result p2
 
-    instance-of v1, p1, Ll/֨ܺᩴ;
+    iput p2, p0, Ll/֨ܺᩴ;->ۙ:I
 
-    if-eqz v1, :cond_0
-
-    check-cast p1, Ll/֨ܺᩴ;
-
-    iget-object p1, p1, Ll/֨ܺᩴ;->a:Ljava/nio/file/WatchEvent$Modifier;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 89
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
-    return p1
-.end method
+    iput p1, p0, Ll/֨ܺᩴ;->᩸:I
 
-.method public final synthetic hashCode()I
-    .locals 1
+    .line 90
+    invoke-virtual {p3}, Ll/֨ܶᩴ;->ۙ()I
 
-    iget-object v0, p0, Ll/֨ܺᩴ;->a:Ljava/nio/file/WatchEvent$Modifier;
+    move-result p2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    if-ne p2, p1, :cond_0
 
-    move-result v0
+    return-void
 
-    return v0
-.end method
+    .line 91
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-.method public final synthetic name()Ljava/lang/String;
-    .locals 1
+    const-string p2, "Line background store length differs from text"
 
-    iget-object v0, p0, Ll/֨ܺᩴ;->a:Ljava/nio/file/WatchEvent$Modifier;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Ljava/nio/file/WatchEvent$Modifier;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

@@ -1,95 +1,142 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
+import android.os.SystemClock;
+import com.alipay.sdk.m.u0.c;
 
-/* JADX INFO: renamed from: l.ۧ۬ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O1JS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11013 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ۤܽ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: OBMG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11013 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22032 f37444;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static String f34776;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14500 f37445;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static volatile C11013 f34777;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f37446;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static Handler f34778;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC5677 f37447;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static Context f34779;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C1777 f37448;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public static String f34780;
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static HandlerThread f34781;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static Object f34782 = new Object();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static C22948 f34783;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static volatile C2697 f34784;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static boolean f34785;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C11013 m27873(Context context) {
+        if (f34777 == null) {
+            synchronized (C11013.class) {
+                f34779 = context.getApplicationContext();
+                f34777 = new C11013();
+            }
+        }
+        if (f34784 == null) {
+            synchronized (C11013.class) {
+                f34779 = context.getApplicationContext();
+                HandlerThread handlerThread = new HandlerThread("SqlWorkThread");
+                f34781 = handlerThread;
+                handlerThread.start();
+                f34778 = new HandlerC22202(f34781.getLooper());
+                f34784 = new C2697(f34779);
+                m27877();
+            }
+        }
+        return f34777;
     }
 
-    public C11013(C22032 c22032, ActivityC5677 activityC5677, boolean z, C14500 c14500) {
-        this.f37444 = c22032;
-        this.f37447 = activityC5677;
-        this.f37446 = z;
-        this.f37445 = c14500;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m27876() {
+        return f34785;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        C1777 c1777 = new C1777(this.f37447);
-        c1777.m5837(R.string.MT_Protector);
-        c1777.m5832(C16737.m39264(R.string.MT_Protector, 0));
-        c1777.mo5828((Runnable) null);
-        c1777.mo5843();
-        this.f37448 = c1777;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m27879() {
+        if (!f34785) {
+            return null;
+        }
+        String str = f34780;
+        if (str != null) {
+            return str;
+        }
+        m27874(0);
+        if (f34783 == null) {
+            Context context = f34779;
+            f34783 = new C22948(f34777, 0);
+            context.getContentResolver().registerContentObserver(Uri.parse("content://com.vivo.vms.IdProvider/IdentifierId/OAID"), true, f34783);
+        }
+        return f34780;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        C6073 c6073 = new C6073(this);
-        C22032 c22032 = this.f37444;
-        C14293 c14293 = new C14293(c22032.f71407);
-        boolean z = this.f37446;
-        C14500 c14500 = this.f37445;
-        if (z) {
-            int i = c14500.f47500;
-            if (i == 0) {
-                C23672.m52122(c22032.f71407, c14500.f47502, c6073);
-                return;
-            } else if (i == 1) {
-                C23672.m52126(c22032.f71407, c14293, c14500.f47502, c14500.f47498, c14500.f47501, c6073);
-                return;
-            } else {
-                if (i != 2) {
-                    return;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m27874(int i) {
+        Object obj = f34782;
+        synchronized (obj) {
+            Message messageObtainMessage = f34778.obtainMessage();
+            messageObtainMessage.what = 11;
+            Bundle bundle = new Bundle();
+            bundle.putInt("type", i);
+            if (i == 1 || i == 2) {
+                bundle.putString(c.d, null);
+            }
+            messageObtainMessage.setData(bundle);
+            f34778.sendMessage(messageObtainMessage);
+            long jUptimeMillis = SystemClock.uptimeMillis();
+            try {
+                obj.wait(2000L);
+            } catch (InterruptedException unused) {
+            }
+            if (SystemClock.uptimeMillis() - jUptimeMillis < 2000) {
+                if (i == 0) {
+                    f34780 = f34776;
+                    f34776 = null;
+                } else if (i == 1) {
+                    if (f34776 != null) {
+                        f34776 = null;
+                    }
+                } else {
+                    if (i != 2) {
+                        if (i != 4) {
+                        }
+                    } else if (f34776 != null) {
+                        f34776 = null;
+                    }
+                    f34776 = null;
                 }
-                C23672.m52124(c22032.f71407, c14293, c14500.f47502, c14500.f47498, c14500.f47499, c6073);
-                return;
             }
-        }
-        int i2 = c14500.f47500;
-        if (i2 == 0) {
-            C23672.m52133(c22032.f71407, c14500.f47502, c6073);
-        } else {
-            if (i2 != 1) {
-                return;
-            }
-            C23672.m52125(c22032.f71407, c14293, c14500.f47502, c14500.f47498, c6073);
         }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f37447.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f37448.m5825();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m27877() {
+        String str;
+        try {
+            Class<?> cls = Class.forName("android.os.SystemProperties");
+            str = (String) cls.getMethod("get", String.class, String.class).invoke(cls, c.c, "unknown");
+        } catch (Throwable unused) {
+            str = "0";
+        }
+        f34785 = "1".equals(str);
     }
 }

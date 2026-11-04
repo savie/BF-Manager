@@ -1,157 +1,46 @@
 .class public final Ll/ۜۧ᩵;
-.super Ll/ۗܿ᩵;
-.source "Q574"
+.super Ljava/lang/Object;
+.source "9IR2"
 
 # interfaces
-.implements Ll/ܿܰۡ;
-
-
-# static fields
-.field public static final ܿ:Ll/ᩳ۫᩵;
-
-
-# instance fields
-.field public final ֡:I
-
-.field public final ۫:I
-
-.field public final ܽ:I
+.implements Ll/۬֫ܶ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static ۙ(Ll/ۜ᩶ۗ;)Ll/۬ܰۗ;
+    .locals 2
 
-    .line 43
-    sget-object v0, Ll/ᩳ۫᩵;->֨ۙ:Ll/ᩳ۫᩵;
-
-    sput-object v0, Ll/ۜۧ᩵;->ܿ:Ll/ᩳ۫᩵;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIILl/ۤ۫᩵;)V
-    .locals 0
-
-    .line 53
-    invoke-direct {p0, p4}, Ll/ۗܿ᩵;-><init>(Ll/ۤ۫᩵;)V
-
-    .line 54
-    invoke-static {p1}, Ll/ܰۖۨ;->ۨ(I)V
-
-    iput p1, p0, Ll/ۜۧ᩵;->ܽ:I
-
-    .line 55
-    invoke-static {p2}, Ll/ܰۖۨ;->ۨ(I)V
-
-    iput p2, p0, Ll/ۜۧ᩵;->۫:I
-
-    .line 56
-    invoke-static {p3}, Ll/ܰۖۨ;->ۚ(I)V
-
-    iput p3, p0, Ll/ۜۧ᩵;->֡:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ()I
-    .locals 1
-
-    .line 61
-    iget v0, p0, Ll/ۜۧ᩵;->ܽ:I
-
-    return v0
-.end method
-
-.method public final ۛ()Ll/ᩳ۫᩵;
-    .locals 1
-
-    .line 81
-    sget-object v0, Ll/ۜۧ᩵;->ܿ:Ll/ᩳ۫᩵;
-
-    return-object v0
-.end method
-
-.method public final ۤ()Ljava/lang/String;
-    .locals 3
-
-    .line 43
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ll/ۗܿ᩵;->ۜ()Ll/ۤ۫᩵;
-
-    move-result-object v1
-
-    iget-object v1, v1, Ll/ۤ۫᩵;->۫:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۜۧ᩵;->ۙ()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۜۧ᩵;->᩷()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ۜۧ᩵;->ܺ()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 32
+    invoke-interface {p0}, Ll/ۜ᩶ۗ;->ܺ()Ll/۬᩶ۗ;
 
     move-result-object v0
 
+    sget-object v1, Ll/۬᩶ۗ;->֡:Ll/۬᩶ۗ;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 35
+    :cond_0
+    invoke-interface {p0}, Ll/ۜ᩶ۗ;->᩻()Ll/ۤܿۗ;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 37
+    check-cast v0, Ll/۬ܰۗ;
+
     return-object v0
-.end method
 
-.method public final ܺ()J
-    .locals 2
+    .line 39
+    :cond_1
+    invoke-interface {p0}, Ll/ۜ᩶ۗ;->۫()Ll/᩵ܺ᩵;
 
-    .line 76
-    iget v0, p0, Ll/ۜۧ᩵;->֡:I
+    move-result-object p0
 
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final ᩷()I
-    .locals 1
-
-    .line 66
-    iget v0, p0, Ll/ۜۧ᩵;->۫:I
-
-    return v0
-.end method
-
-.method public final ᩺()I
-    .locals 1
-
-    .line 71
-    iget v0, p0, Ll/ۜۧ᩵;->֡:I
-
-    return v0
+    return-object p0
 .end method

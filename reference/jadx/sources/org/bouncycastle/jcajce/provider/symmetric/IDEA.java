@@ -7,14 +7,13 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.IvParameterSpec;
-import l.C0280;
-import l.C12278;
-import l.C12441;
-import l.C17214;
-import l.C22697;
-import l.C23234;
-import l.C5800;
-import l.C9023;
+import l.C0703;
+import l.C10732;
+import l.C12669;
+import l.C14087;
+import l.C18063;
+import l.C18176;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -33,7 +32,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class IDEA {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -122,21 +121,18 @@ public final class IDEA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(CBCBlockCipher.newInstance(new IDEAEngine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CFB8Mac extends BaseMac {
         public CFB8Mac() {
             super(new CFBBlockCipherMac(new IDEAEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new IDEAEngine());
@@ -149,7 +145,6 @@ public final class IDEA {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac extends BaseMac {
         public Mac() {
             super(new CBCBlockCipherMac(new IDEAEngine()));
@@ -163,24 +158,22 @@ public final class IDEA {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.1.3.6.1.4.1.188.7.1.1.2", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.IDEA", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.1.3.6.1.4.1.188.7.1.1.2", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.IDEA", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider);
-            C5800.m15969(str, "$ECB", "Cipher.IDEA", C0280.m1793("Alg.Alias.AlgorithmParameters.PBEWITHSHAANDIDEA", "PKCS12PBE", "Alg.Alias.AlgorithmParameters.PBEWITHSHAANDIDEA-CBC", "PKCS12PBE", configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.1.3.6.1.4.1.188.7.1.1.2", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.IDEA", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.1.3.6.1.4.1.188.7.1.1.2", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.IDEA", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$ECB", "Cipher.IDEA", C12669.m31439("Alg.Alias.AlgorithmParameters.PBEWITHSHAANDIDEA", "PKCS12PBE", "Alg.Alias.AlgorithmParameters.PBEWITHSHAANDIDEA-CBC", "PKCS12PBE", configurableProvider), configurableProvider);
             ASN1ObjectIdentifier aSN1ObjectIdentifier = MiscObjectIdentifiers.as_sys_sec_alg_ideaCBC;
             configurableProvider.addAlgorithm("Cipher", aSN1ObjectIdentifier, str + "$CBC");
-            C12441.m30916(C12278.m30516("$PBEWithSHAAndIDEAKeyGen", "SecretKeyFactory.PBEWITHSHAANDIDEA-CBC", str, C17214.m40154(configurableProvider, "KeyGenerator", C22697.m50267(C9023.m23357(str, "$KeyGen", "KeyGenerator.IDEA", C9023.m23357(str, "$PBEWithSHAAndIDEA", "Cipher.PBEWITHSHAANDIDEA-CBC", new StringBuilder(), configurableProvider), configurableProvider), str, "$KeyGen"), str, aSN1ObjectIdentifier), configurableProvider), "$Mac", configurableProvider, "Mac.IDEAMAC");
-            configurableProvider.addAlgorithm("Mac.IDEAMAC/CFB8", C23234.m51270("Alg.Alias.Mac.IDEA", "IDEAMAC", str, "$CFB8Mac", configurableProvider));
+            C10732.m27335(C0703.m3019("$PBEWithSHAAndIDEAKeyGen", "SecretKeyFactory.PBEWITHSHAANDIDEA-CBC", str, C14087.m34249(configurableProvider, "KeyGenerator", C8947.m23910(C18063.m42089(str, "$KeyGen", "KeyGenerator.IDEA", C18063.m42089(str, "$PBEWithSHAAndIDEA", "Cipher.PBEWITHSHAANDIDEA-CBC", new StringBuilder(), configurableProvider), configurableProvider), str, "$KeyGen"), str, aSN1ObjectIdentifier), configurableProvider), "$Mac", configurableProvider, "Mac.IDEAMAC");
+            configurableProvider.addAlgorithm("Mac.IDEAMAC/CFB8", C18176.m42346("Alg.Alias.Mac.IDEA", "IDEAMAC", str, "$CFB8Mac", configurableProvider));
             configurableProvider.addAlgorithm("Alg.Alias.Mac.IDEA/CFB8", "IDEAMAC/CFB8");
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAndIDEA extends BaseBlockCipher {
         public PBEWithSHAAndIDEA() {
             super(CBCBlockCipher.newInstance(new IDEAEngine()), 2, 1, 128, 8);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAAndIDEAKeyGen extends PBESecretKeyFactory {
         public PBEWithSHAAndIDEAKeyGen() {
             super("PBEwithSHAandIDEA-CBC", null, true, 2, 1, 128, 64);

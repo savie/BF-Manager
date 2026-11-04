@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CramerShoupCiphertext {
     public BigInteger e;
     public BigInteger u1;

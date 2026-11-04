@@ -1,330 +1,383 @@
 .class public final Ll/᩹ᩳۚ;
 .super Ljava/lang/Object;
-.source "470W"
+.source "W6LP"
 
 
 # instance fields
-.field public final ֨:I
+.field public ۙ:I
 
-.field public final ۖ:Ll/ۖᩳۚ;
+.field public ۤ:Ll/ܽᩳۚ;
 
-.field public final ۘ:I
+.field public final ܳ:Lbin/mt/json/JSONArray;
 
-.field public final ۙ:Ll/ܳ᩸ۚ;
+.field public final ᩴ:Ljava/lang/String;
 
-.field public final ۚ:Ll/֫ܶۚ;
+.field public ᩷:I
 
-.field public final ۜ:J
-
-.field public final ۨ:I
-
-.field public final ۬:Ll/ۜ᩸ۚ;
-
-.field public final ܰ:Ll/ۖۜۚ;
-
-.field public final ᩹:Ll/ۨᩳۚ;
+.field public ᩸:Z
 
 
 # direct methods
-.method public constructor <init>(Ll/֫ܶۚ;JIIILl/ۜ᩸ۚ;Ll/ۖۜۚ;Ll/ۨᩳۚ;Ll/ܳ᩸ۚ;Ll/ۖᩳۚ;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 467
+    .line 456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "program"
+    .line 450
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
 
-    .line 468
-    invoke-static {p1, v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object v0
 
-    iput-object p1, p0, Ll/᩹ᩳۚ;->ۚ:Ll/֫ܶۚ;
+    iput-object v0, p0, Ll/᩹ᩳۚ;->ܳ:Lbin/mt/json/JSONArray;
 
-    .line 469
-    iput-object p7, p0, Ll/᩹ᩳۚ;->۬:Ll/ۜ᩸ۚ;
-
-    .line 470
-    iput-object p8, p0, Ll/᩹ᩳۚ;->ܰ:Ll/ۖۜۚ;
-
-    .line 471
-    iput-object p9, p0, Ll/᩹ᩳۚ;->᩹:Ll/ۨᩳۚ;
-
-    .line 472
-    iput-object p10, p0, Ll/᩹ᩳۚ;->ۙ:Ll/ܳ᩸ۚ;
-
-    .line 473
-    iput-object p11, p0, Ll/᩹ᩳۚ;->ۖ:Ll/ۖᩳۚ;
-
-    if-eqz p11, :cond_1
-
-    .line 474
-    iget-object p9, p11, Ll/ۖᩳۚ;->ۙ:Ll/᩷ᩳۚ;
-
-    invoke-virtual {p9}, Ll/᩷ᩳۚ;->ۖ()I
-
-    move-result p9
-
-    if-ne p9, p4, :cond_0
-
-    iget-object p9, p11, Ll/ۖᩳۚ;->ۨ:Ll/ۨᩳۚ;
-
-    .line 475
-    invoke-virtual {p9}, Ll/ۨᩳۚ;->ۙ()Ll/֫ܶۚ;
-
-    move-result-object p9
-
-    if-ne p9, p1, :cond_0
-
-    goto :goto_0
-
-    .line 476
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Window pending reuse identity differs"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    if-ltz p4, :cond_5
-
-    if-ltz p5, :cond_5
-
-    if-gt p5, p6, :cond_5
-
-    if-gt p6, p4, :cond_5
-
-    .line 481
-    invoke-virtual {p7}, Ll/ۜ᩸ۚ;->ۙ()I
-
-    move-result p7
-
-    sub-int p9, p6, p5
-
-    if-ne p7, p9, :cond_4
-
-    .line 484
-    invoke-virtual {p8}, Ll/ۖۜۚ;->ܰ()I
-
-    move-result p7
-
-    if-ne p7, p9, :cond_3
-
-    const/4 p7, 0x0
-
-    .line 485
-    invoke-virtual {p8, p7}, Ll/ۖۜۚ;->ۖ(I)Ll/᩷۬ۚ;
-
-    move-result-object p7
-
-    iget-object p8, p1, Ll/֫ܶۚ;->᩺:Ll/᩷۬ۚ;
-
-    if-ne p7, p8, :cond_3
-
-    .line 488
-    invoke-virtual {p10}, Ll/ܳ᩸ۚ;->ܰ()Ll/֫ܶۚ;
-
-    move-result-object p7
-
-    if-ne p7, p1, :cond_2
-
-    .line 489
-    invoke-virtual {p10}, Ll/ܳ᩸ۚ;->ۨ()I
-
-    move-result p1
-
-    if-ne p1, p4, :cond_2
-
-    .line 492
-    iput-wide p2, p0, Ll/᩹ᩳۚ;->ۜ:J
-
-    .line 493
-    iput p4, p0, Ll/᩹ᩳۚ;->ۘ:I
-
-    .line 494
-    iput p5, p0, Ll/᩹ᩳۚ;->֨:I
-
-    .line 495
-    iput p6, p0, Ll/᩹ᩳۚ;->ۨ:I
+    .line 457
+    iput-object p1, p0, Ll/᩹ᩳۚ;->ᩴ:Ljava/lang/String;
 
     return-void
-
-    .line 490
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Window checkpoint cache identity differs"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 486
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Window context differs from requested range"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 482
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Window style length differs from requested range"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 479
-    :cond_5
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Invalid syntax window result range"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static bridge synthetic ۖ(Ll/᩹ᩳۚ;)Ll/ۨᩳۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩹ᩳۚ;->᩹:Ll/ۨᩳۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ۙ(Ll/᩹ᩳۚ;)Ll/ܳ᩸ۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩹ᩳۚ;->ۙ:Ll/ܳ᩸ۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ۚ(Ll/᩹ᩳۚ;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/᩹ᩳۚ;->ۘ:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/᩹ᩳۚ;)Ll/֫ܶۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩹ᩳۚ;->ۚ:Ll/֫ܶۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/᩹ᩳۚ;)Ll/ۖᩳۚ;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/᩹ᩳۚ;->ۖ:Ll/ۖᩳۚ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ᩹(Ll/᩹ᩳۚ;)J
-    .locals 2
-
-    .line 0
-    iget-wide v0, p0, Ll/᩹ᩳۚ;->ۜ:J
-
-    return-wide v0
 .end method
 
 
 # virtual methods
-.method public final ֨()Ll/ۜ᩸ۚ;
-    .locals 1
+.method public final ۙ(Lbin/mt/json/JSONArray;)V
+    .locals 4
 
-    .line 526
-    iget-object v0, p0, Ll/᩹ᩳۚ;->۬:Ll/ۜ᩸ۚ;
+    .line 461
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    return-object v0
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbin/mt/json/JSONValue;
+
+    .line 463
+    iget-object v1, p0, Ll/᩹ᩳۚ;->ܳ:Lbin/mt/json/JSONArray;
+
+    invoke-virtual {v1}, Lbin/mt/json/JSONArray;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lbin/mt/json/JSONValue;
+
+    .line 464
+    invoke-virtual {v3, v0}, Lbin/mt/json/JSONValue;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    .line 469
+    :cond_1
+    invoke-virtual {v1, v0}, Lbin/mt/json/JSONArray;->add(Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONArray;
+
+    goto :goto_0
+
+    :cond_2
+    return-void
 .end method
 
-.method public final ۖ()Ll/֫ܶۚ;
-    .locals 1
+.method public final ۙ(Ll/ۢܳۚ;)V
+    .locals 11
 
-    .line 501
-    iget-object v0, p0, Ll/᩹ᩳۚ;->ۚ:Ll/֫ܶۚ;
+    .line 474
+    iget-object p1, p1, Ll/ۢܳۚ;->ܿ:Lbin/mt/json/JSONObject;
 
-    return-object v0
-.end method
+    const-string v0, "createdDirectories"
 
-.method public final ۘ()J
-    .locals 2
+    .line 475
+    invoke-virtual {p1, v0}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
 
-    .line 506
-    iget-wide v0, p0, Ll/᩹ᩳۚ;->ۜ:J
+    move-result-object v1
 
-    return-wide v0
-.end method
+    .line 476
+    iget v2, p0, Ll/᩹ᩳۚ;->᩷:I
 
-.method public final ۙ()Ll/ܳ᩸ۚ;
-    .locals 1
+    const/4 v3, 0x0
 
-    .line 546
-    iget-object v0, p0, Ll/᩹ᩳۚ;->ۙ:Ll/ܳ᩸ۚ;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v1}, Lbin/mt/json/JSONValue;->isNumber()Z
 
-.method public final ۚ()Ll/ۨᩳۚ;
-    .locals 1
+    move-result v4
 
-    .line 551
-    iget-object v0, p0, Ll/᩹ᩳۚ;->᩹:Ll/ۨᩳۚ;
+    if-eqz v4, :cond_0
 
-    return-object v0
-.end method
+    .line 477
+    invoke-virtual {v1}, Lbin/mt/json/JSONValue;->asInt()I
 
-.method public final ۨ()I
-    .locals 1
+    move-result v1
 
-    .line 521
-    iget v0, p0, Ll/᩹ᩳۚ;->ۨ:I
+    goto :goto_0
 
-    return v0
-.end method
+    :cond_0
+    const/4 v1, 0x0
 
-.method public final ۬()I
-    .locals 1
+    :goto_0
+    add-int/2addr v2, v1
 
-    .line 511
-    iget v0, p0, Ll/᩹ᩳۚ;->ۘ:I
+    const-string v1, "warnings"
 
-    return v0
-.end method
+    .line 478
+    invoke-virtual {p1, v1}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
 
-.method public final ܰ()Ll/ۖۜۚ;
-    .locals 1
+    move-result-object v4
 
-    .line 531
-    iget-object v0, p0, Ll/᩹ᩳۚ;->ܰ:Ll/ۖۜۚ;
+    if-eqz v4, :cond_1
 
-    return-object v0
-.end method
+    .line 479
+    invoke-virtual {v4}, Lbin/mt/json/JSONValue;->isArray()Z
 
-.method public final ᩹()I
-    .locals 1
+    move-result v5
 
-    .line 516
-    iget v0, p0, Ll/᩹ᩳۚ;->֨:I
+    if-eqz v5, :cond_1
 
-    return v0
+    invoke-virtual {v4}, Lbin/mt/json/JSONValue;->asArray()Lbin/mt/json/JSONArray;
+
+    move-result-object v4
+
+    invoke-virtual {p0, v4}, Ll/᩹ᩳۚ;->ۙ(Lbin/mt/json/JSONArray;)V
+
+    :cond_1
+    const-string v4, "changed"
+
+    .line 480
+    invoke-virtual {p1, v4}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v5
+
+    const-string v6, "stateKnown"
+
+    .line 481
+    invoke-virtual {p1, v6}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v7
+
+    const-string v8, "path"
+
+    .line 482
+    iget-object v9, p0, Ll/᩹ᩳۚ;->ᩴ:Ljava/lang/String;
+
+    invoke-virtual {p1, v8, v9}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v8
+
+    const-string v9, "completedFiles"
+
+    iget v10, p0, Ll/᩹ᩳۚ;->ۙ:I
+
+    invoke-virtual {v8, v9, v10}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v0, v2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    iget v8, p0, Ll/᩹ᩳۚ;->ۙ:I
+
+    if-gtz v8, :cond_3
+
+    if-gtz v2, :cond_3
+
+    if-eqz v5, :cond_2
+
+    .line 483
+    invoke-virtual {v5}, Lbin/mt/json/JSONValue;->isBoolean()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v5}, Lbin/mt/json/JSONValue;->asBoolean()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v2, 0x0
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    const/4 v2, 0x1
+
+    :goto_2
+    invoke-virtual {v0, v4, v2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Z)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v7, :cond_4
+
+    .line 484
+    invoke-virtual {v7}, Lbin/mt/json/JSONValue;->isBoolean()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v7}, Lbin/mt/json/JSONValue;->asBoolean()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    :cond_4
+    const/4 v3, 0x1
+
+    :cond_5
+    invoke-virtual {v0, v6, v3}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Z)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v2, "operationMode"
+
+    const-string v3, "non_atomic"
+
+    .line 485
+    invoke-virtual {v0, v2, v3}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    new-instance v2, Lbin/mt/json/JSONArray;
+
+    iget-object v3, p0, Ll/᩹ᩳۚ;->ܳ:Lbin/mt/json/JSONArray;
+
+    invoke-direct {v2, v3}, Lbin/mt/json/JSONArray;-><init>(Lbin/mt/json/JSONArray;)V
+
+    .line 486
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    const-string v0, "entryPaths"
+
+    .line 487
+    invoke-virtual {p1, v0}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v1
+
+    if-nez v1, :cond_7
+
+    .line 488
+    iget-object v1, p0, Ll/᩹ᩳۚ;->ۤ:Ll/ܽᩳۚ;
+
+    if-nez v1, :cond_6
+
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_6
+    invoke-static {v1}, Ll/ܽᩳۚ;->᩸(Ll/ܽᩳۚ;)Ljava/lang/String;
+
+    move-result-object v1
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbin/mt/json/JSON;->array([Ljava/lang/String;)Lbin/mt/json/JSONArray;
+
+    move-result-object v1
+
+    :goto_3
+    invoke-virtual {p1, v0, v1}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    :cond_7
+    const-string v0, "operationIndexes"
+
+    .line 490
+    invoke-virtual {p1, v0}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v1
+
+    if-nez v1, :cond_9
+
+    .line 491
+    iget-object v1, p0, Ll/᩹ᩳۚ;->ۤ:Ll/ܽᩳۚ;
+
+    if-nez v1, :cond_8
+
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
+
+    move-result-object v1
+
+    goto :goto_4
+
+    :cond_8
+    invoke-static {v1}, Ll/ܽᩳۚ;->ᩴ(Ll/ܽᩳۚ;)I
+
+    move-result v1
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbin/mt/json/JSON;->array([I)Lbin/mt/json/JSONArray;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-virtual {p1, v0, v1}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    :cond_9
+    const-string v0, "destinationPath"
+
+    .line 493
+    invoke-virtual {p1, v0}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v1
+
+    if-nez v1, :cond_b
+
+    .line 494
+    iget-object v1, p0, Ll/᩹ᩳۚ;->ۤ:Ll/ܽᩳۚ;
+
+    if-nez v1, :cond_a
+
+    sget-object v1, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
+
+    goto :goto_5
+
+    :cond_a
+    invoke-static {v1}, Ll/ܽᩳۚ;->ۙ(Ll/ܽᩳۚ;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbin/mt/json/JSON;->value(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v1
+
+    :goto_5
+    invoke-virtual {p1, v0, v1}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    :cond_b
+    return-void
 .end method

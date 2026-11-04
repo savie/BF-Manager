@@ -23,7 +23,7 @@
     .locals 1
 
     .line 103
-    sget v0, Ll/ۖ۟ܶ;->ᩳۨ:I
+    sget v0, Ll/ۧ۬ܺ;->ܶۤ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -34,7 +34,7 @@
     .locals 1
 
     .line 108
-    sget v0, Ll/ᩴ۟ܶ;->ۨ֡:I
+    sget v0, Ll/ۘ۬ܺ;->ۤܿ:I
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -53,7 +53,7 @@
     move-result-object p1
 
     .line 119
-    sget-object v2, Ll/۠۟ܶ;->ۜۘ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->ۧ֫:[I
 
     const/4 v6, 0x0
 
@@ -68,17 +68,17 @@
     move v4, p4
 
     .line 120
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/֫ᩳ;
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Ll/ۙ᩹;
 
     move-result-object p2
 
     .line 123
-    sget p3, Ll/۠۟ܶ;->᩸ۘ:I
+    sget p3, Ll/ܰ۬ܺ;->ܽ֫:I
 
     const/4 p4, 0x1
 
     .line 124
-    invoke-virtual {p2, p3, p4}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {p2, p3, p4}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result p3
 
@@ -86,19 +86,19 @@
     invoke-virtual {p0, p3}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->setItemHorizontalTranslationEnabled(Z)V
 
     .line 127
-    sget p3, Ll/۠۟ܶ;->᩺ۘ:I
+    sget p3, Ll/ܰ۬ܺ;->᩻֫:I
 
-    invoke-virtual {p2, p3}, Ll/֫ᩳ;->۬(I)Z
+    invoke-virtual {p2, p3}, Ll/ۙ᩹;->ۚ(I)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
     .line 128
-    sget p3, Ll/۠۟ܶ;->᩺ۘ:I
+    sget p3, Ll/ܰ۬ܺ;->᩻֫:I
 
     .line 129
-    invoke-virtual {p2, p3, v6}, Ll/֫ᩳ;->ܰ(II)I
+    invoke-virtual {p2, p3, v6}, Ll/ۙ᩹;->᩷(II)I
 
     move-result p3
 
@@ -107,9 +107,9 @@
 
     .line 132
     :cond_0
-    sget p3, Ll/۠۟ܶ;->ܶۘ:I
+    sget p3, Ll/ܰ۬ܺ;->ܺ֫:I
 
-    invoke-virtual {p2, p3, p4}, Ll/֫ᩳ;->ۙ(IZ)Z
+    invoke-virtual {p2, p3, p4}, Ll/ۙ᩹;->ۙ(IZ)Z
 
     move-result p3
 
@@ -127,7 +127,7 @@
 
     .line 137
     :cond_1
-    invoke-virtual {p2}, Ll/֫ᩳ;->ۚ()V
+    invoke-virtual {p2}, Ll/ۙ᩹;->ᩴ()V
 
     .line 139
     invoke-direct {p0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->applyWindowInsets()V
@@ -144,10 +144,10 @@
     invoke-direct {v0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 239
-    sget v1, Ll/᩹۟ܶ;->ᩳۙ:I
+    sget v1, Ll/ܺ۬ܺ;->ܶۙ:I
 
     .line 240
-    invoke-static {p1, v1}, Ll/ۤܽ;->ۙ(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Ll/۟֡;->ۙ(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -162,7 +162,7 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->ۖۨ:I
+    sget v2, Ll/ܽ۬ܺ;->᩸ۤ:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -277,7 +277,7 @@
     .locals 1
 
     .line 208
-    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarView;->getMenuView()Ll/۬ۘ;
+    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarView;->getMenuView()Ll/ۧ֫;
 
     move-result-object v0
 
@@ -308,7 +308,7 @@
     .locals 2
 
     .line 193
-    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarView;->getMenuView()Ll/۬ۘ;
+    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarView;->getMenuView()Ll/ۧ֫;
 
     move-result-object v0
 

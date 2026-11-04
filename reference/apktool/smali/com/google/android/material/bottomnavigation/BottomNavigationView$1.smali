@@ -24,13 +24,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ܺۢ;
+.method public onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ۘۜ;
     .locals 5
 
     .line 154
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    invoke-virtual {p2}, Ll/ܺۢ;->֨()I
+    invoke-virtual {p2}, Ll/ۘۜ;->۫()I
 
     move-result v1
 
@@ -39,7 +39,7 @@
     iput v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
     .line 156
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
@@ -57,12 +57,12 @@
 
     .line 157
     :goto_0
-    invoke-virtual {p2}, Ll/ܺۢ;->۬()I
+    invoke-virtual {p2}, Ll/ۘۜ;->ۚ()I
 
     move-result v0
 
     .line 158
-    invoke-virtual {p2}, Ll/ܺۢ;->ۘ()I
+    invoke-virtual {p2}, Ll/ۘۜ;->֫()I
 
     move-result v2
 

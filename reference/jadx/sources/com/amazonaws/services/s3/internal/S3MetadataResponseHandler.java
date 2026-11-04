@@ -8,11 +8,11 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 public class S3MetadataResponseHandler extends AbstractS3ResponseHandler {
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo276(HttpResponse httpResponse) {
+    public final Object mo270(HttpResponse httpResponse) {
         ObjectMetadata objectMetadata = new ObjectMetadata();
-        AbstractS3ResponseHandler.m456(httpResponse, objectMetadata);
-        AmazonWebServiceResponse amazonWebServiceResponseM457 = AbstractS3ResponseHandler.m457(httpResponse);
-        amazonWebServiceResponseM457.m165(objectMetadata);
-        return amazonWebServiceResponseM457;
+        AbstractS3ResponseHandler.m450(httpResponse, objectMetadata);
+        AmazonWebServiceResponse amazonWebServiceResponseM451 = AbstractS3ResponseHandler.m451(httpResponse);
+        amazonWebServiceResponseM451.m159(objectMetadata);
+        return amazonWebServiceResponseM451;
     }
 }

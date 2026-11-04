@@ -1,74 +1,133 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 556V */
+/* JADX INFO: renamed from: l.ܺܿ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 25I */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C17001 extends AbstractC9011 {
+public final class C17001 implements Cloneable {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f54349;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public C17001 f55549;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C23352 f54350;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f55550;
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return this.f54350.compareTo(((C17001) obj).f54350);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C17001 f55551;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f55552;
+
+    public C17001() {
     }
 
-    public C17001(C12063 c12063) {
-        super(c12063);
-        this.f54349 = 0;
+    public C17001(int i) {
+        this.f55552 = i;
+        this.f55550 = -1073741824;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17001 m39780(C12063 c12063, C23352 c23352) {
-        C17001 c17001 = new C17001(c12063);
-        c17001.f54349 = 0;
-        c17001.f54350 = c23352;
-        return (C17001) c12063.f40349.m28060(c17001);
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6320(C13825 c13825, C6187 c6187) {
-        this.f54350 = new C23352(this.f30808, c13825);
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo6315(int i) {
-        return this.f54350.mo4462(i);
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6319(C4651 c4651) {
-        this.f54350.mo4463(c4651);
-    }
-
-    @Override // l.AbstractC9011
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo6317() {
-        return C9576.m24440(new StringBuilder("encoded_array @0x"), this.f30807);
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C23352 m39781() {
-        return this.f54350;
-    }
-
-    public final int hashCode() {
-        if (this.f54349 == 0) {
-            this.f54349 = this.f54350.hashCode();
+    public final C17001 m40062() {
+        if ((this.f55550 & 1073741824) != 0) {
+            return null;
         }
-        return this.f54349;
+        return this.f55551;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C17001 m40069() {
+        if ((this.f55550 & Integer.MIN_VALUE) != 0) {
+            return null;
+        }
+        return this.f55549;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m40068() {
+        return (this.f55550 & 1073741824) != 0;
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final boolean m40066() {
+        return (this.f55550 & Integer.MIN_VALUE) != 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40065(boolean z) {
+        if (z) {
+            this.f55550 |= 1073741824;
+        } else {
+            this.f55550 &= -1073741825;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m40067(boolean z) {
+        if (z) {
+            this.f55550 |= Integer.MIN_VALUE;
+        } else {
+            this.f55550 &= Integer.MAX_VALUE;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40064(C17001 c17001) {
+        this.f55550 |= 1073741824;
+        this.f55551 = c17001;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m40072(C17001 c17001) {
+        this.f55550 |= Integer.MIN_VALUE;
+        this.f55549 = c17001;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40063(int i) {
+        this.f55550 = (i & 255) | (this.f55550 & (-256));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17001 m40071() {
+        C17001 c17001 = this.f55549;
+        if ((this.f55550 & Integer.MIN_VALUE) == 0) {
+            while ((c17001.f55550 & 1073741824) == 0) {
+                c17001 = c17001.f55551;
+            }
+        }
+        return c17001;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C17001 m40070() {
+        C17001 c17001 = this.f55551;
+        if ((this.f55550 & 1073741824) == 0) {
+            while ((c17001.f55550 & Integer.MIN_VALUE) == 0) {
+                c17001 = c17001.f55549;
+            }
+        }
+        return c17001;
+    }
+
+    public final C17001 clone() {
+        try {
+            C17001 c17001 = (C17001) super.clone();
+            c17001.f55552 = this.f55552;
+            c17001.f55550 = this.f55550;
+            return c17001;
+        } catch (CloneNotSupportedException unused) {
+            throw new InternalError();
+        }
     }
 
     public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        return obj != null && C17001.class.equals(obj.getClass()) && this.f54350.compareTo(((C17001) obj).f54350) == 0;
+        return (obj instanceof C17001) && this.f55552 == ((C17001) obj).f55552;
+    }
+
+    public final int hashCode() {
+        return this.f55552;
+    }
+
+    public final String toString() {
+        return String.valueOf(this.f55552);
     }
 }

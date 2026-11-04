@@ -1,11 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۘۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5GB */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15686 implements InterfaceC11955 {
-    @Override // l.InterfaceC11955
-    public final Object apply(Object obj) {
-        return ((C20002) obj).f64023;
+import java.util.Locale;
+
+/* JADX INFO: renamed from: l.ܳ᩺᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: R43A */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15686 implements InterfaceC13449 {
+    public final String toString() {
+        return "compiler.misc.no.args";
+    }
+
+    @Override // l.InterfaceC13449
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo15163(Locale locale, InterfaceC2263 interfaceC2263) {
+        return ((C23721) interfaceC2263).m52976(locale, "compiler.misc.no.args", new Object[0]);
     }
 }

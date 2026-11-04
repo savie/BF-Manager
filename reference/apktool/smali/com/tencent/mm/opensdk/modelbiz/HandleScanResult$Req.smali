@@ -79,7 +79,7 @@
 
     iget-object v0, p0, Lcom/tencent/mm/opensdk/modelbiz/HandleScanResult$Req;->scanResult:Ljava/lang/String;
 
-    invoke-static {v0}, Ll/ܿۤᩴ;->encode(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Ll/᩸۬᩹;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

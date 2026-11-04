@@ -25,7 +25,7 @@ import org.bouncycastle.asn1.x509.GeneralNames;
 import org.bouncycastle.asn1.x509.TBSCertList;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509CRLEntryObject extends X509CRLEntry {
     public TBSCertList.CRLEntry c;
     public X500Name certificateIssuer;

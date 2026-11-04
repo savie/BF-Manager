@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1;
 
 import java.io.IOException;
-import l.C9013;
+import l.C11958;
 
 /* JADX INFO: loaded from: classes2.dex */
 public abstract class ASN1Null extends ASN1Primitive {
@@ -33,7 +33,7 @@ public abstract class ASN1Null extends ASN1Primitive {
         try {
             return (ASN1Null) TYPE.fromByteArray((byte[]) obj);
         } catch (IOException e) {
-            throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct NULL from byte[]: ")));
+            throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct NULL from byte[]: ")));
         }
     }
 

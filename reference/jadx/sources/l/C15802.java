@@ -1,125 +1,82 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import com.google.android.material.motion.MotionUtils;
 
-/* JADX INFO: renamed from: l.ܺ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: G58P */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15802 implements Set {
+/* JADX INFO: renamed from: l.ܶۗۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O44L */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15802 extends AbstractC17294 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC16507 f51152;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f51414;
 
-    public C15802(AbstractC16507 abstractC16507) {
-        this.f51152 = abstractC16507;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public AbstractC22664 f51415;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6108 f51416;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C15802(C6108 c6108, AbstractC22664 abstractC22664, int i) {
+        super(c6108, C8935.m23847(abstractC22664));
+        this.f51416 = c6108;
+        C11972.m30026(i >= 0);
+        this.f51415 = abstractC22664;
+        this.f51414 = i;
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final boolean add(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean addAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final void clear() {
-        this.f51152.mo36172();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean contains(Object obj) {
-        return this.f51152.mo36169(obj) >= 0;
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean containsAll(Collection collection) {
-        Map mapMo36177 = this.f51152.mo36177();
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            if (!mapMo36177.containsKey(it.next())) {
-                return false;
-            }
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ᩸ */
+    public final AbstractC17294 mo5785() {
+        int i = this.f56323;
+        C6108 c6108 = this.f51416;
+        int i2 = this.f51414;
+        if (i2 <= 3) {
+            c6108.f20850.m23883((C8935.m23859(i) * 4) + 26 + i2);
+        } else {
+            c6108.f20850.m23868(C8935.m23859(i) + 21, i2);
         }
-        return true;
+        return c6108.f20855[i];
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final boolean isEmpty() {
-        return this.f51152.mo36175() == 0;
-    }
-
-    @Override // java.util.Set, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        return new C7334(this.f51152, 0);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean remove(Object obj) {
-        AbstractC16507 abstractC16507 = this.f51152;
-        int iMo36169 = abstractC16507.mo36169(obj);
-        if (iMo36169 < 0) {
-            return false;
+    @Override // l.AbstractC17294
+    /* JADX INFO: renamed from: ܳ */
+    public final void mo28618() {
+        int i = this.f56323;
+        C6108 c6108 = this.f51416;
+        int i2 = this.f51414;
+        if (i2 <= 3) {
+            c6108.f20850.m23883((C8935.m23859(i) * 4) + 59 + i2);
+        } else {
+            c6108.f20850.m23868(C8935.m23859(i) + 54, i2);
         }
-        abstractC16507.mo36173(iMo36169);
-        return true;
+        c6108.f20850.m23887(i2);
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        Map mapMo36177 = this.f51152.mo36177();
-        int size = mapMo36177.size();
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            mapMo36177.remove(it.next());
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m37732(int i) {
+        C6108 c6108 = this.f51416;
+        int i2 = this.f56323;
+        if (i2 == 0 && i >= -32768 && i <= 32767) {
+            c6108.f20850.m23894(this.f51414, i);
+            return;
         }
-        return size != mapMo36177.size();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        return AbstractC16507.m38780(this.f51152.mo36177(), collection);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final int size() {
-        return this.f51152.mo36175();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final Object[] toArray(Object[] objArr) {
-        return this.f51152.m38782(0, objArr);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean equals(Object obj) {
-        return AbstractC16507.m38781((Set) this, obj);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final int hashCode() {
-        AbstractC16507 abstractC16507 = this.f51152;
-        int iHashCode = 0;
-        for (int iMo36175 = abstractC16507.mo36175() - 1; iMo36175 >= 0; iMo36175--) {
-            Object objMo36170 = abstractC16507.mo36170(iMo36175, 0);
-            iHashCode += objMo36170 == null ? 0 : objMo36170.hashCode();
+        mo5785();
+        if (i >= 0) {
+            new C24754(c6108, c6108.f20856.f48253, Integer.valueOf(i)).mo5785();
+            c6108.f20850.m23883(96);
+        } else {
+            new C24754(c6108, c6108.f20856.f48253, Integer.valueOf(-i)).mo5785();
+            c6108.f20850.m23883(100);
         }
-        return iHashCode;
+        c6108.m17627(c6108.f20856.f48253).mo40623(i2);
+        mo28618();
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final Object[] toArray() {
-        AbstractC16507 abstractC16507 = this.f51152;
-        int iMo36175 = abstractC16507.mo36175();
-        Object[] objArr = new Object[iMo36175];
-        for (int i = 0; i < iMo36175; i++) {
-            objArr[i] = abstractC16507.mo36170(i, 0);
-        }
-        return objArr;
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("localItem(type=");
+        sb.append(this.f51415);
+        sb.append("; reg=");
+        return C12669.m31437(this.f51414, MotionUtils.EASING_TYPE_FORMAT_END, sb);
     }
 }

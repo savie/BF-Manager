@@ -1,20 +1,19 @@
 .class public interface abstract Ll/ۙ֡᩹;
 .super Ljava/lang/Object;
-.source "164Z"
+.source "4BPK"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
 
 
 # virtual methods
-.method public abstract getName()Ljava/lang/String;
+.method public abstract ۙ(Ll/ۙ֡᩹;)Ll/ۜܿ᩹;
 .end method
 
-.method public abstract ۙ()Ljava/lang/String;
-.end method
-
-.method public abstract ۙ(Lbin/mt/plus/Main;)V
-.end method
-
-.method public abstract ۨ()Z
-.end method
-
-.method public abstract ܰ()Ll/ܳܶۘ;
+.method public abstract ᩷(II)I
 .end method

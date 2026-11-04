@@ -1,36 +1,24 @@
 package l;
 
-import java.util.List;
+/* JADX INFO: renamed from: l.۠᩹ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I8HD */
+/* JADX INFO: loaded from: classes3.dex */
+public class C8936 extends Exception {
 
-/* JADX INFO: renamed from: l.ۡܳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7N6 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8936 extends AbstractC9568 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f29167;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final List f30630;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final long f29168;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f30631;
-
-    public C8936(long j, List list) {
-        super(list.size() - 1);
-        this.f30631 = j;
-        this.f30630 = list;
+    public C8936(String str, Throwable th, int i, long j) {
+        super(str, th);
+        this.f29167 = i;
+        this.f29168 = j;
     }
 
-    @Override // l.InterfaceC2241
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo6884() {
-        m24424();
-        return this.f30631 + ((C19853) this.f30630.get((int) m24423())).f63678;
-    }
-
-    @Override // l.InterfaceC2241
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo6885() {
-        m24424();
-        C19853 c19853 = (C19853) this.f30630.get((int) m24423());
-        return this.f30631 + c19853.f63678 + c19853.f63680;
+    static {
+        C4794.m14773(0, 1, 2, 3, 4);
+        C7116.m19499(5);
     }
 }

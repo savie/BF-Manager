@@ -2,7 +2,7 @@ package com.alipay.sdk.m.q0;
 
 import com.umeng.analytics.pro.cb;
 import java.io.UnsupportedEncodingException;
-import l.C3184;
+import l.C6421;
 import org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi;
 import org.bouncycastle.util.encoders.Base32Encoder;
 import org.bouncycastle.util.encoders.UTF8;
@@ -159,7 +159,7 @@ public class b {
         public static final byte[] k = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, UTF8.S_P4A, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, KeyFactorySpi.x25519_type, KeyFactorySpi.x448_type, KeyFactorySpi.Ed25519_type, KeyFactorySpi.Ed448_type, 114, 115, 116, 117, 118, 119, 120, 121, 122, UTF8.S_P3A, 49, 50, 51, 52, 53, 54, 55, 56, 57, 45, 95};
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final /* synthetic */ boolean f77914l = true;
+        public static final /* synthetic */ boolean f82030l = true;
         public final byte[] c;
         public int d;
         public int e;
@@ -344,7 +344,7 @@ public class b {
                     bArr3[i5] = 10;
                     i5 = i6;
                 }
-                boolean z2 = f77914l;
+                boolean z2 = f82030l;
                 if (!z2 && this.d != 0) {
                     throw new AssertionError();
                 }
@@ -404,23 +404,23 @@ public class b {
 
     public static byte[] b(byte[] bArr, int i, int i2, int i3) {
         c cVar = new c(i3, null);
-        int iM9602 = (i2 / 3) * 4;
+        int iM18182 = (i2 / 3) * 4;
         if (!cVar.f) {
             int i4 = i2 % 3;
             if (i4 == 1) {
-                iM9602 += 2;
+                iM18182 += 2;
             } else if (i4 == 2) {
-                iM9602 += 3;
+                iM18182 += 3;
             }
         } else if (i2 % 3 > 0) {
-            iM9602 += 4;
+            iM18182 += 4;
         }
         if (cVar.g && i2 > 0) {
-            iM9602 += C3184.m9602(i2, 1, 57, 1) * (cVar.h ? 2 : 1);
+            iM18182 += C6421.m18182(i2, 1, 57, 1) * (cVar.h ? 2 : 1);
         }
-        cVar.a = new byte[iM9602];
+        cVar.a = new byte[iM18182];
         cVar.a(bArr, i, i2, true);
-        if (a || cVar.b == iM9602) {
+        if (a || cVar.b == iM18182) {
             return cVar.a;
         }
         throw new AssertionError();

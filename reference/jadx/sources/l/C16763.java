@@ -1,19 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽܽۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5ER */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16763 extends AbstractC23114 {
+import android.view.View;
+import android.view.Window;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f53653;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C20291 f53654;
-
-    @Override // l.AbstractC23114
+/* JADX INFO: renamed from: l.ܺۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 38CF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16763 implements InterfaceC3339 {
+    @Override // l.InterfaceC3339
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2544(AbstractC20521 abstractC20521) {
-        abstractC20521.mo35174(this.f53653, this.f53654.m45782());
+    public void mo10992(C11147 c11147, C11147 c11148, Window window, View view, boolean z, boolean z2) {
+        C15243.m36590(c11147, "statusBarStyle");
+        C15243.m36590(c11148, "navigationBarStyle");
+        C15243.m36590(window, "window");
+        C15243.m36590(view, "view");
+        C18190.m42352(window, false);
+        window.addFlags(67108864);
+        window.addFlags(134217728);
     }
 }

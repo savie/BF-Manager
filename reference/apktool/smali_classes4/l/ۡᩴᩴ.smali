@@ -1,104 +1,138 @@
-.class public final Ll/ۡᩴᩴ;
-.super Ll/֨ܶᩴ;
-.source "W1E0"
+.class public final synthetic Ll/ۡᩴᩴ;
+.super Ljava/lang/Object;
+.source "W18B"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic ֡:Ll/ۤᩴᩴ;
+.field public final synthetic ܰ:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۤᩴᩴ;II)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 675
-    iput-object p1, p0, Ll/ۡᩴᩴ;->֡:Ll/ۤᩴᩴ;
+    .line 0
+    iput p1, p0, Ll/ۡᩴᩴ;->ܰ:I
 
-    .line 676
-    invoke-direct {p0, p2, p3}, Ll/֨ܶᩴ;-><init>(II)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final characteristics()I
-    .locals 1
-
-    const/16 v0, 0x4150
-
-    return v0
-.end method
-
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 0
 
-    .line 674
-    check-cast p1, Ljava/util/function/IntConsumer;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-virtual {p0, p1}, Ll/ۡᩴᩴ;->forEachRemaining(Ljava/util/function/IntConsumer;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
-    .locals 4
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
 
-    .line 698
-    iget-object v0, p0, Ll/ۡᩴᩴ;->֡:Ll/ۤᩴᩴ;
+    .line 0
+    iget v0, p0, Ll/ۡᩴᩴ;->ܰ:I
 
-    iget-object v0, v0, Ll/ۤᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v0, Ll/۟ᩴᩴ;->۫:[I
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    .line 699
-    iget v0, v0, Ll/۟ᩴᩴ;->ܽ:I
+    move-result-object v0
 
-    .line 700
-    :goto_0
-    iget v2, p0, Ll/ۖܶᩴ;->ܺ:I
+    return-object v0
 
-    if-ge v2, v0, :cond_0
+    :pswitch_0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    add-int/lit8 v3, v2, 0x1
+    move-result-object v0
 
-    .line 701
-    iput v3, p0, Ll/ۖܶᩴ;->ܺ:I
+    return-object v0
 
-    aget v2, v1, v2
+    :pswitch_1
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    iget v0, p0, Ll/ۡᩴᩴ;->ܰ:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 7
+    check-cast p1, Ll/ۧܿ᩺;
+
+    .line 2564
+    iget-object p1, p1, Ll/ۧܿ᩺;->֡:Ll/۬ۘ᩺;
+
+    sget-object v0, Ll/۬ۘ᩺;->᩷ۙ:Ll/۬ۘ᩺;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
+    .line 0
+    :pswitch_0
+    check-cast p1, Ll/ۨ᩵ۨ;
 
-.method public final ۙ(I)I
-    .locals 1
+    invoke-static {p1}, Ll/᩶᩵ۨ;->ۙ(Ll/ۨ᩵ۨ;)Z
 
-    .line 687
-    iget-object v0, p0, Ll/ۡᩴᩴ;->֡:Ll/ۤᩴᩴ;
-
-    iget-object v0, v0, Ll/ۤᩴᩴ;->ܺ:Ll/۟ᩴᩴ;
-
-    iget-object v0, v0, Ll/۟ᩴᩴ;->۫:[I
-
-    aget p1, v0, p1
+    move-result p1
 
     return p1
-.end method
 
-.method public final ۙ(II)Ll/ۨܶᩴ;
-    .locals 2
+    :pswitch_1
+    check-cast p1, Ll/ۖ۠ۨ;
 
-    .line 692
-    new-instance v0, Ll/ۡᩴᩴ;
+    invoke-virtual {p1}, Ll/ۖ۠ۨ;->᩸()Z
 
-    iget-object v1, p0, Ll/ۡᩴᩴ;->֡:Ll/ۤᩴᩴ;
+    move-result p1
 
-    invoke-direct {v0, v1, p1, p2}, Ll/ۡᩴᩴ;-><init>(Ll/ۤᩴᩴ;II)V
+    return p1
 
-    return-object v0
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

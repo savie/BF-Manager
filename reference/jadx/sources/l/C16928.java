@@ -1,56 +1,45 @@
 package l;
 
-import java.util.Collection;
-
-/* JADX INFO: renamed from: l.ܽ᩹۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7M7 */
+/* JADX INFO: renamed from: l.ܺܶܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V9HU */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16928 extends AbstractC6344 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C23984 f54126;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3800 f54127;
-
-    public /* synthetic */ C16928(AbstractC3729 abstractC3729, InterfaceC3800 interfaceC3800, InterfaceC3800 interfaceC3801, C23984 c23984, int i) {
-        this(abstractC3729, interfaceC3800, interfaceC3801, c23984);
-    }
-
-    public C16928(AbstractC3729 abstractC3729, InterfaceC3800 interfaceC3800, InterfaceC3800 interfaceC3801, C23984 c23984) {
-        super(abstractC3729, interfaceC3800);
-        C13638.requireNonNull(interfaceC3801);
-        this.f54127 = interfaceC3801;
-        this.f54126 = c23984;
-    }
-
-    @Override // l.InterfaceC3458
-    public final String getName() {
-        return this.f54126.m35483(this.f54127).toString();
-    }
-
-    @Override // l.AbstractC6344
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo17449(Collection collection) {
-        String strSubstring = this.f54126.f48427;
-        int iLastIndexOf = strSubstring.lastIndexOf(".");
-        if (iLastIndexOf != -1) {
-            strSubstring = strSubstring.substring(0, iLastIndexOf);
-        }
-        return strSubstring.replace("/", ".");
-    }
-
-    @Override // l.AbstractC6344
+public final class C16928 extends AbstractC16182 {
     public final String toString() {
-        StringBuilder sb = new StringBuilder("DirectoryFileObject[");
-        sb.append(this.f54127);
-        sb.append(":");
-        return C22697.m50267(sb, this.f54126.f48427, "]");
+        return "big endian";
     }
 
-    @Override // l.AbstractC6344
+    @Override // l.AbstractC16182
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC6344 mo17450(String str) {
-        return new C16928(this.f21403, this.f21404.resolveSibling(str), this.f54127, new C23984(this.f54126.m52821(), str));
+    public final long mo38406(C25134 c25134) throws C2013 {
+        c25134.getClass();
+        byte[] bArr = new byte[8];
+        c25134.m56024(8, bArr);
+        long j = 0;
+        for (int i = 0; i < 8; i++) {
+            j = (j << 8) | ((long) (bArr[i] & 255));
+        }
+        return j;
+    }
+
+    @Override // l.AbstractC16182
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo38409(C25134 c25134, String str) {
+        byte[] bytes = str.getBytes(C22150.f71347);
+        c25134.getClass();
+        c25134.m56007(bytes.length, bytes);
+    }
+
+    @Override // l.AbstractC16182
+    /* JADX INFO: renamed from: ᩷ */
+    public final long mo38410(C25134 c25134) throws C2013 {
+        byte[] bArr = new byte[4];
+        c25134.m56024(4, bArr);
+        return (((long) bArr[3]) & 255) | (((long) (bArr[0] << 24)) & 4278190080L) | (((long) (bArr[1] << 16)) & 16711680) | (((long) (bArr[2] << 8)) & 65280);
+    }
+
+    @Override // l.AbstractC16182
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo38408(C25134 c25134, long j) {
+        c25134.m56007(8, new byte[]{(byte) (j >> 56), (byte) (j >> 48), (byte) (j >> 40), (byte) (j >> 32), (byte) (j >> 24), (byte) (j >> 16), (byte) (j >> 8), (byte) j});
     }
 }

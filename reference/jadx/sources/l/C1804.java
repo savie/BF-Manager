@@ -1,24 +1,42 @@
 package l;
 
-import java.util.ArrayList;
+import android.content.ClipData;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.ContentInfo;
 
-/* JADX INFO: renamed from: l.֫ۨ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7AI */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1804 {
+/* JADX INFO: renamed from: l.֫ۡ, reason: contains not printable characters */
+/* JADX INFO: compiled from: JB1Y */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1804 implements InterfaceC11498 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f6956;
+    public final ContentInfo.Builder f6153;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f6957;
+    public C1804(ClipData clipData, int i) {
+        this.f6153 = C5533.m16446(clipData, i);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C17327 f6958;
+    @Override // l.InterfaceC11498
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo6277(int i) {
+        this.f6153.setFlags(i);
+    }
 
-    public C1804(C17327 c17327, ArrayList arrayList, ArrayList arrayList2, int i, boolean z, int i2, String str) {
-        this.f6958 = c17327;
-        this.f6956 = arrayList;
-        this.f6957 = arrayList2;
+    @Override // l.InterfaceC11498
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo6278(Uri uri) {
+        this.f6153.setLinkUri(uri);
+    }
+
+    @Override // l.InterfaceC11498
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo6279(Bundle bundle) {
+        this.f6153.setExtras(bundle);
+    }
+
+    @Override // l.InterfaceC11498
+    public final C23433 build() {
+        return new C23433(new C16719(this.f6153.build()));
     }
 }

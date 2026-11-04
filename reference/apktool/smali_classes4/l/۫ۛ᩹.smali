@@ -1,263 +1,175 @@
-.class public final Ll/۫ۛ᩹;
-.super Ll/ۗ᩷᩺;
-.source "J4L7"
+.class public final synthetic Ll/۫ۛ᩹;
+.super Ljava/lang/Object;
+.source "JAPJ"
+
+# interfaces
+.implements Ll/֫ۛ᩹;
 
 
 # instance fields
-.field public ֨:Ll/֫ۧۚ;
+.field public final synthetic ܰ:Ll/֫ۛ᩹;
 
-.field public final synthetic ۘ:Ljava/lang/Runnable;
-
-.field public final synthetic ۜ:[I
-
-.field public final synthetic ۬:Ll/᩻ۛ᩹;
-
-.field public ᩹:Z
+.field public final synthetic ᩶:Ll/֫ۛ᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ۛ᩹;[ILjava/lang/Runnable;)V
+.method public synthetic constructor <init>(Ll/֫ۛ᩹;Ll/֫ۛ᩹;)V
     .locals 0
 
-    .line 135
-    iput-object p1, p0, Ll/۫ۛ᩹;->۬:Ll/᩻ۛ᩹;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ll/۫ۛ᩹;->ۜ:[I
+    iput-object p1, p0, Ll/۫ۛ᩹;->ܰ:Ll/֫ۛ᩹;
 
-    iput-object p3, p0, Ll/۫ۛ᩹;->ۘ:Ljava/lang/Runnable;
-
-    invoke-direct {p0}, Ll/ۗ᩷᩺;-><init>()V
+    iput-object p2, p0, Ll/۫ۛ᩹;->᩶:Ll/֫ۛ᩹;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()V
-    .locals 1
+.method public final synthetic and(Ljava/util/function/DoublePredicate;)Ljava/util/function/DoublePredicate;
+    .locals 0
 
-    .line 205
-    iget-object v0, p0, Ll/۫ۛ᩹;->֨:Ll/֫ۧۚ;
+    .line 35
+    invoke-static {p0, p1}, Ll/ۚۛ᩹;->ۙ(Ll/֫ۛ᩹;Ljava/util/function/DoublePredicate;)Ll/֫ۛ᩹;
 
-    invoke-virtual {v0}, Ll/֫ۧۚ;->ۖ()V
+    move-result-object p1
 
-    .line 206
-    invoke-static {}, Ll/ܺۡۜ;->ۨ()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final ۙ()V
+.method public final and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 103
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final negate()Ljava/util/function/DoublePredicate;
     .locals 1
 
-    .line 192
-    iget-boolean v0, p0, Ll/۫ۛ᩹;->᩹:Z
+    .line 109
+    new-instance v0, Ll/᩸ۛ᩹;
 
-    if-nez v0, :cond_1
+    invoke-direct {v0, p0}, Ll/᩸ۛ᩹;-><init>(Ll/֫ۛ᩹;)V
 
-    iget-object v0, p0, Ll/۫ۛ᩹;->֨:Ll/֫ۧۚ;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Ll/֫ۧۚ;->֨()Z
+.method public final negate()Ljava/util/function/Predicate;
+    .locals 1
+
+    .line 109
+    new-instance v0, Ll/᩸ۛ᩹;
+
+    invoke-direct {v0, p0}, Ll/᩸ۛ᩹;-><init>(Ll/֫ۛ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final synthetic or(Ljava/util/function/DoublePredicate;)Ljava/util/function/DoublePredicate;
+    .locals 0
+
+    .line 35
+    invoke-static {p0, p1}, Ll/ۚۛ᩹;->᩷(Ll/֫ۛ᩹;Ljava/util/function/DoublePredicate;)Ll/֫ۛ᩹;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 148
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final synthetic test(D)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1, p2}, Ll/ۚۛ᩹;->ۙ(Ll/֫ۛ᩹;D)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final synthetic test(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 35
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-static {p0, p1}, Ll/ۚۛ᩹;->ۙ(Ll/֫ۛ᩹;Ljava/lang/Float;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۙ(Ll/֫ۛ᩹;)Ll/۫ۛ᩹;
+    .locals 1
+
+    .line 126
+    new-instance v0, Ll/۫ۛ᩹;
+
+    invoke-direct {v0, p0, p1}, Ll/۫ۛ᩹;-><init>(Ll/֫ۛ᩹;Ll/֫ۛ᩹;)V
+
+    return-object v0
+.end method
+
+.method public final ۤ(F)Z
+    .locals 1
+
+    .line 126
+    iget-object v0, p0, Ll/۫ۛ᩹;->ܰ:Ll/֫ۛ᩹;
+
+    invoke-interface {v0, p1}, Ll/֫ۛ᩹;->ۤ(F)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ll/۫ۛ᩹;->᩶:Ll/֫ۛ᩹;
+
+    invoke-interface {v0, p1}, Ll/֫ۛ᩹;->ۤ(F)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    .line 195
     :cond_0
-    iget-object v0, p0, Ll/۫ۛ᩹;->ۘ:Ljava/lang/Runnable;
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    return p1
 
     :cond_1
     :goto_0
-    return-void
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final ۙ(Ljava/lang/Exception;)V
-    .locals 2
+.method public final ᩷(Ll/֫ۛ᩹;)Ll/ܳۛ᩹;
+    .locals 1
 
-    .line 200
-    iget-object v0, p0, Ll/۫ۛ᩹;->۬:Ll/᩻ۛ᩹;
+    .line 81
+    new-instance v0, Ll/ܳۛ᩹;
 
-    invoke-static {v0}, Ll/᩻ۛ᩹;->᩹(Ll/᩻ۛ᩹;)Lbin/mt/plus/Main;
+    invoke-direct {v0, p0, p1}, Ll/ܳۛ᩹;-><init>(Ll/֫ۛ᩹;Ll/֫ۛ᩹;)V
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 546
-    invoke-virtual {v0, p1, v1}, Ll/۫ܶۘ;->ۙ(Ljava/lang/Throwable;Landroid/content/DialogInterface$OnDismissListener;)V
-
-    return-void
-.end method
-
-.method public final ۚ()V
-    .locals 8
-
-    .line 150
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Ll/۫ۛ᩹;->ۜ:[I
-
-    array-length v2, v1
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 151
-    array-length v2, v1
-
-    const/4 v3, 0x0
-
-    :goto_0
-    iget-object v4, p0, Ll/۫ۛ᩹;->۬:Ll/᩻ۛ᩹;
-
-    if-ge v3, v2, :cond_0
-
-    aget v5, v1, v3
-
-    .line 153
-    invoke-static {v4}, Ll/᩻ۛ᩹;->ۘ(Ll/᩻ۛ᩹;)[Ll/ۧۛ᩹;
-
-    move-result-object v4
-
-    aget-object v4, v4, v5
-
-    .line 457
-    iget-object v4, v4, Ll/ۧۛ᩹;->ۨ:Ljava/util/function/Supplier;
-
-    invoke-interface {v4}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ll/᩷ܶۨ;
-
-    .line 153
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 155
-    :cond_0
-    invoke-static {v4}, Ll/᩻ۛ᩹;->᩺(Ll/᩻ۛ᩹;)Ll/ۨۜ᩹;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ll/ۨۜ᩹;->ܶ()Ll/ۨۘ᩹;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ll/ۨۘ᩹;->֡()Ll/ۢܶ᩹;
-
-    move-result-object v2
-
-    .line 156
-    new-instance v3, Ll/ۡܶۨ;
-
-    invoke-direct {v3, v0}, Ll/ۡܶۨ;-><init>(Ljava/util/List;)V
-
-    .line 157
-    :try_start_0
-    invoke-static {v4}, Ll/᩻ۛ᩹;->۬(Ll/᩻ۛ᩹;)Ll/ۖ۬᩹;
-
-    move-result-object v5
-
-    new-instance v6, Ll/ܽۛ᩹;
-
-    invoke-direct {v6, p0, v3}, Ll/ܽۛ᩹;-><init>(Ll/۫ۛ᩹;Ll/ۡܶۨ;)V
-
-    const/4 v7, 0x0
-
-    .line 193
-    invoke-virtual {v2, v7, v5, v6}, Ll/ۢܶ᩹;->ۙ(Ll/۫ܶۘ;Ll/ۖ۬᩹;Ll/۫֨᩹;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 183
-    invoke-virtual {v3}, Ll/ۡܶۨ;->close()V
-
-    .line 184
-    iget-boolean v2, p0, Ll/۫ۛ᩹;->᩹:Z
-
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Ll/۫ۛ᩹;->֨:Ll/֫ۧۚ;
-
-    invoke-virtual {v2}, Ll/֫ۧۚ;->֨()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 185
-    iget-object v2, p0, Ll/۫ۛ᩹;->֨:Ll/֫ۧۚ;
-
-    const/16 v3, 0x64
-
-    invoke-virtual {v2, v3}, Ll/֫ۧۚ;->ܰ(I)V
-
-    .line 186
-    invoke-static {v4}, Ll/᩻ۛ᩹;->֨(Ll/᩻ۛ᩹;)Ll/ܿۛ᩹;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Ll/ܿۛ᩹;->ۙ(Ljava/util/ArrayList;[I)V
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    .line 156
-    :try_start_1
-    invoke-virtual {v3}, Ll/ۡܶۨ;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v0
-.end method
-
-.method public final ܰ()V
-    .locals 2
-
-    .line 142
-    new-instance v0, Ll/֫ۧۚ;
-
-    iget-object v1, p0, Ll/۫ۛ᩹;->۬:Ll/᩻ۛ᩹;
-
-    invoke-static {v1}, Ll/᩻ۛ᩹;->᩹(Ll/᩻ۛ᩹;)Lbin/mt/plus/Main;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/֫ۧۚ;-><init>(Ll/۫ܶۘ;)V
-
-    const v1, 0x7f120528
-
-    .line 143
-    invoke-virtual {v0, v1}, Ll/֫ۧۚ;->ۨ(I)V
-
-    const/4 v1, 0x0
-
-    .line 65
-    invoke-virtual {v0, v1}, Ll/֫ۧۚ;->ۙ(Ljava/lang/Runnable;)Ll/֫ۧۚ;
-
-    .line 145
-    invoke-virtual {v0}, Ll/֫ۧۚ;->᩺()Ll/֫ۧۚ;
-
-    iput-object v0, p0, Ll/۫ۛ᩹;->֨:Ll/֫ۧۚ;
-
-    return-void
+    return-object v0
 .end method

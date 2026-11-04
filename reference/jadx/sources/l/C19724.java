@@ -1,55 +1,418 @@
 package l;
 
-import bin.mt.plus.R;
+import android.widget.BaseAdapter;
 import java.util.List;
 
-/* JADX INFO: renamed from: l.᩵᩸֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: H88G */
+/* JADX INFO: renamed from: l.ᩴۡ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: E6NV */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19724 extends AbstractC9141 {
+public final class C19724 extends BaseAdapter {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C19724 f63298 = new C19724();
+    /* JADX INFO: renamed from: ۬᩶ᩴ, reason: not valid java name and contains not printable characters */
+    private static final short[] f63482 = {4943, 11510, 16263, 15383, -1831, -2959, -8534, -10782, -3119, -2992, 9275, 13456, -13814, -22829, -22972, -22829, -2892, 13330, -10733, 16219, 13014, 8906, -11970, -11000, -10322, 13445, -2669, -12226, -3005, -1608, -12299, 14176, -1015, -2908};
 
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo11849() {
-        return 0;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final List f63483;
+
+    @Override // android.widget.Adapter
+    public final Object getItem(int i) {
+        List list = null;
+        int i2 = -1281975655;
+        int i3 = C3492.f12043;
+        int i4 = C0773.f2792;
+        int iM3169 = (i3 - C0773.m3169("۬ۨ")) * (-21);
+        int i5 = ((iM3169 ^ i4) * (-14883)) ^ (-1567091117);
+        int i6 = -881372406;
+        while (true) {
+            i2 = ((((i2 ^ i4) * (-7523)) >> 31) & i5) ^ (iM3169 ^ i6);
+            switch (i2) {
+                case -2007297977:
+                case -378684787:
+                    if (C2023.f6737) {
+                        iM3169 = C0773.m3169("ܶ֨") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 25361) ^ (-554637730);
+                        i6 = 528331338;
+                    } else {
+                        iM3169 = (C0773.m3169("᩶᩹") ^ i4) * 43;
+                        i5 = ((iM3169 ^ i3) * 14103) ^ 1253109521;
+                        i6 = -2041411624;
+                    }
+                    break;
+                case -1987190546:
+                case -1941309859:
+                    list = this.f63483;
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = (C0773.m3169("᩸֨") + i3) * 77;
+                        i5 = ((iM3169 ^ i4) * 6801) ^ (-744231804);
+                        i6 = -183804219;
+                    } else {
+                        iM3169 = C0773.m3169("֨۠") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 1663) ^ (-929501448);
+                        i6 = -546736459;
+                    }
+                    break;
+                case -1843795971:
+                case 1818793324:
+                    if (C1343.f4799 != 0) {
+                        iM3169 = C0773.m3169("ܶ֨") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 25361) ^ (-554637730);
+                        i6 = 528331338;
+                    } else {
+                        iM3169 = (i4 - C0773.m3169("ۢۛ")) * (-17);
+                        i5 = ((iM3169 ^ i3) * 18185) ^ 2067567425;
+                        i6 = -1128601834;
+                    }
+                    break;
+                case -1757141322:
+                case 1690997749:
+                    if (C1146.m4231()) {
+                        iM3169 = (C0773.m3169("᩸ۖ") ^ i4) * (-69);
+                        i5 = ((iM3169 ^ i3) * 1719) ^ (-1460483276);
+                        i6 = 1150314673;
+                    } else {
+                        iM3169 = (C0773.m3169("᩸֨") + i3) * 77;
+                        i5 = ((iM3169 ^ i4) * 6801) ^ (-744231804);
+                        i6 = -183804219;
+                    }
+                    break;
+                case -1751114331:
+                case 553143000:
+                    if (C2023.m6964() <= 0) {
+                        iM3169 = C0773.m3169("۟ۢ") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 20375) ^ 1676626046;
+                        i6 = 1776102526;
+                    } else {
+                        iM3169 = C0773.m3169("᩷᩻") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 22953) ^ 473308553;
+                        i6 = -1533600608;
+                    }
+                    break;
+                case -1581138060:
+                case -1376274396:
+                    return (C22708) C1542.m5473(list, i);
+                case -1269802682:
+                case 244352604:
+                    if (C11235.f35427 >= 0) {
+                        iM3169 = C0773.m3169("ۧ᩵") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 32013) ^ (-2067020337);
+                        i6 = 2119674291;
+                    } else {
+                        iM3169 = C0773.m3169("ܶ֨") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 25361) ^ (-554637730);
+                        i6 = 528331338;
+                    }
+                    break;
+                case -1184344885:
+                case 1862999689:
+                    if (C0269.m1775() <= 0) {
+                        iM3169 = (C0773.m3169("᩸֨") + i3) * 77;
+                        i5 = ((iM3169 ^ i4) * 6801) ^ (-744231804);
+                        i6 = -183804219;
+                    } else {
+                        iM3169 = C0773.m3169("֨ۧ") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 19095) ^ 1646886552;
+                        i6 = 2141110170;
+                    }
+                    break;
+                case -969235434:
+                case 315089318:
+                    if (C1542.f5343 <= 0) {
+                        iM3169 = (C0773.m3169("᩸֨") + i3) * 77;
+                        i5 = ((iM3169 ^ i4) * 6801) ^ (-744231804);
+                        i6 = -183804219;
+                    } else {
+                        iM3169 = (C0619.m2761("ۛܳ") ^ i3) * 45;
+                        i5 = ((iM3169 ^ i4) * 24639) ^ (-749038641);
+                        i6 = 353282155;
+                    }
+                    break;
+                case -922375768:
+                case -147917280:
+                    RunnableC3055.m9933();
+                    if (C2834.f9334 <= 0) {
+                        iM3169 = C0773.m3169("ۧ᩵") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 32013) ^ (-2067020337);
+                        i6 = 2119674291;
+                    } else {
+                        iM3169 = (C0619.m2761("᩹᩵") + i3) * 29;
+                        i5 = ((iM3169 ^ i4) * 19425) ^ (-2039281086);
+                        i6 = 1306476205;
+                    }
+                    break;
+                case -703976723:
+                case 1952924224:
+                    if (C3033.f9831 >= 0) {
+                        iM3169 = C0773.m3169("ܶ֨") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 25361) ^ (-554637730);
+                        i6 = 528331338;
+                    } else {
+                        iM3169 = C0773.m3169("ᩳ᩵") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 28943) ^ 1517253332;
+                        i6 = -90675162;
+                    }
+                    break;
+                case -658889713:
+                case 457412404:
+                    C0269.m1775();
+                    C2878.m9491();
+                    return null;
+                case -550339706:
+                case 1116232422:
+                    if (C11235.f35427 >= 0) {
+                        iM3169 = C0773.m3169("ۧ᩵") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 32013) ^ (-2067020337);
+                        i6 = 2119674291;
+                    } else {
+                        iM3169 = (C0773.m3169("ۛۙ") ^ i3) * 109;
+                        i5 = ((iM3169 ^ i4) * (-24635)) ^ 898649177;
+                        i6 = -208302826;
+                    }
+                    break;
+                case 210488241:
+                case 1645339037:
+                    RunnableC0334.m2063();
+                    iM3169 = C0773.m3169("۟ۢ") ^ i4;
+                    i5 = ((iM3169 ^ i3) * 20375) ^ 1676626046;
+                    i6 = 1776102526;
+                    break;
+                case 1594672860:
+                case 1994655444:
+                    if (C0619.f2439) {
+                        iM3169 = C0773.m3169("۟ۢ") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 20375) ^ 1676626046;
+                        i6 = 1776102526;
+                    } else {
+                        iM3169 = (i3 - C0773.m3169("۫۫")) * 57;
+                        i5 = ((iM3169 ^ i4) * (-7965)) ^ 1194191130;
+                        i6 = 515670248;
+                    }
+                    break;
+                default:
+                    C1343.m4943();
+                    if (C13473.f42873 == 0) {
+                        iM3169 = C0773.m3169("ܶ֨") ^ i3;
+                        i5 = ((iM3169 ^ i4) * 25361) ^ (-554637730);
+                        i6 = 528331338;
+                    } else {
+                        iM3169 = C0773.m3169("۟ۢ") ^ i4;
+                        i5 = ((iM3169 ^ i3) * 20375) ^ 1676626046;
+                        i6 = 1776102526;
+                    }
+                    break;
+            }
+        }
     }
 
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo11850() {
-        return "Access Key";
+    @Override // android.widget.Adapter
+    public final long getItemId(int i) {
+        List list = null;
+        int i2 = -1209218616;
+        int i3 = C2288.f7433;
+        int i4 = C2354.f7599;
+        int iM2761 = (C0619.m2761("᩸۟") ^ i4) * (-115);
+        int i5 = ((iM2761 ^ i3) * 23691) ^ 2009927422;
+        int i6 = 1961075785;
+        while (true) {
+            i2 = ((((i2 ^ i3) * (-4189)) >> 31) & i5) ^ (iM2761 ^ i6);
+            switch (i2) {
+                case -2084406937:
+                case -776809777:
+                    if (C3077.f9998) {
+                        iM2761 = (C0773.m3169("ܺ᩵") ^ i3) * 21;
+                        i5 = ((iM2761 ^ i4) * 10493) ^ (-908316320);
+                        i6 = 523720930;
+                    } else {
+                        iM2761 = C0619.m2761("ܽ᩷") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 15745) ^ 2108575278;
+                        i6 = 2060303128;
+                    }
+                    break;
+                case -1961157874:
+                case 1469300546:
+                    if (C2023.f6737) {
+                        iM2761 = C0619.m2761("ۜ۟") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 18873) ^ (-1757616925);
+                        i6 = -1756953943;
+                    } else {
+                        iM2761 = (C0773.m3169("֨ۛ") + i4) * (-41);
+                        i5 = ((iM2761 ^ i3) * (-27089)) ^ 624605083;
+                        i6 = 43890085;
+                    }
+                    break;
+                case -1896154346:
+                case -1684648709:
+                    list = this.f63483;
+                    if (C2375.f7641 <= 0) {
+                        iM2761 = C0619.m2761("ܽ᩷") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 15745) ^ 2108575278;
+                        i6 = 2060303128;
+                    } else {
+                        iM2761 = C0619.m2761("ۗ᩵") ^ i4;
+                        i5 = ((iM2761 ^ i3) * 15259) ^ (-288378743);
+                        i6 = 1075015852;
+                    }
+                    break;
+                case -1684496232:
+                case 426599188:
+                    if (RunnableC0334.m2063()) {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    } else {
+                        iM2761 = (C0619.m2761("᩹ۡ") ^ i4) * (-119);
+                        i5 = ((iM2761 ^ i3) * 24213) ^ (-1950866495);
+                        i6 = 1646383039;
+                    }
+                    break;
+                case -1105193453:
+                case -501416864:
+                    if (C1783.f6087 <= 0) {
+                        iM2761 = C0619.m2761("ۜ۟") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 18873) ^ (-1757616925);
+                        i6 = -1756953943;
+                    } else {
+                        iM2761 = (i3 - C0773.m3169("ۘܺ")) * (-99);
+                        i5 = ((iM2761 ^ i4) * 23013) ^ (-922435934);
+                        i6 = -3793267;
+                    }
+                    break;
+                case -1017529021:
+                case -80485059:
+                    if (C1343.f4799 != 0) {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    } else {
+                        iM2761 = (i3 - C0619.m2761("ۘ᩶")) * (-25);
+                        i5 = ((iM2761 ^ i4) * 26991) ^ (-443134037);
+                        i6 = 2138838605;
+                    }
+                    break;
+                case -797731006:
+                case 1772079786:
+                    return ((C22708) C1542.m5473(list, i)).f73703;
+                case -763133024:
+                case -410209609:
+                    if (C1519.m5403()) {
+                        iM2761 = C0773.m3169("᩺ۜ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-29099)) ^ (-1230309467);
+                        i6 = 1800460047;
+                    } else {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    }
+                    break;
+                case -700127909:
+                case 70338108:
+                    if (C23916.f77426 > 0) {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    } else {
+                        iM2761 = C0619.m2761("ۜ۟") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 18873) ^ (-1757616925);
+                        i6 = -1756953943;
+                    }
+                    break;
+                case -681543478:
+                case 268139772:
+                    if (AbstractC3624.f12429 <= 0) {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    } else {
+                        iM2761 = (C0619.m2761("ۤۚ") ^ i3) * (-43);
+                        i5 = ((iM2761 ^ i4) * 22149) ^ 2011165406;
+                        i6 = -218811183;
+                    }
+                    break;
+                case -319841846:
+                case -183107977:
+                    C17202.m40372();
+                    C1343.m4943();
+                    return 0L;
+                case -178890845:
+                case 1240437509:
+                    if (!C0619.f2439) {
+                        iM2761 = C0619.m2761("᩺ᩴ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * 24689) ^ (-1090683552);
+                        i6 = -1806565226;
+                    } else {
+                        iM2761 = C0773.m3169("᩺ᩳ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * (-26121)) ^ (-614523495);
+                        i6 = -641129020;
+                    }
+                    break;
+                case 88703842:
+                case 1050853723:
+                    if (C2288.f7433 <= 0) {
+                        iM2761 = C0619.m2761("᩺ᩴ") ^ i4;
+                        i5 = ((iM2761 ^ i3) * 24689) ^ (-1090683552);
+                        i6 = -1806565226;
+                    } else {
+                        iM2761 = C0619.m2761("֡᩻") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 10051) ^ (-1144057016);
+                        i6 = -231952846;
+                    }
+                    break;
+                case 413099679:
+                case 1293382182:
+                    if (C3099.f10023 <= 0) {
+                        iM2761 = (C0619.m2761("ۛ۫") + i3) * 85;
+                        i5 = ((iM2761 ^ i4) * 19495) ^ (-855682047);
+                        i6 = 1356446130;
+                    } else {
+                        iM2761 = C0619.m2761("ۜ۟") ^ i3;
+                        i5 = ((iM2761 ^ i4) * 18873) ^ (-1757616925);
+                        i6 = -1756953943;
+                    }
+                    break;
+                case 1235903341:
+                case 1573464216:
+                    C1783.m6232();
+                    iM2761 = C0619.m2761("ۜ۟") ^ i3;
+                    i5 = ((iM2761 ^ i4) * 18873) ^ (-1757616925);
+                    i6 = -1756953943;
+                    break;
+                default:
+                    if (C2288.f7433 <= 0) {
+                        iM2761 = (C0619.m2761("ۛ۫") + i3) * 85;
+                        i5 = ((iM2761 ^ i4) * 19495) ^ (-855682047);
+                        i6 = 1356446130;
+                    } else {
+                        iM2761 = (C0773.m3169("ۙ۫") + i4) * 15;
+                        i5 = ((iM2761 ^ i3) * 12889) ^ 120776220;
+                        i6 = -1490098946;
+                    }
+                    break;
+            }
+        }
     }
 
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ۚ */
-    public final String mo11852() {
-        return "s3";
+    public C19724(List list) {
+        this.f63483 = list;
     }
 
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo11854() {
-        return "Secret Key";
+    @Override // android.widget.Adapter
+    public final int getCount() {
+        return C2834.m9336(this.f63483);
     }
 
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ᩹ */
-    public final boolean mo11855() {
-        return false;
-    }
-
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo11853() {
-        return C16737.m39288(R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC9141
-    /* JADX INFO: renamed from: ۙ */
-    public final List mo11851(String str, String str2) {
-        throw new UnsupportedOperationException();
+    /* JADX WARN: Code restructure failed: missing block: B:21:0x00ef, code lost:
+    
+        if (l.C1542.f5343 > 0) goto L22;
+     */
+    @Override // android.widget.Adapter
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final android.view.View getView(int r39, android.view.View r40, android.view.ViewGroup r41) {
+        /*
+            Method dump skipped, instruction units count: 2140
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C19724.getView(int, android.view.View, android.view.ViewGroup):android.view.View");
     }
 }

@@ -9,7 +9,7 @@
 # static fields
 .field public static final ۙ:Ljava/util/HashSet;
 
-.field public static final ܰ:Lcom/amazonaws/logging/Log;
+.field public static final ᩷:Lcom/amazonaws/logging/Log;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->᩷:Lcom/amazonaws/logging/Log;
 
     .line 54
     new-instance v0, Ljava/util/HashSet;
@@ -78,7 +78,7 @@
     .locals 7
 
     .line 110
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
 
     move-result v3
 
-    sget-object v4, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->ܰ:Lcom/amazonaws/logging/Log;
+    sget-object v4, Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;->᩷:Lcom/amazonaws/logging/Log;
 
     if-eqz v3, :cond_1
 
@@ -156,7 +156,7 @@
 
     move-result-object v1
 
-    invoke-interface {v4, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v4, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -216,7 +216,7 @@
 
     move-result-object v1
 
-    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     goto :goto_0
 
@@ -274,7 +274,7 @@
 
     move-result-object v1
 
-    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     goto/16 :goto_0
 
@@ -327,7 +327,7 @@
     move-result-object v2
 
     .line 133
-    invoke-virtual {p1, v2}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۨ(Ljava/util/Date;)V
+    invoke-virtual {p1, v2}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۤ(Ljava/util/Date;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -355,7 +355,7 @@
 
     move-result-object v1
 
-    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v4, v1, v2}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     goto/16 :goto_0
 
@@ -413,7 +413,7 @@
     invoke-direct {v1}, Lcom/amazonaws/services/s3/internal/S3RequesterChargedHeaderHandler;-><init>()V
 
     .line 38
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v1
 
@@ -511,7 +511,7 @@
     return-void
 .end method
 
-.method public static ܰ(Lcom/amazonaws/http/HttpResponse;)Lcom/amazonaws/AmazonWebServiceResponse;
+.method public static ᩷(Lcom/amazonaws/http/HttpResponse;)Lcom/amazonaws/AmazonWebServiceResponse;
     .locals 5
 
     .line 86
@@ -520,7 +520,7 @@
     invoke-direct {v0}, Lcom/amazonaws/AmazonWebServiceResponse;-><init>()V
 
     .line 87
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v1
 
@@ -533,7 +533,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 88
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v2
 
@@ -546,7 +546,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 89
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p0
 

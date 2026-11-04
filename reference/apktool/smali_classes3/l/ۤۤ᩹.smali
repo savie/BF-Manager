@@ -1,110 +1,184 @@
-.class public final synthetic Ll/ۤۤ᩹;
+.class public final Ll/ۤۤ᩹;
 .super Ljava/lang/Object;
-.source "E4GI"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "51RR"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/Object;
+.field public ۙ:Ljava/util/Properties;
 
-.field public final synthetic ۫:Ljava/lang/Object;
-
-.field public final synthetic ܺ:I
-
-.field public final synthetic ܽ:Ljava/lang/Cloneable;
-
-.field public final synthetic ܿ:Ljava/lang/Object;
-
-.field public final synthetic ᩶:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Cloneable;Ljava/lang/Object;Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 0
-    iput p6, p0, Ll/ۤۤ᩹;->ܺ:I
-
-    iput-object p1, p0, Ll/ۤۤ᩹;->᩶:Ljava/lang/Object;
-
-    iput-object p2, p0, Ll/ۤۤ᩹;->֡:Ljava/lang/Object;
-
-    iput-object p3, p0, Ll/ۤۤ᩹;->ܽ:Ljava/lang/Cloneable;
-
-    iput-object p4, p0, Ll/ۤۤ᩹;->۫:Ljava/lang/Object;
-
-    iput-object p5, p0, Ll/ۤۤ᩹;->ܿ:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public ᩷:[B
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 0
-    iget v0, p0, Ll/ۤۤ᩹;->ܺ:I
+    .line 87
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "ApkExternalInfo [p="
 
-    iget-object v0, p0, Ll/ۤۤ᩹;->᩶:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ll/ܿ᩶ۤ;
+    iget-object v1, p0, Ll/ۤۤ᩹;->ۙ:Ljava/util/Properties;
 
-    iget-object v1, p0, Ll/ۤۤ᩹;->֡:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v1, Ll/ۙۧۤ;
+    const-string v1, ", otherData="
 
-    iget-object v2, p0, Ll/ۤۤ᩹;->ܽ:Ljava/lang/Cloneable;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Ll/᩺᩵۟;
+    iget-object v1, p0, Ll/ۤۤ᩹;->᩷:[B
 
-    iget-object v3, p0, Ll/ۤۤ᩹;->۫:Ljava/lang/Object;
+    invoke-static {v1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    check-cast v3, Ll/ۛ۠۟;
+    move-result-object v1
 
-    iget-object v4, p0, Ll/ۤۤ᩹;->ܿ:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v4, Ll/ᩳ᩵ۤ;
+    const-string v1, "]"
 
-    invoke-static {v0, v1, v2, v3, v4}, Ll/ܿ᩶ۤ;->ۙ(Ll/ܿ᩶ۤ;Ll/ۙۧۤ;Ll/᩺᩵۟;Ll/ۛ۠۟;Ll/ᩳ᩵ۤ;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ۙ([B)V
+    .locals 6
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    .line 27
+    :cond_0
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [B
+
+    .line 30
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    .line 32
+    invoke-static {}, Ll/᩸ۤ᩹;->ۙ()Ll/ۛۤ᩹;
+
+    move-result-object v3
+
+    new-instance v4, Ll/ۛۤ᩹;
+
+    invoke-direct {v4, v2}, Ll/ۛۤ᩹;-><init>([B)V
+
+    invoke-virtual {v3, v4}, Ll/ۛۤ᩹;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 36
+    array-length v2, p1
+
+    sub-int/2addr v2, v1
+
+    if-gt v2, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-array v2, v1, [B
+
+    .line 42
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    .line 43
+    new-instance v3, Ll/ۛۤ᩹;
+
+    invoke-direct {v3, v2}, Ll/ۛۤ᩹;-><init>([B)V
+
+    invoke-virtual {v3}, Ll/ۛۤ᩹;->ۙ()I
+
+    move-result v2
+
+    .line 45
+    array-length v3, p1
+
+    add-int/lit8 v3, v3, -0x4
+
+    if-ge v3, v2, :cond_2
+
+    goto :goto_0
+
+    .line 50
+    :cond_2
+    new-array v3, v2, [B
+
+    .line 51
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    .line 52
+    iget-object v4, p0, Ll/ۤۤ᩹;->ۙ:Ljava/util/Properties;
+
+    new-instance v5, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v5, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-virtual {v4, v5}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
+
+    .line 54
+    array-length p1, p1
+
+    sub-int/2addr p1, v1
+
+    sub-int/2addr p1, v2
+
+    sub-int/2addr p1, v1
+
+    if-lez p1, :cond_3
+
+    .line 57
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Ll/ۤۤ᩹;->᩷:[B
+
+    .line 58
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    :cond_3
+    :goto_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Ll/ۤۤ᩹;->᩶:Ljava/lang/Object;
+    .line 34
+    :cond_4
+    new-instance v0, Ljava/net/ProtocolException;
 
-    check-cast v0, Ll/ۛۤ᩹;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ll/ۤۤ᩹;->֡:Ljava/lang/Object;
+    const-string v2, "unknow protocl ["
 
-    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Ll/ۤۤ᩹;->ܽ:Ljava/lang/Cloneable;
+    invoke-static {p1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    check-cast v2, [Ljava/lang/CharSequence;
+    move-result-object p1
 
-    iget-object v3, p0, Ll/ۤۤ᩹;->۫:Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v3, Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string p1, "]"
 
-    iget-object v4, p0, Ll/ۤۤ᩹;->ܿ:Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v4, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3, v4}, Ll/ۛۤ᩹;->ۙ(Ll/ۛۤ᩹;Ljava/util/concurrent/atomic/AtomicBoolean;[Ljava/lang/CharSequence;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicReference;)V
+    move-result-object p1
 
-    return-void
+    invoke-direct {v0, p1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

@@ -1,24 +1,29 @@
 package l;
 
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ۡۗۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57L9 */
+/* JADX INFO: renamed from: l.۠ۨۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8610 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
+public final class C8610 {
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return ((C3836) obj).f14294;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f28114;
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C19161 f28115;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f28116;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f28117;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C0407 f28118;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f28119;
+
+    public C8610(C0407 c0407) {
+        this.f28118 = c0407;
     }
 }

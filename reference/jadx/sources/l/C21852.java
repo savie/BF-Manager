@@ -1,26 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸᩸ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U8RL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21852 {
+/* JADX INFO: renamed from: l.᩷ۚ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: A8XS */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21852 extends AbstractC10663 implements InterfaceC7153 {
+    public C21852() {
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f70923;
+    @Override // l.InterfaceC13864
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo14577() {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f70924;
+    public final String toString() {
+        return "InlineImpl{name='" + this.f33823 + "', start=" + this.f33825 + ", end=" + this.f33824 + ", attributes=" + this.f33822 + '}';
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f70925;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f70926;
-
-    public C21852(long j, long j2, String str, byte[] bArr) {
-        this.f70925 = str;
-        this.f70926 = bArr;
-        this.f70924 = j;
-        this.f70923 = j2;
+    @Override // l.InterfaceC13864
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC8644 mo14574() {
+        throw new ClassCastException("Cannot cast Inline instance to Block");
     }
 }

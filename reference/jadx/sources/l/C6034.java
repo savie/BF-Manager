@@ -1,88 +1,38 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntBinaryOperator;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.ۛۨ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۛ֡᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: X5B7 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6034 implements InterfaceC2319, InterfaceC10974 {
-    public boolean a;
-    public int b;
-    public final /* synthetic */ IntBinaryOperator c;
+public final class C6034 {
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(double d) {
-        AbstractC22686.m();
-        throw null;
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public boolean f20632;
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f20633;
 
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        d((Integer) obj);
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public int f20634;
 
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f20635;
 
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public boolean f20636;
 
-    @Override // l.InterfaceC10974
-    public final /* synthetic */ void d(Integer num) {
-        AbstractC22686.p(this, num);
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f20637;
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void end() {
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f20638;
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f20639;
 
-    public C6034(IntBinaryOperator intBinaryOperator) {
-        this.c = intBinaryOperator;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f20640;
 
-    @Override // l.InterfaceC2319
-    public final void i(InterfaceC2319 interfaceC2319) {
-        C6034 c6034 = (C6034) interfaceC2319;
-        if (c6034.a) {
-            return;
-        }
-        accept(c6034.b);
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        this.a = true;
-        this.b = 0;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void accept(int i) {
-        if (this.a) {
-            this.a = false;
-            this.b = i;
-        } else {
-            this.b = this.c.applyAsInt(this.b, i);
-        }
-    }
-
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        return this.a ? C2347.c : new C2347(this.b);
+    public final String toString() {
+        return "LayoutState{mAvailable=" + this.f20633 + ", mCurrentPosition=" + this.f20639 + ", mItemDirection=" + this.f20638 + ", mLayoutDirection=" + this.f20637 + ", mStartLine=" + this.f20634 + ", mEndLine=" + this.f20635 + '}';
     }
 }

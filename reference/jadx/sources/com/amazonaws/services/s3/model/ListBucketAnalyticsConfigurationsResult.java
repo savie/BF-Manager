@@ -7,16 +7,16 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public class ListBucketAnalyticsConfigurationsResult implements Serializable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public ArrayList f613;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ArrayList f603;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m590() {
-        return this.f613;
+    public final List m584() {
+        return this.f603;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m591(ArrayList arrayList) {
-        this.f613 = arrayList;
+    public final void m585(ArrayList arrayList) {
+        this.f603 = arrayList;
     }
 }

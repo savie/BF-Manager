@@ -1,7 +1,7 @@
 package com.umeng.analytics;
 
 import java.util.Locale;
-import l.C8479;
+import l.C13645;
 
 /* JADX WARN: Enum visitor error
 jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'Male' uses external variables
@@ -36,7 +36,7 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return C8479.m22141(this.value, "Male:");
+                return C13645.m33382(this.value, "Male:");
             }
         };
         Male = gender;
@@ -45,7 +45,7 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return C8479.m22141(this.value, "Female:");
+                return C13645.m33382(this.value, "Female:");
             }
         };
         Female = gender2;
@@ -53,7 +53,7 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return C8479.m22141(this.value, "Unknown:");
+                return C13645.m33382(this.value, "Unknown:");
             }
         };
         Unknown = gender3;

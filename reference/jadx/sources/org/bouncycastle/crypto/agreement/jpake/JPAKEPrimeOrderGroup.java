@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.agreement.jpake;
 import com.umeng.analytics.pro.am;
 import java.math.BigInteger;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKEPrimeOrderGroup {
     public final BigInteger g;
     public final BigInteger p;

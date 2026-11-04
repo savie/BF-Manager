@@ -28,7 +28,7 @@
     .line 70
     iget-object v0, p0, Lbin/mt/plugin/api/editor/BaseTextEditorBaseMenu;->context:Lbin/mt/plugin/api/PluginContext;
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast v0, Lbin/mt/plugin/api/PluginContext;
 
@@ -85,7 +85,7 @@
     const-string v4, "\n\n"
 
     .line 0
-    invoke-static {v1, v4}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v4}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

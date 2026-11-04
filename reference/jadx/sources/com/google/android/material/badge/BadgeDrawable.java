@@ -23,11 +23,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.text.NumberFormat;
 import java.util.Locale;
-import l.C17910;
-import l.C18616;
-import l.C2387;
-import l.C3798;
-import l.C5031;
+import l.C11642;
+import l.C22666;
+import l.C23577;
+import l.C24323;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDrawableDelegate {
@@ -41,8 +41,8 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     public static final int BOTTOM_START = 8388691;
     public static final String DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX = "+";
     public static final String DEFAULT_EXCEED_MAX_BADGE_TEXT_SUFFIX = "…";
-    public static final int DEFAULT_STYLE = C18616.f59827;
-    public static final int DEFAULT_THEME_ATTR = C2387.f8818;
+    public static final int DEFAULT_STYLE = C4185.f14516;
+    public static final int DEFAULT_THEME_ATTR = C11642.f36672;
     public static final float FONT_SCALE_THRESHOLD = 0.3f;
     public static final int OFFSET_ALIGNMENT_MODE_EDGE = 0;
     public static final int OFFSET_ALIGNMENT_MODE_LEGACY = 1;
@@ -178,7 +178,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
 
     private boolean isAnchorViewWrappedInCompatParent() {
         FrameLayout customBadgeParent = getCustomBadgeParent();
-        return customBadgeParent != null && customBadgeParent.getId() == C3798.f14094;
+        return customBadgeParent != null && customBadgeParent.getId() == C23577.f76540;
     }
 
     public FrameLayout getCustomBadgeParent() {
@@ -191,12 +191,12 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
 
     private void tryWrapAnchorInCompatParent(final View view) {
         ViewGroup viewGroup = (ViewGroup) view.getParent();
-        if (viewGroup == null || viewGroup.getId() != C3798.f14094) {
+        if (viewGroup == null || viewGroup.getId() != C23577.f76540) {
             WeakReference weakReference = this.customBadgeParentRef;
             if (weakReference == null || weakReference.get() != viewGroup) {
                 updateAnchorParentToNotClip(view);
                 final FrameLayout frameLayout = new FrameLayout(view.getContext());
-                frameLayout.setId(C3798.f14094);
+                frameLayout.setId(C23577.f76540);
                 frameLayout.setClipChildren(false);
                 frameLayout.setClipToPadding(false);
                 frameLayout.setLayoutParams(view.getLayoutParams());
@@ -737,7 +737,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         int totalHorizontalOffsetForState = getTotalHorizontalOffsetForState();
         int badgeGravity2 = this.state.getBadgeGravity();
         if (badgeGravity2 == 8388659 || badgeGravity2 == 8388691) {
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             if (view.getLayoutDirection() == 0) {
                 f = (rect.left - this.halfBadgeWidth) + totalHorizontalOffsetForState;
             } else {
@@ -745,7 +745,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
             }
             this.badgeCenterX = f;
         } else {
-            int i2 = C5031.f17539;
+            int i2 = C22666.f73603;
             if (view.getLayoutDirection() == 0) {
                 f2 = (rect.right + this.halfBadgeWidth) - totalHorizontalOffsetForState;
             } else {
@@ -855,7 +855,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         if (context == null) {
             return "";
         }
-        return String.format(context.getString(C17910.f56778), text.substring(0, maxCharacterCount - 1), "…");
+        return String.format(context.getString(C24323.f78892), text.substring(0, maxCharacterCount - 1), "…");
     }
 
     private String getNumberBadgeText() {
@@ -863,7 +863,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
             return NumberFormat.getInstance(this.state.getNumberLocale()).format(getNumber());
         }
         Context context = (Context) this.contextRef.get();
-        return context == null ? "" : String.format(this.state.getNumberLocale(), context.getString(C17910.f56745), Integer.valueOf(this.maxBadgeNumber), DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
+        return context == null ? "" : String.format(this.state.getNumberLocale(), context.getString(C24323.f78883), Integer.valueOf(this.maxBadgeNumber), DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
     }
 
     private void onBadgeContentUpdated() {

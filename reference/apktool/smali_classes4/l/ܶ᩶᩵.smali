@@ -1,19 +1,46 @@
-.class public final Ll/ܶ᩶᩵;
+.class public Ll/ܶ᩶᩵;
 .super Ljava/lang/Object;
-.source "K69S"
+.source "Y9WP"
 
-# interfaces
-.implements Ll/ۗ᩶᩵;
+
+# instance fields
+.field public final ۙ:[B
+
+.field public final ᩷:I
+
+
+# direct methods
+.method public constructor <init>(I[B)V
+    .locals 0
+
+    .line 64
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 65
+    iput p1, p0, Ll/ܶ᩶᩵;->᩷:I
+
+    .line 66
+    iput-object p2, p0, Ll/ܶ᩶᩵;->ۙ:[B
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۫֡᩵;Ll/֨֡᩵;[BI)Ll/ۙ֡᩵;
-    .locals 0
+.method public final ۙ()[B
+    .locals 1
 
     .line 82
-    new-instance p1, Ll/᩸᩶᩵;
+    iget-object v0, p0, Ll/ܶ᩶᩵;->ۙ:[B
 
-    invoke-direct {p1, p2, p3, p4}, Ll/᩸᩶᩵;-><init>(Ll/֨֡᩵;[BI)V
+    return-object v0
+.end method
 
-    return-object p1
+.method public final ᩷()I
+    .locals 1
+
+    .line 74
+    iget v0, p0, Ll/ܶ᩶᩵;->᩷:I
+
+    return v0
 .end method

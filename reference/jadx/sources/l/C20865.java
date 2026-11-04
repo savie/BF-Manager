@@ -1,13 +1,12 @@
 package l;
 
-import java.util.Comparator;
-
-/* JADX INFO: renamed from: l.᩷۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: B784 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C20865 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        return ((String) obj).compareTo((String) obj2);
+/* JADX INFO: renamed from: l.᩵᩸᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: D6QF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20865 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 9;
     }
 }

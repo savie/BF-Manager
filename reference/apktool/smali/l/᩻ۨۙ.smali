@@ -1,125 +1,270 @@
 .class public final Ll/᩻ۨۙ;
 .super Ljava/lang/Object;
-.source "MAME"
-
-# interfaces
-.implements Ll/ܰۖۙ;
-
-
-# static fields
-.field public static final ܰ:Ljava/lang/ThreadLocal;
+.source "W8HW"
 
 
 # instance fields
-.field public final ۙ:Landroid/text/TextPaint;
+.field public ۙ:[J
+
+.field public ۤ:I
+
+.field public ᩴ:I
+
+.field public ᩷:I
+
+.field public ᩸:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 46
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Ll/᩻ۨۙ;->ܰ:Ljava/lang/ThreadLocal;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 2
+    .locals 4
 
-    .line 53
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
-    new-instance v0, Landroid/text/TextPaint;
-
-    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
-
-    iput-object v0, p0, Ll/᩻ۨۙ;->ۙ:Landroid/text/TextPaint;
-
-    const/high16 v1, 0x41200000    # 10.0f
+    const/16 v0, 0x10
 
     .line 55
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_0
+
+    const/16 v0, 0xf
+
+    .line 56
+    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
+
+    move-result v0
+
+    shl-int/2addr v0, v2
+
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 58
+    iput v1, p0, Ll/᩻ۨۙ;->᩷:I
+
+    const/4 v3, -0x1
+
+    .line 59
+    iput v3, p0, Ll/᩻ۨۙ;->᩸:I
+
+    .line 60
+    iput v1, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    .line 61
+    new-array v1, v0, [J
+
+    iput-object v1, p0, Ll/᩻ۨۙ;->ۙ:[J
+
+    sub-int/2addr v0, v2
+
+    .line 62
+    iput v0, p0, Ll/᩻ۨۙ;->ᩴ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(IIILjava/lang/CharSequence;)Z
-    .locals 3
+.method public final ۙ()V
+    .locals 2
 
-    .line 68
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x0
 
-    const/16 v1, 0x17
+    .line 118
+    iput v0, p0, Ll/᩻ۨۙ;->᩷:I
 
-    const/4 v2, 0x0
+    const/4 v1, -0x1
 
-    if-ge v0, v1, :cond_0
+    .line 119
+    iput v1, p0, Ll/᩻ۨۙ;->᩸:I
 
-    if-le p3, v0, :cond_0
+    .line 120
+    iput v0, p0, Ll/᩻ۨۙ;->ۤ:I
 
-    return v2
+    return-void
+.end method
 
-    .line 84
-    :cond_0
-    sget-object p3, Ll/᩻ۨۙ;->ܰ:Ljava/lang/ThreadLocal;
+.method public final ۙ(J)V
+    .locals 6
 
-    invoke-virtual {p3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    .line 67
+    iget v0, p0, Ll/᩻ۨۙ;->ۤ:I
 
-    move-result-object v0
+    iget-object v1, p0, Ll/᩻ۨۙ;->ۙ:[J
 
-    if-nez v0, :cond_1
+    array-length v2, v1
 
-    .line 85
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-ne v0, v2, :cond_1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 130
+    array-length v0, v1
 
-    invoke-virtual {p3, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    shl-int/lit8 v0, v0, 0x1
 
-    .line 87
-    :cond_1
-    invoke-virtual {p3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    if-ltz v0, :cond_0
 
-    move-result-object p3
+    .line 135
+    new-array v2, v0, [J
 
-    check-cast p3, Ljava/lang/StringBuilder;
+    .line 136
+    array-length v3, v1
 
-    .line 73
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->setLength(I)V
+    iget v4, p0, Ll/᩻ۨۙ;->᩷:I
 
-    :goto_0
-    if-ge p1, p2, :cond_2
+    sub-int/2addr v3, v4
 
-    .line 76
-    invoke-interface {p4, p1}, Ljava/lang/CharSequence;->charAt(I)C
+    const/4 v5, 0x0
 
-    move-result v0
+    .line 138
+    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    .line 139
+    iget-object v1, p0, Ll/᩻ۨۙ;->ۙ:[J
 
-    add-int/lit8 p1, p1, 0x1
+    invoke-static {v1, v5, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 141
+    iput v5, p0, Ll/᩻ۨۙ;->᩷:I
+
+    .line 142
+    iget v1, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Ll/᩻ۨۙ;->᩸:I
+
+    .line 143
+    iput-object v2, p0, Ll/᩻ۨۙ;->ۙ:[J
+
+    add-int/lit8 v0, v0, -0x1
+
+    .line 144
+    iput v0, p0, Ll/᩻ۨۙ;->ᩴ:I
 
     goto :goto_0
 
-    .line 80
-    :cond_2
-    iget-object p1, p0, Ll/᩻ۨۙ;->ۙ:Landroid/text/TextPaint;
+    .line 132
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    move-result-object p2
+    throw p1
 
-    invoke-static {p1, p2}, Ll/ۖܿ;->ۙ(Landroid/text/TextPaint;Ljava/lang/String;)Z
+    .line 71
+    :cond_1
+    :goto_0
+    iget v0, p0, Ll/᩻ۨۙ;->᩸:I
 
-    move-result p1
+    add-int/lit8 v0, v0, 0x1
 
-    return p1
+    iget v1, p0, Ll/᩻ۨۙ;->ᩴ:I
+
+    and-int/2addr v0, v1
+
+    iput v0, p0, Ll/᩻ۨۙ;->᩸:I
+
+    .line 72
+    iget-object v1, p0, Ll/᩻ۨۙ;->ۙ:[J
+
+    aput-wide p1, v1, v0
+
+    .line 73
+    iget p1, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    return-void
+.end method
+
+.method public final ۤ()Z
+    .locals 1
+
+    .line 113
+    iget v0, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩷()J
+    .locals 3
+
+    .line 99
+    iget v0, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    if-eqz v0, :cond_0
+
+    .line 103
+    iget-object v0, p0, Ll/᩻ۨۙ;->ۙ:[J
+
+    iget v1, p0, Ll/᩻ۨۙ;->᩷:I
+
+    aget-wide v1, v0, v1
+
+    return-wide v1
+
+    .line 100
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final ᩸()J
+    .locals 5
+
+    .line 82
+    iget v0, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    if-eqz v0, :cond_0
+
+    .line 86
+    iget-object v1, p0, Ll/᩻ۨۙ;->ۙ:[J
+
+    iget v2, p0, Ll/᩻ۨۙ;->᩷:I
+
+    aget-wide v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 87
+    iget v1, p0, Ll/᩻ۨۙ;->ᩴ:I
+
+    and-int/2addr v1, v2
+
+    iput v1, p0, Ll/᩻ۨۙ;->᩷:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    .line 88
+    iput v0, p0, Ll/᩻ۨۙ;->ۤ:I
+
+    return-wide v3
+
+    .line 83
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method

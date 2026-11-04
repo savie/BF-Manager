@@ -1,174 +1,94 @@
-.class public final Ll/ܿۨᩴ;
-.super Ll/֨ۚᩴ;
-.source "HBSC"
+.class public final synthetic Ll/ܿۨᩴ;
+.super Ljava/lang/Object;
+.source "A16O"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic ܽ:Ll/ۛۨᩴ;
+.field public final synthetic ܰ:Z
 
 
 # direct methods
-.method public constructor <init>(Ll/ۛۨᩴ;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
-    .line 489
-    iput-object p1, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 490
-    iget p1, p1, Ll/ۤۨᩴ;->ܺ:I
-
-    invoke-direct {p0, p1}, Ll/֨ۚᩴ;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۛۨᩴ;II)V
-    .locals 0
-
-    .line 493
-    iput-object p1, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
-
-    .line 494
-    invoke-direct {p0, p2, p3}, Ll/֨ۚᩴ;-><init>(II)V
+    iput-boolean p1, p0, Ll/ܿۨᩴ;->ܰ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 0
 
-    .line 487
-    check-cast p1, Ll/ᩳۖᩴ;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-virtual {p0, p1}, Ll/ܿۨᩴ;->ۙ(Ll/ᩳۖᩴ;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 487
-    check-cast p1, Ll/ᩳۖᩴ;
-
-    invoke-virtual {p0, p1}, Ll/ܿۨᩴ;->ܰ(Ll/ᩳۖᩴ;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ۙ(I)F
+.method public synthetic negate()Ljava/util/function/Predicate;
     .locals 1
 
-    .line 504
-    iget-object v0, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    iget-object v0, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
-
-    iget-object v0, v0, Ll/ۧۨᩴ;->ܺ:[F
-
-    aget p1, v0, p1
-
-    return p1
-.end method
-
-.method public final ۙ(II)Ll/ۨۚᩴ;
-    .locals 2
-
-    .line 509
-    new-instance v0, Ll/ܿۨᩴ;
-
-    iget-object v1, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
-
-    invoke-direct {v0, v1, p1, p2}, Ll/ܿۨᩴ;-><init>(Ll/ۛۨᩴ;II)V
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ(Ll/ᩳۖᩴ;)V
-    .locals 4
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 521
-    iget-object v0, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    iget-object v0, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
+    move-result-object p1
 
-    iget-object v0, v0, Ll/ۧۨᩴ;->ܺ:[F
+    return-object p1
+.end method
 
-    .line 522
-    invoke-virtual {p0}, Ll/֨ۚᩴ;->ۙ()I
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result v1
+    .line 2
+    check-cast p1, Ljava/io/File;
 
-    .line 523
-    :goto_0
-    iget v2, p0, Ll/ۖۚᩴ;->ܺ:I
+    .line 441
+    iget-boolean v0, p0, Ll/ܿۨᩴ;->ܰ:Z
 
-    if-ge v2, v1, :cond_0
+    if-nez v0, :cond_1
 
-    add-int/lit8 v3, v2, 0x1
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    .line 524
-    iput v3, p0, Ll/ۖۚᩴ;->ܺ:I
+    move-result-object p1
 
-    aget v2, v0, v2
+    const-string v0, "."
 
-    invoke-interface {p1, v2}, Ll/ᩳۖᩴ;->ۙ(F)V
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
-
-.method public final ܰ()I
-    .locals 1
-
-    .line 499
-    iget-object v0, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
-
-    iget v0, v0, Ll/ۤۨᩴ;->֡:I
-
-    return v0
-.end method
-
-.method public final ܰ(Ll/ᩳۖᩴ;)Z
-    .locals 3
-
-    .line 514
-    iget v0, p0, Ll/ۖۚᩴ;->ܺ:I
-
-    invoke-virtual {p0}, Ll/֨ۚᩴ;->ۙ()I
-
-    move-result v1
-
-    if-lt v0, v1, :cond_0
-
     const/4 p1, 0x0
 
     return p1
 
-    .line 515
-    :cond_0
-    iget-object v0, p0, Ll/ܿۨᩴ;->ܽ:Ll/ۛۨᩴ;
-
-    iget-object v0, v0, Ll/ۛۨᩴ;->ܽ:Ll/ۧۨᩴ;
-
-    iget-object v0, v0, Ll/ۧۨᩴ;->ܺ:[F
-
-    iget v1, p0, Ll/ۖۚᩴ;->ܺ:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ll/ۖۚᩴ;->ܺ:I
-
-    aget v0, v0, v1
-
-    invoke-interface {p1, v0}, Ll/ᩳۖᩴ;->ۙ(F)V
-
+    :cond_1
+    :goto_0
     const/4 p1, 0x1
 
     return p1

@@ -1,53 +1,26 @@
 package l;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
+import android.media.Spatializer;
 
-/* JADX INFO: renamed from: l.ۜۤ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: M9Q4 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6691 {
+/* JADX INFO: renamed from: l.ۛ᩸᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 18UV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6691 implements Spatializer.OnSpatializerStateChangedListener {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f22561;
+    public final /* synthetic */ C19369 f22284;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f22562 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized boolean m18067(InterfaceC7739 interfaceC7739) {
-        if (this.f22561) {
-            return false;
-        }
-        this.f22562.add(interfaceC7739);
-        return true;
+    public C6691(C19369 c19369) {
+        this.f22284 = c19369;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m18068(InterfaceC7739 interfaceC7739) {
-        this.f22562.remove(interfaceC7739);
+    @Override // android.media.Spatializer.OnSpatializerStateChangedListener
+    public final void onSpatializerEnabledChanged(Spatializer spatializer, boolean z) {
+        this.f22284.m44793();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18066() {
-        ArrayList arrayList = new ArrayList();
-        synchronized (this) {
-            if (this.f22561) {
-                return;
-            }
-            this.f22561 = true;
-            Iterator it = this.f22562.iterator();
-            while (it.hasNext()) {
-                arrayList.add(((InterfaceC7739) it.next()).mo4866());
-            }
-            Iterator it2 = arrayList.iterator();
-            while (it2.hasNext()) {
-                try {
-                    ((InterfaceC21850) it2.next()).close();
-                } catch (IOException unused) {
-                }
-            }
-        }
+    @Override // android.media.Spatializer.OnSpatializerStateChangedListener
+    public final void onSpatializerAvailableChanged(Spatializer spatializer, boolean z) {
+        this.f22284.m44793();
     }
 }

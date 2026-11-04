@@ -1,75 +1,129 @@
 .class public final Ll/ۚ᩸᩸;
-.super Ll/ۤ᩸᩸;
-.source "99PI"
+.super Ljava/lang/Object;
+.source "KAZI"
 
 
 # instance fields
-.field public final ֡:Ll/ۡ᩸᩸;
+.field public ۙ:I
 
-.field public final ۫:Ljava/lang/String;
+.field public ۤ:Ll/᩺ۤ᩸;
 
-.field public final ܽ:Ljava/lang/String;
+.field public final ᩴ:Ll/۫ܳ᩸;
+
+.field public final ᩷:Ll/᩺ۤ᩸;
+
+.field public final ᩸:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ll/ۡ᩸᩸;)V
-    .locals 1
+.method public constructor <init>(Ll/۫ܳ᩸;Ll/᩺ۤ᩸;Ll/᩺ۤ᩸;[BI)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 178
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3181
-    invoke-direct {p0, v0}, Ll/ۤ᩸᩸;-><init>(I)V
+    .line 179
+    iput-object p1, p0, Ll/ۚ᩸᩸;->ᩴ:Ll/۫ܳ᩸;
 
-    .line 3182
-    iput-object p3, p0, Ll/ۚ᩸᩸;->֡:Ll/ۡ᩸᩸;
+    .line 180
+    iput-object p2, p0, Ll/ۚ᩸᩸;->᩷:Ll/᩺ۤ᩸;
 
-    .line 3183
-    iput-object p2, p0, Ll/ۚ᩸᩸;->ܽ:Ljava/lang/String;
+    .line 181
+    iput-object p3, p0, Ll/ۚ᩸᩸;->ۤ:Ll/᩺ۤ᩸;
 
-    .line 3184
-    iput-object p1, p0, Ll/ۚ᩸᩸;->۫:Ljava/lang/String;
+    .line 182
+    iput-object p4, p0, Ll/ۚ᩸᩸;->᩸:[B
+
+    .line 183
+    iput p5, p0, Ll/ۚ᩸᩸;->ۙ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    .line 3168
-    iget-object v0, p0, Ll/ۚ᩸᩸;->۫:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    return-object v0
-.end method
+    goto :goto_1
 
-.method public final ۚ()Ljava/lang/String;
-    .locals 1
+    .line 189
+    :cond_0
+    instance-of v0, p1, Ll/ۚ᩸᩸;
 
-    .line 3173
-    iget-object v0, p0, Ll/ۚ᩸᩸;->ܽ:Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final ۜ()Ll/֨᩵᩸;
-    .locals 1
+    .line 191
+    :cond_1
+    check-cast p1, Ll/ۚ᩸᩸;
 
-    .line 3163
-    iget-object v0, p0, Ll/ۚ᩸᩸;->֡:Ll/ۡ᩸᩸;
+    .line 192
+    iget-object v0, p0, Ll/ۚ᩸᩸;->ᩴ:Ll/۫ܳ᩸;
 
-    invoke-virtual {v0}, Ll/ۡ᩸᩸;->ۜ()Ll/ۧ᩺᩸;
+    iget-object v1, p1, Ll/ۚ᩸᩸;->ᩴ:Ll/۫ܳ᩸;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ll/۫ܳ᩸;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final ܰ()Ll/ۡ᩸᩸;
-    .locals 1
+    if-nez v0, :cond_2
 
-    .line 3178
-    iget-object v0, p0, Ll/ۚ᩸᩸;->֡:Ll/ۡ᩸᩸;
+    goto :goto_0
 
-    return-object v0
+    .line 193
+    :cond_2
+    iget-object v0, p0, Ll/ۚ᩸᩸;->᩷:Ll/᩺ۤ᩸;
+
+    iget-object v1, p1, Ll/ۚ᩸᩸;->᩷:Ll/᩺ۤ᩸;
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    .line 194
+    :cond_3
+    iget-object v0, p0, Ll/ۚ᩸᩸;->ۤ:Ll/᩺ۤ᩸;
+
+    iget-object v1, p1, Ll/ۚ᩸᩸;->ۤ:Ll/᩺ۤ᩸;
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    .line 195
+    :cond_4
+    iget-object v0, p0, Ll/ۚ᩸᩸;->᩸:[B
+
+    iget-object v1, p1, Ll/ۚ᩸᩸;->᩸:[B
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    .line 196
+    :cond_5
+    iget v0, p0, Ll/ۚ᩸᩸;->ۙ:I
+
+    iget p1, p1, Ll/ۚ᩸᩸;->ۙ:I
+
+    if-eq v0, p1, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method

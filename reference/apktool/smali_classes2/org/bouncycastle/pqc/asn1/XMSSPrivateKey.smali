@@ -217,19 +217,19 @@
     iput v5, p0, Lorg/bouncycastle/pqc/asn1/XMSSPrivateKey;->index:I
 
     .line 0
-    invoke-static {v1, v3}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v1, v3}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v5
 
     iput-object v5, p0, Lorg/bouncycastle/pqc/asn1/XMSSPrivateKey;->secretKeySeed:[B
 
-    invoke-static {v1, v4}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v1, v4}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v5
 
     iput-object v5, p0, Lorg/bouncycastle/pqc/asn1/XMSSPrivateKey;->secretKeyPRF:[B
 
-    invoke-static {v1, v2}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v1, v2}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v5
 
@@ -237,7 +237,7 @@
 
     const/4 v5, 0x4
 
-    invoke-static {v1, v5}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {v1, v5}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v5
 

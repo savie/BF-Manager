@@ -1,35 +1,57 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖۧ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: F9FK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2494 {
+/* JADX INFO: renamed from: l.ۖۜ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: M60I */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2494 extends C13352 {
 
+    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f7991 = 0;
+
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public C8002 f7992;
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final C4273 f7993;
+
+    @Override // l.C13352
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public EnumC11668 f9898;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f9899;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f9900;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m7627(C19240 c19240) {
-        this.f9899 = c19240.m27378();
-        this.f9898 = (EnumC11668) C20799.m46783(c19240.m27394(), EnumC11668.class, null);
-        this.f9900 = c19240.m27379(((int) c19240.m27394()) / 2, C7393.f24570);
+    public final boolean mo8381() {
+        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m7626() {
-        return this.f9899;
+    /* JADX WARN: Illegal instructions before constructor call */
+    public C2494(C8002 c8002) {
+        String strM21843 = c8002.m21843();
+        String parent = c8002.getParent();
+        super(strM21843, parent != null ? "/".concat(parent) : "/", null, c8002.getSize(), c8002.getTime(), !c8002.isDirectory());
+        this.f7992 = c8002;
+        C4273 c4273M21836 = c8002.m21836();
+        this.f7993 = c4273M21836;
+        if (c4273M21836 == null || !c4273M21836.m13622()) {
+            return;
+        }
+        m32931(c4273M21836.m13623());
     }
 
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("FileNotifyInformation{action=");
-        sb.append(this.f9898);
-        sb.append(", fileName='");
-        return C22697.m50267(sb, this.f9900, "'}");
+    @Override // l.C13352, l.InterfaceC2386
+    /* JADX INFO: renamed from: ᩹ */
+    public final boolean mo8113() {
+        return this.f7992.m21856();
+    }
+
+    @Override // l.C13352, l.InterfaceC2386
+    /* JADX INFO: renamed from: ۛ᩷ */
+    public final C9097 mo5155() {
+        C4273 c4273 = this.f7993;
+        if (c4273 == null || !c4273.m13624()) {
+            return null;
+        }
+        return new C9097(c4273.m13621(), (String) null, (String) null);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C8002 m8382() {
+        return this.f7992;
     }
 }

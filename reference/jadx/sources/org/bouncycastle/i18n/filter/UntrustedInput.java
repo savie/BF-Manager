@@ -1,6 +1,6 @@
 package org.bouncycastle.i18n.filter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class UntrustedInput {
     public Object input;
 

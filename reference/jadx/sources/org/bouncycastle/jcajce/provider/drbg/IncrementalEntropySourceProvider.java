@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.crypto.prng.EntropySource;
 import org.bouncycastle.crypto.prng.EntropySourceProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IncrementalEntropySourceProvider implements EntropySourceProvider {
     public final boolean predictionResistant;
     public final SecureRandom random;

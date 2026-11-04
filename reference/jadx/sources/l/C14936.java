@@ -1,68 +1,82 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import com.alipay.sdk.app.OpenAuthTask;
+import java.io.UnsupportedEncodingException;
 
-/* JADX INFO: renamed from: l.ܶۖۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q1K7 */
+/* JADX INFO: renamed from: l.ܰ᩺᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1A38 */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C14936 implements InterfaceC23537 {
+public final class C14936 extends AbstractC10461 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f48714;
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public static final String[] f48767 = {"WrLehDO\u0000B16BBDz\u0000", "WrLehDz\u0000B16BBDz\u0000"};
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8516 f48715;
+    /* JADX INFO: renamed from: ۫᩷, reason: not valid java name and contains not printable characters */
+    public int f48768;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4245 f48716;
+    /* JADX INFO: renamed from: ܳ᩷, reason: not valid java name and contains not printable characters */
+    public String f48769;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19169 f48717;
+    /* JADX INFO: renamed from: ᩴ᩷, reason: not valid java name and contains not printable characters */
+    public String f48770;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f48718;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AtomicReference f48719;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AtomicInteger f48720;
-
-    public /* synthetic */ C14936(C19169 c19169, AtomicInteger atomicInteger, ArrayList arrayList, int i, C4245 c4245, AtomicReference atomicReference, C8516 c8516) {
-        this.f48717 = c19169;
-        this.f48720 = atomicInteger;
-        this.f48714 = arrayList;
-        this.f48718 = i;
-        this.f48716 = c4245;
-        this.f48719 = atomicReference;
-        this.f48715 = c8516;
+    @Override // l.AbstractC10461
+    /* JADX INFO: renamed from: ֫ */
+    public final int mo3142(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // java.util.function.IntConsumer
-    public final void accept(int i) {
-        C19169.m43987(this.f48717, this.f48720, this.f48714, this.f48718, this.f48716, this.f48719, this.f48715, i);
+    @Override // l.AbstractC10461
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo3143(int i, byte[] bArr) {
+        return 0;
     }
 
-    @Override // java.util.function.Consumer
-    public final /* bridge */ /* synthetic */ void accept(Object obj) {
-        mo1000((Integer) obj);
+    public C14936(InterfaceC5878 interfaceC5878, String str, int i) {
+        super(interfaceC5878, (byte) 37, (byte) 104);
+        this.f48769 = null;
+        this.f48770 = str;
+        this.f48768 = i;
+        this.f33288 = "\\PIPE\\LANMAN";
+        this.f33281 = 8;
+        this.f33296 = 16384;
+        this.f33287 = 0;
+        this.f33285 = OpenAuthTask.Duplex;
     }
 
-    @Override // l.InterfaceC23537
-    /* JADX INFO: renamed from: ۨ */
-    public final /* synthetic */ void mo1000(Integer num) {
-        C10837.m27159((InterfaceC23537) this, num);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m35917(int i, String str) {
+        reset();
+        this.f48769 = str;
     }
 
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C10837.m27158((InterfaceC23537) this, intConsumer);
+    @Override // l.AbstractC10461
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo3144(byte[] bArr) {
+        char c = m26887() == 104 ? (char) 0 : (char) 1;
+        try {
+            byte[] bytes = f48767[c].getBytes("ASCII");
+            C0481.m2319(m26887() & 255, 0, bArr);
+            System.arraycopy(bytes, 0, bArr, 2, bytes.length);
+            int length = bytes.length;
+            C0481.m2319(1L, 2 + length, bArr);
+            C0481.m2319(this.f33296, length + 4, bArr);
+            C0481.m2323(this.f48768, length + 6, bArr);
+            int i = length + 10;
+            int iM12759 = i + m12759(this.f48770.toUpperCase(), bArr, i, false);
+            return c == 1 ? iM12759 + m12759(this.f48769.toUpperCase(), bArr, iM12759, false) : iM12759;
+        } catch (UnsupportedEncodingException unused) {
+            return 0;
+        }
     }
 
-    public final Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // l.AbstractC10461, l.AbstractC3971
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("NetServerEnum2[");
+        sb.append(super.toString());
+        sb.append(",name=");
+        sb.append(this.f33288);
+        sb.append(",serverTypes=");
+        return new String(C8947.m23910(sb, this.f48768 == -1 ? "SV_TYPE_ALL" : "SV_TYPE_DOMAIN_ENUM", "]"));
     }
 }

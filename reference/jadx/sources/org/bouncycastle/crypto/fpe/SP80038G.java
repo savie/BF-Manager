@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.fpe;
 
 import java.math.BigInteger;
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.hpke.HPKE;
 import org.bouncycastle.crypto.util.RadixConverter;
@@ -11,7 +11,7 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SP80038G {
     public static final int BLOCK_SIZE = 16;
     public static final String FF1_DISABLED = "org.bouncycastle.fpe.disable_ff1";
@@ -387,7 +387,7 @@ public class SP80038G {
             double d = i;
             if (Math.pow(d, i2) >= 1000000.0d) {
                 if (!z && i2 > (iFloor = ((int) Math.floor(Math.log(TWO_TO_96) / Math.log(d))) * 2)) {
-                    throw new IllegalArgumentException(C8479.m22141(iFloor, "maximum input length is "));
+                    throw new IllegalArgumentException(C13645.m33382(iFloor, "maximum input length is "));
                 }
                 return;
             }

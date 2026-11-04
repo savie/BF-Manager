@@ -1,78 +1,69 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ֨ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4W0 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15606 {
+/* JADX INFO: renamed from: l.ܳ᩷ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5T1 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15606 extends AbstractC12384 implements InterfaceC14269, InterfaceC21839 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f50739;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f50716 = EnumC7011.Format3rc;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f50740;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f50717;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f50741;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final int f50718;
 
-    public C15606(String str, int i, int i2) {
-        str.getClass();
-        this.f50740 = str;
-        this.f50741 = i;
-        this.f50739 = i2;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public InterfaceC10824 f50719;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " " + C24018.m53572(this) + ", " + getReference();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m37273(int i) {
-        int i2;
-        int i3 = this.f50741;
-        if (i3 >= 0 && (i2 = this.f50739) <= i && i3 <= i2) {
-            String str = this.f50740;
-            int iIndexOf = str.indexOf(59);
-            if (iIndexOf == -1) {
-                return C3504.m10306(str);
-            }
-            if (C3504.m10306(str.substring(0, iIndexOf))) {
-                boolean z = true;
-                while (z) {
-                    int i4 = iIndexOf + 1;
-                    int iIndexOf2 = str.indexOf(61, i4);
-                    if (iIndexOf2 != -1) {
-                        String strSubstring = str.substring(i4, iIndexOf2);
-                        int iIndexOf3 = str.indexOf(59, iIndexOf2 + 1);
-                        if (iIndexOf3 == -1) {
-                            z = false;
-                        }
-                        if (C3504.m10306(strSubstring)) {
-                            iIndexOf = iIndexOf3;
-                        }
-                    } else {
-                        z = false;
-                    }
-                }
-                return true;
-            }
-        }
-        return false;
+    public C15606(EnumC22631 enumC22631, int i, int i2, InterfaceC10824 interfaceC10824) {
+        super(enumC22631);
+        C6544.m18433(i);
+        this.f50718 = i;
+        C6544.m18436(i2);
+        this.f50717 = i2;
+        this.f50719 = interfaceC10824;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C15606.class == obj.getClass()) {
-            C15606 c15606 = (C15606) obj;
-            if (this.f50741 == c15606.f50741 && this.f50739 == c15606.f50739 && this.f50740.equals(c15606.f50740)) {
-                return true;
-            }
-        }
-        return false;
+    @Override // l.InterfaceC24077
+    /* JADX INFO: renamed from: ᩹ */
+    public final int mo2772() {
+        return this.f50718;
     }
 
-    public final int hashCode() {
-        return (((this.f50740.hashCode() * 31) + this.f50741) * 31) + this.f50739;
+    @Override // l.InterfaceC0210
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo1655() {
+        return this.f50717;
     }
 
-    public final String toString() {
-        return "Style{value='" + this.f50740 + "', start=" + this.f50741 + ", end=" + this.f50739 + '}';
+    @Override // l.InterfaceC6177
+    public final InterfaceC10824 getReference() {
+        return this.f50719;
+    }
+
+    @Override // l.InterfaceC21839
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2770(C8850 c8850) {
+        this.f50719 = c8850.m23714(this.f50719);
+    }
+
+    @Override // l.InterfaceC6177
+    /* JADX INFO: renamed from: ᩵ */
+    public final int mo2771() {
+        return this.f39756.f73513;
+    }
+
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f50716;
     }
 }

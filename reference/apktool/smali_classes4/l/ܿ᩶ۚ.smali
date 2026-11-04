@@ -1,36 +1,23 @@
-.class public final synthetic Ll/ܿ᩶ۚ;
-.super Ljava/lang/Object;
-.source "N17O"
+.class public final Ll/ܿ᩶ۚ;
+.super Ljava/lang/Exception;
+.source "T6Y0"
 
 
 # instance fields
-.field public final synthetic ۖ:I
-
-.field public final synthetic ۙ:Ll/۠֡ۚ;
-
-.field public final synthetic ۚ:[B
-
-.field public final synthetic ۨ:I
-
-.field public final synthetic ܰ:I
+.field public final ܰ:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۠֡ۚ;III[B)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Encoded text exceeds the file edit limit"
 
-    iput-object p1, p0, Ll/ܿ᩶ۚ;->ۙ:Ll/۠֡ۚ;
+    .line 106
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iput p2, p0, Ll/ܿ᩶ۚ;->ܰ:I
-
-    iput p3, p0, Ll/ܿ᩶ۚ;->ۨ:I
-
-    iput p4, p0, Ll/ܿ᩶ۚ;->ۖ:I
-
-    iput-object p5, p0, Ll/ܿ᩶ۚ;->ۚ:[B
+    .line 107
+    iput-wide p1, p0, Ll/ܿ᩶ۚ;->ܰ:J
 
     return-void
 .end method

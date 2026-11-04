@@ -2,7 +2,6 @@ package org.bouncycastle.util;
 
 import java.math.BigInteger;
 import java.util.NoSuchElementException;
-import l.C23821;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class Arrays {
@@ -1012,10 +1011,7 @@ public final class Arrays {
         if (((bArr.length - i) | i | (i2 - i) | (bArr.length - i2)) >= 0) {
             return;
         }
-        StringBuilder sb = new StringBuilder("buf.length: ");
-        C23821.m52500(sb, bArr.length, ", from: ", i, ", to: ");
-        sb.append(i2);
-        throw new IndexOutOfBoundsException(sb.toString());
+        throw new IndexOutOfBoundsException("buf.length: " + bArr.length + ", from: " + i + ", to: " + i2);
     }
 
     public static void validateSegment(byte[] bArr, int i, int i2) {
@@ -1026,9 +1022,6 @@ public final class Arrays {
         if ((length | i | i2 | (length - i2)) >= 0) {
             return;
         }
-        StringBuilder sb = new StringBuilder("buf.length: ");
-        C23821.m52500(sb, bArr.length, ", off: ", i, ", len: ");
-        sb.append(i2);
-        throw new IndexOutOfBoundsException(sb.toString());
+        throw new IndexOutOfBoundsException("buf.length: " + bArr.length + ", off: " + i + ", len: " + i2);
     }
 }

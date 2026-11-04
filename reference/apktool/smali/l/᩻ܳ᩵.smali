@@ -1,86 +1,66 @@
-.class public final Ll/᩻ܳ᩵;
-.super Ll/ܳܳ᩵;
-.source "T65P"
+.class public final synthetic Ll/᩻ܳ᩵;
+.super Ljava/lang/Object;
+.source "L6E6"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic ۨ:Ll/֫ܳ᩵;
+.field public final synthetic ܰ:Ll/ۗܳ᩵;
 
 
 # direct methods
-.method public constructor <init>(Ll/֫ܳ᩵;I)V
+.method public synthetic constructor <init>(Ll/ۗܳ᩵;)V
     .locals 0
 
-    .line 651
-    iput-object p1, p0, Ll/᩻ܳ᩵;->ۨ:Ll/֫ܳ᩵;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 652
-    invoke-direct {p0, p1, p2}, Ll/ܳܳ᩵;-><init>(Ll/֫ܳ᩵;I)V
+    iput-object p1, p0, Ll/᩻ܳ᩵;->ܰ:Ll/ۗܳ᩵;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ljava/lang/String;
-    .locals 3
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 657
-    iget-object v0, p0, Ll/᩻ܳ᩵;->ۨ:Ll/֫ܳ᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    invoke-static {v0}, Ll/֫ܳ᩵;->ۖ(Ll/֫ܳ᩵;)Ll/ܿܳ᩵;
+    move-result-object p1
 
-    move-result-object v1
-
-    iget-object v0, v0, Ll/֫ܳ᩵;->ۚ:Ll/ۢܳ᩵;
-
-    iget v2, p0, Ll/ܳܳ᩵;->ۙ:I
-
-    invoke-virtual {v0, v2}, Ll/ᩳܳ᩵;->۬(I)I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Ll/ܿܳ᩵;->ۙ(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final ۨ()J
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 661
-    iget-object v0, p0, Ll/᩻ܳ᩵;->ۨ:Ll/֫ܳ᩵;
+    .line 0
+    iget-object v0, p0, Ll/᩻ܳ᩵;->ܰ:Ll/ۗܳ᩵;
 
-    iget-object v0, v0, Ll/֫ܳ᩵;->ۚ:Ll/ۢܳ᩵;
+    check-cast p1, Ll/ۖۡۗ;
 
-    iget v1, p0, Ll/ܳܳ᩵;->ۙ:I
+    invoke-static {v0, p1}, Ll/ۗܳ᩵;->۫(Ll/ۗܳ᩵;Ll/ۖۡۗ;)Z
 
-    add-int/lit8 v1, v1, 0x8
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ll/֫ۧ᩵;->ۨ(I)J
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-wide v0
+    move-result-object p1
 
-    return-wide v0
+    return-object p1
 .end method
 
-.method public final ܰ()I
-    .locals 2
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    .line 669
-    iget-object v0, p0, Ll/᩻ܳ᩵;->ۨ:Ll/֫ܳ᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    iget-object v0, v0, Ll/֫ܳ᩵;->ۚ:Ll/ۢܳ᩵;
+    move-result-object p1
 
-    iget v1, p0, Ll/ܳܳ᩵;->ۙ:I
-
-    add-int/lit8 v1, v1, 0x6
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۜ(I)I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

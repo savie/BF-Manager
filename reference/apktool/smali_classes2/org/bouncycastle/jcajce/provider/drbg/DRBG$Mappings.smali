@@ -33,7 +33,7 @@
     const-string v3, "SecureRandom.DEFAULT"
 
     .line 0
-    invoke-static {v1, v2, v3, v0, p1}, Ll/ۡܿۡ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v3, v0, p1}, Ll/ܿۘۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -45,7 +45,7 @@
 
     const-string v3, "SecureRandom.NONCEANDIV"
 
-    invoke-static {v1, v2, v3, v0, p1}, Ll/ۛۘۖ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)V
+    invoke-static {v1, v2, v3, v0, p1}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Lorg/bouncycastle/jcajce/provider/config/ConfigurableProvider;)V
 
     return-void
 .end method

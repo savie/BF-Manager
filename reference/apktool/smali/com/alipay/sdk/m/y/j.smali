@@ -93,7 +93,7 @@
     const-string v5, "android.permission.CHANGE_NETWORK_STATE"
 
     .line 23
-    invoke-static {p0, v5}, Ll/ۤܽ;->ۙ(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v5}, Ll/۟֡;->ۙ(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 

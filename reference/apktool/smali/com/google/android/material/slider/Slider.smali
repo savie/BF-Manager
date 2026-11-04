@@ -19,7 +19,7 @@
     .locals 1
 
     .line 72
-    sget v0, Ll/ۖ۟ܶ;->ۗ۫:I
+    sget v0, Ll/ۧ۬ܺ;->۬۟:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/slider/Slider;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 

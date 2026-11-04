@@ -1,233 +1,381 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import org.bouncycastle.crypto.engines.ThreefishEngine;
 
-/* JADX INFO: renamed from: l.᩹᩶֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8985 */
+/* JADX INFO: renamed from: l.᩸ۖܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: AB8B */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22504 extends AbstractC11462 {
+public final class C22504 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC11026 f73466;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final float[] f72804 = {1.0f, 10.0f, 100.0f, 1000.0f, 10000.0f, 100000.0f, 1000000.0f, 1.0E7f, 1.0E8f, 1.0E9f, 1.0E10f, 1.0E11f, 1.0E12f, 1.0E13f, 1.0E14f, 1.0E15f, 1.0E16f, 1.0E17f, 1.0E18f, 1.0E19f, 1.0E20f, 1.0E21f, 1.0E22f, 1.0E23f, 1.0E24f, 1.0E25f, 1.0E26f, 1.0E27f, 1.0E28f, 1.0E29f, 1.0E30f, 1.0E31f, 1.0E32f, 1.0E33f, 1.0E34f, 1.0E35f, 1.0E36f, 1.0E37f, 1.0E38f};
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final AbstractC11026 f73467;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final float[] f72805 = {1.0f, 0.1f, 0.01f, 0.001f, 1.0E-4f, 1.0E-5f, 1.0E-6f, 1.0E-7f, 1.0E-8f, 1.0E-9f, 1.0E-10f, 1.0E-11f, 1.0E-12f, 1.0E-13f, 1.0E-14f, 1.0E-15f, 1.0E-16f, 1.0E-17f, 1.0E-18f, 1.0E-19f, 1.0E-20f, 1.0E-21f, 1.0E-22f, 1.0E-23f, 1.0E-24f, 1.0E-25f, 1.0E-26f, 1.0E-27f, 1.0E-28f, 1.0E-29f, 1.0E-30f, 1.0E-31f, 1.0E-32f, 1.0E-33f, 1.0E-34f, 1.0E-35f, 1.0E-36f, 1.0E-37f, 1.0E-38f};
 
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ֫ */
-    public final void mo13030() {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f72806;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m50744() {
+        return this.f72806;
     }
 
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۗ */
-    public final boolean mo13031() {
-        return true;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo13034(C11545 c11545, C11545 c11546) {
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۛ */
-    public final boolean mo13036() {
-        return true;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo13038(C11545 c11545) {
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۫ */
-    public final String mo13039() {
-        return "trash";
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo13041(String str) {
-        return false;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰۙ */
-    public final boolean mo13042() {
-        return false;
-    }
-
-    static {
-        C9615.m24522("trash");
-        C22669.m50201("trash", "local", new C1917());
-        f73467 = new C9680(R.string.MT_Protector, R.drawable.MT_Protector);
-        f73466 = new C5570(R.string.MT_Protector, R.drawable.MT_Protector);
-    }
-
-    public C22504(C17367 c17367) {
-        super(c17367);
-    }
-
-    public C22504(int i) {
-        super(i, "/");
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo28628(String str) {
-        super.mo28628(str);
-        String strM28629 = m28629();
-        if (strM28629.length() <= 1 || strM28629.indexOf(47, 1) != strM28629.length() - 1) {
-            return;
+    /* JADX WARN: Code duplicated, block: B:110:0x008b A[EDGE_INSN: B:110:0x008b->B:40:0x008b BREAK  A[LOOP:0: B:13:0x0031->B:39:0x0080], SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:118:0x0109 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:15:0x0040  */
+    /* JADX WARN: Code duplicated, block: B:17:0x0046 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:18:0x0048  */
+    /* JADX WARN: Code duplicated, block: B:19:0x004b  */
+    /* JADX WARN: Code duplicated, block: B:20:0x004e  */
+    /* JADX WARN: Code duplicated, block: B:45:0x0098 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:46:0x009a A[RETURN] */
+    /* JADX WARN: Code duplicated, block: B:47:0x009b  */
+    /* JADX WARN: Code duplicated, block: B:49:0x009e  */
+    /* JADX WARN: Code duplicated, block: B:58:0x00b9 A[RETURN] */
+    /* JADX WARN: Code duplicated, block: B:59:0x00ba  */
+    /* JADX WARN: Code duplicated, block: B:61:0x00c2  */
+    /* JADX WARN: Code duplicated, block: B:63:0x00c6  */
+    /* JADX WARN: Code duplicated, block: B:64:0x00c9  */
+    /* JADX WARN: Code duplicated, block: B:65:0x00d2  */
+    /* JADX WARN: Code duplicated, block: B:66:0x00d4  */
+    /* JADX WARN: Code duplicated, block: B:67:0x00d6  */
+    /* JADX WARN: Code duplicated, block: B:71:0x00e0  */
+    /* JADX WARN: Code duplicated, block: B:74:0x00e7  */
+    /* JADX WARN: Code duplicated, block: B:83:0x010f A[RETURN] */
+    /* JADX WARN: Code duplicated, block: B:84:0x0110 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:85:0x0112  */
+    /* JADX WARN: Code duplicated, block: B:86:0x0114  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final float m50743(int i, int i2, int i3, String str) {
+        boolean z;
+        int i4;
+        int i5;
+        int i6;
+        boolean z2;
+        int i7;
+        int i8;
+        char c;
+        int i9;
+        int i10;
+        float f;
+        char cCharAt;
+        int i11;
+        char cCharAt2;
+        boolean z3;
+        boolean z4;
+        int i12;
+        int i13;
+        int i14;
+        boolean z5;
+        char cCharAt3;
+        boolean z6;
+        char cCharAt4;
+        this.f72806 = i;
+        if (i >= i2) {
+            return Float.NaN;
         }
-        super.mo28628("/");
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܽ */
-    public final String mo13043() {
-        String strM39288 = C16737.m39288(R.string.MT_Protector);
-        C23791 c23791M35096 = C14619.m35096(m28629());
-        if (c23791M35096 == null) {
-            return strM39288.concat("/");
+        char cCharAt5 = str.charAt(i);
+        if (cCharAt5 != '+') {
+            if (cCharAt5 != '-') {
+                z = false;
+            } else {
+                z = true;
+            }
+            int i15 = this.f72806;
+            long j = 0;
+            i4 = 0;
+            i5 = 0;
+            i6 = 0;
+            z2 = false;
+            i7 = 0;
+            while (true) {
+                i8 = this.f72806;
+                c = '9';
+                if (i8 >= i2) {
+                    break;
+                }
+                cCharAt4 = str.charAt(i8);
+                if (cCharAt4 != '0') {
+                    if (i4 == 0) {
+                        i6++;
+                    } else {
+                        i5++;
+                    }
+                } else if (cCharAt4 < '1' && cCharAt4 <= '9') {
+                    int i16 = i4 + i5;
+                    while (i5 > 0) {
+                        if (j > 922337203685477580L) {
+                            return Float.NaN;
+                        }
+                        j *= 10;
+                        i5--;
+                    }
+                    if (j > 922337203685477580L) {
+                        return Float.NaN;
+                    }
+                    j = (j * 10) + ((long) (cCharAt4 - '0'));
+                    i4 = i16 + 1;
+                    if (j < 0) {
+                        return Float.NaN;
+                    }
+                } else {
+                    if (cCharAt4 != '.' || z2) {
+                        break;
+                    }
+                    i7 = this.f72806 - i15;
+                    z2 = true;
+                }
+                this.f72806++;
+            }
+            if (!z2 && this.f72806 - i3 == i7 + 1) {
+                return Float.NaN;
+            }
+            if (i4 == 0) {
+                if (i6 == 0) {
+                    return Float.NaN;
+                }
+                i4 = 1;
+            }
+            if (z2) {
+                i5 = (i7 - i6) - i4;
+            }
+            i9 = this.f72806;
+            if (i9 < i2 && ((cCharAt = str.charAt(i9)) == 'E' || cCharAt == 'e')) {
+                i11 = this.f72806 + 1;
+                this.f72806 = i11;
+                if (i11 == i2) {
+                    return Float.NaN;
+                }
+                cCharAt2 = str.charAt(i11);
+                if (cCharAt2 != '+') {
+                    if (cCharAt2 != '-') {
+                        switch (cCharAt2) {
+                            case '0':
+                            case '1':
+                            case '2':
+                            case '3':
+                            case '4':
+                            case '5':
+                            case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
+                            case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
+                            case '8':
+                            case '9':
+                                z3 = false;
+                                z4 = false;
+                                break;
+                            default:
+                                this.f72806--;
+                                z3 = false;
+                                z4 = true;
+                                break;
+                        }
+                    } else {
+                        z3 = true;
+                    }
+                    if (!z4) {
+                        i12 = this.f72806;
+                        i13 = 0;
+                        while (true) {
+                            i14 = this.f72806;
+                            if (i14 >= i2 && (cCharAt3 = str.charAt(i14)) >= '0' && cCharAt3 <= c) {
+                                z6 = z3;
+                                if (i13 > 922337203685477580L) {
+                                    return Float.NaN;
+                                }
+                                i13 = (i13 * 10) + (cCharAt3 - '0');
+                                this.f72806++;
+                                z3 = z6;
+                                c = '9';
+                            }
+                        }
+                        z5 = z3;
+                        if (this.f72806 == i12) {
+                            return Float.NaN;
+                        }
+                        if (z5) {
+                            i5 -= i13;
+                        } else {
+                            i5 += i13;
+                        }
+                    }
+                } else {
+                    z3 = false;
+                }
+                this.f72806++;
+                z4 = false;
+                if (!z4) {
+                    i12 = this.f72806;
+                    i13 = 0;
+                    while (true) {
+                        i14 = this.f72806;
+                        if (i14 >= i2) {
+                        }
+                        i13 = (i13 * 10) + (cCharAt3 - '0');
+                        this.f72806++;
+                        z3 = z6;
+                        c = '9';
+                    }
+                    z5 = z3;
+                    if (this.f72806 == i12) {
+                        return Float.NaN;
+                    }
+                    if (z5) {
+                        i5 -= i13;
+                    } else {
+                        i5 += i13;
+                    }
+                }
+            }
+            i10 = i4 + i5;
+            if (i10 <= 39 || i10 < -44) {
+                return Float.NaN;
+            }
+            float f2 = j;
+            if (j != 0) {
+                if (i5 > 0) {
+                    f = f72804[i5];
+                } else if (i5 < 0) {
+                    if (i5 < -38) {
+                        f2 = (float) (((double) f2) * 1.0E-20d);
+                        i5 += 20;
+                    }
+                    f = f72805[-i5];
+                }
+                f2 *= f;
+            }
+            return z ? -f2 : f2;
         }
-        StringBuilder sbM23356 = C9023.m23356(strM39288);
-        sbM23356.append(c23791M35096.m52326());
-        return AbstractC11462.m28614(sbM23356.toString());
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ֡ */
-    public final AbstractC9677 mo13029() {
-        return C14619.f47827;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۧ */
-    public final List mo13037() {
-        String strM28629 = m28629();
-        ArrayList arrayListMo10263 = C14619.f47827.mo10263(strM28629, true);
-        if (strM28629.length() > 1) {
-            arrayListMo10263.add(0, C15404.f50208);
+        z = false;
+        this.f72806++;
+        int i17 = this.f72806;
+        long j2 = 0;
+        i4 = 0;
+        i5 = 0;
+        i6 = 0;
+        z2 = false;
+        i7 = 0;
+        while (true) {
+            i8 = this.f72806;
+            c = '9';
+            if (i8 >= i2) {
+                break;
+                break;
+            }
+            cCharAt4 = str.charAt(i8);
+            if (cCharAt4 != '0') {
+                if (cCharAt4 < '1') {
+                }
+                if (cCharAt4 != '.') {
+                    break;
+                }
+                break;
+                break;
+            }
+            if (i4 == 0) {
+                i6++;
+            } else {
+                i5++;
+            }
+            this.f72806++;
         }
-        return arrayListMo10263;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰ */
-    public final AbstractC4674 mo23634(C21422 c21422) {
-        C8268 c8268 = new C8268(R.string.MT_Protector, R.drawable.MT_Protector);
-        c8268.m12944();
-        return c8268;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܶ */
-    public final AbstractC4674 mo23636() {
-        return new C18145(R.string.MT_Protector, R.drawable.MT_Protector);
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ᩳ */
-    public final AbstractC4674 mo13044() {
-        return new DialogInterfaceOnDismissListenerC16735();
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ᩴ */
-    public final AbstractC4674 mo23637() {
-        return new C8974(R.string.MT_Protector, R.drawable.MT_Protector);
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۠ */
-    public final AbstractC4674 mo28630() {
-        return C10903.m27335();
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ᩸ */
-    public final AbstractC4674 mo28641() {
-        return C12314.m30573();
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo28624(C11545 c11545, InterfaceC2557 interfaceC2557) {
-        C15829.m37611(R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ֨ */
-    public final InterfaceC13848 mo23624() {
-        return C17440.f55541;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo28635(C11545 c11545) {
-        C16137 c16137M17155;
-        if (m28629().length() > 1) {
-            return null;
+        if (!z2) {
         }
-        boolean zM28802 = c11545.m28802();
-        long size = 0;
-        for (InterfaceC2557 interfaceC2557 : c11545.m28829()) {
-            if (!zM28802 || interfaceC2557.isChecked()) {
-                if ((interfaceC2557 instanceof C6151) && (c16137M17155 = ((C6151) interfaceC2557).m17155()) != null) {
-                    size += c16137M17155.size();
+        if (i4 == 0) {
+            if (i6 == 0) {
+                return Float.NaN;
+            }
+            i4 = 1;
+        }
+        if (z2) {
+            i5 = (i7 - i6) - i4;
+        }
+        i9 = this.f72806;
+        if (i9 < i2) {
+            i11 = this.f72806 + 1;
+            this.f72806 = i11;
+            if (i11 == i2) {
+                return Float.NaN;
+            }
+            cCharAt2 = str.charAt(i11);
+            if (cCharAt2 != '+') {
+                if (cCharAt2 != '-') {
+                    switch (cCharAt2) {
+                        case '0':
+                        case '1':
+                        case '2':
+                        case '3':
+                        case '4':
+                        case '5':
+                        case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
+                        case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
+                        case '8':
+                        case '9':
+                            z3 = false;
+                            z4 = false;
+                            break;
+                        default:
+                            this.f72806--;
+                            z3 = false;
+                            z4 = true;
+                            break;
+                    }
+                } else {
+                    z3 = true;
+                }
+                if (!z4) {
+                    i12 = this.f72806;
+                    i13 = 0;
+                    while (true) {
+                        i14 = this.f72806;
+                        if (i14 >= i2) {
+                        }
+                        i13 = (i13 * 10) + (cCharAt3 - '0');
+                        this.f72806++;
+                        z3 = z6;
+                        c = '9';
+                    }
+                    z5 = z3;
+                    if (this.f72806 == i12) {
+                        return Float.NaN;
+                    }
+                    if (z5) {
+                        i5 -= i13;
+                    } else {
+                        i5 += i13;
+                    }
+                }
+            } else {
+                z3 = false;
+            }
+            this.f72806++;
+            z4 = false;
+            if (!z4) {
+                i12 = this.f72806;
+                i13 = 0;
+                while (true) {
+                    i14 = this.f72806;
+                    if (i14 >= i2) {
+                    }
+                    i13 = (i13 * 10) + (cCharAt3 - '0');
+                    this.f72806++;
+                    z3 = z6;
+                    c = '9';
+                }
+                z5 = z3;
+                if (this.f72806 == i12) {
+                    return Float.NaN;
+                }
+                if (z5) {
+                    i5 -= i13;
+                } else {
+                    i5 += i13;
                 }
             }
         }
-        return C16737.m39288(R.string.MT_Protector) + ": " + C1791.m5863(size);
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ᩹ */
-    public final C6086 mo13045() {
-        C23791 c23791M35096 = C14619.m35096(m28629());
-        return new C6086(C16737.m39288(R.string.MT_Protector), c23791M35096 == null ? "/" : c23791M35096.m52326(), C0690.f2933);
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo28636() {
-        return m28629().length() > 1;
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ᩻ */
-    public final List mo13046() {
-        return Arrays.asList(AbstractC11462.f38579, AbstractC11462.f38575, AbstractC11462.f38578, f73467, f73466, AbstractC11462.m28610(R.string.MT_Protector, true));
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ܰ */
-    public final AbstractC20745 mo13040(InterfaceC2557 interfaceC2557) {
-        return interfaceC2557.mo7989();
-    }
-
-    @Override // l.AbstractC11462
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo13033(C11545 c11545, List list, Runnable runnable) {
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            C10840 c10840 = (C10840) it.next();
-            InterfaceC2557 interfaceC2557M27175 = c10840.m27175();
-            if (interfaceC2557M27175 instanceof C6151) {
-                c10840.m27173(((C6151) interfaceC2557M27175).mo7989());
-            }
+        i10 = i4 + i5;
+        if (i10 <= 39) {
         }
-        try {
-            runnable.run();
-        } catch (Throwable th) {
-            c11545.m28824().m31002(th, (DialogInterface.OnDismissListener) null);
-        }
+        return Float.NaN;
     }
 }

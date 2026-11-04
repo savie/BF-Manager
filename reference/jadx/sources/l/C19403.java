@@ -1,87 +1,65 @@
 package l;
 
-import android.net.Uri;
-import com.alipay.sdk.m.y.l;
+import android.view.View;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩵ۤ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: I73O */
+/* JADX INFO: renamed from: l.ᩳ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 097X */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19403 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C12257 f62545;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f62546;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f62547;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f62548;
+public final /* synthetic */ class C19403 implements InterfaceC17544, InterfaceC17614, InterfaceC25265, InterfaceC18006 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Uri f62549;
+    public final /* synthetic */ int f62702;
 
-    public C19403(String str, String str2, byte[] bArr, Uri uri, C12257 c12257) {
-        this.f62548 = str;
-        this.f62547 = str2;
-        this.f62546 = bArr;
-        this.f62549 = uri;
-        this.f62545 = c12257;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f62703;
+
+    public /* synthetic */ C19403(int i, Object obj) {
+        this.f62702 = i;
+        this.f62703 = obj;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C19403)) {
-            return false;
+    @Override // l.InterfaceC17614
+    /* JADX INFO: renamed from: ۙ */
+    public View mo1858() {
+        return ((AbstractActivityC17204) this.f62703).m40418(R.id.MT_Protector);
+    }
+
+    @Override // l.InterfaceC17544
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1209(int i) {
+        AbstractC18900 abstractC18900;
+        switch (this.f62702) {
+            case 0:
+                abstractC18900 = (C10452) this.f62703;
+                break;
+            default:
+                abstractC18900 = (C8744) this.f62703;
+                break;
         }
-        C19403 c19403 = (C19403) obj;
-        return C13638.equals(this.f62548, c19403.f62548) && C13638.equals(this.f62547, c19403.f62547) && C13638.equals(this.f62546, c19403.f62546) && C13638.equals(this.f62549, c19403.f62549) && C13638.equals(this.f62545, c19403.f62545);
+        abstractC18900.mo16839(i);
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f62545) + ((C13638.hashCode(this.f62549) + ((C13638.hashCode(this.f62546) + C0589.m2789(C13638.hashCode(this.f62548) * 31, 31, this.f62547)) * 31)) * 31);
+    @Override // l.InterfaceC25265
+    /* JADX INFO: renamed from: ۙ */
+    public void mo40719(long j, long j2) {
+        C17059.m40195((C17059) this.f62703, j, j2);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f62548, this.f62547, this.f62546, this.f62549, this.f62545};
-        String[] strArrSplit = "identity;stableKey;body;finalUri;originalSpec".length() == 0 ? new String[0] : "identity;stableKey;body;finalUri;originalSpec".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C19403.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    @Override // l.InterfaceC18006
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1736(Object obj) {
+        ((C18372) this.f62703).m42858((C21532) obj, false);
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m44451() {
-        return this.f62547;
+    @Override // l.InterfaceC17614
+    /* JADX INFO: renamed from: ۤ */
+    public /* synthetic */ void mo1859() {
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m44452() {
-        return this.f62548;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] m44453() {
-        return this.f62546;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Uri m44454() {
-        return this.f62549;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C12257 m44455() {
-        return this.f62545;
+    @Override // l.InterfaceC17614
+    /* JADX INFO: renamed from: ᩷ */
+    public /* synthetic */ InterfaceC23097 mo1861() {
+        return null;
     }
 }

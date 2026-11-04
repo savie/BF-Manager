@@ -1,9 +1,9 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C15489;
-import l.C22697;
-import l.C2271;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C6934;
+import l.C8947;
 import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.digests.SkeinDigest;
@@ -15,7 +15,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Skein {
 
     public class DigestSkein1024 extends BCMessageDigest implements Cloneable {
@@ -57,91 +57,78 @@ public class Skein {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_1024_1024 extends DigestSkein1024 {
         public Digest_1024_1024() {
             super(1024);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_1024_384 extends DigestSkein1024 {
         public Digest_1024_384() {
             super(MLKEMEngine.KyberPolyBytes);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_1024_512 extends DigestSkein1024 {
         public Digest_1024_512() {
             super(512);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_256_128 extends DigestSkein256 {
         public Digest_256_128() {
             super(128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_256_160 extends DigestSkein256 {
         public Digest_256_160() {
             super(DHParameters.DEFAULT_MINIMUM_LENGTH);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_256_224 extends DigestSkein256 {
         public Digest_256_224() {
             super(BERTags.FLAGS);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_256_256 extends DigestSkein256 {
         public Digest_256_256() {
             super(256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_128 extends DigestSkein512 {
         public Digest_512_128() {
             super(128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_160 extends DigestSkein512 {
         public Digest_512_160() {
             super(DHParameters.DEFAULT_MINIMUM_LENGTH);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_224 extends DigestSkein512 {
         public Digest_512_224() {
             super(BERTags.FLAGS);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_256 extends DigestSkein512 {
         public Digest_512_256() {
             super(256);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_384 extends DigestSkein512 {
         public Digest_512_384() {
             super(MLKEMEngine.KyberPolyBytes);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Digest_512_512 extends DigestSkein512 {
         public Digest_512_512() {
             super(512);
@@ -226,103 +213,89 @@ public class Skein {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_1024_1024 extends BaseMac {
         public HashMac_1024_1024() {
             super(new HMac(new SkeinDigest(1024, 1024)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_1024_384 extends BaseMac {
         public HashMac_1024_384() {
             super(new HMac(new SkeinDigest(1024, MLKEMEngine.KyberPolyBytes)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_1024_512 extends BaseMac {
         public HashMac_1024_512() {
             super(new HMac(new SkeinDigest(1024, 512)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_256_128 extends BaseMac {
         public HashMac_256_128() {
             super(new HMac(new SkeinDigest(256, 128)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_256_160 extends BaseMac {
         public HashMac_256_160() {
             super(new HMac(new SkeinDigest(256, DHParameters.DEFAULT_MINIMUM_LENGTH)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_256_224 extends BaseMac {
         public HashMac_256_224() {
             super(new HMac(new SkeinDigest(256, BERTags.FLAGS)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_256_256 extends BaseMac {
         public HashMac_256_256() {
             super(new HMac(new SkeinDigest(256, 256)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_128 extends BaseMac {
         public HashMac_512_128() {
             super(new HMac(new SkeinDigest(512, 128)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_160 extends BaseMac {
         public HashMac_512_160() {
             super(new HMac(new SkeinDigest(512, DHParameters.DEFAULT_MINIMUM_LENGTH)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_224 extends BaseMac {
         public HashMac_512_224() {
             super(new HMac(new SkeinDigest(512, BERTags.FLAGS)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_256 extends BaseMac {
         public HashMac_512_256() {
             super(new HMac(new SkeinDigest(512, 256)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_384 extends BaseMac {
         public HashMac_512_384() {
             super(new HMac(new SkeinDigest(512, MLKEMEngine.KyberPolyBytes)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac_512_512 extends BaseMac {
         public HashMac_512_512() {
             super(new HMac(new SkeinDigest(512, 512)));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = Skein.class.getName();
 
         private void addSkeinMacAlgorithm(ConfigurableProvider configurableProvider, int i, int i2) {
-            String strM6967 = C2271.m6967("Skein-MAC-", i, i2, "-");
+            String strM19217 = C6934.m19217("Skein-MAC-", i, i2, "-");
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
             sb.append(str);
@@ -330,31 +303,31 @@ public class Skein {
             sb.append(i);
             sb.append("_");
             sb.append(i2);
-            configurableProvider.addAlgorithm("Mac." + strM6967, sb.toString());
-            configurableProvider.addAlgorithm("Alg.Alias.Mac.Skein-MAC" + i + "/" + i2, strM6967);
+            configurableProvider.addAlgorithm("Mac." + strM19217, sb.toString());
+            configurableProvider.addAlgorithm("Alg.Alias.Mac.Skein-MAC" + i + "/" + i2, strM19217);
             StringBuilder sb2 = new StringBuilder("KeyGenerator.");
-            sb2.append(strM6967);
+            sb2.append(strM19217);
             configurableProvider.addAlgorithm(sb2.toString(), str + "$SkeinMacKeyGenerator_" + i + "_" + i2);
-            configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.Skein-MAC" + i + "/" + i2, strM6967);
+            configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.Skein-MAC" + i + "/" + i2, strM19217);
         }
 
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addHMACAlgorithm(configurableProvider, "Skein-256-128", C22697.m50267(C9023.m23357(str, "$Digest_1024_1024", "MessageDigest.Skein-1024-1024", C9023.m23357(str, "$Digest_1024_512", "MessageDigest.Skein-1024-512", C9023.m23357(str, "$Digest_1024_384", "MessageDigest.Skein-1024-384", C9023.m23357(str, "$Digest_512_512", "MessageDigest.Skein-512-512", C9023.m23357(str, "$Digest_512_384", "MessageDigest.Skein-512-384", C9023.m23357(str, "$Digest_512_256", "MessageDigest.Skein-512-256", C9023.m23357(str, "$Digest_512_224", "MessageDigest.Skein-512-224", C9023.m23357(str, "$Digest_512_160", "MessageDigest.Skein-512-160", C9023.m23357(str, "$Digest_512_128", "MessageDigest.Skein-512-128", C9023.m23357(str, "$Digest_256_256", "MessageDigest.Skein-256-256", C9023.m23357(str, "$Digest_256_224", "MessageDigest.Skein-256-224", C9023.m23357(str, "$Digest_256_160", "MessageDigest.Skein-256-160", C9023.m23357(str, "$Digest_256_128", "MessageDigest.Skein-256-128", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$HashMac_256_128"), C15489.m37076(str, "$HMacKeyGenerator_256_128"));
-            addHMACAlgorithm(configurableProvider, "Skein-256-160", C15489.m37076(str, "$HashMac_256_160"), C15489.m37076(str, "$HMacKeyGenerator_256_160"));
-            addHMACAlgorithm(configurableProvider, "Skein-256-224", C15489.m37076(str, "$HashMac_256_224"), C15489.m37076(str, "$HMacKeyGenerator_256_224"));
-            addHMACAlgorithm(configurableProvider, "Skein-256-256", C15489.m37076(str, "$HashMac_256_256"), C15489.m37076(str, "$HMacKeyGenerator_256_256"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-128", C15489.m37076(str, "$HashMac_512_128"), C15489.m37076(str, "$HMacKeyGenerator_512_128"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-160", C15489.m37076(str, "$HashMac_512_160"), C15489.m37076(str, "$HMacKeyGenerator_512_160"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-224", C15489.m37076(str, "$HashMac_512_224"), C15489.m37076(str, "$HMacKeyGenerator_512_224"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-256", C15489.m37076(str, "$HashMac_512_256"), C15489.m37076(str, "$HMacKeyGenerator_512_256"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-384", C15489.m37076(str, "$HashMac_512_384"), C15489.m37076(str, "$HMacKeyGenerator_512_384"));
-            addHMACAlgorithm(configurableProvider, "Skein-512-512", C15489.m37076(str, "$HashMac_512_512"), C15489.m37076(str, "$HMacKeyGenerator_512_512"));
-            addHMACAlgorithm(configurableProvider, "Skein-1024-384", C15489.m37076(str, "$HashMac_1024_384"), C15489.m37076(str, "$HMacKeyGenerator_1024_384"));
-            addHMACAlgorithm(configurableProvider, "Skein-1024-512", C15489.m37076(str, "$HashMac_1024_512"), C15489.m37076(str, "$HMacKeyGenerator_1024_512"));
-            addHMACAlgorithm(configurableProvider, "Skein-1024-1024", C15489.m37076(str, "$HashMac_1024_1024"), C15489.m37076(str, "$HMacKeyGenerator_1024_1024"));
+            addHMACAlgorithm(configurableProvider, "Skein-256-128", C8947.m23910(C18063.m42089(str, "$Digest_1024_1024", "MessageDigest.Skein-1024-1024", C18063.m42089(str, "$Digest_1024_512", "MessageDigest.Skein-1024-512", C18063.m42089(str, "$Digest_1024_384", "MessageDigest.Skein-1024-384", C18063.m42089(str, "$Digest_512_512", "MessageDigest.Skein-512-512", C18063.m42089(str, "$Digest_512_384", "MessageDigest.Skein-512-384", C18063.m42089(str, "$Digest_512_256", "MessageDigest.Skein-512-256", C18063.m42089(str, "$Digest_512_224", "MessageDigest.Skein-512-224", C18063.m42089(str, "$Digest_512_160", "MessageDigest.Skein-512-160", C18063.m42089(str, "$Digest_512_128", "MessageDigest.Skein-512-128", C18063.m42089(str, "$Digest_256_256", "MessageDigest.Skein-256-256", C18063.m42089(str, "$Digest_256_224", "MessageDigest.Skein-256-224", C18063.m42089(str, "$Digest_256_160", "MessageDigest.Skein-256-160", C18063.m42089(str, "$Digest_256_128", "MessageDigest.Skein-256-128", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$HashMac_256_128"), C14483.m34972(str, "$HMacKeyGenerator_256_128"));
+            addHMACAlgorithm(configurableProvider, "Skein-256-160", C14483.m34972(str, "$HashMac_256_160"), C14483.m34972(str, "$HMacKeyGenerator_256_160"));
+            addHMACAlgorithm(configurableProvider, "Skein-256-224", C14483.m34972(str, "$HashMac_256_224"), C14483.m34972(str, "$HMacKeyGenerator_256_224"));
+            addHMACAlgorithm(configurableProvider, "Skein-256-256", C14483.m34972(str, "$HashMac_256_256"), C14483.m34972(str, "$HMacKeyGenerator_256_256"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-128", C14483.m34972(str, "$HashMac_512_128"), C14483.m34972(str, "$HMacKeyGenerator_512_128"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-160", C14483.m34972(str, "$HashMac_512_160"), C14483.m34972(str, "$HMacKeyGenerator_512_160"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-224", C14483.m34972(str, "$HashMac_512_224"), C14483.m34972(str, "$HMacKeyGenerator_512_224"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-256", C14483.m34972(str, "$HashMac_512_256"), C14483.m34972(str, "$HMacKeyGenerator_512_256"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-384", C14483.m34972(str, "$HashMac_512_384"), C14483.m34972(str, "$HMacKeyGenerator_512_384"));
+            addHMACAlgorithm(configurableProvider, "Skein-512-512", C14483.m34972(str, "$HashMac_512_512"), C14483.m34972(str, "$HMacKeyGenerator_512_512"));
+            addHMACAlgorithm(configurableProvider, "Skein-1024-384", C14483.m34972(str, "$HashMac_1024_384"), C14483.m34972(str, "$HMacKeyGenerator_1024_384"));
+            addHMACAlgorithm(configurableProvider, "Skein-1024-512", C14483.m34972(str, "$HashMac_1024_512"), C14483.m34972(str, "$HMacKeyGenerator_1024_512"));
+            addHMACAlgorithm(configurableProvider, "Skein-1024-1024", C14483.m34972(str, "$HashMac_1024_1024"), C14483.m34972(str, "$HMacKeyGenerator_1024_1024"));
             addSkeinMacAlgorithm(configurableProvider, 256, 128);
             addSkeinMacAlgorithm(configurableProvider, 256, DHParameters.DEFAULT_MINIMUM_LENGTH);
             addSkeinMacAlgorithm(configurableProvider, 256, BERTags.FLAGS);
@@ -449,91 +422,78 @@ public class Skein {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_1024_1024 extends BaseMac {
         public SkeinMac_1024_1024() {
             super(new SkeinMac(1024, 1024));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_1024_384 extends BaseMac {
         public SkeinMac_1024_384() {
             super(new SkeinMac(1024, MLKEMEngine.KyberPolyBytes));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_1024_512 extends BaseMac {
         public SkeinMac_1024_512() {
             super(new SkeinMac(1024, 512));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_256_128 extends BaseMac {
         public SkeinMac_256_128() {
             super(new SkeinMac(256, 128));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_256_160 extends BaseMac {
         public SkeinMac_256_160() {
             super(new SkeinMac(256, DHParameters.DEFAULT_MINIMUM_LENGTH));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_256_224 extends BaseMac {
         public SkeinMac_256_224() {
             super(new SkeinMac(256, BERTags.FLAGS));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_256_256 extends BaseMac {
         public SkeinMac_256_256() {
             super(new SkeinMac(256, 256));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_128 extends BaseMac {
         public SkeinMac_512_128() {
             super(new SkeinMac(512, 128));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_160 extends BaseMac {
         public SkeinMac_512_160() {
             super(new SkeinMac(512, DHParameters.DEFAULT_MINIMUM_LENGTH));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_224 extends BaseMac {
         public SkeinMac_512_224() {
             super(new SkeinMac(512, BERTags.FLAGS));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_256 extends BaseMac {
         public SkeinMac_512_256() {
             super(new SkeinMac(512, 256));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_384 extends BaseMac {
         public SkeinMac_512_384() {
             super(new SkeinMac(512, MLKEMEngine.KyberPolyBytes));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class SkeinMac_512_512 extends BaseMac {
         public SkeinMac_512_512() {
             super(new SkeinMac(512, 512));

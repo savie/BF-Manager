@@ -1,32 +1,61 @@
 package l;
 
-import java.util.function.IntPredicate;
-import java.util.function.Predicate;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۡۜᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51QH */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8720 {
-    @Deprecated
+/* JADX INFO: renamed from: l.۠ܶۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z1GQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8720 implements InterfaceC12943 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m22565(InterfaceC10131 interfaceC10131, final Predicate predicate) {
-        return interfaceC10131.mo3171(predicate instanceof IntPredicate ? (IntPredicate) predicate : new IntPredicate() { // from class: l.᩵ۜᩴ
-            public /* synthetic */ IntPredicate and(IntPredicate intPredicate) {
-                return C23329.$default$and(this, intPredicate);
-            }
+    public final /* synthetic */ C25350 f28390;
 
-            public /* synthetic */ IntPredicate negate() {
-                return C23329.$default$negate(this);
-            }
+    public C8720(C25350 c25350) {
+        this.f28390 = c25350;
+    }
 
-            public /* synthetic */ IntPredicate or(IntPredicate intPredicate) {
-                return C23329.$default$or(this, intPredicate);
+    @Override // l.InterfaceC12943
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15545(boolean z) {
+        String strM56680;
+        C25350 c25350 = this.f28390;
+        if (c25350.f29441.getBoolean("changed", false) != z) {
+            c25350.f29441.putBoolean("changed", z);
+            try {
+                c25350.m24172(((ActivityC0848) c25350.requireActivity()).m3442());
+            } catch (IOException unused) {
             }
+            c25350.m24163(new C2754());
+        }
+        if (c25350.f81856) {
+            if (c25350.f81833 != null) {
+                c25350.f81833.setEnabled(z);
+            }
+            if (z) {
+                strM56680 = "*" + c25350.m56680();
+            } else {
+                strM56680 = c25350.m56680();
+            }
+            int i = z ? C3296.f10764 : C3296.f10762;
+            if (c25350.f81846.getText().toString().equals(strM56680)) {
+                return;
+            }
+            c25350.f81846.setText(strM56680);
+            c25350.f81846.setTextColor(i);
+        }
+    }
 
-            @Override // java.util.function.IntPredicate
-            public final boolean test(int i) {
-                return predicate.test(Integer.valueOf(i));
+    @Override // l.InterfaceC12943
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15546(boolean z, boolean z2) {
+        C25350 c25350 = this.f28390;
+        if (c25350.f81856) {
+            if (c25350.f81848 != null) {
+                c25350.f81848.setEnabled(z);
             }
-        });
+            if (c25350.f81845 != null) {
+                c25350.f81845.setEnabled(z2);
+            }
+        }
     }
 }

@@ -24,8 +24,8 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.CopyOnWriteArraySet;
-import l.C17290;
-import l.C23234;
+import l.C18011;
+import l.C22837;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -389,7 +389,7 @@ public class WXAPiSecurityHelper {
             Log.d(TAG, str2);
             return wXSecurityData;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("getStoredData fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("getStoredData fail, ex = "), TAG);
             return wXSecurityData;
         }
     }
@@ -413,7 +413,7 @@ public class WXAPiSecurityHelper {
                             i2++;
                         }
                     } catch (Exception e) {
-                        C23234.m51271(e, new StringBuilder("checkRuleCanPass, parse fail, e = %s"), TAG);
+                        C18011.m41991(e, new StringBuilder("checkRuleCanPass, parse fail, e = %s"), TAG);
                     }
                 }
                 boolean z = i2 == urlRule.mustQueryKey.size();
@@ -437,7 +437,7 @@ public class WXAPiSecurityHelper {
             jSONObject.put(STORE_VALUE_DATA, strCookStoreJson);
             commitSp(str, jSONObject.toString());
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("storeCheckResp fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("storeCheckResp fail, ex = "), TAG);
         }
     }
 
@@ -475,7 +475,7 @@ public class WXAPiSecurityHelper {
             }
             return promiseShareRule;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("coverJson2ShareRule fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("coverJson2ShareRule fail, ex = "), TAG);
             return promiseShareRule;
         }
     }
@@ -493,7 +493,7 @@ public class WXAPiSecurityHelper {
                 jSONObject.put("buffer", promiseShareRule.buffer.length() > 64 ? "" : promiseShareRule.buffer);
                 return jSONObject.toString();
             } catch (Exception e) {
-                C23234.m51271(e, new StringBuilder("storeCheckResp fail, ex = "), TAG);
+                C18011.m41991(e, new StringBuilder("storeCheckResp fail, ex = "), TAG);
             }
         }
         return "";
@@ -520,7 +520,7 @@ public class WXAPiSecurityHelper {
             jSONObject.put("rules", jSONArray);
             return jSONObject.toString();
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("covertShareRule2Json fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("covertShareRule2Json fail, ex = "), TAG);
             return "";
         }
     }
@@ -528,8 +528,8 @@ public class WXAPiSecurityHelper {
     public StringBuffer postHttpRequest(String str, String str2, String str3) {
         StringBuffer stringBuffer = new StringBuffer();
         try {
-            String strEncode = C17290.encode(str, a.D);
-            String strEncode2 = C17290.encode(str3, a.D);
+            String strEncode = C22837.encode(str, a.D);
+            String strEncode2 = C22837.encode(str3, a.D);
             String str4 = "https://mp.weixin.qq.com/publicpoc/opensdkconf?action=GetShareConf&appid=" + strEncode + "&sdkVersion=" + str2 + "&buffer=" + strEncode2;
             Log.d(TAG, "request http, url = " + str4 + ", appid = " + strEncode + ", version = " + str2 + ", buffer = " + strEncode2);
             HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(str4).openConnection();
@@ -554,7 +554,7 @@ public class WXAPiSecurityHelper {
             httpURLConnection.disconnect();
             return stringBuffer;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("http request fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("http request fail, ex = "), TAG);
             return stringBuffer;
         }
     }

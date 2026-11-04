@@ -1,48 +1,43 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴᩳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97UZ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18927 implements Cloneable {
+import org.simpleframework.xml.transform.ClassTransform;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public byte[] f61241;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public byte[] f61242;
+/* JADX INFO: renamed from: l.ᩳ۟ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: QBI7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18927 extends AbstractC12214 {
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public byte[] f61243;
+    public static final C18927 f61399 = new C18927(0);
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f61240 = 255;
+    @Override // l.AbstractC13487
+    /* JADX INFO: renamed from: ۫ */
+    public final String mo1845() {
+        return ClassTransform.SHORT;
+    }
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public long f61239 = 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C18927 m43944(int i) {
+        short s = (short) i;
+        if (s == i) {
+            return new C18927(s);
+        }
+        throw new IllegalArgumentException(C13645.m33382(i, "bogus short value: "));
+    }
 
-    public final Object clone() {
-        C18927 c18927 = (C18927) super.clone();
-        byte[] bArr = c18927.f61243;
-        if (bArr != null) {
-            int length = bArr.length;
-            byte[] bArr2 = new byte[length];
-            System.arraycopy(bArr, 0, bArr2, 0, length);
-            c18927.f61243 = bArr2;
-        }
-        byte[] bArr3 = c18927.f61242;
-        if (bArr3 != null) {
-            int length2 = bArr3.length;
-            byte[] bArr4 = new byte[length2];
-            System.arraycopy(bArr3, 0, bArr4, 0, length2);
-            c18927.f61242 = bArr4;
-        }
-        byte[] bArr5 = c18927.f61241;
-        if (bArr5 != null) {
-            int length3 = bArr5.length;
-            byte[] bArr6 = new byte[length3];
-            System.arraycopy(bArr5, 0, bArr6, 0, length3);
-            c18927.f61241 = bArr6;
-        }
-        return c18927;
+    public final String toString() {
+        int iMo17877 = mo17877();
+        return "short{0x" + C5306.m15934(iMo17877) + " / " + iMo17877 + '}';
+    }
+
+    @Override // l.InterfaceC22239
+    public final C5085 getType() {
+        return C5085.f17726;
+    }
+
+    @Override // l.InterfaceC6052
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo1843() {
+        return Integer.toString(mo17877());
     }
 }

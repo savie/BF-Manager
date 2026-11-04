@@ -1,30 +1,58 @@
 package l;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
-
-/* JADX INFO: renamed from: l.֨᩵ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P6RO */
+/* JADX INFO: renamed from: l.֨ܽ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: L8IC */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C1316 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C13312 f5607;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public boolean f4729;
 
-    static {
-        final AtomicInteger atomicInteger = new AtomicInteger();
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 2, 30L, TimeUnit.SECONDS, new ArrayBlockingQueue(256), new ThreadFactory() { // from class: l.᩹᩵ۖ
-            @Override // java.util.concurrent.ThreadFactory
-            public final Thread newThread(Runnable runnable) {
-                Thread thread = new Thread(runnable, "editable-prepare-" + atomicInteger.incrementAndGet());
-                thread.setDaemon(true);
-                return thread;
-            }
-        }, new ThreadPoolExecutor.AbortPolicy());
-        threadPoolExecutor.allowCoreThreadTimeOut(true);
-        f5607 = new C13312(new C10428(33554432L), new C16777(), threadPoolExecutor);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public long f4731;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f4733;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f4735;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f4736;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public C10264 f4737;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public long f4740;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f4742;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C25183 f4743;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public int f4744;
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public long[] f4730 = new long[0];
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public int[] f4741 = new int[0];
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public int[] f4739 = new int[0];
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public long[] f4738 = new long[0];
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public boolean[] f4745 = new boolean[0];
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public boolean[] f4734 = new boolean[0];
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C21287 f4732 = new C21287();
 }

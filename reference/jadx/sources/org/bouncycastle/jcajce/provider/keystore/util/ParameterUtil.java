@@ -7,7 +7,7 @@ import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.callback.PasswordCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ParameterUtil {
     public static char[] extractPassword(KeyStore.LoadStoreParameter loadStoreParameter) throws IOException {
         KeyStore.ProtectionParameter protectionParameter = loadStoreParameter.getProtectionParameter();

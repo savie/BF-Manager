@@ -1,109 +1,165 @@
 .class public final Ll/ܺ۫;
 .super Ljava/lang/Object;
-.source "Z4TG"
+.source "Y22J"
+
+# interfaces
+.implements Landroid/animation/TimeInterpolator;
 
 
-# static fields
-.field public static ۙ:Ljava/lang/reflect/Method;
+# instance fields
+.field public ۙ:[I
 
-.field public static final ۨ:Ljava/lang/Object;
+.field public ۤ:I
 
-.field public static ܰ:Z
+.field public ᩷:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
+    .locals 5
 
-    .line 764
-    new-instance v0, Ljava/lang/Object;
+    .line 731
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 736
+    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
-    sput-object v0, Ll/ܺ۫;->ۨ:Ljava/lang/Object;
+    move-result v0
+
+    .line 737
+    iput v0, p0, Ll/ܺ۫;->᩷:I
+
+    .line 738
+    iget-object v1, p0, Ll/ܺ۫;->ۙ:[I
+
+    if-eqz v1, :cond_0
+
+    array-length v1, v1
+
+    if-ge v1, v0, :cond_1
+
+    .line 739
+    :cond_0
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Ll/ܺ۫;->ۙ:[I
+
+    .line 741
+    :cond_1
+    iget-object v1, p0, Ll/ܺ۫;->ۙ:[I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_3
+
+    if-eqz p2, :cond_2
+
+    sub-int v4, v0, v2
+
+    add-int/lit8 v4, v4, -0x1
+
+    goto :goto_1
+
+    :cond_2
+    move v4, v2
+
+    .line 744
+    :goto_1
+    invoke-virtual {p1, v4}, Landroid/graphics/drawable/AnimationDrawable;->getDuration(I)I
+
+    move-result v4
+
+    .line 745
+    aput v4, v1, v2
+
+    add-int/2addr v3, v4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 748
+    :cond_3
+    iput v3, p0, Ll/ܺ۫;->ۤ:I
 
     return-void
 .end method
 
-.method public static ۙ(Landroid/content/res/Resources$Theme;)V
-    .locals 5
 
-    .line 771
-    sget-object v0, Ll/ܺ۫;->ۨ:Ljava/lang/Object;
+# virtual methods
+.method public final getInterpolation(F)F
+    .locals 3
 
-    monitor-enter v0
+    .line 758
+    iget v0, p0, Ll/ܺ۫;->ۤ:I
 
-    .line 772
-    :try_start_0
-    sget-boolean v1, Ll/ܺ۫;->ܰ:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    int-to-float v0, v0
 
-    const/4 v2, 0x0
+    mul-float p1, p1, v0
 
-    if-nez v1, :cond_0
+    const/high16 v0, 0x3f000000    # 0.5f
 
-    const/4 v1, 0x1
+    add-float/2addr p1, v0
 
-    .line 774
-    :try_start_1
-    const-class v3, Landroid/content/res/Resources$Theme;
+    float-to-int p1, p1
 
-    const-string v4, "rebase"
+    const/4 v0, 0x0
 
-    invoke-virtual {v3, v4, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .line 764
+    :goto_0
+    iget v1, p0, Ll/ܺ۫;->᩷:I
 
-    move-result-object v3
+    if-ge v0, v1, :cond_0
 
-    sput-object v3, Ll/ܺ۫;->ۙ:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Ll/ܺ۫;->ۙ:[I
 
-    .line 775
-    invoke-virtual {v3, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_1
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    aget v2, v2, v0
 
-    .line 779
-    :catch_0
-    :try_start_2
-    sput-boolean v1, Ll/ܺ۫;->ܰ:Z
+    if-lt p1, v2, :cond_0
 
-    .line 781
-    :cond_0
-    sget-object v1, Ll/ܺ۫;->ۙ:Ljava/lang/reflect/Method;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    sub-int/2addr p1, v2
 
-    if-eqz v1, :cond_1
-
-    .line 783
-    :try_start_3
-    invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_3
-    .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 786
-    :catch_1
-    :try_start_4
-    sput-object v2, Ll/ܺ۫;->ۙ:Ljava/lang/reflect/Method;
+    :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 789
+    int-to-float p1, p1
+
+    .line 771
+    iget v2, p0, Ll/ܺ۫;->ۤ:I
+
+    int-to-float v2, v2
+
+    div-float/2addr p1, v2
+
+    goto :goto_1
+
     :cond_1
-    :goto_0
-    monitor-exit v0
+    const/4 p1, 0x0
 
-    return-void
+    :goto_1
+    int-to-float v0, v0
 
-    :catchall_0
-    move-exception p0
+    int-to-float v1, v1
 
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    div-float/2addr v0, v1
 
-    throw p0
+    add-float/2addr v0, p1
+
+    return v0
+.end method
+
+.method public final ۙ()I
+    .locals 1
+
+    .line 753
+    iget v0, p0, Ll/ܺ۫;->ۤ:I
+
+    return v0
 .end method

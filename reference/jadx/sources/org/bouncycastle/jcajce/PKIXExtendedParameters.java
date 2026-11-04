@@ -11,10 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.asn1.x509.GeneralName;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXExtendedParameters implements CertPathParameters {
     public static final int CHAIN_VALIDITY_MODEL = 1;
     public static final int PKIX_VALIDITY_MODEL = 0;
@@ -143,15 +143,15 @@ public class PKIXExtendedParameters implements CertPathParameters {
         this.baseParameters = builder.baseParameters;
         this.validityDate = builder.validityDate;
         this.date = builder.date;
-        this.extraCertStores = C0561.unmodifiableList(builder.extraCertStores);
-        this.namedCertificateStoreMap = C0561.unmodifiableMap(new HashMap(builder.namedCertificateStoreMap));
-        this.extraCRLStores = C0561.unmodifiableList(builder.extraCRLStores);
-        this.namedCRLStoreMap = C0561.unmodifiableMap(new HashMap(builder.namedCRLStoreMap));
+        this.extraCertStores = C4681.unmodifiableList(builder.extraCertStores);
+        this.namedCertificateStoreMap = C4681.unmodifiableMap(new HashMap(builder.namedCertificateStoreMap));
+        this.extraCRLStores = C4681.unmodifiableList(builder.extraCRLStores);
+        this.namedCRLStoreMap = C4681.unmodifiableMap(new HashMap(builder.namedCRLStoreMap));
         this.targetConstraints = builder.targetConstraints;
         this.revocationEnabled = builder.revocationEnabled;
         this.useDeltas = builder.useDeltas;
         this.validityModel = builder.validityModel;
-        this.trustAnchors = C0561.unmodifiableSet(builder.trustAnchors);
+        this.trustAnchors = C4681.unmodifiableSet(builder.trustAnchors);
     }
 
     @Override // java.security.cert.CertPathParameters

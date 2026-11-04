@@ -1,174 +1,191 @@
 package l;
 
-import android.util.Pair;
-import java.nio.ByteOrder;
-import java.util.List;
+import android.annotation.SuppressLint;
+import android.app.Application;
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.DocumentsContract;
+import android.text.TextUtils;
+import com.umeng.analytics.pro.d;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩶ۡܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P8OA */
+/* JADX INFO: renamed from: l.ᩴ᩶ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M54P */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20069 implements InterfaceC10045 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public InterfaceC8011 f64223;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public InterfaceC20774 f64224;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public InterfaceC15690 f64227;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f64229 = 0;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public long f64226 = -1;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f64228 = -1;
+public final class C20069 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f64225 = -1;
+    @SuppressLint({"StaticFieldLeak"})
+    public static final Application f64522 = C21576.m49084();
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2751() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final ContentResolver f64523 = C21576.m49091();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static String m46199(Uri uri) {
+        return m46192(uri, "_display_name");
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۨ */
-    public final InterfaceC10045 mo2755() {
-        return this;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static boolean m46197(Uri uri) {
+        String strM46192 = m46192(uri, "mime_type");
+        return ("vnd.android.document/directory".equals(strM46192) || TextUtils.isEmpty(strM46192)) ? false : true;
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ᩹ */
-    public final List mo2756() {
-        return AbstractC22433.of();
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static boolean m46198(Uri uri) {
+        return "vnd.android.document/directory".equals(m46192(uri, "mime_type"));
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2754(InterfaceC7222 interfaceC7222) {
-        return C12308.m30567(interfaceC7222);
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static long m46195(Uri uri) {
+        return m46190(0L, uri, "last_modified");
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2753(InterfaceC15690 interfaceC15690) {
-        this.f64227 = interfaceC15690;
-        this.f64223 = interfaceC15690.mo7684(0, 1);
-        interfaceC15690.mo7696();
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static long m46189(Uri uri) {
+        return m46190(0L, uri, "_size");
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2752(long j, long j2) {
-        this.f64229 = j == 0 ? 0 : 4;
-        InterfaceC20774 interfaceC20774 = this.f64224;
-        if (interfaceC20774 != null) {
-            interfaceC20774.mo19637(j2);
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m46194(Uri uri) {
+        return f64522.checkCallingOrSelfUriPermission(uri, 1) == 0 && !TextUtils.isEmpty(m46192(uri, "mime_type"));
     }
 
-    /* JADX WARN: Code duplicated, block: B:51:0x0100  */
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo2750(InterfaceC7222 interfaceC7222, C0954 c0954) throws C22861 {
-        int iM41816;
-        C2023.m6508(this.f64223);
-        String str = C17983.f57504;
-        int i = this.f64229;
-        if (i == 0) {
-            C2023.m6510(interfaceC7222.getPosition() == 0);
-            int i2 = this.f64228;
-            if (i2 != -1) {
-                interfaceC7222.mo19214(i2);
-                this.f64229 = 4;
-                return 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m46200(Uri uri) {
+        if (f64522.checkCallingOrSelfUriPermission(uri, 2) == 0) {
+            String strM46192 = m46192(uri, "mime_type");
+            int iM46190 = (int) m46190(0, uri, "flags");
+            if (!TextUtils.isEmpty(strM46192)) {
+                if ((iM46190 & 4) != 0) {
+                    return true;
+                }
+                if ("vnd.android.document/directory".equals(strM46192) && (iM46190 & 8) != 0) {
+                    return true;
+                }
+                if (!TextUtils.isEmpty(strM46192) && (iM46190 & 2) != 0) {
+                    return true;
+                }
             }
-            if (!C12308.m30567(interfaceC7222)) {
-                throw C22861.m50610("Unsupported or unrecognized wav file type.", (Throwable) null);
-            }
-            interfaceC7222.mo19214((int) (interfaceC7222.mo19213() - interfaceC7222.getPosition()));
-            this.f64229 = 1;
-            return 0;
         }
-        long jM7512 = -1;
-        if (i == 1) {
-            C2460 c2460 = new C2460(8);
-            C16541 c16541M38943 = C16541.m38943(interfaceC7222, c2460);
-            if (c16541M38943.f53131 != 1685272116) {
-                interfaceC7222.mo19217();
-            } else {
-                interfaceC7222.mo19209(8);
-                c2460.m7510(0);
-                interfaceC7222.mo19210(0, 8, c2460.m7518());
-                jM7512 = c2460.m7512();
-                interfaceC7222.mo19214(((int) c16541M38943.f53132) + 8);
-            }
-            this.f64226 = jM7512;
-            this.f64229 = 2;
-            return 0;
-        }
-        if (i == 2) {
-            C0312 c0312M30569 = C12308.m30569(interfaceC7222);
-            int i3 = c0312M30569.f1675;
-            if (i3 == 17) {
-                this.f64224 = new C7368(this.f64227, this.f64223, c0312M30569);
-            } else if (i3 == 6) {
-                this.f64224 = new C15836(this.f64227, this.f64223, c0312M30569, "audio/g711-alaw", -1);
-            } else if (i3 == 7) {
-                this.f64224 = new C15836(this.f64227, this.f64223, c0312M30569, "audio/g711-mlaw", -1);
-            } else {
-                int i4 = c0312M30569.f1676;
-                if (i3 == 1) {
-                    iM41816 = C17983.m41816(i4, ByteOrder.LITTLE_ENDIAN);
-                } else {
-                    if (i3 != 3) {
-                        if (i3 == 65534) {
-                            iM41816 = C17983.m41816(i4, ByteOrder.LITTLE_ENDIAN);
-                        }
-                    } else if (i4 == 32) {
-                        iM41816 = 4;
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static boolean m46201(Uri uri) {
+        try {
+            Cursor cursorQuery = f64523.query(uri, new String[]{"document_id"}, null, null, null);
+            try {
+                C17359.requireNonNull(cursorQuery);
+                boolean z = cursorQuery.getCount() > 0;
+                cursorQuery.close();
+                return z;
+            } catch (Throwable th) {
+                if (cursorQuery != null) {
+                    try {
+                        cursorQuery.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
                     }
-                    iM41816 = 0;
                 }
-                if (iM41816 == 0) {
-                    throw C22861.m50611("Unsupported WAV format type: " + i3);
+                throw th;
+            }
+        } catch (Exception e) {
+            e.toString();
+            return false;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m46193(Cursor cursor) throws IOException {
+        Bundle extras = cursor.getExtras();
+        if (extras != null) {
+            if (extras.getBoolean("loading", false) || extras.containsKey(d.O)) {
+                throw new IOException("Provider query is incomplete or failed");
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m46196(Uri uri) {
+        try {
+            return DocumentsContract.deleteDocument(f64523, uri);
+        } catch (Exception unused) {
+            return false;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Uri m46191(Uri uri, String str, String str2) {
+        try {
+            return DocumentsContract.createDocument(f64523, uri, str, str2);
+        } catch (Exception unused) {
+            return null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m46192(Uri uri, String str) {
+        try {
+            Cursor cursorQuery = f64523.query(uri, new String[]{str}, null, null, null);
+            try {
+                C17359.requireNonNull(cursorQuery);
+                if (!cursorQuery.moveToFirst() || cursorQuery.isNull(0)) {
+                    cursorQuery.close();
+                    return null;
                 }
-                this.f64224 = new C15836(this.f64227, this.f64223, c0312M30569, "audio/raw", iM41816);
+                String string = cursorQuery.getString(0);
+                cursorQuery.close();
+                return string;
+            } catch (Throwable th) {
+                if (cursorQuery != null) {
+                    try {
+                        cursorQuery.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                }
+                throw th;
             }
-            this.f64229 = 3;
-            return 0;
+        } catch (Exception e) {
+            e.toString();
+            return null;
         }
-        if (i != 3) {
-            if (i != 4) {
-                throw new IllegalStateException();
+        e.toString();
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static long m46190(long j, Uri uri, String str) {
+        try {
+            Cursor cursorQuery = f64523.query(uri, new String[]{str}, null, null, null);
+            try {
+                C17359.requireNonNull(cursorQuery);
+                if (!cursorQuery.moveToFirst() || cursorQuery.isNull(0)) {
+                    cursorQuery.close();
+                    return j;
+                }
+                long j2 = cursorQuery.getLong(0);
+                cursorQuery.close();
+                return j2;
+            } catch (Throwable th) {
+                if (cursorQuery != null) {
+                    try {
+                        cursorQuery.close();
+                    } catch (Throwable th2) {
+                        th.addSuppressed(th2);
+                    }
+                }
+                throw th;
             }
-            C2023.m6510(this.f64225 != -1);
-            long position = this.f64225 - interfaceC7222.getPosition();
-            InterfaceC20774 interfaceC20774 = this.f64224;
-            interfaceC20774.getClass();
-            return interfaceC20774.mo19638(interfaceC7222, position) ? -1 : 0;
+        } catch (Exception e) {
+            e.toString();
+            return j;
         }
-        Pair pairM30568 = C12308.m30568(interfaceC7222);
-        this.f64228 = ((Long) pairM30568.first).intValue();
-        long jLongValue = ((Long) pairM30568.second).longValue();
-        long j = this.f64226;
-        if (j != -1 && jLongValue == 4294967295L) {
-            jLongValue = j;
-        }
-        this.f64225 = ((long) this.f64228) + jLongValue;
-        long length = interfaceC7222.getLength();
-        if (length != -1 && this.f64225 > length) {
-            C0303.m1848("Data exceeds input length: " + this.f64225 + ", " + length);
-            this.f64225 = length;
-        }
-        InterfaceC20774 interfaceC20775 = this.f64224;
-        interfaceC20775.getClass();
-        interfaceC20775.mo19636(this.f64228, this.f64225);
-        this.f64229 = 4;
-        return 0;
+        e.toString();
+        return j;
     }
 }

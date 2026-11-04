@@ -1,32 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳᩳۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 07MC */
+/* JADX INFO: renamed from: l.ܰܶܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J6IU */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14689 implements InterfaceC3398 {
-    @Override // l.InterfaceC3398
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10069() {
-    }
+public final class C14689 {
 
-    @Override // l.InterfaceC3398
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10071(C22492 c22492) {
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f48009;
 
-    @Override // l.InterfaceC3398
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10072(C22492 c22492, InterfaceC13320 interfaceC13320) {
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f48010;
 
-    @Override // l.InterfaceC3398
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo10073() {
-    }
-
-    @Override // l.InterfaceC3398
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10070(C4146 c4146) {
-        throw c4146;
+    public C14689(String str, String str2) {
+        this.f48010 = str;
+        this.f48009 = str2;
     }
 }

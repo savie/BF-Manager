@@ -219,7 +219,7 @@
     const-string v3, "MicroMsg.AddCardToWXCardPackage"
 
     .line 0
-    invoke-static {v1, v2, v3}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     :goto_1
     const-string v1, "_wxapi_add_card_to_wx_card_list"

@@ -20,43 +20,43 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class AmazonWebServiceClient {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final Log f79 = LogFactory.m302(AmazonWebServiceClient.class);
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final CopyOnWriteArrayList f80 = new CopyOnWriteArrayList();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final Log f69 = LogFactory.m296(AmazonWebServiceClient.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AmazonHttpClient f81;
+    public AmazonHttpClient f70;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public volatile String f82;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public volatile URI f71;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public volatile URI f83;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public volatile Signer f72;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ClientConfiguration f84;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public volatile String f73;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public volatile Signer f85;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ClientConfiguration f74;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final CopyOnWriteArrayList f75 = new CopyOnWriteArrayList();
 
     public AmazonWebServiceClient(ClientConfiguration clientConfiguration, UrlHttpClient urlHttpClient) {
-        this.f84 = clientConfiguration;
-        this.f81 = new AmazonHttpClient(clientConfiguration, urlHttpClient);
+        this.f74 = clientConfiguration;
+        this.f70 = new AmazonHttpClient(clientConfiguration, urlHttpClient);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo157(String str) {
+    public void mo151(String str) {
         if (!str.contains("://")) {
-            str = this.f84.m175().toString() + "://" + str;
+            str = this.f74.m169().toString() + "://" + str;
         }
         try {
             URI uri = new URI(str);
-            Signer signerM151 = m151(uri, false);
+            Signer signerM145 = m145(uri, false);
             synchronized (this) {
-                this.f83 = uri;
-                this.f85 = signerM151;
+                this.f71 = uri;
+                this.f72 = signerM145;
             }
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(e);
@@ -64,75 +64,75 @@ public abstract class AmazonWebServiceClient {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Signer m153(URI uri) {
-        return m151(uri, true);
+    public final Signer m147(URI uri) {
+        return m145(uri, true);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private Signer m151(URI uri, boolean z) {
-        Signer signerM224;
+    private Signer m145(URI uri, boolean z) {
+        Signer signerM218;
         if (uri == null) {
             throw new IllegalArgumentException("Endpoint is not set. Use setEndpoint to set an endpoint before performing any request.");
         }
-        String strM154 = m154();
-        String strM739 = AwsHostNameUtils.m739(uri.getHost(), strM154);
-        String strM168 = this.f84.m168();
-        if (strM168 == null) {
-            signerM224 = SignerFactory.m225(strM154, strM739);
+        String strM148 = m148();
+        String strM733 = AwsHostNameUtils.m733(uri.getHost(), strM148);
+        String strM170 = this.f74.m170();
+        if (strM170 == null) {
+            signerM218 = SignerFactory.m219(strM148, strM733);
         } else {
-            signerM224 = SignerFactory.m224(strM168, strM154);
+            signerM218 = SignerFactory.m218(strM170, strM148);
         }
-        Signer signer = signerM224;
+        Signer signer = signerM218;
         if (signer instanceof RegionAwareSigner) {
             RegionAwareSigner regionAwareSigner = (RegionAwareSigner) signer;
-            if (strM739 != null && z) {
-                regionAwareSigner.setRegionName(strM739);
+            if (strM733 != null && z) {
+                regionAwareSigner.setRegionName(strM733);
             }
         }
         synchronized (this) {
-            RegionUtils.m423(strM739);
+            RegionUtils.m417(strM733);
         }
         return signer;
     }
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m155(AmazonWebServiceRequest amazonWebServiceRequest) {
+    public final void m149(AmazonWebServiceRequest amazonWebServiceRequest) {
         amazonWebServiceRequest.getClass();
-        this.f81.getClass();
-        AwsSdkMetrics.m340();
+        this.f70.getClass();
+        AwsSdkMetrics.m300();
     }
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m156(AWSRequestMetrics aWSRequestMetrics, DefaultRequest defaultRequest) {
-        aWSRequestMetrics.mo732(AWSRequestMetrics.Field.ClientExecuteTime);
-        aWSRequestMetrics.m731().mo791();
-        defaultRequest.m189().getClass();
-        this.f81.getClass();
-        AwsSdkMetrics.m340().getClass();
+    public final void m150(AWSRequestMetrics aWSRequestMetrics, DefaultRequest defaultRequest) {
+        aWSRequestMetrics.mo726(AWSRequestMetrics.Field.ClientExecuteTime);
+        aWSRequestMetrics.m725().mo784();
+        defaultRequest.m186().getClass();
+        this.f70.getClass();
+        AwsSdkMetrics.m300().getClass();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m154() {
-        if (this.f82 == null) {
+    public final String m148() {
+        if (this.f73 == null) {
             synchronized (this) {
-                if (this.f82 == null) {
-                    this.f82 = m152();
-                    return this.f82;
+                if (this.f73 == null) {
+                    this.f73 = m146();
+                    return this.f73;
                 }
             }
         }
-        return this.f82;
+        return this.f73;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private String m152() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private String m146() {
         int i;
-        String simpleName = Classes.m761(AmazonWebServiceClient.class, this).getSimpleName();
-        String strM201 = ServiceNameFactory.m201(simpleName);
-        if (strM201 != null) {
-            return strM201;
+        String simpleName = Classes.m755(AmazonWebServiceClient.class, this).getSimpleName();
+        String strM195 = ServiceNameFactory.m195(simpleName);
+        if (strM195 != null) {
+            return strM195;
         }
         int iIndexOf = simpleName.indexOf("JavaClient");
         if (iIndexOf == -1 && (iIndexOf = simpleName.indexOf("Client")) == -1) {
@@ -151,6 +151,6 @@ public abstract class AmazonWebServiceClient {
         if (iIndexOf2 >= iIndexOf) {
             throw new IllegalStateException("Unrecognized AWS http client class name ".concat(simpleName));
         }
-        return StringUtils.m789(simpleName.substring(iIndexOf2 + i, iIndexOf));
+        return StringUtils.m783(simpleName.substring(iIndexOf2 + i, iIndexOf));
     }
 }

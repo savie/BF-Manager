@@ -1,48 +1,66 @@
-.class public interface abstract Ll/ۧۨ᩵;
-.super Ljava/lang/Object;
-.source "K4DD"
+.class public final Ll/ۧۨ᩵;
+.super Ll/ۛۨ᩵;
+.source "RA0U"
 
-# interfaces
-.implements Ll/ۡۖ᩵;
-.implements Ljava/nio/channels/WritableByteChannel;
+
+# instance fields
+.field public ۙ:Ljava/lang/String;
 
 
 # virtual methods
-.method public abstract flush()V
+.method public final ۙ(Ll/ۗۨ᩵;)V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    .line 316
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩷(I)V
+
+    .line 317
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 320
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
+
+    .line 321
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->᩸()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/ۧۨ᩵;->ۙ:Ljava/lang/String;
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract write([B)Ll/ۧۨ᩵;
-.end method
+.method public final ᩷(Ll/ۗۨ᩵;)V
+    .locals 1
 
-.method public abstract writeByte(I)Ll/ۧۨ᩵;
-.end method
+    const/4 v0, 0x4
 
-.method public abstract writeInt(I)Ll/ۧۨ᩵;
-.end method
+    .line 303
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩷(I)V
 
-.method public abstract writeShort(I)Ll/ۧۨ᩵;
-.end method
+    .line 304
+    iget-object v0, p0, Ll/ۧۨ᩵;->ۙ:Ljava/lang/String;
 
-.method public abstract ۖ(II[B)Ll/ۧۨ᩵;
-.end method
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/Object;)V
 
-.method public abstract ۘ()Ll/ۛۨ᩵;
-.end method
+    .line 306
+    iget-object v0, p0, Ll/ۧۨ᩵;->ۙ:Ljava/lang/String;
 
-.method public abstract ۙ(Ll/ܳۨ᩵;)Ll/ۧۨ᩵;
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract ۨ(Ljava/lang/String;)Ll/ۧۨ᩵;
-.end method
+    .line 307
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
 
-.method public abstract ܳ()Ll/ۧۨ᩵;
-.end method
+    .line 308
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/String;)V
 
-.method public abstract ᩹(J)Ll/ۧۨ᩵;
-.end method
-
-.method public abstract ᩹ۨ()Ljava/io/OutputStream;
-.end method
-
-.method public abstract ᩺(J)Ll/ۧۨ᩵;
+    :cond_0
+    return-void
 .end method

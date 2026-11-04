@@ -1,30 +1,85 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻۟ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23552 extends C4748 {
-    @Override // l.C4748, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1767(Object obj, AbstractC16579 abstractC16579) {
-        throw new IllegalArgumentException("Not a method type: " + abstractC16579);
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.᩹۫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4DP */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23552 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final File[] f76077;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20568 f76078;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final File[] f76079;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public long f76080;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f76081;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long[] f76082;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C16092 f76083;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f76084;
+
+    public C23552(C20568 c20568, String str) {
+        this.f76078 = c20568;
+        this.f76084 = str;
+        int i = c20568.f65878;
+        File file = c20568.f65868;
+        this.f76082 = new long[i];
+        this.f76077 = new File[i];
+        this.f76079 = new File[i];
+        StringBuilder sb = new StringBuilder(str);
+        sb.append('.');
+        int length = sb.length();
+        for (int i2 = 0; i2 < i; i2++) {
+            sb.append(i2);
+            this.f76077[i2] = new File(file, sb.toString());
+            sb.append(".tmp");
+            this.f76079[i2] = new File(file, sb.toString());
+            sb.setLength(length);
+        }
     }
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo9280(C10894 c10894, Object obj) {
-        return new C10894((AbstractC16579) c10894.f53121.mo1928(this, (C21825) obj), c10894.f37076);
-    }
-
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6581(C13757 c13757, Object obj) {
-        return new C13757((C21825) obj, c13757.f45368, c13757.f45366, c13757.f53222);
-    }
-
-    @Override // l.C4748, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16579 mo1767(Object obj, AbstractC16579 abstractC16579) {
-        throw new IllegalArgumentException("Not a method type: " + abstractC16579);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3414 m52755() {
+        C20568 c20568 = this.f76078;
+        int i = c20568.f65878;
+        if (!Thread.holdsLock(c20568)) {
+            throw new AssertionError();
+        }
+        InterfaceC13810[] interfaceC13810Arr = new InterfaceC13810[i];
+        for (int i2 = 0; i2 < c20568.f65878; i2++) {
+            try {
+                interfaceC13810Arr[i2] = c20568.f65883.mo17581(this.f76077[i2]);
+            } catch (FileNotFoundException unused) {
+                for (int i3 = 0; i3 < i; i3++) {
+                    InterfaceC13810 interfaceC13810 = interfaceC13810Arr[i3];
+                    if (interfaceC13810 == null) {
+                        break;
+                    }
+                    C19822.m45601(interfaceC13810);
+                }
+                try {
+                    c20568.m47158(this);
+                    return null;
+                } catch (IOException unused2) {
+                    return null;
+                }
+            }
+        }
+        return new C3414(c20568, this.f76084, this.f76080, interfaceC13810Arr);
     }
 }

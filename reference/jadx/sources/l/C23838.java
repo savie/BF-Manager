@@ -1,50 +1,61 @@
 package l;
 
-import java.util.concurrent.CancellationException;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩻ܿ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: B32G */
+/* JADX INFO: renamed from: l.᩹᩸۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8BI */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23838 extends CancellationException {
+public final class C23838 extends FilterInputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final transient C2339 f77037;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final boolean f77199;
 
-    public C23838(String str, Throwable th, C2339 c2339) {
-        super(str);
-        this.f77037 = c2339;
-        if (th != null) {
-            initCause(th);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C3374 f77200;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
+    }
+
+    public C23838(InputStream inputStream, C3374 c3374, boolean z) {
+        super(inputStream);
+        this.f77200 = c3374;
+        this.f77199 = z;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3374 m53163() {
+        return this.f77200;
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read() throws IOException {
+        int i = super.read();
+        if (this.f77199 && i != -1) {
+            this.f77200.m11079(1);
         }
+        return i;
     }
 
-    @Override // java.lang.Throwable
-    public final Throwable fillInStackTrace() {
-        setStackTrace(new StackTraceElement[0]);
-        return this;
-    }
-
-    @Override // java.lang.Throwable
-    public final String toString() {
-        return super.toString() + "; job=" + this.f77037;
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final long skip(long j) throws IOException {
+        long jSkip = super.skip(j);
+        if (this.f77199 && jSkip > 0) {
+            this.f77200.m11077(jSkip);
         }
-        if (!(obj instanceof C23838)) {
-            return false;
-        }
-        C23838 c23838 = (C23838) obj;
-        return C13465.m32965((Object) c23838.getMessage(), (Object) getMessage()) && C13465.m32965(c23838.f77037, this.f77037) && C13465.m32965(c23838.getCause(), getCause());
+        return jSkip;
     }
 
-    public final int hashCode() {
-        String message = getMessage();
-        C13465.m32962((Object) message);
-        int iHashCode = (this.f77037.hashCode() + (message.hashCode() * 31)) * 31;
-        Throwable cause = getCause();
-        return iHashCode + (cause != null ? cause.hashCode() : 0);
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int i3 = super.read(bArr, i, i2);
+        if (this.f77199 && i3 != -1) {
+            this.f77200.m11079(i3);
+        }
+        return i3;
     }
 }

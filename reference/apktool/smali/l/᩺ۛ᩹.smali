@@ -1,58 +1,24 @@
-.class public final synthetic Ll/᩺ۛ᩹;
+.class public final Ll/᩺ۛ᩹;
 .super Ljava/lang/Object;
-.source "EDB"
-
-# interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.source "OAQ5"
 
 
-# virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 2
+# static fields
+.field public static final ۙ:Ll/᩵ۛ᩹;
 
-    const v0, 0x7f0a052c
 
-    .line 38
-    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
 
-    move-result-object p1
+    .line 112
+    new-instance v0, Ll/᩵ۛ᩹;
 
-    check-cast p1, Ljava/lang/Long;
+    .line 56
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    .line 112
+    sput-object v0, Ll/᩺ۛ᩹;->ۙ:Ll/᩵ۛ᩹;
 
-    .line 40
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 41
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v1, 0x7f120a61
-
-    invoke-static {v1}, Ll/ܽܺۘ;->ܰ(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ll/ܽܺۘ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

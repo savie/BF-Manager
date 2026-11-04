@@ -1,28 +1,43 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ܿ᩺ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P5I3 */
+/* JADX INFO: renamed from: l.ܽܳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: L6E6 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17656 extends AbstractC7619 {
+public final /* synthetic */ class C17656 implements Function {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC18029 f56113;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f58035;
 
-    public C17656(InterfaceC18029 interfaceC18029) {
-        this.f56113 = interfaceC18029;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f58036;
+
+    public /* synthetic */ C17656(int i, Object obj) {
+        this.f58035 = i;
+        this.f58036 = obj;
     }
 
-    @Override // l.InterfaceC0390
-    public final List getValue() {
-        ArrayList arrayList = new ArrayList();
-        arrayList.add(new C16951(this));
-        InterfaceC18029 interfaceC18029 = this.f56113;
-        arrayList.add(new C8672(interfaceC18029.mo19722()));
-        arrayList.add(new C12718(this));
-        arrayList.addAll(interfaceC18029.mo19720());
-        return arrayList;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f58035) {
+            case 0:
+                return Boolean.valueOf(C3486.m11469((C3486) this.f58036, (C2551) obj));
+            default:
+                return ((MaterialDynamicColors) this.f58036).lambda$onPrimaryFixed$112((DynamicScheme) obj);
+        }
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 }

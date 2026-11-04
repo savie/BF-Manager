@@ -1,39 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۤۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T8IH */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8106 {
+/* JADX INFO: renamed from: l.۟᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8106 extends C0407 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f28384;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C0407[] f26768;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C8106 m21323(C2460 c2460) {
-        String str;
-        c2460.m7535(2);
-        int iM7516 = c2460.m7516();
-        int i = iM7516 >> 1;
-        int iM7517 = ((c2460.m7516() >> 3) & 31) | ((iM7516 & 1) << 5);
-        if (i == 4 || i == 5 || i == 7 || i == 8) {
-            str = "dvhe";
-        } else if (i == 9) {
-            str = "dvav";
-        } else {
-            if (i != 10) {
-                return null;
-            }
-            str = "dav1";
-        }
-        StringBuilder sbM23356 = C9023.m23356(str);
-        sbM23356.append(i < 10 ? ".0" : ".");
-        sbM23356.append(i);
-        sbM23356.append(iM7517 < 10 ? ".0" : ".");
-        sbM23356.append(iM7517);
-        return new C8106(sbM23356.toString());
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public int f26769 = 2;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int[] f26770;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C0407 f26771;
+
+    public C8106(C0407 c0407, C0407 c0408, C0407 c0409) {
+        this.f26768 = new C0407[]{c0407, c0408};
+        this.f26771 = c0409;
     }
 
-    public C8106(String str) {
-        this.f28384 = str;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m21987() {
+        this.f26770 = null;
+        int i = -1;
+        for (int i2 = 0; i2 < this.f26769; i2++) {
+            int iM21985 = m21985(this.f26768[i2]);
+            if (iM21985 >= 0) {
+                if (i >= 0 && i != iM21985) {
+                    int[] iArr = new int[this.f26769];
+                    for (int i3 = 0; i3 < this.f26769; i3++) {
+                        iArr[i3] = m21985(this.f26768[i3]);
+                    }
+                    this.f26770 = iArr;
+                    return;
+                }
+                i = iM21985;
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m21985(C0407 c0407) {
+        int i;
+        for (int i2 = 0; i2 < 64 && ((c0407 instanceof C17560) || (c0407 instanceof C19293)); i2++) {
+            c0407 = c0407.f1952;
+        }
+        if (!(c0407 instanceof C19624)) {
+            return -1;
+        }
+        int[] iArr = ((C19624) c0407).f19048;
+        if (iArr.length <= 0 || (i = iArr[0]) < 0 || i >= 128) {
+            return -1;
+        }
+        return i;
     }
 }

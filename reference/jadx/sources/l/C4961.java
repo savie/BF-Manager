@@ -1,98 +1,58 @@
 package l;
 
-import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import android.content.DialogInterface;
+import android.content.Intent;
 
-/* JADX INFO: renamed from: l.ۙ᩺ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E5S4 */
+/* JADX INFO: renamed from: l.ۙܰ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 98W2 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4961 implements InterfaceC19429 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m13746(int i) {
-        return m13747(i, 30257, 1);
+public final class C4961 extends AbstractC2432 {
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f17278;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22115 f17279;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public byte[] f17280;
+
+    public C4961(C22115 c22115, AbstractActivityC17204 abstractActivityC17204) {
+        this.f17279 = c22115;
+        this.f17278 = abstractActivityC17204;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m13749(int i) {
-        return m13747(i, 20703, 2);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8190(this.f17278);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String m13748(int i) {
-        return m13747(i, 204287, 3);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        this.f17280 = C0486.m2345(this.f17279.f71283);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m13747(int i, int i2, int i3) {
-        StringBuilder sb = new StringBuilder(80);
-        int i4 = (~i2) & i;
-        int i5 = i & i2;
-        if ((i5 & 1) != 0) {
-            sb.append("|public");
-        }
-        if ((i5 & 2) != 0) {
-            sb.append("|private");
-        }
-        if ((i5 & 4) != 0) {
-            sb.append("|protected");
-        }
-        if ((i5 & 8) != 0) {
-            sb.append("|static");
-        }
-        if ((i5 & 16) != 0) {
-            sb.append("|final");
-        }
-        if ((i5 & 32) != 0) {
-            if (i3 == 1) {
-                sb.append("|super");
-            } else {
-                sb.append("|synchronized");
-            }
-        }
-        if ((i5 & 64) != 0) {
-            if (i3 == 3) {
-                sb.append("|bridge");
-            } else {
-                sb.append("|volatile");
-            }
-        }
-        if ((i5 & 128) != 0) {
-            if (i3 == 3) {
-                sb.append("|varargs");
-            } else {
-                sb.append("|transient");
-            }
-        }
-        if ((i5 & 256) != 0) {
-            sb.append("|native");
-        }
-        if ((i5 & 512) != 0) {
-            sb.append("|interface");
-        }
-        if ((i5 & 1024) != 0) {
-            sb.append("|abstract");
-        }
-        if ((i5 & 2048) != 0) {
-            sb.append("|strictfp");
-        }
-        if ((i5 & 4096) != 0) {
-            sb.append("|synthetic");
-        }
-        if ((i5 & 8192) != 0) {
-            sb.append("|annotation");
-        }
-        if ((i5 & 16384) != 0) {
-            sb.append("|enum");
-        }
-        if ((65536 & i5) != 0) {
-            sb.append("|constructor");
-        }
-        if ((i5 & WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT) != 0) {
-            sb.append("|declared_synchronized");
-        }
-        if (i4 != 0 || sb.length() == 0) {
-            sb.append('|');
-            sb.append(C22475.m49982(i4));
-        }
-        return sb.substring(1);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        AbstractActivityC17204 abstractActivityC17204 = this.f17278;
+        Intent intent = new Intent(abstractActivityC17204, (Class<?>) ActivityC16147.class);
+        intent.putExtra("title", this.f17279.f71285);
+        intent.putExtra("markdown", this.f17280);
+        abstractActivityC17204.startActivity(intent);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f17278.m40401(exc, (DialogInterface.OnDismissListener) null);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

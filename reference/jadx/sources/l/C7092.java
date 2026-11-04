@@ -1,66 +1,65 @@
 package l;
 
-import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۜ᩻۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4AYL */
-/* JADX INFO: loaded from: classes2.dex */
-public class C7092 {
+/* JADX INFO: renamed from: l.ۜۧۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C7092 implements Function, BiConsumer {
+    public final /* synthetic */ int a;
+    public final /* synthetic */ Function b;
+    public final /* synthetic */ Function c;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ AtomicReferenceFieldUpdater f23771 = AtomicReferenceFieldUpdater.newUpdater(C7092.class, Object.class, "_cur");
-    public volatile /* synthetic */ Object _cur = new C15560(8, false);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m18965() {
-        return ((C15560) this._cur).m37203();
+    public /* synthetic */ C7092(Function function, Function function2, int i) {
+        this.a = i;
+        this.b = function;
+        this.c = function2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18962() {
-        while (true) {
-            C15560 c15560 = (C15560) this._cur;
-            if (c15560.m37200()) {
-                return;
-            }
-            AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f23771;
-            C15560 c15560M37198 = c15560.m37198();
-            while (!atomicReferenceFieldUpdater.compareAndSet(this, c15560, c15560M37198) && atomicReferenceFieldUpdater.get(this) == c15560) {
-            }
+    public /* synthetic */ BiConsumer andThen(BiConsumer biConsumer) {
+        return C23501.$default$andThen(this, biConsumer);
+    }
+
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        switch (this.a) {
+            case 0:
+                break;
+        }
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        switch (this.a) {
+            case 0:
+                break;
+        }
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public Object apply(Object obj) {
+        switch (this.a) {
+            case 0:
+                return this.c.apply(this.b.apply(obj));
+            default:
+                return this.b.apply(this.c.apply(obj));
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m18963(Runnable runnable) {
-        while (true) {
-            C15560 c15560 = (C15560) this._cur;
-            int iM37199 = c15560.m37199(runnable);
-            if (iM37199 == 0) {
-                return true;
-            }
-            if (iM37199 == 1) {
-                AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f23771;
-                C15560 c15560M37198 = c15560.m37198();
-                while (!atomicReferenceFieldUpdater.compareAndSet(this, c15560, c15560M37198) && atomicReferenceFieldUpdater.get(this) == c15560) {
-                }
-            } else if (iM37199 == 2) {
-                return false;
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Object m18964() {
-        while (true) {
-            C15560 c15560 = (C15560) this._cur;
-            Object objM37201 = c15560.m37201();
-            if (objM37201 != C15560.f50615) {
-                return objM37201;
-            }
-            AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f23771;
-            C15560 c15560M37198 = c15560.m37198();
-            while (!atomicReferenceFieldUpdater.compareAndSet(this, c15560, c15560M37198) && atomicReferenceFieldUpdater.get(this) == c15560) {
-            }
+    @Override // java.util.function.BiConsumer
+    public void accept(Object obj, Object obj2) {
+        Set set = C2025.a;
+        Object objApply = this.b.apply(obj2);
+        Object objRequireNonNull = C17359.requireNonNull(this.c.apply(obj2));
+        Object objPutIfAbsent = C11392.putIfAbsent((Map) obj, objApply, objRequireNonNull);
+        if (objPutIfAbsent != null) {
+            throw new IllegalStateException(String.format("Duplicate key %s (attempted merging values %s and %s)", objApply, objPutIfAbsent, objRequireNonNull));
         }
     }
 }

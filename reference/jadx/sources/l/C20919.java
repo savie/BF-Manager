@@ -1,33 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ܰܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: OBG8 */
+import com.google.android.material.motion.MotionUtils;
+
+/* JADX INFO: renamed from: l.᩵᩻ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5SA */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20919 extends AbstractC1100 {
+public final class C20919 extends C23903 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9901 f67958;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public Object f66938;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f67959;
-
-    public C20919(int i, AbstractC9901 abstractC9901) {
-        super("AnnotationDefault");
-        if (abstractC9901 == null) {
-            throw new NullPointerException("value == null");
+    @Override // l.C23903, java.lang.Throwable
+    public final String toString() {
+        Object obj = this.f66938;
+        if (obj != null && this.f16097 != null) {
+            return "MissingTokenException(inserted " + obj + " at " + this.f16097.getText() + MotionUtils.EASING_TYPE_FORMAT_END;
         }
-        this.f67958 = abstractC9901;
-        this.f67959 = i;
-    }
-
-    @Override // l.InterfaceC5771
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo2281() {
-        return this.f67959 + 6;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9901 m47029() {
-        return this.f67958;
+        if (this.f16097 == null) {
+            return "MissingTokenException";
+        }
+        return "MissingTokenException(at " + this.f16097.getText() + MotionUtils.EASING_TYPE_FORMAT_END;
     }
 }

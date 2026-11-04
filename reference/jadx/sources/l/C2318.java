@@ -1,39 +1,27 @@
 package l;
 
-import java.io.IOException;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۖۚ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: F43P */
+/* JADX INFO: renamed from: l.ۖ֨ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L7BP */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2318 extends Thread {
+public final class C2318 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14315 f8240;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f7489;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2318(C14315 c14315, String str) {
-        super(str);
-        this.f8240 = c14315;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f7490;
 
-    @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() {
-        try {
-            synchronized (this.f8240) {
-                long jCurrentTimeMillis = System.currentTimeMillis();
-                while (true) {
-                    long j = this.f8240.f13547;
-                    C14315 c14315 = this.f8240;
-                    if (jCurrentTimeMillis < j + c14315.f13552) {
-                        c14315.wait((c14315.f13547 + this.f8240.f13552) - jCurrentTimeMillis);
-                        jCurrentTimeMillis = System.currentTimeMillis();
-                    } else {
-                        c14315.f13552 = 0L;
-                        c14315.close();
-                    }
-                }
-            }
-        } catch (IOException | InterruptedException unused) {
-        }
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f7491;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public String f7492;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public List f7493;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String f7494;
 }

@@ -38,14 +38,14 @@
 
     move-result-object v1
 
-    sget v2, Ll/֨۟ܶ;->֡᩷:I
+    sget v2, Ll/ܽ۬ܺ;->ܿۘ:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     .line 91
-    sget-object v4, Ll/۠۟ܶ;->ᩴ۬:[I
+    sget-object v4, Ll/ܰ۬ܺ;->᩹ۚ:[I
 
     new-array v7, v0, [I
 
@@ -63,7 +63,7 @@
     move-result-object p2
 
     .line 94
-    sget p3, Ll/۠۟ܶ;->ܽ۬:I
+    sget p3, Ll/ܰ۬ܺ;->֡ۚ:I
 
     .line 95
     invoke-static {p1, p2, p3, v1}, Lcom/google/android/material/resources/MaterialResources;->getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
@@ -73,7 +73,7 @@
     iput p3, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
 
     .line 97
-    sget p3, Ll/۠۟ܶ;->֡۬:I
+    sget p3, Ll/ܰ۬ܺ;->ܿۚ:I
 
     .line 99
     invoke-static {p1, p2, p3, v0}, Lcom/google/android/material/resources/MaterialResources;->getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
@@ -92,7 +92,7 @@
     iput p3, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackCornerRadius:I
 
     .line 102
-    sget p3, Ll/۠۟ܶ;->᩷۬:I
+    sget p3, Ll/ܰ۬ܺ;->ۘۚ:I
 
     .line 103
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -102,7 +102,7 @@
     iput p3, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->showAnimationBehavior:I
 
     .line 106
-    sget p3, Ll/۠۟ܶ;->᩵۬:I
+    sget p3, Ll/ܰ۬ܺ;->᩵ۚ:I
 
     .line 107
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -112,7 +112,7 @@
     iput p3, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->hideAnimationBehavior:I
 
     .line 110
-    sget p3, Ll/۠۟ܶ;->ۤ۬:I
+    sget p3, Ll/ܰ۬ܺ;->ۛۚ:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -136,7 +136,7 @@
     .locals 3
 
     .line 127
-    sget v0, Ll/۠۟ܶ;->ۡ۬:I
+    sget v0, Ll/ܰ۬ܺ;->ۨۚ:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -147,7 +147,7 @@
     if-nez v0, :cond_0
 
     .line 129
-    sget p2, Ll/ۖ۟ܶ;->ᩴ֨:I
+    sget p2, Ll/ۧ۬ܺ;->᩹۫:I
 
     invoke-static {p1, p2, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
@@ -163,7 +163,7 @@
 
     .line 133
     :cond_0
-    sget v0, Ll/۠۟ܶ;->ۡ۬:I
+    sget v0, Ll/ܰ۬ܺ;->ۨۚ:I
 
     .line 134
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
@@ -178,7 +178,7 @@
     if-eq v0, v2, :cond_1
 
     .line 137
-    sget p1, Ll/۠۟ܶ;->ۡ۬:I
+    sget p1, Ll/ܰ۬ܺ;->ۨۚ:I
 
     .line 138
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getColor(II)I
@@ -199,7 +199,7 @@
 
     move-result-object p1
 
-    sget v0, Ll/۠۟ܶ;->ۡ۬:I
+    sget v0, Ll/ܰ۬ܺ;->ۨۚ:I
 
     .line 146
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -235,7 +235,7 @@
     .locals 1
 
     .line 162
-    sget v0, Ll/۠۟ܶ;->᩶۬:I
+    sget v0, Ll/ܰ۬ܺ;->᩶ۚ:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -244,7 +244,7 @@
     if-eqz v0, :cond_0
 
     .line 163
-    sget p1, Ll/۠۟ܶ;->᩶۬:I
+    sget p1, Ll/ܰ۬ܺ;->᩶ۚ:I
 
     const/4 v0, -0x1
 

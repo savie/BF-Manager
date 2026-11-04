@@ -2,7 +2,7 @@ package org.bouncycastle.asn1;
 
 import java.io.IOException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BERTaggedObjectParser implements ASN1TaggedObjectParser {
     public final ASN1StreamParser _parser;
     public final int _tagClass;

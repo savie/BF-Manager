@@ -1,20 +1,15 @@
 package l;
 
-import java.util.ArrayList;
+import com.alipay.sdk.m.p.d;
+import java.util.function.Supplier;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-/* JADX INFO: renamed from: l.֫ܰ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 26KG */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1866 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7089;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7090;
-
-    public C1866(ArrayList arrayList, ArrayList arrayList2) {
-        this.f7089 = arrayList;
-        this.f7090 = arrayList2;
+/* JADX INFO: renamed from: l.֫ۤ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1VV */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C1866 implements Supplier {
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return new C12306(259, XMSSKeyParameters.SHA_256, d.a, "SHA256withRSA", null);
     }
 }

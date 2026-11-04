@@ -12,8 +12,8 @@ import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.util.StateSet;
 import com.google.android.material.color.MaterialColors;
-import l.C2387;
-import l.C3224;
+import l.C11642;
+import l.C19988;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RippleUtils {
@@ -82,7 +82,7 @@ public class RippleUtils {
 
     @TargetApi(21)
     public static int doubleAlpha(int i) {
-        return C3224.m9668(i, Math.min(Color.alpha(i) * 2, 255));
+        return C19988.m45964(i, Math.min(Color.alpha(i) * 2, 255));
     }
 
     public class RippleUtilsLollipop {
@@ -90,7 +90,7 @@ public class RippleUtils {
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setColor(-1);
             gradientDrawable.setShape(1);
-            return new RippleDrawable(MaterialColors.getColorStateList(context, C2387.f9206, ColorStateList.valueOf(0)), null, new InsetDrawable((Drawable) gradientDrawable, i, i, i, i));
+            return new RippleDrawable(MaterialColors.getColorStateList(context, C11642.f37175, ColorStateList.valueOf(0)), null, new InsetDrawable((Drawable) gradientDrawable, i, i, i, i));
         }
     }
 }

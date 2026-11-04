@@ -1,238 +1,254 @@
 .class public final Ll/᩺᩸ۨ;
-.super Ljava/lang/Object;
-.source "T4Z8"
+.super Ll/ۛ᩸ۨ;
+.source "C8CP"
 
 
-# instance fields
-.field public ۖ:Z
-
-.field public ۙ:I
-
-.field public ۨ:Ljava/io/InputStream;
-
-.field public ܰ:[I
+# static fields
+.field public static final ᩶:Ll/ۛ᩸ۨ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 2
 
-    .line 13
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0xffffff
-
-    .line 8
-    iput v0, p0, Ll/᩺᩸ۨ;->ۙ:I
-
-    const/4 v0, 0x1
-
-    .line 9
-    iput-boolean v0, p0, Ll/᩺᩸ۨ;->ۖ:Z
-
-    .line 14
-    iput-object p1, p0, Ll/᩺᩸ۨ;->ۨ:Ljava/io/InputStream;
-
-    const/16 p1, 0x100
-
-    new-array v0, p1, [I
-
-    .line 15
-    iput-object v0, p0, Ll/᩺᩸ۨ;->ܰ:[I
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p1, :cond_2
+    .line 22
+    new-instance v0, Ll/᩺᩸ۨ;
 
     const/4 v1, 0x0
 
-    move v2, v0
+    .line 26
+    invoke-direct {v0, v1}, Ll/ۛ᩸ۨ;-><init>(I)V
 
-    :goto_1
-    const/16 v3, 0x8
+    .line 22
+    sput-object v0, Ll/᩺᩸ۨ;->᩶:Ll/ۛ᩸ۨ;
 
-    if-ge v1, v3, :cond_1
-
-    and-int/lit8 v3, v2, 0x1
-
-    shr-int/lit8 v2, v2, 0x1
-
-    if-eqz v3, :cond_0
-
-    const v3, -0x12477dd0
-
-    xor-int/2addr v2, v3
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 24
-    :cond_1
-    iget-object v1, p0, Ll/᩺᩸ۨ;->ܰ:[I
-
-    aput v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()V
-    .locals 1
+.method public final ۙ([BII)I
+    .locals 12
 
-    const v0, 0xffffff
+    .line 28
+    invoke-static {p2, p3, p1}, Ll/᩹᩶᩵;->ۙ(II[B)V
 
-    .line 38
-    iput v0, p0, Ll/᩺᩸ۨ;->ۙ:I
+    add-int v0, p2, p3
 
-    return-void
-.end method
+    const v1, 0x165667b1
 
-.method public final ۖ()I
-    .locals 1
+    const v2, -0x61c8864f
 
-    .line 29
-    iget v0, p0, Ll/᩺᩸ۨ;->ۙ:I
+    const v3, -0x7a143589
 
-    return v0
-.end method
+    const/16 v4, 0x10
 
-.method public final ۙ()Z
-    .locals 2
+    if-lt p3, v4, :cond_1
 
-    .line 33
-    iget v0, p0, Ll/᩺᩸ۨ;->ۙ:I
+    add-int/lit8 v5, v0, -0x10
 
-    .line 34
-    invoke-virtual {p0}, Ll/᩺᩸ۨ;->᩹()I
+    const/4 v6, 0x0
 
-    move-result v1
+    const v7, 0x24234428
 
-    if-ne v1, v0, :cond_0
+    const v8, 0x61c8864f
 
-    const/4 v0, 0x1
+    const v9, -0x7a143589
 
-    return v0
+    .line 40
+    :goto_0
+    invoke-static {p2, p1}, Ll/᩹᩶᩵;->᩷(I[B)I
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result v10
 
-    return v0
-.end method
+    mul-int v10, v10, v3
 
-.method public final ۚ()I
-    .locals 4
+    add-int/2addr v10, v7
+
+    const/16 v7, 0xd
+
+    .line 41
+    invoke-static {v10, v7}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v10
+
+    mul-int v10, v10, v2
+
+    add-int/lit8 v11, p2, 0x4
+
+    .line 45
+    invoke-static {v11, p1}, Ll/᩹᩶᩵;->᩷(I[B)I
+
+    move-result v11
+
+    mul-int v11, v11, v3
+
+    add-int/2addr v11, v9
 
     .line 46
-    iget-object v0, p0, Ll/᩺᩸ۨ;->ۨ:Ljava/io/InputStream;
+    invoke-static {v11, v7}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+    move-result v9
 
-    move-result v0
+    mul-int v9, v9, v2
 
-    .line 47
-    iget-boolean v1, p0, Ll/᩺᩸ۨ;->ۖ:Z
+    add-int/lit8 v11, p2, 0x8
 
-    if-eqz v1, :cond_0
+    .line 50
+    invoke-static {v11, p1}, Ll/᩹᩶᩵;->᩷(I[B)I
 
-    const/4 v1, -0x1
+    move-result v11
 
-    if-eq v0, v1, :cond_0
+    mul-int v11, v11, v3
 
-    not-int v0, v0
+    add-int/2addr v11, v6
 
-    and-int/lit16 v0, v0, 0xff
+    .line 51
+    invoke-static {v11, v7}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    .line 49
+    move-result v6
+
+    mul-int v6, v6, v2
+
+    add-int/lit8 v11, p2, 0xc
+
+    .line 55
+    invoke-static {v11, p1}, Ll/᩹᩶᩵;->᩷(I[B)I
+
+    move-result v11
+
+    mul-int v11, v11, v3
+
+    add-int/2addr v11, v8
+
+    .line 56
+    invoke-static {v11, v7}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v7
+
+    mul-int v8, v7, v2
+
+    add-int/2addr p2, v4
+
+    if-le p2, v5, :cond_0
+
+    const/4 v4, 0x1
+
+    .line 61
+    invoke-static {v10, v4}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v4
+
+    const/4 v5, 0x7
+
+    invoke-static {v9, v5}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v5
+
+    add-int/2addr v5, v4
+
+    const/16 v4, 0xc
+
+    invoke-static {v6, v4}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v4
+
+    add-int/2addr v4, v5
+
+    const/16 v5, 0x12
+
+    invoke-static {v8, v5}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result v5
+
+    add-int/2addr v5, v4
+
+    goto :goto_1
+
     :cond_0
-    iget v1, p0, Ll/᩺᩸ۨ;->ۙ:I
+    move v7, v10
 
-    xor-int v2, v1, v0
+    goto :goto_0
 
-    and-int/lit16 v2, v2, 0xff
+    :cond_1
+    const v5, 0x165667b1
 
-    iget-object v3, p0, Ll/᩺᩸ۨ;->ܰ:[I
+    :goto_1
+    add-int/2addr v5, p3
 
-    aget v2, v3, v2
+    :goto_2
+    add-int/lit8 p3, v0, -0x4
 
-    shr-int/lit8 v1, v1, 0x8
+    const v4, -0x3d4d51c3
 
-    xor-int/2addr v1, v2
+    if-gt p2, p3, :cond_2
 
-    iput v1, p0, Ll/᩺᩸ۨ;->ۙ:I
+    .line 69
+    invoke-static {p2, p1}, Ll/᩹᩶᩵;->᩷(I[B)I
 
-    return v0
-.end method
+    move-result p3
 
-.method public final ۨ()V
-    .locals 1
+    mul-int p3, p3, v4
 
-    const/4 v0, 0x0
+    add-int/2addr p3, v5
 
-    .line 54
-    iput-boolean v0, p0, Ll/᩺᩸ۨ;->ۖ:Z
+    const/16 v4, 0x11
 
-    return-void
-.end method
+    .line 70
+    invoke-static {p3, v4}, Ljava/lang/Integer;->rotateLeft(II)I
 
-.method public final ܰ()V
-    .locals 1
+    move-result p3
 
-    .line 58
-    iget-object v0, p0, Ll/᩺᩸ۨ;->ۨ:Ljava/io/InputStream;
+    const v4, 0x27d4eb2f
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    mul-int v5, p3, v4
 
-    return-void
-.end method
+    add-int/lit8 p2, p2, 0x4
 
-.method public final ᩹()I
-    .locals 2
+    goto :goto_2
 
-    .line 73
-    invoke-virtual {p0}, Ll/᩺᩸ۨ;->ۚ()I
+    :cond_2
+    :goto_3
+    if-ge p2, v0, :cond_3
 
-    move-result v0
+    .line 44
+    aget-byte p3, p1, p2
 
-    and-int/lit16 v0, v0, 0xff
+    and-int/lit16 p3, p3, 0xff
 
-    invoke-virtual {p0}, Ll/᩺᩸ۨ;->ۚ()I
+    mul-int p3, p3, v1
 
-    move-result v1
+    add-int/2addr p3, v5
 
-    and-int/lit16 v1, v1, 0xff
+    const/16 v5, 0xb
 
-    shl-int/lit8 v1, v1, 0x8
+    .line 76
+    invoke-static {p3, v5}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    or-int/2addr v0, v1
+    move-result p3
 
-    invoke-virtual {p0}, Ll/᩺᩸ۨ;->ۚ()I
+    mul-int v5, p3, v2
 
-    move-result v1
+    add-int/lit8 p2, p2, 0x1
 
-    and-int/lit16 v1, v1, 0xff
+    goto :goto_3
 
-    shl-int/lit8 v1, v1, 0x10
+    :cond_3
+    ushr-int/lit8 p1, v5, 0xf
 
-    or-int/2addr v0, v1
+    xor-int/2addr p1, v5
 
-    invoke-virtual {p0}, Ll/᩺᩸ۨ;->ۚ()I
+    mul-int p1, p1, v3
 
-    move-result v1
+    ushr-int/lit8 p2, p1, 0xd
 
-    and-int/lit16 v1, v1, 0xff
+    xor-int/2addr p1, p2
 
-    shl-int/lit8 v1, v1, 0x18
+    mul-int p1, p1, v4
 
-    or-int/2addr v0, v1
+    ushr-int/lit8 p2, p1, 0x10
 
-    return v0
+    xor-int/2addr p1, p2
+
+    return p1
 .end method

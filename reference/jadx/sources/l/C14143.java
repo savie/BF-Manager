@@ -1,36 +1,39 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import com.alipay.sdk.m.y.o;
-import com.umeng.analytics.pro.d;
-import com.umeng.commonsdk.internal.crash.UMCrashManager;
+/* JADX INFO: renamed from: l.۬᩸ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A3Q2 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14143 extends AbstractC5107 {
 
-/* JADX INFO: renamed from: l.ܰ᩻֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: J79K */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14143 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final AbstractC5107 f44726 = new C14143("");
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C7768 m34192(EnumC10591 enumC10591, JSONValue jSONValue, int i, String str) {
-        return AbstractC16940.m39639(enumC10591, "application/json", m34191(jSONValue, i, str).toString());
+    public final String f44727;
+
+    public C14143(String str) {
+        this.f44727 = str;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m34190(JSONObject jSONObject, JSONValue jSONValue) {
-        JSONObject jSONObjectAdd = JSON.object().add("jsonrpc", UMCrashManager.CM_VERSION);
-        if (jSONValue == null) {
-            jSONValue = JSON.NULL;
+    @Override // l.AbstractC5107
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        return jSONObjectAdd.add("id", jSONValue).add(o.c, jSONObject);
+        if (obj == null || C14143.class != obj.getClass()) {
+            throw new RuntimeException();
+        }
+        return C17359.equals(this.f44727, ((C14143) obj).f44727);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m34191(JSONValue jSONValue, int i, String str) {
-        JSONObject jSONObjectAdd = JSON.object().add("jsonrpc", UMCrashManager.CM_VERSION);
-        if (jSONValue == null) {
-            jSONValue = JSON.NULL;
-        }
-        return jSONObjectAdd.add("id", jSONValue).add(d.O, JSON.object().add("code", i).add("message", str));
+    @Override // l.AbstractC5107
+    public final int hashCode() {
+        return this.f44727.hashCode();
+    }
+
+    @Override // l.AbstractC5107
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo15452() {
+        return this.f44727;
     }
 }

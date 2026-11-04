@@ -15,15 +15,15 @@ import com.google.android.material.internal.ManufacturerUtils;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C2387;
+import l.C11642;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DynamicColors {
     public static final DeviceSupportCondition DEFAULT_DEVICE_SUPPORT_CONDITION;
     public static final Map DYNAMIC_COLOR_SUPPORTED_BRANDS;
     public static final Map DYNAMIC_COLOR_SUPPORTED_MANUFACTURERS;
-    public static final int[] DYNAMIC_COLOR_THEME_OVERLAY_ATTRIBUTE = {C2387.f8625};
+    public static final int[] DYNAMIC_COLOR_THEME_OVERLAY_ATTRIBUTE = {C11642.f36608};
 
     @SuppressLint({"PrivateApi"})
     public static final DeviceSupportCondition SAMSUNG_DEVICE_SUPPORT_CONDITION;
@@ -97,11 +97,11 @@ public class DynamicColors {
         map.put("vivo", deviceSupportCondition);
         map.put("wingtech", deviceSupportCondition);
         map.put("xiaomi", deviceSupportCondition);
-        DYNAMIC_COLOR_SUPPORTED_MANUFACTURERS = C0561.unmodifiableMap(map);
+        DYNAMIC_COLOR_SUPPORTED_MANUFACTURERS = C4681.unmodifiableMap(map);
         HashMap map2 = new HashMap();
         map2.put("asus", deviceSupportCondition);
         map2.put("jio", deviceSupportCondition);
-        DYNAMIC_COLOR_SUPPORTED_BRANDS = C0561.unmodifiableMap(map2);
+        DYNAMIC_COLOR_SUPPORTED_BRANDS = C4681.unmodifiableMap(map2);
         TAG = "DynamicColors";
     }
 
@@ -216,7 +216,7 @@ public class DynamicColors {
             if (r0 >= r1) goto L8
             return r2
         L8:
-            int r1 = l.C11506.f38682
+            int r1 = l.C13012.f41678
             r1 = 33
             r3 = 1
             if (r0 >= r1) goto L68
@@ -224,7 +224,7 @@ public class DynamicColors {
             if (r0 < r1) goto L3e
             java.lang.String r0 = android.os.Build.VERSION.CODENAME
             java.lang.String r1 = "CODENAME"
-            l.C13465.m32967(r0, r1)
+            l.C15243.m36591(r0, r1)
             java.lang.String r1 = "REL"
             boolean r1 = r1.equals(r0)
             if (r1 == 0) goto L23
@@ -233,10 +233,10 @@ public class DynamicColors {
             java.util.Locale r1 = java.util.Locale.ROOT
             java.lang.String r0 = r0.toUpperCase(r1)
             java.lang.String r4 = "this as java.lang.String).toUpperCase(Locale.ROOT)"
-            l.C13465.m32967(r0, r4)
+            l.C15243.m36591(r0, r4)
             java.lang.String r5 = "Tiramisu"
             java.lang.String r1 = r5.toUpperCase(r1)
-            l.C13465.m32967(r1, r4)
+            l.C15243.m36591(r1, r4)
             int r0 = r0.compareTo(r1)
             if (r0 < 0) goto L3e
             goto L68

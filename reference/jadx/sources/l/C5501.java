@@ -1,70 +1,71 @@
 package l;
 
-import java.io.DataOutput;
-import java.io.IOException;
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
+import bin.mt.plus.R;
+import com.alipay.sdk.app.OpenAuthTask;
 
-/* JADX INFO: renamed from: l.ۚܿᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۚ۟ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D1Q7 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5501 extends AbstractC9114 {
-    public static final /* synthetic */ int d = 0;
-    public static final long serialVersionUID = 8386373296231747096L;
-    public final String b;
-    public final transient C15380 c;
+public final /* synthetic */ class C5501 implements InterfaceC5392, InterfaceC9600, InterfaceC13083 {
 
-    public static C5501 b0(String str, boolean z) {
-        C15380 c15380A;
-        C13638.requireNonNull(str, "zoneId");
-        int length = str.length();
-        if (length >= 2) {
-            for (int i = 0; i < length; i++) {
-                char cCharAt = str.charAt(i);
-                if ((cCharAt < 'a' || cCharAt > 'z') && ((cCharAt < 'A' || cCharAt > 'Z') && ((cCharAt != '/' || i == 0) && ((cCharAt < '0' || cCharAt > '9' || i == 0) && ((cCharAt != '~' || i == 0) && ((cCharAt != '.' || i == 0) && ((cCharAt != '_' || i == 0) && ((cCharAt != '+' || i == 0) && (cCharAt != '-' || i == 0))))))))) {
-                    throw new C15464("Invalid ID for region-based ZoneId, invalid format: ".concat(str));
-                }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f19133;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f19134;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f19135;
+
+    public /* synthetic */ C5501(Object obj, Object obj2, Object obj3) {
+        this.f19133 = obj;
+        this.f19135 = obj2;
+        this.f19134 = obj3;
+    }
+
+    @Override // l.InterfaceC13083
+    /* JADX INFO: renamed from: ۙ */
+    public C1238 mo2836(int i) {
+        return C17053.m40179((C17053) this.f19133, (C10671) this.f19135, (C4156) this.f19134, i);
+    }
+
+    @Override // l.InterfaceC9600
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1839(C14406 c14406) {
+        String name;
+        String name2;
+        C14406 c14407 = (C14406) this.f19133;
+        C12915 c12915 = (C12915) this.f19135;
+        C8614 c8614 = (C8614) this.f19134;
+        c14406.m34838();
+        AbstractC22044 abstractC22044M34845 = c14407.m34845();
+        AbstractC22044 abstractC22044M34846 = c14406.m34845();
+        boolean zM23195 = c12915.m31983().m23195();
+        if (abstractC22044M34845.getName().equals(abstractC22044M34846.getName())) {
+            int i = R.string.MT_Protector;
+            name = C21576.m49059(zM23195 ? R.string.MT_Protector : R.string.MT_Protector, abstractC22044M34845.getName());
+            if (!zM23195) {
+                i = R.string.MT_Protector;
             }
-            try {
-                c15380A = C18201.a(str);
-            } catch (C21729 e) {
-                if (z) {
-                    throw e;
-                }
-                c15380A = null;
-            }
-            return new C5501(str, c15380A);
+            name2 = C21576.m49059(i, abstractC22044M34846.getName());
+        } else {
+            name = abstractC22044M34845.getName();
+            name2 = abstractC22044M34846.getName();
         }
-        throw new C15464("Invalid ID for region-based ZoneId, invalid format: ".concat(str));
+        C9170 c9170 = new C9170(c14407.m34845(), c14406.m34845(), name, name2, c12915.m31987(), c8614.m23213());
+        if (!zM23195) {
+            c9170.m24304();
+        }
+        C16879.m39842(c9170, c12915.m31983());
     }
 
-    public C5501(String str, C15380 c15380) {
-        this.b = str;
-        this.c = c15380;
-    }
-
-    @Override // l.AbstractC9114
-    public final String k() {
-        return this.b;
-    }
-
-    @Override // l.AbstractC9114
-    public final C15380 W() {
-        C15380 c15380 = this.c;
-        return c15380 != null ? c15380 : C18201.a(this.b);
-    }
-
-    private Object writeReplace() {
-        return new C3944((byte) 7, this);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Deserialization via serialization delegate");
-    }
-
-    @Override // l.AbstractC9114
-    public final void a0(DataOutput dataOutput) throws IOException {
-        dataOutput.writeByte(7);
-        dataOutput.writeUTF(this.b);
+    @Override // l.InterfaceC5392
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1772(AbstractC22044 abstractC22044) {
+        InterfaceC2386 interfaceC2386 = (InterfaceC2386) this.f19133;
+        C20312 c20312 = (C20312) this.f19135;
+        InterfaceC16648 interfaceC16648 = (InterfaceC16648) this.f19134;
+        C20065.m46116(interfaceC2386, OpenAuthTask.Duplex);
+        c20312.m46658(interfaceC16648, abstractC22044, false);
     }
 }

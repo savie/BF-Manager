@@ -1,30 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡֫ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U7MS */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0096 {
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long f1023;
+/* JADX INFO: renamed from: l.֡֫ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0096 extends AbstractC12028 implements Iterator, Enumeration {
+    public final /* synthetic */ int k;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f1024;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public /* synthetic */ C0096(C9790[] c9790Arr, int i, int i2, ConcurrentMapC17249 concurrentMapC17249, int i3) {
+        super(c9790Arr, i, i2, concurrentMapC17249);
+        this.k = i3;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f1025;
+    @Override // java.util.Iterator
+    public final Object next() {
+        switch (this.k) {
+            case 0:
+                C9790 c9790 = this.b;
+                if (c9790 == null) {
+                    throw new NoSuchElementException();
+                }
+                Object obj = c9790.b;
+                this.j = c9790;
+                a();
+                return obj;
+            default:
+                C9790 c9791 = this.b;
+                if (c9791 == null) {
+                    throw new NoSuchElementException();
+                }
+                Object obj2 = c9791.c;
+                this.j = c9791;
+                a();
+                return obj2;
+        }
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f1026;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f1027;
-
-    public C0096(long j, boolean z, long j2, long j3, boolean z2) {
-        this.f1025 = j;
-        this.f1027 = z;
-        this.f1026 = j2;
-        this.f1023 = j3;
-        this.f1024 = z2;
+    @Override // java.util.Enumeration
+    public final Object nextElement() {
+        switch (this.k) {
+            case 0:
+                break;
+        }
+        return next();
     }
 }

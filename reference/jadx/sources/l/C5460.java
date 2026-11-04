@@ -1,32 +1,21 @@
 package l;
 
-import java.nio.file.WatchEvent;
+import java.io.PrintStream;
 
-/* JADX INFO: renamed from: l.ۚܺᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۚۛܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: FBDT */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C5460 implements WatchEvent.Kind {
-    public final /* synthetic */ InterfaceC18618 a;
+public final class C5460 {
 
-    public final /* synthetic */ boolean equals(Object obj) {
-        InterfaceC18618 interfaceC18618 = this.a;
-        if (obj instanceof C5460) {
-            obj = ((C5460) obj).a;
-        }
-        return interfaceC18618.equals(obj);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3222 f19057;
 
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // java.nio.file.WatchEvent.Kind
-    public final /* synthetic */ String name() {
-        return this.a.name();
-    }
-
-    @Override // java.nio.file.WatchEvent.Kind
-    public final /* synthetic */ Class type() {
-        return this.a.type();
+    public C5460() {
+        PrintStream printStream = System.out;
+        PrintStream printStream2 = System.err;
+        this.f19057 = new C3222();
+        new PrintStream(new C12917());
+        new PrintStream(printStream);
+        new PrintStream(printStream2);
     }
 }

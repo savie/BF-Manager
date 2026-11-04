@@ -6,7 +6,7 @@
 # static fields
 .field public static ۙ:Ljavax/xml/parsers/DocumentBuilderFactory;
 
-.field public static ܰ:Lcom/amazonaws/logging/Log;
+.field public static ᩷:Lcom/amazonaws/logging/Log;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/util/XpathUtils;->ܰ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/util/XpathUtils;->᩷:Lcom/amazonaws/logging/Log;
 
     .line 48
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;

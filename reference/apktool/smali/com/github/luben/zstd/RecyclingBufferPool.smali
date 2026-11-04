@@ -133,7 +133,7 @@
     const-string v4, "Unsupported buffer size: "
 
     .line 0
-    invoke-static {v4, p1, v2, v3, v0}, Ll/۠ۜ᩵;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, p1, v2, v3, v0}, Ll/֡᩷᩸;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 

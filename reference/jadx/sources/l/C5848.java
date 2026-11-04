@@ -1,83 +1,79 @@
 package l;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.function.Consumer;
-import java.util.function.DoubleConsumer;
+import android.content.Context;
+import android.os.Bundle;
+import android.util.AttributeSet;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۛۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۚᩴۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z11M */
 /* JADX INFO: loaded from: classes3.dex */
-public class C5848 extends AbstractC21502 implements DoubleConsumer {
-    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
-        return AbstractC14884.a(this, doubleConsumer);
+public class C5848 extends AbstractC11813 {
+
+    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
+    public C20956 f20077;
+
+    /* JADX INFO: renamed from: ۢۙ, reason: not valid java name and contains not printable characters */
+    public AbstractDialogInterfaceOnClickListenerC8552 f20078;
+
+    public C5848(Context context) {
+        super(context);
+        m17035();
     }
 
-    @Override // l.AbstractC21502
-    public final Object[] t() {
-        return new double[8][];
+    public C5848(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        m17035();
     }
 
-    @Override // l.AbstractC21502
-    public final void p(Object obj, int i, int i2, Object obj2) {
-        double[] dArr = (double[]) obj;
-        DoubleConsumer doubleConsumer = (DoubleConsumer) obj2;
-        while (i < i2) {
-            doubleConsumer.accept(dArr[i]);
-            i++;
+    public C5848(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        m17035();
+    }
+
+    public C5848(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+        m17035();
+    }
+
+    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
+    private void m17035() {
+        AbstractActivityC17204 abstractActivityC17204 = (AbstractActivityC17204) C3200.m10534(m12560());
+        if (abstractActivityC17204 != null) {
+            this.f20077 = ViewOnClickListenerC11499.m28899(abstractActivityC17204, new C0249(3, this));
         }
     }
 
-    @Override // l.AbstractC21502
-    public final int q(Object obj) {
-        return ((double[]) obj).length;
-    }
-
-    @Override // java.lang.Iterable, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        if (consumer instanceof DoubleConsumer) {
-            g((DoubleConsumer) consumer);
-        } else {
-            if (AbstractC14233.a) {
-                AbstractC14233.a(getClass(), "{0} calling SpinedBuffer.OfDouble.forEach(Consumer)");
-                throw null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m17034(C5848 c5848, String str) {
+        if (c5848.f20078 != null) {
+            if (str.length() > 1 && str.endsWith("/")) {
+                str = C1402.m5124(1, 0, str);
             }
-            AbstractC14884.b((C19254) spliterator(), consumer);
+            c5848.f20078.m22924((CharSequence) str);
+            c5848.f20078.m22916();
         }
     }
 
-    @Override // l.AbstractC21502
-    public final Object newArray(int i) {
-        return new double[i];
-    }
-
-    @Override // java.util.function.DoubleConsumer
-    public void accept(double d) {
-        u();
-        double[] dArr = (double[]) this.e;
-        int i = this.b;
-        this.b = i + 1;
-        dArr[i] = d;
-    }
-
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        InterfaceC7535 interfaceC7535Spliterator = spliterator();
-        C13638.requireNonNull(interfaceC7535Spliterator);
-        return new C12227(interfaceC7535Spliterator);
-    }
-
-    @Override // l.AbstractC21502, java.lang.Iterable, l.InterfaceC16585, l.InterfaceC10441, java.util.Set, l.InterfaceC22810
-    /* JADX INFO: renamed from: v, reason: merged with bridge method [inline-methods] */
-    public InterfaceC7535 spliterator() {
-        return new C19254(this, 0, this.c, 0, this.b);
-    }
-
-    public final String toString() {
-        double[] dArr = (double[]) b();
-        if (dArr.length < 200) {
-            return String.format("%s[length=%d, chunks=%d]%s", getClass().getSimpleName(), Integer.valueOf(dArr.length), Integer.valueOf(this.c), Arrays.toString(dArr));
+    @Override // l.AbstractC11813
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        C13305 c13305 = new C13305(this, abstractActivityC17204);
+        c13305.m22953((CharSequence) m12578().toString());
+        c13305.m22942(1000);
+        c13305.m22924((CharSequence) m29658().getString(m12557(), "/sdcard/MT2"));
+        c13305.m22957(6);
+        c13305.m22918();
+        c13305.m22916();
+        this.f20078 = c13305;
+        if (this.f20077 != null) {
+            c13305.m22926(new ViewOnClickListenerC16971(3, this));
         }
-        return String.format("%s[length=%d, chunks=%d]%s...", getClass().getSimpleName(), Integer.valueOf(dArr.length), Integer.valueOf(this.c), Arrays.toString(Arrays.copyOf(dArr, 200)));
+        this.f20078.m22955(true);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m17033(C5848 c5848) {
+        c5848.f20077.m37643(0, R.string.MT_Protector, c5848.f20078.m22914(), (String) null, (String[]) null, (Bundle) null);
     }
 }

@@ -1,20 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۜ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: D26X */
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.ۤۧ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 770P */
 /* JADX INFO: loaded from: classes4.dex */
-public final enum C10828 extends EnumC23528 {
-    public /* synthetic */ C10828() {
-        this("DEFAULT", 3);
+public final /* synthetic */ class C10828 implements BiFunction {
+    public /* synthetic */ BiFunction andThen(Function function) {
+        return C3363.$default$andThen(this, function);
     }
 
-    @Override // l.EnumC23528
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean mo27147(EnumC14128 enumC14128) {
-        return true;
-    }
-
-    public C10828(String str, int i) {
-        super(str, i, 0);
+    @Override // java.util.function.BiFunction
+    public final Object apply(Object obj, Object obj2) {
+        return Integer.valueOf(((Integer) obj2).intValue() + ((Integer) obj).intValue());
     }
 }

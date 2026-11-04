@@ -1,19 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۚ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 56MU */
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.֡ۚ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D1K5 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0214 extends AbstractC13723 {
+public final class C0214 implements InterfaceC15610 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean f1390;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7672 f1418;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String f1391;
+    public C0214(C7672 c7672) {
+        this.f1418 = c7672;
+    }
 
-    public C0214(String str, String str2, boolean z) {
-        this.f1391 = str;
-        this.f1390 = z;
-        m44388(new C17250(str2));
+    @Override // l.InterfaceC15610
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo1659(int i) {
+        C7672 c7672 = this.f1418;
+        if (i == -1) {
+            c7672.m43859(R.string.MT_Protector);
+        } else {
+            c7672.m45194(i);
+        }
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f1418.mo924();
     }
 }

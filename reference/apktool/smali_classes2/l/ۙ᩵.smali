@@ -1,48 +1,20 @@
-.class public final Ll/ۙ᩵;
+.class public abstract Ll/ۙ᩵;
 .super Ljava/lang/Object;
 .source "W9N5"
 
 
-# static fields
-.field public static final ۨ:Ll/ۙ᩵;
-
-
-# instance fields
-.field public volatile ۙ:Ll/ۙ᩵;
-
-.field public volatile ܰ:Ljava/lang/Thread;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 121
-    new-instance v0, Ll/ۙ᩵;
-
-    .line 132
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 121
-    sput-object v0, Ll/ۙ᩵;->ۨ:Ll/ۙ᩵;
-
-    return-void
+# virtual methods
+.method public abstract ۙ(Ll/ۚ᩵;Ljava/lang/Thread;)V
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public abstract ۙ(Ll/ۚ᩵;Ll/ۚ᩵;)V
+.end method
 
-    .line 135
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract ۙ(Ll/֫᩵;Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
 
-    .line 137
-    sget-object v0, Ll/ܰ᩵;->ܽ:Ll/ۛ۠;
+.method public abstract ۙ(Ll/֫᩵;Ll/ۚ᩵;Ll/ۚ᩵;)Z
+.end method
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p0, v1}, Ll/ۛ۠;->ۙ(Ll/ۙ᩵;Ljava/lang/Thread;)V
-
-    return-void
+.method public abstract ۙ(Ll/֫᩵;Ll/᩸᩵;Ll/᩸᩵;)Z
 .end method

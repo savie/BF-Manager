@@ -1,72 +1,37 @@
 package l;
 
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.ᩳ۬۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87AO */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18073 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final ArrayList f57794;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f57795;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String f57796;
+/* JADX INFO: renamed from: l.ܿۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18073 extends AbstractC17567 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f57797;
+    public final /* synthetic */ C0174 f59156;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f57798;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Class f59157;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final String f57799;
+    public C18073(C0174 c0174, Class cls) {
+        this.f59156 = c0174;
+        this.f59157 = cls;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f57800;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) {
+        this.f59156.f1247.mo3723(c21362, obj);
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String f57801;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f57802;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final C7263 f57803;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final long f57804;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final String f57805;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean f57806;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f57807;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final ArrayList f57808;
-
-    public C18073(String str, String str2, String str3, String str4, String str5, long j, boolean z, ArrayList arrayList, C7263 c7263, ArrayList arrayList2, int i, int i2, ArrayList arrayList3, ArrayList arrayList4, ArrayList arrayList5) {
-        this.f57805 = str;
-        this.f57801 = str2;
-        this.f57799 = str3;
-        this.f57796 = str4;
-        this.f57802 = str5;
-        this.f57804 = j;
-        this.f57806 = z;
-        this.f57808 = arrayList;
-        this.f57803 = c7263;
-        this.f57795 = arrayList2;
-        this.f57800 = i;
-        this.f57807 = i2;
-        this.f57797 = arrayList3;
-        this.f57798 = arrayList4;
-        this.f57794 = arrayList5;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) {
+        Object objMo3722 = this.f59156.f1247.mo3722(c4208);
+        if (objMo3722 != null) {
+            Class cls = this.f59157;
+            if (!cls.isInstance(objMo3722)) {
+                throw new C7367("Expected a " + cls.getName() + " but was " + objMo3722.getClass().getName() + "; at path " + c4208.m13451());
+            }
+        }
+        return objMo3722;
     }
 }

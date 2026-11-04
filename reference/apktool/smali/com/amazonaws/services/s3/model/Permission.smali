@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static final synthetic ֡:[Lcom/amazonaws/services/s3/model/Permission;
+.field public static final enum ֡:Lcom/amazonaws/services/s3/model/Permission;
 
-.field public static final enum ۛ:Lcom/amazonaws/services/s3/model/Permission;
+.field public static final enum ֨:Lcom/amazonaws/services/s3/model/Permission;
 
-.field public static final enum ۧ:Lcom/amazonaws/services/s3/model/Permission;
+.field public static final enum ۟:Lcom/amazonaws/services/s3/model/Permission;
 
-.field public static final enum ۫:Lcom/amazonaws/services/s3/model/Permission;
+.field public static final enum ۢ:Lcom/amazonaws/services/s3/model/Permission;
 
-.field public static final enum ܽ:Lcom/amazonaws/services/s3/model/Permission;
+.field public static final synthetic ܿ:[Lcom/amazonaws/services/s3/model/Permission;
 
-.field public static final enum ܿ:Lcom/amazonaws/services/s3/model/Permission;
+.field public static final enum ᩳ:Lcom/amazonaws/services/s3/model/Permission;
 
 
 # instance fields
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, v3, v4, v1, v2}, Lcom/amazonaws/services/s3/model/Permission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/services/s3/model/Permission;->ܽ:Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v0, Lcom/amazonaws/services/s3/model/Permission;->֡:Lcom/amazonaws/services/s3/model/Permission;
 
     .line 38
     new-instance v1, Lcom/amazonaws/services/s3/model/Permission;
@@ -55,7 +55,7 @@
 
     invoke-direct {v1, v5, v6, v2, v3}, Lcom/amazonaws/services/s3/model/Permission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    sput-object v1, Lcom/amazonaws/services/s3/model/Permission;->۫:Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v1, Lcom/amazonaws/services/s3/model/Permission;->۟:Lcom/amazonaws/services/s3/model/Permission;
 
     .line 47
     new-instance v2, Lcom/amazonaws/services/s3/model/Permission;
@@ -70,7 +70,7 @@
 
     invoke-direct {v2, v7, v8, v3, v5}, Lcom/amazonaws/services/s3/model/Permission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    sput-object v2, Lcom/amazonaws/services/s3/model/Permission;->ۛ:Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v2, Lcom/amazonaws/services/s3/model/Permission;->ۢ:Lcom/amazonaws/services/s3/model/Permission;
 
     .line 55
     new-instance v3, Lcom/amazonaws/services/s3/model/Permission;
@@ -85,7 +85,7 @@
 
     invoke-direct {v3, v9, v10, v5, v7}, Lcom/amazonaws/services/s3/model/Permission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    sput-object v3, Lcom/amazonaws/services/s3/model/Permission;->ܿ:Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v3, Lcom/amazonaws/services/s3/model/Permission;->ᩳ:Lcom/amazonaws/services/s3/model/Permission;
 
     .line 69
     new-instance v5, Lcom/amazonaws/services/s3/model/Permission;
@@ -100,7 +100,7 @@
 
     invoke-direct {v5, v11, v12, v7, v9}, Lcom/amazonaws/services/s3/model/Permission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    sput-object v5, Lcom/amazonaws/services/s3/model/Permission;->ۧ:Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v5, Lcom/amazonaws/services/s3/model/Permission;->֨:Lcom/amazonaws/services/s3/model/Permission;
 
     const/4 v7, 0x5
 
@@ -117,7 +117,7 @@
     aput-object v5, v7, v12
 
     .line 23
-    sput-object v7, Lcom/amazonaws/services/s3/model/Permission;->֡:[Lcom/amazonaws/services/s3/model/Permission;
+    sput-object v7, Lcom/amazonaws/services/s3/model/Permission;->ܿ:[Lcom/amazonaws/services/s3/model/Permission;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     iput-object p3, p0, Lcom/amazonaws/services/s3/model/Permission;->᩶:Ljava/lang/String;
 
     .line 76
-    iput-object p4, p0, Lcom/amazonaws/services/s3/model/Permission;->ܺ:Ljava/lang/String;
+    iput-object p4, p0, Lcom/amazonaws/services/s3/model/Permission;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     .locals 1
 
     .line 23
-    sget-object v0, Lcom/amazonaws/services/s3/model/Permission;->֡:[Lcom/amazonaws/services/s3/model/Permission;
+    sget-object v0, Lcom/amazonaws/services/s3/model/Permission;->ܿ:[Lcom/amazonaws/services/s3/model/Permission;
 
     invoke-virtual {v0}, [Lcom/amazonaws/services/s3/model/Permission;->clone()Ljava/lang/Object;
 
@@ -221,7 +221,7 @@
     .locals 1
 
     .line 83
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/Permission;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/Permission;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

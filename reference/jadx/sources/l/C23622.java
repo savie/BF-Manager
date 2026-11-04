@@ -1,45 +1,84 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۢ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: V9HU */
+import java.util.NoSuchElementException;
+
+/* JADX INFO: renamed from: l.᩹ܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 75HT */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23622 extends AbstractC1748 {
+public final class C23622 extends AbstractC20638 {
+    public static final long serialVersionUID = 0;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final C23622 f76665 = new C23622("");
+
     public final String toString() {
-        return "big endian";
+        return "-∞";
     }
 
-    @Override // l.AbstractC1748
+    @Override // l.AbstractC20638
     /* JADX INFO: renamed from: ۙ */
-    public final long mo5790(C10922 c10922) throws C17271 {
-        c10922.getClass();
-        byte[] bArr = new byte[8];
-        c10922.m27397(8, bArr);
-        long j = 0;
-        for (int i = 0; i < 8; i++) {
-            j = (j << 8) | ((long) (bArr[i] & 255));
+    public final int compareTo(AbstractC20638 abstractC20638) {
+        return abstractC20638 == this ? 0 : -1;
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo11449(Comparable comparable) {
+        return true;
+    }
+
+    @Override // l.AbstractC20638, java.lang.Comparable
+    public final int compareTo(Object obj) {
+        return ((AbstractC20638) obj) == this ? 0 : -1;
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ۙ */
+    public final Comparable mo41314() {
+        throw new IllegalStateException("range unbounded on this side");
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩸ */
+    public final EnumC3616 mo11452() {
+        throw new IllegalStateException();
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩴ */
+    public final EnumC3616 mo11450() {
+        throw new AssertionError("this statement should be unreachable");
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo11448(StringBuilder sb) {
+        sb.append("(-∞");
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo11451(StringBuilder sb) {
+        throw new AssertionError();
+    }
+
+    @Override // l.AbstractC20638
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC20638 mo38339(AbstractC6468 abstractC6468) {
+        try {
+            abstractC6468.getClass();
+            return new C3484(Integer.MIN_VALUE);
+        } catch (NoSuchElementException unused) {
+            return this;
         }
-        return j;
     }
 
-    @Override // l.AbstractC1748
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5792(C10922 c10922, String str) {
-        byte[] bytes = str.getBytes(C7393.f24573);
-        c10922.getClass();
-        c10922.m27383(bytes.length, bytes);
+    @Override // l.AbstractC20638
+    public final int hashCode() {
+        return System.identityHashCode(this);
     }
 
-    @Override // l.AbstractC1748
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo5794(C10922 c10922) throws C17271 {
-        byte[] bArr = new byte[4];
-        c10922.m27397(4, bArr);
-        return (((long) bArr[3]) & 255) | (((long) (bArr[0] << 24)) & 4278190080L) | (((long) (bArr[1] << 16)) & 16711680) | (((long) (bArr[2] << 8)) & 65280);
-    }
-
-    @Override // l.AbstractC1748
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5791(C10922 c10922, long j) {
-        c10922.m27383(8, new byte[]{(byte) (j >> 56), (byte) (j >> 48), (byte) (j >> 40), (byte) (j >> 32), (byte) (j >> 24), (byte) (j >> 16), (byte) (j >> 8), (byte) j});
+    private Object readResolve() {
+        return f76665;
     }
 }

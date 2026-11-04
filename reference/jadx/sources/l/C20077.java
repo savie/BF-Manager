@@ -1,85 +1,38 @@
 package l;
 
-import android.view.View;
-import android.view.Window;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-/* JADX INFO: renamed from: l.᩶ۢ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XAMH */
+/* JADX INFO: renamed from: l.ᩴ᩷֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5ZN */
 /* JADX INFO: loaded from: classes5.dex */
-public class C20077 extends C17254 {
+public final class C20077 implements SeekBar.OnSeekBarChangeListener {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21631 f65221;
+    public final /* synthetic */ TextView f64538;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Window f65222;
-
-    public C20077(Window window, C21631 c21631) {
-        this.f65222 = window;
-        this.f65221 = c21631;
+    public C20077(TextView textView) {
+        this.f64538 = textView;
     }
 
-    @Override // l.C17254
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo30576(int i) {
-        for (int i2 = 1; i2 <= 256; i2 <<= 1) {
-            if ((i & i2) != 0) {
-                if (i2 == 1) {
-                    m45448(4);
-                    this.f65222.clearFlags(1024);
-                } else if (i2 == 2) {
-                    m45448(2);
-                } else if (i2 == 8) {
-                    this.f65221.m48346();
-                }
-            }
+    @Override // android.widget.SeekBar.OnSeekBarChangeListener
+    public final void onProgressChanged(SeekBar seekBar, int i, boolean z) {
+        this.f64538.setText(C3669.m11953(C3669.m11925(i * 50)));
+    }
+
+    @Override // android.widget.SeekBar.OnSeekBarChangeListener
+    public final void onStartTrackingTouch(SeekBar seekBar) {
+        if (C3669.f12617 != null) {
+            C3669.f12617.f77122 = true;
         }
     }
 
-    @Override // l.C17254
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo30574(int i) {
-        for (int i2 = 1; i2 <= 256; i2 <<= 1) {
-            if ((i & i2) != 0) {
-                if (i2 == 1) {
-                    m45447(4);
-                } else if (i2 == 2) {
-                    m45447(2);
-                } else if (i2 == 8) {
-                    this.f65221.m48345();
-                }
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m45447(int i) {
-        View decorView = this.f65222.getDecorView();
-        decorView.setSystemUiVisibility(i | decorView.getSystemUiVisibility());
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m45448(int i) {
-        View decorView = this.f65222.getDecorView();
-        decorView.setSystemUiVisibility((~i) & decorView.getSystemUiVisibility());
-    }
-
-    @Override // l.C17254
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo30577(int i) {
-        if (i == 0) {
-            m45448(6144);
-            return;
-        }
-        if (i == 1) {
-            m45448(4096);
-            m45447(2048);
-        } else {
-            if (i != 2) {
-                return;
-            }
-            m45448(2048);
-            m45447(4096);
+    @Override // android.widget.SeekBar.OnSeekBarChangeListener
+    public final void onStopTrackingTouch(SeekBar seekBar) {
+        int progress = seekBar.getProgress() * 50;
+        this.f64538.setText(C3669.m11953(C3669.m11925(progress)));
+        if (C3669.f12617 != null) {
+            C3669.f12617.m53125(progress);
         }
     }
 }

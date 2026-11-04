@@ -3,7 +3,7 @@ package org.bouncycastle.pqc.jcajce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
-import l.C16523;
+import l.C14442;
 import org.bouncycastle.pqc.crypto.lms.LMOtsParameters;
 import org.bouncycastle.pqc.crypto.lms.LMSigParameters;
 
@@ -61,12 +61,12 @@ public class LMSKeyGenParameterSpec implements AlgorithmParameterSpec {
     public static LMSKeyGenParameterSpec fromNames(String str, String str2) {
         Map map = sigParameters;
         if (!map.containsKey(str)) {
-            throw new IllegalArgumentException(C16523.m38890("LM signature parameter name ", str, " not recognized"));
+            throw new IllegalArgumentException(C14442.m34865("LM signature parameter name ", str, " not recognized"));
         }
         Map map2 = otsParameters;
         if (map2.containsKey(str2)) {
             return new LMSKeyGenParameterSpec((LMSigParameters) map.get(str), (LMOtsParameters) map2.get(str2));
         }
-        throw new IllegalArgumentException(C16523.m38890("LM OTS parameter name ", str2, " not recognized"));
+        throw new IllegalArgumentException(C14442.m34865("LM OTS parameter name ", str2, " not recognized"));
     }
 }

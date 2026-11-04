@@ -1,55 +1,20 @@
-.class public final synthetic Ll/ۛᩴۨ;
+.class public interface abstract Ll/ۛᩴۨ;
 .super Ljava/lang/Object;
-.source "G7I1"
+.source "Z4CU"
 
 # interfaces
-.implements Ll/ܰۡۨ;
+.implements Ljava/lang/Cloneable;
 
 
 # virtual methods
-.method public final negate()Ll/ۗ۠ۨ;
-    .locals 1
-
-    .line 2395
-    sget-object v0, Ll/᩹۟ۨ;->ܰ:Ll/᩻ۡۨ;
-
-    .line 2374
-    invoke-static {p0}, Ll/ۗ۠ۨ;->ۨ(Ll/ܰۡۨ;)Ll/ۗ۠ۨ;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract cancel()V
 .end method
 
-.method public final synthetic ۙ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ۙ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract execute()Ll/ۡܳۨ;
 .end method
 
-.method public final ۙ(I)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p1}, Ljava/lang/Character;->isIdentifierIgnorable(I)Z
-
-    move-result p1
-
-    return p1
+.method public abstract ۙ(Ll/᩺ᩴۨ;)V
 .end method
 
-.method public final synthetic ܰ(Ll/ܰۡۨ;)Ll/ܰۡۨ;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۙۡۨ;->ܰ(Ll/ܰۡۨ;Ll/ܰۡۨ;)Ll/ܰۡۨ;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract ۫()Z
 .end method

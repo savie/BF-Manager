@@ -1,59 +1,85 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩸۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: O9YQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8442 implements InterfaceC7778 {
+/* JADX INFO: renamed from: l.۠ۛܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0BC1 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8442 extends AbstractC4493 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C19025[] f29298;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C20901[] f27610;
 
-    @Override // l.InterfaceC7778
+    @Override // l.AbstractC18884
     /* JADX INFO: renamed from: ۙ */
-    public final int mo1805(int i, int i2, byte[] bArr) throws C2796 {
-        C4850.m13545(i + 2, bArr);
-        int iM13549 = C4850.m13549(i + 4, bArr);
-        int iM135410 = C4850.m13549(i + 8, bArr);
-        C4850.m13549(i + 12, bArr);
-        int iM135411 = C4850.m13549(i + 16, bArr);
-        if (iM13549 > 0) {
-            new C8775(bArr, iM13549 + i);
-        }
-        if (iM135410 > 0) {
-            new C8775(bArr, iM135410 + i);
-        }
-        int iMo1805 = i + iM135411;
-        if (iM135411 > 0) {
-            C4850.m13545(iMo1805 + 2, bArr);
-            int iM135412 = C4850.m13549(iMo1805 + 4, bArr);
-            iMo1805 += 8;
-            if (iM135412 > 4096) {
-                throw new C2796("Invalid SecurityDescriptor");
-            }
-            this.f29298 = new C19025[iM135412];
-            for (int i3 = 0; i3 < iM135412; i3++) {
-                C19025[] c19025Arr = this.f29298;
-                C19025 c19025 = new C19025();
-                c19025Arr[i3] = c19025;
-                iMo1805 += c19025.mo1805(iMo1805, i2 - iMo1805, bArr);
-            }
-        } else {
-            this.f29298 = null;
-        }
-        return iMo1805 - i;
+    public final String mo18812() {
+        return null;
     }
 
-    public final String toString() {
-        if (this.f29298 == null) {
-            return "SecurityDescriptor:\nNULL";
+    public C8442(C9012 c9012, C0063 c0063) {
+        super(c9012, c0063);
+        if (c0063.size() == 0) {
+            throw new IllegalArgumentException("registers.size() == 0");
         }
-        String string = "SecurityDescriptor:\n";
-        for (int i = 0; i < this.f29298.length; i++) {
-            StringBuilder sbM23356 = C9023.m23356(string);
-            sbM23356.append(this.f29298[i].toString());
-            sbM23356.append("\n");
-            string = sbM23356.toString();
+        this.f27610 = null;
+    }
+
+    @Override // l.AbstractC18884
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo8331() {
+        m22630();
+        int iMo8331 = 0;
+        for (C20901 c20901 : this.f27610) {
+            iMo8331 += c20901.mo8331();
         }
-        return string;
+        return iMo8331;
+    }
+
+    @Override // l.AbstractC18884
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8329(C15000 c15000) {
+        m22630();
+        for (C20901 c20901 : this.f27610) {
+            c20901.mo8329(c15000);
+        }
+    }
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    private void m22630() {
+        if (this.f27610 != null) {
+            return;
+        }
+        C0063 c0063M43795 = m43795();
+        int size = c0063M43795.size();
+        this.f27610 = new C20901[size];
+        int iM47901 = 0;
+        for (int i = 0; i < size; i++) {
+            C20946 c20946M31619get = c0063M43795.m31619get(i);
+            this.f27610[i] = AbstractC18884.m43794(C9012.f29360, C20946.m47883(iM47901, c20946M31619get.getType()), c20946M31619get);
+            iM47901 += c20946M31619get.m47901();
+        }
+    }
+
+    @Override // l.AbstractC18884
+    /* JADX INFO: renamed from: ۙ */
+    public final AbstractC18884 mo18813(C0063 c0063) {
+        return new C8442(m43799(), c0063);
+    }
+
+    @Override // l.AbstractC18884
+    /* JADX INFO: renamed from: ܺ */
+    public final String mo8330() {
+        C0063 c0063M43795 = m43795();
+        int size = c0063M43795.size();
+        StringBuilder sb = new StringBuilder(100);
+        int iM47901 = 0;
+        for (int i = 0; i < size; i++) {
+            C20946 c20946M31619get = c0063M43795.m31619get(i);
+            C20901 c20901M43794 = AbstractC18884.m43794(C9012.f29360, C20946.m47883(iM47901, c20946M31619get.getType()), c20946M31619get);
+            if (i != 0) {
+                sb.append('\n');
+            }
+            sb.append(c20901M43794.mo8330());
+            iM47901 += c20946M31619get.m47901();
+        }
+        return sb.toString();
     }
 }

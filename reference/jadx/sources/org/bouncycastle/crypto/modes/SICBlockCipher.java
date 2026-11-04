@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes;
 
-import l.C12441;
+import l.C12669;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
@@ -293,7 +293,7 @@ public class SICBlockCipher extends StreamBlockCipher implements CTRModeCipher {
         this.IV = bArrClone;
         int i = this.blockSize;
         if (i < bArrClone.length) {
-            throw new IllegalArgumentException(C12441.m30911(this.blockSize, " bytes.", new StringBuilder("CTR/SIC mode requires IV no greater than: ")));
+            throw new IllegalArgumentException(C12669.m31437(this.blockSize, " bytes.", new StringBuilder("CTR/SIC mode requires IV no greater than: ")));
         }
         int i2 = 8 > i / 2 ? i / 2 : 8;
         if (i - bArrClone.length <= i2) {

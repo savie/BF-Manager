@@ -6,7 +6,7 @@ import java.security.KeyPair;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.ECGenParameterSpec;
-import l.C11996;
+import l.C12351;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -24,7 +24,7 @@ import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 import org.bouncycastle.jcajce.spec.XDHParameterSpec;
 import org.bouncycastle.jce.spec.ECNamedCurveGenParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends java.security.KeyPairGeneratorSpi {
     public static final int Ed25519 = 1;
     public static final int Ed448 = 2;
@@ -205,7 +205,7 @@ public class KeyPairGeneratorSpi extends java.security.KeyPairGeneratorSpi {
     public void initialize(AlgorithmParameterSpec algorithmParameterSpec, SecureRandom secureRandom) throws InvalidAlgorithmParameterException {
         String nameFromParams = getNameFromParams(algorithmParameterSpec);
         if (nameFromParams == null) {
-            throw new InvalidAlgorithmParameterException(C11996.m29881("invalid parameterSpec: ", algorithmParameterSpec));
+            throw new InvalidAlgorithmParameterException(C12351.m30818("invalid parameterSpec: ", algorithmParameterSpec));
         }
         int algorithmForName = getAlgorithmForName(nameFromParams);
         int i = this.algorithmDeclared;

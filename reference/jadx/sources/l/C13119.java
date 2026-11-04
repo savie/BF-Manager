@@ -1,102 +1,54 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬۫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F4XQ */
-/* JADX INFO: loaded from: classes3.dex */
+import java.util.ArrayList;
+
+/* JADX INFO: renamed from: l.۫۫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 690O */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13119 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int[] f43693;
+    public ArrayList f41924;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f43694;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f41925;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f43695;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f41926;
 
-    public C13119() {
-        this(10);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C4170 f41927;
 
-    public C13119(int i) {
-        this.f43693 = new int[i];
-        this.f43694 = new int[i];
-        this.f43695 = 0;
+    public C13119(C4170 c4170) {
+        this.f41927 = c4170;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m32474(int i, int i2) {
-        int[] iArr = this.f43693;
-        int i3 = this.f43695;
-        int i4 = -1;
-        int i5 = i3;
-        while (i5 - i4 > 1) {
-            int i6 = (i5 + i4) / 2;
-            if (iArr[i6] < i) {
-                i4 = i6;
-            } else {
-                i5 = i6;
+    public final void m32597() {
+        this.f41924 = null;
+        this.f41926 = false;
+        this.f41925 = 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m32594(C13119 c13119, InterfaceC20029 interfaceC20029, AbstractC24451 abstractC24451) {
+        int length = interfaceC20029.length();
+        interfaceC20029.mo7364(abstractC24451);
+        if (c13119.f41924 != null) {
+            C20775 c20775Builder = interfaceC20029.builder();
+            int length2 = c20775Builder.length();
+            boolean z = length2 > 0 && '\n' != c20775Builder.charAt(length2 - 1);
+            if (z) {
+                interfaceC20029.mo7365();
             }
+            c20775Builder.append((char) 160);
+            C16102 c16102 = new C16102(c13119.f41927, c13119.f41924, c13119.f41926, c13119.f41925 % 2 == 1);
+            c13119.f41925 = c13119.f41926 ? 0 : c13119.f41925 + 1;
+            if (z) {
+                length++;
+            }
+            interfaceC20029.mo7335(length, c16102);
+            c13119.f41924 = null;
         }
-        if (i5 == i3) {
-            i5 = ~i3;
-        } else if (iArr[i5] != i) {
-            i5 = ~i5;
-        }
-        if (i5 >= 0) {
-            this.f43694[i5] = i2;
-            return;
-        }
-        int i7 = ~i5;
-        int i8 = this.f43695;
-        int[] iArr2 = this.f43693;
-        if (i8 >= iArr2.length) {
-            int iMax = Math.max(i8 + 1, iArr2.length * 2);
-            int[] iArr3 = new int[iMax];
-            int[] iArr4 = new int[iMax];
-            int[] iArr5 = this.f43693;
-            System.arraycopy(iArr5, 0, iArr3, 0, iArr5.length);
-            int[] iArr6 = this.f43694;
-            System.arraycopy(iArr6, 0, iArr4, 0, iArr6.length);
-            this.f43693 = iArr3;
-            this.f43694 = iArr4;
-        }
-        int i9 = this.f43695;
-        if (i9 - i7 != 0) {
-            int[] iArr7 = this.f43693;
-            int i10 = i7 + 1;
-            System.arraycopy(iArr7, i7, iArr7, i10, i9 - i7);
-            int[] iArr8 = this.f43694;
-            System.arraycopy(iArr8, i7, iArr8, i10, this.f43695 - i7);
-        }
-        this.f43693[i7] = i;
-        this.f43694[i7] = i2;
-        this.f43695++;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] m32476() {
-        int i = this.f43695;
-        int[] iArr = new int[i];
-        System.arraycopy(this.f43693, 0, iArr, 0, i);
-        return iArr;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int[] m32472() {
-        int i = this.f43695;
-        int[] iArr = new int[i];
-        System.arraycopy(this.f43694, 0, iArr, 0, i);
-        return iArr;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m32475() {
-        return this.f43695;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m32473() {
-        return this.f43693[0];
     }
 }

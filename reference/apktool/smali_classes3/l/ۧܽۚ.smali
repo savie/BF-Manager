@@ -1,65 +1,74 @@
 .class public final Ll/ۧܽۚ;
 .super Ljava/lang/Object;
-.source "J14D"
+.source "26KG"
 
 
-# static fields
-.field public static final ۖ:F
+# instance fields
+.field public final ֫:Ljava/util/HashSet;
 
-.field public static final ۙ:F
+.field public final ۙ:Ljava/util/HashMap;
 
-.field public static final ۚ:Ll/֫ܶۚ;
+.field public ۚ:Ll/ܳ۫ۤ;
 
-.field public static final ۨ:Ll/᩷۬ۚ;
+.field public final ۤ:Ljava/lang/String;
 
-.field public static final ܰ:I
+.field public final ۫:Ljava/util/HashSet;
+
+.field public final ܳ:Ljava/util/HashSet;
+
+.field public ᩴ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:Ljava/util/HashMap;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 1
 
-    const-string v0, ".smali"
+    .line 336
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
-    invoke-static {v0}, Ll/۬ۘۚ;->ۖ(Ljava/lang/String;)Ll/᩷۬ۚ;
+    .line 327
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p0, Ll/ۧܽۚ;->᩸:Ljava/util/HashMap;
 
-    sput-object v0, Ll/ۧܽۚ;->ۨ:Ll/᩷۬ۚ;
+    .line 328
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 19
-    invoke-static {v0}, Ll/֫ܶۚ;->ܰ(Ll/᩷۬ۚ;)Ll/֫ܶۚ;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Ll/ۧܽۚ;->ۙ:Ljava/util/HashMap;
 
-    sput-object v0, Ll/ۧܽۚ;->ۚ:Ll/֫ܶۚ;
+    .line 329
+    new-instance v0, Ljava/util/HashSet;
 
-    .line 22
-    invoke-static {}, Ll/ܽܺۘ;->۠()Landroid/content/res/Resources;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Ll/ۧܽۚ;->֫:Ljava/util/HashSet;
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    .line 331
+    new-instance v0, Ljava/util/HashSet;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 23
-    iget v1, v0, Landroid/util/DisplayMetrics;->density:F
+    iput-object v0, p0, Ll/ۧܽۚ;->ܳ:Ljava/util/HashSet;
 
-    sput v1, Ll/ۧܽۚ;->ۙ:F
+    .line 332
+    new-instance v0, Ljava/util/HashSet;
 
-    .line 24
-    iget v1, v0, Landroid/util/DisplayMetrics;->scaledDensity:F
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput v1, Ll/ۧܽۚ;->ۖ:F
+    iput-object v0, p0, Ll/ۧܽۚ;->۫:Ljava/util/HashSet;
 
-    .line 25
-    iget v0, v0, Landroid/util/DisplayMetrics;->densityDpi:I
+    .line 336
+    iput p1, p0, Ll/ۧܽۚ;->᩷:I
 
-    sput v0, Ll/ۧܽۚ;->ܰ:I
+    iput-object p2, p0, Ll/ۧܽۚ;->ۤ:Ljava/lang/String;
 
     return-void
 .end method

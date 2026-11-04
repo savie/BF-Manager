@@ -1,11 +1,11 @@
 .class public interface abstract Ll/ۧۖܶ;
 .super Ljava/lang/Object;
-.source "75TB"
-
-# interfaces
-.implements Ll/᩻ۖܶ;
+.source "L1WK"
 
 
 # virtual methods
-.method public abstract ܰ()Ll/᩻ܶܶ;
+.method public abstract onAnimationEnd()V
+.end method
+
+.method public abstract ۙ()V
 .end method

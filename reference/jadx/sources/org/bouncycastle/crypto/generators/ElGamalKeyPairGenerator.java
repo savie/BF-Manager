@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.params.ElGamalParameters;
 import org.bouncycastle.crypto.params.ElGamalPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ElGamalPublicKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     public ElGamalKeyGenerationParameters param;
 

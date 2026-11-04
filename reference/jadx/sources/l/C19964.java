@@ -1,76 +1,52 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import java.util.Arrays;
-import java.util.List;
+import android.os.IBinder;
+import android.os.Parcel;
 
-/* JADX INFO: renamed from: l.᩶ۚ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6M7 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19964 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m45251(char c) {
-        if (c >= '0' && c <= '9') {
-            return c - '0';
-        }
-        if (c >= 'a' && c <= 'f') {
-            return c - 'W';
-        }
-        if (c < 'A' || c > 'F') {
-            return -1;
-        }
-        return c - '7';
+/* JADX INFO: renamed from: l.ᩴܽ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: OAQ1 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19964 implements InterfaceC13251 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public IBinder f64166;
+
+    public C19964(IBinder iBinder) {
+        this.f64166 = iBinder;
     }
 
-    /*  JADX ERROR: Type inference failed
-        jadx.core.utils.exceptions.JadxOverflowException: Type inference error: updates count limit reached with updateSeq = 11071. Try increasing type updates limit count.
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:79)
-        */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static l.C20545 m45254(bin.mt.json.JSONObject r37) {
-        /*
-            Method dump skipped, instruction units count: 1107
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C19964.m45254(bin.mt.json.JSONObject):l.᩷֨۬");
+    @Override // android.os.IInterface
+    public final IBinder asBinder() {
+        return this.f64166;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONArray m45252(JSONObject jSONObject, String str, String str2) throws C12731 {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isArray() || jSONValue.asArray().size() == 0) {
-            throw m45253(jSONValue, "Expected a non-empty array", str2);
-        }
-        return jSONValue.asArray();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m45256(JSONObject jSONObject, String str, String str2) throws C12731 {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isString() || jSONValue.asString().trim().isEmpty()) {
-            throw m45253(jSONValue, "Expected a non-empty string", str2);
-        }
-        return jSONValue.asString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m45255(JSONObject jSONObject, String str, String... strArr) throws C12731 {
-        List listAsList = Arrays.asList(strArr);
-        for (String str2 : jSONObject.names()) {
-            if (!listAsList.contains(str2)) {
-                throw m45253(jSONObject.get(str2), "Invalid mt_apk_resource_add argument", str.isEmpty() ? str2 : C1679.m5594(str, ".", str2));
-            }
+    @Override // l.InterfaceC13251
+    public final String a() {
+        Parcel parcelObtain = Parcel.obtain();
+        Parcel parcelObtain2 = Parcel.obtain();
+        try {
+            parcelObtain.writeInterfaceToken("org.repackage.com.zui.deviceidservice.IDeviceidInterface");
+            this.f64166.transact(1, parcelObtain, parcelObtain2, 0);
+            parcelObtain2.readException();
+            return parcelObtain2.readString();
+        } finally {
+            parcelObtain2.recycle();
+            parcelObtain.recycle();
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m45253(JSONValue jSONValue, String str, String str2) {
-        return C12731.m31626(str, str2, jSONValue, JSON.array(), (JSONObject) null);
+    @Override // l.InterfaceC13251
+    public final boolean c() {
+        Parcel parcelObtain = Parcel.obtain();
+        Parcel parcelObtain2 = Parcel.obtain();
+        try {
+            parcelObtain.writeInterfaceToken("org.repackage.com.zui.deviceidservice.IDeviceidInterface");
+            this.f64166.transact(3, parcelObtain, parcelObtain2, 0);
+            parcelObtain2.readException();
+            return parcelObtain2.readInt() != 0;
+        } finally {
+            parcelObtain2.recycle();
+            parcelObtain.recycle();
+        }
     }
 }

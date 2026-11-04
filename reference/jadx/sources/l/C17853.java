@@ -1,59 +1,87 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.LinkedList;
 
-/* JADX INFO: renamed from: l.ᩳۚ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6KJ */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17853 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.ܽ᩷ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L1GV */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17853 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f56544;
+    public LinkedList f58544 = new LinkedList();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f56545;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f58545;
 
-    public C17853(String str, String str2) {
-        this.f56545 = str;
-        this.f56544 = str2;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long m41707() {
+        return this.f58545;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C17853)) {
-            return false;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m41709() {
+        return !this.f58544.isEmpty();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17107 m41708() {
+        LinkedList linkedList = this.f58544;
+        if (linkedList.isEmpty()) {
+            return null;
         }
-        C17853 c17853 = (C17853) obj;
-        return C13638.equals(this.f56545, c17853.f56545) && C13638.equals(this.f56544, c17853.f56544);
+        return (C17107) linkedList.getLast();
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f56544) + (C13638.hashCode(this.f56545) * 31);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C17107 m41706() {
+        LinkedList linkedList = this.f58544;
+        if (linkedList.isEmpty()) {
+            return null;
+        }
+        this.f58545++;
+        return (C17107) linkedList.removeLast();
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f56545, this.f56544};
-        String[] strArrSplit = "path;label".length() == 0 ? new String[0] : "path;label".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C17853.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41704(C17107 c17107) {
+        this.f58545++;
+        LinkedList linkedList = this.f58544;
+        linkedList.addLast(c17107);
+        if (linkedList.size() > 100) {
+            linkedList.removeFirst();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41702() {
+        LinkedList linkedList = this.f58544;
+        if (!linkedList.isEmpty()) {
+            this.f58545++;
+        }
+        linkedList.clear();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41703(C6178 c6178) {
+        c6178.writeInt(-1568513661);
+        LinkedList<C17107> linkedList = this.f58544;
+        c6178.mo17812(linkedList.size());
+        for (C17107 c17107 : linkedList) {
+            c6178.writeInt(c17107.f55832);
+            c6178.writeInt(c17107.f55831);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41705(C20348 c20348) {
+        this.f58545++;
+        LinkedList linkedList = this.f58544;
+        linkedList.clear();
+        if (c20348.m46746(-1568513661)) {
+            int iM46749 = c20348.m46749();
+            for (int i = 0; i < iM46749; i++) {
+                linkedList.addLast(new C17107(c20348.readInt(), c20348.readInt()));
             }
         }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m41443() {
-        return this.f56544;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m41444() {
-        return this.f56545;
     }
 }

@@ -27,11 +27,11 @@
     check-cast p2, Lcom/amazonaws/services/s3/model/PartETag;
 
     .line 44
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/PartETag;->ܰ()I
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/PartETag;->᩷()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/PartETag;->ܰ()I
+    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/PartETag;->᩷()I
 
     move-result v1
 
@@ -43,11 +43,11 @@
 
     .line 46
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/PartETag;->ܰ()I
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/PartETag;->᩷()I
 
     move-result p1
 
-    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/PartETag;->ܰ()I
+    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/PartETag;->᩷()I
 
     move-result p2
 

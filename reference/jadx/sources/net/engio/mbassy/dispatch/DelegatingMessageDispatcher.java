@@ -2,7 +2,7 @@ package net.engio.mbassy.dispatch;
 
 import net.engio.mbassy.subscription.AbstractSubscriptionContextAware;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DelegatingMessageDispatcher extends AbstractSubscriptionContextAware implements IMessageDispatcher {
     public final IMessageDispatcher delegate;
 

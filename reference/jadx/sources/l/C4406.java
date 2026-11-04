@@ -1,205 +1,294 @@
 package l;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Filter;
-import android.widget.Filterable;
-import android.widget.TextView;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ۙۘ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: N155 */
+/* JADX INFO: renamed from: l.ۘ᩶ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 39NU */
 /* JADX INFO: loaded from: classes3.dex */
-public class C4406 extends BaseAdapter implements Filterable, InterfaceC6211 {
+public final class C4406 extends AbstractC12609 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f15688;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final OutputStream f15832;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public List f15690;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final LayoutInflater f15691;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final int f15692;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Context f15693;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C3264 f15694;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public LayoutInflater f15696;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public ArrayList f15697;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final Object f15695 = new Object();
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public boolean f15689 = true;
-
-    @Override // android.widget.Adapter
-    public final long getItemId(int i) {
-        return i;
+    public C4406(OutputStream outputStream, int i) {
+        super(i);
+        if (outputStream == null) {
+            throw new NullPointerException("out");
+        }
+        this.f15832 = outputStream;
     }
 
-    public C4406(int i, Context context, List list) {
-        this.f15693 = context;
-        this.f15691 = LayoutInflater.from(context);
-        this.f15688 = i;
-        this.f15692 = i;
-        this.f15690 = list;
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo14019(int i, int i2) {
+        mo14018((i << 3) | i2);
     }
 
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14022(int i, int i2) throws IOException {
+        m14000(20);
+        m31323(i, 0);
+        if (i2 >= 0) {
+            m31321(i2);
+        } else {
+            m31324(i2);
+        }
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void mo14027(int i, int i2) throws IOException {
+        m14000(20);
+        m31323(i, 0);
+        m31321(i2);
+    }
+
+    @Override // l.AbstractC14846
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m12330(String str) {
-        synchronized (this.f15695) {
-            ArrayList arrayList = this.f15697;
-            if (arrayList != null) {
-                arrayList.add(str);
-            } else {
-                this.f15690.add(str);
-            }
-        }
-        if (this.f15689) {
-            notifyDataSetChanged();
-        }
+    public final void mo14004(int i, int i2) throws IOException {
+        m14000(14);
+        m31323(i, 5);
+        m31322(i2);
     }
 
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14023(int i, long j) throws IOException {
+        m14000(20);
+        m31323(i, 0);
+        m31324(j);
+    }
+
+    @Override // l.AbstractC14846
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m12331(List list) {
-        synchronized (this.f15695) {
-            ArrayList arrayList = this.f15697;
-            if (arrayList != null) {
-                arrayList.addAll(list);
-            } else {
-                this.f15690.addAll(list);
-            }
-        }
-        if (this.f15689) {
-            notifyDataSetChanged();
-        }
+    public final void mo14006(int i, long j) throws IOException {
+        m14000(18);
+        m31323(i, 1);
+        m31325(j);
     }
 
+    @Override // l.AbstractC14846
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m12329() {
-        synchronized (this.f15695) {
-            ArrayList arrayList = this.f15697;
-            if (arrayList != null) {
-                arrayList.clear();
-            } else {
-                this.f15690.clear();
-            }
+    public final void mo14010(int i, boolean z) throws IOException {
+        m14000(11);
+        m31323(i, 0);
+        byte b = z ? (byte) 1 : (byte) 0;
+        int i2 = this.f40464;
+        this.f40464 = i2 + 1;
+        this.f40466[i2] = b;
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14007(int i, String str) throws IOException {
+        mo14019(i, 2);
+        mo14013(str);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14008(int i, AbstractC17084 abstractC17084) {
+        mo14019(i, 2);
+        mo14014(abstractC17084);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14014(AbstractC17084 abstractC17084) {
+        mo14018(abstractC17084.size());
+        abstractC17084.mo29724(this);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14011(int i, byte[] bArr) throws IOException {
+        mo14018(i);
+        m14016(bArr, 0, i);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14025(int i, InterfaceC18775 interfaceC18775) {
+        mo14019(i, 2);
+        mo14015(interfaceC18775);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14009(int i, InterfaceC18775 interfaceC18775, InterfaceC7762 interfaceC7762) {
+        mo14019(i, 2);
+        mo14018(((AbstractC9427) interfaceC18775).getSerializedSize(interfaceC7762));
+        interfaceC7762.mo21143((Object) interfaceC18775, (InterfaceC18356) this.f48543);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo14020(int i, InterfaceC18775 interfaceC18775) throws IOException {
+        mo14019(1, 3);
+        mo14027(2, i);
+        mo14025(3, interfaceC18775);
+        mo14019(1, 4);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14024(int i, AbstractC17084 abstractC17084) throws IOException {
+        mo14019(1, 3);
+        mo14027(2, i);
+        mo14008(3, abstractC17084);
+        mo14019(1, 4);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14015(InterfaceC18775 interfaceC18775) {
+        mo14018(interfaceC18775.getSerializedSize());
+        interfaceC18775.writeTo(this);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14002(byte b) throws IOException {
+        if (this.f40464 == this.f40465) {
+            m14001();
         }
-        if (this.f15689) {
-            notifyDataSetChanged();
+        int i = this.f40464;
+        this.f40464 = i + 1;
+        this.f40466[i] = b;
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14021(int i) throws IOException {
+        if (i >= 0) {
+            mo14018(i);
+        } else {
+            mo14026(i);
         }
     }
 
-    @Override // android.widget.BaseAdapter
-    public final void notifyDataSetChanged() {
-        super.notifyDataSetChanged();
-        this.f15689 = true;
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo14018(int i) {
+        m14000(5);
+        m31321(i);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m12332() {
-        this.f15689 = false;
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14003(int i) throws IOException {
+        m14000(4);
+        m31322(i);
     }
 
-    @Override // android.widget.Adapter
-    public int getCount() {
-        return this.f15690.size();
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo14026(long j) throws IOException {
+        m14000(10);
+        m31324(j);
     }
 
-    @Override // android.widget.Adapter
-    public final Object getItem(int i) {
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14012(long j) throws IOException {
+        m14000(8);
+        m31325(j);
+    }
+
+    @Override // l.AbstractC14846
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14013(String str) throws IOException {
         try {
-            return this.f15690.get(i);
-        } catch (IndexOutOfBoundsException unused) {
-            return null;
+            int length = str.length() * 3;
+            int iM35763 = AbstractC14846.m35763(length);
+            int i = iM35763 + length;
+            int i2 = this.f40465;
+            if (i > i2) {
+                byte[] bArr = new byte[length];
+                int iM29254 = C11643.m29254(0, length, str, bArr);
+                mo14018(iM29254);
+                m14016(bArr, 0, iM29254);
+                return;
+            }
+            if (i > i2 - this.f40464) {
+                m14001();
+            }
+            int iM35764 = AbstractC14846.m35763(str.length());
+            int i3 = this.f40464;
+            byte[] bArr2 = this.f40466;
+            try {
+                if (iM35764 == iM35763) {
+                    int i4 = i3 + iM35764;
+                    this.f40464 = i4;
+                    int iM29255 = C11643.m29254(i4, i2 - i4, str, bArr2);
+                    this.f40464 = i3;
+                    m31321((iM29255 - i3) - iM35764);
+                    this.f40464 = iM29255;
+                } else {
+                    int iM29256 = C11643.m29256(str);
+                    m31321(iM29256);
+                    this.f40464 = C11643.m29254(this.f40464, iM29256, str, bArr2);
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                throw new C24544(e);
+            } catch (C5678 e2) {
+                this.f40464 = i3;
+                throw e2;
+            }
+        } catch (C5678 e3) {
+            m35776(str, e3);
         }
     }
 
-    @Override // android.widget.Adapter
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return m12323(this.f15691, i, view, viewGroup, this.f15692);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m14017() {
+        if (this.f40464 > 0) {
+            m14001();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private View m12323(LayoutInflater layoutInflater, int i, View view, ViewGroup viewGroup, int i2) {
-        if (view == null) {
-            view = layoutInflater.inflate(i2, viewGroup, false);
-        }
-        try {
-            TextView textView = (TextView) view;
-            Object item = getItem(i);
-            if (item instanceof CharSequence) {
-                textView.setText((CharSequence) item);
-                return view;
-            }
-            textView.setText(item == null ? "" : item.toString());
-            return view;
-        } catch (ClassCastException e) {
-            throw new IllegalStateException("ArrayAdapter requires the resource ID to be a TextView", e);
-        }
-    }
-
-    @Override // l.InterfaceC6211
-    public final void setDropDownViewTheme(Resources.Theme theme) {
-        if (theme == null) {
-            this.f15696 = null;
+    public final void m14016(byte[] bArr, int i, int i2) throws IOException {
+        int i3 = this.f40464;
+        int i4 = this.f40465;
+        int i5 = i4 - i3;
+        byte[] bArr2 = this.f40466;
+        if (i5 >= i2) {
+            System.arraycopy(bArr, i, bArr2, i3, i2);
+            this.f40464 += i2;
             return;
         }
-        LayoutInflater layoutInflater = this.f15691;
-        if (theme == layoutInflater.getContext().getTheme()) {
-            this.f15696 = layoutInflater;
+        System.arraycopy(bArr, i, bArr2, i3, i5);
+        int i6 = i + i5;
+        int i7 = i2 - i5;
+        this.f40464 = i4;
+        m14001();
+        if (i7 <= i4) {
+            System.arraycopy(bArr, i6, bArr2, 0, i7);
+            this.f40464 = i7;
         } else {
-            this.f15696 = LayoutInflater.from(new C5716(this.f15693, theme));
+            this.f15832.write(bArr, i6, i7);
         }
     }
 
-    @Override // l.InterfaceC6211
-    public final Resources.Theme getDropDownViewTheme() {
-        LayoutInflater layoutInflater = this.f15696;
-        if (layoutInflater == null) {
-            return null;
-        }
-        return layoutInflater.getContext().getTheme();
+    @Override // l.AbstractC5152
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14005(int i, int i2, byte[] bArr) throws IOException {
+        m14016(bArr, i, i2);
     }
 
-    @Override // android.widget.BaseAdapter, android.widget.SpinnerAdapter
-    public View getDropDownView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater layoutInflater = this.f15696;
-        if (layoutInflater == null) {
-            layoutInflater = this.f15691;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    private void m14000(int i) throws IOException {
+        if (this.f40465 - this.f40464 < i) {
+            m14001();
         }
-        return m12323(layoutInflater, i, view, viewGroup, this.f15688);
     }
 
-    @Override // android.widget.Filterable
-    public final Filter getFilter() {
-        if (this.f15694 == null) {
-            this.f15694 = new C3264(this);
-        }
-        return this.f15694;
-    }
-
-    @Override // android.widget.BaseAdapter, android.widget.Adapter
-    public final CharSequence[] getAutofillOptions() {
-        CharSequence[] autofillOptions = super.getAutofillOptions();
-        if (autofillOptions != null) {
-            return autofillOptions;
-        }
-        return null;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private void m14001() throws IOException {
+        this.f15832.write(this.f40466, 0, this.f40464);
+        this.f40464 = 0;
     }
 }

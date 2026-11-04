@@ -11,12 +11,12 @@ import android.widget.ListAdapter;
 import com.google.android.material.internal.ViewUtils;
 import java.util.Calendar;
 import java.util.Iterator;
-import l.C10946;
-import l.C11423;
-import l.C12025;
-import l.C22006;
-import l.C3798;
-import l.C5031;
+import l.C19835;
+import l.C22073;
+import l.C22666;
+import l.C22687;
+import l.C2310;
+import l.C23577;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class MaterialCalendarGridView extends GridView {
@@ -35,15 +35,15 @@ public final class MaterialCalendarGridView extends GridView {
         super(context, attributeSet, i);
         this.dayCompute = UtcDates.getUtcCalendar();
         if (MaterialDatePicker.isFullscreen(getContext())) {
-            setNextFocusLeftId(C3798.f14093);
-            setNextFocusRightId(C3798.f14045);
+            setNextFocusLeftId(C23577.f76542);
+            setNextFocusRightId(C23577.f76482);
         }
         this.nestedScrollable = MaterialDatePicker.isNestedScrollable(getContext());
-        C5031.m13990(this, new C12025() { // from class: com.google.android.material.datepicker.MaterialCalendarGridView.1
-            @Override // l.C12025
-            public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
-                super.onInitializeAccessibilityNodeInfo(view, c22006);
-                c22006.m48849((C11423) null);
+        C22666.m51098(this, new C22687() { // from class: com.google.android.material.datepicker.MaterialCalendarGridView.1
+            @Override // l.C22687
+            public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
+                super.onInitializeAccessibilityNodeInfo(view, c19835);
+                c19835.m45643((C22073) null);
             }
         });
     }
@@ -112,9 +112,9 @@ public final class MaterialCalendarGridView extends GridView {
         Long item2 = adapter.getItem(iMin);
         Iterator it = dateSelector.getSelectedRanges().iterator();
         while (it.hasNext()) {
-            C10946 c10946 = (C10946) it.next();
-            Object obj = c10946.f37217;
-            Object obj2 = c10946.f37218;
+            C2310 c2310 = (C2310) it.next();
+            Object obj = c2310.f7473;
+            Object obj2 = c2310.f7474;
             if (obj == null) {
                 materialCalendarGridView = this;
             } else if (obj2 != null) {

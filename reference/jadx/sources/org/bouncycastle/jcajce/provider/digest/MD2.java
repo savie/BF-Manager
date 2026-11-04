@@ -1,7 +1,7 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C15489;
-import l.C22697;
+import l.C14483;
+import l.C25272;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.digests.MD2Digest;
@@ -10,7 +10,7 @@ import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MD2 {
 
     public class Digest extends BCMessageDigest implements Cloneable {
@@ -26,7 +26,6 @@ public class MD2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac extends BaseMac {
         public HashMac() {
             super(new HMac(new MD2Digest()));
@@ -39,7 +38,6 @@ public class MD2 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = MD2.class.getName();
 
@@ -50,9 +48,9 @@ public class MD2 {
             sb.append(str);
             sb.append("$Digest");
             configurableProvider.addAlgorithm("MessageDigest.MD2", sb.toString());
-            StringBuilder sbM50268 = C22697.m50268("MD2", str, new StringBuilder("Alg.Alias.MessageDigest."), PKCSObjectIdentifiers.md2, configurableProvider);
-            sbM50268.append("$HashMac");
-            addHMACAlgorithm(configurableProvider, "MD2", sbM50268.toString(), C15489.m37076(str, "$KeyGenerator"));
+            StringBuilder sbM56410 = C25272.m56410("MD2", str, new StringBuilder("Alg.Alias.MessageDigest."), PKCSObjectIdentifiers.md2, configurableProvider);
+            sbM56410.append("$HashMac");
+            addHMACAlgorithm(configurableProvider, "MD2", sbM56410.toString(), C14483.m34972(str, "$KeyGenerator"));
         }
     }
 }

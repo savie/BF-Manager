@@ -1,44 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺۜܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DBG5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15774 extends AbstractC17806 {
+/* JADX INFO: renamed from: l.ܶ֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C15774 extends EnumC13820 {
+    public /* synthetic */ C15774() {
+        this("ScriptDataEscaped", 21);
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f51084;
+    public C15774(String str, int i) {
+        super(str, i, 0);
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f51085;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f51086;
-
-    public C15774(EnumC7306 enumC7306, int i, int i2, int i3, int i4, int i5) {
-        super(enumC7306, i, i2, 0, 0L);
-        if (i5 != ((short) i5)) {
-            throw new IllegalArgumentException(C8479.m22141(i5, "protoIndex doesn't fit in a short: "));
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        if (c3952.m12696()) {
+            c13646.m33399(this);
+            c13646.m33401(EnumC13820.f43874);
+            return;
         }
-        this.f51085 = i3;
-        this.f51084 = i4;
-        this.f51086 = i5;
-    }
-
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ᩴ */
-    public final int mo1687() {
-        return this.f51084;
-    }
-
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo20931() {
-        return this.f51085;
-    }
-
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final short mo37516() {
-        return (short) this.f51086;
+        char cM12681 = c3952.m12681();
+        if (cM12681 == 0) {
+            c13646.m33394(this);
+            c3952.m12675();
+            c13646.m33388((char) 65533);
+        } else if (cM12681 == '-') {
+            c13646.m33388('-');
+            c13646.m33391(EnumC13820.f43865);
+        } else if (cM12681 == '<') {
+            c13646.m33391(EnumC13820.f43875);
+        } else {
+            c13646.m33389(c3952.m12674('-', '<', 0));
+        }
     }
 }

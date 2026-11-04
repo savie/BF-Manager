@@ -1,88 +1,51 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.TreeMap;
+import android.view.View;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۙۘܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3BHY */
+/* JADX INFO: renamed from: l.ۘ᩶ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K1PX */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4400 extends AbstractC5106 {
+public final class C4400 extends AbstractC6274 {
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final TreeMap f15667;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC19974 f15828;
 
-    public C4400(C4669 c4669) {
-        super("string_ids", c4669, 4);
-        this.f15667 = new TreeMap();
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2999(View view, Object obj) {
+        return view == obj;
     }
 
-    @Override // l.AbstractC23721
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Collection mo12263() {
-        return this.f15667.values();
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo3000() {
+        return 2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC15254 m12265(AbstractC9901 abstractC9901) {
-        if (abstractC9901 == null) {
-            throw new NullPointerException("cst == null");
-        }
-        m52243();
-        AbstractC15254 abstractC15254 = (AbstractC15254) this.f15667.get((C17432) abstractC9901);
-        if (abstractC15254 != null) {
-            return abstractC15254;
-        }
-        throw new IllegalArgumentException("not found");
+    public C4400(ActivityC19974 activityC19974) {
+        this.f15828 = activityC19974;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m12267(C2718 c2718) {
-        m52243();
-        int size = this.f15667.size();
-        int iM52248 = size == 0 ? 0 : m52248();
-        if (c2718.m8288()) {
-            c2718.m8283(4, "string_ids_size: ".concat(C22475.m49978(size)));
-            c2718.m8283(4, "string_ids_off:  ".concat(C22475.m49978(iM52248)));
-        }
-        c2718.m8289(size);
-        c2718.m8289(iM52248);
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final CharSequence mo2996(int i) {
+        return this.f15828.getString(i == 0 ? R.string.MT_Protector : R.string.MT_Protector);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m12268(C17432 c17432) {
-        C3258 c3258 = new C3258(c17432);
-        synchronized (this) {
-            m52249();
-            C17432 value = c3258.getValue();
-            if (((C3258) this.f15667.get(value)) != null) {
-                return;
-            }
-            this.f15667.put(value, c3258);
-        }
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2997(C15179 c15179, int i) {
+        ActivityC19974 activityC19974 = this.f15828;
+        C25227 c25227 = i == 0 ? activityC19974.f64184.f28995 : activityC19974.f64185.f60338;
+        c15179.addView(c25227);
+        return c25227;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m12264(C17432 c17432) {
-        if (c17432 == null) {
-            throw new NullPointerException("string == null");
-        }
-        m52243();
-        C3258 c3258 = (C3258) this.f15667.get(c17432);
-        if (c3258 == null) {
-            throw new IllegalArgumentException("not found");
-        }
-        return c3258.m36534();
-    }
-
-    @Override // l.AbstractC5106
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final void mo12266() {
-        Iterator it = this.f15667.values().iterator();
-        int i = 0;
-        while (it.hasNext()) {
-            ((C3258) it.next()).m36533(i);
-            i++;
-        }
+    @Override // l.AbstractC6274
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2998(C15179 c15179, int i, Object obj) {
+        ActivityC19974 activityC19974 = this.f15828;
+        c15179.removeView(i == 0 ? activityC19974.f64184.f28995 : activityC19974.f64185.f60338);
     }
 }

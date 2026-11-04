@@ -1,74 +1,53 @@
-.class public final synthetic Ll/ۡۨۨ;
+.class public final Ll/ۡۨۨ;
 .super Ljava/lang/Object;
-.source "HAQ9"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "X6CH"
 
 
-# instance fields
-.field public final synthetic ܺ:Ljava/lang/Thread;
+# static fields
+.field public static final ۙ:Ljava/util/Set;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Thread;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 94
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-    iput-object p1, p0, Ll/ۡۨۨ;->ܺ:Ljava/lang/Thread;
+    sput-object v0, Ll/ۡۨۨ;->ۙ:Ljava/util/Set;
 
     return-void
 .end method
 
+.method public static ۙ(Ljava/lang/String;Ljava/util/function/Function;)Ll/ۚܺۗ;
+    .locals 7
 
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    .line 210
+    new-instance v6, Ll/֨ۨۨ;
 
-    .line 2
-    check-cast p1, Ljava/lang/Thread;
+    new-instance v1, Ll/۟ۨۨ;
 
-    .line 4
-    check-cast p2, Ljava/lang/Thread;
+    invoke-direct {v1, p0}, Ll/۟ۨۨ;-><init>(Ljava/lang/CharSequence;)V
 
-    if-ne p1, p2, :cond_0
+    new-instance v2, Ll/ᩳۨۨ;
 
-    const/4 p1, 0x0
+    invoke-direct {v2, p1}, Ll/ᩳۨۨ;-><init>(Ljava/util/function/Function;)V
 
-    return p1
+    new-instance v3, Ll/ۢۨۨ;
 
-    .line 75
-    :cond_0
-    iget-object v0, p0, Ll/ۡۨۨ;->ܺ:Ljava/lang/Thread;
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    if-ne p1, v0, :cond_1
+    new-instance v4, Ll/᩹֡ۗ;
 
-    const/4 p1, -0x1
+    const/4 p0, 0x7
 
-    return p1
+    invoke-direct {v4, p0}, Ll/᩹֡ۗ;-><init>(I)V
 
-    :cond_1
-    if-ne p2, v0, :cond_2
+    sget-object v5, Ll/ۡۨۨ;->ۙ:Ljava/util/Set;
 
-    const/4 p1, 0x1
+    move-object v0, v6
 
-    return p1
+    invoke-direct/range {v0 .. v5}, Ll/֨ۨۨ;-><init>(Ll/۟ۨۨ;Ll/ᩳۨۨ;Ll/ۢۨۨ;Ll/᩹֡ۗ;Ljava/util/Set;)V
 
-    .line 79
-    :cond_2
-    invoke-virtual {p2}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
+    return-object v6
 .end method

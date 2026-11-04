@@ -1,111 +1,70 @@
 package l;
 
-import android.os.Handler;
-import android.os.Looper;
-import java.util.Locale;
+import android.annotation.SuppressLint;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.style.CharacterStyle;
+import android.text.style.MetricAffectingSpan;
 
-/* JADX INFO: renamed from: l.᩹ۧ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3AN5 */
+/* JADX INFO: renamed from: l.᩷ᩴۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TB2A */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22252 {
+public final class C22252 extends AbstractC21594 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f72742 = 0;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public TextPaint f71662;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C3446 f72743 = new C3446(new C2495());
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Handler f72744 = new HandlerC5318(Looper.getMainLooper());
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static boolean m49413(String str) {
-        if (str.startsWith("/system/") || str.startsWith("/data/")) {
-            return false;
-        }
-        return C5553.m15304(str) || C8272.m21690(str) != null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49407(String str) {
-        if (str == null) {
-            return;
-        }
-        synchronized (C22252.class) {
-            C3446 c3446 = f72743;
-            c3446.remove(str);
-            c3446.add(str);
-            Handler handler = f72744;
-            if (!handler.hasMessages(0)) {
-                handler.sendEmptyMessageDelayed(0, 2000L);
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String m49411(String str) {
-        String strM28608 = AbstractC11462.m28608(str);
-        while (strM28608.length() > 1 && strM28608.endsWith("/")) {
-            strM28608 = C20630.m46498(1, 0, strM28608);
-        }
-        return strM28608;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49408(String str, boolean z) {
-        String strM49411 = m49411(str);
-        if ((z && !m49412(strM49411)) || !m49413(strM49411)) {
-            strM49411 = null;
-        }
-        m49407(strM49411);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m49405(String str, EnumC11669 enumC11669, boolean z) {
-        String strM49411 = m49411(str);
-        if (enumC11669 != EnumC11669.NONE && ((enumC11669 != EnumC11669.EXACT || !z || m49412(strM49411)) && m49413(strM49411))) {
-            if (enumC11669 != EnumC11669.TREE) {
-                return strM49411;
-            }
-            if (!m49411(strM49411).equalsIgnoreCase(m49411("/sdcard"))) {
-                if (!m49411(strM49411).equalsIgnoreCase(m49411(m49411(C11904.f39934.mo33986())))) {
-                    C18149 c18149M21690 = C8272.m21690(strM49411);
-                    if (c18149M21690 == null) {
-                        return strM49411;
+    /* JADX WARN: Code duplicated, block: B:21:0x0043  */
+    /* JADX WARN: Code duplicated, block: B:23:0x0047  */
+    @Override // android.text.style.ReplacementSpan
+    public final void draw(Canvas canvas, @SuppressLint({"UnknownNullness"}) CharSequence charSequence, int i, int i2, float f, int i3, int i4, int i5, Paint paint) {
+        Paint paint2 = paint;
+        TextPaint textPaint = null;
+        if (charSequence instanceof Spanned) {
+            CharacterStyle[] characterStyleArr = (CharacterStyle[]) ((Spanned) charSequence).getSpans(i, i2, CharacterStyle.class);
+            if (characterStyleArr.length != 0) {
+                if (characterStyleArr.length == 1 && characterStyleArr[0] == this) {
+                    if (paint2 instanceof TextPaint) {
+                        textPaint = (TextPaint) paint2;
                     }
-                    if (!m49411(strM49411).equalsIgnoreCase(m49411(m49411(c18149M21690.f58039.getPath())))) {
-                        return strM49411;
+                } else {
+                    TextPaint textPaint2 = this.f71662;
+                    if (textPaint2 == null) {
+                        textPaint2 = new TextPaint();
+                        this.f71662 = textPaint2;
+                    }
+                    textPaint = textPaint2;
+                    textPaint.set(paint2);
+                    for (CharacterStyle characterStyle : characterStyleArr) {
+                        if (!(characterStyle instanceof MetricAffectingSpan)) {
+                            characterStyle.updateDrawState(textPaint);
+                        }
                     }
                 }
+            } else if (paint2 instanceof TextPaint) {
+                textPaint = (TextPaint) paint2;
             }
+        } else if (paint2 instanceof TextPaint) {
+            textPaint = (TextPaint) paint2;
         }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m49412(String str) {
-        if (str.toLowerCase(Locale.ROOT).contains("download")) {
-            return true;
+        TextPaint textPaint3 = textPaint;
+        if (textPaint3 != null && textPaint3.bgColor != 0) {
+            int color = textPaint3.getColor();
+            Paint.Style style = textPaint3.getStyle();
+            textPaint3.setColor(textPaint3.bgColor);
+            textPaint3.setStyle(Paint.Style.FILL);
+            canvas.drawRect(f, i3, f + m49129(), i5, textPaint3);
+            textPaint3.setStyle(style);
+            textPaint3.setColor(color);
         }
-        String strM48172 = C21512.m48172(str);
-        if (strM48172 != null) {
-            return strM48172.startsWith("image") || strM48172.startsWith("video") || strM48172.startsWith("audio");
+        C2203.m7520().getClass();
+        C5098 c5098M49128 = m49128();
+        float f2 = i4;
+        if (textPaint3 != null) {
+            paint2 = textPaint3;
         }
-        return false;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49409(AbstractC20745 abstractC20745) {
-        m49408(abstractC20745.mo33986(), true);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static void m49404(String str) {
-        m49407(m49405(str, EnumC11669.EXACT, true));
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static void m49410(String str) {
-        m49407(m49405(str, EnumC11669.TREE, false));
+        c5098M49128.m15412(canvas, f, f2, paint2);
     }
 }

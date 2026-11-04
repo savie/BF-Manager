@@ -1,40 +1,37 @@
 package l;
 
-import java.util.WeakHashMap;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۡۛۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W7SR */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8693 {
+/* JADX INFO: renamed from: l.۠ܳۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57L9 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8693 implements Function {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public WeakHashMap f29904 = new WeakHashMap();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f28353;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C19276 m22514(AbstractC23903 abstractC23903, EnumC11678 enumC11678) {
-        C21825<C19276> c21825 = (C21825) this.f29904.get(abstractC23903);
-        if (c21825 == null) {
-            return null;
-        }
-        for (C19276 c19276 : c21825) {
-            if (c19276.f62232.f5037.mo4575().f42957 == enumC11678) {
-                return c19276;
-            }
-        }
-        return null;
+    public /* synthetic */ C8693(int i) {
+        this.f28353 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m22515(AbstractC8774 abstractC8774, C1116 c1116) {
-        AbstractC23903 abstractC23903 = c1116.f5037.mo4575().f42951;
-        WeakHashMap weakHashMap = this.f29904;
-        C21825 c21825M48588 = (C21825) weakHashMap.get(abstractC23903);
-        if (c21825M48588 == null) {
-            c21825M48588 = C21825.m48588();
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f28353) {
+            case 0:
+                return ((C14764) obj).f48253;
+            default:
+                return ((C12510) obj).f40164;
         }
-        C19276 c19276 = new C19276();
-        c19276.f62233 = abstractC8774;
-        c19276.f62232 = c1116;
-        weakHashMap.put(abstractC23903, c21825M48588.m48597(c19276));
     }
 }

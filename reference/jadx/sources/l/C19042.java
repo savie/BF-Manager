@@ -1,41 +1,37 @@
 package l;
 
-import android.view.View;
-import android.view.ViewGroup;
-
-/* JADX INFO: renamed from: l.ᩴ᩹ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: RB93 */
+/* JADX INFO: renamed from: l.ᩳۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19042 implements InterfaceC22089 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f61595;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7753 f61596;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16386 f61597;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewGroup f61598;
-
-    public C19042(View view, ViewGroup viewGroup, C7753 c7753, C16386 c16386) {
-        this.f61595 = view;
-        this.f61598 = viewGroup;
-        this.f61596 = c7753;
-        this.f61597 = c16386;
+public final enum C19042 extends EnumC13820 {
+    public /* synthetic */ C19042() {
+        this("AfterDoctypeSystemIdentifier", 64);
     }
 
-    @Override // l.InterfaceC22089
+    public C19042(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC13820
     /* JADX INFO: renamed from: ۙ */
-    public final void mo18972() {
-        View view = this.f61595;
-        view.clearAnimation();
-        this.f61598.endViewTransition(view);
-        this.f61596.m47610();
-        if (AbstractC8894.m23060(2)) {
-            C13638.toString(this.f61597);
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == '\t' || cM12689 == '\n' || cM12689 == '\f' || cM12689 == '\r' || cM12689 == ' ') {
+            return;
+        }
+        if (cM12689 == '>') {
+            c13646.m33400();
+            c13646.m33401(EnumC13820.f43874);
+        } else {
+            if (cM12689 == 65535) {
+                c13646.m33399(this);
+                c13646.f43324.getClass();
+                c13646.m33400();
+                c13646.m33401(EnumC13820.f43874);
+                return;
+            }
+            c13646.m33394(this);
+            c13646.m33401(EnumC13820.f43851);
         }
     }
 }

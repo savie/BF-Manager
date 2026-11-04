@@ -1,102 +1,52 @@
 .class public final Ll/᩶ۨܶ;
-.super Ll/ܺۨܶ;
-.source "9BGI"
+.super Ljava/lang/Object;
+.source "H9F9"
 
-
-# instance fields
-.field public ۖ:I
-
-.field public ۨ:I
-
-.field public ܰ:Ll/ۢ᩺ܶ;
+# interfaces
+.implements Ll/᩹ܶܶ;
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Long;
+    .locals 4
 
-    const/4 v0, -0x1
+    .line 156
+    check-cast p1, Ljava/util/List;
 
-    return v0
-.end method
+    .line 159
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-.method public final ۙ(II)V
-    .locals 0
+    move-result-object p1
 
-    const/4 p1, 0x0
+    const-wide/16 v0, 0x0
 
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
-.end method
+    move-result v2
 
-.method public final ۙ(IIII)V
-    .locals 0
+    if-eqz v2, :cond_0
 
-    const/4 p1, 0x0
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
+    move-result-object v2
 
-    return-void
-.end method
+    check-cast v2, Ljava/lang/Long;
 
-.method public final ۙ(IIIILl/ۗܶܶ;I)V
-    .locals 0
+    .line 160
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    const/4 p1, 0x0
+    move-result-wide v2
 
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
+    add-long/2addr v0, v2
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final ۙ(IIILl/ۢ᩺ܶ;I)V
-    .locals 0
+    .line 162
+    :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 1437
-    iput-object p4, p0, Ll/᩶ۨܶ;->ܰ:Ll/ۢ᩺ܶ;
+    move-result-object p1
 
-    .line 1438
-    iput p3, p0, Ll/᩶ۨܶ;->ۨ:I
-
-    .line 1439
-    iput p5, p0, Ll/᩶ۨܶ;->ۖ:I
-
-    return-void
-.end method
-
-.method public final ۙ(IILl/ۗܶܶ;)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
-
-    return-void
-.end method
-
-.method public final ۙ(IILl/ۛܶܶ;Ljava/util/ArrayList;)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
-
-    return-void
-.end method
-
-.method public final ۙ(IILl/۠ۖܶ;I)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    .line 1402
-    iput p1, p0, Ll/᩶ۨܶ;->ۨ:I
-
-    return-void
+    return-object p1
 .end method

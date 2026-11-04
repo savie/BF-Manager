@@ -11,8 +11,8 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C2271;
+import l.C14442;
+import l.C4681;
 import org.simpleframework.xml.strategy.Name;
 
 /* JADX INFO: compiled from: O5QW */
@@ -23,7 +23,7 @@ public class an implements av, Serializable, Cloneable {
     public static final Map k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final long f77924l = 420342210744516016L;
+    public static final long f82040l = 420342210744516016L;
     public static final bz m = new bz("UMEnvelope");
     public static final bp n = new bp("version", (byte) 11, 1);
     public static final bp o = new bp("address", (byte) 11, 2);
@@ -67,7 +67,7 @@ public class an implements av, Serializable, Cloneable {
         enumMap.put(e.GUID, new bh("guid", (byte) 1, new bi((byte) 11)));
         enumMap.put(e.CHECKSUM, new bh("checksum", (byte) 1, new bi((byte) 11)));
         enumMap.put(e.CODEX, new bh("codex", (byte) 2, new bi((byte) 8)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         k = mapUnmodifiableMap;
         bh.a(an.class, mapUnmodifiableMap);
     }
@@ -88,7 +88,7 @@ public class an implements av, Serializable, Cloneable {
         public static final Map k = new HashMap();
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public final short f77925l;
+        public final short f82041l;
         public final String m;
 
         static {
@@ -129,7 +129,7 @@ public class an implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {
@@ -137,13 +137,13 @@ public class an implements av, Serializable, Cloneable {
         }
 
         e(short s, String str) {
-            this.f77925l = s;
+            this.f82041l = s;
             this.m = str;
         }
 
         @Override // com.umeng.analytics.pro.bc
         public short a() {
-            return this.f77925l;
+            return this.f82041l;
         }
 
         @Override // com.umeng.analytics.pro.bc

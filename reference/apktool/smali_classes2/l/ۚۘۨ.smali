@@ -1,30 +1,31 @@
 .class public final Ll/ۚۘۨ;
 .super Ljava/lang/Object;
-.source "31R1"
-
-# interfaces
-.implements Ljava/lang/Comparable;
+.source "YAH1"
 
 
 # instance fields
-.field public ܺ:I
+.field public ۙ:Ljava/lang/Object;
 
-.field public ᩶:I
+.field public ۤ:Ll/ۚۘۨ;
+
+.field public ᩷:Ll/ۚۘۨ;
 
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Ll/ۚۘۨ;Ll/ۚۘۨ;)V
+    .locals 0
 
-    .line 232
-    check-cast p1, Ll/ۚۘۨ;
+    .line 272
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
-    iget p1, p1, Ll/ۚۘۨ;->᩶:I
+    .line 273
+    iput-object p1, p0, Ll/ۚۘۨ;->ۙ:Ljava/lang/Object;
 
-    iget v0, p0, Ll/ۚۘۨ;->᩶:I
+    .line 274
+    iput-object p2, p0, Ll/ۚۘۨ;->ۤ:Ll/ۚۘۨ;
 
-    sub-int/2addr p1, v0
+    .line 275
+    iput-object p3, p0, Ll/ۚۘۨ;->᩷:Ll/ۚۘۨ;
 
-    return p1
+    return-void
 .end method

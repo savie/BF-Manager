@@ -1,24 +1,32 @@
 package l;
 
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.᩶ۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7LF */
+/* JADX INFO: renamed from: l.ᩴ᩷۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y5PI */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C20086 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C20086 implements InterfaceC3573 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC15610 f64554;
+
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ */
+    public final /* synthetic */ void mo3465() {
+        throw null;
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    public C20086(InterfaceC15610 interfaceC15610) {
+        this.f64554 = interfaceC15610;
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return C21825.m48588();
+    @Override // l.InterfaceC3573
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3466(long j, long j2, long j3) {
+        this.f64554.mo1659(C3374.m11075(j2, j3));
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f64554.mo924();
     }
 }

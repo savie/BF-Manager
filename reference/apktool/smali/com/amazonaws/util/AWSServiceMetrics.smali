@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static final enum ֡:Lcom/amazonaws/util/AWSServiceMetrics;
+.field public static final enum ܿ:Lcom/amazonaws/util/AWSServiceMetrics;
 
 .field public static final synthetic ᩶:[Lcom/amazonaws/util/AWSServiceMetrics;
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/String;
+.field public final ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Lcom/amazonaws/util/AWSServiceMetrics;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/util/AWSServiceMetrics;->֡:Lcom/amazonaws/util/AWSServiceMetrics;
+    sput-object v0, Lcom/amazonaws/util/AWSServiceMetrics;->ܿ:Lcom/amazonaws/util/AWSServiceMetrics;
 
     const/4 v1, 0x1
 
@@ -57,7 +57,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 37
-    iput-object p3, p0, Lcom/amazonaws/util/AWSServiceMetrics;->ܺ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/util/AWSServiceMetrics;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     .locals 1
 
     .line 42
-    iget-object v0, p0, Lcom/amazonaws/util/AWSServiceMetrics;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/util/AWSServiceMetrics;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

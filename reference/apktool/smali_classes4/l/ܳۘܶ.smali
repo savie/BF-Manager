@@ -1,98 +1,61 @@
-.class public final enum Ll/ܳۘܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ܳۘܶ;
+.super Ljava/lang/Object;
+.source "R1LP"
 
 
-# direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+# instance fields
+.field public volatile ۙ:Z
 
-    const-string v0, "FORMAT_31I"
 
-    const/16 v1, 0x15
+# virtual methods
+.method public final ۙ()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ܳۘܶ;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x1
+
+    .line 28
+    iput-boolean v0, p0, Ll/ܳۘܶ;->ۙ:Z
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public final ۤ()Z
+    .locals 1
+
+    .line 33
+    iget-boolean v0, p0, Ll/ܳۘܶ;->ۙ:Z
+
+    return v0
+.end method
+
+.method public final ᩷()V
+    .locals 1
+
+    .line 38
+    iget-boolean v0, p0, Ll/ܳۘܶ;->ۙ:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 39
+    :cond_0
+    new-instance v0, Ll/֨ۤۤ;
+
+    .line 32
+    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
+
+    .line 39
+    throw v0
+.end method
+
+.method public final ᩸()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 485
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 8
-
-    .line 489
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
-
-    move-result v2
-
-    .line 490
-    invoke-static {p1}, Ll/۟ۜܶ;->ۖ(I)I
-
-    move-result v7
-
-    .line 491
-    invoke-interface {p2}, Ll/ܶۘܶ;->readInt()I
-
-    move-result p1
-
-    .line 492
-    new-instance p2, Ll/᩶ۜܶ;
-
-    const/4 v4, 0x0
-
-    int-to-long v5, p1
-
-    const/4 v3, 0x0
-
-    move-object v0, p2
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v7}, Ll/᩶ۜܶ;-><init>(Ll/۟ۜܶ;IIIJI)V
-
-    return-object p2
-.end method
-
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 2
-
-    .line 500
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۘ()I
-
-    move-result v0
-
-    .line 502
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۙ()I
-
-    move-result p1
-
-    invoke-static {v1, p1}, Ll/۟ۜܶ;->ܰ(II)S
-
-    .line 503
-    invoke-static {v0}, Ll/۟ۜܶ;->ۘ(I)S
-
-    .line 504
-    invoke-static {v0}, Ll/۟ۜܶ;->ۜ(I)S
-
-    .line 501
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ܰ()V
+    .line 23
+    iput-boolean v0, p0, Ll/ܳۘܶ;->ۙ:Z
 
     return-void
 .end method

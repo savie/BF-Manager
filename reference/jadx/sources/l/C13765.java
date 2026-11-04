@@ -1,21 +1,33 @@
 package l;
 
-import java.util.Collections;
 import java.util.Map;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ܰۤ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z9RL */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13765 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f45372 = 0;
+/* JADX INFO: renamed from: l.۬ۢۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V7AU */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C13765 implements Predicate {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C11648 f45373;
+    public final /* synthetic */ long f43691;
 
-    static {
-        Map map = Collections.EMPTY_MAP;
-        f45373 = new C11648();
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((C22455) ((Map.Entry) obj).getValue()).f72672 <= this.f43691;
     }
 }

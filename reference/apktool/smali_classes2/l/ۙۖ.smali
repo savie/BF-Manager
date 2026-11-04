@@ -1,73 +1,20 @@
-.class public final Ll/ۙۖ;
+.class public interface abstract Ll/ۙۖ;
 .super Ljava/lang/Object;
-.source "38CF"
-
-
-# instance fields
-.field public final ۙ:I
-
-.field public final ۨ:I
-
-.field public final ܰ:Ll/ܶ᩶۠;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(IILl/ܶ᩶۠;)V
-    .locals 0
-
-    .line 97
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 98
-    iput p1, p0, Ll/ۙۖ;->ۨ:I
-
-    .line 99
-    iput p2, p0, Ll/ۙۖ;->ۙ:I
-
-    .line 101
-    iput-object p3, p0, Ll/ۙۖ;->ܰ:Ll/ܶ᩶۠;
-
-    return-void
-.end method
+.source "U5F1"
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
-
-    .line 99
-    iget v0, p0, Ll/ۙۖ;->ۙ:I
-
-    return v0
+.method public abstract onNestedPreScroll(Landroid/view/View;II[II)V
 .end method
 
-.method public final ۙ(Z)I
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    .line 179
-    iget p1, p0, Ll/ۙۖ;->ۙ:I
-
-    return p1
-
-    :cond_0
-    iget p1, p0, Ll/ۙۖ;->ۨ:I
-
-    return p1
+.method public abstract onNestedScroll(Landroid/view/View;IIIII)V
 .end method
 
-.method public final ܰ()Ll/ܶ᩶۠;
-    .locals 1
+.method public abstract onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
+.end method
 
-    .line 101
-    iget-object v0, p0, Ll/ۙۖ;->ܰ:Ll/ܶ᩶۠;
+.method public abstract onStartNestedScroll(Landroid/view/View;Landroid/view/View;II)Z
+.end method
 
-    return-object v0
+.method public abstract onStopNestedScroll(Landroid/view/View;I)V
 .end method

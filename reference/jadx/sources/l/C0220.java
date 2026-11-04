@@ -1,23 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8QX */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0220 extends Exception {
+import java.util.function.Predicate;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final boolean f1398;
+/* JADX INFO: renamed from: l.֡ۚ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6H9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C0220 implements Predicate {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f1399;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f1426;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C7648 f1400;
+    public final /* synthetic */ Object f1427;
 
-    public C0220(int i, C7648 c7648, boolean z) {
-        super(C8479.m22141(i, "AudioTrack write failed: "));
-        this.f1398 = z;
-        this.f1399 = i;
-        this.f1400 = c7648;
+    public /* synthetic */ C0220(int i, Object obj) {
+        this.f1426 = i;
+        this.f1427 = obj;
+    }
+
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f1426) {
+            case 0:
+                break;
+            case 1:
+                break;
+        }
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f1426) {
+            case 0:
+                String str = (String) this.f1427;
+                ((C2457) obj).m8286();
+                return "dex-input".equals(str);
+            case 1:
+                return !((C14769) this.f1427).contains((AbstractC22664) obj);
+            default:
+                return ((C24047) obj).f77785 == ((C14106) this.f1427);
+        }
     }
 }

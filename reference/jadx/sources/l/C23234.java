@@ -1,62 +1,38 @@
 package l;
 
-import com.tencent.mm.opensdk.utils.Log;
-import java.util.ArrayList;
-import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
-
-/* JADX INFO: renamed from: l.᩺᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q74D */
+/* JADX INFO: renamed from: l.᩹֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C23234 implements InterfaceC20723, InterfaceC7359, InterfaceC11787 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f75394;
-
-    public /* synthetic */ C23234(int i) {
-        this.f75394 = i;
+public final enum C23234 extends EnumC13820 {
+    public /* synthetic */ C23234() {
+        this("ScriptDataEscapedDash", 22);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m51269(Object obj, ArrayList arrayList, Object obj2, int i, int i2) {
-        C13638.requireNonNull(obj);
-        arrayList.add(obj2);
-        return i + i2;
+    public C23234(String str, int i) {
+        super(str, i, 0);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m51270(String str, String str2, String str3, String str4, ConfigurableProvider configurableProvider) {
-        configurableProvider.addAlgorithm(str, str2);
-        return str3 + str4;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51271(Exception exc, StringBuilder sb, String str) {
-        sb.append(exc.getMessage());
-        Log.e(str, sb.toString());
-    }
-
-    @Override // l.InterfaceC11787
+    @Override // l.EnumC13820
     /* JADX INFO: renamed from: ۙ */
-    public boolean mo10336(int i, int i2, int i3, int i4, int i5) {
-        return false;
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        InterfaceC10430 interfaceC10430 = (InterfaceC10430) obj;
-        switch (this.f75394) {
-            case 2:
-                interfaceC10430.getClass();
-                break;
-            default:
-                interfaceC10430.getClass();
-                break;
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        if (c3952.m12696()) {
+            c13646.m33399(this);
+            c13646.m33401(EnumC13820.f43874);
+            return;
         }
-    }
-
-    @Override // l.InterfaceC20723
-    /* JADX INFO: renamed from: ۙ */
-    public InterfaceC15785 mo4000() {
-        return new C15473();
+        char cM12689 = c3952.m12689();
+        if (cM12689 == 0) {
+            c13646.m33394(this);
+            c13646.m33388((char) 65533);
+            c13646.m33401(EnumC13820.f43863);
+        } else if (cM12689 == '-') {
+            c13646.m33388(cM12689);
+            c13646.m33401(EnumC13820.f43861);
+        } else if (cM12689 == '<') {
+            c13646.m33401(EnumC13820.f43875);
+        } else {
+            c13646.m33388(cM12689);
+            c13646.m33401(EnumC13820.f43863);
+        }
     }
 }

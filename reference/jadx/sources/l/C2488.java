@@ -1,38 +1,28 @@
 package l;
 
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ۖۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: renamed from: l.ۖۜۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W8Q2 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2488 extends AbstractDialogInterfaceOnClickListenerC4973 {
+public final class C2488 {
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC10957 f9889;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C2488 f7960 = new C2488(-9223372036854775807L, -9223372036854775807L, -9223372036854775807L);
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2488(ActivityC10957 activityC10957, ActivityC10957 activityC10958) {
-        super(activityC10958);
-        this.f9889 = activityC10957;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C10098 f7961 = new C10098();
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC4973
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo7624() {
-        String strTrim = m13800().trim();
-        try {
-            if (strTrim.isEmpty()) {
-                throw new NumberFormatException();
-            }
-            int i = Integer.parseInt(strTrim);
-            if (i < 1 || i > 999) {
-                C15829.m37611(R.string.MT_Protector);
-            } else {
-                this.f9889.f37358.m26834(i);
-                m13796();
-            }
-        } catch (NumberFormatException unused) {
-            C15829.m37611(R.string.MT_Protector);
-        }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f7962;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f7963;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f7964;
+
+    public C2488(long j, long j2, long j3) {
+        this.f7963 = j;
+        this.f7962 = j2;
+        this.f7964 = j3;
     }
 }

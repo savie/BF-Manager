@@ -1,21 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ֫ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8459 */
+import java.lang.reflect.Field;
+import sun.misc.Unsafe;
+
+/* JADX INFO: renamed from: l.ۚܶ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: D6OL */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5746 extends C22220 {
+public final class C5746 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1512 f19539;
+    public static final Unsafe f19778;
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
-        this.f19539.f6197.put(c8753.f30086, c8753);
-        super.mo1065(c8753);
-    }
-
-    public C5746(C1512 c1512) {
-        this.f19539 = c1512;
+    static {
+        Field declaredField;
+        try {
+            try {
+                declaredField = Unsafe.class.getDeclaredField("theUnsafe");
+            } catch (NoSuchFieldException unused) {
+                declaredField = Unsafe.class.getDeclaredField("THE_ONE");
+            }
+            declaredField.setAccessible(true);
+            f19778 = (Unsafe) declaredField.get(null);
+        } catch (Exception e) {
+            throw new Error(e);
+        }
     }
 }

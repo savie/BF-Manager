@@ -1,211 +1,59 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.concurrent.atomic.AtomicReference;
-import org.bouncycastle.asn1.BERTags;
-import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩹ۧ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 22T1 */
+/* JADX INFO: renamed from: l.᩷ᩴۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M6WW */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22253 {
+public final class C22253 extends AbstractC11800 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final AtomicReference f72745 = new AtomicReference();
+    public final TextView f71663;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final char[] f72746 = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final TextView f71664;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static MessageDigest m49421() {
-        try {
-            return MessageDigest.getInstance(XMSSKeyParameters.SHA_256);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View f71665;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static MessageDigest m49425() {
-        try {
-            return MessageDigest.getInstance("SHA1");
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11064 f71666;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static MessageDigest m49416() {
-        try {
-            return MessageDigest.getInstance("MD5");
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49417(MessageDigest messageDigest, InputStream inputStream) {
-        AtomicReference atomicReference = f72745;
-        byte[] bArr = (byte[]) atomicReference.getAndSet(null);
-        if (bArr == null) {
-            bArr = new byte[1024];
-        }
-        while (true) {
-            try {
-                int i = inputStream.read(bArr);
-                if (i == -1) {
-                    break;
-                } else {
-                    messageDigest.update(bArr, 0, i);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C22253(C11064 c11064, View view) {
+        super(view);
+        this.f71666 = c11064;
+        C17423.m40911(view);
+        this.f71664 = (TextView) view.findViewById(R.id.title);
+        this.f71663 = (TextView) view.findViewById(R.id.MT_Protector);
+        View viewFindViewById = view.findViewById(R.id.drag);
+        this.f71665 = viewFindViewById;
+        view.setOnClickListener(new View.OnClickListener() { // from class: l.۬᩸ۚ
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view2) {
+                C22253 c22253 = this.f44708;
+                C11064 c11065 = c22253.f71666;
+                int bindingAdapterPosition = c22253.getBindingAdapterPosition();
+                if (bindingAdapterPosition <= 0 || bindingAdapterPosition > c11065.f34897.size()) {
+                    return;
                 }
-            } catch (Throwable th) {
-                while (!atomicReference.compareAndSet(null, bArr) && atomicReference.get() == null) {
-                }
-                if (inputStream != null) {
-                    try {
-                        inputStream.close();
-                    } catch (IOException unused) {
-                    }
-                }
-                throw th;
+                C11064.m27959(c11065, (C0911) c11065.f34897.get(bindingAdapterPosition - 1), false);
             }
-        }
-        while (!atomicReference.compareAndSet(null, bArr) && atomicReference.get() == null) {
-        }
-        try {
-            inputStream.close();
-        } catch (IOException unused2) {
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49419(MessageDigest messageDigest, MessageDigest messageDigest2, InputStream inputStream) {
-        AtomicReference atomicReference = f72745;
-        byte[] bArr = (byte[]) atomicReference.getAndSet(null);
-        if (bArr == null) {
-            bArr = new byte[1024];
-        }
-        while (true) {
-            try {
-                int i = inputStream.read(bArr);
-                if (i == -1) {
-                    break;
+        });
+        viewFindViewById.setOnTouchListener(new View.OnTouchListener() { // from class: l.ۙᩴۚ
+            @Override // android.view.View.OnTouchListener
+            public final boolean onTouch(View view2, MotionEvent motionEvent) {
+                C22253 c22253 = this.f17800;
+                C11064 c11065 = c22253.f71666;
+                if (motionEvent.getActionMasked() != 0 || !C11064.m27970(c11065, c22253.getBindingAdapterPosition())) {
+                    return false;
                 }
-                messageDigest.update(bArr, 0, i);
-                messageDigest2.update(bArr, 0, i);
-            } catch (Throwable th) {
-                while (!atomicReference.compareAndSet(null, bArr) && atomicReference.get() == null) {
-                }
-                if (inputStream != null) {
-                    try {
-                        inputStream.close();
-                    } catch (IOException unused) {
-                    }
-                }
-                throw th;
+                c11065.f34902.m30178(c22253);
+                return false;
             }
-        }
-        while (!atomicReference.compareAndSet(null, bArr) && atomicReference.get() == null) {
-        }
-        try {
-            inputStream.close();
-        } catch (IOException unused2) {
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m49418(MessageDigest messageDigest, String str) {
-        int length = str.length();
-        for (int i = 0; i < length; i++) {
-            char cCharAt = str.charAt(i);
-            if (cCharAt != 0 && cCharAt < 128) {
-                messageDigest.update((byte) cCharAt);
-            } else if (cCharAt < 2048) {
-                messageDigest.update((byte) (((cCharAt >> 6) & 31) | 192));
-                messageDigest.update((byte) ((cCharAt & '?') | 128));
-            } else {
-                messageDigest.update((byte) (((cCharAt >> '\f') & 15) | BERTags.FLAGS));
-                messageDigest.update((byte) (((cCharAt >> 6) & 63) | 128));
-                messageDigest.update((byte) ((cCharAt & '?') | 128));
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m49424(byte[] bArr) {
-        char[] cArr = new char[bArr.length * 2];
-        int i = 0;
-        for (byte b : bArr) {
-            int i2 = i + 1;
-            char[] cArr2 = f72746;
-            cArr[i] = cArr2[(b >>> 4) & 15];
-            i += 2;
-            cArr[i2] = cArr2[b & 15];
-        }
-        return new String(cArr);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static byte[] m49422(String str) {
-        int length = str.length();
-        if (length % 2 != 0) {
-            throw new IllegalArgumentException("Hex string length is not even.");
-        }
-        byte[] bArr = new byte[length / 2];
-        for (int i = 0; i < length; i += 2) {
-            int iDigit = Character.digit(str.charAt(i), 16);
-            int iDigit2 = Character.digit(str.charAt(i + 1), 16);
-            if (iDigit == -1 || iDigit2 == -1) {
-                throw new IllegalArgumentException("Invalid hex digit in input.");
-            }
-            bArr[i / 2] = (byte) ((iDigit << 4) + iDigit2);
-        }
-        return bArr;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String m49420(byte[] bArr) {
-        char[] cArr = new char[(bArr.length * 3) - 1];
-        int i = 0;
-        for (byte b : bArr) {
-            if (i > 0) {
-                cArr[i] = ':';
-                i++;
-            }
-            int i2 = i + 1;
-            char[] cArr2 = f72746;
-            cArr[i] = cArr2[(b >>> 4) & 15];
-            i += 2;
-            cArr[i2] = cArr2[b & 15];
-        }
-        return new String(cArr);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m49414(String str) {
-        MessageDigest messageDigestM49416 = m49416();
-        int length = str.length();
-        for (int i = 0; i < length; i++) {
-            messageDigestM49416.update((byte) (str.charAt(i) & 255));
-        }
-        return m49424(messageDigestM49416.digest());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m49415(byte[] bArr) {
-        MessageDigest messageDigestM49416 = m49416();
-        messageDigestM49416.update(bArr);
-        return m49424(messageDigestM49416.digest());
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m49423(String str) {
-        MessageDigest messageDigestM49416 = m49416();
-        messageDigestM49416.update(str.getBytes(StandardCharsets.UTF_8));
-        return m49424(messageDigestM49416.digest());
+        });
     }
 }

@@ -1,49 +1,66 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.os.SystemClock;
+import com.alipay.sdk.m.y.c;
+import com.tencent.mm.opensdk.modelmsg.WXNativeGamePageObject;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩸ۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: P71B */
+/* JADX INFO: renamed from: l.᩶ۨᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0N4 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21298 extends AbstractC17535 {
+public final class C21298 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C3658 f69307;
+    public static final C24720 f67908 = C24720.m55194(1000);
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22710 f69308;
-
-    public C21298(C22710 c22710, C3658 c3658) {
-        this.f69308 = c22710;
-        this.f69307 = c3658;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C21298)) {
-            return false;
-        }
-        C21298 c21298 = (C21298) obj;
-        return C13638.equals(this.f69308, c21298.f69308) && C13638.equals(this.f69307, c21298.f69307);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f69307) + (C13638.hashCode(this.f69308) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f69308, this.f69307};
-        String[] strArrSplit = "rest;extent".length() == 0 ? new String[0] : "rest;extent".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C21298.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m48534(InputStream inputStream, OutputStream outputStream, long j, InterfaceC23711 interfaceC23711) {
+        long j2;
+        C3639 c3639M11788 = C3639.m11788(interfaceC23711);
+        try {
+            byte[] bArr = new byte[WXNativeGamePageObject.LENGTH_LIMIT];
+            long jUptimeMillis = SystemClock.uptimeMillis();
+            long j3 = 0;
+            long j4 = 0;
+            while (true) {
+                int i = inputStream.read(bArr, 0, WXNativeGamePageObject.LENGTH_LIMIT);
+                if (i == -1) {
+                    if (c3639M11788 != null) {
+                        c3639M11788.mo11791();
+                        return;
+                    }
+                    return;
+                }
+                outputStream.write(bArr, 0, i);
+                long j5 = ((long) i) + j3;
+                if (c3639M11788 != null) {
+                    long jUptimeMillis2 = SystemClock.uptimeMillis();
+                    if (jUptimeMillis2 - jUptimeMillis < c.a || !f67908.m55199()) {
+                        j2 = jUptimeMillis;
+                    } else {
+                        c3639M11788.mo11789();
+                        j2 = jUptimeMillis2;
+                    }
+                    long jMin = outputStream instanceof InterfaceC16251 ? Math.min(j5, Math.max(j4, ((InterfaceC16251) outputStream).mo29367())) : j5;
+                    if (jMin > j4) {
+                        c3639M11788.mo11790(jMin - j4, jMin, Math.max(j5, j));
+                        j4 = jMin;
+                    }
+                    if (c3639M11788.f12461.mo924()) {
+                        c3639M11788.mo11791();
+                        return;
+                    }
+                    jUptimeMillis = j2;
+                }
+                j3 = j5;
             }
+        } catch (Throwable th) {
+            if (c3639M11788 != null) {
+                c3639M11788.mo11791();
+            }
+            throw th;
         }
-        sb.append("]");
-        return sb.toString();
     }
 }

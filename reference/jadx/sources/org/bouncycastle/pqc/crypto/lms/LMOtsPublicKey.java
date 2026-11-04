@@ -3,7 +3,7 @@ package org.bouncycastle.pqc.crypto.lms;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.InputStream;
-import l.C9023;
+import l.C14483;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Encodable;
@@ -98,7 +98,7 @@ public class LMOtsPublicKey implements Encodable {
             if (obj instanceof InputStream) {
                 return getInstance(Streams.readAll((InputStream) obj));
             }
-            throw new IllegalArgumentException(C9023.m23354(obj, "cannot parse "));
+            throw new IllegalArgumentException(C14483.m34971("cannot parse ", obj));
         }
         DataInputStream dataInputStream2 = null;
         try {

@@ -1,31 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬᩸᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 99PI */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13391 extends Exception {
-    public static final long serialVersionUID = 5750205775490483148L;
+/* JADX INFO: renamed from: l.۫᩸ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T65P */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13391 extends AbstractC2205 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC1332 f44342;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3696 f42681;
 
-    public /* synthetic */ C13391(AbstractC10569 abstractC10569, String str, int i) {
-        this(abstractC10569, str);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C13391(C3696 c3696, int i) {
+        super(c3696, i);
+        this.f42681 = c3696;
     }
 
-    public C13391(AbstractC10569 abstractC10569, String str) {
-        super(abstractC10569.mo8523() + ": " + str);
-        abstractC10569.mo8523();
-        this.f44342 = abstractC10569.mo8524();
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo7529() {
+        return ((long) this.f42681.mo8725(this.f7244 + 12)) & 4294967295L;
     }
 
-    public C13391(AbstractC10569 abstractC10569, String str, Exception exc) {
-        this(abstractC10569, str);
-        initCause(exc);
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo7533() {
+        return this.f42681.mo8719(this.f7244 + 16);
     }
 
-    public C13391(C9158 c9158, String str) {
-        super(c9158.getName() + ": " + str);
-        c9158.getName();
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo7531() {
+        return this.f42681.mo8719(this.f7244 + 20);
+    }
+
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo7530() {
+        return this.f42681.mo8719(this.f7244 + 24);
+    }
+
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo7532() {
+        return this.f42681.mo8719(this.f7244 + 36);
     }
 }

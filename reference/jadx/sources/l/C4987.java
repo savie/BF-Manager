@@ -1,23 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩻᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 32SL */
-/* JADX INFO: loaded from: classes2.dex */
-public class C4987 extends Exception {
-    public C4987(int i) {
-        super(C16737.m39288(i));
+import java.util.EnumSet;
+
+/* JADX INFO: renamed from: l.ۙܶۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4987 extends AbstractC14681 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11172 f17328;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4987(C11172 c11172, AbstractC19728 abstractC19728, EnumC3539 enumC3539, EnumSet enumSet) {
+        super(c11172, abstractC19728, enumC3539, enumSet);
+        this.f17328 = c11172;
     }
 
-    @Override // java.lang.Throwable
-    public synchronized C4987 initCause(Throwable th) {
-        super.initCause(th);
-        return this;
-    }
-
-    @Override // java.lang.Throwable
-    public String toString() {
-        String name = Exception.class.getName();
-        String localizedMessage = getLocalizedMessage();
-        return localizedMessage != null ? C1679.m5594(name, ": ", localizedMessage) : name;
+    @Override // l.AbstractC14681
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2564(int i, AbstractC11781 abstractC11781) {
+        this.f17328.m28132(abstractC11781);
     }
 }

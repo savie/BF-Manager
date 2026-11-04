@@ -1,33 +1,16 @@
 package l;
 
-import android.content.DialogInterface;
-
-/* JADX INFO: renamed from: l.ܽۛۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 964K */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16450 implements InterfaceC10597 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f52893;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f52894;
-
-    public /* synthetic */ C16450(int i, Object obj) {
-        this.f52893 = i;
-        this.f52894 = obj;
-    }
-
-    @Override // l.InterfaceC10597
+/* JADX INFO: renamed from: l.ܶ᩻᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6HM */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16450 extends AbstractC15462 {
+    @Override // l.AbstractC15462
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1473(Object obj) {
-        switch (this.f52893) {
-            case 0:
-                ((DialogInterfaceOnClickListenerC8128) this.f52894).m21417();
-                break;
-            default:
-                ((ActivityC5677) this.f52894).m31002((Throwable) obj, (DialogInterface.OnDismissListener) null);
-                break;
-        }
+    public final void mo3186(C11975 c11975, int i, C12479 c12479) {
+        int[] iArrM30061 = c11975.m30061();
+        iArrM30061[0] = AbstractC15462.m37018(i);
+        int iM31000 = c12479.m31000();
+        iArrM30061[1] = iM31000 & 255;
+        iArrM30061[2] = AbstractC15462.m37018(iM31000);
     }
 }

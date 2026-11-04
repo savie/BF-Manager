@@ -1,77 +1,178 @@
 .class public final Ll/ۚ֨ۙ;
-.super Ll/۬֨ۙ;
-.source "J4LB"
+.super Ljava/lang/Object;
+.source "08N4"
 
-
-# instance fields
-.field public final synthetic ۖ:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic ۙ:Ll/᩺֨ۙ;
-
-.field public final synthetic ۚ:Ll/ۨ۠;
-
-.field public final synthetic ۨ:Ll/ܺۖ;
-
-.field public final synthetic ܰ:Ll/ۘۖ;
+# interfaces
+.implements Ll/֨ۢۙ;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩺֨ۙ;Ll/ۨ۠;Ljava/util/concurrent/atomic/AtomicReference;Ll/ܺۖ;Ll/ۘۖ;)V
+.method public static ۙ(Ll/ܿܶۙ;Z)Landroid/media/AudioAttributes;
     .locals 0
 
-    .line 3595
-    iput-object p1, p0, Ll/ۚ֨ۙ;->ۙ:Ll/᩺֨ۙ;
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Ll/ۚ֨ۙ;->ۚ:Ll/ۨ۠;
+    .line 121
+    new-instance p0, Landroid/media/AudioAttributes$Builder;
 
-    iput-object p3, p0, Ll/ۚ֨ۙ;->ۖ:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    iput-object p4, p0, Ll/ۚ֨ۙ;->ۨ:Ll/ܺۖ;
+    const/4 p1, 0x3
 
-    iput-object p5, p0, Ll/ۚ֨ۙ;->ܰ:Ll/ۘۖ;
+    .line 122
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
-    const/4 p1, 0x0
+    move-result-object p0
 
-    invoke-direct {p0, p1}, Ll/۬֨ۙ;-><init>(I)V
+    const/16 p1, 0x10
 
-    return-void
+    .line 123
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p0
+
+    const/4 p1, 0x1
+
+    .line 124
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p0
+
+    .line 125
+    invoke-virtual {p0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 116
+    :cond_0
+    invoke-virtual {p0}, Ll/ܿܶۙ;->ۙ()Ll/᩶ܶۙ;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ll/᩶ܶۙ;->ۙ:Landroid/media/AudioAttributes;
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final ۙ()V
-    .locals 5
+.method public final ۙ(Ll/ܳۢۙ;Ll/ܿܶۙ;ILandroid/content/Context;)Landroid/media/AudioTrack;
+    .locals 6
 
-    .line 3598
-    iget-object v0, p0, Ll/ۚ֨ۙ;->ۙ:Ll/᩺֨ۙ;
+    .line 45
+    iget-boolean v0, p1, Ll/ܳۢۙ;->ܳ:Z
 
-    invoke-virtual {v0}, Ll/᩺֨ۙ;->generateActivityResultKey()Ljava/lang/String;
+    iget v1, p1, Ll/ܳۢۙ;->ۤ:I
+
+    iget v2, p1, Ll/ܳۢۙ;->᩷:I
+
+    iget v3, p1, Ll/ܳۢۙ;->ᩴ:I
+
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x17
+
+    if-lt v4, v5, :cond_2
+
+    .line 59
+    invoke-static {v3, v2, v1}, Ll/ۜۨۙ;->᩷(III)Landroid/media/AudioFormat;
 
     move-result-object v1
 
-    .line 3599
-    iget-object v2, p0, Ll/ۚ֨ۙ;->ۚ:Ll/ۨ۠;
+    .line 62
+    invoke-static {p2, v0}, Ll/ۚ֨ۙ;->ۙ(Ll/ܿܶۙ;Z)Landroid/media/AudioAttributes;
 
-    const/4 v3, 0x0
+    move-result-object p2
 
-    invoke-interface {v2, v3}, Ll/ۨ۠;->ۙ(Ll/᩷۠ۚ;)Ljava/lang/Object;
+    .line 63
+    new-instance v0, Landroid/media/AudioTrack$Builder;
+
+    invoke-direct {v0}, Landroid/media/AudioTrack$Builder;-><init>()V
+
+    .line 65
+    invoke-virtual {v0, p2}, Landroid/media/AudioTrack$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/AudioTrack$Builder;
+
+    move-result-object p2
+
+    .line 66
+    invoke-virtual {p2, v1}, Landroid/media/AudioTrack$Builder;->setAudioFormat(Landroid/media/AudioFormat;)Landroid/media/AudioTrack$Builder;
+
+    move-result-object p2
+
+    const/4 v0, 0x1
+
+    .line 67
+    invoke-virtual {p2, v0}, Landroid/media/AudioTrack$Builder;->setTransferMode(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object p2
+
+    iget v0, p1, Ll/ܳۢۙ;->ۙ:I
+
+    .line 68
+    invoke-virtual {p2, v0}, Landroid/media/AudioTrack$Builder;->setBufferSizeInBytes(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object p2
+
+    .line 69
+    invoke-virtual {p2, p3}, Landroid/media/AudioTrack$Builder;->setSessionId(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object p2
+
+    const/16 p3, 0x1d
+
+    if-lt v4, p3, :cond_0
+
+    .line 71
+    iget-boolean p1, p1, Ll/ܳۢۙ;->᩸:Z
+
+    .line 81
+    invoke-virtual {p2, p1}, Landroid/media/AudioTrack$Builder;->setOffloadedPlayback(Z)Landroid/media/AudioTrack$Builder;
+
+    :cond_0
+    const/16 p1, 0x22
+
+    if-lt v4, p1, :cond_1
+
+    if-eqz p4, :cond_1
+
+    .line 74
+    invoke-virtual {p2, p4}, Landroid/media/AudioTrack$Builder;->setContext(Landroid/content/Context;)Landroid/media/AudioTrack$Builder;
+
+    .line 76
+    :cond_1
+    invoke-virtual {p2}, Landroid/media/AudioTrack$Builder;->build()Landroid/media/AudioTrack;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 102
+    :cond_2
+    new-instance p4, Landroid/media/AudioTrack;
+
+    .line 103
+    invoke-static {p2, v0}, Ll/ۚ֨ۙ;->ۙ(Ll/ܿܶۙ;Z)Landroid/media/AudioAttributes;
+
+    move-result-object p2
+
+    .line 104
+    invoke-static {v3, v2, v1}, Ll/ۜۨۙ;->᩷(III)Landroid/media/AudioFormat;
 
     move-result-object v2
 
-    check-cast v2, Ll/۠ۖ;
+    iget v3, p1, Ll/ܳۢۙ;->ۙ:I
 
-    .line 3600
-    iget-object v3, p0, Ll/ۚ֨ۙ;->ۨ:Ll/ܺۖ;
+    const/4 v4, 0x1
 
-    iget-object v4, p0, Ll/ۚ֨ۙ;->ܰ:Ll/ۘۖ;
+    move-object v0, p4
 
-    invoke-virtual {v2, v1, v0, v3, v4}, Ll/۠ۖ;->ۙ(Ljava/lang/String;Ll/֨᩺ۙ;Ll/ܺۖ;Ll/ۘۖ;)Ll/ۜۖ;
+    move-object v1, p2
 
-    move-result-object v0
+    move v5, p3
 
-    iget-object v1, p0, Ll/ۚ֨ۙ;->ۖ:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct/range {v0 .. v5}, Landroid/media/AudioTrack;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;III)V
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    return-void
+    return-object p4
 .end method

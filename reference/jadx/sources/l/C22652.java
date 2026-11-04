@@ -1,63 +1,67 @@
 package l;
 
-import android.app.ActivityManager;
-import android.os.Build;
-import android.os.Process;
-import bin.mt.plus.Features;
-import net.sf.sevenzipjbinding.SevenZip;
-import org.bouncycastle.crypto.digests.Blake2xsDigest;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩺֨ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T731 */
+/* JADX INFO: renamed from: l.᩸۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J766 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22652 implements SevenZip.ExtractMemoryUsageProvider {
+public final class C22652 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C22652 f73798 = new C22652();
+    public final String f73562;
 
-    @Override // net.sf.sevenzipjbinding.SevenZip.ExtractMemoryUsageProvider
-    public final long getExtractMemoryUsage() {
-        boolean zIs64Bit;
-        long j;
-        ActivityManager activityManager = (ActivityManager) C16737.f53614.getSystemService("activity");
-        if (activityManager == null) {
-            return 268435456L;
-        }
-        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
-        activityManager.getMemoryInfo(memoryInfo);
-        boolean zIsLowRamDevice = activityManager.isLowRamDevice();
-        if (Build.VERSION.SDK_INT >= 23) {
-            zIs64Bit = Process.is64Bit();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f73563;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f73564;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f73565;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f73566;
+
+    public C22652(JSONObject jSONObject) {
+        List listUnmodifiableList;
+        String string = jSONObject.getString("itemKind", "");
+        C10717.m27304(string);
+        this.f73562 = string;
+        this.f73566 = jSONObject.getInt("offset", 0);
+        this.f73563 = jSONObject.getInt("limit", 0);
+        this.f73564 = jSONObject.getInt("totalCount", 0);
+        JSONArray jSONArray = jSONObject.getJSONArray("items");
+        if (jSONArray == null || jSONArray.isEmpty()) {
+            listUnmodifiableList = Collections.EMPTY_LIST;
         } else {
-            String abi = Features.getABI();
-            zIs64Bit = "arm64-v8a".equals(abi) || "x86_64".equals(abi);
+            ArrayList arrayList = new ArrayList(jSONArray.size());
+            for (int i = 0; i < jSONArray.size(); i++) {
+                JSONObject jSONObject2 = jSONArray.getJSONObject(i);
+                if ("neededLibraries".equals(string)) {
+                    arrayList.add(C19668.m45338(jSONObject2));
+                } else if ("sections".equals(string) || "segments".equals(string)) {
+                    arrayList.add(C5498.m16325(jSONObject2));
+                } else if ("imports".equals(string)) {
+                    arrayList.add(C13482.m33161(jSONObject2));
+                } else if ("symbols".equals(string) || "entries".equals(string)) {
+                    arrayList.add(C17430.m40932(jSONObject2));
+                } else if ("initArray".equals(string) || "finiArray".equals(string)) {
+                    arrayList.add(C4752.m14649(jSONObject2));
+                } else {
+                    arrayList.add(C15192.m36542(jSONObject2));
+                }
+            }
+            listUnmodifiableList = C4681.unmodifiableList(arrayList);
         }
-        long j2 = memoryInfo.totalMem;
-        long j3 = memoryInfo.availMem;
-        long j4 = memoryInfo.threshold;
-        boolean z = memoryInfo.lowMemory;
-        long jMax = Math.max(0L, j2);
-        long jMax2 = Math.max(0L, j3);
-        long jMax3 = Math.max(0L, j4);
-        long j5 = zIsLowRamDevice ? 268435456L : 134217728L;
-        long j6 = jMax2 > jMax3 ? jMax2 - jMax3 : 0L;
-        long j7 = j6 > j5 ? j6 - j5 : 0L;
-        long jMin = Math.min(j7, Math.min(jMax / 8, 1073741824L));
-        long j8 = C17492.FOREVER_NS;
-        if (j7 <= C17492.FOREVER_NS - jMin) {
-            j8 = j7 + jMin;
-        }
-        if (zIsLowRamDevice) {
-            j = 536870912;
-        } else if (jMax <= Blake2xsDigest.MAX_NUMBER_BLOCKS) {
-            j = 805306368;
-        } else {
-            j = jMax <= 6442450944L ? 1342177280L : 2415919104L;
-        }
-        long jMin2 = Math.min(j8, Math.min(j, zIs64Bit ? 2415919104L : 805306368L));
-        if (z) {
-            jMin2 = Math.min(jMin2, 268435456L);
-        }
-        return (jMin2 / 1048576) * 1048576;
+        this.f73565 = listUnmodifiableList;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C22652 m51051(JSONObject jSONObject) {
+        return new C22652(jSONObject);
     }
 }

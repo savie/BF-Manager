@@ -1,33 +1,25 @@
 package l;
 
-import android.widget.CompoundButton;
 import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۙܿ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5PI */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C4798 implements CompoundButton.OnCheckedChangeListener {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f16861;
-
-    public /* synthetic */ C4798(int i) {
-        this.f16861 = i;
-    }
-
-    @Override // android.widget.CompoundButton.OnCheckedChangeListener
-    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
-        switch (this.f16861) {
-            case 0:
-                C1679.m5597(ApplicationC0716.f2992, "dfrwn", z);
-                break;
-            default:
-                if (z) {
-                    if (!ApplicationC0716.f2992.getBoolean("forbid_tip_".concat("multi_threaded_transfer"), false)) {
-                        DialogInterfaceOnClickListenerC14147.m34222(R.string.MT_Protector, (AbstractActivityC12483) C8703.m22527(compoundButton.getContext()), "multi_threaded_transfer");
-                    }
-                }
-                break;
+/* JADX INFO: renamed from: l.ۙۡܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 37CJ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4798 extends AbstractDialogInterfaceOnClickListenerC8552 {
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        String strTrim = m22914().trim();
+        if (!strTrim.isEmpty()) {
+            if (C19518.m45051(-1, strTrim)) {
+                m22952(R.string.MT_Protector);
+                return;
+            } else {
+                C19518.m45045(strTrim);
+                m22951();
+                return;
+            }
         }
+        m22951();
     }
 }

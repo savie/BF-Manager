@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:I
 
-.field public final ܰ:[B
+.field public final ᩷:[B
 
 
 # direct methods
@@ -17,7 +17,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
-    iput-object p1, p0, Lcom/amazonaws/auth/ChunkContentIterator;->ܰ:[B
+    iput-object p1, p0, Lcom/amazonaws/auth/ChunkContentIterator;->᩷:[B
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     .line 36
     :cond_1
-    iget-object v0, p0, Lcom/amazonaws/auth/ChunkContentIterator;->ܰ:[B
+    iget-object v0, p0, Lcom/amazonaws/auth/ChunkContentIterator;->᩷:[B
 
     array-length v1, v0
 
@@ -81,7 +81,7 @@
     .line 28
     iget v0, p0, Lcom/amazonaws/auth/ChunkContentIterator;->ۙ:I
 
-    iget-object v1, p0, Lcom/amazonaws/auth/ChunkContentIterator;->ܰ:[B
+    iget-object v1, p0, Lcom/amazonaws/auth/ChunkContentIterator;->᩷:[B
 
     array-length v1, v1
 

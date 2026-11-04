@@ -1,28 +1,29 @@
 package l;
 
-import java.util.function.Predicate;
-
-/* JADX INFO: renamed from: l.ܶܽۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F416 */
+/* JADX INFO: renamed from: l.ܳ۫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8ML */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15354 implements Predicate {
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+public final class C15354 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public long f50110 = -9223372036854775807L;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f50111 = -9223372036854775807L;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m36796() {
+        return this.f50110;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        return C8512.$default$negate(this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m36797() {
+        return this.f50111;
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        return ((AbstractC16579) obj).m39001(EnumC6617.UNDETVAR);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m36793(C15354 c15354) {
+        c15354.f50110 = -9223372036854775807L;
+        c15354.f50111 = -9223372036854775807L;
     }
 }

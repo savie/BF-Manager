@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/ArrayList;
+.field public ܰ:Ljava/util/ArrayList;
 
 .field public ᩶:Ljava/util/ArrayList;
 
@@ -30,7 +30,7 @@
     if-eqz p1, :cond_1
 
     .line 480
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܰ:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
@@ -39,11 +39,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܺ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܰ:Ljava/util/ArrayList;
 
     .line 483
     :cond_0
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketLifecycleConfiguration$Rule;->ܰ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

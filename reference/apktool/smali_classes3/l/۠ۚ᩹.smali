@@ -1,130 +1,186 @@
-.class public final synthetic Ll/۠ۚ᩹;
-.super Ljava/lang/Object;
-.source "D6KU"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.class public final enum Ll/۠ۚ᩹;
+.super Ljava/lang/Enum;
+.source "U4HR"
 
 
-# instance fields
-.field public final synthetic ֡:Z
+# static fields
+.field public static final enum ֡:Ll/۠ۚ᩹;
 
-.field public final synthetic ܺ:Ll/ᩴۚ᩹;
+.field public static final enum ۟:Ll/۠ۚ᩹;
 
-.field public final synthetic ᩶:Ljava/lang/String;
+.field public static final enum ۢ:Ll/۠ۚ᩹;
+
+.field public static final synthetic ܰ:[Ll/۠ۚ᩹;
+
+.field public static final enum ܿ:Ll/۠ۚ᩹;
+
+.field public static final enum ᩳ:Ll/۠ۚ᩹;
+
+.field public static final enum ᩶:Ll/۠ۚ᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ᩴۚ᩹;Ljava/lang/String;Z)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 391
+    new-instance v0, Ll/۠ۚ᩹;
 
-    iput-object p1, p0, Ll/۠ۚ᩹;->ܺ:Ll/ᩴۚ᩹;
+    const-string v1, "Doctype"
 
-    iput-object p2, p0, Ll/۠ۚ᩹;->᩶:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-boolean p3, p0, Ll/۠ۚ᩹;->֡:Z
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->֡:Ll/۠ۚ᩹;
+
+    .line 392
+    new-instance v0, Ll/۠ۚ᩹;
+
+    const-string v1, "StartTag"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->ۢ:Ll/۠ۚ᩹;
+
+    .line 393
+    new-instance v0, Ll/۠ۚ᩹;
+
+    const-string v1, "EndTag"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->ᩳ:Ll/۠ۚ᩹;
+
+    .line 394
+    new-instance v0, Ll/۠ۚ᩹;
+
+    const-string v1, "Comment"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->ܿ:Ll/۠ۚ᩹;
+
+    .line 395
+    new-instance v0, Ll/۠ۚ᩹;
+
+    const-string v1, "Character"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->᩶:Ll/۠ۚ᩹;
+
+    .line 396
+    new-instance v0, Ll/۠ۚ᩹;
+
+    const-string v1, "EOF"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Ll/۠ۚ᩹;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/۠ۚ᩹;->۟:Ll/۠ۚ᩹;
+
+    .line 390
+    invoke-static {}, Ll/۠ۚ᩹;->ۙ()[Ll/۠ۚ᩹;
+
+    move-result-object v0
+
+    sput-object v0, Ll/۠ۚ᩹;->ܰ:[Ll/۠ۚ᩹;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 390
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public synthetic negate()Ljava/util/function/Predicate;
+.method public static valueOf(Ljava/lang/String;)Ll/۠ۚ᩹;
     .locals 1
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 390
+    const-class v0, Ll/۠ۚ᩹;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/۠ۚ᩹;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/۠ۚ᩹;
+    .locals 1
+
+    .line 390
+    sget-object v0, Ll/۠ۚ᩹;->ܰ:[Ll/۠ۚ᩹;
+
+    invoke-virtual {v0}, [Ll/۠ۚ᩹;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Ll/۠ۚ᩹;
 
     return-object v0
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
+.method public static synthetic ۙ()[Ll/۠ۚ᩹;
     .locals 3
 
-    .line 2
-    check-cast p1, Ll/ۡۚ᩹;
+    const/4 v0, 0x6
 
-    .line 50
-    invoke-static {p1}, Ll/ۡۚ᩹;->ܰ(Ll/ۡۚ᩹;)Ljava/lang/String;
+    new-array v0, v0, [Ll/۠ۚ᩹;
 
-    move-result-object v0
+    .line 390
+    sget-object v1, Ll/۠ۚ᩹;->֡:Ll/۠ۚ᩹;
 
-    iget-object v1, p0, Ll/۠ۚ᩹;->ܺ:Ll/ᩴۚ᩹;
+    const/4 v2, 0x0
 
-    iget-object v2, v1, Ll/ᩴۚ᩹;->ۨ:Ljava/lang/String;
+    aput-object v1, v0, v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v1, Ll/۠ۚ᩹;->ۢ:Ll/۠ۚ᩹;
 
-    move-result v0
+    const/4 v2, 0x1
 
-    if-eqz v0, :cond_1
+    aput-object v1, v0, v2
 
-    invoke-static {p1}, Ll/ۡۚ᩹;->ۙ(Ll/ۡۚ᩹;)Ljava/lang/String;
+    sget-object v1, Ll/۠ۚ᩹;->ᩳ:Ll/۠ۚ᩹;
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    .line 51
-    iget-object v2, p0, Ll/۠ۚ᩹;->᩶:Ljava/lang/String;
+    aput-object v1, v0, v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v1, Ll/۠ۚ᩹;->ܿ:Ll/۠ۚ᩹;
 
-    move-result v0
+    const/4 v2, 0x3
 
-    if-nez v0, :cond_0
+    aput-object v1, v0, v2
 
-    iget-boolean v0, p0, Ll/۠ۚ᩹;->֡:Z
+    sget-object v1, Ll/۠ۚ᩹;->᩶:Ll/۠ۚ᩹;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x4
 
-    invoke-static {p1}, Ll/ۡۚ᩹;->ۙ(Ll/ۡۚ᩹;)Ljava/lang/String;
+    aput-object v1, v0, v2
 
-    move-result-object p1
+    sget-object v1, Ll/۠ۚ᩹;->۟:Ll/۠ۚ᩹;
 
-    .line 52
-    invoke-virtual {v1, p1}, Ll/ᩴۚ᩹;->ۙ(Ljava/lang/String;)I
+    const/4 v2, 0x5
 
-    move-result p1
+    aput-object v1, v0, v2
 
-    invoke-virtual {v1, v2}, Ll/ᩴۚ᩹;->ۙ(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-le p1, v0, :cond_1
-
-    :cond_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method

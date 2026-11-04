@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.util;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class Pack {
     public static int bigEndianToInt(byte[] bArr, int i) {
         return (bArr[i + 3] & 255) | (bArr[i] << 24) | ((bArr[i + 1] & 255) << 16) | ((bArr[i + 2] & 255) << 8);

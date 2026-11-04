@@ -1,11 +1,16 @@
-.class public interface abstract Ll/ۗۡ᩵;
-.super Ljava/lang/Object;
-.source "64JA"
-
-# interfaces
-.implements Ll/᩸ᩴ᩵;
+.class public final Ll/ۗۡ᩵;
+.super Ljava/lang/ThreadLocal;
+.source "PAX3"
 
 
 # virtual methods
-.method public abstract ۙ(Ll/ۢۡ᩵;)V
+.method public final initialValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 53
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    return-object v0
 .end method

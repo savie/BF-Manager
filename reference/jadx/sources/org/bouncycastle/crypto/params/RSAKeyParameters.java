@@ -6,7 +6,7 @@ import org.bouncycastle.math.Primes;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKeyParameters extends AsymmetricKeyParameter {
     public BigInteger exponent;
     public BigInteger modulus;

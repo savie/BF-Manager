@@ -1,102 +1,125 @@
-.class public final enum Ll/ܿۘܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ܿۘܶ;
+.super Ljava/lang/Object;
+.source "NAGW"
+
+
+# instance fields
+.field public ۙ:J
+
+.field public final ᩷:[B
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    const-string v0, "FORMAT_22CS"
+    .line 34
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x12
+    const/4 v0, 0x4
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ܿۘܶ;-><init>(Ljava/lang/String;I)V
+    new-array v0, v0, [B
+
+    .line 30
+    iput-object v0, p0, Ll/ܿۘܶ;->᩷:[B
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 2
 
-    const/4 v0, 0x0
+    .line 37
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 421
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    const/4 p1, 0x4
+
+    new-array p1, p1, [B
+
+    .line 30
+    iput-object p1, p0, Ll/ܿۘܶ;->᩷:[B
+
+    const-wide/16 v0, 0x0
+
+    .line 38
+    iput-wide v0, p0, Ll/ܿۘܶ;->ۙ:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 9
-
-    .line 425
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
-
-    move-result v2
-
-    .line 426
-    invoke-static {p1}, Ll/۟ۜܶ;->֨(I)I
-
-    move-result v7
-
-    .line 427
-    invoke-static {p1}, Ll/۟ۜܶ;->۬(I)I
-
-    move-result v8
-
-    .line 428
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
-
-    move-result v3
-
-    .line 429
-    new-instance p1, Ll/ۛۜܶ;
-
-    sget-object p2, Ll/۬ۘܶ;->ۗ:Ll/۬ۘܶ;
-
-    const/4 v4, 0x0
-
-    const-wide/16 v5, 0x0
-
-    move-object v0, p1
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v8}, Ll/ۛۜܶ;-><init>(Ll/۟ۜܶ;IIIJII)V
-
-    return-object p1
-.end method
-
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
+.method public final ۙ()J
     .locals 2
 
-    .line 438
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    .line 57
+    iget-wide v0, p0, Ll/ܿۘܶ;->ۙ:J
 
-    move-result v0
+    return-wide v0
+.end method
 
-    .line 439
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۙ()I
+.method public final ۙ(Ll/᩶ۘܶ;)Ljava/lang/String;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 90
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩷()B
 
     move-result v1
 
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܰ()I
+    iget-object v2, p0, Ll/ܿۘܶ;->᩷:[B
 
-    move-result p1
+    aput-byte v1, v2, v0
 
-    invoke-static {v1, p1}, Ll/۟ۜܶ;->ۨ(II)I
+    const/4 v0, 0x1
 
-    move-result p1
+    .line 91
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩷()B
 
-    .line 438
-    invoke-static {v0, p1}, Ll/۟ۜܶ;->ܰ(II)S
+    move-result v1
 
-    .line 437
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ܶ()V
+    aput-byte v1, v2, v0
 
-    return-void
+    const/4 v0, 0x2
+
+    .line 92
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩷()B
+
+    move-result v1
+
+    aput-byte v1, v2, v0
+
+    const/4 v0, 0x3
+
+    .line 93
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩷()B
+
+    move-result v1
+
+    aput-byte v1, v2, v0
+
+    const-wide/16 v0, 0x4
+
+    .line 94
+    invoke-virtual {p1, v0, v1}, Ll/᩶ۘܶ;->᩷(J)V
+
+    .line 95
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩸()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ll/ܿۘܶ;->ۙ:J
+
+    .line 96
+    invoke-virtual {p1}, Ll/᩶ۘܶ;->᩸()J
+
+    .line 97
+    new-instance p1, Ljava/lang/String;
+
+    const-string v0, "ISO-8859-1"
+
+    invoke-direct {p1, v2, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    return-object p1
 .end method

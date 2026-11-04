@@ -1,19 +1,137 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ᩸ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 722P */
-/* JADX INFO: loaded from: classes4.dex */
-public class C19021 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C18315 m43742(AbstractC5749 abstractC5749) {
-        C18315 c18315 = new C18315();
-        c18315.f58419 = (InterfaceC8438) abstractC5749.m15821(c18315.f58419);
-        return c18315;
+import com.alipay.sdk.m.y.q;
+import java.io.DataInputStream;
+import moe.shizuku.server.IShizukuService;
+import org.bouncycastle.crypto.engines.ThreefishEngine;
+
+/* JADX INFO: renamed from: l.ᩳۤ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: H7CX */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19021 extends AbstractC21136 {
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1122 f61621;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C19021(C1122 c1122, DataInputStream dataInputStream) {
+        super(dataInputStream);
+        this.f61621 = c1122;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m44111() {
+        try {
+            return this.f67516.charAt(this.f67513);
+        } catch (StringIndexOutOfBoundsException unused) {
+            return -1;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m44110() {
+        String str = this.f67516;
+        long j = ((long) this.f67515) << 32;
+        int i = this.f67513;
+        this.f67514 = j | ((long) i);
+        try {
+            char cCharAt = str.charAt(i);
+            int i2 = this.f67513 + 1;
+            this.f67513 = i2;
+            if (cCharAt == '\n') {
+                this.f67515++;
+                return cCharAt;
+            }
+            if (cCharAt != '\r') {
+                return cCharAt;
+            }
+            if (str.charAt(i2) == '\n') {
+                this.f67513++;
+            }
+            this.f67515++;
+            return cCharAt;
+        } catch (StringIndexOutOfBoundsException unused) {
+            return -1;
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m43743(C18315 c18315, AbstractC5749 abstractC5749) {
-        abstractC5749.getClass();
-        abstractC5749.m15843(c18315.f58419);
+    public final int m44109() {
+        char cCharAt;
+        C1122 c1122 = this.f61621;
+        String str = this.f67516;
+        while (true) {
+            try {
+                cCharAt = str.charAt(this.f67513);
+                if (cCharAt != 'u') {
+                    break;
+                }
+                this.f67513++;
+            } catch (StringIndexOutOfBoundsException unused) {
+                c1122.mo4159(this.f67514, "Invalid escape character", new Object[0]);
+                return -1;
+            }
+        }
+        int i = 0;
+        for (int i2 = 0; i2 < 4; i2++) {
+            switch (cCharAt) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case ThreefishEngine.Threefish512Cipher.ROTATION_3_2 /* 54 */:
+                case ThreefishEngine.Threefish1024Cipher.ROTATION_1_3 /* 55 */:
+                case '8':
+                case '9':
+                    i = ((i << 4) + cCharAt) - 48;
+                    continue;
+                    int i3 = this.f67513 + 1;
+                    this.f67513 = i3;
+                    cCharAt = str.charAt(i3);
+                    break;
+                default:
+                    switch (cCharAt) {
+                        case 'A':
+                        case 'B':
+                        case 'C':
+                        case 'D':
+                        case 'E':
+                        case 'F':
+                            i = (((i << 4) + 10) + cCharAt) - 65;
+                            continue;
+                            int i4 = this.f67513 + 1;
+                            this.f67513 = i4;
+                            cCharAt = str.charAt(i4);
+                            break;
+                        default:
+                            switch (cCharAt) {
+                                case 'a':
+                                case 'b':
+                                case q.f /* 99 */:
+                                case 'd':
+                                case 'e':
+                                case IShizukuService.Stub.TRANSACTION_attachUserService /* 102 */:
+                                    i = (((i << 4) + 10) + cCharAt) - 97;
+                                    continue;
+                                    continue;
+                                    continue;
+                                    int i5 = this.f67513 + 1;
+                                    this.f67513 = i5;
+                                    cCharAt = str.charAt(i5);
+                                    break;
+                                default:
+                                    c1122.mo4159(this.f67514, "Invalid escape character", new Object[0]);
+                                    return i;
+                            }
+                            break;
+                    }
+                    break;
+            }
+            c1122.mo4159(this.f67514, "Invalid escape character", new Object[0]);
+            return -1;
+        }
+        return i;
     }
 }

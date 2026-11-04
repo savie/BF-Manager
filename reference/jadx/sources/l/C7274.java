@@ -1,70 +1,44 @@
 package l;
 
-import android.graphics.Canvas;
-import android.graphics.Paint;
-
-/* JADX INFO: renamed from: l.۟ۛۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28WH */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7274 implements InterfaceC18708 {
+/* JADX INFO: renamed from: l.ۜܽۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PARF */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7274 implements InterfaceC9510 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3040 f24197;
+    public final int f23966;
 
-    public C7274(C3040 c3040) {
-        this.f24197 = c3040;
+    @Override // l.InterfaceC9510
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo15211() {
+        return false;
     }
 
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo19410() {
-        C3040 c3040 = this.f24197;
-        return !c3040.f11371 || c3040.f11363.m16926();
+    public C7274(int i) {
+        this.f23966 = i;
     }
 
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19404() {
-        C3040 c3040 = this.f24197;
-        if (c3040.f11371) {
-            c3040.f11363.invalidate();
+    public final int hashCode() {
+        return C7103.m19444(C7103.m19447(C7103.m19447(0, EnumC8765.CHANNEL.ordinal()), this.f23966), 2);
+    }
+
+    @Override // l.InterfaceC9510
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15210(AbstractC14709 abstractC14709) {
+        abstractC14709.f48063 = this.f23966;
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
         }
+        if (obj instanceof C7274) {
+            return this.f23966 == ((C7274) obj).f23966;
+        }
+        return false;
     }
 
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo19409() {
-        C5863 c5863 = this.f24197.f11374;
-        c5863.f20014 = false;
-        c5863.f20009 = null;
-        c5863.f20016 = null;
-        c5863.f20015 = null;
-        c5863.f20013 = null;
-        c5863.f20012.clear();
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19408(boolean z) {
-        C3040 c3040 = this.f24197;
-        C3040.m9064(c3040, c3040.f11374, z);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19407(C3662 c3662, int i, int i2, int i3, Canvas canvas, Paint paint, C1590 c1590) {
-        C3040.m9069(this.f24197, true, c3662, i, i2, i3, canvas, paint, c1590);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19406(C3662 c3662, int i, int i2, float f, float f2, boolean z, Canvas canvas, C4916 c4916, InterfaceC13855 interfaceC13855, C1590 c1590) {
-        C3040.m9068(this.f24197, true, c3662, i, i2, f, f2, z, canvas, (Paint) c4916, interfaceC13855, c1590);
-    }
-
-    @Override // l.InterfaceC18708
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19405(C3662 c3662, float f, float f2, float f3, float f4, Canvas canvas, C4916 c4916, C1590 c1590) {
-        C3040.m9067(this.f24197, true, c3662, f, f2, f3, f4, canvas, c4916, c1590);
+    public final String toString() {
+        return String.format("channel(%d)", Integer.valueOf(this.f23966));
     }
 }

@@ -1,30 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۘܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 88T8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19217 {
+/* JADX INFO: renamed from: l.ᩳܽ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: QUZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19217 extends AbstractC24527 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f62070;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final InterfaceC9105 f62167;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f62071;
+    public C19217(AbstractC10266 abstractC10266) {
+        super(0);
+        this.f62167 = abstractC10266;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f62072;
+    public C19217(InterfaceC9105 interfaceC9105, int i, int i2) {
+        super(i, i2);
+        this.f62167 = interfaceC9105;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f62073;
+    @Override // l.AbstractC24527
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo23938() {
+        return this.f62167.size();
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f62074;
+    @Override // l.AbstractC23781
+    /* JADX INFO: renamed from: ۙ */
+    public final char mo23935(int i) {
+        return this.f62167.getChar(i);
+    }
 
-    public C19217(int i, int i2, int i3, long j, String str) {
-        this.f62070 = str;
-        this.f62071 = i;
-        this.f62072 = i2;
-        this.f62073 = i3;
-        this.f62074 = j;
+    @Override // l.AbstractC23781
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC16321 mo23936(int i, int i2) {
+        return new C19217(this.f62167, i, i2);
     }
 }

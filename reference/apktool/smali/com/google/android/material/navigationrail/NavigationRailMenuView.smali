@@ -338,11 +338,11 @@
     move-result v0
 
     .line 56
-    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getMenu()Ll/۫۬;
+    invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getMenu()Ll/ۢۚ;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ll/۫۬;->getVisibleItems()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Ll/ۢۚ;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v1
 

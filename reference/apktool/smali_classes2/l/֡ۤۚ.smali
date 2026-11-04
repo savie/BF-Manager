@@ -1,67 +1,151 @@
-.class public final Ll/֡ۤۚ;
+.class public final synthetic Ll/֡ۤۚ;
 .super Ljava/lang/Object;
-.source "28BC"
+.source "Y6Y9"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final ۙ:Landroid/content/pm/IPackageManager;
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    .line 129
-    new-instance v0, Ll/ۢ֡۟;
+    .line 0
+    iput p1, p0, Ll/֡ۤۚ;->ܰ:I
 
-    const-string v1, "package"
+    iput-object p2, p0, Ll/֡ۤۚ;->᩶:Ljava/lang/Object;
 
-    invoke-static {v1}, Ll/᩹ܽ۟;->ۙ(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/ۢ֡۟;-><init>(Landroid/os/IBinder;)V
-
-    invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
-
-    move-result-object v0
-
-    sput-object v0, Ll/֡ۤۚ;->ۙ:Landroid/content/pm/IPackageManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static bridge synthetic ۙ()Landroid/content/pm/IPackageManager;
-    .locals 1
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 2
+    iget v0, p0, Ll/֡ۤۚ;->ܰ:I
+
+    const/4 v1, 0x0
+
+    .line 5
+    iget-object v2, p0, Ll/֡ۤۚ;->᩶:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 10
+    check-cast v2, Lcom/google/android/material/search/SearchView;
+
+    .line 13
+    invoke-static {v2}, Lcom/google/android/material/search/SearchView;->$r8$lambda$dreB4TGol5yqs3ptMQ4DkiyTx48(Lcom/google/android/material/search/SearchView;)V
+
+    return-void
+
+    .line 16
+    :pswitch_0
+    check-cast v2, Ll/᩷ۨᩴ;
+
+    .line 431
+    invoke-static {v2}, Ll/ᩴ᩸۫;->ۙ(Ll/᩷ۨᩴ;)V
+
+    .line 432
+    invoke-static {}, Ll/ۛۤۧ;->᩷()V
+
+    .line 433
+    invoke-static {}, Ll/᩸ܿܳ;->۫()V
+
+    return-void
 
     .line 0
-    sget-object v0, Ll/֡ۤۚ;->ۙ:Landroid/content/pm/IPackageManager;
+    :pswitch_1
+    check-cast v2, Ll/ۧܳۚ;
 
-    return-object v0
-.end method
+    sget v0, Ll/ۛܳۚ;->ᩳ:I
 
-.method public static ܰ()Landroid/content/pm/IPackageInstaller;
-    .locals 2
+    .line 274
+    invoke-virtual {v2}, Ll/ۧܳۚ;->᩸()V
 
-    .line 132
-    sget-object v0, Ll/֡ۤۚ;->ۙ:Landroid/content/pm/IPackageManager;
+    .line 275
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-interface {v0}, Landroid/content/pm/IPackageManager;->getPackageInstaller()Landroid/content/pm/IPackageInstaller;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v0
+    move-result-object v2
 
-    .line 133
-    new-instance v1, Ll/ۢ֡۟;
+    invoke-direct {v0, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-interface {v0}, Landroid/content/pm/IPackageInstaller;->asBinder()Landroid/os/IBinder;
+    new-instance v2, Ll/᩹ܳۚ;
 
-    move-result-object v0
+    invoke-direct {v2, v1}, Ll/᩹ܳۚ;-><init>(I)V
 
-    invoke-direct {v1, v0}, Ll/ۢ֡۟;-><init>(Landroid/os/IBinder;)V
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-static {v1}, Landroid/content/pm/IPackageInstaller$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageInstaller;
+    return-void
 
-    move-result-object v0
+    .line 0
+    :pswitch_2
+    check-cast v2, Ll/ۤۜᩴ;
 
-    return-object v0
+    invoke-static {v2}, Ll/ۤۜᩴ;->᩷(Ll/ۤۜᩴ;)V
+
+    return-void
+
+    :pswitch_3
+    check-cast v2, Ll/᩹ۖ᩸;
+
+    .line 91
+    invoke-virtual {v2}, Landroid/view/View;->hasFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v2}, Ll/᩹ۖ᩸;->֡᩸()V
+
+    :cond_0
+    return-void
+
+    .line 0
+    :pswitch_4
+    check-cast v2, Ll/֫ᩳۙ;
+
+    invoke-static {v2}, Ll/֫ᩳۙ;->ۙ(Ll/֫ᩳۙ;)V
+
+    return-void
+
+    :pswitch_5
+    check-cast v2, Ll/ܽ֡֫;
+
+    .line 409
+    instance-of v0, v2, Ll/᩵᩸ۧ;
+
+    if-eqz v0, :cond_1
+
+    check-cast v2, Ll/᩵᩸ۧ;
+
+    .line 410
+    invoke-virtual {v2, v1}, Ll/᩵᩸ۧ;->᩷(Z)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

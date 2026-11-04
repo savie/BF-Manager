@@ -40,7 +40,7 @@
     .locals 1
 
     .line 48
-    sget v0, Ll/ۘ۟ܶ;->ܺ᩹:I
+    sget v0, Ll/᩹۬ܺ;->ܰܳ:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -85,7 +85,7 @@
     move-result v0
 
     .line 60
-    sget v1, Ll/ۘ۟ܶ;->ܺ᩹:I
+    sget v1, Ll/᩹۬ܺ;->ܰܳ:I
 
     invoke-virtual {p1, v1, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 

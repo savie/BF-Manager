@@ -1,27 +1,15 @@
 package l;
 
-import android.text.TextUtils;
-import android.view.View;
-
-/* JADX INFO: renamed from: l.᩷ܳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 95QI */
+/* JADX INFO: renamed from: l.᩵᩻᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6HM */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20926 extends AbstractC0464 {
-    @Override // l.AbstractC0464
+public final class C20926 extends AbstractC15462 {
+    @Override // l.AbstractC15462
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2318(View view, Object obj) {
-        C3286.m9786(view, (CharSequence) obj);
-    }
-
-    @Override // l.AbstractC0464
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2319(Object obj, Object obj2) {
-        return !TextUtils.equals((CharSequence) obj, (CharSequence) obj2);
-    }
-
-    @Override // l.AbstractC0464
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo2317(View view) {
-        return C3286.m9793(view);
+    public final void mo3186(C11975 c11975, int i, C12479 c12479) {
+        int[] iArrM30061 = c11975.m30061();
+        iArrM30061[0] = AbstractC15462.m37021(i);
+        iArrM30061[1] = AbstractC15462.m37019(i);
+        c11975.m30049(c12479.m30994());
     }
 }

@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
-.super Ll/᩻ܺ;
+.super Ll/ۤ᩶;
 .source "HideBottomViewOnScrollBehavior.java"
 
 
@@ -47,17 +47,17 @@
     .locals 1
 
     .line 71
-    sget v0, Ll/ۖ۟ܶ;->᩸ܺ:I
+    sget v0, Ll/ۧ۬ܺ;->ܽܰ:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->ENTER_ANIM_DURATION_ATTR:I
 
     .line 72
-    sget v0, Ll/ۖ۟ܶ;->ۤܺ:I
+    sget v0, Ll/ۧ۬ܺ;->ۛܰ:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->EXIT_ANIM_DURATION_ATTR:I
 
     .line 73
-    sget v0, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget v0, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->ENTER_EXIT_ANIM_EASING_ATTR:I
 
@@ -68,7 +68,7 @@
     .locals 2
 
     .line 102
-    invoke-direct {p0}, Ll/᩻ܺ;-><init>()V
+    invoke-direct {p0}, Ll/ۤ᩶;-><init>()V
 
     .line 65
     new-instance v0, Ljava/util/LinkedHashSet;
@@ -97,7 +97,7 @@
     .locals 0
 
     .line 105
-    invoke-direct {p0, p1, p2}, Ll/᩻ܺ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Ll/ۤ᩶;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 65
     new-instance p1, Ljava/util/LinkedHashSet;
@@ -273,7 +273,7 @@
     return v0
 .end method
 
-.method public onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+.method public onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
     .locals 3
 
     .line 112
@@ -357,14 +357,14 @@
     iput-object v0, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->exitAnimInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 130
-    invoke-super {p0, p1, p2, p3}, Ll/᩻ܺ;->onLayoutChild(Ll/ۖ᩶;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Ll/ۤ᩶;->onLayoutChild(Ll/᩻᩶;Landroid/view/View;I)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public onNestedScroll(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;IIIII[I)V
+.method public onNestedScroll(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;IIIII[I)V
     .locals 0
 
     if-lez p5, :cond_0
@@ -384,7 +384,7 @@
     return-void
 .end method
 
-.method public onStartNestedScroll(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+.method public onStartNestedScroll(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
     const/4 p1, 0x2

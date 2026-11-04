@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final ۖ:Lcom/amazonaws/logging/Log;
+.field public static final ᩸:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
 .field public final ۙ:Ljava/util/Set;
 
-.field public final ۨ:Ljava/lang/String;
+.field public final ۤ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/lang/String;
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۖ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/S3Signer;->᩸:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -40,10 +40,10 @@
     const/4 v0, 0x0
 
     .line 80
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ܰ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->᩷:Ljava/lang/String;
 
     .line 81
-    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۨ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۤ:Ljava/lang/String;
 
     .line 82
     iput-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۙ:Ljava/util/Set;
@@ -60,10 +60,10 @@
     if-eqz p2, :cond_0
 
     .line 122
-    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ܰ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->᩷:Ljava/lang/String;
 
     .line 123
-    iput-object p2, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۨ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۤ:Ljava/lang/String;
 
     const/4 p1, 0x0
 
@@ -89,7 +89,7 @@
     .locals 1
 
     .line 186
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->ܰ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->᩷()Ljava/lang/String;
 
     move-result-object p2
 
@@ -106,23 +106,23 @@
     .locals 5
 
     .line 135
-    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۤ:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
     .line 141
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amazonaws/services/s3/internal/S3Signer;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/services/s3/internal/S3Signer;->᩸:Lcom/amazonaws/logging/Log;
 
     if-nez v1, :cond_0
 
     const-string p1, "Canonical string will not be signed, as no AWS Secret Key was provided"
 
     .line 142
-    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     return-void
 
@@ -148,7 +148,7 @@
     :cond_1
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -188,7 +188,7 @@
     invoke-virtual {p1, v3, v1}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 169
-    iget-object v1, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ܰ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->᩷:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/amazonaws/services/s3/internal/S3Signer;->ۙ:Ljava/util/Set;
 
@@ -213,10 +213,10 @@
 
     move-result-object v1
 
-    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 174
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 

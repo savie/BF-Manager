@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import l.C9023;
+import l.C10732;
 
 /* JADX INFO: compiled from: Y48R */
 /* JADX INFO: loaded from: classes.dex */
@@ -151,21 +151,21 @@ public abstract class bf implements av {
     }
 
     public String toString() {
-        StringBuilder sbM23356 = C9023.m23356("<");
-        sbM23356.append(getClass().getSimpleName());
-        sbM23356.append(" ");
+        StringBuilder sbM27333 = C10732.m27333("<");
+        sbM27333.append(getClass().getSimpleName());
+        sbM27333.append(" ");
         if (a() != null) {
             Object objB = b();
-            sbM23356.append(c(a()).a);
-            sbM23356.append(":");
+            sbM27333.append(c(a()).a);
+            sbM27333.append(":");
             if (objB instanceof ByteBuffer) {
-                aw.a((ByteBuffer) objB, sbM23356);
+                aw.a((ByteBuffer) objB, sbM27333);
             } else {
-                sbM23356.append(objB.toString());
+                sbM27333.append(objB.toString());
             }
         }
-        sbM23356.append(">");
-        return sbM23356.toString();
+        sbM27333.append(">");
+        return sbM27333.toString();
     }
 
     @Override // com.umeng.analytics.pro.av

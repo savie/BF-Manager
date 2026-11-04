@@ -10,18 +10,18 @@ import java.io.InputStream;
 public class S3StringResponseHandler extends AbstractS3ResponseHandler {
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo276(HttpResponse httpResponse) throws IOException {
-        AmazonWebServiceResponse amazonWebServiceResponseM457 = AbstractS3ResponseHandler.m457(httpResponse);
+    public final Object mo270(HttpResponse httpResponse) throws IOException {
+        AmazonWebServiceResponse amazonWebServiceResponseM451 = AbstractS3ResponseHandler.m451(httpResponse);
         byte[] bArr = new byte[1024];
         StringBuilder sb = new StringBuilder();
-        InputStream inputStreamM267 = httpResponse.m267();
+        InputStream inputStreamM260 = httpResponse.m260();
         while (true) {
-            int i = inputStreamM267.read(bArr);
+            int i = inputStreamM260.read(bArr);
             if (i > 0) {
-                sb.append(new String(bArr, 0, i, StringUtils.f844));
+                sb.append(new String(bArr, 0, i, StringUtils.f834));
             } else {
-                amazonWebServiceResponseM457.m165(sb.toString());
-                return amazonWebServiceResponseM457;
+                amazonWebServiceResponseM451.m159(sb.toString());
+                return amazonWebServiceResponseM451;
             }
         }
     }

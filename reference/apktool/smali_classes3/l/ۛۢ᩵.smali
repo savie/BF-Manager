@@ -1,82 +1,133 @@
-.class public final Ll/ۛۢ᩵;
-.super Ll/ۡܿ᩵;
-.source "D5ZX"
+.class public abstract Ll/ۛۢ᩵;
+.super Ll/᩵ۢ᩵;
+.source "CANR"
 
 
 # instance fields
-.field public final ܺ:Ll/ܿ᩻᩵;
+.field public transient ܿ:Ll/ۙۢ᩵;
 
-.field public final ᩶:I
+.field public final ᩶:Ll/ۧۢ᩵;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ᩻᩵;I)V
+.method public constructor <init>(Ll/ۙۢ᩵;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    .line 103
+    invoke-interface {p1}, Ll/ۙۢ᩵;->getContext()Ll/ۧۢ᩵;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-direct {p0, p1, v0}, Ll/ۛۢ᩵;-><init>(Ll/ۙۢ᩵;Ll/ۧۢ᩵;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۙۢ᩵;Ll/ۧۢ᩵;)V
     .locals 0
 
-    .line 36
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 97
+    invoke-direct {p0, p1}, Ll/᩵ۢ᩵;-><init>(Ll/ۙۢ᩵;)V
 
-    .line 47
-    iput-object p1, p0, Ll/ۛۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    .line 48
-    iput p2, p0, Ll/ۛۢ᩵;->᩶:I
+    .line 101
+    iput-object p2, p0, Ll/ۛۢ᩵;->᩶:Ll/ۧۢ᩵;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getType()Ljava/lang/String;
-    .locals 2
+.method public getContext()Ll/ۧۢ᩵;
+    .locals 1
 
-    .line 53
-    iget-object v0, p0, Ll/ۛۢ᩵;->ܺ:Ll/ܿ᩻᩵;
+    .line 106
+    iget-object v0, p0, Ll/ۛۢ᩵;->᩶:Ll/ۧۢ᩵;
 
-    iget v1, p0, Ll/ۛۢ᩵;->᩶:I
-
-    invoke-virtual {v0, v1}, Ll/ܿ᩻᩵;->᩺(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {v0}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final ۚ()V
-    .locals 4
+.method public final ۚ()Ll/ۙۢ᩵;
+    .locals 2
 
-    .line 70
-    iget v0, p0, Ll/ۛۢ᩵;->᩶:I
+    .line 112
+    iget-object v0, p0, Ll/ۛۢ᩵;->ܿ:Ll/ۙۢ᩵;
 
-    if-ltz v0, :cond_0
+    if-nez v0, :cond_1
 
-    iget-object v1, p0, Ll/ۛۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v1}, Ll/ܿ᩻᩵;->ᩳ()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    return-void
-
-    .line 71
-    :cond_0
-    new-instance v1, Ll/ۤۨۡ;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "type@"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 113
+    invoke-virtual {p0}, Ll/ۛۢ᩵;->getContext()Ll/ۧۢ᩵;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ll/ۤۨۡ;-><init>(Ljava/lang/String;)V
+    sget-object v1, Ll/᩸ۢ᩵;->᩵:Ll/ۤۢ᩵;
 
-    throw v1
+    invoke-interface {v0, v1}, Ll/ۧۢ᩵;->ۙ(Ll/֫ۢ᩵;)Ll/ۚۢ᩵;
+
+    move-result-object v0
+
+    check-cast v0, Ll/᩸ۢ᩵;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p0}, Ll/᩸ۢ᩵;->ۙ(Ll/ۛۢ᩵;)Ll/᩻᩷ۨ;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, p0
+
+    .line 114
+    :goto_0
+    iput-object v0, p0, Ll/ۛۢ᩵;->ܿ:Ll/ۙۢ᩵;
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public ۫()V
+    .locals 3
+
+    .line 117
+    iget-object v0, p0, Ll/ۛۢ᩵;->ܿ:Ll/ۙۢ᩵;
+
+    if-eqz v0, :cond_0
+
+    if-eq v0, p0, :cond_0
+
+    .line 119
+    invoke-virtual {p0}, Ll/ۛۢ᩵;->getContext()Ll/ۧۢ᩵;
+
+    move-result-object v1
+
+    sget-object v2, Ll/᩸ۢ᩵;->᩵:Ll/ۤۢ᩵;
+
+    invoke-interface {v1, v2}, Ll/ۧۢ᩵;->ۙ(Ll/֫ۢ᩵;)Ll/ۚۢ᩵;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;)V
+
+    check-cast v1, Ll/᩸ۢ᩵;
+
+    invoke-interface {v1, v0}, Ll/᩸ۢ᩵;->ۙ(Ll/ۙۢ᩵;)V
+
+    .line 121
+    :cond_0
+    sget-object v0, Ll/ۨۢ᩵;->ܰ:Ll/ۨۢ᩵;
+
+    iput-object v0, p0, Ll/ۛۢ᩵;->ܿ:Ll/ۙۢ᩵;
+
+    return-void
 .end method

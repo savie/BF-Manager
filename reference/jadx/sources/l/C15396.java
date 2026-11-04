@@ -1,58 +1,31 @@
 package l;
 
-import java.util.function.Predicate;
+/* JADX INFO: renamed from: l.ܳܰ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: LA1Y */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15396 implements InterfaceC2149 {
 
-/* JADX INFO: renamed from: l.ܶᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 81EW */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15396 implements Predicate {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f50184;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f50113;
-
-    public /* synthetic */ C15396(int i) {
-        this.f50113 = i;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m36862() {
+        return this.f50184;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f50113) {
-            case 0:
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
+    @Override // l.InterfaceC2149
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo6138(int i, int i2, byte[] bArr) {
+        C0481.m2322(i, bArr);
+        this.f50184 = C0481.m2322(i + 4, bArr);
+        C0481.m2322(i + 8, bArr);
+        C0481.m2322(i + 12, bArr);
+        int i3 = i + 16;
+        int i4 = i2 - 16;
+        byte[] bArr2 = new byte[i4];
+        if (i4 > 0) {
+            System.arraycopy(bArr, i3, bArr2, 0, i4);
         }
-        return C8512.$default$negate(this);
-    }
-
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
-    }
-
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f50113) {
-            case 0:
-                return ((AbstractC23157) obj).mo21788();
-            case 1:
-                String lowerCase = ((AbstractC20745) obj).getName().toLowerCase();
-                return lowerCase.endsWith(".pk8") || lowerCase.endsWith(".aes") || lowerCase.endsWith(".key") || lowerCase.endsWith(".enc");
-            case 2:
-                return ((EnumC15236) obj).m36503();
-            case 3:
-                return ((AbstractC16579) obj).mo9480();
-            default:
-                return ((AbstractC8774) obj).m22847(EnumC18651.f60554);
-        }
+        return i3 - i;
     }
 }

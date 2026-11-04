@@ -1,33 +1,41 @@
 package l;
 
-import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩴ۟ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N9AI */
+/* JADX INFO: renamed from: l.ܿ᩸ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 89QF */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18613 {
+public final class C18613 implements Iterable, Iterator {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f59218 = new ArrayList();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC23057 f60524;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43017(int i, int i2, int i3, int[] iArr) {
-        if (i > 1) {
-            int i4 = iArr[i];
-            int i5 = iArr[i + 1];
-            if (i4 == -1 || i5 == -1 || i4 == i2 || i5 == i3) {
-                return;
-            }
-            this.f59218.add(new C12573(i / 2, i4, i5));
-        }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f60525;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f60526;
+
+    public C18613(int i, InterfaceC23057 interfaceC23057) {
+        this.f60525 = i;
+        this.f60524 = interfaceC23057;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43016(int i) {
-        ArrayList arrayList = this.f59218;
-        int size = arrayList.size();
-        if (size > i) {
-            arrayList.subList(i, size).clear();
-        }
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        this.f60526 = 0;
+        return this;
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f60526 < this.f60525;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        int i = this.f60526;
+        this.f60526 = i + 1;
+        return this.f60524.apply(i);
     }
 }

@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.signers.Ed25519Signer;
 import org.bouncycastle.crypto.signers.Ed448Signer;
 import org.bouncycastle.jcajce.spec.EdDSAParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureSpi extends java.security.SignatureSpi {
     public static final byte[] EMPTY_CONTEXT = new byte[0];
     public final String algorithm;

@@ -1,37 +1,36 @@
 package l;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܺܶۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S135 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16019 implements InterfaceC20957 {
+/* JADX INFO: renamed from: l.ܶۤۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16019 implements Iterable, InterfaceC22091 {
+    public final Iterable a;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final MessageDigest f51846;
-
-    public C16019(String str) {
-        try {
-            this.f51846 = MessageDigest.getInstance(str);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
+    @Override // java.lang.Iterable
+    public final /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // l.InterfaceC20957
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo26267(C18840 c18840) {
-        this.f51846.update(c18840.m43470(), 0, c18840.m43472());
+    public C16019(Iterable iterable) {
+        this.a = iterable;
     }
 
-    @Override // l.InterfaceC20957
-    /* JADX INFO: renamed from: ۙ */
-    public final byte[] mo26268() {
-        return this.f51846.digest();
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C9410(this.a.iterator());
     }
 
-    public final String toString() {
-        return this.f51846.getAlgorithm();
+    @Override // java.lang.Iterable, l.InterfaceC22091
+    public final void forEach(Consumer consumer) {
+        C4937.forEach(this.a, new C16765(consumer, 1));
+    }
+
+    @Override // java.lang.Iterable, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        return C13629.spliteratorUnknownSize(iterator(), 0);
     }
 }

@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.agreement.kdf;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.DerivationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHKDFParameters implements DerivationParameters {
     public ASN1ObjectIdentifier algorithm;
     public byte[] extraInfo;

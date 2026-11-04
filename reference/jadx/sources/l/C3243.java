@@ -1,51 +1,46 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import android.graphics.Path;
 
-/* JADX INFO: renamed from: l.ۗ۫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1UL */
+/* JADX INFO: renamed from: l.ۗۜܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TB7B */
 /* JADX INFO: loaded from: classes3.dex */
-public class C3243 extends AbstractC18908 {
+public final class C3243 extends AbstractC6227 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC8858 f12062;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Path f10573;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C11992 f12063;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f10574;
 
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String mo9700() {
-        return (String) this.f12063.m29872().mo1014(this.f12062.mo9700());
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3989 f10575;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public float f10576;
+
+    public C3243(C3989 c3989, float f, float f2, Path path) {
+        this.f10575 = c3989;
+        this.f10574 = f;
+        this.f10576 = f2;
+        this.f10573 = path;
     }
 
-    @Override // l.InterfaceC8858
-    public String getName() {
-        return this.f12062.getName();
+    @Override // l.AbstractC6227
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo10603(AbstractC4735 abstractC4735) {
+        return !(abstractC4735 instanceof C21889);
     }
 
-    public C3243(C11992 c11992, InterfaceC8858 interfaceC8858) {
-        this.f12063 = c11992;
-        this.f12062 = interfaceC8858;
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final List mo9699() {
-        InterfaceC8858 interfaceC8858 = this.f12062;
-        ArrayList arrayList = new ArrayList(interfaceC8858.mo9699().size());
-        Iterator it = interfaceC8858.mo9699().iterator();
-        while (it.hasNext()) {
-            arrayList.add(((CharSequence) it.next()).toString());
+    @Override // l.AbstractC6227
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo10602(String str) {
+        C3989 c3989 = this.f10575;
+        if (c3989.m12896()) {
+            Path path = new Path();
+            c3989.f13654.f65381.getTextPath(str, 0, str.length(), this.f10574, this.f10576, path);
+            this.f10573.addPath(path);
         }
-        return C15604.m37270(this.f12063.m29872(), (List) arrayList);
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String mo9698() {
-        return (String) this.f12063.m29872().mo1014(this.f12062.mo9698());
+        this.f10574 = c3989.f13654.f65381.measureText(str) + this.f10574;
     }
 }

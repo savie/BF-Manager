@@ -2,7 +2,7 @@ package org.bouncycastle.pqc.crypto.xmss;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class WOTSPlusOid implements XMSSOid {
@@ -16,7 +16,7 @@ public final class WOTSPlusOid implements XMSSOid {
         map.put(createKey(XMSSKeyParameters.SHA_512, 64, 16, 131), new WOTSPlusOid(33554434, "WOTSP_SHA2-512_W16"));
         map.put(createKey("SHAKE128", 32, 16, 67), new WOTSPlusOid(50331651, "WOTSP_SHAKE128_W16"));
         map.put(createKey("SHAKE256", 64, 16, 131), new WOTSPlusOid(67108868, "WOTSP_SHAKE256_W16"));
-        oidLookupTable = C0561.unmodifiableMap(map);
+        oidLookupTable = C4681.unmodifiableMap(map);
     }
 
     public WOTSPlusOid(int i, String str) {

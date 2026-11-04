@@ -9,57 +9,57 @@ import java.util.List;
 public class DeleteObjectsRequest extends AmazonWebServiceRequest {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f586;
+    public final ArrayList f576 = new ArrayList();
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f587;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public boolean f577;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f588 = new ArrayList();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public String f578;
 
     public DeleteObjectsRequest(String str) {
-        this.f586 = str;
+        this.f578 = str;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m560() {
-        return this.f586;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m556() {
+        return this.f578;
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final void m563() {
-        this.f587 = true;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final void m555() {
+        this.f577 = true;
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean m564() {
-        return this.f587;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean m557() {
+        return this.f577;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m561(List list) {
-        ArrayList arrayList = this.f588;
+    public final void m554(List list) {
+        ArrayList arrayList = this.f576;
         arrayList.clear();
         arrayList.addAll(list);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final ArrayList m562() {
-        return this.f588;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m558() {
+        return this.f576;
     }
 
     public class KeyVersion implements Serializable {
 
-        /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-        public final String f589;
+        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+        public final String f579;
 
         public KeyVersion(String str) {
-            this.f589 = str;
+            this.f579 = str;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final String m565() {
-            return this.f589;
+        public final String m559() {
+            return this.f579;
         }
     }
 }

@@ -2,8 +2,8 @@ package org.bouncycastle.pqc.crypto.slhdsa;
 
 import java.io.IOException;
 import java.security.SecureRandom;
-import l.C0252;
-import l.C9013;
+import l.C11958;
+import l.C12669;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.Digest;
@@ -89,11 +89,11 @@ public class HashSLHDSASigner implements Signer {
         ADRS adrs = new ADRS();
         int i = engine.K;
         int i2 = engine.A;
-        int iM1692 = C0252.m1692(i2, 1, i, 1) + engine.H;
+        int iM31441 = C12669.m31441(i2, 1, i, 1) + engine.H;
         int i3 = engine.D;
         int i4 = engine.WOTS_LEN;
         int i5 = engine.N;
-        if (((i3 * i4) + iM1692) * i5 != bArr3.length) {
+        if (((i3 * i4) + iM31441) * i5 != bArr3.length) {
             return false;
         }
         SIG sig = new SIG(i5, i, i2, i3, engine.H_PRIME, i4, bArr3);
@@ -215,7 +215,7 @@ public class HashSLHDSASigner implements Signer {
             }
             System.arraycopy(encoded, 0, this.msgPrefix, i, encoded.length);
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("oid encoding failed: ")));
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("oid encoding failed: ")));
         }
     }
 }

@@ -144,7 +144,7 @@
     const-string p0, "ua_%s.db"
 
     .line 0
-    invoke-static {v0, p0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/tabs/TabLayoutMediator$TabLayoutOnPageChangeCallback;
-.super Ll/ۨۗܰ;
+.super Ll/᩶ۜ᩷;
 .source "TabLayoutMediator.java"
 
 
@@ -16,7 +16,7 @@
     .locals 1
 
     .line 204
-    invoke-direct {p0}, Ll/ۨۗܰ;-><init>()V
+    invoke-direct {p0}, Ll/᩶ۜ᩷;-><init>()V
 
     .line 205
     new-instance v0, Ljava/lang/ref/WeakReference;

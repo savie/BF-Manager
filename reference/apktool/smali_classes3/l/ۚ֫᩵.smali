@@ -1,53 +1,177 @@
-.class public final Ll/ۚ֫᩵;
-.super Ll/ۖ֫᩵;
-.source "F64Z"
+.class public final synthetic Ll/ۚ֫᩵;
+.super Ljava/lang/Object;
+.source "T6GT"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic ֡:I
+.field public final synthetic ܰ:I
 
-.field public final synthetic ᩶:Ll/۬֫᩵;
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/۬֫᩵;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 97
-    iput-object p1, p0, Ll/ۚ֫᩵;->᩶:Ll/۬֫᩵;
+    .line 0
+    iput p1, p0, Ll/ۚ֫᩵;->ܰ:I
 
-    iput p2, p0, Ll/ۚ֫᩵;->֡:I
+    iput-object p2, p0, Ll/ۚ֫᩵;->᩶:Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ll/ۖ֫᩵;-><init>(Ll/۬֫᩵;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(I)Ljava/lang/Object;
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    .line 101
-    iget-object v0, p0, Ll/ۚ֫᩵;->᩶:Ll/۬֫᩵;
+    .line 2
+    iget v0, p0, Ll/ۚ֫᩵;->ܰ:I
 
-    iget-object v0, v0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    .line 7
+    iget-object v0, p0, Ll/ۚ֫᩵;->᩶:Ljava/lang/Object;
+
+    .line 9
+    check-cast v0, Ll/۟ۜۗ;
+
+    .line 11
+    check-cast p1, Ll/ᩳۡۗ;
+
+    .line 14
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 42
+    invoke-virtual {p1}, Ll/ᩳۡۗ;->getType()Ll/᩺ۢۗ;
 
     move-result-object v0
 
-    mul-int/lit8 p1, p1, 0x2
+    sget-object v1, Ll/᩺ۢۗ;->ۖۙ:Ll/᩺ۢۗ;
 
-    iget v1, p0, Ll/ۚ֫᩵;->֡:I
+    if-ne v0, v1, :cond_1
 
-    add-int/2addr p1, v1
+    .line 51
+    invoke-virtual {p1}, Ll/ᩳۡۗ;->᩻ۙ()I
 
-    invoke-virtual {v0, p1}, Ll/ᩳܳ᩵;->֨(I)I
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_0
+
+    .line 0
+    :pswitch_0
+    iget-object v0, p0, Ll/ۚ֫᩵;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/ᩳۛ۫;
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ll/ᩳۛ۫;->ۧ(Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ll/ۚ֫᩵;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    check-cast p1, Ll/ۧᩳۗ;
+
+    .line 1043
+    invoke-virtual {p1}, Ll/ۧᩳۗ;->ۚ()Ll/᩷ۡۗ;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/᩷ۡۗ;->getId()I
 
     move-result p1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p1}, Ljava/util/BitSet;->set(I)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 54
+    invoke-virtual {p1, v0}, Ll/ᩳۡۗ;->᩸(I)Ll/ܺ֨ۗ;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ll/֡֨ۗ;->getType()Ll/֫֨ۗ;
+
+    move-result-object v1
+
+    sget-object v2, Ll/֫֨ۗ;->۟:Ll/֫֨ۗ;
+
+    invoke-virtual {v1, v2}, Ll/֫֨ۗ;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x1
+
+    .line 55
+    invoke-virtual {p1, v1}, Ll/ᩳۡۗ;->᩸(I)Ll/ܺ֨ۗ;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ll/֡֨ۗ;->getType()Ll/֫֨ۗ;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ll/֫֨ۗ;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 45
+    invoke-virtual {p1}, Ll/ᩳۡۗ;->ۧۙ()Ljava/util/List;
+
+    move-result-object p1
+
+    new-instance v1, Ll/ۚۢۗ;
+
+    const-string v2, ""
+
+    invoke-direct {v1, v2}, Ll/ۚۢۗ;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Ll/ܺ֨ۗ;->ۤ(Ll/ᩳۡۗ;)Ll/ܺ֨ۗ;
+
+    move-result-object v1
+
+    invoke-interface {p1, v0, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public synthetic andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۨۧۗ;->$default$andThen(Ljava/util/function/Consumer;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
 
     move-result-object p1
 

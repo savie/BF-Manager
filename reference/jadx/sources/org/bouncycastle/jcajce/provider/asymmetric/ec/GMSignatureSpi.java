@@ -19,7 +19,7 @@ import org.bouncycastle.jcajce.spec.SM2ParameterSpec;
 import org.bouncycastle.jcajce.util.BCJcaJceHelper;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GMSignatureSpi extends java.security.SignatureSpi {
     public AlgorithmParameters engineParams;
     public final JcaJceHelper helper = new BCJcaJceHelper();

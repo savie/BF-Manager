@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.params;
 
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSAValidationParameters {
     public int counter;
     public byte[] seed;

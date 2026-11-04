@@ -1,44 +1,18 @@
 package l;
 
-import java.net.InetAddress;
-import java.net.Socket;
-import javax.net.SocketFactory;
-import javax.net.ssl.SSLContext;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.ۙ᩸᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B2VY */
+/* JADX INFO: renamed from: l.ۙ۬ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8RW */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C4922 extends SocketFactory {
+public final /* synthetic */ class C4922 implements Comparator {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final SSLContext f17241;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC5668 f17176;
 
-    public C4922(SSLContext sSLContext) {
-        this.f17241 = sSLContext;
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket() {
-        return this.f17241.getSocketFactory().createSocket();
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(InetAddress inetAddress, int i) {
-        return this.f17241.getSocketFactory().createSocket(inetAddress, i);
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(InetAddress inetAddress, int i, InetAddress inetAddress2, int i2) {
-        return this.f17241.getSocketFactory().createSocket(inetAddress, i, inetAddress2, i2);
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(String str, int i) {
-        return this.f17241.getSocketFactory().createSocket(str, i);
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(String str, int i, InetAddress inetAddress, int i2) {
-        return this.f17241.getSocketFactory().createSocket(str, i, inetAddress, i2);
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        InterfaceC5668 interfaceC5668 = this.f17176;
+        return interfaceC5668.mo16657(obj2) - interfaceC5668.mo16657(obj);
     }
 }

@@ -1,59 +1,33 @@
 package l;
 
-import android.content.Context;
-import android.graphics.Rect;
-import android.util.AttributeSet;
-import android.view.ViewGroup;
-
-/* JADX INFO: renamed from: l.᩹ܿܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6A7 */
+/* JADX INFO: renamed from: l.᩸֡ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28VT */
 /* JADX INFO: loaded from: classes.dex */
-public class C22432 extends ViewGroup.MarginLayoutParams {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public AbstractC12554 f73212;
+public final class C22432 implements InterfaceC11309 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Rect f73213;
+    public final /* synthetic */ Runnable f72631;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f73214;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f73215;
-
-    public C22432(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        this.f73213 = new Rect();
-        this.f73215 = true;
-        this.f73214 = false;
+    public C22432(Runnable runnable) {
+        this.f72631 = runnable;
     }
 
-    public C22432(int i, int i2) {
-        super(i, i2);
-        this.f73213 = new Rect();
-        this.f73215 = true;
-        this.f73214 = false;
+    @Override // l.InterfaceC11309
+    public final void onSuccess() {
+        C12569.f40362 = false;
+        this.f72631.run();
     }
 
-    public C22432(ViewGroup.MarginLayoutParams marginLayoutParams) {
-        super(marginLayoutParams);
-        this.f73213 = new Rect();
-        this.f73215 = true;
-        this.f73214 = false;
+    @Override // l.InterfaceC11309
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo28582(Exception exc) {
+        C12569.f40362 = false;
+        return false;
     }
 
-    public C22432(ViewGroup.LayoutParams layoutParams) {
-        super(layoutParams);
-        this.f73213 = new Rect();
-        this.f73215 = true;
-        this.f73214 = false;
-    }
-
-    public C22432(C22432 c22432) {
-        super((ViewGroup.LayoutParams) c22432);
-        this.f73213 = new Rect();
-        this.f73215 = true;
-        this.f73214 = false;
+    @Override // l.InterfaceC11309
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo28581() {
+        C12569.f40362 = false;
     }
 }

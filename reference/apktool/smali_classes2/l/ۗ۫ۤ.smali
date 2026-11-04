@@ -1,42 +1,40 @@
-.class public final synthetic Ll/ۗ۫ۤ;
+.class public interface abstract Ll/ۗ۫ۤ;
 .super Ljava/lang/Object;
-.source "542M"
-
-# interfaces
-.implements Ll/ۨᩴۤ;
+.source "I59Q"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/᩷ܿۤ;
-
-.field public final synthetic ܰ:Ll/۫۟۟;
+# static fields
+.field public static final ۙ:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩷ܿۤ;Ll/۫۟۟;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 6
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
-    iput-object p1, p0, Ll/ۗ۫ۤ;->ۙ:Ll/᩷ܿۤ;
+    move-result-object v0
 
-    iput-object p2, p0, Ll/ۗ۫ۤ;->ܰ:Ll/۫۟۟;
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۗ۫ۤ;->ۙ:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()V
-    .locals 2
+.method public abstract getItem(I)Ll/ܶ۫ۤ;
+.end method
 
-    .line 0
-    iget-object v0, p0, Ll/ۗ۫ۤ;->ۙ:Ll/᩷ܿۤ;
+.method public abstract size()I
+.end method
 
-    iget-object v1, p0, Ll/ۗ۫ۤ;->ܰ:Ll/۫۟۟;
+.method public abstract ۙ(I)Ll/ܶ۫ۤ;
+.end method
 
-    invoke-static {v0, v1}, Ll/᩷ܿۤ;->ۙ(Ll/᩷ܿۤ;Ll/۫۟۟;)V
-
-    return-void
+.method public abstract ۙ()Z
 .end method

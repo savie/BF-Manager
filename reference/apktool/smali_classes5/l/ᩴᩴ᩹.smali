@@ -1,64 +1,44 @@
-.class public final synthetic Ll/ᩴᩴ᩹;
+.class public interface abstract Ll/ᩴᩴ᩹;
 .super Ljava/lang/Object;
-.source "715M"
+.source "5905"
 
 # interfaces
-.implements Ll/֨ۘ᩺;
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/ۜᩳ᩹;
-
-.field public final synthetic ܰ:Lbin/mt/plus/Main;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ۜᩳ᩹;Lbin/mt/plus/Main;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ᩴᩴ᩹;->ۙ:Ll/ۜᩳ᩹;
-
-    iput-object p2, p0, Ll/ᩴᩴ᩹;->ܰ:Lbin/mt/plus/Main;
-
-    return-void
-.end method
+.implements Ll/ܽ֡ۨ;
 
 
 # virtual methods
-.method public final ۙ(F)V
-    .locals 3
+.method public abstract builder()Ll/᩵ᩴ᩹;
+.end method
 
-    .line 138
-    sget-object v0, Ll/֡᩺ۘ;->֡:Landroid/content/SharedPreferences;
+.method public abstract length()I
+.end method
 
-    const-string v1, "bookmark_swipe_pos_aware"
+.method public abstract ۙ()Ll/ܺᩴ᩹;
+.end method
 
-    const/4 v2, 0x0
+.method public abstract ۙ(ILjava/lang/Object;)V
+.end method
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+.method public abstract ۙ(Ll/ۙ֡ۨ;I)V
+.end method
 
-    move-result v0
+.method public abstract ۤ()Ll/ۢ᩸᩹;
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract ۤ(Ll/ۙ֡ۨ;)Z
+.end method
 
-    .line 139
-    iget-object v0, p0, Ll/ᩴᩴ᩹;->ܰ:Lbin/mt/plus/Main;
+.method public abstract ᩴ()V
+.end method
 
-    invoke-virtual {v0}, Lbin/mt/plus/Main;->ۗ()Ll/۠ۘ᩺;
+.method public abstract ᩴ(Ll/ۙ֡ۨ;)V
+.end method
 
-    move-result-object v0
+.method public abstract ᩷(Ll/ۙ֡ۨ;)V
+.end method
 
-    invoke-virtual {v0}, Ll/۠ۘ᩺;->ۚ()Z
+.method public abstract ᩸()V
+.end method
 
-    move-result v0
-
-    iget-object v1, p0, Ll/ᩴᩴ᩹;->ۙ:Ll/ۜᩳ᩹;
-
-    invoke-virtual {v1, v0, p1}, Ll/ۜᩳ᩹;->ۙ(ZF)V
-
-    :cond_0
-    return-void
+.method public abstract ᩸(Ll/ۙ֡ۨ;)V
 .end method

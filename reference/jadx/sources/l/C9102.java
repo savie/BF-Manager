@@ -1,45 +1,89 @@
 package l;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import com.google.android.material.motion.MotionUtils;
+import java.io.IOException;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۡ᩶ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M8IS */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9102 extends BroadcastReceiver {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8065 f31027;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7690 f31028;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10513 f31029;
-
-    public C9102(C7690 c7690, InterfaceC8065 interfaceC8065, InterfaceC10513 interfaceC10513) {
-        this.f31028 = c7690;
-        this.f31027 = interfaceC8065;
-        this.f31029 = interfaceC10513;
+/* JADX INFO: renamed from: l.ۡۗ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: U9V0 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9102 extends AbstractC8357 {
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ۫ */
+    public final String mo8131() {
+        return "announcing";
     }
 
-    @Override // android.content.BroadcastReceiver
-    public final void onReceive(Context context, Intent intent) {
-        if ("android.media.AUDIO_BECOMING_NOISY".equals(intent.getAction())) {
-            this.f31027.mo21243(new Runnable() { // from class: l.᩵᩶ۙ
-                @Override // java.lang.Runnable
-                public final void run() {
-                    C9102.m23452(this.f63201);
-                }
-            });
-        }
+    public C9102(C14168 c14168) {
+        super(c14168, AbstractC8357.m22491());
+        EnumC21037 enumC21037 = EnumC21037.f67237;
+        m22497(enumC21037);
+        m22493(enumC21037);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m23452(C9102 c9102) {
-        if (c9102.f31028.f25472) {
-            ((SurfaceHolderCallbackC4057) c9102.f31029).f14958.m36757(3, false);
+    @Override // l.AbstractC18053
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1348() {
+        return C8947.m23910(new StringBuilder("Announcer("), m42076() != null ? m42076().getName() : "", MotionUtils.EASING_TYPE_FORMAT_END);
+    }
+
+    @Override // l.AbstractC18053
+    public final String toString() {
+        return mo1348() + " state: " + m22494();
+    }
+
+    @Override // java.util.TimerTask
+    public final boolean cancel() {
+        m22495();
+        return super.cancel();
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ᩸ */
+    public final boolean mo8133() {
+        return (m42076().m34457() || m42076().m34438()) ? false : true;
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ᩴ */
+    public final C1271 mo8132() {
+        return new C1271(33792);
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ۙ */
+    public final C1271 mo8128(C1271 c1271) throws IOException {
+        Iterator it = m42076().m34408().m49145(EnumC6121.CLASS_ANY, true, m22496()).iterator();
+        while (it.hasNext()) {
+            c1271 = m42072(c1271, (C0525) null, (AbstractC17152) it.next());
         }
+        return c1271;
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ۙ */
+    public final C1271 mo8129(C17307 c17307, C1271 c1271) throws IOException {
+        Iterator it = c17307.m40636(EnumC6121.CLASS_ANY, m22496(), m42076().m34408()).iterator();
+        while (it.hasNext()) {
+            c1271 = m42072(c1271, (C0525) null, (AbstractC17152) it.next());
+        }
+        return c1271;
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ֫ */
+    public final void mo8127() {
+        m42076().m34441();
+    }
+
+    @Override // l.AbstractC8357
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo8130() {
+        m22497(m22494().m48083());
+        if (m22494().m48087()) {
+            return;
+        }
+        cancel();
+        m42076().mo34440();
     }
 }

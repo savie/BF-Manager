@@ -1,38 +1,48 @@
-.class public final Ll/ۙ۠᩵;
-.super Ljava/lang/Object;
-.source "J6M2"
-
-# interfaces
-.implements Ll/ۗۡ᩵;
-.implements Ll/ۛۤ᩵;
-.implements Ll/᩸ᩴ᩵;
+.class public Ll/ۙ۠᩵;
+.super Ll/۬ۖ᩵;
+.source "FANX"
 
 
-# virtual methods
-.method public final ۙ(Ll/ۢۡ᩵;)V
-    .locals 1
+# direct methods
+.method public static final ۙ(IIILjava/lang/String;Ljava/lang/String;Z)Z
+    .locals 6
 
-    .line 37
-    new-instance v0, Ll/ۖ۠᩵;
+    const-string v0, "<this>"
+
+    .line 5
+    invoke-static {p3, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "other"
 
     .line 10
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p4, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 37
-    invoke-virtual {p1, v0}, Ll/ۢۡ᩵;->ۙ(Ll/ۖ۠᩵;)V
+    if-nez p5, :cond_0
 
-    return-void
-.end method
+    .line 726
+    invoke-virtual {p3, p0, p4, p1, p2}, Ljava/lang/String;->regionMatches(ILjava/lang/String;II)Z
 
-.method public final ۙ(Ll/ܿۤ᩵;)V
-    .locals 1
+    move-result p0
 
-    .line 42
-    new-instance v0, Ll/ۗᩴ᩵;
+    return p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    move-object v0, p3
 
-    invoke-virtual {p1, v0}, Ll/ܿۤ᩵;->ۙ(Ll/ܽۤ᩵;)V
+    move v1, p5
 
-    return-void
+    move v2, p0
+
+    move-object v3, p4
+
+    move v4, p1
+
+    move v5, p2
+
+    .line 728
+    invoke-virtual/range {v0 .. v5}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    move-result p0
+
+    return p0
 .end method

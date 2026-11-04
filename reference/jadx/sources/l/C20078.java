@@ -1,22 +1,86 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۢ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: P77N */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20078 {
+import java.nio.file.FileStore;
+import java.nio.file.attribute.FileStoreAttributeView;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f65223;
+/* JADX INFO: renamed from: l.ᩴ᩷ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C20078 extends AbstractC11648 {
+    public final /* synthetic */ FileStore a;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 f65224;
+    @Override // l.AbstractC11648
+    public final /* synthetic */ Object a(String str) {
+        return this.a.getAttribute(str);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f65225;
+    @Override // l.AbstractC11648
+    public final /* synthetic */ long b() {
+        return this.a.getBlockSize();
+    }
 
-    public C20078(long j, AbstractC20745 abstractC20745, String str) {
-        this.f65223 = str;
-        this.f65224 = abstractC20745;
-        this.f65225 = j;
+    @Override // l.AbstractC11648
+    public final /* synthetic */ C9878 c(Class cls) {
+        FileStoreAttributeView fileStoreAttributeView = this.a.getFileStoreAttributeView(cls);
+        if (fileStoreAttributeView == null) {
+            return null;
+        }
+        return new C9878(fileStoreAttributeView);
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ long d() {
+        return this.a.getTotalSpace();
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ long e() {
+        return this.a.getUnallocatedSpace();
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        FileStore fileStore = this.a;
+        if (obj instanceof C20078) {
+            obj = ((C20078) obj).a;
+        }
+        return fileStore.equals(obj);
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ boolean f() {
+        return this.a.isReadOnly();
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ String g() {
+        return this.a.name();
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ long getUsableSpace() {
+        return this.a.getUsableSpace();
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ boolean h(Class cls) {
+        return this.a.supportsFileAttributeView(AbstractC1758.q(cls));
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ boolean i(String str) {
+        return this.a.supportsFileAttributeView(str);
+    }
+
+    @Override // l.AbstractC11648
+    public final /* synthetic */ String j() {
+        return this.a.type();
+    }
+
+    public C20078(FileStore fileStore) {
+        this.a = fileStore;
     }
 }

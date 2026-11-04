@@ -1,14 +1,19 @@
-.class public final Ll/ۘ᩸᩹;
-.super Ll/ܺ᩸᩹;
-.source "R12P"
+.class public Ll/ۘ᩸᩹;
+.super Ljava/lang/Object;
+.source "L8X1"
+
+# interfaces
+.implements Ll/᩷ᩴ᩹;
 
 
 # virtual methods
-.method public final ۖ()I
-    .locals 1
+.method public ۙ(Ll/ᩴᩴ᩹;Ll/ۙ֡ۨ;)V
+    .locals 0
 
-    .line 137
-    sget v0, Ll/᩶᩵ۘ;->ۛ:I
+    .line 13
+    check-cast p1, Ll/֫ᩴ᩹;
 
-    return v0
+    invoke-virtual {p1}, Ll/֫ᩴ᩹;->ᩴ()V
+
+    return-void
 .end method

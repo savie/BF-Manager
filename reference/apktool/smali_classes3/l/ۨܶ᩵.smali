@@ -1,165 +1,118 @@
-.class public final Ll/ۨܶ᩵;
-.super Ljava/io/Writer;
-.source "Q2RQ"
+.class public abstract Ll/ۨܶ᩵;
+.super Ljava/lang/Object;
+.source "M9Z3"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = -0x209fdc77c8b2a69L
-
-
-# instance fields
-.field public final ܺ:Ljava/lang/StringBuilder;
+.implements Ljava/lang/Cloneable;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
-
-    .line 46
-    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
-
-    .line 47
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iput-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/StringBuilder;)V
     .locals 0
 
-    .line 66
-    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
-
-    .line 67
-    iput-object p1, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
+    .line 33
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final append(C)Ljava/io/Writer;
+.method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .line 78
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
-    .locals 1
-
-    .line 90
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
-    .locals 1
-
-    .line 104
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(C)Ljava/lang/Appendable;
-    .locals 1
-
-    .line 78
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-    .locals 1
-
-    .line 90
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
-    .locals 1
-
-    .line 104
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    return-object p0
-.end method
-
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    .line 140
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 33
+    invoke-virtual {p0}, Ll/ۨܶ᩵;->clone()Ll/ۨܶ᩵;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final write(Ljava/lang/String;)V
+.method public clone()Ll/ۨܶ᩵;
     .locals 1
 
-    if-eqz p1, :cond_0
+    .line 624
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 165
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Ll/ۨܶ᩵;
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    return-void
+    return-object v0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
-.method public final write([CII)V
-    .locals 1
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    if-eqz p1, :cond_0
+.method public abstract ֫()[Ljava/net/InetAddress;
+.end method
 
-    .line 153
-    iget-object v0, p0, Ll/ۨܶ᩵;->ܺ:Ljava/lang/StringBuilder;
+.method public abstract ۗ()Ljava/lang/String;
+.end method
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
+.method public abstract ۘ()Z
+.end method
 
-    :cond_0
-    return-void
+.method public abstract ۙ()Ljava/lang/String;
+.end method
+
+.method public abstract ۙ(Ll/ۨܶ᩵;)Z
+.end method
+
+.method public abstract ۚ()[Ljava/net/Inet6Address;
+.end method
+
+.method public abstract ۛ()Ljava/lang/String;
+.end method
+
+.method public abstract ۤ()Ljava/net/Inet4Address;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract ۧ()Ljava/lang/String;
+.end method
+
+.method public abstract ۨ()[B
+.end method
+
+.method public abstract ܳ()Ljava/net/Inet6Address;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract ܶ()Ljava/lang/String;
+.end method
+
+.method public abstract ܺ()I
+.end method
+
+.method public abstract ܽ()Ljava/lang/String;
+.end method
+
+.method public abstract ᩴ()[Ljava/net/Inet4Address;
+.end method
+
+.method public abstract ᩵()Ljava/lang/String;
+.end method
+
+.method public abstract ᩶()Z
+.end method
+
+.method public abstract ᩷()Ljava/lang/String;
+.end method
+
+.method public abstract ᩺()I
+.end method
+
+.method public abstract ᩻()I
 .end method

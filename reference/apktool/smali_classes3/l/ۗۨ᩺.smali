@@ -1,13 +1,14 @@
-.class public final Ll/ۗۨ᩺;
-.super Ll/᩺᩹᩵;
-.source "T6QI"
+.class public interface abstract Ll/ۗۨ᩺;
+.super Ljava/lang/Object;
+.source "K411"
+
+# interfaces
+.implements Ll/᩷ۨ᩺;
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
+.method public abstract getExpression()Ll/᩷᩶ۘ;
+.end method
 
-    const/16 v0, 0x4d
-
-    return v0
+.method public abstract ֫()Ll/ᩴۢۘ;
 .end method

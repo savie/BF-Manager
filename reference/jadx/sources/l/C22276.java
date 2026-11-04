@@ -1,49 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: S98R */
+/* JADX INFO: renamed from: l.᩷᩵ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z69Q */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22276 {
+public final class C22276 extends AbstractC13567 {
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3618(int i, Object obj) {
+        C23022 c23022 = (C23022) obj;
+        int i2 = c23022.f74714;
+        c23022.f74714 = i;
+        return i2;
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72791 = null;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72792 = null;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72793 = null;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72794 = null;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72795 = null;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72796 = null;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72797 = null;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72798 = null;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72799 = null;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static int[] f72800;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static C2519[] f72801;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public static C2519[] f72802;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72803 = null;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static final C2519 f72804 = null;
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3619(Object obj) {
+        return ((C23022) obj).f74714;
+    }
 }

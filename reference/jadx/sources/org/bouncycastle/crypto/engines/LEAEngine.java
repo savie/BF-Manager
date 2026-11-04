@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.engines;
 
 import java.lang.reflect.Array;
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LEAEngine implements BlockCipher {
     public static final int BASEROUNDS = 16;
     public static final int BLOCKSIZE = 16;
@@ -233,7 +233,7 @@ public class LEAEngine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("Invalid parameter passed to LEA init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("Invalid parameter passed to LEA init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         int length = key.length;

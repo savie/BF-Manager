@@ -1,48 +1,48 @@
 package l;
 
-import com.alipay.sdk.m.m.b;
-import java.util.HashMap;
-import java.util.function.Function;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.ܳܶ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: PAJ1 */
+/* JADX INFO: renamed from: l.ܰ۬ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 58LL */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14616 {
+public final class C14616 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C4176();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final HashMap f47825;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final long f46032;
 
-    static {
-        HashMap map = new HashMap();
-        f47825 = map;
-        map.put("local", new C23590(1));
-        map.put("zip", new C13688(2));
-        map.put("tar", new C21051(2));
-        map.put("compress", new C7459(1));
-        map.put("archive", new C23788(0));
-        map.put(b.k, new C1443(3));
-        map.put("payload", new C1533(1));
-        map.put("trash", new C18834(1));
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final long f46033;
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m35095(String str) {
-        if (!f47825.containsKey(str)) {
-            throw new RuntimeException("Type has not been registered in StatelessVisitor.Generator: ".concat(str));
-        }
+    public C14616(Parcel parcel) {
+        long j = parcel.readLong();
+        long j2 = parcel.readLong();
+        C20782.m47565(j2 >= 0 || j2 == -9223372036854775807L);
+        this.f46033 = j;
+        this.f46032 = j2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AbstractC9677 m35094(byte[] bArr, boolean z) {
-        C17367 c17367 = new C17367(bArr);
-        Function function = (Function) f47825.get(c17367.m40458());
-        if (function == null) {
-            throw new RuntimeException();
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C14616)) {
+            return false;
         }
-        AbstractC9677 abstractC9677 = (AbstractC9677) function.apply(c17367);
-        if (z) {
-            abstractC9677.f32622 = true;
-        }
-        return abstractC9677;
+        C14616 c14616 = (C14616) obj;
+        return this.f46033 == c14616.f46033 && this.f46032 == c14616.f46032;
+    }
+
+    public final int hashCode() {
+        return (((int) this.f46033) * 961) + ((int) this.f46032);
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(this.f46033);
+        parcel.writeLong(this.f46032);
     }
 }

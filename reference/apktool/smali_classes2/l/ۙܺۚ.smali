@@ -1,38 +1,41 @@
-.class public final synthetic Ll/ۙܺۚ;
+.class public final Ll/ۙܺۚ;
 .super Ljava/lang/Object;
-.source "715Z"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+.source "1761"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/᩹ܺۚ;
+.field public final ۙ:Z
+
+.field public final ۤ:I
+
+.field public final ᩴ:I
+
+.field public final ᩷:Z
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩹ܺۚ;)V
+.method public constructor <init>(ZIIIZ)V
     .locals 0
 
-    .line 0
+    .line 1558
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۙܺۚ;->ۙ:Ll/᩹ܺۚ;
+    .line 1559
+    iput-boolean p1, p0, Ll/ۙܺۚ;->᩷:Z
+
+    .line 1560
+    iput p2, p0, Ll/ۙܺۚ;->ۤ:I
+
+    .line 1561
+    iput p3, p0, Ll/ۙܺۚ;->᩸:I
+
+    .line 1562
+    iput p4, p0, Ll/ۙܺۚ;->ᩴ:I
+
+    .line 1563
+    iput-boolean p5, p0, Ll/ۙܺۚ;->ۙ:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Ll/ۙܺۚ;->ۙ:Ll/᩹ܺۚ;
-
-    invoke-static {v0}, Ll/᩹ܺۚ;->ۨ(Ll/᩹ܺۚ;)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    return-object v0
 .end method

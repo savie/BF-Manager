@@ -20,7 +20,7 @@ import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECKeyPairGenerator implements AsymmetricCipherKeyPairGenerator, ECConstants {
     public final String name;
     public ECDomainParameters params;

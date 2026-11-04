@@ -1,154 +1,157 @@
 package l;
 
-import java.util.Map;
-import java.util.Spliterator;
-import java.util.function.Consumer;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۚ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1MW */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5233 extends AbstractC5543 implements InterfaceC17537, InterfaceC22810 {
+/* JADX INFO: renamed from: l.ۙ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5233 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6644 f18145;
-
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
-    }
-
-    public C5233(C6644 c6644) {
-        this.f18145 = c6644;
-    }
-
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC6269 iterator() {
-        return new C2014(this.f18145);
-    }
-
-    @Override // l.InterfaceC17537
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC6269 mo14425() {
-        return new C3425(this.f18145);
+    public static final int[] f18436;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C3390 f18437;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C0407 f18438;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m15736(int i) {
+        if (i >= 65536) {
+            return true;
+        }
+        char c = (char) i;
+        int i2 = C18446.f60051;
+        return c >= 55296 && c < 57344;
     }
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC7371 spliterator() {
-        return new C9777(this.f18145);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C10673 m15734(C0407 c0407) {
+        if (!(c0407 instanceof C16640)) {
+            return null;
+        }
+        C10673 c10673 = new C10673();
+        c10673.f33882 = ((C16640) c0407).f53784;
+        if (c0407.getClass() == C6200.class) {
+            C6200 c6200 = (C6200) c0407;
+            c10673.f33878 = 1;
+            c10673.f33881 = c6200.f21109;
+            c10673.f33879 = c6200.f21109.f1952;
+            c10673.f33884 = (int[]) c6200.f21108.clone();
+            return c10673;
+        }
+        if (c0407.getClass() == C17386.class) {
+            C17386 c17386 = (C17386) c0407;
+            c10673.f33878 = 2;
+            c10673.f33881 = c17386.f56542;
+            c10673.f33879 = c17386.f56542.f1952;
+            c10673.f33880 = c17386.f56543;
+            return c10673;
+        }
+        if (c0407.getClass() == C23354.class) {
+            C23354 c23354 = (C23354) c0407;
+            c10673.f33878 = 3;
+            c10673.f33881 = c23354.f75636;
+            c10673.f33883 = Arrays.copyOf(c23354.f75635.f15783, c23354.f75635.f15784);
+            return c10673;
+        }
+        if (c0407.getClass() == C15894.class) {
+            C15894 c15894 = (C15894) c0407;
+            c10673.f33878 = 4;
+            c10673.f33881 = c15894.f51659;
+            c10673.f33880 = c15894.f51660;
+            return c10673;
+        }
+        if (c0407.getClass() == C20370.class) {
+            C20370 c20370 = (C20370) c0407;
+            c10673.f33878 = 5;
+            c10673.f33881 = c20370.f65328;
+            c10673.f33875 = new C21862(c20370.f65327);
+            c10673.f33876 = c20370.f65326;
+            return c10673;
+        }
+        if (c0407.getClass() != C3216.class) {
+            return null;
+        }
+        C3216 c3216 = (C3216) c0407;
+        c10673.f33878 = 6;
+        c10673.f33881 = c3216.f10483;
+        c10673.f33875 = new C21862(c3216.f10481);
+        c10673.f33880 = c3216.f10480;
+        c10673.f33877 = c3216.f10482;
+        return c10673;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        Object obj2;
-        if (!(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getValue() == null || !(entry.getValue() instanceof Integer)) {
-            return false;
-        }
-        Object key = entry.getKey();
-        int iIntValue = ((Integer) entry.getValue()).intValue();
-        C6644 c6644 = this.f18145;
-        if (key != null) {
-            Object[] objArr = c6644.f22442;
-            int iM25125 = C9927.m25125(key.hashCode()) & c6644.f22443;
-            Object obj3 = objArr[iM25125];
-            if (obj3 == null) {
-                return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C21862 m15731(C0407 c0407) {
+        if (c0407 instanceof C4136) {
+            InterfaceC24274 interfaceC24274 = ((C4136) c0407).f14031;
+            if (C1402.m5130(interfaceC24274)) {
+                return new C21862(((C4708) interfaceC24274).f16613);
             }
-            if (!key.equals(obj3)) {
-                do {
-                    iM25125 = (iM25125 + 1) & c6644.f22443;
-                    obj2 = objArr[iM25125];
-                    if (obj2 == null) {
-                        return false;
-                    }
-                } while (!key.equals(obj2));
-                if (c6644.f22435[iM25125] != iIntValue) {
-                    return false;
+        }
+        throw new IllegalArgumentException("Unknown looking-at check: ".concat(c0407.getClass().getName()));
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InterfaceC2885 m15735(C0407 c0407) {
+        if (c0407 instanceof C21290) {
+            return ((C21290) c0407).f67889;
+        }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int[] m15733(C8106 c8106) {
+        return c8106.f26770;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC2885 m15729(InterfaceC2885 interfaceC2885, InterfaceC2885 interfaceC2886, InterfaceC2885 interfaceC2887, boolean z) {
+        return C0891.m3624(C0891.m3624(interfaceC2885, interfaceC2886, z), interfaceC2887, z);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC12580 m15730(int i) {
+        return new C22608(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m15728(InterfaceC2885 interfaceC2885) {
+        if (interfaceC2885 instanceof C3631) {
+            return ((C3631) interfaceC2885).f12444.length << 6;
+        }
+        if (interfaceC2885 instanceof C11834) {
+            return ((C11834) interfaceC2885).f38163.length << 6;
+        }
+        int iM33756 = C13830.m33756(interfaceC2885);
+        if (iM33756 >= 0) {
+            return iM33756 + 1;
+        }
+        return 65536;
+    }
+
+    static {
+        int[] iArrCopyOf = new int[4096];
+        int i = 0;
+        for (int i2 = 0; i2 <= 65535; i2++) {
+            int upperCase = Character.toUpperCase(i2);
+            if (upperCase != i2 || Character.toLowerCase(upperCase) != i2) {
+                if (i == iArrCopyOf.length) {
+                    iArrCopyOf = Arrays.copyOf(iArrCopyOf, i * 2);
                 }
-            } else if (c6644.f22435[iM25125] != iIntValue) {
-                return false;
+                iArrCopyOf[i] = i2;
+                i++;
             }
-        } else if (!c6644.f22441 || c6644.f22435[c6644.f22445] != iIntValue) {
-            return false;
         }
-        return true;
+        f18436 = Arrays.copyOf(iArrCopyOf, i);
+        f18438 = new C0407();
+        f18437 = new C3390();
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean remove(Object obj) {
-        if (!(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getValue() == null || !(entry.getValue() instanceof Integer)) {
-            return false;
-        }
-        Object key = entry.getKey();
-        int iIntValue = ((Integer) entry.getValue()).intValue();
-        C6644 c6644 = this.f18145;
-        if (key == null) {
-            if (!c6644.f22441 || c6644.f22435[c6644.f22445] != iIntValue) {
-                return false;
-            }
-            c6644.m18013();
-            return true;
-        }
-        Object[] objArr = c6644.f22442;
-        int iM25125 = C9927.m25125(key.hashCode()) & c6644.f22443;
-        Object obj2 = objArr[iM25125];
-        if (obj2 == null) {
-            return false;
-        }
-        if (obj2.equals(key)) {
-            if (c6644.f22435[iM25125] != iIntValue) {
-                return false;
-            }
-            c6644.m18017(iM25125);
-            return true;
-        }
-        while (true) {
-            iM25125 = (iM25125 + 1) & c6644.f22443;
-            Object obj3 = objArr[iM25125];
-            if (obj3 == null) {
-                return false;
-            }
-            if (obj3.equals(key) && c6644.f22435[iM25125] == iIntValue) {
-                c6644.m18017(iM25125);
-                return true;
-            }
-        }
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f18145.f22440;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final void clear() {
-        this.f18145.clear();
-    }
-
-    @Override // l.AbstractC14695, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        C6644 c6644 = this.f18145;
-        if (c6644.f22441) {
-            consumer.n(new C2410(c6644, c6644.f22445));
-        }
-        Object[] objArr = c6644.f22442;
-        int i = c6644.f22445;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return;
-            }
-            if (objArr[i2] != null) {
-                consumer.n(new C2410(c6644, i2));
-            }
-            i = i2;
-        }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static C19161 m15737(C0407 c0407) {
+        return C7119.m19517(c0407);
     }
 }

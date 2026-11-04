@@ -1,104 +1,49 @@
-.class public final Ll/ۤ۬ᩴ;
-.super Ll/֨ܶᩴ;
-.source "VZ3"
+.class public final synthetic Ll/ۤ۬ᩴ;
+.super Ljava/lang/Object;
+.source "P70J"
+
+# interfaces
+.implements Ll/ۖᩴܳ;
 
 
 # instance fields
-.field public final synthetic ֡:Ll/۟۬ᩴ;
+.field public final synthetic ۙ:Ll/ܶۤܳ;
+
+.field public final synthetic ᩷:Ll/ܳ۬ᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/۟۬ᩴ;II)V
+.method public synthetic constructor <init>(Ll/ܶۤܳ;Ll/ܳ۬ᩴ;)V
     .locals 0
 
-    .line 558
-    iput-object p1, p0, Ll/ۤ۬ᩴ;->֡:Ll/۟۬ᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 559
-    invoke-direct {p0, p2, p3}, Ll/֨ܶᩴ;-><init>(II)V
+    iput-object p1, p0, Ll/ۤ۬ᩴ;->ۙ:Ll/ܶۤܳ;
+
+    iput-object p2, p0, Ll/ۤ۬ᩴ;->᩷:Ll/ܳ۬ᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final characteristics()I
-    .locals 1
-
-    const/16 v0, 0x4151
-
-    return v0
-.end method
-
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 557
-    check-cast p1, Ljava/util/function/IntConsumer;
-
-    invoke-virtual {p0, p1}, Ll/ۤ۬ᩴ;->forEachRemaining(Ljava/util/function/IntConsumer;)V
-
-    return-void
-.end method
-
-.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
-    .locals 4
-
-    .line 581
-    iget-object v0, p0, Ll/ۤ۬ᩴ;->֡:Ll/۟۬ᩴ;
-
-    iget-object v0, v0, Ll/۟۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
-
-    iget-object v1, v0, Ll/ܽ۬ᩴ;->᩶:[I
-
-    .line 582
-    iget v0, v0, Ll/ܽ۬ᩴ;->ܽ:I
-
-    .line 583
-    :goto_0
-    iget v2, p0, Ll/ۖܶᩴ;->ܺ:I
-
-    if-ge v2, v0, :cond_0
-
-    add-int/lit8 v3, v2, 0x1
-
-    .line 584
-    iput v3, p0, Ll/ۖܶᩴ;->ܺ:I
-
-    aget v2, v1, v2
-
-    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final ۙ(I)I
-    .locals 1
-
-    .line 570
-    iget-object v0, p0, Ll/ۤ۬ᩴ;->֡:Ll/۟۬ᩴ;
-
-    iget-object v0, v0, Ll/۟۬ᩴ;->ܺ:Ll/ܽ۬ᩴ;
-
-    iget-object v0, v0, Ll/ܽ۬ᩴ;->᩶:[I
-
-    aget p1, v0, p1
-
-    return p1
-.end method
-
-.method public final ۙ(II)Ll/ۨܶᩴ;
+.method public final create()Ll/ۡᩴܳ;
     .locals 2
 
-    .line 575
-    new-instance v0, Ll/ۤ۬ᩴ;
+    .line 298
+    new-instance v0, Ll/᩸۬ᩴ;
 
-    iget-object v1, p0, Ll/ۤ۬ᩴ;->֡:Ll/۟۬ᩴ;
+    iget-object v1, p0, Ll/ۤ۬ᩴ;->᩷:Ll/ܳ۬ᩴ;
 
-    invoke-direct {v0, v1, p1, p2}, Ll/ۤ۬ᩴ;-><init>(Ll/۟۬ᩴ;II)V
+    invoke-direct {v0, v1}, Ll/᩸۬ᩴ;-><init>(Ll/ܳ۬ᩴ;)V
+
+    .line 297
+    iget-object v1, p0, Ll/ۤ۬ᩴ;->ۙ:Ll/ܶۤܳ;
+
+    invoke-virtual {v1, v0}, Ll/ܶۤܳ;->ۙ(Ljava/util/function/LongSupplier;)Ll/ۡᩴܳ;
+
+    move-result-object v0
 
     return-object v0
 .end method

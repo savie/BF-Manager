@@ -1,28 +1,29 @@
 package l;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.֡᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W8YJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0748 extends AbstractC3382 {
-    @Override // l.AbstractC3382
+/* JADX INFO: renamed from: l.֡᩹᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 97L */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0748 extends AbstractC21631 implements InterfaceC15224, InterfaceC19597 {
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19393 f2726;
+
+    @Override // l.AbstractC21631
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo3244(InterfaceC12061 interfaceC12061, AbstractC4332 abstractC4332, InterfaceC21022 interfaceC21022) {
-        if (interfaceC21022.mo38114()) {
-            AbstractC3382.m10034(interfaceC12061, abstractC4332, interfaceC21022.mo38112());
-        }
-        C18410 c18410Mo29970 = interfaceC12061.mo29970();
-        InterfaceC4774 interfaceC4774Mo19014 = c18410Mo29970.m42695().mo19014(C2036.class);
-        if (interfaceC4774Mo19014 != null) {
-            C2657.m8180(interfaceC12061.builder(), interfaceC4774Mo19014.mo6311(c18410Mo29970, interfaceC12061.mo29965()), interfaceC21022.start(), interfaceC21022.end());
-        }
+    public final void mo3081(int i, Object obj) {
+        ((Consumer) obj).accept(this.f2726.f62673[i]);
     }
 
-    @Override // l.AbstractC3382
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Collection mo3243() {
-        return Collections.singleton("blockquote");
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C0748(C19393 c19393) {
+        super(c19393);
+        this.f2726 = c19393;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        return this.f2726.f62673[m49168()];
     }
 }

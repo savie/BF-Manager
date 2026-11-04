@@ -1,58 +1,56 @@
 package l;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-import net.sf.sevenzipjbinding.IInArchive;
-
-/* JADX INFO: renamed from: l.ۨ᩻᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAIH */
+/* JADX INFO: renamed from: l.ۨ֫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q7UG */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12043 implements InterfaceC3600 {
+public class C12043 implements InterfaceC22024 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AtomicBoolean f40307;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22024 f38809;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21920 f40308;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15571 f40309;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7353 f40310;
-
-    public C12043(C21920 c21920, C15571 c15571, AtomicBoolean atomicBoolean, C7353 c7353) {
-        this.f40308 = c21920;
-        this.f40309 = c15571;
-        this.f40307 = atomicBoolean;
-        this.f40310 = c7353;
+    public C12043(InterfaceC22024 interfaceC22024) {
+        this.f38809 = interfaceC22024;
     }
 
-    @Override // l.InterfaceC3600
+    @Override // l.InterfaceC22024
     /* JADX INFO: renamed from: ۙ */
-    public final void mo10687(IInArchive iInArchive) {
-        try {
-            this.f40308.m48731(iInArchive, this.f40309);
-        } catch (Throwable th) {
-            C19431.m44468(iInArchive);
-            throw th;
-        }
+    public final void mo14382(long j) {
+        this.f38809.mo14382(j);
     }
 
-    @Override // l.InterfaceC3600
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo10688() {
-        this.f40307.set(true);
-    }
-
-    @Override // l.InterfaceC3600
+    @Override // l.InterfaceC22024
     /* JADX INFO: renamed from: ۙ */
-    public final void mo10686(AbstractC20745 abstractC20745) {
-        this.f40309.m37208(abstractC20745);
+    public final void mo14384(C15648 c15648) {
+        this.f38809.mo14384(c15648);
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f40310.getAsBoolean();
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo14380(InterfaceC9461 interfaceC9461, int i, boolean z) {
+        return this.f38809.mo14380(interfaceC9461, i, z);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14381(int i, C21287 c21287) {
+        this.f38809.mo14381(i, c21287);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo14386(InterfaceC9461 interfaceC9461, int i, boolean z) {
+        return this.f38809.mo14386(interfaceC9461, i, z);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14385(C21287 c21287, int i, int i2) {
+        this.f38809.mo14385(c21287, i, i2);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public void mo14383(long j, int i, int i2, int i3, C4870 c4870) {
+        this.f38809.mo14383(j, i, i2, i3, c4870);
     }
 }

@@ -1,39 +1,69 @@
 .class public final Ll/ܶ֫;
 .super Ljava/lang/Object;
-.source "E9O4"
+.source "C4MC"
 
 # interfaces
-.implements Ll/᩹ܽ۠;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ܿܿܰ;
+.field public final synthetic ܰ:Ll/᩹֫;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿܿܰ;)V
+.method public constructor <init>(Ll/᩹֫;)V
     .locals 0
 
-    .line 101
+    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 0
-    iput-object p1, p0, Ll/ܶ֫;->ۙ:Ll/ܿܿܰ;
+    iput-object p1, p0, Ll/ܶ֫;->ܰ:Ll/᩹֫;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 2
 
+    .line 86
+    iget-object v0, p0, Ll/ܶ֫;->ܰ:Ll/᩹֫;
+
+    iget-object v1, v0, Ll/᩹֫;->ܳۙ:Landroid/view/ViewTreeObserver;
+
+    if-eqz v1, :cond_1
+
     .line 87
-    new-instance v0, Ll/ᩳ֫;
+    invoke-virtual {v1}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
-    iget-object v1, p0, Ll/ܶ֫;->ۙ:Ll/ܿܿܰ;
+    move-result v1
 
-    invoke-direct {v0, v1}, Ll/ᩳ֫;-><init>(Landroid/view/ViewGroup;)V
+    if-nez v1, :cond_0
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ll/᩹֫;->ܳۙ:Landroid/view/ViewTreeObserver;
+
+    .line 88
+    :cond_0
+    iget-object v1, v0, Ll/᩹֫;->ܳۙ:Landroid/view/ViewTreeObserver;
+
+    iget-object v0, v0, Ll/᩹֫;->֨:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 90
+    :cond_1
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
 .end method

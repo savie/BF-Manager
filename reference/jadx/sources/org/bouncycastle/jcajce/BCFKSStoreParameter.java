@@ -4,7 +4,7 @@ import java.io.OutputStream;
 import java.security.KeyStore;
 import org.bouncycastle.crypto.util.PBKDFConfig;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCFKSStoreParameter implements KeyStore.LoadStoreParameter {
     public OutputStream out;
     public final KeyStore.ProtectionParameter protectionParameter;

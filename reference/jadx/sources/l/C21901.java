@@ -1,333 +1,134 @@
 package l;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.AttributeSet;
-import android.view.View;
-import com.google.android.material.timepicker.TimeModel;
+import com.umeng.analytics.pro.bo;
+import org.bouncycastle.asn1.BERTags;
 
-/* JADX INFO: renamed from: l.᩸᩺᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: S593 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C21901 extends View {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f71041;
-
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public float f71042;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public int f71043;
-
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public Paint f71044;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public Paint f71045;
-
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public final RectF f71046;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final RectF f71047;
-
-    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public float f71048;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public boolean f71049;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public float f71050;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public int f71051;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public int f71052;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public float f71053;
-
-    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
-    public Paint f71054;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public String f71055;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public String f71056;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f71057;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public float f71058;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public boolean f71059;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f71060;
-
-    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public int f71061;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final float f71062;
-
-    public C21901(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, 0);
-    }
-
-    public C21901(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f71051 = 100;
-        this.f71060 = 0;
-        this.f71055 = "%";
-        this.f71056 = "";
-        int iRgb = Color.rgb(66, 145, 241);
-        int iRgb2 = Color.rgb(66, 145, 241);
-        int iArgb = Color.argb(180, 194, 194, 194);
-        this.f71046 = new RectF(0.0f, 0.0f, 0.0f, 0.0f);
-        this.f71047 = new RectF(0.0f, 0.0f, 0.0f, 0.0f);
-        this.f71059 = true;
-        this.f71041 = true;
-        this.f71049 = true;
-        float f = (getResources().getDisplayMetrics().density * 1.5f) + 0.5f;
-        float f2 = (getResources().getDisplayMetrics().density * 1.0f) + 0.5f;
-        float f3 = getResources().getDisplayMetrics().scaledDensity * 10.0f;
-        float f4 = (getResources().getDisplayMetrics().density * 3.0f) + 0.5f;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8270.f28748);
-        this.f71043 = typedArrayObtainStyledAttributes.getColor(3, iRgb2);
-        this.f71061 = typedArrayObtainStyledAttributes.getColor(9, iArgb);
-        this.f71052 = typedArrayObtainStyledAttributes.getColor(4, iRgb);
-        this.f71048 = typedArrayObtainStyledAttributes.getDimension(6, f3);
-        this.f71050 = typedArrayObtainStyledAttributes.getDimension(2, f);
-        this.f71042 = typedArrayObtainStyledAttributes.getDimension(8, f2);
-        this.f71062 = typedArrayObtainStyledAttributes.getDimension(5, f4);
-        if (typedArrayObtainStyledAttributes.getInt(7, 0) != 0) {
-            this.f71049 = false;
+/* JADX INFO: renamed from: l.᩷۟ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F411 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21901 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m49591(int i, int i2, byte[] bArr) {
+        char[] cArr = new char[i2];
+        int i3 = i2 + i;
+        int i4 = 0;
+        while (i < i3) {
+            int i5 = i + 1;
+            byte b = bArr[i];
+            int i6 = b & 255;
+            if (i6 >= 224) {
+                int i7 = i + 2;
+                i += 3;
+                i6 = ((bArr[i5] & 63) << 6) | ((b & 15) << 12) | (bArr[i7] & 63);
+            } else if (i6 >= 192) {
+                i += 2;
+                i6 = ((b & bo.j) << 6) | (bArr[i5] & 63);
+            } else {
+                i = i5;
+            }
+            cArr[i4] = (char) i6;
+            i4++;
         }
-        m48699(typedArrayObtainStyledAttributes.getInt(0, 0));
-        int i2 = typedArrayObtainStyledAttributes.getInt(1, 100);
-        if (i2 > 0) {
-            this.f71051 = i2;
-            invalidate();
-        }
-        typedArrayObtainStyledAttributes.recycle();
-        m48698();
-    }
-
-    @Override // android.view.View
-    public final int getSuggestedMinimumWidth() {
-        return (int) this.f71048;
-    }
-
-    @Override // android.view.View
-    public final int getSuggestedMinimumHeight() {
-        return Math.max((int) this.f71048, Math.max((int) this.f71050, (int) this.f71042));
-    }
-
-    @Override // android.view.View
-    public final void onMeasure(int i, int i2) {
-        setMeasuredDimension(m48697(i, true), m48697(i2, false));
+        return new String(cArr, 0, i4);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private int m48697(int i, boolean z) {
-        int paddingTop;
-        int paddingBottom;
-        int suggestedMinimumHeight;
-        int mode = View.MeasureSpec.getMode(i);
-        int size = View.MeasureSpec.getSize(i);
-        if (z) {
-            paddingTop = getPaddingLeft();
-            paddingBottom = getPaddingRight();
-        } else {
-            paddingTop = getPaddingTop();
-            paddingBottom = getPaddingBottom();
+    public static int m49589(byte[] bArr, int i, int i2, char[] cArr) {
+        for (int i3 = 0; i3 < i2; i3++) {
+            char c = cArr[i3];
+            if (1 <= c && c <= 127) {
+                bArr[i] = (byte) c;
+                i++;
+            } else if (c <= 2047) {
+                int i4 = i + 1;
+                bArr[i] = (byte) ((c >> 6) | 192);
+                i += 2;
+                bArr[i4] = (byte) ((c & '?') | 128);
+            } else {
+                bArr[i] = (byte) ((c >> '\f') | BERTags.FLAGS);
+                int i5 = i + 2;
+                bArr[i + 1] = (byte) (((c >> 6) & 63) | 128);
+                i += 3;
+                bArr[i5] = (byte) ((c & '?') | 128);
+            }
         }
-        int i2 = paddingBottom + paddingTop;
-        if (mode == 1073741824) {
-            return size;
-        }
-        if (z) {
-            suggestedMinimumHeight = (int) this.f71048;
-        } else {
-            suggestedMinimumHeight = getSuggestedMinimumHeight();
-        }
-        int i3 = suggestedMinimumHeight + i2;
-        if (mode != Integer.MIN_VALUE) {
-            return i3;
-        }
-        if (z) {
-            return Math.max(i3, size);
-        }
-        return Math.min(i3, size);
+        return i;
     }
 
-    @Override // android.view.View
-    public final void onDraw(Canvas canvas) {
-        boolean z = this.f71049;
-        RectF rectF = this.f71047;
-        RectF rectF2 = this.f71046;
-        if (z) {
-            this.f71057 = String.format(TimeModel.NUMBER_FORMAT, Integer.valueOf((this.f71060 * 100) / this.f71051));
-            String str = this.f71056 + this.f71057 + this.f71055;
-            this.f71057 = str;
-            float fMeasureText = this.f71044.measureText(str);
-            int i = this.f71060;
-            float f = this.f71062;
-            if (i == 0) {
-                this.f71041 = false;
-                this.f71053 = getPaddingLeft();
-            } else {
-                this.f71041 = true;
-                rectF.left = getPaddingLeft();
-                rectF.top = (getHeight() / 2.0f) - (this.f71050 / 2.0f);
-                rectF.right = (((((getWidth() - getPaddingLeft()) - getPaddingRight()) / (this.f71051 * 1.0f)) * this.f71060) - f) + getPaddingLeft();
-                rectF.bottom = (this.f71050 / 2.0f) + (getHeight() / 2.0f);
-                this.f71053 = rectF.right + f;
-            }
-            this.f71058 = (int) ((getHeight() / 2.0f) - ((this.f71044.ascent() + this.f71044.descent()) / 2.0f));
-            if (this.f71053 + fMeasureText >= getWidth() - getPaddingRight()) {
-                float width = (getWidth() - getPaddingRight()) - fMeasureText;
-                this.f71053 = width;
-                rectF.right = width - f;
-            }
-            float f2 = this.f71053 + fMeasureText + f;
-            if (f2 >= getWidth() - getPaddingRight()) {
-                this.f71059 = false;
-            } else {
-                this.f71059 = true;
-                rectF2.left = f2;
-                rectF2.right = getWidth() - getPaddingRight();
-                rectF2.top = ((-this.f71042) / 2.0f) + (getHeight() / 2.0f);
-                rectF2.bottom = (this.f71042 / 2.0f) + (getHeight() / 2.0f);
-            }
-        } else {
-            rectF.left = getPaddingLeft();
-            rectF.top = (getHeight() / 2.0f) - (this.f71050 / 2.0f);
-            rectF.right = ((((getWidth() - getPaddingLeft()) - getPaddingRight()) / (this.f71051 * 1.0f)) * this.f71060) + getPaddingLeft();
-            rectF.bottom = (this.f71050 / 2.0f) + (getHeight() / 2.0f);
-            rectF2.left = rectF.right;
-            rectF2.right = getWidth() - getPaddingRight();
-            rectF2.top = ((-this.f71042) / 2.0f) + (getHeight() / 2.0f);
-            rectF2.bottom = (this.f71042 / 2.0f) + (getHeight() / 2.0f);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m49592(String str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            sb.append(m49590(str.charAt(i)));
         }
-        if (this.f71041) {
-            canvas.drawRect(rectF, this.f71045);
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m49590(char c) {
+        if (c == '\f') {
+            return "\\f";
         }
-        if (this.f71059) {
-            canvas.drawRect(rectF2, this.f71054);
+        if (c == '\r') {
+            return "\\r";
         }
-        if (this.f71049) {
-            canvas.drawText(this.f71057, this.f71053, this.f71058, this.f71044);
+        if (c == '\"') {
+            return "\\\"";
+        }
+        if (c == '\'') {
+            return "\\'";
+        }
+        if (c == '\\') {
+            return "\\\\";
+        }
+        switch (c) {
+            case '\b':
+                return "\\b";
+            case '\t':
+                return "\\t";
+            case '\n':
+                return "\\n";
+            default:
+                return (c < ' ' || c > '~') ? String.format("\\u%04x", Integer.valueOf(c)) : String.valueOf(c);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static AbstractC19728 m49594(AbstractC19728 abstractC19728) {
+        return (abstractC19728.m45427((byte) 46) + 1 == 0 && abstractC19728.mo42395() == abstractC19728.length()) ? abstractC19728 : abstractC19728.m45429(abstractC19728.m45427((byte) 46) + 1, abstractC19728.mo42395());
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C14769 m49595(AbstractC19728 abstractC19728) {
+        C14769 c14769M35543 = C14769.m35543();
+        while (true) {
+            int iM45427 = abstractC19728.m45427((byte) 36);
+            if (iM45427 <= 0) {
+                return c14769M35543;
+            }
+            abstractC19728 = abstractC19728.m45429(0, iM45427);
+            c14769M35543.getClass();
+            c14769M35543 = new C14769(abstractC19728, c14769M35543);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m48698() {
-        Paint paint = new Paint(1);
-        this.f71045 = paint;
-        paint.setColor(this.f71043);
-        Paint paint2 = new Paint(1);
-        this.f71054 = paint2;
-        paint2.setColor(this.f71061);
-        Paint paint3 = new Paint(1);
-        this.f71044 = paint3;
-        paint3.setColor(this.f71052);
-        this.f71044.setTextSize(this.f71048);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m48699(int i) {
-        if (i > this.f71051 || i < 0) {
-            return;
+    public static C14769 m49593(AbstractC19728 abstractC19728) {
+        C14769 c14769M35543 = C14769.m35543();
+        String string = abstractC19728.toString();
+        int iIndexOf = -1;
+        while (true) {
+            iIndexOf = string.indexOf(46, iIndexOf + 1);
+            if (iIndexOf <= 0) {
+                return c14769M35543.m35554();
+            }
+            int i = iIndexOf + 1;
+            String strSubstring = string.substring(0, i);
+            String strReplace = string.substring(i).replace('.', '$');
+            C15252 c15252 = abstractC19728.f63499.f73707;
+            AbstractC19728 abstractC19728M51194 = c15252.f49864.m51194(C14483.m34972(strSubstring, strReplace));
+            c14769M35543.getClass();
+            c14769M35543 = new C14769(abstractC19728M51194, c14769M35543);
         }
-        this.f71060 = i;
-        invalidate();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m48702(int i) {
-        this.f71052 = i;
-        this.f71044.setColor(i);
-        invalidate();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m48701(int i) {
-        this.f71043 = i;
-        this.f71045.setColor(i);
-        invalidate();
-    }
-
-    @Override // android.view.View
-    public final Parcelable onSaveInstanceState() {
-        Bundle bundle = new Bundle();
-        bundle.putParcelable("saved_instance", super.onSaveInstanceState());
-        bundle.putInt("text_color", this.f71052);
-        bundle.putFloat("text_size", this.f71048);
-        bundle.putFloat("reached_bar_height", this.f71050);
-        bundle.putFloat("unreached_bar_height", this.f71042);
-        bundle.putInt("reached_bar_color", this.f71043);
-        bundle.putInt("unreached_bar_color", this.f71061);
-        bundle.putInt("max", this.f71051);
-        bundle.putInt("progress", this.f71060);
-        bundle.putString("suffix", this.f71055);
-        bundle.putString("prefix", this.f71056);
-        bundle.putBoolean("text_visibility", this.f71049);
-        return bundle;
-    }
-
-    @Override // android.view.View
-    public final void onRestoreInstanceState(Parcelable parcelable) {
-        if (parcelable instanceof Bundle) {
-            Bundle bundle = (Bundle) parcelable;
-            this.f71052 = bundle.getInt("text_color");
-            this.f71048 = bundle.getFloat("text_size");
-            this.f71050 = bundle.getFloat("reached_bar_height");
-            this.f71042 = bundle.getFloat("unreached_bar_height");
-            this.f71043 = bundle.getInt("reached_bar_color");
-            this.f71061 = bundle.getInt("unreached_bar_color");
-            m48698();
-            int i = bundle.getInt("max");
-            if (i > 0) {
-                this.f71051 = i;
-                invalidate();
-            }
-            m48699(bundle.getInt("progress"));
-            String string = bundle.getString("prefix");
-            if (string == null) {
-                this.f71056 = "";
-            } else {
-                this.f71056 = string;
-            }
-            String string2 = bundle.getString("suffix");
-            if (string2 == null) {
-                this.f71055 = "";
-            } else {
-                this.f71055 = string2;
-            }
-            m48700(bundle.getBoolean("text_visibility") ? EnumC15552.Visible : EnumC15552.Invisible);
-            super.onRestoreInstanceState(bundle.getParcelable("saved_instance"));
-            return;
-        }
-        super.onRestoreInstanceState(parcelable);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m48700(EnumC15552 enumC15552) {
-        this.f71049 = enumC15552 == EnumC15552.Visible;
-        invalidate();
     }
 }

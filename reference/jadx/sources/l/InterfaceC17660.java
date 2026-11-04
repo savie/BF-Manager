@@ -1,0 +1,9 @@
+package l;
+
+/* JADX INFO: renamed from: l.ܽܳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 64JA */
+/* JADX INFO: loaded from: classes4.dex */
+@FunctionalInterface
+public interface InterfaceC17660 {
+    C14150 get();
+}

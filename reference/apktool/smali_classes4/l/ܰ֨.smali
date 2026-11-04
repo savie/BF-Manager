@@ -1,41 +1,170 @@
 .class public final Ll/ܰ֨;
-.super Ll/ۤܰܶ;
-.source "45OX"
+.super Ljava/lang/Object;
+.source "Z21V"
 
-
-# instance fields
-.field public final synthetic ۙ:Ll/ۚ֨;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۚ֨;)V
-    .locals 0
-
-    .line 29
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 150
-    iput-object p1, p0, Ll/ܰ֨;->ۙ:Ll/ۚ֨;
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/text/Spannable;
 
 
 # virtual methods
-.method public final onAnimationEnd()V
-    .locals 2
+.method public final charAt(I)C
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 727
+    throw p1
+.end method
+
+.method public final getSpanEnd(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 702
+    throw p1
+.end method
+
+.method public final getSpanFlags(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 707
+    throw p1
+.end method
+
+.method public final getSpanStart(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 697
+    throw p1
+.end method
+
+.method public final getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    .locals 0
+
+    .line 687
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x1d
+
+    const/4 p3, 0x0
+
+    if-lt p1, p2, :cond_0
+
+    .line 688
+    throw p3
+
+    .line 690
+    :cond_0
+    throw p3
+.end method
+
+.method public final length()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    .line 153
-    iget-object v1, p0, Ll/ܰ֨;->ۙ:Ll/ۚ֨;
+    .line 722
+    throw v0
+.end method
 
-    iput-object v0, v1, Ll/ۚ֨;->۬:Ll/ܰ۬;
+.method public final nextSpanTransition(IILjava/lang/Class;)I
+    .locals 0
 
-    .line 154
-    iget-object v0, v1, Ll/ۚ֨;->ܰ:Ll/᩷ۘ;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    .line 712
+    throw p1
+.end method
 
-    return-void
+.method public final removeSpan(Ljava/lang/Object;)V
+    .locals 2
+
+    .line 669
+    instance-of p1, p1, Landroid/text/style/MetricAffectingSpan;
+
+    if-nez p1, :cond_1
+
+    .line 673
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1d
+
+    const/4 v1, 0x0
+
+    if-lt p1, v0, :cond_0
+
+    .line 674
+    throw v1
+
+    .line 676
+    :cond_0
+    throw v1
+
+    .line 670
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "MetricAffectingSpan can not be removed from PrecomputedText."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final setSpan(Ljava/lang/Object;III)V
+    .locals 0
+
+    .line 653
+    instance-of p1, p1, Landroid/text/style/MetricAffectingSpan;
+
+    if-nez p1, :cond_1
+
+    .line 657
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x1d
+
+    const/4 p3, 0x0
+
+    if-lt p1, p2, :cond_0
+
+    .line 658
+    throw p3
+
+    .line 660
+    :cond_0
+    throw p3
+
+    .line 654
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "MetricAffectingSpan can not be set to PrecomputedText."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final subSequence(II)Ljava/lang/CharSequence;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 732
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 738
+    throw v0
 .end method

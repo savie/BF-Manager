@@ -1,152 +1,54 @@
 package l;
 
-import android.media.MediaCodec;
-import android.media.MediaFormat;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.Surface;
-import java.nio.ByteBuffer;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import com.alipay.sdk.m.w.a;
+import com.alipay.sdk.m.y.o;
+import com.tencent.connect.common.AssistActivity;
+import com.umeng.analytics.pro.d;
 
-/* JADX INFO: renamed from: l.۫ۗۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R8QD */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12133 implements InterfaceC13544 {
+/* JADX INFO: renamed from: l.ۨۙ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51RR */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12133 extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final MediaCodec f40627;
+    public final /* synthetic */ AssistActivity f39019;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C14437 f40628;
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean mo30202(InterfaceC3146 interfaceC3146) {
-        return false;
+    public C12133(AssistActivity assistActivity) {
+        this.f39019 = assistActivity;
     }
 
-    public C12133(MediaCodec mediaCodec, C14437 c14437) {
-        this.f40627 = mediaCodec;
-        this.f40628 = c14437;
-        if (Build.VERSION.SDK_INT < 35 || c14437 == null) {
-            return;
+    @Override // android.content.BroadcastReceiver
+    public final void onReceive(Context context, Intent intent) {
+        String str = "#";
+        Intent intent2 = new Intent();
+        String stringExtra = intent.getStringExtra("key_action");
+        AssistActivity assistActivity = this.f39019;
+        if (stringExtra != null && !stringExtra.isEmpty()) {
+            C21587.m49113(assistActivity.f882, "QQStayReceiver action: ".concat(stringExtra));
+            intent2.putExtra("key_action", stringExtra);
+        } else {
+            intent2.putExtra("key_action", "action_share");
         }
-        c14437.m34717(mediaCodec);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int mo30191() {
-        return this.f40627.dequeueInputBuffer(0L);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo30193(MediaCodec.BufferInfo bufferInfo) {
-        int iDequeueOutputBuffer;
-        do {
-            iDequeueOutputBuffer = this.f40627.dequeueOutputBuffer(bufferInfo, 0L);
-        } while (iDequeueOutputBuffer == -3);
-        return iDequeueOutputBuffer;
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final MediaFormat mo30205() {
-        return this.f40627.getOutputFormat();
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ByteBuffer mo30206(int i) {
-        return this.f40627.getInputBuffer(i);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ByteBuffer mo30192(int i) {
-        return this.f40627.getOutputBuffer(i);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30196(int i, int i2, int i3, long j) {
-        this.f40627.queueInputBuffer(i, 0, i2, j, i3);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30198(int i, C8977 c8977, long j, int i2) {
-        this.f40627.queueSecureInputBuffer(i, 0, c8977.m23287(), j, i2);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo30204(int i) {
-        this.f40627.releaseOutputBuffer(i, false);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30197(int i, long j) {
-        this.f40627.releaseOutputBuffer(i, j);
-    }
-
-    @Override // l.InterfaceC13544
-    public final void flush() {
-        this.f40627.flush();
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30194() {
-        C14437 c14437 = this.f40628;
-        MediaCodec mediaCodec = this.f40627;
         try {
-            int i = Build.VERSION.SDK_INT;
-            if (i >= 30 && i < 33) {
-                mediaCodec.stop();
+            Uri uri = (Uri) intent.getParcelableExtra("uriData");
+            String string = uri.toString();
+            if (!string.contains("#")) {
+                str = "?";
             }
-        } finally {
-            if (Build.VERSION.SDK_INT >= 35 && c14437 != null) {
-                c14437.m34718(mediaCodec);
+            for (String str2 : string.substring(string.indexOf(str) + 1).split(a.p)) {
+                String[] strArrSplit = str2.split("=");
+                intent2.putExtra(strArrSplit[0], strArrSplit[1]);
             }
-            mediaCodec.release();
+            intent2.setData(uri);
+        } catch (Exception e) {
+            C21587.m49113(assistActivity.f882, "QQStayReceiver parse uri error : " + e.getMessage());
+            intent2.putExtra(o.c, d.O);
+            intent2.putExtra("response", "parse error.");
         }
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30201(final InterfaceC4370 interfaceC4370, Handler handler) {
-        this.f40627.setOnFrameRenderedListener(new MediaCodec.OnFrameRenderedListener(this) { // from class: l.֡ۗۙ
-            @Override // android.media.MediaCodec.OnFrameRenderedListener
-            public final void onFrameRendered(MediaCodec mediaCodec, long j, long j2) {
-                interfaceC4370.mo6814(j);
-            }
-        }, handler);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30200(Surface surface) {
-        this.f40627.setOutputSurface(surface);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo30203() {
-        this.f40627.detachOutputSurface();
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30199(Bundle bundle) {
-        this.f40627.setParameters(bundle);
-    }
-
-    @Override // l.InterfaceC13544
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo30195(int i) {
-        this.f40627.setVideoScalingMode(i);
+        assistActivity.setResult(-1, intent2);
     }
 }

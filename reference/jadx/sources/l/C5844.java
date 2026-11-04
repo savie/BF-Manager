@@ -1,60 +1,46 @@
 package l;
 
-import android.media.MediaDataSource;
-import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
-/* JADX INFO: renamed from: l.ۛۚۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 057Y */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5844 extends MediaDataSource {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public long f19814;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9373 f19815;
-
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
+/* JADX INFO: renamed from: l.ۚᩴۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: QB0L */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5844 extends C2115 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C5844 m17027(ByteBuffer byteBuffer) {
+        C5844 c5844 = new C5844();
+        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+        c5844.m7295(byteBuffer, byteBuffer.position() + byteBuffer.getInt(byteBuffer.position()));
+        return c5844;
     }
 
-    @Override // android.media.MediaDataSource
-    public final long getSize() {
-        return -1L;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m17030() {
+        int iM7294 = m7294(4);
+        if (iM7294 != 0) {
+            return this.f6993.getInt(iM7294 + this.f6995);
+        }
+        return 0;
     }
 
-    public C5844(C9373 c9373) {
-        this.f19815 = c9373;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m17029(C13301 c13301, int i) {
+        int iM7294 = m7294(6);
+        if (iM7294 != 0) {
+            int i2 = iM7294 + this.f6995;
+            int i3 = (i * 4) + this.f6993.getInt(i2) + i2 + 4;
+            c13301.m7295(this.f6993, this.f6993.getInt(i3) + i3);
+        }
     }
 
-    @Override // android.media.MediaDataSource
-    public final int readAt(long j, byte[] bArr, int i, int i2) {
-        if (i2 == 0) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m17028() {
+        int iM7294 = m7294(6);
+        if (iM7294 == 0) {
             return 0;
         }
-        if (j < 0) {
-            return -1;
-        }
-        try {
-            long j2 = this.f19814;
-            if (j2 != j) {
-                if (j2 >= 0 && j >= j2 + ((long) this.f19815.f36737.available())) {
-                    return -1;
-                }
-                this.f19815.seek(j);
-                this.f19814 = j;
-            }
-            if (i2 > this.f19815.f36737.available()) {
-                i2 = this.f19815.f36737.available();
-            }
-            int i3 = this.f19815.read(bArr, i, i2);
-            if (i3 >= 0) {
-                this.f19814 += (long) i3;
-                return i3;
-            }
-        } catch (IOException unused) {
-        }
-        this.f19814 = -1L;
-        return -1;
+        int i = iM7294 + this.f6995;
+        return this.f6993.getInt(this.f6993.getInt(i) + i);
     }
 }

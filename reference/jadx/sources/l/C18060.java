@@ -1,102 +1,115 @@
 package l;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.util.HashMap;
+import android.view.View;
+import android.view.ViewGroup;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ᩳ۫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 31TZ */
+/* JADX INFO: renamed from: l.ܿۘ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: P7RC */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C18060 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object f57762;
+    public boolean f59129 = false;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Object f57763;
-
-    public C18060(int i) {
-        switch (i) {
-            case 1:
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(512);
-                this.f57763 = byteArrayOutputStream;
-                this.f57762 = new DataOutputStream(byteArrayOutputStream);
-                break;
-            default:
-                this.f57763 = new HashMap();
-                this.f57762 = new HashMap();
-                break;
-        }
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f59130 = new ArrayList();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void m42051(C21588 c21588) {
-        C21588 c21589 = (C21588) ((HashMap) this.f57763).put(c21588.m48305(), c21588);
-        C21588 c215810 = (C21588) ((HashMap) this.f57762).put(c21588.m48299(), c21588);
-        if (c21589 != null) {
-            throw new RuntimeException("Old Name conflict: " + c21588.m48305() + ", [" + c21588.m48305() + ", " + c21588.m48299() + "], [" + c21589.m48305() + ", " + c21589.m48299() + "]");
-        }
-        if (c215810 == null) {
+    public static void m42083(View... viewArr) {
+        ArrayList arrayList;
+        View viewM48095;
+        C18060 c18060 = new C18060();
+        if (viewArr.length == 0) {
             return;
         }
-        throw new RuntimeException("New Name conflict: " + c21588.m48299() + ", [" + c21588.m48305() + ", " + c21588.m48299() + "], [" + c215810.m48305() + ", " + c215810.m48299() + "]");
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C21588 m42054(String str) {
-        if (str.length() == 1) {
-            return null;
+        int length = viewArr.length;
+        int i = 0;
+        while (true) {
+            arrayList = c18060.f59130;
+            if (i >= length) {
+                break;
+            }
+            View view = viewArr[i];
+            if (view != null) {
+                arrayList.add(new C21044(view, new RunnableC8501(4, c18060)));
+            }
+            i++;
         }
-        return (C21588) ((HashMap) this.f57763).get(str);
+        if (arrayList.isEmpty() || (viewM48095 = ((C21044) arrayList.get(0)).m48095()) == null) {
+            return;
+        }
+        viewM48095.post(new RunnableC8501(4, c18060));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public byte[] m42053(C0726 c0726) {
-        DataOutputStream dataOutputStream = (DataOutputStream) this.f57762;
-        ByteArrayOutputStream byteArrayOutputStream = (ByteArrayOutputStream) this.f57763;
-        byteArrayOutputStream.reset();
+    public static void m42082(C18060 c18060) {
+        ViewGroup.LayoutParams layoutParams;
+        ArrayList arrayList = c18060.f59130;
+        if (c18060.f59129) {
+            return;
+        }
+        c18060.f59129 = true;
         try {
-            dataOutputStream.writeBytes(c0726.f3011);
-            dataOutputStream.writeByte(0);
-            dataOutputStream.writeBytes(c0726.f3014);
-            dataOutputStream.writeByte(0);
-            dataOutputStream.writeLong(c0726.f3010);
-            dataOutputStream.writeLong(c0726.f3012);
-            dataOutputStream.write(c0726.f3009);
-            dataOutputStream.flush();
-            return byteArrayOutputStream.toByteArray();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            Iterator it = arrayList.iterator();
+            while (it.hasNext()) {
+                C21044 c21044 = (C21044) it.next();
+                if (!c21044.m48094()) {
+                    c21044.m48093();
+                    it.remove();
+                }
+            }
+            if (arrayList.isEmpty()) {
+                return;
+            }
+            int iM42081 = c18060.m42081();
+            if (iM42081 > 0) {
+                Iterator it2 = arrayList.iterator();
+                while (it2.hasNext()) {
+                    View viewM48095 = ((C21044) it2.next()).m48095();
+                    if (viewM48095 != null && (layoutParams = viewM48095.getLayoutParams()) != null && layoutParams.width != iM42081) {
+                        layoutParams.width = iM42081;
+                        viewM48095.setLayoutParams(layoutParams);
+                    }
+                }
+            }
+        } finally {
+            c18060.f59129 = false;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean m42052(String str) {
-        return ((HashMap) this.f57763).containsKey(str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String m42050(String str, String str2) {
-        String strSubstring;
-        if (str.charAt(0) == '[') {
-            int iIndexOf = str.indexOf(76);
-            if (iIndexOf != -1) {
-                strSubstring = str.substring(0, iIndexOf);
-                str = str.substring(iIndexOf);
+    private int m42081() {
+        ArrayList arrayList = this.f59130;
+        ArrayList arrayList2 = new ArrayList();
+        try {
+            Iterator it = arrayList.iterator();
+            while (it.hasNext()) {
+                View viewM48095 = ((C21044) it.next()).m48095();
+                if (viewM48095 != null) {
+                    arrayList2.add(new C3890(viewM48095));
+                    ViewGroup.LayoutParams layoutParams = viewM48095.getLayoutParams();
+                    if (layoutParams != null) {
+                        layoutParams.width = -2;
+                    }
+                }
             }
-            return str2;
-        }
-        strSubstring = null;
-        C21588 c21588M42054 = m42054(str);
-        if (c21588M42054 != null) {
-            if (strSubstring == null) {
-                return c21588M42054.m48299();
+            Iterator it2 = arrayList.iterator();
+            int iMax = 0;
+            while (it2.hasNext()) {
+                View viewM48096 = ((C21044) it2.next()).m48095();
+                if (viewM48096 != null) {
+                    viewM48096.measure(View.MeasureSpec.makeMeasureSpec(0, 0), View.MeasureSpec.makeMeasureSpec(0, 0));
+                    iMax = Math.max(iMax, viewM48096.getMeasuredWidth());
+                }
             }
-            StringBuilder sbM23356 = C9023.m23356(strSubstring);
-            sbM23356.append(c21588M42054.m48299());
-            return sbM23356.toString();
+            return iMax;
+        } finally {
+            Iterator it3 = arrayList2.iterator();
+            while (it3.hasNext()) {
+                ((C3890) it3.next()).m12527();
+            }
         }
-        return str2;
     }
 }

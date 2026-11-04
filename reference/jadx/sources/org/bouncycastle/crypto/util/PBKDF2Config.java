@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.DERNull;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PBKDF2Config extends PBKDFConfig {
     public static final Map PRFS_SALT;
     public static final AlgorithmIdentifier PRF_SHA1;
@@ -104,6 +104,6 @@ public class PBKDF2Config extends PBKDFConfig {
         if (map.containsKey(aSN1ObjectIdentifier)) {
             return ((Integer) map.get(aSN1ObjectIdentifier)).intValue();
         }
-        throw new IllegalStateException(C22979.m50820("no salt size for algorithm: ", aSN1ObjectIdentifier));
+        throw new IllegalStateException(C20196.m46452("no salt size for algorithm: ", aSN1ObjectIdentifier));
     }
 }

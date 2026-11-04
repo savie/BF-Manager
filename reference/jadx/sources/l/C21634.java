@@ -1,47 +1,51 @@
 package l;
 
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
+/* JADX INFO: renamed from: l.᩶᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 91K6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class C21634 {
 
-/* JADX INFO: renamed from: l.᩸ܳۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51FV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21634 extends SpannableString implements CharSequence, Comparable {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f69076;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f70160;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C8500 f70161;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final String f70162;
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        String str = ((C21634) obj).f70162;
-        String str2 = this.f70162;
-        if (str2.equalsIgnoreCase(str)) {
-            return 0;
+    static {
+        int[] iArr = new int[EnumC18650.values().length];
+        f69076 = iArr;
+        try {
+            iArr[EnumC18650.CENTER.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (str2.equalsIgnoreCase("type-info")) {
-            return -1;
+        try {
+            f69076[EnumC18650.LEFT.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        if (str.equalsIgnoreCase("type-info")) {
-            return 1;
+        try {
+            f69076[EnumC18650.RIGHT.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        return str2.compareToIgnoreCase(str);
-    }
-
-    public C21634(String str, String str2, C8500 c8500) {
-        super(C12441.m30911(c8500.f29470, "]", C3012.m8976(str2, " [line: ")));
-        int length = str2.length() + 1;
-        int length2 = length();
-        setSpan(new ForegroundColorSpan(C20368.f66007 & (-2130706433)), length, length2, 33);
-        setSpan(new RelativeSizeSpan(0.7f), length, length2, 33);
-        this.f70162 = str;
-        this.f70160 = str2;
-        this.f70161 = c8500;
+        try {
+            f69076[EnumC18650.TOP.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f69076[EnumC18650.BOTTOM.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f69076[EnumC18650.BASELINE.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f69076[EnumC18650.CENTER_X.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f69076[EnumC18650.CENTER_Y.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f69076[EnumC18650.NONE.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
     }
 }

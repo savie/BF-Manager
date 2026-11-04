@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DefiniteLengthInputStream extends LimitedInputStream {
     public static final byte[] EMPTY_BYTES = new byte[0];
     public final int _originalLength;

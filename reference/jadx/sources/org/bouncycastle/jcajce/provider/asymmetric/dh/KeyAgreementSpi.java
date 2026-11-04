@@ -35,7 +35,7 @@ import org.bouncycastle.jcajce.spec.MQVParameterSpec;
 import org.bouncycastle.jcajce.spec.UserKeyingMaterialSpec;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyAgreementSpi extends BaseAgreementSpi {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public static final BigInteger TWO = BigInteger.valueOf(2);

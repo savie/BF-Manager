@@ -1,12 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۧۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 16NE */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18712 implements InterfaceC0056 {
-    @Override // l.InterfaceC0056
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo957(CharSequence charSequence, C18503 c18503) {
-        C11137.m28067(charSequence, EnumC18877.JSON, new C12052(0, false), C8294.f28808, true, c18503);
+/* JADX INFO: renamed from: l.ᩳ֡᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: R5IK */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18712 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22221 f60835;
+
+    public C18712(C22221 c22221) {
+        this.f60835 = c22221;
     }
 }

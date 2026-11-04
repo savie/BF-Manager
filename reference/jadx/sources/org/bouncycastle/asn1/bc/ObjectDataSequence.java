@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Iterable;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ObjectDataSequence extends ASN1Object implements Iterable {
     public final ASN1Encodable[] dataSequence;
 

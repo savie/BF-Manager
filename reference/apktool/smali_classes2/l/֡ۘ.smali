@@ -1,58 +1,104 @@
-.class public final Ll/֡ۘ;
-.super Landroid/animation/AnimatorListenerAdapter;
-.source "Q63C"
+.class public final synthetic Ll/֡ۘ;
+.super Ljava/lang/Object;
+.source "M1C7"
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/ۧۘ;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۧۘ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 113
-    iput-object p1, p0, Ll/֡ۘ;->ۙ:Ll/ۧۘ;
+    .line 101
+    invoke-static {}, Ll/ܿ᩺;->values()[Ll/ܿ᩺;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+    sput-object v0, Ll/֡ۘ;->ۙ:[I
 
-    const/4 p1, 0x0
+    :try_start_0
+    sget-object v1, Ll/ܿ᩺;->ۢ:Ll/ܿ᩺;
 
-    .line 122
-    iget-object v0, p0, Ll/֡ۘ;->ۙ:Ll/ۧۘ;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iput-object p1, v0, Ll/ۧۘ;->ܳ:Landroid/view/ViewPropertyAnimator;
+    move-result v1
 
-    const/4 p1, 0x0
+    const/4 v2, 0x1
 
-    .line 123
-    iput-boolean p1, v0, Ll/ۧۘ;->۫:Z
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/֡ۘ;->ۙ:[I
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    sget-object v1, Ll/ܿ᩺;->ۡ:Ll/ܿ᩺;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 116
-    iget-object v0, p0, Ll/֡ۘ;->ۙ:Ll/ۧۘ;
+    move-result v1
 
-    iput-object p1, v0, Ll/ۧۘ;->ܳ:Landroid/view/ViewPropertyAnimator;
+    const/4 v2, 0x2
 
-    const/4 p1, 0x0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 117
-    iput-boolean p1, v0, Ll/ۧۘ;->۫:Z
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/֡ۘ;->ۙ:[I
 
+    sget-object v1, Ll/ܿ᩺;->ۖ:Ll/ܿ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/֡ۘ;->ۙ:[I
+
+    sget-object v1, Ll/ܿ᩺;->᩶:Ll/ܿ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll/֡ۘ;->ۙ:[I
+
+    sget-object v1, Ll/ܿ᩺;->ܿ:Ll/ܿ᩺;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
     return-void
 .end method

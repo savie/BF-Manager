@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Map;
 import org.bouncycastle.util.Longs;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LocaleUtil {
     public static final Map localeCache = new HashMap();
     public static Locale EN_Locale = forEN();

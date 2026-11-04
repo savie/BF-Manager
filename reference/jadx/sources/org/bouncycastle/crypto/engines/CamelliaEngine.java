@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CamelliaEngine implements BlockCipher {
     public static final int BLOCK_SIZE = 16;
     public static final int MASK8 = 255;

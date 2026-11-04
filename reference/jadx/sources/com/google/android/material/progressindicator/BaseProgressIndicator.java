@@ -14,16 +14,16 @@ import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
-import l.AbstractC2220;
-import l.C18616;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.AbstractC7591;
+import l.C11642;
+import l.C14625;
+import l.C22666;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseProgressIndicator extends ProgressBar {
     public static final float DEFAULT_OPACITY = 0.2f;
-    public static final int DEF_STYLE_RES = C18616.f59451;
+    public static final int DEF_STYLE_RES = C4185.f14393;
     public static final int HIDE_ESCAPE = 3;
     public static final int HIDE_INWARD = 2;
     public static final int HIDE_NONE = 0;
@@ -36,7 +36,7 @@ public abstract class BaseProgressIndicator extends ProgressBar {
     public AnimatorDurationScaleProvider animatorDurationScaleProvider;
     public final Runnable delayedHide;
     public final Runnable delayedShow;
-    public final AbstractC2220 hideAnimationCallback;
+    public final AbstractC7591 hideAnimationCallback;
     public boolean isIndeterminateModeChangeRequested;
     public boolean isParentDoneInitializing;
     public long lastShowStartTime;
@@ -45,7 +45,7 @@ public abstract class BaseProgressIndicator extends ProgressBar {
     public BaseProgressIndicatorSpec spec;
     public int storedProgress;
     public boolean storedProgressAnimated;
-    public final AbstractC2220 switchIndeterminateModeCallback;
+    public final AbstractC7591 switchIndeterminateModeCallback;
     public int visibilityAfterHide;
 
     @Retention(RetentionPolicy.SOURCE)
@@ -126,16 +126,16 @@ public abstract class BaseProgressIndicator extends ProgressBar {
                 BaseProgressIndicator.this.lastShowStartTime = -1L;
             }
         };
-        this.switchIndeterminateModeCallback = new AbstractC2220() { // from class: com.google.android.material.progressindicator.BaseProgressIndicator.3
-            @Override // l.AbstractC2220
+        this.switchIndeterminateModeCallback = new AbstractC7591() { // from class: com.google.android.material.progressindicator.BaseProgressIndicator.3
+            @Override // l.AbstractC7591
             public void onAnimationEnd(Drawable drawable) {
                 BaseProgressIndicator.this.setIndeterminate(false);
                 BaseProgressIndicator baseProgressIndicator = BaseProgressIndicator.this;
                 baseProgressIndicator.setProgressCompat(baseProgressIndicator.storedProgress, BaseProgressIndicator.this.storedProgressAnimated);
             }
         };
-        this.hideAnimationCallback = new AbstractC2220() { // from class: com.google.android.material.progressindicator.BaseProgressIndicator.4
-            @Override // l.AbstractC2220
+        this.hideAnimationCallback = new AbstractC7591() { // from class: com.google.android.material.progressindicator.BaseProgressIndicator.4
+            @Override // l.AbstractC7591
             public void onAnimationEnd(Drawable drawable) {
                 super.onAnimationEnd(drawable);
                 if (BaseProgressIndicator.this.isIndeterminateModeChangeRequested) {
@@ -147,9 +147,9 @@ public abstract class BaseProgressIndicator extends ProgressBar {
         };
         Context context2 = getContext();
         this.spec = createSpec(context2, attributeSet);
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f27740, i, i2, new int[0]);
-        this.showDelay = typedArrayObtainStyledAttributes.getInt(C8033.f27528, -1);
-        this.minHideDelay = Math.min(typedArrayObtainStyledAttributes.getInt(C8033.f26890, -1), 1000);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f47725, i, i2, new int[0]);
+        this.showDelay = typedArrayObtainStyledAttributes.getInt(C14625.f47085, -1);
+        this.minHideDelay = Math.min(typedArrayObtainStyledAttributes.getInt(C14625.f47778, -1), 1000);
         typedArrayObtainStyledAttributes.recycle();
         this.animatorDurationScaleProvider = new AnimatorDurationScaleProvider();
         this.isParentDoneInitializing = true;
@@ -320,7 +320,7 @@ public abstract class BaseProgressIndicator extends ProgressBar {
     }
 
     public boolean visibleToUser() {
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         return isAttachedToWindow() && getWindowVisibility() == 0 && isEffectivelyVisible();
     }
 
@@ -364,7 +364,7 @@ public abstract class BaseProgressIndicator extends ProgressBar {
 
     public void setIndicatorColor(int... iArr) {
         if (iArr.length == 0) {
-            iArr = new int[]{MaterialColors.getColor(getContext(), C2387.f9313, -1)};
+            iArr = new int[]{MaterialColors.getColor(getContext(), C11642.f37584, -1)};
         }
         if (Arrays.equals(getIndicatorColor(), iArr)) {
             return;

@@ -1,24 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡ᩺ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 41QS */
+/* JADX INFO: renamed from: l.ۡۜۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2IWY */
 /* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C9198 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AbstractC10796 m23658(int... iArr) {
-        int length = iArr.length;
-        if (length == 0) {
-            return C14137.f46396;
+    public static final /* synthetic */ int[] f30008;
+
+    static {
+        int[] iArr = new int[EnumC24203.values().length];
+        f30008 = iArr;
+        try {
+            iArr[EnumC24203.AGET.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (length == 1) {
-            int i = iArr[0];
-            C16253 c16253 = C17663.f56124;
-            return new C0729(i);
+        try {
+            f30008[EnumC24203.INVOKE.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        C14137 c14137 = C14137.f46396;
-        if (iArr.length == 0) {
-            return C14137.f46396;
-        }
-        return new C14137(iArr);
     }
 }

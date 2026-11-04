@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.StreamBlockCipher;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CTSBlockCipher extends DefaultBufferedBlockCipher {
     public int blockSize;
 

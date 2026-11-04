@@ -1,55 +1,70 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤᩳ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 69WS */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10454 extends AbstractC14792 {
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
-    /* JADX INFO: renamed from: ۡۙ, reason: not valid java name and contains not printable characters */
-    public int f35686;
+/* JADX INFO: renamed from: l.ۢ᩺ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SAHW */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10454 {
 
-    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
-    public int f35687;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static ScheduledThreadPoolExecutor f33264;
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final HashMap f33265 = new HashMap();
+
+    public final String toString() {
+        return "EvictionTimer []";
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static synchronized void m26878(RunnableC3743 runnableC3743, C18257 c18257, C18257 c18258) {
+        if (f33264 == null) {
+            ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, new ThreadFactoryC0760(0));
+            f33264 = scheduledThreadPoolExecutor;
+            scheduledThreadPoolExecutor.setRemoveOnCancelPolicy(true);
+            f33264.scheduleAtFixedRate(new RunnableC8218(), c18257.toMillis(), c18258.toMillis(), TimeUnit.MILLISECONDS);
+        }
+        WeakReference weakReference = new WeakReference(runnableC3743);
+        RunnableC19405 runnableC19405 = new RunnableC19405(weakReference);
+        runnableC3743.m12169(f33264.scheduleWithFixedDelay(runnableC19405, c18257.toMillis(), c18258.toMillis(), TimeUnit.MILLISECONDS));
+        f33265.put(weakReference, runnableC19405);
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static synchronized void m26879(RunnableC3743 runnableC3743, C18257 c18257, boolean z) {
+        if (runnableC3743 != null) {
+            try {
+                runnableC3743.m12168();
+                m26877(runnableC3743);
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+        if (!z && f33264 != null && f33265.isEmpty()) {
+            f33264.shutdown();
+            try {
+                f33264.awaitTermination(c18257.toMillis(), TimeUnit.MILLISECONDS);
+            } catch (InterruptedException unused) {
+            }
+            f33264.setCorePoolSize(0);
+            f33264 = null;
+        }
     }
 
-    public C10454(InterfaceC10601 interfaceC10601) {
-        super(interfaceC10601, (byte) 18);
-        this.f35687 = 0;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final void m26415(int i) {
-        this.f35687 = i;
-    }
-
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26416() {
-        this.f35686 = 2;
-    }
-
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        C4850.m13546(this.f35687, i, bArr);
-        C4850.m13546(this.f35686, i + 2, bArr);
-        C4850.m13550(0L, i + 4, bArr);
-        return (i + 8) - i;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m26877(RunnableC3743 runnableC3743) {
+        HashMap map = f33265;
+        for (Map.Entry entry : map.entrySet()) {
+            if (((WeakReference) entry.getKey()).get() == runnableC3743) {
+                f33264.remove((Runnable) entry.getValue());
+                map.remove(entry.getKey());
+                return;
+            }
+        }
     }
 }

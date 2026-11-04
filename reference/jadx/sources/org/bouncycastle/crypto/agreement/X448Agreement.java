@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.params.X448PrivateKeyParameters;
 import org.bouncycastle.crypto.params.X448PublicKeyParameters;
 import org.bouncycastle.jcajce.spec.XDHParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class X448Agreement implements RawAgreement {
     public X448PrivateKeyParameters privateKey;
 

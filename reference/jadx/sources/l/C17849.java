@@ -1,81 +1,143 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 
-/* JADX INFO: renamed from: l.ᩳۚᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L1LP */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17849 extends AbstractC18555 {
+/* JADX INFO: renamed from: l.ܽ᩷ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D5GW */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17849 extends GestureDetector.SimpleOnGestureListener {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f56536;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12628 f58541;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final CharSequence f56537;
-
-    public C17849(InterfaceC13409 interfaceC13409, CharSequence charSequence, CharSequence charSequence2, ArrayList arrayList, ArrayList arrayList2) {
-        super(arrayList, arrayList2, interfaceC13409);
-        this.f56536 = charSequence;
-        this.f56537 = charSequence2;
+    public C17849(C12628 c12628) {
+        this.f58541 = c12628;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m41437(CharSequence charSequence, List list, int i, int i2, boolean z) {
-        InterfaceC2326 interfaceC2326;
-        InterfaceC2326 interfaceC2327;
-        int i3 = 0;
-        while (i3 < i2) {
-            if (z) {
-                int i4 = i + i3;
-                interfaceC2326 = (InterfaceC2326) list.get(i4);
-                interfaceC2327 = (InterfaceC2326) list.get(i4 + 1);
-            } else {
-                int i5 = i - i3;
-                interfaceC2326 = (InterfaceC2326) list.get(i5 - 1);
-                interfaceC2327 = (InterfaceC2326) list.get(i5);
-            }
-            i3++;
-            if (m41438(charSequence, interfaceC2326, interfaceC2327)) {
-                return i3;
-            }
-        }
-        return -1;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m41438(CharSequence charSequence, InterfaceC2326 interfaceC2326, InterfaceC2326 interfaceC2327) {
-        if ((interfaceC2326 instanceof C22083) || (interfaceC2327 instanceof C22083)) {
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final boolean onSingleTapUp(MotionEvent motionEvent) {
+        C12628 c12628 = this.f58541;
+        C5917 c5917 = c12628.f40509;
+        C15282 c15282 = c12628.f40530;
+        int iM36658 = c15282.m36658(motionEvent.getX(), ((long) ((int) motionEvent.getY())) + c12628.m31378(), false);
+        boolean zM36683 = c15282.m36683();
+        c12628.requestFocus();
+        if (c15282.m36655() && !c15282.m36677() && !zM36683 && C12628.m31346(c12628)) {
+            c12628.m31345();
+            c12628.invalidate();
             return true;
         }
-        int iMo7062 = interfaceC2327.mo7062();
-        for (int iMo7061 = interfaceC2326.mo7061(); iMo7061 < iMo7062; iMo7061++) {
-            if (C13571.m33170(charSequence.charAt(iMo7061))) {
-                return true;
-            }
+        if (zM36683) {
+            C12628.m31344(c12628);
+            c12628.m31345();
+            c12628.invalidate();
+            return false;
         }
+        if (c15282.m36655()) {
+            int iM36659 = c15282.m36659(((long) ((int) motionEvent.getY())) + c12628.m31378(), motionEvent.getX());
+            if (iM36659 < 0) {
+                return false;
+            }
+            c5917.m17193(iM36659, c15282.m36668());
+            c12628.m31367(iM36659);
+            c12628.m31345();
+            c12628.invalidate();
+            return false;
+        }
+        if (c5917.m17206()) {
+            if (c15282.m36677() || iM36658 < c5917.m17202() || iM36658 > c5917.m17208()) {
+                c5917.m17193(iM36658, c15282.m36668());
+                c12628.m31367(iM36658);
+                c12628.m31385();
+            } else {
+                C12628.m31344(c12628);
+            }
+        } else {
+            if (c12628.m31371() || c5917.m17202() != iM36658 || c5917.m17220() != c15282.m36668()) {
+                c5917.m17193(iM36658, c15282.m36668());
+                c12628.m31367(iM36658);
+            } else if (c15282.m36677()) {
+                c12628.m31367(iM36658);
+            } else {
+                C12628.m31341(c12628, c12628.m31367(iM36658));
+            }
+            c12628.m31385();
+        }
+        c12628.m31345();
+        c12628.invalidate();
         return false;
     }
 
-    @Override // l.AbstractC18555
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo41439(EnumC0707 enumC0707, int i, int i2, C20464 c20464, C20464 c20465) {
-        List list = (List) enumC0707.m3110((Object) this.f59034, (Object) this.f59036);
-        C13638.requireNonNull(list);
-        CharSequence charSequence = (CharSequence) enumC0707.m3110(this.f56536, this.f56537);
-        C13638.requireNonNull(charSequence);
-        int iM3117 = enumC0707.m3117(c20465.f66401, c20465.f66399);
-        int i3 = iM3117 - 1;
-        if (!m41438(charSequence, (InterfaceC2326) list.get(i3), (InterfaceC2326) list.get(iM3117))) {
-            int iM41437 = m41437(charSequence, list, iM3117, i, true);
-            if (iM41437 > 0) {
-                return iM41437;
-            }
-            int iM41438 = m41437(charSequence, list, i3, i2, false);
-            if (iM41438 > 0) {
-                return -iM41438;
-            }
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnDoubleTapListener
+    public final boolean onDoubleTap(MotionEvent motionEvent) {
+        C12628 c12628 = this.f58541;
+        C5917 c5917 = c12628.f40509;
+        C15282 c15282 = c12628.f40530;
+        int iM36658 = c15282.m36658(motionEvent.getX(), ((long) ((int) motionEvent.getY())) + c12628.m31378(), false);
+        boolean zM36683 = c15282.m36683();
+        c12628.requestFocus();
+        if (c15282.m36655() && !c15282.m36677() && !zM36683 && C12628.m31346(c12628)) {
+            c12628.m31345();
+            c12628.invalidate();
+            return true;
         }
-        return 0;
+        if (zM36683) {
+            c12628.m31345();
+            c12628.invalidate();
+            C12628.m31344(c12628);
+            return true;
+        }
+        if (c15282.m36655()) {
+            iM36658 = c15282.m36659(((long) ((int) motionEvent.getY())) + c12628.m31378(), motionEvent.getX());
+        }
+        if (iM36658 < 0 || iM36658 >= c5917.m17218()) {
+            return false;
+        }
+        if (!c5917.m17206() || c15282.m36677() || iM36658 < c5917.m17202() || iM36658 > c5917.m17208()) {
+            c5917.m17216(iM36658, iM36658);
+        }
+        c12628.m31345();
+        c12628.invalidate();
+        C12628.m31341(c12628, c12628.m31367(iM36658));
+        return true;
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final void onLongPress(MotionEvent motionEvent) {
+        if (onDoubleTap(motionEvent)) {
+            this.f58541.performHapticFeedback(0);
+        }
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent2, float f, float f2) {
+        if (f2 == 0.0f) {
+            return false;
+        }
+        C12628 c12628 = this.f58541;
+        c12628.requestFocus();
+        long jM31378 = c12628.m31378() + ((long) Math.round(f2));
+        long jM36675 = c12628.f40530.m36675();
+        if (jM31378 < 0) {
+            jM31378 = 0;
+        } else if (jM31378 > jM36675) {
+            jM31378 = jM36675;
+        }
+        c12628.m31348();
+        c12628.m31359(jM31378);
+        return true;
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public final boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent2, float f, float f2) {
+        if (f2 == 0.0f) {
+            return false;
+        }
+        C12628 c12628 = this.f58541;
+        c12628.f40531.m23017(c12628.m31378(), (int) (-f2), c12628.f40530.m36675(), c12628.f40527);
+        c12628.m31348();
+        c12628.invalidate();
+        return true;
     }
 }

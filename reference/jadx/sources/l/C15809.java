@@ -1,42 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15809 extends AbstractC8047 implements InterfaceC8486 {
-    @Override // l.AbstractC8047
-    /* JADX INFO: renamed from: ֨ۙ */
-    public final boolean mo16199() {
-        return false;
+import android.text.Editable;
+import android.text.TextWatcher;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.ܶۗ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5AG9 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15809 implements TextWatcher {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23255 f51436;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Function f51437;
+
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.AbstractC8047
-    /* JADX INFO: renamed from: ۚۙ */
-    public final boolean mo16200() {
-        return false;
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3948(this);
+    public C15809(C23255 c23255, Function function) {
+        this.f51436 = c23255;
+        this.f51437 = function;
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.DEFAULT_CASE_LABEL;
-    }
-
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1897(this);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60565;
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        this.f51436.m52337(((CharSequence) this.f51437.apply(editable)).toString());
     }
 }

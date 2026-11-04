@@ -1,19 +1,26 @@
-.class public final synthetic Ll/ۡ᩵ۚ;
+.class public final Ll/ۡ᩵ۚ;
 .super Ljava/lang/Object;
-.source "097P"
-
-# interfaces
-.implements Ll/ۚ᩸ۘ;
+.source "K6YZ"
 
 
-# virtual methods
-.method public final ֨()Z
-    .locals 1
+# instance fields
+.field public final ۙ:Ljava/util/ArrayList;
 
-    .line 0
-    sget v0, Ll/᩶᩵ۚ;->ۙ:I
+.field public final ᩷:I
 
-    const/4 v0, 0x0
 
-    return v0
+# direct methods
+.method public constructor <init>(Ljava/util/ArrayList;I)V
+    .locals 0
+
+    .line 159
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 160
+    iput-object p1, p0, Ll/ۡ᩵ۚ;->ۙ:Ljava/util/ArrayList;
+
+    .line 161
+    iput p2, p0, Ll/ۡ᩵ۚ;->᩷:I
+
+    return-void
 .end method

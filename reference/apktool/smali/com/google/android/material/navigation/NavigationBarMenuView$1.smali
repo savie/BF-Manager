@@ -31,14 +31,14 @@
     check-cast p1, Lcom/google/android/material/navigation/NavigationBarItemView;
 
     .line 140
-    invoke-virtual {p1}, Lcom/google/android/material/navigation/NavigationBarItemView;->getItemData()Ll/᩻۬;
+    invoke-virtual {p1}, Lcom/google/android/material/navigation/NavigationBarItemView;->getItemData()Ll/۠ۚ;
 
     move-result-object p1
 
     .line 141
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView$1;->this$0:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
-    invoke-static {v0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->access$100(Lcom/google/android/material/navigation/NavigationBarMenuView;)Ll/۫۬;
+    invoke-static {v0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->access$100(Lcom/google/android/material/navigation/NavigationBarMenuView;)Ll/ۢۚ;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Ll/۫۬;->performItemAction(Landroid/view/MenuItem;Ll/᩹ۘ;I)Z
+    invoke-virtual {v0, p1, v1, v2}, Ll/ۢۚ;->performItemAction(Landroid/view/MenuItem;Ll/ۚ֫;I)Z
 
     move-result v0
 
@@ -59,7 +59,7 @@
     const/4 v0, 0x1
 
     .line 142
-    invoke-virtual {p1, v0}, Ll/᩻۬;->setChecked(Z)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0}, Ll/۠ۚ;->setChecked(Z)Landroid/view/MenuItem;
 
     :cond_0
     return-void

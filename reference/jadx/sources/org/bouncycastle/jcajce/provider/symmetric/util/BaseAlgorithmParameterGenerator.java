@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.jcajce.util.BCJcaJceHelper;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class BaseAlgorithmParameterGenerator extends AlgorithmParameterGeneratorSpi {
     public SecureRandom random;
     public final JcaJceHelper helper = new BCJcaJceHelper();

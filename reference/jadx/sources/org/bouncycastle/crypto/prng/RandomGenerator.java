@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.prng;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface RandomGenerator {
     void addSeedMaterial(long j);
 

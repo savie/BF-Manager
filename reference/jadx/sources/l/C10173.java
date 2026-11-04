@@ -1,73 +1,64 @@
 package l;
 
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ۤ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S24 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10173 implements InterfaceC6269, InterfaceC6206 {
+/* JADX INFO: renamed from: l.ۢܰܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V9OM */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10173 extends FilterInputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f34758 = 0;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f32570;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20756 f34759;
-
-    public C10173(C20756 c20756) {
-        this.f34759 = c20756;
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f34758 < this.f34759.f67554.f51193;
+    public C10173(InputStream inputStream, int i) {
+        super(inputStream);
+        this.f32570 = i;
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int available() {
+        return Math.min(super.available(), this.f32570);
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read() throws IOException {
+        if (this.f32570 <= 0) {
+            return -1;
         }
-        Object[] objArr = this.f34759.f67554.f51191;
-        int i = this.f34758;
-        this.f34758 = i + 1;
-        return objArr[i];
+        int i = super.read();
+        if (i >= 0) {
+            this.f32570--;
+        }
+        return i;
     }
 
-    @Override // java.util.Iterator
-    public final void remove() {
-        int i = this.f34758;
-        if (i == 0) {
-            throw new IllegalStateException();
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int i3 = this.f32570;
+        if (i3 <= 0) {
+            return -1;
         }
-        C20756 c20756 = this.f34759;
-        C15818 c15818 = c20756.f67554;
-        int i2 = c15818.f51193 - i;
-        Object[] objArr = c15818.f51195;
-        System.arraycopy(objArr, i, objArr, i - 1, i2);
-        Object[] objArr2 = c20756.f67554.f51191;
-        int i3 = this.f34758;
-        System.arraycopy(objArr2, i3, objArr2, i3 - 1, i2);
-        C15818 c15819 = c20756.f67554;
-        int i4 = c15819.f51193 - 1;
-        c15819.f51193 = i4;
-        this.f34758--;
-        c15819.f51195[i4] = null;
-        c15819.f51191[i4] = null;
+        int i4 = super.read(bArr, i, Math.min(i2, i3));
+        if (i4 >= 0) {
+            this.f32570 -= i4;
+        }
+        return i4;
     }
 
-    @Override // java.util.Iterator, l.InterfaceC6206
-    public final void forEachRemaining(Consumer consumer) {
-        C15818 c15818 = this.f34759.f67554;
-        Object[] objArr = c15818.f51191;
-        int i = c15818.f51193;
-        while (true) {
-            int i2 = this.f34758;
-            if (i2 >= i) {
-                return;
-            }
-            this.f34758 = i2 + 1;
-            consumer.accept(objArr[i2]);
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public final long skip(long j) {
+        int iSkip = (int) super.skip(Math.min(j, this.f32570));
+        if (iSkip >= 0) {
+            this.f32570 -= iSkip;
         }
+        return iSkip;
     }
 }

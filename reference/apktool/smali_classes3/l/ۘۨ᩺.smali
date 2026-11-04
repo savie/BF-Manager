@@ -1,13 +1,20 @@
-.class public final Ll/ۘۨ᩺;
-.super Ll/᩺᩹᩵;
-.source "T6QI"
+.class public interface abstract Ll/ۘۨ᩺;
+.super Ljava/lang/Object;
+.source "N7KJ"
+
+# interfaces
+.implements Ll/ᩴۛ᩺;
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
+.method public abstract getAnnotations()Ll/ܰᩳۘ;
+.end method
 
-    const/16 v0, 0x80
+.method public abstract getName()Ll/᩷᩶ۘ;
+.end method
 
-    return v0
+.method public abstract ۜ()Ll/ܰᩳۘ;
+.end method
+
+.method public abstract ۨ()Ll/᩺ۨ᩺;
 .end method

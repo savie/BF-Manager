@@ -1,68 +1,71 @@
 .class public final Ll/۟ۢ᩸;
 .super Ljava/lang/Object;
-.source "H4JG"
+.source "66UB"
 
 
-# static fields
-.field public static final ۖ:Ljava/nio/charset/Charset;
+# instance fields
+.field public final ۙ:J
 
-.field public static final ۙ:Ljava/nio/charset/Charset;
+.field public final ۚ:Ll/ۢۢ᩸;
 
-.field public static final ۚ:Ljava/nio/charset/Charset;
+.field public final ۤ:J
 
-.field public static final ۨ:Ljava/nio/charset/Charset;
+.field public volatile ۫:J
 
-.field public static final ܰ:Ljava/nio/charset/Charset;
+.field public final ܳ:I
+
+.field public final ᩴ:I
+
+.field public final ᩷:I
+
+.field public final ᩸:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ll/ۢۢ᩸;JJIIIZ)V
+    .locals 0
 
-    const-string v0, "UTF-8"
+    .line 17
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 18
+    iput-object p1, p0, Ll/۟ۢ᩸;->ۚ:Ll/ۢۢ᩸;
+
+    .line 19
+    iput-wide p2, p0, Ll/۟ۢ᩸;->ۤ:J
+
+    .line 20
+    iput-wide p4, p0, Ll/۟ۢ᩸;->۫:J
+
+    .line 21
+    iput p6, p0, Ll/۟ۢ᩸;->᩷:I
+
+    .line 22
+    iput p7, p0, Ll/۟ۢ᩸;->ᩴ:I
+
+    .line 23
+    iput p8, p0, Ll/۟ۢ᩸;->ܳ:I
 
     .line 24
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ll/۟ۢ᩸;->ۚ:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16BE"
+    iput-boolean p9, p0, Ll/۟ۢ᩸;->᩸:Z
 
     .line 25
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    invoke-static {p6, p8, p9}, Ll/ۚ֨᩸;->ۙ(IIZ)J
 
-    move-result-object v0
+    move-result-wide p1
 
-    sput-object v0, Ll/۟ۢ᩸;->ۨ:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    .line 26
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ll/۟ۢ᩸;->ۖ:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16"
-
-    .line 27
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ll/۟ۢ᩸;->ܰ:Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    .line 28
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ll/۟ۢ᩸;->ۙ:Ljava/nio/charset/Charset;
+    iput-wide p1, p0, Ll/۟ۢ᩸;->ۙ:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final ۙ()J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Ll/۟ۢ᩸;->۫:J
+
+    return-wide v0
 .end method

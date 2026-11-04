@@ -6,10 +6,10 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.TypedValue;
-import l.C10405;
-import l.C15945;
-import l.C1977;
-import l.C8033;
+import l.C0385;
+import l.C14625;
+import l.C5204;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialResources {
@@ -18,20 +18,20 @@ public class MaterialResources {
 
     public static ColorStateList getColorStateList(Context context, TypedArray typedArray, int i) {
         int resourceId;
-        ColorStateList colorStateListM26305;
-        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0 || (colorStateListM26305 = C10405.m26305(context, resourceId)) == null) ? typedArray.getColorStateList(i) : colorStateListM26305;
+        ColorStateList colorStateListM20564;
+        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0 || (colorStateListM20564 = C7508.m20564(context, resourceId)) == null) ? typedArray.getColorStateList(i) : colorStateListM20564;
     }
 
-    public static ColorStateList getColorStateList(Context context, C1977 c1977, int i) {
-        int iM6387;
-        ColorStateList colorStateListM26305;
-        return (!c1977.m6383(i) || (iM6387 = c1977.m6387(i, 0)) == 0 || (colorStateListM26305 = C10405.m26305(context, iM6387)) == null) ? c1977.m6385(i) : colorStateListM26305;
+    public static ColorStateList getColorStateList(Context context, C5204 c5204, int i) {
+        int iM15660;
+        ColorStateList colorStateListM20564;
+        return (!c5204.m15655(i) || (iM15660 = c5204.m15660(i, 0)) == 0 || (colorStateListM20564 = C7508.m20564(context, iM15660)) == null) ? c5204.m15666(i) : colorStateListM20564;
     }
 
     public static Drawable getDrawable(Context context, TypedArray typedArray, int i) {
         int resourceId;
-        Drawable drawableM37904;
-        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0 || (drawableM37904 = C15945.m37904(context, resourceId)) == null) ? typedArray.getDrawable(i) : drawableM37904;
+        Drawable drawableM2186;
+        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0 || (drawableM2186 = C0385.m2186(context, resourceId)) == null) ? typedArray.getDrawable(i) : drawableM2186;
     }
 
     public static TextAppearance getTextAppearance(Context context, TypedArray typedArray, int i) {
@@ -67,9 +67,9 @@ public class MaterialResources {
 
     public static int getUnscaledTextSize(Context context, int i, int i2) {
         if (i != 0) {
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, C8033.f27281);
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, C14625.f46632);
             TypedValue typedValue = new TypedValue();
-            boolean value = typedArrayObtainStyledAttributes.getValue(C8033.f27380, typedValue);
+            boolean value = typedArrayObtainStyledAttributes.getValue(C14625.f47639, typedValue);
             typedArrayObtainStyledAttributes.recycle();
             if (value) {
                 if (getComplexUnit(typedValue) == 2) {

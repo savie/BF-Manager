@@ -1,97 +1,109 @@
 package l;
 
-import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Enumeration;
+import org.bouncycastle.asn1.ASN1Encodable;
+import org.bouncycastle.asn1.ASN1EncodableVector;
+import org.bouncycastle.asn1.ASN1Encoding;
+import org.bouncycastle.asn1.ASN1Enumerated;
+import org.bouncycastle.asn1.ASN1InputStream;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+import org.bouncycastle.asn1.ASN1OctetString;
+import org.bouncycastle.asn1.ASN1OutputStream;
+import org.bouncycastle.asn1.ASN1Primitive;
+import org.bouncycastle.asn1.ASN1Sequence;
+import org.bouncycastle.asn1.ASN1TaggedObject;
+import org.bouncycastle.asn1.DEROctetString;
+import org.bouncycastle.asn1.DERSequence;
+import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: renamed from: l.ܽۜ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 39WK */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16473 {
+/* JADX INFO: renamed from: l.ܺ֡᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: FA1E */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16473 extends AbstractC15727 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f52934 = Pattern.compile("^((.*)\\._)?_?(.*)\\._sub\\._([^.]*)\\._([^.]*)\\.(.*)\\.?$");
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public ASN1ObjectIdentifier f53427;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f52933 = Pattern.compile("^((.*)?\\._)?([^.]*)\\._([^.]*)\\.(.*)\\.?$");
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f53428;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static HashMap m38742(String str) {
-        String strM1635;
-        String strSubstring;
-        String str2;
-        String strM38741;
-        String str3;
-        String strM38742;
-        String strM38743;
-        String strM38744;
-        String lowerCase = str.toLowerCase();
-        String strM38745 = "";
-        if (lowerCase.contains("in-addr.arpa") || lowerCase.contains("ip6.arpa")) {
-            int iIndexOf = lowerCase.contains("in-addr.arpa") ? lowerCase.indexOf("in-addr.arpa") : lowerCase.indexOf("ip6.arpa");
-            strM1635 = C0244.m1635(str.substring(0, iIndexOf));
-            strSubstring = str.substring(iIndexOf);
-        } else {
-            if (!lowerCase.contains("_") && lowerCase.contains(".")) {
-                int iIndexOf2 = lowerCase.indexOf(46);
-                strM1635 = C0244.m1635(str.substring(0, iIndexOf2));
-                strSubstring = C0244.m1635(str.substring(iIndexOf2));
-            } else {
-                Matcher matcher = f52934.matcher(lowerCase);
-                if (matcher.matches()) {
-                    strM38742 = m38741(str, matcher, 2);
-                    strM38745 = m38741(str, matcher, 3);
-                    strM38743 = m38741(str, matcher, 4);
-                    strM38741 = m38741(str, matcher, 5);
-                    strM38744 = m38741(str, matcher, 6);
+    public C16473(byte[] bArr) throws IOException {
+        this.f53428 = -1;
+        ASN1InputStream aSN1InputStream = new ASN1InputStream(bArr);
+        try {
+            Enumeration objects = ASN1Sequence.getInstance((ASN1TaggedObject) aSN1InputStream.readObject(), true).getObjects();
+            while (objects.hasMoreElements()) {
+                ASN1TaggedObject aSN1TaggedObject = (ASN1TaggedObject) objects.nextElement();
+                int tagNo = aSN1TaggedObject.getTagNo();
+                if (tagNo == 0) {
+                    this.f53428 = ASN1Enumerated.getInstance(aSN1TaggedObject, true).getValue().intValue();
+                } else if (tagNo == 1) {
+                    this.f53427 = ASN1ObjectIdentifier.getInstance(aSN1TaggedObject, true);
+                } else if (tagNo == 2) {
+                    m37639(ASN1OctetString.getInstance(aSN1TaggedObject, true).getOctets());
+                } else if (tagNo == 3) {
+                    m37636(ASN1OctetString.getInstance(aSN1TaggedObject, true).getOctets());
                 } else {
-                    Matcher matcher2 = f52933.matcher(lowerCase);
-                    if (matcher2.matches()) {
-                        strM38742 = m38741(str, matcher2, 2);
-                        strM38743 = m38741(str, matcher2, 3);
-                        strM38741 = m38741(str, matcher2, 4);
-                        strM38744 = m38741(str, matcher2, 5);
-                    } else {
-                        str2 = "";
-                        str3 = str2;
-                        strM38741 = str3;
-                    }
+                    throw new IOException("Malformed token field.");
                 }
-                String str4 = strM38744;
-                str2 = strM38742;
-                lowerCase = strM38743;
-                String str5 = strM38745;
-                strM38745 = str4;
-                str3 = str5;
             }
-            String strM1636 = C0244.m1635(lowerCase);
-            String strM1637 = C0244.m1635(strM38745);
-            HashMap map = new HashMap(5);
-            map.put(EnumC6075.Instance, str2);
-            map.put(EnumC6075.Application, strM1636);
-            map.put(EnumC6075.Protocol, strM38741);
-            map.put(EnumC6075.Domain, strM1637);
-            map.put(EnumC6075.Subtype, str3);
-            return map;
+            aSN1InputStream.close();
+        } catch (Throwable th) {
+            try {
+                aSN1InputStream.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
+            }
+            throw th;
         }
-        lowerCase = "";
-        strM38741 = lowerCase;
-        strM38745 = strSubstring;
-        str2 = strM1635;
-        str3 = strM38741;
-        String strM1638 = C0244.m1635(lowerCase);
-        String strM1639 = C0244.m1635(strM38745);
-        HashMap map2 = new HashMap(5);
-        map2.put(EnumC6075.Instance, str2);
-        map2.put(EnumC6075.Application, strM1638);
-        map2.put(EnumC6075.Protocol, strM38741);
-        map2.put(EnumC6075.Domain, strM1639);
-        map2.put(EnumC6075.Subtype, str3);
-        return map2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m38741(String str, Matcher matcher, int i) {
-        return matcher.start(i) != -1 ? str.substring(matcher.start(i), matcher.end(i)) : "";
+    public C16473(byte[] bArr, byte[] bArr2) {
+        this.f53428 = -1;
+        this.f53427 = null;
+        m37639(bArr);
+        m37636(bArr2);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int m39080() {
+        return this.f53428;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ASN1ObjectIdentifier m39081() {
+        return this.f53427;
+    }
+
+    @Override // l.AbstractC15727
+    /* JADX INFO: renamed from: ۤ */
+    public final byte[] mo37638() {
+        try {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            ASN1OutputStream aSN1OutputStreamCreate = ASN1OutputStream.create(byteArrayOutputStream, ASN1Encoding.DER);
+            ASN1EncodableVector aSN1EncodableVector = new ASN1EncodableVector();
+            int i = this.f53428;
+            if (i != -1) {
+                aSN1EncodableVector.add(new DERTaggedObject(true, 0, (ASN1Encodable) new ASN1Enumerated(i)));
+            }
+            ASN1ObjectIdentifier aSN1ObjectIdentifier = this.f53427;
+            if (aSN1ObjectIdentifier != null) {
+                aSN1EncodableVector.add(new DERTaggedObject(true, 1, (ASN1Encodable) aSN1ObjectIdentifier));
+            }
+            byte[] bArrM37640 = m37640();
+            if (bArrM37640 != null) {
+                aSN1EncodableVector.add(new DERTaggedObject(true, 2, (ASN1Encodable) new DEROctetString(bArrM37640)));
+            }
+            byte[] bArrM37637 = m37637();
+            if (bArrM37637 != null) {
+                aSN1EncodableVector.add(new DERTaggedObject(true, 3, (ASN1Encodable) new DEROctetString(bArrM37637)));
+            }
+            aSN1OutputStreamCreate.writeObject((ASN1Primitive) new DERTaggedObject(true, 1, (ASN1Encodable) new DERSequence(aSN1EncodableVector)));
+            return byteArrayOutputStream.toByteArray();
+        } catch (IOException e) {
+            throw new IllegalStateException(e.getMessage());
+        }
     }
 }

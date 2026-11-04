@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERIA5String;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PolicyQualifierInfo extends ASN1Object {
     public ASN1ObjectIdentifier policyQualifierId;
     public ASN1Encodable qualifier;
@@ -26,7 +26,7 @@ public class PolicyQualifierInfo extends ASN1Object {
 
     public PolicyQualifierInfo(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 2) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         this.policyQualifierId = ASN1ObjectIdentifier.getInstance(aSN1Sequence.getObjectAt(0));
         this.qualifier = aSN1Sequence.getObjectAt(1);

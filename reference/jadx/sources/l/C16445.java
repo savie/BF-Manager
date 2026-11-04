@@ -1,41 +1,48 @@
 package l;
 
-import android.content.pm.PackageInfo;
-import java.util.Comparator;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.logging.Level;
 
-/* JADX INFO: renamed from: l.ܽۛ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SB10 */
+/* JADX INFO: renamed from: l.ܶ᩻ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 27BS */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16445 implements Comparator {
+public final class C16445 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f52877;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f53331;
 
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        switch (this.f52877) {
-            case 0:
-                byte[] bArr = (byte[]) obj;
-                byte[] bArr2 = (byte[]) obj2;
-                if (bArr.length != bArr2.length) {
-                    return bArr.length - bArr2.length;
-                }
-                for (int i = 0; i < bArr.length; i++) {
-                    byte b = bArr[i];
-                    byte b2 = bArr2[i];
-                    if (b != b2) {
-                        return b - b2;
-                    }
-                }
-                return 0;
-            default:
-                PackageInfo packageInfo = (PackageInfo) obj;
-                PackageInfo packageInfo2 = (PackageInfo) obj2;
-                boolean z = (packageInfo.applicationInfo.flags & 129) == 0;
-                if (z == ((packageInfo2.applicationInfo.flags & 129) == 0)) {
-                    return packageInfo.packageName.compareToIgnoreCase(packageInfo2.packageName);
-                }
-                return z ? -1 : 1;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final File f53332;
+
+    public C16445() {
+        File file = new File(System.getProperty("java.io.tmpdir"));
+        this.f53332 = file;
+        if (!file.exists()) {
+            file.mkdirs();
         }
+        this.f53331 = new ArrayList();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m39000() {
+        ArrayList arrayList = this.f53331;
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            try {
+                ((InterfaceC19429) it.next()).delete();
+            } catch (Exception e) {
+                AbstractC1530.f5318.log(Level.WARNING, "could not delete file ", (Throwable) e);
+            }
+        }
+        arrayList.clear();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17937 m39001() {
+        C17937 c17937 = new C17937(this.f53332);
+        this.f53331.add(c17937);
+        return c17937;
     }
 }

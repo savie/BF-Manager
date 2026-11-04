@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.x509.qualified;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.x509.X509ObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface RFC3739QCObjectIdentifiers {
     public static final ASN1ObjectIdentifier id_qcs;
     public static final ASN1ObjectIdentifier id_qcs_pkixQCSyntax_v1;

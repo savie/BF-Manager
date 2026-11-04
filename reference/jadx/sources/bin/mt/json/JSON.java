@@ -1,42 +1,42 @@
 package bin.mt.json;
 
 import java.io.Reader;
-import l.C14824;
-import l.C20630;
-import l.C23996;
-import l.C3533;
-import l.C6356;
+import l.C0740;
+import l.C10434;
+import l.C1402;
+import l.C14909;
+import l.C18639;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class JSON {
-    public static final JSONValue NULL = new C23996("null");
-    public static final JSONValue TRUE = new C23996("true");
-    public static final JSONValue FALSE = new C23996("false");
+    public static final JSONValue NULL = new C18639("null");
+    public static final JSONValue TRUE = new C18639("true");
+    public static final JSONValue FALSE = new C18639("false");
 
     public static JSONValue value(int i) {
-        return new C14824(Integer.toString(i, 10));
+        return new C0740(Integer.toString(i, 10));
     }
 
     public static JSONValue value(long j) {
-        return new C14824(Long.toString(j, 10));
+        return new C0740(Long.toString(j, 10));
     }
 
     public static JSONValue value(float f) {
         if (Float.isInfinite(f) || Float.isNaN(f)) {
             throw new IllegalArgumentException("Infinite and NaN values not permitted in JSON");
         }
-        return new C14824(cutOffPointZero(Float.toString(f)));
+        return new C0740(cutOffPointZero(Float.toString(f)));
     }
 
     public static JSONValue value(double d) {
         if (Double.isInfinite(d) || Double.isNaN(d)) {
             throw new IllegalArgumentException("Infinite and NaN values not permitted in JSON");
         }
-        return new C14824(cutOffPointZero(Double.toString(d)));
+        return new C0740(cutOffPointZero(Double.toString(d)));
     }
 
     public static JSONValue value(String str) {
-        return str == null ? NULL : new C3533(str);
+        return str == null ? NULL : new C10434(str);
     }
 
     public static JSONValue value(boolean z) {
@@ -121,21 +121,21 @@ public final class JSON {
         if (str == null) {
             throw new NullPointerException("string is null");
         }
-        C6356 c6356 = new C6356();
-        new JSONParser(c6356).parse(str);
-        return c6356.m17461();
+        C14909 c14909 = new C14909();
+        new JSONParser(c14909).parse(str);
+        return c14909.m35866();
     }
 
     public static JSONValue parse(Reader reader) {
         if (reader == null) {
             throw new NullPointerException("reader is null");
         }
-        C6356 c6356 = new C6356();
-        new JSONParser(c6356).parse(reader);
-        return c6356.m17461();
+        C14909 c14909 = new C14909();
+        new JSONParser(c14909).parse(reader);
+        return c14909.m35866();
     }
 
     public static String cutOffPointZero(String str) {
-        return str.endsWith(".0") ? C20630.m46498(2, 0, str) : str;
+        return str.endsWith(".0") ? C1402.m5124(2, 0, str) : str;
     }
 }

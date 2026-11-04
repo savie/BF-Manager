@@ -123,7 +123,7 @@
 
     const p3, 0x5a827999
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 
@@ -144,7 +144,7 @@
 
     const p3, 0x6ed9eba1
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 
@@ -165,7 +165,7 @@
 
     const p3, -0x70e44324
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 
@@ -205,7 +205,7 @@
 
     const p3, 0x6d703ef3
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 
@@ -226,7 +226,7 @@
 
     const p3, 0x5c4dd124
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 
@@ -247,7 +247,7 @@
 
     const p3, 0x50a28be6
 
-    invoke-static {p1, p2, p5, p3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {p1, p2, p5, p3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p1
 

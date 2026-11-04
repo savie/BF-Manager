@@ -3,7 +3,7 @@ package org.bouncycastle.jce.spec;
 import java.math.BigInteger;
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElGamalParameterSpec implements AlgorithmParameterSpec {
     public BigInteger g;
     public BigInteger p;

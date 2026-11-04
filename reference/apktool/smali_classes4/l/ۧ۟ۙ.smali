@@ -1,94 +1,74 @@
 .class public final Ll/ۧ۟ۙ;
 .super Ljava/lang/Object;
-.source "C8NR"
+.source "98TD"
 
 # interfaces
-.implements Ll/᩷۟ۙ;
+.implements Ll/֨֡ۙ;
 
 
 # instance fields
-.field public ֡:I
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public ܺ:I
+.field public ۤ:Z
 
-.field public ܽ:Ll/ۢ᩷۬;
+.field public final ᩴ:Ljava/lang/Object;
 
-.field public final ᩶:Ll/۬᩷ۙ;
+.field public ᩷:I
+
+.field public final ᩸:Ll/ᩳۙ᩷;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/۬ۙ᩷;Z)V
     .locals 1
 
-    .line 90
+    .line 512
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
-    new-instance v0, Ll/۬᩷ۙ;
+    .line 513
+    new-instance v0, Ll/ᩳۙ᩷;
 
-    invoke-direct {v0}, Ll/۬᩷ۙ;-><init>()V
+    invoke-direct {v0, p1, p2}, Ll/ᩳۙ᩷;-><init>(Ll/۬ۙ᩷;Z)V
 
-    iput-object v0, p0, Ll/ۧ۟ۙ;->᩶:Ll/۬᩷ۙ;
+    iput-object v0, p0, Ll/ۧ۟ۙ;->᩸:Ll/ᩳۙ᩷;
 
-    const/16 v0, 0x1f40
+    .line 514
+    new-instance p1, Ljava/util/ArrayList;
 
-    .line 92
-    iput v0, p0, Ll/ۧ۟ۙ;->ܺ:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 93
-    iput v0, p0, Ll/ۧ۟ۙ;->֡:I
+    iput-object p1, p0, Ll/ۧ۟ۙ;->ۙ:Ljava/util/ArrayList;
+
+    .line 515
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۧ۟ۙ;->ᩴ:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ۗ۟ۙ;
-    .locals 5
+.method public final getUid()Ljava/lang/Object;
+    .locals 1
 
-    .line 238
-    new-instance v0, Ll/ۗ۟ۙ;
-
-    iget-object v1, p0, Ll/ۧ۟ۙ;->᩶:Ll/۬᩷ۙ;
-
-    iget-object v2, p0, Ll/ۧ۟ۙ;->ܽ:Ll/ۢ᩷۬;
-
-    iget v3, p0, Ll/ۧ۟ۙ;->ܺ:I
-
-    iget v4, p0, Ll/ۧ۟ۙ;->֡:I
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ll/ۗ۟ۙ;-><init>(IILl/۬᩷ۙ;Ll/ۢ᩷۬;)V
+    .line 526
+    iget-object v0, p0, Ll/ۧ۟ۙ;->ᩴ:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final bridge synthetic ۙ()Ll/ܺ۟ۙ;
+.method public final ۙ()Ll/᩻ۗۙ;
     .locals 1
 
-    .line 75
-    invoke-virtual {p0}, Ll/ۧ۟ۙ;->ۙ()Ll/ۗ۟ۙ;
+    .line 531
+    iget-object v0, p0, Ll/ۧ۟ۙ;->᩸:Ll/ᩳۙ᩷;
+
+    invoke-virtual {v0}, Ll/ᩳۙ᩷;->ܺ()Ll/᩻ۗۙ;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final ۙ(Ljava/util/Map;)V
-    .locals 1
-
-    .line 100
-    iget-object v0, p0, Ll/ۧ۟ۙ;->᩶:Ll/۬᩷ۙ;
-
-    invoke-virtual {v0, p1}, Ll/۬᩷ۙ;->ۙ(Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public final ۙ(Ll/ۢ᩷۬;)V
-    .locals 0
-
-    .line 123
-    iput-object p1, p0, Ll/ۧ۟ۙ;->ܽ:Ll/ۢ᩷۬;
-
-    return-void
 .end method

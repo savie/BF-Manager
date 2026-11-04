@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.params.ISO18033KDFParameters;
 import org.bouncycastle.crypto.params.KDFParameters;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BaseKDFBytesGenerator implements DigestDerivationFunction {
     public int counterStart;
     public Digest digest;

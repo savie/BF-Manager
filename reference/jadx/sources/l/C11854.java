@@ -1,45 +1,70 @@
 package l;
 
-import java.util.ArrayList;
+import bin.mt.json.JSONArray;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۨܿ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: A4XC */
+/* JADX INFO: renamed from: l.ۧ᩶ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46W4 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11854 implements InterfaceC7600 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC7124[] f39770;
+public final class C11854 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1269 f39771;
+    public final JSONArray f38190;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2184 f39772;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final JSONArray f38191;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f39773;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5143 f38192;
 
-    @Override // l.InterfaceC9012
-    /* JADX INFO: renamed from: ۙ */
-    public final C2184 mo4153(C2184 c2184, C15592 c15592) {
-        return c2184;
+    public C11854(C5143 c5143, JSONArray jSONArray, JSONArray jSONArray2) {
+        this.f38192 = c5143;
+        this.f38191 = jSONArray;
+        this.f38190 = jSONArray2;
     }
 
-    public C11854(C2184 c2184, C1269 c1269, AbstractC7124[] abstractC7124Arr, ArrayList arrayList) {
-        this.f39772 = c2184;
-        this.f39771 = c1269;
-        this.f39770 = abstractC7124Arr;
-        this.f39773 = arrayList;
-    }
-
-    @Override // l.InterfaceC10423
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC7124 mo4154(C2184 c2184) {
-        if (this.f39772 != c2184) {
-            return c2184;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C11854)) {
+            return false;
         }
-        C3469 c3469 = new C3469(this.f39770, this.f39771.f5494);
-        this.f39773.add(c3469);
-        return c3469;
+        C11854 c11854 = (C11854) obj;
+        return C17359.equals(this.f38192, c11854.f38192) && C17359.equals(this.f38191, c11854.f38191) && C17359.equals(this.f38190, c11854.f38190);
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f38190) + ((C17359.hashCode(this.f38191) + (C17359.hashCode(this.f38192) * 31)) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f38192, this.f38191, this.f38190};
+        String[] strArrSplit = "page;warnings;failedFiles".length() == 0 ? new String[0] : "page;warnings;failedFiles".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C11854.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final JSONArray m29701() {
+        return this.f38190;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final JSONArray m29702() {
+        return this.f38191;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5143 m29703() {
+        return this.f38192;
     }
 }

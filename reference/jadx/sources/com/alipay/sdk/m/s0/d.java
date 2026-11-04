@@ -12,8 +12,8 @@ import java.util.Random;
 import java.util.regex.Pattern;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import l.C20630;
-import l.C22697;
+import l.C1402;
+import l.C8947;
 import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.crypto.signers.PSSSigner;
@@ -30,7 +30,7 @@ public class d {
     public com.alipay.sdk.m.r0.a f;
     public com.alipay.sdk.m.r0.a g;
     public static final Object i = new Object();
-    public static final String k = C22697.m50267(new StringBuilder(".UTSystemConfig"), File.separator, "Global");
+    public static final String k = C8947.m23910(new StringBuilder(".UTSystemConfig"), File.separator, "Global");
     public String b = null;
     public Pattern h = Pattern.compile("[^0-9a-zA-Z=/+]+");
 
@@ -85,7 +85,7 @@ public class d {
         com.alipay.sdk.m.r0.a aVar;
         if (a(str)) {
             if (str.endsWith("\n")) {
-                str = C20630.m46498(1, 0, str);
+                str = C1402.m5124(1, 0, str);
             }
             if (str.length() != 24 || (aVar = this.g) == null) {
                 return;
@@ -206,7 +206,7 @@ public class d {
     public final boolean a(String str) {
         if (str != null) {
             if (str.endsWith("\n")) {
-                str = C20630.m46498(1, 0, str);
+                str = C1402.m5124(1, 0, str);
             }
             if (24 == str.length() && !this.h.matcher(str).find()) {
                 return true;

@@ -1,18 +1,28 @@
-.class public final Ll/۟ۚ᩺;
-.super Ll/᩻ۚ᩵;
-.source "W6O3"
+.class public final synthetic Ll/۟ۚ᩺;
+.super Ljava/lang/Object;
+.source "P7DJ"
+
+# interfaces
+.implements Ljava/util/function/ToIntFunction;
 
 
 # virtual methods
-.method public final ۙ(Ll/ᩴ᩹᩵;Ljava/lang/Object;IILjava/lang/String;Ll/᩸᩹᩵;)V
+.method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 33
-    new-instance p1, Ll/ᩴۢۜ;
+    .line 2
+    check-cast p1, Ll/ᩳ۠ۛ;
 
-    sget-object p2, Ll/᩵ۢۜ;->۫:Ll/᩵ۢۜ;
+    .line 619
+    iget-object p1, p1, Ll/ᩳ۠ۛ;->ܰ:Ljava/lang/Object;
 
-    invoke-direct {p1, p2, p3, p4, p5}, Ll/ᩴۢۜ;-><init>(Ll/᩵ۢۜ;IILjava/lang/String;)V
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    throw p1
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    return p1
 .end method

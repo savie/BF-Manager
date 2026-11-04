@@ -98,7 +98,7 @@ public class AuthTask {
             cVarA = cVarA2;
             a();
         } catch (Throwable th2) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.C, th2);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.C, th2);
             a();
         }
         if (cVarA == null) {
@@ -120,10 +120,10 @@ public class AuthTask {
             if (!TextUtils.equals(strA2, k.j) && !TextUtils.equals(strA2, k.k)) {
                 return TextUtils.isEmpty(strA2) ? com.alipay.sdk.m.l.b.a() : strA2;
             }
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.i0);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.i0);
             return b(activity, strA, aVar);
         }
-        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.j0);
+        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.j0);
         return b(activity, strA, aVar);
     }
 
@@ -164,8 +164,8 @@ public class AuthTask {
                     g.a(e);
                     sb = new StringBuilder("");
                 } finally {
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.V, str9 + SystemClock.elapsedRealtime());
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.W, o.a(strA, o.a) + "|" + o.a(strA, o.b));
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.V, str9 + SystemClock.elapsedRealtime());
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.W, o.a(strA, o.a) + "|" + o.a(strA, o.b));
                     if (!com.alipay.sdk.m.o.b.i().t()) {
                         com.alipay.sdk.m.o.b.i().a(aVar, this.a, false, 1);
                     }

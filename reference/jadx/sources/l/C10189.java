@@ -1,21 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤۡۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10189 extends C23595 {
+import android.content.Context;
+import android.content.Intent;
+import android.util.AttributeSet;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f34813 = true;
+/* JADX INFO: renamed from: l.ۢܳۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7AVR */
+/* JADX INFO: loaded from: classes4.dex */
+public class C10189 extends AbstractC11813 {
+    public C10189(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f34814;
+    public C10189(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f34815;
+    public C10189(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
 
-    public C10189(int i, int i2) {
-        this.f34814 = i;
-        this.f34815 = i2 + i2;
+    public C10189(Context context) {
+        super(context);
+    }
+
+    @Override // l.AbstractC11813
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        abstractActivityC17204.startActivity(new Intent(abstractActivityC17204, (Class<?>) ActivityC5440.class));
     }
 }

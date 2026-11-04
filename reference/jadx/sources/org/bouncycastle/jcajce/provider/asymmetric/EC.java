@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Vector;
-import l.C7997;
+import l.C18011;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -21,11 +21,90 @@ import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EC {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.asymmetric.ec.";
     public static final Map ecSupportCurves;
     public static final Map generalEcAttributes;
+
+    static {
+        int i;
+        String str;
+        ASN1ObjectIdentifier oid;
+        HashMap map = new HashMap();
+        generalEcAttributes = map;
+        ecSupportCurves = new HashMap();
+        map.put("SupportedKeyClasses", "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey");
+        map.put("SupportedKeyFormats", "PKCS#8|X.509");
+        Enumeration names = ECNamedCurveTable.getNames();
+        Hashtable hashtable = new Hashtable();
+        while (names.hasMoreElements()) {
+            String str2 = (String) names.nextElement();
+            if (org.bouncycastle.jce.ECNamedCurveTable.getParameterSpec(str2) != null && (oid = ECNamedCurveTable.getOID(str2)) != null) {
+                String id = oid.getId();
+                Vector vector = (Vector) hashtable.get(id);
+                if (vector == null) {
+                    vector = new Vector();
+                    hashtable.put(id, vector);
+                }
+                if (!vector.contains(str2)) {
+                    vector.addElement(str2);
+                }
+            }
+        }
+        Enumeration enumerationKeys = hashtable.keys();
+        Vector vector2 = new Vector();
+        while (true) {
+            i = 0;
+            if (!enumerationKeys.hasMoreElements()) {
+                break;
+            }
+            String str3 = (String) enumerationKeys.nextElement();
+            Vector vector3 = (Vector) hashtable.get(str3);
+            StringBuffer stringBuffer = new StringBuffer("[");
+            ASN1ObjectIdentifier aSN1ObjectIdentifier = new ASN1ObjectIdentifier(str3);
+            if (X9ObjectIdentifiers.prime256v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
+                str = "secp256r1,NIST P-256,X9.62 prime256v1";
+            } else {
+                if (X9ObjectIdentifiers.prime192v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
+                    str = "secp192r1,NIST P-192,X9.62 prime192v1";
+                } else {
+                    if (aSN1ObjectIdentifier.on(X9ObjectIdentifiers.primeCurve) || aSN1ObjectIdentifier.on(X9ObjectIdentifiers.cTwoCurve)) {
+                        stringBuffer.append("X9.62 ");
+                    }
+                    while (i < vector3.size()) {
+                        if (i > 0) {
+                            stringBuffer.append(",");
+                        }
+                        String str4 = (String) vector3.elementAt(i);
+                        if ((aSN1ObjectIdentifier.on(SECObjectIdentifiers.ellipticCurve) || X9ObjectIdentifiers.prime256v1.equals((ASN1Primitive) aSN1ObjectIdentifier) || X9ObjectIdentifiers.prime192v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) && (str4.startsWith("K-") || str4.startsWith("B-") || str4.startsWith("P-"))) {
+                            stringBuffer.append("NIST ");
+                        }
+                        stringBuffer.append(str4);
+                        i++;
+                    }
+                }
+                stringBuffer.append(",");
+                stringBuffer.append(str3);
+                stringBuffer.append("]");
+                vector2.addElement(stringBuffer.toString());
+            }
+            stringBuffer.append(str);
+            stringBuffer.append(",");
+            stringBuffer.append(str3);
+            stringBuffer.append("]");
+            vector2.addElement(stringBuffer.toString());
+        }
+        StringBuffer stringBuffer2 = new StringBuffer();
+        while (i < vector2.size()) {
+            if (i > 0) {
+                stringBuffer2.append("|");
+            }
+            stringBuffer2.append((String) vector2.elementAt(i));
+            i++;
+        }
+        ecSupportCurves.put("SupportedCurves", stringBuffer2.toString());
+    }
 
     public class Mappings extends AsymmetricAlgorithmProvider {
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
@@ -208,7 +287,7 @@ public class EC {
             configurableProvider.addAlgorithm("Alg.Alias.Signature.SHA1WithECDSA", "ECDSA");
             configurableProvider.addAlgorithm("Alg.Alias.Signature.ECDSAWithSHA1", "ECDSA");
             configurableProvider.addAlgorithm("Alg.Alias.Signature.1.2.840.10045.4.1", "ECDSA");
-            C7997.m21058(new StringBuilder("Alg.Alias.Signature."), TeleTrusTObjectIdentifiers.ecSignWithSha1, configurableProvider, "ECDSA");
+            C18011.m41992(new StringBuilder("Alg.Alias.Signature."), TeleTrusTObjectIdentifiers.ecSignWithSha1, configurableProvider, "ECDSA");
             configurableProvider.addAlgorithm("Signature.ECDDSA", "org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA", EC.generalEcAttributes);
             configurableProvider.addAlgorithm("Signature.SHA1WITHECDDSA", "org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA", EC.generalEcAttributes);
             configurableProvider.addAlgorithm("Signature.SHA224WITHECDDSA", "org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA224", EC.generalEcAttributes);
@@ -257,84 +336,5 @@ public class EC {
             addSignatureAlgorithm(configurableProvider, "SHA3-384", "PLAIN-ECDSA", "org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_384", BSIObjectIdentifiers.ecdsa_plain_SHA3_384, EC.generalEcAttributes);
             addSignatureAlgorithm(configurableProvider, "SHA3-512", "PLAIN-ECDSA", "org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_512", BSIObjectIdentifiers.ecdsa_plain_SHA3_512, EC.generalEcAttributes);
         }
-    }
-
-    static {
-        int i;
-        String str;
-        ASN1ObjectIdentifier oid;
-        HashMap map = new HashMap();
-        generalEcAttributes = map;
-        ecSupportCurves = new HashMap();
-        map.put("SupportedKeyClasses", "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey");
-        map.put("SupportedKeyFormats", "PKCS#8|X.509");
-        Enumeration names = ECNamedCurveTable.getNames();
-        Hashtable hashtable = new Hashtable();
-        while (names.hasMoreElements()) {
-            String str2 = (String) names.nextElement();
-            if (org.bouncycastle.jce.ECNamedCurveTable.getParameterSpec(str2) != null && (oid = ECNamedCurveTable.getOID(str2)) != null) {
-                String id = oid.getId();
-                Vector vector = (Vector) hashtable.get(id);
-                if (vector == null) {
-                    vector = new Vector();
-                    hashtable.put(id, vector);
-                }
-                if (!vector.contains(str2)) {
-                    vector.addElement(str2);
-                }
-            }
-        }
-        Enumeration enumerationKeys = hashtable.keys();
-        Vector vector2 = new Vector();
-        while (true) {
-            i = 0;
-            if (!enumerationKeys.hasMoreElements()) {
-                break;
-            }
-            String str3 = (String) enumerationKeys.nextElement();
-            Vector vector3 = (Vector) hashtable.get(str3);
-            StringBuffer stringBuffer = new StringBuffer("[");
-            ASN1ObjectIdentifier aSN1ObjectIdentifier = new ASN1ObjectIdentifier(str3);
-            if (X9ObjectIdentifiers.prime256v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
-                str = "secp256r1,NIST P-256,X9.62 prime256v1";
-            } else {
-                if (X9ObjectIdentifiers.prime192v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
-                    str = "secp192r1,NIST P-192,X9.62 prime192v1";
-                } else {
-                    if (aSN1ObjectIdentifier.on(X9ObjectIdentifiers.primeCurve) || aSN1ObjectIdentifier.on(X9ObjectIdentifiers.cTwoCurve)) {
-                        stringBuffer.append("X9.62 ");
-                    }
-                    while (i < vector3.size()) {
-                        if (i > 0) {
-                            stringBuffer.append(",");
-                        }
-                        String str4 = (String) vector3.elementAt(i);
-                        if ((aSN1ObjectIdentifier.on(SECObjectIdentifiers.ellipticCurve) || X9ObjectIdentifiers.prime256v1.equals((ASN1Primitive) aSN1ObjectIdentifier) || X9ObjectIdentifiers.prime192v1.equals((ASN1Primitive) aSN1ObjectIdentifier)) && (str4.startsWith("K-") || str4.startsWith("B-") || str4.startsWith("P-"))) {
-                            stringBuffer.append("NIST ");
-                        }
-                        stringBuffer.append(str4);
-                        i++;
-                    }
-                }
-                stringBuffer.append(",");
-                stringBuffer.append(str3);
-                stringBuffer.append("]");
-                vector2.addElement(stringBuffer.toString());
-            }
-            stringBuffer.append(str);
-            stringBuffer.append(",");
-            stringBuffer.append(str3);
-            stringBuffer.append("]");
-            vector2.addElement(stringBuffer.toString());
-        }
-        StringBuffer stringBuffer2 = new StringBuffer();
-        while (i < vector2.size()) {
-            if (i > 0) {
-                stringBuffer2.append("|");
-            }
-            stringBuffer2.append((String) vector2.elementAt(i));
-            i++;
-        }
-        ecSupportCurves.put("SupportedCurves", stringBuffer2.toString());
     }
 }

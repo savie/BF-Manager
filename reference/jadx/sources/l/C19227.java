@@ -1,20 +1,20 @@
 package l;
 
-import android.view.View;
-import android.widget.TextView;
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.᩵ۙۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9R5 */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.ᩳܿۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B4HK */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C19227 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TextView f62122;
+    public int f62178;
 
-    public C19227(View view) {
-        this.f62122 = (TextView) view.findViewById(R.id.textView2);
-        view.findViewById(R.id.textView1).setVisibility(4);
-        view.findViewById(R.id.textView3).setVisibility(8);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m44558(int i) {
+        this.f62178 += i;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m44557() {
+        return this.f62178;
     }
 }

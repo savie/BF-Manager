@@ -9,11 +9,11 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.C4905;
-import l.C8033;
+import l.C10993;
+import l.C14625;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ForegroundLinearLayout extends C4905 {
+public class ForegroundLinearLayout extends C10993 {
     public Drawable foreground;
     public boolean foregroundBoundsChanged;
     public int foregroundGravity;
@@ -36,13 +36,13 @@ public class ForegroundLinearLayout extends C4905 {
         this.foregroundGravity = 119;
         this.mForegroundInPadding = true;
         this.foregroundBoundsChanged = false;
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f26792, i, 0, new int[0]);
-        this.foregroundGravity = typedArrayObtainStyledAttributes.getInt(C8033.f28120, this.foregroundGravity);
-        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(C8033.f27163);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f46756, i, 0, new int[0]);
+        this.foregroundGravity = typedArrayObtainStyledAttributes.getInt(C14625.f46703, this.foregroundGravity);
+        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(C14625.f46119);
         if (drawable != null) {
             setForeground(drawable);
         }
-        this.mForegroundInPadding = typedArrayObtainStyledAttributes.getBoolean(C8033.f27430, true);
+        this.mForegroundInPadding = typedArrayObtainStyledAttributes.getBoolean(C14625.f46225, true);
         typedArrayObtainStyledAttributes.recycle();
     }
 
@@ -124,7 +124,7 @@ public class ForegroundLinearLayout extends C4905 {
         return this.foreground;
     }
 
-    @Override // l.C4905, android.view.ViewGroup, android.view.View
+    @Override // l.C10993, android.view.ViewGroup, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         super.onLayout(z, i, i2, i3, i4);
         this.foregroundBoundsChanged = z | this.foregroundBoundsChanged;

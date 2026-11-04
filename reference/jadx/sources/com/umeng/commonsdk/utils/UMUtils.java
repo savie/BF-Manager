@@ -55,8 +55,8 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.microedition.khronos.opengles.GL10;
-import l.C0252;
-import l.C15489;
+import l.C14483;
+import l.C25272;
 
 /* JADX INFO: loaded from: classes.dex */
 public class UMUtils {
@@ -906,15 +906,15 @@ public class UMUtils {
     }
 
     public static String bytes2Hex(byte[] bArr) {
-        String strM37076 = "";
+        String strM34972 = "";
         for (byte b : bArr) {
             String hexString = Integer.toHexString(b & 255);
             if (hexString.length() == 1) {
-                strM37076 = C15489.m37076(strM37076, "0");
+                strM34972 = C14483.m34972(strM34972, "0");
             }
-            strM37076 = C15489.m37076(strM37076, hexString);
+            strM34972 = C14483.m34972(strM34972, hexString);
         }
-        return strM37076;
+        return strM34972;
     }
 
     public static String getUMId(Context context) {
@@ -1176,7 +1176,7 @@ public class UMUtils {
         if (!TextUtils.isEmpty(strB)) {
             VALUE_ASMS_VERSION = strB;
             if (UMConfigure.isDebugLog()) {
-                UMLog.mutlInfo(2, C0252.m1693("ZID SDK版本号: ", strB));
+                UMLog.mutlInfo(2, C25272.m56409("ZID SDK版本号: ", strB));
             }
         }
         Class cls = getClass("com.umeng.analytics.game.GameSdkVersion");

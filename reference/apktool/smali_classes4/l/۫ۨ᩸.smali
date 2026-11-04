@@ -1,146 +1,48 @@
 .class public final Ll/۫ۨ᩸;
-.super Ll/۟ۖ᩸;
-.source "688Y"
+.super Ljava/lang/Object;
+.source "1AOV"
+
+# interfaces
+.implements Ll/ۙۜ᩷;
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/۟ۖ᩸;
-
-
-# direct methods
-.method public constructor <init>(Ll/۟ۖ᩸;)V
+# virtual methods
+.method public final onPageScrollStateChanged(I)V
     .locals 0
-
-    .line 557
-    iput-object p1, p0, Ll/۫ۨ᩸;->ۙ:Ll/۟ۖ᩸;
-
-    invoke-direct {p0}, Ll/۟ۖ᩸;-><init>()V
 
     return-void
 .end method
 
+.method public final onPageScrolled(IFI)V
+    .locals 0
 
-# virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-    .locals 5
-
-    .line 569
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 570
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۙ()V
-
-    .line 571
-    :goto_0
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ᩴ()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 572
-    iget-object v1, p0, Ll/۫ۨ᩸;->ۙ:Ll/۟ۖ᩸;
-
-    invoke-virtual {v1, p1}, Ll/۟ۖ᩸;->ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    .line 573
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 575
-    :cond_0
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->᩹()V
-
-    .line 576
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    .line 577
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicLongArray;
-
-    invoke-direct {v1, p1}, Ljava/util/concurrent/atomic/AtomicLongArray;-><init>(I)V
-
-    const/4 v2, 0x0
-
-    :goto_1
-    if-ge v2, p1, :cond_1
-
-    .line 579
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Long;
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    invoke-virtual {v1, v2, v3, v4}, Ljava/util/concurrent/atomic/AtomicLongArray;->set(IJ)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v1
+    return-void
 .end method
 
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-    .locals 4
+.method public final onPageSelected(I)V
+    .locals 3
 
-    .line 557
-    check-cast p2, Ljava/util/concurrent/atomic/AtomicLongArray;
-
-    .line 560
-    invoke-virtual {p1}, Ll/֨۬᩸;->ۙ()V
-
-    .line 561
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicLongArray;->length()I
+    .line 72
+    invoke-static {}, Ll/ۚۨ᩸;->ۤ()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eq v0, p1, :cond_0
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    .line 73
+    invoke-static {p1}, Ll/ۚۨ᩸;->ۙ(I)V
 
-    .line 562
-    invoke-virtual {p2, v1}, Ljava/util/concurrent/atomic/AtomicLongArray;->get(I)J
+    .line 75
+    new-instance p1, Ll/ܳۨ᩸;
 
-    move-result-wide v2
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v0, "tfcgi"
 
-    move-result-object v2
+    const-wide/16 v1, 0x1388
 
-    iget-object v3, p0, Ll/۫ۨ᩸;->ۙ:Ll/۟ۖ᩸;
+    invoke-static {v0, v1, v2, p1}, Ll/ۙ᩻ܺ;->ۙ(Ljava/lang/Object;JLjava/lang/Runnable;)V
 
-    invoke-virtual {v3, p1, v2}, Ll/۟ۖ᩸;->ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 564
     :cond_0
-    invoke-virtual {p1}, Ll/֨۬᩸;->ۖ()V
-
     return-void
 .end method

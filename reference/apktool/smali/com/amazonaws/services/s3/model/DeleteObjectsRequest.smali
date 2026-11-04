@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public ֡:Ljava/lang/String;
+.field public final ֡:Ljava/util/ArrayList;
 
-.field public ۫:Z
+.field public ۟:Z
 
-.field public final ܽ:Ljava/util/ArrayList;
+.field public ܿ:Ljava/lang/String;
 
 
 # direct methods
@@ -23,30 +23,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܽ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->֡:Ljava/util/ArrayList;
 
     .line 98
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->֡:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܿ:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()Ljava/lang/String;
-    .locals 1
-
-    .line 87
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->֡:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final ۙ(Ljava/util/List;)V
     .locals 1
 
     .line 219
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܽ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->֡:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -56,31 +47,40 @@
     return-void
 .end method
 
-.method public final ۚ()Ljava/util/ArrayList;
-    .locals 1
-
-    .line 239
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܽ:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public final ۬()V
+.method public final ۚ()V
     .locals 1
 
     const/4 v0, 0x1
 
     .line 190
-    iput-boolean v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->۫:Z
+    iput-boolean v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->۟:Z
 
     return-void
 .end method
 
-.method public final ᩹()Z
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
+
+    .line 87
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܿ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ܳ()Z
     .locals 1
 
     .line 198
-    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->۫:Z
+    iget-boolean v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->۟:Z
 
     return v0
+.end method
+
+.method public final ᩴ()Ljava/util/ArrayList;
+    .locals 1
+
+    .line 239
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->֡:Ljava/util/ArrayList;
+
+    return-object v0
 .end method

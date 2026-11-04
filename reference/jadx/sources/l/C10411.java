@@ -1,24 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤܽۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 86QM */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10411 {
+/* JADX INFO: renamed from: l.ۢ᩸۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB6I */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10411 extends C13352 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public boolean f35592;
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final C1997 f33099;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f35593;
+    public C10411(C1997 c1997) {
+        super(c1997.m6838(), c1997.m6839(), c1997.m6843(), c1997.m6834(), c1997.m6831(), !c1997.m6837());
+        this.f33099 = c1997;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f35594;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C1997 m26722() {
+        return this.f33099;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f35595;
-
-    public C10411(boolean z, boolean z2) {
-        this.f35593 = z;
-        this.f35595 = z2;
+    @Override // l.C13352, l.InterfaceC2386
+    /* JADX INFO: renamed from: ᩹ */
+    public final boolean mo8113() {
+        return this.f33099.m6844();
     }
 }

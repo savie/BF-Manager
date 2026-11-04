@@ -1,136 +1,106 @@
-.class public abstract Ll/ۘܶᩴ;
-.super Ll/ۖܶᩴ;
-.source "AAP5"
+.class public final Ll/ۘܶᩴ;
+.super Ll/ᩳܶᩴ;
+.source "M701"
 
 
 # instance fields
-.field public ֡:Z
+.field public final ܳ:Ll/ᩳܶᩴ;
 
-.field public ᩶:I
+.field public final ᩴ:Ll/ᩳܶᩴ;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Ll/ᩳܶᩴ;Ll/ᩳܶᩴ;)V
+    .locals 7
 
-    .line 935
-    invoke-direct {p0, p1}, Ll/ۖܶᩴ;-><init>(I)V
+    .line 486
+    iget v0, p1, Ll/ᩳܶᩴ;->ۤ:I
 
-    const/4 p1, -0x1
+    iget v1, p2, Ll/ᩳܶᩴ;->ۤ:I
 
-    .line 931
-    iput p1, p0, Ll/ۘܶᩴ;->᩶:I
+    int-to-long v2, v0
 
-    const/4 p1, 0x0
+    int-to-long v0, v1
 
-    .line 936
-    iput-boolean p1, p0, Ll/ۘܶᩴ;->֡:Z
+    add-long/2addr v2, v0
 
-    return-void
-.end method
+    long-to-int v0, v2
 
-.method public constructor <init>(II)V
-    .locals 0
+    int-to-long v4, v0
 
-    .line 940
-    invoke-direct {p0, p1}, Ll/ۖܶᩴ;-><init>(I)V
+    cmp-long v1, v2, v4
 
-    .line 941
-    iput p2, p0, Ll/ۘܶᩴ;->᩶:I
+    if-nez v1, :cond_3
 
-    const/4 p1, 0x1
+    iget v1, p1, Ll/ᩳܶᩴ;->᩸:I
 
-    .line 942
-    iput-boolean p1, p0, Ll/ۘܶᩴ;->֡:Z
+    iget v2, p2, Ll/ᩳܶᩴ;->᩸:I
 
-    return-void
-.end method
+    int-to-long v3, v1
 
+    int-to-long v1, v2
 
-# virtual methods
-.method public final bridge synthetic trySplit()Ll/ۤۛᩴ;
-    .locals 1
+    add-long/2addr v3, v1
 
-    .line 929
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->trySplit()Ll/ۨܶᩴ;
+    long-to-int v1, v3
 
-    move-result-object v0
+    int-to-long v5, v1
 
-    return-object v0
-.end method
+    cmp-long v2, v3, v5
 
-.method public final trySplit()Ll/ۨܶᩴ;
-    .locals 2
+    if-nez v2, :cond_2
 
-    .line 962
-    invoke-super {p0}, Ll/ۖܶᩴ;->trySplit()Ll/ۨܶᩴ;
+    iget v2, p1, Ll/ᩳܶᩴ;->᩷:I
 
-    move-result-object v0
+    iget v3, p2, Ll/ᩳܶᩴ;->᩷:I
 
-    .line 963
-    iget-boolean v1, p0, Ll/ۘܶᩴ;->֡:Z
+    .line 487
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
-    if-nez v1, :cond_0
+    move-result v2
 
-    if-eqz v0, :cond_0
+    const/4 v3, 0x1
 
-    .line 964
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->ܰ()I
+    add-int/2addr v2, v3
 
-    move-result v1
+    iget-boolean v4, p1, Ll/ᩳܶᩴ;->ۙ:Z
 
-    iput v1, p0, Ll/ۘܶᩴ;->᩶:I
+    if-nez v4, :cond_1
 
-    const/4 v1, 0x1
+    iget-boolean v4, p2, Ll/ᩳܶᩴ;->ۙ:Z
 
-    .line 965
-    iput-boolean v1, p0, Ll/ۘܶᩴ;->֡:Z
+    if-eqz v4, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    return-object v0
-.end method
+    const/4 v3, 0x0
 
-.method public final bridge synthetic trySplit()Ll/ᩴۛᩴ;
-    .locals 1
+    .line 486
+    :cond_1
+    :goto_0
+    invoke-direct {p0, v0, v1, v2, v3}, Ll/ᩳܶᩴ;-><init>(IIIZ)V
 
-    .line 929
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->trySplit()Ll/ۨܶᩴ;
+    .line 488
+    iput-object p1, p0, Ll/ۘܶᩴ;->ᩴ:Ll/ᩳܶᩴ;
 
-    move-result-object v0
+    .line 489
+    iput-object p2, p0, Ll/ۘܶᩴ;->ܳ:Ll/ᩳܶᩴ;
 
-    return-object v0
-.end method
+    return-void
 
-.method public final bridge synthetic trySplit()Ll/᩷ۛᩴ;
-    .locals 1
+    .line 0
+    :cond_2
+    new-instance p1, Ljava/lang/ArithmeticException;
 
-    .line 929
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->trySplit()Ll/ۨܶᩴ;
+    invoke-direct {p1}, Ljava/lang/ArithmeticException;-><init>()V
 
-    move-result-object v0
+    throw p1
 
-    return-object v0
-.end method
+    :cond_3
+    new-instance p1, Ljava/lang/ArithmeticException;
 
-.method public final ۙ()I
-    .locals 1
+    invoke-direct {p1}, Ljava/lang/ArithmeticException;-><init>()V
 
-    .line 957
-    iget-boolean v0, p0, Ll/ۘܶᩴ;->֡:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ll/ۘܶᩴ;->᩶:I
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->ܰ()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public abstract ܰ()I
+    throw p1
 .end method

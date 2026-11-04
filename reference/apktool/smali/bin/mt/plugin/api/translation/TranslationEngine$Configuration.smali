@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILbin/mt/plugin/api/translation/TranslationEngine$TextLengthCalculator;ZZZZZZLl/᩻᩹ۘ;)V
+.method public synthetic constructor <init>(ILbin/mt/plugin/api/translation/TranslationEngine$TextLengthCalculator;ZZZZZZLl/ۨۛ֫;)V
     .locals 0
 
     .line 382

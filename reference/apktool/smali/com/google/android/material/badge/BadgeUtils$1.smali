@@ -13,15 +13,15 @@
 
 .field public final synthetic val$menuItemId:I
 
-.field public final synthetic val$toolbar:Ll/ۜᩴ;
+.field public final synthetic val$toolbar:Ll/ܶ᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜᩴ;ILcom/google/android/material/badge/BadgeDrawable;Landroid/widget/FrameLayout;)V
+.method public constructor <init>(Ll/ܶ᩹;ILcom/google/android/material/badge/BadgeDrawable;Landroid/widget/FrameLayout;)V
     .locals 0
 
     .line 134
-    iput-object p1, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ۜᩴ;
+    iput-object p1, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ܶ᩹;
 
     iput p2, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$menuItemId:I
 
@@ -40,12 +40,12 @@
     .locals 3
 
     .line 137
-    iget-object v0, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ܶ᩹;
 
     iget v1, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$menuItemId:I
 
     .line 138
-    invoke-static {v0, v1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuItemView(Ll/ۜᩴ;I)Ll/ۜ۬;
+    invoke-static {v0, v1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuItemView(Ll/ܶ᩹;I)Ll/ܺۚ;
 
     move-result-object v0
 
@@ -54,7 +54,7 @@
     .line 140
     iget-object v1, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
-    iget-object v2, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ۜᩴ;
+    iget-object v2, p0, Lcom/google/android/material/badge/BadgeUtils$1;->val$toolbar:Ll/ܶ᩹;
 
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 

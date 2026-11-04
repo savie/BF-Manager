@@ -1,45 +1,108 @@
-.class public final Ll/۬ۡ᩹;
-.super Ll/᩵ܿۚ;
-.source "C12B"
+.class public Ll/۬ۡ᩹;
+.super Ll/ܳ֨᩹;
+.source "XEW"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
-# instance fields
-.field public final synthetic ۛ:Ll/᩹ۢ᩺;
-
-.field public final synthetic ܿ:Ll/۫֫᩺;
+# static fields
+.field public static final serialVersionUID:J = -0x61c8864680b583e9L
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLl/֨ۡ᩹;Ll/᩹ۢ᩺;Ll/۫֫᩺;)V
-    .locals 0
+.method private readResolve()Ljava/lang/Object;
+    .locals 1
 
-    .line 159
-    iput-object p5, p0, Ll/۬ۡ᩹;->ۛ:Ll/᩹ۢ᩺;
+    .line 98
+    sget-object v0, Ll/ۙۖ᩹;->ۙ:Ll/۬ۡ᩹;
 
-    iput-object p6, p0, Ll/۬ۡ᩹;->ܿ:Ll/۫֫᩺;
-
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/᩵ܿۚ;-><init>(Ljava/lang/String;JLjava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ljava/io/InputStream;
+.method public final clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public clone()Ljava/lang/Object;
+    .locals 1
+
+    .line 78
+    sget-object v0, Ll/ۙۖ᩹;->ۙ:Ll/۬ۡ᩹;
+
+    return-object v0
+.end method
+
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 162
-    iget-object v0, p0, Ll/۬ۡ᩹;->ۛ:Ll/᩹ۢ᩺;
+    .line 88
+    instance-of v0, p1, Ll/᩶ܺ᩹;
 
-    invoke-virtual {v0}, Ll/᩹ۢ᩺;->ۙ()Ll/ۖۢ᩺;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Ll/۬ۡ᩹;->ܿ:Ll/۫֫᩺;
+    return v1
 
-    invoke-virtual {v0, v1}, Ll/ۖۢ᩺;->ۙ(Ll/۫֫᩺;)Ljava/io/InputStream;
+    .line 89
+    :cond_0
+    check-cast p1, Ll/᩶ܺ᩹;
 
-    move-result-object v0
+    invoke-interface {p1}, Ll/᩶ܺ᩹;->size()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "{}"
 
     return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/material/navigation/NavigationBarMenu;
-.super Ll/۫۬;
+.super Ll/ۢۚ;
 .source "NavigationBarMenu.java"
 
 
@@ -14,7 +14,7 @@
     .locals 0
 
     .line 44
-    invoke-direct {p0, p1}, Ll/۫۬;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Ll/ۢۚ;-><init>(Landroid/content/Context;)V
 
     .line 45
     iput-object p2, p0, Lcom/google/android/material/navigation/NavigationBarMenu;->viewClass:Ljava/lang/Class;
@@ -31,7 +31,7 @@
     .locals 3
 
     .line 65
-    invoke-virtual {p0}, Ll/۫۬;->size()I
+    invoke-virtual {p0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -44,28 +44,28 @@
     if-gt v0, v2, :cond_1
 
     .line 76
-    invoke-virtual {p0}, Ll/۫۬;->stopDispatchingItemsChanged()V
+    invoke-virtual {p0}, Ll/ۢۚ;->stopDispatchingItemsChanged()V
 
     .line 77
-    invoke-super {p0, p1, p2, p3, p4}, Ll/۫۬;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-super {p0, p1, p2, p3, p4}, Ll/ۢۚ;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object p1
 
     .line 78
-    instance-of p2, p1, Ll/᩻۬;
+    instance-of p2, p1, Ll/۠ۚ;
 
     if-eqz p2, :cond_0
 
     .line 79
     move-object p2, p1
 
-    check-cast p2, Ll/᩻۬;
+    check-cast p2, Ll/۠ۚ;
 
-    invoke-virtual {p2, v1}, Ll/᩻۬;->ۨ(Z)V
+    invoke-virtual {p2, v1}, Ll/۠ۚ;->ۤ(Z)V
 
     .line 81
     :cond_0
-    invoke-virtual {p0}, Ll/۫۬;->startDispatchingItemsChanged()V
+    invoke-virtual {p0}, Ll/ۢۚ;->startDispatchingItemsChanged()V
 
     return-object p1
 
@@ -85,7 +85,7 @@
     const-string p4, " is "
 
     .line 0
-    invoke-static {p3, p1, p4}, Ll/۫ܰۖ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p3, p1, p4}, Ll/᩸ۨۧ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p3
 

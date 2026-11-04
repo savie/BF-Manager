@@ -4,14 +4,14 @@ import java.math.BigInteger;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHParameters implements CipherParameters {
     public static final int DEFAULT_MINIMUM_LENGTH = 160;
     public BigInteger g;
     public BigInteger j;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77970l;
+    public int f82086l;
     public int m;
     public BigInteger p;
     public BigInteger q;
@@ -49,7 +49,7 @@ public class DHParameters implements CipherParameters {
         this.p = bigInteger;
         this.q = bigInteger3;
         this.m = i;
-        this.f77970l = i2;
+        this.f82086l = i2;
         this.j = bigInteger4;
         this.validation = dHValidationParameters;
     }
@@ -86,7 +86,7 @@ public class DHParameters implements CipherParameters {
     }
 
     public int getL() {
-        return this.f77970l;
+        return this.f82086l;
     }
 
     public int getM() {

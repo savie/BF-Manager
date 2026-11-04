@@ -1,53 +1,60 @@
 package l;
 
-import java.util.Arrays;
+import org.bouncycastle.math.ec.custom.sec.SecP160R1Field;
+import org.checkerframework.dataflow.qual.Pure;
 
-/* JADX INFO: renamed from: l.ۚۨ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q77G */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5332 extends AbstractC13613 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C15606[] f18401;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final String f18402;
-
-    @Override // l.InterfaceC12078
-    public final int[] getStyle() {
-        return null;
-    }
-
-    public C5332(String str, C15606[] c15606Arr) {
-        this.f18402 = str;
-        this.f18401 = (C15606[]) Arrays.copyOf(c15606Arr, c15606Arr.length);
-    }
-
-    @Override // l.InterfaceC12078
-    public final String getValue() {
-        return this.f18402;
-    }
-
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ֡ۙ */
-    public final C15606[] mo11444() {
-        C15606[] c15606Arr = this.f18401;
-        if (c15606Arr == null) {
-            return null;
+/* JADX INFO: renamed from: l.ۚ֫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: C8LI */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5332 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m15984(int i) {
+        if (i == 20) {
+            return 63750;
         }
-        return (C15606[]) Arrays.copyOf(c15606Arr, c15606Arr.length);
+        if (i == 30) {
+            return 2250000;
+        }
+        switch (i) {
+            case 5:
+                return 80000;
+            case 6:
+                return 768000;
+            case 7:
+                return 192000;
+            case 8:
+                return 2250000;
+            case 9:
+                return 40000;
+            case 10:
+                return 100000;
+            case 11:
+                return 16000;
+            case 12:
+                return 7000;
+            default:
+                switch (i) {
+                    case 14:
+                        return 3062500;
+                    case 15:
+                        return 8000;
+                    case 16:
+                        return 256000;
+                    case 17:
+                        return 336000;
+                    case 18:
+                        return 768000;
+                    default:
+                        return SecP160R1Field.PInv;
+                }
+        }
     }
 
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ۢۙ */
-    public final C15606[] mo11446() {
-        return m33291(mo11444());
-    }
-
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ֫ۙ */
-    public final boolean mo11445() {
-        C15606[] c15606Arr = this.f18401;
-        return c15606Arr != null && c15606Arr.length > 0;
+    @Pure
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m15985(String str, boolean z) throws C2970 {
+        if (!z) {
+            throw C2970.m9688(str, (Throwable) null);
+        }
     }
 }

@@ -1,3 +1,3 @@
-.class public interface abstract Ll/֨ۖۙ;
-.super Ljava/lang/Object;
-.source "DB30"
+.class public final Ll/֨ۖۙ;
+.super Ljava/io/IOException;
+.source "O7MN"

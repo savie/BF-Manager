@@ -16,7 +16,7 @@
     </style>
     <style name="MT_Protector_res_0x7f130119" parent="@style/MT_Protector_res_0x7f1300d6">
     </style>
-    <style name="MT_Protector_res_0x7f1303ae" parent="@android:style/Widget">
+    <style name="MT_Protector_res_0x7f1303b3" parent="@android:style/Widget">
         <item name="android:background">?attr/MT_Protector_res_0x7f04011a</item>
         <item name="android:stateListAnimator">@animator/MT_Protector_res_0x7f020003</item>
         <item name="android:touchscreenBlocksFocus">true</item>

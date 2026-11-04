@@ -1,213 +1,153 @@
 .class public final Ll/ۤۧۘ;
-.super Ll/᩵ۨ;
-.source "31K1"
+.super Ljava/util/AbstractQueue;
+.source "X426"
 
 
 # instance fields
-.field public final synthetic ۖ:Ll/ۚ᩻ۘ;
+.field public ܰ:Ljava/util/LinkedList;
+
+.field public final synthetic ᩶:Ll/᩸ۧۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۚ᩻ۘ;)V
+.method public constructor <init>(Ll/᩸ۧۘ;)V
     .locals 0
 
-    .line 404
-    iput-object p1, p0, Ll/ۤۧۘ;->ۖ:Ll/ۚ᩻ۘ;
+    .line 156
+    iput-object p1, p0, Ll/ۤۧۘ;->᩶:Ll/᩸ۧۘ;
 
-    const/4 p1, 0x1
+    invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
-    invoke-direct {p0, p1}, Ll/᩵ۨ;-><init>(Z)V
+    .line 187
+    new-instance p1, Ljava/util/LinkedList;
+
+    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object p1, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ܰ()V
-    .locals 5
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    .line 407
-    iget-object v0, p0, Ll/ۤۧۘ;->ۖ:Ll/ۚ᩻ۘ;
+    .line 159
+    iget-object v0, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
 
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->۠(Ll/ۚ᩻ۘ;)Ll/ܿܰۙ;
-
-    move-result-object v1
-
-    const v2, 0x800003
-
-    invoke-virtual {v1, v2}, Ll/ܿܰۙ;->ۖ(I)Z
-
-    move-result v1
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_1
-
-    .line 409
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ܺ(Ll/ۚ᩻ۘ;)Ll/ۨۜ᩺;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ll/ۨۜ᩺;->ܰ()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 410
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ܺ(Ll/ۚ᩻ۘ;)Ll/ۨۜ᩺;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 77
-    invoke-virtual {v0, v3}, Ll/ۨۜ᩺;->ۙ(Z)V
+    return-object v0
+.end method
 
-    return-void
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 412
+    .line 156
+    check-cast p1, Ll/ۗۙۘ;
+
+    .line 168
+    iget-object v0, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 169
+    iget-object v0, p0, Ll/ۤۧۘ;->᩶:Ll/᩸ۧۘ;
+
+    iget-object v0, v0, Ll/᩸ۧۘ;->ܰ:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    const/4 p1, 0x1
+
+    return p1
+
     :cond_0
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->۠(Ll/ۚ᩻ۘ;)Ll/ܿܰۙ;
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final peek()Ljava/lang/Object;
+    .locals 2
+
+    .line 184
+    iget-object v0, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ll/ܿܰۙ;->ۙ(I)V
+    check-cast v0, Ll/ۗۙۘ;
 
-    return-void
+    return-object v0
+.end method
 
-    .line 415
-    :cond_1
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ᩳ(Ll/ۚ᩻ۘ;)I
+.method public final poll()Ljava/lang/Object;
+    .locals 2
 
-    move-result v1
+    .line 176
+    iget-object v0, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
 
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_2
-
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ᩳ(Ll/ۚ᩻ۘ;)I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ۡ(Ll/ۚ᩻ۘ;)Ljava/util/ArrayList;
+    if-nez v1, :cond_0
 
-    move-result-object v2
+    const/4 v0, 0x0
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    return-object v0
 
-    move-result v2
+    :cond_0
+    const/4 v1, 0x0
 
-    if-ge v1, v2, :cond_2
+    .line 178
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(I)Ljava/lang/Object;
 
-    .line 416
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ۡ(Ll/ۚ᩻ۘ;)Ljava/util/ArrayList;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Ll/ۗۙۘ;
 
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ᩳ(Ll/ۚ᩻ۘ;)I
+    .line 179
+    iget-object v1, p0, Ll/ۤۧۘ;->᩶:Ll/᩸ۧۘ;
 
-    move-result v2
+    iget-object v1, v1, Ll/᩸ۧۘ;->ܰ:Ljava/util/LinkedList;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    check-cast v1, Ll/᩺֨ۙ;
+.method public final size()I
+    .locals 1
 
-    .line 417
-    instance-of v2, v1, Ll/᩵ܿۘ;
+    .line 164
+    iget-object v0, p0, Ll/ۤۧۘ;->ܰ:Ljava/util/LinkedList;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
-    .line 418
-    check-cast v1, Ll/᩵ܿۘ;
+    move-result v0
 
-    invoke-interface {v1}, Ll/᩵ܿۘ;->ۙ()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return-void
-
-    .line 423
-    :cond_2
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->᩸(Ll/ۚ᩻ۘ;)Ljava/util/LinkedList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    .line 424
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->᩸(Ll/ۚ᩻ۘ;)Ljava/util/LinkedList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->pop()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    .line 425
-    :goto_0
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ۡ(Ll/ۚ᩻ۘ;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_4
-
-    .line 426
-    invoke-static {v0}, Ll/ۚ᩻ۘ;->ۡ(Ll/ۚ᩻ۘ;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ll/᩹᩻ۘ;
-
-    invoke-virtual {v4}, Ll/᩹᩻ۘ;->ۜ()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    .line 427
-    invoke-static {v0, v3, v2}, Ll/ۚ᩻ۘ;->ۙ(Ll/ۚ᩻ۘ;IZ)V
-
-    return-void
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 431
-    :cond_4
-    invoke-static {v0, v2, v2}, Ll/ۚ᩻ۘ;->ۙ(Ll/ۚ᩻ۘ;IZ)V
-
-    return-void
-
-    .line 434
-    :cond_5
-    invoke-virtual {v0, v3}, Ll/ۚ᩻ۘ;->ۙ(Z)V
-
-    return-void
+    return v0
 .end method

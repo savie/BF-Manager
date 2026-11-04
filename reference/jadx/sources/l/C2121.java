@@ -1,25 +1,62 @@
 package l;
 
-import java.io.IOException;
+import net.sf.sevenzipjbinding.ISequentialOutStream;
 
-/* JADX INFO: renamed from: l.֫᩹᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0B0D */
-/* JADX INFO: loaded from: classes2.dex */
-public class C2121 extends AbstractC7186 {
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        StringBuilder sb = (StringBuilder) obj;
-        c1145.m4212(sb == null ? null : sb.toString());
+/* JADX INFO: renamed from: l.֫ᩴ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: HAIH */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2121 extends AbstractC7217 {
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC6116 f7000;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f7001;
+
+    @Override // l.InterfaceC2742
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo7308(int i) {
     }
 
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
-        }
-        return new StringBuilder(c5379.m14922());
+    @Override // l.InterfaceC2742
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final void mo7312() {
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2121(C17036 c17036, boolean z, InterfaceC6116 interfaceC6116) {
+        super(c17036);
+        this.f7001 = z;
+        this.f7000 = interfaceC6116;
+    }
+
+    @Override // l.AbstractC7217, l.InterfaceC2742
+    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo7310() {
+        return this.f7001;
+    }
+
+    @Override // l.InterfaceC2742
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ISequentialOutStream mo7311() {
+        return new C0747(this.f7000);
+    }
+
+    @Override // l.InterfaceC2742
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo7313() {
+        this.f7000.mo17646();
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f7000.mo924();
+    }
+
+    @Override // l.InterfaceC2742
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo7309(int i) {
+        this.f7000.mo17643(i);
     }
 }

@@ -5,7 +5,7 @@ import net.engio.mbassy.bus.error.PublicationError;
 import net.engio.mbassy.listener.IMessageFilter;
 import net.engio.mbassy.subscription.SubscriptionContext;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ElFilter implements IMessageFilter {
 
     public final class ExpressionFactoryHolder {

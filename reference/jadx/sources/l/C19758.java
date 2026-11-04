@@ -1,157 +1,175 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵᩹ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3BBC */
+import android.text.style.BackgroundColorSpan;
+import android.widget.CompoundButton;
+import android.widget.TextView;
+import bin.mt.plus.R;
+import java.io.IOException;
+import java.math.BigInteger;
+
+/* JADX INFO: renamed from: l.ᩴۤܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95HF */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19758 extends AbstractC10586 {
+public final class C19758 implements CompoundButton.OnCheckedChangeListener {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63587;
 
     /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C20671[] f63492;
+    public final ViewOnLongClickListenerC10807 f63588;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C4129 f63493;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63589;
+
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63590;
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63591;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63592;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63593;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63594;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final AbstractActivityC17204 f63595;
 
     /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C20671 f63494;
+    public final ViewOnLongClickListenerC10807 f63596;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean f63495;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AbstractActivityC17204 f63597;
 
-    public C19758(C11312 c11312, C20671 c20671, C4129 c4129, C20671[] c20671Arr) {
-        super(c11312, C0727.f3015);
-        if (c20671 == null) {
-            throw new NullPointerException("user == null");
-        }
-        if (c4129 == null) {
-            throw new NullPointerException("cases == null");
-        }
-        if (c20671Arr == null) {
-            throw new NullPointerException("targets == null");
-        }
-        int size = c4129.size();
-        if (size != c20671Arr.length) {
-            throw new IllegalArgumentException("cases / targets mismatch");
-        }
-        if (size > 65535) {
-            throw new IllegalArgumentException("too many cases");
-        }
-        this.f63494 = c20671;
-        this.f63493 = c4129;
-        this.f63492 = c20671Arr;
-        boolean z = true;
-        if (c4129.size() >= 2) {
-            long jM44950 = m44950(c4129);
-            long size2 = (((long) c4129.size()) * 4) + 2;
-            if (jM44950 < 0 || jM44950 > (size2 * 5) / 4) {
-                z = false;
-            }
-        }
-        this.f63495 = z;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final TextView f63598;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final CompoundButton f63599;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public BackgroundColorSpan f63600 = new BackgroundColorSpan(1627389951 & C3296.f10738);
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public final ViewOnLongClickListenerC10807 f63601;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public C19758(InterfaceC23488 interfaceC23488) {
+        this.f63595 = (AbstractActivityC17204) interfaceC23488;
+        AbstractActivityC17204 abstractActivityC17204Mo44752 = interfaceC23488.mo44752();
+        this.f63597 = abstractActivityC17204Mo44752;
+        CompoundButton compoundButton = (CompoundButton) abstractActivityC17204Mo44752.m40418(R.id.MT_Protector);
+        this.f63599 = compoundButton;
+        this.f63598 = (TextView) abstractActivityC17204Mo44752.m40418(R.id.MT_Protector);
+        this.f63588 = new ViewOnLongClickListenerC10807(this, 1, R.id.MT_Protector);
+        this.f63591 = new ViewOnLongClickListenerC10807(this, 1, R.id.MT_Protector);
+        this.f63593 = new ViewOnLongClickListenerC10807(this, 2, R.id.MT_Protector);
+        this.f63601 = new ViewOnLongClickListenerC10807(this, 2, R.id.MT_Protector);
+        this.f63594 = new ViewOnLongClickListenerC10807(this, 4, R.id.MT_Protector);
+        this.f63596 = new ViewOnLongClickListenerC10807(this, 4, R.id.MT_Protector);
+        this.f63589 = new ViewOnLongClickListenerC10807(this, 8, R.id.MT_Protector);
+        this.f63590 = new ViewOnLongClickListenerC10807(this, 8, R.id.MT_Protector);
+        this.f63592 = new ViewOnLongClickListenerC10807(this, 4, R.id.MT_Protector);
+        this.f63587 = new ViewOnLongClickListenerC10807(this, 8, R.id.MT_Protector);
+        compoundButton.setOnCheckedChangeListener(this);
     }
 
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo15536() {
-        boolean z = this.f63495;
-        C4129 c4129 = this.f63493;
-        return (int) (z ? m44950(c4129) : (((long) c4129.size()) * 4) + 2);
-    }
-
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo15535(C2718 c2718) {
-        int iM38698;
-        int iM38699 = this.f63494.m38698();
-        int iMo3096 = C5854.f19832.m40073().mo3096();
-        C20671[] c20671Arr = this.f63492;
-        int length = c20671Arr.length;
-        boolean z = this.f63495;
-        C4129 c4129 = this.f63493;
-        int i = 0;
-        if (z) {
-            int i2 = length == 0 ? 0 : c4129.get(0);
-            int i3 = ((length == 0 ? 0 : c4129.get(length - 1)) - i2) + 1;
-            c2718.m8297(256);
-            c2718.m8297(i3);
-            c2718.m8289(i2);
-            int i4 = 0;
-            while (i < i3) {
-                if (c4129.get(i4) > i2 + i) {
-                    iM38698 = iMo3096;
-                } else {
-                    iM38698 = c20671Arr[i4].m38698() - iM38699;
-                    i4++;
-                }
-                c2718.m8289(iM38698);
-                i++;
-            }
+    /* JADX WARN: Type inference failed for: r0v11, types: [l.ܽ֡֫, l.᩹ۤܳ] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m45517() {
+        int iMin;
+        byte[] bArr;
+        this.f63598.setText("");
+        this.f63588.m27544(0);
+        this.f63591.m27544(0);
+        this.f63593.m27544(0);
+        this.f63601.m27544(0);
+        this.f63594.m27544(0);
+        this.f63596.m27544(0);
+        this.f63589.m27544(0);
+        this.f63590.m27544(0);
+        this.f63592.m27544(0);
+        this.f63587.m27544(0);
+        C12628 c12628Mo44761 = this.f63595.mo44761();
+        if (c12628Mo44761.m31371()) {
             return;
         }
-        c2718.m8297(512);
-        c2718.m8297(length);
-        for (int i5 = 0; i5 < length; i5++) {
-            c2718.m8289(c4129.get(i5));
-        }
-        while (i < length) {
-            c2718.m8289(c20671Arr[i].m38698() - iM38699);
-            i++;
+        C19143 c19143M17213 = c12628Mo44761.f40509.m17213();
+        try {
+            synchronized (c19143M17213) {
+                try {
+                    int length = c19143M17213.length();
+                    int iMax = Math.max(0, Math.min(c12628Mo44761.f40509.m17202(), length));
+                    long jMin = length;
+                    if (c12628Mo44761.f40509.m17206()) {
+                        jMin = Math.min(jMin, ((long) c12628Mo44761.f40509.m17208()) + 1);
+                    }
+                    iMin = (int) Math.min(8L, Math.max(0L, jMin - ((long) iMax)));
+                    bArr = new byte[iMin];
+                    c19143M17213.m44363(iMax, bArr, 0, iMin);
+                } catch (Throwable th) {
+                    throw th;
+                }
+            }
+            if (iMin > 0) {
+                StringBuilder sb = new StringBuilder(iMin * 3);
+                for (int i = 0; i < iMin; i++) {
+                    sb.append(String.format("%02X ", Integer.valueOf(bArr[i] & 255)));
+                }
+                sb.deleteCharAt(sb.length() - 1);
+                this.f63598.setText(sb.toString());
+            }
+            if (this.f63588.m27544(iMin)) {
+                this.f63588.m27543(String.valueOf((int) ((byte) this.f63588.m27542(bArr))));
+            }
+            if (this.f63591.m27544(iMin)) {
+                this.f63591.m27543(String.valueOf(this.f63591.m27542(bArr)));
+            }
+            if (this.f63593.m27544(iMin)) {
+                this.f63593.m27543(String.valueOf((int) ((short) this.f63593.m27542(bArr))));
+            }
+            if (this.f63601.m27544(iMin)) {
+                this.f63601.m27543(String.valueOf(this.f63601.m27542(bArr)));
+            }
+            if (this.f63594.m27544(iMin)) {
+                this.f63594.m27543(String.valueOf((int) this.f63594.m27542(bArr)));
+            }
+            if (this.f63596.m27544(iMin)) {
+                this.f63596.m27543(String.valueOf(this.f63596.m27542(bArr)));
+            }
+            if (this.f63589.m27544(iMin)) {
+                this.f63589.m27543(String.valueOf(this.f63589.m27542(bArr)));
+            }
+            if (this.f63590.m27544(iMin)) {
+                ViewOnLongClickListenerC10807 viewOnLongClickListenerC10807 = this.f63590;
+                int i2 = viewOnLongClickListenerC10807.f34294;
+                byte[] bArr2 = new byte[i2];
+                if (viewOnLongClickListenerC10807.f34292.f63599.isChecked()) {
+                    System.arraycopy(bArr, 0, bArr2, 0, i2);
+                } else {
+                    for (int i3 = 1; i3 <= i2; i3++) {
+                        bArr2[i3 - 1] = bArr[i2 - i3];
+                    }
+                }
+                viewOnLongClickListenerC10807.m27543(new BigInteger(1, bArr2).toString());
+            }
+            if (this.f63592.m27544(iMin)) {
+                this.f63592.m27543(Float.toString(Float.intBitsToFloat((int) this.f63592.m27542(bArr))));
+            }
+            if (this.f63587.m27544(iMin)) {
+                this.f63587.m27543(Double.toString(Double.longBitsToDouble(this.f63587.m27542(bArr))));
+            }
+        } catch (IOException e) {
+            c12628Mo44761.m31361(e);
         }
     }
 
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC16438 mo8569(C0727 c0727) {
-        return new C19758(m38701(), this.f63494, this.f63493, this.f63492);
-    }
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean m44951() {
-        return this.f63495;
-    }
-
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo8568() {
-        StringBuilder sb = new StringBuilder(100);
-        C20671[] c20671Arr = this.f63492;
-        int length = c20671Arr.length;
-        for (int i = 0; i < length; i++) {
-            sb.append("\n    ");
-            sb.append(this.f63493.get(i));
-            sb.append(": ");
-            sb.append(c20671Arr[i]);
-        }
-        return sb.toString();
-    }
-
-    @Override // l.AbstractC16438
-    /* JADX INFO: renamed from: ܶ */
-    public final String mo15537() {
-        int iM38698 = this.f63494.m38698();
-        StringBuilder sb = new StringBuilder(100);
-        C20671[] c20671Arr = this.f63492;
-        int length = c20671Arr.length;
-        sb.append(this.f63495 ? "packed" : "sparse");
-        sb.append("-switch-payload // for switch @ ");
-        sb.append(C22475.m49982(iM38698));
-        for (int i = 0; i < length; i++) {
-            int iM38699 = c20671Arr[i].m38698();
-            sb.append("\n  ");
-            sb.append(this.f63493.get(i));
-            sb.append(": ");
-            sb.append(C22475.m49978(iM38699));
-            sb.append(" // ");
-            sb.append(C22475.m49979(iM38699 - iM38698));
-        }
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m44950(C4129 c4129) {
-        long j = (((((long) c4129.get(c4129.size() - 1)) - ((long) c4129.get(0))) + 1) * 2) + 4;
-        if (j <= 2147483647L) {
-            return j;
-        }
-        return -1L;
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        m45517();
     }
 }

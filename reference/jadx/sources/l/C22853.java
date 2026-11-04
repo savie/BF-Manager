@@ -1,145 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺۟᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: O7S5 */
+/* JADX INFO: renamed from: l.᩸ܰܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 556V */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22853 {
+public final class C22853 extends AbstractC10172 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int[] f74344 = new int[258];
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final C10722 f74235;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean[] f74345;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public byte[] f74236;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f74346;
+    public C22853(C10722 c10722) {
+        super(1, -1);
+        this.f74235 = c10722;
+        this.f74236 = null;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final char[] f74347;
+    @Override // l.AbstractC23599
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC3461 mo1454() {
+        return EnumC3461.TYPE_ENCODED_ARRAY_ITEM;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f74348;
+    public final int hashCode() {
+        return this.f74235.hashCode();
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] f74349;
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo15563(AbstractC10172 abstractC10172) {
+        return this.f74235.compareTo(((C22853) abstractC10172).f74235);
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f74350;
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ۧ */
+    public final String mo1456() {
+        return this.f74235.mo1843();
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50595() {
-        char[] cArr;
-        int[] iArr;
-        int i;
-        int i2;
-        byte[] bArr = new byte[256];
-        C17913 c17913 = new C17913();
-        char c = 0;
-        int i3 = 0;
-        for (int i4 = 0; i4 < 256; i4++) {
-            if (this.f74345[i4]) {
-                bArr[i4] = (byte) i3;
-                i3++;
-            }
+    @Override // l.AbstractC23599
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1455(C10918 c10918) {
+        C2168.m7458(c10918, this.f74235);
+    }
+
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1458(C19123 c19123, int i) {
+        C15000 c15000 = new C15000();
+        new C2168(c19123.m23369(), c15000).m7462(this.f74235, false);
+        byte[] bArrM36121 = c15000.m36121();
+        this.f74236 = bArrM36121;
+        m26283(bArrM36121.length);
+    }
+
+    @Override // l.AbstractC10172
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1457(C10918 c10918, C15000 c15000) {
+        if (c15000.m36116()) {
+            c15000.m36111(0, m26281() + " encoded array");
+            new C2168(c10918, c15000).m7462(this.f74235, true);
+            return;
         }
-        int i5 = i3 + 1;
-        int i6 = 0;
-        int i7 = 0;
-        int i8 = 0;
-        int i9 = 0;
-        int i10 = 0;
-        while (true) {
-            int i11 = this.f74348;
-            cArr = this.f74347;
-            iArr = this.f74344;
-            if (i6 >= i11) {
-                break;
-            }
-            int iM41599 = c17913.m41599(bArr[this.f74349[i6] & 255]);
-            if (iM41599 == 0) {
-                i7++;
-            } else {
-                if (i7 > 0) {
-                    int i12 = i7 - 1;
-                    while (true) {
-                        if ((i12 & 1) == 0) {
-                            i2 = i8 + 1;
-                            cArr[i8] = c;
-                            i9++;
-                        } else {
-                            i2 = i8 + 1;
-                            cArr[i8] = 1;
-                            i10++;
-                        }
-                        i8 = i2;
-                        if (i12 <= 1) {
-                            break;
-                        } else {
-                            i12 = (i12 - 2) >>> 1;
-                        }
-                    }
-                    i7 = 0;
-                }
-                int i13 = iM41599 + 1;
-                cArr[i8] = (char) i13;
-                iArr[i13] = iArr[i13] + 1;
-                i8++;
-            }
-            i6++;
-            c = 0;
-        }
-        if (i7 > 0) {
-            int i14 = i7 - 1;
-            while (true) {
-                if ((i14 & 1) == 0) {
-                    i = i8 + 1;
-                    cArr[i8] = 0;
-                    i9++;
-                } else {
-                    i = i8 + 1;
-                    cArr[i8] = 1;
-                    i10++;
-                }
-                i8 = i;
-                if (i14 <= 1) {
-                    break;
-                } else {
-                    i14 = (i14 - 2) >>> 1;
-                }
-            }
-        }
-        cArr[i8] = (char) i5;
-        iArr[i5] = iArr[i5] + 1;
-        iArr[0] = iArr[0] + i9;
-        iArr[1] = iArr[1] + i10;
-        this.f74350 = i8 + 1;
-        this.f74346 = i3 + 2;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final char[] m50597() {
-        return this.f74347;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m50594() {
-        return this.f74350;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m50598() {
-        return this.f74346;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int[] m50596() {
-        return this.f74344;
-    }
-
-    public C22853(int[] iArr, int i, boolean[] zArr) {
-        this.f74349 = iArr;
-        this.f74348 = i;
-        this.f74345 = zArr;
-        this.f74347 = new char[i + 1];
+        c15000.m36115(this.f74236);
     }
 }

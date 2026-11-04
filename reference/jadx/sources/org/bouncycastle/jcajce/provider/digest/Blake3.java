@@ -1,11 +1,11 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C7997;
+import l.C18011;
 import org.bouncycastle.crypto.digests.Blake3Digest;
 import org.bouncycastle.internal.asn1.misc.MiscObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Blake3 {
 
     public class Blake3_256 extends BCMessageDigest implements Cloneable {
@@ -21,14 +21,13 @@ public class Blake3 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = Blake3.class.getName();
 
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {
             configurableProvider.addAlgorithm("MessageDigest.BLAKE3-256", PREFIX + "$Blake3_256");
-            C7997.m21058(new StringBuilder("Alg.Alias.MessageDigest."), MiscObjectIdentifiers.blake3_256, configurableProvider, "BLAKE3-256");
+            C18011.m41992(new StringBuilder("Alg.Alias.MessageDigest."), MiscObjectIdentifiers.blake3_256, configurableProvider, "BLAKE3-256");
         }
     }
 }

@@ -1,120 +1,268 @@
 .class public final Ll/ܽ᩹᩵;
-.super Ll/᩸᩶ۜ;
-.source "0AST"
+.super Ljava/lang/Object;
+.source "G9ZA"
 
 
 # static fields
-.field public static final ܰ:Ll/ܽ᩹᩵;
+.field public static ۤ:Ll/᩻ܽ᩺;
+
+
+# instance fields
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ᩷:Ll/ܽ֫ۗ;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    .line 42
-    new-instance v0, Ll/ܽ᩹᩵;
+    .line 36
+    const-class v0, Ll/ܽ᩹᩵;
 
-    const/4 v1, 0x6
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 14
-    invoke-direct {v0, v1}, Ll/᩸᩶ۜ;-><init>(I)V
+    move-result-object v0
 
-    .line 42
-    sput-object v0, Ll/ܽ᩹᩵;->ܰ:Ll/ܽ᩹᩵;
+    invoke-static {v0}, Ll/ܺܽ᩺;->ۙ(Ljava/lang/String;)Ll/᩻ܽ᩺;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ܽ᩹᩵;->ۤ:Ll/᩻ܽ᩺;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .line 46
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 47
+    iput-object p1, p0, Ll/ܽ᩹᩵;->ۙ:Ljava/lang/String;
+
+    .line 48
+    new-instance p1, Ll/ܽ֫ۗ;
+
+    const/16 v0, 0x32
+
+    invoke-direct {p1, v0}, Ll/ܽ֫ۗ;-><init>(I)V
+
+    iput-object p1, p0, Ll/ܽ᩹᩵;->᩷:Ll/ܽ֫ۗ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)I
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    .line 41
-    check-cast p1, Ll/᩶᩹᩵;
+    const/16 v0, 0x3e8
 
-    .line 50
-    iget-object v0, p1, Ll/᩶᩹᩵;->ۚ:Ll/֫᩹᩵;
+    const-string v1, "Semaphore: "
 
-    iget v0, v0, Ll/֫᩹᩵;->ۚ:I
+    .line 0
+    invoke-static {v0, v1}, Ll/֡᩷᩸;->ۙ(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit16 v0, v0, 0xd9
+    move-result-object v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    .line 87
+    iget-object v1, p0, Ll/ܽ᩹᩵;->ۙ:Ljava/lang/String;
 
-    .line 51
-    iget v1, p1, Ll/᩶᩹᩵;->ۙ:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v0, v1
+    .line 88
+    iget-object v1, p0, Ll/ܽ᩹᩵;->᩷:Ll/ܽ֫ۗ;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v1}, Ll/ܽ֫ۗ;->size()I
 
-    .line 52
-    iget-object p1, p1, Ll/᩶᩹᩵;->ۖ:Ll/ۡ۬᩵;
+    move-result v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    if-nez v2, :cond_0
 
-    move-result p1
+    const-string v1, " no semaphores."
 
-    add-int/2addr p1, v0
+    .line 89
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p1
+    goto :goto_1
+
+    :cond_0
+    const-string v2, " semaphores:\n"
+
+    .line 91
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 92
+    invoke-virtual {v1}, Ll/ܽ֫ۗ;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    const-string v3, "\tThread: "
+
+    .line 93
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 94
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Thread;
+
+    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x20
+
+    .line 95
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 96
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0xa
+
+    .line 97
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    .line 100
+    :cond_1
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final ۙ(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 2
+.method public final ۙ()V
+    .locals 3
 
-    .line 41
-    check-cast p1, Ll/᩶᩹᩵;
+    .line 76
+    iget-object v0, p0, Ll/ܽ᩹᩵;->᩷:Ll/ܽ֫ۗ;
 
-    check-cast p2, Ll/᩶᩹᩵;
+    invoke-virtual {v0}, Ll/ܽ֫ۗ;->values()Ljava/util/Collection;
 
-    if-ne p1, p2, :cond_0
+    move-result-object v0
+
+    .line 77
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/concurrent/Semaphore;
+
+    .line 78
+    invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->release()V
+
+    .line 79
+    invoke-interface {v0, v2}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    if-nez p2, :cond_1
+    return-void
+.end method
 
-    goto :goto_1
+.method public final ۙ(J)V
+    .locals 4
+
+    .line 57
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    .line 58
+    iget-object v1, p0, Ll/ܽ᩹᩵;->᩷:Ll/ܽ֫ۗ;
+
+    invoke-virtual {v1, v0}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/concurrent/Semaphore;
+
+    if-nez v2, :cond_0
 
     .line 60
-    :cond_1
-    iget-object v0, p1, Ll/᩶᩹᩵;->ۚ:Ll/֫᩹᩵;
+    new-instance v2, Ljava/util/concurrent/Semaphore;
 
-    iget v0, v0, Ll/֫᩹᩵;->ۚ:I
+    const/4 v3, 0x1
 
-    iget-object v1, p2, Ll/᩶᩹᩵;->ۚ:Ll/֫᩹᩵;
+    invoke-direct {v2, v3, v3}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V
 
-    iget v1, v1, Ll/֫᩹᩵;->ۚ:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p1, Ll/᩶᩹᩵;->ۙ:I
-
-    iget v1, p2, Ll/᩶᩹᩵;->ۙ:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object p1, p1, Ll/᩶᩹᩵;->ۖ:Ll/ۡ۬᩵;
-
-    iget-object p2, p2, Ll/᩶᩹᩵;->ۖ:Ll/ۡ۬᩵;
+    .line 61
+    invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->drainPermits()I
 
     .line 62
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0, v2}, Ll/ܽ֫ۗ;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    .line 64
+    :cond_0
+    invoke-virtual {v1, v0}, Ll/ܽ֫ۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p1, :cond_2
+    move-result-object v0
 
-    :goto_0
-    const/4 p1, 0x1
+    check-cast v0, Ljava/util/concurrent/Semaphore;
 
-    return p1
+    .line 66
+    :try_start_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    invoke-virtual {v0, p1, p2, v1}, Ljava/util/concurrent/Semaphore;->tryAcquire(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 68
+    sget-object p2, Ll/ܽ᩹᩵;->ۤ:Ll/᩻ܽ᩺;
+
+    const-string v0, "Exception "
+
+    invoke-interface {p2, v0, p1}, Ll/᩻ܽ᩺;->ۤ(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

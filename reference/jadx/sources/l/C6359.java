@@ -1,51 +1,64 @@
 package l;
 
-import java.util.Calendar;
-
-/* JADX INFO: renamed from: l.ۛ᩺֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: WADD */
+/* JADX INFO: renamed from: l.ۛۧܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q5AZ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6359 extends AbstractC5362 {
+public final class C6359 extends AbstractC8639 {
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public C11731 f21424;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final transient Object f21488;
 
-    /* JADX WARN: Illegal instructions before constructor call */
-    public C6359(C11086 c11086, String str) {
-        int i;
-        String strM27956 = c11086.m27956();
-        String strM27959 = c11086.m27959();
-        long jM27953 = c11086.m27953();
-        Calendar calendarM27961 = c11086.m27961();
-        super(strM27956, str, strM27959, jM27953, calendarM27961 == null ? 0L : calendarM27961.getTimeInMillis(), c11086.m27955());
-        int iM27942 = c11086.m27942();
-        if (iM27942 == 0) {
-            i = 32768;
-        } else if (iM27942 != 1) {
-            i = iM27942 != 2 ? 0 : 40960;
-        } else {
-            i = 16384;
-        }
-        i = c11086.m27952(0, 0) ? i | 256 : i;
-        i = c11086.m27952(0, 1) ? i | 128 : i;
-        i = c11086.m27952(0, 2) ? i | 64 : i;
-        i = c11086.m27952(1, 0) ? i | 32 : i;
-        i = c11086.m27952(1, 1) ? i | 16 : i;
-        i = c11086.m27952(1, 2) ? i | 8 : i;
-        i = c11086.m27952(2, 0) ? i | 4 : i;
-        i = c11086.m27952(2, 1) ? i | 2 : i;
-        this.f21424 = new C11731(c11086.m27952(2, 2) ? i | 1 : i, c11086.m27958(), c11086.m27946());
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return 1;
     }
 
-    @Override // l.C15404, l.InterfaceC2557
-    /* JADX INFO: renamed from: ۤܰ */
-    public final C11731 mo7971() {
-        return this.f21424;
+    @Override // l.AbstractC4911
+    /* JADX INFO: renamed from: ܳ */
+    public final boolean mo14905() {
+        return false;
     }
 
-    @Override // l.AbstractC5362
+    public C6359(Object obj) {
+        obj.getClass();
+        this.f21488 = obj;
+    }
+
+    @Override // l.AbstractC4911, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean contains(Object obj) {
+        return this.f21488.equals(obj);
+    }
+
+    @Override // l.AbstractC8639, l.AbstractC4911
+    /* JADX INFO: renamed from: ᩷ */
+    public final AbstractC1928 mo6621() {
+        return AbstractC1928.of(this.f21488);
+    }
+
+    @Override // l.AbstractC4911
     /* JADX INFO: renamed from: ۙ */
-    public final void mo14868(C11731 c11731) {
-        this.f21424 = c11731;
+    public final int mo6619(int i, Object[] objArr) {
+        objArr[i] = this.f21488;
+        return i + 1;
+    }
+
+    @Override // l.AbstractC8639, java.util.Collection, java.util.Set
+    public final int hashCode() {
+        return this.f21488.hashCode();
+    }
+
+    @Override // java.util.AbstractCollection
+    public final String toString() {
+        return "[" + this.f21488.toString() + ']';
+    }
+
+    @Override // l.AbstractC8639, l.AbstractC4911
+    public Object writeReplace() {
+        return super.writeReplace();
+    }
+
+    @Override // l.AbstractC8639, l.AbstractC4911, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
+    public final AbstractC4516 iterator() {
+        return new C0218(this.f21488);
     }
 }

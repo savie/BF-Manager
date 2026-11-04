@@ -1,56 +1,43 @@
 package l;
 
-import android.animation.Animator;
-
-/* JADX INFO: renamed from: l.ᩳۧܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D5XC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18012 implements Animator.AnimatorListener {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8135 f57609;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18718 f57610;
-
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationCancel(Animator animator) {
+/* JADX INFO: renamed from: l.ܿ֫᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C18012 extends EnumC13820 {
+    public /* synthetic */ C18012() {
+        this("ScriptDataDoubleEscapedDashDash", 30);
     }
 
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
+    public C18012(String str, int i) {
+        super(str, i, 0);
     }
 
-    public C18012(C8135 c8135, C18718 c18718) {
-        this.f57609 = c8135;
-        this.f57610 = c18718;
-    }
-
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationStart(Animator animator) {
-        this.f57609.f28483 = 0.0f;
-    }
-
-    @Override // android.animation.Animator.AnimatorListener
-    public final void onAnimationRepeat(Animator animator) {
-        C8135 c8135 = this.f57609;
-        C18718 c18718 = this.f57610;
-        c8135.m21441(1.0f, c18718, true);
-        c18718.f60713 = c18718.f60711;
-        c18718.f60720 = c18718.f60724;
-        c18718.f60712 = c18718.f60718;
-        c18718.m43253((c18718.f60715 + 1) % c18718.f60706.length);
-        if (c8135.f28484) {
-            c8135.f28484 = false;
-            animator.cancel();
-            animator.setDuration(1332L);
-            animator.start();
-            if (c18718.f60719) {
-                c18718.f60719 = false;
-                return;
-            }
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == 0) {
+            c13646.m33394(this);
+            c13646.m33388((char) 65533);
+            c13646.m33401(EnumC13820.f43882);
             return;
         }
-        c8135.f28483 += 1.0f;
+        if (cM12689 == '-') {
+            c13646.m33388(cM12689);
+            return;
+        }
+        if (cM12689 == '<') {
+            c13646.m33388(cM12689);
+            c13646.m33401(EnumC13820.f43852);
+        } else if (cM12689 == '>') {
+            c13646.m33388(cM12689);
+            c13646.m33401(EnumC13820.f43828);
+        } else if (cM12689 == 65535) {
+            c13646.m33399(this);
+            c13646.m33401(EnumC13820.f43874);
+        } else {
+            c13646.m33388(cM12689);
+            c13646.m33401(EnumC13820.f43882);
+        }
     }
 }

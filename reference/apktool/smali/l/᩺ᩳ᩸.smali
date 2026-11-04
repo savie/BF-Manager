@@ -1,88 +1,115 @@
-.class public final synthetic Ll/᩺ᩳ᩸;
+.class public final Ll/᩺ᩳ᩸;
 .super Ljava/lang/Object;
-.source "HAVQ"
+.source "56TX"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
-# static fields
-.field public static final synthetic ۙ:[I
+# instance fields
+.field public final ܰ:I
+
+.field public final ܿ:Ll/᩶۟᩸;
+
+.field public volatile ᩶:Ll/ܰᩳ᩸;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ll/ܰᩳ᩸;ILl/᩶۟᩸;)V
+    .locals 0
 
-    .line 411
-    invoke-static {}, Ll/ۤᩳ᩸;->values()[Ll/ۤᩳ᩸;
+    .line 202
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 203
+    iput-object p1, p0, Ll/᩺ᩳ᩸;->᩶:Ll/ܰᩳ᩸;
 
-    array-length v0, v0
+    .line 204
+    iput p2, p0, Ll/᩺ᩳ᩸;->ܰ:I
 
-    new-array v0, v0, [I
+    .line 205
+    iput-object p3, p0, Ll/᩺ᩳ᩸;->ܿ:Ll/᩶۟᩸;
 
-    sput-object v0, Ll/᩺ᩳ᩸;->ۙ:[I
-
-    :try_start_0
-    sget-object v1, Ll/ۤᩳ᩸;->֡ۙ:Ll/ۤᩳ᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/᩺ᩳ᩸;->ۙ:[I
-
-    sget-object v1, Ll/ۤᩳ᩸;->ᩴۙ:Ll/ۤᩳ᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/᩺ᩳ᩸;->ۙ:[I
-
-    sget-object v1, Ll/ۤᩳ᩸;->ܽۙ:Ll/ۤᩳ᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll/᩺ᩳ᩸;->ۙ:[I
-
-    sget-object v1, Ll/ۤᩳ᩸;->۠ۙ:Ll/ۤᩳ᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
     return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/᩺ᩳ᩸;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Ll/᩺ᩳ᩸;->ܰ:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic ۤ(Ll/᩺ᩳ᩸;)Ll/᩶۟᩸;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩺ᩳ᩸;->ܿ:Ll/᩶۟᩸;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩷(Ll/᩺ᩳ᩸;)Ll/ܰᩳ᩸;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/᩺ᩳ᩸;->᩶:Ll/ܰᩳ᩸;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic ᩸(Ll/᩺ᩳ᩸;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 0
+    iput-object v0, p0, Ll/᩺ᩳ᩸;->᩶:Ll/ܰᩳ᩸;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .locals 1
+
+    .line 222
+    iget-object v0, p0, Ll/᩺ᩳ᩸;->᩶:Ll/ܰᩳ᩸;
+
+    if-eqz v0, :cond_0
+
+    .line 223
+    invoke-virtual {v0}, Ll/ܰᩳ᩸;->᩷()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final ۙ(Ll/ܿ۟᩸;)Ll/᩶۟᩸;
+    .locals 1
+
+    .line 215
+    iget-object v0, p0, Ll/᩺ᩳ᩸;->᩶:Ll/ܰᩳ᩸;
+
+    if-eqz v0, :cond_0
+
+    .line 217
+    invoke-static {v0, p0, p1}, Ll/ܰᩳ᩸;->ۙ(Ll/ܰᩳ᩸;Ll/᩺ᩳ᩸;Ll/ܿ۟᩸;)Ll/᩶۟᩸;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 216
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Text batch is no longer active"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,31 +1,65 @@
 .class public final Ll/᩶ܶۚ;
-.super Ll/֡ܶۚ;
-.source "86ZM"
+.super Ljava/lang/Object;
+.source "G7AI"
 
 
 # instance fields
-.field public final ۖ:I
+.field public final ۙ:Ljava/util/ArrayList;
 
-.field public final ۨ:Ll/ܺۘۚ;
+.field public final ۤ:Ljava/util/LinkedHashSet;
 
-.field public final ܰ:[I
+.field public final ᩷:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(I[ILl/ܺۘۚ;Ll/ۗᩳۨ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 644
-    invoke-direct {p0, p4}, Ll/֡ܶۚ;-><init>(Ll/ۗᩳۨ;)V
+    .line 1953
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 645
-    iput p1, p0, Ll/᩶ܶۚ;->ۖ:I
+    .line 1954
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    .line 646
-    iput-object p2, p0, Ll/᩶ܶۚ;->ܰ:[I
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 647
-    iput-object p3, p0, Ll/᩶ܶۚ;->ۨ:Ll/ܺۘۚ;
+    iput-object v0, p0, Ll/᩶ܶۚ;->ۤ:Ljava/util/LinkedHashSet;
+
+    .line 1955
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object v0, p0, Ll/᩶ܶۚ;->᩷:Ljava/util/LinkedHashSet;
+
+    .line 1956
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll/᩶ܶۚ;->ۙ:Ljava/util/ArrayList;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final ۙ()Ljava/util/ArrayList;
+    .locals 2
+
+    .line 1978
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Ll/᩶ܶۚ;->ۤ:Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 1979
+    new-instance v1, Ll/۬ܽۚ;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v0, v1}, Ll/۫ۚۗ;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    return-object v0
 .end method

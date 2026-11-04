@@ -78,7 +78,7 @@
 
     iget v3, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    sget v4, Ll/ۚ֫;->ۙ:I
+    sget v4, Ll/᩸۠;->ۙ:I
 
     .line 2255
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPaddingRelative(IIII)V

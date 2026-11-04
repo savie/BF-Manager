@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.x500.RDN;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.asn1.x500.X500NameStyle;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AbstractX500NameStyle implements X500NameStyle {
     private int calcHashCode(ASN1Encodable aSN1Encodable) {
         return IETFUtils.canonicalString(aSN1Encodable).hashCode();

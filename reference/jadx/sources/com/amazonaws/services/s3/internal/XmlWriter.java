@@ -2,40 +2,40 @@ package com.amazonaws.services.s3.internal;
 
 import com.amazonaws.util.StringUtils;
 import java.util.ArrayList;
-import l.C0219;
-import l.C17745;
+import l.C18011;
+import l.C22121;
 
 /* JADX INFO: loaded from: classes.dex */
 public class XmlWriter {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ArrayList f515 = new ArrayList();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f505 = new ArrayList();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public StringBuilder f514 = new StringBuilder();
+    public StringBuilder f504 = new StringBuilder();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m489(String str) {
-        C0219.m1594(this.f514, "<", str, ">");
-        this.f515.add(str);
+    public final void m483(String str) {
+        C22121.m50078(this.f504, "<", str, ">");
+        this.f505.add(str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m488() {
-        C0219.m1594(this.f514, "</", (String) C17745.m41308(this.f515, 1), ">");
+    public final void m482() {
+        C22121.m50078(this.f504, "</", (String) C18011.m41990(this.f505, 1), ">");
     }
 
     public final String toString() {
-        return this.f514.toString();
+        return this.f504.toString();
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] m491() {
-        return this.f514.toString().getBytes(StringUtils.f844);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] m485() {
+        return this.f504.toString().getBytes(StringUtils.f834);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m490(String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m484(String str) {
         StringBuilder sb;
         String str2;
         if (str == null) {
@@ -45,7 +45,7 @@ public class XmlWriter {
         int i = 0;
         int i2 = 0;
         while (true) {
-            sb = this.f514;
+            sb = this.f504;
             if (i >= length) {
                 break;
             }

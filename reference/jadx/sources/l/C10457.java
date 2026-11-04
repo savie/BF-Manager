@@ -1,75 +1,96 @@
 package l;
 
-import android.util.SparseArray;
-import java.util.HashMap;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۤᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N1FO */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10457 extends AbstractC23157 {
+/* JADX INFO: renamed from: l.ۢ᩺ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A1NH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10457 implements InterfaceC5984 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public CharSequence f35694;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f33268;
 
-    @Override // l.AbstractC23157
-    /* JADX INFO: renamed from: ᩹ */
-    public final boolean mo21788() {
-        return false;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Iterator f33269;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f33270;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f33271;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f33272;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public C22547 f33273;
+
+    public C10457(InterfaceC21646 interfaceC21646, int i, int i2, int i3, int i4) {
+        this.f33269 = interfaceC21646.mo3129();
+        this.f33271 = i;
+        this.f33268 = i2;
+        this.f33270 = i3;
+        this.f33272 = i4;
+        next();
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m26418() {
-        return this.f35694.toString();
-    }
-
-    @Override // l.AbstractC23157
+    @Override // l.InterfaceC5984
     /* JADX INFO: renamed from: ۙ */
-    public final void mo21782(C11018 c11018, HashMap map) {
-        c11018.m27775(this.f75170);
-        c11018.m27775(this.f75169);
-        c11018.m27775(this.f75168);
-        c11018.m27775(this.f75171);
-        AbstractC23157.m51154(c11018, map, this.f35694.toString());
+    public final boolean mo17407() {
+        return this.f33273 != null;
     }
 
-    @Override // l.AbstractC23157
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo21783(C17367 c17367, SparseArray sparseArray) {
-        this.f75170 = c17367.m40454();
-        this.f75169 = c17367.m40454();
-        this.f75168 = c17367.m40454();
-        this.f75171 = c17367.m40454();
-        String str = (String) sparseArray.get(c17367.m40454());
-        C13638.requireNonNull(str);
-        this.f35694 = str;
-    }
-
-    public final String toString() {
-        return "XmlText{text='" + ((Object) this.f35694) + "', line=" + this.f75170 + ", column=" + this.f75169 + ", startPosition=" + this.f75168 + ", endPosition=" + this.f75171 + '}';
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C10457.class == obj.getClass()) {
-            C10457 c10457 = (C10457) obj;
-            if (this.f75170 != c10457.f75170 || this.f75169 != c10457.f75169) {
-                return false;
+    @Override // l.InterfaceC5984
+    public final void next() {
+        int i;
+        int i2;
+        this.f33273 = null;
+        while (true) {
+            Iterator it = this.f33269;
+            if (!it.hasNext()) {
+                return;
             }
-            CharSequence charSequence = this.f35694;
-            if (charSequence != null) {
-                return c10457.f35694 != null && charSequence.toString().equals(c10457.f35694.toString());
-            }
-            if (c10457.f35694 == null) {
-                return true;
+            C22547 c22547 = (C22547) it.next();
+            int i3 = c22547.f72891;
+            int i4 = c22547.f72894;
+            int i5 = c22547.f72893;
+            int i6 = this.f33271;
+            if (i3 >= i6 && i5 >= (i = this.f33270)) {
+                int i7 = c22547.f72892;
+                int i8 = this.f33268;
+                if (i7 > i8 || i4 > (i2 = this.f33272)) {
+                    return;
+                }
+                C22547 c22548 = new C22547(Math.max(i6, i7) - i6, Math.min(i8, c22547.f72891) - i6, Math.max(i, i4) - i, Math.min(i2, i5) - i);
+                if (!c22548.m50782()) {
+                    this.f33273 = c22548;
+                    return;
+                }
             }
         }
-        return false;
     }
 
-    public final int hashCode() {
-        CharSequence charSequence = this.f35694;
-        return ((((charSequence != null ? charSequence.hashCode() : 0) * 31) + this.f75170) * 31) + this.f75169;
+    @Override // l.InterfaceC5984
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo17411() {
+        return this.f33273.f72892;
+    }
+
+    @Override // l.InterfaceC5984
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo17409() {
+        return this.f33273.f72894;
+    }
+
+    @Override // l.InterfaceC5984
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo17408() {
+        return this.f33273.f72891;
+    }
+
+    @Override // l.InterfaceC5984
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo17410() {
+        return this.f33273.f72893;
     }
 }

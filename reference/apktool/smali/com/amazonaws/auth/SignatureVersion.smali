@@ -6,13 +6,13 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/auth/SignatureVersion;
 
-.field public static final enum ܽ:Lcom/amazonaws/auth/SignatureVersion;
+.field public static final enum ܿ:Lcom/amazonaws/auth/SignatureVersion;
 
 .field public static final synthetic ᩶:[Lcom/amazonaws/auth/SignatureVersion;
 
 
 # instance fields
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Lcom/amazonaws/auth/SignatureVersion;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/amazonaws/auth/SignatureVersion;->֡:Lcom/amazonaws/auth/SignatureVersion;
+    sput-object v0, Lcom/amazonaws/auth/SignatureVersion;->ܿ:Lcom/amazonaws/auth/SignatureVersion;
 
     .line 27
     new-instance v1, Lcom/amazonaws/auth/SignatureVersion;
@@ -43,7 +43,7 @@
 
     invoke-direct {v1, v4, v5, v2}, Lcom/amazonaws/auth/SignatureVersion;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v1, Lcom/amazonaws/auth/SignatureVersion;->ܽ:Lcom/amazonaws/auth/SignatureVersion;
+    sput-object v1, Lcom/amazonaws/auth/SignatureVersion;->֡:Lcom/amazonaws/auth/SignatureVersion;
 
     const/4 v2, 0x2
 
@@ -66,7 +66,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 32
-    iput-object p3, p0, Lcom/amazonaws/auth/SignatureVersion;->ܺ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/auth/SignatureVersion;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     .locals 1
 
     .line 37
-    iget-object v0, p0, Lcom/amazonaws/auth/SignatureVersion;->ܺ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/auth/SignatureVersion;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method

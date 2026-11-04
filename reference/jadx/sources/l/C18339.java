@@ -1,92 +1,61 @@
 package l;
 
+import bin.mt.plus.R;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
 
-/* JADX INFO: renamed from: l.ᩳ᩹۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7QT */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18339 {
+/* JADX INFO: renamed from: l.ܿ۫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5R1 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18339 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20456 f58507;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC22597 f59808;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final LinkedHashMap f58506 = new LinkedHashMap();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final LinkedHashMap f58508 = new LinkedHashMap();
-
-    public C18339(C20456 c20456) {
-        this.f58507 = c20456;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C18339(ActivityC22597 activityC22597, ActivityC22597 activityC22598) {
+        super(activityC22598, -1);
+        this.f59808 = activityC22597;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42590(C11990 c11990) {
-        this.f58506.put(c11990.f40190, c11990);
-        Iterator it = c11990.f40189.iterator();
-        while (it.hasNext()) {
-            this.f58508.put(C20456.m46261((InterfaceC3800) it.next()), c11990);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m42595(C11990 c11990) {
-        LinkedHashMap linkedHashMap = this.f58508;
-        Iterator it = linkedHashMap.entrySet().iterator();
-        while (it.hasNext()) {
-            if (((Map.Entry) it.next()).getValue() == c11990) {
-                it.remove();
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        ActivityC22597.f73045 = m22914();
+        String strTrim = ActivityC22597.f73045.toLowerCase().trim();
+        if (strTrim.length() > 0) {
+            if (strTrim.startsWith("@") || strTrim.startsWith("?")) {
+                strTrim = strTrim.substring(1);
+            } else if (strTrim.startsWith("0x")) {
+                strTrim = strTrim.substring(2);
             }
-        }
-        Iterator it2 = c11990.f40189.iterator();
-        while (it2.hasNext()) {
-            linkedHashMap.put(C20456.m46261((InterfaceC3800) it2.next()), c11990);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11990 m42588(String str) {
-        return (C11990) this.f58506.get(str);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C11990 m42594(InterfaceC3800 interfaceC3800) {
-        while (interfaceC3800 != null) {
-            C11990 c11990 = (C11990) this.f58508.get(interfaceC3800);
-            if (c11990 != null) {
-                return c11990;
+            if (!C11730.m29453(strTrim)) {
+                m22952(R.string.MT_Protector);
+                return;
             }
-            interfaceC3800 = interfaceC3800.getParent();
+            int iM29456 = C11730.m29456(strTrim);
+            int i = (iM29456 >>> 24) & 255;
+            int i2 = (iM29456 >>> 16) & 255;
+            int i3 = iM29456 & 65535;
+            ActivityC22597 activityC22597 = this.f59808;
+            for (InterfaceC10869 interfaceC10869 : activityC22597.f73046.f33797.mo15672()) {
+                if (interfaceC10869.mo27607() == i) {
+                    for (InterfaceC15344 interfaceC15344 : interfaceC10869.mo19822()) {
+                        if (interfaceC15344.mo35833() == i2) {
+                            Iterator it = interfaceC15344.mo33925().iterator();
+                            while (it.hasNext()) {
+                                for (InterfaceC8697 interfaceC8697 : ((InterfaceC2731) it.next()).mo9078()) {
+                                    if (interfaceC8697.mo23383() == i3) {
+                                        activityC22597.f73046.f33799.add((C13304) interfaceC8697);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            activityC22597.setTitle(ActivityC22597.f73045);
+            activityC22597.m50915(EnumC3951.SEARCH_BY_ID);
+            m22951();
         }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42589() {
-        this.f58506.clear();
-        this.f58508.clear();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m42592() {
-        return this.f58506.isEmpty();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m42591(InterfaceC3800 interfaceC3800) {
-        return C20456.m46266(this.f58507, this.f58508.keySet(), interfaceC3800);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Set m42587() {
-        return C0561.unmodifiableSet((Set) C9030.stream(this.f58506.values()).collect(C1890.toSet()));
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Set m42593() {
-        return C0561.unmodifiableSet((Set) C9030.stream(this.f58506.entrySet()).filter(new C15518()).map(new C21867()).collect(C1890.toSet()));
     }
 }

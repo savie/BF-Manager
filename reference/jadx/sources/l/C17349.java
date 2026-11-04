@@ -1,37 +1,57 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ۫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M5U2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17349 extends C13261 {
-    @Override // l.C13261
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC6910 mo32740() {
-        throw null;
-    }
+import java.io.IOException;
+import java.util.Iterator;
 
-    @Override // l.C13261
-    /* JADX INFO: renamed from: ۙ */
-    public final C13261 mo32741(Object obj, Object obj2) {
-        super.mo32741(obj, obj2);
-        return this;
+/* JADX INFO: renamed from: l.ܽۙܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A52J */
+/* JADX INFO: loaded from: classes4.dex */
+public class C17349 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f56460;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C17349 m40726(String str) {
+        return new C17349(str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40378(Integer num, String str) {
-        super.mo32741((Object) num, (Object) str);
+    public static C17349 m40725() {
+        return new C17349(String.valueOf(','));
     }
 
-    public C17349() {
-        super(4);
+    public C17349(String str) {
+        str.getClass();
+        this.f56460 = str;
     }
 
-    @Override // l.C13261
-    /* JADX INFO: renamed from: ܰ */
-    public final AbstractC11000 mo32742() {
-        if (this.f44036 == 0) {
-            return C14155.f46459;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40729(StringBuilder sb, Iterator it) {
+        try {
+            if (it.hasNext()) {
+                sb.append(m40727(it.next()));
+                while (it.hasNext()) {
+                    sb.append((CharSequence) this.f56460);
+                    sb.append(m40727(it.next()));
+                }
+            }
+        } catch (IOException e) {
+            throw new AssertionError(e);
         }
-        return new C14155(this.f44036, this.f44035);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m40728(Iterable iterable) {
+        Iterator it = iterable.iterator();
+        StringBuilder sb = new StringBuilder();
+        m40729(sb, it);
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public CharSequence m40727(Object obj) {
+        C17359.requireNonNull(obj);
+        return obj instanceof CharSequence ? (CharSequence) obj : obj.toString();
     }
 }

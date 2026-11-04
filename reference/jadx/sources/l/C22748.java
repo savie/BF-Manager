@@ -1,149 +1,151 @@
 package l;
 
-import java.util.Map;
-import java.util.Spliterator;
-import java.util.function.Consumer;
+import java.util.Arrays;
+import java.util.Random;
 
-/* JADX INFO: renamed from: l.᩺ۘᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: WKX */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22748 extends AbstractC5543 implements InterfaceC1849, InterfaceC22810 {
+/* JADX INFO: renamed from: l.᩸ۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: G8TA */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22748 implements InterfaceC19764 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7931 f74090;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f73816;
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int[] f73817;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Random f73818;
+
+    public C22748() {
+        this(new Random());
     }
 
-    public C22748(C7931 c7931) {
-        this.f74090 = c7931;
+    public C22748(Random random) {
+        this(new int[0], random);
     }
 
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC6269 iterator() {
-        return new C2285(this.f74090);
+    public C22748(int[] iArr, Random random) {
+        this.f73817 = iArr;
+        this.f73818 = random;
+        this.f73816 = new int[iArr.length];
+        for (int i = 0; i < iArr.length; i++) {
+            this.f73816[iArr[i]] = i;
+        }
     }
 
-    @Override // l.InterfaceC1849
+    @Override // l.InterfaceC19764
+    public final int getLength() {
+        return this.f73817.length;
+    }
+
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo45524(int i) {
+        int i2 = this.f73816[i] + 1;
+        int[] iArr = this.f73817;
+        if (i2 < iArr.length) {
+            return iArr[i2];
+        }
+        return -1;
+    }
+
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo45525(int i) {
+        int i2 = this.f73816[i] - 1;
+        if (i2 >= 0) {
+            return this.f73817[i2];
+        }
+        return -1;
+    }
+
+    @Override // l.InterfaceC19764
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC6269 mo6012() {
-        return new C22042(this.f74090);
+    public final int mo45521() {
+        int[] iArr = this.f73817;
+        if (iArr.length > 0) {
+            return iArr[iArr.length - 1];
+        }
+        return -1;
     }
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC7371 spliterator() {
-        return new C5108(this.f74090);
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo45523() {
+        int[] iArr = this.f73817;
+        if (iArr.length > 0) {
+            return iArr[0];
+        }
+        return -1;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        int i;
-        if (!(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getKey() == null || !(entry.getKey() instanceof Integer)) {
-            return false;
-        }
-        int iIntValue = ((Integer) entry.getKey()).intValue();
-        Object value = entry.getValue();
-        C7931 c7931 = this.f74090;
-        if (iIntValue == 0) {
-            return c7931.f26053 && C13638.equals(c7931.f26047[c7931.f26057], value);
-        }
-        int[] iArr = c7931.f26054;
-        int iM25125 = C9927.m25125(iIntValue) & c7931.f26055;
-        int i2 = iArr[iM25125];
-        if (i2 == 0) {
-            return false;
-        }
-        if (iIntValue == i2) {
-            return C13638.equals(c7931.f26047[iM25125], value);
-        }
-        do {
-            iM25125 = (iM25125 + 1) & c7931.f26055;
-            i = iArr[iM25125];
-            if (i == 0) {
-                return false;
-            }
-        } while (iIntValue != i);
-        return C13638.equals(c7931.f26047[iM25125], value);
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean remove(Object obj) {
-        if (!(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getKey() == null || !(entry.getKey() instanceof Integer)) {
-            return false;
-        }
-        int iIntValue = ((Integer) entry.getKey()).intValue();
-        Object value = entry.getValue();
-        C7931 c7931 = this.f74090;
-        if (iIntValue == 0) {
-            if (!c7931.f26053 || !C13638.equals(c7931.f26047[c7931.f26057], value)) {
-                return false;
-            }
-            c7931.m20938();
-            return true;
-        }
-        int[] iArr = c7931.f26054;
-        int iM25125 = C9927.m25125(iIntValue) & c7931.f26055;
-        int i = iArr[iM25125];
-        if (i == 0) {
-            return false;
-        }
-        if (i == iIntValue) {
-            if (!C13638.equals(c7931.f26047[iM25125], value)) {
-                return false;
-            }
-            c7931.m20943(iM25125);
-            return true;
-        }
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ᩸ */
+    public final C22748 mo45527(int i) {
+        int[] iArr;
+        Random random;
+        int[] iArr2 = new int[i];
+        int[] iArr3 = new int[i];
+        int i2 = 0;
         while (true) {
-            iM25125 = (iM25125 + 1) & c7931.f26055;
-            int i2 = iArr[iM25125];
-            if (i2 == 0) {
-                return false;
+            iArr = this.f73817;
+            random = this.f73818;
+            if (i2 >= i) {
+                break;
             }
-            if (i2 == iIntValue && C13638.equals(c7931.f26047[iM25125], value)) {
-                c7931.m20943(iM25125);
-                return true;
+            iArr2[i2] = random.nextInt(iArr.length + 1);
+            int i3 = i2 + 1;
+            int iNextInt = random.nextInt(i3);
+            iArr3[i2] = iArr3[iNextInt];
+            iArr3[iNextInt] = i2;
+            i2 = i3;
+        }
+        Arrays.sort(iArr2);
+        int[] iArr4 = new int[iArr.length + i];
+        int i4 = 0;
+        int i5 = 0;
+        for (int i6 = 0; i6 < iArr.length + i; i6++) {
+            if (i4 < i && i5 == iArr2[i4]) {
+                iArr4[i6] = iArr3[i4];
+                i4++;
+            } else {
+                int i7 = i5 + 1;
+                int i8 = iArr[i5];
+                iArr4[i6] = i8;
+                if (i8 >= 0) {
+                    iArr4[i6] = i8 + i;
+                }
+                i5 = i7;
             }
         }
+        return new C22748(iArr4, new Random(random.nextLong()));
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f74090.f26052;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final void clear() {
-        this.f74090.clear();
-    }
-
-    @Override // l.AbstractC14695, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        C7931 c7931 = this.f74090;
-        if (c7931.f26053) {
-            consumer.n(new C6519(c7931, c7931.f26057));
-        }
-        int[] iArr = c7931.f26054;
-        int i = c7931.f26057;
-        while (true) {
-            int i2 = i - 1;
-            if (i == 0) {
-                return;
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ۙ */
+    public final C22748 mo45522(int i) {
+        int[] iArr = this.f73817;
+        int[] iArr2 = new int[iArr.length - i];
+        int i2 = 0;
+        for (int i3 = 0; i3 < iArr.length; i3++) {
+            int i4 = iArr[i3];
+            if (i4 < 0 || i4 >= i) {
+                int i5 = i3 - i2;
+                if (i4 >= 0) {
+                    i4 -= i;
+                }
+                iArr2[i5] = i4;
+            } else {
+                i2++;
             }
-            if (iArr[i2] != 0) {
-                consumer.n(new C6519(c7931, i2));
-            }
-            i = i2;
         }
+        return new C22748(iArr2, new Random(this.f73818.nextLong()));
+    }
+
+    @Override // l.InterfaceC19764
+    /* JADX INFO: renamed from: ᩷ */
+    public final C22748 mo45526() {
+        return new C22748(new Random(this.f73818.nextLong()));
     }
 }

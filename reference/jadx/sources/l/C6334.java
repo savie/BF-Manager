@@ -1,179 +1,145 @@
 package l;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Map;
+import android.content.Context;
+import bin.mt.plus.R;
+import java.io.File;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۛ᩸᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 69R1 */
+/* JADX INFO: renamed from: l.ۛۤܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V717 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6334 extends AbstractC23019 {
+public final class C6334 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C19741[] f21379;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24234 f21443;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3679 f21444;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C6708 f21380;
+    public final /* synthetic */ C12628 f21445;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C8347 f21381;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Context f21446;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C2806 f21382;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f21383 = -1;
-
-    public C6334(C2806 c2806, C8347 c8347, C19741[] c19741Arr, C6708 c6708) {
-        this.f21382 = c2806;
-        this.f21381 = c8347;
-        this.f21379 = c19741Arr;
-        this.f21380 = c6708;
+    public C6334(C24234 c24234, C12628 c12628, Context context, C3679 c3679) {
+        this.f21443 = c24234;
+        this.f21445 = c12628;
+        this.f21446 = context;
+        this.f21444 = c3679;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6334 m17438(C2806 c2806) {
-        return new C6334(c2806, C8347.m21825(), new C19741[c2806.mo8524().m1366()], C6708.m18141());
-    }
-
-    @Override // l.InterfaceC18266
-    public final C2806 getDescriptorForType() {
-        return this.f21382;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return m17438(this.f21382);
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return m17438(this.f21382);
-    }
-
-    @Override // l.InterfaceC18266
-    public final Map getAllFields() {
-        return this.f21381.m21848();
-    }
-
-    @Override // l.InterfaceC18266
-    public final C6708 getUnknownFields() {
-        return this.f21380;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        Iterator it = this.f21382.getFields().iterator();
-        while (true) {
-            boolean zHasNext = it.hasNext();
-            C8347 c8347 = this.f21381;
-            if (zHasNext) {
-                C19741 c19741 = (C19741) it.next();
-                if (c19741.m44914() && !c8347.m21844(c19741)) {
-                    return false;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        this.f21443.f78481 = this.f21445.f40509.m17212();
+        Context context = this.f21446;
+        if (context instanceof AbstractActivityC17204) {
+            final C3679 c3679 = this.f21444;
+            m8193((AbstractActivityC17204) context, R.string.MT_Protector, 200, new Runnable() { // from class: l.ۗۤܳ
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f10938.f7780.m33188(new Runnable() { // from class: l.ۨۤܳ
+                        @Override // java.lang.Runnable
+                        public final void run() {
+                            c3679.m11970();
+                        }
+                    });
                 }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public boolean m18060() {
+        if (this.f21444.m11971()) {
+            return true;
+        }
+        C13511 c13511 = this.f7780;
+        return (c13511 != null && c13511.m33196()) || !C4096.m13187(this.f21445);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r4v0, types: [l.᩵ۤܳ] */
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        C24234 c24234 = this.f21443;
+        if (c24234.f78481 != null) {
+            C5917 c5917 = this.f21445.f40509;
+            C20087 c20087 = c24234.f78481;
+            File cacheDir = this.f21446.getCacheDir();
+            ?? r4 = new InterfaceC7509() { // from class: l.᩵ۤܳ
+                @Override // l.InterfaceC7509
+                /* JADX INFO: renamed from: ۫ */
+                public final boolean mo924() {
+                    return this.f65694.m18060();
+                }
+            };
+            c5917.getClass();
+            if (c20087.f64563 != c5917) {
+                throw new IllegalArgumentException("Copy request belongs to another HexData");
+            }
+            c20087.m46220();
+            try {
+                C7210 c7210M21660 = c20087.f64559.m21660(c20087.f64556, c20087.length(), cacheDir, r4);
+                c20087.m46221();
+                c24234.f78482 = c7210M21660;
+            } catch (Throwable th) {
+                c20087.m46221();
+                throw th;
+            }
+        }
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (m18060()) {
+            return;
+        }
+        C24234 c24234 = this.f21443;
+        if (c24234.f78482 == null || !this.f21445.f40509.m17201(c24234.f78481, c24234.f78482)) {
+            return;
+        }
+        c24234.f78482 = null;
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        C12628 c12628 = this.f21445;
+        C5917 c5917 = c12628.f40509;
+        if ((exc instanceof C9446) || m18060()) {
+            return;
+        }
+        boolean z = exc instanceof C13308;
+        C24234 c24234 = this.f21443;
+        if (z) {
+            if (C4096.m13187(c12628)) {
+                if (c24234.f78481 == null || c5917.m17200(c24234.f78481)) {
+                    C22673.m51152(R.string.MT_Protector);
+                    return;
+                }
+                return;
+            }
+            return;
+        }
+        if ((c24234.f78481 == null || c5917.m17200(c24234.f78481)) && C4096.m13187(c12628)) {
+            if (exc instanceof IOException) {
+                c12628.m31361((IOException) exc);
             } else {
-                return c8347.m21835();
+                c12628.m31361(new IOException("Unable to copy hex range", exc));
             }
         }
     }
 
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        boolean zM29472 = this.f21382.m8525().m29472();
-        C6708 c6708 = this.f21380;
-        C8347 c8347 = this.f21381;
-        if (zM29472) {
-            c8347.m21843(abstractC22044);
-            c6708.m18144(abstractC22044);
-        } else {
-            c8347.m21849(abstractC22044);
-            c6708.writeTo(abstractC22044);
-        }
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int iM21836;
-        int serializedSize;
-        int i = this.f21383;
-        if (i != -1) {
-            return i;
-        }
-        boolean zM29472 = this.f21382.m8525().m29472();
-        C6708 c6708 = this.f21380;
-        C8347 c8347 = this.f21381;
-        if (zM29472) {
-            iM21836 = c8347.m21846();
-            serializedSize = c6708.m18146();
-        } else {
-            iM21836 = c8347.m21836();
-            serializedSize = c6708.getSerializedSize();
-        }
-        int i2 = serializedSize + iM21836;
-        this.f21383 = i2;
-        return i2;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C17623 newBuilderForType() {
-        return new C17623(this.f21382, 0);
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 toBuilder() {
-        return newBuilderForType().mergeFrom((InterfaceC1332) this);
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 toBuilder() {
-        return newBuilderForType().mergeFrom((InterfaceC1332) this);
-    }
-
-    @Override // l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return new C16918(this);
-    }
-
-    @Override // l.InterfaceC18266
-    public final Object getField(C19741 c19741) {
-        if (c19741.m44910() == this.f21382) {
-            Object objM21838 = this.f21381.m21838((InterfaceC18930) c19741);
-            if (objM21838 != null) {
-                return objM21838;
-            }
-            if (c19741.mo23408()) {
-                return Collections.EMPTY_LIST;
-            }
-            if (c19741.m44913() == EnumC19035.MESSAGE) {
-                return m17438(c19741.m44907());
-            }
-            return c19741.m44911();
-        }
-        throw new IllegalArgumentException("FieldDescriptor does not match message type.");
-    }
-
-    @Override // l.InterfaceC18266
-    public final boolean hasField(C19741 c19741) {
-        if (c19741.m44910() == this.f21382) {
-            return this.f21381.m21844(c19741);
-        }
-        throw new IllegalArgumentException("FieldDescriptor does not match message type.");
-    }
-
-    @Override // l.AbstractC23019
-    public final C19741 getOneofFieldDescriptor(C21151 c21151) {
-        if (c21151.m47593() == this.f21382) {
-            return this.f21379[c21151.m47595()];
-        }
-        throw new IllegalArgumentException("OneofDescriptor does not match message type.");
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean hasOneof(C21151 c21151) {
-        if (c21151.m47593() == this.f21382) {
-            return this.f21379[c21151.m47595()] != null;
-        }
-        throw new IllegalArgumentException("OneofDescriptor does not match message type.");
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        this.f21443.m54216();
+        m8196();
+        this.f21444.close();
     }
 }

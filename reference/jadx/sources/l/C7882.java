@@ -1,79 +1,71 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.LongBinaryOperator;
-import java.util.function.LongConsumer;
+import java.util.Arrays;
+import org.bouncycastle.util.encoders.Base32Encoder;
 
-/* JADX INFO: renamed from: l.۠ۖ۠, reason: contains not printable characters */
+/* JADX INFO: renamed from: l.۟۫ۗ, reason: contains not printable characters */
 /* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C7882 implements InterfaceC2319, InterfaceC21993 {
-    public long a;
-    public final /* synthetic */ long b;
-    public final /* synthetic */ LongBinaryOperator c;
+/* JADX INFO: loaded from: classes3.dex */
+public class C7882 {
+    public static final char[] a = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'};
+    public static final C7882 b = new C7882();
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(double d) {
-        AbstractC22686.m();
-        throw null;
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(int i) {
-        AbstractC22686.t();
-        throw null;
-    }
-
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        l((Long) obj);
-    }
-
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
-
-    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
-        return C21917.$default$andThen(this, longConsumer);
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void end() {
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC21993
-    public final /* synthetic */ void l(Long l2) {
-        AbstractC22686.r(this, l2);
-    }
-
-    public C7882(long j, LongBinaryOperator longBinaryOperator) {
-        this.b = j;
-        this.c = longBinaryOperator;
-    }
-
-    @Override // l.InterfaceC2319
-    public final void i(InterfaceC2319 interfaceC2319) {
-        accept(((C7882) interfaceC2319).a);
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        this.a = this.b;
-    }
-
-    @Override // l.InterfaceC19171
-    public final void accept(long j) {
-        this.a = this.c.applyAsLong(this.a, j);
-    }
-
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        return Long.valueOf(this.a);
+    public String encodeToString(byte[] bArr) {
+        int length = ((bArr.length + 2) / 3) * 4;
+        byte[] bArrCopyOf = new byte[length];
+        int length2 = bArr.length;
+        int i = (length2 / 3) * 3;
+        int i2 = 0;
+        int i3 = 0;
+        while (true) {
+            char[] cArr = a;
+            if (i2 >= i) {
+                if (i2 < length2) {
+                    int i4 = i2 + 1;
+                    int i5 = bArr[i2] & 255;
+                    int i6 = i3 + 1;
+                    bArrCopyOf[i3] = (byte) cArr[i5 >> 2];
+                    if (i4 == length2) {
+                        bArrCopyOf[i6] = (byte) cArr[(i5 << 4) & 63];
+                        int i7 = i3 + 3;
+                        bArrCopyOf[i3 + 2] = Base32Encoder.DEFAULT_PADDING;
+                        i3 += 4;
+                        bArrCopyOf[i7] = Base32Encoder.DEFAULT_PADDING;
+                    } else {
+                        int i8 = bArr[i4] & 255;
+                        bArrCopyOf[i6] = (byte) cArr[((i5 << 4) & 63) | (i8 >> 4)];
+                        int i9 = i3 + 3;
+                        bArrCopyOf[i3 + 2] = (byte) cArr[(i8 << 2) & 63];
+                        i3 += 4;
+                        bArrCopyOf[i9] = Base32Encoder.DEFAULT_PADDING;
+                    }
+                }
+                if (i3 != length) {
+                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, i3);
+                }
+                return new String(bArrCopyOf, 0, 0, bArrCopyOf.length);
+            }
+            int iMin = Math.min(i2 + i, i);
+            int i10 = i2;
+            int i11 = i3;
+            while (i10 < iMin) {
+                int i12 = i10 + 2;
+                int i13 = ((bArr[i10 + 1] & 255) << 8) | ((bArr[i10] & 255) << 16);
+                i10 += 3;
+                int i14 = i13 | (bArr[i12] & 255);
+                bArrCopyOf[i11] = (byte) cArr[(i14 >>> 18) & 63];
+                bArrCopyOf[i11 + 1] = (byte) cArr[(i14 >>> 12) & 63];
+                int i15 = i11 + 3;
+                bArrCopyOf[i11 + 2] = (byte) cArr[(i14 >>> 6) & 63];
+                i11 += 4;
+                bArrCopyOf[i15] = (byte) cArr[i14 & 63];
+            }
+            int i16 = ((iMin - i2) / 3) * 4;
+            i3 += i16;
+            if (i16 == -1 && iMin < length2) {
+                throw null;
+            }
+            i2 = iMin;
+        }
     }
 }

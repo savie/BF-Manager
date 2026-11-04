@@ -34,13 +34,13 @@
     .line 496
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$11;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    invoke-static {v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Ll/ܿܿܰ;
+    invoke-static {v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Ll/᩻ᩳ᩷;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$11;->val$position:I
 
-    invoke-virtual {v0, v1}, Ll/ܿܿܰ;->smoothScrollToPosition(I)V
+    invoke-virtual {v0, v1}, Ll/᩻ᩳ᩷;->smoothScrollToPosition(I)V
 
     return-void
 .end method

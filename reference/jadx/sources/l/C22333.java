@@ -1,148 +1,109 @@
 package l;
 
-import com.alipay.sdk.m.n.c;
-import java.io.IOException;
-import java.net.ProtocolException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
+import android.os.Build;
+import com.alipay.sdk.m.w.a;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.᩹ܰ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: U4FJ */
+/* JADX INFO: renamed from: l.᩷᩷᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51RR */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22333 implements InterfaceC7953 {
+public final class C22333 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C11045 f72915;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C22333 f72305;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7247 f72916;
+    public C24988 f72306;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C15009 f72917;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public InterfaceC9149 f72307;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final EnumC22013 f72918;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C20217 f72919;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final List f72914 = C0140.m1228("connection", c.f, "keep-alive", "proxy-connection", "te", "transfer-encoding", "encoding", "upgrade", ":method", ":path", ":scheme", ":authority");
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final List f72913 = C0140.m1228("connection", c.f, "keep-alive", "proxy-connection", "te", "transfer-encoding", "encoding", "upgrade");
-
-    public C22333(C5079 c5079, C7247 c7247, C15009 c15009, C20217 c20217) {
-        this.f72916 = c7247;
-        this.f72917 = c15009;
-        this.f72919 = c20217;
-        List listM14168 = c5079.m14168();
-        EnumC22013 enumC22013 = EnumC22013.H2_PRIOR_KNOWLEDGE;
-        this.f72918 = listM14168.contains(enumC22013) ? enumC22013 : EnumC22013.HTTP_2;
+    public C22333() {
+        String str = "AndroidSDK_" + Build.VERSION.SDK + "_" + C13053.m32513().m32514() + "_" + Build.VERSION.RELEASE;
+        try {
+            this.f72307 = new C5179(str);
+        } catch (NoClassDefFoundError unused) {
+            C21587.m49113("openSDK_LOG.OpenHttpService", "initClient okHttp fail NoClassDefFoundError");
+        } catch (Throwable th) {
+            C21587.m49112("openSDK_LOG.OpenHttpService", "initClient okHttp catch throwable", th);
+        }
+        if (this.f72307 == null) {
+            this.f72307 = new C2438(str);
+        }
     }
 
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC8597 mo20987(C22719 c22719, long j) {
-        return this.f72915.m27859();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C22333 m50398() {
+        if (f72305 == null) {
+            synchronized (C22333.class) {
+                if (f72305 == null) {
+                    f72305 = new C22333();
+                }
+            }
+        }
+        f72305.m50399();
+        return f72305;
     }
 
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo20991(C22719 c22719) {
-        if (this.f72915 != null) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m50402(C24988 c24988) {
+        this.f72306 = c24988;
+        m50399();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private void m50399() {
+        C24988 c24988 = this.f72306;
+        if (c24988 == null) {
             return;
         }
-        boolean z = c22719.m50358() != null;
-        C10912 c10912M50360 = c22719.m50360();
-        ArrayList arrayList = new ArrayList(c10912M50360.m27347() + 4);
-        arrayList.add(new C3013(C3013.f11261, c22719.m50359()));
-        C14511 c14511 = C3013.f11265;
-        C14440 c14440M50355 = c22719.m50355();
-        String strM34743 = c14440M50355.m34743();
-        String strM34735 = c14440M50355.m34735();
-        if (strM34735 != null) {
-            strM34743 = strM34743 + '?' + strM34735;
+        int iM55837 = c24988.m55837("Common_HttpConnectionTimeout");
+        if (iM55837 == 0) {
+            iM55837 = 15000;
         }
-        arrayList.add(new C3013(c14511, strM34743));
-        String strM50357 = c22719.m50357("Host");
-        if (strM50357 != null) {
-            arrayList.add(new C3013(C3013.f11266, strM50357));
+        int iM55838 = this.f72306.m55837("Common_SocketConnectionTimeout");
+        if (iM55838 == 0) {
+            iM55838 = 30000;
         }
-        arrayList.add(new C3013(C3013.f11263, c22719.m50355().m34747()));
-        int iM27347 = c10912M50360.m27347();
-        for (int i = 0; i < iM27347; i++) {
-            C14511 c14511M34934 = C14511.m34934(c10912M50360.m27344(i).toLowerCase(Locale.US));
-            if (!f72914.contains(c14511M34934.mo34948())) {
-                arrayList.add(new C3013(c14511M34934, c10912M50360.m27348(i)));
+        long j = iM55837;
+        long j2 = iM55838;
+        InterfaceC9149 interfaceC9149 = this.f72307;
+        if (interfaceC9149 != null) {
+            interfaceC9149.a(j, j2);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11144 m50401(HashMap map, String str) {
+        if (!map.isEmpty()) {
+            StringBuilder sb = new StringBuilder("");
+            for (String str2 : map.keySet()) {
+                String str3 = (String) map.get(str2);
+                if (str3 != null) {
+                    sb.append(C22837.encode(str2, a.D));
+                    sb.append("=");
+                    sb.append(C22837.encode(str3, a.D));
+                    sb.append(a.p);
+                }
             }
-        }
-        C11045 c11045M45692 = this.f72919.m45692(arrayList, z);
-        this.f72915 = c11045M45692;
-        C6105 c6105 = c11045M45692.f37508;
-        C7247 c7247 = this.f72916;
-        long jM19376 = c7247.m19376();
-        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
-        c6105.mo9654(jM19376);
-        this.f72915.f37518.mo9654(c7247.m19368());
-    }
-
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo20992() {
-        this.f72919.f65611.flush();
-    }
-
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo20990() throws IOException {
-        ((C12456) this.f72915.m27859()).close();
-    }
-
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ۙ */
-    public final C17779 mo20988(boolean z) throws ProtocolException {
-        C10912 c10912M27861 = this.f72915.m27861();
-        C5972 c5972 = new C5972();
-        int iM27347 = c10912M27861.m27347();
-        C19948 c19948M45245 = null;
-        for (int i = 0; i < iM27347; i++) {
-            String strM27344 = c10912M27861.m27344(i);
-            String strM27348 = c10912M27861.m27348(i);
-            if (strM27344.equals(":status")) {
-                c19948M45245 = C19948.m45245("HTTP/1.1 " + strM27348);
-            } else if (!f72913.contains(strM27344)) {
-                AbstractC7196.f24003.mo19138(c5972, strM27344, strM27348);
+            if (sb.length() > 0) {
+                sb.deleteCharAt(sb.length() - 1);
             }
+            return this.f72307.mo8231(str, sb.toString());
         }
-        if (c19948M45245 == null) {
-            throw new ProtocolException("Expected ':status' header not present");
-        }
-        C17779 c17779 = new C17779();
-        c17779.m41348(this.f72918);
-        c17779.m41341(c19948M45245.f63897);
-        c17779.m41353(c19948M45245.f63899);
-        c17779.m41344(c5972.m16265());
-        if (z && AbstractC7196.f24003.mo19132(c17779) == 100) {
-            return null;
-        }
-        return c17779;
+        return this.f72307.mo8231(str, "");
     }
 
-    @Override // l.InterfaceC7953
-    /* JADX INFO: renamed from: ۙ */
-    public final C20653 mo20989(C18485 c18485) {
-        this.f72917.f48950.getClass();
-        return new C20653(c18485.m42859("Content-Type"), C10070.m25481(c18485), C0834.m3437(new C5399(this, this.f72915.m27853())));
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11144 m50403(HashMap map, String str) {
+        return this.f72307.mo8233(str, map);
     }
 
-    @Override // l.InterfaceC7953
-    public final void cancel() {
-        C11045 c11045 = this.f72915;
-        if (c11045 != null) {
-            c11045.m27863(EnumC9365.CANCEL);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11144 m50400(String str, HashMap map, HashMap map2) {
+        if (map2.size() == 0) {
+            return this.f72307.mo8233(str, map);
         }
+        return this.f72307.mo8232(str, map, map2);
     }
 }

@@ -1,37 +1,63 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜ۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
+
+/* JADX INFO: renamed from: l.ۛ᩶ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 16WT */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6635 extends AbstractC10495 implements InterfaceC21891 {
+public final class C6635 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f22412;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f22413;
-
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return C3128.m9463(this.f35956);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3927(this);
-    }
-
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1873(this, obj);
-    }
-
-    @Override // l.AbstractC10495
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC5930 mo17996(EnumC9084 enumC9084) {
-        return enumC9084 == EnumC9084.LEFT ? this.f22412 : this.f22413;
+    public final long f22161;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f22162;
+
+    public final int hashCode() {
+        long j = this.f22162;
+        int i = ((int) (j ^ (j >>> 32))) * 31;
+        long j2 = this.f22161;
+        return i + ((int) (j2 ^ (j2 >>> 32)));
+    }
+
+    public C6635(long j, long j2) {
+        this.f22162 = j;
+        this.f22161 = j2;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C6635)) {
+            return false;
+        }
+        C6635 c6635 = (C6635) obj;
+        return this.f22162 == c6635.f22162 && this.f22161 == c6635.f22161;
+    }
+
+    public final String toString() {
+        Object[] objArr = {Long.valueOf(this.f22162), Long.valueOf(this.f22161)};
+        String[] strArrSplit = "line;column".length() == 0 ? new String[0] : "line;column".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C6635.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m18574() {
+        return this.f22161;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m18575() {
+        return this.f22162;
     }
 }

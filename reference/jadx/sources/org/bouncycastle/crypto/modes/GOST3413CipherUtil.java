@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.modes;
 
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3413CipherUtil {
     public static byte[] LSB(byte[] bArr, int i) {
         byte[] bArr2 = new byte[i];

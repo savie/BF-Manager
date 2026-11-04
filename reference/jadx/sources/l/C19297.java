@@ -1,68 +1,51 @@
 package l;
 
-import android.graphics.drawable.Drawable;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.view.View;
+import com.google.android.material.color.utilities.DynamicScheme;
+import java.util.BitSet;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.᩵ۜۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S5C6 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19297 extends View.BaseSavedState {
-    public static final Parcelable.Creator CREATOR = new C8008();
+/* JADX INFO: renamed from: l.ᩳ᩵ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 969A */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C19297 implements Function {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final long[][] f62271;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f62371;
 
-    public C19297(Parcelable parcelable, Drawable... drawableArr) {
-        super(parcelable);
-        this.f62271 = new long[drawableArr.length][];
-        for (int i = 0; i < drawableArr.length; i++) {
-            Drawable drawable = drawableArr[i];
-            if (drawable instanceof C4479) {
-                this.f62271[i] = ((C4479) drawable).f15939.m52923();
-            } else {
-                this.f62271[i] = null;
-            }
-        }
+    public /* synthetic */ C19297(int i) {
+        this.f62371 = i;
     }
 
-    public C19297(Parcel parcel) {
-        super(parcel);
-        this.f62271 = new long[parcel.readInt()][];
-        int i = 0;
-        while (true) {
-            long[][] jArr = this.f62271;
-            if (i >= jArr.length) {
-                return;
-            }
-            jArr[i] = parcel.createLongArray();
-            i++;
-        }
+    public /* synthetic */ C19297(C13586 c13586) {
+        this.f62371 = 5;
     }
 
-    public C19297(Parcelable parcelable, long[] jArr) {
-        super(parcelable);
-        this.f62271 = new long[][]{jArr};
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        super.writeToParcel(parcel, i);
-        long[][] jArr = this.f62271;
-        parcel.writeInt(jArr.length);
-        for (long[] jArr2 : jArr) {
-            parcel.writeLongArray(jArr2);
-        }
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44284(Drawable drawable, int i) {
-        long[] jArr = this.f62271[i];
-        if (jArr == null || !(drawable instanceof C4479)) {
-            return;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f62371) {
+            case 0:
+                return new C21227((C20348) obj);
+            case 1:
+                return C11312.m28585((C20348) obj);
+            case 2:
+                return ((C1392) obj).f4951;
+            case 3:
+                return new BitSet();
+            case 4:
+                return ((DynamicScheme) obj).errorPalette;
+            default:
+                return C13586.m33294((InterfaceC14244) obj);
         }
-        C4479 c4479 = (C4479) drawable;
-        c4479.m12503(c4479.f15939.m52900(jArr, c4479.f15944));
     }
 }

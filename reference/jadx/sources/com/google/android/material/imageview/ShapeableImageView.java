@@ -21,14 +21,14 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.ShapeAppearancePathProvider;
 import com.google.android.material.shape.Shapeable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import l.C10405;
-import l.C18616;
-import l.C2830;
-import l.C8033;
+import l.C14625;
+import l.C15688;
+import l.C4185;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ShapeableImageView extends C2830 implements Shapeable {
-    public static final int DEF_STYLE_RES = C18616.f59882;
+public class ShapeableImageView extends C15688 implements Shapeable {
+    public static final int DEF_STYLE_RES = C4185.f15154;
     public static final int UNDEFINED_PADDING = Integer.MIN_VALUE;
     public final Paint borderPaint;
     public int bottomContentPadding;
@@ -73,21 +73,21 @@ public class ShapeableImageView extends C2830 implements Shapeable {
         this.destination = new RectF();
         this.maskRect = new RectF();
         this.maskPath = new Path();
-        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, C8033.f27243, i, i2);
+        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, C14625.f46600, i, i2);
         setLayerType(2, null);
-        this.strokeColor = MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f27356);
-        this.strokeWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27196, 0);
-        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27615, 0);
+        this.strokeColor = MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f47629);
+        this.strokeWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46831, 0);
+        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f47397, 0);
         this.leftContentPadding = dimensionPixelSize;
         this.topContentPadding = dimensionPixelSize;
         this.rightContentPadding = dimensionPixelSize;
         this.bottomContentPadding = dimensionPixelSize;
-        this.leftContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f28093, dimensionPixelSize);
-        this.topContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27030, dimensionPixelSize);
-        this.rightContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27403, dimensionPixelSize);
-        this.bottomContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f26765, dimensionPixelSize);
-        this.startContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f26444, Integer.MIN_VALUE);
-        this.endContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27136, Integer.MIN_VALUE);
+        this.leftContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46706, dimensionPixelSize);
+        this.topContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46547, dimensionPixelSize);
+        this.rightContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46228, dimensionPixelSize);
+        this.bottomContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46759, dimensionPixelSize);
+        this.startContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46653, Integer.MIN_VALUE);
+        this.endContentPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f46122, Integer.MIN_VALUE);
         typedArrayObtainStyledAttributes.recycle();
         Paint paint2 = new Paint();
         this.borderPaint = paint2;
@@ -284,7 +284,7 @@ public class ShapeableImageView extends C2830 implements Shapeable {
     }
 
     public void setStrokeColorResource(int i) {
-        setStrokeColor(C10405.m26305(getContext(), i));
+        setStrokeColor(C7508.m20564(getContext(), i));
     }
 
     public ColorStateList getStrokeColor() {

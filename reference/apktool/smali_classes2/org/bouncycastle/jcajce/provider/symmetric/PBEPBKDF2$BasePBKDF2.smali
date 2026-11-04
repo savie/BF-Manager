@@ -67,7 +67,7 @@
     const-string v1, "Invalid KeySpec: unknown PRF algorithm "
 
     .line 0
-    invoke-static {v1, p1}, Ll/᩺ۨ᩹;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
 
     move-result-object p1
 

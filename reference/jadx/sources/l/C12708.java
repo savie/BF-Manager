@@ -1,37 +1,34 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import com.umeng.commonsdk.framework.UMModuleRegister;
+import java.nio.ByteBuffer;
 
-/* JADX INFO: renamed from: l.۫᩹᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1KB */
+/* JADX INFO: renamed from: l.ۨ᩻ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F43P */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12708 implements IntConsumer {
+public final class C12708 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f42383;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public ByteBuffer f40698;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f42384;
-
-    public /* synthetic */ C12708(int i, Object obj) {
-        this.f42383 = i;
-        this.f42384 = obj;
-    }
-
-    @Override // java.util.function.IntConsumer
-    public final void accept(int i) {
-        switch (this.f42383) {
-            case 0:
-                C9886.m24985((C9886) this.f42384, i);
-                break;
-            default:
-                ((Consumer) this.f42384).accept(Integer.valueOf(i));
-                break;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ByteBuffer m31496(int i) {
+        ByteBuffer byteBufferAllocate;
+        if (i < 20480) {
+            i = UMModuleRegister.PUSH_EVENT_VALUE_HIGH;
         }
+        ByteBuffer byteBuffer = this.f40698;
+        if (byteBuffer != null && byteBuffer.capacity() >= i) {
+            byteBufferAllocate = (ByteBuffer) this.f40698.clear();
+        } else {
+            byteBufferAllocate = ByteBuffer.allocate((i + i) >> 1);
+        }
+        this.f40698 = null;
+        return byteBufferAllocate;
     }
 
-    public /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m31497(ByteBuffer byteBuffer) {
+        this.f40698 = byteBuffer;
     }
 }

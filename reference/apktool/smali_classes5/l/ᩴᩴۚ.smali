@@ -1,39 +1,49 @@
 .class public final Ll/ᩴᩴۚ;
-.super Ll/֡᩺᩺;
-.source "N15M"
+.super Ljava/lang/Object;
+.source "V6X4"
 
 
-# virtual methods
-.method public final ۙ(Landroid/widget/TextView;Z)V
+# static fields
+.field public static final ۙ:Ll/᩸ᩴۚ;
+
+.field public static final ᩷:Ll/ۢܿۚ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "textView"
+    .line 10
+    new-instance v0, Ll/᩸ᩴۚ;
 
-    .line 6
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x11
+    sput-object v0, Ll/ᩴᩴۚ;->ۙ:Ll/᩸ᩴۚ;
 
-    .line 82
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
+    .line 12
+    new-instance v0, Ll/ۢܿۚ;
 
-    const/high16 v0, 0x41a80000    # 21.0f
+    invoke-direct {v0}, Ll/ۢܿۚ;-><init>()V
 
-    .line 83
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextSize(F)V
-
-    if-eqz p2, :cond_0
-
-    const/4 p2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x4
-
-    .line 84
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    sput-object v0, Ll/ᩴᩴۚ;->᩷:Ll/ۢܿۚ;
 
     return-void
+.end method
+
+.method public static ۙ()Ll/᩸ᩴۚ;
+    .locals 1
+
+    .line 24
+    sget-object v0, Ll/ᩴᩴۚ;->ۙ:Ll/᩸ᩴۚ;
+
+    return-object v0
+.end method
+
+.method public static ᩷()Ll/ۢܿۚ;
+    .locals 1
+
+    .line 31
+    sget-object v0, Ll/ᩴᩴۚ;->᩷:Ll/ۢܿۚ;
+
+    return-object v0
 .end method

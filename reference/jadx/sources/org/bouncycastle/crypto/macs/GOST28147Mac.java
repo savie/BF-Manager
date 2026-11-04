@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.macs;
 import com.google.android.material.color.ColorResourcesTableCreator;
 import com.umeng.analytics.pro.cb;
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.crypto.params.ParametersWithSBox;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST28147Mac implements Mac {
     public static final int BLOCK_SIZE = 8;
     public static final int MAC_SIZE = 4;
@@ -35,7 +35,7 @@ public class GOST28147Mac implements Mac {
         this.firstStep = true;
         this.workingKey = null;
         this.macIV = null;
-        this.S = new byte[]{9, 6, 3, 2, 8, 11, 1, 7, 10, 4, cb.f77931l, 15, 12, 0, cb.k, 5, 3, 7, cb.f77931l, 9, 8, 10, 15, 0, 5, 2, 6, 12, 11, 4, cb.k, 1, cb.f77931l, 4, 6, 2, 11, 3, cb.k, 8, 12, 15, 5, 10, 0, 7, 1, 9, cb.f77931l, 7, 10, 12, cb.k, 1, 3, 9, 0, 2, 11, 4, 15, 8, 5, 6, 11, 5, 1, 9, 8, cb.k, 15, 0, cb.f77931l, 4, 2, 3, 12, 7, 10, 6, 3, 10, cb.k, 12, 1, 2, 0, 11, 7, 5, 9, 4, 8, 15, cb.f77931l, 6, 1, cb.k, 2, 9, 7, 10, 6, 0, 8, 12, 4, 5, 15, 3, 11, cb.f77931l, 11, 10, 15, 5, 0, 12, cb.f77931l, 8, 6, 2, 3, 9, 1, 7, cb.k, 4};
+        this.S = new byte[]{9, 6, 3, 2, 8, 11, 1, 7, 10, 4, cb.f82047l, 15, 12, 0, cb.k, 5, 3, 7, cb.f82047l, 9, 8, 10, 15, 0, 5, 2, 6, 12, 11, 4, cb.k, 1, cb.f82047l, 4, 6, 2, 11, 3, cb.k, 8, 12, 15, 5, 10, 0, 7, 1, 9, cb.f82047l, 7, 10, 12, cb.k, 1, 3, 9, 0, 2, 11, 4, 15, 8, 5, 6, 11, 5, 1, 9, 8, cb.k, 15, 0, cb.f82047l, 4, 2, 3, 12, 7, 10, 6, 3, 10, cb.k, 12, 1, 2, 0, 11, 7, 5, 9, 4, 8, 15, cb.f82047l, 6, 1, cb.k, 2, 9, 7, 10, 6, 0, 8, 12, 4, 5, 15, 3, 11, cb.f82047l, 11, 10, 15, 5, 0, 12, cb.f82047l, 8, 6, 2, 3, 9, 1, 7, cb.k, 4};
         this.purpose = cryptoServicePurpose;
         this.mac = new byte[8];
         this.buf = new byte[8];
@@ -220,7 +220,7 @@ public class GOST28147Mac implements Mac {
             parameters = null;
         } else {
             if (!(cipherParameters instanceof ParametersWithIV)) {
-                throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to GOST28147 init - ", cipherParameters));
+                throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to GOST28147 init - ", cipherParameters));
             }
             ParametersWithIV parametersWithIV = (ParametersWithIV) cipherParameters;
             byte[] iv = parametersWithIV.getIV();

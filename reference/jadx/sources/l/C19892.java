@@ -1,72 +1,38 @@
 package l;
 
-import java.util.LinkedList;
+import java.util.AbstractCollection;
+import java.util.Iterator;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩶ۗۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L1GV */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19892 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public LinkedList f63783 = new LinkedList();
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m45150() {
-        return !this.f63783.isEmpty();
-    }
+/* JADX INFO: renamed from: l.ᩴܳܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O2OZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19892 extends AbstractCollection {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C15659 m45156() {
-        LinkedList linkedList = this.f63783;
-        if (linkedList.isEmpty()) {
-            return null;
-        }
-        return (C15659) linkedList.getLast();
+    public final /* synthetic */ C15416 f63998;
+
+    public C19892(C15416 c15416) {
+        this.f63998 = c15416;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C15659 m45155() {
-        LinkedList linkedList = this.f63783;
-        if (linkedList.isEmpty()) {
-            return null;
-        }
-        return (C15659) linkedList.removeLast();
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final int size() {
+        return this.f63998.size();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m45153(C15659 c15659) {
-        LinkedList linkedList = this.f63783;
-        linkedList.addLast(c15659);
-        if (linkedList.size() > 100) {
-            linkedList.removeFirst();
-        }
+    @Override // java.util.AbstractCollection, java.util.Collection
+    public final void clear() {
+        this.f63998.clear();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m45151() {
-        this.f63783.clear();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m45152(C11018 c11018) {
-        c11018.writeInt(-1568513661);
-        LinkedList<C15659> linkedList = this.f63783;
-        c11018.mo24508(linkedList.size());
-        for (C15659 c15659 : linkedList) {
-            c11018.writeInt(c15659.f50867);
-            c11018.writeInt(c15659.f50866);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
+    public final Iterator iterator() {
+        C15416 c15416 = this.f63998;
+        Map mapM36914 = c15416.m36914();
+        if (mapM36914 != null) {
+            return mapM36914.values().iterator();
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m45154(C17367 c17367) {
-        LinkedList linkedList = this.f63783;
-        linkedList.clear();
-        if (c17367.m40447(-1568513661)) {
-            int iM40462 = c17367.m40462();
-            for (int i = 0; i < iM40462; i++) {
-                linkedList.addLast(new C15659(c17367.readInt(), c17367.readInt()));
-            }
-        }
+        return new C14056(c15416);
     }
 }

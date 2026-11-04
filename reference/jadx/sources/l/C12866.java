@@ -1,36 +1,25 @@
 package l;
 
-import java.util.ArrayList;
+/* JADX INFO: renamed from: l.۫ۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4Y0 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12866 extends AbstractC16113 implements InterfaceC19601 {
 
-/* JADX INFO: renamed from: l.۬ۘ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87AO */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12866 {
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f41193;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f42783;
+    @Override // l.InterfaceC10650
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo4171() {
+        return 10;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2323 f42784;
+    public C12866(int i) {
+        this.f41193 = i;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f42785;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f42786;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f42787;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f42788;
-
-    public C12866(String str, String str2, ArrayList arrayList, ArrayList arrayList2, int i, C2323 c2323) {
-        this.f42788 = str;
-        this.f42786 = str2;
-        this.f42787 = arrayList;
-        this.f42783 = arrayList2;
-        this.f42785 = i;
-        this.f42784 = c2323;
+    @Override // l.InterfaceC19601
+    public final int getLineNumber() {
+        return this.f41193;
     }
 }

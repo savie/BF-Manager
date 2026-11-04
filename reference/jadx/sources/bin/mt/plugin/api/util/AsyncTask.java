@@ -2,9 +2,8 @@ package bin.mt.plugin.api.util;
 
 import bin.mt.plugin.api.PluginContext;
 import java.util.concurrent.Executor;
-import l.RunnableC0968;
-import l.RunnableC19991;
-import l.RunnableC7856;
+import l.RunnableC14793;
+import l.RunnableC24228;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class AsyncTask {
@@ -28,7 +27,7 @@ public abstract class AsyncTask {
     public void start() {
         try {
             beforeThread();
-            this.executor.execute(new RunnableC7856(6, this));
+            this.executor.execute(new RunnableC14793(2, this));
         } catch (Exception e) {
             try {
                 onException(e);
@@ -42,7 +41,7 @@ public abstract class AsyncTask {
     public /* synthetic */ void lambda$start$1() {
         try {
             onThread();
-            ThreadUtil.post(new RunnableC19991(3, this));
+            ThreadUtil.post(new RunnableC24228(3, this));
         } catch (Exception e) {
             handleError(e);
         } catch (OutOfMemoryError e2) {
@@ -68,7 +67,7 @@ public abstract class AsyncTask {
     }
 
     private void handleError(Exception exc) {
-        ThreadUtil.post(new RunnableC0968(2, this, exc));
+        ThreadUtil.post(new AsyncTask$$ExternalSyntheticLambda1(0, this, exc));
     }
 
     /* JADX INFO: Access modifiers changed from: private */

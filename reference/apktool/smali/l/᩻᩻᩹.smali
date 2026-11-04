@@ -1,71 +1,60 @@
-.class public final Ll/᩻᩻᩹;
-.super Ljava/io/FilterInputStream;
-.source "X8F9"
-
-# interfaces
-.implements Ll/᩷ۤᩴ;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/۠᩻᩺;
-
-
-# direct methods
-.method public constructor <init>(Ljava/io/InputStream;Ll/۠᩻᩺;)V
-    .locals 0
-
-    .line 88
-    iput-object p2, p0, Ll/᩻᩻᩹;->ܺ:Ll/۠᩻᩺;
-
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
-
-    return-void
-.end method
+.class public abstract Ll/᩻᩻᩹;
+.super Ll/ܽۚ᩹;
+.source "S912"
 
 
 # virtual methods
-.method public final read()I
-    .locals 3
+.method public abstract ۙ(Ll/ۢ᩸᩹;Ll/ܺᩴ᩹;Ll/۬۫᩹;)Ljava/lang/Object;
+.end method
 
-    .line 91
-    invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
+.method public final ۙ(Ll/ᩴᩴ᩹;Ll/ۧۢۧ;Ll/۬۫᩹;)V
+    .locals 1
+
+    .line 32
+    invoke-interface {p3}, Ll/۬۫᩹;->᩷()Z
 
     move-result v0
 
-    .line 92
-    iget-object v1, p0, Ll/᩻᩻᩹;->ܺ:Ll/۠᩻᩺;
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x1
+    .line 33
+    invoke-interface {p3}, Ll/۬۫᩹;->ۙ()Ll/۠۫᩹;
 
-    .line 41
-    invoke-virtual {v1, v2}, Ll/۠᩻᩺;->ۙ(I)Z
+    move-result-object v0
 
-    return v0
-.end method
+    invoke-static {p1, p2, v0}, Ll/ܽۚ᩹;->ۙ(Ll/ᩴᩴ᩹;Ll/ۧۢۧ;Ll/۠۫᩹;)V
 
-.method public final read([BII)I
-    .locals 0
+    .line 36
+    :cond_0
+    invoke-interface {p1}, Ll/ᩴᩴ᩹;->ۤ()Ll/ۢ᩸᩹;
 
-    .line 98
-    invoke-super {p0, p1, p2, p3}, Ljava/io/FilterInputStream;->read([BII)I
+    move-result-object p2
 
-    move-result p1
+    invoke-interface {p1}, Ll/ᩴᩴ᩹;->ۙ()Ll/ܺᩴ᩹;
 
-    .line 99
-    iget-object p2, p0, Ll/᩻᩻᩹;->ܺ:Ll/۠᩻᩺;
+    move-result-object v0
 
-    invoke-virtual {p2, p1}, Ll/۠᩻᩺;->ۙ(I)Z
+    invoke-virtual {p0, p2, v0, p3}, Ll/᩻᩻᩹;->ۙ(Ll/ۢ᩸᩹;Ll/ܺᩴ᩹;Ll/۬۫᩹;)Ljava/lang/Object;
 
-    return p1
-.end method
+    move-result-object p2
 
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
+    if-eqz p2, :cond_1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .line 38
+    invoke-interface {p1}, Ll/ᩴᩴ᩹;->builder()Ll/᩵ᩴ᩹;
 
-    move-result-wide v0
+    move-result-object p1
 
-    return-wide v0
+    invoke-interface {p3}, Ll/۬۫᩹;->start()I
+
+    move-result v0
+
+    invoke-interface {p3}, Ll/۬۫᩹;->end()I
+
+    move-result p3
+
+    invoke-static {p1, p2, v0, p3}, Ll/᩵ᩴ᩹;->ۙ(Ll/᩵ᩴ᩹;Ljava/lang/Object;II)V
+
+    :cond_1
+    return-void
 .end method

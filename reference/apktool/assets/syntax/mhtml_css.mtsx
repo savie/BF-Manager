@@ -317,8 +317,8 @@
 
         // 数字和单位
         "numbers": [
-            // 十六进制颜色
-            {match: /#([0-9a-fA-F]{3,8})\b/, 0: "parseColor(auto,1,HEX)"}
+            // CSS 的 4/8 位十六进制颜色将透明度放在末尾
+            {match: /#([0-9a-fA-F]{3,8})\b/, 0: "parseColor(auto,1,HEXA)"}
 
             // 数字 + 百分号（百分号后面不是单词字符）
             {match: /\b\d+(\.\d+)?%/, 0: "number"}

@@ -13,7 +13,7 @@ import org.bouncycastle.math.ec.WNafUtil;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TeleTrusTNamedCurves {
     public static X9ECParametersHolder brainpoolP160r1 = new X9ECParametersHolder() { // from class: org.bouncycastle.asn1.teletrust.TeleTrusTNamedCurves.1
         @Override // org.bouncycastle.asn1.x9.X9ECParametersHolder

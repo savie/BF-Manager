@@ -3,7 +3,7 @@ package org.bouncycastle.jce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IESParameterSpec implements AlgorithmParameterSpec {
     public int cipherKeySize;
     public byte[] derivation;

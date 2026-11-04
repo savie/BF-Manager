@@ -1,56 +1,72 @@
 package l;
 
-import android.text.InputFilter;
-import android.text.method.TransformationMethod;
-import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩶ۚۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: FB0V */
+/* JADX INFO: renamed from: l.ᩴܽܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q9F8 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19956 extends C15723 {
+public final class C19956 extends AbstractC22194 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C20661 f63914;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public byte[] f64158;
 
-    public C19956(TextView textView) {
-        this.f63914 = new C20661(textView);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public List f64159;
+
+    public C19956() {
+        super(EnumC11005.SMB2_PREAUTH_INTEGRITY_CAPABILITIES);
+        this.f64159 = new ArrayList();
     }
 
-    @Override // l.C15723
-    /* JADX INFO: renamed from: ۙ */
-    public final TransformationMethod mo37445(TransformationMethod transformationMethod) {
-        return !C12817.m31812() ? transformationMethod : this.f63914.mo37445(transformationMethod);
+    public C19956(byte[] bArr, List list) {
+        super(EnumC11005.SMB2_PREAUTH_INTEGRITY_CAPABILITIES);
+        this.f64159 = list;
+        this.f64158 = (byte[]) bArr.clone();
     }
 
-    @Override // l.C15723
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo37446(boolean z) {
-        if (C12817.m31812()) {
-            this.f63914.mo37446(z);
+    @Override // l.AbstractC22194
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo19897(C7453 c7453) {
+        List list = this.f64159;
+        if (list == null) {
+            throw new IllegalStateException("There should be at least 1 hash algorithm provided");
         }
-    }
-
-    @Override // l.C15723
-    /* JADX INFO: renamed from: ۙ */
-    public final InputFilter[] mo37448(InputFilter[] inputFilterArr) {
-        return !C12817.m31812() ? inputFilterArr : this.f63914.mo37448(inputFilterArr);
-    }
-
-    @Override // l.C15723
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo37449(boolean z) {
-        boolean zM31812 = C12817.m31812();
-        C20661 c20661 = this.f63914;
-        if (!zM31812) {
-            c20661.m46513(z);
-        } else {
-            c20661.mo37449(z);
+        if (this.f64158 == null) {
+            throw new IllegalStateException("A salt should be provided");
         }
+        c7453.m56023(list.size());
+        c7453.m56023(this.f64158.length);
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            c7453.m56023((int) ((EnumC5018) it.next()).getValue());
+        }
+        byte[] bArr = this.f64158;
+        c7453.m56007(bArr.length, bArr);
+        return (list.size() * 2) + 4 + this.f64158.length;
     }
 
-    @Override // l.C15723
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo37447() {
-        return this.f63914.mo37447();
+    @Override // l.AbstractC22194
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo19896(C7453 c7453) throws C2013 {
+        int iM56017 = c7453.m56017();
+        int iM56018 = c7453.m56017();
+        for (int i = 0; i < iM56017; i++) {
+            int iM56019 = c7453.m56017();
+            EnumC5018 enumC5018 = (EnumC5018) C10961.m27793(iM56019, EnumC5018.class, null);
+            if (enumC5018 == null) {
+                throw new IllegalStateException(String.format("Unknown SMB3HashAlgorithm with value '%d'", Integer.valueOf(iM56019)));
+            }
+            this.f64159.add(enumC5018);
+        }
+        byte[] bArr = new byte[iM56018];
+        c7453.m56024(iM56018, bArr);
+        this.f64158 = bArr;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m45881() {
+        return this.f64159;
     }
 }

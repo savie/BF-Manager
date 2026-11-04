@@ -1,237 +1,150 @@
 .class public final Ll/ᩴܰ᩹;
-.super Ljava/lang/Object;
-.source "D70T"
+.super Ll/ۤܰ᩹;
+.source "M1N0"
 
 # interfaces
-.implements Ll/ܶܰ᩹;
-.implements Ll/֡ۙ᩹;
+.implements Ll/ܶ۟᩹;
 
 
 # instance fields
-.field public final ܺ:[B
-
-.field public ᩶:I
+.field public final synthetic ۢ:Ll/ܳܰ᩹;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ll/ܳܰ᩹;)V
     .locals 0
 
-    .line 5891
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1275
+    iput-object p1, p0, Ll/ᩴܰ᩹;->ۢ:Ll/ܳܰ᩹;
 
-    .line 5892
-    new-array p1, p1, [B
+    invoke-direct {p0, p1}, Ll/ۤܰ᩹;-><init>(Ll/ܳܰ᩹;)V
 
-    iput-object p1, p0, Ll/ᩴܰ᩹;->ܺ:[B
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ܳܰ᩹;IIZ)V
+    .locals 0
+
+    .line 1278
+    iput-object p1, p0, Ll/ᩴܰ᩹;->ۢ:Ll/ܳܰ᩹;
+
+    .line 1279
+    invoke-direct {p0, p1, p2, p3, p4}, Ll/ۤܰ᩹;-><init>(Ll/ܳܰ᩹;IIZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic close()V
+.method public final characteristics()I
+    .locals 1
+
+    .line 1284
+    iget-boolean v0, p0, Ll/ۤܰ᩹;->᩶:Z
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x100
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x140
+
+    return v0
+.end method
+
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
     .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ۟᩹;->ۙ(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public final finish()V
-    .locals 2
+.method public final bridge synthetic getComparator()Ljava/util/Comparator;
+    .locals 1
 
-    .line 5915
-    iget v0, p0, Ll/ᩴܰ᩹;->᩶:I
+    .line 29
+    invoke-virtual {p0}, Ll/ᩴܰ᩹;->getComparator()Ll/ۙ֡᩹;
 
-    iget-object v1, p0, Ll/ᩴܰ᩹;->ܺ:[B
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    .line 5916
-    :cond_0
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Incomplete hex clipboard memory backing"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final length()I
+.method public final getComparator()Ll/ۙ֡᩹;
     .locals 1
 
-    .line 5922
-    iget-object v0, p0, Ll/ᩴܰ᩹;->ܺ:[B
+    .line 158
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    array-length v0, v0
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    return v0
+    throw v0
 .end method
 
-.method public final ֫ܰ()Ll/ᩴۨ᩹;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final ۙ(Ll/ۘۖ᩹;Ll/ۚ᩸ۘ;)I
-    .locals 7
-
-    .line 5898
-    iget v0, p0, Ll/ᩴܰ᩹;->᩶:I
-
-    int-to-long v0, v0
-
-    iget v2, p1, Ll/ۘۖ᩹;->ۙ:I
-
-    int-to-long v3, v2
-
-    add-long/2addr v0, v3
-
-    iget-object v3, p0, Ll/ᩴܰ᩹;->ܺ:[B
-
-    array-length v4, v3
-
-    int-to-long v4, v4
-
-    cmp-long v6, v0, v4
-
-    if-gtz v6, :cond_2
-
-    .line 5901
-    invoke-interface {p2}, Ll/ۚ᩸ۘ;->֨()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 5904
-    iget v0, p0, Ll/ᩴܰ᩹;->᩶:I
-
-    const/4 v1, 0x0
-
-    .line 5905
-    invoke-virtual {p1, v1, v3, v0, v2}, Ll/ۘۖ᩹;->ۙ(I[BII)V
-
-    .line 5906
-    invoke-interface {p2}, Ll/ۚ᩸ۘ;->֨()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 5909
-    iget p1, p0, Ll/ᩴܰ᩹;->᩶:I
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Ll/ᩴܰ᩹;->᩶:I
-
-    return v0
-
-    .line 5907
-    :cond_0
-    new-instance p1, Ll/֨ۨ᩹;
-
-    invoke-direct {p1}, Ll/֨ۨ᩹;-><init>()V
-
-    throw p1
-
-    .line 5902
-    :cond_1
-    new-instance p1, Ll/֨ۨ᩹;
-
-    invoke-direct {p1}, Ll/֨ۨ᩹;-><init>()V
-
-    throw p1
-
-    .line 5899
-    :cond_2
-    new-instance p1, Ljava/io/IOException;
-
-    const-string p2, "Hex clipboard memory backing overflow"
-
-    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final ۙ()Ljava/lang/Object;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final ۙ(I[BII)V
-    .locals 3
-
-    .line 5932
-    iget v0, p0, Ll/ᩴܰ᩹;->᩶:I
-
-    iget-object v1, p0, Ll/ᩴܰ᩹;->ܺ:[B
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_0
-
-    .line 5935
-    array-length v0, v1
-
-    invoke-static {v0, p1, p4}, Ll/᩺ۨ᩹;->ۨ(III)V
-
-    .line 5936
-    array-length v0, p2
-
-    invoke-static {v0, p3, p4}, Ll/᩺ۨ᩹;->ܰ(III)V
-
-    .line 5937
-    invoke-static {v1, p1, p2, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
-
-    .line 5933
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Hex clipboard memory backing is incomplete"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final ۚ()J
+.method public synthetic getExactSizeIfKnown()J
     .locals 2
 
-    .line 5927
-    iget-object v0, p0, Ll/ᩴܰ᩹;->ܺ:[B
-
-    array-length v0, v0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final synthetic ۛ()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final ۨ()J
-    .locals 2
-
-    .line 84
-    invoke-virtual {p0}, Ll/ᩴܰ᩹;->ۚ()J
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
 
     move-result-wide v0
 
     return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ۟᩹;->᩷(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۙ(IIZ)Ll/ۤܰ᩹;
+    .locals 2
+
+    .line 1294
+    new-instance v0, Ll/ᩴܰ᩹;
+
+    iget-object v1, p0, Ll/ᩴܰ᩹;->ۢ:Ll/ܳܰ᩹;
+
+    invoke-direct {v0, v1, p1, p2, p3}, Ll/ᩴܰ᩹;-><init>(Ll/ܳܰ᩹;IIZ)V
+
+    return-object v0
+.end method
+
+.method public final ۙ(ILjava/lang/Object;)V
+    .locals 1
+
+    .line 1272
+    check-cast p2, Ljava/util/function/IntConsumer;
+
+    .line 1289
+    iget-object v0, p0, Ll/ᩴܰ᩹;->ۢ:Ll/ܳܰ᩹;
+
+    iget-object v0, v0, Ll/ܳܰ᩹;->ۜ:[I
+
+    aget p1, v0, p1
+
+    invoke-interface {p2, p1}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    return-void
 .end method

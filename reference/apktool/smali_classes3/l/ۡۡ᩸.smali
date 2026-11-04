@@ -1,53 +1,62 @@
-.class public final Ll/ۡۡ᩸;
+.class public final synthetic Ll/ۡۡ᩸;
 .super Ljava/lang/Object;
-.source "V9PU"
+.source "UAZD"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final ۙ:Ljava/lang/Iterable;
+# instance fields
+.field public final synthetic ܰ:I
 
-.field public static final ܰ:Ljava/util/Iterator;
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    .line 607
-    new-instance v0, Ll/۠ۡ᩸;
+    .line 0
+    iput p1, p0, Ll/ۡۡ᩸;->ܰ:I
 
-    .line 608
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ll/ۡۡ᩸;->᩶:Ljava/lang/Object;
 
-    .line 607
-    sput-object v0, Ll/ۡۡ᩸;->ܰ:Ljava/util/Iterator;
-
-    .line 625
-    new-instance v0, Ll/᩵ۡ᩸;
-
-    .line 626
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 625
-    sput-object v0, Ll/ۡۡ᩸;->ۙ:Ljava/lang/Iterable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic ۙ()Ljava/util/Iterator;
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    .line 605
-    sget-object v0, Ll/ۡۡ᩸;->ܰ:Ljava/util/Iterator;
+    .line 0
+    iget v0, p0, Ll/ۡۡ᩸;->ܰ:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public static ܰ()Ljava/lang/Iterable;
-    .locals 1
+    iget-object v0, p0, Ll/ۡۡ᩸;->᩶:Ljava/lang/Object;
 
-    .line 635
-    sget-object v0, Ll/ۡۡ᩸;->ۙ:Ljava/lang/Iterable;
+    check-cast v0, Ll/ۤۙᩴ;
 
-    return-object v0
+    invoke-static {v0}, Ll/ۤۙᩴ;->ۙ(Ll/ۤۙᩴ;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll/ۡۡ᩸;->᩶:Ljava/lang/Object;
+
+    check-cast v0, Ll/۬ۡ᩸;
+
+    invoke-static {v0}, Ll/۬ۡ᩸;->ۙ(Ll/۬ۡ᩸;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

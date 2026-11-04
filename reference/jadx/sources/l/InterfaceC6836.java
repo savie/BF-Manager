@@ -1,8 +1,11 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜܶۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K1X4 */
-/* JADX INFO: loaded from: classes2.dex */
+import android.os.Message;
+
+/* JADX INFO: renamed from: l.ۜۖۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A151 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC6836 {
-    Object call();
+    /* JADX INFO: renamed from: ۙ */
+    void mo14768(Object obj, Message message);
 }

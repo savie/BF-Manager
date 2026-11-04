@@ -1,619 +1,570 @@
 .class public final Ll/ۜ᩸ᩴ;
-.super Ll/ܺܶᩴ;
-.source "GQL"
-
-# interfaces
-.implements Ljava/lang/Cloneable;
+.super Ljava/lang/Object;
+.source "N6R3"
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
+.field public static final ֫:I
 
 
 # instance fields
-.field public transient ֡:Ll/ᩴᩳᩴ;
+.field public final ۙ:Ljava/util/function/BooleanSupplier;
 
-.field public transient ۫:[Ljava/lang/Object;
+.field public final ۚ:I
 
-.field public transient ܺ:Ll/۠᩸ᩴ;
+.field public final ۤ:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public ܽ:I
+.field public final ۫:Ljava/util/List;
 
-.field public transient ܿ:Ll/֡᩵ᩴ;
+.field public final ܳ:[Ll/ۜۙᩴ;
 
-.field public transient ᩶:[J
+.field public final ᩴ:Ljava/util/function/Supplier;
+
+.field public final ᩷:Ljava/util/concurrent/CountDownLatch;
+
+.field public final ᩸:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
-    .line 34
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 21
+    sget v0, Ll/ۤ᩷ܺ;->ۙ:I
 
-    .line 73
-    sget-object v0, Ll/ۧ᩸ᩴ;->ܰ:[J
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
+    sub-int/2addr v0, v1
 
-    .line 74
-    sget-object v0, Ll/۟᩵ᩴ;->ܰ:[Ljava/lang/Object;
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    sput v0, Ll/ۜ᩸ᩴ;->֫:I
 
     return-void
 .end method
 
-.method private readObject(Ljava/io/ObjectInputStream;)V
+.method public constructor <init>(Ljava/util/function/Supplier;Ljava/util/List;Ljava/util/function/BooleanSupplier;)V
+    .locals 1
+
+    .line 36
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 31
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object v0, p0, Ll/ۜ᩸ᩴ;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 32
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Ll/ۜ᩸ᩴ;->ۤ:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 37
+    iput-object p1, p0, Ll/ۜ᩸ᩴ;->ᩴ:Ljava/util/function/Supplier;
+
+    .line 38
+    iput-object p2, p0, Ll/ۜ᩸ᩴ;->۫:Ljava/util/List;
+
+    .line 39
+    iput-object p3, p0, Ll/ۜ᩸ᩴ;->ۙ:Ljava/util/function/BooleanSupplier;
+
+    .line 40
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    new-array p1, p1, [Ll/ۜۙᩴ;
+
+    iput-object p1, p0, Ll/ۜ᩸ᩴ;->ܳ:[Ll/ۜۙᩴ;
+
+    .line 41
+    sget p1, Ll/ۜ᩸ᩴ;->֫:I
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iput p1, p0, Ll/ۜ᩸ᩴ;->ۚ:I
+
+    .line 42
+    new-instance p2, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object p2, p0, Ll/ۜ᩸ᩴ;->᩷:Ljava/util/concurrent/CountDownLatch;
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/ۜ᩸ᩴ;)Ljava/util/concurrent/CountDownLatch;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->᩷:Ljava/util/concurrent/CountDownLatch;
+
+    return-object p0
+.end method
+
+.method public static ۙ(Ljava/util/function/Supplier;Ljava/util/List;Ljava/util/function/BooleanSupplier;)Ll/ۜۙᩴ;
     .locals 5
 
-    .line 767
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
+    .line 50
+    new-instance v0, Ll/ۜ᩸ᩴ;
 
-    .line 768
-    iget v0, p0, Ll/ۜ᩸ᩴ;->ܽ:I
+    invoke-direct {v0, p0, p1, p2}, Ll/ۜ᩸ᩴ;-><init>(Ljava/util/function/Supplier;Ljava/util/List;Ljava/util/function/BooleanSupplier;)V
 
-    new-array v1, v0, [J
+    .line 71
+    iget-object p0, v0, Ll/ۜ᩸ᩴ;->᩷:Ljava/util/concurrent/CountDownLatch;
 
-    iput-object v1, p0, Ll/ۜ᩸ᩴ;->᩶:[J
+    iget-object p1, v0, Ll/ۜ᩸ᩴ;->ۤ:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 769
-    new-array v0, v0, [Ljava/lang/Object;
+    new-instance p2, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 770
+    .line 72
     :goto_0
-    iget v3, p0, Ll/ۜ᩸ᩴ;->ܽ:I
+    iget v3, v0, Ll/ۜ᩸ᩴ;->ۚ:I
 
     if-ge v2, v3, :cond_0
 
-    .line 771
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readLong()J
+    new-instance v3, Ll/۠᩸ᩴ;
 
-    move-result-wide v3
+    invoke-direct {v3, v0}, Ll/۠᩸ᩴ;-><init>(Ll/ۜ᩸ᩴ;)V
 
-    aput-wide v3, v1, v2
-
-    .line 772
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
-
-    move-result-object v3
-
-    aput-object v3, v0, v2
+    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const/4 v2, 0x1
+
+    .line 75
+    :try_start_0
+    sget-object v3, Ll/ۙ᩻ܺ;->ۙ:Ljava/util/concurrent/ExecutorService;
+
+    invoke-static {v3, p2}, Ll/ۙ᩻ܺ;->ۙ(Ljava/util/concurrent/ExecutorService;Ljava/util/ArrayList;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    .line 76
+    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/concurrent/Future;
+
+    invoke-interface {v4}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    .line 83
+    :cond_1
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_2
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll/۠᩸ᩴ;
+
+    invoke-virtual {v3}, Ll/۠᩸ᩴ;->ۙ()V
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p2, 0x0
+
+    .line 86
+    :goto_3
+    :try_start_1
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-eqz p2, :cond_3
+
+    .line 93
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 95
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    iget-object p0, v0, Ll/ۜ᩸ᩴ;->ۙ:Ljava/util/function/BooleanSupplier;
+
+    invoke-interface {p0}, Ljava/util/function/BooleanSupplier;->getAsBoolean()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    goto :goto_5
+
+    .line 96
+    :cond_4
+    new-instance p0, Ll/ۜۙᩴ;
+
+    invoke-direct {p0}, Ll/ۜۙᩴ;-><init>()V
+
+    .line 97
+    iget-object p1, v0, Ll/ۜ᩸ᩴ;->ܳ:[Ll/ۜۙᩴ;
+
+    array-length p2, p1
+
+    :goto_4
+    if-ge v1, p2, :cond_7
+
+    aget-object v0, p1, v1
+
+    if-eqz v0, :cond_5
+
+    .line 99
+    invoke-virtual {p0, v0}, Ll/ۜۙᩴ;->ۙ(Ll/ۜۙᩴ;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_4
+
+    .line 98
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Missing wrap batch result"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_6
+    :goto_5
+    const/4 p0, 0x0
+
+    :cond_7
+    return-object p0
+
+    .line 90
+    :catch_0
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    const/4 p2, 0x1
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    .line 78
+    :goto_6
+    :try_start_2
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 79
+    instance-of v1, v0, Ljava/lang/InterruptedException;
+
+    .line 80
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 83
+    :goto_7
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_8
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll/۠᩸ᩴ;
+
+    invoke-virtual {v3}, Ll/۠᩸ᩴ;->ۙ()V
+
+    goto :goto_8
+
+    .line 86
+    :cond_8
+    :goto_9
+    :try_start_3
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_3
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_3
+
+    if-eqz v1, :cond_9
+
+    .line 93
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 94
+    :cond_9
+    throw v0
+
+    .line 90
+    :catch_3
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    const/4 v1, 0x1
+
+    goto :goto_9
 .end method
 
-.method private writeObject(Ljava/io/ObjectOutputStream;)V
-    .locals 6
+.method public static ۙ(Ll/᩵᩸ᩴ;Ljava/util/ArrayList;Ll/᩹᩸ᩴ;)Ll/ۜۙᩴ;
+    .locals 5
 
-    .line 757
-    invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
+    .line 59
+    new-instance v0, Ll/ۜۙᩴ;
 
-    .line 758
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
+    invoke-direct {v0}, Ll/ۜۙᩴ;-><init>()V
 
-    .line 759
-    iget-object v1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
+    .line 60
+    iget-object p0, p0, Ll/᩵᩸ᩴ;->᩶:Ljava/lang/Object;
 
-    .line 760
-    iget v2, p0, Ll/ۜ᩸ᩴ;->ܽ:I
+    check-cast p0, Ll/ۡ᩸ᩴ;
+
+    invoke-virtual {p0}, Ll/۬ۡ᩸;->᩶()Ll/ܳܿ᩸;
+
+    move-result-object p0
+
+    .line 61
+    :try_start_0
+    invoke-virtual {p0}, Ll/ܳܿ᩸;->۫()Ll/ᩴܿ᩸;
+
+    move-result-object v1
+
+    .line 62
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
 
     const/4 v3, 0x0
 
-    :goto_0
-    if-ge v3, v2, :cond_0
+    if-eqz v2, :cond_1
 
-    .line 761
-    aget-wide v4, v0, v3
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v4, v5}, Ljava/io/ObjectOutputStream;->writeLong(J)V
+    move-result-object v2
 
-    .line 762
-    aget-object v4, v1, v3
+    check-cast v2, Ll/ۖ᩸ᩴ;
 
-    invoke-virtual {p1, v4}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
+    .line 63
+    invoke-virtual {p2}, Ll/᩹᩸ᩴ;->getAsBoolean()Z
 
-    add-int/lit8 v3, v3, 0x1
+    move-result v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v4, :cond_0
+
+    .line 66
+    invoke-virtual {p0}, Ll/ܳܿ᩸;->close()V
+
+    return-object v3
+
+    .line 64
+    :cond_0
+    :try_start_1
+    invoke-interface {v2, v1}, Ll/ۖ᩸ᩴ;->ۙ(Ll/ᩴܿ᩸;)Ll/ۜۙᩴ;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ll/ۜۙᩴ;->ۙ(Ll/ۜۙᩴ;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
-
-.method private ۖ(J)I
-    .locals 5
-
-    .line 415
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    .line 416
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    :goto_0
-    add-int/lit8 v2, v1, -0x1
-
-    if-eqz v1, :cond_1
-
-    aget-wide v3, v0, v2
-
-    cmp-long v1, v3, p1
-
-    if-nez v1, :cond_0
-
-    return v2
-
-    :cond_0
-    move v1, v2
-
-    goto :goto_0
-
+    .line 66
     :cond_1
-    const/4 p1, -0x1
+    invoke-virtual {p0}, Ll/ܳܿ᩸;->close()V
 
-    return p1
-.end method
-
-.method public static synthetic ۙ(Ll/ۜ᩸ᩴ;J)I
-    .locals 0
-
-    .line 37
-    invoke-direct {p0, p1, p2}, Ll/ۜ᩸ᩴ;->ۖ(J)I
+    .line 67
+    invoke-virtual {p2}, Ll/᩹᩸ᩴ;->getAsBoolean()Z
 
     move-result p0
+
+    if-eqz p0, :cond_2
+
+    return-object v3
+
+    :cond_2
+    return-object v0
+
+    :catchall_0
+    move-exception p1
+
+    .line 60
+    :try_start_2
+    invoke-virtual {p0}, Ll/ܳܿ᩸;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_1
+    throw p1
+.end method
+
+.method public static bridge synthetic ۤ(Ll/ۜ᩸ᩴ;)Ljava/util/concurrent/atomic/AtomicInteger;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->᩸:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-object p0
+.end method
+
+.method public static ۫(Ll/ۜ᩸ᩴ;)Z
+    .locals 1
+
+    .line 104
+    iget-object v0, p0, Ll/ۜ᩸ᩴ;->ۤ:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->ۙ:Ljava/util/function/BooleanSupplier;
+
+    invoke-interface {p0}, Ljava/util/function/BooleanSupplier;->getAsBoolean()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
     return p0
 .end method
 
-
-# virtual methods
-.method public final clear()V
-    .locals 3
-
-    .line 435
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    .line 436
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    :goto_0
-    add-int/lit8 v2, v1, -0x1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 437
-    aput-object v1, v0, v2
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 439
-    iput v0, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    return-void
-.end method
-
-.method public final clone()Ljava/lang/Object;
-    .locals 2
-
-    .line 744
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll/ۜ᩸ᩴ;
-    :try_end_0
-    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 748
-    iget-object v1, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    invoke-virtual {v1}, [J->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [J
-
-    iput-object v1, v0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    .line 749
-    iget-object v1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    invoke-virtual {v1}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Ljava/lang/Object;
-
-    iput-object v1, v0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    .line 750
-    iput-object v1, v0, Ll/ۜ᩸ᩴ;->ܺ:Ll/۠᩸ᩴ;
-
-    .line 751
-    iput-object v1, v0, Ll/ۜ᩸ᩴ;->֡:Ll/ᩴᩳᩴ;
-
-    .line 752
-    iput-object v1, v0, Ll/ۜ᩸ᩴ;->ܿ:Ll/֡᩵ᩴ;
-
-    return-object v0
-
-    .line 746
-    :catch_0
-    new-instance v0, Ljava/lang/InternalError;
-
-    invoke-direct {v0}, Ljava/lang/InternalError;-><init>()V
-
-    throw v0
-.end method
-
-.method public final containsValue(Ljava/lang/Object;)Z
-    .locals 3
-
-    .line 449
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    .line 450
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    :goto_0
-    add-int/lit8 v2, v1, -0x1
-
-    if-eqz v1, :cond_1
-
-    aget-object v1, v0, v2
-
-    invoke-static {v1, p1}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    .line 456
-    iget v0, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final keySet()Ljava/util/Set;
-    .locals 1
-
-    .line 616
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->֡:Ll/ᩴᩳᩴ;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ll/ۚ᩸ᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۚ᩸ᩴ;-><init>(Ll/ۜ᩸ᩴ;)V
-
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->֡:Ll/ᩴᩳᩴ;
-
-    .line 617
-    :cond_0
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->֡:Ll/ᩴᩳᩴ;
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 430
-    iget v0, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    return v0
-.end method
-
-.method public final values()Ljava/util/Collection;
-    .locals 1
-
-    .line 726
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->ܿ:Ll/֡᩵ᩴ;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ll/ۘ᩸ᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۘ᩸ᩴ;-><init>(Ll/ۜ᩸ᩴ;)V
-
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->ܿ:Ll/֡᩵ᩴ;
-
-    .line 727
-    :cond_0
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->ܿ:Ll/֡᩵ᩴ;
-
-    return-object v0
-.end method
-
-.method public final ۙ(JLjava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    .line 462
-    invoke-direct {p0, p1, p2}, Ll/ۜ᩸ᩴ;->ۖ(J)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    .line 464
-    iget-object p1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aget-object p2, p1, v0
-
-    .line 465
-    aput-object p3, p1, v0
-
-    return-object p2
-
-    .line 468
-    :cond_0
-    iget v0, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    iget-object v1, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-nez v0, :cond_1
-
-    const/4 v2, 0x2
-
-    goto :goto_0
-
-    :cond_1
-    mul-int/lit8 v2, v0, 0x2
-
-    .line 469
-    :goto_0
-    new-array v2, v2, [J
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    mul-int/lit8 v1, v0, 0x2
-
-    .line 470
-    :goto_1
-    new-array v1, v1, [Ljava/lang/Object;
-
-    :goto_2
-    add-int/lit8 v3, v0, -0x1
-
-    if-eqz v0, :cond_3
-
-    .line 472
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    aget-wide v4, v0, v3
-
-    aput-wide v4, v2, v3
-
-    .line 473
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aget-object v0, v0, v3
-
-    aput-object v0, v1, v3
-
-    move v0, v3
-
-    goto :goto_2
-
-    .line 475
-    :cond_3
-    iput-object v2, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    .line 476
-    iput-object v1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    .line 478
-    :cond_4
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    aput-wide p1, v0, v1
-
-    .line 479
-    iget-object p1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aput-object p3, p1, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    .line 480
-    iput v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final ۙ(J)Z
+.method public static bridge synthetic ܳ(Ll/ۜ᩸ᩴ;)Ljava/util/List;
     .locals 0
 
-    .line 444
-    invoke-direct {p0, p1, p2}, Ll/ۜ᩸ᩴ;->ۖ(J)I
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->۫:Ljava/util/List;
 
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object p0
 .end method
 
-.method public final ۠()Ll/ᩴۡᩴ;
-    .locals 1
+.method public static bridge synthetic ᩴ(Ll/ۜ᩸ᩴ;)[Ll/ۜۙᩴ;
+    .locals 0
 
-    .line 410
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->ܺ:Ll/۠᩸ᩴ;
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->ܳ:[Ll/ۜۙᩴ;
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Ll/ܰ᩸ᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܰ᩸ᩴ;-><init>(Ll/ۜ᩸ᩴ;)V
-
-    iput-object v0, p0, Ll/ۜ᩸ᩴ;->ܺ:Ll/۠᩸ᩴ;
-
-    .line 411
-    :cond_0
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->ܺ:Ll/۠᩸ᩴ;
-
-    return-object v0
+    return-object p0
 .end method
 
-.method public final ۨ(J)Ljava/lang/Object;
-    .locals 4
+.method public static bridge synthetic ᩷(Ll/ۜ᩸ᩴ;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 0
 
-    .line 487
-    invoke-direct {p0, p1, p2}, Ll/ۜ᩸ᩴ;->ۖ(J)I
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->ۤ:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result p1
-
-    const/4 p2, -0x1
-
-    const/4 v0, 0x0
-
-    if-ne p1, p2, :cond_0
-
-    return-object v0
-
-    .line 489
-    :cond_0
-    iget-object p2, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aget-object p2, p2, p1
-
-    .line 490
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    sub-int/2addr v1, p1
-
-    add-int/lit8 v1, v1, -0x1
-
-    .line 491
-    iget-object v2, p0, Ll/ۜ᩸ᩴ;->᩶:[J
-
-    add-int/lit8 v3, p1, 0x1
-
-    invoke-static {v2, v3, v2, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 492
-    iget-object v2, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    invoke-static {v2, v3, v2, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 493
-    iget p1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    .line 494
-    iget-object v1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aput-object v0, v1, p1
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final ܰ(J)Ljava/lang/Object;
-    .locals 5
+.method public static bridge synthetic ᩸(Ll/ۜ᩸ᩴ;)Ljava/util/function/Supplier;
+    .locals 0
 
-    .line 423
-    iget-object v0, p0, Ll/ۜ᩸ᩴ;->᩶:[J
+    .line 0
+    iget-object p0, p0, Ll/ۜ᩸ᩴ;->ᩴ:Ljava/util/function/Supplier;
 
-    .line 424
-    iget v1, p0, Ll/ۜ᩸ᩴ;->ܽ:I
-
-    :goto_0
-    add-int/lit8 v2, v1, -0x1
-
-    if-eqz v1, :cond_1
-
-    aget-wide v3, v0, v2
-
-    cmp-long v1, v3, p1
-
-    if-nez v1, :cond_0
-
-    iget-object p1, p0, Ll/ۜ᩸ᩴ;->۫:[Ljava/lang/Object;
-
-    aget-object p1, p1, v2
-
-    return-object p1
-
-    :cond_0
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object p0
 .end method

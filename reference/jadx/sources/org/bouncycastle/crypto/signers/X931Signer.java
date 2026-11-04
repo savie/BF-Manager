@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.RSAKeyParameters;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X931Signer implements Signer {
     public static final int TRAILER_IMPLICIT = 188;
     public static final int TRAILER_RIPEMD128 = 13004;

@@ -1,14 +1,14 @@
 .class public final Ll/ܿᩴ;
 .super Ljava/lang/Object;
-.source "T58S"
+.source "Y4G0"
 
 
 # direct methods
-.method public static ۙ(Landroid/os/Looper;)Landroid/os/Handler;
+.method public static ۙ(Ljava/lang/String;)Landroid/os/LocaleList;
     .locals 0
 
-    .line 111
-    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
+    .line 1160
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
     move-result-object p0
 

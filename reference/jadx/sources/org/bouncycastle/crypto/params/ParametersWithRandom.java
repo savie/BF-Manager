@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ParametersWithRandom implements CipherParameters {
     public CipherParameters parameters;
     public SecureRandom random;

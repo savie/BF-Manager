@@ -544,7 +544,7 @@
     :goto_6
     if-ge v0, v14, :cond_7
 
-    invoke-static {v15, v14, v9, v0}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {v15, v14, v9, v0}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result v1
 

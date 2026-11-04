@@ -1,196 +1,200 @@
 package l;
 
-import java.io.IOException;
-import java.nio.channels.FileChannel;
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.ۛۢۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F70U */
+/* JADX INFO: renamed from: l.ۚ᩹᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: P1SD */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5970 implements InterfaceC13163 {
+public final class C5970 extends AbstractC25362 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f20326;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final C2241 f20460;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f20327 = new ArrayList();
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final C17902 f20461;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public boolean f20328;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final int f20329;
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final int f20462;
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C17259 f20330;
+    public final int[] f20463;
 
     /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C20559 f20331;
+    public int f20464;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C14438 f20332;
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public int f20465;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f20333;
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int f20466;
 
-    public C5970(AbstractC20745 abstractC20745, C20559 c20559) throws Throwable {
-        C13638.requireNonNull(abstractC20745, "file");
-        this.f20331 = c20559;
-        this.f20329 = Integer.MAX_VALUE;
-        C5339 c5339M49439 = C22273.m49439();
-        FileChannel fileChannel = null;
-        try {
-            FileChannel fileChannelMo33982 = abstractC20745.mo33982();
-            C13638.requireNonNull(fileChannelMo33982, "checkpoint channel");
-            try {
-                this.f20332 = new C14438(fileChannelMo33982, c5339M49439);
-            } catch (IOException | Error | RuntimeException e) {
-                fileChannel = fileChannelMo33982;
-                e = e;
-                if (fileChannel != null) {
-                    try {
-                        fileChannel.close();
-                    } catch (Throwable th) {
-                        e.addSuppressed(th);
-                    }
-                }
-                try {
-                    c5339M49439.close();
-                    throw e;
-                } catch (Throwable th2) {
-                    e.addSuppressed(th2);
-                    throw e;
-                }
-            }
-        } catch (IOException e2) {
-            e = e2;
-        } catch (Error e3) {
-            e = e3;
-        } catch (RuntimeException e4) {
-            e = e4;
-        }
+    public C5970(int i, int i2, int i3, int i4, int i5, C0573 c0573) {
+        super(i, i2, i3, i4, c0573);
+        this.f20464 = -1;
+        this.f20460 = new C2241(i, c0573);
+        int i6 = i + 1;
+        this.f20462 = i6;
+        this.f20463 = c0573.mo2595(i6, false);
+        this.f20465 = i6;
+        this.f20461 = new C17902(i4 - 1);
+        this.f20466 = i5 <= 0 ? (i4 / 4) + 4 : i5;
     }
 
+    @Override // l.AbstractC25362
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m16261(C5970 c5970, C17259 c17259) {
-        if (c5970.f20330 != c17259) {
-            throw new IllegalStateException("Hex restore delta entry is not active");
-        }
-        c5970.f20330 = null;
+    public final void mo17391(C0573 c0573) {
+        c0573.mo2593(this.f20463);
+        this.f20460.m7645(c0573);
+        c0573.mo2592(this.f81884);
     }
 
-    @Override // l.InterfaceC13163
-    public final void finish() throws IOException {
-        if (this.f20333) {
-            throw new IllegalStateException("Hex restore delta store is closed");
-        }
-        if (this.f20330 != null) {
-            throw new IOException("Hex restore delta entry is incomplete");
-        }
-        this.f20326 = true;
-    }
-
-    @Override // l.InterfaceC13163
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public final void mo16264() {
-        if (this.f20333 || this.f20328 || !this.f20326 || this.f20330 != null) {
-            throw new IllegalStateException("Hex restore delta store is not transferable");
-        }
-        this.f20328 = true;
-        this.f20333 = true;
-        this.f20327.clear();
-        this.f20332.m34725();
-    }
-
-    @Override // java.lang.AutoCloseable
-    public final void close() throws IOException {
-        if (this.f20333) {
-            return;
-        }
-        this.f20333 = true;
-        ArrayList arrayList = this.f20327;
-        Throwable th = null;
-        for (int size = arrayList.size() - 1; size >= 0; size--) {
-            try {
-                ((C12321) arrayList.get(size)).close();
-            } catch (Throwable th2) {
-                if (th == null) {
-                    th = th2;
-                } else {
-                    th.addSuppressed(th2);
-                }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    private int m17390() {
+        int iM56723 = m56723(4);
+        if (iM56723 != 0) {
+            int i = this.f20465 + 1;
+            this.f20465 = i;
+            int i2 = this.f20462;
+            if (i == Integer.MAX_VALUE) {
+                int i3 = Integer.MAX_VALUE - i2;
+                this.f20460.m7643(i3);
+                AbstractC25362.m56714(i2, i3, this.f20463);
+                this.f20465 -= i3;
+            }
+            int i4 = this.f20464 + 1;
+            this.f20464 = i4;
+            if (i4 == i2) {
+                this.f20464 = 0;
             }
         }
-        arrayList.clear();
-        try {
-            this.f20332.m34725();
-        } catch (Throwable th3) {
-            if (th == null) {
-                th = th3;
+        return iM56723;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:14:0x005d  */
+    /* JADX WARN: Code duplicated, block: B:26:0x008c A[DONT_INVERT, PHI: r14
+      0x008c: PHI (r14v3 int) = (r14v2 int), (r14v9 int) binds: [B:22:0x007b, B:24:0x0089] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:28:0x008f  */
+    @Override // l.AbstractC25362
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17902 mo17392() {
+        int iM40309;
+        int i;
+        int iM403010;
+        C17902 c17902 = this.f20461;
+        c17902.f58641 = 0;
+        int[] iArr = c17902.f58643;
+        int[] iArr2 = c17902.f58642;
+        int iM17390 = m17390();
+        int i2 = this.f81889;
+        int i3 = this.f81888;
+        if (iM17390 < i2) {
+            if (iM17390 != 0) {
+                if (i3 > iM17390) {
+                    i3 = iM17390;
+                }
+            }
+            return c17902;
+        }
+        iM17390 = i2;
+        int i4 = this.f81887;
+        C2241 c2241 = this.f20460;
+        byte[] bArr = this.f81884;
+        c2241.m7644(i4, bArr);
+        int iM7642 = this.f20465 - c2241.m7642();
+        int iM7647 = this.f20465 - c2241.m7647();
+        int iM7646 = c2241.m7646();
+        c2241.m7648(this.f20465);
+        int i5 = this.f20464;
+        int[] iArr3 = this.f20463;
+        iArr3[i5] = iM7646;
+        int i6 = this.f20462;
+        if (iM7642 < i6) {
+            int i7 = this.f81887;
+            if (bArr[i7 - iM7642] == bArr[i7]) {
+                iM40309 = 2;
+                iArr2[0] = 2;
+                iArr[0] = iM7642 - 1;
+                c17902.f58641 = 1;
             } else {
-                th.addSuppressed(th3);
-            }
-        }
-        if (th != null) {
-            if (th instanceof IOException) {
-                throw ((IOException) th);
-            }
-            if (th instanceof RuntimeException) {
-                throw ((RuntimeException) th);
-            }
-            if (th instanceof Error) {
-                throw ((Error) th);
-            }
-            throw new IOException("Unable to close hex restore delta store", th);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m16262(C5970 c5970) {
-        if (c5970.f20333 || c5970.f20326 || c5970.f20328) {
-            throw new IllegalStateException("Hex restore delta store is not writable");
-        }
-    }
-
-    @Override // l.InterfaceC13163
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22335 mo16263(int i) throws Throwable {
-        if (!this.f20333 && !this.f20326 && !this.f20328) {
-            if (this.f20330 != null) {
-                throw new IllegalStateException("Previous hex restore delta entry is unfinished");
-            }
-            if (i <= 0 || i > this.f20329) {
-                throw new IOException("Invalid hex restore delta entry length");
-            }
-            C12321 c12321 = null;
-            try {
-                C12321 c12322 = new C12321(this.f20332, i);
-                try {
-                    C17259 c17259 = new C17259(this, c12322, this.f20331, i);
-                    this.f20327.add(c12322);
-                    this.f20330 = c17259;
-                    return c17259;
-                } catch (IOException | Error | RuntimeException e) {
-                    e = e;
-                    c12321 = c12322;
-                    if (c12321 != null) {
-                        try {
-                            c12321.close();
-                        } catch (IOException e2) {
-                            e.addSuppressed(e2);
-                        }
-                    }
-                    throw e;
-                }
-            } catch (IOException e3) {
-                e = e3;
-            } catch (Error e4) {
-                e = e4;
-            } catch (RuntimeException e5) {
-                e = e5;
+                iM40309 = 0;
             }
         } else {
-            throw new IllegalStateException("Hex restore delta store is not writable");
+            iM40309 = 0;
+        }
+        if (iM7642 != iM7647 && iM7647 < i6) {
+            int i8 = this.f81887;
+            if (bArr[i8 - iM7647] == bArr[i8]) {
+                int i9 = c17902.f58641;
+                c17902.f58641 = i9 + 1;
+                iArr[i9] = iM7647 - 1;
+                iM40309 = 3;
+                iM7642 = iM7647;
+            }
+        }
+        if (c17902.f58641 > 0) {
+            iM40309 = C17156.m40309(bArr, this.f81887, iM7642, iM40309, iM17390);
+            iArr2[c17902.f58641 - 1] = iM40309;
+            if (iM40309 < i3) {
+                int i10 = iM40309 >= 3 ? iM40309 : 3;
+                i = this.f20466;
+                while (true) {
+                    int i11 = this.f20465 - iM7646;
+                    int i12 = i - 1;
+                    if (i == 0 || i11 >= i6) {
+                        break;
+                    }
+                    int i13 = this.f20464;
+                    int i14 = iArr3[(i13 - i11) + (i11 > i13 ? i6 : 0)];
+                    int i15 = this.f81887;
+                    int i16 = i15 + i10;
+                    if (bArr[i16 - i11] == bArr[i16] && bArr[i15 - i11] == bArr[i15] && (iM403010 = C17156.m40309(bArr, i15, i11, 1, iM17390)) > i10) {
+                        int i17 = c17902.f58641;
+                        iArr2[i17] = iM403010;
+                        iArr[i17] = i11 - 1;
+                        c17902.f58641 = i17 + 1;
+                        if (iM403010 >= i3) {
+                            break;
+                        }
+                        i10 = iM403010;
+                    }
+                    iM7646 = i14;
+                    i = i12;
+                }
+            }
+        } else {
+            if (iM40309 >= 3) {
+            }
+            i = this.f20466;
+            while (true) {
+                int i18 = this.f20465 - iM7646;
+                int i19 = i - 1;
+                if (i == 0) {
+                    break;
+                }
+                break;
+                break;
+                iM7646 = i14;
+                i = i19;
+            }
+        }
+        return c17902;
+    }
+
+    @Override // l.AbstractC25362
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void mo17393(int i) {
+        while (true) {
+            int i2 = i - 1;
+            if (i <= 0) {
+                return;
+            }
+            if (m17390() != 0) {
+                byte[] bArr = this.f81884;
+                int i3 = this.f81887;
+                C2241 c2241 = this.f20460;
+                c2241.m7644(i3, bArr);
+                this.f20463[this.f20464] = c2241.m7646();
+                c2241.m7648(this.f20465);
+            }
+            i = i2;
         }
     }
 }

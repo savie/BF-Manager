@@ -1,14 +1,9 @@
 package l;
 
-import android.view.MenuItem;
-
-/* JADX INFO: renamed from: l.᩸᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5LE */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.᩷ۚۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q5SL */
+/* JADX INFO: loaded from: classes.dex */
 public interface InterfaceC21839 {
     /* JADX INFO: renamed from: ۙ */
-    void mo21477(C12418 c12418, MenuItem menuItem);
-
-    /* JADX INFO: renamed from: ۙ */
-    void mo21478(C12418 c12418, C23707 c23707);
+    void mo2770(C8850 c8850);
 }

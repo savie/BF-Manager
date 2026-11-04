@@ -1,693 +1,423 @@
-.class public final Ll/۠᩶᩺;
-.super Ll/᩵᩶᩺;
-.source "UBKO"
+.class public final enum Ll/۠᩶᩺;
+.super Ljava/lang/Enum;
+.source "643O"
+
+
+# static fields
+.field public static final enum ֡:Ll/۠᩶᩺;
+
+.field public static final enum ֨:Ll/۠᩶᩺;
+
+.field public static final enum ۖ:Ll/۠᩶᩺;
+
+.field public static final ۜ:I
+
+.field public static final enum ۟:Ll/۠᩶᩺;
+
+.field public static final enum ۠:Ll/۠᩶᩺;
+
+.field public static final enum ۡ:Ll/۠᩶᩺;
+
+.field public static final enum ۢ:Ll/۠᩶᩺;
+
+.field public static final synthetic ܿ:[Ll/۠᩶᩺;
+
+.field public static final enum ᩳ:Ll/۠᩶᩺;
 
 
 # instance fields
-.field public ֨:F
+.field public final ܰ:I
 
-.field public ۖ:F
-
-.field public final ۘ:Landroid/graphics/Matrix;
-
-.field public final ۙ:Ljava/util/ArrayList;
-
-.field public ۚ:F
-
-.field public ۜ:F
-
-.field public final ۨ:Landroid/graphics/Matrix;
-
-.field public ۬:F
-
-.field public ܰ:Ljava/lang/String;
-
-.field public ᩹:F
-
-.field public ᩺:F
+.field public final ᩶:Ll/᩶ܿۘ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 7
 
-    .line 1091
-    invoke-direct {p0}, Ll/᩵᩶᩺;-><init>()V
+    .line 2463
+    new-instance v0, Ll/۠᩶᩺;
 
-    .line 1030
-    new-instance v0, Landroid/graphics/Matrix;
+    sget-object v1, Ll/᩶ܿۘ;->ܶ᩷:Ll/᩶ܿۘ;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Ll/۠᩶᩺;->ۘ:Landroid/graphics/Matrix;
-
-    .line 1034
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    .line 1036
-    iput v0, p0, Ll/۠᩶᩺;->᩹:F
-
-    .line 1037
-    iput v0, p0, Ll/۠᩶᩺;->ۖ:F
-
-    .line 1038
-    iput v0, p0, Ll/۠᩶᩺;->ۚ:F
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 1039
-    iput v1, p0, Ll/۠᩶᩺;->֨:F
-
-    .line 1040
-    iput v1, p0, Ll/۠᩶᩺;->۬:F
-
-    .line 1041
-    iput v0, p0, Ll/۠᩶᩺;->ۜ:F
-
-    .line 1042
-    iput v0, p0, Ll/۠᩶᩺;->᩺:F
-
-    .line 1046
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Ll/۠᩶᩺;->ۨ:Landroid/graphics/Matrix;
-
-    const/4 v0, 0x0
-
-    .line 1049
-    iput-object v0, p0, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/۠᩶᩺;Ll/᩸۠;)V
-    .locals 6
-
-    .line 1051
-    invoke-direct {p0}, Ll/᩵᩶᩺;-><init>()V
-
-    .line 1030
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Ll/۠᩶᩺;->ۘ:Landroid/graphics/Matrix;
-
-    .line 1034
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    .line 1036
-    iput v0, p0, Ll/۠᩶᩺;->᩹:F
-
-    .line 1037
-    iput v0, p0, Ll/۠᩶᩺;->ۖ:F
-
-    .line 1038
-    iput v0, p0, Ll/۠᩶᩺;->ۚ:F
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 1039
-    iput v1, p0, Ll/۠᩶᩺;->֨:F
-
-    .line 1040
-    iput v1, p0, Ll/۠᩶᩺;->۬:F
-
-    .line 1041
-    iput v0, p0, Ll/۠᩶᩺;->ۜ:F
-
-    .line 1042
-    iput v0, p0, Ll/۠᩶᩺;->᩺:F
-
-    .line 1046
-    new-instance v2, Landroid/graphics/Matrix;
-
-    invoke-direct {v2}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v2, p0, Ll/۠᩶᩺;->ۨ:Landroid/graphics/Matrix;
+    const-string v2, "UNKNOWN"
 
     const/4 v3, 0x0
 
-    .line 1049
-    iput-object v3, p0, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
+    const/4 v4, -0x1
 
-    .line 1052
-    iget v3, p1, Ll/۠᩶᩺;->᩹:F
+    invoke-direct {v0, v2, v3, v4, v1}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    iput v3, p0, Ll/۠᩶᩺;->᩹:F
+    sput-object v0, Ll/۠᩶᩺;->۠:Ll/۠᩶᩺;
 
-    .line 1053
-    iget v3, p1, Ll/۠᩶᩺;->ۖ:F
+    .line 2464
+    new-instance v0, Ll/۠᩶᩺;
 
-    iput v3, p0, Ll/۠᩶᩺;->ۖ:F
+    const-string v2, "DEREF"
 
-    .line 1054
-    iget v3, p1, Ll/۠᩶᩺;->ۚ:F
+    const/4 v4, 0x1
 
-    iput v3, p0, Ll/۠᩶᩺;->ۚ:F
+    invoke-direct {v0, v2, v4, v3, v1}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    .line 1055
-    iget v3, p1, Ll/۠᩶᩺;->֨:F
+    sput-object v0, Ll/۠᩶᩺;->۟:Ll/۠᩶᩺;
 
-    iput v3, p0, Ll/۠᩶᩺;->֨:F
+    .line 2465
+    new-instance v0, Ll/۠᩶᩺;
 
-    .line 1056
-    iget v3, p1, Ll/۠᩶᩺;->۬:F
+    const/4 v2, 0x2
 
-    iput v3, p0, Ll/۠᩶᩺;->۬:F
+    sget-object v3, Ll/᩶ܿۘ;->֨:Ll/᩶ܿۘ;
 
-    .line 1057
-    iget v3, p1, Ll/۠᩶᩺;->ۜ:F
+    const-string v4, "ASSIGN"
 
-    iput v3, p0, Ll/۠᩶᩺;->ۜ:F
+    invoke-direct {v0, v4, v2, v2, v3}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    .line 1058
-    iget v3, p1, Ll/۠᩶᩺;->᩺:F
+    sput-object v0, Ll/۠᩶᩺;->֡:Ll/۠᩶᩺;
 
-    iput v3, p0, Ll/۠᩶᩺;->᩺:F
+    .line 2466
+    new-instance v0, Ll/۠᩶᩺;
 
-    .line 1060
-    iget-object v3, p1, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
+    sget-object v2, Ll/᩶ܿۘ;->ᩳ᩷:Ll/᩶ܿۘ;
 
-    iput-object v3, p0, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
+    const-string v3, "PREINC"
 
-    if-eqz v3, :cond_0
+    const/4 v4, 0x3
 
-    .line 1063
-    invoke-virtual {p2, v3, p0}, Ll/۫۠;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x4
 
-    .line 1066
-    :cond_0
-    iget-object v3, p1, Ll/۠᩶᩺;->ۨ:Landroid/graphics/Matrix;
+    invoke-direct {v0, v3, v4, v5, v2}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    invoke-virtual {v2, v3}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    sput-object v0, Ll/۠᩶᩺;->ۖ:Ll/۠᩶᩺;
 
-    .line 1068
-    iget-object p1, p1, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
+    .line 2467
+    new-instance v0, Ll/۠᩶᩺;
 
-    const/4 v2, 0x0
+    sget-object v2, Ll/᩶ܿۘ;->۟᩷:Ll/᩶ܿۘ;
 
-    .line 1069
-    :goto_0
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    const-string v3, "PREDEC"
 
-    move-result v3
+    const/4 v4, 0x6
 
-    if-ge v2, v3, :cond_5
+    invoke-direct {v0, v3, v5, v4, v2}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    .line 1070
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    sput-object v0, Ll/۠᩶᩺;->ۡ:Ll/۠᩶᩺;
 
-    move-result-object v3
+    .line 2468
+    new-instance v0, Ll/۠᩶᩺;
 
-    .line 1071
-    instance-of v4, v3, Ll/۠᩶᩺;
+    const/16 v2, 0x8
 
-    if-eqz v4, :cond_1
+    sget-object v3, Ll/᩶ܿۘ;->֡᩷:Ll/᩶ܿۘ;
 
-    .line 1072
-    check-cast v3, Ll/۠᩶᩺;
+    const-string v5, "POSTINC"
 
-    .line 1073
-    iget-object v4, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
+    const/4 v6, 0x5
 
-    new-instance v5, Ll/۠᩶᩺;
+    invoke-direct {v0, v5, v6, v2, v3}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    invoke-direct {v5, v3, p2}, Ll/۠᩶᩺;-><init>(Ll/۠᩶᩺;Ll/᩸۠;)V
+    sput-object v0, Ll/۠᩶᩺;->֨:Ll/۠᩶᩺;
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 2469
+    new-instance v0, Ll/۠᩶᩺;
 
-    goto :goto_2
+    const/16 v2, 0xa
 
-    .line 1076
-    :cond_1
-    instance-of v4, v3, Ll/ᩴ᩶᩺;
+    sget-object v3, Ll/᩶ܿۘ;->ܿ᩷:Ll/᩶ܿۘ;
 
-    if-eqz v4, :cond_2
+    const-string v5, "POSTDEC"
 
-    .line 1077
-    new-instance v4, Ll/ᩴ᩶᩺;
+    invoke-direct {v0, v5, v4, v2, v3}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    check-cast v3, Ll/ᩴ᩶᩺;
+    sput-object v0, Ll/۠᩶᩺;->ۢ:Ll/۠᩶᩺;
 
-    .line 1436
-    invoke-direct {v4, v3}, Ll/ۡ᩶᩺;-><init>(Ll/ۡ᩶᩺;)V
+    .line 2470
+    new-instance v0, Ll/۠᩶᩺;
 
-    .line 1418
-    iput v0, v4, Ll/ᩴ᩶᩺;->ܶ:F
+    const/4 v2, 0x7
 
-    .line 1421
-    iput v1, v4, Ll/ᩴ᩶᩺;->֨:F
+    const/16 v3, 0xc
 
-    .line 1422
-    iput v1, v4, Ll/ᩴ᩶᩺;->ۚ:F
+    const-string v4, "FIRSTASGOP"
 
-    .line 1423
-    iput v0, v4, Ll/ᩴ᩶᩺;->ᩴ:F
+    invoke-direct {v0, v4, v2, v3, v1}, Ll/۠᩶᩺;-><init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
 
-    .line 1424
-    iput v1, v4, Ll/ᩴ᩶᩺;->᩸:F
+    sput-object v0, Ll/۠᩶᩺;->ᩳ:Ll/۠᩶᩺;
 
-    .line 1425
-    iput v0, v4, Ll/ᩴ᩶᩺;->ᩳ:F
+    .line 2462
+    invoke-static {}, Ll/۠᩶᩺;->ۙ()[Ll/۠᩶᩺;
 
-    .line 1427
-    sget-object v5, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
+    move-result-object v1
 
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->ۘ:Landroid/graphics/Paint$Cap;
+    sput-object v1, Ll/۠᩶᩺;->ܿ:[Ll/۠᩶᩺;
 
-    .line 1428
-    sget-object v5, Landroid/graphics/Paint$Join;->MITER:Landroid/graphics/Paint$Join;
+    .line 2474
+    iget v0, v0, Ll/۠᩶᩺;->ܰ:I
 
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->ۜ:Landroid/graphics/Paint$Join;
+    add-int/lit8 v0, v0, 0x56
 
-    const/high16 v5, 0x40800000    # 4.0f
+    sput v0, Ll/۠᩶᩺;->ۜ:I
 
-    .line 1429
-    iput v5, v4, Ll/ᩴ᩶᩺;->᩺:F
-
-    .line 1439
-    iget-object v5, v3, Ll/ᩴ᩶᩺;->۬:Ll/֨۫;
-
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->۬:Ll/֨۫;
-
-    .line 1440
-    iget v5, v3, Ll/ᩴ᩶᩺;->ܶ:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->ܶ:F
-
-    .line 1441
-    iget v5, v3, Ll/ᩴ᩶᩺;->֨:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->֨:F
-
-    .line 1442
-    iget-object v5, v3, Ll/ᩴ᩶᩺;->᩹:Ll/֨۫;
-
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->᩹:Ll/֨۫;
-
-    .line 1443
-    iget v5, v3, Ll/ۡ᩶᩺;->ۙ:I
-
-    iput v5, v4, Ll/ۡ᩶᩺;->ۙ:I
-
-    .line 1444
-    iget v5, v3, Ll/ᩴ᩶᩺;->ۚ:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->ۚ:F
-
-    .line 1445
-    iget v5, v3, Ll/ᩴ᩶᩺;->ᩴ:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->ᩴ:F
-
-    .line 1446
-    iget v5, v3, Ll/ᩴ᩶᩺;->᩸:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->᩸:F
-
-    .line 1447
-    iget v5, v3, Ll/ᩴ᩶᩺;->ᩳ:F
-
-    iput v5, v4, Ll/ᩴ᩶᩺;->ᩳ:F
-
-    .line 1449
-    iget-object v5, v3, Ll/ᩴ᩶᩺;->ۘ:Landroid/graphics/Paint$Cap;
-
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->ۘ:Landroid/graphics/Paint$Cap;
-
-    .line 1450
-    iget-object v5, v3, Ll/ᩴ᩶᩺;->ۜ:Landroid/graphics/Paint$Join;
-
-    iput-object v5, v4, Ll/ᩴ᩶᩺;->ۜ:Landroid/graphics/Paint$Join;
-
-    .line 1451
-    iget v3, v3, Ll/ᩴ᩶᩺;->᩺:F
-
-    iput v3, v4, Ll/ᩴ᩶᩺;->᩺:F
-
-    goto :goto_1
-
-    .line 1078
-    :cond_2
-    instance-of v4, v3, Ll/ᩳ᩶᩺;
-
-    if-eqz v4, :cond_4
-
-    .line 1079
-    new-instance v4, Ll/ᩳ᩶᩺;
-
-    check-cast v3, Ll/ᩳ᩶᩺;
-
-    .line 1365
-    invoke-direct {v4, v3}, Ll/ۡ᩶᩺;-><init>(Ll/ۡ᩶᩺;)V
-
-    .line 1083
-    :goto_1
-    iget-object v3, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1084
-    iget-object v3, v4, Ll/ۡ᩶᩺;->ۖ:Ljava/lang/String;
-
-    if-eqz v3, :cond_3
-
-    .line 1085
-    invoke-virtual {p2, v3, v4}, Ll/۫۠;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    :goto_2
-    add-int/lit8 v2, v2, 0x1
-
-    goto/16 :goto_0
-
-    .line 1081
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Unknown object in the tree!"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IILl/᩶ܿۘ;)V
+    .locals 0
 
-# virtual methods
-.method public final ۙ(Ll/ۧܳ᩺;Ll/ۛۨۨ;)V
-    .locals 3
+    .line 2476
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1103
-    sget-object v0, Ll/᩸֫ܰ;->ܰ:[I
+    .line 2477
+    iput p3, p0, Ll/۠᩶᩺;->ܰ:I
 
-    invoke-static {p1, v0, p2}, Ll/ܺܿ᩺;->ۙ(Ll/ۧܳ᩺;[ILl/ۛۨۨ;)Ll/᩷ܿ᩺;
+    .line 2478
+    iput-object p4, p0, Ll/۠᩶᩺;->᩶:Ll/᩶ܿۘ;
 
-    move-result-object p2
+    return-void
+.end method
 
-    .line 1116
-    iget v0, p0, Ll/۠᩶᩺;->᩹:F
+.method public static valueOf(Ljava/lang/String;)Ll/۠᩶᩺;
+    .locals 1
 
-    const-string v1, "http://schemas.android.com/apk/res/android"
+    .line 2462
+    const-class v0, Ll/۠᩶᩺;
 
-    const-string v2, "rotation"
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 96
-    invoke-virtual {p1, v1, v2}, Ll/ۧܳ᩺;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object v2
+    check-cast p0, Ll/۠᩶᩺;
 
-    if-eqz v2, :cond_0
+    return-object p0
+.end method
 
-    const/4 v2, 0x5
+.method public static values()[Ll/۠᩶᩺;
+    .locals 1
 
-    .line 91
-    invoke-virtual {p2, v0, v2}, Ll/᩷ܿ᩺;->ܰ(FI)F
+    .line 2462
+    sget-object v0, Ll/۠᩶᩺;->ܿ:[Ll/۠᩶᩺;
 
-    move-result v0
+    invoke-virtual {v0}, [Ll/۠᩶᩺;->clone()Ljava/lang/Object;
 
-    .line 1116
-    :cond_0
-    iput v0, p0, Ll/۠᩶᩺;->᩹:F
+    move-result-object v0
+
+    check-cast v0, [Ll/۠᩶᩺;
+
+    return-object v0
+.end method
+
+.method public static ۙ(Ll/᩶ܿۘ;I)I
+    .locals 1
+
+    .line 2494
+    sget-object v0, Ll/ۨ᩶᩺;->ۙ:[I
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p0
+
+    aget p0, v0, p0
 
     const/4 v0, 0x1
 
-    .line 1119
-    iget v2, p0, Ll/۠᩶᩺;->ۖ:F
-
-    invoke-virtual {p2, v2, v0}, Ll/᩷ܿ᩺;->ܰ(FI)F
-
-    move-result v0
-
-    iput v0, p0, Ll/۠᩶᩺;->ۖ:F
+    if-eq p0, v0, :cond_6
 
     const/4 v0, 0x2
 
-    .line 1120
-    iget v2, p0, Ll/۠᩶᩺;->ۚ:F
+    if-eq p0, v0, :cond_5
 
-    invoke-virtual {p2, v2, v0}, Ll/᩷ܿ᩺;->ܰ(FI)F
+    const/4 v0, 0x3
 
-    move-result v0
+    if-eq p0, v0, :cond_4
 
-    iput v0, p0, Ll/۠᩶᩺;->ۚ:F
+    const/4 v0, 0x4
 
-    .line 1123
-    iget v0, p0, Ll/۠᩶᩺;->֨:F
+    if-eq p0, v0, :cond_3
 
-    const-string v2, "scaleX"
+    const/16 p0, 0x60
 
-    .line 96
-    invoke-virtual {p1, v1, v2}, Ll/ۧܳ᩺;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-gt p0, p1, :cond_0
 
-    move-result-object v2
+    const/16 v0, 0x83
 
-    if-eqz v2, :cond_1
+    if-gt p1, v0, :cond_0
+
+    sub-int/2addr p1, p0
+
+    mul-int/lit8 p1, p1, 0x2
+
+    .line 2505
+    sget-object p0, Ll/۠᩶᩺;->ᩳ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p0, 0x100
+
+    if-ne p1, p0, :cond_1
+
+    .line 2507
+    sget-object p0, Ll/۠᩶᩺;->ᩳ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    add-int/lit8 p0, p0, 0x48
+
+    return p0
+
+    :cond_1
+    const/16 p0, 0x10e
+
+    if-gt p0, p1, :cond_2
+
+    const/16 p0, 0x113
+
+    if-gt p1, p0, :cond_2
+
+    add-int/lit16 p1, p1, -0xe9
+
+    mul-int/lit8 p1, p1, 0x2
+
+    .line 2509
+    sget-object p0, Ll/۠᩶᩺;->ᩳ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    :goto_0
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_2
+    const/4 p0, -0x1
+
+    return p0
+
+    .line 2502
+    :cond_3
+    sget-object p0, Ll/۠᩶᩺;->ۢ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    return p0
+
+    .line 2500
+    :cond_4
+    sget-object p0, Ll/۠᩶᩺;->֨:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    return p0
+
+    .line 2498
+    :cond_5
+    sget-object p0, Ll/۠᩶᩺;->ۡ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    return p0
+
+    .line 2496
+    :cond_6
+    sget-object p0, Ll/۠᩶᩺;->ۖ:Ll/۠᩶᩺;
+
+    iget p0, p0, Ll/۠᩶᩺;->ܰ:I
+
+    return p0
+.end method
+
+.method public static ۙ(I)Ll/۠᩶᩺;
+    .locals 5
+
+    .line 2482
+    invoke-static {}, Ll/۠᩶᩺;->values()[Ll/۠᩶᩺;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    .line 2483
+    iget v4, v3, Ll/۠᩶᩺;->ܰ:I
+
+    if-ne v4, p0, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 2487
+    :cond_1
+    sget-object p0, Ll/۠᩶᩺;->۠:Ll/۠᩶᩺;
+
+    return-object p0
+.end method
+
+.method public static synthetic ۙ()[Ll/۠᩶᩺;
+    .locals 3
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [Ll/۠᩶᩺;
+
+    .line 2462
+    sget-object v1, Ll/۠᩶᩺;->۠:Ll/۠᩶᩺;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۠᩶᩺;->۟:Ll/۠᩶᩺;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۠᩶᩺;->֡:Ll/۠᩶᩺;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۠᩶᩺;->ۖ:Ll/۠᩶᩺;
 
     const/4 v2, 0x3
 
-    .line 91
-    invoke-virtual {p2, v0, v2}, Ll/᩷ܿ᩺;->ܰ(FI)F
+    aput-object v1, v0, v2
 
-    move-result v0
-
-    .line 1123
-    :cond_1
-    iput v0, p0, Ll/۠᩶᩺;->֨:F
-
-    .line 1127
-    iget v0, p0, Ll/۠᩶᩺;->۬:F
-
-    const-string v2, "scaleY"
-
-    .line 96
-    invoke-virtual {p1, v1, v2}, Ll/ۧܳ᩺;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
+    sget-object v1, Ll/۠᩶᩺;->ۡ:Ll/۠᩶᩺;
 
     const/4 v2, 0x4
 
-    .line 91
-    invoke-virtual {p2, v0, v2}, Ll/᩷ܿ᩺;->ܰ(FI)F
+    aput-object v1, v0, v2
 
-    move-result v0
+    sget-object v1, Ll/۠᩶᩺;->֨:Ll/۠᩶᩺;
 
-    .line 1127
-    :cond_2
-    iput v0, p0, Ll/۠᩶᩺;->۬:F
+    const/4 v2, 0x5
 
-    .line 1130
-    iget v0, p0, Ll/۠᩶᩺;->ۜ:F
+    aput-object v1, v0, v2
 
-    const-string v2, "translateX"
-
-    .line 96
-    invoke-virtual {p1, v1, v2}, Ll/ۧܳ᩺;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
+    sget-object v1, Ll/۠᩶᩺;->ۢ:Ll/۠᩶᩺;
 
     const/4 v2, 0x6
 
-    .line 91
-    invoke-virtual {p2, v0, v2}, Ll/᩷ܿ᩺;->ܰ(FI)F
+    aput-object v1, v0, v2
 
-    move-result v0
+    sget-object v1, Ll/۠᩶᩺;->ᩳ:Ll/۠᩶᩺;
 
-    .line 1130
-    :cond_3
-    iput v0, p0, Ll/۠᩶᩺;->ۜ:F
+    const/4 v2, 0x7
 
-    .line 1132
-    iget v0, p0, Ll/۠᩶᩺;->᩺:F
-
-    const-string v2, "translateY"
-
-    .line 96
-    invoke-virtual {p1, v1, v2}, Ll/ۧܳ᩺;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    const/4 p1, 0x7
-
-    .line 91
-    invoke-virtual {p2, v0, p1}, Ll/᩷ܿ᩺;->ܰ(FI)F
-
-    move-result v0
-
-    .line 1132
-    :cond_4
-    iput v0, p0, Ll/۠᩶᩺;->᩺:F
-
-    const/4 p1, 0x0
-
-    .line 1136
-    invoke-virtual {p2, p1}, Ll/᩷ܿ᩺;->ۙ(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    .line 1138
-    iput-object p1, p0, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
-
-    .line 1147
-    :cond_5
-    iget-object p1, p0, Ll/۠᩶᩺;->ۨ:Landroid/graphics/Matrix;
-
-    invoke-virtual {p1}, Landroid/graphics/Matrix;->reset()V
-
-    .line 1148
-    iget p2, p0, Ll/۠᩶᩺;->ۖ:F
-
-    neg-float p2, p2
-
-    iget v0, p0, Ll/۠᩶᩺;->ۚ:F
-
-    neg-float v0, v0
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    .line 1149
-    iget p2, p0, Ll/۠᩶᩺;->֨:F
-
-    iget v0, p0, Ll/۠᩶᩺;->۬:F
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    .line 1150
-    iget p2, p0, Ll/۠᩶᩺;->᩹:F
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, v0, v0}, Landroid/graphics/Matrix;->postRotate(FFF)Z
-
-    .line 1151
-    iget p2, p0, Ll/۠᩶᩺;->ۜ:F
-
-    iget v0, p0, Ll/۠᩶᩺;->ۖ:F
-
-    add-float/2addr p2, v0
-
-    iget v0, p0, Ll/۠᩶᩺;->᩺:F
-
-    iget v1, p0, Ll/۠᩶᩺;->ۚ:F
-
-    add-float/2addr v0, v1
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-.end method
-
-.method public final ۙ()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 1248
-    :goto_0
-    iget-object v2, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_1
-
-    .line 1249
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/᩵᩶᩺;
-
-    invoke-virtual {v2}, Ll/᩵᩶᩺;->ۙ()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final ۙ([I)Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 1259
-    :goto_0
-    iget-object v2, p0, Ll/۠᩶᩺;->ۙ:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_0
-
-    .line 1260
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/᩵᩶᩺;
-
-    invoke-virtual {v2, p1}, Ll/᩵᩶᩺;->ۙ([I)Z
-
-    move-result v2
-
-    or-int/2addr v1, v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final ܰ()Ljava/lang/String;
-    .locals 1
-
-    .line 1095
-    iget-object v0, p0, Ll/۠᩶᩺;->ܰ:Ljava/lang/String;
+    aput-object v1, v0, v2
 
     return-object v0
 .end method

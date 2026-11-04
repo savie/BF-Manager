@@ -1,52 +1,35 @@
 package l;
 
-import java.util.Comparator;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۖܰۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y1KK */
+/* JADX INFO: renamed from: l.ۖۡ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: JAJQ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2565 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f10119;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f10120;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C13626 f10121;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f10122;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C13626 f10123;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String f10124;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final Comparator f10118 = C7618.comparing(new C19929(3));
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final Comparator f10117 = C21023.thenComparing(C7618.comparing(new C5008(2)), new C11739(0));
-
-    public C2565(String str) {
-        C13638.requireNonNull(str);
-        this.f10124 = str;
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || C2565.class != obj.getClass()) {
-            return false;
-        }
-        return this.f10124.equals(((C2565) obj).f10124);
+public final class C2565 implements Iterable {
+    public final long getLast() {
+        return 0L;
     }
 
     public final int hashCode() {
-        return this.f10124.hashCode();
+        if (1 > getLast()) {
+            return -1;
+        }
+        return (int) (((long) 31) + (getLast() ^ (getLast() >>> 32)));
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof C2565) {
+            return (1 > getLast() && 1 > ((C2565) obj).getLast()) || getLast() == ((C2565) obj).getLast();
+        }
+        return false;
+    }
+
+    public final String toString() {
+        return "1.." + getLast();
+    }
+
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C9276(0L, 0L);
     }
 }

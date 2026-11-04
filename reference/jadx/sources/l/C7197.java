@@ -1,42 +1,36 @@
 package l;
 
-import java.io.IOException;
+import java.lang.ref.WeakReference;
+import java.util.Iterator;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.۟ۗۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57DZ */
+/* JADX INFO: renamed from: l.ۜܰ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: R450 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7197 extends C11514 {
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public EnumC2300 f24004;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public AbstractC9315 f24005;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C4417 f24006;
-
-    public C7197(C15187 c15187, boolean z) {
-        super(c15187, z);
-        this.f24006 = new C4417();
+public class C7197 extends C24352 {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public void mo19770() {
+        for (C14769 c14769M43093 = this.f78966.m43093(); c14769M43093.m35550(); c14769M43093 = c14769M43093.f48336) {
+            c14769M43093.f48335 = m19769((AbstractC16344) c14769M43093.f48335);
+        }
     }
 
-    @Override // l.C11514, l.InterfaceC4705
-    public final int getLength() {
-        return this.f24006.getLength() + super.getLength() + 1 + this.f24005.getLength();
-    }
-
-    @Override // l.C11514, l.InterfaceC4705
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2341(InterfaceC19275 interfaceC19275) throws IOException {
-        C23509 c23509 = (C23509) interfaceC19275;
-        c23509.m51765(this.f24004.f8210);
-        this.f24005.mo2341(c23509);
-        this.f24006.mo2341(c23509);
-        super.mo2341(c23509);
-    }
-
-    public final String toString() {
-        return this.f24004.toString() + " " + this.f24005.toString() + " " + this.f24006.toString();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static AbstractC16344 m19769(AbstractC16344 abstractC16344) {
+        if (abstractC16344 instanceof C9433) {
+            AbstractC11781 abstractC11781 = abstractC16344.f53083;
+            C9433 c9433 = (C9433) abstractC16344;
+            if (abstractC11781.f38066 == EnumC13603.f43213 && c9433.m24812()) {
+                C2175 c2175 = new C2175(abstractC11781);
+                Iterator it = abstractC16344.mo7472((Predicate) null, EnumC13908.RECURSIVE).iterator();
+                while (it.hasNext()) {
+                    c2175.mo7481((AbstractC11781) it.next());
+                }
+                C25296 c25296 = c2175.f53082;
+                c25296.f81699 = c25296.f81699.m35552(new WeakReference(new C8688()));
+                return c2175;
+            }
+        }
+        return abstractC16344;
     }
 }

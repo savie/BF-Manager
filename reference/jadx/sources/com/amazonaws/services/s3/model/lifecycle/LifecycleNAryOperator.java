@@ -5,10 +5,10 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class LifecycleNAryOperator extends LifecycleFilterPredicate {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final List f684;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final List f674;
 
     public LifecycleNAryOperator(List list) {
-        this.f684 = list;
+        this.f674 = list;
     }
 }

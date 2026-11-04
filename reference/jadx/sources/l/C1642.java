@@ -1,91 +1,53 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.֫ۛᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֫ۗܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S9CL */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1642 implements InterfaceC20693 {
-    public final Object[] a;
-    public int b;
-    public final int c;
-    public final int d;
+public final class C1642 {
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f5675;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f5676;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final char[] f5677;
+
+    public C1642(String str, char[] cArr, String str2) {
+        this.f5676 = str;
+        this.f5677 = Arrays.copyOf(cArr, cArr.length);
+        this.f5675 = str2;
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m5811() {
+        return this.f5676;
     }
 
-    public C1642(Object[] objArr, int i, int i2, int i3) {
-        this.a = objArr;
-        this.b = i;
-        this.c = i2;
-        this.d = i3 | 16448;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final char[] m5813() {
+        return this.f5677;
     }
 
-    @Override // l.InterfaceC20693
-    public final InterfaceC20693 trySplit() {
-        int i = this.b;
-        int i2 = (this.c + i) >>> 1;
-        if (i >= i2) {
-            return null;
-        }
-        this.b = i2;
-        return new C1642(this.a, i, i2, this.d);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m5810() {
+        return this.f5675;
     }
 
-    @Override // l.InterfaceC20693
-    public final void forEachRemaining(Consumer consumer) {
-        int i;
-        consumer.getClass();
-        Object[] objArr = this.a;
-        int length = objArr.length;
-        int i2 = this.c;
-        if (length < i2 || (i = this.b) < 0) {
-            return;
-        }
-        this.b = i2;
-        if (i < i2) {
-            do {
-                consumer.accept(objArr[i]);
-                i++;
-            } while (i < i2);
-        }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean m5814() {
+        return this.f5676.isEmpty() && this.f5677.length == 0;
     }
 
-    @Override // l.InterfaceC20693
-    public final boolean tryAdvance(Consumer consumer) {
-        consumer.getClass();
-        int i = this.b;
-        if (i < 0 || i >= this.c) {
-            return false;
-        }
-        this.b = i + 1;
-        consumer.accept(this.a[i]);
-        return true;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean m5812() {
+        return this.f5676.equals("Guest") && this.f5677.length == 0;
     }
 
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.c - this.b;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.d;
-    }
-
-    @Override // l.InterfaceC20693
-    public final Comparator getComparator() {
-        if (C21398.$default$hasCharacteristics(this, 4)) {
-            return null;
-        }
-        throw new IllegalStateException();
+    public final String toString() {
+        return "AuthenticationContext[" + this.f5676 + '@' + this.f5675 + ']';
     }
 }

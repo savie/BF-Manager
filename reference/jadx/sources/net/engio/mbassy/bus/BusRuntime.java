@@ -3,11 +3,11 @@ package net.engio.mbassy.bus;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import l.C16523;
+import l.C14442;
 import net.engio.mbassy.bus.common.PubSubSupport;
 import net.engio.mbassy.bus.error.MissingPropertyException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BusRuntime {
     public Map properties = new HashMap();
     public PubSubSupport provider;
@@ -20,7 +20,7 @@ public class BusRuntime {
         if (contains(str)) {
             return this.properties.get(str);
         }
-        throw new MissingPropertyException(C16523.m38890("The property ", str, " is not available in this runtime"));
+        throw new MissingPropertyException(C14442.m34865("The property ", str, " is not available in this runtime"));
     }
 
     public PubSubSupport getProvider() {

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:tint="#ffffff"
-    android:height="24dp"
-    android:width="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-    <path
-        android:fillColor="@android:color/white"
-        android:pathData="M20,15.31L23.31,12 20,8.69V4h-4.69L12,0.69 8.69,4H4v4.69L0.69,12 4,15.31V20h4.69L12,23.31 15.31,20H20v-4.69zM12,18c-3.31,0 -6,-2.69 -6,-6s2.69,-6 6,-6 6,2.69 6,6 -2.69,6 -6,6z"/>
-</vector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/MT_Protector_res_0x7f08007d"
+        android:left="6dp"
+        android:top="7dp"
+        android:right="6dp"
+        android:bottom="7dp"/>
+    <item
+        android:left="4dp"
+        android:top="6dp"
+        android:right="4dp"
+        android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="2dp"/>
+            <stroke
+                android:width="1.5dp"
+                android:color="@color/MT_Protector_res_0x7f06004a"/>
+        </shape>
+    </item>
+</layer-list>

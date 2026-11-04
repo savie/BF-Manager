@@ -1,27 +1,65 @@
-.class public final Ll/ۤ۫ۤ;
-.super Ll/ۛۡۤ;
-.source "17L4"
+.class public interface abstract Ll/ۤ۫ۤ;
+.super Ljava/lang/Object;
+.source "J4V0"
+
+# interfaces
+.implements Ll/֫۫ۤ;
 
 
-# instance fields
-.field public final ۨۙ:Ll/᩻᩵ۤ;
+# virtual methods
+.method public abstract getPackageName()Ljava/lang/String;
+.end method
 
+.method public abstract getPath()Ljava/lang/String;
+.end method
 
-# direct methods
-.method public constructor <init>(Ll/ۛۡۤ;Ll/᩻᩵ۤ;)V
-    .locals 1
+.method public abstract getType(I)Ll/ܳ۫ۤ;
+.end method
 
-    .line 257
-    invoke-virtual {p1}, Ll/ۛۡۤ;->֫()Ll/ܽۤۤ;
+.method public abstract getType(Ljava/lang/String;)Ll/ܳ۫ۤ;
+.end method
 
-    move-result-object v0
+.method public abstract ۙ()Ll/ۜܳۤ;
+.end method
 
-    iget-object p1, p1, Ll/ܽۤۤ;->᩶:Ll/֡᩵ۤ;
+.method public abstract ۙ᩷()Ll/ܿۤۤ;
+.end method
 
-    invoke-direct {p0, v0, p1}, Ll/ۛۡۤ;-><init>(Ll/ܽۤۤ;Ll/֡᩵ۤ;)V
+.method public abstract ۚ(I)Ll/᩸۫ۤ;
+.end method
 
-    .line 258
-    iput-object p2, p0, Ll/ۤ۫ۤ;->ۨۙ:Ll/᩻᩵ۤ;
+.method public abstract ۚ᩷()Ljava/util/List;
+.end method
 
-    return-void
+.method public abstract ۛۙ()I
+.end method
+
+.method public abstract ۟()I
+.end method
+
+.method public abstract ۫()I
+.end method
+
+.method public abstract ܽ(I)Ll/۬ܳۤ;
+.end method
+
+.method public abstract ܽ᩷()Ljava/lang/Iterable;
+.end method
+
+.method public abstract ᩵()I
+.end method
+
+.method public abstract ᩵ۙ()Ljava/lang/Iterable;
+.end method
+
+.method public abstract ᩶()Ljava/lang/Iterable;
+.end method
+
+.method public abstract ᩹(I)Ll/ۙ۫ۤ;
+.end method
+
+.method public abstract ᩺ۙ()I
+.end method
+
+.method public abstract ᩺᩷()Ljava/lang/Iterable;
 .end method

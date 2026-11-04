@@ -5,38 +5,38 @@ import com.amazonaws.logging.LogFactory;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import l.C0561;
-import l.C1679;
+import l.C20196;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class InternalConfig {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final Log f215 = LogFactory.m302(InternalConfig.class);
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final HashMap f216;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final Log f205 = LogFactory.m296(InternalConfig.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final SignerConfig f217 = new SignerConfig("AWS4SignerType");
+    public final SignerConfig f206 = new SignerConfig("AWS4SignerType");
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final HashMap f218;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f207;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f219;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final HashMap f208;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f220;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f209;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final HashMap f221;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f210;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f211;
 
     public InternalConfig() {
         HashMap map = new HashMap();
         map.put("eu-central-1", new SignerConfig("AWS4SignerType"));
         map.put("cn-north-1", new SignerConfig("AWS4SignerType"));
-        this.f216 = map;
+        this.f211 = map;
         HashMap map2 = new HashMap();
         map2.put("ec2", new SignerConfig("QueryStringSignerType"));
         map2.put("email", new SignerConfig("AWS4SignerType"));
@@ -44,7 +44,7 @@ public class InternalConfig {
         map2.put("sdb", new SignerConfig("QueryStringSignerType"));
         map2.put("lex", new SignerConfig("AmazonLexV4Signer"));
         map2.put("polly", new SignerConfig("AmazonPollyCustomPresigner"));
-        this.f221 = map2;
+        this.f208 = map2;
         HashMap map3 = new HashMap();
         map3.put("s3/eu-central-1", new SignerConfig("AWSS3V4SignerType"));
         map3.put("s3/cn-north-1", new SignerConfig("AWSS3V4SignerType"));
@@ -57,7 +57,7 @@ public class InternalConfig {
         map3.put("lex/cn-north-1", new SignerConfig("AmazonLexV4Signer"));
         map3.put("polly/eu-central-1", new SignerConfig("AmazonPollyCustomPresigner"));
         map3.put("polly/cn-north-1", new SignerConfig("AmazonPollyCustomPresigner"));
-        this.f218 = map3;
+        this.f209 = map3;
         HashMap map4 = new HashMap();
         map4.put("AmazonCloudWatchClient", new HttpClientConfig("monitoring"));
         map4.put("AmazonCloudWatchLogsClient", new HttpClientConfig("logs"));
@@ -80,51 +80,51 @@ public class InternalConfig {
         map4.put("AmazonTextractClient", new HttpClientConfig("textract"));
         map4.put("AmazonTranscribeClient", new HttpClientConfig("transcribe"));
         map4.put("AmazonTranslateClient", new HttpClientConfig("translate"));
-        this.f219 = map4;
+        this.f207 = map4;
         ArrayList arrayList = new ArrayList();
         arrayList.add(new HostRegexToRegionMapping("(.+\\.)?s3\\.amazonaws\\.com", "us-east-1"));
         arrayList.add(new HostRegexToRegionMapping("(.+\\.)?s3-external-1\\.amazonaws\\.com", "us-east-1"));
         arrayList.add(new HostRegexToRegionMapping("(.+\\.)?s3-fips-us-gov-west-1\\.amazonaws\\.com", "us-gov-west-1"));
-        this.f220 = arrayList;
+        this.f210 = arrayList;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HttpClientConfig m286(String str) {
-        return (HttpClientConfig) this.f219.get(str);
+    public final HttpClientConfig m280(String str) {
+        return (HttpClientConfig) this.f207.get(str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final SignerConfig m287(String str, String str2) {
+    public final SignerConfig m281(String str, String str2) {
         if (str == null) {
             throw new IllegalArgumentException();
         }
         if (str2 != null) {
-            SignerConfig signerConfig = (SignerConfig) this.f218.get(C1679.m5594(str, "/", str2));
+            SignerConfig signerConfig = (SignerConfig) this.f209.get(C20196.m46451(str, "/", str2));
             if (signerConfig != null) {
                 return signerConfig;
             }
-            SignerConfig signerConfig2 = (SignerConfig) this.f216.get(str2);
+            SignerConfig signerConfig2 = (SignerConfig) this.f211.get(str2);
             if (signerConfig2 != null) {
                 return signerConfig2;
             }
         }
-        SignerConfig signerConfig3 = (SignerConfig) this.f221.get(str);
-        return signerConfig3 == null ? this.f217 : signerConfig3;
+        SignerConfig signerConfig3 = (SignerConfig) this.f208.get(str);
+        return signerConfig3 == null ? this.f206 : signerConfig3;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m288() {
-        return C0561.unmodifiableList(this.f220);
+    public final List m282() {
+        return C4681.unmodifiableList(this.f210);
     }
 
     public class Factory {
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public static final InternalConfig f222;
+        public static final InternalConfig f212;
 
         static {
             try {
-                f222 = new InternalConfig();
+                f212 = new InternalConfig();
             } catch (RuntimeException e) {
                 throw e;
             } catch (Exception e2) {
@@ -133,8 +133,8 @@ public class InternalConfig {
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public static InternalConfig m289() {
-            return f222;
+        public static InternalConfig m283() {
+            return f212;
         }
     }
 }

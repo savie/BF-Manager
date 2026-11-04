@@ -1,134 +1,163 @@
-.class public Ll/ܿ۟ܶ;
-.super Ll/ܳ۟ܶ;
-.source "532I"
+.class public abstract Ll/ܿ۟ܶ;
+.super Ljava/lang/Object;
+.source "07ZJ"
+
+# interfaces
+.implements Ll/᩶ܰܶ;
 
 
 # instance fields
-.field public final ܺ:Ll/ܳ۟ܶ;
+.field public ۙ:Lorg/bouncycastle/crypto/modes/CTRModeCipher;
 
 
-# direct methods
-.method public constructor <init>(Ll/ܳ۟ܶ;)V
+# virtual methods
+.method public final synthetic ۙ(I)V
     .locals 0
-
-    .line 1505
-    invoke-direct {p0}, Ll/ܳ۟ܶ;-><init>()V
-
-    .line 1506
-    iput-object p1, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
 
     return-void
 .end method
 
+.method public ۙ(I[BI[BI)V
+    .locals 6
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    .line 73
+    iget-object v0, p0, Ll/ܿ۟ܶ;->ۙ:Lorg/bouncycastle/crypto/modes/CTRModeCipher;
 
-    .line 1501
-    check-cast p1, Ljava/lang/Character;
+    move-object v1, p2
 
-    .line 918
-    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
+    move v2, p1
 
-    move-result p1
+    move v3, p3
 
-    invoke-virtual {p0, p1}, Ll/ܿ۟ܶ;->ۙ(C)Z
+    move-object v4, p4
 
-    move-result p1
+    move v5, p5
 
-    return p1
+    invoke-interface/range {v0 .. v5}, Lorg/bouncycastle/crypto/StreamCipher;->processBytes([BII[BI)I
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public ۙ(I[B[B)V
+    .locals 4
 
-    .line 1545
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 48
+    array-length v0, p3
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
+    const/16 v2, 0x10
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-le v0, v2, :cond_0
 
-    const-string v1, ".negate()"
+    new-array v0, v2, [B
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 50
+    invoke-static {p3, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object p3, v0
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۖ(Ljava/lang/CharSequence;)Z
-    .locals 1
-
-    .line 1521
-    iget-object v0, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
-
-    invoke-virtual {v0, p1}, Ll/ܳ۟ܶ;->ۨ(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ۙ(Ljava/lang/CharSequence;)I
-    .locals 2
-
-    .line 1526
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    .line 53
+    :cond_0
+    invoke-interface {p0}, Ll/᩶ܰܶ;->getBlockSize()I
 
     move-result v0
 
-    iget-object v1, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
+    .line 54
+    array-length v2, p2
 
-    invoke-virtual {v1, p1}, Ll/ܳ۟ܶ;->ۙ(Ljava/lang/CharSequence;)I
+    if-le v2, v0, :cond_1
 
-    move-result p1
+    .line 55
+    new-array v2, v0, [B
 
-    sub-int/2addr v0, p1
+    .line 56
+    invoke-static {p2, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    return v0
+    move-object p2, v2
+
+    .line 61
+    :cond_1
+    :try_start_0
+    new-instance v0, Lorg/bouncycastle/crypto/params/ParametersWithIV;
+
+    new-instance v2, Lorg/bouncycastle/crypto/params/KeyParameter;
+
+    array-length v3, p2
+
+    invoke-direct {v2, p2, v1, v3}, Lorg/bouncycastle/crypto/params/KeyParameter;-><init>([BII)V
+
+    array-length p2, p3
+
+    invoke-direct {v0, v2, p3, v1, p2}, Lorg/bouncycastle/crypto/params/ParametersWithIV;-><init>(Lorg/bouncycastle/crypto/CipherParameters;[BII)V
+
+    .line 63
+    new-instance p2, Lorg/bouncycastle/crypto/engines/TwofishEngine;
+
+    invoke-direct {p2}, Lorg/bouncycastle/crypto/engines/TwofishEngine;-><init>()V
+
+    invoke-static {p2}, Lorg/bouncycastle/crypto/modes/SICBlockCipher;->newInstance(Lorg/bouncycastle/crypto/BlockCipher;)Lorg/bouncycastle/crypto/modes/CTRModeCipher;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ll/ܿ۟ܶ;->ۙ:Lorg/bouncycastle/crypto/modes/CTRModeCipher;
+
+    if-nez p1, :cond_2
+
+    const/4 v1, 0x1
+
+    .line 64
+    :cond_2
+    invoke-interface {p2, v1, v0}, Lorg/bouncycastle/crypto/BlockCipher;->init(ZLorg/bouncycastle/crypto/CipherParameters;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const/4 p2, 0x0
+
+    .line 66
+    iput-object p2, p0, Ll/ܿ۟ܶ;->ۙ:Lorg/bouncycastle/crypto/modes/CTRModeCipher;
+
+    .line 67
+    throw p1
 .end method
 
-.method public final ۙ()Ll/ܳ۟ܶ;
+.method public final synthetic ۙ([B)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final synthetic ۤ()Z
     .locals 1
 
     const/4 v0, 0x0
 
-    throw v0
+    return v0
 .end method
 
-.method public final ۙ(C)Z
+.method public final synthetic ᩴ()Z
     .locals 1
 
-    .line 1511
-    iget-object v0, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ll/ܳ۟ܶ;->ۙ(C)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
+    return v0
 .end method
 
-.method public final ۨ(Ljava/lang/CharSequence;)Z
+.method public final synthetic ᩷()I
     .locals 1
 
-    .line 1516
-    iget-object v0, p0, Ll/ܿ۟ܶ;->ܺ:Ll/ܳ۟ܶ;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ll/ܳ۟ܶ;->ۖ(Ljava/lang/CharSequence;)Z
+    return v0
+.end method
 
-    move-result p1
+.method public final synthetic ᩷(I[BI[BI)V
+    .locals 0
 
-    return p1
+    return-void
 .end method

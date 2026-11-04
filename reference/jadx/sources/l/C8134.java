@@ -1,57 +1,28 @@
 package l;
 
-import android.text.TextUtils;
-
-/* JADX INFO: renamed from: l.۠ۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8134 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Object f28474;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Object f28475;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m21433(C8134 c8134, Object obj) {
-        c8134.f28475 = obj;
-        c8134.f28474 = null;
+/* JADX INFO: renamed from: l.۟᩶ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C8134 extends EnumC14757 {
+    public /* synthetic */ C8134() {
+        this("FORMAT_22T", 15);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m21434(C8134 c8134, String str) {
-        c8134.f28475 = null;
-        c8134.f28474 = str;
+    public C8134(String str, int i) {
+        super(str, i, 0);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m21435(C8134 c8134, String str, InterfaceC19423 interfaceC19423) {
-        Object obj = c8134.f28475;
-        if (obj == null) {
-            return;
-        }
-        String strMo21047 = interfaceC19423.mo21047(obj);
-        if (TextUtils.isEmpty(strMo21047) || !TextUtils.equals(strMo21047, str)) {
-            return;
-        }
-        c8134.f28474 = obj;
-        c8134.f28475 = null;
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        return new C9536(this, EnumC14757.m35466(i), 0, (interfaceC16337.m41673() - 1) + ((short) interfaceC16337.read()), 0L, EnumC14757.m35445(i), EnumC14757.m35463(i));
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static Object m21436(C8134 c8134) {
-        return c8134.f28474;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m21437(C8134 c8134) {
-        c8134.f28474 = null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m21432(C8134 c8134) {
-        c8134.f28475 = null;
-        c8134.f28474 = null;
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        abstractC3659.m11858(interfaceC23797.m41673());
+        EnumC14757.m35480(abstractC3659.m11863(), EnumC14757.m35469(abstractC3659.mo2677(), abstractC3659.mo4905()));
+        interfaceC23797.m53082();
     }
 }

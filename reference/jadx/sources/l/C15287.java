@@ -1,17 +1,13 @@
 package l;
 
-import java.util.function.IntConsumer;
+import java.util.function.IntFunction;
 
-/* JADX INFO: renamed from: l.ܶܳۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: PAKQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15287 implements IntConsumer {
-    @Override // java.util.function.IntConsumer
-    public final void accept(int i) {
-        C17403.m40551(i);
-    }
-
-    public /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
+/* JADX INFO: renamed from: l.ܳۤ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6FF */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C15287 implements IntFunction {
+    @Override // java.util.function.IntFunction
+    public final Object apply(int i) {
+        return new C21943[i];
     }
 }

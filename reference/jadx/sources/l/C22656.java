@@ -1,61 +1,70 @@
 package l;
 
-import java.io.IOException;
-import java.util.zip.GZIPOutputStream;
+import org.bouncycastle.crypto.digests.RIPEMD160Digest;
+import org.bouncycastle.crypto.macs.HMac;
+import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: renamed from: l.᩺֨ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K14B */
+/* JADX INFO: renamed from: l.᩸۟ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7XH */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22656 implements InterfaceC19083 {
+public class C22656 implements InterfaceC7299 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13108 f73803;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public HMac f73574;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f73575;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final byte[] f73576 = new byte[4];
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C11018 f73804 = new C11018();
+    public RIPEMD160Digest f73573 = new RIPEMD160Digest();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13626 f73805;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14895 f73806;
-
-    public C22656(C14895 c14895, C13108 c13108, C13626 c13626) {
-        this.f73806 = c14895;
-        this.f73803 = c13108;
-        this.f73805 = c13626;
+    @Override // l.InterfaceC7299
+    public final int getBlockSize() {
+        return 20;
     }
 
-    @Override // l.InterfaceC19083
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo30475() {
-        C11018 c11018 = this.f73804;
-        c11018.writeInt(1382253411);
-        c11018.m27784(this.f73806.f48666);
-        this.f73803.m32413(c11018);
-    }
-
-    @Override // l.InterfaceC19083
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo30474() {
-        try {
-            this.f73805.m33324();
-            synchronized (this.f73806) {
-                GZIPOutputStream gZIPOutputStream = new GZIPOutputStream(this.f73805.m33318().mo33976(false));
-                try {
-                    gZIPOutputStream.write(this.f73804.m27788(), 0, this.f73804.size());
-                    gZIPOutputStream.close();
-                } catch (Throwable th) {
-                    try {
-                        gZIPOutputStream.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                    throw th;
-                }
-            }
-        } catch (IOException e) {
-            this.f73806.f48667.m42627((Throwable) e);
+    @Override // l.InterfaceC7299
+    public final void init(byte[] bArr) {
+        if (bArr.length > 20) {
+            byte[] bArr2 = new byte[20];
+            System.arraycopy(bArr, 0, bArr2, 0, 20);
+            bArr = bArr2;
         }
+        KeyParameter keyParameter = new KeyParameter(bArr, 0, bArr.length);
+        HMac hMac = new HMac(this.f73573);
+        this.f73574 = hMac;
+        hMac.init(keyParameter);
+    }
+
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo19965(int i) {
+        byte[] bArr = this.f73576;
+        bArr[0] = (byte) (i >>> 24);
+        bArr[1] = (byte) (i >>> 16);
+        bArr[2] = (byte) (i >>> 8);
+        bArr[3] = (byte) i;
+        mo19966(4, bArr);
+    }
+
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo19966(int i, byte[] bArr) {
+        this.f73574.update(bArr, 0, i);
+    }
+
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo19967(int i, byte[] bArr) {
+        this.f73574.doFinal(bArr, i);
+    }
+
+    @Override // l.InterfaceC7299
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2726() {
+        return this.f73575;
     }
 }

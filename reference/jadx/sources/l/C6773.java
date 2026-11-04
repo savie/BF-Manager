@@ -1,23 +1,47 @@
 package l;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۜ۬֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5AHS */
+/* JADX INFO: renamed from: l.ۜ֡۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: R9JP */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C6773 implements BiFunction {
-    public /* synthetic */ BiFunction andThen(Function function) {
-        return C5689.$default$andThen(this, function);
+public final class C6773 extends AbstractC2323 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f22588;
+
+    public C6773(boolean z) {
+        this.f22588 = z;
     }
 
-    @Override // java.util.function.BiFunction
-    public final Object apply(Object obj, Object obj2) {
-        C21590 c21590 = (C21590) obj2;
-        if (c21590 == null || System.currentTimeMillis() - c21590.f70050 > 10000) {
-            return new C21590();
+    public final boolean equals(Object obj) {
+        return (obj instanceof C6773) && this.f22588 == ((C6773) obj).f22588 && "".equals("") && "".equals("");
+    }
+
+    public final int hashCode() {
+        return "".hashCode() + (("".hashCode() + ((this.f22588 ? 1231 : 1237) * 31)) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {Boolean.valueOf(this.f22588)};
+        String[] strArrSplit = "signingDisabledCandidate".length() == 0 ? new String[0] : "signingDisabledCandidate".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C6773.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
         }
-        c21590.f70050 = System.currentTimeMillis();
-        return c21590;
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m18895() {
+        return this.f22588;
     }
 }

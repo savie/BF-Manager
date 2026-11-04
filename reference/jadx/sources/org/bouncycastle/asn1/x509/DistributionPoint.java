@@ -1,9 +1,9 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C12441;
-import l.C22697;
-import l.C3012;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C14483;
+import l.C3188;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
@@ -16,7 +16,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.util.ASN1Dump;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DistributionPoint extends ASN1Object {
     public GeneralNames cRLIssuer;
     public DistributionPointName distributionPoint;
@@ -46,8 +46,8 @@ public class DistributionPoint extends ASN1Object {
     }
 
     private void appendObject(StringBuilder sb, String str, String str2, String str3) {
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, str2, ":", str);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
+        C4794.m14774(sb, ASN1Dump.TAB, str2, ":", str);
+        C4794.m14774(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
     }
 
     public static DistributionPoint getInstance(Object obj) {
@@ -57,7 +57,7 @@ public class DistributionPoint extends ASN1Object {
         if (obj instanceof ASN1Sequence) {
             return new DistributionPoint((ASN1Sequence) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "Invalid DistributionPoint: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "Invalid DistributionPoint: "));
     }
 
     public static DistributionPoint getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {
@@ -96,19 +96,19 @@ public class DistributionPoint extends ASN1Object {
 
     public String toString() {
         String strLineSeparator = Strings.lineSeparator();
-        StringBuilder sbM8976 = C3012.m8976("DistributionPoint: [", strLineSeparator);
+        StringBuilder sbM10405 = C3188.m10405("DistributionPoint: [", strLineSeparator);
         DistributionPointName distributionPointName = this.distributionPoint;
         if (distributionPointName != null) {
-            appendObject(sbM8976, strLineSeparator, "distributionPoint", distributionPointName.toString());
+            appendObject(sbM10405, strLineSeparator, "distributionPoint", distributionPointName.toString());
         }
         ReasonFlags reasonFlags = this.reasons;
         if (reasonFlags != null) {
-            appendObject(sbM8976, strLineSeparator, "reasons", reasonFlags.toString());
+            appendObject(sbM10405, strLineSeparator, "reasons", reasonFlags.toString());
         }
         GeneralNames generalNames = this.cRLIssuer;
         if (generalNames != null) {
-            appendObject(sbM8976, strLineSeparator, "cRLIssuer", generalNames.toString());
+            appendObject(sbM10405, strLineSeparator, "cRLIssuer", generalNames.toString());
         }
-        return C22697.m50267(sbM8976, "]", strLineSeparator);
+        return C8947.m23910(sbM10405, "]", strLineSeparator);
     }
 }

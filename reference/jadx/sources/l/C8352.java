@@ -1,247 +1,280 @@
 package l;
 
-import android.graphics.Point;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.text.TextUtils;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.۠ᩴۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P6SA */
+/* JADX INFO: renamed from: l.۠ۗܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OAKT */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8352 {
+public class C8352 extends ViewGroup {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public ViewGroup f27385;
 
     /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C20409 f28943;
+    public C15688 f27386;
 
     /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public View.OnAttachStateChangeListener f28944;
+    public int f27387;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final Handler f28945 = new Handler(Looper.getMainLooper());
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public FutureC12075 f28946;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean f28947;
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public int f27388;
 
     /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final C14393 f28948;
+    public C5752 f27389;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public boolean f27390;
 
     /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public boolean f28949;
+    public C5752 f27391;
 
     /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final C6111 f28950;
+    public int f27392;
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public boolean f28951;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f28952;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public int f27393;
 
     /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C20556 f28953;
+    public C5752 f27394;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Bundle f28954;
+    public View f27395;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final C2063 f28955;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f27396;
 
     /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final Point f28956;
+    public TextView f27397;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public C5752 f27398;
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public int f27399;
+
+    public C8352(Context context) {
+        super(context);
+        this.f27390 = false;
+        m22477();
+    }
+
+    public C8352(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f27390 = false;
+        m22477();
+    }
+
+    public C8352(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f27390 = false;
+        m22477();
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    private void m22477() {
+        ColorStateList colorStateListValueOf;
+        ColorStateList colorStateListValueOf2;
+        Context context = getContext();
+        float f = context.getResources().getDisplayMetrics().density;
+        this.f27387 = (int) ((32.0f * f) + 0.5f);
+        this.f27393 = (int) ((3.0f * f) + 0.5f);
+        this.f27399 = (int) ((4.0f * f) + 0.5f);
+        this.f27392 = (int) ((2.0f * f) + 0.5f);
+        this.f27396 = (int) ((f * 5.0f) + 0.5f);
+        this.f27395 = new View(context);
+        this.f27386 = new C15688(context);
+        this.f27389 = new C5752(context);
+        this.f27391 = new C5752(context);
+        this.f27398 = new C5752(context);
+        this.f27394 = new C5752(context);
+        ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.MT_Protector, (ViewGroup) this, false);
+        this.f27385 = viewGroup;
+        this.f27397 = (TextView) viewGroup.getChildAt(1);
+        this.f27385.setVisibility(8);
+        this.f27395.setId(R.id.MT_Protector);
+        this.f27386.setId(R.id.MT_Protector);
+        this.f27389.setId(R.id.file_name);
+        this.f27391.setId(R.id.MT_Protector);
+        this.f27398.setId(R.id.MT_Protector);
+        this.f27394.setId(R.id.MT_Protector);
+        this.f27389.setEllipsize(TextUtils.TruncateAt.END);
+        this.f27389.setMaxLines(2);
+        this.f27391.setText("->");
+        this.f27389.setTextSize(13.0f);
+        this.f27391.setTextSize(10.0f);
+        this.f27398.setTextSize(10.0f);
+        this.f27394.setTextSize(10.0f);
+        if (isInEditMode()) {
+            colorStateListValueOf = ColorStateList.valueOf(-288304944);
+            colorStateListValueOf2 = ColorStateList.valueOf(-1715157820);
+            this.f27386.setImageResource(R.drawable.MT_Protector);
+            this.f27389.setText("文件名");
+            this.f27398.setText("2020-11-11 20:30");
+            this.f27394.setText("16.9MB");
+        } else {
+            colorStateListValueOf = C3296.f10751;
+            colorStateListValueOf2 = C3296.f10779;
+        }
+        this.f27389.setTextColor(colorStateListValueOf);
+        this.f27391.setTextColor(colorStateListValueOf2);
+        this.f27398.setTextColor(colorStateListValueOf2);
+        this.f27394.setTextColor(colorStateListValueOf2);
+        this.f27388 = C3296.f10776;
+        addView(this.f27395);
+        addView(this.f27386);
+        addView(this.f27389);
+        addView(this.f27391);
+        addView(this.f27398);
+        addView(this.f27394);
+        addView(this.f27385);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m22480(boolean z) {
+        if (this.f27390 != z) {
+            this.f27390 = z;
+            if (z) {
+                this.f27395.setVisibility(8);
+                this.f27386.setVisibility(8);
+                this.f27389.setVisibility(8);
+                this.f27391.setVisibility(8);
+                this.f27398.setVisibility(8);
+                this.f27394.setVisibility(8);
+                this.f27385.setVisibility(0);
+            } else {
+                this.f27395.setVisibility(0);
+                this.f27386.setVisibility(0);
+                this.f27389.setVisibility(0);
+                this.f27391.setVisibility(0);
+                this.f27398.setVisibility(0);
+                this.f27394.setVisibility(0);
+                this.f27385.setVisibility(8);
+            }
+            requestLayout();
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m22479() {
+        if (this.f27388 != C3296.f10776) {
+            ColorStateList colorStateList = C3296.f10751;
+            ColorStateList colorStateList2 = C3296.f10779;
+            this.f27389.setTextColor(colorStateList);
+            this.f27391.setTextColor(colorStateList2);
+            this.f27398.setTextColor(colorStateList2);
+            this.f27394.setTextColor(colorStateList2);
+            this.f27397.setTextColor(colorStateList2);
+            this.f27385.getChildAt(0).setBackgroundColor(C3296.f10757);
+            this.f27385.getChildAt(2).setBackgroundColor(C3296.f10757);
+            this.f27388 = C3296.f10776;
+        }
+    }
+
+    @Override // android.view.View
+    public final void onMeasure(int i, int i2) {
+        int size = View.MeasureSpec.getSize(i);
+        int size2 = View.MeasureSpec.getSize(i2);
+        if (this.f27390) {
+            this.f27385.measure(View.MeasureSpec.makeMeasureSpec(size, Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(size2, Integer.MIN_VALUE));
+            setMeasuredDimension(size, this.f27385.getMeasuredHeight());
+            return;
+        }
+        int i3 = this.f27393;
+        int i4 = this.f27387;
+        int i5 = size - (((i3 + i4) + this.f27392) + i3);
+        int i6 = size2 - (this.f27399 * 2);
+        int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(i4, 1073741824);
+        this.f27386.measure(iMakeMeasureSpec, iMakeMeasureSpec);
+        this.f27391.measure(View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+        this.f27398.measure(View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+        this.f27394.measure(View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+        this.f27389.measure(View.MeasureSpec.makeMeasureSpec(i5 - this.f27391.getMeasuredWidth(), Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+        setMeasuredDimension(size, Math.max(this.f27387, this.f27398.getMeasuredHeight() + this.f27389.getMeasuredHeight()) + (this.f27399 * 2));
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
+        int measuredHeight;
+        int i5 = i3 - i;
+        int i6 = i4 - i2;
+        if (this.f27390) {
+            this.f27385.layout(0, 0, i5, i6);
+            return;
+        }
+        int i7 = this.f27387;
+        int i8 = this.f27393;
+        C5752 c5752 = this.f27389;
+        C5752 c5753 = this.f27398;
+        C5752 c5754 = this.f27394;
+        C5752 c5755 = this.f27391;
+        this.f27395.layout(0, 0, i5, i6);
+        int i9 = (i6 - i7) / 2;
+        int i10 = i8 + i7;
+        this.f27386.layout(i8, i9, i10, i7 + i9);
+        if (c5753.getVisibility() == 8) {
+            measuredHeight = (i6 - c5752.getMeasuredHeight()) / 2;
+        } else {
+            measuredHeight = ((i6 - c5752.getMeasuredHeight()) - c5753.getMeasuredHeight()) / 2;
+        }
+        int measuredWidth = i10 + this.f27392;
+        c5752.layout(measuredWidth, measuredHeight, c5752.getMeasuredWidth() + measuredWidth, c5752.getMeasuredHeight() + measuredHeight);
+        int measuredHeight2 = c5752.getMeasuredHeight() + measuredHeight;
+        c5753.layout(measuredWidth, measuredHeight2, c5753.getMeasuredWidth() + measuredWidth, c5753.getMeasuredHeight() + measuredHeight2);
+        if (c5753.getMeasuredWidth() != 0) {
+            measuredWidth = c5753.getMeasuredWidth() + measuredWidth + this.f27396;
+        }
+        c5754.layout(measuredWidth, measuredHeight2, c5754.getMeasuredWidth() + measuredWidth, c5753.getMeasuredHeight() + measuredHeight2);
+        int i11 = i5 - i8;
+        int baseline = (c5752.getBaseline() + measuredHeight) - c5755.getBaseline();
+        c5755.layout(i11 - c5755.getMeasuredWidth(), baseline, i11, c5755.getMeasuredHeight() + baseline);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View m22486() {
+        return this.f27395;
+    }
 
     /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public C15990 f28957;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final int f28958;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final Point f28959;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public long f28960;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public C18935 f28961;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C18935 m21871() {
-        return this.f28961;
+    public final C15688 m22485() {
+        return this.f27386;
     }
 
-    public C8352(C20409 c20409, C14393 c14393, int i, C2063 c2063, boolean z) {
-        this.f28943 = c20409;
-        this.f28948 = c14393;
-        this.f28958 = i;
-        this.f28947 = z;
-        C6111 c6111 = c20409.f66125;
-        this.f28950 = c6111;
-        this.f28953 = c20409.f66135;
-        this.f28956 = c6111.m16956(c6111.m16916());
-        this.f28959 = new Point(c6111.getScrollX(), c6111.m17066());
-        this.f28954 = new Bundle(c20409.f16884);
-        this.f28955 = c2063 == null ? null : c2063.m6569();
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C5752 m22483() {
+        return this.f27389;
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final FutureC12075 m21873() {
-        FutureC12075 futureC12075 = this.f28946;
-        if (futureC12075 != null && !futureC12075.m30013()) {
-            return m21872();
-        }
-        this.f28946 = new FutureC12075();
-        C15990 c15990 = this.f28957;
-        C14393 c14393 = this.f28948;
-        if (c15990 == null) {
-            this.f28957 = this.f28950.m16847(c14393.f47162);
-        }
-        c14393.m34655().m30016((InterfaceC7486) new C13291(0, this));
-        return m21872();
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C5752 m22484() {
+        return this.f27391;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m21863(C8352 c8352, Throwable th) {
-        if (th == null) {
-            c8352.m21854();
-        } else {
-            c8352.m21857(th);
-        }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C5752 m22482() {
+        return this.f27398;
     }
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Point m21870() {
-        return new Point(this.f28956);
+    public final C5752 m22481() {
+        return this.f27394;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Point m21868() {
-        return new Point(this.f28959);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final TextView m22487() {
+        return this.f27397;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final FutureC12075 m21872() {
-        return this.f28946.m30032((InterfaceC15954) new C9023());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21869() {
-        this.f28951 = true;
-        if (this.f28952) {
-            this.f28953.m46365();
-        }
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public void m21854() {
-        C20556 c20556 = this.f28953;
-        try {
-            boolean z = this.f28952;
-            C14393 c14393 = this.f28948;
-            if (!z) {
-                if (!this.f28949) {
-                    if (!this.f28950.m16899(c14393.f47162, this.f28957)) {
-                        this.f28945.postDelayed(new RunnableC6940(this), 10L);
-                        return;
-                    }
-                    this.f28949 = true;
-                }
-                C11018 c11018 = new C11018();
-                C11018 c11019 = new C11018();
-                c20556.m46381(c11018);
-                c20556.m46372(c11019);
-                this.f28954.putBoolean("changed", this.f28943.m46130(c14393.f47162.isChanged()));
-                byte[] bArrM27773 = c11018.m27773();
-                byte[] bArrM27774 = c11019.m27773();
-                C17523 c17523M40781 = C17523.m40781(this.f28950, this.f28954, this.f28955, bArrM27773, bArrM27774, this.f28958, -1L, null);
-                this.f28961 = new C18935(c17523M40781.m40790(), bArrM27773, bArrM27774);
-                FutureC12075 futureC12075M4634 = c14393.f47165.m4634(c17523M40781);
-                C1254 c1254Mo8735 = c14393.f47162.mo8735();
-                C13638.requireNonNull(c1254Mo8735);
-                futureC12075M4634.m30028((InterfaceC15954) new C5925(1, c1254Mo8735)).m30016((InterfaceC7486) new C10865(this));
-                return;
-            }
-            c14393.m34644(this.f28960).m30016((InterfaceC7486) new C23565(this));
-        } catch (Throwable th) {
-            m21857(th);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m21859(C8352 c8352, Long l2, Throwable th) {
-        if (th != null) {
-            c8352.m21857(th);
-        } else if (c8352.f28948.f47162.mo8735().m4523() != l2.longValue()) {
-            c8352.f28945.post(new RunnableC6940(c8352));
-        } else {
-            c8352.f28960 = l2.longValue();
-            c8352.m21864();
-        }
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public void m21864() {
-        C14393 c14393 = this.f28948;
-        boolean z = this.f28947;
-        C6111 c6111 = this.f28950;
-        if (z && c6111.isAttachedToWindow()) {
-            if (this.f28944 == null) {
-                ViewOnAttachStateChangeListenerC18229 viewOnAttachStateChangeListenerC18229 = new ViewOnAttachStateChangeListenerC18229(this);
-                this.f28944 = viewOnAttachStateChangeListenerC18229;
-                c6111.addOnAttachStateChangeListener(viewOnAttachStateChangeListenerC18229);
-                return;
-            }
-            return;
-        }
-        try {
-            if (c14393.f47162.mo8735().m4523() != this.f28960) {
-                m21854();
-                return;
-            }
-            if (!c6111.m16836()) {
-                this.f28945.postDelayed(new Runnable() { // from class: l.᩸ᩴۖ
-                    @Override // java.lang.Runnable
-                    public final void run() {
-                        this.f70515.m21864();
-                    }
-                }, 10L);
-                return;
-            }
-            c6111.m16861((InterfaceC2916) c14393.f47162);
-            this.f28952 = true;
-            if (this.f28951) {
-                this.f28953.m46365();
-            }
-            c14393.m34644(this.f28960).m30016((InterfaceC7486) new C23565(this));
-        } catch (Throwable th) {
-            m21857(th);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m21860(C8352 c8352, Throwable th) {
-        C6111 c6111 = c8352.f28950;
-        if (th != null) {
-            c8352.m21857(th);
-            return;
-        }
-        c6111.m16922(false);
-        c6111.m16877(c8352.f28957);
-        c8352.f28943.m46136(c8352);
-        c8352.f28946.m30019((Object) null);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m21857(Throwable th) {
-        if ((th instanceof C17013) && th.getCause() != null) {
-            th = th.getCause();
-        }
-        this.f28946.m30021(th);
-        this.f28943.m46137(this, th);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void m22478() {
+        this.f27393 = 0;
+        requestLayout();
     }
 }

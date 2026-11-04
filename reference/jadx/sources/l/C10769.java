@@ -1,27 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۙۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7EH */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10769 {
+import android.graphics.Rect;
+
+/* JADX INFO: renamed from: l.ۤۡ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: C5U9 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10769 extends AbstractC23450 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f36718;
+    public final /* synthetic */ Rect f34182;
 
-    static {
-        int[] iArr = new int[EnumC10020.values().length];
-        f36718 = iArr;
-        try {
-            iArr[EnumC10020.SOURCE_FILE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    @Override // l.AbstractC23450
+    /* JADX INFO: renamed from: ۙ */
+    public final Rect mo18986() {
+        Rect rect = this.f34182;
+        if (rect.isEmpty()) {
+            return null;
         }
-        try {
-            f36718[EnumC10020.NEST_HOST.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f36718[EnumC10020.ENCLOSING_METHOD.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
+        return rect;
+    }
+
+    public C10769(Rect rect) {
+        this.f34182 = rect;
     }
 }

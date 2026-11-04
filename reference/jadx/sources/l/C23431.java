@@ -1,36 +1,32 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۗܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7QO */
+/* JADX INFO: renamed from: l.᩹۠᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F416 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23431 extends AbstractC1557 {
+public class C23431 extends C13690 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f75858;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0310 f75857;
 
-    public C23431(Iterable iterable) {
-        this.f75858 = AbstractC22433.m49797(iterable);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23431(C0310 c0310, InterfaceC1013 interfaceC1013) {
+        super(interfaceC1013);
+        this.f75857 = c0310;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // l.AbstractC1557
+    @Override // l.C13690, l.InterfaceC1013
     /* JADX INFO: renamed from: ۙ */
-    public final C11521 mo5337() {
-        AbstractC16706 abstractC16706ListIterator = this.f75858.listIterator(0);
-        while (abstractC16706ListIterator.hasNext()) {
-            if (((Boolean) ((C2968) abstractC16706ListIterator.next()).f11103.orElse(Boolean.FALSE)).booleanValue()) {
-                return C11521.of(Boolean.TRUE);
-            }
-        }
-        return C11521.empty();
+    public boolean mo3911(AbstractC22664 abstractC22664, AbstractC22664 abstractC22665, C1083 c1083) {
+        InterfaceC1013 interfaceC1013 = this.f75857.f1698.f71222;
+        InterfaceC1013 interfaceC1014 = this.f43432;
+        return interfaceC1013.mo3911(interfaceC1014.mo2276().m8710(abstractC22664), interfaceC1014.mo2276().m8710(abstractC22665), c1083);
     }
 
-    @Override // l.AbstractC1557
+    @Override // l.C13690, l.InterfaceC1013
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC1557 mo5336(AbstractC1557 abstractC1557) {
-        if (!(abstractC1557 instanceof C23431)) {
-            return abstractC1557;
-        }
-        return new C23431(C22808.m50465(this.f75858, ((C23431) abstractC1557).f75858));
+    public void mo3910(InterfaceC5075 interfaceC5075, C17007 c17007) {
+        C19991 c19991 = this.f75857.f1704;
+        C15515 c15515 = C19859.f63823;
+        this.f43432.mo3910(interfaceC5075, c19991.m45975(new C15515("compiler", "incompatible.ret.type.in.lambda", c17007)));
     }
 }

@@ -1,49 +1,47 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.app.Activity;
+import java.util.WeakHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
-/* JADX INFO: renamed from: l.᩷ۧۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M6OA */
+/* JADX INFO: renamed from: l.᩵᩷ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: OANW */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20829 extends AbstractC17535 {
+public final class C20829 implements InterfaceC9883 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C21575 f66701;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ReentrantLock f66700 = new ReentrantLock();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f67692;
+    public final WeakHashMap f66699 = new WeakHashMap();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f67693;
-
-    public C20829(int i, int i2) {
-        this.f67692 = i;
-        this.f67693 = i2;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C20829)) {
-            return false;
-        }
-        C20829 c20829 = (C20829) obj;
-        return this.f67692 == c20829.f67692 && this.f67693 == c20829.f67693;
-    }
-
-    public final int hashCode() {
-        return (this.f67692 * 31) + this.f67693;
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f67692), Integer.valueOf(this.f67693)};
-        String[] strArrSplit = "end;offset".length() == 0 ? new String[0] : "end;offset".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C20829.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m47633(Activity activity, C14115 c14115) {
+        WeakHashMap weakHashMap = this.f66699;
+        C15243.m36590(activity, "activity");
+        ReentrantLock reentrantLock = this.f66700;
+        reentrantLock.lock();
+        try {
+            if (c14115.equals((C14115) weakHashMap.get(activity))) {
+                reentrantLock.unlock();
+                return;
             }
+            reentrantLock.unlock();
+            for (C18591 c18591 : this.f66701.f68926.m2993()) {
+                if (C15243.m36589(c18591.m43168(), activity)) {
+                    c18591.m43169(c14115);
+                }
+            }
+        } catch (Throwable th) {
+            reentrantLock.unlock();
+            throw th;
         }
-        sb.append("]");
-        return sb.toString();
+    }
+
+    public C20829(C21575 c21575) {
+        this.f66701 = c21575;
     }
 }

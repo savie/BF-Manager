@@ -1,72 +1,41 @@
 .class public final synthetic Ll/ᩳ֨᩸;
 .super Ljava/lang/Object;
-.source "0B0D"
+.source "28WH"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic ۙ:[I
+# instance fields
+.field public final synthetic ܰ:Ll/᩻ۡ᩸;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ll/᩻ۡ᩸;)V
+    .locals 0
 
-    .line 95
-    invoke-static {}, Ll/᩹۬᩸;->values()[Ll/᩹۬᩸;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Ll/ᩳ֨᩸;->ܰ:Ll/᩻ۡ᩸;
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Ll/ᩳ֨᩸;->ۙ:[I
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    :try_start_0
-    sget-object v1, Ll/᩹۬᩸;->ܳ:Ll/᩹۬᩸;
+    .line 2
+    sget v0, Ll/᩻ۡ᩸;->۟ۙ:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/4 v0, 0x0
 
-    move-result v1
+    .line 1914
+    iget-object v1, p0, Ll/ᩳ֨᩸;->ܰ:Ll/᩻ۡ᩸;
 
-    const/4 v2, 0x1
+    invoke-virtual {v1, v0}, Ll/᩻ۡ᩸;->᩷(Z)V
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ᩳ֨᩸;->ۙ:[I
-
-    sget-object v1, Ll/᩹۬᩸;->֫:Ll/᩹۬᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/ᩳ֨᩸;->ۙ:[I
-
-    sget-object v1, Ll/᩹۬᩸;->ܽ:Ll/᩹۬᩸;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
     return-void
 .end method

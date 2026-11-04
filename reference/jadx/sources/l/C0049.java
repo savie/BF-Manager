@@ -1,31 +1,27 @@
 package l;
 
-import android.os.Bundle;
-import java.util.ArrayList;
+import android.media.browse.MediaBrowser;
+import java.util.List;
 
 /* JADX INFO: renamed from: l.֡, reason: contains not printable characters */
 /* JADX INFO: compiled from: 95XT */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0049 {
+public class C0049 extends MediaBrowser.SubscriptionCallback {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f910 = new ArrayList();
+    public final /* synthetic */ AbstractC18694 f900;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f911 = new ArrayList();
+    public C0049(AbstractC18694 abstractC18694) {
+        this.f900 = abstractC18694;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m930(Bundle bundle) {
-        int i = 0;
-        while (true) {
-            ArrayList arrayList = this.f911;
-            if (i >= arrayList.size()) {
-                return;
-            }
-            if (C14611.m35086((Bundle) arrayList.get(i), bundle)) {
-                return;
-            }
-            i++;
-        }
+    @Override // android.media.browse.MediaBrowser.SubscriptionCallback
+    public final void onChildrenLoaded(String str, List list) {
+        C3778.m12254(list);
+    }
+
+    @Override // android.media.browse.MediaBrowser.SubscriptionCallback
+    public final void onError(String str) {
+        this.f900.getClass();
     }
 }

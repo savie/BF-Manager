@@ -2,9 +2,9 @@ package org.bouncycastle.crypto.agreement.jpake;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import l.C0242;
-import l.C15489;
-import l.C16523;
+import l.C14442;
+import l.C14483;
+import l.C3188;
 import org.bouncycastle.crypto.CryptoException;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.Mac;
@@ -14,7 +14,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKEUtil {
     public static final BigInteger ZERO = BigInteger.valueOf(0);
     public static final BigInteger ONE = BigInteger.valueOf(1);
@@ -178,19 +178,19 @@ public class JPAKEUtil {
 
     public static void validateParticipantIdsDiffer(String str, String str2) throws CryptoException {
         if (str.equals(str2)) {
-            throw new CryptoException(C16523.m38890("Both participants are using the same participantId (", str, "). This is not allowed. Each participant must use a unique participantId."));
+            throw new CryptoException(C14442.m34865("Both participants are using the same participantId (", str, "). This is not allowed. Each participant must use a unique participantId."));
         }
     }
 
     public static void validateParticipantIdsEqual(String str, String str2) throws CryptoException {
         if (!str.equals(str2)) {
-            throw new CryptoException(C0242.m1617("Received payload from incorrect partner (", str2, "). Expected to receive payload from ", str, "."));
+            throw new CryptoException(C3188.m10404("Received payload from incorrect partner (", str2, "). Expected to receive payload from ", str, "."));
         }
     }
 
     public static void validateNotNull(Object obj, String str) {
         if (obj == null) {
-            throw new NullPointerException(C15489.m37076(str, " must not be null"));
+            throw new NullPointerException(C14483.m34972(str, " must not be null"));
         }
     }
 }

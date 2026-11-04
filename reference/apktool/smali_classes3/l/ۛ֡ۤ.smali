@@ -1,125 +1,130 @@
-.class public final synthetic Ll/ۛ֡ۤ;
-.super Ljava/lang/Object;
-.source "F416"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.class public final Ll/ۛ֡ۤ;
+.super Ll/۠ۢᩴ;
+.source "28VT"
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final synthetic ۜ:Ll/᩺֡ۤ;
+
+.field public final synthetic ۬:Ll/᩷ۨᩴ;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ll/᩺֡ۤ;Ll/ܽ֡֫;Ll/᩷ۨᩴ;)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/ۛ֡ۤ;->ܺ:I
+    .line 589
+    iput-object p1, p0, Ll/ۛ֡ۤ;->ۜ:Ll/᩺֡ۤ;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Ll/ۛ֡ۤ;->۬:Ll/᩷ۨᩴ;
+
+    const/4 p1, -0x1
+
+    .line 39
+    invoke-direct {p0, p2, p1}, Ll/۠ۢᩴ;-><init>(Ll/ܽ֡֫;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public final ܶ()V
+    .locals 5
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 592
+    iget-object v0, p0, Ll/ۛ֡ۤ;->ۜ:Ll/᩺֡ۤ;
 
-    move-result-object p1
+    iget-object v0, v0, Ll/᩺֡ۤ;->᩶:Ll/ۘ֡ۤ;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Ll/ۛ֡ۤ;->۬:Ll/᩷ۨᩴ;
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    invoke-virtual {v1}, Ll/᩷ۨᩴ;->᩷ۙ()Ljava/lang/String;
 
-    .line 0
-    iget v0, p0, Ll/ۛ֡ۤ;->ܺ:I
+    move-result-object v2
 
-    packed-switch v0, :pswitch_data_0
+    .line 593
+    invoke-virtual {p0}, Ll/۠ۢᩴ;->֫()Ljava/lang/String;
 
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    move-result-object v3
 
-    move-result-object v0
+    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    return-object v0
+    move-result-object v3
 
-    :pswitch_0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 594
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
-    move-result-object v0
+    move-result v4
 
-    return-object v0
+    if-nez v4, :cond_2
 
-    nop
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v2
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 2
-    iget v0, p0, Ll/ۛ֡ۤ;->ܺ:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 7
-    check-cast p1, Ll/᩹᩵ۤ;
-
-    .line 2089
-    iget-object p1, p1, Ll/᩻᩵ۤ;->ܽ:Ll/ۤᩴۤ;
-
-    sget-object v0, Ll/ۤᩴۤ;->֨ۙ:Ll/ۤᩴۤ;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     .line 0
-    :pswitch_0
-    check-cast p1, Ll/ܽۤۤ;
-
-    .line 2172
-    sget-object v0, Ll/ۜ۟ۤ;->ۛ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {p1, v0}, Ll/ܽۤۤ;->ۙ(Ll/ۜ۟ۤ;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
-
     :cond_0
-    const/4 p1, 0x0
+    invoke-static {v3}, Ll/ۤ۠֫;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v2
+
+    .line 598
+    invoke-virtual {v1}, Ll/᩷ۨᩴ;->ܶۙ()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ll/᩷ۨᩴ;->ᩴ(Ljava/lang/String;)Ll/᩷ۨᩴ;
+
+    move-result-object v2
+
+    .line 599
+    invoke-static {v1, v2}, Ll/ܰۨᩴ;->ۙ(Ll/᩷ۨᩴ;Ll/᩷ۨᩴ;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 601
+    invoke-virtual {p0, v1}, Ll/۠ۢᩴ;->ۙ(Ljava/lang/String;)V
+
+    return-void
+
+    .line 603
+    :cond_1
+    invoke-static {}, Ll/ۛۤۧ;->᩷()V
+
+    .line 604
+    invoke-static {}, Ll/᩸ܿܳ;->۫()V
+
+    .line 605
+    invoke-virtual {p0}, Ll/۠ۢᩴ;->᩷()V
+
+    .line 606
+    invoke-virtual {v2}, Ll/᩷ۨᩴ;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ll/ۘ֡ۤ;->ۤ(Ll/ۘ֡ۤ;Ljava/lang/String;)V
+
+    .line 607
+    invoke-static {v0}, Ll/ۘ֡ۤ;->ܺ(Ll/ۘ֡ۤ;)V
+
+    return-void
+
+    .line 595
+    :cond_2
     :goto_0
-    return p1
+    invoke-virtual {p0}, Ll/۠ۢᩴ;->᩷()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

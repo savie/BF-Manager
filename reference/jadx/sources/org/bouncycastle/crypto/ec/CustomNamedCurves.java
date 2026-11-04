@@ -52,7 +52,7 @@ import org.bouncycastle.pqc.crypto.picnic.PicnicEngine;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CustomNamedCurves {
     public static X9ECParametersHolder curve25519 = new X9ECParametersHolder() { // from class: org.bouncycastle.crypto.ec.CustomNamedCurves.1
         @Override // org.bouncycastle.asn1.x9.X9ECParametersHolder

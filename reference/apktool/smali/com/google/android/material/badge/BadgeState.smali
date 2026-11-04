@@ -74,7 +74,7 @@
     move-result-object p3
 
     .line 98
-    sget p4, Ll/۠۟ܶ;->۫֨:I
+    sget p4, Ll/ܰ۬ܺ;->۟۫:I
 
     const/4 v1, -0x1
 
@@ -92,7 +92,7 @@
 
     move-result-object p4
 
-    sget v2, Ll/֨۟ܶ;->ۜ᩵:I
+    sget v2, Ll/ܽ۬ܺ;->ۧ᩵:I
 
     .line 104
     invoke-virtual {p4, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -106,7 +106,7 @@
 
     move-result-object p4
 
-    sget v2, Ll/֨۟ܶ;->᩸᩵:I
+    sget v2, Ll/ܽ۬ܺ;->ܽ᩵:I
 
     .line 109
     invoke-virtual {p4, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -116,7 +116,7 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->horizontalInsetWithText:I
 
     .line 111
-    sget p4, Ll/۠۟ܶ;->ܰ۬:I
+    sget p4, Ll/ܰ۬ܺ;->᩷ۚ:I
 
     .line 112
     invoke-virtual {p2, p4, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -128,9 +128,9 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->badgeWithTextRadius:F
 
     .line 113
-    sget p4, Ll/۠۟ܶ;->ۗ֨:I
+    sget p4, Ll/ܰ۬ܺ;->۬۫:I
 
-    sget v2, Ll/֨۟ܶ;->ܶۚ:I
+    sget v2, Ll/ܽ۬ܺ;->ܺᩴ:I
 
     .line 114
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -144,9 +144,9 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->badgeWidth:F
 
     .line 115
-    sget p4, Ll/۠۟ܶ;->ۚ۬:I
+    sget p4, Ll/ܰ۬ܺ;->ᩴۚ:I
 
-    sget v2, Ll/֨۟ܶ;->۠ۚ:I
+    sget v2, Ll/ܽ۬ܺ;->ۗᩴ:I
 
     .line 118
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -161,9 +161,9 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->badgeWithTextWidth:F
 
     .line 119
-    sget p4, Ll/۠۟ܶ;->ܽ֨:I
+    sget p4, Ll/ܰ۬ܺ;->֡۫:I
 
-    sget v2, Ll/֨۟ܶ;->ܶۚ:I
+    sget v2, Ll/ܽ۬ܺ;->ܺᩴ:I
 
     .line 120
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -177,9 +177,9 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->badgeHeight:F
 
     .line 121
-    sget p4, Ll/۠۟ܶ;->ۙ۬:I
+    sget p4, Ll/ܰ۬ܺ;->ۙۚ:I
 
-    sget v2, Ll/֨۟ܶ;->۠ۚ:I
+    sget v2, Ll/ܽ۬ܺ;->ۗᩴ:I
 
     .line 124
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -194,7 +194,7 @@
     iput p4, p0, Lcom/google/android/material/badge/BadgeState;->badgeWithTextHeight:F
 
     .line 126
-    sget p4, Ll/۠۟ܶ;->ܶ۬:I
+    sget p4, Ll/ܰ۬ܺ;->ܺۚ:I
 
     const/4 v2, 0x1
 
@@ -246,7 +246,7 @@
 
     .line 136
     :cond_3
-    sget p4, Ll/۠۟ܶ;->᩺۬:I
+    sget p4, Ll/ܰ۬ܺ;->᩻ۚ:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -255,7 +255,7 @@
     if-eqz p4, :cond_4
 
     .line 137
-    sget p4, Ll/۠۟ܶ;->᩺۬:I
+    sget p4, Ll/ܰ۬ܺ;->᩻ۚ:I
 
     invoke-virtual {p2, p4, v4}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -288,7 +288,7 @@
 
     .line 144
     :cond_5
-    sget p4, Ll/۠۟ܶ;->ۧ֨:I
+    sget p4, Ll/ܰ۬ܺ;->֨۫:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -297,7 +297,7 @@
     if-eqz p4, :cond_6
 
     .line 145
-    sget p4, Ll/۠۟ܶ;->ۧ֨:I
+    sget p4, Ll/ܰ۬ܺ;->֨۫:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -322,7 +322,7 @@
     if-nez p4, :cond_7
 
     .line 152
-    sget p4, Ll/ᩳ۟ܶ;->֡ܰ:I
+    sget p4, Ll/᩺۬ܺ;->ܿ᩷:I
 
     invoke-virtual {p1, p4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -348,7 +348,7 @@
     if-nez p4, :cond_8
 
     .line 157
-    sget p4, Ll/᩸۟ܶ;->ۙ:I
+    sget p4, Ll/ۛ۬ܺ;->ۙ:I
 
     goto :goto_4
 
@@ -370,7 +370,7 @@
     if-nez p4, :cond_9
 
     .line 162
-    sget p4, Ll/ᩳ۟ܶ;->ۨۨ:I
+    sget p4, Ll/᩺۬ܺ;->ۤۤ:I
 
     goto :goto_5
 
@@ -422,7 +422,7 @@
     if-ne p4, v3, :cond_c
 
     .line 169
-    sget p4, Ll/۠۟ܶ;->ۘ۬:I
+    sget p4, Ll/ܰ۬ܺ;->֫ۚ:I
 
     invoke-virtual {p2, p4, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -448,7 +448,7 @@
     if-ne p4, v3, :cond_d
 
     .line 174
-    sget p4, Ll/۠۟ܶ;->ۜ۬:I
+    sget p4, Ll/ܰ۬ܺ;->ۧۚ:I
 
     invoke-virtual {p2, p4, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -474,9 +474,9 @@
     if-nez p4, :cond_e
 
     .line 179
-    sget p4, Ll/۠۟ܶ;->ܿ֨:I
+    sget p4, Ll/ܰ۬ܺ;->ᩳ۫:I
 
-    sget v1, Ll/ᩴ۟ܶ;->֨᩺:I
+    sget v1, Ll/ۘ۬ܺ;->۫᩻:I
 
     invoke-virtual {p2, p4, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -511,7 +511,7 @@
     if-nez p4, :cond_f
 
     .line 186
-    sget p4, Ll/۠۟ܶ;->ۛ֨:I
+    sget p4, Ll/ܰ۬ܺ;->ۢ۫:I
 
     invoke-virtual {p2, p4, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -546,9 +546,9 @@
     if-nez p4, :cond_10
 
     .line 191
-    sget p4, Ll/۠۟ܶ;->ۨ۬:I
+    sget p4, Ll/ܰ۬ܺ;->ۤۚ:I
 
-    sget v1, Ll/ᩴ۟ܶ;->֨᩺:I
+    sget v1, Ll/ۘ۬ܺ;->۫᩻:I
 
     invoke-virtual {p2, p4, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -583,7 +583,7 @@
     if-nez p4, :cond_11
 
     .line 198
-    sget p4, Ll/۠۟ܶ;->ۖ۬:I
+    sget p4, Ll/ܰ۬ܺ;->᩸ۚ:I
 
     invoke-virtual {p2, p4, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -618,7 +618,7 @@
     if-nez p4, :cond_12
 
     .line 203
-    sget p4, Ll/۠۟ܶ;->᩶֨:I
+    sget p4, Ll/ܰ۬ܺ;->᩶۫:I
 
     invoke-static {p1, p2, p4}, Lcom/google/android/material/badge/BadgeState;->readColorFromAttributes(Landroid/content/Context;Landroid/content/res/TypedArray;I)I
 
@@ -653,9 +653,9 @@
     if-nez p4, :cond_13
 
     .line 208
-    sget p4, Ll/۠۟ܶ;->᩻֨:I
+    sget p4, Ll/ܰ۬ܺ;->ۡ۫:I
 
-    sget v1, Ll/ᩴ۟ܶ;->ۛᩳ:I
+    sget v1, Ll/ۘ۬ܺ;->ۢܶ:I
 
     invoke-virtual {p2, p4, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -700,7 +700,7 @@
 
     .line 217
     :cond_14
-    sget p4, Ll/۠۟ܶ;->ܳ֨:I
+    sget p4, Ll/ܰ۬ܺ;->ۖ۫:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -709,7 +709,7 @@
     if-eqz p4, :cond_15
 
     .line 218
-    sget p4, Ll/۠۟ܶ;->ܳ֨:I
+    sget p4, Ll/ܰ۬ܺ;->ۖ۫:I
 
     .line 219
     invoke-static {p1, p2, p4}, Lcom/google/android/material/badge/BadgeState;->readColorFromAttributes(Landroid/content/Context;Landroid/content/res/TypedArray;I)I
@@ -764,7 +764,7 @@
     if-nez p1, :cond_16
 
     .line 228
-    sget p1, Ll/۠۟ܶ;->֡֨:I
+    sget p1, Ll/ܰ۬ܺ;->ܿ۫:I
 
     const p4, 0x800035
 
@@ -801,9 +801,9 @@
     if-nez p1, :cond_17
 
     .line 233
-    sget p1, Ll/۠۟ܶ;->ۢ֨:I
+    sget p1, Ll/ܰ۬ܺ;->ۜ۫:I
 
-    sget p4, Ll/֨۟ܶ;->᩺᩵:I
+    sget p4, Ll/ܽ۬ܺ;->᩻᩵:I
 
     .line 235
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -844,9 +844,9 @@
     if-nez p1, :cond_18
 
     .line 239
-    sget p1, Ll/۠۟ܶ;->֫֨:I
+    sget p1, Ll/ܰ۬ܺ;->۠۫:I
 
-    sget p4, Ll/֨۟ܶ;->ۡۚ:I
+    sget p4, Ll/ܽ۬ܺ;->ۨᩴ:I
 
     .line 241
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -887,7 +887,7 @@
     if-nez p1, :cond_19
 
     .line 246
-    sget p1, Ll/۠۟ܶ;->᩹۬:I
+    sget p1, Ll/ܰ۬ܺ;->ܳۚ:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -922,7 +922,7 @@
     if-nez p1, :cond_1a
 
     .line 251
-    sget p1, Ll/۠۟ܶ;->᩸۬:I
+    sget p1, Ll/ܰ۬ܺ;->ܽۚ:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -957,7 +957,7 @@
     if-nez p1, :cond_1b
 
     .line 259
-    sget p1, Ll/۠۟ܶ;->֨۬:I
+    sget p1, Ll/ܰ۬ܺ;->۫ۚ:I
 
     .line 261
     invoke-static {v0}, Lcom/google/android/material/badge/BadgeState$State;->access$2100(Lcom/google/android/material/badge/BadgeState$State;)Ljava/lang/Integer;
@@ -1002,7 +1002,7 @@
     if-nez p1, :cond_1c
 
     .line 266
-    sget p1, Ll/۠۟ܶ;->ᩳ۬:I
+    sget p1, Ll/ܰ۬ܺ;->ܶۚ:I
 
     .line 267
     invoke-static {v0}, Lcom/google/android/material/badge/BadgeState$State;->access$2200(Lcom/google/android/material/badge/BadgeState$State;)Ljava/lang/Integer;
@@ -1047,7 +1047,7 @@
     if-nez p1, :cond_1d
 
     .line 272
-    sget p1, Ll/۠۟ܶ;->۬۬:I
+    sget p1, Ll/ܰ۬ܺ;->ۚۚ:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -1138,7 +1138,7 @@
     if-nez p1, :cond_20
 
     .line 284
-    sget p1, Ll/۠۟ܶ;->ܺ֨:I
+    sget p1, Ll/ܰ۬ܺ;->ܰ۫:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -1258,7 +1258,7 @@
 
     .line 316
     :goto_1
-    sget-object v4, Ll/۠۟ܶ;->᩷֨:[I
+    sget-object v4, Ll/ܰ۬ܺ;->ۘ۫:[I
 
     new-array v7, v0, [I
 

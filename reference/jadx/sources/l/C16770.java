@@ -1,239 +1,200 @@
 package l;
 
+import com.alipay.sdk.m.p.a;
+import com.alipay.sdk.m.y.l;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ܽܽᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܺۤۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: CAOF */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16770 {
-    public static final C22935 h = new C22935(2);
-    public static final Map i;
-    public C16770 a;
-    public final C16770 b;
-    public final List c;
-    public final boolean d;
-    public int e;
-    public char f;
-    public int g;
+public class C16770 {
 
-    static {
-        HashMap map = new HashMap();
-        i = map;
-        map.put('G', EnumC18762.ERA);
-        map.put('y', EnumC18762.YEAR_OF_ERA);
-        map.put('u', EnumC18762.YEAR);
-        EnumC20879 enumC20879 = AbstractC20174.a;
-        map.put('Q', enumC20879);
-        map.put('q', enumC20879);
-        EnumC18762 enumC18762 = EnumC18762.MONTH_OF_YEAR;
-        map.put('M', enumC18762);
-        map.put('L', enumC18762);
-        map.put('D', EnumC18762.DAY_OF_YEAR);
-        map.put('d', EnumC18762.DAY_OF_MONTH);
-        map.put('F', EnumC18762.ALIGNED_DAY_OF_WEEK_IN_MONTH);
-        EnumC18762 enumC18763 = EnumC18762.DAY_OF_WEEK;
-        map.put('E', enumC18763);
-        map.put('c', enumC18763);
-        map.put('e', enumC18763);
-        map.put('a', EnumC18762.AMPM_OF_DAY);
-        map.put('H', EnumC18762.HOUR_OF_DAY);
-        map.put('k', EnumC18762.CLOCK_HOUR_OF_DAY);
-        map.put('K', EnumC18762.HOUR_OF_AMPM);
-        map.put('h', EnumC18762.CLOCK_HOUR_OF_AMPM);
-        map.put('m', EnumC18762.MINUTE_OF_HOUR);
-        map.put('s', EnumC18762.SECOND_OF_MINUTE);
-        EnumC18762 enumC18764 = EnumC18762.NANO_OF_SECOND;
-        map.put('S', enumC18764);
-        map.put('A', EnumC18762.MILLI_OF_DAY);
-        map.put('n', enumC18764);
-        map.put('N', EnumC18762.NANO_OF_DAY);
-        map.put('g', AbstractC16646.a);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f54121;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f54120 = new ArrayList();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f54122 = new ArrayList();
+
+    public C16770(String str) {
+        this.f54121 = str;
     }
 
-    public C16770() {
-        this.a = this;
-        this.c = new ArrayList();
-        this.g = -1;
-        this.b = null;
-        this.d = false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void mo39581(String str, String str2) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(str);
+        sb.append(a.h);
+        char c = str2.indexOf(34) != -1 ? '\'' : '\"';
+        sb.append(c);
+        m39579(c, str2, sb);
+        sb.append(c);
+        this.f54120.add(sb.toString());
     }
 
-    public C16770(C16770 c16770) {
-        this.a = this;
-        this.c = new ArrayList();
-        this.g = -1;
-        this.b = c16770;
-        this.d = true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void mo39583(C16770 c16770) {
+        this.f54122.add(c16770);
     }
 
-    public final void k(InterfaceC11002 interfaceC11002) {
-        C13638.requireNonNull(interfaceC11002, "field");
-        j(new C21709(interfaceC11002, 1, 19, EnumC1247.NORMAL));
-    }
-
-    public final void l(InterfaceC11002 interfaceC11002, int i2) {
-        C13638.requireNonNull(interfaceC11002, "field");
-        if (i2 < 1 || i2 > 19) {
-            throw new IllegalArgumentException("The width must be from 1 to 19 inclusive but was " + i2);
-        }
-        j(new C21709(interfaceC11002, i2, i2, EnumC1247.NOT_NEGATIVE));
-    }
-
-    public final void m(InterfaceC11002 interfaceC11002, int i2, int i3, EnumC1247 enumC1247) {
-        if (i2 == i3 && enumC1247 == EnumC1247.NOT_NEGATIVE) {
-            l(interfaceC11002, i3);
-            return;
-        }
-        C13638.requireNonNull(interfaceC11002, "field");
-        C13638.requireNonNull(enumC1247, "signStyle");
-        if (i2 < 1 || i2 > 19) {
-            throw new IllegalArgumentException("The minimum width must be from 1 to 19 inclusive but was " + i2);
-        }
-        if (i3 < 1 || i3 > 19) {
-            throw new IllegalArgumentException("The maximum width must be from 1 to 19 inclusive but was " + i3);
-        }
-        if (i3 < i2) {
-            throw new IllegalArgumentException("The maximum width must exceed or equal the minimum width but " + i3 + " < " + i2);
-        }
-        j(new C21709(interfaceC11002, i2, i3, enumC1247));
-    }
-
-    public final void j(C21709 c21709) {
-        C21709 c21709D;
-        C16770 c16770 = this.a;
-        int i2 = c16770.g;
-        if (i2 < 0) {
-            c16770.g = c(c21709);
-            return;
-        }
-        C21709 c217010 = (C21709) ((ArrayList) c16770.c).get(i2);
-        int i3 = c21709.b;
-        int i4 = c21709.c;
-        if (i3 == i4 && c21709.d == EnumC1247.NOT_NEGATIVE) {
-            c21709D = c217010.e(i4);
-            c(c21709.d());
-            this.a.g = i2;
-        } else {
-            c21709D = c217010.d();
-            this.a.g = c(c21709);
-        }
-        ((ArrayList) this.a.c).set(i2, c21709D);
-    }
-
-    public final void b(EnumC18762 enumC18762, int i2, int i3, boolean z) {
-        if (i2 == i3 && !z) {
-            j(new C13243(enumC18762, i2, i3, z));
-        } else {
-            c(new C13243(enumC18762, i2, i3, z));
-        }
-    }
-
-    public final void i(InterfaceC11002 interfaceC11002, EnumC4069 enumC4069) {
-        C13638.requireNonNull(interfaceC11002, "field");
-        C13638.requireNonNull(enumC4069, "textStyle");
-        c(new C21003(interfaceC11002, enumC4069, C9240.c));
-    }
-
-    public final void h(EnumC18762 enumC18762, Map map) {
-        C13638.requireNonNull(enumC18762, "field");
-        C13638.requireNonNull(map, "textLookup");
-        LinkedHashMap linkedHashMap = new LinkedHashMap(map);
-        EnumC4069 enumC4069 = EnumC4069.FULL;
-        c(new C21003(enumC18762, enumC4069, new C1477(new C14179(Collections.singletonMap(enumC4069, linkedHashMap)))));
-    }
-
-    public final void g(String str, String str2) {
-        c(new C18181(str, str2));
-    }
-
-    public final void f(EnumC4069 enumC4069) {
-        C13638.requireNonNull(enumC4069, "style");
-        if (enumC4069 != EnumC4069.FULL && enumC4069 != EnumC4069.SHORT) {
-            throw new IllegalArgumentException("Style must be either full or short");
-        }
-        c(new C15360(0, enumC4069));
-    }
-
-    public final void d(char c) {
-        c(new C13949(c));
-    }
-
-    public final void e(String str) {
-        C13638.requireNonNull(str, "literal");
-        if (str.isEmpty()) {
-            return;
-        }
-        if (str.length() == 1) {
-            c(new C13949(str.charAt(0)));
-        } else {
-            c(new C15360(1, str));
-        }
-    }
-
-    public final void a(C23351 c23351) {
-        C13638.requireNonNull(c23351, "formatter");
-        C2658 c2658 = c23351.a;
-        if (c2658.b) {
-            c2658 = new C2658(c2658.a, false);
-        }
-        c(c2658);
-    }
-
-    public final void o() {
-        C16770 c16770 = this.a;
-        c16770.g = -1;
-        this.a = new C16770(c16770);
-    }
-
-    public final void n() {
-        C16770 c16770 = this.a;
-        if (c16770.b == null) {
-            throw new IllegalStateException("Cannot call optionalEnd() as there was no previous call to optionalStart()");
-        }
-        if (((ArrayList) c16770.c).size() > 0) {
-            C16770 c16771 = this.a;
-            C2658 c2658 = new C2658(c16771.c, c16771.d);
-            this.a = this.a.b;
-            c(c2658);
-            return;
-        }
-        this.a = this.a.b;
-    }
-
-    public final int c(InterfaceC22415 interfaceC22415) {
-        C13638.requireNonNull(interfaceC22415, "pp");
-        C16770 c16770 = this.a;
-        int i2 = c16770.e;
-        if (i2 > 0) {
-            if (interfaceC22415 != null) {
-                interfaceC22415 = new C18887(interfaceC22415, i2, c16770.f);
+    /* JADX WARN: Code duplicated, block: B:33:0x0063 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:34:0x0065 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:35:0x0067  */
+    /* JADX WARN: Code duplicated, block: B:36:0x006a  */
+    /* JADX WARN: Code duplicated, block: B:38:0x0070  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m39579(int i, String str, StringBuilder sb) {
+        String str2;
+        for (int i2 = 0; i2 < str.length(); i2++) {
+            char cCharAt = str.charAt(i2);
+            if (cCharAt == '\t' || cCharAt == '\n') {
+                if (i == -1) {
+                    sb.append(cCharAt);
+                } else {
+                    sb.append("&#");
+                    sb.append((int) cCharAt);
+                    sb.append(';');
+                }
+            } else if (cCharAt == '\r') {
+                sb.append("&#");
+                sb.append((int) cCharAt);
+                sb.append(';');
+            } else if (cCharAt == '\"') {
+                if (cCharAt == i) {
+                    if (cCharAt == '\"') {
+                        str2 = "&quot;";
+                    } else {
+                        str2 = "&apos;";
+                    }
+                    sb.append(str2);
+                } else {
+                    sb.append(cCharAt);
+                }
+            } else if (cCharAt == '<') {
+                sb.append("&lt;");
+            } else if (cCharAt == '>') {
+                sb.append("&gt;");
+            } else if (cCharAt == '&') {
+                sb.append("&amp;");
+            } else if (cCharAt != '\'') {
+                if (cCharAt >= ' ' && cCharAt < 127) {
+                    sb.append(cCharAt);
+                } else if (C1306.m4761(cCharAt)) {
+                    sb.append(cCharAt);
+                } else {
+                    sb.append("&#");
+                    sb.append((int) cCharAt);
+                    sb.append(l.b);
+                }
+            } else if (cCharAt == i) {
+                if (cCharAt == '\"') {
+                    str2 = "&quot;";
+                } else {
+                    str2 = "&apos;";
+                }
+                sb.append(str2);
+            } else {
+                sb.append(cCharAt);
             }
-            c16770.e = 0;
-            c16770.f = (char) 0;
         }
-        ((ArrayList) c16770.c).add(interfaceC22415);
-        C16770 c16771 = this.a;
-        c16771.g = -1;
-        return ((ArrayList) c16771.c).size() - 1;
     }
 
-    public final C23351 p(EnumC5481 enumC5481, InterfaceC21233 interfaceC21233) {
-        return q(Locale.getDefault(), enumC5481, interfaceC21233);
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        mo39582(sb, 0);
+        return sb.toString();
     }
 
-    public final C23351 q(Locale locale, EnumC5481 enumC5481, InterfaceC21233 interfaceC21233) {
-        C13638.requireNonNull(locale, "locale");
-        while (this.a.b != null) {
-            n();
+    /* JADX WARN: Code duplicated, block: B:26:0x0095  */
+    /* JADX WARN: Code duplicated, block: B:29:0x009f  */
+    /* JADX WARN: Code duplicated, block: B:31:0x00ad A[LOOP:8: B:30:0x00ab->B:31:0x00ad, LOOP_END] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public void mo39582(StringBuilder sb, int i) {
+        int i2;
+        int i3;
+        ArrayList<String> arrayList = this.f54120;
+        String str = this.f54121;
+        ArrayList<C16770> arrayList2 = this.f54122;
+        if (i == -1) {
+            sb.append('<');
+            sb.append(str);
+            for (String str2 : arrayList) {
+                sb.append(' ');
+                sb.append(str2);
+            }
+            if (arrayList2.isEmpty()) {
+                sb.append(" />");
+                return;
+            }
+            sb.append(">");
+            Iterator it = arrayList2.iterator();
+            while (it.hasNext()) {
+                ((C16770) it.next()).mo39582(sb, -1);
+            }
+            sb.append("</");
+            sb.append(str);
+            sb.append('>');
+            return;
         }
-        C2658 c2658 = new C2658(this.c, false);
-        C4775 c4775 = C4775.a;
-        return new C23351(c2658, locale, enumC5481, interfaceC21233);
+        for (int i4 = 0; i4 < i; i4++) {
+            sb.append(' ');
+        }
+        sb.append('<');
+        sb.append(str);
+        if (arrayList.size() == 1) {
+            if (((String) arrayList.get(0)).length() + str.length() + i < 60) {
+                sb.append(' ');
+                sb.append((String) arrayList.get(0));
+            } else {
+                for (String str3 : arrayList) {
+                    sb.append('\n');
+                    i2 = i + 4;
+                    for (i3 = 0; i3 < i2; i3++) {
+                        sb.append(' ');
+                    }
+                    sb.append(str3);
+                }
+            }
+        } else {
+            while (r5.hasNext()) {
+                sb.append('\n');
+                i2 = i + 4;
+                while (i3 < i2) {
+                    sb.append(' ');
+                }
+                sb.append(str3);
+            }
+        }
+        if (arrayList2.isEmpty()) {
+            sb.append(" />");
+            return;
+        }
+        sb.append(">");
+        Iterator it2 = arrayList2.iterator();
+        while (it2.hasNext()) {
+            if (((C16770) it2.next()) instanceof C24976) {
+                Iterator it3 = arrayList2.iterator();
+                while (it3.hasNext()) {
+                    ((C16770) it3.next()).mo39582(sb, -1);
+                }
+                sb.append("</");
+                sb.append(str);
+                sb.append('>');
+            }
+        }
+        for (C16770 c16770 : arrayList2) {
+            sb.append('\n');
+            c16770.mo39582(sb, i + 4);
+        }
+        sb.append('\n');
+        for (int i5 = 0; i5 < i; i5++) {
+            sb.append(' ');
+        }
+        sb.append("</");
+        sb.append(str);
+        sb.append('>');
     }
 }

@@ -1,55 +1,51 @@
 .class public final Ll/ܰۛۤ;
-.super Ll/ܿۛۤ;
-.source "W7SR"
+.super Ljava/lang/Object;
+.source "Z6QT"
 
 
 # instance fields
-.field public final synthetic ܰ:Ll/ۨۛۤ;
+.field public ۙ:Z
+
+.field public ۤ:Z
+
+.field public ᩷:I
+
+.field public ᩸:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۨۛۤ;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 1276
-    iput-object p1, p0, Ll/ܰۛۤ;->ܰ:Ll/ۨۛۤ;
+    .line 57
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ll/ܿۛۤ;-><init>()V
+    .line 58
+    invoke-virtual {p0}, Ll/ܰۛۤ;->ۙ()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/᩸ۡ۟;)V
-    .locals 2
+.method public final ۙ()V
+    .locals 1
 
-    .line 1279
-    iget-object v0, p0, Ll/ܰۛۤ;->ܰ:Ll/ۨۛۤ;
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Ll/ۨۛۤ;->ۖ:Ll/ܽۤۤ;
+    .line 62
+    iput v0, p0, Ll/ܰۛۤ;->᩸:I
 
-    .line 1281
-    :try_start_0
-    iput-object v1, v0, Ll/ۨۛۤ;->ۖ:Ll/ܽۤۤ;
+    .line 63
+    iput v0, p0, Ll/ܰۛۤ;->᩷:I
 
-    .line 1282
-    iget-object p1, p1, Ll/᩸ۡ۟;->ܿ:Ll/ۛ۠۟;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Ll/᩷ۛۤ;->ܰ(Ll/ۡۡ۟;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 64
+    iput-boolean v0, p0, Ll/ܰۛۤ;->ۤ:Z
 
-    .line 1284
-    iput-object v1, v0, Ll/ۨۛۤ;->ۖ:Ll/ܽۤۤ;
+    .line 65
+    iput-boolean v0, p0, Ll/ܰۛۤ;->ۙ:Z
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    iput-object v1, v0, Ll/ۨۛۤ;->ۖ:Ll/ܽۤۤ;
-
-    .line 1285
-    throw p1
 .end method

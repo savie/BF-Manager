@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.generators;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.KeyGenerationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Poly1305KeyGenerator extends CipherKeyGenerator {
     public static final byte R_MASK_HIGH_4 = 15;
     public static final byte R_MASK_LOW_2 = -4;

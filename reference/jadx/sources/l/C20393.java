@@ -1,27 +1,46 @@
 package l;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.᩶᩶۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: S403 */
+/* JADX INFO: renamed from: l.᩵ۜۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 014Q */
 /* JADX INFO: loaded from: classes5.dex */
-@InterfaceC16741(EnumC12508.RELEASE_6)
-public class C20393 extends AbstractC7693 {
+public final class C20393 implements InterfaceC11442 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m46039(List list, Object obj) {
-        Iterator it = list.iterator();
-        Set setM18692 = null;
-        while (it.hasNext()) {
-            setM18692 = ((C6945) this).m18692((InterfaceC14625) it.next(), (Set) obj);
-        }
-        return setM18692;
+    public final /* synthetic */ C24123 f65376;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean[] f65377;
+
+    public C20393(C24123 c24123, boolean[] zArr) {
+        this.f65376 = c24123;
+        this.f65377 = zArr;
     }
 
-    @Override // l.AbstractC7693
+    @Override // l.InterfaceC11442
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2553(int i) {
+        if (i < this.f65376.f77970) {
+            this.f65377[i] = false;
+        }
+    }
+
+    @Override // l.InterfaceC11442
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo20328(C16847 c16847, Object obj) {
-        return m46039(c16847.mo2882(), obj);
+    public final void mo2552(int i) {
+        if (i < this.f65376.f77970) {
+            this.f65377[i] = false;
+        }
+    }
+
+    @Override // l.InterfaceC11442
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2554(int i) {
+        mo2553(i);
+    }
+
+    @Override // l.InterfaceC11442
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo2555(int i) {
+        mo2552(i);
     }
 }

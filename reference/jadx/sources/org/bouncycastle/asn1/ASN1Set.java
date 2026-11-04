@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import l.C12441;
-import l.C9013;
+import l.C11958;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Iterable;
 
@@ -102,10 +102,10 @@ public abstract class ASN1Set extends ASN1Primitive implements Iterable {
             try {
                 return (ASN1Set) TYPE.fromByteArray((byte[]) obj);
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct set from byte[]: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct set from byte[]: ")));
             }
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in getInstance: "));
     }
 
     public static ASN1Set getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

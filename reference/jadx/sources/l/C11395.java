@@ -1,27 +1,31 @@
 package l;
 
-import java.io.OutputStream;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۨ֫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 658Z */
+/* JADX INFO: renamed from: l.ۧۚۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U78T */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C11395 extends OutputStream {
-    public final String toString() {
-        return "ByteStreams.nullOutputStream()";
-    }
+public final class C11395 {
 
-    @Override // java.io.OutputStream
-    public final void write(int i) {
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f35855;
 
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr) {
-        bArr.getClass();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f35856 = new ArrayList();
 
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) {
-        bArr.getClass();
-        C18304.m42511(i, i2 + i, bArr.length);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f35857;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f35858;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m28748(C1701 c1701) {
+        this.f35856.add(c1701);
+        if (c1701.f5833) {
+            this.f35855 = true;
+            this.f35858 += c1701.f5836;
+            this.f35857 += c1701.f5835;
+        }
     }
 }

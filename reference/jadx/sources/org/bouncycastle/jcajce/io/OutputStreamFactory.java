@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 import java.security.Signature;
 import javax.crypto.Mac;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OutputStreamFactory {
     public static OutputStream createStream(MessageDigest messageDigest) {
         return new DigestUpdatingOutputStream(messageDigest);

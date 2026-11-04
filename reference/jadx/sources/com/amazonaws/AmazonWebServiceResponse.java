@@ -6,32 +6,32 @@ import com.amazonaws.services.s3.S3ResponseMetadata;
 public class AmazonWebServiceResponse {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public S3ResponseMetadata f88;
+    public S3ResponseMetadata f78;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Object f89;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Object f79;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Object m166() {
-        return this.f89;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m160() {
+        return this.f79;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m165(Object obj) {
-        this.f89 = obj;
+    public final void m159(Object obj) {
+        this.f79 = obj;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m164(S3ResponseMetadata s3ResponseMetadata) {
-        this.f88 = s3ResponseMetadata;
+    public final void m158(S3ResponseMetadata s3ResponseMetadata) {
+        this.f78 = s3ResponseMetadata;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m163() {
-        S3ResponseMetadata s3ResponseMetadata = this.f88;
+    public final String m157() {
+        S3ResponseMetadata s3ResponseMetadata = this.f78;
         if (s3ResponseMetadata == null) {
             return null;
         }
-        return (String) s3ResponseMetadata.f117.get("AWS_REQUEST_ID");
+        return (String) s3ResponseMetadata.f107.get("AWS_REQUEST_ID");
     }
 }

@@ -1,17 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۤۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: renamed from: l.ᩳ᩺ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6B2 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C19402 extends C23595 {
+public final class C19402 extends C24649 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f62544;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9730 f62701;
 
-    public C19402(C23595 c23595) {
-        this.f76439 = c23595;
-        C17285 c17285 = new C17285();
-        this.f76439.m52022(c17285);
-        this.f62544 = c17285.f55041;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object m44870() {
+        return this.f62701;
     }
 }

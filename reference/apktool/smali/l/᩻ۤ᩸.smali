@@ -1,36 +1,31 @@
-.class public final enum Ll/᩻ۤ᩸;
-.super Ll/ۗۤ᩸;
-.source "L9QC"
+.class public final synthetic Ll/᩻ۤ᩸;
+.super Ljava/lang/Object;
+.source "B1VV"
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ILl/ۙ۟᩸;I)V
-    .locals 6
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move v4, p4
-
-    .line 97
-    invoke-direct/range {v0 .. v5}, Ll/ۗۤ᩸;-><init>(Ljava/lang/String;ILl/ۙ۟᩸;ILl/ۧۤ᩸;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/function/Supplier;
 
 
 # virtual methods
-.method public ۚ()Z
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x0
+    .line 86
+    new-instance v6, Ll/ۨۤ᩸;
 
-    return v0
+    const-string v4, "SHA256withECDSA"
+
+    const/4 v5, 0x0
+
+    const/16 v1, 0x201
+
+    const-string v2, "SHA-256"
+
+    const-string v3, "EC"
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Ll/ۨۤ᩸;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/PSSParameterSpec;)V
+
+    return-object v6
 .end method

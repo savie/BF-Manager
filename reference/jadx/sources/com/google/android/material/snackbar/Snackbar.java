@@ -15,10 +15,10 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import l.C15089;
-import l.C2387;
-import l.C2746;
-import l.ViewOnClickListenerC21401;
+import l.C11642;
+import l.C12388;
+import l.C25276;
+import l.ViewOnClickListenerC12107;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Snackbar extends BaseTransientBottomBar {
@@ -45,9 +45,9 @@ public class Snackbar extends BaseTransientBottomBar {
     }
 
     static {
-        int i = C2387.f8652;
+        int i = C11642.f36737;
         SNACKBAR_BUTTON_STYLE_ATTR = new int[]{i};
-        SNACKBAR_CONTENT_STYLE_ATTRS = new int[]{i, C2387.f8994};
+        SNACKBAR_CONTENT_STYLE_ATTRS = new int[]{i, C11642.f37010};
     }
 
     public Snackbar(Context context, ViewGroup viewGroup, View view, ContentViewCallback contentViewCallback) {
@@ -89,9 +89,9 @@ public class Snackbar extends BaseTransientBottomBar {
         }
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(context);
         if (hasSnackbarContentStyleAttrs(context)) {
-            i2 = C15089.f49213;
+            i2 = C12388.f39777;
         } else {
-            i2 = C15089.f49217;
+            i2 = C12388.f39791;
         }
         SnackbarContentLayout snackbarContentLayout = (SnackbarContentLayout) layoutInflaterFrom.inflate(i2, viewGroupFindSuitableParent, false);
         Snackbar snackbar = new Snackbar(context, viewGroupFindSuitableParent, snackbarContentLayout, snackbarContentLayout);
@@ -122,7 +122,7 @@ public class Snackbar extends BaseTransientBottomBar {
 
     public static ViewGroup findSuitableParent(View view) {
         ViewGroup viewGroup = null;
-        while (!(view instanceof C2746)) {
+        while (!(view instanceof C25276)) {
             if (view instanceof FrameLayout) {
                 if (view.getId() == 16908290) {
                     return (ViewGroup) view;
@@ -164,7 +164,7 @@ public class Snackbar extends BaseTransientBottomBar {
         this.hasAction = true;
         actionView.setVisibility(0);
         actionView.setText(charSequence);
-        actionView.setOnClickListener(new ViewOnClickListenerC21401(1, this, onClickListener));
+        actionView.setOnClickListener(new ViewOnClickListenerC12107(3, this, onClickListener));
         return this;
     }
 

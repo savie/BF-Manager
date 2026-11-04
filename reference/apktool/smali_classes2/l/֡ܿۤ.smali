@@ -1,136 +1,62 @@
 .class public final synthetic Ll/֡ܿۤ;
 .super Ljava/lang/Object;
-.source "T41H"
+.source "B4HK"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
-# static fields
-.field public static final synthetic ۙ:[I
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    .line 320
-    invoke-static {}, Ll/ۜ۟ۤ;->values()[Ll/ۜ۟ۤ;
+    .line 0
+    iput p1, p0, Ll/֡ܿۤ;->ܰ:I
 
-    move-result-object v0
+    iput-object p2, p0, Ll/֡ܿۤ;->᩶:Ljava/lang/Object;
 
-    array-length v0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
-
-    sput-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    :try_start_0
-    sget-object v1, Ll/ۜ۟ۤ;->ۧ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->᩻:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->ۘۙ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->ۨۙ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->ۖۙ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->ۙۙ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Ll/֡ܿۤ;->ۙ:[I
-
-    sget-object v1, Ll/ۜ۟ۤ;->ۢ:Ll/ۜ۟ۤ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
     return-void
+.end method
+
+
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 0
+
+    .line 0
+    iget p1, p0, Ll/֡ܿۤ;->ܰ:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Ll/֡ܿۤ;->᩶:Ljava/lang/Object;
+
+    check-cast p1, Ll/᩶ܺۧ;
+
+    invoke-static {p1, p2}, Ll/᩶ܺۧ;->ۙ(Ll/᩶ܺۧ;Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Ll/֡ܿۤ;->᩶:Ljava/lang/Object;
+
+    check-cast p1, Ll/ۢܿۤ;
+
+    invoke-static {p1, p2}, Ll/ۢܿۤ;->ۙ(Ll/ۢܿۤ;Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -6,7 +6,7 @@ import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.asn1.cryptopro.ECGOST3410NamedCurves;
 import org.bouncycastle.internal.asn1.rosstandart.RosstandartObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410ParameterSpec implements AlgorithmParameterSpec {
     public final ASN1ObjectIdentifier digestParamSet;
     public final ASN1ObjectIdentifier encryptionParamSet;

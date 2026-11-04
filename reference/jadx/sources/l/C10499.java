@@ -1,22 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤ᩵ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ۤ֡ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q18Y */
 /* JADX INFO: loaded from: classes3.dex */
-public class C10499 extends C23595 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f35964;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f35965;
+public final class C10499 implements Iterator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C23595 f35966;
+    public final AbstractC4534 f33407;
 
-    public C10499(int i, int i2, C23595 c23595) {
-        this.f35966 = c23595;
-        this.f35965 = i;
-        this.f35964 = i2;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public AbstractC4534 f33408;
+
+    public C10499(AbstractC4534 abstractC4534, AbstractC4534 abstractC4535) {
+        this.f33408 = abstractC4534;
+        this.f33407 = abstractC4535;
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        AbstractC4534 abstractC4534 = this.f33408;
+        return (abstractC4534 == null || abstractC4534 == this.f33407) ? false : true;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        AbstractC4534 abstractC4534 = this.f33408;
+        this.f33408 = abstractC4534.m14261();
+        return abstractC4534;
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("remove");
     }
 }

@@ -1,86 +1,171 @@
-.class public abstract Ll/۬ۨܶ;
-.super Ll/֨ۨܶ;
-.source "NBDN"
+.class public final Ll/۬ۨܶ;
+.super Ll/ۜۨܶ;
+.source "I9JA"
 
 
 # instance fields
-.field public final ܰ:Ll/֫ۨܶ;
+.field public final ۢ:[B
+
+.field public final ᩳ:Ll/۟ܶܶ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll/֫ۨܶ;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/io/InputStream;Ll/۟ܶܶ;Ll/ۢܶܶ;)V
+    .locals 0
 
-    .line 40
-    invoke-direct {p0, p1}, Ll/֨ۨܶ;-><init>(Ljava/lang/String;)V
+    .line 35
+    invoke-direct {p0, p1, p2, p4}, Ll/ۜۨܶ;-><init>(Ljava/lang/String;Ljava/io/InputStream;Ll/ۢܶܶ;)V
 
-    .line 43
-    :try_start_0
-    invoke-virtual {p2}, Ll/ᩴᩴܶ;->ܰ()Z
+    const/4 p1, 0x4
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    new-array p1, p1, [B
 
-    if-nez p1, :cond_0
+    .line 32
+    iput-object p1, p0, Ll/۬ۨܶ;->ۢ:[B
 
-    .line 51
-    iput-object p2, p0, Ll/۬ۨܶ;->ܰ:Ll/֫ۨܶ;
+    .line 36
+    iput-object p3, p0, Ll/۬ۨܶ;->ᩳ:Ll/۟ܶܶ;
 
     return-void
-
-    .line 44
-    :cond_0
-    :try_start_1
-    new-instance p1, Ll/۠ᩴܶ;
-
-    const-string p2, "localVariables.isMutable()"
-
-    const/4 v0, 0x0
-
-    .line 60
-    invoke-direct {p1, p2, v0}, Ll/۟ܰܶ;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    .line 44
-    throw p1
-    :try_end_1
-    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 48
-    :catch_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "localVariables == null"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
+.method private ۙ([B)V
+    .locals 4
 
-# virtual methods
-.method public final ۙ()I
-    .locals 1
+    .line 68
+    array-length v0, p1
 
-    .line 59
-    iget-object v0, p0, Ll/۬ۨܶ;->ܰ:Ll/֫ۨܶ;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ll/ۚᩴܶ;->size()I
+    :goto_0
+    if-lez v0, :cond_1
 
-    move-result v0
+    .line 71
+    iget-object v2, p0, Ll/ۜۨܶ;->᩶:Ljava/io/BufferedInputStream;
 
-    mul-int/lit8 v0, v0, 0xa
+    invoke-virtual {v2, p1, v1, v0}, Ljava/io/InputStream;->read([BII)I
 
-    add-int/lit8 v0, v0, 0x8
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    sub-int/2addr v0, v2
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    .line 73
+    :cond_0
+    new-instance p1, Ll/ۡܶܶ;
+
+    new-instance v0, Ljava/io/EOFException;
+
+    const-string v1, "EOF while reading packet"
+
+    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    .line 35
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 73
+    throw p1
+
+    :cond_1
+    return-void
+.end method
+
+.method private ᩸()I
+    .locals 3
+
+    .line 61
+    iget-object v0, p0, Ll/۬ۨܶ;->ۢ:[B
+
+    invoke-direct {p0, v0}, Ll/۬ۨܶ;->ۙ([B)V
+
+    const/4 v1, 0x1
+
+    .line 62
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x10
+
+    const/4 v2, 0x2
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    const/4 v2, 0x3
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final ܰ()Ll/֫ۨܶ;
-    .locals 1
 
-    .line 68
-    iget-object v0, p0, Ll/۬ۨܶ;->ܰ:Ll/֫ۨܶ;
+# virtual methods
+.method public final ۙ()Ll/۬ܽܶ;
+    .locals 2
+
+    .line 48
+    :try_start_0
+    invoke-direct {p0}, Ll/۬ۨܶ;->᩸()I
+
+    move-result v0
+
+    .line 40
+    new-array v0, v0, [B
+
+    .line 41
+    invoke-direct {p0, v0}, Ll/۬ۨܶ;->ۙ([B)V
+
+    .line 42
+    iget-object v1, p0, Ll/۬ۨܶ;->ᩳ:Ll/۟ܶܶ;
+
+    invoke-interface {v1, v0}, Ll/۟ܶܶ;->read([B)Ll/۬ܽܶ;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ll/ۡܶܶ; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ll/֫ܶܶ; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    .line 53
+    :goto_0
+    new-instance v1, Ll/ۡܶܶ;
+
+    .line 35
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 53
+    throw v1
+
+    :catch_2
+    move-exception v0
+
+    .line 51
+    throw v0
 .end method

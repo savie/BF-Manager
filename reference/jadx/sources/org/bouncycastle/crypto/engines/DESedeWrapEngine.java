@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.engines;
 
 import java.security.SecureRandom;
-import l.C8479;
+import l.C13645;
 import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.crypto.util.DigestFactory;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESedeWrapEngine implements Wrapper {
     public static final byte[] IV2 = {74, -35, -94, 44, 121, -24, PublicSuffixDatabase.EXCEPTION_MARKER, 5};
     public CBCBlockCipher engine;
@@ -127,7 +127,7 @@ public class DESedeWrapEngine implements Wrapper {
         }
         int blockSize = this.engine.getBlockSize();
         if (i2 % blockSize != 0) {
-            throw new InvalidCipherTextException(C8479.m22141(blockSize, "Ciphertext not multiple of "));
+            throw new InvalidCipherTextException(C13645.m33382(blockSize, "Ciphertext not multiple of "));
         }
         this.engine.init(false, new ParametersWithIV(this.param, IV2));
         byte[] bArr2 = new byte[i2];

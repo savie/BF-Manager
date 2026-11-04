@@ -1,61 +1,45 @@
-.class public final synthetic Ll/֡۫ۚ;
+.class public final Ll/֡۫ۚ;
 .super Ljava/lang/Object;
-.source "S5F9"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.source "L79Z"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܿ۫ۚ;
+.field public final ۙ:I
+
+.field public final ۤ:Z
+
+.field public final ᩴ:I
+
+.field public final ᩷:Ljava/lang/CharSequence;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܿ۫ۚ;)V
+.method public constructor <init>(Ljava/lang/CharSequence;IIZ)V
     .locals 0
 
-    .line 0
+    .line 374
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֡۫ۚ;->ܺ:Ll/ܿ۫ۚ;
+    .line 375
+    iput-object p1, p0, Ll/֡۫ۚ;->᩷:Ljava/lang/CharSequence;
+
+    .line 376
+    iput p2, p0, Ll/֡۫ۚ;->ᩴ:I
+
+    .line 377
+    iput p3, p0, Ll/֡۫ۚ;->᩸:I
+
+    .line 378
+    iput-boolean p4, p0, Ll/֡۫ۚ;->ۤ:Z
+
+    .line 379
+    invoke-static {p1, p2, p3}, Ljava/lang/Character;->codePointCount(Ljava/lang/CharSequence;II)I
+
+    move-result p1
+
+    iput p1, p0, Ll/֡۫ۚ;->ۙ:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Ll/֡۫ۚ;->ܺ:Ll/ܿ۫ۚ;
-
-    .line 5
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 63
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result p3
-
-    if-nez p3, :cond_0
-
-    const/4 p3, 0x4
-
-    if-ne p2, p3, :cond_0
-
-    .line 65
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 66
-    invoke-virtual {v0}, Ll/ܿ۫ۚ;->᩸()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
 .end method

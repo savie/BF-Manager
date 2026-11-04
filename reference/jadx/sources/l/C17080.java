@@ -1,67 +1,64 @@
 package l;
 
-import java.util.Iterator;
+import android.content.DialogInterface;
+import bin.mt.plus.R;
+import com.umeng.commonsdk.framework.UMModuleRegister;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ܿۗܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17NL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17080 {
+/* JADX INFO: renamed from: l.ܺ᩶۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 27JL */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17080 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f54498 = 0;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC23844 f54499 = AbstractC23844.m52567("\r\n", "\n", "\r");
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m39865(String str) {
-        return f54499.contains(str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m39862(int i, String str) {
-        AbstractC0477 it = f54499.iterator();
-        while (it.hasNext()) {
-            String str2 = (String) it.next();
-            if (str.startsWith(str2, i)) {
-                return str2.length();
-            }
-        }
-        return -1;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m39863(String str) {
-        AbstractC0477 it = f54499.iterator();
-        while (it.hasNext()) {
-            String str2 = (String) it.next();
-            if (str.endsWith(str2)) {
-                return str2;
-            }
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m39866(String str) {
-        char cCharAt;
-        int i = 0;
-        while (i < str.length() && (cCharAt = str.charAt(i)) != '\n') {
-            i++;
-            if (cCharAt == '\r') {
-                return (i >= str.length() || str.charAt(i) != '\n') ? "\r" : "\r\n";
-            }
-        }
-        return "\n";
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f55764;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static Iterator m39864(String str) {
-        return new C12142(str);
+    public final /* synthetic */ C23255 f55765;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f55766;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f55767;
+
+    public C17080(AbstractActivityC17204 abstractActivityC17204, String str, C23255 c23255) {
+        this.f55766 = abstractActivityC17204;
+        this.f55764 = str;
+        this.f55765 = c23255;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static Iterator m39861(String str) {
-        return new C16375(str);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8191(this.f55766, R.string.MT_Protector);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws IOException {
+        String strM49871 = C14584.m35193(this.f55764, new String[0]).m49871();
+        this.f55767 = strM49871;
+        if (strM49871.length() > 20480) {
+            this.f55767 = this.f55767.substring(0, UMModuleRegister.PUSH_EVENT_VALUE_HIGH);
+        }
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        this.f55765.mo52335((CharSequence) this.f55767);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f55766.m40401(exc, (DialogInterface.OnDismissListener) null);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

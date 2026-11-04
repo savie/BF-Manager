@@ -1,155 +1,89 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
+import bin.mt.radare2.Radare2Native;
 
-/* JADX INFO: renamed from: l.۬ۜ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+/* JADX INFO: renamed from: l.۫۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F75A */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12955 extends AbstractC18785 {
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream) {
-        return super.parseDelimitedFrom(inputStream);
-    }
+public final class C12955 implements AutoCloseable {
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseDelimitedFrom(inputStream, c2701);
-    }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public long f41522;
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream) {
-        return super.parseFrom(inputStream);
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final boolean f41523;
 
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(InputStream inputStream, C2701 c2701) {
-        return super.parseFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer) {
-        return super.parseFrom(byteBuffer);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(ByteBuffer byteBuffer, C2701 c2701) {
-        return super.parseFrom(byteBuffer, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262) {
-        return super.parseFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        return super.parseFrom(abstractC3262, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725) {
-        return super.parseFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parseFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr) {
-        return super.parseFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2) {
-        return super.parseFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parseFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785, l.InterfaceC6271
-    public final /* bridge */ /* synthetic */ Object parseFrom(byte[] bArr, C2701 c2701) {
-        return super.parseFrom(bArr, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream) {
-        return super.parsePartialDelimitedFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialDelimitedFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialDelimitedFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream) {
-        return super.parsePartialFrom(inputStream);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(InputStream inputStream, C2701 c2701) {
-        return super.parsePartialFrom(inputStream, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC3262 abstractC3262) {
-        return super.parsePartialFrom(abstractC3262);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725) {
-        return super.parsePartialFrom(abstractC23725);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(AbstractC23725 abstractC23725, C2701 c2701) {
-        return super.parsePartialFrom(abstractC23725, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr) {
-        return super.parsePartialFrom(bArr);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2) {
-        return super.parsePartialFrom(bArr, i, i2);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, int i, int i2, C2701 c2701) {
-        return super.parsePartialFrom(bArr, i, i2, c2701);
-    }
-
-    @Override // l.AbstractC18785
-    public final /* bridge */ /* synthetic */ Object parsePartialFrom(byte[] bArr, C2701 c2701) {
-        return super.parsePartialFrom(bArr, c2701);
-    }
-
-    @Override // l.InterfaceC6271
-    public final Object parsePartialFrom(AbstractC3262 abstractC3262, C2701 c2701) throws C4529 {
-        C3781 c3781NewBuilder = C18599.newBuilder();
-        try {
-            c3781NewBuilder.mergeFrom(abstractC3262, c2701);
-            return c3781NewBuilder.buildPartial();
-        } catch (C2474 e) {
-            C4529 c4529M7587 = e.m7587();
-            c4529M7587.m12651(c3781NewBuilder.buildPartial());
-            throw c4529M7587;
-        } catch (C4529 e2) {
-            e2.m12651(c3781NewBuilder.buildPartial());
-            throw e2;
-        } catch (IOException e3) {
-            C4529 c4529 = new C4529(e3.getMessage(), e3);
-            c4529.m12651(c3781NewBuilder.buildPartial());
-            throw c4529;
+    public C12955(long j, boolean z) {
+        if (j == 0) {
+            throw new C15938("Unable to open ELF search session");
         }
+        this.f41522 = j;
+        this.f41523 = z;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C12955 m32336(String str, boolean z) {
+        return new C12955(Radare2Native.nativeOpenElfSearchSession(str, z), z);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22652 m32339(int i, int i2, String str) {
+        if (this.f41523) {
+            throw new IllegalStateException("String-only search session cannot read ELF items");
+        }
+        C10717.m27304(str);
+        m32337(i, i2);
+        long j = this.f41522;
+        if (j != 0) {
+            C22652 c22652M51051 = C22652.m51051(C21160.m48264(Radare2Native.nativeReadElfSearchSessionItems(j, str, "", true, i, 1024, i2)));
+            if (c22652M51051.f73566 <= c22652M51051.f73564) {
+                return c22652M51051;
+            }
+            throw new IllegalArgumentException("offset must not exceed totalCount");
+        }
+        throw new IllegalStateException("ELF search session is closed");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C11463 m32338(int i, int i2, long j) {
+        if (!this.f41523) {
+            throw new IllegalStateException("Symbol search session cannot read ELF strings");
+        }
+        m32337(i, i2);
+        if (j < -1) {
+            throw new IllegalArgumentException("scanOffset must be -1 or non-negative");
+        }
+        long j2 = this.f41522;
+        if (j2 != 0) {
+            C11463 c11463M28820 = C11463.m28820(C21160.m48264(Radare2Native.nativeReadElfSearchSessionStrings(j2, i, 1024, i2, j)));
+            if (c11463M28820.f36048 > c11463M28820.f36046 || c11463M28820.f36045 < 0) {
+                throw new IllegalArgumentException("Invalid ELF string search page");
+            }
+            return c11463M28820;
+        }
+        throw new IllegalStateException("ELF search session is closed");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m32337(int i, int i2) {
+        if (i < 0) {
+            throw new IllegalArgumentException("offset must be non-negative");
+        }
+        if (i2 < -1) {
+            throw new IllegalArgumentException("knownTotalCount must be -1 or non-negative");
+        }
+        if (i2 >= 0 && i > i2) {
+            throw new IllegalArgumentException("offset must not exceed knownTotalCount");
+        }
+    }
+
+    @Override // java.lang.AutoCloseable
+    public final void close() {
+        long j = this.f41522;
+        if (j == 0) {
+            return;
+        }
+        this.f41522 = 0L;
+        Radare2Native.nativeCloseElfSearchSession(j);
     }
 }

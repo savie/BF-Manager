@@ -1,80 +1,122 @@
 package l;
 
-import com.alipay.sdk.m.w.a;
-import com.alipay.sdk.m.y.l;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۧ᩵᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: L8ZE */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11210 {
+/* JADX INFO: renamed from: l.ۤ᩺᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21QH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11210 implements InterfaceC8273, InterfaceC19597 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Map f37930;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public InterfaceC8273 f35371;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m28154(String str) {
-        int i;
-        if (str.startsWith(a.p) && str.endsWith(l.b)) {
-            String strM46498 = C20630.m46498(1, 1, str);
-            if (strM46498.startsWith("#")) {
-                String strSubstring = strM46498.substring(1);
-                if (strSubstring.startsWith("x") || strSubstring.startsWith("X")) {
-                    strSubstring = strSubstring.substring(1);
-                    i = 16;
-                } else {
-                    i = 10;
-                }
-                try {
-                    int i2 = Integer.parseInt(strSubstring, i);
-                    return i2 == 0 ? "�" : new String(Character.toChars(i2));
-                } catch (IllegalArgumentException unused) {
-                    return "�";
-                }
-            }
-            String str2 = (String) f37930.get(strM46498);
-            if (str2 != null) {
-                return str2;
-            }
-        }
-        return str;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20161 f35372;
+
+    @Override // java.util.ListIterator
+    public final /* bridge */ /* synthetic */ void add(Object obj) {
+        mo12329((Integer) obj);
     }
 
-    static {
-        HashMap map = new HashMap();
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(C11210.class.getResourceAsStream("/org/commonmark/internal/util/entities.txt"), StandardCharsets.UTF_8));
-            while (true) {
-                try {
-                    String line = bufferedReader.readLine();
-                    if (line != null) {
-                        if (!line.isEmpty()) {
-                            int iIndexOf = line.indexOf("=");
-                            map.put(line.substring(0, iIndexOf), line.substring(iIndexOf + 1));
-                        }
-                    } else {
-                        bufferedReader.close();
-                        map.put("NewLine", "\n");
-                        f37930 = map;
-                        return;
-                    }
-                } catch (Throwable th) {
-                    try {
-                        bufferedReader.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                    throw th;
-                }
-                throw new IllegalStateException("Failed reading data for HTML named character references", e);
-            }
-        } catch (IOException e) {
-            throw new IllegalStateException("Failed reading data for HTML named character references", e);
+    @Override // l.InterfaceC24073
+    public /* bridge */ /* synthetic */ void forEachRemaining(Object obj) {
+        forEachRemaining((IntConsumer) obj);
+    }
+
+    @Override // java.util.Iterator, l.InterfaceC6036, l.InterfaceC20343, l.InterfaceC19597
+    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
+        C12001.m30186(this, consumer);
+    }
+
+    @Override // l.InterfaceC20343
+    public /* synthetic */ void forEachRemaining(IntConsumer intConsumer) {
+        C3189.$default$forEachRemaining((InterfaceC20343) this, intConsumer);
+    }
+
+    @Override // java.util.ListIterator
+    public final /* bridge */ /* synthetic */ void set(Object obj) {
+        mo12332((Integer) obj);
+    }
+
+    @Override // l.InterfaceC8273
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo12329(Integer num) {
+        C2307.m7790((InterfaceC8273) this, num);
+    }
+
+    @Override // l.InterfaceC8273
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ void mo12332(Integer num) {
+        C2307.m7793((InterfaceC8273) this, num);
+    }
+
+    @Override // java.util.ListIterator, l.InterfaceC6847
+    public final Object previous() {
+        return Integer.valueOf(mo12330());
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final Integer next() {
+        return C12001.m30185(this);
+    }
+
+    public C11210(C20161 c20161, InterfaceC8273 interfaceC8273) {
+        this.f35372 = c20161;
+        this.f35371 = interfaceC8273;
+    }
+
+    @Override // java.util.ListIterator
+    public final int nextIndex() {
+        return this.f35371.nextIndex() - this.f35372.f64763;
+    }
+
+    @Override // java.util.ListIterator
+    public final int previousIndex() {
+        return this.f35371.previousIndex() - this.f35372.f64763;
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final boolean hasNext() {
+        return this.f35371.nextIndex() < this.f35372.f64764;
+    }
+
+    @Override // java.util.ListIterator, l.InterfaceC6847
+    public final boolean hasPrevious() {
+        return this.f35371.previousIndex() >= this.f35372.f64763;
+    }
+
+    @Override // l.InterfaceC20343
+    public final int nextInt() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
         }
+        return this.f35371.nextInt();
+    }
+
+    @Override // l.InterfaceC8273
+    /* JADX INFO: renamed from: ܽۙ */
+    public final int mo12330() {
+        if (!hasPrevious()) {
+            throw new NoSuchElementException();
+        }
+        return this.f35371.mo12330();
+    }
+
+    @Override // l.InterfaceC8273
+    public final void add(int i) {
+        this.f35371.add(i);
+    }
+
+    @Override // l.InterfaceC8273
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo12327(int i) {
+        this.f35371.mo12327(i);
+    }
+
+    @Override // l.InterfaceC8273, java.util.ListIterator, java.util.Iterator
+    public final void remove() {
+        this.f35371.remove();
     }
 }

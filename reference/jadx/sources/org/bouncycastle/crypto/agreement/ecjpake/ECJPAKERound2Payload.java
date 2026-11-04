@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.agreement.ecjpake;
 import com.umeng.analytics.pro.am;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECJPAKERound2Payload {
     public final ECPoint a;
     public final ECSchnorrZKP knowledgeProofForX2s;

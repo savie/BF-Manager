@@ -1,41 +1,66 @@
 .class public final Ll/ۡۡᩴ;
-.super Ljava/lang/Object;
-.source "U5"
+.super Landroid/text/style/ReplacementSpan;
+.source "G7AW"
 
 
-# static fields
-.field public static final ۙ:Ll/۠ۡᩴ;
+# instance fields
+.field public final ܰ:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    .line 71
-    new-instance v0, Ll/۠ۡᩴ;
+    .line 357
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    invoke-direct {v0}, Ll/۠ۡᩴ;-><init>()V
-
-    sput-object v0, Ll/ۡۡᩴ;->ۙ:Ll/۠ۡᩴ;
-
-    .line 75
-    new-instance v0, Ll/ۤ᩵ᩴ;
-
-    sget-object v1, Ll/۟᩵ᩴ;->ܰ:[Ljava/lang/Object;
-
-    invoke-direct {v0, v1}, Ll/ۤ᩵ᩴ;-><init>([Ljava/lang/Object;)V
+    .line 358
+    iput p1, p0, Ll/ۡۡᩴ;->ܰ:I
 
     return-void
 .end method
 
-.method public static ۙ(Ll/ᩴۡᩴ;Ljava/lang/Object;)Ll/᩵ۡᩴ;
-    .locals 1
 
-    .line 217
-    new-instance v0, Ll/᩵ۡᩴ;
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
 
-    .line 181
-    invoke-direct {v0, p0, p1}, Ll/۫᩵ᩴ;-><init>(Ll/֡᩵ᩴ;Ljava/lang/Object;)V
+    return-void
+.end method
 
-    return-object v0
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    if-eqz p5, :cond_0
+
+    .line 367
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+
+    move-result-object p1
+
+    .line 368
+    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+
+    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+
+    .line 369
+    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+
+    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+
+    .line 370
+    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->top:I
+
+    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
+
+    .line 371
+    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+
+    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+
+    .line 373
+    :cond_0
+    iget p1, p0, Ll/ۡۡᩴ;->ܰ:I
+
+    return p1
 .end method

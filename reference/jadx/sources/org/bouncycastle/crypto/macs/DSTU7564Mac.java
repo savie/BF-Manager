@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU7564Mac implements Mac {
     public static final int BITS_IN_BYTE = 8;
     public DSTU7564Digest engine;

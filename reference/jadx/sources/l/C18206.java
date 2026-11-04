@@ -1,23 +1,28 @@
 package l;
 
+import android.content.Context;
+import android.text.method.SingleLineTransformationMethod;
 import android.view.View;
-import android.widget.AdapterView;
+import java.util.Locale;
 
-/* JADX INFO: renamed from: l.ᩳᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5JQ */
+/* JADX INFO: renamed from: l.ܿ۠᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5V7 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C18206 implements AdapterView.OnItemClickListener {
+public final class C18206 extends SingleLineTransformationMethod {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20323 f58152;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Locale f59452;
 
-    public C18206(C20323 c20323) {
-        this.f58152 = c20323;
+    public C18206(Context context) {
+        this.f59452 = context.getResources().getConfiguration().locale;
     }
 
-    @Override // android.widget.AdapterView.OnItemClickListener
-    public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
-        this.f58152.getClass();
-        throw null;
+    @Override // android.text.method.ReplacementTransformationMethod, android.text.method.TransformationMethod
+    public final CharSequence getTransformation(CharSequence charSequence, View view) {
+        CharSequence transformation = super.getTransformation(charSequence, view);
+        if (transformation != null) {
+            return transformation.toString().toUpperCase(this.f59452);
+        }
+        return null;
     }
 }

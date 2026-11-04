@@ -135,7 +135,7 @@
     const-string v0, "Unknown key specification: "
 
     .line 0
-    invoke-static {p2, v0, v1}, Ll/ܺ᩹᩺;->ۙ(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0, v1}, Ll/᩵ۨܽ;->ۙ(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -152,7 +152,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v0, v1}, Ll/ۗۙᩴ;->ۙ(Ljava/security/Key;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Ll/ۧ᩵᩸;->ۙ(Ljava/security/Key;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

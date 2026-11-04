@@ -1,16 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡ᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M605 */
+import java.util.HashMap;
+
+/* JADX INFO: renamed from: l.ۡ۟ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: AIXM */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9219 extends AbstractC15673 {
-    public C9219(C17684 c17684, int i, int i2) {
-        super(c17684, i, i2);
+public final class C9219 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashMap f30038 = new HashMap();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m24395(Object obj) {
+        return this.f30038.get(obj);
     }
 
-    @Override // l.AbstractC15673
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1249(C18825 c18825, int i) {
-        return Integer.valueOf(c18825.m43449());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m24396(Integer num, C17467 c17467) {
+        this.f30038.put(num, c17467);
     }
 }

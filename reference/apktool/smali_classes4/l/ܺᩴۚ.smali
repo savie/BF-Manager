@@ -1,118 +1,99 @@
 .class public final Ll/ܺᩴۚ;
 .super Ljava/lang/Object;
-.source "014Z"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.source "C7AH"
 
 
 # instance fields
-.field public final synthetic ֡:Ll/֡᩺᩺;
-
-.field public final synthetic ܺ:Ll/۫ᩴۚ;
-
-.field public final synthetic ܽ:Ll/֡᩺᩺;
-
-.field public final synthetic ᩶:Ll/ᩴᩴۚ;
+.field public final ۙ:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Ll/۫ᩴۚ;Ll/ᩴᩴۚ;Ll/֡᩺᩺;Ll/֡᩺᩺;)V
+.method public constructor <init>(Ljava/util/HashSet;)V
     .locals 0
 
-    .line 69
+    .line 523
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܺᩴۚ;->ܺ:Ll/۫ᩴۚ;
-
-    iput-object p2, p0, Ll/ܺᩴۚ;->᩶:Ll/ᩴᩴۚ;
-
-    iput-object p3, p0, Ll/ܺᩴۚ;->֡:Ll/֡᩺᩺;
-
-    iput-object p4, p0, Ll/ܺᩴۚ;->ܽ:Ll/֡᩺᩺;
+    .line 525
+    iput-object p1, p0, Ll/ܺᩴۚ;->ۙ:Ljava/util/HashSet;
 
     return-void
+.end method
+
+.method public static varargs ۙ([Ljava/lang/String;)Ll/ܺᩴۚ;
+    .locals 5
+
+    .line 511
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    const-string v1, "2025-11-25"
+
+    .line 512
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 513
+    array-length v1, p0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, p0, v2
+
+    const-string v4, "supportedProtocolVersion"
+
+    .line 514
+    invoke-static {v3, v4}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 517
+    :cond_0
+    new-instance p0, Ll/ܺᩴۚ;
+
+    invoke-direct {p0, v0}, Ll/ܺᩴۚ;-><init>(Ljava/util/HashSet;)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
-
-    .line 72
-    iget-object p2, p0, Ll/ܺᩴۚ;->᩶:Ll/ᩴᩴۚ;
-
-    invoke-virtual {p2, p3}, Ll/ۙۘ᩺;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ll/۟ᩴۚ;
-
-    .line 73
-    iget-object p4, p0, Ll/ܺᩴۚ;->ܺ:Ll/۫ᩴۚ;
-
-    invoke-static {p4, p2}, Ll/۫ᩴۚ;->ۙ(Ll/۫ᩴۚ;Ll/۟ᩴۚ;)V
-
-    if-nez p2, :cond_0
-
-    .line 75
-    invoke-virtual {p0, p1}, Ll/ܺᩴۚ;->onNothingSelected(Landroid/widget/AdapterView;)V
-
-    return-void
-
-    .line 78
-    :cond_0
-    invoke-static {p4}, Ll/۫ᩴۚ;->ۖ(Ll/۫ᩴۚ;)V
-
-    .line 79
-    invoke-virtual {p4, p3}, Ll/۫ᩴۚ;->ۙ(I)V
-
-    .line 80
-    sget-object p1, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
-
-    invoke-interface {p1}, Ll/ۛۧ᩺;->edit()Ll/ܿۧ᩺;
-
-    move-result-object p1
-
-    const-string p3, "text_translator_engine"
-
-    invoke-interface {p2}, Ll/۟ᩴۚ;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-interface {p1, p3, p2}, Ll/ܿۧ᩺;->putString(Ljava/lang/String;Ljava/lang/String;)Ll/ܿۧ᩺;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ll/ܿۧ᩺;->apply()V
-
-    return-void
-.end method
-
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
+.method public final ۙ(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    const/4 p1, 0x0
+    .line 541
+    iget-object v0, p0, Ll/ܺᩴۚ;->ۙ:Ljava/util/HashSet;
 
-    .line 85
-    iget-object v0, p0, Ll/ܺᩴۚ;->ܺ:Ll/۫ᩴۚ;
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    invoke-static {v0, p1}, Ll/۫ᩴۚ;->ۙ(Ll/۫ᩴۚ;Ll/۟ᩴۚ;)V
+    move-result v0
 
-    .line 86
-    iget-object p1, p0, Ll/ܺᩴۚ;->֡:Ll/֡᩺᩺;
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Ll/۫ᩴۚ;->ۙ(Ll/֡᩺᩺;)V
+    return-object p1
 
-    .line 87
-    iget-object p1, p0, Ll/ܺᩴۚ;->ܽ:Ll/֡᩺᩺;
+    :cond_0
+    const-string p1, "2025-11-25"
 
-    invoke-static {p1}, Ll/۫ᩴۚ;->ۙ(Ll/֡᩺᩺;)V
+    return-object p1
+.end method
 
-    const/4 p1, -0x1
+.method public final ᩷(Ljava/lang/String;)Z
+    .locals 1
 
-    .line 88
-    invoke-virtual {v0, p1}, Ll/۫ᩴۚ;->ۙ(I)V
+    .line 541
+    iget-object v0, p0, Ll/ܺᩴۚ;->ۙ:Ljava/util/HashSet;
 
-    return-void
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

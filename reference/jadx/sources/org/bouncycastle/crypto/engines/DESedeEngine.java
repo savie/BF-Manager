@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.engines;
 
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESedeEngine extends DESBase implements BlockCipher {
     public static final int BLOCK_SIZE = 8;
     public boolean forEncryption;
@@ -72,7 +72,7 @@ public class DESedeEngine extends DESBase implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to DESede init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to DESede init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         if (key.length != 24 && key.length != 16) {

@@ -8,7 +8,7 @@
     .locals 2
 
     .line 481
-    sget v0, Ll/ܶ۟ܶ;->᩹ۙ:I
+    sget v0, Ll/ۨ۬ܺ;->ܳۙ:I
 
     const/4 v1, 0x0
 

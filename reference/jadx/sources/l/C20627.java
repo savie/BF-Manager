@@ -1,41 +1,42 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۘ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: I770 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20627 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m46497(InterfaceC18528 interfaceC18528, String str) {
-        String name = interfaceC18528.getName();
-        int iIndexOf = str.indexOf(40);
-        if (iIndexOf != name.length() || !str.startsWith(name)) {
-            return false;
-        }
-        int length = iIndexOf + 1;
-        for (CharSequence charSequence : interfaceC18528.mo9699()) {
-            if (!m46496(str, charSequence, length)) {
-                return false;
-            }
-            length += charSequence.length();
-        }
-        if (length >= str.length() || str.charAt(length) != ')') {
-            return false;
-        }
-        int i = length + 1;
-        String strMo9698 = interfaceC18528.mo9698();
-        return m46496(str, strMo9698, i) && strMo9698.length() + i == str.length();
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.᩵ܳۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57L9 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20627 extends AbstractC24357 {
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1917 f66152;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public Predicate f66153;
+
+    @Override // java.util.function.BiPredicate
+    public final boolean test(Object obj, Object obj2) {
+        AbstractC22664 abstractC22664 = (AbstractC22664) obj2;
+        C1917 c1917 = this.f66152;
+        AbstractC22664 abstractC22664M6596 = c1917.m6596((AbstractC22664) obj);
+        Predicate predicate = this.f66153;
+        return predicate.test(abstractC22664M6596) && predicate.test(c1917.m6596(abstractC22664));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m46496(String str, CharSequence charSequence, int i) {
-        if (i < 0 || charSequence.length() + i > str.length()) {
-            return false;
-        }
-        for (int i2 = 0; i2 < charSequence.length(); i2++) {
-            if (str.charAt(i + i2) != charSequence.charAt(i2)) {
-                return false;
-            }
-        }
-        return true;
+    public C20627(C1917 c1917, EnumC21461 enumC21461) {
+        this(c1917, enumC21461, new C6563(6));
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C20627(C1917 c1917, EnumC21461 enumC21461, Predicate predicate) {
+        super(c1917, enumC21461);
+        this.f66152 = c1917;
+        this.f66153 = predicate;
+    }
+
+    @Override // l.AbstractC24357
+    /* JADX INFO: renamed from: ۙ */
+    public final C7395 mo11429(AbstractC22664 abstractC22664, AbstractC22664 abstractC22665) {
+        AbstractC22664 abstractC22664M6597 = this.f66152.m6597(abstractC22664, abstractC22665);
+        return m44271(new C6457(this, abstractC22664M6597, abstractC22664M6597));
     }
 }

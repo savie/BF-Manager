@@ -1,83 +1,54 @@
 package l;
 
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.᩵۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S24 */
+/* JADX INFO: renamed from: l.ᩳ᩷ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S4H6 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19345 extends AbstractC5543 {
+public final class C19345 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C15818 f62382;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C10394 f62505;
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C7412 f62506;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final EnumC9648 f62507;
+
+    public C19345(C10394 c10394, C7412 c7412, EnumC9648 enumC9648) {
+        this.f62505 = c10394;
+        this.f62506 = c7412;
+        this.f62507 = enumC9648;
     }
 
-    public C19345(C15818 c15818) {
-        this.f62382 = c15818;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        return this.f62382.m37599(obj) != -1;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean remove(Object obj) {
-        C15818 c15818 = this.f62382;
-        int iM37599 = c15818.m37599(obj);
-        if (iM37599 == -1) {
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C19345)) {
             return false;
         }
-        int i = (c15818.f51193 - iM37599) - 1;
-        Object[] objArr = c15818.f51195;
-        int i2 = iM37599 + 1;
-        System.arraycopy(objArr, i2, objArr, iM37599, i);
-        Object[] objArr2 = c15818.f51191;
-        System.arraycopy(objArr2, i2, objArr2, iM37599, i);
-        int i3 = c15818.f51193 - 1;
-        c15818.f51193 = i3;
-        c15818.f51195[i3] = null;
-        c15818.f51191[i3] = null;
-        return true;
+        C19345 c19345 = (C19345) obj;
+        return C17359.equals(this.f62505, c19345.f62505) && C17359.equals(this.f62506, c19345.f62506) && C17359.equals(this.f62507, c19345.f62507);
     }
 
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final Iterator iterator() {
-        return new C18639(this);
+    public final int hashCode() {
+        return C17359.hashCode(this.f62507) + ((C17359.hashCode(this.f62506) + (C17359.hashCode(this.f62505) * 31)) * 31);
     }
 
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC6269 iterator() {
-        return new C18639(this);
-    }
-
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC7371 spliterator() {
-        return new C8056(this, 0, this.f62382.f51193);
-    }
-
-    @Override // l.AbstractC14695, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        C15818 c15818 = this.f62382;
-        Object[] objArr = c15818.f51195;
-        int i = c15818.f51193;
-        for (int i2 = 0; i2 < i; i2++) {
-            consumer.accept(objArr[i2]);
+    public final String toString() {
+        Object[] objArr = {this.f62505, this.f62506, this.f62507};
+        String[] strArrSplit = "request;store;state".length() == 0 ? new String[0] : "request;store;state".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C19345.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
         }
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f62382.f51193;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final void clear() {
-        this.f62382.clear();
+        sb.append("]");
+        return sb.toString();
     }
 }

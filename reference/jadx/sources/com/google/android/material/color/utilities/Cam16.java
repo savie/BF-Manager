@@ -1,6 +1,6 @@
 package com.google.android.material.color.utilities;
 
-import l.C17745;
+import l.C22972;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class Cam16 {
@@ -103,7 +103,7 @@ public final class Cam16 {
         double d10 = ((((-12.0d) * dSignum2) + (dSignum * 11.0d)) + dSignum3) / 11.0d;
         double d11 = ((dSignum + dSignum2) - (dSignum3 * 2.0d)) / 9.0d;
         double d12 = dSignum2 * 20.0d;
-        double dM41305 = C17745.m41305(dSignum3, 21.0d, (dSignum * 20.0d) + d12, 20.0d);
+        double dM51847 = C22972.m51847(dSignum3, 21.0d, (dSignum * 20.0d) + d12, 20.0d);
         double d13 = (((dSignum * 40.0d) + d12) + dSignum3) / 20.0d;
         double degrees = Math.toDegrees(Math.atan2(d11, d10));
         if (degrees < 0.0d) {
@@ -116,7 +116,7 @@ public final class Cam16 {
         double dPow4 = Math.pow((viewingConditions.getNbb() * d13) / viewingConditions.getAw(), viewingConditions.getC() * viewingConditions.getZ()) * 100.0d;
         double d15 = dPow4 / 100.0d;
         double flRoot = viewingConditions.getFlRoot() * (viewingConditions.getAw() + 4.0d) * Math.sqrt(d15) * (4.0d / viewingConditions.getC());
-        double dPow5 = Math.pow((Math.hypot(d10, d11) * (((((Math.cos(Math.toRadians(d14 < 20.14d ? d14 + 360.0d : d14) + 2.0d) + 3.8d) * 0.25d) * 3846.153846153846d) * viewingConditions.getNc()) * viewingConditions.getNcb())) / (dM41305 + 0.305d), 0.9d) * Math.pow(1.64d - Math.pow(0.29d, viewingConditions.getN()), 0.73d);
+        double dPow5 = Math.pow((Math.hypot(d10, d11) * (((((Math.cos(Math.toRadians(d14 < 20.14d ? d14 + 360.0d : d14) + 2.0d) + 3.8d) * 0.25d) * 3846.153846153846d) * viewingConditions.getNc()) * viewingConditions.getNcb())) / (dM51847 + 0.305d), 0.9d) * Math.pow(1.64d - Math.pow(0.29d, viewingConditions.getN()), 0.73d);
         double dSqrt = Math.sqrt(d15) * dPow5;
         double flRoot2 = viewingConditions.getFlRoot() * dSqrt;
         double dSqrt2 = Math.sqrt((dPow5 * viewingConditions.getC()) / (viewingConditions.getAw() + 4.0d)) * 50.0d;
@@ -175,10 +175,10 @@ public final class Cam16 {
         double d2 = dCos2 * d;
         double d3 = d * dSin;
         double d4 = nbb * 460.0d;
-        double dM41305 = C17745.m41305(d3, 288.0d, (451.0d * d2) + d4, 1403.0d);
+        double dM51847 = C22972.m51847(d3, 288.0d, (451.0d * d2) + d4, 1403.0d);
         double d5 = ((d4 - (891.0d * d2)) - (261.0d * d3)) / 1403.0d;
         double d6 = ((d4 - (d2 * 220.0d)) - (d3 * 6300.0d)) / 1403.0d;
-        double dPow3 = Math.pow(Math.max(0.0d, (Math.abs(dM41305) * 27.13d) / (400.0d - Math.abs(dM41305))), 2.380952380952381d) * (100.0d / viewingConditions.getFl()) * Math.signum(dM41305);
+        double dPow3 = Math.pow(Math.max(0.0d, (Math.abs(dM51847) * 27.13d) / (400.0d - Math.abs(dM51847))), 2.380952380952381d) * (100.0d / viewingConditions.getFl()) * Math.signum(dM51847);
         double dPow4 = Math.pow(Math.max(0.0d, (Math.abs(d5) * 27.13d) / (400.0d - Math.abs(d5))), 2.380952380952381d) * (100.0d / viewingConditions.getFl()) * Math.signum(d5);
         double dPow5 = Math.pow(Math.max(0.0d, (Math.abs(d6) * 27.13d) / (400.0d - Math.abs(d6))), 2.380952380952381d) * (100.0d / viewingConditions.getFl()) * Math.signum(d6);
         double d7 = dPow3 / viewingConditions.getRgbD()[0];

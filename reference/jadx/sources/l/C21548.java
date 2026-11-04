@@ -1,26 +1,29 @@
 package l;
 
-import android.view.View;
-import android.view.Window;
+/* JADX INFO: renamed from: l.᩶᩶ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F7CM */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21548 extends AbstractC17072 {
 
-/* JADX INFO: renamed from: l.᩸ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 38CF */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C21548 implements InterfaceC18020 {
-    @Override // l.InterfaceC18020
-    /* JADX INFO: renamed from: ۙ */
-    public void mo18177(C4345 c4345, C4345 c4346, Window window, View view, boolean z, boolean z2) {
-        C13465.m32966(c4345, "statusBarStyle");
-        C13465.m32966(c4346, "navigationBarStyle");
-        C13465.m32966(window, "window");
-        C13465.m32966(view, "view");
-        C16321.m38489(window, false);
-        window.setStatusBarColor(0);
-        window.setNavigationBarColor(0);
-        window.setStatusBarContrastEnforced(false);
-        window.setNavigationBarContrastEnforced(true);
-        C5965 c5965 = new C5965(window, view);
-        c5965.m16258(!z);
-        c5965.m16254(true ^ z2);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f68826;
+
+    public C21548(String str) {
+        this.f68826 = str;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m48986() {
+        return this.f68826;
+    }
+
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֫ */
+    public final InterfaceC2157 mo1791() {
+        return C25278.f81640;
+    }
+
+    public final String toString() {
+        return "SOURCE:" + this.f68826;
     }
 }

@@ -1,823 +1,279 @@
-.class public abstract Ll/ۨܶܶ;
-.super Ll/᩷ܶܶ;
-.source "YBDT"
+.class public final Ll/ۨܶܶ;
+.super Ll/ۗܶܶ;
+.source "J9I9"
 
 
 # instance fields
-.field public ֡:Ll/֫ܶܶ;
+.field public final ֡:Ll/ܰܶܶ;
 
-.field public final ܽ:Ll/֫ܶܶ;
+.field public final ܰ:Ll/᩵ܶܶ;
+
+.field public final ܿ:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+.field public final ᩶:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۛܶܶ;Ll/֡ܶܶ;)V
-    .locals 0
+.method public constructor <init>(Ll/ܰܶܶ;Ll/᩵ܶܶ;)V
+    .locals 2
 
-    .line 49
-    invoke-direct {p0, p1, p2}, Ll/᩷ܶܶ;-><init>(Ll/ۛܶܶ;Ll/֡ܶܶ;)V
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
-    invoke-virtual {p0}, Ll/᩷ܶܶ;->ܶ()Ll/֡ܶܶ;
+    .line 30
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ll/֡ܶܶ;->ܶ()Ll/ܿܶܶ;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    move-result-object p1
+    iput-object v0, p0, Ll/ۨܶܶ;->᩶:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p1}, Ll/ܿܶܶ;->getString()Ljava/lang/String;
+    .line 31
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
 
-    .line 52
-    invoke-virtual {p0}, Ll/ۨܶܶ;->᩵()Z
+    iput-object v0, p0, Ll/ۨܶܶ;->ܿ:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    move-result p2
+    .line 34
+    iput-object p1, p0, Ll/ۨܶܶ;->֡:Ll/ܰܶܶ;
 
-    if-eqz p2, :cond_0
-
-    .line 58
-    invoke-static {p1}, Ll/֫ܶܶ;->ۙ(Ljava/lang/String;)Ll/֫ܶܶ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
-
-    goto :goto_0
-
-    .line 60
-    :cond_0
-    invoke-static {p1}, Ll/֫ܶܶ;->ܰ(Ljava/lang/String;)Ll/֫ܶܶ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
-
-    :goto_0
-    const/4 p1, 0x0
-
-    .line 62
-    iput-object p1, p0, Ll/ۨܶܶ;->֡:Ll/֫ܶܶ;
+    .line 35
+    iput-object p2, p0, Ll/ۨܶܶ;->ܰ:Ll/᩵ܶܶ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getType()Ll/ۗܶܶ;
+.method public final cancel(Z)Z
+    .locals 4
+
+    .line 40
+    iget-object p1, p0, Ll/ۨܶܶ;->᩶:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iget-object v0, p0, Ll/ۨܶܶ;->ܿ:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
+
+    const/4 v1, 0x0
+
+    .line 42
+    :try_start_0
+    invoke-virtual {p0}, Ll/ۨܶܶ;->isDone()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    .line 46
+    :cond_0
+    iget-object v3, p0, Ll/ۨܶܶ;->ܰ:Ll/᩵ܶܶ;
+
+    invoke-interface {v3}, Ll/᩵ܶܶ;->cancel()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 53
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
+
+    return v2
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
+
+    return v1
+
+    :catchall_0
+    move-exception v2
+
+    .line 50
+    :try_start_1
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 51
+    sget-object p1, Ll/ۨۗܶ;->ܰ:Ll/ۛܶܶ;
+
+    invoke-interface {p1, v2}, Ll/ۛܶܶ;->ۙ(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۨۗܶ;
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    .line 53
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
+
+    .line 54
+    throw p1
+.end method
+
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    .line 122
-    iget-object v0, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
+    .line 79
+    iget-object v0, p0, Ll/ۨܶܶ;->֡:Ll/ܰܶܶ;
 
-    invoke-virtual {v0}, Ll/֫ܶܶ;->ۖ()Ll/ۗܶܶ;
+    invoke-virtual {v0}, Ll/ܰܶܶ;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ(Z)Ll/֫ܶܶ;
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
-    .line 87
-    iget-object v0, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
+    .line 84
+    iget-object v0, p0, Ll/ۨܶܶ;->֡:Ll/ܰܶܶ;
 
-    if-eqz p1, :cond_0
-
-    return-object v0
-
-    .line 90
-    :cond_0
-    iget-object p1, p0, Ll/ۨܶܶ;->֡:Ll/֫ܶܶ;
-
-    if-nez p1, :cond_1
-
-    .line 91
-    invoke-virtual {p0}, Ll/᩷ܶܶ;->᩹()Ll/ۛܶܶ;
+    invoke-virtual {v0, p1, p2, p3}, Ll/ܰܶܶ;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Ll/ۛܶܶ;->ܶ()Ll/ۗܶܶ;
-
-    move-result-object p1
-
-    .line 92
-    invoke-virtual {v0, p1}, Ll/֫ܶܶ;->ۙ(Ll/ۗܶܶ;)Ll/֫ܶܶ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۨܶܶ;->֡:Ll/֫ܶܶ;
-
-    .line 94
-    :cond_1
-    iget-object p1, p0, Ll/ۨܶܶ;->֡:Ll/֫ܶܶ;
 
     return-object p1
 .end method
 
-.method public final ܰ(Ll/ۢ᩺ܶ;)I
-    .locals 1
+.method public final isCancelled()Z
+    .locals 2
 
-    .line 103
-    invoke-super {p0, p1}, Ll/᩷ܶܶ;->ܰ(Ll/ۢ᩺ܶ;)I
+    .line 59
+    iget-object v0, p0, Ll/ۨܶܶ;->ܿ:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    return v0
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
-    .line 109
-    :cond_0
-    check-cast p1, Ll/ۨܶܶ;
+    .line 61
+    :try_start_0
+    iget-object v1, p0, Ll/ۨܶܶ;->᩶:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 110
-    iget-object v0, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-object p1, p1, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, p1}, Ll/֫ܶܶ;->ۙ(Ll/֫ܶܶ;)I
+    .line 63
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    .line 64
+    throw v1
 .end method
 
-.method public final ᩴ()Ll/֫ܶܶ;
-    .locals 1
+.method public final isDone()Z
+    .locals 2
 
-    .line 72
-    iget-object v0, p0, Ll/ۨܶܶ;->ܽ:Ll/֫ܶܶ;
+    .line 69
+    iget-object v0, p0, Ll/ۨܶܶ;->ܿ:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
-.method public final ᩵()Z
-    .locals 5
+    move-result-object v1
 
-    .line 175
-    invoke-virtual {p0}, Ll/᩷ܶܶ;->᩹()Ll/ۛܶܶ;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
-    move-result-object v0
+    .line 71
+    :try_start_0
+    iget-object v1, p0, Ll/ۨܶܶ;->᩶:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 176
-    sget-object v1, Ll/ۛܶܶ;->ۖۙ:Ll/ۛܶܶ;
-
-    invoke-virtual {v0, v1}, Ll/ۛܶܶ;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v1
 
-    const/4 v2, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v3, 0x1
+    iget-object v1, p0, Ll/ۨܶܶ;->֡:Ll/ܰܶܶ;
 
-    if-eqz v1, :cond_1
-
-    .line 177
-    invoke-virtual {p0}, Ll/᩷ܶܶ;->ܶ()Ll/֡ܶܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/֡ܶܶ;->getName()Ll/ܿܶܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/ܿܶܶ;->getString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "invoke"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ll/ܰܶܶ;->isDone()Z
 
     move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    const-string v1, "invokeExact"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_1
+    goto :goto_0
 
     :cond_0
-    return v3
-
-    .line 182
-    :cond_1
-    sget-object v1, Ll/ۛܶܶ;->۬ۙ:Ll/ۛܶܶ;
-
-    invoke-virtual {v0, v1}, Ll/ۛܶܶ;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_21
-
-    .line 183
-    invoke-virtual {p0}, Ll/᩷ܶܶ;->ܶ()Ll/֡ܶܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/֡ܶܶ;->getName()Ll/ܿܶܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/ܿܶܶ;->getString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/4 v4, -0x1
-
-    sparse-switch v1, :sswitch_data_0
-
-    goto/16 :goto_0
-
-    :sswitch_0
-    const-string v1, "weakCompareAndSetRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    const/16 v4, 0x1e
-
-    goto/16 :goto_0
-
-    :sswitch_1
-    const-string v1, "getAndSetAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    const/16 v4, 0x1d
-
-    goto/16 :goto_0
-
-    :sswitch_2
-    const-string v1, "compareAndExchange"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    const/16 v4, 0x1c
-
-    goto/16 :goto_0
-
-    :sswitch_3
-    const-string v1, "getAndBitwiseOr"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto/16 :goto_0
-
-    :cond_5
-    const/16 v4, 0x1b
-
-    goto/16 :goto_0
-
-    :sswitch_4
-    const-string v1, "getAndBitwiseXorAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto/16 :goto_0
-
-    :cond_6
-    const/16 v4, 0x1a
-
-    goto/16 :goto_0
-
-    :sswitch_5
-    const-string v1, "getAndAddAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto/16 :goto_0
-
-    :cond_7
-    const/16 v4, 0x19
-
-    goto/16 :goto_0
-
-    :sswitch_6
-    const-string v1, "compareAndExchangeAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    goto/16 :goto_0
-
-    :cond_8
-    const/16 v4, 0x18
-
-    goto/16 :goto_0
-
-    :sswitch_7
-    const-string v1, "getOpaque"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    goto/16 :goto_0
-
-    :cond_9
-    const/16 v4, 0x17
-
-    goto/16 :goto_0
-
-    :sswitch_8
-    const-string v1, "setOpaque"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    goto/16 :goto_0
-
-    :cond_a
-    const/16 v4, 0x16
-
-    goto/16 :goto_0
-
-    :sswitch_9
-    const-string v1, "getAndBitwiseAndAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    goto/16 :goto_0
-
-    :cond_b
-    const/16 v4, 0x15
-
-    goto/16 :goto_0
-
-    :sswitch_a
-    const-string v1, "getAndSet"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    goto/16 :goto_0
-
-    :cond_c
-    const/16 v4, 0x14
-
-    goto/16 :goto_0
-
-    :sswitch_b
-    const-string v1, "getAndAdd"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    goto/16 :goto_0
-
-    :cond_d
-    const/16 v4, 0x13
-
-    goto/16 :goto_0
-
-    :sswitch_c
-    const-string v1, "getVolatile"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_e
-
-    goto/16 :goto_0
-
-    :cond_e
-    const/16 v4, 0x12
-
-    goto/16 :goto_0
-
-    :sswitch_d
-    const-string v1, "setVolatile"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_f
-
-    goto/16 :goto_0
-
-    :cond_f
-    const/16 v4, 0x11
-
-    goto/16 :goto_0
-
-    :sswitch_e
-    const-string v1, "getAndBitwiseOrAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_10
-
-    goto/16 :goto_0
-
-    :cond_10
-    const/16 v4, 0x10
-
-    goto/16 :goto_0
-
-    :sswitch_f
-    const-string v1, "set"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_11
-
-    goto/16 :goto_0
-
-    :cond_11
-    const/16 v4, 0xf
-
-    goto/16 :goto_0
-
-    :sswitch_10
-    const-string v1, "get"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_12
-
-    goto/16 :goto_0
-
-    :cond_12
-    const/16 v4, 0xe
-
-    goto/16 :goto_0
-
-    :sswitch_11
-    const-string v1, "getAndSetRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_13
-
-    goto/16 :goto_0
-
-    :cond_13
-    const/16 v4, 0xd
-
-    goto/16 :goto_0
-
-    :sswitch_12
-    const-string v1, "getAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_14
-
-    goto/16 :goto_0
-
-    :cond_14
-    const/16 v4, 0xc
-
-    goto/16 :goto_0
-
-    :sswitch_13
-    const-string v1, "setRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_15
-
-    goto/16 :goto_0
-
-    :cond_15
-    const/16 v4, 0xb
-
-    goto/16 :goto_0
-
-    :sswitch_14
-    const-string v1, "weakCompareAndSetAcquire"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_16
-
-    goto/16 :goto_0
-
-    :cond_16
-    const/16 v4, 0xa
-
-    goto/16 :goto_0
-
-    :sswitch_15
-    const-string v1, "weakCompareAndSetPlain"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_17
-
-    goto/16 :goto_0
-
-    :cond_17
-    const/16 v4, 0x9
-
-    goto/16 :goto_0
-
-    :sswitch_16
-    const-string v1, "getAndBitwiseXorRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_18
-
-    goto/16 :goto_0
-
-    :cond_18
-    const/16 v4, 0x8
-
-    goto/16 :goto_0
-
-    :sswitch_17
-    const-string v1, "getAndBitwiseXor"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_19
-
-    goto :goto_0
-
-    :cond_19
-    const/4 v4, 0x7
-
-    goto :goto_0
-
-    :sswitch_18
-    const-string v1, "getAndBitwiseAnd"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1a
-
-    goto :goto_0
-
-    :cond_1a
-    const/4 v4, 0x6
-
-    goto :goto_0
-
-    :sswitch_19
-    const-string v1, "getAndAddRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1b
-
-    goto :goto_0
-
-    :cond_1b
-    const/4 v4, 0x5
-
-    goto :goto_0
-
-    :sswitch_1a
-    const-string v1, "weakCompareAndSet"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1c
-
-    goto :goto_0
-
-    :cond_1c
-    const/4 v4, 0x4
-
-    goto :goto_0
-
-    :sswitch_1b
-    const-string v1, "compareAndExchangeRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1d
-
-    goto :goto_0
-
-    :cond_1d
-    const/4 v4, 0x3
-
-    goto :goto_0
-
-    :sswitch_1c
-    const-string v1, "compareAndSet"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1e
-
-    goto :goto_0
-
-    :cond_1e
-    const/4 v4, 0x2
-
-    goto :goto_0
-
-    :sswitch_1d
-    const-string v1, "getAndBitwiseAndRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1f
-
-    goto :goto_0
-
-    :cond_1f
-    const/4 v4, 0x1
-
-    goto :goto_0
-
-    :sswitch_1e
-    const-string v1, "getAndBitwiseOrRelease"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_20
-
-    goto :goto_0
-
-    :cond_20
-    const/4 v4, 0x0
-
-    :goto_0
-    packed-switch v4, :pswitch_data_0
+    const/4 v1, 0x0
 
     goto :goto_1
 
-    :pswitch_0
-    return v3
+    :cond_1
+    :goto_0
+    const/4 v1, 0x1
 
-    :cond_21
+    .line 73
     :goto_1
-    return v2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
-    :sswitch_data_0
-    .sparse-switch
-        -0x74054ecc -> :sswitch_1e
-        -0x64896c60 -> :sswitch_1d
-        -0x639aefb0 -> :sswitch_1c
-        -0x4d038cae -> :sswitch_1b
-        -0x42a27c48 -> :sswitch_1a
-        -0x41bf8e59 -> :sswitch_19
-        -0x3d910599 -> :sswitch_18
-        -0x3d90af15 -> :sswitch_17
-        -0x2f5b5f64 -> :sswitch_16
-        -0x21ce070e -> :sswitch_15
-        -0xe5aaa02 -> :sswitch_14
-        -0xdc04ebb -> :sswitch_13
-        -0x7976360 -> :sswitch_12
-        -0x23e5d3a -> :sswitch_11
-        0x18f56 -> :sswitch_10
-        0x1bc62 -> :sswitch_f
-        0x594ea03 -> :sswitch_e
-        0x6099c1e -> :sswitch_d
-        0xb513b12 -> :sswitch_c
-        0x10d9c640 -> :sswitch_b
-        0x10da0a01 -> :sswitch_a
-        0x1510cc6f -> :sswitch_9
-        0x1c0e5b23 -> :sswitch_8
-        0x28d92717 -> :sswitch_7
-        0x2c96ac21 -> :sswitch_6
-        0x37daaa76 -> :sswitch_5
-        0x4a3ed96b -> :sswitch_4
-        0x50983b53 -> :sswitch_3
-        0x58737ef5 -> :sswitch_2
-        0x775bdb95 -> :sswitch_1
-        0x780b1d2f -> :sswitch_0
-    .end sparse-switch
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    .line 74
+    throw v1
 .end method

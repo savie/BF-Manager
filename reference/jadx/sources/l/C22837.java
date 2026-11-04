@@ -1,28 +1,117 @@
 package l;
 
-import java.io.IOException;
+import java.io.CharArrayWriter;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.nio.charset.IllegalCharsetNameException;
+import java.nio.charset.UnsupportedCharsetException;
+import java.security.AccessController;
+import java.util.BitSet;
 
-/* JADX INFO: renamed from: l.᩺۟֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: C9PC */
+/* JADX INFO: renamed from: l.᩸۬᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
-public class C22837 extends AbstractC18785 {
-    @Override // l.InterfaceC6271
-    public C21425 parsePartialFrom(AbstractC3262 abstractC3262, C2701 c2701) throws C4529 {
-        C15076 c15076NewBuilder = C21425.newBuilder();
-        try {
-            c15076NewBuilder.mergeFrom(abstractC3262, c2701);
-            return c15076NewBuilder.buildPartial();
-        } catch (C2474 e) {
-            C4529 c4529M7587 = e.m7587();
-            c4529M7587.m12651(c15076NewBuilder.buildPartial());
-            throw c4529M7587;
-        } catch (C4529 e2) {
-            e2.m12651(c15076NewBuilder.buildPartial());
-            throw e2;
-        } catch (IOException e3) {
-            C4529 c4529 = new C4529(e3.getMessage(), e3);
-            c4529.m12651(c15076NewBuilder.buildPartial());
-            throw c4529;
+public class C22837 {
+    public static final BitSet a = new BitSet(256);
+    public static final String b;
+
+    static {
+        String property;
+        for (int i = 97; i <= 122; i++) {
+            a.set(i);
         }
+        for (int i2 = 65; i2 <= 90; i2++) {
+            a.set(i2);
+        }
+        for (int i3 = 48; i3 <= 57; i3++) {
+            a.set(i3);
+        }
+        BitSet bitSet = a;
+        bitSet.set(32);
+        bitSet.set(45);
+        bitSet.set(95);
+        bitSet.set(46);
+        bitSet.set(42);
+        if (System.getSecurityManager() != null) {
+            C4087 c4087 = new C4087();
+            c4087.b = "file.encoding";
+            property = (String) AccessController.doPrivileged(c4087);
+        } else {
+            property = System.getProperty("file.encoding");
+        }
+        b = property;
+    }
+
+    public static String encode(String str) {
+        try {
+            return encode(str, b);
+        } catch (UnsupportedEncodingException unused) {
+            return null;
+        }
+    }
+
+    public static String encode(String str, String str2) throws UnsupportedEncodingException {
+        if (str2 == null) {
+            throw new NullPointerException("charsetName");
+        }
+        try {
+            return encode(str, Charset.forName(str2));
+        } catch (IllegalCharsetNameException | UnsupportedCharsetException unused) {
+            throw new UnsupportedEncodingException(str2);
+        }
+    }
+
+    public static String encode(String str, Charset charset) {
+        BitSet bitSet;
+        int i;
+        char cCharAt;
+        C17359.requireNonNull(charset, "charset");
+        StringBuilder sb = new StringBuilder(str.length());
+        CharArrayWriter charArrayWriter = new CharArrayWriter();
+        int i2 = 0;
+        boolean z = false;
+        while (i2 < str.length()) {
+            char cCharAt2 = str.charAt(i2);
+            if (a.get(cCharAt2)) {
+                if (cCharAt2 == ' ') {
+                    cCharAt2 = '+';
+                    z = true;
+                }
+                sb.append(cCharAt2);
+                i2++;
+            } else {
+                do {
+                    charArrayWriter.write(cCharAt2);
+                    if (cCharAt2 >= 55296 && cCharAt2 <= 56319 && (i = i2 + 1) < str.length() && (cCharAt = str.charAt(i)) >= 56320 && cCharAt <= 57343) {
+                        charArrayWriter.write(cCharAt);
+                        i2 = i;
+                    }
+                    i2++;
+                    if (i2 >= str.length()) {
+                        break;
+                    }
+                    bitSet = a;
+                    cCharAt2 = str.charAt(i2);
+                } while (!bitSet.get(cCharAt2));
+                charArrayWriter.flush();
+                byte[] bytes = new String(charArrayWriter.toCharArray()).getBytes(charset);
+                for (int i3 = 0; i3 < bytes.length; i3++) {
+                    sb.append('%');
+                    char cForDigit = Character.forDigit((bytes[i3] >> 4) & 15, 16);
+                    if (Character.isLetter(cForDigit)) {
+                        cForDigit = (char) (cForDigit - ' ');
+                    }
+                    sb.append(cForDigit);
+                    char cForDigit2 = Character.forDigit(bytes[i3] & 15, 16);
+                    if (Character.isLetter(cForDigit2)) {
+                        cForDigit2 = (char) (cForDigit2 - ' ');
+                    }
+                    sb.append(cForDigit2);
+                }
+                charArrayWriter.reset();
+                z = true;
+            }
+        }
+        return z ? sb.toString() : str;
     }
 }

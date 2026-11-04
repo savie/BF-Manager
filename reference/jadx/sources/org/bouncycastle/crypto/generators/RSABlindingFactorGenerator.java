@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.RSAKeyParameters;
 import org.bouncycastle.crypto.params.RSAPrivateCrtKeyParameters;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSABlindingFactorGenerator {
     public static BigInteger TWO = BigInteger.valueOf(2);
     public RSAKeyParameters key;

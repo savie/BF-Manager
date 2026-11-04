@@ -1,8 +1,8 @@
 package org.bouncycastle.crypto.util;
 
 import java.math.BigInteger;
-import l.C22979;
-import l.C8479;
+import l.C16076;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -29,7 +29,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OpenSSHPrivateKeyUtil {
     public static final byte[] AUTH_MAGIC = Strings.toByteArray("openssh-key-v1\u0000");
 
@@ -96,7 +96,7 @@ public class OpenSSHPrivateKeyUtil {
                 }
                 X9ECParameters byOID = NISTNamedCurves.getByOID(byName);
                 if (byOID == null) {
-                    throw new IllegalStateException(C22979.m50820("Curve not found for: ", byName));
+                    throw new IllegalStateException(C20196.m46452("Curve not found for: ", byName));
                 }
                 sSHBuffer2.readBlock();
                 rSAPrivateCrtKeyParameters = new ECPrivateKeyParameters(new BigInteger(1, sSHBuffer2.readBlock()), new ECNamedDomainParameters(byName, byOID));
@@ -144,7 +144,7 @@ public class OpenSSHPrivateKeyUtil {
             try {
                 return new DERSequence(aSN1EncodableVector).getEncoded();
             } catch (Exception e) {
-                throw new IllegalStateException(C8479.m22142(e, new StringBuilder("unable to encode DSAPrivateKeyParameters ")));
+                throw new IllegalStateException(C16076.m38224(e, new StringBuilder("unable to encode DSAPrivateKeyParameters ")));
             }
         }
         if (!(asymmetricKeyParameter instanceof Ed25519PrivateKeyParameters)) {

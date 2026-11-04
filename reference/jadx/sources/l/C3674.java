@@ -1,96 +1,70 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.SortedSet;
+import java.nio.charset.Charset;
 
-/* JADX INFO: renamed from: l.ۘۗᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5SO */
+/* JADX INFO: renamed from: l.ۗ᩷ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 698I */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3674 extends AbstractC22477 {
+public class C3674 extends AbstractC2599 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C12848 f13434 = new C12848();
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public byte[] f12639;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16376 f13435;
+    public final int f12640;
 
-    public C3674(C16376 c16376) {
-        this.f13435 = c16376;
+    public C3674(byte[] bArr, int i) {
+        this.f12639 = bArr;
+        this.f12640 = i;
     }
 
-    @Override // java.util.SortedSet
-    public final SortedSet headSet(Object obj) {
-        return ((C15671) this.f13435.mo37338(((InterfaceC14260) obj).mo14566())).mo8794();
+    @Override // l.AbstractC2599
+    /* JADX INFO: renamed from: ۤ */
+    public final long mo8720(int i) {
+        byte[] bArr = this.f12639;
+        int i2 = i + this.f12640;
+        return ((long) ((bArr[i2] & 255) | ((bArr[i2 + 1] & 255) << 8) | ((bArr[i2 + 2] & 255) << 16))) | ((((long) bArr[i2 + 3]) & 255) << 24) | ((((long) bArr[i2 + 4]) & 255) << 32) | ((((long) bArr[i2 + 5]) & 255) << 40) | ((((long) bArr[i2 + 6]) & 255) << 48) | (((long) bArr[i2 + 7]) << 56);
     }
 
-    @Override // java.util.SortedSet
-    public final SortedSet subSet(Object obj, Object obj2) {
-        return ((C15671) this.f13435.mo37340(((InterfaceC14260) obj).mo14566(), ((InterfaceC14260) obj2).mo14566())).mo8794();
+    @Override // l.AbstractC2599
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo8725(int i) {
+        byte[] bArr = this.f12639;
+        int i2 = i + this.f12640;
+        return (bArr[i2 + 3] << 24) | (bArr[i2] & 255) | ((bArr[i2 + 1] & 255) << 8) | ((bArr[i2 + 2] & 255) << 16);
     }
 
-    @Override // java.util.SortedSet
-    public final SortedSet tailSet(Object obj) {
-        return ((C15671) this.f13435.mo37342(((InterfaceC14260) obj).mo14566())).mo8794();
+    @Override // l.AbstractC2599
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo8722(int i) {
+        byte[] bArr = this.f12639;
+        int i2 = i + this.f12640;
+        return (bArr[i2 + 1] << 8) | (bArr[i2] & 255);
     }
 
-    @Override // java.util.SortedSet
-    public final Comparator comparator() {
-        return this.f13434;
+    @Override // l.AbstractC2599
+    /* JADX INFO: renamed from: ۙ */
+    public final byte mo8717(int i) {
+        return this.f12639[this.f12640 + i];
     }
 
-    @Override // l.AbstractC22477, l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC21086 iterator() {
-        return new C14965(this.f13435);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m11964(int i, int i2, Charset charset) {
+        return new String(this.f12639, this.f12640 + i, i2, charset);
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean contains(Object obj) {
-        if (obj == null || !(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getKey() == null || !(entry.getKey() instanceof Character)) {
-            return false;
-        }
-        return entry.equals(this.f13435.m38563(((Character) entry.getKey()).charValue()));
+    @Override // l.AbstractC2599
+    public final int length() {
+        return this.f12639.length - this.f12640;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final boolean remove(Object obj) {
-        if (!(obj instanceof Map.Entry)) {
-            return false;
-        }
-        Map.Entry entry = (Map.Entry) obj;
-        if (entry.getKey() != null && entry.getKey() != null && (entry.getKey() instanceof Character)) {
-            char cCharValue = ((Character) entry.getKey()).charValue();
-            C16376 c16376 = this.f13435;
-            C22726 c22726M38563 = c16376.m38563(cCharValue);
-            if (c22726M38563 != null && C13638.equals(c22726M38563.f18266, entry.getValue())) {
-                c16376.mo7436(c22726M38563.f18265);
-                return true;
-            }
-        }
-        return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m11965() {
+        return this.f12639;
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final int size() {
-        return this.f13435.f52700;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
-    public final void clear() {
-        this.f13435.clear();
-    }
-
-    @Override // java.util.SortedSet
-    public final Object first() {
-        return this.f13435.f52701;
-    }
-
-    @Override // java.util.SortedSet
-    public final Object last() {
-        return this.f13435.f52702;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m11966(byte[] bArr) {
+        this.f12639 = bArr;
     }
 }

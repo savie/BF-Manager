@@ -1,40 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H56R */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15406 extends C10336 {
+import android.os.Parcel;
+import android.os.Parcelable;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f50223 = false;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f50224;
+/* JADX INFO: renamed from: l.ܳܳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G20T */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15406 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C19882();
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21755 f50225;
+    public final ArrayList f50219;
 
-    public C15406(C21755 c21755, int i) {
-        this.f50225 = c21755;
-        this.f50224 = i;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final ArrayList f50220;
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
     }
 
-    @Override // l.C10336, l.InterfaceC15616
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo12847() {
-        this.f50225.f70507.setVisibility(0);
+    public C15406(Parcel parcel) {
+        this.f50219 = parcel.createStringArrayList();
+        this.f50220 = parcel.createTypedArrayList(C22866.CREATOR);
     }
 
-    @Override // l.InterfaceC15616
-    public final void onAnimationEnd() {
-        if (this.f50223) {
-            return;
-        }
-        this.f50225.f70507.setVisibility(this.f50224);
-    }
-
-    @Override // l.C10336, l.InterfaceC15616
-    public final void onAnimationCancel() {
-        this.f50223 = true;
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeStringList(this.f50219);
+        parcel.writeTypedList(this.f50220);
     }
 }

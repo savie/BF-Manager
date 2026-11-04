@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.DSAExt;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.signers.DSAEncoding;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DSABase extends SignatureSpi implements PKCSObjectIdentifiers, X509ObjectIdentifiers {
     public Digest digest;
     public DSAEncoding encoding;

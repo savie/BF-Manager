@@ -1,163 +1,70 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import android.graphics.Path;
 
-/* JADX INFO: renamed from: l.ܿܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܽۜܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: TB7B */
 /* JADX INFO: loaded from: classes5.dex */
-public class C17413 implements Map, Serializable, InterfaceC4464 {
-    public static final long serialVersionUID = -1034234728574286014L;
-    public final Map a;
-    public transient Set b;
-    public transient C16708 c;
-    public transient Collection d;
+public final class C17413 implements InterfaceC8332 {
 
-    public C17413(Map map) {
-        map.getClass();
-        this.a = map;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public float f56610;
 
-    @Override // java.util.Map
-    public final int size() {
-        return this.a.size();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Path f56611 = new Path();
 
-    @Override // java.util.Map
-    public final boolean isEmpty() {
-        return this.a.isEmpty();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public float f56612;
 
-    @Override // java.util.Map
-    public final boolean containsKey(Object obj) {
-        return this.a.containsKey(obj);
-    }
-
-    @Override // java.util.Map
-    public final boolean containsValue(Object obj) {
-        return this.a.containsValue(obj);
-    }
-
-    @Override // java.util.Map
-    public final Object get(Object obj) {
-        return this.a.get(obj);
-    }
-
-    @Override // java.util.Map
-    public final Object put(Object obj, Object obj2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map
-    public final Object remove(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map
-    public final void putAll(Map map) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map
-    public final void clear() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map
-    public final Set keySet() {
-        if (this.b == null) {
-            this.b = C0561.unmodifiableSet(this.a.keySet());
+    public C17413(C2366 c2366) {
+        if (c2366 == null) {
+            return;
         }
-        return this.b;
+        c2366.m8041(this);
     }
 
-    @Override // java.util.Map
-    public final Set entrySet() {
-        if (this.c == null) {
-            this.c = new C16708(this.a.entrySet());
-        }
-        return this.c;
+    @Override // l.InterfaceC8332
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8037(float f, float f2) {
+        this.f56611.moveTo(f, f2);
+        this.f56610 = f;
+        this.f56612 = f2;
     }
 
-    @Override // java.util.Map
-    public final Collection values() {
-        if (this.d == null) {
-            this.d = C0561.unmodifiableCollection(this.a.values());
-        }
-        return this.d;
+    @Override // l.InterfaceC8332
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo8042(float f, float f2) {
+        this.f56611.lineTo(f, f2);
+        this.f56610 = f;
+        this.f56612 = f2;
     }
 
-    @Override // java.util.Map
-    public final boolean equals(Object obj) {
-        return obj == this || this.a.equals(obj);
+    @Override // l.InterfaceC8332
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8039(float f, float f2, float f3, float f4, float f5, float f6) {
+        this.f56611.cubicTo(f, f2, f3, f4, f5, f6);
+        this.f56610 = f5;
+        this.f56612 = f6;
     }
 
-    @Override // java.util.Map
-    public final int hashCode() {
-        return this.a.hashCode();
+    @Override // l.InterfaceC8332
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8038(float f, float f2, float f3, float f4) {
+        this.f56611.quadTo(f, f2, f3, f4);
+        this.f56610 = f3;
+        this.f56612 = f4;
     }
 
-    public final String toString() {
-        return this.a.toString();
+    @Override // l.InterfaceC8332
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8040(float f, float f2, float f3, boolean z, boolean z2, float f4, float f5) {
+        C3989.m12868(this.f56610, this.f56612, f, f2, f3, z, z2, f4, f5, this);
+        this.f56610 = f4;
+        this.f56612 = f5;
     }
 
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object getOrDefault(Object obj, Object obj2) {
-        return C9735.getOrDefault(this.a, obj, obj2);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final void forEach(BiConsumer biConsumer) {
-        C9735.forEach(this.a, biConsumer);
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final void replaceAll(BiFunction biFunction) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object putIfAbsent(Object obj, Object obj2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final boolean remove(Object obj, Object obj2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final boolean replace(Object obj, Object obj2, Object obj3) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object replace(Object obj, Object obj2) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object computeIfAbsent(Object obj, Function function) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object computeIfPresent(Object obj, BiFunction biFunction) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object compute(Object obj, BiFunction biFunction) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Map, l.InterfaceC4464
-    public final Object merge(Object obj, Object obj2, BiFunction biFunction) {
-        throw new UnsupportedOperationException();
+    @Override // l.InterfaceC8332
+    public final void close() {
+        this.f56611.close();
     }
 }

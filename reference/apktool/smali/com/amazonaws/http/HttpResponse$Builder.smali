@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public ۖ:Ljava/lang/String;
-
 .field public ۙ:Ljava/io/InputStream;
 
-.field public ۨ:I
+.field public ۤ:I
 
-.field public final ܰ:Ljava/util/HashMap;
+.field public final ᩷:Ljava/util/HashMap;
+
+.field public ᩸:Ljava/lang/String;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ܰ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/http/HttpResponse$Builder;->᩷:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -38,14 +38,14 @@
     .line 178
     new-instance v0, Lcom/amazonaws/http/HttpResponse;
 
-    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۖ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->᩸:Ljava/lang/String;
 
-    iget v2, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۨ:I
+    iget v2, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۤ:I
 
-    iget-object v3, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ܰ:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/amazonaws/http/HttpResponse$Builder;->᩷:Ljava/util/HashMap;
 
     .line 179
-    invoke-static {v3}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v3}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v3
 
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 144
-    iput p1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۨ:I
+    iput p1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۤ:I
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 132
-    iput-object p1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ۖ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/http/HttpResponse$Builder;->᩸:Ljava/lang/String;
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     .locals 1
 
     .line 168
-    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse$Builder;->ܰ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse$Builder;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.crypto.crystals.dilithium;
 
-import l.C15489;
-import l.C3012;
+import l.C14483;
+import l.C3188;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class PolyVecL {
@@ -85,20 +85,20 @@ public class PolyVecL {
     }
 
     public String toString() {
-        String strM37076 = "\n[";
+        String strM34972 = "\n[";
         for (int i = 0; i < this.dilithiumL; i++) {
-            strM37076 = strM37076 + "Inner Matrix " + i + " " + getVectorIndex(i).toString();
+            strM34972 = strM34972 + "Inner Matrix " + i + " " + getVectorIndex(i).toString();
             if (i != this.dilithiumL - 1) {
-                strM37076 = C15489.m37076(strM37076, ",\n");
+                strM34972 = C14483.m34972(strM34972, ",\n");
             }
         }
-        return C15489.m37076(strM37076, "]");
+        return C14483.m34972(strM34972, "]");
     }
 
     public String toString(String str) {
-        StringBuilder sbM8976 = C3012.m8976(str, ": ");
-        sbM8976.append(toString());
-        return sbM8976.toString();
+        StringBuilder sbM10405 = C3188.m10405(str, ": ");
+        sbM10405.append(toString());
+        return sbM10405.toString();
     }
 
     public void uniformEta(byte[] bArr, short s) {

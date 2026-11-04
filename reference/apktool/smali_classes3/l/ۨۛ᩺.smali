@@ -1,70 +1,33 @@
-.class public final synthetic Ll/ۨۛ᩺;
+.class public abstract Ll/ۨۛ᩺;
 .super Ljava/lang/Object;
-.source "1AG9"
+.source "K418"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic ֡:I
-
-.field public final synthetic ۫:F
-
-.field public final synthetic ܺ:Landroid/graphics/Canvas;
-
-.field public final synthetic ܽ:F
-
-.field public final synthetic ܿ:Landroid/graphics/Paint;
-
-.field public final synthetic ᩶:[C
+.implements Ljava/util/concurrent/Callable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/Canvas;[CIFFLandroid/graphics/Paint;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 0
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۨۛ᩺;->ܺ:Landroid/graphics/Canvas;
-
-    iput-object p2, p0, Ll/ۨۛ᩺;->᩶:[C
-
-    iput p3, p0, Ll/ۨۛ᩺;->֡:I
-
-    iput p4, p0, Ll/ۨۛ᩺;->ܽ:F
-
-    iput p5, p0, Ll/ۨۛ᩺;->۫:F
-
-    iput-object p6, p0, Ll/ۨۛ᩺;->ܿ:Landroid/graphics/Paint;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public abstract call()Ljava/lang/Boolean;
+.end method
 
-    .line 2
-    iget v5, p0, Ll/ۨۛ᩺;->۫:F
+.method public bridge synthetic call()Ljava/lang/Object;
+    .locals 1
 
-    .line 4
-    iget-object v6, p0, Ll/ۨۛ᩺;->ܿ:Landroid/graphics/Paint;
+    .line 297
+    invoke-virtual {p0}, Ll/ۨۛ᩺;->call()Ljava/lang/Boolean;
 
-    .line 1089
-    iget-object v0, p0, Ll/ۨۛ᩺;->ܺ:Landroid/graphics/Canvas;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Ll/ۨۛ᩺;->᩶:[C
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Ll/ۨۛ᩺;->֡:I
-
-    iget v4, p0, Ll/ۨۛ᩺;->ܽ:F
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->drawText([CIIFFLandroid/graphics/Paint;)V
-
-    return-void
+    throw v0
 .end method

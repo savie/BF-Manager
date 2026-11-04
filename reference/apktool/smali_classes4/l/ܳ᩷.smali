@@ -1,136 +1,295 @@
-.class public final synthetic Ll/ܳ᩷;
+.class public final Ll/ܳ᩷;
 .super Ljava/lang/Object;
-.source "P1C9"
+.source "U6BF"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final synthetic ۙ:[I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+
+
+# instance fields
+.field public ֡:Ll/ۨ۠᩷;
+
+.field public ܰ:Ll/ܽۙ;
+
+.field public final ܿ:Ljava/lang/Object;
+
+.field public final ᩶:Ljava/lang/Object;
 
 
 # direct methods
 .method public static constructor <clinit>()V
+    .locals 1
+
+    .line 2110
+    new-instance v0, Ll/ᩴ᩷;
+
+    .line 2111
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 2110
+    sput-object v0, Ll/ܳ᩷;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Ll/ܽۙ;)V
+    .locals 1
+
+    .line 1937
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1921
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Ll/ܳ᩷;->ܿ:Ljava/lang/Object;
+
+    .line 1938
+    iput-object p1, p0, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
+
+    .line 1939
+    iput-object p2, p0, Ll/ܳ᩷;->ܰ:Ll/ܽۙ;
+
+    const/4 p1, 0x0
+
+    .line 1940
+    iput-object p1, p0, Ll/ܳ᩷;->֡:Ll/ۨ۠᩷;
+
+    return-void
+.end method
+
+.method public static ۙ(Landroid/media/session/MediaSession$Token;Ll/ܽۙ;)Ll/ܳ᩷;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    .line 1977
+    new-instance v0, Ll/ܳ᩷;
+
+    .line 1934
+    invoke-direct {v0, p0, p1}, Ll/ܳ᩷;-><init>(Ljava/lang/Object;Ll/ܽۙ;)V
+
+    return-object v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 88
-    invoke-static {}, Ll/֫᩷;->values()[Ll/֫᩷;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    array-length v0, v0
+    return v0
 
-    new-array v0, v0, [I
+    .line 2009
+    :cond_0
+    instance-of v1, p1, Ll/ܳ᩷;
 
-    sput-object v0, Ll/ܳ᩷;->ۙ:[I
+    const/4 v2, 0x0
 
-    :try_start_0
-    sget-object v1, Ll/֫᩷;->ܽ:Ll/֫᩷;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    return v2
 
-    move-result v1
+    .line 2013
+    :cond_1
+    check-cast p1, Ll/ܳ᩷;
 
-    const/4 v2, 0x1
+    iget-object p1, p1, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 2014
+    iget-object v1, p0, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
+    if-nez v1, :cond_3
 
-    sget-object v1, Ll/֫᩷;->֡:Ll/֫᩷;
+    if-nez p1, :cond_2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    return v0
 
-    move-result v1
+    :cond_2
+    return v2
 
-    const/4 v2, 0x2
+    :cond_3
+    if-nez p1, :cond_4
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    return v2
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
+    .line 2020
+    :cond_4
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget-object v1, Ll/֫᩷;->ۛ:Ll/֫᩷;
+    move-result p1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    return p1
+.end method
 
-    move-result v1
+.method public final hashCode()I
+    .locals 1
 
-    const/4 v2, 0x3
+    .line 1998
+    iget-object v0, p0, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    if-nez v0, :cond_0
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
+    const/4 v0, 0x0
 
-    sget-object v1, Ll/֫᩷;->ܿ:Ll/֫᩷;
+    return v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    .line 2001
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x4
+    return v0
+.end method
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    :catch_3
-    :try_start_4
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
+    .line 1990
+    iget-object v0, p0, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
 
-    sget-object v1, Ll/֫᩷;->ۧ:Ll/֫᩷;
+    check-cast v0, Landroid/os/Parcelable;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
-
-    sget-object v1, Ll/֫᩷;->᩶:Ll/֫᩷;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Ll/ܳ᩷;->ۙ:[I
-
-    sget-object v1, Ll/֫᩷;->۫:Ll/֫᩷;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
     return-void
+.end method
+
+.method public final ۙ()Ll/ܽۙ;
+    .locals 2
+
+    .line 2040
+    iget-object v0, p0, Ll/ܳ᩷;->ܿ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2041
+    :try_start_0
+    iget-object v1, p0, Ll/ܳ᩷;->ܰ:Ll/ܽۙ;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 2042
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final ۙ(Ll/ۨ۠᩷;)V
+    .locals 1
+
+    .line 2067
+    iget-object v0, p0, Ll/ܳ᩷;->ܿ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2068
+    :try_start_0
+    iput-object p1, p0, Ll/ܳ᩷;->֡:Ll/ۨ۠᩷;
+
+    .line 2069
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final ۙ(Ll/ܽۙ;)V
+    .locals 1
+
+    .line 2049
+    iget-object v0, p0, Ll/ܳ᩷;->ܿ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2050
+    :try_start_0
+    iput-object p1, p0, Ll/ܳ᩷;->ܰ:Ll/ܽۙ;
+
+    .line 2051
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final ۤ()Ljava/lang/Object;
+    .locals 1
+
+    .line 2033
+    iget-object v0, p0, Ll/ܳ᩷;->᩶:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ll/ۨ۠᩷;
+    .locals 2
+
+    .line 2058
+    iget-object v0, p0, Ll/ܳ᩷;->ܿ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2059
+    :try_start_0
+    iget-object v1, p0, Ll/ܳ᩷;->֡:Ll/ۨ۠᩷;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 2060
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

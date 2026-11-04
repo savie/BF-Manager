@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-    android:duration="275">
-    <translate
-        android:fromXDelta="100%"
-        android:toXDelta="0"/>
+    android:interpolator="@interpolator/MT_Protector_res_0x7f0c0008"
+    android:duration="@integer/MT_Protector_res_0x7f0b0020"
+    android:shareInterpolator="true">
+    <alpha
+        android:fromAlpha="1"
+        android:toAlpha="0"/>
 </set>

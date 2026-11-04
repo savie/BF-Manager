@@ -1,44 +1,39 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.function.Predicate;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۠ۨۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R1EE */
+/* JADX INFO: renamed from: l.۟᩷ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M605 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8149 implements InterfaceC0737 {
+public final class C8149 implements Iterable {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C14415 f28499;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f26900;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f28500;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f26901;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6094 f28501;
+    public final /* synthetic */ C22737 f26902;
 
-    public C8149(C14415 c14415, C6094 c6094, String str) {
-        this.f28499 = c14415;
-        this.f28501 = c6094;
-        this.f28500 = str;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Iterator f26903;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC6460 f26904;
+
+    public C8149(C22737 c22737, AbstractC6460 abstractC6460, int i, Iterator it, boolean z) {
+        this.f26902 = c22737;
+        this.f26904 = abstractC6460;
+        this.f26901 = i;
+        this.f26903 = it;
+        this.f26900 = z;
     }
 
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC7794 mo3200() {
-        return this.f28499;
-    }
-
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3202(ConcurrentLinkedQueue concurrentLinkedQueue) {
-        this.f28501.m16539(concurrentLinkedQueue, "", true, (Predicate) null);
-    }
-
-    @Override // l.InterfaceC0737
-    /* JADX INFO: renamed from: ۙ */
-    public final C10617 mo3201(ArrayList arrayList) {
-        return new C10617("", "Subclasses: " + this.f28500, arrayList);
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        InterfaceC3476 interfaceC3476Mo18263 = this.f26904.mo18263();
+        C22737 c22737 = this.f26902;
+        return new C0691(this, c22737.f73785, c22737.f73778, AbstractC1239.m4473(c22737.f73785, this.f26901), interfaceC3476Mo18263);
     }
 }

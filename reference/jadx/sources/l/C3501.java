@@ -1,39 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗ᩸۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 29XR */
+/* JADX INFO: renamed from: l.ۗܶۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: HASO */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3501 extends AbstractC14792 {
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo2724(int i, byte[] bArr) {
-        return 0;
+public final class C3501 extends AbstractC23683 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f12074;
+
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo2568() {
+        return 10;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۚ */
-    public final int mo2725(int i, byte[] bArr) {
-        return 0;
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2569(int i, int i2) {
+        return false;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo2726(int i, byte[] bArr) {
-        return 0;
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo2570() {
+        return true;
     }
 
-    @Override // l.AbstractC14792
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2727(int i, byte[] bArr) {
-        return 0;
+    public C3501(AbstractC17715 abstractC17715, int i) {
+        super(abstractC17715);
+        this.f12074 = i;
     }
 
-    public C3501(InterfaceC10601 interfaceC10601) {
-        super(interfaceC10601);
-    }
-
-    @Override // l.AbstractC14792
     public final String toString() {
-        return new String(C22697.m50267(new StringBuilder("SmbComBlankResponse["), super.toString(), "]"));
+        return C12669.m31437(this.f12074, " >= _p", new StringBuilder());
     }
 }

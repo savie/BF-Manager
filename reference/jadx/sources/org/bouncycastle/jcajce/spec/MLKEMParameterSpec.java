@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MLKEMParameterSpec implements AlgorithmParameterSpec {
     public static final MLKEMParameterSpec ml_kem_1024;
     public static final MLKEMParameterSpec ml_kem_512;

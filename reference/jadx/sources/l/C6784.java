@@ -1,42 +1,78 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۜ۬۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 079R */
-/* JADX INFO: loaded from: classes2.dex */
+import android.widget.ImageButton;
+import android.widget.TextView;
+import java.lang.reflect.Field;
+
+/* JADX INFO: renamed from: l.ۜ֡᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: H9SC */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C6784 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String f22901;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final Field f22609;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f22902;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Field f22610;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Field f22611;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Field f22612;
+
+    static {
+        try {
+            Field declaredField = C16390.class.getDeclaredField("mTitleTextView");
+            f22612 = declaredField;
+            declaredField.setAccessible(true);
+            Field declaredField2 = C16390.class.getDeclaredField("mSubtitleTextView");
+            f22610 = declaredField2;
+            declaredField2.setAccessible(true);
+            Field declaredField3 = C16390.class.getDeclaredField("mMenuView");
+            f22609 = declaredField3;
+            declaredField3.setAccessible(true);
+            Field declaredField4 = C16390.class.getDeclaredField("mNavButtonView");
+            f22611 = declaredField4;
+            declaredField4.setAccessible(true);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static TextView m18918(C16390 c16390) {
+        try {
+            return (TextView) f22612.get(c16390);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static TextView m18916(C16390 c16390) {
+        try {
+            return (TextView) f22610.get(c16390);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f22903;
+    public static C17531 m18915(C16390 c16390) {
+        try {
+            return (C17531) f22609.get(c16390);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f22904;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f22905;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String f22906;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f22907;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C4481 f22908;
-
-    public C6784(String str, String str2, String str3, String str4, String str5, String str6, int i, C4481 c4481) {
-        this.f22906 = str;
-        this.f22907 = str2;
-        this.f22901 = str3;
-        this.f22903 = str4;
-        this.f22902 = str5;
-        this.f22904 = str6;
-        this.f22905 = i;
-        this.f22908 = c4481;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static ImageButton m18917(C16390 c16390) {
+        try {
+            return (ImageButton) f22611.get(c16390);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -20,7 +20,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.Mac;
 import javax.crypto.SecretKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface JcaJceHelper {
     AlgorithmParameterGenerator createAlgorithmParameterGenerator(String str);
 

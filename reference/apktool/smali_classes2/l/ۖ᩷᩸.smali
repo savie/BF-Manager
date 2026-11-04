@@ -1,366 +1,310 @@
 .class public final Ll/ۖ᩷᩸;
-.super Ll/᩷֡ۡ;
-.source "55UE"
+.super Ljava/lang/Object;
+.source "JBNC"
 
 
 # direct methods
-.method public constructor <init>(Ll/᩷֡ۡ;)V
-    .locals 1
+.method public static ۙ(I[B)J
+    .locals 8
 
-    const/high16 v0, 0x90000
+    .line 31
+    aget-byte v0, p1, p0
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0xff
+
+    and-long/2addr v0, v2
+
+    add-int/lit8 v4, p0, 0x1
+
+    .line 32
+    aget-byte v4, p1, v4
+
+    int-to-long v4, v4
+
+    and-long/2addr v4, v2
+
+    add-int/lit8 v6, p0, 0x2
 
     .line 33
-    invoke-direct {p0, v0, p1}, Ll/᩷֡ۡ;-><init>(ILl/᩷֡ۡ;)V
+    aget-byte v6, p1, v6
+
+    int-to-long v6, v6
+
+    and-long/2addr v6, v2
+
+    add-int/lit8 p0, p0, 0x3
+
+    .line 34
+    aget-byte p0, p1, p0
+
+    int-to-long p0, p0
+
+    and-long/2addr p0, v2
+
+    const/16 v2, 0x8
+
+    shl-long v2, v4, v2
+
+    or-long/2addr v0, v2
+
+    const/16 v2, 0x10
+
+    shl-long v2, v6, v2
+
+    or-long/2addr v0, v2
+
+    const/16 v2, 0x18
+
+    shl-long/2addr p0, v2
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+.end method
+
+.method public static ۙ(II[B)V
+    .locals 2
+
+    and-int/lit16 v0, p0, 0xff
+
+    int-to-byte v0, v0
+
+    .line 6
+    aput-byte v0, p2, p1
+
+    add-int/lit8 v0, p1, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-byte v1, v1
+
+    .line 7
+    aput-byte v1, p2, v0
+
+    add-int/lit8 v0, p1, 0x2
+
+    shr-int/lit8 v1, p0, 0x10
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-byte v1, v1
+
+    .line 8
+    aput-byte v1, p2, v0
+
+    add-int/lit8 p1, p1, 0x3
+
+    shr-int/lit8 p0, p0, 0x18
+
+    and-int/lit16 p0, p0, 0xff
+
+    int-to-byte p0, p0
+
+    .line 9
+    aput-byte p0, p2, p1
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
+.method public static ۙ(JI[B)V
     .locals 5
 
-    if-nez p1, :cond_0
+    const-wide/16 v0, 0xff
 
-    const/4 p1, 0x1
+    and-long v2, p0, v0
 
-    .line 44
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    long-to-int v3, v2
 
-    return-void
+    int-to-byte v2, v3
 
-    .line 45
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Integer;
+    .line 20
+    aput-byte v2, p3, p2
 
-    if-eqz v0, :cond_4
+    add-int/lit8 v2, p2, 0x1
 
-    .line 46
-    move-object v0, p1
+    const/16 v3, 0x8
 
-    check-cast v0, Ljava/lang/Integer;
+    shr-long v3, p0, v3
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    and-long/2addr v3, v0
 
-    move-result v0
+    long-to-int v4, v3
 
-    const/4 v1, -0x1
+    int-to-byte v3, v4
 
-    if-lt v0, v1, :cond_1
+    .line 21
+    aput-byte v3, p3, v2
 
-    const/4 v1, 0x5
+    add-int/lit8 v2, p2, 0x2
 
-    if-gt v0, v1, :cond_1
+    const/16 v3, 0x10
 
-    add-int/lit8 v0, v0, 0x3
+    shr-long v3, p0, v3
 
-    .line 48
-    invoke-virtual {p0, v0}, Ll/᩷֡ۡ;->ۙ(I)V
+    and-long/2addr v3, v0
 
-    return-void
+    long-to-int v4, v3
 
-    :cond_1
-    const/16 v1, 0x7f
+    int-to-byte v3, v4
 
-    if-gt v0, v1, :cond_2
+    .line 22
+    aput-byte v3, p3, v2
 
-    const/16 v1, -0x80
+    add-int/lit8 v2, p2, 0x3
 
-    if-lt v0, v1, :cond_2
+    const/16 v3, 0x18
 
-    const/16 p1, 0x10
+    shr-long v3, p0, v3
 
-    .line 50
-    invoke-virtual {p0, p1, v0}, Ll/᩷֡ۡ;->ܰ(II)V
+    and-long/2addr v3, v0
 
-    return-void
+    long-to-int v4, v3
 
-    :cond_2
-    const/16 v1, 0x7fff
+    int-to-byte v3, v4
 
-    if-gt v0, v1, :cond_3
+    .line 23
+    aput-byte v3, p3, v2
 
-    const/16 v1, -0x8000
+    add-int/lit8 v2, p2, 0x4
 
-    if-lt v0, v1, :cond_3
+    const/16 v3, 0x20
 
-    const/16 p1, 0x11
+    shr-long v3, p0, v3
 
-    .line 52
-    invoke-virtual {p0, p1, v0}, Ll/᩷֡ۡ;->ܰ(II)V
+    and-long/2addr v3, v0
 
-    return-void
+    long-to-int v4, v3
 
-    .line 54
-    :cond_3
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
+    int-to-byte v3, v4
 
-    return-void
+    .line 24
+    aput-byte v3, p3, v2
 
-    .line 56
-    :cond_4
-    instance-of v0, p1, Ljava/lang/Long;
+    add-int/lit8 v2, p2, 0x5
 
-    if-eqz v0, :cond_7
+    const/16 v3, 0x28
 
-    .line 57
-    move-object v0, p1
+    shr-long v3, p0, v3
 
-    check-cast v0, Ljava/lang/Long;
+    and-long/2addr v3, v0
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    long-to-int v4, v3
 
-    move-result-wide v0
+    int-to-byte v3, v4
 
-    const-wide/16 v2, 0x0
+    .line 25
+    aput-byte v3, p3, v2
 
-    cmp-long v4, v0, v2
+    add-int/lit8 v2, p2, 0x6
 
-    if-eqz v4, :cond_6
+    const/16 v3, 0x30
 
-    const-wide/16 v2, 0x1
+    shr-long v3, p0, v3
 
-    cmp-long v4, v0, v2
+    and-long/2addr v3, v0
 
-    if-nez v4, :cond_5
+    long-to-int v4, v3
 
-    goto :goto_0
+    int-to-byte v3, v4
 
-    .line 61
-    :cond_5
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
+    .line 26
+    aput-byte v3, p3, v2
 
-    return-void
+    add-int/lit8 p2, p2, 0x7
 
-    :cond_6
-    :goto_0
-    long-to-int p1, v0
+    const/16 v2, 0x38
 
-    add-int/lit8 p1, p1, 0x9
+    shr-long/2addr p0, v2
 
-    .line 59
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    and-long/2addr p0, v0
+
+    long-to-int p1, p0
+
+    int-to-byte p0, p1
+
+    .line 27
+    aput-byte p0, p3, p2
 
     return-void
+.end method
 
-    .line 63
-    :cond_7
-    instance-of v0, p1, Ljava/lang/Float;
+.method public static ۙ(I)[B
+    .locals 2
 
-    if-eqz v0, :cond_b
+    const/4 v0, 0x4
 
-    .line 64
-    move-object v0, p1
-
-    check-cast v0, Ljava/lang/Float;
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
+    new-array v0, v0, [B
 
     const/4 v1, 0x0
 
-    cmpl-float v1, v0, v1
+    .line 40
+    invoke-static {p0, v1, v0}, Ll/ۖ᩷᩸;->ۙ(II[B)V
 
-    if-nez v1, :cond_8
+    return-object v0
+.end method
 
-    const/16 p1, 0xb
+.method public static ᩷(JI[B)V
+    .locals 5
 
-    .line 66
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    const-wide/16 v0, 0xff
 
-    return-void
+    and-long v2, p0, v0
 
-    :cond_8
-    const/high16 v1, 0x3f800000    # 1.0f
+    long-to-int v3, v2
 
-    cmpl-float v1, v0, v1
+    int-to-byte v2, v3
 
-    if-nez v1, :cond_9
+    .line 13
+    aput-byte v2, p3, p2
 
-    const/16 p1, 0xc
+    add-int/lit8 v2, p2, 0x1
 
-    .line 68
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    const/16 v3, 0x8
 
-    return-void
+    shr-long v3, p0, v3
 
-    :cond_9
-    const/high16 v1, 0x40000000    # 2.0f
+    and-long/2addr v3, v0
 
-    cmpl-float v0, v0, v1
+    long-to-int v4, v3
 
-    if-nez v0, :cond_a
+    int-to-byte v3, v4
 
-    const/16 p1, 0xd
+    .line 14
+    aput-byte v3, p3, v2
 
-    .line 70
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    add-int/lit8 v2, p2, 0x2
 
-    return-void
+    const/16 v3, 0x10
 
-    .line 72
-    :cond_a
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
+    shr-long v3, p0, v3
 
-    return-void
+    and-long/2addr v3, v0
 
-    .line 74
-    :cond_b
-    instance-of v0, p1, Ljava/lang/Double;
+    long-to-int v4, v3
 
-    if-eqz v0, :cond_e
+    int-to-byte v3, v4
 
-    .line 75
-    move-object v0, p1
+    .line 15
+    aput-byte v3, p3, v2
 
-    check-cast v0, Ljava/lang/Double;
+    add-int/lit8 p2, p2, 0x3
 
-    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
+    const/16 v2, 0x18
 
-    move-result-wide v0
+    shr-long/2addr p0, v2
 
-    const-wide/16 v2, 0x0
+    and-long/2addr p0, v0
 
-    cmpl-double v4, v0, v2
+    long-to-int p1, p0
 
-    if-nez v4, :cond_c
+    int-to-byte p0, p1
 
-    const/16 p1, 0xe
-
-    .line 77
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
+    .line 16
+    aput-byte p0, p3, p2
 
     return-void
-
-    :cond_c
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    cmpl-double v4, v0, v2
-
-    if-nez v4, :cond_d
-
-    const/16 p1, 0xf
-
-    .line 79
-    invoke-virtual {p0, p1}, Ll/᩷֡ۡ;->ۙ(I)V
-
-    return-void
-
-    .line 81
-    :cond_d
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 83
-    :cond_e
-    instance-of v0, p1, Ll/ܳ֡ۡ;
-
-    if-eqz v0, :cond_f
-
-    .line 84
-    move-object v0, p1
-
-    check-cast v0, Ll/ܳ֡ۡ;
-
-    .line 85
-    invoke-virtual {v0}, Ll/ܳ֡ۡ;->ۚ()I
-
-    move-result v0
-
-    const-string v1, "Ljava/lang/Class;"
-
-    const-string v2, "TYPE"
-
-    const/16 v3, 0xb2
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 111
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    const-string p1, "java/lang/Double"
-
-    .line 96
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_1
-    const-string p1, "java/lang/Long"
-
-    .line 105
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_2
-    const-string p1, "java/lang/Float"
-
-    .line 99
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_3
-    const-string p1, "java/lang/Integer"
-
-    .line 102
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_4
-    const-string p1, "java/lang/Short"
-
-    .line 108
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_5
-    const-string p1, "java/lang/Byte"
-
-    .line 90
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_6
-    const-string p1, "java/lang/Character"
-
-    .line 93
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_7
-    const-string p1, "java/lang/Boolean"
-
-    .line 87
-    invoke-virtual {p0, p1, v3, v2, v1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    .line 114
-    :cond_f
-    invoke-super {p0, p1}, Ll/᩷֡ۡ;->ۙ(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

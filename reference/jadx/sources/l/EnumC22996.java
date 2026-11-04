@@ -1,58 +1,63 @@
 package l;
 
-import com.amazonaws.auth.AWS4Signer;
-
-/* JADX INFO: renamed from: l.᩺۫ᩴ, reason: contains not printable characters */
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* JADX INFO: renamed from: l.᩸ᩴۗ, reason: contains not printable characters */
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
-public enum EnumC22996 implements InterfaceC18056 {
-    NANOS("Nanos", C21813.n(1)),
-    MICROS("Micros", C21813.n(1000)),
-    MILLIS("Millis", C21813.n(1000000)),
-    SECONDS("Seconds", C21813.ofSeconds(1)),
-    MINUTES("Minutes", C21813.ofSeconds(60)),
-    HOURS("Hours", C21813.ofSeconds(3600)),
-    HALF_DAYS("HalfDays", C21813.ofSeconds(43200)),
-    DAYS("Days", C21813.ofSeconds(86400)),
-    WEEKS("Weeks", C21813.ofSeconds(AWS4Signer.MAX_EXPIRATION_TIME_IN_SECONDS)),
-    MONTHS("Months", C21813.ofSeconds(2629746)),
-    YEARS("Years", C21813.ofSeconds(31556952)),
-    DECADES("Decades", C21813.ofSeconds(315569520)),
-    CENTURIES("Centuries", C21813.ofSeconds(3155695200L)),
-    MILLENNIA("Millennia", C21813.ofSeconds(31556952000L)),
-    ERAS("Eras", C21813.ofSeconds(31556952000000000L)),
-    FOREVER("Forever", C21813.s(C17492.FOREVER_NS, 999999999));
+public final class EnumC22996 implements InterfaceC7421 {
+    public static final EnumC22996 AH;
+    public static final /* synthetic */ EnumC22996[] a;
 
-    public final String a;
-    public final C21813 b;
-
-    EnumC22996(String str, C21813 c21813) {
-        this.a = str;
-        this.b = c21813;
+    @Override // l.InterfaceC9437
+    public final /* synthetic */ long C(InterfaceC16831 interfaceC16831) {
+        return AbstractC2946.d(this, interfaceC16831);
     }
 
-    @Override // l.InterfaceC18056
-    public final C21813 getDuration() {
-        return this.b;
+    @Override // l.InterfaceC9437
+    public final /* synthetic */ Object P(C14435 c14435) {
+        return AbstractC2946.f(this, c14435);
     }
 
-    @Override // l.InterfaceC18056
-    public final boolean isDurationEstimated() {
-        return compareTo(DAYS) >= 0;
+    @Override // l.InterfaceC9437
+    public final /* synthetic */ boolean d(InterfaceC16831 interfaceC16831) {
+        return AbstractC2946.e(this, interfaceC16831);
     }
 
-    @Override // l.InterfaceC18056
-    public final InterfaceC15235 m(InterfaceC15235 interfaceC15235, long j) {
-        return interfaceC15235.d(j, this);
+    @Override // l.InterfaceC7421
+    public final int getValue() {
+        return 1;
     }
 
-    @Override // l.InterfaceC18056
-    public final long l(InterfaceC15235 interfaceC15235, InterfaceC15235 interfaceC15236) {
-        return interfaceC15235.g(interfaceC15236, this);
+    @Override // l.InterfaceC9437
+    public final /* synthetic */ int i(InterfaceC16831 interfaceC16831) {
+        return AbstractC2946.c(this, interfaceC16831);
     }
 
-    @Override // java.lang.Enum
-    public final String toString() {
-        return this.a;
+    public static EnumC22996 valueOf(String str) {
+        return (EnumC22996) Enum.valueOf(EnumC22996.class, str);
+    }
+
+    public static EnumC22996[] values() {
+        return (EnumC22996[]) a.clone();
+    }
+
+    static {
+        EnumC22996 enumC22996 = new EnumC22996("AH", 0);
+        AH = enumC22996;
+        a = new EnumC22996[]{enumC22996};
+    }
+
+    @Override // l.InterfaceC9437
+    public final C23545 k(InterfaceC16831 interfaceC16831) {
+        if (interfaceC16831 == EnumC8692.ERA) {
+            return C23545.f(1L, 1L);
+        }
+        return AbstractC17577.d(this, interfaceC16831);
+    }
+
+    @Override // l.InterfaceC1916
+    public final InterfaceC1235 p(InterfaceC1235 interfaceC1235) {
+        return interfaceC1235.b(1, EnumC8692.ERA);
     }
 }

@@ -69,11 +69,11 @@
 
 
 # virtual methods
-.method public onDependentViewChanged(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;)Z
+.method public onDependentViewChanged(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     .line 883
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;->onDependentViewChanged(Ll/ۖ᩶;Landroid/view/View;Landroid/view/View;)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;->onDependentViewChanged(Ll/᩻᩶;Landroid/view/View;Landroid/view/View;)Z
 
     move-result p1
 

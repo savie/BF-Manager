@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector android:drawable="@drawable/APKTOOL_RENAMED_0x7f080269"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-    <target android:name="@string/APKTOOL_RENAMED_0x7f120650" android:animation="@drawable/APKTOOL_RENAMED_0x7f08001a" />
-    <target android:name="@string/APKTOOL_RENAMED_0x7f120650" android:animation="@drawable/APKTOOL_RENAMED_0x7f08001b" />
-    <target android:name="@string/APKTOOL_RENAMED_0x7f120652" android:animation="@drawable/APKTOOL_RENAMED_0x7f08001c" />
-</animated-vector>
+<vector android:tint="?APKTOOL_RENAMED_0x7f040101" android:height="24.0dp" android:width="24.0dp" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#fff" android:pathData="M16,6l2.29,2.29 -4.88,4.88 -4,-4L2,16.59 3.41,18l6,-6 4,4 6.3,-6.29L22,12V6z" />
+</vector>

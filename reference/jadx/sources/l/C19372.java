@@ -1,18 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵ۢ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: P77N */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19372 {
+import java.util.function.IntPredicate;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0321 f62435;
+/* JADX INFO: renamed from: l.ᩳ᩸᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7FA */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C19372 implements IntPredicate {
+    public /* synthetic */ IntPredicate and(IntPredicate intPredicate) {
+        return C14549.$default$and(this, intPredicate);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C19485 f62436;
+    public /* synthetic */ IntPredicate negate() {
+        return C14549.$default$negate(this);
+    }
 
-    public C19372(C0321 c0321, C19485 c19485) {
-        this.f62435 = c0321;
-        this.f62436 = c19485;
+    public /* synthetic */ IntPredicate or(IntPredicate intPredicate) {
+        return C14549.$default$or(this, intPredicate);
+    }
+
+    @Override // java.util.function.IntPredicate
+    public final boolean test(int i) {
+        return i > 0;
     }
 }

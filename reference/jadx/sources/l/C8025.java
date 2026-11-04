@@ -1,13 +1,8 @@
 package l;
 
-import java.util.function.IntFunction;
-
-/* JADX INFO: renamed from: l.۠۟ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: CAJ3 */
+/* JADX INFO: renamed from: l.۟ܽܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B3GI */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8025 implements IntFunction {
-    @Override // java.util.function.IntFunction
-    public final Object apply(int i) {
-        return new String[i];
-    }
+public final class C8025 extends RuntimeException {
+    public static final long serialVersionUID = 0;
 }

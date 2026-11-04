@@ -1,57 +1,44 @@
 package l;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.view.KeyEvent;
-
-/* JADX INFO: renamed from: l.᩻ᩳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X59Z */
+/* JADX INFO: renamed from: l.᩹᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7AT */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23855 extends C21216 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Intent f77119;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C5694 f77120;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Context f77121;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final BroadcastReceiver.PendingResult f77122;
-
-    public C23855(Context context, Intent intent, BroadcastReceiver.PendingResult pendingResult) {
-        this.f77121 = context;
-        this.f77119 = intent;
-        this.f77122 = pendingResult;
-    }
+public final class C23855 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52579(C5694 c5694) {
-        this.f77120 = c5694;
+    public final String f77240;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f77241;
+
+    public C23855(String str, boolean z) {
+        this.f77240 = str;
+        this.f77241 = z;
     }
 
-    @Override // l.C21216
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo47687() {
-        new C20636(this.f77121, this.f77120.m15705()).m46500((KeyEvent) this.f77119.getParcelableExtra("android.intent.extra.KEY_EVENT"));
-        this.f77120.m15706();
-        this.f77122.finish();
-    }
-
-    @Override // l.C21216
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo47688() {
-        this.f77120.m15706();
-        this.f77122.finish();
-    }
-
-    @Override // l.C21216
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo47689() {
-        this.f77120.m15706();
-        this.f77122.finish();
+    /* JADX WARN: Code duplicated, block: B:19:0x0043  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C23855 m53205(int i, int i2, CharSequence charSequence) {
+        if (i >= i2) {
+            return new C23855("", i < i2);
+        }
+        StringBuilder sb = new StringBuilder(Math.min(i2 - i, 480));
+        for (int i3 = 0; i < i2 && i3 < 240; i3++) {
+            int i4 = i + 1;
+            char cCharAt = charSequence.charAt(i);
+            sb.append(cCharAt);
+            if (!Character.isHighSurrogate(cCharAt) || i4 >= i2) {
+                i = i4;
+            } else {
+                char cCharAt2 = charSequence.charAt(i4);
+                if (Character.isLowSurrogate(cCharAt2)) {
+                    sb.append(cCharAt2);
+                    i += 2;
+                } else {
+                    i = i4;
+                }
+            }
+        }
+        return new C23855(sb.toString(), i < i2);
     }
 }

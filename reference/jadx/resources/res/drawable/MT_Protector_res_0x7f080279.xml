@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white"/>
-            <size android:height="2dp"/>
-        </shape>
-    </item>
-</selector>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/MT_Protector_res_0x7f080286">
+    <target
+        android:name="@string/MT_Protector_res_0x7f12080e"
+        android:animation="@drawable/MT_Protector_res_0x7f080014"/>
+    <target
+        android:name="@string/MT_Protector_res_0x7f12080e"
+        android:animation="@drawable/MT_Protector_res_0x7f080015"/>
+    <target
+        android:name="@string/MT_Protector_res_0x7f120810"
+        android:animation="@drawable/MT_Protector_res_0x7f080016"/>
+</animated-vector>

@@ -1,54 +1,49 @@
 package l;
 
-import bin.mt.plugin.api.util.ResultCallback;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
-/* JADX INFO: renamed from: l.᩷ۘۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 61L9 */
+/* JADX INFO: renamed from: l.᩵ܰᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LA2Z */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20617 extends C9640 {
+public final class C20617 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC4471 f67163;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public HashSet f66139 = new HashSet();
 
-    public C20617(ActivityC4471 activityC4471) {
-        this.f67163 = activityC4471;
-    }
-
-    @Override // l.C9640
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo7023(ResultCallback resultCallback) {
-        ActivityC4471 activityC4471 = this.f67163;
-        if (activityC4471.f15894.f32341.booleanValue()) {
-            super.mo7023(resultCallback);
-        } else {
-            ActivityC4471.m12460(activityC4471, false, true, resultCallback);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m47238(AbstractC22044 abstractC22044) {
+        if (abstractC22044 == null || !(abstractC22044 instanceof C18379)) {
+            return;
         }
+        this.f66139.add(abstractC22044.mo42890());
     }
 
-    @Override // l.C9640
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo7024() {
-        ActivityC4471 activityC4471 = this.f67163;
-        return !activityC4471.f15894.f32341.booleanValue() && activityC4471.f15887.m9117().m17040();
-    }
-
-    @Override // l.C9640
-    /* JADX INFO: renamed from: ۨ */
-    public final String mo15468() {
-        ActivityC4471 activityC4471 = this.f67163;
-        if (activityC4471.f15894.f32340 == null && activityC4471.f15894.f32339 != null) {
-            return activityC4471.f15894.f32339.mo33986();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m47239() {
+        if (!C13903.m33865()) {
+            return true;
         }
-        return null;
+        Iterator it = this.f66139.iterator();
+        while (it.hasNext()) {
+            String strM42887 = ((C18379) it.next()).m42887();
+            C4209 c4209 = C18379.f59876;
+            if (!C4209.m13460(strM42887)) {
+                C18379.f59879.mo40348(new AtomicReference(strM42887));
+                return false;
+            }
+        }
+        return true;
     }
 
-    @Override // l.C9640
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo7025() {
-        ActivityC4471 activityC4471 = this.f67163;
-        if (activityC4471.f15894.f32340 != null) {
-            return activityC4471.f15894.f32340;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m47240() {
+        if (!C13903.m33865()) {
+            return Collections.EMPTY_LIST;
         }
-        return activityC4471.f15894.f32339 != null ? activityC4471.f15894.f32339.getName() : "";
+        return (List) C1170.stream(this.f66139).filter(new C14005(1)).sorted().collect(C2025.toList());
     }
 }

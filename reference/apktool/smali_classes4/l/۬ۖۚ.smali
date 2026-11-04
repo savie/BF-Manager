@@ -1,45 +1,58 @@
 .class public final synthetic Ll/۬ۖۚ;
 .super Ljava/lang/Object;
-.source "97UL"
+.source "474R"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/ۘ֨ۚ;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/ܺ᩸֫;
+
+.field public final synthetic ۤ:Ljava/lang/String;
+
+.field public final synthetic ᩷:Landroid/net/Uri;
+
+.field public final synthetic ᩸:J
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܺ᩸֫;Landroid/net/Uri;Ljava/lang/String;J)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۬ۖۚ;->ۙ:Ll/ܺ᩸֫;
+
+    iput-object p2, p0, Ll/۬ۖۚ;->᩷:Landroid/net/Uri;
+
+    iput-object p3, p0, Ll/۬ۖۚ;->ۤ:Ljava/lang/String;
+
+    iput-wide p4, p0, Ll/۬ۖۚ;->᩸:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final ۙ()Ll/֨ܺ֫;
+    .locals 7
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 83
+    new-instance v6, Ll/۠᩷֫;
 
-    move-result-object p1
+    iget-object v1, p0, Ll/۬ۖۚ;->ۙ:Ll/ܺ᩸֫;
 
-    return-object p1
-.end method
+    iget-object v2, p0, Ll/۬ۖۚ;->᩷:Landroid/net/Uri;
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v3, p0, Ll/۬ۖۚ;->ۤ:Ljava/lang/String;
 
-    .line 2
-    new-instance v0, Ll/ۘۖۚ;
+    iget-wide v4, p0, Ll/۬ۖۚ;->᩸:J
 
-    .line 4
-    check-cast p1, Ll/ۜۖۚ;
+    move-object v0, v6
 
-    .line 392
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {v0 .. v5}, Ll/۠᩷֫;-><init>(Ll/ܺ᩸֫;Landroid/net/Uri;Ljava/lang/String;J)V
 
-    return-object v0
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v6
 .end method

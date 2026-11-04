@@ -1,66 +1,50 @@
-.class public final Ll/֨ܳᩴ;
-.super Ll/ۙܳᩴ;
-.source "N673"
+.class public final synthetic Ll/֨ܳᩴ;
+.super Ljava/lang/Object;
+.source "4AWI"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
+.implements Ll/ܶ᩻ۙ;
 
 
-# static fields
-.field public static final serialVersionUID:J = 0x153e0c6c865668d2L
+# instance fields
+.field public final synthetic ܰ:Ll/ۚۚᩴ;
+
+.field public final synthetic ܿ:Landroid/view/MenuItem;
+
+.field public final synthetic ᩶:Landroid/view/MenuItem;
 
 
 # direct methods
-.method private writeReplace()Ljava/lang/Object;
-    .locals 2
+.method public synthetic constructor <init>(Ll/ۚۚᩴ;Landroid/view/MenuItem;Landroid/view/MenuItem;)V
+    .locals 0
 
-    .line 1479
-    new-instance v0, Ll/ۙܳᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Ll/ۙܳᩴ;->c:Ljava/util/List;
+    iput-object p1, p0, Ll/֨ܳᩴ;->ܰ:Ll/ۚۚᩴ;
 
-    invoke-direct {v0, v1}, Ll/ۙܳᩴ;-><init>(Ljava/util/List;)V
+    iput-object p2, p0, Ll/֨ܳᩴ;->᩶:Landroid/view/MenuItem;
 
-    return-object v0
+    iput-object p3, p0, Ll/֨ܳᩴ;->ܿ:Landroid/view/MenuItem;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final subList(II)Ljava/util/List;
+.method public final ۙ(Ljava/lang/Object;)V
     .locals 3
 
-    .line 1466
-    iget-object v0, p0, Ll/֫᩻ᩴ;->b:Ljava/lang/Object;
+    .line 0
+    iget-object v0, p0, Ll/֨ܳᩴ;->ܿ:Landroid/view/MenuItem;
 
-    monitor-enter v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    .line 1467
-    :try_start_0
-    new-instance v1, Ll/֨ܳᩴ;
+    iget-object v1, p0, Ll/֨ܳᩴ;->ܰ:Ll/ۚۚᩴ;
 
-    iget-object v2, p0, Ll/ۙܳᩴ;->c:Ljava/util/List;
+    iget-object v2, p0, Ll/֨ܳᩴ;->᩶:Landroid/view/MenuItem;
 
-    invoke-interface {v2, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+    invoke-static {v1, v2, v0, p1}, Ll/ۚۚᩴ;->ۙ(Ll/ۚۚᩴ;Landroid/view/MenuItem;Landroid/view/MenuItem;Ljava/lang/Boolean;)V
 
-    move-result-object p1
-
-    iget-object p2, p0, Ll/֫᩻ᩴ;->b:Ljava/lang/Object;
-
-    .line 1462
-    invoke-direct {v1, p1, p2}, Ll/ۙܳᩴ;-><init>(Ljava/util/List;Ljava/lang/Object;)V
-
-    .line 1467
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
-    .line 1468
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return-void
 .end method

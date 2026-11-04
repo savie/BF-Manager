@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final ۖ:Ljava/util/HashMap;
-
 .field public final ۙ:Ljava/util/HashMap;
 
-.field public final ۨ:Ljava/lang/String;
+.field public final ۤ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/util/HashMap;
+.field public final ᩷:Ljava/util/HashMap;
+
+.field public final ᩸:Ljava/util/HashMap;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/regions/Region;->ۖ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/regions/Region;->᩸:Ljava/util/HashMap;
 
     .line 40
     new-instance v0, Ljava/util/HashMap;
@@ -39,10 +39,10 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/regions/Region;->ܰ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/regions/Region;->᩷:Ljava/util/HashMap;
 
     .line 47
-    iput-object p1, p0, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
     return-void
 .end method
@@ -66,9 +66,9 @@
     check-cast p1, Lcom/amazonaws/regions/Region;
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
-    iget-object p1, p1, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
+    iget-object p1, p1, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
     .line 201
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -82,7 +82,7 @@
     .locals 1
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
     .line 206
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -96,24 +96,7 @@
     .locals 1
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۖ()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "s3"
-
-    .line 118
-    iget-object v1, p0, Lcom/amazonaws/regions/Region;->ۖ:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -127,29 +110,46 @@
     return-object v0
 .end method
 
-.method public final ۚ()Ljava/util/HashMap;
-    .locals 1
-
-    .line 100
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۖ:Ljava/util/HashMap;
-
-    return-object v0
-.end method
-
-.method public final ۨ()Ljava/lang/String;
+.method public final ۤ()Ljava/lang/String;
     .locals 1
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/util/HashMap;
+.method public final ᩴ()Ljava/util/HashMap;
+    .locals 1
+
+    .line 100
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->᩸:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ljava/util/HashMap;
     .locals 1
 
     .line 108
-    iget-object v0, p0, Lcom/amazonaws/regions/Region;->ܰ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/regions/Region;->᩷:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method public final ᩸()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "s3"
+
+    .line 118
+    iget-object v1, p0, Lcom/amazonaws/regions/Region;->᩸:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
 
     return-object v0
 .end method

@@ -1,280 +1,239 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
 
-/* JADX INFO: renamed from: l.ܶ۫᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 94T8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15237 extends AbstractC10872 {
+/* JADX INFO: renamed from: l.ܳۡ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: C9PC */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15237 extends AbstractC9035 implements InterfaceC5543 {
+    public static final C15237 DEFAULT_INSTANCE;
+    public static final int HASH_FIELD_NUMBER = 2;
+    public static final InterfaceC11490 PARSER;
+    public static final int SIZE_FIELD_NUMBER = 1;
+    public static final long serialVersionUID = 0;
+    public int bitField0_;
+    public AbstractC17084 hash_;
+    public byte memoizedIsInitialized;
+    public long size_;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C19805 f49691 = new C19805();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m36504(ArrayList arrayList, HashMap map, HashSet hashSet) {
-        if (arrayList != null) {
-            Iterator it = arrayList.iterator();
-            while (it.hasNext()) {
-                for (C15592 c15592 : ((C17002) it.next()).f54351) {
-                    for (AbstractC7124 abstractC7124 : c15592.f31401.mo19023()) {
-                        AbstractC7124 abstractC7125 = (AbstractC7124) map.get(abstractC7124);
-                        if (abstractC7125 != null) {
-                            hashSet.add(abstractC7125);
-                        } else {
-                            hashSet.add(abstractC7124);
-                        }
-                    }
-                    hashSet.remove(c15592.f31402);
-                    c15592.f31401.mo19022((AbstractC7124[]) hashSet.toArray(new AbstractC7124[0]));
-                    hashSet.clear();
-                }
-            }
-        }
+    public /* synthetic */ C15237(C19713 c19713) {
+        this((AbstractC15001) c19713);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m36505(Map map) {
-        boolean z;
-        Object obj;
-        ArrayList<Map.Entry> arrayList = new ArrayList(map.entrySet());
-        Collections.sort(arrayList, new C3946());
-        for (boolean z2 = true; z2; z2 = z) {
-            z = false;
-            for (Map.Entry entry : arrayList) {
-                Object value = entry.getValue();
-                if ((value instanceof C2184) && (obj = map.get(value)) != null && value != obj) {
-                    entry.setValue(obj);
-                    z = true;
-                }
-            }
-        }
+    static {
+        C0304.m1888(EnumC18203.PUBLIC, C15237.class.getName());
+        DEFAULT_INSTANCE = new C15237();
+        PARSER = new C22697();
     }
 
-    /* JADX WARN: Type inference fix 'apply assigned field type' failed
-    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
-    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
-    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
-    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
-     */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m36506(C9116 c9116) {
-        boolean z;
-        boolean z2;
-        boolean z3;
-        C22998 c22998;
-        ArrayList<C15592> arrayList = new ArrayList();
-        ArrayList arrayList2 = c9116.f31047;
-        for (AbstractC4777 first = c9116.f31045.getFirst(); first != null; first = first.m13247()) {
-            if (first.f16795 == EnumC2890.ASSIGN) {
-                C15592 c15592 = (C15592) first;
-                EnumC9947 enumC9947 = c15592.f31402.f23823;
-                EnumC9947 enumC9948 = EnumC9947.LOCAL;
-                if (enumC9947 == enumC9948 && c15592.f31401.f23823 == enumC9948) {
-                    arrayList.add(c15592);
-                }
-            }
+    public C15237(AbstractC15001 abstractC15001) {
+        super(abstractC15001);
+        this.size_ = 0L;
+        this.hash_ = AbstractC17084.f55772;
+        this.memoizedIsInitialized = (byte) -1;
+    }
+
+    public C15237() {
+        this.size_ = 0L;
+        AbstractC17084 abstractC17084 = AbstractC17084.f55772;
+        this.memoizedIsInitialized = (byte) -1;
+        this.hash_ = abstractC17084;
+    }
+
+    public static final C24478 getDescriptor() {
+        return C18221.internal_static_bin_mt_manager_visitor_payload_PartitionInfo_descriptor;
+    }
+
+    @Override // l.AbstractC9035
+    public C7544 internalGetFieldAccessorTable() {
+        C7544 c7544 = C18221.internal_static_bin_mt_manager_visitor_payload_PartitionInfo_fieldAccessorTable;
+        c7544.m20621(C15237.class, C19713.class);
+        return c7544;
+    }
+
+    @Override // l.InterfaceC5543
+    public boolean hasSize() {
+        return (this.bitField0_ & 1) != 0;
+    }
+
+    @Override // l.InterfaceC5543
+    public long getSize() {
+        return this.size_;
+    }
+
+    @Override // l.InterfaceC5543
+    public boolean hasHash() {
+        return (this.bitField0_ & 2) != 0;
+    }
+
+    @Override // l.InterfaceC5543
+    public AbstractC17084 getHash() {
+        return this.hash_;
+    }
+
+    @Override // l.AbstractC9035, l.AbstractC19124, l.InterfaceC9824
+    public final boolean isInitialized() {
+        byte b = this.memoizedIsInitialized;
+        if (b == 1) {
+            return true;
         }
-        HashMap map = new HashMap();
-        HashSet hashSet = new HashSet();
-        boolean z4 = true;
-        boolean z5 = true;
-        boolean z6 = false;
-        while (z5) {
-            if (arrayList2 != null) {
-                HashSet hashSet2 = new HashSet();
-                C19805 c19805 = this.f49691;
-                Map map2 = (Map) c19805.m45009();
-                if (map2 == null) {
-                    map2 = new HashMap();
-                }
-                Iterator it = arrayList2.iterator();
-                while (it.hasNext()) {
-                    for (C15592 c15593 : ((C17002) it.next()).f54351) {
-                        C2184 c2184 = (C2184) c15593.f31402;
-                        C22998 c22999 = (C22998) map2.get(c2184);
-                        if (c22999 == null) {
-                            c22999 = new C22998();
-                            c22999.f74741 = c2184;
-                            map2.put(c2184, c22999);
-                        }
-                        c22999.f74742 = z4;
-                        AbstractC7124[] abstractC7124ArrMo19023 = c15593.f31401.mo19023();
-                        int length = abstractC7124ArrMo19023.length;
-                        boolean z7 = z6;
-                        int i = 0;
-                        while (i < length) {
-                            AbstractC7124 abstractC7124 = abstractC7124ArrMo19023[i];
-                            if (abstractC7124 == c2184) {
-                                abstractC7124ArrMo19023 = abstractC7124ArrMo19023;
-                            } else {
-                                C2184 c2185 = (C2184) abstractC7124;
-                                C22998 c229910 = (C22998) map2.get(c2185);
-                                if (c229910 == null) {
-                                    c22998 = new C22998();
-                                    c22998.f74741 = c2185;
-                                    map2.put(c2185, c22998);
-                                } else {
-                                    c22998 = c229910;
-                                }
-                                c22998.f74740.add(c22999);
-                                c22999.f74739.add(c22998);
-                            }
-                            i++;
-                            abstractC7124ArrMo19023 = abstractC7124ArrMo19023;
-                        }
-                        z4 = true;
-                        z6 = z7;
-                    }
-                }
-                z = z6;
-                C23704 c23704 = new C23704();
-                c23704.addAll(map2.values());
-                while (!c23704.isEmpty()) {
-                    C22998 c229911 = (C22998) c23704.poll();
-                    for (C22998 c229912 : c229911.f74740) {
-                        if (c229912.f74742 && c229912.f74739.addAll(c229911.f74739)) {
-                            c23704.add(c229912);
-                        }
-                    }
-                }
-                z2 = false;
-                for (C22998 c229913 : map2.values()) {
-                    if (c229913.f74742) {
-                        C2184 c2186 = null;
-                        for (C22998 c229914 : c229913.f74739) {
-                            if (!c229914.f74742) {
-                                if (c2186 != null) {
-                                    c2186 = null;
-                                    break;
-                                }
-                                c2186 = c229914.f74741;
-                            }
-                        }
-                        if (c2186 != null) {
-                            map.put(c229913.f74741, c2186);
-                            hashSet2.add(c229913.f74741);
-                            z2 = true;
-                        }
-                    }
-                }
-                Iterator it2 = arrayList2.iterator();
-                while (it2.hasNext()) {
-                    C17002 c17002 = (C17002) it2.next();
-                    Iterator it3 = c17002.f54351.iterator();
-                    while (it3.hasNext()) {
-                        if (hashSet2.contains(((C15592) it3.next()).f31402)) {
-                            it3.remove();
-                        }
-                    }
-                    if (c17002.f54351.size() == 0) {
-                        c17002.f54351 = null;
-                        it2.remove();
-                    }
-                }
-                map2.clear();
-                c19805.m45011(map2);
-            } else {
-                z = z6;
-                z2 = false;
-            }
-            if (z2) {
-                m36505(map);
-                m36504(arrayList2, map, hashSet);
-            }
-            while (true) {
-                if (arrayList2 != null) {
-                    Iterator it4 = arrayList2.iterator();
-                    z3 = false;
-                    while (it4.hasNext()) {
-                        C17002 c17003 = (C17002) it4.next();
-                        Iterator it5 = c17003.f54351.iterator();
-                        while (it5.hasNext()) {
-                            C15592 c15594 = (C15592) it5.next();
-                            hashSet.addAll(Arrays.asList(c15594.f31401.mo19023()));
-                            hashSet.remove(c15594.f31402);
-                            if (hashSet.size() == 1) {
-                                it5.remove();
-                                map.put((C2184) c15594.f31402, (C2184) hashSet.iterator().next());
-                                z3 = true;
-                            }
-                            hashSet.clear();
-                        }
-                        if (c17003.f54351.size() == 0) {
-                            c17003.f54351 = null;
-                            it4.remove();
-                        }
-                    }
-                } else {
-                    z3 = false;
-                }
-                if (!z3) {
-                    break;
-                }
-                m36505(map);
-                m36504(arrayList2, map, hashSet);
-            }
-            z6 = z;
-            z5 = false;
-            while (true) {
-                C11834 c11834 = c9116.f31045;
-                HashSet hashSet3 = new HashSet();
-                if (arrayList2 != null) {
-                    Iterator it6 = arrayList2.iterator();
-                    while (it6.hasNext()) {
-                        Iterator it7 = ((C17002) it6.next()).f54351.iterator();
-                        while (it7.hasNext()) {
-                            hashSet3.addAll(Arrays.asList(((C15592) it7.next()).f31401.mo19023()));
-                        }
-                    }
-                }
-                Iterator it8 = arrayList.iterator();
-                boolean z8 = false;
-                while (it8.hasNext()) {
-                    C15592 c15595 = (C15592) it8.next();
-                    if (!hashSet3.contains(c15595.f31402)) {
-                        it8.remove();
-                        c11834.m29522(c15595);
-                        map.put((C2184) c15595.f31402, (C2184) c15595.f31401);
-                        z8 = true;
-                    }
-                }
-                if (z8) {
-                    m36505(map);
-                    for (C15592 c15596 : arrayList) {
-                        AbstractC7124 abstractC7125 = (AbstractC7124) map.get(c15596.f31401);
-                        if (abstractC7125 != null) {
-                            c15596.f31401 = abstractC7125;
-                        }
-                    }
-                    z5 = true;
-                    z6 = true;
-                }
-            }
-            m36504(arrayList2, map, hashSet);
-            z4 = true;
+        if (b == 0) {
+            return false;
         }
-        Iterator it9 = map.keySet().iterator();
-        while (it9.hasNext()) {
-            c9116.f31044.remove((C2184) it9.next());
-            z6 = true;
+        this.memoizedIsInitialized = (byte) 1;
+        return true;
+    }
+
+    @Override // l.AbstractC9035, l.AbstractC19124, l.InterfaceC18775
+    public void writeTo(AbstractC14846 abstractC14846) {
+        if ((this.bitField0_ & 1) != 0) {
+            abstractC14846.mo14023(1, this.size_);
         }
-        if (map.size() > 0) {
-            C11834 c11835 = c9116.f31045;
-            C6769 c6769 = new C6769(map);
-            for (AbstractC4777 first2 = c11835.getFirst(); first2 != null; first2 = first2.m13247()) {
-                C21005.m47175(first2, c6769, true);
-            }
+        if ((this.bitField0_ & 2) != 0) {
+            abstractC14846.mo14008(2, this.hash_);
         }
-        return z6;
+        getUnknownFields().writeTo(abstractC14846);
+    }
+
+    @Override // l.AbstractC9035, l.AbstractC19124, l.InterfaceC18775
+    public int getSerializedSize() {
+        int i = this.memoizedSize;
+        if (i != -1) {
+            return i;
+        }
+        int iM35773 = (this.bitField0_ & 1) != 0 ? AbstractC14846.m35773(1, this.size_) : 0;
+        if ((this.bitField0_ & 2) != 0) {
+            iM35773 += AbstractC14846.m35761(2, this.hash_);
+        }
+        int serializedSize = getUnknownFields().getSerializedSize() + iM35773;
+        this.memoizedSize = serializedSize;
+        return serializedSize;
+    }
+
+    @Override // l.AbstractC19124
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof C15237)) {
+            return super.equals(obj);
+        }
+        C15237 c15237 = (C15237) obj;
+        if (hasSize() != c15237.hasSize()) {
+            return false;
+        }
+        if ((!hasSize() || getSize() == c15237.getSize()) && hasHash() == c15237.hasHash()) {
+            return (!hasHash() || getHash().equals(c15237.getHash())) && getUnknownFields().equals(c15237.getUnknownFields());
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC19124
+    public int hashCode() {
+        int i = this.memoizedHashCode;
+        if (i != 0) {
+            return i;
+        }
+        int iHashCode = getDescriptor().hashCode() + 779;
+        if (hasSize()) {
+            iHashCode = C18176.m42345(iHashCode, 37, 1, 53) + C23447.m52660(getSize());
+        }
+        if (hasHash()) {
+            iHashCode = C18176.m42345(iHashCode, 37, 2, 53) + getHash().hashCode();
+        }
+        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
+        this.memoizedHashCode = iHashCode2;
+        return iHashCode2;
+    }
+
+    public static C15237 parseFrom(ByteBuffer byteBuffer) {
+        return (C15237) PARSER.parseFrom(byteBuffer);
+    }
+
+    public static C15237 parseFrom(ByteBuffer byteBuffer, C24215 c24215) {
+        return (C15237) PARSER.parseFrom(byteBuffer, c24215);
+    }
+
+    public static C15237 parseFrom(AbstractC17084 abstractC17084) {
+        return (C15237) PARSER.parseFrom(abstractC17084);
+    }
+
+    public static C15237 parseFrom(AbstractC17084 abstractC17084, C24215 c24215) {
+        return (C15237) PARSER.parseFrom(abstractC17084, c24215);
+    }
+
+    public static C15237 parseFrom(byte[] bArr) {
+        return (C15237) PARSER.parseFrom(bArr);
+    }
+
+    public static C15237 parseFrom(byte[] bArr, C24215 c24215) {
+        return (C15237) PARSER.parseFrom(bArr, c24215);
+    }
+
+    public static C15237 parseFrom(InputStream inputStream) {
+        return (C15237) AbstractC9035.m24127(PARSER, inputStream);
+    }
+
+    public static C15237 parseFrom(InputStream inputStream, C24215 c24215) {
+        return (C15237) AbstractC9035.m24128(PARSER, inputStream, c24215);
+    }
+
+    public static C15237 parseDelimitedFrom(InputStream inputStream) {
+        return (C15237) AbstractC9035.m24107(PARSER, inputStream);
+    }
+
+    public static C15237 parseDelimitedFrom(InputStream inputStream, C24215 c24215) {
+        return (C15237) AbstractC9035.m24108(PARSER, inputStream, c24215);
+    }
+
+    public static C15237 parseFrom(AbstractC3660 abstractC3660) {
+        return (C15237) AbstractC9035.m24109(PARSER, abstractC3660);
+    }
+
+    public static C15237 parseFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        return (C15237) AbstractC9035.m24110(PARSER, abstractC3660, c24215);
+    }
+
+    @Override // l.AbstractC19124, l.InterfaceC18775
+    public C19713 newBuilderForType() {
+        return newBuilder();
+    }
+
+    public static C19713 newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static C19713 newBuilder(C15237 c15237) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(c15237);
+    }
+
+    @Override // l.AbstractC19124, l.InterfaceC18775
+    public C19713 toBuilder() {
+        int i = 0;
+        return this == DEFAULT_INSTANCE ? new C19713(i) : new C19713(i).mergeFrom(this);
+    }
+
+    @Override // l.AbstractC19124
+    public C19713 newBuilderForType(InterfaceC7937 interfaceC7937) {
+        return new C19713(interfaceC7937, 0);
+    }
+
+    public static C15237 getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+    }
+
+    public static InterfaceC11490 parser() {
+        return PARSER;
+    }
+
+    @Override // l.AbstractC9035, l.InterfaceC18775
+    public InterfaceC11490 getParserForType() {
+        return PARSER;
+    }
+
+    @Override // l.AbstractC19124, l.InterfaceC9824
+    public C15237 getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
     }
 }

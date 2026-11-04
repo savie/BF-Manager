@@ -1,310 +1,515 @@
-.class public abstract Ll/ᩴۢܶ;
-.super Ll/ۡۢܶ;
-.source "U2NA"
+.class public final Ll/ᩴۢܶ;
+.super Ljava/lang/Object;
+.source "X7WN"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final synthetic ܳ:I
+.implements Ll/ۛ֡ܶ;
 
 
 # instance fields
-.field public ۧ:Ll/᩹᩶ܶ;
+.field public ۙ:Ljava/security/KeyFactory;
 
-.field public ᩻:Ll/۫ۢܶ;
+.field public ᩷:Ljava/security/Signature;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 39
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static ۤ([B)[B
+    .locals 4
+
+    .line 154
+    array-length v0, p0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    aget-byte v2, p0, v0
+
+    if-nez v2, :cond_0
+
+    aget-byte v2, p0, v1
+
+    and-int/lit16 v2, v2, 0x80
+
+    if-nez v2, :cond_0
+
+    .line 155
+    array-length v2, p0
+
+    sub-int/2addr v2, v1
+
+    new-array v3, v2, [B
+
+    .line 156
+    invoke-static {p0, v1, v3, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 157
+    invoke-static {v3}, Ll/ᩴۢܶ;->ۤ([B)[B
+
+    move-result-object p0
+
+    :cond_0
+    return-object p0
+.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final init()V
+    .locals 1
 
-    .line 73
-    iget-object v0, p0, Ll/ᩴۢܶ;->᩻:Ll/۫ۢܶ;
+    const-string v0, "SHA1withDSA"
 
-    .line 74
-    iget-object v1, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
+    .line 46
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    const-string v0, "DSA"
+
+    .line 47
+    invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ᩴۢܶ;->ۙ:Ljava/security/KeyFactory;
+
+    return-void
+.end method
+
+.method public final sign()[B
+    .locals 9
+
+    .line 68
+    iget-object v0, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    invoke-virtual {v0}, Ljava/security/Signature;->sign()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x3
 
     .line 77
-    iget-object v2, p0, Ll/᩸ۢܶ;->᩶:Ljava/lang/Object;
+    aget-byte v1, v0, v1
 
-    .line 323
-    instance-of v2, v2, Ll/֫֫ܶ;
+    and-int/lit16 v1, v1, 0xff
 
-    const/4 v3, 0x1
+    .line 79
+    new-array v2, v1, [B
+
+    const/4 v3, 0x4
 
     const/4 v4, 0x0
 
-    if-nez v0, :cond_0
+    .line 80
+    invoke-static {v0, v3, v2, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/4 v5, 0x1
+    add-int/lit8 v3, v1, 0x5
+
+    add-int/lit8 v5, v1, 0x6
+
+    .line 82
+    aget-byte v3, v0, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    .line 84
+    new-array v6, v3, [B
+
+    .line 85
+    invoke-static {v0, v5, v6, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    const/16 v0, 0x28
+
+    new-array v0, v0, [B
+
+    const/16 v5, 0x14
+
+    if-le v1, v5, :cond_0
+
+    const/4 v7, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     :goto_0
-    or-int/2addr v2, v5
+    if-le v1, v5, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 v8, 0x0
 
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x0
+    rsub-int/lit8 v8, v1, 0x14
 
     :goto_1
-    or-int/2addr v2, v3
+    if-le v1, v5, :cond_2
 
-    if-eqz v2, :cond_2
+    const/16 v1, 0x14
 
-    return-void
-
+    .line 91
     :cond_2
-    const/4 v2, 0x0
+    invoke-static {v2, v7, v0, v8, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 78
-    iput-object v2, p0, Ll/ᩴۢܶ;->᩻:Ll/۫ۢܶ;
+    if-le v3, v5, :cond_3
 
-    .line 80
-    move-object v3, v0
+    const/4 v4, 0x1
 
-    check-cast v3, Ll/֡ۢܶ;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 1177
-    :try_start_0
-    invoke-static {v0}, Ll/ܳۢܶ;->ۙ(Ljava/util/concurrent/Future;)Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 255
-    :try_start_1
-    invoke-interface {v1, v0}, Ll/ۨ᩷ܶ;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 133
-    iput-object v2, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
-
-    .line 172
-    move-object v1, p0
-
-    check-cast v1, Ll/ᩳۢܶ;
-
-    .line 260
-    invoke-virtual {v1, v0}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Object;)Z
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    .line 36
-    :try_start_2
-    instance-of v1, v0, Ljava/lang/InterruptedException;
-
-    if-eqz v1, :cond_3
-
-    .line 37
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
-
-    .line 130
     :cond_3
-    invoke-virtual {p0, v0}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Throwable;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    if-le v3, v5, :cond_4
 
-    .line 133
-    iput-object v2, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
+    const/16 v1, 0x14
 
-    return-void
+    goto :goto_2
 
-    :catchall_1
-    move-exception v0
+    :cond_4
+    rsub-int/lit8 v1, v3, 0x28
 
-    iput-object v2, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
+    :goto_2
+    if-le v3, v5, :cond_5
 
-    .line 134
-    throw v0
+    const/16 v3, 0x14
 
-    :catch_0
-    move-exception v0
+    .line 93
+    :cond_5
+    invoke-static {v6, v4, v0, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 120
-    invoke-virtual {p0, v0}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Throwable;)Z
+    return-object v0
+.end method
 
-    return-void
-
-    :catch_1
-    move-exception v0
-
-    .line 112
-    invoke-virtual {p0, v0}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    :catch_2
-    move-exception v0
-
-    .line 108
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ll/ۚۢܶ;->ۙ(Ljava/lang/Throwable;)Z
-
-    return-void
+.method public final update([B)V
+    .locals 1
 
     .line 104
-    :catch_3
-    invoke-virtual {p0, v4}, Ll/ۚۢܶ;->cancel(Z)Z
+    iget-object v0, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    invoke-virtual {v0, p1}, Ljava/security/Signature;->update([B)V
 
     return-void
 .end method
 
-.method public final ۖ()V
-    .locals 3
+.method public final verify([B)Z
+    .locals 10
 
-    .line 186
-    iget-object v0, p0, Ll/ᩴۢܶ;->᩻:Ll/۫ۢܶ;
+    .line 112
+    new-instance v0, Ll/ۢۘܶ;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p1}, Ll/ۢۘܶ;-><init>([B)V
 
-    const/4 v1, 0x1
+    .line 114
+    new-instance v1, Ljava/lang/String;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 77
-    :goto_0
-    iget-object v2, p0, Ll/᩸ۢܶ;->᩶:Ljava/lang/Object;
-
-    .line 323
-    instance-of v2, v2, Ll/֫֫ܶ;
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_2
-
-    .line 77
-    iget-object v1, p0, Ll/᩸ۢܶ;->᩶:Ljava/lang/Object;
-
-    .line 433
-    instance-of v2, v1, Ll/֫֫ܶ;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Ll/֫֫ܶ;
-
-    iget-boolean v1, v1, Ll/֫֫ܶ;->ܰ:Z
-
-    .line 832
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_2
-    const/4 v0, 0x0
-
-    .line 188
-    iput-object v0, p0, Ll/ᩴۢܶ;->᩻:Ll/۫ۢܶ;
-
-    .line 189
-    iput-object v0, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
-
-    return-void
-.end method
-
-.method public final ۚ()Ljava/lang/String;
-    .locals 5
-
-    .line 194
-    iget-object v0, p0, Ll/ᩴۢܶ;->᩻:Ll/۫ۢܶ;
-
-    .line 195
-    iget-object v1, p0, Ll/ᩴۢܶ;->ۧ:Ll/᩹᩶ܶ;
-
-    .line 196
-    invoke-super {p0}, Ll/ۚۢܶ;->ۚ()Ljava/lang/String;
+    invoke-virtual {v0}, Ll/ۢۘܶ;->֫()[B
 
     move-result-object v2
 
-    if-eqz v0, :cond_0
+    sget-object v3, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    .line 199
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    const-string v4, "inputFuture=["
+    const-string v2, "ssh-dss"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v0, "], "
+    const/4 v2, 0x0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 115
+    invoke-virtual {v0}, Ll/ۢۘܶ;->ۤ()I
 
-    move-result-object v0
+    move-result v1
+
+    .line 116
+    invoke-virtual {v0}, Ll/ۢۘܶ;->۫()I
+
+    move-result v0
+
+    .line 117
+    new-array v3, v1, [B
+
+    .line 118
+    invoke-static {p1, v0, v3, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move-object p1, v3
+
+    :cond_0
+    const/16 v0, 0x14
+
+    new-array v1, v0, [B
+
+    .line 123
+    invoke-static {p1, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 124
+    invoke-static {v1}, Ll/ᩴۢܶ;->ۤ([B)[B
+
+    move-result-object v1
+
+    new-array v3, v0, [B
+
+    .line 127
+    invoke-static {p1, v0, v3, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 128
+    invoke-static {v3}, Ll/ᩴۢܶ;->ۤ([B)[B
+
+    move-result-object p1
+
+    .line 131
+    aget-byte v0, v1, v2
+
+    and-int/lit16 v0, v0, 0x80
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const-string v0, ""
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    .line 202
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "function=["
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
     :cond_1
-    if-eqz v2, :cond_2
-
-    .line 0
-    invoke-static {v0, v2}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
     const/4 v0, 0x0
 
-    return-object v0
+    .line 132
+    :goto_0
+    aget-byte v4, p1, v2
+
+    and-int/lit16 v4, v4, 0x80
+
+    if-eqz v4, :cond_2
+
+    const/4 v4, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v4, 0x0
+
+    .line 134
+    :goto_1
+    array-length v5, v1
+
+    array-length v6, p1
+
+    add-int/2addr v5, v6
+
+    add-int/lit8 v5, v5, 0x6
+
+    add-int/2addr v5, v0
+
+    add-int/2addr v5, v4
+
+    .line 135
+    new-array v5, v5, [B
+
+    const/16 v6, 0x30
+
+    .line 136
+    aput-byte v6, v5, v2
+
+    .line 137
+    array-length v6, v1
+
+    array-length v7, p1
+
+    add-int/2addr v6, v7
+
+    add-int/lit8 v6, v6, 0x4
+
+    int-to-byte v6, v6
+
+    aput-byte v6, v5, v3
+
+    int-to-byte v7, v0
+
+    add-int/2addr v6, v7
+
+    int-to-byte v6, v6
+
+    .line 138
+    aput-byte v6, v5, v3
+
+    int-to-byte v8, v4
+
+    add-int/2addr v6, v8
+
+    int-to-byte v6, v6
+
+    .line 139
+    aput-byte v6, v5, v3
+
+    const/4 v3, 0x2
+
+    .line 140
+    aput-byte v3, v5, v3
+
+    .line 141
+    array-length v6, v1
+
+    int-to-byte v6, v6
+
+    const/4 v9, 0x3
+
+    aput-byte v6, v5, v9
+
+    add-int/2addr v6, v7
+
+    int-to-byte v6, v6
+
+    .line 142
+    aput-byte v6, v5, v9
+
+    add-int/lit8 v0, v0, 0x4
+
+    .line 143
+    array-length v6, v1
+
+    invoke-static {v1, v2, v5, v0, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 144
+    aget-byte v0, v5, v9
+
+    add-int/lit8 v0, v0, 0x4
+
+    aput-byte v3, v5, v0
+
+    .line 145
+    aget-byte v0, v5, v9
+
+    add-int/lit8 v0, v0, 0x5
+
+    array-length v1, p1
+
+    int-to-byte v1, v1
+
+    aput-byte v1, v5, v0
+
+    .line 146
+    aget-byte v0, v5, v9
+
+    add-int/lit8 v0, v0, 0x5
+
+    aget-byte v1, v5, v0
+
+    add-int/2addr v1, v8
+
+    int-to-byte v1, v1
+
+    aput-byte v1, v5, v0
+
+    .line 147
+    aget-byte v0, v5, v9
+
+    add-int/lit8 v0, v0, 0x6
+
+    add-int/2addr v0, v4
+
+    array-length v1, p1
+
+    invoke-static {p1, v2, v5, v0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 150
+    iget-object p1, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    invoke-virtual {p1, v5}, Ljava/security/Signature;->verify([B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ۙ([B[B[B[B)V
+    .locals 2
+
+    .line 60
+    new-instance v0, Ljava/security/spec/DSAPrivateKeySpec;
+
+    new-instance v1, Ljava/math/BigInteger;
+
+    invoke-direct {v1, p1}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p1, Ljava/math/BigInteger;
+
+    invoke-direct {p1, p2}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p2, Ljava/math/BigInteger;
+
+    invoke-direct {p2, p3}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p3, Ljava/math/BigInteger;
+
+    invoke-direct {p3, p4}, Ljava/math/BigInteger;-><init>([B)V
+
+    invoke-direct {v0, v1, p1, p2, p3}, Ljava/security/spec/DSAPrivateKeySpec;-><init>(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V
+
+    .line 62
+    iget-object p1, p0, Ll/ᩴۢܶ;->ۙ:Ljava/security/KeyFactory;
+
+    invoke-virtual {p1, v0}, Ljava/security/KeyFactory;->generatePrivate(Ljava/security/spec/KeySpec;)Ljava/security/PrivateKey;
+
+    move-result-object p1
+
+    .line 63
+    iget-object p2, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
+
+    return-void
+.end method
+
+.method public final ᩷([B[B[B[B)V
+    .locals 2
+
+    .line 52
+    new-instance v0, Ljava/security/spec/DSAPublicKeySpec;
+
+    new-instance v1, Ljava/math/BigInteger;
+
+    invoke-direct {v1, p1}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p1, Ljava/math/BigInteger;
+
+    invoke-direct {p1, p2}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p2, Ljava/math/BigInteger;
+
+    invoke-direct {p2, p3}, Ljava/math/BigInteger;-><init>([B)V
+
+    new-instance p3, Ljava/math/BigInteger;
+
+    invoke-direct {p3, p4}, Ljava/math/BigInteger;-><init>([B)V
+
+    invoke-direct {v0, v1, p1, p2, p3}, Ljava/security/spec/DSAPublicKeySpec;-><init>(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V
+
+    .line 54
+    iget-object p1, p0, Ll/ᩴۢܶ;->ۙ:Ljava/security/KeyFactory;
+
+    invoke-virtual {p1, v0}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
+
+    move-result-object p1
+
+    .line 55
+    iget-object p2, p0, Ll/ᩴۢܶ;->᩷:Ljava/security/Signature;
+
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
+
+    return-void
 .end method

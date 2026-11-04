@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.DESParameters;
 import org.bouncycastle.crypto.params.DESedeParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DESedeKeyGenerator extends DESKeyGenerator {
     public static final int MAX_IT = 20;
 

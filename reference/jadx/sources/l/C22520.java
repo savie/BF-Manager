@@ -1,12 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹᩶᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 455Z */
+/* JADX INFO: renamed from: l.᩸ۗۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22520 implements InterfaceC3468 {
-    @Override // l.InterfaceC3468
+public final /* synthetic */ class C22520 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public final AbstractC4300 mo2412(C12063 c12063, EnumC0772 enumC0772, byte[] bArr, int i) {
-        return new C1352(enumC0772, bArr, i);
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        return ((1643118592 >> C18446.m42976(i)) & 1) != 0;
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

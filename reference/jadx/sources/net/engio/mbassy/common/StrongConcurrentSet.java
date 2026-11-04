@@ -3,7 +3,7 @@ package net.engio.mbassy.common;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class StrongConcurrentSet extends AbstractConcurrentSet {
     public StrongConcurrentSet() {
         super(new HashMap());

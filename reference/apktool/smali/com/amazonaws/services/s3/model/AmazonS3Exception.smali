@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field public ۛ:Ljava/lang/String;
+.field public ۢ:Ljava/lang/String;
 
-.field public ܿ:Ljava/util/HashMap;
+.field public ᩳ:Ljava/util/HashMap;
 
 
 # virtual methods
@@ -36,7 +36,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 107
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۛ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۢ:Ljava/lang/String;
 
     .line 163
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -52,25 +52,25 @@
     .locals 0
 
     .line 153
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ܿ:Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩳ:Ljava/util/HashMap;
 
     return-void
 .end method
 
-.method public final ۚ()Ljava/util/Map;
+.method public final ᩴ()Ljava/util/Map;
     .locals 1
 
     .line 146
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ܿ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩳ:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
-.method public final ۚ(Ljava/lang/String;)V
+.method public final ᩴ(Ljava/lang/String;)V
     .locals 0
 
     .line 117
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۛ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۢ:Ljava/lang/String;
 
     return-void
 .end method

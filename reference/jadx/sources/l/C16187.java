@@ -1,38 +1,33 @@
 package l;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.view.AbsSavedState;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.Collection;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ܺ᩷ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A4UI */
+/* JADX INFO: renamed from: l.ܶܶ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 48P4 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16187 extends C23948 {
-    public static final Parcelable.Creator CREATOR = new C21125();
+public final class C16187 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public HashSet f52281;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 f52541;
 
-    @Override // android.view.AbsSavedState, android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        super.writeToParcel(parcel, i);
-        parcel.writeInt(this.f52281.size());
-        HashSet hashSet = this.f52281;
-        parcel.writeStringArray((String[]) hashSet.toArray(new String[hashSet.size()]));
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f52542;
 
-    public C16187(Parcel parcel) {
-        super(parcel);
-        int i = parcel.readInt();
-        this.f52281 = new HashSet();
-        String[] strArr = new String[i];
-        parcel.readStringArray(strArr);
-        Collections.addAll(this.f52281, strArr);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f52543;
 
-    public C16187() {
-        super(AbsSavedState.EMPTY_STATE);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f52544;
+
+    public C16187(long j, long j2, List list) {
+        this.f52541 = AbstractC1928.copyOf((Collection) list);
+        this.f52544 = j;
+        this.f52543 = j2;
+        long j3 = -9223372036854775807L;
+        if (j != -9223372036854775807L && j2 != -9223372036854775807L) {
+            j3 = j + j2;
+        }
+        this.f52542 = j3;
     }
 }

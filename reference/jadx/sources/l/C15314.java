@@ -1,26 +1,26 @@
 package l;
 
-import bin.mt.json.JSONArray;
 import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ܶܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 46W4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15314 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.ܳۧ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6PO */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15314 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final JSONArray f49892;
+    public final boolean f50053;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final JSONArray f49893;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f50054;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2612 f49894;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f50055;
 
-    public C15314(C2612 c2612, JSONArray jSONArray, JSONArray jSONArray2) {
-        this.f49894 = c2612;
-        this.f49893 = jSONArray;
-        this.f49892 = jSONArray2;
+    public C15314(int i, int i2, boolean z) {
+        this.f50054 = i;
+        this.f50055 = i2;
+        this.f50053 = z;
     }
 
     public final boolean equals(Object obj) {
@@ -28,18 +28,18 @@ public final class C15314 extends AbstractC17535 {
             return false;
         }
         C15314 c15314 = (C15314) obj;
-        return C13638.equals(this.f49894, c15314.f49894) && C13638.equals(this.f49893, c15314.f49893) && C13638.equals(this.f49892, c15314.f49892);
+        return this.f50053 == c15314.f50053 && this.f50054 == c15314.f50054 && this.f50055 == c15314.f50055;
     }
 
     public final int hashCode() {
-        return C13638.hashCode(this.f49892) + ((C13638.hashCode(this.f49893) + (C13638.hashCode(this.f49894) * 31)) * 31);
+        return ((((this.f50053 ? 1231 : 1237) * 31) + this.f50054) * 31) + this.f50055;
     }
 
     public final String toString() {
-        Object[] objArr = {this.f49894, this.f49893, this.f49892};
-        String[] strArrSplit = "page;warnings;failedFiles".length() == 0 ? new String[0] : "page;warnings;failedFiles".split(l.b);
+        Object[] objArr = {Integer.valueOf(this.f50054), Integer.valueOf(this.f50055), Boolean.valueOf(this.f50053)};
+        String[] strArrSplit = "start;end;complete".length() == 0 ? new String[0] : "start;end;complete".split(l.b);
         StringBuilder sb = new StringBuilder();
-        C17745.m41311(C15314.class, sb, "[");
+        ExternalValue$$ExternalSyntheticOutline0.m(C15314.class, sb, "[");
         for (int i = 0; i < strArrSplit.length; i++) {
             sb.append(strArrSplit[i]);
             sb.append("=");
@@ -50,20 +50,5 @@ public final class C15314 extends AbstractC17535 {
         }
         sb.append("]");
         return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final JSONArray m36674() {
-        return this.f49893;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final JSONArray m36675() {
-        return this.f49892;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C2612 m36676() {
-        return this.f49894;
     }
 }

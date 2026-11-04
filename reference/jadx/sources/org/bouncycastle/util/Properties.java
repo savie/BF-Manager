@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
-import l.C0561;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class Properties {
@@ -39,7 +39,7 @@ public class Properties {
                 hashSet.add(Strings.toLowerCase(stringTokenizer.nextToken()).trim());
             }
         }
-        return C0561.unmodifiableSet(hashSet);
+        return C4681.unmodifiableSet(hashSet);
     }
 
     public static String getPropertyValue(final String str) {

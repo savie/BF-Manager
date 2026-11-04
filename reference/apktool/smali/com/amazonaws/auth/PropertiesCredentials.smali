@@ -9,7 +9,7 @@
 # instance fields
 .field public final ۙ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/lang/String;
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
@@ -72,7 +72,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/auth/PropertiesCredentials;->ܰ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/auth/PropertiesCredentials;->᩷:Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -213,7 +213,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/auth/PropertiesCredentials;->ܰ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/auth/PropertiesCredentials;->᩷:Ljava/lang/String;
 
     return-void
 
@@ -252,11 +252,11 @@
     return-object v0
 .end method
 
-.method public final ۨ()Ljava/lang/String;
+.method public final ۤ()Ljava/lang/String;
     .locals 1
 
     .line 128
-    iget-object v0, p0, Lcom/amazonaws/auth/PropertiesCredentials;->ܰ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/auth/PropertiesCredentials;->᩷:Ljava/lang/String;
 
     return-object v0
 .end method

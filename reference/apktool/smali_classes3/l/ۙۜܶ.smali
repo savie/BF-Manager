@@ -1,51 +1,63 @@
-.class public final enum Ll/ۙۜܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ۙۜܶ;
+.super Ll/ۨ۠ܶ;
+.source "O5QJ"
 
 
-# direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const-string v0, "FORMAT_35MS"
-
-    const/16 v1, 0x19
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ۙۜܶ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 582
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
-
-    return-void
-.end method
+# instance fields
+.field public ۧ:[B
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 0
+.method public final ۙ(Ll/֡۠ܶ;)V
+    .locals 2
 
-    .line 586
-    invoke-static {p0, p1}, Ll/۟ۜܶ;->ۙ(Ll/۟ۜܶ;I)Ll/ᩳۘܶ;
+    .line 100
+    invoke-super {p0, p1}, Ll/ۨ۠ܶ;->ۙ(Ll/֡۠ܶ;)V
 
-    move-result-object p1
+    .line 101
+    invoke-virtual {p0}, Ll/ۨ۠ܶ;->۫()I
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 0
+    invoke-virtual {p0}, Ll/ۨ۠ܶ;->ܳ()I
 
-    .line 591
-    invoke-static {p1}, Ll/۟ۜܶ;->ۙ(Ll/ᩳۘܶ;)V
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    add-int/lit8 v0, v0, -0x18
+
+    new-array v0, v0, [B
+
+    .line 83
+    iput-object v0, p0, Ll/ۙۜܶ;->ۧ:[B
+
+    const/16 v0, 0x8
+
+    .line 102
+    invoke-virtual {p1, v0}, Ll/֡۠ܶ;->ۙ(I)V
+
+    .line 79
+    iget-object v0, p0, Ll/ۙۜܶ;->ۧ:[B
+
+    .line 103
+    invoke-virtual {p1, v0}, Ll/֡۠ܶ;->ۙ([B)V
+
+    .line 104
+    invoke-virtual {p0}, Ll/ۨ۠ܶ;->ܳ()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ll/֡۠ܶ;->ۙ(I)V
 
     return-void
+.end method
+
+.method public final ۧ()[B
+    .locals 1
+
+    .line 79
+    iget-object v0, p0, Ll/ۙۜܶ;->ۧ:[B
+
+    return-object v0
 .end method

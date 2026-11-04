@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce;
 import org.bouncycastle.crypto.CharToByteConverter;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PBKDF2Key implements PBKDFKey {
     public final CharToByteConverter converter;
     public final char[] password;

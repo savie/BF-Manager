@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.x509;
 import com.google.android.material.motion.MotionUtils;
 import java.math.BigInteger;
 import java.util.Enumeration;
-import l.C16523;
+import l.C14442;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
@@ -19,7 +19,7 @@ import org.bouncycastle.crypto.digests.SHA1Digest;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AuthorityKeyIdentifier extends ASN1Object {
     public GeneralNames certissuer;
     public ASN1Integer certserno;
@@ -147,6 +147,6 @@ public class AuthorityKeyIdentifier extends ASN1Object {
 
     public String toString() {
         ASN1OctetString aSN1OctetString = this.keyIdentifier;
-        return C16523.m38890("AuthorityKeyIdentifier: KeyID(", aSN1OctetString != null ? Hex.toHexString(aSN1OctetString.getOctets()) : "null", MotionUtils.EASING_TYPE_FORMAT_END);
+        return C14442.m34865("AuthorityKeyIdentifier: KeyID(", aSN1OctetString != null ? Hex.toHexString(aSN1OctetString.getOctets()) : "null", MotionUtils.EASING_TYPE_FORMAT_END);
     }
 }

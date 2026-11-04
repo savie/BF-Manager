@@ -1,18 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ᩸ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G8N2 */
+/* JADX INFO: renamed from: l.ܰᩴۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U4EH */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C14797 {
+    public final boolean equals(Object obj) {
+        if (obj instanceof C14797) {
+            throw null;
+        }
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f48385;
+    public final int hashCode() {
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] f48386;
-
-    public C14797(byte[] bArr, byte[] bArr2) {
-        this.f48385 = bArr;
-        this.f48386 = bArr2;
+    public final String toString() {
+        throw null;
     }
 }

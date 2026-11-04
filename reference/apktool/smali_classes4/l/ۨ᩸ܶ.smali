@@ -1,164 +1,93 @@
-.class public Ll/ۨ᩸ܶ;
-.super Ll/۫ᩳۜ;
-.source "FBDV"
+.class public final Ll/ۨ᩸ܶ;
+.super Ll/ۧ᩸ܶ;
+.source "N5DL"
 
 
 # instance fields
-.field public ۨ:I
-
-.field public final ܰ:Ll/ۘᩴܶ;
+.field public ᩳ:Ll/᩻ۙܶ;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>(Ll/᩷ᩴܶ;[Ll/ۤᩴܶ;Ll/᩻ۙܶ;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 31
+    invoke-direct {p0, p1, p2}, Ll/ۙᩴܶ;-><init>(Ll/᩷ᩴܶ;[Ll/ۤᩴܶ;)V
 
-    .line 29
-    invoke-direct {p0, v0}, Ll/۫ᩳۜ;-><init>(I)V
-
-    .line 43
-    new-instance v0, Ll/ۘᩴܶ;
-
-    invoke-direct {v0, p1}, Ll/ۘᩴܶ;-><init>(I)V
-
-    iput-object v0, p0, Ll/ۨ᩸ܶ;->ܰ:Ll/ۘᩴܶ;
+    .line 38
+    iput-object p3, p0, Ll/ۨ᩸ܶ;->ᩳ:Ll/᩻ۙܶ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
+.method public final bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .line 51
-    iget v0, p0, Ll/ۨ᩸ܶ;->ۨ:I
+    .line 22
+    invoke-virtual {p0}, Ll/ۨ᩸ܶ;->clone()Ll/ۤᩴܶ;
 
-    return v0
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final ۙ(I)I
-    .locals 2
+.method public final clone()Ll/ۤᩴܶ;
+    .locals 4
 
-    .line 85
-    iget-object v0, p0, Ll/ۨ᩸ܶ;->ܰ:Ll/ۘᩴܶ;
+    .line 43
+    new-instance v0, Ll/ۨ᩸ܶ;
 
-    invoke-virtual {v0}, Ll/ۘᩴܶ;->size()I
+    invoke-virtual {p0}, Ll/ۙᩴܶ;->ۚ()[Ll/ۤᩴܶ;
 
-    move-result v1
+    move-result-object v1
 
-    if-lt p1, v1, :cond_0
+    iget-object v2, p0, Ll/ۨ᩸ܶ;->ᩳ:Ll/᩻ۙܶ;
 
-    const/4 p1, -0x1
+    iget-object v3, p0, Ll/ۤᩴܶ;->֡:Ll/᩷ᩴܶ;
 
-    return p1
+    invoke-direct {v0, v3, v1, v2}, Ll/ۨ᩸ܶ;-><init>(Ll/᩷ᩴܶ;[Ll/ۤᩴܶ;Ll/᩻ۙܶ;)V
 
-    .line 89
-    :cond_0
-    invoke-virtual {v0, p1}, Ll/ۘᩴܶ;->get(I)I
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final ۙ(Ll/ܺ᩺ܶ;)Ll/ܺ᩺ܶ;
-    .locals 2
+.method public final ֫()Ll/ۨۙܶ;
+    .locals 1
 
-    if-nez p1, :cond_0
+    .line 33
+    iget-object v0, p0, Ll/ۨ᩸ܶ;->ᩳ:Ll/᩻ۙܶ;
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ll/᩻ۙܶ;->᩸()Ll/ۨۙܶ;
 
-    return-object p1
+    move-result-object v0
 
-    .line 65
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Ll/ۨ᩸ܶ;->ܰ:Ll/ۘᩴܶ;
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Ll/ܺ᩺ܶ;->ᩴ()I
+.method public final ۙ(Ll/ۙ᩸ܶ;)Ll/ۤᩴܶ;
+    .locals 3
 
-    move-result v1
+    .line 48
+    new-instance v0, Ll/ۨ᩸ܶ;
 
-    invoke-virtual {v0, v1}, Ll/ۘᩴܶ;->get(I)I
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_1
-
-    .line 74
-    invoke-virtual {p1, v0}, Ll/ܺ᩺ܶ;->ܰ(I)Ll/ܺ᩺ܶ;
+    invoke-virtual {p0, p1}, Ll/ۙᩴܶ;->᩷(Ll/ۙ᩸ܶ;)[Ll/ۤᩴܶ;
 
     move-result-object p1
 
-    return-object p1
+    iget-object v1, p0, Ll/ۨ᩸ܶ;->ᩳ:Ll/᩻ۙܶ;
 
-    .line 71
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    iget-object v2, p0, Ll/ۤᩴܶ;->֡:Ll/᩷ᩴܶ;
 
-    const-string v0, "no mapping specified for register"
+    invoke-direct {v0, v2, p1, v1}, Ll/ۨ᩸ܶ;-><init>(Ll/᩷ᩴܶ;[Ll/ۤᩴܶ;Ll/᩻ۙܶ;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public ۙ(III)V
-    .locals 3
+.method public final ܳ()Ljava/lang/String;
+    .locals 1
 
-    .line 125
-    iget-object v0, p0, Ll/ۨ᩸ܶ;->ܰ:Ll/ۘᩴܶ;
+    const-string v0, "InvokeCustomExpr(....)"
 
-    invoke-virtual {v0}, Ll/ۘᩴܶ;->size()I
-
-    move-result v1
-
-    if-lt p1, v1, :cond_0
-
-    .line 127
-    invoke-virtual {v0}, Ll/ۘᩴܶ;->size()I
-
-    move-result v1
-
-    sub-int v1, p1, v1
-
-    :goto_0
-    if-ltz v1, :cond_0
-
-    const/4 v2, -0x1
-
-    .line 128
-    invoke-virtual {v0, v2}, Ll/ۘᩴܶ;->add(I)V
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    .line 132
-    :cond_0
-    invoke-virtual {v0, p1, p2}, Ll/ۘᩴܶ;->set(II)V
-
-    .line 134
-    iget p1, p0, Ll/ۨ᩸ܶ;->ۨ:I
-
-    add-int/2addr p2, p3
-
-    if-ge p1, p2, :cond_1
-
-    .line 135
-    iput p2, p0, Ll/ۨ᩸ܶ;->ۨ:I
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

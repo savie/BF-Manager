@@ -1,136 +1,89 @@
 package l;
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.channels.FileLock;
-import java.nio.channels.ReadableByteChannel;
-import java.nio.channels.SeekableByteChannel;
-import java.nio.channels.WritableByteChannel;
+import android.content.pm.PackageInfo;
+import android.net.Uri;
+import android.os.Build;
+import android.webkit.WebView;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Set;
+import java.util.WeakHashMap;
 
-/* JADX INFO: renamed from: l.ۨۤᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11646 extends FileChannel implements SeekableByteChannel {
-    public static final /* synthetic */ int e = 0;
-    public final FileChannel a;
-    public final boolean b;
-    public final boolean c;
-    public final InterfaceC3800 d;
+/* JADX INFO: renamed from: l.ۧ۬᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: H6ZH */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11646 {
 
-    public C11646(FileChannel fileChannel, boolean z, boolean z2, InterfaceC3800 interfaceC3800) {
-        this.a = fileChannel;
-        this.b = z;
-        this.c = z2;
-        this.d = z ? interfaceC3800 : null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f37671 = 0;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean f37672;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final WeakHashMap f37673;
+
+    static {
+        Uri.parse("*");
+        Uri.parse("");
+        f37672 = true;
+        f37673 = new WeakHashMap();
     }
 
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel, java.nio.channels.ReadableByteChannel
-    public final int read(ByteBuffer byteBuffer) {
-        return this.a.read(byteBuffer);
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.ScatteringByteChannel
-    public final long read(ByteBuffer[] byteBufferArr, int i, int i2) {
-        return this.a.read(byteBufferArr, i, i2);
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel, java.nio.channels.WritableByteChannel
-    public final int write(ByteBuffer byteBuffer) {
-        if (this.c) {
-            FileChannel fileChannel = this.a;
-            return fileChannel.write(byteBuffer, fileChannel.size());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static PackageInfo m29275() {
+        if (Build.VERSION.SDK_INT >= 26) {
+            return C4189.m13370();
         }
-        return this.a.write(byteBuffer);
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.GatheringByteChannel
-    public final long write(ByteBuffer[] byteBufferArr, int i, int i2) {
-        return this.a.write(byteBufferArr, i, i2);
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel
-    public final long position() {
-        return this.a.position();
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel
-    public final FileChannel position(long j) throws IOException {
-        FileChannel fileChannelPosition = this.a.position(j);
-        if (fileChannelPosition instanceof C11646) {
-            return (C11646) fileChannelPosition;
-        }
-        return new C11646(fileChannelPosition, false, false, null);
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel
-    public final long size() {
-        return this.a.size();
-    }
-
-    @Override // java.nio.channels.FileChannel, java.nio.channels.SeekableByteChannel
-    public final FileChannel truncate(long j) throws IOException {
-        FileChannel fileChannelTruncate = this.a.truncate(j);
-        if (fileChannelTruncate instanceof C11646) {
-            return (C11646) fileChannelTruncate;
-        }
-        return new C11646(fileChannelTruncate, false, false, null);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final void force(boolean z) throws IOException {
-        this.a.force(z);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final long transferTo(long j, long j2, WritableByteChannel writableByteChannel) {
-        return this.a.transferTo(j, j2, writableByteChannel);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final long transferFrom(ReadableByteChannel readableByteChannel, long j, long j2) {
-        return this.a.transferFrom(readableByteChannel, j, j2);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final int read(ByteBuffer byteBuffer, long j) {
-        return this.a.read(byteBuffer, j);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final int write(ByteBuffer byteBuffer, long j) {
-        return this.a.write(byteBuffer, j);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final MappedByteBuffer map(FileChannel.MapMode mapMode, long j, long j2) {
-        return this.a.map(mapMode, j, j2);
-    }
-
-    @Override // java.nio.channels.FileChannel
-    public final FileLock lock(long j, long j2, boolean z) throws IOException {
-        FileLock fileLockLock = this.a.lock(j, j2, z);
-        if (fileLockLock == null) {
+        try {
+            return m29280();
+        } catch (ClassNotFoundException | IllegalAccessException | NoSuchMethodException | InvocationTargetException unused) {
             return null;
         }
-        return new C2472(fileLockLock, this);
     }
 
-    @Override // java.nio.channels.FileChannel
-    public final FileLock tryLock(long j, long j2, boolean z) throws IOException {
-        FileLock fileLockTryLock = this.a.tryLock(j, j2, z);
-        if (fileLockTryLock == null) {
-            return null;
-        }
-        return new C2472(fileLockTryLock, this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static PackageInfo m29280() {
+        return (PackageInfo) Class.forName("android.webkit.WebViewFactory").getMethod("getLoadedPackageInfo", null).invoke(null, null);
     }
 
-    @Override // java.nio.channels.spi.AbstractInterruptibleChannel
-    public final void implCloseChannel() {
-        this.a.close();
-        if (this.b) {
-            this.d.toFile().delete();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C1681 m29276(WebView webView) {
+        if (C19580.f63143.mo27117() && f37672) {
+            WeakHashMap weakHashMap = f37673;
+            C1681 c1681 = (C1681) weakHashMap.get(webView);
+            if (c1681 != null) {
+                return c1681;
+            }
+            C1681 c1682 = new C1681(C5410.m16137().createWebView(webView));
+            weakHashMap.put(webView, c1682);
+            return c1682;
         }
+        return new C1681(C5410.m16137().createWebView(webView));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m29279(WebView webView, String str, Set set, C11021 c11021) {
+        if (C19580.f63136.mo27117()) {
+            m29276(webView).m6028(str, (String[]) set.toArray(new String[0]), c11021);
+            return;
+        }
+        throw C19580.m45180();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m29278(WebView webView, String str) {
+        if (C19580.f63136.mo27117()) {
+            m29276(webView).m6027(str);
+            return;
+        }
+        throw C19580.m45180();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C19105 m29277(WebView webView, String str, Set set) {
+        if (C19580.f63144.mo27117()) {
+            return m29276(webView).m6026(str, (String[]) set.toArray(new String[0]));
+        }
+        throw C19580.m45180();
     }
 }

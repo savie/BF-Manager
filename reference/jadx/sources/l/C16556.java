@@ -1,32 +1,60 @@
 package l;
 
-import java.util.ArrayList;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ܽۢ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: C30H */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16556 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f53179 = new ArrayList();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f53180 = new ArrayList();
+/* JADX INFO: renamed from: l.ܺۗܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7HV */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16556 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C12323 m38975() {
-        return new C12323(this.f53179, this.f53180);
+    public final String f53575;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f53576;
+
+    public C16556(String str, int i) {
+        this.f53575 = str;
+        this.f53576 = i;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C16556)) {
+            return false;
+        }
+        C16556 c16556 = (C16556) obj;
+        return this.f53576 == c16556.f53576 && C17359.equals(this.f53575, c16556.f53575);
+    }
+
+    public final int hashCode() {
+        return C17359.hashCode(this.f53575) + (this.f53576 * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f53575, Integer.valueOf(this.f53576)};
+        String[] strArrSplit = "path;sortingData".length() == 0 ? new String[0] : "path;sortingData".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C16556.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38976(String str, String str2) {
-        if (str == null) {
-            throw new NullPointerException("name == null");
-        }
-        if (str2 == null) {
-            throw new NullPointerException("value == null");
-        }
-        this.f53179.add(C14440.m34727(str, 0, str.length(), " \"':;<=>@[]^`{}|/\\?#&!$(),~", false, false, true, true));
-        this.f53180.add(C14440.m34727(str2, 0, str2.length(), " \"':;<=>@[]^`{}|/\\?#&!$(),~", false, false, true, true));
+    public final String m39198() {
+        return this.f53575;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m39199() {
+        return this.f53576;
     }
 }

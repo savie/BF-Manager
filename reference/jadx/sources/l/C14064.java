@@ -1,26 +1,31 @@
 package l;
 
-import bin.mt.plus.R;
-
-/* JADX INFO: renamed from: l.ܰ᩷ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 998H */
+/* JADX INFO: renamed from: l.۬᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 71DP */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14064 implements InterfaceC4968 {
+public final class C14064 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f46211;
+    public AbstractC3624 f44518;
 
-    public /* synthetic */ C14064(int i) {
-        this.f46211 = i;
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public float[] f44519;
 
-    @Override // l.InterfaceC4968
-    public final Object get() {
-        switch (this.f46211) {
-            case 0:
-                return RunnableC23541.m51890(R.drawable.MT_Protector);
-            default:
-                return RunnableC23541.m51890(R.drawable.MT_Protector);
-        }
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C4370 f44520;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public double[] f44521;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public double[] f44522;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public double[] f44523;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public float[] f44524;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public float[] f44525;
 }

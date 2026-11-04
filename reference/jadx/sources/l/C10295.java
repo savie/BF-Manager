@@ -1,15 +1,16 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤ۫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O913 */
+import android.media.AudioDeviceInfo;
+
+/* JADX INFO: renamed from: l.ۢᩳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A8PK */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10295 implements InterfaceC16294 {
-    @Override // l.InterfaceC16294
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2175(InterfaceC12061 interfaceC12061, AbstractC19367 abstractC19367) {
-        C18244 c18244 = (C18244) abstractC19367;
-        int length = interfaceC12061.length();
-        interfaceC12061.mo29972(c18244);
-        interfaceC12061.mo29967(c18244, length);
+public final class C10295 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AudioDeviceInfo f32872;
+
+    public C10295(AudioDeviceInfo audioDeviceInfo) {
+        this.f32872 = audioDeviceInfo;
     }
 }

@@ -1,15 +1,21 @@
 package l;
 
-import android.widget.TextView;
+import org.json.JSONObject;
 
-/* JADX INFO: renamed from: l.ۢۘۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U9SC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9333 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public TextView f31682;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public TextView f31683;
+/* JADX INFO: renamed from: l.ۡۧۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X66Z */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9333 implements InterfaceC22760 {
+    @Override // l.InterfaceC22760
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1200(C19929 c19929) {
+        String strM34647 = ((C14270) c19929.m45858()).m34647();
+        JSONObject jSONObject = (JSONObject) ((C14270) c19929.m45858()).m34634();
+        C14270 c14270 = new C14270();
+        try {
+            c14270.m34620(jSONObject.get(strM34647));
+        } catch (Throwable unused) {
+        }
+        c19929.m45857(c14270);
+    }
 }

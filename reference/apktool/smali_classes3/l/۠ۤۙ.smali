@@ -1,143 +1,165 @@
 .class public final Ll/۠ۤۙ;
 .super Ljava/lang/Object;
-.source "T8IH"
+.source "DB30"
 
 
 # instance fields
-.field public final ۙ:Ljava/lang/String;
+.field public final ۙ:Ll/֫᩸ۙ;
+
+.field public volatile ۤ:Ll/ܰ᩸ۙ;
+
+.field public volatile ᩷:Ll/۠᩸ۙ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ll/֫᩸ۙ;)V
     .locals 0
 
-    .line 68
+    .line 1649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
-    iput-object p1, p0, Ll/۠ۤۙ;->ۙ:Ljava/lang/String;
+    .line 1650
+    iput-object p1, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
 
     return-void
 .end method
 
-.method public static ۙ(Ll/ۖۤۙ;)Ll/۠ۤۙ;
-    .locals 6
+.method public static synthetic ۙ(Ll/۠ۤۙ;)Ll/֫᩸ۙ;
+    .locals 0
 
-    const/4 v0, 0x2
+    .line 1636
+    iget-object p0, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
 
-    .line 36
-    invoke-virtual {p0, v0}, Ll/ۖۤۙ;->᩹(I)V
+    return-object p0
+.end method
 
-    .line 37
-    invoke-virtual {p0}, Ll/ۖۤۙ;->ۤ()I
 
-    move-result v0
+# virtual methods
+.method public final ۙ(Ljava/lang/CharSequence;IIZ)Ljava/lang/CharSequence;
+    .locals 1
 
-    shr-int/lit8 v1, v0, 0x1
+    .line 1716
+    iget-object v0, p0, Ll/۠ۤۙ;->ۤ:Ll/ܰ᩸ۙ;
 
-    and-int/lit8 v0, v0, 0x1
+    invoke-virtual {v0, p1, p2, p3, p4}, Ll/ܰ᩸ۙ;->ۙ(Ljava/lang/CharSequence;IIZ)Ljava/lang/CharSequence;
 
-    const/4 v2, 0x5
+    move-result-object p1
 
-    shl-int/2addr v0, v2
+    return-object p1
+.end method
 
-    .line 39
-    invoke-virtual {p0}, Ll/ۖۤۙ;->ۤ()I
+.method public final ۙ()V
+    .locals 3
 
-    move-result p0
+    .line 1655
+    iget-object v0, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
 
-    shr-int/lit8 p0, p0, 0x3
+    :try_start_0
+    new-instance v1, Ll/ۖۤۙ;
 
-    and-int/lit8 p0, p0, 0x1f
+    invoke-direct {v1, p0}, Ll/ۖۤۙ;-><init>(Ll/۠ۤۙ;)V
 
-    or-int/2addr p0, v0
+    .line 1666
+    iget-object v2, v0, Ll/֫᩸ۙ;->۫:Ll/ܳ᩸ۙ;
 
-    const/4 v0, 0x4
+    invoke-interface {v2, v1}, Ll/ܳ᩸ۙ;->ۙ(Ll/۫᩸ۙ;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v3, 0xa
+    return-void
 
-    if-eq v1, v0, :cond_3
+    :catchall_0
+    move-exception v1
 
-    if-eq v1, v2, :cond_3
+    .line 1668
+    invoke-virtual {v0, v1}, Ll/֫᩸ۙ;->ۙ(Ljava/lang/Throwable;)V
 
-    const/4 v0, 0x7
+    return-void
+.end method
 
-    if-eq v1, v0, :cond_3
+.method public final ۙ(Landroid/view/inputmethod/EditorInfo;)V
+    .locals 3
 
-    const/16 v0, 0x8
+    .line 1720
+    iget-object v0, p1, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
-    if-ne v1, v0, :cond_0
+    iget-object v1, p0, Ll/۠ۤۙ;->᩷:Ll/۠᩸ۙ;
+
+    invoke-virtual {v1}, Ll/۠᩸ۙ;->ۤ()I
+
+    move-result v1
+
+    const-string v2, "android.support.text.emoji.emojiCompat_metadataVersion"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    .line 1721
+    iget-object p1, p1, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    const-string v0, "android.support.text.emoji.emojiCompat_replaceAll"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/۠᩸ۙ;)V
+    .locals 5
+
+    .line 1680
+    iput-object p1, p0, Ll/۠ۤۙ;->᩷:Ll/۠᩸ۙ;
+
+    .line 1681
+    new-instance p1, Ll/ܰ᩸ۙ;
+
+    iget-object v0, p0, Ll/۠ۤۙ;->᩷:Ll/۠᩸ۙ;
+
+    iget-object v1, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
+
+    .line 1683
+    invoke-static {v1}, Ll/֫᩸ۙ;->ۙ(Ll/֫᩸ۙ;)Ll/۬ۤۙ;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
+
+    .line 1684
+    invoke-static {v2}, Ll/֫᩸ۙ;->᩷(Ll/֫᩸ۙ;)Ll/ۙ᩸ۙ;
+
+    move-result-object v2
+
+    .line 34
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x22
+
+    if-lt v3, v4, :cond_0
+
+    .line 48
+    invoke-static {}, Ll/᩵᩸ۙ;->ۙ()Ljava/util/Set;
+
+    move-result-object v3
 
     goto :goto_0
 
+    .line 37
     :cond_0
-    const/16 v0, 0x9
+    invoke-static {}, Ll/᩵᩸ۙ;->ۙ()Ljava/util/Set;
 
-    if-ne v1, v0, :cond_1
+    move-result-object v3
 
-    const-string v0, "dvav"
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v1, v3, :cond_2
-
-    const-string v0, "dav1"
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_3
+    .line 1687
     :goto_0
-    const-string v0, "dvhe"
+    invoke-direct {p1, v0, v1, v2, v3}, Ll/ܰ᩸ۙ;-><init>(Ll/۠᩸ۙ;Ll/۬ۤۙ;Ll/ۙ᩸ۙ;Ljava/util/Set;)V
 
-    .line 0
-    :goto_1
-    invoke-static {v0}, Ll/ۡܿۡ;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ll/۠ۤۙ;->ۤ:Ll/ܰ᩸ۙ;
 
-    move-result-object v0
+    .line 1690
+    iget-object p1, p0, Ll/۠ۤۙ;->ۙ:Ll/֫᩸ۙ;
 
-    const-string v2, "."
+    invoke-virtual {p1}, Ll/֫᩸ۙ;->ۤ()V
 
-    const-string v4, ".0"
-
-    if-ge v1, v3, :cond_4
-
-    move-object v5, v4
-
-    goto :goto_2
-
-    :cond_4
-    move-object v5, v2
-
-    .line 52
-    :goto_2
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    if-ge p0, v3, :cond_5
-
-    move-object v2, v4
-
-    .line 54
-    :cond_5
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 56
-    new-instance v0, Ll/۠ۤۙ;
-
-    invoke-direct {v0, p0}, Ll/۠ۤۙ;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return-void
 .end method

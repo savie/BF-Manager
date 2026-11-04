@@ -1,95 +1,50 @@
-.class public final synthetic Ll/ۨۧۤ;
+.class public final Ll/ۨۧۤ;
 .super Ljava/lang/Object;
-.source "6428"
+.source "T5RH"
 
 # interfaces
-.implements Ljava/util/function/Function;
-
-
-# instance fields
-.field public final synthetic ܺ:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, Ll/ۨۧۤ;->ܺ:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 3
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 258
+    new-instance v0, Ll/ܰ֫ۤ;
 
-    move-result-object p1
+    invoke-direct {v0}, Ll/ܰ֫ۤ;-><init>()V
 
-    return-object p1
-.end method
+    .line 259
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move-result-object v1
 
-    .line 2
-    iget v0, p0, Ll/ۨۧۤ;->ܺ:I
+    check-cast v1, Ll/ܰ֫ۤ;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1}, Ll/ܰ֫ۤ;->ܺ()Ljava/lang/String;
 
-    .line 7
-    check-cast p1, Ljava/util/Map$Entry;
+    move-result-object v1
 
-    .line 790
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    .line 260
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
 
-    check-cast p1, Ll/ۛ᩵ۤ;
+    check-cast v2, Ll/ܰ֫ۤ;
 
-    return-object p1
+    invoke-virtual {v2}, Ll/ܰ֫ۤ;->ܺ()Ljava/lang/String;
 
-    .line 0
-    :pswitch_0
-    check-cast p1, Ljava/util/function/Supplier;
+    move-result-object v2
 
-    invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+    invoke-static {v2, v1}, Ll/᩸۬᩹;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    check-cast p1, Ll/ۤ᩵ۤ;
+    invoke-virtual {v0, v1}, Ll/ܰ֫ۤ;->ۙ(Ljava/lang/String;)V
 
-    return-object p1
+    .line 261
+    invoke-virtual {p1, v0}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
 
-    :pswitch_1
-    check-cast p1, Ll/ᩴ۠۟;
-
-    invoke-static {p1}, Ll/᩹ۧۤ;->ܰ(Ll/ᩴ۠۟;)Ll/ۚ֫ᩴ;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

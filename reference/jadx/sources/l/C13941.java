@@ -1,70 +1,41 @@
 package l;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+/* JADX INFO: renamed from: l.۬ܶۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 6ASE */
+/* JADX INFO: loaded from: classes4.dex */
+public class C13941 extends AbstractC5959 {
 
-/* JADX INFO: renamed from: l.ܰܽ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: NAWS */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13941 implements Iterator {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C14907 f44195;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f45886 = -1;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final Iterator f45887;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11824 f45888;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Object f45889;
-
-    @Override // java.util.Iterator
-    public final void remove() {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ۙ */
+    public int mo2568() {
+        return 7;
     }
 
-    public C13941(C11824 c11824) {
-        this.f45888 = c11824;
-        this.f45887 = new C19585((C9002) c11824.f39715);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private final void m33774() {
-        Object next;
-        do {
-            Iterator it = this.f45887;
-            if (it.hasNext()) {
-                next = it.next();
-            } else {
-                this.f45886 = 0;
-                return;
-            }
-        } while (((Boolean) ((C18879) this.f45888.f39714).invoke(next)).booleanValue());
-        this.f45889 = next;
-        this.f45886 = 1;
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (this.f45886 == -1) {
-            m33774();
+    public C13941(AbstractC17715 abstractC17715, C14907 c14907) {
+        super(abstractC17715);
+        if (c14907 == null) {
+            c14907 = new C14907(new int[0]);
+            c14907.m35858(0);
         }
-        if (this.f45886 == 0) {
-            throw new NoSuchElementException();
-        }
-        Object obj = this.f45889;
-        this.f45889 = null;
-        this.f45886 = -1;
-        return obj;
+        this.f44195 = c14907;
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        if (this.f45886 == -1) {
-            m33774();
-        }
-        return this.f45886 == 1;
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ۤ */
+    public final C14907 mo17341() {
+        return this.f44195;
+    }
+
+    @Override // l.AbstractC5959
+    /* JADX INFO: renamed from: ۙ */
+    public boolean mo2569(int i, int i2) {
+        return this.f44195.m35864(i);
+    }
+
+    public String toString() {
+        return this.f44195.toString();
     }
 }

@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.util.Arrays;
-import l.C17910;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TimeModel implements Parcelable {
@@ -89,7 +89,7 @@ public class TimeModel implements Parcelable {
     }
 
     public int getHourContentDescriptionResId() {
-        return this.format == 1 ? C17910.f56746 : C17910.f56883;
+        return this.format == 1 ? C24323.f78884 : C24323.f78834;
     }
 
     public MaxInputValidator getMinuteInputValidator() {

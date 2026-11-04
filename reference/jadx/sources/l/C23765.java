@@ -1,35 +1,31 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ܳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: T65P */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23765 extends AbstractC14593 {
+/* JADX INFO: renamed from: l.᩹᩵ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 945B */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23765 extends AbstractC22445 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1891 f76876;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final int f77001;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C23765(C1891 c1891, int i) {
-        super(c1891, i);
-        this.f76876 = c1891;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static C23765 m53046(AbstractC22664 abstractC22664) {
+        return new C23765(EnumC21172.UNINITIALIZED_THIS, abstractC22664, -1, abstractC22664.m51069());
     }
 
-    @Override // l.AbstractC14593
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C23765 m53045(int i, AbstractC22664 abstractC22664) {
+        return new C23765(EnumC21172.UNINITIALIZED_OBJECT, abstractC22664, i, abstractC22664.m51069());
+    }
+
+    public C23765(EnumC21172 enumC21172, AbstractC22664 abstractC22664, int i, C14458 c14458) {
+        super(enumC21172, abstractC22664, c14458);
+        this.f77001 = i;
+    }
+
+    @Override // l.AbstractC22664
     /* JADX INFO: renamed from: ۙ */
-    public final String mo27885() {
-        C1891 c1891 = this.f76876;
-        return c1891.f7133.m40579(c1891.f7135.mo9809(this.f47750));
-    }
-
-    @Override // l.AbstractC14593
-    /* JADX INFO: renamed from: ۨ */
-    public final long mo27886() {
-        return this.f76876.f7135.mo5858(this.f47750 + 8);
-    }
-
-    @Override // l.AbstractC14593
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo27887() {
-        return this.f76876.f7135.m42183(this.f47750 + 6);
+    public final AbstractC22664 mo4934(C14458 c14458) {
+        return new C23765(this.f72658, this.f72657, this.f77001, c14458);
     }
 }

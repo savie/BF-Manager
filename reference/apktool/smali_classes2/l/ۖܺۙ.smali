@@ -1,29 +1,26 @@
-.class public interface abstract Ll/ۖܺۙ;
+.class public final Ll/ۖܺۙ;
 .super Ljava/lang/Object;
-.source "Z754"
+.source "X32D"
 
 
-# virtual methods
-.method public abstract delete()V
-.end method
+# instance fields
+.field public final ۙ:Landroid/content/Intent;
 
-.method public abstract ۙ(J)V
-.end method
+.field public final ᩷:Ljava/util/ArrayList;
 
-.method public abstract ۙ(Ljava/util/HashMap;)V
-.end method
 
-.method public abstract ۙ(Ljava/util/HashMap;Landroid/util/SparseArray;)V
-.end method
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+    .locals 0
 
-.method public abstract ۙ(Ll/ۙܺۙ;)V
-.end method
+    .line 79
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ۙ(Ll/ۙܺۙ;Z)V
-.end method
+    .line 80
+    iput-object p1, p0, Ll/ۖܺۙ;->ۙ:Landroid/content/Intent;
 
-.method public abstract ۙ()Z
-.end method
+    .line 81
+    iput-object p2, p0, Ll/ۖܺۙ;->᩷:Ljava/util/ArrayList;
 
-.method public abstract ܰ(Ljava/util/HashMap;)V
+    return-void
 .end method

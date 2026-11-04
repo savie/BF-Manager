@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.provider.asymmetric;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509 {
 
     public class Mappings extends AsymmetricAlgorithmProvider {

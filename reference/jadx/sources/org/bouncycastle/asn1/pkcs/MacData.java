@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1.pkcs;
 
 import java.math.BigInteger;
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.DigestInfo;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MacData extends ASN1Object {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public DigestInfo digInfo;
@@ -21,7 +21,7 @@ public class MacData extends ASN1Object {
 
     public MacData(ASN1Sequence aSN1Sequence) {
         this.digInfo = DigestInfo.getInstance(aSN1Sequence.getObjectAt(0));
-        this.salt = C15489.m37078(aSN1Sequence, 1);
+        this.salt = C20551.m47118(aSN1Sequence, 1);
         this.iterationCount = aSN1Sequence.size() == 3 ? ASN1Integer.getInstance(aSN1Sequence.getObjectAt(2)).getValue() : ONE;
     }
 

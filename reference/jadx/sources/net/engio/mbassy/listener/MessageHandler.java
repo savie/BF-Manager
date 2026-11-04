@@ -5,11 +5,11 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import l.C16523;
+import l.C14442;
 import net.engio.mbassy.common.ReflectionUtils;
 import net.engio.mbassy.dispatch.el.ElFilter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageHandler {
     public final boolean acceptsSubtypes;
     public final String condition;
@@ -78,7 +78,7 @@ public class MessageHandler {
         }
 
         public static String cleanEL(String str) {
-            return (str.trim().startsWith("${") || str.trim().startsWith("#{")) ? str : C16523.m38890("${", str, l.d);
+            return (str.trim().startsWith("${") || str.trim().startsWith("#{")) ? str : C14442.m34865("${", str, l.d);
         }
     }
 

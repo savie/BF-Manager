@@ -1,17 +1,30 @@
 package l;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.ܺۖܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18UV */
+/* JADX INFO: renamed from: l.ܳ᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S776 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15649 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        List list = (List) obj;
-        List list2 = (List) obj2;
-        return AbstractC13116.m32469().mo4145((C0913) Collections.max(list, new C5147()), (C0913) Collections.max(list2, new C5147()), new C5147()).mo4143(list.size(), list2.size()).mo4145((C0913) Collections.max(list, new C22081()), (C0913) Collections.max(list2, new C22081()), new C22081()).mo4142();
+public final class C15649 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f50854;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f50855;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f50856;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f50857;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f50858;
+
+    public C15649(String str, int i, String str2, String str3, String str4) {
+        this.f50857 = i;
+        this.f50855 = str;
+        this.f50856 = str2;
+        this.f50854 = str3;
+        this.f50858 = str4;
     }
 }

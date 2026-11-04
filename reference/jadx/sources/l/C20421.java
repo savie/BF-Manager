@@ -1,34 +1,41 @@
 package l;
 
-import java.util.Iterator;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩶᩷ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O3OZ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20421 implements Iterable {
+/* JADX INFO: renamed from: l.᩵۟ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N17O */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20421 extends InputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12660 f66192;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C3267 f65423;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ CharSequence f66193;
-
-    public C20421(C12660 c12660, CharSequence charSequence) {
-        this.f66193 = charSequence;
-        this.f66192 = c12660;
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        return C12660.m31453(this.f66192, this.f66193);
+    public C20421(C3267 c3267) {
+        this.f65423 = c3267;
     }
 
-    public final String toString() {
-        C13366 c13366M32865 = C13366.m32865(", ");
-        StringBuilder sb = new StringBuilder();
-        sb.append('[');
-        c13366M32865.m32868(sb, iterator());
-        sb.append(']');
-        return sb.toString();
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = new byte[1];
+        if (this.f65423.m10744(bArr, 0, 1) == -1) {
+            return -1;
+        }
+        return bArr[0] & 255;
+    }
+
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) {
+        return this.f65423.m10744(bArr, i, i2);
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        this.f65423.m10745();
     }
 }

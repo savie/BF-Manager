@@ -5,7 +5,7 @@ import java.io.InputStream;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class X448PublicKeyParameters extends AsymmetricKeyParameter {
     public static final int KEY_SIZE = 56;
     public final byte[] data;

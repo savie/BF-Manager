@@ -1,81 +1,44 @@
 package l;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۜܰᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 69H1 */
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: renamed from: l.ۜ֫֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6MT */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C6808 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public ReentrantReadWriteLock f22959 = new ReentrantReadWriteLock();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C6808 f22671 = new C6808(268435456, 268435456);
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public HashMap f22958 = new HashMap();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public HashMap f22957 = new HashMap();
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C6808 f22672 = new C6808(1000000000, 536870912);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18803 m18403(Long l2) {
-        ReentrantReadWriteLock reentrantReadWriteLock = this.f22959;
-        reentrantReadWriteLock.readLock().lock();
-        try {
-            return (C18803) this.f22958.get(l2);
-        } finally {
-            reentrantReadWriteLock.readLock().unlock();
-        }
-    }
+    public final long f22673;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C18803 m18406(Long l2) {
-        ReentrantReadWriteLock reentrantReadWriteLock = this.f22959;
-        reentrantReadWriteLock.writeLock().lock();
-        try {
-            C18803 c18803 = (C18803) this.f22958.remove(l2);
-            if (c18803 == null) {
-                throw new C13865("Unable to find outstanding request for messageId " + l2);
-            }
-            this.f22957.remove(c18803.m43370());
-            reentrantReadWriteLock.writeLock().unlock();
-            return c18803;
-        } catch (Throwable th) {
-            reentrantReadWriteLock.writeLock().unlock();
-            throw th;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f22674;
+
+    public C6808(long j, long j2) {
+        if (j <= 0 || j2 <= 0 || j > 2305843009213693951L) {
+            throw new IllegalArgumentException("Invalid image decode limits");
         }
+        this.f22674 = j;
+        this.f22673 = j2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18404(C18803 c18803) {
-        ReentrantReadWriteLock reentrantReadWriteLock = this.f22959;
-        reentrantReadWriteLock.writeLock().lock();
-        try {
-            this.f22958.put(Long.valueOf(c18803.m43369()), c18803);
-            this.f22957.put(c18803.m43370(), c18803);
-        } finally {
-            reentrantReadWriteLock.writeLock().unlock();
-        }
+    public final C6808 m18988(String str, boolean z) {
+        return (this == f22671 && ("image/x-tga".equals(str) || (z && ("image/jpeg".equals(str) || "image/png".equals(str))))) ? f22672 : this;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18405(C21317 c21317) {
-        HashMap map = this.f22958;
-        ReentrantReadWriteLock reentrantReadWriteLock = this.f22959;
-        reentrantReadWriteLock.writeLock().lock();
-        try {
-            Iterator it = new HashSet(map.keySet()).iterator();
-            while (it.hasNext()) {
-                C18803 c18803 = (C18803) map.remove((Long) it.next());
-                this.f22957.remove(c18803.m43370());
-                c18803.m43368().m14181(c21317);
-            }
-            reentrantReadWriteLock.writeLock().unlock();
-        } catch (Throwable th) {
-            reentrantReadWriteLock.writeLock().unlock();
-            throw th;
+    public final void m18989(int i, int i2) throws IOException {
+        if (i <= 0 || i2 <= 0) {
+            throw new IOException("Invalid image dimensions");
+        }
+        if (i > 1000000 || i2 > 1000000 || ((long) i) * ((long) i2) > this.f22674) {
+            throw new C9789("Image dimensions exceed safe decode limits");
         }
     }
 }

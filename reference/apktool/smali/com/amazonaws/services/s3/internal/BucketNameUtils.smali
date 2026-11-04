@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final ֡:I = 0x3f
+.field public static final ֡:I = 0x3
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
+.field public static final synthetic ܰ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
 
-.field public static final ܽ:I = 0x3
+.field public static final ܿ:I = 0x3f
 
 .field public static final ᩶:Ljava/util/regex/Pattern;
 
@@ -22,7 +22,7 @@
     new-array v0, v0, [Lcom/amazonaws/services/s3/internal/BucketNameUtils;
 
     .line 25
-    sput-object v0, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->ܺ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->ܰ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
 
     const-string v0, "(\\d+\\.){3}\\d+"
 
@@ -64,7 +64,7 @@
     .locals 1
 
     .line 25
-    sget-object v0, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->ܺ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
+    sget-object v0, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->ܰ:[Lcom/amazonaws/services/s3/internal/BucketNameUtils;
 
     invoke-virtual {v0}, [Lcom/amazonaws/services/s3/internal/BucketNameUtils;->clone()Ljava/lang/Object;
 
@@ -79,7 +79,7 @@
     .locals 0
 
     .line 73
-    invoke-static {p0}, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->ܰ(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/amazonaws/services/s3/internal/BucketNameUtils;->᩷(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -394,7 +394,7 @@
     throw p0
 .end method
 
-.method public static ۨ(Ljava/lang/String;)V
+.method public static ۤ(Ljava/lang/String;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -405,7 +405,7 @@
     return-void
 .end method
 
-.method public static ܰ(Ljava/lang/String;)Z
+.method public static ᩷(Ljava/lang/String;)Z
     .locals 1
 
     const/4 v0, 0x0

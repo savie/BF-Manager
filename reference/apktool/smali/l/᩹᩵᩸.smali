@@ -1,42 +1,23 @@
-.class public interface abstract Ll/᩹᩵᩸;
+.class public final synthetic Ll/᩹᩵᩸;
 .super Ljava/lang/Object;
-.source "M9WK"
+.source "G6MK"
 
 # interfaces
-.implements Ll/ۜ᩵᩸;
-.implements Ll/ᩳ᩵᩸;
+.implements Ljava/util/concurrent/Executor;
 
 
 # virtual methods
-.method public abstract addRepeatedField(Ll/᩵᩸᩸;Ljava/lang/Object;)Ll/᩹᩵᩸;
-.end method
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-.method public abstract build()Ll/֨᩵᩸;
-.end method
+    .line 54
+    new-instance v0, Ljava/lang/Thread;
 
-.method public abstract buildPartial()Ll/֨᩵᩸;
-.end method
+    const-string v1, "SessionRecoveryDiagnostics"
 
-.method public abstract clearField(Ll/᩵᩸᩸;)Ll/᩹᩵᩸;
-.end method
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-.method public abstract getDescriptorForType()Ll/ۖ᩸᩸;
-.end method
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-.method public abstract getFieldBuilder(Ll/᩵᩸᩸;)Ll/᩹᩵᩸;
-.end method
-
-.method public abstract mergeFrom(Ll/֨᩵᩸;)Ll/᩹᩵᩸;
-.end method
-
-.method public abstract mergeFrom(Ll/᩻۬᩸;Ll/ۖᩳ᩸;)Ll/᩹᩵᩸;
-.end method
-
-.method public abstract newBuilderForField(Ll/᩵᩸᩸;)Ll/᩹᩵᩸;
-.end method
-
-.method public abstract setField(Ll/᩵᩸᩸;Ljava/lang/Object;)Ll/᩹᩵᩸;
-.end method
-
-.method public abstract setUnknownFields(Ll/ۜۤ᩸;)Ll/᩹᩵᩸;
+    return-void
 .end method

@@ -1,42 +1,53 @@
 package l;
 
-import java.io.Serializable;
+import java.util.AbstractSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.۟֡᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBK3 */
+/* JADX INFO: renamed from: l.ۜۨܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1AZL */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7126 extends AbstractC15594 implements Serializable {
-    public static final long serialVersionUID = 6150783262733311327L;
+public final class C7126 extends AbstractSet {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public double f23829;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C21869 f23485;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public double f23830;
-
-    public C7126(double d, double d2) {
-        this.f23829 = d;
-        this.f23830 = d2;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean remove(Object obj) {
+        C21869 c21869 = this.f23485;
+        C4715 c4715M49563 = null;
+        if (obj != null) {
+            try {
+                c4715M49563 = c21869.m49563(obj, false);
+            } catch (ClassCastException unused) {
+            }
+        }
+        if (c4715M49563 != null) {
+            c21869.m49564(c4715M49563, true);
+        }
+        return c4715M49563 != null;
     }
 
-    @Override // l.AbstractC15594
-    public final double getX() {
-        return this.f23829;
+    public C7126(C21869 c21869) {
+        this.f23485 = c21869;
     }
 
-    @Override // l.AbstractC15594
-    public final double getY() {
-        return this.f23830;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f23485.f69702;
     }
 
-    @Override // l.AbstractC15594
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19028(double d, double d2) {
-        this.f23829 = d;
-        this.f23830 = d2;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return new C8617(this.f23485);
     }
 
-    public final String toString() {
-        return "Point2D.Double[" + this.f23829 + ", " + this.f23830 + "]";
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.f23485.containsKey(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f23485.clear();
     }
 }

@@ -43,7 +43,7 @@
     return p1
 .end method
 
-.method public onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)V
+.method public onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 1
 
     .line 1446
@@ -89,7 +89,7 @@
 
     float-to-int p3, p3
 
-    invoke-virtual {p1, p2, v0, p3}, Ll/ۖ᩶;->isPointInChildBounds(Landroid/view/View;II)Z
+    invoke-virtual {p1, p2, v0, p3}, Ll/᩻᩶;->isPointInChildBounds(Landroid/view/View;II)Z
 
     move-result p1
 

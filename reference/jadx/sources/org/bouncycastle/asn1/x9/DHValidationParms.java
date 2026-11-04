@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x9;
 
-import l.C8550;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHValidationParms extends ASN1Object {
     public ASN1Integer pgenCounter;
     public ASN1BitString seed;
@@ -27,7 +27,7 @@ public class DHValidationParms extends ASN1Object {
 
     public DHValidationParms(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 2) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("Bad sequence size: ")));
         }
         this.seed = ASN1BitString.getInstance(aSN1Sequence.getObjectAt(0));
         this.pgenCounter = ASN1Integer.getInstance(aSN1Sequence.getObjectAt(1));

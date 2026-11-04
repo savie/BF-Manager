@@ -1,77 +1,74 @@
 package l;
 
-import android.media.MediaDrmResetException;
-import java.util.function.BiFunction;
+import android.os.Build;
+import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.inputmethod.InputMethodManager;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-/* JADX INFO: renamed from: l.ܽ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: NJN */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16523 implements InterfaceC7359 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m38890(String str, String str2, String str3) {
-        return str + str2 + str3;
+/* JADX INFO: renamed from: l.ܺۖ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A9BS */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16523 extends C11302 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public WindowInsetsController f53490;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public View f53491;
+
+    public C16523(View view) {
+        super(view);
+        this.f53491 = view;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m38891(String str, String str2) {
-        C0303.m1848(str + str2);
+    public C16523(WindowInsetsController windowInsetsController) {
+        super(null);
+        this.f53490 = windowInsetsController;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* bridge */ /* synthetic */ boolean m38892(Object obj) {
-        return obj instanceof MediaDrmResetException;
+    @Override // l.C11302
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo28564() {
+        View view = this.f53491;
+        if (view != null && Build.VERSION.SDK_INT < 33) {
+            ((InputMethodManager) view.getContext().getSystemService("input_method")).isActive();
+        }
+        WindowInsetsController windowInsetsController = this.f53490;
+        if (windowInsetsController == null) {
+            windowInsetsController = view != null ? view.getWindowInsetsController() : null;
+        }
+        if (windowInsetsController != null) {
+            windowInsetsController.show(WindowInsets.Type.ime());
+        }
+        super.mo28564();
     }
 
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        ((InterfaceC10430) obj).getClass();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Object m38893(InterfaceC5939 interfaceC5939, Object obj, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        Object obj2 = interfaceC5939.get(obj);
-        if (obj2 == null && !interfaceC5939.containsKey(obj)) {
-            return null;
+    @Override // l.C11302
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo28563() {
+        WindowInsetsController windowInsetsController = this.f53490;
+        View view = this.f53491;
+        if (windowInsetsController == null) {
+            windowInsetsController = view != null ? view.getWindowInsetsController() : null;
         }
-        Object objApply = biFunction.apply(obj, obj2);
-        if (objApply == null) {
-            interfaceC5939.remove(obj);
-            return null;
+        if (windowInsetsController != null) {
+            final AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+            WindowInsetsController.OnControllableInsetsChangedListener onControllableInsetsChangedListener = new WindowInsetsController.OnControllableInsetsChangedListener() { // from class: l.᩻ۖ
+                @Override // android.view.WindowInsetsController.OnControllableInsetsChangedListener
+                public final void onControllableInsetsChanged(WindowInsetsController windowInsetsController2, int i) {
+                    atomicBoolean.set((i & 8) != 0);
+                }
+            };
+            windowInsetsController.addOnControllableInsetsChangedListener(onControllableInsetsChangedListener);
+            if (!atomicBoolean.get() && view != null) {
+                ((InputMethodManager) view.getContext().getSystemService("input_method")).hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+            windowInsetsController.removeOnControllableInsetsChangedListener(onControllableInsetsChangedListener);
+            windowInsetsController.hide(WindowInsets.Type.ime());
+            return;
         }
-        interfaceC5939.put(obj, objApply);
-        return objApply;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Object m38889(InterfaceC5939 interfaceC5939, Object obj, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        Object obj2 = interfaceC5939.get(obj);
-        boolean z = obj2 != null || interfaceC5939.containsKey(obj);
-        if (!z) {
-            obj2 = null;
-        }
-        Object objApply = biFunction.apply(obj, obj2);
-        if (objApply != null) {
-            interfaceC5939.put(obj, objApply);
-            return objApply;
-        }
-        if (z) {
-            interfaceC5939.remove(obj);
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Object m38888(InterfaceC5939 interfaceC5939, Object obj, Object obj2, BiFunction biFunction) {
-        C13638.requireNonNull(biFunction);
-        C13638.requireNonNull(obj2);
-        Object obj3 = interfaceC5939.get(obj);
-        if ((obj3 != null || interfaceC5939.containsKey(obj)) && (obj2 = biFunction.apply(obj3, obj2)) == null) {
-            interfaceC5939.remove(obj);
-            return null;
-        }
-        interfaceC5939.put(obj, obj2);
-        return obj2;
+        super.mo28563();
     }
 }

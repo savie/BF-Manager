@@ -1,89 +1,157 @@
-.class public abstract Ll/֫ۗܶ;
+.class public final Ll/֫ۗܶ;
 .super Ljava/lang/Object;
-.source "A7QO"
+.source "S9CL"
 
 
-# static fields
-.field public static final ۙ:Ll/֫ۗܶ;
+# instance fields
+.field public final ۙ:Ljava/lang/String;
 
-.field public static final ۨ:Ll/֫ۗܶ;
+.field public final ۤ:Ljava/lang/String;
 
-.field public static final ܰ:Ll/֫ۗܶ;
+.field public final ᩷:[C
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 91
-    new-instance v0, Ll/ܳۗܶ;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {v1}, Ll/ۨۛᩴ;->of(Ljava/lang/Object;)Ll/ۨۛᩴ;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/ܳۗܶ;-><init>(Ll/ۨۛᩴ;)V
-
-    sput-object v0, Ll/֫ۗܶ;->ۨ:Ll/֫ۗܶ;
-
-    .line 96
-    new-instance v0, Ll/ܳۗܶ;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v1}, Ll/ۨۛᩴ;->of(Ljava/lang/Object;)Ll/ۨۛᩴ;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/ܳۗܶ;-><init>(Ll/ۨۛᩴ;)V
-
-    sput-object v0, Ll/֫ۗܶ;->ۙ:Ll/֫ۗܶ;
-
-    .line 102
-    new-instance v0, Ll/ܳۗܶ;
-
-    .line 103
-    invoke-static {}, Ll/ۨۛᩴ;->empty()Ll/ۨۛᩴ;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ll/ܳۗܶ;-><init>(Ll/ۨۛᩴ;)V
-
-    sput-object v0, Ll/֫ۗܶ;->ܰ:Ll/֫ۗܶ;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;[CLjava/lang/String;)V
     .locals 0
 
-    .line 86
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
+    iput-object p1, p0, Ll/֫ۗܶ;->ۤ:Ljava/lang/String;
+
+    .line 27
+    array-length p1, p2
+
+    invoke-static {p2, p1}, Ljava/util/Arrays;->copyOf([CI)[C
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/֫ۗܶ;->᩷:[C
+
+    .line 28
+    iput-object p3, p0, Ll/֫ۗܶ;->ۙ:Ljava/lang/String;
+
     return-void
-.end method
-
-.method public static ۙ(Ll/ۗۗܶ;)Ll/֫ۗܶ;
-    .locals 1
-
-    .line 119
-    new-instance v0, Ll/᩻ۗܶ;
-
-    invoke-static {p0}, Ll/᩹ܿܶ;->of(Ljava/lang/Object;)Ll/᩹ܿܶ;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ll/᩻ۗܶ;-><init>(Ljava/lang/Iterable;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract ۙ(Ll/֫ۗܶ;)Ll/֫ۗܶ;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 61
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AuthenticationContext["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll/֫ۗܶ;->ۤ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll/֫ۗܶ;->ۙ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract ۙ()Ll/ۨۛᩴ;
+.method public final ۙ()Ljava/lang/String;
+    .locals 1
+
+    .line 48
+    iget-object v0, p0, Ll/֫ۗܶ;->ۙ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
+
+    .line 40
+    iget-object v0, p0, Ll/֫ۗܶ;->ۤ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩴ()Z
+    .locals 2
+
+    .line 56
+    iget-object v0, p0, Ll/֫ۗܶ;->ۤ:Ljava/lang/String;
+
+    const-string v1, "Guest"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ll/֫ۗܶ;->᩷:[C
+
+    array-length v0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩷()[C
+    .locals 1
+
+    .line 44
+    iget-object v0, p0, Ll/֫ۗܶ;->᩷:[C
+
+    return-object v0
+.end method
+
+.method public final ᩸()Z
+    .locals 1
+
+    .line 52
+    iget-object v0, p0, Ll/֫ۗܶ;->ۤ:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ll/֫ۗܶ;->᩷:[C
+
+    array-length v0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,45 +1,76 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6428 */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.concurrent.CountDownLatch;
+
+/* JADX INFO: renamed from: l.᩵᩷۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D4TJ */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20832 extends C3897 {
+public final class C20832 extends AbstractC6662 {
+
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f66705;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public boolean f66706;
+
+    @Override // l.AbstractC6662
+    /* JADX INFO: renamed from: ۙ */
+    public final C20832 mo18607() {
+        return this;
+    }
+
+    public C20832() {
+        super(true);
+        this.f66705 = new ArrayList();
+        this.f66706 = false;
+    }
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m47638() {
+        return this.f66705;
+    }
 
     /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public boolean f67696;
-
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public AbstractC9462 f67697;
-
-    @Override // l.C3897, l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
-    }
-
-    @Override // l.C3897, l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3959(C22489 c22489) {
-        if (this.f67696) {
-            return;
-        }
-        this.f67696 = true;
-        try {
-            super.mo3959(c22489);
-        } finally {
-            this.f67696 = false;
+    public final void m47637() {
+        C8172 c8172 = C4424.f15867;
+        ArrayList<AbstractC6662> arrayList = this.f66705;
+        Collections.sort(arrayList, c8172);
+        for (AbstractC6662 abstractC6662 : arrayList) {
+            if (abstractC6662.m18625()) {
+                abstractC6662.mo18607().m47637();
+            }
         }
     }
 
-    @Override // l.C3897, l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3928(C6656 c6656) {
-        this.f67697.mo24224(c6656.f22475);
-        super.mo3928(c6656);
+    @Override // l.AbstractC6662
+    /* JADX INFO: renamed from: ᩷ */
+    public final C12627 mo18632() {
+        throw new UnsupportedOperationException();
     }
 
-    @Override // l.C3897
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo11351(C6263 c6263) {
-        return this.f67697.mo9331(c6263) && c6263.f77448.f77452 == EnumC10477.f35879;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final boolean m47636() {
+        if (this.f66706) {
+            return true;
+        }
+        for (AbstractC6662 abstractC6662 : this.f66705) {
+            if (abstractC6662.m18625() && abstractC6662.mo18607().m47636()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC6662
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo18610(CountDownLatch countDownLatch) {
+        this.f22209 = countDownLatch;
+        Iterator it = this.f66705.iterator();
+        while (it.hasNext()) {
+            ((AbstractC6662) it.next()).mo18610(countDownLatch);
+        }
     }
 }

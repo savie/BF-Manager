@@ -1,45 +1,71 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6428 */
+import android.view.ViewGroup;
+import bin.mt.plus.R;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.֨ۡ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5ZM */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1075 extends C18009 {
+public final class C1075 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7403 f4927;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C6056 f3855 = new C6056();
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7403 f4928;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static ThreadLocal f3856 = new ThreadLocal();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7403 f4929;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static ArrayList f3857 = new ArrayList();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3897 f4930;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7403 f4931;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1075(C3897 c3897, C21473 c21473, C7403 c7403, C7403 c7404, C7403 c7405, C7403 c7406) {
-        super(c21473);
-        this.f4930 = c3897;
-        this.f4927 = c7403;
-        this.f4929 = c7404;
-        this.f4931 = c7405;
-        this.f4928 = c7406;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C14307 m4035() {
+        C14307 c14307;
+        ThreadLocal threadLocal = f3856;
+        WeakReference weakReference = (WeakReference) threadLocal.get();
+        if (weakReference != null && (c14307 = (C14307) weakReference.get()) != null) {
+            return c14307;
+        }
+        C14307 c14308 = new C14307();
+        threadLocal.set(new WeakReference(c14308));
+        return c14308;
     }
 
-    @Override // l.C18009
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo4051() {
-        C3897 c3897 = this.f4930;
-        if (!c3897.f14570.m19747()) {
-            c3897.m11343(true);
+    public static void m4036(ViewGroup viewGroup, AbstractC0329 abstractC0329) {
+        ArrayList arrayList = f3857;
+        if (arrayList.contains(viewGroup) || !viewGroup.isLaidOut()) {
+            return;
         }
-        c3897.f14567.m19739(this.f4927);
-        c3897.f14582.m19739(this.f4929);
-        c3897.f14572.m19739(this.f4931);
-        c3897.f14579.m19739(this.f4928);
+        arrayList.add(viewGroup);
+        if (abstractC0329 == null) {
+            abstractC0329 = f3855;
+        }
+        AbstractC0329 abstractC0329Clone = abstractC0329.clone();
+        ArrayList arrayList2 = (ArrayList) m4035().get(viewGroup);
+        if (arrayList2 != null && arrayList2.size() > 0) {
+            Iterator it = arrayList2.iterator();
+            while (it.hasNext()) {
+                ((AbstractC0329) it.next()).pause(viewGroup);
+            }
+        }
+        if (abstractC0329Clone != null) {
+            abstractC0329Clone.captureValues(viewGroup, true);
+        }
+        if (((C5550) viewGroup.getTag(R.id.MT_Protector)) == null) {
+            viewGroup.setTag(R.id.MT_Protector, null);
+            if (abstractC0329Clone != null) {
+                ViewTreeObserverOnPreDrawListenerC10023 viewTreeObserverOnPreDrawListenerC10023 = new ViewTreeObserverOnPreDrawListenerC10023();
+                viewTreeObserverOnPreDrawListenerC10023.f32148 = abstractC0329Clone;
+                viewTreeObserverOnPreDrawListenerC10023.f32147 = viewGroup;
+                viewGroup.addOnAttachStateChangeListener(viewTreeObserverOnPreDrawListenerC10023);
+                viewGroup.getViewTreeObserver().addOnPreDrawListener(viewTreeObserverOnPreDrawListenerC10023);
+                return;
+            }
+            return;
+        }
+        throw null;
     }
 }

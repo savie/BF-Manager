@@ -1,50 +1,84 @@
-.class public final synthetic Ll/۠᩻ᩴ;
+.class public final Ll/۠᩻ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "970E"
 
 
-# direct methods
-.method public static $default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 2
+# instance fields
+.field public ۙ:I
 
-    .line 68
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
-    new-instance v0, Ll/ۧ᩻ᩴ;
+# virtual methods
+.method public final ۙ(I)V
+    .locals 1
 
-    const/4 v1, 0x0
+    if-ltz p1, :cond_0
 
-    invoke-direct {v0, p0, p1, v1}, Ll/ۧ᩻ᩴ;-><init>(Ljava/util/function/Predicate;Ljava/util/function/Predicate;I)V
+    .line 311
+    iget v0, p0, Ll/۠᩻ᩴ;->ۙ:I
 
-    return-object v0
+    if-gt p1, v0, :cond_0
+
+    sub-int/2addr v0, p1
+
+    .line 314
+    iput v0, p0, Ll/۠᩻ᩴ;->ۙ:I
+
+    return-void
+
+    .line 312
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Invalid proof budget release"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static $default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public final ۙ()Z
     .locals 2
 
-    .line 80
-    new-instance v0, Ll/ۚۤᩴ;
+    .line 301
+    iget v0, p0, Ll/۠᩻ᩴ;->ۙ:I
 
-    const/16 v1, 0x9
+    const/16 v1, 0x400
 
-    invoke-direct {v0, v1, p0}, Ll/ۚۤᩴ;-><init>(ILjava/lang/Object;)V
+    if-ge v0, v1, :cond_0
 
-    return-object v0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public static $default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public final ᩷()Z
     .locals 2
 
-    .line 100
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 305
+    invoke-virtual {p0}, Ll/۠᩻ᩴ;->ۙ()Z
 
-    .line 101
-    new-instance v0, Ll/ۧ᩻ᩴ;
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 306
+    :cond_0
+    iget v0, p0, Ll/۠᩻ᩴ;->ۙ:I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, p1, v1}, Ll/ۧ᩻ᩴ;-><init>(Ljava/util/function/Predicate;Ljava/util/function/Predicate;I)V
+    add-int/2addr v0, v1
 
-    return-object v0
+    iput v0, p0, Ll/۠᩻ᩴ;->ۙ:I
+
+    return v1
 .end method

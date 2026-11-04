@@ -1,67 +1,63 @@
 package l;
 
-import java.util.List;
-import java.util.Vector;
+import com.alipay.sdk.app.OpenAuthTask;
+import java.io.IOException;
+import java.lang.ref.SoftReference;
 
-/* JADX INFO: renamed from: l.ܶᩴ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: AAGU */
+/* JADX INFO: renamed from: l.ܳܳۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 9IQO */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15407 implements InterfaceC15241 {
+public final class C15407 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18934 f50226;
+    public static SoftReference f50221;
 
-    public C15407(C18934 c18934) {
-        this.f50226 = c18934;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static SoftReference f50222;
 
-    @Override // l.InterfaceC15241
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo25907(Object obj) {
-        return ((C14199) obj).m34299();
-    }
-
-    @Override // l.InterfaceC15241
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo25908(Object obj) {
-        return ((C14199) obj).m34298();
-    }
-
-    @Override // l.InterfaceC15241
-    /* JADX INFO: renamed from: ۙ */
-    public final List mo25906(String str) {
-        String strM28608 = AbstractC11462.m28608(str);
-        C18934 c18934 = this.f50226;
-        C4670 c4670M43614 = C18934.m43614(c18934);
-        try {
-            Vector<C14199> vectorM12926 = c4670M43614.m12926(strM28608);
-            if (c18934.f61254 == null && vectorM12926.size() > 0) {
-                C18934.m43613(c18934, c4670M43614, vectorM12926, strM28608);
-            }
-            for (C14199 c14199 : vectorM12926) {
-                if (c14199.m34293().m13758()) {
-                    String strM12932 = c4670M43614.m12932(C6730.m18162(strM28608, c14199.m34298()));
-                    c14199.m34294(strM12932);
-                    if (!strM12932.startsWith("/")) {
-                        strM12932 = C6730.m18162(strM28608, strM12932);
-                    }
-                    try {
-                        c14199.m34295(c4670M43614.m12938(strM12932));
-                    } catch (C12019 e) {
-                        int i = e.f40261;
-                        if (i == 2) {
-                            continue;
-                        } else if (i != 10) {
-                            throw e;
-                        }
-                    }
-                }
-            }
-            C12563.m31270(c4670M43614);
-            return vectorM12926;
-        } catch (Throwable th) {
-            C12563.m31270(c4670M43614);
-            throw th;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static synchronized C24296 m36884() {
+        C24296 c24296;
+        SoftReference softReference = f50221;
+        if (softReference != null && (c24296 = (C24296) softReference.get()) != null) {
+            return c24296;
         }
+        try {
+            C24296 c24297 = new C24296(C12149.m30355("/assets/1"));
+            f50221 = new SoftReference(c24297);
+            return c24297;
+        } catch (IOException e) {
+            throw new Error(e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static synchronized C7075 m36886() {
+        C7075 c7075;
+        SoftReference softReference = f50222;
+        if (softReference != null && (c7075 = (C7075) softReference.get()) != null) {
+            return c7075;
+        }
+        C7075 c7076 = new C7075(m36884());
+        f50222 = new SoftReference(c7076);
+        return c7076;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C4245 m36883(C18415 c18415, CharSequence charSequence) {
+        C4245 c4245Matcher = c18415.matcher(charSequence);
+        c4245Matcher.m13569setTimeoutMillis(OpenAuthTask.Duplex);
+        c4245Matcher.m13565((c18415.flags() & 16) == 0);
+        return c4245Matcher;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m36885(String str) {
+        return str.equals("POST") || str.equals("PATCH") || str.equals("PUT") || str.equals("DELETE") || str.equals("MOVE");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m36887(String str) {
+        return (str.equals("GET") || str.equals("HEAD")) ? false : true;
     }
 }

@@ -1,41 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰᩳۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J57T */
+import android.os.IBinder;
+
+/* JADX INFO: renamed from: l.۬ܽۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6AW */
 /* JADX INFO: loaded from: classes4.dex */
-public class RunnableC13980 extends AbstractRunnableC16096 implements Runnable {
+public final class RunnableC13980 implements Runnable {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f45972;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10953 f44326;
 
-    public RunnableC13980(C0572 c0572, String str) {
-        super(c0572);
-        this.f45972 = str;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19904 f44327;
+
+    public RunnableC13980(C10953 c10953, C19904 c19904) {
+        this.f44326 = c10953;
+        this.f44327 = c19904;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        String strM38120 = AbstractRunnableC16096.m38120(this.f45972);
-        C0572 c0572 = this.f52046;
-        String strM2696 = c0572.m2696();
-        if (strM2696 == null) {
-            c0572.m2708("503 Must send USER first\r\n");
-            return;
-        }
-        if (strM2696.equals("anonymous") && C21034.m47433()) {
-            c0572.m2708("230 Guest login ok, read only access.\r\n");
-            return;
-        }
-        if (C21034.m47434(strM2696, strM38120)) {
-            c0572.m2708("230 Access granted\r\n");
-            c0572.m2702(true);
-        } else {
-            try {
-                Thread.sleep(1000L);
-            } catch (InterruptedException unused) {
-            }
-            c0572.m2708("530 Login incorrect.\r\n");
-            c0572.m2702(false);
+        IBinder binder = this.f44327.f64055.getBinder();
+        C23678 c23678 = (C23678) this.f44326.f34619.f42128.remove(binder);
+        if (c23678 != null) {
+            binder.unlinkToDeath(c23678, 0);
         }
     }
 }

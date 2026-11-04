@@ -1,43 +1,64 @@
-.class public final synthetic Ll/᩹ܺۨ;
+.class public final Ll/᩹ܺۨ;
 .super Ljava/lang/Object;
-.source "G1PO"
+.source "0AS6"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/ۜܺۨ;
+
+
+# static fields
+.field public static final ۙ:Ll/᩹ܺۨ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 24
+    new-instance v0, Ll/᩹ܺۨ;
+
+    .line 53
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 24
+    sput-object v0, Ll/᩹ܺۨ;->ۙ:Ll/᩹ܺۨ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final ۙ(Ll/ܿ᩹ۨ;ILjava/lang/String;IIIII)Ll/۠ܺۨ;
+    .locals 7
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 70
+    new-instance v6, Ll/ܶܺۨ;
 
-    move-result-object p1
+    move-object v0, v6
 
-    return-object p1
-.end method
+    move-object v1, p1
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move v2, p2
 
-    .line 0
-    check-cast p1, Ljava/lang/String;
+    move v3, p4
 
-    new-instance v0, Ll/ۨܺۨ;
+    move v4, p5
 
-    invoke-direct {v0, p1}, Ll/ۨܺۨ;-><init>(Ljava/lang/String;)V
+    move v5, p6
 
-    return-object v0
-.end method
+    invoke-direct/range {v0 .. v5}, Ll/ܶܺۨ;-><init>(Ll/ܿ᩹ۨ;IIII)V
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+    .line 157
+    iput p7, v6, Ll/ܶܺۨ;->֡:I
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 203
+    iput p8, v6, Ll/ܶܺۨ;->᩶:I
 
-    move-result-object p1
+    if-eqz p3, :cond_0
 
-    return-object p1
+    .line 188
+    iput-object p3, v6, Ll/ܶܺۨ;->֨:Ljava/lang/String;
+
+    :cond_0
+    return-object v6
 .end method

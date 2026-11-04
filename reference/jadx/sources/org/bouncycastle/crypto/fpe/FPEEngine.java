@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.crypto.params.FPEParameters;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class FPEEngine {
     public final BlockCipher baseCipher;
     public boolean forEncryption;

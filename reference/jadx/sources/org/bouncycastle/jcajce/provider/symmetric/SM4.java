@@ -5,9 +5,9 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.spec.IvParameterSpec;
-import l.C15489;
-import l.C22697;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -24,7 +24,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SM4 {
 
     public class AlgParamGen extends BaseAlgorithmParameterGenerator {
@@ -50,7 +50,6 @@ public final class SM4 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -58,14 +57,12 @@ public final class SM4 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CMAC extends BaseMac {
         public CMAC() {
             super(new CMac(new SM4Engine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.SM4.ECB.1
@@ -77,7 +74,6 @@ public final class SM4 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GMAC extends BaseMac {
         public GMAC() {
             super(new GMac(GCMBlockCipher.newInstance(new SM4Engine())));
@@ -90,7 +86,6 @@ public final class SM4 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = SM4.class.getName();
 
@@ -98,13 +93,12 @@ public final class SM4 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addCMacAlgorithm(configurableProvider, "SM4", C22697.m50267(C9023.m23357(str, "$KeyGen", "KeyGenerator.SM4", C9023.m23357(str, "$ECB", "Cipher.SM4", C9023.m23357(str, "$AlgParamGen", "AlgorithmParameterGenerator.SM4", C9023.m23357(str, "$AlgParams", "AlgorithmParameters.SM4", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$CMAC"), C15489.m37076(str, "$KeyGen"));
-            addGMacAlgorithm(configurableProvider, "SM4", C15489.m37076(str, "$GMAC"), C15489.m37076(str, "$KeyGen"));
-            addPoly1305Algorithm(configurableProvider, "SM4", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            addCMacAlgorithm(configurableProvider, "SM4", C8947.m23910(C18063.m42089(str, "$KeyGen", "KeyGenerator.SM4", C18063.m42089(str, "$ECB", "Cipher.SM4", C18063.m42089(str, "$AlgParamGen", "AlgorithmParameterGenerator.SM4", C18063.m42089(str, "$AlgParams", "AlgorithmParameters.SM4", sb, configurableProvider), configurableProvider), configurableProvider), configurableProvider), str, "$CMAC"), C14483.m34972(str, "$KeyGen"));
+            addGMacAlgorithm(configurableProvider, "SM4", C14483.m34972(str, "$GMAC"), C14483.m34972(str, "$KeyGen"));
+            addPoly1305Algorithm(configurableProvider, "SM4", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Poly1305 extends BaseMac {
         public Poly1305() {
             super(new org.bouncycastle.crypto.macs.Poly1305(new SM4Engine()));

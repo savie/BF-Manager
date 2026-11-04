@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.agreement.ecjpake;
 
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECJPAKERound1Payload {
     public final ECPoint gx1;
     public final ECPoint gx2;

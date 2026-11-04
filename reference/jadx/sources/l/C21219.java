@@ -1,195 +1,115 @@
 package l;
 
-import java.io.IOException;
-import java.util.UUID;
+/* JADX INFO: renamed from: l.᩶ۢۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B6CK */
+/* JADX INFO: loaded from: classes5.dex */
+public class C21219 extends AbstractC15251 {
 
-/* JADX INFO: renamed from: l.᩸֡ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 46SG */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21219 implements AutoCloseable {
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final EnumC0336 f67722;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f69124;
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final C21965 f67723;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C21571 f69125;
+    public C21219(C21965 c21965, InterfaceC7377 interfaceC7377, EnumC0336 enumC0336, boolean z) {
+        this(c21965, interfaceC7377, enumC0336, enumC0336 != EnumC0336.STATIC, z);
+    }
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final UUID f69126;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f69127;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C10428 f69128;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3800 f69129;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final C3350 f69130;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f69131;
-
-    @Override // java.lang.AutoCloseable
-    public final synchronized void close() {
-        if (this.f69124) {
-            return;
+    public C21219(C21965 c21965, InterfaceC7377 interfaceC7377, EnumC0336 enumC0336, boolean z, boolean z2) {
+        super(EnumC24203.INVOKE, c21965.m49705() + (z ? 1 : 0));
+        this.f67723 = c21965;
+        this.f67722 = enumC0336;
+        int iMo20252 = z2 ? interfaceC7377.mo20252(0) : 0;
+        if (z) {
+            int iMo20253 = z2 ? iMo20252 : interfaceC7377.mo20252(iMo20252);
+            AbstractC1566 type = c21965.m49700().getType();
+            int i = AbstractC16481.f53441;
+            mo44014((AbstractC16481) new C6041(iMo20253, type));
+            iMo20252++;
         }
-        if (this.f69131 || this.f69127) {
-            throw new IllegalStateException("Cannot release migration ownership during use");
+        for (AbstractC1566 abstractC1566 : c21965.m49702()) {
+            int iMo20254 = z2 ? iMo20252 : interfaceC7377.mo20252(iMo20252);
+            int i2 = AbstractC16481.f53441;
+            mo44014((AbstractC16481) new C6041(iMo20254, abstractC1566));
+            iMo20252 += abstractC1566.m5568();
         }
-        try {
-            this.f69130.close();
-            this.f69124 = true;
-            C21571 c21571 = this.f69125;
-            if (c21571 != null) {
-                c21571.close();
-                this.f69125 = null;
+        interfaceC7377.getClass();
+    }
+
+    public C21219(C21965 c21965, EnumC0336 enumC0336, int i) {
+        super(EnumC24203.INVOKE, i);
+        this.f67723 = c21965;
+        this.f67722 = enumC0336;
+    }
+
+    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC0336 m48374() {
+        return this.f67722;
+    }
+
+    @Override // l.AbstractC15251
+    /* JADX INFO: renamed from: ᩵ۙ */
+    public final C21965 mo18926() {
+        return this.f67723;
+    }
+
+    @Override // l.AbstractC15251
+    /* JADX INFO: renamed from: ᩺ۙ */
+    public AbstractC16481 mo13131() {
+        if (this.f67722 == EnumC0336.STATIC || m44039() <= 0) {
+            return null;
+        }
+        return mo44035(0);
+    }
+
+    /* JADX INFO: renamed from: ᩶ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m48375() {
+        EnumC0336 enumC0336 = EnumC0336.POLYMORPHIC;
+        EnumC0336 enumC0337 = this.f67722;
+        if (enumC0337 == enumC0336) {
+            return true;
+        }
+        if (enumC0337 != EnumC0336.VIRTUAL) {
+            return false;
+        }
+        C21965 c21965 = this.f67723;
+        if (c21965.m49700().m4957().equals("java.lang.invoke.MethodHandle")) {
+            return c21965.getName().equals("invoke") || c21965.getName().equals("invokeExact");
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC15251
+    /* JADX INFO: renamed from: ۛۙ */
+    public int mo13126() {
+        return this.f67722 == EnumC0336.STATIC ? 0 : 1;
+    }
+
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ۫ۙ */
+    public C18959 mo4072() {
+        C21219 c21219 = new C21219(this.f67723, this.f67722, m44039());
+        m44033(c21219);
+        return c21219;
+    }
+
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ᩴ */
+    public boolean mo4075(C18959 c18959) {
+        if (this == c18959) {
+            return true;
+        }
+        if ((c18959 instanceof C21219) && super.mo4075(c18959)) {
+            C21219 c21219 = (C21219) c18959;
+            if (this.f67722 == c21219.f67722 && this.f67723.equals(c21219.f67723)) {
+                return true;
             }
-        } catch (Throwable th) {
-            this.f69124 = true;
-            C21571 c21572 = this.f69125;
-            if (c21572 != null) {
-                c21572.close();
-                this.f69125 = null;
-            }
-            throw th;
         }
+        return false;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized Object m47698(C0985 c0985) {
-        Object objM47697;
-        if (this.f69124) {
-            throw new IllegalStateException("Migration result is closed");
-        }
-        if (this.f69127 || this.f69131) {
-            throw new IllegalStateException("Migration result is already in use");
-        }
-        this.f69127 = true;
-        try {
-            objM47697 = m47697(c0985);
-            this.f69127 = false;
-        } catch (Throwable th) {
-            this.f69127 = false;
-            throw th;
-        }
-        return objM47697;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m47700(C20325 c20325) {
-        if (this.f69124) {
-            throw new IllegalStateException("Migration result is closed");
-        }
-        if (this.f69131 || this.f69127) {
-            throw new IllegalStateException("Migration result is already in use");
-        }
-        this.f69131 = true;
-        try {
-            m47697(null);
-            c20325.m45873();
-            this.f69131 = false;
-        } catch (Throwable th) {
-            this.f69131 = false;
-            throw th;
-        }
-    }
-
-    public C21219(InterfaceC3800 interfaceC3800, C3350 c3350, UUID uuid, C10428 c10428) {
-        this.f69129 = interfaceC3800;
-        this.f69130 = c3350;
-        this.f69126 = uuid;
-        this.f69128 = c10428;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC3800 m47699() {
-        return this.f69129;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final UUID m47701() {
-        return this.f69126;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m47696(C21219 c21219) throws IOException {
-        c21219.m47697(null);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private Object m47697(C0985 c0985) throws IOException {
-        InterfaceC1959 interfaceC1959 = InterfaceC1959.f7372;
-        InterfaceC3800 interfaceC3800 = this.f69129;
-        C3350 c3350 = this.f69130;
-        C9702 c9702M9978 = c3350.m9978();
-        UUID uuid = c9702M9978.f32686;
-        UUID uuid2 = this.f69126;
-        if (!uuid.equals(uuid2)) {
-            throw new IOException("Migration recovery identity does not match");
-        }
-        InterfaceC3800 interfaceC3800M9983 = c3350.m9983(c9702M9978);
-        C10428 c10428 = this.f69128;
-        C16072 c16072M38075 = C16072.m38075(interfaceC3800M9983, c10428);
-        try {
-            try {
-                C6754 c6754M50850 = new C22983(c16072M38075).m50850(C3931.f14649);
-                try {
-                    C3350.m9967(c9702M9978, c16072M38075, c6754M50850.f22785);
-                    if (c6754M50850.f22784 != 0 || c6754M50850.f22778 != null || c6754M50850.f22776 != null) {
-                        throw new IOException("Migration recovery requires explicit repair before cleanup");
-                    }
-                    C5697 c5697M15715 = C5697.m15715(c6754M50850.m18264());
-                    if (!c5697M15715.f19434.equals(uuid2)) {
-                        throw new IOException("Migration metadata identity does not match");
-                    }
-                    c5697M15715.m15722(interfaceC3800, c10428);
-                    c16072M38075.f51985.mo17203();
-                    interfaceC1959.mo6327(interfaceC3800);
-                    C21571 c21571 = this.f69125;
-                    this.f69125 = c6754M50850.m18263();
-                    if (c21571 != null) {
-                        c21571.close();
-                    }
-                    if (c0985 != null) {
-                        C6276 c6276 = new C6276(c6754M50850.m18262(), c6754M50850.f22775);
-                        try {
-                            Object objM3787 = c0985.m3787(c6276, c5697M15715);
-                            c6276.close();
-                            c6754M50850.close();
-                            c16072M38075.close();
-                            return objM3787;
-                        } catch (Throwable th) {
-                            try {
-                                c6276.close();
-                            } catch (Throwable th2) {
-                                th.addSuppressed(th2);
-                            }
-                            throw th;
-                        }
-                    }
-                    c6754M50850.close();
-                    c16072M38075.close();
-                    return null;
-                } catch (Throwable th3) {
-                    try {
-                        c6754M50850.close();
-                    } catch (Throwable th4) {
-                        th3.addSuppressed(th4);
-                    }
-                    throw th3;
-                }
-            } catch (Throwable th5) {
-                c16072M38075.close();
-                throw th5;
-            }
-            c16072M38075.close();
-        } catch (Throwable th6) {
-            th5.addSuppressed(th6);
-        }
-        throw th5;
+    @Override // l.C18959
+    public String toString() {
+        return m44038() + " " + this.f67722 + " call: " + this.f67723 + m44019();
     }
 }

@@ -1,80 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۜۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 7704 */
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.֨ۙ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: L58U */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0946 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C12942 f3754;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f3755;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f3756;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f3757;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f3758;
+public final class C0946 extends BaseAdapter {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f3759;
+    public final /* synthetic */ AbstractDialogInterfaceOnClickListenerC2437 f3485;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f3760;
+    @Override // android.widget.Adapter
+    public final Object getItem(int i) {
+        return null;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m3710(C12942 c12942, int i, int i2) {
-        c12942.m32059(i, i2);
-        if (i == i2) {
-            throw new IllegalArgumentException("Empty syntax context cursor range");
+    @Override // android.widget.Adapter
+    public final long getItemId(int i) {
+        return 0L;
+    }
+
+    public C0946(AbstractDialogInterfaceOnClickListenerC2437 abstractDialogInterfaceOnClickListenerC2437) {
+        this.f3485 = abstractDialogInterfaceOnClickListenerC2437;
+    }
+
+    @Override // android.widget.Adapter
+    public final int getCount() {
+        return this.f3485.f7813.size();
+    }
+
+    @Override // android.widget.Adapter
+    public final View getView(int i, View view, ViewGroup viewGroup) {
+        C9148 c9148;
+        AbstractDialogInterfaceOnClickListenerC2437 abstractDialogInterfaceOnClickListenerC2437 = this.f3485;
+        if (view == null) {
+            view = abstractDialogInterfaceOnClickListenerC2437.f7811.getLayoutInflater().inflate(R.layout.MT_Protector, viewGroup, false);
+            c9148 = new C9148(view);
+            view.setTag(c9148);
+        } else {
+            c9148 = (C9148) view.getTag();
         }
-        this.f3754 = c12942;
-        this.f3755 = i2;
-        this.f3757 = c12942.f43020.m7173(i - c12942.f43022);
-        m3707(i);
-        this.f3756 = true;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean m3708() {
-        if (!this.f3756 || this.f3759 >= this.f3755) {
-            this.f3756 = false;
-            return false;
-        }
-        this.f3757++;
-        m3707(this.f3754.f43022 + this.f3754.f43020.m7171(this.f3757));
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m3711() {
-        this.f3754 = null;
-        this.f3756 = false;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m3712() {
-        return this.f3760;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m3709() {
-        return this.f3759;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m3713() {
-        return this.f3758;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m3707(int i) {
-        this.f3760 = i;
-        this.f3759 = Math.min(this.f3755, this.f3754.f43022 + this.f3754.f43020.m7163(this.f3757));
-        this.f3758 = this.f3754.f43020.m7165(this.f3757);
+        c9148.f29723.setText(((C18099) abstractDialogInterfaceOnClickListenerC2437.f7813.get(i)).m42221());
+        c9148.f29723.setChecked(abstractDialogInterfaceOnClickListenerC2437.f7803 == i);
+        return view;
     }
 }

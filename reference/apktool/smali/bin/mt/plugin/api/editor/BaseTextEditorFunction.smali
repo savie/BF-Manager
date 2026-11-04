@@ -36,7 +36,7 @@
     .line 106
     iget-object v0, p0, Lbin/mt/plugin/api/editor/BaseTextEditorFunction;->context:Lbin/mt/plugin/api/PluginContext;
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast v0, Lbin/mt/plugin/api/PluginContext;
 

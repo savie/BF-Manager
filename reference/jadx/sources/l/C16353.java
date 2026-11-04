@@ -1,30 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۖ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S776 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16353 {
+import androidx.window.sidecar.SidecarDisplayFeature;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f52647;
+/* JADX INFO: renamed from: l.ܶ᩷ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: YAN2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16353 extends AbstractC13006 implements InterfaceC3071 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f52648;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final C16353 f53093 = new C16353(1);
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f52649;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f52650;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f52651;
-
-    public C16353(int i, String str, String str2, String str3, String str4) {
-        this.f52651 = i;
-        this.f52650 = str;
-        this.f52649 = str2;
-        this.f52648 = str3;
-        this.f52647 = str4;
+    @Override // l.InterfaceC3071
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
+    public final Boolean invoke(SidecarDisplayFeature sidecarDisplayFeature) {
+        C15243.m36590(sidecarDisplayFeature, "$this$require");
+        return Boolean.valueOf(sidecarDisplayFeature.getRect().left == 0 || sidecarDisplayFeature.getRect().top == 0);
     }
 }

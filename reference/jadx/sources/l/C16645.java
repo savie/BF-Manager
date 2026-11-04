@@ -1,20 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ۫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 690O */
+/* JADX INFO: renamed from: l.ܺۛܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P1MC */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16645 implements InterfaceC16294 {
+public final /* synthetic */ class C16645 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6061 f53372;
+    public static final /* synthetic */ int[] f53788;
 
-    public C16645(C6061 c6061) {
-        this.f53372 = c6061;
-    }
-
-    @Override // l.InterfaceC16294
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2175(InterfaceC12061 interfaceC12061, AbstractC19367 abstractC19367) {
-        C6061.m16461(this.f53372, interfaceC12061, (C0604) abstractC19367);
+    static {
+        int[] iArr = new int[EnumC6950.values().length];
+        f53788 = iArr;
+        try {
+            iArr[EnumC6950.DEFAULT.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f53788[EnumC6950.TRIM_WHITESPACES.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f53788[EnumC6950.IGNORE_WHITESPACES.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
     }
 }

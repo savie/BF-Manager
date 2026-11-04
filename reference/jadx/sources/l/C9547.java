@@ -1,19 +1,24 @@
 package l;
 
-import android.graphics.PointF;
-import android.util.Property;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۢۧܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A65W */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9547 extends Property {
-    @Override // android.util.Property
-    public final /* bridge */ /* synthetic */ Object get(Object obj) {
-        return null;
+/* JADX INFO: renamed from: l.ۡᩳۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 36FV */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C9547 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // android.util.Property
-    public final void set(Object obj, Object obj2) {
-        ((C22620) obj).m50144((PointF) obj2);
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return new C8802(0);
     }
 }

@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.params.AEADParameters;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EAXBlockCipher implements AEADBlockCipher {
     public static final byte cTAG = 2;
     public static final byte hTAG = 1;

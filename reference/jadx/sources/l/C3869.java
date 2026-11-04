@@ -1,38 +1,60 @@
 package l;
 
-import android.view.MenuItem;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۘۤۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3B3L */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3869 implements InterfaceC10597 {
+/* JADX INFO: renamed from: l.ۘۗۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3869 extends AbstractC25344 {
+    public C16216 c;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ MenuItem f14460;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ MenuItem f14461;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20409 f14462;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ MenuItem f14463;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceMenuC1957 f14464;
-
-    public /* synthetic */ C3869(C20409 c20409, InterfaceMenuC1957 interfaceMenuC1957, MenuItem menuItem, MenuItem menuItem2, MenuItem menuItem3) {
-        this.f14462 = c20409;
-        this.f14464 = interfaceMenuC1957;
-        this.f14460 = menuItem;
-        this.f14463 = menuItem2;
-        this.f14461 = menuItem3;
+    /* JADX WARN: Type inference failed for: r0v2, types: [l.ܶܽۗ, l.᩷ܶۗ] */
+    /* JADX WARN: Type inference failed for: r0v5, types: [l.᩷ܶۗ] */
+    /* JADX WARN: Type inference failed for: r0v6, types: [l.᩷ܶۗ] */
+    @Override // l.AbstractC6610, l.InterfaceC15143
+    public final void c(long j) {
+        ?? abstractC22140;
+        if (j >= 2147483639) {
+            throw new IllegalArgumentException("Stream size exceeds max array size");
+        }
+        if (j <= 0) {
+            abstractC22140 = new AbstractC22140();
+        } else {
+            abstractC22140 = new C16216((int) j);
+        }
+        this.c = abstractC22140;
     }
 
-    @Override // l.InterfaceC10597
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1473(Object obj) {
-        C20409.m46073(this.f14462, this.f14464, this.f14460, this.f14463, this.f14461, (Boolean) obj);
+    @Override // l.AbstractC6610, l.InterfaceC15143
+    public final void end() {
+        long[] jArr = (long[]) this.c.b();
+        Arrays.sort(jArr);
+        long length = jArr.length;
+        InterfaceC15143 interfaceC15143 = this.a;
+        interfaceC15143.c(length);
+        int i = 0;
+        if (!this.b) {
+            int length2 = jArr.length;
+            while (i < length2) {
+                interfaceC15143.accept(jArr[i]);
+                i++;
+            }
+        } else {
+            int length3 = jArr.length;
+            while (i < length3) {
+                long j = jArr[i];
+                if (interfaceC15143.f()) {
+                    break;
+                }
+                interfaceC15143.accept(j);
+                i++;
+            }
+        }
+        interfaceC15143.end();
+    }
+
+    @Override // l.InterfaceC1148, l.InterfaceC15143
+    public final void accept(long j) {
+        this.c.accept(j);
     }
 }

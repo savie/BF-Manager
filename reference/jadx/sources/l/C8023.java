@@ -1,7 +1,7 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠۟ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R8K9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8023 extends C20018 {
+/* JADX INFO: renamed from: l.۟ܽܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 09IN */
+/* JADX INFO: loaded from: classes4.dex */
+public class C8023 implements InterfaceC7277 {
 }

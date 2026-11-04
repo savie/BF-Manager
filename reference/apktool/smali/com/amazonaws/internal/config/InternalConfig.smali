@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static final ֨:Lcom/amazonaws/logging/Log;
+.field public static final ۫:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public final ۖ:Ljava/util/HashMap;
-
 .field public final ۙ:Lcom/amazonaws/internal/config/SignerConfig;
 
-.field public final ۚ:Ljava/util/HashMap;
+.field public final ۤ:Ljava/util/HashMap;
 
-.field public final ۨ:Ljava/util/HashMap;
+.field public final ܳ:Ljava/util/HashMap;
 
-.field public final ܰ:Ljava/util/ArrayList;
+.field public final ᩴ:Ljava/util/HashMap;
 
-.field public final ᩹:Ljava/util/HashMap;
+.field public final ᩷:Ljava/util/ArrayList;
+
+.field public final ᩸:Ljava/util/HashMap;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/internal/config/InternalConfig;->֨:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/internal/config/InternalConfig;->۫:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -77,7 +77,7 @@
     invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 45
-    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۖ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩸:Ljava/util/HashMap;
 
     .line 162
     new-instance v0, Ljava/util/HashMap;
@@ -147,7 +147,7 @@
     invoke-virtual {v0, v8, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 46
-    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩹:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ܳ:Ljava/util/HashMap;
 
     .line 145
     new-instance v0, Ljava/util/HashMap;
@@ -254,7 +254,7 @@
     invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 47
-    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۚ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ᩴ:Ljava/util/HashMap;
 
     .line 109
     new-instance v0, Ljava/util/HashMap;
@@ -485,7 +485,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 48
-    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۨ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۤ:Ljava/util/HashMap;
 
     .line 177
     new-instance v0, Ljava/util/ArrayList;
@@ -524,7 +524,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 49
-    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ܰ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩷:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -535,7 +535,7 @@
     .locals 1
 
     .line 64
-    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۨ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۤ:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -556,12 +556,12 @@
     const-string v0, "/"
 
     .line 0
-    invoke-static {p1, v0, p2}, Ll/֫۟ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p2}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 84
-    iget-object v1, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۚ:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/amazonaws/internal/config/InternalConfig;->ᩴ:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -575,7 +575,7 @@
 
     .line 89
     :cond_0
-    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ۖ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩸:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -589,7 +589,7 @@
 
     .line 95
     :cond_1
-    iget-object p2, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩹:Ljava/util/HashMap;
+    iget-object p2, p0, Lcom/amazonaws/internal/config/InternalConfig;->ܳ:Ljava/util/HashMap;
 
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -618,9 +618,9 @@
     .locals 1
 
     .line 104
-    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->ܰ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/internal/config/InternalConfig;->᩷:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 

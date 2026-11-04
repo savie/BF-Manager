@@ -14,7 +14,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.x509.ExtendedPKIXParameters;
 import org.bouncycastle.x509.X509AttributeCertStoreSelector;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXAttrCertPathValidatorSpi extends CertPathValidatorSpi {
     public final JcaJceHelper helper = new BCJcaJceHelper();
 

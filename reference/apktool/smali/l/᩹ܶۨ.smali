@@ -1,29 +1,13 @@
 .class public final Ll/᩹ܶۨ;
-.super Ljava/lang/Object;
-.source "N53S"
-
-# interfaces
-.implements Ll/᩸ۜۨ;
+.super Ll/᩶ܽۨ;
+.source "LATI"
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 3
+.method public final ᩷()I
+    .locals 1
 
-    .line 67
-    new-instance v0, Ll/ܳۘۨ;
+    const/16 v0, 0xb
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
-
-    .line 68
-    invoke-static {}, Ll/֫۠᩺;->ۚ()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ll/ܳۘۨ;->ۙ(J)V
-
-    .line 69
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
-
-    return-void
+    return v0
 .end method

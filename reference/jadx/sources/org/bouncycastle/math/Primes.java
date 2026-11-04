@@ -3,7 +3,7 @@ package org.bouncycastle.math;
 import com.umeng.commonsdk.statistics.UMErrorCode;
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import l.C16523;
+import l.C14442;
 import moe.shizuku.server.IShizukuService;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.Arrays;
@@ -384,7 +384,7 @@ public abstract class Primes {
 
     public static void checkCandidate(BigInteger bigInteger, String str) {
         if (bigInteger == null || bigInteger.signum() < 1 || bigInteger.bitLength() < 2) {
-            throw new IllegalArgumentException(C16523.m38890("'", str, "' must be non-null and >= 2"));
+            throw new IllegalArgumentException(C14442.m34865("'", str, "' must be non-null and >= 2"));
         }
     }
 }

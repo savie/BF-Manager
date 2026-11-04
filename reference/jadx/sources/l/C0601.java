@@ -1,76 +1,45 @@
 package l;
 
 import android.content.ContentResolver;
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
+import android.database.ContentObserver;
 import android.net.Uri;
-import android.text.TextUtils;
+import android.os.Handler;
 
-/* JADX INFO: renamed from: l.֡ᩴܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 194E */
+/* JADX INFO: renamed from: l.֡ᩳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O8SZ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0601 {
+public final class C0601 extends ContentObserver {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m2807(Context context) {
-        ContentResolver contentResolver = context.getContentResolver();
-        if (contentResolver != null) {
-            Cursor cursor = null;
-            try {
-                Cursor cursorQuery = contentResolver.query(Uri.parse("content://com.bbk.launcher2.settings/favorites"), null, null, null, null);
-                if (cursorQuery != null) {
-                    String strM2808 = m2808(context);
-                    while (cursorQuery.moveToNext()) {
-                        String string = cursorQuery.getString(cursorQuery.getColumnIndexOrThrow("title"));
-                        if (!TextUtils.isEmpty(string) && string.equals(strM2808)) {
-                            int i = cursorQuery.getInt(cursorQuery.getColumnIndexOrThrow("shortcutPermission"));
-                            if (i == 1 || i == 17) {
-                                cursorQuery.close();
-                                return -1;
-                            }
-                            if (i == 16) {
-                                cursorQuery.close();
-                                return 0;
-                            }
-                            if (i == 18) {
-                                cursorQuery.close();
-                                return 1;
-                            }
-                        }
-                    }
-                    cursorQuery.close();
-                    return 2;
-                }
-                if (cursorQuery != null) {
-                    cursorQuery.close();
-                    return 2;
-                }
-            } catch (Exception unused) {
-                if (0 != 0) {
-                    cursor.close();
-                }
-            } catch (Throwable th) {
-                if (0 != 0) {
-                    cursor.close();
-                }
-                throw th;
-            }
-        }
-        return 2;
+    public final ContentResolver f2396;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C19246 f2397;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Uri f2398;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C0601(C19246 c19246, Handler handler, ContentResolver contentResolver, Uri uri) {
+        super(handler);
+        this.f2397 = c19246;
+        this.f2396 = contentResolver;
+        this.f2398 = uri;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String m2808(Context context) {
-        try {
-            PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo(context.getApplicationContext().getPackageName(), 0);
-            if (packageInfo == null) {
-                return null;
-            }
-            return packageInfo.applicationInfo.loadLabel(packageManager).toString();
-        } catch (PackageManager.NameNotFoundException unused) {
-            return "";
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m2705() {
+        this.f2396.registerContentObserver(this.f2398, false, this);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m2706() {
+        this.f2396.unregisterContentObserver(this);
+    }
+
+    @Override // android.database.ContentObserver
+    public final void onChange(boolean z) {
+        C19246 c19246 = this.f2397;
+        c19246.m44583(C14770.m35557(c19246.f62265, c19246.f62257, c19246.f62260));
     }
 }

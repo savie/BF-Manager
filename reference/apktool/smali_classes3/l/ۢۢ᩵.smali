@@ -1,27 +1,21 @@
-.class public interface abstract Ll/ۢۢ᩵;
+.class public final Ll/ۢۢ᩵;
 .super Ljava/lang/Object;
-.source "Z5Z9"
-
-
-# static fields
-.field public static final ۙ:Ll/ۢۢ᩵;
+.source "B99Q"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public static final ۙ([Ljava/lang/Enum;)Ll/ᩳۢ᩵;
     .locals 1
 
-    .line 154
-    new-instance v0, Ll/֫ۢ᩵;
+    const-string v0, "entries"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    invoke-static {p0, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v0, Ll/ۢۢ᩵;->ۙ:Ll/ۢۢ᩵;
+    .line 46
+    new-instance v0, Ll/֨ۢ᩵;
 
-    return-void
-.end method
+    invoke-direct {v0, p0}, Ll/֨ۢ᩵;-><init>([Ljava/lang/Enum;)V
 
-
-# virtual methods
-.method public abstract seekTo(I)I
+    return-object v0
 .end method

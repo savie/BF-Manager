@@ -1,26 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ܳܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A5H1 */
+import android.widget.CompoundButton;
+import java.io.Serializable;
+
+/* JADX INFO: renamed from: l.᩸᩶᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: S5T9 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23055 extends C2592 {
+public final class C23055 implements CompoundButton.OnCheckedChangeListener {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21643 f74905;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20071 f74801;
 
-    public C23055(C21643 c21643) {
-        this.f74905 = c21643;
+    public C23055(C20071 c20071) {
+        this.f74801 = c20071;
     }
 
-    @Override // l.C2592, l.InterfaceC24031
-    public final void onTransitionCancel(AbstractC11766 abstractC11766) {
-        C21643 c21643 = this.f74905;
-        c21643.f70174.remove(abstractC11766);
-        if (c21643.hasAnimators()) {
-            return;
-        }
-        c21643.notifyListeners(InterfaceC13883.f45754, false);
-        c21643.mEnded = true;
-        c21643.notifyListeners(InterfaceC13883.f45757, false);
+    @Override // android.widget.CompoundButton.OnCheckedChangeListener
+    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
+        Boolean boolValueOf = Boolean.valueOf(z);
+        C20071 c20071 = this.f74801;
+        c20071.m12566((Serializable) boolValueOf);
+        c20071.m17138(z);
     }
 }

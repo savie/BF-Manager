@@ -1,1090 +1,643 @@
 package l;
 
-import com.alipay.sdk.m.y.q;
-import com.google.android.material.slider.BaseSlider;
-import com.umeng.commonsdk.statistics.UMErrorCode;
-import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
-import org.json.JSONObject;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Region;
+import android.graphics.RegionIterator;
+import android.os.BadParcelableException;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.JsonWriter;
+import android.util.Size;
+import android.util.SparseArray;
+import android.view.accessibility.AccessibilityNodeInfo;
+import com.alipay.sdk.m.u0.b;
+import com.umeng.analytics.pro.d;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import org.bouncycastle.i18n.TextBundle;
+import org.bouncycastle.jcajce.util.AnnotatedPrivateKey;
+import org.simpleframework.xml.strategy.Name;
+import org.xmlpull.v1.XmlSerializer;
 
-/* JADX INFO: renamed from: l.ᩴ֨ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R2SJ */
+/* JADX INFO: renamed from: l.ܿܶܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 36GP */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C18419 {
-
-    /* JADX INFO: renamed from: ᩸֫۬, reason: not valid java name and contains not printable characters */
-    private static final short[] f58720 = {1402, 12391, 12387, 12388, 12363, 12388, 12398, 12408, 12389, 12387, 12398, 12380, 12399, 12408, 12409, 12387, 12389, 12388, 12330, 12387, 12409, 12330, 12388, 12389, 12414, 12330, 12409, 12399, 12414, 2906, -11246, -11242, -11247, -11209, -11248, -11252, -11253, -11223, -11238, -11251, -11252, -11242, -11248, -11247, -11169, -11242, -11252, -11169, -11247, -11248, -11253, -11169, -11252, -11238, -11253};
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public String f58721;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public JSONObject f58722;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public String f58723;
-
+    /* JADX WARN: Code duplicated, block: B:100:? A[RETURN, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:26:0x029c  */
+    /* JADX WARN: Code duplicated, block: B:29:0x02ba  */
+    /* JADX WARN: Code duplicated, block: B:32:0x02cb  */
+    /* JADX WARN: Code duplicated, block: B:35:0x02e9  */
+    /* JADX WARN: Code duplicated, block: B:38:0x030c  */
+    /* JADX WARN: Code duplicated, block: B:41:0x033a  */
+    /* JADX WARN: Code duplicated, block: B:43:0x034d  */
+    /* JADX WARN: Code duplicated, block: B:44:0x034f  */
+    /* JADX WARN: Code duplicated, block: B:47:0x035b A[LOOP:2: B:45:0x0355->B:47:0x035b, LOOP_END] */
+    /* JADX WARN: Code duplicated, block: B:49:0x0389  */
+    /* JADX WARN: Code duplicated, block: B:52:0x0390  */
+    /* JADX WARN: Code duplicated, block: B:54:0x039f  */
+    /* JADX WARN: Code duplicated, block: B:55:0x03a1  */
+    /* JADX WARN: Code duplicated, block: B:57:0x03a7  */
+    /* JADX WARN: Code duplicated, block: B:58:0x03a9  */
+    /* JADX WARN: Code duplicated, block: B:63:0x03fc  */
+    /* JADX WARN: Code duplicated, block: B:66:0x0416  */
+    /* JADX WARN: Code duplicated, block: B:69:0x0452  */
+    /* JADX WARN: Code duplicated, block: B:72:0x0463  */
+    /* JADX WARN: Code duplicated, block: B:75:0x04a6 A[LOOP:1: B:73:0x04a0->B:75:0x04a6, LOOP_END] */
+    /* JADX WARN: Code duplicated, block: B:79:0x04bd A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:80:0x04bf  */
+    /* JADX WARN: Code duplicated, block: B:81:0x04c5  */
+    /* JADX WARN: Code duplicated, block: B:84:0x04cc  */
+    /* JADX WARN: Code duplicated, block: B:86:0x04d4  */
+    /* JADX WARN: Code duplicated, block: B:87:0x04d6  */
+    /* JADX WARN: Code duplicated, block: B:91:0x0505  */
+    /* JADX WARN: Code duplicated, block: B:93:0x050d  */
+    /* JADX WARN: Code duplicated, block: B:94:0x050f  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f58724;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f58725;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public int f58726;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public int f58727;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f58728;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public String f58729;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f58730;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public int f58731;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public String f58732;
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public long f58733;
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public String f58734;
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public String f58735;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f58736;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public long f58737;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m42723() {
-        int i = 0;
-        short[] sArr = null;
-        char c = 0;
-        short s = 0;
-        int i2 = 0;
-        int i3 = 0;
-        short s2 = 0;
-        int i4 = 0;
-        int i5 = -1816733632;
-        int i6 = C7105.f23796;
-        int i7 = C2124.f7782;
-        int iM11306 = ThreadFactoryC3888.m11306("᩵۬") ^ i7;
-        int i8 = ((iM11306 ^ i6) * 30611) ^ (-506129173);
-        int i9 = 1526545953;
-        while (true) {
-            i5 = ((((i5 ^ i6) * 16993) >> 31) & i8) ^ (iM11306 ^ i9);
-            switch (i5) {
-                case -2138978462:
-                case 1349515725:
-                    c = 29;
-                    if (RunnableC1606.f6488 >= 0) {
-                        iM11306 = (i7 - ThreadFactoryC3888.m11306("᩷ۤ")) * (-65);
-                        i8 = ((iM11306 ^ i6) * (-16419)) ^ 124988977;
-                        i9 = 1901954657;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ᩳۢ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 29981) ^ 2118220240;
-                        i9 = -1564845826;
+    public static void m42938(XmlSerializer xmlSerializer, AccessibilityNodeInfo accessibilityNodeInfo) {
+        char c;
+        LinkedHashMap linkedHashMapM42936;
+        LinkedHashMap linkedHashMapM42937;
+        char c2;
+        LinkedHashMap linkedHashMapM42938;
+        char c3;
+        int i;
+        char c4;
+        int i2;
+        int i3;
+        Object objM42933;
+        LinkedHashMap linkedHashMapM42939;
+        int i4;
+        Object objM42934;
+        LinkedHashMap linkedHashMapM429310;
+        ArrayList arrayList;
+        Iterator it;
+        AccessibilityNodeInfo.ExtraRenderingInfo extraRenderingInfo;
+        Size layoutSize;
+        LinkedHashMap linkedHashMapM429311;
+        LinkedHashMap linkedHashMapM429312;
+        AccessibilityNodeInfo.TouchDelegateInfo touchDelegateInfo;
+        ArrayList arrayList2;
+        int i5;
+        Rect rect = new Rect();
+        accessibilityNodeInfo.getBoundsInParent(rect);
+        m42940(xmlSerializer, "bounds-in-parent", rect.toShortString());
+        m42940(xmlSerializer, "window-id", Integer.valueOf(accessibilityNodeInfo.getWindowId()));
+        m42940(xmlSerializer, "child-count", Integer.valueOf(accessibilityNodeInfo.getChildCount()));
+        m42940(xmlSerializer, "accessibility-focused", Boolean.valueOf(accessibilityNodeInfo.isAccessibilityFocused()));
+        m42940(xmlSerializer, "editable", Boolean.valueOf(accessibilityNodeInfo.isEditable()));
+        m42940(xmlSerializer, "content-invalid", Boolean.valueOf(accessibilityNodeInfo.isContentInvalid()));
+        m42940(xmlSerializer, "dismissable", Boolean.valueOf(accessibilityNodeInfo.isDismissable()));
+        m42940(xmlSerializer, "multi-line", Boolean.valueOf(accessibilityNodeInfo.isMultiLine()));
+        m42940(xmlSerializer, "can-open-popup", Boolean.valueOf(accessibilityNodeInfo.canOpenPopup()));
+        m42940(xmlSerializer, "input-type", Integer.valueOf(accessibilityNodeInfo.getInputType()));
+        m42940(xmlSerializer, "live-region", Integer.valueOf(accessibilityNodeInfo.getLiveRegion()));
+        m42940(xmlSerializer, "movement-granularities", Integer.valueOf(accessibilityNodeInfo.getMovementGranularities()));
+        m42940(xmlSerializer, "text-selection-start", Integer.valueOf(accessibilityNodeInfo.getTextSelectionStart()));
+        m42940(xmlSerializer, "text-selection-end", Integer.valueOf(accessibilityNodeInfo.getTextSelectionEnd()));
+        m42940(xmlSerializer, "max-text-length", Integer.valueOf(accessibilityNodeInfo.getMaxTextLength()));
+        m42940(xmlSerializer, d.O, accessibilityNodeInfo.getError());
+        ArrayList arrayList3 = new ArrayList();
+        for (AccessibilityNodeInfo.AccessibilityAction accessibilityAction : accessibilityNodeInfo.getActionList()) {
+            arrayList3.add(m42936("id", Integer.valueOf(accessibilityAction.getId()), AnnotatedPrivateKey.LABEL, accessibilityAction.getLabel(), "description", accessibilityAction.toString()));
+        }
+        m42939(xmlSerializer, "actions", arrayList3);
+        AccessibilityNodeInfo.RangeInfo rangeInfo = accessibilityNodeInfo.getRangeInfo();
+        if (rangeInfo == null) {
+            linkedHashMapM42936 = null;
+            c = 7;
+        } else {
+            c = 7;
+            linkedHashMapM42936 = m42936("type", Integer.valueOf(rangeInfo.getType()), "min", Float.valueOf(rangeInfo.getMin()), "max", Float.valueOf(rangeInfo.getMax()), "current", Float.valueOf(rangeInfo.getCurrent()));
+        }
+        m42939(xmlSerializer, "range-info", linkedHashMapM42936);
+        AccessibilityNodeInfo.CollectionInfo collectionInfo = accessibilityNodeInfo.getCollectionInfo();
+        if (collectionInfo == null) {
+            c2 = 5;
+            linkedHashMapM42937 = null;
+        } else {
+            Integer numValueOf = Integer.valueOf(collectionInfo.getRowCount());
+            Integer numValueOf2 = Integer.valueOf(collectionInfo.getColumnCount());
+            Boolean boolValueOf = Boolean.valueOf(collectionInfo.isHierarchical());
+            Integer numValueOf3 = Integer.valueOf(collectionInfo.getSelectionMode());
+            Object[] objArr = new Object[8];
+            objArr[0] = "row-count";
+            objArr[1] = numValueOf;
+            objArr[2] = "column-count";
+            objArr[3] = numValueOf2;
+            objArr[4] = "hierarchical";
+            objArr[5] = boolValueOf;
+            objArr[6] = "selection-mode";
+            objArr[c] = numValueOf3;
+            linkedHashMapM42937 = m42936(objArr);
+            if (Build.VERSION.SDK_INT >= 35) {
+                linkedHashMapM42937.put("item-count", Integer.valueOf(collectionInfo.getItemCount()));
+                linkedHashMapM42937.put("important-for-accessibility-item-count", Integer.valueOf(collectionInfo.getImportantForAccessibilityItemCount()));
+            }
+            c2 = 5;
+        }
+        m42939(xmlSerializer, "collection-info", linkedHashMapM42937);
+        AccessibilityNodeInfo.CollectionItemInfo collectionItemInfo = accessibilityNodeInfo.getCollectionItemInfo();
+        if (collectionItemInfo != null) {
+            Integer numValueOf4 = Integer.valueOf(collectionItemInfo.getRowIndex());
+            Integer numValueOf5 = Integer.valueOf(collectionItemInfo.getColumnIndex());
+            Integer numValueOf6 = Integer.valueOf(collectionItemInfo.getRowSpan());
+            Integer numValueOf7 = Integer.valueOf(collectionItemInfo.getColumnSpan());
+            Boolean boolValueOf2 = Boolean.valueOf(collectionItemInfo.isHeading());
+            Boolean boolValueOf3 = Boolean.valueOf(collectionItemInfo.isSelected());
+            Object[] objArr2 = new Object[12];
+            objArr2[0] = "row-index";
+            objArr2[1] = numValueOf4;
+            objArr2[2] = "column-index";
+            objArr2[3] = numValueOf5;
+            objArr2[4] = "row-span";
+            objArr2[c2] = numValueOf6;
+            objArr2[6] = "column-span";
+            objArr2[c] = numValueOf7;
+            objArr2[8] = "heading";
+            objArr2[9] = boolValueOf2;
+            objArr2[10] = "selected";
+            objArr2[11] = boolValueOf3;
+            linkedHashMapM42938 = m42936(objArr2);
+            if (Build.VERSION.SDK_INT >= 33) {
+                c3 = 3;
+                linkedHashMapM42938.put("row-title", collectionItemInfo.getRowTitle());
+                linkedHashMapM42938.put("column-title", collectionItemInfo.getColumnTitle());
+            }
+            m42939(xmlSerializer, "collection-item-info", linkedHashMapM42938);
+            m42939(xmlSerializer, "extras", accessibilityNodeInfo.getExtras());
+            m42939(xmlSerializer, "label-for", m42934(accessibilityNodeInfo.getLabelFor()));
+            m42939(xmlSerializer, "labeled-by", m42934(accessibilityNodeInfo.getLabeledBy()));
+            i = Build.VERSION.SDK_INT;
+            if (i >= 22) {
+                m42939(xmlSerializer, "traversal-before", m42934(accessibilityNodeInfo.getTraversalBefore()));
+                m42939(xmlSerializer, "traversal-after", m42934(accessibilityNodeInfo.getTraversalAfter()));
+            }
+            if (i >= 23) {
+                m42940(xmlSerializer, "context-clickable", Boolean.valueOf(accessibilityNodeInfo.isContextClickable()));
+            }
+            if (i >= 24) {
+                m42940(xmlSerializer, "drawing-order", Integer.valueOf(accessibilityNodeInfo.getDrawingOrder()));
+                m42940(xmlSerializer, "important-for-accessibility", Boolean.valueOf(accessibilityNodeInfo.isImportantForAccessibility()));
+            }
+            if (i >= 26) {
+                m42940(xmlSerializer, "hint-text", accessibilityNodeInfo.getHintText());
+                m42940(xmlSerializer, "showing-hint-text", Boolean.valueOf(accessibilityNodeInfo.isShowingHintText()));
+                m42939(xmlSerializer, "available-extra-data", accessibilityNodeInfo.getAvailableExtraData());
+            }
+            if (i >= 28) {
+                m42940(xmlSerializer, "pane-title", accessibilityNodeInfo.getPaneTitle());
+                m42940(xmlSerializer, "tooltip-text", accessibilityNodeInfo.getTooltipText());
+                m42940(xmlSerializer, "heading", Boolean.valueOf(accessibilityNodeInfo.isHeading()));
+                m42940(xmlSerializer, "screen-reader-focusable", Boolean.valueOf(accessibilityNodeInfo.isScreenReaderFocusable()));
+            }
+            if (i >= 29) {
+                m42940(xmlSerializer, "text-entry-key", Boolean.valueOf(accessibilityNodeInfo.isTextEntryKey()));
+                touchDelegateInfo = accessibilityNodeInfo.getTouchDelegateInfo();
+                if (touchDelegateInfo == null) {
+                    arrayList2 = null;
+                } else {
+                    arrayList2 = new ArrayList();
+                    for (i5 = 0; i5 < touchDelegateInfo.getRegionCount(); i5++) {
+                        Region regionAt = touchDelegateInfo.getRegionAt(i5);
+                        LinkedHashMap linkedHashMapM42934 = m42934(touchDelegateInfo.getTargetForRegion(regionAt));
+                        Object[] objArr3 = new Object[4];
+                        objArr3[0] = "region";
+                        objArr3[1] = regionAt;
+                        objArr3[2] = "target";
+                        objArr3[c3] = linkedHashMapM42934;
+                        arrayList2.add(m42936(objArr3));
                     }
-                    break;
-                case -2060905193:
-                case 1059309987:
-                    i = this.f58736;
-                    if (i != -1) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩶᩹") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 14315) ^ 1326454887;
-                        i9 = 1259917061;
+                }
+                c4 = 2;
+                m42939(xmlSerializer, "touch-delegate-info", arrayList2);
+            } else {
+                c4 = 2;
+            }
+            i2 = Build.VERSION.SDK_INT;
+            if (i2 >= 30) {
+                m42940(xmlSerializer, "state-description", accessibilityNodeInfo.getStateDescription());
+                extraRenderingInfo = accessibilityNodeInfo.getExtraRenderingInfo();
+                if (extraRenderingInfo == null) {
+                    linkedHashMapM429312 = null;
+                } else {
+                    layoutSize = extraRenderingInfo.getLayoutSize();
+                    if (layoutSize == null) {
+                        linkedHashMapM429311 = null;
                     } else {
-                        iM11306 = C19806.m45029("ᩴܺ") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 11407) ^ (-784238366);
-                        i9 = 1613165869;
+                        Integer numValueOf8 = Integer.valueOf(layoutSize.getWidth());
+                        Integer numValueOf9 = Integer.valueOf(layoutSize.getHeight());
+                        Object[] objArr4 = new Object[4];
+                        objArr4[0] = "width";
+                        objArr4[1] = numValueOf8;
+                        objArr4[c4] = "height";
+                        objArr4[c3] = numValueOf9;
+                        linkedHashMapM429311 = m42936(objArr4);
                     }
-                    break;
-                case -1627197996:
-                case 1920882685:
-                    i4 = 54399;
-                    iM11306 = ThreadFactoryC3888.m11306("۬ۤ") ^ i7;
-                    i8 = ((iM11306 ^ i6) * (-29261)) ^ (-1479968);
-                    i9 = 1220055760;
-                    break;
-                case -1508337057:
-                case -854046015:
-                    int i10 = s + s2;
-                    if (i3 - (i10 * i10) > 0) {
-                        iM11306 = C19806.m45029("ܺ᩶") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-2461)) ^ 1920617630;
-                        i9 = -1022065970;
+                    Float fValueOf = Float.valueOf(extraRenderingInfo.getTextSizeInPx());
+                    Integer numValueOf10 = Integer.valueOf(extraRenderingInfo.getTextSizeUnit());
+                    Object[] objArr5 = new Object[6];
+                    objArr5[0] = "layout-size";
+                    objArr5[1] = linkedHashMapM429311;
+                    objArr5[c4] = "text-size-in-px";
+                    objArr5[c3] = fValueOf;
+                    objArr5[4] = "text-size-unit";
+                    objArr5[c2] = numValueOf10;
+                    linkedHashMapM429312 = m42936(objArr5);
+                }
+                m42939(xmlSerializer, "extra-rendering-info", linkedHashMapM429312);
+            }
+            if (i2 >= 33) {
+                m42940(xmlSerializer, "unique-id", accessibilityNodeInfo.getUniqueId());
+                m42940(xmlSerializer, "text-selectable", Boolean.valueOf(accessibilityNodeInfo.isTextSelectable()));
+            }
+            if (i2 >= 34) {
+                accessibilityNodeInfo.getBoundsInWindow(rect);
+                m42940(xmlSerializer, "bounds-in-window", rect.toShortString());
+                m42940(xmlSerializer, "container-title", accessibilityNodeInfo.getContainerTitle());
+                m42940(xmlSerializer, "accessibility-data-sensitive", Boolean.valueOf(accessibilityNodeInfo.isAccessibilityDataSensitive()));
+                m42940(xmlSerializer, "request-initial-accessibility-focus", Boolean.valueOf(accessibilityNodeInfo.hasRequestInitialAccessibilityFocus()));
+                m42940(xmlSerializer, "min-duration-between-content-changes", C7070.convert(accessibilityNodeInfo.getMinDurationBetweenContentChanges()));
+            }
+            if (i2 >= 35) {
+                m42940(xmlSerializer, "granular-scrolling-supported", Boolean.valueOf(accessibilityNodeInfo.isGranularScrollingSupported()));
+            }
+            if (i2 >= 36) {
+                m42940(xmlSerializer, "checked-state", Integer.valueOf(accessibilityNodeInfo.getChecked()));
+                m42940(xmlSerializer, "expanded-state", Integer.valueOf(accessibilityNodeInfo.getExpandedState()));
+                m42940(xmlSerializer, "field-required", Boolean.valueOf(accessibilityNodeInfo.isFieldRequired()));
+                m42940(xmlSerializer, "supplemental-description", accessibilityNodeInfo.getSupplementalDescription());
+                arrayList = new ArrayList();
+                it = accessibilityNodeInfo.getLabeledByList().iterator();
+                while (it.hasNext()) {
+                    arrayList.add(m42934((AccessibilityNodeInfo) it.next()));
+                }
+                m42939(xmlSerializer, "labeled-by-list", arrayList);
+            }
+            i3 = Build.VERSION.SDK_INT;
+            if (i3 >= 36) {
+                if (i3 < 36) {
+                    i4 = 100000 * i3;
+                } else {
+                    i4 = Build.VERSION.SDK_INT_FULL;
+                }
+                if (i4 >= 3600001) {
+                    objM42934 = m42933(accessibilityNodeInfo, "getSelection");
+                    if (objM42934 == null) {
+                        linkedHashMapM429310 = null;
                     } else {
-                        iM11306 = C19806.m45029("᩶۠") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 2181) ^ 1993885039;
-                        i9 = -392539915;
+                        LinkedHashMap linkedHashMapM42935 = m42935(m42933(objM42934, "getStart"));
+                        LinkedHashMap linkedHashMapM429313 = m42935(m42933(objM42934, "getEnd"));
+                        Object[] objArr6 = new Object[4];
+                        objArr6[0] = "start";
+                        objArr6[1] = linkedHashMapM42935;
+                        objArr6[c4] = "end";
+                        objArr6[c3] = linkedHashMapM429313;
+                        linkedHashMapM429310 = m42936(objArr6);
                     }
-                    break;
-                case -1438540988:
-                case -482982632:
-                    short[] sArr2 = f58720;
-                    if (C1148.f5161 > 0) {
-                        if (C1937.f7317 < 0) {
-                            throw new UnsupportedOperationException(C1398.m4892(sArr2, 30, 25, i4));
-                        }
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩵") + i6) * (-29);
-                        i8 = ((iM11306 ^ i7) * (-11835)) ^ (-2038605594);
-                        i9 = 711253778;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۖۡ") ^ i6) * (-27);
-                        i8 = ((iM11306 ^ i7) * 20357) ^ 489820456;
-                        i9 = -203369409;
-                    }
-                    break;
-                case -1182989813:
-                case -754416733:
-                    MenuItemOnMenuItemClickListenerC3244.m9701();
-                    if (C0526.m2437() < 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۖۡ") ^ i6) * (-27);
-                        i8 = ((iM11306 ^ i7) * 20357) ^ 489820456;
-                        i9 = -203369409;
-                    } else {
-                        iM11306 = (i6 - C19806.m45029("ۤ᩵")) * (-11);
-                        i8 = ((iM11306 ^ i7) * (-5019)) ^ 764768919;
-                        i9 = 2058388966;
-                    }
-                    break;
-                case -865069898:
-                case 1099569460:
-                    if (C0278.m1789() <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۖۡ") ^ i6) * (-27);
-                        i8 = ((iM11306 ^ i7) * 20357) ^ 489820456;
-                        i9 = -203369409;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("᩹ᩴ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 11951) ^ 215782241;
-                        i9 = 383991817;
-                    }
-                    break;
-                case -570192005:
-                case 942061590:
-                    if (!RunnableC1564.m5345()) {
-                        iM11306 = (i6 - C19806.m45029("ۤ᩵")) * (-11);
-                        i8 = ((iM11306 ^ i7) * (-5019)) ^ 764768919;
-                        i9 = 2058388966;
-                    } else {
-                        iM11306 = C19806.m45029("᩷ۗ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 26485) ^ 894127561;
-                        i9 = -1761585317;
-                    }
-                    break;
-                case -549352537:
-                case 1015023565:
-                    return i;
-                case -526849520:
-                case 1137038957:
-                    C3722.m10894();
-                    iM11306 = (i6 - C19806.m45029("ۤ᩵")) * (-11);
-                    i8 = ((iM11306 ^ i7) * (-5019)) ^ 764768919;
-                    i9 = 2058388966;
-                    break;
-                case -323759735:
-                case 335745868:
-                    s2 = 1;
-                    if (RunnableC1895.f7152) {
-                        iM11306 = C19806.m45029("ۜ᩻") ^ i6;
-                        i8 = ((iM11306 ^ i7) * (-2179)) ^ (-1484618415);
-                        i9 = 125628657;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩵") + i6) * (-29);
-                        i8 = ((iM11306 ^ i7) * (-11835)) ^ (-2038605594);
-                        i9 = 711253778;
-                    }
-                    break;
-                case -117052405:
-                case 158346653:
-                    i4 = 3634;
-                    iM11306 = ThreadFactoryC3888.m11306("۬ۤ") ^ i7;
-                    i8 = ((iM11306 ^ i6) * (-29261)) ^ (-1479968);
-                    i9 = 1220055760;
-                    break;
-                case 168994897:
-                case 1759328030:
-                    s = sArr[c];
-                    if (C2704.f10408) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩶᩺") ^ i7;
-                        i8 = ((iM11306 ^ i6) * (-8231)) ^ 580261940;
-                        i9 = 508537415;
-                    } else {
-                        iM11306 = (i7 - ThreadFactoryC3888.m11306("᩷ۤ")) * (-65);
-                        i8 = ((iM11306 ^ i6) * (-16419)) ^ 124988977;
-                        i9 = 1901954657;
-                    }
-                    break;
-                case 374853272:
-                case 1417938635:
-                    if (RunnableC0195.f1321 >= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩸᩵") + i6) * (-29);
-                        i8 = ((iM11306 ^ i7) * (-11835)) ^ (-2038605594);
-                        i9 = 711253778;
-                    } else {
-                        iM11306 = (i6 - C19806.m45029("ۤ᩵")) * (-11);
-                        i8 = ((iM11306 ^ i7) * (-5019)) ^ 764768919;
-                        i9 = 2058388966;
-                    }
-                    break;
-                case 761627453:
-                case 1687788959:
-                    sArr = f58720;
-                    if (CallableC1627.f6528) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ܶۙ") + i6) * (-47);
-                        i8 = ((iM11306 ^ i7) * 22229) ^ (-1669124369);
-                        i9 = -1763702522;
-                    } else {
-                        iM11306 = C19806.m45029("᩷ۗ") ^ i7;
-                        i8 = ((iM11306 ^ i6) * 26485) ^ 894127561;
-                        i9 = -1761585317;
-                    }
-                    break;
-                case 778386281:
-                case 1635485977:
-                    if (C10634.m26820()) {
-                        iM11306 = (i7 - ThreadFactoryC3888.m11306("᩷ۤ")) * (-65);
-                        i8 = ((iM11306 ^ i6) * (-16419)) ^ 124988977;
-                        i9 = 1901954657;
-                    } else {
-                        iM11306 = (C19806.m45029("ᩳ֫") ^ i7) * 101;
-                        i8 = ((iM11306 ^ i6) * 28907) ^ 279435103;
-                        i9 = 2133617970;
-                    }
-                    break;
-                case 923411024:
-                case 1123081046:
-                    RunnableC1564.m5345();
-                    RunnableC0195.m1431();
-                    return 0;
-                case 1566606330:
-                case 1853233288:
-                    i3 = i2 + 1;
-                    if (C1875.f7103 >= 0) {
-                        iM11306 = (i6 - C19806.m45029("ۤ᩵")) * (-11);
-                        i8 = ((iM11306 ^ i7) * (-5019)) ^ 764768919;
-                        i9 = 2058388966;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۜᩴ") + i7) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
-                        i8 = ((iM11306 ^ i6) * (-7937)) ^ 831336693;
-                        i9 = 1177704822;
-                    }
-                    break;
-                default:
-                    i2 = s * 2;
-                    if (C2642.f10294 <= 0) {
-                        iM11306 = (i7 - ThreadFactoryC3888.m11306("᩷ۤ")) * (-65);
-                        i8 = ((iM11306 ^ i6) * (-16419)) ^ 124988977;
-                        i9 = 1901954657;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("֫᩷") ^ i6;
-                        i8 = ((iM11306 ^ i7) * 14461) ^ (-1608621158);
-                        i9 = -1542289525;
-                    }
-                    break;
+                    m42939(xmlSerializer, "selection", linkedHashMapM429310);
+                }
+            }
+            if (i3 >= 37) {
+                objM42933 = m42933(accessibilityNodeInfo, "getStructuredDataInfo");
+                if (objM42933 == null) {
+                    linkedHashMapM42939 = null;
+                } else {
+                    Object objM42935 = m42933(objM42933, "getTag");
+                    Object objM42936 = m42933(objM42933, "getAttributes");
+                    Object[] objArr7 = new Object[4];
+                    objArr7[0] = "tag";
+                    objArr7[1] = objM42935;
+                    objArr7[c4] = "attributes";
+                    objArr7[c3] = objM42936;
+                    linkedHashMapM42939 = m42936(objArr7);
+                }
+                m42939(xmlSerializer, "structured-data-info", linkedHashMapM42939);
             }
         }
-    }
-
-    /* JADX WARN: Code duplicated, block: B:56:0x01a6 A[PHI: r2 r3
-      0x01a6: PHI (r2v3 char) = (r2v2 char), (r2v1 char), (r2v1 char) binds: [B:55:0x01a4, B:51:0x0186, B:11:0x0046] A[DONT_GENERATE, DONT_INLINE]
-      0x01a6: PHI (r3v3 short) = (r3v1 short), (r3v2 short), (r3v1 short) binds: [B:55:0x01a4, B:51:0x0186, B:11:0x0046] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code duplicated, block: B:68:0x0224 A[PHI: r1 r4
-      0x0224: PHI (r1v3 short[]) = (r1v2 short[]), (r1v1 short[]), (r1v1 short[]) binds: [B:67:0x0222, B:59:0x01d6, B:47:0x0168] A[DONT_GENERATE, DONT_INLINE]
-      0x0224: PHI (r4v2 int) = (r4v1 int), (r4v1 int), (r4v3 int) binds: [B:67:0x0222, B:59:0x01d6, B:47:0x0168] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Code restructure failed: missing block: B:13:0x004c, code lost:
-    
-        if (l.C1419.f5860 >= 0) goto L14;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:16:0x0054, code lost:
-    
-        if (l.C2871.f10837 < 0) goto L17;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:9:0x0040, code lost:
-    
-        if (l.C1419.f5860 >= 0) goto L10;
-     */
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final int m42713() {
-        /*
-            Method dump skipped, instruction units count: 742
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C18419.m42713():int");
-    }
-
-    public C18419() {
-        int i = 0;
-        int i2 = 582334833;
-        int i3 = C2642.f10294;
-        int i4 = C0050.f912;
-        int iM45029 = C19806.m45029("᩺֨") ^ i4;
-        int i5 = ((iM45029 ^ i3) * (-31871)) ^ 459768406;
-        int i6 = -1181835867;
-        while (true) {
-            i2 = ((((i2 ^ i3) * (-22239)) >> 31) & i5) ^ (iM45029 ^ i6);
-            switch (i2) {
-                case -2090309008:
-                case -931491018:
-                    if (C3660.f13403 >= 0) {
-                        iM45029 = (ThreadFactoryC3888.m11306("ۡۤ") ^ i4) * 35;
-                        i5 = ((iM45029 ^ i3) * 5953) ^ (-821962141);
-                        i6 = -598105546;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("᩹ᩴ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 21201) ^ 1427409330;
-                        i6 = -892425171;
-                    }
-                    break;
-                case -1962156882:
-                case -327863756:
-                    if (C2332.f8260) {
-                        iM45029 = C19806.m45029("ۘۖ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * (-19143)) ^ (-1321011144);
-                        i6 = 1379864193;
-                    } else {
-                        iM45029 = C19806.m45029("᩹֨") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-6111)) ^ 1320486160;
-                        i6 = -2074922854;
-                    }
-                    break;
-                case -1388969329:
-                case 1865888709:
-                    if (C1025.m3861() <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = (C19806.m45029("ܶܽ") ^ i4) * (-33);
-                        i5 = ((iM45029 ^ i3) * 1221) ^ (-291739806);
-                        i6 = -778994079;
-                    }
-                    break;
-                case -1326471334:
-                case 1112711726:
-                    if (C1066.f4915 <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = (i3 - C19806.m45029("۬֨")) * 37;
-                        i5 = ((iM45029 ^ i4) * 6719) ^ (-656385119);
-                        i6 = -26220941;
-                    }
-                    break;
-                case -1247925386:
-                case 501626607:
-                    C2124.m6673();
-                    if (!C0797.f3386) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = C19806.m45029("ۘۧ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 30949) ^ 1861455732;
-                        i6 = -551708742;
-                    }
-                    break;
-                case -1102409754:
-                case -622811442:
-                    if (C0962.m3746() >= 0) {
-                        iM45029 = C19806.m45029("ۘۧ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 30949) ^ 1861455732;
-                        i6 = -551708742;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("ۛ᩶") ^ i4;
-                        i5 = ((iM45029 ^ i3) * 23705) ^ (-1886042790);
-                        i6 = -1281890046;
-                    }
-                    break;
-                case -1064946033:
-                case 1582931605:
-                    C2704.m8255();
-                    if (!C3577.m10565()) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("᩹ᩴ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 21201) ^ 1427409330;
-                        i6 = -892425171;
-                    }
-                    break;
-                case -967205441:
-                case 1666901704:
-                    if (C10634.f36300 >= 0) {
-                        iM45029 = (ThreadFactoryC3888.m11306("ۡۤ") ^ i4) * 35;
-                        i5 = ((iM45029 ^ i3) * 5953) ^ (-821962141);
-                        i6 = -598105546;
-                    } else {
-                        iM45029 = (i4 - ThreadFactoryC3888.m11306("᩵ۢ")) * 123;
-                        i5 = ((iM45029 ^ i3) * 761) ^ 798915271;
-                        i6 = -1960736690;
-                    }
-                    break;
-                case -715745012:
-                case 276250332:
-                    C3535.m10431();
-                    throw new RuntimeException();
-                case -710817262:
-                case -4350438:
-                    if (C0216.f1393 != 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = C19806.m45029("ۧۧ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 31711) ^ (-1245376816);
-                        i6 = 2093039634;
-                    }
-                    break;
-                case -173588952:
-                case 907142729:
-                    i = -1;
-                    this.f58725 = -1;
-                    if (C1148.f5161 <= 0) {
-                        iM45029 = C19806.m45029("ۘۧ") ^ i3;
-                        i5 = ((iM45029 ^ i4) * 30949) ^ 1861455732;
-                        i6 = -551708742;
-                    } else {
-                        iM45029 = (C19806.m45029("ۛ۟") ^ i3) * (-61);
-                        i5 = ((iM45029 ^ i4) * 799) ^ 405351823;
-                        i6 = -912260228;
-                    }
-                    break;
-                case -15408579:
-                case 1508401441:
-                    if (C0629.m2907()) {
-                        iM45029 = (i3 - C19806.m45029("ۤᩴ")) * (-105);
-                        i5 = ((iM45029 ^ i4) * (-14667)) ^ (-1056487501);
-                        i6 = -2104063896;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    }
-                    break;
-                case 118329610:
-                case 791484273:
-                    this.f58736 = i;
-                    return;
-                case 754200553:
-                case 2085765589:
-                    C2477.m7593();
-                    iM45029 = ThreadFactoryC3888.m11306("᩹ᩴ") ^ i3;
-                    i5 = ((iM45029 ^ i4) * 21201) ^ 1427409330;
-                    i6 = -892425171;
-                    break;
-                case 1246829266:
-                case 1302638149:
-                    if (C0526.f2219) {
-                        iM45029 = C19806.m45029("᩹֨") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-6111)) ^ 1320486160;
-                        i6 = -2074922854;
-                    } else {
-                        iM45029 = (ThreadFactoryC3888.m11306("ۛۜ") ^ i4) * (-111);
-                        i5 = ((iM45029 ^ i3) * (-16695)) ^ (-1757744093);
-                        i6 = -696238381;
-                    }
-                    break;
-                default:
-                    if (C2477.f9839 <= 0) {
-                        iM45029 = ThreadFactoryC3888.m11306("۟ܶ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-21559)) ^ (-1957214750);
-                        i6 = 1625188925;
-                    } else {
-                        iM45029 = ThreadFactoryC3888.m11306("ۨۘ") ^ i4;
-                        i5 = ((iM45029 ^ i3) * (-14349)) ^ 143906719;
-                        i6 = -54140343;
-                    }
-                    break;
+        linkedHashMapM42938 = null;
+        c3 = 3;
+        m42939(xmlSerializer, "collection-item-info", linkedHashMapM42938);
+        m42939(xmlSerializer, "extras", accessibilityNodeInfo.getExtras());
+        m42939(xmlSerializer, "label-for", m42934(accessibilityNodeInfo.getLabelFor()));
+        m42939(xmlSerializer, "labeled-by", m42934(accessibilityNodeInfo.getLabeledBy()));
+        i = Build.VERSION.SDK_INT;
+        if (i >= 22) {
+            m42939(xmlSerializer, "traversal-before", m42934(accessibilityNodeInfo.getTraversalBefore()));
+            m42939(xmlSerializer, "traversal-after", m42934(accessibilityNodeInfo.getTraversalAfter()));
+        }
+        if (i >= 23) {
+            m42940(xmlSerializer, "context-clickable", Boolean.valueOf(accessibilityNodeInfo.isContextClickable()));
+        }
+        if (i >= 24) {
+            m42940(xmlSerializer, "drawing-order", Integer.valueOf(accessibilityNodeInfo.getDrawingOrder()));
+            m42940(xmlSerializer, "important-for-accessibility", Boolean.valueOf(accessibilityNodeInfo.isImportantForAccessibility()));
+        }
+        if (i >= 26) {
+            m42940(xmlSerializer, "hint-text", accessibilityNodeInfo.getHintText());
+            m42940(xmlSerializer, "showing-hint-text", Boolean.valueOf(accessibilityNodeInfo.isShowingHintText()));
+            m42939(xmlSerializer, "available-extra-data", accessibilityNodeInfo.getAvailableExtraData());
+        }
+        if (i >= 28) {
+            m42940(xmlSerializer, "pane-title", accessibilityNodeInfo.getPaneTitle());
+            m42940(xmlSerializer, "tooltip-text", accessibilityNodeInfo.getTooltipText());
+            m42940(xmlSerializer, "heading", Boolean.valueOf(accessibilityNodeInfo.isHeading()));
+            m42940(xmlSerializer, "screen-reader-focusable", Boolean.valueOf(accessibilityNodeInfo.isScreenReaderFocusable()));
+        }
+        if (i >= 29) {
+            m42940(xmlSerializer, "text-entry-key", Boolean.valueOf(accessibilityNodeInfo.isTextEntryKey()));
+            touchDelegateInfo = accessibilityNodeInfo.getTouchDelegateInfo();
+            if (touchDelegateInfo == null) {
+                arrayList2 = null;
+            } else {
+                arrayList2 = new ArrayList();
+                while (i5 < touchDelegateInfo.getRegionCount()) {
+                    Region regionAt2 = touchDelegateInfo.getRegionAt(i5);
+                    LinkedHashMap linkedHashMapM429314 = m42934(touchDelegateInfo.getTargetForRegion(regionAt2));
+                    Object[] objArr8 = new Object[4];
+                    objArr8[0] = "region";
+                    objArr8[1] = regionAt2;
+                    objArr8[2] = "target";
+                    objArr8[c3] = linkedHashMapM429314;
+                    arrayList2.add(m42936(objArr8));
+                }
             }
+            c4 = 2;
+            m42939(xmlSerializer, "touch-delegate-info", arrayList2);
+        } else {
+            c4 = 2;
+        }
+        i2 = Build.VERSION.SDK_INT;
+        if (i2 >= 30) {
+            m42940(xmlSerializer, "state-description", accessibilityNodeInfo.getStateDescription());
+            extraRenderingInfo = accessibilityNodeInfo.getExtraRenderingInfo();
+            if (extraRenderingInfo == null) {
+                linkedHashMapM429312 = null;
+            } else {
+                layoutSize = extraRenderingInfo.getLayoutSize();
+                if (layoutSize == null) {
+                    linkedHashMapM429311 = null;
+                } else {
+                    Integer numValueOf11 = Integer.valueOf(layoutSize.getWidth());
+                    Integer numValueOf12 = Integer.valueOf(layoutSize.getHeight());
+                    Object[] objArr9 = new Object[4];
+                    objArr9[0] = "width";
+                    objArr9[1] = numValueOf11;
+                    objArr9[c4] = "height";
+                    objArr9[c3] = numValueOf12;
+                    linkedHashMapM429311 = m42936(objArr9);
+                }
+                Float fValueOf2 = Float.valueOf(extraRenderingInfo.getTextSizeInPx());
+                Integer numValueOf13 = Integer.valueOf(extraRenderingInfo.getTextSizeUnit());
+                Object[] objArr10 = new Object[6];
+                objArr10[0] = "layout-size";
+                objArr10[1] = linkedHashMapM429311;
+                objArr10[c4] = "text-size-in-px";
+                objArr10[c3] = fValueOf2;
+                objArr10[4] = "text-size-unit";
+                objArr10[c2] = numValueOf13;
+                linkedHashMapM429312 = m42936(objArr10);
+            }
+            m42939(xmlSerializer, "extra-rendering-info", linkedHashMapM429312);
+        }
+        if (i2 >= 33) {
+            m42940(xmlSerializer, "unique-id", accessibilityNodeInfo.getUniqueId());
+            m42940(xmlSerializer, "text-selectable", Boolean.valueOf(accessibilityNodeInfo.isTextSelectable()));
+        }
+        if (i2 >= 34) {
+            accessibilityNodeInfo.getBoundsInWindow(rect);
+            m42940(xmlSerializer, "bounds-in-window", rect.toShortString());
+            m42940(xmlSerializer, "container-title", accessibilityNodeInfo.getContainerTitle());
+            m42940(xmlSerializer, "accessibility-data-sensitive", Boolean.valueOf(accessibilityNodeInfo.isAccessibilityDataSensitive()));
+            m42940(xmlSerializer, "request-initial-accessibility-focus", Boolean.valueOf(accessibilityNodeInfo.hasRequestInitialAccessibilityFocus()));
+            m42940(xmlSerializer, "min-duration-between-content-changes", C7070.convert(accessibilityNodeInfo.getMinDurationBetweenContentChanges()));
+        }
+        if (i2 >= 35) {
+            m42940(xmlSerializer, "granular-scrolling-supported", Boolean.valueOf(accessibilityNodeInfo.isGranularScrollingSupported()));
+        }
+        if (i2 >= 36) {
+            m42940(xmlSerializer, "checked-state", Integer.valueOf(accessibilityNodeInfo.getChecked()));
+            m42940(xmlSerializer, "expanded-state", Integer.valueOf(accessibilityNodeInfo.getExpandedState()));
+            m42940(xmlSerializer, "field-required", Boolean.valueOf(accessibilityNodeInfo.isFieldRequired()));
+            m42940(xmlSerializer, "supplemental-description", accessibilityNodeInfo.getSupplementalDescription());
+            arrayList = new ArrayList();
+            it = accessibilityNodeInfo.getLabeledByList().iterator();
+            while (it.hasNext()) {
+                arrayList.add(m42934((AccessibilityNodeInfo) it.next()));
+            }
+            m42939(xmlSerializer, "labeled-by-list", arrayList);
+        }
+        i3 = Build.VERSION.SDK_INT;
+        if (i3 >= 36) {
+            if (i3 < 36) {
+                i4 = 100000 * i3;
+            } else {
+                i4 = Build.VERSION.SDK_INT_FULL;
+            }
+            if (i4 >= 3600001) {
+                objM42934 = m42933(accessibilityNodeInfo, "getSelection");
+                if (objM42934 == null) {
+                    linkedHashMapM429310 = null;
+                } else {
+                    LinkedHashMap linkedHashMapM429315 = m42935(m42933(objM42934, "getStart"));
+                    LinkedHashMap linkedHashMapM429316 = m42935(m42933(objM42934, "getEnd"));
+                    Object[] objArr11 = new Object[4];
+                    objArr11[0] = "start";
+                    objArr11[1] = linkedHashMapM429315;
+                    objArr11[c4] = "end";
+                    objArr11[c3] = linkedHashMapM429316;
+                    linkedHashMapM429310 = m42936(objArr11);
+                }
+                m42939(xmlSerializer, "selection", linkedHashMapM429310);
+            }
+        }
+        if (i3 >= 37) {
+            objM42933 = m42933(accessibilityNodeInfo, "getStructuredDataInfo");
+            if (objM42933 == null) {
+                linkedHashMapM42939 = null;
+            } else {
+                Object objM42937 = m42933(objM42933, "getTag");
+                Object objM42938 = m42933(objM42933, "getAttributes");
+                Object[] objArr12 = new Object[4];
+                objArr12[0] = "tag";
+                objArr12[1] = objM42937;
+                objArr12[c4] = "attributes";
+                objArr12[c3] = objM42938;
+                linkedHashMapM42939 = m42936(objArr12);
+            }
+            m42939(xmlSerializer, "structured-data-info", linkedHashMapM42939);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42718(int i) {
-        this.f58725 = i;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m42732() {
-        int i = 0;
-        int i2 = 0;
-        int i3 = 384648030;
-        int i4 = C1668.f6641;
-        int i5 = RunnableC3388.f12514;
-        int iM11306 = (i4 - ThreadFactoryC3888.m11306("ۗܺ")) * 63;
-        int i6 = ((iM11306 ^ i5) * 17183) ^ (-1825126799);
-        int i7 = 1814439505;
-        while (true) {
-            i3 = ((((i3 ^ i5) * 14601) >> 31) & i6) ^ (iM11306 ^ i7);
-            switch (i3) {
-                case -2100757296:
-                case 1569222981:
-                    if (C1066.f4915 <= 0) {
-                        iM11306 = C19806.m45029("᩹ۨ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-15151)) ^ 835897514;
-                        i7 = -348197713;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("᩵᩻") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-19835)) ^ (-14630057);
-                        i7 = -623639046;
-                    }
-                    break;
-                case -1698626134:
-                case -448148760:
-                    if (RunnableC1606.f6488 >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩻᩻") ^ i4;
-                        i6 = ((iM11306 ^ i5) * MLKEMEngine.KyberQ) ^ (-2122384625);
-                        i7 = -754572969;
-                    } else {
-                        iM11306 = (i4 - ThreadFactoryC3888.m11306("ܰۜ")) * 79;
-                        i6 = ((iM11306 ^ i5) * (-11781)) ^ 618423146;
-                        i7 = -96423007;
-                    }
-                    break;
-                case -1384888895:
-                case 724329461:
-                    i = this.f58726;
-                    if (C1066.f4915 <= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩻᩻") ^ i4;
-                        i6 = ((iM11306 ^ i5) * MLKEMEngine.KyberQ) ^ (-2122384625);
-                        i7 = -754572969;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("֨ۙ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 16981) ^ (-48295810);
-                        i7 = -485300308;
-                    }
-                    break;
-                case -984396657:
-                case 159527328:
-                    return C11986.m29797(i, i2, this.f58725);
-                case -572981047:
-                case 156588269:
-                    i2 = this.f58736;
-                    if (C0050.f912 <= 0) {
-                        iM11306 = C19806.m45029("᩹ۨ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-15151)) ^ 835897514;
-                        i7 = -348197713;
-                    } else {
-                        iM11306 = (C19806.m45029("ᩳۚ") ^ i4) * (-87);
-                        i6 = ((iM11306 ^ i5) * 22677) ^ 1444506396;
-                        i7 = -1944446536;
-                    }
-                    break;
-                case -448469279:
-                case -330612780:
-                    RunnableC1895.m6170();
-                    C2332.m7079();
-                    return null;
-                case -365610600:
-                case 239567057:
-                    if (AbstractC0464.f2088 <= 0) {
-                        iM11306 = C19806.m45029("᩹ۨ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-15151)) ^ 835897514;
-                        i7 = -348197713;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("֫᩶") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-19755)) ^ 170351973;
-                        i7 = 230368030;
-                    }
-                    break;
-                case -207056401:
-                case 118811601:
-                    if (C0962.f3784) {
-                        iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                        i7 = 2066811026;
-                    } else {
-                        iM11306 = (i5 - C19806.m45029("᩶۟")) * (-43);
-                        i6 = ((iM11306 ^ i4) * (-13153)) ^ 748207878;
-                        i7 = -1671991978;
-                    }
-                    break;
-                case 305692394:
-                case 1966941855:
-                    AbstractC0464.m2313();
-                    if (C7105.f23796 < 0) {
-                        iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                        i7 = 2066811026;
-                    } else {
-                        iM11306 = C19806.m45029("ܽ۫") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-27329)) ^ (-797817073);
-                        i7 = -1185935597;
-                    }
-                    break;
-                case 415297548:
-                case 1351148546:
-                    if (C1875.f7103 >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩻᩻") ^ i4;
-                        i6 = ((iM11306 ^ i5) * MLKEMEngine.KyberQ) ^ (-2122384625);
-                        i7 = -754572969;
-                    } else {
-                        iM11306 = C19806.m45029("ۧܶ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 18291) ^ (-1713096807);
-                        i7 = 1138306137;
-                    }
-                    break;
-                case 431356415:
-                case 659560930:
-                    if (C1419.f5860 < 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩻᩻") ^ i4;
-                        i6 = ((iM11306 ^ i5) * MLKEMEngine.KyberQ) ^ (-2122384625);
-                        i7 = -754572969;
-                    } else {
-                        iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                        i7 = 2066811026;
-                    }
-                    break;
-                case 1049180813:
-                case 2124470121:
-                    C1148.m4232();
-                    RunnableC1606.m5473();
-                    iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                    i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                    i7 = 2066811026;
-                    break;
-                case 1154988771:
-                case 1331882282:
-                    if (RunnableC1895.f7152) {
-                        iM11306 = (C19806.m45029("ۚۚ") + i4) * 27;
-                        i6 = ((iM11306 ^ i5) * 31895) ^ (-814926072);
-                        i7 = -48562348;
-                    } else {
-                        iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                        i7 = 2066811026;
-                    }
-                    break;
-                case 1156093788:
-                case 1716850048:
-                    if (C3286.m9798() <= 0) {
-                        iM11306 = C19806.m45029("᩹ۨ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-15151)) ^ 835897514;
-                        i7 = -348197713;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۤ֨") + i5) * 69;
-                        i6 = ((iM11306 ^ i4) * (-4287)) ^ (-1721260706);
-                        i7 = -957045299;
-                    }
-                    break;
-                case 1171824377:
-                case 2098372642:
-                    if (ThreadFactoryC3888.f14547 <= 0) {
-                        iM11306 = C19806.m45029("᩹۬") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-3213)) ^ 1516021389;
-                        i7 = -526181051;
-                    } else {
-                        iM11306 = C19806.m45029("ܰۤ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 13949) ^ 1312429521;
-                        i7 = -890079122;
-                    }
-                    break;
-                default:
-                    C1875.m6086();
-                    if (CallableC1627.m5507() != 0) {
-                        iM11306 = C19806.m45029("᩹۬") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-3213)) ^ 1516021389;
-                        i7 = -526181051;
-                    } else {
-                        iM11306 = C19806.m45029("۟ۘ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-18029)) ^ 1834936526;
-                        i7 = 2066811026;
-                    }
-                    break;
+    public static LinkedHashMap m42934(AccessibilityNodeInfo accessibilityNodeInfo) {
+        if (accessibilityNodeInfo == null) {
+            return null;
+        }
+        try {
+            Rect rect = new Rect();
+            accessibilityNodeInfo.getBoundsInScreen(rect);
+            LinkedHashMap linkedHashMapM42936 = m42936("window-id", Integer.valueOf(accessibilityNodeInfo.getWindowId()), "package", accessibilityNodeInfo.getPackageName(), Name.LABEL, accessibilityNodeInfo.getClassName(), "resource-id", accessibilityNodeInfo.getViewIdResourceName(), TextBundle.TEXT_ENTRY, accessibilityNodeInfo.getText(), "bounds", rect.toShortString());
+            if (Build.VERSION.SDK_INT >= 33) {
+                linkedHashMapM42936.put("unique-id", accessibilityNodeInfo.getUniqueId());
             }
+            return linkedHashMapM42936;
+        } finally {
+            accessibilityNodeInfo.recycle();
         }
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m42735(int i) {
-        this.f58736 = i;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final int m42726() {
-        return this.f58726;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m42730(int i) {
-        this.f58726 = i;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m42734() {
-        return this.f58730;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m42737(String str) {
-        this.f58730 = str;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m42711() {
-        return this.f58729;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m42715(String str) {
-        this.f58729 = str;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String m42743() {
-        return this.f58721;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m42731(String str) {
-        this.f58721 = str;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static LinkedHashMap m42935(Object obj) {
+        if (obj == null) {
+            return null;
+        }
+        return m42936("node", m42934((AccessibilityNodeInfo) m42933(obj, "getNode")), "offset", m42933(obj, "getOffset"));
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m42717() {
-        return this.f58724;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42720(String str) {
-        this.f58724 = str;
-    }
-
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final String m42741() {
-        return this.f58734;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final void m42733(String str) {
-        this.f58734 = str;
-    }
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final int m42727() {
-        return this.f58727;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m42724(int i) {
-        this.f58727 = i;
-    }
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final boolean m42728() {
-        return this.f58728;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42722(boolean z) {
-        this.f58728 = z;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int m42738() {
-        return this.f58731;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m42714(int i) {
-        this.f58731 = i;
-    }
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final String m42742() {
-        return this.f58735;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final void m42744(String str) {
-        this.f58735 = str;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String m42716() {
-        return this.f58723;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m42725(String str) {
-        this.f58723 = str;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final long m42745() {
-        return this.f58737;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42719(long j) {
-        this.f58737 = j;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final String m42739() {
-        return this.f58732;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final void m42712(String str) {
-        String str2 = null;
-        int i = -1344150288;
-        int i2 = C2788.f10625;
-        int i3 = RunnableC0195.f1321;
-        int iM11306 = ThreadFactoryC3888.m11306("ۛ۠") ^ i2;
-        int i4 = ((iM11306 ^ i3) * (-28339)) ^ (-1619793572);
-        int i5 = 1458087988;
-        while (true) {
-            i = ((((i ^ i3) * (-32091)) >> 31) & i4) ^ (iM11306 ^ i5);
-            switch (i) {
-                case -2096719481:
-                case -1978667333:
-                    if (RunnableC1606.m5473() != 0) {
-                        iM11306 = (i2 - C19806.m45029("ܳܰ")) * 79;
-                        i4 = ((iM11306 ^ i3) * 11437) ^ (-417712471);
-                        i5 = 1350995322;
-                    } else {
-                        iM11306 = C19806.m45029("᩶ۖ") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 2913) ^ 1349135176;
-                        i5 = -1548145273;
-                    }
-                    break;
-                case -2017348868:
-                case 1765426820:
-                    C1460.m5050();
-                    C10634.m26820();
-                    break;
-                case -1975493100:
-                case -1631150977:
-                    if (C0216.f1393 != 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۙۚ") + i3) * 9;
-                        i4 = ((iM11306 ^ i2) * 22427) ^ 785409038;
-                        i5 = 1162711016;
-                    } else {
-                        iM11306 = C19806.m45029("᩵ۤ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * (-24533)) ^ (-784438863);
-                        i5 = -1710877944;
-                    }
-                    break;
-                case -1889046863:
-                case 1068997923:
-                    if (C3577.m10565()) {
-                        iM11306 = C19806.m45029("ۜ᩹") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 2787) ^ 970345891;
-                        i5 = 1605262303;
-                    } else {
-                        iM11306 = (i3 - ThreadFactoryC3888.m11306("ۜۡ")) * q.h;
-                        i4 = ((iM11306 ^ i2) * 2411) ^ 1063829981;
-                        i5 = 1232411301;
-                    }
-                    break;
-                case -1549080855:
-                case 744455594:
-                    if (C0629.m2907()) {
-                        iM11306 = (ThreadFactoryC3888.m11306("᩷᩸") ^ i3) * 27;
-                        i4 = ((iM11306 ^ i2) * 2893) ^ (-1469572885);
-                        i5 = 82828601;
-                    } else {
-                        iM11306 = (i3 - ThreadFactoryC3888.m11306("ۜۡ")) * q.h;
-                        i4 = ((iM11306 ^ i2) * 2411) ^ 1063829981;
-                        i5 = 1232411301;
-                    }
-                    break;
-                case -1538180156:
-                case 1129170943:
-                    if (str != null) {
-                        iM11306 = ThreadFactoryC3888.m11306("ۜ۠") ^ i3;
-                        i4 = ((iM11306 ^ i2) * (-25615)) ^ (-404780361);
-                        i5 = 122412398;
-                    } else {
-                        str2 = str;
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚۡ") + i2) * UMErrorCode.E_UM_BE_CREATE_FAILED;
-                        i4 = ((iM11306 ^ i3) * 3941) ^ 1894781059;
-                        i5 = -1877419925;
-                    }
-                    break;
-                case -1533095751:
-                case -285193985:
-                    if (C3660.m10786(str)) {
-                        iM11306 = C19806.m45029("ᩴۛ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * 9301) ^ (-1657206838);
-                        i5 = -1812705175;
-                    } else {
-                        str2 = str;
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚۡ") + i2) * UMErrorCode.E_UM_BE_CREATE_FAILED;
-                        i4 = ((iM11306 ^ i3) * 3941) ^ 1894781059;
-                        i5 = -1877419925;
-                    }
-                    break;
-                case -1215599565:
-                case 495723310:
-                    if (C2124.f7782 <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۧ۬") ^ i2) * (-87);
-                        i4 = ((iM11306 ^ i3) * 20595) ^ (-1206741726);
-                        i5 = 694906425;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ܽ᩷") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 28665) ^ (-1968866000);
-                        i5 = -942832791;
-                    }
-                    break;
-                case -760682628:
-                case -38982867:
-                    if (C2477.f9839 <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۧ۬") ^ i2) * (-87);
-                        i4 = ((iM11306 ^ i3) * 20595) ^ (-1206741726);
-                        i5 = 694906425;
-                    } else {
-                        iM11306 = C19806.m45029("ܺ֡") ^ i3;
-                        i4 = ((iM11306 ^ i2) * (-22057)) ^ (-878218891);
-                        i5 = -1370876790;
-                    }
-                    break;
-                case -390595880:
-                case 1700854418:
-                    C1977.m6356();
-                    if (!ViewGroupOnHierarchyChangeListenerC1916.f7262) {
-                        iM11306 = ThreadFactoryC3888.m11306("ܽ᩷") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 28665) ^ (-1968866000);
-                        i5 = -942832791;
-                    } else {
-                        iM11306 = (i2 - C19806.m45029("ܳܰ")) * 79;
-                        i4 = ((iM11306 ^ i3) * 11437) ^ (-417712471);
-                        i5 = 1350995322;
-                    }
-                    break;
-                case -326584658:
-                case 1382719448:
-                    if (C0278.m1789() <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۙۚ") + i3) * 9;
-                        i4 = ((iM11306 ^ i2) * 22427) ^ 785409038;
-                        i5 = 1162711016;
-                    } else {
-                        iM11306 = (i2 - ThreadFactoryC3888.m11306("ۗܿ")) * (-105);
-                        i4 = ((iM11306 ^ i3) * 26847) ^ 141152798;
-                        i5 = -1812760130;
-                    }
-                    break;
-                case -94412520:
-                case 1176076376:
-                    str2 = null;
-                    iM11306 = (ThreadFactoryC3888.m11306("ۚۡ") + i2) * UMErrorCode.E_UM_BE_CREATE_FAILED;
-                    i4 = ((iM11306 ^ i3) * 3941) ^ 1894781059;
-                    i5 = -1877419925;
-                    break;
-                case -85246245:
-                case 1255023030:
-                    if (C1875.f7103 >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("ܽ᩷") ^ i3;
-                        i4 = ((iM11306 ^ i2) * 28665) ^ (-1968866000);
-                        i5 = -942832791;
-                    } else {
-                        iM11306 = C19806.m45029("۠ۖ") ^ i2;
-                        i4 = ((iM11306 ^ i3) * (-21197)) ^ (-1374598742);
-                        i5 = 1984223177;
-                    }
-                    break;
-                case 7323892:
-                case 1670059833:
-                    if (C3660.f13403 >= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۧ۬") ^ i2) * (-87);
-                        i4 = ((iM11306 ^ i3) * 20595) ^ (-1206741726);
-                        i5 = 694906425;
-                    } else {
-                        iM11306 = (i2 - ThreadFactoryC3888.m11306("ۧᩴ")) * (-7);
-                        i4 = ((iM11306 ^ i3) * 11153) ^ 689164004;
-                        i5 = -889810545;
-                    }
-                    break;
-                case 94040503:
-                case 1679339488:
-                    C1937.m6279();
-                    if (C0671.m3008() >= 0) {
-                        iM11306 = (i2 - C19806.m45029("ܳܰ")) * 79;
-                        i4 = ((iM11306 ^ i3) * 11437) ^ (-417712471);
-                        i5 = 1350995322;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۙۚ") + i3) * 9;
-                        i4 = ((iM11306 ^ i2) * 22427) ^ 785409038;
-                        i5 = 1162711016;
-                    }
-                    break;
-                case 228534142:
-                case 859872133:
-                    if (ViewGroupOnHierarchyChangeListenerC1916.m6233() != 0) {
-                        iM11306 = (i3 - ThreadFactoryC3888.m11306("ۜۡ")) * q.h;
-                        i4 = ((iM11306 ^ i2) * 2411) ^ 1063829981;
-                        i5 = 1232411301;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۘ᩹") ^ i3) * (-63);
-                        i4 = ((iM11306 ^ i2) * (-5747)) ^ 781930438;
-                        i5 = -1859034799;
-                    }
-                    break;
-                case 1089570608:
-                case 1425402925:
-                    ViewTreeObserverOnPreDrawListenerC3327.m9874();
-                    C0278.m1789();
-                    iM11306 = (ThreadFactoryC3888.m11306("ۙۚ") + i3) * 9;
-                    i4 = ((iM11306 ^ i2) * 22427) ^ 785409038;
-                    i5 = 1162711016;
-                    break;
-                case 1178611534:
-                case 1340850897:
-                    if (C3535.m10431() <= 0) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۙۚ") + i3) * 9;
-                        i4 = ((iM11306 ^ i2) * 22427) ^ 785409038;
-                        i5 = 1162711016;
-                    } else {
-                        iM11306 = (C19806.m45029("ܿۨ") + i3) * 21;
-                        i4 = ((iM11306 ^ i2) * (-31451)) ^ (-570310161);
-                        i5 = -1971933737;
-                    }
-                    break;
-                default:
-                    this.f58732 = str2;
-                    break;
+    public static Object m42933(Object obj, String str) throws IOException {
+        try {
+            return obj.getClass().getMethod(str, null).invoke(obj, null);
+        } catch (ReflectiveOperationException e) {
+            e = e;
+            if (e instanceof InvocationTargetException) {
+                e = e.getCause();
             }
+            throw new IOException("Unable to read accessibility property: ".concat(str), e);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static LinkedHashMap m42936(Object... objArr) {
+        LinkedHashMap linkedHashMap = new LinkedHashMap();
+        for (int i = 0; i < objArr.length; i += 2) {
+            linkedHashMap.put((String) objArr[i], objArr[i + 1]);
+        }
+        return linkedHashMap;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m42940(XmlSerializer xmlSerializer, String str, Object obj) throws IOException {
+        C17147.m40291(xmlSerializer, str, obj == null ? "" : obj.toString());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m42939(XmlSerializer xmlSerializer, String str, Object obj) throws IOException {
+        if (obj == null) {
+            m42940(xmlSerializer, str, null);
             return;
         }
-    }
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final long m42740() {
-        return this.f58733;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m42736(long j) {
-        this.f58733 = j;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final JSONObject m42729() {
-        return this.f58722;
+        C2232 c2232 = new C2232();
+        JsonWriter jsonWriter = new JsonWriter(c2232);
+        jsonWriter.setIndent(EnumC7687.f25319);
+        try {
+            m42937(jsonWriter, obj, new IdentityHashMap(), 0);
+            jsonWriter.flush();
+            C17147.m40291(xmlSerializer, str, c2232.toString());
+        } catch (BadParcelableException e) {
+            m42940(xmlSerializer, str, "Unable to decode accessibility property: " + e.getMessage());
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42721(JSONObject jSONObject) {
-        this.f58722 = jSONObject;
+    public static void m42937(JsonWriter jsonWriter, Object obj, IdentityHashMap identityHashMap, int i) throws IOException {
+        if (i > 128) {
+            throw new IOException("Accessibility property nesting exceeds limit");
+        }
+        if (obj == null) {
+            jsonWriter.nullValue();
+            return;
+        }
+        if ((obj instanceof CharSequence) || (obj instanceof Character)) {
+            jsonWriter.value(obj.toString());
+            return;
+        }
+        if (obj instanceof Boolean) {
+            jsonWriter.value(((Boolean) obj).booleanValue());
+            return;
+        }
+        if (obj instanceof Number) {
+            Number number = (Number) obj;
+            double dDoubleValue = number.doubleValue();
+            if (Double.isNaN(dDoubleValue) || Double.isInfinite(dDoubleValue)) {
+                jsonWriter.value(obj.toString());
+                return;
+            } else {
+                jsonWriter.value(number);
+                return;
+            }
+        }
+        if (identityHashMap.put(obj, Boolean.TRUE) != null) {
+            throw new IOException("Cyclic accessibility property");
+        }
+        try {
+            if (obj instanceof Bundle) {
+                Bundle bundle = (Bundle) obj;
+                jsonWriter.beginObject();
+                for (String str : bundle.keySet()) {
+                    jsonWriter.name(str);
+                    m42937(jsonWriter, bundle.get(str), identityHashMap, i + 1);
+                }
+                jsonWriter.endObject();
+            } else if (obj instanceof Map) {
+                jsonWriter.beginObject();
+                for (Map.Entry entry : ((Map) obj).entrySet()) {
+                    jsonWriter.name(String.valueOf(entry.getKey()));
+                    m42937(jsonWriter, entry.getValue(), identityHashMap, i + 1);
+                }
+                jsonWriter.endObject();
+            } else if (obj instanceof Iterable) {
+                jsonWriter.beginArray();
+                Iterator it = ((Iterable) obj).iterator();
+                while (it.hasNext()) {
+                    m42937(jsonWriter, it.next(), identityHashMap, i + 1);
+                }
+                jsonWriter.endArray();
+            } else {
+                int i2 = 0;
+                if (obj instanceof SparseArray) {
+                    SparseArray sparseArray = (SparseArray) obj;
+                    jsonWriter.beginObject();
+                    while (i2 < sparseArray.size()) {
+                        jsonWriter.name(Integer.toString(sparseArray.keyAt(i2)));
+                        m42937(jsonWriter, sparseArray.valueAt(i2), identityHashMap, i + 1);
+                        i2++;
+                    }
+                    jsonWriter.endObject();
+                } else if (obj.getClass().isArray()) {
+                    jsonWriter.beginArray();
+                    while (i2 < Array.getLength(obj)) {
+                        m42937(jsonWriter, Array.get(obj, i2), identityHashMap, i + 1);
+                        i2++;
+                    }
+                    jsonWriter.endArray();
+                } else if (obj instanceof Rect) {
+                    jsonWriter.value(((Rect) obj).toShortString());
+                } else if (obj instanceof RectF) {
+                    RectF rectF = (RectF) obj;
+                    jsonWriter.beginArray().value(rectF.left).value(rectF.top).value(rectF.right).value(rectF.bottom).endArray();
+                } else if (obj instanceof Region) {
+                    jsonWriter.beginArray();
+                    RegionIterator regionIterator = new RegionIterator((Region) obj);
+                    Rect rect = new Rect();
+                    while (regionIterator.next(rect)) {
+                        jsonWriter.value(rect.toShortString());
+                    }
+                    jsonWriter.endArray();
+                } else {
+                    jsonWriter.beginObject().name("type").value(obj.getClass().getName()).name(b.d).value(obj.toString()).endObject();
+                }
+            }
+        } finally {
+            identityHashMap.remove(obj);
+        }
     }
 }

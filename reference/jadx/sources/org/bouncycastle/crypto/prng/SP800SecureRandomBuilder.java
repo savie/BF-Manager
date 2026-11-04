@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.prng;
 
 import java.security.SecureRandom;
-import l.C0242;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.Digest;
@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.prng.drbg.HashSP800DRBG;
 import org.bouncycastle.crypto.prng.drbg.SP80090DRBG;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SP800SecureRandomBuilder {
     public int entropyBitsRequired;
     public final EntropySourceProvider entropySourceProvider;
@@ -162,6 +162,6 @@ public class SP800SecureRandomBuilder {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(algorithmName.substring(0, iIndexOf));
-        return C0242.m1616(iIndexOf + 1, algorithmName, sb);
+        return ExternalValue$$ExternalSyntheticOutline0.m(iIndexOf + 1, algorithmName, sb);
     }
 }

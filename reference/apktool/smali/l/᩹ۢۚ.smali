@@ -1,99 +1,98 @@
 .class public final Ll/᩹ۢۚ;
 .super Ljava/lang/Object;
-.source "D5GW"
-
-# interfaces
-.implements Ljava/lang/AutoCloseable;
-
-
-# instance fields
-.field public final ֡:Ll/۬ۢۚ;
-
-.field public volatile ܺ:Z
-
-.field public ᩶:Z
+.source "O6L0"
 
 
 # direct methods
-.method public constructor <init>(Ll/۬ۢۚ;)V
-    .locals 0
+.method public static ۙ(Ll/᩷ܿۚ;Ll/֡ܿۚ;)Ljava/util/List;
+    .locals 7
 
-    .line 1059
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 28
+    new-instance v0, Ll/֡ᩳۚ;
 
-    .line 1060
-    iput-object p1, p0, Ll/᩹ۢۚ;->֡:Ll/۬ۢۚ;
+    invoke-direct {v0, p0}, Ll/֡ᩳۚ;-><init>(Ll/᩷ܿۚ;)V
 
-    return-void
-.end method
+    .line 29
+    new-instance v1, Ll/۫ۢۚ;
 
+    invoke-direct {v1, p0, p1}, Ll/۫ۢۚ;-><init>(Ll/᩷ܿۚ;Ll/֡ܿۚ;)V
 
-# virtual methods
-.method public final close()V
-    .locals 2
+    .line 30
+    new-instance v2, Ll/ۧۢۚ;
 
-    move-object v0, p0
+    .line 17
+    invoke-direct {v2, v0}, Ll/ܽۢۚ;-><init>(Ll/֡ᩳۚ;)V
 
-    .line 1075
-    monitor-enter v0
+    .line 30
+    new-instance v3, Ll/ܺۢۚ;
 
-    .line 1076
-    :try_start_0
-    iget-boolean v1, p0, Ll/᩹ۢۚ;->᩶:Z
+    .line 17
+    invoke-direct {v3, v0}, Ll/ܽۢۚ;-><init>(Ll/֡ᩳۚ;)V
 
-    if-eqz v1, :cond_0
+    .line 30
+    new-instance v4, Ll/᩻ۢۚ;
 
-    .line 1077
-    monitor-exit v0
+    .line 17
+    invoke-direct {v4, v0}, Ll/ܽۢۚ;-><init>(Ll/֡ᩳۚ;)V
 
-    return-void
+    .line 30
+    new-instance v5, Ll/ܶۢۚ;
 
-    :cond_0
-    const/4 v1, 0x1
+    .line 15
+    invoke-direct {v5, v0}, Ll/ܽۢۚ;-><init>(Ll/֡ᩳۚ;)V
 
-    .line 1079
-    iput-boolean v1, p0, Ll/᩹ۢۚ;->᩶:Z
+    .line 30
+    new-instance v0, Ll/֫ۢۚ;
 
-    .line 1080
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v6, Ll/ۨᩳۚ;
 
-    .line 1081
-    iget-object v0, p0, Ll/᩹ۢۚ;->֡:Ll/۬ۢۚ;
+    invoke-direct {v6, p0, p1}, Ll/ۨᩳۚ;-><init>(Ll/᩷ܿۚ;Ll/֡ܿۚ;)V
 
-    invoke-static {v0, p0}, Ll/۬ۢۚ;->ۙ(Ll/۬ۢۚ;Ll/᩹ۢۚ;)V
+    invoke-direct {v0, v6}, Ll/֫ۢۚ;-><init>(Ll/ۨᩳۚ;)V
 
-    return-void
+    new-instance p0, Ll/ۚۢۚ;
 
-    :catchall_0
-    move-exception v1
+    invoke-direct {p0, v1}, Ll/ۚۢۚ;-><init>(Ll/۫ۢۚ;)V
 
-    .line 1080
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    new-instance p1, Ll/ۗۢۚ;
 
-    throw v1
-.end method
+    invoke-direct {p1, v1}, Ll/ۗۢۚ;-><init>(Ll/۫ۢۚ;)V
 
-.method public final ۙ()V
-    .locals 1
+    const/4 v1, 0x7
 
-    const/4 v0, 0x1
+    new-array v1, v1, [Ll/ᩳܳۚ;
 
-    .line 1070
-    iput-boolean v0, p0, Ll/᩹ۢۚ;->ܺ:Z
+    const/4 v6, 0x0
 
-    return-void
-.end method
+    aput-object v2, v1, v6
 
-.method public final ۨ()Z
-    .locals 1
+    const/4 v2, 0x1
 
-    .line 1065
-    iget-boolean v0, p0, Ll/᩹ۢۚ;->ܺ:Z
+    aput-object v3, v1, v2
 
-    return v0
+    const/4 v2, 0x2
+
+    aput-object v4, v1, v2
+
+    const/4 v2, 0x3
+
+    aput-object v5, v1, v2
+
+    const/4 v2, 0x4
+
+    aput-object v0, v1, v2
+
+    const/4 v0, 0x5
+
+    aput-object p0, v1, v0
+
+    const/4 p0, 0x6
+
+    aput-object p1, v1, p0
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
 .end method

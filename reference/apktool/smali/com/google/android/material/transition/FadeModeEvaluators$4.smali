@@ -22,7 +22,7 @@
     .locals 2
 
     .line 67
-    invoke-static {p3, p2, p4, p2}, Ll/֡۠ۖ;->ۙ(FFFF)F
+    invoke-static {p3, p2, p4, p2}, Ll/ᩴܿ֫;->ۙ(FFFF)F
 
     move-result p4
 

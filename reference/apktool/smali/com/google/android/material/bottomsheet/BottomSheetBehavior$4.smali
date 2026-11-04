@@ -28,31 +28,31 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ܺۢ;
+.method public onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ۘۜ;
     .locals 10
 
     const/4 v0, 0x7
 
     .line 1743
-    invoke-virtual {p2, v0}, Ll/ܺۢ;->ۙ(I)Ll/ܰܿ;
+    invoke-virtual {p2, v0}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
     move-result-object v0
 
     const/16 v1, 0x20
 
     .line 1745
-    invoke-virtual {p2, v1}, Ll/ܺۢ;->ۙ(I)Ll/ܰܿ;
+    invoke-virtual {p2, v1}, Ll/ۘۜ;->ۙ(I)Ll/۫ᩳ;
 
     move-result-object v1
 
     .line 1747
     iget-object v2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$4;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget v3, v0, Ll/ܰܿ;->ۖ:I
+    iget v3, v0, Ll/۫ᩳ;->᩸:I
 
-    iget v4, v0, Ll/ܰܿ;->ۨ:I
+    iget v4, v0, Ll/۫ᩳ;->ۤ:I
 
-    iget v5, v0, Ll/ܰܿ;->ܰ:I
+    iget v5, v0, Ll/۫ᩳ;->᩷:I
 
     invoke-static {v2, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->access$302(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)I
 
@@ -88,7 +88,7 @@
     .line 1758
     iget-object v3, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$4;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    invoke-virtual {p2}, Ll/ܺۢ;->֨()I
+    invoke-virtual {p2}, Ll/ۘۜ;->۫()I
 
     move-result v8
 
@@ -217,7 +217,7 @@
 
     iget v4, p3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    iget v0, v0, Ll/ܰܿ;->ۖ:I
+    iget v0, v0, Ll/۫ᩳ;->᩸:I
 
     if-eq v4, v0, :cond_7
 
@@ -251,7 +251,7 @@
     .line 1796
     iget-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$4;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget p3, v1, Ll/ܰܿ;->ۙ:I
+    iget p3, v1, Ll/۫ᩳ;->ۙ:I
 
     invoke-static {p1, p3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->access$1102(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)I
 

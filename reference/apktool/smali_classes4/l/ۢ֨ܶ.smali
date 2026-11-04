@@ -1,259 +1,150 @@
 .class public final Ll/ۢ֨ܶ;
-.super Ll/۫۬ܶ;
-.source "F5QL"
+.super Ll/᩶֨ܶ;
+.source "V8DC"
 
 
 # instance fields
-.field public final ۛ:Z
-
-.field public final ۧ:Ll/᩶ܶܶ;
-
-.field public final ۫:Ll/֡ۚܶ;
-
-.field public ܿ:[B
+.field public final synthetic ᩳ:Ll/֨֨ܶ;
 
 
 # direct methods
-.method public constructor <init>(Ll/֡ۚܶ;ZLl/᩶ܶܶ;)V
-    .locals 2
+.method public constructor <init>(Ll/֨֨ܶ;Ll/۠᩷᩻;II)V
+    .locals 1
 
-    const/4 v0, 0x1
+    .line 52
+    iput-object p1, p0, Ll/ۢ֨ܶ;->ᩳ:Ll/֨֨ܶ;
 
-    const/4 v1, -0x1
+    .line 41
+    invoke-direct {p0, p1}, Ljava/util/EventObject;-><init>(Ljava/lang/Object;)V
 
-    .line 49
-    invoke-direct {p0, v0, v1}, Ll/۫۬ܶ;-><init>(II)V
+    add-int p1, p3, p4
 
-    if-eqz p1, :cond_0
+    .line 78
+    invoke-virtual {p2}, Ll/۠᩷᩻;->᩷()I
 
-    .line 55
-    iput-object p1, p0, Ll/ۢ֨ܶ;->۫:Ll/֡ۚܶ;
+    move-result v0
 
-    .line 56
-    iput-boolean p2, p0, Ll/ۢ֨ܶ;->ۛ:Z
+    if-gt p1, v0, :cond_1
 
-    .line 57
-    iput-object p3, p0, Ll/ۢ֨ܶ;->ۧ:Ll/᩶ܶܶ;
+    if-ltz p3, :cond_0
+
+    .line 84
+    iput-object p2, p0, Ll/᩶֨ܶ;->۟:Ll/۠᩷᩻;
+
+    .line 85
+    new-instance p1, Ll/֡֨ܶ;
+
+    const/4 p2, 0x3
+
+    .line 24
+    invoke-direct {p1, p2}, Ll/۠᩷᩻;-><init>(I)V
+
+    .line 86
+    iput p3, p0, Ll/ܿ֨ܶ;->֡:I
+
+    .line 87
+    iput p4, p0, Ll/ܿ֨ܶ;->᩶:I
 
     return-void
 
-    .line 52
+    .line 81
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "code == null"
+    const-string p2, "tried to queue before start of data, "
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 0
+    invoke-static {p3, p2}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 81
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
 
-.method private ۙ(Ll/ۙ۬ܶ;Ljava/lang/String;Ll/ۖᩴܶ;Z)[B
-    .locals 9
+    .line 79
+    :cond_1
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    .line 187
-    iget-object v0, p0, Ll/ۢ֨ܶ;->۫:Ll/֡ۚܶ;
+    const-string p3, "tried to queue past end of data, "
 
-    invoke-virtual {v0}, Ll/֡ۚܶ;->᩹()Ll/ۘ᩹ܶ;
-
-    move-result-object v2
-
-    .line 188
-    invoke-virtual {v0}, Ll/֡ۚܶ;->ۚ()Ll/ۙ᩹ܶ;
-
-    move-result-object v3
-
-    .line 189
-    invoke-virtual {v0}, Ll/֡ۚܶ;->ۖ()Ll/۫ۚܶ;
-
-    move-result-object v0
-
-    .line 190
-    invoke-virtual {v0}, Ll/۫ۚܶ;->ۤ()I
-
-    move-result v5
-
-    .line 191
-    invoke-virtual {v0}, Ll/۫ۚܶ;->᩷()I
-
-    move-result v6
-
-    .line 193
-    new-instance v0, Ll/֫֨ܶ;
-
-    iget-boolean v7, p0, Ll/ۢ֨ܶ;->ۛ:Z
-
-    iget-object v8, p0, Ll/ۢ֨ܶ;->ۧ:Ll/᩶ܶܶ;
-
-    move-object v1, v0
-
-    move-object v4, p1
-
-    invoke-direct/range {v1 .. v8}, Ll/֫֨ܶ;-><init>(Ll/ۘ᩹ܶ;Ll/ۙ᩹ܶ;Ll/ۙ۬ܶ;IIZLl/᩶ܶܶ;)V
-
-    if-nez p3, :cond_0
-
-    .line 200
-    invoke-virtual {v0}, Ll/֫֨ܶ;->ۙ()[B
+    .line 0
+    invoke-static {p1, p3}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    .line 79
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 202
-    :cond_0
-    invoke-virtual {v0, p2, p3, p4}, Ll/֫֨ܶ;->ۙ(Ljava/lang/String;Ll/᩻ᩳܶ;Z)[B
-
-    move-result-object p1
-
-    return-object p1
+    throw p2
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ᩳ۬ܶ;
-    .locals 1
-
-    .line 65
-    sget-object v0, Ll/ᩳ۬ܶ;->ۙۙ:Ll/ᩳ۬ܶ;
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/ۙ۬ܶ;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ۜ()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    .line 97
-    new-instance v0, Ljava/lang/RuntimeException;
+    .line 58
+    iget-object v0, p0, Ll/ۢ֨ܶ;->ᩳ:Ll/֨֨ܶ;
 
-    const-string v1, "unsupported"
+    invoke-static {v0}, Ll/֨֨ܶ;->ۙ(Ll/֨֨ܶ;)Ljava/util/LinkedList;
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
-.end method
+    monitor-enter v0
 
-.method public final ۨ(Ll/ۙ۬ܶ;Ll/ۖᩴܶ;)V
-    .locals 2
+    .line 60
+    :try_start_0
+    iget-object v1, p0, Ll/ۢ֨ܶ;->ᩳ:Ll/֨֨ܶ;
 
-    const-string v0, "    "
-
-    const/4 v1, 0x0
-
-    .line 111
-    invoke-direct {p0, p1, v0, p2, v1}, Ll/ۢ֨ܶ;->ۙ(Ll/ۙ۬ܶ;Ljava/lang/String;Ll/ۖᩴܶ;Z)[B
-
-    return-void
-.end method
-
-.method public final ܰ(Ll/ۙ۬ܶ;Ll/ۖᩴܶ;)V
-    .locals 2
-
-    .line 129
-    invoke-virtual {p2}, Ll/ۖᩴܶ;->ۙ()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 135
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ll/۫۬ܶ;->ۘ()Ljava/lang/String;
+    invoke-static {v1}, Ll/֨֨ܶ;->ۙ(Ll/֨֨ܶ;)Ljava/util/LinkedList;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
-    const-string v1, " debug info"
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-lez v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 61
+    iget-object v1, p0, Ll/ۢ֨ܶ;->ᩳ:Ll/֨֨ܶ;
 
-    move-result-object v0
+    invoke-static {v1}, Ll/֨֨ܶ;->ۙ(Ll/֨֨ܶ;)Ljava/util/LinkedList;
 
-    invoke-virtual {p2, v0}, Ll/ۖᩴܶ;->ۙ(Ljava/lang/String;)V
+    move-result-object v1
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    .line 136
-    invoke-direct {p0, p1, v0, p2, v1}, Ll/ۢ֨ܶ;->ۙ(Ll/ۙ۬ܶ;Ljava/lang/String;Ll/ۖᩴܶ;Z)[B
+    check-cast v1, Ll/ܿ֨ܶ;
 
-    .line 139
+    .line 62
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 89
     :cond_0
-    iget-object p1, p0, Ll/ۢ֨ܶ;->ܿ:[B
+    iget-object v1, p0, Ll/ۢ֨ܶ;->ᩳ:Ll/֨֨ܶ;
 
-    invoke-virtual {p2, p1}, Ll/ۖᩴܶ;->ۙ([B)V
+    invoke-static {v1}, Ll/֨֨ܶ;->ۙ(Ll/֨֨ܶ;)Ljava/util/LinkedList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    .line 90
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final ܰ(Ll/ܽ۬ܶ;I)V
-    .locals 1
+    :catchall_0
+    move-exception v1
 
-    .line 84
-    :try_start_0
-    invoke-virtual {p1}, Ll/᩻۬ܶ;->ܰ()Ll/ۙ۬ܶ;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0, v0, p2}, Ll/ۢ֨ܶ;->ۙ(Ll/ۙ۬ܶ;Ljava/lang/String;Ll/ۖᩴܶ;Z)[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۢ֨ܶ;->ܿ:[B
-
-    .line 85
-    array-length p1, p1
-
-    invoke-virtual {p0, p1}, Ll/۫۬ܶ;->ۙ(I)V
+    monitor-exit v0
     :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    .line 87
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "...while placing debug info for "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Ll/ۢ֨ܶ;->ۧ:Ll/᩶ܶܶ;
-
-    .line 88
-    invoke-virtual {v0}, Ll/᩷ܶܶ;->ۙ()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 87
-    invoke-static {p2, p1}, Ll/۟ܰܶ;->ۙ(Ljava/lang/String;Ljava/lang/Exception;)Ll/۟ܰܶ;
-
-    move-result-object p1
-
-    throw p1
+    throw v1
 .end method

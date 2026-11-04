@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:Lcom/amazonaws/services/s3/model/Grantee;
 
-.field public ܰ:Lcom/amazonaws/services/s3/model/Permission;
+.field public ᩷:Lcom/amazonaws/services/s3/model/Permission;
 
 
 # direct methods
@@ -20,7 +20,7 @@
     iput-object p1, p0, Lcom/amazonaws/services/s3/model/Grant;->ۙ:Lcom/amazonaws/services/s3/model/Grantee;
 
     .line 40
-    iput-object p2, p0, Lcom/amazonaws/services/s3/model/Grant;->ܰ:Lcom/amazonaws/services/s3/model/Permission;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/model/Grant;->᩷:Lcom/amazonaws/services/s3/model/Permission;
 
     return-void
 .end method
@@ -84,9 +84,9 @@
 
     .line 94
     :cond_4
-    iget-object v2, p0, Lcom/amazonaws/services/s3/model/Grant;->ܰ:Lcom/amazonaws/services/s3/model/Permission;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/model/Grant;->᩷:Lcom/amazonaws/services/s3/model/Permission;
 
-    iget-object p1, p1, Lcom/amazonaws/services/s3/model/Grant;->ܰ:Lcom/amazonaws/services/s3/model/Permission;
+    iget-object p1, p1, Lcom/amazonaws/services/s3/model/Grant;->᩷:Lcom/amazonaws/services/s3/model/Permission;
 
     if-eq v2, p1, :cond_5
 
@@ -121,7 +121,7 @@
     mul-int/lit8 v1, v1, 0x1f
 
     .line 72
-    iget-object v2, p0, Lcom/amazonaws/services/s3/model/Grant;->ܰ:Lcom/amazonaws/services/s3/model/Permission;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/model/Grant;->᩷:Lcom/amazonaws/services/s3/model/Permission;
 
     if-nez v2, :cond_1
 
@@ -156,7 +156,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Grant;->ܰ:Lcom/amazonaws/services/s3/model/Permission;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/Grant;->᩷:Lcom/amazonaws/services/s3/model/Permission;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

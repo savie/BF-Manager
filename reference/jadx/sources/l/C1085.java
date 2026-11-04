@@ -1,71 +1,45 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۧ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: R7U1 */
+import android.media.MediaDataSource;
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.֨ۢۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26KB */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1085 implements InterfaceC17314 {
-    @Override // l.InterfaceC17314
-    public final void apply() {
+public final class C1085 extends MediaDataSource {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public volatile boolean f3879;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final MediaDataSource f3880;
+
+    public C1085(MediaDataSource mediaDataSource) {
+        this.f3880 = mediaDataSource;
     }
 
-    @Override // l.InterfaceC17314
-    public final boolean commit() {
-        return true;
+    @Override // android.media.MediaDataSource
+    public final int readAt(long j, byte[] bArr, int i, int i2) throws IOException {
+        try {
+            return this.f3880.readAt(j, bArr, i, i2);
+        } catch (IOException e) {
+            this.f3879 = true;
+            throw e;
+        }
     }
 
-    @Override // l.InterfaceC17314
-    public final InterfaceC17314 putBoolean(String str, boolean z) {
-        return this;
+    @Override // android.media.MediaDataSource
+    public final long getSize() throws IOException {
+        try {
+            return this.f3880.getSize();
+        } catch (IOException e) {
+            this.f3879 = true;
+            throw e;
+        }
     }
 
-    @Override // l.InterfaceC17314
-    public final InterfaceC17314 putFloat(String str, float f) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    public final InterfaceC17314 putString(String str, String str2) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    public final InterfaceC17314 remove(String str) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4064(byte b, String str) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4065(int i, String str) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4066(long j, String str) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4067(String str, byte[] bArr) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4068(String str, int[] iArr) {
-        return this;
-    }
-
-    @Override // l.InterfaceC17314
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC17314 mo4069(String str, String[] strArr) {
-        return this;
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        this.f3880.close();
     }
 }

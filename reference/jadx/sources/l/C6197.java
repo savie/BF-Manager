@@ -1,29 +1,29 @@
 package l;
 
-import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۛܿۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 46PA */
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: renamed from: l.ۛۛۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8SC */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C6197 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C4943 f21078;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C2338 f21079;
+    public final AbstractC1928 f21095;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f21080;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C15891 f21096;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C19273 f21081;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C16637 f21097;
 
-    public C6197(C4943 c4943, C19273 c19273, C5161 c5161) {
-        this.f21078 = c4943;
-        this.f21081 = c19273;
-        this.f21080 = c5161.f17913;
-        C11512 c11512 = c5161.f17908;
-        this.f21079 = c11512 == null ? null : c11512.m28695(c19273.f62225.length());
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C12162 f21098;
+
+    public C6197(List list, C16637 c16637, C15891 c15891, C12162 c12162) {
+        this.f21095 = list != null ? AbstractC1928.copyOf((Collection) list) : AbstractC1928.of();
+        this.f21097 = c16637;
+        this.f21096 = c15891;
+        this.f21098 = c12162;
     }
 }

@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import javax.crypto.spec.IvParameterSpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AEADParameterSpec extends IvParameterSpec {
     public final byte[] associatedData;
     public final int macSizeInBits;

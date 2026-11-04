@@ -1,28 +1,52 @@
 package l;
 
-import java.util.ArrayList;
+import android.os.Build;
+import android.os.IBinder;
+import android.text.TextUtils;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.᩻ۨ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7AI */
+/* JADX INFO: renamed from: l.᩹ܽۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X6AW */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23678 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f76607;
+public final class C23678 implements IBinder.DeathRecipient {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f76608;
+    public final InterfaceC22888 f76776;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f76609;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f76777;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f76610;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f76778;
 
-    public C23678(ArrayList arrayList, int i, int i2, int i3, boolean z) {
-        this.f76610 = arrayList;
-        this.f76607 = i2;
-        this.f76609 = i3;
-        this.f76608 = z;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractServiceC13191 f76779;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f76780;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f76781 = new HashMap();
+
+    public C23678(AbstractServiceC13191 abstractServiceC13191, String str, int i, int i2, C19904 c19904) {
+        this.f76779 = abstractServiceC13191;
+        this.f76777 = str;
+        this.f76780 = i;
+        this.f76778 = i2;
+        if (str == null) {
+            throw new NullPointerException("package shouldn't be null");
+        }
+        if (TextUtils.isEmpty(str)) {
+            throw new IllegalArgumentException("packageName should be nonempty");
+        }
+        if (Build.VERSION.SDK_INT >= 28) {
+            C2005.m6846(i, i2, str);
+        }
+        this.f76776 = c19904;
+    }
+
+    @Override // android.os.IBinder.DeathRecipient
+    public final void binderDied() {
+        this.f76779.f42130.post(new RunnableC16218(this));
     }
 }

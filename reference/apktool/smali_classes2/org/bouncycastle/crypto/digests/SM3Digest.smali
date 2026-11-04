@@ -510,7 +510,7 @@
 
     move-result v13
 
-    invoke-static {v13, v7, v3, v11}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v13, v7, v3, v11}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v3
 
@@ -518,7 +518,7 @@
 
     move-result v7
 
-    invoke-static {v7, v2, v15, v14}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v7, v2, v15, v14}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v2
 
@@ -626,7 +626,7 @@
 
     move-result v11
 
-    invoke-static {v11, v8, v15, v12}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v11, v8, v15, v12}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v8
 
@@ -634,7 +634,7 @@
 
     move-result v11
 
-    invoke-static {v11, v4, v13, v3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v11, v4, v13, v3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v3
 

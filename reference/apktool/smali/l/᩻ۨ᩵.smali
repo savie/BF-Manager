@@ -1,66 +1,146 @@
-.class public interface abstract Ll/᩻ۨ᩵;
-.super Ljava/lang/Object;
-.source "W4D8"
+.class public Ll/᩻ۨ᩵;
+.super Ll/۬᩵᩵;
+.source "9A0K"
 
-# interfaces
-.implements Ll/ۤۖ᩵;
-.implements Ljava/nio/channels/ReadableByteChannel;
+
+# instance fields
+.field public ֨:I
+
+.field public ۖ:I
+
+.field public ۜ:Ljava/lang/String;
+
+.field public ۠:I
+
+.field public ۡ:I
+
+.field public ۢ:Ll/ۛۨ᩵;
 
 
 # virtual methods
-.method public abstract readByte()B
+.method public final ۙ()I
+    .locals 1
+
+    const/16 v0, 0xf
+
+    return v0
 .end method
 
-.method public abstract readFully([B)V
+.method public final ܳ(Ll/ۗۨ᩵;)V
+    .locals 1
+
+    .line 404
+    iget-object v0, p0, Ll/᩻ۨ᩵;->ۜ:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_0
+
+    .line 406
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/String;)V
+
+    .line 409
+    :cond_0
+    iget v0, p0, Ll/᩻ۨ᩵;->֨:I
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    .line 410
+    iget v0, p0, Ll/᩻ۨ᩵;->֨:I
+
+    .line 411
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    .line 412
+    iget-object v0, p0, Ll/᩻ۨ᩵;->ۢ:Ll/ۛۨ᩵;
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/Object;)V
+
+    .line 413
+    iget-object v0, p0, Ll/᩻ۨ᩵;->ۢ:Ll/ۛۨ᩵;
+
+    if-eqz v0, :cond_1
+
+    .line 414
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
+
+    .line 415
+    invoke-virtual {v0, p1}, Ll/ۛۨ᩵;->᩷(Ll/ۗۨ᩵;)V
+
+    .line 418
+    :cond_1
+    iget v0, p0, Ll/᩻ۨ᩵;->ۡ:I
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    .line 419
+    iget v0, p0, Ll/᩻ۨ᩵;->ۖ:I
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    return-void
 .end method
 
-.method public abstract readInt()I
-.end method
+.method public final ᩸(Ll/ۗۨ᩵;)V
+    .locals 1
 
-.method public abstract readShort()S
-.end method
+    .line 425
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
-.method public abstract skip(J)V
-.end method
+    move-result v0
 
-.method public abstract ۘ()Ll/ۛۨ᩵;
-.end method
+    iput v0, p0, Ll/᩻ۨ᩵;->֨:I
 
-.method public abstract ۙ(Ll/ۡۖ᩵;)J
-.end method
+    .line 426
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
-.method public abstract ۙ(J)Ljava/lang/String;
-.end method
+    .line 427
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
-.method public abstract ۙ(Ljava/nio/charset/Charset;)Ljava/lang/String;
-.end method
+    move-result v0
 
-.method public abstract ۚ(J)V
-.end method
+    if-eqz v0, :cond_1
 
-.method public abstract ۜۨ()J
-.end method
+    .line 429
+    iget-object v0, p0, Ll/᩻ۨ᩵;->ۢ:Ll/ۛۨ᩵;
 
-.method public abstract ۜܰ()Z
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract ۠ܰ()J
-.end method
+    .line 430
+    new-instance v0, Ll/ܶۨ᩵;
 
-.method public abstract ۨ(J)[B
-.end method
+    .line 24
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ۬(J)Ll/ܳۨ᩵;
-.end method
+    .line 430
+    iput-object v0, p0, Ll/᩻ۨ᩵;->ۢ:Ll/ۛۨ᩵;
 
-.method public abstract ۬ܰ()[B
-.end method
+    .line 432
+    :cond_0
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
 
-.method public abstract ܰ(Ll/ܳۨ᩵;)Z
-.end method
+    .line 433
+    iget-object v0, p0, Ll/᩻ۨ᩵;->ۢ:Ll/ۛۨ᩵;
 
-.method public abstract ᩵ۙ()Ljava/lang/String;
-.end method
+    invoke-virtual {v0, p1}, Ll/ۛۨ᩵;->ۙ(Ll/ۗۨ᩵;)V
 
-.method public abstract ᩺ۨ()Ljava/io/InputStream;
+    .line 436
+    :cond_1
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
+
+    .line 437
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
+
+    move-result v0
+
+    iput v0, p0, Ll/᩻ۨ᩵;->ۖ:I
+
+    .line 438
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
+
+    move-result p1
+
+    iput p1, p0, Ll/᩻ۨ᩵;->۠:I
+
+    return-void
 .end method

@@ -1,88 +1,45 @@
-.class public final synthetic Ll/ۙܺ;
+.class public final Ll/ۙܺ;
 .super Ljava/lang/Object;
-.source "Z1JV"
-
-
-# static fields
-.field public static final synthetic ۙ:[I
+.source "S566"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public static ۙ(Landroid/widget/TextView;)I
+    .locals 0
 
-    .line 660
-    invoke-static {}, Ll/۟۟;->values()[Ll/۟۟;
+    .line 746
+    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
 
-    move-result-object v0
+    move-result p0
 
-    array-length v0, v0
+    return p0
+.end method
 
-    new-array v0, v0, [I
+.method public static ۙ(Landroid/widget/TextView;IIII)V
+    .locals 0
 
-    sput-object v0, Ll/ۙܺ;->ۙ:[I
+    .line 753
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
 
-    :try_start_0
-    sget-object v1, Ll/۟۟;->᩶:Ll/۟۟;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ۙܺ;->ۙ:[I
-
-    sget-object v1, Ll/۟۟;->۫:Ll/۟۟;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/ۙܺ;->ۙ:[I
-
-    sget-object v1, Ll/۟۟;->ܽ:Ll/۟۟;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll/ۙܺ;->ۙ:[I
-
-    sget-object v1, Ll/۟۟;->֡:Ll/۟۟;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
     return-void
+.end method
+
+.method public static ۙ(Landroid/widget/TextView;[II)V
+    .locals 0
+
+    .line 760
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+
+    return-void
+.end method
+
+.method public static ۙ(Landroid/widget/TextView;Ljava/lang/String;)Z
+    .locals 0
+
+    .line 741
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
 .end method

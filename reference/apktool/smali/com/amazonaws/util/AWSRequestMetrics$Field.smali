@@ -9,45 +9,45 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ֨ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ֨:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ֫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
-
-.field public static final enum ۖۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
-
-.field public static final enum ۗ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ۖ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
 .field public static final enum ۙۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
 .field public static final enum ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ۛ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ۜ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+
+.field public static final enum ۟:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+
+.field public static final enum ۠:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+
+.field public static final enum ۡ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
 .field public static final enum ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ۧ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ۤۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ۨۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ۫ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ۫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ۬:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ۬ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ܰۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
-
-.field public static final enum ܳ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
-
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
-
-.field public static final enum ܽ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ܳۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
 .field public static final enum ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
+.field public static final enum ᩳ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+
+.field public static final enum ᩴۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+
 .field public static final enum ᩶:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ᩹ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ᩷ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-.field public static final enum ᩻:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+.field public static final enum ᩸ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
 
 # direct methods
@@ -74,7 +74,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 57
     new-instance v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -85,7 +85,7 @@
 
     invoke-direct {v2, v3, v4}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܽ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 64
     new-instance v3, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -96,7 +96,7 @@
 
     invoke-direct {v3, v4, v5}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v3, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۟:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 67
     new-instance v4, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -107,7 +107,7 @@
 
     invoke-direct {v4, v5, v6}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v4, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v4, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ᩳ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 70
     new-instance v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -118,7 +118,7 @@
 
     invoke-direct {v5, v6, v7}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۛ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 75
     new-instance v6, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -129,7 +129,7 @@
 
     invoke-direct {v6, v7, v8}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v6, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v6, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۠:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 78
     new-instance v7, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -140,7 +140,7 @@
 
     invoke-direct {v7, v8, v10}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v7, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v7, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۜ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 81
     new-instance v8, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -162,7 +162,7 @@
 
     invoke-direct {v11, v14, v13}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v11, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܰۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v11, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩷ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 90
     new-instance v13, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -175,7 +175,7 @@
 
     invoke-direct {v13, v14, v10}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v13, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۨۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v13, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۤۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 94
     new-instance v10, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -188,7 +188,7 @@
 
     invoke-direct {v10, v14, v15}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v10, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۗ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v10, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 98
     new-instance v14, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -201,7 +201,7 @@
 
     invoke-direct {v14, v15, v12}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v14, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۖۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v14, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩸ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 104
     new-instance v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -214,7 +214,7 @@
 
     invoke-direct {v12, v15, v9}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩻:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۡ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 109
     new-instance v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -227,7 +227,7 @@
 
     invoke-direct {v9, v15, v12}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܳ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۖ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 114
     new-instance v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -240,7 +240,7 @@
 
     invoke-direct {v12, v15, v9}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۧ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֨:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 117
     new-instance v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -253,7 +253,7 @@
 
     invoke-direct {v9, v15, v12}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ᩴۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 123
     new-instance v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -266,7 +266,7 @@
 
     invoke-direct {v12, v15, v9}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩹ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܳۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 126
     new-instance v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -279,7 +279,7 @@
 
     invoke-direct {v9, v15, v12}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֨ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v9, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۫ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     .line 129
     new-instance v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;
@@ -292,7 +292,7 @@
 
     invoke-direct {v12, v15, v9}, Lcom/amazonaws/util/AWSRequestMetrics$Field;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v12, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     const/16 v15, 0x14
 
@@ -369,7 +369,7 @@
     aput-object v12, v15, v9
 
     .line 48
-    sput-object v15, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܺ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sput-object v15, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܰ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     return-void
 .end method
@@ -402,7 +402,7 @@
     .locals 1
 
     .line 48
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܺ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܰ:[Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/AWSRequestMetrics$Field;->clone()Ljava/lang/Object;
 

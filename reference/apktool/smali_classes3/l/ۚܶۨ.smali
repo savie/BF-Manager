@@ -1,29 +1,28 @@
 .class public final Ll/ۚܶۨ;
-.super Ljava/lang/Object;
-.source "N53S"
+.super Ll/ܽܽۨ;
+.source "WAT7"
 
-# interfaces
-.implements Ll/᩸ۜۨ;
+
+# instance fields
+.field public ۚ:Ll/ܽܽۨ;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 10
+    invoke-direct {p0}, Ll/ܽܽۨ;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 2
+.method public final ᩷()I
+    .locals 1
 
-    .line 37
-    new-instance v0, Ll/ܳۘۨ;
+    const/16 v0, 0xc
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
-
-    .line 38
-    invoke-static {}, Ll/֫۠᩺;->᩹()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(Ljava/lang/String;)V
-
-    .line 39
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
-
-    return-void
+    return v0
 .end method

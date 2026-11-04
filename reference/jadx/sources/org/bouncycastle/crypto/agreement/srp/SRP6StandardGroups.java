@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.crypto.params.SRP6GroupParameters;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SRP6StandardGroups {
     public static final String rfc5054_1024_g = "02";
     public static final String rfc5054_1536_g = "02";

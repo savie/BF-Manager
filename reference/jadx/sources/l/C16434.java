@@ -1,68 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۚۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L7ER */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C16434 {
+import android.content.Context;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.widget.SeekBar;
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52854;
+/* JADX INFO: renamed from: l.ܶ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: I5W3 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C16434 extends SeekBar {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f52855;
+    public final C23894 f53316;
 
-    static {
-        int[] iArr = new int[EnumC9728.values().length];
-        f52855 = iArr;
-        try {
-            iArr[EnumC9728.ITEM_Object.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f52855[EnumC9728.ITEM_NewObject.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        int[] iArr2 = new int[EnumC1965.values().length];
-        f52854 = iArr2;
-        try {
-            iArr2[EnumC1965.EARLY_LARVAL.ordinal()] = 1;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f52854[EnumC1965.SAME_FRAME.ordinal()] = 2;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f52854[EnumC1965.SAME_FRAME_EXTENDED.ordinal()] = 3;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f52854[EnumC1965.SAME_LOCALS_1_STACK_ITEM_FRAME.ordinal()] = 4;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f52854[EnumC1965.SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED.ordinal()] = 5;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f52854[EnumC1965.CHOP_1_FRAME.ordinal()] = 6;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f52854[EnumC1965.CHOP_2_FRAME.ordinal()] = 7;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f52854[EnumC1965.CHOP_3_FRAME.ordinal()] = 8;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            f52854[EnumC1965.APPEND_FRAME.ordinal()] = 9;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f52854[EnumC1965.FULL_FRAME.ordinal()] = 10;
-        } catch (NoSuchFieldError unused12) {
-        }
+    @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
+    public final synchronized void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        this.f53316.m53398(canvas);
+    }
+
+    public C16434(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, R.attr.MT_Protector);
+    }
+
+    public C16434(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        C9457.m24831(getContext(), this);
+        C23894 c23894 = new C23894(this);
+        this.f53316 = c23894;
+        c23894.mo29937(attributeSet, i);
+    }
+
+    @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
+    public final void drawableStateChanged() {
+        super.drawableStateChanged();
+        this.f53316.m53400();
+    }
+
+    @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
+    public final void jumpDrawablesToCurrentState() {
+        super.jumpDrawablesToCurrentState();
+        this.f53316.m53399();
     }
 }

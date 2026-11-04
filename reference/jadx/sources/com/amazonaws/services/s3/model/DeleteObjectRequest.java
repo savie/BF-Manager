@@ -7,23 +7,23 @@ import java.io.Serializable;
 public class DeleteObjectRequest extends AmazonWebServiceRequest implements Serializable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f584;
+    public String f574;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public String f585;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public String f575;
 
     public DeleteObjectRequest(String str, String str2) {
-        this.f584 = str;
-        this.f585 = str2;
+        this.f575 = str;
+        this.f574 = str2;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m558() {
-        return this.f584;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m552() {
+        return this.f575;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m559() {
-        return this.f585;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String m553() {
+        return this.f574;
     }
 }

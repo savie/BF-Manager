@@ -1,83 +1,103 @@
 .class public final Ll/᩶ۛۤ;
-.super Ll/ۨۛۤ;
-.source "W7SR"
+.super Ljava/lang/Object;
+.source "Z6QT"
 
 
 # instance fields
-.field public ֨:Z
+.field public ֫:Z
+
+.field public ۙ:I
+
+.field public ۚ:I
+
+.field public final ۤ:I
+
+.field public ۧ:I
+
+.field public final ۫:I
+
+.field public ܳ:I
+
+.field public ܺ:I
+
+.field public final ᩴ:Z
+
+.field public ᩷:I
+
+.field public final ᩸:I
+
+.field public final ᩻:Ll/֡ۨۤ;
 
 
-# virtual methods
-.method public final ۙ(Ll/ۜ᩵۟;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(ILl/֡ۨۤ;Ll/ܰۛۤ;)V
+    .locals 6
 
-    .line 1322
-    invoke-super {p0, p1}, Ll/ۨۛۤ;->ۙ(Ll/ۜ᩵۟;)V
+    const/4 v4, 0x0
 
-    .line 1323
-    invoke-virtual {p1}, Ll/ۜ᩵۟;->ۘۙ()Ll/۬᩵۟;
+    const/4 v5, 0x0
 
-    move-result-object p1
+    move-object v0, p0
 
-    sget-object v0, Ll/۬᩵۟;->ܽ:Ll/۬᩵۟;
+    move v1, p1
 
-    if-eq p1, v0, :cond_0
+    move-object v2, p2
 
-    const/4 p1, 0x1
+    move-object v3, p3
 
-    .line 1324
-    iput-boolean p1, p0, Ll/᩶ۛۤ;->֨:Z
+    .line 678
+    invoke-direct/range {v0 .. v5}, Ll/᩶ۛۤ;-><init>(ILl/֡ۨۤ;Ll/ܰۛۤ;II)V
 
-    :cond_0
     return-void
 .end method
 
-.method public final ۙ(Ll/᩹᩵۟;)V
+.method public constructor <init>(ILl/֡ۨۤ;Ll/ܰۛۤ;II)V
     .locals 1
 
-    .line 1314
-    invoke-super {p0, p1}, Ll/ۨۛۤ;->ۙ(Ll/᩹᩵۟;)V
+    .line 681
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1315
-    iget-object p1, p1, Ll/᩹᩵۟;->᩻:Ll/ۚ᩵۟;
+    const v0, 0x7fffffff
 
-    sget-object v0, Ll/ۚ᩵۟;->֡:Ll/ۚ᩵۟;
+    .line 672
+    iput v0, p0, Ll/᩶ۛۤ;->᩷:I
 
-    if-ne p1, v0, :cond_0
+    const/4 v0, -0x1
 
-    const/4 p1, 0x1
+    .line 673
+    iput v0, p0, Ll/᩶ۛۤ;->ۙ:I
 
-    .line 1316
-    iput-boolean p1, p0, Ll/᩶ۛۤ;->֨:Z
+    .line 682
+    iput p1, p0, Ll/᩶ۛۤ;->۫:I
 
-    :cond_0
+    .line 683
+    iput-object p2, p0, Ll/᩶ۛۤ;->᩻:Ll/֡ۨۤ;
+
+    .line 684
+    iget p1, p3, Ll/ܰۛۤ;->᩸:I
+
+    iput p1, p0, Ll/᩶ۛۤ;->ۧ:I
+
+    .line 685
+    iget p1, p3, Ll/ܰۛۤ;->᩷:I
+
+    iput p1, p0, Ll/᩶ۛۤ;->ۚ:I
+
+    .line 686
+    iget-boolean p1, p3, Ll/ܰۛۤ;->ۤ:Z
+
+    iput-boolean p1, p0, Ll/᩶ۛۤ;->֫:Z
+
+    .line 687
+    iget-boolean p1, p3, Ll/ܰۛۤ;->ۙ:Z
+
+    iput-boolean p1, p0, Ll/᩶ۛۤ;->ᩴ:Z
+
+    .line 688
+    iput p4, p0, Ll/᩶ۛۤ;->᩸:I
+
+    .line 689
+    iput p5, p0, Ll/᩶ۛۤ;->ۤ:I
+
     return-void
-.end method
-
-.method public final ۙ()Z
-    .locals 1
-
-    .line 1305
-    invoke-super {p0}, Ll/ۨۛۤ;->ۙ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Ll/᩶ۛۤ;->֨:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
 .end method

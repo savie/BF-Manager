@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce;
 import javax.crypto.SecretKey;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SecretKeyWithEncapsulation implements SecretKey {
     public final byte[] encapsulation;
     public final SecretKey secretKey;

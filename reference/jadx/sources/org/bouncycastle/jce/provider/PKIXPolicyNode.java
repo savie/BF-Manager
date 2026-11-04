@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 import org.bouncycastle.asn1.util.ASN1Dump;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXPolicyNode implements PolicyNode {
     public List children;
     public boolean critical;

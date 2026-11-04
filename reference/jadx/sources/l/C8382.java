@@ -1,49 +1,76 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩵ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8382 implements InterfaceC13717 {
+import java.util.Spliterator;
+import java.util.function.IntConsumer;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long[] f29112;
+/* JADX INFO: renamed from: l.۠ۘ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1N0 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8382 extends AbstractC13448 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f29113;
+    public final /* synthetic */ C15399 f27488;
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+    @Override // l.AbstractC13448, l.AbstractC6957, java.util.Collection, java.lang.Iterable, java.util.Set
+    public /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    public C8382(C15399 c15399) {
+        this.f27488 = c15399;
     }
 
-    public C8382(long[] jArr, boolean z) {
-        this.f29112 = jArr;
-        this.f29113 = z;
+    @Override // l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC6036 iterator() {
+        return new C2416(this.f27488);
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        if (C20025.m45351(i)) {
-            i = C20025.m45350(i);
+    @Override // l.AbstractC13448, l.AbstractC6957, java.util.Collection, java.lang.Iterable, l.InterfaceC9372, l.InterfaceC21938, l.InterfaceC22091, l.InterfaceC13409
+    public final InterfaceC15949 spliterator() {
+        return new C6891(this.f27488);
+    }
+
+    @Override // l.AbstractC6957, l.InterfaceC20206
+    public final void forEach(IntConsumer intConsumer) {
+        C15399 c15399 = this.f27488;
+        int[] iArr = c15399.f50196;
+        if (c15399.f50203) {
+            intConsumer.accept(iArr[c15399.f50194]);
         }
-        long[] jArr = this.f29112;
-        if (i < (jArr.length << 6)) {
-            return (jArr[i >>> 6] & (1 << i)) != 0;
+        int i = c15399.f50194;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            int i3 = iArr[i2];
+            if (i3 != 0) {
+                intConsumer.accept(i3);
+            }
+            i = i2;
         }
-        return this.f29113;
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f27488.f50197;
+    }
+
+    @Override // l.InterfaceC1340
+    public final boolean contains(int i) {
+        return this.f27488.mo34770(i);
+    }
+
+    @Override // l.AbstractC13448
+    public final boolean remove(int i) {
+        C15399 c15399 = this.f27488;
+        int i2 = c15399.f50197;
+        c15399.remove(i);
+        return c15399.f50197 != i2;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f27488.clear();
     }
 }

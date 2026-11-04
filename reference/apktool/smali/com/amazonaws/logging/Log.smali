@@ -4,9 +4,6 @@
 
 
 # virtual methods
-.method public abstract ۖ(Ljava/lang/String;)V
-.end method
-
 .method public abstract ۙ(Ljava/lang/String;)V
 .end method
 
@@ -16,20 +13,23 @@
 .method public abstract ۙ()Z
 .end method
 
-.method public abstract ۚ(Ljava/lang/String;)V
+.method public abstract ۤ(Ljava/lang/String;)V
 .end method
 
-.method public abstract ۨ(Ljava/lang/String;)V
+.method public abstract ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 .end method
 
-.method public abstract ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public abstract ᩴ(Ljava/lang/String;)V
 .end method
 
-.method public abstract ܰ(Ljava/lang/String;)V
+.method public abstract ᩷(Ljava/lang/String;)V
 .end method
 
-.method public abstract ܰ(Ljava/lang/String;Ljava/lang/Exception;)V
+.method public abstract ᩷(Ljava/lang/String;Ljava/lang/Exception;)V
 .end method
 
-.method public abstract ܰ()Z
+.method public abstract ᩷()Z
+.end method
+
+.method public abstract ᩸(Ljava/lang/String;)V
 .end method

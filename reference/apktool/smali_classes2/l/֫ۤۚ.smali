@@ -1,24 +1,68 @@
 .class public final synthetic Ll/֫ۤۚ;
 .super Ljava/lang/Object;
-.source "313O"
+.source "Y6Y9"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic ܰ:Lcom/google/android/material/tabs/TabLayout;
+
+.field public final synthetic ܿ:Ll/۠᩷ۚ;
+
+.field public final synthetic ᩶:Ll/ۤᩴۚ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/material/tabs/TabLayout;Ll/ۤᩴۚ;Ll/۠᩷ۚ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֫ۤۚ;->ܰ:Lcom/google/android/material/tabs/TabLayout;
+
+    iput-object p2, p0, Ll/֫ۤۚ;->᩶:Ll/ۤᩴۚ;
+
+    iput-object p3, p0, Ll/֫ۤۚ;->ܿ:Ll/۠᩷ۚ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 489
-    sget-object p1, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
+    .line 482
+    iget-object p1, p0, Ll/֫ۤۚ;->ܰ:Lcom/google/android/material/tabs/TabLayout;
 
-    const-string p2, "show_install_file_transfer"
+    invoke-virtual {p1}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
 
-    const/4 v0, 0x1
+    move-result p1
 
-    .line 0
-    invoke-static {p1, p2, v0}, Ll/֫۟ۨ;->ۙ(Ll/ۛۧ᩺;Ljava/lang/String;Z)V
+    const/4 v0, 0x2
 
+    if-ne p1, v0, :cond_0
+
+    .line 483
+    iget-object p1, p0, Ll/֫ۤۚ;->᩶:Ll/ۤᩴۚ;
+
+    invoke-virtual {p1}, Ll/ۤᩴۚ;->ۙ()V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x3
+
+    if-ne p1, v0, :cond_1
+
+    .line 484
+    iget-object p1, p0, Ll/֫ۤۚ;->ܿ:Ll/۠᩷ۚ;
+
+    invoke-virtual {p1}, Ll/۠᩷ۚ;->ۙ()V
+
+    :cond_1
     return-void
 .end method

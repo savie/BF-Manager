@@ -1,40 +1,52 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import com.google.android.material.motion.MotionUtils;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۗ᩹ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K9H */
+/* JADX INFO: renamed from: l.ۗܺ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 66DD */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3530 extends AbstractC5026 implements InterfaceC13431, InterfaceC6206 {
+public final class C3530 implements InterfaceC7179 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3614 f13018;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List f12123;
 
-    @Override // l.AbstractC5026, java.util.Iterator, l.InterfaceC6206
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C1435.m5012(this, consumer);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f12124;
+
+    public C3530(String str, List list) {
+        this.f12124 = str;
+        this.f12123 = list;
     }
 
-    @Override // java.util.Iterator
-    public final Integer next() {
-        return Integer.valueOf(nextInt());
+    @Override // l.InterfaceC7179
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final List mo11554() {
+        return this.f12123;
     }
 
-    @Override // l.AbstractC5026
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3343(int i, Object obj) {
-        ((IntConsumer) obj).accept(this.f13018.f13284[i]);
+    @Override // l.InterfaceC7179
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String mo11553() {
+        return this.f12124;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C3530(C3614 c3614) {
-        super(c3614);
-        this.f13018 = c3614;
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof InterfaceC7179)) {
+            return false;
+        }
+        InterfaceC7179 interfaceC7179 = (InterfaceC7179) obj;
+        return this.f12123.equals(interfaceC7179.mo11554()) && this.f12124.equals(interfaceC7179.mo11553());
     }
 
-    @Override // l.InterfaceC22104
-    public final int nextInt() {
-        return this.f13018.f13284[m13969()];
+    public final int hashCode() {
+        return this.f12124.hashCode() + (this.f12123.hashCode() * 31);
+    }
+
+    public final String toString() {
+        return MotionUtils.EASING_TYPE_FORMAT_START + C6544.m18426(this.f12123) + MotionUtils.EASING_TYPE_FORMAT_END + this.f12124;
     }
 }

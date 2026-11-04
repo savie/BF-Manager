@@ -1,120 +1,36 @@
 .class public final Ll/ܶۧ᩵;
-.super Ll/ۗܿ᩵;
-.source "S53J"
-
-# interfaces
-.implements Ll/ۧܰۡ;
-
-
-# static fields
-.field public static final ۫:Ll/ᩳ۫᩵;
+.super Ll/ۛ᩸ۨ;
+.source "W856"
 
 
 # instance fields
-.field public final ֡:I
-
-.field public final ܽ:I
+.field public final synthetic ᩶:Ljava/util/function/Consumer;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 43
-    sget-object v0, Ll/ᩳ۫᩵;->ۘۙ:Ll/ᩳ۫᩵;
+    const/4 v0, 0x1
 
-    sput-object v0, Ll/ܶۧ᩵;->۫:Ll/ᩳ۫᩵;
+    .line 7
+    invoke-direct {p0, v0}, Ll/ۛ᩸ۨ;-><init>(I)V
 
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۤ۫᩵;II)V
-    .locals 0
-
-    .line 51
-    invoke-direct {p0, p1}, Ll/ۗܿ᩵;-><init>(Ll/ۤ۫᩵;)V
-
-    .line 52
-    invoke-static {p2}, Ll/ܰۖۨ;->ܰ(I)V
-
-    iput p2, p0, Ll/ܶۧ᩵;->֡:I
-
-    .line 53
-    invoke-static {p3}, Ll/ܰۖۨ;->᩹(I)V
-
-    iput p3, p0, Ll/ܶۧ᩵;->ܽ:I
+    .line 623
+    iput-object p1, p0, Ll/ܶۧ᩵;->᩶:Ljava/util/function/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
+.method public final ۙ(Ll/ۖۡۗ;Ll/᩹ۡۗ;)V
+    .locals 0
 
-    .line 58
-    iget v0, p0, Ll/ܶۧ᩵;->֡:I
+    .line 626
+    iget-object p1, p0, Ll/ܶۧ᩵;->᩶:Ljava/util/function/Consumer;
 
-    return v0
-.end method
+    invoke-interface {p1, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-.method public final ۛ()Ll/ᩳ۫᩵;
-    .locals 1
-
-    .line 68
-    sget-object v0, Ll/ܶۧ᩵;->۫:Ll/ᩳ۫᩵;
-
-    return-object v0
-.end method
-
-.method public final ۤ()Ljava/lang/String;
-    .locals 2
-
-    .line 42
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ll/ۗܿ᩵;->ۜ()Ll/ۤ۫᩵;
-
-    move-result-object v1
-
-    iget-object v1, v1, Ll/ۤ۫᩵;->۫:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ܶۧ᩵;->ۙ()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", v"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ll/ܶۧ᩵;->᩷()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ᩷()I
-    .locals 1
-
-    .line 63
-    iget v0, p0, Ll/ܶۧ᩵;->ܽ:I
-
-    return v0
+    return-void
 .end method

@@ -22,7 +22,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
-import l.EnumC21522;
+import l.EnumC7717;
 
 /* JADX INFO: compiled from: 747B */
 /* JADX INFO: loaded from: classes.dex */
@@ -40,7 +40,7 @@ public class a implements UMImprintChangeCallback {
     public static IntentFilter k = null;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static volatile boolean f77946l = false;
+    public static volatile boolean f82062l = false;
     public static ArrayList m = null;
     public static final String p = "report_policy";
     public static final String q = "report_interval";
@@ -181,7 +181,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void a(boolean z) {
         int size;
-        f77946l = z;
+        f82062l = z;
         if (z) {
             synchronized (n) {
                 ArrayList arrayList = m;
@@ -196,7 +196,7 @@ public class a implements UMImprintChangeCallback {
             return;
         }
         ULog.i("--->>> network disconnected.");
-        f77946l = false;
+        f82062l = false;
     }
 
     public a(Context context, Handler handler) {
@@ -283,7 +283,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void b(int i2) {
         Handler handler;
-        if (!f77946l || (handler = b) == null || handler.hasMessages(i2)) {
+        if (!f82062l || (handler = b) == null || handler.hasMessages(i2)) {
             return;
         }
         Message messageObtainMessage = b.obtainMessage();
@@ -293,7 +293,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void c(int i2) {
         Handler handler;
-        if (!f77946l || (handler = b) == null) {
+        if (!f82062l || (handler = b) == null) {
             return;
         }
         Message messageObtainMessage = handler.obtainMessage();
@@ -303,7 +303,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void a(int i2, long j2) {
         Handler handler;
-        if (!f77946l || (handler = b) == null) {
+        if (!f82062l || (handler = b) == null) {
             return;
         }
         Message messageObtainMessage = handler.obtainMessage();
@@ -324,7 +324,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void a(int i2, int i3) {
         Handler handler;
-        if (!f77946l || (handler = b) == null) {
+        if (!f82062l || (handler = b) == null) {
             return;
         }
         handler.removeMessages(i2);
@@ -334,7 +334,7 @@ public class a implements UMImprintChangeCallback {
     }
 
     public static void e() {
-        a(274, EnumC21522.f69929);
+        a(274, EnumC7717.f25434);
     }
 
     /* JADX INFO: renamed from: com.umeng.commonsdk.framework.a$a, reason: collision with other inner class name */
@@ -357,7 +357,7 @@ public class a implements UMImprintChangeCallback {
 
     public static void n() {
         ULog.d("--->>> handleProcessNext: Enter...");
-        if (f77946l) {
+        if (f82062l) {
             Context appContext = UMModuleRegister.getAppContext();
             try {
                 if (UMFrUtils.envelopeFileNumber(appContext) > 0) {

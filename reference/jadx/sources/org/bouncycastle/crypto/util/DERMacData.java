@@ -6,7 +6,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DERMacData {
     public final byte[] macData;
 

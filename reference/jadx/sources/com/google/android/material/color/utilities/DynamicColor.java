@@ -3,8 +3,8 @@ package com.google.android.material.color.utilities;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.Function;
-import l.C4277;
-import l.C8542;
+import l.C20387;
+import l.C6585;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class DynamicColor {
@@ -58,25 +58,8 @@ public final class DynamicColor {
     }
 
     public static DynamicColor fromArgb(String str, int i) {
-        Hct hctFromInt = Hct.fromInt(i);
-        final TonalPalette tonalPaletteFromInt = TonalPalette.fromInt(i);
-        return fromPalette(str, new Function() { // from class: com.google.android.material.color.utilities.DynamicColor$$ExternalSyntheticLambda0
-            @Override // java.util.function.Function
-            /* JADX INFO: renamed from: andThen */
-            public /* synthetic */ Function mo33696andThen(Function function) {
-                return C4277.$default$andThen(this, function);
-            }
-
-            @Override // java.util.function.Function
-            public final Object apply(Object obj) {
-                return DynamicColor.lambda$fromArgb$0(tonalPaletteFromInt, (DynamicScheme) obj);
-            }
-
-            @Override // java.util.function.Function
-            public /* synthetic */ Function compose(Function function) {
-                return C4277.$default$compose(this, function);
-            }
-        }, new C8542(1, hctFromInt));
+        int i2 = 1;
+        return fromPalette(str, new C6585(i2, TonalPalette.fromInt(i)), new C20387(i2, Hct.fromInt(i)));
     }
 
     public static /* synthetic */ Double lambda$fromArgb$1(Hct hct, DynamicScheme dynamicScheme) {

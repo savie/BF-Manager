@@ -1,255 +1,383 @@
 .class public final Ll/᩺ܰ;
 .super Ljava/lang/Object;
-.source "E5FU"
+.source "R1K2"
+
+
+# static fields
+.field public static ܶ:Landroid/util/SparseIntArray;
+
+
+# instance fields
+.field public ֫:F
+
+.field public ۙ:Z
+
+.field public ۚ:F
+
+.field public ۤ:Z
+
+.field public ۧ:F
+
+.field public ۫:F
+
+.field public ܳ:F
+
+.field public ܺ:F
+
+.field public ܽ:F
+
+.field public ᩴ:F
+
+.field public ᩷:F
+
+.field public ᩸:F
+
+.field public ᩻:F
 
 
 # direct methods
-.method public static ֨(Landroid/media/session/PlaybackState;)F
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 8
 
-    .line 1446
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPlaybackSpeed()F
+    .line 1057
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    move-result p0
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    return p0
+    sput-object v0, Ll/᩺ܰ;->ܶ:Landroid/util/SparseIntArray;
+
+    const/4 v1, 0x6
+
+    const/4 v2, 0x1
+
+    .line 1071
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v3, 0x7
+
+    const/4 v4, 0x2
+
+    .line 1072
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v5, 0x8
+
+    const/4 v6, 0x3
+
+    .line 1073
+    invoke-virtual {v0, v5, v6}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v7, 0x4
+
+    .line 1074
+    invoke-virtual {v0, v7, v7}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v7, 0x5
+
+    .line 1075
+    invoke-virtual {v0, v7, v7}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v7, 0x0
+
+    .line 1076
+    invoke-virtual {v0, v7, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 1077
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 1078
+    invoke-virtual {v0, v4, v5}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v1, 0x9
+
+    .line 1079
+    invoke-virtual {v0, v6, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v2, 0xa
+
+    .line 1080
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v1, 0xb
+
+    .line 1081
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    return-void
 .end method
 
-.method public static ۖ(Landroid/media/session/PlaybackState$CustomAction;)Ljava/lang/CharSequence;
-    .locals 0
 
-    .line 1497
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getName()Ljava/lang/CharSequence;
+# virtual methods
+.method public final ۙ(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 4
 
-    move-result-object p0
+    .line 1085
+    sget-object v0, Ll/֨ܰ;->ܿ:[I
 
-    return-object p0
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    .line 1086
+    iput-boolean p2, p0, Ll/᩺ܰ;->ۤ:Z
+
+    .line 1087
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    .line 1089
+    invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
+
+    move-result v2
+
+    .line 1091
+    sget-object v3, Ll/᩺ܰ;->ܶ:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
+
+    move-result v3
+
+    packed-switch v3, :pswitch_data_0
+
+    goto :goto_1
+
+    .line 1126
+    :pswitch_0
+    iput-boolean p2, p0, Ll/᩺ܰ;->ۙ:Z
+
+    .line 1127
+    iget v3, p0, Ll/᩺ܰ;->᩷:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->᩷:F
+
+    goto :goto_1
+
+    .line 1121
+    :pswitch_1
+    iget v3, p0, Ll/᩺ܰ;->ܽ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ܽ:F
+
+    goto :goto_1
+
+    .line 1117
+    :pswitch_2
+    iget v3, p0, Ll/᩺ܰ;->ܺ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ܺ:F
+
+    goto :goto_1
+
+    .line 1114
+    :pswitch_3
+    iget v3, p0, Ll/᩺ܰ;->᩻:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->᩻:F
+
+    goto :goto_1
+
+    .line 1111
+    :pswitch_4
+    iget v3, p0, Ll/᩺ܰ;->ۧ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ۧ:F
+
+    goto :goto_1
+
+    .line 1108
+    :pswitch_5
+    iget v3, p0, Ll/᩺ܰ;->֫:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->֫:F
+
+    goto :goto_1
+
+    .line 1105
+    :pswitch_6
+    iget v3, p0, Ll/᩺ܰ;->ۚ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ۚ:F
+
+    goto :goto_1
+
+    .line 1102
+    :pswitch_7
+    iget v3, p0, Ll/᩺ܰ;->۫:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->۫:F
+
+    goto :goto_1
+
+    .line 1099
+    :pswitch_8
+    iget v3, p0, Ll/᩺ܰ;->ܳ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ܳ:F
+
+    goto :goto_1
+
+    .line 1096
+    :pswitch_9
+    iget v3, p0, Ll/᩺ܰ;->ᩴ:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->ᩴ:F
+
+    goto :goto_1
+
+    .line 1093
+    :pswitch_a
+    iget v3, p0, Ll/᩺ܰ;->᩸:F
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p0, Ll/᩺ܰ;->᩸:F
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 1132
+    :cond_0
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static ۖ(Landroid/media/session/PlaybackState;)Ljava/util/List;
-    .locals 0
-
-    .line 1421
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getCustomActions()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ۘ(Landroid/media/session/PlaybackState;)I
-    .locals 0
-
-    .line 1431
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getState()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static ۙ(Landroid/media/session/PlaybackState;)J
-    .locals 2
-
-    .line 1451
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActions()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static ۙ()Landroid/media/session/PlaybackState$Builder;
+.method public final ۙ(Ll/᩺ܰ;)V
     .locals 1
 
-    .line 1384
-    new-instance v0, Landroid/media/session/PlaybackState$Builder;
+    .line 1042
+    iget-boolean v0, p1, Ll/᩺ܰ;->ۤ:Z
 
-    invoke-direct {v0}, Landroid/media/session/PlaybackState$Builder;-><init>()V
+    iput-boolean v0, p0, Ll/᩺ܰ;->ۤ:Z
 
-    return-object v0
-.end method
+    .line 1043
+    iget v0, p1, Ll/᩺ܰ;->᩸:F
 
-.method public static ۙ(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/media/session/PlaybackState$CustomAction$Builder;
-    .locals 1
+    iput v0, p0, Ll/᩺ܰ;->᩸:F
 
-    .line 1472
-    new-instance v0, Landroid/media/session/PlaybackState$CustomAction$Builder;
+    .line 1044
+    iget v0, p1, Ll/᩺ܰ;->ᩴ:F
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/media/session/PlaybackState$CustomAction$Builder;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+    iput v0, p0, Ll/᩺ܰ;->ᩴ:F
 
-    return-object v0
-.end method
+    .line 1045
+    iget v0, p1, Ll/᩺ܰ;->ܳ:F
 
-.method public static ۙ(Landroid/media/session/PlaybackState$CustomAction$Builder;)Landroid/media/session/PlaybackState$CustomAction;
-    .locals 0
+    iput v0, p0, Ll/᩺ܰ;->ܳ:F
 
-    .line 1482
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction$Builder;->build()Landroid/media/session/PlaybackState$CustomAction;
+    .line 1046
+    iget v0, p1, Ll/᩺ܰ;->۫:F
 
-    move-result-object p0
+    iput v0, p0, Ll/᩺ܰ;->۫:F
 
-    return-object p0
-.end method
+    .line 1047
+    iget v0, p1, Ll/᩺ܰ;->ۚ:F
 
-.method public static ۙ(Landroid/media/session/PlaybackState$Builder;)Landroid/media/session/PlaybackState;
-    .locals 0
+    iput v0, p0, Ll/᩺ܰ;->ۚ:F
 
-    .line 1426
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
+    .line 1048
+    iget v0, p1, Ll/᩺ܰ;->֫:F
 
-    move-result-object p0
+    iput v0, p0, Ll/᩺ܰ;->֫:F
 
-    return-object p0
-.end method
+    .line 1049
+    iget v0, p1, Ll/᩺ܰ;->ۧ:F
 
-.method public static ۙ(Landroid/media/session/PlaybackState$CustomAction;)Ljava/lang/String;
-    .locals 0
+    iput v0, p0, Ll/᩺ܰ;->ۧ:F
 
-    .line 1492
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getAction()Ljava/lang/String;
+    .line 1050
+    iget v0, p1, Ll/᩺ܰ;->᩻:F
 
-    move-result-object p0
+    iput v0, p0, Ll/᩺ܰ;->᩻:F
 
-    return-object p0
-.end method
+    .line 1051
+    iget v0, p1, Ll/᩺ܰ;->ܺ:F
 
-.method public static ۙ(Landroid/media/session/PlaybackState$Builder;IJFJ)V
-    .locals 0
+    iput v0, p0, Ll/᩺ܰ;->ܺ:F
 
-    .line 1390
-    invoke-virtual/range {p0 .. p6}, Landroid/media/session/PlaybackState$Builder;->setState(IJFJ)Landroid/media/session/PlaybackState$Builder;
+    .line 1052
+    iget v0, p1, Ll/᩺ܰ;->ܽ:F
 
-    return-void
-.end method
+    iput v0, p0, Ll/᩺ܰ;->ܽ:F
 
-.method public static ۙ(Landroid/media/session/PlaybackState$Builder;J)V
-    .locals 0
+    .line 1053
+    iget-boolean v0, p1, Ll/᩺ܰ;->ۙ:Z
 
-    .line 1400
-    invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setActions(J)Landroid/media/session/PlaybackState$Builder;
+    iput-boolean v0, p0, Ll/᩺ܰ;->ۙ:Z
+
+    .line 1054
+    iget p1, p1, Ll/᩺ܰ;->᩷:F
+
+    iput p1, p0, Ll/᩺ܰ;->᩷:F
 
     return-void
-.end method
-
-.method public static ۙ(Landroid/media/session/PlaybackState$Builder;Landroid/media/session/PlaybackState$CustomAction;)V
-    .locals 0
-
-    .line 1411
-    invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$Builder;->addCustomAction(Landroid/media/session/PlaybackState$CustomAction;)Landroid/media/session/PlaybackState$Builder;
-
-    return-void
-.end method
-
-.method public static ۙ(Landroid/media/session/PlaybackState$Builder;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    .line 1405
-    invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$Builder;->setErrorMessage(Ljava/lang/CharSequence;)Landroid/media/session/PlaybackState$Builder;
-
-    return-void
-.end method
-
-.method public static ۙ(Landroid/media/session/PlaybackState$CustomAction$Builder;Landroid/os/Bundle;)V
-    .locals 0
-
-    .line 1477
-    invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$CustomAction$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/session/PlaybackState$CustomAction$Builder;
-
-    return-void
-.end method
-
-.method public static ۚ(Landroid/media/session/PlaybackState;)Ljava/lang/CharSequence;
-    .locals 0
-
-    .line 1456
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getErrorMessage()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ۨ(Landroid/media/session/PlaybackState$CustomAction;)I
-    .locals 0
-
-    .line 1502
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getIcon()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static ۨ(Landroid/media/session/PlaybackState;)J
-    .locals 2
-
-    .line 1441
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getBufferedPosition()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static ۨ(Landroid/media/session/PlaybackState$Builder;J)V
-    .locals 0
-
-    .line 1395
-    invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setBufferedPosition(J)Landroid/media/session/PlaybackState$Builder;
-
-    return-void
-.end method
-
-.method public static ۬(Landroid/media/session/PlaybackState;)J
-    .locals 2
-
-    .line 1436
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPosition()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static ܰ(Landroid/media/session/PlaybackState;)J
-    .locals 2
-
-    .line 1466
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActiveQueueItemId()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static ܰ(Landroid/media/session/PlaybackState$CustomAction;)Landroid/os/Bundle;
-    .locals 0
-
-    .line 1487
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ܰ(Landroid/media/session/PlaybackState$Builder;J)V
-    .locals 0
-
-    .line 1416
-    invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setActiveQueueItemId(J)Landroid/media/session/PlaybackState$Builder;
-
-    return-void
-.end method
-
-.method public static ᩹(Landroid/media/session/PlaybackState;)J
-    .locals 2
-
-    .line 1461
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getLastPositionUpdateTime()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

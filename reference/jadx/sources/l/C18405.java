@@ -1,27 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ֡ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I7LP */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18405 extends C17159 {
+import android.text.TextPaint;
+import android.text.style.URLSpan;
+import android.view.View;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19003 f58662;
+/* JADX INFO: renamed from: l.ܿܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y8ZG */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18405 extends URLSpan {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7822 f58663;
+    public final String f59965;
 
-    public C18405(C7822 c7822, C19003 c19003) {
-        this.f58663 = c7822;
-        this.f58662 = c19003;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C15421 f59966;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC14895 f59967;
+
+    public C18405(C15421 c15421, String str, InterfaceC14895 interfaceC14895) {
+        super(str);
+        this.f59966 = c15421;
+        this.f59965 = str;
+        this.f59967 = interfaceC14895;
     }
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1068(C21473 c21473) {
-        if (c21473.f69789 == this.f58663.f38291) {
-            this.f58662.m43723(c21473);
-        }
-        mo7248(c21473.f69790);
+    @Override // android.text.style.URLSpan, android.text.style.ClickableSpan
+    public final void onClick(View view) {
+        this.f59967.mo14510(view, this.f59965);
+    }
+
+    @Override // android.text.style.ClickableSpan, android.text.style.CharacterStyle
+    public final void updateDrawState(TextPaint textPaint) {
+        this.f59966.m36929(textPaint);
     }
 }

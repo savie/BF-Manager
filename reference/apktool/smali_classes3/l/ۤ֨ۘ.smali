@@ -1,8 +1,7 @@
-.class public interface abstract Ll/ۤ֨ۘ;
-.super Ljava/lang/Object;
-.source "K3YT"
+.class public Ll/ۤ֨ۘ;
+.super Ljava/lang/RuntimeException;
+.source "344H"
 
 
-# virtual methods
-.method public abstract ۙ(Lbin/mt/plugin/api/PluginContext;Ljava/lang/String;)Ljava/io/InputStream;
-.end method
+# static fields
+.field public static final serialVersionUID:J = 0x10dL

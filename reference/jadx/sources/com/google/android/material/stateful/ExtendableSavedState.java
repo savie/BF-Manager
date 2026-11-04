@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.alipay.sdk.m.y.l;
-import l.AbstractC3000;
-import l.C12274;
+import l.AbstractC6898;
+import l.C9086;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ExtendableSavedState extends AbstractC3000 {
+public class ExtendableSavedState extends AbstractC6898 {
     public static final Parcelable.Creator CREATOR = new Parcelable.ClassLoaderCreator() { // from class: com.google.android.material.stateful.ExtendableSavedState.1
         @Override // android.os.Parcelable.ClassLoaderCreator
         public ExtendableSavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
@@ -26,11 +26,11 @@ public class ExtendableSavedState extends AbstractC3000 {
             return new ExtendableSavedState[i];
         }
     };
-    public final C12274 extendableStates;
+    public final C9086 extendableStates;
 
     public ExtendableSavedState(Parcelable parcelable) {
         super(parcelable);
-        this.extendableStates = new C12274();
+        this.extendableStates = new C9086();
     }
 
     public ExtendableSavedState(Parcel parcel, ClassLoader classLoader) {
@@ -40,13 +40,13 @@ public class ExtendableSavedState extends AbstractC3000 {
         parcel.readStringArray(strArr);
         Bundle[] bundleArr = new Bundle[i];
         parcel.readTypedArray(bundleArr, Bundle.CREATOR);
-        this.extendableStates = new C12274(i);
+        this.extendableStates = new C9086(i);
         for (int i2 = 0; i2 < i; i2++) {
             this.extendableStates.put(strArr[i2], bundleArr[i2]);
         }
     }
 
-    @Override // l.AbstractC3000, android.os.Parcelable
+    @Override // l.AbstractC6898, android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
         super.writeToParcel(parcel, i);
         int size = this.extendableStates.size();
@@ -54,8 +54,8 @@ public class ExtendableSavedState extends AbstractC3000 {
         String[] strArr = new String[size];
         Bundle[] bundleArr = new Bundle[size];
         for (int i2 = 0; i2 < size; i2++) {
-            strArr[i2] = (String) this.extendableStates.m30510(i2);
-            bundleArr[i2] = (Bundle) this.extendableStates.m30513(i2);
+            strArr[i2] = (String) this.extendableStates.m24220(i2);
+            bundleArr[i2] = (Bundle) this.extendableStates.m24221(i2);
         }
         parcel.writeStringArray(strArr);
         parcel.writeTypedArray(bundleArr, 0);

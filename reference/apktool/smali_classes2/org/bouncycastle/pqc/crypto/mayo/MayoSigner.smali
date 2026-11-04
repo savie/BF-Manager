@@ -1338,7 +1338,7 @@
 
     aget-wide v23, p1, v21
 
-    invoke-static {v11, v13, v15, v3}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v11, v13, v15, v3}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v21
 
@@ -1413,7 +1413,7 @@
 
     aget-wide v23, p1, v21
 
-    invoke-static {v5, v3, v15, v13}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v5, v3, v15, v13}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result v21
 

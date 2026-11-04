@@ -1,33 +1,71 @@
 package l;
 
-import java.util.function.Supplier;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.ByteBuffer;
 
-/* JADX INFO: renamed from: l.ܺۚۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L7ER */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15729 implements Supplier {
+/* JADX INFO: renamed from: l.ܶ֡᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: A6SP */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15729 extends InputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f51027;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23189 f51165;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f51166;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public long f51167;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC6741 f51028;
+    public final byte[] f51168 = new byte[1];
 
-    public /* synthetic */ C15729(AbstractC6741 abstractC6741, int i) {
-        this.f51027 = i;
-        this.f51028 = abstractC6741;
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // java.util.function.Supplier
-    public final Object get() {
-        int i = this.f51027;
-        AbstractC6741 abstractC6741 = this.f51028;
-        switch (i) {
-            case 0:
-                C17139 c17139 = (C17139) abstractC6741;
-                return String.format(" same_locals_1_stack_item_frame_extended=%d, offset=%d, numstack=%s", Integer.valueOf(c17139.f54668), Integer.valueOf(c17139.f54671), C18755.m43308(c17139.f54661));
-            default:
-                return String.format("#%d;", Integer.valueOf(((AbstractC14297) abstractC6741).f46838));
+    public C15729(C23189 c23189) {
+        this.f51165 = c23189;
+    }
+
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = this.f51168;
+        if (read(bArr, 0, 1) == -1) {
+            return -1;
         }
+        return bArr[0] & 255;
+    }
+
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        C17359.checkFromIndexSize(i, i2, bArr.length);
+        C23189 c23189 = this.f51165;
+        C3051 c3051 = c23189.f75152;
+        C3051.m9914(c3051);
+        if (this.f51166) {
+            throw new IOException("Legacy state slice is closed");
+        }
+        if (i2 == 0) {
+            return 0;
+        }
+        if (this.f51167 == c23189.f75151) {
+            return -1;
+        }
+        int i3 = c3051.f9887.read(ByteBuffer.wrap(bArr, i, (int) Math.min(i2, c23189.f75151 - this.f51167)), c23189.f75153 + this.f51167);
+        if (i3 <= 0) {
+            throw new EOFException("Legacy state slice is truncated");
+        }
+        this.f51167 += (long) i3;
+        return i3;
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        this.f51166 = true;
     }
 }

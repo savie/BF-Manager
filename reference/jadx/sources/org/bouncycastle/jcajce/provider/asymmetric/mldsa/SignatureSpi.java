@@ -20,40 +20,35 @@ import org.bouncycastle.pqc.crypto.mldsa.MLDSAPublicKeyParameters;
 import org.bouncycastle.pqc.crypto.mldsa.MLDSASigner;
 import org.bouncycastle.pqc.crypto.util.PublicKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureSpi extends BaseDeterministicOrRandomSignature {
     public MLDSAParameters parameters;
     public MLDSASigner signer;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA extends SignatureSpi {
         public MLDSA() {
             super(new MLDSASigner());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA44 extends SignatureSpi {
         public MLDSA44() {
             super(new MLDSASigner(), MLDSAParameters.ml_dsa_44);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA65 extends SignatureSpi {
         public MLDSA65() {
             super(new MLDSASigner(), MLDSAParameters.ml_dsa_65);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSA87 extends SignatureSpi {
         public MLDSA87() {
             super(new MLDSASigner(), MLDSAParameters.ml_dsa_87);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSACalcMu extends SignatureSpi {
         public MLDSACalcMu() {
             super(new MLDSASigner());
@@ -74,7 +69,6 @@ public class SignatureSpi extends BaseDeterministicOrRandomSignature {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MLDSAExtMu extends SignatureSpi {
         public ByteArrayOutputStream bOut;
 

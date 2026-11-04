@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM2KeyPairGenerator extends ECKeyPairGenerator {
     public SM2KeyPairGenerator() {
         super("SM2KeyGen");

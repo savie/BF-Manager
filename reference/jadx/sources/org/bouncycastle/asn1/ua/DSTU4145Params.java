@@ -2,7 +2,6 @@ package org.bouncycastle.asn1.ua;
 
 import com.umeng.analytics.pro.bo;
 import com.umeng.analytics.pro.cb;
-import l.C18828;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
@@ -11,11 +10,12 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU4145Params extends ASN1Object {
     public static final byte[] DEFAULT_DKE = {-87, -42, -21, 69, -15, 60, KeyFactorySpi.Ed25519_type, bo.h, GCMSIVBlockCipher.MASK, -60, -106, 123, 35, bo.j, 94, -83, -10, 88, -21, -92, -64, 55, 41, 29, 56, -39, 107, -16, 37, -54, 78, 23, -8, -23, 114, cb.k, -58, 21, -76, 58, 40, -105, 95, 11, -63, -34, -93, 100, 56, -75, 100, -22, 44, 23, -97, -48, 18, 62, 109, -72, -6, -59, 121, 4};
     public byte[] dke;
@@ -82,9 +82,9 @@ public class DSTU4145Params extends ASN1Object {
         ASN1Sequence aSN1Sequence = ASN1Sequence.getInstance(obj);
         DSTU4145Params dSTU4145Params = aSN1Sequence.getObjectAt(0) instanceof ASN1ObjectIdentifier ? new DSTU4145Params(ASN1ObjectIdentifier.getInstance(aSN1Sequence.getObjectAt(0))) : new DSTU4145Params(DSTU4145ECBinary.getInstance(aSN1Sequence.getObjectAt(0)));
         if (aSN1Sequence.size() == 2) {
-            byte[] bArrM43458 = C18828.m43458(aSN1Sequence, 1);
-            dSTU4145Params.dke = bArrM43458;
-            if (bArrM43458.length != DEFAULT_DKE.length) {
+            byte[] bArrM = ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 1);
+            dSTU4145Params.dke = bArrM;
+            if (bArrM.length != DEFAULT_DKE.length) {
                 throw new IllegalArgumentException("object parse error");
             }
         }

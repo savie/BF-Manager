@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.KeySpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class TLSKeyMaterialSpec implements KeySpec {
     public static final String KEY_EXPANSION = "key expansion";
     public static final String MASTER_SECRET = "master secret";

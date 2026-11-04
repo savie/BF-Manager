@@ -1,104 +1,268 @@
 package l;
 
-import java.util.function.Consumer;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.res.Resources;
+import android.view.ContextThemeWrapper;
+import java.io.IOException;
+import java.io.InterruptedIOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩺ܽۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F416 */
+/* JADX INFO: renamed from: l.᩸᩹ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6F5 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C23115 implements Consumer {
+public final class C23115 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f75079;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashMap f74970 = new HashMap();
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f75080;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Context f74971;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f75081;
-
-    public /* synthetic */ C23115(int i, Object obj, Object obj2) {
-        this.f75080 = i;
-        this.f75081 = obj;
-        this.f75079 = obj2;
+    public C23115(ContextThemeWrapper contextThemeWrapper) {
+        this.f74971 = contextThemeWrapper.getApplicationContext();
     }
 
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
-
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final void n(Object obj) {
-        switch (this.f75080) {
-            case 0:
-                C0356.forEach((C21825) this.f75079, 
-                /*  JADX ERROR: Method code generation error
-                    jadx.core.utils.exceptions.CodegenException: Error generate insn: 0x001b: INVOKE 
-                      (wrap l.￡ﾩﾸ￡ﾩﾷￛﾟ:0x0017: CHECK_CAST (l.￡ﾩﾸ￡ﾩﾷￛﾟ) (wrap java.lang.Object:0x0015: IGET (r2v0 'this' l.￡ﾩﾺￜﾽￛﾤ A[IMMUTABLE_TYPE, THIS]) A[WRAPPED] l.￡ﾩﾺￜﾽￛﾤ.ￖﾡ java.lang.Object))
-                      (wrap java.util.function.Consumer:0x0002: CONSTRUCTOR 
-                      (wrap l.ￛﾜￛﾫￛﾤ:0x0013: CHECK_CAST (l.ￛﾜￛﾫￛﾤ) (wrap java.lang.Object:0x0011: IGET (r2v0 'this' l.￡ﾩﾺￜﾽￛﾤ A[IMMUTABLE_TYPE, THIS]) A[WRAPPED] l.￡ﾩﾺￜﾽￛﾤ.￡ﾩﾶ java.lang.Object))
-                      (wrap l.ￜﾽￛﾤￛﾤ:0x0019: CHECK_CAST (l.ￜﾽￛﾤￛﾤ) (r3v0 'obj' java.lang.Object))
-                     A[MD:(l.ￛﾜￛﾫￛﾤ, l.ￜﾽￛﾤￛﾤ):void (m), WRAPPED] (LINE:3863) call: l.ￛﾘￜﾽￛﾤ.<init>(l.ￛﾜￛﾫￛﾤ, l.ￜﾽￛﾤￛﾤ):void type: CONSTRUCTOR)
-                     STATIC call: l.ￖﾡￛﾤ￡ﾩﾴ.forEach(java.lang.Iterable, java.util.function.Consumer):void A[MD:(java.lang.Iterable, java.util.function.Consumer):void (m)] (LINE:3863) in method: l.￡ﾩﾺￜﾽￛﾤ.accept(java.lang.Object):void, file: classes.dex
-                    	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:310)
-                    	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:273)
-                    	at jadx.core.codegen.RegionGen.makeSimpleBlock(RegionGen.java:94)
-                    	at jadx.core.dex.nodes.IBlock.generate(IBlock.java:15)
-                    	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
-                    	at jadx.core.dex.regions.Region.generate(Region.java:35)
-                    	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
-                    	at jadx.core.codegen.RegionGen.makeRegionIndent(RegionGen.java:83)
-                    	at jadx.core.codegen.RegionGen.makeSwitch(RegionGen.java:267)
-                    	at jadx.core.dex.regions.SwitchRegion.generate(SwitchRegion.java:90)
-                    	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
-                    	at jadx.core.dex.regions.Region.generate(Region.java:35)
-                    	at jadx.core.codegen.RegionGen.makeRegion(RegionGen.java:66)
-                    	at jadx.core.codegen.MethodGen.addRegionInsns(MethodGen.java:291)
-                    	at jadx.core.codegen.MethodGen.addInstructions(MethodGen.java:270)
-                    	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:420)
-                    	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:345)
-                    	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:299)
-                    	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-                    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-                    	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
-                    	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
-                    Caused by: jadx.core.utils.exceptions.JadxRuntimeException: Expected class to be processed at this point, class: l.ￛﾘￜﾽￛﾤ, state: NOT_LOADED
-                    	at jadx.core.dex.nodes.ClassNode.ensureProcessed(ClassNode.java:306)
-                    	at jadx.core.codegen.InsnGen.inlineAnonymousConstructor(InsnGen.java:807)
-                    	at jadx.core.codegen.InsnGen.makeConstructor(InsnGen.java:730)
-                    	at jadx.core.codegen.InsnGen.makeInsnBody(InsnGen.java:418)
-                    	at jadx.core.codegen.InsnGen.addWrappedArg(InsnGen.java:145)
-                    	at jadx.core.codegen.InsnGen.addArg(InsnGen.java:121)
-                    	at jadx.core.codegen.InsnGen.addArg(InsnGen.java:108)
-                    	at jadx.core.codegen.InsnGen.generateMethodArguments(InsnGen.java:1143)
-                    	at jadx.core.codegen.InsnGen.makeInvoke(InsnGen.java:910)
-                    	at jadx.core.codegen.InsnGen.makeInsnBody(InsnGen.java:422)
-                    	at jadx.core.codegen.InsnGen.makeInsn(InsnGen.java:303)
-                    	... 21 more
-                    */
-                /*
-                    this = this;
-                    int r0 = r2.f75080
-                    switch(r0) {
-                        case 0: goto L11;
-                        default: goto L5;
-                    }
-                L5:
-                    java.lang.Object r0 = r2.f75081
-                    java.util.TreeMap r0 = (java.util.TreeMap) r0
-                    java.lang.Object r1 = r2.f75079
-                    l.ۧ᩸᩵ r3 = (l.InterfaceC11273) r3
-                    r0.put(r3, r1)
-                    return
-                L11:
-                    java.lang.Object r0 = r2.f75081
-                    l.ۜ۫ۤ r0 = (l.C6761) r0
-                    java.lang.Object r1 = r2.f75079
-                    l.᩸᩷۟ r1 = (l.C21825) r1
-                    l.ܽۤۤ r3 = (l.AbstractC16579) r3
-                    l.C6761.m18281(r0, r1, r3)
-                    return
-                */
-                throw new UnsupportedOperationException("Method not decompiled: l.C23115.n(java.lang.Object):void");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Map m52049(C15655 c15655, C25133 c25133) {
+        int iIntValue;
+        String str;
+        Context context = this.f74971;
+        C10258.m26450(c25133);
+        HashSet<String> hashSet = new HashSet();
+        List<C20131> list = c15655.f50877;
+        for (C20131 c20131 : list) {
+            C10258.m26450(c25133);
+            String str2 = (String) c20131.f64695.get("resource-id");
+            if (m52048(str2) && !str2.startsWith("android:") && (str = (String) c20131.f64695.get("package")) != null && !str.isEmpty()) {
+                hashSet.add(str);
             }
         }
+        HashMap map = this.f74970;
+        map.keySet().retainAll(hashSet);
+        HashMap map2 = new HashMap();
+        for (String str3 : hashSet) {
+            C10258.m26450(c25133);
+            try {
+                ArrayList<C22369> arrayListM52046 = m52046(context.getPackageManager().getApplicationInfo(str3, 0));
+                C11180 c11180 = (C11180) map.get(str3);
+                if (c11180 == null || !c11180.f35251.equals(arrayListM52046)) {
+                    HashMap map3 = new HashMap();
+                    for (C22369 c22369 : arrayListM52046) {
+                        C10258.m26450(c25133);
+                        C10258 c10258M26448 = C10258.m26448(c22369.f72419, context.getCacheDir(), c25133);
+                        if (c10258M26448 != null) {
+                            try {
+                                m52047(c10258M26448.f32758, map3, c25133);
+                            } catch (Throwable th) {
+                                try {
+                                    c10258M26448.close();
+                                } catch (Throwable th2) {
+                                    th.addSuppressed(th2);
+                                }
+                                throw th;
+                            }
+                        }
+                        if (c10258M26448 != null) {
+                            c10258M26448.close();
+                        }
+                    }
+                    if (!arrayListM52046.equals(m52046(context.getPackageManager().getApplicationInfo(str3, 0)))) {
+                        throw new IOException("APK changed during resource ID lookup");
+                    }
+                    C11180 c11181 = new C11180(arrayListM52046, map3);
+                    map.put(str3, c11181);
+                    c11180 = c11181;
+                }
+                map2.put(str3, c11180.f35252);
+            } catch (InterruptedIOException e) {
+                throw e;
+            } catch (Exception unused) {
+                if (0 == 0) {
+                    map.remove(str3);
+                } else {
+                    map.put(str3, new C11180(null, Collections.EMPTY_MAP));
+                }
+            }
+        }
+        HashMap map4 = new HashMap();
+        for (int i = 0; i < list.size(); i++) {
+            C10258.m26450(c25133);
+            C20131 c20132 = (C20131) list.get(i);
+            String str4 = (String) c20132.f64695.get("resource-id");
+            if (m52048(str4)) {
+                if (str4.startsWith("android:")) {
+                    Resources system = Resources.getSystem();
+                    iIntValue = system.getIdentifier(str4, null, null);
+                    if (iIntValue != 0) {
+                        try {
+                            if (!str4.equals(system.getResourceName(iIntValue))) {
+                            }
+                        } catch (Resources.NotFoundException unused2) {
+                        }
+                    }
+                } else {
+                    Map map5 = (Map) map2.get(c20132.f64695.get("package"));
+                    iIntValue = map5 != null ? ((Integer) C11392.getOrDefault(map5, str4, 0)).intValue() : 0;
+                }
+                if (iIntValue != 0) {
+                    map4.put(Integer.valueOf(i), String.format(Locale.ROOT, "0x%08x", Integer.valueOf(iIntValue)));
+                }
+            }
+        }
+        return C4681.unmodifiableMap(map4);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m52050() {
+        this.f74970.clear();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m52048(String str) {
+        if (str == null) {
+            return false;
+        }
+        int iIndexOf = str.indexOf(58);
+        int i = iIndexOf + 1;
+        int iIndexOf2 = str.indexOf(47, i);
+        return iIndexOf > 0 && iIndexOf2 > i && iIndexOf2 < str.length() - 1 && str.indexOf(58, i) < 0 && str.indexOf(47, iIndexOf2 + 1) < 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static ArrayList m52046(ApplicationInfo applicationInfo) {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(new C22369(applicationInfo.sourceDir));
+        String[] strArr = applicationInfo.splitSourceDirs;
+        if (strArr != null) {
+            for (String str : strArr) {
+                arrayList.add(new C22369(str));
+            }
+        }
+        return arrayList;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:45:0x00a8  */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m52047(AbstractC21094 abstractC21094, HashMap map, C25133 c25133) throws IOException {
+        if (abstractC21094.mo10510() < 12 || abstractC21094.mo10514(0) != 2 || abstractC21094.mo10513(4) != abstractC21094.mo10510()) {
+            throw new IOException("Invalid resource table header");
+        }
+        int iMo10514 = abstractC21094.mo10514(2);
+        if (iMo10514 < 12 || iMo10514 > abstractC21094.mo10510()) {
+            throw new IOException("Invalid resource table header size");
+        }
+        int i = 0;
+        while (true) {
+            int i2 = 24;
+            int i3 = 16;
+            int i4 = 8;
+            if (iMo10514 < abstractC21094.mo10510()) {
+                C10258.m26450(c25133);
+                if (abstractC21094.m48154(iMo10514) < 8) {
+                    throw new IOException("Truncated resource table chunk");
+                }
+                int iMo10515 = abstractC21094.mo10514(iMo10514 + 2);
+                int iMo10513 = abstractC21094.mo10513(iMo10514 + 4);
+                if (iMo10515 < 8 || iMo10513 < iMo10515 || iMo10513 > abstractC21094.m48154(iMo10514)) {
+                    throw new IOException("Invalid resource table chunk");
+                }
+                if (abstractC21094.mo10514(iMo10514) == 512) {
+                    i++;
+                    if (iMo10515 < 284) {
+                        throw new IOException("Invalid resource package header");
+                    }
+                    int iMo10516 = abstractC21094.mo10513(iMo10514 + 8);
+                    if (iMo10516 <= 0 || iMo10516 > 255 || (iMo10515 >= 288 && abstractC21094.mo10513(iMo10514 + 284) != 0)) {
+                        throw new IOException("Unsupported dynamic resource package or type ID offset");
+                    }
+                    int i5 = iMo10515 + iMo10514;
+                    for (int i6 = iMo10514 + iMo10513; i5 < i6; i6 = i6) {
+                        C10258.m26450(c25133);
+                        int i7 = i6 - i5;
+                        if (i7 < i4) {
+                            throw new IOException("Truncated resource package chunk");
+                        }
+                        int iMo10517 = abstractC21094.mo10514(i5 + 2);
+                        int iMo10518 = abstractC21094.mo10513(i5 + 4);
+                        if (iMo10517 < i4 || iMo10518 < iMo10517 || iMo10518 > i7) {
+                            throw new IOException("Invalid resource package chunk");
+                        }
+                        int iMo10519 = abstractC21094.mo10514(i5);
+                        if (iMo10519 == 514 || iMo10519 == 513) {
+                            if (iMo10517 < i3) {
+                                throw new IOException("Invalid resource type header");
+                            }
+                            int iMo105110 = abstractC21094.mo10513(i5 + 12);
+                            if (iMo105110 < 0 || iMo105110 > 65536) {
+                                throw new IOException("Invalid resource type entry count");
+                            }
+                            if (iMo10519 == 513) {
+                                if (iMo10517 < i2) {
+                                    throw new IOException("Invalid resource config header");
+                                }
+                                int iMo105111 = abstractC21094.mo10513(i5 + 16);
+                                byte bMo10516 = abstractC21094.mo10516(i5 + 9);
+                                if ((((long) iMo105110) * ((long) (((bMo10516 & 1) != 0 || (bMo10516 & 2) == 0) ? 4 : 2))) + ((long) iMo10517) > iMo105111 || iMo105111 > iMo10518) {
+                                    throw new IOException("Invalid resource entry offsets");
+                                }
+                            }
+                        }
+                        i5 += iMo10518;
+                        i2 = 24;
+                        i3 = 16;
+                        i4 = 8;
+                    }
+                }
+                iMo10514 += iMo10513;
+            } else {
+                if (i == abstractC21094.mo10513(8)) {
+                    C24296 c24296 = new C24296(abstractC21094);
+                    c24296.m54313();
+                    if (c24296.mo15674() != i) {
+                        throw new IOException("Incomplete resource table");
+                    }
+                    for (C7887 c7887 : c24296.mo15672()) {
+                        for (InterfaceC15344 interfaceC15344 : c7887.mo19822()) {
+                            C10258.m26450(c25133);
+                            if ("id".equals(interfaceC15344.getTypeName())) {
+                                if (interfaceC15344.mo35833() <= 0 || interfaceC15344.mo35833() > 255) {
+                                    throw new IOException("Invalid resource type ID");
+                                }
+                                for (InterfaceC2731 interfaceC2731 : interfaceC15344.mo33925()) {
+                                    if (interfaceC2731.mo9069() > 65535) {
+                                        throw new IOException("Invalid resource entry ID");
+                                    }
+                                    for (int i8 = 0; i8 <= interfaceC2731.mo9069(); i8++) {
+                                        C10258.m26450(c25133);
+                                        String strMo9070 = interfaceC2731.mo9070(i8);
+                                        if (strMo9070 != null) {
+                                            if (!interfaceC2731.mo9075(i8)) {
+                                                throw new IOException("Invalid resource entry");
+                                            }
+                                            String str = c7887.getPackageName() + ":id/" + strMo9070;
+                                            int iMo27607 = (c7887.mo27607() << 24) | (interfaceC15344.mo35833() << 16) | i8;
+                                            Integer num = (Integer) map.get(str);
+                                            if (num != null && num.intValue() != iMo27607) {
+                                                iMo27607 = 0;
+                                            }
+                                            map.put(str, Integer.valueOf(iMo27607));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return;
+                }
+                throw new IOException("Resource package count mismatch");
+            }
+        }
+    }
+}

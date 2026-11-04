@@ -1,39 +1,46 @@
-.class public final synthetic Ll/ۤ᩶ۚ;
+.class public final Ll/ۤ᩶ۚ;
 .super Ljava/lang/Object;
-.source "N17O"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+.source "L6Y6"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/᩹᩶ۚ;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ܳ:Ljava/lang/String;
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public final ᩷:Ljava/lang/String;
+
+.field public final ᩸:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩹᩶ۚ;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
+    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۤ᩶ۚ;->ۙ:Ll/᩹᩶ۚ;
+    .line 280
+    iput-object p1, p0, Ll/ۤ᩶ۚ;->ۤ:Ljava/lang/String;
+
+    .line 281
+    iput-object p2, p0, Ll/ۤ᩶ۚ;->ܳ:Ljava/lang/String;
+
+    .line 282
+    iput-object p3, p0, Ll/ۤ᩶ۚ;->᩸:Ljava/lang/Long;
+
+    .line 283
+    iput-object p4, p0, Ll/ۤ᩶ۚ;->᩷:Ljava/lang/String;
+
+    .line 284
+    iput-object p5, p0, Ll/ۤ᩶ۚ;->ۙ:Ljava/lang/String;
+
+    .line 285
+    iput-object p6, p0, Ll/ۤ᩶ۚ;->ᩴ:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Ll/ۤ᩶ۚ;->ۙ:Ll/᩹᩶ۚ;
-
-    .line 1706
-    invoke-interface {v0}, Ll/᩹᩶ۚ;->call()V
-
-    const/4 v0, 0x0
-
-    return-object v0
 .end method

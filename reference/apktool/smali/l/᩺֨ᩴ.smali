@@ -1,26 +1,62 @@
-.class public interface abstract Ll/᩺֨ᩴ;
+.class public final synthetic Ll/᩺֨ᩴ;
 .super Ljava/lang/Object;
-.source "M1M5"
+.source "6AK0"
 
 # interfaces
-.implements Ll/ۜ֫ᩳ;
-.implements Ljava/util/function/IntUnaryOperator;
-
-
-# annotations
-.annotation runtime Ljava/lang/FunctionalInterface;
-.end annotation
+.implements Ljava/util/function/Predicate;
 
 
 # virtual methods
-.method public abstract get(I)I
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract ۙ(II)I
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract ۙ(I)Z
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract ۨ()I
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 2
+    check-cast p1, Ll/᩶֨ᩴ;
+
+    .line 171
+    iget-object p1, p1, Ll/᩶֨ᩴ;->᩶:Ljava/io/IOException;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

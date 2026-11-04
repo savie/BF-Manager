@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.DSAKeyParameters;
 import org.bouncycastle.crypto.params.ECKeyParameters;
 import org.bouncycastle.crypto.params.GOST3410KeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Utils {
     public static CryptoServiceProperties getDefaultProperties(String str, int i, CipherParameters cipherParameters, boolean z) {
         return new DefaultServiceProperties(str, i, cipherParameters, getPurpose(z));

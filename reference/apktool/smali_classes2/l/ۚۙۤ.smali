@@ -1,127 +1,184 @@
 .class public final Ll/ۚۙۤ;
 .super Ljava/lang/Object;
-.source "Q7EB"
-
-
-# instance fields
-.field public final ۙ:Ll/ܰۙۤ;
-
-.field public final ܰ:I
+.source "W73L"
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method public static ۙ()Ll/ۧۙۤ;
+    .locals 3
 
-    .line 74
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 73
+    :try_start_0
+    invoke-static {}, Ll/ۚۙۤ;->᩷()Ljava/lang/reflect/InvocationHandler;
 
-    .line 66
-    invoke-static {}, Ll/ܰۙۤ;->values()[Ll/ܰۙۤ;
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 84
+    new-instance v1, Ll/᩻ۙۤ;
+
+    const-class v2, Lorg/chromium/support_lib_boundary/WebViewProviderFactoryBoundaryInterface;
+
+    invoke-static {v2, v0}, Ll/۠ۘۨ;->ۙ(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object v0
 
-    aget-object p1, v0, p1
+    check-cast v0, Lorg/chromium/support_lib_boundary/WebViewProviderFactoryBoundaryInterface;
 
-    .line 75
-    iput-object p1, p0, Ll/ۚۙۤ;->ۙ:Ll/ܰۙۤ;
+    invoke-direct {v1, v0}, Ll/᩻ۙۤ;-><init>(Lorg/chromium/support_lib_boundary/WebViewProviderFactoryBoundaryInterface;)V
 
-    .line 76
-    iput p2, p0, Ll/ۚۙۤ;->ܰ:I
+    return-object v1
 
-    return-void
-.end method
+    .line 82
+    :catch_0
+    new-instance v0, Ll/֡۬᩷;
 
-.method public constructor <init>(Ll/ܰۙۤ;I)V
-    .locals 0
+    .line 40
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-object v0
 
-    .line 80
-    iput-object p1, p0, Ll/ۚۙۤ;->ۙ:Ll/ܰۙۤ;
-
-    .line 81
-    iput p2, p0, Ll/ۚۙۤ;->ܰ:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .line 97
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ll/ۚۙۤ;->ۙ:Ll/ܰۙۤ;
-
-    invoke-virtual {v1}, Ll/ܰۙۤ;->ۙ()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Ll/ܰۙۤ;->ۙ(Ll/ܰۙۤ;)I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Ll/ۚۙۤ;->ܰ:I
-
-    const-string v3, "}"
-
-    .line 0
-    invoke-static {v2, v3, v1}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v1
+    :catch_1
+    move-exception v0
 
     goto :goto_0
 
-    :cond_0
-    const-string v1, ""
+    :catch_2
+    move-exception v0
 
-    .line 97
+    goto :goto_0
+
+    :catch_3
+    move-exception v0
+
+    .line 78
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    throw v1
+.end method
+
+.method public static ۤ()Ll/᩹ۗܶ;
+    .locals 1
+
+    .line 47
+    sget-object v0, Ll/ܳۙۤ;->ۙ:Ll/᩹ۗܶ;
 
     return-object v0
 .end method
 
-.method public final ۙ()I
-    .locals 1
+.method public static ᩷()Ljava/lang/reflect/InvocationHandler;
+    .locals 4
 
-    .line 89
-    iget v0, p0, Ll/ۚۙۤ;->ܰ:I
+    .line 92
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
+    const/16 v1, 0x1c
+
+    const/4 v2, 0x0
+
+    if-lt v0, v1, :cond_0
+
+    .line 93
+    invoke-static {}, Ll/ܰ۬᩷;->ۙ()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 102
+    :cond_0
+    :try_start_0
+    const-class v0, Landroid/webkit/WebView;
+
+    const-string v1, "getFactory"
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    .line 103
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 104
+    invoke-virtual {v0, v2, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 95
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    :goto_0
+    const-string v1, "org.chromium.support_lib_glue.SupportLibReflectionUtil"
+
+    const/4 v3, 0x0
+
+    .line 62
+    invoke-static {v1, v3, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "createWebViewProviderFactory"
+
+    .line 64
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    .line 66
+    invoke-virtual {v0, v2, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/reflect/InvocationHandler;
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    .line 106
+    :goto_1
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public final ܰ()I
+.method public static ᩸()Ll/ۧۙۤ;
     .locals 1
 
-    .line 85
-    iget-object v0, p0, Ll/ۚۙۤ;->ۙ:Ll/ܰۙۤ;
+    .line 43
+    sget-object v0, Ll/۫ۙۤ;->ۙ:Ll/ۧۙۤ;
 
-    invoke-virtual {v0}, Ll/ܰۙۤ;->ܰ()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

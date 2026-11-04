@@ -15,7 +15,7 @@ public class au extends bb {
     public static final bp k = new bp("message", (byte) 11, 1);
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final bp f77927l = new bp("type", (byte) 8, 2);
+    public static final bp f82043l = new bp("type", (byte) 8, 2);
     public static final long m = 1;
     public int i;
 
@@ -78,7 +78,7 @@ public class au extends bb {
             buVar.a(getMessage());
             buVar.c();
         }
-        buVar.a(f77927l);
+        buVar.a(f82043l);
         buVar.a(this.i);
         buVar.c();
         buVar.d();

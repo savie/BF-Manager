@@ -1,60 +1,36 @@
 package l;
 
-import java.util.Arrays;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩷ۙ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.᩵ܳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: S7FD */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20644 extends AbstractC22727 {
-    public C8463 c;
+public final class C20644 extends AbstractC5948 {
 
-    /* JADX WARN: Type inference failed for: r0v2, types: [l.۠᩹۠, l.᩸ۢᩴ] */
-    /* JADX WARN: Type inference failed for: r0v5, types: [l.᩸ۢᩴ] */
-    /* JADX WARN: Type inference failed for: r0v6, types: [l.᩸ۢᩴ] */
-    @Override // l.AbstractC10330, l.InterfaceC19171
-    public final void c(long j) {
-        ?? abstractC21502;
-        if (j >= 2147483639) {
-            throw new IllegalArgumentException("Stream size exceeds max array size");
-        }
-        if (j <= 0) {
-            abstractC21502 = new AbstractC21502();
-        } else {
-            abstractC21502 = new C8463((int) j);
-        }
-        this.c = abstractC21502;
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public C17355 f66209;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public C4105 f66210;
+
+    public C20644(C17355 c17355, C4105 c4105) {
+        super(c17355.f20376, c17355.m17326(), 0);
+        this.f20380 = EnumC5670.record_component_info;
+        this.f66209 = c17355;
+        this.f66210 = c4105;
     }
 
-    @Override // l.AbstractC10330, l.InterfaceC19171
-    public final void end() {
-        int[] iArr = (int[]) this.c.b();
-        Arrays.sort(iArr);
-        long length = iArr.length;
-        InterfaceC19171 interfaceC19171 = this.a;
-        interfaceC19171.c(length);
-        int i = 0;
-        if (!this.b) {
-            int length2 = iArr.length;
-            while (i < length2) {
-                interfaceC19171.accept(iArr[i]);
-                i++;
-            }
-        } else {
-            int length3 = iArr.length;
-            while (i < length3) {
-                int i2 = iArr[i];
-                if (interfaceC19171.f()) {
-                    break;
-                }
-                interfaceC19171.accept(i2);
-                i++;
-            }
-        }
-        interfaceC19171.end();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C11562 m47262() {
+        return this.f66209.m17321((InterfaceC3359[]) new C14618[]{this.f20373});
     }
 
-    @Override // l.InterfaceC10974, l.InterfaceC19171
-    public final void accept(int i) {
-        this.c.accept(i);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m47261(InterfaceC9397 interfaceC9397) throws IOException {
+        C4105 c4105 = this.f66210;
+        C11388 c11388 = (C11388) interfaceC9397;
+        c11388.m28740(((C7660) ((C18941) c4105.m13203().f61224).f61428).f67820);
+        c11388.m28740(((C7660) ((C18941) c4105.m13203().f61224).f61429).f67820);
+        m47262().m29082(c11388);
     }
 }

@@ -1,143 +1,44 @@
 package l;
 
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.֡ۨᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: HBSC */
+/* JADX INFO: renamed from: l.֡ۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0397 implements InterfaceC12124, InterfaceC6206 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10982 f1884;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f1885 = -1;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f1886;
-
-    @Override // java.util.Iterator, l.InterfaceC6206
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C8596.m22379(this, consumer);
+public final enum C0397 extends EnumC13820 {
+    public /* synthetic */ C0397() {
+        this("DoctypeSystemIdentifier_doubleQuoted", 62);
     }
 
-    @Override // java.util.ListIterator
-    public final void add(Object obj) {
-        add(((Float) obj).floatValue());
+    public C0397(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // java.util.ListIterator
-    public final void set(Object obj) {
-        mo2132(((Float) obj).floatValue());
-    }
-
-    @Override // java.util.ListIterator, l.InterfaceC21086
-    public final Object previous() {
-        return Float.valueOf(mo2134());
-    }
-
-    @Override // java.util.ListIterator, java.util.Iterator
-    public final Object next() {
-        return Float.valueOf(nextFloat());
-    }
-
-    public C0397(C10982 c10982, int i) {
-        this.f1884 = c10982;
-        this.f1886 = i;
-    }
-
-    @Override // java.util.ListIterator, java.util.Iterator
-    public final boolean hasNext() {
-        return this.f1886 < this.f1884.f37399;
-    }
-
-    @Override // java.util.ListIterator, l.InterfaceC21086
-    public final boolean hasPrevious() {
-        return this.f1886 > 0;
-    }
-
-    @Override // l.InterfaceC10007
-    public final float nextFloat() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == 0) {
+            c13646.m33394(this);
+            c13646.f43324.f61263.append((char) 65533);
+            return;
         }
-        float[] fArr = this.f1884.f37398;
-        int i = this.f1886;
-        this.f1886 = i + 1;
-        this.f1885 = i;
-        return fArr[i];
-    }
-
-    @Override // l.InterfaceC12124
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final float mo2134() {
-        if (!hasPrevious()) {
-            throw new NoSuchElementException();
+        if (cM12689 == '\"') {
+            c13646.m33401(EnumC13820.f43842);
+            return;
         }
-        float[] fArr = this.f1884.f37398;
-        int i = this.f1886 - 1;
-        this.f1886 = i;
-        this.f1885 = i;
-        return fArr[i];
-    }
-
-    @Override // java.util.ListIterator
-    public final int nextIndex() {
-        return this.f1886;
-    }
-
-    @Override // java.util.ListIterator
-    public final int previousIndex() {
-        return this.f1886 - 1;
-    }
-
-    @Override // l.InterfaceC12124
-    public final void add(float f) {
-        int i = this.f1886;
-        this.f1886 = i + 1;
-        this.f1884.mo26069(f, i);
-        this.f1885 = -1;
-    }
-
-    @Override // l.InterfaceC12124
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo2132(float f) {
-        int i = this.f1885;
-        if (i == -1) {
-            throw new IllegalStateException();
+        if (cM12689 == '>') {
+            c13646.m33394(this);
+            c13646.f43324.getClass();
+            c13646.m33400();
+            c13646.m33401(EnumC13820.f43874);
+            return;
         }
-        this.f1884.mo26064(f, i);
-    }
-
-    @Override // l.InterfaceC12124, java.util.ListIterator, java.util.Iterator
-    public final void remove() {
-        int i = this.f1885;
-        if (i == -1) {
-            throw new IllegalStateException();
+        if (cM12689 == 65535) {
+            c13646.m33399(this);
+            c13646.f43324.getClass();
+            c13646.m33400();
+            c13646.m33401(EnumC13820.f43874);
+            return;
         }
-        this.f1884.mo26070(i);
-        int i2 = this.f1885;
-        int i3 = this.f1886;
-        if (i2 < i3) {
-            this.f1886 = i3 - 1;
-        }
-        this.f1885 = -1;
-    }
-
-    @Override // l.InterfaceC3758
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void forEachRemaining(InterfaceC17767 interfaceC17767) {
-        C10982 c10982 = this.f1884;
-        float[] fArr = c10982.f37398;
-        while (true) {
-            int i = this.f1886;
-            if (i >= c10982.f37399) {
-                return;
-            }
-            this.f1886 = i + 1;
-            this.f1885 = i;
-            interfaceC17767.mo35707(fArr[i]);
-        }
+        c13646.f43324.f61263.append(cM12689);
     }
 }

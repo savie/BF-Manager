@@ -1,74 +1,25 @@
-.class public interface abstract Ll/ۧۡ᩵;
+.class public final Ll/ۧۡ᩵;
 .super Ljava/lang/Object;
-.source "YA63"
+.source "I1MH"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public ܰ:I
 
 
 # virtual methods
-.method public abstract ۙ(Ll/֨ۡ᩵;)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract ۙ(Ll/֫᩵᩵;)V
-.end method
+    .line 45
+    iget v0, p0, Ll/ۧۡ᩵;->ܰ:I
 
-.method public abstract ۙ(Ll/ۖۡ᩵;)V
-.end method
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-.method public abstract ۙ(Ll/ۗ᩵᩵;)V
-.end method
+    move-result-object v0
 
-.method public abstract ۙ(Ll/ۘۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ۙۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ۚۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ۛۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ۜۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/۠ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ۢ᩵᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/۫ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/۬ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ܰۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ܶۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ܺۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ܿۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/ᩳۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/᩶ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/᩷ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/᩸ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/᩹ۡ᩵;)V
-.end method
-
-.method public abstract ۙ(Ll/᩺ۡ᩵;)V
+    return-object v0
 .end method

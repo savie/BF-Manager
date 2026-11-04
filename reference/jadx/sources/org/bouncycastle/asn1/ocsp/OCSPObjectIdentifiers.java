@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.ocsp;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.x509.X509ObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface OCSPObjectIdentifiers {
     public static final ASN1ObjectIdentifier id_pkix_ocsp;
     public static final ASN1ObjectIdentifier id_pkix_ocsp_archive_cutoff;

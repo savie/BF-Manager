@@ -1,96 +1,92 @@
-.class public Ll/᩻᩹᩸;
-.super Ll/۟ۖ᩸;
-.source "0B0D"
+.class public final synthetic Ll/᩻᩹᩸;
+.super Ljava/lang/Object;
+.source "P6SA"
+
+# interfaces
+.implements Ll/֡ۛۙ;
+.implements Ll/᩻ܶ᩵;
+.implements Ll/ܽۧܺ;
+.implements Ll/ۧ۫ۤ;
+
+
+# instance fields
+.field public final synthetic ܰ:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 494
-    invoke-direct {p0}, Ll/۟ۖ᩸;-><init>()V
+    .line 0
+    iput-object p1, p0, Ll/᩻᩹᩸;->ܰ:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-    .locals 5
-
-    .line 497
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
-
-    move-result-object v0
-
-    sget-object v1, Ll/᩹۬᩸;->᩻:Ll/᩹۬᩸;
-
-    if-ne v0, v1, :cond_0
-
-    .line 498
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->۫()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 501
-    :cond_0
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ܿ()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 503
-    :try_start_0
-    invoke-static {v0}, Ll/۬ۚ᩸;->ۨ(Ljava/lang/String;)Ljava/math/BigInteger;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception v1
-
-    .line 505
-    new-instance v2, Ll/᩹ۖ᩸;
-
-    const-string v3, "Failed parsing \'"
-
-    const-string v4, "\' as BigInteger; at path "
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    invoke-static {v3, v0, v4}, Ll/۫ܰۖ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ll/᩻᩹᩸;->ܰ:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Ll/ܽۢ᩸;
 
-    .line 506
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->᩸()Ljava/lang/String;
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ll/ܽۢ᩸;->᩷(J)Ll/᩹ܽ᩵;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 52
-    invoke-direct {v2, p1, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 506
-    throw v2
+    return-object p1
 .end method
 
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-    .locals 0
+.method public ۙ(I)V
+    .locals 1
 
-    .line 494
-    check-cast p2, Ljava/math/BigInteger;
+    .line 0
+    iget-object v0, p0, Ll/᩻᩹᩸;->ܰ:Ljava/lang/Object;
 
-    .line 512
-    invoke-virtual {p1, p2}, Ll/֨۬᩸;->ۙ(Ljava/lang/Number;)V
+    check-cast v0, Ll/᩻ۢ۫;
+
+    invoke-interface {v0, p1}, Ll/᩻ۢ۫;->᩷(I)V
 
     return-void
+.end method
+
+.method public ۙ(JLl/᩶ۨۙ;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Ll/᩻᩹᩸;->ܰ:Ljava/lang/Object;
+
+    check-cast v0, Ll/ᩳ᩵᩷;
+
+    invoke-static {v0, p1, p2, p3}, Ll/ᩳ᩵᩷;->ۙ(Ll/ᩳ᩵᩷;JLl/᩶ۨۙ;)V
+
+    return-void
+.end method
+
+.method public ۙ(Ljava/lang/String;)Z
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Ll/᩻᩹᩸;->ܰ:Ljava/lang/Object;
+
+    .line 4
+    check-cast v0, Ljava/lang/String;
+
+    .line 1082
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

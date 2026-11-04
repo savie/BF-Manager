@@ -5,7 +5,7 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.math.ec.ECFieldElement;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X9FieldElement extends ASN1Object {
     public static X9IntegerConverter converter = new X9IntegerConverter();
     public ECFieldElement f;

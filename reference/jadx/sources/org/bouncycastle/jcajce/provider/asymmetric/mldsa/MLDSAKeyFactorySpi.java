@@ -10,8 +10,8 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.HashSet;
 import java.util.Set;
-import l.C16236;
-import l.C3012;
+import l.C11845;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -188,7 +188,7 @@ public class MLDSAKeyFactorySpi extends BaseKeyFactorySpi {
             }
         } else {
             if (!(key instanceof BCMLDSAPublicKey)) {
-                throw new InvalidKeySpecException(C3012.m8975(key, new StringBuilder("unsupported key type: "), "."));
+                throw new InvalidKeySpecException(C11845.m29685(key, new StringBuilder("unsupported key type: "), "."));
             }
             if (X509EncodedKeySpec.class.isAssignableFrom(cls)) {
                 return new X509EncodedKeySpec(key.getEncoded());
@@ -198,6 +198,6 @@ public class MLDSAKeyFactorySpi extends BaseKeyFactorySpi {
                 return new MLDSAPublicKeySpec(bCMLDSAPublicKey.getParameterSpec(), bCMLDSAPublicKey.getPublicData());
             }
         }
-        throw new InvalidKeySpecException(C16236.m38347(cls, "unknown key specification: ", "."));
+        throw new InvalidKeySpecException(C20551.m47117(cls, "unknown key specification: ", "."));
     }
 }

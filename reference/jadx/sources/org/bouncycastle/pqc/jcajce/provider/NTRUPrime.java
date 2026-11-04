@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C18917;
-import l.C7997;
+import l.C18011;
+import l.C22121;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
@@ -19,7 +19,7 @@ public class NTRUPrime {
             configurableProvider.addAlgorithm("KeyPairGenerator.NTRULPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.NTRULPRimeKeyPairGeneratorSpi");
             configurableProvider.addAlgorithm("KeyGenerator.NTRULPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.NTRULPRimeKeyGeneratorSpi");
             NTRULPRimeKeyFactorySpi nTRULPRimeKeyFactorySpi = new NTRULPRimeKeyFactorySpi();
-            C7997.m21058(C18917.m43575(configurableProvider, "Cipher.NTRULPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.NTRULPRimeCipherSpi$Base", "Alg.Alias.Cipher."), BCObjectIdentifiers.pqc_kem_ntrulprime, configurableProvider, "NTRU");
+            C18011.m41992(C22121.m50077(configurableProvider, "Cipher.NTRULPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.NTRULPRimeCipherSpi$Base", "Alg.Alias.Cipher."), BCObjectIdentifiers.pqc_kem_ntrulprime, configurableProvider, "NTRU");
             registerOid(configurableProvider, BCObjectIdentifiers.ntrulpr653, "NTRULPRIME", nTRULPRimeKeyFactorySpi);
             registerOid(configurableProvider, BCObjectIdentifiers.ntrulpr761, "NTRULPRIME", nTRULPRimeKeyFactorySpi);
             registerOid(configurableProvider, BCObjectIdentifiers.ntrulpr857, "NTRULPRIME", nTRULPRimeKeyFactorySpi);
@@ -30,7 +30,7 @@ public class NTRUPrime {
             configurableProvider.addAlgorithm("KeyPairGenerator.SNTRUPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.SNTRUPrimeKeyPairGeneratorSpi");
             configurableProvider.addAlgorithm("KeyGenerator.SNTRUPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.SNTRUPrimeKeyGeneratorSpi");
             SNTRUPrimeKeyFactorySpi sNTRUPrimeKeyFactorySpi = new SNTRUPrimeKeyFactorySpi();
-            C7997.m21058(C18917.m43575(configurableProvider, "Cipher.SNTRUPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.SNTRUPrimeCipherSpi$Base", "Alg.Alias.Cipher."), BCObjectIdentifiers.pqc_kem_sntruprime, configurableProvider, "NTRU");
+            C18011.m41992(C22121.m50077(configurableProvider, "Cipher.SNTRUPRIME", "org.bouncycastle.pqc.jcajce.provider.ntruprime.SNTRUPrimeCipherSpi$Base", "Alg.Alias.Cipher."), BCObjectIdentifiers.pqc_kem_sntruprime, configurableProvider, "NTRU");
             registerOid(configurableProvider, BCObjectIdentifiers.sntrup653, "SNTRUPRIME", sNTRUPrimeKeyFactorySpi);
             registerOid(configurableProvider, BCObjectIdentifiers.sntrup761, "SNTRUPRIME", sNTRUPrimeKeyFactorySpi);
             registerOid(configurableProvider, BCObjectIdentifiers.sntrup857, "SNTRUPRIME", sNTRUPrimeKeyFactorySpi);

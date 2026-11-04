@@ -1,40 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ᩸ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I3KA */
-/* JADX INFO: loaded from: classes5.dex */
-public class C19027 extends C8444 {
+/* JADX INFO: renamed from: l.ᩳۧۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y5SN */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C19027 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C18321 f61553;
+    public static final /* synthetic */ int[] f61639;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m43758(C18321 c18321, C8753 c8753) {
-        this.f61553 = c18321;
+    static {
+        int[] iArr = new int[EnumC2619.values().length];
         try {
-            c18321.m42559().mo1800(this, c8753);
-        } finally {
-            this.f61553 = null;
+            iArr[EnumC2619.CREATED.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-    }
-
-    @Override // l.C8444
-    /* JADX INFO: renamed from: ۙ */
-    public Object mo22105(InterfaceC17428 interfaceC17428, Object obj) {
-        if (interfaceC17428 == null) {
-            return null;
-        }
-        C18321 c18321 = this.f61553;
-        this.f61553 = new C18321(c18321, interfaceC17428);
         try {
-            return interfaceC17428.mo1800(this, obj);
-        } finally {
-            this.f61553 = c18321;
+            iArr[EnumC2619.STARTED.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18321 m43757() {
-        return this.f61553;
+        try {
+            iArr[EnumC2619.RESUMED.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            iArr[EnumC2619.DESTROYED.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            iArr[EnumC2619.INITIALIZED.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        f61639 = iArr;
     }
 }

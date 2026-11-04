@@ -11,6 +11,6 @@ public class DeleteObjectsResult implements Serializable, S3RequesterChargedResu
 
     @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo465(boolean z) {
+    public final void mo459(boolean z) {
     }
 }

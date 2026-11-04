@@ -1,194 +1,143 @@
 .class public final Ll/ۙۛۙ;
 .super Ljava/lang/Object;
-.source "H8RW"
+.source "T8IH"
+
+
+# instance fields
+.field public final ۙ:Ljava/lang/String;
 
 
 # direct methods
-.method public static ۙ(IILl/ۖᩴۙ;)I
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    const/16 v0, 0xa
+    .line 68
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :goto_0
-    if-lez v0, :cond_2
+    .line 71
+    iput-object p1, p0, Ll/ۙۛۙ;->ۙ:Ljava/lang/String;
 
-    .line 625
-    invoke-static {v0}, Ll/ᩳۤۙ;->ܰ(I)I
+    return-void
+.end method
 
-    move-result v1
+.method public static ۙ(Ll/᩶ۨۙ;)Ll/ۙۛۙ;
+    .locals 6
 
-    if-nez v1, :cond_0
+    const/4 v0, 0x2
+
+    .line 36
+    invoke-virtual {p0, v0}, Ll/᩶ۨۙ;->ܳ(I)V
+
+    .line 37
+    invoke-virtual {p0}, Ll/᩶ۨۙ;->ۛ()I
+
+    move-result v0
+
+    shr-int/lit8 v1, v0, 0x1
+
+    and-int/lit8 v0, v0, 0x1
+
+    const/4 v2, 0x5
+
+    shl-int/2addr v0, v2
+
+    .line 39
+    invoke-virtual {p0}, Ll/᩶ۨۙ;->ۛ()I
+
+    move-result p0
+
+    shr-int/lit8 p0, p0, 0x3
+
+    and-int/lit8 p0, p0, 0x1f
+
+    or-int/2addr p0, v0
+
+    const/4 v0, 0x4
+
+    const/16 v3, 0xa
+
+    if-eq v1, v0, :cond_3
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq v1, v0, :cond_3
+
+    const/16 v0, 0x8
+
+    if-ne v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x9
+
+    if-ne v1, v0, :cond_1
+
+    const-string v0, "dvav"
 
     goto :goto_1
 
-    .line 629
-    :cond_0
-    new-instance v2, Landroid/media/AudioFormat$Builder;
-
-    invoke-direct {v2}, Landroid/media/AudioFormat$Builder;-><init>()V
-
-    .line 631
-    invoke-virtual {v2, p0}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v2
-
-    .line 632
-    invoke-virtual {v2, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v2
-
-    .line 633
-    invoke-virtual {v2, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v1
-
-    .line 634
-    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v1
-
-    .line 636
-    invoke-virtual {p2}, Ll/ۖᩴۙ;->ۙ()Ll/ۨᩴۙ;
-
-    move-result-object v2
-
-    iget-object v2, v2, Ll/ۨᩴۙ;->ۙ:Landroid/media/AudioAttributes;
-
-    .line 635
-    invoke-static {v1, v2}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return v0
-
     :cond_1
-    :goto_1
-    add-int/lit8 v0, v0, -0x1
+    if-ne v1, v3, :cond_2
 
-    goto :goto_0
+    const-string v0, "dav1"
+
+    goto :goto_1
 
     :cond_2
     const/4 p0, 0x0
 
-    return p0
-.end method
-
-.method public static ۙ(Ll/ۖᩴۙ;)Ll/᩹ܿܶ;
-    .locals 6
-
-    .line 596
-    sget v0, Ll/᩹ܿܶ;->᩶:I
-
-    .line 726
-    new-instance v0, Ll/ۙܿܶ;
-
-    invoke-direct {v0}, Ll/ۙܿܶ;-><init>()V
-
-    .line 597
-    sget-object v1, Ll/ۖۛۙ;->ۨ:Ll/ۜܿܶ;
-
-    invoke-virtual {v1}, Ll/ۜܿܶ;->keySet()Ll/᩻ܿܶ;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ll/֫۫ܶ;->iterator()Ll/֡ܳܶ;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    .line 598
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-static {v3}, Ll/ᩳۤۙ;->ۙ(I)I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_1
-
-    goto :goto_0
-
-    .line 602
-    :cond_1
-    new-instance v4, Landroid/media/AudioFormat$Builder;
-
-    invoke-direct {v4}, Landroid/media/AudioFormat$Builder;-><init>()V
-
-    const/16 v5, 0xc
-
-    .line 604
-    invoke-virtual {v4, v5}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v4
-
-    .line 605
-    invoke-virtual {v4, v3}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v3
-
-    const v4, 0xbb80
-
-    .line 606
-    invoke-virtual {v3, v4}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v3
-
-    .line 607
-    invoke-virtual {v3}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v3
-
-    .line 608
-    invoke-virtual {p0}, Ll/ۖᩴۙ;->ۙ()Ll/ۨᩴۙ;
-
-    move-result-object v4
-
-    iget-object v4, v4, Ll/ۨᩴۙ;->ۙ:Landroid/media/AudioAttributes;
-
-    .line 602
-    invoke-static {v3, v4}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 609
-    invoke-virtual {v0, v2}, Ll/᩻۫ܶ;->ܰ(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p0, 0x2
-
-    .line 612
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ll/᩻۫ܶ;->ܰ(Ljava/lang/Object;)V
-
-    .line 613
-    invoke-virtual {v0}, Ll/ۙܿܶ;->ۙ()Ll/᩹ܿܶ;
-
-    move-result-object p0
-
     return-object p0
+
+    :cond_3
+    :goto_0
+    const-string v0, "dvhe"
+
+    .line 0
+    :goto_1
+    invoke-static {v0}, Ll/ۤ۠֫;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "."
+
+    const-string v4, ".0"
+
+    if-ge v1, v3, :cond_4
+
+    move-object v5, v4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v5, v2
+
+    .line 52
+    :goto_2
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    if-ge p0, v3, :cond_5
+
+    move-object v2, v4
+
+    .line 54
+    :cond_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 56
+    new-instance v0, Ll/ۙۛۙ;
+
+    invoke-direct {v0, p0}, Ll/ۙۛۙ;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method

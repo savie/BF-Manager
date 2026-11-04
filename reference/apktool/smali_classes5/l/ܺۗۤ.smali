@@ -1,71 +1,85 @@
-.class public final Ll/ܺۗۤ;
-.super Ll/۫ۗۤ;
-.source "57L9"
+.class public final synthetic Ll/ܺۗۤ;
+.super Ljava/lang/Object;
+.source "G7I1"
+
+# interfaces
+.implements Ll/ۨ᩵ۤ;
 
 
 # instance fields
-.field public final synthetic ܿ:Ll/ۧۗۤ;
+.field public final synthetic ۙ:I
+
+.field public final synthetic ᩷:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    .line 440
-    iput-object p1, p0, Ll/ܺۗۤ;->ܿ:Ll/ۧۗۤ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 441
-    invoke-direct {p0, p1, p2}, Ll/۫ۗۤ;-><init>(Ll/ۧۗۤ;Ll/ᩴۡ۟;)V
+    iput p1, p0, Ll/ܺۗۤ;->ۙ:I
+
+    iput p2, p0, Ll/ܺۗۤ;->᩷:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final negate()Ll/֨ۗۤ;
     .locals 1
 
-    .line 438
-    check-cast p1, Ll/ܽۤۤ;
+    .line 2395
+    sget-object v0, Ll/ۙ᩺ۤ;->᩷:Ll/֡ۨۤ;
 
-    .line 446
-    iget-object v0, p0, Ll/ܺۗۤ;->ܿ:Ll/ۧۗۤ;
-
-    invoke-static {v0}, Ll/ۧۗۤ;->ܰ(Ll/ۧۗۤ;)Ll/᩻ܺۤ;
+    .line 2374
+    invoke-static {p0}, Ll/֨ۗۤ;->ۤ(Ll/ۖ᩵ۤ;)Ll/֨ۗۤ;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ll/᩻ܺۤ;->֡(Ll/ܽۤۤ;)Ll/ܽۤۤ;
+    return-object v0
+.end method
+
+.method public final synthetic ۙ(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩵᩵ۤ;->ۙ(Ll/ۨ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 
-    sget-object v0, Ll/ۜ۟ۤ;->ܿ:Ll/ۜ۟ۤ;
+    return-object p1
+.end method
 
-    invoke-virtual {p1, v0}, Ll/ܽۤۤ;->ۙ(Ll/ۜ۟ۤ;)Z
+.method public final ۙ(I)Z
+    .locals 1
 
-    move-result p1
+    .line 436
+    iget v0, p0, Ll/ܺۗۤ;->ۙ:I
+
+    if-gt v0, p1, :cond_0
+
+    iget v0, p0, Ll/ܺۗۤ;->᩷:I
+
+    if-gt p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final ۙ(Ll/ܽۤۤ;)Ll/ۤ᩵ۤ;
-    .locals 1
+.method public final synthetic ᩷(Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
+    .locals 0
 
-    .line 451
-    iget-object p1, p0, Ll/ܺۗۤ;->ܿ:Ll/ۧۗۤ;
-
-    invoke-static {p1}, Ll/ۧۗۤ;->ۙ(Ll/ۧۗۤ;)Ll/ۘۡۤ;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll/ۘۡۤ;->۬:Ll/ۗۡۤ;
-
-    .line 322
-    new-instance v0, Ll/ܽۗۤ;
-
-    invoke-direct {v0, p0, p1}, Ll/ܽۗۤ;-><init>(Ll/۫ۗۤ;Ll/ܽۤۤ;)V
-
-    invoke-virtual {p0, v0}, Ll/ܶۗۤ;->ۙ(Ljava/util/function/Predicate;)Ll/ۤ᩵ۤ;
+    .line 0
+    invoke-static {p0, p1}, Ll/᩵᩵ۤ;->᩷(Ll/ۨ᩵ۤ;Ll/ۖ᩵ۤ;)Ll/ۖ᩵ۤ;
 
     move-result-object p1
 

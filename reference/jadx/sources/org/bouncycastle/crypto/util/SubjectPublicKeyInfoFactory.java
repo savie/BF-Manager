@@ -39,7 +39,7 @@ import org.bouncycastle.pqc.crypto.lms.HSSPublicKeyParameters;
 import org.bouncycastle.pqc.crypto.lms.LMSPublicKeyParameters;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SubjectPublicKeyInfoFactory {
     public static Set cryptoProOids = null;
     public static final byte tag_OctetString = 4;

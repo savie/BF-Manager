@@ -1,10 +1,9 @@
 package org.bouncycastle.asn1;
 
-import l.C16523;
-import l.C2271;
-import l.C7997;
+import l.C14442;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ASN1Util {
     public static ASN1TaggedObject checkContextTag(ASN1TaggedObject aSN1TaggedObject, int i) {
         return checkTag(aSN1TaggedObject, 128, i);
@@ -26,28 +25,28 @@ public abstract class ASN1Util {
         if (aSN1TaggedObject.hasTag(i, i2)) {
             return aSN1TaggedObject;
         }
-        throw new IllegalStateException(C7997.m21055("Expected ", getTagText(i, i2), " tag but found ", getTagText(aSN1TaggedObject)));
+        throw new IllegalStateException(ExternalValue$$ExternalSyntheticOutline0.m("Expected ", getTagText(i, i2), " tag but found ", getTagText(aSN1TaggedObject)));
     }
 
     public static ASN1TaggedObjectParser checkTag(ASN1TaggedObjectParser aSN1TaggedObjectParser, int i, int i2) {
         if (aSN1TaggedObjectParser.hasTag(i, i2)) {
             return aSN1TaggedObjectParser;
         }
-        throw new IllegalStateException(C7997.m21055("Expected ", getTagText(i, i2), " tag but found ", getTagText(aSN1TaggedObjectParser)));
+        throw new IllegalStateException(ExternalValue$$ExternalSyntheticOutline0.m("Expected ", getTagText(i, i2), " tag but found ", getTagText(aSN1TaggedObjectParser)));
     }
 
     public static ASN1TaggedObject checkTagClass(ASN1TaggedObject aSN1TaggedObject, int i) {
         if (aSN1TaggedObject.hasTagClass(i)) {
             return aSN1TaggedObject;
         }
-        throw new IllegalStateException(C7997.m21055("Expected ", getTagClassText(i), " tag but found ", getTagClassText(aSN1TaggedObject)));
+        throw new IllegalStateException(ExternalValue$$ExternalSyntheticOutline0.m("Expected ", getTagClassText(i), " tag but found ", getTagClassText(aSN1TaggedObject)));
     }
 
     public static ASN1TaggedObjectParser checkTagClass(ASN1TaggedObjectParser aSN1TaggedObjectParser, int i) {
         if (aSN1TaggedObjectParser.hasTagClass(i)) {
             return aSN1TaggedObjectParser;
         }
-        throw new IllegalStateException(C7997.m21055("Expected ", getTagClassText(i), " tag but found ", getTagClassText(aSN1TaggedObjectParser)));
+        throw new IllegalStateException(ExternalValue$$ExternalSyntheticOutline0.m("Expected ", getTagClassText(i), " tag but found ", getTagClassText(aSN1TaggedObjectParser)));
     }
 
     public static ASN1Primitive getBaseUniversal(ASN1TaggedObject aSN1TaggedObject, int i, int i2, boolean z, int i3) {
@@ -129,7 +128,7 @@ public abstract class ASN1Util {
         } else {
             str = "[CONTEXT ";
         }
-        return C2271.m6966(i2, str, "]");
+        return C14442.m34864(i2, str, "]");
     }
 
     public static String getTagText(ASN1Tag aSN1Tag) {
@@ -307,7 +306,7 @@ public abstract class ASN1Util {
 
     public static Object getInstanceChoiceBaseObject(ASN1TaggedObject aSN1TaggedObject, boolean z, String str) {
         if (!z) {
-            throw new IllegalArgumentException(C16523.m38890("Implicit tagging cannot be used with untagged choice type ", str, " (X.680 30.6, 30.8)."));
+            throw new IllegalArgumentException(C14442.m34865("Implicit tagging cannot be used with untagged choice type ", str, " (X.680 30.6, 30.8)."));
         }
         if (aSN1TaggedObject != null) {
             return getExplicitContextBaseObject(aSN1TaggedObject);
@@ -317,7 +316,7 @@ public abstract class ASN1Util {
 
     public static Object getTaggedChoiceBaseObject(ASN1TaggedObject aSN1TaggedObject, boolean z, String str) {
         if (!z) {
-            throw new IllegalArgumentException(C16523.m38890("Implicit tagging cannot be used with untagged choice type ", str, " (X.680 30.6, 30.8)."));
+            throw new IllegalArgumentException(C14442.m34865("Implicit tagging cannot be used with untagged choice type ", str, " (X.680 30.6, 30.8)."));
         }
         if (aSN1TaggedObject != null) {
             return aSN1TaggedObject.getExplicitBaseObject();

@@ -10,7 +10,7 @@ import java.util.Collection;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Selector;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCRLStoreSelector implements Selector {
     public final CRLSelector baseSelector;
     public final boolean completeCRLEnabled;

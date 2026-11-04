@@ -6,9 +6,9 @@
 # instance fields
 .field public final ۙ:Lcom/amazonaws/util/AWSRequestMetrics;
 
-.field public final ۨ:Ljava/util/List;
+.field public final ۤ:Ljava/util/List;
 
-.field public ܰ:Lcom/amazonaws/auth/AWSCredentials;
+.field public ᩷:Lcom/amazonaws/auth/AWSCredentials;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 64
-    iput-object p1, p0, Lcom/amazonaws/http/ExecutionContext;->ۨ:Ljava/util/List;
+    iput-object p1, p0, Lcom/amazonaws/http/ExecutionContext;->ۤ:Ljava/util/List;
 
     if-eqz p2, :cond_0
 
@@ -58,25 +58,25 @@
     .locals 0
 
     .line 128
-    iput-object p1, p0, Lcom/amazonaws/http/ExecutionContext;->ܰ:Lcom/amazonaws/auth/AWSCredentials;
+    iput-object p1, p0, Lcom/amazonaws/http/ExecutionContext;->᩷:Lcom/amazonaws/auth/AWSCredentials;
 
     return-void
 .end method
 
-.method public final ۨ()Ljava/util/List;
+.method public final ۤ()Ljava/util/List;
     .locals 1
 
     .line 80
-    iget-object v0, p0, Lcom/amazonaws/http/ExecutionContext;->ۨ:Ljava/util/List;
+    iget-object v0, p0, Lcom/amazonaws/http/ExecutionContext;->ۤ:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public final ܰ()Lcom/amazonaws/auth/AWSCredentials;
+.method public final ᩷()Lcom/amazonaws/auth/AWSCredentials;
     .locals 1
 
     .line 115
-    iget-object v0, p0, Lcom/amazonaws/http/ExecutionContext;->ܰ:Lcom/amazonaws/auth/AWSCredentials;
+    iget-object v0, p0, Lcom/amazonaws/http/ExecutionContext;->᩷:Lcom/amazonaws/auth/AWSCredentials;
 
     return-object v0
 .end method

@@ -1,70 +1,33 @@
 package l;
 
-import java.io.EOFException;
-import java.io.InterruptedIOException;
-import java.util.List;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.᩺᩺ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J8PP */
+/* JADX INFO: renamed from: l.᩹ۙۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7428 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23306 implements InterfaceC10045 {
+public final class C23306 implements Iterator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2460 f75560 = new C2460(4);
+    public C3168 f75471;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C15067 f75559 = new C15067(-1, -1, "image/heif");
-
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2751() {
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f75471.f10278 != null;
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۨ */
-    public final InterfaceC10045 mo2755() {
-        return this;
-    }
-
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2754(InterfaceC7222 interfaceC7222) throws EOFException, InterruptedIOException {
-        C14984 c14984 = (C14984) interfaceC7222;
-        c14984.mo19218(4, false);
-        C2460 c2460 = this.f75560;
-        c2460.m7517(4);
-        c14984.mo19219(false, 0, 4, c2460.m7518());
-        if (c2460.m7532() == 1718909296) {
-            c2460.m7517(4);
-            c14984.mo19219(false, 0, 4, c2460.m7518());
-            if (c2460.m7532() == 1751476579) {
-                return true;
-            }
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (hasNext()) {
+            C3168 c3168 = this.f75471;
+            this.f75471 = c3168.f10278;
+            return c3168;
         }
-        return false;
+        throw new NoSuchElementException();
     }
 
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2753(InterfaceC15690 interfaceC15690) {
-        this.f75559.mo2753(interfaceC15690);
-    }
-
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo2750(InterfaceC7222 interfaceC7222, C0954 c0954) {
-        return this.f75559.mo2750(interfaceC7222, c0954);
-    }
-
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2752(long j, long j2) {
-        this.f75559.mo2752(j, j2);
-    }
-
-    @Override // l.InterfaceC10045
-    /* JADX INFO: renamed from: ᩹ */
-    public final List mo2756() {
-        return AbstractC22433.of();
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
     }
 }

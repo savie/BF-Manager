@@ -1,133 +1,115 @@
 package l;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import com.alipay.sdk.m.o.b;
+import java.io.InterruptedIOException;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.᩹ܽ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 96ZB */
+/* JADX INFO: renamed from: l.᩷᩻ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4ET */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22411 {
+public class C22411 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Set f73136;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C22411 f73137 = new C22411(Collections.EMPTY_MAP, false);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C22411 f72586 = new C5257();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f73138;
+    public long f72587;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Map f73139;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long f72588;
 
-    static {
-        Object[] objArr = {"range", "accept-encoding", "content-length", "transfer-encoding", "if-none-match", "if-modified-since"};
-        HashSet hashSet = new HashSet(6);
-        for (int i = 0; i < 6; i++) {
-            Object obj = objArr[i];
-            C13638.requireNonNull(obj);
-            if (!hashSet.add(obj)) {
-                throw new IllegalArgumentException(C9023.m23354(obj, "duplicate element: "));
-            }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f72589;
+
+    /* JADX INFO: renamed from: ᩷ */
+    public C22411 mo15814(long j) {
+        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
+        if (j < 0) {
+            throw new IllegalArgumentException(C24770.m55292(j, "timeout < 0: "));
         }
-        f73136 = C0561.unmodifiableSet(hashSet);
+        if (timeUnit == null) {
+            throw new IllegalArgumentException("unit == null");
+        }
+        this.f72588 = timeUnit.toNanos(j);
+        return this;
     }
 
-    public C22411(Map map, boolean z) {
-        this.f73139 = C0561.unmodifiableMap(new LinkedHashMap(map));
-        this.f73138 = z;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public long mo50551() {
+        return this.f72588;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C22411 m49694(String str, boolean z) {
-        LinkedHashMap linkedHashMap = new LinkedHashMap();
-        TreeSet treeSet = new TreeSet(String.CASE_INSENSITIVE_ORDER);
-        int i = 1;
-        int i2 = 0;
-        int i3 = 0;
-        while (i2 <= str.length()) {
-            if (i2 >= str.length() || str.charAt(i2) == '\n') {
-                String strM49693 = m49693(str.substring(i3, (i2 <= i3 || str.charAt(i2 + (-1)) != '\r') ? i2 : i2 - 1));
-                if (!strM49693.isEmpty()) {
-                    int iIndexOf = strM49693.indexOf(58);
-                    if (iIndexOf < 0) {
-                        throw new C2654(i, EnumC5477.INVALID_FORMAT);
-                    }
-                    String strM49694 = m49693(strM49693.substring(0, iIndexOf));
-                    if (!strM49694.isEmpty()) {
-                        for (int i4 = 0; i4 < strM49694.length(); i4++) {
-                            char cCharAt = strM49694.charAt(i4);
-                            if ((cCharAt >= 'a' && cCharAt <= 'z') || ((cCharAt >= 'A' && cCharAt <= 'Z') || ((cCharAt >= '0' && cCharAt <= '9') || "!#$%&'*+-.^_`|~".indexOf(cCharAt) >= 0))) {
-                            }
-                        }
-                        String strM49695 = m49693(strM49693.substring(iIndexOf + 1));
-                        for (int i5 = 0; i5 < strM49695.length(); i5++) {
-                            char cCharAt2 = strM49695.charAt(i5);
-                            if ((cCharAt2 < ' ' && cCharAt2 != '\t') || cCharAt2 == 127) {
-                                throw new C2654(i, EnumC5477.INVALID_VALUE);
-                            }
-                        }
-                        if (f73136.contains(strM49694.toLowerCase(Locale.ROOT))) {
-                            throw new C2654(i, EnumC5477.MANAGED_HEADER);
-                        }
-                        if (!treeSet.add(strM49694)) {
-                            throw new C2654(i, EnumC5477.DUPLICATE_NAME);
-                        }
-                        linkedHashMap.put(strM49694, strM49695);
-                    }
-                    throw new C2654(i, EnumC5477.INVALID_NAME);
-                }
-                i3 = i2 + 1;
-                i++;
-            }
-            i2++;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean mo50553() {
+        return this.f72589;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public long mo50550() {
+        if (!this.f72589) {
+            throw new IllegalStateException("No deadline");
         }
-        return (!linkedHashMap.isEmpty() || z) ? new C22411(linkedHashMap, z) : f73137;
+        return this.f72587;
+    }
+
+    /* JADX INFO: renamed from: ۙ */
+    public C22411 mo15812(long j) {
+        this.f72589 = true;
+        this.f72587 = j;
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C22411 mo50552() {
+        this.f72588 = 0L;
+        return this;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m49693(String str) {
-        int length = str.length();
-        int i = 0;
-        while (i < length && (str.charAt(i) == ' ' || str.charAt(i) == '\t')) {
-            i++;
-        }
-        while (length > i) {
-            int i2 = length - 1;
-            if (str.charAt(i2) != ' ' && str.charAt(i2) != '\t') {
-                break;
-            }
-            length--;
-        }
-        return str.substring(i, length);
+    public C22411 mo50548() {
+        this.f72589 = false;
+        return this;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Map m49696() {
-        return this.f73139;
+    /* JADX INFO: renamed from: ᩴ */
+    public void mo15813() throws InterruptedIOException {
+        if (Thread.interrupted()) {
+            Thread.currentThread().interrupt();
+            throw new InterruptedIOException("interrupted");
+        }
+        if (this.f72589 && this.f72587 - System.nanoTime() <= 0) {
+            throw new InterruptedIOException("deadline reached");
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m49695() {
-        return this.f73138;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m49697() {
-        StringBuilder sb = new StringBuilder();
-        for (Map.Entry entry : this.f73139.entrySet()) {
-            if (sb.length() > 0) {
-                sb.append('\n');
+    public final void m50549(Object obj) throws InterruptedIOException {
+        try {
+            boolean zMo50553 = mo50553();
+            long jMo50551 = mo50551();
+            long jNanoTime = 0;
+            if (!zMo50553 && jMo50551 == 0) {
+                obj.wait();
+                return;
             }
-            sb.append((String) entry.getKey());
-            sb.append(": ");
-            sb.append((String) entry.getValue());
+            long jNanoTime2 = System.nanoTime();
+            if (zMo50553 && jMo50551 != 0) {
+                jMo50551 = Math.min(jMo50551, mo50550() - jNanoTime2);
+            } else if (zMo50553) {
+                jMo50551 = mo50550() - jNanoTime2;
+            }
+            if (jMo50551 > 0) {
+                long j = jMo50551 / 1000000;
+                Long.signum(j);
+                obj.wait(j, (int) (jMo50551 - (1000000 * j)));
+                jNanoTime = System.nanoTime() - jNanoTime2;
+            }
+            if (jNanoTime >= jMo50551) {
+                throw new InterruptedIOException(b.n0);
+            }
+        } catch (InterruptedException unused) {
+            Thread.currentThread().interrupt();
+            throw new InterruptedIOException("interrupted");
         }
-        return sb.toString();
     }
 }

@@ -1,38 +1,56 @@
 package l;
 
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputConnection;
 
-/* JADX INFO: renamed from: l.ܿ۠۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: H6L4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17224 extends FilterInputStream implements InterfaceC20818 {
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+/* JADX INFO: renamed from: l.ܽ֡᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: E7F1 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C17224 extends C23255 {
+
+    /* JADX INFO: renamed from: ᩷ܳ, reason: not valid java name and contains not printable characters */
+    public InterfaceC16478 f56125;
+
+    @Override // l.C23255, l.C24132
+    /* JADX INFO: renamed from: ۠᩷, reason: not valid java name and contains not printable characters */
+    public final boolean mo40459() {
+        return false;
     }
 
-    public C17224(InputStream inputStream) {
-        super(inputStream);
+    public C17224(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        C14540 c14540 = this.f78066;
+        c14540.m35089();
+        c14540.m35086(1728053247 & C3296.f10738);
     }
 
-    @Override // java.io.FilterInputStream, java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) throws C1701 {
-        try {
-            return ((FilterInputStream) this).in.read(bArr, i, i2);
-        } catch (IOException e) {
-            throw new C1701(e.getMessage(), e);
+    public C17224(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        C14540 c14540 = this.f78066;
+        c14540.m35089();
+        c14540.m35086(1728053247 & C3296.f10738);
+    }
+
+    @Override // l.C23255, l.C24132
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void mo40460() {
+        super.mo40460();
+        this.f78066.m35086(1728053247 & C3296.f10738);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m40458(InterfaceC16478 interfaceC16478) {
+        this.f56125 = interfaceC16478;
+    }
+
+    @Override // l.C24132, android.view.View
+    public final InputConnection onCreateInputConnection(EditorInfo editorInfo) {
+        InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
+        if (inputConnectionOnCreateInputConnection == null) {
+            return null;
         }
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws C1701 {
-        try {
-            ((FilterInputStream) this).in.close();
-        } catch (IOException e) {
-            throw new C1701(e.getMessage(), e);
-        }
+        return new C24684(this, inputConnectionOnCreateInputConnection);
     }
 }

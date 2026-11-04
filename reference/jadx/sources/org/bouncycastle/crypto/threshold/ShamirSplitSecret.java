@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.threshold;
 
 import java.lang.reflect.Array;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ShamirSplitSecret implements SplitSecret {
     public final Polynomial poly;
     public final ShamirSplitSecretShare[] secretShares;

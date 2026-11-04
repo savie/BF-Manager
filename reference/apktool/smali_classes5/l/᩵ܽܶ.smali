@@ -1,32 +1,44 @@
-.class public final synthetic Ll/᩵ܽܶ;
-.super Ljava/lang/Object;
-.source "X7LT"
-
-# interfaces
-.implements Ljava/util/function/BinaryOperator;
+.class public final Ll/᩵ܽܶ;
+.super Ll/ۧܽܶ;
+.source "D9C3"
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/BiFunction;
-    .locals 0
+.method public final ۙ(Ll/ۧܶܶ;)V
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۚ᩻ᩴ;->$default$andThen(Ljava/util/function/BiFunction;Ljava/util/function/Function;)Ljava/util/function/BiFunction;
+    .line 41
+    iget-object v0, p0, Ll/ۧܽܶ;->ۙ:Ll/֫ܽܶ;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ll/֫ܽܶ;->getValue()J
 
-    return-object p1
-.end method
+    move-result-wide v0
 
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    long-to-int v1, v0
 
-    .line 0
-    check-cast p1, Ll/ܽܿܶ;
+    invoke-virtual {p1, v1}, Ll/᩻ܶܶ;->᩷(I)V
 
-    check-cast p2, Ll/ܽܿܶ;
+    .line 42
+    iget-object v0, p0, Ll/ۧܽܶ;->᩷:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Ll/ܽܿܶ;->ۙ(Ll/ܽܿܶ;)V
+    check-cast v0, Ljava/lang/String;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-virtual {p1, v0}, Ll/᩻ܶܶ;->᩷(I)V
+
+    .line 43
+    iget-object v0, p0, Ll/ۧܽܶ;->᩷:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    sget-object v1, Ll/᩷ܶܶ;->᩸:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, v0, v1}, Ll/᩻ܶܶ;->᩷(Ljava/lang/String;Ljava/nio/charset/Charset;)V
+
+    return-void
 .end method

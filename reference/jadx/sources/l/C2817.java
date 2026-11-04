@@ -1,44 +1,23 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C2817 extends AbstractC23736 {
-    public long b;
-    public long c;
-    public final /* synthetic */ C19046 d;
+/* JADX INFO: renamed from: l.ۖܿۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6XI */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C2817 extends Exception {
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2817(C19046 c19046, InterfaceC19171 interfaceC19171) {
-        super(interfaceC19171);
-        this.d = c19046;
-        this.b = c19046.s;
-        long j = c19046.t;
-        this.c = j < 0 ? C17492.FOREVER_NS : j;
-    }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f9259;
 
-    @Override // l.AbstractC23736, l.InterfaceC19171
-    public final void c(long j) {
-        this.a.c(AbstractC20092.a(j, this.d.s, this.c));
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final EnumC7292 f9260;
 
-    @Override // l.InterfaceC21993, l.InterfaceC19171
-    public final void accept(long j) {
-        long j2 = this.b;
-        if (j2 == 0) {
-            long j3 = this.c;
-            if (j3 > 0) {
-                this.c = j3 - 1;
-                this.a.accept(j);
-                return;
-            }
-            return;
-        }
-        this.b = j2 - 1;
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f9261;
 
-    @Override // l.AbstractC23736, l.InterfaceC19171
-    public final boolean f() {
-        return this.c == 0 || this.a.f();
+    public C2817(EnumC7292 enumC7292, int i, int i2) {
+        super(enumC7292.name());
+        this.f9260 = enumC7292;
+        this.f9261 = i;
+        this.f9259 = i2;
     }
 }

@@ -1,34 +1,43 @@
 package l;
 
-import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.۫ܿ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAYQ */
+/* JADX INFO: renamed from: l.ۨᩳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12549 extends AbstractC14666 {
+public final class C12549 implements Predicate {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ AtomicIntegerFieldUpdater f42011 = AtomicIntegerFieldUpdater.newUpdater(C12549.class, "_invoked");
-    public volatile /* synthetic */ int _invoked = 0;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24705 f40318;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final AbstractC3375 f42012;
-
-    @Override // l.InterfaceC15456
-    public final /* bridge */ /* synthetic */ Object invoke(Object obj) {
-        mo12440((Throwable) obj);
-        return C7321.f24318;
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    public C12549(AbstractC3375 abstractC3375) {
-        this.f42012 = abstractC3375;
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.AbstractC19460
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo12440(Throwable th) {
-        if (f42011.compareAndSet(this, 0, 1)) {
-            this.f42012.invoke(th);
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    public C12549(C24705 c24705) {
+        this.f40318 = c24705;
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        AbstractC11781 abstractC11781 = (AbstractC11781) obj;
+        if (abstractC11781.f38066 != EnumC13603.f43218) {
+            return false;
         }
+        AbstractC19728 abstractC19728 = abstractC11781.f38072;
+        C15252 c15252 = this.f40318.f79964;
+        return (abstractC19728 == c15252.f49865 || abstractC19728 == c15252.f49758 || (abstractC11781.mo29591() & ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF) != 0) ? false : true;
     }
 }

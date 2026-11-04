@@ -1,14 +1,22 @@
 package l;
 
-import android.view.View;
+/* JADX INFO: renamed from: l.ܿ֨ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 77BV */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17979 {
 
-/* JADX INFO: renamed from: l.ᩳۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1CY */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17979 extends AbstractC8102 {
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3906(float f, View view) {
-        view.setTranslationY(m21316(f));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f58911;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f58912;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final byte[] f58913;
+
+    public C17979(String str, byte[] bArr, String str2) {
+        this.f58912 = str;
+        this.f58911 = str2;
+        this.f58913 = bArr;
     }
 }

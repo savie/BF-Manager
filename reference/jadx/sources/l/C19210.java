@@ -1,62 +1,80 @@
 package l;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.᩵ۘۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O1K3 */
+/* JADX INFO: renamed from: l.ᩳܽܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D9E2 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19210 implements InterfaceC8228 {
+public final class C19210 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f62129 = C16980.m40037(C19210.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23444 f62034;
+    public ArrayList f62130 = new ArrayList();
 
-    public C19210(C23444 c23444) {
-        this.f62034 = c23444;
-    }
-
-    @Override // l.InterfaceC8228
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3560(boolean z) {
-        String strMo3620;
-        C23444 c23444 = this.f62034;
-        if (c23444.f73689.getBoolean("changed", false) != z) {
-            c23444.f73689.putBoolean("changed", z);
-            try {
-                c23444.m50128(((ActivityC5677) c23444.requireActivity()).m15676());
-            } catch (IOException unused) {
-            }
-            c23444.m50125(new C22053());
-        }
-        if (c23444.f75898) {
-            c23444.f75894.mo10753(c23444.f75896, c23444.f75915.m17000());
-            if (c23444.f75914 != null) {
-                c23444.f75914.setEnabled(z);
-            }
-            if (z) {
-                strMo3620 = "*" + c23444.mo3620();
-            } else {
-                strMo3620 = c23444.mo3620();
-            }
-            int i = z ? C20368.f66005 : C20368.f65993;
-            if (c23444.f75904.getText().toString().equals(strMo3620)) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m44528(C11707 c11707) throws C2013 {
+        while (true) {
+            AbstractC11751 abstractC11751M38525 = C16226.m38525(c11707);
+            if (abstractC11751M38525.m29501() == EnumC2057.MsvAvEOL) {
                 return;
             }
-            c23444.f75904.setText(strMo3620);
-            c23444.f75904.setTextColor(i);
+            f62129.mo13723("Read TargetInfo {} --> {}", abstractC11751M38525.m29501(), abstractC11751M38525.m29502());
+            this.f62130.add(abstractC11751M38525);
         }
     }
 
-    @Override // l.InterfaceC8228
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3561(boolean z, boolean z2) {
-        C23444 c23444 = this.f62034;
-        if (c23444.f75898) {
-            if (c23444.f75910 != null) {
-                c23444.f75910.setEnabled(z);
-            }
-            if (c23444.f75893 != null) {
-                c23444.f75893.setEnabled(z2);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m44530(C11707 c11707) {
+        for (AbstractC11751 abstractC11751 : this.f62130) {
+            f62129.mo13723("Writing TargetInfo {} --> {}", abstractC11751.m29501(), abstractC11751.m29502());
+            abstractC11751.mo11567(c11707);
+        }
+        new C16972().mo11567(c11707);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C19210 m44527() {
+        C19210 c19210 = new C19210();
+        c19210.f62130 = new ArrayList(this.f62130);
+        return c19210;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC11751 m44526(EnumC2057 enumC2057) {
+        for (AbstractC11751 abstractC11751 : this.f62130) {
+            if (abstractC11751.m29501() == enumC2057) {
+                return abstractC11751;
             }
         }
+        return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m44529(AbstractC11751 abstractC11751) {
+        for (AbstractC11751 abstractC11752 : this.f62130) {
+            if (abstractC11752.m29501() == abstractC11751.m29501()) {
+                this.f62130.remove(abstractC11752);
+                break;
+            }
+        }
+        this.f62130.add(abstractC11751);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m44531(EnumC2057 enumC2057) {
+        Iterator it = this.f62130.iterator();
+        while (it.hasNext()) {
+            if (((AbstractC11751) it.next()).m29501() == enumC2057) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public final String toString() {
+        return "TargetInfo{targetInfo=" + this.f62130 + '}';
     }
 }

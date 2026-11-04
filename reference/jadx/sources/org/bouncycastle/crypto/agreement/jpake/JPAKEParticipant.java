@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Exceptions;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKEParticipant {
     public static final int STATE_INITIALIZED = 0;
     public static final int STATE_KEY_CALCULATED = 50;

@@ -1,321 +1,195 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۜ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+import java.io.File;
+import java.net.URI;
+import java.nio.file.Path;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ۧۤۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11544 extends AbstractC0584 implements InterfaceC18266 {
+public final /* synthetic */ class C11544 implements InterfaceC24329, InterfaceC22091 {
+    public final /* synthetic */ Path a;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f38788;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C0959 f38789;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f38790;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C15135 f38791;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Object f38792;
-
-    public /* synthetic */ C11544(int i) {
-        this();
+    public /* synthetic */ C11544(Path path) {
+        this.a = path;
     }
 
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC0584 mo2777clear() {
-        m28722();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ AbstractC3967 mo2777clear() {
-        m28722();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mo2777clear() {
-        m28722();
-        return this;
-    }
-
-    @Override // l.AbstractC0584, l.AbstractC3967
-    /* JADX INFO: renamed from: clear */
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mo2777clear() {
-        m28722();
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC3967 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC6977 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ AbstractC21607 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final /* bridge */ /* synthetic */ InterfaceC22500 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        mergeFrom(abstractC3262, c2701);
-        return this;
-    }
-
-    @Override // l.AbstractC0584
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46285;
-        c6956.m18696(C2370.class, C11544.class);
-        return c6956;
-    }
-
-    public C11544() {
-        this.f38792 = "";
-        if (AbstractC18245.alwaysUseFieldBuilders) {
-            m28721();
+    public static /* synthetic */ InterfaceC24329 i(Path path) {
+        if (path == null) {
+            return null;
         }
+        return path instanceof C24971 ? ((C24971) path).a : new C11544(path);
     }
 
-    public C11544(InterfaceC6790 interfaceC6790, int i) {
-        super(interfaceC6790);
-        this.f38792 = "";
-        if (AbstractC18245.alwaysUseFieldBuilders) {
-            m28721();
+    @Override // java.lang.Comparable
+    public final /* synthetic */ int compareTo(Object obj) {
+        return this.a.compareTo(AbstractC1758.p(obj));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ int compareTo(InterfaceC24329 interfaceC24329) {
+        return this.a.compareTo(C24971.i(interfaceC24329));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean endsWith(String str) {
+        return this.a.endsWith(str);
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean endsWith(InterfaceC24329 interfaceC24329) {
+        return this.a.endsWith(C24971.i(interfaceC24329));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean equals(Object obj) {
+        Path path = this.a;
+        if (obj instanceof C11544) {
+            obj = ((C11544) obj).a;
         }
+        return path.equals(obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28722() {
-        super.mo2777clear();
-        this.f38790 = 0;
-        this.f38792 = "";
-        this.f38788 = 0;
-        this.f38789 = null;
-        C15135 c15135 = this.f38791;
-        if (c15135 != null) {
-            c15135.m36296();
-            this.f38791 = null;
-        }
+    @Override // java.lang.Iterable, l.InterfaceC22091
+    public final /* synthetic */ void forEach(Consumer consumer) {
+        C4937.forEach(this.a, consumer);
     }
 
-    @Override // l.AbstractC0584, l.InterfaceC22500, l.InterfaceC18266
-    public final C2806 getDescriptorForType() {
-        return C14097.f46312;
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 getFileName() {
+        return i(this.a.getFileName());
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return C2370.getDefaultInstance();
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ AbstractC25075 getFileSystem() {
+        return C2179.b(this.a.getFileSystem());
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return C2370.getDefaultInstance();
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 getName(int i) {
+        return i(this.a.getName(i));
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC1332 build() {
-        C2370 c2370BuildPartial = buildPartial();
-        if (c2370BuildPartial.isInitialized()) {
-            return c2370BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c2370BuildPartial);
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ int getNameCount() {
+        return this.a.getNameCount();
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final InterfaceC23206 build() {
-        C2370 c2370BuildPartial = buildPartial();
-        if (c2370BuildPartial.isInitialized()) {
-            return c2370BuildPartial;
-        }
-        throw AbstractC3967.m11452((InterfaceC1332) c2370BuildPartial);
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 getParent() {
+        return i(this.a.getParent());
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC6977, l.InterfaceC22500
-    public final C2370 buildPartial() {
-        C0959 c0959;
-        int i = 0;
-        C2370 c2370 = new C2370(this, 0);
-        int i2 = this.f38790;
-        if (i2 != 0) {
-            if ((i2 & 1) != 0) {
-                c2370.f8376 = this.f38792;
-                i = 1;
-            }
-            if ((i2 & 2) != 0) {
-                c2370.f8379 = this.f38788;
-                i |= 2;
-            }
-            if ((i2 & 4) != 0) {
-                C15135 c15135 = this.f38791;
-                if (c15135 == null) {
-                    c0959 = this.f38789;
-                } else {
-                    c0959 = (C0959) c15135.m36297();
-                }
-                c2370.f8377 = c0959;
-                i |= 4;
-            }
-            c2370.f8378 = i | c2370.f8378;
-        }
-        onBuilt();
-        return c2370;
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 getRoot() {
+        return i(this.a.getRoot());
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final AbstractC3967 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C2370) {
-            m28725((C2370) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
     }
 
-    @Override // l.AbstractC3967, l.InterfaceC22500
-    public final InterfaceC22500 mergeFrom(InterfaceC1332 interfaceC1332) {
-        if (interfaceC1332 instanceof C2370) {
-            m28725((C2370) interfaceC1332);
-            return this;
-        }
-        super.mergeFrom(interfaceC1332);
-        return this;
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean isAbsolute() {
+        return this.a.isAbsolute();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28725(C2370 c2370) {
-        C0959 c0959;
-        if (c2370 == C2370.getDefaultInstance()) {
-            return;
-        }
-        if (c2370.hasName()) {
-            this.f38792 = c2370.f8376;
-            this.f38790 |= 1;
-            onChanged();
-        }
-        if (c2370.m7221()) {
-            m28723(c2370.m7222());
-        }
-        if (c2370.m7223()) {
-            C0959 c0959M7220 = c2370.m7220();
-            C15135 c15135 = this.f38791;
-            if (c15135 == null) {
-                if ((this.f38790 & 4) == 0 || (c0959 = this.f38789) == null || c0959 == C0959.getDefaultInstance()) {
-                    this.f38789 = c0959M7220;
-                } else {
-                    this.f38790 |= 4;
-                    onChanged();
-                    ((C22127) m28721().m36293()).m49090(c0959M7220);
-                }
-            } else {
-                c15135.m36294(c0959M7220);
-            }
-            if (this.f38789 != null) {
-                this.f38790 |= 4;
-                onChanged();
-            }
-        }
-        mo2781mergeUnknownFields(c2370.getUnknownFields());
-        onChanged();
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 normalize() {
+        return i(this.a.normalize());
     }
 
-    @Override // l.AbstractC3967, l.AbstractC21607, l.InterfaceC6977
-    public final C11544 mergeFrom(AbstractC3262 abstractC3262, C2701 c2701) {
-        c2701.getClass();
-        boolean z = false;
-        while (!z) {
-            try {
-                try {
-                    int iMo6048 = abstractC3262.mo6048();
-                    if (iMo6048 != 0) {
-                        if (iMo6048 == 10) {
-                            this.f38792 = abstractC3262.mo6050();
-                            this.f38790 |= 1;
-                        } else if (iMo6048 == 16) {
-                            this.f38788 = abstractC3262.mo6040();
-                            this.f38790 |= 2;
-                        } else if (iMo6048 == 26) {
-                            abstractC3262.mo6027(m28721().m36293(), c2701);
-                            this.f38790 |= 4;
-                        } else if (!super.parseUnknownField(abstractC3262, c2701, iMo6048)) {
-                        }
-                    }
-                    z = true;
-                } catch (C4529 e) {
-                    throw e.m12650();
-                }
-            } catch (Throwable th) {
-                onChanged();
-                throw th;
-            }
-        }
-        onChanged();
-        return this;
+    @Override // l.InterfaceC24329, l.InterfaceC21987
+    public final /* synthetic */ InterfaceC10156 register(InterfaceC1208 interfaceC1208, InterfaceC7920[] interfaceC7920Arr) {
+        return C18586.a(this.a.register(C9635.b(interfaceC1208), AbstractC1758.L(interfaceC7920Arr)));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28724(String str) {
-        str.getClass();
-        this.f38792 = str;
-        this.f38790 |= 1;
-        onChanged();
+    @Override // l.InterfaceC24329, l.InterfaceC21987
+    public final /* synthetic */ InterfaceC10156 register(InterfaceC1208 interfaceC1208, InterfaceC7920[] interfaceC7920Arr, InterfaceC19107[] interfaceC19107Arr) {
+        return C18586.a(this.a.register(C9635.b(interfaceC1208), AbstractC1758.L(interfaceC7920Arr), AbstractC1758.M(interfaceC19107Arr)));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28723(int i) {
-        this.f38788 = i;
-        this.f38790 |= 2;
-        onChanged();
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 relativize(InterfaceC24329 interfaceC24329) {
+        return i(this.a.relativize(C24971.i(interfaceC24329)));
     }
 
-    @Override // l.AbstractC0584, l.InterfaceC15445
-    public final boolean isInitialized() {
-        C0959 defaultInstance;
-        if ((this.f38790 & 4) == 0) {
-            return true;
-        }
-        C15135 c15135 = this.f38791;
-        if (c15135 == null) {
-            defaultInstance = this.f38789;
-            if (defaultInstance == null) {
-                defaultInstance = C0959.getDefaultInstance();
-            }
-        } else {
-            defaultInstance = (C0959) c15135.m36295();
-        }
-        return defaultInstance.isInitialized();
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 resolve(String str) {
+        return i(this.a.resolve(str));
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private C15135 m28721() {
-        C0959 defaultInstance;
-        C15135 c15135 = this.f38791;
-        if (c15135 == null) {
-            if (c15135 == null) {
-                defaultInstance = this.f38789;
-                if (defaultInstance == null) {
-                    defaultInstance = C0959.getDefaultInstance();
-                }
-            } else {
-                defaultInstance = (C0959) c15135.m36295();
-            }
-            this.f38791 = new C15135(defaultInstance, getParentForChildren(), isClean());
-            this.f38789 = null;
-        }
-        return this.f38791;
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 resolve(InterfaceC24329 interfaceC24329) {
+        return i(this.a.resolve(C24971.i(interfaceC24329)));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 resolveSibling(String str) {
+        return i(this.a.resolveSibling(str));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 resolveSibling(InterfaceC24329 interfaceC24329) {
+        return i(this.a.resolveSibling(C24971.i(interfaceC24329)));
+    }
+
+    @Override // java.lang.Iterable
+    public final /* synthetic */ Spliterator spliterator() {
+        return C2443.convert(spliterator());
+    }
+
+    @Override // java.lang.Iterable, l.InterfaceC22091, l.InterfaceC13409
+    public final /* synthetic */ InterfaceC8409 spliterator() {
+        return C19553.a(this.a.spliterator());
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean startsWith(String str) {
+        return this.a.startsWith(str);
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ boolean startsWith(InterfaceC24329 interfaceC24329) {
+        return this.a.startsWith(C24971.i(interfaceC24329));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 subpath(int i, int i2) {
+        return i(this.a.subpath(i, i2));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 toAbsolutePath() {
+        return i(this.a.toAbsolutePath());
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ File toFile() {
+        return this.a.toFile();
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ InterfaceC24329 toRealPath(EnumC20599[] enumC20599Arr) {
+        return i(this.a.toRealPath(AbstractC1758.K(enumC20599Arr)));
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ String toString() {
+        return this.a.toString();
+    }
+
+    @Override // l.InterfaceC24329
+    public final /* synthetic */ URI toUri() {
+        return this.a.toUri();
+    }
+
+    @Override // l.InterfaceC24329, java.lang.Iterable
+    public final Iterator iterator() {
+        return new C9410(this.a.iterator());
     }
 }

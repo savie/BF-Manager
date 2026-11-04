@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.digests;
 
 import org.bouncycastle.crypto.ExtendedDigest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NonMemoableDigest implements ExtendedDigest {
     public ExtendedDigest baseDigest;
 

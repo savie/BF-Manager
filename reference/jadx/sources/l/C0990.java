@@ -1,39 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import android.view.MenuItem;
+
+/* JADX INFO: renamed from: l.֨ۛ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0990 extends AbstractC5930 implements InterfaceC3068 {
+public final /* synthetic */ class C0990 implements InterfaceC16438 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f4638;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ MenuItem f3587;
 
-    @Override // l.AbstractC8774
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ MenuItem f3588;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7941 f3589;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ MenuItem f3590;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceMenuC10774 f3591;
+
+    public /* synthetic */ C0990(C7941 c7941, InterfaceMenuC10774 interfaceMenuC10774, MenuItem menuItem, MenuItem menuItem2, MenuItem menuItem3) {
+        this.f3589 = c7941;
+        this.f3591 = interfaceMenuC10774;
+        this.f3590 = menuItem;
+        this.f3587 = menuItem2;
+        this.f3588 = menuItem3;
+    }
+
+    @Override // l.InterfaceC16438
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3915(this);
-    }
-
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.ARRAY_TYPE;
-    }
-
-    @Override // l.InterfaceC3068
-    public final InterfaceC17428 getType() {
-        return this.f4638;
-    }
-
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1857(this, obj);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60566;
+    public final void mo1486(Object obj) {
+        C7941.m21548(this.f3589, this.f3591, this.f3590, this.f3587, this.f3588, (Boolean) obj);
     }
 }

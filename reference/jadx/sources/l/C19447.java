@@ -1,78 +1,55 @@
 package l;
 
-import java.util.Set;
-import java.util.UUID;
-
-/* JADX INFO: renamed from: l.᩵ۨᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q9DZ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19447 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public String f62615;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f62616;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Set f62617;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f62618;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f62619 = false;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public EnumC20508 f62620;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public UUID f62621;
+/* JADX INFO: renamed from: l.ᩴ֡ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UBJ4 */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C19447 extends EnumC15717 {
+    public /* synthetic */ C19447() {
+        this("BeforeHtml", 1);
+    }
 
     public C19447(String str, int i) {
-        this.f62615 = str;
-        this.f62616 = i;
+        super(str, i, 0);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m44497(UUID uuid, EnumC20508 enumC20508, int i, Set set) {
-        if (this.f62619) {
-            throw new IllegalStateException(C16523.m38890("Server object '", this.f62615, "' already initialized"));
+    @Override // l.EnumC15717
+    /* JADX INFO: renamed from: ۙ */
+    public boolean mo2666(AbstractC0802 abstractC0802, C4310 c4310) {
+        if (abstractC0802.m3215()) {
+            c4310.m13755(this);
+            return false;
         }
-        this.f62619 = true;
-        this.f62621 = uuid;
-        this.f62620 = enumC20508;
-        this.f62618 = i;
-        this.f62617 = set;
+        if (abstractC0802.m3220()) {
+            c4310.m13752((C14225) abstractC0802);
+            return true;
+        }
+        if (EnumC15717.m37586(abstractC0802)) {
+            c4310.m13750((C3785) abstractC0802);
+            return true;
+        }
+        if (abstractC0802.m3217()) {
+            C7514 c7514 = (C7514) abstractC0802;
+            if (c7514.f60787.equals("html")) {
+                c4310.m13746(c7514);
+                c4310.m13765(EnumC15717.f51060);
+                return true;
+            }
+        }
+        if (abstractC0802.m3218() && C0669.m2903(((C0056) abstractC0802).f60787, C17209.f56096)) {
+            return m44930(abstractC0802, c4310);
+        }
+        if (abstractC0802.m3218()) {
+            c4310.m13755(this);
+            return false;
+        }
+        return m44930(abstractC0802, c4310);
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m44499() {
-        return this.f62615;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m44501() {
-        return this.f62616;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final UUID m44495() {
-        return this.f62621;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m44498(C19447 c19447) {
-        return c19447.f62621.equals(this.f62621) && c19447.f62620.equals(this.f62620) && (c19447.f62618 == this.f62618) && c19447.f62617.equals(this.f62617);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m44500() {
-        return this.f62618;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Set m44496() {
-        return this.f62617;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private boolean m44930(AbstractC0802 abstractC0802, C4310 c4310) {
+        c4310.getClass();
+        c4310.m13764(new C15496(c4310.m20059("html", c4310.f24095), null, null));
+        c4310.m13765(EnumC15717.f51060);
+        return c4310.mo13758(abstractC0802);
     }
 }

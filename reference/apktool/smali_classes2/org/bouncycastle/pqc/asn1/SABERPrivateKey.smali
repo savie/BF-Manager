@@ -99,7 +99,7 @@
     const/4 v0, 0x1
 
     .line 0
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {p1, v0}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {p1, v0}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
 
     const/4 v0, 0x4
 
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
+    invoke-static {p1, v0}, Ll/᩵ۨܽ;->ۙ(Lorg/bouncycastle/asn1/ASN1Sequence;I)[B
 
     move-result-object p1
 

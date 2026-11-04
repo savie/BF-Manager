@@ -1,56 +1,31 @@
 package l;
 
-import android.content.DialogInterface;
+import android.content.Context;
+import android.util.AttributeSet;
 
-/* JADX INFO: renamed from: l.ۤ۬᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: A91T */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10321 extends AbstractC3492 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f35388;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC20904 f35389;
-
-    public C10321(ActivityC20904 activityC20904, boolean z) {
-        this.f35389 = activityC20904;
-        this.f35388 = z;
+/* JADX INFO: renamed from: l.ۢᩴۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q9R5 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C10321 extends AbstractC11813 {
+    public C10321(Context context, AttributeSet attributeSet, int i, int i2) {
+        super(context, attributeSet, i, i2);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        ActivityC20904 activityC20904 = this.f35389;
-        activityC20904.f67931.setVisibility(8);
-        activityC20904.f67930.m16335(true);
+    public C10321(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        this.f35389.f67933 = C9616.m24523(this.f35388);
+    public C10321(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
     }
 
-    @Override // l.AbstractC3492
+    public C10321(Context context) {
+        super(context);
+    }
+
+    @Override // l.AbstractC11813
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        this.f35389.f67934.getAdapter().notifyDataSetChanged();
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f35389.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        ActivityC20904 activityC20904 = this.f35389;
-        activityC20904.f67930.m16335(false);
-        if (activityC20904.f67933.isEmpty()) {
-            activityC20904.f67931.setVisibility(0);
-        }
+    public final void mo2388(AbstractActivityC17204 abstractActivityC17204) {
+        abstractActivityC17204.m40420(C13047.m32494(C4767.m14717() ? "cn" : C21576.m49055().getConfiguration().locale.getCountry()));
     }
 }

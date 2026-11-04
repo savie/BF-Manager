@@ -1,99 +1,43 @@
 package l;
 
-import java.util.List;
-import java.util.Set;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۤۜۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J62B */
+/* JADX INFO: renamed from: l.ۢ۫ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81ID */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10124 extends AbstractC18908 implements InterfaceC18528 {
+public final class C10124 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C12863 f34606;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1176 f32406;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C5890 f34607;
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20567 f32407;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final List f34608;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final Set f34609;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f34610;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InterfaceC7945 f34612;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f34613 = 0;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f34611 = 0;
-
-    public C10124(C5890 c5890, List list, int i, C12863 c12863, Set set, InterfaceC7945 interfaceC7945) {
-        this.f34607 = c5890;
-        this.f34608 = list;
-        this.f34610 = i;
-        this.f34606 = c12863;
-        this.f34609 = set;
-        this.f34612 = interfaceC7945;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C10124(C1176 c1176, AbstractActivityC17204 abstractActivityC17204, C20567 c20567) {
+        super(abstractActivityC17204, -1);
+        this.f32406 = c1176;
+        this.f32407 = c20567;
     }
 
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩹ */
-    public final String mo9700() {
-        return this.f34607.f20095.f5881.f11559;
-    }
-
-    @Override // l.InterfaceC8858
-    public final String getName() {
-        return this.f34607.f20094.f11559;
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ᩳ */
-    public final C4956 mo9699() {
-        return this.f34607.f20096.f54765;
-    }
-
-    @Override // l.InterfaceC8858
-    /* JADX INFO: renamed from: ۖ */
-    public final String mo9698() {
-        return this.f34607.f20096.f54762.f5881.f11559;
-    }
-
-    @Override // l.InterfaceC18528
-    public final List getParameters() {
-        return this.f34608;
-    }
-
-    @Override // l.InterfaceC18528
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo25750() {
-        return this.f34610;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m25748(C10111 c10111) {
-        this.f34612 = c10111;
-    }
-
-    @Override // l.InterfaceC18528
-    public final Set getAnnotations() {
-        return this.f34606;
-    }
-
-    @Override // l.InterfaceC18528
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final Set mo25749() {
-        return this.f34609;
-    }
-
-    @Override // l.InterfaceC18528
-    /* JADX INFO: renamed from: ۘܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC7945 mo25747() {
-        return this.f34612;
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        m22951();
+        String strM22914 = m22914();
+        if (strM22914.isEmpty()) {
+            return;
+        }
+        C20567 c20567 = this.f32407;
+        if (strM22914.equals(c20567.f65866)) {
+            return;
+        }
+        try {
+            c20567.f65865.m49879(strM22914);
+        } catch (IOException unused) {
+        }
+        C1176 c1176 = this.f32406;
+        c1176.f4308 = c1176.f4310.m30840();
+        c1176.f4311.notifyDataSetChanged();
     }
 }

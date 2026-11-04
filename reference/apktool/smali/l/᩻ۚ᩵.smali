@@ -1,26 +1,32 @@
-.class public Ll/᩻ۚ᩵;
+.class public final synthetic Ll/᩻ۚ᩵;
 .super Ljava/lang/Object;
-.source "BAT7"
+.source "V6FE"
 
 # interfaces
-.implements Ll/ۛۚ᩵;
+.implements Ljava/util/function/BiConsumer;
 
 
 # virtual methods
-.method public final ۙ(Ll/ۜ᩹᩵;Ll/᩻۬᩵;IIILl/ܿ᩹᩵;)V
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+
+    .line 0
+    check-cast p1, Ll/᩻ۡۗ;
+
+    check-cast p2, Ljava/util/Set;
+
+    invoke-static {p1, p2}, Ll/᩹ۚ᩵;->᩷(Ll/᩻ۡۗ;Ljava/util/Set;)V
 
     return-void
 .end method
 
-.method public final ۙ(Ll/ۜ᩹᩵;Ll/᩻۬᩵;IILjava/util/BitSet;Ll/ܿ᩹᩵;)V
+.method public synthetic andThen(Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
     .locals 0
 
-    return-void
-.end method
+    .line 0
+    invoke-static {p0, p1}, Ll/᩹ۧۗ;->$default$andThen(Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;)Ljava/util/function/BiConsumer;
 
-.method public final ۙ(Ll/ۜ᩹᩵;Ll/᩻۬᩵;IIZLjava/util/BitSet;Ll/ܿ᩹᩵;)V
-    .locals 0
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

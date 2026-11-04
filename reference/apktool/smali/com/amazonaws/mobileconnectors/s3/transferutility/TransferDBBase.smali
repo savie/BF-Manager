@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static final ۚ:Ljava/lang/Object;
+.field public static final ܳ:Lcom/amazonaws/logging/Log;
 
-.field public static final ᩹:Lcom/amazonaws/logging/Log;
+.field public static final ᩴ:Ljava/lang/Object;
 
 
 # instance fields
-.field public final ۖ:Landroid/content/UriMatcher;
-
 .field public final ۙ:Landroid/net/Uri;
 
-.field public final ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
+.field public final ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
 
-.field public ܰ:Landroid/database/sqlite/SQLiteDatabase;
+.field public ᩷:Landroid/database/sqlite/SQLiteDatabase;
+
+.field public final ᩸:Landroid/content/UriMatcher;
 
 
 # direct methods
@@ -30,14 +30,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩹:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܳ:Lcom/amazonaws/logging/Log;
 
     .line 47
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۚ:Ljava/lang/Object;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ᩴ:Ljava/lang/Object;
 
     return-void
 .end method
@@ -62,14 +62,14 @@
 
     invoke-direct {v1, p1}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
+    iput-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
 
     .line 58
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     .line 59
     new-instance p1, Ljava/lang/StringBuilder;
@@ -101,7 +101,7 @@
 
     invoke-direct {p1, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۖ:Landroid/content/UriMatcher;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩸:Landroid/content/UriMatcher;
 
     const-string v1, "transfers"
 
@@ -134,17 +134,17 @@
     return-void
 .end method
 
-.method private ܰ()V
+.method private ᩷()V
     .locals 2
 
     .line 274
-    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۚ:Ljava/lang/Object;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ᩴ:Ljava/lang/Object;
 
     monitor-enter v0
 
     .line 275
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
 
@@ -153,13 +153,13 @@
     if-nez v1, :cond_0
 
     .line 276
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۨ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۤ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     .line 278
     :cond_0
@@ -183,14 +183,14 @@
     .locals 5
 
     .line 215
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۖ:Landroid/content/UriMatcher;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩸:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
     move-result v0
 
     .line 217
-    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ()V
+    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷()V
 
     const/16 v1, 0xa
 
@@ -219,7 +219,7 @@
     if-eqz v0, :cond_0
 
     .line 226
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -239,12 +239,12 @@
 
     .line 229
     :cond_0
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, " and null"
 
     .line 0
-    invoke-static {v1, p1, v4}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v4}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -277,7 +277,7 @@
 
     .line 220
     :cond_2
-    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p1, v3, v2, v2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -302,14 +302,14 @@
 
     .line 181
     :try_start_0
-    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۖ:Landroid/content/UriMatcher;
+    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩸:Landroid/content/UriMatcher;
 
     invoke-virtual {v4, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
     move-result v4
 
     .line 183
-    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ()V
+    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷()V
 
     const/16 v5, 0xa
 
@@ -332,7 +332,7 @@
     if-eqz v1, :cond_0
 
     .line 192
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string p4, "awstransfer"
 
@@ -356,7 +356,7 @@
 
     .line 195
     :cond_0
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "awstransfer"
 
@@ -403,7 +403,7 @@
 
     .line 186
     :cond_2
-    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "awstransfer"
 
@@ -445,7 +445,7 @@
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
     .line 144
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ۖ:Landroid/content/UriMatcher;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩸:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -555,10 +555,10 @@
 
     .line 163
     :goto_0
-    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ()V
+    invoke-direct {p0}, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷()V
 
     .line 164
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->ܰ:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDBBase;->᩷:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v5, 0x0
 

@@ -1,9 +1,9 @@
 package org.bouncycastle.asn1;
 
 import java.io.IOException;
-import l.C12441;
-import l.C8479;
-import l.C9013;
+import l.C11958;
+import l.C13645;
+import l.C14483;
 import org.bouncycastle.util.Objects;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -106,10 +106,10 @@ public abstract class ASN1External extends ASN1Primitive {
             try {
                 return (ASN1External) TYPE.fromByteArray((byte[]) obj);
             } catch (IOException e) {
-                throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("failed to construct external from byte[]: ")));
+                throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("failed to construct external from byte[]: ")));
             }
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
     }
 
     public static ASN1External getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {
@@ -194,7 +194,7 @@ public abstract class ASN1External extends ASN1Primitive {
 
     public static int checkEncoding(int i) {
         if (i < 0 || i > 2) {
-            throw new IllegalArgumentException(C8479.m22141(i, "invalid encoding value: "));
+            throw new IllegalArgumentException(C13645.m33382(i, "invalid encoding value: "));
         }
         return i;
     }

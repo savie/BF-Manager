@@ -1,34 +1,39 @@
 package l;
 
-import android.view.MenuItem;
+import java.security.MessageDigest;
 
-/* JADX INFO: renamed from: l.ۙᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V659 */
+/* JADX INFO: renamed from: l.ۙۢܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H95A */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4821 implements InterfaceC0422 {
+public final class C4821 implements InterfaceC1421 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6938 f16961;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public MessageDigest f16866;
 
-    public C4821(C6938 c6938) {
-        this.f16961 = c6938;
+    @Override // l.InterfaceC1421
+    public final int getBlockSize() {
+        return 28;
     }
 
-    @Override // l.InterfaceC0422
-    public final boolean onMenuItemSelected(C12418 c12418, MenuItem menuItem) {
-        InterfaceC0422 interfaceC0422 = this.f16961.mMenuBuilderCallback;
-        return interfaceC0422 != null && interfaceC0422.onMenuItemSelected(c12418, menuItem);
+    @Override // l.InterfaceC1421
+    public final String name() {
+        return "SHA224";
     }
 
-    @Override // l.InterfaceC0422
-    public final void onMenuModeChange(C12418 c12418) {
-        C6938 c6938 = this.f16961;
-        if (!c6938.mMenuView.m50494()) {
-            c6938.mMenuHostHelper.m17514(c12418);
-        }
-        InterfaceC0422 interfaceC0422 = c6938.mMenuBuilderCallback;
-        if (interfaceC0422 != null) {
-            interfaceC0422.onMenuModeChange(c12418);
-        }
+    @Override // l.InterfaceC1421
+    public final void init() {
+        this.f16866 = MessageDigest.getInstance("SHA-224");
+    }
+
+    @Override // l.InterfaceC1421
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5157(int i, byte[] bArr) {
+        this.f16866.update(bArr, 0, i);
+    }
+
+    @Override // l.InterfaceC1421
+    /* JADX INFO: renamed from: ۙ */
+    public final byte[] mo5158() {
+        return this.f16866.digest();
     }
 }

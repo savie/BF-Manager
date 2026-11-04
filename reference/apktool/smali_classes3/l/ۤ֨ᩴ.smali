@@ -1,63 +1,42 @@
-.class public final Ll/ۤ֨ᩴ;
-.super Ll/ܽ֨ᩴ;
-.source "M1N0"
+.class public final synthetic Ll/ۤ֨ᩴ;
+.super Ljava/lang/Object;
+.source "7AJG"
 
 # interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final ۛ:Ll/᩶֨ᩴ;
+.field public final synthetic ܰ:Ll/۫֨ᩴ;
+
+.field public final synthetic ᩶:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۧ֨ᩴ;)V
-    .locals 1
+.method public synthetic constructor <init>(Ll/۫֨ᩴ;I)V
+    .locals 0
 
-    .line 867
-    invoke-direct {p0, p1}, Ll/ܽ֨ᩴ;-><init>(Ll/ۧ֨ᩴ;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 868
-    new-instance v0, Ll/᩶֨ᩴ;
+    iput-object p1, p0, Ll/ۤ֨ᩴ;->ܰ:Ll/۫֨ᩴ;
 
-    invoke-direct {v0, p1}, Ll/᩶֨ᩴ;-><init>(Ll/ۧ֨ᩴ;)V
-
-    iput-object v0, p0, Ll/ۤ֨ᩴ;->ۛ:Ll/᩶֨ᩴ;
+    iput p2, p0, Ll/ۤ֨ᩴ;->᩶:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
+.method public final run()V
     .locals 2
 
-    .line 872
-    invoke-virtual {p0}, Ll/ܽ֨ᩴ;->ۙ()I
+    .line 0
+    iget-object v0, p0, Ll/ۤ֨ᩴ;->ܰ:Ll/۫֨ᩴ;
 
-    move-result v0
+    iget v1, p0, Ll/ۤ֨ᩴ;->᩶:I
 
-    iget-object v1, p0, Ll/ۤ֨ᩴ;->ۛ:Ll/᩶֨ᩴ;
-
-    iput v0, v1, Ll/᩶֨ᩴ;->ܺ:I
-
-    return-object v1
-.end method
-
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 1
-
-    .line 867
-    check-cast p2, Ljava/util/function/Consumer;
-
-    .line 879
-    iget-object v0, p0, Ll/ۤ֨ᩴ;->ۛ:Ll/᩶֨ᩴ;
-
-    iput p1, v0, Ll/᩶֨ᩴ;->ܺ:I
-
-    .line 880
-    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Ll/۫֨ᩴ;->ۙ(Ll/۫֨ᩴ;I)V
 
     return-void
 .end method

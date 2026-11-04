@@ -1,143 +1,110 @@
-.class public abstract Ll/ܶ۬᩺;
-.super Ljava/lang/Object;
-.source "98W2"
+.class public final enum Ll/ܶ۬᩺;
+.super Ljava/lang/Enum;
+.source "W7SR"
 
 
-# instance fields
-.field public final ۙ:I
+# static fields
+.field public static final synthetic ܰ:[Ll/ܶ۬᩺;
+
+.field public static final enum ܿ:Ll/ܶ۬᩺;
+
+.field public static final enum ᩶:Ll/ܶ۬᩺;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 45
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 417
+    new-instance v0, Ll/ܶ۬᩺;
 
-    .line 46
-    iput p1, p0, Ll/ܶ۬᩺;->ۙ:I
+    const-string v1, "SPECULATIVE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ll/ܶ۬᩺;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܶ۬᩺;->ܿ:Ll/ܶ۬᩺;
+
+    .line 421
+    new-instance v0, Ll/ܶ۬᩺;
+
+    const-string v1, "CHECK"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ܶ۬᩺;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ܶ۬᩺;->᩶:Ll/ܶ۬᩺;
+
+    .line 409
+    invoke-static {}, Ll/ܶ۬᩺;->ۙ()[Ll/ܶ۬᩺;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ܶ۬᩺;->ܰ:[Ll/ܶ۬᩺;
 
     return-void
 .end method
 
-.method public static ۙ(Ll/ܿ۬ۨ;)Ll/ܶ۬᩺;
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    .line 56
-    invoke-virtual {p0}, Ll/ܿ۬ۨ;->readByte()B
+    .line 409
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v0
+    return-void
+.end method
 
-    and-int/lit16 v0, v0, 0xff
+.method public static valueOf(Ljava/lang/String;)Ll/ܶ۬᩺;
+    .locals 1
 
-    if-eqz v0, :cond_0
+    .line 409
+    const-class v0, Ll/ܶ۬᩺;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 75
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-result-object p0
 
-    const-string v1, "Unknown action: "
+    check-cast p0, Ll/ܶ۬᩺;
 
-    .line 0
-    invoke-static {v0, v1}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    return-object p0
+.end method
+
+.method public static values()[Ll/ܶ۬᩺;
+    .locals 1
+
+    .line 409
+    sget-object v0, Ll/ܶ۬᩺;->ܰ:[Ll/ܶ۬᩺;
+
+    invoke-virtual {v0}, [Ll/ܶ۬᩺;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 75
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 73
-    :pswitch_0
-    new-instance v0, Ll/᩺۬᩺;
-
-    invoke-direct {v0, p0}, Ll/᩺۬᩺;-><init>(Ll/ܿ۬ۨ;)V
+    check-cast v0, [Ll/ܶ۬᩺;
 
     return-object v0
-
-    .line 71
-    :pswitch_1
-    new-instance p0, Ll/ۘ۬᩺;
-
-    const/4 v0, 0x7
-
-    .line 323
-    invoke-direct {p0, v0}, Ll/ܶ۬᩺;-><init>(I)V
-
-    return-object p0
-
-    .line 69
-    :pswitch_2
-    new-instance v0, Ll/ۗ֨᩺;
-
-    invoke-direct {v0, p0}, Ll/ۗ֨᩺;-><init>(Ll/ܿ۬ۨ;)V
-
-    return-object v0
-
-    .line 67
-    :pswitch_3
-    new-instance v0, Ll/᩹۬᩺;
-
-    invoke-direct {v0, p0}, Ll/᩹۬᩺;-><init>(Ll/ܿ۬ۨ;)V
-
-    return-object v0
-
-    .line 65
-    :pswitch_4
-    new-instance v0, Ll/۬۬᩺;
-
-    invoke-direct {v0, p0}, Ll/۬۬᩺;-><init>(Ll/ܿ۬ۨ;)V
-
-    return-object v0
-
-    .line 63
-    :pswitch_5
-    new-instance v0, Ll/ܰ۬᩺;
-
-    invoke-direct {v0, p0}, Ll/ܰ۬᩺;-><init>(Ll/ܿ۬ۨ;)V
-
-    return-object v0
-
-    .line 61
-    :pswitch_6
-    new-instance v0, Ll/֨۬᩺;
-
-    invoke-direct {v0, p0}, Ll/֨۬᩺;-><init>(Ll/ܿ۬ۨ;)V
-
-    return-object v0
-
-    .line 59
-    :cond_0
-    sget-object p0, Ll/ۙ۬᩺;->ܰ:Ll/ۙ۬᩺;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
+.method public static synthetic ۙ()[Ll/ܶ۬᩺;
+    .locals 3
 
-# virtual methods
-.method public final ۙ()I
-    .locals 1
+    const/4 v0, 0x2
 
-    .line 50
-    iget v0, p0, Ll/ܶ۬᩺;->ۙ:I
+    new-array v0, v0, [Ll/ܶ۬᩺;
 
-    return v0
-.end method
+    .line 409
+    sget-object v1, Ll/ܶ۬᩺;->ܿ:Ll/ܶ۬᩺;
 
-.method public abstract ۙ(Ll/۫ܶۘ;)V
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ܶ۬᩺;->᩶:Ll/ܶ۬᩺;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

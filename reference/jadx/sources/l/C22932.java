@@ -1,44 +1,23 @@
 package l;
 
-import android.os.Build;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import bin.mt.plus.R;
+import android.media.AudioAttributes;
 
-/* JADX INFO: renamed from: l.᩺ۤܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 28G3 */
+/* JADX INFO: renamed from: l.᩸ܽۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y21J */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22932 extends AbstractC12554 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7409 f74541;
+public class C22932 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C10997 m51684(AbstractC3290 abstractC3290) {
+        C10997 c10997 = new C10997();
+        c10997.f34743 = (AudioAttributes) abstractC3290.m10839(c10997.f34743, 1);
+        c10997.f34744 = abstractC3290.m10838(c10997.f34744, 2);
+        return c10997;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ImageView f74542;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final TextView f74543;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final TextView f74544;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22932(C7409 c7409, View view) {
-        super(view);
-        this.f74541 = c7409;
-        if (Build.VERSION.SDK_INT < 26) {
-            view.setFocusable(true);
-        }
-        this.f74544 = (TextView) view.findViewById(R.id.MT_Protector);
-        this.f74543 = (TextView) view.findViewById(R.id.MT_Protector);
-        this.f74542 = (ImageView) view.findViewById(R.id.MT_Protector);
-        view.setOnClickListener(new View.OnClickListener() { // from class: l.ۜۤܰ
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view2) {
-                C22932 c22932 = this.f22595;
-                C7409.m19771(c22932.f74541, c22932.getBindingAdapterPosition());
-            }
-        });
+    public static void m51685(C10997 c10997, AbstractC3290 abstractC3290) {
+        abstractC3290.getClass();
+        abstractC3290.m10865(c10997.f34743, 1);
+        abstractC3290.m10861(c10997.f34744, 2);
     }
 }

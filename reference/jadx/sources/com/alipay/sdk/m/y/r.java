@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import l.C0252;
+import l.C25272;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -14,7 +14,7 @@ public class r {
     public static void a(String str, String str2) throws IOException {
         File file = new File(str2);
         if (!file.exists() && !file.mkdirs()) {
-            throw new IOException(C0252.m1693("Failed to create destination directory: ", str2));
+            throw new IOException(C25272.m56409("Failed to create destination directory: ", str2));
         }
         FileInputStream fileInputStream = new FileInputStream(str);
         try {

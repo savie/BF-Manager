@@ -1,37 +1,19 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ۤ᩻ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۤۙۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F6YU */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C10629 implements BinaryOperator {
-    public final /* synthetic */ int a;
-    public final /* synthetic */ Comparator b;
-
-    public /* synthetic */ C10629(Comparator comparator, int i) {
-        this.a = i;
-        this.b = comparator;
-    }
-
-    public final /* synthetic */ BiFunction andThen(Function function) {
-        switch (this.a) {
-            case 0:
-                break;
+public final class C10629 extends C16121 {
+    @Override // l.AbstractC24327
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean mo27117() {
+        if (!super.mo27117() || !C11972.m30031("MULTI_PROCESS")) {
+            return false;
         }
-        return C5689.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.BiFunction
-    public final Object apply(Object obj, Object obj2) {
-        switch (this.a) {
-            case 0:
-                return this.b.compare(obj, obj2) >= 0 ? obj : obj2;
-            default:
-                return this.b.compare(obj, obj2) <= 0 ? obj : obj2;
+        int i = C11646.f37671;
+        if (C19580.f63140.mo27117()) {
+            return C12867.f41194.getStatics().isMultiProcessEnabled();
         }
+        throw C19580.m45180();
     }
 }

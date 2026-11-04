@@ -1,34 +1,41 @@
 package l;
 
-import java.util.function.Supplier;
+/* JADX INFO: renamed from: l.ۙܿۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5053 extends AbstractC2705 implements InterfaceC9368 {
 
-/* JADX INFO: renamed from: l.ۚۖۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L19N */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5053 {
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C14769 f17631;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Supplier f17628;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f17632;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public volatile Object f17629;
-
-    public C5053(Supplier supplier) {
-        this.f17628 = supplier;
+    public C5053() {
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m14070() {
-        Object obj = this.f17629;
-        if (obj != null) {
-            return obj;
-        }
-        synchronized (this) {
-            if (this.f17629 == null) {
-                obj = this.f17628.get();
-                this.f17629 = obj;
-            }
-        }
-        return obj;
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo2604(this);
+    }
+
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.PROVIDES;
+    }
+
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5850(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68491;
     }
 }

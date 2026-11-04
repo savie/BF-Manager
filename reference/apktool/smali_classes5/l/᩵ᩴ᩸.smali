@@ -1,75 +1,46 @@
-.class public abstract Ll/᩵ᩴ᩸;
-.super Ll/ܺᩴ᩸;
-.source "D9PY"
-
-# interfaces
-.implements Ll/ܶ᩵᩸;
+.class public final Ll/᩵ᩴ᩸;
+.super Ll/ۙۧܺ;
+.source "I9S1"
 
 
 # instance fields
-.field public ܽ:Ll/۠ᩳ᩸;
+.field public final ܰ:Ljava/lang/String;
+
+.field public final ᩶:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 591
-    invoke-direct {p0}, Ll/ܺᩴ᩸;-><init>()V
+    .line 16
+    invoke-direct {p0, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 598
-    invoke-static {}, Ll/۠ᩳ᩸;->ۜ()Ll/۠ᩳ᩸;
+    .line 47
+    iput-object p1, p0, Ll/᩵ᩴ᩸;->᩶:Ljava/lang/String;
 
-    move-result-object v0
-
-    iput-object v0, p0, Ll/᩵ᩴ᩸;->ܽ:Ll/۠ᩳ᩸;
+    .line 48
+    iput-object p2, p0, Ll/᩵ᩴ᩸;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getDefaultInstanceForType()Ll/᩺᩵᩸;
+.method public final ۙ()Ljava/lang/String;
     .locals 1
 
-    .line 96
-    sget-object v0, Ll/۟ᩴ᩸;->ܽ:Ll/۟ᩴ᩸;
-
-    .line 290
-    invoke-virtual {p0}, Ll/ܺᩴ᩸;->ۙ()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 96
-    check-cast v0, Ll/ܺᩴ᩸;
+    .line 62
+    iget-object v0, p0, Ll/᩵ᩴ᩸;->ܰ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final newBuilderForType()Ll/ۜ᩵᩸;
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
-    .line 102
-    sget-object v0, Ll/۟ᩴ᩸;->ܽ:Ll/۟ᩴ᩸;
-
-    .line 290
-    invoke-virtual {p0}, Ll/ܺᩴ᩸;->ۙ()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 102
-    check-cast v0, Ll/۠ᩴ᩸;
+    .line 55
+    iget-object v0, p0, Ll/᩵ᩴ᩸;->᩶:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public final bridge synthetic toBuilder()Ll/ۜ᩵᩸;
-    .locals 1
-
-    .line 591
-    invoke-virtual {p0}, Ll/ܺᩴ᩸;->toBuilder()Ll/۠ᩴ᩸;
-
-    const/4 v0, 0x0
-
-    throw v0
 .end method

@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ContextParameterSpec implements AlgorithmParameterSpec {
     public static ContextParameterSpec EMPTY_CONTEXT_SPEC = new ContextParameterSpec(new byte[0]);
     public final byte[] context;

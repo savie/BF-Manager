@@ -1,26 +1,14 @@
-.class public final enum Ll/᩺֡ܶ;
-.super Ll/᩸֡ܶ;
-.source "Y3M1"
+.class public interface abstract Ll/᩺֡ܶ;
+.super Ljava/lang/Object;
+.source "G7ZD"
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 71
-    invoke-direct {p0, p1, p2, v0}, Ll/᩸֡ܶ;-><init>(Ljava/lang/String;ILl/۬֡ܶ;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/ۨ֡ܶ;
 
 
 # virtual methods
-.method public ۙ()Z
-    .locals 1
+.method public abstract ۙ([B)V
+.end method
 
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract ۙ([B[B)V
 .end method

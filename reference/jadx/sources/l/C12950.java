@@ -1,49 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۜܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8NG */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12950 {
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.Properties;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C22828 f43052;
+/* JADX INFO: renamed from: l.۫۟ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G3L1 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12950 extends AbstractC11458 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22828 f43053;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final EnumC15187 f41510;
 
-    public C12950(C22828 c22828, C22828 c22829) {
-        this.f43052 = c22828;
-        this.f43053 = c22829;
-    }
-
-    public final String toString() {
-        String str;
-        StringBuilder sb = new StringBuilder("[");
-        C22828 c22828 = this.f43052;
-        sb.append(c22828);
-        C22828 c22829 = this.f43053;
-        if (c22828.equals(c22829)) {
-            str = "";
+    public C12950(C24550 c24550) {
+        EnumC15187 enumC15187;
+        super(c24550);
+        this.f36037 = new EnumMap(EnumC10712.class);
+        for (EnumC10712 enumC10712 : EnumC10712.values()) {
+            this.f36037.put(enumC10712, new ArrayList());
+        }
+        InterfaceC15976 interfaceC15976 = c24550.f79575;
+        if ((interfaceC15976 == null && c24550.f79584 == null) || (interfaceC15976 != null && interfaceC15976.mo10885() == EnumC17468.CLASS)) {
+            enumC15187 = EnumC15187.CLASS;
         } else {
-            str = ", " + c22829;
+            enumC15187 = EnumC15187.SOURCE;
         }
-        return C22697.m50267(sb, str, "]");
+        this.f41510 = enumC15187;
     }
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C12950.class == obj.getClass()) {
-            C12950 c12950 = (C12950) obj;
-            if (this.f43052.equals(c12950.f43052) && this.f43053.equals(c12950.f43053)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        return this.f43053.hashCode() + (this.f43052.hashCode() * 31);
+    @Override // l.AbstractC11458, l.InterfaceC14441
+    /* JADX INFO: renamed from: ۙ */
+    public final Properties mo25146() {
+        Properties propertiesMo25146 = super.mo25146();
+        propertiesMo25146.put("style", this.f41510.f49587);
+        propertiesMo25146.put("shape", "ellipse");
+        return propertiesMo25146;
     }
 }

@@ -1,18 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫᩷ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
-/* JADX INFO: loaded from: classes3.dex */
+import java.util.Arrays;
+
+/* JADX INFO: renamed from: l.ۨ᩸᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 18UV */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C12656 {
+    public final int hashCode() {
+        return Arrays.hashCode((int[]) null) * 31;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C17594 f42268;
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && C12656.class == obj.getClass()) {
+            if (Arrays.equals((int[]) null, (int[]) null)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f42269;
-
-    public C12656(C17594 c17594, int i) {
-        this.f42268 = c17594;
-        this.f42269 = i;
+    static {
+        C7116.m19499(0);
+        C7116.m19499(1);
+        C7116.m19499(2);
     }
 }

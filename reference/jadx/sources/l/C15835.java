@@ -1,86 +1,37 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-/* JADX INFO: renamed from: l.ܺۡ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B75R */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15835 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f51247;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20170 f51248;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f51249;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f51250;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20773 f51251;
-
-    public C15835(InterfaceC20773 interfaceC20773, int i, C11662 c11662, int i2, int i3) {
-        this.f51251 = interfaceC20773;
-        this.f51250 = i;
-        this.f51248 = c11662;
-        this.f51249 = i2;
-        this.f51247 = i3;
+/* JADX INFO: renamed from: l.ܶۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: loaded from: classes5.dex */
+public class C15835 extends AbstractC17567 {
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) throws IOException {
+        URI uri = (URI) obj;
+        c21362.m48602(uri == null ? null : uri.toString());
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C15835)) {
-            return false;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        if (c4208.m13438() == EnumC14648.NULL) {
+            c4208.m13444();
+            return null;
         }
-        C15835 c15835 = (C15835) obj;
-        return this.f51250 == c15835.f51250 && this.f51249 == c15835.f51249 && this.f51247 == c15835.f51247 && C13638.equals(this.f51251, c15835.f51251) && C13638.equals(this.f51248, c15835.f51248);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f51248) + ((C13638.hashCode(this.f51251) + (((((this.f51250 * 31) + this.f51249) * 31) + this.f51247) * 31)) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f51251, Integer.valueOf(this.f51250), this.f51248, Integer.valueOf(this.f51249), Integer.valueOf(this.f51247)};
-        String[] strArrSplit = "descriptor;generation;callback;width;height".length() == 0 ? new String[0] : "descriptor;generation;callback;width;height".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C15835.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+        String strM13453 = c4208.m13453();
+        if (strM13453.equals("null")) {
+            return null;
         }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m37643() {
-        return this.f51249;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m37644() {
-        return this.f51250;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20170 m37645() {
-        return this.f51248;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20773 m37646() {
-        return this.f51251;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m37647() {
-        return this.f51247;
+        try {
+            return new URI(strM13453);
+        } catch (URISyntaxException e) {
+            StringBuilder sbM51387 = C22783.m51387("Failed parsing '", strM13453, "' as URI; at path ");
+            sbM51387.append(c4208.m13451());
+            throw new C7367(sbM51387.toString(), e);
+        }
     }
 }

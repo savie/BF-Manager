@@ -1,17 +1,14 @@
 package l;
 
-import java.lang.ref.WeakReference;
-
-/* JADX INFO: renamed from: l.ۘ᩸᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 99PI */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4217 extends WeakReference {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f15299;
-
-    public C4217(int i, C21857 c21857) {
-        super(c21857);
-        this.f15299 = i;
+/* JADX INFO: renamed from: l.ۘܳ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8GL */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C4217 implements InterfaceC4152 {
+    @Override // l.InterfaceC4152
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo13306(Object obj) {
+        String str = (String) obj;
+        int i = ActivityC7135.f23493;
+        return str;
     }
 }

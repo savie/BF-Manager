@@ -1,132 +1,186 @@
 .class public final Ll/ۛۢۙ;
 .super Ljava/lang/Object;
-.source "08PI"
+.source "L8FI"
 
 # interfaces
-.implements Ll/ۢۢۙ;
+.implements Ll/֫ۢۙ;
 
 
 # instance fields
-.field public final ۙ:Landroid/content/ContextWrapper;
+.field public final synthetic ۙ:Ll/᩺ۢۙ;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ContextWrapper;)V
+.method public constructor <init>(Ll/᩺ۢۙ;)V
     .locals 0
 
-    .line 101
+    .line 900
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
-    iput-object p1, p0, Ll/ۛۢۙ;->ۙ:Landroid/content/ContextWrapper;
+    iput-object p1, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/֫ۢۙ;)Ll/ܰۗۙ;
-    .locals 4
+.method public final ۙ()V
+    .locals 1
 
-    .line 150
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 909
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
-    const/16 v1, 0x17
+    invoke-static {v0}, Ll/᩺ۢۙ;->᩷(Ll/᩺ۢۙ;)V
 
-    if-lt v0, v1, :cond_1
+    return-void
+.end method
 
-    const/16 v1, 0x1f
+.method public final ۙ(I)V
+    .locals 1
 
-    if-lt v0, v1, :cond_0
+    .line 945
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
-    goto :goto_0
-
-    .line 176
-    :cond_0
-    iget-object v1, p0, Ll/ۛۢۙ;->ۙ:Landroid/content/ContextWrapper;
-
-    if-eqz v1, :cond_1
-
-    const/16 v2, 0x1c
-
-    if-lt v0, v2, :cond_1
-
-    .line 178
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
 
     move-result-object v0
 
-    const-string v1, "com.amazon.hardware.tv_screen"
+    invoke-virtual {v0, p1}, Ll/᩸ۢۙ;->ۙ(I)V
 
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    return-void
+.end method
 
-    move-result v0
+.method public final ۙ(J)V
+    .locals 1
 
-    if-eqz v0, :cond_1
+    .line 914
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
-    .line 153
-    :goto_0
-    iget-object v0, p1, Ll/֫ۢۙ;->ۨ:Ll/۟ᩴۙ;
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
 
-    iget-object v0, v0, Ll/۟ᩴۙ;->ܰۙ:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v0}, Ll/ۜ۠ۙ;->ۚ(Ljava/lang/String;)I
+    invoke-virtual {v0, p1, p2}, Ll/᩸ۢۙ;->ۙ(J)V
 
-    move-result v0
+    return-void
+.end method
 
-    .line 154
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public final ۙ(JIJ)V
+    .locals 7
 
-    const-string v2, "Creating an asynchronous MediaCodec adapter for track type "
+    .line 919
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 157
-    invoke-static {v0}, Ll/ᩳۤۙ;->᩹(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
 
     move-result-object v1
 
-    .line 154
-    invoke-static {v1}, Ll/֡ۡۙ;->ۨ(Ljava/lang/String;)V
+    move-wide v2, p1
 
-    .line 162
-    new-instance v1, Ll/۟ۢۙ;
+    move v4, p3
 
-    .line 70
-    new-instance v2, Ll/ۡۢۙ;
+    move-wide v5, p4
 
-    invoke-direct {v2, v0}, Ll/ۡۢۙ;-><init>(I)V
+    invoke-virtual/range {v1 .. v6}, Ll/᩸ۢۙ;->ۙ(JIJ)V
 
-    new-instance v3, Ll/ۤۢۙ;
+    return-void
+.end method
 
-    invoke-direct {v3, v0}, Ll/ۤۢۙ;-><init>(I)V
+.method public final ۙ(Ljava/lang/Exception;)V
+    .locals 1
 
-    invoke-direct {v1, v2, v3}, Ll/۟ۢۙ;-><init>(Ll/ۡۢۙ;Ll/ۤۢۙ;)V
+    const-string v0, "Audio sink error"
 
-    .line 164
-    invoke-virtual {v1, p1}, Ll/۟ۢۙ;->ۙ(Ll/֫ۢۙ;)Ll/᩷ۢۙ;
+    .line 929
+    invoke-static {v0, p1}, Ll/֫ۨۙ;->᩷(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object p1
+    .line 930
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
 
-    return-object p1
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
 
-    .line 166
-    :cond_1
-    new-instance v0, Ll/ܽۗۙ;
+    move-result-object v0
 
-    .line 45
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, p1}, Ll/᩸ۢۙ;->᩷(Ljava/lang/Exception;)V
 
-    .line 166
-    invoke-virtual {v0, p1}, Ll/ܽۗۙ;->ۙ(Ll/֫ۢۙ;)Ll/ܰۗۙ;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final ۙ(Ll/ܳۢۙ;)V
+    .locals 1
 
-    return-object p1
+    .line 935
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
+
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ll/᩸ۢۙ;->ۙ(Ll/ܳۢۙ;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Z)V
+    .locals 1
+
+    .line 924
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
+
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ll/᩸ۢۙ;->ۙ(Z)V
+
+    return-void
+.end method
+
+.method public final ۤ()V
+    .locals 1
+
+    .line 950
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
+
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۤ(Ll/᩺ۢۙ;)V
+
+    return-void
+.end method
+
+.method public final synthetic ᩴ()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final synthetic ᩷()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ᩷(Ll/ܳۢۙ;)V
+    .locals 1
+
+    .line 940
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
+
+    invoke-static {v0}, Ll/᩺ۢۙ;->ۙ(Ll/᩺ۢۙ;)Ll/᩸ۢۙ;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ll/᩸ۢۙ;->᩷(Ll/ܳۢۙ;)V
+
+    return-void
+.end method
+
+.method public final ᩸()V
+    .locals 1
+
+    .line 904
+    iget-object v0, p0, Ll/ۛۢۙ;->ۙ:Ll/᩺ۢۙ;
+
+    invoke-virtual {v0}, Ll/᩺ۢۙ;->ۙۙ()V
+
+    return-void
 .end method

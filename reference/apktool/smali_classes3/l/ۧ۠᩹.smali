@@ -1,30 +1,24 @@
 .class public final Ll/ۧ۠᩹;
-.super Ljava/lang/Exception;
-.source "473S"
+.super Ljava/lang/Object;
+.source "Y1FB"
 
 
-# instance fields
-.field public final ܺ:Ljava/lang/String;
+# static fields
+.field public static final ۙ:Ll/֫۠᩹;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/io/IOException;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 1072
-    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+    .line 112
+    new-instance v0, Ll/֫۠᩹;
 
-    .line 1073
-    iput-object p1, p0, Ll/ۧ۠᩹;->ܺ:Ljava/lang/String;
+    .line 47
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 112
+    sput-object v0, Ll/ۧ۠᩹;->ۙ:Ll/֫۠᩹;
 
     return-void
-.end method
-
-.method public static bridge synthetic ۙ(Ll/ۧ۠᩹;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۧ۠᩹;->ܺ:Ljava/lang/String;
-
-    return-object p0
 .end method

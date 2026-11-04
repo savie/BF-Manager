@@ -1,84 +1,31 @@
-.class public final synthetic Ll/᩻ܰۚ;
+.class public final Ll/᩻ܰۚ;
 .super Ljava/lang/Object;
-.source "35OM"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "46X2"
 
 
 # instance fields
-.field public final synthetic ֡:I
+.field public final ۙ:Z
 
-.field public final synthetic ۛ:F
+.field public final ۤ:Z
 
-.field public final synthetic ۧ:I
-
-.field public final synthetic ۫:Ll/ۘۗۖ;
-
-.field public final synthetic ܺ:Ll/ۚۨۚ;
-
-.field public final synthetic ܽ:I
-
-.field public final synthetic ܿ:I
-
-.field public final synthetic ᩶:Ll/ۗ֫ۖ;
-
-.field public final synthetic ᩻:I
+.field public final ᩷:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۚۨۚ;Ll/ۗ֫ۖ;IILl/ۘۗۖ;IFII)V
+.method public constructor <init>(ZZZ)V
     .locals 0
 
-    .line 0
+    .line 785
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩻ܰۚ;->ܺ:Ll/ۚۨۚ;
+    .line 786
+    iput-boolean p1, p0, Ll/᩻ܰۚ;->ۙ:Z
 
-    iput-object p2, p0, Ll/᩻ܰۚ;->᩶:Ll/ۗ֫ۖ;
+    .line 787
+    iput-boolean p2, p0, Ll/᩻ܰۚ;->ۤ:Z
 
-    iput p3, p0, Ll/᩻ܰۚ;->֡:I
-
-    iput p4, p0, Ll/᩻ܰۚ;->ܽ:I
-
-    iput-object p5, p0, Ll/᩻ܰۚ;->۫:Ll/ۘۗۖ;
-
-    iput p6, p0, Ll/᩻ܰۚ;->ܿ:I
-
-    iput p7, p0, Ll/᩻ܰۚ;->ۛ:F
-
-    iput p8, p0, Ll/᩻ܰۚ;->ۧ:I
-
-    iput p9, p0, Ll/᩻ܰۚ;->᩻:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 9
-
-    .line 0
-    iget v7, p0, Ll/᩻ܰۚ;->ۧ:I
-
-    iget v8, p0, Ll/᩻ܰۚ;->᩻:I
-
-    iget-object v0, p0, Ll/᩻ܰۚ;->ܺ:Ll/ۚۨۚ;
-
-    iget-object v1, p0, Ll/᩻ܰۚ;->᩶:Ll/ۗ֫ۖ;
-
-    iget v2, p0, Ll/᩻ܰۚ;->֡:I
-
-    iget v3, p0, Ll/᩻ܰۚ;->ܽ:I
-
-    iget-object v4, p0, Ll/᩻ܰۚ;->۫:Ll/ۘۗۖ;
-
-    iget v5, p0, Ll/᩻ܰۚ;->ܿ:I
-
-    iget v6, p0, Ll/᩻ܰۚ;->ۛ:F
-
-    invoke-static/range {v0 .. v8}, Ll/ۚۨۚ;->ۙ(Ll/ۚۨۚ;Ll/ۗ֫ۖ;IILl/ۘۗۖ;IFII)V
+    .line 788
+    iput-boolean p3, p0, Ll/᩻ܰۚ;->᩷:Z
 
     return-void
 .end method

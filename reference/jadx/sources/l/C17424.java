@@ -1,39 +1,45 @@
 package l;
 
-import bin.mt.json.JSONObject;
-import org.bouncycastle.i18n.TextBundle;
+import com.alipay.sdk.m.y.l;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܿܶۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J76B */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17424 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f55435;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f55436;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f55437;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f55438;
+/* JADX INFO: renamed from: l.ܽ۟ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6IN */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17424 implements Consumer {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f55439;
+    public final /* synthetic */ int f56658;
 
-    public C17424(JSONObject jSONObject) {
-        this.f55435 = jSONObject.getString(TextBundle.TEXT_ENTRY, "");
-        this.f55438 = C1383.m4844(jSONObject, "size", 0L);
-        this.f55436 = C1383.m4844(jSONObject, "paddr", -1L);
-        this.f55437 = C1383.m4844(jSONObject, "vaddr", -1L);
-        this.f55439 = jSONObject.getString("sectionName", "");
-        jSONObject.getString("type", "");
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f56659;
+
+    public /* synthetic */ C17424(int i, Object obj) {
+        this.f56658 = i;
+        this.f56659 = obj;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C17424 m40620(JSONObject jSONObject) {
-        return new C17424(jSONObject);
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        switch (this.f56658) {
+            case 0:
+                InterfaceC11851 interfaceC11851 = (InterfaceC11851) this.f56659;
+                ((Map) obj).put(interfaceC11851.mo1791(), interfaceC11851);
+                break;
+            default:
+                ArrayList arrayList = (ArrayList) this.f56659;
+                String strConcat = (String) obj;
+                if (!strConcat.startsWith("// ==")) {
+                    strConcat = strConcat.concat(l.b);
+                }
+                arrayList.add(strConcat);
+                break;
+        }
     }
 }

@@ -1,276 +1,489 @@
 package l;
 
-import android.app.Activity;
-import android.app.Notification;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.os.Build;
-import android.os.Bundle;
-import android.text.Editable;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
-import bin.mt.json.JSON;
-import bin.mt.json.JSONObject;
-import bin.mt.plus.R;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Comparator;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ۘ֡, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5WY */
-/* JADX INFO: loaded from: classes.dex */
-public final class C3577 {
+/* JADX INFO: renamed from: l.ۗܿ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 25I */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3577 extends AbstractC5991 implements Serializable {
+    public static final long serialVersionUID = -7046029254386353130L;
 
-    /* JADX INFO: renamed from: ܰ֡ܽ, reason: not valid java name and contains not printable characters */
-    public static int f13150;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public transient C17001 f12248;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public Context f13151;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public transient C17001 f12251;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public PendingIntent f13152;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public transient boolean[] f12252 = new boolean[48];
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public CharSequence f13155;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C16775 f13156;
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public boolean f13157;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public String f13159;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public Bundle f13160;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public transient C17001 f12249 = null;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public boolean f13161;
+    public int f12250 = 0;
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    @Deprecated
-    public ArrayList f13162;
+    @Override // java.util.SortedSet
+    public final /* bridge */ /* synthetic */ Comparator comparator() {
+        return null;
+    }
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public int f13163;
+    @Override // l.InterfaceC16695, java.util.SortedSet
+    public final InterfaceC4544 comparator() {
+        return null;
+    }
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public AbstractC22629 f13165;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public CharSequence f13167;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public Notification f13168;
+    @Override // l.InterfaceC1340
+    public final boolean contains(int i) {
+        C17001 c17001M40062 = this.f12249;
+        while (c17001M40062 != null) {
+            int iCompare = Integer.compare(i, c17001M40062.f55552);
+            if (iCompare == 0) {
+                break;
+            }
+            c17001M40062 = iCompare < 0 ? c17001M40062.m40062() : c17001M40062.m40069();
+        }
+        return c17001M40062 != null;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public ArrayList f13154 = new ArrayList();
-
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public ArrayList f13166 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public ArrayList f13153 = new ArrayList();
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public boolean f13164 = true;
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public int f13158 = 0;
-
-    /* JADX INFO: renamed from: ֡ۨ᩹, reason: not valid java name and contains not printable characters */
-    public static StringBuilder m10562(Object obj, long j) {
-        return ((StringBuilder) obj).append(j);
+    public final C17001 m11628(int i) {
+        C17001 c17001M40062 = this.f12249;
+        C17001 c17001 = c17001M40062;
+        int iCompare = 0;
+        while (c17001M40062 != null) {
+            iCompare = Integer.compare(i, c17001M40062.f55552);
+            if (iCompare == 0) {
+                break;
+            }
+            c17001 = c17001M40062;
+            c17001M40062 = iCompare < 0 ? c17001M40062.m40062() : c17001M40062.m40069();
+        }
+        return iCompare == 0 ? c17001M40062 : c17001;
     }
 
-    /* JADX INFO: renamed from: ֫᩺ܶ, reason: not valid java name and contains not printable characters */
-    public static Iterator m10563(Object obj) {
-        return ((ArrayList) obj).iterator();
-    }
-
-    /* JADX INFO: renamed from: ۗܽۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m10564(Object obj) {
-        return ((InterfaceC5614) obj).mo2357();
-    }
-
-    /* JADX INFO: renamed from: ۡۧܿ, reason: not valid java name and contains not printable characters */
-    public static boolean m10565() {
+    /* JADX WARN: Code duplicated, block: B:86:0x018d  */
+    /* JADX WARN: Code duplicated, block: B:88:0x0190  */
+    /* JADX WARN: Code duplicated, block: B:90:0x0194  */
+    /* JADX WARN: Code duplicated, block: B:92:0x0197  */
+    @Override // l.AbstractC6957, l.InterfaceC1340
+    public final boolean add(int i) {
+        C17001 c17001;
+        C17001 c17002;
+        C17001 c17003;
+        C17001 c17004;
+        C17001 c17005 = this.f12249;
+        if (c17005 == null) {
+            this.f12250++;
+            C17001 c17006 = new C17001(i);
+            this.f12251 = c17006;
+            this.f12248 = c17006;
+            this.f12249 = c17006;
+            return true;
+        }
+        C17001 c17007 = null;
+        C17001 c17008 = null;
+        int i2 = 0;
+        C17001 c17009 = c17005;
+        while (true) {
+            int iCompare = Integer.compare(i, c17005.f55552);
+            if (iCompare == 0) {
+                return false;
+            }
+            if (((byte) c17005.f55550) != 0) {
+                i2 = 0;
+                c17009 = c17005;
+                c17008 = c17007;
+            }
+            boolean[] zArr = this.f12252;
+            int i3 = i2 + 1;
+            boolean z = iCompare > 0;
+            zArr[i2] = z;
+            if (z) {
+                if (c17005.m40066()) {
+                    this.f12250++;
+                    c17001 = new C17001(i);
+                    C17001 c170010 = c17005.f55549;
+                    if (c170010 == null) {
+                        this.f12248 = c17001;
+                    }
+                    c17001.f55551 = c17005;
+                    c17001.f55549 = c170010;
+                    c17005.f55550 &= Integer.MAX_VALUE;
+                    c17005.f55549 = c17001;
+                    break;
+                }
+                c17002 = c17005.f55549;
+                i2 = i3;
+                C17001 c170011 = c17002;
+                c17007 = c17005;
+                c17005 = c170011;
+            } else {
+                if (c17005.m40068()) {
+                    this.f12250++;
+                    c17001 = new C17001(i);
+                    C17001 c170012 = c17005.f55551;
+                    if (c170012 == null) {
+                        this.f12251 = c17001;
+                    }
+                    c17001.f55549 = c17005;
+                    c17001.f55551 = c170012;
+                    c17005.f55550 &= -1073741825;
+                    c17005.f55551 = c17001;
+                    break;
+                }
+                c17002 = c17005.f55551;
+                i2 = i3;
+                C17001 c170013 = c17002;
+                c17007 = c17005;
+                c17005 = c170013;
+            }
+        }
+        int i4 = 0;
+        C17001 c170014 = c17009;
+        while (c170014 != c17001) {
+            boolean z2 = this.f12252[i4];
+            if (z2) {
+                int i5 = c170014.f55550;
+                c170014.f55550 = ((((byte) i5) + 1) & 255) | (i5 & (-256));
+            } else {
+                int i6 = c170014.f55550;
+                c170014.f55550 = ((((byte) i6) - 1) & 255) | (i6 & (-256));
+            }
+            i4++;
+            c170014 = z2 ? c170014.f55549 : c170014.f55551;
+        }
+        byte b = (byte) c17009.f55550;
+        if (b == -2) {
+            c17003 = c17009.f55551;
+            if (((byte) c17003.f55550) == -1) {
+                if (c17003.m40066()) {
+                    c17003.m40067(false);
+                    c17009.m40064(c17003);
+                } else {
+                    c17009.f55551 = c17003.f55549;
+                }
+                c17003.f55549 = c17009;
+                c17003.m40063(0);
+                c17009.m40063(0);
+            } else {
+                c17004 = c17003.f55549;
+                c17003.f55549 = c17004.f55551;
+                c17004.f55551 = c17003;
+                c17009.f55551 = c17004.f55549;
+                c17004.f55549 = c17009;
+                byte b2 = (byte) c17004.f55550;
+                if (b2 == -1) {
+                    c17003.m40063(0);
+                    c17009.m40063(1);
+                } else if (b2 == 0) {
+                    c17003.m40063(0);
+                    c17009.m40063(0);
+                } else {
+                    c17003.m40063(-1);
+                    c17009.m40063(0);
+                }
+                c17004.m40063(0);
+                if (c17004.m40068()) {
+                    c17003.m40072(c17004);
+                    c17004.m40065(false);
+                }
+                if (c17004.m40066()) {
+                    c17009.m40064(c17004);
+                    c17004.m40067(false);
+                }
+                c17003 = c17004;
+            }
+            if (c17008 == null) {
+                this.f12249 = c17003;
+                return true;
+            }
+            if (c17008.f55551 == c17009) {
+                c17008.f55551 = c17003;
+                return true;
+            }
+            c17008.f55549 = c17003;
+        } else if (b == 2) {
+            c17003 = c17009.f55549;
+            if (((byte) c17003.f55550) == 1) {
+                if (c17003.m40068()) {
+                    c17003.m40065(false);
+                    c17009.m40072(c17003);
+                } else {
+                    c17009.f55549 = c17003.f55551;
+                }
+                c17003.f55551 = c17009;
+                c17003.m40063(0);
+                c17009.m40063(0);
+            } else {
+                c17004 = c17003.f55551;
+                c17003.f55551 = c17004.f55549;
+                c17004.f55549 = c17003;
+                c17009.f55549 = c17004.f55551;
+                c17004.f55551 = c17009;
+                byte b3 = (byte) c17004.f55550;
+                if (b3 == 1) {
+                    c17003.m40063(0);
+                    c17009.m40063(-1);
+                } else if (b3 == 0) {
+                    c17003.m40063(0);
+                    c17009.m40063(0);
+                } else {
+                    c17003.m40063(1);
+                    c17009.m40063(0);
+                }
+                c17004.m40063(0);
+                if (c17004.m40068()) {
+                    c17009.m40072(c17004);
+                    c17004.m40065(false);
+                }
+                if (c17004.m40066()) {
+                    c17003.m40064(c17004);
+                    c17004.m40067(false);
+                }
+                c17003 = c17004;
+            }
+            if (c17008 == null) {
+                this.f12249 = c17003;
+                return true;
+            }
+            if (c17008.f55551 == c17009) {
+                c17008.f55551 = c17003;
+                return true;
+            }
+            c17008.f55549 = c17003;
+        }
         return true;
     }
 
-    /* JADX INFO: renamed from: ۤ֨ۙ, reason: not valid java name and contains not printable characters */
-    public static View m10566(Object obj, int i) {
-        return ((ViewGroup) obj).getChildAt(i);
+    /* JADX WARN: Code duplicated, block: B:171:0x0284 A[LOOP:1: B:65:0x00f0->B:171:0x0284, LOOP_END] */
+    /* JADX WARN: Code duplicated, block: B:192:0x0110 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:194:? A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:75:0x010a  */
+    /* JADX WARN: Code duplicated, block: B:79:0x0114  */
+    /* JADX WARN: Code duplicated, block: B:85:0x0121 A[LOOP:2: B:83:0x011b->B:85:0x0121, LOOP_END] */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:43:0x00a0 -> B:60:0x00e6). Please report as a decompilation issue!!! */
+    /*  JADX ERROR: JadxOverflowException in pass: RegionMakerVisitor
+        jadx.core.utils.exceptions.JadxOverflowException: Regions stack size limit reached
+        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
+        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
+        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
+        */
+    @Override // l.AbstractC13448
+    public final boolean remove(int r11) {
+        /*
+            Method dump skipped, instruction units count: 685
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C3577.remove(int):boolean");
     }
 
-    /* JADX INFO: renamed from: ۤ֨᩶, reason: not valid java name and contains not printable characters */
-    public static String m10567(Object obj, Object obj2) {
-        return ((String) obj).concat((String) obj2);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f12250 = 0;
+        this.f12249 = null;
+        this.f12248 = null;
+        this.f12251 = null;
     }
 
-    /* JADX INFO: renamed from: ۤۢ۟, reason: not valid java name and contains not printable characters */
-    public static boolean m10568(Object obj) {
-        return ((Boolean) obj).booleanValue();
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f12250;
     }
 
-    /* JADX INFO: renamed from: ۨ᩹ܿ, reason: not valid java name and contains not printable characters */
-    public static boolean m10569(Object obj) {
-        return ((AbstractC20745) obj).mo33971();
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean isEmpty() {
+        return this.f12250 == 0;
     }
 
-    /* JADX INFO: renamed from: ۫ۜۗ, reason: not valid java name and contains not printable characters */
-    public static void m10570(Object obj, Object obj2, Object obj3) {
-        ((C5013) obj).m13907((String) obj2, (String) obj3);
-    }
-
-    /* JADX INFO: renamed from: ۫ۡ۫, reason: not valid java name and contains not printable characters */
-    public static String m10571(short[] sArr, int i, int i2, int i3) {
-        char[] cArr = new char[i2];
-        for (int i4 = 0; i4 < i2; i4++) {
-            cArr[i4] = (char) (sArr[i + i4] ^ i3);
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ᩵ */
+    public final int mo8337() {
+        if (this.f12249 == null) {
+            throw new NoSuchElementException();
         }
-        return new String(cArr);
+        return this.f12251.f55552;
     }
 
-    /* JADX INFO: renamed from: ۫᩺ۢ, reason: not valid java name and contains not printable characters */
-    public static int m10572(Object obj, int i) {
-        return ((String) obj).indexOf(i);
-    }
-
-    /* JADX INFO: renamed from: ᩷ۚᩳ, reason: not valid java name and contains not printable characters */
-    public static void m10574(Object obj) {
-        ((AbstractC20745) obj).m46739();
-    }
-
-    /* JADX INFO: renamed from: ᩷᩻ۚ, reason: not valid java name and contains not printable characters */
-    public static Long m10575(long j) {
-        return Long.valueOf(j);
-    }
-
-    /* JADX INFO: renamed from: ᩹ܿۤ, reason: not valid java name and contains not printable characters */
-    public static Editable m10576(Object obj) {
-        return ((EditText) obj).getText();
-    }
-
-    /* JADX INFO: renamed from: ᩻ۜۖ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m10577() {
-        return JSON.object();
-    }
-
-    /* JADX INFO: renamed from: ᩻۟۬, reason: not valid java name and contains not printable characters */
-    public static boolean m10578(Object obj) {
-        return ((Activity) obj).isFinishing();
-    }
-
-    public C3577(Context context, String str) {
-        Notification notification = new Notification();
-        this.f13168 = notification;
-        this.f13151 = context;
-        this.f13159 = str;
-        notification.when = System.currentTimeMillis();
-        notification.audioStreamType = -1;
-        this.f13163 = 0;
-        this.f13162 = new ArrayList();
-        this.f13161 = true;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10588(boolean z) {
-        this.f13164 = z;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final void m10592() {
-        this.f13168.icon = R.drawable.MT_Protector;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m10589() {
-        this.f13157 = true;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10586(String str) {
-        this.f13167 = m10573(str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10585(CharSequence charSequence) {
-        this.f13155 = m10573(charSequence);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10583(PendingIntent pendingIntent) {
-        this.f13152 = pendingIntent;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m10590() {
-        this.f13168.flags |= 2;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m10591() {
-        this.f13168.flags |= 16;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m10580() {
-        this.f13163 = 1;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10582(int i, String str, PendingIntent pendingIntent) {
-        this.f13154.add(new C0755(i == 0 ? null : C16775.m39334((Resources) null, "", i), str, pendingIntent, new Bundle(), null, null, true, true));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10587(AbstractC22629 abstractC22629) {
-        if (this.f13165 != abstractC22629) {
-            this.f13165 = abstractC22629;
-            if (abstractC22629 == null || abstractC22629.f73730 == this) {
-                return;
-            }
-            abstractC22629.f73730 = this;
-            m10587(abstractC22629);
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final int mo8335() {
+        if (this.f12249 == null) {
+            throw new NoSuchElementException();
         }
+        return this.f12248.f55552;
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final void m10579() {
-        this.f13158 = 1;
+    @Override // l.AbstractC5991, l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return new C17747(this);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Notification m10581() {
-        return new C7106(this).m18996();
+    @Override // l.AbstractC5991, l.AbstractC6957, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final InterfaceC6036 iterator() {
+        return new C17747(this);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static CharSequence m10573(CharSequence charSequence) {
-        return (charSequence != null && charSequence.length() > 5120) ? charSequence.subSequence(0, 5120) : charSequence;
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ۟ */
+    public final InterfaceC8273 mo11424() {
+        return new C17747(this);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10584(Bitmap bitmap) {
-        C16775 c16775M39337;
-        if (bitmap == null) {
-            c16775M39337 = null;
-        } else {
-            if (Build.VERSION.SDK_INT < 27) {
-                Resources resources = this.f13151.getResources();
-                int dimensionPixelSize = resources.getDimensionPixelSize(R.dimen.MT_Protector);
-                int dimensionPixelSize2 = resources.getDimensionPixelSize(R.dimen.MT_Protector);
-                if (bitmap.getWidth() > dimensionPixelSize || bitmap.getHeight() > dimensionPixelSize2) {
-                    double dMin = Math.min(((double) dimensionPixelSize) / ((double) Math.max(1, bitmap.getWidth())), ((double) dimensionPixelSize2) / ((double) Math.max(1, bitmap.getHeight())));
-                    bitmap = Bitmap.createScaledBitmap(bitmap, (int) Math.ceil(((double) bitmap.getWidth()) * dMin), (int) Math.ceil(((double) bitmap.getHeight()) * dMin), true);
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ᩹ */
+    public final InterfaceC16695 mo8338(int i) {
+        return new C23715(this, 0, true, i, false);
+    }
+
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ܳ */
+    public final InterfaceC16695 mo8336(int i) {
+        return new C23715(this, i, false, 0, true);
+    }
+
+    @Override // l.InterfaceC16695
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC16695 mo8334(int i, int i2) {
+        return new C23715(this, i, false, i2, false);
+    }
+
+    public final Object clone() {
+        try {
+            C3577 c3577 = (C3577) super.clone();
+            c3577.f12252 = new boolean[48];
+            if (this.f12250 != 0) {
+                C17001 c17001 = new C17001();
+                C17001 c17002 = new C17001();
+                C17001 c17003 = this.f12249;
+                c17001.f55550 &= -1073741825;
+                c17001.f55551 = c17003;
+                c17002.m40064((C17001) null);
+                C17001 c17004 = c17002;
+                loop0: while (true) {
+                    if (!c17001.m40068()) {
+                        C17001 c17001Clone = c17001.f55551.clone();
+                        c17001Clone.m40064(c17004.f55551);
+                        c17001Clone.m40072(c17004);
+                        c17004.f55550 &= -1073741825;
+                        c17004.f55551 = c17001Clone;
+                        c17001 = c17001.f55551;
+                        c17004 = c17001Clone;
+                    } else {
+                        while (c17001.m40066()) {
+                            c17001 = c17001.f55549;
+                            if (c17001 == null) {
+                                break loop0;
+                            }
+                            c17004 = c17004.f55549;
+                        }
+                        c17001 = c17001.f55549;
+                        c17004 = c17004.f55549;
+                    }
+                    if (!c17001.m40066()) {
+                        C17001 c17001Clone2 = c17001.f55549.clone();
+                        c17001Clone2.m40072(c17004.f55549);
+                        c17001Clone2.m40064(c17004);
+                        c17004.f55550 &= Integer.MAX_VALUE;
+                        c17004.f55549 = c17001Clone2;
+                    }
+                }
+                c17004.f55549 = null;
+                C17001 c17005 = c17002.f55551;
+                c3577.f12249 = c17005;
+                c3577.f12251 = c17005;
+                while (true) {
+                    C17001 c17006 = c3577.f12251.f55551;
+                    if (c17006 == null) {
+                        break;
+                    }
+                    c3577.f12251 = c17006;
+                }
+                c3577.f12248 = c3577.f12249;
+                while (true) {
+                    C17001 c17007 = c3577.f12248.f55549;
+                    if (c17007 == null) {
+                        break;
+                    }
+                    c3577.f12248 = c17007;
                 }
             }
-            c16775M39337 = C16775.m39337(bitmap);
+            return c3577;
+        } catch (CloneNotSupportedException unused) {
+            throw new InternalError();
         }
-        this.f13156 = c16775M39337;
+    }
+
+    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
+        int i = this.f12250;
+        C17747 c17747 = new C17747(this);
+        objectOutputStream.defaultWriteObject();
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return;
+            }
+            objectOutputStream.writeInt(c17747.nextInt());
+            i = i2;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C17001 m11627(ObjectInputStream objectInputStream, int i, C17001 c17001, C17001 c17002) {
+        if (i == 1) {
+            C17001 c17003 = new C17001(objectInputStream.readInt());
+            c17003.m40064(c17001);
+            c17003.m40072(c17002);
+            return c17003;
+        }
+        if (i == 2) {
+            C17001 c17004 = new C17001(objectInputStream.readInt());
+            C17001 c17005 = new C17001(objectInputStream.readInt());
+            c17004.f55550 &= Integer.MAX_VALUE;
+            c17004.f55549 = c17005;
+            c17005.m40064(c17004);
+            c17004.m40063(1);
+            c17004.m40064(c17001);
+            c17004.f55549.m40072(c17002);
+            return c17004;
+        }
+        int i2 = i / 2;
+        C17001 c17006 = new C17001();
+        C17001 c17001M11627 = m11627(objectInputStream, (i - i2) - 1, c17001, c17006);
+        c17006.f55550 &= -1073741825;
+        c17006.f55551 = c17001M11627;
+        c17006.f55552 = objectInputStream.readInt();
+        C17001 c17001M11628 = m11627(objectInputStream, i2, c17006, c17002);
+        c17006.f55550 &= Integer.MAX_VALUE;
+        c17006.f55549 = c17001M11628;
+        if (i == ((-i) & i)) {
+            c17006.m40063(1);
+        }
+        return c17006;
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
+        objectInputStream.defaultReadObject();
+        this.f12252 = new boolean[48];
+        int i = this.f12250;
+        if (i != 0) {
+            C17001 c17001M11627 = m11627(objectInputStream, i, null, null);
+            this.f12249 = c17001M11627;
+            while (c17001M11627.m40062() != null) {
+                c17001M11627 = c17001M11627.m40062();
+            }
+            this.f12251 = c17001M11627;
+            C17001 c17001M40069 = this.f12249;
+            while (c17001M40069.m40069() != null) {
+                c17001M40069 = c17001M40069.m40069();
+            }
+            this.f12248 = c17001M40069;
+        }
     }
 }

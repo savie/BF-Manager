@@ -1,54 +1,41 @@
-.class public final synthetic Ll/ۛۨۚ;
+.class public final Ll/ۛۨۚ;
 .super Ljava/lang/Object;
-.source "B7TD"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "079R"
 
 
-# virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+# instance fields
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ᩴ:Ljava/lang/String;
+
+.field public final ᩷:I
+
+.field public final ᩸:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 564
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    .line 565
+    iput-object p1, p0, Ll/ۛۨۚ;->ۙ:Ljava/lang/String;
 
-    return-object p1
-.end method
+    .line 566
+    iput-object p3, p0, Ll/ۛۨۚ;->ۤ:Ljava/lang/String;
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
+    .line 567
+    iput p2, p0, Ll/ۛۨۚ;->᩷:I
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 568
+    iput p5, p0, Ll/ۛۨۚ;->᩸:I
 
-    move-result-object v0
+    .line 569
+    iput-object p4, p0, Ll/ۛۨۚ;->ᩴ:Ljava/lang/String;
 
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 0
-    check-cast p1, Ll/ۧۨۚ;
-
-    invoke-static {p1}, Ll/ܰۛᩴ;->nonNull(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

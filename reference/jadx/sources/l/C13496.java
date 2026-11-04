@@ -1,35 +1,36 @@
 package l;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-
-/* JADX INFO: renamed from: l.ܰ֨᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: renamed from: l.۬֨, reason: contains not printable characters */
+/* JADX INFO: compiled from: R5O3 */
 /* JADX INFO: loaded from: classes4.dex */
-public class C13496 extends AbstractC7186 {
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        URI uri = (URI) obj;
-        c1145.m4212(uri == null ? null : uri.toASCIIString());
+public final class C13496 extends C6785 {
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object f42915;
+
+    public C13496(int i) {
+        super(i);
+        this.f42915 = new Object();
     }
 
-    @Override // l.AbstractC7186
+    @Override // l.C6785, l.InterfaceC8276
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
+    public final Object mo18919() {
+        Object objMo18919;
+        synchronized (this.f42915) {
+            objMo18919 = super.mo18919();
         }
-        try {
-            String strM14922 = c5379.m14922();
-            if (strM14922.equals("null")) {
-                return null;
-            }
-            return new URI(strM14922);
-        } catch (URISyntaxException e) {
-            throw new C9573(e);
+        return objMo18919;
+    }
+
+    @Override // l.C6785, l.InterfaceC8276
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo18920(Object obj) {
+        boolean zMo18920;
+        C15243.m36590(obj, AbstractC0329.MATCH_INSTANCE_STR);
+        synchronized (this.f42915) {
+            zMo18920 = super.mo18920(obj);
         }
+        return zMo18920;
     }
 }

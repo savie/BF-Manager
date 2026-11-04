@@ -1,109 +1,140 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩷᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 55UE */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2785 extends AbstractC20521 {
-    public C2785(AbstractC20521 abstractC20521) {
-        super(589824, abstractC20521);
+/* JADX INFO: renamed from: l.ۖܺ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 78KX */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2785 implements InterfaceC10242 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f9175;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f9176;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f9177;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final long[] f9178;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f9179;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f9180;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f9181;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C2785 m9252(C9496 c9496, long j) {
+        long jM24875 = c9496.m24875();
+        if (jM24875 == -9223372036854775807L) {
+            return null;
+        }
+        C18010 c18010 = c9496.f30772;
+        return new C2785(j, c18010.f58964, jM24875, c18010.f58963, c9496.f30769, c9496.f30771);
     }
 
-    @Override // l.AbstractC20521
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo8457(Object obj) {
-        if (obj == null) {
-            mo35159(1);
-            return;
+    public C2785(long j, int i, long j2, int i2, long j3, long[] jArr) {
+        this.f9181 = j;
+        this.f9177 = i;
+        this.f9179 = j2;
+        this.f9175 = i2;
+        this.f9176 = j3;
+        this.f9178 = jArr;
+        this.f9180 = j3 != -1 ? j + j3 : -1L;
+    }
+
+    @Override // l.InterfaceC9060
+    /* JADX INFO: renamed from: ᩴ */
+    public final boolean mo2298() {
+        return this.f9178 != null;
+    }
+
+    @Override // l.InterfaceC9060
+    /* JADX INFO: renamed from: ۙ */
+    public final C9805 mo2290(long j) {
+        double d;
+        double d2;
+        double d3;
+        boolean zMo2298 = mo2298();
+        int i = this.f9177;
+        long j2 = this.f9181;
+        if (!zMo2298) {
+            C2349 c2349 = new C2349(0L, j2 + ((long) i));
+            return new C9805(c2349, c2349);
         }
-        if (obj instanceof Integer) {
-            int iIntValue = ((Integer) obj).intValue();
-            if (iIntValue >= -1 && iIntValue <= 5) {
-                mo35159(iIntValue + 3);
-                return;
-            }
-            if (iIntValue <= 127 && iIntValue >= -128) {
-                mo35172(16, iIntValue);
-                return;
-            } else if (iIntValue <= 32767 && iIntValue >= -32768) {
-                mo35172(17, iIntValue);
-                return;
+        long jM19476 = C7116.m19476(j, 0L, this.f9179);
+        double d4 = (jM19476 * 100.0d) / this.f9179;
+        double d5 = 0.0d;
+        if (d4 <= 0.0d) {
+            d3 = 256.0d;
+        } else if (d4 >= 100.0d) {
+            d3 = 256.0d;
+            d5 = 256.0d;
+        } else {
+            int i2 = (int) d4;
+            long[] jArr = this.f9178;
+            C20782.m47566(jArr);
+            double d6 = jArr[i2];
+            if (i2 == 99) {
+                d = 256.0d;
+                d2 = 256.0d;
             } else {
-                super.mo8457(obj);
-                return;
+                d = jArr[i2 + 1];
+                d2 = 256.0d;
             }
+            d5 = ((d - d6) * (d4 - ((double) i2))) + d6;
+            d3 = d2;
         }
-        if (obj instanceof Long) {
-            long jLongValue = ((Long) obj).longValue();
-            if (jLongValue == 0 || jLongValue == 1) {
-                mo35159(((int) jLongValue) + 9);
-                return;
-            } else {
-                super.mo8457(obj);
-                return;
-            }
+        double d7 = d5 / d3;
+        long j3 = this.f9176;
+        C2349 c23410 = new C2349(jM19476, j2 + C7116.m19476(Math.round(d7 * j3), i, j3 - 1));
+        return new C9805(c23410, c23410);
+    }
+
+    @Override // l.InterfaceC10242
+    /* JADX INFO: renamed from: ᩷ */
+    public final long mo2549(long j) {
+        long j2 = j - this.f9181;
+        if (!mo2298() || j2 <= this.f9177) {
+            return 0L;
         }
-        if (obj instanceof Float) {
-            float fFloatValue = ((Float) obj).floatValue();
-            if (fFloatValue == 0.0f) {
-                mo35159(11);
-                return;
-            }
-            if (fFloatValue == 1.0f) {
-                mo35159(12);
-                return;
-            } else if (fFloatValue == 2.0f) {
-                mo35159(13);
-                return;
-            } else {
-                super.mo8457(obj);
-                return;
-            }
-        }
-        if (obj instanceof Double) {
-            double dDoubleValue = ((Double) obj).doubleValue();
-            if (dDoubleValue == 0.0d) {
-                mo35159(14);
-                return;
-            } else if (dDoubleValue == 1.0d) {
-                mo35159(15);
-                return;
-            } else {
-                super.mo8457(obj);
-                return;
-            }
-        }
-        if (obj instanceof C14172) {
-            switch (((C14172) obj).m34269()) {
-                case 1:
-                    mo33785("java/lang/Boolean", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 2:
-                    mo33785("java/lang/Character", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 3:
-                    mo33785("java/lang/Byte", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 4:
-                    mo33785("java/lang/Short", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 5:
-                    mo33785("java/lang/Integer", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 6:
-                    mo33785("java/lang/Float", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 7:
-                    mo33785("java/lang/Long", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                case 8:
-                    mo33785("java/lang/Double", 178, "TYPE", "Ljava/lang/Class;");
-                    break;
-                default:
-                    super.mo8457(obj);
-                    break;
-            }
-            return;
-        }
-        super.mo8457(obj);
+        long[] jArr = this.f9178;
+        C20782.m47566(jArr);
+        double d = (j2 * 256.0d) / this.f9176;
+        int iM19505 = C7116.m19505(jArr, (long) d, true);
+        long j3 = this.f9179;
+        long j4 = (((long) iM19505) * j3) / 100;
+        long j5 = jArr[iM19505];
+        int i = iM19505 + 1;
+        long j6 = (j3 * ((long) i)) / 100;
+        long j7 = iM19505 == 99 ? 256L : jArr[i];
+        return Math.round((j5 == j7 ? 0.0d : (d - j5) / (j7 - j5)) * (j6 - j4)) + j4;
+    }
+
+    @Override // l.InterfaceC9060
+    /* JADX INFO: renamed from: ۚ */
+    public final long mo2295() {
+        return this.f9179;
+    }
+
+    @Override // l.InterfaceC10242
+    /* JADX INFO: renamed from: ᩷ */
+    public final long mo2548() {
+        return this.f9181 + ((long) this.f9177);
+    }
+
+    @Override // l.InterfaceC10242
+    /* JADX INFO: renamed from: ᩸ */
+    public final long mo2550() {
+        return this.f9180;
+    }
+
+    @Override // l.InterfaceC10242
+    /* JADX INFO: renamed from: ۫ */
+    public final int mo2547() {
+        return this.f9175;
     }
 }

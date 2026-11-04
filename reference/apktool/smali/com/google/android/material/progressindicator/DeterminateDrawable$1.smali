@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/progressindicator/DeterminateDrawable$1;
-.super Ll/᩷ۨۙ;
+.super Ll/᩺ۤۙ;
 .source "DeterminateDrawable.java"
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 300
-    invoke-direct {p0, p1}, Ll/᩷ۨۙ;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ll/᩺ۤۙ;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

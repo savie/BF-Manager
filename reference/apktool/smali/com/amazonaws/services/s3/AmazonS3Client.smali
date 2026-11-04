@@ -7,25 +7,25 @@
 
 
 # static fields
-.field public static ۠:Lcom/amazonaws/logging/Log;
+.field public static ۗ:Lcom/amazonaws/logging/Log;
 
-.field public static final ᩴ:Ljava/util/Map;
+.field public static final ᩹:Ljava/util/Map;
 
 
 # instance fields
-.field public ۘ:Lcom/amazonaws/services/s3/S3ClientOptions;
+.field public ֫:Lcom/amazonaws/services/s3/S3ClientOptions;
 
-.field public volatile ۜ:Ljava/lang/String;
+.field public final ۚ:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
-.field public final ۬:Lcom/amazonaws/auth/AWSCredentialsProvider;
+.field public volatile ۧ:Ljava/lang/String;
 
-.field public final ܶ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
+.field public final ܶ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
 
-.field public final ᩳ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
+.field public final ܺ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
 
-.field public ᩸:I
+.field public ܽ:I
 
-.field public final ᩺:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
+.field public final ᩻:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     .line 175
     invoke-static {}, Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;->ۙ()[Lcom/amazonaws/services/s3/metrics/S3ServiceMetric;
@@ -82,11 +82,11 @@
     invoke-direct {v0, v3, v1, v2}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     .line 218
-    invoke-static {v0}, Ll/֡ܿᩴ;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v0}, Ll/ۙۚۗ;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩴ:Ljava/util/Map;
+    sput-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩹:Ljava/util/Map;
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 
     invoke-direct {p2}, Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;-><init>()V
 
-    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܶ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܺ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
 
     .line 185
     new-instance p2, Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
@@ -138,29 +138,29 @@
 
     invoke-direct {p2, v0}, Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;-><init>(Lcom/amazonaws/transform/Unmarshaller;)V
 
-    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩳ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܶ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
 
     .line 198
     new-instance p2, Lcom/amazonaws/services/s3/S3ClientOptions;
 
     invoke-direct {p2}, Lcom/amazonaws/services/s3/S3ClientOptions;-><init>()V
 
-    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۘ:Lcom/amazonaws/services/s3/S3ClientOptions;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->֫:Lcom/amazonaws/services/s3/S3ClientOptions;
 
     const/16 p2, 0x400
 
     .line 214
-    iput p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩸:I
+    iput p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܽ:I
 
     .line 232
     new-instance p2, Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
 
     invoke-direct {p2}, Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;-><init>()V
 
-    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩺:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
+    iput-object p2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩻:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
 
     .line 402
-    iput-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->۬:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۚ:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
     const-string p1, "s3.amazonaws.com"
 
@@ -173,9 +173,9 @@
     invoke-direct {p1}, Lcom/amazonaws/handlers/HandlerChainFactory;-><init>()V
 
     .line 603
-    iget-object p2, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۖ:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p2, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩸:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {p1}, Lcom/amazonaws/handlers/HandlerChainFactory;->ܰ()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/handlers/HandlerChainFactory;->᩷()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -199,7 +199,7 @@
     const-string v1, "The bucket is in this region: "
 
     .line 4795
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object v2
 
@@ -228,7 +228,7 @@
     :goto_0
     new-instance v4, Lcom/amazonaws/services/s3/internal/S3ExecutionContext;
 
-    iget-object v5, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۖ:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v5, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩸:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 40
     invoke-direct {v4, v5, v2}, Lcom/amazonaws/http/ExecutionContext;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;Z)V
@@ -242,13 +242,13 @@
     invoke-virtual {p1, v2}, Lcom/amazonaws/DefaultRequest;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics;)V
 
     .line 4806
-    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۟:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v2, v5}, Lcom/amazonaws/util/AWSRequestMetrics;->ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v2, v5}, Lcom/amazonaws/util/AWSRequestMetrics;->ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
     .line 4816
     :try_start_0
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v5
 
@@ -267,7 +267,7 @@
     if-eqz p3, :cond_3
 
     .line 4173
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -285,7 +285,7 @@
     if-eqz v0, :cond_2
 
     .line 4187
-    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
@@ -295,11 +295,11 @@
     if-eqz v3, :cond_3
 
     .line 4826
-    invoke-direct {p0, p3}, Lcom/amazonaws/services/s3/AmazonS3Client;->ܰ(Ljava/lang/String;)V
+    invoke-direct {p0, p3}, Lcom/amazonaws/services/s3/AmazonS3Client;->᩷(Ljava/lang/String;)V
 
     .line 4829
     :cond_3
-    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->۬:Lcom/amazonaws/auth/AWSCredentialsProvider;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۚ:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
     invoke-interface {v0}, Lcom/amazonaws/auth/AWSCredentialsProvider;->ۙ()Lcom/amazonaws/auth/AWSCredentials;
 
@@ -318,7 +318,7 @@
     .line 4835
     iget-object p4, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۙ:Lcom/amazonaws/http/AmazonHttpClient;
 
-    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܶ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܺ:Lcom/amazonaws/services/s3/internal/S3ErrorResponseHandler;
 
     invoke-virtual {p4, p1, p2, v0, v4}, Lcom/amazonaws/http/AmazonHttpClient;->ۙ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/services/s3/internal/S3ExecutionContext;)Lcom/amazonaws/Response;
 
@@ -347,7 +347,7 @@
 
     .line 4847
     :try_start_1
-    invoke-virtual {p2}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p2}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result p4
 
@@ -356,14 +356,14 @@
     if-ne p4, v0, :cond_4
 
     .line 4848
-    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ()Ljava/util/Map;
+    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ()Ljava/util/Map;
 
     move-result-object p4
 
     if-eqz p4, :cond_4
 
     .line 4849
-    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ()Ljava/util/Map;
+    invoke-virtual {p2}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ()Ljava/util/Map;
 
     move-result-object p4
 
@@ -378,7 +378,7 @@
     check-cast p4, Ljava/lang/String;
 
     .line 4850
-    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩴ:Ljava/util/Map;
+    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩹:Ljava/util/Map;
 
     invoke-interface {v0, p3, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -397,7 +397,7 @@
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcom/amazonaws/AmazonServiceException;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {p2, p3}, Lcom/amazonaws/AmazonServiceException;->᩷(Ljava/lang/String;)V
 
     .line 4855
     :cond_4
@@ -466,7 +466,7 @@
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 5414
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/Tag;->ܰ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/Tag;->᩷()Ljava/lang/String;
 
     move-result-object v1
 
@@ -508,7 +508,7 @@
     .locals 4
 
     .line 4299
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۜ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۧ()Ljava/util/Map;
 
     move-result-object v0
 
@@ -521,7 +521,7 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/lang/String;
+    sget-object v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩳ:Ljava/lang/String;
 
     const-string v2, "x-amz-server-side-encryption"
 
@@ -594,7 +594,7 @@
 
     .line 4314
     :cond_2
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۬()Ljava/util/Date;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۚ()Ljava/util/Date;
 
     move-result-object v0
 
@@ -614,7 +614,7 @@
 
     .line 4319
     :cond_3
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۠()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۗ()Ljava/util/Map;
 
     move-result-object p1
 
@@ -745,12 +745,12 @@
     const-string v1, ", "
 
     .line 0
-    invoke-static {v0, v1}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_0
-    invoke-static {v0, v2}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -790,11 +790,11 @@
     return-void
 .end method
 
-.method private ܰ(Ljava/lang/String;)V
+.method private ᩷(Ljava/lang/String;)V
     .locals 9
 
     .line 5573
-    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩴ:Ljava/util/Map;
+    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩹:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -803,7 +803,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 5574
-    sget-object v2, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     if-nez v1, :cond_3
 
@@ -831,7 +831,7 @@
 
     move-result-object v1
 
-    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_0
     const/4 v1, 0x0
@@ -844,7 +844,7 @@
     invoke-direct {v6}, Lcom/amazonaws/AmazonWebServiceRequest;-><init>()V
 
     .line 5601
-    sget-object v7, Lcom/amazonaws/http/HttpMethodName;->ܽ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v7, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
 
     new-instance v8, Ljava/net/URI;
 
@@ -892,20 +892,20 @@
     const-string v3, "Error while creating URI"
 
     .line 5613
-    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 5608
     :goto_0
-    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ()Ljava/util/Map;
+    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ()Ljava/util/Map;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
     .line 5609
-    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ()Ljava/util/Map;
+    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ()Ljava/util/Map;
 
     move-result-object v1
 
@@ -947,7 +947,7 @@
 
     move-result-object v3
 
-    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_2
     if-eqz v1, :cond_3
@@ -982,7 +982,7 @@
 
     move-result-object p1
 
-    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_4
     return-void
@@ -999,7 +999,7 @@
     invoke-direct {v0, p3}, Lcom/amazonaws/DefaultRequest;-><init>(Lcom/amazonaws/AmazonWebServiceRequest;)V
 
     .line 4757
-    iget-object p3, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۘ:Lcom/amazonaws/services/s3/S3ClientOptions;
+    iget-object p3, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->֫:Lcom/amazonaws/services/s3/S3ClientOptions;
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1016,12 +1016,12 @@
     .locals 6
 
     .line 4087
-    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۘ:Lcom/amazonaws/services/s3/S3ClientOptions;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->֫:Lcom/amazonaws/services/s3/S3ClientOptions;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4089
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -1031,10 +1031,10 @@
     move-result-object v0
 
     .line 4158
-    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iget-object v1, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
     .line 4159
-    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->ۖ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/ClientConfiguration;->᩸()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1049,7 +1049,7 @@
     if-eqz v1, :cond_4
 
     .line 4173
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -1067,16 +1067,16 @@
     if-eqz v1, :cond_4
 
     .line 4187
-    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     if-nez v1, :cond_4
 
     .line 4098
-    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    sget-object v1, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩴ:Ljava/util/Map;
+    sget-object v1, Lcom/amazonaws/services/s3/AmazonS3Client;->᩹:Ljava/util/Map;
 
     .line 4099
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1088,7 +1088,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     :goto_0
     if-eqz v1, :cond_4
@@ -1098,14 +1098,14 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/amazonaws/regions/Region;->ۖ()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/amazonaws/regions/Region;->᩸()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iget-object v3, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
     .line 48
-    invoke-virtual {v3}, Lcom/amazonaws/ClientConfiguration;->ܰ()Lcom/amazonaws/Protocol;
+    invoke-virtual {v3}, Lcom/amazonaws/ClientConfiguration;->᩷()Lcom/amazonaws/Protocol;
 
     move-result-object v3
 
@@ -1188,11 +1188,11 @@
 
     .line 4119
     :cond_4
-    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     if-nez v1, :cond_5
 
-    sget-object v1, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩴ:Ljava/util/Map;
+    sget-object v1, Lcom/amazonaws/services/s3/AmazonS3Client;->᩹:Ljava/util/Map;
 
     .line 4120
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1204,7 +1204,7 @@
     goto :goto_1
 
     :cond_5
-    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     :goto_1
     if-eqz v1, :cond_6
@@ -1273,7 +1273,7 @@
     .line 4203
     new-instance p3, Lcom/amazonaws/services/s3/internal/S3Signer;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ۖ()Lcom/amazonaws/http/HttpMethodName;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩸()Lcom/amazonaws/http/HttpMethodName;
 
     move-result-object p1
 
@@ -1293,17 +1293,17 @@
     .locals 13
 
     .line 3498
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v6
 
     .line 3499
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v7
 
     .line 3500
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->۬()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ۚ()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1323,7 +1323,7 @@
     invoke-static {v8, v0}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3507
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->᩹()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ܳ()Ljava/util/List;
 
     move-result-object v0
 
@@ -1339,7 +1339,7 @@
 
     .line 3513
     :goto_0
-    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v5, 0x0
 
@@ -1359,10 +1359,10 @@
     const-string v1, "uploadId"
 
     .line 3514
-    invoke-virtual {v0, v1, v8}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v8}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3518
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->᩹()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CompleteMultipartUploadRequest;->ܳ()Ljava/util/List;
 
     move-result-object v1
 
@@ -1446,14 +1446,14 @@
     check-cast v0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;
 
     .line 3535
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->۬()Lcom/amazonaws/services/s3/model/CompleteMultipartUploadResult;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->ۚ()Lcom/amazonaws/services/s3/model/CompleteMultipartUploadResult;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 3536
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->۬()Lcom/amazonaws/services/s3/model/CompleteMultipartUploadResult;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->ۚ()Lcom/amazonaws/services/s3/model/CompleteMultipartUploadResult;
 
     move-result-object p1
 
@@ -1461,23 +1461,23 @@
 
     .line 3539
     :cond_0
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->֨()Lcom/amazonaws/services/s3/model/AmazonS3Exception;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->۫()Lcom/amazonaws/services/s3/model/AmazonS3Exception;
 
     move-result-object v1
 
     add-int/lit8 v2, v10, 0x1
 
     .line 3548
-    iget-object v3, p0, Lcom/amazonaws/AmazonWebServiceClient;->ܰ:Lcom/amazonaws/ClientConfiguration;
+    iget-object v3, p0, Lcom/amazonaws/AmazonWebServiceClient;->᩷:Lcom/amazonaws/ClientConfiguration;
 
-    invoke-virtual {v3}, Lcom/amazonaws/ClientConfiguration;->ۨ()Lcom/amazonaws/retry/RetryPolicy;
+    invoke-virtual {v3}, Lcom/amazonaws/ClientConfiguration;->ۤ()Lcom/amazonaws/retry/RetryPolicy;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
     .line 3550
-    invoke-virtual {v3}, Lcom/amazonaws/retry/RetryPolicy;->ۨ()Lcom/amazonaws/retry/RetryPolicy$RetryCondition;
+    invoke-virtual {v3}, Lcom/amazonaws/retry/RetryPolicy;->ۤ()Lcom/amazonaws/retry/RetryPolicy$RetryCondition;
 
     move-result-object v4
 
@@ -1487,7 +1487,7 @@
 
     .line 3554
     :cond_1
-    sget-object v4, Lcom/amazonaws/retry/PredefinedRetryPolicies;->ۖ:Lcom/amazonaws/retry/RetryPolicy;
+    sget-object v4, Lcom/amazonaws/retry/PredefinedRetryPolicies;->᩸:Lcom/amazonaws/retry/RetryPolicy;
 
     if-ne v3, v4, :cond_2
 
@@ -1495,7 +1495,7 @@
 
     .line 3558
     :cond_2
-    iget-object v3, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩺:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
+    iget-object v3, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩻:Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;
 
     .line 3559
     invoke-virtual {v3, v1, v10}, Lcom/amazonaws/services/s3/internal/CompleteMultipartUploadRetryCondition;->ۙ(Lcom/amazonaws/AmazonClientException;I)Z
@@ -1517,7 +1517,7 @@
 
     .line 3541
     :cond_4
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->֨()Lcom/amazonaws/services/s3/model/AmazonS3Exception;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CompleteMultipartUploadHandler;->۫()Lcom/amazonaws/services/s3/model/AmazonS3Exception;
 
     move-result-object p1
 
@@ -1528,7 +1528,7 @@
     .locals 8
 
     .line 3574
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1537,7 +1537,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3576
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ܳ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1546,16 +1546,16 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3580
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v3
 
     .line 3581
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ܳ()Ljava/lang/String;
 
     move-result-object v4
 
-    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v7, 0x0
 
@@ -1573,17 +1573,17 @@
     const/4 v2, 0x0
 
     .line 3583
-    invoke-virtual {v0, v1, v2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3597
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۚ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ᩴ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 3598
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۚ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ᩴ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
 
     move-result-object v1
 
@@ -1599,7 +1599,7 @@
 
     .line 3602
     :cond_0
-    iget-object v1, p1, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ܿ:Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    iget-object v1, p1, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ᩳ:Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     if-eqz v1, :cond_1
 
@@ -1608,7 +1608,7 @@
 
     .line 3606
     :cond_1
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۘ()Lcom/amazonaws/services/s3/model/ObjectTagging;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->֫()Lcom/amazonaws/services/s3/model/ObjectTagging;
 
     move-result-object v1
 
@@ -1625,14 +1625,14 @@
 
     .line 3615
     :cond_2
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->۬()Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۚ()Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
     .line 59
-    sget-object v2, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܽ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sget-object v2, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     invoke-virtual {v2}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->getAlgorithm()Ljava/lang/String;
 
@@ -1699,12 +1699,12 @@
     invoke-direct {v1, v3, v5}, Lcom/amazonaws/services/s3/internal/ResponseHeaderHandlerChain;-><init>(Lcom/amazonaws/transform/Unmarshaller;[Lcom/amazonaws/services/s3/internal/HeaderHandler;)V
 
     .line 3634
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v2
 
     .line 3635
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/InitiateMultipartUploadRequest;->ܳ()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1722,7 +1722,7 @@
     .locals 8
 
     .line 842
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1740,11 +1740,11 @@
     move-result v0
 
     .line 856
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v3
 
-    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v7, 0x0
 
@@ -1760,7 +1760,7 @@
     move-result-object v2
 
     .line 858
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۘ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->֫()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1769,11 +1769,11 @@
     const-string v4, "prefix"
 
     .line 4601
-    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 859
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1782,11 +1782,11 @@
     const-string v4, "delimiter"
 
     .line 4601
-    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 860
     :cond_1
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ܳ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1795,18 +1795,18 @@
     const-string v4, "marker"
 
     .line 4601
-    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 865
     :cond_2
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->۬()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۚ()Ljava/lang/Integer;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
     .line 866
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->۬()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۚ()Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -1817,7 +1817,7 @@
     if-ltz v3, :cond_3
 
     .line 867
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->۬()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۚ()Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -1827,7 +1827,7 @@
 
     const-string v4, "max-keys"
 
-    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v4, v3}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 869
     :cond_3
@@ -1836,7 +1836,7 @@
     invoke-direct {v3, v0}, Lcom/amazonaws/services/s3/model/transform/Unmarshallers$ListObjectsUnmarshaller;-><init>(Z)V
 
     .line 870
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/ListObjectsRequest;->ۤ()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1863,22 +1863,22 @@
     const-string v8, "Unable to cleanly close input stream: "
 
     .line 1755
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
     .line 1756
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->۬()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۚ()Ljava/lang/String;
 
     move-result-object v9
 
     .line 1757
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۘ()Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->֫()Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     move-result-object v1
 
     .line 1758
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩹()Ljava/io/InputStream;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܳ()Ljava/io/InputStream;
 
     move-result-object v2
 
@@ -1890,7 +1890,7 @@
     if-nez v3, :cond_0
 
     .line 1767
-    sget v3, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ܰ:I
+    sget v3, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->᩷:I
 
     const/4 v3, 0x0
 
@@ -1933,7 +1933,7 @@
     move-result v1
 
     .line 1782
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷ܰ()Ljava/io/File;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۘ᩷()Ljava/io/File;
 
     move-result-object v3
 
@@ -1942,7 +1942,7 @@
     if-eqz v3, :cond_5
 
     .line 1783
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩷ܰ()Ljava/io/File;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۘ᩷()Ljava/io/File;
 
     move-result-object v2
 
@@ -1954,7 +1954,7 @@
     invoke-virtual {v11, v3, v4}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۙ(J)V
 
     .line 1787
-    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۨ()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩷()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1969,7 +1969,7 @@
 
     .line 1790
     :goto_1
-    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۖ()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۤ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1984,7 +1984,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v11, v4}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۘ(Ljava/lang/String;)V
+    invoke-virtual {v11, v4}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֫(Ljava/lang/String;)V
 
     :cond_3
     if-eqz v3, :cond_4
@@ -2002,12 +2002,12 @@
     move-result-object v1
 
     .line 116
-    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۨ([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۤ([B)Ljava/lang/String;
 
     move-result-object v1
 
     .line 1797
-    invoke-virtual {v11, v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۬(Ljava/lang/String;)V
+    invoke-virtual {v11, v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۚ(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2026,7 +2026,7 @@
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {v0, v2}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2069,7 +2069,7 @@
 
     .line 1811
     :goto_3
-    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ۛ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v5, Lcom/amazonaws/http/HttpMethodName;->ۢ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v6, 0x0
 
@@ -2087,14 +2087,14 @@
     move-result-object v1
 
     .line 1816
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۚ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ᩴ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
 
     move-result-object v2
 
     if-eqz v2, :cond_6
 
     .line 1817
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۚ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ᩴ()Lcom/amazonaws/services/s3/model/CannedAccessControlList;
 
     move-result-object v2
 
@@ -2108,7 +2108,7 @@
 
     .line 1820
     :cond_6
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܶ()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܺ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2117,7 +2117,7 @@
     const-string v2, "x-amz-storage-class"
 
     .line 1821
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܶ()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܺ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2125,7 +2125,7 @@
 
     .line 1824
     :cond_7
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۜ()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۧ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2136,7 +2136,7 @@
     const-string v2, "x-amz-website-redirect-location"
 
     .line 1825
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۜ()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ۧ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2160,7 +2160,7 @@
 
     .line 1832
     :cond_8
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩸()Lcom/amazonaws/services/s3/model/ObjectTagging;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->ܽ()Lcom/amazonaws/services/s3/model/ObjectTagging;
 
     move-result-object v2
 
@@ -2177,7 +2177,7 @@
 
     .line 1834
     :cond_9
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/PutObjectRequest;->ᩳ()Z
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/PutObjectRequest;->ܶ()Z
 
     move-result v2
 
@@ -2192,7 +2192,7 @@
 
     .line 1840
     :cond_a
-    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩺()Ljava/lang/Object;
+    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩻()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -2201,7 +2201,7 @@
     const-wide/16 v4, 0x0
 
     .line 1841
-    sget-object v6, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sget-object v6, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     if-nez v2, :cond_f
 
@@ -2217,7 +2217,7 @@
     const-string v2, "No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors."
 
     .line 1850
-    invoke-interface {v6, v2}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v6, v2}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     const/high16 v2, 0x40000
 
@@ -2272,7 +2272,7 @@
     invoke-virtual {v1, v3, v2}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1855
-    invoke-virtual {v1}, Lcom/amazonaws/DefaultRequest;->ۜ()V
+    invoke-virtual {v1}, Lcom/amazonaws/DefaultRequest;->ۧ()V
 
     goto :goto_6
 
@@ -2393,7 +2393,7 @@
     invoke-direct {v2, v13, v10}, Lcom/amazonaws/event/ProgressReportingInputStream;-><init>(Ljava/io/InputStream;Lcom/amazonaws/event/ProgressListenerCallbackExecutor;)V
 
     .line 1882
-    iget v3, v7, Lcom/amazonaws/services/s3/AmazonS3Client;->᩸:I
+    iget v3, v7, Lcom/amazonaws/services/s3/AmazonS3Client;->ܽ:I
 
     invoke-virtual {v2, v3}, Lcom/amazonaws/event/ProgressReportingInputStream;->ۙ(I)V
 
@@ -2406,7 +2406,7 @@
 
     .line 1886
     :cond_11
-    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۖ()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۤ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2415,21 +2415,21 @@
     const-string v2, "application/octet-stream"
 
     .line 1891
-    invoke-virtual {v11, v2}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۘ(Ljava/lang/String;)V
+    invoke-virtual {v11, v2}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֫(Ljava/lang/String;)V
 
     .line 1894
     :cond_12
     invoke-static {v1, v11}, Lcom/amazonaws/services/s3/AmazonS3Client;->ۙ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/services/s3/model/ObjectMetadata;)V
 
     .line 1895
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩺()Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/services/s3/model/AbstractPutObjectRequest;->᩻()Lcom/amazonaws/services/s3/model/SSEAwsKeyManagementParams;
 
     move-result-object v2
 
     if-eqz v2, :cond_14
 
     .line 59
-    sget-object v3, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܽ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sget-object v3, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->getAlgorithm()Ljava/lang/String;
 
@@ -2523,37 +2523,37 @@
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩵()Ljava/lang/String;
 
     .line 1929
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩸(Ljava/lang/String;)V
+
+    .line 1930
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܽ()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩷(Ljava/lang/String;)V
+
+    .line 1931
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܶ()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۖ(Ljava/lang/String;)V
-
-    .line 1930
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩸()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܰ(Ljava/lang/String;)V
-
-    .line 1931
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩳ()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۚ(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ᩴ(Ljava/lang/String;)V
 
     .line 1932
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩹()Ljava/util/Date;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܳ()Ljava/util/Date;
 
     .line 1934
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۚ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩴ()Ljava/lang/String;
 
     .line 1936
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۡ()Z
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۨ()Z
 
     .line 1937
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۨ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩷()Ljava/lang/String;
 
     return-object v0
 
@@ -2620,7 +2620,7 @@
     .locals 9
 
     .line 1532
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2629,7 +2629,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1534
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2638,16 +2638,16 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1537
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v3
 
     .line 1538
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v4
 
-    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v7, 0x0
 
@@ -2661,10 +2661,10 @@
     move-result-object v0
 
     .line 1540
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۜ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۧ()Ljava/lang/String;
 
     .line 1545
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۘ()[J
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->֫()[J
 
     move-result-object v1
 
@@ -2707,7 +2707,7 @@
     if-ltz v8, :cond_0
 
     .line 0
-    invoke-static {v3}, Ll/ۡܿۡ;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ll/ۤ۠֫;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -2734,7 +2734,7 @@
     const-string v1, "If-Match"
 
     .line 1568
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->᩹()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ܳ()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -2744,7 +2744,7 @@
     const-string v1, "If-None-Match"
 
     .line 1570
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->۬()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۚ()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -2761,7 +2761,7 @@
     if-nez v1, :cond_2
 
     .line 1582
-    sget v1, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ܰ:I
+    sget v1, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->᩷:I
 
     move-object v4, v3
 
@@ -2781,11 +2781,11 @@
     invoke-direct {v1}, Lcom/amazonaws/services/s3/internal/S3ObjectResponseHandler;-><init>()V
 
     .line 1586
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v6
 
@@ -2797,18 +2797,18 @@
     check-cast v0, Lcom/amazonaws/services/s3/model/S3Object;
 
     .line 1593
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/S3Object;->ۙ(Ljava/lang/String;)V
 
     .line 1594
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/GetObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/S3Object;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/amazonaws/services/s3/model/S3Object;->᩷(Ljava/lang/String;)V
 
     .line 1596
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3Object;->ۙ()Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
@@ -2828,10 +2828,10 @@
     invoke-direct {p1, v1, v4}, Lcom/amazonaws/event/ProgressReportingInputStream;-><init>(Ljava/io/InputStream;Lcom/amazonaws/event/ProgressListenerCallbackExecutor;)V
 
     .line 1610
-    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressReportingInputStream;->᩹()V
+    invoke-virtual {p1}, Lcom/amazonaws/event/ProgressReportingInputStream;->ܳ()V
 
     .line 1611
-    iget v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩸:I
+    iget v1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܽ:I
 
     invoke-virtual {p1, v1}, Lcom/amazonaws/event/ProgressReportingInputStream;->ۙ(I)V
 
@@ -2847,7 +2847,7 @@
     new-instance p1, Lcom/amazonaws/util/LengthCheckInputStream;
 
     .line 1620
-    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3Object;->ۨ()Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/S3Object;->᩷()Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     move-result-object v5
 
@@ -2872,7 +2872,7 @@
     move-exception p1
 
     .line 1637
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result v0
 
@@ -2880,7 +2880,7 @@
 
     if-eq v0, v1, :cond_5
 
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result v0
 
@@ -2913,27 +2913,27 @@
     .locals 13
 
     .line 3736
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v6
 
     .line 3737
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۘ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->֫()Ljava/lang/String;
 
     move-result-object v7
 
     .line 3738
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܶ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ܺ()Ljava/lang/String;
 
     move-result-object v8
 
     .line 3739
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۜ()I
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۧ()I
 
     move-result v9
 
     .line 3740
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩺()J
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩻()J
 
     move-result-wide v10
 
@@ -2953,7 +2953,7 @@
     invoke-static {v8, v0}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3753
-    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ۛ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ۢ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v5, 0x0
 
@@ -2973,7 +2973,7 @@
     const-string v0, "uploadId"
 
     .line 3755
-    invoke-virtual {v12, v0, v8}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v12, v0, v8}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "partNumber"
 
@@ -2982,7 +2982,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v12, v0, v1}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v12, v0, v1}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Content-Length"
 
@@ -2994,14 +2994,14 @@
     invoke-virtual {v12, v0, v1}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3773
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۬()Ljava/io/InputStream;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۚ()Ljava/io/InputStream;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3774
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->۬()Ljava/io/InputStream;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۚ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -3009,7 +3009,7 @@
 
     .line 3775
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩷ܰ()Ljava/io/File;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۘ᩷()Ljava/io/File;
 
     move-result-object v0
 
@@ -3022,14 +3022,14 @@
     new-instance v1, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;
 
     .line 3778
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->᩷ܰ()Ljava/io/File;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۘ᩷()Ljava/io/File;
 
     move-result-object v0
 
     invoke-direct {v1, v0}, Lcom/amazonaws/services/s3/internal/RepeatableFileInputStream;-><init>(Ljava/io/File;)V
 
     .line 3779
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ۚ()J
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/UploadPartRequest;->ᩴ()J
 
     move-result-wide v2
 
@@ -3064,7 +3064,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۨ([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۤ([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3096,7 +3096,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 0
-    invoke-static {p1, v1}, Ll/۠᩺ۘ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ll/ܶۨᩴ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3116,7 +3116,7 @@
     if-nez p1, :cond_3
 
     .line 3811
-    sget p1, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ܰ:I
+    sget p1, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->᩷:I
 
     const/4 p1, 0x0
 
@@ -3139,7 +3139,7 @@
     invoke-direct {v1, v0, p1}, Lcom/amazonaws/event/ProgressReportingInputStream;-><init>(Ljava/io/InputStream;Lcom/amazonaws/event/ProgressListenerCallbackExecutor;)V
 
     .line 3815
-    iget v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->᩸:I
+    iget v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܽ:I
 
     invoke-virtual {v1, v0}, Lcom/amazonaws/event/ProgressReportingInputStream;->ۙ(I)V
 
@@ -3177,38 +3177,38 @@
     invoke-direct {v2}, Lcom/amazonaws/services/s3/model/UploadPartResult;-><init>()V
 
     .line 3828
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۚ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩴ()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/model/UploadPartResult;->᩹(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/model/UploadPartResult;->ܳ(Ljava/lang/String;)V
 
     .line 3829
     invoke-virtual {v2, v9}, Lcom/amazonaws/services/s3/model/UploadPartResult;->ۙ(I)V
 
     .line 3830
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩸(Ljava/lang/String;)V
+
+    .line 3831
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܽ()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩷(Ljava/lang/String;)V
+
+    .line 3832
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܶ()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۖ(Ljava/lang/String;)V
-
-    .line 3831
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩸()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܰ(Ljava/lang/String;)V
-
-    .line 3832
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩳ()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۚ(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ᩴ(Ljava/lang/String;)V
 
     .line 3833
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۡ()Z
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ۨ()Z
     :try_end_2
     .catch Lcom/amazonaws/AmazonClientException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -3287,11 +3287,11 @@
     if-nez p4, :cond_0
 
     .line 5659
-    iget-object p4, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۨ:Ljava/net/URI;
+    iget-object p4, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۤ:Ljava/net/URI;
 
     .line 5675
     :cond_0
-    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۘ:Lcom/amazonaws/services/s3/S3ClientOptions;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->֫:Lcom/amazonaws/services/s3/S3ClientOptions;
 
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/S3ClientOptions;->ۙ()Z
 
@@ -3369,7 +3369,7 @@
     :catch_0
     :cond_4
     :goto_1
-    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3383,7 +3383,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 4281
     :try_start_1
@@ -3461,7 +3461,7 @@
     const-string p4, "Invalid bucket name: "
 
     .line 0
-    invoke-static {p4, p2}, Ll/֡ۜᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p2}, Ll/᩻᩵᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -3472,7 +3472,7 @@
 
     .line 5665
     :cond_6
-    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3486,7 +3486,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 5666
     invoke-virtual {p1, p4}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/net/URI;)V
@@ -3494,7 +3494,7 @@
     if-eqz p2, :cond_8
 
     .line 0
-    invoke-static {p2, v1}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p2, v1}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -3521,7 +3521,7 @@
     .line 5671
     :cond_8
     :goto_4
-    sget-object p2, Lcom/amazonaws/services/s3/AmazonS3Client;->۠:Lcom/amazonaws/logging/Log;
+    sget-object p2, Lcom/amazonaws/services/s3/AmazonS3Client;->ۗ:Lcom/amazonaws/logging/Log;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -3541,7 +3541,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -3550,7 +3550,7 @@
     .locals 8
 
     .line 3467
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3559,7 +3559,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3469
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3568,7 +3568,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3471
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ܳ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3577,12 +3577,12 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3474
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
     .line 3475
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3607,14 +3607,14 @@
     const-string v3, "uploadId"
 
     .line 3479
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->᩹()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/AbortMultipartUploadRequest;->ܳ()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v2, v3, p1}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, p1}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3482
-    iget-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩳ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܶ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
 
     invoke-direct {p0, v2, p1, v0, v1}, Lcom/amazonaws/services/s3/AmazonS3Client;->ۙ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3625,7 +3625,7 @@
     .locals 10
 
     .line 2018
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۘ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->֫()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3634,7 +3634,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2020
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۜ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۧ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3643,7 +3643,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2022
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3652,7 +3652,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2024
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3661,17 +3661,17 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2027
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
     .line 2028
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
     .line 2030
-    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ۛ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v6, Lcom/amazonaws/http/HttpMethodName;->ۢ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v7, 0x0
 
@@ -3695,7 +3695,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۘ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->֫()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3704,7 +3704,7 @@
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 4381
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۜ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۧ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3722,7 +3722,7 @@
     const-string v3, "x-amz-copy-source-if-match"
 
     .line 4394
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->᩹()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ܳ()Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -3732,7 +3732,7 @@
     const-string v3, "x-amz-copy-source-if-none-match"
 
     .line 4396
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->۬()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/CopyObjectRequest;->ۚ()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -3804,7 +3804,7 @@
     .catch Lcom/amazonaws/services/s3/model/AmazonS3Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2082
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۬()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۚ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3816,63 +3816,63 @@
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/CopyObjectResult;-><init>()V
 
     .line 2102
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֨()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۫()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩹(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܳ(Ljava/lang/String;)V
 
     .line 2103
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ᩳ()Ljava/util/Date;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܶ()Ljava/util/Date;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ܰ(Ljava/util/Date;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->᩷(Ljava/util/Date;)V
 
     .line 2104
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ᩴ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->᩹()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۙ(Ljava/lang/String;)V
 
     .line 2105
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->ۨ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۖ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩸(Ljava/lang/String;)V
 
     .line 2106
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->᩸()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->᩷(Ljava/lang/String;)V
 
     .line 2107
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/AbstractSSEHandler;->ᩴ()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ۚ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/internal/SSEResultBase;->ᩴ(Ljava/lang/String;)V
 
     .line 2108
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܶ()Ljava/util/Date;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܺ()Ljava/util/Date;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۙ(Ljava/util/Date;)V
 
     .line 2109
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->᩸()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ܽ()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۨ(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/services/s3/model/CopyObjectResult;->ۤ(Ljava/lang/String;)V
 
     .line 2110
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۠()Z
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۗ()Z
 
     move-result p1
 
@@ -3882,22 +3882,22 @@
 
     .line 2083
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->۬()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۚ()Ljava/lang/String;
 
     move-result-object v0
 
     .line 2084
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۜ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۧ()Ljava/lang/String;
 
     move-result-object v1
 
     .line 2085
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->᩺()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->᩻()Ljava/lang/String;
 
     move-result-object v3
 
     .line 2086
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->ۘ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$CopyObjectResultHandler;->֫()Ljava/lang/String;
 
     move-result-object p1
 
@@ -3914,17 +3914,17 @@
     sget-object v0, Lcom/amazonaws/AmazonServiceException$ErrorType;->᩶:Lcom/amazonaws/AmazonServiceException$ErrorType;
 
     .line 2091
-    invoke-virtual {v4, v3}, Lcom/amazonaws/AmazonServiceException;->ۨ(Ljava/lang/String;)V
+    invoke-virtual {v4, v3}, Lcom/amazonaws/AmazonServiceException;->ۤ(Ljava/lang/String;)V
 
     .line 2092
-    invoke-virtual {v4, p1}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ(Ljava/lang/String;)V
+    invoke-virtual {v4, p1}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ(Ljava/lang/String;)V
 
     .line 2093
-    invoke-virtual {v2}, Lcom/amazonaws/DefaultRequest;->۬()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/amazonaws/DefaultRequest;->ۚ()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v4, p1}, Lcom/amazonaws/AmazonServiceException;->ۖ(Ljava/lang/String;)V
+    invoke-virtual {v4, p1}, Lcom/amazonaws/AmazonServiceException;->᩸(Ljava/lang/String;)V
 
     const/16 p1, 0xc8
 
@@ -3938,7 +3938,7 @@
     move-exception p1
 
     .line 2065
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result v0
 
@@ -3957,7 +3957,7 @@
     .locals 8
 
     .line 2262
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3966,7 +3966,7 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2264
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3975,12 +3975,12 @@
     invoke-static {v0, v1}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2267
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v3
 
     .line 2268
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3998,17 +3998,17 @@
     move-result-object v0
 
     .line 2269
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
     .line 2270
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object p1
 
     .line 2269
-    iget-object v2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ᩳ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ܶ:Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;
 
     invoke-direct {p0, v0, v2, v1, p1}, Lcom/amazonaws/services/s3/AmazonS3Client;->ۙ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/services/s3/internal/AbstractS3ResponseHandler;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4019,11 +4019,11 @@
     .locals 7
 
     .line 2281
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ۤ()Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v5, 0x0
 
@@ -4041,7 +4041,7 @@
     const-string v1, "delete"
 
     .line 2283
-    invoke-virtual {v0, v1, v2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2291
     new-instance v1, Lcom/amazonaws/services/s3/model/transform/MultiObjectDeleteXmlFactory;
@@ -4059,7 +4059,7 @@
     invoke-virtual {v1, v3}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ(Ljava/lang/String;)V
 
     .line 39
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->᩹()Z
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ܳ()Z
 
     move-result v3
 
@@ -4072,13 +4072,13 @@
 
     const-string v3, "true"
 
-    invoke-virtual {v1, v3}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
     .line 43
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ۚ()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ᩴ()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -4113,7 +4113,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ(Ljava/lang/String;)V
+    invoke-virtual {v1, v4}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
@@ -4127,7 +4127,7 @@
     invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ۙ()V
 
     .line 49
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->ܰ()[B
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/XmlWriter;->᩷()[B
 
     move-result-object v1
 
@@ -4174,7 +4174,7 @@
 
     .line 83
     :try_start_1
-    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۨ([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/amazonaws/util/Base64;->ۤ([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4207,7 +4207,7 @@
     invoke-direct {v1, v3, v5}, Lcom/amazonaws/services/s3/internal/ResponseHeaderHandlerChain;-><init>(Lcom/amazonaws/transform/Unmarshaller;[Lcom/amazonaws/services/s3/internal/HeaderHandler;)V
 
     .line 2310
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/model/DeleteObjectsRequest;->ۤ()Ljava/lang/String;
 
     move-result-object p1
 
@@ -4218,7 +4218,7 @@
     check-cast p1, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;
 
     .line 2315
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܰ()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->᩷()Ljava/util/List;
 
     move-result-object v0
 
@@ -4247,7 +4247,7 @@
 
     .line 2316
     :cond_2
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;->ܰ()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/internal/S3XmlResponseHandler;->᩷()Ljava/util/Map;
 
     move-result-object v0
 
@@ -4255,7 +4255,7 @@
     new-instance v1, Lcom/amazonaws/services/s3/model/MultiObjectDeleteException;
 
     .line 2319
-    invoke-virtual {p1}, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->ܰ()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;->᩷()Ljava/util/List;
 
     move-result-object v2
 
@@ -4280,7 +4280,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Lcom/amazonaws/AmazonServiceException;->ۨ(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lcom/amazonaws/AmazonServiceException;->ۤ(Ljava/lang/String;)V
 
     const-string p1, "x-amz-id-2"
 
@@ -4291,7 +4291,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ۚ(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lcom/amazonaws/services/s3/model/AmazonS3Exception;->ᩴ(Ljava/lang/String;)V
 
     const-string p1, "X-Amz-Cf-Id"
 
@@ -4361,7 +4361,7 @@
     if-nez p1, :cond_0
 
     .line 668
-    iget-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۨ:Ljava/net/URI;
+    iget-object p1, p0, Lcom/amazonaws/AmazonWebServiceClient;->ۤ:Ljava/net/URI;
 
     invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
 
@@ -4373,7 +4373,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۜ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/AmazonS3Client;->ۧ:Ljava/lang/String;
 
     :cond_0
     return-void
@@ -4399,12 +4399,12 @@
     invoke-direct {v3, p1, p2}, Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1393
-    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;->ۖ()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;->ۤ()Ljava/lang/String;
 
     move-result-object p1
 
     .line 1394
-    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;->ۚ()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;->ᩴ()Ljava/lang/String;
 
     move-result-object p2
 
@@ -4419,7 +4419,7 @@
     invoke-static {p2, v0}, Lcom/amazonaws/util/ValidationUtils;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1402
-    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->ܽ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v4, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v5, 0x0
 
@@ -4455,7 +4455,7 @@
     move-exception p1
 
     .line 1460
-    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result p2
 

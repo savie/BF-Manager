@@ -1,41 +1,17 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.᩺ۖ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22699 extends AbstractC7238 {
-    public final /* synthetic */ int s;
-    public final /* synthetic */ Object t;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ C22699(AbstractC5752 abstractC5752, int i, Object obj, int i2) {
-        super(abstractC5752, i);
-        this.s = i2;
-        this.t = obj;
-    }
-
-    @Override // l.AbstractC5752
-    public final InterfaceC19171 q0(int i, InterfaceC19171 interfaceC19171) {
-        switch (this.s) {
-            case 0:
-                return new C3211(this, interfaceC19171, 0);
-            case 1:
-                return new C19877(this, interfaceC19171, 0);
-            case 2:
-                return new C8803(this, interfaceC19171, 0);
-            case 3:
-                return new C4622(this, interfaceC19171, 1);
-            default:
-                return new C4622(this, interfaceC19171, 2);
+/* JADX INFO: renamed from: l.᩸ۡܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 88BR */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22699 extends AbstractC12256 {
+    @Override // l.AbstractC4053
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2017() {
+        double[] dArrM20606 = this.f39423.m20606();
+        double[] dArrM20607 = this.f39422.m20606();
+        double[] dArrM20608 = this.f39421.m20606();
+        for (int i = 0; i < 8; i++) {
+            dArrM20608[i] = dArrM20606[i] + dArrM20607[i];
         }
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C22699(AbstractC14295 abstractC14295, Consumer consumer) {
-        super(abstractC14295, 0);
-        this.s = 3;
-        this.t = consumer;
     }
 }

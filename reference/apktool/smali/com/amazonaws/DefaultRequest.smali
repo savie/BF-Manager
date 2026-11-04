@@ -7,25 +7,25 @@
 
 
 # instance fields
-.field public final ֨:Ljava/util/LinkedHashMap;
-
-.field public ۖ:Lcom/amazonaws/http/HttpMethodName;
-
-.field public ۘ:Ljava/lang/String;
+.field public ֫:Ljava/lang/String;
 
 .field public ۙ:Ljava/io/InputStream;
 
-.field public ۚ:Lcom/amazonaws/util/AWSRequestMetrics;
+.field public ۚ:Ljava/lang/String;
 
-.field public ۜ:Z
+.field public final ۤ:Ljava/util/HashMap;
 
-.field public final ۨ:Ljava/util/HashMap;
+.field public ۧ:Z
 
-.field public ۬:Ljava/lang/String;
+.field public final ۫:Ljava/util/LinkedHashMap;
 
-.field public ܰ:Ljava/net/URI;
+.field public final ܳ:Lcom/amazonaws/AmazonWebServiceRequest;
 
-.field public final ᩹:Lcom/amazonaws/AmazonWebServiceRequest;
+.field public ᩴ:Lcom/amazonaws/util/AWSRequestMetrics;
+
+.field public ᩷:Ljava/net/URI;
+
+.field public ᩸:Lcom/amazonaws/http/HttpMethodName;
 
 
 # direct methods
@@ -38,34 +38,34 @@
     const/4 v0, 0x0
 
     .line 39
-    iput-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۜ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۧ:Z
 
     .line 47
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->֨:Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->۫:Ljava/util/LinkedHashMap;
 
     .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۨ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۤ:Ljava/util/HashMap;
 
     .line 65
-    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
-    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۖ:Lcom/amazonaws/http/HttpMethodName;
+    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->᩸:Lcom/amazonaws/http/HttpMethodName;
 
     const-string v0, "Amazon S3"
 
     .line 92
-    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۘ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/DefaultRequest;->֫:Ljava/lang/String;
 
     .line 93
-    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->᩹:Lcom/amazonaws/AmazonWebServiceRequest;
+    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ܳ:Lcom/amazonaws/AmazonWebServiceRequest;
 
     return-void
 .end method
@@ -81,7 +81,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 181
-    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->ۖ:Lcom/amazonaws/http/HttpMethodName;
+    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->᩸:Lcom/amazonaws/http/HttpMethodName;
 
     .line 315
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -91,7 +91,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 205
-    iget-object v2, p0, Lcom/amazonaws/DefaultRequest;->ܰ:Ljava/net/URI;
+    iget-object v2, p0, Lcom/amazonaws/DefaultRequest;->᩷:Ljava/net/URI;
 
     .line 316
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -99,7 +99,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 148
-    iget-object v2, p0, Lcom/amazonaws/DefaultRequest;->۬:Ljava/lang/String;
+    iget-object v2, p0, Lcom/amazonaws/DefaultRequest;->ۚ:Ljava/lang/String;
 
     const-string v3, "/"
 
@@ -130,7 +130,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 329
-    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->֨:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->۫:Ljava/util/LinkedHashMap;
 
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
@@ -179,7 +179,7 @@
     check-cast v7, Ljava/lang/String;
 
     .line 0
-    invoke-static {v0, v6, v5, v7, v4}, Lorg/bouncycastle/asn1/ASN1BMPString$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6, v5, v7, v4}, Ll/ۙۡۤ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -189,7 +189,7 @@
 
     .line 338
     :cond_3
-    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->ۨ:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/amazonaws/DefaultRequest;->ۤ:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->isEmpty()Z
 
@@ -232,7 +232,7 @@
     check-cast v7, Ljava/lang/String;
 
     .line 0
-    invoke-static {v0, v6, v5, v7, v4}, Lorg/bouncycastle/asn1/ASN1BMPString$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6, v5, v7, v4}, Ll/ۙۡۤ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -249,29 +249,11 @@
     return-object v0
 .end method
 
-.method public final ֨()Ljava/lang/String;
-    .locals 1
-
-    .line 148
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->۬:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۖ()Lcom/amazonaws/http/HttpMethodName;
-    .locals 1
-
-    .line 181
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۖ:Lcom/amazonaws/http/HttpMethodName;
-
-    return-object v0
-.end method
-
-.method public final ۘ()Z
+.method public final ֫()Z
     .locals 1
 
     .line 370
-    iget-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۜ:Z
+    iget-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۧ:Z
 
     return v0
 .end method
@@ -289,7 +271,7 @@
     .locals 0
 
     .line 189
-    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ۖ:Lcom/amazonaws/http/HttpMethodName;
+    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->᩸:Lcom/amazonaws/http/HttpMethodName;
 
     return-void
 .end method
@@ -300,12 +282,12 @@
     .end annotation
 
     .line 360
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۚ:Lcom/amazonaws/util/AWSRequestMetrics;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ᩴ:Lcom/amazonaws/util/AWSRequestMetrics;
 
     if-nez v0, :cond_0
 
     .line 361
-    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ۚ:Lcom/amazonaws/util/AWSRequestMetrics;
+    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ᩴ:Lcom/amazonaws/util/AWSRequestMetrics;
 
     return-void
 
@@ -333,7 +315,7 @@
     .locals 0
 
     .line 140
-    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->۬:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ۚ:Ljava/lang/String;
 
     return-void
 .end method
@@ -342,7 +324,7 @@
     .locals 1
 
     .line 124
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۨ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۤ:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -353,7 +335,7 @@
     .locals 0
 
     .line 197
-    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->ܰ:Ljava/net/URI;
+    iput-object p1, p0, Lcom/amazonaws/DefaultRequest;->᩷:Ljava/net/URI;
 
     return-void
 .end method
@@ -362,7 +344,7 @@
     .locals 1
 
     .line 237
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۨ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۤ:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -376,7 +358,7 @@
     .locals 1
 
     .line 246
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->֨:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->۫:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
 
@@ -386,69 +368,87 @@
     return-void
 .end method
 
-.method public final ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+.method public final ۚ()Ljava/lang/String;
     .locals 1
 
-    .line 116
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->᩹:Lcom/amazonaws/AmazonWebServiceRequest;
+    .line 213
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->֫:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۜ()V
+.method public final ۤ()Ljava/util/HashMap;
+    .locals 1
+
+    .line 132
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۤ:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method public final ۧ()V
     .locals 1
 
     const/4 v0, 0x1
 
     .line 375
-    iput-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۜ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/DefaultRequest;->ۧ:Z
 
     return-void
 .end method
 
-.method public final ۨ()Ljava/util/HashMap;
+.method public final ۫()Ljava/lang/String;
     .locals 1
 
-    .line 132
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۨ:Ljava/util/HashMap;
+    .line 148
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۚ:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ۬()Ljava/lang/String;
+.method public final ܳ()Ljava/util/LinkedHashMap;
     .locals 1
 
-    .line 213
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ۘ:Ljava/lang/String;
+    .line 164
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->۫:Ljava/util/LinkedHashMap;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/net/URI;
+.method public final ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
+    .locals 1
+
+    .line 116
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ܳ:Lcom/amazonaws/AmazonWebServiceRequest;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ljava/net/URI;
     .locals 1
 
     .line 205
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->ܰ:Ljava/net/URI;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->᩷:Ljava/net/URI;
 
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/lang/String;Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 156
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->֨:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->۫:Ljava/util/LinkedHashMap;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ᩹()Ljava/util/LinkedHashMap;
+.method public final ᩸()Lcom/amazonaws/http/HttpMethodName;
     .locals 1
 
-    .line 164
-    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->֨:Ljava/util/LinkedHashMap;
+    .line 181
+    iget-object v0, p0, Lcom/amazonaws/DefaultRequest;->᩸:Lcom/amazonaws/http/HttpMethodName;
 
     return-object v0
 .end method

@@ -1,126 +1,72 @@
 .class public final Ll/᩹ۙۘ;
 .super Ljava/lang/Object;
-.source "R9L1"
+.source "7428"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public ۙ:I
-
-.field public ۨ:I
-
-.field public ܰ:[B
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public ܰ:Ll/ۗۙۘ;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final hasNext()Z
+    .locals 1
 
-    const/4 v0, 0x4
+    .line 139
+    iget-object v0, p0, Ll/᩹ۙۘ;->ܰ:Ll/ۗۙۘ;
 
-    new-array v0, v0, [B
+    iget-object v0, v0, Ll/ۗۙۘ;->ᩳ:Ll/ۗۙۘ;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    .line 36
-    iget v2, p0, Ll/᩹ۙۘ;->ۨ:I
+    const/4 v0, 0x1
 
-    invoke-static {v1, v2, v0}, Ll/ܶۢ᩺;->ۙ(II[B)V
+    return v0
 
-    .line 37
-    new-instance v1, Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " dataLen="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Ll/᩹ۙۘ;->ܰ:[B
-
-    array-length v0, v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public final ۙ()V
+.method public final next()Ljava/lang/Object;
     .locals 2
 
-    .line 23
-    new-instance v0, Ljava/util/zip/CRC32;
+    .line 142
+    invoke-virtual {p0}, Ll/᩹ۙۘ;->hasNext()Z
 
-    invoke-direct {v0}, Ljava/util/zip/CRC32;-><init>()V
+    move-result v0
 
-    .line 24
-    iget v1, p0, Ll/᩹ۙۘ;->ۨ:I
+    if-eqz v0, :cond_0
 
-    and-int/lit16 v1, v1, 0xff
+    .line 143
+    iget-object v0, p0, Ll/᩹ۙۘ;->ܰ:Ll/ۗۙۘ;
 
-    invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update(I)V
+    .line 144
+    iget-object v1, v0, Ll/ۗۙۘ;->ᩳ:Ll/ۗۙۘ;
 
-    .line 25
-    iget v1, p0, Ll/᩹ۙۘ;->ۨ:I
+    iput-object v1, p0, Ll/᩹ۙۘ;->ܰ:Ll/ۗۙۘ;
 
-    ushr-int/lit8 v1, v1, 0x8
+    return-object v0
 
-    and-int/lit16 v1, v1, 0xff
+    .line 147
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update(I)V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    .line 26
-    iget v1, p0, Ll/᩹ۙۘ;->ۨ:I
+    throw v0
+.end method
 
-    ushr-int/lit8 v1, v1, 0x10
+.method public final remove()V
+    .locals 1
 
-    and-int/lit16 v1, v1, 0xff
+    .line 150
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update(I)V
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    .line 27
-    iget v1, p0, Ll/᩹ۙۘ;->ۨ:I
-
-    ushr-int/lit8 v1, v1, 0x18
-
-    and-int/lit16 v1, v1, 0xff
-
-    invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update(I)V
-
-    .line 28
-    iget-object v1, p0, Ll/᩹ۙۘ;->ܰ:[B
-
-    invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update([B)V
-
-    .line 29
-    invoke-virtual {v0}, Ljava/util/zip/CRC32;->getValue()J
-
-    move-result-wide v0
-
-    long-to-int v1, v0
-
-    .line 19
-    iput v1, p0, Ll/᩹ۙۘ;->ۙ:I
-
-    return-void
+    throw v0
 .end method

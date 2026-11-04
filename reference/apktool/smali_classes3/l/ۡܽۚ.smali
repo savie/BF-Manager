@@ -1,162 +1,41 @@
 .class public final Ll/ۡܽۚ;
-.super Landroid/view/animation/Animation;
-.source "L9CC"
+.super Ljava/lang/Object;
+.source "G7AI"
 
 
 # instance fields
-.field public final synthetic ֡:F
+.field public final ۙ:Ljava/lang/String;
 
-.field public final synthetic ۫:I
+.field public final ۤ:Z
 
-.field public final synthetic ܺ:Ll/۫ܽۚ;
+.field public final ᩴ:Z
 
-.field public final synthetic ܽ:I
+.field public final ᩷:Ljava/lang/String;
 
-.field public final synthetic ᩶:F
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/۫ܽۚ;IIFF)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 0
 
-    .line 793
-    iput-object p1, p0, Ll/ۡܽۚ;->ܺ:Ll/۫ܽۚ;
+    .line 2563
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Ll/ۡܽۚ;->۫:I
+    .line 2564
+    iput-object p1, p0, Ll/ۡܽۚ;->᩸:Ljava/lang/String;
 
-    iput p3, p0, Ll/ۡܽۚ;->ܽ:I
+    .line 2565
+    iput-boolean p4, p0, Ll/ۡܽۚ;->ᩴ:Z
 
-    iput p4, p0, Ll/ۡܽۚ;->᩶:F
+    .line 2566
+    iput-boolean p5, p0, Ll/ۡܽۚ;->ۤ:Z
 
-    iput p5, p0, Ll/ۡܽۚ;->֡:F
+    .line 2567
+    iput-object p2, p0, Ll/ۡܽۚ;->ۙ:Ljava/lang/String;
 
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
-    .locals 4
-
-    .line 796
-    iget p2, p0, Ll/ۡܽۚ;->۫:I
-
-    iget v0, p0, Ll/ۡܽۚ;->ܽ:I
-
-    sub-int v1, p2, v0
-
-    int-to-float v1, v1
-
-    mul-float p1, p1, v1
-
-    float-to-int p1, p1
-
-    .line 797
-    iget-object v1, p0, Ll/ۡܽۚ;->ܺ:Ll/۫ܽۚ;
-
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object v2
-
-    add-int/2addr p1, v0
-
-    invoke-static {v2, p1}, Ll/۫ܽۚ;->ܰ(Landroid/view/ViewGroup;I)V
-
-    .line 798
-    invoke-static {v1}, Ll/۫ܽۚ;->ᩳ(Ll/۫ܽۚ;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 799
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object p1
-
-    iget p2, p0, Ll/ۡܽۚ;->᩶:F
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
-
-    .line 802
-    invoke-static {v1}, Ll/۫ܽۚ;->ۨ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
-
-    .line 803
-    invoke-static {v1}, Ll/۫ܽۚ;->ۜ(Ll/۫ܽۚ;)Ll/֡ܽۚ;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
-
-    return-void
-
-    .line 805
-    :cond_0
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object p1
-
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    iget v3, p0, Ll/ۡܽۚ;->֡:F
-
-    sub-float/2addr v3, v2
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setX(F)V
-
-    .line 809
-    invoke-static {v1}, Ll/۫ܽۚ;->ۨ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object p1
-
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    sub-int/2addr v2, p2
-
-    int-to-float p2, v2
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
-
-    .line 810
-    invoke-static {v1}, Ll/۫ܽۚ;->ۜ(Ll/۫ܽۚ;)Ll/֡ܽۚ;
-
-    move-result-object p1
-
-    invoke-static {v1}, Ll/۫ܽۚ;->ۙ(Ll/۫ܽۚ;)Landroid/view/ViewGroup;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    sub-int/2addr p2, v0
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
+    .line 2568
+    iput-object p3, p0, Ll/ۡܽۚ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

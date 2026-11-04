@@ -198,7 +198,7 @@
     throw p0
 
     :cond_1
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object p0
     :try_end_0

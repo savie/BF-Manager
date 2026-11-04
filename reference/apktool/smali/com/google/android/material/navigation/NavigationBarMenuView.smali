@@ -3,7 +3,7 @@
 .source "NavigationBarMenuView.java"
 
 # interfaces
-.implements Ll/۬ۘ;
+.implements Ll/ۧ֫;
 
 
 # static fields
@@ -49,7 +49,7 @@
 
 .field public itemPaddingTop:I
 
-.field public final itemPool:Ll/᩻ۧ;
+.field public final itemPool:Ll/۠֨;
 
 .field public itemRippleColor:Landroid/content/res/ColorStateList;
 
@@ -65,7 +65,7 @@
 
 .field public labelVisibilityMode:I
 
-.field public menu:Ll/۫۬;
+.field public menu:Ll/ۢۚ;
 
 .field public final onClickListener:Landroid/view/View$OnClickListener;
 
@@ -77,7 +77,7 @@
 
 .field public selectedItemPosition:I
 
-.field public final set:Ll/᩸ܳܰ;
+.field public final set:Ll/ۙۖ᩷;
 
 
 # direct methods
@@ -112,13 +112,13 @@
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
     .line 74
-    new-instance p1, Ll/֫ۧ;
+    new-instance p1, Ll/۬֨;
 
     const/4 v0, 0x5
 
-    invoke-direct {p1, v0}, Ll/֫ۧ;-><init>(I)V
+    invoke-direct {p1, v0}, Ll/۬֨;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/᩻ۧ;
+    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/۠֨;
 
     .line 77
     new-instance p1, Landroid/util/SparseArray;
@@ -175,34 +175,34 @@
     const/4 p1, 0x0
 
     .line 118
-    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/᩸ܳܰ;
+    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/ۙۖ᩷;
 
     goto :goto_0
 
     .line 120
     :cond_0
-    new-instance v0, Ll/ܳۧܰ;
+    new-instance v0, Ll/ۛ֨᩷;
 
-    invoke-direct {v0}, Ll/ܳۧܰ;-><init>()V
+    invoke-direct {v0}, Ll/ۛ֨᩷;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/᩸ܳܰ;
+    iput-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/ۙۖ᩷;
 
     .line 121
-    invoke-virtual {v0, p1}, Ll/᩸ܳܰ;->ۨ(I)V
+    invoke-virtual {v0, p1}, Ll/ۙۖ᩷;->ۤ(I)V
 
     .line 124
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v1, Ll/ۖ۟ܶ;->ۤܺ:I
+    sget v1, Ll/ۧ۬ܺ;->ۛܰ:I
 
     .line 126
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Ll/ۜ۟ܶ;->ۚۙ:I
+    sget v3, Ll/ۗ۬ܺ;->ᩴۙ:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -216,14 +216,14 @@
     int-to-long v1, p1
 
     .line 122
-    invoke-virtual {v0, v1, v2}, Ll/᩸ܳܰ;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Ll/ۙۖ᩷;->setDuration(J)V
 
     .line 129
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v1, Ll/ۖ۟ܶ;->֫ܺ:I
+    sget v1, Ll/ۧ۬ܺ;->۠ܰ:I
 
     sget-object v2, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -233,14 +233,14 @@
     move-result-object p1
 
     .line 127
-    invoke-virtual {v0, p1}, Ll/᩸ܳܰ;->setInterpolator(Landroid/animation/TimeInterpolator;)Ll/᩸ܳܰ;
+    invoke-virtual {v0, p1}, Ll/ۙۖ᩷;->setInterpolator(Landroid/animation/TimeInterpolator;)Ll/ۙۖ᩷;
 
     .line 132
     new-instance p1, Lcom/google/android/material/internal/TextScale;
 
     invoke-direct {p1}, Lcom/google/android/material/internal/TextScale;-><init>()V
 
-    invoke-virtual {v0, p1}, Ll/᩸ܳܰ;->ܰ(Ll/ۨܳܰ;)V
+    invoke-virtual {v0, p1}, Ll/ۙۖ᩷;->᩷(Ll/֡ۡ᩷;)V
 
     .line 135
     :goto_0
@@ -251,7 +251,7 @@
     iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->onClickListener:Landroid/view/View$OnClickListener;
 
     .line 147
-    sget p1, Ll/ۚ֫;->ۙ:I
+    sget p1, Ll/᩸۠;->ۙ:I
 
     const/4 p1, 0x1
 
@@ -270,11 +270,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/navigation/NavigationBarMenuView;)Ll/۫۬;
+.method public static synthetic access$100(Lcom/google/android/material/navigation/NavigationBarMenuView;)Ll/ۢۚ;
     .locals 0
 
     .line 65
-    iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
     return-object p0
 .end method
@@ -315,9 +315,9 @@
     .locals 1
 
     .line 827
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/᩻ۧ;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/۠֨;
 
-    invoke-interface {v0}, Ll/᩻ۧ;->ۙ()Ljava/lang/Object;
+    invoke-interface {v0}, Ll/۠֨;->ۙ()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -369,18 +369,18 @@
 
     .line 932
     :goto_0
-    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v3}, Ll/۫۬;->size()I
+    invoke-virtual {v3}, Ll/ۢۚ;->size()I
 
     move-result v3
 
     if-ge v2, v3, :cond_0
 
     .line 933
-    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v3, v2}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v3, v2}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
@@ -541,9 +541,9 @@
     if-eqz v4, :cond_0
 
     .line 721
-    iget-object v5, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/᩻ۧ;
+    iget-object v5, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->itemPool:Ll/۠֨;
 
-    invoke-interface {v5, v4}, Ll/᩻ۧ;->ۙ(Ljava/lang/Object;)Z
+    invoke-interface {v5, v4}, Ll/۠֨;->ۙ(Ljava/lang/Object;)Z
 
     .line 722
     invoke-virtual {v4}, Lcom/google/android/material/navigation/NavigationBarItemView;->clear()V
@@ -555,9 +555,9 @@
 
     .line 727
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v0}, Ll/۫۬;->size()I
+    invoke-virtual {v0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -581,9 +581,9 @@
     invoke-direct {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->removeUnusedBadges()V
 
     .line 735
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v0}, Ll/۫۬;->size()I
+    invoke-virtual {v0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -594,9 +594,9 @@
     .line 736
     iget v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->labelVisibilityMode:I
 
-    iget-object v2, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v2, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v2}, Ll/۫۬;->getVisibleItems()Ljava/util/ArrayList;
+    invoke-virtual {v2}, Ll/ۢۚ;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -612,9 +612,9 @@
 
     .line 737
     :goto_1
-    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v3}, Ll/۫۬;->size()I
+    invoke-virtual {v3}, Ll/ۢۚ;->size()I
 
     move-result v3
 
@@ -628,9 +628,9 @@
     invoke-virtual {v3, v4}, Lcom/google/android/material/navigation/NavigationBarPresenter;->setUpdateSuspended(Z)V
 
     .line 739
-    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v3, v2}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v3, v2}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
@@ -778,22 +778,22 @@
     invoke-virtual {v3, v4}, Lcom/google/android/material/navigation/NavigationBarItemView;->setLabelVisibilityMode(I)V
 
     .line 774
-    iget-object v4, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v4, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v4, v2}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v4, v2}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v4
 
-    check-cast v4, Ll/᩻۬;
+    check-cast v4, Ll/۠ۚ;
 
     .line 775
-    invoke-virtual {v3, v4, v1}, Lcom/google/android/material/navigation/NavigationBarItemView;->initialize(Ll/᩻۬;I)V
+    invoke-virtual {v3, v4, v1}, Lcom/google/android/material/navigation/NavigationBarItemView;->initialize(Ll/۠ۚ;I)V
 
     .line 776
     invoke-virtual {v3, v2}, Lcom/google/android/material/navigation/NavigationBarItemView;->setItemPosition(I)V
 
     .line 777
-    invoke-virtual {v4}, Ll/᩻۬;->getItemId()I
+    invoke-virtual {v4}, Ll/۠ۚ;->getItemId()I
 
     move-result v4
 
@@ -836,9 +836,9 @@
 
     .line 786
     :cond_8
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v0}, Ll/۫۬;->size()I
+    invoke-virtual {v0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -853,9 +853,9 @@
     iput v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->selectedItemPosition:I
 
     .line 787
-    iget-object v1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v1, v0}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v1, v0}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
@@ -902,7 +902,7 @@
     iget v3, v0, Landroid/util/TypedValue;->resourceId:I
 
     .line 46
-    invoke-static {p1, v3}, Ll/ۤܽ;->ܰ(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v3}, Ll/۟֡;->᩷(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1226,11 +1226,11 @@
     return v0
 .end method
 
-.method public getMenu()Ll/۫۬;
+.method public getMenu()Ll/ۢۚ;
     .locals 1
 
     .line 967
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
     return-object v0
 .end method
@@ -1307,11 +1307,11 @@
     return v0
 .end method
 
-.method public initialize(Ll/۫۬;)V
+.method public initialize(Ll/ۢۚ;)V
     .locals 0
 
     .line 152
-    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
     return-void
 .end method
@@ -1361,15 +1361,15 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 163
-    invoke-static {p1}, Ll/᩹ۗ;->ۙ(Landroid/view/accessibility/AccessibilityNodeInfo;)Ll/᩹ۗ;
+    invoke-static {p1}, Ll/ᩴ۬;->ۙ(Landroid/view/accessibility/AccessibilityNodeInfo;)Ll/ᩴ۬;
 
     move-result-object p1
 
     .line 164
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
     .line 167
-    invoke-virtual {v0}, Ll/۫۬;->getVisibleItems()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ll/ۢۚ;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1382,12 +1382,12 @@
     const/4 v2, 0x1
 
     .line 165
-    invoke-static {v2, v0, v2, v1}, Ll/ۨۗ;->ۙ(IIIZ)Ll/ۨۗ;
+    invoke-static {v2, v0, v2, v1}, Ll/᩷۬;->ۙ(IIIZ)Ll/᩷۬;
 
     move-result-object v0
 
     .line 164
-    invoke-virtual {p1, v0}, Ll/᩹ۗ;->ۙ(Ll/ۨۗ;)V
+    invoke-virtual {p1, v0}, Ll/ᩴ۬;->ۙ(Ll/᩷۬;)V
 
     return-void
 .end method
@@ -1932,11 +1932,11 @@
     aget-object v3, v0, v2
 
     .line 683
-    invoke-virtual {v3}, Lcom/google/android/material/navigation/NavigationBarItemView;->getItemData()Ll/᩻۬;
+    invoke-virtual {v3}, Lcom/google/android/material/navigation/NavigationBarItemView;->getItemData()Ll/۠ۚ;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ll/᩻۬;->getItemId()I
+    invoke-virtual {v4}, Ll/۠ۚ;->getItemId()I
 
     move-result v4
 
@@ -2218,9 +2218,9 @@
     .locals 4
 
     .line 846
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v0}, Ll/۫۬;->size()I
+    invoke-virtual {v0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -2230,9 +2230,9 @@
     if-ge v1, v0, :cond_1
 
     .line 848
-    iget-object v2, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v2, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v2, v1}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v2, v1}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v2
 
@@ -2269,7 +2269,7 @@
     .locals 6
 
     .line 791
-    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
     if-eqz v0, :cond_5
 
@@ -2281,7 +2281,7 @@
 
     .line 795
     :cond_0
-    invoke-virtual {v0}, Ll/۫۬;->size()I
+    invoke-virtual {v0}, Ll/ۢۚ;->size()I
 
     move-result v0
 
@@ -2309,9 +2309,9 @@
     if-ge v3, v0, :cond_3
 
     .line 805
-    iget-object v4, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v4, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v4, v3}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v4, v3}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v4
 
@@ -2343,20 +2343,20 @@
 
     if-eq v1, v3, :cond_4
 
-    iget-object v1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/᩸ܳܰ;
+    iget-object v1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->set:Ll/ۙۖ᩷;
 
     if-eqz v1, :cond_4
 
     .line 813
-    invoke-static {p0, v1}, Ll/֨ܳܰ;->ۙ(Landroid/view/ViewGroup;Ll/ۨܳܰ;)V
+    invoke-static {p0, v1}, Ll/֨ۡ᩷;->ۙ(Landroid/view/ViewGroup;Ll/֡ۡ᩷;)V
 
     .line 816
     :cond_4
     iget v1, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->labelVisibilityMode:I
 
-    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v3, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v3}, Ll/۫۬;->getVisibleItems()Ljava/util/ArrayList;
+    invoke-virtual {v3}, Ll/ۢۚ;->getVisibleItems()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -2401,15 +2401,15 @@
 
     aget-object v4, v4, v3
 
-    iget-object v5, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/۫۬;
+    iget-object v5, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->menu:Ll/ۢۚ;
 
-    invoke-virtual {v5, v3}, Ll/۫۬;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v5, v3}, Ll/ۢۚ;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v5
 
-    check-cast v5, Ll/᩻۬;
+    check-cast v5, Ll/۠ۚ;
 
-    invoke-virtual {v4, v5, v2}, Lcom/google/android/material/navigation/NavigationBarItemView;->initialize(Ll/᩻۬;I)V
+    invoke-virtual {v4, v5, v2}, Lcom/google/android/material/navigation/NavigationBarItemView;->initialize(Ll/۠ۚ;I)V
 
     .line 822
     iget-object v4, p0, Lcom/google/android/material/navigation/NavigationBarMenuView;->presenter:Lcom/google/android/material/navigation/NavigationBarPresenter;

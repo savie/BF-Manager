@@ -4,13 +4,13 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import l.C14917;
-import l.C17214;
-import l.C21266;
-import l.C22678;
-import l.C9421;
-import l.EnumC2215;
-import l.InterfaceC19856;
+import l.C10410;
+import l.C1462;
+import l.C3102;
+import l.C3769;
+import l.C9664;
+import l.EnumC14885;
+import l.InterfaceC20019;
 import net.sf.sevenzipjbinding.ArchiveFormat;
 import net.sf.sevenzipjbinding.ExtractOperationResult;
 import net.sf.sevenzipjbinding.IArchiveExtractCallback;
@@ -27,7 +27,7 @@ import net.sf.sevenzipjbinding.PropertyInfo;
 import net.sf.sevenzipjbinding.SevenZip;
 import net.sf.sevenzipjbinding.SevenZipException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InArchiveImpl implements IInArchive {
     public static final long USE_DEFAULT_MEMORY_USAGE = -1;
     public ArchiveFormat archiveFormat;
@@ -75,21 +75,21 @@ public final class InArchiveImpl implements IInArchive {
     @Override // net.sf.sevenzipjbinding.IInArchive
     public ExtractOperationResult extractSlow(int i, ISequentialOutStream iSequentialOutStream) throws SevenZipException {
         ensureOpened();
-        C14917 c14917 = new C14917(iSequentialOutStream);
-        extractWithMemoryUsage(new int[]{i}, false, c14917);
-        return c14917.m35659();
+        C1462 c1462 = new C1462(iSequentialOutStream);
+        extractWithMemoryUsage(new int[]{i}, false, c1462);
+        return c1462.m5235();
     }
 
     @Override // net.sf.sevenzipjbinding.IInArchive
     public ExtractOperationResult extractSlow(int i, ISequentialOutStream iSequentialOutStream, String str) throws SevenZipException {
         ensureOpened();
-        C21266 c21266 = new C21266(iSequentialOutStream, str);
-        extractWithMemoryUsage(new int[]{i}, false, c21266);
-        return c21266.m35659();
+        C9664 c9664 = new C9664(iSequentialOutStream, str);
+        extractWithMemoryUsage(new int[]{i}, false, c9664);
+        return c9664.m5235();
     }
 
     private void extractWithMemoryUsage(int[] iArr, boolean z, IArchiveExtractCallback iArchiveExtractCallback) {
-        nativeExtract(iArr, z, iArchiveExtractCallback, this.archiveFormat == ArchiveFormat.SEVEN_ZIP ? SevenZip.m52890() : -1L);
+        nativeExtract(iArr, z, iArchiveExtractCallback, this.archiveFormat == ArchiveFormat.SEVEN_ZIP ? SevenZip.m56786() : -1L);
     }
 
     @Override // net.sf.sevenzipjbinding.IInArchive
@@ -160,18 +160,18 @@ public final class InArchiveImpl implements IInArchive {
         ArchiveFormat archiveFormat;
         ensureOpened();
         if (i < 0 || i >= getNumberOfItems()) {
-            StringBuilder sbM40153 = C17214.m40153(i, "Index out of range. Index: ", ", NumberOfItems: ");
-            sbM40153.append(getNumberOfItems());
-            throw new SevenZipException(sbM40153.toString());
+            StringBuilder sbM12235 = C3769.m12235(i, "Index out of range. Index: ", ", NumberOfItems: ");
+            sbM12235.append(getNumberOfItems());
+            throw new SevenZipException(sbM12235.toString());
         }
         Object objNativeGetProperty = nativeGetProperty(i, propID.getPropIDIndex());
-        int i2 = C22678.f73837[propID.ordinal()];
+        int i2 = C10410.f33098[propID.ordinal()];
         if (i2 != 1 && i2 != 2) {
             if (i2 == 3) {
                 return objNativeGetProperty == null ? Boolean.FALSE : objNativeGetProperty;
             }
             if (i2 != 4) {
-                return (i2 == 5 && objNativeGetProperty != null) ? EnumC2215.values()[((Integer) objNativeGetProperty).intValue()] : objNativeGetProperty;
+                return (i2 == 5 && objNativeGetProperty != null) ? EnumC14885.values()[((Integer) objNativeGetProperty).intValue()] : objNativeGetProperty;
             }
             return objNativeGetProperty == null ? Boolean.FALSE : objNativeGetProperty;
         }
@@ -190,14 +190,14 @@ public final class InArchiveImpl implements IInArchive {
         if (i >= 0 && i < getNumberOfItems()) {
             return nativeGetStringProperty(i, propID.getPropIDIndex());
         }
-        StringBuilder sbM40153 = C17214.m40153(i, "Index out of range. Index: ", ", NumberOfItems: ");
-        sbM40153.append(getNumberOfItems());
-        throw new SevenZipException(sbM40153.toString());
+        StringBuilder sbM12235 = C3769.m12235(i, "Index out of range. Index: ", ", NumberOfItems: ");
+        sbM12235.append(getNumberOfItems());
+        throw new SevenZipException(sbM12235.toString());
     }
 
     @Override // net.sf.sevenzipjbinding.IInArchive
-    public InterfaceC19856 getSimpleInterface() {
-        return new C9421();
+    public InterfaceC20019 getSimpleInterface() {
+        return new C3102();
     }
 
     @Override // net.sf.sevenzipjbinding.IInArchive

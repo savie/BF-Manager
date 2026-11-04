@@ -1,193 +1,235 @@
 package l;
 
-import android.os.Build;
-import android.view.ActionMode;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.View;
-import android.view.Window;
-import java.util.List;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۜ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 422Y */
+/* JADX INFO: renamed from: l.ۜۡ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: S24 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7043 extends WindowCallbackC22295 {
+public class C7043 extends AbstractC12769 implements Cloneable {
+    public static final long serialVersionUID = 1;
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f23662;
+    public int f23232;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f23663;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public transient Object[] f23233;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public boolean f23664;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public transient InterfaceC22510 f23234;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ LayoutInflaterFactory2C9161 f23665;
+    public transient InterfaceC7767 f23235;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public transient InterfaceC21938 f23236;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public InterfaceC4926 f23666;
+    public transient Object[] f23237;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C7043(LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161, Window.Callback callback) {
-        super(callback);
-        this.f23665 = layoutInflaterFactory2C9161;
+    public C7043() {
+        Object[] objArr = C8338.f27328;
+        this.f23237 = objArr;
+        this.f23233 = objArr;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18895(InterfaceC4926 interfaceC4926) {
-        this.f23666 = interfaceC4926;
-    }
-
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final boolean dispatchKeyEvent(KeyEvent keyEvent) {
-        if (this.f23662) {
-            return m49461().dispatchKeyEvent(keyEvent);
+    @Override // l.InterfaceC19526
+    /* JADX INFO: renamed from: ۧ᩷ */
+    public final InterfaceC7767 mo12503() {
+        if (this.f23234 == null) {
+            this.f23234 = new C0331(this);
         }
-        return this.f23665.m23555(keyEvent) || super.dispatchKeyEvent(keyEvent);
+        return this.f23234;
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final boolean dispatchKeyShortcutEvent(KeyEvent keyEvent) {
-        return super.dispatchKeyShortcutEvent(keyEvent) || this.f23665.m23554(keyEvent.getKeyCode(), keyEvent);
-    }
-
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final boolean onCreatePanelMenu(int i, Menu menu) {
-        if (i != 0 || (menu instanceof C12418)) {
-            return super.onCreatePanelMenu(i, menu);
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int m19368(Object obj) {
+        Object[] objArr = this.f23237;
+        int i = this.f23232;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return -1;
+            }
+            if (C17359.equals(objArr[i2], obj)) {
+                return i2;
+            }
+            i = i2;
         }
-        return false;
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final View onCreatePanelView(int i) {
-        InterfaceC4926 interfaceC4926 = this.f23666;
-        if (interfaceC4926 != null) {
-            View view = i == 0 ? new View(((C23977) interfaceC4926).f77733.f48402.getContext()) : null;
-            if (view != null) {
-                return view;
+    @Override // l.InterfaceC21433, java.util.Map
+    public final Object get(Object obj) {
+        Object[] objArr = this.f23237;
+        int i = this.f23232;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return null;
+            }
+            if (C17359.equals(objArr[i2], obj)) {
+                return this.f23233[i2];
+            }
+            i = i2;
+        }
+    }
+
+    @Override // l.AbstractC15006, l.InterfaceC21433, java.util.Map
+    public final int size() {
+        return this.f23232;
+    }
+
+    @Override // java.util.Map
+    public final void clear() {
+        Object[] objArr = this.f23237;
+        Object[] objArr2 = this.f23233;
+        int i = this.f23232;
+        while (true) {
+            int i2 = i - 1;
+            if (i != 0) {
+                objArr[i2] = null;
+                objArr2[i2] = null;
+                i = i2;
+            } else {
+                this.f23232 = 0;
+                return;
             }
         }
-        return super.onCreatePanelView(i);
     }
 
-    @Override // android.view.Window.Callback
-    public final void onContentChanged() {
-        if (this.f23664) {
-            m49461().onContentChanged();
-        }
+    @Override // l.InterfaceC21433, java.util.Map
+    public final boolean containsKey(Object obj) {
+        return m19368(obj) != -1;
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final boolean onPreparePanel(int i, View view, Menu menu) {
-        C12418 c12418 = menu instanceof C12418 ? (C12418) menu : null;
-        if (i == 0 && c12418 == null) {
-            return false;
-        }
-        if (c12418 != null) {
-            c12418.setOverrideVisibleItems(true);
-        }
-        InterfaceC4926 interfaceC4926 = this.f23666;
-        if (interfaceC4926 != null) {
-            C14805 c14805 = ((C23977) interfaceC4926).f77733;
-            if (i == 0 && !c14805.f48400) {
-                c14805.f48402.mo44629();
-                c14805.f48400 = true;
+    @Override // java.util.Map
+    public final boolean containsValue(Object obj) {
+        Object[] objArr = this.f23233;
+        int i = this.f23232;
+        while (true) {
+            int i2 = i - 1;
+            if (i == 0) {
+                return false;
             }
-        }
-        boolean zOnPreparePanel = super.onPreparePanel(i, view, menu);
-        if (c12418 != null) {
-            c12418.setOverrideVisibleItems(false);
-        }
-        return zOnPreparePanel;
-    }
-
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final boolean onMenuOpened(int i, Menu menu) {
-        super.onMenuOpened(i, menu);
-        this.f23665.m23539(i);
-        return true;
-    }
-
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final void onPanelClosed(int i, Menu menu) {
-        if (this.f23663) {
-            m49461().onPanelClosed(i, menu);
-        } else {
-            super.onPanelClosed(i, menu);
-            this.f23665.m23559(i);
+            if (C17359.equals(objArr[i2], obj)) {
+                return true;
+            }
+            i = i2;
         }
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final ActionMode onWindowStartingActionMode(ActionMode.Callback callback) {
-        if (Build.VERSION.SDK_INT >= 23) {
-            return null;
+    @Override // java.util.Map
+    public final boolean isEmpty() {
+        return this.f23232 == 0;
+    }
+
+    @Override // l.InterfaceC19526, java.util.Map
+    public final Object put(Object obj, Object obj2) {
+        int iM19368 = m19368(obj);
+        if (iM19368 != -1) {
+            Object[] objArr = this.f23233;
+            Object obj3 = objArr[iM19368];
+            objArr[iM19368] = obj2;
+            return obj3;
         }
-        LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161 = this.f23665;
-        if (!layoutInflaterFactory2C9161.m23570()) {
-            return super.onWindowStartingActionMode(callback);
+        int i = this.f23232;
+        if (i == this.f23237.length) {
+            Object[] objArr2 = new Object[i == 0 ? 2 : i * 2];
+            Object[] objArr3 = new Object[i != 0 ? i * 2 : 2];
+            while (true) {
+                int i2 = i - 1;
+                if (i == 0) {
+                    break;
+                }
+                objArr2[i2] = this.f23237[i2];
+                objArr3[i2] = this.f23233[i2];
+                i = i2;
+            }
+            this.f23237 = objArr2;
+            this.f23233 = objArr3;
         }
-        C23356 c23356 = new C23356(layoutInflaterFactory2C9161.f31195, callback);
-        AbstractC12067 abstractC12067M23544 = layoutInflaterFactory2C9161.m23544(c23356);
-        if (abstractC12067M23544 != null) {
-            return c23356.m51471(abstractC12067M23544);
-        }
+        Object[] objArr4 = this.f23237;
+        int i3 = this.f23232;
+        objArr4[i3] = obj;
+        this.f23233[i3] = obj2;
+        this.f23232 = i3 + 1;
         return null;
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final ActionMode onWindowStartingActionMode(ActionMode.Callback callback, int i) {
-        LayoutInflaterFactory2C9161 layoutInflaterFactory2C9161 = this.f23665;
-        if (layoutInflaterFactory2C9161.m23570() && i == 0) {
-            C23356 c23356 = new C23356(layoutInflaterFactory2C9161.f31195, callback);
-            AbstractC12067 abstractC12067M23544 = layoutInflaterFactory2C9161.m23544(c23356);
-            if (abstractC12067M23544 != null) {
-                return c23356.m51471(abstractC12067M23544);
-            }
+    @Override // l.InterfaceC19526, java.util.Map
+    public final Object remove(Object obj) {
+        int iM19368 = m19368(obj);
+        if (iM19368 == -1) {
             return null;
         }
-        return super.onWindowStartingActionMode(callback, i);
+        Object obj2 = this.f23233[iM19368];
+        int i = (this.f23232 - iM19368) - 1;
+        Object[] objArr = this.f23237;
+        int i2 = iM19368 + 1;
+        System.arraycopy(objArr, i2, objArr, iM19368, i);
+        Object[] objArr2 = this.f23233;
+        System.arraycopy(objArr2, i2, objArr2, iM19368, i);
+        int i3 = this.f23232 - 1;
+        this.f23232 = i3;
+        this.f23237[i3] = null;
+        this.f23233[i3] = null;
+        return obj2;
     }
 
-    @Override // l.WindowCallbackC22295, android.view.Window.Callback
-    public final void onProvideKeyboardShortcuts(List list, Menu menu, int i) {
-        C12418 c12418 = this.f23665.m23563(0).f29345;
-        if (c12418 != null) {
-            super.onProvideKeyboardShortcuts(list, c12418, i);
-        } else {
-            super.onProvideKeyboardShortcuts(list, menu, i);
+    @Override // java.util.Map
+    public final Set keySet() {
+        if (this.f23235 == null) {
+            this.f23235 = new C10025(this);
+        }
+        return this.f23235;
+    }
+
+    @Override // java.util.Map
+    public final InterfaceC21938 values() {
+        if (this.f23236 == null) {
+            this.f23236 = new C8534(this);
+        }
+        return this.f23236;
+    }
+
+    public final Object clone() {
+        try {
+            C7043 c7043 = (C7043) super.clone();
+            c7043.f23237 = (Object[]) this.f23237.clone();
+            c7043.f23233 = (Object[]) this.f23233.clone();
+            c7043.f23234 = null;
+            c7043.f23235 = null;
+            c7043.f23236 = null;
+            return c7043;
+        } catch (CloneNotSupportedException unused) {
+            throw new InternalError();
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18893(Window.Callback callback) {
-        try {
-            this.f23664 = true;
-            callback.onContentChanged();
-        } finally {
-            this.f23664 = false;
+    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
+        objectOutputStream.defaultWriteObject();
+        Object[] objArr = this.f23237;
+        Object[] objArr2 = this.f23233;
+        int i = this.f23232;
+        for (int i2 = 0; i2 < i; i2++) {
+            objectOutputStream.writeObject(objArr[i2]);
+            objectOutputStream.writeObject(objArr2[i2]);
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m18896(Window.Callback callback, KeyEvent keyEvent) {
-        try {
-            this.f23662 = true;
-            return callback.dispatchKeyEvent(keyEvent);
-        } finally {
-            this.f23662 = false;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m18894(Window.Callback callback, int i, Menu menu) {
-        try {
-            this.f23663 = true;
-            callback.onPanelClosed(i, menu);
-        } finally {
-            this.f23663 = false;
+    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
+        objectInputStream.defaultReadObject();
+        int i = this.f23232;
+        Object[] objArr = new Object[i];
+        this.f23237 = objArr;
+        Object[] objArr2 = new Object[i];
+        this.f23233 = objArr2;
+        for (int i2 = 0; i2 < this.f23232; i2++) {
+            objArr[i2] = objectInputStream.readObject();
+            objArr2[i2] = objectInputStream.readObject();
         }
     }
 }

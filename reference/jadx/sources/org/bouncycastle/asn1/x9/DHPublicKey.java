@@ -1,13 +1,13 @@
 package org.bouncycastle.asn1.x9;
 
 import java.math.BigInteger;
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHPublicKey extends ASN1Object {
     public ASN1Integer y;
 
@@ -32,7 +32,7 @@ public class DHPublicKey extends ASN1Object {
         if (obj instanceof ASN1Integer) {
             return new DHPublicKey((ASN1Integer) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "Invalid DHPublicKey: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "Invalid DHPublicKey: "));
     }
 
     public static DHPublicKey getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

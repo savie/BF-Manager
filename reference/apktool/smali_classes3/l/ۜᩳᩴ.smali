@@ -1,214 +1,190 @@
 .class public final Ll/ۜᩳᩴ;
 .super Ljava/lang/Object;
-.source "2GI"
-
-# interfaces
-.implements Ll/ᩳᩳᩴ;
-.implements Ljava/io/Serializable;
-.implements Ljava/lang/Cloneable;
-.implements Ll/ۛܿᩴ;
+.source "G14L"
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x61c8864680b583e9L
+# instance fields
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ᩷:Ll/᩷ۢᩴ;
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method private readResolve()Ljava/lang/Object;
-    .locals 1
+.method public constructor <init>(Ll/᩷ۢᩴ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 105
-    sget-object v0, Ll/᩺ᩳᩴ;->ۙ:Ll/ۜᩳᩴ;
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    .line 10
+    iput-object p1, p0, Ll/ۜᩳᩴ;->᩷:Ll/᩷ۢᩴ;
+
+    .line 11
+    iput-object p2, p0, Ll/ۜᩳᩴ;->᩸:Ljava/lang/String;
+
+    .line 12
+    iput-object p3, p0, Ll/ۜᩳᩴ;->ۤ:Ljava/lang/String;
+
+    .line 13
+    iput-object p4, p0, Ll/ۜᩳᩴ;->ۙ:Ljava/lang/String;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final add(J)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    .line 56
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final add(Ljava/lang/Object;)V
-    .locals 2
-
-    .line 31
-    check-cast p1, Ljava/lang/Long;
-
-    .line 92
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, v0, v1}, Ll/ۜᩳᩴ;->add(J)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final clone()Ljava/lang/Object;
-    .locals 1
-
-    .line 101
-    sget-object v0, Ll/᩺ᩳᩴ;->ۙ:Ll/ۜᩳᩴ;
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 44
-    check-cast p1, Ljava/util/function/LongConsumer;
-
-    return-void
-.end method
-
-.method public final forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    return-void
-.end method
-
-.method public final forEachRemaining(Ljava/util/function/LongConsumer;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
     return v0
-.end method
 
-.method public final hasPrevious()Z
-    .locals 1
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    if-eqz p1, :cond_7
+
+    .line 19
+    const-class v2, Ll/ۜᩳᩴ;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_2
+
+    .line 21
+    :cond_1
+    check-cast p1, Ll/ۜᩳᩴ;
+
+    iget-object v2, p1, Ll/ۜᩳᩴ;->ۙ:Ljava/lang/String;
+
+    iget-object v3, p1, Ll/ۜᩳᩴ;->ۤ:Ljava/lang/String;
+
+    iget-object p1, p1, Ll/ۜᩳᩴ;->᩸:Ljava/lang/String;
+
+    .line 23
+    iget-object v4, p0, Ll/ۜᩳᩴ;->᩸:Ljava/lang/String;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    :goto_0
+    return v1
+
+    .line 25
+    :cond_3
+    iget-object p1, p0, Ll/ۜᩳᩴ;->ۤ:Ljava/lang/String;
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_1
+
+    :cond_4
+    if-eqz v3, :cond_5
+
+    :goto_1
+    return v1
+
+    .line 27
+    :cond_5
+    iget-object p1, p0, Ll/ۜᩳᩴ;->ۙ:Ljava/lang/String;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_6
+    if-nez v2, :cond_7
 
     return v0
+
+    :cond_7
+    :goto_2
+    return v1
 .end method
 
-.method public final next()Ljava/lang/Long;
-    .locals 1
-
-    .line 46
-    invoke-interface {p0}, Ll/۬ۛᩴ;->nextLong()J
+.method public final hashCode()I
+    .locals 3
 
     const/4 v0, 0x0
 
-    throw v0
-.end method
+    .line 32
+    iget-object v1, p0, Ll/ۜᩳᩴ;->᩸:Ljava/lang/String;
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    if-eqz v1, :cond_0
 
-    .line 46
-    invoke-virtual {p0}, Ll/ۜᩳᩴ;->nextLong()J
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    throw v0
-.end method
+    goto :goto_0
 
-.method public final nextIndex()I
-    .locals 1
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    return v0
-.end method
+    .line 33
+    iget-object v2, p0, Ll/ۜᩳᩴ;->ۤ:Ljava/lang/String;
 
-.method public final nextLong()J
-    .locals 1
+    if-eqz v2, :cond_1
 
-    .line 62
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result v2
 
-    throw v0
-.end method
+    goto :goto_1
 
-.method public final previous()Ljava/lang/Object;
-    .locals 1
+    :cond_1
+    const/4 v2, 0x0
 
-    .line 44
-    invoke-virtual {p0}, Ll/ۜᩳᩴ;->ۚۙ()J
+    :goto_1
+    add-int/2addr v1, v2
 
-    const/4 v0, 0x0
+    mul-int/lit8 v1, v1, 0x1f
 
-    throw v0
-.end method
+    .line 34
+    iget-object v2, p0, Ll/ۜᩳᩴ;->ۙ:Ljava/lang/String;
 
-.method public final previousIndex()I
-    .locals 1
+    if-eqz v2, :cond_2
 
-    const/4 v0, -0x1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    return v0
-.end method
+    move-result v0
 
-.method public final remove()V
-    .locals 1
+    :cond_2
+    add-int/2addr v1, v0
 
-    .line 70
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 2
-
-    .line 31
-    check-cast p1, Ljava/lang/Long;
-
-    .line 81
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, v0, v1}, Ll/ۜᩳᩴ;->ۖ(J)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final ۖ(J)V
-    .locals 0
-
-    .line 43
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final ۚۙ()J
-    .locals 1
-
-    .line 67
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return v1
 .end method

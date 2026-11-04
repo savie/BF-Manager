@@ -1,34 +1,36 @@
-.class public final Ll/᩺᩷᩵;
-.super Ll/᩸᩷᩵;
-.source "U6AJ"
+.class public final synthetic Ll/᩺᩷᩵;
+.super Ljava/lang/Object;
+.source "P6HD"
 
-
-# instance fields
-.field public final ܰ:Ll/۠᩷᩵;
-
-
-# direct methods
-.method public constructor <init>(ILl/۠᩷᩵;)V
-    .locals 0
-
-    .line 112
-    invoke-direct {p0, p1}, Ll/᩸᩷᩵;-><init>(I)V
-
-    .line 113
-    iput-object p2, p0, Ll/᩺᩷᩵;->ܰ:Ll/۠᩷᩵;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/function/ToIntFunction;
 
 
 # virtual methods
-.method public final ۙ(Ll/۫۠ۡ;)V
-    .locals 1
+.method public final applyAsInt(Ljava/lang/Object;)I
+    .locals 0
 
-    .line 117
-    iget-object v0, p0, Ll/᩺᩷᩵;->ܰ:Ll/۠᩷᩵;
+    .line 2
+    check-cast p1, Ll/ۛ֨ۗ;
 
-    invoke-virtual {v0, p1}, Ll/۠᩷᩵;->ۙ(Ll/۫۠ۡ;)Z
+    if-eqz p1, :cond_0
 
-    return-void
+    .line 119
+    invoke-virtual {p1}, Ll/ܺ֨ۗ;->ۜ()Ll/ᩳۡۗ;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 121
+    invoke-virtual {p1}, Ll/ᩳۡۗ;->getOffset()I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
 .end method

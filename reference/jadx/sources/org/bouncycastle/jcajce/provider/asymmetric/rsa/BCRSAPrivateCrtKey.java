@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.security.interfaces.RSAPrivateCrtKey;
 import java.security.spec.RSAPrivateCrtKeySpec;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C4794;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
 import org.bouncycastle.asn1.pkcs.RSAPrivateKey;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
@@ -162,7 +162,7 @@ public class BCRSAPrivateCrtKey extends BCRSAPrivateKey implements RSAPrivateCrt
         String strLineSeparator = Strings.lineSeparator();
         sb.append(RSAUtil.generateKeyFingerprint(getModulus()));
         sb.append("],[");
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, RSAUtil.generateExponentFingerprint(getPublicExponent()), "]", strLineSeparator, "             modulus: ");
+        C4794.m14774(sb, RSAUtil.generateExponentFingerprint(getPublicExponent()), "]", strLineSeparator, "             modulus: ");
         sb.append(getModulus().toString(16));
         sb.append(strLineSeparator);
         sb.append("     public exponent: ");

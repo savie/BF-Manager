@@ -1,42 +1,54 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۧ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: GAN8 */
+/* JADX INFO: renamed from: l.ᩴ᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S776 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20125 implements InterfaceC22386 {
+public final class C20125 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC22386 f65355;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean f64672;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Throwable f65356;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f64673;
 
-    @Override // l.InterfaceC22386
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo4415(Object obj, InterfaceC8400 interfaceC8400) {
-        return this.f65355.mo4415(obj, interfaceC8400);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean f64674;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Integer f64675;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f64676;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f64677;
+
+    public C20125(String str, String str2, Integer num, boolean z, boolean z2, String str3) {
+        this.f64673 = str;
+        this.f64677 = str2;
+        this.f64675 = num;
+        this.f64674 = z;
+        this.f64672 = z2;
+        this.f64676 = str3;
     }
 
-    @Override // l.InterfaceC22386
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC2629 mo4416(InterfaceC5452 interfaceC5452) {
-        return this.f65355.mo4416(interfaceC5452);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C20125 m46335(int i, String str, String str2) {
+        return new C20125(str, str2, Integer.valueOf(i), false, true, null);
     }
 
-    @Override // l.InterfaceC22386
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC22386 mo4417(InterfaceC22386 interfaceC22386) {
-        return this.f65355.mo4417(interfaceC22386);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C20125 m46334(int i, String str) {
+        return new C20125(str, null, Integer.valueOf(i), true, true, "VALUE_XML_TRUNCATED");
     }
 
-    @Override // l.InterfaceC22386
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC22386 mo4418(InterfaceC5452 interfaceC5452) {
-        return this.f65355.mo4418(interfaceC5452);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C20125 m46336(String str) {
+        return new C20125(str, null, null, false, false, "VALUE_XML_TOO_LARGE");
     }
 
-    public C20125(Throwable th, InterfaceC22386 interfaceC22386) {
-        this.f65356 = th;
-        this.f65355 = interfaceC22386;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C20125 m46337(String str, String str2) {
+        return new C20125(str, null, null, false, false, str2);
     }
 }

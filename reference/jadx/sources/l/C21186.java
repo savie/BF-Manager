@@ -1,14 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩺ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5YJ */
+/* JADX INFO: renamed from: l.᩶۠ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB7W */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21186 implements InterfaceC21414 {
-    @Override // l.InterfaceC21414
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3144(C15313 c15313) {
-        C14277 c14277 = new C14277();
-        c14277.m34465(((C14277) c15313.m36673()).m34493().getBytes(((C14277) c15313.m36673()).m34493()));
-        c15313.m36672(c14277);
+public final class C21186 extends AbstractC20266 {
+
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public C18028 f67654;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public C18028 f67655;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public C18028 f67656;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public C18028 f67657;
+
+    @Override // l.C18202
+    /* JADX INFO: renamed from: ۫ */
+    public final String mo1286() {
+        return "linearGradient";
     }
 }

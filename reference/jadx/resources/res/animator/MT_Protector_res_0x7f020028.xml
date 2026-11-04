@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <objectAnimator
-        android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-        android:duration="?attr/MT_Protector_res_0x7f04035e"
+        android:interpolator="?attr/MT_Protector_res_0x7f040370"
+        android:duration="?attr/MT_Protector_res_0x7f040360"
         android:startOffset="0"
         android:valueFrom="0"
         android:valueTo="1"
         android:valueType="floatType"
         android:propertyName="opacity"/>
     <objectAnimator
-        android:interpolator="?attr/MT_Protector_res_0x7f04036e"
-        android:duration="?attr/MT_Protector_res_0x7f04035e"
+        android:interpolator="?attr/MT_Protector_res_0x7f040370"
+        android:duration="?attr/MT_Protector_res_0x7f040360"
         android:startOffset="0"
         android:valueFrom="0.4"
         android:valueTo="1"

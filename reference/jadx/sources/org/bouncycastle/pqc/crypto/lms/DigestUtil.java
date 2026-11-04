@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.crypto.lms;
 
-import l.C22979;
+import l.C20196;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.nist.NISTObjectIdentifiers;
@@ -61,7 +61,7 @@ public class DigestUtil {
         if (aSN1ObjectIdentifier.equals((ASN1Primitive) NISTObjectIdentifiers.id_shake256_len)) {
             return new SHAKEDigest(256);
         }
-        throw new IllegalArgumentException(C22979.m50820("unrecognized digest OID: ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unrecognized digest OID: ", aSN1ObjectIdentifier));
     }
 
     public static Digest createDigest(ASN1ObjectIdentifier aSN1ObjectIdentifier, int i) {

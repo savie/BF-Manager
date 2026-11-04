@@ -1,80 +1,73 @@
 package l;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.util.LinkedList;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۗۨᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 49K9 */
+/* JADX INFO: renamed from: l.ۗۛۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P4VD */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3218 extends AbstractC12392 {
+public final class C3218 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final C12828 f12020;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C17388[] f10486 = new C17388[0];
 
-    public C3218(C6396 c6396, C9570 c9570, C11748 c11748) {
-        super(c6396, c9570, c11748);
-        this.f12020 = new C12828(c9570, c6396, c11748.m29354());
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public LinkedList f10487;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C12851 m9644(long j, int i, byte[] bArr) {
-        return this.f12020.m31829(j, i, bArr);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f10488;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC15896 f10489;
+
+    public C3218(InterfaceC15896 interfaceC15896, C11421 c11421) {
+        LinkedList linkedList = new LinkedList();
+        this.f10487 = linkedList;
+        linkedList.listIterator();
+        this.f10489 = interfaceC15896;
+        this.f10488 = false;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m9641(C12851 c12851) throws IOException {
+    public final C17388[] m10562() {
+        return (C17388[]) ((List) C1170.stream(this.f10487).map(new C22418(2, this)).filter(new C15165(3)).collect(C2025.toList())).toArray(f10486);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ C17388 m10560(C3218 c3218, String str) {
+        C17388 c17388Mo1715 = c3218.f10489.mo1715(str);
+        return (c17388Mo1715 == null && c3218.f10488) ? new C17388(str) : c17388Mo1715;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m10561(InputStream inputStream, String str) throws IOException {
+        this.f10487 = new LinkedList();
+        InterfaceC15896 interfaceC15896 = this.f10489;
+        int i = C18046.f59088;
+        Charset charsetDefaultCharset = Charset.defaultCharset();
+        if (str != null) {
+            charsetDefaultCharset = Charset.forName(str);
+        }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, charsetDefaultCharset));
         try {
-            return ((Long) c12851.get(this.f41413.m47754(), TimeUnit.MILLISECONDS)).longValue();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new IOException("SMB write interrupted", e);
-        } catch (CancellationException e2) {
-            throw new IOException("SMB write canceled", e2);
-        } catch (ExecutionException e3) {
-            throw new IOException("SMB write failed", e3);
-        } catch (TimeoutException e4) {
-            throw new IOException("SMB write timed out", e4);
+            for (String strMo19232 = interfaceC15896.mo19232(bufferedReader); strMo19232 != null; strMo19232 = interfaceC15896.mo19232(bufferedReader)) {
+                this.f10487.add(strMo19232);
+            }
+            bufferedReader.close();
+            interfaceC15896.mo1713(this.f10487);
+            this.f10487.listIterator();
+        } catch (Throwable th) {
+            try {
+                bufferedReader.close();
+            } catch (Throwable th2) {
+                th.addSuppressed(th2);
+            }
+            throw th;
         }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m9643() {
-        return this.f41413.m47751();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m9638() {
-        return this.f41413.m47752();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m9640(long j, byte[] bArr, int i, int i2) {
-        C2225 c2225M47747 = this.f41413.m47747(this.f41412, j, i2);
-        if (((C1186) c2225M47747.mo25478()).m4349() == EnumC3055.STATUS_END_OF_FILE.getValue()) {
-            return -1;
-        }
-        int iMin = Math.min(i2, c2225M47747.m6845());
-        c2225M47747.m6847(0, bArr, i, iMin);
-        return iMin;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InputStream m9639(long j) {
-        C9570 c9570 = this.f41413;
-        return new C11417(this, c9570.m47751(), c9570.m47745(), j, -1L, 1);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InputStream m9642(long j, int i, long j2) {
-        C9570 c9570 = this.f41413;
-        return new C11417(this, c9570.m47751(), c9570.m47745(), j, j2, i);
-    }
-
-    public final String toString() {
-        return "File{fileId=" + this.f41412 + ", fileName='" + this.f41411.m29354() + "'}";
     }
 }

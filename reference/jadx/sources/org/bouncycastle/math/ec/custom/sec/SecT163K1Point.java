@@ -1,6 +1,6 @@
 package org.bouncycastle.math.ec.custom.sec;
 
-import l.C0833;
+import l.C1402;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECFieldElement;
@@ -182,13 +182,13 @@ public class SecT163K1Point extends ECPoint.AbstractF2m {
         if (!zIsOne) {
             eCFieldElementSquare = eCFieldElementSquare.square();
         }
-        ECFieldElement eCFieldElementM3430 = C0833.m3430(eCFieldElement2, eCFieldElementMultiply, eCFieldElementSquare);
-        if (eCFieldElementM3430.isZero()) {
-            return new SecT163K1Point(curve, eCFieldElementM3430, curve.getB());
+        ECFieldElement eCFieldElementM5128 = C1402.m5128(eCFieldElement2, eCFieldElementMultiply, eCFieldElementSquare);
+        if (eCFieldElementM5128.isZero()) {
+            return new SecT163K1Point(curve, eCFieldElementM5128, curve.getB());
         }
-        ECFieldElement eCFieldElementSquare2 = eCFieldElementM3430.square();
-        ECFieldElement eCFieldElementMultiply2 = zIsOne ? eCFieldElementM3430 : eCFieldElementM3430.multiply(eCFieldElementSquare);
+        ECFieldElement eCFieldElementSquare2 = eCFieldElementM5128.square();
+        ECFieldElement eCFieldElementMultiply2 = zIsOne ? eCFieldElementM5128 : eCFieldElementM5128.multiply(eCFieldElementSquare);
         ECFieldElement eCFieldElementSquare3 = eCFieldElement2.add(eCFieldElement).square();
-        return new SecT163K1Point(curve, eCFieldElementSquare2, eCFieldElementSquare3.add(eCFieldElementM3430).add(eCFieldElementSquare).multiply(eCFieldElementSquare3).add(eCFieldElementSquare2), new ECFieldElement[]{eCFieldElementMultiply2});
+        return new SecT163K1Point(curve, eCFieldElementSquare2, eCFieldElementSquare3.add(eCFieldElementM5128).add(eCFieldElementSquare).multiply(eCFieldElementSquare3).add(eCFieldElementSquare2), new ECFieldElement[]{eCFieldElementMultiply2});
     }
 }

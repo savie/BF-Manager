@@ -4,7 +4,5 @@
         android:state_enabled="true"
         android:color="?attr/MT_Protector_res_0x7f04011a"
         android:alpha="0.24"/>
-    <item
-        android:color="?attr/MT_Protector_res_0x7f040111"
-        android:alpha="0.12"/>
+    <item android:color="@android:color/transparent"/>
 </selector>

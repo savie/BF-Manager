@@ -9,9 +9,9 @@
 # static fields
 .field public static final ۙ:Ljava/util/regex/Pattern;
 
-.field public static final ۨ:Lcom/amazonaws/logging/Log;
+.field public static final ۤ:Lcom/amazonaws/logging/Log;
 
-.field public static final ܰ:Ljava/util/regex/Pattern;
+.field public static final ᩷:Ljava/util/regex/Pattern;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ܰ:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->᩷:Ljava/util/regex/Pattern;
 
     .line 44
     const-class v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;
@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ۨ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ۤ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     .locals 5
 
     .line 56
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p1
 
@@ -118,11 +118,11 @@
     move-exception v0
 
     .line 79
-    sget-object v1, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ۨ:Lcom/amazonaws/logging/Log;
+    sget-object v1, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ۤ:Lcom/amazonaws/logging/Log;
 
     const-string v4, "Error parsing expiry-date from x-amz-expiration header."
 
-    invoke-interface {v1, v4, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v1, v4, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     :cond_0
     move-object v0, v2
@@ -132,7 +132,7 @@
     invoke-interface {p0, v0}, Lcom/amazonaws/services/s3/internal/ObjectExpirationResult;->ۙ(Ljava/util/Date;)V
 
     .line 65
-    sget-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->ܰ:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/amazonaws/services/s3/internal/ObjectExpirationHeaderHandler;->᩷:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -152,7 +152,7 @@
 
     .line 60
     :cond_1
-    invoke-interface {p0, v2}, Lcom/amazonaws/services/s3/internal/ObjectExpirationResult;->ۨ(Ljava/lang/String;)V
+    invoke-interface {p0, v2}, Lcom/amazonaws/services/s3/internal/ObjectExpirationResult;->ۤ(Ljava/lang/String;)V
 
     :cond_2
     return-void

@@ -1,129 +1,107 @@
 package l;
 
-import android.graphics.Rect;
-import android.graphics.Region;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import android.os.Build;
+import android.text.TextUtils;
+import com.google.android.material.internal.ManufacturerUtils;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-/* JADX INFO: renamed from: l.ۡܿ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 79CQ */
+/* JADX INFO: renamed from: l.ۡ֨ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 253O */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C9034 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public Field f30835;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Object f30836;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public Field f30837;
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f30838;
+    public static final String f29396 = Build.MANUFACTURER.toLowerCase();
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public Method f30839;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f30840;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f30841;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Field f30842;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f30843;
-
-    public C9034(Object obj) {
-        this.f30836 = obj;
-        Class<?> cls = obj.getClass();
+    public static double m24089() throws Throwable {
         try {
-            this.f30842 = cls.getDeclaredField("contentInsets");
+            String strM24087 = m24087("ro.build.version.emui");
+            return Double.parseDouble(strM24087.substring(strM24087.indexOf("_") + 1));
         } catch (Exception unused) {
-            this.f30842 = null;
-        }
-        try {
-            this.f30837 = cls.getDeclaredField("visibleInsets");
-        } catch (Exception unused2) {
-            this.f30837 = null;
-        }
-        try {
-            this.f30835 = cls.getDeclaredField("touchableRegion");
-        } catch (Exception unused3) {
-            this.f30835 = null;
-        }
-        try {
-            this.f30840 = ((Integer) cls.getDeclaredField("TOUCHABLE_INSETS_FRAME").get(null)).intValue();
-            this.f30838 = ((Integer) cls.getDeclaredField("TOUCHABLE_INSETS_CONTENT").get(null)).intValue();
-            this.f30841 = ((Integer) cls.getDeclaredField("TOUCHABLE_INSETS_VISIBLE").get(null)).intValue();
-            this.f30843 = ((Integer) cls.getDeclaredField("TOUCHABLE_INSETS_REGION").get(null)).intValue();
-        } catch (Exception unused4) {
-        }
-        try {
-            this.f30839 = cls.getDeclaredMethod("setTouchableInsets", Integer.TYPE);
-        } catch (Exception unused5) {
-            this.f30839 = null;
+            return 4.0d;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Rect m23368() {
-        Field field = this.f30842;
-        if (field == null) {
-            throw new UnsupportedOperationException();
-        }
+    public static String m24087(String str) throws Throwable {
+        BufferedReader bufferedReader;
+        BufferedReader bufferedReader2 = null;
         try {
-            return (Rect) field.get(this.f30836);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
+            bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("getprop ".concat(str)).getInputStream()), 1024);
+            try {
+                String line = bufferedReader.readLine();
+                bufferedReader.close();
+                try {
+                    bufferedReader.close();
+                } catch (IOException unused) {
+                }
+                return line;
+            } catch (IOException unused2) {
+                if (bufferedReader != null) {
+                    try {
+                        bufferedReader.close();
+                    } catch (IOException unused3) {
+                    }
+                }
+                return null;
+            } catch (Throwable th) {
+                th = th;
+                bufferedReader2 = bufferedReader;
+                if (bufferedReader2 != null) {
+                    try {
+                        bufferedReader2.close();
+                    } catch (IOException unused4) {
+                    }
+                }
+                throw th;
+            }
+        } catch (IOException unused5) {
+            bufferedReader = null;
+        } catch (Throwable th2) {
+            th = th2;
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Rect m23369() {
-        Field field = this.f30837;
-        if (field == null) {
-            throw new UnsupportedOperationException();
-        }
-        try {
-            return (Rect) field.get(this.f30836);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static boolean m24095() {
+        return !TextUtils.isEmpty(m24087("ro.miui.ui.version.name"));
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Region m23370() {
-        Field field = this.f30835;
-        if (field == null) {
-            throw new UnsupportedOperationException();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static boolean m24090() throws Throwable {
+        String strM24087 = m24087("ro.build.display.id");
+        if (TextUtils.isEmpty(strM24087)) {
+            return false;
         }
-        try {
-            return (Region) field.get(this.f30836);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+        return strM24087.contains("flyme") || strM24087.toLowerCase().contains("flyme");
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m23367() {
-        int i;
-        Method method = this.f30839;
-        if (method == null) {
-            return;
-        }
-        int i2 = this.f30843;
-        int i3 = this.f30840;
-        int i4 = this.f30838;
-        if (i3 == i4 && i4 == (i = this.f30841) && i == i2) {
-            return;
-        }
-        try {
-            method.invoke(this.f30836, Integer.valueOf(i2));
-        } catch (Exception unused) {
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m24094() {
+        return f29396.contains("huawei");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m24088() {
+        String str = f29396;
+        return str.contains("qiku") || str.contains("360");
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static boolean m24093() {
+        return f29396.contains("oppo");
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static boolean m24091() {
+        return f29396.contains("vivo");
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static boolean m24092() {
+        return f29396.contains(ManufacturerUtils.SAMSUNG);
     }
 }

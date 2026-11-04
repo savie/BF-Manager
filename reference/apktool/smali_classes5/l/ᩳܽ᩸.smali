@@ -1,48 +1,62 @@
-.class public final Ll/ᩳܽ᩸;
+.class public final synthetic Ll/ᩳܽ᩸;
 .super Ljava/lang/Object;
-.source "262Q"
+.source "J57L"
 
 # interfaces
-.implements Ll/۟ܽ᩸;
+.implements Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
 
 # instance fields
-.field public final synthetic ۙ:[I
+.field public final synthetic ۙ:I
+
+.field public final synthetic ᩷:[Z
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public synthetic constructor <init>([ZI)V
     .locals 0
 
-    .line 49
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    iput p2, p0, Ll/ᩳܽ᩸;->ۙ:I
 
-    iput-object p1, p0, Ll/ᩳܽ᩸;->ۙ:[I
+    iput-object p1, p0, Ll/ᩳܽ᩸;->᩷:[Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۖ֡᩸;Ll/ܺ֡᩸;)Ll/ۖ֡᩸;
+.method public final onClick(Landroid/content/DialogInterface;IZ)V
     .locals 0
 
-    return-object p1
-.end method
+    .line 2
+    iget p1, p0, Ll/ᩳܽ᩸;->ۙ:I
 
-.method public final ۙ(Ll/ۖ֡᩸;)Ll/۟֡᩸;
-    .locals 3
+    packed-switch p1, :pswitch_data_0
 
-    .line 57
-    iget v0, p1, Ll/ۖ֡᩸;->۫:I
+    .line 7
+    iget-object p1, p0, Ll/ᩳܽ᩸;->᩷:[Z
 
-    iget-object v1, p0, Ll/ᩳܽ᩸;->ۙ:[I
+    .line 73
+    aput-boolean p3, p1, p2
 
-    aget v2, v1, v0
+    return-void
 
-    add-int/lit8 v2, v2, 0x1
+    .line 0
+    :pswitch_0
+    iget-object p1, p0, Ll/ᩳܽ᩸;->᩷:[Z
 
-    aput v2, v1, v0
+    .line 181
+    aput-boolean p3, p1, p2
 
-    return-object p1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

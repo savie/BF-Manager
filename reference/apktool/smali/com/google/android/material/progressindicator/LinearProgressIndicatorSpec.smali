@@ -18,7 +18,7 @@
     .locals 1
 
     .line 65
-    sget v0, Ll/ۖ۟ܶ;->᩸ۤ:I
+    sget v0, Ll/ۧ۬ܺ;->ܽۛ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -43,9 +43,9 @@
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 80
-    sget-object v2, Ll/۠۟ܶ;->ۚ֫:[I
+    sget-object v2, Ll/ܰ۬ܺ;->ᩴ۠:[I
 
-    sget v3, Ll/ۖ۟ܶ;->᩸ۤ:I
+    sget v3, Ll/ۧ۬ܺ;->ܽۛ:I
 
     sget v4, Lcom/google/android/material/progressindicator/LinearProgressIndicator;->DEF_STYLE_RES:I
 
@@ -63,7 +63,7 @@
     move-result-object p1
 
     .line 87
-    sget p2, Ll/۠۟ܶ;->᩹֫:I
+    sget p2, Ll/ܰ۬ܺ;->ܳ۠:I
 
     const/4 p4, 0x1
 
@@ -75,7 +75,7 @@
     iput p2, p0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;->indeterminateAnimationType:I
 
     .line 91
-    sget p2, Ll/۠۟ܶ;->֨֫:I
+    sget p2, Ll/ܰ۬ܺ;->۫۠:I
 
     .line 92
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -85,7 +85,7 @@
     iput p2, p0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;->indicatorDirection:I
 
     .line 95
-    sget p2, Ll/۠۟ܶ;->۬֫:I
+    sget p2, Ll/ܰ۬ܺ;->ۚ۠:I
 
     .line 97
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I

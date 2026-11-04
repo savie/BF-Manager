@@ -1,437 +1,151 @@
-.class public abstract Ll/۟ۖۨ;
-.super Ljava/lang/Object;
-.source "B53K"
-
-# interfaces
-.implements Ll/ᩳ֨ۨ;
+.class public final Ll/۟ۖۨ;
+.super Ll/ܰۖۨ;
+.source "N55R"
 
 
 # instance fields
-.field public ֡:I
-
-.field public final ܺ:Ll/ۜ֨ۨ;
-
-.field public ܽ:Ljava/lang/String;
-
-.field public ᩶:Ll/ۧۨۨ;
+.field public final ܰ:I
 
 
 # direct methods
-.method public constructor <init>(Ll/᩺ۖۨ;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    .line 26
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 55
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
 
-    .line 27
-    iput-object p1, p0, Ll/۟ۖۨ;->ܺ:Ll/ۜ֨ۨ;
+    .line 56
+    iput p1, p0, Ll/۟ۖۨ;->ܰ:I
 
-    .line 14
-    iget-object p1, p1, Ll/᩺ۖۨ;->ܺ:Ll/ۧۨۨ;
+    return-void
+.end method
 
-    .line 28
-    iput-object p1, p0, Ll/۟ۖۨ;->᩶:Ll/ۧۨۨ;
+.method public constructor <init>(Ll/ۘ۠ۨ;B)V
+    .locals 0
+
+    .line 46
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
+
+    add-int/lit8 p2, p2, 0x1
+
+    .line 47
+    invoke-virtual {p1, p2}, Ll/ۘ۠ۨ;->᩷(I)[B
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۗۖۘ;->᩷([B)J
+
+    move-result-wide p1
+
+    long-to-int p2, p1
+
+    iput p2, p0, Ll/۟ۖۨ;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getPackageName()Ljava/lang/String;
+.method public final hashCode()I
     .locals 1
 
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getPath()Ljava/lang/String;
-    .locals 1
-
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getType(Ljava/lang/String;)Ll/᩵֨ۨ;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 48
-    :goto_0
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۫()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    .line 49
-    invoke-interface {p0, v0}, Ll/ᩳ֨ۨ;->getType(I)Ll/᩵֨ۨ;
-
-    move-result-object v1
-
-    .line 50
-    invoke-interface {v1}, Ll/᩵֨ۨ;->getTypeName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ֨()I
-    .locals 1
-
-    .line 38
-    iget v0, p0, Ll/۟ۖۨ;->֡:I
+    .line 99
+    iget v0, p0, Ll/۟ۖۨ;->ܰ:I
 
     return v0
 .end method
 
-.method public ۙ()Ll/ۜ֨ۨ;
-    .locals 1
+.method public final ۙ(I)I
+    .locals 2
 
-    .line 33
-    iget-object v0, p0, Ll/۟ۖۨ;->ܺ:Ll/ۜ֨ۨ;
+    .line 78
+    iget v0, p0, Ll/۟ۖۨ;->ܰ:I
 
-    return-object v0
-.end method
+    int-to-long v0, v0
 
-.method public final ۙ(Ll/۟֨ۨ;)V
-    .locals 4
-
-    .line 85
-    check-cast p1, Ll/ᩳ֨ۨ;
-
-    .line 86
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۫()I
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->ᩴ(J)B
 
     move-result v0
 
-    invoke-interface {p1}, Ll/ᩳ֨ۨ;->۫()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_7
-
-    .line 88
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۟ۙ()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ll/ᩳ֨ۨ;->۟ۙ()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_6
-
-    .line 90
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->᩵()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ll/ᩳ֨ۨ;->᩵()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_5
-
-    .line 92
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->ۤۙ()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ll/ᩳ֨ۨ;->ۤۙ()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 94
-    :goto_0
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۫()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    .line 95
-    invoke-interface {p0, v1}, Ll/ᩳ֨ۨ;->getType(I)Ll/᩵֨ۨ;
-
-    move-result-object v2
-
-    invoke-interface {p1, v1}, Ll/ᩳ֨ۨ;->getType(I)Ll/᩵֨ۨ;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3}, Ll/۟֨ۨ;->ۙ(Ll/۟֨ۨ;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 97
-    :goto_1
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۟ۙ()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    .line 98
-    invoke-interface {p0, v1}, Ll/ᩳ֨ۨ;->᩸(I)Ll/᩺֨ۨ;
-
-    move-result-object v2
-
-    invoke-interface {p1, v1}, Ll/ᩳ֨ۨ;->᩸(I)Ll/᩺֨ۨ;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3}, Ll/۟֨ۨ;->ۙ(Ll/۟֨ۨ;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 100
-    :goto_2
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->᩵()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_2
-
-    .line 101
-    invoke-interface {p0, v1}, Ll/ᩳ֨ۨ;->ᩴ(I)Ll/ܶ֨ۨ;
-
-    move-result-object v2
-
-    invoke-interface {p1, v1}, Ll/ᩳ֨ۨ;->ᩴ(I)Ll/ܶ֨ۨ;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3}, Ll/۟֨ۨ;->ۙ(Ll/۟֨ۨ;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    .line 103
-    :cond_2
-    :goto_3
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->ۤۙ()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_3
-
-    .line 104
-    invoke-interface {p0, v0}, Ll/ᩳ֨ۨ;->۬(I)Ll/ᩴ֨ۨ;
-
-    move-result-object v1
-
-    invoke-interface {p1, v0}, Ll/ᩳ֨ۨ;->۬(I)Ll/ᩴ֨ۨ;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ll/۟֨ۨ;->ۙ(Ll/۟֨ۨ;)V
+    add-int/2addr v0, p1
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_3
+    return v0
+.end method
 
-    :cond_3
+.method public final ۙ(Ll/᩺۠ۨ;)V
+    .locals 3
+
+    .line 63
+    iget v0, p0, Ll/۟ۖۨ;->ܰ:I
+
+    int-to-long v0, v0
+
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->᩷(J)[B
+
+    move-result-object v0
+
+    .line 70
+    sget-object v1, Ll/ۜۖۨ;->ۜ:Ll/ۜۖۨ;
+
+    iget-byte v1, v1, Ll/ۜۖۨ;->ܰ:B
+
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    shl-int/lit8 v2, v2, 0x5
+
+    or-int/2addr v1, v2
+
+    invoke-virtual {p1, v1}, Ll/᩺۠ۨ;->᩷(I)V
+
+    const/4 v1, 0x0
+
+    .line 347
+    array-length v2, v0
+
+    invoke-virtual {p1, v0, v1, v2}, Ll/᩺۠ۨ;->ۙ([BII)V
+
     return-void
+.end method
 
-    .line 93
-    :cond_4
-    new-instance p1, Ljava/lang/RuntimeException;
+.method public final ܽ()Ll/ۜۖۨ;
+    .locals 1
 
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
+    .line 94
+    sget-object v0, Ll/ۜۖۨ;->ۜ:Ll/ۜۖۨ;
 
-    .line 93
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    throw p1
+.method public final ᩷(Ll/ܰۖۨ;)I
+    .locals 1
 
-    .line 91
-    :cond_5
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
-
-    .line 91
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 89
-    :cond_6
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
-
-    .line 89
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    .line 85
+    check-cast p1, Ll/۟ۖۨ;
 
     .line 87
-    :cond_7
-    new-instance p1, Ljava/lang/RuntimeException;
+    iget p1, p1, Ll/۟ۖۨ;->ܰ:I
 
-    .line 43
-    iget-object v0, p0, Ll/۟ۖۨ;->ܽ:Ljava/lang/String;
+    iget v0, p0, Ll/۟ۖۨ;->ܰ:I
 
-    .line 87
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    if-ge v0, p1, :cond_0
 
-    throw p1
-.end method
+    const/4 p1, -0x1
 
-.method public final ۙܰ()Ll/ۧۨۨ;
-    .locals 1
+    return p1
 
-    .line 19
-    iget-object v0, p0, Ll/۟ۖۨ;->᩶:Ll/ۧۨۨ;
+    :cond_0
+    if-le v0, p1, :cond_1
 
-    return-object v0
-.end method
+    const/4 p1, 0x1
 
-.method public ۟ܰ()Ljava/lang/Iterable;
-    .locals 1
+    return p1
 
-    .line 345
-    invoke-virtual {p0}, Ll/۟ۖۨ;->ۨ()Ljava/lang/Iterable;
+    :cond_1
+    const/4 p1, 0x0
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۨ()Ljava/lang/Iterable;
-    .locals 3
-
-    .line 61
-    new-instance v0, Ll/ܳۖۨ;
-
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۟ۙ()I
-
-    move-result v1
-
-    new-instance v2, Ll/ۤۖۨ;
-
-    invoke-direct {v2, p0}, Ll/ۤۖۨ;-><init>(Ll/۟ۖۨ;)V
-
-    invoke-direct {v0, v1, v2}, Ll/ܳۖۨ;-><init>(ILl/ܿ۬ᩴ;)V
-
-    return-object v0
-.end method
-
-.method public ᩵ۙ()Ljava/lang/Iterable;
-    .locals 3
-
-    .line 65
-    new-instance v0, Ll/ܳۖۨ;
-
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->᩵()I
-
-    move-result v1
-
-    new-instance v2, Ll/ۡۖۨ;
-
-    invoke-direct {v2, p0}, Ll/ۡۖۨ;-><init>(Ll/۟ۖۨ;)V
-
-    invoke-direct {v0, v1, v2}, Ll/ܳۖۨ;-><init>(ILl/ܿ۬ᩴ;)V
-
-    return-object v0
-.end method
-
-.method public ᩶()Ljava/lang/Iterable;
-    .locals 3
-
-    .line 69
-    new-instance v0, Ll/ܳۖۨ;
-
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->ۤۙ()I
-
-    move-result v1
-
-    new-instance v2, Ll/᩵ۖۨ;
-
-    invoke-direct {v2, p0}, Ll/᩵ۖۨ;-><init>(Ll/۟ۖۨ;)V
-
-    invoke-direct {v0, v1, v2}, Ll/ܳۖۨ;-><init>(ILl/ܿ۬ᩴ;)V
-
-    return-object v0
-.end method
-
-.method public ᩸ܰ()Ljava/lang/Iterable;
-    .locals 1
-
-    .line 340
-    invoke-virtual {p0}, Ll/۟ۖۨ;->᩹()Ljava/lang/Iterable;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ᩹()Ljava/lang/Iterable;
-    .locals 3
-
-    .line 57
-    new-instance v0, Ll/ܳۖۨ;
-
-    invoke-interface {p0}, Ll/ᩳ֨ۨ;->۫()I
-
-    move-result v1
-
-    new-instance v2, Ll/۠ۖۨ;
-
-    invoke-direct {v2, p0}, Ll/۠ۖۨ;-><init>(Ll/۟ۖۨ;)V
-
-    invoke-direct {v0, v1, v2}, Ll/ܳۖۨ;-><init>(ILl/ܿ۬ᩴ;)V
-
-    return-object v0
+    return p1
 .end method

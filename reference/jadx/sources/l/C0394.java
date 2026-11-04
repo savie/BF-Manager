@@ -1,32 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۨܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 58MT */
+import java.util.ArrayDeque;
+import java.util.List;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.֡ۧ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86HZ */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C0394 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20723 f1877;
+    public final Function f1938;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC14113 f1878;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C18293 f1939;
 
-    public C0394(InterfaceC20723 interfaceC20723) {
-        interfaceC20723.getClass();
-        this.f1877 = interfaceC20723;
-        this.f1878 = new C1619();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f1940;
+
+    public C0394(C2551 c2551, C21943 c21943, Function function) {
+        this.f1938 = function;
+        ArrayDeque arrayDeque = new ArrayDeque();
+        this.f1940 = arrayDeque;
+        C18293 c18293 = new C18293(c2551);
+        this.f1939 = c18293;
+        arrayDeque.addLast(c21943);
+        c18293.m42623(c21943);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m2122(InterfaceC14113 interfaceC14113) {
-        if (interfaceC14113 == null) {
-            interfaceC14113 = new C1619();
+    public final C21943 m2203() {
+        ArrayDeque arrayDeque = this.f1940;
+        C21943 c21943 = (C21943) arrayDeque.pollLast();
+        if (c21943 == null) {
+            return null;
         }
-        this.f1878 = interfaceC14113;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C16623 m2121(C4515 c4515) {
-        return new C16623(c4515, this.f1877, this.f1878);
+        List list = (List) this.f1938.apply(c21943);
+        int size = list.size();
+        while (true) {
+            size--;
+            if (size < 0) {
+                return c21943;
+            }
+            C21943 c21944 = (C21943) list.get(size);
+            if (!this.f1939.m42627(c21944)) {
+                arrayDeque.addLast(c21944);
+            }
+        }
     }
 }

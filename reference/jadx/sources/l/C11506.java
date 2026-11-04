@@ -1,30 +1,20 @@
 package l;
 
-import android.os.Build;
-import com.google.android.material.slider.BasicLabelFormatter;
+/* JADX INFO: renamed from: l.ۧۡۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I7BH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11506 implements InterfaceC7509 {
 
-/* JADX INFO: renamed from: l.ۨۛ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 35OZ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11506 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20457 f36205;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f38682 = 0;
+    public C11506(C20457 c20457) {
+        this.f36205 = c20457;
+    }
 
-    static {
-        int i = Build.VERSION.SDK_INT;
-        C13623 c13623 = C13623.f44941;
-        if (i >= 30) {
-            c13623.m33301(30);
-        }
-        if (i >= 30) {
-            c13623.m33301(31);
-        }
-        if (i >= 30) {
-            c13623.m33301(33);
-        }
-        if (i >= 30) {
-            c13623.m33301(BasicLabelFormatter.MILLION);
-        }
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f36205.f65539;
     }
 }

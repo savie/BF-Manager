@@ -1,11 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۚᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 11MF */
+import android.os.Bundle;
+
+/* JADX INFO: renamed from: l.᩵ܺۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: KIV4 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20672 extends C6723 {
-    @Override // java.lang.Throwable
-    public final String getMessage() {
-        return "File is too big and there are too many changes";
+public final /* synthetic */ class C20672 implements InterfaceC19742 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12467 f66283;
+
+    @Override // l.InterfaceC19742
+    /* JADX INFO: renamed from: ۙ */
+    public final Bundle mo14860() {
+        return C12467.m30961(this.f66283);
     }
 }

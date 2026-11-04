@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.CryptoServiceConstraintsException;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LegacyBitsOfSecurityConstraint extends ServicesConstraint {
     public final int legacyRequiredBitsOfSecurity;
     public final int requiredBitsOfSecurity;

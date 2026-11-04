@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final ܺ:Landroid/content/Context;
+.field public final ܰ:Landroid/content/Context;
 
 .field public ᩶:I
 
@@ -23,7 +23,7 @@
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     .line 39
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;->ܺ:Landroid/content/Context;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;->ܰ:Landroid/content/Context;
 
     .line 40
     iput v2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;->᩶:I
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 55
-    iget-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;->ܺ:Landroid/content/Context;
+    iget-object p2, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferDatabaseHelper;->ܰ:Landroid/content/Context;
 
     const-string p3, "awss3transfertable.db"
 

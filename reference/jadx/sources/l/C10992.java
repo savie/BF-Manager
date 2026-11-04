@@ -1,36 +1,12 @@
 package l;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-
-/* JADX INFO: renamed from: l.ۧ۫ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X81I */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10992 implements TextWatcher {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC23692 f37412;
-
-    @Override // android.text.TextWatcher
-    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-    }
-
-    @Override // android.text.TextWatcher
-    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-    }
-
-    public C10992(AbstractC23692 abstractC23692) {
-        this.f37412 = abstractC23692;
-    }
-
-    @Override // android.text.TextWatcher
-    public final void afterTextChanged(Editable editable) {
-        AbstractC23692 abstractC23692 = this.f37412;
-        if (abstractC23692.f76666 && abstractC23692.f76664.isFocused()) {
-            try {
-                abstractC23692.f76668.mo16989((CharSequence) String.valueOf((Integer.parseInt(editable.toString()) * abstractC23692.f76665) / abstractC23692.f76663));
-            } catch (Exception unused) {
-            }
-        }
+/* JADX INFO: renamed from: l.ۤܺ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZAV2 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10992 extends C7998 {
+    @Override // l.C2777
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo1229() {
+        return 7;
     }
 }

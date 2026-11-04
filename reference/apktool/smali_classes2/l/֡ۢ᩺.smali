@@ -1,110 +1,116 @@
-.class public final Ll/֡ۢ᩺;
-.super Ljava/io/InputStream;
-.source "Q4HB"
-
-# interfaces
-.implements Ll/᩷ۤᩴ;
+.class public abstract enum Ll/֡ۢ᩺;
+.super Ljava/lang/Enum;
+.source "X43L"
 
 
-# instance fields
-.field public ֡:[B
+# static fields
+.field public static final synthetic ܰ:[Ll/֡ۢ᩺;
 
-.field public ܺ:Ll/ܽۢ᩺;
+.field public static final enum ܿ:Ll/֡ۢ᩺;
 
-.field public ᩶:Ll/ۛۢ᩺;
+.field public static final enum ᩶:Ll/֡ۢ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۖۢ᩺;Ll/۫֫᩺;Ll/ۛۢ᩺;Ljava/lang/String;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 15
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    .line 199
+    new-instance v0, Ll/᩶ۢ᩺;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Ll/᩶ۢ᩺;-><init>()V
 
-    new-array v0, v0, [B
+    sput-object v0, Ll/֡ۢ᩺;->ܿ:Ll/֡ۢ᩺;
 
-    .line 13
-    iput-object v0, p0, Ll/֡ۢ᩺;->֡:[B
+    .line 205
+    new-instance v0, Ll/ܿۢ᩺;
 
-    .line 16
-    iput-object p3, p0, Ll/֡ۢ᩺;->᩶:Ll/ۛۢ᩺;
+    invoke-direct {v0}, Ll/ܿۢ᩺;-><init>()V
 
-    const/16 v0, 0xc
+    sput-object v0, Ll/֡ۢ᩺;->᩶:Ll/֡ۢ᩺;
 
-    new-array v1, v0, [B
+    .line 198
+    invoke-static {}, Ll/֡ۢ᩺;->᩸()[Ll/֡ۢ᩺;
 
-    .line 123
-    invoke-static {p3, v1, v0}, Ll/᩸ۢ᩺;->ܰ(Ljava/io/InputStream;[BI)V
+    move-result-object v0
 
-    .line 19
-    new-instance p3, Ll/ܽۢ᩺;
-
-    invoke-direct {p3, p1, p2, p4, v1}, Ll/ܽۢ᩺;-><init>(Ll/ۖۢ᩺;Ll/۫֫᩺;Ljava/lang/String;[B)V
-
-    iput-object p3, p0, Ll/֡ۢ᩺;->ܺ:Ll/ܽۢ᩺;
+    sput-object v0, Ll/֡ۢ᩺;->ܰ:[Ll/֡ۢ᩺;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final read()I
-    .locals 2
+    .line 198
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 33
-    iget-object v0, p0, Ll/֡ۢ᩺;->֡:[B
-
-    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
-
-    move-result v1
-
-    if-gtz v1, :cond_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 36
-    aget-byte v0, v0, v1
-
-    and-int/lit16 v0, v0, 0xff
-
-    return v0
+    return-void
 .end method
 
-.method public final read([BII)I
-    .locals 1
-
-    .line 24
-    iget-object v0, p0, Ll/֡ۢ᩺;->᩶:Ll/ۛۢ᩺;
-
-    invoke-virtual {v0, p1, p2, p3}, Ll/ۛۢ᩺;->read([BII)I
-
-    move-result p3
-
-    if-lez p3, :cond_0
-
-    .line 26
-    iget-object v0, p0, Ll/֡ۢ᩺;->ܺ:Ll/ܽۢ᩺;
-
-    invoke-virtual {v0, p2, p3, p1}, Ll/ܽۢ᩺;->ۙ(II[B)V
-
-    :cond_0
-    return p3
-.end method
-
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    invoke-direct {p0, p1, p2}, Ll/֡ۢ᩺;-><init>(Ljava/lang/String;I)V
 
-    move-result-wide v0
+    return-void
+.end method
 
-    return-wide v0
+.method public static valueOf(Ljava/lang/String;)Ll/֡ۢ᩺;
+    .locals 1
+
+    .line 198
+    const-class v0, Ll/֡ۢ᩺;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/֡ۢ᩺;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/֡ۢ᩺;
+    .locals 1
+
+    .line 198
+    sget-object v0, Ll/֡ۢ᩺;->ܰ:[Ll/֡ۢ᩺;
+
+    invoke-virtual {v0}, [Ll/֡ۢ᩺;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/֡ۢ᩺;
+
+    return-object v0
+.end method
+
+.method public static synthetic ᩸()[Ll/֡ۢ᩺;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ll/֡ۢ᩺;
+
+    .line 198
+    sget-object v1, Ll/֡ۢ᩺;->ܿ:Ll/֡ۢ᩺;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֡ۢ᩺;->᩶:Ll/֡ۢ᩺;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public abstract ۙ()Ll/֡ۢ᩺;
 .end method

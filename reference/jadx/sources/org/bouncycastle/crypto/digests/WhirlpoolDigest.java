@@ -5,7 +5,7 @@ import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
 import com.google.android.material.slider.BaseSlider;
 import com.google.android.material.textfield.IndicatorViewController;
 import com.umeng.commonsdk.statistics.UMErrorCode;
-import l.EnumC2300;
+import l.EnumC24309;
 import moe.shizuku.server.IShizukuService;
 import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.crypto.CryptoServicePurpose;
@@ -20,7 +20,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Memoable;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WhirlpoolDigest implements ExtendedDigest, Memoable {
     public static final int BITCOUNT_ARRAY_SIZE = 32;
     public static final int BYTE_LENGTH = 64;
@@ -38,7 +38,7 @@ public final class WhirlpoolDigest implements ExtendedDigest, Memoable {
     public final long[] _rc;
     public long[] _state;
     public final CryptoServicePurpose purpose;
-    public static final int[] SBOX = {24, 35, 198, 232, 135, 184, 1, 79, 54, 166, 210, 245, UMErrorCode.E_UM_BE_EMPTY_URL_PATH, UMErrorCode.E_UM_BE_CREATE_FAILED, 145, 82, 96, 188, 155, 142, 163, 12, 123, 53, 29, BERTags.FLAGS, 215, 194, 46, 75, Scalar25519.TARGET_LENGTH, 87, 21, 119, 55, 229, 159, 240, 74, 218, 88, 201, 41, 10, 177, DHParameters.DEFAULT_MINIMUM_LENGTH, IShizukuService.Stub.TRANSACTION_updateFlagsForUid, 133, 189, 93, 16, 244, 203, 62, 5, IShizukuService.Stub.TRANSACTION_dispatchPackageChanged, 228, 39, 65, 139, 167, q.h, 149, 216, 251, 238, 124, IShizukuService.Stub.TRANSACTION_attachUserService, 221, 23, 71, 158, 202, 45, 191, 7, 173, 90, 131, 51, 99, 2, 170, UMErrorCode.E_UM_BE_RAW_OVERSIZE, 200, 25, 73, IndicatorViewController.DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION, 242, 227, 91, 136, EnumC2300.f8185, 38, 50, PicnicEngine.MAX_AUX_BYTES, 233, 15, 213, 128, 190, 205, 52, 72, 255, 122, 144, 95, 32, IShizukuService.Stub.TRANSACTION_isHidden, 26, 174, 180, 84, 147, 34, 100, 241, 115, 18, 64, 8, 195, 236, 219, 161, 141, 61, 151, 0, 207, 43, 118, 130, 214, 27, 181, HideBottomViewOnScrollBehavior.DEFAULT_EXIT_ANIMATION_DURATION_MS, IShizukuService.Stub.TRANSACTION_getFlagsForUid, 80, 69, 243, 48, 239, 63, 85, 162, 234, 101, 186, 47, 192, 222, 28, 253, 77, 146, BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION, 6, 138, 178, 230, 14, 31, 98, 212, 168, 150, 249, 197, 37, 89, 132, 114, 57, 76, 94, UMErrorCode.E_UM_BE_NOT_MAINPROCESS, 56, 140, 209, 165, 226, 97, 179, 33, 156, 30, 67, 199, 252, 4, 81, 153, 109, 13, 250, 223, 126, 36, 59, 171, 206, 17, 143, 78, 183, 235, 60, 129, 148, 247, 185, 19, 44, Primes.SMALL_FACTOR_LIMIT, 231, UMErrorCode.E_UM_BE_JSON_FAILED, 196, 3, 86, 68, 127, 169, 42, 187, 193, 83, 220, 11, 157, 108, 49, 116, 246, 70, 172, 137, 20, HideBottomViewOnScrollBehavior.DEFAULT_ENTER_ANIMATION_DURATION_MS, 22, 58, IShizukuService.Stub.TRANSACTION_dispatchPermissionConfirmationResult, 9, UMErrorCode.E_UM_BE_DEFLATE_FAILED, 182, 208, 237, 204, 66, 152, 164, 40, 92, 248, 134};
+    public static final int[] SBOX = {24, 35, 198, 232, 135, 184, 1, 79, 54, 166, 210, 245, UMErrorCode.E_UM_BE_EMPTY_URL_PATH, UMErrorCode.E_UM_BE_CREATE_FAILED, 145, 82, 96, 188, 155, 142, 163, 12, 123, 53, 29, BERTags.FLAGS, 215, 194, 46, 75, Scalar25519.TARGET_LENGTH, 87, 21, 119, 55, 229, 159, 240, 74, 218, 88, 201, 41, 10, 177, DHParameters.DEFAULT_MINIMUM_LENGTH, IShizukuService.Stub.TRANSACTION_updateFlagsForUid, 133, 189, 93, 16, 244, 203, 62, 5, IShizukuService.Stub.TRANSACTION_dispatchPackageChanged, 228, 39, 65, 139, 167, q.h, 149, 216, 251, 238, 124, IShizukuService.Stub.TRANSACTION_attachUserService, 221, 23, 71, 158, 202, 45, 191, 7, 173, 90, 131, 51, 99, 2, 170, UMErrorCode.E_UM_BE_RAW_OVERSIZE, 200, 25, 73, IndicatorViewController.DEFAULT_CAPTION_TRANSLATION_Y_ANIMATION_DURATION, 242, 227, 91, 136, EnumC24309.f78687, 38, 50, PicnicEngine.MAX_AUX_BYTES, 233, 15, 213, 128, 190, 205, 52, 72, 255, 122, 144, 95, 32, IShizukuService.Stub.TRANSACTION_isHidden, 26, 174, 180, 84, 147, 34, 100, 241, 115, 18, 64, 8, 195, 236, 219, 161, 141, 61, 151, 0, 207, 43, 118, 130, 214, 27, 181, HideBottomViewOnScrollBehavior.DEFAULT_EXIT_ANIMATION_DURATION_MS, IShizukuService.Stub.TRANSACTION_getFlagsForUid, 80, 69, 243, 48, 239, 63, 85, 162, 234, 101, 186, 47, 192, 222, 28, 253, 77, 146, BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION, 6, 138, 178, 230, 14, 31, 98, 212, 168, 150, 249, 197, 37, 89, 132, 114, 57, 76, 94, UMErrorCode.E_UM_BE_NOT_MAINPROCESS, 56, 140, 209, 165, 226, 97, 179, 33, 156, 30, 67, 199, 252, 4, 81, 153, 109, 13, 250, 223, 126, 36, 59, 171, 206, 17, 143, 78, 183, 235, 60, 129, 148, 247, 185, 19, 44, Primes.SMALL_FACTOR_LIMIT, 231, UMErrorCode.E_UM_BE_JSON_FAILED, 196, 3, 86, 68, 127, 169, 42, 187, 193, 83, 220, 11, 157, 108, 49, 116, 246, 70, 172, 137, 20, HideBottomViewOnScrollBehavior.DEFAULT_ENTER_ANIMATION_DURATION_MS, 22, 58, IShizukuService.Stub.TRANSACTION_dispatchPermissionConfirmationResult, 9, UMErrorCode.E_UM_BE_DEFLATE_FAILED, 182, 208, 237, 204, 66, 152, 164, 40, 92, 248, 134};
     public static final long[] C0 = new long[256];
     public static final long[] C1 = new long[256];
     public static final long[] C2 = new long[256];

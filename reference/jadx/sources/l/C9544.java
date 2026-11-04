@@ -1,29 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M43N */
+import android.text.Editable;
+
+/* JADX INFO: renamed from: l.ۡܿ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: P9S5 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C9544 extends AbstractC14151 {
+public final class C9544 extends AbstractC21318 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13174 f32237;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7308 f30894;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C9544(C13174 c13174) {
-        super(c13174);
-        this.f32237 = c13174;
+    public C9544(C7308 c7308) {
+        this.f30894 = c7308;
     }
 
-    @Override // l.AbstractC14151
-    /* JADX INFO: renamed from: ܰ */
-    public final C21825 mo9607(C10229 c10229, EnumC8112 enumC8112, AbstractC16579 abstractC16579, boolean z) {
-        C19003 c19003 = new C19003();
-        AbstractC16579 abstractC16579M26017 = c10229.m26017();
-        C13174 c13174 = this.f32237;
-        if (abstractC16579M26017 != null) {
-            c19003.m43723(new C1449(c13174, c10229, enumC8112, new EnumC8112[0]));
+    @Override // l.AbstractC21318, android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        String string = editable.toString();
+        C7308 c7308 = this.f30894;
+        c7308.m20004();
+        if (c7308.f24055 || c7308.f24053 == null) {
+            return;
         }
-        c19003.m43723(new C21911(c13174, c10229, abstractC16579, enumC8112));
-        return c19003.m43726();
+        c7308.f24053.mo8153(string);
     }
 }

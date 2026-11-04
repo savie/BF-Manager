@@ -11,7 +11,7 @@ import org.bouncycastle.jce.interfaces.GOST3410PrivateKey;
 import org.bouncycastle.jce.interfaces.GOST3410PublicKey;
 import org.bouncycastle.jce.spec.GOST3410PublicKeyParameterSetSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410Util {
     public static AsymmetricKeyParameter generatePrivateKeyParameter(PrivateKey privateKey) throws InvalidKeyException {
         if (!(privateKey instanceof GOST3410PrivateKey)) {

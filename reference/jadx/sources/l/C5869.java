@@ -1,24 +1,12 @@
 package l;
 
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ۛۛۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: FBFP */
+/* JADX INFO: renamed from: l.ۚ᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C5869 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return (InterfaceC6387) ((InterfaceC4705) obj);
+public final class C5869 extends C22036 {
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C5869() {
+        super(new C5123());
+        C0407 c0407 = C5233.f18438;
     }
 }

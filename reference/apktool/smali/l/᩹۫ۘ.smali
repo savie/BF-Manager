@@ -1,82 +1,88 @@
-.class public final Ll/᩹۫ۘ;
+.class public final synthetic Ll/᩹۫ۘ;
 .super Ljava/lang/Object;
-.source "B6LU"
+.source "A451"
 
 # interfaces
-.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ܿ۫ۚ;
+.field public final synthetic ܰ:Ll/᩷ۧۘ;
+
+.field public final synthetic ܿ:Z
+
+.field public final synthetic ᩶:Ll/ۗۙۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ۫ۚ;)V
+.method public synthetic constructor <init>(Ll/᩷ۧۘ;Ll/ۗۙۘ;Z)V
     .locals 0
 
-    .line 135
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩹۫ۘ;->ۙ:Ll/ܿ۫ۚ;
+    iput-object p1, p0, Ll/᩹۫ۘ;->ܰ:Ll/᩷ۧۘ;
+
+    iput-object p2, p0, Ll/᩹۫ۘ;->᩶:Ll/ۗۙۘ;
+
+    iput-boolean p3, p0, Ll/᩹۫ۘ;->ܿ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
-    .locals 1
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    if-eqz p3, :cond_0
-
-    mul-int/lit8 p2, p2, 0x5
-
-    add-int/lit8 p2, p2, 0x50
-
-    .line 43
-    sget-object p1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    int-to-float p2, p2
-
-    const/high16 p3, 0x42c80000    # 100.0f
-
-    div-float/2addr p2, p3
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    new-array p3, p3, [Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    aput-object p2, p3, v0
-
-    const-string p2, "%.2f"
-
-    invoke-static {p1, p2, p3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object p1
 
-    .line 137
-    iget-object p2, p0, Ll/᩹۫ۘ;->ۙ:Ll/ܿ۫ۚ;
-
-    invoke-virtual {p2, p1}, Ll/ܿ۫ۚ;->ۙ(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 0
+.method public synthetic negate()Ljava/util/function/Predicate;
+    .locals 1
 
-    return-void
+    .line 0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 0
 
-    return-void
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 2
+    check-cast p1, Ll/᩸۟᩺;
+
+    .line 392
+    iget-object p1, p1, Ll/᩸۟᩺;->᩶:Ll/᩸ܿ᩺;
+
+    iget-object v0, p0, Ll/᩹۫ۘ;->ܰ:Ll/᩷ۧۘ;
+
+    iget-object v1, p0, Ll/᩹۫ۘ;->᩶:Ll/ۗۙۘ;
+
+    iget-boolean v2, p0, Ll/᩹۫ۘ;->ܿ:Z
+
+    invoke-virtual {v0, v1, p1, v2}, Ll/᩷ۧۘ;->ۙ(Ll/ۗۙۘ;Ll/᩸ܿ᩺;Z)Z
+
+    move-result p1
+
+    return p1
 .end method

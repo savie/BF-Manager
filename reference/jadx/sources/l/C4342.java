@@ -1,29 +1,25 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ֫᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: E9H5 */
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+/* JADX INFO: renamed from: l.ۘᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6IE */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4342 extends C11771 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public byte[] f15537;
-
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2356(C19240 c19240) throws C17271 {
-        c19240.m27389(2);
-        int iM27375 = c19240.m27375();
-        int iM27378 = c19240.m27378();
-        if (iM27375 > 0) {
-            c19240.m27376(iM27375);
-            byte[] bArr = new byte[iM27378];
-            c19240.m27397(iM27378, bArr);
-            this.f15537 = bArr;
+public final class C4342 extends C6580 implements Iterator {
+    @Override // java.util.Iterator
+    public final Object next() {
+        m18499();
+        if (m18503() >= m18505().f48372) {
+            throw new NoSuchElementException();
         }
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final byte[] m12178() {
-        return this.f15537;
+        int iM18503 = m18503();
+        m18504(iM18503 + 1);
+        m18501(iM18503);
+        Object[] objArr = m18505().f48368;
+        C15243.m36586(objArr);
+        Object obj = objArr[m18500()];
+        m18502();
+        return obj;
     }
 }

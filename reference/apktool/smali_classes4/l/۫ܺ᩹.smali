@@ -1,27 +1,22 @@
-.class public final synthetic Ll/۫ܺ᩹;
+.class public abstract Ll/۫ܺ᩹;
 .super Ljava/lang/Object;
-.source "164Z"
+.source "58XF"
 
-# interfaces
-.implements Ll/ܿۧ;
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public abstract ۙ()Ljava/util/Collection;
+.end method
 
-    .line 2
-    check-cast p1, Lbin/mt/plus/Main;
-
-    .line 136
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Ll/֫ۚۘ;
-
-    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 137
-    invoke-virtual {p1, v0}, Lbin/mt/plus/Main;->startActivity(Landroid/content/Intent;)V
-
-    return-void
+.method public abstract ۙ(Ljava/lang/String;)Ll/۠᩻᩹;
 .end method

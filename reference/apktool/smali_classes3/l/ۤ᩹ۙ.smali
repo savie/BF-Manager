@@ -1,55 +1,74 @@
 .class public final Ll/ۤ᩹ۙ;
 .super Ljava/lang/Object;
-.source "RB93"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "28K4"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ܽۘۙ;
+.field public ۙ:Z
 
-.field public final synthetic ᩶:Ll/ܺ᩹ۙ;
+.field public final ᩷:Landroid/util/SparseBooleanArray;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܺ᩹ۙ;Ll/ܽۘۙ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 722
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۤ᩹ۙ;->᩶:Ll/ܺ᩹ۙ;
+    .line 47
+    new-instance v0, Landroid/util/SparseBooleanArray;
 
-    iput-object p2, p0, Ll/ۤ᩹ۙ;->ܺ:Ll/ܽۘۙ;
+    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    iput-object v0, p0, Ll/ۤ᩹ۙ;->᩷:Landroid/util/SparseBooleanArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final ۙ()Ll/᩸᩹ۙ;
+    .locals 2
 
-    .line 725
-    iget-object v0, p0, Ll/ۤ᩹ۙ;->᩶:Ll/ܺ᩹ۙ;
+    .line 161
+    iget-boolean v0, p0, Ll/ۤ᩹ۙ;->ۙ:Z
 
-    invoke-virtual {v0}, Ll/᩷᩹ۙ;->ۙ()V
+    const/4 v1, 0x1
 
-    const/4 v0, 0x2
+    xor-int/2addr v0, v1
 
-    .line 726
-    invoke-static {v0}, Ll/ۡ۬ۙ;->ۚ(I)Z
+    invoke-static {v0}, Ll/᩵᩵ۙ;->᩷(Z)V
 
-    move-result v0
+    .line 162
+    iput-boolean v1, p0, Ll/ۤ᩹ۙ;->ۙ:Z
 
-    if-eqz v0, :cond_0
+    .line 163
+    new-instance v0, Ll/᩸᩹ۙ;
 
-    .line 727
-    iget-object v0, p0, Ll/ۤ᩹ۙ;->ܺ:Ll/ܽۘۙ;
+    iget-object v1, p0, Ll/ۤ᩹ۙ;->᩷:Landroid/util/SparseBooleanArray;
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Ll/᩸᩹ۙ;-><init>(Landroid/util/SparseBooleanArray;)V
 
-    :cond_0
+    return-object v0
+.end method
+
+.method public final ۙ(I)V
+    .locals 2
+
+    .line 59
+    iget-boolean v0, p0, Ll/ۤ᩹ۙ;->ۙ:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Ll/᩵᩵ۙ;->᩷(Z)V
+
+    .line 60
+    iget-object v0, p0, Ll/ۤ᩹ۙ;->᩷:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->append(IZ)V
+
     return-void
 .end method

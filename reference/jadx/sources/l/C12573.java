@@ -1,33 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J1JQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12573 implements Comparable {
+import java.util.Arrays;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f42039;
+/* JADX INFO: renamed from: l.ۨ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21AZ */
+/* JADX INFO: loaded from: classes4.dex */
+public class C12573 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f42040;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C12573 f40367 = new C12573();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f42041;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String[] f40368 = {"standard", "accelerate", "decelerate", "linear"};
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        C12573 c12573 = (C12573) obj;
-        int iCompare = Integer.compare(this.f42039, c12573.f42039);
-        return iCompare == 0 ? Integer.compare(this.f42041, c12573.f42041) : iCompare;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public String f40369 = "identity";
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public double mo31288(double d) {
+        return d;
     }
 
-    public C12573(int i, int i2, int i3) {
-        this.f42041 = i;
-        this.f42039 = i2;
-        this.f42040 = i3;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public double mo31289(double d) {
+        return 1.0d;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C12573 m31287(String str) {
+        if (str == null) {
+            return null;
+        }
+        if (str.startsWith("cubic")) {
+            return new C20778(str);
+        }
+        switch (str) {
+            case "accelerate":
+                return new C20778("cubic(0.4, 0.05, 0.8, 0.7)");
+            case "decelerate":
+                return new C20778("cubic(0.0, 0.0, 0.2, 0.95)");
+            case "linear":
+                return new C20778("cubic(1, 1, 0, 0)");
+            case "standard":
+                return new C20778("cubic(0.4, 0.0, 0.2, 1)");
+            default:
+                Arrays.toString(f40368);
+                return f40367;
+        }
     }
 
     public final String toString() {
-        return "Group" + this.f42041 + " " + this.f42039 + "-" + this.f42040;
+        return this.f40369;
     }
 }

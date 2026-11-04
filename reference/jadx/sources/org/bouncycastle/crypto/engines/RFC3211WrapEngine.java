@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RFC3211WrapEngine implements Wrapper {
     public CBCBlockCipher engine;
     public boolean forWrapping;

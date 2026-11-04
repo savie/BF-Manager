@@ -40,11 +40,11 @@
     .line 410
     iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$SettleRunnable;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Ll/ܶܰۙ;
+    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Ll/᩻᩷ۙ;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll/ܶܰۙ;->ۖ()Z
+    invoke-virtual {v0}, Ll/᩻᩷ۙ;->᩸()Z
 
     move-result v0
 
@@ -53,7 +53,7 @@
     .line 411
     iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$SettleRunnable;->view:Landroid/view/View;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1359
     invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V

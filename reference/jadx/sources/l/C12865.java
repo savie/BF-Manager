@@ -1,50 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y1R8 */
+/* JADX INFO: renamed from: l.۫ۙۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S98Z */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12865 implements InterfaceC17803 {
+public final class C12865 implements InterfaceC16594 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C12865 f42782 = new C12865();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f41190;
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3481(int i, byte[] bArr) {
-        byte b;
-        long j;
-        int[][] iArr = C2280.f8142;
-        int i2 = 0;
-        long j2 = 0;
-        long j3 = 1;
-        int i3 = 1;
-        int i4 = 1;
-        while (i2 < i - 1) {
-            byte b2 = bArr[i2];
-            if (b2 < 0) {
-                i4++;
-                if (-95 <= b2 && b2 <= -9 && -95 <= (b = bArr[i2 + 1]) && b <= -2) {
-                    i3++;
-                    j3 += 500;
-                    int i5 = b2 + 95;
-                    int i6 = iArr[i5][b + 95];
-                    if (i6 != 0) {
-                        j = i6;
-                    } else if (15 <= i5 && i5 < 55) {
-                        j = 200;
-                    }
-                    j2 += j;
-                }
-                i2++;
-            }
-            i2++;
-        }
-        return (int) (((j2 / j3) * 50.0f) + ((i3 / i4) * 50.0f));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5408 f41191;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f41192 = 0;
+
+    public C12865(C5408 c5408) {
+        this.f41191 = c5408;
+        this.f41190 = c5408.m16131();
     }
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3480() {
-        return C22037.f71422;
+    @Override // l.InterfaceC16594
+    public final int read() {
+        int i = this.f41192;
+        int i2 = this.f41190;
+        if (i >= i2) {
+            return -1;
+        }
+        this.f41192 = i + 1;
+        int i3 = (i2 - 1) - i;
+        return (this.f41191.mo6024(i3 >> 2) >>> ((i3 & 3) << 3)) & 255;
     }
 }

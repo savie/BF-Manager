@@ -1,52 +1,53 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22158 extends AbstractC5930 implements InterfaceC9420 {
+import java.io.IOException;
+import java.io.OutputStream;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f72476;
+/* JADX INFO: renamed from: l.᩷ܶ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F2NF */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22158 extends AbstractC13207 {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public AbstractC5930 f72477;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final OutputStream f71374;
 
-    public C22158(AbstractC5930 abstractC5930, AbstractC5930 abstractC5931) {
-        this.f72477 = abstractC5930;
-        this.f72476 = abstractC5931;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public long f71375 = 0;
+
+    public C22158(OutputStream outputStream) {
+        this.f71374 = outputStream;
     }
 
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3957(this);
+    @Override // java.io.OutputStream
+    public final void write(int i) throws IOException {
+        this.f71374.write(i);
+        long j = this.f71375;
+        if (j >= 0) {
+            this.f71375 = j + 1;
+        }
     }
 
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.ARRAY_ACCESS;
+    @Override // java.io.OutputStream
+    public final void write(byte[] bArr, int i, int i2) throws IOException {
+        this.f71374.write(bArr, i, i2);
+        long j = this.f71375;
+        if (j >= 0) {
+            this.f71375 = j + ((long) i2);
+        }
     }
 
-    @Override // l.InterfaceC9420
-    public final AbstractC5930 getExpression() {
-        return this.f72477;
+    @Override // java.io.OutputStream, java.io.Flushable
+    public final void flush() throws IOException {
+        this.f71374.flush();
     }
 
-    @Override // l.InterfaceC9420
-    public final AbstractC5930 getIndex() {
-        return this.f72476;
+    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        this.f71374.close();
     }
 
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1913(this, obj);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60540;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m50122() {
+        return this.f71375;
     }
 }

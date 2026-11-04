@@ -1,43 +1,54 @@
 package l;
 
-import java.io.Writer;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.᩵ۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G5WC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C19208 extends Writer {
+/* JADX INFO: renamed from: l.ᩳܽ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 195F */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19208 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public StringBuilder f62032 = new StringBuilder(128);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public AbstractC22044 f62125;
 
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        m44126();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 f62126;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f62127;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10257 f62128;
+
+    public C19208(C10257 c10257, AbstractC22044 abstractC22044, String str) {
+        this.f62128 = c10257;
+        this.f62126 = abstractC22044;
+        this.f62127 = str;
     }
 
-    @Override // java.io.Writer, java.io.Flushable
-    public final void flush() {
-        m44126();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final OutputStream m44523(int i, int i2) {
+        String strM26446 = C10257.m26446(i, i2, this.f62127);
+        this.f62128.mo29447(strM26446);
+        AbstractC22044 abstractC22044M49868 = this.f62126.m49868(strM26446);
+        this.f62125 = abstractC22044M49868;
+        return abstractC22044M49868.mo4289(false);
     }
 
-    @Override // java.io.Writer
-    public final void write(char[] cArr, int i, int i2) {
-        for (int i3 = 0; i3 < i2; i3++) {
-            char c = cArr[i + i3];
-            if (c == '\n') {
-                m44126();
-            } else {
-                this.f62032.append(c);
-            }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m44525() {
+        AbstractC22044 abstractC22044 = this.f62125;
+        if (abstractC22044 != null) {
+            this.f62128.f32755.add(abstractC22044.getName());
+            this.f62125 = null;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m44126() {
-        StringBuilder sb = this.f62032;
-        if (sb.length() > 0) {
-            sb.toString();
-            sb.delete(0, sb.length());
+    public final void m44524() {
+        AbstractC22044 abstractC22044 = this.f62125;
+        if (abstractC22044 != null) {
+            abstractC22044.mo4296();
+            this.f62125 = null;
         }
     }
 }

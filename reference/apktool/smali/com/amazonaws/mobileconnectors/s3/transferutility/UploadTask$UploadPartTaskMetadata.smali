@@ -6,6 +6,6 @@
 # instance fields
 .field public ۙ:J
 
-.field public ۨ:Ljava/util/concurrent/Future;
+.field public ۤ:Ljava/util/concurrent/Future;
 
-.field public ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;
+.field public ᩷:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferState;

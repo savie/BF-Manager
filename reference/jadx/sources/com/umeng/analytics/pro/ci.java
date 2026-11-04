@@ -1,6 +1,6 @@
 package com.umeng.analytics.pro;
 
-import l.C8015;
+import l.C0703;
 
 /* JADX INFO: compiled from: R5FG */
 /* JADX INFO: loaded from: classes.dex */
@@ -42,7 +42,7 @@ public abstract class ci {
         while (i3 < i2) {
             int iA = a(bArr, i + i3, i2 - i3);
             if (iA <= 0) {
-                throw new cj(C8015.m21119("Cannot read. Remote side has closed. Tried to read ", i2, " bytes, but only got ", " bytes. (This is often indicative of an internal error on the server side. Please check your server logs.)", i3));
+                throw new cj(C0703.m3016("Cannot read. Remote side has closed. Tried to read ", i2, " bytes, but only got ", " bytes. (This is often indicative of an internal error on the server side. Please check your server logs.)", i3));
             }
             i3 += iA;
         }

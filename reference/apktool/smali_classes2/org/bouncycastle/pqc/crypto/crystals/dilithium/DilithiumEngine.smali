@@ -178,7 +178,7 @@
     const-string v0, "is not supported by Crystals Dilithium!"
 
     .line 0
-    invoke-static {p1, p3, v0}, Ll/ۖۘۖ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p3, v0}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -315,7 +315,7 @@
 
     iget v0, p0, Lorg/bouncycastle/pqc/crypto/crystals/dilithium/DilithiumEngine;->DilithiumPolyZPackedBytes:I
 
-    invoke-static {p3, v0, p2, p1}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {p3, v0, p2, p1}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result p1
 

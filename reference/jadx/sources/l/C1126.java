@@ -1,22 +1,52 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.function.BiPredicate;
 
-/* JADX INFO: renamed from: l.֨۫᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51V0 */
+/* JADX INFO: renamed from: l.֨ۧۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1126 extends AbstractC7619 {
+public final /* synthetic */ class C1126 implements BiPredicate {
+    public final /* synthetic */ int a;
+    public final /* synthetic */ BiPredicate b;
+    public final /* synthetic */ BiPredicate c;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f5056;
-
-    public C1126(ArrayList arrayList) {
-        this.f5056 = arrayList;
+    public /* synthetic */ C1126(BiPredicate biPredicate, BiPredicate biPredicate2, int i) {
+        this.a = i;
+        this.b = biPredicate;
+        this.c = biPredicate2;
     }
 
-    @Override // l.InterfaceC0390
-    public final List getValue() {
-        return this.f5056;
+    public final /* synthetic */ BiPredicate and(BiPredicate biPredicate) {
+        switch (this.a) {
+            case 0:
+                break;
+        }
+        return C20517.$default$and(this, biPredicate);
+    }
+
+    public final /* synthetic */ BiPredicate negate() {
+        switch (this.a) {
+            case 0:
+                break;
+        }
+        return C20517.$default$negate(this);
+    }
+
+    public final /* synthetic */ BiPredicate or(BiPredicate biPredicate) {
+        switch (this.a) {
+            case 0:
+                break;
+        }
+        return C20517.$default$or(this, biPredicate);
+    }
+
+    @Override // java.util.function.BiPredicate
+    public final boolean test(Object obj, Object obj2) {
+        switch (this.a) {
+            case 0:
+                return this.b.test(obj, obj2) || this.c.test(obj, obj2);
+            default:
+                return this.b.test(obj, obj2) && this.c.test(obj, obj2);
+        }
     }
 }

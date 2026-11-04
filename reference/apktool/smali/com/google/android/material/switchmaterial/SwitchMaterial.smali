@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/switchmaterial/SwitchMaterial;
-.super Ll/۫ᩳ;
+.super Ll/֨ܶ;
 .source "SwitchMaterial.java"
 
 
@@ -24,7 +24,7 @@
     .locals 5
 
     .line 46
-    sget v0, Ll/ᩴ۟ܶ;->ܿ᩻:I
+    sget v0, Ll/ۘ۬ܺ;->ᩳۡ:I
 
     sput v0, Lcom/google/android/material/switchmaterial/SwitchMaterial;->DEF_STYLE_RES:I
 
@@ -93,7 +93,7 @@
     .locals 1
 
     .line 66
-    sget v0, Ll/ۖ۟ܶ;->۠ۛ:I
+    sget v0, Ll/ۧ۬ܺ;->ۗۢ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/switchmaterial/SwitchMaterial;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -110,7 +110,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Ll/۫ᩳ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ll/֨ܶ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 72
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -125,7 +125,7 @@
     iput-object p1, p0, Lcom/google/android/material/switchmaterial/SwitchMaterial;->elevationOverlayProvider:Lcom/google/android/material/elevation/ElevationOverlayProvider;
 
     .line 76
-    sget-object v2, Ll/۠۟ܶ;->۫ܶۙ:[I
+    sget-object v2, Ll/ܰ۬ܺ;->۟ܺۙ:[I
 
     const/4 p1, 0x0
 
@@ -141,7 +141,7 @@
     move-result-object p2
 
     .line 80
-    sget p3, Ll/۠۟ܶ;->ܿܶۙ:I
+    sget p3, Ll/ܰ۬ܺ;->ᩳܺۙ:I
 
     .line 81
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -165,14 +165,14 @@
     if-nez v0, :cond_1
 
     .line 122
-    sget v0, Ll/ۖ۟ܶ;->ۛ֨:I
+    sget v0, Ll/ۧ۬ܺ;->ۢ۫:I
 
     invoke-static {p0, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
     move-result v0
 
     .line 123
-    sget v1, Ll/ۖ۟ܶ;->᩷᩹:I
+    sget v1, Ll/ۧ۬ܺ;->ۘܳ:I
 
     invoke-static {p0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
@@ -183,7 +183,7 @@
 
     move-result-object v2
 
-    sget v3, Ll/֨۟ܶ;->ܶܺ:I
+    sget v3, Ll/ܽ۬ܺ;->ܺܰ:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -283,21 +283,21 @@
     new-array v1, v1, [I
 
     .line 147
-    sget v2, Ll/ۖ۟ܶ;->ۛ֨:I
+    sget v2, Ll/ۧ۬ܺ;->ۢ۫:I
 
     invoke-static {p0, v2}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
     move-result v2
 
     .line 148
-    sget v3, Ll/ۖ۟ܶ;->᩷᩹:I
+    sget v3, Ll/ۧ۬ܺ;->ۘܳ:I
 
     invoke-static {p0, v3}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
     move-result v3
 
     .line 149
-    sget v4, Ll/ۖ۟ܶ;->᩹֨:I
+    sget v4, Ll/ۧ۬ܺ;->ܳ۫:I
 
     invoke-static {p0, v4}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
 
@@ -381,7 +381,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ll/۫ᩳ;->getThumbTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {p0}, Ll/֨ܶ;->getThumbTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -392,7 +392,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ll/۫ᩳ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, v0}, Ll/֨ܶ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
 
     .line 93
     :cond_0
@@ -400,7 +400,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Ll/۫ᩳ;->getTrackTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {p0}, Ll/֨ܶ;->getTrackTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -411,7 +411,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ll/۫ᩳ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, v0}, Ll/֨ܶ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     return-void
@@ -430,14 +430,14 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ll/۫ᩳ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, Ll/֨ܶ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
 
     .line 108
     invoke-direct {p0}, Lcom/google/android/material/switchmaterial/SwitchMaterial;->getMaterialThemeColorsTrackTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ll/۫ᩳ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, Ll/֨ܶ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 
@@ -445,10 +445,10 @@
     const/4 p1, 0x0
 
     .line 110
-    invoke-virtual {p0, p1}, Ll/۫ᩳ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, Ll/֨ܶ;->setThumbTintList(Landroid/content/res/ColorStateList;)V
 
     .line 111
-    invoke-virtual {p0, p1}, Ll/۫ᩳ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, Ll/֨ܶ;->setTrackTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method

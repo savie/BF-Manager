@@ -1,6 +1,6 @@
 package net.engio.mbassy.bus.error;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageBusException extends Exception {
     public MessageBusException(String str) {
         super(str);

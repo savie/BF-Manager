@@ -48,7 +48,7 @@
 
 .field public final divider:Landroid/view/View;
 
-.field public final dummyToolbar:Ll/ۜᩴ;
+.field public final dummyToolbar:Ll/ܶ᩹;
 
 .field public final editText:Landroid/widget/EditText;
 
@@ -64,7 +64,7 @@
 
 .field public final searchView:Lcom/google/android/material/search/SearchView;
 
-.field public final toolbar:Ll/ۜᩴ;
+.field public final toolbar:Ll/ܶ᩹;
 
 .field public final toolbarContainer:Landroid/widget/FrameLayout;
 
@@ -88,11 +88,11 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$WWXE9jFF650BkIjOhTeSBIog5c8(Ll/ۡ֨;Landroid/animation/ValueAnimator;)V
+.method public static synthetic $r8$lambda$WWXE9jFF650BkIjOhTeSBIog5c8(Ll/᩺۫;Landroid/animation/ValueAnimator;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Lcom/google/android/material/search/SearchViewAnimationHelper;->lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(Ll/ۡ֨;Landroid/animation/ValueAnimator;)V
+    invoke-static {p0, p1}, Lcom/google/android/material/search/SearchViewAnimationHelper;->lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(Ll/᩺۫;Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method
@@ -147,12 +147,12 @@
     .line 113
     iget-object v1, p1, Lcom/google/android/material/search/SearchView;->toolbar:Lcom/google/android/material/appbar/MaterialToolbar;
 
-    iput-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iput-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
     .line 114
-    iget-object v1, p1, Lcom/google/android/material/search/SearchView;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v1, p1, Lcom/google/android/material/search/SearchView;->dummyToolbar:Ll/ܶ᩹;
 
-    iput-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iput-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
     .line 115
     iget-object v1, p1, Lcom/google/android/material/search/SearchView;->searchPrefix:Landroid/widget/TextView;
@@ -229,9 +229,9 @@
     .locals 8
 
     .line 458
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
-    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object v0
 
@@ -322,9 +322,9 @@
     .locals 2
 
     .line 414
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
-    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ۜᩴ;)Landroid/widget/ImageButton;
+    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ܶ᩹;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ll/۟ܿ;->ۚ(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Ll/֡ᩳ;->ᩴ(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -370,9 +370,9 @@
     .locals 8
 
     .line 398
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
-    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ۜᩴ;)Landroid/widget/ImageButton;
+    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getNavigationIconButton(Ll/ܶ᩹;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -461,12 +461,12 @@
     .locals 2
 
     .line 429
-    instance-of v0, p2, Ll/ۡ֨;
+    instance-of v0, p2, Ll/᩺۫;
 
     if-eqz v0, :cond_0
 
     .line 430
-    check-cast p2, Ll/ۡ֨;
+    check-cast p2, Ll/᩺۫;
 
     const/4 v0, 0x2
 
@@ -482,7 +482,7 @@
     .line 432
     new-instance v1, Lcom/google/android/material/search/SearchViewAnimationHelper$$ExternalSyntheticLambda1;
 
-    invoke-direct {v1, p2}, Lcom/google/android/material/search/SearchViewAnimationHelper$$ExternalSyntheticLambda1;-><init>(Ll/ۡ֨;)V
+    invoke-direct {v1, p2}, Lcom/google/android/material/search/SearchViewAnimationHelper$$ExternalSyntheticLambda1;-><init>(Ll/᩺۫;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -605,16 +605,16 @@
     if-eqz p1, :cond_1
 
     .line 490
-    iget-object p1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object p1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
-    invoke-static {p1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {p1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object p1
 
     .line 491
-    iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
-    invoke-static {v1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {v1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object v1
 
@@ -1073,7 +1073,7 @@
     const/4 v0, 0x0
 
     .line 476
-    iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
     invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/search/SearchViewAnimationHelper;->getTranslationAnimator(ZZLandroid/view/View;)Landroid/animation/Animator;
 
@@ -1304,7 +1304,7 @@
     .line 569
     iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->searchBar:Lcom/google/android/material/search/SearchBar;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
@@ -1849,7 +1849,7 @@
     return-object v1
 .end method
 
-.method public static synthetic lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(Ll/ۡ֨;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$addDrawerArrowDrawableAnimatorIfNeeded$3(Ll/᩺۫;Landroid/animation/ValueAnimator;)V
     .locals 0
 
     .line 433
@@ -1863,7 +1863,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Ll/ۡ֨;->ۙ(F)V
+    invoke-virtual {p0, p1}, Ll/᩺۫;->ۙ(F)V
 
     return-void
 .end method
@@ -1977,9 +1977,9 @@
     if-eqz v0, :cond_0
 
     .line 318
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->toolbar:Ll/ܶ᩹;
 
-    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {v0}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object v0
 
@@ -2020,7 +2020,7 @@
     .locals 2
 
     .line 449
-    instance-of v0, p1, Ll/ۡ֨;
+    instance-of v0, p1, Ll/᩺۫;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -2029,9 +2029,9 @@
     .line 450
     move-object v0, p1
 
-    check-cast v0, Ll/ۡ֨;
+    check-cast v0, Ll/᩺۫;
 
-    invoke-virtual {v0, v1}, Ll/ۡ֨;->ۙ(F)V
+    invoke-virtual {v0, v1}, Ll/᩺۫;->ۙ(F)V
 
     .line 452
     :cond_0
@@ -2048,11 +2048,11 @@
     return-void
 .end method
 
-.method private setMenuItemsNotClickable(Ll/ۜᩴ;)V
+.method private setMenuItemsNotClickable(Ll/ܶ᩹;)V
     .locals 3
 
     .line 604
-    invoke-static {p1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ۜᩴ;)Ll/᩺ۜ;
+    invoke-static {p1}, Lcom/google/android/material/internal/ToolbarUtils;->getActionMenuView(Ll/ܶ᩹;)Ll/ܽۧ;
 
     move-result-object p1
 
@@ -2096,9 +2096,9 @@
     .locals 2
 
     .line 590
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
-    invoke-virtual {v0}, Ll/ۜᩴ;->getMenu()Landroid/view/Menu;
+    invoke-virtual {v0}, Ll/ܶ᩹;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
@@ -2128,7 +2128,7 @@
     if-eqz v0, :cond_1
 
     .line 595
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
     iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->searchBar:Lcom/google/android/material/search/SearchBar;
 
@@ -2136,15 +2136,15 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ll/ۜᩴ;->inflateMenu(I)V
+    invoke-virtual {v0, v1}, Ll/ܶ᩹;->inflateMenu(I)V
 
     .line 596
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/search/SearchViewAnimationHelper;->setMenuItemsNotClickable(Ll/ۜᩴ;)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/search/SearchViewAnimationHelper;->setMenuItemsNotClickable(Ll/ܶ᩹;)V
 
     .line 597
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
     const/4 v1, 0x0
 
@@ -2154,7 +2154,7 @@
 
     .line 599
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ۜᩴ;
+    iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->dummyToolbar:Ll/ܶ᩹;
 
     const/16 v1, 0x8
 
@@ -2326,7 +2326,7 @@
     iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->searchView:Lcom/google/android/material/search/SearchView;
 
     .line 205
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v1, Lcom/google/android/material/search/SearchViewAnimationHelper$$ExternalSyntheticLambda4;
 
@@ -2467,13 +2467,13 @@
     return-object v0
 .end method
 
-.method public onHandleBackInvoked()Ll/֡ܰ;
+.method public onHandleBackInvoked()Ll/ܿ᩷;
     .locals 1
 
     .line 650
     iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->backHelper:Lcom/google/android/material/motion/MaterialMainContainerBackHelper;
 
-    invoke-virtual {v0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onHandleBackInvoked()Ll/֡ܰ;
+    invoke-virtual {v0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onHandleBackInvoked()Ll/ܿ᩷;
 
     move-result-object v0
 
@@ -2509,7 +2509,7 @@
     return-void
 .end method
 
-.method public startBackProgress(Ll/֡ܰ;)V
+.method public startBackProgress(Ll/ܿ᩷;)V
     .locals 2
 
     .line 616
@@ -2517,16 +2517,16 @@
 
     iget-object v1, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->searchBar:Lcom/google/android/material/search/SearchBar;
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/motion/MaterialMainContainerBackHelper;->startBackProgress(Ll/֡ܰ;Landroid/view/View;)V
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/motion/MaterialMainContainerBackHelper;->startBackProgress(Ll/ܿ᩷;Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public updateBackProgress(Ll/֡ܰ;)V
+.method public updateBackProgress(Ll/ܿ᩷;)V
     .locals 3
 
     .line 621
-    invoke-virtual {p1}, Ll/֡ܰ;->ۙ()F
+    invoke-virtual {p1}, Ll/ܿ᩷;->ۙ()F
 
     move-result v0
 
@@ -2548,7 +2548,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/google/android/material/motion/MaterialMainContainerBackHelper;->updateBackProgress(Ll/֡ܰ;Landroid/view/View;F)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/google/android/material/motion/MaterialMainContainerBackHelper;->updateBackProgress(Ll/ܿ᩷;Landroid/view/View;F)V
 
     .line 627
     iget-object v0, p0, Lcom/google/android/material/search/SearchViewAnimationHelper;->backProgressAnimatorSet:Landroid/animation/AnimatorSet;
@@ -2604,7 +2604,7 @@
 
     .line 644
     :cond_3
-    invoke-virtual {p1}, Ll/֡ܰ;->ۙ()F
+    invoke-virtual {p1}, Ll/ܿ᩷;->ۙ()F
 
     move-result p1
 

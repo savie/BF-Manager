@@ -1,48 +1,56 @@
-.class public final Ll/ᩴ᩷᩵;
-.super Ll/ܰ᩷᩵;
-.source "F63J"
+.class public final synthetic Ll/ᩴ᩷᩵;
+.super Ljava/lang/Object;
+.source "Q6FB"
 
 
-# virtual methods
-.method public final ۙ(Ll/۫۠ۡ;)Z
+# static fields
+.field public static final synthetic ۙ:[I
+
+
+# direct methods
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 51
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 482
+    invoke-static {}, Ll/᩺ۢۗ;->values()[Ll/᩺ۢۗ;
 
-    const/16 v0, 0x35
+    move-result-object v0
 
-    const-string v1, "#Replaced unresolvable odex instruction with a throw\n"
+    array-length v0, v0
 
-    const/4 v2, 0x0
+    new-array v0, v0, [I
 
-    .line 116
-    invoke-virtual {p1, v1, v2, v0}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
+    sput-object v0, Ll/ᩴ᩷᩵;->ۙ:[I
 
-    const-string v0, "throw "
+    :try_start_0
+    sget-object v1, Ll/᩺ۢۗ;->۠ۙ:Ll/᩺ۢۗ;
 
-    const/4 v1, 0x6
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1, v0, v2, v1}, Ll/۫۠ۡ;->write(Ljava/lang/String;II)V
+    move-result v1
 
-    .line 53
-    iget-object v0, p0, Ll/ܰ᩷᩵;->᩶:Ll/֫ۙۡ;
+    const/4 v2, 0x1
 
-    check-cast v0, Ll/ۛ۫᩵;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ᩴ᩷᩵;->ۙ:[I
 
-    const/4 v0, 0x0
+    sget-object v1, Ll/᩺ۢۗ;->۫ۙ:Ll/᩺ۢۗ;
 
-    invoke-virtual {p0, p1, v0}, Ll/ܰ᩷᩵;->ܰ(Ll/۫۠ۡ;I)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 p1, 0x1
+    move-result v1
 
-    return p1
-.end method
+    const/4 v2, 0x2
 
-.method public final ۚ()V
-    .locals 0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
+    :catch_1
     return-void
 .end method

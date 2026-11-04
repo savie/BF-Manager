@@ -1,48 +1,23 @@
 package l;
 
 /* JADX INFO: renamed from: l.֡֫ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8459 */
+/* JADX INFO: compiled from: 86A1 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0101 extends C22220 {
-
+public final class C0101 implements InterfaceC22760 {
+    @Override // l.InterfaceC22760
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC8774 f1041;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC8774 f1042;
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo1065(C8753 c8753) {
-    }
-
-    public C0101(AbstractC8774 abstractC8774, AbstractC8774 abstractC8775) {
-        this.f1042 = abstractC8774;
-        this.f1041 = abstractC8775;
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo1066(C17924 c17924) {
-        if (c17924.f56927 == this.f1042) {
-            c17924.f56927 = this.f1041;
-        }
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo1068(C21473 c21473) {
-        if (c21473.f69789 == this.f1042) {
-            c21473.f69789 = this.f1041;
-        }
-        mo7248(c21473.f69790);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo1067(C20747 c20747) {
-        if (c20747.f67505 == this.f1042) {
-            c20747.f67505 = this.f1041;
+    public final void mo1200(C19929 c19929) {
+        int iM34627 = ((C14270) c19929.m45858()).m34627();
+        byte[] bArr = (byte[]) ((C14270) c19929.m45858()).m34634();
+        int[] iArr = (int[]) ((C14270) c19929.m45858()).m34634();
+        int i = iM34627 * 4;
+        while (iM34627 < iArr.length) {
+            int i2 = ((bArr[i + 1] & 255) << 8) | ((~bArr[i]) & 255);
+            int i3 = i + 3;
+            int i4 = i2 | (((~bArr[i + 2]) & 255) << 16);
+            i += 4;
+            iArr[iM34627] = i4 | ((bArr[i3] & 255) << 24);
+            iM34627++;
         }
     }
 }

@@ -1,68 +1,61 @@
 .class public final Ll/ܺ۫᩹;
 .super Ljava/lang/Object;
-.source "X4HD"
-
-# interfaces
-.implements Ll/ۘܳۨ;
+.source "G90S"
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ܳܰۖ;
+.field public final ۙ:I
 
-.field public final synthetic ܰ:Ll/ܿ۫᩹;
+.field public final ᩷:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ۫᩹;Ll/ܳܰۖ;)V
+.method public constructor <init>(ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 129
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܺ۫᩹;->ܰ:Ll/ܿ۫᩹;
+    .line 53
+    iput p1, p0, Ll/ܺ۫᩹;->ۙ:I
 
-    iput-object p2, p0, Ll/ܺ۫᩹;->ۙ:Ll/ܳܰۖ;
+    .line 54
+    iput-object p2, p0, Ll/ܺ۫᩹;->᩷:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCanceled()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 142
-    iget-object v0, p0, Ll/ܺ۫᩹;->ܰ:Ll/ܿ۫᩹;
+    .line 69
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Ll/ܿ۫᩹;->onCanceled()V
+    const-string v1, "Cell{alignment="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final onSuccess()V
-    .locals 3
+    iget v1, p0, Ll/ܺ۫᩹;->ۙ:I
 
-    .line 132
-    iget-object v0, p0, Ll/ܺ۫᩹;->ۙ:Ll/ܳܰۖ;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, ", text="
 
-    iget-object v2, p0, Ll/ܺ۫᩹;->ܰ:Ll/ܿ۫᩹;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v2, v0, v1}, Ll/ܿ۫᩹;->ۙ(Ll/ܳܰۖ;Z)V
+    iget-object v1, p0, Ll/ܺ۫᩹;->᩷:Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final ۙ(Ljava/lang/Exception;)Z
-    .locals 1
+    const/16 v1, 0x7d
 
-    .line 137
-    iget-object v0, p0, Ll/ܺ۫᩹;->ܰ:Ll/ܿ۫᩹;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ll/ܿ۫᩹;->ۙ(Ljava/lang/Exception;)Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    return-object v0
 .end method

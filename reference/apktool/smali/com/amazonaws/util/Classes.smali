@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/Classes;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/Classes;
 
 
 # direct methods
@@ -16,7 +16,7 @@
     new-array v0, v0, [Lcom/amazonaws/util/Classes;
 
     .line 29
-    sput-object v0, Lcom/amazonaws/util/Classes;->ܺ:[Lcom/amazonaws/util/Classes;
+    sput-object v0, Lcom/amazonaws/util/Classes;->ܰ:[Lcom/amazonaws/util/Classes;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 29
-    sget-object v0, Lcom/amazonaws/util/Classes;->ܺ:[Lcom/amazonaws/util/Classes;
+    sget-object v0, Lcom/amazonaws/util/Classes;->ܰ:[Lcom/amazonaws/util/Classes;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/Classes;->clone()Ljava/lang/Object;
 

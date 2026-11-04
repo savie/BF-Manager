@@ -1,35 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺۠ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U8D0 */
+import java.io.InputStream;
+import java.io.OutputStream;
+import net.sf.sevenzipjbinding.NativeXZOutputStream;
+
+/* JADX INFO: renamed from: l.᩸ܳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: F8CE */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22872 extends AbstractC0998 implements InterfaceC12994 {
+public final class C22872 implements InterfaceC1989 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C21064 f74393;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final int[] f74328 = {0, 3, 6, 7, 8};
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C8761 f74394 = new C8761();
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C7659 f74395;
-
-    public C22872() {
-        C7659 c7659 = new C7659(1, "Amplitude", 1.0d);
-        this.f74395 = c7659;
-        m3818(c7659);
-        C21064 c21064 = new C21064(0);
-        this.f74393 = c21064;
-        m3818(c21064);
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo6818(byte[] bArr, int i) {
+        return C21030.m48048(i, bArr);
     }
 
-    @Override // l.AbstractC0998
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2809() {
-        double[] dArrM36893 = this.f74395.m36893();
-        double[] dArrM36894 = this.f74393.m36893();
-        for (int i = 0; i < 8; i++) {
-            dArrM36894[i] = this.f74394.m22765() * dArrM36893[i];
-        }
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo6815(InterfaceC17713 interfaceC17713) {
+        return C21030.m48047(interfaceC17713);
+    }
+
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final InputStream mo6816(InputStream inputStream) {
+        return C24653.m55007(inputStream);
+    }
+
+    @Override // l.InterfaceC1989
+    /* JADX INFO: renamed from: ۙ */
+    public final OutputStream mo6817(OutputStream outputStream, int i, long j) {
+        OutputStream outputStreamM55008 = C24653.m55008(outputStream, f74328[i]);
+        return (j <= 0 || !(outputStreamM55008 instanceof NativeXZOutputStream)) ? outputStreamM55008 : new C11683((NativeXZOutputStream) outputStreamM55008, j);
     }
 }

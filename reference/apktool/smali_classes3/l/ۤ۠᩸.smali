@@ -1,29 +1,48 @@
-.class public final Ll/ۤ۠᩸;
+.class public final synthetic Ll/ۤ۠᩸;
 .super Ljava/lang/Object;
-.source "I9QN"
+.source "X68P"
 
 # interfaces
-.implements Ll/ۘ᩵᩸;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/᩺ۜ᩸;
+
+.field public final synthetic ܿ:Ljava/lang/Runnable;
+
+.field public final synthetic ᩶:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩺ۜ᩸;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۤ۠᩸;->ܰ:Ll/᩺ۜ᩸;
+
+    iput-object p2, p0, Ll/ۤ۠᩸;->᩶:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Ll/ۤ۠᩸;->ܿ:Ljava/lang/Runnable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Class;)Ll/۬᩵᩸;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    .line 143
-    new-instance p1, Ljava/lang/IllegalStateException;
+    .line 0
+    iget-object v0, p0, Ll/ۤ۠᩸;->᩶:Ljava/lang/Runnable;
 
-    const-string v0, "This should never be called."
+    iget-object v1, p0, Ll/ۤ۠᩸;->ܿ:Ljava/lang/Runnable;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Ll/ۤ۠᩸;->ܰ:Ll/᩺ۜ᩸;
 
-    throw p1
-.end method
+    invoke-static {v2, v0, v1}, Ll/᩺ۜ᩸;->ۙ(Ll/᩺ۜ᩸;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-.method public final ܰ(Ljava/lang/Class;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

@@ -30,7 +30,7 @@
     .locals 4
 
     .line 47
-    sget v0, Ll/ۖ۟ܶ;->ۘ᩺:I
+    sget v0, Ll/ۧ۬ܺ;->֫᩻:I
 
     filled-new-array {v0}, [I
 
@@ -188,7 +188,7 @@
     invoke-virtual {v2, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 108
-    invoke-static {v2}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v2}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -210,7 +210,7 @@
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 117
-    invoke-static {v1}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -636,7 +636,7 @@
 
     .line 404
     :cond_0
-    sget v1, Ll/ۨۛ;->ۙ:I
+    sget v1, Ll/۫ۢ;->ۙ:I
 
     const/16 v1, 0x21
 
@@ -653,7 +653,7 @@
 
     const-string v1, "CODENAME"
 
-    invoke-static {v0, v1}, Ll/ܰ֡۠;->ܰ(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/ܳۡ᩵;->᩷(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "REL"
 
@@ -676,7 +676,7 @@
 
     const-string v4, "this as java.lang.String).toUpperCase(Locale.ROOT)"
 
-    invoke-static {v0, v4}, Ll/ܰ֡۠;->ܰ(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Ll/ܳۡ᩵;->᩷(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v5, "Tiramisu"
 
@@ -684,7 +684,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Ll/ܰ֡۠;->ܰ(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Ll/ܳۡ᩵;->᩷(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 

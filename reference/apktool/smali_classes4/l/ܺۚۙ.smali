@@ -1,45 +1,74 @@
-.class public Ll/ܺۚۙ;
+.class public final Ll/ܺۚۙ;
 .super Ljava/lang/Object;
-.source "FB0V"
+.source "O5NM"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+
+
+# instance fields
+.field public ܰ:I
+
+.field public ᩶:Ljava/lang/String;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 3539
+    new-instance v0, Ll/᩻ۚۙ;
+
+    .line 3540
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 3539
+    sput-object v0, Ll/ܺۚۙ;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 3518
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3519
+    iput-object p1, p0, Ll/ܺۚۙ;->᩶:Ljava/lang/String;
+
+    .line 3520
+    iput p2, p0, Ll/ܺۚۙ;->ܰ:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public ۙ(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public ۙ(Z)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public ۙ()Z
+.method public final describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
-    throw v0
+    return v0
 .end method
 
-.method public ۙ([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    const/4 p1, 0x0
+    .line 3535
+    iget-object p2, p0, Ll/ܺۚۙ;->᩶:Ljava/lang/String;
 
-    throw p1
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-.method public ܰ(Z)V
-    .locals 0
+    .line 3536
+    iget p2, p0, Ll/ܺۚۙ;->ܰ:I
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    throw p1
+    return-void
 .end method

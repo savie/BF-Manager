@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.rosstandart;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface RosstandartObjectIdentifiers {
     public static final ASN1ObjectIdentifier id_tc26;
     public static final ASN1ObjectIdentifier id_tc26_agreement;

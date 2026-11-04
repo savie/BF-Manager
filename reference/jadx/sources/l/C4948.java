@@ -1,11 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩺֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: TAIM */
+import android.view.View;
+import android.widget.TextView;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.ۙܰۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1KQ */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C4948 implements InterfaceC6440 {
-    @Override // l.InterfaceC6440
-    public final AbstractC4674 create() {
-        return new C6338("tar");
+public final class C4948 extends AbstractC11800 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final TextView f17237;
+
+    public C4948(View view) {
+        super(view);
+        this.f17237 = (TextView) view.findViewById(R.id.textView);
     }
 }

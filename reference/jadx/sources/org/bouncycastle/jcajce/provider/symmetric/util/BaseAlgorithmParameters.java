@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.provider.symmetric.util;
 import java.security.AlgorithmParametersSpi;
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class BaseAlgorithmParameters extends AlgorithmParametersSpi {
     @Override // java.security.AlgorithmParametersSpi
     public AlgorithmParameterSpec engineGetParameterSpec(Class cls) {

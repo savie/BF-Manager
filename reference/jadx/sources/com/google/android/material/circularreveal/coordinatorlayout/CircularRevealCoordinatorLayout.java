@@ -6,10 +6,10 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import com.google.android.material.circularreveal.CircularRevealHelper;
 import com.google.android.material.circularreveal.CircularRevealWidget;
-import l.C2746;
+import l.C25276;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class CircularRevealCoordinatorLayout extends C2746 implements CircularRevealWidget {
+public class CircularRevealCoordinatorLayout extends C25276 implements CircularRevealWidget {
     public final CircularRevealHelper helper;
 
     public CircularRevealCoordinatorLayout(Context context) {

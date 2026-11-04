@@ -1,82 +1,34 @@
 package l;
 
-import com.alipay.sdk.m.w.a;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.security.PrivilegedExceptionAction;
 
-/* JADX INFO: renamed from: l.ۖ᩹᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27BS */
+/* JADX INFO: renamed from: l.ۖܿ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: E9ZA */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2828 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f10717;
+public final class C2828 implements PrivilegedExceptionAction {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f10718;
+    public final /* synthetic */ C8794 f9288;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f10719;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f9289;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f10720;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f9290;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final Pattern f10714 = Pattern.compile("[ |\t]*([^/^ ^;^,]+/[^ ^;^,]+)", 2);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3464 f9291;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final Pattern f10716 = Pattern.compile("[ |\t]*(charset)[ |\t]*=[ |\t]*['|\"]?([^\"^'^;^,]*)['|\"]?", 2);
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f10715 = Pattern.compile("[ |\t]*(boundary)[ |\t]*=[ |\t]*['|\"]?([^\"^'^;^,]*)['|\"]?", 2);
-
-    public C2828(String str) {
-        this.f10719 = str;
-        if (str == null) {
-            this.f10720 = "";
-            this.f10717 = a.D;
-        } else {
-            Matcher matcher = f10714.matcher(str);
-            this.f10720 = matcher.find() ? matcher.group(1) : "";
-            Matcher matcher2 = f10716.matcher(str);
-            this.f10717 = matcher2.find() ? matcher2.group(2) : null;
-        }
-        if (!"multipart/form-data".equalsIgnoreCase(this.f10720)) {
-            this.f10718 = null;
-        } else {
-            Matcher matcher3 = f10715.matcher(str);
-            this.f10718 = matcher3.find() ? matcher3.group(2) : null;
-        }
+    public C2828(C8794 c8794, String str, String str2, C3464 c3464, boolean z) {
+        this.f9288 = c8794;
+        this.f9289 = str2;
+        this.f9291 = c3464;
+        this.f9290 = z;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String m8582() {
-        return this.f10719;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m8583() {
-        return this.f10720;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m8579() {
-        String str = this.f10717;
-        return str != null ? str : a.D;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m8580() {
-        return this.f10718;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean m8581() {
-        return "multipart/form-data".equalsIgnoreCase(this.f10720);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C2828 m8584() {
-        return this.f10717 == null ? new C2828(C22697.m50267(new StringBuilder(), this.f10719, "; charset=UTF-8")) : this;
+    @Override // java.security.PrivilegedExceptionAction
+    public final Object run() {
+        C8794 c8794 = this.f9288;
+        return c8794.m23609().mo45910(c8794.getContext(), this.f9289, this.f9291.m11403(), this.f9290);
     }
 }

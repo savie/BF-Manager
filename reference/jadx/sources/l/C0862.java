@@ -1,63 +1,117 @@
 package l;
 
-import android.transition.Transition;
-import java.util.ArrayList;
+import android.view.View;
+import android.view.WindowInsets;
+import bin.mt.plugin.api.PluginContext;
+import java.util.HashSet;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.֨ۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 451G */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0862 implements Transition.TransitionListener {
+/* JADX INFO: renamed from: l.֨ۖ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95QI */
+/* JADX INFO: loaded from: classes.dex */
+public final class C0862 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f3516;
+    /* JADX INFO: renamed from: ۜۜۖ, reason: not valid java name and contains not printable characters */
+    public static int f3233;
+
+    /* JADX INFO: renamed from: ֫᩺ܳ, reason: not valid java name and contains not printable characters */
+    public static boolean m3493(Object obj, Object obj2) {
+        return ((List) obj).add(obj2);
+    }
+
+    /* JADX INFO: renamed from: ۖܿ᩵, reason: not valid java name and contains not printable characters */
+    public static boolean m3494(Object obj) {
+        return ((C8002) obj).isDirectory();
+    }
+
+    /* JADX INFO: renamed from: ۗۛۗ, reason: not valid java name and contains not printable characters */
+    public static String m3495(Object obj) {
+        return ((C8002) obj).getName();
+    }
+
+    /* JADX INFO: renamed from: ۘ᩺֨, reason: not valid java name and contains not printable characters */
+    public static C10186 m3496(Object obj, Object obj2) {
+        return C10186.m26300((String) obj, (String) obj2);
+    }
+
+    /* JADX INFO: renamed from: ۛۗۗ, reason: not valid java name and contains not printable characters */
+    public static int m3499(Object obj) {
+        return ((InterfaceC12142) obj).mo1542();
+    }
+
+    /* JADX INFO: renamed from: ۜ᩸ۖ, reason: not valid java name and contains not printable characters */
+    public static String m3500(short[] sArr, int i, int i2, int i3) {
+        char[] cArr = new char[i2];
+        for (int i4 = 0; i4 < i2; i4++) {
+            cArr[i4] = (char) (sArr[i + i4] ^ i3);
+        }
+        return new String(cArr);
+    }
+
+    /* JADX INFO: renamed from: ۤ᩹᩸, reason: not valid java name and contains not printable characters */
+    public static void m3501(Object obj, Object obj2, int i) {
+        ((C14787) obj).m35632((String) obj2, i);
+    }
+
+    /* JADX INFO: renamed from: ۫ۘܿ, reason: not valid java name and contains not printable characters */
+    public static boolean m3502(Object obj, Object obj2) {
+        return ((HashSet) obj).add(obj2);
+    }
+
+    /* JADX INFO: renamed from: ۫ܳۛ, reason: not valid java name and contains not printable characters */
+    public static boolean m3503() {
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ۬֫ܰ, reason: not valid java name and contains not printable characters */
+    public static void m3504(Object obj, float f) {
+        ((View) obj).setAlpha(f);
+    }
+
+    /* JADX INFO: renamed from: ᩴۧܿ, reason: not valid java name and contains not printable characters */
+    public static boolean m3505(Object obj) {
+        return ((View) obj).requestFocus();
+    }
+
+    /* JADX INFO: renamed from: ᩶ۘ۠, reason: not valid java name and contains not printable characters */
+    public static EnumC22631 m3506(Object obj) {
+        return ((InterfaceC23331) obj).mo30864();
+    }
+
+    /* JADX INFO: renamed from: ᩸֫᩸, reason: not valid java name and contains not printable characters */
+    public static void m3507(Object obj, Object obj2) {
+        ((AbstractC22044) obj).m49849((byte[]) obj2);
+    }
+
+    /* JADX INFO: renamed from: ᩸ۙۖ, reason: not valid java name and contains not printable characters */
+    public static String m3508(Object obj, Object obj2) {
+        return ((PluginContext) obj).getStringNullable((String) obj2);
+    }
+
+    /* JADX INFO: renamed from: ᩹ۡۢ, reason: not valid java name and contains not printable characters */
+    public static int m3509(Object obj) {
+        return ((CharSequence) obj).length();
+    }
+
+    /* JADX INFO: renamed from: ᩻ۜۖ, reason: not valid java name and contains not printable characters */
+    public static int m3510(Object obj) {
+        return ((StringBuilder) obj).length();
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6507 f3517;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f3518;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f3519;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f3520;
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionCancel(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionPause(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionResume(Transition transition) {
-    }
-
-    public C0862(C6507 c6507, Object obj, ArrayList arrayList, Object obj2, ArrayList arrayList2) {
-        this.f3517 = c6507;
-        this.f3520 = obj;
-        this.f3519 = arrayList;
-        this.f3516 = obj2;
-        this.f3518 = arrayList2;
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionStart(Transition transition) {
-        C6507 c6507 = this.f3517;
-        Object obj = this.f3520;
-        if (obj != null) {
-            c6507.m17709(obj, this.f3519, (ArrayList) null);
+    public static C3977 m3497(View view) {
+        WindowInsets rootWindowInsets = view.getRootWindowInsets();
+        if (rootWindowInsets == null) {
+            return null;
         }
-        Object obj2 = this.f3516;
-        if (obj2 != null) {
-            c6507.m17709(obj2, this.f3518, (ArrayList) null);
-        }
+        C3977 c3977M12812 = C3977.m12812(null, rootWindowInsets);
+        c3977M12812.m12819(c3977M12812);
+        c3977M12812.m12818(view.getRootView());
+        return c3977M12812;
     }
 
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionEnd(Transition transition) {
-        transition.removeListener(this);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m3498(View view, int i, int i2) {
+        view.setScrollIndicators(i, i2);
     }
 }

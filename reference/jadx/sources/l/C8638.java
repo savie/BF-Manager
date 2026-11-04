@@ -1,13 +1,13 @@
 package l;
 
-import java.util.function.ToLongFunction;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۡۘ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3AHN */
+/* JADX INFO: renamed from: l.۠۫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7TD */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8638 implements ToLongFunction {
-    @Override // java.util.function.ToLongFunction
-    public final long applyAsLong(Object obj) {
-        return ((C16399) obj).m38605();
+public final class C8638 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Iterator m23273(String str) {
+        return new C2672(str);
     }
 }

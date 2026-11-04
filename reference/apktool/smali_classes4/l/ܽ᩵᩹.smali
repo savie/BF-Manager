@@ -1,26 +1,65 @@
-.class public final Ll/ܽ᩵᩹;
+.class public final synthetic Ll/ܽ᩵᩹;
 .super Ljava/lang/Object;
-.source "XAJ9"
-
-
-# instance fields
-.field public final ۙ:C
-
-.field public final ܰ:J
+.source "ZAO9"
 
 
 # direct methods
-.method public constructor <init>(JC)V
-    .locals 0
+.method public static ۙ(Ll/ܶ᩵᩹;Ljava/util/function/Consumer;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 603
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 58
+    instance-of v0, p1, Ll/ۨۗ᩹;
 
-    .line 604
-    iput-char p3, p0, Ll/ܽ᩵᩹;->ۙ:C
+    if-eqz v0, :cond_0
 
-    .line 605
-    iput-wide p1, p0, Ll/ܽ᩵᩹;->ܰ:J
+    check-cast p1, Ll/ۨۗ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ll/ۛۗ᩹;
+
+    invoke-direct {v0, p1}, Ll/ۛۗ᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/ۡۚۗ;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
+.end method
+
+.method public static ᩷(Ll/ܶ᩵᩹;Ljava/util/function/Consumer;)Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 41
+    instance-of v0, p1, Ll/ۨۗ᩹;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/ۨۗ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ll/ۛۗ᩹;
+
+    invoke-direct {v0, p1}, Ll/ۛۗ᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/ۡۚۗ;->tryAdvance(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
 .end method

@@ -111,7 +111,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 100
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -257,7 +257,7 @@
 
     .line 145
     :cond_6
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object v1
 
@@ -386,7 +386,7 @@
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 170
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
@@ -395,7 +395,7 @@
     move-result-object p0
 
     .line 171
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
@@ -463,7 +463,7 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 189
-    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p2}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object v1
 

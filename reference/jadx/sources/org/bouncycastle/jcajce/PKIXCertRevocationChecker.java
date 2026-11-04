@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce;
 
 import java.security.cert.Certificate;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface PKIXCertRevocationChecker {
     void check(Certificate certificate);
 

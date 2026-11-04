@@ -1,102 +1,65 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۚۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y4TR */
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.ByteBuffer;
+
+/* JADX INFO: renamed from: l.ܶ᩻֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K6MS */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16435 extends AbstractC23408 {
+public final class C16435 implements InterfaceC6116 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C12202 f52856;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final OutputStream f53317;
 
-    public C16435(C18551 c18551, int i, int i2, int i3) {
-        super(c18551);
-        this.f75807 = i;
-        this.f75806 = i2;
-        this.f75804 = i3;
-    }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final byte[] f53318 = new byte[32768];
 
-    public C16435(C18551 c18551, String str, C15606[] c15606Arr, int i) {
-        super(c18551);
-        this.f52856 = ((C22785) super.mo32493()).mo5139().m40058(str, c15606Arr);
-        this.f75806 = 3;
-        this.f75804 = i;
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f53319;
 
-    @Override // l.AbstractC23408, l.InterfaceC9961
-    public final int getValue() {
-        C12202 c12202;
-        if (mo25192() == 3 && (c12202 = this.f52856) != null) {
-            return c12202.m30302();
-        }
-        return super.getValue();
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C17181 f53320;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38686(int i) {
-        this.f75807 = i;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final void m38684(int i) {
-        if (i != 3 && this.f52856 != null) {
-            this.f52856 = null;
-        }
-        this.f75806 = i;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m38685(int i) {
-        this.f75804 = i;
-    }
-
-    @Override // l.AbstractC23408, l.InterfaceC9961
-    /* JADX INFO: renamed from: ۚܰ */
-    public final C12202 mo25187() {
-        C12202 c12202 = this.f52856;
-        if (c12202 != null) {
-            return c12202;
-        }
-        throw new RuntimeException("stringItem == null");
-    }
-
-    @Override // l.AbstractC23408
+    @Override // l.InterfaceC6116
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC6432 mo32493() {
-        return (C22785) super.mo32493();
+    public final void mo17643(int i) {
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38687(String str, C15606[] c15606Arr) {
-        this.f52856 = ((C22785) super.mo32493()).mo5139().m40058(str, c15606Arr);
-        this.f75806 = 3;
+    public C16435(OutputStream outputStream, C17181 c17181) {
+        this.f53317 = outputStream;
+        this.f53320 = c17181;
     }
 
-    @Override // l.AbstractC23408, l.InterfaceC9961
-    /* JADX INFO: renamed from: ܰ */
-    public final InterfaceC17721 mo25190() {
-        return (C7262) super.mo25190();
+    @Override // l.InterfaceC6116
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17644(int i, byte[] bArr) throws IOException {
+        AbstractC13057.m32543(this.f53320);
+        this.f53317.write(bArr, 0, i);
     }
 
-    @Override // l.AbstractC23408, l.InterfaceC9961
-    public final InterfaceC3609 getEntry() {
-        return (C18551) super.getEntry();
-    }
-
-    @Override // l.AbstractC23408, l.InterfaceC9961
-    public final C18551 getEntry() {
-        return (C18551) super.getEntry();
-    }
-
-    @Override // l.InterfaceC9961
-    /* JADX INFO: renamed from: ۘۙ */
-    public final int mo25186() {
-        C18551 c18551 = (C18551) super.getEntry();
-        int iMo7647 = c18551.mo7647();
-        for (int i = 0; i < iMo7647; i++) {
-            if (c18551.getValue(i) == this) {
-                return i;
-            }
+    @Override // l.InterfaceC6116
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17645(ByteBuffer byteBuffer) throws IOException {
+        while (byteBuffer.hasRemaining()) {
+            AbstractC13057.m32543(this.f53320);
+            int iRemaining = byteBuffer.remaining();
+            byte[] bArr = this.f53318;
+            int iMin = Math.min(iRemaining, bArr.length);
+            byteBuffer.get(bArr, 0, iMin);
+            this.f53317.write(bArr, 0, iMin);
         }
-        return -1;
+    }
+
+    @Override // l.InterfaceC6116
+    /* JADX INFO: renamed from: ܳۙ */
+    public final void mo17646() {
+        this.f53319 = true;
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return this.f53320.mo924();
     }
 }

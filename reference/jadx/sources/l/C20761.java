@@ -1,49 +1,80 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L1CU */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C20761 extends AbstractInterpolatorC8767 {
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import bin.mt.json.JSONValue;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10884 f67557;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public float f67559;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public float f67560 = 0.0f;
+/* JADX INFO: renamed from: l.᩵ᩴۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H79P */
+/* JADX INFO: loaded from: classes.dex */
+public final class C20761 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public float f67558 = 0.0f;
+    public final C17031 f66503;
 
-    public C20761(C10884 c10884) {
-        this.f67557 = c10884;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C9440 f66504;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final JSONObject f66505;
+
+    static {
+        ApplicationC23172.m52091(146);
     }
 
-    @Override // android.animation.TimeInterpolator
-    public final float getInterpolation(float f) {
-        float f2 = this.f67560;
-        C10884 c10884 = this.f67557;
-        if (f2 > 0.0f) {
-            float f3 = this.f67559;
-            if (f2 / f3 < f) {
-                f = f2 / f3;
-            }
-            c10884.f37037 = f2 - (f3 * f);
-            return ((f2 * f) - (((f3 * f) * f) / 2.0f)) + this.f67558;
-        }
-        float f4 = this.f67559;
-        if ((-f2) / f4 < f) {
-            f = (-f2) / f4;
-        }
-        c10884.f37037 = (f4 * f) + f2;
-        return (((f4 * f) * f) / 2.0f) + (f2 * f) + this.f67558;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public native C3607 m47467(JSONObject jSONObject);
+
+    public C20761(C17031 c17031, JSONObject jSONObject, C9440 c9440) {
+        this.f66503 = c17031;
+        this.f66505 = jSONObject;
+        this.f66504 = c9440;
     }
 
-    @Override // l.AbstractInterpolatorC8767
-    /* JADX INFO: renamed from: ۙ */
-    public final float mo22816() {
-        return this.f67557.f37037;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private JSONObject m47464(String str) {
+        return JSON.object().add("protocolVersion", str).add("serverInfo", this.f66505).add("capabilities", JSON.object().add("tools", JSON.object()));
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private String m47465(JSONObject jSONObject) throws C10186 {
+        JSONObject jSONObjectM47463 = m47463(jSONObject, "params");
+        if (jSONObjectM47463 == null) {
+            throw C10186.m26301("Missing protocolVersion", (String) null, (JSONValue) null, (JSONArray) null, (JSONObject) null);
+        }
+        JSONValue jSONValue = jSONObjectM47463.get("protocolVersion");
+        if (jSONValue == null || !jSONValue.isString()) {
+            throw C10186.m26301("Invalid protocolVersion", (String) null, (JSONValue) null, (JSONArray) null, (JSONObject) null);
+        }
+        return this.f66503.m40122(jSONValue.asString());
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private JSONObject m47466(JSONObject jSONObject) throws C10186 {
+        if (jSONObject == null) {
+            throw C10186.m26301("Missing params", (String) null, (JSONValue) null, (JSONArray) null, (JSONObject) null);
+        }
+        JSONValue jSONValue = jSONObject.get("name");
+        if (jSONValue == null || !jSONValue.isString()) {
+            throw C10186.m26301("Missing name", (String) null, (JSONValue) null, (JSONArray) null, (JSONObject) null);
+        }
+        JSONObject jSONObjectM47463 = m47463(jSONObject, "arguments");
+        if (jSONObjectM47463 == null) {
+            jSONObjectM47463 = JSON.object();
+        }
+        return this.f66504.m24814(jSONObjectM47463, jSONValue.asString());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static JSONObject m47463(JSONObject jSONObject, String str) throws C10186 {
+        JSONValue jSONValue = jSONObject.get(str);
+        if (jSONValue == null || jSONValue.isNull()) {
+            return null;
+        }
+        if (!jSONValue.isObject()) {
+            throw C10186.m26301("Invalid ".concat(str), (String) null, (JSONValue) null, (JSONArray) null, (JSONObject) null);
+        }
+        return jSONValue.asObject();
     }
 }

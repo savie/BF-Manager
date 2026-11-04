@@ -2,26 +2,26 @@ package net.sf.sevenzipjbinding;
 
 import java.io.OutputStream;
 import java.util.concurrent.CountDownLatch;
-import l.AbstractC8457;
-import l.C0804;
-import l.C10362;
-import l.C17738;
-import l.C21972;
-import l.C5038;
-import l.C6449;
+import l.AbstractC16166;
+import l.C12225;
+import l.C18615;
+import l.C19361;
+import l.C21599;
+import l.C24653;
+import l.C2953;
 import net.sf.sevenzipjbinding.impl.OutArchiveImpl;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SevenZip {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile ExtractMemoryUsageProvider f77892;
+    public static volatile ExtractMemoryUsageProvider f82008;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final CountDownLatch f77893 = new CountDownLatch(1);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final CountDownLatch f82009 = new CountDownLatch(1);
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static volatile String f77894;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static volatile String f82010;
 
     @FunctionalInterface
     public interface ExtractMemoryUsageProvider {
@@ -59,13 +59,13 @@ public class SevenZip {
     public static native byte[] nativeWriteUltraDeflateCompressor(long j, byte[] bArr, int i, int i2);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52887(ExtractMemoryUsageProvider extractMemoryUsageProvider) {
-        f77892 = extractMemoryUsageProvider;
+    public static void m56784(ExtractMemoryUsageProvider extractMemoryUsageProvider) {
+        f82008 = extractMemoryUsageProvider;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static long m52890() {
-        ExtractMemoryUsageProvider extractMemoryUsageProvider = f77892;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static long m56786() {
+        ExtractMemoryUsageProvider extractMemoryUsageProvider = f82008;
         if (extractMemoryUsageProvider == null) {
             return -1L;
         }
@@ -77,54 +77,54 @@ public class SevenZip {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static IInArchive m52885(C17738 c17738, AbstractC8457 abstractC8457) {
-        if (c17738 == null) {
+    public static IInArchive m56782(C2953 c2953, AbstractC16166 abstractC16166) {
+        if (c2953 == null) {
             throw new NullPointerException("SevenZip.callNativeOpenArchive(...): inStream parameter is null");
         }
-        return nativeOpenArchive(null, c17738, abstractC8457);
+        return nativeOpenArchive(null, c2953, abstractC16166);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static void m52882() {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static void m56791() {
         try {
             try {
                 String strNativeInitSevenZipLibrary = nativeInitSevenZipLibrary();
                 if (strNativeInitSevenZipLibrary != null) {
-                    throw new C6449("Error initializing 7-Zip-JBinding: ".concat(strNativeInitSevenZipLibrary));
+                    throw new C19361("Error initializing 7-Zip-JBinding: ".concat(strNativeInitSevenZipLibrary));
                 }
-                if (NativeXZInputStream.m52878()) {
-                    C10362.m26263(new C5038(0));
+                if (NativeXZInputStream.m56776()) {
+                    C24653.m55011(new C12225(7));
                 }
-                if (NativeXZOutputStream.m52879()) {
-                    C10362.m26264(new C21972());
+                if (NativeXZOutputStream.m56778()) {
+                    C24653.m55010(new C21599());
                 }
-                f77893.countDown();
+                f82009.countDown();
             } catch (Exception e) {
-                f77894 = e.getMessage();
+                f82010 = e.getMessage();
                 throw e;
             }
         } catch (Throwable th) {
-            f77893.countDown();
+            f82009.countDown();
             throw th;
         }
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m52892() {
-        f77893.await();
-        if (f77894 != null) {
-            throw new C6449(f77894);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m56789() {
+        f82009.await();
+        if (f82010 != null) {
+            throw new C19361(f82010);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static OutputStream m52884(OutputStream outputStream) {
-        return new C0804(outputStream);
+    public static OutputStream m56781(OutputStream outputStream) {
+        return new C18615(outputStream);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static IOutCreateArchive7z m52889() {
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static IOutCreateArchive7z m56788() {
         ArchiveFormat archiveFormat = ArchiveFormat.SEVEN_ZIP;
         if (!archiveFormat.isOutArchiveSupported()) {
             throw new IllegalStateException("Archive format '" + archiveFormat + "' doesn't support archive creation.");

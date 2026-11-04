@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/ۘ۟ܶ;->ۜۘ:I
+    sget v1, Ll/᩹۬ܺ;->ۧ֫:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

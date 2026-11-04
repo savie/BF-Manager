@@ -1,51 +1,50 @@
 package l;
 
-import android.util.SparseArray;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ܳۖۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LB1M */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14229 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final SparseArray f46620;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C4432 f46621;
-
-    public C14229() {
-        this(1);
-    }
-
-    public C14229(int i) {
-        this.f46620 = new SparseArray(i);
-    }
+/* JADX INFO: renamed from: l.ܰ֡۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: R8AK */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14229 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C14229 m34332(int i) {
-        SparseArray sparseArray = this.f46620;
-        if (sparseArray == null) {
-            return null;
+    public final String f44958;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C23533 f44959;
+
+    public C14229(C23533 c23533, String str) {
+        this.f44959 = c23533;
+        this.f44958 = str;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C14229)) {
+            return false;
         }
-        return (C14229) sparseArray.get(i);
+        C14229 c14229 = (C14229) obj;
+        return C17359.equals(this.f44959, c14229.f44959) && C17359.equals(this.f44958, c14229.f44958);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4432 m34331() {
-        return this.f46621;
+    public final int hashCode() {
+        return C17359.hashCode(this.f44958) + (C17359.hashCode(this.f44959) * 31);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m34333(C4432 c4432, int i, int i2) {
-        C14229 c14229M34332 = m34332(c4432.m12369(i));
-        if (c14229M34332 == null) {
-            c14229M34332 = new C14229();
-            this.f46620.put(c4432.m12369(i), c14229M34332);
+    public final String toString() {
+        Object[] objArr = {this.f44959, this.f44958};
+        String[] strArrSplit = "share;path".length() == 0 ? new String[0] : "share;path".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C14229.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
         }
-        if (i2 > i) {
-            c14229M34332.m34333(c4432, i + 1, i2);
-        } else {
-            c14229M34332.f46621 = c4432;
-        }
+        sb.append("]");
+        return sb.toString();
     }
 }

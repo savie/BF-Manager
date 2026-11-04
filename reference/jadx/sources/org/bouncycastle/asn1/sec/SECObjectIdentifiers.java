@@ -3,7 +3,7 @@ package org.bouncycastle.asn1.sec;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.x9.X9ObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SECObjectIdentifiers {
     public static final ASN1ObjectIdentifier dhSinglePass_cofactorDH_sha224kdf_scheme;
     public static final ASN1ObjectIdentifier dhSinglePass_cofactorDH_sha256kdf_scheme;

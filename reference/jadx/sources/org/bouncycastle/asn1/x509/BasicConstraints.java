@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BasicConstraints extends ASN1Object {
     public ASN1Boolean cA;
     public ASN1Integer pathLenConstraint;

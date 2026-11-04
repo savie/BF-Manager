@@ -1,10 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ᩴۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6B2 */
+/* JADX INFO: renamed from: l.֨ܽۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5U8 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1302 extends C5151 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C18557 f5569;
+public final class C1302 extends AbstractC14681 {
+    @Override // l.AbstractC14681
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2564(int i, AbstractC11781 abstractC11781) {
+        abstractC11781.f38071 |= 8192;
+    }
 }

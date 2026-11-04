@@ -6,7 +6,7 @@
     android:viewportHeight="24">
     <path
         android:name="strike_through"
-        android:pathData="@string/MT_Protector_res_0x7f12073d"
+        android:pathData="@string/MT_Protector_res_0x7f1208fc"
         android:strokeColor="@android:color/white"
         android:strokeWidth="1.8"
         android:trimPathEnd="0"
@@ -14,10 +14,10 @@
     <group>
         <clip-path
             android:name="eye_mask"
-            android:pathData="@string/MT_Protector_res_0x7f12073c"/>
+            android:pathData="@string/MT_Protector_res_0x7f1208fb"/>
         <path
             android:name="eye"
             android:fillColor="@android:color/white"
-            android:pathData="@string/MT_Protector_res_0x7f12073a"/>
+            android:pathData="@string/MT_Protector_res_0x7f1208f9"/>
     </group>
 </vector>

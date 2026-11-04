@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.jcajce.util.SpecUtil;
 import org.bouncycastle.util.Exceptions;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class BaseDeterministicOrRandomSignature extends SignatureSpi {
     public AlgorithmParameters engineParams;
     public AsymmetricKeyParameter keyParams;

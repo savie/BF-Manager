@@ -1,26 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠۬ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J8TG */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8197 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f28556;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C18074 f28557;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f28558;
+/* JADX INFO: renamed from: l.۟᩹۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28AQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8197 implements InterfaceC7509 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C18074 f28559;
+    public final /* synthetic */ C1485 f27014;
 
-    public C8197(C18074 c18074, C18074 c18075, int i) {
-        this.f28557 = c18074;
-        this.f28559 = c18075;
-        this.f28556 = i;
-        this.f28558 = c18074 == c18075;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC24628 f27015;
+
+    public /* synthetic */ C8197(C1485 c1485, InterfaceC24628 interfaceC24628) {
+        this.f27014 = c1485;
+        this.f27015 = interfaceC24628;
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return C1485.m5289(this.f27014, this.f27015);
     }
 }

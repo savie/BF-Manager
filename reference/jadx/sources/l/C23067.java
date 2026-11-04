@@ -1,87 +1,51 @@
 package l;
 
-import android.os.Bundle;
-import java.util.Map;
+import android.graphics.Rect;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
-/* JADX INFO: renamed from: l.᩺ܶۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: MANZ */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23067 implements InterfaceC7284 {
+/* JADX INFO: renamed from: l.᩸᩷ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PANA */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23067 extends AbstractC13006 implements InterfaceC19479 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC5204 f74941;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ClassLoader f74833;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f74942;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C20690 f74943;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Bundle f74944;
-
-    public C23067(C20690 c20690, InterfaceC17422 interfaceC17422) {
-        C13465.m32966(c20690, "savedStateRegistry");
-        this.f74943 = c20690;
-        this.f74941 = C22138.m49098(new C6838(interfaceC17422));
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23067(ClassLoader classLoader) {
+        super(0);
+        this.f74833 = classLoader;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private final C15306 m51038() {
-        return (C15306) this.f74941.getValue();
-    }
-
-    @Override // l.InterfaceC7284
+    /* JADX WARN: Code duplicated, block: B:15:0x0071  */
+    @Override // l.InterfaceC19479
     /* JADX INFO: renamed from: ۙ */
-    public final Bundle mo8703() {
-        Bundle bundle = new Bundle();
-        Bundle bundle2 = this.f74944;
-        if (bundle2 != null) {
-            bundle.putAll(bundle2);
-        }
-        for (Map.Entry entry : m51038().m36648().entrySet()) {
-            String str = (String) entry.getKey();
-            Bundle bundleMo8703 = ((C13895) entry.getValue()).m33732().mo8703();
-            if (!C13465.m32965(bundleMo8703, Bundle.EMPTY)) {
-                bundle.putBundle(str, bundleMo8703);
+    public final Object mo4064() throws NoSuchMethodException, ClassNotFoundException {
+        boolean z;
+        C2184 c2184 = C2184.f7187;
+        c2184.getClass();
+        Class<?> clsLoadClass = this.f74833.loadClass("androidx.window.extensions.layout.FoldingFeature");
+        Method method = clsLoadClass.getMethod("getBounds", null);
+        Method method2 = clsLoadClass.getMethod("getType", null);
+        Method method3 = clsLoadClass.getMethod("getState", null);
+        C15243.m36591(method, "getBoundsMethod");
+        if (C2184.m7490(c2184, method, C16735.m39514(Rect.class)) && Modifier.isPublic(method.getModifiers())) {
+            C15243.m36591(method2, "getTypeMethod");
+            Class cls = Integer.TYPE;
+            if (C2184.m7490(c2184, method2, C16735.m39514(cls)) && Modifier.isPublic(method2.getModifiers())) {
+                C15243.m36591(method3, "getStateMethod");
+                if (C2184.m7490(c2184, method3, C16735.m39514(cls)) && Modifier.isPublic(method3.getModifiers())) {
+                    z = true;
+                } else {
+                    z = false;
+                }
+            } else {
+                z = false;
             }
+        } else {
+            z = false;
         }
-        this.f74942 = false;
-        return bundle;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m51040() {
-        if (this.f74942) {
-            return;
-        }
-        Bundle bundleM46522 = this.f74943.m46522("androidx.lifecycle.internal.SavedStateHandlesProvider");
-        Bundle bundle = new Bundle();
-        Bundle bundle2 = this.f74944;
-        if (bundle2 != null) {
-            bundle.putAll(bundle2);
-        }
-        if (bundleM46522 != null) {
-            bundle.putAll(bundleM46522);
-        }
-        this.f74944 = bundle;
-        this.f74942 = true;
-        m51038();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Bundle m51039(String str) {
-        m51040();
-        Bundle bundle = this.f74944;
-        Bundle bundle2 = bundle != null ? bundle.getBundle(str) : null;
-        Bundle bundle3 = this.f74944;
-        if (bundle3 != null) {
-            bundle3.remove(str);
-        }
-        Bundle bundle4 = this.f74944;
-        if (bundle4 != null && bundle4.isEmpty()) {
-            this.f74944 = null;
-        }
-        return bundle2;
+        return Boolean.valueOf(z);
     }
 }

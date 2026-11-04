@@ -1,61 +1,66 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B2S3 */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.᩷ۡܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 98C6 */
+/* JADX INFO: loaded from: classes.dex */
 public class C21953 {
-    /* JADX INFO: renamed from: ۨ */
-    public InterfaceC2196 mo18376(C11992 c11992) {
-        return new C23489(c11992);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public String f70859;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AbstractC4053 f70860;
+
+    public C21953(String str) {
+        this.f70859 = str;
     }
 
-    /* JADX INFO: renamed from: ᩹ */
-    public InterfaceC2196 mo45461(C11992 c11992) {
-        return new C8464(c11992);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m49676(String str) {
+        this.f70859 = str;
     }
 
-    /* JADX INFO: renamed from: ۬ */
-    public InterfaceC2196 mo18377(C11992 c11992) {
-        return new C23986(c11992);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m49675() {
+        return this.f70859;
     }
 
-    /* JADX INFO: renamed from: ֨ */
-    public InterfaceC2196 mo45460(C11992 c11992) {
-        return new C6346(c11992);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m49677(AbstractC4053 abstractC4053) {
+        if (this.f70860 == null) {
+            this.f70860 = abstractC4053;
+        }
     }
 
-    /* JADX INFO: renamed from: ܰ */
-    public InterfaceC2196 mo1467() {
-        return new C16309();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4053 m49680() {
+        return this.f70860;
     }
 
-    /* JADX INFO: renamed from: ۚ */
-    public InterfaceC2196 mo1466(C11992 c11992) {
-        return new C18341(c11992);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C15745 m49681() {
+        AbstractC4053 abstractC4053 = this.f70860;
+        if (abstractC4053 == null) {
+            return null;
+        }
+        return abstractC4053.m13046();
     }
 
-    /* JADX INFO: renamed from: ۘ */
-    public InterfaceC2196 mo1465(C11992 c11992) {
-        return new C4313(c11992);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m49678(C4930 c4930, InterfaceC6971 interfaceC6971) {
+        if (m49681() == null) {
+            interfaceC6971.run();
+        } else {
+            m49681().m37656(c4930, interfaceC6971);
+        }
     }
 
-    /* JADX INFO: renamed from: ܰ */
-    public InterfaceC2196 mo18378(C11992 c11992) {
-        return new C19961(c11992);
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public C20666 mo18375(C11992 c11992) {
-        return new C20666(c11992);
-    }
-
-    /* JADX INFO: renamed from: ۖ */
-    public InterfaceC2196 mo18374(C11992 c11992) {
-        return new C7052(c11992);
-    }
-
-    /* JADX INFO: renamed from: ۙ */
-    public InterfaceC2196 mo27118() {
-        return new C5019();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m49679(InterfaceC6971 interfaceC6971) {
+        if (m49681() == null) {
+            interfaceC6971.run();
+        } else {
+            m49681().m37656(m49681().m37654(), interfaceC6971);
+        }
     }
 }

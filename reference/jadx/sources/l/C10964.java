@@ -1,26 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۧ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: SB6I */
+/* JADX INFO: renamed from: l.ۤܶᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86ZM */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10964 extends C15404 {
+public final class C10964 extends AbstractC2016 {
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final C18334 f37380;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C23909 f34638;
 
-    public C10964(C18334 c18334) {
-        super(c18334.m42568(), c18334.m42580(), c18334.m42569(), c18334.m42577(), c18334.m42570(), !c18334.m42574());
-        this.f37380 = c18334;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int[] f34639;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C18334 m27721() {
-        return this.f37380;
-    }
-
-    @Override // l.C15404, l.InterfaceC2557
-    /* JADX INFO: renamed from: ᩴ */
-    public final boolean mo7987() {
-        return this.f37380.m42581();
+    public C10964(int[] iArr, C19161[] c19161Arr, C19161 c19161) {
+        super(c19161);
+        this.f34639 = iArr;
+        this.f34638 = C23909.m53411(c19161Arr);
     }
 }

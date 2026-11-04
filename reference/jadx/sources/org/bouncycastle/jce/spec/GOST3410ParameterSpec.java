@@ -8,7 +8,7 @@ import org.bouncycastle.asn1.cryptopro.GOST3410ParamSetParameters;
 import org.bouncycastle.asn1.cryptopro.GOST3410PublicKeyAlgParameters;
 import org.bouncycastle.jce.interfaces.GOST3410Params;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410ParameterSpec implements AlgorithmParameterSpec, GOST3410Params {
     public String digestParamSetOID;
     public String encryptionParamSetOID;

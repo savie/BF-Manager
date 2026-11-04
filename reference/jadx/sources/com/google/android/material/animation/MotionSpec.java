@@ -10,23 +10,23 @@ import android.content.res.TypedArray;
 import android.util.Property;
 import java.util.ArrayList;
 import java.util.List;
-import l.C12274;
+import l.C9086;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MotionSpec {
     public static final String TAG = "MotionSpec";
-    public final C12274 timings = new C12274();
-    public final C12274 propertyValues = new C12274();
+    public final C9086 timings = new C9086();
+    public final C9086 propertyValues = new C9086();
 
     public boolean hasTiming(String str) {
-        return this.timings.getOrDefault(str, null) != null;
+        return this.timings.get(str) != null;
     }
 
     public MotionTiming getTiming(String str) {
         if (!hasTiming(str)) {
             throw new IllegalArgumentException();
         }
-        return (MotionTiming) this.timings.getOrDefault(str, null);
+        return (MotionTiming) this.timings.get(str);
     }
 
     public void setTiming(String str, MotionTiming motionTiming) {
@@ -34,14 +34,14 @@ public class MotionSpec {
     }
 
     public boolean hasPropertyValues(String str) {
-        return this.propertyValues.getOrDefault(str, null) != null;
+        return this.propertyValues.get(str) != null;
     }
 
     public PropertyValuesHolder[] getPropertyValues(String str) {
         if (!hasPropertyValues(str)) {
             throw new IllegalArgumentException();
         }
-        return clonePropertyValuesHolder((PropertyValuesHolder[]) this.propertyValues.getOrDefault(str, null));
+        return clonePropertyValuesHolder((PropertyValuesHolder[]) this.propertyValues.get(str));
     }
 
     public void setPropertyValues(String str, PropertyValuesHolder[] propertyValuesHolderArr) {
@@ -67,7 +67,7 @@ public class MotionSpec {
         int size = this.timings.size();
         long jMax = 0;
         for (int i = 0; i < size; i++) {
-            MotionTiming motionTiming = (MotionTiming) this.timings.m30513(i);
+            MotionTiming motionTiming = (MotionTiming) this.timings.m24221(i);
             jMax = Math.max(jMax, motionTiming.getDuration() + motionTiming.getDelay());
         }
         return jMax;

@@ -1,18 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩳۙۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L6NC */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C17818 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10058 f56450;
+/* JADX INFO: renamed from: l.ܽ᩶ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46FD */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17818 extends AbstractC17072 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ long f56451;
+    public final C15580 f58459;
 
-    public /* synthetic */ C17818(C10058 c10058, long j) {
-        this.f56450 = c10058;
-        this.f56451 = j;
+    public C17818(C15580 c15580) {
+        this.f58459 = c15580;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C15580 m41662() {
+        return this.f58459;
+    }
+
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֫ */
+    public final InterfaceC2157 mo1791() {
+        return C25278.f81637;
+    }
+
+    public final String toString() {
+        return "ANNOTATION_DEFAULT: " + this.f58459;
     }
 }

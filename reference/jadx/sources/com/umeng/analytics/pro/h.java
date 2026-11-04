@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import l.C12278;
+import l.C3188;
 
 /* JADX INFO: compiled from: E4L5 */
 /* JADX INFO: loaded from: classes.dex */
@@ -105,8 +105,8 @@ public class h {
     }
 
     public static void a(SQLiteDatabase sQLiteDatabase, String str, String str2, String str3) {
-        StringBuilder sbM30515 = C12278.m30515("alter table ", str, " add ", str2, " ");
-        sbM30515.append(str3);
-        sQLiteDatabase.execSQL(sbM30515.toString());
+        StringBuilder sbM10406 = C3188.m10406("alter table ", str, " add ", str2, " ");
+        sbM10406.append(str3);
+        sQLiteDatabase.execSQL(sbM10406.toString());
     }
 }

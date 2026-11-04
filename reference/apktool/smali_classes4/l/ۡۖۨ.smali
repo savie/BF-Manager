@@ -1,150 +1,153 @@
-.class public final synthetic Ll/ۡۖۨ;
-.super Ljava/lang/Object;
-.source "B53K"
-
-# interfaces
-.implements Ll/ܿ۬ᩴ;
+.class public final Ll/ۡۖۨ;
+.super Ll/ܰۖۨ;
+.source "S4UH"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/۟ۖۨ;
+.field public final ܰ:S
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۟ۖۨ;)V
+.method public constructor <init>(Ll/ۘ۠ۨ;B)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 46
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
 
-    iput-object p1, p0, Ll/ۡۖۨ;->ܺ:Ll/۟ۖۨ;
+    add-int/lit8 p2, p2, 0x1
+
+    .line 47
+    invoke-virtual {p1, p2}, Ll/ۘ۠ۨ;->᩷(I)[B
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۗۖۘ;->᩷([B)J
+
+    move-result-wide p1
+
+    long-to-int p2, p1
+
+    int-to-short p1, p2
+
+    iput-short p1, p0, Ll/ۡۖۨ;->ܰ:S
+
+    return-void
+.end method
+
+.method public constructor <init>(S)V
+    .locals 0
+
+    .line 55
+    invoke-direct {p0}, Ll/ܰۖۨ;-><init>()V
+
+    .line 56
+    iput-short p1, p0, Ll/ۡۖۨ;->ܰ:S
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(I)Ljava/lang/Object;
-    .locals 0
-
-    .line 60
-    invoke-virtual {p0, p1}, Ll/ۡۖۨ;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 93
-    invoke-virtual {p0, p1}, Ll/ۡۖۨ;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 230
-    new-instance p1, Ljava/lang/NoSuchMethodError;
-
-    invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
-
-    throw p1
-.end method
-
-.method public final synthetic containsKey(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۫۬ᩴ;->ۙ(Ll/ܿ۬ᩴ;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/ۡۖۨ;->ܺ:Ll/۟ۖۨ;
-
-    invoke-interface {v0, p1}, Ll/ᩳ֨ۨ;->ᩴ(I)Ll/ܶ֨ۨ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۫۬ᩴ;->ܰ(Ll/ܿ۬ᩴ;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 0
-
-    .line 111
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final synthetic size()I
-    .locals 1
-
-    const/4 v0, -0x1
+    .line 99
+    iget-short v0, p0, Ll/ۡۖۨ;->ܰ:S
 
     return v0
 .end method
 
-.method public final ۙ(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final ۙ(I)I
+    .locals 2
 
-    .line 73
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 78
+    iget-short v0, p0, Ll/ۡۖۨ;->ܰ:S
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    int-to-long v0, v0
 
-    throw p1
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->ᩴ(J)B
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
 .end method
 
-.method public final synthetic ۙ(I)Z
-    .locals 0
+.method public final ۙ(Ll/᩺۠ۨ;)V
+    .locals 3
+
+    .line 63
+    iget-short v0, p0, Ll/ۡۖۨ;->ܰ:S
+
+    int-to-long v0, v0
+
+    invoke-static {v0, v1}, Ll/ۗۖۘ;->᩷(J)[B
+
+    move-result-object v0
+
+    .line 70
+    sget-object v1, Ll/ۜۖۨ;->ۤۙ:Ll/ۜۖۨ;
+
+    iget-byte v1, v1, Ll/ۜۖۨ;->ܰ:B
+
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    shl-int/lit8 v2, v2, 0x5
+
+    or-int/2addr v1, v2
+
+    invoke-virtual {p1, v1}, Ll/᩺۠ۨ;->᩷(I)V
+
+    const/4 v1, 0x0
+
+    .line 347
+    array-length v2, v0
+
+    invoke-virtual {p1, v0, v1, v2}, Ll/᩺۠ۨ;->ۙ([BII)V
+
+    return-void
+.end method
+
+.method public final ܽ()Ll/ۜۖۨ;
+    .locals 1
+
+    .line 94
+    sget-object v0, Ll/ۜۖۨ;->ۤۙ:Ll/ۜۖۨ;
+
+    return-object v0
+.end method
+
+.method public final ᩷(Ll/ܰۖۨ;)I
+    .locals 1
+
+    .line 85
+    check-cast p1, Ll/ۡۖۨ;
+
+    .line 87
+    iget-short p1, p1, Ll/ۡۖۨ;->ܰ:S
+
+    iget-short v0, p0, Ll/ۡۖۨ;->ܰ:S
+
+    if-ge v0, p1, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    if-le v0, p1, :cond_1
 
     const/4 p1, 0x1
 
     return p1
-.end method
 
-.method public final synthetic ۨ()Ljava/lang/Object;
-    .locals 1
+    :cond_1
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
-
-    return-object v0
+    return p1
 .end method

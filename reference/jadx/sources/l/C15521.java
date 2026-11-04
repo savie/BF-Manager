@@ -1,17 +1,16 @@
 package l;
 
-import android.os.IBinder;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ܶ᩹ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: IBM5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15521 implements InterfaceC9171 {
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public IBinder f50531;
-
-    @Override // android.os.IInterface
-    public final IBinder asBinder() {
-        return this.f50531;
+/* JADX INFO: renamed from: l.ܳᩳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q4HT */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15521 extends AbstractC13284 {
+    @Override // l.AbstractC19734
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo4982(C2161 c2161) throws IOException {
+        c2161.getClass();
+        c2161.write(".prologue", 0, 9);
+        return true;
     }
 }

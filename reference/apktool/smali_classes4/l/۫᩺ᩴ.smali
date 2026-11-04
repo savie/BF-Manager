@@ -1,30 +1,39 @@
-.class public final Ll/۫᩺ᩴ;
-.super Ll/ܽ᩺ᩴ;
-.source "PCGG"
+.class public final synthetic Ll/۫᩺ᩴ;
+.super Ljava/lang/Object;
+.source "LAQJ"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final serialVersionUID:J
+# instance fields
+.field public final synthetic ܰ:Ll/ܺ᩺ᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܺ᩺ᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۫᩺ᩴ;->ܰ:Ll/ܺ᩺ᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final subList(II)Ll/ۤ᩺ᩴ;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    .line 1229
-    new-instance v0, Ll/۫᩺ᩴ;
+    .line 2
+    iget-object p1, p0, Ll/۫᩺ᩴ;->ܰ:Ll/ܺ᩺ᩴ;
 
-    iget-object v1, p0, Ll/ܽ᩺ᩴ;->᩶:Ll/ۤ᩺ᩴ;
+    .line 1109
+    iget-object p1, p1, Ll/ܺ᩺ᩴ;->ۚ:Ll/ۤ۠ᩴ;
 
-    invoke-interface {v1, p1, p2}, Ll/ۤ᩺ᩴ;->subList(II)Ll/ۤ᩺ᩴ;
+    invoke-virtual {p1}, Ll/ۤ۠ᩴ;->᩸()V
 
-    move-result-object p1
-
-    .line 1224
-    invoke-direct {v0, p1}, Ll/ܽ᩺ᩴ;-><init>(Ll/ۤ᩺ᩴ;)V
-
-    return-object v0
+    return-void
 .end method

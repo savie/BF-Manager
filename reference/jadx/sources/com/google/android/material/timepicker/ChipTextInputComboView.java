@@ -20,10 +20,10 @@ import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.textfield.TextInputLayout;
 import java.util.Arrays;
-import l.C12025;
-import l.C15089;
-import l.C3798;
-import l.C5031;
+import l.C12388;
+import l.C22666;
+import l.C22687;
+import l.C23577;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ChipTextInputComboView extends FrameLayout implements Checkable {
@@ -44,10 +44,10 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
     public ChipTextInputComboView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(context);
-        Chip chip = (Chip) layoutInflaterFrom.inflate(C15089.f49253, (ViewGroup) this, false);
+        Chip chip = (Chip) layoutInflaterFrom.inflate(C12388.f39841, (ViewGroup) this, false);
         this.chip = chip;
         chip.setAccessibilityClassName("android.view.View");
-        TextInputLayout textInputLayout = (TextInputLayout) layoutInflaterFrom.inflate(C15089.f49203, (ViewGroup) this, false);
+        TextInputLayout textInputLayout = (TextInputLayout) layoutInflaterFrom.inflate(C12388.f39804, (ViewGroup) this, false);
         this.textInputLayout = textInputLayout;
         EditText editText = textInputLayout.getEditText();
         this.editText = editText;
@@ -58,8 +58,8 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         updateHintLocales();
         addView(chip);
         addView(textInputLayout);
-        this.label = (TextView) findViewById(C3798.f13712);
-        int i2 = C5031.f17539;
+        this.label = (TextView) findViewById(C23577.f76434);
+        int i2 = C22666.f73603;
         editText.setId(View.generateViewId());
         this.label.setLabelFor(editText.getId());
         editText.setSaveEnabled(false);
@@ -141,8 +141,8 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         return this.textInputLayout;
     }
 
-    public void setChipDelegate(C12025 c12025) {
-        C5031.m13990(this.chip, c12025);
+    public void setChipDelegate(C22687 c22687) {
+        C22666.m51098(this.chip, c22687);
     }
 
     public class TextFormatter extends TextWatcherAdapter {

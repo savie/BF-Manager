@@ -27,13 +27,13 @@ import com.google.android.material.shadow.ShadowRenderer;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.BitSet;
-import l.C13638;
-import l.C1694;
-import l.C2387;
-import l.InterfaceC17480;
+import l.C11642;
+import l.C12669;
+import l.C17359;
+import l.InterfaceC8800;
 
 /* JADX INFO: loaded from: classes.dex */
-public class MaterialShapeDrawable extends Drawable implements InterfaceC17480, Shapeable {
+public class MaterialShapeDrawable extends Drawable implements InterfaceC8800, Shapeable {
     public static final int SHADOW_COMPAT_MODE_ALWAYS = 2;
     public static final int SHADOW_COMPAT_MODE_DEFAULT = 0;
     public static final int SHADOW_COMPAT_MODE_NEVER = 1;
@@ -95,7 +95,7 @@ public class MaterialShapeDrawable extends Drawable implements InterfaceC17480, 
 
     public static MaterialShapeDrawable createWithElevationOverlay(Context context, float f, ColorStateList colorStateList) {
         if (colorStateList == null) {
-            colorStateList = ColorStateList.valueOf(MaterialColors.getColor(context, C2387.f8699, TAG));
+            colorStateList = ColorStateList.valueOf(MaterialColors.getColor(context, C11642.f36968, TAG));
         }
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable();
         materialShapeDrawable.initializeElevationOverlay(context);
@@ -626,7 +626,7 @@ public class MaterialShapeDrawable extends Drawable implements InterfaceC17480, 
             if (iWidth < 0 || iHeight < 0) {
                 throw new IllegalStateException("Invalid shadow bounds. Check that the treatments result in a valid path.");
             }
-            Bitmap bitmapCreateBitmap = Bitmap.createBitmap(C1694.m5620(this.drawableState.shadowCompatRadius, 2, (int) this.pathBounds.width(), iWidth), C1694.m5620(this.drawableState.shadowCompatRadius, 2, (int) this.pathBounds.height(), iHeight), Bitmap.Config.ARGB_8888);
+            Bitmap bitmapCreateBitmap = Bitmap.createBitmap(C12669.m31436(this.drawableState.shadowCompatRadius, 2, (int) this.pathBounds.width(), iWidth), C12669.m31436(this.drawableState.shadowCompatRadius, 2, (int) this.pathBounds.height(), iHeight), Bitmap.Config.ARGB_8888);
             Canvas canvas2 = new Canvas(bitmapCreateBitmap);
             float f = (getBounds().left - this.drawableState.shadowCompatRadius) - iWidth;
             float f2 = (getBounds().top - this.drawableState.shadowCompatRadius) - iHeight;
@@ -751,7 +751,7 @@ public class MaterialShapeDrawable extends Drawable implements InterfaceC17480, 
         if (materialShapeDrawableState3.useTintColorForShadow) {
             this.shadowRenderer.setShadowColor(materialShapeDrawableState3.tintList.getColorForState(getState(), 0));
         }
-        return (C13638.equals(porterDuffColorFilter, this.tintFilter) && C13638.equals(porterDuffColorFilter2, this.strokeTintFilter)) ? false : true;
+        return (C17359.equals(porterDuffColorFilter, this.tintFilter) && C17359.equals(porterDuffColorFilter2, this.strokeTintFilter)) ? false : true;
     }
 
     private PorterDuffColorFilter calculateTintFilter(ColorStateList colorStateList, PorterDuff.Mode mode, Paint paint, boolean z) {

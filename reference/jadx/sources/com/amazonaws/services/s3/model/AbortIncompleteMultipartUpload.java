@@ -5,23 +5,23 @@ import java.io.Serializable;
 /* JADX INFO: loaded from: classes.dex */
 public class AbortIncompleteMultipartUpload implements Serializable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f519;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f509;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m493(int i) {
-        this.f519 = i;
+    public final void m487(int i) {
+        this.f509 = i;
     }
 
     public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-        return obj != null && getClass() == obj.getClass() && this.f519 == ((AbortIncompleteMultipartUpload) obj).f519;
+        return obj != null && getClass() == obj.getClass() && this.f509 == ((AbortIncompleteMultipartUpload) obj).f509;
     }
 
     public final int hashCode() {
-        return this.f519;
+        return this.f509;
     }
 
     public final Object clone() {

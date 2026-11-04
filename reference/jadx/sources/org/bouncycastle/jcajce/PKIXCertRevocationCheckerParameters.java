@@ -5,7 +5,7 @@ import java.security.cert.CertPath;
 import java.security.cert.X509Certificate;
 import java.util.Date;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKIXCertRevocationCheckerParameters {
     public final CertPath certPath;
     public final int index;

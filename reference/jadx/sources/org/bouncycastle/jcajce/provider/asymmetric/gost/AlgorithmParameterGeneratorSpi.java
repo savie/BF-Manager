@@ -11,7 +11,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.BaseAlgorithmParameterGe
 import org.bouncycastle.jce.spec.GOST3410ParameterSpec;
 import org.bouncycastle.jce.spec.GOST3410PublicKeyParameterSetSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParameterGeneratorSpi extends BaseAlgorithmParameterGeneratorSpi {
     public SecureRandom random;
     public int strength = 1024;

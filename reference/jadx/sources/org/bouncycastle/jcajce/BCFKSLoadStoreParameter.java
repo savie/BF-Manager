@@ -10,7 +10,7 @@ import java.security.cert.X509Certificate;
 import org.bouncycastle.crypto.util.PBKDF2Config;
 import org.bouncycastle.crypto.util.PBKDFConfig;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCFKSLoadStoreParameter extends BCLoadStoreParameter {
     public final X509Certificate[] certificates;
     public final EncryptionAlgorithm encAlg;

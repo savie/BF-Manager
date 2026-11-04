@@ -15,15 +15,15 @@ import android.widget.TextView;
 import com.google.android.material.internal.CheckableImageButton;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.resources.MaterialResources;
-import l.C0976;
-import l.C15089;
-import l.C16407;
-import l.C1977;
-import l.C22006;
-import l.C22357;
-import l.C3798;
-import l.C5031;
-import l.C8033;
+import l.C12388;
+import l.C14625;
+import l.C17609;
+import l.C18085;
+import l.C19835;
+import l.C22666;
+import l.C23577;
+import l.C5204;
+import l.C5752;
 
 /* JADX INFO: loaded from: classes.dex */
 public class StartCompoundLayout extends LinearLayout {
@@ -38,60 +38,60 @@ public class StartCompoundLayout extends LinearLayout {
     public final CheckableImageButton startIconView;
     public final TextInputLayout textInputLayout;
 
-    public StartCompoundLayout(TextInputLayout textInputLayout, C1977 c1977) {
+    public StartCompoundLayout(TextInputLayout textInputLayout, C5204 c5204) {
         super(textInputLayout.getContext());
         this.textInputLayout = textInputLayout;
         setVisibility(8);
         setOrientation(0);
         setLayoutParams(new FrameLayout.LayoutParams(-2, -1, 8388611));
-        CheckableImageButton checkableImageButton = (CheckableImageButton) LayoutInflater.from(getContext()).inflate(C15089.f49206, (ViewGroup) this, false);
+        CheckableImageButton checkableImageButton = (CheckableImageButton) LayoutInflater.from(getContext()).inflate(C12388.f39811, (ViewGroup) this, false);
         this.startIconView = checkableImageButton;
         IconHelper.setCompatRippleBackgroundIfNeeded(checkableImageButton);
-        C22357 c22357 = new C22357(getContext());
-        this.prefixTextView = c22357;
-        initStartIconView(c1977);
-        initPrefixTextView(c1977);
+        C5752 c5752 = new C5752(getContext());
+        this.prefixTextView = c5752;
+        initStartIconView(c5204);
+        initPrefixTextView(c5204);
         addView(checkableImageButton);
-        addView(c22357);
+        addView(c5752);
     }
 
-    private void initStartIconView(C1977 c1977) {
+    private void initStartIconView(C5204 c5204) {
         if (MaterialResources.isFontScaleAtLeast1_3(getContext())) {
             ((ViewGroup.MarginLayoutParams) this.startIconView.getLayoutParams()).setMarginEnd(0);
         }
         setStartIconOnClickListener(null);
         setStartIconOnLongClickListener(null);
-        if (c1977.m6383(C8033.f27943)) {
-            this.startIconTintList = MaterialResources.getColorStateList(getContext(), c1977, C8033.f27943);
+        if (c5204.m15655(C14625.f47294)) {
+            this.startIconTintList = MaterialResources.getColorStateList(getContext(), c5204, C14625.f47294);
         }
-        if (c1977.m6383(C8033.f27678)) {
-            this.startIconTintMode = ViewUtils.parseTintMode(c1977.m6381(C8033.f27678, -1), null);
+        if (c5204.m15655(C14625.f47188)) {
+            this.startIconTintMode = ViewUtils.parseTintMode(c5204.m15657(C14625.f47188, -1), null);
         }
-        if (c1977.m6383(C8033.f26828)) {
-            setStartIconDrawable(c1977.m6370(C8033.f26828));
-            if (c1977.m6383(C8033.f26614)) {
-                setStartIconContentDescription(c1977.m6368(C8033.f26614));
+        if (c5204.m15655(C14625.f46869)) {
+            setStartIconDrawable(c5204.m15669(C14625.f46869));
+            if (c5204.m15655(C14625.f46178)) {
+                setStartIconContentDescription(c5204.m15659(C14625.f46178));
             }
-            setStartIconCheckable(c1977.m6376(C8033.f27306, true));
+            setStartIconCheckable(c5204.m15654(C14625.f46444, true));
         }
-        setStartIconMinSize(c1977.m6384(C8033.f28050, getResources().getDimensionPixelSize(C0976.f4384)));
-        if (c1977.m6383(C8033.f27466)) {
-            setStartIconScaleType(IconHelper.convertScaleType(c1977.m6381(C8033.f27466, -1)));
+        setStartIconMinSize(c5204.m15665(C14625.f47827, getResources().getDimensionPixelSize(C17609.f57758)));
+        if (c5204.m15655(C14625.f47241)) {
+            setStartIconScaleType(IconHelper.convertScaleType(c5204.m15657(C14625.f47241, -1)));
         }
     }
 
-    private void initPrefixTextView(C1977 c1977) {
+    private void initPrefixTextView(C5204 c5204) {
         this.prefixTextView.setVisibility(8);
-        this.prefixTextView.setId(C3798.f13807);
+        this.prefixTextView.setId(C23577.f76301);
         this.prefixTextView.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
         TextView textView = this.prefixTextView;
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         textView.setAccessibilityLiveRegion(1);
-        setPrefixTextAppearance(c1977.m6387(C8033.f26507, 0));
-        if (c1977.m6383(C8033.f26721)) {
-            setPrefixTextColor(c1977.m6385(C8033.f26721));
+        setPrefixTextAppearance(c5204.m15660(C14625.f47667, 0));
+        if (c5204.m15655(C14625.f47453)) {
+            setPrefixTextColor(c5204.m15666(C14625.f47453));
         }
-        setPrefixText(c1977.m6368(C8033.f27199));
+        setPrefixText(c5204.m15659(C14625.f46815));
     }
 
     @Override // android.widget.LinearLayout, android.view.View
@@ -123,7 +123,7 @@ public class StartCompoundLayout extends LinearLayout {
     }
 
     public void setPrefixTextAppearance(int i) {
-        C16407.m38617(this.prefixTextView, i);
+        C18085.m42126(this.prefixTextView, i);
     }
 
     public void setStartIconDrawable(Drawable drawable) {
@@ -224,12 +224,12 @@ public class StartCompoundLayout extends LinearLayout {
         return this.startIconScaleType;
     }
 
-    public void setupAccessibilityNodeInfo(C22006 c22006) {
+    public void setupAccessibilityNodeInfo(C19835 c19835) {
         if (this.prefixTextView.getVisibility() == 0) {
-            c22006.m48873(this.prefixTextView);
-            c22006.m48852(this.prefixTextView);
+            c19835.m45681(this.prefixTextView);
+            c19835.m45673(this.prefixTextView);
         } else {
-            c22006.m48852(this.startIconView);
+            c19835.m45673(this.startIconView);
         }
     }
 
@@ -242,14 +242,14 @@ public class StartCompoundLayout extends LinearLayout {
         if (isStartIconVisible()) {
             paddingStart = 0;
         } else {
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             paddingStart = editText.getPaddingStart();
         }
         TextView textView = this.prefixTextView;
         int compoundPaddingTop = editText.getCompoundPaddingTop();
-        int dimensionPixelSize = getContext().getResources().getDimensionPixelSize(C0976.f4127);
+        int dimensionPixelSize = getContext().getResources().getDimensionPixelSize(C17609.f57363);
         int compoundPaddingBottom = editText.getCompoundPaddingBottom();
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         textView.setPaddingRelative(paddingStart, compoundPaddingTop, dimensionPixelSize, compoundPaddingBottom);
     }
 
@@ -260,7 +260,7 @@ public class StartCompoundLayout extends LinearLayout {
         } else {
             marginEnd = 0;
         }
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         return this.prefixTextView.getPaddingStart() + getPaddingStart() + marginEnd;
     }
 

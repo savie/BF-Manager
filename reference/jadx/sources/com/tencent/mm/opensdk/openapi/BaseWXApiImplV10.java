@@ -70,9 +70,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import l.C17290;
-import l.C22697;
-import l.C23234;
+import l.C18011;
+import l.C22837;
+import l.C8947;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -334,7 +334,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
 
     private boolean sendInvoiceAuthInsert(Context context, BaseReq baseReq) {
         launchWXIfNeed();
-        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "2", C17290.encode("url=" + C17290.encode(((WXInvoiceAuthInsert.Req) baseReq).url))}, null);
+        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "2", C22837.encode("url=" + C22837.encode(((WXInvoiceAuthInsert.Req) baseReq).url))}, null);
         if (cursorQuery == null) {
             return true;
         }
@@ -382,7 +382,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
 
     private boolean sendNonTaxPay(Context context, BaseReq baseReq) {
         launchWXIfNeed();
-        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "3", C17290.encode("url=" + C17290.encode(((WXNontaxPay.Req) baseReq).url))}, null);
+        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "3", C22837.encode("url=" + C22837.encode(((WXNontaxPay.Req) baseReq).url))}, null);
         if (cursorQuery == null) {
             return true;
         }
@@ -462,7 +462,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
 
     private boolean sendPayInSurance(Context context, BaseReq baseReq) {
         launchWXIfNeed();
-        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "4", C17290.encode("url=" + C17290.encode(((WXPayInsurance.Req) baseReq).url))}, null);
+        Cursor cursorQuery = context.getContentResolver().query(Uri.parse("content://com.tencent.mm.sdk.comm.provider/openTypeWebview"), null, null, new String[]{this.appId, "4", C22837.encode("url=" + C22837.encode(((WXPayInsurance.Req) baseReq).url))}, null);
         if (cursorQuery == null) {
             return true;
         }
@@ -606,7 +606,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
 
     @Override // com.tencent.mm.opensdk.openapi.IWXAPI
     public boolean sendReq(BaseReq baseReq, final SendReqCallback sendReqCallback) {
-        String strM50267;
+        String strM23910;
         String str;
         if (this.detached) {
             throw new IllegalStateException("sendReq fail, WXMsgImpl has been detached");
@@ -738,16 +738,16 @@ public class BaseWXApiImplV10 implements IWXAPI {
             SendMessageToWX.Req req2 = (SendMessageToWX.Req) baseReq;
             if (d.a(req2.message.getType())) {
                 WXMiniProgramObject wXMiniProgramObject = (WXMiniProgramObject) req2.message.mediaObject;
-                wXMiniProgramObject.userName = C22697.m50267(new StringBuilder(), wXMiniProgramObject.userName, "@app");
+                wXMiniProgramObject.userName = C8947.m23910(new StringBuilder(), wXMiniProgramObject.userName, "@app");
                 String str2 = wXMiniProgramObject.path;
                 if (!d.b(str2)) {
                     String[] strArrSplit = str2.split("\\?");
                     if (strArrSplit.length > 1) {
-                        strM50267 = strArrSplit[0] + ".html?" + strArrSplit[1];
+                        strM23910 = strArrSplit[0] + ".html?" + strArrSplit[1];
                     } else {
-                        strM50267 = C22697.m50267(new StringBuilder(), strArrSplit[0], ".html");
+                        strM23910 = C8947.m23910(new StringBuilder(), strArrSplit[0], ".html");
                     }
-                    wXMiniProgramObject.path = strM50267;
+                    wXMiniProgramObject.path = strM23910;
                 }
                 int i = req2.scene;
                 if (i != 3 && i != 1) {
@@ -881,7 +881,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
                 }
             }, null);
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("launchWXUsingPendingIntent pendingIntent send failed: "), TAG);
+            C18011.m41991(e, new StringBuilder("launchWXUsingPendingIntent pendingIntent send failed: "), TAG);
             openWXApp();
         }
     }
@@ -894,7 +894,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
                 try {
                     wxappPayEntryClassname = context.getPackageManager().getApplicationInfo("com.tencent.mm", 128).metaData.getString("com.tencent.mm.BuildInfo.OPEN_SDK_PAY_ENTRY_CLASSNAME", null);
                 } catch (Exception e) {
-                    C23234.m51271(e, new StringBuilder("get from metaData failed : "), TAG);
+                    C18011.m41991(e, new StringBuilder("get from metaData failed : "), TAG);
                 }
             }
             if (wxappPayEntryClassname == null) {
@@ -932,7 +932,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
             this.wxSdkVersion = this.context.getPackageManager().getApplicationInfo("com.tencent.mm", 128).metaData.getInt("com.tencent.mm.BuildInfo.OPEN_SDK_VERSION", 0);
             Log.d(TAG, "OPEN_SDK_VERSION = " + this.wxSdkVersion);
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("get from metaData failed : "), TAG);
+            C18011.m41991(e, new StringBuilder("get from metaData failed : "), TAG);
         }
         if (this.wxSdkVersion == 0) {
             final CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -972,7 +972,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
             context.startActivity(context.getPackageManager().getLaunchIntentForPackage("com.tencent.mm"));
             return true;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("startActivity fail, exception = "), TAG);
+            C18011.m41991(e, new StringBuilder("startActivity fail, exception = "), TAG);
             return false;
         }
     }
@@ -1047,7 +1047,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
             iWXAPIEventHandler.onResp(resp5);
             return true;
         } catch (Exception e) {
-            C23234.m51271(e, new StringBuilder("handleWxInternalRespType fail, ex = "), TAG);
+            C18011.m41991(e, new StringBuilder("handleWxInternalRespType fail, ex = "), TAG);
         }
     }
 
@@ -1217,7 +1217,7 @@ public class BaseWXApiImplV10 implements IWXAPI {
             Log.e(TAG, "invalid argument");
             return false;
         } catch (Exception e2) {
-            C23234.m51271(e2, new StringBuilder("handleIntent fail, ex = "), TAG);
+            C18011.m41991(e2, new StringBuilder("handleIntent fail, ex = "), TAG);
         }
     }
 }

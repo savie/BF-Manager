@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import java.security.spec.KeySpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ScryptKeySpec implements KeySpec {
     public final int blockSize;
     public final int costParameter;

@@ -9,13 +9,13 @@
 # static fields
 .field public static final serialVersionUID:J = 0x1L
 
-.field public static final ֡:Lcom/amazonaws/logging/Log;
+.field public static final ܿ:Lcom/amazonaws/logging/Log;
 
 .field public static final synthetic ᩶:I
 
 
 # instance fields
-.field public ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+.field public ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtilityOptions;->֡:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtilityOptions;->ܿ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     sget-object v0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;->᩶:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     .line 96
-    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtilityOptions;->ܺ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
+    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferUtilityOptions;->ܰ:Lcom/amazonaws/mobileconnectors/s3/transferutility/TransferNetworkConnectionType;
 
     return-void
 .end method

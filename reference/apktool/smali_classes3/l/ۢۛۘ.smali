@@ -1,60 +1,49 @@
-.class public final synthetic Ll/ۢۛۘ;
+.class public abstract Ll/ۢۛۘ;
 .super Ljava/lang/Object;
-.source "31K1"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "S7QC"
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
+.method public abstract ۙ(Ll/۟ۛۘ;)Ljava/lang/String;
+.end method
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+.method public abstract ۙ()Ll/ۜᩳۘ;
+.end method
+
+.method public final ۙ(Ll/ۤᩳۘ;)Ll/ܰۛۘ;
+    .locals 2
+
+    .line 95
+    new-instance v0, Ll/ܰۛۘ;
+
+    invoke-virtual {p0}, Ll/ۢۛۘ;->ۙ()Ll/ۜᩳۘ;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ll/ۜᩳۘ;->ۙ(Ll/۬۟ۘ;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-.end method
-
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object v0
+    .line 838
+    invoke-direct {v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract ۙ(Ljava/lang/String;)V
 .end method
 
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
+.method public abstract ۙ(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    .line 2
-    check-cast p1, Ll/᩹᩻ۘ;
+.method public abstract ۙ(Ll/᩺۬᩹;)V
+.end method
 
-    .line 4
-    sget v0, Ll/ۚ᩻ۘ;->᩻ܰ:I
+.method public abstract ۙ(Ll/۟ۛۘ;Ljava/lang/String;)Z
+.end method
 
-    .line 1903
-    invoke-virtual {p1}, Ll/᩹᩻ۘ;->ۨ()Z
+.method public abstract ᩷()Ljava/lang/String;
+.end method
 
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
+.method public abstract ᩷(Ljava/lang/String;)V
 .end method

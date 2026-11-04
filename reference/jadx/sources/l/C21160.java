@@ -1,21 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩹ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
+import bin.mt.json.JSONValue;
+
+/* JADX INFO: renamed from: l.᩶۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I764 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21160 extends C9886 {
-
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC3520 f68907;
-
-    public C21160(ViewOnClickListenerC3520 viewOnClickListenerC3520) {
-        this.f68907 = viewOnClickListenerC3520;
+public final class C21160 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static JSONObject m48264(String str) {
+        try {
+            return JSON.parse(str).asObject();
+        } catch (RuntimeException e) {
+            throw new C15938("Unable to parse radare2 native response", e);
+        }
     }
 
-    @Override // l.C9886
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo24995() {
-        super.mo24995();
-        this.f68907.m10369(false);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static long m48263(JSONObject jSONObject, String str, long j) {
+        JSONValue jSONValue = jSONObject.get(str);
+        if (jSONValue == null) {
+            return j;
+        }
+        if (!jSONValue.isNumber()) {
+            return jSONValue.asLong();
+        }
+        String string = jSONValue.toString();
+        try {
+            return Long.parseLong(string, 10);
+        } catch (NumberFormatException e) {
+            try {
+                return C8947.m23916(string);
+            } catch (NumberFormatException unused) {
+                throw e;
+            }
+        }
     }
 }

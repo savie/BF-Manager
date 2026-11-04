@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:state_checked="true"
-        android:color="?android:attr/textColorPrimary"/>
-    <item
-        android:state_checked="false"
-        android:color="@color/MT_Protector_res_0x7f06039f"/>
+        android:state_enabled="false"
+        android:color="#30000000"/>
+    <item android:color="#99000000"/>
 </selector>

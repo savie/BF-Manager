@@ -1,11 +1,3 @@
-.class public interface abstract Ll/᩻֡;
+.class public final Ll/᩻֡;
 .super Ljava/lang/Object;
-.source "AAKL"
-
-
-# virtual methods
-.method public abstract ۖ(Ll/ܿۧ;)V
-.end method
-
-.method public abstract ܰ(Ll/ܿۧ;)V
-.end method
+.source "P5TS"

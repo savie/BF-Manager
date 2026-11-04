@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.agreement.kdf;
 
 import java.io.IOException;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -19,7 +19,7 @@ import org.bouncycastle.crypto.generators.KDF2BytesGenerator;
 import org.bouncycastle.crypto.params.KDFParameters;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECDHKEKGenerator implements DigestDerivationFunction {
     public ASN1ObjectIdentifier algorithm;
     public DigestDerivationFunction kdf;
@@ -55,7 +55,7 @@ public class ECDHKEKGenerator implements DigestDerivationFunction {
             this.kdf.init(new KDFParameters(this.z, new DERSequence(aSN1EncodableVector).getEncoded(ASN1Encoding.DER)));
             return this.kdf.generateBytes(bArr, i, i2);
         } catch (IOException e) {
-            throw new IllegalArgumentException(C9013.m23329(e, new StringBuilder("unable to initialise kdf: ")));
+            throw new IllegalArgumentException(C11958.m29932(e, new StringBuilder("unable to initialise kdf: ")));
         }
     }
 }

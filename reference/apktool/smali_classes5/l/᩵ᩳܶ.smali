@@ -1,60 +1,44 @@
-.class public final enum Ll/᩵ᩳܶ;
-.super Ll/ۤᩳܶ;
-.source "9BH0"
+.class public Ll/᩵ᩳܶ;
+.super Ll/ۧᩳܶ;
+.source "G7Y4"
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const-string v0, "ODD"
-
-    const/4 v1, 0x1
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/᩵ᩳܶ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
+    .line 30
+    invoke-direct {p0}, Ll/ۧᩳܶ;-><init>()V
 
-    .line 64
-    invoke-direct {p0, p1, p2, v0}, Ll/ۤᩳܶ;-><init>(Ljava/lang/String;II)V
+    const/16 v0, 0x14
+
+    .line 32
+    iput v0, p0, Ll/ۧᩳܶ;->᩷:I
+
+    const-string v0, "HmacSHA1"
+
+    .line 33
+    iput-object v0, p0, Ll/ۧᩳܶ;->ۙ:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ljava/util/BitSet;I)I
+.method public getBlockSize()I
     .locals 1
 
-    .line 67
-    invoke-virtual {p1, p2}, Ljava/util/BitSet;->nextClearBit(I)I
+    .line 45
+    iget v0, p0, Ll/ۧᩳܶ;->᩷:I
 
-    move-result p2
+    return v0
+.end method
 
-    .line 68
-    :goto_0
-    invoke-static {p2}, Ll/᩷ᩳܶ;->ۙ(I)Z
+.method public final ۙ()Z
+    .locals 1
 
-    move-result v0
+    .line 94
+    iget-boolean v0, p0, Ll/ۧᩳܶ;->ۤ:Z
 
-    if-eqz v0, :cond_0
-
-    add-int/lit8 p2, p2, 0x1
-
-    .line 69
-    invoke-virtual {p1, p2}, Ljava/util/BitSet;->nextClearBit(I)I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    return p2
+    return v0
 .end method

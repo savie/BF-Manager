@@ -2,19 +2,19 @@ package org.lsposed.lsplant;
 
 import java.lang.reflect.Member;
 import java.lang.reflect.Method;
-import l.InterfaceC2049;
+import l.InterfaceC23439;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class Hooker {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static Method f77898;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static Method f82014;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Method f77899;
+    public Method f82015;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC2049 f77900;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public InterfaceC23439 f82016;
 
     private native boolean check();
 
@@ -25,28 +25,28 @@ public class Hooker {
     static {
         try {
             System.loadLibrary("hook");
-            f77898 = Hooker.class.getDeclaredMethod("ۙ", Object[].class);
+            f82014 = Hooker.class.getDeclaredMethod("ۙ", Object[].class);
         } catch (Throwable unused) {
-            f77898 = null;
+            f82014 = null;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Object m52896(Object[] objArr) {
-        return this.f77900.mo6551(this.f77899, objArr);
+    public Object m56794(Object[] objArr) {
+        return this.f82016.mo11559(this.f82015, objArr);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52895(Method method, InterfaceC2049 interfaceC2049) {
+    public static void m56793(Method method, InterfaceC23439 interfaceC23439) {
         Method methodDoHook;
-        Method method2 = f77898;
+        Method method2 = f82014;
         if (method2 == null) {
             return;
         }
         Hooker hooker = new Hooker();
         if (hooker.check() && (methodDoHook = hooker.doHook(method, method2)) != null) {
-            hooker.f77899 = methodDoHook;
-            hooker.f77900 = interfaceC2049;
+            hooker.f82015 = methodDoHook;
+            hooker.f82016 = interfaceC23439;
         }
     }
 }

@@ -19,7 +19,7 @@ public class b {
     public static final int k = 2;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77916l = 4;
+    public static final int f82032l = 4;
     public Context a;
 
     public b(Context context) {

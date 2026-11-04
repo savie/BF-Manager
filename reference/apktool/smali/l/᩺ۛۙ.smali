@@ -1,109 +1,31 @@
 .class public final Ll/᩺ۛۙ;
 .super Ljava/lang/Object;
-.source "X8TF"
+.source "S8SC"
 
 
 # instance fields
-.field public ۙ:Z
+.field public final ۙ:Z
 
-.field public ۨ:Z
+.field public final ۤ:I
 
-.field public ܰ:Z
+.field public final ᩷:I
 
 
 # direct methods
-.method public static bridge synthetic ۙ(Ll/᩺ۛۙ;)Z
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    .line 0
-    iget-boolean p0, p0, Ll/᩺ۛۙ;->ۙ:Z
+    .line 455
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
-.end method
+    .line 456
+    iput p1, p0, Ll/᩺ۛۙ;->᩷:I
 
-.method public static bridge synthetic ۨ(Ll/᩺ۛۙ;)Z
-    .locals 0
+    .line 457
+    iput p2, p0, Ll/᩺ۛۙ;->ۤ:I
 
-    .line 0
-    iget-boolean p0, p0, Ll/᩺ۛۙ;->ۨ:Z
-
-    return p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/᩺ۛۙ;)Z
-    .locals 0
-
-    .line 0
-    iget-boolean p0, p0, Ll/᩺ۛۙ;->ܰ:Z
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final ۙ()Ll/ܶۛۙ;
-    .locals 2
-
-    .line 89
-    iget-boolean v0, p0, Ll/᩺ۛۙ;->ۙ:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Ll/᩺ۛۙ;->ܰ:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Ll/᩺ۛۙ;->ۨ:Z
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    .line 90
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Secondary offload attribute fields are true but primary isFormatSupported is false"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 93
-    :cond_1
-    :goto_0
-    new-instance v0, Ll/ܶۛۙ;
-
-    invoke-direct {v0, p0}, Ll/ܶۛۙ;-><init>(Ll/᩺ۛۙ;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(Z)V
-    .locals 0
-
-    .line 67
-    iput-boolean p1, p0, Ll/᩺ۛۙ;->ܰ:Z
-
-    return-void
-.end method
-
-.method public final ܰ()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 56
-    iput-boolean v0, p0, Ll/᩺ۛۙ;->ۙ:Z
-
-    return-void
-.end method
-
-.method public final ܰ(Z)V
-    .locals 0
-
-    .line 78
-    iput-boolean p1, p0, Ll/᩺ۛۙ;->ۨ:Z
+    .line 458
+    iput-boolean p3, p0, Ll/᩺ۛۙ;->ۙ:Z
 
     return-void
 .end method

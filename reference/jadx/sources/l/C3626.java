@@ -1,68 +1,39 @@
 package l;
 
-import java.io.PrintWriter;
-import java.io.Writer;
+import java.util.function.Consumer;
+import java.util.function.IntFunction;
 
-/* JADX INFO: renamed from: l.ۘ֫۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0B6H */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3626 extends Writer {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f13318;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f13319;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public PrintWriter f13320;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final String f13321;
-
-    public C3626(PrintWriter printWriter, String str) {
-        super(printWriter);
-        this.f13318 = true;
-        this.f13320 = printWriter;
-        this.f13321 = str;
+/* JADX INFO: renamed from: l.ۗ᩵ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3626 extends AbstractC23523 implements InterfaceC2047 {
+    @Override // l.InterfaceC13409
+    public final /* synthetic */ void forEach(Consumer consumer) {
+        AbstractC13956.z(this, consumer);
     }
 
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        this.f13320.close();
+    @Override // l.InterfaceC13409
+    public final /* synthetic */ InterfaceC13409 j(long j, long j2, IntFunction intFunction) {
+        return AbstractC13956.C(this, j, j2);
     }
 
-    @Override // java.io.Writer, java.io.Flushable
-    public final void flush() {
-        this.f13320.flush();
+    @Override // l.InterfaceC13409
+    public final /* synthetic */ void k(Object[] objArr, int i) {
+        AbstractC13956.w(this, (Double[]) objArr, i);
     }
 
-    @Override // java.io.Writer
-    public final void write(char[] cArr, int i, int i2) {
-        for (int i3 = 0; i3 < i2; i3++) {
-            char c = cArr[i3];
-            PrintWriter printWriter = this.f13320;
-            if (c == '\n' || c == '\r') {
-                this.f13318 = true;
-            } else {
-                if (this.f13318) {
-                    int i4 = this.f13319;
-                    String str = this.f13321;
-                    if (str.charAt(i4) == ' ') {
-                        printWriter.write("| ");
-                    } else {
-                        printWriter.write(str.charAt(this.f13319));
-                        printWriter.write(32);
-                    }
-                    int i5 = this.f13319 + 1;
-                    this.f13319 = i5;
-                    if (i5 >= str.length()) {
-                        this.f13319 = 0;
-                    }
-                }
-                this.f13318 = false;
-            }
-            printWriter.write(cArr[i3]);
-        }
+    @Override // l.InterfaceC9459
+    public final Object newArray(int i) {
+        return new double[i];
+    }
+
+    @Override // l.InterfaceC13409
+    public final InterfaceC8409 spliterator() {
+        return new C24378(this);
+    }
+
+    @Override // l.InterfaceC13409
+    public final InterfaceC9154 spliterator() {
+        return new C24378(this);
     }
 }

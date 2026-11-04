@@ -1,44 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖۚۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 55CR */
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ۖ֨۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: C9PC */
 /* JADX INFO: loaded from: classes3.dex */
-public class C2320 implements InterfaceC5143, InterfaceC6035 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final double f8241;
-
-    @Override // l.InterfaceC10975
-    /* JADX INFO: renamed from: ᩸ */
-    public final int mo2656() {
-        return 17;
-    }
-
-    public C2320(double d) {
-        this.f8241 = d;
-    }
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        InterfaceC10975 interfaceC10975 = (InterfaceC10975) obj;
-        int iCompare = Integer.compare(17, interfaceC10975.mo2656());
-        if (iCompare != 0) {
-            return iCompare;
+public class C2320 extends AbstractC2716 {
+    @Override // l.InterfaceC11490
+    public C4797 parsePartialFrom(AbstractC3660 abstractC3660, C24215 c24215) throws C20463 {
+        C8286 c8286NewBuilder = C4797.newBuilder();
+        try {
+            c8286NewBuilder.mergeFrom(abstractC3660, c24215);
+            return c8286NewBuilder.buildPartial();
+        } catch (C20463 e) {
+            e.m46972(c8286NewBuilder.buildPartial());
+            throw e;
+        } catch (IOException e2) {
+            C20463 c20463 = new C20463(e2.getMessage(), e2);
+            c20463.m46972(c8286NewBuilder.buildPartial());
+            throw c20463;
+        } catch (C24128 e3) {
+            C20463 c20463M53671 = e3.m53671();
+            c20463M53671.m46972(c8286NewBuilder.buildPartial());
+            throw c20463M53671;
         }
-        return Double.compare(this.f8241, ((InterfaceC6035) interfaceC10975).getValue());
-    }
-
-    public final boolean equals(Object obj) {
-        return (obj instanceof InterfaceC6035) && Double.doubleToRawLongBits(this.f8241) == Double.doubleToRawLongBits(((InterfaceC6035) obj).getValue());
-    }
-
-    @Override // l.InterfaceC6035
-    public final double getValue() {
-        return this.f8241;
-    }
-
-    public final int hashCode() {
-        long jDoubleToRawLongBits = Double.doubleToRawLongBits(this.f8241);
-        return (int) (jDoubleToRawLongBits ^ (jDoubleToRawLongBits >>> 32));
     }
 }

@@ -7,7 +7,7 @@ import org.bouncycastle.pqc.crypto.mayo.GF16Utils;
 import org.bouncycastle.util.Longs;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GCMUtil {
     public static final int E1 = -520093696;
     public static final long E1L = -2233785415175766016L;

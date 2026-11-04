@@ -16,7 +16,7 @@ import org.bouncycastle.asn1.pkcs.SignedData;
 import org.bouncycastle.x509.X509StreamParserSpi;
 import org.bouncycastle.x509.util.StreamParsingException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509CertParser extends X509StreamParserSpi {
     public static final PEMUtil PEM_PARSER = new PEMUtil("CERTIFICATE");
     public ASN1Set sData = null;

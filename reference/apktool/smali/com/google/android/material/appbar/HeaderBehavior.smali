@@ -87,7 +87,7 @@
     return p1
 .end method
 
-.method public final fling(Ll/ۖ᩶;Landroid/view/View;IIF)Z
+.method public final fling(Ll/᩻᩶;Landroid/view/View;IIF)Z
     .locals 13
 
     move-object v0, p0
@@ -167,12 +167,12 @@
 
     move-object v3, p1
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior$FlingRunnable;-><init>(Lcom/google/android/material/appbar/HeaderBehavior;Ll/ۖ᩶;Landroid/view/View;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior$FlingRunnable;-><init>(Lcom/google/android/material/appbar/HeaderBehavior;Ll/᩻᩶;Landroid/view/View;)V
 
     iput-object v2, v0, Lcom/google/android/material/appbar/HeaderBehavior;->flingRunnable:Ljava/lang/Runnable;
 
     .line 223
-    sget v3, Ll/ۚ֫;->ۙ:I
+    sget v3, Ll/᩸۠;->ۙ:I
 
     .line 1359
     invoke-virtual {p2, v2}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
@@ -185,7 +185,7 @@
     move-object v3, p1
 
     .line 226
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior;->onFlingFinished(Ll/ۖ᩶;Landroid/view/View;)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior;->onFlingFinished(Ll/᩻᩶;Landroid/view/View;)V
 
     const/4 v1, 0x0
 
@@ -227,13 +227,13 @@
     return v0
 .end method
 
-.method public onFlingFinished(Ll/ۖ᩶;Landroid/view/View;)V
+.method public onFlingFinished(Ll/᩻᩶;Landroid/view/View;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onInterceptTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onInterceptTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
 
     .line 59
@@ -352,7 +352,7 @@
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {p1, p2, v0, v1}, Ll/ۖ᩶;->isPointInChildBounds(Landroid/view/View;II)Z
+    invoke-virtual {p1, p2, v0, v1}, Ll/᩻᩶;->isPointInChildBounds(Landroid/view/View;II)Z
 
     move-result p1
 
@@ -414,7 +414,7 @@
     return v4
 .end method
 
-.method public onTouchEvent(Ll/ۖ᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onTouchEvent(Ll/᩻᩶;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 11
 
     .line 112
@@ -523,7 +523,7 @@
 
     move-object v6, p2
 
-    invoke-virtual/range {v4 .. v9}, Lcom/google/android/material/appbar/HeaderBehavior;->scroll(Ll/ۖ᩶;Landroid/view/View;III)I
+    invoke-virtual/range {v4 .. v9}, Lcom/google/android/material/appbar/HeaderBehavior;->scroll(Ll/᩻᩶;Landroid/view/View;III)I
 
     :goto_1
     const/4 p1, 0x0
@@ -570,7 +570,7 @@
 
     move-object v7, p2
 
-    invoke-virtual/range {v5 .. v10}, Lcom/google/android/material/appbar/HeaderBehavior;->fling(Ll/ۖ᩶;Landroid/view/View;IIF)Z
+    invoke-virtual/range {v5 .. v10}, Lcom/google/android/material/appbar/HeaderBehavior;->fling(Ll/᩻᩶;Landroid/view/View;IIF)Z
 
     const/4 p1, 0x1
 
@@ -627,7 +627,7 @@
     return v3
 .end method
 
-.method public final scroll(Ll/ۖ᩶;Landroid/view/View;III)I
+.method public final scroll(Ll/᩻᩶;Landroid/view/View;III)I
     .locals 7
 
     .line 191
@@ -648,14 +648,14 @@
     move v6, p5
 
     .line 188
-    invoke-virtual/range {v1 .. v6}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/ۖ᩶;Landroid/view/View;III)I
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/᩻᩶;Landroid/view/View;III)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public setHeaderTopBottomOffset(Ll/ۖ᩶;Landroid/view/View;I)I
+.method public setHeaderTopBottomOffset(Ll/᩻᩶;Landroid/view/View;I)I
     .locals 6
 
     const/high16 v4, -0x80000000
@@ -671,14 +671,14 @@
     move v3, p3
 
     .line 158
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/ۖ᩶;Landroid/view/View;III)I
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/᩻᩶;Landroid/view/View;III)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public setHeaderTopBottomOffset(Ll/ۖ᩶;Landroid/view/View;III)I
+.method public setHeaderTopBottomOffset(Ll/᩻᩶;Landroid/view/View;III)I
     .locals 0
 
     .line 164
@@ -693,7 +693,7 @@
     if-gt p1, p5, :cond_0
 
     .line 170
-    invoke-static {p3, p4, p5}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {p3, p4, p5}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result p2
 

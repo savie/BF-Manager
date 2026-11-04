@@ -4,7 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import org.bouncycastle.util.Encodable;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ASN1Object implements ASN1Encodable, Encodable {
     public static boolean hasEncodedTagValue(Object obj, int i) {
         return (obj instanceof byte[]) && ((byte[]) obj)[0] == i;

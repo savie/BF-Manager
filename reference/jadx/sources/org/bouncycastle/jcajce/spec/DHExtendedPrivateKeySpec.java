@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.DHPrivateKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHExtendedPrivateKeySpec extends DHPrivateKeySpec {
     public final DHParameterSpec params;
 

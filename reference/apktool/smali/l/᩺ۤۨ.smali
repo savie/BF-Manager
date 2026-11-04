@@ -1,14 +1,34 @@
 .class public final Ll/᩺ۤۨ;
-.super Ll/᩸ۤۨ;
-.source "Z6QT"
+.super Ljava/lang/Object;
+.source "LAYC"
+
+# interfaces
+.implements Ll/ۛۤۨ;
+
+
+# instance fields
+.field public final ۙ:I
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    .line 1800
-    invoke-direct {p0, p1}, Ll/᩸ۤۨ;-><init>([I)V
+    .line 66
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ll/᩺ۤۨ;->ۙ:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final ۙ()I
+    .locals 1
+
+    .line 66
+    iget v0, p0, Ll/᩺ۤۨ;->ۙ:I
+
+    return v0
 .end method

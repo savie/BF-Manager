@@ -1,48 +1,35 @@
 .class public final synthetic Ll/᩺ۗ᩹;
 .super Ljava/lang/Object;
-.source "B29A"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field public final synthetic ֡:Ljava/util/ArrayList;
-
-.field public final synthetic ܺ:Ll/᩸ۗ᩹;
-
-.field public final synthetic ᩶:Ll/᩸ۜ᩹;
+.source "2C5O"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩸ۗ᩹;Ll/᩸ۜ᩹;Ljava/util/ArrayList;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩺ۗ᩹;->ܺ:Ll/᩸ۗ᩹;
-
-    iput-object p2, p0, Ll/᩺ۗ᩹;->᩶:Ll/᩸ۜ᩹;
-
-    iput-object p3, p0, Ll/᩺ۗ᩹;->֡:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public static ۙ(Ll/۫ۗ᩹;Ljava/util/function/Consumer;)V
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    iget-object p1, p0, Ll/᩺ۗ᩹;->᩶:Ll/᩸ۜ᩹;
+    .line 163
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p2, p0, Ll/᩺ۗ᩹;->֡:Ljava/util/ArrayList;
+    .line 166
+    instance-of v0, p1, Ll/ۨۗ᩹;
 
-    iget-object v0, p0, Ll/᩺ۗ᩹;->ܺ:Ll/᩸ۗ᩹;
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, p1, p2}, Ll/᩸ۗ᩹;->ۙ(Ll/᩸ۗ᩹;Ll/᩸ۜ᩹;Ljava/util/ArrayList;)V
+    check-cast p1, Ll/ۨۗ᩹;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ll/ۛۗ᩹;
+
+    invoke-direct {v0, p1}, Ll/ۛۗ᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/ۘۗ᩹;->ۙ(Ll/ۨۗ᩹;)V
 
     return-void
 .end method

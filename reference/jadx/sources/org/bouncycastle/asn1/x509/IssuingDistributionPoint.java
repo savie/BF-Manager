@@ -1,8 +1,8 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C22697;
-import l.C3012;
-import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
+import l.C3188;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Boolean;
 import org.bouncycastle.asn1.ASN1Encodable;
@@ -16,7 +16,7 @@ import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.util.ASN1Dump;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IssuingDistributionPoint extends ASN1Object {
     public DistributionPointName distributionPoint;
     public boolean indirectCRL;
@@ -87,8 +87,8 @@ public class IssuingDistributionPoint extends ASN1Object {
     }
 
     private void appendObject(StringBuilder sb, String str, String str2, String str3) {
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, str2, ":", str);
-        ASN1BMPString$$ExternalSyntheticOutline0.m(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
+        C4794.m14774(sb, ASN1Dump.TAB, str2, ":", str);
+        C4794.m14774(sb, ASN1Dump.TAB, ASN1Dump.TAB, str3, str);
     }
 
     private String booleanToString(boolean z) {
@@ -140,31 +140,31 @@ public class IssuingDistributionPoint extends ASN1Object {
 
     public String toString() {
         String strLineSeparator = Strings.lineSeparator();
-        StringBuilder sbM8976 = C3012.m8976("IssuingDistributionPoint: [", strLineSeparator);
+        StringBuilder sbM10405 = C3188.m10405("IssuingDistributionPoint: [", strLineSeparator);
         DistributionPointName distributionPointName = this.distributionPoint;
         if (distributionPointName != null) {
-            appendObject(sbM8976, strLineSeparator, "distributionPoint", distributionPointName.toString());
+            appendObject(sbM10405, strLineSeparator, "distributionPoint", distributionPointName.toString());
         }
         boolean z = this.onlyContainsUserCerts;
         if (z) {
-            appendObject(sbM8976, strLineSeparator, "onlyContainsUserCerts", booleanToString(z));
+            appendObject(sbM10405, strLineSeparator, "onlyContainsUserCerts", booleanToString(z));
         }
         boolean z2 = this.onlyContainsCACerts;
         if (z2) {
-            appendObject(sbM8976, strLineSeparator, "onlyContainsCACerts", booleanToString(z2));
+            appendObject(sbM10405, strLineSeparator, "onlyContainsCACerts", booleanToString(z2));
         }
         ReasonFlags reasonFlags = this.onlySomeReasons;
         if (reasonFlags != null) {
-            appendObject(sbM8976, strLineSeparator, "onlySomeReasons", reasonFlags.toString());
+            appendObject(sbM10405, strLineSeparator, "onlySomeReasons", reasonFlags.toString());
         }
         boolean z3 = this.onlyContainsAttributeCerts;
         if (z3) {
-            appendObject(sbM8976, strLineSeparator, "onlyContainsAttributeCerts", booleanToString(z3));
+            appendObject(sbM10405, strLineSeparator, "onlyContainsAttributeCerts", booleanToString(z3));
         }
         boolean z4 = this.indirectCRL;
         if (z4) {
-            appendObject(sbM8976, strLineSeparator, "indirectCRL", booleanToString(z4));
+            appendObject(sbM10405, strLineSeparator, "indirectCRL", booleanToString(z4));
         }
-        return C22697.m50267(sbM8976, "]", strLineSeparator);
+        return C8947.m23910(sbM10405, "]", strLineSeparator);
     }
 }

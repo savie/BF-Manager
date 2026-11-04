@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public ֡:J
+.field public final ֡:J
 
-.field public final ۫:J
+.field public final ۟:J
 
-.field public final ܺ:Z
+.field public final ܰ:Z
 
-.field public final ܽ:J
+.field public ܿ:J
 
 .field public ᩶:J
 
@@ -25,21 +25,21 @@
     const-wide/16 v0, 0x0
 
     .line 32
-    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
+    iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܿ:J
 
     .line 50
     iput-wide v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->᩶:J
 
     .line 51
-    iput-wide p4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܽ:J
+    iput-wide p4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
 
     .line 52
-    iput-wide p2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۫:J
+    iput-wide p2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۟:J
 
     const/4 p1, 0x1
 
     .line 53
-    iput-boolean p1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܺ:Z
+    iput-boolean p1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܰ:Z
 
     return-void
 .end method
@@ -52,9 +52,9 @@
     .line 108
     iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->᩶:J
 
-    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܽ:J
+    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
 
-    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۫:J
+    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۟:J
 
     cmp-long v6, v0, v4
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 101
-    iget-boolean v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܺ:Z
+    iget-boolean v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܰ:Z
 
     if-eqz v0, :cond_0
 
@@ -111,7 +111,7 @@
     :try_start_0
     iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->᩶:J
 
-    iput-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
+    iput-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܿ:J
 
     .line 87
     invoke-super {p0, p1}, Lcom/amazonaws/internal/SdkFilterInputStream;->mark(I)V
@@ -168,7 +168,7 @@
     :goto_0
     iget-wide v0, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->᩶:J
 
-    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۫:J
+    iget-wide v2, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->۟:J
 
     cmp-long v4, v0, v2
 
@@ -192,7 +192,7 @@
 
     .line 73
     :cond_0
-    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܽ:J
+    iget-wide v4, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
 
     add-long/2addr v4, v2
 
@@ -245,7 +245,7 @@
 
     .line 92
     :try_start_0
-    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->֡:J
+    iget-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->ܿ:J
 
     iput-wide v1, p0, Lcom/amazonaws/services/s3/internal/InputSubstream;->᩶:J
 

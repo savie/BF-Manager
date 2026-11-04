@@ -23,7 +23,7 @@
 
     move-result-object v0
 
-    check-cast v0, Ll/᩹ܿܰ;
+    check-cast v0, Ll/ܿ۟᩷;
 
     .line 50
     invoke-interface {p1}, Lcom/google/android/material/carousel/Carousel;->isHorizontal()Z

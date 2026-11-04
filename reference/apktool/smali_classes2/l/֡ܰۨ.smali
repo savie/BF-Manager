@@ -1,114 +1,76 @@
 .class public final Ll/֡ܰۨ;
 .super Ljava/lang/Object;
-.source "OANW"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.source "0907"
 
 
 # instance fields
-.field public final ܺ:Ljava/lang/ref/WeakReference;
+.field public ۙ:I
 
-.field public final ᩶:Ll/ܿܰۨ;
+.field public final ᩷:Ljava/lang/StringBuilder;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿܰۨ;Landroid/app/Activity;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 302
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 303
-    iput-object p1, p0, Ll/֡ܰۨ;->᩶:Ll/ܿܰۨ;
+    const/4 v0, 0x0
 
-    .line 306
-    new-instance p1, Ljava/lang/ref/WeakReference;
+    .line 7
+    iput v0, p0, Ll/֡ܰۨ;->ۙ:I
 
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    .line 10
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Ll/֡ܰۨ;->ܺ:Ljava/lang/ref/WeakReference;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object v0, p0, Ll/֡ܰۨ;->᩷:Ljava/lang/StringBuilder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "view"
-
-    .line 6
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 308
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 309
-    iget-object p1, p0, Ll/֡ܰۨ;->ܺ:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/app/Activity;
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    .line 475
-    :cond_0
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, v1, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
-
-    :goto_0
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    if-nez v0, :cond_4
-
-    :goto_1
-    return-void
-
-    .line 323
-    :cond_4
-    iget-object v1, p0, Ll/֡ܰۨ;->᩶:Ll/ܿܰۨ;
-
-    invoke-virtual {v1, v0, p1}, Ll/ܿܰۨ;->ۙ(Landroid/os/IBinder;Landroid/app/Activity;)V
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+.method public final ۙ()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "view"
+    .line 26
+    iget-object v0, p0, Ll/֡ܰۨ;->᩷:Ljava/lang/StringBuilder;
 
-    .line 0
-    invoke-static {p1, v0}, Ll/ܰ֡۠;->ۨ(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ljava/lang/CharSequence;)V
+    .locals 2
+
+    .line 18
+    iget v0, p0, Ll/֡ܰۨ;->ۙ:I
+
+    iget-object v1, p0, Ll/֡ܰۨ;->᩷:Ljava/lang/StringBuilder;
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0xa
+
+    .line 19
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 21
+    :cond_0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 22
+    iget p1, p0, Ll/֡ܰۨ;->ۙ:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ll/֡ܰۨ;->ۙ:I
 
     return-void
 .end method

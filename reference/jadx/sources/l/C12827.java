@@ -1,21 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.۬ۖܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5BHG */
-/* JADX INFO: loaded from: classes3.dex */
-public class C12827 {
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f42701;
-
-    public C12827(int i) {
-        this.f42701 = i;
+/* JADX INFO: renamed from: l.۫ۗܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7HV */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C12827 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    /* JADX INFO: renamed from: ۙ */
-    public int mo3427() {
-        int i = this.f42701;
-        this.f42701 = i + 1;
-        return i;
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return ((C16556) obj).m39198();
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 }

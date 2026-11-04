@@ -1,154 +1,210 @@
 .class public final Ll/ܶ۬᩸;
-.super Ljava/io/FilterInputStream;
-.source "V9OM"
-
-# interfaces
-.implements Ll/᩷ۤᩴ;
+.super Ljava/lang/Object;
+.source "G4ML"
 
 
 # instance fields
-.field public ܺ:I
+.field public final ۙ:I
+
+.field public final ۤ:Ll/ᩳ۬᩸;
+
+.field public final ܳ:I
+
+.field public final ᩴ:Ll/ᩳ۬᩸;
+
+.field public final ᩷:Ll/ܶ᩷ᩴ;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;I)V
+.method public constructor <init>(Ll/ᩳ۬᩸;Ll/ᩳ۬᩸;ILl/ܶ᩷ᩴ;)V
     .locals 0
 
-    .line 254
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    .line 648
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
-    iput p2, p0, Ll/ܶ۬᩸;->ܺ:I
+    .line 649
+    iput-object p1, p0, Ll/ܶ۬᩸;->ᩴ:Ll/ᩳ۬᩸;
+
+    iput-object p2, p0, Ll/ܶ۬᩸;->ۤ:Ll/ᩳ۬᩸;
+
+    iput p3, p0, Ll/ܶ۬᩸;->ۙ:I
+
+    iput-object p4, p0, Ll/ܶ۬᩸;->᩷:Ll/ܶ᩷ᩴ;
+
+    const/4 p3, 0x0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    .line 650
+    :cond_0
+    invoke-interface {p1}, Ll/ۡ᩶᩸;->ۛ᩷()I
+
+    move-result p1
+
+    :goto_0
+    iput p1, p0, Ll/ܶ۬᩸;->ܳ:I
+
+    if-nez p2, :cond_1
+
+    goto :goto_1
+
+    .line 651
+    :cond_1
+    invoke-interface {p2}, Ll/ۡ᩶᩸;->ۛ᩷()I
+
+    move-result p3
+
+    :goto_1
+    iput p3, p0, Ll/ܶ۬᩸;->᩸:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final available()I
-    .locals 2
+.method public final ۙ(Ll/ܶ۬᩸;)Z
+    .locals 3
 
-    .line 260
-    invoke-super {p0}, Ljava/io/FilterInputStream;->available()I
+    if-eqz p1, :cond_0
 
-    move-result v0
+    .line 656
+    iget-object v0, p0, Ll/ܶ۬᩸;->ᩴ:Ll/ᩳ۬᩸;
 
-    iget v1, p0, Ll/ܶ۬᩸;->ܺ:I
+    iget-object v1, p1, Ll/ܶ۬᩸;->ᩴ:Ll/ᩳ۬᩸;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    if-ne v0, v1, :cond_0
 
-    move-result v0
+    iget-object v0, p0, Ll/ܶ۬᩸;->ۤ:Ll/ᩳ۬᩸;
 
-    return v0
-.end method
+    iget-object v1, p1, Ll/ܶ۬᩸;->ۤ:Ll/ᩳ۬᩸;
 
-.method public final read()I
-    .locals 2
+    if-ne v0, v1, :cond_0
 
-    .line 265
-    iget v0, p0, Ll/ܶ۬᩸;->ܺ:I
+    iget v0, p0, Ll/ܶ۬᩸;->ܳ:I
 
-    if-gtz v0, :cond_0
+    iget v1, p1, Ll/ܶ۬᩸;->ܳ:I
 
-    const/4 v0, -0x1
+    if-ne v0, v1, :cond_0
 
-    return v0
+    iget v0, p0, Ll/ܶ۬᩸;->᩸:I
 
-    .line 268
-    :cond_0
-    invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
+    iget v1, p1, Ll/ܶ۬᩸;->᩸:I
 
-    move-result v0
+    if-ne v0, v1, :cond_0
 
-    if-ltz v0, :cond_1
+    iget v0, p0, Ll/ܶ۬᩸;->ۙ:I
 
-    .line 270
-    iget v1, p0, Ll/ܶ۬᩸;->ܺ:I
+    iget v1, p1, Ll/ܶ۬᩸;->ۙ:I
 
-    add-int/lit8 v1, v1, -0x1
+    if-ne v0, v1, :cond_0
 
-    iput v1, p0, Ll/ܶ۬᩸;->ܺ:I
+    iget-object p1, p1, Ll/ܶ۬᩸;->᩷:Ll/ܶ᩷ᩴ;
 
-    :cond_1
-    return v0
-.end method
+    .line 75
+    iget-object v0, p0, Ll/ܶ۬᩸;->᩷:Ll/ܶ᩷ᩴ;
 
-.method public final read([BII)I
-    .locals 1
+    iget v1, v0, Ll/ܶ᩷ᩴ;->ۘ:I
 
-    .line 277
-    iget v0, p0, Ll/ܶ۬᩸;->ܺ:I
+    iget v2, p1, Ll/ܶ᩷ᩴ;->ۘ:I
 
-    if-gtz v0, :cond_0
+    if-ne v1, v2, :cond_0
 
-    const/4 p1, -0x1
+    iget v1, v0, Ll/ܶ᩷ᩴ;->᩶:F
 
-    return p1
+    iget v2, p1, Ll/ܶ᩷ᩴ;->᩶:F
 
-    .line 280
-    :cond_0
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
+    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
 
-    move-result p3
+    move-result v1
 
-    .line 281
-    invoke-super {p0, p1, p2, p3}, Ljava/io/FilterInputStream;->read([BII)I
+    if-nez v1, :cond_0
+
+    iget v1, v0, Ll/ܶ᩷ᩴ;->ܳ:F
+
+    iget v2, p1, Ll/ܶ᩷ᩴ;->ܳ:F
+
+    .line 76
+    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget v1, v0, Ll/ܶ᩷ᩴ;->ۗ:I
+
+    iget v2, p1, Ll/ܶ᩷ᩴ;->ۗ:I
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v1, v0, Ll/ܶ᩷ᩴ;->ܺ:Z
+
+    iget-boolean v2, p1, Ll/ܶ᩷ᩴ;->ܺ:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v1, v0, Ll/ܶ᩷ᩴ;->ۧ:Z
+
+    iget-boolean v2, p1, Ll/ܶ᩷ᩴ;->ۧ:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v1, v0, Ll/ܶ᩷ᩴ;->ۚ:Z
+
+    iget-boolean v2, p1, Ll/ܶ᩷ᩴ;->ۚ:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v1, v0, Ll/ܶ᩷ᩴ;->ܶ:Z
+
+    iget-boolean v2, p1, Ll/ܶ᩷ᩴ;->ܶ:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v1, v0, Ll/ܶ᩷ᩴ;->᩷:Z
+
+    iget-boolean v2, p1, Ll/ܶ᩷ᩴ;->᩷:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, v0, Ll/ܶ᩷ᩴ;->ۛ:I
+
+    iget v2, p1, Ll/ܶ᩷ᩴ;->ۛ:I
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, v0, Ll/ܶ᩷ᩴ;->᩵:Ljava/lang/String;
+
+    iget-object v2, p1, Ll/ܶ᩷ᩴ;->᩵:Ljava/lang/String;
+
+    .line 80
+    invoke-static {v1, v2}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Ll/ܶ᩷ᩴ;->᩸:Ljava/lang/String;
+
+    iget-object p1, p1, Ll/ܶ᩷ᩴ;->᩸:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ll/ܽۚۗ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-ltz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 283
-    iget p2, p0, Ll/ܶ۬᩸;->ܺ:I
+    const/4 p1, 0x1
 
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Ll/ܶ۬᩸;->ܺ:I
-
-    :cond_1
     return p1
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    .line 292
-    iget v0, p0, Ll/ܶ۬᩸;->ܺ:I
-
-    int-to-long v0, v0
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    invoke-super {p0, p1, p2}, Ljava/io/FilterInputStream;->skip(J)J
-
-    move-result-wide p1
-
-    long-to-int p2, p1
-
-    if-ltz p2, :cond_0
-
-    .line 295
-    iget p1, p0, Ll/ܶ۬᩸;->ܺ:I
-
-    sub-int/2addr p1, p2
-
-    iput p1, p0, Ll/ܶ۬᩸;->ܺ:I
 
     :cond_0
-    int-to-long p1, p2
+    const/4 p1, 0x0
 
-    return-wide p1
-.end method
-
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-
-    move-result-wide v0
-
-    return-wide v0
+    return p1
 .end method

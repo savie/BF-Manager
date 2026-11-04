@@ -1,96 +1,62 @@
 .class public final synthetic Ll/ۙ᩷ᩴ;
-.super Ljava/nio/file/attribute/UserPrincipalLookupService;
-.source "N673"
+.super Ljava/lang/Object;
+.source "35IJ"
 
-
-# static fields
-.field public static final synthetic b:I
+# interfaces
+.implements Landroid/view/PixelCopy$OnPixelCopyFinishedListener;
 
 
 # instance fields
-.field public final synthetic a:Ll/ۛ۟ᩴ;
+.field public final synthetic ۙ:Ll/᩷᩷ᩴ;
+
+.field public final synthetic ۤ:I
+
+.field public final synthetic ᩴ:Landroid/view/View;
+
+.field public final synthetic ᩷:Landroid/graphics/Bitmap;
+
+.field public final synthetic ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۛ۟ᩴ;)V
+.method public synthetic constructor <init>(Ll/᩷᩷ᩴ;Landroid/graphics/Bitmap;IILandroid/view/View;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/nio/file/attribute/UserPrincipalLookupService;-><init>()V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
+    iput-object p1, p0, Ll/ۙ᩷ᩴ;->ۙ:Ll/᩷᩷ᩴ;
+
+    iput-object p2, p0, Ll/ۙ᩷ᩴ;->᩷:Landroid/graphics/Bitmap;
+
+    iput p3, p0, Ll/ۙ᩷ᩴ;->ۤ:I
+
+    iput p4, p0, Ll/ۙ᩷ᩴ;->᩸:I
+
+    iput-object p5, p0, Ll/ۙ᩷ᩴ;->ᩴ:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    iget-object v0, p0, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
-
-    instance-of v1, p1, Ll/ۙ᩷ᩴ;
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, Ll/ۙ᩷ᩴ;
-
-    iget-object p1, p1, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final synthetic hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic lookupPrincipalByGroupName(Ljava/lang/String;)Ljava/nio/file/attribute/GroupPrincipal;
-    .locals 1
-
-    iget-object v0, p0, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
-
-    invoke-virtual {v0, p1}, Ll/ۛ۟ᩴ;->a(Ljava/lang/String;)Ll/ۤ᩷ᩴ;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+.method public final onPixelCopyFinished(I)V
+    .locals 6
 
     .line 0
-    :cond_0
-    iget-object p1, p1, Ll/ۤ᩷ᩴ;->a:Ljava/nio/file/attribute/GroupPrincipal;
+    iget-object v0, p0, Ll/ۙ᩷ᩴ;->ۙ:Ll/᩷᩷ᩴ;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Ll/ۙ᩷ᩴ;->᩷:Landroid/graphics/Bitmap;
 
-.method public final synthetic lookupPrincipalByName(Ljava/lang/String;)Ljava/nio/file/attribute/UserPrincipal;
-    .locals 1
+    iget v2, p0, Ll/ۙ᩷ᩴ;->ۤ:I
 
-    iget-object v0, p0, Ll/ۙ᩷ᩴ;->a:Ll/ۛ۟ᩴ;
+    iget v3, p0, Ll/ۙ᩷ᩴ;->᩸:I
 
-    invoke-virtual {v0, p1}, Ll/ۛ۟ᩴ;->b(Ljava/lang/String;)Ll/ܳ۟ᩴ;
+    iget-object v4, p0, Ll/ۙ᩷ᩴ;->ᩴ:Landroid/view/View;
 
-    move-result-object p1
+    move v5, p1
 
-    invoke-static {p1}, Ll/ۧ۟ᩴ;->a(Ll/ܳ۟ᩴ;)Ljava/nio/file/attribute/UserPrincipal;
+    invoke-static/range {v0 .. v5}, Ll/᩷᩷ᩴ;->ۙ(Ll/᩷᩷ᩴ;Landroid/graphics/Bitmap;IILandroid/view/View;I)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

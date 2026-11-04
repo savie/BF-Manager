@@ -1,28 +1,39 @@
 package l;
 
-import android.view.GestureDetector;
-import android.view.MotionEvent;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۛ۟᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 86WH */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5922 extends GestureDetector.SimpleOnGestureListener {
+/* JADX INFO: renamed from: l.ۚ᩷᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: B6EY */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5922 implements Consumer {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23562 f20183;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f20264;
 
-    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
-    public final boolean onDown(MotionEvent motionEvent) {
-        return true;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f20265;
+
+    public /* synthetic */ C5922(int i, Object obj) {
+        this.f20264 = i;
+        this.f20265 = obj;
     }
 
-    public C5922(C23562 c23562) {
-        this.f20183 = c23562;
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnDoubleTapListener
-    public final boolean onDoubleTap(MotionEvent motionEvent) {
-        this.f20183.m51958(420L, false);
-        return true;
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f20264) {
+            case 0:
+                C21943 c21943 = (C21943) obj;
+                c21943.m49646().remove((C21943) this.f20265);
+                c21943.m49653();
+                break;
+            default:
+                C1930.m6626((C1930) this.f20265, (C17973) obj);
+                break;
+        }
     }
 }

@@ -10,7 +10,7 @@ import org.bouncycastle.internal.asn1.oiw.ElGamalParameter;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseAlgorithmParameters;
 import org.bouncycastle.jce.spec.ElGamalParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersSpi extends BaseAlgorithmParameters {
     public ElGamalParameterSpec currentSpec;
 

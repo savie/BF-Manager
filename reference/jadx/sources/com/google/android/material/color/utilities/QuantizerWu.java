@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import l.C17922;
-import l.C8015;
+import l.C18176;
+import l.C24579;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class QuantizerWu implements Quantizer {
@@ -39,7 +39,7 @@ public final class QuantizerWu implements Quantizer {
     }
 
     public static int getIndex(int i, int i2, int i3) {
-        return C8015.m21118((i << 10) + (i << 6) + i, i2 << 5, i2, i3);
+        return C24579.m54897((i << 10) + (i << 6) + i, i2 << 5, i2, i3);
     }
 
     public void constructHistogram(Map map) {
@@ -64,7 +64,7 @@ public final class QuantizerWu implements Quantizer {
             int[] iArr4 = this.momentsB;
             iArr4[index] = (iBlueFromArgb * iIntValue2) + iArr4[index];
             double[] dArr = this.moments;
-            dArr[index] = dArr[index] + ((double) C17922.m41614(iBlueFromArgb, iBlueFromArgb, (iGreenFromArgb * iGreenFromArgb) + (iRedFromArgb * iRedFromArgb), iIntValue2));
+            dArr[index] = dArr[index] + ((double) C18176.m42345(iBlueFromArgb, iBlueFromArgb, (iGreenFromArgb * iGreenFromArgb) + (iRedFromArgb * iRedFromArgb), iIntValue2));
         }
     }
 

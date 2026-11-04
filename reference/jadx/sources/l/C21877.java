@@ -1,72 +1,57 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩸᩹᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N4NK */
-/* JADX INFO: loaded from: classes4.dex */
-public class C21877 extends RuntimeException {
+import android.view.View;
+import android.view.WindowInsetsAnimation;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f70983;
+/* JADX INFO: renamed from: l.᩷ۜ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R9NW */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21877 extends C10688 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final AbstractC19055 f70984;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final WindowInsetsAnimation f69710;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C23289 f70985;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public InterfaceC19761 f70986;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22583 f70987;
-
-    public C21877(AbstractC19055 abstractC19055, InterfaceC22583 interfaceC22583, C23289 c23289) {
-        this.f70983 = -1;
-        this.f70984 = abstractC19055;
-        this.f70987 = interfaceC22583;
-        this.f70985 = c23289;
-        if (abstractC19055 != null) {
-            this.f70983 = abstractC19055.m43800();
-        }
+    public C21877(WindowInsetsAnimation windowInsetsAnimation) {
+        super(0, null, 0L);
+        this.f69710 = windowInsetsAnimation;
     }
 
-    public C21877(String str, AbstractC7060 abstractC7060, InterfaceC22583 interfaceC22583, C23289 c23289) {
-        super(str);
-        this.f70983 = -1;
-        this.f70984 = abstractC7060;
-        this.f70987 = interfaceC22583;
-        this.f70985 = c23289;
-        if (abstractC7060 != null) {
-            this.f70983 = abstractC7060.m43800();
-        }
+    @Override // l.C10688
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo27237() {
+        return this.f69710.getTypeMask();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m48661(int i) {
-        this.f70983 = i;
+    @Override // l.C10688
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo27235() {
+        return this.f69710.getDurationMillis();
+    }
+
+    @Override // l.C10688
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo27236(float f) {
+        this.f69710.setFraction(f);
+    }
+
+    @Override // l.C10688
+    /* JADX INFO: renamed from: ᩷ */
+    public final float mo27238() {
+        return this.f69710.getInterpolatedFraction();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0875 m48660() {
-        AbstractC19055 abstractC19055 = this.f70984;
-        if (abstractC19055 != null) {
-            return abstractC19055.mo5091().m38340(this.f70983, this.f70985);
-        }
-        return null;
+    public static void m49567(View view, AbstractC7749 abstractC7749) {
+        view.setWindowInsetsAnimationCallback(new C4723(abstractC7749));
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC22583 m48664() {
-        return this.f70987;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC19761 m48663() {
-        return this.f70986;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C13275 m49568(WindowInsetsAnimation.Bounds bounds) {
+        return C13275.m32820(bounds.getLowerBound());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m48662(InterfaceC19761 interfaceC19761) {
-        this.f70986 = interfaceC19761;
+    public static C13275 m49566(WindowInsetsAnimation.Bounds bounds) {
+        return C13275.m32820(bounds.getUpperBound());
     }
 }

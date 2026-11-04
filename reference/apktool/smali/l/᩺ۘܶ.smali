@@ -1,14 +1,11 @@
 .class public interface abstract Ll/᩺ۘܶ;
 .super Ljava/lang/Object;
-.source "E81N"
+.source "X1L7"
+
+# interfaces
+.implements Ljava/lang/CharSequence;
 
 
 # virtual methods
-.method public abstract ۘ()I
-.end method
-
-.method public abstract ۜ()V
-.end method
-
-.method public abstract ᩸()I
+.method public abstract ᩻᩷()V
 .end method

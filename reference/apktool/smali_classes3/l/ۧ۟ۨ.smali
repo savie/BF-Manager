@@ -1,20 +1,8 @@
-.class public interface abstract annotation Ll/ۧ۟ۨ;
+.class public interface abstract Ll/ۧ۟ۨ;
 .super Ljava/lang/Object;
-.source "615X"
-
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
+.source "36M1"
 
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+# virtual methods
+.method public abstract ۙ(Ll/֫۟ۨ;)Ll/ۤ۟ۨ;
+.end method

@@ -1,19 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۙۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7EH */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0184 implements InterfaceC23469 {
+import java.io.IOException;
+import java.nio.file.attribute.FileOwnerAttributeView;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC14297 f1298;
+/* JADX INFO: renamed from: l.֡ۙۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C0184 implements InterfaceC18829 {
+    public final /* synthetic */ FileOwnerAttributeView a;
 
-    @Override // l.InterfaceC23469
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo1386() {
-        AbstractC14297 abstractC14297 = this.f1298;
-        abstractC14297.f22710.mo18524(abstractC14297.m18222(abstractC14297.m18220(), (String) abstractC14297.f46841.get()));
-        String str = abstractC14297.f46833;
-        abstractC14297.m18219(str != null ? " // ".concat(str) : "");
+    @Override // l.InterfaceC18829
+    public final /* synthetic */ void b(InterfaceC5405 interfaceC5405) throws IOException {
+        this.a.setOwner(C15099.a(interfaceC5405));
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        FileOwnerAttributeView fileOwnerAttributeView = this.a;
+        if (obj instanceof C0184) {
+            obj = ((C0184) obj).a;
+        }
+        return fileOwnerAttributeView.equals(obj);
+    }
+
+    @Override // l.InterfaceC18829
+    public final /* synthetic */ InterfaceC5405 getOwner() {
+        return C5162.a(this.a.getOwner());
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+
+    @Override // l.InterfaceC1676
+    public final /* synthetic */ String name() {
+        return this.a.name();
     }
 }

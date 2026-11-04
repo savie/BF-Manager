@@ -1,47 +1,73 @@
-.class public final Ll/ۖۗ᩺;
+.class public Ll/ۖۗ᩺;
 .super Ljava/lang/Object;
-.source "0AR8"
+.source "L5HA"
+
+
+# instance fields
+.field public ۙ:Z
+
+.field public final ᩷:I
 
 
 # direct methods
-.method public static ۙ(IJ)I
-    .locals 5
+.method public constructor <init>()V
+    .locals 1
 
-    long-to-int v0, p1
+    .line 112
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v1, v0
+    const/4 v0, 0x0
 
-    const-string v3, "integer overflow"
+    .line 113
+    iput-boolean v0, p0, Ll/ۖۗ᩺;->ۙ:Z
 
-    cmp-long v4, v1, p1
+    const/4 v0, -0x1
 
-    if-nez v4, :cond_1
+    .line 114
+    iput v0, p0, Ll/ۖۗ᩺;->᩷:I
 
-    add-int p1, p0, v0
+    return-void
+.end method
 
-    xor-int/2addr p0, p1
+.method public constructor <init>(Landroid/view/View;Landroid/util/AttributeSet;I)V
+    .locals 2
 
-    xor-int p2, v0, p1
+    .line 105
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/2addr p0, p2
+    .line 106
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-ltz p0, :cond_0
+    move-result-object p1
 
-    return p1
+    sget-object v0, Ll/ܳ᩵᩺;->᩷:[I
 
-    .line 25
-    :cond_0
-    new-instance p0, Ljava/lang/ArithmeticException;
+    const/4 v1, 0x0
 
-    invoke-direct {p0, v3}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    throw p0
+    move-result-object p1
 
-    .line 32
-    :cond_1
-    new-instance p0, Ljava/lang/ArithmeticException;
+    .line 107
+    invoke-virtual {p1, v1, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    invoke-direct {p0, v3}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
+    move-result p2
 
-    throw p0
+    iput-boolean p2, p0, Ll/ۖۗ᩺;->ۙ:Z
+
+    const/4 p2, 0x1
+
+    const/4 p3, -0x1
+
+    .line 108
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result p2
+
+    iput p2, p0, Ll/ۖۗ᩺;->᩷:I
+
+    .line 109
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
 .end method

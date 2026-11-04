@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    sget v1, Ll/ۜ۟ܶ;->ۨ:I
+    sget v1, Ll/ۗ۬ܺ;->ۤ:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -63,9 +63,9 @@
     invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
 
     .line 67
-    sget v2, Ll/ۖ۟ܶ;->ܽܿ:I
+    sget v2, Ll/ۧ۬ܺ;->֡ᩳ:I
 
-    sget v3, Ll/ۖ۟ܶ;->۫ܿ:I
+    sget v3, Ll/ۧ۬ܺ;->۟ᩳ:I
 
     neg-int v3, v3
 

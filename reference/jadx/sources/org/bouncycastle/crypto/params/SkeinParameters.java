@@ -10,11 +10,11 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Locale;
-import l.C15489;
+import l.C13645;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SkeinParameters implements CipherParameters {
     public static final int PARAM_TYPE_CONFIG = 4;
     public static final int PARAM_TYPE_KEY = 0;
@@ -90,7 +90,7 @@ public class SkeinParameters implements CipherParameters {
                 outputStreamWriter.close();
                 return set(8, byteArrayOutputStream.toByteArray());
             } catch (IOException e) {
-                throw new IllegalStateException(C15489.m37075("Byte I/O failed: ", e));
+                throw new IllegalStateException(C13645.m33383("Byte I/O failed: ", e));
             }
         }
 
@@ -106,7 +106,7 @@ public class SkeinParameters implements CipherParameters {
                 outputStreamWriter.close();
                 return set(8, byteArrayOutputStream.toByteArray());
             } catch (IOException e) {
-                throw new IllegalStateException(C15489.m37075("Byte I/O failed: ", e));
+                throw new IllegalStateException(C13645.m33383("Byte I/O failed: ", e));
             }
         }
 

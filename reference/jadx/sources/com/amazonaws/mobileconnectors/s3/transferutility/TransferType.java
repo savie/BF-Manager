@@ -1,6 +1,6 @@
 package com.amazonaws.mobileconnectors.s3.transferutility;
 
-import l.C16523;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum TransferType {
@@ -9,7 +9,7 @@ public enum TransferType {
     ANY;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static TransferType m402(String str) {
+    public static TransferType m396(String str) {
         TransferType transferType = UPLOAD;
         if (str.equalsIgnoreCase(transferType.toString())) {
             return transferType;
@@ -22,6 +22,6 @@ public enum TransferType {
         if (str.equalsIgnoreCase(transferType3.toString())) {
             return transferType3;
         }
-        throw new IllegalArgumentException(C16523.m38890("Type ", str, " is not a recognized type"));
+        throw new IllegalArgumentException(C14442.m34865("Type ", str, " is not a recognized type"));
     }
 }

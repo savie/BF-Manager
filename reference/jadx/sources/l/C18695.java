@@ -1,20 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۤۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 34PY */
-/* JADX INFO: loaded from: classes5.dex */
-public final enum C18695 extends EnumC8112 {
-    public /* synthetic */ C18695() {
-        this("UPPER", 2);
-    }
+import android.content.Context;
+import java.io.File;
 
-    public C18695(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC8112
-    /* JADX INFO: renamed from: ۙ */
-    public EnumC8112 mo21371() {
-        return EnumC8112.f28425;
+/* JADX INFO: renamed from: l.ᩳ֡, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3650 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18695 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static File[] m43484(Context context) {
+        return context.getExternalMediaDirs();
     }
 }

@@ -1,15 +1,18 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۤ᩸ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6B2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10560 extends C5151 {
+import android.net.Uri;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C18557 f36155;
+/* JADX INFO: renamed from: l.ۤۖۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A7N6 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10560 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m26713() {
-        return this.f36155;
-    }
+    public AbstractC24240 f33547;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Uri f33548;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f33549;
 }

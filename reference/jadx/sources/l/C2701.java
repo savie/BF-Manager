@@ -1,66 +1,78 @@
 package l;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-/* JADX INFO: renamed from: l.ۖᩳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: R9OM */
+/* JADX INFO: renamed from: l.ۖ۬᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: K6W6 */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2701 {
+public final class C2701 {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static volatile C2701 f10401;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C2701 f10402 = new C2701(0);
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final double f8578 = Math.sqrt(0.85d);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Map f10403;
+    public boolean f8579;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f8580;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public float f8581;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public float f8582;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public float f8583;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public float f8584;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public float f8585;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2701 m8236() {
-        C2701 c2701;
-        C2701 c2702 = f10401;
-        if (c2702 != null) {
-            return c2702;
-        }
-        synchronized (C2701.class) {
-            c2701 = f10401;
-            if (c2701 == null) {
-                Class cls = C13992.f45995;
-                C2701 c2703 = null;
-                if (cls != null) {
-                    try {
-                        c2703 = (C2701) cls.getDeclaredMethod("getEmptyRegistry", null).invoke(null, null);
-                    } catch (Exception unused) {
-                    }
-                }
-                c2701 = c2703 != null ? c2703 : f10402;
-                f10401 = c2701;
-            }
-        }
-        return c2701;
+    public final void m8868(float f, float f2) {
+        this.f8584 += f;
+        this.f8580 += f2;
+        this.f8579 = true;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C10485 m8237(int i, InterfaceC23206 interfaceC23206) {
-        return (C10485) this.f10403.get(new C11875(i, interfaceC23206));
-    }
-
-    public C2701() {
-        this.f10403 = new HashMap();
-    }
-
-    public C2701(C2701 c2701) {
-        if (c2701 == f10402) {
-            this.f10403 = Collections.EMPTY_MAP;
-        } else {
-            this.f10403 = C0561.unmodifiableMap(c2701.f10403);
+    public final void m8867(float f) {
+        float fMax = Math.max(f * 60.0f, 0.001f);
+        if (this.f8579) {
+            this.f8585 = this.f8584 / fMax;
+            this.f8583 = this.f8580 / fMax;
+            this.f8580 = 0.0f;
+            this.f8584 = 0.0f;
+            this.f8579 = false;
+            this.f8581 = 0.0f;
+            this.f8582 = 0.0f;
+            return;
         }
+        double d = f8578;
+        double dPow = Math.pow(d, fMax);
+        float f2 = (float) (((1.0d - dPow) * d) / (1.0d - d));
+        float f3 = this.f8585;
+        this.f8582 = f3 * f2;
+        float f4 = this.f8583;
+        this.f8581 = f2 * f4;
+        this.f8585 = (float) (((double) f3) * dPow);
+        this.f8583 = (float) (((double) f4) * dPow);
     }
 
-    public C2701(int i) {
-        this.f10403 = Collections.EMPTY_MAP;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m8869() {
+        return this.f8579 || Math.hypot((double) this.f8585, (double) this.f8583) >= 0.004999999888241291d;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m8870() {
+        this.f8579 = false;
+        this.f8581 = 0.0f;
+        this.f8582 = 0.0f;
+        this.f8583 = 0.0f;
+        this.f8585 = 0.0f;
+        this.f8580 = 0.0f;
+        this.f8584 = 0.0f;
     }
 }

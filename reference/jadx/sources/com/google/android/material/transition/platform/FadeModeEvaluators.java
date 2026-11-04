@@ -1,7 +1,7 @@
 package com.google.android.material.transition.platform;
 
-import l.C0280;
-import l.C8479;
+import l.C13645;
+import l.C19967;
 
 /* JADX INFO: loaded from: classes.dex */
 public class FadeModeEvaluators {
@@ -26,8 +26,8 @@ public class FadeModeEvaluators {
     public static final FadeModeEvaluator THROUGH = new FadeModeEvaluator() { // from class: com.google.android.material.transition.platform.FadeModeEvaluators.4
         @Override // com.google.android.material.transition.platform.FadeModeEvaluator
         public FadeModeResult evaluate(float f, float f2, float f3, float f4) {
-            float fM1792 = C0280.m1792(f3, f2, f4, f2);
-            return FadeModeResult.startOnTop(TransitionUtils.lerp(255, 0, f2, fM1792, f), TransitionUtils.lerp(0, 255, fM1792, f3, f));
+            float fM45884 = C19967.m45884(f3, f2, f4, f2);
+            return FadeModeResult.startOnTop(TransitionUtils.lerp(255, 0, f2, fM45884, f), TransitionUtils.lerp(0, 255, fM45884, f3, f));
         }
     };
 
@@ -44,6 +44,6 @@ public class FadeModeEvaluators {
         if (i == 3) {
             return THROUGH;
         }
-        throw new IllegalArgumentException(C8479.m22141(i, "Invalid fade mode: "));
+        throw new IllegalArgumentException(C13645.m33382(i, "Invalid fade mode: "));
     }
 }

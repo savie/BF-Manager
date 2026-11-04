@@ -10,7 +10,7 @@ import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Memoable;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HMac implements Mac {
     public static final byte IPAD = 54;
     public static final byte OPAD = 92;

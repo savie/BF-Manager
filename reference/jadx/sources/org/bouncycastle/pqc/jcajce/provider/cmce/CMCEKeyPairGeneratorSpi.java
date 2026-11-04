@@ -7,7 +7,7 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
-import l.C11996;
+import l.C12351;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.jcajce.util.SpecUtil;
@@ -74,7 +74,7 @@ public class CMCEKeyPairGeneratorSpi extends KeyPairGenerator {
     public void initialize(AlgorithmParameterSpec algorithmParameterSpec, SecureRandom secureRandom) throws InvalidAlgorithmParameterException {
         String nameFromParams = getNameFromParams(algorithmParameterSpec);
         if (nameFromParams == null) {
-            throw new InvalidAlgorithmParameterException(C11996.m29881("invalid ParameterSpec: ", algorithmParameterSpec));
+            throw new InvalidAlgorithmParameterException(C12351.m30818("invalid ParameterSpec: ", algorithmParameterSpec));
         }
         CMCEKeyGenerationParameters cMCEKeyGenerationParameters = new CMCEKeyGenerationParameters(secureRandom, (CMCEParameters) parameters.get(nameFromParams));
         this.param = cMCEKeyGenerationParameters;

@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.crypto.params.DHPrivateKeyParameters;
 import org.bouncycastle.crypto.params.DHPublicKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MQVBasicAgreement implements BasicAgreement {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public DHMQVPrivateParameters privParams;

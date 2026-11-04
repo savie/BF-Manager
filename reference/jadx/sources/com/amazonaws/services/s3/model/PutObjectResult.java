@@ -10,21 +10,21 @@ import java.util.Date;
 public class PutObjectResult extends SSEResultBase implements ObjectExpirationResult, S3RequesterChargedResult, S3VersionResult {
     @Override // com.amazonaws.services.s3.internal.S3VersionResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo478(String str) {
+    public final void mo472(String str) {
     }
 
     @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo468(Date date) {
+    public final void mo462(Date date) {
     }
 
     @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo465(boolean z) {
+    public final void mo459(boolean z) {
     }
 
     @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo469(String str) {
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo463(String str) {
     }
 }

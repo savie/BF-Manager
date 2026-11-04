@@ -22,26 +22,26 @@ import com.google.android.material.badge.BadgeUtils;
 import com.google.android.material.motion.MotionUtils;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.ripple.RippleUtils;
-import l.C0976;
-import l.C10405;
-import l.C12972;
-import l.C13165;
-import l.C16407;
-import l.C17910;
-import l.C18933;
-import l.C22006;
-import l.C2249;
-import l.C23707;
-import l.C2387;
-import l.C3798;
-import l.C5031;
-import l.C6621;
-import l.C7603;
-import l.C9494;
-import l.InterfaceC0858;
+import l.C0597;
+import l.C10884;
+import l.C11642;
+import l.C1608;
+import l.C16117;
+import l.C17609;
+import l.C18085;
+import l.C19835;
+import l.C22666;
+import l.C23577;
+import l.C24323;
+import l.C3439;
+import l.C6696;
+import l.C7508;
+import l.C8407;
+import l.C8451;
+import l.InterfaceC1586;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class NavigationBarItemView extends FrameLayout implements InterfaceC0858 {
+public abstract class NavigationBarItemView extends FrameLayout implements InterfaceC1586 {
     public static final ActiveIndicatorTransform ACTIVE_INDICATOR_LABELED_TRANSFORM;
     public static final ActiveIndicatorTransform ACTIVE_INDICATOR_UNLABELED_TRANSFORM;
     public static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
@@ -64,7 +64,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
     public boolean initialized;
     public boolean isShifting;
     public Drawable itemBackground;
-    public C23707 itemData;
+    public C8407 itemData;
     public int itemPaddingBottom;
     public int itemPaddingTop;
     public int itemPosition;
@@ -81,7 +81,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
 
     public abstract int getItemLayoutResId();
 
-    @Override // l.InterfaceC0858
+    @Override // l.InterfaceC1586
     public boolean prefersCondensedTitle() {
         return false;
     }
@@ -111,21 +111,21 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
         this.activeIndicatorResizeable = false;
         this.activeIndicatorMarginHorizontal = 0;
         LayoutInflater.from(context).inflate(getItemLayoutResId(), (ViewGroup) this, true);
-        this.iconContainer = (FrameLayout) findViewById(C3798.f13931);
-        this.activeIndicatorView = findViewById(C3798.f13778);
-        ImageView imageView = (ImageView) findViewById(C3798.f13895);
+        this.iconContainer = (FrameLayout) findViewById(C23577.f76491);
+        this.activeIndicatorView = findViewById(C23577.f76221);
+        ImageView imageView = (ImageView) findViewById(C23577.f76313);
         this.icon = imageView;
-        ViewGroup viewGroup = (ViewGroup) findViewById(C3798.f13743);
+        ViewGroup viewGroup = (ViewGroup) findViewById(C23577.f76503);
         this.labelGroup = viewGroup;
-        TextView textView = (TextView) findViewById(C3798.f14073);
+        TextView textView = (TextView) findViewById(C23577.f76384);
         this.smallLabel = textView;
-        TextView textView2 = (TextView) findViewById(C3798.f13790);
+        TextView textView2 = (TextView) findViewById(C23577.f76455);
         this.largeLabel = textView2;
         setBackgroundResource(getItemBackgroundResId());
         this.itemPaddingTop = getResources().getDimensionPixelSize(getItemDefaultMarginResId());
         this.itemPaddingBottom = viewGroup.getPaddingBottom();
-        this.activeIndicatorLabelPadding = getResources().getDimensionPixelSize(C0976.f4564);
-        int i = C5031.f17539;
+        this.activeIndicatorLabelPadding = getResources().getDimensionPixelSize(C17609.f57633);
+        int i = C22666.f73603;
         textView.setImportantForAccessibility(2);
         textView2.setImportantForAccessibility(2);
         setFocusable(true);
@@ -155,28 +155,28 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
         return this.labelGroup.getMeasuredHeight() + getSuggestedIconHeight() + (this.labelGroup.getVisibility() == 0 ? this.activeIndicatorLabelPadding : 0) + layoutParams.topMargin + layoutParams.bottomMargin;
     }
 
-    @Override // l.InterfaceC0858
-    public void initialize(C23707 c23707, int i) {
+    @Override // l.InterfaceC1586
+    public void initialize(C8407 c8407, int i) {
         CharSequence title;
-        this.itemData = c23707;
-        setCheckable(c23707.isCheckable());
-        setChecked(c23707.isChecked());
-        setEnabled(c23707.isEnabled());
-        setIcon(c23707.getIcon());
-        setTitle(c23707.getTitle());
-        setId(c23707.getItemId());
-        if (!TextUtils.isEmpty(c23707.getContentDescription())) {
-            setContentDescription(c23707.getContentDescription());
+        this.itemData = c8407;
+        setCheckable(c8407.isCheckable());
+        setChecked(c8407.isChecked());
+        setEnabled(c8407.isEnabled());
+        setIcon(c8407.getIcon());
+        setTitle(c8407.getTitle());
+        setId(c8407.getItemId());
+        if (!TextUtils.isEmpty(c8407.getContentDescription())) {
+            setContentDescription(c8407.getContentDescription());
         }
-        if (!TextUtils.isEmpty(c23707.getTooltipText())) {
-            title = c23707.getTooltipText();
+        if (!TextUtils.isEmpty(c8407.getTooltipText())) {
+            title = c8407.getTooltipText();
         } else {
-            title = c23707.getTitle();
+            title = c8407.getTitle();
         }
         if (Build.VERSION.SDK_INT > 23) {
-            C18933.m43611(this, title);
+            C6696.m18717(this, title);
         }
-        setVisibility(c23707.isVisible() ? 0 : 8);
+        setVisibility(c8407.isVisible() ? 0 : 8);
         this.initialized = true;
     }
 
@@ -216,24 +216,24 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
         }
     }
 
-    @Override // l.InterfaceC0858
-    public C23707 getItemData() {
+    @Override // l.InterfaceC1586
+    public C8407 getItemData() {
         return this.itemData;
     }
 
     public void setTitle(CharSequence charSequence) {
         this.smallLabel.setText(charSequence);
         this.largeLabel.setText(charSequence);
-        C23707 c23707 = this.itemData;
-        if (c23707 == null || TextUtils.isEmpty(c23707.getContentDescription())) {
+        C8407 c8407 = this.itemData;
+        if (c8407 == null || TextUtils.isEmpty(c8407.getContentDescription())) {
             setContentDescription(charSequence);
         }
-        C23707 c23708 = this.itemData;
-        if (c23708 != null && !TextUtils.isEmpty(c23708.getTooltipText())) {
+        C8407 c8408 = this.itemData;
+        if (c8408 != null && !TextUtils.isEmpty(c8408.getTooltipText())) {
             charSequence = this.itemData.getTooltipText();
         }
         if (Build.VERSION.SDK_INT > 23) {
-            C18933.m43611(this, charSequence);
+            C6696.m18717(this, charSequence);
         }
     }
 
@@ -271,7 +271,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
 
     private void maybeAnimateActiveIndicatorToProgress(final float f) {
         if (this.activeIndicatorEnabled && this.initialized) {
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             if (isAttachedToWindow()) {
                 ValueAnimator valueAnimator = this.activeIndicatorAnimator;
                 if (valueAnimator != null) {
@@ -286,8 +286,8 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
                         NavigationBarItemView.this.setActiveIndicatorProgress(((Float) valueAnimator2.getAnimatedValue()).floatValue(), f);
                     }
                 });
-                this.activeIndicatorAnimator.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C2387.f8957, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR));
-                this.activeIndicatorAnimator.setDuration(MotionUtils.resolveThemeDuration(getContext(), C2387.f9469, getResources().getInteger(C6621.f22335)));
+                this.activeIndicatorAnimator.setInterpolator(MotionUtils.resolveThemeInterpolator(getContext(), C11642.f36560, AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR));
+                this.activeIndicatorAnimator.setDuration(MotionUtils.resolveThemeDuration(getContext(), C11642.f37310, getResources().getInteger(C3439.f11187)));
                 this.activeIndicatorAnimator.start();
                 return;
             }
@@ -296,9 +296,9 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
     }
 
     private void refreshChecked() {
-        C23707 c23707 = this.itemData;
-        if (c23707 != null) {
-            setChecked(c23707.isChecked());
+        C8407 c8407 = this.itemData;
+        if (c8407 != null) {
+            setChecked(c8407.isChecked());
         }
     }
 
@@ -387,13 +387,13 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
             }
             accessibilityNodeInfo.setContentDescription(((Object) title) + ", " + ((Object) this.badgeDrawable.getContentDescription()));
         }
-        C22006 c22006M48820 = C22006.m48820(accessibilityNodeInfo);
-        c22006M48820.m48846(C2249.m6904(0, 1, getItemVisiblePosition(), 1, false, isSelected()));
+        C19835 c19835M45619 = C19835.m45619(accessibilityNodeInfo);
+        c19835M45619.m45642(C10884.m27635(0, 1, getItemVisiblePosition(), 1, false, isSelected()));
         if (isSelected()) {
-            c22006M48820.m48834(false);
-            c22006M48820.m48876(C9494.f32123);
+            c19835M45619.m45689(false);
+            c19835M45619.m45683(C8451.f27630);
         }
-        c22006M48820.m48875(getResources().getString(C17910.f56797));
+        c19835M45619.m45640(getResources().getString(C24323.f78776));
     }
 
     private int getItemVisiblePosition() {
@@ -434,17 +434,17 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
         this.largeLabel.setEnabled(z);
         this.icon.setEnabled(z);
         if (z) {
-            C5031.m13996(this, C13165.m32553(getContext()));
+            C22666.m51102(this, C1608.m5657(getContext()));
         } else {
-            C5031.m13996(this, (C13165) null);
+            C22666.m51102(this, (C1608) null);
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public int[] onCreateDrawableState(int i) {
         int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i + 1);
-        C23707 c23707 = this.itemData;
-        if (c23707 != null && c23707.isCheckable() && this.itemData.isChecked()) {
+        C8407 c8407 = this.itemData;
+        if (c8407 != null && c8407.isCheckable() && this.itemData.isChecked()) {
             View.mergeDrawableStates(iArrOnCreateDrawableState, CHECKED_STATE_SET);
         }
         return iArrOnCreateDrawableState;
@@ -460,11 +460,11 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
             if (constantState != null) {
                 drawable = constantState.newDrawable();
             }
-            drawable = C7603.m20139(drawable).mutate();
+            drawable = C0597.m2697(drawable).mutate();
             this.wrappedIconDrawable = drawable;
             ColorStateList colorStateList = this.iconTint;
             if (colorStateList != null) {
-                C7603.m20129(drawable, colorStateList);
+                C0597.m2690(drawable, colorStateList);
             }
         }
         this.icon.setImageDrawable(drawable);
@@ -476,7 +476,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
         if (this.itemData == null || (drawable = this.wrappedIconDrawable) == null) {
             return;
         }
-        C7603.m20129(drawable, colorStateList);
+        C0597.m2690(drawable, colorStateList);
         this.wrappedIconDrawable.invalidateSelf();
     }
 
@@ -505,7 +505,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
     }
 
     public static void setTextAppearanceWithoutFontScaling(TextView textView, int i) {
-        C16407.m38617(textView, i);
+        C18085.m42126(textView, i);
         int unscaledTextSize = MaterialResources.getUnscaledTextSize(textView.getContext(), i, 0);
         if (unscaledTextSize != 0) {
             textView.setTextSize(0, unscaledTextSize);
@@ -526,7 +526,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
     }
 
     public void setItemBackground(int i) {
-        setItemBackground(i == 0 ? null : C10405.m26304(getContext(), i));
+        setItemBackground(i == 0 ? null : C7508.m20563(getContext(), i));
     }
 
     public void setItemBackground(Drawable drawable) {
@@ -560,7 +560,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
             frameLayout.setPadding(0, 0, 0, 0);
             this.iconContainer.setForeground(rippleDrawable);
         }
-        int i = C5031.f17539;
+        int i = C22666.f73603;
         setBackground(drawableCreateItemBackgroundCompat);
         if (Build.VERSION.SDK_INT >= 26) {
             setDefaultFocusHighlightEnabled(z);
@@ -736,11 +736,11 @@ public abstract class NavigationBarItemView extends FrameLayout implements Inter
     }
 
     public int getItemBackgroundResId() {
-        return C12972.f43145;
+        return C16117.f52385;
     }
 
     public int getItemDefaultMarginResId() {
-        return C0976.f4173;
+        return C17609.f57192;
     }
 
     public class ActiveIndicatorTransform {

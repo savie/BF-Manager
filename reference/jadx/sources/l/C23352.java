@@ -1,87 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻֡᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 565E */
+/* JADX INFO: renamed from: l.᩹ۛۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87AO */
 /* JADX INFO: loaded from: classes.dex */
-public class C23352 extends AbstractC11833 {
+public final class C23352 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f75656 = 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f75630;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public AbstractC11833[] f75657;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f75631;
 
-    public C23352(C12063 c12063, C13825 c13825) {
-        int i = 0;
-        this.f75657 = new AbstractC11833[c13825.m33647()];
-        while (true) {
-            AbstractC11833[] abstractC11833Arr = this.f75657;
-            if (i >= abstractC11833Arr.length) {
-                return;
-            }
-            abstractC11833Arr[i] = AbstractC11833.m29516(c12063, c13825);
-            i++;
-        }
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f75632;
 
-    public C23352(AbstractC11833[] abstractC11833Arr) {
-        this.f75657 = abstractC11833Arr;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f75633;
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public void mo4463(C4651 c4651) {
-        c4651.m12842(this.f75657.length);
-        for (AbstractC11833 abstractC11833 : this.f75657) {
-            abstractC11833.mo4463(c4651);
-        }
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public int mo4462(int i) {
-        int iM33072 = C13530.m33072(this.f75657.length) + i;
-        for (AbstractC11833 abstractC11833 : this.f75657) {
-            iM33072 = abstractC11833.mo4462(iM33072);
-        }
-        return iM33072;
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo4464(AbstractC11833 abstractC11833) {
-        C23352 c23352 = (C23352) abstractC11833;
-        int length = this.f75657.length - c23352.f75657.length;
-        if (length != 0) {
-            return length;
-        }
-        int i = 0;
-        while (true) {
-            AbstractC11833[] abstractC11833Arr = this.f75657;
-            if (i >= abstractC11833Arr.length) {
-                return length;
-            }
-            length = abstractC11833Arr[i].compareTo(c23352.f75657[i]);
-            if (length != 0) {
-                return length;
-            }
-            i++;
-        }
-    }
-
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ᩸ */
-    public final EnumC18182 mo4465() {
-        return EnumC18182.VALUE_ARRAY;
-    }
-
-    public final int hashCode() {
-        if (this.f75656 == 0) {
-            this.f75656 = 0;
-            for (AbstractC11833 abstractC11833 : this.f75657) {
-                this.f75656 = abstractC11833.hashCode() + (this.f75656 * 31);
-            }
-        }
-        return this.f75656;
+    public C23352(String str, String str2, String str3, String str4) {
+        this.f75633 = str;
+        this.f75630 = str2;
+        this.f75631 = str3;
+        this.f75632 = str4;
     }
 }

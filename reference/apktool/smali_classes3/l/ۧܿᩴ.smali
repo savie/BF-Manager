@@ -1,107 +1,152 @@
 .class public final synthetic Ll/ۧܿᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "I6YB"
+
+
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public static $default$replaceAll(Ljava/util/List;Ljava/util/function/UnaryOperator;)V
-    .locals 1
-
-    .line 437
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 438
-    invoke-interface {p0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object p0
-
-    .line 439
-    :goto_0
-    invoke-interface {p0}, Ljava/util/ListIterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 440
-    invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Ljava/util/function/UnaryOperator;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p0, v0}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static $default$sort(Ljava/util/List;Ljava/util/Comparator;)V
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 505
-    invoke-interface {p0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
+    .line 44
+    invoke-static {}, Ll/ۚۨᩴ;->values()[Ll/ۚۨᩴ;
 
     move-result-object v0
 
-    .line 506
-    invoke-static {v0, p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+    array-length v0, v0
 
-    .line 507
-    invoke-interface {p0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
+    new-array v0, v0, [I
 
-    move-result-object p0
+    sput-object v0, Ll/ۧܿᩴ;->ۙ:[I
 
-    .line 508
-    array-length p1, v0
+    :try_start_0
+    sget-object v1, Ll/ۚۨᩴ;->ۡ:Ll/ۚۨᩴ;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :goto_0
-    if-ge v1, p1, :cond_0
+    move-result v1
 
-    aget-object v2, v0, v1
+    const/4 v2, 0x1
 
-    .line 509
-    invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 510
-    invoke-interface {p0, v2}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
 
-    add-int/lit8 v1, v1, 0x1
+    sget-object v1, Ll/ۚۨᩴ;->ᩳ:Ll/ۚۨᩴ;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :cond_0
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->ܿ:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->᩶:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->۟:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->֡:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->ۢ:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Ll/ۧܿᩴ;->ۙ:[I
+
+    sget-object v1, Ll/ۚۨᩴ;->֨:Ll/ۚۨᩴ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
-.end method
-
-.method public static $default$spliterator(Ljava/util/List;)Ll/᩷ۛᩴ;
-    .locals 1
-
-    .line 773
-    instance-of v0, p0, Ljava/util/RandomAccess;
-
-    if-eqz v0, :cond_0
-
-    .line 774
-    new-instance v0, Ll/ܿۛᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܿۛᩴ;-><init>(Ljava/util/List;)V
-
-    return-object v0
-
-    :cond_0
-    const/16 v0, 0x10
-
-    .line 776
-    invoke-static {p0, v0}, Ll/᩶ۛᩴ;->spliterator(Ljava/util/Collection;I)Ll/᩷ۛᩴ;
-
-    move-result-object p0
-
-    return-object p0
 .end method

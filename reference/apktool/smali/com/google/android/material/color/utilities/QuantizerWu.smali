@@ -282,7 +282,7 @@
     shl-int/lit8 p0, p1, 0x5
 
     .line 68
-    invoke-static {v0, p0, p1, p2}, Ll/۠ۜ᩵;->ۙ(IIII)I
+    invoke-static {v0, p0, p1, p2}, Ll/᩺᩸ۚ;->ۙ(IIII)I
 
     move-result p0
 
@@ -774,7 +774,7 @@
 
     add-int/2addr v3, v2
 
-    invoke-static {v1, v1, v3, v0}, Ll/ᩳ۠ۚ;->ۙ(IIII)I
+    invoke-static {v1, v1, v3, v0}, Ll/ܿ۟ۧ;->ۙ(IIII)I
 
     move-result v0
 

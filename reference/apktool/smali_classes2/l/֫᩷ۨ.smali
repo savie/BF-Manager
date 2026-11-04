@@ -1,51 +1,83 @@
 .class public final Ll/֫᩷ۨ;
 .super Ljava/lang/Object;
-.source "D77D"
+.source "4AX2"
 
 
-# instance fields
-.field public final ۙ:Ljava/util/ArrayList;
-
-.field public final ۨ:Ll/ۢ᩷ۨ;
-
-.field public final ܰ:Ll/ۢ᩷ۨ;
+# static fields
+.field public static final ۙ:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۢ᩷ۨ;Ljava/util/List;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    .line 20
+    :try_start_0
+    new-instance v0, Ll/᩶۬᩵;
 
-    .line 330
-    invoke-direct {p0, p1, v0}, Ll/֫᩷ۨ;-><init>(Ll/ۢ᩷ۨ;Ll/ۢ᩷ۨ;)V
+    invoke-direct {v0}, Ll/᩶۬᩵;-><init>()V
 
-    .line 331
-    iget-object p1, p0, Ll/֫᩷ۨ;->ۙ:Ljava/util/ArrayList;
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    new-array v1, v1, [Ll/֨۠᩵;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-string v1, "<this>"
+
+    .line 0
+    invoke-static {v0, v1}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 31
+    new-instance v1, Ll/ۗۖ᩵;
+
+    invoke-direct {v1, v0}, Ll/ۗۖ᩵;-><init>(Ljava/util/Iterator;)V
+
+    .line 677
+    new-instance v0, Ll/᩸ۖ᩵;
+
+    invoke-direct {v0, v1}, Ll/᩸ۖ᩵;-><init>(Ll/ۗۖ᩵;)V
+
+    .line 20
+    invoke-static {v0}, Ll/ܺۖ᩵;->ۙ(Ll/֫ۖ᩵;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Ll/֫᩷ۨ;->ۙ:Ljava/util/List;
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Ljava/util/ServiceConfigurationError;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v0}, Ljava/util/ServiceConfigurationError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public constructor <init>(Ll/ۢ᩷ۨ;Ll/ۢ᩷ۨ;)V
+.method public static final ۙ()Ljava/util/List;
     .locals 1
 
-    .line 324
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 17
+    sget-object v0, Ll/֫᩷ۨ;->ۙ:Ljava/util/List;
 
-    .line 322
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ll/֫᩷ۨ;->ۙ:Ljava/util/ArrayList;
-
-    .line 325
-    iput-object p1, p0, Ll/֫᩷ۨ;->ܰ:Ll/ۢ᩷ۨ;
-
-    .line 326
-    iput-object p2, p0, Ll/֫᩷ۨ;->ۨ:Ll/ۢ᩷ۨ;
-
-    return-void
+    return-object v0
 .end method

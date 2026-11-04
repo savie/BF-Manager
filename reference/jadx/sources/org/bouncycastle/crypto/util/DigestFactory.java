@@ -16,7 +16,7 @@ import org.bouncycastle.crypto.digests.SHA512tDigest;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DigestFactory {
     public static final Map cloneMap;
 

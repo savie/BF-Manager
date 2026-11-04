@@ -1,20 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷֡۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: JAXP */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20520 {
-    public final int hashCode() {
-        long jDoubleToLongBits = Double.doubleToLongBits(0.0d);
-        long jDoubleToLongBits2 = Double.doubleToLongBits(0.0d);
-        return (((int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32))) * 31) + ((int) (jDoubleToLongBits2 ^ (jDoubleToLongBits2 >>> 32)));
-    }
+import java.io.IOException;
 
-    public final String toString() {
-        return "0.0..0.0";
-    }
+/* JADX INFO: renamed from: l.᩵ۧۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P77N */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20520 extends IOException {
 
-    public final boolean equals(Object obj) {
-        return obj instanceof C20520;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final IOException f65729;
+
+    public C20520(IOException iOException) {
+        super(iOException.getMessage(), iOException);
+        this.f65729 = iOException;
     }
 }

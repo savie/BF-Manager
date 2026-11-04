@@ -1,19 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۨۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R1EE */
+/* JADX INFO: renamed from: l.ۤܺ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6MQ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10972 extends ThreadLocal {
-    @Override // java.lang.ThreadLocal
-    public final Object initialValue() {
-        return new C2093();
-    }
+public final class C10972 {
 
-    @Override // java.lang.ThreadLocal
-    public final C2093 get() {
-        C2093 c2093 = (C2093) super.get();
-        C13638.requireNonNull(c2093);
-        c2093.m6636();
-        return c2093;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C6499 f34666;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f34667;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f34668;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f34669;
+
+    public C10972(int i, int i2, int i3, C6499 c6499) {
+        this.f34669 = i;
+        this.f34668 = i2;
+        this.f34667 = i3;
+        this.f34666 = c6499;
     }
 }

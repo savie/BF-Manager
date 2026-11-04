@@ -8,15 +8,15 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.navigation.NavigationBarMenuView;
 import com.google.android.material.navigation.NavigationBarView;
-import l.C0976;
-import l.C10405;
-import l.C15844;
-import l.C18616;
-import l.C1977;
-import l.C22144;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C16863;
+import l.C17609;
+import l.C22666;
+import l.C3977;
+import l.C4185;
+import l.C5204;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BottomNavigationView extends NavigationBarView {
@@ -44,45 +44,45 @@ public class BottomNavigationView extends NavigationBarView {
     }
 
     public BottomNavigationView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9293);
+        this(context, attributeSet, C11642.f37238);
     }
 
     public BottomNavigationView(Context context, AttributeSet attributeSet, int i) {
-        this(context, attributeSet, i, C18616.f59780);
+        this(context, attributeSet, i, C4185.f14670);
     }
 
     public BottomNavigationView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
         Context context2 = getContext();
-        C1977 c1977ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C8033.f26817, i, i2, new int[0]);
-        setItemHorizontalTranslationEnabled(c1977ObtainTintedStyledAttributes.m6376(C8033.f27932, true));
-        if (c1977ObtainTintedStyledAttributes.m6383(C8033.f28039)) {
-            setMinimumHeight(c1977ObtainTintedStyledAttributes.m6384(C8033.f28039, 0));
+        C5204 c5204ObtainTintedStyledAttributes = ThemeEnforcement.obtainTintedStyledAttributes(context2, attributeSet, C14625.f46865, i, i2, new int[0]);
+        setItemHorizontalTranslationEnabled(c5204ObtainTintedStyledAttributes.m15654(C14625.f47290, true));
+        if (c5204ObtainTintedStyledAttributes.m15655(C14625.f47823)) {
+            setMinimumHeight(c5204ObtainTintedStyledAttributes.m15665(C14625.f47823, 0));
         }
-        if (c1977ObtainTintedStyledAttributes.m6376(C8033.f27455, true) && shouldDrawCompatibilityTopDivider()) {
+        if (c5204ObtainTintedStyledAttributes.m15654(C14625.f47237, true) && shouldDrawCompatibilityTopDivider()) {
             addCompatibilityTopDivider(context2);
         }
-        c1977ObtainTintedStyledAttributes.m6379();
+        c5204ObtainTintedStyledAttributes.m15664();
         applyWindowInsets();
     }
 
     private void applyWindowInsets() {
         ViewUtils.doOnApplyWindowInsets(this, new ViewUtils.OnApplyWindowInsetsListener() { // from class: com.google.android.material.bottomnavigation.BottomNavigationView.1
             @Override // com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener
-            public C15844 onApplyWindowInsets(View view, C15844 c15844, ViewUtils.RelativePadding relativePadding) {
-                relativePadding.bottom = c15844.m37670() + relativePadding.bottom;
-                int i = C5031.f17539;
+            public C3977 onApplyWindowInsets(View view, C3977 c3977, ViewUtils.RelativePadding relativePadding) {
+                relativePadding.bottom = c3977.m12825() + relativePadding.bottom;
+                int i = C22666.f73603;
                 boolean z = view.getLayoutDirection() == 1;
-                int iM37683 = c15844.m37683();
-                int iM37672 = c15844.m37672();
-                relativePadding.start += z ? iM37672 : iM37683;
+                int iM12822 = c3977.m12822();
+                int iM12814 = c3977.m12814();
+                relativePadding.start += z ? iM12814 : iM12822;
                 int i2 = relativePadding.end;
                 if (!z) {
-                    iM37683 = iM37672;
+                    iM12822 = iM12814;
                 }
-                relativePadding.end = i2 + iM37683;
+                relativePadding.end = i2 + iM12822;
                 relativePadding.applyToView(view);
-                return c15844;
+                return c3977;
             }
         });
     }
@@ -119,8 +119,8 @@ public class BottomNavigationView extends NavigationBarView {
 
     private void addCompatibilityTopDivider(Context context) {
         View view = new View(context);
-        view.setBackgroundColor(C10405.m26299(context, C22144.f72245));
-        view.setLayoutParams(new FrameLayout.LayoutParams(-1, getResources().getDimensionPixelSize(C0976.f3892)));
+        view.setBackgroundColor(C7508.m20558(context, C16863.f54886));
+        view.setLayoutParams(new FrameLayout.LayoutParams(-1, getResources().getDimensionPixelSize(C17609.f57862)));
         addView(view);
     }
 

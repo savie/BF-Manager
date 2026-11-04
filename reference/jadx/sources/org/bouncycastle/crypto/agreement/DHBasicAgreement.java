@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.DHPrivateKeyParameters;
 import org.bouncycastle.crypto.params.DHPublicKeyParameters;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHBasicAgreement implements BasicAgreement {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public DHParameters dhParams;

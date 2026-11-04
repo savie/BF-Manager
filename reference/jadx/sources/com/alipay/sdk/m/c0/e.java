@@ -26,7 +26,7 @@ import android.widget.TextView;
 import com.alipay.sdk.m.y.n;
 import com.alipay.sdk.m.y.q;
 import java.lang.reflect.Method;
-import l.C9023;
+import l.C10732;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -45,7 +45,7 @@ public class e extends LinearLayout {
     public View.OnClickListener k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final float f77907l;
+    public final float f82023l;
 
     /* JADX INFO: compiled from: N673 */
     public class a implements View.OnClickListener {
@@ -281,7 +281,7 @@ public class e extends LinearLayout {
         this.k = new a();
         this.f = c0012e == null ? new C0012e(false, false) : c0012e;
         this.j = aVar;
-        this.f77907l = context.getResources().getDisplayMetrics().density;
+        this.f82023l = context.getResources().getDisplayMetrics().density;
         setOrientation(1);
         a(context);
         b(context);
@@ -390,9 +390,9 @@ public class e extends LinearLayout {
     public void a(WebView webView, Context context) {
         String userAgentString = webView.getSettings().getUserAgentString();
         WebSettings settings = webView.getSettings();
-        StringBuilder sbM23356 = C9023.m23356(userAgentString);
-        sbM23356.append(q.g(context));
-        settings.setUserAgentString(sbM23356.toString());
+        StringBuilder sbM27333 = C10732.m27333(userAgentString);
+        sbM27333.append(q.g(context));
+        settings.setUserAgentString(sbM27333.toString());
     }
 
     public void a(String str) {
@@ -405,6 +405,6 @@ public class e extends LinearLayout {
     }
 
     public final int a(int i) {
-        return (int) (i * this.f77907l);
+        return (int) (i * this.f82023l);
     }
 }

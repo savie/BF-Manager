@@ -3,7 +3,7 @@ package net.engio.mbassy.dispatch;
 import net.engio.mbassy.bus.MessagePublication;
 import net.engio.mbassy.subscription.AbstractSubscriptionContextAware;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SynchronizedHandlerInvocation extends AbstractSubscriptionContextAware implements IHandlerInvocation {
     public IHandlerInvocation delegate;
 

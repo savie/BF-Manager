@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface BERTags {
     public static final int APPLICATION = 64;
     public static final int BIT_STRING = 3;

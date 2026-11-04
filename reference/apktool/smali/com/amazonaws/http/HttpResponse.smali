@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final ۖ:I
-
 .field public ۙ:Ljava/io/InputStream;
 
-.field public final ۚ:Ljava/lang/String;
+.field public final ۤ:Ljava/io/InputStream;
 
-.field public final ۨ:Ljava/io/InputStream;
+.field public final ᩴ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/util/Map;
+.field public final ᩷:Ljava/util/Map;
+
+.field public final ᩸:I
 
 
 # direct methods
@@ -23,31 +23,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
-    iput-object p1, p0, Lcom/amazonaws/http/HttpResponse;->ۚ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/http/HttpResponse;->ᩴ:Ljava/lang/String;
 
     .line 42
-    iput p2, p0, Lcom/amazonaws/http/HttpResponse;->ۖ:I
+    iput p2, p0, Lcom/amazonaws/http/HttpResponse;->᩸:I
 
     .line 43
-    iput-object p3, p0, Lcom/amazonaws/http/HttpResponse;->ܰ:Ljava/util/Map;
+    iput-object p3, p0, Lcom/amazonaws/http/HttpResponse;->᩷:Ljava/util/Map;
 
     .line 44
-    iput-object p4, p0, Lcom/amazonaws/http/HttpResponse;->ۨ:Ljava/io/InputStream;
+    iput-object p4, p0, Lcom/amazonaws/http/HttpResponse;->ۤ:Ljava/io/InputStream;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()I
-    .locals 1
-
-    .line 103
-    iget v0, p0, Lcom/amazonaws/http/HttpResponse;->ۖ:I
-
-    return v0
-.end method
-
 .method public final ۙ()Ljava/io/InputStream;
     .locals 4
 
@@ -63,13 +54,13 @@
 
     .line 66
     :try_start_0
-    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse;->ۨ:Ljava/io/InputStream;
+    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse;->ۤ:Ljava/io/InputStream;
 
     if-eqz v1, :cond_0
 
     const-string v1, "gzip"
 
-    iget-object v2, p0, Lcom/amazonaws/http/HttpResponse;->ܰ:Ljava/util/Map;
+    iget-object v2, p0, Lcom/amazonaws/http/HttpResponse;->᩷:Ljava/util/Map;
 
     const-string v3, "Content-Encoding"
 
@@ -86,7 +77,7 @@
     .line 67
     new-instance v1, Ljava/util/zip/GZIPInputStream;
 
-    iget-object v2, p0, Lcom/amazonaws/http/HttpResponse;->ۨ:Ljava/io/InputStream;
+    iget-object v2, p0, Lcom/amazonaws/http/HttpResponse;->ۤ:Ljava/io/InputStream;
 
     invoke-direct {v1, v2}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
 
@@ -96,7 +87,7 @@
 
     .line 69
     :cond_0
-    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse;->ۨ:Ljava/io/InputStream;
+    iget-object v1, p0, Lcom/amazonaws/http/HttpResponse;->ۤ:Ljava/io/InputStream;
 
     iput-object v1, p0, Lcom/amazonaws/http/HttpResponse;->ۙ:Ljava/io/InputStream;
 
@@ -123,29 +114,38 @@
     return-object v0
 .end method
 
-.method public final ۚ()Ljava/lang/String;
-    .locals 1
-
-    .line 93
-    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->ۚ:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۨ()Ljava/io/InputStream;
+.method public final ۤ()Ljava/io/InputStream;
     .locals 1
 
     .line 84
-    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->ۨ:Ljava/io/InputStream;
+    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->ۤ:Ljava/io/InputStream;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/util/Map;
+.method public final ᩴ()Ljava/lang/String;
+    .locals 1
+
+    .line 93
+    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->ᩴ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ljava/util/Map;
     .locals 1
 
     .line 53
-    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->ܰ:Ljava/util/Map;
+    iget-object v0, p0, Lcom/amazonaws/http/HttpResponse;->᩷:Ljava/util/Map;
 
     return-object v0
+.end method
+
+.method public final ᩸()I
+    .locals 1
+
+    .line 103
+    iget v0, p0, Lcom/amazonaws/http/HttpResponse;->᩸:I
+
+    return v0
 .end method

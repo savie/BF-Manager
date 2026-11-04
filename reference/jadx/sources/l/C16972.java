@@ -1,20 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ᩻ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M43N */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C16972 extends EnumC12739 {
-    public /* synthetic */ C16972() {
-        this("IS_SAME_TYPE", 1);
+/* JADX INFO: renamed from: l.ܺܽܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K9E3 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16972 extends AbstractC11751 {
+    public C16972() {
+        super(EnumC2057.MsvAvEOL);
     }
 
-    public C16972(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC12739
+    @Override // l.AbstractC11751
     /* JADX INFO: renamed from: ۙ */
-    public boolean mo3210(AbstractC16579 abstractC16579, AbstractC16579 abstractC165710, C10391 c10391, C23800 c23800) {
-        return c23800.m52399(abstractC16579, abstractC165710);
+    public final void mo11567(C11707 c11707) {
+        c11707.m56023((int) this.f37993.getValue());
+        c11707.m56023(0);
     }
 }

@@ -23,7 +23,7 @@ public class SnovaEngine {
     public final int alpha;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final int f77982l;
+    public final int f82098l;
     public final int lsq;
     public final int m;
     public final int n;
@@ -36,7 +36,7 @@ public class SnovaEngine {
         int i;
         this.params = snovaParameters;
         int l2 = snovaParameters.getL();
-        this.f77982l = l2;
+        this.f82098l = l2;
         int lsq = snovaParameters.getLsq();
         this.lsq = lsq;
         this.m = snovaParameters.getM();
@@ -51,7 +51,7 @@ public class SnovaEngine {
             be_aI(bArr[0], 0, (byte) 1);
             beTheS(bArr[1]);
             while (true) {
-                int i3 = this.f77982l;
+                int i3 = this.f82098l;
                 if (i2 >= i3) {
                     break;
                 }
@@ -60,7 +60,7 @@ public class SnovaEngine {
             }
             int i4 = 0;
             while (true) {
-                i = this.f77982l;
+                i = this.f82098l;
                 if (i4 >= i) {
                     break;
                 }
@@ -70,15 +70,15 @@ public class SnovaEngine {
                 i4++;
             }
             sSet.put(Integers.valueOf(i), bArr);
-            xSSet.put(Integers.valueOf(this.f77982l), iArr);
+            xSSet.put(Integers.valueOf(this.f82098l), iArr);
         }
-        this.S = (byte[][]) sSet.get(Integers.valueOf(this.f77982l));
-        this.xS = (int[][]) xSSet.get(Integers.valueOf(this.f77982l));
-        if (this.f77982l >= 4 || fixedAbqSet.containsKey(Integers.valueOf(this.o))) {
+        this.S = (byte[][]) sSet.get(Integers.valueOf(this.f82098l));
+        this.xS = (int[][]) xSSet.get(Integers.valueOf(this.f82098l));
+        if (this.f82098l >= 4 || fixedAbqSet.containsKey(Integers.valueOf(this.o))) {
             return;
         }
         int i6 = this.alpha;
-        int i7 = this.f77982l;
+        int i7 = this.f82098l;
         int i8 = i6 * i7;
         int i9 = i7 * i8;
         int i10 = this.o;
@@ -113,7 +113,7 @@ public class SnovaEngine {
                 genAFqS(bArr4, i20, bArr2, i14 + i21);
                 genAFqS(bArr4, i11 + i20, bArr2, i14 + i12 + i21);
                 i19++;
-                i20 += this.f77982l;
+                i20 += this.f82098l;
                 i21 += this.lsq;
             }
             i15++;
@@ -128,13 +128,13 @@ public class SnovaEngine {
         int i3 = 0;
         int i4 = 0;
         while (true) {
-            i = this.f77982l;
+            i = this.f82098l;
             if (i3 >= i) {
                 break;
             }
             int i5 = 0;
             while (true) {
-                i2 = this.f77982l;
+                i2 = this.f82098l;
                 if (i5 < i2) {
                     bArr[i4 + i5] = (byte) ((8 - (i3 + i5)) & 15);
                     i5++;
@@ -149,9 +149,9 @@ public class SnovaEngine {
     }
 
     private void be_aI(byte[] bArr, int i, byte b) {
-        int i2 = this.f77982l + 1;
+        int i2 = this.f82098l + 1;
         int i3 = 0;
-        while (i3 < this.f77982l) {
+        while (i3 < this.f82098l) {
             bArr[i] = b;
             i3++;
             i += i2;
@@ -256,7 +256,7 @@ public class SnovaEngine {
         be_aI(bArr2, i2, bArr[i]);
         int i5 = 1;
         while (true) {
-            i3 = this.f77982l;
+            i3 = this.f82098l;
             if (i5 >= i3 - 1) {
                 break;
             }
@@ -275,18 +275,18 @@ public class SnovaEngine {
     private void genAFqSCT(byte[] bArr, int i, byte[] bArr2) {
         int i2;
         int[] iArr = new int[this.lsq];
-        int i3 = this.f77982l + 1;
+        int i3 = this.f82098l + 1;
         int iGf16FromNibble = GF16Utils.gf16FromNibble(bArr[i]);
         int i4 = 0;
         int i5 = 0;
-        while (i4 < this.f77982l) {
+        while (i4 < this.f82098l) {
             iArr[i5] = iGf16FromNibble;
             i4++;
             i5 += i3;
         }
         int i6 = 1;
         while (true) {
-            i2 = this.f77982l;
+            i2 = this.f82098l;
             if (i6 >= i2 - 1) {
                 break;
             }
@@ -297,9 +297,9 @@ public class SnovaEngine {
             i6++;
         }
         int iCtGF16IsNotZero = GF16Utils.ctGF16IsNotZero(bArr[(i2 + i) - 1]);
-        int iGf16FromNibble3 = GF16Utils.gf16FromNibble((byte) ((((GF16Utils.ctGF16IsNotZero(bArr[i]) + 15) - bArr[i]) * (1 - iCtGF16IsNotZero)) + (bArr[(this.f77982l + i) - 1] * iCtGF16IsNotZero)));
+        int iGf16FromNibble3 = GF16Utils.gf16FromNibble((byte) ((((GF16Utils.ctGF16IsNotZero(bArr[i]) + 15) - bArr[i]) * (1 - iCtGF16IsNotZero)) + (bArr[(this.f82098l + i) - 1] * iCtGF16IsNotZero)));
         for (int i8 = 0; i8 < this.lsq; i8++) {
-            int i9 = iArr[i8] ^ (this.xS[this.f77982l - 1][i8] * iGf16FromNibble3);
+            int i9 = iArr[i8] ^ (this.xS[this.f82098l - 1][i8] * iGf16FromNibble3);
             iArr[i8] = i9;
             bArr2[i8] = GF16Utils.gf16ToNibble(i9);
         }
@@ -319,7 +319,7 @@ public class SnovaEngine {
                 for (int i5 = 0; i5 < this.o; i5++) {
                     for (int i6 = 0; i6 < this.v; i6++) {
                         byte[][][] bArr4 = mapGroup1.p11[i3];
-                        GF16Utils.gf16mMulToTo(bArr4[i4][i6], bArr[i6][i5], bArr4[i6][i4], mapGroup2.f12[i3][i4][i5], mapGroup2.f21[i3][i5][i4], this.f77982l);
+                        GF16Utils.gf16mMulToTo(bArr4[i4][i6], bArr[i6][i5], bArr4[i6][i4], mapGroup2.f12[i3][i4][i5], mapGroup2.f21[i3][i5][i4], this.f82098l);
                     }
                 }
             }
@@ -327,7 +327,7 @@ public class SnovaEngine {
     }
 
     private void genSeedsAndT12(byte[][][] bArr, byte[] bArr2) {
-        int i = this.v * this.o * this.f77982l;
+        int i = this.v * this.o * this.f82098l;
         int i2 = (i + 1) >>> 1;
         byte[] bArr3 = new byte[i2];
         SHAKEDigest sHAKEDigest = new SHAKEDigest(256);
@@ -339,7 +339,7 @@ public class SnovaEngine {
         for (int i4 = 0; i4 < this.v; i4++) {
             for (int i5 = 0; i5 < this.o; i5++) {
                 genAFqSCT(bArr4, i3, bArr[i4][i5]);
-                i3 += this.f77982l;
+                i3 += this.f82098l;
             }
         }
     }
@@ -347,10 +347,10 @@ public class SnovaEngine {
     private void generateASMatrixTo(byte[] bArr, int i, byte b) {
         int i2;
         int i3 = 0;
-        while (i3 < this.f77982l) {
+        while (i3 < this.f82098l) {
             int i4 = 0;
             while (true) {
-                i2 = this.f77982l;
+                i2 = this.f82098l;
                 if (i4 < i2) {
                     byte b2 = (byte) (8 - (i3 + i4));
                     if (i2 == 5 && i3 == 4 && i4 == 4) {
@@ -367,7 +367,7 @@ public class SnovaEngine {
     }
 
     private byte gf16Determinant(byte[] bArr, int i) {
-        int i2 = this.f77982l;
+        int i2 = this.f82098l;
         if (i2 == 2) {
             return determinant2x2(bArr, i);
         }
@@ -387,10 +387,10 @@ public class SnovaEngine {
         int i2;
         int i3 = 0;
         int i4 = 0;
-        while (i3 < this.f77982l) {
+        while (i3 < this.f82098l) {
             int i5 = 0;
             while (true) {
-                i2 = this.f77982l;
+                i2 = this.f82098l;
                 if (i5 < i2) {
                     int i6 = i4 + i5;
                     int i7 = i6 + i;
@@ -421,7 +421,7 @@ public class SnovaEngine {
         int i3 = this.alpha;
         int i4 = this.n;
         int i5 = ((((i4 * i4) - (i2 * i2)) * i2) + (i2 * 2 * i3)) * i;
-        int i6 = this.f77982l;
+        int i6 = this.f82098l;
         int i7 = (i6 * 2 * i2 * i3) + i5;
         int i8 = ((i2 * i3) * i6) << 1;
         byte[] bArr2 = new byte[i8];
@@ -462,14 +462,14 @@ public class SnovaEngine {
             }
         }
         if ((this.lsq & 1) == 0) {
-            mapGroup1.decode(bArr3, (i7 - i8) >> 1, this.f77982l >= 4);
+            mapGroup1.decode(bArr3, (i7 - i8) >> 1, this.f82098l >= 4);
         } else {
             int i13 = i7 - i8;
             byte[] bArr6 = new byte[i13];
             GF16.decode(bArr3, bArr6, i13);
-            mapGroup1.fill(bArr6, this.f77982l >= 4);
+            mapGroup1.fill(bArr6, this.f82098l >= 4);
         }
-        if (this.f77982l < 4) {
+        if (this.f82098l < 4) {
             int i14 = this.o;
             int i15 = this.alpha * i14 * this.lsq;
             byte[] bArr7 = (byte[]) fixedAbqSet.get(Integers.valueOf(i14));
@@ -480,7 +480,7 @@ public class SnovaEngine {
             return;
         }
         GF16.decode(bArr3, (i7 - i8) >> 1, bArr2, 0, i8);
-        int i16 = this.m * this.alpha * this.f77982l;
+        int i16 = this.m * this.alpha * this.f82098l;
         int i17 = 0;
         for (int i18 = 0; i18 < this.m; i18++) {
             for (int i19 = 0; i19 < this.alpha; i19++) {
@@ -488,7 +488,7 @@ public class SnovaEngine {
                 makeInvertibleByAddingAS(mapGroup1.bAlpha[i18][i19], 0);
                 genAFqS(bArr2, i17, mapGroup1.qAlpha1[i18][i19], 0);
                 genAFqS(bArr2, i16, mapGroup1.qAlpha2[i18][i19], 0);
-                int i20 = this.f77982l;
+                int i20 = this.f82098l;
                 i17 += i20;
                 i16 += i20;
             }
@@ -520,7 +520,7 @@ public class SnovaEngine {
                     while (i12 < this.v) {
                         byte[][] bArr6 = bArr2[i12];
                         int i13 = i12;
-                        GF16Utils.gf16mMulTo(bArr6[i9], bArr4[i6][i12][i11], bArr3[i6][i9][i12], bArr6[i11], bArr5, i10, this.f77982l);
+                        GF16Utils.gf16mMulTo(bArr6[i9], bArr4[i6][i12][i11], bArr3[i6][i9][i12], bArr6[i11], bArr5, i10, this.f82098l);
                         i12 = i13 + 1;
                         i11 = i11;
                     }

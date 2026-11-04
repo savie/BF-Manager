@@ -1,27 +1,41 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶۟۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B74J */
-/* JADX INFO: loaded from: classes4.dex */
+/* JADX INFO: renamed from: l.ᩴᩴ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26FQ */
+/* JADX INFO: loaded from: classes5.dex */
 public final class C20026 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public String f64129;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C21943 f64332;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object f64333;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Integer f64334;
+
+    public C20026(Object obj, Integer num, C21943 c21943) {
+        this.f64333 = obj;
+        this.f64332 = c21943;
+        this.f64334 = num;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Object m46073() {
+        return this.f64333;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String f64130;
+    public final C21943 m46072() {
+        return this.f64332;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public long f64131;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Integer m46074() {
+        return this.f64334;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public long f64132;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String f64133;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m45355() {
-        return (this.f64132 <= 0 && this.f64130 == null && this.f64129 == null && this.f64131 == -1) ? false : true;
+    public final String toString() {
+        return "CaseData{" + this.f64333 + '}';
     }
 }

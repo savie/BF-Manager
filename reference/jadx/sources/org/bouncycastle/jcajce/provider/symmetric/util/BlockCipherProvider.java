@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.symmetric.util;
 
 import org.bouncycastle.crypto.BlockCipher;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface BlockCipherProvider {
     BlockCipher get();
 }

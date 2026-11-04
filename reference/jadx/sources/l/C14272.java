@@ -1,37 +1,54 @@
 package l;
 
-import android.widget.TextView;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.security.cert.TrustAnchor;
+import java.security.cert.X509Certificate;
+import javax.net.ssl.X509TrustManager;
 
-/* JADX INFO: renamed from: l.ܳۘۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U9SC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14272 implements InterfaceC5673 {
+/* JADX INFO: renamed from: l.ܰ֫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I4F2 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14272 implements InterfaceC22016 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4475 f46792;
+    public final Method f45090;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ TextView f46793;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final X509TrustManager f45091;
 
-    @Override // l.InterfaceC5673
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo2812(String str) {
+    public C14272(X509TrustManager x509TrustManager, Method method) {
+        this.f45090 = method;
+        this.f45091 = x509TrustManager;
     }
 
-    public C14272(C4475 c4475, TextView textView) {
-        this.f46792 = c4475;
-        this.f46793 = textView;
-    }
-
-    @Override // l.InterfaceC5673
+    @Override // l.InterfaceC22016
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2810(String str) {
-        this.f46792.f15922.m5371(str);
+    public final X509Certificate mo18990(X509Certificate x509Certificate) {
+        try {
+            TrustAnchor trustAnchor = (TrustAnchor) this.f45090.invoke(this.f45091, x509Certificate);
+            if (trustAnchor != null) {
+                return trustAnchor.getTrustedCert();
+            }
+        } catch (IllegalAccessException e) {
+            throw C19822.m45592("unable to get issues and signature", (Exception) e);
+        } catch (InvocationTargetException unused) {
+        }
+        return null;
     }
 
-    @Override // l.InterfaceC5673
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2811(EnumC22607 enumC22607) {
-        this.f46793.setVisibility(enumC22607.m50115() ? 4 : 0);
+    public final boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof C14272)) {
+            return false;
+        }
+        C14272 c14272 = (C14272) obj;
+        return this.f45091.equals(c14272.f45091) && this.f45090.equals(c14272.f45090);
+    }
+
+    public final int hashCode() {
+        return (this.f45090.hashCode() * 31) + this.f45091.hashCode();
     }
 }

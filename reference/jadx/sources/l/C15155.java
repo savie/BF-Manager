@@ -1,21 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶۢ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: DACT */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15155 {
+import java.lang.reflect.AccessibleObject;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] f49499 = new byte[0];
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m36320(C5982 c5982, byte[] bArr, int i) {
-        if (bArr == null) {
-            bArr = f49499;
-        }
-        c5982.m27396(bArr.length);
-        c5982.m27396(bArr.length);
-        c5982.m27398(i);
-        return i + bArr.length;
+/* JADX INFO: renamed from: l.ܳۛܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U87V */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15155 extends AbstractC12918 {
+    @Override // l.AbstractC12918
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo31992(Object obj, AccessibleObject accessibleObject) {
+        return true;
     }
 }

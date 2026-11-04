@@ -1,47 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵᩹ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 82T8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C19753 {
+/* JADX INFO: renamed from: l.ᩴۤۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B5S9 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C19753 extends AbstractC8696 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f63475;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24975 f63578;
 
-    static {
-        int[] iArr = new int[EnumC18057.values().length];
-        f63475 = iArr;
-        try {
-            iArr[EnumC18057.Format20bc.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f63475[EnumC18057.Format21c.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f63475[EnumC18057.Format22c.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f63475[EnumC18057.Format31c.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f63475[EnumC18057.Format35c.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f63475[EnumC18057.Format3rc.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f63475[EnumC18057.Format45cc.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f63475[EnumC18057.Format4rcc.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
+    public C19753(C24975 c24975) {
+        this.f63578 = c24975;
+    }
+
+    @Override // l.AbstractC8696
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo23382(int i) {
+        C24975 c24975 = this.f63578;
+        return new C22737(c24975, c24975.m55784(i), c24975.m55807(i));
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.f63578.f80885;
     }
 }

@@ -1,60 +1,86 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫֫۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: V4E2 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1510 extends AbstractC19191 {
+import java.util.BitSet;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f6158;
+/* JADX INFO: renamed from: l.֨᩺ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: FB9X */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1510 extends AbstractC6951 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC23683 f6159;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C1510 f5250 = new C1510();
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final C4424 f6160;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final String f6161;
-
-    public C1510(C4424 c4424, String str, String str2) {
-        this.f6160 = c4424;
-        this.f6158 = str;
-        this.f6161 = str2;
-        this.f6159 = C0834.m3437(new C14212(c4424.m12357(1), c4424));
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3133() {
+        return 2;
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C9501 mo5213() {
-        String str = this.f6158;
-        if (str == null) {
-            return null;
-        }
-        try {
-            return C9501.m24336(str);
-        } catch (IllegalArgumentException unused) {
-            return null;
-        }
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo3134(AbstractC2476 abstractC2476) {
+        return abstractC2476.m43795().m31619get(0).m47904() + ", " + abstractC2476.mo37455();
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final long mo5212() {
-        try {
-            String str = this.f6161;
-            if (str != null) {
-                return Long.parseLong(str);
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo3137(AbstractC2476 abstractC2476) {
+        return abstractC2476.mo37450();
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo3138(AbstractC18884 abstractC18884) {
+        C20946 c20946M31619get;
+        if (!(abstractC18884 instanceof C18138)) {
+            return false;
+        }
+        C0063 c0063M43795 = abstractC18884.m43795();
+        int size = c0063M43795.size();
+        if (size == 1) {
+            c20946M31619get = c0063M43795.m31619get(0);
+        } else {
+            if (size != 2) {
+                return false;
             }
-            return -1L;
-        } catch (NumberFormatException unused) {
-            return -1L;
+            c20946M31619get = c0063M43795.m31619get(0);
+            if (c20946M31619get.m47903() != c0063M43795.m31619get(1).m47903()) {
+                return false;
+            }
         }
+        if (!AbstractC6951.m19242(c20946M31619get.m47903())) {
+            return false;
+        }
+        C18138 c18138 = (C18138) abstractC18884;
+        int iM42254 = c18138.m42254();
+        AbstractC13487 abstractC13487M42255 = c18138.m42255();
+        if (AbstractC6951.m19246(iM42254)) {
+            return (abstractC13487M42255 instanceof C1028) || (abstractC13487M42255 instanceof C16689) || (abstractC13487M42255 instanceof C9976) || (abstractC13487M42255 instanceof C21165) || (abstractC13487M42255 instanceof C7740);
+        }
+        return false;
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final InterfaceC23683 mo5211() {
-        return this.f6159;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final BitSet mo3135(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        int size = c0063M43795.size();
+        BitSet bitSet = new BitSet(size);
+        boolean zM19242 = AbstractC6951.m19242(c0063M43795.m31619get(0).m47903());
+        if (size == 1) {
+            bitSet.set(0, zM19242);
+            return bitSet;
+        }
+        if (c0063M43795.m31619get(0).m47903() == c0063M43795.m31619get(1).m47903()) {
+            bitSet.set(0, zM19242);
+            bitSet.set(1, zM19242);
+        }
+        return bitSet;
+    }
+
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3136(C15000 c15000, AbstractC2476 abstractC2476) {
+        AbstractC6951.m19240((InterfaceC8550) c15000, AbstractC6951.m19239(abstractC2476, abstractC2476.m43795().m31619get(0).m47903()), (short) ((C18138) abstractC2476).m42254());
     }
 }

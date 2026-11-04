@@ -1,43 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C5C3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12160 {
+import java.util.Arrays;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f40697;
+/* JADX INFO: renamed from: l.ۨۛۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12160 extends AbstractC14900 {
+    public Object[] d;
+    public int e;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f40698;
-
-    public C12160(byte[] bArr) {
-        this.f40697 = bArr;
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final void c(long j) {
+        if (j >= 2147483639) {
+            throw new IllegalArgumentException("Stream size exceeds max array size");
+        }
+        this.d = new Object[(int) j];
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m30246() {
-        int i = this.f40698;
-        byte[] bArr = this.f40697;
-        int i2 = (bArr[i + 3] << 24) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 1] & 255) << 8) | (bArr[i] & 255);
-        this.f40698 = i + 4;
-        return i2;
+    @Override // l.AbstractC9591, l.InterfaceC15143
+    public final void end() {
+        int i = 0;
+        Arrays.sort(this.d, 0, this.e, this.b);
+        long j = this.e;
+        InterfaceC15143 interfaceC15143 = this.a;
+        interfaceC15143.c(j);
+        if (!this.c) {
+            while (i < this.e) {
+                interfaceC15143.accept(this.d[i]);
+                i++;
+            }
+        } else {
+            while (i < this.e && !interfaceC15143.f()) {
+                interfaceC15143.accept(this.d[i]);
+                i++;
+            }
+        }
+        interfaceC15143.end();
+        this.d = null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final short m30248() {
-        int i = this.f40698;
-        byte[] bArr = this.f40697;
-        short s = (short) (((bArr[i + 1] & 255) << 8) | (bArr[i] & 255));
-        this.f40698 = i + 2;
-        return s;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] m30247(int i) {
-        byte[] bArr = new byte[i];
-        System.arraycopy(this.f40697, this.f40698, bArr, 0, i);
-        this.f40698 += i;
-        return bArr;
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        Object[] objArr = this.d;
+        int i = this.e;
+        this.e = i + 1;
+        objArr[i] = obj;
     }
 }

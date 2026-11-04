@@ -1,30 +1,31 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ۠ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C2405 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+/* JADX INFO: renamed from: l.ۖۘۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M1KQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2405 extends AbstractC24700 {
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1965 f7722;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2405(C1965 c1965, AbstractActivityC17204 abstractActivityC17204, boolean z, String str) {
+        super(abstractActivityC17204, z, str, "dex_search_match_case", "dex_search_regex", "dex_search_exactly_match");
+        this.f7722 = c1965;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    @Override // l.AbstractC24700
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8145() {
+        C1965 c1965 = this.f7722;
+        c1965.f6589 = false;
+        C1965.m6764(c1965);
+        c1965.f6595.notifyDataSetChanged();
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return C4312.m12113(i) == 12 || i == 9;
-    }
-
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    @Override // l.AbstractC24700
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8146(C11273 c11273, String str) {
+        new C8371(this.f7722, str, c11273).m8197();
     }
 }

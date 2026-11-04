@@ -1,58 +1,59 @@
 package l;
 
-import java.io.File;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.RemoteException;
 
-/* JADX INFO: renamed from: l.֫᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 173H */
+/* JADX INFO: renamed from: l.֫ܽ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8BM6 */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2065 implements Comparable {
+public final class C2065 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f7656;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public Context f6868 = null;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final long f7657;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public ServiceConnection f6869;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final File f7658;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public InterfaceC13251 f6870;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final long f7659;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final long f7660;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final boolean f7661;
-
-    public C2065(String str, long j, long j2, long j3, File file) {
-        this.f7656 = str;
-        this.f7660 = j;
-        this.f7657 = j2;
-        this.f7661 = file != null;
-        this.f7658 = file;
-        this.f7659 = j3;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m7136(Context context) {
+        this.f6868 = context;
+        this.f6869 = new ServiceConnectionC5794(this);
+        Intent intent = new Intent();
+        intent.setClassName("org.repackage.com.zui.deviceidservice", "org.repackage.com.zui.deviceidservice.DeviceidService");
+        return this.f6868.bindService(intent, this.f6869, 1) ? 1 : -1;
     }
 
-    @Override // java.lang.Comparable
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
-    public final int compareTo(C2065 c2065) {
-        String str = c2065.f7656;
-        String str2 = this.f7656;
-        if (!str2.equals(str)) {
-            return str2.compareTo(c2065.f7656);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m7137() {
+        if (this.f6868 == null) {
+            throw new IllegalArgumentException("Context is null, must be new OpenDeviceId first");
         }
-        long j = this.f7660 - c2065.f7660;
-        if (j == 0) {
-            return 0;
+        try {
+            InterfaceC13251 interfaceC13251 = this.f6870;
+            if (interfaceC13251 != null) {
+                return interfaceC13251.a();
+            }
+            return null;
+        } catch (RemoteException unused) {
+            return null;
         }
-        return j < 0 ? -1 : 1;
     }
 
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("[");
-        sb.append(this.f7660);
-        sb.append(", ");
-        return C15037.m36023(sb, this.f7657, "]");
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m7138() {
+        try {
+            InterfaceC13251 interfaceC13251 = this.f6870;
+            if (interfaceC13251 != null) {
+                return interfaceC13251.c();
+            }
+            return false;
+        } catch (RemoteException unused) {
+            return false;
+        }
     }
 }

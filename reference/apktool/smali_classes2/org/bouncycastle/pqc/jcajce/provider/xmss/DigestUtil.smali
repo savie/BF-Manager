@@ -101,7 +101,7 @@
     const-string v1, "unrecognized digest OID: "
 
     .line 0
-    invoke-static {v1, p0}, Ll/᩺ۨ᩹;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
+    invoke-static {v1, p0}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -265,7 +265,7 @@
     const-string v1, "unrecognized digest OID: "
 
     .line 0
-    invoke-static {v1, p0}, Ll/᩺ۨ᩹;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
+    invoke-static {v1, p0}, Ll/᩵֡ۨ;->ۙ(Ljava/lang/String;Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/lang/String;
 
     move-result-object p0
 

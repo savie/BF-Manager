@@ -1,218 +1,278 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import com.google.android.material.motion.MotionUtils;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Locale;
+/* JADX INFO: renamed from: l.۫᩹᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21RU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13427 extends AbstractC25362 {
 
-/* JADX INFO: renamed from: l.۬᩺۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D6WW */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13427 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0219 f44421;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2800 f44422;
-
-    public C13427(C2800 c2800) {
-        C0219 c0219 = new C0219();
-        this.f44422 = c2800;
-        this.f44421 = c0219;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C1431 m32919(String str) {
-        C2800 c2800 = this.f44422;
-        C3070 c3070M8504 = c2800.m8504();
-        String strM17474 = C6370.m17474(c3070M8504, str, MotionUtils.EASING_TYPE_PATH, false);
-        c3070M8504.m9207(strM17474);
-        C11268 c11268M8509 = c2800.m8509(strM17474);
-        try {
-            C1431 c1431M32921 = m32921(strM17474);
-            c11268M8509.close();
-            return c1431M32921;
-        } catch (Throwable th) {
-            try {
-                c11268M8509.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX WARN: Type inference fix 'apply assigned field type' failed
-    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
-    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
-    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
-    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
-     */
-    /* JADX WARN: Unreachable blocks removed: 2, instructions: 8 */
-    /*  JADX ERROR: Types fix failed
-        jadx.core.utils.exceptions.JadxOverflowException: Type inference error: updates count limit reached with updateSeq = 6931. Try increasing type updates limit count.
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:99)
-        */
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final l.C1431 m32921(java.lang.String r26) throws l.C12731 {
-        /*
-            Method dump skipped, instruction units count: 693
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C13427.m32921(java.lang.String):l.֨᩺۬");
-    }
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public int f42759;
 
     /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m32920(String str) throws C12731 {
-        m32917(str, this.f44422.m8504());
+    public final int[] f42760;
+
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final int f42761;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public int f42762;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final int f42763;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final C17902 f42764;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final C2241 f42765;
+
+    public C13427(int i, int i2, int i3, int i4, int i5, C0573 c0573) {
+        super(i, i2, i3, i4, c0573);
+        this.f42762 = -1;
+        int i6 = i + 1;
+        this.f42763 = i6;
+        this.f42759 = i6;
+        this.f42765 = new C2241(i, c0573);
+        this.f42760 = c0573.mo2595(i6 * 2, false);
+        this.f42764 = new C17902(i4 - 1);
+        this.f42761 = i5 <= 0 ? (i4 / 2) + 16 : i5;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C22599 m32917(String str, C3070 c3070) throws C12731 {
-        ArrayDeque arrayDeque = new ArrayDeque();
-        C2800 c2800 = this.f44422;
-        AbstractC20745 abstractC20745M8508 = c2800.m8508(str);
-        String strM32910 = str;
-        do {
-            c3070.m9207(strM32910);
-            String str2 = c3070.f11560;
-            AbstractC20745 abstractC20745M8509 = c2800.m8508(strM32910);
-            C5928 c5928M32911 = m32911(abstractC20745M8509);
-            if (c5928M32911.m16196() == EnumC12279.DIRECTORY) {
-                if (!arrayDeque.isEmpty()) {
-                    c3070.m9207(strM32910);
-                }
-                if (abstractC20745M8508.mo33979() || (abstractC20745M8508 instanceof C17589) || (abstractC20745M8508 instanceof C17196)) {
-                    String strM32911 = m32910(strM32910);
-                    while (strM32911 != null) {
-                        AbstractC20745 abstractC20745M85010 = c2800.m8508(strM32911);
-                        try {
-                            C5928 c5928Mo8394 = abstractC20745M85010.mo33989().mo8394();
-                            if (c5928Mo8394.m16196() == EnumC12279.LINK) {
-                                throw m32912("FILE_IS_SYMLINK", "A symbolic-link parent cannot be traversed by a modifying file tool.", str, str2, "parent_is_link");
-                            }
-                            if (c5928Mo8394.m16196() != EnumC12279.DIRECTORY) {
-                                throw m32912(c5928Mo8394.m16196() != EnumC12279.MISSING ? "FILE_NOT_DIRECTORY" : "FILE_LINK_CHECK_FAILED", "The existing parent chain could not be verified safely.", str, str2, c5928Mo8394.m16196().name().toLowerCase(Locale.ROOT));
-                            }
-                            strM32911 = abstractC20745M85010.getParent();
-                        } catch (C20040 e) {
-                            throw m32912("FILE_LINK_CHECK_FAILED", "A parent link status could not be verified safely.", str, str2, e.m45399().name().toLowerCase(Locale.ROOT));
-                        }
+    @Override // l.AbstractC25362
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17391(C0573 c0573) {
+        c0573.mo2593(this.f42760);
+        this.f42765.m7645(c0573);
+        c0573.mo2592(this.f81884);
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    private int m33065() {
+        int iM56723 = m56723(this.f81888);
+        if (iM56723 != 0) {
+            int i = this.f42759 + 1;
+            this.f42759 = i;
+            int i2 = this.f42763;
+            if (i == Integer.MAX_VALUE) {
+                int i3 = Integer.MAX_VALUE - i2;
+                this.f42765.m7643(i3);
+                AbstractC25362.m56714(i2 * 2, i3, this.f42760);
+                this.f42759 -= i3;
+            }
+            int i4 = this.f42762 + 1;
+            this.f42762 = i4;
+            if (i4 == i2) {
+                this.f42762 = 0;
+            }
+        }
+        return iM56723;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:14:0x0056  */
+    @Override // l.AbstractC25362
+    /* JADX INFO: renamed from: ᩷ */
+    public final C17902 mo17392() {
+        int iM40309;
+        int i;
+        int[] iArr;
+        C17902 c17902 = this.f42764;
+        c17902.f58641 = 0;
+        int[] iArr2 = c17902.f58643;
+        int[] iArr3 = c17902.f58642;
+        int iM33065 = m33065();
+        int i2 = this.f81889;
+        int i3 = this.f81888;
+        if (iM33065 >= i2) {
+            iM33065 = i2;
+        } else {
+            if (iM33065 == 0) {
+                return c17902;
+            }
+            if (i3 > iM33065) {
+                i3 = iM33065;
+            }
+        }
+        int i4 = this.f81887;
+        C2241 c2241 = this.f42765;
+        byte[] bArr = this.f81884;
+        c2241.m7644(i4, bArr);
+        int iM7642 = this.f42759 - c2241.m7642();
+        int iM7647 = this.f42759 - c2241.m7647();
+        int iM7646 = c2241.m7646();
+        c2241.m7648(this.f42759);
+        int i5 = this.f42763;
+        if (iM7642 < i5) {
+            int i6 = this.f81887;
+            if (bArr[i6 - iM7642] == bArr[i6]) {
+                iM40309 = 2;
+                iArr3[0] = 2;
+                iArr2[0] = iM7642 - 1;
+                c17902.f58641 = 1;
+            } else {
+                iM40309 = 0;
+            }
+        } else {
+            iM40309 = 0;
+        }
+        if (iM7642 == iM7647 || iM7647 >= i5) {
+            i = 0;
+        } else {
+            int i7 = this.f81887;
+            i = 0;
+            if (bArr[i7 - iM7647] == bArr[i7]) {
+                int i8 = c17902.f58641;
+                c17902.f58641 = i8 + 1;
+                iArr2[i8] = iM7647 - 1;
+                iM40309 = 3;
+                iM7642 = iM7647;
+            }
+        }
+        if (c17902.f58641 > 0) {
+            iM40309 = C17156.m40309(bArr, this.f81887, iM7642, iM40309, iM33065);
+            iArr3[c17902.f58641 - 1] = iM40309;
+            if (iM40309 >= i3) {
+                m33064(i3, iM7646);
+                return c17902;
+            }
+        }
+        int i9 = iM40309 >= 3 ? iM40309 : 3;
+        int i10 = this.f42762 << 1;
+        int i11 = i10 + 1;
+        int i12 = this.f42761;
+        int i13 = 0;
+        int i14 = 0;
+        while (true) {
+            int i15 = this.f42759 - iM7646;
+            int i16 = i12 - 1;
+            int i17 = iM7646;
+            iArr = this.f42760;
+            if (i12 == 0 || i15 >= i5) {
+                break;
+            }
+            int i18 = this.f42762;
+            int i19 = ((i18 - i15) + (i15 > i18 ? i5 : 0)) << 1;
+            int iMin = Math.min(i13, i14);
+            int i20 = i5;
+            int i21 = this.f81887;
+            int i22 = i21 + iMin;
+            int i23 = i13;
+            int i24 = i14;
+            if (bArr[i22 - i15] == bArr[i22]) {
+                int iM403010 = C17156.m40309(bArr, i21, i15, iMin + 1, iM33065);
+                if (iM403010 > i9) {
+                    int i25 = c17902.f58641;
+                    iArr3[i25] = iM403010;
+                    iArr2[i25] = i15 - 1;
+                    c17902.f58641 = i25 + 1;
+                    if (iM403010 >= i3) {
+                        iArr[i10] = iArr[i19];
+                        iArr[i11] = iArr[i19 + 1];
+                        return c17902;
                     }
+                    i9 = iM403010;
+                    iMin = i9;
+                } else {
+                    iMin = iM403010;
                 }
-                return new C22599(new ArrayList(arrayDeque));
             }
-            if (c5928M32911.m16196() != EnumC12279.MISSING) {
-                throw m32914(strM32910, c5928M32911.m16196());
+            int i26 = this.f81887 + iMin;
+            if ((bArr[i26 - i15] & 255) < (bArr[i26] & 255)) {
+                iArr[i10] = i17;
+                int i27 = i19 + 1;
+                iM7646 = iArr[i27];
+                i10 = i27;
+                i14 = iMin;
+                i13 = i23;
+            } else {
+                iArr[i11] = i17;
+                iM7646 = iArr[i19];
+                i11 = i19;
+                i13 = iMin;
+                i14 = i24;
             }
-            m32916(abstractC20745M8509, str2);
-            arrayDeque.addFirst(strM32910);
-            strM32910 = m32910(strM32910);
-        } while (strM32910 != null);
-        throw m32913("FILE_PARENT_NOT_FOUND", "No existing writable parent directory was found.", str, c3070.f11560, "preflight", "parent_missing", false, (String) null, JSON.array(), 0, (String) null, str);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m32912(String str, String str2, String str3, String str4, String str5) {
-        return C12731.m31631(str, str2, "fatal", null, C3184.m9603(MotionUtils.EASING_TYPE_PATH, str3, "policyRevision", str4).add("operation", "check_parent_links").add("backendReason", str5).add("changed", false).add("stateKnown", true).add("warnings", JSON.array()));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C5928 m32911(AbstractC20745 abstractC20745) throws C12731 {
-        try {
-            return abstractC20745.mo33989().mo8394();
-        } catch (C20040 e) {
-            this.f44422.getClass();
-            throw C2800.m8500(e);
+            i12 = i16;
+            i5 = i20;
         }
+        iArr[i11] = i;
+        iArr[i10] = i;
+        return c17902;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C12731 m32914(String str, EnumC12279 enumC12279) {
-        int i = C5665.f19342[enumC12279.ordinal()];
-        C2800 c2800 = this.f44422;
-        if (i == 1) {
-            c2800.getClass();
-            return C2800.m8499("FILE_IS_SYMLINK", "A symbolic link cannot be used as a mkdir -p directory component.", str, enumC12279);
-        }
-        if (i == 2) {
-            c2800.getClass();
-            return C2800.m8499("FILE_UNSUPPORTED_TYPE", "A special node cannot be used as a mkdir -p directory component.", str, enumC12279);
-        }
-        c2800.getClass();
-        return C2800.m8499("FILE_NOT_DIRECTORY", "An existing mkdir -p path component is not a directory.", str, enumC12279);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static EnumC16512 m32916(AbstractC20745 abstractC20745, String str) throws C12731 {
-        EnumC16512 enumC16512Mo1799 = abstractC20745.mo33989().mo1799(EnumC17217.CREATE_DIRECTORY_SINGLE);
-        if (enumC16512Mo1799 != EnumC16512.UNSUPPORTED) {
-            return enumC16512Mo1799;
-        }
-        throw m32913("FILE_BACKEND_UNSUPPORTED", "The file backend does not support checked directory creation.", abstractC20745.mo33986(), str, "create_directory", "unsupported", false, (String) null, JSON.array(), 0, (String) null, abstractC20745.mo33986());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m32915(C12731 c12731, String str, String str2, String str3, boolean z, boolean z2, JSONArray jSONArray, int i, String str4, String str5, String str6, boolean z3) {
-        JSONObject jSONObject = c12731.f42468;
-        JSONArray jSONArray2 = c12731.f42471;
-        String str7 = c12731.f42475;
-        String str8 = c12731.f42472;
-        JSONObject jSONObject2 = new JSONObject(jSONObject);
-        jSONObject2.put(MotionUtils.EASING_TYPE_PATH, str);
-        jSONObject2.put("policyRevision", str2);
-        jSONObject2.put("changed", z);
-        jSONObject2.put("operationMode", JSON.value(str3));
-        jSONObject2.put("stateKnown", z2);
-        jSONObject2.put("warnings", new JSONArray(jSONArray));
-        jSONObject2.put("createdDirectories", i);
-        jSONObject2.put("deepestCreatedPath", str4 == null ? JSON.NULL : JSON.value(str4));
-        jSONObject2.put("failedPath", str5 == null ? JSON.NULL : JSON.value(str5));
-        jSONObject2.put("failureStage", str6 == null ? JSON.NULL : JSON.value(str6));
-        jSONObject2.put("safeToRetry", z3);
-        if (c12731.f42469) {
-            return C12731.m31627(str8, c12731.getMessage(), str7, jSONArray2, jSONObject2);
-        }
-        return C12731.m31631(str8, c12731.getMessage(), str7, jSONArray2, jSONObject2);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m32913(String str, String str2, String str3, String str4, String str5, String str6, boolean z, String str7, JSONArray jSONArray, int i, String str8, String str9) {
-        JSONObject jSONObjectAdd = C3184.m9603(MotionUtils.EASING_TYPE_PATH, str3, "policyRevision", str4).add("operation", str5).add("backendReason", str6).add("changed", z).add("operationMode", str7 == null ? JSON.NULL : JSON.value(str7)).add("stateKnown", true).add("warnings", new JSONArray(jSONArray)).add("createdDirectories", i).add("deepestCreatedPath", str8 == null ? JSON.NULL : JSON.value(str8)).add("failedPath", str9 == null ? JSON.NULL : JSON.value(str9)).add("failureStage", str5).add("safeToRetry", true);
-        return "FILE_STORAGE_ERROR".equals(str) ? C12731.m31627(str, str2, "warning", (JSONArray) null, jSONObjectAdd) : C12731.m31631(str, str2, "fatal", null, jSONObjectAdd);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static String m32910(String str) {
-        if ("/".equals(str)) {
-            return null;
-        }
-        int iLastIndexOf = str.lastIndexOf(47);
-        return iLastIndexOf == 0 ? "/" : str.substring(0, iLastIndexOf);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m32918(JSONArray jSONArray, String str) {
-        Iterator it = jSONArray.iterator();
-        while (it.hasNext()) {
-            JSONValue jSONValue = (JSONValue) it.next();
-            if (jSONValue.isString() && str.equals(jSONValue.asString())) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private void m33064(int i, int i2) {
+        int[] iArr;
+        int i3;
+        int i4 = this.f42762;
+        int i5 = (i4 << 1) + 1;
+        int i6 = i4 << 1;
+        int i7 = this.f42761;
+        int i8 = 0;
+        int i9 = 0;
+        while (true) {
+            int i10 = this.f42759 - i2;
+            int i11 = i7 - 1;
+            iArr = this.f42760;
+            if (i7 == 0 || i10 >= (i3 = this.f42763)) {
+                break;
+            }
+            int i12 = this.f42762;
+            int i13 = i12 - i10;
+            if (i10 <= i12) {
+                i3 = 0;
+            }
+            int i14 = (i13 + i3) << 1;
+            int iMin = Math.min(i8, i9);
+            int i15 = this.f81887;
+            byte[] bArr = this.f81884;
+            if (bArr[(i15 + iMin) - i10] == bArr[i15 + iMin] && (iMin = C17156.m40309(bArr, i15, i10, iMin + 1, i)) == i) {
+                iArr[i6] = iArr[i14];
+                iArr[i5] = iArr[i14 + 1];
                 return;
             }
+            int i16 = this.f81887;
+            if ((bArr[(i16 + iMin) - i10] & 255) < (bArr[i16 + iMin] & 255)) {
+                iArr[i6] = i2;
+                int i17 = i14 + 1;
+                i2 = iArr[i17];
+                i6 = i17;
+                i9 = iMin;
+            } else {
+                iArr[i5] = i2;
+                i2 = iArr[i14];
+                i5 = i14;
+                i8 = iMin;
+            }
+            i7 = i11;
         }
-        jSONArray.add(str);
+        iArr[i5] = 0;
+        iArr[i6] = 0;
+    }
+
+    @Override // l.AbstractC25362
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo17393(int i) {
+        while (true) {
+            int i2 = i - 1;
+            if (i <= 0) {
+                return;
+            }
+            int iM33065 = m33065();
+            int i3 = this.f81888;
+            if (iM33065 < i3) {
+                if (iM33065 == 0) {
+                }
+                i = i2;
+            } else {
+                iM33065 = i3;
+            }
+            byte[] bArr = this.f81884;
+            int i4 = this.f81887;
+            C2241 c2241 = this.f42765;
+            c2241.m7644(i4, bArr);
+            int iM7646 = c2241.m7646();
+            c2241.m7648(this.f42759);
+            m33064(iM33065, iM7646);
+            i = i2;
+        }
     }
 }

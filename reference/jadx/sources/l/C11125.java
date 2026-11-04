@@ -1,12 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧܽᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q8ZQ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11125 implements InterfaceC4774 {
-    @Override // l.InterfaceC4774
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo6311(C18410 c18410, InterfaceC9239 interfaceC9239) {
-        return new C2532(c18410.m42692());
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.ResultReceiver;
+
+/* JADX INFO: renamed from: l.ۤ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6BF */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11125 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        C23060 c23060 = new C23060();
+        c23060.f74811 = (ResultReceiver) ResultReceiver.CREATOR.createFromParcel(parcel);
+        return c23060;
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C23060[i];
     }
 }

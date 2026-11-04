@@ -26,8 +26,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C16523;
-import l.C3012;
+import l.C14442;
+import l.C3188;
 import org.bouncycastle.asn1.x509.CRLDistPoint;
 import org.bouncycastle.asn1.x509.DistributionPoint;
 import org.bouncycastle.asn1.x509.DistributionPointName;
@@ -47,7 +47,7 @@ import org.bouncycastle.x509.PKIXAttrCertChecker;
 import org.bouncycastle.x509.X509AttributeCertificate;
 import org.bouncycastle.x509.X509CertStoreSelector;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RFC3281CertPathUtilities {
     public static final String TARGET_INFORMATION = Extension.targetInformation.getId();
     public static final String NO_REV_AVAIL = Extension.noRevAvail.getId();
@@ -258,14 +258,14 @@ public class RFC3281CertPathUtilities {
         while (it.hasNext()) {
             String str = (String) it.next();
             if (x509AttributeCertificate.getAttributes(str) != null) {
-                throw new CertPathValidatorException(C16523.m38890("Attribute certificate contains prohibited attribute: ", str, "."));
+                throw new CertPathValidatorException(C14442.m34865("Attribute certificate contains prohibited attribute: ", str, "."));
             }
         }
         Iterator it2 = set2.iterator();
         while (it2.hasNext()) {
             String str2 = (String) it2.next();
             if (x509AttributeCertificate.getAttributes(str2) == null) {
-                throw new CertPathValidatorException(C16523.m38890("Attribute certificate does not contain necessary attribute: ", str2, "."));
+                throw new CertPathValidatorException(C14442.m34865("Attribute certificate does not contain necessary attribute: ", str2, "."));
             }
         }
     }
@@ -357,9 +357,9 @@ public class RFC3281CertPathUtilities {
                                                 throw new CertPathValidatorException("Attribute certificate status could not be determined.");
                                             }
                                         }
-                                        StringBuilder sbM8976 = C3012.m8976("Attribute certificate revocation after " + certStatus.getRevocationDate(), ", reason: ");
-                                        sbM8976.append(RFC3280CertPathUtilities.crlReasons[certStatus.getCertStatus()]);
-                                        throw new CertPathValidatorException(sbM8976.toString());
+                                        StringBuilder sbM10405 = C3188.m10405("Attribute certificate revocation after " + certStatus.getRevocationDate(), ", reason: ");
+                                        sbM10405.append(RFC3280CertPathUtilities.crlReasons[certStatus.getCertStatus()]);
+                                        throw new CertPathValidatorException(sbM10405.toString());
                                     }
                                 } catch (AnnotatedException e4) {
                                     e = e4;
@@ -386,9 +386,9 @@ public class RFC3281CertPathUtilities {
                         throw new ExtCertPathValidatorException("No valid CRL found.", annotatedException);
                     }
                     if (certStatus.getCertStatus() != 11) {
-                        StringBuilder sbM8977 = C3012.m8976("Attribute certificate revocation after " + certStatus.getRevocationDate(), ", reason: ");
-                        sbM8977.append(RFC3280CertPathUtilities.crlReasons[certStatus.getCertStatus()]);
-                        throw new CertPathValidatorException(sbM8977.toString());
+                        StringBuilder sbM10406 = C3188.m10405("Attribute certificate revocation after " + certStatus.getRevocationDate(), ", reason: ");
+                        sbM10406.append(RFC3280CertPathUtilities.crlReasons[certStatus.getCertStatus()]);
+                        throw new CertPathValidatorException(sbM10406.toString());
                     }
                     if (!reasonsMask.isAllReasons() && certStatus.getCertStatus() == 11) {
                         certStatus.setCertStatus(12);

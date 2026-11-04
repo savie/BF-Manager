@@ -1,28 +1,85 @@
 package l;
 
-import com.umeng.analytics.pro.am;
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.function.IntFunction;
 
-/* JADX INFO: renamed from: l.ۢ᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P904 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9922 extends AbstractC3382 {
-    @Override // l.AbstractC3382
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3244(InterfaceC12061 interfaceC12061, AbstractC4332 abstractC4332, InterfaceC21022 interfaceC21022) {
-        if (interfaceC21022.mo38114()) {
-            AbstractC3382.m10034(interfaceC12061, abstractC4332, interfaceC21022.mo38112());
-        }
-        C2657 c2657Builder = interfaceC12061.builder();
-        C18410 c18410Mo29970 = interfaceC12061.mo29970();
-        InterfaceC4774 interfaceC4774Mo19014 = c18410Mo29970.m42695().mo19014(C18244.class);
-        C2657.m8180(c2657Builder, interfaceC4774Mo19014 == null ? null : interfaceC4774Mo19014.mo6311(c18410Mo29970, interfaceC12061.mo29965()), interfaceC21022.start(), interfaceC21022.end());
+/* JADX INFO: renamed from: l.ۢۛۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9922 extends AbstractC8934 {
+    public final /* synthetic */ long s;
+    public final /* synthetic */ long t;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C9922(AbstractC24007 abstractC24007, int i, long j, long j2) {
+        super(abstractC24007, i);
+        this.s = j;
+        this.t = j2;
     }
 
-    @Override // l.AbstractC3382
-    /* JADX INFO: renamed from: ۙ */
-    public final Collection mo3243() {
-        return Arrays.asList(am.aB, "del");
+    @Override // l.AbstractC15470
+    public final InterfaceC8409 o0(AbstractC15470 abstractC15470, InterfaceC8409 interfaceC8409) {
+        long j;
+        long j2;
+        long jR = abstractC15470.R(interfaceC8409);
+        if (jR > 0 && interfaceC8409.hasCharacteristics(16384)) {
+            InterfaceC8409 interfaceC8409H0 = abstractC15470.h0(interfaceC8409);
+            long j3 = this.s;
+            return new C8013(interfaceC8409H0, j3, AbstractC16918.c(j3, this.t));
+        }
+        if (EnumC21614.ORDERED.p(abstractC15470.m)) {
+            return ((InterfaceC13409) new C4986(this, abstractC15470, interfaceC8409, new C13189(11), this.s, this.t).invoke()).spliterator();
+        }
+        InterfaceC8409 interfaceC8409H1 = abstractC15470.h0(interfaceC8409);
+        long j4 = this.s;
+        long j5 = this.t;
+        if (j4 <= jR) {
+            long jMin = jR - j4;
+            if (j5 >= 0) {
+                jMin = Math.min(j5, jMin);
+            }
+            j2 = jMin;
+            j = 0;
+        } else {
+            j = j4;
+            j2 = j5;
+        }
+        return new C18630(interfaceC8409H1, j, j2);
+    }
+
+    @Override // l.AbstractC15470
+    public final InterfaceC13409 n0(AbstractC13956 abstractC13956, InterfaceC8409 interfaceC8409, IntFunction intFunction) {
+        long j;
+        long j2;
+        long jR = abstractC13956.R(interfaceC8409);
+        if (jR > 0 && interfaceC8409.hasCharacteristics(16384)) {
+            AbstractC15470 abstractC15470 = (AbstractC15470) abstractC13956;
+            while (abstractC15470.f82078l > 0) {
+                abstractC15470 = abstractC15470.i;
+            }
+            return AbstractC13956.H(abstractC13956, AbstractC16918.b(abstractC15470.m0(), interfaceC8409, this.s, this.t), true, intFunction);
+        }
+        if (!EnumC21614.ORDERED.p(((AbstractC15470) abstractC13956).m)) {
+            InterfaceC8409 interfaceC8409H0 = abstractC13956.h0(interfaceC8409);
+            long j3 = this.s;
+            long j4 = this.t;
+            if (j3 <= jR) {
+                long jMin = jR - j3;
+                if (j4 >= 0) {
+                    jMin = Math.min(j4, jMin);
+                }
+                j2 = jMin;
+                j = 0;
+            } else {
+                j = j3;
+                j2 = j4;
+            }
+            return AbstractC13956.H(this, new C18630(interfaceC8409H0, j, j2), true, intFunction);
+        }
+        return (InterfaceC13409) new C4986(this, abstractC13956, interfaceC8409, intFunction, this.s, this.t).invoke();
+    }
+
+    @Override // l.AbstractC15470
+    public final InterfaceC15143 q0(int i, InterfaceC15143 interfaceC15143) {
+        return new C20365(this, interfaceC15143);
     }
 }

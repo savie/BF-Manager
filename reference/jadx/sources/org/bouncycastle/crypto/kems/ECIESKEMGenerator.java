@@ -20,7 +20,7 @@ import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECIESKEMGenerator implements EncapsulatedSecretGenerator {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public boolean CofactorMode;

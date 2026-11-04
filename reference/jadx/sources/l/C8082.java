@@ -1,41 +1,31 @@
 package l;
 
-import android.view.WindowInsets;
+/* JADX INFO: renamed from: l.۟ᩴۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26HN */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C8082 {
 
-/* JADX INFO: renamed from: l.۠ۢ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4Z7 */
-/* JADX INFO: loaded from: classes4.dex */
-public class C8082 extends C18665 {
-    public C8082(C15844 c15844, WindowInsets windowInsets) {
-        super(c15844, windowInsets);
-    }
-
-    @Override // l.C10199
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C9203 mo21289() {
-        return C9203.m23665(this.f57445.getDisplayCutout());
-    }
-
-    @Override // l.C10199
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C15844 mo21290() {
-        return C15844.m37669(null, this.f57445.consumeDisplayCutout());
-    }
+    public static final /* synthetic */ int[] f26737;
 
-    @Override // l.C17959, l.C10199
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    static {
+        int[] iArr = new int[EnumC4836.values().length];
+        f26737 = iArr;
+        try {
+            iArr[EnumC4836.FAILED.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (!(obj instanceof C8082)) {
-            return false;
+        try {
+            f26737[EnumC4836.WAITING.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        C8082 c8082 = (C8082) obj;
-        return C13638.equals(this.f57445, c8082.f57445) && C13638.equals(this.f57446, c8082.f57446);
-    }
-
-    @Override // l.C10199
-    public int hashCode() {
-        return this.f57445.hashCode();
+        try {
+            f26737[EnumC4836.RUNNING.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f26737[EnumC4836.SUCCEEDED.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
     }
 }

@@ -1,3 +1,3 @@
 .class public Ll/᩵;
-.super Ll/۠;
+.super Ll/ۗ;
 .source "95XT"

@@ -2,7 +2,7 @@ package net.engio.mbassy.bus;
 
 import net.engio.mbassy.bus.error.PublicationError;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IMessagePublication {
     void execute();
 

@@ -1,90 +1,148 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۚ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 195F */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11486 {
+import android.content.DialogInterface;
+import android.content.res.Resources;
+import bin.mt.plus.Main;
+import bin.mt.plus.R;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int[] f38655;
+/* JADX INFO: renamed from: l.ۧ۠۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8985 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11486 extends AbstractC18551 {
+    @Override // l.AbstractC18551
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3178(final C8614 c8614) {
+        final Resources resourcesM49055 = C21576.m49055();
+        final CharSequence[] charSequenceArr = {resourcesM49055.getString(R.string.MT_Protector), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 1, 1), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 3, 3), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 7, 7), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 14, 14), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 30, 30), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 60, 60), resourcesM49055.getQuantityString(R.plurals.MT_Protector, 90, 90)};
+        C2361 c2361BuildDialog = c8614.m23233().buildDialog();
+        c2361BuildDialog.m8021(R.string.MT_Protector);
+        c2361BuildDialog.m8013(charSequenceArr, -1, new DialogInterface.OnClickListener() { // from class: l.ᩴ۠۫
+            @Override // android.content.DialogInterface.OnClickListener
+            public final void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+                C8614 c8615 = c8614;
+                C2361 c2361BuildDialog2 = c8615.m23233().buildDialog();
+                c2361BuildDialog2.m8021(R.string.MT_Protector);
+                c2361BuildDialog2.m8008(resourcesM49055.getString(R.string.MT_Protector, charSequenceArr[i]));
+                c2361BuildDialog2.m8026(R.string.MT_Protector, new DialogInterface.OnClickListener(this.f63417, i, c8615) { // from class: l.ܳ۠۫
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f38656;
+                    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+                    public final /* synthetic */ int f49672;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f38657;
+                    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+                    public final /* synthetic */ C8614 f49673;
 
-    public C11486(int i) {
-        this.f38655 = new int[i];
-    }
+                    {
+                        this.f49672 = i;
+                        this.f49673 = c8615;
+                    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m28672() {
-        return this.f38656;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28669(int i) {
-        int i2 = this.f38656;
-        int[] iArr = this.f38655;
-        if (i2 == iArr.length) {
-            throw new IllegalStateException("Code point window is full");
-        }
-        int length = this.f38657 + i2;
-        if (length >= iArr.length) {
-            length -= iArr.length;
-        }
-        iArr[length] = i;
-        this.f38656 = i2 + 1;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28671(InterfaceC4429 interfaceC4429) {
-        if (this.f38656 == 0) {
-            throw new IllegalStateException("Code point window is empty");
-        }
-        int i = this.f38657;
-        int[] iArr = this.f38655;
-        interfaceC4429.mo12360(iArr[i]);
-        int i2 = this.f38657 + 1;
-        if (i2 == iArr.length) {
-            i2 = 0;
-        }
-        this.f38657 = i2;
-        this.f38656--;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m28670(int i, InterfaceC4429 interfaceC4429) {
-        if (i < 0 || i > this.f38656) {
-            throw new IllegalArgumentException("Code point count is out of range");
-        }
-        for (int i2 = 0; i2 < i; i2++) {
-            m28671(interfaceC4429);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m28673(InterfaceC4429 interfaceC4429) {
-        m28670(this.f38656, interfaceC4429);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m28668() {
-        int length;
-        int[] iArr;
-        int i = this.f38656;
-        do {
-            i--;
-            if (i < 0) {
-                return -1;
+                    /* JADX WARN: Code duplicated, block: B:17:0x003f  */
+                    /* JADX WARN: Code duplicated, block: B:18:0x0041  */
+                    @Override // android.content.DialogInterface.OnClickListener
+                    public final void onClick(DialogInterface dialogInterface2, int i2) {
+                        long j;
+                        long j2;
+                        boolean z;
+                        long jCurrentTimeMillis = System.currentTimeMillis();
+                        int i3 = this.f49672;
+                        switch (i3) {
+                            case 0:
+                                j = C25227.FOREVER_NS;
+                                Main mainM23233 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23233, j, z).m8197();
+                                return;
+                            case 1:
+                                j2 = 86400000;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23234 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23234, j, z).m8197();
+                                return;
+                            case 2:
+                                j2 = 259200000;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23235 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23235, j, z).m8197();
+                                return;
+                            case 3:
+                                j2 = 604800000;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23236 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23236, j, z).m8197();
+                                return;
+                            case 4:
+                                j2 = 1209600000;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23237 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23237, j, z).m8197();
+                                return;
+                            case 5:
+                                j2 = 2592000000L;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23238 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23238, j, z).m8197();
+                                return;
+                            case 6:
+                                j2 = 5184000000L;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM23239 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM23239, j, z).m8197();
+                                return;
+                            case 7:
+                                j2 = 7776000000L;
+                                j = jCurrentTimeMillis - j2;
+                                Main mainM232310 = this.f49673.m23233();
+                                if (i3 == 0) {
+                                    z = true;
+                                } else {
+                                    z = false;
+                                }
+                                new C1792(mainM232310, j, z).m8197();
+                                return;
+                            default:
+                                throw new RuntimeException();
+                        }
+                    }
+                });
+                c2361BuildDialog2.m8022(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
+                c2361BuildDialog2.m8016();
             }
-            length = this.f38657 + i;
-            iArr = this.f38655;
-            if (length >= iArr.length) {
-                length -= iArr.length;
-            }
-        } while (iArr[length] != 10);
-        return i;
+        });
+        c2361BuildDialog.m8016();
     }
 }

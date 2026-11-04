@@ -1,45 +1,38 @@
-.class public final Ll/ۤۛ᩸;
-.super Ll/᩶ۛ᩸;
-.source "T9HK"
+.class public final synthetic Ll/ۤۛ᩸;
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Ll/᩻᩹;
 
 
-# static fields
-.field public static final ֡:[B
+# instance fields
+.field public final synthetic ܰ:Ll/ܿۛ᩸;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ll/ܿۛ᩸;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [B
-
-    .line 29
-    sput-object v0, Ll/ۤۛ᩸;->֡:[B
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 32
-    sget-object v0, Ll/ܳܿ᩸;->۬:Ll/ܳܿ᩸;
-
-    sget-object v1, Ll/ۤۛ᩸;->֡:[B
-
-    invoke-direct {p0, v0, v1}, Ll/᩶ۛ᩸;-><init>(Ll/ܳܿ᩸;[B)V
+    iput-object p1, p0, Ll/ۤۛ᩸;->ܰ:Ll/ܿۛ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic getValue()Ljava/lang/Object;
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    .line 0
+    iget-object v0, p0, Ll/ۤۛ᩸;->ܰ:Ll/ܿۛ᩸;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Ll/ܿۛ᩸;->ۙ(Landroid/view/MenuItem;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

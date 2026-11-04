@@ -8,51 +8,51 @@ import java.io.InputStream;
 public class ProgressReportingInputStream extends SdkFilterInputStream {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f173;
+    public int f163;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f174;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f164;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f175;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f165;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final ProgressListenerCallbackExecutor f176;
+    public final ProgressListenerCallbackExecutor f166;
 
     public ProgressReportingInputStream(InputStream inputStream, ProgressListenerCallbackExecutor progressListenerCallbackExecutor) {
         super(inputStream);
-        this.f173 = 8192;
-        this.f176 = progressListenerCallbackExecutor;
+        this.f165 = 8192;
+        this.f166 = progressListenerCallbackExecutor;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m232(int i) {
-        this.f173 = i * 1024;
+    public final void m226(int i) {
+        this.f165 = i * 1024;
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final void m233() {
-        this.f174 = true;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final void m227() {
+        this.f164 = true;
     }
 
     @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
     public final int read() {
         int i = super.read();
-        ProgressListenerCallbackExecutor progressListenerCallbackExecutor = this.f176;
+        ProgressListenerCallbackExecutor progressListenerCallbackExecutor = this.f166;
         if (i == -1) {
-            if (this.f174) {
-                ProgressEvent progressEvent = new ProgressEvent(this.f175);
-                progressEvent.f167 = 4;
-                this.f175 = 0;
-                progressListenerCallbackExecutor.m231(progressEvent);
+            if (this.f164) {
+                ProgressEvent progressEvent = new ProgressEvent(this.f163);
+                progressEvent.f157 = 4;
+                this.f163 = 0;
+                progressListenerCallbackExecutor.m225(progressEvent);
                 return i;
             }
         } else {
-            int i2 = this.f175 + 1;
-            this.f175 = i2;
-            if (i2 >= this.f173) {
-                progressListenerCallbackExecutor.m231(new ProgressEvent(i2));
-                this.f175 = 0;
+            int i2 = this.f163 + 1;
+            this.f163 = i2;
+            if (i2 >= this.f165) {
+                progressListenerCallbackExecutor.m225(new ProgressEvent(i2));
+                this.f163 = 0;
             }
         }
         return i;
@@ -61,28 +61,28 @@ public class ProgressReportingInputStream extends SdkFilterInputStream {
     @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
     public final void reset() {
         super.reset();
-        ProgressEvent progressEvent = new ProgressEvent(this.f175);
-        progressEvent.f167 = 32;
-        this.f176.m231(progressEvent);
-        this.f175 = 0;
+        ProgressEvent progressEvent = new ProgressEvent(this.f163);
+        progressEvent.f157 = 32;
+        this.f166.m225(progressEvent);
+        this.f163 = 0;
     }
 
     @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
     public final int read(byte[] bArr, int i, int i2) {
         int i3 = super.read(bArr, i, i2);
-        ProgressListenerCallbackExecutor progressListenerCallbackExecutor = this.f176;
-        if (i3 == -1 && this.f174) {
-            ProgressEvent progressEvent = new ProgressEvent(this.f175);
-            progressEvent.f167 = 4;
-            this.f175 = 0;
-            progressListenerCallbackExecutor.m231(progressEvent);
+        ProgressListenerCallbackExecutor progressListenerCallbackExecutor = this.f166;
+        if (i3 == -1 && this.f164) {
+            ProgressEvent progressEvent = new ProgressEvent(this.f163);
+            progressEvent.f157 = 4;
+            this.f163 = 0;
+            progressListenerCallbackExecutor.m225(progressEvent);
         }
         if (i3 != -1) {
-            int i4 = this.f175 + i3;
-            this.f175 = i4;
-            if (i4 >= this.f173) {
-                progressListenerCallbackExecutor.m231(new ProgressEvent(i4));
-                this.f175 = 0;
+            int i4 = this.f163 + i3;
+            this.f163 = i4;
+            if (i4 >= this.f165) {
+                progressListenerCallbackExecutor.m225(new ProgressEvent(i4));
+                this.f163 = 0;
             }
         }
         return i3;
@@ -90,10 +90,10 @@ public class ProgressReportingInputStream extends SdkFilterInputStream {
 
     @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
     public final void close() throws IOException {
-        int i = this.f175;
+        int i = this.f163;
         if (i > 0) {
-            this.f176.m231(new ProgressEvent(i));
-            this.f175 = 0;
+            this.f166.m225(new ProgressEvent(i));
+            this.f163 = 0;
         }
         super.close();
     }

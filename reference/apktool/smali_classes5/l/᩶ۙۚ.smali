@@ -1,47 +1,34 @@
-.class public final synthetic Ll/᩶ۙۚ;
+.class public final Ll/᩶ۙۚ;
 .super Ljava/lang/Object;
-.source "76QP"
+.source "R77X"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ll/۟᩷᩸;
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ܽۙۚ;
-
-.field public final synthetic ᩶:Ljava/lang/Runnable;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ܽۙۚ;Ljava/lang/Runnable;)V
+# virtual methods
+.method public final ֡()V
     .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩶ۙۚ;->ܺ:Ll/ܽۙۚ;
-
-    iput-object p2, p0, Ll/᩶ۙۚ;->᩶:Ljava/lang/Runnable;
 
     return-void
 .end method
 
+.method public final ۙ(II)V
+    .locals 0
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+    return-void
+.end method
 
-    .line 2
-    iget-object v0, p0, Ll/᩶ۙۚ;->ܺ:Ll/ܽۙۚ;
+.method public final ۙ(ZZ)V
+    .locals 0
 
-    .line 4
-    iget-object v1, p0, Ll/᩶ۙۚ;->᩶:Ljava/lang/Runnable;
+    return-void
+.end method
 
-    .line 98
-    invoke-virtual {v0, v1}, Ll/ۧܺۖ;->ܰ(Ljava/lang/Runnable;)V
+.method public final synthetic ۫()Z
+    .locals 1
 
-    .line 0
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method

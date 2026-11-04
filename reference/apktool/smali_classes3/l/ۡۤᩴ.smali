@@ -1,29 +1,48 @@
 .class public final synthetic Ll/ۡۤᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "44TS"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۧ᩸ᩴ;
+
+.field public final synthetic ܿ:Ll/۫᩻ܺ;
+
+.field public final synthetic ᩶:Ll/֫᩸ᩴ;
 
 
 # direct methods
-.method public static lines(Ljava/io/BufferedReader;)Ll/ۚ֫ᩴ;
-    .locals 1
+.method public synthetic constructor <init>(Ll/ۧ᩸ᩴ;Ll/֫᩸ᩴ;Ll/۫᩻ܺ;)V
+    .locals 0
 
-    .line 566
-    new-instance v0, Ll/ܺۤᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Ll/ܺۤᩴ;-><init>(Ljava/io/BufferedReader;)V
+    iput-object p1, p0, Ll/ۡۤᩴ;->ܰ:Ll/ۧ᩸ᩴ;
 
-    const/16 p0, 0x110
+    iput-object p2, p0, Ll/ۡۤᩴ;->᩶:Ll/֫᩸ᩴ;
 
-    .line 568
-    invoke-static {v0, p0}, Ll/᩶ۛᩴ;->b(Ljava/util/Iterator;I)Ll/᩹ܳᩴ;
+    iput-object p3, p0, Ll/ۡۤᩴ;->ܿ:Ll/۫᩻ܺ;
 
-    move-result-object p0
+    return-void
+.end method
 
-    const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Ll/᩹֫ᩴ;->stream(Ll/᩷ۛᩴ;Z)Ll/ۚ֫ᩴ;
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    move-result-object p0
+    .line 0
+    iget-object v0, p0, Ll/ۡۤᩴ;->᩶:Ll/֫᩸ᩴ;
 
-    return-object p0
+    iget-object v1, p0, Ll/ۡۤᩴ;->ܿ:Ll/۫᩻ܺ;
+
+    iget-object v2, p0, Ll/ۡۤᩴ;->ܰ:Ll/ۧ᩸ᩴ;
+
+    invoke-static {v2, v0, v1}, Ll/ۧ᩸ᩴ;->ۙ(Ll/ۧ᩸ᩴ;Ll/֫᩸ᩴ;Ll/۫᩻ܺ;)V
+
+    return-void
 .end method

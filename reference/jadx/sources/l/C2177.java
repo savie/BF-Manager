@@ -1,91 +1,40 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Stack;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/* JADX INFO: renamed from: l.ۖ֡ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P676 */
+/* JADX INFO: renamed from: l.֫᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: X5H0 */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2177 extends AbstractC8956 {
+public class C2177 implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new C5906();
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public int[] f7891;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f7165;
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public boolean f7893;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f7166;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public C0766 f7897;
-
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    public C14655[] f7898;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public int f7899;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public C12063 f7900;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public boolean f7901;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public byte[] f7904;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f7905;
-
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public C21934 f7906;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C13929 f7907;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f7167;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public String f7908;
+    public int f7168;
 
-    /* JADX INFO: renamed from: ᩳۙ, reason: not valid java name and contains not printable characters */
-    public EnumC12762 f7909;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f7169;
 
-    /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
-    public EnumC12762 f7910;
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
 
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    public int f7913;
-
-    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public C9186 f7911 = new C9186(EnumC12762.MAIN);
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final HashMap f7902 = new HashMap();
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public boolean f7895 = false;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7914 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7903 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7892 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7894 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f7896 = new HashMap();
-
-    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public Stack f7912 = new Stack();
-
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public Stack f7890 = new Stack();
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final EnumC12762 m6777() {
-        return (EnumC12762) this.f7911.m44956();
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(this.f7166);
+        parcel.writeInt(this.f7169);
+        parcel.writeInt(this.f7165);
+        parcel.writeInt(this.f7168);
+        parcel.writeInt(this.f7167);
     }
 }

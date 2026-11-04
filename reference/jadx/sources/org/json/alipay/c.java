@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import l.C9023;
+import l.C10732;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
@@ -91,9 +91,9 @@ public class c {
     }
 
     public JSONException a(String str) {
-        StringBuilder sbM23356 = C9023.m23356(str);
-        sbM23356.append(toString());
-        return new JSONException(sbM23356.toString());
+        StringBuilder sbM27333 = C10732.m27333(str);
+        sbM27333.append(toString());
+        return new JSONException(sbM27333.toString());
     }
 
     public void a() {
@@ -174,7 +174,7 @@ public class c {
         }
     }
 
-    public Object d() {
+    public Object d() throws JSONException {
         char c = c();
         if (c != '\"') {
             if (c != '[') {

@@ -7,7 +7,7 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
-import l.C11996;
+import l.C12351;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.jcajce.spec.SLHDSAParameterSpec;
@@ -19,7 +19,7 @@ import org.bouncycastle.pqc.crypto.slhdsa.SLHDSAPrivateKeyParameters;
 import org.bouncycastle.pqc.crypto.slhdsa.SLHDSAPublicKeyParameters;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SLHDSAKeyPairGeneratorSpi extends KeyPairGenerator {
     public static Map parameters;
     public SLHDSAKeyPairGenerator engine;
@@ -255,7 +255,7 @@ public class SLHDSAKeyPairGeneratorSpi extends KeyPairGenerator {
     public void initialize(AlgorithmParameterSpec algorithmParameterSpec, SecureRandom secureRandom) throws InvalidAlgorithmParameterException {
         String nameFromParams = getNameFromParams(algorithmParameterSpec);
         if (nameFromParams == null) {
-            throw new InvalidAlgorithmParameterException(C11996.m29881("invalid ParameterSpec: ", algorithmParameterSpec));
+            throw new InvalidAlgorithmParameterException(C12351.m30818("invalid ParameterSpec: ", algorithmParameterSpec));
         }
         SLHDSAParameters sLHDSAParameters = (SLHDSAParameters) parameters.get(nameFromParams);
         if (sLHDSAParameters == null) {

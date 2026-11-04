@@ -15,20 +15,20 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes.dex */
 public class TransferService extends Service {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static TransferNetworkLossHandler f335;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public static final Log f325 = LogFactory.m296(TransferService.class);
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final Log f336 = LogFactory.m302(TransferService.class);
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static TransferNetworkLossHandler f326;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f338 = true;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f327 = true;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f339 = 3462;
+    public int f329 = 3462;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f337 = true;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f328 = true;
 
     @Override // android.app.Service
     public final IBinder onBind(Intent intent) {
@@ -38,21 +38,21 @@ public class TransferService extends Service {
     @Override // android.app.Service
     public final void onCreate() {
         super.onCreate();
-        Log log = f336;
-        log.mo296("Starting Transfer Service to listen for network connectivity changes.");
-        f335 = TransferNetworkLossHandler.m379(getApplicationContext());
+        Log log = f325;
+        log.mo288("Starting Transfer Service to listen for network connectivity changes.");
+        f326 = TransferNetworkLossHandler.m373(getApplicationContext());
         synchronized (this) {
-            if (this.f338) {
+            if (this.f327) {
                 try {
                     try {
-                        log.mo296("Registering the network receiver");
-                        registerReceiver(f335, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
-                        this.f338 = false;
+                        log.mo288("Registering the network receiver");
+                        registerReceiver(f326, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+                        this.f327 = false;
                     } catch (IllegalStateException unused) {
-                        f336.mo291("Ignoring the leak in registering the receiver.");
+                        f325.mo294("Ignoring the leak in registering the receiver.");
                     }
                 } catch (IllegalArgumentException unused2) {
-                    f336.mo291("Ignoring the exception trying to register the receiver for connectivity change.");
+                    f325.mo294("Ignoring the exception trying to register the receiver for connectivity change.");
                 }
             }
         }
@@ -66,33 +66,33 @@ public class TransferService extends Service {
                 synchronized (this) {
                     Notification notification = (Notification) intent.getParcelableExtra("notification");
                     if (notification != null) {
-                        this.f339 = intent.getIntExtra("ongoing-notification-id", this.f339);
-                        this.f337 = intent.getBooleanExtra("remove-notification", this.f337);
-                        f336.mo296("Putting the service in Foreground state.");
+                        this.f329 = intent.getIntExtra("ongoing-notification-id", this.f329);
+                        this.f328 = intent.getBooleanExtra("remove-notification", this.f328);
+                        f325.mo288("Putting the service in Foreground state.");
                         if (i3 >= 34) {
-                            startForeground(this.f339, notification, 1);
+                            startForeground(this.f329, notification, 1);
                         } else {
-                            startForeground(this.f339, notification);
+                            startForeground(this.f329, notification);
                         }
                     } else {
-                        f336.mo292("No notification is passed in the intent. Unable to transition to foreground.");
+                        f325.mo285("No notification is passed in the intent. Unable to transition to foreground.");
                     }
                 }
             } catch (Exception e) {
-                f336.mo292("Error in moving the service to foreground state: " + e);
+                f325.mo285("Error in moving the service to foreground state: " + e);
             }
             return 1;
         }
         synchronized (this) {
-            if (this.f338) {
+            if (this.f327) {
                 try {
-                    f336.mo296("Registering the network receiver");
-                    registerReceiver(f335, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
-                    this.f338 = false;
+                    f325.mo288("Registering the network receiver");
+                    registerReceiver(f326, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+                    this.f327 = false;
                 } catch (IllegalArgumentException unused) {
-                    f336.mo291("Ignoring the exception trying to register the receiver for connectivity change.");
+                    f325.mo294("Ignoring the exception trying to register the receiver for connectivity change.");
                 } catch (IllegalStateException unused2) {
-                    f336.mo291("Ignoring the leak in registering the receiver.");
+                    f325.mo294("Ignoring the leak in registering the receiver.");
                 }
             }
             return 1;
@@ -104,26 +104,26 @@ public class TransferService extends Service {
         try {
             try {
                 if (Build.VERSION.SDK_INT >= 26) {
-                    f336.mo296("Moving the service out of the Foreground state.");
+                    f325.mo288("Moving the service out of the Foreground state.");
                     synchronized (this) {
-                        stopForeground(this.f337);
+                        stopForeground(this.f328);
                     }
                     super.onDestroy();
                 }
-                f336.mo296("De-registering the network receiver.");
+                f325.mo288("De-registering the network receiver.");
                 synchronized (this) {
-                    if (!this.f338) {
-                        unregisterReceiver(f335);
-                        this.f338 = true;
-                        f335 = null;
+                    if (!this.f327) {
+                        unregisterReceiver(f326);
+                        this.f327 = true;
+                        f326 = null;
                     }
                     super.onDestroy();
                 }
             } catch (IllegalArgumentException unused) {
-                f336.mo291("Exception trying to de-register the network receiver");
+                f325.mo294("Exception trying to de-register the network receiver");
             }
         } catch (Exception e) {
-            f336.mo292("Error in moving the service out of the foreground state: " + e);
+            f325.mo285("Error in moving the service out of the foreground state: " + e);
         }
     }
 
@@ -132,11 +132,11 @@ public class TransferService extends Service {
         if ((getApplicationInfo().flags & 2) == 0) {
             return;
         }
-        printWriter.printf("network status: %s\n", Boolean.valueOf(f335.m382()));
-        Map mapM393 = TransferStatusUpdater.m390(this).m393();
-        printWriter.printf("# of active transfers: %d\n", Integer.valueOf(mapM393.size()));
-        for (TransferRecord transferRecord : mapM393.values()) {
-            printWriter.printf("bucket: %s, key: %s, status: %s, total size: %d, current: %d\n", transferRecord.f310, transferRecord.f316, transferRecord.f325, Long.valueOf(transferRecord.f319), Long.valueOf(transferRecord.f322));
+        printWriter.printf("network status: %s\n", Boolean.valueOf(f326.m376()));
+        Map mapM387 = TransferStatusUpdater.m384(this).m387();
+        printWriter.printf("# of active transfers: %d\n", Integer.valueOf(mapM387.size()));
+        for (TransferRecord transferRecord : mapM387.values()) {
+            printWriter.printf("bucket: %s, key: %s, status: %s, total size: %d, current: %d\n", transferRecord.f301, transferRecord.f308, transferRecord.f296, Long.valueOf(transferRecord.f306), Long.valueOf(transferRecord.f320));
         }
         printWriter.flush();
     }

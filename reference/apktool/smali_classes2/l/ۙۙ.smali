@@ -26,15 +26,15 @@
 
 
 # virtual methods
-.method public final ۙ()Ll/ܰۙ;
+.method public final ۙ()Ll/᩷ۙ;
     .locals 2
 
     .line 901
-    new-instance v0, Ll/ܰۙ;
+    new-instance v0, Ll/᩷ۙ;
 
     iget-object v1, p0, Ll/ۙۙ;->ۙ:Landroid/os/Bundle;
 
-    invoke-direct {v0, v1}, Ll/ܰۙ;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v0, v1}, Ll/᩷ۙ;-><init>(Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -43,24 +43,21 @@
     .locals 3
 
     .line 826
-    sget-object v0, Ll/ܰۙ;->֡:Ll/᩸۠;
+    sget-object v0, Ll/᩷ۙ;->ܿ:Ll/ܰۗ;
 
     const-string v1, "android.media.metadata.DURATION"
 
-    invoke-virtual {v0, v1}, Ll/۫۠;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ll/ۡۗ;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    const/4 v2, 0x0
-
-    .line 369
-    invoke-virtual {v0, v1, v2}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 827
+    invoke-virtual {v0, v1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 827
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -95,22 +92,19 @@
     .locals 2
 
     .line 885
-    sget-object v0, Ll/ܰۙ;->֡:Ll/᩸۠;
+    sget-object v0, Ll/᩷ۙ;->ܿ:Ll/ܰۗ;
 
-    invoke-virtual {v0, p1}, Ll/۫۠;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 886
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 886
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -132,7 +126,7 @@
     const-string v1, " key cannot be used to put a Bitmap"
 
     .line 0
-    invoke-static {v0, p1, v1}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -155,22 +149,19 @@
     .locals 2
 
     .line 796
-    sget-object v0, Ll/ܰۙ;->֡:Ll/᩸۠;
+    sget-object v0, Ll/᩷ۙ;->ܿ:Ll/ܰۗ;
 
-    invoke-virtual {v0, p1}, Ll/۫۠;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    const/4 v1, 0x0
-
-    .line 369
-    invoke-virtual {v0, p1, v1}, Ll/۫۠;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 797
+    invoke-virtual {v0, p1}, Ll/ۡۗ;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 797
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -192,7 +183,7 @@
     const-string v1, " key cannot be used to put a String"
 
     .line 0
-    invoke-static {v0, p1, v1}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

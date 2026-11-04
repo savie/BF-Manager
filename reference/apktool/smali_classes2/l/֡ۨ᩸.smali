@@ -1,82 +1,48 @@
-.class public final Ll/֡ۨ᩸;
-.super Ll/۟ۖ᩸;
-.source "688Y"
+.class public final synthetic Ll/֡ۨ᩸;
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ܿۛ᩸;
+
+.field public final synthetic ܿ:Z
+
+.field public final synthetic ᩶:Landroid/content/Intent;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܿۛ᩸;Landroid/content/Intent;Z)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֡ۨ᩸;->ܰ:Ll/ܿۛ᩸;
+
+    iput-object p2, p0, Ll/֡ۨ᩸;->᩶:Landroid/content/Intent;
+
+    iput-boolean p3, p0, Ll/֡ۨ᩸;->ܿ:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
-    .locals 2
-
-    .line 483
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
-
-    move-result-object v0
-
-    sget-object v1, Ll/᩹۬᩸;->᩻:Ll/᩹۬᩸;
-
-    if-ne v0, v1, :cond_0
-
-    .line 484
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->۫()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 487
-    :cond_0
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ܺ()D
-
-    move-result-wide v0
-
-    double-to-float p1, v0
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
+.method public final run()V
     .locals 3
 
-    .line 480
-    check-cast p2, Ljava/lang/Number;
+    .line 0
+    iget-object v0, p0, Ll/֡ۨ᩸;->᩶:Landroid/content/Intent;
 
-    if-nez p2, :cond_0
+    iget-boolean v1, p0, Ll/֡ۨ᩸;->ܿ:Z
 
-    .line 493
-    invoke-virtual {p1}, Ll/֨۬᩸;->ᩳ()Ll/֨۬᩸;
+    iget-object v2, p0, Ll/֡ۨ᩸;->ܰ:Ll/ܿۛ᩸;
 
-    return-void
-
-    .line 496
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    float-to-double v1, v0
-
-    .line 497
-    invoke-static {v1, v2}, Ll/ۛۨ᩸;->ۙ(D)V
-
-    .line 500
-    instance-of v1, p2, Ljava/lang/Float;
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    .line 501
-    :goto_0
-    invoke-virtual {p1, p2}, Ll/֨۬᩸;->ۙ(Ljava/lang/Number;)V
+    invoke-static {v2, v0, v1}, Ll/ܿۛ᩸;->ۙ(Ll/ܿۛ᩸;Landroid/content/Intent;Z)V
 
     return-void
 .end method

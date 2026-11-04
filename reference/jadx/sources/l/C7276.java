@@ -1,20 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8QX */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7276 extends Exception {
+import java.util.function.IntConsumer;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C7648 f24199;
+/* JADX INFO: renamed from: l.ۜܽܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W6DR */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C7276 implements IntConsumer {
 
-    public C7276(C8375 c8375, C7648 c7648) {
-        super(c8375);
-        this.f24199 = c7648;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2012 f23972;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1310 f23973;
+
+    public /* synthetic */ C7276(C2012 c2012, C1310 c1310) {
+        this.f23972 = c2012;
+        this.f23973 = c1310;
     }
 
-    public C7276(String str, C7648 c7648) {
-        super(str);
-        this.f24199 = c7648;
+    @Override // java.util.function.IntConsumer
+    public final void accept(int i) {
+        C2012.m6900(this.f23972, this.f23973, i);
+    }
+
+    public /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
+        return C4109.$default$andThen(this, intConsumer);
     }
 }

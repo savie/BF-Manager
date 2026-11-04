@@ -1,6 +1,6 @@
 package com.amazonaws.services.s3.model;
 
-import l.C16523;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes.dex */
 public class CORSRule {
@@ -13,27 +13,27 @@ public class CORSRule {
         DELETE("DELETE");
 
 
-        /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-        public final String f556;
+        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+        public final String f546;
 
         AllowedMethods(String str) {
-            this.f556 = str;
+            this.f546 = str;
         }
 
         @Override // java.lang.Enum
         public String toString() {
-            return this.f556;
+            return this.f546;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public static AllowedMethods m538(String str) {
+        public static AllowedMethods m532(String str) {
             for (AllowedMethods allowedMethods : values()) {
                 String string = allowedMethods.toString();
                 if ((string == null && str == null) || (string != null && string.equals(str))) {
                     return allowedMethods;
                 }
             }
-            throw new IllegalArgumentException(C16523.m38890("Cannot create enum from ", str, " value!"));
+            throw new IllegalArgumentException(C14442.m34865("Cannot create enum from ", str, " value!"));
         }
     }
 }

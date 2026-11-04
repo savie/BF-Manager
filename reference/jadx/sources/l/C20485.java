@@ -1,150 +1,90 @@
 package l;
 
-import java.nio.ByteBuffer;
-import javax.crypto.AEADBadTagException;
-import org.bouncycastle.crypto.engines.ChaChaEngine;
-import org.bouncycastle.crypto.macs.Poly1305;
-import org.bouncycastle.crypto.params.KeyParameter;
-import org.bouncycastle.crypto.params.ParametersWithIV;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.᩶᩺ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 37WC */
+/* JADX INFO: renamed from: l.᩵ۢܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9Q3 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20485 implements InterfaceC1142 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public ChaChaEngine f66432;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public KeyParameter f66433;
+public class C20485 extends C24215 {
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f66434;
+    public static final C20485 f65620 = new C20485(0);
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public ChaChaEngine f66435;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final Map f65621;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public KeyParameter f66436;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final Map f65622;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public Poly1305 f66437;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Map f65623;
 
-    @Override // l.InterfaceC1142
-    public final int getBlockSize() {
-        return 64;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final Map f65624;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C20485 m46986() {
+        return new C20485();
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo2383() {
-        return 8;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3331 m46987(C24478 c24478, int i) {
+        return (C3331) this.f65623.get(new C23469(c24478, i));
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2387(byte[] bArr) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2388() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo2389() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۨ */
-    public final boolean mo2390() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo2391() {
-        return 16;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2386(int i, byte[] bArr, byte[] bArr2) throws Exception {
-        if (bArr.length > 64) {
-            byte[] bArr3 = new byte[64];
-            System.arraycopy(bArr, 0, bArr3, 0, 64);
-            bArr = bArr3;
-        }
-        byte[] bArr4 = new byte[32];
-        byte[] bArr5 = new byte[32];
-        System.arraycopy(bArr, 32, bArr4, 0, 32);
-        System.arraycopy(bArr, 0, bArr5, 0, 32);
-        this.f66434 = i;
-        try {
-            this.f66433 = new KeyParameter(bArr4, 0, 32);
-            this.f66436 = new KeyParameter(bArr5, 0, 32);
-            this.f66435 = new ChaChaEngine();
-            this.f66432 = new ChaChaEngine();
-            this.f66437 = new Poly1305();
-        } catch (Exception e) {
-            this.f66435 = null;
-            this.f66432 = null;
-            this.f66433 = null;
-            this.f66436 = null;
-            throw e;
-        }
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2384(int i) {
-        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(8);
-        byteBufferAllocate.putLong(0, i);
-        this.f66435.init(this.f66434 == 0, new ParametersWithIV(this.f66433, byteBufferAllocate.array(), 0, byteBufferAllocate.array().length));
-        this.f66432.init(this.f66434 == 0, new ParametersWithIV(this.f66436, byteBufferAllocate.array(), 0, byteBufferAllocate.array().length));
-        byte[] bArr = new byte[64];
-        this.f66432.processBytes(bArr, 0, 64, bArr, 0);
-        this.f66437.init(new KeyParameter(bArr, 0, 32));
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2385(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
-        this.f66435.processBytes(bArr, i, i2, bArr2, i3);
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2392(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws AEADBadTagException {
-        if (this.f66434 == 1) {
-            byte[] bArr3 = new byte[16];
-            System.arraycopy(bArr, i2, bArr3, 0, 16);
-            byte[] bArr4 = new byte[16];
-            if (i < 0) {
-                this.f66437.update(bArr, i + 4, i2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46988(C9780 c9780) {
+        C3331 c3331;
+        Map map;
+        Map map2;
+        if (c9780.m25505() == EnumC24961.IMMUTABLE || c9780.m25505() == EnumC24961.MUTABLE) {
+            if (c9780.mo25504().m20086() == EnumC2848.MESSAGE) {
+                if (c9780.mo25502() == null) {
+                    throw new IllegalStateException("Registered message-type extension had null default instance: " + c9780.mo25504().mo5002());
+                }
+                c3331 = new C3331(c9780.mo25504(), c9780.mo25502());
             } else {
-                this.f66437.update(bArr, i, i2);
+                c3331 = new C3331(c9780.mo25504(), null);
             }
-            this.f66437.doFinal(bArr4, 0);
-            int i4 = 0;
-            for (int i5 = 0; i5 < 16; i5++) {
-                i4 |= bArr3[i5] ^ bArr4[i5];
+            EnumC24961 enumC24961M25505 = c9780.m25505();
+            C7323 c7323 = c3331.f10901;
+            if (!c7323.m20083()) {
+                throw new IllegalArgumentException("ExtensionRegistry.add() was given a FieldDescriptor for a regular (non-extension) field.");
             }
-            if (i4 != 0) {
-                throw new AEADBadTagException("Tag mismatch");
+            int i = C16009.f51951[enumC24961M25505.ordinal()];
+            if (i == 1) {
+                map = this.f65624;
+                map2 = this.f65623;
+            } else {
+                if (i != 2) {
+                    return;
+                }
+                map = this.f65622;
+                map2 = this.f65621;
+            }
+            map.put(c7323.mo5002(), c3331);
+            map2.put(new C23469(c7323.m20099(), c7323.getNumber()), c3331);
+            if (c7323.m20099().m54744().m17896() && c7323.getType() == EnumC8814.f28803 && c7323.m20091() && c7323.m20087() == c7323.m20093()) {
+                map.put(c7323.m20093().mo5002(), c3331);
             }
         }
-        if (i < 0) {
-            this.f66432.processBytes(bArr, i + 4, (i2 - 4) - i, bArr2, i3 + 4 + i);
-        } else {
-            this.f66432.processBytes(bArr, i + 4, i2 - 4, bArr2, i3 + 4);
-        }
-        if (this.f66434 == 0) {
-            this.f66437.update(bArr2, i3, i2);
-            this.f66437.doFinal(bArr2, i2);
-        }
+    }
+
+    public C20485() {
+        this.f65624 = new HashMap();
+        this.f65622 = new HashMap();
+        this.f65623 = new HashMap();
+        this.f65621 = new HashMap();
+    }
+
+    public C20485(int i) {
+        super(C24215.f78465);
+        Map map = Collections.EMPTY_MAP;
+        this.f65624 = map;
+        this.f65622 = map;
+        this.f65623 = map;
+        this.f65621 = map;
     }
 }

@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.util.KeyUtil;
 import org.bouncycastle.jcajce.provider.asymmetric.util.PKCS12BagAttributeCarrierImpl;
 import org.bouncycastle.jce.interfaces.PKCS12BagAttributeCarrier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JCERSAPrivateKey implements RSAPrivateKey, PKCS12BagAttributeCarrier {
     public static BigInteger ZERO = BigInteger.valueOf(0);
     public static final long serialVersionUID = 5110188922551353628L;

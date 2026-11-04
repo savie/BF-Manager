@@ -6,12 +6,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.GeneralSecurityException;
 import javax.crypto.Cipher;
-import l.C10235;
-import l.InterfaceC20818;
+import l.C9214;
+import l.InterfaceC8469;
 import org.bouncycastle.crypto.io.InvalidCipherTextIOException;
 
-/* JADX INFO: loaded from: classes.dex */
-public class CipherInputStream extends FilterInputStream implements InterfaceC20818 {
+/* JADX INFO: loaded from: classes2.dex */
+public class CipherInputStream extends FilterInputStream implements InterfaceC8469 {
     public byte[] buf;
     public int bufOff;
     public final Cipher cipher;
@@ -141,8 +141,8 @@ public class CipherInputStream extends FilterInputStream implements InterfaceC20
         return iMin;
     }
 
-    @Override // java.io.InputStream, l.InterfaceC20818
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 }

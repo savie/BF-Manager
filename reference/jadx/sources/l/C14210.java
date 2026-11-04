@@ -1,20 +1,27 @@
 package l;
 
-import java.io.File;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ܳ֫ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X4ZQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14210 {
+/* JADX INFO: renamed from: l.۬᩻ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 658Z */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14210 extends OutputStream {
+    public final String toString() {
+        return "ByteStreams.nullOutputStream()";
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final File f46597;
+    @Override // java.io.OutputStream
+    public final void write(int i) {
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C6750 f46598;
+    @Override // java.io.OutputStream
+    public final void write(byte[] bArr) {
+        bArr.getClass();
+    }
 
-    public C14210(C6750 c6750, File file) {
-        this.f46597 = file;
-        this.f46598 = c6750;
+    @Override // java.io.OutputStream
+    public final void write(byte[] bArr, int i, int i2) {
+        bArr.getClass();
+        C12128.m30303(i, i2 + i, bArr.length);
     }
 }

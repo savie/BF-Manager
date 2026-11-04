@@ -1,20 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: renamed from: l.ۖۗۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6VY */
 /* JADX INFO: loaded from: classes2.dex */
-public final enum C2382 extends EnumC8422 {
-    public /* synthetic */ C2382() {
-        this("CharacterReferenceInData", 1);
-    }
+public final /* synthetic */ class C2382 {
 
-    public C2382(String str, int i) {
-        super(str, i, 0);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f7664;
 
-    @Override // l.EnumC8422
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        EnumC8422.m22067(c8111, EnumC8422.f29249);
+    static {
+        int[] iArr = new int[EnumC9355.values().length];
+        f7664 = iArr;
+        try {
+            iArr[EnumC9355.GREEDY.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f7664[EnumC9355.LAZY.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f7664[EnumC9355.POSSESSIVE.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
     }
 }

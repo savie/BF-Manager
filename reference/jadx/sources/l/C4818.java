@@ -1,90 +1,110 @@
 package l;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۙᩳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9Q3 */
+/* JADX INFO: renamed from: l.ۙۢۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 94TD */
 /* JADX INFO: loaded from: classes3.dex */
-public class C4818 extends C2701 {
+public class C4818 extends AbstractC19734 {
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C4818 f16954 = new C4818(0);
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f16857;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final Map f16955;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final C5564 f16858;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final Map f16956;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final String f16859;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Map f16957;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public String f16860;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Map f16958;
+    @Override // l.AbstractC19734
+    /* JADX INFO: renamed from: ᩸ */
+    public double mo13837() {
+        return 0.0d;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C4818 m13398() {
-        return new C4818();
+    public final int hashCode() {
+        return this.f63511;
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public int mo14841() {
+        return this.f63511;
+    }
+
+    public C4818(C5564 c5564, int i, String str) {
+        super(i);
+        this.f16858 = c5564;
+        this.f16859 = str;
+    }
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String m14846() {
+        return this.f16860;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C3511 m13399(C2806 c2806, int i) {
-        return (C3511) this.f16957.get(new C9863(c2806, i));
+    public final void m14844(String str) {
+        this.f16860 = str;
     }
 
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final boolean m14848() {
+        return this.f16860 != null;
+    }
+
+    @Override // l.AbstractC19734, java.lang.Comparable
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m13400(C15424 c15424) {
-        C3511 c3511;
-        Map map;
-        Map map2;
-        if (c15424.m36895() == EnumC11274.IMMUTABLE || c15424.m36895() == EnumC11274.MUTABLE) {
-            if (c15424.mo36901().m44913() == EnumC19035.MESSAGE) {
-                if (c15424.mo36899() == null) {
-                    throw new IllegalStateException("Registered message-type extension had null default instance: " + c15424.mo36901().mo8523());
-                }
-                c3511 = new C3511(c15424.mo36901(), c15424.mo36899());
-            } else {
-                c3511 = new C3511(c15424.mo36901(), null);
-            }
-            EnumC11274 enumC11274M36895 = c15424.m36895();
-            C19741 c19741 = c3511.f12865;
-            if (!c19741.m44908()) {
-                throw new IllegalArgumentException("ExtensionRegistry.add() was given a FieldDescriptor for a regular (non-extension) field.");
-            }
-            int i = C2100.f7742[enumC11274M36895.ordinal()];
-            if (i == 1) {
-                map = this.f16956;
-                map2 = this.f16957;
-            } else {
-                if (i != 2) {
-                    return;
-                }
-                map = this.f16958;
-                map2 = this.f16955;
-            }
-            map.put(c19741.mo8523(), c3511);
-            map2.put(new C9863(c19741.m44910(), c19741.getNumber()), c3511);
-            if (c19741.m44910().m8525().m29472() && c19741.getType() == EnumC8452.f29310 && c19741.m44899() && c19741.m44902() == c19741.m44907()) {
-                map.put(c19741.m44907().mo8523(), c3511);
-            }
+    public final int compareTo(AbstractC19734 abstractC19734) {
+        int iCompareTo = super.compareTo(abstractC19734);
+        if (iCompareTo != 0 || !(abstractC19734 instanceof C4818)) {
+            return iCompareTo;
+        }
+        return this.f16859.compareTo(((C4818) abstractC19734).f16859);
+    }
+
+    public final boolean equals(Object obj) {
+        return (obj instanceof C4818) && compareTo((AbstractC19734) obj) == 0;
+    }
+
+    @Override // l.AbstractC19734
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo4982(C2161 c2161) throws IOException {
+        c2161.write(58);
+        c2161.write(this.f16859);
+        if (this.f16858.f19335) {
+            c2161.mo7441(this.f16857);
+        } else {
+            c2161.mo7441(mo14841());
+        }
+        if (this.f16860 == null) {
+            return true;
+        }
+        c2161.write("  #", 0, 3);
+        c2161.write(this.f16860);
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m14847(C2161 c2161) throws IOException {
+        c2161.write(58);
+        c2161.write(this.f16859);
+        if (this.f16858.f19335) {
+            c2161.mo7441(this.f16857);
+        } else {
+            c2161.mo7441(mo14841());
         }
     }
 
-    public C4818() {
-        this.f16956 = new HashMap();
-        this.f16958 = new HashMap();
-        this.f16957 = new HashMap();
-        this.f16955 = new HashMap();
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final String m14845() {
+        return this.f16859;
     }
 
-    public C4818(int i) {
-        super(C2701.f10402);
-        Map map = Collections.EMPTY_MAP;
-        this.f16956 = map;
-        this.f16958 = map;
-        this.f16957 = map;
-        this.f16955 = map;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m14843(int i) {
+        this.f16857 = i;
     }
 }

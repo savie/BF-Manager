@@ -10,37 +10,37 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ExecutionContext {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AWSRequestMetrics f183;
+    public final AWSRequestMetrics f173;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final List f184;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final List f174;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AWSCredentials f185;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public AWSCredentials f175;
 
     public ExecutionContext(CopyOnWriteArrayList copyOnWriteArrayList, boolean z) {
-        this.f184 = copyOnWriteArrayList;
-        this.f183 = z ? new AWSRequestMetricsFullSupport() : new AWSRequestMetrics();
+        this.f174 = copyOnWriteArrayList;
+        this.f173 = z ? new AWSRequestMetricsFullSupport() : new AWSRequestMetrics();
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final List m256() {
-        return this.f184;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final List m250() {
+        return this.f174;
     }
 
     @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AWSRequestMetrics m254() {
-        return this.f183;
+    public final AWSRequestMetrics m248() {
+        return this.f173;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AWSCredentials m257() {
-        return this.f185;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AWSCredentials m251() {
+        return this.f175;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m255(AWSCredentials aWSCredentials) {
-        this.f185 = aWSCredentials;
+    public final void m249(AWSCredentials aWSCredentials) {
+        this.f175 = aWSCredentials;
     }
 }

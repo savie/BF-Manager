@@ -1,43 +1,30 @@
 package l;
 
-import android.content.Context;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-import com.alipay.sdk.app.OpenAuthTask;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import android.text.Editable;
+import android.text.TextWatcher;
 
-/* JADX INFO: renamed from: l.ۘ֡ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 79M1 */
+/* JADX INFO: renamed from: l.ۗᩳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: NA5M */
 /* JADX INFO: loaded from: classes2.dex */
-public class C3590 implements InterfaceC3900 {
-    @Override // l.InterfaceC3900
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo10668(Context context) {
-        if (Build.VERSION.SDK_INT >= 24) {
-            final Context applicationContext = context.getApplicationContext();
-            C21936.m48753(new Runnable(this) { // from class: l.ۖ֡ܰ
-                @Override // java.lang.Runnable
-                public final void run() {
-                    Handler handler;
-                    if (Build.VERSION.SDK_INT >= 28) {
-                        handler = C0768.m3298(Looper.getMainLooper());
-                    } else {
-                        handler = new Handler(Looper.getMainLooper());
-                    }
-                    handler.postDelayed(new RunnableC19285(1, applicationContext), new Random().nextInt(Math.max(1000, 1)) + OpenAuthTask.Duplex);
-                }
-            });
-            return new C12764();
-        }
-        return new C12764();
+public final class C3590 implements TextWatcher {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1255 f12286;
+
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // l.InterfaceC3900
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List mo10669() {
-        return Collections.EMPTY_LIST;
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    }
+
+    public C3590(C1255 c1255) {
+        this.f12286 = c1255;
+    }
+
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        this.f12286.setEnabled(editable.toString().toLowerCase().startsWith("https://"));
     }
 }

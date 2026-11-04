@@ -4,11 +4,11 @@ package com.amazonaws.handlers;
 @Deprecated
 public interface RequestHandler {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    void m238();
+    void m232();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    void m239();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    void m233();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    void m240();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    void m234();
 }

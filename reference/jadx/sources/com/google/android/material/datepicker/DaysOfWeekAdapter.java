@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Locale;
-import l.C15089;
-import l.C17910;
+import l.C12388;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DaysOfWeekAdapter extends BaseAdapter {
@@ -59,11 +59,11 @@ public class DaysOfWeekAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         TextView textView = (TextView) view;
         if (view == null) {
-            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(C15089.f49275, viewGroup, false);
+            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(C12388.f39827, viewGroup, false);
         }
         this.calendar.set(7, positionToDayOfWeek(i));
         textView.setText(this.calendar.getDisplayName(7, CALENDAR_DAY_STYLE, textView.getResources().getConfiguration().locale));
-        textView.setContentDescription(String.format(viewGroup.getContext().getString(C17910.f56857), this.calendar.getDisplayName(7, 2, Locale.getDefault())));
+        textView.setContentDescription(String.format(viewGroup.getContext().getString(C24323.f78888), this.calendar.getDisplayName(7, 2, Locale.getDefault())));
         return textView;
     }
 

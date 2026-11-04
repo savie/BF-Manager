@@ -4,7 +4,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM2KeyExchangePrivateParameters implements CipherParameters {
     public final ECPrivateKeyParameters ephemeralPrivateKey;
     public final ECPoint ephemeralPublicPoint;

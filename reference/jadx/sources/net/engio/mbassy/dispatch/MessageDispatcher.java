@@ -5,7 +5,7 @@ import net.engio.mbassy.bus.MessagePublication;
 import net.engio.mbassy.subscription.AbstractSubscriptionContextAware;
 import net.engio.mbassy.subscription.SubscriptionContext;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageDispatcher extends AbstractSubscriptionContextAware implements IMessageDispatcher {
     public final IHandlerInvocation invocation;
 

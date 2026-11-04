@@ -1,46 +1,72 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ܿۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 56UC */
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
+
+/* JADX INFO: renamed from: l.۠֫ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 35B7 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8311 implements AutoCloseable {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C10428 f28836;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public C18894 f28837;
-
-    public C8311(C10428 c10428, C18894 c18894) {
-        this.f28836 = c10428;
-        this.f28837 = c18894;
+public final class C8311 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m22392(int i) {
+        int i2;
+        if (i < -1) {
+            return false;
+        }
+        return i == -1 || (i2 = i & 255) == 0 || i2 == 255 || (i & 65280) == 0;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13625 m21738() {
-        C18894 c18894 = this.f28837;
-        if (c18894 == null) {
-            throw new IllegalStateException("Page lease is closed");
+    public static String m22390(long j) {
+        if (j < ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS) {
+            return j + "B";
         }
-        return c18894.f61177;
+        if (j < 1048576) {
+            return m22391("K", j / 1024.0d);
+        }
+        if (j < 1073741824) {
+            return m22391("M", j / 1048576.0d);
+        }
+        if (j < 1099511627776L) {
+            return m22391("G", j / 1.073741824E9d);
+        }
+        return m22391("T", j / 1.099511627776E12d);
     }
 
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        C16072 c16072;
-        synchronized (this.f28836) {
-            C18894 c18894 = this.f28837;
-            c16072 = null;
-            if (c18894 != null) {
-                c18894.f61176--;
-                C16072 c16073 = c18894.f61174.f25159;
-                this.f28837 = null;
-                this.f28836.notifyAll();
-                c16072 = c16073;
-            }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m22393(long j) {
+        if (j < ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS) {
+            return j + " B";
         }
-        if (c16072 != null) {
-            c16072.m38088();
+        if (j < 1048576) {
+            return m22391(" KB", j / 1024.0d);
         }
+        if (j < 1073741824) {
+            return m22391(" MB", j / 1048576.0d);
+        }
+        if (j < 1099511627776L) {
+            return m22391(" GB", j / 1.073741824E9d);
+        }
+        return m22391(" TB", j / 1.099511627776E12d);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m22391(String str, double d) {
+        long jRound = Math.round(d * 100.0d);
+        boolean z = jRound < 0;
+        if (z) {
+            jRound = -jRound;
+        }
+        long j = jRound / 100;
+        long j2 = jRound % 100;
+        StringBuilder sb = new StringBuilder(str.length() + 7);
+        if (z) {
+            sb.append('-');
+        }
+        sb.append(j);
+        sb.append('.');
+        if (j2 < 10) {
+            sb.append('0');
+        }
+        return C2764.m9137(sb, j2, str);
     }
 }

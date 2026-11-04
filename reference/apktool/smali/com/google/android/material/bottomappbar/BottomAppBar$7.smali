@@ -8,7 +8,7 @@
 
 .field public final synthetic this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-.field public final synthetic val$actionMenuView:Ll/᩺ۜ;
+.field public final synthetic val$actionMenuView:Ll/ܽۧ;
 
 .field public final synthetic val$targetAttached:Z
 
@@ -16,13 +16,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZ)V
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZ)V
     .locals 0
 
     .line 1016
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Ll/᩺ۜ;
+    iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Ll/ܽۧ;
 
     iput p3, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$targetMode:I
 
@@ -83,13 +83,13 @@
     .line 1029
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Ll/᩺ۜ;
+    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Ll/ܽۧ;
 
     iget v2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$targetMode:I
 
     iget-boolean v3, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$targetAttached:Z
 
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->access$2200(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/᩺ۜ;IZZ)V
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->access$2200(Lcom/google/android/material/bottomappbar/BottomAppBar;Ll/ܽۧ;IZZ)V
 
     :cond_1
     return-void

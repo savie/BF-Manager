@@ -1,21 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۢ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: C176 */
+/* JADX INFO: renamed from: l.ۤܰ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3B3L */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C10923 extends AbstractC4674 {
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        return c21422.m47974("local") && c21422.m47977() && c21422.m47975() == 1;
+public final class C10923 implements InterfaceC12943 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7941 f34578;
+
+    public C10923(C7941 c7941) {
+        this.f34578 = c7941;
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        InterfaceC2557 interfaceC2557M47981 = c21422.m47981();
-        C11545 c11545M47965 = c21422.m47965();
-        c11545M47965.m28763(interfaceC2557M47981.getName());
-        c11545M47965.m28812(interfaceC2557M47981.getParent(), true);
+    @Override // l.InterfaceC12943
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15545(boolean z) {
+        C7941 c7941 = this.f34578;
+        boolean zM21640 = c7941.m21640(z);
+        if (c7941.m19932(zM21640)) {
+            c7941.m19928();
+        }
+        c7941.f23993.m29412(zM21640 || c7941.f26404);
+        c7941.m21515();
+    }
+
+    @Override // l.InterfaceC12943
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15546(boolean z, boolean z2) {
+        C7941 c7941 = this.f34578;
+        c7941.f23993.m29417(z);
+        c7941.f23993.m29392(z2);
     }
 }

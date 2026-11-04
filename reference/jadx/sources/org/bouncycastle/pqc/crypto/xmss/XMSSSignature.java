@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.crypto.xmss;
 
-import l.C8015;
+import l.C24579;
 import org.bouncycastle.util.Encodable;
 import org.bouncycastle.util.Pack;
 
@@ -81,7 +81,7 @@ public final class XMSSSignature extends XMSSReducedSignature implements XMSSSto
     @Override // org.bouncycastle.pqc.crypto.xmss.XMSSReducedSignature, org.bouncycastle.pqc.crypto.xmss.XMSSStoreableObjectInterface
     public byte[] toByteArray() {
         int treeDigestSize = getParams().getTreeDigestSize();
-        byte[] bArr = new byte[C8015.m21118(treeDigestSize, 4, getParams().getWOTSPlus().getParams().getLen() * treeDigestSize, getParams().getHeight() * treeDigestSize)];
+        byte[] bArr = new byte[C24579.m54897(treeDigestSize, 4, getParams().getWOTSPlus().getParams().getLen() * treeDigestSize, getParams().getHeight() * treeDigestSize)];
         Pack.intToBigEndian(this.index, bArr, 0);
         XMSSUtil.copyBytesAtOffset(bArr, this.random, 4);
         int i = 4 + treeDigestSize;

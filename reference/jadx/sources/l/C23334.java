@@ -1,91 +1,72 @@
 package l;
 
-import android.graphics.Bitmap;
-import android.media.MediaDescription;
-import android.net.Uri;
-import android.os.Bundle;
+import java.util.Locale;
 
-/* JADX INFO: renamed from: l.᩻, reason: contains not printable characters */
-/* JADX INFO: compiled from: J622 */
+/* JADX INFO: renamed from: l.᩹ۚۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G4EY */
 /* JADX INFO: loaded from: classes.dex */
 public final class C23334 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static MediaDescription.Builder m51416() {
-        return new MediaDescription.Builder();
-    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51423(MediaDescription.Builder builder, String str) {
-        builder.setMediaId(str);
-    }
+    public final int f75576;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m51426(MediaDescription.Builder builder, CharSequence charSequence) {
-        builder.setTitle(charSequence);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C16794 f75577;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m51428(MediaDescription.Builder builder, CharSequence charSequence) {
-        builder.setSubtitle(charSequence);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C16794 f75578;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51422(MediaDescription.Builder builder, CharSequence charSequence) {
-        builder.setDescription(charSequence);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C16794 f75575 = C16794.m39651(":");
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51419(MediaDescription.Builder builder, Bitmap bitmap) {
-        builder.setIconBitmap(bitmap);
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C16794 f75574 = C16794.m39651(":status");
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51420(MediaDescription.Builder builder, Uri uri) {
-        builder.setIconUri(uri);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m51421(MediaDescription.Builder builder, Bundle bundle) {
-        builder.setExtras(bundle);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static MediaDescription m51417(MediaDescription.Builder builder) {
-        return builder.build();
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final C16794 f75572 = C16794.m39651(":method");
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static String m51424(MediaDescription mediaDescription) {
-        return mediaDescription.getMediaId();
+    public static final C16794 f75571 = C16794.m39651(":path");
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final C16794 f75570 = C16794.m39651(":scheme");
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final C16794 f75573 = C16794.m39651(":authority");
+
+    public C23334(String str, String str2) {
+        this(C16794.m39651(str), C16794.m39651(str2));
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static CharSequence m51414(MediaDescription mediaDescription) {
-        return mediaDescription.getTitle();
+    public C23334(C16794 c16794, String str) {
+        this(c16794, C16794.m39651(str));
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static CharSequence m51429(MediaDescription mediaDescription) {
-        return mediaDescription.getSubtitle();
+    public C23334(C16794 c16794, C16794 c16795) {
+        this.f75578 = c16794;
+        this.f75577 = c16795;
+        this.f75576 = c16795.mo23081() + c16794.mo23081() + 32;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static CharSequence m51418(MediaDescription mediaDescription) {
-        return mediaDescription.getDescription();
+    public final boolean equals(Object obj) {
+        if (obj instanceof C23334) {
+            C23334 c23334 = (C23334) obj;
+            if (this.f75578.equals(c23334.f75578) && this.f75577.equals(c23334.f75577)) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static Bitmap m51425(MediaDescription mediaDescription) {
-        return mediaDescription.getIconBitmap();
+    public final int hashCode() {
+        return this.f75577.hashCode() + ((this.f75578.hashCode() + 527) * 31);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static Uri m51415(MediaDescription mediaDescription) {
-        return mediaDescription.getIconUri();
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Bundle m51427(MediaDescription mediaDescription) {
-        return mediaDescription.getExtras();
+    public final String toString() {
+        String strMo23092 = this.f75578.mo23092();
+        String strMo23093 = this.f75577.mo23092();
+        byte[] bArr = C19822.f63715;
+        Locale locale = Locale.US;
+        return C20196.m46451(strMo23092, ": ", strMo23093);
     }
 }

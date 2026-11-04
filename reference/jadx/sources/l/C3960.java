@@ -1,91 +1,78 @@
 package l;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ۘ۬ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C4LO */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C3960 extends AbstractC13613 {
+/* JADX INFO: renamed from: l.ۘۛۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87AO */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3960 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f14717;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final boolean f13526;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f13527;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f13528;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f13529;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final int f13530;
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final String f13531;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f13532;
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC3733 f14718;
+    public final C22474 f13535;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int[] f14719;
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final String f13538;
 
-    public C3960(AbstractC3733 abstractC3733, String str, int[] iArr) {
-        str.getClass();
-        this.f14718 = abstractC3733;
-        this.f14717 = str;
-        this.f14719 = iArr;
-    }
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int f13541;
 
-    @Override // l.InterfaceC12078
-    public final String getValue() {
-        return this.f14717;
-    }
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final int f13542;
 
-    @Override // l.InterfaceC12078
-    public final int[] getStyle() {
-        return this.f14719;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13540 = new ArrayList();
 
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ֡ۙ, reason: not valid java name and contains not printable characters */
-    public final C15606[] mo11444() {
-        int[] iArr = this.f14719;
-        if (iArr == null) {
-            return null;
-        }
-        int length = iArr.length / 3;
-        C15606[] c15606Arr = new C15606[length];
-        for (int i = 0; i < length; i++) {
-            int i2 = i * 3;
-            c15606Arr[i] = new C15606(this.f14718.m10939(iArr[i2]), iArr[i2 + 1], iArr[i2 + 2] + 1);
-        }
-        return c15606Arr;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f13537 = new HashMap();
 
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ۢۙ, reason: not valid java name and contains not printable characters */
-    public final C15606[] mo11446() {
-        int[] iArr = this.f14719;
-        if (iArr == null || iArr.length % 3 != 0) {
-            return null;
-        }
-        int length = iArr.length / 3;
-        C15606[] c15606Arr = new C15606[length];
-        for (int i = 0; i < length; i++) {
-            int i2 = i * 3;
-            try {
-                c15606Arr[i] = new C15606(this.f14718.mo15779(iArr[i2]).getValue(), iArr[i2 + 1], iArr[i2 + 2] + 1);
-            } catch (IndexOutOfBoundsException unused) {
-                return null;
-            }
-        }
-        return m33291(c15606Arr);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13539 = new ArrayList();
 
-    @Override // l.InterfaceC12078
-    /* JADX INFO: renamed from: ֫ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo11445() {
-        return this.f14719 != null;
-    }
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13536 = new ArrayList();
 
-    @Override // l.AbstractC13613
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C3960.class == obj.getClass()) {
-            C3960 c3960 = (C3960) obj;
-            if (this.f14717.equals(c3960.f14717) && Arrays.equals(this.f14719, c3960.f14719)) {
-                return true;
-            }
-        }
-        return false;
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13534 = new ArrayList();
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13533 = new ArrayList();
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13525 = new ArrayList();
+
+    public C3960(String str, String str2, int i, int i2, int i3, boolean z, int i4, String str3, String str4, C22474 c22474, int i5) {
+        this.f13531 = str;
+        this.f13538 = str2;
+        this.f13529 = i;
+        this.f13541 = i2;
+        this.f13528 = i3;
+        this.f13526 = z;
+        this.f13542 = i4;
+        this.f13527 = str3;
+        this.f13532 = str4;
+        this.f13535 = c22474;
+        this.f13530 = i5;
     }
 }

@@ -6,36 +6,36 @@ import java.util.concurrent.TimeUnit;
 public class TimingInfo {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Long f845;
+    public Long f835;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f846;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long f836;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo792(long j, String str) {
+    public void mo785(long j, String str) {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo793(String str) {
+    public void mo786(String str) {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo794(String str, TimingInfo timingInfo) {
+    public void mo787(String str, TimingInfo timingInfo) {
     }
 
     public TimingInfo(long j, Long l2) {
-        this.f846 = j;
-        this.f845 = l2;
+        this.f836 = j;
+        this.f835 = l2;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long m795() {
-        return this.f846;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long m788() {
+        return this.f836;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m796() {
-        Long l2 = this.f845;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m789() {
+        Long l2 = this.f835;
         if (l2 == null) {
             return -1L;
         }
@@ -45,20 +45,20 @@ public class TimingInfo {
     public final String toString() {
         Double dValueOf;
         if (m790()) {
-            dValueOf = Double.valueOf(TimeUnit.NANOSECONDS.toMicros(this.f845.longValue() - this.f846) / 1000.0d);
+            dValueOf = Double.valueOf(TimeUnit.NANOSECONDS.toMicros(this.f835.longValue() - this.f836) / 1000.0d);
         } else {
             dValueOf = null;
         }
         return String.valueOf(dValueOf == null ? -1.0d : dValueOf.doubleValue());
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
     public final boolean m790() {
-        return this.f845 != null;
+        return this.f835 != null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo791() {
-        this.f845 = Long.valueOf(System.nanoTime());
+    public void mo784() {
+        this.f835 = Long.valueOf(System.nanoTime());
     }
 }

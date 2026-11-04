@@ -34,7 +34,7 @@ public class d extends com.alipay.sdk.m.t.e {
         String strA = super.a(aVar, str, jSONObject);
         try {
             String strF = com.alipay.sdk.m.r.b.e().f();
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "localConfigVersion", strF);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "localConfigVersion", strF);
             JSONObject jSONObject2 = new JSONObject(strA);
             jSONObject2.put("h5_local", "true");
             jSONObject2.put("h5_local_version", strF);
@@ -43,7 +43,7 @@ public class d extends com.alipay.sdk.m.t.e {
             jSONObject2.put("cc", "y");
             return jSONObject2.toString();
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "buildBody", th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "buildBody", th);
             com.alipay.sdk.m.y.g.a(th);
             return strA;
         }

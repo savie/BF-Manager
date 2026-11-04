@@ -16,12 +16,12 @@
     .locals 1
 
     .line 40
-    sget v0, Ll/ۖ۟ܶ;->ܶܺ:I
+    sget v0, Ll/ۧ۬ܺ;->ܺܰ:I
 
     sput v0, Lcom/google/android/material/transition/platform/MaterialFadeThrough;->DEFAULT_THEMED_DURATION_ATTR:I
 
     .line 43
-    sget v0, Ll/ۖ۟ܶ;->ۧܺ:I
+    sget v0, Ll/ۧ۬ܺ;->֨ܰ:I
 
     sput v0, Lcom/google/android/material/transition/platform/MaterialFadeThrough;->DEFAULT_THEMED_EASING_ATTR:I
 

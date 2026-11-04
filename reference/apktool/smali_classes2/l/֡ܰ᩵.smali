@@ -1,231 +1,477 @@
 .class public final Ll/֡ܰ᩵;
 .super Ljava/lang/Object;
-.source "G4EL"
-
-# interfaces
-.implements Ll/ۤۖ᩵;
+.source "L9U1"
 
 
-# instance fields
-.field public ֡:I
+# static fields
+.field public static final ۙ:[B
 
-.field public final ۫:Ll/᩻ۨ᩵;
-
-.field public ܺ:B
-
-.field public ܽ:S
-
-.field public ܿ:I
-
-.field public ᩶:I
+.field public static final ᩷:[B
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ۨ᩵;)V
-    .locals 0
-
-    .line 359
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 360
-    iput-object p1, p0, Ll/֡ܰ᩵;->۫:Ll/᩻ۨ᩵;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ۜ()Ll/᩷ۖ᩵;
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 379
-    iget-object v0, p0, Ll/֡ܰ᩵;->۫:Ll/᩻ۨ᩵;
+    const/16 v0, 0x18
 
-    invoke-interface {v0}, Ll/ۤۖ᩵;->ۜ()Ll/᩷ۖ᩵;
+    new-array v0, v0, [B
 
-    move-result-object v0
+    .line 98
+    fill-array-data v0, :array_0
 
-    return-object v0
+    sput-object v0, Ll/֡ܰ᩵;->᩷:[B
+
+    const/16 v0, 0x44
+
+    new-array v0, v0, [B
+
+    .line 104
+    fill-array-data v0, :array_1
+
+    sput-object v0, Ll/֡ܰ᩵;->ۙ:[B
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 1
+        -0x1t
+        0x53t
+        0x4dt
+        0x42t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        -0x2t
+        0x53t
+        0x4dt
+        0x42t
+        0x40t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+    .end array-data
 .end method
 
-.method public final ܰ(Ll/ۛۨ᩵;J)J
-    .locals 7
+.method public static ۙ(I[B)I
+    .locals 1
 
-    .line 364
-    :goto_0
-    iget p2, p0, Ll/֡ܰ᩵;->᩶:I
+    .line 45
+    aget-byte v0, p1, p0
 
-    const-wide/16 v0, -0x1
+    and-int/lit16 v0, v0, 0xff
 
-    iget-object p3, p0, Ll/֡ܰ᩵;->۫:Ll/᩻ۨ᩵;
+    add-int/lit8 p0, p0, 0x1
 
-    if-nez p2, :cond_4
+    aget-byte p0, p1, p0
 
-    .line 365
-    iget-short p2, p0, Ll/֡ܰ᩵;->ܽ:S
+    and-int/lit16 p0, p0, 0xff
 
-    int-to-long v2, p2
+    shl-int/lit8 p0, p0, 0x8
 
-    invoke-interface {p3, v2, v3}, Ll/᩻ۨ᩵;->skip(J)V
+    add-int/2addr v0, p0
 
-    const/4 p2, 0x0
+    return v0
+.end method
 
-    .line 366
-    iput-short p2, p0, Ll/֡ܰ᩵;->ܽ:S
+.method public static ۙ(JI[B)V
+    .locals 1
 
-    .line 367
-    iget-byte v2, p0, Ll/֡ܰ᩵;->ܺ:B
+    long-to-int v0, p0
 
-    and-int/lit8 v2, v2, 0x4
+    int-to-byte v0, v0
 
-    if-eqz v2, :cond_0
+    .line 31
+    aput-byte v0, p3, p2
 
-    goto :goto_1
+    add-int/lit8 p2, p2, 0x1
 
-    .line 386
-    :cond_0
-    iget v0, p0, Ll/֡ܰ᩵;->ܿ:I
+    const/16 v0, 0x8
 
-    .line 388
-    invoke-static {p3}, Ll/ܽܰ᩵;->ۙ(Ll/᩻ۨ᩵;)I
+    shr-long/2addr p0, v0
 
-    move-result v1
+    long-to-int p1, p0
 
-    iput v1, p0, Ll/֡ܰ᩵;->᩶:I
+    int-to-byte p0, p1
 
-    iput v1, p0, Ll/֡ܰ᩵;->֡:I
+    .line 32
+    aput-byte p0, p3, p2
 
-    .line 389
-    invoke-interface {p3}, Ll/᩻ۨ᩵;->readByte()B
+    return-void
+.end method
 
-    move-result v1
+.method public static ۤ(I[B)J
+    .locals 4
+
+    .line 56
+    invoke-static {p0, p1}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    add-int/lit8 p0, p0, 0x4
+
+    invoke-static {p0, p1}, Ll/֡ܰ᩵;->᩷(I[B)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr p0, v2
+
+    add-long/2addr v0, p0
+
+    return-wide v0
+.end method
+
+.method public static ۤ(JI[B)V
+    .locals 3
+
+    long-to-int v0, p0
+
+    int-to-byte v0, v0
+
+    .line 61
+    aput-byte v0, p3, p2
+
+    add-int/lit8 v0, p2, 0x1
+
+    const/16 v1, 0x8
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 62
+    aput-byte v1, p3, v0
+
+    add-int/lit8 v0, p2, 0x2
+
+    const/16 v1, 0x10
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 63
+    aput-byte v1, p3, v0
+
+    add-int/lit8 v0, p2, 0x3
+
+    const/16 v1, 0x18
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 64
+    aput-byte v1, p3, v0
+
+    add-int/lit8 v0, p2, 0x4
+
+    const/16 v1, 0x20
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 65
+    aput-byte v1, p3, v0
+
+    add-int/lit8 v0, p2, 0x5
+
+    const/16 v1, 0x28
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 66
+    aput-byte v1, p3, v0
+
+    add-int/lit8 v0, p2, 0x6
+
+    const/16 v1, 0x30
+
+    shr-long v1, p0, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    .line 67
+    aput-byte v1, p3, v0
+
+    add-int/lit8 p2, p2, 0x7
+
+    const/16 v0, 0x38
+
+    shr-long/2addr p0, v0
+
+    long-to-int p1, p0
+
+    int-to-byte p0, p1
+
+    .line 68
+    aput-byte p0, p3, p2
+
+    return-void
+.end method
+
+.method public static ᩷(I[B)I
+    .locals 2
+
+    .line 50
+    aget-byte v0, p1, p0
+
+    and-int/lit16 v0, v0, 0xff
+
+    add-int/lit8 v1, p0, 0x1
+
+    aget-byte v1, p1, v1
 
     and-int/lit16 v1, v1, 0xff
 
-    int-to-byte v1, v1
+    shl-int/lit8 v1, v1, 0x8
 
-    .line 390
-    invoke-interface {p3}, Ll/᩻ۨ᩵;->readByte()B
+    add-int/2addr v0, v1
 
-    move-result v2
+    add-int/lit8 v1, p0, 0x2
 
-    and-int/lit16 v2, v2, 0xff
+    aget-byte v1, p1, v1
 
-    int-to-byte v2, v2
+    and-int/lit16 v1, v1, 0xff
 
-    iput-byte v2, p0, Ll/֡ܰ᩵;->ܺ:B
+    shl-int/lit8 v1, v1, 0x10
 
-    .line 391
-    sget-object v2, Ll/ܽܰ᩵;->ܽ:Ljava/util/logging/Logger;
+    add-int/2addr v0, v1
 
-    sget-object v3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+    add-int/lit8 p0, p0, 0x3
 
-    invoke-virtual {v2, v3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+    aget-byte p0, p1, p0
 
-    move-result v3
+    and-int/lit16 p0, p0, 0xff
 
-    const/4 v4, 0x1
+    shl-int/lit8 p0, p0, 0x18
 
-    if-eqz v3, :cond_1
+    add-int/2addr v0, p0
 
-    iget v3, p0, Ll/֡ܰ᩵;->ܿ:I
+    return v0
+.end method
 
-    iget v5, p0, Ll/֡ܰ᩵;->֡:I
+.method public static ᩷(JI[B)V
+    .locals 3
 
-    iget-byte v6, p0, Ll/֡ܰ᩵;->ܺ:B
+    long-to-int v0, p0
 
-    invoke-static {v4, v3, v5, v1, v6}, Ll/ۖܰ᩵;->ۙ(ZIIBB)Ljava/lang/String;
+    int-to-byte v0, v0
 
-    move-result-object v3
+    .line 37
+    aput-byte v0, p3, p2
 
-    invoke-virtual {v2, v3}, Ljava/util/logging/Logger;->fine(Ljava/lang/String;)V
+    add-int/lit8 v0, p2, 0x1
 
-    .line 392
-    :cond_1
-    invoke-interface {p3}, Ll/᩻ۨ᩵;->readInt()I
+    const/16 v1, 0x8
 
-    move-result p3
+    shr-long v1, p0, v1
 
-    const v2, 0x7fffffff
+    long-to-int v2, v1
 
-    and-int/2addr p3, v2
+    int-to-byte v1, v2
 
-    iput p3, p0, Ll/֡ܰ᩵;->ܿ:I
+    .line 38
+    aput-byte v1, p3, v0
 
-    const/16 v2, 0x9
+    add-int/lit8 v0, p2, 0x2
 
-    const/4 v3, 0x0
+    const/16 v1, 0x10
 
-    if-ne v1, v2, :cond_3
+    shr-long v1, p0, v1
 
-    if-ne p3, v0, :cond_2
+    long-to-int v2, v1
 
-    goto :goto_0
+    int-to-byte v1, v2
 
-    :cond_2
-    const-string p1, "TYPE_CONTINUATION streamId changed"
+    .line 39
+    aput-byte v1, p3, v0
 
-    new-array p2, p2, [Ljava/lang/Object;
+    add-int/lit8 p2, p2, 0x3
 
-    .line 394
-    invoke-static {p1, p2}, Ll/ۖܰ᩵;->ܰ(Ljava/lang/String;[Ljava/lang/Object;)V
+    const/16 v0, 0x18
 
-    throw v3
+    shr-long/2addr p0, v0
 
-    .line 393
-    :cond_3
-    invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    long-to-int p1, p0
 
-    move-result-object p1
+    int-to-byte p0, p1
 
-    new-array p3, v4, [Ljava/lang/Object;
+    .line 40
+    aput-byte p0, p3, p2
 
-    aput-object p1, p3, p2
+    return-void
+.end method
 
-    const-string p1, "%s != TYPE_CONTINUATION"
+.method public static ᩸(I[B)J
+    .locals 4
 
-    invoke-static {p1, p3}, Ll/ۖܰ᩵;->ܰ(Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 73
+    invoke-static {p0, p1}, Ll/֡ܰ᩵;->᩷(I[B)I
 
-    throw v3
+    move-result v0
 
-    :cond_4
-    int-to-long v2, p2
+    add-int/lit8 p0, p0, 0x4
 
-    const-wide/16 v4, 0x2000
+    .line 74
+    invoke-static {p0, p1}, Ll/֡ܰ᩵;->᩷(I[B)I
 
-    .line 372
-    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    move-result p0
 
-    move-result-wide v2
+    int-to-long p0, p0
 
-    invoke-interface {p3, p1, v2, v3}, Ll/ۤۖ᩵;->ܰ(Ll/ۛۨ᩵;J)J
+    const/16 v1, 0x20
 
-    move-result-wide p1
+    shl-long/2addr p0, v1
 
-    cmp-long p3, p1, v0
+    int-to-long v0, v0
 
-    if-nez p3, :cond_5
+    const-wide v2, 0xffffffffL
 
-    :goto_1
-    return-wide v0
+    and-long/2addr v0, v2
 
-    .line 374
-    :cond_5
-    iget p3, p0, Ll/֡ܰ᩵;->᩶:I
+    or-long/2addr p0, v0
 
-    int-to-long v0, p3
+    const-wide/16 v0, 0x2710
 
-    sub-long/2addr v0, p1
+    .line 76
+    div-long/2addr p0, v0
 
-    long-to-int p3, v0
+    const-wide v0, 0xa9730b66800L
 
-    iput p3, p0, Ll/֡ܰ᩵;->᩶:I
+    sub-long/2addr p0, v0
 
-    return-wide p1
+    return-wide p0
+.end method
+
+.method public static ᩸(JI[B)V
+    .locals 3
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p0, v0
+
+    if-eqz v2, :cond_0
+
+    const-wide v0, 0xa9730b66800L
+
+    add-long/2addr p0, v0
+
+    const-wide/16 v0, 0x2710
+
+    mul-long p0, p0, v0
+
+    .line 85
+    :cond_0
+    invoke-static {p0, p1, p2, p3}, Ll/֡ܰ᩵;->ۤ(JI[B)V
+
+    return-void
 .end method

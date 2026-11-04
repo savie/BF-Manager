@@ -1,86 +1,64 @@
 package l;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import bin.mt.plus.R;
-import com.google.android.material.motion.MotionUtils;
-import java.nio.ByteBuffer;
-import net.sf.sevenzipjbinding.ISequentialOutStream;
-import net.sf.sevenzipjbinding.SevenZipException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-/* JADX INFO: renamed from: l.۬ܺۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G1PO */
+/* JADX INFO: renamed from: l.۫ܺۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P1EM */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13217 implements InterfaceC21921, InterfaceC1692, ISequentialOutStream, InterfaceC18848, InterfaceC1118, InterfaceC3485, InterfaceC0380 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f43974;
-
-    public /* synthetic */ C13217(Object obj) {
-        this.f43974 = obj;
-    }
-
-    @Override // l.InterfaceC1692
-    public /* synthetic */ void onCanceled() {
-    }
-
-    @Override // l.InterfaceC1118
-    /* JADX INFO: renamed from: ۙ */
-    public String mo4141(C12257 c12257) {
-        return (String) this.f43974;
-    }
-
-    @Override // l.InterfaceC21921
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1855(int i) {
-        ((C18861) this.f43974).mo21455(i);
-    }
-
-    @Override // l.InterfaceC0380
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1825(Object obj) {
-        C23421.m51571((C23421) this.f43974, (Object[]) obj);
-    }
-
-    @Override // l.InterfaceC1692
-    /* JADX INFO: renamed from: ۙ */
-    public void mo3908(String str) {
-        ActivityC20293.m45789((ActivityC20293) this.f43974, str);
-    }
-
-    @Override // net.sf.sevenzipjbinding.ISequentialOutStream
-    public int write(ByteBuffer byteBuffer) throws SevenZipException {
-        if (((InterfaceC9868) this.f43974).mo2357()) {
-            throw new SevenZipException("Canceled");
-        }
-        return byteBuffer.remaining();
-    }
-
-    @Override // l.InterfaceC3485
-    /* JADX INFO: renamed from: ۙ */
-    public CharSequence mo4815(C4751 c4751) {
-        String string;
-        Context context = (Context) this.f43974;
-        String string2 = ApplicationC0716.f2992.getString("ais", "");
-        if (string2.isEmpty()) {
-            return context.getString(R.string.MT_Protector);
-        }
-        if (string2.equals("com.android.vending")) {
-            string = context.getString(R.string.MT_Protector);
-        } else {
-            PackageManager packageManager = context.getPackageManager();
-            try {
-                string = packageManager.getApplicationInfo(string2, 0).loadLabel(packageManager).toString();
-            } catch (PackageManager.NameNotFoundException unused) {
-                return string2;
+public final class C13217 extends C3369 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m32751(C11967 c11967, String str, String str2, int i, int i2, boolean z, boolean z2, boolean z3, boolean z4, final InterfaceC23507 interfaceC23507, Set set) {
+        final C15454 c15454 = new C15454(c11967, i2 != 0);
+        final C22914 c22914 = new C22914(i2, str, z3, z2, c15454, i, z4, c11967, str2, z, set);
+        final ArrayList arrayList = new ArrayList();
+        new Thread(new Runnable() { // from class: l.ܿ᩻ۧ
+            @Override // java.lang.Runnable
+            public final void run() {
+                final C15454 c15455 = c15454;
+                final InterfaceC23507 interfaceC23508 = interfaceC23507;
+                try {
+                    c15455.f50312 = c15455.f50313 ? c15455.f50311.m29999() : Collections.EMPTY_MAP;
+                    final InterfaceC16047 interfaceC16047 = c22914;
+                    C22914 c22915 = (C22914) interfaceC16047;
+                    InterfaceC11572 interfaceC11572Mo7395 = c22915.mo7395();
+                    if (interfaceC11572Mo7395 == null) {
+                        C21576.m49068(new RunnableC20701(3, interfaceC23508));
+                        return;
+                    }
+                    ConcurrentLinkedQueue concurrentLinkedQueue = new ConcurrentLinkedQueue();
+                    c22915.mo7396(concurrentLinkedQueue);
+                    interfaceC23508.mo19230(0);
+                    C3374 c3374 = new C3374(concurrentLinkedQueue.size());
+                    c3374.m11078(new C15953(interfaceC23508));
+                    C24720 c24720M55195 = C24720.m55195();
+                    final ArrayList arrayList2 = arrayList;
+                    C3369.m11069(C11138.f35105, new RunnableC19930(concurrentLinkedQueue, interfaceC23508, c3374, interfaceC11572Mo7395, arrayList2, c24720M55195));
+                    C21576.m49068(new Runnable() { // from class: l.ۖ᩻ۧ
+                        @Override // java.lang.Runnable
+                        public final void run() {
+                            InterfaceC23507 interfaceC23509 = interfaceC23508;
+                            if (interfaceC23509.mo19226()) {
+                                C22673.m51157();
+                            }
+                            interfaceC23509.mo19225(((C22914) interfaceC16047).mo7394(arrayList2));
+                            interfaceC23509.mo19229();
+                        }
+                    });
+                } catch (Exception e) {
+                    C21576.m49068(new Runnable() { // from class: l.ۡ᩻ۧ
+                        @Override // java.lang.Runnable
+                        public final void run() {
+                            Exception exc = e;
+                            InterfaceC23507 interfaceC23509 = interfaceC23508;
+                            c15455.m37008(interfaceC23509.mo19227(), exc);
+                            interfaceC23509.mo19229();
+                        }
+                    });
+                }
             }
-        }
-        return string + " (" + string2 + MotionUtils.EASING_TYPE_FORMAT_END;
-    }
-
-    @Override // l.InterfaceC18848
-    /* JADX INFO: renamed from: ܰ */
-    public void mo4355(AbstractC20745 abstractC20745) {
-        new DialogInterfaceOnClickListenerC8128((C11545) this.f43974, abstractC20745.mo33986());
+        }).start();
     }
 }

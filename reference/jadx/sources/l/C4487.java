@@ -1,283 +1,200 @@
 package l;
 
-import java.util.Collections;
-import java.util.List;
+import android.os.Build;
+import java.lang.reflect.Array;
 
-/* JADX INFO: renamed from: l.ۙۜ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4487 extends AbstractC6229 {
-    public static final long serialVersionUID = 0;
+/* JADX INFO: renamed from: l.ۘ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P7HY */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4487 {
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f15959;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final boolean[][] f16041 = (boolean[][]) Array.newInstance((Class<?>) Boolean.TYPE, 15, 15);
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public static final C4487 f15960;
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f15961;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public byte f15962;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public List f15963;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f15964;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public boolean f15965;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C23539 f15966;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f15967;
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        C17518 c17518 = new C17518(this);
-        if ((this.f15961 & 1) != 0) {
-            abstractC22044.mo14240(2, this.f15967);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m14198(CharSequence charSequence, int i, int i2, InterfaceC24625 interfaceC24625) {
+        C17359.checkFromToIndex(i, i2, charSequence.length());
+        int iCodePointAt = Character.codePointAt(charSequence, i);
+        int iCharCount = Character.charCount(iCodePointAt) + i;
+        int iM14197 = m14197(iCodePointAt);
+        int i3 = iM14197 == 6 ? 1 : 0;
+        boolean z = iM14197 == 14;
+        while (iCharCount < i2) {
+            int iCodePointAt2 = Character.codePointAt(charSequence, iCharCount);
+            int iM14198 = m14197(iCodePointAt2);
+            if (interfaceC24625 != null && ((C23879) interfaceC24625).m53350()) {
+                return -2;
+            }
+            if ((!z || iM14197 != 5 || iM14198 != 14) && ((i3 % 2 != 1 || iM14197 != 6 || iM14198 != 6) && f16041[iM14197][iM14198])) {
+                if (iCharCount > i) {
+                    break;
+                }
+                i3 = 0;
+                z = iM14198 == 14;
+            }
+            i3 += iM14198 == 6 ? 1 : 0;
+            iCharCount += Character.charCount(iCodePointAt2);
+            iM14197 = iM14198;
         }
-        if ((this.f15961 & 2) != 0) {
-            abstractC22044.mo14240(3, this.f15964);
+        if (interfaceC24625 == null || !(((C23879) interfaceC24625).m53350() || Thread.currentThread().isInterrupted())) {
+            return iCharCount;
         }
-        if ((this.f15961 & 4) != 0) {
-            abstractC22044.mo14240(6, this.f15965);
-        }
-        if ((this.f15961 & 8) != 0) {
-            abstractC22044.mo14254(7, m12525());
-        }
-        for (int i = 0; i < this.f15963.size(); i++) {
-            abstractC22044.mo14254(EnumC12167.f40728, (InterfaceC23206) this.f15963.get(i));
-        }
-        c17518.m40779(536870912, abstractC22044);
-        getUnknownFields().writeTo(abstractC22044);
+        return -2;
     }
 
     static {
-        C3844.m11171(EnumC13018.PUBLIC, C4487.class.getName());
-        f15960 = new C4487();
-        f15959 = new C9345();
-    }
-
-    public C4487(C2993 c2993) {
-        super(c2993);
-        this.f15967 = false;
-        this.f15964 = false;
-        this.f15965 = false;
-        this.f15962 = (byte) -1;
-    }
-
-    public C4487() {
-        this.f15967 = false;
-        this.f15964 = false;
-        this.f15965 = false;
-        this.f15962 = (byte) -1;
-        this.f15963 = Collections.EMPTY_LIST;
-    }
-
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46310;
-        c6956.m18696(C4487.class, C2993.class);
-        return c6956;
-    }
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public final boolean m12526() {
-        return (this.f15961 & 1) != 0;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m12529() {
-        return this.f15967;
-    }
-
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final boolean m12522() {
-        return (this.f15961 & 2) != 0;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final boolean m12524() {
-        return this.f15964;
-    }
-
-    @Deprecated
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final boolean m12527() {
-        return (this.f15961 & 4) != 0;
-    }
-
-    @Deprecated
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final boolean m12528() {
-        return this.f15965;
-    }
-
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public final boolean m12523() {
-        return (this.f15961 & 8) != 0;
-    }
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public final C23539 m12525() {
-        C23539 c23539 = this.f15966;
-        return c23539 == null ? C23539.getDefaultInstance() : c23539;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f15962;
-        if (b == 1) {
-            return true;
+        for (int i = 0; i <= 14; i++) {
+            for (int i2 = 0; i2 <= 14; i2++) {
+                f16041[i][i2] = true;
+            }
         }
-        if (b == 0) {
-            return false;
+        boolean[][] zArr = f16041;
+        boolean[] zArr2 = zArr[9];
+        zArr2[9] = false;
+        zArr2[10] = false;
+        zArr2[12] = false;
+        zArr2[13] = false;
+        boolean[] zArr3 = zArr[12];
+        zArr3[10] = false;
+        zArr3[11] = false;
+        boolean[] zArr4 = zArr[10];
+        zArr4[10] = false;
+        zArr4[11] = false;
+        zArr[13][11] = false;
+        zArr[11][11] = false;
+        for (int i3 = 0; i3 <= 14; i3++) {
+            boolean[][] zArr5 = f16041;
+            boolean[] zArr6 = zArr5[i3];
+            zArr6[4] = false;
+            zArr6[5] = false;
+            zArr6[8] = false;
+            zArr5[7][i3] = false;
         }
-        if (!m12523() || m12525().isInitialized()) {
-            for (int i = 0; i < this.f15963.size(); i++) {
-                if (!((C4923) this.f15963.get(i)).isInitialized()) {
-                    this.f15962 = (byte) 0;
-                    return false;
+        for (int i4 = 0; i4 <= 14; i4++) {
+            for (int i5 = 1; i5 <= 3; i5++) {
+                boolean[][] zArr7 = f16041;
+                zArr7[i4][i5] = true;
+                zArr7[i5][i4] = true;
+            }
+        }
+        boolean[][] zArr8 = f16041;
+        zArr8[1][2] = false;
+        boolean[] zArr9 = zArr8[14];
+        zArr9[4] = false;
+        zArr9[5] = false;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:118:0x00f7 A[FALL_THROUGH, RETURN] */
+    /* JADX WARN: Code duplicated, block: B:153:0x0138 A[RETURN] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m14197(int i) {
+        if (i < 127) {
+            if (i >= 32) {
+                return 0;
+            }
+            if (i == 13) {
+                return 1;
+            }
+            return i == 10 ? 2 : 3;
+        }
+        if (Build.VERSION.SDK_INT >= 36) {
+            if (Character.isExtendedPictographic(i)) {
+                return 14;
+            }
+        } else if (C18723.m43537(i)) {
+            return 14;
+        }
+        int iM42976 = C18446.m42976(i);
+        if (iM42976 != 0) {
+            if (iM42976 != 19) {
+                if (iM42976 != 27) {
+                    if (iM42976 == 28) {
+                        return (i < 127462 || i > 127487) ? 0 : 6;
+                    }
+                    switch (iM42976) {
+                        case 4:
+                            break;
+                        case 5:
+                            if (i == 3635 || i == 3763) {
+                                return 8;
+                            }
+                            if (i >= 4352 && i <= 4607) {
+                                if (i <= 4447) {
+                                    return 9;
+                                }
+                                return i <= 4519 ? 10 : 11;
+                            }
+                            int i2 = i - 44032;
+                            if (i2 >= 0 && i2 < 11172) {
+                                return i2 % 28 == 0 ? 12 : 13;
+                            }
+                            if (i >= 43360 && i <= 43388) {
+                                return 9;
+                            }
+                            if (i >= 55216 && i <= 55238) {
+                                return 10;
+                            }
+                            if (i >= 55243 && i <= 55291) {
+                                return 11;
+                            }
+                            switch (i) {
+                                default:
+                                    switch (i) {
+                                        default:
+                                            switch (i) {
+                                                case 72324:
+                                                case 72325:
+                                                case 72326:
+                                                case 72327:
+                                                case 72328:
+                                                case 72329:
+                                                    break;
+                                                default:
+                                                    return 0;
+                                            }
+                                        case 70082:
+                                        case 70083:
+                                            return 7;
+                                    }
+                                case 3406:
+                                case 71999:
+                                case 72001:
+                                case 72250:
+                                case 73030:
+                                case 73474:
+                                    return 7;
+                            }
+                            break;
+                        case 6:
+                        case 7:
+                            return 4;
+                        case 8:
+                            return (i == 4139 || i == 4140 || i == 4152 || (i >= 4194 && i <= 4196) || ((i >= 4199 && i <= 4205) || i == 4227 || ((i >= 4231 && i <= 4236) || i == 4239 || ((i >= 4250 && i <= 4252) || i == 6753 || i == 6755 || i == 6756 || i == 43643 || i == 43645)))) ? 0 : 8;
+                        default:
+                            switch (iM42976) {
+                                case 13:
+                                case 14:
+                                case 15:
+                                    break;
+                                case 16:
+                                    if (i == 8204 || (i >= 917536 && i <= 917631)) {
+                                        return 4;
+                                    }
+                                    if (i == 8205) {
+                                        return 5;
+                                    }
+                                    return ((i >= 1536 && i <= 1541) || i == 1757 || i == 1807 || i == 2192 || i == 2193 || i == 2274 || i == 69821 || i == 69837) ? 7 : 3;
+                                default:
+                                    return 0;
+                            }
+                            break;
+                    }
                 }
+                return (i == 65438 || i == 65439 || (i >= 127995 && i <= 127999)) ? 4 : 0;
             }
-            if (!m17285()) {
-                this.f15962 = (byte) 0;
-                return false;
-            }
-            this.f15962 = (byte) 1;
-            return true;
+        } else if (i == 888) {
+            return 0;
         }
-        this.f15962 = (byte) 0;
-        return false;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM48961 = (this.f15961 & 1) != 0 ? AbstractC22044.m48961(2) : 0;
-        if ((2 & this.f15961) != 0) {
-            iM48961 += AbstractC22044.m48961(3);
-        }
-        if ((this.f15961 & 4) != 0) {
-            iM48961 += AbstractC22044.m48961(6);
-        }
-        if ((this.f15961 & 8) != 0) {
-            iM48961 += AbstractC22044.m48963(7, m12525());
-        }
-        for (int i2 = 0; i2 < this.f15963.size(); i2++) {
-            iM48961 += AbstractC22044.m48963(EnumC12167.f40728, (InterfaceC23206) this.f15963.get(i2));
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM48961 + m17282();
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof C4487)) {
-            return super.equals(obj);
-        }
-        C4487 c4487 = (C4487) obj;
-        if (m12526() != c4487.m12526()) {
-            return false;
-        }
-        if ((m12526() && this.f15967 != c4487.f15967) || m12522() != c4487.m12522()) {
-            return false;
-        }
-        if ((m12522() && this.f15964 != c4487.f15964) || m12527() != c4487.m12527()) {
-            return false;
-        }
-        if ((!m12527() || this.f15965 == c4487.f15965) && m12523() == c4487.m12523()) {
-            return (!m12523() || m12525().equals(c4487.m12525())) && this.f15963.equals(c4487.f15963) && getUnknownFields().equals(c4487.getUnknownFields()) && m17283().equals(c4487.m17283());
-        }
-        return false;
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
-        }
-        int iHashCode = C14097.f46320.hashCode() + 779;
-        if (m12526()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + C9779.m24888(this.f15967);
-        }
-        if (m12522()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + C9779.m24888(this.f15964);
-        }
-        if (m12527()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 6, 53) + C9779.m24888(this.f15965);
-        }
-        if (m12523()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 7, 53) + m12525().hashCode();
-        }
-        if (this.f15963.size() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, EnumC12167.f40728, 53) + this.f15963.hashCode();
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (AbstractC23019.m50911(iHashCode, m17283()) * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C2993 newBuilder() {
-        return f15960.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f15960.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f15960.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C2993 toBuilder() {
-        int i = 0;
-        if (this == f15960) {
-            return new C2993(i);
-        }
-        C2993 c2993 = new C2993(i);
-        c2993.m8957(this);
-        return c2993;
-    }
-
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C2993(interfaceC6790, 0);
-    }
-
-    public static C4487 getDefaultInstance() {
-        return f15960;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f15959;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f15960;
-    }
-
-    @Override // l.AbstractC6229, l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f15960;
+        return 3;
     }
 }

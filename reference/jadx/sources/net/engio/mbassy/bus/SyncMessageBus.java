@@ -44,7 +44,6 @@ public class SyncMessageBus extends AbstractPubSubSupport implements PubSubSuppo
         return new SyncPostCommand(obj);
     }
 
-    /* JADX INFO: loaded from: classes.dex */
     public class SyncPostCommand implements IPublicationCommand {
         public Object message;
 

@@ -4,12 +4,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import l.C18616;
-import l.C2387;
+import l.C11642;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class CircularProgressIndicator extends BaseProgressIndicator {
-    public static final int DEF_STYLE_RES = C18616.f59613;
+    public static final int DEF_STYLE_RES = C4185.f15255;
     public static final int INDICATOR_DIRECTION_CLOCKWISE = 0;
     public static final int INDICATOR_DIRECTION_COUNTERCLOCKWISE = 1;
 
@@ -22,7 +22,7 @@ public class CircularProgressIndicator extends BaseProgressIndicator {
     }
 
     public CircularProgressIndicator(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9216);
+        this(context, attributeSet, C11642.f36533);
     }
 
     public CircularProgressIndicator(Context context, AttributeSet attributeSet, int i) {

@@ -1,38 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ֡֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 81ZE */
+import java.util.function.IntPredicate;
+
+/* JADX INFO: renamed from: l.ܳ᩵᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: UAPK */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15575 {
-
+public final /* synthetic */ class C15575 {
+    @Deprecated
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 f50638;
+    public static boolean m37298(InterfaceC13338 interfaceC13338, int i) {
+        return interfaceC13338.mo28051(C8485.m22804(i));
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C22918 f50639;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f50640;
-
-    public C15575(AbstractC20745 abstractC20745) {
-        this.f50638 = abstractC20745;
+    @Deprecated
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m37299(InterfaceC13338 interfaceC13338, Character ch) {
+        return interfaceC13338.mo28051(ch.charValue());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 m37218() {
-        return this.f50640;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22918 m37220() {
-        return this.f50639;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m37219(AbstractC20745 abstractC20745, Runnable runnable, AutoCloseable... autoCloseableArr) {
-        for (AutoCloseable autoCloseable : autoCloseableArr) {
-            C19431.m44468(autoCloseable);
+    public static InterfaceC13338 m37297(InterfaceC13338 interfaceC13338, IntPredicate intPredicate) {
+        InterfaceC13338 c22289;
+        if (intPredicate instanceof InterfaceC13338) {
+            c22289 = (InterfaceC13338) intPredicate;
+        } else {
+            C17359.requireNonNull(intPredicate);
+            c22289 = new C22289(intPredicate);
         }
-        this.f50640.m46702(abstractC20745, C0674.f2826, true, runnable);
+        return interfaceC13338.mo28050(c22289);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InterfaceC13338 m37300(InterfaceC13338 interfaceC13338, IntPredicate intPredicate) {
+        InterfaceC13338 c22289;
+        if (intPredicate instanceof InterfaceC13338) {
+            c22289 = (InterfaceC13338) intPredicate;
+        } else {
+            C17359.requireNonNull(intPredicate);
+            c22289 = new C22289(intPredicate);
+        }
+        return interfaceC13338.mo28052(c22289);
     }
 }

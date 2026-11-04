@@ -1,65 +1,97 @@
-.class public final synthetic Ll/᩺۬᩹;
+.class public interface abstract Ll/᩺۬᩹;
 .super Ljava/lang/Object;
-.source "C76R"
+.source "N673"
 
 # interfaces
-.implements Ll/ۗۧ;
-
-
-# instance fields
-.field public final synthetic ܺ:Z
-
-.field public final synthetic ᩶:Ljava/lang/String;
-
-
-# direct methods
-.method public synthetic constructor <init>(ZLjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Ll/᩺۬᩹;->ܺ:Z
-
-    iput-object p2, p0, Ll/᩺۬᩹;->᩶:Ljava/lang/String;
-
-    return-void
-.end method
+.implements Ljava/lang/Comparable;
+.implements Ljava/lang/Iterable;
+.implements Ll/᩷ۤۗ;
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/String;)Z
-    .locals 2
+.method public abstract compareTo(Ll/᩺۬᩹;)I
+.end method
 
-    .line 407
-    iget-boolean v0, p0, Ll/᩺۬᩹;->ܺ:Z
+.method public abstract endsWith(Ljava/lang/String;)Z
+.end method
 
-    iget-object v1, p0, Ll/᩺۬᩹;->᩶:Ljava/lang/String;
+.method public abstract endsWith(Ll/᩺۬᩹;)Z
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract equals(Ljava/lang/Object;)Z
+.end method
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+.method public abstract getFileName()Ll/᩺۬᩹;
+.end method
 
-    move-result p1
+.method public abstract getFileSystem()Ll/᩻۬᩹;
+.end method
 
-    if-nez p1, :cond_1
+.method public abstract getName(I)Ll/᩺۬᩹;
+.end method
 
-    goto :goto_0
+.method public abstract getNameCount()I
+.end method
 
-    :cond_0
-    invoke-static {p1, v1}, Ll/ۜܶ᩵;->ۙ(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.method public abstract getParent()Ll/᩺۬᩹;
+.end method
 
-    move-result p1
+.method public abstract getRoot()Ll/᩺۬᩹;
+.end method
 
-    if-nez p1, :cond_1
+.method public abstract hashCode()I
+.end method
 
-    :goto_0
-    const/4 p1, 0x1
+.method public abstract isAbsolute()Z
+.end method
 
-    return p1
+.method public abstract iterator()Ljava/util/Iterator;
+.end method
 
-    :cond_1
-    const/4 p1, 0x0
+.method public abstract normalize()Ll/᩺۬᩹;
+.end method
 
-    return p1
+.method public varargs abstract register(Ll/֨۬᩹;[Ll/۟۬᩹;)Ll/ۢ۬᩹;
+.end method
+
+.method public varargs abstract register(Ll/֨۬᩹;[Ll/۟۬᩹;[Ll/ᩳ۬᩹;)Ll/ۢ۬᩹;
+.end method
+
+.method public abstract relativize(Ll/᩺۬᩹;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract resolve(Ljava/lang/String;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract resolve(Ll/᩺۬᩹;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract resolveSibling(Ljava/lang/String;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract resolveSibling(Ll/᩺۬᩹;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract startsWith(Ljava/lang/String;)Z
+.end method
+
+.method public abstract startsWith(Ll/᩺۬᩹;)Z
+.end method
+
+.method public abstract subpath(II)Ll/᩺۬᩹;
+.end method
+
+.method public abstract toAbsolutePath()Ll/᩺۬᩹;
+.end method
+
+.method public abstract toFile()Ljava/io/File;
+.end method
+
+.method public varargs abstract toRealPath([Ll/᩵۬᩹;)Ll/᩺۬᩹;
+.end method
+
+.method public abstract toString()Ljava/lang/String;
+.end method
+
+.method public abstract toUri()Ljava/net/URI;
 .end method

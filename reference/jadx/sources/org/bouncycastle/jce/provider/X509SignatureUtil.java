@@ -6,8 +6,8 @@ import java.security.GeneralSecurityException;
 import java.security.Signature;
 import java.security.SignatureException;
 import java.security.spec.PSSParameterSpec;
-import l.C22697;
-import l.C9013;
+import l.C11958;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -24,7 +24,7 @@ import org.bouncycastle.asn1.x509.Extensions;
 import org.bouncycastle.asn1.x9.X9ObjectIdentifiers;
 import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509SignatureUtil {
     public static String getDigestAlgName(ASN1ObjectIdentifier aSN1ObjectIdentifier) {
         if (PKCSObjectIdentifiers.md5.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
@@ -79,7 +79,7 @@ public class X509SignatureUtil {
                 digestAlgName = getDigestAlgName(algorithmIdentifier2.getAlgorithm());
                 str = "withECDSA";
             }
-            return C22697.m50267(sb, digestAlgName, str);
+            return C8947.m23910(sb, digestAlgName, str);
         }
         return algorithm.getId();
     }
@@ -100,7 +100,7 @@ public class X509SignatureUtil {
                 }
             }
         } catch (IOException e2) {
-            throw new SignatureException(C9013.m23329(e2, new StringBuilder("IOException decoding parameters: ")));
+            throw new SignatureException(C11958.m29932(e2, new StringBuilder("IOException decoding parameters: ")));
         }
     }
 

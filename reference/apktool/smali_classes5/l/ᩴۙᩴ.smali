@@ -1,119 +1,115 @@
 .class public final Ll/ᩴۙᩴ;
-.super Ll/᩸ۙᩴ;
-.source "97L"
+.super Landroid/os/ResultReceiver;
+.source "C2CV"
 
-# interfaces
-.implements Ll/۟ۡᩴ;
+
+# static fields
+.field public static ᩶:I
 
 
 # instance fields
-.field public final synthetic ۛ:Ll/۠ۙᩴ;
+.field public volatile ܰ:I
 
 
 # direct methods
-.method public constructor <init>(Ll/۠ۙᩴ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 1192
-    iput-object p1, p0, Ll/ᩴۙᩴ;->ۛ:Ll/۠ۙᩴ;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1}, Ll/᩸ۙᩴ;-><init>(Ll/۠ۙᩴ;)V
+    .line 12
+    invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    return-void
-.end method
+    const/4 v0, -0x1
 
-.method public constructor <init>(Ll/۠ۙᩴ;IIZ)V
-    .locals 0
-
-    .line 1195
-    iput-object p1, p0, Ll/ᩴۙᩴ;->ۛ:Ll/۠ۙᩴ;
-
-    .line 1196
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/᩸ۙᩴ;-><init>(Ll/۠ۙᩴ;IIZ)V
+    .line 9
+    iput v0, p0, Ll/ᩴۙᩴ;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final characteristics()I
-    .locals 1
-
-    .line 1201
-    iget-boolean v0, p0, Ll/᩸ۙᩴ;->᩶:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x40
-
-    return v0
-.end method
-
-.method public synthetic getComparator()Ljava/util/Comparator;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getComparator(Ll/᩷ۛᩴ;)Ljava/util/Comparator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic getExactSizeIfKnown()J
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getExactSizeIfKnown(Ll/᩷ۛᩴ;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public synthetic hasCharacteristics(I)Z
+.method public final onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۛᩴ;->$default$hasCharacteristics(Ll/᩷ۛᩴ;I)Z
+    .line 21
+    iput p1, p0, Ll/ᩴۙᩴ;->ܰ:I
 
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final ۙ(IIZ)Ll/᩸ۙᩴ;
-    .locals 2
+.method public final ۙ()I
+    .locals 5
 
-    .line 1211
-    new-instance v0, Ll/ᩴۙᩴ;
+    .line 25
+    sget v0, Ll/ᩴۙᩴ;->᩶:I
 
-    iget-object v1, p0, Ll/ᩴۙᩴ;->ۛ:Ll/۠ۙᩴ;
+    const/16 v1, 0xa
 
-    invoke-direct {v0, v1, p1, p2, p3}, Ll/ᩴۙᩴ;-><init>(Ll/۠ۙᩴ;IIZ)V
+    const/4 v2, -0x1
 
-    return-object v0
+    if-le v0, v1, :cond_0
+
+    return v2
+
+    :cond_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    .line 28
+    :goto_0
+    iget v3, p0, Ll/ᩴۙᩴ;->ܰ:I
+
+    if-ne v3, v2, :cond_1
+
+    const/16 v3, 0x3c
+
+    if-ge v1, v3, :cond_1
+
+    const-wide/16 v3, 0x5
+
+    .line 29
+    invoke-static {v3, v4}, Landroid/os/SystemClock;->sleep(J)V
+
+    add-int/lit8 v1, v1, 0x5
+
+    goto :goto_0
+
+    .line 32
+    :cond_1
+    iget v1, p0, Ll/ᩴۙᩴ;->ܰ:I
+
+    if-ne v1, v2, :cond_2
+
+    .line 33
+    sget v0, Ll/ᩴۙᩴ;->᩶:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    sput v0, Ll/ᩴۙᩴ;->᩶:I
+
+    goto :goto_1
+
+    .line 35
+    :cond_2
+    sput v0, Ll/ᩴۙᩴ;->᩶:I
+
+    .line 36
+    :goto_1
+    iget v0, p0, Ll/ᩴۙᩴ;->ܰ:I
+
+    return v0
 .end method
 
-.method public final ۙ(ILjava/lang/Object;)V
+.method public final ᩷()V
     .locals 1
 
-    .line 1189
-    check-cast p2, Ljava/util/function/Consumer;
+    const/4 v0, -0x1
 
-    .line 1206
-    iget-object v0, p0, Ll/ᩴۙᩴ;->ۛ:Ll/۠ۙᩴ;
-
-    iget-object v0, v0, Ll/۠ۙᩴ;->֫:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-interface {p2, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    .line 16
+    iput v0, p0, Ll/ᩴۙᩴ;->ܰ:I
 
     return-void
 .end method

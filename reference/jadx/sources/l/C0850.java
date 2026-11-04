@@ -1,60 +1,36 @@
 package l;
 
-import android.R;
-
-/* JADX INFO: renamed from: l.֨ۗܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F1OQ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0850 extends AbstractC3154 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21312 f3495;
+/* JADX INFO: renamed from: l.֨֫۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 18AW */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0850 implements InterfaceC3573 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8601 f3496 = new C2261(this);
+    public final /* synthetic */ C9053 f3199;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8601 f3494 = new C5084(this);
-
-    public C0850(C21312 c21312) {
-        this.f3495 = c21312;
+    @Override // l.InterfaceC23711
+    /* JADX INFO: renamed from: ֫ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ void mo3465() {
+        throw null;
     }
 
+    public C0850(C9053 c9053) {
+        this.f3199 = c9053;
+    }
+
+    @Override // l.InterfaceC3573
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m3462() {
-        int itemCount;
-        int i = R.id.accessibilityActionPageLeft;
-        C21312 c21312 = this.f3495;
-        C5031.m13973(R.id.accessibilityActionPageLeft, c21312);
-        C5031.m13973(R.id.accessibilityActionPageRight, c21312);
-        C5031.m13973(R.id.accessibilityActionPageUp, c21312);
-        C5031.m13973(R.id.accessibilityActionPageDown, c21312);
-        if (c21312.f69345.getAdapter() == null || (itemCount = c21312.f69345.getAdapter().getItemCount()) == 0 || !c21312.m47805()) {
-            return;
-        }
-        int iM47796 = c21312.m47796();
-        InterfaceC8601 interfaceC8601 = this.f3494;
-        InterfaceC8601 interfaceC8602 = this.f3496;
-        if (iM47796 == 0) {
-            boolean z = c21312.f69353.getLayoutDirection() == 1;
-            int i2 = z ? R.id.accessibilityActionPageLeft : R.id.accessibilityActionPageRight;
-            if (z) {
-                i = R.id.accessibilityActionPageRight;
-            }
-            if (c21312.f69354 < itemCount - 1) {
-                C5031.m13988(c21312, new C9494(i2, (String) null), null, interfaceC8602);
-            }
-            if (c21312.f69354 > 0) {
-                C5031.m13988(c21312, new C9494(i, (String) null), null, interfaceC8601);
-                return;
-            }
-            return;
-        }
-        if (c21312.f69354 < itemCount - 1) {
-            C5031.m13988(c21312, new C9494(R.id.accessibilityActionPageDown, (String) null), null, interfaceC8602);
-        }
-        if (c21312.f69354 > 0) {
-            C5031.m13988(c21312, new C9494(R.id.accessibilityActionPageUp, (String) null), null, interfaceC8601);
-        }
+    public final void mo3466(long j, long j2, long j3) {
+        C13528 c13528 = this.f3199.f29444;
+        InterfaceC2342 interfaceC2342 = c13528.f42983;
+        ((C1178) interfaceC2342).f4312.m45194(C3374.m11075(j2, j3));
+        InterfaceC2342 interfaceC2343 = c13528.f42983;
+        ((C1178) interfaceC2343).f4312.mo16839(C3374.m11075(c13528.f42990.m6383() + j2, c13528.f42990.m6379()));
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        return ((C1178) this.f3199.f29444.f42983).mo924();
     }
 }

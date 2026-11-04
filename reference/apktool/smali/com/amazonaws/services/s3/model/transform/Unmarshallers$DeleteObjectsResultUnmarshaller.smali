@@ -35,7 +35,7 @@
     invoke-virtual {v0, v1, p1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser;->ۙ(Lorg/xml/sax/helpers/DefaultHandler;Ljava/io/InputStream;)V
 
     .line 318
-    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$DeleteObjectsHandler;->ۨ()Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;
+    invoke-virtual {v1}, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$DeleteObjectsHandler;->ۤ()Lcom/amazonaws/services/s3/internal/DeleteObjectsResponse;
 
     move-result-object p1
 

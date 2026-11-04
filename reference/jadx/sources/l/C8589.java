@@ -1,19 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡۖۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R4RJ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C8589 extends AbstractC9031 {
+import java.util.Comparator;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7177 f29694;
-
-    public C8589(C7177 c7177) {
-        this.f29694 = c7177;
-    }
-
-    @Override // l.InterfaceC15914
-    public final String getType() {
-        return this.f29694.f23968;
+/* JADX INFO: renamed from: l.۠ۧۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51FV */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C8589 implements Comparator {
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        String str = (String) obj;
+        String str2 = (String) obj2;
+        if (str.equalsIgnoreCase(str2)) {
+            return 0;
+        }
+        if (str.equalsIgnoreCase("type-info")) {
+            return -1;
+        }
+        if (str2.equalsIgnoreCase("type-info")) {
+            return 1;
+        }
+        return str.compareToIgnoreCase(str2);
     }
 }

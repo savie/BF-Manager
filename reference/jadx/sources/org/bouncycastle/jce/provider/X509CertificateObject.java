@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1BitString;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Encoding;
@@ -61,7 +61,7 @@ import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509CertificateObject extends X509Certificate implements PKCS12BagAttributeCarrier {
     public PKCS12BagAttributeCarrier attrCarrier = new PKCS12BagAttributeCarrierImpl();
     public BasicConstraints basicConstraints;
@@ -146,32 +146,32 @@ public class X509CertificateObject extends X509Certificate implements PKCS12BagA
                     case 5:
                         encoded = generalName.getEncoded();
                         arrayList2.add(encoded);
-                        arrayList.add(C0561.unmodifiableList(arrayList2));
+                        arrayList.add(C4681.unmodifiableList(arrayList2));
                         break;
                     case 1:
                     case 2:
                     case 6:
                         encoded = ((ASN1String) generalName.getName()).getString();
                         arrayList2.add(encoded);
-                        arrayList.add(C0561.unmodifiableList(arrayList2));
+                        arrayList.add(C4681.unmodifiableList(arrayList2));
                         break;
                     case 4:
                         encoded = X500Name.getInstance(RFC4519Style.INSTANCE, generalName.getName()).toString();
                         arrayList2.add(encoded);
-                        arrayList.add(C0561.unmodifiableList(arrayList2));
+                        arrayList.add(C4681.unmodifiableList(arrayList2));
                         break;
                     case 7:
                         try {
                             encoded = InetAddress.getByAddress(ASN1OctetString.getInstance(generalName.getName()).getOctets()).getHostAddress();
                             arrayList2.add(encoded);
-                            arrayList.add(C0561.unmodifiableList(arrayList2));
+                            arrayList.add(C4681.unmodifiableList(arrayList2));
                         } catch (UnknownHostException unused) {
                         }
                         break;
                     case 8:
                         encoded = ASN1ObjectIdentifier.getInstance(generalName.getName()).getId();
                         arrayList2.add(encoded);
-                        arrayList.add(C0561.unmodifiableList(arrayList2));
+                        arrayList.add(C4681.unmodifiableList(arrayList2));
                         break;
                     default:
                         throw new IOException("Bad tag number: " + generalName.getTagNo());
@@ -180,7 +180,7 @@ public class X509CertificateObject extends X509Certificate implements PKCS12BagA
             if (arrayList.size() == 0) {
                 return null;
             }
-            return C0561.unmodifiableCollection(arrayList);
+            return C4681.unmodifiableCollection(arrayList);
         } catch (Exception e) {
             throw new CertificateParsingException(e.getMessage());
         }
@@ -302,7 +302,7 @@ public class X509CertificateObject extends X509Certificate implements PKCS12BagA
             for (int i = 0; i != aSN1Sequence.size(); i++) {
                 arrayList.add(((ASN1ObjectIdentifier) aSN1Sequence.getObjectAt(i)).getId());
             }
-            return C0561.unmodifiableList(arrayList);
+            return C4681.unmodifiableList(arrayList);
         } catch (Exception unused) {
             throw new CertificateParsingException("error processing extended key usage extension");
         }

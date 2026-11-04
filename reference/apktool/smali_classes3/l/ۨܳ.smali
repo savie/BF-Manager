@@ -1,8 +1,37 @@
-.class public interface abstract Ll/ۨܳ;
+.class public final Ll/ۨܳ;
 .super Ljava/lang/Object;
-.source "C5TA"
+.source "422Y"
 
 
-# virtual methods
-.method public abstract onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;)Ll/ܺۢ;
-.end method
+# instance fields
+.field public ֫:Z
+
+.field public ۗ:I
+
+.field public ۙ:I
+
+.field public ۚ:Z
+
+.field public ۤ:Landroid/view/ViewGroup;
+
+.field public ۧ:Ll/ܿۚ;
+
+.field public ۫:Z
+
+.field public ܳ:I
+
+.field public ܶ:Z
+
+.field public ܺ:Ll/ۢۚ;
+
+.field public ܽ:Z
+
+.field public ᩴ:Landroid/os/Bundle;
+
+.field public ᩷:Landroid/view/View;
+
+.field public ᩸:I
+
+.field public ᩹:Landroid/view/View;
+
+.field public ᩻:Ll/ۡ۫;

@@ -1,17 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨᩺ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X66Z */
+import android.content.Context;
+import android.graphics.Point;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.FrameLayout;
+
+/* JADX INFO: renamed from: l.֨᩶᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: KAKB */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1430 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m5000(C10749 c10749) {
-        c10749.m27043("ZXZDdbHqDeVsDadbNduweyfPiVodXwZb", new C3069());
-        c10749.m27043("REBeCfNRoNcqgiqoXcCfRoucCLqAiBTo", new C14132());
-        c10749.m27043("wsffaewEJVqkXcRsNNDuFCoZELkZEPmN", new C4958());
-        c10749.m27043("eqiFqAXwuwFaToAXZDbTwkcubLRAwgNF", new C12015());
-        c10749.m27043("ucusoZZDyPNNbTeyoNVkayaqXEXkZHXk", new C2841());
-        c10749.m27043("RcDmTEPZFuemHuXEskDidLiBsoCLsAbT", new C22598());
-        c10749.m27043("oVEbCLaioVHqbTgiCHgeNZuEPZyHmZcu", new C5664());
+public class C1430 extends FrameLayout {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f5029;
+
+    public C1430(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        Point point = C6907.f22902;
+        this.f5029 = Math.min(Math.min(point.x, point.y) - C6907.m19160(64.0f), C6907.m19160(330.0f));
+    }
+
+    public C1430(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        Point point = C6907.f22902;
+        this.f5029 = Math.min(Math.min(point.x, point.y) - C6907.m19160(64.0f), C6907.m19160(330.0f));
+    }
+
+    @Override // android.widget.FrameLayout, android.view.View
+    public final void onMeasure(int i, int i2) {
+        if (!isInEditMode()) {
+            i = View.MeasureSpec.makeMeasureSpec(this.f5029, 1073741824);
+        }
+        super.onMeasure(i, i2);
     }
 }

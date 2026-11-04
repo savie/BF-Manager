@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.params.SRP6GroupParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SRP6VerifierGenerator {
     public BigInteger N;
     public Digest digest;

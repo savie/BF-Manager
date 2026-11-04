@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import org.bouncycastle.crypto.KeyGenerationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKeyGenerationParameters extends KeyGenerationParameters {
     public int certainty;
     public BigInteger publicExponent;

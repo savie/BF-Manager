@@ -1,56 +1,144 @@
-.class public final synthetic Ll/ܽ۠ۤ;
+.class public final Ll/ܽ۠ۤ;
 .super Ljava/lang/Object;
-.source "R450"
-
-# interfaces
-.implements Ljava/lang/Iterable;
+.source "F15V"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/util/function/Predicate;
+.field public final ۙ:I
 
-.field public final synthetic ܺ:Ll/ۧ۠ۤ;
+.field public final ۤ:I
 
-.field public final synthetic ܽ:Ll/ۤ۠ۤ;
+.field public final ᩴ:Z
 
-.field public final synthetic ᩶:Ll/ۧ᩷۟;
+.field public final synthetic ᩷:Ll/ܶ۠ۤ;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۧ۠ۤ;Ll/ۧ᩷۟;Ljava/util/function/Predicate;Ll/ۤ۠ۤ;)V
+.method public constructor <init>(Ll/ܶ۠ۤ;IIIZ)V
     .locals 0
 
-    .line 0
+    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܽ۠ۤ;->ܺ:Ll/ۧ۠ۤ;
+    iput-object p1, p0, Ll/ܽ۠ۤ;->᩷:Ll/ܶ۠ۤ;
 
-    iput-object p2, p0, Ll/ܽ۠ۤ;->᩶:Ll/ۧ᩷۟;
+    .line 212
+    iput p2, p0, Ll/ܽ۠ۤ;->ۙ:I
 
-    iput-object p3, p0, Ll/ܽ۠ۤ;->֡:Ljava/util/function/Predicate;
+    .line 213
+    iput p3, p0, Ll/ܽ۠ۤ;->᩸:I
 
-    iput-object p4, p0, Ll/ܽ۠ۤ;->ܽ:Ll/ۤ۠ۤ;
+    .line 214
+    iput p4, p0, Ll/ܽ۠ۤ;->ۤ:I
+
+    .line 215
+    iput-boolean p5, p0, Ll/ܽ۠ۤ;->ᩴ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 5
+.method public final ۙ(Ll/۠᩵ۛ;Ll/ۤۙۛ;I)V
+    .locals 7
 
-    .line 630
-    new-instance v0, Ll/ۛ۠ۤ;
+    const/4 v0, -0x1
 
-    iget-object v1, p0, Ll/ܽ۠ۤ;->ܺ:Ll/ۧ۠ۤ;
+    .line 219
+    iget v1, p0, Ll/ܽ۠ۤ;->ۤ:I
 
-    iget-object v2, p0, Ll/ܽ۠ۤ;->᩶:Ll/ۧ᩷۟;
+    if-eq v1, v0, :cond_0
 
-    iget-object v3, p0, Ll/ܽ۠ۤ;->֡:Ljava/util/function/Predicate;
+    .line 220
+    iget-object v0, p0, Ll/ܽ۠ۤ;->᩷:Ll/ܶ۠ۤ;
 
-    iget-object v4, p0, Ll/ܽ۠ۤ;->ܽ:Ll/ۤ۠ۤ;
+    iget-object v0, v0, Ll/ܶ۠ۤ;->ۚ:Ljava/util/List;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ll/ۛ۠ۤ;-><init>(Ll/ۧ۠ۤ;Ll/ۧ᩷۟;Ljava/util/function/Predicate;Ll/ۤ۠ۤ;)V
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    iget v1, p0, Ll/ܽ۠ۤ;->ۙ:I
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Ll/ۙۧۛ;
+
+    .line 221
+    iget v3, p0, Ll/ܽ۠ۤ;->᩸:I
+
+    iget-boolean v4, p0, Ll/ܽ۠ۤ;->ᩴ:Z
+
+    move-object v1, p1
+
+    move-object v5, p2
+
+    move v6, p3
+
+    invoke-static/range {v1 .. v6}, Ll/ܶ۠ۤ;->ۙ(Ll/۠᩵ۛ;Ll/ۙۧۛ;IZLl/ۤۙۛ;I)V
+
+    return-void
+
+    .line 219
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final ᩷(Ll/۠᩵ۛ;Ll/ۤۙۛ;I)V
+    .locals 7
+
+    const/4 v0, -0x1
+
+    .line 225
+    iget v1, p0, Ll/ܽ۠ۤ;->ۤ:I
+
+    if-eq v1, v0, :cond_0
+
+    .line 226
+    iget-object v0, p0, Ll/ܽ۠ۤ;->᩷:Ll/ܶ۠ۤ;
+
+    iget-object v0, v0, Ll/ܶ۠ۤ;->֫:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Ll/ۙۧۛ;
+
+    .line 227
+    iget v3, p0, Ll/ܽ۠ۤ;->᩸:I
+
+    iget-boolean v4, p0, Ll/ܽ۠ۤ;->ᩴ:Z
+
+    move-object v1, p1
+
+    move-object v5, p2
+
+    move v6, p3
+
+    invoke-static/range {v1 .. v6}, Ll/ܶ۠ۤ;->ۙ(Ll/۠᩵ۛ;Ll/ۙۧۛ;IZLl/ۤۙۛ;I)V
+
+    return-void
+
+    .line 225
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
 .end method

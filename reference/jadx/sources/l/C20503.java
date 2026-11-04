@@ -1,32 +1,29 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
+import java.util.ArrayList;
+import java.util.function.Supplier;
 
-/* JADX INFO: renamed from: l.᩶᩻ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G5Y2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20503 extends AnimatorListenerAdapter {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC11766 f66472;
+/* JADX INFO: renamed from: l.᩵ۤ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: J4L7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C20503 implements Supplier {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21445 f66473;
+    public final /* synthetic */ int f65693;
 
-    public C20503(AbstractC11766 abstractC11766, C21445 c21445) {
-        this.f66472 = abstractC11766;
-        this.f66473 = c21445;
+    public /* synthetic */ C20503(int i) {
+        this.f65693 = i;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationStart(Animator animator) {
-        this.f66472.mCurrentAnimators.add(animator);
-    }
-
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        this.f66473.remove(animator);
-        this.f66472.mCurrentAnimators.remove(animator);
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        switch (this.f65693) {
+            case 0:
+                return C17691.m41402();
+            case 1:
+                return C15022.m36183();
+            default:
+                return new ArrayList();
+        }
     }
 }

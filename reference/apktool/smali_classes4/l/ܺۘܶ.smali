@@ -1,104 +1,91 @@
-.class public final enum Ll/ܺۘܶ;
-.super Ll/۟ۜܶ;
-.source "VBIK"
+.class public final Ll/ܺۘܶ;
+.super Ljava/lang/Object;
+.source "N1MQ"
+
+
+# instance fields
+.field public final ۙ:I
+
+.field public final ۤ:I
+
+.field public ᩴ:Ll/ܺۘܶ;
+
+.field public final ᩷:I
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>(IIII)V
+    .locals 0
 
-    const-string v0, "FORMAT_23X"
+    .line 224
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xd
+    .line 225
+    iput p1, p0, Ll/ܺۘܶ;->ۤ:I
 
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ܺۘܶ;-><init>(Ljava/lang/String;I)V
+    .line 226
+    iput p2, p0, Ll/ܺۘܶ;->᩸:I
 
-    return-void
-.end method
+    .line 227
+    iput p4, p0, Ll/ܺۘܶ;->᩷:I
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+    .line 228
+    iput p3, p0, Ll/ܺۘܶ;->ۙ:I
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    .line 302
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۜܶ;-><init>(Ljava/lang/String;II)V
+    .line 229
+    iput-object p1, p0, Ll/ܺۘܶ;->ᩴ:Ll/ܺۘܶ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(ILl/ܶۘܶ;)Ll/ᩳۘܶ;
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 306
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    .line 235
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v2
+    const-string v1, "change[inserted="
 
-    .line 307
-    invoke-static {p1}, Ll/۟ۜܶ;->ۖ(I)I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v4
+    iget v1, p0, Ll/ܺۘܶ;->᩷:I
 
-    .line 308
-    invoke-interface {p2}, Ll/ܶۘܶ;->read()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result p1
+    const-string v1, ", deleted="
 
-    .line 309
-    invoke-static {p1}, Ll/۟ۜܶ;->ܰ(I)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v5
+    iget v1, p0, Ll/ܺۘܶ;->ۙ:I
 
-    .line 310
-    invoke-static {p1}, Ll/۟ۜܶ;->ۖ(I)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v6
+    const-string v1, ", line0="
 
-    .line 311
-    new-instance p1, Ll/ܿۜܶ;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    iget v1, p0, Ll/ܺۘܶ;->ۤ:I
 
-    move-object v0, p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-object v1, p0
+    const-string v1, ", line1="
 
-    invoke-direct/range {v0 .. v6}, Ll/ܿۜܶ;-><init>(Ll/۟ۜܶ;IIIII)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    iget v1, p0, Ll/ܺۘܶ;->᩸:I
 
-.method public ۙ(Ll/ᩳۘܶ;Ll/᩸ۘܶ;)V
-    .locals 2
+    const-string v2, "]"
 
-    .line 320
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܶ()I
+    .line 0
+    invoke-static {v1, v2, v0}, Ll/ۨ᩹ۧ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۙ()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Ll/۟ۜܶ;->ܰ(II)S
-
-    .line 321
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ܰ()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Ll/ᩳۘܶ;->ۨ()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ll/۟ۜܶ;->ܰ(II)S
-
-    .line 319
-    invoke-interface {p2}, Ll/᩸ۘܶ;->ܶ()V
-
-    return-void
+    return-object v0
 .end method

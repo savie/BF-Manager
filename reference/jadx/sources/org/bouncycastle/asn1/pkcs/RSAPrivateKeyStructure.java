@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.pkcs;
 
 import java.math.BigInteger;
 import java.util.Enumeration;
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAPrivateKeyStructure extends ASN1Object {
     public BigInteger coefficient;
     public BigInteger exponent1;
@@ -65,7 +65,7 @@ public class RSAPrivateKeyStructure extends ASN1Object {
         if (obj instanceof ASN1Sequence) {
             return new RSAPrivateKeyStructure((ASN1Sequence) obj);
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in factory: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in factory: "));
     }
 
     public static RSAPrivateKeyStructure getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

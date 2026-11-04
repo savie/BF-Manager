@@ -14,7 +14,7 @@ import org.bouncycastle.crypto.params.KDFParameters;
 import org.bouncycastle.crypto.params.RSAKeyParameters;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKEMGenerator implements EncapsulatedSecretGenerator {
     public DerivationFunction kdf;
     public final int keyLen;

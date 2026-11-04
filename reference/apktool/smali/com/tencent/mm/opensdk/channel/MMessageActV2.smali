@@ -51,49 +51,49 @@
 
     const-string v2, "send fail, invalid targetPkgName, targetPkgName = "
 
-    .line 25
+    .line 24
     invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 27
+    .line 26
     iget-object p1, p1, Lcom/tencent/mm/opensdk/channel/MMessageActV2$Args;->targetPkgName:Ljava/lang/String;
 
-    .line 30
+    .line 29
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 33
+    .line 32
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 37
+    .line 36
     invoke-static {v1, p0}, Lcom/tencent/mm/opensdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    .line 40
+    .line 39
     :cond_1
     iget-object v2, p1, Lcom/tencent/mm/opensdk/channel/MMessageActV2$Args;->targetClassName:Ljava/lang/String;
 
-    .line 43
+    .line 42
     invoke-static {v2}, Lcom/tencent/mm/opensdk/utils/d;->b(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 48
+    .line 47
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 51
+    .line 50
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 53
+    .line 52
     iget-object v3, p1, Lcom/tencent/mm/opensdk/channel/MMessageActV2$Args;->targetPkgName:Ljava/lang/String;
 
     const-string v4, ".wxapi.WXEntryActivity"
 
     .line 0
-    invoke-static {v2, v3, v4}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

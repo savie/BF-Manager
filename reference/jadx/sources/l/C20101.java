@@ -1,58 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۤۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A8OY */
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
+
+/* JADX INFO: renamed from: l.ᩴ᩸ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y7SB */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20101 implements InterfaceC22155 {
+public final class C20101 extends C3036 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f65284;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f64589;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f65285;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18609 f64590;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f65286;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6633 f64591;
 
-    @Override // l.InterfaceC22155
+    @Override // l.C3036, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ C7648 mo3145() {
-        return null;
+    public final void mo1505(C7926 c7926) {
+        this.f9840 = c7926;
     }
 
-    @Override // l.InterfaceC22155
+    @Override // l.C3036, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo3146(C2398 c2398) {
+    public final void mo1518(C16327 c16327) {
+        this.f9840 = c16327;
     }
 
-    @Override // l.InterfaceC22155
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ byte[] mo3147() {
-        return null;
-    }
-
-    public C20101(long j, long j2, long j3) {
-        this.f65284 = j;
-        this.f65286 = j2;
-        this.f65285 = j3;
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    @Override // l.C3036, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1510(C11018 c11018) {
+        boolean z = c11018.f34795 == null;
+        if (this.f64589 && !z) {
+            C18609 c18609 = this.f64590;
+            AbstractC22712 abstractC22712 = c18609.f60496.f49864;
+            abstractC22712.getClass();
+            char[] charArray = "$loc".toCharArray();
+            this.f9840 = c18609.f60514.m37506(0L, C14769.of((Object) c18609.f60514.m37523(new C5816(ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_PDF, abstractC22712.mo2069(charArray, charArray.length), c11018.f34795.f26659, this.f64591.f22152), c11018.f34795), (Object) c18609.f60514.m37553((AbstractC22295) null)));
+            return;
         }
-        if (!(obj instanceof C20101)) {
-            return false;
-        }
-        C20101 c20101 = (C20101) obj;
-        return this.f65284 == c20101.f65284 && this.f65286 == c20101.f65286 && this.f65285 == c20101.f65285;
+        this.f9840 = c11018;
     }
 
-    public final int hashCode() {
-        return C23390.m51532(this.f65285) + ((C23390.m51532(this.f65286) + ((C23390.m51532(this.f65284) + 527) * 31)) * 31);
-    }
-
-    public final String toString() {
-        return "Mp4Timestamp: creation time=" + this.f65284 + ", modification time=" + this.f65286 + ", timescale=" + this.f65285;
+    public C20101(C18609 c18609, boolean z, C6633 c6633) {
+        this.f64590 = c18609;
+        this.f64589 = z;
+        this.f64591 = c6633;
     }
 }

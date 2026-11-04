@@ -1,39 +1,43 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
+import android.view.ViewGroup;
 
-/* JADX INFO: renamed from: l.ᩴۨ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ᩳ֨᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: A65W */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18734 extends AbstractC12385 implements InterfaceC23620 {
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void forEach(Consumer consumer) {
-        AbstractC22686.B(this, consumer);
+public final class C18734 extends C7787 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f60890 = false;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ViewGroup f60891;
+
+    public C18734(ViewGroup viewGroup) {
+        this.f60891 = viewGroup;
     }
 
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.E(this, j, j2);
+    @Override // l.C7787, l.InterfaceC12261
+    public final void onTransitionCancel(AbstractC0329 abstractC0329) {
+        C12811.m31773(this.f60891, false);
+        this.f60890 = true;
     }
 
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void k(Object[] objArr, int i) {
-        AbstractC22686.y(this, (Long[]) objArr, i);
+    @Override // l.C7787, l.InterfaceC12261
+    public final void onTransitionEnd(AbstractC0329 abstractC0329) {
+        if (!this.f60890) {
+            C12811.m31773(this.f60891, false);
+        }
+        abstractC0329.removeListener(this);
     }
 
-    @Override // l.InterfaceC0853
-    public final Object newArray(int i) {
-        return new long[i];
+    @Override // l.C7787, l.InterfaceC12261
+    public final void onTransitionPause(AbstractC0329 abstractC0329) {
+        C12811.m31773(this.f60891, false);
     }
 
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC10110 spliterator() {
-        return new C10027(this);
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC20693 spliterator() {
-        return new C10027(this);
+    @Override // l.C7787, l.InterfaceC12261
+    public final void onTransitionResume(AbstractC0329 abstractC0329) {
+        C12811.m31773(this.f60891, true);
     }
 }

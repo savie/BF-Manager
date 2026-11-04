@@ -1,16 +1,29 @@
 .class public final synthetic Ll/֨ۜ᩹;
 .super Ljava/lang/Object;
-.source "M292"
-
-# interfaces
-.implements Ll/ۘۜ᩹;
+.source "N673"
 
 
-# virtual methods
-.method public final ۙ(Ll/ۖ۬᩹;)Z
-    .locals 0
+# direct methods
+.method public static lines(Ljava/io/BufferedReader;)Ll/᩵ܺۗ;
+    .locals 1
 
-    const/4 p1, 0x0
+    .line 566
+    new-instance v0, Ll/ۜۜ᩹;
 
-    return p1
+    invoke-direct {v0, p0}, Ll/ۜۜ᩹;-><init>(Ljava/io/BufferedReader;)V
+
+    const/16 p0, 0x110
+
+    .line 568
+    invoke-static {v0, p0}, Ll/۬ۚۗ;->spliteratorUnknownSize(Ljava/util/Iterator;I)Ll/۠ۚۗ;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Ll/ۨܺۗ;->stream(Ll/۠ۚۗ;Z)Ll/᩵ܺۗ;
+
+    move-result-object p0
+
+    return-object p0
 .end method

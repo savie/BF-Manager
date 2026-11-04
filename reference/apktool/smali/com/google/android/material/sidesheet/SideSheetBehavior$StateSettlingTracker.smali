@@ -52,7 +52,7 @@
     .line 1094
     iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    invoke-static {v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/ܶܰۙ;
+    invoke-static {v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/᩻᩷ۙ;
 
     move-result-object v0
 
@@ -60,11 +60,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    invoke-static {v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/ܶܰۙ;
+    invoke-static {v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->access$800(Lcom/google/android/material/sidesheet/SideSheetBehavior;)Ll/᩻᩷ۙ;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/ܶܰۙ;->ۖ()Z
+    invoke-virtual {v0}, Ll/᩻᩷ۙ;->᩸()Z
 
     move-result v0
 
@@ -152,7 +152,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$StateSettlingTracker;->continueSettlingRunnable:Ljava/lang/Runnable;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1359
     invoke-virtual {p1, v0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V

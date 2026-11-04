@@ -1,60 +1,42 @@
-.class public Ll/ܳ᩹᩸;
-.super Ll/۟ۖ᩸;
-.source "0B0D"
+.class public final synthetic Ll/ܳ᩹᩸;
+.super Ljava/lang/Object;
+.source "Y6SG"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۚ᩹᩸;
+
+.field public final synthetic ᩶:Ll/۫᩹᩸;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Ll/ۚ᩹᩸;Ll/۫᩹᩸;)V
     .locals 0
 
-    .line 517
-    invoke-direct {p0}, Ll/۟ۖ᩸;-><init>()V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܳ᩹᩸;->ܰ:Ll/ۚ᩹᩸;
+
+    iput-object p2, p0, Ll/ܳ᩹᩸;->᩶:Ll/۫᩹᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۚ۬᩸;)Ljava/lang/Object;
+.method public final run()V
     .locals 2
 
-    .line 523
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ۧ()Ll/᩹۬᩸;
+    .line 0
+    iget-object v0, p0, Ll/ܳ᩹᩸;->ܰ:Ll/ۚ᩹᩸;
 
-    move-result-object v0
+    iget-object v1, p0, Ll/ܳ᩹᩸;->᩶:Ll/۫᩹᩸;
 
-    sget-object v1, Ll/᩹۬᩸;->᩻:Ll/᩹۬᩸;
-
-    if-ne v0, v1, :cond_0
-
-    .line 524
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->۫()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 527
-    :cond_0
-    new-instance v0, Ll/ۢۖ᩸;
-
-    invoke-virtual {p1}, Ll/ۚ۬᩸;->ܿ()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ll/ۢۖ᩸;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/֨۬᩸;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 517
-    check-cast p2, Ll/ۢۖ᩸;
-
-    .line 532
-    invoke-virtual {p1, p2}, Ll/֨۬᩸;->ۙ(Ljava/lang/Number;)V
+    invoke-static {v0, v1}, Ll/ۚ᩹᩸;->ۙ(Ll/ۚ᩹᩸;Ll/۫᩹᩸;)V
 
     return-void
 .end method

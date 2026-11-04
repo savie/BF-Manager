@@ -1,81 +1,132 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ᩴ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: D9UF */
+import java.util.Collections;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.۠ۗ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: F8HT */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8358 extends AbstractC2712 {
+public final class C8358 implements InterfaceC6867 {
 
-    /* JADX INFO: renamed from: ֨ܰ, reason: not valid java name and contains not printable characters */
-    public long f28989;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f27419;
 
-    /* JADX INFO: renamed from: ۘܰ, reason: not valid java name and contains not printable characters */
-    public int f28990;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f27420;
 
-    /* JADX INFO: renamed from: ۚܰ, reason: not valid java name and contains not printable characters */
-    public String f28991;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public boolean f27421;
 
-    /* JADX INFO: renamed from: ۬ܰ, reason: not valid java name and contains not printable characters */
-    public int f28992;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final List f27422;
 
-    /* JADX INFO: renamed from: ᩹ܰ, reason: not valid java name and contains not printable characters */
-    public int f28993;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22024[] f27423;
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۬ */
-    public final int mo6399(int i, byte[] bArr) {
-        return 0;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public long f27424 = -9223372036854775807L;
+
+    public C8358(List list) {
+        this.f27422 = list;
+        this.f27423 = new InterfaceC22024[list.size()];
     }
 
-    public C8358(int i, int i2, int i3, int i4, String str, InterfaceC10601 interfaceC10601) {
-        super(interfaceC10601, (byte) 50, (byte) 2);
-        this.f28990 = i;
-        this.f28992 = i2;
-        this.f28991 = str;
-        this.f28993 = 260;
-        this.f10440 = 8;
-        this.f28989 = i3;
-        this.f10424 = i4;
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1349() {
+        this.f27421 = false;
+        this.f27424 = -9223372036854775807L;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m21882(int i, String str) {
-        reset();
-        this.f28992 = i;
-        this.f28991 = str;
-        this.f48356 = 0;
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1351(InterfaceC12789 interfaceC12789, C10857 c10857) {
+        int i = 0;
+        while (true) {
+            InterfaceC22024[] interfaceC22024Arr = this.f27423;
+            if (i >= interfaceC22024Arr.length) {
+                return;
+            }
+            C14081 c14081 = (C14081) this.f27422.get(i);
+            c10857.m27594();
+            InterfaceC22024 interfaceC22024Mo16658 = interfaceC12789.mo16658(c10857.m27595(), 3);
+            C20124 c20124 = new C20124();
+            c20124.m46309(c10857.m27596());
+            c20124.m46327("video/mp2t");
+            c20124.m46315("application/dvbsubs");
+            c20124.m46301(Collections.singletonList(c14081.f44584));
+            c20124.m46321(c14081.f44585);
+            interfaceC22024Mo16658.mo14384(c20124.m46295());
+            interfaceC22024Arr[i] = interfaceC22024Mo16658;
+            i++;
+        }
     }
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۘ */
-    public final int mo6397(int i, byte[] bArr) {
-        bArr[i] = m8267();
-        bArr[i + 1] = 0;
-        return 2;
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1350(int i, long j) {
+        if ((i & 4) == 0) {
+            return;
+        }
+        this.f27421 = true;
+        this.f27424 = j;
+        this.f27420 = 0;
+        this.f27419 = 2;
     }
 
-    @Override // l.AbstractC2712
-    /* JADX INFO: renamed from: ۨ */
-    public final int mo6398(byte[] bArr) {
-        C4850.m13546(this.f28990, 0, bArr);
-        C4850.m13546(this.f28989, 2, bArr);
-        C4850.m13546(this.f28993, 4, bArr);
-        C4850.m13550(this.f28992, 6, bArr);
-        C4850.m13546(0, 10, bArr);
-        return m35440(this.f28991, 12, bArr) + 12;
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1353(boolean z) {
+        if (this.f27421) {
+            C20782.m47568(this.f27424 != -9223372036854775807L);
+            for (InterfaceC22024 interfaceC22024 : this.f27423) {
+                interfaceC22024.mo14383(this.f27424, 1, this.f27420, 0, null);
+            }
+            this.f27421 = false;
+        }
     }
 
-    @Override // l.AbstractC2712, l.AbstractC14792
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("Trans2FindNext2[");
-        sb.append(super.toString());
-        sb.append(",sid=");
-        sb.append(this.f28990);
-        sb.append(",searchCount=");
-        sb.append(((C9895) m35454()).m25070());
-        sb.append(",informationLevel=0x");
-        C18855.m43491(this.f28993, 3, ",resumeKey=0x", sb);
-        C18855.m43491(this.f28992, 4, ",flags=0x", sb);
-        C18855.m43491(0, 2, ",filename=", sb);
-        return new String(C22697.m50267(sb, this.f28991, "]"));
+    @Override // l.InterfaceC6867
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1352(C21287 c21287) {
+        boolean z;
+        boolean z2;
+        if (this.f27421) {
+            if (this.f27419 == 2) {
+                if (c21287.m48486() == 0) {
+                    z2 = false;
+                } else {
+                    if (c21287.m48493() != 32) {
+                        this.f27421 = false;
+                    }
+                    this.f27419--;
+                    z2 = this.f27421;
+                }
+                if (!z2) {
+                    return;
+                }
+            }
+            if (this.f27419 == 1) {
+                if (c21287.m48486() == 0) {
+                    z = false;
+                } else {
+                    if (c21287.m48493() != 0) {
+                        this.f27421 = false;
+                    }
+                    this.f27419--;
+                    z = this.f27421;
+                }
+                if (!z) {
+                    return;
+                }
+            }
+            int iM48516 = c21287.m48516();
+            int iM48486 = c21287.m48486();
+            for (InterfaceC22024 interfaceC22024 : this.f27423) {
+                c21287.m48510(iM48516);
+                interfaceC22024.mo14381(iM48486, c21287);
+            }
+            this.f27420 += iM48486;
+        }
     }
 }

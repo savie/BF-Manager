@@ -1,33 +1,26 @@
 package l;
 
-import java.util.Map;
+import java.util.Collections;
 
-/* JADX INFO: renamed from: l.۟ۘۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H5GB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7218 implements Map.Entry {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19213 f24046;
-
-    public C7218(C19213 c19213) {
-        this.f24046 = c19213;
+/* JADX INFO: renamed from: l.ۜܳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: O913 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7218 extends AbstractC24593 {
+    @Override // l.AbstractC24593, l.InterfaceC2963
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo9654(InterfaceC8929 interfaceC8929) {
+        interfaceC8929.mo23841(C13592.class, new C2743());
     }
 
-    @Override // java.util.Map.Entry
-    public final Object setValue(Object obj) {
-        Integer num = (Integer) obj;
-        this.f24046.f62049 = num.intValue();
-        return num;
+    @Override // l.AbstractC24593, l.InterfaceC2963
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo8843(InterfaceC11078 interfaceC11078) {
+        interfaceC11078.mo17052(C13592.class, new C8709());
     }
 
-    @Override // java.util.Map.Entry
-    public final Object getKey() {
-        return this.f24046;
-    }
-
-    @Override // java.util.Map.Entry
-    public final Object getValue() {
-        return Integer.valueOf(this.f24046.f62049);
+    @Override // l.AbstractC24593, l.InterfaceC2963
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo9656(C11991 c11991) {
+        c11991.m30141(Collections.singleton(new C22103()));
     }
 }

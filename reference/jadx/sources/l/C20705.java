@@ -1,30 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۜ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27L2 */
+/* JADX INFO: renamed from: l.᩵ܽᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R704 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20705 implements InterfaceC15767 {
+public final class C20705 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC11242 f67327;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C0524 f66369;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final AbstractC16579 f67328;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f66370;
 
-    @Override // l.InterfaceC15767
-    /* JADX INFO: renamed from: ᩳ */
-    public final int mo1941() {
-        return 12;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f66371;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final C2761 f66372;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f66373;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f66374;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f66375;
+
+    public C20705(long j, int i, int i2, C2761 c2761, boolean z, int i3, C0524 c0524) {
+        this.f66373 = j;
+        this.f66375 = i;
+        this.f66371 = i2;
+        this.f66372 = c2761;
+        this.f66370 = z;
+        this.f66374 = i3;
+        this.f66369 = c0524;
     }
 
-    public C20705(AbstractC11242 abstractC11242, AbstractC16579 abstractC16579) {
-        this.f67327 = abstractC11242;
-        this.f67328 = abstractC16579;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m47374() {
+        return this.f66375;
     }
 
-    @Override // l.InterfaceC15767
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo18742(C23800 c23800) {
-        return new C2068(this.f67327, new C11100(this.f67328, c23800));
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int m47376() {
+        return this.f66371;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C2761 m47378() {
+        return this.f66372;
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean m47375() {
+        return this.f66370;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m47377() {
+        return this.f66374;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C0524 m47373() {
+        return this.f66369;
     }
 }

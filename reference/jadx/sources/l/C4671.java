@@ -1,80 +1,19 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-
-/* JADX INFO: renamed from: l.ۙ۬ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0JF */
+/* JADX INFO: renamed from: l.ۙۙܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 532I */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4671 extends C23017 implements InterfaceC21191, InterfaceC6206 {
-    @Override // l.InterfaceC21191
-    public final /* synthetic */ void add(int i) {
-        C7786.m20456();
-        throw null;
-    }
+public final class C4671 extends AbstractC2693 {
 
-    @Override // java.util.ListIterator
-    public final /* bridge */ /* synthetic */ void add(Object obj) {
-        mo3717((Integer) obj);
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final int f16489 = Integer.numberOfLeadingZeros(31);
 
-    @Override // l.InterfaceC3758
-    public /* bridge */ /* synthetic */ void forEachRemaining(Object obj) {
-        forEachRemaining((IntConsumer) obj);
-    }
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final AbstractC21825 f16490 = new C4671("CharMatcher.whitespace()");
 
-    @Override // java.util.Iterator, l.InterfaceC13431, l.InterfaceC22104, l.InterfaceC6206
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C1435.m5012(this, consumer);
-    }
-
-    @Override // l.InterfaceC22104
-    public /* synthetic */ void forEachRemaining(IntConsumer intConsumer) {
-        C5170.$default$forEachRemaining((InterfaceC22104) this, intConsumer);
-    }
-
-    @Override // java.util.ListIterator
-    public final /* bridge */ /* synthetic */ void set(Object obj) {
-        mo3718((Integer) obj);
-    }
-
-    @Override // l.InterfaceC21191
+    @Override // l.AbstractC21825
     /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo3716(int i) {
-        C7786.m20459();
-        throw null;
-    }
-
-    @Override // l.InterfaceC21191
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo3717(Integer num) {
-        C7786.m20457((InterfaceC21191) this, num);
-    }
-
-    @Override // l.InterfaceC21191
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo3718(Integer num) {
-        C7786.m20460((InterfaceC21191) this, num);
-    }
-
-    @Override // l.C23017, l.InterfaceC21086, java.util.ListIterator
-    public final Object previous() {
-        return Integer.valueOf(mo3719());
-    }
-
-    @Override // java.util.ListIterator, java.util.Iterator
-    public final Integer next() {
-        return C1435.m5011(this);
-    }
-
-    @Override // l.InterfaceC22104
-    public final int nextInt() {
-        return m50909().f29881;
-    }
-
-    @Override // l.InterfaceC21191
-    /* JADX INFO: renamed from: ᩸ۙ */
-    public final int mo3719() {
-        return m50910().f29881;
+    public final boolean mo4420(char c) {
+        return "\u2002\u3000\r\u0085\u200a\u2005\u2000\u3000\u2029\u000b\u3000\u2008\u2003\u205f\u3000\u1680\t \u2006\u2001  \f\u2009\u3000\u2004\u3000\u3000\u2028\n \u3000".charAt((48906 * c) >>> f16489) == c;
     }
 }

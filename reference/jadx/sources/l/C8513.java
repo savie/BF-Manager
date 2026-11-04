@@ -1,32 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M605 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8513 extends AbstractC15673 {
+/* JADX INFO: renamed from: l.۠۠᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 17L4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8513 extends C3036 {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10630 f29490;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16327 f27824;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C8513(C10630 c10630, C17684 c17684, int i, int i2) {
-        super(c17684, i, i2);
-        this.f29490 = c10630;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f27825;
 
-    @Override // l.AbstractC15673
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C4742 f27826;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18499 f27827;
+
+    @Override // l.C3036, l.AbstractC0578
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo1249(C18825 c18825, int i) {
-        return Integer.valueOf(c18825.m43449());
+    public final void mo1505(C7926 c7926) {
     }
 
-    @Override // l.AbstractC15673, java.util.ListIterator, java.util.Iterator
-    public final Object next() {
-        int iNextIndex = nextIndex();
-        C10630 c10630 = this.f29490;
-        if (iNextIndex == c10630.f36289.f25685) {
-            c10630.f36290 = m37344();
+    @Override // l.C3036, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1518(C16327 c16327) {
+    }
+
+    @Override // l.C3036, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1510(final C11018 c11018) {
+        this.f9840 = c11018;
+        boolean z = this.f27825;
+        C18499 c18499 = this.f27827;
+        C4742 c4742 = this.f27826;
+        if (z) {
+            if (c11018.f34795 != null) {
+                final C13891 c13891M37569 = c4742.f16674.m37569(C14769.of((Object) c11018));
+                this.f9840 = c13891M37569;
+                final C16327 c16327 = this.f27824;
+                c18499.m43089(new Runnable(this) { // from class: l.ۡ۠᩺
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        C2547 c2547 = new C2547(c13891M37569, c11018);
+                        C16327 c16328 = c16327;
+                        c16328.f53001 = c2547.mo8479(c16328.f53001);
+                    }
+                });
+                return;
+            }
+            return;
         }
-        return (Integer) super.next();
+        if (c11018.f34795 == null) {
+            C13891 c13891M37568 = c4742.f16674.m37568();
+            c13891M37568.f26659 = c4742.f16676.f48263;
+            c11018.f34795 = c13891M37568;
+            c18499.m43089(new RunnableC9168(3, c11018));
+        }
+    }
+
+    public C8513(C4742 c4742, boolean z, C18499 c18499, C16327 c16327) {
+        this.f27826 = c4742;
+        this.f27825 = z;
+        this.f27827 = c18499;
+        this.f27824 = c16327;
     }
 }

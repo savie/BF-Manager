@@ -1,42 +1,25 @@
 package l;
 
-import java.util.concurrent.ThreadPoolExecutor;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ܶۖۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: EB24 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14934 extends AbstractC21989 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ThreadPoolExecutor f48710;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC21989 f48711;
-
-    @Override // l.AbstractC21989
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo34913(C1527 c1527) {
-        ThreadPoolExecutor threadPoolExecutor = this.f48710;
-        try {
-            this.f48711.mo34913(c1527);
-        } finally {
-            threadPoolExecutor.shutdown();
-        }
+/* JADX INFO: renamed from: l.ܰ᩺ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H88J */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14934 extends AbstractC17567 {
+    public final String toString() {
+        return "AnonymousOrNonStaticLocalClassAdapter";
     }
 
-    @Override // l.AbstractC21989
+    @Override // l.AbstractC17567
     /* JADX INFO: renamed from: ۙ */
-    public final void mo34912(Throwable th) {
-        ThreadPoolExecutor threadPoolExecutor = this.f48710;
-        try {
-            this.f48711.mo34912(th);
-        } finally {
-            threadPoolExecutor.shutdown();
-        }
+    public final Object mo3722(C4208 c4208) throws IOException {
+        c4208.m13445();
+        return null;
     }
 
-    public C14934(AbstractC21989 abstractC21989, ThreadPoolExecutor threadPoolExecutor) {
-        this.f48711 = abstractC21989;
-        this.f48710 = threadPoolExecutor;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) {
+        c21362.m48598();
     }
 }

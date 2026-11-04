@@ -79,7 +79,7 @@
 
     iget v8, p0, Lorg/bouncycastle/pqc/crypto/frodo/FrodoMatrixGenerator;->n:I
 
-    invoke-static {v5, v8, v6, v7}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {v5, v8, v6, v7}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result v8
 

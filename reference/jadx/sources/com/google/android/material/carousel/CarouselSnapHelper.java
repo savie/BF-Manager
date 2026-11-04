@@ -3,21 +3,21 @@ package com.google.android.material.carousel;
 import android.graphics.PointF;
 import android.util.DisplayMetrics;
 import android.view.View;
-import l.AbstractC21020;
-import l.AbstractC3380;
-import l.AbstractC5498;
-import l.C10438;
-import l.C16082;
-import l.C17492;
-import l.C3941;
-import l.InterfaceC7615;
+import l.AbstractC12546;
+import l.AbstractC20005;
+import l.AbstractC21169;
+import l.C11054;
+import l.C15529;
+import l.C25227;
+import l.C7525;
+import l.InterfaceC22989;
 
 /* JADX INFO: loaded from: classes.dex */
-public class CarouselSnapHelper extends AbstractC3380 {
+public class CarouselSnapHelper extends AbstractC12546 {
     public static final float HORIZONTAL_SNAP_SPEED = 100.0f;
     public static final float VERTICAL_SNAP_SPEED = 50.0f;
     public final boolean disableFling;
-    public C17492 recyclerView;
+    public C25227 recyclerView;
 
     public CarouselSnapHelper() {
         this(true);
@@ -27,27 +27,27 @@ public class CarouselSnapHelper extends AbstractC3380 {
         this.disableFling = z;
     }
 
-    @Override // l.AbstractC3380
-    public void attachToRecyclerView(C17492 c17492) {
-        super.attachToRecyclerView(c17492);
-        this.recyclerView = c17492;
+    @Override // l.AbstractC12546
+    public void attachToRecyclerView(C25227 c25227) {
+        super.attachToRecyclerView(c25227);
+        this.recyclerView = c25227;
     }
 
-    @Override // l.AbstractC3380
-    public int[] calculateDistanceToFinalSnap(AbstractC5498 abstractC5498, View view) {
-        return calculateDistanceToSnap(abstractC5498, view, false);
+    @Override // l.AbstractC12546
+    public int[] calculateDistanceToFinalSnap(AbstractC21169 abstractC21169, View view) {
+        return calculateDistanceToSnap(abstractC21169, view, false);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public int[] calculateDistanceToSnap(AbstractC5498 abstractC5498, View view, boolean z) {
-        if (!(abstractC5498 instanceof CarouselLayoutManager)) {
+    public int[] calculateDistanceToSnap(AbstractC21169 abstractC21169, View view, boolean z) {
+        if (!(abstractC21169 instanceof CarouselLayoutManager)) {
             return new int[]{0, 0};
         }
-        int iDistanceToFirstFocalKeyline = distanceToFirstFocalKeyline(view, (CarouselLayoutManager) abstractC5498, z);
-        if (abstractC5498.canScrollHorizontally()) {
+        int iDistanceToFirstFocalKeyline = distanceToFirstFocalKeyline(view, (CarouselLayoutManager) abstractC21169, z);
+        if (abstractC21169.canScrollHorizontally()) {
             return new int[]{iDistanceToFirstFocalKeyline, 0};
         }
-        if (abstractC5498.canScrollVertically()) {
+        if (abstractC21169.canScrollVertically()) {
             return new int[]{0, iDistanceToFirstFocalKeyline};
         }
         return new int[]{0, 0};
@@ -57,20 +57,20 @@ public class CarouselSnapHelper extends AbstractC3380 {
         return carouselLayoutManager.getOffsetToScrollToPositionForSnap(carouselLayoutManager.getPosition(view), z);
     }
 
-    @Override // l.AbstractC3380
-    public View findSnapView(AbstractC5498 abstractC5498) {
-        return findViewNearestFirstKeyline(abstractC5498);
+    @Override // l.AbstractC12546
+    public View findSnapView(AbstractC21169 abstractC21169) {
+        return findViewNearestFirstKeyline(abstractC21169);
     }
 
-    private View findViewNearestFirstKeyline(AbstractC5498 abstractC5498) {
-        int childCount = abstractC5498.getChildCount();
+    private View findViewNearestFirstKeyline(AbstractC21169 abstractC21169) {
+        int childCount = abstractC21169.getChildCount();
         View view = null;
-        if (childCount != 0 && (abstractC5498 instanceof CarouselLayoutManager)) {
-            CarouselLayoutManager carouselLayoutManager = (CarouselLayoutManager) abstractC5498;
+        if (childCount != 0 && (abstractC21169 instanceof CarouselLayoutManager)) {
+            CarouselLayoutManager carouselLayoutManager = (CarouselLayoutManager) abstractC21169;
             int i = Integer.MAX_VALUE;
             for (int i2 = 0; i2 < childCount; i2++) {
-                View childAt = abstractC5498.getChildAt(i2);
-                int iAbs = Math.abs(carouselLayoutManager.getOffsetToScrollToPositionForSnap(abstractC5498.getPosition(childAt), false));
+                View childAt = abstractC21169.getChildAt(i2);
+                int iAbs = Math.abs(carouselLayoutManager.getOffsetToScrollToPositionForSnap(abstractC21169.getPosition(childAt), false));
                 if (iAbs < i) {
                     view = childAt;
                     i = iAbs;
@@ -80,21 +80,21 @@ public class CarouselSnapHelper extends AbstractC3380 {
         return view;
     }
 
-    @Override // l.AbstractC3380
-    public int findTargetSnapPosition(AbstractC5498 abstractC5498, int i, int i2) {
+    @Override // l.AbstractC12546
+    public int findTargetSnapPosition(AbstractC21169 abstractC21169, int i, int i2) {
         int itemCount;
-        if (!this.disableFling || (itemCount = abstractC5498.getItemCount()) == 0) {
+        if (!this.disableFling || (itemCount = abstractC21169.getItemCount()) == 0) {
             return -1;
         }
-        int childCount = abstractC5498.getChildCount();
+        int childCount = abstractC21169.getChildCount();
         View view = null;
         View view2 = null;
         int i3 = Integer.MIN_VALUE;
         int i4 = Integer.MAX_VALUE;
         for (int i5 = 0; i5 < childCount; i5++) {
-            View childAt = abstractC5498.getChildAt(i5);
+            View childAt = abstractC21169.getChildAt(i5);
             if (childAt != null) {
-                int iDistanceToFirstFocalKeyline = distanceToFirstFocalKeyline(childAt, (CarouselLayoutManager) abstractC5498, false);
+                int iDistanceToFirstFocalKeyline = distanceToFirstFocalKeyline(childAt, (CarouselLayoutManager) abstractC21169, false);
                 if (iDistanceToFirstFocalKeyline <= 0 && iDistanceToFirstFocalKeyline > i3) {
                     view2 = childAt;
                     i3 = iDistanceToFirstFocalKeyline;
@@ -105,12 +105,12 @@ public class CarouselSnapHelper extends AbstractC3380 {
                 }
             }
         }
-        boolean zIsForwardFling = isForwardFling(abstractC5498, i, i2);
+        boolean zIsForwardFling = isForwardFling(abstractC21169, i, i2);
         if (zIsForwardFling && view != null) {
-            return abstractC5498.getPosition(view);
+            return abstractC21169.getPosition(view);
         }
         if (!zIsForwardFling && view2 != null) {
-            return abstractC5498.getPosition(view2);
+            return abstractC21169.getPosition(view2);
         }
         if (zIsForwardFling) {
             view = view2;
@@ -118,36 +118,36 @@ public class CarouselSnapHelper extends AbstractC3380 {
         if (view == null) {
             return -1;
         }
-        int position = abstractC5498.getPosition(view) + (isReverseLayout(abstractC5498) == zIsForwardFling ? -1 : 1);
+        int position = abstractC21169.getPosition(view) + (isReverseLayout(abstractC21169) == zIsForwardFling ? -1 : 1);
         if (position < 0 || position >= itemCount) {
             return -1;
         }
         return position;
     }
 
-    private boolean isForwardFling(AbstractC5498 abstractC5498, int i, int i2) {
-        if (abstractC5498.canScrollHorizontally()) {
+    private boolean isForwardFling(AbstractC21169 abstractC21169, int i, int i2) {
+        if (abstractC21169.canScrollHorizontally()) {
             return i > 0;
         }
         return i2 > 0;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private boolean isReverseLayout(AbstractC5498 abstractC5498) {
+    private boolean isReverseLayout(AbstractC21169 abstractC21169) {
         PointF pointFComputeScrollVectorForPosition;
-        int itemCount = abstractC5498.getItemCount();
-        if (!(abstractC5498 instanceof InterfaceC7615) || (pointFComputeScrollVectorForPosition = ((InterfaceC7615) abstractC5498).computeScrollVectorForPosition(itemCount - 1)) == null) {
+        int itemCount = abstractC21169.getItemCount();
+        if (!(abstractC21169 instanceof InterfaceC22989) || (pointFComputeScrollVectorForPosition = ((InterfaceC22989) abstractC21169).computeScrollVectorForPosition(itemCount - 1)) == null) {
             return false;
         }
         return pointFComputeScrollVectorForPosition.x < 0.0f || pointFComputeScrollVectorForPosition.y < 0.0f;
     }
 
-    @Override // l.AbstractC3380
-    public AbstractC21020 createScroller(final AbstractC5498 abstractC5498) {
-        if (abstractC5498 instanceof InterfaceC7615) {
-            return new C3941(this.recyclerView.getContext()) { // from class: com.google.android.material.carousel.CarouselSnapHelper.1
-                @Override // l.C3941, l.AbstractC21020
-                public void onTargetFound(View view, C16082 c16082, C10438 c10438) {
+    @Override // l.AbstractC12546
+    public AbstractC20005 createScroller(final AbstractC21169 abstractC21169) {
+        if (abstractC21169 instanceof InterfaceC22989) {
+            return new C7525(this.recyclerView.getContext()) { // from class: com.google.android.material.carousel.CarouselSnapHelper.1
+                @Override // l.C7525, l.AbstractC20005
+                public void onTargetFound(View view, C15529 c15529, C11054 c11054) {
                     if (CarouselSnapHelper.this.recyclerView != null) {
                         CarouselSnapHelper carouselSnapHelper = CarouselSnapHelper.this;
                         int[] iArrCalculateDistanceToSnap = carouselSnapHelper.calculateDistanceToSnap(carouselSnapHelper.recyclerView.getLayoutManager(), view, true);
@@ -155,16 +155,16 @@ public class CarouselSnapHelper extends AbstractC3380 {
                         int i2 = iArrCalculateDistanceToSnap[1];
                         int iCalculateTimeForDeceleration = calculateTimeForDeceleration(Math.max(Math.abs(i), Math.abs(i2)));
                         if (iCalculateTimeForDeceleration > 0) {
-                            c10438.m26352(i, i2, this.mDecelerateInterpolator, iCalculateTimeForDeceleration);
+                            c11054.m27938(i, i2, this.mDecelerateInterpolator, iCalculateTimeForDeceleration);
                         }
                     }
                 }
 
-                @Override // l.C3941
+                @Override // l.C7525
                 public float calculateSpeedPerPixel(DisplayMetrics displayMetrics) {
                     float f;
                     float f2;
-                    if (abstractC5498.canScrollVertically()) {
+                    if (abstractC21169.canScrollVertically()) {
                         f = displayMetrics.densityDpi;
                         f2 = 50.0f;
                     } else {

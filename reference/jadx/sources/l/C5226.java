@@ -1,10 +1,15 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚ۠ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 355P */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5226 extends C17146 {
+import android.view.View;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f18127;
+/* JADX INFO: renamed from: l.ۙ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: V1D4 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5226 extends AbstractC11191 {
+    @Override // l.AbstractC11191
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo1701(float f, long j, View view, C10335 c10335) {
+        view.setTranslationY(m28197(f, j, view, c10335));
+        return this.f35301;
+    }
 }

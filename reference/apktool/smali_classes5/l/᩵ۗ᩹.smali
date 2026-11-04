@@ -1,116 +1,77 @@
-.class public final Ll/᩵ۗ᩹;
-.super Ll/ۙ۬᩹;
-.source "K17Q"
+.class public final synthetic Ll/᩵ۗ᩹;
+.super Ljava/lang/Object;
+.source "SATH"
 
 
-# virtual methods
-.method public final ۨ(Ll/᩸ۜ᩹;)V
-    .locals 7
+# direct methods
+.method public static ۙ(Ll/ۨۗ᩹;Ljava/util/function/IntConsumer;)Ll/ۨۗ᩹;
+    .locals 1
 
-    const-string v0, "local"
+    .line 94
+    instance-of v0, p1, Ll/ۨۗ᩹;
 
-    .line 18
-    invoke-virtual {p1, v0}, Ll/᩸ۜ᩹;->ۙ(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    .line 19
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->᩸()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/ۡܿᩴ;->stream(Ljava/util/Collection;)Ll/ۚ֫ᩴ;
-
-    move-result-object v0
-
-    new-instance v1, Ll/ۙܰۤ;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Ll/ۙܰۤ;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ll/ۚ֫ᩴ;->map(Ljava/util/function/Function;)Ll/ۚ֫ᩴ;
-
-    move-result-object v0
-
-    new-instance v1, Ll/۠ۗ᩹;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {v0, v1}, Ll/ۚ֫ᩴ;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    .line 21
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    const/4 v4, 0x1
-
-    if-ge v3, v1, :cond_1
-
-    aget-object v5, v0, v3
-
-    .line 22
-    invoke-virtual {v5}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, ".apk"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
+    check-cast p1, Ll/ۨۗ᩹;
 
     goto :goto_0
 
-    :cond_1
-    const/4 v1, 0x1
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
-    :goto_1
-    array-length v3, v0
+    new-instance v0, Ll/᩹ۗ᩹;
 
-    if-ne v3, v4, :cond_2
+    invoke-direct {v0, p1}, Ll/᩹ۗ᩹;-><init>(Ljava/util/function/IntConsumer;)V
 
-    .line 29
-    aget-object v3, v0, v2
+    move-object p1, v0
 
-    new-array v4, v2, [Ljava/lang/String;
+    :goto_0
+    invoke-interface {p0, p1}, Ll/ۨۗ᩹;->ۤ(Ll/ۨۗ᩹;)Ll/ۗۗ᩹;
 
-    invoke-static {v3, v4}, Ll/ۚ᩵ۚ;->ۙ(Ljava/lang/String;[Ljava/lang/String;)Ll/᩷۠ۚ;
+    move-result-object p0
 
-    move-result-object v3
+    return-object p0
+.end method
 
-    invoke-static {v3}, Ll/᩶ܳ᩺;->ۙ(Ll/᩷۠ۚ;)Ljava/lang/String;
+.method public static ۙ(Ll/ۨۗ᩹;I)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    move-result-object v3
+    .line 52
+    invoke-static {p1}, Ll/۠۟ܺ;->᩷(I)C
 
-    goto :goto_2
+    move-result p1
 
-    :cond_2
-    const/4 v3, 0x0
+    invoke-interface {p0, p1}, Ll/ۨۗ᩹;->ۤ(C)V
 
-    .line 31
-    :goto_2
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->ۚ()Ll/ۨۜ᩹;
+    return-void
+.end method
 
-    move-result-object p1
+.method public static ۙ(Ll/ۨۗ᩹;Ljava/lang/Character;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    invoke-static {p1, v0, v3, v1, v2}, Ll/᩷۫ۨ;->ۙ(Ll/ۨۜ᩹;[Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .line 63
+    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
+
+    move-result p1
+
+    invoke-interface {p0, p1}, Ll/ۨۗ᩹;->ۤ(C)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/ۨۗ᩹;Ljava/lang/Object;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 35
+    check-cast p1, Ljava/lang/Character;
+
+    invoke-interface {p0, p1}, Ll/ۨۗ᩹;->᩷(Ljava/lang/Character;)V
 
     return-void
 .end method

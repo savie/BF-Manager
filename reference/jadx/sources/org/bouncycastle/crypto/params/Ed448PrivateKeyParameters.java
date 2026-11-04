@@ -7,7 +7,7 @@ import org.bouncycastle.math.ec.rfc8032.Ed448;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Ed448PrivateKeyParameters extends AsymmetricKeyParameter {
     public static final int KEY_SIZE = 57;
     public static final int SIGNATURE_SIZE = 114;

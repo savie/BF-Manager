@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.ExtendedDigest;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Blake2spDigest implements ExtendedDigest {
     public int depth;
     public int digestLength;

@@ -789,7 +789,7 @@
     iget v0, p0, Lorg/bouncycastle/crypto/modes/SICBlockCipher;->blockSize:I
 
     .line 0
-    invoke-static {v0, v2, p2}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2, p2}, Ll/ۨ᩹ۧ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
 

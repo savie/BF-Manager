@@ -1,138 +1,90 @@
 package l;
 
-import android.os.Handler;
-import android.os.SystemClock;
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۧ֡۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B78Q */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10647 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C0219 f36319 = new C0219();
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C16996 f36320 = new C16996();
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Runnable f36323;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final RunnableC12058 f36324 = new Runnable() { // from class: l.۫֡۬
-        @Override // java.lang.Runnable
-        public final void run() {
-            C10647.m26832(this.f40340);
-        }
-    };
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f36321 = new ArrayList();
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f36325 = -1;
+/* JADX INFO: renamed from: l.ۤۚۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10647 implements InterfaceC20980 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0219 f36322 = f36319;
+    public final /* synthetic */ C22010 f33752;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final C16996 f36326 = f36320;
-
-    /* JADX WARN: Type inference failed for: r0v0, types: [l.۫֡۬] */
-    public C10647(Runnable runnable) {
-        this.f36323 = runnable;
+    public C10647(C22010 c22010) {
+        this.f33752 = c22010;
     }
 
+    /* JADX WARN: Type inference failed for: r4v0, types: [l.۠۫ۘ] */
+    /* JADX WARN: Type inference failed for: r5v0, types: [l.ۜ۫ۘ] */
+    @Override // l.InterfaceC20980
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26834(int i) {
-        if (i < 1 || i > 999) {
-            throw new IllegalArgumentException("Minutes must be between 1 and 999");
-        }
-        this.f36322.getClass();
-        this.f36325 = (((long) i) * 60000) + SystemClock.elapsedRealtime();
-        long jM26837 = m26837();
-        this.f36326.getClass();
-        Handler handlerM39278 = C16737.m39278();
-        RunnableC12058 runnableC12058 = this.f36324;
-        handlerM39278.removeCallbacks(runnableC12058);
-        C16737.m39278().postDelayed(runnableC12058, Math.max(jM26837, 0L));
-        Iterator it = new ArrayList(this.f36321).iterator();
-        while (it.hasNext()) {
-            ((InterfaceC5707) it.next()).mo15742();
-        }
-    }
+    public final AbstractC11781 mo27137(C3168 c3168, AbstractC19728 abstractC19728) {
+        final C14769 c14769M49593 = C21901.m49593(abstractC19728);
+        ?? r4 = new Function() { // from class: l.۠۫ۘ
+            @Override // java.util.function.Function
+            /* JADX INFO: renamed from: andThen */
+            public /* synthetic */ Function mo10608andThen(Function function) {
+                return C24247.$default$andThen(this, function);
+            }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long m26837() {
-        long j = this.f36325;
-        if (j == -1) {
-            return 0L;
-        }
-        this.f36322.getClass();
-        return Math.max(j - SystemClock.elapsedRealtime(), 0L);
-    }
+            @Override // java.util.function.Function
+            public /* synthetic */ Function compose(Function function) {
+                return C24247.$default$compose(this, function);
+            }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m26836() {
-        long jM26837 = m26837();
-        if (jM26837 <= 0) {
-            return 0;
-        }
-        return (int) ((jM26837 + 59999) / 60000);
-    }
+            @Override // java.util.function.Function
+            public final Object apply(Object obj) {
+                final C10647 c10647 = this.f28192;
+                final C14769 c14769 = c14769M49593;
+                return new Iterable() { // from class: l.ۙۚۘ
+                    @Override // java.lang.Iterable
+                    public final Iterator iterator() {
+                        final C10647 c10648 = c10647;
+                        return C8475.m22793(c14769, new Function() { // from class: l.᩷ۚۘ
+                            @Override // java.util.function.Function
+                            /* JADX INFO: renamed from: andThen */
+                            public /* synthetic */ Function mo10608andThen(Function function) {
+                                return C24247.$default$andThen(this, function);
+                            }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26835(InterfaceC5707 interfaceC5707) {
-        ArrayList arrayList = this.f36321;
-        if (arrayList.contains(interfaceC5707)) {
-            return;
-        }
-        arrayList.add(interfaceC5707);
-    }
+                            @Override // java.util.function.Function
+                            public /* synthetic */ Function compose(Function function) {
+                                return C24247.$default$compose(this, function);
+                            }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m26838(InterfaceC5707 interfaceC5707) {
-        this.f36321.remove(interfaceC5707);
-    }
+                            @Override // java.util.function.Function
+                            public final Object apply(Object obj2) {
+                                return c10648.f33752.f71034.m35528((AbstractC19728) obj2).iterator();
+                            }
+                        });
+                    }
+                };
+            }
+        };
+        ?? r5 = new BiFunction() { // from class: l.ۜ۫ۘ
+            public /* synthetic */ BiFunction andThen(Function function) {
+                return C3363.$default$andThen(this, function);
+            }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m26832(C10647 c10647) {
-        RunnableC12058 runnableC12058 = c10647.f36324;
-        C16996 c16996 = c10647.f36326;
-        if (c10647.f36325 != -1) {
-            long jM26837 = c10647.m26837();
-            if (jM26837 <= 0) {
-                c16996.getClass();
-                C16737.m39278().removeCallbacks(runnableC12058);
-                boolean z = c10647.f36325 != -1;
-                c10647.f36325 = -1L;
-                if (z) {
-                    Iterator it = new ArrayList(c10647.f36321).iterator();
-                    while (it.hasNext()) {
-                        ((InterfaceC5707) it.next()).mo15742();
+            @Override // java.util.function.BiFunction
+            public final Object apply(Object obj, Object obj2) {
+                C2920 c2920 = (C2920) obj;
+                C10647 c10647 = this.f23599;
+                c10647.getClass();
+                Iterator it = c14769M49593.iterator();
+                while (it.hasNext()) {
+                    try {
+                        return c10647.f33752.f71006.m45172(c2920, (AbstractC19728) it.next());
+                    } catch (C21566 unused) {
                     }
                 }
-                c10647.f36323.run();
-                return;
+                return null;
             }
-            c16996.getClass();
-            C16737.m39278().removeCallbacks(runnableC12058);
-            C16737.m39278().postDelayed(runnableC12058, Math.max(jM26837, 0L));
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m26833() {
-        this.f36326.getClass();
-        C16737.m39278().removeCallbacks(this.f36324);
-        boolean z = this.f36325 != -1;
-        this.f36325 = -1L;
-        if (z) {
-            Iterator it = new ArrayList(this.f36321).iterator();
-            while (it.hasNext()) {
-                ((InterfaceC5707) it.next()).mo15742();
-            }
-        }
+        };
+        C13848 c13848 = new C13848(0);
+        C22010 c22010 = this.f33752;
+        return c22010.m49744(c3168, abstractC19728, (Function) r4, (BiFunction) r5, c13848, c22010.f71028);
     }
 }

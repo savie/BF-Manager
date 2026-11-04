@@ -1,20 +1,31 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ᩷ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes4.dex */
-public final enum C11950 extends EnumC8422 {
-    public /* synthetic */ C11950() {
-        this("Rawtext", 4);
+/* JADX INFO: renamed from: l.ۧ᩺ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2BBU */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11950 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f38489;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9012 f38490;
+
+    public C11950(int i, C9012 c9012) {
+        if (i < 0) {
+            throw new IllegalArgumentException("address < 0");
+        }
+        this.f38489 = i;
+        this.f38490 = c9012;
     }
 
-    public C11950(String str, int i) {
-        super(str, i, 0);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m29922() {
+        return this.f38489;
     }
 
-    @Override // l.EnumC8422
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        EnumC8422.m22068(c8111, c2424, this, EnumC8422.f29196);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9012 m29923() {
+        return this.f38490;
     }
 }

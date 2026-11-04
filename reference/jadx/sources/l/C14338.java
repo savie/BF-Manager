@@ -1,35 +1,47 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳۛۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S424 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14338 extends C22220 {
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.Locale;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC23903 f46964;
+/* JADX INFO: renamed from: l.ܰۘۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A2DO */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14338 extends AbstractC20306 {
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1262(C3107 c3107) {
-        AbstractC23903 abstractC23903 = this.f46964;
-        c3107.f11716 = abstractC23903;
-        c3107.f30190 = abstractC23903.f77449;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f45230 = 32;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f45231;
+
+    public C14338(int i) {
+        this.f45231 = i;
     }
 
-    @Override // l.C22220, l.AbstractC19357
+    @Override // l.AbstractC20306
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1268(C23570 c23570) {
-        AbstractC23903 abstractC23903 = this.f46964;
-        c23570.f76355 = abstractC23903;
-        c23570.f30190 = abstractC23903.f77449;
-        this.f46964 = abstractC23903.f77448;
-        mo7248(c23570.f76357);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3930(C7672 c7672) {
-        this.f46964 = c7672.f25387;
-        mo7248(c7672.f25385);
+    public final boolean mo24271(int i, StringWriter stringWriter) throws IOException {
+        if (i >= this.f45230 && i <= this.f45231) {
+            return false;
+        }
+        if (i > 65535) {
+            char[] chars = Character.toChars(i);
+            StringBuilder sb = new StringBuilder("\\u");
+            String hexString = Integer.toHexString(chars[0]);
+            Locale locale = Locale.ENGLISH;
+            sb.append(hexString.toUpperCase(locale));
+            sb.append("\\u");
+            sb.append(Integer.toHexString(chars[1]).toUpperCase(locale));
+            stringWriter.write(sb.toString());
+            return true;
+        }
+        stringWriter.write("\\u");
+        char[] cArr = AbstractC3152.f10217;
+        stringWriter.write(cArr[(i >> 12) & 15]);
+        stringWriter.write(cArr[(i >> 8) & 15]);
+        stringWriter.write(cArr[(i >> 4) & 15]);
+        stringWriter.write(cArr[i & 15]);
+        return true;
     }
 }

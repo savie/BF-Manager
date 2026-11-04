@@ -1,10 +1,10 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C0252;
-import l.C15489;
-import l.C22697;
-import l.C5800;
-import l.C7997;
+import l.C14483;
+import l.C18011;
+import l.C25272;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
 import org.bouncycastle.crypto.CipherKeyGenerator;
@@ -18,7 +18,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3411 {
 
     public class Digest extends BCMessageDigest implements Cloneable {
@@ -60,21 +60,18 @@ public class GOST3411 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac extends BaseMac {
         public HashMac() {
             super(new HMac(new GOST3411Digest()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac2012_256 extends BaseMac {
         public HashMac2012_256() {
             super(new HMac(new GOST3411_2012_256Digest()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac2012_512 extends BaseMac {
         public HashMac2012_512() {
             super(new HMac(new GOST3411_2012_512Digest()));
@@ -99,7 +96,6 @@ public class GOST3411 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = GOST3411.class.getName();
 
@@ -107,34 +103,33 @@ public class GOST3411 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$Digest", "MessageDigest.GOST3411", sb, configurableProvider);
+            C8947.m23913(str, "$Digest", "MessageDigest.GOST3411", sb, configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST", "GOST3411");
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST-3411", "GOST3411");
             StringBuilder sb2 = new StringBuilder("Alg.Alias.MessageDigest.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = CryptoProObjectIdentifiers.gostR3411;
-            StringBuilder sbM50268 = C22697.m50268("GOST3411", str, sb2, aSN1ObjectIdentifier, configurableProvider);
-            sbM50268.append("$HashMac");
-            addHMACAlgorithm(configurableProvider, "GOST3411", sbM50268.toString(), C15489.m37076(str, "$KeyGenerator"));
+            StringBuilder sbM56410 = C25272.m56410("GOST3411", str, sb2, aSN1ObjectIdentifier, configurableProvider);
+            sbM56410.append("$HashMac");
+            addHMACAlgorithm(configurableProvider, "GOST3411", sbM56410.toString(), C14483.m34972(str, "$KeyGenerator"));
             addHMACAlias(configurableProvider, "GOST3411", aSN1ObjectIdentifier);
             configurableProvider.addAlgorithm("MessageDigest.GOST3411-2012-256", str + "$Digest2012_256");
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST-2012-256", "GOST3411-2012-256");
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST-3411-2012-256", "GOST3411-2012-256");
-            StringBuilder sbM50269 = C22697.m50268("GOST3411-2012-256", str, new StringBuilder("Alg.Alias.MessageDigest."), RosstandartObjectIdentifiers.id_tc26_gost_3411_12_256, configurableProvider);
-            sbM50269.append("$HashMac2012_256");
-            addHMACAlgorithm(configurableProvider, "GOST3411-2012-256", sbM50269.toString(), C15489.m37076(str, "$KeyGenerator2012_256"));
+            StringBuilder sbM56411 = C25272.m56410("GOST3411-2012-256", str, new StringBuilder("Alg.Alias.MessageDigest."), RosstandartObjectIdentifiers.id_tc26_gost_3411_12_256, configurableProvider);
+            sbM56411.append("$HashMac2012_256");
+            addHMACAlgorithm(configurableProvider, "GOST3411-2012-256", sbM56411.toString(), C14483.m34972(str, "$KeyGenerator2012_256"));
             addHMACAlias(configurableProvider, "GOST3411-2012-256", RosstandartObjectIdentifiers.id_tc26_hmac_gost_3411_12_256);
             configurableProvider.addAlgorithm("MessageDigest.GOST3411-2012-512", str + "$Digest2012_512");
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST-2012-512", "GOST3411-2012-512");
             configurableProvider.addAlgorithm("Alg.Alias.MessageDigest.GOST-3411-2012-512", "GOST3411-2012-512");
-            StringBuilder sbM502610 = C22697.m50268("GOST3411-2012-512", str, new StringBuilder("Alg.Alias.MessageDigest."), RosstandartObjectIdentifiers.id_tc26_gost_3411_12_512, configurableProvider);
-            sbM502610.append("$HashMac2012_512");
-            addHMACAlgorithm(configurableProvider, "GOST3411-2012-512", sbM502610.toString(), C15489.m37076(str, "$KeyGenerator2012_512"));
+            StringBuilder sbM56412 = C25272.m56410("GOST3411-2012-512", str, new StringBuilder("Alg.Alias.MessageDigest."), RosstandartObjectIdentifiers.id_tc26_gost_3411_12_512, configurableProvider);
+            sbM56412.append("$HashMac2012_512");
+            addHMACAlgorithm(configurableProvider, "GOST3411-2012-512", sbM56412.toString(), C14483.m34972(str, "$KeyGenerator2012_512"));
             addHMACAlias(configurableProvider, "GOST3411-2012-512", RosstandartObjectIdentifiers.id_tc26_hmac_gost_3411_12_512);
-            C7997.m21058(C0252.m1694(str, "$PBEWithMacKeyFactory", "SecretKeyFactory.PBEWITHHMACGOST3411", "Alg.Alias.SecretKeyFactory.", configurableProvider), aSN1ObjectIdentifier, configurableProvider, "PBEWITHHMACGOST3411");
+            C18011.m41992(C4794.m14772(str, "$PBEWithMacKeyFactory", "SecretKeyFactory.PBEWITHHMACGOST3411", "Alg.Alias.SecretKeyFactory.", configurableProvider), aSN1ObjectIdentifier, configurableProvider, "PBEWITHHMACGOST3411");
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithMacKeyFactory extends PBESecretKeyFactory {
         public PBEWithMacKeyFactory() {
             super("PBEwithHmacGOST3411", null, false, 2, 6, 256, 0);

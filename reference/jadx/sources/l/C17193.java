@@ -1,70 +1,34 @@
 package l;
 
-import bin.mt.plus.R;
+import java.util.concurrent.TimeUnit;
 
-/* JADX INFO: renamed from: l.ܿ۟ۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3B3L */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17193 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ܺ᩻ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAIZ */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17193 implements InterfaceC19479 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC11632 f54817;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f56022;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16881 f54818;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20409 f54819;
-
-    public C17193(C20409 c20409, ActivityC11632 activityC11632, C16881 c16881) {
-        this.f54819 = c20409;
-        this.f54817 = activityC11632;
-        this.f54818 = c16881;
+    public /* synthetic */ C17193(int i) {
+        this.f56022 = i;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f54817, R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        C2063 c2063 = new C2063(0, C22037.f71424, false, 0, null, null, null);
-        synchronized (this.f54819.f66154) {
-            C23232 c23232M46060 = C20409.m46060(this.f54819, c2063);
-            try {
-                c23232M46060.f75392.m49637(this.f54818);
-                c23232M46060.close();
-            } catch (Throwable th) {
-                if (c23232M46060 != null) {
-                    try {
-                        c23232M46060.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                }
-                throw th;
-            }
+    @Override // l.InterfaceC19479
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo4064() {
+        switch (this.f56022) {
+            case 0:
+                return C23907.m53404();
+            default:
+                C6463 c6463M54267 = C24258.m54267();
+                TimeUnit timeUnit = TimeUnit.SECONDS;
+                c6463M54267.m18267(10L, timeUnit);
+                c6463M54267.m18276(10L, timeUnit);
+                c6463M54267.m18278(15L, timeUnit);
+                c6463M54267.m18266(25L);
+                c6463M54267.m18273(new C12970());
+                return c6463M54267.m18265();
         }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C15829.m37611(R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f54819.m46062(exc, this.f54817);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
     }
 }

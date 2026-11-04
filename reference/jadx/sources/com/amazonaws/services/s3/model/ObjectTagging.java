@@ -7,15 +7,15 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public class ObjectTagging implements Serializable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public ArrayList f636;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public ArrayList f626;
 
     public ObjectTagging(ArrayList arrayList) {
-        this.f636 = arrayList;
+        this.f626 = arrayList;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m640() {
-        return this.f636;
+    public final List m634() {
+        return this.f626;
     }
 }

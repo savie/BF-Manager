@@ -1,143 +1,98 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import com.google.android.material.motion.MotionUtils;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۡ۠۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6KS */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8758 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m22721(JSONObject jSONObject, String... strArr) throws C12731 {
-        HashSet hashSet = new HashSet(Arrays.asList(strArr));
-        HashSet hashSet2 = new HashSet();
-        for (String str : jSONObject.names()) {
-            if (!hashSet.contains(str) || !hashSet2.add(str)) {
-                throw m22719(jSONObject.get(str), str, "Unexpected or repeated argument");
-            }
-        }
-        for (String str2 : strArr) {
-            if (!hashSet2.contains(str2)) {
-                throw m22719((JSONValue) null, str2, "Missing argument");
-            }
-        }
+/* JADX INFO: renamed from: l.۠ܽۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8758 extends C4284 implements InterfaceC17160 {
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final /* synthetic */ void accept(double d) {
+        AbstractC13956.m();
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static String m22723(JSONObject jSONObject, String str) throws C12731 {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isString()) {
-            throw m22719(jSONValue, str, "Expected a string");
-        }
-        return jSONValue.asString();
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(long j) {
+        AbstractC13956.u();
+        throw null;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m22724(JSONObject jSONObject, String str) throws C12731 {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isBoolean()) {
-            throw m22719(jSONValue, str, "Expected a boolean");
-        }
-        return jSONValue.asBoolean();
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        d((Integer) obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m22714(JSONObject jSONObject, String str, int i, int i2) throws C12731 {
-        int iM26321;
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue != null) {
-            try {
-                if (jSONValue.isNumber() && (iM26321 = C10413.m26321(jSONValue)) >= i && iM26321 <= i2) {
-                    return iM26321;
-                }
-            } catch (ArithmeticException | NumberFormatException unused) {
-            }
-        }
-        throw m22719(jSONValue, str, "Integer is outside the allowed range");
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONArray m22715(JSONObject jSONObject, String str) throws C12731 {
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isArray() || jSONValue.asArray().isEmpty()) {
-            throw m22719(jSONValue, str, "Expected a non-empty array");
-        }
-        return jSONValue.asArray();
+    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
+        return C4109.$default$andThen(this, intConsumer);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static JSONObject m22716(String str, JSONValue jSONValue) throws C12731 {
-        if (jSONValue == null || !jSONValue.isObject()) {
-            throw m22719(jSONValue, str, "Expected an object");
-        }
-        return jSONValue.asObject();
+    @Override // l.InterfaceC12334
+    public final /* synthetic */ void d(Integer num) {
+        AbstractC13956.p(this, num);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m22722(String str, String str2, boolean z) throws C12731 {
-        if (str.isEmpty()) {
-            if (!z) {
-                throw m22719(JSON.value(str), str2, "The ZIP root cannot be modified");
-            }
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    @Override // l.InterfaceC4262
+    public final /* bridge */ /* synthetic */ InterfaceC13409 build() {
+        build();
+        return this;
+    }
+
+    @Override // l.InterfaceC17160, l.InterfaceC4262
+    public final InterfaceC2792 build() {
+        int i = this.b;
+        int[] iArr = this.a;
+        if (i >= iArr.length) {
+            return this;
+        }
+        throw new IllegalStateException(String.format("Current size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(iArr.length)));
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        int[] iArr = this.a;
+        if (j != iArr.length) {
+            throw new IllegalStateException(String.format("Begin size %d is not equal to fixed size %d", Long.valueOf(j), Integer.valueOf(iArr.length)));
+        }
+        this.b = 0;
+    }
+
+    @Override // l.InterfaceC15143
+    public final void accept(int i) {
+        int i2 = this.b;
+        int[] iArr = this.a;
+        if (i2 < iArr.length) {
+            this.b = i2 + 1;
+            iArr[i2] = i;
             return;
         }
-        if (str.indexOf(92) < 0) {
-            if (str.indexOf(0) < 0) {
-                int i = str.charAt(0) == '/' ? 1 : 0;
-                int i2 = i;
-                while (i <= str.length()) {
-                    if (i >= str.length() || str.charAt(i) == '/') {
-                        if (i == str.length() && i2 == i) {
-                            return;
-                        }
-                        if (str.substring(i2, i).isEmpty()) {
-                            throw m22719(JSON.value(str), str2, "ZIP path contains an empty segment");
-                        }
-                        i2 = i + 1;
-                    }
-                    i++;
-                }
-                return;
-            }
-        }
-        throw m22719(JSON.value(str), str2, "Expected a ZIP entry name using forward slashes without NUL");
+        throw new IllegalStateException(String.format("Accept exceeded fixed size of %d", Integer.valueOf(iArr.length)));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C5928 m22717(C2800 c2800, String str, boolean z) throws C12731 {
-        C5928 c5928M8503 = c2800.m8503(str);
-        EnumC12279 enumC12279M16196 = c5928M8503.m16196();
-        if (enumC12279M16196 == EnumC12279.MISSING) {
-            throw m22718(JSON.object().add(MotionUtils.EASING_TYPE_PATH, str), "FILE_NOT_FOUND", "The source path does not exist");
+    @Override // l.InterfaceC15143
+    public final void end() {
+        int i = this.b;
+        int[] iArr = this.a;
+        if (i < iArr.length) {
+            throw new IllegalStateException(String.format("End size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(iArr.length)));
         }
-        if (enumC12279M16196 == EnumC12279.LINK || enumC12279M16196 == EnumC12279.OTHER) {
-            throw C12731.m31631("FILE_UNSUPPORTED_TYPE", "Links and special nodes cannot be used as ZIP content sources", "fatal", null, JSON.object().add(MotionUtils.EASING_TYPE_PATH, str));
-        }
-        if (enumC12279M16196 == (z ? EnumC12279.DIRECTORY : EnumC12279.REGULAR)) {
-            return c5928M8503;
-        }
-        throw m22718(JSON.object().add(MotionUtils.EASING_TYPE_PATH, str), "ZIP_PATH_TYPE_MISMATCH", "The path suffix does not match the source type");
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m22719(JSONValue jSONValue, String str, String str2) {
-        return C12731.m31626(str2, str, jSONValue, JSON.array(), (JSONObject) null);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m22718(JSONObject jSONObject, String str, String str2) {
-        return C12731.m31627(str, str2, "warning", (JSONArray) null, jSONObject);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m22720() throws C12731 {
-        if (Thread.currentThread().isInterrupted()) {
-            throw m22718(JSON.object(), "ZIP_OPERATION_CANCELLED", "ZIP operation was cancelled");
-        }
+    @Override // l.C4284
+    public final String toString() {
+        int[] iArr = this.a;
+        return String.format("IntFixedNodeBuilder[%d][%s]", Integer.valueOf(iArr.length - this.b), Arrays.toString(iArr));
     }
 }

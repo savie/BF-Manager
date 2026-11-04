@@ -1,59 +1,61 @@
 package l;
 
-import java.io.Serializable;
-import java.util.function.Function;
-import java.util.function.IntUnaryOperator;
-
-/* JADX INFO: renamed from: l.ᩴۚᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1L7 */
+/* JADX INFO: renamed from: l.ܿ᩵᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: IA21 */
 /* JADX INFO: loaded from: classes5.dex */
-public abstract class AbstractC18556 implements InterfaceC22666, Serializable {
-    public static final long serialVersionUID = -4940583368468432370L;
+public abstract class AbstractC18556 extends Thread implements InterfaceC23032 {
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f60286 = C16980.m40037(AbstractC18556.class);
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f60287;
+
+    @Override // l.InterfaceC23032
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo22001() {
+        return false;
+    }
+
+    /* JADX INFO: renamed from: ᩻ */
+    public abstract C19982 mo2877();
+
+    public AbstractC18556() {
+        Runtime.getRuntime().addShutdownHook(this);
+    }
+
+    @Override // l.InterfaceC23032
+    /* JADX INFO: renamed from: ᩷ */
+    public final InterfaceC23032 mo22002() {
+        return new C8115(this, new C19982());
+    }
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f59037;
-
-    public /* synthetic */ IntUnaryOperator andThen(IntUnaryOperator intUnaryOperator) {
-        return C15568.$default$andThen(this, intUnaryOperator);
+    public final InterfaceC23032 m43135() {
+        return new C8115(this, new C19982(null, null, null, EnumC22966.GUEST));
     }
 
-    public /* synthetic */ IntUnaryOperator compose(IntUnaryOperator intUnaryOperator) {
-        return C15568.$default$compose(this, intUnaryOperator);
-    }
-
-    @Override // l.InterfaceC22666
+    @Override // l.InterfaceC23032
     /* JADX INFO: renamed from: ۙ */
-    public abstract int mo26878(int i, int i2);
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m42951() {
-        this.f59037 = -1;
+    public final InterfaceC24546 mo22000() {
+        return mo2877();
     }
 
-    @Override // l.InterfaceC22666
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int mo42952() {
-        return this.f59037;
+    /* JADX INFO: renamed from: ۧ */
+    public void mo2873() {
+        if (this.f60287) {
+            return;
+        }
+        Runtime.getRuntime().removeShutdownHook(this);
     }
 
-    @Override // java.util.function.IntUnaryOperator
-    public final int applyAsInt(int i) {
-        return get(i);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return get(obj);
-    }
-
-    @Override // java.util.function.Function
-    public final Function compose(Function function) {
-        throw new NoSuchMethodError();
-    }
-
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public final Function mo33696andThen(Function function) {
-        throw new NoSuchMethodError();
+    @Override // java.lang.Thread, java.lang.Runnable
+    public final void run() {
+        try {
+            this.f60287 = true;
+            mo2873();
+        } catch (C20048 e) {
+            f60286.mo13702("Failed to close context on shutdown", (Throwable) e);
+        }
     }
 }

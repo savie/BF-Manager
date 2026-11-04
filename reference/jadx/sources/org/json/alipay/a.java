@@ -3,7 +3,7 @@ package org.json.alipay;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
-import l.C2271;
+import l.C14442;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
@@ -86,7 +86,7 @@ public class a {
         if (objB != null) {
             return objB;
         }
-        throw new JSONException(C2271.m6966(i, "JSONArray[", "] not found."));
+        throw new JSONException(C14442.m34864(i, "JSONArray[", "] not found."));
     }
 
     public String a(String str) {

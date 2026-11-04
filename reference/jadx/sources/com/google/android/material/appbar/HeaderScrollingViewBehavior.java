@@ -7,11 +7,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.List;
-import l.C15844;
-import l.C2746;
-import l.C4449;
-import l.C5031;
-import l.C9679;
+import l.C15578;
+import l.C16973;
+import l.C22666;
+import l.C25276;
+import l.C3977;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class HeaderScrollingViewBehavior extends ViewOffsetBehavior {
@@ -50,22 +50,22 @@ public abstract class HeaderScrollingViewBehavior extends ViewOffsetBehavior {
         this.verticalLayoutGap = 0;
     }
 
-    @Override // l.AbstractC23790
-    public boolean onMeasureChild(C2746 c2746, View view, int i, int i2, int i3, int i4) {
+    @Override // l.AbstractC11103
+    public boolean onMeasureChild(C25276 c25276, View view, int i, int i2, int i3, int i4) {
         View viewFindFirstDependency;
-        C15844 lastWindowInsets;
+        C3977 lastWindowInsets;
         int i5 = view.getLayoutParams().height;
-        if ((i5 != -1 && i5 != -2) || (viewFindFirstDependency = findFirstDependency(c2746.getDependencies(view))) == null) {
+        if ((i5 != -1 && i5 != -2) || (viewFindFirstDependency = findFirstDependency(c25276.getDependencies(view))) == null) {
             return false;
         }
         int size = View.MeasureSpec.getSize(i3);
         if (size > 0) {
-            int i6 = C5031.f17539;
-            if (viewFindFirstDependency.getFitsSystemWindows() && (lastWindowInsets = c2746.getLastWindowInsets()) != null) {
-                size += lastWindowInsets.m37670() + lastWindowInsets.m37681();
+            int i6 = C22666.f73603;
+            if (viewFindFirstDependency.getFitsSystemWindows() && (lastWindowInsets = c25276.getLastWindowInsets()) != null) {
+                size += lastWindowInsets.m12825() + lastWindowInsets.m12824();
             }
         } else {
-            size = c2746.getHeight();
+            size = c25276.getHeight();
         }
         int scrollRange = size + getScrollRange(viewFindFirstDependency);
         int measuredHeight = viewFindFirstDependency.getMeasuredHeight();
@@ -75,33 +75,33 @@ public abstract class HeaderScrollingViewBehavior extends ViewOffsetBehavior {
             view.setTranslationY(0.0f);
             scrollRange -= measuredHeight;
         }
-        c2746.onMeasureChild(view, i, i2, View.MeasureSpec.makeMeasureSpec(scrollRange, i5 == -1 ? 1073741824 : Integer.MIN_VALUE), i4);
+        c25276.onMeasureChild(view, i, i2, View.MeasureSpec.makeMeasureSpec(scrollRange, i5 == -1 ? 1073741824 : Integer.MIN_VALUE), i4);
         return true;
     }
 
     @Override // com.google.android.material.appbar.ViewOffsetBehavior
-    public void layoutChild(C2746 c2746, View view, int i) {
-        View viewFindFirstDependency = findFirstDependency(c2746.getDependencies(view));
+    public void layoutChild(C25276 c25276, View view, int i) {
+        View viewFindFirstDependency = findFirstDependency(c25276.getDependencies(view));
         if (viewFindFirstDependency != null) {
-            C9679 c9679 = (C9679) view.getLayoutParams();
+            C15578 c15578 = (C15578) view.getLayoutParams();
             Rect rect = this.tempRect1;
-            rect.set(c2746.getPaddingLeft() + ((ViewGroup.MarginLayoutParams) c9679).leftMargin, viewFindFirstDependency.getBottom() + ((ViewGroup.MarginLayoutParams) c9679).topMargin, (c2746.getWidth() - c2746.getPaddingRight()) - ((ViewGroup.MarginLayoutParams) c9679).rightMargin, ((viewFindFirstDependency.getBottom() + c2746.getHeight()) - c2746.getPaddingBottom()) - ((ViewGroup.MarginLayoutParams) c9679).bottomMargin);
-            C15844 lastWindowInsets = c2746.getLastWindowInsets();
+            rect.set(c25276.getPaddingLeft() + ((ViewGroup.MarginLayoutParams) c15578).leftMargin, viewFindFirstDependency.getBottom() + ((ViewGroup.MarginLayoutParams) c15578).topMargin, (c25276.getWidth() - c25276.getPaddingRight()) - ((ViewGroup.MarginLayoutParams) c15578).rightMargin, ((viewFindFirstDependency.getBottom() + c25276.getHeight()) - c25276.getPaddingBottom()) - ((ViewGroup.MarginLayoutParams) c15578).bottomMargin);
+            C3977 lastWindowInsets = c25276.getLastWindowInsets();
             if (lastWindowInsets != null) {
-                int i2 = C5031.f17539;
-                if (c2746.getFitsSystemWindows() && !view.getFitsSystemWindows()) {
-                    rect.left = lastWindowInsets.m37683() + rect.left;
-                    rect.right -= lastWindowInsets.m37672();
+                int i2 = C22666.f73603;
+                if (c25276.getFitsSystemWindows() && !view.getFitsSystemWindows()) {
+                    rect.left = lastWindowInsets.m12822() + rect.left;
+                    rect.right -= lastWindowInsets.m12814();
                 }
             }
             Rect rect2 = this.tempRect2;
-            Gravity.apply(resolveGravity(c9679.f32632), view.getMeasuredWidth(), view.getMeasuredHeight(), rect, rect2, i);
+            Gravity.apply(resolveGravity(c15578.f50661), view.getMeasuredWidth(), view.getMeasuredHeight(), rect, rect2, i);
             int overlapPixelsForOffset = getOverlapPixelsForOffset(viewFindFirstDependency);
             view.layout(rect2.left, rect2.top - overlapPixelsForOffset, rect2.right, rect2.bottom - overlapPixelsForOffset);
             this.verticalLayoutGap = rect2.top - viewFindFirstDependency.getBottom();
             return;
         }
-        super.layoutChild(c2746, view, i);
+        super.layoutChild(c25276, view, i);
         this.verticalLayoutGap = 0;
     }
 
@@ -111,7 +111,7 @@ public abstract class HeaderScrollingViewBehavior extends ViewOffsetBehavior {
         }
         float overlapRatioForOffset = getOverlapRatioForOffset(view);
         int i = this.overlayTop;
-        return C4449.m12402((int) (overlapRatioForOffset * i), 0, i);
+        return C16973.m40021((int) (overlapRatioForOffset * i), 0, i);
     }
 
     public int getScrollRange(View view) {

@@ -1,7 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۡܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 38SD */
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/* JADX INFO: renamed from: l.ܿ᩺ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 615X */
 /* JADX INFO: loaded from: classes4.dex */
-public interface InterfaceC18657 {
+@Target({ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR})
+@Retention(RetentionPolicy.CLASS)
+public @interface InterfaceC18657 {
 }

@@ -1,60 +1,60 @@
 package l;
 
-import java.util.ArrayList;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.۫۬۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: 87AO */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12430 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C0465 f41467;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f41468;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C7263 f41469;
+/* JADX INFO: renamed from: l.ۨܳܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D70T */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12430 extends AbstractC2323 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f41470;
+    public final boolean f39967;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C3287 f41471;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C6465 f39968;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final boolean f41472;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* bridge */ /* synthetic */ boolean m30906(C12430 c12430) {
+        return c12430.f39967;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean f41473;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static /* bridge */ /* synthetic */ C6465 m30907(C12430 c12430) {
+        return c12430.f39968;
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C18469 f41474;
+    public C12430(C6465 c6465, boolean z) {
+        this.f39968 = c6465;
+        this.f39967 = z;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f41475;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C12430)) {
+            return false;
+        }
+        C12430 c12430 = (C12430) obj;
+        return this.f39967 == c12430.f39967 && C17359.equals(this.f39968, c12430.f39968);
+    }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int f41476;
+    public final int hashCode() {
+        return C17359.hashCode(this.f39968) + ((this.f39967 ? 1231 : 1237) * 31);
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final ArrayList f41477;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final String f41478;
-
-    public C12430(String str, boolean z, String str2, ArrayList arrayList, ArrayList arrayList2, C0465 c0465, C3287 c3287, C18469 c18469, int i, boolean z2, boolean z3, C7263 c7263) {
-        this.f41478 = str;
-        this.f41472 = z;
-        this.f41470 = str2;
-        this.f41477 = arrayList;
-        this.f41468 = arrayList2;
-        this.f41467 = c0465;
-        this.f41471 = c3287;
-        this.f41474 = c18469;
-        this.f41476 = i;
-        this.f41475 = z2;
-        this.f41473 = z3;
-        this.f41469 = c7263;
+    public final String toString() {
+        Object[] objArr = {this.f39968, Boolean.valueOf(this.f39967)};
+        String[] strArrSplit = "recipe;exit".length() == 0 ? new String[0] : "recipe;exit".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C12430.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

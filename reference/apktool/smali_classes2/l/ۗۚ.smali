@@ -1,149 +1,70 @@
 .class public final Ll/ۗۚ;
 .super Ljava/lang/Object;
-.source "422Y"
+.source "E50U"
 
 # interfaces
-.implements Ll/ܳۖ;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic ۙ:Ll/ۡ᩹;
+.field public final synthetic ܰ:Ll/᩺ۚ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۡ᩹;)V
+.method public constructor <init>(Ll/᩺ۚ;)V
     .locals 0
 
-    .line 3727
+    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
+    iput-object p1, p0, Ll/ۗۚ;->ܰ:Ll/᩺ۚ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Landroid/content/Context;
-    .locals 1
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    .line 3741
-    iget-object v0, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
-
-    invoke-virtual {v0}, Ll/ۡ᩹;->᩷()Landroid/content/Context;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ(I)V
-    .locals 1
-
-    .line 3761
-    iget-object p1, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
-
-    invoke-virtual {p1}, Ll/ۡ᩹;->᩹()Ll/ۧۖ;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 3763
-    invoke-virtual {p1, v0}, Ll/ۧۖ;->ۙ(I)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final ۙ(Landroid/graphics/drawable/Drawable;I)V
-    .locals 1
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 2
 
-    .line 3752
-    iget-object v0, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
+    .line 126
+    iget-object v0, p0, Ll/ۗۚ;->ܰ:Ll/᩺ۚ;
 
-    invoke-virtual {v0}, Ll/ۡ᩹;->᩹()Ll/ۧۖ;
+    iget-object v1, v0, Ll/᩺ۚ;->᩻ۙ:Landroid/view/ViewTreeObserver;
 
-    move-result-object v0
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_0
+    .line 127
+    invoke-virtual {v1}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
-    .line 3754
-    invoke-virtual {v0, p1}, Ll/ۧۖ;->ۙ(Landroid/graphics/drawable/Drawable;)V
+    move-result v1
 
-    .line 3755
-    invoke-virtual {v0, p2}, Ll/ۧۖ;->ۙ(I)V
+    if-nez v1, :cond_0
 
+    .line 128
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ll/᩺ۚ;->᩻ۙ:Landroid/view/ViewTreeObserver;
+
+    .line 130
     :cond_0
+    iget-object v1, v0, Ll/᩺ۚ;->᩻ۙ:Landroid/view/ViewTreeObserver;
+
+    iget-object v0, v0, Ll/᩺ۚ;->ۢ:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 132
+    :cond_1
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
     return-void
-.end method
-
-.method public final ۨ()Landroid/graphics/drawable/Drawable;
-    .locals 3
-
-    .line 3741
-    iget-object v0, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
-
-    invoke-virtual {v0}, Ll/ۡ᩹;->᩷()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f04024e
-
-    .line 3733
-    filled-new-array {v1}, [I
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    .line 3732
-    invoke-static {v0, v2, v1}, Ll/֫ᩳ;->ۙ(Landroid/content/Context;Landroid/util/AttributeSet;[I)Ll/֫ᩳ;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 3734
-    invoke-virtual {v0, v1}, Ll/֫ᩳ;->ۖ(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    .line 3735
-    invoke-virtual {v0}, Ll/֫ᩳ;->ۚ()V
-
-    return-object v1
-.end method
-
-.method public final ܰ()Z
-    .locals 1
-
-    .line 3746
-    iget-object v0, p0, Ll/ۗۚ;->ۙ:Ll/ۡ᩹;
-
-    invoke-virtual {v0}, Ll/ۡ᩹;->᩹()Ll/ۧۖ;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 3747
-    invoke-virtual {v0}, Ll/ۧۖ;->ۨ()I
-
-    move-result v0
-
-    and-int/lit8 v0, v0, 0x4
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
 .end method

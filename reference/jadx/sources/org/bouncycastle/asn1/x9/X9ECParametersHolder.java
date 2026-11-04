@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.x9;
 
 import org.bouncycastle.math.ec.ECCurve;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class X9ECParametersHolder {
     public ECCurve curve;
     public X9ECParameters params;

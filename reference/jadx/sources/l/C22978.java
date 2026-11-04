@@ -1,37 +1,42 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ۨ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: U4HR */
+/* JADX INFO: renamed from: l.᩸ᩳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22978 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC6749 f74681;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f74682;
-
-    public C22978(EnumC6749 enumC6749, String str) {
-        this.f74681 = enumC6749;
-        this.f74682 = str;
+public final enum C22978 extends EnumC8806 {
+    public /* synthetic */ C22978() {
+        this("CommentStartDash", 45);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC6749 m50815() {
-        return this.f74681;
+    public C22978(String str, int i) {
+        super(str, i, 0);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m50817() {
-        return this.f74682;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m50816() {
-        return this.f74682.length();
-    }
-
-    public final String toString() {
-        return "\n" + this.f74681 + ": " + this.f74682;
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        char cM54669 = c24448.m54669();
+        if (cM54669 == 0) {
+            c8260.m22262(this);
+            c8260.f27175.m34534((char) 65533);
+            c8260.m22269(EnumC8806.f28762);
+            return;
+        }
+        if (cM54669 == '-') {
+            c8260.m22269(EnumC8806.f28737);
+            return;
+        }
+        if (cM54669 == '>') {
+            c8260.m22262(this);
+            c8260.m22268();
+            c8260.m22269(EnumC8806.f28749);
+        } else if (cM54669 == 65535) {
+            c8260.m22267(this);
+            c8260.m22268();
+            c8260.m22269(EnumC8806.f28749);
+        } else {
+            c8260.f27175.m34534(cM54669);
+            c8260.m22269(EnumC8806.f28762);
+        }
     }
 }

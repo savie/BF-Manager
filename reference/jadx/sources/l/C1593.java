@@ -1,60 +1,31 @@
 package l;
 
-import java.util.Arrays;
-
-/* JADX INFO: renamed from: l.֫ۙ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.֫֫ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P1Q9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1593 extends AbstractC15672 {
-    public C16336 c;
+public final class C1593 implements InterfaceC19492 {
 
-    /* JADX WARN: Type inference failed for: r0v2, types: [l.ܽ֫ᩴ, l.᩸ۢᩴ] */
-    /* JADX WARN: Type inference failed for: r0v5, types: [l.᩸ۢᩴ] */
-    /* JADX WARN: Type inference failed for: r0v6, types: [l.᩸ۢᩴ] */
-    @Override // l.AbstractC23736, l.InterfaceC19171
-    public final void c(long j) {
-        ?? abstractC21502;
-        if (j >= 2147483639) {
-            throw new IllegalArgumentException("Stream size exceeds max array size");
-        }
-        if (j <= 0) {
-            abstractC21502 = new AbstractC21502();
-        } else {
-            abstractC21502 = new C16336((int) j);
-        }
-        this.c = abstractC21502;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C1593 f5492 = new C1593();
 
-    @Override // l.AbstractC23736, l.InterfaceC19171
-    public final void end() {
-        long[] jArr = (long[]) this.c.b();
-        Arrays.sort(jArr);
-        long length = jArr.length;
-        InterfaceC19171 interfaceC19171 = this.a;
-        interfaceC19171.c(length);
-        int i = 0;
-        if (!this.b) {
-            int length2 = jArr.length;
-            while (i < length2) {
-                interfaceC19171.accept(jArr[i]);
-                i++;
-            }
-        } else {
-            int length3 = jArr.length;
-            while (i < length3) {
-                long j = jArr[i];
-                if (interfaceC19171.f()) {
-                    break;
-                }
-                interfaceC19171.accept(j);
-                i++;
+    @Override // l.InterfaceC19492
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo5605(int i, byte[] bArr) {
+        if (i >= 4) {
+            int i2 = bArr[0] & 255;
+            int i3 = bArr[1] & 255;
+            int i4 = bArr[2] & 255;
+            int i5 = bArr[3] & 255;
+            if (i2 == 255 && i3 == 254 && i4 == 0 && i5 == 0) {
+                return 100;
             }
         }
-        interfaceC19171.end();
+        return 0;
     }
 
-    @Override // l.InterfaceC21993, l.InterfaceC19171
-    public final void accept(long j) {
-        this.c.accept(j);
+    @Override // l.InterfaceC19492
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo5604() {
+        return C2448.f7864;
     }
 }

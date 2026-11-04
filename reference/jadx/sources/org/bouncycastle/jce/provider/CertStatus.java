@@ -2,7 +2,7 @@ package org.bouncycastle.jce.provider;
 
 import java.util.Date;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertStatus {
     public static final int UNDETERMINED = 12;
     public static final int UNREVOKED = 11;

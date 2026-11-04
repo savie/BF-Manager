@@ -12,17 +12,17 @@
 
 
 # static fields
-.field public static final ܿ:Ljava/lang/String;
+.field public static final ᩳ:Ljava/lang/String;
 
 
 # instance fields
-.field public ֡:Ljava/util/TreeMap;
+.field public ֡:Ljava/util/Date;
 
-.field public ۫:Ljava/util/Map;
+.field public ۟:Ljava/util/Map;
 
-.field public ܺ:Ljava/util/Date;
+.field public ܰ:Ljava/util/Date;
 
-.field public ܽ:Ljava/util/Date;
+.field public ܿ:Ljava/util/TreeMap;
 
 .field public ᩶:Ljava/util/Date;
 
@@ -32,19 +32,19 @@
     .locals 1
 
     .line 61
-    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܿ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     .line 62
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->getAlgorithm()Ljava/lang/String;
 
     .line 64
-    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->ܽ:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
+    sget-object v0, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->֡:Lcom/amazonaws/services/s3/model/SSEAlgorithm;
 
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/SSEAlgorithm;->getAlgorithm()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/lang/String;
+    sput-object v0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ᩳ:Ljava/lang/String;
 
     return-void
 .end method
@@ -62,14 +62,14 @@
 
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     .line 59
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .locals 5
 
     .line 867
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     new-instance v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
@@ -94,17 +94,17 @@
 
     invoke-direct {v2, v3}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     .line 59
     new-instance v2, Ljava/util/TreeMap;
 
     invoke-direct {v2, v3}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     .line 100
-    iget-object v2, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iget-object v2, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     const/4 v3, 0x0
 
@@ -117,12 +117,12 @@
     :cond_0
     new-instance v2, Ljava/util/TreeMap;
 
-    iget-object v4, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iget-object v4, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     invoke-direct {v2, v4}, Ljava/util/TreeMap;-><init>(Ljava/util/Map;)V
 
     :goto_0
-    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iput-object v2, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     if-nez v0, :cond_1
 
@@ -135,16 +135,16 @@
     invoke-direct {v3, v0}, Ljava/util/TreeMap;-><init>(Ljava/util/Map;)V
 
     :goto_1
-    iput-object v3, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iput-object v3, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     .line 107
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ:Ljava/util/Date;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܰ:Ljava/util/Date;
 
     invoke-static {v0}, Lcom/amazonaws/util/DateUtils;->ۙ(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ:Ljava/util/Date;
+    iput-object v0, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܰ:Ljava/util/Date;
 
     .line 109
     iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
@@ -156,13 +156,13 @@
     iput-object v0, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
 
     .line 111
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܽ:Ljava/util/Date;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/Date;
 
     invoke-static {v0}, Lcom/amazonaws/util/DateUtils;->ۙ(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܽ:Ljava/util/Date;
+    iput-object v0, v1, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/Date;
 
     return-object v1
 .end method
@@ -178,54 +178,11 @@
     return-object v0
 .end method
 
-.method public final ֨(Ljava/lang/String;)V
-    .locals 2
-
-    .line 484
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "Content-Encoding"
-
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final ۖ()Ljava/lang/String;
-    .locals 2
-
-    .line 368
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "Content-Type"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۖ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 686
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "x-amz-server-side-encryption"
-
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final ۘ()J
+.method public final ֫()J
     .locals 2
 
     .line 306
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "Content-Range"
 
@@ -268,11 +225,11 @@
     return-wide v0
 .end method
 
-.method public final ۘ(Ljava/lang/String;)V
+.method public final ֫(Ljava/lang/String;)V
     .locals 2
 
     .line 396
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "Content-Type"
 
@@ -281,11 +238,20 @@
     return-void
 .end method
 
+.method public final ۗ()Ljava/util/Map;
+    .locals 1
+
+    .line 144
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
+
+    return-object v0
+.end method
+
 .method public final ۙ()J
     .locals 2
 
     .line 291
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "Content-Length"
 
@@ -314,7 +280,7 @@
     .locals 2
 
     .line 339
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "Content-Length"
 
@@ -331,7 +297,7 @@
     .locals 1
 
     .line 189
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -342,7 +308,7 @@
     .locals 2
 
     .line 523
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "Cache-Control"
 
@@ -355,7 +321,7 @@
     .locals 1
 
     .line 220
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -366,7 +332,7 @@
     .locals 0
 
     .line 751
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ:Ljava/util/Date;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܰ:Ljava/util/Date;
 
     return-void
 .end method
@@ -375,7 +341,7 @@
     .locals 0
 
     .line 178
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۟:Ljava/util/Map;
 
     return-void
 .end method
@@ -386,7 +352,7 @@
     if-eqz p1, :cond_0
 
     .line 887
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v0, "x-amz-request-charged"
 
@@ -398,13 +364,48 @@
     return-void
 .end method
 
-.method public final ۚ()Ljava/lang/String;
+.method public final ۚ()Ljava/util/Date;
+    .locals 1
+
+    .line 828
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
+
+    invoke-static {v0}, Lcom/amazonaws/util/DateUtils;->ۙ(Ljava/util/Date;)Ljava/util/Date;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ۚ(Ljava/lang/String;)V
     .locals 2
 
-    .line 646
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    .line 550
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    const-string v1, "ETag"
+    const-string v1, "Content-MD5"
+
+    if-nez p1, :cond_0
+
+    .line 551
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    .line 553
+    :cond_0
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final ۤ()Ljava/lang/String;
+    .locals 2
+
+    .line 368
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
+
+    const-string v1, "Content-Type"
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -415,20 +416,28 @@
     return-object v0
 .end method
 
-.method public final ۚ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 730
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "x-amz-server-side-encryption-customer-key-MD5"
-
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final ۤ(Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final ۜ()Ljava/util/Map;
+.method public final ۤ(Ljava/util/Date;)V
+    .locals 0
+
+    .line 821
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
+
+    return-void
+.end method
+
+.method public final ۤ(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ۧ()Ljava/util/Map;
     .locals 2
 
     .line 230
@@ -439,32 +448,23 @@
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
     .line 231
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     invoke-virtual {v0, v1}, Ljava/util/TreeMap;->putAll(Ljava/util/Map;)V
 
     .line 232
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۠()Ljava/util/Map;
-    .locals 1
-
-    .line 144
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->۫:Ljava/util/Map;
-
-    return-object v0
-.end method
-
-.method public final ۡ()Z
+.method public final ۨ()Z
     .locals 2
 
     .line 881
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "x-amz-request-charged"
 
@@ -484,49 +484,24 @@
     return v0
 .end method
 
-.method public final ۨ()Ljava/lang/String;
+.method public final ۫(Ljava/lang/String;)V
     .locals 2
 
-    .line 582
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    .line 484
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    const-string v1, "Content-MD5"
+    const-string v1, "Content-Encoding"
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ۨ(Ljava/lang/String;)V
-    .locals 0
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ۨ(Ljava/util/Date;)V
-    .locals 0
-
-    .line 821
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
-
-    return-void
-.end method
-
-.method public final ۨ(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ۬()Ljava/util/Date;
+.method public final ܳ()Ljava/util/Date;
     .locals 1
 
-    .line 828
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->᩶:Ljava/util/Date;
+    .line 739
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܰ:Ljava/util/Date;
 
     invoke-static {v0}, Lcom/amazonaws/util/DateUtils;->ۙ(Ljava/util/Date;)Ljava/util/Date;
 
@@ -535,46 +510,15 @@
     return-object v0
 .end method
 
-.method public final ۬(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 2
 
-    .line 550
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    .line 602
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    const-string v1, "Content-MD5"
-
-    if-nez p1, :cond_0
-
-    .line 551
-    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    .line 553
-    :cond_0
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final ܰ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 712
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "x-amz-server-side-encryption-customer-algorithm"
+    const-string v1, "Content-Disposition"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final ܰ(Ljava/util/Date;)V
-    .locals 0
-
-    .line 795
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܽ:Ljava/util/Date;
 
     return-void
 .end method
@@ -582,25 +526,8 @@
 .method public final ܶ()Ljava/lang/String;
     .locals 2
 
-    .line 666
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
-
-    const-string v1, "x-amz-server-side-encryption"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final ᩳ()Ljava/lang/String;
-    .locals 2
-
     .line 720
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "x-amz-server-side-encryption-customer-key-MD5"
 
@@ -613,13 +540,13 @@
     return-object v0
 .end method
 
-.method public final ᩵()Ljava/lang/String;
+.method public final ܺ()Ljava/lang/String;
     .locals 2
 
-    .line 657
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    .line 666
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    const-string v1, "x-amz-version-id"
+    const-string v1, "x-amz-server-side-encryption"
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -630,11 +557,11 @@
     return-object v0
 .end method
 
-.method public final ᩸()Ljava/lang/String;
+.method public final ܽ()Ljava/lang/String;
     .locals 2
 
     .line 702
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     const-string v1, "x-amz-server-side-encryption-customer-algorithm"
 
@@ -647,39 +574,112 @@
     return-object v0
 .end method
 
-.method public final ᩹()Ljava/util/Date;
-    .locals 1
+.method public final ᩴ()Ljava/lang/String;
+    .locals 2
 
-    .line 739
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܺ:Ljava/util/Date;
+    .line 646
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    invoke-static {v0}, Lcom/amazonaws/util/DateUtils;->ۙ(Ljava/util/Date;)Ljava/util/Date;
+    const-string v1, "ETag"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ᩴ(Ljava/lang/String;)V
     .locals 2
 
-    .line 602
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    .line 730
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
-    const-string v1, "Content-Disposition"
+    const-string v1, "x-amz-server-side-encryption-customer-key-MD5"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ᩺()Ljava/lang/Object;
+.method public final ᩵()Ljava/lang/String;
+    .locals 2
+
+    .line 657
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
+
+    const-string v1, "x-amz-version-id"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩷()Ljava/lang/String;
+    .locals 2
+
+    .line 582
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
+
+    const-string v1, "Content-MD5"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ᩷(Ljava/lang/String;)V
+    .locals 2
+
+    .line 712
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
+
+    const-string v1, "x-amz-server-side-encryption-customer-algorithm"
+
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final ᩷(Ljava/util/Date;)V
+    .locals 0
+
+    .line 795
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/Date;
+
+    return-void
+.end method
+
+.method public final ᩸(Ljava/lang/String;)V
+    .locals 2
+
+    .line 686
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
+
+    const-string v1, "x-amz-server-side-encryption"
+
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final ᩻()Ljava/lang/Object;
     .locals 2
 
     const-string v0, "Content-Length"
 
     .line 240
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->֡:Ljava/util/TreeMap;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/ObjectMetadata;->ܿ:Ljava/util/TreeMap;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

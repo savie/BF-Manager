@@ -1,30 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ۠ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: renamed from: l.ܶۗܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7Q5 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15813 implements InterfaceC13717 {
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+public final class C15813 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f51450;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f51451;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f51452;
+
+    public final String toString() {
+        return C14442.m34865("Comment: '", this.f51451, "'");
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        return C13872.m33717(i);
+    public C15813(int i, int i2, String str) {
+        this.f51452 = i;
+        this.f51450 = i2;
+        this.f51451 = str;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m37739() {
+        int i = this.f51450;
+        int i2 = this.f51452;
+        C12128.m30307("Expected %s in the range [0, %s)", 0, i - i2, i - i2 > 0);
+        return i2;
     }
 
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m37740() {
+        return this.f51451;
     }
 }

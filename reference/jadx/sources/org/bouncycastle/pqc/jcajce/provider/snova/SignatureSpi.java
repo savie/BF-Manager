@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 import java.security.Signature;
 import java.security.SignatureException;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.pqc.crypto.snova.SnovaParameters;
@@ -384,7 +384,7 @@ public class SignatureSpi extends Signature {
             try {
                 publicKey = new BCSnovaPublicKey(SubjectPublicKeyInfo.getInstance(publicKey.getEncoded()));
             } catch (Exception e) {
-                throw new InvalidKeyException(C8479.m22142(e, new StringBuilder("unknown public key passed to Snova: ")));
+                throw new InvalidKeyException(C16076.m38224(e, new StringBuilder("unknown public key passed to Snova: ")));
             }
         }
         BCSnovaPublicKey bCSnovaPublicKey = (BCSnovaPublicKey) publicKey;

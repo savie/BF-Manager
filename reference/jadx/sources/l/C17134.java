@@ -1,38 +1,25 @@
 package l;
 
-import bin.mt.plus.R;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ܿۚۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4AWI */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17134 extends AbstractDialogInterfaceOnClickListenerC17341 {
+/* JADX INFO: renamed from: l.ܺ᩸᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: B7FA */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17134 implements Consumer {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC19749 f54647;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7439 f55888;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9166 f54648;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C17134(ActivityC19749 activityC19749, ActivityC19749 activityC197410, C9166 c9166) {
-        super(activityC197410, -1);
-        this.f54647 = activityC19749;
-        this.f54648 = c9166;
+    public /* synthetic */ C17134(C7439 c7439) {
+        this.f55888 = c7439;
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String strM40352 = m40352();
-        if (strM40352.isEmpty()) {
-            m40365(R.string.MT_Protector);
-            return;
-        }
-        this.f54648.m23580(strM40352);
-        C7754.m20408();
-        AbstractC14217 abstractC14217M44430 = this.f54647.f63464.m44430();
-        C13638.requireNonNull(abstractC14217M44430);
-        abstractC14217M44430.m34322();
-        m40364();
+    @Override // java.util.function.Consumer
+    public final void accept(Object obj) {
+        this.f55888.f24488.m21391((C19043) obj);
+    }
+
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 }

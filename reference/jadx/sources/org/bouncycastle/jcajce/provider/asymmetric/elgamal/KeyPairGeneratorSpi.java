@@ -17,7 +17,7 @@ import org.bouncycastle.crypto.params.ElGamalPublicKeyParameters;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.jce.spec.ElGamalParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends KeyPairGenerator {
     public int certainty;
     public ElGamalKeyPairGenerator engine;

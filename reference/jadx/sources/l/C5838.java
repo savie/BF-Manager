@@ -1,70 +1,37 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۙ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: A70P */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5838 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final long f19800;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f19801;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean f19802;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f19803;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C5838 f19804;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final long f19805;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C5838 f19806;
+/* JADX INFO: renamed from: l.ۚᩳ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5838 extends AbstractC1584 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long[] f19807;
+    public final /* synthetic */ C24705 f20060;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f19808;
+    @Override // l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final /* bridge */ /* synthetic */ Object mo1766(Object obj, AbstractC22664 abstractC22664) {
+        return Boolean.TRUE;
+    }
 
-    public C5838(C5838 c5838, C5838 c5839, long[] jArr, int i, int i2, boolean z, boolean z2) {
-        this.f19804 = c5838;
-        this.f19806 = c5839;
-        this.f19807 = jArr;
-        this.f19808 = i;
-        this.f19801 = i2;
-        this.f19802 = z;
-        this.f19803 = z2;
-        if (jArr != null) {
-            long length = ((long) jArr.length) * 8;
-            this.f19805 = length;
-            this.f19800 = length + 48;
-        } else if (c5838 != null) {
-            this.f19805 = C9367.m24038(c5838.f19805, c5839.f19805);
-            this.f19800 = C9367.m24038(48L, C9367.m24038(c5838.f19800, c5839.f19800));
-        } else {
-            this.f19805 = 0L;
-            this.f19800 = 48L;
+    @Override // l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo1768(C10510 c10510, Object obj) {
+        C14769 c14769Mo9323 = c10510.f73596.f38067.mo9323();
+        C14769 c14769Mo9324 = c10510.mo9323();
+        while (c14769Mo9323.m35550()) {
+            C24705 c24705 = this.f20060;
+            C14764 c14764 = c24705.f79947;
+            if (!c24705.m55163((AbstractC22664) c14769Mo9324.f48335, new C10729(c14764.f48286, EnumC18670.UNBOUND, c14764.f48274, (C17969) c14769Mo9323.f48335))) {
+                return Boolean.FALSE;
+            }
+            c14769Mo9323 = c14769Mo9323.f48336;
+            c14769Mo9324 = c14769Mo9324.f48336;
         }
+        return Boolean.TRUE;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m16054() {
-        return this.f19804 == null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m16052() {
-        return this.f19807 != null;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m16053() {
-        return m16054() && this.f19807 == null;
+    public C5838(C24705 c24705) {
+        this.f20060 = c24705;
     }
 }

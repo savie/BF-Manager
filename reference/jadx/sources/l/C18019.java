@@ -1,230 +1,144 @@
 package l;
 
-import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.io.EOFException;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
-/* JADX INFO: renamed from: l.ᩳۧ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: T2R9 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18019 {
+/* JADX INFO: renamed from: l.ܿۖۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 07NF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C18019 implements InterfaceC22024 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f57618 = 0;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final C15648 f59003;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C19805 f57620 = new C19805(5);
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C19805 f57619 = new C19805(5);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final C15648 f59004;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m41966(int i, final byte[] bArr) {
-        if (i <= 131072) {
-            return m41965(0, i, bArr);
-        }
-        C11018 c11018 = new C11018();
-        c11018.mo24508(10847);
-        c11018.writeInt(i);
-        ArrayList arrayList = new ArrayList((i / 10847) + 1);
-        final int i2 = 0;
-        while (i > 0) {
-            final int iMin = Math.min(i, WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT);
-            arrayList.add(new Callable() { // from class: l.᩸ۧ᩺
-                @Override // java.util.concurrent.Callable
-                public final Object call() {
-                    return C18019.m41965(i2, iMin, bArr);
-                }
-            });
-            i2 += iMin;
-            i -= iMin;
-        }
-        try {
-            List listInvokeAll = C4716.f16633.invokeAll(arrayList);
-            c11018.mo24508(listInvokeAll.size());
-            Iterator it = listInvokeAll.iterator();
-            while (it.hasNext()) {
-                byte[] bArr2 = (byte[]) ((Future) it.next()).get();
-                c11018.m27775(bArr2.length);
-                c11018.write(bArr2, 0, bArr2.length);
+    public byte[] f59005;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC22024 f59006;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C15648 f59007;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f59008;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C15648 f59009;
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo14382(long j) {
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo14380(InterfaceC9461 interfaceC9461, int i, boolean z) {
+        return mo14386(interfaceC9461, i, z);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14381(int i, C21287 c21287) {
+        mo14385(c21287, i, 0);
+    }
+
+    static {
+        C20124 c20124 = new C20124();
+        c20124.m46315("application/id3");
+        f59003 = c20124.m46295();
+        C20124 c20125 = new C20124();
+        c20125.m46315("application/x-emsg");
+        f59004 = c20125.m46295();
+    }
+
+    public C18019(InterfaceC22024 interfaceC22024, int i) {
+        this.f59006 = interfaceC22024;
+        if (i == 1) {
+            this.f59009 = f59003;
+        } else {
+            if (i != 3) {
+                throw new IllegalArgumentException(C13645.m33382(i, "Unknown metadataType: "));
             }
-            return c11018.m27773();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+            this.f59009 = f59004;
         }
+        this.f59005 = new byte[0];
+        this.f59008 = 0;
     }
 
-    /* JADX WARN: Type inference fix 'apply assigned field type' failed
-    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$ArrayArg
-    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
-    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
-    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
-    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
-     */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m41967(String str) {
-        C19551 c19551M41963 = m41963();
-        C19805 c19805 = f57619;
-        byte[] bArr = (byte[]) c19805.m45009();
-        if (bArr == null) {
-            bArr = new byte[8192];
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14384(C15648 c15648) {
+        this.f59007 = c15648;
+        this.f59006.mo14384(this.f59009);
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo14386(InterfaceC9461 interfaceC9461, int i, boolean z) throws EOFException {
+        int i2 = this.f59008 + i;
+        byte[] bArr = this.f59005;
+        if (bArr.length < i2) {
+            this.f59005 = Arrays.copyOf(bArr, (i2 / 2) + i2);
         }
-        try {
-            C12678 c12678 = new C12678(bArr, new GZIPOutputStream(c19551M41963));
-            try {
-                C23967.m52797(c12678, str);
-                c12678.close();
-                byte[] bArrCopyOf = Arrays.copyOf(c19551M41963.f62829, c19551M41963.f62830);
-                m41964(c19551M41963);
-                c19805.m45011(bArr);
-                return bArrCopyOf;
-            } catch (Throwable th) {
-                try {
-                    c12678.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
+        int i3 = interfaceC9461.read(this.f59005, this.f59008, i);
+        if (i3 != -1) {
+            this.f59008 += i3;
+            return i3;
+        }
+        if (z) {
+            return -1;
+        }
+        throw new EOFException();
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14385(C21287 c21287, int i, int i2) {
+        int i3 = this.f59008 + i;
+        byte[] bArr = this.f59005;
+        if (bArr.length < i3) {
+            this.f59005 = Arrays.copyOf(bArr, (i3 / 2) + i3);
+        }
+        c21287.m48490(this.f59008, i, this.f59005);
+        this.f59008 += i;
+    }
+
+    @Override // l.InterfaceC22024
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo14383(long j, int i, int i2, int i3, C4870 c4870) {
+        this.f59007.getClass();
+        int i4 = this.f59008 - i3;
+        C21287 c21287 = new C21287(Arrays.copyOfRange(this.f59005, i4 - i2, i4));
+        byte[] bArr = this.f59005;
+        System.arraycopy(bArr, i4, bArr, 0, i3);
+        this.f59008 = i3;
+        String str = this.f59007.f50848;
+        C15648 c15648 = this.f59009;
+        String str2 = c15648.f50848;
+        String str3 = c15648.f50848;
+        if (!C17359.equals(str, str2)) {
+            if ("application/x-emsg".equals(this.f59007.f50848)) {
+                C11976 c11976M56765 = C25403.m56765(c21287);
+                C15648 c15648Mo12245 = c11976M56765.mo12245();
+                if (c15648Mo12245 == null || !C17359.equals(str3, c15648Mo12245.f50848)) {
+                    C1896.m6517("Ignoring EMSG. Expected it to contain wrapped " + str3 + " but actual wrapped format: " + c11976M56765.mo12245());
+                    return;
                 }
-                throw th;
+                byte[] bArrMo12247 = c11976M56765.mo12247();
+                bArrMo12247.getClass();
+                c21287 = new C21287(bArrMo12247);
+            } else {
+                C1896.m6517("Ignoring sample for unsupported format: " + this.f59007.f50848);
+                return;
             }
-        } catch (IOException e) {
-            m41964(c19551M41963);
-            c19805.m45011(bArr);
-            throw new RuntimeException(e);
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m41968(byte[] bArr, int i) {
-        C19551 c19551M41963 = m41963();
-        try {
-            GZIPOutputStream gZIPOutputStream = new GZIPOutputStream(c19551M41963);
-            try {
-                gZIPOutputStream.write(bArr, 0, i);
-                gZIPOutputStream.close();
-                byte[] bArrCopyOf = Arrays.copyOf(c19551M41963.f62829, c19551M41963.f62830);
-                m41964(c19551M41963);
-                return bArrCopyOf;
-            } catch (Throwable th) {
-                try {
-                    gZIPOutputStream.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-                throw th;
-            }
-        } catch (IOException e) {
-            m41964(c19551M41963);
-            throw new RuntimeException(e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m41965(int i, int i2, byte[] bArr) {
-        C19551 c19551M41963 = m41963();
-        try {
-            C11267 c11267 = new C11267(c19551M41963);
-            try {
-                c11267.write(bArr, i, i2);
-                c11267.close();
-                byte[] bArrCopyOf = Arrays.copyOf(c19551M41963.f62829, c19551M41963.f62830);
-                m41964(c19551M41963);
-                return bArrCopyOf;
-            } catch (Throwable th) {
-                try {
-                    c11267.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-                throw th;
-            }
-        } catch (IOException e) {
-            m41964(c19551M41963);
-            throw new RuntimeException(e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m41962(byte[] bArr) {
-        int length = bArr.length;
-        C19551 c19551M41963 = m41963();
-        try {
-            try {
-                GZIPInputStream gZIPInputStream = new GZIPInputStream(new ByteArrayInputStream(bArr, 0, length));
-                try {
-                    C20010.m45301(gZIPInputStream, c19551M41963);
-                    String str = new String(c19551M41963.f62829, 0, c19551M41963.f62830, StandardCharsets.UTF_8);
-                    gZIPInputStream.close();
-                    m41964(c19551M41963);
-                    return str;
-                } catch (Throwable th) {
-                    try {
-                        gZIPInputStream.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                    throw th;
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (Throwable th3) {
-            m41964(c19551M41963);
-            throw th3;
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static byte[] m41969(byte[] bArr, int i) {
-        C19551 c19551M41963 = m41963();
-        try {
-            try {
-                GZIPInputStream gZIPInputStream = new GZIPInputStream(new ByteArrayInputStream(bArr, 0, i));
-                try {
-                    C20010.m45301(gZIPInputStream, c19551M41963);
-                    byte[] bArrCopyOf = Arrays.copyOf(c19551M41963.f62829, c19551M41963.f62830);
-                    gZIPInputStream.close();
-                    m41964(c19551M41963);
-                    return bArrCopyOf;
-                } catch (Throwable th) {
-                    try {
-                        gZIPInputStream.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                    throw th;
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (Throwable th3) {
-            m41964(c19551M41963);
-            throw th3;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C19551 m41963() {
-        C19551 c19551 = (C19551) f57620.m45009();
-        return c19551 == null ? new C19551() : c19551;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m41964(C19551 c19551) {
-        if (c19551.f62829.length < 2097152) {
-            c19551.m44640();
-            f57620.m45011(c19551);
-        }
+        int iM48486 = c21287.m48486();
+        InterfaceC22024 interfaceC22024 = this.f59006;
+        interfaceC22024.mo14381(iM48486, c21287);
+        interfaceC22024.mo14383(j, i, iM48486, 0, c4870);
     }
 }

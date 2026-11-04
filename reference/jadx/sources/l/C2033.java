@@ -1,25 +1,22 @@
 package l;
 
-import java.util.Collections;
-import java.util.List;
+/* JADX INFO: renamed from: l.֫ܺ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: T7BL */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C2033 {
 
-/* JADX INFO: renamed from: l.֫᩵ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: SB7W */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C2033 extends AbstractC8075 implements InterfaceC17952 {
-    @Override // l.C8781
-    /* JADX INFO: renamed from: ֨ */
-    public final String mo1944() {
-        return "solidColor";
-    }
-
-    @Override // l.InterfaceC17952
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo6530(C8781 c8781) {
-    }
+    public final AbstractC22044 f6760;
 
-    @Override // l.InterfaceC17952
-    public final List getChildren() {
-        return Collections.EMPTY_LIST;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f6761;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final EnumC22346 f6762;
+
+    public C2033(AbstractC22044 abstractC22044, String str, EnumC22346 enumC22346) {
+        this.f6760 = abstractC22044;
+        this.f6761 = str;
+        this.f6762 = enumC22346;
     }
 }

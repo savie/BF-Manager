@@ -1,67 +1,41 @@
 package l;
 
-import java.util.BitSet;
+import android.view.View;
+import bin.mt.plus.R;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۢ᩹ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2BCT */
+/* JADX INFO: renamed from: l.ۢۙۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G9NZ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9880 extends AbstractC14322 {
+public final class C9880 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final void m25687(View view) {
+        C15243.m36590(view, "<this>");
+        for (View view2 : C3274.m10776(view)) {
+            C9134 c9134 = (C9134) view2.getTag(R.id.MT_Protector);
+            if (c9134 == null) {
+                c9134 = new C9134();
+                view2.setTag(R.id.MT_Protector, c9134);
+            }
+            c9134.m24277();
+        }
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C9880 f33728 = new C9880();
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3096() {
-        return 2;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo3097(AbstractC10794 abstractC10794) {
-        C0727 c0727M38695 = abstractC10794.m38695();
-        return c0727M38695.m15275get(0).m38392() + ", " + c0727M38695.m15275get(1).m38392() + ", " + AbstractC14322.m34561((AbstractC10377) ((C15733) abstractC10794).m37458());
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo3100(AbstractC10794 abstractC10794) {
-        return AbstractC14322.m34562((AbstractC10377) ((C15733) abstractC10794).m37458(), 16);
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo3101(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        if ((abstractC16438 instanceof C15733) && c0727M38695.size() == 2 && AbstractC14322.m34575(c0727M38695.m15275get(0).m38400()) && AbstractC14322.m34575(c0727M38695.m15275get(1).m38400())) {
-            AbstractC9901 abstractC9901M37458 = ((C15733) abstractC16438).m37458();
-            if (abstractC9901M37458 instanceof AbstractC10377) {
-                AbstractC10377 abstractC10377 = (AbstractC10377) abstractC9901M37458;
-                if (abstractC10377.mo21657()) {
-                    int iMo21658 = abstractC10377.mo21658();
-                    if (((short) iMo21658) == iMo21658) {
-                        return true;
-                    }
-                }
+    public static final void m25688(C25227 c25227) {
+        Iterator it = C15952.m38066(c25227).iterator();
+        while (true) {
+            C17444 c17444 = (C17444) it;
+            if (!c17444.hasNext()) {
+                return;
             }
+            View view = (View) c17444.next();
+            C9134 c9134 = (C9134) view.getTag(R.id.MT_Protector);
+            if (c9134 == null) {
+                c9134 = new C9134();
+                view.setTag(R.id.MT_Protector, c9134);
+            }
+            c9134.m24277();
         }
-        return false;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final BitSet mo3098(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        BitSet bitSet = new BitSet(2);
-        bitSet.set(0, AbstractC14322.m34575(c0727M38695.m15275get(0).m38400()));
-        bitSet.set(1, AbstractC14322.m34575(c0727M38695.m15275get(1).m38400()));
-        return bitSet;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3099(C2718 c2718, AbstractC10794 abstractC10794) {
-        C0727 c0727M38695 = abstractC10794.m38695();
-        AbstractC14322.m34567((InterfaceC23865) c2718, AbstractC14322.m34565(abstractC10794, AbstractC14322.m34573(c0727M38695.m15275get(0).m38400(), c0727M38695.m15275get(1).m38400())), (short) ((AbstractC10377) ((C15733) abstractC10794).m37458()).mo21658());
     }
 }

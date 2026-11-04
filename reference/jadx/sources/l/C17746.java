@@ -1,45 +1,32 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
-
-/* JADX INFO: renamed from: l.ᩳ֫ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܽܿ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: V6VE */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17746 extends AbstractC13742 implements InterfaceC19282 {
-    public final /* synthetic */ C16336 g;
+public final class C17746 extends AbstractC1339 {
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C7993.a(this, consumer);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1339[] f58291;
+
+    public C17746(Object obj, AbstractC1339[] abstractC1339Arr) {
+        super(abstractC1339Arr[0].f4791 + 1, obj);
+        this.f58291 = abstractC1339Arr;
+        m41559();
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C7993.b(this, consumer);
-    }
-
-    @Override // l.AbstractC13742
-    public final void a(int i, Object obj, Object obj2) {
-        ((LongConsumer) obj2).accept(((long[]) obj)[i]);
-    }
-
-    @Override // l.AbstractC13742
-    public final InterfaceC10110 b(Object obj, int i, int i2) {
-        long[] jArr = (long[]) obj;
-        int i3 = i2 + i;
-        C19988.a(((long[]) C13638.requireNonNull(jArr)).length, i, i3);
-        return new C4006(jArr, i, i3, 1040);
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C17746(C16336 c16336, int i, int i2, int i3, int i4) {
-        super(c16336, i, i2, i3, i4);
-        this.g = c16336;
-    }
-
-    @Override // l.AbstractC13742
-    public final InterfaceC10110 c(int i, int i2, int i3, int i4) {
-        return new C17746(this.g, i, i2, i3, i4);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m41559() {
+        this.f4793 = -1L;
+        long j = 0;
+        long j2 = 0;
+        for (AbstractC1339 abstractC1339 : this.f58291) {
+            j += (long) abstractC1339.f4794;
+            j2 += (long) abstractC1339.f4792;
+        }
+        if (j > 2147483647L) {
+            throw new IllegalArgumentException("Text exceeds UTF-16 coordinate limit");
+        }
+        this.f4794 = (int) j;
+        this.f4792 = (int) j2;
     }
 }

@@ -1,24 +1,58 @@
-.class public final Ll/ۗۖ᩸;
+.class public final synthetic Ll/ۗۖ᩸;
 .super Ljava/lang/Object;
-.source "1AZL"
+.source "X68P"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ll/᩺ۜ᩸;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩺ۜ᩸;I)V
+    .locals 0
+
+    .line 0
+    iput p2, p0, Ll/ۗۖ᩸;->ܰ:I
+
+    iput-object p1, p0, Ll/ۗۖ᩸;->᩶:Ll/᩺ۜ᩸;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    .line 47
-    check-cast p1, Ljava/lang/Comparable;
+    .line 0
+    iget v0, p0, Ll/ۗۖ᩸;->ܰ:I
 
-    check-cast p2, Ljava/lang/Comparable;
+    packed-switch v0, :pswitch_data_0
 
-    .line 50
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    iget-object v0, p0, Ll/ۗۖ᩸;->᩶:Ll/᩺ۜ᩸;
 
-    move-result p1
+    invoke-static {v0}, Ll/᩺ۜ᩸;->᩷᩷(Ll/᩺ۜ᩸;)V
 
-    return p1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll/ۗۖ᩸;->᩶:Ll/᩺ۜ᩸;
+
+    invoke-static {v0}, Ll/᩺ۜ᩸;->ᩴ(Ll/᩺ۜ᩸;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

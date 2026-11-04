@@ -24,7 +24,7 @@ import org.bouncycastle.crypto.signers.DSTU4145Signer;
 import org.bouncycastle.jcajce.provider.asymmetric.util.ECUtil;
 import org.bouncycastle.jce.interfaces.ECKey;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SignatureSpi extends java.security.SignatureSpi implements PKCSObjectIdentifiers, X509ObjectIdentifiers {
     public Digest digest;
     public DSAExt signer = new DSTU4145Signer();

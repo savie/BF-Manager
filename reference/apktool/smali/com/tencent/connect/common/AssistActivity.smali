@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public final ֡:Ljava/lang/String;
+.field public ֡:Z
 
-.field public ۛ:Z
+.field public ֨:Ll/ܽۙ᩹;
 
-.field public ۧ:Ll/ۙ᩷ᩳ;
+.field public ۟:Ljava/lang/String;
 
-.field public ۫:Ljava/lang/String;
+.field public ۢ:Z
 
-.field public ܺ:Z
+.field public ܰ:Z
 
-.field public ܽ:Z
+.field public final ܿ:Ljava/lang/String;
 
-.field public ܿ:Ll/᩹᩷ᩳ;
+.field public ᩳ:Ll/ۨۙ᩹;
 
 .field public ᩶:Landroid/os/Handler;
 
@@ -45,31 +45,33 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const/4 v0, 0x0
 
     .line 45
-    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܽ:Z
+    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Z
 
     .line 53
-    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܺ:Z
+    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܰ:Z
 
     .line 59
-    new-instance v0, Ll/ۙ᩷ᩳ;
+    new-instance v0, Ll/ܽۙ᩹;
 
-    invoke-direct {v0}, Ll/ۙ᩷ᩳ;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    invoke-direct {v0, v1}, Ll/ܽۙ᩹;-><init>(I)V
+
+    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     .line 66
-    new-instance v0, Ll/ۨ᩷ᩳ;
+    new-instance v0, Ll/᩹ۙ᩹;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Ll/ۨ᩷ᩳ;-><init>(Lcom/tencent/connect/common/AssistActivity;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Ll/᩹ۙ᩹;-><init>(Lcom/tencent/connect/common/AssistActivity;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->᩶:Landroid/os/Handler;
 
@@ -80,7 +82,7 @@
     .locals 0
 
     .line 38
-    iget-object p0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object p0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -89,7 +91,7 @@
     .locals 2
 
     .line 218
-    sget-object v0, Ll/۬᩷ᩳ;->ܰ:Ljava/lang/String;
+    sget-object v0, Ll/᩺ۙ᩹;->᩷:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -113,7 +115,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 221
-    sget-object p2, Ll/۬᩷ᩳ;->ۨ:Ljava/lang/String;
+    sget-object p2, Ll/᩺ۙ᩹;->ۤ:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -122,13 +124,13 @@
     move-result p1
 
     .line 222
-    invoke-static {}, Ll/ۖܺᩳ;->ܰ()Ll/ۖܺᩳ;
+    invoke-static {}, Ll/ۗ᩷᩹;->᩷()Ll/ۗ᩷᩹;
 
     move-result-object p2
 
-    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->۫:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->۟:Ljava/lang/String;
 
-    invoke-virtual {p2, v0, v1, p1}, Ll/ۖܺᩳ;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1, p1}, Ll/ۗ᩷᩹;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
 
     :cond_1
     return-void
@@ -146,7 +148,7 @@
     const-string v2, "--onActivityResult--requestCode: "
 
     .line 0
-    invoke-static {v2, p1, v0, v1, p2}, Ll/֡ᩴۖ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v2, p1, v0, v1, p2}, Ll/֨᩵ᩴ;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -169,9 +171,9 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
-    invoke-static {v2, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 414
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
@@ -182,7 +184,7 @@
 
     .line 418
     :cond_1
-    invoke-static {p0}, Ll/ܰ᩷ᩳ;->ۙ(Lcom/tencent/connect/common/AssistActivity;)Z
+    invoke-static {p0}, Ll/ܶۙ᩹;->ۙ(Lcom/tencent/connect/common/AssistActivity;)Z
 
     move-result p2
 
@@ -205,7 +207,7 @@
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 420
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -243,7 +245,7 @@
     const-string p2, "--setResultData--bundle is null, setResult ACTIVITY_CANCEL"
 
     .line 455
-    invoke-static {v2, p2}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 456
     invoke-virtual {p0, v1}, Landroid/app/Activity;->setResult(I)V
@@ -253,17 +255,17 @@
     if-ne p1, p2, :cond_9
 
     .line 459
-    invoke-static {}, Ll/ۗ᩷ᩳ;->ۙ()Ll/ۗ᩷ᩳ;
+    invoke-static {}, Ll/ܺ᩷᩹;->ۙ()Ll/ܺ᩷᩹;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/tencent/connect/common/AssistActivity;->۫:Ljava/lang/String;
+    iget-object p2, p0, Lcom/tencent/connect/common/AssistActivity;->۟:Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const-string p1, "2"
 
-    invoke-static {p3, p2, p1}, Ll/ۗ᩷ᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p2, p1}, Ll/ܺ᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -279,7 +281,7 @@
     const-string v0, "--setResultDataForLogin-- "
 
     .line 468
-    invoke-static {v2, v0}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 469
     new-instance v0, Landroid/content/Intent;
@@ -347,23 +349,23 @@
     const-string p2, "--setResultData--openid and token not empty, setResult ACTIVITY_OK"
 
     .line 481
-    invoke-static {v2, p2}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 482
     invoke-virtual {p0, v3, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 484
-    invoke-static {}, Ll/ۗ᩷ᩳ;->ۙ()Ll/ۗ᩷ᩳ;
+    invoke-static {}, Ll/ܺ᩷᩹;->ۙ()Ll/ܺ᩷᩹;
 
     move-result-object p2
 
-    iget-object p3, p0, Lcom/tencent/connect/common/AssistActivity;->۫:Ljava/lang/String;
+    iget-object p3, p0, Lcom/tencent/connect/common/AssistActivity;->۟:Ljava/lang/String;
 
     const-string v0, "0"
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, p3, v0}, Ll/ۗ᩷ᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p3, v0}, Ll/ܺ᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -384,7 +386,7 @@
     const-string p1, "--setResultData--proxy_code and proxy_expires_in are valid"
 
     .line 487
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 488
     invoke-virtual {p0, v3, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
@@ -395,23 +397,23 @@
     const-string p1, "--setResultData--openid or token is empty, setResult ACTIVITY_CANCEL"
 
     .line 490
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 491
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 493
-    invoke-static {}, Ll/ۗ᩷ᩳ;->ۙ()Ll/ۗ᩷ᩳ;
+    invoke-static {}, Ll/ܺ᩷᩹;->ۙ()Ll/ܺ᩷᩹;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/tencent/connect/common/AssistActivity;->۫:Ljava/lang/String;
+    iget-object p2, p0, Lcom/tencent/connect/common/AssistActivity;->۟:Ljava/lang/String;
 
     const-string v0, "1"
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p3, p2, v0}, Ll/ۗ᩷ᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p2, v0}, Ll/ܺ᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -419,7 +421,7 @@
     const-string p1, "--setResultData--response is empty, setResult ACTIVITY_OK"
 
     .line 507
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 509
     invoke-virtual {p0, v3, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
@@ -434,24 +436,24 @@
     const-string p2, "--setResultData--parse response failed"
 
     .line 512
-    invoke-static {v2, p2}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "--setResultData--parse response exception"
 
     .line 513
-    invoke-static {v2, p2, p1}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, p2, p1}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 430
     :cond_9
     :goto_2
-    iget-boolean p1, p0, Lcom/tencent/connect/common/AssistActivity;->ۛ:Z
+    iget-boolean p1, p0, Lcom/tencent/connect/common/AssistActivity;->ۢ:Z
 
     if-nez p1, :cond_a
 
     const-string p1, "onActivityResult finish immediate"
 
     .line 431
-    invoke-static {v2, p1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 432
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -468,9 +470,9 @@
 
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance p2, Ll/ۚ᩷ᩳ;
+    new-instance p2, Ll/᩵ۙ᩹;
 
-    invoke-direct {p2, p0}, Ll/ۚ᩷ᩳ;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
+    invoke-direct {p2, p0}, Ll/᩵ۙ᩹;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
 
     const-wide/16 v0, 0xc8
 
@@ -508,24 +510,24 @@
     invoke-virtual {v8, v12}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 84
-    invoke-static/range {p0 .. p0}, Ll/֡ܺᩳ;->ۙ(Lcom/tencent/connect/common/AssistActivity;)V
+    invoke-static/range {p0 .. p0}, Ll/᩷ۤ᩹;->ۙ(Lcom/tencent/connect/common/AssistActivity;)V
 
     .line 85
     invoke-super/range {p0 .. p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 86
-    iget-object v1, v8, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v1, v8, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v13, 0x0
 
-    invoke-virtual {v1, v13}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v1, v13}, Ll/ܽۙ᩹;->ۙ(I)V
 
     .line 88
-    invoke-static/range {p0 .. p0}, Ll/ܰ᩷ᩳ;->ۙ(Lcom/tencent/connect/common/AssistActivity;)Z
+    invoke-static/range {p0 .. p0}, Ll/ܶۙ᩹;->ۙ(Lcom/tencent/connect/common/AssistActivity;)Z
 
     move-result v1
 
-    iget-object v14, v8, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v14, v8, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -547,7 +549,7 @@
 
     move-result-object v0
 
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 91
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -560,13 +562,13 @@
 
     move-result-object v1
 
-    sget-object v2, Ll/۬᩷ᩳ;->ۖ:Ljava/lang/String;
+    sget-object v2, Ll/᩺ۙ᩹;->᩸:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v13}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    iput-boolean v1, v8, Lcom/tencent/connect/common/AssistActivity;->ۛ:Z
+    iput-boolean v1, v8, Lcom/tencent/connect/common/AssistActivity;->ۢ:Z
 
     .line 96
     new-instance v1, Ljava/lang/StringBuilder;
@@ -575,7 +577,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v2, v8, Lcom/tencent/connect/common/AssistActivity;->ۛ:Z
+    iget-boolean v2, v8, Lcom/tencent/connect/common/AssistActivity;->ۢ:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -583,7 +585,7 @@
 
     move-result-object v1
 
-    invoke-static {v14, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 97
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -595,7 +597,7 @@
     const-string v1, "-->onCreate--getIntent() returns null"
 
     .line 98
-    invoke-static {v14, v1}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v1}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -652,7 +654,7 @@
     move-result-object v1
 
     :goto_1
-    iput-object v1, v8, Lcom/tencent/connect/common/AssistActivity;->۫:Ljava/lang/String;
+    iput-object v1, v8, Lcom/tencent/connect/common/AssistActivity;->۟:Ljava/lang/String;
 
     .line 108
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -674,7 +676,7 @@
 
     move-result v2
 
-    iput-boolean v2, v8, Lcom/tencent/connect/common/AssistActivity;->ܽ:Z
+    iput-boolean v2, v8, Lcom/tencent/connect/common/AssistActivity;->֡:Z
 
     const-string v2, "RESUME_FLAG"
 
@@ -683,11 +685,11 @@
 
     move-result v0
 
-    iput-boolean v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܺ:Z
+    iput-boolean v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܰ:Z
 
     .line 114
     :cond_4
-    iget-boolean v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܽ:Z
+    iget-boolean v0, v8, Lcom/tencent/connect/common/AssistActivity;->֡:Z
 
     if-nez v0, :cond_13
 
@@ -725,7 +727,7 @@
 
     move-result-object v0
 
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "com.tencent.tauth.opensdk.SHARE_SUCCESS_AND_STAY_QQ_"
 
@@ -764,16 +766,16 @@
     invoke-direct {v2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 185
-    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ll/᩹᩷ᩳ;
+    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ᩳ:Ll/ۨۙ᩹;
 
     if-nez v0, :cond_6
 
     .line 186
-    new-instance v0, Ll/᩹᩷ᩳ;
+    new-instance v0, Ll/ۨۙ᩹;
 
-    invoke-direct {v0, v8}, Ll/᩹᩷ᩳ;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
+    invoke-direct {v0, v8}, Ll/ۨۙ᩹;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
 
-    iput-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ll/᩹᩷ᩳ;
+    iput-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ᩳ:Ll/ۨۙ᩹;
 
     .line 188
     :cond_6
@@ -784,7 +786,7 @@
     if-lt v0, v3, :cond_7
 
     .line 189
-    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ll/᩹᩷ᩳ;
+    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ᩳ:Ll/ۨۙ᩹;
 
     const/4 v3, 0x2
 
@@ -794,7 +796,7 @@
 
     .line 191
     :cond_7
-    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ll/᩹᩷ᩳ;
+    iget-object v0, v8, Lcom/tencent/connect/common/AssistActivity;->ᩳ:Ll/ۨۙ᩹;
 
     invoke-virtual {v8, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     :try_end_0
@@ -808,7 +810,7 @@
     const-string v2, "registerReceiver exception: "
 
     .line 194
-    invoke-static {v14, v2, v0}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v14, v2, v0}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 125
     :goto_2
@@ -917,12 +919,12 @@
 
     move-result-object v0
 
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 152
-    invoke-static {v14, v9}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v9}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 153
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -954,31 +956,31 @@
 
     move-result-object v0
 
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 135
-    invoke-static {}, Ll/᩺᩷ᩳ;->ۙ()Ll/᩺᩷ᩳ;
+    invoke-static {}, Ll/᩶ۙ᩹;->ۙ()Ll/᩶ۙ᩹;
 
     move-result-object v0
 
     move/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Ll/᩺᩷ᩳ;->ۙ(I)Ll/ᩳ᩶ᩳ;
+    invoke-virtual {v0, v1}, Ll/᩶ۙ᩹;->ۙ(I)Ll/ᩳۤ᩹;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
     .line 137
-    new-instance v1, Ll/۠᩶ᩳ;
+    new-instance v1, Ll/֨ۤ᩹;
 
     const-string v2, "\u624bQ\u7248\u672c\u8fc7\u4f4e\uff0c\u8bf7\u4e0b\u8f7d\u5b89\u88c5\u6700\u65b0\u7248\u624bQ"
 
     const/16 v3, -0x14
 
-    invoke-direct {v1, v3, v2, v13}, Ll/۠᩶ᩳ;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v2, v13}, Ll/֨ۤ᩹;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Ll/ᩳ᩶ᩳ;->ۙ(Ll/۠᩶ᩳ;)V
+    invoke-interface {v0, v1}, Ll/ᩳۤ᩹;->ۙ(Ll/֨ۤ᩹;)V
 
     :cond_9
     const/4 v1, 0x0
@@ -997,7 +999,7 @@
     if-eqz v12, :cond_a
 
     .line 152
-    invoke-static {v14, v9}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v9}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 153
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -1044,7 +1046,7 @@
 
     move-result-object v0
 
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 162
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -1057,7 +1059,7 @@
     const-string v0, "--onCreate--h5 bundle not null, will open browser"
 
     .line 165
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ۚ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->ᩴ(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "viaShareType"
 
@@ -1142,25 +1144,25 @@
 
     .line 538
     :goto_c
-    invoke-static {v8, v2}, Ll/ۖ᩶ᩳ;->ۙ(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v2}, Ll/᩵ۤ᩹;->ۙ(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_12
 
     .line 540
-    invoke-static {}, Ll/᩺᩷ᩳ;->ۙ()Ll/᩺᩷ᩳ;
+    invoke-static {}, Ll/᩶ۙ᩹;->ۙ()Ll/᩶ۙ᩹;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Ll/᩺᩷ᩳ;->ۙ(Ljava/lang/String;)Ll/ᩳ᩶ᩳ;
+    invoke-virtual {v2, v0}, Ll/᩶ۙ᩹;->ۙ(Ljava/lang/String;)Ll/ᩳۤ᩹;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
     .line 542
-    new-instance v2, Ll/۠᩶ᩳ;
+    new-instance v2, Ll/֨ۤ᩹;
 
     const/4 v3, -0x6
 
@@ -1168,13 +1170,13 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v2, v3, v4, v5}, Ll/۠᩶ᩳ;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Ll/֨ۤ᩹;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0, v2}, Ll/ᩳ᩶ᩳ;->ۙ(Ll/۠᩶ᩳ;)V
+    invoke-interface {v0, v2}, Ll/ᩳۤ᩹;->ۙ(Ll/֨ۤ᩹;)V
 
     .line 545
     :cond_11
-    invoke-static {}, Ll/ۗ᩷ᩳ;->ۙ()Ll/ۗ᩷ᩳ;
+    invoke-static {}, Ll/ܺ᩷᩹;->ۙ()Ll/ܺ᩷᩹;
 
     move-result-object v0
 
@@ -1197,18 +1199,18 @@
     move-object/from16 v21, v1
 
     .line 88
-    invoke-static/range {v17 .. v28}, Ll/ۖ᩶ᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static/range {v17 .. v28}, Ll/᩵ۤ᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
     .line 90
-    invoke-static {}, Ll/ۖܺᩳ;->ܰ()Ll/ۖܺᩳ;
+    invoke-static {}, Ll/ۗ᩷᩹;->᩷()Ll/ۗ᩷᩹;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v0, v1, v3}, Ll/ۖܺᩳ;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
+    invoke-virtual {v2, v0, v1, v3}, Ll/ۗ᩷᩹;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
 
     .line 548
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
@@ -1217,7 +1219,7 @@
 
     .line 550
     :cond_12
-    invoke-static {}, Ll/ۗ᩷ᩳ;->ۙ()Ll/ۗ᩷ᩳ;
+    invoke-static {}, Ll/ܺ᩷᩹;->ۙ()Ll/ܺ᩷᩹;
 
     move-result-object v0
 
@@ -1240,18 +1242,18 @@
     move-object/from16 v21, v1
 
     .line 88
-    invoke-static/range {v17 .. v28}, Ll/ۖ᩶ᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static/range {v17 .. v28}, Ll/᩵ۤ᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
     .line 90
-    invoke-static {}, Ll/ۖܺᩳ;->ܰ()Ll/ۖܺᩳ;
+    invoke-static {}, Ll/ۗ᩷᩹;->᩷()Ll/ۗ᩷᩹;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v0, v1, v3}, Ll/ۖܺᩳ;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
+    invoke-virtual {v2, v0, v1, v3}, Ll/ۗ᩷᩹;->ۙ(Landroid/os/Bundle;Ljava/lang/String;Z)V
 
     .line 554
     :goto_d
@@ -1269,7 +1271,7 @@
     const-string v0, "is restart"
 
     .line 170
-    invoke-static {v14, v0}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_e
     const v0, 0x1020002
@@ -1285,9 +1287,9 @@
 
     .line 203
     :cond_14
-    new-instance v1, Ll/ۖ᩷ᩳ;
+    new-instance v1, Ll/ۗۙ᩹;
 
-    invoke-direct {v1, v8}, Ll/ۖ᩷ᩳ;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
+    invoke-direct {v1, v8}, Ll/ۗۙ᩹;-><init>(Lcom/tencent/connect/common/AssistActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -1299,24 +1301,24 @@
     .locals 2
 
     .line 294
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const-string v1, "-->onDestroy"
 
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 295
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 296
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v1, 0x5
 
-    invoke-virtual {v0, v1}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v0, v1}, Ll/ܽۙ᩹;->ۙ(I)V
 
     .line 297
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ll/᩹᩷ᩳ;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ᩳ:Ll/ۨۙ᩹;
 
     if-eqz v0, :cond_0
 
@@ -1347,19 +1349,19 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 306
     invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 307
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v2, 0x6
 
-    invoke-virtual {v0, v2}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v0, v2}, Ll/ܽۙ᩹;->ۙ(I)V
 
     if-eqz p1, :cond_0
 
@@ -1395,7 +1397,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v3, 0x277c
 
@@ -1611,7 +1613,7 @@
     if-nez p1, :cond_d
 
     .line 370
-    invoke-static {v1, v5}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 371
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -1639,7 +1641,7 @@
     if-nez p1, :cond_d
 
     .line 390
-    invoke-static {v1, v5}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 391
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -1665,7 +1667,7 @@
     if-nez p1, :cond_d
 
     .line 380
-    invoke-static {v1, v5}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 381
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -1678,11 +1680,11 @@
     .locals 2
 
     .line 267
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const-string v1, "-->onPause"
 
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268
     iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->᩶:Landroid/os/Handler;
@@ -1695,11 +1697,11 @@
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 270
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v0, v1}, Ll/ܽۙ᩹;->ۙ(I)V
 
     return-void
 .end method
@@ -1708,11 +1710,11 @@
     .locals 4
 
     .line 235
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const-string v1, "-->onResume"
 
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 236
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
@@ -1720,9 +1722,9 @@
     const/4 v0, 0x2
 
     .line 237
-    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
-    invoke-virtual {v1, v0}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v1, v0}, Ll/ܽۙ᩹;->ۙ(I)V
 
     .line 246
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1753,7 +1755,7 @@
     if-nez v0, :cond_1
 
     .line 252
-    iget-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܽ:Z
+    iget-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Z
 
     if-eqz v0, :cond_1
 
@@ -1768,11 +1770,11 @@
 
     .line 256
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܺ:Z
+    iget-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܰ:Z
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Ll/ۙ᩷ᩳ;->ۙ()Z
+    invoke-virtual {v1}, Ll/ܽۙ᩹;->ۙ()Z
 
     move-result v0
 
@@ -1794,7 +1796,7 @@
     const/4 v0, 0x1
 
     .line 261
-    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܺ:Z
+    iput-boolean v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܰ:Z
 
     return-void
 .end method
@@ -1803,11 +1805,11 @@
     .locals 2
 
     .line 401
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const-string v1, "--onSaveInstanceState--"
 
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "RESTART_FLAG"
 
@@ -1819,7 +1821,7 @@
     const-string v0, "RESUME_FLAG"
 
     .line 403
-    iget-boolean v1, p0, Lcom/tencent/connect/common/AssistActivity;->ܺ:Z
+    iget-boolean v1, p0, Lcom/tencent/connect/common/AssistActivity;->ܰ:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -1833,21 +1835,21 @@
     .locals 2
 
     .line 228
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
     const-string v1, "-->onStart"
 
-    invoke-static {v0, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 230
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v0, v1}, Ll/ܽۙ᩹;->ۙ(I)V
 
     return-void
 .end method
@@ -1860,19 +1862,19 @@
     const-string v1, "-->onStop"
 
     .line 275
-    iget-object v2, p0, Lcom/tencent/connect/common/AssistActivity;->֡:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/connect/common/AssistActivity;->ܿ:Ljava/lang/String;
 
-    invoke-static {v2, v1}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 276
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 277
-    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->ۧ:Ll/ۙ᩷ᩳ;
+    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->֨:Ll/ܽۙ᩹;
 
     const/4 v3, 0x4
 
-    invoke-virtual {v1, v3}, Ll/ۙ᩷ᩳ;->ۙ(I)V
+    invoke-virtual {v1, v3}, Ll/ܽۙ᩹;->ۙ(I)V
 
     .line 280
     :try_start_0
@@ -1899,7 +1901,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Ll/᩺ܺᩳ;->ۨ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Ll/᩶᩷᩹;->ۤ(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eq v1, v4, :cond_0
 
@@ -1917,7 +1919,7 @@
     const-string v1, "reset requestedOrientation catch exception"
 
     .line 287
-    invoke-static {v2, v1, v0}, Ll/᩺ܺᩳ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1, v0}, Ll/᩶᩷᩹;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1926,7 +1928,7 @@
     .locals 1
 
     .line 446
-    invoke-static {p0}, Ll/֡ܺᩳ;->ܰ(Lcom/tencent/connect/common/AssistActivity;)Z
+    invoke-static {p0}, Ll/᩷ۤ᩹;->᩷(Lcom/tencent/connect/common/AssistActivity;)Z
 
     move-result v0
 

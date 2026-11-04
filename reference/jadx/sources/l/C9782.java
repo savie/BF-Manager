@@ -1,14 +1,44 @@
 package l;
 
-import android.view.View;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 71DP */
+/* JADX INFO: renamed from: l.ۢ֨᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3AN3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9782 extends AbstractC22172 {
-    @Override // l.AbstractC22172
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6502(float f, View view) {
-        view.setRotationY(m49189(f));
+public final class C9782 implements Iterator {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final Object[] f31535;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f31536;
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    public C9782(Object[] objArr) {
+        C15243.m36590(objArr, "array");
+        this.f31535 = objArr;
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        return this.f31536 < this.f31535.length;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        try {
+            Object[] objArr = this.f31535;
+            int i = this.f31536;
+            this.f31536 = i + 1;
+            return objArr[i];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            this.f31536--;
+            throw new NoSuchElementException(e.getMessage());
+        }
     }
 }

@@ -1,103 +1,122 @@
 package l;
 
-import android.os.Build;
-import java.util.Collection;
-import java.util.Set;
+/* JADX INFO: renamed from: l.ۧۡܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8CV */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11510 extends AbstractC6291 {
 
-/* JADX INFO: renamed from: l.ۨۛۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H8RW */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11510 {
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public double f36210;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C11510 f38690;
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public C13508 f36211;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC23844 f38691;
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public double f36212;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public C13508 f36213;
+
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public double f36214;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public double f36215;
 
     /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f38692;
+    public double f36216;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f38693;
+    public double f36217;
 
-    static {
-        C11510 c11510;
-        if (Build.VERSION.SDK_INT < 33) {
-            c11510 = new C11510(2, 10);
-        } else {
-            C6204 c6204 = new C6204();
-            for (int i = 1; i <= 10; i++) {
-                c6204.mo13308((Object) Integer.valueOf(C17983.m41854(i)));
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public double f36218;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public C13508 f36219;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public double f36220;
+
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public double f36221;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public double f36222;
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public double f36223;
+
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public double f36224;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public double f36225;
+
+    @Override // l.AbstractC4053
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2017() {
+        double d = this.f36211.m20606()[0];
+        double d2 = this.f36213.m20606()[0];
+        if (d < 1.0E-5d) {
+            d = 1.0E-5d;
+        }
+        if (d2 < 1.0E-5d) {
+            d2 = 1.0E-5d;
+        }
+        if (d != this.f36216 || d2 != this.f36214) {
+            this.f36216 = d;
+            this.f36214 = d2;
+            double dM37658 = this.f13796.m37658() * d;
+            if (dM37658 >= 0.499d) {
+                dM37658 = 0.499d;
             }
-            c11510 = new C11510(2, c6204.mo14317());
+            double d3 = dM37658 * 6.283185307179586d;
+            this.f36221 = d3;
+            this.f36223 = Math.cos(d3);
+            double dSin = Math.sin(this.f36221) / (d2 * 2.0d);
+            double d4 = 1.0d / (dSin + 1.0d);
+            double d5 = this.f36223;
+            double d6 = 1.0d - d5;
+            double d7 = 0.5d * d6 * d4;
+            this.f36210 = d7;
+            this.f36215 = d6 * d4;
+            this.f36225 = d7;
+            this.f36220 = d5 * (-2.0d) * d4;
+            this.f36218 = (1.0d - dSin) * d4;
         }
-        f38690 = c11510;
-    }
-
-    public C11510(int i, Set set) {
-        this.f38693 = i;
-        AbstractC23844 abstractC23844CopyOf = AbstractC23844.copyOf((Collection) set);
-        this.f38691 = abstractC23844CopyOf;
-        AbstractC0477 it = abstractC23844CopyOf.iterator();
-        int iMax = 0;
-        while (it.hasNext()) {
-            iMax = Math.max(iMax, Integer.bitCount(((Integer) it.next()).intValue()));
+        double[] dArrM20606 = this.f21357.m20606();
+        double[] dArrM20607 = this.f36219.m20606();
+        double[] dArrM20608 = this.f21356.m20606();
+        double d8 = this.f36224;
+        double d9 = this.f36212;
+        double d10 = this.f36217;
+        double d11 = this.f36222;
+        double d12 = this.f36210;
+        double d13 = this.f36215;
+        double d14 = this.f36225;
+        double d15 = this.f36220;
+        double d16 = d10;
+        double d17 = this.f36218;
+        int i = 0;
+        double d18 = d9;
+        double d19 = d11;
+        double d20 = d8;
+        while (i < 8) {
+            double d21 = dArrM20606[i];
+            d19 = (((d18 * d14) + ((d13 * d20) + (d12 * d21))) - (d15 * d16)) - (d19 * d17);
+            dArrM20608[i] = dArrM20607[i] * d19;
+            int i2 = i + 1;
+            double d22 = dArrM20606[i2];
+            d16 = (((d20 * d14) + ((d13 * d21) + (d12 * d22))) - (d15 * d19)) - (d16 * d17);
+            dArrM20608[i2] = dArrM20607[i2] * d16;
+            i += 2;
+            d18 = d21;
+            d20 = d22;
         }
-        this.f38692 = iMax;
-    }
-
-    public C11510(int i, int i2) {
-        this.f38693 = i;
-        this.f38692 = i2;
-        this.f38691 = null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m28693(int i) {
-        AbstractC23844 abstractC23844 = this.f38691;
-        if (abstractC23844 == null) {
-            return i <= this.f38692;
-        }
-        int iM41854 = C17983.m41854(i);
-        if (iM41854 == 0) {
-            return false;
-        }
-        return abstractC23844.contains(Integer.valueOf(iM41854));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m28692(int i, C2708 c2708) {
-        if (this.f38691 != null) {
-            return this.f38692;
-        }
-        int i2 = Build.VERSION.SDK_INT;
-        int i3 = this.f38693;
-        if (i2 >= 29) {
-            return C4453.m12423(i3, i, c2708);
-        }
-        Object obj = C2336.f8270.get(Integer.valueOf(i3));
-        return ((Integer) (obj != null ? obj : 0)).intValue();
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof C11510)) {
-            return false;
-        }
-        C11510 c11510 = (C11510) obj;
-        return this.f38693 == c11510.f38693 && this.f38692 == c11510.f38692 && C13638.equals(this.f38691, c11510.f38691);
-    }
-
-    public final int hashCode() {
-        int i = ((this.f38693 * 31) + this.f38692) * 31;
-        AbstractC23844 abstractC23844 = this.f38691;
-        return i + (abstractC23844 == null ? 0 : abstractC23844.hashCode());
-    }
-
-    public final String toString() {
-        return "AudioProfile[format=" + this.f38693 + ", maxChannelCount=" + this.f38692 + ", channelMasks=" + this.f38691 + "]";
+        this.f36224 = d20;
+        this.f36212 = d18;
+        this.f36217 = d16 + 1.0E-26d;
+        this.f36222 = d19 - 1.0E-26d;
     }
 }

@@ -16,10 +16,10 @@ import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.internal.ViewUtils;
 import java.lang.reflect.Field;
 import java.util.Locale;
-import l.C15945;
-import l.C17910;
-import l.C22006;
-import l.C3798;
+import l.C0385;
+import l.C19835;
+import l.C23577;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionChange, TimePickerPresenter {
@@ -62,23 +62,23 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
         this.timePickerView = linearLayout;
         this.time = timeModel;
         Resources resources = linearLayout.getResources();
-        ChipTextInputComboView chipTextInputComboView = (ChipTextInputComboView) linearLayout.findViewById(C3798.f13982);
+        ChipTextInputComboView chipTextInputComboView = (ChipTextInputComboView) linearLayout.findViewById(C23577.f76153);
         this.minuteTextInput = chipTextInputComboView;
-        ChipTextInputComboView chipTextInputComboView2 = (ChipTextInputComboView) linearLayout.findViewById(C3798.f13970);
+        ChipTextInputComboView chipTextInputComboView2 = (ChipTextInputComboView) linearLayout.findViewById(C23577.f76374);
         this.hourTextInput = chipTextInputComboView2;
-        TextView textView = (TextView) chipTextInputComboView.findViewById(C3798.f13712);
-        TextView textView2 = (TextView) chipTextInputComboView2.findViewById(C3798.f13712);
-        textView.setText(resources.getString(C17910.f56780));
-        textView2.setText(resources.getString(C17910.f56799));
-        chipTextInputComboView.setTag(C3798.f13815, 12);
-        chipTextInputComboView2.setTag(C3798.f13815, 10);
+        TextView textView = (TextView) chipTextInputComboView.findViewById(C23577.f76434);
+        TextView textView2 = (TextView) chipTextInputComboView2.findViewById(C23577.f76434);
+        textView.setText(resources.getString(C24323.f78894));
+        textView2.setText(resources.getString(C24323.f78778));
+        chipTextInputComboView.setTag(C23577.f76320, 12);
+        chipTextInputComboView2.setTag(C23577.f76320, 10);
         if (timeModel.format == 0) {
             setupPeriodToggle();
         }
         View.OnClickListener onClickListener = new View.OnClickListener() { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter.3
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                TimePickerTextInputPresenter.this.onSelectionChanged(((Integer) view.getTag(C3798.f13815)).intValue());
+                TimePickerTextInputPresenter.this.onSelectionChanged(((Integer) view.getTag(C23577.f76320)).intValue());
             }
         };
         chipTextInputComboView2.setOnClickListener(onClickListener);
@@ -88,18 +88,18 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
         this.hourEditText = chipTextInputComboView2.getTextInput().getEditText();
         this.minuteEditText = chipTextInputComboView.getTextInput().getEditText();
         this.controller = new TimePickerTextInputKeyController(chipTextInputComboView2, chipTextInputComboView, timeModel);
-        chipTextInputComboView2.setChipDelegate(new ClickActionDelegate(linearLayout.getContext(), C17910.f56765) { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter.4
-            @Override // com.google.android.material.timepicker.ClickActionDelegate, l.C12025
-            public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
-                super.onInitializeAccessibilityNodeInfo(view, c22006);
-                c22006.m48874((CharSequence) view.getResources().getString(timeModel.getHourContentDescriptionResId(), String.valueOf(timeModel.getHourForDisplay())));
+        chipTextInputComboView2.setChipDelegate(new ClickActionDelegate(linearLayout.getContext(), C24323.f78864) { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter.4
+            @Override // com.google.android.material.timepicker.ClickActionDelegate, l.C22687
+            public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
+                super.onInitializeAccessibilityNodeInfo(view, c19835);
+                c19835.m45682((CharSequence) view.getResources().getString(timeModel.getHourContentDescriptionResId(), String.valueOf(timeModel.getHourForDisplay())));
             }
         });
-        chipTextInputComboView.setChipDelegate(new ClickActionDelegate(linearLayout.getContext(), C17910.f56737) { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter.5
-            @Override // com.google.android.material.timepicker.ClickActionDelegate, l.C12025
-            public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
-                super.onInitializeAccessibilityNodeInfo(view, c22006);
-                c22006.m48874((CharSequence) view.getResources().getString(C17910.f56819, String.valueOf(timeModel.minute)));
+        chipTextInputComboView.setChipDelegate(new ClickActionDelegate(linearLayout.getContext(), C24323.f78820) { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter.5
+            @Override // com.google.android.material.timepicker.ClickActionDelegate, l.C22687
+            public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
+                super.onInitializeAccessibilityNodeInfo(view, c19835);
+                c19835.m45682((CharSequence) view.getResources().getString(C24323.f78773, String.valueOf(timeModel.minute)));
             }
         });
         initialize();
@@ -134,7 +134,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
     }
 
     private void setupPeriodToggle() {
-        MaterialButtonToggleGroup materialButtonToggleGroup = (MaterialButtonToggleGroup) this.timePickerView.findViewById(C3798.f14053);
+        MaterialButtonToggleGroup materialButtonToggleGroup = (MaterialButtonToggleGroup) this.timePickerView.findViewById(C23577.f76211);
         this.toggle = materialButtonToggleGroup;
         materialButtonToggleGroup.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() { // from class: com.google.android.material.timepicker.TimePickerTextInputPresenter$$ExternalSyntheticLambda0
             @Override // com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener
@@ -149,7 +149,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ void lambda$setupPeriodToggle$0(MaterialButtonToggleGroup materialButtonToggleGroup, int i, boolean z) {
         if (z) {
-            this.time.setPeriod(i == C3798.f13829 ? 1 : 0);
+            this.time.setPeriod(i == C23577.f76529 ? 1 : 0);
         }
     }
 
@@ -160,9 +160,9 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
             return;
         }
         if (this.time.period == 0) {
-            i = C3798.f13876;
+            i = C23577.f76247;
         } else {
-            i = C3798.f13829;
+            i = C23577.f76529;
         }
         materialButtonToggleGroup.check(i);
     }
@@ -206,9 +206,9 @@ public class TimePickerTextInputPresenter implements TimePickerView.OnSelectionC
             Object obj = declaredField2.get(editText);
             Field declaredField3 = obj.getClass().getDeclaredField("mCursorDrawable");
             declaredField3.setAccessible(true);
-            Drawable drawableM37904 = C15945.m37904(context, i2);
-            drawableM37904.setColorFilter(i, PorterDuff.Mode.SRC_IN);
-            declaredField3.set(obj, new Drawable[]{drawableM37904, drawableM37904});
+            Drawable drawableM2186 = C0385.m2186(context, i2);
+            drawableM2186.setColorFilter(i, PorterDuff.Mode.SRC_IN);
+            declaredField3.set(obj, new Drawable[]{drawableM2186, drawableM2186});
         } catch (Throwable unused) {
         }
     }

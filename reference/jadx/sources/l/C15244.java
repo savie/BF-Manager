@@ -1,40 +1,78 @@
 package l;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
+import android.content.res.TypedArray;
+import android.graphics.Matrix;
+import android.graphics.Path;
+import android.graphics.PathMeasure;
+import android.util.AttributeSet;
+import org.xmlpull.v1.XmlPullParser;
 
-/* JADX INFO: renamed from: l.ܶ۬ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O5NM */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15244 extends AbstractC15636 {
-    @Override // l.AbstractC15636
-    /* JADX INFO: renamed from: ۙ */
-    public final Intent mo1151(Context context, Object obj) {
-        Bundle bundleExtra;
-        C7168 c7168M22351 = (C7168) obj;
-        Intent intent = new Intent("androidx.activity.result.contract.action.INTENT_SENDER_REQUEST");
-        Intent intentM19098 = c7168M22351.m19098();
-        if (intentM19098 != null && (bundleExtra = intentM19098.getBundleExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE")) != null) {
-            intent.putExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE", bundleExtra);
-            intentM19098.removeExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE");
-            if (intentM19098.getBooleanExtra("androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE", false)) {
-                C8580 c8580 = new C8580(c7168M22351.m19097());
-                c8580.m22353(null);
-                c8580.m22352(c7168M22351.m19099(), c7168M22351.m19100());
-                c7168M22351 = c8580.m22351();
+/* JADX INFO: renamed from: l.ܳۡ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3346 */
+/* JADX INFO: loaded from: classes5.dex */
+public class C15244 extends AbstractC19720 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Path f49724 = new Path();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Matrix f49725 = new Matrix();
+
+    public C15244(Context context, AttributeSet attributeSet) {
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C1821.f6178);
+        try {
+            String strM8388 = C2506.m8388(typedArrayObtainStyledAttributes, (XmlPullParser) attributeSet, "patternPathData", 0);
+            if (strM8388 == null) {
+                throw new RuntimeException("pathData must be supplied for patternPathMotion");
             }
+            m36594(C25210.m56212(strM8388));
+            typedArrayObtainStyledAttributes.recycle();
+        } catch (Throwable th) {
+            typedArrayObtainStyledAttributes.recycle();
+            throw th;
         }
-        intent.putExtra("androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST", c7168M22351);
-        if (AbstractC8894.m23060(2)) {
-            intent.toString();
-        }
-        return intent;
     }
 
-    @Override // l.AbstractC15636
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1152(Intent intent, int i) {
-        return new C12813(intent, i);
+    public C15244(Path path) {
+        m36594(path);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m36594(Path path) {
+        PathMeasure pathMeasure = new PathMeasure(path, false);
+        float[] fArr = new float[2];
+        pathMeasure.getPosTan(pathMeasure.getLength(), fArr, null);
+        float f = fArr[0];
+        float f2 = fArr[1];
+        pathMeasure.getPosTan(0.0f, fArr, null);
+        float f3 = fArr[0];
+        float f4 = fArr[1];
+        if (f3 == f && f4 == f2) {
+            throw new IllegalArgumentException("pattern must not end at the starting point");
+        }
+        Matrix matrix = this.f49725;
+        matrix.setTranslate(-f3, -f4);
+        float f5 = f - f3;
+        float f6 = f2 - f4;
+        float fSqrt = 1.0f / ((float) Math.sqrt((f6 * f6) + (f5 * f5)));
+        matrix.postScale(fSqrt, fSqrt);
+        matrix.postRotate((float) Math.toDegrees(-Math.atan2(f6, f5)));
+        path.transform(matrix, this.f49724);
+    }
+
+    @Override // l.AbstractC19720
+    public final Path getPath(float f, float f2, float f3, float f4) {
+        float f5 = f3 - f;
+        float f6 = f4 - f2;
+        float fSqrt = (float) Math.sqrt((f6 * f6) + (f5 * f5));
+        double dAtan2 = Math.atan2(f6, f5);
+        Matrix matrix = this.f49725;
+        matrix.setScale(fSqrt, fSqrt);
+        matrix.postRotate((float) Math.toDegrees(dAtan2));
+        matrix.postTranslate(f, f2);
+        Path path = new Path();
+        this.f49724.transform(matrix, path);
+        return path;
     }
 }

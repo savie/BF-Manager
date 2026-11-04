@@ -1,7 +1,7 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.Grainv1Engine;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
@@ -10,10 +10,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseStreamCipher;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Grainv1 {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -21,7 +20,6 @@ public final class Grainv1 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Base extends BaseStreamCipher {
         public Base() {
             super(new Grainv1Engine(), 8);
@@ -41,7 +39,7 @@ public final class Grainv1 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.Grainv1", C9023.m23357(str, "$KeyGen", "KeyGenerator.Grainv1", C9023.m23357(str, "$Base", "Cipher.Grainv1", sb, configurableProvider), configurableProvider), configurableProvider);
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.Grainv1", C18063.m42089(str, "$KeyGen", "KeyGenerator.Grainv1", C18063.m42089(str, "$Base", "Cipher.Grainv1", sb, configurableProvider), configurableProvider), configurableProvider);
         }
     }
 }

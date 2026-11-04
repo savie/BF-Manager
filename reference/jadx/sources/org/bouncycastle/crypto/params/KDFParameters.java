@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.params;
 
 import org.bouncycastle.crypto.DerivationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KDFParameters implements DerivationParameters {
     public byte[] iv;
     public byte[] shared;

@@ -1,332 +1,292 @@
 package l;
 
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.TimeZone;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.TypedValue;
+import android.util.Xml;
+import android.view.View;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ܶܿᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܳܰ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P1C9 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15380 implements Serializable {
-    public static final long[] i = new long[0];
-    public static final C23141[] j = new C23141[0];
-    public static final C1952[] k = new C1952[0];
+public final class C15380 {
 
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final C13263[] f77966l = new C13263[0];
-    public static final long serialVersionUID = 3044319355680032515L;
-    public final long[] a;
-    public final C2678[] b;
-    public final long[] c;
-    public final C1952[] d;
-    public final C2678[] e;
-    public final C23141[] f;
-    public final TimeZone g;
-    public final transient ConcurrentMapC13783 h = new ConcurrentMapC13783();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f50150;
 
-    public static Object a(C1952 c1952, C13263 c13263) {
-        C1952 c1953 = c13263.b;
-        if (c13263.l()) {
-            if (c1952.X(c1953)) {
-                return c13263.c;
-            }
-            if (!c1952.X(c13263.b.b0(c13263.d.b - c13263.c.b))) {
-                return c13263.d;
-            }
-        } else {
-            if (!c1952.X(c1953)) {
-                return c13263.d;
-            }
-            if (c1952.X(c13263.b.b0(c13263.d.b - c13263.c.b))) {
-                return c13263.c;
-            }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public float f50151;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public EnumC19856 f50152;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f50153;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public String f50154;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f50155;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f50156;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m36837(int i) {
+        int i2 = (i & (~(i >> 31))) - 255;
+        return (i2 & (i2 >> 31)) + 255;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC19856 m36840() {
+        return this.f50152;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m36844() {
+        int i = C22840.f74022[this.f50152.ordinal()];
+        return (i == 1 || i == 2) ? 4 : 1;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final float m36845() {
+        switch (C22840.f74022[this.f50152.ordinal()]) {
+            case 1:
+            case 2:
+                throw new RuntimeException("Color does not have a single color to interpolate");
+            case 3:
+                return this.f50156;
+            case 4:
+                return this.f50151;
+            case 5:
+                throw new RuntimeException("Cannot interpolate String");
+            case 6:
+                return this.f50150 ? 1.0f : 0.0f;
+            case 7:
+                return this.f50151;
+            default:
+                return Float.NaN;
         }
-        return c13263;
     }
 
-    public C15380(long[] jArr, C2678[] c2678Arr, long[] jArr2, C2678[] c2678Arr2, C23141[] c23141Arr) {
-        this.a = jArr;
-        this.b = c2678Arr;
-        this.c = jArr2;
-        this.e = c2678Arr2;
-        this.f = c23141Arr;
-        if (jArr2.length == 0) {
-            this.d = k;
-        } else {
-            ArrayList arrayList = new ArrayList();
-            int i2 = 0;
-            while (i2 < jArr2.length) {
-                int i3 = i2 + 1;
-                C13263 c13263 = new C13263(jArr2[i2], c2678Arr2[i2], c2678Arr2[i3]);
-                if (c13263.l()) {
-                    arrayList.add(c13263.b);
-                    arrayList.add(c13263.b.b0(c13263.d.b - c13263.c.b));
-                } else {
-                    arrayList.add(c13263.b.b0(c13263.d.b - c13263.c.b));
-                    arrayList.add(c13263.b);
-                }
-                i2 = i3;
-            }
-            this.d = (C1952[]) arrayList.toArray(new C1952[arrayList.size()]);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m36843(float[] fArr) {
+        switch (C22840.f74022[this.f50152.ordinal()]) {
+            case 1:
+            case 2:
+                int i = this.f50155;
+                int i2 = (i >> 24) & 255;
+                float fPow = (float) Math.pow(((i >> 16) & 255) / 255.0f, 2.2d);
+                float fPow2 = (float) Math.pow(((i >> 8) & 255) / 255.0f, 2.2d);
+                float fPow3 = (float) Math.pow((i & 255) / 255.0f, 2.2d);
+                fArr[0] = fPow;
+                fArr[1] = fPow2;
+                fArr[2] = fPow3;
+                fArr[3] = i2 / 255.0f;
+                return;
+            case 3:
+                fArr[0] = this.f50156;
+                return;
+            case 4:
+                fArr[0] = this.f50151;
+                return;
+            case 5:
+                throw new RuntimeException("Color does not have a single color to interpolate");
+            case 6:
+                fArr[0] = this.f50150 ? 1.0f : 0.0f;
+                return;
+            case 7:
+                fArr[0] = this.f50151;
+                return;
+            default:
+                return;
         }
-        this.g = null;
     }
 
-    public C15380(C2678 c2678) {
-        C2678[] c2678Arr = {c2678};
-        this.b = c2678Arr;
-        long[] jArr = i;
-        this.a = jArr;
-        this.c = jArr;
-        this.d = k;
-        this.e = c2678Arr;
-        this.f = j;
-        this.g = null;
+    public C15380(C15380 c15380, Object obj) {
+        this.f50154 = c15380.f50154;
+        this.f50152 = c15380.f50152;
+        m36842(obj);
     }
 
-    public C15380(TimeZone timeZone) {
-        C2678[] c2678Arr = {h(timeZone.getRawOffset())};
-        this.b = c2678Arr;
-        long[] jArr = i;
-        this.a = jArr;
-        this.c = jArr;
-        this.d = k;
-        this.e = c2678Arr;
-        this.f = j;
-        this.g = timeZone;
-    }
-
-    public static C2678 h(int i2) {
-        return C2678.e0(i2 / 1000);
-    }
-
-    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
-        throw new InvalidObjectException("Deserialization via serialization delegate");
-    }
-
-    private Object writeReplace() {
-        return new C1267(this.g != null ? (byte) 100 : (byte) 1, this);
-    }
-
-    public static int c(long j2, C2678 c2678) {
-        return C18991.i0(AbstractC1726.z(j2 + ((long) c2678.b), 86400)).a;
-    }
-
-    public final C2678 d(C18285 c18285) {
-        TimeZone timeZone = this.g;
-        if (timeZone != null) {
-            return h(timeZone.getOffset(c18285.toEpochMilli()));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m36842(Object obj) {
+        switch (C22840.f74022[this.f50152.ordinal()]) {
+            case 1:
+            case 2:
+                this.f50155 = ((Integer) obj).intValue();
+                break;
+            case 3:
+                this.f50156 = ((Integer) obj).intValue();
+                break;
+            case 4:
+                this.f50151 = ((Float) obj).floatValue();
+                break;
+            case 5:
+                this.f50153 = (String) obj;
+                break;
+            case 6:
+                this.f50150 = ((Boolean) obj).booleanValue();
+                break;
+            case 7:
+                this.f50151 = ((Float) obj).floatValue();
+                break;
         }
-        if (this.c.length == 0) {
-            return this.b[0];
-        }
-        long epochSecond = c18285.getEpochSecond();
-        if (this.f.length > 0) {
-            long[] jArr = this.c;
-            if (epochSecond > jArr[jArr.length - 1]) {
-                C2678[] c2678Arr = this.e;
-                C13263[] c13263ArrB = b(c(epochSecond, c2678Arr[c2678Arr.length - 1]));
-                C13263 c13263 = null;
-                for (int i2 = 0; i2 < c13263ArrB.length; i2++) {
-                    c13263 = c13263ArrB[i2];
-                    if (epochSecond < c13263.a) {
-                        return c13263.c;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m36839(View view, HashMap map) {
+        Class<?> cls = view.getClass();
+        for (String str : map.keySet()) {
+            C15380 c15380 = (C15380) map.get(str);
+            String strM56409 = C25272.m56409("set", str);
+            try {
+                try {
+                    int i = C22840.f74022[c15380.f50152.ordinal()];
+                    Class<?> cls2 = Integer.TYPE;
+                    Class<?> cls3 = Float.TYPE;
+                    switch (i) {
+                        case 1:
+                            cls.getMethod(strM56409, cls2).invoke(view, Integer.valueOf(c15380.f50155));
+                            break;
+                        case 2:
+                            Method method = cls.getMethod(strM56409, Drawable.class);
+                            ColorDrawable colorDrawable = new ColorDrawable();
+                            colorDrawable.setColor(c15380.f50155);
+                            method.invoke(view, colorDrawable);
+                            break;
+                        case 3:
+                            cls.getMethod(strM56409, cls2).invoke(view, Integer.valueOf(c15380.f50156));
+                            break;
+                        case 4:
+                            cls.getMethod(strM56409, cls3).invoke(view, Float.valueOf(c15380.f50151));
+                            break;
+                        case 5:
+                            cls.getMethod(strM56409, CharSequence.class).invoke(view, c15380.f50153);
+                            break;
+                        case 6:
+                            cls.getMethod(strM56409, Boolean.TYPE).invoke(view, Boolean.valueOf(c15380.f50150));
+                            break;
+                        case 7:
+                            cls.getMethod(strM56409, cls3).invoke(view, Float.valueOf(c15380.f50151));
+                            break;
                     }
+                } catch (NoSuchMethodException e) {
+                    e.getMessage();
                 }
-                return c13263.d;
+            } catch (IllegalAccessException | InvocationTargetException unused) {
             }
         }
-        int iBinarySearch = Arrays.binarySearch(this.c, epochSecond);
-        if (iBinarySearch < 0) {
-            iBinarySearch = (-iBinarySearch) - 2;
-        }
-        return this.e[iBinarySearch + 1];
     }
 
-    public final List f(C1952 c1952) {
-        Object objE = e(c1952);
-        if (!(objE instanceof C13263)) {
-            return Collections.singletonList((C2678) objE);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m36841(View view, float[] fArr) {
+        Class<?> cls = view.getClass();
+        StringBuilder sb = new StringBuilder("set");
+        String str = this.f50154;
+        sb.append(str);
+        String string = sb.toString();
+        try {
+            int i = C22840.f74022[this.f50152.ordinal()];
+            Class<?> cls2 = Integer.TYPE;
+            Class<?> cls3 = Float.TYPE;
+            switch (i) {
+                case 1:
+                    cls.getMethod(string, cls2).invoke(view, Integer.valueOf((m36837((int) (((float) Math.pow(fArr[0], 0.45454545454545453d)) * 255.0f)) << 16) | (m36837((int) (fArr[3] * 255.0f)) << 24) | (m36837((int) (((float) Math.pow(fArr[1], 0.45454545454545453d)) * 255.0f)) << 8) | m36837((int) (((float) Math.pow(fArr[2], 0.45454545454545453d)) * 255.0f))));
+                    return;
+                case 2:
+                    Method method = cls.getMethod(string, Drawable.class);
+                    int iM36837 = (m36837((int) (((float) Math.pow(fArr[0], 0.45454545454545453d)) * 255.0f)) << 16) | (m36837((int) (fArr[3] * 255.0f)) << 24) | (m36837((int) (((float) Math.pow(fArr[1], 0.45454545454545453d)) * 255.0f)) << 8) | m36837((int) (((float) Math.pow(fArr[2], 0.45454545454545453d)) * 255.0f));
+                    ColorDrawable colorDrawable = new ColorDrawable();
+                    colorDrawable.setColor(iM36837);
+                    method.invoke(view, colorDrawable);
+                    return;
+                case 3:
+                    cls.getMethod(string, cls2).invoke(view, Integer.valueOf((int) fArr[0]));
+                    return;
+                case 4:
+                    cls.getMethod(string, cls3).invoke(view, Float.valueOf(fArr[0]));
+                    return;
+                case 5:
+                    throw new RuntimeException("unable to interpolate strings " + str);
+                case 6:
+                    cls.getMethod(string, Boolean.TYPE).invoke(view, Boolean.valueOf(fArr[0] > 0.5f));
+                    return;
+                case 7:
+                    cls.getMethod(string, cls3).invoke(view, Float.valueOf(fArr[0]));
+                    return;
+                default:
+                    return;
+            }
+        } catch (IllegalAccessException unused) {
+            C18540.m43118(view);
+        } catch (NoSuchMethodException unused2) {
+            C18540.m43118(view);
+        } catch (InvocationTargetException unused3) {
         }
-        C13263 c13263 = (C13263) objE;
-        return c13263.l() ? Collections.EMPTY_LIST : AbstractC1726.B(new Object[]{c13263.c, c13263.d});
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:27:0x0063, code lost:
-    
-        if (r9.V(r0) > 0) goto L34;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:33:0x0086, code lost:
-    
-        if (r9.b.h0() <= r0.b.h0()) goto L44;
-     */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final java.lang.Object e(l.C1952 r9) {
-        /*
-            Method dump skipped, instruction units count: 261
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C15380.e(l.֫ܽᩴ):java.lang.Object");
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    public final C13263[] b(int i2) {
-        C18991 c18991W;
-        C13263[] c13263Arr = f77966l;
-        Integer numValueOf = Integer.valueOf(i2);
-        C13263[] c13263Arr2 = (C13263[]) this.h.get(numValueOf);
-        if (c13263Arr2 != null) {
-            return c13263Arr2;
-        }
-        long j2 = 1;
-        int i3 = 0;
-        if (this.g != null) {
-            if (i2 < 1800) {
-                return c13263Arr;
-            }
-            C1952 c1952 = C1952.c;
-            C18991 c18991H0 = C18991.h0(i2 - 1, 12, 31);
-            EnumC18762.HOUR_OF_DAY.T(0);
-            long j3 = AbstractC1726.j(new C1952(c18991H0, C3363.h[0]), this.b[0]);
-            int offset = this.g.getOffset(j3 * 1000);
-            long j4 = 31968000 + j3;
-            while (j3 < j4) {
-                long j5 = j3 + 7776000;
-                long j6 = j2;
-                if (offset != this.g.getOffset(j5 * 1000)) {
-                    for (long j7 = j6; j5 - j3 > j7; j7 = 1) {
-                        long jZ = AbstractC1726.z(j5 + j3, 2L);
-                        long j8 = j3;
-                        if (this.g.getOffset(jZ * 1000) == offset) {
-                            j3 = jZ;
-                        } else {
-                            j5 = jZ;
-                            j3 = j8;
-                        }
-                    }
-                    long j9 = j3;
-                    j3 = this.g.getOffset(j9 * 1000) != offset ? j9 : j5;
-                    C2678 c2678H = h(offset);
-                    int offset2 = this.g.getOffset(j3 * 1000);
-                    C2678 c2678H2 = h(offset2);
-                    if (c(j3, c2678H2) == i2) {
-                        c13263Arr = (C13263[]) Arrays.copyOf(c13263Arr, c13263Arr.length + 1);
-                        c13263Arr[c13263Arr.length - 1] = new C13263(j3, c2678H, c2678H2);
-                    }
-                    offset = offset2;
-                } else {
-                    j3 = j5;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m36838(Context context, XmlResourceParser xmlResourceParser, HashMap map) {
+        EnumC19856 enumC19856;
+        Object string;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlResourceParser), C1211.f4436);
+        int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
+        String string2 = null;
+        Object objValueOf = null;
+        EnumC19856 enumC19857 = null;
+        for (int i = 0; i < indexCount; i++) {
+            int index = typedArrayObtainStyledAttributes.getIndex(i);
+            if (index == 0) {
+                string2 = typedArrayObtainStyledAttributes.getString(index);
+                if (string2 != null && string2.length() > 0) {
+                    string2 = Character.toUpperCase(string2.charAt(0)) + string2.substring(1);
                 }
-                j2 = 1;
-            }
-            if (1916 <= i2 && i2 < 2100) {
-                this.h.putIfAbsent(numValueOf, c13263Arr);
-            }
-            return c13263Arr;
-        }
-        C23141[] c23141Arr = this.f;
-        C13263[] c13263Arr3 = new C13263[c23141Arr.length];
-        int i4 = 0;
-        while (i4 < c23141Arr.length) {
-            C23141 c23141 = c23141Arr[i4];
-            byte b = c23141.b;
-            if (b < 0) {
-                EnumC13824 enumC13824 = c23141.a;
-                long j10 = i2;
-                int iW = enumC13824.W(C7122.c.S(j10)) + 1 + c23141.b;
-                C18991 c18991 = C18991.d;
-                EnumC18762.YEAR.T(j10);
-                C13638.requireNonNull(enumC13824, "month");
-                EnumC18762.DAY_OF_MONTH.T(iW);
-                c18991W = C18991.W(i2, enumC13824.getValue(), iW);
-                EnumC16169 enumC16169 = c23141.c;
-                if (enumC16169 != null) {
-                    c18991W = c18991W.B(new C17351(enumC16169.getValue(), 1));
-                }
+            } else if (index == 1) {
+                objValueOf = Boolean.valueOf(typedArrayObtainStyledAttributes.getBoolean(index, false));
+                enumC19857 = EnumC19856.BOOLEAN_TYPE;
             } else {
-                EnumC13824 enumC13825 = c23141.a;
-                C18991 c18992 = C18991.d;
-                EnumC18762.YEAR.T(i2);
-                C13638.requireNonNull(enumC13825, "month");
-                EnumC18762.DAY_OF_MONTH.T(b);
-                c18991W = C18991.W(i2, enumC13825.getValue(), b);
-                EnumC16169 enumC161610 = c23141.c;
-                if (enumC161610 != null) {
-                    c18991W = c18991W.B(new C17351(enumC161610.getValue(), i3));
+                if (index == 3) {
+                    enumC19856 = EnumC19856.COLOR_TYPE;
+                    string = Integer.valueOf(typedArrayObtainStyledAttributes.getColor(index, 0));
+                } else if (index == 2) {
+                    enumC19856 = EnumC19856.COLOR_DRAWABLE_TYPE;
+                    string = Integer.valueOf(typedArrayObtainStyledAttributes.getColor(index, 0));
+                } else if (index == 7) {
+                    enumC19856 = EnumC19856.DIMENSION_TYPE;
+                    string = Float.valueOf(TypedValue.applyDimension(1, typedArrayObtainStyledAttributes.getDimension(index, 0.0f), context.getResources().getDisplayMetrics()));
+                } else if (index == 4) {
+                    enumC19856 = EnumC19856.DIMENSION_TYPE;
+                    string = Float.valueOf(typedArrayObtainStyledAttributes.getDimension(index, 0.0f));
+                } else if (index == 5) {
+                    enumC19856 = EnumC19856.FLOAT_TYPE;
+                    string = Float.valueOf(typedArrayObtainStyledAttributes.getFloat(index, Float.NaN));
+                } else if (index == 6) {
+                    enumC19856 = EnumC19856.INT_TYPE;
+                    string = Integer.valueOf(typedArrayObtainStyledAttributes.getInteger(index, -1));
+                } else if (index == 8) {
+                    enumC19856 = EnumC19856.STRING_TYPE;
+                    string = typedArrayObtainStyledAttributes.getString(index);
                 }
-            }
-            if (c23141.e) {
-                c18991W = c18991W.l0(1L);
-            }
-            C1952 c1952Y = C1952.Y(c18991W, c23141.d);
-            EnumC6912 enumC6912 = c23141.f;
-            C2678 c2678 = c23141.g;
-            C2678 c2679 = c23141.h;
-            enumC6912.getClass();
-            int i5 = AbstractC4089.a[enumC6912.ordinal()];
-            if (i5 == 1) {
-                c1952Y = c1952Y.b0(c2679.b - C2678.f.b);
-            } else if (i5 == 2) {
-                c1952Y = c1952Y.b0(c2679.b - c2678.b);
-            }
-            c13263Arr3[i4] = new C13263(c1952Y, c23141.h, c23141.i);
-            i4++;
-            i3 = 0;
-        }
-        if (i2 < 2100) {
-            this.h.putIfAbsent(numValueOf, c13263Arr3);
-        }
-        return c13263Arr3;
-    }
-
-    public final boolean g(C18285 c18285) {
-        C2678 c2678H;
-        TimeZone timeZone = this.g;
-        if (timeZone != null) {
-            c2678H = h(timeZone.getRawOffset());
-        } else if (this.c.length == 0) {
-            c2678H = this.b[0];
-        } else {
-            int iBinarySearch = Arrays.binarySearch(this.a, c18285.getEpochSecond());
-            if (iBinarySearch < 0) {
-                iBinarySearch = (-iBinarySearch) - 2;
-            }
-            c2678H = this.b[iBinarySearch + 1];
-        }
-        return !c2678H.equals(d(c18285));
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof C15380) {
-            C15380 c15380 = (C15380) obj;
-            if (C13638.equals(this.g, c15380.g) && Arrays.equals(this.a, c15380.a) && Arrays.equals(this.b, c15380.b) && Arrays.equals(this.c, c15380.c) && Arrays.equals(this.e, c15380.e) && Arrays.equals(this.f, c15380.f)) {
-                return true;
+                Object obj = string;
+                enumC19857 = enumC19856;
+                objValueOf = obj;
             }
         }
-        return false;
-    }
-
-    public final int hashCode() {
-        return ((((C13638.hashCode(this.g) ^ Arrays.hashCode(this.a)) ^ Arrays.hashCode(this.b)) ^ Arrays.hashCode(this.c)) ^ Arrays.hashCode(this.e)) ^ Arrays.hashCode(this.f);
-    }
-
-    public final String toString() {
-        TimeZone timeZone = this.g;
-        if (timeZone != null) {
-            return "ZoneRules[timeZone=" + timeZone.getID() + "]";
+        if (string2 != null && objValueOf != null) {
+            C15380 c15380 = new C15380();
+            c15380.f50154 = string2;
+            c15380.f50152 = enumC19857;
+            c15380.m36842(objValueOf);
+            map.put(string2, c15380);
         }
-        C2678[] c2678Arr = this.b;
-        return "ZoneRules[currentStandardOffset=" + c2678Arr[c2678Arr.length - 1] + "]";
+        typedArrayObtainStyledAttributes.recycle();
     }
 }

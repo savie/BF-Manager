@@ -1,234 +1,67 @@
 package l;
 
-import com.google.android.material.color.ColorResourcesTableCreator;
+import java.util.function.DoubleConsumer;
+import java.util.function.DoubleFunction;
+import java.util.function.DoublePredicate;
+import java.util.function.DoubleToIntFunction;
+import java.util.function.DoubleToLongFunction;
+import java.util.function.DoubleUnaryOperator;
 
-/* JADX INFO: renamed from: l.ܰ۫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5SC */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13825 {
+/* JADX INFO: renamed from: l.۬ۨۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13825 extends AbstractC2377 {
+    public final /* synthetic */ int b;
+    public final /* synthetic */ AbstractC15470 c;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f45633;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public /* synthetic */ C13825(AbstractC15470 abstractC15470, InterfaceC15143 interfaceC15143, int i) {
+        super(interfaceC15143);
+        this.b = i;
+        this.c = abstractC15470;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public byte[] f45634;
-
-    public C13825(byte[] bArr) {
-        if (bArr == null) {
-            throw new NullPointerException("data == null");
+    @Override // l.AbstractC2377, l.InterfaceC15143
+    public void c(long j) {
+        switch (this.b) {
+            case 4:
+                this.a.c(-1L);
+                break;
+            default:
+                super.c(j);
+                break;
         }
-        this.f45634 = bArr;
-        this.f45633 = 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m33639() {
-        return this.f45633;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m33643(int i) {
-        if (i < 0 || i >= this.f45634.length) {
-            throw new IndexOutOfBoundsException("The provided cursor value is not within the bounds of this instance's data array");
-        }
-        this.f45633 = i;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte m33645() {
-        int i = this.f45633;
-        this.f45633 = i + 1;
-        return this.f45634[i];
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m33638() {
-        int i = this.f45633;
-        byte[] bArr = this.f45634;
-        int i2 = bArr[i] & 255;
-        int i3 = i2 + ((bArr[i + 1] & 255) << 8);
-        this.f45633 = i + 2;
-        return i3;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m33642() {
-        int i = this.f45633;
-        byte[] bArr = this.f45634;
-        int i2 = (bArr[i] & 255) + ((bArr[i + 1] & 255) << 8) + ((bArr[i + 2] & 255) << 16);
-        int i3 = i2 + ((bArr[i + 3] & 255) << 24);
-        this.f45633 = i + 4;
-        return i3;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m33637() {
-        int i = this.f45633;
-        int i2 = i + 1;
-        byte[] bArr = this.f45634;
-        byte b = bArr[i];
-        int i3 = b & 255;
-        if (i3 > 127) {
-            int i4 = i + 2;
-            byte b2 = bArr[i2];
-            int i5 = b2 & 255;
-            int i6 = ((b2 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 7) | (b & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID);
-            if (i5 > 127) {
-                int i7 = i + 3;
-                byte b3 = bArr[i4];
-                int i8 = b3 & 255;
-                i6 |= (b3 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 14;
-                if (i8 > 127) {
-                    i4 = i + 4;
-                    byte b4 = bArr[i7];
-                    int i9 = b4 & 255;
-                    i6 |= (b4 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 21;
-                    if (i9 > 127) {
-                        int i10 = i + 5;
-                        int i11 = bArr[i4] & 255;
-                        if (i11 > 15) {
-                            throw new RuntimeException("invalid LEB128 integer encountered");
-                        }
-                        i6 |= i11 << 28;
-                        i4 = i10;
-                    }
-                } else {
-                    i4 = i7;
+    @Override // l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final void accept(double d) {
+        switch (this.b) {
+            case 0:
+                this.a.accept(((DoubleFunction) ((C24841) this.c).t).apply(d));
+                return;
+            case 1:
+                this.a.accept(((DoubleUnaryOperator) ((C14397) this.c).t).applyAsDouble(d));
+                return;
+            case 2:
+                ((C6940) this.c).getClass();
+                DoubleToIntFunction doubleToIntFunction = null;
+                doubleToIntFunction.applyAsInt(d);
+                throw null;
+            case 3:
+                ((C11939) this.c).getClass();
+                DoubleToLongFunction doubleToLongFunction = null;
+                doubleToLongFunction.applyAsLong(d);
+                throw null;
+            case 4:
+                if (((DoublePredicate) ((C14397) this.c).t).test(d)) {
+                    this.a.accept(d);
+                    return;
                 }
-            }
-            this.f45633 = i4;
-            return bArr[i4 + (-1)] == 0 ? ~i6 : i6;
+                return;
+            default:
+                ((DoubleConsumer) ((C14397) this.c).t).accept(d);
+                this.a.accept(d);
+                return;
         }
-        this.f45633 = i2;
-        return i3;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m33647() {
-        int i = this.f45633;
-        int i2 = i + 1;
-        byte[] bArr = this.f45634;
-        byte b = bArr[i];
-        int i3 = b & 255;
-        if (i3 > 127) {
-            int i4 = i + 2;
-            byte b2 = bArr[i2];
-            int i5 = b2 & 255;
-            int i6 = ((b2 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 7) | (b & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID);
-            if (i5 > 127) {
-                int i7 = i + 3;
-                byte b3 = bArr[i4];
-                int i8 = b3 & 255;
-                i3 = ((b3 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 14) | i6;
-                if (i8 > 127) {
-                    i2 = i + 4;
-                    byte b4 = bArr[i7];
-                    int i9 = b4 & 255;
-                    i3 |= (b4 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 21;
-                    if (i9 > 127) {
-                        int i10 = i + 5;
-                        int i11 = bArr[i2] & 255;
-                        if (i11 > 15) {
-                            throw new RuntimeException("invalid LEB128 integer encountered");
-                        }
-                        i3 |= i11 << 28;
-                        i2 = i10;
-                    }
-                } else {
-                    i2 = i7;
-                }
-            } else {
-                i3 = i6;
-                i2 = i4;
-            }
-        }
-        this.f45633 = i2;
-        return i3;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int m33641() {
-        int i;
-        int i2 = this.f45633;
-        int i3 = i2 + 1;
-        byte[] bArr = this.f45634;
-        byte b = bArr[i2];
-        int i4 = b & 255;
-        if (i4 <= 127) {
-            i = (i4 << 25) >> 25;
-        } else {
-            int i5 = i2 + 2;
-            byte b2 = bArr[i3];
-            int i6 = b2 & 255;
-            int i7 = ((b2 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 7) | (b & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID);
-            if (i6 <= 127) {
-                i = (i7 << 18) >> 18;
-            } else {
-                int i8 = i2 + 3;
-                byte b3 = bArr[i5];
-                int i9 = b3 & 255;
-                int i10 = i7 | ((b3 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 14);
-                if (i9 <= 127) {
-                    i = (i10 << 11) >> 11;
-                    i3 = i8;
-                } else {
-                    i5 = i2 + 4;
-                    byte b4 = bArr[i8];
-                    int i11 = b4 & 255;
-                    int i12 = i10 | ((b4 & ColorResourcesTableCreator.APPLICATION_PACKAGE_ID) << 21);
-                    if (i11 <= 127) {
-                        i = (i12 << 4) >> 4;
-                    } else {
-                        int i13 = i2 + 5;
-                        int i14 = bArr[i5] & 255;
-                        if (i14 > 15) {
-                            throw new RuntimeException("invalid LEB128 integer encountered");
-                        }
-                        int i15 = i12 | (i14 << 28);
-                        i3 = i13;
-                        i = i15;
-                    }
-                }
-            }
-            i3 = i5;
-        }
-        this.f45633 = i3;
-        return i;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final byte[] m33646(int i) {
-        int i2 = this.f45633;
-        int i3 = i2 + i;
-        byte[] bArr = this.f45634;
-        if (i3 <= bArr.length) {
-            byte[] bArr2 = new byte[i];
-            System.arraycopy(bArr, i2, bArr2, 0, i);
-            this.f45633 = i3;
-            return bArr2;
-        }
-        throw new IndexOutOfBoundsException("attempt to read past the end");
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m33644() {
-        int i = this.f45633;
-        while (true) {
-            int i2 = this.f45633;
-            byte[] bArr = this.f45634;
-            if (bArr[i2] != 0) {
-                this.f45633 = i2 + 1;
-            } else {
-                int i3 = i2 - i;
-                this.f45633 = i2 + 1;
-                return C16845.m39502(i, i3, bArr);
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m33640(int i) {
-        int i2 = i - 1;
-        this.f45633 = (~i2) & (this.f45633 + i2);
     }
 }

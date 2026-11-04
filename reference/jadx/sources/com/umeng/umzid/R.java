@@ -4,6 +4,6 @@ package com.umeng.umzid;
 public final class R {
 
     public final class string {
-        public static int app_name = 0x7f120090;
+        public static int app_name = 0x7f120093;
     }
 }

@@ -1,84 +1,129 @@
 package l;
 
-import android.net.Uri;
-import java.util.Arrays;
-import java.util.UUID;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
+import android.util.Base64;
+import android.util.Xml;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
-/* JADX INFO: renamed from: l.ۛᩴۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 78PS */
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: renamed from: l.ۛ۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: X63W */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C6236 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final boolean f21157;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC6910 f21158;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC23390 m17859(XmlResourceParser xmlResourceParser, Resources resources) {
+        int next;
+        do {
+            next = xmlResourceParser.next();
+            if (next == 2) {
+                break;
+            }
+        } while (next != 1);
+        if (next != 2) {
+            throw new XmlPullParserException("No start tag found");
+        }
+        xmlResourceParser.require(2, null, "font-family");
+        if (!xmlResourceParser.getName().equals("font-family")) {
+            m17860(xmlResourceParser);
+            return null;
+        }
+        TypedArray typedArrayObtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlResourceParser), C16324.f52995);
+        String string = typedArrayObtainAttributes.getString(0);
+        String string2 = typedArrayObtainAttributes.getString(4);
+        String string3 = typedArrayObtainAttributes.getString(5);
+        int resourceId = typedArrayObtainAttributes.getResourceId(1, 0);
+        int integer = typedArrayObtainAttributes.getInteger(2, 1);
+        int integer2 = typedArrayObtainAttributes.getInteger(3, 500);
+        String string4 = typedArrayObtainAttributes.getString(6);
+        typedArrayObtainAttributes.recycle();
+        if (string != null && string2 != null && string3 != null) {
+            while (xmlResourceParser.next() != 3) {
+                m17860(xmlResourceParser);
+            }
+            return new C12201(new C21701(string, string2, string3, m17858(resourceId, resources)), integer, integer2, string4);
+        }
+        ArrayList arrayList = new ArrayList();
+        while (xmlResourceParser.next() != 3) {
+            if (xmlResourceParser.getEventType() == 2) {
+                if (!xmlResourceParser.getName().equals("font")) {
+                    m17860(xmlResourceParser);
+                } else {
+                    TypedArray typedArrayObtainAttributes2 = resources.obtainAttributes(Xml.asAttributeSet(xmlResourceParser), C16324.f52993);
+                    int i = typedArrayObtainAttributes2.getInt(typedArrayObtainAttributes2.hasValue(8) ? 8 : 1, 400);
+                    boolean z = 1 == typedArrayObtainAttributes2.getInt(typedArrayObtainAttributes2.hasValue(6) ? 6 : 2, 0);
+                    int i2 = typedArrayObtainAttributes2.hasValue(9) ? 9 : 3;
+                    String string5 = typedArrayObtainAttributes2.getString(typedArrayObtainAttributes2.hasValue(7) ? 7 : 4);
+                    int i3 = typedArrayObtainAttributes2.getInt(i2, 0);
+                    int i4 = typedArrayObtainAttributes2.hasValue(5) ? 5 : 0;
+                    int resourceId2 = typedArrayObtainAttributes2.getResourceId(i4, 0);
+                    String string6 = typedArrayObtainAttributes2.getString(i4);
+                    typedArrayObtainAttributes2.recycle();
+                    while (xmlResourceParser.next() != 3) {
+                        m17860(xmlResourceParser);
+                    }
+                    arrayList.add(new C20406(i, i3, resourceId2, string6, string5, z));
+                }
+            }
+        }
+        if (arrayList.isEmpty()) {
+            return null;
+        }
+        return new C3252((C20406[]) arrayList.toArray(new C20406[0]));
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f21159;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Uri f21160;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final byte[] f21161;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final UUID f21162;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC22433 f21163;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean f21164;
-
-    public C6236(C17525 c17525) {
-        C2023.m6510((c17525.f55716 && c17525.f55717 == null) ? false : true);
-        UUID uuid = c17525.f55719;
-        uuid.getClass();
-        this.f21162 = uuid;
-        this.f21160 = c17525.f55717;
-        AbstractC6910 unused = c17525.f55715;
-        this.f21158 = c17525.f55715;
-        this.f21164 = c17525.f55721;
-        this.f21159 = c17525.f55716;
-        this.f21157 = c17525.f55714;
-        AbstractC22433 unused2 = c17525.f55720;
-        this.f21163 = c17525.f55720;
-        this.f21161 = c17525.f55718 != null ? Arrays.copyOf(c17525.f55718, c17525.f55718.length) : null;
+    public static List m17858(int i, Resources resources) {
+        if (i == 0) {
+            return Collections.EMPTY_LIST;
+        }
+        TypedArray typedArrayObtainTypedArray = resources.obtainTypedArray(i);
+        try {
+            if (typedArrayObtainTypedArray.length() == 0) {
+                return Collections.EMPTY_LIST;
+            }
+            ArrayList arrayList = new ArrayList();
+            if (C15930.m37955(typedArrayObtainTypedArray, 0) == 1) {
+                for (int i2 = 0; i2 < typedArrayObtainTypedArray.length(); i2++) {
+                    int resourceId = typedArrayObtainTypedArray.getResourceId(i2, 0);
+                    if (resourceId != 0) {
+                        String[] stringArray = resources.getStringArray(resourceId);
+                        ArrayList arrayList2 = new ArrayList();
+                        for (String str : stringArray) {
+                            arrayList2.add(Base64.decode(str, 0));
+                        }
+                        arrayList.add(arrayList2);
+                    }
+                }
+            } else {
+                String[] stringArray2 = resources.getStringArray(i);
+                ArrayList arrayList3 = new ArrayList();
+                for (String str2 : stringArray2) {
+                    arrayList3.add(Base64.decode(str2, 0));
+                }
+                arrayList.add(arrayList3);
+            }
+            return arrayList;
+        } finally {
+            typedArrayObtainTypedArray.recycle();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] m17291() {
-        byte[] bArr = this.f21161;
-        if (bArr != null) {
-            return Arrays.copyOf(bArr, bArr.length);
+    public static void m17860(XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+        int i = 1;
+        while (i > 0) {
+            int next = xmlPullParser.next();
+            if (next == 2) {
+                i++;
+            } else if (next == 3) {
+                i--;
+            }
         }
-        return null;
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof C6236)) {
-            return false;
-        }
-        C6236 c6236 = (C6236) obj;
-        return this.f21162.equals(c6236.f21162) && C13638.equals(this.f21160, c6236.f21160) && C13638.equals(this.f21158, c6236.f21158) && this.f21164 == c6236.f21164 && this.f21159 == c6236.f21159 && this.f21157 == c6236.f21157 && this.f21163.equals(c6236.f21163) && Arrays.equals(this.f21161, c6236.f21161);
-    }
-
-    public final int hashCode() {
-        int iHashCode = this.f21162.hashCode() * 31;
-        Uri uri = this.f21160;
-        return Arrays.hashCode(this.f21161) + ((this.f21163.hashCode() + ((((((((this.f21158.hashCode() + ((iHashCode + (uri != null ? uri.hashCode() : 0)) * 31)) * 31) + (this.f21164 ? 1 : 0)) * 31) + (this.f21159 ? 1 : 0)) * 31) + (this.f21157 ? 1 : 0)) * 31)) * 31);
-    }
-
-    static {
-        C9023.m23358(0, 1, 2, 3, 4);
-        C17983.m41806(5);
-        C17983.m41806(6);
-        C17983.m41806(7);
     }
 }

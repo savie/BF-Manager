@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.motion.MotionUtils;
-import l.C12972;
-import l.C17910;
-import l.C2387;
+import l.C11642;
+import l.C16117;
+import l.C24323;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ClearTextEndIconDelegate extends EndIconDelegate {
@@ -61,10 +61,10 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
                 this.f$0.lambda$new$1(view, z);
             }
         };
-        this.animationFadeDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C2387.f9197, 100);
-        this.animationScaleDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C2387.f9197, 150);
-        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C2387.f9129, AnimationUtils.LINEAR_INTERPOLATOR);
-        this.animationScaleInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C2387.f8957, AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR);
+        this.animationFadeDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C11642.f37174, 100);
+        this.animationScaleDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C11642.f37174, 150);
+        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C11642.f36628, AnimationUtils.LINEAR_INTERPOLATOR);
+        this.animationScaleInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C11642.f36560, AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR);
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
@@ -92,12 +92,12 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
 
     @Override // com.google.android.material.textfield.EndIconDelegate
     public int getIconDrawableResId() {
-        return C12972.f43226;
+        return C16117.f52323;
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
     public int getIconContentDescriptionResId() {
-        return C17910.f56886;
+        return C24323.f78897;
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate

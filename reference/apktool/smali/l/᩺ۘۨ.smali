@@ -1,90 +1,82 @@
 .class public final Ll/᩺ۘۨ;
 .super Ljava/lang/Object;
-.source "B1QD"
-
-# interfaces
-.implements Ll/ᩳۘۨ;
+.source "62DG"
 
 
 # static fields
-.field public static final ܰ:Ll/᩺ۘۨ;
+.field public static final ۙ:Ljava/lang/String;
+
+.field public static final ۤ:[C
+
+.field public static final ᩷:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 4
-    new-instance v0, Ll/᩺ۘۨ;
+    const/16 v0, 0x22
 
-    .line 6
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 98
+    invoke-static {v0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
-    .line 4
-    sput-object v0, Ll/᩺ۘۨ;->ܰ:Ll/᩺ۘۨ;
+    move-result-object v0
+
+    sput-object v0, Ll/᩺ۘۨ;->᩷:Ljava/lang/String;
+
+    .line 0
+    invoke-static {v0, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 101
+    sput-object v0, Ll/᩺ۘۨ;->ۙ:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [C
+
+    .line 104
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ll/᩺ۘۨ;->ۤ:[C
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 2
+        0x2cs
+        0x22s
+        0xds
+        0xas
+    .end array-data
 .end method
 
-
-# virtual methods
-.method public final ۙ()I
+.method public static synthetic ۙ()[C
     .locals 1
 
-    .line 22
-    sget v0, Ll/᩹ۘۨ;->۬:I
+    .line 35
+    sget-object v0, Ll/᩺ۘۨ;->ۤ:[C
 
-    return v0
+    return-object v0
 .end method
 
-.method public final ۙ(I[B)I
-    .locals 5
+.method public static synthetic ۤ()Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 35
+    sget-object v0, Ll/᩺ۘۨ;->ۙ:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    :goto_0
-    if-ge v1, p1, :cond_1
+.method public static synthetic ᩷()Ljava/lang/String;
+    .locals 1
 
-    add-int/lit8 v2, v1, 0x2
+    .line 35
+    sget-object v0, Ll/᩺ۘۨ;->᩷:Ljava/lang/String;
 
-    if-ge v2, p1, :cond_0
-
-    .line 13
-    aget-byte v3, p2, v1
-
-    const/16 v4, 0x1b
-
-    if-ne v3, v4, :cond_0
-
-    add-int/lit8 v3, v1, 0x1
-
-    aget-byte v3, p2, v3
-
-    int-to-char v3, v3
-
-    const/16 v4, 0x24
-
-    if-ne v3, v4, :cond_0
-
-    aget-byte v2, p2, v2
-
-    int-to-char v2, v2
-
-    const/16 v3, 0x42
-
-    if-ne v2, v3, :cond_0
-
-    const/16 p1, 0x64
-
-    return p1
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
+    return-object v0
 .end method

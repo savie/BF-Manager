@@ -7,9 +7,9 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.HashMap;
 import java.util.Map;
-import l.C18917;
-import l.C19028;
-import l.C9013;
+import l.C11958;
+import l.C22121;
+import l.C2458;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.asn1.bc.ExternalValue;
@@ -21,7 +21,7 @@ import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricAlgorithmProvider;
 import org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EXTERNAL {
     public static final String PREFIX = "org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL";
     public static AsymmetricKeyInfoConverter baseConverter;
@@ -67,7 +67,7 @@ public class EXTERNAL {
                 }
                 throw new InvalidKeyException("key not recognized");
             } catch (IOException e) {
-                throw new InvalidKeyException(C9013.m23329(e, new StringBuilder("key could not be parsed: ")));
+                throw new InvalidKeyException(C11958.m29932(e, new StringBuilder("key could not be parsed: ")));
             }
         }
     }
@@ -75,11 +75,11 @@ public class EXTERNAL {
     public class Mappings extends AsymmetricAlgorithmProvider {
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {
-            StringBuilder sbM43575 = C18917.m43575(configurableProvider, "KeyFactory.EXTERNAL", "org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory", "KeyFactory.");
+            StringBuilder sbM50077 = C22121.m50077(configurableProvider, "KeyFactory.EXTERNAL", "org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory", "KeyFactory.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = BCObjectIdentifiers.external_value;
-            StringBuilder sbM43760 = C19028.m43760("org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory", "KeyFactory.OID.", sbM43575, aSN1ObjectIdentifier, configurableProvider);
-            sbM43760.append(aSN1ObjectIdentifier);
-            configurableProvider.addAlgorithm(sbM43760.toString(), "org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory");
+            StringBuilder sbM8290 = C2458.m8290("org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory", "KeyFactory.OID.", sbM50077, aSN1ObjectIdentifier, configurableProvider);
+            sbM8290.append(aSN1ObjectIdentifier);
+            configurableProvider.addAlgorithm(sbM8290.toString(), "org.bouncycastle.jcajce.provider.asymmetric.EXTERNAL$KeyFactory");
             AsymmetricKeyInfoConverter unused = EXTERNAL.baseConverter = new ExternalKeyInfoConverter(configurableProvider);
             configurableProvider.addKeyInfoConverter(aSN1ObjectIdentifier, EXTERNAL.baseConverter);
         }

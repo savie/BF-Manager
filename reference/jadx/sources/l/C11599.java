@@ -1,45 +1,70 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 843X */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11599 implements InterfaceC13320 {
+import java.util.BitSet;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC16579 f38968;
+/* JADX INFO: renamed from: l.ۧۨܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5BHG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11599 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3836 f38969;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public BitSet f36419;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC13320 f38970;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f36420;
 
-    public C11599(C3836 c3836, InterfaceC13320 interfaceC13320, AbstractC16579 abstractC16579) {
-        this.f38969 = c3836;
-        this.f38970 = interfaceC13320;
-        this.f38968 = abstractC16579;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public BitSet f36421;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16820 f36422;
+
+    public C11599(C16820 c16820, int i) {
+        this.f36422 = c16820;
+        this.f36420 = i;
+        this.f36421 = new BitSet(c16820.f54270);
+        this.f36419 = new BitSet(c16820.f54270);
+        c16820.f54276 = true;
     }
 
-    @Override // l.InterfaceC13320
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1179(AbstractC23903 abstractC23903) {
-        C3836 c3836 = this.f38969;
-        C22492 c22492 = c3836.f14240;
-        try {
-            this.f38970.mo1179(abstractC23903);
-        } catch (C4146 unused) {
-            abstractC23903.f77447 |= 1;
-            ((C0309) abstractC23903.f77449).f1654 = c3836.f14275;
-            AbstractC11242 abstractC11242 = c3836.f14246.f77616;
-            AbstractC16579 abstractC16579 = this.f38968;
-            abstractC23903.mo20272().mo24224(new C18258(9L, abstractC11242, new C13757(C21825.of((Object) abstractC16579), abstractC23903.f77449, C21825.m48588(), c22492), abstractC23903));
-            abstractC23903.mo20272().mo24224(new C18258(1L, abstractC16579.f53222.f77453.m28211(c3836.f14246.f77570), new C13757(C21825.m48588(), abstractC16579, C21825.m48588(), c22492), abstractC23903));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m29155() {
+        return this.f36420;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m29159(int i) {
+        this.f36421.set(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29156(int i) {
+        this.f36419.set(i);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C24698 m29158() {
+        BitSet bitSet = this.f36419;
+        C24698 c24698 = new C24698(bitSet.size());
+        for (int iNextSetBit = bitSet.nextSetBit(0); iNextSetBit >= 0; iNextSetBit = bitSet.nextSetBit(iNextSetBit + 1)) {
+            c24698.add(this.f36422.m39737(iNextSetBit).m50590().get(0));
         }
+        c24698.mo15005();
+        return c24698;
     }
 
-    @Override // l.InterfaceC13320
-    /* JADX INFO: renamed from: ۨ */
-    public final boolean mo1180() {
-        return this.f38970.mo1180();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m29157(C1400 c1400, int[] iArr) {
+        BitSet bitSet = this.f36419;
+        for (int iNextSetBit = bitSet.nextSetBit(0); iNextSetBit >= 0; iNextSetBit = bitSet.nextSetBit(iNextSetBit + 1)) {
+            C16820 c16820 = this.f36422;
+            int i = c16820.m39737(iNextSetBit).m50590().get(0);
+            C1400 c1400M5120 = c1400.m5120(this.f36420, iNextSetBit);
+            if (c1400M5120 != null) {
+                c16820.m39724(i, -1, null, c1400M5120, iArr);
+            } else {
+                C4560.m14326(iNextSetBit, iArr);
+            }
+        }
     }
 }

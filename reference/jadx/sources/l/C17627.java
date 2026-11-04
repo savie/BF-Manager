@@ -1,66 +1,95 @@
 package l;
 
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
-import java.util.Collection;
-import java.util.List;
+import com.umeng.analytics.pro.j$$ExternalSyntheticOutline0;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ܿ᩹֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: MAIE */
+/* JADX INFO: renamed from: l.ܽܰۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4917 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C17627 extends AbstractC0656 {
-
-    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
-    public C16943 f56035 = new C16943();
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۟ */
-    public final C14600 mo3078() {
-        return C1362.f5726;
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ᩳۙ */
-    public final CharSequence mo3080() {
-        return C16737.m39264(R.string.MT_Protector, m41585("descPath"));
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۘ */
-    public final void mo3075() {
-        m41591(R.string.MT_Protector);
-        mo2982("...");
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۜ */
-    public final C5202 mo3077() {
-        String[] strArrM41566 = m41566("ARG_PATHS");
-        String strM41585 = m41585("targetPath");
-        this.f56035.m39670(m41560(), (AbstractC12233) m41574(), strArrM41566, strM41585, new C12689(this));
-        return m41583();
-    }
-
-    @Override // l.AbstractC17902
+public final class C17627 extends AbstractC2297 {
+    @Override // l.InterfaceC6772
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3076(Main main, C11545 c11545, C11545 c11546, C5202 c5202) {
-        if (c5202.m14380() && m41579(c11545)) {
-            c11545.m28831();
+    public final C1220 mo13215(C5147 c5147, InterfaceC13483 interfaceC13483) {
+        int i;
+        boolean z;
+        boolean z2;
+        EnumC13152 enumC13152;
+        ArrayList arrayListM47876 = interfaceC13483.mo19760().m47876();
+        if (arrayListM47876.isEmpty() || C6790.m18955('|', ((C14228) j$$ExternalSyntheticOutline0.m(arrayListM47876, 1)).m34537(), 0) == -1) {
+            return null;
         }
-        List listM39669 = this.f56035.m39669();
-        if (listM39669.isEmpty() || !m41559(c11546)) {
-            return;
+        C14228 line = c5147.getLine();
+        CharSequence charSequenceM34537 = line.m34538(c5147.getIndex(), line.m34537().length()).m34537();
+        ArrayList arrayList = new ArrayList();
+        int i2 = 0;
+        boolean z3 = false;
+        loop0: while (true) {
+            int i3 = 0;
+            while (true) {
+                if (i2 >= charSequenceM34537.length()) {
+                    if (!z3) {
+                        break loop0;
+                    }
+                    break loop0;
+                }
+                char cCharAt = charSequenceM34537.charAt(i2);
+                if (cCharAt == '\t' || cCharAt == ' ') {
+                    i2++;
+                } else if (cCharAt == '-' || cCharAt == ':') {
+                    if (i3 != 0 || arrayList.isEmpty()) {
+                        if (cCharAt == ':') {
+                            i2++;
+                            i = 1;
+                            z = true;
+                        } else {
+                            i = 0;
+                            z = false;
+                        }
+                        boolean z4 = false;
+                        while (i2 < charSequenceM34537.length() && charSequenceM34537.charAt(i2) == '-') {
+                            i2++;
+                            i++;
+                            z4 = true;
+                        }
+                        if (z4) {
+                            if (i2 >= charSequenceM34537.length() || charSequenceM34537.charAt(i2) != ':') {
+                                z2 = false;
+                            } else {
+                                i2++;
+                                i++;
+                                z2 = true;
+                            }
+                            if (z && z2) {
+                                enumC13152 = EnumC13152.CENTER;
+                            } else if (z) {
+                                enumC13152 = EnumC13152.LEFT;
+                            } else {
+                                enumC13152 = z2 ? EnumC13152.RIGHT : null;
+                            }
+                            arrayList.add(new C16135(enumC13152, i));
+                        }
+                    }
+                } else if (cCharAt == '|') {
+                    i2++;
+                    i3++;
+                    if (i3 <= 1) {
+                        z3 = true;
+                    }
+                }
+                arrayList = null;
+                break loop0;
+            }
         }
-        c11546.m28777((Collection) listM39669);
-        c11546.m28830();
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3079(C5202 c5202) {
-        AbstractC12233 abstractC12233M39672 = this.f56035.m39672();
-        if (abstractC12233M39672 != null) {
-            C21094.m47529(abstractC12233M39672.mo10276());
+        if (arrayList == null || arrayList.isEmpty()) {
+            return null;
         }
+        C14228 c14228 = (C14228) j$$ExternalSyntheticOutline0.m(arrayListM47876, 1);
+        if (arrayList.size() < C23595.m52834(c14228).size()) {
+            return null;
+        }
+        C1220 c1220 = new C1220(new C23595(arrayList, c14228));
+        c1220.m4440(c5147.getIndex());
+        c1220.m4438(1);
+        return c1220;
     }
 }

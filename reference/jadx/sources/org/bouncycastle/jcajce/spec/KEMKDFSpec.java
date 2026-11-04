@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.spec;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KEMKDFSpec {
     public final AlgorithmIdentifier kdfAlgorithm;
     public final String keyAlgorithmName;

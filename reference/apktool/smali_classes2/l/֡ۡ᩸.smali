@@ -1,97 +1,256 @@
 .class public final Ll/֡ۡ᩸;
 .super Ljava/lang/Object;
-.source "69OZ"
+.source "O6OW"
 
 # interfaces
-.implements Ll/۬᩵᩸;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final ۖ:Z
+.field public final synthetic ֡:Ll/۟ۡ᩸;
 
-.field public final ۙ:[I
+.field public final ۟:Ll/᩺ۜ᩸;
 
-.field public final ۚ:Ll/᩻᩵᩸;
+.field public final ܰ:Ll/᩷ۨᩴ;
 
-.field public final ۨ:[Ll/ܶᩳ᩸;
+.field public final ܿ:Ljava/lang/CharSequence;
 
-.field public final ܰ:Ll/᩺᩵᩸;
+.field public final ᩶:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻᩵᩸;Z[I[Ll/ܶᩳ᩸;Ljava/lang/Object;)V
+.method public constructor <init>(Ll/۟ۡ᩸;Ll/᩺ۜ᩸;Ljava/lang/CharSequence;Ll/᩷ۨᩴ;)V
     .locals 0
 
-    .line 40
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
-    iput-object p1, p0, Ll/֡ۡ᩸;->ۚ:Ll/᩻᩵᩸;
+    iput-object p1, p0, Ll/֡ۡ᩸;->֡:Ll/۟ۡ᩸;
 
-    .line 42
-    iput-boolean p2, p0, Ll/֡ۡ᩸;->ۖ:Z
+    .line 63
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 43
-    iput-object p3, p0, Ll/֡ۡ᩸;->ۙ:[I
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 44
-    iput-object p4, p0, Ll/֡ۡ᩸;->ۨ:[Ll/ܶᩳ᩸;
+    iput-object p1, p0, Ll/֡ۡ᩸;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-string p1, "defaultInstance"
+    .line 66
+    iput-object p2, p0, Ll/֡ۡ᩸;->۟:Ll/᩺ۜ᩸;
 
-    .line 45
-    invoke-static {p5, p1}, Ll/ۢᩴ᩸;->ۙ(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 67
+    iput-object p3, p0, Ll/֡ۡ᩸;->ܿ:Ljava/lang/CharSequence;
 
-    check-cast p5, Ll/᩺᩵᩸;
-
-    iput-object p5, p0, Ll/֡ۡ᩸;->ܰ:Ll/᩺᩵᩸;
+    .line 68
+    iput-object p4, p0, Ll/֡ۡ᩸;->ܰ:Ll/᩷ۨᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()[I
-    .locals 1
+.method public final run()V
+    .locals 7
 
-    .line 62
-    iget-object v0, p0, Ll/֡ۡ᩸;->ۙ:[I
+    .line 85
+    iget-object v0, p0, Ll/֡ۡ᩸;->֡:Ll/۟ۡ᩸;
 
-    return-object v0
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Ll/֡ۡ᩸;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x2
+
+    .line 87
+    :try_start_0
+    iget-object v2, p0, Ll/֡ۡ᩸;->۟:Ll/᩺ۜ᩸;
+
+    iget-object v4, p0, Ll/֡ۡ᩸;->ܿ:Ljava/lang/CharSequence;
+
+    iget-object v5, p0, Ll/֡ۡ᩸;->ܰ:Ll/᩷ۨᩴ;
+
+    new-instance v6, Ll/ܿۡ᩸;
+
+    invoke-direct {v6, v0}, Ll/ܿۡ᩸;-><init>(Ll/۟ۡ᩸;)V
+
+    invoke-virtual {v2, v5, v6, v4}, Ll/᩺ۜ᩸;->ۙ(Ll/᩷ۨᩴ;Ll/۟֡֫;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v2
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v2
+
+    .line 89
+    :goto_0
+    :try_start_1
+    invoke-static {v0}, Ll/۟ۡ᩸;->᩷(Ll/۟ۡ᩸;)Ljava/util/concurrent/atomic/AtomicReference;
+
+    move-result-object v4
+
+    :cond_1
+    const/4 v5, 0x0
+
+    .line 0
+    invoke-virtual {v4, v5, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v5, :cond_1
+
+    .line 91
+    :goto_1
+    invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    .line 92
+    invoke-static {v0}, Ll/۟ۡ᩸;->ۙ(Ll/۟ۡ᩸;)Ljava/util/concurrent/CountDownLatch;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return-void
+
+    .line 91
+    :goto_2
+    invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    .line 92
+    invoke-static {v0}, Ll/۟ۡ᩸;->ۙ(Ll/۟ۡ᩸;)Ljava/util/concurrent/CountDownLatch;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    .line 93
+    throw v2
 .end method
 
-.method public final ۙ()Z
-    .locals 1
+.method public final ۙ()V
+    .locals 3
 
-    .line 57
-    iget-boolean v0, p0, Ll/֡ۡ᩸;->ۖ:Z
+    .line 72
+    :try_start_0
+    sget-object v0, Ll/ۙ᩻ܺ;->᩷:Ljava/util/concurrent/ExecutorService;
 
-    return v0
-.end method
+    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final ۚ()[Ll/ܶᩳ᩸;
-    .locals 1
+    return-void
 
-    .line 70
-    iget-object v0, p0, Ll/֡ۡ᩸;->ۨ:[Ll/ܶᩳ᩸;
+    :catch_0
+    move-exception v0
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final ۨ()Ll/᩻᩵᩸;
-    .locals 1
+    :catch_1
+    move-exception v0
 
-    .line 51
-    iget-object v0, p0, Ll/֡ۡ᩸;->ۚ:Ll/᩻᩵᩸;
+    .line 74
+    :goto_0
+    iget-object v1, p0, Ll/֡ۡ᩸;->֡:Ll/۟ۡ᩸;
 
-    return-object v0
-.end method
+    invoke-static {v1}, Ll/۟ۡ᩸;->᩷(Ll/۟ۡ᩸;)Ljava/util/concurrent/atomic/AtomicReference;
 
-.method public final ܰ()Ll/᩺᩵᩸;
-    .locals 1
+    move-result-object v1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    .line 0
+    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
 
     .line 75
-    iget-object v0, p0, Ll/֡ۡ᩸;->ܰ:Ll/᩺᩵᩸;
+    :goto_1
+    invoke-virtual {p0}, Ll/֡ۡ᩸;->᩷()V
 
-    return-object v0
+    return-void
+.end method
+
+.method public final ᩷()V
+    .locals 3
+
+    .line 80
+    iget-object v0, p0, Ll/֡ۡ᩸;->۟:Ll/᩺ۜ᩸;
+
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->ܰ()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    .line 81
+    iget-object v2, p0, Ll/֡ۡ᩸;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ll/֡ۡ᩸;->֡:Ll/۟ۡ᩸;
+
+    invoke-static {v0}, Ll/۟ۡ᩸;->ۙ(Ll/۟ۡ᩸;)Ljava/util/concurrent/CountDownLatch;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    :cond_0
+    return-void
 .end method

@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C19028;
-import l.C7997;
+import l.C18011;
+import l.C2458;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.internal.asn1.isara.IsaraObjectIdentifiers;
@@ -23,7 +23,7 @@ public class XMSS {
             configurableProvider.addAlgorithm("Signature.XMSS", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSSignatureSpi$generic");
             StringBuilder sb = new StringBuilder("Alg.Alias.Signature.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = IsaraObjectIdentifiers.id_alg_xmss;
-            C7997.m21058(C19028.m43760("XMSS", "Alg.Alias.Signature.OID.", sb, aSN1ObjectIdentifier, configurableProvider), aSN1ObjectIdentifier, configurableProvider, "XMSS");
+            C18011.m41992(C2458.m8290("XMSS", "Alg.Alias.Signature.OID.", sb, aSN1ObjectIdentifier, configurableProvider), aSN1ObjectIdentifier, configurableProvider, "XMSS");
             addSignatureAlgorithm(configurableProvider, "XMSS-SHA256", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSSignatureSpi$withSha256", BCObjectIdentifiers.xmss_SHA256);
             addSignatureAlgorithm(configurableProvider, "XMSS-SHAKE128", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSSignatureSpi$withShake128", BCObjectIdentifiers.xmss_SHAKE128);
             addSignatureAlgorithm(configurableProvider, "XMSS-SHA512", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSSignatureSpi$withSha512", BCObjectIdentifiers.xmss_SHA512);
@@ -45,7 +45,7 @@ public class XMSS {
             configurableProvider.addAlgorithm("Signature.XMSSMT", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$generic");
             StringBuilder sb2 = new StringBuilder("Alg.Alias.Signature.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier2 = IsaraObjectIdentifiers.id_alg_xmssmt;
-            C7997.m21058(C19028.m43760("XMSSMT", "Alg.Alias.Signature.OID.", sb2, aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier2, configurableProvider, "XMSSMT");
+            C18011.m41992(C2458.m8290("XMSSMT", "Alg.Alias.Signature.OID.", sb2, aSN1ObjectIdentifier2, configurableProvider), aSN1ObjectIdentifier2, configurableProvider, "XMSSMT");
             addSignatureAlgorithm(configurableProvider, "XMSSMT-SHA256", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withSha256", BCObjectIdentifiers.xmss_mt_SHA256);
             addSignatureAlgorithm(configurableProvider, "XMSSMT-SHAKE128", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withShake128", BCObjectIdentifiers.xmss_mt_SHAKE128);
             addSignatureAlgorithm(configurableProvider, "XMSSMT-SHA512", "org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withSha512", BCObjectIdentifiers.xmss_mt_SHA512);

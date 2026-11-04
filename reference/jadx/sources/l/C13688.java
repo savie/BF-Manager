@@ -1,51 +1,67 @@
 package l;
 
-import bin.mt.plus.Features;
-import com.google.android.material.color.utilities.DynamicScheme;
-import java.util.Map;
-import java.util.function.Function;
+import android.view.MenuItem;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ܰ۠ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 350S */
+/* JADX INFO: renamed from: l.۬ۜ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: G4ML */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C13688 implements Function {
+public final /* synthetic */ class C13688 implements InterfaceC19795, InterfaceC2017, InterfaceC21436, InterfaceC17544, InterfaceC13258, InterfaceC18006 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f45153;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f43431;
 
-    public /* synthetic */ C13688(int i) {
-        this.f45153 = i;
+    public /* synthetic */ C13688(Object obj) {
+        this.f43431 = obj;
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+    public /* synthetic */ C13688(C11041 c11041, C14368 c14368, C9893 c9893, IOException iOException, boolean z) {
+        this.f43431 = c9893;
     }
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    @Override // l.InterfaceC21436
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        C23582.m52779((C23582) this.f43431, menuItem);
+        return true;
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f45153) {
-            case 0:
-                return Features.uid2name(((Integer) obj).intValue());
-            case 1:
-                int i = C23523.f76125;
-                return new SharedPreferencesC10259();
-            case 2:
-                return C8289.m21708((C17367) obj);
-            case 3:
-                return ((DynamicScheme) obj).tertiaryPalette;
-            case 4:
-                return "#" + ((Integer) obj);
-            case 5:
-                return ((Map) obj).values().iterator();
-            default:
-                return C23879.m52617(EnumC0573.f2484, EnumC0573.f2433);
+    @Override // l.InterfaceC13258
+    /* JADX INFO: renamed from: ۙ */
+    public /* synthetic */ void mo968() {
+    }
+
+    @Override // l.InterfaceC17544
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1209(int i) {
+        ((InterfaceC24124) this.f43431).setProgress(i);
+    }
+
+    @Override // l.InterfaceC18006
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1736(Object obj) {
+        C1965.m6766((C1965) this.f43431);
+    }
+
+    @Override // l.InterfaceC19795
+    public void invoke(Object obj) {
+        ((InterfaceC19992) obj).mo45983((C9893) this.f43431);
+    }
+
+    @Override // l.InterfaceC13258
+    /* JADX INFO: renamed from: ۙ */
+    public void mo969(C12512 c12512, BufferedOutputStream bufferedOutputStream) throws IOException {
+        bufferedOutputStream.write((byte[]) this.f43431);
+    }
+
+    @Override // l.InterfaceC2017
+    /* JADX INFO: renamed from: ᩷ */
+    public void mo1355(Object obj, Throwable th) {
+        FutureC23690 futureC23690 = (FutureC23690) this.f43431;
+        if (th == null) {
+            futureC23690.m52935((Object) null);
+        } else {
+            futureC23690.m52937(th);
         }
     }
 }

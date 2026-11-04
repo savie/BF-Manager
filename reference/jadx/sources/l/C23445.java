@@ -1,129 +1,75 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-
-/* JADX INFO: renamed from: l.᩻ۘ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: O44L */
+/* JADX INFO: renamed from: l.᩹ۡܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O8C4 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23445 extends AbstractC2982 {
+public final class C23445 extends AbstractC4053 implements InterfaceC21207 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C6510 f75916;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f75917;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public C10764 f75883;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C22116 f75918;
+    public C4799 f75884;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C6510 f75919;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C13508 f75885;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public AbstractC8774 f75920;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C13508 f75886;
 
-    @Override // l.AbstractC2982
-    /* JADX INFO: renamed from: ۚ */
-    public final C23445 mo5376() {
-        return this;
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C23445(C22116 c22116, int i, C6510 c6510, C6510 c6511) {
-        super(c22116, 5);
-        this.f75918 = c22116;
-        this.f75917 = i;
-        this.f75916 = c6510;
-        this.f75919 = c6511;
-    }
-
-    @Override // l.AbstractC2982
-    /* JADX INFO: renamed from: ۖ */
-    public final AbstractC2982 mo5374() {
-        C6510 c6510M25361;
-        C6510 c6510M51662 = m51662();
-        boolean zM51664 = m51664();
-        C22116 c22116 = this.f75918;
-        if (zM51664) {
-            c6510M25361 = null;
-        } else {
-            c22116.f71608.m25368(this.f75916);
-            c22116.f71608.m25378(4);
-            c6510M25361 = c22116.f71608.m25361(167);
-        }
-        if (c6510M51662 != null) {
-            c22116.f71608.m25368(c6510M51662);
-            c22116.f71608.m25378(3);
-        }
-        c22116.f71608.m25368(c6510M25361);
-        return c22116.f71611[this.f11189];
-    }
-
-    @Override // l.AbstractC2982
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo7179() {
-        mo5374().mo7179();
-    }
-
-    @Override // l.AbstractC2982
+    @Override // l.InterfaceC21207
     /* JADX INFO: renamed from: ۙ */
-    public final void mo7178() {
-        mo5374().mo7178();
+    public final void mo44242(int i) {
     }
 
-    @Override // l.AbstractC2982
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo7180(int i) {
-        C6171.m17170();
-        throw null;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final C6510 m51663() {
-        AbstractC8774 abstractC8774 = this.f75920;
-        int i = this.f75917;
-        C6510 c6510 = this.f75916;
-        C22116 c22116 = this.f75918;
-        if (abstractC8774 == null) {
-            return C10039.m25338(c6510, c22116.f71608.m25361(i));
+    @Override // l.AbstractC4053
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2017() {
+        double[] dArrM20606 = this.f75885.m20606();
+        double[] dArrM20607 = this.f75886.m20606();
+        double[] dArrM20608 = this.f75884.m20606();
+        C10764 c10764 = this.f75883;
+        double dM27434 = c10764.m27434();
+        for (int i = 0; i < 8; i++) {
+            try {
+                double dM37661 = dArrM20606[i] * this.f13796.m37661();
+                if (dM37661 > 1.0d) {
+                    dM37661 = 1.0d;
+                } else if (dM37661 < -1.0d) {
+                    dM37661 = -1.0d;
+                }
+                dM27434 += dM37661;
+                if (dM27434 >= 1.0d) {
+                    dM27434 -= 2.0d;
+                } else if (dM27434 < -1.0d) {
+                    dM27434 += 2.0d;
+                }
+                double d = (dM27434 > 0.5d ? 1.0d - dM27434 : dM27434 < -0.5d ? (-1.0d) - dM27434 : dM27434) * 3.141592653589793d;
+                double d2 = d * d;
+                dArrM20608[i] = (((((((((((-2.505210838544172E-8d) * d2) + 2.7557319223985893E-6d) * d2) - 1.984126984126984E-4d) * d2) + 0.008333333333333333d) * d2) - 0.16666666666666666d) * d2) + 1.0d) * d * dArrM20607[i];
+            } catch (NullPointerException unused) {
+                throw new NullPointerException("Null Synth! You probably forgot to add this unit to the Synthesizer!");
+            }
         }
-        int iM25383 = c22116.f71608.m25383();
-        C6510 c6510M25338 = C10039.m25338(c6510, c22116.f71608.m25361(i));
-        C10039 c10039 = c22116.f71608;
-        c10039.f34277.m32992(this.f75920, 128, iM25383, c10039.m25383());
-        return c6510M25338;
+        c10764.m27433(dM27434);
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C6510 m51662() {
-        AbstractC8774 abstractC8774 = this.f75920;
-        int i = this.f75917;
-        C6510 c6510 = this.f75919;
-        C22116 c22116 = this.f75918;
-        if (abstractC8774 == null) {
-            return C10039.m25338(c6510, c22116.f71608.m25361(C10039.m25347(i)));
-        }
-        int iM25383 = c22116.f71608.m25383();
-        C6510 c6510M25338 = C10039.m25338(c6510, c22116.f71608.m25361(C10039.m25347(i)));
-        C10039 c10039 = c22116.f71608;
-        c10039.f34277.m32992(this.f75920, 256, iM25383, c10039.m25383());
-        return c6510M25338;
+    @Override // l.InterfaceC14493
+    /* JADX INFO: renamed from: ᩸ */
+    public final C4799 mo35005() {
+        return this.f75884;
     }
 
-    @Override // l.AbstractC2982
-    /* JADX INFO: renamed from: ֨ */
-    public final int mo7177() {
-        throw new AssertionError();
+    @Override // l.InterfaceC21207
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo44243(C4930 c4930) {
+        this.f75886.m33176(0.0d, c4930);
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final boolean m51664() {
-        return this.f75916 == null && this.f75917 == 168;
-    }
-
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("cond(");
-        int i = C10039.f34268;
-        return C22697.m50267(sb, C21327.f69414[this.f75917], MotionUtils.EASING_TYPE_FORMAT_END);
+    @Override // l.InterfaceC21207
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo44241(double d, double d2, C4930 c4930) {
+        this.f75885.m33176(d, c4930);
+        this.f75886.m33176(d2, c4930);
     }
 }

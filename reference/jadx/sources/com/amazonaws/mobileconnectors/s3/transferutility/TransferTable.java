@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 /* JADX INFO: loaded from: classes.dex */
 public class TransferTable {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m400(SQLiteDatabase sQLiteDatabase, int i, int i2) {
+    public static void m394(SQLiteDatabase sQLiteDatabase, int i, int i2) {
         if (i < 2 && i2 >= 2) {
             sQLiteDatabase.execSQL("ALTER TABLE awstransfer ADD COLUMN user_metadata text;");
             sQLiteDatabase.execSQL("ALTER TABLE awstransfer ADD COLUMN expiration_time_rule_id text;");

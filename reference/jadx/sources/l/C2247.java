@@ -1,59 +1,83 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-/* JADX INFO: renamed from: l.ۖۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 970R */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2247 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.֫᩺ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K8MX */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2247 extends InputStream implements InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5070 f8048;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C25368 f7347;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final InterfaceC13433 f7348;
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public boolean f7344 = false;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f8049;
+    public boolean f7346 = false;
 
-    public C2247(C5070 c5070, boolean z) {
-        this.f8048 = c5070;
-        this.f8049 = z;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final byte[] f7345 = new byte[1];
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C2247)) {
-            return false;
+    public C2247(InterfaceC13433 interfaceC13433, C25368 c25368) {
+        this.f7348 = interfaceC13433;
+        this.f7347 = c25368;
+    }
+
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = this.f7345;
+        if (read(bArr, 0, bArr.length) == -1) {
+            return -1;
         }
-        C2247 c2247 = (C2247) obj;
-        return this.f8049 == c2247.f8049 && C13638.equals(this.f8048, c2247.f8048);
+        return bArr[0] & 255;
     }
 
-    public final int hashCode() {
-        return C13638.hashCode(this.f8048) + ((this.f8049 ? 1231 : 1237) * 31);
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr) {
+        return read(bArr, 0, bArr.length);
     }
 
-    public final String toString() {
-        Object[] objArr = {this.f8048, Boolean.valueOf(this.f8049)};
-        String[] strArrSplit = "patches;removedPatternIdentity".length() == 0 ? new String[0] : "patches;removedPatternIdentity".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C2247.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) {
+        C20782.m47568(!this.f7346);
+        boolean z = this.f7344;
+        InterfaceC13433 interfaceC13433 = this.f7348;
+        if (!z) {
+            interfaceC13433.mo8326(this.f7347);
+            this.f7344 = true;
         }
-        sb.append("]");
-        return sb.toString();
+        int i3 = interfaceC13433.read(bArr, i, i2);
+        if (i3 == -1) {
+            return -1;
+        }
+        return i3;
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() {
+        if (this.f7346) {
+            return;
+        }
+        this.f7348.close();
+        this.f7346 = true;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5070 m6900() {
-        return this.f8048;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final boolean m6901() {
-        return this.f8049;
+    public final void m7664() {
+        if (this.f7344) {
+            return;
+        }
+        this.f7348.mo8326(this.f7347);
+        this.f7344 = true;
     }
 }

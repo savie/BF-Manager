@@ -4,8 +4,8 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import l.C10235;
-import l.InterfaceC20818;
+import l.C9214;
+import l.InterfaceC8469;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.SkippingCipher;
@@ -13,8 +13,8 @@ import org.bouncycastle.crypto.StreamCipher;
 import org.bouncycastle.crypto.modes.AEADBlockCipher;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
-public class CipherInputStream extends FilterInputStream implements InterfaceC20818 {
+/* JADX INFO: loaded from: classes2.dex */
+public class CipherInputStream extends FilterInputStream implements InterfaceC8469 {
     public static final int INPUT_BUF_SIZE = 2048;
     public AEADBlockCipher aeadBlockCipher;
     public byte[] buf;
@@ -278,8 +278,8 @@ public class CipherInputStream extends FilterInputStream implements InterfaceC20
         throw new IOException("Unable to skip cipher " + jSkip + " bytes.");
     }
 
-    @Override // java.io.InputStream, l.InterfaceC20818
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 }

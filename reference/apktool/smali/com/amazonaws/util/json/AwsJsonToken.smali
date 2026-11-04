@@ -6,25 +6,25 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ֫:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ֨:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ۛ:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ۖ:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ۧ:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ۟:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ۫:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ۠:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ܳ:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ۡ:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ۢ:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ܽ:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final synthetic ܰ:[Lcom/amazonaws/util/json/AwsJsonToken;
 
 .field public static final enum ܿ:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ᩶:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ᩳ:Lcom/amazonaws/util/json/AwsJsonToken;
 
-.field public static final enum ᩻:Lcom/amazonaws/util/json/AwsJsonToken;
+.field public static final enum ᩶:Lcom/amazonaws/util/json/AwsJsonToken;
 
 
 # direct methods
@@ -51,7 +51,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/util/json/AwsJsonToken;->ܽ:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v1, Lcom/amazonaws/util/json/AwsJsonToken;->֡:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 27
     new-instance v2, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -62,7 +62,7 @@
 
     invoke-direct {v2, v3, v4}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v2, Lcom/amazonaws/util/json/AwsJsonToken;->֡:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v2, Lcom/amazonaws/util/json/AwsJsonToken;->ܿ:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 29
     new-instance v3, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -73,7 +73,7 @@
 
     invoke-direct {v3, v4, v5}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/util/json/AwsJsonToken;->۫:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v3, Lcom/amazonaws/util/json/AwsJsonToken;->۟:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 31
     new-instance v4, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -84,7 +84,7 @@
 
     invoke-direct {v4, v6, v7}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v4, Lcom/amazonaws/util/json/AwsJsonToken;->ܿ:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v4, Lcom/amazonaws/util/json/AwsJsonToken;->ᩳ:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 33
     new-instance v6, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -95,7 +95,7 @@
 
     invoke-direct {v6, v8, v9}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v6, Lcom/amazonaws/util/json/AwsJsonToken;->ۧ:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v6, Lcom/amazonaws/util/json/AwsJsonToken;->֨:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 35
     new-instance v8, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -106,7 +106,7 @@
 
     invoke-direct {v8, v10, v11}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v8, Lcom/amazonaws/util/json/AwsJsonToken;->᩻:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v8, Lcom/amazonaws/util/json/AwsJsonToken;->ۡ:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 37
     new-instance v10, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -119,7 +119,7 @@
 
     invoke-direct {v10, v12, v14}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v10, Lcom/amazonaws/util/json/AwsJsonToken;->ܳ:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v10, Lcom/amazonaws/util/json/AwsJsonToken;->ۖ:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 39
     new-instance v12, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -132,7 +132,7 @@
 
     invoke-direct {v12, v15, v14}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v12, Lcom/amazonaws/util/json/AwsJsonToken;->֫:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v12, Lcom/amazonaws/util/json/AwsJsonToken;->۠:Lcom/amazonaws/util/json/AwsJsonToken;
 
     .line 41
     new-instance v14, Lcom/amazonaws/util/json/AwsJsonToken;
@@ -145,7 +145,7 @@
 
     invoke-direct {v14, v15, v11}, Lcom/amazonaws/util/json/AwsJsonToken;-><init>(Ljava/lang/String;I)V
 
-    sput-object v14, Lcom/amazonaws/util/json/AwsJsonToken;->ۛ:Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v14, Lcom/amazonaws/util/json/AwsJsonToken;->ۢ:Lcom/amazonaws/util/json/AwsJsonToken;
 
     const/16 v15, 0xa
 
@@ -178,7 +178,7 @@
     aput-object v14, v15, v11
 
     .line 21
-    sput-object v15, Lcom/amazonaws/util/json/AwsJsonToken;->ܺ:[Lcom/amazonaws/util/json/AwsJsonToken;
+    sput-object v15, Lcom/amazonaws/util/json/AwsJsonToken;->ܰ:[Lcom/amazonaws/util/json/AwsJsonToken;
 
     return-void
 .end method
@@ -211,7 +211,7 @@
     .locals 1
 
     .line 21
-    sget-object v0, Lcom/amazonaws/util/json/AwsJsonToken;->ܺ:[Lcom/amazonaws/util/json/AwsJsonToken;
+    sget-object v0, Lcom/amazonaws/util/json/AwsJsonToken;->ܰ:[Lcom/amazonaws/util/json/AwsJsonToken;
 
     invoke-virtual {v0}, [Lcom/amazonaws/util/json/AwsJsonToken;->clone()Ljava/lang/Object;
 

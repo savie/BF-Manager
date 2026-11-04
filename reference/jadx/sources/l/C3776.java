@@ -1,41 +1,50 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘۜܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8NG */
-/* JADX INFO: loaded from: classes2.dex */
-public class C3776 implements InterfaceC6599 {
+import com.alipay.sdk.m.y.l;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f13645;
+/* JADX INFO: renamed from: l.ۗ᩻᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: S7FD */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3776 extends AbstractC1890 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C12950 f13646;
+    /* JADX INFO: renamed from: ۫᩷, reason: not valid java name and contains not printable characters */
+    public ArrayList f12950;
 
-    @Override // l.InterfaceC6599
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo5382() {
-        return false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m12253(DataInputStream dataInputStream) throws IOException {
+        int unsignedShort = dataInputStream.readUnsignedShort();
+        this.f6369.m32315(C13645.m33382(unsignedShort, "components="), new Object[0]);
+        this.f12950 = new ArrayList(unsignedShort);
+        for (int i = 0; i < unsignedShort; i++) {
+            ArrayList arrayList = this.f12950;
+            C23914 c23914 = new C23914((C0224) this.f6363);
+            c23914.f6365 = "RecordData";
+            c23914.m53415(dataInputStream);
+            arrayList.add(c23914);
+        }
     }
 
-    public C3776(long j) {
-        this(j, 0L);
-    }
-
-    public C3776(long j, long j2) {
-        this.f13645 = j;
-        C22828 c22828 = j2 == 0 ? C22828.f74276 : new C22828(0L, j2);
-        this.f13646 = new C12950(c22828, c22828);
-    }
-
-    @Override // l.InterfaceC6599
-    /* JADX INFO: renamed from: ۬ */
-    public final long mo5383() {
-        return this.f13645;
-    }
-
-    @Override // l.InterfaceC6599
-    /* JADX INFO: renamed from: ۙ */
-    public final C12950 mo5381(long j) {
-        return this.f13646;
+    @Override // l.AbstractC20997, l.InterfaceC16454
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1688() {
+        int size = this.f12950.size();
+        if (size > 0) {
+            boolean zM27633 = this.f67131.m27633();
+            m48013(EnumC5202.f18247.m15637() + " {");
+            for (int i = 0; i < size; i++) {
+                C23914 c23914 = (C23914) this.f12950.get(i);
+                c23914.f67148 = m48002() + this.f67148;
+                c23914.m48012(1);
+                if (!zM27633 || !mo5637()) {
+                    c23914.mo11099(i, size);
+                } else {
+                    c23914.mo11099(i, size);
+                }
+            }
+            m48013(l.d);
+        }
     }
 }

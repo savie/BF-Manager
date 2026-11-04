@@ -1,39 +1,87 @@
 package l;
 
-import android.view.View;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
+import java.lang.ref.WeakReference;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۙ۟ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 313O */
+/* JADX INFO: renamed from: l.ۘ᩺ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LAQJ */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4495 implements InterfaceC15080 {
+public final class C4495 implements InterfaceC19510 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Main f15998;
+    public boolean f16060;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f15999;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final List f16061;
 
-    public C4495(AbstractC20745 abstractC20745, Main main) {
-        this.f15999 = abstractC20745;
-        this.f15998 = main;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22044 f16062;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f16063 = C8224.m22127();
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f16064;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean f16065;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final WeakReference f16066;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f16067;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized boolean m14219() {
+        if (this.f16060) {
+            return true;
+        }
+        this.f16060 = true;
+        C24633 c24633 = C8224.f27070;
+        int i = this.f16063;
+        c24633.getClass();
+        C12797.m31690(this);
+        try {
+            C12797.m31695(i);
+            return true;
+        } catch (Throwable unused) {
+            C12797.m31703(this);
+            this.f16060 = false;
+            return false;
+        }
     }
 
-    @Override // l.InterfaceC15080
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo9566(C23630 c23630, InterfaceC23898 interfaceC23898, C6695 c6695) {
-        c23630.m52100(interfaceC23898, this.f15999, true);
+    public C4495(C6733 c6733) {
+        this.f16066 = new WeakReference(c6733.f22436);
+        this.f16062 = c6733.f22440;
+        this.f16065 = c6733.f22441;
+        this.f16064 = c6733.f22439;
+        this.f16061 = c6733.f22438;
+        this.f16067 = c6733.f22437;
     }
 
-    @Override // l.InterfaceC15080
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo9565(View view, C23630 c23630, InterfaceC23898 interfaceC23898, C6695 c6695) {
-        C16195 c16195 = new C16195(this.f15998, view, 0);
-        C12418 c12418M38298 = c16195.m38298();
-        c12418M38298.add(0, R.string.MT_Protector, 0, R.string.MT_Protector);
-        c12418M38298.add(0, R.string.MT_Protector, 0, R.string.MT_Protector);
-        c16195.m38296(new C18748(interfaceC23898, c23630));
-        c16195.m38297();
+    @Override // l.InterfaceC19510
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo14218(int i, int i2) {
+        if (i != this.f16063) {
+            return;
+        }
+        synchronized (this) {
+            if (this.f16060) {
+                this.f16060 = false;
+                C8224.f27070.getClass();
+                C12797.m31703(this);
+                AbstractActivityC17204 abstractActivityC17204 = (AbstractActivityC17204) this.f16066.get();
+                if (abstractActivityC17204 != null) {
+                    C6733 c6733 = new C6733(abstractActivityC17204, this.f16062, this.f16065, this.f16064, this.f16061, this.f16067);
+                    if (i2 == 0) {
+                        c6733.m18825(EnumC16427.SHIZUKU);
+                    } else {
+                        c6733.m18826(EnumC16427.SHIZUKU);
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,24 +1,18 @@
 package l;
 
-import java.util.function.Function;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.۠᩵ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 097P */
+/* JADX INFO: renamed from: l.۠ۘܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: RBI4 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8376 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
+public final class C8376 implements Comparator {
+    @Override // java.util.Comparator
+    public final boolean equals(Object obj) {
+        return obj == this;
     }
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return C16137.m38197((AbstractC20745) obj);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return ((C11950) obj).m29922() - ((C11950) obj2).m29922();
     }
 }

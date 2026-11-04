@@ -1,44 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۘ֨᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: TAS9 */
+import com.alipay.sdk.m.y.l;
+
+/* JADX INFO: renamed from: l.ۗᩴܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z99H */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3615 extends C7495 {
+public final class C3615 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C3615 f13295 = new C3615(null, Integer.MAX_VALUE);
-
-    @Override // l.C7495, l.AbstractC11729
-    public final boolean equals(Object obj) {
-        return this == obj;
-    }
-
-    @Override // l.C7495
-    public final String toString() {
-        return "$";
-    }
-
-    @Override // l.C7495, l.AbstractC11729
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC11729 mo10716(int i) {
-        return null;
+    public final AbstractC5107 f12389;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f12390;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f12391;
+
+    public C3615(String str, AbstractC5107 abstractC5107, boolean z) {
+        this.f12390 = str;
+        this.f12389 = abstractC5107;
+        this.f12391 = z;
     }
 
-    @Override // l.C7495, l.AbstractC11729
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo10717() {
-        return 1;
+    public final String toString() {
+        Object[] objArr = {this.f12390, this.f12389, Boolean.valueOf(this.f12391)};
+        String[] strArrSplit = "name;descriptor;isMethod".length() == 0 ? new String[0] : "name;descriptor;isMethod".split(l.b);
+        StringBuilder sb = new StringBuilder("NameDescriptorKey[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
-    @Override // l.AbstractC11729
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo10719() {
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m11731() {
+        return this.f12391;
     }
 
-    @Override // l.C7495, l.AbstractC11729
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo10718(int i) {
-        return this.f24960;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m11732() {
+        return this.f12390;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || C3615.class != obj.getClass()) {
+            return false;
+        }
+        C3615 c3615 = (C3615) obj;
+        if (this.f12391 == c3615.f12391 && this.f12390.equals(c3615.f12390)) {
+            return this.f12389.equals(c3615.f12389);
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return ((this.f12389.hashCode() + (this.f12390.hashCode() * 31)) * 31) + (this.f12391 ? 1 : 0);
     }
 }

@@ -1,57 +1,47 @@
 .class public final Ll/ۚ᩺ۨ;
 .super Ljava/lang/Object;
-.source "X66Z"
+.source "63TE"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ljavax/net/ssl/X509TrustManager;
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 3
-
-    .line 66
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll/ܳۘۨ;
-
-    invoke-virtual {v0}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 67
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll/ܳۘۨ;
-
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ۜ()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lorg/json/JSONObject;
-
-    .line 68
-    new-instance v2, Ll/ܳۘۨ;
-
-    invoke-direct {v2}, Ll/ܳۘۨ;-><init>()V
-
-    .line 70
-    :try_start_0
-    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Ll/ܳۘۨ;->ۙ(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 73
-    :catchall_0
-    invoke-virtual {p1, v2}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
+.method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+    .locals 2
+
+    .line 54
+    array-length p2, p1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_0
+
+    aget-object v1, p1, v0
+
+    .line 55
+    invoke-virtual {v1}, Ljava/security/cert/X509Certificate;->checkValidity()V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
+    .locals 1
+
+    .line 65
+    sget-object v0, Ll/۫᩺ۨ;->ۙ:[Ljava/security/cert/X509Certificate;
+
+    return-object v0
 .end method

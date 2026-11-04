@@ -1,332 +1,62 @@
 .class public final Ll/ۖ۠ᩴ;
 .super Ljava/lang/Object;
-.source "H1MW"
+.source "PAKQ"
 
 # interfaces
-.implements Ll/۫ᩴᩴ;
-.implements Ljava/util/Map$Entry;
-.implements Ll/ܶ֫ᩳ;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public ܺ:I
-
-.field public final synthetic ᩶:Ll/ۜ۠ᩴ;
+.field public final synthetic ܰ:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۠ᩴ;)V
+.method public constructor <init>(Landroid/content/BroadcastReceiver;)V
     .locals 0
 
-    .line 618
+    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۜ۠ᩴ;I)V
-    .locals 0
-
-    .line 614
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    .line 615
-    iput p2, p0, Ll/ۖ۠ᩴ;->ܺ:I
+    iput-object p1, p0, Ll/ۖ۠ᩴ;->ܰ:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    .line 679
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 680
-    :cond_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    .line 681
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v2, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
-
-    iget v3, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget-object v2, v2, v3
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v2, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v0, v0, v2
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v1
-.end method
-
-.method public final first()Ljava/lang/Object;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
-    .line 99
-    invoke-virtual {p0}, Ll/ۖ۠ᩴ;->ۨ()Ljava/lang/Object;
+    .line 120
+    new-instance p1, Landroid/content/IntentFilter;
 
-    move-result-object v0
+    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
-    return-object v0
+    const-string v0, "ScreenColorPicker.ACTION_START"
+
+    .line 121
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v0, "ScreenColorPicker.ACTION_STOP"
+
+    .line 122
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 123
+    iget-object v0, p0, Ll/ۖ۠ᩴ;->ܰ:Landroid/content/BroadcastReceiver;
+
+    invoke-static {v0, p1}, Ll/᩶᩷ۧ;->ۙ(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
+
+    return-void
 .end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 2
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
 
-    .line 623
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
+    .line 128
+    iget-object p1, p0, Ll/ۖ۠ᩴ;->ܰ:Landroid/content/BroadcastReceiver;
 
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
+    invoke-static {p1}, Ll/᩶᩷ۧ;->ۙ(Landroid/content/BroadcastReceiver;)V
 
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget-object v0, v0, v1
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 662
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v0, v0, v1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    .line 686
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v1, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
-
-    iget v2, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget-object v1, v1, v2
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v2, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v0, v0, v2
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 610
-    check-cast p1, Ljava/lang/Integer;
-
-    .line 673
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    .line 643
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v2, v0, v1
-
-    .line 644
-    aput p1, v0, v1
-
-    .line 673
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .line 691
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v2, v1, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
-
-    iget v3, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, "=>"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, v1, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v2, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v1, v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۖ()Ljava/lang/Object;
-    .locals 1
-
-    .line 72
-    invoke-virtual {p0}, Ll/ۖ۠ᩴ;->ۡ()I
-
-    move-result v0
-
-    .line 83
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۘ()I
-    .locals 2
-
-    .line 633
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v0, v0, v1
-
-    return v0
-.end method
-
-.method public final ۡ()I
-    .locals 2
-
-    .line 638
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->֫:[I
-
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget v0, v0, v1
-
-    return v0
-.end method
-
-.method public final ۨ()Ljava/lang/Object;
-    .locals 2
-
-    .line 628
-    iget-object v0, p0, Ll/ۖ۠ᩴ;->᩶:Ll/ۜ۠ᩴ;
-
-    iget-object v0, v0, Ll/ۜ۠ᩴ;->ܽ:[Ljava/lang/Object;
-
-    iget v1, p0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    aget-object v0, v0, v1
-
-    return-object v0
-.end method
-
-.method public final ᩹()Ljava/lang/Object;
-    .locals 1
-
-    .line 38
-    invoke-virtual {p0}, Ll/ۖ۠ᩴ;->ۡ()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

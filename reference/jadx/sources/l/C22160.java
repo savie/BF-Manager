@@ -1,18 +1,13 @@
 package l;
 
-import java.util.ArrayList;
+import android.graphics.Typeface;
 
-/* JADX INFO: renamed from: l.᩹۠ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 355P */
+/* JADX INFO: renamed from: l.᩷ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S566 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22160 extends C17146 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public String f72481;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public ArrayList f72482;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public String f72483;
+public final class C22160 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Typeface m50123(Typeface typeface, int i, boolean z) {
+        return Typeface.create(typeface, i, z);
+    }
 }

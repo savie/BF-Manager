@@ -1,51 +1,84 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۛᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ܺ֡ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J416 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16460 {
-    public static final C16460 c = new C16460();
-    public final boolean a;
-    public final double b;
+public final /* synthetic */ class C16460 {
 
-    public C16460() {
-        this.a = false;
-        this.b = Double.NaN;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f53375;
 
-    public C16460(double d) {
-        this.a = true;
-        this.b = d;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f53376;
 
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    static {
+        int[] iArr = new int[EnumC21172.values().length];
+        f53375 = iArr;
+        try {
+            iArr[EnumC21172.BYTE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (!(obj instanceof C16460)) {
-            return false;
+        try {
+            f53375[EnumC21172.CHAR.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        C16460 c16460 = (C16460) obj;
-        boolean z = c16460.a;
-        boolean z2 = this.a;
-        if (z2 && z) {
-            return Double.compare(this.b, c16460.b) == 0;
+        try {
+            f53375[EnumC21172.SHORT.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        return z2 == z;
-    }
-
-    public final int hashCode() {
-        if (!this.a) {
-            return 0;
+        try {
+            f53375[EnumC21172.INT.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
         }
-        long jDoubleToLongBits = Double.doubleToLongBits(this.b);
-        return (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
-    }
-
-    public final String toString() {
-        if (!this.a) {
-            return "OptionalDouble.empty";
+        try {
+            f53375[EnumC21172.LONG.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
         }
-        return "OptionalDouble[" + this.b + "]";
+        try {
+            f53375[EnumC21172.FLOAT.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f53375[EnumC21172.DOUBLE.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f53375[EnumC21172.BOOLEAN.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f53375[EnumC21172.VOID.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f53375[EnumC21172.TYPEVAR.ordinal()] = 10;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f53375[EnumC21172.WILDCARD.ordinal()] = 11;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f53375[EnumC21172.CLASS.ordinal()] = 12;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f53375[EnumC21172.ARRAY.ordinal()] = 13;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f53375[EnumC21172.ERROR.ordinal()] = 14;
+        } catch (NoSuchFieldError unused14) {
+        }
+        int[] iArr2 = new int[EnumC18720.values().length];
+        f53376 = iArr2;
+        try {
+            iArr2[EnumC18720.UNION.ordinal()] = 1;
+        } catch (NoSuchFieldError unused15) {
+        }
+        try {
+            f53376[EnumC18720.INTERSECTION.ordinal()] = 2;
+        } catch (NoSuchFieldError unused16) {
+        }
     }
 }

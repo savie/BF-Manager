@@ -1,48 +1,48 @@
 package l;
 
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.MaterialDynamicColors;
-import java.util.Iterator;
-import java.util.function.Function;
-
-/* JADX INFO: renamed from: l.ܳܰۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M7E7 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14566 implements Function {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f47671;
-
-    public /* synthetic */ C14566(int i) {
-        this.f47671 = i;
+/* JADX INFO: renamed from: l.ܰۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C14566 extends EnumC13820 {
+    public /* synthetic */ C14566() {
+        this("BetweenDoctypePublicAndSystemIdentifiers", 59);
     }
 
-    public /* synthetic */ C14566(C20724 c20724) {
-        this.f47671 = 1;
+    public C14566(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f47671) {
-            case 0:
-                return (InterfaceC12387) ((AbstractC6741) obj);
-            case 1:
-                return ((AbstractC20745) obj).getName();
-            case 2:
-                return MaterialDynamicColors.lambda$surface$16((DynamicScheme) obj);
-            default:
-                return (Iterator) obj;
+    @Override // l.EnumC13820
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1228(C13646 c13646, C3952 c3952) {
+        char cM12689 = c3952.m12689();
+        if (cM12689 == '\t' || cM12689 == '\n' || cM12689 == '\f' || cM12689 == '\r' || cM12689 == ' ') {
+            return;
+        }
+        if (cM12689 == '\"') {
+            c13646.m33394(this);
+            c13646.m33401(EnumC13820.f43856);
+            return;
+        }
+        if (cM12689 == '\'') {
+            c13646.m33394(this);
+            c13646.m33401(EnumC13820.f43877);
+            return;
+        }
+        if (cM12689 == '>') {
+            c13646.m33400();
+            c13646.m33401(EnumC13820.f43874);
+        } else {
+            if (cM12689 == 65535) {
+                c13646.m33399(this);
+                c13646.f43324.getClass();
+                c13646.m33400();
+                c13646.m33401(EnumC13820.f43874);
+                return;
+            }
+            c13646.m33394(this);
+            c13646.f43324.getClass();
+            c13646.m33401(EnumC13820.f43851);
         }
     }
 }

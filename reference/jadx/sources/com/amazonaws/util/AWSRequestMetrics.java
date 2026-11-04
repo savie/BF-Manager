@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class AWSRequestMetrics {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TimingInfo f794;
+    public final TimingInfo f784;
 
     public enum Field implements MetricType {
         AWSErrorCode,
@@ -34,36 +34,36 @@ public class AWSRequestMetrics {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo732(Field field) {
+    public void mo726(Field field) {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo733(Field field, long j) {
+    public void mo727(Field field, long j) {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo734(Field field, Serializable serializable) {
+    public void mo728(Field field, Serializable serializable) {
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public void mo735(Field field) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public void mo729(Field field) {
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void mo736(Field field) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public void mo730(Field field) {
     }
 
     public AWSRequestMetrics() {
         System.currentTimeMillis();
-        this.f794 = new TimingInfo(System.nanoTime(), null);
+        this.f784 = new TimingInfo(System.nanoTime(), null);
     }
 
     public AWSRequestMetrics(TimingInfo timingInfo) {
-        this.f794 = timingInfo;
+        this.f784 = timingInfo;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final TimingInfo m731() {
-        return this.f794;
+    public final TimingInfo m725() {
+        return this.f784;
     }
 }

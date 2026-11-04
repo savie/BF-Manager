@@ -1,46 +1,72 @@
-.class public final Ll/ܳۚ᩹;
-.super Ll/֫۠᩵;
-.source "A6LD"
+.class public final synthetic Ll/ܳۚ᩹;
+.super Ljava/lang/Object;
+.source "590I"
 
 
-# instance fields
-.field public ۠:I
+# static fields
+.field public static final synthetic ۙ:[I
 
 
-# virtual methods
-.method public final ۙ(Ll/ۖۤ᩵;Ll/᩵ۡ᩵;)V
-    .locals 2
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 137
-    instance-of v0, p2, Ll/ܺᩴ᩵;
+    .line 149
+    invoke-static {}, Ll/۠ۚ᩹;->values()[Ll/۠ۚ᩹;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget v0, p0, Ll/ܳۚ᩹;->۠:I
+    array-length v0, v0
 
-    add-int/lit8 v0, v0, 0x1
+    new-array v0, v0, [I
 
-    iput v0, p0, Ll/ܳۚ᩹;->۠:I
+    sput-object v0, Ll/ܳۚ᩹;->ۙ:[I
 
-    const v1, 0x186a0
+    :try_start_0
+    sget-object v1, Ll/۠ۚ᩹;->ۢ:Ll/۠ۚ᩹;
 
-    if-gt v0, v1, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    goto :goto_0
+    move-result v1
 
-    :cond_0
-    new-instance p1, Ll/ۗۚ᩹;
+    const/4 v2, 0x1
 
-    .line 56
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
-    throw p1
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ܳۚ᩹;->ۙ:[I
 
-    .line 138
-    :cond_1
-    :goto_0
-    invoke-super {p0, p1, p2}, Ll/֫۠᩵;->ۙ(Ll/ۖۤ᩵;Ll/᩵ۡ᩵;)V
+    sget-object v1, Ll/۠ۚ᩹;->ᩳ:Ll/۠ۚ᩹;
 
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ܳۚ᩹;->ۙ:[I
+
+    sget-object v1, Ll/۠ۚ᩹;->᩶:Ll/۠ۚ᩹;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
 .end method

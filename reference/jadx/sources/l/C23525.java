@@ -1,54 +1,22 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ۜۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5SN */
+import android.content.Context;
+import android.telephony.TelephonyManager;
+
+/* JADX INFO: renamed from: l.᩹ۨۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J8TX */
 /* JADX INFO: loaded from: classes.dex */
 public final class C23525 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static EnumC1651 m51821(EnumC9414 enumC9414) {
-        C13465.m32966(enumC9414, "state");
-        int i = C10825.f36858[enumC9414.ordinal()];
-        if (i == 1) {
-            return EnumC1651.ON_DESTROY;
+    public static void m52728(Context context, C4133 c4133) {
+        try {
+            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService("phone");
+            telephonyManager.getClass();
+            C16065 c16065 = new C16065(c4133);
+            telephonyManager.registerTelephonyCallback(c4133.f14021, c16065);
+            telephonyManager.unregisterTelephonyCallback(c16065);
+        } catch (RuntimeException unused) {
+            c4133.m13255(5);
         }
-        if (i == 2) {
-            return EnumC1651.ON_STOP;
-        }
-        if (i != 3) {
-            return null;
-        }
-        return EnumC1651.ON_PAUSE;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static EnumC1651 m51822(EnumC9414 enumC9414) {
-        C13465.m32966(enumC9414, "state");
-        int i = C10825.f36858[enumC9414.ordinal()];
-        if (i == 1) {
-            return EnumC1651.ON_CREATE;
-        }
-        if (i == 2) {
-            return EnumC1651.ON_START;
-        }
-        if (i != 3) {
-            return null;
-        }
-        return EnumC1651.ON_RESUME;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static EnumC1651 m51823(EnumC9414 enumC9414) {
-        C13465.m32966(enumC9414, "state");
-        int i = C10825.f36858[enumC9414.ordinal()];
-        if (i == 1) {
-            return EnumC1651.ON_START;
-        }
-        if (i == 2) {
-            return EnumC1651.ON_RESUME;
-        }
-        if (i != 5) {
-            return null;
-        }
-        return EnumC1651.ON_CREATE;
     }
 }

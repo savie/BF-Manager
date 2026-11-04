@@ -2,7 +2,7 @@ package org.bouncycastle.util.encoders;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.util.Strings;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -19,7 +19,7 @@ public class Hex {
             encoder.decode(str, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("exception decoding Hex string: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("exception decoding Hex string: ")), e);
         }
     }
 
@@ -33,7 +33,7 @@ public class Hex {
             encoder.decode(bArr, i, i2, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("exception decoding Hex data: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("exception decoding Hex data: ")), e);
         }
     }
 
@@ -41,7 +41,7 @@ public class Hex {
         try {
             return encoder.decodeStrict(str, 0, str.length());
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("exception decoding Hex string: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("exception decoding Hex string: ")), e);
         }
     }
 
@@ -49,7 +49,7 @@ public class Hex {
         try {
             return encoder.decodeStrict(str, i, i2);
         } catch (Exception e) {
-            throw new DecoderException(C8479.m22142(e, new StringBuilder("exception decoding Hex string: ")), e);
+            throw new DecoderException(C16076.m38224(e, new StringBuilder("exception decoding Hex string: ")), e);
         }
     }
 
@@ -71,7 +71,7 @@ public class Hex {
             encoder.encode(bArr, i, i2, byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
-            throw new EncoderException(C8479.m22142(e, new StringBuilder("exception encoding Hex string: ")), e);
+            throw new EncoderException(C16076.m38224(e, new StringBuilder("exception encoding Hex string: ")), e);
         }
     }
 

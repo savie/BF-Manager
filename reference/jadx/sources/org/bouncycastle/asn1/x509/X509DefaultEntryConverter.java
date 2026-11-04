@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DERPrintableString;
 import org.bouncycastle.asn1.DERUTF8String;
 import org.bouncycastle.asn1.x500.style.BCStyle;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509DefaultEntryConverter extends X509NameEntryConverter {
     @Override // org.bouncycastle.asn1.x509.X509NameEntryConverter
     public ASN1Primitive getConvertedValue(ASN1ObjectIdentifier aSN1ObjectIdentifier, String str) {

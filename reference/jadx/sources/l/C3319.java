@@ -1,88 +1,74 @@
 package l;
 
-import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import java.io.EOFException;
-import java.io.InterruptedIOException;
+/* JADX INFO: renamed from: l.ۗۢۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3IVQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3319 extends C18959 {
 
-/* JADX INFO: renamed from: l.ۗܶܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T8TF */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3319 {
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public Object f10829;
+
+    public C3319(EnumC24203 enumC24203, Object obj, int i) {
+        super(enumC24203, i);
+        this.f10829 = obj;
+    }
+
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m10937() {
+        return this.f10829;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f12254;
+    public final void m10935(AbstractC1566 abstractC1566) {
+        this.f10829 = abstractC1566;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C2460 f12255 = new C2460(8);
+    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1566 m10936() {
+        return (AbstractC1566) this.f10829;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m9825(C14984 c14984) throws EOFException, InterruptedIOException {
-        long length = c14984.getLength();
-        long j = ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS;
-        if (length != -1 && length <= ConstantsAPI.AppSupportContentFlag.MMAPP_SUPPORT_XLS) {
-            j = length;
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final C18959 mo4072() {
+        C3319 c3319 = new C3319(this.f61472, this.f10829, m44039());
+        m44033(c3319);
+        return c3319;
+    }
+
+    @Override // l.C18959
+    /* JADX INFO: renamed from: ᩴ */
+    public final boolean mo4075(C18959 c18959) {
+        if (this == c18959) {
+            return true;
         }
-        int i = (int) j;
-        C2460 c2460 = this.f12255;
-        c14984.mo19219(false, 0, 4, c2460.m7518());
-        this.f12254 = 4;
-        for (long jM7532 = c2460.m7532(); jM7532 != 440786851; jM7532 = ((jM7532 << 8) & (-256)) | ((long) (c2460.m7518()[0] & 255))) {
-            int i2 = this.f12254 + 1;
-            this.f12254 = i2;
-            if (i2 == i) {
-                return false;
-            }
-            c14984.mo19219(false, 0, 1, c2460.m7518());
-        }
-        long jM9824 = m9824(c14984);
-        long j2 = this.f12254;
-        if (jM9824 != Long.MIN_VALUE && (length == -1 || j2 + jM9824 < length)) {
-            while (true) {
-                long j3 = this.f12254;
-                long j4 = j2 + jM9824;
-                if (j3 < j4) {
-                    if (m9824(c14984) == Long.MIN_VALUE) {
-                        break;
-                    }
-                    long jM9825 = m9824(c14984);
-                    if (jM9825 < 0 || jM9825 > 2147483647L) {
-                        break;
-                    }
-                    if (jM9825 != 0) {
-                        int i3 = (int) jM9825;
-                        c14984.mo19218(i3, false);
-                        this.f12254 += i3;
-                    }
-                } else if (j3 == j4) {
-                    return true;
-                }
-            }
+        if ((c18959 instanceof C3319) && super.mo4075(c18959)) {
+            return C17359.equals(this.f10829, ((C3319) c18959).f10829);
         }
         return false;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private long m9824(C14984 c14984) {
-        C2460 c2460 = this.f12255;
-        int i = 0;
-        c14984.mo19219(false, 0, 1, c2460.m7518());
-        int i2 = c2460.m7518()[0] & 255;
-        if (i2 == 0) {
-            return Long.MIN_VALUE;
+    @Override // l.C18959
+    public final String toString() {
+        int[] iArr = C23457.f75909;
+        EnumC24203 enumC24203 = this.f61472;
+        int i = iArr[enumC24203.ordinal()];
+        if (i == 1 || i == 2) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(C8314.m22396(this.f61471));
+            sb.append(": ");
+            sb.append(enumC24203);
+            sb.append(' ');
+            if (m44027() != null) {
+                sb.append(m44027());
+                sb.append(" = ");
+            }
+            sb.append('(');
+            sb.append(C8314.m22397(this.f10829));
+            sb.append(") ");
+            sb.append(C4123.m13221(m44026(), ", "));
+            return sb.toString();
         }
-        int i3 = 128;
-        int i4 = 0;
-        while ((i2 & i3) == 0) {
-            i3 >>= 1;
-            i4++;
-        }
-        int i5 = i2 & (~i3);
-        c14984.mo19219(false, 1, i4, c2460.m7518());
-        while (i < i4) {
-            i++;
-            i5 = (c2460.m7518()[i] & 255) + (i5 << 8);
-        }
-        this.f12254 = i4 + 1 + this.f12254;
-        return i5;
+        return super.toString() + ' ' + C8314.m22397(this.f10829);
     }
 }

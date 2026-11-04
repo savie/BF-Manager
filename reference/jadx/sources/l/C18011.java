@@ -1,62 +1,39 @@
 package l;
 
-import java.util.concurrent.ExecutorService;
+import com.tencent.mm.opensdk.utils.Log;
+import java.util.ArrayList;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 
-/* JADX INFO: renamed from: l.ᩳۧ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: D8GL */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18011 {
-
+/* JADX INFO: renamed from: l.ܿ֫᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 61L9 */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C18011 implements InterfaceC19795, InterfaceC25138 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f57606;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public Thread f57607;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C21539 f57608;
-
-    public C18011(C21539 c21539) {
-        this.f57608 = c21539;
+    public static void m41991(Exception exc, StringBuilder sb, String str) {
+        sb.append(exc.getMessage());
+        Log.e(str, sb.toString());
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m41955(C18011 c18011, Thread thread) {
-        boolean z;
-        synchronized (c18011) {
-            c18011.f57607 = thread;
-            z = !c18011.f57606;
-        }
-        return z;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m41957(C18011 c18011) {
-        synchronized (c18011) {
-            Thread.interrupted();
-            c18011.f57607 = null;
-        }
+    public static void m41992(StringBuilder sb, ASN1ObjectIdentifier aSN1ObjectIdentifier, ConfigurableProvider configurableProvider, String str) {
+        sb.append(aSN1ObjectIdentifier);
+        configurableProvider.addAlgorithm(sb.toString(), str);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m41954(C18011 c18011) {
-        synchronized (c18011) {
-            if (c18011.f57606) {
-                return;
-            }
-            c18011.f57606 = true;
-            Thread thread = c18011.f57607;
-            if (thread != null) {
-                thread.interrupt();
-            }
-            C10148 c10148M48256 = c18011.f57608.m48256();
-            ExecutorService executorService = C4716.f16632;
-            c10148M48256.m25794();
-        }
+    public static Object m41990(ArrayList arrayList, int i) {
+        return arrayList.remove(arrayList.size() - i);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static C21539 m41956(C18011 c18011) {
-        return c18011.f57608;
+    @Override // l.InterfaceC25138
+    public Object apply(Object obj) {
+        ((Throwable) obj).getClass();
+        return null;
+    }
+
+    @Override // l.InterfaceC19795
+    public void invoke(Object obj) {
+        ((InterfaceC19992) obj).getClass();
     }
 }

@@ -1,48 +1,36 @@
-.class public final enum Ll/ᩴۨ᩸;
-.super Ll/۟ۨ᩸;
-.source "Q87L"
+.class public final synthetic Ll/ᩴۨ᩸;
+.super Ljava/lang/Object;
+.source "1AOV"
+
+# interfaces
+.implements Ll/ܶ᩻ۙ;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/ۚۨ᩸;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public synthetic constructor <init>(Ll/ۚۨ᩸;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۨ᩸;-><init>(Ljava/lang/String;ILl/᩸ۨ᩸;)V
+    iput-object p1, p0, Ll/ᩴۨ᩸;->ܰ:Ll/ۚۨ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ljava/lang/reflect/Field;)Ljava/util/List;
+.method public final ۙ(Ljava/lang/Object;)V
     .locals 0
 
-    .line 53
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    .line 0
+    iget-object p1, p0, Ll/ᩴۨ᩸;->ܰ:Ll/ۚۨ᩸;
 
-    return-object p1
-.end method
+    invoke-static {p1}, Ll/ۚۨ᩸;->ۙ(Ll/ۚۨ᩸;)V
 
-.method public ܰ(Ljava/lang/reflect/Field;)Ljava/lang/String;
-    .locals 1
-
-    .line 75
-    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/16 v0, 0x20
-
-    invoke-static {p1, v0}, Ll/۟ۨ᩸;->ۙ(Ljava/lang/String;C)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ll/۟ۨ᩸;->ۙ(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

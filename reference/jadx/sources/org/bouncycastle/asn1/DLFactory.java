@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DLFactory {
     public static final DLSequence EMPTY_SEQUENCE = new DLSequence();
     public static final DLSet EMPTY_SET = new DLSet();

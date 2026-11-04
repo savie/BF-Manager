@@ -2,7 +2,7 @@ package com.google.android.material.sidesheet;
 
 import android.view.View;
 import android.view.ViewGroup;
-import l.C2746;
+import l.C25276;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class RightSheetDelegate extends SheetDelegate {
@@ -77,8 +77,8 @@ public final class RightSheetDelegate extends SheetDelegate {
     }
 
     @Override // com.google.android.material.sidesheet.SheetDelegate
-    public int getParentInnerEdge(C2746 c2746) {
-        return c2746.getRight();
+    public int getParentInnerEdge(C25276 c25276) {
+        return c25276.getRight();
     }
 
     @Override // com.google.android.material.sidesheet.SheetDelegate

@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:Ljava/lang/Long;
 
-.field public final ܰ:J
+.field public final ᩷:J
 
 
 # direct methods
@@ -17,7 +17,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 158
-    iput-wide p1, p0, Lcom/amazonaws/util/TimingInfo;->ܰ:J
+    iput-wide p1, p0, Lcom/amazonaws/util/TimingInfo;->᩷:J
 
     .line 159
     iput-object p3, p0, Lcom/amazonaws/util/TimingInfo;->ۙ:Ljava/lang/Long;
@@ -31,7 +31,7 @@
     .locals 5
 
     .line 249
-    invoke-virtual {p0}, Lcom/amazonaws/util/TimingInfo;->ۖ()Z
+    invoke-virtual {p0}, Lcom/amazonaws/util/TimingInfo;->᩸()Z
 
     move-result v0
 
@@ -47,7 +47,7 @@
     .line 261
     sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-wide v3, p0, Lcom/amazonaws/util/TimingInfo;->ܰ:J
+    iget-wide v3, p0, Lcom/amazonaws/util/TimingInfo;->᩷:J
 
     sub-long/2addr v0, v3
 
@@ -93,24 +93,6 @@
     return-object v0
 .end method
 
-.method public final ۖ()Z
-    .locals 1
-
-    .line 280
-    iget-object v0, p0, Lcom/amazonaws/util/TimingInfo;->ۙ:Ljava/lang/Long;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public ۙ()V
     .locals 2
 
@@ -146,16 +128,16 @@
     return-void
 .end method
 
-.method public final ۨ()J
+.method public final ۤ()J
     .locals 2
 
     .line 191
-    iget-wide v0, p0, Lcom/amazonaws/util/TimingInfo;->ܰ:J
+    iget-wide v0, p0, Lcom/amazonaws/util/TimingInfo;->᩷:J
 
     return-wide v0
 .end method
 
-.method public final ܰ()J
+.method public final ᩷()J
     .locals 2
 
     .line 226
@@ -173,4 +155,22 @@
     move-result-wide v0
 
     return-wide v0
+.end method
+
+.method public final ᩸()Z
+    .locals 1
+
+    .line 280
+    iget-object v0, p0, Lcom/amazonaws/util/TimingInfo;->ۙ:Ljava/lang/Long;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

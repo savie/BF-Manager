@@ -1,12 +1,21 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽ۫ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6QA */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16637 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 29;
+import java.util.Collection;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ܺۛۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S8SC */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16637 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f53779;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 f53780;
+
+    public C16637(List list, int[] iArr) {
+        this.f53780 = AbstractC1928.copyOf((Collection) list);
+        this.f53779 = iArr;
     }
 }

@@ -1,19 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰ᩻᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 19KT */
+/* JADX INFO: renamed from: l.۬᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14159 implements InterfaceC18723 {
-    @Override // l.InterfaceC18723
+public final /* synthetic */ class C14159 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public final EnumC13785 mo2111() {
-        return EnumC13785.FileEaInformation;
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    @Override // l.InterfaceC18723
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC19429 mo2112(C10922 c10922) {
-        c10922.m27394();
-        return new C1323();
+    public final boolean mo1303(int i) {
+        return Character.isEmojiModifier(i);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

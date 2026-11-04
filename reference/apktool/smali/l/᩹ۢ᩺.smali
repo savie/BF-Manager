@@ -1,96 +1,51 @@
-.class public final Ll/᩹ۢ᩺;
-.super Ljava/lang/ThreadLocal;
-.source "5AQ2"
-
-
-# instance fields
-.field public final ۙ:Ll/ۖۢ᩺;
-
-
-# direct methods
-.method public constructor <init>(Ll/ۖۢ᩺;)V
-    .locals 0
-
-    .line 12
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    .line 13
-    iput-object p1, p0, Ll/᩹ۢ᩺;->ۙ:Ll/ۖۢ᩺;
-
-    return-void
-.end method
+.class public Ll/᩹ۢ᩺;
+.super Ll/۬ᩳ᩺;
+.source "X43L"
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 19
-    new-instance v0, Ljava/lang/RuntimeException;
+    .line 5003
+    check-cast p1, Ll/᩸۟᩺;
 
-    const-string v1, "Use getZipFile() instead."
+    .line 5005
+    invoke-virtual {p0, p1}, Ll/᩹ۢ᩺;->ۙ(Ll/᩸۟᩺;)Ll/᩸۟᩺;
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    throw v0
+    return-object p1
 .end method
 
-.method public final initialValue()Ljava/lang/Object;
-    .locals 2
+.method public bridge synthetic ۙ(Ljava/lang/Object;Ll/᩸۟᩺;)Ljava/lang/Object;
+    .locals 0
 
-    .line 36
-    :try_start_0
-    iget-object v0, p0, Ll/᩹ۢ᩺;->ۙ:Ll/ۖۢ᩺;
+    .line 4993
+    invoke-virtual {p0, p1, p2}, Ll/᩹ۢ᩺;->ۙ(Ljava/lang/Object;Ll/᩸۟᩺;)Ll/᩸۟᩺;
 
-    invoke-virtual {v0}, Ll/ۖۢ᩺;->ۨ()Ll/ۖۢ᩺;
+    move-result-object p1
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    .line 38
-    new-instance v1, Ll/ۚۢ᩺;
-
-    .line 44
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 38
-    throw v1
+    return-object p1
 .end method
 
-.method public final ۙ()Ll/ۖۢ᩺;
+.method public ۙ(Ljava/lang/Object;Ll/᩸۟᩺;)Ll/᩸۟᩺;
+    .locals 0
+
+    return-object p2
+.end method
+
+.method public final ۙ(Ll/᩸۟᩺;)Ll/᩸۟᩺;
     .locals 1
 
-    .line 25
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    .line 4994
+    invoke-virtual {p1, p0, v0}, Ll/᩸۟᩺;->ۙ(Ll/ۙ۟᩺;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Ll/ۖۢ᩺;
+    move-result-object p1
 
-    invoke-static {v0}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ll/ۚۢ᩺; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p1, Ll/᩸۟᩺;
 
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    .line 28
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/IOException;
-
-    throw v0
+    return-object p1
 .end method

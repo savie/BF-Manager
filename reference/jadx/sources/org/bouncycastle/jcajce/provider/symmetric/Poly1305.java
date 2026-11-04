@@ -1,14 +1,14 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C5800;
-import l.C9023;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.generators.Poly1305KeyGenerator;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Poly1305 {
 
     public class KeyGen extends BaseKeyGenerator {
@@ -17,7 +17,6 @@ public class Poly1305 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac extends BaseMac {
         public Mac() {
             super(new org.bouncycastle.crypto.macs.Poly1305());
@@ -31,7 +30,7 @@ public class Poly1305 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$KeyGen", "KeyGenerator.POLY1305", C9023.m23357(str, "$Mac", "Mac.POLY1305", sb, configurableProvider), configurableProvider);
+            C8947.m23913(str, "$KeyGen", "KeyGenerator.POLY1305", C18063.m42089(str, "$Mac", "Mac.POLY1305", sb, configurableProvider), configurableProvider);
         }
     }
 }

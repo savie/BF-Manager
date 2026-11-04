@@ -1,54 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩹ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6B9T */
+import java.util.Arrays;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.᩶۟᩵, reason: contains not printable characters */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21168 extends AbstractC14322 {
+public final class C21168 extends C0285 {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ void m48279(int i, int i2, int i3, Object[] objArr, Object[] objArr2) {
+        if ((i3 & 4) != 0) {
+            i = 0;
+        }
+        m48276(0, i, i2, objArr, objArr2);
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C21168 f68945 = new C21168();
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3096() {
-        return 1;
+    public static void m48276(int i, int i2, int i3, Object[] objArr, Object[] objArr2) {
+        C15243.m36590(objArr, "<this>");
+        C15243.m36590(objArr2, "destination");
+        System.arraycopy(objArr, i2, objArr2, i, i3 - i2);
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo3097(AbstractC10794 abstractC10794) {
-        return AbstractC14322.m34560(abstractC10794);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m48277(int i, int i2, int[] iArr, int[] iArr2, int i3) {
+        C15243.m36590(iArr, "<this>");
+        C15243.m36590(iArr2, "destination");
+        System.arraycopy(iArr, i2, iArr2, i, i3 - i2);
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo3100(AbstractC10794 abstractC10794) {
-        return AbstractC14322.m34571(abstractC10794);
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo3101(AbstractC16438 abstractC16438) {
-        if (!(abstractC16438 instanceof C9175) || abstractC16438.m38695().size() != 0) {
-            return false;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static Object[] m48278(int i, int i2, Object[] objArr) {
+        C15243.m36590(objArr, "<this>");
+        int length = objArr.length;
+        if (i2 > length) {
+            throw new IndexOutOfBoundsException(C0703.m3016("toIndex (", i2, ") is greater than size (", ").", length));
         }
-        C9175 c9175 = (C9175) abstractC16438;
-        if (c9175.m23587()) {
-            return mo10389(c9175);
+        Object[] objArrCopyOfRange = Arrays.copyOfRange(objArr, i, i2);
+        C15243.m36591(objArrCopyOfRange, "copyOfRange(...)");
+        return objArrCopyOfRange;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static List m48275(Object[] objArr) {
+        int length = objArr.length;
+        if (length == 0) {
+            return C22242.f71645;
         }
-        return true;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo10389(C9175 c9175) {
-        int iM23589 = c9175.m23589();
-        return iM23589 != 0 && ((byte) iM23589) == iM23589;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3099(C2718 c2718, AbstractC10794 abstractC10794) {
-        c2718.m8297(AbstractC14322.m34565(abstractC10794, ((C9175) abstractC10794).m23589() & 255));
+        if (length == 1) {
+            return C7743.m21087(objArr[0]);
+        }
+        Object[] objArrCopyOf = Arrays.copyOf(objArr, objArr.length);
+        C15243.m36591(objArrCopyOf, "copyOf(...)");
+        List listAsList = Arrays.asList(objArrCopyOf);
+        C15243.m36591(listAsList, "asList(...)");
+        return listAsList;
     }
 }

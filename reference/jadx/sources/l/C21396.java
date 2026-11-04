@@ -1,40 +1,26 @@
 package l;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import android.media.AudioAttributes;
+import android.os.Build;
 
-/* JADX INFO: renamed from: l.᩸ۛܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5ZF */
+/* JADX INFO: renamed from: l.᩶ܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L8MG */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21396 extends AbstractC0477 {
+public final class C21396 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f69571 = 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AudioAttributes f68157;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Iterator[] f69572;
-
-    public C21396(Iterator[] itArr) {
-        this.f69572 = itArr;
-    }
-
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return this.f69571 < this.f69572.length;
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
+    public C21396(C18412 c18412) {
+        AudioAttributes.Builder usage = new AudioAttributes.Builder().setContentType(0).setFlags(0).setUsage(1);
+        int i = Build.VERSION.SDK_INT;
+        if (i >= 29) {
+            C4242.m13546(usage);
         }
-        int i = this.f69571;
-        Iterator[] itArr = this.f69572;
-        Iterator it = itArr[i];
-        C13638.requireNonNull(it);
-        int i2 = this.f69571;
-        itArr[i2] = null;
-        this.f69571 = i2 + 1;
-        return it;
+        if (i >= 32) {
+            C14682.m35305(usage);
+            C14682.m35304(usage);
+        }
+        this.f68157 = usage.build();
     }
 }

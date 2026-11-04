@@ -1,31 +1,30 @@
 package l;
 
-import android.os.Build;
-import java.util.concurrent.TimeUnit;
+/* JADX INFO: renamed from: l.֨᩸ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 94XD */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1459 extends AbstractC19270 implements InterfaceC2447 {
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
+    }
 
-/* JADX INFO: renamed from: l.֨᩻᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9975 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1459 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m5044(Process process, long j) throws InterruptedException {
-        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
-        if (Build.VERSION.SDK_INT >= 26) {
-            return process.waitFor(j, timeUnit);
-        }
-        long jNanoTime = System.nanoTime();
-        long nanos = timeUnit.toNanos(j);
-        do {
-            try {
-                process.exitValue();
-                return true;
-            } catch (IllegalThreadStateException unused) {
-                if (nanos > 0) {
-                    Thread.sleep(Math.min(TimeUnit.NANOSECONDS.toMillis(nanos) + 1, 100L));
-                }
-                nanos = timeUnit.toNanos(j) - (System.nanoTime() - jNanoTime);
-            }
-        } while (nanos > 0);
-        return false;
+    @Override // l.InterfaceC12142
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1542() {
+        return this.f62313.m55818().mo8717(this.f62315 + 1) & 15;
+    }
+
+    @Override // l.InterfaceC3193
+    /* JADX INFO: renamed from: ᩻ */
+    public final int mo1546() {
+        return (this.f62313.m55818().mo8717(this.f62315 + 1) << 24) >> 28;
+    }
+
+    @Override // l.InterfaceC18855
+    /* JADX INFO: renamed from: ܰ */
+    public final long mo1545() {
+        return mo1546();
     }
 }

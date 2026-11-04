@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-import l.C1455;
+import l.C12312;
 
 /* JADX INFO: loaded from: classes2.dex */
 public interface WebViewBuilderBoundaryInterface {
@@ -33,28 +33,28 @@ public interface WebViewBuilderBoundaryInterface {
         public int baseline = 0;
 
         /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-        public ArrayList f77897 = new ArrayList();
+        public ArrayList f82013 = new ArrayList();
 
-        /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-        public ArrayList f77896 = new ArrayList();
+        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+        public ArrayList f82011 = new ArrayList();
 
-        /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-        public ArrayList f77895 = new ArrayList();
+        /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+        public ArrayList f82012 = new ArrayList();
 
         public /* synthetic */ Consumer andThen(Consumer consumer) {
-            return C1455.$default$andThen(this, consumer);
+            return C12312.$default$andThen(this, consumer);
         }
 
         public void addJavascriptInterface(Object obj, String str, List list) {
-            this.f77897.add(obj);
-            this.f77896.add(str);
-            this.f77895.add(list);
+            this.f82013.add(obj);
+            this.f82011.add(str);
+            this.f82012.add(list);
         }
 
         @Override // java.util.function.Consumer
         public void accept(BiConsumer biConsumer) {
             biConsumer.accept(0, Integer.valueOf(this.baseline));
-            biConsumer.accept(1, new Object[]{this.f77897, this.f77896, this.f77895});
+            biConsumer.accept(1, new Object[]{this.f82013, this.f82011, this.f82012});
         }
     }
 }

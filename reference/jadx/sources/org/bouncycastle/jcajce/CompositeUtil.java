@@ -2,12 +2,12 @@ package org.bouncycastle.jcajce;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C16523;
+import l.C14442;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.internal.asn1.iana.IANAObjectIdentifiers;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CompositeUtil {
     public static final Map algorithmOids;
 
@@ -39,6 +39,6 @@ public class CompositeUtil {
         if (aSN1ObjectIdentifier != null) {
             return aSN1ObjectIdentifier;
         }
-        throw new IllegalArgumentException(C16523.m38890("name ", str, " not recognized"));
+        throw new IllegalArgumentException(C14442.m34865("name ", str, " not recognized"));
     }
 }

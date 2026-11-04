@@ -10,37 +10,37 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes.dex */
 public class S3XmlResponseHandler extends AbstractS3ResponseHandler {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final Log f506 = LogFactory.m303("com.amazonaws.request");
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final Log f496 = LogFactory.m297("com.amazonaws.request");
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public Unmarshaller f507;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Map f497;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public Map f508;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public Unmarshaller f498;
 
     public S3XmlResponseHandler(Unmarshaller unmarshaller) {
-        this.f507 = unmarshaller;
+        this.f498 = unmarshaller;
     }
 
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public AmazonWebServiceResponse mo276(HttpResponse httpResponse) {
-        AmazonWebServiceResponse amazonWebServiceResponseM457 = AbstractS3ResponseHandler.m457(httpResponse);
-        this.f508 = httpResponse.m270();
-        Unmarshaller unmarshaller = this.f507;
+    public AmazonWebServiceResponse mo270(HttpResponse httpResponse) {
+        AmazonWebServiceResponse amazonWebServiceResponseM451 = AbstractS3ResponseHandler.m451(httpResponse);
+        this.f497 = httpResponse.m263();
+        Unmarshaller unmarshaller = this.f498;
         if (unmarshaller != null) {
-            Log log = f506;
-            log.mo295("Beginning to parse service response XML");
-            Object objMo706 = unmarshaller.mo706(httpResponse.m267());
-            log.mo295("Done parsing service response XML");
-            amazonWebServiceResponseM457.m165(objMo706);
+            Log log = f496;
+            log.mo290("Beginning to parse service response XML");
+            Object objMo700 = unmarshaller.mo700(httpResponse.m260());
+            log.mo290("Done parsing service response XML");
+            amazonWebServiceResponseM451.m159(objMo700);
         }
-        return amazonWebServiceResponseM457;
+        return amazonWebServiceResponseM451;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Map m479() {
-        return this.f508;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Map m473() {
+        return this.f497;
     }
 }

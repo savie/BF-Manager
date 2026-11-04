@@ -1,48 +1,145 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖܽ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: E50W */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2659 extends AbstractC11833 {
+import android.content.Context;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import java.lang.ref.WeakReference;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C18888 f10326;
+/* JADX INFO: renamed from: l.ۖ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: U5VL */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2659 extends AbstractC10116 implements InterfaceC7662 {
 
-    public C2659(C12063 c12063, C13825 c13825, byte b) {
-        this.f10326 = (C18888) c12063.f40352.m44688((int) C12076.m30047(c13825.m33646(b + 1)));
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public Context f8468;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public C9898 f8469;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C0094 f8470;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public boolean f8471;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public InterfaceC19067 f8472;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public WeakReference f8473;
+
+    public C2659(Context context, C0094 c0094, InterfaceC19067 interfaceC19067) {
+        this.f8468 = context;
+        this.f8470 = c0094;
+        this.f8472 = interfaceC19067;
+        C9898 defaultShowAsAction = new C9898(c0094.getContext()).setDefaultShowAsAction(1);
+        this.f8469 = defaultShowAsAction;
+        defaultShowAsAction.setCallback(this);
     }
 
-    public C2659(C18888 c18888) {
-        this.f10326 = c18888;
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo8811(CharSequence charSequence) {
+        this.f8470.m1192(charSequence);
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4463(C4651 c4651) {
-        byte[] bArrM30048 = C12076.m30048(this.f10326.m23325());
-        c4651.m12841(EnumC18182.VALUE_ENUM.f58128 | ((bArrM30048.length - 1) << 5));
-        c4651.m12837(bArrM30048, 0, bArrM30048.length);
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8803(CharSequence charSequence) {
+        this.f8470.m1185(charSequence);
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo4462(int i) {
-        return C12076.m30051(this.f10326.m23325()) + i + 1;
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo8810(int i) {
+        mo8811(this.f8468.getString(i));
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo4464(AbstractC11833 abstractC11833) {
-        return this.f10326.m23325() - ((C2659) abstractC11833).f10326.m23325();
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8801(int i) {
+        mo8803((CharSequence) this.f8468.getString(i));
     }
 
-    @Override // l.AbstractC11833
-    /* JADX INFO: renamed from: ᩸ */
-    public final EnumC18182 mo4465() {
-        return EnumC18182.VALUE_ENUM;
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8804(boolean z) {
+        super.mo8804(z);
+        this.f8470.m1187(z);
     }
 
-    public final int hashCode() {
-        return this.f10326.hashCode();
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final boolean mo8806() {
+        return this.f8470.m1193();
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8802(View view) {
+        this.f8470.m1184(view);
+        this.f8473 = view != null ? new WeakReference(view) : null;
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void mo8799() {
+        this.f8472.mo23250(this, this.f8469);
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo8800() {
+        if (this.f8471) {
+            return;
+        }
+        this.f8471 = true;
+        this.f8472.mo23249(this);
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C9898 mo8805() {
+        return this.f8469;
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final CharSequence mo8807() {
+        return this.f8470.m1188();
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final CharSequence mo8808() {
+        return this.f8470.m1191();
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final View mo8809() {
+        WeakReference weakReference = this.f8473;
+        if (weakReference != null) {
+            return (View) weakReference.get();
+        }
+        return null;
+    }
+
+    @Override // l.AbstractC10116
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final MenuInflater mo8812() {
+        return new C21833(this.f8470.getContext());
+    }
+
+    @Override // l.InterfaceC7662
+    public final boolean onMenuItemSelected(C9898 c9898, MenuItem menuItem) {
+        return this.f8472.mo23251(this, menuItem);
+    }
+
+    @Override // l.InterfaceC7662
+    public final void onMenuModeChange(C9898 c9898) {
+        mo8799();
+        this.f8470.m1189();
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.jce.spec;
 
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECPublicKeySpec extends ECKeySpec {
     public ECPoint q;
 

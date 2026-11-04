@@ -1,13 +1,34 @@
 .class public final Ll/۠ܰ᩺;
-.super Ll/᩺᩹᩵;
-.source "T6QI"
+.super Ljava/lang/Object;
+.source "R450"
+
+# interfaces
+.implements Ll/ۧ᩶᩺;
 
 
 # virtual methods
-.method public final ܰ()I
-    .locals 1
+.method public final ۙ(Ll/ܶ᩶᩺;Ll/ۧܿ᩺;)V
+    .locals 0
 
-    const/16 v0, 0x98
+    const-string p1, "The scope is sealed."
 
-    return v0
+    .line 768
+    invoke-static {p1}, Ll/ۧ᩻ܺ;->ۙ(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final ᩷(Ll/ܶ᩶᩺;Ll/ۧܿ᩺;)V
+    .locals 0
+
+    const-string p1, "The scope is sealed."
+
+    .line 773
+    invoke-static {p1}, Ll/ۧ᩻ܺ;->ۙ(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method

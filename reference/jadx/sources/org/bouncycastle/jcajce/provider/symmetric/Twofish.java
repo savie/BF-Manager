@@ -1,10 +1,9 @@
 package org.bouncycastle.jcajce.provider.symmetric;
 
-import l.C0280;
-import l.C15489;
-import l.C22697;
-import l.C5800;
-import l.C9023;
+import l.C12669;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.engines.TwofishEngine;
@@ -20,10 +19,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BlockCipherProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters;
 import org.bouncycastle.jcajce.provider.symmetric.util.PBESecretKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Twofish {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends IvAlgorithmParameters {
         @Override // org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters, java.security.AlgorithmParametersSpi
         public String engineToString() {
@@ -31,7 +29,6 @@ public final class Twofish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new BlockCipherProvider() { // from class: org.bouncycastle.jcajce.provider.symmetric.Twofish.ECB.1
@@ -43,7 +40,6 @@ public final class Twofish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GMAC extends BaseMac {
         public GMAC() {
             super(new GMac(GCMBlockCipher.newInstance(new TwofishEngine())));
@@ -56,7 +52,6 @@ public final class Twofish {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends SymmetricAlgorithmProvider {
         public static final String PREFIX = Twofish.class.getName();
 
@@ -64,27 +59,24 @@ public final class Twofish {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$AlgParams", "AlgorithmParameters.Twofish", C9023.m23357(str, "$KeyGen", "KeyGenerator.Twofish", C9023.m23357(str, "$ECB", "Cipher.Twofish", sb, configurableProvider), configurableProvider), configurableProvider);
-            addGMacAlgorithm(configurableProvider, "Twofish", C22697.m50267(C9023.m23357(str, "$PBEWithSHAKeyFactory", "SecretKeyFactory.PBEWITHSHAANDTWOFISH-CBC", C9023.m23357(str, "$PBEWithSHA", "Cipher.PBEWITHSHAANDTWOFISH-CBC", C0280.m1793("Alg.Alias.AlgorithmParameters.PBEWITHSHAANDTWOFISH", "PKCS12PBE", "Alg.Alias.AlgorithmParameters.PBEWITHSHAANDTWOFISH-CBC", "PKCS12PBE", configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C15489.m37076(str, "$KeyGen"));
-            addPoly1305Algorithm(configurableProvider, "Twofish", C15489.m37076(str, "$Poly1305"), C15489.m37076(str, "$Poly1305KeyGen"));
+            C8947.m23913(str, "$AlgParams", "AlgorithmParameters.Twofish", C18063.m42089(str, "$KeyGen", "KeyGenerator.Twofish", C18063.m42089(str, "$ECB", "Cipher.Twofish", sb, configurableProvider), configurableProvider), configurableProvider);
+            addGMacAlgorithm(configurableProvider, "Twofish", C8947.m23910(C18063.m42089(str, "$PBEWithSHAKeyFactory", "SecretKeyFactory.PBEWITHSHAANDTWOFISH-CBC", C18063.m42089(str, "$PBEWithSHA", "Cipher.PBEWITHSHAANDTWOFISH-CBC", C12669.m31439("Alg.Alias.AlgorithmParameters.PBEWITHSHAANDTWOFISH", "PKCS12PBE", "Alg.Alias.AlgorithmParameters.PBEWITHSHAANDTWOFISH-CBC", "PKCS12PBE", configurableProvider), configurableProvider), configurableProvider), str, "$GMAC"), C14483.m34972(str, "$KeyGen"));
+            addPoly1305Algorithm(configurableProvider, "Twofish", C14483.m34972(str, "$Poly1305"), C14483.m34972(str, "$Poly1305KeyGen"));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHA extends BaseBlockCipher {
         public PBEWithSHA() {
             super(new CBCBlockCipher(new TwofishEngine()), 2, 1, 256, 16);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBEWithSHAKeyFactory extends PBESecretKeyFactory {
         public PBEWithSHAKeyFactory() {
             super("PBEwithSHAandTwofish-CBC", null, true, 2, 1, 256, 128);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Poly1305 extends BaseMac {
         public Poly1305() {
             super(new org.bouncycastle.crypto.macs.Poly1305(new TwofishEngine()));

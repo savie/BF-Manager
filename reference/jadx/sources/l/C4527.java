@@ -1,29 +1,61 @@
 package l;
 
-import java.util.function.Consumer;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ۙ۠ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1MW */
+/* JADX INFO: renamed from: l.ۙ֡ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UIX4 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4527 extends AbstractC22167 implements InterfaceC6269, InterfaceC6206 {
+public final /* synthetic */ class C4527 implements Function {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6644 f16116;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f16119;
 
-    @Override // l.AbstractC22167
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6482(int i, Object obj) {
-        ((Consumer) obj).accept(this.f16116.f22442[i]);
+    public /* synthetic */ C4527(int i) {
+        this.f16119 = i;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C4527(C6644 c6644) {
-        super(c6644);
-        this.f16116 = c6644;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        return this.f16116.f22442[m49177()];
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f16119) {
+            case 0:
+                return new ArrayList();
+            case 1:
+                return new C15102((C20348) obj);
+            case 2:
+                return ((InterfaceC2386) obj).getPath();
+            case 3:
+                ApplicationInfo applicationInfo = ((PackageInfo) obj).applicationInfo;
+                if (applicationInfo == null) {
+                    return null;
+                }
+                return applicationInfo.sourceDir;
+            case 4:
+                return ((DynamicScheme) obj).tertiaryPalette;
+            case 5:
+                return MaterialDynamicColors.lambda$primaryPaletteKeyColor$1((DynamicScheme) obj);
+            case 6:
+                return new ArrayList();
+            case 7:
+                return ((EnumC16110) obj).m38277();
+            default:
+                return new LinkedHashMap();
+        }
     }
 }

@@ -1,242 +1,199 @@
 package l;
 
-import android.text.TextUtils;
-import bin.mt.plus.R;
-import com.google.android.material.timepicker.RadialViewGroup;
-
-/* JADX INFO: renamed from: l.ᩴۨ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: M7BP */
+/* JADX INFO: renamed from: l.ᩳ֨۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: C9PC */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18727 extends C16608 {
+public final class C18727 extends AbstractC15001 implements InterfaceC9031 {
+    public int bitField0_;
+    public long numBlocks_;
+    public long startBlock_;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public boolean f60736;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final C7340 f60737;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final Object f60738;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public boolean f60739;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public long f60740;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public boolean f60741;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public boolean f60742;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final String f60743;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final boolean f60744;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public int f60745;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public String f60746;
-
-    /* JADX WARN: Code duplicated, block: B:7:0x001d  */
-    public C18727(String str, C7340 c7340, boolean z) {
-        boolean z2;
-        super(false);
-        this.f60738 = new Object();
-        if (C20370.m46024()) {
-            z2 = C16737.f53615.getBoolean("def_mov_recycle_bin", true);
-        }
-        this.f60736 = z2;
-        this.f60745 = 0;
-        this.f60740 = 1L;
-        this.f60746 = "";
-        this.f60743 = str;
-        this.f60737 = c7340;
-        this.f60744 = z;
+    public /* synthetic */ C18727(int i) {
+        this();
     }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static int m43263(String str) {
-        if ("replace".equals(str)) {
-            return 0;
-        }
-        if (RadialViewGroup.SKIP_TAG.equals(str)) {
-            return 1;
-        }
-        return "keep_both".equals(str) ? 2 : -1;
+    public /* synthetic */ C18727(InterfaceC7937 interfaceC7937, int i) {
+        this(interfaceC7937);
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ۚۙ */
-    public final void mo11427() {
-        synchronized (this.f60738) {
-        }
+    @Override // l.AbstractC15001, l.InterfaceC9824
+    public final boolean isInitialized() {
+        return true;
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ۠ */
-    public final boolean mo11428() {
-        boolean z;
-        synchronized (this.f60738) {
-            z = !this.f60739;
-        }
-        return z;
+    public static final C24478 getDescriptor() {
+        return C18221.internal_static_bin_mt_manager_visitor_payload_Extent_descriptor;
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo11425(boolean z) {
-        return (z || this.f60744 || !mo11428()) ? false : true;
+    @Override // l.AbstractC15001
+    public C7544 internalGetFieldAccessorTable() {
+        C7544 c7544 = C18221.internal_static_bin_mt_manager_visitor_payload_Extent_fieldAccessorTable;
+        c7544.m20621(C9776.class, C18727.class);
+        return c7544;
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ᩷ */
-    public final boolean mo11432() {
-        boolean z;
-        synchronized (this.f60738) {
-            z = this.f60745 == 0 && this.f60736;
-        }
-        return z;
+    public C18727() {
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11424(String str, C20321 c20321, C20321 c20322, boolean z) {
-        synchronized (this.f60738) {
-            if (this.f60741) {
-                return;
-            }
-            if (this.f60744) {
-                throw new RuntimeException(C16737.m39288(R.string.MT_Protector));
-            }
-            if (this.f60739) {
-                return;
-            }
-            StringBuilder sb = new StringBuilder();
-            sb.append(this.f60743);
-            sb.append("-c");
-            long j = this.f60740;
-            this.f60740 = 1 + j;
-            sb.append(j);
-            String string = sb.toString();
-            this.f60746 = string;
-            this.f60742 = true;
-            if (!this.f60737.m19617(this.f60743, string, str, c20321, c20322, this, z)) {
-                m43267(string);
-                return;
-            }
-            synchronized (this.f60738) {
-                while (this.f60742 && !this.f60741 && TextUtils.equals(string, this.f60746)) {
-                    try {
-                        this.f60738.wait();
-                    } catch (InterruptedException unused) {
-                        Thread.currentThread().interrupt();
-                        this.f60741 = true;
-                        this.f60742 = false;
-                        this.f60746 = "";
-                    }
-                }
-            }
-        }
+    public C18727(InterfaceC7937 interfaceC7937) {
+        super(interfaceC7937);
     }
 
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo11423(String str, C20321 c20321, C20321 c20322, boolean z, boolean z2) {
-        if (z2) {
-            return 1;
-        }
-        if (mo11428()) {
-            mo11424(str, c20321, c20322, z);
-        }
-        return mo11431();
+    @Override // l.AbstractC15001, l.AbstractC0479
+    /* JADX INFO: renamed from: clear */
+    public C18727 mo2313clear() {
+        super.mo2313clear();
+        this.bitField0_ = 0;
+        this.startBlock_ = 0L;
+        this.numBlocks_ = 0L;
+        return this;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m43266() {
-        String str;
-        synchronized (this.f60738) {
-            int i = this.f60745;
-            if (i == 1) {
-                str = RadialViewGroup.SKIP_TAG;
-            } else {
-                str = i == 2 ? "keep_both" : "replace";
-            }
-        }
-        return str;
+    @Override // l.AbstractC15001, l.InterfaceC14299, l.InterfaceC9078
+    public C24478 getDescriptorForType() {
+        return C18221.internal_static_bin_mt_manager_visitor_payload_Extent_descriptor;
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean m43264(String str) {
-        boolean z;
-        synchronized (this.f60738) {
-            z = this.f60742 && TextUtils.equals(this.f60746, str);
-        }
-        return z;
+    @Override // l.AbstractC0479, l.InterfaceC9824
+    public C9776 getDefaultInstanceForType() {
+        return C9776.getDefaultInstance();
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m43265(String str, String str2, boolean z, boolean z2) {
-        int iM43263 = m43263(str2);
-        if (iM43263 == -1) {
-            return false;
+    @Override // l.AbstractC0479, l.InterfaceC7588
+    public C9776 build() {
+        C9776 c9776BuildPartial = buildPartial();
+        if (c9776BuildPartial.isInitialized()) {
+            return c9776BuildPartial;
         }
-        synchronized (this.f60738) {
-            if (this.f60742 && TextUtils.equals(this.f60746, str)) {
-                this.f60745 = iM43263;
-                this.f60739 = z;
-                this.f60736 = iM43263 == 0 && z2;
-                this.f60742 = false;
-                this.f60746 = "";
-                this.f60738.notifyAll();
-                return true;
-            }
-            return false;
-        }
+        throw AbstractC0479.m2311((InterfaceC21013) c9776BuildPartial);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m43267(String str) {
-        synchronized (this.f60738) {
-            if (TextUtils.isEmpty(str) || TextUtils.equals(this.f60746, str)) {
-                this.f60741 = true;
-                this.f60742 = false;
-                this.f60746 = "";
-                this.f60738.notifyAll();
-            }
+    @Override // l.AbstractC0479, l.InterfaceC7588
+    public C9776 buildPartial() {
+        C9776 c9776 = new C9776(this);
+        if (this.bitField0_ != 0) {
+            buildPartial0(c9776);
         }
+        onBuilt();
+        return c9776;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean m43268() {
-        boolean z;
-        synchronized (this.f60738) {
-            z = this.f60736;
-        }
-        return z;
-    }
-
-    @Override // l.C16608, l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        boolean z;
-        synchronized (this.f60738) {
-            z = this.f60741;
-        }
-        return z;
-    }
-
-    @Override // l.C16608, l.InterfaceC16088
-    /* JADX INFO: renamed from: ܿ */
-    public final int mo11431() {
+    private void buildPartial0(C9776 c9776) {
         int i;
-        synchronized (this.f60738) {
-            i = this.f60745;
+        int i2 = this.bitField0_;
+        if ((i2 & 1) != 0) {
+            c9776.startBlock_ = this.startBlock_;
+            i = 1;
+        } else {
+            i = 0;
         }
-        return i;
+        if ((i2 & 2) != 0) {
+            c9776.numBlocks_ = this.numBlocks_;
+            i |= 2;
+        }
+        c9776.bitField0_ |= i;
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC14299
+    public C18727 mergeFrom(InterfaceC21013 interfaceC21013) {
+        if (interfaceC21013 instanceof C9776) {
+            return mergeFrom((C9776) interfaceC21013);
+        }
+        super.mergeFrom(interfaceC21013);
+        return this;
+    }
+
+    public C18727 mergeFrom(C9776 c9776) {
+        if (c9776 == C9776.getDefaultInstance()) {
+            return this;
+        }
+        if (c9776.hasStartBlock()) {
+            setStartBlock(c9776.getStartBlock());
+        }
+        if (c9776.hasNumBlocks()) {
+            setNumBlocks(c9776.getNumBlocks());
+        }
+        mo2317mergeUnknownFields(c9776.getUnknownFields());
+        onChanged();
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.AbstractC1225, l.InterfaceC7588
+    public C18727 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        c24215.getClass();
+        boolean z = false;
+        while (!z) {
+            try {
+                try {
+                    int iMo11876 = abstractC3660.mo11876();
+                    if (iMo11876 != 0) {
+                        if (iMo11876 == 8) {
+                            this.startBlock_ = abstractC3660.mo11896();
+                            this.bitField0_ |= 1;
+                        } else if (iMo11876 == 16) {
+                            this.numBlocks_ = abstractC3660.mo11896();
+                            this.bitField0_ |= 2;
+                        } else if (!super.parseUnknownField(abstractC3660, c24215, iMo11876)) {
+                        }
+                    }
+                    z = true;
+                } catch (C20463 e) {
+                    throw e.m46971();
+                }
+            } catch (Throwable th) {
+                onChanged();
+                throw th;
+            }
+        }
+        onChanged();
+        return this;
+    }
+
+    @Override // l.InterfaceC9031
+    public boolean hasStartBlock() {
+        return (this.bitField0_ & 1) != 0;
+    }
+
+    @Override // l.InterfaceC9031
+    public long getStartBlock() {
+        return this.startBlock_;
+    }
+
+    public C18727 setStartBlock(long j) {
+        this.startBlock_ = j;
+        this.bitField0_ |= 1;
+        onChanged();
+        return this;
+    }
+
+    public C18727 clearStartBlock() {
+        this.bitField0_ &= -2;
+        this.startBlock_ = 0L;
+        onChanged();
+        return this;
+    }
+
+    @Override // l.InterfaceC9031
+    public boolean hasNumBlocks() {
+        return (this.bitField0_ & 2) != 0;
+    }
+
+    @Override // l.InterfaceC9031
+    public long getNumBlocks() {
+        return this.numBlocks_;
+    }
+
+    public C18727 setNumBlocks(long j) {
+        this.numBlocks_ = j;
+        this.bitField0_ |= 2;
+        onChanged();
+        return this;
+    }
+
+    public C18727 clearNumBlocks() {
+        this.bitField0_ &= -3;
+        this.numBlocks_ = 0L;
+        onChanged();
+        return this;
     }
 }

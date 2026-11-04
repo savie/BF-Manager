@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final ֡:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
+.field public final ܿ:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     .line 1681
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketAccelerateConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketAccelerateConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 1
 
     const-string v0, "AccelerateConfiguration"
@@ -60,9 +60,9 @@
     if-eqz p1, :cond_0
 
     .line 1701
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketAccelerateConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketAccelerateConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketAccelerateConfiguration;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

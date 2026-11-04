@@ -1,13 +1,6 @@
-.class public final Ll/ۚ֨᩵;
-.super Ll/֫᩹᩵;
-.source "KAR6"
+.class public interface abstract Ll/ۚ֨᩵;
+.super Ljava/lang/Object;
+.source "Z531"
 
-
-# virtual methods
-.method public final ܰ()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
+# interfaces
+.implements Ll/ᩳ֡᩵;

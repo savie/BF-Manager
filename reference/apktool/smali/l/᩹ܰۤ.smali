@@ -1,33 +1,23 @@
 .class public final synthetic Ll/᩹ܰۤ;
 .super Ljava/lang/Object;
-.source "FBFP"
+.source "D77D"
 
 # interfaces
-.implements Ljava/util/function/IntFunction;
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public final apply(I)Ljava/lang/Object;
-    .locals 2
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-    .line 699
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 0
+    check-cast p1, Ll/ᩳۘۤ;
 
-    move-result-object p1
+    check-cast p2, Ll/ᩳۘۤ;
 
-    const/4 v0, 0x1
+    invoke-static {p1, p2}, Ll/ܿܰۤ;->᩷(Ll/ᩳۘۤ;Ll/ᩳۘۤ;)I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    move-result p1
 
-    const/4 v1, 0x0
-
-    aput-object p1, v0, v1
-
-    const-string p1, "#%d"
-
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

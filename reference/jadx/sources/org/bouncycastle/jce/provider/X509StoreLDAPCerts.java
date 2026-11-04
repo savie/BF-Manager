@@ -12,7 +12,7 @@ import org.bouncycastle.x509.X509StoreParameters;
 import org.bouncycastle.x509.X509StoreSpi;
 import org.bouncycastle.x509.util.LDAPStoreHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509StoreLDAPCerts extends X509StoreSpi {
     public LDAPStoreHelper helper;
 

@@ -1,33 +1,33 @@
 package com.amazonaws.services.s3.model;
 
 import java.io.Serializable;
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Owner implements Serializable {
     public static final long serialVersionUID = -8916731456944569115L;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f637;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public String f627;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public String f638;
+    public String f628;
 
     public final String toString() {
         StringBuilder sb = new StringBuilder("S3Owner [name=");
-        sb.append(this.f637);
+        sb.append(this.f627);
         sb.append(",id=");
-        return C22697.m50267(sb, this.f638, "]");
+        return C8947.m23910(sb, this.f628, "]");
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m642(String str) {
-        this.f638 = str;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m636(String str) {
+        this.f628 = str;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m641(String str) {
-        this.f637 = str;
+    public final void m635(String str) {
+        this.f627 = str;
     }
 
     public final boolean equals(Object obj) {
@@ -35,10 +35,10 @@ public class Owner implements Serializable {
             return false;
         }
         Owner owner = (Owner) obj;
-        String str = owner.f638;
-        String str2 = owner.f637;
-        String str3 = this.f638;
-        String str4 = this.f637;
+        String str = owner.f628;
+        String str2 = owner.f627;
+        String str3 = this.f628;
+        String str4 = this.f627;
         if (str == null) {
             str = "";
         }
@@ -55,7 +55,7 @@ public class Owner implements Serializable {
     }
 
     public final int hashCode() {
-        String str = this.f638;
+        String str = this.f628;
         if (str != null) {
             return str.hashCode();
         }

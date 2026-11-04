@@ -1,190 +1,43 @@
 package l;
 
-import java.io.Writer;
+import android.view.ViewGroup;
 
-/* JADX INFO: renamed from: l.ܽ۠ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 64JW */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16516 extends Writer {
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final String f53050 = System.getProperty("line.separator");
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f53052;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final StringBuilder f53053;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final char[] f53054 = new char[16];
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public int f53051 = 0;
-
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-    }
-
-    @Override // java.io.Writer, java.io.Flushable
-    public final void flush() {
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final /* bridge */ /* synthetic */ Appendable append(CharSequence charSequence) {
-        append(charSequence);
-        return this;
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final /* bridge */ /* synthetic */ Appendable append(CharSequence charSequence, int i, int i2) {
-        append(charSequence, i, i2);
-        return this;
-    }
-
-    public C16516(StringBuilder sb) {
-        this.f53053 = sb;
-    }
-
-    @Override // java.io.Writer
-    public final void write(int i) {
-        StringBuilder sb = this.f53053;
-        if (i == 10) {
-            sb.append(f53050);
-            this.f53052 = true;
-            return;
-        }
-        if (this.f53052) {
-            for (int i2 = 0; i2 < this.f53051; i2++) {
-                sb.append(' ');
-            }
-        }
-        this.f53052 = false;
-        sb.append((char) i);
-    }
-
-    @Override // java.io.Writer
-    public final void write(char[] cArr) {
-        for (char c : cArr) {
-            write(c);
-        }
-    }
-
-    @Override // java.io.Writer
-    public final void write(char[] cArr, int i, int i2) {
-        int i3 = i2 + i;
-        while (i < i3) {
-            write(cArr[i]);
-            i++;
-        }
-    }
-
-    @Override // java.io.Writer
-    public final void write(String str) {
-        int length = str.length();
-        for (int i = 0; i < length; i++) {
-            write(str.charAt(i));
-        }
-    }
-
-    @Override // java.io.Writer
-    public final void write(String str, int i, int i2) {
-        int i3 = i2 + i;
-        while (i < i3) {
-            write(str.charAt(i));
-            i++;
-        }
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final Writer append(CharSequence charSequence) {
-        write(charSequence.toString());
-        return this;
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final Writer append(CharSequence charSequence, int i, int i2) {
-        write(charSequence.subSequence(i, i2).toString());
-        return this;
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final Writer append(char c) {
-        write(c);
-        return this;
-    }
-
-    @Override // java.io.Writer, java.lang.Appendable
-    public final Appendable append(char c) {
-        write(c);
-        return this;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void m38836() {
-        int i = this.f53051 + 4;
-        this.f53051 = i;
-        if (i < 0) {
-            this.f53051 = 0;
-        }
-    }
+/* JADX INFO: renamed from: l.ܺ֫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A7IB */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16516 extends AbstractC12964 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38835() {
-        int i = this.f53051 - 4;
-        this.f53051 = i;
-        if (i < 0) {
-            this.f53051 = 0;
-        }
+    public final /* synthetic */ ActivityC3838 f53484;
+
+    public C16516(ActivityC3838 activityC3838) {
+        this.f53484 = activityC3838;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m38838(long j) {
-        char[] cArr;
-        int i;
-        int i2 = 0;
-        do {
-            int i3 = (int) (15 & j);
-            cArr = this.f53054;
-            if (i3 < 10) {
-                i = i2 + 1;
-                cArr[i2] = (char) (i3 + 48);
-            } else {
-                i = i2 + 1;
-                cArr[i2] = (char) (i3 + 87);
-            }
-            i2 = i;
-            j >>>= 4;
-        } while (j != 0);
-        while (i2 > 0) {
-            i2--;
-            write(cArr[i2]);
-        }
+    @Override // l.AbstractC12964
+    public final void onBindViewHolder(AbstractC11800 abstractC11800, int i) {
+        ((AbstractC23976) abstractC11800).mo17588((AbstractC23230) this.f53484.f13073.get(i));
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m38837(int i) {
-        int i2;
-        char[] cArr;
-        int i3 = 0;
-        boolean z = i < 0;
-        while (true) {
-            i2 = i3 + 1;
-            cArr = this.f53054;
-            cArr[i3] = (char) ((i % 10) + 48);
-            i /= 10;
-            if (i == 0) {
-                break;
-            } else {
-                i3 = i2;
-            }
+    @Override // l.AbstractC12964
+    public final int getItemCount() {
+        return this.f53484.f13073.size();
+    }
+
+    @Override // l.AbstractC12964
+    public final int getItemViewType(int i) {
+        return ((AbstractC23230) this.f53484.f13073.get(i)).mo10066();
+    }
+
+    @Override // l.AbstractC12964
+    public final AbstractC11800 onCreateViewHolder(ViewGroup viewGroup, int i) {
+        ActivityC3838 activityC3838 = this.f53484;
+        if (i == 1) {
+            return new C15770(activityC3838, viewGroup);
         }
-        if (z) {
-            write(45);
+        if (i == 2) {
+            return new ViewOnTouchListenerC6076(activityC3838, viewGroup);
         }
-        while (i2 > 0) {
-            i2--;
-            write(cArr[i2]);
-        }
+        throw new RuntimeException();
     }
 }

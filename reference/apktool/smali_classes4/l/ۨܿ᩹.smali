@@ -1,93 +1,351 @@
 .class public final Ll/ۨܿ᩹;
 .super Ljava/lang/Object;
-.source "Y5PI"
+.source "N1QM"
 
 # interfaces
-.implements Ll/᩹ܿ᩹;
+.implements Ll/ܶ۟᩹;
 
 
 # instance fields
-.field public ܺ:Z
+.field public final synthetic ֡:Ll/ܰܿ᩹;
 
-.field public final synthetic ᩶:Ll/ۖܿ᩹;
+.field public ܰ:Z
+
+.field public ܿ:I
+
+.field public ᩶:I
 
 
 # direct methods
-.method public constructor <init>(Ll/ۖܿ᩹;)V
+.method public constructor <init>(Ll/ܰܿ᩹;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 881
+    iget v1, p1, Ll/ܰܿ᩹;->᩶:I
+
+    invoke-direct {p0, p1, v0, v1, v0}, Ll/ۨܿ᩹;-><init>(Ll/ܰܿ᩹;IIZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ܰܿ᩹;IIZ)V
     .locals 0
 
-    .line 135
+    .line 884
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۨܿ᩹;->᩶:Ll/ۖܿ᩹;
+    iput-object p1, p0, Ll/ۨܿ᩹;->֡:Ll/ܰܿ᩹;
 
-    const/4 p1, 0x1
+    .line 886
+    iput p2, p0, Ll/ۨܿ᩹;->ܿ:I
 
-    .line 136
-    iput-boolean p1, p0, Ll/ۨܿ᩹;->ܺ:Z
+    .line 887
+    iput p3, p0, Ll/ۨܿ᩹;->᩶:I
+
+    .line 888
+    iput-boolean p4, p0, Ll/ۨܿ᩹;->ܰ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֨()Z
+.method public final characteristics()I
     .locals 1
 
-    .line 153
-    iget-object v0, p0, Ll/ۨܿ᩹;->᩶:Ll/ۖܿ᩹;
-
-    iget-object v0, v0, Ll/ۖܿ᩹;->᩹:Ll/֫ۧۚ;
-
-    invoke-virtual {v0}, Ll/֫ۧۚ;->֨()Z
-
-    move-result v0
+    const/16 v0, 0x4150
 
     return v0
 .end method
 
-.method public final ܰ(I)V
-    .locals 3
+.method public final estimateSize()J
+    .locals 2
 
-    const/4 v0, -0x1
+    .line 892
+    iget-boolean v0, p0, Ll/ۨܿ᩹;->ܰ:Z
 
-    .line 140
-    iget-object v1, p0, Ll/ۨܿ᩹;->᩶:Ll/ۖܿ᩹;
+    if-eqz v0, :cond_0
 
-    if-ne p1, v0, :cond_0
+    iget v0, p0, Ll/ۨܿ᩹;->᩶:I
 
-    .line 141
-    iget-object p1, v1, Ll/ۖܿ᩹;->᩹:Ll/֫ۧۚ;
+    goto :goto_0
 
-    const v0, 0x7f120b85
+    :cond_0
+    iget-object v0, p0, Ll/ۨܿ᩹;->֡:Ll/ܰܿ᩹;
 
-    invoke-virtual {p1, v0}, Ll/֫ۧۚ;->ۙ(I)V
+    iget v0, v0, Ll/ܰܿ᩹;->᩶:I
+
+    .line 902
+    :goto_0
+    iget v1, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    sub-int/2addr v0, v1
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 873
+    check-cast p1, Ljava/util/function/IntConsumer;
+
+    invoke-virtual {p0, p1}, Ll/ۨܿ᩹;->forEachRemaining(Ljava/util/function/IntConsumer;)V
 
     return-void
+.end method
 
-    .line 143
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ۟᩹;->ۙ(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
+    .locals 3
+
+    .line 914
+    iget-object v0, p0, Ll/ۨܿ᩹;->֡:Ll/ܰܿ᩹;
+
+    iget-object v1, v0, Ll/ܰܿ᩹;->ܰ:[I
+
+    .line 892
+    iget-boolean v2, p0, Ll/ۨܿ᩹;->ܰ:Z
+
+    if-eqz v2, :cond_0
+
+    iget v0, p0, Ll/ۨܿ᩹;->᩶:I
+
+    goto :goto_0
+
     :cond_0
-    iget-boolean v0, p0, Ll/ۨܿ᩹;->ܺ:Z
+    iget v0, v0, Ll/ܰܿ᩹;->᩶:I
 
-    if-eqz v0, :cond_1
+    .line 915
+    :goto_0
+    iget v2, p0, Ll/ۨܿ᩹;->ܿ:I
 
-    .line 144
-    iget-object v0, v1, Ll/ۖܿ᩹;->᩹:Ll/֫ۧۚ;
+    if-ge v2, v0, :cond_1
 
-    const v2, 0x7f1207a7
+    .line 916
+    aget v2, v1, v2
 
-    invoke-virtual {v0, v2}, Ll/֫ۧۚ;->ۙ(I)V
+    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    .line 915
+    iget v2, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final bridge synthetic getComparator()Ljava/util/Comparator;
+    .locals 1
+
+    .line 29
+    invoke-virtual {p0}, Ll/ۨܿ᩹;->getComparator()Ll/ۙ֡᩹;
 
     const/4 v0, 0x0
 
-    .line 145
-    iput-boolean v0, p0, Ll/ۨܿ᩹;->ܺ:Z
+    throw v0
+.end method
 
-    .line 147
+.method public final getComparator()Ll/ۙ֡᩹;
+    .locals 1
+
+    .line 158
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
+    .locals 2
+
+    .line 0
+    invoke-static {p0}, Ll/ܿۚۗ;->$default$getExactSizeIfKnown(Ll/۠ۚۗ;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public synthetic hasCharacteristics(I)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܿۚۗ;->$default$hasCharacteristics(Ll/۠ۚۗ;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 873
+    check-cast p1, Ljava/util/function/IntConsumer;
+
+    invoke-virtual {p0, p1}, Ll/ۨܿ᩹;->tryAdvance(Ljava/util/function/IntConsumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ܽ۟᩹;->᩷(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final tryAdvance(Ljava/util/function/IntConsumer;)Z
+    .locals 3
+
+    .line 907
+    iget v0, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    .line 892
+    iget-boolean v1, p0, Ll/ۨܿ᩹;->ܰ:Z
+
+    iget-object v2, p0, Ll/ۨܿ᩹;->֡:Ll/ܰܿ᩹;
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Ll/ۨܿ᩹;->᩶:I
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, v2, Ll/ܰܿ᩹;->᩶:I
+
+    :goto_0
+    if-lt v0, v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 908
     :cond_1
-    iget-object v0, v1, Ll/ۖܿ᩹;->᩹:Ll/֫ۧۚ;
+    iget-object v1, v2, Ll/ܰܿ᩹;->ܰ:[I
 
-    invoke-virtual {v0, p1}, Ll/֫ۧۚ;->ܰ(I)V
+    add-int/lit8 v2, v0, 0x1
 
-    return-void
+    iput v2, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    aget v0, v1, v0
+
+    invoke-interface {p1, v0}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۟ۚۗ;
+    .locals 1
+
+    .line 873
+    invoke-virtual {p0}, Ll/ۨܿ᩹;->trySplit()Ll/ܶ۟᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 873
+    invoke-virtual {p0}, Ll/ۨܿ᩹;->trySplit()Ll/ܶ۟᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic trySplit()Ll/ۡۚۗ;
+    .locals 1
+
+    .line 873
+    invoke-virtual {p0}, Ll/ۨܿ᩹;->trySplit()Ll/ܶ۟᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final trySplit()Ll/ܶ۟᩹;
+    .locals 5
+
+    .line 892
+    iget-boolean v0, p0, Ll/ۨܿ᩹;->ܰ:Z
+
+    iget-object v1, p0, Ll/ۨܿ᩹;->֡:Ll/ܰܿ᩹;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Ll/ۨܿ᩹;->᩶:I
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, v1, Ll/ܰܿ᩹;->᩶:I
+
+    .line 938
+    :goto_0
+    iget v2, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    sub-int v3, v0, v2
+
+    const/4 v4, 0x1
+
+    shr-int/2addr v3, v4
+
+    if-gt v3, v4, :cond_1
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 941
+    :cond_1
+    iput v0, p0, Ll/ۨܿ᩹;->᩶:I
+
+    add-int/2addr v3, v2
+
+    .line 945
+    iput v3, p0, Ll/ۨܿ᩹;->ܿ:I
+
+    .line 946
+    iput-boolean v4, p0, Ll/ۨܿ᩹;->ܰ:Z
+
+    .line 947
+    new-instance v0, Ll/ۨܿ᩹;
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ll/ۨܿ᩹;-><init>(Ll/ܰܿ᩹;IIZ)V
+
+    return-object v0
 .end method

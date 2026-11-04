@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C12441;
+import l.C14483;
 import org.bouncycastle.asn1.ASN1Choice;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Object;
@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERTaggedObject;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AttCertIssuer extends ASN1Object implements ASN1Choice {
     public ASN1Primitive choiceObj;
     public ASN1Encodable obj;
@@ -40,7 +40,7 @@ public class AttCertIssuer extends ASN1Object implements ASN1Choice {
         if (obj instanceof ASN1Sequence) {
             return new AttCertIssuer(GeneralNames.getInstance(obj));
         }
-        throw new IllegalArgumentException(C12441.m30912(obj, "unknown object in factory: "));
+        throw new IllegalArgumentException(C14483.m34970(obj, "unknown object in factory: "));
     }
 
     public static AttCertIssuer getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z) {

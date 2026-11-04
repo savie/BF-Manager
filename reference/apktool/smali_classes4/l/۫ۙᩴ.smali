@@ -1,431 +1,191 @@
 .class public final Ll/۫ۙᩴ;
-.super Ll/᩵ۢᩳ;
-.source "M1DS"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x1L
+.super Ljava/lang/Object;
+.source "UAZ7"
 
 
 # instance fields
-.field public transient ܺ:[C
+.field public ۙ:C
 
-.field public ᩶:I
+.field public ۤ:I
+
+.field public ᩷:Ll/ܰܿ᩹;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static ۙ(Ll/۬ۡ᩸;Ljava/lang/CharSequence;II)I
+    .locals 5
 
     .line 35
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    .line 55
-    sget-object v0, Ll/ܿۙᩴ;->ܰ:[C
-
-    iput-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    return-void
-.end method
-
-.method public constructor <init>([C)V
-    .locals 0
-
-    .line 35
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    .line 47
-    iput-object p1, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    .line 48
-    array-length p1, p1
-
-    iput p1, p0, Ll/۫ۙᩴ;->᩶:I
-
-    return-void
-.end method
-
-.method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 3
-
-    .line 436
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
-
-    .line 437
-    iget v0, p0, Ll/۫ۙᩴ;->᩶:I
-
-    new-array v0, v0, [C
-
-    iput-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
+    move-result v0
 
     const/4 v1, 0x0
 
-    .line 438
-    :goto_0
-    iget v2, p0, Ll/۫ۙᩴ;->᩶:I
-
-    if-ge v1, v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readChar()C
-
-    move-result v2
-
-    aput-char v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private writeObject(Ljava/io/ObjectOutputStream;)V
-    .locals 3
-
-    .line 430
-    invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
-
-    .line 431
-    iget-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    const/4 v1, 0x0
-
-    .line 432
-    :goto_0
-    iget v2, p0, Ll/۫ۙᩴ;->᩶:I
-
-    if-ge v1, v2, :cond_0
-
-    aget-char v2, v0, v1
-
-    invoke-virtual {p1, v2}, Ljava/io/ObjectOutputStream;->writeChar(I)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private ۨ(C)I
-    .locals 3
-
-    .line 204
-    iget-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    .line 205
-    iget v1, p0, Ll/۫ۙᩴ;->᩶:I
+    const/4 v2, 0x0
 
     :goto_0
-    add-int/lit8 v2, v1, -0x1
+    if-ge p2, v0, :cond_4
 
-    if-eqz v1, :cond_1
+    .line 37
+    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
-    aget-char v1, v0, v2
+    move-result v3
 
-    if-ne v1, p1, :cond_0
+    const/16 v4, 0xa
 
-    return v2
+    if-eq v3, v4, :cond_4
+
+    const/16 v4, 0xd
+
+    if-ne v3, v4, :cond_0
+
+    goto :goto_2
 
     :cond_0
-    move v1, v2
+    const/16 v4, 0x9
 
-    goto :goto_0
+    if-ne v3, v4, :cond_1
+
+    .line 41
+    rem-int v3, v2, p3
+
+    sub-int v3, p3, v3
+
+    add-int/2addr v3, v2
+
+    move v2, v3
+
+    goto :goto_1
 
     :cond_1
-    const/4 p1, -0x1
+    const/16 v4, 0x20
 
-    return p1
+    if-ne v3, v4, :cond_2
+
+    add-int/lit8 v2, v2, 0x1
+
+    :goto_1
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    .line 2178
+    :cond_2
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    if-ne p1, p3, :cond_3
+
+    .line 2179
+    invoke-virtual {p0}, Ll/۬ۡ᩸;->᩵()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p0, p0, Ll/۬ۡ᩸;->ܺ:Ll/᩺ۜ᩸;
+
+    .line 9221
+    iget-object p1, p0, Ll/᩺ۜ᩸;->۠᩸:Ll/֨ܽᩴ;
+
+    iget-object p0, p0, Ll/᩺ۜ᩸;->۬᩸:Ll/ܰۤᩴ;
+
+    iget-boolean p3, p0, Ll/ܰۤᩴ;->ۙۤ:Z
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p1}, Ll/֨ܽᩴ;->ۧ()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    .line 9222
+    invoke-virtual {p0}, Ll/ۚۚܺ;->ܶ()I
+
+    move-result p0
+
+    invoke-virtual {p1, p2, p0}, Ll/֨ܽᩴ;->᩸(II)I
+
+    move-result p0
+
+    .line 9223
+    invoke-virtual {p1, p2}, Ll/֨ܽᩴ;->ۙ(I)Ll/ۧ᩻ᩴ;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    .line 9224
+    invoke-virtual {p1}, Ll/ۧ᩻ᩴ;->ܽ()I
+
+    move-result p1
+
+    if-ne p0, p1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v3
+
+    :cond_4
+    :goto_2
+    const p0, 0xffff
+
+    and-int/2addr p0, v2
+
+    shl-int/lit8 p1, v1, 0x10
+
+    or-int/2addr p0, p1
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 386
-    iput v0, p0, Ll/۫ۙᩴ;->᩶:I
-
-    return-void
-.end method
-
-.method public final clone()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 421
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 58
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, "IndentGuideLine{spacesCount="
 
-    check-cast v0, Ll/۫ۙᩴ;
-    :try_end_0
-    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 425
-    iget-object v1, p0, Ll/۫ۙᩴ;->ܺ:[C
+    iget v1, p0, Ll/۫ۙᩴ;->ۤ:I
 
-    invoke-virtual {v1}, [C->clone()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, ", firstNotBlankChar="
 
-    check-cast v1, [C
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v1, v0, Ll/۫ۙᩴ;->ܺ:[C
+    iget-char v1, p0, Ll/۫ۙᩴ;->ۙ:C
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 423
-    :catch_0
-    new-instance v0, Ljava/lang/InternalError;
+    const-string v1, ", markList="
 
-    invoke-direct {v0}, Ljava/lang/InternalError;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
-.end method
+    iget-object v1, p0, Ll/۫ۙᩴ;->᩷:Ll/ܰܿ᩹;
 
-.method public final isEmpty()Z
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 391
-    iget v0, p0, Ll/۫ۙᩴ;->᩶:I
+    const/16 v1, 0x7d
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 213
-    new-instance v0, Ll/֡ۙᩴ;
-
-    invoke-direct {v0, p0}, Ll/֡ۙᩴ;-><init>(Ll/۫ۙᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final iterator()Ll/ܶܰᩴ;
-    .locals 1
-
-    .line 213
-    new-instance v0, Ll/֡ۙᩴ;
-
-    invoke-direct {v0, p0}, Ll/֡ۙᩴ;-><init>(Ll/۫ۙᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 358
-    iget v0, p0, Ll/۫ۙᩴ;->᩶:I
-
-    return v0
-.end method
-
-.method public synthetic spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Ll/۫ۙᩴ;->spliterator()Ll/᩷ۛᩴ;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ll/۟ۛᩴ;->convert(Ll/᩷ۛᩴ;)Ljava/util/Spliterator;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final spliterator()Ll/ۨۨᩴ;
-    .locals 1
-
-    .line 348
-    new-instance v0, Ll/ܽۙᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܽۙᩴ;-><init>(Ll/۫ۙᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final spliterator()Ll/᩷ۛᩴ;
-    .locals 1
-
-    .line 348
-    new-instance v0, Ll/ܽۙᩴ;
-
-    invoke-direct {v0, p0}, Ll/ܽۙᩴ;-><init>(Ll/۫ۙᩴ;)V
-
-    return-object v0
-.end method
-
-.method public final ֨(C)Z
-    .locals 1
-
-    .line 353
-    invoke-direct {p0, p1}, Ll/۫ۙᩴ;->ۨ(C)I
-
-    move-result p1
-
-    const/4 v0, -0x1
-
-    if-eq p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final ۙ(C)Z
-    .locals 6
-
-    .line 363
-    invoke-direct {p0, p1}, Ll/۫ۙᩴ;->ۨ(C)I
-
-    move-result p1
-
-    const/4 v0, -0x1
-
-    const/4 v1, 0x0
-
-    if-ne p1, v0, :cond_0
-
-    return v1
-
-    .line 365
-    :cond_0
-    iget v0, p0, Ll/۫ۙᩴ;->᩶:I
-
-    sub-int/2addr v0, p1
-
-    const/4 v2, 0x1
-
-    sub-int/2addr v0, v2
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    .line 366
-    iget-object v3, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    add-int v4, p1, v1
-
-    add-int/lit8 v5, v4, 0x1
-
-    aget-char v5, v3, v5
-
-    aput-char v5, v3, v4
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 367
-    :cond_1
-    iget p1, p0, Ll/۫ۙᩴ;->᩶:I
-
-    sub-int/2addr p1, v2
-
-    iput p1, p0, Ll/۫ۙᩴ;->᩶:I
-
-    return v2
-.end method
-
-.method public final ܰ(C)Z
-    .locals 3
-
-    .line 373
-    invoke-direct {p0, p1}, Ll/۫ۙᩴ;->ۨ(C)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 375
-    :cond_0
-    iget v0, p0, Ll/۫ۙᩴ;->᩶:I
-
-    iget-object v1, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_3
-
-    if-nez v0, :cond_1
-
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :cond_1
-    mul-int/lit8 v1, v0, 0x2
-
-    .line 376
-    :goto_0
-    new-array v1, v1, [C
-
-    :goto_1
-    add-int/lit8 v2, v0, -0x1
-
-    if-eqz v0, :cond_2
-
-    .line 377
-    iget-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    aget-char v0, v0, v2
-
-    aput-char v0, v1, v2
-
-    move v0, v2
-
-    goto :goto_1
-
-    .line 378
-    :cond_2
-    iput-object v1, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    .line 380
-    :cond_3
-    iget-object v0, p0, Ll/۫ۙᩴ;->ܺ:[C
-
-    iget v1, p0, Ll/۫ۙᩴ;->᩶:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ll/۫ۙᩴ;->᩶:I
-
-    aput-char p1, v0, v1
-
-    const/4 p1, 0x1
-
-    return p1
 .end method

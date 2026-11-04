@@ -1,387 +1,242 @@
 .class public final Ll/ܺܶܶ;
-.super Ll/᩻ܶܶ;
-.source "YBD4"
-
-
-# static fields
-.field public static final ֡:[Ljava/lang/String;
-
-
-# instance fields
-.field public final ܺ:Ll/ۢ᩺ܶ;
-
-.field public final ᩶:I
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 9
-
-    const-string v7, "invoke-direct"
-
-    const-string v8, "invoke-interface"
-
-    const-string v0, "static-put"
-
-    const-string v1, "static-get"
-
-    const-string v2, "instance-put"
-
-    const-string v3, "instance-get"
-
-    const-string v4, "invoke-static"
-
-    const-string v5, "invoke-instance"
-
-    const-string v6, "invoke-constructor"
-
-    .line 37
-    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ܺܶܶ;->֡:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILl/ۢ᩺ܶ;)V
-    .locals 0
-
-    .line 82
-    invoke-direct {p0}, Ll/᩻ܶܶ;-><init>()V
-
-    .line 83
-    iput p1, p0, Ll/ܺܶܶ;->᩶:I
-
-    .line 84
-    iput-object p2, p0, Ll/ܺܶܶ;->ܺ:Ll/ۢ᩺ܶ;
-
-    return-void
-.end method
-
-.method public static ۙ(I)Ljava/lang/String;
-    .locals 1
-
-    .line 167
-    sget-object v0, Ll/ܺܶܶ;->֡:[Ljava/lang/String;
-
-    aget-object p0, v0, p0
-
-    return-object p0
-.end method
-
-.method public static ۙ(ILl/ۢ᩺ܶ;)Ll/ܺܶܶ;
-    .locals 2
-
-    const-string v0, "ref has wrong type: "
-
-    if-eqz p0, :cond_1
-
-    const/4 v1, 0x1
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_1
-
-    packed-switch p0, :pswitch_data_0
-
-    .line 71
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "type is out of range: "
-
-    .line 0
-    invoke-static {p0, v0}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 71
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 67
-    :pswitch_0
-    instance-of v1, p1, Ll/ۨܶܶ;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    .line 68
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 63
-    :cond_1
-    instance-of v1, p1, Ll/᩺ܶܶ;
-
-    if-eqz v1, :cond_2
-
-    .line 73
-    :goto_0
-    new-instance v0, Ll/ܺܶܶ;
-
-    invoke-direct {v0, p0, p1}, Ll/ܺܶܶ;-><init>(ILl/ۢ᩺ܶ;)V
-
-    return-object v0
-
-    .line 64
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
+.super Ll/ܶܶܶ;
+.source "V9HU"
 
 
 # virtual methods
-.method public final getType()Ll/ۗܶܶ;
-    .locals 1
-
-    .line 217
-    sget-object v0, Ll/ۗܶܶ;->ۤۙ:Ll/ۗܶܶ;
-
-    return-object v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 196
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "method-handle{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ll/ܺܶܶ;->ۙ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "big endian"
 
     return-object v0
 .end method
 
-.method public final ֨()Ljava/lang/String;
-    .locals 1
+.method public final ۙ(Ll/᩻ܶܶ;)J
+    .locals 6
 
-    const-string v0, "method handle"
+    .line 142
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v0
-.end method
+    const/16 v0, 0x8
 
-.method public final ۙ()Ljava/lang/String;
-    .locals 3
+    new-array v1, v0, [B
 
-    .line 212
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 293
+    invoke-virtual {p1, v0, v1}, Ll/᩻ܶܶ;->᩷(I[B)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 v2, 0x0
 
-    iget v1, p0, Ll/ܺܶܶ;->᩶:I
+    const/4 p1, 0x0
 
-    .line 167
-    sget-object v2, Ll/ܺܶܶ;->֡:[Ljava/lang/String;
+    :goto_0
+    if-ge p1, v0, :cond_0
 
-    aget-object v1, v2, v1
+    shl-long/2addr v2, v0
 
-    .line 212
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 145
+    aget-byte v4, v1, p1
 
-    const-string v1, ","
+    and-int/lit16 v4, v4, 0xff
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-long v4, v4
 
-    iget-object v1, p0, Ll/ܺܶܶ;->ܺ:Ll/ۢ᩺ܶ;
+    or-long/2addr v2, v4
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙܰ()I
-    .locals 1
-
-    .line 102
-    iget v0, p0, Ll/ܺܶܶ;->᩶:I
-
-    return v0
-.end method
-
-.method public final ܰ(Ll/ۢ᩺ܶ;)I
-    .locals 2
-
-    .line 183
-    check-cast p1, Ll/ܺܶܶ;
-
-    .line 102
-    iget v0, p1, Ll/ܺܶܶ;->᩶:I
-
-    .line 184
-    iget v1, p0, Ll/ܺܶܶ;->᩶:I
-
-    if-ne v1, v0, :cond_0
-
-    .line 93
-    iget-object v0, p0, Ll/ܺܶܶ;->ܺ:Ll/ۢ᩺ܶ;
-
-    iget-object p1, p1, Ll/ܺܶܶ;->ܺ:Ll/ۢ᩺ܶ;
-
-    .line 185
-    invoke-virtual {v0, p1}, Ll/ۢ᩺ܶ;->ۙ(Ll/ۢ᩺ܶ;)I
-
-    move-result p1
-
-    return p1
-
-    .line 187
-    :cond_0
-    invoke-static {v1, v0}, Ljava/lang/Integer;->compare(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ܰ()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ܶ()Ll/ۢ᩺ܶ;
-    .locals 1
-
-    .line 93
-    iget-object v0, p0, Ll/ܺܶܶ;->ܺ:Ll/ۢ᩺ܶ;
-
-    return-object v0
-.end method
-
-.method public final ᩴ()Z
-    .locals 3
-
-    .line 112
-    iget v0, p0, Ll/ܺܶܶ;->᩶:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v2, 0x2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v2, 0x3
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    return v1
+    return-wide v2
 .end method
 
-.method public final ᩵()Z
-    .locals 1
+.method public final ۙ(Ll/᩻ܶܶ;J)V
+    .locals 9
 
-    .line 157
-    iget v0, p0, Ll/ܺܶܶ;->᩶:I
+    const/16 v0, 0x38
 
-    packed-switch v0, :pswitch_data_0
+    shr-long v0, p2, v0
 
-    const/4 v0, 0x0
+    long-to-int v1, v0
 
-    return v0
+    int-to-byte v0, v1
 
-    :pswitch_0
+    const/16 v1, 0x30
+
+    shr-long v1, p2, v1
+
+    long-to-int v2, v1
+
+    int-to-byte v1, v2
+
+    const/16 v2, 0x28
+
+    shr-long v2, p2, v2
+
+    long-to-int v3, v2
+
+    int-to-byte v2, v3
+
+    const/16 v3, 0x20
+
+    shr-long v3, p2, v3
+
+    long-to-int v4, v3
+
+    int-to-byte v3, v4
+
+    const/16 v4, 0x18
+
+    shr-long v4, p2, v4
+
+    long-to-int v5, v4
+
+    int-to-byte v4, v5
+
+    const/16 v5, 0x10
+
+    shr-long v5, p2, v5
+
+    long-to-int v6, v5
+
+    int-to-byte v5, v6
+
+    const/16 v6, 0x8
+
+    shr-long v7, p2, v6
+
+    long-to-int v8, v7
+
+    int-to-byte v7, v8
+
+    long-to-int p3, p2
+
+    int-to-byte p2, p3
+
+    new-array p3, v6, [B
+
+    const/4 v8, 0x0
+
+    aput-byte v0, p3, v8
+
     const/4 v0, 0x1
 
-    return v0
+    aput-byte v1, p3, v0
 
-    nop
+    const/4 v0, 0x2
 
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    aput-byte v2, p3, v0
+
+    const/4 v0, 0x3
+
+    aput-byte v3, p3, v0
+
+    const/4 v0, 0x4
+
+    aput-byte v4, p3, v0
+
+    const/4 v0, 0x5
+
+    aput-byte v5, p3, v0
+
+    const/4 v0, 0x6
+
+    aput-byte v7, p3, v0
+
+    const/4 v0, 0x7
+
+    aput-byte p2, p3, v0
+
+    .line 318
+    invoke-virtual {p1, v6, p3}, Ll/᩻ܶܶ;->ۙ(I[B)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/᩻ܶܶ;Ljava/lang/String;)V
+    .locals 1
+
+    .line 162
+    sget-object v0, Ll/᩷ܶܶ;->ۤ:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    .line 163
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 318
+    array-length v0, p2
+
+    invoke-virtual {p1, v0, p2}, Ll/᩻ܶܶ;->ۙ(I[B)V
+
+    return-void
+.end method
+
+.method public final ᩷(Ll/᩻ܶܶ;)J
+    .locals 8
+
+    const/4 v0, 0x4
+
+    new-array v1, v0, [B
+
+    .line 293
+    invoke-virtual {p1, v0, v1}, Ll/᩻ܶܶ;->᩷(I[B)V
+
+    const/4 p1, 0x0
+
+    .line 103
+    aget-byte p1, v1, p1
+
+    shl-int/lit8 p1, p1, 0x18
+
+    int-to-long v2, p1
+
+    const-wide v4, 0xff000000L
+
+    and-long/2addr v2, v4
+
+    const/4 p1, 0x1
+
+    aget-byte p1, v1, p1
+
+    shl-int/lit8 p1, p1, 0x10
+
+    int-to-long v4, p1
+
+    const-wide/32 v6, 0xff0000
+
+    and-long/2addr v4, v6
+
+    or-long/2addr v2, v4
+
+    const/4 p1, 0x2
+
+    aget-byte p1, v1, p1
+
+    shl-int/lit8 p1, p1, 0x8
+
+    int-to-long v4, p1
+
+    const-wide/32 v6, 0xff00
+
+    and-long/2addr v4, v6
+
+    or-long/2addr v2, v4
+
+    const/4 p1, 0x3
+
+    aget-byte p1, v1, p1
+
+    int-to-long v0, p1
+
+    const-wide/16 v4, 0xff
+
+    and-long/2addr v0, v4
+
+    or-long/2addr v0, v2
+
+    return-wide v0
 .end method

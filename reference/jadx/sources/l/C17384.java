@@ -1,31 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿܰ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: A451 */
+/* JADX INFO: renamed from: l.ܽۛۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87AO */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C17384 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC23903 f55329;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final String f56531;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11948 f55330;
+    public final String f56532;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final EnumC11678 f55331;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final String f56533;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC16579 f55332;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String f56534;
 
-    public C17384(EnumC11678 enumC11678, AbstractC23903 abstractC23903, C11948 c11948, AbstractC16579 abstractC16579) {
-        this.f55331 = enumC11678;
-        this.f55329 = abstractC23903;
-        this.f55330 = c11948;
-        this.f55332 = abstractC16579;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final String f56535;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m40497() {
-        return this.f55332 != null;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String f56536;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final Integer f56537;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Integer f56538;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String f56539;
+
+    public C17384(String str, String str2, String str3, String str4, String str5, String str6, String str7, Integer num, Integer num2) {
+        this.f56533 = str;
+        this.f56535 = str2;
+        this.f56532 = str3;
+        this.f56534 = str4;
+        this.f56531 = str5;
+        this.f56539 = str6;
+        this.f56536 = str7;
+        this.f56537 = num;
+        this.f56538 = num2;
     }
 }

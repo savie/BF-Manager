@@ -1,36 +1,88 @@
-.class public final Ll/ۘۡۨ;
-.super Ll/᩻ۡۨ;
-.source "Z6QT"
+.class public final synthetic Ll/ۘۡۨ;
+.super Ljava/lang/Object;
+.source "85GM"
 
 
-# instance fields
-.field public ۖ:I
-
-.field public ۚ:Ll/ۙۤۨ;
-
-.field public ۨ:I
-
-.field public ܰ:Ll/᩻ۡۨ;
+# static fields
+.field public static final synthetic ۙ:[I
 
 
 # direct methods
-.method public constructor <init>(Ll/᩻ۡۨ;IILl/ۙۤۨ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 1915
-    invoke-direct {p0}, Ll/᩻ۡۨ;-><init>()V
+    .line 70
+    invoke-static {}, Ll/ᩳۡۨ;->values()[Ll/ᩳۡۨ;
 
-    .line 1916
-    iput-object p1, p0, Ll/ۘۡۨ;->ܰ:Ll/᩻ۡۨ;
+    move-result-object v0
 
-    .line 1917
-    iput-object p4, p0, Ll/ۘۡۨ;->ۚ:Ll/ۙۤۨ;
+    array-length v0, v0
 
-    .line 1918
-    iput p2, p0, Ll/ۘۡۨ;->ۖ:I
+    new-array v0, v0, [I
 
-    .line 1919
-    iput p3, p0, Ll/ۘۡۨ;->ۨ:I
+    sput-object v0, Ll/ۘۡۨ;->ۙ:[I
 
+    :try_start_0
+    sget-object v1, Ll/ᩳۡۨ;->᩶:Ll/ᩳۡۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll/ۘۡۨ;->ۙ:[I
+
+    sget-object v1, Ll/ᩳۡۨ;->ܿ:Ll/ᩳۡۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll/ۘۡۨ;->ۙ:[I
+
+    sget-object v1, Ll/ᩳۡۨ;->ᩳ:Ll/ᩳۡۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll/ۘۡۨ;->ۙ:[I
+
+    sget-object v1, Ll/ᩳۡۨ;->۟:Ll/ᩳۡۨ;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
 .end method

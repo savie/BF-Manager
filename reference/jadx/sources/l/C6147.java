@@ -1,296 +1,81 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛܶ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+import java.util.HashMap;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ۛۘ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: W403 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6147 extends AbstractC18245 implements InterfaceC18266 {
-    public static final long serialVersionUID = 0;
+public final class C6147 {
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f20990;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public InterfaceC5075 f20975;
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final C6147 f20991;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public HashMap f20976;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public C21463 f20992;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final C13477 f20974 = new C13477();
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public int f20993;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC5075 f20973 = new C20317();
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public InterfaceC23890 f20994;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f20995;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f20996;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public byte f20997;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InterfaceC23890 f20998;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public volatile Object f20999;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public volatile Object f21000;
-
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C6147.class.getName());
-        f20991 = new C6147();
-        f20990 = new C12498();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C6147 m17745(C4747 c4747) {
+        C13477 c13477 = f20974;
+        C6147 c6147 = (C6147) c4747.m14643(c13477);
+        if (c6147 != null) {
+            return c6147;
+        }
+        C6147 c6148 = new C6147();
+        c6148.f20976 = new HashMap();
+        c4747.m14646(c13477, c6148);
+        c6148.f20975 = f20973;
+        return c6148;
     }
 
-    public C6147(C17436 c17436, int i) {
-        super(c17436);
-        this.f20998 = AbstractC18245.m42411();
-        this.f20995 = -1;
-        this.f20994 = AbstractC18245.m42411();
-        this.f20993 = -1;
-        this.f20999 = "";
-        this.f21000 = "";
-        this.f20992 = C21463.m48084();
-        this.f20997 = (byte) -1;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m17749(InterfaceC12112 interfaceC12112) {
+        HashMap map = this.f20976;
+        InterfaceC5075 interfaceC5075 = this.f20975;
+        if (interfaceC5075 == f20973) {
+            interfaceC12112.mo6201();
+            return;
+        }
+        C18499 c18499 = (C18499) map.get(interfaceC5075);
+        if (c18499 == null) {
+            InterfaceC5075 interfaceC5076 = this.f20975;
+            C18499 c184910 = new C18499();
+            map.put(interfaceC5076, c184910);
+            c18499 = c184910;
+        }
+        c18499.m43089(interfaceC12112);
     }
 
-    public C6147() {
-        this.f20998 = AbstractC18245.m42411();
-        this.f20995 = -1;
-        this.f20994 = AbstractC18245.m42411();
-        this.f20993 = -1;
-        this.f20999 = "";
-        this.f21000 = "";
-        this.f20992 = C21463.m48084();
-        this.f20997 = (byte) -1;
-        this.f20998 = AbstractC18245.m42411();
-        this.f20994 = AbstractC18245.m42411();
-        this.f20999 = "";
-        this.f21000 = "";
-        this.f20992 = C21463.m48084();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m17748(AbstractC8036 abstractC8036) {
+        HashMap map = this.f20976;
+        C18499 c18499 = (C18499) map.get(abstractC8036);
+        if (c18499 != null) {
+            Iterator it = c18499.iterator();
+            while (it.hasNext()) {
+                ((InterfaceC12112) it.next()).mo6201();
+            }
+            map.remove(abstractC8036);
+        }
     }
 
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46305;
-        c6956.m18696(C6147.class, C17436.class);
-        return c6956;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC5075 m17746() {
+        InterfaceC5075 interfaceC5075 = this.f20975;
+        this.f20975 = f20973;
+        return interfaceC5075;
     }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final boolean m17150() {
-        return (this.f20996 & 1) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final String m17151() {
-        Object obj = this.f20999;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f20999 = strM52260;
-        }
-        return strM52260;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m17152() {
-        return (this.f20996 & 2) != 0;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String m17149() {
-        Object obj = this.f21000;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f21000 = strM52260;
-        }
-        return strM52260;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f20997;
-        if (b == 1) {
-            return true;
-        }
-        if (b == 0) {
-            return false;
-        }
-        this.f20997 = (byte) 1;
-        return true;
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        getSerializedSize();
-        if (this.f20998.size() > 0) {
-            abstractC22044.mo14248(10);
-            abstractC22044.mo14248(this.f20995);
-        }
-        for (int i = 0; i < this.f20998.size(); i++) {
-            abstractC22044.mo14251(this.f20998.getInt(i));
-        }
-        if (this.f20994.size() > 0) {
-            abstractC22044.mo14248(18);
-            abstractC22044.mo14248(this.f20993);
-        }
-        for (int i2 = 0; i2 < this.f20994.size(); i2++) {
-            abstractC22044.mo14251(this.f20994.getInt(i2));
-        }
-        if ((this.f20996 & 1) != 0) {
-            AbstractC18245.m42405(abstractC22044, 3, this.f20999);
-        }
-        if ((this.f20996 & 2) != 0) {
-            AbstractC18245.m42405(abstractC22044, 4, this.f21000);
-        }
-        for (int i3 = 0; i3 < this.f20992.size(); i3++) {
-            AbstractC18245.m42405(abstractC22044, 6, this.f20992.mo21384(i3));
-        }
-        getUnknownFields().writeTo(abstractC22044);
-    }
-
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
-        }
-        int iM48969 = 0;
-        for (int i2 = 0; i2 < this.f20998.size(); i2++) {
-            iM48969 += AbstractC22044.m48969(this.f20998.getInt(i2));
-        }
-        int iM489610 = this.f20998.isEmpty() ? iM48969 : AbstractC22044.m48969(iM48969) + iM48969 + 1;
-        this.f20995 = iM48969;
-        int iM489611 = 0;
-        for (int i3 = 0; i3 < this.f20994.size(); i3++) {
-            iM489611 += AbstractC22044.m48969(this.f20994.getInt(i3));
-        }
-        int iM42390 = iM489610 + iM489611;
-        if (!this.f20994.isEmpty()) {
-            iM42390 = iM42390 + 1 + AbstractC22044.m48969(iM489611);
-        }
-        this.f20993 = iM489611;
-        if ((this.f20996 & 1) != 0) {
-            iM42390 += AbstractC18245.m42390(3, this.f20999);
-        }
-        if ((this.f20996 & 2) != 0) {
-            iM42390 += AbstractC18245.m42390(4, this.f21000);
-        }
-        int iM42412 = 0;
-        for (int i4 = 0; i4 < this.f20992.size(); i4++) {
-            iM42412 += AbstractC18245.m42412(this.f20992.mo21384(i4));
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + this.f20992.size() + iM42390 + iM42412;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
-    }
-
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof C6147)) {
-            return super.equals(obj);
-        }
-        C6147 c6147 = (C6147) obj;
-        if (!this.f20998.equals(c6147.f20998) || !this.f20994.equals(c6147.f20994) || m17150() != c6147.m17150()) {
-            return false;
-        }
-        if ((!m17150() || m17151().equals(c6147.m17151())) && m17152() == c6147.m17152()) {
-            return (!m17152() || m17149().equals(c6147.m17149())) && this.f20992.equals(c6147.f20992) && getUnknownFields().equals(c6147.getUnknownFields());
-        }
-        return false;
-    }
-
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
-        }
-        int iHashCode = C14097.f46319.hashCode() + 779;
-        if (this.f20998.size() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + this.f20998.hashCode();
-        }
-        if (this.f20994.size() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + this.f20994.hashCode();
-        }
-        if (m17150()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + m17151().hashCode();
-        }
-        if (m17152()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 4, 53) + m17149().hashCode();
-        }
-        if (this.f20992.size() > 0) {
-            iHashCode = C17922.m41614(iHashCode, 37, 6, 53) + this.f20992.hashCode();
-        }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
-    }
-
-    public static C17436 newBuilder() {
-        return f20991.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f20991.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f20991.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C17436 toBuilder() {
-        int i = 0;
-        if (this == f20991) {
-            return new C17436(i);
-        }
-        C17436 c17436 = new C17436(i);
-        c17436.m40647(this);
-        return c17436;
-    }
-
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C17436(interfaceC6790, 0);
-    }
-
-    public static C6147 getDefaultInstance() {
-        return f20991;
-    }
-
-    public static InterfaceC6271 parser() {
-        return f20990;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f20990;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f20991;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f20991;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC5075 m17747(InterfaceC5075 interfaceC5075) {
+        InterfaceC5075 interfaceC5076 = this.f20975;
+        this.f20975 = interfaceC5075;
+        return interfaceC5076;
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.macs;
 
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -12,7 +12,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CMac implements Mac {
     public byte[] Lu;
     public byte[] Lu2;
@@ -218,7 +218,7 @@ public class CMac implements Mac {
                 i3 = 548865;
                 break;
             default:
-                throw new IllegalArgumentException(C8479.m22141(i2, "Unknown block size for CMAC: "));
+                throw new IllegalArgumentException(C13645.m33382(i2, "Unknown block size for CMAC: "));
         }
         return Pack.intToBigEndian(i3);
     }

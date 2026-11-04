@@ -1,23 +1,30 @@
 package l;
 
-import java.util.Iterator;
+import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: renamed from: l.ۡ۫ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X4RA */
+/* JADX INFO: renamed from: l.۠᩶᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9MU */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8883 extends AbstractC15939 {
+public final class C8883 {
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Iterable f30445;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29009 = {UTF8.S_P3A, 49, 53, 0};
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C8883(Iterable iterable, Iterable iterable2) {
-        super(iterable);
-        this.f30445 = iterable2;
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29010 = {UTF8.S_P3A, 49, UTF8.S_P3A, 0};
 
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        return this.f30445.iterator();
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29011 = {UTF8.S_P3A, UTF8.S_P3A, 57, 0};
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29013 = {UTF8.S_P3A, UTF8.S_P3A, 53, 0};
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29008 = {UTF8.S_P3A, UTF8.S_P3A, 49, 0};
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29007 = {UTF8.S_P3A, UTF8.S_P3A, 49, 0};
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final byte[] f29012 = {UTF8.S_P3A, UTF8.S_P3A, 50, 0};
 }

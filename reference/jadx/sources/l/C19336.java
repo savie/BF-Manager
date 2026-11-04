@@ -1,49 +1,59 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵۠۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: H44W */
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ᩳ᩷ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M605 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19336 extends AbstractC8774 implements InterfaceC7074 {
+public final class C19336 extends AbstractC15343 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C21452 f62362;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f62450;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public C6656 f62363;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC3476 f62451;
 
-    @Override // l.AbstractC8774
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f62452;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10385 f62453;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public int f62454;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C19336(C10385 c10385, C24975 c24975, int i, InterfaceC3476 interfaceC3476) {
+        super(c24975, i);
+        this.f62453 = c10385;
+        this.f62451 = interfaceC3476;
+        this.f62452 = -1;
+    }
+
+    @Override // l.AbstractC15343
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1802(AbstractC19357 abstractC19357) {
-        abstractC19357.mo3954(this);
-    }
-
-    @Override // l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC12490 mo1801() {
-        return EnumC12490.CATCH;
-    }
-
-    @Override // l.InterfaceC7074
-    /* JADX INFO: renamed from: ۟ */
-    public final C6656 mo18945() {
-        return this.f62363;
-    }
-
-    @Override // l.InterfaceC7074
-    /* JADX INFO: renamed from: ۚ */
-    public final C21452 mo18944() {
-        return this.f62362;
-    }
-
-    @Override // l.AbstractC8774, l.InterfaceC17428
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1800(InterfaceC6139 interfaceC6139, Object obj) {
-        return interfaceC6139.mo1906(this, obj);
-    }
-
-    @Override // l.AbstractC8774
-    /* JADX INFO: renamed from: ۨۙ */
-    public final EnumC18651 mo1803() {
-        return EnumC18651.f60562;
+    public final Object mo2989(C8565 c8565) {
+        C17515 c17515;
+        int i;
+        do {
+            int i2 = this.f62450 + 1;
+            this.f62450 = i2;
+            C10385 c10385 = this.f62453;
+            C22737 c22737 = c10385.f33021;
+            if (i2 > c22737.f73783) {
+                c22737.f73780 = c8565.m23001();
+                m14148();
+                return null;
+            }
+            Iterator it = c10385.f33019;
+            c17515 = new C17515(c22737.f73785, c8565, c22737, this.f62454, this.f62451, it != null ? ((Integer) it.next()).intValue() : 7);
+            i = c17515.f56940;
+            this.f62454 = i;
+            if (!c10385.f33020) {
+                break;
+            }
+        } while (this.f62452 == i);
+        this.f62452 = i;
+        return c17515;
     }
 }

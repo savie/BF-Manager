@@ -6,7 +6,7 @@
 # instance fields
 .field public ۙ:Lcom/amazonaws/services/s3/S3ResponseMetadata;
 
-.field public ܰ:Ljava/lang/Object;
+.field public ᩷:Ljava/lang/Object;
 
 
 # direct methods
@@ -61,16 +61,16 @@
     .locals 0
 
     .line 49
-    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceResponse;->ܰ:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/amazonaws/AmazonWebServiceResponse;->᩷:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ܰ()Ljava/lang/Object;
+.method public final ᩷()Ljava/lang/Object;
     .locals 1
 
     .line 40
-    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceResponse;->ܰ:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/amazonaws/AmazonWebServiceResponse;->᩷:Ljava/lang/Object;
 
     return-object v0
 .end method

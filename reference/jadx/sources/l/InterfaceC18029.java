@@ -1,24 +1,15 @@
 package l;
 
-import java.util.List;
+/* JADX INFO: renamed from: l.ܿۖܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9Q0 */
+/* JADX INFO: loaded from: classes4.dex */
+public interface InterfaceC18029 {
+    /* JADX INFO: renamed from: ۙ */
+    boolean mo36490();
 
-/* JADX INFO: renamed from: l.ᩳۨۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 14JC */
-/* JADX INFO: loaded from: classes5.dex */
-public interface InterfaceC18029 extends InterfaceC7446 {
-    int getIndex();
+    /* JADX INFO: renamed from: ۤ */
+    EnumC16711 mo36491();
 
-    String getName();
-
-    /* JADX INFO: renamed from: ۘ */
-    InterfaceC8152 mo19719();
-
-    /* JADX INFO: renamed from: ۜ */
-    List mo19720();
-
-    /* JADX INFO: renamed from: ܰ */
-    InterfaceC19441 mo19721();
-
-    /* JADX INFO: renamed from: ܶ */
-    String mo19722();
+    /* JADX INFO: renamed from: ᩷ */
+    InterfaceC18775 mo36493();
 }

@@ -3,7 +3,7 @@
 .source "SideSheetBehavior"
 
 # interfaces
-.implements Ll/ۡۗ;
+.implements Ll/᩵۬;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public final perform(Landroid/view/View;Ll/ۜۗ;)Z
+.method public final perform(Landroid/view/View;Ll/֫۬;)Z
     .locals 2
 
     .line 0
@@ -36,7 +36,7 @@
 
     iget v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior$$ExternalSyntheticLambda1;->f$1:I
 
-    invoke-static {v0, v1, p1, p2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->$r8$lambda$eRzu7MgSiEjwRPskR15qKusJnfM(Lcom/google/android/material/sidesheet/SideSheetBehavior;ILandroid/view/View;Ll/ۜۗ;)Z
+    invoke-static {v0, v1, p1, p2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->$r8$lambda$eRzu7MgSiEjwRPskR15qKusJnfM(Lcom/google/android/material/sidesheet/SideSheetBehavior;ILandroid/view/View;Ll/֫۬;)Z
 
     move-result p1
 

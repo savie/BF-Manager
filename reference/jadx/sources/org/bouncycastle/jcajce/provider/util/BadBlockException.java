@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.util;
 
 import javax.crypto.BadPaddingException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BadBlockException extends BadPaddingException {
     public final Throwable cause;
 

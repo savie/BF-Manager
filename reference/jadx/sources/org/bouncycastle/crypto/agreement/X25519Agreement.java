@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.params.X25519PrivateKeyParameters;
 import org.bouncycastle.crypto.params.X25519PublicKeyParameters;
 import org.bouncycastle.jcajce.spec.XDHParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class X25519Agreement implements RawAgreement {
     public X25519PrivateKeyParameters privateKey;
 

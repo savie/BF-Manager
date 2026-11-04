@@ -1,61 +1,38 @@
 package l;
 
-import bin.mt.json.JSONObject;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۧܶۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V75S */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11075 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f37594;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f37595;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final int f37596;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f37597;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f37598;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f37599;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int f37600;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f37601;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f37602;
-
-    public C11075(JSONObject jSONObject) {
-        this.f37598 = m27924(jSONObject, "neededLibraries");
-        this.f37594 = m27924(jSONObject, "sections");
-        this.f37600 = m27924(jSONObject, "segments");
-        this.f37599 = m27924(jSONObject, "imports");
-        this.f37596 = m27924(jSONObject, "symbols");
-        this.f37597 = m27924(jSONObject, "entries");
-        this.f37595 = m27924(jSONObject, "initArray");
-        this.f37601 = m27924(jSONObject, "finiArray");
-        this.f37602 = m27924(jSONObject, "relocations");
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C11075 m27925(JSONObject jSONObject) {
-        return new C11075(jSONObject);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m27924(JSONObject jSONObject, String str) {
-        if (jSONObject == null) {
-            return 0;
+/* JADX INFO: renamed from: l.ۤᩴ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: H6C3 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11075 extends AbstractC14146 {
+    /* JADX WARN: Code duplicated, block: B:14:0x004a  */
+    @Override // l.AbstractC14146
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo15469(C2551 c2551, InterfaceC18213 interfaceC18213) {
+        C18959 c18959;
+        List listMo19035 = interfaceC18213.mo19035();
+        InterfaceC6281 interfaceC6281 = (InterfaceC6281) C6823.m18999(listMo19035);
+        if (interfaceC6281 instanceof InterfaceC23435) {
+            InterfaceC23435 interfaceC23435 = (InterfaceC23435) interfaceC6281;
+            if (m34361(interfaceC23435)) {
+                if (interfaceC23435.mo1986().size() > 1) {
+                    c18959 = (C18959) C7750.m21093(2, interfaceC23435.mo1986());
+                } else if (listMo19035.size() > 1) {
+                    InterfaceC6281 interfaceC6282 = (InterfaceC6281) C7750.m21093(2, listMo19035);
+                    if (interfaceC6282 instanceof InterfaceC23435) {
+                        c18959 = (C18959) C6823.m18999(((InterfaceC23435) interfaceC6282).mo1986());
+                    } else {
+                        c18959 = null;
+                    }
+                } else {
+                    c18959 = null;
+                }
+                if (c18959 == null || !c18959.m44037()) {
+                    return;
+                }
+                m34359(interfaceC23435, interfaceC18213);
+            }
         }
-        return jSONObject.getInt(str, 0);
     }
 }

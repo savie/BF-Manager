@@ -10,53 +10,53 @@ import java.util.List;
 public class AccessControlList implements Serializable, S3RequesterChargedResult {
     public static final long serialVersionUID = 8095040648034788376L;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Owner f533 = null;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public LinkedList f523;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public LinkedList f534;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public Owner f524 = null;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public HashSet f535;
+    public HashSet f525;
 
     @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo465(boolean z) {
+    public final void mo459(boolean z) {
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Owner m522() {
-        return this.f533;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m521(Owner owner) {
-        this.f533 = owner;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Owner m516() {
+        return this.f524;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m520() {
-        HashSet hashSet = this.f535;
-        if (hashSet != null && this.f534 != null) {
+    public final void m515(Owner owner) {
+        this.f524 = owner;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final List m514() {
+        HashSet hashSet = this.f525;
+        if (hashSet != null && this.f523 != null) {
             throw new IllegalStateException("Both grant set and grant list cannot be null");
         }
-        if (this.f534 == null) {
+        if (this.f523 == null) {
             if (hashSet == null) {
-                this.f534 = new LinkedList();
+                this.f523 = new LinkedList();
             } else {
-                this.f534 = new LinkedList(this.f535);
-                this.f535 = null;
+                this.f523 = new LinkedList(this.f525);
+                this.f525 = null;
             }
         }
-        return this.f534;
+        return this.f523;
     }
 
     public final int hashCode() {
-        Owner owner = this.f533;
+        Owner owner = this.f524;
         int iHashCode = ((owner == null ? 0 : owner.hashCode()) + 31) * 31;
-        HashSet hashSet = this.f535;
+        HashSet hashSet = this.f525;
         int iHashCode2 = (iHashCode + (hashSet == null ? 0 : hashSet.hashCode())) * 31;
-        LinkedList linkedList = this.f534;
+        LinkedList linkedList = this.f523;
         return iHashCode2 + (linkedList != null ? linkedList.hashCode() : 0);
     }
 
@@ -68,30 +68,30 @@ public class AccessControlList implements Serializable, S3RequesterChargedResult
             return false;
         }
         AccessControlList accessControlList = (AccessControlList) obj;
-        Owner owner = this.f533;
+        Owner owner = this.f524;
         if (owner == null) {
-            if (accessControlList.f533 != null) {
+            if (accessControlList.f524 != null) {
                 return false;
             }
-        } else if (!owner.equals(accessControlList.f533)) {
+        } else if (!owner.equals(accessControlList.f524)) {
             return false;
         }
-        HashSet hashSet = this.f535;
+        HashSet hashSet = this.f525;
         if (hashSet == null) {
-            if (accessControlList.f535 != null) {
+            if (accessControlList.f525 != null) {
                 return false;
             }
-        } else if (!hashSet.equals(accessControlList.f535)) {
+        } else if (!hashSet.equals(accessControlList.f525)) {
             return false;
         }
-        LinkedList linkedList = this.f534;
+        LinkedList linkedList = this.f523;
         if (linkedList == null) {
-            return accessControlList.f534 == null;
+            return accessControlList.f523 == null;
         }
-        return linkedList.equals(accessControlList.f534);
+        return linkedList.equals(accessControlList.f523);
     }
 
     public final String toString() {
-        return "AccessControlList [owner=" + this.f533 + ", grants=" + m520() + "]";
+        return "AccessControlList [owner=" + this.f524 + ", grants=" + m514() + "]";
     }
 }

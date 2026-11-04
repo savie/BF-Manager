@@ -1,40 +1,53 @@
 package l;
 
-/* JADX INFO: renamed from: l.۠ۗ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: F4CH */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7902 extends AbstractC19191 {
+import android.content.ClipDescription;
+import android.net.Uri;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9501 f25975;
+/* JADX INFO: renamed from: l.۟۬, reason: contains not printable characters */
+/* JADX INFO: compiled from: 23DC */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7902 implements InterfaceC19089 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6043 f25976;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Uri f26255;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ long f25977;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final Uri f26256;
 
-    public C7902(C9501 c9501, long j, C6043 c6043) {
-        this.f25975 = c9501;
-        this.f25977 = j;
-        this.f25976 = c6043;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ClipDescription f26257;
+
+    @Override // l.InterfaceC19089
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2262() {
+        return null;
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ᩹ */
-    public final C9501 mo5213() {
-        return this.f25975;
+    @Override // l.InterfaceC19089
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo2263() {
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ۖ */
-    public final long mo5212() {
-        return this.f25977;
+    public C7902(Uri uri, ClipDescription clipDescription, Uri uri2) {
+        this.f26255 = uri;
+        this.f26257 = clipDescription;
+        this.f26256 = uri2;
     }
 
-    @Override // l.AbstractC19191
-    /* JADX INFO: renamed from: ֨ */
-    public final InterfaceC23683 mo5211() {
-        return this.f25976;
+    @Override // l.InterfaceC19089
+    /* JADX INFO: renamed from: ᩷ */
+    public final Uri mo2264() {
+        return this.f26255;
+    }
+
+    @Override // l.InterfaceC19089
+    public final ClipDescription getDescription() {
+        return this.f26257;
+    }
+
+    @Override // l.InterfaceC19089
+    /* JADX INFO: renamed from: ᩸ */
+    public final Uri mo2265() {
+        return this.f26256;
     }
 }

@@ -1,94 +1,62 @@
 .class public final synthetic Ll/᩶ۧ᩺;
 .super Ljava/lang/Object;
-.source "S1JO"
+.source "97F2"
 
 # interfaces
-.implements Ll/ۤ᩺ۙ;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public final synthetic ܰ:Ll/᩷᩻᩺;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ll/᩷᩻᩺;)V
     .locals 0
 
     .line 0
-    iput p1, p0, Ll/᩶ۧ᩺;->ܺ:I
-
-    iput-object p2, p0, Ll/᩶ۧ᩺;->᩶:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩶ۧ᩺;->ܰ:Ll/᩷᩻᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/Object;)V
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 0
-    iget v0, p0, Ll/᩶ۧ᩺;->ܺ:I
+    iget-object v0, p0, Ll/᩶ۧ᩺;->ܰ:Ll/᩷᩻᩺;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Ljava/util/Map$Entry;
 
-    iget-object v0, p0, Ll/᩶ۧ᩺;->᩶:Ljava/lang/Object;
+    invoke-static {v0, p1}, Ll/᩷᩻᩺;->᩷(Ll/᩷᩻᩺;Ljava/util/Map$Entry;)Ljava/lang/String;
 
-    check-cast v0, Ll/᩷۬ۜ;
+    move-result-object p1
 
-    check-cast p1, Ll/ۛܰۜ;
+    return-object p1
+.end method
 
-    invoke-static {v0, p1}, Ll/᩷۬ۜ;->ۙ(Ll/᩷۬ۜ;Ll/ۛܰۜ;)V
+.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+    .locals 0
 
-    return-void
+    .line 0
+    invoke-static {p0, p1}, Ll/᩺ۧۗ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
 
-    :pswitch_0
-    iget-object v0, p0, Ll/᩶ۧ᩺;->᩶:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Ll/֨ۚۜ;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {v0}, Ll/֨ۚۜ;->ۙ(Ll/֨ۚۜ;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ll/᩶ۧ᩺;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/MenuItem;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    invoke-interface {v0, p1}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ll/᩶ۧ᩺;->᩶:Ljava/lang/Object;
-
-    check-cast v0, Ll/֡ۧ᩺;
-
-    check-cast p1, [Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ll/ܽۧ᩺;->ۙ(Ll/֡ۧ᩺;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

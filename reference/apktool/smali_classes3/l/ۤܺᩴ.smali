@@ -1,143 +1,246 @@
-.class public final synthetic Ll/ۤܺᩴ;
+.class public final Ll/ۤܺᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/nio/file/WatchService;
+.source "V702"
 
 
 # instance fields
-.field public final synthetic a:Ll/ۡ۟ᩴ;
+.field public final ֡:I
+
+.field public final ֨:I
+
+.field public final ֫:Ll/᩵᩻ᩴ;
+
+.field public final ۖ:I
+
+.field public final ۗ:Ll/᩻ۗᩴ;
+
+.field public ۘ:[I
+
+.field public ۙ:I
+
+.field public ۙۙ:I
+
+.field public ۚ:J
+
+.field public ۛ:I
+
+.field public ۜ:I
+
+.field public ۟:I
+
+.field public final ۠:I
+
+.field public ۡ:I
+
+.field public ۢ:I
+
+.field public ۤ:[I
+
+.field public ۤۙ:[I
+
+.field public ۧ:Ll/᩶᩻ᩴ;
+
+.field public ۨ:I
+
+.field public ۫:J
+
+.field public final ۬:I
+
+.field public ܰ:[I
+
+.field public final ܳ:I
+
+.field public final ܳۙ:Ll/֨ܶᩴ;
+
+.field public final ܶ:Ll/۟᩻ᩴ;
+
+.field public ܺ:I
+
+.field public ܽ:I
+
+.field public final ܿ:I
+
+.field public final ᩳ:I
+
+.field public final ᩴ:Ll/᩸ۗᩴ;
+
+.field public final ᩴۙ:Z
+
+.field public final ᩵:I
+
+.field public ᩶:I
+
+.field public ᩷:[I
+
+.field public ᩷ۙ:I
+
+.field public ᩸:[I
+
+.field public ᩸ۙ:[I
+
+.field public ᩹:I
+
+.field public ᩺:Z
+
+.field public ᩻:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۡ۟ᩴ;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
-
-    return-void
-.end method
-
-.method public static synthetic b(Ll/ۡ۟ᩴ;)Ljava/nio/file/WatchService;
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ll/᩵ܺᩴ;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ll/᩵ܺᩴ;
-
-    iget-object p0, p0, Ll/᩵ܺᩴ;->a:Ljava/nio/file/WatchService;
-
-    return-object p0
-
-    :cond_1
-    new-instance v0, Ll/ۤܺᩴ;
-
-    invoke-direct {v0, p0}, Ll/ۤܺᩴ;-><init>(Ll/ۡ۟ᩴ;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final synthetic close()V
-    .locals 1
-
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-.end method
-
-.method public final synthetic equals(Ljava/lang/Object;)Z
+.method public constructor <init>(Ll/᩵᩻ᩴ;I)V
     .locals 2
 
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    .line 3076
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v1, p1, Ll/ۤܺᩴ;
+    const/4 v0, -0x1
 
-    if-eqz v1, :cond_0
+    .line 3040
+    iput v0, p0, Ll/ۤܺᩴ;->᩻:I
 
-    check-cast p1, Ll/ۤܺᩴ;
+    .line 3041
+    iput v0, p0, Ll/ۤܺᩴ;->ܽ:I
 
-    iget-object p1, p1, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    .line 3077
+    iput-object p1, p0, Ll/ۤܺᩴ;->֫:Ll/᩵᩻ᩴ;
 
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
-    move-result p1
+    .line 3078
+    iput-object v1, p0, Ll/ۤܺᩴ;->ܳۙ:Ll/֨ܶᩴ;
 
-    return p1
-.end method
+    .line 3079
+    iput-object v1, p0, Ll/ۤܺᩴ;->ۗ:Ll/᩻ۗᩴ;
 
-.method public final synthetic hashCode()I
-    .locals 1
+    .line 3080
+    iput-object v1, p0, Ll/ۤܺᩴ;->ܶ:Ll/۟᩻ᩴ;
 
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    .line 3081
+    iput-object v1, p0, Ll/ۤܺᩴ;->ᩴ:Ll/᩸ۗᩴ;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    .line 3082
+    iput p2, p0, Ll/ۤܺᩴ;->ܳ:I
+
+    .line 3084
+    invoke-virtual {p1, p2}, Ll/᩵᩻ᩴ;->ᩴ(I)I
+
+    move-result v1
+
+    iput v1, p0, Ll/ۤܺᩴ;->ܿ:I
+
+    iput v1, p0, Ll/ۤܺᩴ;->ۖ:I
+
+    .line 3085
+    iput v0, p0, Ll/ۤܺᩴ;->ᩳ:I
+
+    iput v0, p0, Ll/ۤܺᩴ;->۬:I
+
+    const/4 v0, 0x1
+
+    .line 3086
+    iput-boolean v0, p0, Ll/ۤܺᩴ;->ᩴۙ:Z
+
+    .line 3087
+    invoke-virtual {p1, p2}, Ll/᩵᩻ᩴ;->ܺ(I)I
 
     move-result v0
 
-    return v0
+    iput v0, p0, Ll/ۤܺᩴ;->᩵:I
+
+    .line 3088
+    invoke-virtual {p1}, Ll/᩵᩻ᩴ;->ᩴ()I
+
+    move-result v0
+
+    iput v0, p0, Ll/ۤܺᩴ;->֨:I
+
+    .line 3089
+    invoke-virtual {p1, p2}, Ll/᩵᩻ᩴ;->۫(I)I
+
+    move-result p1
+
+    iput p1, p0, Ll/ۤܺᩴ;->֡:I
+
+    iput p1, p0, Ll/ۤܺᩴ;->۠:I
+
+    return-void
 .end method
 
-.method public final synthetic poll()Ljava/nio/file/WatchKey;
+.method public constructor <init>(Ll/᩵᩻ᩴ;ILl/֨ܶᩴ;Ll/᩻ۗᩴ;Ll/۟᩻ᩴ;Ll/᩸ۗᩴ;IIII)V
     .locals 1
 
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    .line 3057
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0}, Ll/ۡ۟ᩴ;->poll()Ll/᩵۟ᩴ;
+    const/4 v0, -0x1
 
-    move-result-object v0
+    .line 3040
+    iput v0, p0, Ll/ۤܺᩴ;->᩻:I
 
-    invoke-static {v0}, Ll/ᩴܺᩴ;->a(Ll/᩵۟ᩴ;)Ljava/nio/file/WatchKey;
+    .line 3041
+    iput v0, p0, Ll/ۤܺᩴ;->ܽ:I
 
-    move-result-object v0
+    .line 3058
+    iput-object p1, p0, Ll/ۤܺᩴ;->֫:Ll/᩵᩻ᩴ;
 
-    return-object v0
-.end method
+    .line 3059
+    iput-object p3, p0, Ll/ۤܺᩴ;->ܳۙ:Ll/֨ܶᩴ;
 
-.method public final synthetic poll(JLjava/util/concurrent/TimeUnit;)Ljava/nio/file/WatchKey;
-    .locals 1
+    .line 3060
+    iput-object p4, p0, Ll/ۤܺᩴ;->ۗ:Ll/᩻ۗᩴ;
 
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    .line 3061
+    iput-object p5, p0, Ll/ۤܺᩴ;->ܶ:Ll/۟᩻ᩴ;
 
-    invoke-interface {v0, p1, p2, p3}, Ll/ۡ۟ᩴ;->poll(JLjava/util/concurrent/TimeUnit;)Ll/᩵۟ᩴ;
+    .line 3062
+    iput-object p6, p0, Ll/ۤܺᩴ;->ᩴ:Ll/᩸ۗᩴ;
 
-    move-result-object p1
+    .line 3063
+    iput p2, p0, Ll/ۤܺᩴ;->ܳ:I
 
-    invoke-static {p1}, Ll/ᩴܺᩴ;->a(Ll/᩵۟ᩴ;)Ljava/nio/file/WatchKey;
+    .line 3064
+    iput p7, p0, Ll/ۤܺᩴ;->ۖ:I
 
-    move-result-object p1
+    .line 3065
+    iput p8, p0, Ll/ۤܺᩴ;->ܿ:I
 
-    return-object p1
-.end method
+    .line 3066
+    iput p9, p0, Ll/ۤܺᩴ;->۬:I
 
-.method public final synthetic take()Ljava/nio/file/WatchKey;
-    .locals 1
+    .line 3067
+    iput p10, p0, Ll/ۤܺᩴ;->ᩳ:I
 
-    iget-object v0, p0, Ll/ۤܺᩴ;->a:Ll/ۡ۟ᩴ;
+    const/4 p3, 0x0
 
-    invoke-interface {v0}, Ll/ۡ۟ᩴ;->take()Ll/᩵۟ᩴ;
+    .line 3068
+    iput-boolean p3, p0, Ll/ۤܺᩴ;->ᩴۙ:Z
 
-    move-result-object v0
+    .line 3069
+    invoke-virtual {p1, p2}, Ll/᩵᩻ᩴ;->ܺ(I)I
 
-    invoke-static {v0}, Ll/ᩴܺᩴ;->a(Ll/᩵۟ᩴ;)Ljava/nio/file/WatchKey;
+    move-result p3
 
-    move-result-object v0
+    iput p3, p0, Ll/ۤܺᩴ;->᩵:I
 
-    return-object v0
+    .line 3070
+    invoke-virtual {p1}, Ll/᩵᩻ᩴ;->ᩴ()I
+
+    move-result p3
+
+    iput p3, p0, Ll/ۤܺᩴ;->֨:I
+
+    .line 3071
+    invoke-virtual {p1, p2}, Ll/᩵᩻ᩴ;->۫(I)I
+
+    move-result p1
+
+    iput p1, p0, Ll/ۤܺᩴ;->۠:I
+
+    .line 3072
+    invoke-static {p6, p1}, Ll/ܶܺᩴ;->ۙ(Ll/᩸ۗᩴ;I)I
+
+    move-result p1
+
+    iput p1, p0, Ll/ۤܺᩴ;->֡:I
+
+    return-void
 .end method

@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public final ۨ(Ljava/lang/String;)V
+.method public final ۤ(Ljava/lang/String;)V
     .locals 0
 
     return-void

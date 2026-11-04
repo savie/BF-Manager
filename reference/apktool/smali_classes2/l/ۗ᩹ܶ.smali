@@ -1,316 +1,76 @@
 .class public final Ll/ۗ᩹ܶ;
-.super Ll/ܳۚܶ;
-.source "GBFP"
+.super Ljava/lang/Object;
+.source "99JQ"
 
 
 # static fields
-.field public static final ۙ:Ll/ۗ᩹ܶ;
+.field public static final ۙ:Ljava/util/HashMap;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    .line 35
-    new-instance v0, Ll/ۗ᩹ܶ;
-
-    .line 36
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 35
-    sput-object v0, Ll/ۗ᩹ܶ;->ۙ:Ll/ۗ᩹ܶ;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ()I
-    .locals 1
-
-    const/4 v0, 0x2
-
-    return v0
-.end method
-
-.method public final ۙ(Ll/ۧۚܶ;)Ljava/lang/String;
-    .locals 4
-
-    .line 50
-    invoke-virtual {p1}, Ll/ܽۚܶ;->ۘ()Ll/֡᩺ܶ;
-
-    move-result-object v0
-
-    .line 51
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ll/ܺ᩺ܶ;->۟()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v3}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/ܺ᩺ܶ;->۟()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 52
-    invoke-static {p1}, Ll/ܳۚܶ;->ۖ(Ll/ۧۚܶ;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ܽۚܶ;)Ljava/util/BitSet;
     .locals 3
 
-    .line 94
-    invoke-virtual {p1}, Ll/ܽۚܶ;->ۘ()Ll/֡᩺ܶ;
+    .line 35
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 95
-    new-instance v0, Ljava/util/BitSet;
+    sput-object v0, Ll/ۗ᩹ܶ;->ۙ:Ljava/util/HashMap;
 
-    const/4 v1, 0x2
+    .line 38
+    new-instance v1, Ll/᩻᩹ܶ;
 
-    invoke-direct {v0, v1}, Ljava/util/BitSet;-><init>(I)V
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    const-string v2, "DES/ECB/NoPadding"
 
-    .line 97
-    invoke-virtual {p1, v1}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    .line 49
+    new-instance v1, Ll/ܽ᩹ܶ;
 
-    invoke-virtual {v2}, Ll/ܺ᩺ܶ;->ᩴ()I
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    move-result v2
+    const-string v2, "RC4"
 
-    invoke-static {v2}, Ll/ܳۚܶ;->ܰ(I)Z
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    const/4 v1, 0x1
-
-    .line 98
-    invoke-virtual {p1, v1}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll/ܺ᩺ܶ;->ᩴ()I
-
-    move-result p1
-
-    invoke-static {p1}, Ll/ܳۚܶ;->ܰ(I)Z
-
-    move-result p1
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(Ll/ۖᩴܶ;Ll/ۧۚܶ;)V
-    .locals 4
-
-    .line 118
-    invoke-virtual {p2}, Ll/ܽۚܶ;->ۘ()Ll/֡᩺ܶ;
-
-    move-result-object v0
-
-    .line 119
-    move-object v1, p2
-
-    check-cast v1, Ll/ۡ᩹ܶ;
-
-    invoke-virtual {v1}, Ll/ۡ᩹ܶ;->ᩴ()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    .line 123
-    invoke-virtual {v0, v2}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ll/ܺ᩺ܶ;->ᩴ()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v3}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll/ܺ᩺ܶ;->ᩴ()I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Ll/ܳۚܶ;->ܰ(II)I
-
-    move-result v0
-
-    .line 122
-    invoke-static {p2, v0}, Ll/ܳۚܶ;->ۙ(Ll/ܽۚܶ;I)S
-
-    move-result p2
-
-    int-to-short v0, v1
-
-    .line 121
-    invoke-static {p1, p2, v0}, Ll/ܳۚܶ;->ۙ(Ll/᩻ᩳܶ;SS)V
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ۙ(Ll/ۡ᩹ܶ;)Z
-    .locals 1
+.method public static ۙ()Ll/ۜܶܶ;
+    .locals 2
 
-    .line 107
-    invoke-virtual {p1}, Ll/ۡ᩹ܶ;->ᩴ()I
+    const-string v0, "RC4"
 
-    move-result p1
+    .line 63
+    sget-object v1, Ll/ۗ᩹ܶ;->ۙ:Ljava/util/HashMap;
 
-    if-eqz p1, :cond_0
-
-    int-to-short v0, p1
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final ܰ(Ll/ۧۚܶ;)Ljava/lang/String;
-    .locals 0
-
-    .line 60
-    invoke-static {p1}, Ll/ܳۚܶ;->ۨ(Ll/ۧۚܶ;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ܰ(Ll/ܽۚܶ;)Z
-    .locals 4
-
-    .line 76
-    invoke-virtual {p1}, Ll/ܽۚܶ;->ۘ()Ll/֡᩺ܶ;
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 78
-    instance-of v1, p1, Ll/ۡ᩹ܶ;
+    check-cast v0, Ll/ܳܶܶ;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_2
-
-    .line 79
-    invoke-virtual {v0}, Ll/ۚᩴܶ;->size()I
-
-    move-result v1
-
-    const/4 v3, 0x2
-
-    if-ne v1, v3, :cond_2
-
-    .line 80
-    invoke-virtual {v0, v2}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ll/ܺ᩺ܶ;->ᩴ()I
-
-    move-result v1
-
-    invoke-static {v1}, Ll/ܳۚܶ;->ܰ(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x1
-
-    .line 81
-    invoke-virtual {v0, v1}, Ll/ۚᩴܶ;->get(I)Ll/ܺ᩺ܶ;
+    .line 67
+    invoke-interface {v0}, Ll/ܳܶܶ;->create()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/ܺ᩺ܶ;->ᩴ()I
+    check-cast v0, Ll/ۜܶܶ;
 
-    move-result v0
+    return-object v0
 
-    invoke-static {v0}, Ll/ܳۚܶ;->ܰ(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    .line 85
+    .line 65
     :cond_0
-    check-cast p1, Ll/ۡ᩹ܶ;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 86
-    invoke-virtual {p1}, Ll/ۡ᩹ܶ;->۠()Z
+    const-string v1, "Unknown Cipher RC4"
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0, p1}, Ll/ۗ᩹ܶ;->ۙ(Ll/ۡ᩹ܶ;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_0
-    return v2
+    throw v0
 .end method

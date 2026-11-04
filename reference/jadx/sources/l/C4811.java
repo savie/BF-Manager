@@ -1,68 +1,90 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙᩳۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A5OQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4811 extends C4987 {
+import java.util.HashMap;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C11868 f16903;
+/* JADX INFO: renamed from: l.ۙۢۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UITV */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4811 {
 
-    @Override // l.C4987, java.lang.Throwable
-    public final /* bridge */ /* synthetic */ Throwable initCause(Throwable th) {
-        initCause(th);
-        return this;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashMap f16836 = new HashMap();
 
-    @Override // l.C4987, java.lang.Throwable
-    public final /* bridge */ /* synthetic */ C4987 initCause(Throwable th) {
-        initCause(th);
-        return this;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f16839 = new HashMap();
 
-    public C4811(String str, int i, int i2) {
-        super(str);
-        C11868 c11868 = new C11868();
-        this.f16903 = c11868;
-        c11868.m29588(i);
-        c11868.m29581(i2);
-        c11868.m29579(i);
-        c11868.m29586(i2);
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final HashMap f16838 = new HashMap();
 
-    public C4811(String str, C3504 c3504) {
-        super(str);
-        C11868 c11868 = new C11868();
-        this.f16903 = c11868;
-        c11868.m29587(c3504);
-        c11868.m29582(c3504);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f16837 = new HashMap();
 
-    public C4811(String str, C11868 c11868) {
-        super(str);
-        this.f16903 = c11868;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f16840 = new HashMap();
 
-    public C4811(String str, AbstractC23157 abstractC23157) {
-        this(str, abstractC23157.m51155(), abstractC23157.m51159());
-    }
-
-    public C4811(String str, C18923 c18923) {
-        this(str, c18923.m43583(), c18923.m43585());
-    }
-
-    @Override // l.C4987, java.lang.Throwable
-    public final String toString() {
-        return super.toString() + " " + this.f16903;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C1345 m14831(AbstractC1566 abstractC1566) {
+        return (C1345) this.f16836.get(abstractC1566);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11868 m13367() {
-        return this.f16903;
+    public final C1345 m14830(C1345 c1345) {
+        synchronized (this.f16836) {
+            C1345 c1346 = (C1345) this.f16836.put(c1345.getType(), c1345);
+            if (c1346 != null) {
+                c1345 = c1346;
+            }
+        }
+        return c1345;
     }
 
-    @Override // java.lang.Throwable
-    public final synchronized void initCause(Throwable th) {
-        super.initCause(th);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C21965 m14834(int i) {
+        C21965 c21965;
+        synchronized (this.f16837) {
+            c21965 = (C21965) this.f16837.get(Integer.valueOf(i));
+        }
+        return c21965;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m14836(int i, C21965 c21965) {
+        synchronized (this.f16837) {
+            this.f16837.put(Integer.valueOf(i), c21965);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C21965 m14835(C21965 c21965) {
+        synchronized (this.f16838) {
+            C21965 c21966 = (C21965) this.f16838.get(c21965);
+            if (c21966 != null) {
+                return c21966;
+            }
+            this.f16838.put(c21965, c21965);
+            return c21965;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C14022 m14833(C14022 c14022) {
+        synchronized (this.f16839) {
+            C14022 c14023 = (C14022) this.f16839.get(c14022);
+            if (c14023 != null) {
+                return c14023;
+            }
+            this.f16839.put(c14022, c14022);
+            return c14022;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C10776 m14832(String str) {
+        return (C10776) this.f16840.get(str);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m14837(C10776 c10776) {
+        this.f16840.put(c10776.m27469(), c10776);
     }
 }

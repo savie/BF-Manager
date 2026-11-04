@@ -8,9 +8,9 @@
 
 .field public static final errorMsg:Ljava/lang/String;
 
-.field public static final libname:Ljava/lang/String; = "libzstd-jni-1.5.7-7"
+.field public static final libname:Ljava/lang/String; = "libzstd-jni-1.5.7-12"
 
-.field public static final libnameShort:Ljava/lang/String; = "zstd-jni-1.5.7-7"
+.field public static final libnameShort:Ljava/lang/String; = "zstd-jni-1.5.7-12"
 
 .field public static loaded:Ljava/util/concurrent/atomic/AtomicBoolean; = null
 
@@ -42,10 +42,10 @@
 
     move-result-object v2
 
-    const-string v3, " or load zstd-jni-1.5.7-7 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.7-7 in your system."
+    const-string v3, " or load zstd-jni-1.5.7-12 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.7-12 in your system."
 
     .line 0
-    invoke-static {v1, v2, v3}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -312,29 +312,24 @@
 
     :cond_1
     :try_start_2
-    const-string v3, "org.osgi.framework.BundleEvent"
+    const-string v3, "libzstd-jni-1.5.7-12"
 
     .line 112
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    const-string v3, "libzstd-jni-1.5.7-7"
-
-    .line 113
     invoke-static {v3}, Lcom/github/luben/zstd/util/Native;->loadLibrary(Ljava/lang/String;)V
 
-    .line 114
+    .line 113
     sget-object v3, Lcom/github/luben/zstd/util/Native;->loaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 115
+    .line 114
     monitor-exit v0
 
     return-void
 
-    .line 120
+    .line 119
     :catchall_0
     :try_start_3
     const-class v3, Lcom/github/luben/zstd/util/Native;
@@ -348,12 +343,12 @@
     if-nez v2, :cond_2
 
     :try_start_4
-    const-string p0, "zstd-jni-1.5.7-7"
+    const-string p0, "zstd-jni-1.5.7-12"
 
-    .line 125
+    .line 124
     invoke-static {p0}, Lcom/github/luben/zstd/util/Native;->loadLibrary(Ljava/lang/String;)V
 
-    .line 126
+    .line 125
     sget-object p0, Lcom/github/luben/zstd/util/Native;->loaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -361,7 +356,7 @@
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 127
+    .line 126
     monitor-exit v0
 
     return-void
@@ -369,7 +364,7 @@
     :catch_0
     move-exception p0
 
-    .line 129
+    .line 128
     :try_start_5
     new-instance v1, Ljava/lang/UnsatisfiedLinkError;
 
@@ -397,14 +392,14 @@
 
     invoke-direct {v1, v2}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
 
-    .line 130
+    .line 129
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p0
 
     invoke-virtual {v1, p0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 131
+    .line 130
     throw v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
@@ -413,9 +408,9 @@
     const/4 v3, 0x0
 
     :try_start_6
-    const-string v5, "libzstd-jni-1.5.7-7"
+    const-string v5, "libzstd-jni-1.5.7-12"
 
-    .line 137
+    .line 136
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -437,11 +432,11 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_7
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 139
+    .line 138
     :try_start_7
     invoke-virtual {p0}, Ljava/io/File;->deleteOnExit()V
 
-    .line 141
+    .line 140
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -454,7 +449,7 @@
     :try_start_8
     new-array v5, v5, [B
 
-    .line 144
+    .line 143
     :goto_0
     invoke-virtual {v2, v5}, Ljava/io/InputStream;->read([B)I
 
@@ -467,11 +462,11 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 151
+    .line 150
     :try_start_9
     invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
 
-    .line 152
+    .line 151
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
@@ -482,7 +477,7 @@
     :catch_1
     move-object v3, v1
 
-    .line 158
+    .line 157
     :goto_1
     :try_start_a
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -501,16 +496,16 @@
     move-exception v1
 
     :try_start_b
-    const-string v5, "zstd-jni-1.5.7-7"
+    const-string v5, "zstd-jni-1.5.7-12"
 
-    .line 162
+    .line 161
     invoke-static {v5}, Lcom/github/luben/zstd/util/Native;->loadLibrary(Ljava/lang/String;)V
     :try_end_b
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_b .. :try_end_b} :catch_4
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_6
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 174
+    .line 173
     :goto_2
     :try_start_c
     sget-object v1, Lcom/github/luben/zstd/util/Native;->loaded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -520,16 +515,16 @@
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 183
+    .line 182
     :try_start_d
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     if-eqz v3, :cond_3
 
-    .line 185
+    .line 184
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
 
-    .line 187
+    .line 186
     :cond_3
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -537,13 +532,13 @@
 
     if-eqz v1, :cond_4
 
-    .line 188
+    .line 187
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_3
     .catchall {:try_start_d .. :try_end_d} :catchall_4
 
-    .line 194
+    .line 193
     :catch_3
     :cond_4
     monitor-exit v0
@@ -553,7 +548,7 @@
     :catch_4
     move-exception v4
 
-    .line 166
+    .line 165
     :try_start_e
     new-instance v5, Ljava/lang/UnsatisfiedLinkError;
 
@@ -561,7 +556,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 167
+    .line 166
     invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -572,7 +567,7 @@
 
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 168
+    .line 167
     invoke-virtual {v4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -593,14 +588,14 @@
 
     invoke-direct {v5, v1}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
 
-    .line 170
+    .line 169
     invoke-virtual {v4}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v1
 
     invoke-virtual {v5, v1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 171
+    .line 170
     throw v5
     :try_end_e
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_6
@@ -609,7 +604,7 @@
     :cond_5
     const/4 v7, 0x0
 
-    .line 148
+    .line 147
     :try_start_f
     invoke-virtual {v1, v5, v7, v6}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_f
@@ -657,7 +652,7 @@
 
     move-object p0, v1
 
-    .line 177
+    .line 176
     :goto_3
     :try_start_10
     new-instance v4, Ljava/lang/ExceptionInInitializerError;
@@ -666,11 +661,11 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Cannot unpack libzstd-jni-1.5.7-7: "
+    const-string v6, "Cannot unpack libzstd-jni-1.5.7-12: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 178
+    .line 177
     invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v6
@@ -683,14 +678,14 @@
 
     invoke-direct {v4, v5}, Ljava/lang/ExceptionInInitializerError;-><init>(Ljava/lang/String;)V
 
-    .line 179
+    .line 178
     invoke-virtual {v3}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v3
 
     invoke-virtual {v4, v3}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 180
+    .line 179
     throw v4
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_3
@@ -704,33 +699,33 @@
 
     move-object v1, v8
 
-    .line 183
+    .line 182
     :goto_4
     :try_start_11
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     if-eqz v3, :cond_6
 
-    .line 185
+    .line 184
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
 
     :cond_6
     if-eqz p0, :cond_7
 
-    .line 187
+    .line 186
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 188
+    .line 187
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
     :try_end_11
     .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_8
     .catchall {:try_start_11 .. :try_end_11} :catchall_4
 
-    .line 193
+    .line 192
     :catch_8
     :cond_7
     :try_start_12
@@ -856,12 +851,12 @@
     const-string v1, "x86_64"
 
     :cond_0
-    const-string v2, "/libzstd-jni-1.5.7-7."
+    const-string v2, "/libzstd-jni-1.5.7-12."
 
     const-string v3, "/"
 
     .line 0
-    invoke-static {v3, v0, v3, v1, v2}, Ll/۫۠ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v0, v3, v1, v2}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

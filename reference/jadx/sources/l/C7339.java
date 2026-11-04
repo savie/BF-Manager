@@ -1,68 +1,34 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import bin.mt.plus.R;
+import java.io.Serializable;
 
-/* JADX INFO: renamed from: l.۟۠ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A186 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7339 implements InterfaceC12984 {
+/* JADX INFO: renamed from: l.ۜᩴۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B6LU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7339 extends AbstractDialogInterfaceOnClickListenerC8552 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ long f24382;
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22124 f24156;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f24383 = true;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C7339(C22124 c22124, AbstractActivityC17204 abstractActivityC17204) {
+        super(abstractActivityC17204, -1);
+        this.f24156 = c22124;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC8978 f24384;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InputStream f24385;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f24386;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f24387;
-
-    @Override // l.InterfaceC12984
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo19602(AbstractC20745 abstractC20745, int i) throws IOException {
-        OutputStream outputStreamMo33976 = abstractC20745.mo33976(false);
+    @Override // l.AbstractDialogInterfaceOnClickListenerC8552
+    /* JADX INFO: renamed from: ܶ */
+    public final void mo1877() {
+        C22124 c22124 = this.f24156;
         try {
-            this.f24383 = false;
-            C22487.m49992(this.f24385, outputStreamMo33976, this.f24382, this.f24384);
-            if (outputStreamMo33976 != null) {
-                outputStreamMo33976.close();
-            }
-            if (i == 0 && this.f24387) {
-                C5553.m15325(this.f24386);
-            }
-        } catch (Throwable th) {
-            if (outputStreamMo33976 != null) {
-                try {
-                    outputStreamMo33976.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-            }
-            throw th;
+            int iM50083 = C22124.m50083(m22914());
+            c22124.m12566((Serializable) Integer.valueOf(iM50083));
+            c22124.m29658().edit().putInt(c22124.m12557(), iM50083).apply();
+            c22124.m50084(iM50083);
+            m22951();
+        } catch (ArithmeticException | IllegalArgumentException unused) {
+            m22952(R.string.MT_Protector);
         }
-    }
-
-    public C7339(AbstractC20745 abstractC20745, InputStream inputStream, long j, InterfaceC8978 interfaceC8978, boolean z) {
-        this.f24386 = abstractC20745;
-        this.f24385 = inputStream;
-        this.f24382 = j;
-        this.f24384 = interfaceC8978;
-        this.f24387 = z;
-    }
-
-    @Override // l.InterfaceC12984
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo19603(IOException iOException) {
-        return this.f24383;
     }
 }

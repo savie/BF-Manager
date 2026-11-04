@@ -1,12 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ܿۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6QA */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1258 extends C23289 {
-    @Override // l.C8472
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo1058() {
-        return 66;
+/* JADX INFO: renamed from: l.֨ܶۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C1258 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC19728 f4533;
+
+    public C1258(AbstractC19728 abstractC19728) {
+        this.f4533 = abstractC19728;
     }
 }

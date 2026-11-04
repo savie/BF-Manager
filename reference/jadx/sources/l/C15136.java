@@ -1,108 +1,102 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
-import java.util.ArrayList;
-import java.util.Iterator;
+import android.graphics.PointF;
+import android.opengl.GLES20;
+import android.opengl.GLSurfaceView;
+import android.opengl.Matrix;
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
-/* JADX INFO: renamed from: l.ܶۡ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: C12B */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15136 extends AbstractC4674 {
-    public C15136() {
-        super(R.string.MT_Protector, R.drawable.MT_Protector);
+/* JADX INFO: renamed from: l.ܳۚ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8S0 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15136 implements GLSurfaceView.Renderer, InterfaceC1713, InterfaceC9387 {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final C19612 f49377;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final float[] f49378;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final float[] f49382;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public float f49383;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final float[] f49384;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C5442 f49386;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public float f49387;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final float[] f49385 = new float[16];
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final float[] f49381 = new float[16];
+
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final float[] f49379 = new float[16];
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final float[] f49380 = new float[16];
+
+    @Override // android.opengl.GLSurfaceView.Renderer
+    public final synchronized void onSurfaceCreated(GL10 gl10, EGLConfig eGLConfig) {
+        C5442.m16266(this.f49386, this.f49377.m45265());
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        if (c21422.m47975() == 2) {
-            ArrayList arrayList = new ArrayList(2);
-            Iterator it = c21422.m47979().iterator();
-            while (it.hasNext()) {
-                arrayList.add(new C10840((InterfaceC2557) it.next()));
-            }
-            c21422.m47960().mo13033(c21422.m47965(), arrayList, new RunnableC17999(this, arrayList, c21422, 1));
-            return;
-        }
-        c21422.m47960().m28625(c21422.m47965(), c21422.m47981(), new C2434(this, c21422.m47970(), c21422));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m36301(C15136 c15136, ArrayList arrayList, C21422 c21422) {
-        ((C10840) arrayList.get(0)).m27172();
-        ((C10840) arrayList.get(1)).m27172();
-        AbstractC20745 abstractC20745M27177 = ((C10840) arrayList.get(0)).m27177();
-        AbstractC20745 abstractC20745M27178 = ((C10840) arrayList.get(1)).m27177();
-        C3246 c3246 = new C3246(abstractC20745M27177, abstractC20745M27178, abstractC20745M27177.mo33986(), abstractC20745M27178.mo33986(), c21422.m47960(), c21422.m47960());
-        C11545 c11545M47965 = c21422.m47965();
-        c3246.m9719();
-        c15136.m36300(c11545M47965, c3246);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ void m36302(C15136 c15136, C10840 c10840, C21422 c21422, C11545 c11545, C10840 c10841) {
-        String name;
-        String name2;
-        c10841.m27172();
-        AbstractC20745 abstractC20745M27177 = c10840.m27177();
-        AbstractC20745 abstractC20745M27178 = c10841.m27177();
-        boolean zM28762 = c21422.m47965().m28762();
-        if (abstractC20745M27177.getName().equals(abstractC20745M27178.getName())) {
-            int i = R.string.MT_Protector;
-            name = C16737.m39264(zM28762 ? R.string.MT_Protector : R.string.MT_Protector, abstractC20745M27177.getName());
-            if (!zM28762) {
-                i = R.string.MT_Protector;
-            }
-            name2 = C16737.m39264(i, abstractC20745M27178.getName());
-        } else {
-            name = abstractC20745M27177.getName();
-            name2 = abstractC20745M27178.getName();
-        }
-        C3246 c3246 = new C3246(c10840.m27177(), c10841.m27177(), name, name2, c21422.m47960(), c11545.m28817());
-        if (!zM28762) {
-            c3246.m9718();
-        }
-        c15136.m36300(c21422.m47965(), c3246);
+    @Override // l.InterfaceC9387
+    /* JADX INFO: renamed from: ۙ */
+    public final synchronized void mo24714(float f, float[] fArr) {
+        float[] fArr2 = this.f49384;
+        System.arraycopy(fArr, 0, fArr2, 0, fArr2.length);
+        float f2 = -f;
+        this.f49387 = f2;
+        Matrix.setRotateM(this.f49378, 0, -this.f49383, (float) Math.cos(f2), (float) Math.sin(this.f49387), 0.0f);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m36300(final C11545 c11545, final C3246 c3246) {
-        View viewM30995 = c11545.m28824().m30995(R.layout.MT_Protector);
-        EditText editText = (EditText) viewM30995.findViewById(R.id.MT_Protector);
-        EditText editText2 = (EditText) viewM30995.findViewById(R.id.editText2);
-        ((TextView) viewM30995.findViewById(R.id.MT_Protector)).setText(m12942());
-        editText.setKeyListener(null);
-        editText2.setKeyListener(null);
-        C4388.m12238(c3246.f12072, c3246.f12075, editText, editText2);
-        Main mainM28824 = c11545.m28824();
-        int i = DialogInterfaceC19356.f62401;
-        C8067 c8067 = new C8067(mainM28824);
-        c8067.m21258(viewM30995);
-        c8067.m21251(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۚۡ᩹
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i2) {
-                C3246 c3247 = c3246;
-                c3247.m9717();
-                AbstractC20745 abstractC20745 = c3247.f12071;
-                AbstractC20745 abstractC20746 = c3247.f12074;
-                C15136 c15136 = this.f18229;
-                AbstractC20745 abstractC20745M4734 = C1333.m4734(c11545, c15136.m12942(), "txt");
-                int i3 = C20725.f67443;
-                C10142 c10142 = new C10142(C22897.class);
-                c10142.m25768("saveAsPath", abstractC20745M4734.mo33986());
-                c10142.m25768("inputPath1", abstractC20745.mo33986());
-                c10142.m25768("inputPath2", abstractC20746.mo33986());
-                c10142.m25768("title", C16737.m39288(c15136.m12942()));
-                c10142.m25763();
-            }
-        });
-        c8067.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        c8067.m21271(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        c8067.m21269().m44361().setOnClickListener(new ViewOnClickListenerC8043(c3246, editText, editText2, 1));
+    public final synchronized void m36413(PointF pointF) {
+        float f = pointF.y;
+        this.f49383 = f;
+        Matrix.setRotateM(this.f49378, 0, -f, (float) Math.cos(this.f49387), (float) Math.sin(this.f49387), 0.0f);
+        Matrix.setRotateM(this.f49382, 0, -pointF.x, 0.0f, 1.0f, 0.0f);
+    }
+
+    public C15136(C5442 c5442, C19612 c19612) {
+        this.f49386 = c5442;
+        float[] fArr = new float[16];
+        this.f49384 = fArr;
+        float[] fArr2 = new float[16];
+        this.f49378 = fArr2;
+        float[] fArr3 = new float[16];
+        this.f49382 = fArr3;
+        this.f49377 = c19612;
+        Matrix.setIdentityM(fArr, 0);
+        Matrix.setIdentityM(fArr2, 0);
+        Matrix.setIdentityM(fArr3, 0);
+        this.f49387 = 3.1415927f;
+    }
+
+    @Override // android.opengl.GLSurfaceView.Renderer
+    public final void onSurfaceChanged(GL10 gl10, int i, int i2) {
+        GLES20.glViewport(0, 0, i, i2);
+        float f = i / i2;
+        Matrix.perspectiveM(this.f49385, 0, f > 1.0f ? (float) (Math.toDegrees(Math.atan(Math.tan(Math.toRadians(45.0d)) / ((double) f))) * 2.0d) : 90.0f, f, 0.1f, 100.0f);
+    }
+
+    @Override // android.opengl.GLSurfaceView.Renderer
+    public final void onDrawFrame(GL10 gl10) {
+        synchronized (this) {
+            Matrix.multiplyMM(this.f49380, 0, this.f49384, 0, this.f49382, 0);
+            Matrix.multiplyMM(this.f49379, 0, this.f49378, 0, this.f49380, 0);
+        }
+        Matrix.multiplyMM(this.f49381, 0, this.f49385, 0, this.f49379, 0);
+        this.f49377.m45266(this.f49381);
     }
 }

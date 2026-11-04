@@ -1,15 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨ۡۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
+import android.content.res.Resources;
+import android.os.Build;
+
+/* JADX INFO: renamed from: l.֨۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z4TG */
 /* JADX INFO: loaded from: classes2.dex */
-public class C1015 extends C23595 {
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC13717 f4704;
-
-    public C1015(InterfaceC13717 interfaceC13717) {
-        C3111.m9332(interfaceC13717);
-        this.f4704 = interfaceC13717;
+public final class C1015 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m3912(Resources.Theme theme) {
+        int i = Build.VERSION.SDK_INT;
+        if (i >= 29) {
+            C9963.m25794(theme);
+        } else if (i >= 23) {
+            C18914.m43919(theme);
+        }
     }
 }

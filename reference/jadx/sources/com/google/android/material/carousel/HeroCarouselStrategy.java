@@ -2,8 +2,8 @@ package com.google.android.material.carousel;
 
 import android.view.View;
 import android.view.ViewGroup;
-import l.C22432;
-import l.C4449;
+import l.C16973;
+import l.C18185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class HeroCarouselStrategy extends CarouselStrategy {
@@ -19,19 +19,19 @@ public class HeroCarouselStrategy extends CarouselStrategy {
         if (carousel.isHorizontal()) {
             containerHeight = carousel.getContainerWidth();
         }
-        C22432 c22432 = (C22432) view.getLayoutParams();
-        float f = ((ViewGroup.MarginLayoutParams) c22432).topMargin + ((ViewGroup.MarginLayoutParams) c22432).bottomMargin;
+        C18185 c18185 = (C18185) view.getLayoutParams();
+        float f = ((ViewGroup.MarginLayoutParams) c18185).topMargin + ((ViewGroup.MarginLayoutParams) c18185).bottomMargin;
         float measuredWidth = view.getMeasuredWidth() * 2;
         if (carousel.isHorizontal()) {
-            f = ((ViewGroup.MarginLayoutParams) c22432).leftMargin + ((ViewGroup.MarginLayoutParams) c22432).rightMargin;
+            f = ((ViewGroup.MarginLayoutParams) c18185).leftMargin + ((ViewGroup.MarginLayoutParams) c18185).rightMargin;
             measuredWidth = view.getMeasuredHeight() * 2;
         }
         float smallItemSizeMin = getSmallItemSizeMin() + f;
         float fMax = Math.max(getSmallItemSizeMax() + f, smallItemSizeMin);
         float f2 = containerHeight;
         float fMin = Math.min(measuredWidth + f, f2);
-        float fM12401 = C4449.m12401((measuredWidth / 3.0f) + f, smallItemSizeMin + f, fMax + f);
-        float f3 = (fMin + fM12401) / 2.0f;
+        float fM40018 = C16973.m40018((measuredWidth / 3.0f) + f, smallItemSizeMin + f, fMax + f);
+        float f3 = (fMin + fM40018) / 2.0f;
         int[] iArr = SMALL_COUNTS;
         int[] iArr2 = f2 < 2.0f * smallItemSizeMin ? new int[]{0} : iArr;
         int iMax = (int) Math.max(1.0d, Math.floor((f2 - (CarouselStrategyHelper.maxValue(iArr) * fMax)) / fMin));
@@ -47,10 +47,10 @@ public class HeroCarouselStrategy extends CarouselStrategy {
         } else {
             iArrDoubleCounts = MEDIUM_COUNTS;
         }
-        Arrangement arrangementFindLowestCostArrangement = Arrangement.findLowestCostArrangement(f2, fM12401, smallItemSizeMin, fMax, iArrDoubleCounts2, f3, iArrDoubleCounts, fMin, iArr3);
+        Arrangement arrangementFindLowestCostArrangement = Arrangement.findLowestCostArrangement(f2, fM40018, smallItemSizeMin, fMax, iArrDoubleCounts2, f3, iArrDoubleCounts, fMin, iArr3);
         this.keylineCount = arrangementFindLowestCostArrangement.getItemCount();
         if (arrangementFindLowestCostArrangement.getItemCount() > carousel.getItemCount()) {
-            arrangementFindLowestCostArrangement = Arrangement.findLowestCostArrangement(f2, fM12401, smallItemSizeMin, fMax, iArr2, f3, MEDIUM_COUNTS, fMin, iArr3);
+            arrangementFindLowestCostArrangement = Arrangement.findLowestCostArrangement(f2, fM40018, smallItemSizeMin, fMax, iArr2, f3, MEDIUM_COUNTS, fMin, iArr3);
             i = 0;
         } else {
             i = i3;

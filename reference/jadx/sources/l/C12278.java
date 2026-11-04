@@ -1,60 +1,94 @@
 package l;
 
-import android.os.Message;
-import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.ShortBufferException;
+import javax.crypto.spec.DESedeKeySpec;
+import javax.crypto.spec.IvParameterSpec;
 
-/* JADX INFO: renamed from: l.۫۠ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T8IW */
+/* JADX INFO: renamed from: l.ۨۢܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7Y6 */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C12278 implements InterfaceC7359, InterfaceC15954, InterfaceC8773 {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f41054;
-
-    public /* synthetic */ C12278(int i) {
-        this.f41054 = i;
-    }
+public final class C12278 implements InterfaceC21360 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static StringBuilder m30515(String str, String str2, String str3, String str4, String str5) {
-        StringBuilder sb = new StringBuilder(str);
-        sb.append(str2);
-        sb.append(str3);
-        sb.append(str4);
-        sb.append(str5);
-        return sb;
+    public Cipher f39478;
+
+    @Override // l.InterfaceC21360
+    public final int getBlockSize() {
+        return 24;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static StringBuilder m30516(String str, String str2, String str3, StringBuilder sb, ConfigurableProvider configurableProvider) {
-        sb.append(str);
-        configurableProvider.addAlgorithm(str2, sb.toString());
-        StringBuilder sb2 = new StringBuilder();
-        sb2.append(str3);
-        return sb2;
-    }
-
-    @Override // l.InterfaceC15954
-    public Object apply(Object obj) {
-        return (Long) obj;
-    }
-
-    @Override // l.InterfaceC8773
+    @Override // l.InterfaceC21360
     /* JADX INFO: renamed from: ۙ */
-    public void mo5624(Object obj, Message message) {
-        ((C18002) obj).m41926();
+    public final /* synthetic */ void mo3921(int i) {
     }
 
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        InterfaceC10430 interfaceC10430 = (InterfaceC10430) obj;
-        switch (this.f41054) {
-            case 1:
-                interfaceC10430.getClass();
-                break;
-            default:
-                interfaceC10430.getClass();
-                break;
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ void mo3924(byte[] bArr) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo3925() {
+        return true;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۤ */
+    public final /* synthetic */ boolean mo3926() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩴ */
+    public final /* synthetic */ boolean mo3927() {
+        return false;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ int mo3928() {
+        return 0;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ void mo3929(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo3930() {
+        return 8;
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3923(int i, byte[] bArr, byte[] bArr2) throws Exception {
+        if (bArr2.length > 8) {
+            byte[] bArr3 = new byte[8];
+            System.arraycopy(bArr2, 0, bArr3, 0, 8);
+            bArr2 = bArr3;
         }
+        if (bArr.length > 24) {
+            byte[] bArr4 = new byte[24];
+            System.arraycopy(bArr, 0, bArr4, 0, 24);
+            bArr = bArr4;
+        }
+        try {
+            this.f39478 = Cipher.getInstance("DESede/CBC/NoPadding");
+            this.f39478.init(i == 0 ? 1 : 2, SecretKeyFactory.getInstance("DESede").generateSecret(new DESedeKeySpec(bArr)), new IvParameterSpec(bArr2));
+        } catch (Exception e) {
+            this.f39478 = null;
+            throw e;
+        }
+    }
+
+    @Override // l.InterfaceC21360
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3922(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
+        this.f39478.update(bArr, i, i2, bArr2, i3);
     }
 }

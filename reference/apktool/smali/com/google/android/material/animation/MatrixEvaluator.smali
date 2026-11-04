@@ -74,7 +74,7 @@
 
     aget v1, v1, p2
 
-    invoke-static {v0, v1, p1, v1}, Ll/֡۠ۖ;->ۙ(FFFF)F
+    invoke-static {v0, v1, p1, v1}, Ll/ᩴܿ֫;->ۙ(FFFF)F
 
     move-result v0
 

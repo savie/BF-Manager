@@ -1,18 +1,12 @@
 package l;
 
-import android.view.View;
-
-/* JADX INFO: renamed from: l.ۘۨۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 7B5N */
+/* JADX INFO: renamed from: l.ۘۙ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K5ZN */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3912 extends AbstractC8853 {
-    @Override // l.AbstractC20847
-    public final float getValue(Object obj) {
-        return ((View) obj).getScaleX();
-    }
-
-    @Override // l.AbstractC20847
-    public final void setValue(Object obj, float f) {
-        ((View) obj).setScaleX(f);
+public final /* synthetic */ class C3912 implements InterfaceC16438 {
+    @Override // l.InterfaceC16438
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1486(Object obj) {
+        ServiceC4415.m14039();
     }
 }

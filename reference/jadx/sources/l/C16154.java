@@ -1,32 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺ᩶֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: P1ZZ */
+/* JADX INFO: renamed from: l.ܶܳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5Z9 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16154 implements InterfaceC10389 {
+public final class C16154 extends AbstractC9441 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ InterfaceC7107 f52214;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f52444;
 
-    @Override // l.InterfaceC8978
-    /* JADX INFO: renamed from: ۘۙ */
-    public final /* synthetic */ void mo2885() {
-        throw null;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f52445;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24975 f52446;
+
+    public C16154(C24975 c24975, int i, int i2) {
+        this.f52446 = c24975;
+        this.f52444 = i;
+        this.f52445 = i2;
     }
 
-    public C16154(InterfaceC7107 interfaceC7107) {
-        this.f52214 = interfaceC7107;
-    }
-
-    @Override // l.InterfaceC10389
+    @Override // l.AbstractC9441
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2886(long j, long j2, long j3) {
-        this.f52214.mo13817(j2, j3);
+    public final Object mo5053(int i) {
+        C24975 c24975 = this.f52446;
+        return AbstractC6460.m18258(c24975, c24975.m55818().mo8719((i * 4) + this.f52444 + 4));
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f52214.mo2357();
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.f52445;
     }
 }

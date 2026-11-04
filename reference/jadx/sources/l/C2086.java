@@ -1,34 +1,28 @@
 package l;
 
-import android.os.Messenger;
-import android.service.media.MediaBrowserService;
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.֫᩸ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X6AW */
-/* JADX INFO: loaded from: classes2.dex */
-public class C2086 implements InterfaceC23960 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractServiceC21032 f7712;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Messenger f7713;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public MediaBrowserService f7714;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f7715 = new ArrayList();
-
-    public C2086(AbstractServiceC21032 abstractServiceC21032) {
-        this.f7712 = abstractServiceC21032;
+/* JADX INFO: renamed from: l.֫ܿ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: X5U */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2086 extends C5815 implements InterfaceC15970 {
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void add(Object obj) {
+        C18063.m42090();
+        throw null;
     }
 
-    @Override // l.InterfaceC23960
-    public void onCreate() {
-        C14788 c14788 = new C14788(this, this.f7712);
-        this.f7714 = c14788;
-        c14788.onCreate();
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void set(Object obj) {
+        C18063.m42091();
+        throw null;
+    }
+
+    @Override // l.C5815, java.util.Iterator, java.util.ListIterator
+    public final Object next() {
+        return m16946().f3593;
+    }
+
+    @Override // l.C5815, l.InterfaceC6847, java.util.ListIterator
+    public final Object previous() {
+        return m16948().f3593;
     }
 }

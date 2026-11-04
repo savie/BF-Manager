@@ -7,7 +7,7 @@ import org.bouncycastle.math.ec.rfc7748.X25519;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class X25519PrivateKeyParameters extends AsymmetricKeyParameter {
     public static final int KEY_SIZE = 32;
     public static final int SECRET_SIZE = 32;

@@ -1,26 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۢ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: P77N */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5966 {
+import java.net.Inet4Address;
+import java.net.Inet6Address;
+import java.net.InetAddress;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f20320;
+/* JADX INFO: renamed from: l.ۚ᩹᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: C9Z9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5966 extends AbstractC20136 {
+    @Override // l.AbstractC17152
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo7635(C10219 c10219) {
+        InetAddress inetAddress = this.f64714;
+        if (inetAddress != null) {
+            byte[] address = inetAddress.getAddress();
+            if (inetAddress instanceof Inet4Address) {
+                byte[] bArr = new byte[16];
+                for (int i = 0; i < 16; i++) {
+                    if (i < 11) {
+                        bArr[i] = address[i - 12];
+                    } else {
+                        bArr[i] = 0;
+                    }
+                }
+                address = bArr;
+            }
+            c10219.m26354(address.length, address);
+        }
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f20321;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f20322;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f20323;
-
-    public C5966(String str, int i, String str2, String str3) {
-        this.f20323 = str;
-        this.f20320 = str2;
-        this.f20321 = i;
-        this.f20322 = str3;
+    @Override // l.AbstractC20136, l.AbstractC17152
+    /* JADX INFO: renamed from: ۙ */
+    public final C17307 mo7633(boolean z) {
+        C17307 c17307Mo7633 = super.mo7633(z);
+        c17307Mo7633.m40639((Inet6Address) this.f64714);
+        return c17307Mo7633;
     }
 }

@@ -9,9 +9,9 @@
 # instance fields
 .field public final ۙ:Ljava/lang/String;
 
-.field public final ۨ:Ljava/lang/String;
+.field public final ۤ:Ljava/lang/String;
 
-.field public final ܰ:Ljava/lang/String;
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
@@ -25,10 +25,10 @@
     iput-object p1, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ۙ:Ljava/lang/String;
 
     .line 35
-    iput-object p2, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ܰ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->᩷:Ljava/lang/String;
 
     .line 36
-    iput-object p3, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ۨ:Ljava/lang/String;
+    iput-object p3, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ۤ:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,20 +44,20 @@
     return-object v0
 .end method
 
-.method public final ۨ()Ljava/lang/String;
+.method public final ۤ()Ljava/lang/String;
     .locals 1
 
     .line 46
-    iget-object v0, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ܰ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->᩷:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/lang/String;
+.method public final ᩷()Ljava/lang/String;
     .locals 1
 
     .line 51
-    iget-object v0, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ۨ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amazonaws/auth/BasicSessionCredentials;->ۤ:Ljava/lang/String;
 
     return-object v0
 .end method

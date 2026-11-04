@@ -1,175 +1,134 @@
-.class public final Ll/ۜۜᩴ;
-.super Ll/ۘܶᩴ;
-.source "N1QM"
+.class public final synthetic Ll/ۜۜᩴ;
+.super Ljava/lang/Object;
+.source "44R4"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic ܽ:Ll/᩺ۜᩴ;
+.field public final synthetic ֡:Ljava/util/function/IntConsumer;
+
+.field public final synthetic ۟:Ll/۠ۖۧ;
+
+.field public final synthetic ܰ:Ll/᩹ۖ᩸;
+
+.field public final synthetic ܿ:Ljava/util/function/IntSupplier;
+
+.field public final synthetic ᩶:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩺ۜᩴ;)V
+.method public synthetic constructor <init>(Ll/᩹ۖ᩸;Landroid/widget/CheckBox;Ljava/util/function/IntSupplier;Ljava/util/function/IntConsumer;Ll/۠ۖۧ;)V
     .locals 0
 
-    .line 523
-    iput-object p1, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 524
-    iget p1, p1, Ll/ۛۚᩴ;->ܺ:I
+    iput-object p1, p0, Ll/ۜۜᩴ;->ܰ:Ll/᩹ۖ᩸;
 
-    invoke-direct {p0, p1}, Ll/ۘܶᩴ;-><init>(I)V
+    iput-object p2, p0, Ll/ۜۜᩴ;->᩶:Landroid/widget/CheckBox;
 
-    return-void
-.end method
+    iput-object p3, p0, Ll/ۜۜᩴ;->ܿ:Ljava/util/function/IntSupplier;
 
-.method public constructor <init>(Ll/᩺ۜᩴ;II)V
-    .locals 0
+    iput-object p4, p0, Ll/ۜۜᩴ;->֡:Ljava/util/function/IntConsumer;
 
-    .line 527
-    iput-object p1, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
-
-    .line 528
-    invoke-direct {p0, p2, p3}, Ll/ۘܶᩴ;-><init>(II)V
+    iput-object p5, p0, Ll/ۜۜᩴ;->۟:Ll/۠ۖۧ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic forEachRemaining(Ljava/lang/Object;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    .line 521
-    check-cast p1, Ljava/util/function/IntConsumer;
+    .line 52
+    iget-object p1, p0, Ll/ۜۜᩴ;->ܰ:Ll/᩹ۖ᩸;
 
-    invoke-virtual {p0, p1}, Ll/ۜۜᩴ;->forEachRemaining(Ljava/util/function/IntConsumer;)V
+    invoke-virtual {p1}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final forEachRemaining(Ljava/util/function/IntConsumer;)V
-    .locals 4
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 555
-    iget-object v0, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
+    move-result-object p1
 
-    iget-object v0, v0, Ll/᩺ۜᩴ;->ܽ:Ll/ܶۜᩴ;
+    .line 53
+    iget-object v0, p0, Ll/ۜۜᩴ;->᩶:Landroid/widget/CheckBox;
 
-    iget-object v0, v0, Ll/ܶۜᩴ;->ܺ:[I
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    .line 556
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->ۙ()I
+    move-result v0
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    .line 557
-    :goto_0
-    iget v2, p0, Ll/ۖܶᩴ;->ܺ:I
-
-    if-ge v2, v1, :cond_0
-
-    add-int/lit8 v3, v2, 0x1
-
-    .line 558
-    iput v3, p0, Ll/ۖܶᩴ;->ܺ:I
-
-    aget v2, v0, v2
-
-    invoke-interface {p1, v2}, Ljava/util/function/IntConsumer;->accept(I)V
+    const/16 v0, 0x10
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    const/16 v0, 0xa
 
-.method public final bridge synthetic tryAdvance(Ljava/lang/Object;)Z
-    .locals 0
+    :goto_0
+    const/4 v1, 0x0
 
-    .line 521
-    check-cast p1, Ljava/util/function/IntConsumer;
-
-    invoke-virtual {p0, p1}, Ll/ۜۜᩴ;->tryAdvance(Ljava/util/function/IntConsumer;)Z
+    .line 56
+    :try_start_0
+    invoke-static {p1, v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result p1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
-.end method
+    if-ltz p1, :cond_2
 
-.method public final tryAdvance(Ljava/util/function/IntConsumer;)Z
-    .locals 3
+    .line 61
+    iget-object v0, p0, Ll/ۜۜᩴ;->ܿ:Ljava/util/function/IntSupplier;
 
-    .line 548
-    iget v0, p0, Ll/ۖܶᩴ;->ܺ:I
+    invoke-interface {v0}, Ljava/util/function/IntSupplier;->getAsInt()I
 
-    invoke-virtual {p0}, Ll/ۘܶᩴ;->ۙ()I
+    move-result v0
 
-    move-result v1
+    if-le p1, v0, :cond_1
 
-    if-lt v0, v1, :cond_0
+    goto :goto_1
 
-    const/4 p1, 0x0
+    .line 65
+    :cond_1
+    iget-object v0, p0, Ll/ۜۜᩴ;->֡:Ljava/util/function/IntConsumer;
 
-    return p1
+    invoke-interface {v0, p1}, Ljava/util/function/IntConsumer;->accept(I)V
 
-    .line 549
-    :cond_0
-    iget-object v0, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
+    .line 66
+    iget-object p1, p0, Ll/ۜۜᩴ;->۟:Ll/۠ۖۧ;
 
-    iget-object v0, v0, Ll/᩺ۜᩴ;->ܽ:Ll/ܶۜᩴ;
+    invoke-virtual {p1}, Ll/۠ۖۧ;->dismiss()V
 
-    iget-object v0, v0, Ll/ܶۜᩴ;->ܺ:[I
+    return-void
 
-    iget v1, p0, Ll/ۖܶᩴ;->ܺ:I
+    :cond_2
+    :goto_1
+    const p1, 0x7f120311
 
-    add-int/lit8 v2, v1, 0x1
+    .line 62
+    invoke-static {p1, v1}, Ll/᩸۠ۧ;->᩷(II)Ll/᩸۠ۧ;
 
-    iput v2, p0, Ll/ۖܶᩴ;->ܺ:I
+    move-result-object p1
 
-    aget v0, v0, v1
+    invoke-virtual {p1}, Ll/᩸۠ۧ;->᩷()V
 
-    invoke-interface {p1, v0}, Ljava/util/function/IntConsumer;->accept(I)V
+    return-void
 
-    const/4 p1, 0x1
+    :catch_0
+    const p1, 0x7f120d11
 
-    return p1
-.end method
+    .line 58
+    invoke-static {p1, v1}, Ll/᩸۠ۧ;->᩷(II)Ll/᩸۠ۧ;
 
-.method public final ۙ(I)I
-    .locals 1
+    move-result-object p1
 
-    .line 538
-    iget-object v0, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
+    invoke-virtual {p1}, Ll/᩸۠ۧ;->᩷()V
 
-    iget-object v0, v0, Ll/᩺ۜᩴ;->ܽ:Ll/ܶۜᩴ;
-
-    iget-object v0, v0, Ll/ܶۜᩴ;->ܺ:[I
-
-    aget p1, v0, p1
-
-    return p1
-.end method
-
-.method public final ۙ(II)Ll/ۨܶᩴ;
-    .locals 2
-
-    .line 543
-    new-instance v0, Ll/ۜۜᩴ;
-
-    iget-object v1, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
-
-    invoke-direct {v0, v1, p1, p2}, Ll/ۜۜᩴ;-><init>(Ll/᩺ۜᩴ;II)V
-
-    return-object v0
-.end method
-
-.method public final ܰ()I
-    .locals 1
-
-    .line 533
-    iget-object v0, p0, Ll/ۜۜᩴ;->ܽ:Ll/᩺ۜᩴ;
-
-    iget v0, v0, Ll/ۛۚᩴ;->֡:I
-
-    return v0
+    return-void
 .end method

@@ -1,24 +1,19 @@
 package l;
 
-import java.util.UUID;
-
-/* JADX INFO: renamed from: l.֨ᩴۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S8TZ */
+/* JADX INFO: renamed from: l.֨ܺ᩺, reason: contains not printable characters */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C1297 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final UUID f5560 = new UUID(0, 0);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final UUID f5564 = new UUID(1186680826959645954L, -5988876978535335093L);
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final UUID f5561 = new UUID(-2129748144642739255L, 8654423357094679310L);
+    public long f4633;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final UUID f5562 = new UUID(-1301668207276963122L, -6645017420763422227L);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public String f4634;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final UUID f5563 = new UUID(-7348484286925749626L, -6083546864340672619L);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f4635;
+
+    public C1297(String str) {
+        this.f4634 = str;
+    }
 }

@@ -8,13 +8,13 @@ import java.net.SocketTimeoutException;
 /* JADX INFO: loaded from: classes.dex */
 public class RetryUtils {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m432(AmazonServiceException amazonServiceException) {
-        String strM144 = amazonServiceException.m144();
-        return "RequestTimeTooSkewed".equals(strM144) || "RequestExpired".equals(strM144) || "InvalidSignatureException".equals(strM144) || "SignatureDoesNotMatch".equals(strM144);
+    public static boolean m426(AmazonServiceException amazonServiceException) {
+        String strM136 = amazonServiceException.m136();
+        return "RequestTimeTooSkewed".equals(strM136) || "RequestExpired".equals(strM136) || "InvalidSignatureException".equals(strM136) || "SignatureDoesNotMatch".equals(strM136);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m433(Exception exc) {
+    public static boolean m427(Exception exc) {
         if (exc instanceof AbortedException) {
             return true;
         }

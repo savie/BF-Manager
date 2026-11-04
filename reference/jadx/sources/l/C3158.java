@@ -1,54 +1,38 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۗۢ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5Z9 */
+import android.content.ComponentName;
+import android.content.Intent;
+import bin.mt.plus.Main;
+import com.alipay.sdk.m.m.b;
+import com.google.android.material.motion.MotionUtils;
+import org.simpleframework.xml.strategy.Name;
+
+/* JADX INFO: renamed from: l.ۗۘᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 59SA */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3158 implements InterfaceC9510 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f11890;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f11891;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f11892;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f11893 = 0;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4382 f11894;
-
-    public C3158(C4382 c4382, int i, int i2) {
-        this.f11894 = c4382;
-        this.f11891 = i;
-        this.f11890 = i2;
-        this.f11892 = c4382.f15623.m41166().mo9809(i);
+public final class C3158 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m10299(C8614 c8614, InterfaceC2386 interfaceC2386) {
+        if (!c8614.m23228(b.k)) {
+            return false;
+        }
+        String strMo8114 = interfaceC2386.mo8114();
+        return strMo8114.startsWith("video/") || strMo8114.startsWith("audio/");
     }
 
-    @Override // l.InterfaceC9510
-    public final int seekTo(int i) {
-        int i2;
-        int i3;
-        C4382 c4382;
-        while (true) {
-            i2 = this.f11892;
-            i3 = this.f11891;
-            c4382 = this.f11894;
-            if (i2 >= i) {
-                break;
-            }
-            int i4 = this.f11893;
-            if (i4 + 1 >= this.f11890) {
-                break;
-            }
-            this.f11893 = i4 + 1;
-            this.f11892 = c4382.f15623.m41166().mo9809((this.f11893 * 8) + i3);
-        }
-        if (i2 == i) {
-            return c4382.f15623.m41166().mo9809((this.f11893 * 8) + i3 + 4);
-        }
-        return 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m10298(C8614 c8614, InterfaceC2386 interfaceC2386, ComponentName componentName) {
+        int i = ServiceC2099.f6952;
+        Main mainM23233 = c8614.m23233();
+        AbstractC18881 abstractC18881 = (AbstractC18881) c8614.m23213().mo10174();
+        Intent intent = new Intent(mainM23233, (Class<?>) ServiceC2099.class);
+        intent.setAction("bin.mt.plus.NetworkStreamingService.ACTION_PLAY");
+        intent.putExtra("componentName", componentName);
+        intent.putExtra("statelessVisitor", abstractC18881.m20838());
+        intent.putExtra(MotionUtils.EASING_TYPE_PATH, interfaceC2386.getPath());
+        intent.putExtra("mime", interfaceC2386.mo8114());
+        intent.putExtra("time", interfaceC2386.getTime());
+        intent.putExtra(Name.LENGTH, interfaceC2386.getSize());
+        C7508.m20562(mainM23233, intent);
     }
 }

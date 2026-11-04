@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.engines;
 import org.bouncycastle.crypto.digests.ISAPDigest;
 import org.bouncycastle.util.Longs;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AsconPermutationFriend {
 
     public class AsconPermutation {

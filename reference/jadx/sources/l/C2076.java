@@ -1,35 +1,28 @@
 package l;
 
-import android.os.Bundle;
-import java.io.Serializable;
-import java.util.HashMap;
-
-/* JADX INFO: renamed from: l.֫᩷ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 51RR */
+/* JADX INFO: renamed from: l.֫ܿۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T7S3 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2076 implements Serializable {
+public final class C2076 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final HashMap f7679;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4534 f6908;
 
-    public C2076(Bundle bundle) {
-        this.f7679 = new HashMap();
-        for (String str : bundle.keySet()) {
-            this.f7679.put(str, bundle.getString(str));
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9753 f6909;
+
+    public C2076(AbstractC4534 abstractC4534, C9753 c9753) {
+        this.f6908 = abstractC4534;
+        this.f6909 = c9753;
     }
 
-    public C2076(HashMap map) {
-        this.f7679 = new HashMap(map);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC4534 m7152() {
+        return this.f6908;
     }
 
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("BaseData{time=");
-        HashMap map = this.f7679;
-        sb.append((String) map.get("time"));
-        sb.append(", name=");
-        sb.append((String) map.get("interface_name"));
-        sb.append('}');
-        return sb.toString();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C9753 m7153() {
+        return this.f6909;
     }
 }

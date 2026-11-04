@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
-    <solid android:color="@color/MT_Protector_res_0x7f060352"/>
-</shape>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/MT_Protector_res_0x7f08028e">
+    <target
+        android:name="@string/MT_Protector_res_0x7f120843"
+        android:animation="@drawable/MT_Protector_res_0x7f080023"/>
+</animated-vector>

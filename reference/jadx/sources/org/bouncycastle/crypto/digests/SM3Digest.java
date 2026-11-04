@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.digests;
 
-import l.C8015;
+import l.C24579;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 import org.bouncycastle.crypto.CryptoServicePurpose;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -150,18 +150,18 @@ public class SM3Digest extends GeneralDigest {
             int i16 = (i15 << 7) | (i15 >>> 25);
             int[] iArr3 = this.W;
             int i17 = iArr3[i13];
-            int iM21118 = C8015.m21118(FF0(i6, i7, i8), i9, i14 ^ i16, iArr3[i13 + 4] ^ i17);
-            int iM21119 = C8015.m21118(GG0(iP0, i10, i11), i12, i16, i17);
+            int iM54897 = C24579.m54897(FF0(i6, i7, i8), i9, i14 ^ i16, iArr3[i13 + 4] ^ i17);
+            int iM54898 = C24579.m54897(GG0(iP0, i10, i11), i12, i16, i17);
             int i18 = (i10 << 19) | (i10 >>> 13);
             i13++;
             i10 = iP0;
-            iP0 = P0(iM21119);
+            iP0 = P0(iM54898);
             i12 = i11;
             i11 = i18;
             i9 = i8;
             i8 = (i7 >>> 23) | (i7 << 9);
             i7 = i6;
-            i6 = iM21118;
+            i6 = iM54897;
         }
         int i19 = 16;
         int i20 = i6;
@@ -179,17 +179,17 @@ public class SM3Digest extends GeneralDigest {
             int i30 = (i29 >>> 25) | (i29 << 7);
             int[] iArr4 = this.W;
             int i31 = iArr4[i19];
-            int iM211110 = C8015.m21118(FF1(i27, i26, i25), i24, i28 ^ i30, iArr4[i19 + 4] ^ i31);
-            int iM211111 = C8015.m21118(GG1(iP1, i23, i22), i21, i30, i31);
+            int iM54899 = C24579.m54897(FF1(i27, i26, i25), i24, i28 ^ i30, iArr4[i19 + 4] ^ i31);
+            int iM548910 = C24579.m54897(GG1(iP1, i23, i22), i21, i30, i31);
             int i32 = (i26 >>> 23) | (i26 << 9);
             int i33 = (i23 << 19) | (i23 >>> 13);
             i19++;
             i23 = iP1;
-            iP1 = P0(iM211111);
+            iP1 = P0(iM548910);
             i21 = i22;
             i22 = i33;
             i26 = i27;
-            i27 = iM211110;
+            i27 = iM54899;
             i24 = i25;
             i25 = i32;
         }

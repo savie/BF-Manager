@@ -1,8 +1,8 @@
 package org.bouncycastle.jcajce.provider.digest;
 
-import l.C15489;
-import l.C22697;
-import l.C9023;
+import l.C14483;
+import l.C18063;
+import l.C8947;
 import org.bouncycastle.crypto.CipherKeyGenerator;
 import org.bouncycastle.crypto.digests.RIPEMD320Digest;
 import org.bouncycastle.crypto.macs.HMac;
@@ -10,7 +10,7 @@ import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
 import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RIPEMD320 {
 
     public class Digest extends BCMessageDigest implements Cloneable {
@@ -26,7 +26,6 @@ public class RIPEMD320 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class HashMac extends BaseMac {
         public HashMac() {
             super(new HMac(new RIPEMD320Digest()));
@@ -39,7 +38,6 @@ public class RIPEMD320 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mappings extends DigestAlgorithmProvider {
         public static final String PREFIX = RIPEMD320.class.getName();
 
@@ -47,7 +45,7 @@ public class RIPEMD320 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            addHMACAlgorithm(configurableProvider, "RIPEMD320", C22697.m50267(C9023.m23357(str, "$Digest", "MessageDigest.RIPEMD320", sb, configurableProvider), str, "$HashMac"), C15489.m37076(str, "$KeyGenerator"));
+            addHMACAlgorithm(configurableProvider, "RIPEMD320", C8947.m23910(C18063.m42089(str, "$Digest", "MessageDigest.RIPEMD320", sb, configurableProvider), str, "$HashMac"), C14483.m34972(str, "$KeyGenerator"));
         }
     }
 }

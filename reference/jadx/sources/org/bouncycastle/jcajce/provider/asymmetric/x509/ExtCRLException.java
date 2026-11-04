@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.provider.asymmetric.x509;
 
 import java.security.cert.CRLException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ExtCRLException extends CRLException {
     public Throwable cause;
 

@@ -1,14 +1,17 @@
 .class public interface abstract Ll/ܺ֫;
 .super Ljava/lang/Object;
-.source "I508"
+.source "54NZ"
 
 
 # virtual methods
-.method public abstract onAnimationCancel()V
+.method public abstract dismiss()V
 .end method
 
-.method public abstract onAnimationEnd()V
+.method public abstract isShowing()Z
 .end method
 
-.method public abstract ۙ()V
+.method public abstract show()V
+.end method
+
+.method public abstract ᩸()Landroid/widget/ListView;
 .end method

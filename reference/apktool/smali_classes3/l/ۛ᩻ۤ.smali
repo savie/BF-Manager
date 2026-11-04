@@ -1,46 +1,52 @@
-.class public final enum Ll/ۛ᩻ۤ;
-.super Ll/ܰܳۤ;
-.source "M43N"
+.class public final Ll/ۛ᩻ۤ;
+.super Ljava/lang/Object;
+.source "T5YJ"
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ILl/۠ۤۤ;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1425
-    invoke-direct {p0, p1, p2, p3, v0}, Ll/ܰܳۤ;-><init>(Ljava/lang/String;ILl/۠ۤۤ;I)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ll/۠ۤۤ;)V
-    .locals 2
-
-    const-string v0, "EQ"
-
-    const/4 v1, 0x0
-
-    .line 0
-    invoke-direct {p0, v0, v1, p1}, Ll/ۛ᩻ۤ;-><init>(Ljava/lang/String;ILl/۠ۤۤ;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public ۨ(Ll/ۤۤۤ;Ll/᩵ܳۤ;)Ll/ܽۤۤ;
-    .locals 0
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 3
 
-    .line 1428
-    invoke-virtual {p0, p1, p2}, Ll/ܰܳۤ;->ܰ(Ll/ۤۤۤ;Ll/᩵ܳۤ;)Ll/᩸᩷۟;
+    .line 177
+    new-instance v0, Ll/ܰ֫ۤ;
 
-    move-result-object p1
+    invoke-direct {v0}, Ll/ܰ֫ۤ;-><init>()V
 
-    iget-object p1, p1, Ll/᩸᩷۟;->ܺ:Ljava/lang/Object;
+    .line 178
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-    check-cast p1, Ll/ܽۤۤ;
+    move-result-object v1
 
-    return-object p1
+    check-cast v1, Ll/ܰ֫ۤ;
+
+    invoke-virtual {v1}, Ll/ܰ֫ۤ;->ܺ()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 180
+    :try_start_0
+    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ll/ܰ֫ۤ;->ۙ(J)V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-wide/16 v1, 0x0
+
+    .line 182
+    invoke-virtual {v0, v1, v2}, Ll/ܰ֫ۤ;->ۙ(J)V
+
+    .line 184
+    :goto_0
+    invoke-virtual {p1, v0}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
+
+    return-void
 .end method

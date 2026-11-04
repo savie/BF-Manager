@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes;
 
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.DataLengthException;
@@ -485,7 +485,7 @@ public class GCMBlockCipher implements GCMModeCipher {
             this.initialAssociatedText = aEADParameters.getAssociatedText();
             int macSize = aEADParameters.getMacSize();
             if (macSize < 32 || macSize > 128 || macSize % 8 != 0) {
-                throw new IllegalArgumentException(C8479.m22141(macSize, "Invalid value for MAC size: "));
+                throw new IllegalArgumentException(C13645.m33382(macSize, "Invalid value for MAC size: "));
             }
             this.macSize = macSize / 8;
             key = aEADParameters.getKey();

@@ -1,26 +1,38 @@
-.class public interface abstract Ll/ۤܿᩴ;
+.class public final synthetic Ll/ۤܿᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "715Z"
 
 # interfaces
-.implements Ll/ܽۤᩴ;
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/᩸ܿᩴ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩸ܿᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۤܿᩴ;->ۙ:Ll/᩸ܿᩴ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract forEach(Ljava/util/function/Consumer;)V
-.end method
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-.method public abstract parallelStream()Ll/ۚ֫ᩴ;
-.end method
+    .line 0
+    iget-object v0, p0, Ll/ۤܿᩴ;->ۙ:Ll/᩸ܿᩴ;
 
-.method public abstract removeIf(Ljava/util/function/Predicate;)Z
-.end method
+    invoke-static {v0}, Ll/᩸ܿᩴ;->ۙ(Ll/᩸ܿᩴ;)Ljava/lang/Boolean;
 
-.method public abstract spliterator()Ll/᩷ۛᩴ;
-.end method
+    move-result-object v0
 
-.method public abstract stream()Ll/ۚ֫ᩴ;
-.end method
-
-.method public abstract toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
+    return-object v0
 .end method

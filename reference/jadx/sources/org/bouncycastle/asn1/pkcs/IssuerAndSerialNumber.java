@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.asn1.x509.X509Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IssuerAndSerialNumber extends ASN1Object {
     public ASN1Integer certSerialNumber;
     public X500Name name;

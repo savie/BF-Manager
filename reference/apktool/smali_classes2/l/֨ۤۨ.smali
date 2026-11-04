@@ -1,52 +1,161 @@
-.class public final Ll/֨ۤۨ;
-.super Ljava/lang/Object;
-.source "Z6QT"
+.class public final enum Ll/֨ۤۨ;
+.super Ljava/lang/Enum;
+.source "R96D"
 
 
-# instance fields
-.field public final ۖ:Ll/ܰۡۨ;
+# static fields
+.field public static final enum ֡:Ll/֨ۤۨ;
 
-.field public final ۙ:C
+.field public static final enum ۟:Ll/֨ۤۨ;
 
-.field public final ۨ:I
+.field public static final synthetic ܰ:Ll/ᩳۢ᩵;
 
-.field public final ܰ:Z
+.field public static final enum ܿ:Ll/֨ۤۨ;
+
+.field public static final enum ᩳ:Ll/֨ۤۨ;
+
+.field public static final synthetic ᩶:[Ll/֨ۤۨ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۚۤۨ;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 1353
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 859
+    new-instance v0, Ll/֨ۤۨ;
 
-    .line 1354
-    invoke-static {p1}, Ll/ۚۤۨ;->ۨ(Ll/ۚۤۨ;)I
+    const-string v1, "SUCCESSFUL"
 
-    move-result v0
+    const/4 v2, 0x0
 
-    iput v0, p0, Ll/֨ۤۨ;->ۨ:I
+    invoke-direct {v0, v1, v2}, Ll/֨ۤۨ;-><init>(Ljava/lang/String;I)V
 
-    .line 1355
-    invoke-static {p1}, Ll/ۚۤۨ;->ܰ(Ll/ۚۤۨ;)Z
+    sput-object v0, Ll/֨ۤۨ;->ᩳ:Ll/֨ۤۨ;
 
-    move-result v0
+    new-instance v0, Ll/֨ۤۨ;
 
-    iput-boolean v0, p0, Ll/֨ۤۨ;->ܰ:Z
+    const-string v1, "REREGISTER"
 
-    .line 1356
-    invoke-static {p1}, Ll/ۚۤۨ;->ۙ(Ll/ۚۤۨ;)C
+    const/4 v2, 0x1
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Ll/֨ۤۨ;-><init>(Ljava/lang/String;I)V
 
-    iput-char v0, p0, Ll/֨ۤۨ;->ۙ:C
+    sput-object v0, Ll/֨ۤۨ;->۟:Ll/֨ۤۨ;
 
-    .line 1357
-    invoke-static {p1}, Ll/ۚۤۨ;->ۖ(Ll/ۚۤۨ;)Ll/ܰۡۨ;
+    new-instance v0, Ll/֨ۤۨ;
 
-    move-result-object p1
+    const-string v1, "CANCELLED"
 
-    iput-object p1, p0, Ll/֨ۤۨ;->ۖ:Ll/ܰۡۨ;
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/֨ۤۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֨ۤۨ;->֡:Ll/֨ۤۨ;
+
+    new-instance v0, Ll/֨ۤۨ;
+
+    const-string v1, "ALREADY_SELECTED"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Ll/֨ۤۨ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/֨ۤۨ;->ܿ:Ll/֨ۤۨ;
+
+    invoke-static {}, Ll/֨ۤۨ;->ۙ()[Ll/֨ۤۨ;
+
+    move-result-object v0
+
+    sput-object v0, Ll/֨ۤۨ;->᩶:[Ll/֨ۤۨ;
+
+    invoke-static {v0}, Ll/ۢۢ᩵;->ۙ([Ljava/lang/Enum;)Ll/ᩳۢ᩵;
+
+    move-result-object v0
+
+    sput-object v0, Ll/֨ۤۨ;->ܰ:Ll/ᩳۢ᩵;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 858
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/֨ۤۨ;
+    .locals 1
+
+    .line 0
+    const-class v0, Ll/֨ۤۨ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/֨ۤۨ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/֨ۤۨ;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/֨ۤۨ;->᩶:[Ll/֨ۤۨ;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/֨ۤۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ۙ()[Ll/֨ۤۨ;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Ll/֨ۤۨ;
+
+    .line 0
+    sget-object v1, Ll/֨ۤۨ;->ᩳ:Ll/֨ۤۨ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֨ۤۨ;->۟:Ll/֨ۤۨ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֨ۤۨ;->֡:Ll/֨ۤۨ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֨ۤۨ;->ܿ:Ll/֨ۤۨ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static ᩸()Ll/ᩳۢ᩵;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/֨ۤۨ;->ܰ:Ll/ᩳۢ᩵;
+
+    return-object v0
 .end method

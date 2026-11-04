@@ -6,63 +6,63 @@ import android.os.Parcelable;
 import android.view.ViewGroup;
 import com.google.android.material.badge.BadgeUtils;
 import com.google.android.material.internal.ParcelableSparseArray;
-import l.C12418;
-import l.C23707;
-import l.InterfaceC12854;
-import l.InterfaceC22026;
-import l.InterfaceC5092;
-import l.SubMenuC7915;
+import l.C8407;
+import l.C9898;
+import l.InterfaceC11280;
+import l.InterfaceC12772;
+import l.InterfaceC5315;
+import l.SubMenuC12026;
 
 /* JADX INFO: loaded from: classes.dex */
-public class NavigationBarPresenter implements InterfaceC22026 {
+public class NavigationBarPresenter implements InterfaceC5315 {
     public int id;
-    public C12418 menu;
+    public C9898 menu;
     public NavigationBarMenuView menuView;
     public boolean updateSuspended = false;
 
-    @Override // l.InterfaceC22026
-    public boolean collapseItemActionView(C12418 c12418, C23707 c23707) {
+    @Override // l.InterfaceC5315
+    public boolean collapseItemActionView(C9898 c9898, C8407 c8407) {
         return false;
     }
 
-    @Override // l.InterfaceC22026
-    public boolean expandItemActionView(C12418 c12418, C23707 c23707) {
+    @Override // l.InterfaceC5315
+    public boolean expandItemActionView(C9898 c9898, C8407 c8407) {
         return false;
     }
 
-    @Override // l.InterfaceC22026
+    @Override // l.InterfaceC5315
     public boolean flagActionItems() {
         return false;
     }
 
-    @Override // l.InterfaceC22026
-    public void onCloseMenu(C12418 c12418, boolean z) {
+    @Override // l.InterfaceC5315
+    public void onCloseMenu(C9898 c9898, boolean z) {
     }
 
-    @Override // l.InterfaceC22026
-    public boolean onSubMenuSelected(SubMenuC7915 subMenuC7915) {
+    @Override // l.InterfaceC5315
+    public boolean onSubMenuSelected(SubMenuC12026 subMenuC12026) {
         return false;
     }
 
-    @Override // l.InterfaceC22026
-    public void setCallback(InterfaceC5092 interfaceC5092) {
+    @Override // l.InterfaceC5315
+    public void setCallback(InterfaceC12772 interfaceC12772) {
     }
 
     public void setMenuView(NavigationBarMenuView navigationBarMenuView) {
         this.menuView = navigationBarMenuView;
     }
 
-    @Override // l.InterfaceC22026
-    public void initForMenu(Context context, C12418 c12418) {
-        this.menu = c12418;
-        this.menuView.initialize(c12418);
+    @Override // l.InterfaceC5315
+    public void initForMenu(Context context, C9898 c9898) {
+        this.menu = c9898;
+        this.menuView.initialize(c9898);
     }
 
-    public InterfaceC12854 getMenuView(ViewGroup viewGroup) {
+    public InterfaceC11280 getMenuView(ViewGroup viewGroup) {
         return this.menuView;
     }
 
-    @Override // l.InterfaceC22026
+    @Override // l.InterfaceC5315
     public void updateMenuView(boolean z) {
         if (this.updateSuspended) {
             return;
@@ -78,12 +78,12 @@ public class NavigationBarPresenter implements InterfaceC22026 {
         this.id = i;
     }
 
-    @Override // l.InterfaceC22026
+    @Override // l.InterfaceC5315
     public int getId() {
         return this.id;
     }
 
-    @Override // l.InterfaceC22026
+    @Override // l.InterfaceC5315
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState();
         savedState.selectedItemId = this.menuView.getSelectedItemId();
@@ -91,7 +91,7 @@ public class NavigationBarPresenter implements InterfaceC22026 {
         return savedState;
     }
 
-    @Override // l.InterfaceC22026
+    @Override // l.InterfaceC5315
     public void onRestoreInstanceState(Parcelable parcelable) {
         if (parcelable instanceof SavedState) {
             SavedState savedState = (SavedState) parcelable;

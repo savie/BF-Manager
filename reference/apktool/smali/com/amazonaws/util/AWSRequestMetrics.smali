@@ -79,13 +79,13 @@
     return-void
 .end method
 
-.method public ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+.method public ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     .locals 0
 
     return-void
 .end method
 
-.method public ܰ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+.method public ᩷(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     .locals 0
 
     return-void

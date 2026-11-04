@@ -1,78 +1,81 @@
 package l;
 
-import android.content.DialogInterface;
-import bin.mt.plus.R;
-import java.io.IOException;
+import java.net.ProtocolException;
 
-/* JADX INFO: renamed from: l.᩹᩺֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: TAIM */
+/* JADX INFO: renamed from: l.᩸ۚۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U4D5 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22588 extends AbstractC3492 {
+public final class C22588 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9183 f73612;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f73024;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f73613;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final EnumC4225 f73025;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f73614;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f73026;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f73615;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C13662 f73616;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C11545 f73617;
-
-    public C22588(C9183 c9183, C11545 c11545, String str, boolean z, String str2) {
-        this.f73612 = c9183;
-        this.f73617 = c11545;
-        this.f73614 = str;
-        this.f73615 = z;
-        this.f73613 = str2;
+    public C22588(EnumC4225 enumC4225, int i, String str) {
+        this.f73025 = enumC4225;
+        this.f73024 = i;
+        this.f73026 = str;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        this.f73616 = this.f73617.m28834();
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws C22356, IOException {
-        C9183 c9183 = this.f73612;
-        AbstractC12233 abstractC12233Mo13029 = c9183.mo13029();
-        String str = this.f73614;
-        if (abstractC12233Mo13029.mo10261(str)) {
-            throw new C22356(R.string.MT_Protector);
-        }
-        if (this.f73615) {
-            c9183.mo13029().mo10268(str);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C22588 m50912(String str) throws ProtocolException {
+        EnumC4225 enumC4225;
+        int i;
+        String strSubstring;
+        if (str.startsWith("HTTP/1.")) {
+            i = 9;
+            if (str.length() < 9 || str.charAt(8) != ' ') {
+                throw new ProtocolException("Unexpected status line: ".concat(str));
+            }
+            int iCharAt = str.charAt(7) - '0';
+            if (iCharAt == 0) {
+                enumC4225 = EnumC4225.HTTP_1_0;
+            } else if (iCharAt == 1) {
+                enumC4225 = EnumC4225.HTTP_1_1;
+            } else {
+                throw new ProtocolException("Unexpected status line: ".concat(str));
+            }
+        } else if (str.startsWith("ICY ")) {
+            enumC4225 = EnumC4225.HTTP_1_0;
+            i = 4;
         } else {
-            c9183.mo13029().mo10273(0L, str).close();
+            throw new ProtocolException("Unexpected status line: ".concat(str));
+        }
+        int i2 = i + 3;
+        if (str.length() < i2) {
+            throw new ProtocolException("Unexpected status line: ".concat(str));
+        }
+        try {
+            int i3 = Integer.parseInt(str.substring(i, i2));
+            if (str.length() <= i2) {
+                strSubstring = "";
+            } else {
+                if (str.charAt(i2) != ' ') {
+                    throw new ProtocolException("Unexpected status line: ".concat(str));
+                }
+                strSubstring = str.substring(i + 4);
+            }
+            return new C22588(enumC4225, i3, strSubstring);
+        } catch (NumberFormatException unused) {
+            throw new ProtocolException("Unexpected status line: ".concat(str));
         }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        this.f73617.m28763(this.f73613);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f73617.m28824().m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        this.f73616.m33365();
-        C21094.m47529(this.f73612.mo13029().mo10276());
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.f73025 == EnumC4225.HTTP_1_0 ? "HTTP/1.0" : "HTTP/1.1");
+        sb.append(' ');
+        sb.append(this.f73024);
+        String str = this.f73026;
+        if (str != null) {
+            sb.append(' ');
+            sb.append(str);
+        }
+        return sb.toString();
     }
 }

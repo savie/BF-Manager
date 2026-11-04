@@ -1,76 +1,75 @@
 package l;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import android.content.DialogInterface;
+import android.text.TextUtils;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.᩷۠ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 08RH */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20744 implements Comparable, Parcelable {
-    public static final Parcelable.Creator CREATOR = new C7338();
+/* JADX INFO: renamed from: l.᩵ᩳ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: NA5M */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20744 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f67492;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6574 f66480;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f67493;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f66481;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final int f67494;
-
-    @Override // android.os.Parcelable
-    public final int describeContents() {
-        return 0;
+    public C20744(AbstractActivityC17204 abstractActivityC17204, C6574 c6574) {
+        this.f66481 = abstractActivityC17204;
+        this.f66480 = c6574;
     }
 
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        C20744 c20744 = (C20744) obj;
-        int i = this.f67494 - c20744.f67494;
-        if (i != 0) {
-            return i;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8191(this.f66481, R.string.MT_Protector);
+        C13511 c13511 = this.f7780;
+        C17359.requireNonNull(c13511);
+        c13511.m33188(new RunnableC22836(5, c13511));
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        C6574 c6574 = this.f66480;
+        C24363 c24363M18496 = c6574.m18496();
+        if (!c6574.f22050.isEmpty()) {
+            C6463 c6463M54459 = c24363M18496.m54459();
+            c6463M54459.m18273(new C18506(c6574.f22050));
+            c24363M18496 = c6463M54459.m18265();
         }
-        int i2 = this.f67493 - c20744.f67493;
-        return i2 == 0 ? this.f67492 - c20744.f67492 : i2;
-    }
-
-    public C20744(Parcel parcel) {
-        this.f67494 = parcel.readInt();
-        this.f67493 = parcel.readInt();
-        this.f67492 = parcel.readInt();
-    }
-
-    public final String toString() {
-        return this.f67494 + "." + this.f67493 + "." + this.f67492;
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+        C5947 c5947 = new C5947(c24363M18496, c6574.f22053);
+        if (!TextUtils.isEmpty(c6574.f22051)) {
+            c5947.m17315(c6574.f22051, c6574.f22049, false);
         }
-        if (obj != null && C20744.class == obj.getClass()) {
-            C20744 c20744 = (C20744) obj;
-            if (this.f67494 == c20744.f67494 && this.f67493 == c20744.f67493 && this.f67492 == c20744.f67492) {
-                return true;
-            }
+        c5947.m17320(c6574.f22053 + "/");
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f7780.m33196()) {
+            return;
         }
-        return false;
+        C22673.m51152(R.string.MT_Protector);
     }
 
-    public final int hashCode() {
-        return (((this.f67494 * 31) + this.f67493) * 31) + this.f67492;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f7780.m33196()) {
+            return;
+        }
+        this.f66481.m40401(exc, (DialogInterface.OnDismissListener) null);
     }
 
-    @Override // android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.f67494);
-        parcel.writeInt(this.f67493);
-        parcel.writeInt(this.f67492);
-    }
-
-    static {
-        C17983.m41806(0);
-        C17983.m41806(1);
-        C17983.m41806(2);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        if (this.f7780.m33196()) {
+            return;
+        }
+        m8196();
     }
 }

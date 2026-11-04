@@ -144,7 +144,7 @@
     const-string v0, "unknown parameter set "
 
     .line 0
-    invoke-static {p1, v0}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -8661,7 +8661,7 @@
 
     iget v7, p0, Lorg/bouncycastle/pqc/crypto/picnic/PicnicEngine;->digestSizeBytes:I
 
-    invoke-static {v6, v7, v5, v2}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v6, v7, v5, v2}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v2
 

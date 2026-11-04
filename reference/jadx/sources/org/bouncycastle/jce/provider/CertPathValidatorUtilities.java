@@ -42,8 +42,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.security.auth.x500.X500Principal;
-import l.C0252;
-import l.C8479;
+import l.C16076;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Enumerated;
 import org.bouncycastle.asn1.ASN1GeneralizedTime;
@@ -80,7 +80,7 @@ import org.bouncycastle.util.Store;
 import org.bouncycastle.util.StoreException;
 import org.bouncycastle.x509.X509AttributeCertificate;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CertPathValidatorUtilities {
     public static final String ANY_POLICY = "2.5.29.32.0";
     public static final int CRL_SIGN = 6;
@@ -411,7 +411,7 @@ public class CertPathValidatorUtilities {
                         }
                         return deltaCRLs;
                     } catch (Exception e) {
-                        throw new AnnotatedException(C8479.m22142(e, new StringBuilder("cannot create certificate factory: ")), e);
+                        throw new AnnotatedException(C16076.m38224(e, new StringBuilder("cannot create certificate factory: ")), e);
                     }
                 } catch (Exception e2) {
                     throw new AnnotatedException("Issuing distribution point extension value could not be read.", e2);
@@ -652,7 +652,7 @@ public class CertPathValidatorUtilities {
         try {
             return ASN1Primitive.fromByteArray(ASN1OctetString.getInstance(bArr).getOctets());
         } catch (Exception e) {
-            throw new AnnotatedException(C0252.m1693("exception processing extension ", str), e);
+            throw new AnnotatedException(C25272.m56409("exception processing extension ", str), e);
         }
     }
 
@@ -697,7 +697,7 @@ public class CertPathValidatorUtilities {
                         }
                     }
                 } catch (Exception e) {
-                    throw new AnnotatedException(C8479.m22142(e, new StringBuilder("cannot create certificate factory: ")), e);
+                    throw new AnnotatedException(C16076.m38224(e, new StringBuilder("cannot create certificate factory: ")), e);
                 }
             }
             return arrayList;

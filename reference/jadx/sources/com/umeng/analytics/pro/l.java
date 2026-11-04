@@ -31,7 +31,7 @@ public class l {
     public final Map h;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f77937l;
+    public boolean f82053l;
     public int m;
     public int n;
     public static JSONArray i = new JSONArray();
@@ -68,7 +68,7 @@ public class l {
     }
 
     public boolean a() {
-        return this.f77937l;
+        return this.f82053l;
     }
 
     /* JADX INFO: compiled from: Q5HZ */
@@ -106,7 +106,7 @@ public class l {
 
     public l() {
         this.h = new HashMap();
-        this.f77937l = false;
+        this.f82053l = false;
         this.b = false;
         this.c = false;
         this.m = 0;
@@ -251,17 +251,17 @@ public class l {
     }
 
     private void g() {
-        if (this.f77937l) {
+        if (this.f82053l) {
             return;
         }
-        this.f77937l = true;
+        this.f82053l = true;
         if (k != null) {
             k.registerActivityLifecycleCallbacks(this.g);
         }
     }
 
     public void b() {
-        this.f77937l = false;
+        this.f82053l = false;
         if (k != null) {
             k.unregisterActivityLifecycleCallbacks(this.g);
             k = null;

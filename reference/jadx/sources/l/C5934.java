@@ -1,36 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ۠ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S6VA */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5934 {
+/* JADX INFO: renamed from: l.ۚ᩸ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T65P */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5934 extends AbstractC2205 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int[] f20200;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3696 f20284;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f20201;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C5934(C3696 c3696, int i) {
+        super(c3696, i);
+        this.f20284 = c3696;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final int f20202;
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ۙ */
+    public final long mo7529() {
+        return this.f20284.mo8720(this.f7244 + 16);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int[] f20203;
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo7533() {
+        return this.f20284.m8726(this.f7244 + 24);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int[] f20204;
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩴ */
+    public final int mo7531() {
+        return this.f20284.m8726(this.f7244 + 32);
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean f20205;
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ۤ */
+    public final int mo7530() {
+        return this.f20284.mo8719(this.f7244 + 40);
+    }
 
-    public C5934(C6264 c6264, int i) {
-        int[] iArr = (int[]) c6264.f21231.clone();
-        this.f20200 = iArr;
-        this.f20203 = (int[]) c6264.f21230.clone();
-        this.f20204 = (int[]) c6264.f21229.clone();
-        this.f20202 = i;
-        boolean z = c6264.getClass() == C11204.class;
-        this.f20205 = z;
-        this.f20201 = z ? ((C11204) c6264).f37919 : iArr.length;
+    @Override // l.AbstractC2205
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo7532() {
+        return this.f20284.m8726(this.f7244 + 56);
     }
 }

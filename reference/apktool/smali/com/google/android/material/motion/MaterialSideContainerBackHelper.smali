@@ -24,7 +24,7 @@
     move-result-object p1
 
     .line 62
-    sget v0, Ll/֨۟ܶ;->۬ۚ:I
+    sget v0, Ll/ܽ۬ܺ;->ۚᩴ:I
 
     .line 63
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -34,7 +34,7 @@
     iput v0, p0, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->maxScaleXDistanceShrink:F
 
     .line 64
-    sget v0, Ll/֨۟ܶ;->֨ۚ:I
+    sget v0, Ll/ܽ۬ܺ;->۫ᩴ:I
 
     .line 65
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -44,7 +44,7 @@
     iput v0, p0, Lcom/google/android/material/motion/MaterialSideContainerBackHelper;->maxScaleXDistanceGrow:F
 
     .line 66
-    sget v0, Ll/֨۟ܶ;->ۘۚ:I
+    sget v0, Ll/ܽ۬ܺ;->֫ᩴ:I
 
     .line 67
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -63,7 +63,7 @@
     iget-object v0, p0, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->view:Landroid/view/View;
 
     .line 183
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1977
     invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
@@ -131,7 +131,7 @@
     .locals 9
 
     .line 160
-    invoke-super {p0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onCancelBackProgress()Ll/֡ܰ;
+    invoke-super {p0}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onCancelBackProgress()Ll/ܿ᩷;
 
     move-result-object v0
 
@@ -249,11 +249,11 @@
     return-void
 .end method
 
-.method public finishBackProgress(Ll/֡ܰ;ILandroid/animation/Animator$AnimatorListener;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+.method public finishBackProgress(Ll/ܿ᩷;ILandroid/animation/Animator$AnimatorListener;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
     .locals 7
 
     .line 134
-    invoke-virtual {p1}, Ll/֡ܰ;->ܰ()I
+    invoke-virtual {p1}, Ll/ܿ᩷;->᩷()I
 
     move-result v0
 
@@ -329,9 +329,9 @@
 
     .line 142
     :cond_2
-    new-instance p4, Ll/᩺ۜۙ;
+    new-instance p4, Ll/֫ۧۙ;
 
-    invoke-direct {p4}, Ll/᩺ۜۙ;-><init>()V
+    invoke-direct {p4}, Ll/֫ۧۙ;-><init>()V
 
     invoke-virtual {v1, p4}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -341,7 +341,7 @@
     iget v2, p0, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->hideDurationMin:I
 
     .line 144
-    invoke-virtual {p1}, Ll/֡ܰ;->ۙ()F
+    invoke-virtual {p1}, Ll/ܿ᩷;->ۙ()F
 
     move-result p1
 
@@ -373,11 +373,11 @@
     return-void
 .end method
 
-.method public startBackProgress(Ll/֡ܰ;)V
+.method public startBackProgress(Ll/ܿ᩷;)V
     .locals 0
 
     .line 71
-    invoke-super {p0, p1}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onStartBackProgress(Ll/֡ܰ;)V
+    invoke-super {p0, p1}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onStartBackProgress(Ll/ܿ᩷;)V
 
     return-void
 .end method
@@ -605,11 +605,11 @@
     return-void
 .end method
 
-.method public updateBackProgress(Ll/֡ܰ;I)V
+.method public updateBackProgress(Ll/ܿ᩷;I)V
     .locals 1
 
     .line 75
-    invoke-super {p0, p1}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onUpdateBackProgress(Ll/֡ܰ;)Ll/֡ܰ;
+    invoke-super {p0, p1}, Lcom/google/android/material/motion/MaterialBackAnimationHelper;->onUpdateBackProgress(Ll/ܿ᩷;)Ll/ܿ᩷;
 
     move-result-object v0
 
@@ -619,7 +619,7 @@
 
     .line 79
     :cond_0
-    invoke-virtual {p1}, Ll/֡ܰ;->ܰ()I
+    invoke-virtual {p1}, Ll/ܿ᩷;->᩷()I
 
     move-result v0
 
@@ -634,7 +634,7 @@
 
     .line 80
     :goto_0
-    invoke-virtual {p1}, Ll/֡ܰ;->ۙ()F
+    invoke-virtual {p1}, Ll/ܿ᩷;->ۙ()F
 
     move-result p1
 

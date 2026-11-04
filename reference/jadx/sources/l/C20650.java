@@ -1,76 +1,71 @@
 package l;
 
-import java.lang.reflect.Type;
-import java.math.BigDecimal;
-import java.math.BigInteger;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.pm.ServiceInfo;
+import android.os.Build;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.᩷ۙܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: KAUB */
+/* JADX INFO: renamed from: l.᩵ܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X59Z */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20650 implements InterfaceC11747, InterfaceC7950 {
+public class C20650 extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C20650 f67222 = new C20650();
+    public static final /* synthetic */ int f66221 = 0;
 
-    @Override // l.InterfaceC11747
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1396(C23473 c23473, Object obj, Object obj2, Type type) {
-        C13158 c13158 = c23473.f76006;
-        if (obj == null) {
-            if ((c13158.f43818 & EnumC3984.WriteNullNumberAsZero.f14811) != 0) {
-                c13158.write(48);
+    @Override // android.content.BroadcastReceiver
+    public final void onReceive(Context context, Intent intent) {
+        if (intent == null || !"android.intent.action.MEDIA_BUTTON".equals(intent.getAction()) || !intent.hasExtra("android.intent.extra.KEY_EVENT")) {
+            C17359.toString(intent);
+            return;
+        }
+        ComponentName componentNameM47263 = m47263(context, "android.intent.action.MEDIA_BUTTON");
+        if (componentNameM47263 != null) {
+            intent.setComponent(componentNameM47263);
+            try {
+                C7508.m20562(context, intent);
                 return;
-            } else {
-                c13158.m32530();
+            } catch (IllegalStateException e) {
+                if (Build.VERSION.SDK_INT < 31 || !C23634.m52878(e)) {
+                    throw e;
+                }
+                C23634.m52877(e).getMessage();
                 return;
             }
         }
-        if (obj instanceof BigInteger) {
-            c13158.write(((BigInteger) obj).toString());
+        ComponentName componentNameM47264 = m47263(context, "android.media.browse.MediaBrowserService");
+        if (componentNameM47264 != null) {
+            BroadcastReceiver.PendingResult pendingResultGoAsync = goAsync();
+            Context applicationContext = context.getApplicationContext();
+            C3496 c3496 = new C3496(applicationContext, intent, pendingResultGoAsync);
+            C9743 c9743 = new C9743(applicationContext, componentNameM47264, c3496);
+            c3496.m11494(c9743);
+            c9743.m25370();
             return;
         }
-        BigDecimal bigDecimal = (BigDecimal) obj;
-        c13158.write(bigDecimal.toString());
-        if ((c13158.f43818 & EnumC3984.WriteClassName.f14811) == 0 || type == BigDecimal.class || bigDecimal.scale() != 0) {
-            return;
-        }
-        c13158.write(46);
+        throw new IllegalStateException("Could not find any Service that handles android.intent.action.MEDIA_BUTTON or implements a media browser service.");
     }
 
-    @Override // l.InterfaceC7950
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1395(C14265 c14265, Type type, Object obj) {
-        C2974 c2974 = c14265.f46690;
-        int iM8859 = c2974.m8859();
-        if (iM8859 == 2) {
-            if (type == BigInteger.class) {
-                String strM8854 = c2974.m8854();
-                c2974.m8850(16);
-                return new BigInteger(strM8854, 10);
-            }
-            BigDecimal bigDecimalM8844 = c2974.m8844();
-            c2974.m8850(16);
-            return bigDecimalM8844;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static ComponentName m47263(Context context, String str) {
+        PackageManager packageManager = context.getPackageManager();
+        Intent intent = new Intent(str);
+        intent.setPackage(context.getPackageName());
+        List<ResolveInfo> listQueryIntentServices = packageManager.queryIntentServices(intent, 0);
+        if (listQueryIntentServices.size() == 1) {
+            ServiceInfo serviceInfo = listQueryIntentServices.get(0).serviceInfo;
+            return new ComponentName(serviceInfo.packageName, serviceInfo.name);
         }
-        if (iM8859 == 3) {
-            BigDecimal bigDecimalM8845 = c2974.m8844();
-            c2974.m8850(16);
-            if (type != BigInteger.class) {
-                return bigDecimalM8845;
-            }
-            int iScale = bigDecimalM8845.scale();
-            if (iScale < -100 || iScale > 100) {
-                throw new NumberFormatException();
-            }
-            return bigDecimalM8845.toBigInteger();
-        }
-        Object objM34396 = c14265.m34396((Object) null);
-        if (objM34396 == null) {
+        if (listQueryIntentServices.isEmpty()) {
             return null;
         }
-        if (type == BigInteger.class) {
-            return C8219.m21534(objM34396);
-        }
-        return C8219.m21516(objM34396);
+        StringBuilder sbM51387 = C22783.m51387("Expected 1 service that handles ", str, ", found ");
+        sbM51387.append(listQueryIntentServices.size());
+        throw new IllegalStateException(sbM51387.toString());
     }
 }

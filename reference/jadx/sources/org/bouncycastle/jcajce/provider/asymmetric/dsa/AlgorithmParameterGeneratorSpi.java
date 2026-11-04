@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.params.DSAParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.BaseAlgorithmParameterGeneratorSpi;
 import org.bouncycastle.jcajce.provider.asymmetric.util.PrimeCertaintyCalculator;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParameterGeneratorSpi extends BaseAlgorithmParameterGeneratorSpi {
     public DSAParameterGenerationParameters params;
     public SecureRandom random;

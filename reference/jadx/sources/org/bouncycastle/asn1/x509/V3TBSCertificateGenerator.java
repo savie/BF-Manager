@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class V3TBSCertificateGenerator {
     public static final DERTaggedObject VERSION = new DERTaggedObject(true, 0, (ASN1Encodable) new ASN1Integer(2));
     public boolean altNamePresentAndCritical;

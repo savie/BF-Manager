@@ -1,63 +1,83 @@
 package l;
 
-import android.content.DialogInterface;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.֡ۧۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G668 */
+/* JADX INFO: renamed from: l.֡ۤ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: J4L7 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C0366 extends AbstractC3492 {
+public final class C0366 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C12362 f1819;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public volatile String[] f1885 = new String[4];
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ byte[] f1820;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean[] f1886;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceC19356 f1821;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ byte[] f1822;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f1823;
-
-    public C0366(C12362 c12362, byte[] bArr, byte[] bArr2, DialogInterfaceC19356 dialogInterfaceC19356) {
-        this.f1819 = c12362;
-        this.f1822 = bArr;
-        this.f1820 = bArr2;
-        this.f1821 = dialogInterfaceC19356;
+    public C0366(int i) {
+        m2138(i);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10252(this.f1819.f41338, 100);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m2138(int i) {
+        boolean[] zArr = new boolean[4];
+        for (int i2 = 0; i2 < 4; i2++) {
+            zArr[i2] = (C10060.f32250[i2] & i) == 0;
+        }
+        this.f1886 = zArr;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        this.f1823 = C19954.m45248(C23053.m51001(), this.f1819.f41339.m46718(), this.f1822, this.f1820);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m2141(int i) {
+        return this.f1886[i];
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C21094.m47530();
-        this.f1821.dismiss();
-        this.f1819.f41337.accept(this.f1823);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m2142(int i) {
+        return this.f1885[i];
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f1819.f41338.m31002(exc, (DialogInterface.OnDismissListener) null);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] m2140() {
+        String[] strArr = this.f1885;
+        int i = 0;
+        for (int i2 = 0; i2 < 4; i2++) {
+            if (this.f1886[i2] && strArr[i2] == null) {
+                i++;
+            }
+        }
+        int[] iArr = new int[i];
+        int i3 = 0;
+        for (int i4 = 0; i4 < 4; i4++) {
+            if (this.f1886[i4] && strArr[i4] == null) {
+                iArr[i3] = i4;
+                i3++;
+            }
+        }
+        return iArr;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m2139(ArrayList arrayList, int[] iArr) {
+        if (iArr.length != arrayList.size()) {
+            throw new IllegalArgumentException("Digest count does not match item count");
+        }
+        String[] strArr = new String[iArr.length];
+        for (int i = 0; i < iArr.length; i++) {
+            int i2 = iArr[i];
+            if (i2 >= 0 && i2 < 4) {
+                String strM36182 = C15022.m36182(((InterfaceC16199) arrayList.get(i)).mo38425());
+                if (strM36182.length() != C10060.f32249[i2]) {
+                    throw new IllegalStateException("Unexpected digest length");
+                }
+                strArr[i] = strM36182;
+            } else {
+                throw new IllegalArgumentException("Unexpected checksum item index");
+            }
+        }
+        String[] strArr2 = (String[]) this.f1885.clone();
+        for (int i3 = 0; i3 < iArr.length; i3++) {
+            strArr2[iArr[i3]] = strArr[i3];
+        }
+        this.f1885 = strArr2;
     }
 }

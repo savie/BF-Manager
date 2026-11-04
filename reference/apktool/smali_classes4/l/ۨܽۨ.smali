@@ -1,102 +1,82 @@
-.class public final synthetic Ll/ۨܽۨ;
-.super Ljava/lang/Object;
-.source "28VT"
+.class public final Ll/ۨܽۨ;
+.super Ll/ۚ᩹ۨ;
+.source "0AR3"
 
-# interfaces
-.implements Ljava/util/function/Predicate;
+
+# instance fields
+.field public final ۤ:I
+
+
+# direct methods
+.method public constructor <init>(Ll/ܽܽۨ;I)V
+    .locals 0
+
+    .line 17
+    invoke-direct {p0, p1}, Ll/ۚ᩹ۨ;-><init>(Ll/ܽܽۨ;)V
+
+    .line 18
+    iput p2, p0, Ll/ۨܽۨ;->ۤ:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic negate()Ljava/util/function/Predicate;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .line 37
+    iget v0, p0, Ll/ۨܽۨ;->ۤ:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
+.method public final ۙ()I
     .locals 1
 
-    .line 2
-    check-cast p1, Ll/᩷۠ۚ;
+    const/4 v0, 0x5
 
-    .line 159
-    invoke-virtual {p1}, Ll/᩷۠ۚ;->۟ۙ()Z
+    return v0
+.end method
 
-    move-result v0
+.method public final ۙ(II)Z
+    .locals 0
 
-    if-nez v0, :cond_0
+    .line 32
+    iget p2, p0, Ll/ۨܽۨ;->ۤ:I
 
-    goto :goto_0
+    if-ne p2, p1, :cond_0
 
-    .line 162
-    :cond_0
-    invoke-virtual {p1}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, ".jks"
-
-    .line 163
-    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, ".bks"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, ".keystore"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
     const/4 p1, 0x1
 
     return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final ۤ()Ll/ܰ᩹ۨ;
+    .locals 2
+
+    .line 70
+    new-instance v0, Ll/ܰ᩹ۨ;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [I
+
+    invoke-direct {v0, v1}, Ll/ܰ᩹ۨ;-><init>([I)V
+
+    .line 71
+    iget v1, p0, Ll/ۨܽۨ;->ۤ:I
+
+    invoke-virtual {v0, v1}, Ll/ܰ᩹ۨ;->ۙ(I)V
+
+    return-object v0
 .end method

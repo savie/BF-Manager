@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public ܺ:Ljava/util/ArrayList;
+.field public ܰ:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -18,7 +18,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 71
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;->ܺ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;->ܰ:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -29,7 +29,7 @@
     .locals 1
 
     .line 36
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;->ܺ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;->ܰ:Ljava/util/ArrayList;
 
     return-object v0
 .end method

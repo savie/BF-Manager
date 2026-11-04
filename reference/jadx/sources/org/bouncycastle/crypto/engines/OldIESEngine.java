@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.DerivationFunction;
 import org.bouncycastle.crypto.Mac;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class OldIESEngine extends IESEngine {
     public OldIESEngine(BasicAgreement basicAgreement, DerivationFunction derivationFunction, Mac mac) {
         super(basicAgreement, derivationFunction, mac);

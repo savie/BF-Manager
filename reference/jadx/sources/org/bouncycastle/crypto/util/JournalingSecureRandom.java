@@ -3,11 +3,11 @@ package org.bouncycastle.crypto.util;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.security.SecureRandom;
-import l.C9013;
+import l.C11958;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JournalingSecureRandom extends SecureRandom {
     public static byte[] EMPTY_TRANSCRIPT = new byte[0];
     public final SecureRandom base;
@@ -91,7 +91,7 @@ public class JournalingSecureRandom extends SecureRandom {
         try {
             this.tOut.write(bArr);
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("unable to record transcript: ")));
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("unable to record transcript: ")));
         }
     }
 }

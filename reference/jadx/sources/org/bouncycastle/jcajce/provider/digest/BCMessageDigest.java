@@ -4,7 +4,7 @@ import java.security.DigestException;
 import java.security.MessageDigest;
 import org.bouncycastle.crypto.Digest;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BCMessageDigest extends MessageDigest {
     public Digest digest;
     public int digestSize;

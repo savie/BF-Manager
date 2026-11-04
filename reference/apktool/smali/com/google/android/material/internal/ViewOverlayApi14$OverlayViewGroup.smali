@@ -286,7 +286,7 @@
     if-eqz v1, :cond_0
 
     .line 174
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 4137
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
@@ -318,7 +318,7 @@
 
     sub-int/2addr v4, v3
 
-    invoke-static {v4, p1}, Ll/ۚ֫;->ܰ(ILandroid/view/View;)V
+    invoke-static {v4, p1}, Ll/᩸۠;->᩷(ILandroid/view/View;)V
 
     const/4 v3, 0x1
 
@@ -329,7 +329,7 @@
 
     sub-int/2addr v2, v1
 
-    invoke-static {v2, p1}, Ll/ۚ֫;->ۨ(ILandroid/view/View;)V
+    invoke-static {v2, p1}, Ll/᩸۠;->ۤ(ILandroid/view/View;)V
 
     .line 184
     :cond_0

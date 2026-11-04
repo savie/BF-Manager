@@ -8,8 +8,8 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import com.alipay.sdk.m.m.b;
 import com.alipay.sdk.m.y.o;
-import l.C3012;
-import l.ConcurrentMapC13783;
+import l.C3188;
+import l.ConcurrentMapC17249;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -18,7 +18,7 @@ public class APayEntranceActivity extends Activity {
     public static final String e = "ap_target_packagename";
     public static final String f = "ap_session";
     public static final String g = "ap_local_info";
-    public static final ConcurrentMapC13783 h = new ConcurrentMapC13783();
+    public static final ConcurrentMapC17249 h = new ConcurrentMapC17249();
     public String a;
     public String b;
     public com.alipay.sdk.m.w.a c;
@@ -32,9 +32,9 @@ public class APayEntranceActivity extends Activity {
     public void finish() {
         String str = this.b;
         com.alipay.sdk.m.w.a aVar = this.c;
-        StringBuilder sbM8976 = C3012.m8976(str, "|");
-        sbM8976.append(TextUtils.isEmpty(this.a));
-        com.alipay.sdk.m.m.a.a(aVar, b.f77909l, "BSAFinish", sbM8976.toString());
+        StringBuilder sbM10405 = C3188.m10405(str, "|");
+        sbM10405.append(TextUtils.isEmpty(this.a));
+        com.alipay.sdk.m.m.a.a(aVar, b.f82025l, "BSAFinish", sbM10405.toString());
         if (TextUtils.isEmpty(this.a)) {
             this.a = com.alipay.sdk.m.l.b.a();
             com.alipay.sdk.m.w.a aVar2 = this.c;
@@ -60,7 +60,7 @@ public class APayEntranceActivity extends Activity {
     @Override // android.app.Activity
     public void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
-        com.alipay.sdk.m.m.a.a(this.c, b.f77909l, "BSAOnAR", this.b + "|" + i + "," + i2);
+        com.alipay.sdk.m.m.a.a(this.c, b.f82025l, "BSAOnAR", this.b + "|" + i + "," + i2);
         if (i == 1000) {
             if (intent != null) {
                 try {
@@ -88,7 +88,7 @@ public class APayEntranceActivity extends Activity {
             if (!TextUtils.isEmpty(this.b)) {
                 com.alipay.sdk.m.w.a aVarA = com.alipay.sdk.m.w.a.C0028a.a(this.b);
                 this.c = aVarA;
-                com.alipay.sdk.m.m.a.a(aVarA, b.f77909l, "BSAEntryCreate", this.b + "|" + SystemClock.elapsedRealtime());
+                com.alipay.sdk.m.m.a.a(aVarA, b.f82025l, "BSAEntryCreate", this.b + "|" + SystemClock.elapsedRealtime());
             }
             Intent intent = new Intent();
             intent.putExtra("order_info", string);

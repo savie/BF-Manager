@@ -1,88 +1,97 @@
-.class public final synthetic Ll/ۧۡۚ;
+.class public final Ll/ۧۡۚ;
 .super Ljava/lang/Object;
-.source "LAQJ"
+.source "B75R"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
-# static fields
-.field public static final synthetic ۙ:[I
+# instance fields
+.field public ܰ:Landroid/graphics/Bitmap;
 
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+# virtual methods
+.method public final close()V
+    .locals 2
 
-    .line 1552
-    invoke-static {}, Ll/᩻ۡۚ;->values()[Ll/᩻ۡۚ;
+    .line 844
+    iget-object v0, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    array-length v0, v0
+    .line 845
+    iput-object v1, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
 
-    new-array v0, v0, [I
+    if-eqz v0, :cond_0
 
-    sput-object v0, Ll/ۧۡۚ;->ۙ:[I
-
-    :try_start_0
-    sget-object v1, Ll/᩻ۡۚ;->ܽ:Ll/᩻ۡۚ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ۧۡۚ;->ۙ:[I
-
-    sget-object v1, Ll/᩻ۡۚ;->᩶:Ll/᩻ۡۚ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    .line 846
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
 
-    const/4 v2, 0x2
+    if-nez v1, :cond_0
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    .line 847
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Ll/ۧۡۚ;->ۙ:[I
-
-    sget-object v1, Ll/᩻ۡۚ;->֡:Ll/᩻ۡۚ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll/ۧۡۚ;->ۙ:[I
-
-    sget-object v1, Ll/᩻ۡۚ;->۫:Ll/᩻ۡۚ;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
+    :cond_0
     return-void
+.end method
+
+.method public final take()Landroid/graphics/Bitmap;
+    .locals 2
+
+    .line 837
+    iget-object v0, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
+
+    invoke-static {v0}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    .line 838
+    iput-object v1, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
+
+    return-object v0
+.end method
+
+.method public final ۙ(Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    .line 825
+    iget-object v0, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    .line 828
+    iput-object p1, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
+
+    return-void
+
+    .line 826
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "MPEG-TS preview bitmap is already owned"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final ۙ()Z
+    .locals 1
+
+    .line 832
+    iget-object v0, p0, Ll/ۧۡۚ;->ܰ:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

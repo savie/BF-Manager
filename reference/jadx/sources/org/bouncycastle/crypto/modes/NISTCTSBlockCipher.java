@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.DefaultBufferedBlockCipher;
 import org.bouncycastle.crypto.OutputLengthException;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NISTCTSBlockCipher extends DefaultBufferedBlockCipher {
     public static final int CS1 = 1;
     public static final int CS2 = 2;

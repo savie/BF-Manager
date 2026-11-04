@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.EditText;
 import com.google.android.material.internal.CheckableImageButton;
-import l.C22006;
-import l.InterfaceC23605;
+import l.C19835;
+import l.InterfaceC0994;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class EndIconDelegate {
@@ -42,7 +42,7 @@ public abstract class EndIconDelegate {
         return null;
     }
 
-    public InterfaceC23605 getTouchExplorationStateChangeListener() {
+    public InterfaceC0994 getTouchExplorationStateChangeListener() {
         return null;
     }
 
@@ -69,7 +69,7 @@ public abstract class EndIconDelegate {
     public void onEditTextAttached(EditText editText) {
     }
 
-    public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
+    public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
     }
 
     public void onPopulateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {

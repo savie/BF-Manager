@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import l.C3184;
+import l.C6421;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BaselineLayout extends ViewGroup {
@@ -65,9 +65,9 @@ public class BaselineLayout extends ViewGroup {
             if (childAt.getVisibility() != 8) {
                 int measuredWidth = childAt.getMeasuredWidth();
                 int measuredHeight = childAt.getMeasuredHeight();
-                int iM9602 = C3184.m9602(paddingRight, measuredWidth, 2, paddingLeft);
+                int iM18182 = C6421.m18182(paddingRight, measuredWidth, 2, paddingLeft);
                 int baseline = (this.baseline == -1 || childAt.getBaseline() == -1) ? paddingTop : (this.baseline + paddingTop) - childAt.getBaseline();
-                childAt.layout(iM9602, baseline, measuredWidth + iM9602, measuredHeight + baseline);
+                childAt.layout(iM18182, baseline, measuredWidth + iM18182, measuredHeight + baseline);
             }
         }
     }

@@ -1,71 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳܶ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2A1U */
-/* JADX INFO: loaded from: classes4.dex */
-public class C14605 extends AbstractC23777 {
+/* JADX INFO: renamed from: l.ܰ۫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V5XH */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14605 extends AbstractC1928 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public byte f47797;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7894 f46008;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public byte[] f47798;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f46009;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int[] f47799;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2346 f46010;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public byte f47800;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f46011;
 
-    @Override // l.AbstractC23777
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2371(C17426 c17426) {
-        c17426.m40631(4);
-        byte b = this.f47797;
-        c17426.m40622(b);
-        c17426.m40632(this.f47800);
-        c17426.m40632(this.f47797);
-        int i = c17426.f55443;
-        c17426.m40624(6);
-        int i2 = c17426.f55443;
-        c17426.m40624(b * 4);
-        C17426 c17426M40629 = c17426.m40629(i);
-        for (int i3 = 0; i3 < 6; i3++) {
-            c17426M40629.m40632(this.f47798[i3]);
-        }
-        C17426 c17426M406210 = c17426M40629.m40629(i2);
-        for (int i4 = 0; i4 < b; i4++) {
-            c17426M406210.m40622(this.f47799[i4]);
-        }
+    @Override // l.AbstractC4911
+    /* JADX INFO: renamed from: ܳ */
+    public final boolean mo14905() {
+        return true;
     }
 
-    @Override // l.AbstractC23777
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2370(C17426 c17426) throws C6137 {
-        c17426.m40631(4);
-        int iM40623 = c17426.m40623();
-        this.f47800 = (byte) c17426.m40628();
-        this.f47797 = (byte) c17426.m40628();
-        int i = c17426.f55443;
-        c17426.m40624(6);
-        int i2 = c17426.f55443;
-        c17426.m40624(iM40623 * 4);
-        if (this.f47798 == null) {
-            this.f47798 = new byte[6];
-        }
-        C17426 c17426M40629 = c17426.m40629(i);
-        for (int i3 = 0; i3 < 6; i3++) {
-            this.f47798[i3] = (byte) c17426M40629.m40628();
-        }
-        if (this.f47799 == null) {
-            if (iM40623 < 0 || iM40623 > 65535) {
-                throw new C6137("invalid array conformance");
-            }
-            this.f47799 = new int[iM40623];
-        }
-        C17426 c17426M406210 = c17426M40629.m40629(i2);
-        for (int i4 = 0; i4 < iM40623; i4++) {
-            this.f47799[i4] = c17426M406210.m40623();
-        }
+    public C14605(C7894 c7894, int i, int i2, C2346 c2346) {
+        this.f46009 = i;
+        this.f46011 = i2;
+        this.f46010 = c2346;
+        this.f46008 = c7894;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.f46009;
+    }
+
+    @Override // java.util.List
+    public final Object get(int i) {
+        int i2 = this.f46009;
+        C12128.m30302(i, i2);
+        int i3 = this.f46011;
+        C7894 c7894 = this.f46008;
+        return (i == 0 || i == i2 + (-1)) ? ((C2346) c7894.f26242.get(i + i3)).m7923(this.f46010) : (C2346) c7894.f26242.get(i + i3);
+    }
+
+    @Override // l.AbstractC1928, l.AbstractC4911
+    public Object writeReplace() {
+        return super.writeReplace();
     }
 }

@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.crypto.falcon;
 
 import java.security.SecureRandom;
-import l.C0833;
+import l.C7376;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator;
 import org.bouncycastle.crypto.KeyGenerationParameters;
@@ -37,7 +37,7 @@ public class FalconKeyPairGenerator implements AsymmetricCipherKeyPairGenerator 
         } else {
             i = (i2 == 64 || i2 == 128) ? 7 : 8;
         }
-        this.pk_size = C0833.m3428(i2, 14, 8, 1);
+        this.pk_size = C7376.m20246(i2, 14, 8, 1);
         this.sk_size = (((i * 2) * i2) / 8) + 1 + i2;
     }
 }

@@ -1,7 +1,7 @@
 package org.bouncycastle.asn1;
 
-import l.C0252;
-import l.C12441;
+import l.C12669;
+import l.C14483;
 import org.bouncycastle.util.Arrays;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -71,7 +71,7 @@ public abstract class ASN1UniversalString extends ASN1Primitive implements ASN1S
             }
         }
         if (!(obj instanceof byte[])) {
-            throw new IllegalArgumentException(C12441.m30912(obj, "illegal object in getInstance: "));
+            throw new IllegalArgumentException(C14483.m34970(obj, "illegal object in getInstance: "));
         }
         try {
             return (ASN1UniversalString) TYPE.fromByteArray((byte[]) obj);
@@ -118,7 +118,7 @@ public abstract class ASN1UniversalString extends ASN1Primitive implements ASN1S
     @Override // org.bouncycastle.asn1.ASN1String
     public final String getString() {
         int length = this.contents.length;
-        StringBuilder sb = new StringBuilder(C0252.m1692(ASN1OutputStream.getLengthOfDL(length), length, 2, 3));
+        StringBuilder sb = new StringBuilder(C12669.m31441(ASN1OutputStream.getLengthOfDL(length), length, 2, 3));
         sb.append("#1C");
         encodeHexDL(sb, length);
         for (int i = 0; i < length; i++) {

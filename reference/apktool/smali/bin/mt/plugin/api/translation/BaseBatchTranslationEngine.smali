@@ -31,13 +31,13 @@
     .locals 3
 
     .line 57
-    new-instance v0, Ll/ۧ᩹ۘ;
+    new-instance v0, Ll/᩵ۛ֫;
 
     const/16 v1, 0x64
 
     const/16 v2, 0x1388
 
-    invoke-direct {v0, p0, v1, v2}, Ll/ۧ᩹ۘ;-><init>(Lbin/mt/plugin/api/translation/BaseBatchTranslationEngine;II)V
+    invoke-direct {v0, p0, v1, v2}, Ll/᩵ۛ֫;-><init>(Lbin/mt/plugin/api/translation/BaseBatchTranslationEngine;II)V
 
     return-object v0
 .end method

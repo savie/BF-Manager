@@ -1,100 +1,66 @@
 package l;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.util.AttributeSet;
-import bin.mt.plus.R;
-import java.util.ArrayList;
+import com.google.android.material.slider.BasicLabelFormatter;
 
-/* JADX INFO: renamed from: l.ܰ۫ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAIU */
+/* JADX INFO: renamed from: l.۬ۧܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A6LD */
 /* JADX INFO: loaded from: classes4.dex */
-public class C13812 extends AbstractC18168 {
+public final class C13812 {
 
-    /* JADX INFO: renamed from: ۛۙ, reason: not valid java name and contains not printable characters */
-    public C4638 f45593;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f43795;
 
-    public C13812(Context context) {
-        super(context);
-        m33626();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f43796;
 
-    public C13812(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        m33626();
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f43797;
 
-    public C13812(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        m33626();
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final StringBuilder f43798 = new StringBuilder();
 
-    public C13812(Context context, AttributeSet attributeSet, int i, int i2) {
-        super(context, attributeSet, i, i2);
-        m33626();
-    }
-
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    private void m33626() {
-        this.f45593 = new C4638(m13133());
-        m33627();
-    }
-
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    private void m33627() {
-        int i = this.f45593.f16386;
-        if (i == 0) {
-            m13153(R.string.MT_Protector);
-        } else if (i == 1) {
-            m13153(R.string.MT_Protector);
-        } else {
-            if (i != 2) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m33722(int i, CharSequence charSequence) throws C22413 {
+        int length = charSequence.length();
+        StringBuilder sb = this.f43798;
+        if (length > BasicLabelFormatter.MILLION - sb.length()) {
+            throw new C22413();
+        }
+        for (int i2 = 0; i2 <= charSequence.length(); i2++) {
+            if (i2 == i) {
+                this.f43796 = this.f43795;
+            }
+            if (i2 == charSequence.length()) {
                 return;
             }
-            m13153(R.string.MT_Protector);
-        }
-    }
-
-    @Override // l.AbstractC18168
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo950(AbstractActivityC12483 abstractActivityC12483) {
-        final int[] iArr = {this.f45593.f16386};
-        C8067 c8067BuildDialog = abstractActivityC12483.buildDialog();
-        c8067BuildDialog.m21274(R.string.MT_Protector);
-        c8067BuildDialog.m21254(R.array.MT_Protector, this.f45593.f16386, new DialogInterface.OnClickListener() { // from class: l.֫ܽۘ
-            @Override // android.content.DialogInterface.OnClickListener
-            public final void onClick(DialogInterface dialogInterface, int i) {
-                iArr[0] = i;
+            char cCharAt = charSequence.charAt(i2);
+            if (cCharAt == '\n' && this.f43797) {
+                this.f43797 = false;
+            } else {
+                boolean z = cCharAt == '\r';
+                this.f43797 = z;
+                if (z) {
+                    cCharAt = '\n';
+                }
+                if (cCharAt == '\n') {
+                    int i3 = this.f43795 + 1;
+                    this.f43795 = i3;
+                    if (i3 >= 20000) {
+                        throw new C22413();
+                    }
+                }
+                sb.append(cCharAt);
             }
-        });
-        c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterfaceOnClickListenerC13641(this, abstractActivityC12483, iArr, 1));
-        c8067BuildDialog.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        c8067BuildDialog.m21269();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m33625(C13812 c13812, int[] iArr) {
-        c13812.f45593.f16386 = iArr[0];
-        PackageManager packageManagerM39292 = C16737.m39292();
-        ArrayList<C3351> arrayList = new ArrayList(3);
-        int i = c13812.f45593.f16386;
-        if (i == 0) {
-            arrayList.add(new C3351(c13812.f45593.f16387, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16388, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16389, 1, 0));
-        } else if (i == 1) {
-            arrayList.add(new C3351(c13812.f45593.f16389, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16388, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16387, 1, 0));
-        } else if (i == 2) {
-            arrayList.add(new C3351(c13812.f45593.f16389, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16387, 2, 1));
-            arrayList.add(new C3351(c13812.f45593.f16388, 1, 0));
-        }
-        for (C3351 c3351 : arrayList) {
-            packageManagerM39292.setComponentEnabledSetting(c3351.f12395, c3351.f12396, c3351.f12397);
-        }
-        c13812.m33627();
+    public final int m33721() {
+        return this.f43796;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m33723() {
+        return this.f43798.toString();
     }
 }

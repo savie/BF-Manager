@@ -5,7 +5,7 @@ import java.security.PublicKey;
 import java.security.spec.KeySpec;
 import org.bouncycastle.jce.interfaces.IESKey;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IEKeySpec implements KeySpec, IESKey {
     public PrivateKey privKey;
     public PublicKey pubKey;

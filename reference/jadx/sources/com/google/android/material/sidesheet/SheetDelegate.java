@@ -2,7 +2,7 @@ package com.google.android.material.sidesheet;
 
 import android.view.View;
 import android.view.ViewGroup;
-import l.C2746;
+import l.C25276;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class SheetDelegate {
@@ -22,7 +22,7 @@ public abstract class SheetDelegate {
 
     public abstract int getOuterEdge(View view);
 
-    public abstract int getParentInnerEdge(C2746 c2746);
+    public abstract int getParentInnerEdge(C25276 c25276);
 
     public abstract int getSheetEdge();
 

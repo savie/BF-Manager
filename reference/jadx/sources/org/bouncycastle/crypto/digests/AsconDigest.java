@@ -6,7 +6,6 @@ import org.bouncycastle.util.Pack;
 public class AsconDigest extends AsconBaseDigest {
     public AsconParameters asconParameters;
 
-    /* JADX INFO: loaded from: classes.dex */
     public enum AsconParameters {
         AsconHash,
         AsconHashA

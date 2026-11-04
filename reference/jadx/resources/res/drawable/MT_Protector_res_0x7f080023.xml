@@ -2,7 +2,7 @@
 <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
     android:interpolator="@interpolator/MT_Protector_res_0x7f0c000b"
     android:duration="@integer/MT_Protector_res_0x7f0b003c"
-    android:valueFrom="@string/MT_Protector_res_0x7f120686"
-    android:valueTo="@string/MT_Protector_res_0x7f120683"
+    android:valueFrom="@string/MT_Protector_res_0x7f120844"
+    android:valueTo="@string/MT_Protector_res_0x7f120841"
     android:valueType="pathType"
     android:propertyName="pathData"/>

@@ -5,48 +5,48 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import l.C10235;
-import l.C13638;
-import l.InterfaceC20818;
+import l.C17359;
+import l.C9214;
+import l.InterfaceC8469;
 
-/* JADX INFO: loaded from: classes.dex */
-public final class NativeXZInputStream extends InputStream implements InterfaceC20818 {
+/* JADX INFO: loaded from: classes2.dex */
+public final class NativeXZInputStream extends InputStream implements InterfaceC8469 {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f77870;
+    public int f81986;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public IOException f77871;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public int f81988;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public long f77872;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f81990;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public int f77875;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public IOException f81991;
 
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public int f77876;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f77877;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f77878;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public InputStream f77879;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final byte[] f77880;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f77881;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final byte[] f77874 = new byte[65536];
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public int f81992;
 
     /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final byte[] f77873 = new byte[1];
+    public long f81993;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f81994;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f81995;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public InputStream f81996;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final byte[] f81997;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public final byte[] f81987 = new byte[65536];
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final byte[] f81989 = new byte[1];
 
     public static native long nativeCreate();
 
@@ -58,33 +58,33 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
 
     public static native void nativeValidateHeader(byte[] bArr);
 
-    @Override // java.io.InputStream, l.InterfaceC20818
+    @Override // java.io.InputStream, l.InterfaceC8469
     public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+        return C9214.transferTo(this, outputStream);
     }
 
     public NativeXZInputStream(InputStream inputStream) throws IOException {
         byte[] bArr = new byte[65536];
-        this.f77880 = bArr;
-        C13638.requireNonNull(inputStream, "inputStream");
-        this.f77879 = inputStream;
+        this.f81997 = bArr;
+        C17359.requireNonNull(inputStream, "inputStream");
+        this.f81996 = inputStream;
         long jNativeCreate = nativeCreate();
-        this.f77872 = jNativeCreate;
+        this.f81993 = jNativeCreate;
         if (jNativeCreate == 0) {
             throw new IOException("Failed to create native XZ decoder");
         }
         try {
             new DataInputStream(inputStream).readFully(bArr, 0, 12);
             nativeValidateHeader(bArr);
-            this.f77878 = 12;
+            this.f81986 = 12;
         } catch (Throwable th) {
-            m52876();
+            m56774();
             throw th;
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static boolean m52878() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m56776() {
         try {
             return nativeGetApiVersion() == 1;
         } catch (LinkageError unused) {
@@ -93,7 +93,7 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
 
     @Override // java.io.InputStream
     public final int read() {
-        byte[] bArr = this.f77873;
+        byte[] bArr = this.f81989;
         if (read(bArr, 0, 1) < 0) {
             return -1;
         }
@@ -110,53 +110,53 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
         if (i2 == 0) {
             return 0;
         }
-        if (this.f77879 != null) {
-            IOException iOException = this.f77871;
+        if (this.f81996 != null) {
+            IOException iOException = this.f81991;
             if (iOException != null) {
                 throw iOException;
             }
-            if (this.f77877) {
+            if (this.f81994) {
                 return -1;
             }
             int i4 = 0;
             while (i2 > 0) {
                 try {
-                    int i5 = this.f77876;
-                    int i6 = this.f77881;
-                    byte[] bArr2 = this.f77874;
+                    int i5 = this.f81988;
+                    int i6 = this.f81992;
+                    byte[] bArr2 = this.f81987;
                     if (i5 != i6) {
-                        iMin = Math.min(i2, this.f77881 - this.f77876);
-                        System.arraycopy(bArr2, this.f77876, bArr, i, iMin);
-                        this.f77876 += iMin;
+                        iMin = Math.min(i2, this.f81992 - this.f81988);
+                        System.arraycopy(bArr2, this.f81988, bArr, i, iMin);
+                        this.f81988 += iMin;
                     } else if (i2 >= 65536) {
-                        iMin = m52877(i, 65536, bArr);
+                        iMin = m56775(i, 65536, bArr);
                         if (iMin < 0) {
                             break;
                         }
                     } else {
-                        this.f77876 = 0;
-                        int iM52877 = m52877(0, bArr2.length, bArr2);
-                        this.f77881 = iM52877;
-                        if (iM52877 < 0) {
-                            this.f77881 = 0;
+                        this.f81988 = 0;
+                        int iM56775 = m56775(0, bArr2.length, bArr2);
+                        this.f81992 = iM56775;
+                        if (iM56775 < 0) {
+                            this.f81992 = 0;
                             break;
                         }
-                        iMin = Math.min(i2, this.f77881 - this.f77876);
-                        System.arraycopy(bArr2, this.f77876, bArr, i, iMin);
-                        this.f77876 += iMin;
+                        iMin = Math.min(i2, this.f81992 - this.f81988);
+                        System.arraycopy(bArr2, this.f81988, bArr, i, iMin);
+                        this.f81988 += iMin;
                     }
                     i += iMin;
                     i2 -= iMin;
                     i4 += iMin;
                 } catch (IOException e) {
-                    this.f77871 = e;
-                    m52876();
+                    this.f81991 = e;
+                    m56774();
                     if (i4 == 0) {
                         throw e;
                     }
                 }
             }
-            if (i4 == 0 && this.f77877) {
+            if (i4 == 0 && this.f81994) {
                 return -1;
             }
             return i4;
@@ -166,43 +166,43 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
 
     @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
     public final void close() throws IOException {
-        InputStream inputStream = this.f77879;
+        InputStream inputStream = this.f81996;
         if (inputStream == null) {
             return;
         }
-        this.f77879 = null;
+        this.f81996 = null;
         try {
-            m52876();
+            m56774();
         } finally {
             inputStream.close();
         }
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    private int m52877(int i, int i2, byte[] bArr) throws IOException {
-        while (!this.f77877) {
-            if (this.f77875 == this.f77878 && !this.f77870) {
-                this.f77875 = 0;
-                InputStream inputStream = this.f77879;
-                byte[] bArr2 = this.f77880;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    private int m56775(int i, int i2, byte[] bArr) throws IOException {
+        while (!this.f81994) {
+            if (this.f81990 == this.f81986 && !this.f81995) {
+                this.f81990 = 0;
+                InputStream inputStream = this.f81996;
+                byte[] bArr2 = this.f81997;
                 int i3 = inputStream.read(bArr2);
-                this.f77878 = i3;
+                this.f81986 = i3;
                 if (i3 < 0) {
-                    this.f77878 = 0;
-                    this.f77870 = true;
+                    this.f81986 = 0;
+                    this.f81995 = true;
                 } else if (i3 == 0) {
-                    int i4 = this.f77879.read();
+                    int i4 = this.f81996.read();
                     if (i4 < 0) {
-                        this.f77870 = true;
+                        this.f81995 = true;
                     } else {
                         bArr2[0] = (byte) i4;
-                        this.f77878 = 1;
+                        this.f81986 = 1;
                     }
                 }
             }
-            int i5 = this.f77875;
-            int i6 = this.f77878 - i5;
-            long jNativeDecode = nativeDecode(this.f77872, this.f77880, i5, i6, this.f77870, bArr, i, i2);
+            int i5 = this.f81990;
+            int i6 = this.f81986 - i5;
+            long jNativeDecode = nativeDecode(this.f81993, this.f81997, i5, i6, this.f81995, bArr, i, i2);
             if (((-1125899906842624L) & jNativeDecode) != 0) {
                 throw new IOException("Invalid native XZ decoder result flags");
             }
@@ -211,25 +211,25 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
             if (i7 > i6 || i8 > i2) {
                 throw new IOException("Invalid native XZ decoder result size");
             }
-            int i9 = this.f77875 + i7;
-            this.f77875 = i9;
+            int i9 = this.f81990 + i7;
+            this.f81990 = i9;
             boolean z = (281474976710656L & jNativeDecode) != 0;
             boolean z2 = (jNativeDecode & 562949953421312L) != 0;
-            if (z && i9 != this.f77878) {
+            if (z && i9 != this.f81986) {
                 throw new IOException("Native XZ decoder requested input before consuming the current buffer");
             }
             if (i8 > 0) {
                 return i8;
             }
-            if (this.f77870 && i9 == this.f77878 && z) {
+            if (this.f81995 && i9 == this.f81986 && z) {
                 if (!z2) {
                     throw new EOFException("Unexpected end of XZ input");
                 }
-                this.f77877 = true;
-                m52876();
+                this.f81994 = true;
+                m56774();
                 return -1;
             }
-            if (i9 == i5 && (!z || i9 != this.f77878)) {
+            if (i9 == i5 && (!z || i9 != this.f81986)) {
                 throw new IOException("Native XZ decoder made no progress");
             }
         }
@@ -238,22 +238,22 @@ public final class NativeXZInputStream extends InputStream implements InterfaceC
 
     @Override // java.io.InputStream
     public final int available() throws IOException {
-        if (this.f77879 != null) {
-            IOException iOException = this.f77871;
+        if (this.f81996 != null) {
+            IOException iOException = this.f81991;
             if (iOException != null) {
                 throw iOException;
             }
-            return this.f77881 - this.f77876;
+            return this.f81992 - this.f81988;
         }
         throw new IOException("Stream closed");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m52876() {
-        long j = this.f77872;
+    private void m56774() {
+        long j = this.f81993;
         if (j != 0) {
             nativeDestroy(j);
-            this.f77872 = 0L;
+            this.f81993 = 0L;
         }
     }
 }

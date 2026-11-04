@@ -1,50 +1,38 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
+import android.app.Dialog;
+import android.os.Bundle;
 
-/* JADX INFO: renamed from: l.᩸ۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.᩶ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q4Q8 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21370 extends AbstractC6457 implements InterfaceC7163 {
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void forEach(Consumer consumer) {
-        AbstractC22686.z(this, consumer);
+public class C21370 extends DialogInterfaceOnCancelListenerC19136 {
+    public C21370() {
     }
 
-    @Override // l.AbstractC6457, l.InterfaceC8616
-    public final /* synthetic */ InterfaceC8616 j(long j, long j2, IntFunction intFunction) {
-        return AbstractC22686.C(this, j, j2);
+    public C21370(int i) {
+        super(i);
     }
 
-    @Override // l.AbstractC6457, l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC8616 a(int i) {
-        a(i);
-        throw null;
+    @Override // l.DialogInterfaceOnCancelListenerC19136
+    public Dialog onCreateDialog(Bundle bundle) {
+        return new DialogC14656(getContext(), getTheme());
     }
 
-    @Override // l.AbstractC6457, l.InterfaceC8616, l.InterfaceC0853
-    public final InterfaceC0853 a(int i) {
-        throw new IndexOutOfBoundsException();
-    }
-
-    @Override // l.InterfaceC8616
-    public final /* synthetic */ void k(Object[] objArr, int i) {
-        AbstractC22686.w(this, (Double[]) objArr, i);
-    }
-
-    @Override // l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ Object b() {
-        return AbstractC22686.g;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC10110 spliterator() {
-        return C19988.d;
-    }
-
-    @Override // l.InterfaceC8616, l.InterfaceC0853
-    public final /* bridge */ /* synthetic */ InterfaceC20693 spliterator() {
-        return C19988.d;
+    @Override // l.DialogInterfaceOnCancelListenerC19136
+    public void setupDialog(Dialog dialog, int i) {
+        if (dialog instanceof DialogC14656) {
+            DialogC14656 dialogC14656 = (DialogC14656) dialog;
+            if (i != 1 && i != 2) {
+                if (i != 3) {
+                    return;
+                } else {
+                    dialog.getWindow().addFlags(24);
+                }
+            }
+            dialogC14656.supportRequestWindowFeature(1);
+            return;
+        }
+        super.setupDialog(dialog, i);
     }
 }

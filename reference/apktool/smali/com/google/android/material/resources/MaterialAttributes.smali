@@ -179,9 +179,9 @@
     .locals 2
 
     .line 142
-    sget v0, Ll/ۖ۟ܶ;->ۢ᩷:I
+    sget v0, Ll/ۧ۬ܺ;->ۜۘ:I
 
-    sget v1, Ll/֨۟ܶ;->ܿ۟:I
+    sget v1, Ll/ܽ۬ܺ;->ᩳ᩺:I
 
     invoke-static {p0, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveDimension(Landroid/content/Context;II)I
 

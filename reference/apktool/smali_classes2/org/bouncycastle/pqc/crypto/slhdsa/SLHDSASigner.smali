@@ -249,7 +249,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v11, v1, v10, v1}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v11, v1, v10, v1}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v1
 

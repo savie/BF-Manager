@@ -13,10 +13,10 @@
 .method public constructor <init>([BI)V
     .locals 3
 
-    .line 1778
+    .line 1815
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1779
+    .line 1816
     invoke-static {p1, p2}, Lcom/github/luben/zstd/Zstd;->findFrameCompressedSize([BI)J
 
     move-result-wide v0
@@ -25,14 +25,14 @@
 
     long-to-int v1, v0
 
-    .line 1780
+    .line 1817
     invoke-static {p1, p2, v1}, Lcom/github/luben/zstd/Zstd;->getFrameContentSize([BII)J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/github/luben/zstd/Zstd$FrameData;->contentSize:J
 
-    .line 1782
+    .line 1819
     invoke-static {p1, p2}, Lcom/github/luben/zstd/Zstd;->isError(J)Z
 
     move-result v0
@@ -45,7 +45,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1785
+    .line 1822
     new-instance v0, Lcom/github/luben/zstd/ZstdException;
 
     const-string v1, "Content size is unknown"
@@ -54,7 +54,7 @@
 
     throw v0
 
-    .line 1788
+    .line 1825
     :cond_0
     new-instance v0, Lcom/github/luben/zstd/ZstdException;
 

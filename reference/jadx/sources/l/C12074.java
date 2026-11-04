@@ -1,43 +1,94 @@
 package l;
 
-import java.util.EnumSet;
+import java.util.Collection;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.۫֨۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z5U8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C12074 extends AbstractC3956 {
+/* JADX INFO: renamed from: l.ۨۗۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28U3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C12074 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C0429 f40410;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final C12074 f38882 = new C12074(AbstractC1928.of());
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C12074(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
-        super(c0429, abstractC11242, enumC11368, enumSet);
-        this.f40410 = c0429;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 f38883;
+
+    static {
+        C7116.m19499(0);
     }
 
-    @Override // l.AbstractC3956
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo11442(EnumC13130 enumC13130) {
-        return super.mo11442(enumC13130) && this.f40410.f1959;
+    public C12074(List list) {
+        this.f38883 = AbstractC1928.copyOf((Collection) list);
     }
 
-    @Override // l.AbstractC3956
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo5135(int i, AbstractC23903 abstractC23903) {
-        if (abstractC23903.f77452 == EnumC10477.f35865) {
-            AbstractC23903 abstractC23904 = abstractC23903.f77448;
-            if (abstractC23904.f77452 == EnumC10477.f35868) {
-                EnumSet enumSet = ((C19670) abstractC23904).f63144;
-                char cM2248 = this.f40410.m2248();
-                EnumSet enumSetNoneOf = EnumSet.noneOf(EnumC8381.class);
-                for (EnumC8381 enumC8381 : EnumC8381.values()) {
-                    if ((enumC8381.f29111 & cM2248) != 0) {
-                        enumSetNoneOf.add(enumC8381);
-                    }
-                }
-                enumSet.addAll(enumSetNoneOf);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC1928 m30246() {
+        return this.f38883;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m30249() {
+        return this.f38883.isEmpty();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m30247(int i) {
+        int i2 = 0;
+        while (true) {
+            AbstractC1928 abstractC1928 = this.f38883;
+            if (i2 >= abstractC1928.size()) {
+                return false;
             }
+            if (((C20279) abstractC1928.get(i2)).m46543() == i) {
+                return true;
+            }
+            i2++;
         }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean m30248() {
+        int i = 0;
+        while (true) {
+            AbstractC1928 abstractC1928 = this.f38883;
+            if (i >= abstractC1928.size()) {
+                return false;
+            }
+            if (((C20279) abstractC1928.get(i)).m46543() == 2 && ((C20279) abstractC1928.get(i)).m46545()) {
+                return true;
+            }
+            i++;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m30250(int i) {
+        int i2 = 0;
+        while (true) {
+            AbstractC1928 abstractC1928 = this.f38883;
+            if (i2 >= abstractC1928.size()) {
+                return false;
+            }
+            C20279 c20279 = (C20279) abstractC1928.get(i2);
+            if (c20279.m46542() && c20279.m46543() == i) {
+                return true;
+            }
+            i2++;
+        }
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || C12074.class != obj.getClass()) {
+            return false;
+        }
+        return this.f38883.equals(((C12074) obj).f38883);
+    }
+
+    public final int hashCode() {
+        return this.f38883.hashCode();
     }
 }

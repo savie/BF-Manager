@@ -2,8 +2,8 @@ package org.bouncycastle.crypto.engines;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import l.C1694;
-import l.C8015;
+import l.C12669;
+import l.C24579;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -27,7 +27,7 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.Memoable;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM2Engine {
     public int curveLength;
     public final Digest digest;
@@ -102,7 +102,7 @@ public class SM2Engine {
         } else {
             i3 = 0;
             for (int i7 = 0; i7 != digestSize2; i7++) {
-                i3 |= bArr4[i7] ^ bArr[C8015.m21118(i, i4, i5, i7)];
+                i3 |= bArr4[i7] ^ bArr[C24579.m54897(i, i4, i5, i7)];
             }
         }
         Arrays.fill(bArr2, (byte) 0);
@@ -191,7 +191,7 @@ public class SM2Engine {
     }
 
     public int getOutputSize(int i) {
-        return this.digest.getDigestSize() + C1694.m5620(this.curveLength, 2, 1, i);
+        return this.digest.getDigestSize() + C12669.m31436(this.curveLength, 2, 1, i);
     }
 
     public void init(boolean z, CipherParameters cipherParameters) {

@@ -1,73 +1,163 @@
-.class public final Ll/ۛۢ᩹;
-.super Ll/ۙ۬᩹;
-.source "217H"
+.class public abstract Ll/ۛۢ᩹;
+.super Ll/ۙᩳ᩹;
+.source "2GI"
+
+
+# instance fields
+.field public ܰ:I
+
+.field public ᩶:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 26
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 862
+    iput p1, p0, Ll/ۛۢ᩹;->᩶:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۖ(Ll/᩸ۜ᩹;)Z
-    .locals 1
+.method public forEachRemaining(Ljava/util/function/LongConsumer;)V
+    .locals 2
 
-    const-string v0, "local"
+    .line 931
+    :goto_0
+    iget v0, p0, Ll/ۛۢ᩹;->᩶:I
 
-    .line 17
-    invoke-virtual {p1, v0}, Ll/᩸ۜ᩹;->ܰ(Ljava/lang/String;)Z
+    invoke-virtual {p0}, Ll/ۛۢ᩹;->ۙ()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-ge v0, v1, :cond_0
 
-    .line 18
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->ᩴ()Z
+    .line 932
+    iget v0, p0, Ll/ۛۢ᩹;->᩶:I
 
-    move-result v0
+    add-int/lit8 v1, v0, 0x1
 
-    if-eqz v0, :cond_0
+    iput v1, p0, Ll/ۛۢ᩹;->᩶:I
 
-    .line 19
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->ܶ()I
+    iput v0, p0, Ll/ۛۢ᩹;->ܰ:I
 
-    move-result p1
+    invoke-virtual {p0, v0}, Ll/ۛۢ᩹;->᩷(I)J
+
+    move-result-wide v0
+
+    invoke-interface {p1, v0, v1}, Ljava/util/function/LongConsumer;->accept(J)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final hasNext()Z
+    .locals 2
+
+    .line 911
+    iget v0, p0, Ll/ۛۢ᩹;->᩶:I
+
+    invoke-virtual {p0}, Ll/ۛۢ᩹;->ۙ()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
 
     const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
 
     return v0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return p1
+    return v0
 .end method
 
-.method public final ۨ(Ll/᩸ۜ᩹;)V
+.method public nextLong()J
     .locals 2
 
-    .line 24
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->᩺()Ll/ۖ۬᩹;
+    .line 916
+    invoke-virtual {p0}, Ll/ۛۢ᩹;->hasNext()Z
 
-    move-result-object v0
+    move-result v0
 
-    .line 25
-    invoke-virtual {p1}, Ll/᩸ۜ᩹;->ۨ()Ll/ۨۜ᩹;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    .line 917
+    iget v0, p0, Ll/ۛۢ᩹;->᩶:I
 
-    .line 26
-    invoke-interface {v0}, Ll/ۖ۬᩹;->getName()Ljava/lang/String;
+    add-int/lit8 v1, v0, 0x1
 
-    move-result-object v1
+    iput v1, p0, Ll/ۛۢ᩹;->᩶:I
 
-    invoke-virtual {p1, v1}, Ll/ۨۜ᩹;->ۖ(Ljava/lang/String;)V
+    iput v0, p0, Ll/ۛۢ᩹;->ܰ:I
 
-    .line 27
-    invoke-interface {v0}, Ll/ۖ۬᩹;->getParent()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ll/ۛۢ᩹;->᩷(I)J
 
-    move-result-object v0
+    move-result-wide v0
 
-    const/4 v1, 0x1
+    return-wide v0
 
-    invoke-virtual {p1, v0, v1}, Ll/ۨۜ᩹;->ܰ(Ljava/lang/String;Z)V
+    .line 916
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public remove()V
+    .locals 3
+
+    .line 922
+    iget v0, p0, Ll/ۛۢ᩹;->ܰ:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    .line 923
+    invoke-virtual {p0, v0}, Ll/ۛۢ᩹;->ۤ(I)V
+
+    .line 925
+    iget v0, p0, Ll/ۛۢ᩹;->ܰ:I
+
+    iget v2, p0, Ll/ۛۢ᩹;->᩶:I
+
+    if-ge v0, v2, :cond_0
+
+    add-int/lit8 v2, v2, -0x1
+
+    iput v2, p0, Ll/ۛۢ᩹;->᩶:I
+
+    .line 926
+    :cond_0
+    iput v1, p0, Ll/ۛۢ᩹;->ܰ:I
 
     return-void
+
+    .line 922
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public abstract ۙ()I
+.end method
+
+.method public abstract ۤ(I)V
+.end method
+
+.method public abstract ᩷(I)J
 .end method

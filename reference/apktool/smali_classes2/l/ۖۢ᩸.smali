@@ -1,324 +1,265 @@
 .class public final Ll/ۖۢ᩸;
 .super Ljava/lang/Object;
-.source "W9GW"
+.source "I6UJ"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
+
+
+# static fields
+.field public static final ֡:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public ۙ:Ljava/util/Random;
+.field public ܰ:Z
 
-.field public ܰ:Ll/᩸ۙᩳ;
+.field public ܿ:I
+
+.field public final ᩶:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Random;Ll/᩸ۙᩳ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 32
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 11
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    .line 33
-    iput-object p1, p0, Ll/ۖۢ᩸;->ۙ:Ljava/util/Random;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    .line 34
-    iput-object p2, p0, Ll/ۖۢ᩸;->ܰ:Ll/᩸ۙᩳ;
+    sput-object v0, Ll/ۖۢ᩸;->֡:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ(Ljava/lang/String;Ljava/lang/String;[CLl/᩹ۢ᩸;JLl/᩺ۢ᩸;)Ll/ܰۢ᩸;
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    move-object/from16 v3, p7
-
-    const/16 v4, 0x8
-
-    new-array v5, v4, [B
-
-    .line 65
-    iget-object v6, v0, Ll/ۖۢ᩸;->ۙ:Ljava/util/Random;
-
-    invoke-virtual {v6, v5}, Ljava/util/Random;->nextBytes([B)V
-
-    .line 67
-    invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v0, v6, v1, v2}, Ll/ۖۢ᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B
-
-    move-result-object v6
-
-    .line 68
-    invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 108
-    invoke-virtual {v0, v7, v1, v2}, Ll/ۖۢ᩸;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    .line 70
-    invoke-virtual/range {p4 .. p4}, Ll/᩹ۢ᩸;->ܰ()[B
-
-    move-result-object v2
-
-    .line 121
-    new-instance v7, Ll/ۛۢ᩸;
-
-    .line 42
-    invoke-direct {v7}, Ll/ۧۢ᩸;-><init>()V
-
-    const/4 v8, 0x2
-
-    new-array v9, v8, [[B
-
-    const/4 v10, 0x0
-
-    aput-object v2, v9, v10
-
-    const/4 v2, 0x1
-
-    aput-object v5, v9, v2
-
-    .line 122
-    iget-object v11, v0, Ll/ۖۢ᩸;->ܰ:Ll/᩸ۙᩳ;
-
-    invoke-static {v11, v1, v9}, Ll/ۨۢ᩸;->ۙ(Ll/᩸ۙᩳ;[B[[B)[B
-
-    move-result-object v1
-
-    .line 318
-    array-length v9, v1
-
-    invoke-virtual {v7, v9, v1}, Ll/ۧۢ᩸;->ۙ(I[B)V
-
-    invoke-virtual {v7, v4, v5}, Ll/ۧۢ᩸;->ۙ(I[B)V
-
-    .line 125
-    invoke-virtual {v7}, Ll/ۧۢ᩸;->ۖ()[B
-
-    move-result-object v1
-
-    .line 73
-    invoke-virtual/range {p4 .. p4}, Ll/᩹ۢ᩸;->ܰ()[B
-
-    move-result-object v7
-
-    .line 174
-    new-instance v9, Ll/ۛۢ᩸;
-
-    .line 42
-    invoke-direct {v9}, Ll/ۧۢ᩸;-><init>()V
-
-    .line 175
-    invoke-virtual {v9, v2}, Ll/ۧۢ᩸;->ۙ(B)V
-
-    .line 176
-    invoke-virtual {v9, v2}, Ll/ۧۢ᩸;->ۙ(B)V
-
-    .line 177
-    invoke-virtual {v9, v10}, Ll/ۧۢ᩸;->ܰ(I)V
-
-    const-wide/16 v12, 0x0
-
-    .line 178
-    invoke-virtual {v9, v12, v13}, Ll/ۧۢ᩸;->ܰ(J)V
-
-    move-wide/from16 v14, p5
-
-    .line 179
-    invoke-virtual {v9, v14, v15}, Ll/ۧۢ᩸;->ۙ(J)V
-
-    .line 318
-    invoke-virtual {v9, v4, v5}, Ll/ۧۢ᩸;->ۙ(I[B)V
-
-    .line 181
-    invoke-virtual {v9, v12, v13}, Ll/ۧۢ᩸;->ܰ(J)V
-
-    if-eqz v3, :cond_0
-
-    .line 183
-    invoke-virtual {v3, v9}, Ll/᩺ۢ᩸;->ܰ(Ll/ۛۢ᩸;)V
-
-    .line 185
-    :cond_0
-    invoke-virtual {v9, v12, v13}, Ll/ۧۢ᩸;->ܰ(J)V
-
-    .line 187
-    invoke-virtual {v9}, Ll/ۧۢ᩸;->ۖ()[B
-
-    move-result-object v3
-
-    new-array v4, v8, [[B
-
-    aput-object v7, v4, v10
-
-    aput-object v3, v4, v2
-
-    .line 201
-    invoke-static {v11, v6, v4}, Ll/ۨۢ᩸;->ۙ(Ll/᩸ۙᩳ;[B[[B)[B
-
-    move-result-object v4
-
-    .line 144
-    array-length v5, v4
-
-    array-length v7, v3
-
-    add-int/2addr v5, v7
-
-    new-array v5, v5, [B
-
-    .line 145
-    array-length v7, v4
-
-    invoke-static {v4, v10, v5, v10, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 146
-    array-length v4, v4
-
-    array-length v7, v3
-
-    invoke-static {v3, v10, v5, v4, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    const/16 v3, 0x10
-
-    .line 76
-    invoke-static {v5, v10, v3}, Lorg/bouncycastle/util/Arrays;->copyOfRange([BII)[B
-
-    move-result-object v3
-
-    new-array v2, v2, [[B
-
-    aput-object v3, v2, v10
-
-    .line 161
-    invoke-static {v11, v6, v2}, Ll/ۨۢ᩸;->ۙ(Ll/᩸ۙᩳ;[B[[B)[B
-
-    move-result-object v2
-
-    .line 79
-    new-instance v3, Ll/ܰۢ᩸;
-
-    invoke-direct {v3, v5, v1, v2}, Ll/ܰۢ᩸;-><init>([B[B[B)V
-
-    return-object v3
-.end method
-
-.method public final ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B
+.method public constructor <init>()V
     .locals 3
 
-    .line 92
-    iget-object v0, p0, Ll/ۖۢ᩸;->ܰ:Ll/᩸ۙᩳ;
+    .line 17
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    .line 20
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    sget-object p1, Ll/ۨۢ᩸;->ۙ:Ljava/nio/charset/Charset;
+    .line 21
+    new-instance v1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    new-array p1, v1, [B
+    new-instance v2, Ll/֨ۢ᩸;
 
-    goto :goto_0
+    invoke-direct {v2, v0}, Ll/֨ۢ᩸;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;)V
 
-    .line 48
-    :cond_0
-    sget-object v2, Ll/ۨۢ᩸;->ۙ:Ljava/nio/charset/Charset;
+    const/4 v0, 0x2
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    invoke-direct {v1, v0, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
 
-    move-result-object p1
+    iput-object v1, p0, Ll/ۖۢ᩸;->᩶:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    :goto_0
+    const/4 v0, 0x1
+
+    .line 29
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
+
+    const/4 v0, 0x0
+
+    .line 30
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setExecuteExistingDelayedTasksAfterShutdownPolicy(Z)V
+
+    return-void
+.end method
+
+.method public static synthetic ۙ(Ljava/lang/Runnable;)V
+    .locals 2
+
+    .line 23
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    sget-object v1, Ll/ۖۢ᩸;->֡:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    .line 24
     :try_start_0
-    const-string v2, "MD4"
-
-    .line 74
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v2}, Ll/᩸ۙᩳ;->ۙ(Ljava/lang/String;)Ll/ܶۙᩳ;
-
-    move-result-object v2
-
-    .line 75
-    invoke-virtual {v2, p1}, Ll/ܶۙᩳ;->ۙ([B)V
-
-    .line 76
-    invoke-virtual {v2}, Ll/ܶۙᩳ;->ۙ()[B
-
-    move-result-object p1
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catch Ll/۟ۗ᩸; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 93
-    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
 
-    move-result-object p2
+    return-void
 
-    if-nez p2, :cond_1
+    :catchall_0
+    move-exception p0
 
-    new-array p2, v1, [B
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
 
-    goto :goto_1
+    throw p0
+.end method
 
-    .line 48
-    :cond_1
-    sget-object v2, Ll/ۨۢ᩸;->ۙ:Ljava/nio/charset/Charset;
+.method public static bridge synthetic ۙ(Ll/ۖۢ᩸;I)V
+    .locals 0
 
-    invoke-virtual {p2, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    .line 0
+    iput p1, p0, Ll/ۖۢ᩸;->ܿ:I
 
-    move-result-object p2
+    return-void
+.end method
 
-    :goto_1
-    if-nez p3, :cond_2
+.method public static bridge synthetic ۙ(Ll/ۖۢ᩸;)Z
+    .locals 0
 
-    new-array p3, v1, [B
+    .line 0
+    iget-boolean p0, p0, Ll/ۖۢ᩸;->ܰ:Z
 
-    goto :goto_2
+    return p0
+.end method
 
-    :cond_2
-    sget-object v2, Ll/ۨۢ᩸;->ۙ:Ljava/nio/charset/Charset;
+.method public static bridge synthetic ۤ(Ll/ۖۢ᩸;)I
+    .locals 0
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    .line 0
+    iget p0, p0, Ll/ۖۢ᩸;->ܿ:I
 
-    move-result-object p3
+    return p0
+.end method
 
-    :goto_2
-    const/4 v2, 0x2
+.method public static bridge synthetic ᩷(Ll/ۖۢ᩸;)Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    .locals 0
 
-    new-array v2, v2, [[B
+    .line 0
+    iget-object p0, p0, Ll/ۖۢ᩸;->᩶:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    aput-object p2, v2, v1
+    return-object p0
+.end method
 
-    const/4 p2, 0x1
+.method public static ᩷()Z
+    .locals 2
 
-    aput-object p3, v2, p2
+    .line 35
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 95
-    invoke-static {v0, p1, v2}, Ll/ۨۢ᩸;->ۙ(Ll/᩸ۙᩳ;[B[[B)[B
+    sget-object v1, Ll/ۖۢ᩸;->֡:Ljava/lang/ThreadLocal;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v1
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {v0, v1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    .line 78
-    new-instance p2, Ll/ܽ֫᩸;
+    move-result v0
 
-    .line 34
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    return v0
+.end method
 
-    .line 78
-    throw p2
+
+# virtual methods
+.method public final declared-synchronized close()V
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 56
+    :try_start_0
+    iget v1, p0, Ll/ۖۢ᩸;->ܿ:I
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 57
+    iput-boolean v1, p0, Ll/ۖۢ᩸;->ܰ:Z
+
+    .line 58
+    iget-object v1, p0, Ll/ۖۢ᩸;->᩶:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 59
+    monitor-exit v0
+
+    return-void
+
+    .line 56
+    :cond_0
+    :try_start_1
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Persistence sessions are still active"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 59
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final declared-synchronized ۙ()Ll/ۡۢ᩸;
+    .locals 3
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 40
+    :try_start_0
+    iget-boolean v1, p0, Ll/ۖۢ᩸;->ܰ:Z
+
+    if-nez v1, :cond_0
+
+    iget v1, p0, Ll/ۖۢ᩸;->ܿ:I
+
+    const/16 v2, 0x100
+
+    if-eq v1, v2, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 41
+    iput v1, p0, Ll/ۖۢ᩸;->ܿ:I
+
+    .line 42
+    new-instance v1, Ll/ۡۢ᩸;
+
+    invoke-direct {v1, p0}, Ll/ۡۢ᩸;-><init>(Ll/ۖۢ᩸;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 40
+    :cond_0
+    :try_start_1
+    new-instance v1, Ljava/util/concurrent/RejectedExecutionException;
+
+    const-string v2, "Persistence session limit reached or scheduler closed"
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

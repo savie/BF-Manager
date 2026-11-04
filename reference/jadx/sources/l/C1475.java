@@ -1,55 +1,39 @@
 package l;
 
-import java.util.Comparator;
-import java.util.SortedMap;
-import java.util.SortedSet;
+import android.os.Looper;
 
-/* JADX INFO: renamed from: l.֫֡ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: O3K3 */
+/* JADX INFO: renamed from: l.֨᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: C58G */
 /* JADX INFO: loaded from: classes3.dex */
-public class C1475 extends C16998 implements SortedSet {
+public final class C1475 extends AbstractC11528 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC11830 f6004;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static volatile C1475 f5136;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1475(AbstractC11830 abstractC11830, SortedMap sortedMap) {
-        super(abstractC11830, sortedMap);
-        this.f6004 = abstractC11830;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C8932 f5137 = new C8932();
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C1475 m5264() {
+        if (f5136 != null) {
+            return f5136;
+        }
+        synchronized (C1475.class) {
+            if (f5136 == null) {
+                f5136 = new C1475();
+            }
+        }
+        return f5136;
     }
 
-    @Override // java.util.SortedSet
-    public final Comparator comparator() {
-        return mo5121().comparator();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m5265(Runnable runnable) {
+        this.f5137.m23844(runnable);
     }
 
-    @Override // java.util.SortedSet
-    public final Object first() {
-        return mo5121().firstKey();
-    }
-
-    @Override // java.util.SortedSet
-    public SortedSet headSet(Object obj) {
-        return new C1475(this.f6004, mo5121().headMap(obj));
-    }
-
-    @Override // java.util.SortedSet
-    public final Object last() {
-        return mo5121().lastKey();
-    }
-
-    @Override // java.util.SortedSet
-    public SortedSet subSet(Object obj, Object obj2) {
-        return new C1475(this.f6004, mo5121().subMap(obj, obj2));
-    }
-
-    @Override // java.util.SortedSet
-    public SortedSet tailSet(Object obj) {
-        return new C1475(this.f6004, mo5121().tailMap(obj));
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public SortedMap mo5121() {
-        return (SortedMap) this.f74624;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m5266() {
+        this.f5137.getClass();
+        return Looper.getMainLooper().getThread() == Thread.currentThread();
     }
 }

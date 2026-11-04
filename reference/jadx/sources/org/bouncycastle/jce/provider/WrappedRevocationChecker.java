@@ -6,7 +6,7 @@ import java.security.cert.PKIXCertPathChecker;
 import org.bouncycastle.jcajce.PKIXCertRevocationChecker;
 import org.bouncycastle.jcajce.PKIXCertRevocationCheckerParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class WrappedRevocationChecker implements PKIXCertRevocationChecker {
     public final PKIXCertPathChecker checker;
 

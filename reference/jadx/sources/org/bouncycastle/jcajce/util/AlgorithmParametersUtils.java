@@ -5,7 +5,7 @@ import java.security.AlgorithmParameters;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1Primitive;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class AlgorithmParametersUtils {
     public static ASN1Encodable extractParameters(AlgorithmParameters algorithmParameters) {
         try {

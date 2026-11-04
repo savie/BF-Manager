@@ -1,77 +1,122 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import com.umeng.analytics.pro.j$$ExternalSyntheticOutline0;
+import java.util.ArrayList;
+import java.util.Collections;
 
-/* JADX INFO: renamed from: l.ۙ᩻۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: H74F */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4979 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.ۙܳ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8MR */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4979 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f17358;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f17313;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f17314;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f17317;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f17318;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static final C8839 f17311 = new C8839();
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static final C7348 f17310 = new C7348();
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C14059[] f17316 = new C14059[5];
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f17315 = new ArrayList();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7648 f17359;
+    public int f17312 = -1;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f17360;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C1693 f17361;
-
-    public C4979(C1693 c1693, int i, C7648 c7648, int i2) {
-        this.f17361 = c1693;
-        this.f17358 = i;
-        this.f17359 = c7648;
-        this.f17360 = i2;
+    public C4979(int i) {
+        this.f17317 = i;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C4979)) {
-            return false;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m15186() {
+        this.f17315.clear();
+        this.f17312 = -1;
+        this.f17313 = 0;
+        this.f17314 = 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m15185(float f, int i) {
+        C14059 c14059;
+        int i2 = this.f17312;
+        ArrayList arrayList = this.f17315;
+        if (i2 != 1) {
+            Collections.sort(arrayList, f17311);
+            this.f17312 = 1;
         }
-        C4979 c4979 = (C4979) obj;
-        return this.f17358 == c4979.f17358 && this.f17360 == c4979.f17360 && C13638.equals(this.f17361, c4979.f17361) && C13638.equals(this.f17359, c4979.f17359);
-    }
-
-    public final int hashCode() {
-        return C13638.hashCode(this.f17359) + ((C13638.hashCode(this.f17361) + C17922.m41614(this.f17358, 31, this.f17360, 31)) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f17361, Integer.valueOf(this.f17358), this.f17359, Integer.valueOf(this.f17360)};
-        String[] strArrSplit = "group;trackIndex;format;sourceOrder".length() == 0 ? new String[0] : "group;trackIndex;format;sourceOrder".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C4979.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+        int i3 = this.f17318;
+        C14059[] c14059Arr = this.f17316;
+        if (i3 > 0) {
+            int i4 = i3 - 1;
+            this.f17318 = i4;
+            c14059 = c14059Arr[i4];
+        } else {
+            c14059 = new C14059(0);
+        }
+        int i5 = this.f17313;
+        this.f17313 = i5 + 1;
+        c14059.f44514 = i5;
+        c14059.f44515 = i;
+        c14059.f44516 = f;
+        arrayList.add(c14059);
+        this.f17314 += i;
+        while (true) {
+            int i6 = this.f17314;
+            int i7 = this.f17317;
+            if (i6 <= i7) {
+                return;
+            }
+            int i8 = i6 - i7;
+            C14059 c140510 = (C14059) arrayList.get(0);
+            int i9 = c140510.f44515;
+            if (i9 <= i8) {
+                this.f17314 -= i9;
+                arrayList.remove(0);
+                int i10 = this.f17318;
+                if (i10 < 5) {
+                    this.f17318 = i10 + 1;
+                    c14059Arr[i10] = c140510;
+                }
+            } else {
+                c140510.f44515 = i9 - i8;
+                this.f17314 -= i8;
             }
         }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m13807() {
-        return this.f17360;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C7648 m13808() {
-        return this.f17359;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C1693 m13809() {
-        return this.f17361;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int m13810() {
-        return this.f17358;
+    public final float m15184() {
+        int i = this.f17312;
+        ArrayList arrayList = this.f17315;
+        if (i != 0) {
+            Collections.sort(arrayList, f17310);
+            this.f17312 = 0;
+        }
+        float f = this.f17314 * 0.5f;
+        int i2 = 0;
+        for (int i3 = 0; i3 < arrayList.size(); i3++) {
+            C14059 c14059 = (C14059) arrayList.get(i3);
+            i2 += c14059.f44515;
+            if (i2 >= f) {
+                return c14059.f44516;
+            }
+        }
+        if (arrayList.isEmpty()) {
+            return Float.NaN;
+        }
+        return ((C14059) j$$ExternalSyntheticOutline0.m(arrayList, 1)).f44516;
     }
 }

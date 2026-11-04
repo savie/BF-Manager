@@ -101,7 +101,7 @@
 
     move-result-object p1
 
-    sget v1, Ll/֨۟ܶ;->᩹ۖ:I
+    sget v1, Ll/ܽ۬ܺ;->ܳ᩸:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -112,7 +112,7 @@
     iput p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionTranslationYPx:F
 
     .line 139
-    sget p1, Ll/ۖ۟ܶ;->᩶ܺ:I
+    sget p1, Ll/ۧ۬ܺ;->᩶ܰ:I
 
     const/16 v1, 0xd9
 
@@ -124,7 +124,7 @@
     iput p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionTranslationYAnimationDuration:I
 
     .line 142
-    sget p1, Ll/ۖ۟ܶ;->ۤܺ:I
+    sget p1, Ll/ۧ۬ܺ;->ۛܰ:I
 
     const/16 v1, 0xa7
 
@@ -136,7 +136,7 @@
     iput p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionFadeInAnimationDuration:I
 
     .line 145
-    sget p1, Ll/ۖ۟ܶ;->᩶ܺ:I
+    sget p1, Ll/ۧ۬ܺ;->᩶ܰ:I
 
     .line 146
     invoke-static {v0, p1, v1}, Lcom/google/android/material/motion/MotionUtils;->resolveThemeDuration(Landroid/content/Context;II)I
@@ -146,7 +146,7 @@
     iput p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionFadeOutAnimationDuration:I
 
     .line 148
-    sget p1, Ll/ۖ۟ܶ;->ۛܺ:I
+    sget p1, Ll/ۧ۬ܺ;->ۢܰ:I
 
     sget-object v1, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -158,7 +158,7 @@
     iput-object p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionTranslationYAnimationInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 153
-    sget p1, Ll/ۖ۟ܶ;->ۛܺ:I
+    sget p1, Ll/ۧ۬ܺ;->ۢܰ:I
 
     sget-object v1, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -170,7 +170,7 @@
     iput-object p1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->captionFadeInAnimationInterpolator:Landroid/animation/TimeInterpolator;
 
     .line 158
-    sget p1, Ll/ۖ۟ܶ;->ܳܺ:I
+    sget p1, Ll/ۧ۬ܺ;->ۖܰ:I
 
     .line 159
     invoke-static {v0, p1, v1}, Lcom/google/android/material/motion/MotionUtils;->resolveThemeInterpolator(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
@@ -626,7 +626,7 @@
     .line 227
     iget-object v0, p0, Lcom/google/android/material/textfield/IndicatorViewController;->textInputView:Lcom/google/android/material/textfield/TextInputLayout;
 
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 3941
     invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
@@ -936,10 +936,10 @@
     .line 405
     iget-object v2, p0, Lcom/google/android/material/textfield/IndicatorViewController;->indicatorArea:Landroid/widget/LinearLayout;
 
-    sget v3, Ll/֨۟ܶ;->ܳ۠:I
+    sget v3, Ll/ܽ۬ܺ;->ۖۗ:I
 
     .line 410
-    sget v4, Ll/ۚ֫;->ۙ:I
+    sget v4, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
@@ -951,7 +951,7 @@
 
     move-result v3
 
-    sget v4, Ll/֨۟ܶ;->֫۠:I
+    sget v4, Ll/ܽ۬ܺ;->۠ۗ:I
 
     iget-object v5, p0, Lcom/google/android/material/textfield/IndicatorViewController;->context:Landroid/content/Context;
 
@@ -960,7 +960,7 @@
 
     move-result-object v5
 
-    sget v6, Ll/֨۟ܶ;->᩻۠:I
+    sget v6, Ll/ܽ۬ܺ;->ۡۗ:I
 
     .line 416
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -972,7 +972,7 @@
 
     move-result v4
 
-    sget v5, Ll/֨۟ܶ;->ܳ۠:I
+    sget v5, Ll/ܽ۬ܺ;->ۖۗ:I
 
     .line 2235
     invoke-virtual {v0}, Landroid/view/View;->getPaddingEnd()I
@@ -1388,7 +1388,7 @@
     if-eqz v0, :cond_0
 
     .line 665
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 2205
     invoke-virtual {v0, p1}, Landroid/view/View;->setAccessibilityLiveRegion(I)V
@@ -1434,16 +1434,16 @@
     if-eqz p1, :cond_2
 
     .line 494
-    new-instance v1, Ll/᩹ܶ;
+    new-instance v1, Ll/ۚܺ;
 
     iget-object v2, p0, Lcom/google/android/material/textfield/IndicatorViewController;->context:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Ll/᩹ܶ;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Ll/ۚܺ;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->errorView:Landroid/widget/TextView;
 
     .line 495
-    sget v2, Ll/ۘ۟ܶ;->ܽۜ:I
+    sget v2, Ll/᩹۬ܺ;->֡ۧ:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -1582,7 +1582,7 @@
     if-eqz v0, :cond_0
 
     .line 698
-    invoke-static {v0, p1}, Ll/ܽۙۙ;->ۖ(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Ll/ܿۙۙ;->ᩴ(Landroid/widget/TextView;I)V
 
     :cond_0
     return-void
@@ -1607,16 +1607,16 @@
     if-eqz p1, :cond_2
 
     .line 536
-    new-instance v1, Ll/᩹ܶ;
+    new-instance v1, Ll/ۚܺ;
 
     iget-object v2, p0, Lcom/google/android/material/textfield/IndicatorViewController;->context:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Ll/᩹ܶ;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Ll/ۚܺ;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->helperTextView:Landroid/widget/TextView;
 
     .line 537
-    sget v2, Ll/ۘ۟ܶ;->۫ۜ:I
+    sget v2, Ll/᩹۬ܺ;->۟ۧ:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -1648,7 +1648,7 @@
     .line 545
     iget-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->helperTextView:Landroid/widget/TextView;
 
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 2205
     invoke-virtual {v1, v0}, Landroid/view/View;->setAccessibilityLiveRegion(I)V

@@ -12,43 +12,43 @@ import java.util.regex.Pattern;
 public class ObjectRestoreHeaderHandler implements HeaderHandler {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f488 = Pattern.compile("expiry-date=\"(.*?)\"");
+    public static final Pattern f478 = Pattern.compile("expiry-date=\"(.*?)\"");
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Pattern f490 = Pattern.compile("ongoing-request=\"(.*?)\"");
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Pattern f480 = Pattern.compile("ongoing-request=\"(.*?)\"");
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Log f489 = LogFactory.m302(ObjectRestoreHeaderHandler.class);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final Log f479 = LogFactory.m296(ObjectRestoreHeaderHandler.class);
 
     @Override // com.amazonaws.services.s3.internal.HeaderHandler
     /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ void mo463(Object obj, HttpResponse httpResponse) {
-        m470((ObjectRestoreResult) obj, httpResponse);
+    public final /* bridge */ /* synthetic */ void mo457(Object obj, HttpResponse httpResponse) {
+        m464((ObjectRestoreResult) obj, httpResponse);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m470(ObjectRestoreResult objectRestoreResult, HttpResponse httpResponse) {
-        Date dateM769;
-        String str = (String) httpResponse.m270().get("x-amz-restore");
+    public static void m464(ObjectRestoreResult objectRestoreResult, HttpResponse httpResponse) {
+        Date dateM763;
+        String str = (String) httpResponse.m263().get("x-amz-restore");
         if (str != null) {
-            Matcher matcher = f488.matcher(str);
+            Matcher matcher = f478.matcher(str);
             if (matcher.find()) {
                 String strGroup = matcher.group(1);
                 try {
-                    int i = ServiceUtils.f512;
-                    dateM769 = DateUtils.m769("EEE, dd MMM yyyy HH:mm:ss z", strGroup);
+                    int i = ServiceUtils.f502;
+                    dateM763 = DateUtils.m763("EEE, dd MMM yyyy HH:mm:ss z", strGroup);
                 } catch (Exception e) {
-                    f489.mo297("Error parsing expiry-date from x-amz-restore header.", e);
-                    dateM769 = null;
+                    f479.mo289("Error parsing expiry-date from x-amz-restore header.", e);
+                    dateM763 = null;
                 }
             } else {
-                dateM769 = null;
+                dateM763 = null;
             }
-            objectRestoreResult.mo472(dateM769);
-            Matcher matcher2 = f490.matcher(str);
+            objectRestoreResult.mo466(dateM763);
+            Matcher matcher2 = f480.matcher(str);
             Boolean boolValueOf = matcher2.find() ? Boolean.valueOf(Boolean.parseBoolean(matcher2.group(1))) : null;
             if (boolValueOf != null) {
-                objectRestoreResult.mo471(boolValueOf.booleanValue());
+                objectRestoreResult.mo465(boolValueOf.booleanValue());
             }
         }
     }

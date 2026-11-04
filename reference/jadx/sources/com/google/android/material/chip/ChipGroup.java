@@ -13,16 +13,16 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.util.List;
 import java.util.Set;
-import l.C11423;
-import l.C18616;
-import l.C22006;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C19835;
+import l.C22073;
+import l.C22666;
+import l.C4185;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ChipGroup extends FlowLayout {
-    public static final int DEF_STYLE_RES = C18616.f60143;
+    public static final int DEF_STYLE_RES = C4185.f15222;
     public final CheckableGroup checkableGroup;
     public int chipSpacingHorizontal;
     public int chipSpacingVertical;
@@ -62,7 +62,7 @@ public class ChipGroup extends FlowLayout {
     }
 
     public ChipGroup(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8463);
+        this(context, attributeSet, C11642.f37113);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -73,14 +73,14 @@ public class ChipGroup extends FlowLayout {
         this.checkableGroup = checkableGroup;
         PassThroughHierarchyChangeListener passThroughHierarchyChangeListener = new PassThroughHierarchyChangeListener();
         this.passThroughListener = passThroughHierarchyChangeListener;
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(getContext(), attributeSet, C8033.f26557, i, i2, new int[0]);
-        int dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27391, 0);
-        setChipSpacingHorizontal(typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27231, dimensionPixelOffset));
-        setChipSpacingVertical(typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f26539, dimensionPixelOffset));
-        setSingleLine(typedArrayObtainStyledAttributes.getBoolean(C8033.f28028, false));
-        setSingleSelection(typedArrayObtainStyledAttributes.getBoolean(C8033.f26432, false));
-        setSelectionRequired(typedArrayObtainStyledAttributes.getBoolean(C8033.f26753, false));
-        this.defaultCheckedId = typedArrayObtainStyledAttributes.getResourceId(C8033.f26699, -1);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(getContext(), attributeSet, C14625.f47042, i, i2, new int[0]);
+        int dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47658, 0);
+        setChipSpacingHorizontal(typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f46860, dimensionPixelOffset));
+        setChipSpacingVertical(typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47712, dimensionPixelOffset));
+        setSingleLine(typedArrayObtainStyledAttributes.getBoolean(C14625.f47179, false));
+        setSingleSelection(typedArrayObtainStyledAttributes.getBoolean(C14625.f47019, false));
+        setSelectionRequired(typedArrayObtainStyledAttributes.getBoolean(C14625.f47498, false));
+        this.defaultCheckedId = typedArrayObtainStyledAttributes.getResourceId(C14625.f46435, -1);
         typedArrayObtainStyledAttributes.recycle();
         checkableGroup.setOnCheckedStateChangeListener(new CheckableGroup.OnCheckedStateChangeListener() { // from class: com.google.android.material.chip.ChipGroup.1
             @Override // com.google.android.material.internal.CheckableGroup.OnCheckedStateChangeListener
@@ -93,14 +93,14 @@ public class ChipGroup extends FlowLayout {
             }
         });
         super.setOnHierarchyChangeListener(passThroughHierarchyChangeListener);
-        int i3 = C5031.f17539;
+        int i3 = C22666.f73603;
         setImportantForAccessibility(1);
     }
 
     @Override // android.view.View
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        C22006.m48820(accessibilityNodeInfo).m48849(C11423.m28533(getRowCount(), isSingleLine() ? getVisibleChipCount() : -1, isSingleSelection() ? 1 : 2, false));
+        C19835.m45619(accessibilityNodeInfo).m45643(C22073.m49904(getRowCount(), isSingleLine() ? getVisibleChipCount() : -1, isSingleSelection() ? 1 : 2, false));
     }
 
     @Override // android.view.ViewGroup
@@ -314,7 +314,7 @@ public class ChipGroup extends FlowLayout {
         public void onChildViewAdded(View view, View view2) {
             if (view == ChipGroup.this && (view2 instanceof Chip)) {
                 if (view2.getId() == -1) {
-                    int i = C5031.f17539;
+                    int i = C22666.f73603;
                     view2.setId(View.generateViewId());
                 }
                 ChipGroup.this.checkableGroup.addCheckable((Chip) view2);

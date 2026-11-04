@@ -1,106 +1,33 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.DoubleConsumer;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.۠ܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.۟᩻۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 22BV */
 /* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C8241 implements InterfaceC7535 {
-    public final /* synthetic */ Spliterator.OfDouble a;
+public final class C8241 extends AbstractC18551 {
 
-    public /* synthetic */ C8241(Spliterator.OfDouble ofDouble) {
-        this.a = ofDouble;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C7495 f27102;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C8241(C7495 c7495) {
+        super(R.string.MT_Protector, R.drawable.MT_Protector);
+        this.f27102 = c7495;
     }
 
-    public static /* synthetic */ InterfaceC7535 a(Spliterator.OfDouble ofDouble) {
-        if (ofDouble == null) {
-            return null;
-        }
-        return ofDouble instanceof C8947 ? ((C8947) ofDouble).a : new C8241(ofDouble);
+    @Override // l.AbstractC18551
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3178(C8614 c8614) {
+        boolean zM23195 = c8614.m23195();
+        ApplicationC17729.f58258.edit().putString(zM23195 ? "home_path_left" : "home_path_right", this.f27102.m20218()).apply();
+        ApplicationC17729.f58262.edit().putString(zM23195 ? "load_path_left" : "load_path_right", "0").apply();
+        C22673.m51152(R.string.MT_Protector);
     }
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ int characteristics() {
-        return this.a.characteristics();
-    }
-
-    public final /* synthetic */ boolean equals(Object obj) {
-        Spliterator.OfDouble ofDouble = this.a;
-        if (obj instanceof C8241) {
-            obj = ((C8241) obj).a;
-        }
-        return ofDouble.equals(obj);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long estimateSize() {
-        return this.a.estimateSize();
-    }
-
-    @Override // l.InterfaceC10110
-    public final /* synthetic */ void forEachRemaining(Object obj) {
-        this.a.forEachRemaining(obj);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        this.a.forEachRemaining((Consumer<? super Double>) consumer);
-    }
-
-    @Override // l.InterfaceC7535
-    public final /* synthetic */ void forEachRemaining(DoubleConsumer doubleConsumer) {
-        this.a.forEachRemaining(doubleConsumer);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ Comparator getComparator() {
-        return this.a.getComparator();
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return this.a.getExactSizeIfKnown();
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return this.a.hasCharacteristics(i);
-    }
-
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // l.InterfaceC10110
-    public final /* synthetic */ boolean tryAdvance(Object obj) {
-        return this.a.tryAdvance(obj);
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return this.a.tryAdvance((Consumer<? super Double>) consumer);
-    }
-
-    @Override // l.InterfaceC7535
-    public final /* synthetic */ boolean tryAdvance(DoubleConsumer doubleConsumer) {
-        return this.a.tryAdvance(doubleConsumer);
-    }
-
-    @Override // l.InterfaceC7535, l.InterfaceC10110, l.InterfaceC20693
-    public final /* synthetic */ InterfaceC7535 trySplit() {
-        return a(this.a.trySplit());
-    }
-
-    @Override // l.InterfaceC10110, l.InterfaceC20693
-    public final /* synthetic */ InterfaceC10110 trySplit() {
-        return C16224.a(this.a.trySplit());
-    }
-
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ InterfaceC20693 trySplit() {
-        return C12696.a(this.a.trySplit());
+    @Override // l.AbstractC18551
+    /* JADX INFO: renamed from: ܳ */
+    public final boolean mo3179() {
+        return !this.f27102.mo20209();
     }
 }

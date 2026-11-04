@@ -1,148 +1,133 @@
 package l;
 
-import java.security.MessageDigest;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.᩻᩸۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: P9WB */
-/* JADX INFO: loaded from: classes.dex */
-public final class C23964 implements InterfaceC5619 {
+/* JADX INFO: renamed from: l.᩺֫ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23964 extends C10625 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f77699 = 0;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC22664 f77561;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC4314 f77700 = C13488.m32997(C23964.class);
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3826 f77562;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f77701;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f77563 = true;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public MessageDigest f77702;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final AbstractC22664 f77564;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f77703;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public byte[] f77704;
-
-    public C23964(byte[] bArr, int i) {
-        this.f77702 = C16577.m38992();
-        this.f77704 = bArr;
-        this.f77703 = 0;
-        InterfaceC4314 interfaceC4314 = f77700;
-        if (interfaceC4314.mo12133()) {
-            interfaceC4314.mo12127("macSigningKey:");
-            interfaceC4314.mo12127(C5993.m16281(bArr, 0, bArr.length));
-        }
+    public C23964(C3826 c3826, AbstractC22664 abstractC22664, AbstractC22664 abstractC22665) {
+        this.f77562 = c3826;
+        this.f77564 = abstractC22664;
+        this.f77561 = abstractC22665;
     }
 
-    public C23964(byte[] bArr) {
-        this.f77702 = C16577.m38992();
-        this.f77704 = bArr;
+    @Override // l.AbstractC13886
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo33830() {
+        this.f77563 = false;
     }
 
-    public C23964(byte[] bArr, Object obj) {
-        this.f77702 = C16577.m38992();
-        this.f77704 = bArr;
-        this.f77703 = 2;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1508(C10162 c10162) {
+        mo5474(m53495(c10162.f32544));
+        mo5474(m53495(c10162.f32545));
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52787(byte[] bArr, int i, int i2) {
-        InterfaceC4314 interfaceC4314 = f77700;
-        if (interfaceC4314.mo12133()) {
-            StringBuilder sb = new StringBuilder("update: ");
-            C23821.m52500(sb, this.f77701, " ", i, ":");
-            sb.append(i2);
-            interfaceC4314.mo12127(sb.toString());
-            interfaceC4314.mo12127(C5993.m16281(bArr, i, Math.min(i2, 256)));
-        }
-        if (i2 == 0) {
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1954(C12598 c12598) {
+        EnumC21172 enumC21172 = EnumC21172.VOID;
+        AbstractC22664 abstractC22664 = this.f77561;
+        if (abstractC22664.m51067(enumC21172)) {
+            this.f77563 = this.f77563;
             return;
         }
-        this.f77702.update(bArr, i, i2);
-        this.f77701++;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] m52790() {
-        byte[] bArrDigest = this.f77702.digest();
-        InterfaceC4314 interfaceC4314 = f77700;
-        if (interfaceC4314.mo12133()) {
-            interfaceC4314.mo12127("digest: ");
-            interfaceC4314.mo12127(C5993.m16281(bArrDigest, 0, bArrDigest.length));
+        AbstractC22664 abstractC22665 = this.f77564;
+        boolean z = false;
+        if (abstractC22665.m51067(enumC21172)) {
+            this.f77563 = false;
+            return;
         }
-        this.f77701 = 0;
-        return bArrDigest;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m52788(byte[] bArr, int i, int i2, InterfaceC9666 interfaceC9666, InterfaceC9666 interfaceC9667) {
-        InterfaceC4314 interfaceC4314 = f77700;
-        if (interfaceC4314.mo12133()) {
-            interfaceC4314.mo12127("Signing with seq " + this.f77703);
-        }
-        ((AbstractC14792) interfaceC9666).m35437(this.f77703);
-        if (interfaceC9667 != null) {
-            ((AbstractC14792) interfaceC9667).m35437(this.f77703 + 1);
-        }
-        try {
-            try {
-                byte[] bArr2 = this.f77704;
-                m52787(bArr2, 0, bArr2.length);
-                int i3 = i + 14;
-                for (int i4 = 0; i4 < 8; i4++) {
-                    bArr[i3 + i4] = 0;
-                }
-                C4850.m13550(this.f77703, i3, bArr);
-                m52787(bArr, i, i2);
-                System.arraycopy(m52790(), 0, bArr, i3, 8);
-            } catch (Exception e) {
-                interfaceC4314.mo12138("Signature failed", (Throwable) e);
+        if (abstractC22665.mo40452() != abstractC22664.mo40452()) {
+            boolean z2 = c12598.f40438 == EnumC8869.STANDALONE && c12598.f40439.f38067.mo31585().mo40452();
+            boolean z3 = this.f77563;
+            if (z2 == abstractC22665.mo40452() && z2 != abstractC22664.mo40452()) {
+                z = true;
             }
-        } finally {
-            this.f77703 += 2;
+            this.f77563 = z3 & z;
+            return;
         }
+        this.f77563 &= this.f77562.m12365(abstractC22665, abstractC22664);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m52789(byte[] bArr, int i, int i2, InterfaceC9666 interfaceC9666) {
-        AbstractC14792 abstractC14792 = (AbstractC14792) interfaceC9666;
-        int i3 = abstractC14792.f48356 & 4;
-        InterfaceC4314 interfaceC4314 = f77700;
-        if (i3 == 0) {
-            interfaceC4314.mo12116("Expected signed response, but is not signed");
-            return false;
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1945(C1412 c1412) {
+        mo5474(m53495(c1412.f4986));
+    }
+
+    @Override // l.C23174, l.AbstractC0578
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1518(C16327 c16327) {
+        C14769<AbstractC22295> c14769M43093;
+        EnumC21172 enumC21172 = EnumC21172.VOID;
+        AbstractC22664 abstractC22664 = this.f77561;
+        if (abstractC22664.m51067(enumC21172)) {
+            this.f77563 = this.f77563;
+            return;
         }
-        byte[] bArr2 = this.f77704;
-        m52787(bArr2, 0, bArr2.length);
-        m52787(bArr, 4, 14);
-        byte[] bArr3 = new byte[8];
-        C4850.m13550(abstractC14792.m35436(), 0, bArr3);
-        m52787(bArr3, 0, 8);
-        if (abstractC14792.mo24564() == 46) {
-            C19626 c19626 = (C19626) abstractC14792;
-            m52787(bArr, 26, (abstractC14792.f48369 - c19626.m44720()) - 22);
-            m52787(c19626.m44717(), c19626.m44719(), c19626.m44720());
+        AbstractC22664 abstractC22665 = this.f77564;
+        if (abstractC22665.m51067(enumC21172)) {
+            this.f77563 = false;
+            return;
+        }
+        if (c16327.m38748() == EnumC25033.EXPRESSION) {
+            c14769M43093 = C14769.of((Object) m53495((AbstractC22295) c16327.f53001));
         } else {
-            m52787(bArr, 26, abstractC14792.f48369 - 22);
+            C18499 c18499 = new C18499();
+            new C6064(this, c18499).mo5474(c16327.f53001);
+            c14769M43093 = c18499.m43093();
         }
-        byte[] bArrM52790 = m52790();
-        for (int i4 = 0; i4 < 8; i4++) {
-            if (bArrM52790[i4] != bArr[i4 + 18]) {
-                if (interfaceC4314.mo12125()) {
-                    interfaceC4314.mo12135("signature verification failure");
-                    interfaceC4314.mo12135("Expect: ".concat(C5993.m16281(bArrM52790, 0, 8)));
-                    interfaceC4314.mo12135("Have: ".concat(C5993.m16281(bArr, 18, 8)));
-                }
-                return true;
+        boolean zIsEmpty = c14769M43093.isEmpty();
+        C3826 c3826 = this.f77562;
+        if (!zIsEmpty && c3826.m12369(abstractC22665, abstractC22664)) {
+            Iterator it = c14769M43093.iterator();
+            while (it.hasNext()) {
+                this.f77563 = c3826.m12366(abstractC22665, abstractC22664, (AbstractC22295) it.next()) & this.f77563;
             }
+            return;
         }
-        return false;
+        if (!c14769M43093.isEmpty() && abstractC22665.mo40452() != abstractC22664.mo40452()) {
+            for (AbstractC22295 abstractC22295 : c14769M43093) {
+                boolean z = true;
+                boolean z2 = abstractC22295.mo20264() && abstractC22295.f26659.mo40452();
+                boolean z3 = this.f77563;
+                if (z2 != abstractC22665.mo40452() || z2 == abstractC22664.mo40452()) {
+                    z = false;
+                }
+                this.f77563 = z3 & z;
+            }
+            return;
+        }
+        this.f77563 &= c3826.m12365(abstractC22665, abstractC22664);
     }
 
-    public final String toString() {
-        byte[] bArr = this.f77704;
-        return "MacSigningKey=".concat(C5993.m16281(bArr, 0, bArr.length));
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 m53495(AbstractC22295 abstractC22295) {
+        if (abstractC22295.f26659.m51067(EnumC21172.DEFERRED)) {
+            C8666 c8666 = (C8666) abstractC22295.f26659;
+            C3826 c3826 = this.f77562;
+            AbstractC8036 abstractC8036Mo17983 = c8666.mo17983(c3826.f43279);
+            if (abstractC8036Mo17983 != c3826.f13044.f45078.f71035.f41173) {
+                return (AbstractC22295) abstractC8036Mo17983;
+            }
+        }
+        return abstractC22295;
     }
 }

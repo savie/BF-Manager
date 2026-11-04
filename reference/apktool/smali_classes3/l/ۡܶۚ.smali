@@ -1,30 +1,26 @@
 .class public final Ll/ۡܶۚ;
-.super Ll/֡ܶۚ;
-.source "86ZM"
+.super Ljava/lang/Object;
+.source "577V"
 
 
 # instance fields
-.field public final ۨ:Ll/ܿۘۚ;
+.field public final ۙ:Z
 
-.field public final ܰ:[I
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>([I[Ll/ۗᩳۨ;Ll/ۗᩳۨ;)V
+.method public constructor <init>(ZLjava/lang/String;)V
     .locals 0
 
-    .line 631
-    invoke-direct {p0, p3}, Ll/֡ܶۚ;-><init>(Ll/ۗᩳۨ;)V
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 632
-    iput-object p1, p0, Ll/ۡܶۚ;->ܰ:[I
+    .line 20
+    iput-boolean p1, p0, Ll/ۡܶۚ;->ۙ:Z
 
-    .line 633
-    invoke-static {p2}, Ll/ܿۘۚ;->ۙ([Ll/ۗᩳۨ;)Ll/ܿۘۚ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ۡܶۚ;->ۨ:Ll/ܿۘۚ;
+    .line 21
+    iput-object p2, p0, Ll/ۡܶۚ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

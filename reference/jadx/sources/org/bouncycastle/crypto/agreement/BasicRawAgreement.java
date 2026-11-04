@@ -5,7 +5,7 @@ import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.RawAgreement;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BasicRawAgreement implements RawAgreement {
     public final BasicAgreement basicAgreement;
 

@@ -1,27 +1,30 @@
 package l;
 
-import java.io.OutputStream;
-import java.security.MessageDigest;
-
-/* JADX INFO: renamed from: l.ۡۨۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B1VV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8851 extends OutputStream {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ MessageDigest f30388;
-
-    public C8851(MessageDigest messageDigest) {
-        this.f30388 = messageDigest;
+/* JADX INFO: renamed from: l.۠᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8851 implements InterfaceC12580 {
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C20785.m47569(this, interfaceC2885);
     }
 
-    @Override // java.io.OutputStream
-    public final void write(int i) {
-        this.f30388.update((byte) i);
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        return true;
     }
 
-    @Override // java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) {
-        this.f30388.update(bArr, i, i2);
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C20785.m47570(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

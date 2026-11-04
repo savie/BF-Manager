@@ -1,89 +1,158 @@
 .class public final Ll/֫᩻᩵;
-.super Ll/۫۠ۡ;
-.source "Z556"
+.super Ljava/lang/Object;
+.source "65V2"
 
 
 # instance fields
-.field public final synthetic ܿ:Z
+.field public final ۙ:Ljava/nio/ByteBuffer;
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ᩷:Ll/ܽܺ᩵;
+
+.field public final ᩸:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/Writer;Z)V
+.method public constructor <init>(IILjava/lang/String;[B)V
     .locals 0
 
-    .line 691
-    iput-boolean p2, p0, Ll/֫᩻᩵;->ܿ:Z
+    .line 18
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ll/۫۠ۡ;-><init>(Ljava/io/Writer;)V
+    .line 19
+    iput p1, p0, Ll/֫᩻᩵;->᩸:I
+
+    .line 20
+    iput-object p3, p0, Ll/֫᩻᩵;->ۤ:Ljava/lang/String;
+
+    .line 21
+    invoke-static {p4}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/֫᩻᩵;->ۙ:Ljava/nio/ByteBuffer;
+
+    .line 22
+    new-instance p1, Ll/ܽܺ᩵;
+
+    new-instance p3, Ll/ۨܺ᩵;
+
+    invoke-direct {p3, p0, p2}, Ll/ۨܺ᩵;-><init>(Ll/֫᩻᩵;I)V
+
+    invoke-direct {p1, p3}, Ll/ܽܺ᩵;-><init>(Ll/ۨܺ᩵;)V
+
+    iput-object p1, p0, Ll/֫᩻᩵;->᩷:Ll/ܽܺ᩵;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۤ۫᩵;)V
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 695
-    sget-object v0, Ll/ۤ۫᩵;->ܶܰ:Ll/ۤ۫᩵;
+    .line 58
+    iget-object v0, p0, Ll/֫᩻᩵;->ۤ:Ljava/lang/String;
 
-    if-ne p1, v0, :cond_0
+    return-object v0
+.end method
 
-    .line 696
-    sget-object p1, Ll/ۤ۫᩵;->᩺ܰ:Ll/ۤ۫᩵;
+.method public final ۙ()Ljava/nio/ByteBuffer;
+    .locals 1
+
+    .line 41
+    iget-object v0, p0, Ll/֫᩻᩵;->ۙ:Ljava/nio/ByteBuffer;
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ll/᩸۫᩸;)V
+    .locals 5
+
+    .line 26
+    iget-object v0, p0, Ll/֫᩻᩵;->᩷:Ll/ܽܺ᩵;
+
+    invoke-virtual {v0}, Ll/ܽܺ᩵;->ۤ()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    .line 30
+    :cond_0
+    invoke-virtual {v0}, Ll/ܽܺ᩵;->᩷()I
+
+    move-result v0
+
+    .line 31
+    new-instance v2, Ll/ۨܺ᩵;
+
+    invoke-direct {v2, p0, v0}, Ll/ۨܺ᩵;-><init>(Ll/֫᩻᩵;I)V
+
+    .line 32
+    new-instance v0, Ll/ۛܺ᩵;
+
+    invoke-virtual {v2}, Ll/ۨܺ᩵;->ۙ()Ll/ۨܺ᩵;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Ll/ۨܺ᩵;->ۙ()Ll/ۨܺ᩵;
+
+    move-result-object v4
+
+    invoke-direct {v0, v3, v4}, Ll/ۛܺ᩵;-><init>(Ll/ۨܺ᩵;Ll/ۨܺ᩵;)V
+
+    .line 33
+    new-instance v3, Ll/ۧܺ᩵;
+
+    invoke-direct {v3, v2, v0}, Ll/ۧܺ᩵;-><init>(Ll/ۨܺ᩵;Ll/ۛܺ᩵;)V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v1, :cond_1
+
+    .line 35
+    invoke-virtual {p1, v3}, Ll/᩸۫᩸;->accept(Ljava/lang/Object;)V
+
+    .line 36
+    invoke-virtual {v2}, Ll/ۨܺ᩵;->᩹()V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 697
-    :cond_0
-    sget-object v0, Ll/ۤ۫᩵;->ۚۨ:Ll/ۤ۫᩵;
-
-    if-eq p1, v0, :cond_1
-
-    sget-object v0, Ll/ۤ۫᩵;->᩹ۨ:Ll/ۤ۫᩵;
-
-    if-ne p1, v0, :cond_2
-
-    .line 698
     :cond_1
-    sget-object p1, Ll/ۤ۫᩵;->ۖۨ:Ll/ۤ۫᩵;
-
-    .line 700
-    :cond_2
-    :goto_0
-    invoke-super {p0, p1}, Ll/۫۠ۡ;->ۙ(Ll/ۤ۫᩵;)V
-
+    :goto_1
     return-void
 .end method
 
-.method public final ܰ(J)V
-    .locals 5
+.method public final ۤ()Ljava/lang/String;
+    .locals 1
 
-    .line 705
-    iget-boolean v0, p0, Ll/֫᩻᩵;->ܿ:Z
+    .line 49
+    iget-object v0, p0, Ll/֫᩻᩵;->ۤ:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    const-wide/32 v0, 0x7f000000
+.method public final ᩷()Ll/ܽܺ᩵;
+    .locals 1
 
-    cmp-long v2, v0, p1
+    .line 45
+    iget-object v0, p0, Ll/֫᩻᩵;->᩷:Ll/ܽܺ᩵;
 
-    if-gtz v2, :cond_0
+    return-object v0
+.end method
 
-    const-wide/32 v2, 0x7fffffff
+.method public final ᩸()I
+    .locals 1
 
-    cmp-long v4, p1, v2
+    .line 53
+    iget v0, p0, Ll/֫᩻᩵;->᩸:I
 
-    if-gtz v4, :cond_0
-
-    .line 706
-    invoke-super {p0, v0, v1}, Ll/۫۠ۡ;->ܰ(J)V
-
-    return-void
-
-    .line 708
-    :cond_0
-    invoke-super {p0, p1, p2}, Ll/۫۠ۡ;->ܰ(J)V
-
-    return-void
+    return v0
 .end method

@@ -8,10 +8,10 @@ import java.util.Locale;
 public class StringUtils {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Charset f844 = Charset.forName(a.D);
+    public static final Charset f834 = Charset.forName(a.D);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m789(String str) {
+    public static String m783(String str) {
         if (str == null) {
             return null;
         }

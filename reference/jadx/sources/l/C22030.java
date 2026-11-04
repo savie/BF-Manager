@@ -1,51 +1,248 @@
 package l;
 
-import android.transition.Transition;
-import android.view.View;
-import java.util.ArrayList;
+import com.umeng.commonsdk.statistics.UMErrorCode;
+import moe.shizuku.server.IShizukuService;
 
-/* JADX INFO: renamed from: l.᩹ۘۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 451G */
+/* JADX INFO: renamed from: l.᩷ۨ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K3YG */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22030 implements Transition.TransitionListener {
+public final class C22030 extends C9959 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f71395;
+    /* JADX INFO: renamed from: ܿ᩷ܰ, reason: not valid java name and contains not printable characters */
+    private static final short[] f71059 = {536, -9894, -9914, -9889, -9907, -9917, -9916, -9980, -9914, -9915, -9907};
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f71396;
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionCancel(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionPause(Transition transition) {
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionResume(Transition transition) {
-    }
-
-    public C22030(View view, ArrayList arrayList) {
-        this.f71396 = view;
-        this.f71395 = arrayList;
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionEnd(Transition transition) {
-        transition.removeListener(this);
-        this.f71396.setVisibility(8);
-        ArrayList arrayList = this.f71395;
-        int size = arrayList.size();
-        for (int i = 0; i < size; i++) {
-            ((View) arrayList.get(i)).setVisibility(0);
+    @Override // l.C9959
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo4583() {
+        short[] sArr = null;
+        char c = 0;
+        short s = 0;
+        int i = 0;
+        int i2 = 0;
+        int i3 = 0;
+        short s2 = 0;
+        int i4 = 0;
+        short[] sArr2 = null;
+        int i5 = 0;
+        int i6 = -1700438169;
+        int i7 = C1321.f4751;
+        int i8 = C23916.f77426;
+        int iM2761 = (i8 - C0619.m2761("ۖᩳ")) * IShizukuService.Stub.TRANSACTION_dispatchPackageChanged;
+        int i9 = ((iM2761 ^ i7) * 19225) ^ (-1808776615);
+        int i10 = -1575536739;
+        while (true) {
+            i6 = ((((i6 ^ i7) * 21303) >> 31) & i9) ^ (iM2761 ^ i10);
+            switch (i6) {
+                case -2131475261:
+                case 2017708543:
+                    C3448.m11248();
+                    iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                    i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                    i10 = 961283507;
+                    break;
+                case -2109077552:
+                case -1496095126:
+                    i = s * s;
+                    i2 = 227406400;
+                    if (C1542.f5343 <= 0) {
+                        iM2761 = (C0619.m2761("۫ۙ") + i7) * UMErrorCode.E_UM_BE_EMPTY_URL_PATH;
+                        i9 = ((iM2761 ^ i8) * 7677) ^ 1585508552;
+                        i10 = -1958962908;
+                    } else {
+                        iM2761 = (i8 - C0773.m3169("ܿ֡")) * 7;
+                        i9 = ((iM2761 ^ i7) * (-27905)) ^ (-468718373);
+                        i10 = 1425749152;
+                    }
+                    break;
+                case -2084262817:
+                case 318869106:
+                    sArr = f71059;
+                    if (C1343.m4943()) {
+                        iM2761 = (C0619.m2761("֨۟") ^ i7) * (-25);
+                        i9 = ((iM2761 ^ i8) * 21321) ^ (-739789838);
+                        i10 = 2128738676;
+                    } else {
+                        iM2761 = C0619.m2761("ۖۛ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 1349) ^ (-474523730);
+                        i10 = -149296648;
+                    }
+                    break;
+                case -2024161085:
+                case 1819365331:
+                    i4 = 55594;
+                    iM2761 = C0773.m3169("֨ᩳ") ^ i7;
+                    i9 = ((iM2761 ^ i8) * 9853) ^ (-167316082);
+                    i10 = -1625937738;
+                    break;
+                case -1890614656:
+                case -496148449:
+                    s2 = 15080;
+                    if (C2485.f7950 != 0) {
+                        iM2761 = C0619.m2761("ۖۛ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 1349) ^ (-474523730);
+                        i10 = -149296648;
+                    } else {
+                        iM2761 = C0773.m3169("ۚܽ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * (-16791)) ^ (-499869662);
+                        i10 = -1897884851;
+                    }
+                    break;
+                case -1613494404:
+                case 357513306:
+                    C1321.m4852();
+                    C2834.m9344();
+                    return null;
+                case -1551870080:
+                case -973320480:
+                    if (C0950.f3488 >= 0) {
+                        iM2761 = C0619.m2761("ۖۛ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 1349) ^ (-474523730);
+                        i10 = -149296648;
+                    } else {
+                        iM2761 = C0619.m2761("ᩳۙ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * (-12057)) ^ (-262982747);
+                        i10 = 1689261720;
+                    }
+                    break;
+                case -1470579383:
+                case 678991765:
+                    int i11 = s + s2;
+                    if (i3 - (i11 * i11) >= 0) {
+                        iM2761 = C0619.m2761("᩸ۙ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 12153) ^ (-169215428);
+                        i10 = -1111906252;
+                    } else {
+                        iM2761 = (C0773.m3169("᩺᩺") ^ i8) * 41;
+                        i9 = ((iM2761 ^ i7) * (-5581)) ^ 1481989357;
+                        i10 = 1438612451;
+                    }
+                    break;
+                case -1147127859:
+                case -839229269:
+                    C2878.m9491();
+                    if (AbstractC0641.m2813() <= 0) {
+                        iM2761 = C0619.m2761("۠ۨ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 16165) ^ (-1400778114);
+                        i10 = -498040887;
+                    } else {
+                        iM2761 = C0773.m3169("᩸᩸") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 825) ^ (-1181160455);
+                        i10 = 1118033257;
+                    }
+                    break;
+                case -1138001809:
+                case 945546661:
+                    i4 = 669;
+                    iM2761 = C0773.m3169("֨ᩳ") ^ i7;
+                    i9 = ((iM2761 ^ i8) * 9853) ^ (-167316082);
+                    i10 = -1625937738;
+                    break;
+                case -926168596:
+                case 33708030:
+                    int i12 = i + i2;
+                    i3 = i12 + i12;
+                    if (C1542.f5343 <= 0) {
+                        iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                        i10 = 961283507;
+                    } else {
+                        iM2761 = (C0619.m2761("֨ۜ") ^ i7) * (-61);
+                        i9 = ((iM2761 ^ i8) * 27013) ^ (-1337927240);
+                        i10 = -1025414483;
+                    }
+                    break;
+                case -759641736:
+                case -719070521:
+                    s = sArr[c];
+                    if (C2375.f7641 <= 0) {
+                        iM2761 = C0619.m2761("۠ۨ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 16165) ^ (-1400778114);
+                        i10 = -498040887;
+                    } else {
+                        iM2761 = C0773.m3169("ۙ۟") ^ i7;
+                        i9 = ((iM2761 ^ i8) * (-3371)) ^ 1464569949;
+                        i10 = 617743245;
+                    }
+                    break;
+                case -420613:
+                case 1753617980:
+                    c = 0;
+                    if (C0487.m2356() >= 0) {
+                        iM2761 = (C0619.m2761("۫ۙ") + i7) * UMErrorCode.E_UM_BE_EMPTY_URL_PATH;
+                        i9 = ((iM2761 ^ i8) * 7677) ^ 1585508552;
+                        i10 = -1958962908;
+                    } else {
+                        iM2761 = C0773.m3169("֫ۡ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 3489) ^ (-1394403868);
+                        i10 = -272613433;
+                    }
+                    break;
+                case 123923418:
+                case 2145289676:
+                    return C0487.m2361(sArr2, i5, 10, i4);
+                case 519217885:
+                case 1153989818:
+                    if (C3779.f12953 <= 0) {
+                        iM2761 = C0773.m3169("᩸᩸") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 825) ^ (-1181160455);
+                        i10 = 1118033257;
+                    } else {
+                        iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                        i10 = 961283507;
+                    }
+                    break;
+                case 549919904:
+                case 1582333896:
+                    if (C2966.f9654 >= 0) {
+                        iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                        i10 = 961283507;
+                    } else {
+                        iM2761 = (C0619.m2761("᩵᩺") + i7) * (-51);
+                        i9 = ((iM2761 ^ i8) * (-28727)) ^ 1161748025;
+                        i10 = 1514219646;
+                    }
+                    break;
+                case 899064357:
+                case 1718823638:
+                    AbstractC0116.m1243();
+                    if (!RunnableC3646.f12471) {
+                        iM2761 = C0619.m2761("ۖۛ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 1349) ^ (-474523730);
+                        i10 = -149296648;
+                    } else {
+                        iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                        i10 = 961283507;
+                    }
+                    break;
+                case 965623302:
+                case 2080156678:
+                    sArr2 = f71059;
+                    i5 = 1;
+                    if (C0950.f3488 >= 0) {
+                        iM2761 = C0619.m2761("۫ܿ") ^ i7;
+                        i9 = ((iM2761 ^ i8) * 4585) ^ 372821031;
+                        i10 = 961283507;
+                    } else {
+                        iM2761 = C0619.m2761("۠᩺") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 25575) ^ (-1838044297);
+                        i10 = 1031886806;
+                    }
+                    break;
+                default:
+                    if (C4238.m13540() <= 0) {
+                        iM2761 = C0773.m3169("᩸᩸") ^ i8;
+                        i9 = ((iM2761 ^ i7) * 825) ^ (-1181160455);
+                        i10 = 1118033257;
+                    } else {
+                        iM2761 = C0773.m3169("ᩴܺ") ^ i8;
+                        i9 = ((iM2761 ^ i7) * (-4895)) ^ (-2134928500);
+                        i10 = -988152789;
+                    }
+                    break;
+            }
         }
-    }
-
-    @Override // android.transition.Transition.TransitionListener
-    public final void onTransitionStart(Transition transition) {
-        transition.removeListener(this);
-        transition.addListener(this);
     }
 }

@@ -1,99 +1,61 @@
 package l;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
 
-/* JADX INFO: renamed from: l.᩻᩸۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6X9 */
+/* JADX INFO: renamed from: l.᩺֫ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U5BR */
 /* JADX INFO: loaded from: classes.dex */
 public final class C23968 {
 
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public InterfaceC22760[] f77569 = new InterfaceC22760[10];
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f77708;
+    public final ArrayList f77568 = new ArrayList();
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ReentrantLock f77709;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m53498(String str, InterfaceC22760 interfaceC22760) {
+        ArrayList arrayList = this.f77568;
+        int size = arrayList.size();
+        InterfaceC22760[] interfaceC22760Arr = this.f77569;
+        if (size == interfaceC22760Arr.length) {
+            InterfaceC22760[] interfaceC22760Arr2 = new InterfaceC22760[interfaceC22760Arr.length + 10];
+            this.f77569 = interfaceC22760Arr2;
+            System.arraycopy(interfaceC22760Arr, 0, interfaceC22760Arr2, 0, interfaceC22760Arr.length);
+        }
+        this.f77569[arrayList.size()] = interfaceC22760;
+        arrayList.add(str);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Condition f77710;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m53497(String str) {
+        int iIndexOf = this.f77568.indexOf(str);
+        if (iIndexOf != -1) {
+            return iIndexOf;
+        }
+        throw new RuntimeException("Null");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m53499(C23222 c23222, int i) {
+        this.f77569[i].mo1200(c23222.f75230);
+    }
 
     public C23968() {
-        ReentrantLock reentrantLock = new ReentrantLock(true);
-        this.f77709 = reentrantLock;
-        this.f77710 = reentrantLock.newCondition();
-        this.f77708 = new ArrayList();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11268 m52809(String str) {
-        return m52805((Collection) Collections.singletonList(str), false);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11268 m52811(List list) {
-        return m52805((Collection) list, false);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C11268 m52812(String str) {
-        return m52805((Collection) Collections.singletonList(str), true);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11268 m52810(Collection collection) {
-        return m52805(collection, true);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private C11268 m52805(Collection collection, boolean z) throws C12731 {
-        ArrayList arrayList = new ArrayList(new LinkedHashSet(collection));
-        Collections.sort(arrayList);
-        if (arrayList.isEmpty()) {
-            throw C12731.m31630("FILE_INVALID_PATH", "At least one path claim is required.");
-        }
-        ReentrantLock reentrantLock = this.f77709;
-        reentrantLock.lock();
-        while (m52806(arrayList, z)) {
-            try {
-                try {
-                    this.f77710.await();
-                } catch (InterruptedException unused) {
-                    Thread.currentThread().interrupt();
-                    throw C12731.m31625("FILE_OPERATION_INTERRUPTED", "File operation was interrupted while waiting for a path claim.");
-                }
-            } catch (Throwable th) {
-                reentrantLock.unlock();
-                throw th;
-            }
-        }
-        C6328 c6328 = new C6328(arrayList, z);
-        this.f77708.add(c6328);
-        C11268 c11268 = new C11268(this, c6328);
-        reentrantLock.unlock();
-        return c11268;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private boolean m52806(ArrayList arrayList, boolean z) {
-        for (C6328 c6328 : this.f77708) {
-            if (z || c6328.f21370) {
-                Iterator it = arrayList.iterator();
-                while (it.hasNext()) {
-                    String str = (String) it.next();
-                    for (String str2 : c6328.f21369) {
-                        if (C6370.m17477(str, str2) || C6370.m17477(str2, str)) {
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
+        m53498("FqEbNJXkJJiNHyALXoAPmNssdfAfNBwo", new C17933());
+        m53498("VccaTcBCLZNJJFdPoFgCfDEXEfyLbLRc", new C13808());
+        m53498("EPBCJBqAFiXcEDiZdDcukBwcwgiRscVA", new C15300());
+        m53498("CTHiqssoBaukCbPJsgNBkFeCwooFJZbf", new C18969());
+        m53498("qoNZDuCTyLXAuEZHyHscRAodgmRgkJVA", new C0385(0));
+        m53498("ybqoPJTkJJFqmNPBdfToJBZDdTDCNdiR", new C25040());
+        m53498("NBwgiNDasoayTwBCayNZeyybZTbXcyHi", new C19776());
+        C10825.m27554(this);
+        C19425.m44917(this);
+        C10978.m27823(this);
+        C7097.m19440(this);
+        C6352.m18070(this);
+        C5606.m16583(this);
+        C18284.m42617(this);
+        C17187.m40356(this);
     }
 }

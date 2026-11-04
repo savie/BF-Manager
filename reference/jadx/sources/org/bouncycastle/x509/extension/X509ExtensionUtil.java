@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Enumeration;
-import l.C0561;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -62,7 +62,7 @@ public class X509ExtensionUtil {
                 arrayList2.add(aSN1Primitive);
                 arrayList.add(arrayList2);
             }
-            return C0561.unmodifiableCollection(arrayList);
+            return C4681.unmodifiableCollection(arrayList);
         } catch (Exception e) {
             throw new CertificateParsingException(e.getMessage());
         }

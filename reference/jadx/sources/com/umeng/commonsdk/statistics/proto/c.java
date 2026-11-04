@@ -35,8 +35,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import l.C0561;
-import l.C2271;
+import l.C14442;
+import l.C4681;
 
 /* JADX INFO: compiled from: T578 */
 /* JADX INFO: loaded from: classes.dex */
@@ -62,7 +62,7 @@ public class c implements av, Serializable, Cloneable {
         enumMap.put(e.SNAPSHOTS, new bh("snapshots", (byte) 1, new bk(cb.k, new bi((byte) 11), new bm((byte) 12, com.umeng.commonsdk.statistics.proto.b.class))));
         enumMap.put(e.JOURNALS, new bh("journals", (byte) 2, new bj((byte) 15, new bm((byte) 12, com.umeng.commonsdk.statistics.proto.a.class))));
         enumMap.put(e.CHECKSUM, new bh("checksum", (byte) 2, new bi((byte) 11)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         d = mapUnmodifiableMap;
         bh.a(c.class, mapUnmodifiableMap);
     }
@@ -101,7 +101,7 @@ public class c implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {

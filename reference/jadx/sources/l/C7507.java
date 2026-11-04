@@ -1,28 +1,31 @@
 package l;
 
-import java.util.Arrays;
-import java.util.function.IntFunction;
+import android.os.Bundle;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.۟ܰ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95XT */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C7507 extends AbstractC12808 {
-    @Override // l.AbstractC5752
-    public final InterfaceC19171 q0(int i, InterfaceC19171 interfaceC19171) {
-        C13638.requireNonNull(interfaceC19171);
-        if (EnumC2970.SORTED.s(i)) {
-            return interfaceC19171;
-        }
-        return EnumC2970.SIZED.s(i) ? new C0825(interfaceC19171) : new C20644(interfaceC19171);
+public final class C7507 extends C0049 {
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC18694 f24812;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C7507(AbstractC18694 abstractC18694) {
+        super(abstractC18694);
+        this.f24812 = abstractC18694;
     }
 
-    @Override // l.AbstractC5752
-    public final InterfaceC8616 n0(AbstractC22686 abstractC22686, InterfaceC20693 interfaceC20693, IntFunction intFunction) {
-        if (EnumC2970.SORTED.s(((AbstractC5752) abstractC22686).m)) {
-            return abstractC22686.Q(interfaceC20693, false, intFunction);
-        }
-        int[] iArr = (int[]) ((InterfaceC13036) abstractC22686.Q(interfaceC20693, true, intFunction)).b();
-        Arrays.sort(iArr);
-        return new C1518(iArr);
+    @Override // android.media.browse.MediaBrowser.SubscriptionCallback
+    public final void onChildrenLoaded(String str, List list, Bundle bundle) {
+        C13363.m32945(bundle);
+        C3778.m12254(list);
+    }
+
+    @Override // android.media.browse.MediaBrowser.SubscriptionCallback
+    public final void onError(String str, Bundle bundle) {
+        C13363.m32945(bundle);
+        this.f24812.getClass();
     }
 }

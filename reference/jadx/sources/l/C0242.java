@@ -1,76 +1,84 @@
 package l;
 
-import android.content.pm.ShortcutManager;
-import java.util.concurrent.ConcurrentSkipListMap;
+/* JADX INFO: renamed from: l.֡ۛ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: G9ZG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0242 extends AbstractC3971 implements InterfaceC0416 {
 
-/* JADX INFO: renamed from: l.֡ۜۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T1PJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C0242 implements InterfaceC7359, InterfaceC3183, InterfaceC3740 {
+    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
+    public static final InterfaceC25186 f1510 = C16980.m40037(C0242.class);
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f1442;
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public int f1511;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* bridge */ /* synthetic */ ShortcutManager m1614(Object obj) {
-        return (ShortcutManager) obj;
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int mo1722(int i, byte[] bArr) {
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ String m1615(int i, String str) {
-        if (i < 0) {
-            throw new IllegalArgumentException(C8479.m22141(i, "count is negative: "));
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int mo1724(int i, byte[] bArr) {
+        return 0;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int mo1725(int i, byte[] bArr) {
+        return 0;
+    }
+
+    public C0242(InterfaceC5878 interfaceC5878, int i) {
+        super(interfaceC5878, (byte) 4);
+        this.f1511 = i;
+    }
+
+    @Override // l.AbstractC3971, l.InterfaceC21299, l.InterfaceC14585
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final AbstractC3971 mo1727() {
+        return (C18141) super.mo1727();
+    }
+
+    @Override // l.AbstractC3971, l.InterfaceC21299, l.InterfaceC14585
+    /* JADX INFO: renamed from: ᩸ */
+    public final InterfaceC17965 mo1727() {
+        return (C18141) super.mo1727();
+    }
+
+    @Override // l.AbstractC3971, l.InterfaceC21299, l.InterfaceC14585
+    /* JADX INFO: renamed from: ᩸ */
+    public final InterfaceC18315 mo1727() {
+        return (C18141) super.mo1727();
+    }
+
+    @Override // l.InterfaceC0416
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC18315 mo1726(InterfaceC23032 interfaceC23032) {
+        C18141 c18141 = new C18141(interfaceC23032.mo2875());
+        mo12766((InterfaceC18315) c18141);
+        return c18141;
+    }
+
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int mo1723(int i, byte[] bArr) {
+        C0481.m2319(this.f1511, i, bArr);
+        int i2 = i + 2;
+        if (this.f13583 != null) {
+            int i3 = C24109.f77937;
+            C0481.m2323(-1L, i2, bArr);
+            return 6;
         }
-        int length = str.length();
-        if (i == 0 || length == 0) {
-            return "";
-        }
-        if (i == 1) {
-            return str;
-        }
-        if (str.length() <= Integer.MAX_VALUE / i) {
-            StringBuilder sb = new StringBuilder(length * i);
-            for (int i2 = 0; i2 < i; i2++) {
-                sb.append(str);
-            }
-            return sb.toString();
-        }
-        throw new OutOfMemoryError("Repeating " + str.length() + " bytes String " + i + " times will produce a String exceeding maximum size.");
+        f1510.mo13717("SmbComClose without a digest");
+        return 6;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m1616(int i, String str, StringBuilder sb) {
-        sb.append(str.substring(i));
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m1617(String str, String str2, String str3, String str4, String str5) {
-        return str + str2 + str3 + str4 + str5;
-    }
-
-    @Override // l.InterfaceC3183
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean mo1619(String str) {
-        return true;
-    }
-
-    @Override // l.InterfaceC7359
-    public void invoke(Object obj) {
-        InterfaceC10430 interfaceC10430 = (InterfaceC10430) obj;
-        switch (this.f1442) {
-            case 5:
-                interfaceC10430.getClass();
-                break;
-            default:
-                interfaceC10430.getClass();
-                break;
-        }
-    }
-
-    @Override // l.InterfaceC3740
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Object mo1620() {
-        return new ConcurrentSkipListMap();
+    @Override // l.AbstractC3971
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("SmbComClose[");
+        sb.append(super.toString());
+        sb.append(",fid=");
+        return new String(C12669.m31437(this.f1511, ",lastWriteTime=0]", sb));
     }
 }

@@ -1,49 +1,64 @@
 package l;
 
-import java.util.function.Predicate;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.֨۠ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R450 */
+/* JADX INFO: renamed from: l.֨ۛ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: TBJG */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C0993 extends C10873 {
-    @Override // l.C10873
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C22161 mo3806(AbstractC11242 abstractC11242) {
-        C22161 c22161M27242 = m27242(abstractC11242, null);
-        return c22161M27242.f72487 == null ? new C22161(this.f11719, null, null, null) : c22161M27242;
-    }
+public final class C0993 extends AbstractC21130 {
 
-    @Override // l.C10873, l.AbstractC3110
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f3594;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f3595;
+
+    @Override // l.AbstractC21130
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC23903 mo3804(AbstractC11242 abstractC11242, Predicate predicate) {
-        return m27242(abstractC11242, predicate).f72486;
+    public final void mo3871() {
+        this.f3594 = false;
     }
 
-    @Override // l.C10873, l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Iterable mo3802(Predicate predicate, EnumC10167 enumC10167) {
-        return new C0288(this, enumC10167, predicate);
+    @Override // l.AbstractC21130
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final boolean mo3873() {
+        return this.f3595;
     }
 
-    @Override // l.C10873, l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Iterable mo3803(AbstractC11242 abstractC11242, Predicate predicate, EnumC10167 enumC10167) {
-        return new C16517(this, abstractC11242, predicate, enumC10167);
-    }
-
-    public C0993(C22492 c22492) {
-        super(c22492);
-    }
-
-    @Override // l.C10873, l.AbstractC9462
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9462 mo3805(AbstractC23903 abstractC23903) {
-        return new C0993(this, abstractC23903, this.f36968);
-    }
-
-    @Override // l.C10873, l.AbstractC9462
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9462 mo3801(AbstractC23903 abstractC23903) {
-        return new C0993(this, abstractC23903, (C22161[]) this.f36968.clone());
+    @Override // l.AbstractC21130
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final String mo3872() throws IOException {
+        StringBuilder sb = new StringBuilder();
+        while (!this.f3594) {
+            this.f67507.mark(1);
+            int i = this.f67507.read();
+            if (i == -1) {
+                break;
+            }
+            char c = (char) i;
+            if (c == '<') {
+                this.f67507.reset();
+                this.f3594 = true;
+            } else {
+                sb.append(c);
+            }
+        }
+        if (sb.length() < 1) {
+            this.f3595 = false;
+        } else if (sb.toString().trim().length() == 0) {
+            String string = sb.toString();
+            StringBuilder sb2 = new StringBuilder();
+            for (int i2 = 0; i2 < string.length(); i2++) {
+                char cCharAt = string.charAt(i2);
+                if (cCharAt == '\n' || cCharAt == '\r') {
+                    sb2.append(cCharAt);
+                }
+            }
+            this.f3595 = false;
+            sb = sb2;
+        } else {
+            this.f3595 = true;
+        }
+        return sb.toString();
     }
 }

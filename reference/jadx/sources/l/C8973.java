@@ -1,43 +1,53 @@
 package l;
 
-import android.content.Context;
-import android.util.AttributeSet;
+/* JADX INFO: renamed from: l.۠᩺᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: IF3 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C8973 extends AbstractC18144 implements Cloneable {
+    public static final long serialVersionUID = -7046029254386353129L;
 
-/* JADX INFO: renamed from: l.ۡܺ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J1JQ */
-/* JADX INFO: loaded from: classes3.dex */
-public class C8973 extends AbstractC3472 {
-    public C8973(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
+    public final void clear() {
     }
 
-    public C8973(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
+    @Override // l.InterfaceC3007
+    public final float get(int i) {
+        return 0.0f;
     }
 
-    @Override // l.AbstractC3472, android.view.View
-    public final void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        m10196();
+    public int hashCode() {
+        return 0;
     }
 
-    @Override // android.view.View
-    public final void setVisibility(int i) {
-        super.setVisibility(i);
-        m10196();
+    @Override // l.InterfaceC21433, java.util.Map
+    public final int size() {
+        return 0;
     }
 
-    @Override // android.view.View
-    public final void setElevation(float f) {
-        super.setElevation(f);
-        m10196();
+    public String toString() {
+        return "{}";
     }
 
-    @Override // l.AbstractC3472
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo10204() {
-        C11795 c11795 = (C11795) getLayoutParams();
-        c11795.f39661.m46608(0);
-        c11795.f39661.m46620(0);
+    @Override // l.InterfaceC3007
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo9815(int i) {
+        return false;
+    }
+
+    @Override // l.AbstractC18144, l.InterfaceC3007
+    /* JADX INFO: renamed from: ᩷ */
+    public final float mo9816() {
+        return 0.0f;
+    }
+
+    public Object clone() {
+        return C14193.f44870;
+    }
+
+    public boolean equals(Object obj) {
+        return (obj instanceof InterfaceC21433) && ((InterfaceC21433) obj).size() == 0;
+    }
+
+    private Object readResolve() {
+        return C14193.f44870;
     }
 }

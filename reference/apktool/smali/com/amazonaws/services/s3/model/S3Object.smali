@@ -9,11 +9,11 @@
 
 
 # instance fields
-.field public ֡:Lcom/amazonaws/services/s3/model/ObjectMetadata;
+.field public transient ֡:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
 
-.field public ܺ:Ljava/lang/String;
+.field public ܰ:Ljava/lang/String;
 
-.field public transient ܽ:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
+.field public ܿ:Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
 .field public ᩶:Ljava/lang/String;
 
@@ -31,14 +31,14 @@
     iput-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->᩶:Ljava/lang/String;
 
     .line 41
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܺ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܰ:Ljava/lang/String;
 
     .line 44
     new-instance v0, Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/ObjectMetadata;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->֡:Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܿ:Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 105
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܽ:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->֡:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
 
     if-eqz v0, :cond_0
 
@@ -80,7 +80,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܺ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܰ:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
@@ -90,7 +90,7 @@
     const-string v2, "]"
 
     .line 0
-    invoke-static {v0, v1, v2}, Ll/᩺ۖۜ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
     .locals 1
 
     .line 105
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܽ:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->֡:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
 
     return-object v0
 .end method
@@ -110,7 +110,7 @@
     .locals 0
 
     .line 117
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܽ:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3Object;->֡:Lcom/amazonaws/services/s3/model/S3ObjectInputStream;
 
     return-void
 .end method
@@ -119,7 +119,7 @@
     .locals 0
 
     .line 152
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܺ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܰ:Ljava/lang/String;
 
     return-void
 .end method
@@ -130,16 +130,16 @@
     return-void
 .end method
 
-.method public final ۨ()Lcom/amazonaws/services/s3/model/ObjectMetadata;
+.method public final ᩷()Lcom/amazonaws/services/s3/model/ObjectMetadata;
     .locals 1
 
     .line 70
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->֡:Lcom/amazonaws/services/s3/model/ObjectMetadata;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/S3Object;->ܿ:Lcom/amazonaws/services/s3/model/ObjectMetadata;
 
     return-object v0
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
+.method public final ᩷(Ljava/lang/String;)V
     .locals 0
 
     .line 175

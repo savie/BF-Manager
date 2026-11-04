@@ -1,32 +1,43 @@
 package l;
 
-import android.text.TextUtils;
+import android.widget.AbsListView;
+import org.chromium.support_lib_boundary.WebSettingsBoundaryInterface;
 
-/* JADX INFO: renamed from: l.۟ۖۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: RB0P */
+/* JADX INFO: renamed from: l.ۜ۬᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46YU */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7172 implements InterfaceC9995 {
+public class C7172 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f23959;
+    public final Object f23694;
 
-    @Override // l.InterfaceC9995
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo19102() {
-        return this;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public AbsListView m19745() {
+        return (AbsListView) this.f23694;
     }
 
-    public C7172(String str) {
-        this.f23959 = str;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int m19743() {
+        return ((AbsListView) this.f23694).getFirstVisiblePosition();
     }
 
-    @Override // l.InterfaceC9995
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int m19747() {
+        return ((AbsListView) this.f23694).getLastVisiblePosition();
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean mo19103(CharSequence charSequence, int i, int i2, C4432 c4432) {
-        if (!TextUtils.equals(charSequence.subSequence(i, i2), this.f23959)) {
-            return true;
-        }
-        c4432.m12367();
-        return false;
+    public void mo19744(int i) {
+        ((WebSettingsBoundaryInterface) this.f23694).setForceDark(i);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public void mo19746() {
+        ((WebSettingsBoundaryInterface) this.f23694).setForceDarkBehavior(1);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public void mo19748() {
+        ((WebSettingsBoundaryInterface) this.f23694).setAlgorithmicDarkeningAllowed(false);
     }
 }

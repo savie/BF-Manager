@@ -1,46 +1,97 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺֨ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: IAH0 */
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.util.AttributeSet;
+import android.view.View;
+
+/* JADX INFO: renamed from: l.᩸۟᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: L5RE */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22665 {
+public class C22665 extends View {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f73820;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public Paint f73597;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C22665 f73817 = new C22665("tableDirectory");
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public Path f73598;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C22665 f73819 = new C22665("name");
+    public boolean f73599;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C22665 f73818 = new C22665("OS/2");
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f73600;
 
-    public C22665(String str) {
-        this.f73820 = str;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public boolean f73601;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f73602;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m51076(boolean z) {
+        this.f73599 = z;
+    }
+
+    public C22665(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f73600 = 0;
+        this.f73601 = true;
+        if (isInEditMode()) {
+            return;
+        }
+        this.f73598 = new Path();
+        Paint paint = new Paint();
+        this.f73597 = paint;
+        paint.setAntiAlias(true);
+    }
+
+    public C22665(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f73600 = 0;
+        this.f73601 = true;
+        if (isInEditMode()) {
+            return;
+        }
+        this.f73598 = new Path();
+        Paint paint = new Paint();
+        this.f73597 = paint;
+        paint.setAntiAlias(true);
+    }
+
+    @Override // android.view.View
+    public final void onDraw(Canvas canvas) {
+        int i;
+        super.onDraw(canvas);
+        if (this.f73601) {
+            this.f73598.reset();
+            int measuredWidth = getMeasuredWidth();
+            float f = this.f73602 / this.f73600;
+            this.f73598.lineTo(0.0f, 0.0f);
+            if (f < 0.5f) {
+                i = this.f73602;
+            } else {
+                i = this.f73600 - this.f73602;
+            }
+            float f2 = measuredWidth;
+            if (!this.f73599) {
+                f = 1.0f - f;
+            }
+            this.f73598.quadTo(f * f2, i, f2, 0.0f);
+            this.f73598.lineTo(f2, 0.0f);
+            canvas.drawPath(this.f73598, this.f73597);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m51077(int i) {
+        this.f73600 = i * 2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C22665 m50198(String str) {
-        return new C22665(str);
-    }
-
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj instanceof C22665) {
-            return this.f73820.equals(((C22665) obj).f73820);
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        return this.f73820.hashCode();
-    }
-
-    public final String toString() {
-        return this.f73820;
+    public final void m51075(int i) {
+        this.f73602 = i;
     }
 }

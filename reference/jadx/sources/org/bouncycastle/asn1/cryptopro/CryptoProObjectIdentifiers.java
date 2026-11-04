@@ -2,7 +2,7 @@ package org.bouncycastle.asn1.cryptopro;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface CryptoProObjectIdentifiers {
     public static final ASN1ObjectIdentifier GOST_id;
     public static final ASN1ObjectIdentifier gostR28147_gcfb;

@@ -5,7 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 import java.lang.reflect.Method;
-import l.C10405;
+import l.C7508;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -32,7 +32,7 @@ public class j {
                 str = a.c;
                 try {
                     boolean z = 1 != ((TelephonyManager) context.getSystemService("phone")).getSimState();
-                    boolean z2 = C10405.m26300(context, "android.permission.CHANGE_NETWORK_STATE") == 0;
+                    boolean z2 = C7508.m20559(context, "android.permission.CHANGE_NETWORK_STATE") == 0;
                     Method declaredMethod = ConnectivityManager.class.getDeclaredMethod("getMobileDataEnabled", null);
                     declaredMethod.setAccessible(true);
                     Boolean bool = (Boolean) declaredMethod.invoke(connectivityManager, null);

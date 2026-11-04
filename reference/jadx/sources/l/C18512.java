@@ -1,51 +1,75 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴۘܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1BEY */
+import java.util.Collection;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ܿᩳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: S6IE */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18512 extends AbstractC17806 {
+public final class C18512 extends AbstractC4014 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Object f58963;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final C14782 f60203;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final int f58964;
-
-    @Override // l.AbstractC17806
-    /* JADX INFO: renamed from: ᩴ */
-    public final int mo1687() {
-        return 0;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean addAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        throw new UnsupportedOperationException();
     }
 
-    public C18512(EnumC7306 enumC7306, int i, Object obj, int i2, int i3) {
-        super(enumC7306, i, 0, 0, 0L);
-        this.f58963 = obj;
-        this.f58964 = i3;
+    @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean removeAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        this.f60203.m35607();
+        return super.removeAll(collection);
     }
 
-    public C18512(EnumC7306 enumC7306, int i, byte[] bArr) {
-        this(enumC7306, i, bArr, bArr.length, 1);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean retainAll(Collection collection) {
+        C15243.m36590(collection, "elements");
+        this.f60203.m35607();
+        return super.retainAll(collection);
     }
 
-    public C18512(EnumC7306 enumC7306, int i, short[] sArr) {
-        this(enumC7306, i, sArr, sArr.length, 2);
+    public C18512(C14782 c14782) {
+        this.f60203 = c14782;
     }
 
-    public C18512(EnumC7306 enumC7306, int i, int[] iArr) {
-        this(enumC7306, i, iArr, iArr.length, 4);
+    @Override // l.AbstractC4014
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo12987() {
+        return this.f60203.size();
     }
 
-    public C18512(EnumC7306 enumC7306, int i, long[] jArr) {
-        this(enumC7306, i, jArr, jArr.length, 8);
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean isEmpty() {
+        return this.f60203.isEmpty();
     }
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public final short m42904() {
-        return (short) this.f58964;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.f60203.containsKey(obj);
     }
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public final Object m42903() {
-        return this.f58963;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.f60203.clear();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean add(Object obj) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean remove(Object obj) {
+        return this.f60203.m35608(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        C14782 c14782 = this.f60203;
+        c14782.getClass();
+        return new C24480(c14782);
     }
 }

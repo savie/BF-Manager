@@ -2,7 +2,7 @@ package org.bouncycastle.internal.asn1.iana;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IANAObjectIdentifiers {
     public static final ASN1ObjectIdentifier SNMPv2;
     public static final ASN1ObjectIdentifier _private;

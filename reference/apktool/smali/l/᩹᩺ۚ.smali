@@ -1,27 +1,26 @@
 .class public final Ll/᩹᩺ۚ;
-.super Ljava/lang/Object;
-.source "O700"
+.super Ljava/lang/Exception;
+.source "N7AJ"
 
 
 # instance fields
-.field public volatile ֨:Ll/֨᩺ۚ;
+.field public final ܰ:Ljava/lang/String;
 
-.field public ۖ:I
+.field public final ᩶:Z
 
-.field public volatile ۘ:Ll/ۜ᩸ۚ;
 
-.field public ۙ:Z
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 0
 
-.field public volatile ۚ:Z
+    .line 756
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-.field public ۜ:Ljava/lang/Integer;
+    .line 757
+    iput-object p1, p0, Ll/᩹᩺ۚ;->ܰ:Ljava/lang/String;
 
-.field public ۨ:Ll/ۖۜۚ;
+    .line 758
+    iput-boolean p2, p0, Ll/᩹᩺ۚ;->᩶:Z
 
-.field public volatile ۬:Ll/ᩳܶۚ;
-
-.field public volatile ܰ:Ll/۬ۜۚ;
-
-.field public volatile ᩹:Ll/۬ۜۚ;
-
-.field public ᩺:Ll/ۗ᩸ۚ;
+    return-void
+.end method

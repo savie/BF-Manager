@@ -37,12 +37,12 @@
 
     iget-object v0, p0, Lcom/google/android/material/search/SearchBar$1;->this$0:Lcom/google/android/material/search/SearchBar;
 
-    invoke-static {v0}, Lcom/google/android/material/search/SearchBar;->access$100(Lcom/google/android/material/search/SearchBar;)Ll/᩻ۢ;
+    invoke-static {v0}, Lcom/google/android/material/search/SearchBar;->access$100(Lcom/google/android/material/search/SearchBar;)Ll/֨ۜ;
 
     move-result-object v0
 
     .line 233
-    invoke-static {p1, v0}, Ll/֫ۢ;->ۙ(Landroid/view/accessibility/AccessibilityManager;Ll/᩻ۢ;)V
+    invoke-static {p1, v0}, Ll/ۖۜ;->ۙ(Landroid/view/accessibility/AccessibilityManager;Ll/֨ۜ;)V
 
     return-void
 .end method
@@ -60,12 +60,12 @@
 
     iget-object v0, p0, Lcom/google/android/material/search/SearchBar$1;->this$0:Lcom/google/android/material/search/SearchBar;
 
-    invoke-static {v0}, Lcom/google/android/material/search/SearchBar;->access$100(Lcom/google/android/material/search/SearchBar;)Ll/᩻ۢ;
+    invoke-static {v0}, Lcom/google/android/material/search/SearchBar;->access$100(Lcom/google/android/material/search/SearchBar;)Ll/֨ۜ;
 
     move-result-object v0
 
     .line 239
-    invoke-static {p1, v0}, Ll/֫ۢ;->ܰ(Landroid/view/accessibility/AccessibilityManager;Ll/᩻ۢ;)V
+    invoke-static {p1, v0}, Ll/ۖۜ;->᩷(Landroid/view/accessibility/AccessibilityManager;Ll/֨ۜ;)V
 
     return-void
 .end method

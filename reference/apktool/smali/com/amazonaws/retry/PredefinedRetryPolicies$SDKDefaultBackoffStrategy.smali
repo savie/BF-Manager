@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field public final ۖ:Ljava/util/Random;
+.field public final ۤ:I
 
-.field public final ۨ:I
+.field public final ᩷:I
 
-.field public final ܰ:I
+.field public final ᩸:Ljava/util/Random;
 
 
 # direct methods
@@ -26,17 +26,17 @@
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۖ:Ljava/util/Random;
+    iput-object v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->᩸:Ljava/util/Random;
 
     const/16 v0, 0x64
 
     .line 215
-    iput v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ܰ:I
+    iput v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->᩷:I
 
     const/16 v0, 0x4e20
 
     .line 216
-    iput v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۨ:I
+    iput v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۤ:I
 
     return-void
 .end method
@@ -58,17 +58,17 @@
     shl-int p1, v0, p1
 
     .line 229
-    iget v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ܰ:I
+    iget v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->᩷:I
 
     mul-int p1, p1, v0
 
-    iget v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۨ:I
+    iget v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۤ:I
 
     invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    iget-object v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->ۖ:Ljava/util/Random;
+    iget-object v0, p0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;->᩸:Ljava/util/Random;
 
     invoke-virtual {v0, p1}, Ljava/util/Random;->nextInt(I)I
 

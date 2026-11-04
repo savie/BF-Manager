@@ -1,44 +1,74 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩷ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+import android.content.DialogInterface;
+import bin.mt.plugin.api.util.ResultCallback;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.ۙۨ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: PAPA */
 /* JADX INFO: loaded from: classes3.dex */
-public final enum C4893 extends EnumC8422 {
-    public /* synthetic */ C4893() {
-        this("DoctypePublicIdentifier_singleQuoted", 57);
+public final class C4893 extends AbstractC2432 {
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f17101;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ResultCallback f17102;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC22047 f17103;
+
+    public C4893(AbstractActivityC22047 abstractActivityC22047, boolean z, ResultCallback resultCallback) {
+        this.f17103 = abstractActivityC22047;
+        this.f17101 = z;
+        this.f17102 = resultCallback;
     }
 
-    public C4893(String str, int i) {
-        super(str, i, 0);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8191(this.f17103, R.string.MT_Protector);
     }
 
-    @Override // l.EnumC8422
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        AbstractActivityC22047 abstractActivityC22047 = this.f17103;
+        abstractActivityC22047.mo1387(abstractActivityC22047.f71108.m54021().toString());
+    }
+
+    @Override // l.AbstractC2432
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7382 = c2424.m7382();
-        if (cM7382 == 0) {
-            c8111.m21365(this);
-            c8111.f28416.f4890.append((char) 65533);
-            return;
+    public final void mo1134() {
+        C22673.m51152(R.string.MT_Protector);
+        boolean z = this.f17101;
+        AbstractActivityC22047 abstractActivityC22047 = this.f17103;
+        if (z) {
+            abstractActivityC22047.finish();
+        } else {
+            abstractActivityC22047.f71108.m54016(false);
         }
-        if (cM7382 == '\'') {
-            c8111.m21353(EnumC8422.f29225);
-            return;
+        ResultCallback resultCallback = this.f17102;
+        if (resultCallback != null) {
+            resultCallback.onSuccess();
         }
-        if (cM7382 == '>') {
-            c8111.m21365(this);
-            c8111.f28416.f4891 = true;
-            c8111.m21363();
-            c8111.m21353(EnumC8422.f29249);
-            return;
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        AbstractActivityC22047 abstractActivityC22047 = this.f17103;
+        abstractActivityC22047.m40401(exc, (DialogInterface.OnDismissListener) null);
+        abstractActivityC22047.mo1385(exc);
+        ResultCallback resultCallback = this.f17102;
+        if (resultCallback != null) {
+            resultCallback.onFailure(C22327.m50390(exc));
         }
-        if (cM7382 == 65535) {
-            c8111.m21368(this);
-            c8111.f28416.f4891 = true;
-            c8111.m21363();
-            c8111.m21353(EnumC8422.f29249);
-            return;
-        }
-        c8111.f28416.f4890.append(cM7382);
     }
 }

@@ -1,243 +1,126 @@
 .class public final Ll/ۘۛ᩺;
 .super Ljava/lang/Object;
-.source "1AG9"
-
-# interfaces
-.implements Ljava/lang/CharSequence;
+.source "B410"
 
 
 # instance fields
-.field public final ֡:Landroid/text/GetChars;
+.field public ۙ:Ll/ۘ֨ۘ;
 
-.field public ۫:I
+.field public ۤ:Ll/᩺ۛ᩺;
 
-.field public final ܺ:[C
+.field public ᩷:Ll/ܶۡۘ;
 
-.field public ܽ:I
-
-.field public final ᩶:I
+.field public ᩸:Ll/ܿ᩵᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۗܺۖ;)V
+.method public constructor <init>(Ll/᩺ۛ᩺;)V
     .locals 1
 
-    .line 475
+    const/4 v0, 0x0
+
+    .line 87
+    invoke-direct {p0, p1, v0, v0, v0}, Ll/ۘۛ᩺;-><init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 97
+    invoke-direct {p0, p1, p2, v0, v0}, Ll/ۘۛ᩺;-><init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
+    .locals 0
+
+    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x800
+    .line 124
+    iput-object p1, p0, Ll/ۘۛ᩺;->ۤ:Ll/᩺ۛ᩺;
 
-    new-array v0, v0, [C
+    .line 125
+    iput-object p2, p0, Ll/ۘۛ᩺;->᩷:Ll/ܶۡۘ;
 
-    .line 471
-    iput-object v0, p0, Ll/ۘۛ᩺;->ܺ:[C
+    .line 126
+    iput-object p3, p0, Ll/ۘۛ᩺;->᩸:Ll/ܿ᩵᩺;
 
-    .line 476
-    iput-object p1, p0, Ll/ۘۛ᩺;->֡:Landroid/text/GetChars;
-
-    .line 477
-    invoke-virtual {p1}, Ll/ۗܺۖ;->length()I
-
-    move-result p1
-
-    iput p1, p0, Ll/ۘۛ᩺;->᩶:I
+    .line 127
+    iput-object p4, p0, Ll/ۘۛ᩺;->ۙ:Ll/ۘ֨ۘ;
 
     return-void
 .end method
 
-.method public static bridge synthetic ۙ(Ll/ۘۛ᩺;I)V
-    .locals 0
+.method public constructor <init>(Ll/᩺ۛ᩺;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0, p1}, Ll/ۘۛ᩺;->ܰ(I)V
+    .line 120
+    invoke-interface {p2}, Ll/ܿ᩵᩺;->ۚ()Ll/ܶۡۘ;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static bridge synthetic ۙ(Ll/ۘۛ᩺;)[C
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ۘۛ᩺;->ܺ:[C
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/ۘۛ᩺;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/ۘۛ᩺;->۫:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/ۘۛ᩺;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Ll/ۘۛ᩺;->ܽ:I
-
-    return p0
-.end method
-
-.method private ܰ(I)V
-    .locals 4
-
-    .line 484
-    iget v0, p0, Ll/ۘۛ᩺;->۫:I
-
-    if-lt p1, v0, :cond_0
-
-    iget v0, p0, Ll/ۘۛ᩺;->ܽ:I
-
-    if-ge p1, v0, :cond_0
+    invoke-direct {p0, p1, v0, p2, p3}, Ll/ۘۛ᩺;-><init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
 
     return-void
+.end method
 
-    :cond_0
-    if-ltz p1, :cond_1
+.method public constructor <init>(Ll/᩺ۛ᩺;Ll/ᩳܰۘ;)V
+    .locals 2
 
-    .line 485
-    iget v0, p0, Ll/ۘۛ᩺;->᩶:I
+    .line 602
+    iget-object v0, p2, Ll/ᩳܰۘ;->ۜ:Ll/ܶۡۘ;
 
-    if-ge p1, v0, :cond_1
+    const/4 v1, 0x0
 
-    .line 486
-    iget-object v1, p0, Ll/ۘۛ᩺;->ܺ:[C
-
-    array-length v2, v1
-
-    sub-int/2addr v0, p1
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    const/4 v2, 0x0
-
-    .line 488
-    iput v2, p0, Ll/ۘۛ᩺;->ܽ:I
-
-    iput v2, p0, Ll/ۘۛ᩺;->۫:I
-
-    .line 489
-    iget-object v3, p0, Ll/ۘۛ᩺;->֡:Landroid/text/GetChars;
-
-    invoke-interface {v3, p1, v0, v1, v2}, Landroid/text/GetChars;->getChars(II[CI)V
-
-    .line 490
-    iput p1, p0, Ll/ۘۛ᩺;->۫:I
-
-    .line 491
-    iput v0, p0, Ll/ۘۛ᩺;->ܽ:I
+    .line 108
+    invoke-direct {p0, p1, v0, p2, v1}, Ll/ۘۛ᩺;-><init>(Ll/᩺ۛ᩺;Ll/ܶۡۘ;Ll/ܿ᩵᩺;Ll/ۘ֨ۘ;)V
 
     return-void
-
-    .line 485
-    :cond_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v0, "Invalid character index"
-
-    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final charAt(I)C
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 496
-    iget v0, p0, Ll/ۘۛ᩺;->۫:I
+    .line 167
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-lt p1, v0, :cond_0
+    const-string v1, "TaskEvent["
 
-    iget v0, p0, Ll/ۘۛ᩺;->ܽ:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-lt p1, v0, :cond_1
+    iget-object v1, p0, Ll/ۘۛ᩺;->ۤ:Ll/᩺ۛ᩺;
 
-    .line 497
-    :cond_0
-    invoke-direct {p0, p1}, Ll/ۘۛ᩺;->ܰ(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 499
-    :cond_1
-    iget v0, p0, Ll/ۘۛ᩺;->۫:I
+    const-string v1, ","
 
-    sub-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ll/ۘۛ᩺;->ܺ:[C
+    iget-object v2, p0, Ll/ۘۛ᩺;->᩷:Ll/ܶۡۘ;
 
-    aget-char p1, v0, p1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final length()I
-    .locals 1
+    iget-object v1, p0, Ll/ۘۛ᩺;->ۙ:Ll/ۘ֨ۘ;
 
-    .line 481
-    iget v0, p0, Ll/ۘۛ᩺;->᩶:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v1, "]"
 
-.method public final subSequence(II)Ljava/lang/CharSequence;
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ltz p1, :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-lt p2, p1, :cond_1
+    move-result-object v0
 
-    .line 504
-    iget v0, p0, Ll/ۘۛ᩺;->᩶:I
-
-    if-gt p2, v0, :cond_1
-
-    .line 506
-    iget v0, p0, Ll/ۘۛ᩺;->۫:I
-
-    if-lt p1, v0, :cond_0
-
-    iget v1, p0, Ll/ۘۛ᩺;->ܽ:I
-
-    if-gt p2, v1, :cond_0
-
-    .line 507
-    new-instance v1, Ljava/lang/String;
-
-    sub-int v0, p1, v0
-
-    sub-int/2addr p2, p1
-
-    iget-object p1, p0, Ll/ۘۛ᩺;->ܺ:[C
-
-    invoke-direct {v1, p1, v0, p2}, Ljava/lang/String;-><init>([CII)V
-
-    return-object v1
-
-    .line 508
-    :cond_0
-    iget-object v0, p0, Ll/ۘۛ᩺;->֡:Landroid/text/GetChars;
-
-    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 505
-    :cond_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string p2, "Invalid character range"
-
-    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

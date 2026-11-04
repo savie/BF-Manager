@@ -1,122 +1,148 @@
-.class public final Ll/ۜۤܶ;
-.super Ll/᩸ۤܶ;
-.source "TB7B"
+.class public final enum Ll/ۜۤܶ;
+.super Ljava/lang/Enum;
+.source "Y4VS"
 
 
-# instance fields
-.field public ۖ:F
+# static fields
+.field public static final enum ֡:Ll/ۜۤܶ;
 
-.field public ۙ:Landroid/graphics/Path;
+.field public static final enum ۟:Ll/ۜۤܶ;
 
-.field public ۨ:F
+.field public static final synthetic ܰ:[Ll/ۜۤܶ;
 
-.field public final synthetic ܰ:Ll/ᩴۤܶ;
+.field public static final enum ܿ:Ll/ۜۤܶ;
+
+.field public static final enum ᩶:Ll/ۜۤܶ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩴۤܶ;FFLandroid/graphics/Path;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 1578
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 34
+    new-instance v0, Ll/ۜۤܶ;
 
-    .line 4196
-    iput-object p1, p0, Ll/ۜۤܶ;->ܰ:Ll/ᩴۤܶ;
+    const-string v1, "E0"
 
-    .line 4197
-    iput p2, p0, Ll/ۜۤܶ;->ۨ:F
+    const/4 v2, 0x0
 
-    .line 4198
-    iput p3, p0, Ll/ۜۤܶ;->ۖ:F
+    invoke-direct {v0, v1, v2}, Ll/ۜۤܶ;-><init>(Ljava/lang/String;I)V
 
-    .line 4199
-    iput-object p4, p0, Ll/ۜۤܶ;->ۙ:Landroid/graphics/Path;
+    sput-object v0, Ll/ۜۤܶ;->᩶:Ll/ۜۤܶ;
 
-    return-void
-.end method
+    .line 38
+    new-instance v0, Ll/ۜۤܶ;
 
+    const-string v1, "E1"
 
-# virtual methods
-.method public final ۙ(Ljava/lang/String;)V
-    .locals 9
+    const/4 v2, 0x1
 
-    .line 4216
-    iget-object v0, p0, Ll/ۜۤܶ;->ܰ:Ll/ᩴۤܶ;
+    invoke-direct {v0, v1, v2}, Ll/ۜۤܶ;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v0}, Ll/ᩴۤܶ;->ۨ(Ll/ᩴۤܶ;)Z
+    sput-object v0, Ll/ۜۤܶ;->ܿ:Ll/ۜۤܶ;
 
-    move-result v1
+    .line 42
+    new-instance v0, Ll/ۜۤܶ;
 
-    if-eqz v1, :cond_0
+    const-string v1, "E2"
 
-    .line 4219
-    new-instance v1, Landroid/graphics/Path;
+    const/4 v2, 0x2
 
-    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+    invoke-direct {v0, v1, v2}, Ll/ۜۤܶ;-><init>(Ljava/lang/String;I)V
 
-    .line 4220
-    invoke-static {v0}, Ll/ᩴۤܶ;->ܰ(Ll/ᩴۤܶ;)Ll/᩺ۤܶ;
+    sput-object v0, Ll/ۜۤܶ;->֡:Ll/ۜۤܶ;
 
-    move-result-object v2
+    .line 46
+    new-instance v0, Ll/ۜۤܶ;
 
-    iget-object v2, v2, Ll/᩺ۤܶ;->ۙ:Landroid/graphics/Paint;
+    const-string v1, "En"
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    const/4 v2, 0x3
 
-    move-result v5
+    invoke-direct {v0, v1, v2}, Ll/ۜۤܶ;-><init>(Ljava/lang/String;I)V
 
-    iget v6, p0, Ll/ۜۤܶ;->ۨ:F
+    sput-object v0, Ll/ۜۤܶ;->۟:Ll/ۜۤܶ;
 
-    iget v7, p0, Ll/ۜۤܶ;->ۖ:F
-
-    const/4 v4, 0x0
-
-    move-object v3, p1
-
-    move-object v8, v1
-
-    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Paint;->getTextPath(Ljava/lang/String;IIFFLandroid/graphics/Path;)V
-
-    .line 4221
-    iget-object v2, p0, Ll/ۜۤܶ;->ۙ:Landroid/graphics/Path;
-
-    invoke-virtual {v2, v1}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
-
-    .line 4225
-    :cond_0
-    iget v1, p0, Ll/ۜۤܶ;->ۨ:F
-
-    invoke-static {v0}, Ll/ᩴۤܶ;->ܰ(Ll/ᩴۤܶ;)Ll/᩺ۤܶ;
+    .line 29
+    invoke-static {}, Ll/ۜۤܶ;->ۙ()[Ll/ۜۤܶ;
 
     move-result-object v0
 
-    iget-object v0, v0, Ll/᩺ۤܶ;->ۙ:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result p1
-
-    add-float/2addr p1, v1
-
-    iput p1, p0, Ll/ۜۤܶ;->ۨ:F
+    sput-object v0, Ll/ۜۤܶ;->ܰ:[Ll/ۜۤܶ;
 
     return-void
 .end method
 
-.method public final ۙ(Ll/ۧۡܶ;)Z
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 4205
-    instance-of p1, p1, Ll/᩻ۡܶ;
+    .line 29
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz p1, :cond_0
+    return-void
+.end method
 
-    const/4 p1, 0x0
+.method public static valueOf(Ljava/lang/String;)Ll/ۜۤܶ;
+    .locals 1
 
-    return p1
+    .line 29
+    const-class v0, Ll/ۜۤܶ;
 
-    :cond_0
-    const/4 p1, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return p1
+    move-result-object p0
+
+    check-cast p0, Ll/ۜۤܶ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ۜۤܶ;
+    .locals 1
+
+    .line 29
+    sget-object v0, Ll/ۜۤܶ;->ܰ:[Ll/ۜۤܶ;
+
+    invoke-virtual {v0}, [Ll/ۜۤܶ;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۜۤܶ;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/ۜۤܶ;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Ll/ۜۤܶ;
+
+    .line 29
+    sget-object v1, Ll/ۜۤܶ;->᩶:Ll/ۜۤܶ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۜۤܶ;->ܿ:Ll/ۜۤܶ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۜۤܶ;->֡:Ll/ۜۤܶ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۜۤܶ;->۟:Ll/ۜۤܶ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

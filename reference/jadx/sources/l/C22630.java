@@ -1,36 +1,55 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺֡֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: V8BV */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22630 implements InterfaceC10389 {
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18396 f73731;
+/* JADX INFO: renamed from: l.᩸ۜۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9B2 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22630 implements InterfaceC19510 {
 
-    @Override // l.InterfaceC8978
-    /* JADX INFO: renamed from: ۘۙ */
-    public final /* synthetic */ void mo2885() {
-        throw null;
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final CountDownLatch f73228 = new CountDownLatch(1);
 
-    public C22630(C18396 c18396) {
-        this.f73731 = c18396;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public volatile int f73230 = Integer.MIN_VALUE;
 
-    @Override // l.InterfaceC10389
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f73229 = 21320;
+
+    @Override // l.InterfaceC19510
     /* JADX INFO: renamed from: ۙ */
-    public final void mo2886(long j, long j2, long j3) {
-        C18396 c18396 = this.f73731;
-        InterfaceC17690 interfaceC17690 = c18396.f58642;
-        C8516.m22238(j2, j3);
-        interfaceC17690.getClass();
-        c18396.f58642.setProgress(C8516.m22238(c18396.f58644.m10995() + j2, c18396.f58644.m10997()));
+    public final void mo14218(int i, int i2) {
+        if (this.f73229 != i) {
+            return;
+        }
+        this.f73230 = i2;
+        this.f73228.countDown();
     }
 
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public final boolean mo2357() {
-        return this.f73731.f58642.mo2357();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m50985(long j) {
+        CountDownLatch countDownLatch = this.f73228;
+        try {
+            if (j > 0) {
+                countDownLatch.await(j, TimeUnit.MILLISECONDS);
+                return true;
+            }
+            countDownLatch.await();
+            return true;
+        } catch (InterruptedException unused) {
+            Thread.currentThread().interrupt();
+            return false;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m50986() {
+        return this.f73230 == 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m50984() {
+        return this.f73230 == -1;
     }
 }

@@ -1,32 +1,31 @@
-.class public final Ll/ۨ֡;
+.class public interface abstract Ll/ۨ֡;
 .super Ljava/lang/Object;
-.source "RALO"
+.source "1B13"
+
+# interfaces
+.implements Landroid/os/IInterface;
 
 
-# instance fields
-.field public final ۙ:Z
+# static fields
+.field public static final ۤ:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 27
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x24
 
-    .line 33
-    iput-boolean p1, p0, Ll/ۨ֡;->ۙ:Z
+    const/16 v1, 0x2e
+
+    const-string v2, "androidx$core$app$unusedapprestrictions$IUnusedAppRestrictionsBackportCallback"
+
+    .line 126
+    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۨ֡;->ۤ:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ()Z
-    .locals 1
-
-    .line 33
-    iget-boolean v0, p0, Ll/ۨ֡;->ۙ:Z
-
-    return v0
 .end method

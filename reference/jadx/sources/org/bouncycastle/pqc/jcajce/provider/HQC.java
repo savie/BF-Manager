@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C7997;
+import l.C18011;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
@@ -36,7 +36,7 @@ public class HQC {
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.HQC", "HQC");
             StringBuilder sb = new StringBuilder("Alg.Alias.Cipher.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier4 = BCObjectIdentifiers.pqc_kem_hqc;
-            C7997.m21058(sb, aSN1ObjectIdentifier4, configurableProvider, "HQC");
+            C18011.m41992(sb, aSN1ObjectIdentifier4, configurableProvider, "HQC");
             addCipherAlgorithm(configurableProvider, "HQC128", "org.bouncycastle.pqc.jcajce.provider.hqc.HQCCipherSpi$HQC128", aSN1ObjectIdentifier);
             addCipherAlgorithm(configurableProvider, "HQC192", "org.bouncycastle.pqc.jcajce.provider.hqc.HQCCipherSpi$HQC192", aSN1ObjectIdentifier2);
             addCipherAlgorithm(configurableProvider, "HQC256", "org.bouncycastle.pqc.jcajce.provider.hqc.HQCCipherSpi$HQC256", aSN1ObjectIdentifier3);

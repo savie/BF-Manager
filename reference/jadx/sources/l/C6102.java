@@ -1,33 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛܰܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 8BG9 */
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ۛۖ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: DD2 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6102 extends AbstractC1100 {
+public final class C6102 extends AbstractC20272 implements InterfaceC15224, InterfaceC19597 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22974 f20669;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3864 f20828;
 
-    public C6102(C22974 c22974) {
-        super("InnerClasses");
-        try {
-            if (c22974.m43640()) {
-                throw new C8364("innerClasses.isMutable()", null);
-            }
-            this.f20669 = c22974;
-        } catch (NullPointerException unused) {
-            throw new NullPointerException("innerClasses == null");
-        }
-    }
-
-    @Override // l.InterfaceC5771
+    @Override // l.AbstractC20272
     /* JADX INFO: renamed from: ۙ */
-    public final int mo2281() {
-        return (this.f20669.size() * 8) + 8;
+    public final void mo5772(int i, Object obj) {
+        ((Consumer) obj).accept(this.f20828.f13184[i]);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C22974 m16597() {
-        return this.f20669;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C6102(C3864 c3864) {
+        super(c3864);
+        this.f20828 = c3864;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        return this.f20828.f13184[m46538()];
     }
 }

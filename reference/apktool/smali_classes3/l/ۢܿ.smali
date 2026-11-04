@@ -1,59 +1,33 @@
-.class public interface abstract Ll/ۢܿ;
-.super Ljava/lang/Object;
-.source "94YU"
+.class public abstract Ll/ۢܿ;
+.super Landroid/app/Service;
+.source "H5YD"
 
-# interfaces
-.implements Landroid/view/MenuItem;
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 47
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract getAlphabeticModifiers()I
-.end method
+.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 1
 
-.method public abstract getContentDescription()Ljava/lang/CharSequence;
-.end method
+    .line 51
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
-.end method
+    move-result-object p1
 
-.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
-.end method
+    const-string v0, "android.support.BIND_NOTIFICATION_SIDE_CHANNEL"
 
-.method public abstract getNumericModifiers()I
-.end method
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public abstract getTooltipText()Ljava/lang/CharSequence;
-.end method
+    const/4 p1, 0x0
 
-.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setContentDescription(Ljava/lang/CharSequence;)Ll/ۢܿ;
-.end method
-
-.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setTooltipText(Ljava/lang/CharSequence;)Ll/ۢܿ;
-.end method
-
-.method public abstract ۙ()Ll/ۚ᩻;
-.end method
-
-.method public abstract ۙ(Ll/ۚ᩻;)Ll/ۢܿ;
-.end method
-
-.method public abstract ۨ()Z
-.end method
-
-.method public abstract ܰ()Z
+    return-object p1
 .end method

@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.modes.kgcm;
 
 import org.bouncycastle.math.raw.Interleave;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KGCMUtil_512 {
     public static final int SIZE = 8;
 

@@ -1,98 +1,136 @@
-.class public final Ll/۫֫᩵;
-.super Ll/ۜۢ᩵;
-.source "257Q"
+.class public final synthetic Ll/۫֫᩵;
+.super Ljava/lang/Object;
+.source "T6GT"
 
 # interfaces
-.implements Ll/ܿܰۡ;
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ᩶:Ll/ܺ۟ۗ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ܺ۟ۗ;I)V
+    .locals 0
+
+    .line 0
+    iput p2, p0, Ll/۫֫᩵;->ܰ:I
+
+    iput-object p1, p0, Ll/۫֫᩵;->᩶:Ll/ܺ۟ۗ;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 2
+.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    .line 50
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    move-result-object p1
 
-    move-result-object v0
-
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۙ(I)B
-
-    move-result v0
-
-    and-int/lit8 v0, v0, 0xf
-
-    return v0
+    return-object p1
 .end method
 
-.method public final synthetic ۤ()Ljava/lang/String;
+.method public synthetic negate()Ljava/util/function/Predicate;
     .locals 1
 
-    const/4 v0, 0x0
+    .line 0
+    iget v0, p0, Ll/۫֫᩵;->ܰ:I
 
-    throw v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final ܺ()J
-    .locals 2
-
-    .line 65
-    invoke-virtual {p0}, Ll/۫֫᩵;->᩺()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final ᩷()I
-    .locals 2
-
-    .line 55
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object v0
 
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
+    return-object v0
 
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->ۙ(I)B
-
-    move-result v0
-
-    invoke-static {v0}, Ll/ۧ۠ۡ;->ۙ(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final ᩺()I
-    .locals 2
-
-    .line 60
-    iget-object v0, p0, Ll/ۜۢ᩵;->ܺ:Ll/ܿ᩻᩵;
-
-    invoke-virtual {v0}, Ll/ܿ᩻᩵;->ۖ()Ll/ᩳܳ᩵;
+    :pswitch_0
+    invoke-static {p0}, Ll/ᩳۧۗ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object v0
 
-    iget v1, p0, Ll/ۜۢ᩵;->᩶:I
+    return-object v0
 
-    add-int/lit8 v1, v1, 0x2
+    nop
 
-    invoke-virtual {v0, v1}, Ll/ᩳܳ᩵;->֨(I)I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result v0
+.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+    .locals 0
 
-    return v0
+    .line 0
+    invoke-static {p0, p1}, Ll/ᩳۧۗ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    iget v0, p0, Ll/۫֫᩵;->ܰ:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 7
+    iget-object v0, p0, Ll/۫֫᩵;->᩶:Ll/ܺ۟ۗ;
+
+    .line 9
+    check-cast v0, Ll/ܺ֨ۗ;
+
+    .line 11
+    check-cast p1, Ll/ܺ֨ۗ;
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    .line 19
+    :pswitch_0
+    iget-object v0, p0, Ll/۫֫᩵;->᩶:Ll/ܺ۟ۗ;
+
+    .line 21
+    check-cast v0, Ll/᩷ۡۗ;
+
+    .line 23
+    check-cast p1, Ll/ᩴ۠ۗ;
+
+    .line 1512
+    invoke-virtual {p1}, Ll/ᩴ۠ۗ;->ܳ()Ll/᩷ۡۗ;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Ll/᩹֫᩵;->ܳ(Ll/᩷ۡۗ;Ll/᩷ۡۗ;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

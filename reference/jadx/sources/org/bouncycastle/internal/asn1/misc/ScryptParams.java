@@ -1,8 +1,8 @@
 package org.bouncycastle.internal.asn1.misc;
 
 import java.math.BigInteger;
-import l.C15489;
-import l.C8550;
+import l.C20551;
+import l.C24966;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -12,7 +12,7 @@ import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ScryptParams extends ASN1Object {
     public final BigInteger blockSize;
     public final BigInteger costParameter;
@@ -22,9 +22,9 @@ public class ScryptParams extends ASN1Object {
 
     public ScryptParams(ASN1Sequence aSN1Sequence) {
         if (aSN1Sequence.size() != 4 && aSN1Sequence.size() != 5) {
-            throw new IllegalArgumentException(C8550.m22297(aSN1Sequence, new StringBuilder("invalid sequence: size = ")));
+            throw new IllegalArgumentException(C24966.m55773(aSN1Sequence, new StringBuilder("invalid sequence: size = ")));
         }
-        this.salt = C15489.m37078(aSN1Sequence, 0);
+        this.salt = C20551.m47118(aSN1Sequence, 0);
         this.costParameter = ASN1Integer.getInstance(aSN1Sequence.getObjectAt(1)).getValue();
         this.blockSize = ASN1Integer.getInstance(aSN1Sequence.getObjectAt(2)).getValue();
         this.parallelizationParameter = ASN1Integer.getInstance(aSN1Sequence.getObjectAt(3)).getValue();

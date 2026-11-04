@@ -1,42 +1,19 @@
 package l;
 
-import android.media.MediaDataSource;
-import java.io.IOException;
+import android.content.pm.IPackageInstaller;
+import android.content.pm.IPackageManager;
+import com.rosan.dhizuku.api.Dhizuku;
 
-/* JADX INFO: renamed from: l.֫ۜ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: U17E */
+/* JADX INFO: renamed from: l.֫ۘᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28BC */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1667 extends MediaDataSource {
+public final class C1667 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final long f6639;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final IPackageManager f5768 = IPackageManager.Stub.asInterface(Dhizuku.binderWrapper(C23240.m52219("package")));
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C1388 f6640;
-
-    public C1667(AbstractC20745 abstractC20745) {
-        C1388 c1388M46710 = abstractC20745.m46710("r");
-        this.f6640 = c1388M46710;
-        this.f6639 = c1388M46710.length();
-    }
-
-    @Override // android.media.MediaDataSource
-    public final int readAt(long j, byte[] bArr, int i, int i2) {
-        int i3;
-        synchronized (this.f6640) {
-            this.f6640.seek(j);
-            i3 = this.f6640.read(bArr, i, i2);
-        }
-        return i3;
-    }
-
-    @Override // android.media.MediaDataSource
-    public final long getSize() {
-        return this.f6639;
-    }
-
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        this.f6640.close();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static IPackageInstaller m5993() {
+        return IPackageInstaller.Stub.asInterface(Dhizuku.binderWrapper(f5768.getPackageInstaller().asBinder()));
     }
 }

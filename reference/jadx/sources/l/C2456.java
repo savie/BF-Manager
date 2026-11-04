@@ -1,13 +1,13 @@
 package l;
 
-import android.view.View;
+import java.util.function.IntFunction;
 
-/* JADX INFO: renamed from: l.ۖۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H1CY */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2456 extends AbstractC8102 {
-    @Override // l.AbstractC8102
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3906(float f, View view) {
+/* JADX INFO: renamed from: l.ۖۚᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 89CO */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2456 implements IntFunction {
+    @Override // java.util.function.IntFunction
+    public final Object apply(int i) {
+        return new String[i];
     }
 }

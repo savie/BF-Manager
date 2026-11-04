@@ -1,17 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶۠᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: C8XW */
+import android.annotation.SuppressLint;
+import android.content.Context;
+
+/* JADX INFO: renamed from: l.ᩴ᩵᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: R4WE */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20052 extends AbstractC15175 {
-    @Override // l.InterfaceC17996
-    /* JADX INFO: renamed from: ۙ */
-    public final C3822 mo3830(C8057 c8057, InterfaceC18702 interfaceC18702) {
-        if (c8057.mo21201() < 4 || c8057.mo21199() || (c8057.mo21200().mo1823() instanceof C15840)) {
-            return null;
+public final class C20052 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    @SuppressLint({"StaticFieldLeak"})
+    public static Context f64445;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m46110() {
+        try {
+            System.loadLibrary("pl_droidsonroids_gif");
+        } catch (UnsatisfiedLinkError unused) {
+            if (f64445 == null) {
+                try {
+                    f64445 = (Context) Class.forName("android.app.ActivityThread").getDeclaredMethod("currentApplication", null).invoke(null, null);
+                } catch (Exception e) {
+                    throw new IllegalStateException("LibraryLoader not initialized. Call LibraryLoader.initialize() before using library classes.", e);
+                }
+            }
+            C22831.m51495(f64445);
         }
-        C3822 c3822 = new C3822(new C0295());
-        c3822.m11111(c8057.mo21202() + 4);
-        return c3822;
     }
 }

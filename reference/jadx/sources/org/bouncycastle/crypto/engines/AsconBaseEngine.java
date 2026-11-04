@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AsconBaseEngine extends AEADBaseEngine {
     public long ASCON_IV;
     public long K0;

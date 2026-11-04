@@ -9,13 +9,13 @@
 
 
 # static fields
-.field public static final ۖ:Lcom/amazonaws/logging/Log;
+.field public static final ᩸:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
-.field public final ۨ:Ljava/util/HashMap;
+.field public final ۤ:Ljava/util/HashMap;
 
-.field public final ܰ:Ljava/util/HashMap;
+.field public final ᩷:Ljava/util/HashMap;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ۖ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->᩸:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -57,14 +57,14 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ۨ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ۤ:Ljava/util/HashMap;
 
     .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ܰ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->᩷:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     move-result-object p1
 
     .line 100
-    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ܰ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/amazonaws/logging/Log;->ۖ(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/amazonaws/logging/Log;->᩸(Ljava/lang/String;)V
 
     return-void
 
@@ -120,12 +120,12 @@
     invoke-virtual {v0}, Lcom/amazonaws/util/TimingInfo;->ۙ()V
 
     .line 110
-    invoke-virtual {v0}, Lcom/amazonaws/util/TimingInfo;->ۨ()J
+    invoke-virtual {v0}, Lcom/amazonaws/util/TimingInfo;->ۤ()J
 
     move-result-wide v1
 
     .line 111
-    invoke-virtual {v0}, Lcom/amazonaws/util/TimingInfo;->ܰ()J
+    invoke-virtual {v0}, Lcom/amazonaws/util/TimingInfo;->᩷()J
 
     move-result-wide v3
 
@@ -172,7 +172,7 @@
     move-result-object p1
 
     .line 161
-    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ۨ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ۤ:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -197,7 +197,7 @@
     return-void
 .end method
 
-.method public final ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+.method public final ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     .locals 3
 
     .line 88
@@ -216,14 +216,14 @@
     invoke-direct {v2, v0, v1}, Lcom/amazonaws/util/TimingInfoFullSupport;-><init>(J)V
 
     .line 83
-    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->ܰ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/amazonaws/util/AWSRequestMetricsFullSupport;->᩷:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final ܰ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+.method public final ᩷(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     .locals 1
 
     .line 136

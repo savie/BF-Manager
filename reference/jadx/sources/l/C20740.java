@@ -1,125 +1,44 @@
 package l;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-/* JADX INFO: renamed from: l.᩷۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: G58P */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20740 implements Set {
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC16507 f67486;
-
-    public C20740(AbstractC16507 abstractC16507) {
-        this.f67486 = abstractC16507;
+/* JADX INFO: renamed from: l.᩵ᩳۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C20740 extends EnumC8806 {
+    public /* synthetic */ C20740() {
+        this("DoctypePublicIdentifier_singleQuoted", 57);
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final boolean add(Object obj) {
-        throw new UnsupportedOperationException();
+    public C20740(String str, int i) {
+        super(str, i, 0);
     }
 
-    @Override // java.util.Set, java.util.Collection
-    public final boolean addAll(Collection collection) {
-        AbstractC16507 abstractC16507 = this.f67486;
-        int iMo36175 = abstractC16507.mo36175();
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            Map.Entry entry = (Map.Entry) it.next();
-            abstractC16507.mo36174(entry.getKey(), entry.getValue());
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        char cM54669 = c24448.m54669();
+        if (cM54669 == 0) {
+            c8260.m22262(this);
+            c8260.f27169.f66989.append((char) 65533);
+            return;
         }
-        return iMo36175 != abstractC16507.mo36175();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final void clear() {
-        this.f67486.mo36172();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean contains(Object obj) {
-        if (obj instanceof Map.Entry) {
-            Map.Entry entry = (Map.Entry) obj;
-            Object key = entry.getKey();
-            AbstractC16507 abstractC16507 = this.f67486;
-            int iMo36169 = abstractC16507.mo36169(key);
-            if (iMo36169 >= 0) {
-                Object objMo36170 = abstractC16507.mo36170(iMo36169, 1);
-                Object value = entry.getValue();
-                return objMo36170 == value || (objMo36170 != null && objMo36170.equals(value));
-            }
+        if (cM54669 == '\'') {
+            c8260.m22269(EnumC8806.f28711);
+            return;
         }
-        return false;
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean containsAll(Collection collection) {
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            if (!contains(it.next())) {
-                return false;
-            }
+        if (cM54669 == '>') {
+            c8260.m22262(this);
+            c8260.f27169.f66992 = true;
+            c8260.m22265();
+            c8260.m22269(EnumC8806.f28749);
+            return;
         }
-        return true;
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean isEmpty() {
-        return this.f67486.mo36175() == 0;
-    }
-
-    @Override // java.util.Set, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        return new C20035(this.f67486);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean remove(Object obj) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final int size() {
-        return this.f67486.mo36175();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final Object[] toArray() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final Object[] toArray(Object[] objArr) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final boolean equals(Object obj) {
-        return AbstractC16507.m38781((Set) this, obj);
-    }
-
-    @Override // java.util.Set, java.util.Collection
-    public final int hashCode() {
-        AbstractC16507 abstractC16507 = this.f67486;
-        int iHashCode = 0;
-        for (int iMo36175 = abstractC16507.mo36175() - 1; iMo36175 >= 0; iMo36175--) {
-            Object objMo36170 = abstractC16507.mo36170(iMo36175, 0);
-            Object objMo36171 = abstractC16507.mo36170(iMo36175, 1);
-            iHashCode += (objMo36170 == null ? 0 : objMo36170.hashCode()) ^ (objMo36171 == null ? 0 : objMo36171.hashCode());
+        if (cM54669 == 65535) {
+            c8260.m22267(this);
+            c8260.f27169.f66992 = true;
+            c8260.m22265();
+            c8260.m22269(EnumC8806.f28749);
+            return;
         }
-        return iHashCode;
+        c8260.f27169.f66989.append(cM54669);
     }
 }

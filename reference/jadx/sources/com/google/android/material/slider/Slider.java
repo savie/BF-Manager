@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import l.C2387;
+import l.C11642;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Slider extends BaseSlider {
@@ -439,7 +439,7 @@ public class Slider extends BaseSlider {
     }
 
     public Slider(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8576);
+        this(context, attributeSet, C11642.f37132);
     }
 
     public Slider(Context context, AttributeSet attributeSet, int i) {

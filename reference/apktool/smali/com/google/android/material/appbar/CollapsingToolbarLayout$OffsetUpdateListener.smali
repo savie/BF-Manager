@@ -33,13 +33,13 @@
     iput p2, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->currentOffset:I
 
     .line 1775
-    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Ll/ܺۢ;
+    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Ll/ۘۜ;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ll/ܺۢ;->ۜ()I
+    invoke-virtual {p1}, Ll/ۘۜ;->ۧ()I
 
     move-result p1
 
@@ -122,7 +122,7 @@
 
     move-result v3
 
-    invoke-static {v4, v0, v3}, Ll/ۙۛ;->ۙ(III)I
+    invoke-static {v4, v0, v3}, Ll/ܺܽܺ;->ۙ(III)I
 
     move-result v3
 
@@ -150,7 +150,7 @@
     if-lez p1, :cond_4
 
     .line 1799
-    sget v1, Ll/ۚ֫;->ۙ:I
+    sget v1, Ll/᩸۠;->ۙ:I
 
     .line 1323
     invoke-virtual {v0}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -167,7 +167,7 @@
     iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
     .line 1805
-    sget v2, Ll/ۚ֫;->ۙ:I
+    sget v2, Ll/᩸۠;->ۙ:I
 
     .line 2393
     invoke-virtual {v1}, Landroid/view/View;->getMinimumHeight()I

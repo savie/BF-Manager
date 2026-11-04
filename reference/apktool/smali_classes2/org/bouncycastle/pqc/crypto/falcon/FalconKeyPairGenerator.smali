@@ -180,7 +180,7 @@
     :goto_2
     const/16 v3, 0xe
 
-    invoke-static {v0, v3, v2, p1}, Ll/֨ۖᩴ;->ۙ(IIII)I
+    invoke-static {v0, v3, v2, p1}, Ll/ۜ᩶֫;->ۙ(IIII)I
 
     move-result v3
 

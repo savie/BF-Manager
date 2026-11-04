@@ -1,61 +1,71 @@
 package l;
 
-import java.util.BitSet;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
+import bin.mt.json.JSONValue;
 
-/* JADX INFO: renamed from: l.ܶ֨ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: CBAC */
+/* JADX INFO: renamed from: l.ܰ᩹ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 87B0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14903 extends AbstractC14322 {
+public final class C14903 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C14903 f48677 = new C14903();
+    public final int f48686;
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3096() {
-        return 5;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f48687;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f48688;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f48689;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final long f48690;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f48691;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f48692;
+
+    public C14903(int i, int i2, int i3, int i4, int i5) {
+        this(i, i2, i3, i4, i5, -1L, -1);
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo3097(AbstractC10794 abstractC10794) {
-        return abstractC10794.m38695().m15275get(0).m38392() + ", " + AbstractC14322.m34561((AbstractC10377) ((C15733) abstractC10794).m37458());
+    public C14903(int i, int i2, int i3, int i4, int i5, long j, int i6) {
+        this.f48688 = i;
+        this.f48687 = i2;
+        this.f48691 = i3;
+        this.f48692 = i4;
+        this.f48686 = i5;
+        this.f48690 = j;
+        this.f48689 = i6;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo3100(AbstractC10794 abstractC10794) {
-        return AbstractC14322.m34562((AbstractC10377) ((C15733) abstractC10794).m37458(), 64);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C14903 m35853(int i, int i2, int i3, int i4, long j) {
+        return new C14903(i, i2, 0, i3, 0, j, i4);
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo3101(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        if ((abstractC16438 instanceof C15733) && c0727M38695.size() == 1 && AbstractC14322.m34568(c0727M38695.m15275get(0).m38400())) {
-            return ((C15733) abstractC16438).m37458() instanceof AbstractC8966;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C14903 m35852(int i, int i2, int i3) {
+        return new C14903(i, 0, i2, i3, 0);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C14903 m35854(JSONObject jSONObject, JSONValue jSONValue) throws C10186 {
+        int i = jSONObject.getInt("scopeIndex", 0);
+        int i2 = jSONObject.getInt("entryIndex", 0);
+        int i3 = jSONObject.getInt("classIndex", 0);
+        int i4 = jSONObject.getInt("memberIndex", -1);
+        int i5 = jSONObject.getInt("classCharOffset", 0);
+        long j = jSONObject.getLong("nativeStringScanOffset", -1L);
+        int i6 = jSONObject.getInt("nativeStringTotalCount", -1);
+        if (i < 0 || i2 < 0 || i3 < 0 || i4 < -1 || i5 < 0 || j < -1 || i6 < -1 || ((j >= 0 && i6 < 0) || (i6 >= 0 && (i4 < 0 || i4 > i6)))) {
+            throw C10186.m26301("Invalid cursor position", "nextCursor", jSONValue, JSON.array(), JSON.object().add("nextCursor", "<cursor>"));
         }
-        return false;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final BitSet mo3098(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        BitSet bitSet = new BitSet(1);
-        bitSet.set(0, AbstractC14322.m34568(c0727M38695.m15275get(0).m38400()));
-        return bitSet;
-    }
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3099(C2718 c2718, AbstractC10794 abstractC10794) {
-        C0727 c0727M38695 = abstractC10794.m38695();
-        long jMo21659 = ((AbstractC8966) ((C15733) abstractC10794).m37458()).mo21659();
-        c2718.m8297(AbstractC14322.m34565(abstractC10794, c0727M38695.m15275get(0).m38400()));
-        c2718.m8297((short) jMo21659);
-        c2718.m8297((short) (jMo21659 >> 16));
-        c2718.m8297((short) (jMo21659 >> 32));
-        c2718.m8297((short) (jMo21659 >> 48));
+        return new C14903(i, i2, i3, i4, i5, j, i6);
     }
 }

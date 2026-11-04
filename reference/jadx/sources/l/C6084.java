@@ -1,22 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ۬᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: MAQX */
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.ۛۖ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E72G */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6084 extends AbstractC17373 {
-    public final String toString() {
-        return ".";
-    }
-
-    @Override // l.AbstractC17373
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo12146() {
-        return 9;
-    }
-
-    @Override // l.AbstractC17373
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo12147(int i, int i2) {
-        return i >= 0 && i <= i2;
+public final class C6084 extends LinkedHashMap {
+    @Override // java.util.LinkedHashMap
+    public final boolean removeEldestEntry(Map.Entry entry) {
+        return size() > 32;
     }
 }

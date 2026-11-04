@@ -22,31 +22,31 @@ public enum TransferState {
     UNKNOWN;
 
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static final Map f344 = new HashMap();
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public static final Map f338 = new HashMap();
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final Log f353;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final Log f343;
 
     static {
         for (TransferState transferState : values()) {
-            f344.put(transferState.toString(), transferState);
+            f338.put(transferState.toString(), transferState);
         }
-        f353 = LogFactory.m302(TransferState.class);
+        f343 = LogFactory.m296(TransferState.class);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static TransferState m388(String str) {
-        Map map = f344;
+    public static TransferState m382(String str) {
+        Map map = f338;
         if (map.containsKey(str)) {
             return (TransferState) map.get(str);
         }
-        f353.mo292("Unknown state " + str + " transfer will be have state set to UNKNOWN.");
+        f343.mo285("Unknown state " + str + " transfer will be have state set to UNKNOWN.");
         return UNKNOWN;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m389(TransferState transferState) {
+    public static boolean m383(TransferState transferState) {
         return COMPLETED.equals(transferState) || FAILED.equals(transferState) || CANCELED.equals(transferState);
     }
 }

@@ -1,39 +1,78 @@
 package l;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.IOException;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 
-/* JADX INFO: renamed from: l.᩹ܳ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8CE */
+/* JADX INFO: renamed from: l.᩷᩸᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: QABT */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22355 implements InterfaceC6832 {
+public final class C22355 implements InterfaceC24495 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int[] f73027 = {1, 3, 5, 7, 9};
+    public final /* synthetic */ C5947 f72348;
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo4350(InterfaceC7739 interfaceC7739) {
-        return -1L;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16096 f72349;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13404 f72350;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AtomicReference f72351;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AtomicBoolean f72352;
+
+    public C22355(C5947 c5947, AtomicReference atomicReference, C16096 c16096, C13404 c13404, AtomicBoolean atomicBoolean) {
+        this.f72348 = c5947;
+        this.f72351 = atomicReference;
+        this.f72349 = c16096;
+        this.f72350 = c13404;
+        this.f72352 = atomicBoolean;
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo4353(byte[] bArr, int i) {
-        return i >= 3 && (bArr[0] & 255) == 66 && (bArr[1] & 255) == 90 && (bArr[2] & 255) == 104;
+    @Override // l.InterfaceC24495
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo50423(IOException iOException) {
+        AtomicReference atomicReference;
+        do {
+            atomicReference = this.f72351;
+            if (atomicReference.compareAndSet(null, iOException)) {
+                break;
+            }
+        } while (atomicReference.get() == null);
+        try {
+            this.f72349.close();
+        } catch (Exception unused) {
+        }
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo4351(InputStream inputStream) {
-        return new C6624(new BufferedInputStream(inputStream, 65536));
-    }
-
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final OutputStream mo4352(OutputStream outputStream, int i, long j) {
-        return new C15092(new BufferedOutputStream(outputStream, 65536), f73027[i]);
+    @Override // l.InterfaceC24495
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo50424(C9444 c9444) {
+        AtomicReference atomicReference;
+        try {
+            if (this.f72350.f42709 && c9444.m24820() == 403) {
+                this.f72348.m17312();
+            }
+            C20863.m47689(c9444);
+            this.f72352.set(true);
+        } catch (IOException e) {
+            do {
+                atomicReference = this.f72351;
+                if (atomicReference.compareAndSet(null, e)) {
+                    break;
+                }
+            } while (atomicReference.get() == null);
+            try {
+                c9444.close();
+            } catch (Exception unused) {
+            }
+            try {
+                this.f72349.close();
+            } catch (Exception unused2) {
+            }
+        }
     }
 }

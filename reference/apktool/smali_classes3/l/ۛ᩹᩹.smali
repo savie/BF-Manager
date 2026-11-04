@@ -1,213 +1,181 @@
-.class public Ll/ۛ᩹᩹;
-.super Lbin/mt/json/JSONHandler;
-.source "5AV2"
+.class public final Ll/ۛ᩹᩹;
+.super Ll/֨ܽ᩹;
+.source "97L"
 
 
 # instance fields
-.field public ۙ:Lbin/mt/json/JSONValue;
+.field public final synthetic ܰ:Ll/ᩳ᩹᩹;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/ᩳ᩹᩹;)V
     .locals 0
 
-    .line 310
-    invoke-direct {p0}, Lbin/mt/json/JSONHandler;-><init>()V
+    .line 1111
+    iput-object p1, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    .line 35
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic endArray(Ljava/lang/Object;)V
-    .locals 0
+.method public final clear()V
+    .locals 1
 
-    .line 310
-    check-cast p1, Lbin/mt/json/JSONArray;
+    .line 1152
+    iget-object v0, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
 
-    invoke-virtual {p0, p1}, Ll/ۛ᩹᩹;->ۙ(Lbin/mt/json/JSONArray;)V
-
-    return-void
-.end method
-
-.method public bridge synthetic endArrayValue(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 310
-    check-cast p1, Lbin/mt/json/JSONArray;
-
-    invoke-virtual {p0, p1}, Ll/ۛ᩹᩹;->ܰ(Lbin/mt/json/JSONArray;)V
+    invoke-virtual {v0}, Ll/ᩳ᩹᩹;->clear()V
 
     return-void
 .end method
 
-.method public endBoolean(Z)V
-    .locals 0
+.method public final iterator()Ll/᩶ۗ᩹;
+    .locals 2
 
-    if-eqz p1, :cond_0
+    .line 1114
+    new-instance v0, Ll/ۨ᩹᩹;
 
-    .line 331
-    sget-object p1, Lbin/mt/json/JSON;->TRUE:Lbin/mt/json/JSONValue;
+    iget-object v1, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    invoke-direct {v0, v1}, Ll/ۨ᩹᩹;-><init>(Ll/ᩳ᩹᩹;)V
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 1135
+    iget-object v0, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    iget v0, v0, Ll/ᩳ᩹᩹;->ۖ:I
+
+    return v0
+.end method
+
+.method public synthetic spliterator()Ljava/util/Spliterator;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ll/ۛ᩹᩹;->spliterator()Ll/۠ۚۗ;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ll/ۖۚۗ;->convert(Ll/۠ۚۗ;)Ljava/util/Spliterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic spliterator()Ll/۠ۚۗ;
+    .locals 1
+
+    .line 1111
+    invoke-virtual {p0}, Ll/ۛ᩹᩹;->spliterator()Ll/ܶ᩵᩹;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final spliterator()Ll/ܶ᩵᩹;
+    .locals 2
+
+    .line 1119
+    new-instance v0, Ll/᩺᩹᩹;
+
+    iget-object v1, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    invoke-direct {v0, v1}, Ll/᩺᩹᩹;-><init>(Ll/ᩳ᩹᩹;)V
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ll/ۨۗ᩹;)V
+    .locals 3
+
+    .line 1125
+    iget-object v0, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    iget-object v1, v0, Ll/ᩳ᩹᩹;->֡:[C
+
+    .line 1126
+    iget-boolean v2, v0, Ll/ᩳ᩹᩹;->ܰ:Z
+
+    if-eqz v2, :cond_0
+
+    iget v2, v0, Ll/ᩳ᩹᩹;->ۡ:I
+
+    aget-char v2, v1, v2
+
+    invoke-interface {p1, v2}, Ll/ۨۗ᩹;->ۤ(C)V
+
+    .line 1127
+    :cond_0
+    iget v0, v0, Ll/ᩳ᩹᩹;->ۡ:I
+
+    :goto_0
+    add-int/lit8 v2, v0, -0x1
+
+    if-eqz v0, :cond_2
+
+    .line 1128
+    aget-char v0, v1, v2
+
+    if-eqz v0, :cond_1
+
+    .line 1129
+    invoke-interface {p1, v0}, Ll/ۨۗ᩹;->ۤ(C)V
+
+    :cond_1
+    move v0, v2
 
     goto :goto_0
 
+    :cond_2
+    return-void
+.end method
+
+.method public final ۫(C)Z
+    .locals 1
+
+    .line 1140
+    iget-object v0, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    invoke-virtual {v0, p1}, Ll/ᩳ᩹᩹;->ۙ(C)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final ᩷(C)Z
+    .locals 2
+
+    .line 1145
+    iget-object v0, p0, Ll/ۛ᩹᩹;->ܰ:Ll/ᩳ᩹᩹;
+
+    iget v1, v0, Ll/ᩳ᩹᩹;->ۖ:I
+
+    .line 1146
+    invoke-virtual {v0, p1}, Ll/ᩳ᩹᩹;->ᩴ(C)Ljava/lang/Object;
+
+    .line 1147
+    iget p1, v0, Ll/ᩳ᩹᩹;->ۖ:I
+
+    if-eq p1, v1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
     :cond_0
-    sget-object p1, Lbin/mt/json/JSON;->FALSE:Lbin/mt/json/JSONValue;
+    const/4 p1, 0x0
 
-    :goto_0
-    iput-object p1, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public endNull()V
-    .locals 1
-
-    .line 326
-    sget-object v0, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
-
-    iput-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public endNumber(Ljava/lang/String;)V
-    .locals 1
-
-    .line 341
-    new-instance v0, Ll/ܳ᩹᩹;
-
-    invoke-direct {v0, p1}, Ll/ܳ᩹᩹;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public bridge synthetic endObject(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 310
-    check-cast p1, Lbin/mt/json/JSONObject;
-
-    invoke-virtual {p0, p1}, Ll/ۛ᩹᩹;->ۙ(Lbin/mt/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method public bridge synthetic endObjectValue(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
-
-    .line 310
-    check-cast p1, Lbin/mt/json/JSONObject;
-
-    invoke-virtual {p0, p1, p2}, Ll/ۛ᩹᩹;->ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public endString(Ljava/lang/String;)V
-    .locals 1
-
-    .line 336
-    new-instance v0, Ll/ۗ᩹᩹;
-
-    invoke-direct {v0, p1}, Ll/ۗ᩹᩹;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public startArray()Lbin/mt/json/JSONArray;
-    .locals 1
-
-    .line 316
-    new-instance v0, Lbin/mt/json/JSONArray;
-
-    invoke-direct {v0}, Lbin/mt/json/JSONArray;-><init>()V
-
-    return-object v0
-.end method
-
-.method public bridge synthetic startArray()Ljava/lang/Object;
-    .locals 1
-
-    .line 310
-    invoke-virtual {p0}, Ll/ۛ᩹᩹;->startArray()Lbin/mt/json/JSONArray;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public startObject()Lbin/mt/json/JSONObject;
-    .locals 1
-
-    .line 321
-    new-instance v0, Lbin/mt/json/JSONObject;
-
-    invoke-direct {v0}, Lbin/mt/json/JSONObject;-><init>()V
-
-    return-object v0
-.end method
-
-.method public bridge synthetic startObject()Ljava/lang/Object;
-    .locals 1
-
-    .line 310
-    invoke-virtual {p0}, Ll/ۛ᩹᩹;->startObject()Lbin/mt/json/JSONObject;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public ۙ()Lbin/mt/json/JSONValue;
-    .locals 1
-
-    .line 365
-    iget-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-object v0
-.end method
-
-.method public ۙ(Lbin/mt/json/JSONArray;)V
-    .locals 0
-
-    .line 346
-    iput-object p1, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public ۙ(Lbin/mt/json/JSONObject;)V
-    .locals 0
-
-    .line 351
-    iput-object p1, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    return-void
-.end method
-
-.method public ۙ(Lbin/mt/json/JSONObject;Ljava/lang/String;)V
-    .locals 1
-
-    .line 361
-    iget-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    invoke-virtual {p1, p2, v0}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
-
-    return-void
-.end method
-
-.method public ܰ(Lbin/mt/json/JSONArray;)V
-    .locals 1
-
-    .line 356
-    iget-object v0, p0, Ll/ۛ᩹᩹;->ۙ:Lbin/mt/json/JSONValue;
-
-    invoke-virtual {p1, v0}, Lbin/mt/json/JSONArray;->add(Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONArray;
-
-    return-void
+    return p1
 .end method

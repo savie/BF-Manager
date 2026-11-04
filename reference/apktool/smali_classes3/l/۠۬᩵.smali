@@ -1,161 +1,397 @@
 .class public final Ll/۠۬᩵;
-.super Ll/ۡ۬᩵;
-.source "HAT6"
-
-# interfaces
-.implements Ljava/lang/Comparable;
+.super Ljava/lang/Object;
+.source "D97F"
 
 
-# instance fields
-.field public final ܺ:I
+# static fields
+.field public static final ֫:Ll/ۜ᩷ۨ;
+
+.field public static final ۗ:Ll/ۜ᩷ۨ;
+
+.field public static final ۙ:Ll/ۜ᩷ۨ;
+
+.field public static final ۚ:Ll/ۜ᩷ۨ;
+
+.field public static final ۤ:Ll/ۜ᩷ۨ;
+
+.field public static final ۧ:Ll/ۜ᩷ۨ;
+
+.field public static final ۫:Ll/ۜ᩷ۨ;
+
+.field public static final ܳ:Ll/ۜ᩷ۨ;
+
+.field public static final ܶ:Ll/ۜ᩷ۨ;
+
+.field public static final ܺ:Ll/ۜ᩷ۨ;
+
+.field public static final ܽ:Ll/ۜ᩷ۨ;
+
+.field public static final ᩴ:Ll/ۜ᩷ۨ;
+
+.field public static final ᩵:Ll/ۜ᩷ۨ;
+
+.field public static final ᩷:Ll/ۜ᩷ۨ;
+
+.field public static final ᩸:I
+
+.field public static final ᩹:I
+
+.field public static final ᩻:Ll/ۤۙۨ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 7
 
-    .line 133
-    invoke-direct {p0}, Ll/ۡ۬᩵;-><init>()V
+    .line 2902
+    new-instance v6, Ll/ۤۙۨ;
 
-    const/4 v0, 0x0
+    const/4 v4, 0x0
 
-    .line 134
-    iput v0, p0, Ll/۠۬᩵;->ܺ:I
+    const/4 v5, 0x0
+
+    const-wide/16 v1, -0x1
+
+    const/4 v3, 0x0
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Ll/ۤۙۨ;-><init>(JLl/ۤۙۨ;Ll/ۡ۬᩵;I)V
+
+    sput-object v6, Ll/۠۬᩵;->᩻:Ll/ۤۙۨ;
+
+    const/16 v0, 0x20
+
+    const/16 v1, 0xc
+
+    const-string v2, "kotlinx.coroutines.bufferedChannel.segmentSize"
+
+    .line 2908
+    invoke-static {v0, v1, v2}, Ll/۬᩷ۨ;->ۙ(IILjava/lang/String;)I
+
+    move-result v0
+
+    sput v0, Ll/۠۬᩵;->᩹:I
+
+    const-string v0, "kotlinx.coroutines.bufferedChannel.expandBufferCompletionWaitIterations"
+
+    const/16 v2, 0x2710
+
+    .line 2915
+    invoke-static {v2, v1, v0}, Ll/۬᩷ۨ;->ۙ(IILjava/lang/String;)I
+
+    move-result v0
+
+    sput v0, Ll/۠۬᩵;->᩸:I
+
+    .line 2952
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "BUFFERED"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ۙ:Ll/ۜ᩷ۨ;
+
+    .line 2955
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "SHOULD_BUFFER"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ۚ:Ll/ۜ᩷ۨ;
+
+    .line 2960
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "S_RESUMING_BY_RCV"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ܶ:Ll/ۜ᩷ۨ;
+
+    .line 2965
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "RESUMING_BY_EB"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ܽ:Ll/ۜ᩷ۨ;
+
+    .line 2970
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "POISONED"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ܺ:Ll/ۜ᩷ۨ;
+
+    .line 2973
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "DONE_RCV"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ۤ:Ll/ۜ᩷ۨ;
+
+    .line 2975
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "INTERRUPTED_SEND"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->۫:Ll/ۜ᩷ۨ;
+
+    .line 2977
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "INTERRUPTED_RCV"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ܳ:Ll/ۜ᩷ۨ;
+
+    .line 2979
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "CHANNEL_CLOSED"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->᩷:Ll/ۜ᩷ۨ;
+
+    .line 3009
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "SUSPEND"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ۗ:Ll/ۜ᩷ۨ;
+
+    .line 3010
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "SUSPEND_NO_WAITER"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->᩵:Ll/ۜ᩷ۨ;
+
+    .line 3011
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "FAILED"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ᩴ:Ll/ۜ᩷ۨ;
+
+    .line 3027
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "NO_RECEIVE_RESULT"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->ۧ:Ll/ۜ᩷ۨ;
+
+    .line 3042
+    new-instance v0, Ll/ۜ᩷ۨ;
+
+    const-string v1, "NO_CLOSE_CAUSE"
+
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ll/۠۬᩵;->֫:Ll/ۜ᩷ۨ;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 0
-
-    .line 137
-    invoke-direct {p0}, Ll/ۡ۬᩵;-><init>()V
-
-    .line 138
-    iput p1, p0, Ll/۠۬᩵;->ܺ:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
+.method public static final synthetic ֫()Ll/ۤۙۨ;
     .locals 1
 
-    .line 130
-    check-cast p1, Ll/۠۬᩵;
-
-    .line 158
-    iget v0, p0, Ll/۠۬᩵;->ܺ:I
-
-    iget p1, p1, Ll/۠۬᩵;->ܺ:I
-
-    sub-int/2addr v0, p1
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    .line 170
-    instance-of v0, p1, Ll/۠۬᩵;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_1
-
-    return v0
-
-    .line 178
-    :cond_1
-    check-cast p1, Ll/۠۬᩵;
-
-    .line 179
-    iget v2, p0, Ll/۠۬᩵;->ܺ:I
-
-    iget p1, p1, Ll/۠۬᩵;->ܺ:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 164
-    iget v0, p0, Ll/۠۬᩵;->ܺ:I
-
-    add-int/lit8 v0, v0, 0x1f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 185
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ll/۠۬᩵;->ܺ:I
-
-    const-string v2, ">=prec}?"
-
-    .line 0
-    invoke-static {v1, v2, v0}, Ll/۫ܰۖ;->ۙ(ILjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->᩻:Ll/ۤۙۨ;
 
     return-object v0
 .end method
 
-.method public final ۙ(Ll/ᩴ᩹᩵;Ll/۠᩹᩵;)Z
-    .locals 0
+.method public static final synthetic ۙ()Ll/ۜ᩷ۨ;
+    .locals 1
 
-    .line 143
-    iget p2, p0, Ll/۠۬᩵;->ܺ:I
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ۤ:Ll/ۜ᩷ۨ;
 
-    invoke-virtual {p1, p2}, Ll/ᩴ᩹᩵;->ۙ(I)Z
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final ܰ(Ll/ᩴ᩹᩵;Ll/۠᩹᩵;)Ll/ۡ۬᩵;
-    .locals 0
+.method public static ۙ(Ll/ۧ۠᩵;Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 148
-    iget p2, p0, Ll/۠۬᩵;->ܺ:I
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Ll/ᩴ᩹᩵;->ۙ(I)Z
+    .line 2925
+    invoke-interface {p0, p1, v0}, Ll/ۧ۠᩵;->ۙ(Ljava/lang/Object;Ll/ۗ֨᩵;)Ll/ۜ᩷ۨ;
 
-    move-result p1
+    move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 149
-    sget-object p1, Ll/᩸۬᩵;->ۙ:Ll/᩸۬᩵;
+    .line 2927
+    invoke-interface {p0}, Ll/ۧ۠᩵;->᩸()V
 
-    return-object p1
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return p0
+.end method
+
+.method public static final ۙ(Ll/ۧ۠᩵;Ljava/lang/Object;Ll/ۗ֨᩵;)Z
+    .locals 0
+
+    .line 2925
+    invoke-interface {p0, p1, p2}, Ll/ۧ۠᩵;->ۙ(Ljava/lang/Object;Ll/ۗ֨᩵;)Ll/ۜ᩷ۨ;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 2927
+    invoke-interface {p0}, Ll/ۧ۠᩵;->᩸()V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final synthetic ۚ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ۧ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ۤ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ᩴ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ۧ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ܺ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ۫()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->֫:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ܳ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ۚ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ܶ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->᩵:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ܺ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ܶ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ܽ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ۗ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ᩴ()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->۫:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ᩷()I
+    .locals 1
+
+    .line 1
+    sget v0, Ll/۠۬᩵;->᩸:I
+
+    return v0
+.end method
+
+.method public static final synthetic ᩸()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ܳ:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final ᩹()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 2979
+    sget-object v0, Ll/۠۬᩵;->᩷:Ll/ۜ᩷ۨ;
+
+    return-object v0
+.end method
+
+.method public static final synthetic ᩻()Ll/ۜ᩷ۨ;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ll/۠۬᩵;->ܽ:Ll/ۜ᩷ۨ;
+
+    return-object v0
 .end method

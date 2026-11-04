@@ -4,7 +4,7 @@ import java.security.cert.CRLException;
 import org.bouncycastle.asn1.x509.CertificateList;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509CRLInternal extends X509CRLImpl {
     public final byte[] encoding;
     public final CRLException exception;

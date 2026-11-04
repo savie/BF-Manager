@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:tint="?APKTOOL_RENAMED_0x7f040102" android:height="24.0dp" android:width="24.0dp" android:viewportWidth="24.0" android:viewportHeight="24.0"
+<layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#fff" android:pathData="M6,19c0,1.1 0.9,2 2,2h8c1.1,0 2,-0.9 2,-2V7H6v12zM19,4h-3.5l-1,-1h-5l-1,1H5v2h14V4z" />
-</vector>
+    <item android:left="2.0dp" android:right="2.0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:topLeftRadius="3.0dp" android:topRightRadius="3.0dp" android:bottomLeftRadius="0.0dp" android:bottomRightRadius="0.0dp" />
+            <size android:height="@dimen/APKTOOL_RENAMED_0x7f070193" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,6 +1,6 @@
 package com.amazonaws.services.s3.model;
 
-import l.C22697;
+import l.C8947;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum GroupGrantee implements Grantee {
@@ -9,38 +9,38 @@ public enum GroupGrantee implements Grantee {
     LogDelivery("http://acs.amazonaws.com/groups/s3/LogDelivery");
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public String f604;
-
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public String m577() {
+    public String f594;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public String m571() {
         return "uri";
     }
 
     GroupGrantee(String str) {
-        this.f604 = str;
+        this.f594 = str;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public String m576() {
-        return this.f604;
+    public String m570() {
+        return this.f594;
     }
 
     @Override // com.amazonaws.services.s3.model.Grantee
     /* JADX INFO: renamed from: ۙ */
-    public void mo539(String str) {
+    public void mo533(String str) {
         throw new UnsupportedOperationException("Group grantees have preset identifiers that cannot be modified.");
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return C22697.m50267(new StringBuilder("GroupGrantee ["), this.f604, "]");
+        return C8947.m23910(new StringBuilder("GroupGrantee ["), this.f594, "]");
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static GroupGrantee m575(String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static GroupGrantee m569(String str) {
         for (GroupGrantee groupGrantee : values()) {
-            if (groupGrantee.f604.equals(str)) {
+            if (groupGrantee.f594.equals(str)) {
                 return groupGrantee;
             }
         }

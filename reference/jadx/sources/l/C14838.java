@@ -1,24 +1,34 @@
 package l;
 
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.ܳ᩺۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: L6Y6 */
+/* JADX INFO: renamed from: l.ܰ᩶ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M283 */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C14838 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f48481;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f48482;
-
-    public C14838() {
-        throw null;
+    public static void m35754(Object obj) {
+        if (obj == null) {
+            throw new C21552("Object must not be null");
+        }
     }
 
-    public C14838(ArrayList arrayList, long j) {
-        this.f48481 = arrayList;
-        this.f48482 = j;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m35757(boolean z) {
+        if (!z) {
+            throw new C21552("Must be true");
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m35755(String str) {
+        if (str == null || str.length() == 0) {
+            throw new C21552("String must not be empty");
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m35756(String str, String str2) {
+        if (str == null || str.length() == 0) {
+            throw new C21552(str2);
+        }
     }
 }

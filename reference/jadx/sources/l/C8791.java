@@ -1,61 +1,130 @@
 package l;
 
-import bin.mt.plus.R;
-import com.umeng.analytics.pro.d;
+import com.alipay.sdk.m.y.l;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.ۡۢۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8791 extends AbstractDialogInterfaceOnClickListenerC17341 {
+/* JADX INFO: renamed from: l.۠ܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5A8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8791 extends C20222 implements Comparable, InterfaceC6052 {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC15847 f30216;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final EnumC7300 f28645;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f30217;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final C1028 f28646;
 
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f30218;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final TreeMap f28647;
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f30219;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C8791(ViewOnClickListenerC15847 viewOnClickListenerC15847, AbstractActivityC12483 abstractActivityC12483, String str, String str2, String str3) {
-        super(abstractActivityC12483, -1);
-        this.f30216 = viewOnClickListenerC15847;
-        this.f30218 = str;
-        this.f30219 = str2;
-        this.f30217 = str3;
+    public C8791(C1028 c1028, EnumC7300 enumC7300) {
+        if (c1028 == null) {
+            throw new NullPointerException("type == null");
+        }
+        if (enumC7300 == null) {
+            throw new NullPointerException("visibility == null");
+        }
+        this.f28646 = c1028;
+        this.f28645 = enumC7300;
+        this.f28647 = new TreeMap();
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String str = this.f30219;
-        ViewOnClickListenerC15847 viewOnClickListenerC15847 = this.f30216;
-        String strM40352 = m40352();
-        String str2 = this.f30218;
-        if (!strM40352.startsWith(str2)) {
-            m40347(d.O);
-            return;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C8791)) {
+            return false;
         }
-        try {
-            String str3 = str + "/" + str2 + C15916.m37840(strM40352.substring(str2.length()), viewOnClickListenerC15847.f51287.m21596(str)).m37865();
-            if (viewOnClickListenerC15847.f51287.m21609(str3)) {
-                m40365(R.string.MT_Protector);
-                return;
-            }
-            try {
-                viewOnClickListenerC15847.f51287.m21576(str3, this.f30217);
-                viewOnClickListenerC15847.m37734();
-                viewOnClickListenerC15847.m37735(str3);
-                m40364();
-            } catch (Exception e) {
-                viewOnClickListenerC15847.f51295.m42627((Throwable) e);
-            }
-        } catch (Exception e2) {
-            viewOnClickListenerC15847.f51295.m42627((Throwable) e2);
+        C8791 c8791 = (C8791) obj;
+        if (this.f28646.equals(c8791.f28646) && this.f28645 == c8791.f28645) {
+            return this.f28647.equals(c8791.f28647);
         }
+        return false;
+    }
+
+    public final int hashCode() {
+        return this.f28645.hashCode() + ((this.f28647.hashCode() + (this.f28646.hashCode() * 31)) * 31);
+    }
+
+    @Override // java.lang.Comparable
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters and merged with bridge method [inline-methods] */
+    public final int compareTo(C8791 c8791) {
+        int iCompareTo = this.f28646.compareTo((AbstractC13487) c8791.f28646);
+        if (iCompareTo != 0) {
+            return iCompareTo;
+        }
+        int iCompareTo2 = this.f28645.compareTo(c8791.f28645);
+        if (iCompareTo2 != 0) {
+            return iCompareTo2;
+        }
+        Iterator it = this.f28647.values().iterator();
+        Iterator it2 = c8791.f28647.values().iterator();
+        while (it.hasNext() && it2.hasNext()) {
+            int iCompareTo3 = ((C21692) it.next()).compareTo((C21692) it2.next());
+            if (iCompareTo3 != 0) {
+                return iCompareTo3;
+            }
+        }
+        if (it.hasNext()) {
+            return 1;
+        }
+        return it2.hasNext() ? -1 : 0;
+    }
+
+    public final String toString() {
+        return mo1843();
+    }
+
+    @Override // l.InterfaceC6052
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo1843() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.f28645.mo1843());
+        sb.append("-annotation ");
+        sb.append(this.f28646.mo1843());
+        sb.append(" {");
+        boolean z = true;
+        for (C21692 c21692 : this.f28647.values()) {
+            if (z) {
+                z = false;
+            } else {
+                sb.append(", ");
+            }
+            sb.append(c21692.getName().mo1843());
+            sb.append(": ");
+            sb.append(c21692.getValue().mo1843());
+        }
+        sb.append(l.d);
+        return sb.toString();
+    }
+
+    public final C1028 getType() {
+        return this.f28646;
+    }
+
+    public final EnumC7300 getVisibility() {
+        return this.f28645;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m23589(C21692 c21692) {
+        m46490();
+        this.f28647.put(c21692.getName(), c21692);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m23587(C21692 c21692) {
+        m46490();
+        C9976 name = c21692.getName();
+        TreeMap treeMap = this.f28647;
+        if (treeMap.get(name) != null) {
+            throw new IllegalArgumentException("name already added: " + name);
+        }
+        treeMap.put(name, c21692);
+    }
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final Collection m23588() {
+        return C4681.unmodifiableCollection(this.f28647.values());
     }
 }

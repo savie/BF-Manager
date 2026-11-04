@@ -1,330 +1,237 @@
 .class public final Ll/֫ۚۨ;
-.super Ll/ۨ᩹ۨ;
-.source "D1EV"
+.super Ljava/lang/Object;
+.source "A4E9"
+
+# interfaces
+.implements Ll/ۜۧۨ;
+
+
+# instance fields
+.field public final ֡:Ll/᩹ۧۨ;
+
+.field public ܰ:J
+
+.field public final synthetic ܿ:Ll/ܺۚۨ;
+
+.field public ᩶:Z
+
+
+# direct methods
+.method public constructor <init>(Ll/ܺۚۨ;J)V
+    .locals 1
+
+    .line 280
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/֫ۚۨ;->ܿ:Ll/ܺۚۨ;
+
+    .line 276
+    new-instance v0, Ll/᩹ۧۨ;
+
+    iget-object p1, p1, Ll/ܺۚۨ;->ۤ:Ll/ۧۧۨ;
+
+    invoke-interface {p1}, Ll/ۜۧۨ;->ۧ()Ll/᩷᩻ۨ;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ll/᩹ۧۨ;-><init>(Ll/᩷᩻ۨ;)V
+
+    iput-object v0, p0, Ll/֫ۚۨ;->֡:Ll/᩹ۧۨ;
+
+    .line 281
+    iput-wide p2, p0, Ll/֫ۚۨ;->ܰ:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۢۚۨ;Ll/ۘ֨ۨ;Ll/᩹᩹ۨ;Ll/ۖ᩹ۨ;)V
-    .locals 8
+.method public final close()V
+    .locals 5
 
-    .line 18
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->֨ۙ()Z
+    .line 305
+    iget-boolean v0, p0, Ll/֫ۚۨ;->᩶:Z
 
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    .line 54
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->values()Ljava/lang/Iterable;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const v1, 0x1000001
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll/ۤ֨ۨ;
-
-    .line 55
-    invoke-interface {v2}, Ll/ۤ֨ۨ;->᩺ۙ()I
-
-    move-result v2
-
-    add-int/lit8 v3, v1, 0x1
-
-    if-eq v2, v1, :cond_0
-
-    .line 22
-    invoke-super {p0, p1, p2, p3, p4}, Ll/ۨ᩹ۨ;->ۙ(Ll/ۢۚۨ;Ll/ۘ֨ۨ;Ll/᩹᩹ۨ;Ll/ۖ᩹ۨ;)V
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    move v1, v3
+    const/4 v0, 0x1
 
-    goto :goto_0
+    .line 306
+    iput-boolean v0, p0, Ll/֫ۚۨ;->᩶:Z
 
-    .line 63
-    :cond_1
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->values()Ljava/lang/Iterable;
+    .line 307
+    iget-wide v0, p0, Ll/֫ۚۨ;->ܰ:J
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    cmp-long v4, v0, v2
 
-    move-result-object v0
+    if-gtz v4, :cond_1
 
-    const/4 v1, 0x0
+    .line 268
+    iget-object v0, p0, Ll/֫ۚۨ;->֡:Ll/᩹ۧۨ;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ll/᩹ۧۨ;->۫()Ll/᩷᩻ۨ;
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v1
 
-    move-result v3
+    .line 269
+    invoke-virtual {v0}, Ll/᩹ۧۨ;->ۚ()V
 
-    const/4 v4, 0x2
+    .line 270
+    invoke-virtual {v1}, Ll/᩷᩻ۨ;->ۙ()Ll/᩷᩻ۨ;
 
-    const/4 v5, 0x1
+    .line 271
+    invoke-virtual {v1}, Ll/᩷᩻ۨ;->᩷()Ll/᩷᩻ۨ;
 
-    if-eqz v3, :cond_5
+    const/4 v0, 0x3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 309
+    iget-object v1, p0, Ll/֫ۚۨ;->ܿ:Ll/ܺۚۨ;
 
-    move-result-object v3
-
-    check-cast v3, Ll/ۤ֨ۨ;
-
-    .line 64
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->᩸()I
-
-    move-result v6
-
-    if-ne v6, v4, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-ne v6, v5, :cond_3
-
-    .line 68
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->getValue()I
-
-    move-result v3
-
-    invoke-virtual {p3, v3}, Ll/᩹᩹ۨ;->ۙ(I)Ll/᩵֨ۨ;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_6
-
-    .line 69
-    invoke-interface {v3}, Ll/᩵֨ۨ;->getTypeName()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v6, "string"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v3, 0x3
-
-    if-eq v6, v3, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    if-lez v2, :cond_6
-
-    const-string v0, "string-array"
-
-    goto :goto_5
-
-    .line 84
-    :cond_6
-    :goto_2
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->values()Ljava/lang/Iterable;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_a
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll/ۤ֨ۨ;
-
-    .line 85
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->᩸()I
-
-    move-result v6
-
-    if-ne v6, v4, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    if-ne v6, v5, :cond_8
-
-    .line 89
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->getValue()I
-
-    move-result v3
-
-    invoke-virtual {p3, v3}, Ll/᩹᩹ۨ;->ۙ(I)Ll/᩵֨ۨ;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_b
-
-    .line 90
-    invoke-interface {v3}, Ll/᩵֨ۨ;->getTypeName()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v6, "integer"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_9
-
-    goto :goto_4
-
-    .line 96
-    :cond_8
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->᩸()I
-
-    move-result v6
-
-    const/16 v7, 0x10
-
-    if-eq v6, v7, :cond_9
-
-    .line 97
-    invoke-interface {v3}, Ll/ۤ֨ۨ;->᩸()I
-
-    move-result v3
-
-    const/16 v6, 0x11
-
-    if-eq v3, v6, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_a
-    if-lez v2, :cond_b
-
-    const-string v0, "integer-array"
-
-    goto :goto_5
-
-    :cond_b
-    :goto_4
-    const-string v0, "array"
-
-    const/4 v1, 0x1
-
-    .line 35
-    :goto_5
-    invoke-interface {p1, v0}, Ll/ۢۚۨ;->ܰ(Ljava/lang/String;)V
-
-    const-string v2, "name"
-
-    .line 36
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->ۗۙ()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {p1, v2, v3}, Ll/ۢۚۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 37
-    invoke-static {p1, p2, p4}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۢۚۨ;Ll/ۘ֨ۨ;Ll/ۖ᩹ۨ;)V
-
-    .line 38
-    invoke-interface {p2}, Ll/ۘ֨ۨ;->values()Ljava/lang/Iterable;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_6
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p4
-
-    if-eqz p4, :cond_d
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ll/ۤ֨ۨ;
-
-    if-eqz v1, :cond_c
-
-    .line 41
-    invoke-static {p4}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۤ֨ۨ;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_7
-
-    :cond_c
-    const-string v2, "item"
-
-    .line 45
-    :goto_7
-    invoke-interface {p1, v2}, Ll/ۢۚۨ;->ܰ(Ljava/lang/String;)V
-
-    .line 46
-    invoke-static {p3, p4}, Ll/ۜ᩹ۨ;->ۙ(Ll/᩹᩹ۨ;Ll/ۤ֨ۨ;)Ljava/lang/CharSequence;
-
-    move-result-object p4
-
-    invoke-static {p1, p4}, Ll/ۜ᩹ۨ;->ۙ(Ll/ۢۚۨ;Ljava/lang/CharSequence;)V
-
-    .line 47
-    invoke-interface {p1, v2}, Ll/ۢۚۨ;->ۙ(Ljava/lang/String;)V
-
-    goto :goto_6
-
-    .line 49
-    :cond_d
-    invoke-interface {p1, v0}, Ll/ۢۚۨ;->ۙ(Ljava/lang/String;)V
+    iput v0, v1, Ll/ܺۚۨ;->ᩴ:I
 
     return-void
 
-    .line 19
-    :cond_e
-    new-instance p1, Ljava/lang/RuntimeException;
+    .line 307
+    :cond_1
+    new-instance v0, Ljava/net/ProtocolException;
 
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+    const-string v1, "unexpected end of stream"
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    .line 300
+    iget-boolean v0, p0, Ll/֫ۚۨ;->᩶:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 301
+    :cond_0
+    iget-object v0, p0, Ll/֫ۚۨ;->ܿ:Ll/ܺۚۨ;
+
+    iget-object v0, v0, Ll/ܺۚۨ;->ۤ:Ll/ۧۧۨ;
+
+    invoke-interface {v0}, Ll/ۧۧۨ;->flush()V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/֫ۧۨ;J)V
+    .locals 5
+
+    .line 289
+    iget-boolean v0, p0, Ll/֫ۚۨ;->᩶:Z
+
+    if-nez v0, :cond_2
+
+    .line 290
+    invoke-virtual {p1}, Ll/֫ۧۨ;->size()J
+
+    move-result-wide v0
+
+    sget-object v2, Ll/ᩴ۫ۨ;->ۙ:[B
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, p2, v2
+
+    if-ltz v4, :cond_1
+
+    cmp-long v4, v2, v0
+
+    if-gtz v4, :cond_1
+
+    cmp-long v2, v0, p2
+
+    if-ltz v2, :cond_1
+
+    .line 291
+    iget-wide v0, p0, Ll/֫ۚۨ;->ܰ:J
+
+    cmp-long v2, p2, v0
+
+    if-gtz v2, :cond_0
+
+    .line 295
+    iget-object v0, p0, Ll/֫ۚۨ;->ܿ:Ll/ܺۚۨ;
+
+    iget-object v0, v0, Ll/ܺۚۨ;->ۤ:Ll/ۧۧۨ;
+
+    invoke-interface {v0, p1, p2, p3}, Ll/ۜۧۨ;->ۙ(Ll/֫ۧۨ;J)V
+
+    .line 296
+    iget-wide v0, p0, Ll/֫ۚۨ;->ܰ:J
+
+    sub-long/2addr v0, p2
+
+    iput-wide v0, p0, Ll/֫ۚۨ;->ܰ:J
+
+    return-void
+
+    .line 292
+    :cond_0
+    new-instance p1, Ljava/net/ProtocolException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "expected "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ll/֫ۚۨ;->ܰ:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " bytes but received "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    .line 126
+    :cond_1
+    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    .line 289
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final ۧ()Ll/᩷᩻ۨ;
+    .locals 1
+
+    .line 285
+    iget-object v0, p0, Ll/֫ۚۨ;->֡:Ll/᩹ۧۨ;
+
+    return-object v0
 .end method

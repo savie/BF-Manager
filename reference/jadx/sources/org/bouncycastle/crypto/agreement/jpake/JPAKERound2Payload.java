@@ -4,7 +4,7 @@ import com.umeng.analytics.pro.am;
 import java.math.BigInteger;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JPAKERound2Payload {
     public final BigInteger a;
     public final BigInteger[] knowledgeProofForX2s;

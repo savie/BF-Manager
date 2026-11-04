@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.prng;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DigestRandomGenerator implements RandomGenerator {
     public static long CYCLE_COUNT = 10;
     public Digest digest;

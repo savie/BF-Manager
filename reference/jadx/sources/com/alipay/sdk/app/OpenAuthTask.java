@@ -19,7 +19,7 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import l.ConcurrentMapC13783;
+import l.ConcurrentMapC17249;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,7 +30,7 @@ public final class OpenAuthTask {
     public static final int NOT_INSTALLED = 4001;
     public static final int OK = 9000;
     public static final int SYS_ERR = 4000;
-    public static final Map e = new ConcurrentMapC13783();
+    public static final Map e = new ConcurrentMapC17249();
     public static long f = -1;
     public static final int g = 122;
     public final Activity b;
@@ -160,14 +160,14 @@ public final class OpenAuthTask {
                 mapA.put("ts_scheme", String.valueOf(SystemClock.elapsedRealtime()));
                 map2.put("mqpLoc", new JSONObject(mapA).toString());
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "OpenAuthLocEx", th);
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "OpenAuthLocEx", th);
             }
             String strA4 = a(bizType, map2);
             e.put(strA2, this.c);
             try {
                 strA = a(jElapsedRealtime, strA2, bizType, strA4);
             } catch (JSONException e2) {
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.q0, e2);
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.q0, e2);
                 strA = null;
             }
             if (TextUtils.isEmpty(strA)) {
@@ -178,11 +178,11 @@ public final class OpenAuthTask {
             intent2.addFlags(268435456);
             intent2.setPackage(cVarA.a.packageName);
             try {
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.Y, "" + jElapsedRealtime);
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.Y, "" + jElapsedRealtime);
                 com.alipay.sdk.m.w.a.C0028a.a(aVar, strA2);
                 this.b.startActivity(intent2);
             } catch (Throwable th2) {
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "StartWalletEx", th2);
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "StartWalletEx", th2);
             }
             return false;
         } catch (Throwable unused) {

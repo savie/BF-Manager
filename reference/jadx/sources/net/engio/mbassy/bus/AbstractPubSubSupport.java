@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
-import l.C0561;
+import l.C4681;
 import net.engio.mbassy.bus.common.DeadMessage;
 import net.engio.mbassy.bus.common.PubSubSupport;
 import net.engio.mbassy.bus.config.ConfigurationError;
@@ -16,7 +16,7 @@ import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 import net.engio.mbassy.bus.error.PublicationError;
 import net.engio.mbassy.subscription.SubscriptionManager;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AbstractPubSubSupport implements PubSubSupport {
     public static final String ERROR_HANDLER_MSG = "INFO: No error handler has been configured to handle exceptions during publication.\nPublication error handlers can be added by IBusConfiguration.addPublicationErrorHandler()\nFalling back to console logger.";
     public final List errorHandlers;
@@ -47,7 +47,7 @@ public abstract class AbstractPubSubSupport implements PubSubSupport {
     }
 
     public Collection getRegisteredErrorHandlers() {
-        return C0561.unmodifiableCollection(this.errorHandlers);
+        return C4681.unmodifiableCollection(this.errorHandlers);
     }
 
     @Override // net.engio.mbassy.bus.common.PubSubSupport

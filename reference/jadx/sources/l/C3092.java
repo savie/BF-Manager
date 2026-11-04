@@ -1,68 +1,37 @@
 package l;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.util.AttributeSet;
-import android.view.View;
-import android.view.accessibility.AccessibilityManager;
-import android.widget.Checkable;
-import android.widget.CompoundButton;
-import bin.mt.plus.R;
+import android.graphics.drawable.Drawable;
 
-/* JADX INFO: renamed from: l.ۗ۟ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 05VZ */
+/* JADX INFO: renamed from: l.ۗ֫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A7IB */
 /* JADX INFO: loaded from: classes3.dex */
-public class C3092 extends AbstractC16166 {
+public final class C3092 extends AbstractC23230 {
 
-    /* JADX INFO: renamed from: ۢۙ, reason: not valid java name and contains not printable characters */
-    public final C9444 f11680;
-
-    public C3092(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i, 0);
-        this.f11680 = new C9444(this);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C6993.f23530, i, 0);
-        String string = typedArrayObtainStyledAttributes.getString(5);
-        m38260(string == null ? typedArrayObtainStyledAttributes.getString(0) : string);
-        String string2 = typedArrayObtainStyledAttributes.getString(4);
-        m38261(string2 == null ? typedArrayObtainStyledAttributes.getString(1) : string2);
-        m38262(typedArrayObtainStyledAttributes.getBoolean(3, typedArrayObtainStyledAttributes.getBoolean(2, false)));
-        typedArrayObtainStyledAttributes.recycle();
-    }
-
-    public C3092(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C12398.m30832(context, R.attr.MT_Protector, android.R.attr.checkBoxPreferenceStyle));
-    }
-
-    @Override // l.C4751
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo8452(C4170 c4170) {
-        super.mo8452(c4170);
-        m9282(c4170.m11813(android.R.id.checkbox));
-        m38264(c4170.m11813(android.R.id.summary));
-    }
-
-    @Override // l.C4751
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo9283(View view) {
-        super.mo9283(view);
-        if (((AccessibilityManager) m13133().getSystemService("accessibility")).isEnabled()) {
-            m9282(view.findViewById(android.R.id.checkbox));
-            m38264(view.findViewById(android.R.id.summary));
-        }
+    public final AbstractC22484 f10018;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C10549 f10019;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Drawable f10020;
+
+    @Override // l.AbstractC23230
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int mo10066() {
+        return 2;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private void m9282(View view) {
-        boolean z = view instanceof CompoundButton;
-        if (z) {
-            ((CompoundButton) view).setOnCheckedChangeListener(null);
-        }
-        if (view instanceof Checkable) {
-            ((Checkable) view).setChecked(this.f52240);
-        }
-        if (z) {
-            ((CompoundButton) view).setOnCheckedChangeListener(this.f11680);
-        }
+    @Override // l.AbstractC23230
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C3092 mo10067() {
+        return this;
+    }
+
+    public C3092(ActivityC3838 activityC3838, AbstractC22484 abstractC22484) {
+        super(0);
+        this.f10018 = abstractC22484;
+        this.f10019 = abstractC22484.mo31676();
+        this.f10020 = abstractC22484.mo31673(activityC3838);
     }
 }

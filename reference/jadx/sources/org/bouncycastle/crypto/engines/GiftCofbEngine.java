@@ -11,9 +11,9 @@ import org.bouncycastle.util.Bytes;
 import org.bouncycastle.util.encoders.Base32Encoder;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GiftCofbEngine extends AEADBaseEngine {
-    public static final byte[] GIFT_RC = {1, 3, 7, 15, bo.j, 62, Base32Encoder.DEFAULT_PADDING, 59, 55, 47, 30, 60, 57, 51, 39, cb.f77931l, 29, 58, 53, 43, 22, 44, 24, UTF8.S_P3A, PublicSuffixDatabase.EXCEPTION_MARKER, 2, 5, 11, 23, 46, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 56, 49, 35, 6, cb.k, 27, 54, 45, 26};
+    public static final byte[] GIFT_RC = {1, 3, 7, 15, bo.j, 62, Base32Encoder.DEFAULT_PADDING, 59, 55, 47, 30, 60, 57, 51, 39, cb.f82047l, 29, 58, 53, 43, 22, 44, 24, UTF8.S_P3A, PublicSuffixDatabase.EXCEPTION_MARKER, 2, 5, 11, 23, 46, ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB, 56, 49, 35, 6, cb.k, 27, 54, 45, 26};
     public byte[] Y;
     public byte[] input;
     public byte[] k;

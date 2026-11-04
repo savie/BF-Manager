@@ -1,59 +1,81 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.ArrayList;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.֨۠֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R8AK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0984 extends AbstractC17535 {
+/* JADX INFO: renamed from: l.֨ۛܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L1LP */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0984 extends AbstractC9186 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C0279 f4622;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final CharSequence f3577;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final CharSequence f3578;
+
+    public C0984(InterfaceC21646 interfaceC21646, CharSequence charSequence, CharSequence charSequence2, ArrayList arrayList, ArrayList arrayList2) {
+        super(arrayList, arrayList2, interfaceC21646);
+        this.f3578 = charSequence;
+        this.f3577 = charSequence2;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final byte[] f4623;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f4624;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final long f4625;
-
-    public C0984(byte[] bArr, int i, long j, C0279 c0279) {
-        this.f4623 = bArr;
-        this.f4624 = i;
-        this.f4625 = j;
-        this.f4622 = c0279;
-    }
-
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C0984)) {
-            return false;
-        }
-        C0984 c0984 = (C0984) obj;
-        return this.f4624 == c0984.f4624 && this.f4625 == c0984.f4625 && C13638.equals(this.f4623, c0984.f4623) && this.f4622.equals(c0984.f4622);
-    }
-
-    public final int hashCode() {
-        int i = this.f4624 * 31;
-        long j = this.f4625;
-        return this.f4622.hashCode() + ((C13638.hashCode(this.f4623) + ((i + ((int) (j ^ (j >>> 32)))) * 31)) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f4623, Integer.valueOf(this.f4624), Long.valueOf(this.f4625), this.f4622};
-        String[] strArrSplit = "buffer;length;fileOffset;pendingWrite".length() == 0 ? new String[0] : "buffer;length;fileOffset;pendingWrite".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C0984.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
+    public static int m3860(CharSequence charSequence, List list, int i, int i2, boolean z) {
+        InterfaceC6205 interfaceC6205;
+        InterfaceC6205 interfaceC6206;
+        int i3 = 0;
+        while (i3 < i2) {
+            if (z) {
+                int i4 = i + i3;
+                interfaceC6205 = (InterfaceC6205) list.get(i4);
+                interfaceC6206 = (InterfaceC6205) list.get(i4 + 1);
+            } else {
+                int i5 = i - i3;
+                interfaceC6205 = (InterfaceC6205) list.get(i5 - 1);
+                interfaceC6206 = (InterfaceC6205) list.get(i5);
+            }
+            i3++;
+            if (m3861(charSequence, interfaceC6205, interfaceC6206)) {
+                return i3;
             }
         }
-        sb.append("]");
-        return sb.toString();
+        return -1;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m3861(CharSequence charSequence, InterfaceC6205 interfaceC6205, InterfaceC6205 interfaceC6206) {
+        if ((interfaceC6205 instanceof C3967) || (interfaceC6206 instanceof C3967)) {
+            return true;
+        }
+        int iMo12746 = interfaceC6206.mo12746();
+        for (int iMo12745 = interfaceC6205.mo12745(); iMo12745 < iMo12746; iMo12745++) {
+            if (C7569.m20684(charSequence.charAt(iMo12745))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC9186
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo3862(EnumC19563 enumC19563, int i, int i2, C22547 c22547, C22547 c22548) {
+        List list = (List) enumC19563.m45142((Object) this.f29790, (Object) this.f29792);
+        C17359.requireNonNull(list);
+        CharSequence charSequence = (CharSequence) enumC19563.m45142(this.f3578, this.f3577);
+        C17359.requireNonNull(charSequence);
+        int iM45149 = enumC19563.m45149(c22548.f72892, c22548.f72894);
+        int i3 = iM45149 - 1;
+        if (!m3861(charSequence, (InterfaceC6205) list.get(i3), (InterfaceC6205) list.get(iM45149))) {
+            int iM3860 = m3860(charSequence, list, iM45149, i, true);
+            if (iM3860 > 0) {
+                return iM3860;
+            }
+            int iM3861 = m3860(charSequence, list, i3, i2, false);
+            if (iM3861 > 0) {
+                return -iM3861;
+            }
+        }
+        return 0;
     }
 }

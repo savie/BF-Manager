@@ -6,6 +6,6 @@ import com.amazonaws.http.HttpResponse;
 public class SetObjectTaggingResponseHeaderHandler implements HeaderHandler {
     @Override // com.amazonaws.services.s3.internal.HeaderHandler
     /* JADX INFO: renamed from: ۙ */
-    public final void mo463(Object obj, HttpResponse httpResponse) {
+    public final void mo457(Object obj, HttpResponse httpResponse) {
     }
 }

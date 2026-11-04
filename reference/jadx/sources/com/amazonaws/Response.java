@@ -4,14 +4,14 @@ package com.amazonaws;
 public final class Response {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object f116;
+    public final Object f106;
 
     public Response(Object obj) {
-        this.f116 = obj;
+        this.f106 = obj;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object m198() {
-        return this.f116;
+    public final Object m192() {
+        return this.f106;
     }
 }

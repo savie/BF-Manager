@@ -1,61 +1,54 @@
 package l;
 
-import bin.mt.plus.R;
+import java.util.BitSet;
 
-/* JADX INFO: renamed from: l.ᩳۢۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17962 extends AbstractDialogInterfaceOnClickListenerC17341 {
+/* JADX INFO: renamed from: l.ܿ֡ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: ZBH4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17962 {
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC15847 f57452;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f58834 = 0;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f57453;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f58835;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C17962(ViewOnClickListenerC15847 viewOnClickListenerC15847, AbstractActivityC12483 abstractActivityC12483, String str) {
-        super(abstractActivityC12483, -1);
-        this.f57452 = viewOnClickListenerC15847;
-        this.f57453 = str;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C0063 f58836;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final BitSet f58837;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C0063 f58838;
+
+    public C17962(C0063 c0063, BitSet bitSet, boolean z) {
+        this.f58838 = c0063;
+        this.f58837 = bitSet;
+        this.f58836 = new C0063(c0063.size());
+        this.f58835 = z;
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        String lowerCase = m40352().toLowerCase();
-        if (lowerCase.isEmpty()) {
-            m40364();
-            return;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m41915(C17962 c17962, int i) {
+        C20946 c20946M47899 = (C20946) c17962.f58838.m31593(i);
+        BitSet bitSet = c17962.f58837;
+        if (bitSet == null || !bitSet.get(i)) {
+            c20946M47899 = c20946M47899.m47899(c17962.f58834);
+            if (!c17962.f58835) {
+                c17962.f58834 = c20946M47899.m47901() + c17962.f58834;
+            }
         }
-        if (!lowerCase.matches("[a-z0-9^\\-]+")) {
-            m40365(R.string.MT_Protector);
-            return;
+        c17962.f58835 = false;
+        c17962.f58836.m31596(i, (Object) c20946M47899);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C0063 m41914(C17962 c17962) {
+        C0063 c0063 = c17962.f58836;
+        if (c17962.f58838.m46487()) {
+            c0063.mo15005();
         }
-        StringBuilder sb = new StringBuilder();
-        String str = this.f57453;
-        sb.append(str);
-        sb.append("/");
-        sb.append(lowerCase);
-        sb.append("/type-info");
-        String string = sb.toString();
-        ViewOnClickListenerC15847 viewOnClickListenerC15847 = this.f57452;
-        if (viewOnClickListenerC15847.f51287.m21609(string)) {
-            m40365(R.string.MT_Protector);
-            return;
-        }
-        C18597 c18597M21600 = viewOnClickListenerC15847.f51287.m21600(str);
-        int size = c18597M21600.size() + 1;
-        while (c18597M21600.contains(size)) {
-            size++;
-        }
-        try {
-            viewOnClickListenerC15847.f51287.m21576(string, "<?xml version='1.0' encoding='utf-8' ?>\n" + String.format("<type id=\"0x%02x\">\n", Integer.valueOf(size)) + String.format("    <entry id=\"0x%02x%02x0000\" name=\"todo\" />\n", Integer.valueOf(viewOnClickListenerC15847.f51287.m21574(127, str)), Integer.valueOf(size)) + "</type>\n");
-            viewOnClickListenerC15847.m37734();
-            viewOnClickListenerC15847.m37735(string);
-            m40364();
-        } catch (Exception e) {
-            viewOnClickListenerC15847.f51295.m42627((Throwable) e);
-        }
+        return c0063;
     }
 }

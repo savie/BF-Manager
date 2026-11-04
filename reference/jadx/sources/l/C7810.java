@@ -1,136 +1,47 @@
 package l;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.security.GeneralSecurityException;
-import java.security.SecureRandom;
-import java.util.LinkedList;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocket;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.X509TrustManager;
-
-/* JADX INFO: renamed from: l.۟᩻᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1B8U */
+/* JADX INFO: renamed from: l.۟ۢ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: 66UB */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7810 extends SSLSocketFactory {
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static String[] f25703;
+public final class C7810 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public SSLSocketFactory f25704;
+    public final long f26018;
 
-    @Override // javax.net.ssl.SSLSocketFactory
-    public final String[] getDefaultCipherSuites() {
-        return null;
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C10046 f26019;
 
-    @Override // javax.net.ssl.SSLSocketFactory
-    public final String[] getSupportedCipherSuites() {
-        return null;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f26020;
 
-    static {
-        try {
-            SSLSocket sSLSocket = (SSLSocket) SSLSocketFactory.getDefault().createSocket();
-            if (sSLSocket != null) {
-                LinkedList linkedList = new LinkedList();
-                for (String str : sSLSocket.getSupportedProtocols()) {
-                    if (!str.toUpperCase().contains("SSL")) {
-                        linkedList.add(str);
-                    }
-                }
-                f25703 = (String[]) linkedList.toArray(new String[0]);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public volatile long f26021;
 
-    @Override // javax.net.ssl.SSLSocketFactory
-    public final Socket createSocket(Socket socket, String str, int i, boolean z) throws IOException {
-        Socket socketCreateSocket = this.f25704.createSocket(socket, str, i, z);
-        if (socketCreateSocket instanceof SSLSocket) {
-            SSLSocket sSLSocket = (SSLSocket) socketCreateSocket;
-            String[] strArr = f25703;
-            if (strArr != null) {
-                sSLSocket.setEnabledProtocols(strArr);
-            }
-        }
-        return socketCreateSocket;
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f26022;
 
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(String str, int i) throws IOException {
-        Socket socketCreateSocket = this.f25704.createSocket(str, i);
-        if (socketCreateSocket instanceof SSLSocket) {
-            SSLSocket sSLSocket = (SSLSocket) socketCreateSocket;
-            String[] strArr = f25703;
-            if (strArr != null) {
-                sSLSocket.setEnabledProtocols(strArr);
-            }
-        }
-        return socketCreateSocket;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f26023;
 
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(String str, int i, InetAddress inetAddress, int i2) throws IOException {
-        Socket socketCreateSocket = this.f25704.createSocket(str, i, inetAddress, i2);
-        if (socketCreateSocket instanceof SSLSocket) {
-            SSLSocket sSLSocket = (SSLSocket) socketCreateSocket;
-            String[] strArr = f25703;
-            if (strArr != null) {
-                sSLSocket.setEnabledProtocols(strArr);
-            }
-        }
-        return socketCreateSocket;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f26024;
 
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(InetAddress inetAddress, int i) throws IOException {
-        Socket socketCreateSocket = this.f25704.createSocket(inetAddress, i);
-        if (socketCreateSocket instanceof SSLSocket) {
-            SSLSocket sSLSocket = (SSLSocket) socketCreateSocket;
-            String[] strArr = f25703;
-            if (strArr != null) {
-                sSLSocket.setEnabledProtocols(strArr);
-            }
-        }
-        return socketCreateSocket;
-    }
-
-    @Override // javax.net.SocketFactory
-    public final Socket createSocket(InetAddress inetAddress, int i, InetAddress inetAddress2, int i2) throws IOException {
-        Socket socketCreateSocket = this.f25704.createSocket(inetAddress, i, inetAddress2, i2);
-        if (socketCreateSocket instanceof SSLSocket) {
-            SSLSocket sSLSocket = (SSLSocket) socketCreateSocket;
-            String[] strArr = f25703;
-            if (strArr != null) {
-                sSLSocket.setEnabledProtocols(strArr);
-            }
-        }
-        return socketCreateSocket;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final boolean f26025;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C2256 m20502() {
-        C10633 c10633 = new C10633();
-        C2256 c2256 = new C2256();
-        try {
-            C7810 c7810 = new C7810();
-            try {
-                SSLContext sSLContext = SSLContext.getInstance("TLS");
-                sSLContext.init(null, new X509TrustManager[]{c10633}, new SecureRandom());
-                c7810.f25704 = sSLContext.getSocketFactory();
-                c2256.m6927(c7810, c10633);
-                return c2256;
-            } catch (GeneralSecurityException unused) {
-                throw new AssertionError();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    public final long m21282() {
+        return this.f26021;
+    }
+
+    public C7810(C10046 c10046, long j, long j2, int i, int i2, int i3, boolean z) {
+        this.f26019 = c10046;
+        this.f26020 = j;
+        this.f26021 = j2;
+        this.f26024 = i;
+        this.f26023 = i2;
+        this.f26022 = i3;
+        this.f26025 = z;
+        this.f26018 = C5311.m15947(i, i3, z);
     }
 }

@@ -2,7 +2,7 @@ package net.sf.sevenzipjbinding;
 
 import java.io.PrintStream;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IOutArchiveBase {
     PrintStream getTracePrintStream();
 

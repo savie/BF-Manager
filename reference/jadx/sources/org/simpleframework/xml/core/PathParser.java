@@ -3,8 +3,8 @@ package org.simpleframework.xml.core;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l.C1679;
-import l.C1694;
+import l.C12669;
+import l.C20196;
 import org.simpleframework.xml.strategy.Type;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.Style;
@@ -118,7 +118,7 @@ public class PathParser implements Expression {
 
     public String getAttributePath(String str, String str2) {
         String attribute = this.style.getAttribute(str2);
-        return isEmpty(str) ? attribute : C1679.m5594(str, "/@", attribute);
+        return isEmpty(str) ? attribute : C20196.m46451(str, "/@", attribute);
     }
 
     @Override // java.lang.Iterable
@@ -277,9 +277,9 @@ public class PathParser implements Expression {
     }
 
     private void index() throws PathException {
-        int iM5620;
+        int iM31436;
         if (this.data[this.off - 1] == '[') {
-            iM5620 = 0;
+            iM31436 = 0;
             while (true) {
                 int i = this.off;
                 if (i >= this.count) {
@@ -291,11 +291,11 @@ public class PathParser implements Expression {
                 if (!isDigit(c)) {
                     break;
                 } else {
-                    iM5620 = C1694.m5620(iM5620, 10, c, -48);
+                    iM31436 = C12669.m31436(iM31436, 10, c, -48);
                 }
             }
         } else {
-            iM5620 = 0;
+            iM31436 = 0;
         }
         char[] cArr2 = this.data;
         int i2 = this.off;
@@ -303,7 +303,7 @@ public class PathParser implements Expression {
         if (cArr2[i2 - 1] != ']') {
             throw new PathException("Invalid index for path '%s' in %s", this.path, this.type);
         }
-        this.indexes.add(Integer.valueOf(iM5620));
+        this.indexes.add(Integer.valueOf(iM31436));
     }
 
     private void truncate() {

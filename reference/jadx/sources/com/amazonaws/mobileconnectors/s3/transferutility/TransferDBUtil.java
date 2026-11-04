@@ -12,79 +12,79 @@ import com.google.android.material.motion.MotionUtils;
 import com.umeng.analytics.pro.aq;
 import java.io.File;
 import java.util.ArrayList;
-import l.C16523;
-import l.C6044;
+import l.C14442;
+import l.C24522;
 
 /* JADX INFO: loaded from: classes.dex */
 public class TransferDBUtil {
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static TransferDBBase f289;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static TransferDBBase f279;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Log f290 = LogFactory.m302(TransferDBUtil.class);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final Log f280 = LogFactory.m296(TransferDBUtil.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Object f288 = new Object();
+    public static final Object f278 = new Object();
 
     public TransferDBUtil(Context context) {
-        new C6044();
-        synchronized (f288) {
-            if (f289 == null) {
-                f289 = new TransferDBBase(context);
+        new C24522();
+        synchronized (f278) {
+            if (f279 == null) {
+                f279 = new TransferDBBase(context);
             }
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m362(TransferRecord transferRecord) {
+    public static int m355(TransferRecord transferRecord) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(aq.d, Integer.valueOf(transferRecord.f328));
-        contentValues.put("state", transferRecord.f325.toString());
-        contentValues.put("bytes_total", Long.valueOf(transferRecord.f319));
-        contentValues.put("bytes_current", Long.valueOf(transferRecord.f322));
-        return f289.m357(m368(transferRecord.f328), contentValues, null, null);
+        contentValues.put(aq.d, Integer.valueOf(transferRecord.f322));
+        contentValues.put("state", transferRecord.f296.toString());
+        contentValues.put("bytes_total", Long.valueOf(transferRecord.f306));
+        contentValues.put("bytes_current", Long.valueOf(transferRecord.f320));
+        return f279.m351(m360(transferRecord.f322), contentValues, null, null);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m366(int i, long j) {
+    public static void m359(int i, long j) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("bytes_current", Long.valueOf(j));
-        f289.m357(m368(i), contentValues, null, null);
+        f279.m351(m360(i), contentValues, null, null);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m361(int i, TransferState transferState) {
+    public static int m354(int i, TransferState transferState) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("state", transferState.toString());
         if (TransferState.FAILED.equals(transferState)) {
-            return f289.m357(m368(i), contentValues, "state not in (?,?,?,?,?) ", new String[]{TransferState.COMPLETED.toString(), TransferState.PENDING_NETWORK_DISCONNECT.toString(), TransferState.PAUSED.toString(), TransferState.CANCELED.toString(), TransferState.WAITING_FOR_NETWORK.toString()});
+            return f279.m351(m360(i), contentValues, "state not in (?,?,?,?,?) ", new String[]{TransferState.COMPLETED.toString(), TransferState.PENDING_NETWORK_DISCONNECT.toString(), TransferState.PAUSED.toString(), TransferState.CANCELED.toString(), TransferState.WAITING_FOR_NETWORK.toString()});
         }
-        return f289.m357(m368(i), contentValues, null, null);
+        return f279.m351(m360(i), contentValues, null, null);
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m369(int i, String str) {
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m361(int i, String str) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("multipart_id", str);
-        f289.m357(m368(i), contentValues, null, null);
+        f279.m351(m360(i), contentValues, null, null);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m371(int i, String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m365(int i, String str) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("etag", str);
-        f289.m357(m368(i), contentValues, null, null);
+        f279.m351(m360(i), contentValues, null, null);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Cursor m363(TransferType transferType, TransferState[] transferStateArr) {
+    public static Cursor m356(TransferType transferType, TransferState[] transferStateArr) {
         String string;
-        String strM38890;
+        String strM34865;
         String[] strArr;
         int length = transferStateArr.length;
         if (length <= 0) {
-            f290.mo292("Cannot create a string of 0 or less placeholders.");
+            f280.mo285("Cannot create a string of 0 or less placeholders.");
             string = null;
         } else {
             StringBuilder sb = new StringBuilder((length * 2) - 1);
@@ -96,43 +96,43 @@ public class TransferDBUtil {
         }
         int i2 = 0;
         if (transferType == TransferType.ANY) {
-            strM38890 = C16523.m38890("state in (", string, MotionUtils.EASING_TYPE_FORMAT_END);
+            strM34865 = C14442.m34865("state in (", string, MotionUtils.EASING_TYPE_FORMAT_END);
             strArr = new String[length];
             while (i2 < length) {
                 strArr[i2] = transferStateArr[i2].toString();
                 i2++;
             }
         } else {
-            String strM38891 = C16523.m38890("state in (", string, ") and type=?");
+            String strM34866 = C14442.m34865("state in (", string, ") and type=?");
             String[] strArr2 = new String[length + 1];
             while (i2 < length) {
                 strArr2[i2] = transferStateArr[i2].toString();
                 i2++;
             }
             strArr2[i2] = transferType.toString();
-            strM38890 = strM38891;
+            strM34865 = strM34866;
             strArr = strArr2;
         }
-        TransferDBBase transferDBBase = f289;
-        return transferDBBase.m358(transferDBBase.m359(), strM38890, strArr);
+        TransferDBBase transferDBBase = f279;
+        return transferDBBase.m352(transferDBBase.m353(), strM34865, strArr);
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static TransferRecord m360(int i) throws Throwable {
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static TransferRecord m366(int i) throws Throwable {
         Cursor cursor = null;
         TransferRecord transferRecord = null;
         try {
-            Cursor cursorM358 = f289.m358(m368(i), null, null);
+            Cursor cursorM352 = f279.m352(m360(i), null, null);
             try {
-                if (cursorM358.moveToFirst()) {
+                if (cursorM352.moveToFirst()) {
                     transferRecord = new TransferRecord(i);
-                    transferRecord.m383(cursorM358);
+                    transferRecord.m377(cursorM352);
                 }
-                cursorM358.close();
+                cursorM352.close();
                 return transferRecord;
             } catch (Throwable th) {
                 th = th;
-                cursor = cursorM358;
+                cursor = cursorM352;
                 if (cursor != null) {
                     cursor.close();
                 }
@@ -143,90 +143,90 @@ public class TransferDBUtil {
         }
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static long m367(int i) {
-        Cursor cursorM358 = null;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static long m363(int i) {
+        Cursor cursorM352 = null;
         try {
-            cursorM358 = f289.m358(m370(i), null, null);
+            cursorM352 = f279.m352(m364(i), null, null);
             long j = 0;
-            while (cursorM358.moveToNext()) {
-                if (TransferState.PART_COMPLETED.equals(TransferState.m388(cursorM358.getString(cursorM358.getColumnIndexOrThrow("state"))))) {
-                    j += cursorM358.getLong(cursorM358.getColumnIndexOrThrow("bytes_total"));
+            while (cursorM352.moveToNext()) {
+                if (TransferState.PART_COMPLETED.equals(TransferState.m382(cursorM352.getString(cursorM352.getColumnIndexOrThrow("state"))))) {
+                    j += cursorM352.getLong(cursorM352.getColumnIndexOrThrow("bytes_total"));
                 }
             }
-            cursorM358.close();
+            cursorM352.close();
             return j;
         } catch (Throwable th) {
-            if (cursorM358 != null) {
-                cursorM358.close();
+            if (cursorM352 != null) {
+                cursorM352.close();
             }
             throw th;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m365(int i) {
-        f289.m356(m368(i));
+    public static void m358(int i) {
+        f279.m350(m360(i));
     }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static ArrayList m372(int i) {
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static ArrayList m362(int i) {
         ArrayList arrayList = new ArrayList();
-        Cursor cursorM358 = null;
+        Cursor cursorM352 = null;
         try {
-            cursorM358 = f289.m358(m370(i), null, null);
-            while (cursorM358.moveToNext()) {
-                arrayList.add(new PartETag(cursorM358.getInt(cursorM358.getColumnIndexOrThrow("part_num")), cursorM358.getString(cursorM358.getColumnIndexOrThrow("etag"))));
+            cursorM352 = f279.m352(m364(i), null, null);
+            while (cursorM352.moveToNext()) {
+                arrayList.add(new PartETag(cursorM352.getInt(cursorM352.getColumnIndexOrThrow("part_num")), cursorM352.getString(cursorM352.getColumnIndexOrThrow("etag"))));
             }
-            cursorM358.close();
+            cursorM352.close();
             return arrayList;
         } catch (Throwable th) {
-            if (cursorM358 != null) {
-                cursorM358.close();
+            if (cursorM352 != null) {
+                cursorM352.close();
             }
             throw th;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static ArrayList m364(int i, String str) {
+    public static ArrayList m357(int i, String str) {
         ArrayList arrayList = new ArrayList();
-        Cursor cursorM358 = null;
+        Cursor cursorM352 = null;
         try {
-            cursorM358 = f289.m358(m370(i), null, null);
-            while (cursorM358.moveToNext()) {
-                if (!TransferState.PART_COMPLETED.equals(TransferState.m388(cursorM358.getString(cursorM358.getColumnIndexOrThrow("state"))))) {
+            cursorM352 = f279.m352(m364(i), null, null);
+            while (cursorM352.moveToNext()) {
+                if (!TransferState.PART_COMPLETED.equals(TransferState.m382(cursorM352.getString(cursorM352.getColumnIndexOrThrow("state"))))) {
                     UploadPartRequest uploadPartRequest = new UploadPartRequest();
-                    uploadPartRequest.m676(cursorM358.getInt(cursorM358.getColumnIndexOrThrow(aq.d)));
-                    cursorM358.getInt(cursorM358.getColumnIndexOrThrow("main_upload_id"));
-                    uploadPartRequest.m680(cursorM358.getString(cursorM358.getColumnIndexOrThrow("bucket_name")));
-                    uploadPartRequest.m687(cursorM358.getString(cursorM358.getColumnIndexOrThrow("key")));
-                    uploadPartRequest.m684(str);
-                    uploadPartRequest.m678(new File(cursorM358.getString(cursorM358.getColumnIndexOrThrow("file"))));
-                    uploadPartRequest.m677(cursorM358.getLong(cursorM358.getColumnIndexOrThrow("file_offset")));
-                    uploadPartRequest.m683(cursorM358.getInt(cursorM358.getColumnIndexOrThrow("part_num")));
-                    uploadPartRequest.m686(cursorM358.getLong(cursorM358.getColumnIndexOrThrow("bytes_total")));
-                    cursorM358.getInt(cursorM358.getColumnIndexOrThrow("is_last_part"));
+                    uploadPartRequest.m670(cursorM352.getInt(cursorM352.getColumnIndexOrThrow(aq.d)));
+                    cursorM352.getInt(cursorM352.getColumnIndexOrThrow("main_upload_id"));
+                    uploadPartRequest.m674(cursorM352.getString(cursorM352.getColumnIndexOrThrow("bucket_name")));
+                    uploadPartRequest.m684(cursorM352.getString(cursorM352.getColumnIndexOrThrow("key")));
+                    uploadPartRequest.m678(str);
+                    uploadPartRequest.m672(new File(cursorM352.getString(cursorM352.getColumnIndexOrThrow("file"))));
+                    uploadPartRequest.m671(cursorM352.getLong(cursorM352.getColumnIndexOrThrow("file_offset")));
+                    uploadPartRequest.m677(cursorM352.getInt(cursorM352.getColumnIndexOrThrow("part_num")));
+                    uploadPartRequest.m683(cursorM352.getLong(cursorM352.getColumnIndexOrThrow("bytes_total")));
+                    cursorM352.getInt(cursorM352.getColumnIndexOrThrow("is_last_part"));
                     arrayList.add(uploadPartRequest);
                 }
             }
-            cursorM358.close();
+            cursorM352.close();
             return arrayList;
         } catch (Throwable th) {
-            if (cursorM358 != null) {
-                cursorM358.close();
+            if (cursorM352 != null) {
+                cursorM352.close();
             }
             throw th;
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static Uri m368(int i) {
-        return Uri.parse(f289.m359() + "/" + i);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static Uri m360(int i) {
+        return Uri.parse(f279.m353() + "/" + i);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static Uri m370(int i) {
-        return Uri.parse(f289.m359() + "/part/" + i);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Uri m364(int i) {
+        return Uri.parse(f279.m353() + "/part/" + i);
     }
 }

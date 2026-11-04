@@ -1,34 +1,8 @@
-.class public final Ll/۫ܺ᩸;
-.super Ll/֡ܺ᩸;
-.source "95O9"
-
-
-# instance fields
-.field public final ۖ:I
-
-.field public final ۨ:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩸᩶᩸;ILjava/lang/Object;)V
-    .locals 0
-
-    .line 12
-    invoke-direct {p0, p1}, Ll/֡ܺ᩸;-><init>(Ll/᩸᩶᩸;)V
-
-    .line 13
-    iput p2, p0, Ll/۫ܺ᩸;->ۖ:I
-
-    .line 14
-    iput-object p3, p0, Ll/۫ܺ᩸;->ۨ:Ljava/lang/Object;
-
-    return-void
-.end method
+.class public interface abstract Ll/۫ܺ᩸;
+.super Ljava/lang/Object;
+.source "K1X4"
 
 
 # virtual methods
-.method public final ۙ(Ll/ۛܽ;)V
-    .locals 0
-
-    return-void
+.method public abstract call()Ljava/lang/Object;
 .end method

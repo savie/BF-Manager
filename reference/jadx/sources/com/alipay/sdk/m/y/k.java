@@ -23,8 +23,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import l.C1679;
-import l.C17114;
+import l.C20196;
+import l.C2458;
 import org.json.JSONObject;
 
 /* JADX INFO: compiled from: N673 */
@@ -57,7 +57,7 @@ public class k {
                 try {
                     this.a.notify();
                 } catch (Throwable th) {
-                    com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "BSAResultEx", th);
+                    com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "BSAResultEx", th);
                 }
             }
         }
@@ -76,7 +76,7 @@ public class k {
             if (k.this.f == null || k.this.f.h()) {
                 return;
             }
-            com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.e0, "");
+            com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.e0, "");
             if (com.alipay.sdk.m.o.b.i().y()) {
                 k.this.f.b(true);
                 this.a.a(com.alipay.sdk.m.l.b.a());
@@ -101,20 +101,20 @@ public class k {
                     k.this.a.startActivity(this.a);
                     return;
                 }
-                com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.c0, "");
+                com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.c0, "");
                 Context contextB = k.this.f.b();
                 if (contextB != null) {
                     contextB.startActivity(this.a);
                 }
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.d0, th);
+                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.d0, th);
                 q.a("alipaySdk", com.alipay.sdk.m.n.b.q, k.this.a, k.this.f);
                 synchronized (this.b) {
                     try {
                         k.this.h = k.k;
                         this.b.notify();
                     } catch (Throwable th2) {
-                        com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "BSAResultEx", th2);
+                        com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "BSAResultEx", th2);
                     }
                 }
             }
@@ -163,18 +163,18 @@ public class k {
                 bundle.putInt("CallingPid", i);
                 intent.putExtras(bundle);
             } catch (Exception e) {
-                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.Z, e);
+                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.Z, e);
             }
             intent.setClassName(str, str2);
             try {
                 ActivityManager.RunningAppProcessInfo runningAppProcessInfo = new ActivityManager.RunningAppProcessInfo();
                 ActivityManager.getMyMemoryState(runningAppProcessInfo);
-                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "isFg", runningAppProcessInfo.processName + "|" + runningAppProcessInfo.importance + "|");
+                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "isFg", runningAppProcessInfo.processName + "|" + runningAppProcessInfo.importance + "|");
             } catch (Throwable unused) {
             }
             try {
                 if (k.this.a == null) {
-                    com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.a0, "");
+                    com.alipay.sdk.m.m.a.b(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.a0, "");
                     Context contextB = k.this.f.b();
                     if (contextB != null) {
                         contextB.startActivity(intent);
@@ -184,9 +184,9 @@ public class k {
                 }
                 long jElapsedRealtime = SystemClock.elapsedRealtime();
                 k.this.a.startActivity(intent);
-                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "stAct2", "" + (SystemClock.elapsedRealtime() - jElapsedRealtime));
+                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "stAct2", "" + (SystemClock.elapsedRealtime() - jElapsedRealtime));
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.b0, th);
+                com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.b0, th);
                 throw th;
             }
         }
@@ -203,7 +203,7 @@ public class k {
 
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "srvCon");
+            com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "srvCon");
             synchronized (k.this.c) {
                 k.this.b = IAlixPay.Stub.asInterface(iBinder);
                 k.this.c.notify();
@@ -212,7 +212,7 @@ public class k {
 
         @Override // android.content.ServiceConnection
         public void onServiceDisconnected(ComponentName componentName) {
-            com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f77909l, "srvDis");
+            com.alipay.sdk.m.m.a.a(k.this.f, com.alipay.sdk.m.m.b.f82025l, "srvDis");
             k.this.b = null;
         }
 
@@ -286,7 +286,7 @@ public class k {
                     }
                 } catch (Throwable th2) {
                     th = th2;
-                    com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.N, th);
+                    com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.N, th);
                 }
                 boolean zB = q.b(this.f);
                 if ((z || this.g) && !zB && a(strB, this.a, this.f)) {
@@ -320,7 +320,7 @@ public class k {
         try {
             this.a.startActivity(intent);
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.g0, th);
+            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.g0, th);
         }
         Thread.sleep(200L);
     }
@@ -328,7 +328,7 @@ public class k {
     public final String a(String str, String str2, PackageInfo packageInfo) {
         String str3 = packageInfo != null ? packageInfo.versionName : "";
         g.d(com.alipay.sdk.m.n.a.B, "pay payInvokeAct");
-        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.X, C1679.m5594(str2, "|", str3));
+        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.X, C20196.m46451(str2, "|", str3));
         Activity activity = this.a;
         com.alipay.sdk.m.w.a aVar = this.f;
         com.alipay.sdk.m.m.a.a(activity, aVar, str, aVar.d);
@@ -354,7 +354,7 @@ public class k {
                 } catch (Throwable unused) {
                 }
             }
-            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BindSkipByL");
+            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BindSkipByL");
             str3 = j;
         } else {
             if (cVar != null) {
@@ -369,11 +369,11 @@ public class k {
             str3 = (String) pairA.first;
             try {
                 if (j.equals(str3) && ((Boolean) pairA.second).booleanValue() && com.alipay.sdk.m.o.b.i().p()) {
-                    com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BindRetry");
+                    com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BindRetry");
                     str3 = (String) a(str, str2, this.f).first;
                 }
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BindRetryEx", th);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BindRetryEx", th);
             }
         }
         g.d(com.alipay.sdk.m.n.a.B, "pay bind result: " + str3);
@@ -387,7 +387,7 @@ public class k {
                 m.b(aVar3, aVar3.b(), i, "true");
             }
             if (!"com.eg.android.AlipayGphone".equals(str2)) {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSPNotStartByAlipay", str2 + "|" + i2);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSPNotStartByAlipay", str2 + "|" + i2);
                 return str3;
             }
             if (i2 >= 460 && !zContains && (activity = this.a) != null && a(str2, activity, this.f)) {
@@ -412,28 +412,28 @@ public class k {
         intent.setPackage(str2);
         intent.setAction(q.c(str2));
         long jElapsedRealtime = SystemClock.elapsedRealtime();
-        StringBuilder sbM39970 = C17114.m39970("", "|", jElapsedRealtime);
-        sbM39970.append(str != null ? str.length() : 0);
-        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.R, sbM39970.toString());
+        StringBuilder sbM8289 = C2458.m8289("", "|", jElapsedRealtime);
+        sbM8289.append(str != null ? str.length() : 0);
+        com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.R, sbM8289.toString());
         com.alipay.sdk.m.m.a.a(this.a, aVar, str, aVar.d);
         try {
             try {
                 if (com.alipay.sdk.m.o.b.i().h()) {
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "stSrv", "skipped");
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "stSrv", "skipped");
                 } else {
                     ComponentName componentNameStartService = this.a.getApplication().startService(intent);
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "stSrv", componentNameStartService != null ? componentNameStartService.getPackageName() : "null");
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "stSrv", componentNameStartService != null ? componentNameStartService.getPackageName() : "null");
                 }
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.J, th);
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.J, th);
                 q.a("alipaySdk", com.alipay.sdk.m.n.b.n, this.a, this.f);
                 return new Pair(j, Boolean.TRUE);
             }
         } catch (Throwable th2) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.K, th2);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.K, th2);
         }
         if (com.alipay.sdk.m.o.b.i().c()) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "bindFlg", "imp");
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "bindFlg", "imp");
             i2 = 65;
         } else {
             i2 = 1;
@@ -441,7 +441,7 @@ public class k {
         boolean zB = com.alipay.sdk.m.o.b.i().b();
         if (Build.VERSION.SDK_INT >= 34 && zB) {
             i2 |= 512;
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "bindFlg", "allow");
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "bindFlg", "allow");
         }
         a aVar2 = null;
         e eVar2 = new e(this, aVar2);
@@ -453,14 +453,14 @@ public class k {
                 try {
                     this.c.wait(com.alipay.sdk.m.o.b.i().l());
                 } catch (InterruptedException e2) {
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.L, e2);
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.L, e2);
                 }
             }
         }
         IAlixPay iAlixPay = this.b;
         try {
             if (iAlixPay == null) {
-                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.E, "");
+                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.E, "");
                 q.a("alipaySdk", com.alipay.sdk.m.n.b.o, this.a, this.f);
                 Pair pair = new Pair(j, Boolean.TRUE);
                 try {
@@ -468,7 +468,7 @@ public class k {
                 } catch (Throwable th3) {
                     g.a(th3);
                 }
-                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
+                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
                 com.alipay.sdk.m.m.a.a(this.a, aVar, str, aVar.d);
                 this.b = null;
                 if (this.d && (activity4 = this.a) != null) {
@@ -478,7 +478,7 @@ public class k {
                 return pair;
             }
             long jElapsedRealtime2 = SystemClock.elapsedRealtime();
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.S, "" + jElapsedRealtime2);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.S, "" + jElapsedRealtime2);
             f fVar = this.e;
             if (fVar != null) {
                 fVar.b();
@@ -502,9 +502,9 @@ public class k {
                 }
                 long jElapsedRealtime3 = SystemClock.elapsedRealtime();
                 try {
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.U, "" + jElapsedRealtime3);
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.U, "" + jElapsedRealtime3);
                     if (version >= 3) {
-                        iAlixPay.r03(com.alipay.sdk.m.m.b.f77909l, "bind_pay", null);
+                        iAlixPay.r03(com.alipay.sdk.m.m.b.f82025l, "bind_pay", null);
                     }
                     try {
                         if (version >= 2) {
@@ -520,7 +520,7 @@ public class k {
                     } catch (Throwable th5) {
                         com.alipay.sdk.m.w.a aVar3 = this.f;
                         if (aVar3 != null && !aVar3.j()) {
-                            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.H, th5);
+                            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.H, th5);
                             q.a("alipaySdk", com.alipay.sdk.m.n.b.p, this.a, this.f);
                             if (com.alipay.sdk.m.o.b.i().w()) {
                                 Pair pair2 = new Pair(j, Boolean.FALSE);
@@ -534,7 +534,7 @@ public class k {
                                 } catch (Throwable th7) {
                                     g.a(th7);
                                 }
-                                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
+                                com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
                                 com.alipay.sdk.m.m.a.a(this.a, aVar, str, aVar.d);
                                 this.b = null;
                                 if (this.d && (activity2 = this.a) != null) {
@@ -562,7 +562,7 @@ public class k {
                     } catch (Throwable th10) {
                         g.a(th10);
                     }
-                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
+                    com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
                     com.alipay.sdk.m.m.a.a(this.a, aVar, str, aVar.d);
                     this.b = null;
                     if (this.d && (activity3 = this.a) != null) {
@@ -584,7 +584,7 @@ public class k {
             dVar = null;
         }
         try {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.E, th, "in_bind");
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.E, th, "in_bind");
             return new Pair(j, Boolean.TRUE);
         } finally {
             if (dVar != null) {
@@ -599,7 +599,7 @@ public class k {
             } catch (Throwable th15) {
                 g.a(th15);
             }
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.T, "" + SystemClock.elapsedRealtime());
             com.alipay.sdk.m.m.a.a(this.a, aVar, str, aVar.d);
             this.b = null;
             if (this.d && (activity = this.a) != null) {
@@ -616,7 +616,7 @@ public class k {
         Object obj = new Object();
         String strA = q.a(32);
         long jElapsedRealtime = SystemClock.elapsedRealtime();
-        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSAStart", strA + "|" + jElapsedRealtime);
+        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSAStart", strA + "|" + jElapsedRealtime);
         com.alipay.sdk.m.w.a.C0028a.a(this.f, strA);
         a aVar = new a(obj);
         APayEntranceActivity.h.put(strA, aVar);
@@ -626,14 +626,14 @@ public class k {
             jSONObject = new JSONObject(mapA);
         } catch (Throwable th) {
             try {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSALocEx", th);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSALocEx", th);
                 jSONObject = null;
             } catch (InterruptedException e2) {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSAWaiting", e2);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSAWaiting", e2);
                 com.alipay.sdk.m.l.c cVar = com.alipay.sdk.m.l.c.PAY_WAITTING;
                 return com.alipay.sdk.m.l.b.a(cVar.c(), cVar.b(), "");
             } catch (Throwable th2) {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSAEx", th2);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSAEx", th2);
                 q.a("alipaySdk", com.alipay.sdk.m.n.b.q, this.a, this.f);
                 return k;
             }
@@ -657,14 +657,14 @@ public class k {
                 if (activity2 != null) {
                     activity2.startActivity(intent);
                 } else {
-                    com.alipay.sdk.m.m.a.b(this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.a0, "");
+                    com.alipay.sdk.m.m.a.b(this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.a0, "");
                     Context contextB = this.f.b();
                     if (contextB != null) {
                         contextB.startActivity(intent);
                     }
                 }
             } catch (Throwable th3) {
-                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.b0, th3);
+                com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.b0, th3);
                 throw th3;
             }
         }
@@ -679,13 +679,13 @@ public class k {
             }
         } catch (Throwable th4) {
             str3 = "unknown";
-            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSAStatEx", th4);
+            com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSAStatEx", th4);
         }
-        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSADone-" + str3);
+        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSADone-" + str3);
         if (!TextUtils.isEmpty(str4)) {
             return str4;
         }
-        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f77909l, "BSAEmpty");
+        com.alipay.sdk.m.m.a.a(this.f, com.alipay.sdk.m.m.b.f82025l, "BSAEmpty");
         return k;
     }
 
@@ -701,10 +701,10 @@ public class k {
             if (intent.resolveActivityInfo(context.getPackageManager(), 0) != null) {
                 return true;
             }
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "BSADetectFail");
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "BSADetectFail");
             return false;
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f77909l, "BSADetectFail", th);
+            com.alipay.sdk.m.m.a.a(aVar, com.alipay.sdk.m.m.b.f82025l, "BSADetectFail", th);
             return false;
         }
     }

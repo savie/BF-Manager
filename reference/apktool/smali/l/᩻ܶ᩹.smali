@@ -1,93 +1,28 @@
-.class public final synthetic Ll/᩻ܶ᩹;
+.class public interface abstract Ll/᩻ܶ᩹;
 .super Ljava/lang/Object;
-.source "PAJ1"
+.source "WBNS"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/᩶ܺ᩹;
+.implements Ljava/util/function/IntUnaryOperator;
 
 
-# instance fields
-.field public final synthetic ܺ:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, Ll/᩻ܶ᩹;->ܺ:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract get(Ljava/lang/Object;)Ljava/lang/Character;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget v0, p0, Ll/᩻ܶ᩹;->ܺ:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 7
-    check-cast p1, Ll/ۧ᩷۟;
-
-    .line 750
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    return-object p1
-
-    .line 0
-    :pswitch_0
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
-
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$JiIKre9Uej6UnWFHZZbq-mzMVvg(Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/TonalPalette;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Ll/ܿ۬ۨ;
-
-    invoke-static {p1}, Ll/᩸᩻᩹;->ۙ(Ll/ܿ۬ۨ;)Ll/᩸᩻᩹;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract ۙ(CC)C
 .end method
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public abstract ۙ(C)Z
+.end method
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract ᩷(C)C
 .end method

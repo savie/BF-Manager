@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes;
 
-import l.C2271;
+import l.C14442;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.StreamBlockCipher;
@@ -160,7 +160,7 @@ public class CFBBlockCipher extends StreamBlockCipher implements CFBModeCipher {
         super(blockCipher);
         this.cipher = null;
         if (i > blockCipher.getBlockSize() * 8 || i < 8 || i % 8 != 0) {
-            throw new IllegalArgumentException(C2271.m6966(i, "CFB", " not supported"));
+            throw new IllegalArgumentException(C14442.m34864(i, "CFB", " not supported"));
         }
         this.cipher = blockCipher;
         this.blockSize = i / 8;

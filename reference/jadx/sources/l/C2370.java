@@ -1,238 +1,457 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖۜ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: T9Q9 */
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.util.AttributeSet;
+import android.util.Xml;
+import java.io.IOException;
+import java.util.ArrayList;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+/* JADX INFO: renamed from: l.ۖۖ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 560O */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2370 extends AbstractC18245 implements InterfaceC18266 {
-    public static final long serialVersionUID = 0;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC6271 f8374;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final C2370 f8375;
+public final class C2370 extends AbstractC21936 implements Animatable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public volatile Object f8376;
+    public Animator.AnimatorListener f7629;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public C0959 f8377;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final Drawable.Callback f7630;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f8378;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public ArrayList f7631;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public int f8379;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public Context f7632;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public byte f8380;
+    public C0879 f7633;
 
-    static {
-        C3844.m11171(EnumC13018.PUBLIC, C2370.class.getName());
-        f8375 = new C2370();
-        f8374 = new C13661();
-    }
-
-    public C2370(C11544 c11544, int i) {
-        super(c11544);
-        this.f8376 = "";
-        this.f8379 = 0;
-        this.f8380 = (byte) -1;
+    public C2370(Context context, int i) {
+        this.f7629 = null;
+        this.f7631 = null;
+        this.f7630 = new C18778(this);
+        this.f7632 = context;
+        this.f7633 = new C0879();
     }
 
     public C2370() {
-        this.f8376 = "";
-        this.f8379 = 0;
-        this.f8380 = (byte) -1;
-        this.f8376 = "";
+        this(null, 0);
     }
 
-    @Override // l.AbstractC18245
-    public final C6956 internalGetFieldAccessorTable() {
-        C6956 c6956 = C14097.f46285;
-        c6956.m18696(C2370.class, C11544.class);
-        return c6956;
+    @Override // android.graphics.drawable.Drawable
+    public final Drawable mutate() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.mutate();
+        }
+        return this;
     }
 
-    public final boolean hasName() {
-        return (this.f8378 & 1) != 0;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C2370 m8053(Context context, int i) {
+        int next;
+        if (Build.VERSION.SDK_INT >= 24) {
+            C2370 c2370 = new C2370(context, 0);
+            Drawable drawableM24392 = C9217.m24392(context.getResources(), i, context.getTheme());
+            c2370.f70810 = drawableM24392;
+            drawableM24392.setCallback(c2370.f7630);
+            new C9081(c2370.f70810.getConstantState());
+            return c2370;
+        }
+        try {
+            XmlResourceParser xml = context.getResources().getXml(i);
+            AttributeSet attributeSetAsAttributeSet = Xml.asAttributeSet(xml);
+            do {
+                next = xml.next();
+                if (next == 2) {
+                    break;
+                }
+            } while (next != 1);
+            if (next != 2) {
+                throw new XmlPullParserException("No start tag found");
+            }
+            return m8054(context, context.getResources(), xml, attributeSetAsAttributeSet, context.getTheme());
+        } catch (IOException | XmlPullParserException unused) {
+            return null;
+        }
     }
 
-    public final String getName() {
-        Object obj = this.f8376;
-        if (obj instanceof String) {
-            return (String) obj;
-        }
-        AbstractC23725 abstractC23725 = (AbstractC23725) obj;
-        String strM52260 = abstractC23725.m52260();
-        if (abstractC23725.mo16494()) {
-            this.f8376 = strM52260;
-        }
-        return strM52260;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C2370 m8054(Context context, Resources resources, XmlResourceParser xmlResourceParser, AttributeSet attributeSet, Resources.Theme theme) throws Throwable {
+        C2370 c2370 = new C2370(context, 0);
+        c2370.inflate(resources, xmlResourceParser, attributeSet, theme);
+        return c2370;
     }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final boolean m7221() {
-        return (this.f8378 & 2) != 0;
+    @Override // android.graphics.drawable.Drawable
+    public final Drawable.ConstantState getConstantState() {
+        if (this.f70810 == null || Build.VERSION.SDK_INT < 24) {
+            return null;
+        }
+        return new C9081(this.f70810.getConstantState());
     }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final int m7222() {
-        return this.f8379;
+    @Override // android.graphics.drawable.Drawable
+    public final int getChangingConfigurations() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.getChangingConfigurations();
+        }
+        int changingConfigurations = super.getChangingConfigurations();
+        this.f7633.getClass();
+        return changingConfigurations;
     }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m7223() {
-        return (this.f8378 & 4) != 0;
+    @Override // android.graphics.drawable.Drawable
+    public final void draw(Canvas canvas) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.draw(canvas);
+            return;
+        }
+        C0879 c0879 = this.f7633;
+        c0879.f3272.draw(canvas);
+        if (c0879.f3269.isStarted()) {
+            invalidateSelf();
+        }
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final C0959 m7220() {
-        C0959 c0959 = this.f8377;
-        return c0959 == null ? C0959.getDefaultInstance() : c0959;
+    @Override // android.graphics.drawable.Drawable
+    public final void onBoundsChange(Rect rect) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.setBounds(rect);
+        } else {
+            this.f7633.f3272.setBounds(rect);
+        }
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC15445
-    public final boolean isInitialized() {
-        byte b = this.f8380;
-        if (b == 1) {
-            return true;
+    @Override // android.graphics.drawable.Drawable
+    public final boolean onStateChange(int[] iArr) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.setState(iArr);
         }
-        if (b == 0) {
-            return false;
-        }
-        if (m7223() && !m7220().isInitialized()) {
-            this.f8380 = (byte) 0;
-            return false;
-        }
-        this.f8380 = (byte) 1;
-        return true;
+        return this.f7633.f3272.setState(iArr);
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final void writeTo(AbstractC22044 abstractC22044) {
-        if ((this.f8378 & 1) != 0) {
-            AbstractC18245.m42405(abstractC22044, 1, this.f8376);
+    @Override // l.AbstractC21936, android.graphics.drawable.Drawable
+    public final boolean onLevelChange(int i) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.setLevel(i);
         }
-        if ((this.f8378 & 2) != 0) {
-            abstractC22044.mo14252(2, this.f8379);
-        }
-        if ((this.f8378 & 4) != 0) {
-            abstractC22044.mo14254(3, m7220());
-        }
-        getUnknownFields().writeTo(abstractC22044);
+        return this.f7633.f3272.setLevel(i);
     }
 
-    @Override // l.AbstractC18245, l.AbstractC23019, l.InterfaceC23206
-    public final int getSerializedSize() {
-        int i = this.memoizedSize;
-        if (i != -1) {
-            return i;
+    @Override // android.graphics.drawable.Drawable
+    public final int getAlpha() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.getAlpha();
         }
-        int iM42390 = (this.f8378 & 1) != 0 ? AbstractC18245.m42390(1, this.f8376) : 0;
-        if ((this.f8378 & 2) != 0) {
-            iM42390 += AbstractC22044.m48974(2, this.f8379);
-        }
-        if ((this.f8378 & 4) != 0) {
-            iM42390 += AbstractC22044.m48963(3, m7220());
-        }
-        int serializedSize = getUnknownFields().getSerializedSize() + iM42390;
-        this.memoizedSize = serializedSize;
-        return serializedSize;
+        return this.f7633.f3272.getAlpha();
     }
 
-    @Override // l.AbstractC23019
-    public final boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+    @Override // android.graphics.drawable.Drawable
+    public final void setAlpha(int i) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.setAlpha(i);
+        } else {
+            this.f7633.f3272.setAlpha(i);
         }
-        if (!(obj instanceof C2370)) {
-            return super.equals(obj);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setColorFilter(ColorFilter colorFilter) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.setColorFilter(colorFilter);
+        } else {
+            this.f7633.f3272.setColorFilter(colorFilter);
         }
-        C2370 c2370 = (C2370) obj;
-        if (hasName() != c2370.hasName()) {
-            return false;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final ColorFilter getColorFilter() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return C0597.m2696(drawable);
         }
-        if ((hasName() && !getName().equals(c2370.getName())) || m7221() != c2370.m7221()) {
-            return false;
+        return this.f7633.f3272.getColorFilter();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setTint(int i) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            C0597.m2700(drawable, i);
+        } else {
+            this.f7633.f3272.setTint(i);
         }
-        if ((!m7221() || this.f8379 == c2370.f8379) && m7223() == c2370.m7223()) {
-            return (!m7223() || m7220().equals(c2370.m7220())) && getUnknownFields().equals(c2370.getUnknownFields());
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setTintList(ColorStateList colorStateList) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            C0597.m2690(drawable, colorStateList);
+        } else {
+            this.f7633.f3272.setTintList(colorStateList);
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setTintMode(PorterDuff.Mode mode) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            C0597.m2693(drawable, mode);
+        } else {
+            this.f7633.f3272.setTintMode(mode);
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final boolean setVisible(boolean z, boolean z2) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.setVisible(z, z2);
+        }
+        this.f7633.f3272.setVisible(z, z2);
+        return super.setVisible(z, z2);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final boolean isStateful() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.isStateful();
+        }
+        return this.f7633.f3272.isStateful();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getOpacity() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.getOpacity();
+        }
+        return this.f7633.f3272.getOpacity();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getIntrinsicWidth() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.getIntrinsicWidth();
+        }
+        return this.f7633.f3272.getIntrinsicWidth();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final int getIntrinsicHeight() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.getIntrinsicHeight();
+        }
+        return this.f7633.f3272.getIntrinsicHeight();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final boolean isAutoMirrored() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return drawable.isAutoMirrored();
+        }
+        return this.f7633.f3272.isAutoMirrored();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void setAutoMirrored(boolean z) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            drawable.setAutoMirrored(z);
+        } else {
+            this.f7633.f3272.setAutoMirrored(z);
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void inflate(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) throws Throwable {
+        C0879 c0879;
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            C0597.m2692(drawable, resources, xmlPullParser, attributeSet, theme);
+            return;
+        }
+        int eventType = xmlPullParser.getEventType();
+        int depth = xmlPullParser.getDepth() + 1;
+        while (true) {
+            c0879 = this.f7633;
+            if (eventType == 1 || (xmlPullParser.getDepth() < depth && eventType == 3)) {
+                break;
+            }
+            if (eventType == 2) {
+                String name = xmlPullParser.getName();
+                if ("animated-vector".equals(name)) {
+                    TypedArray typedArrayM8387 = C2506.m8387(resources, theme, attributeSet, C18032.f59037);
+                    int resourceId = typedArrayM8387.getResourceId(0, 0);
+                    if (resourceId != 0) {
+                        C24920 c24920M55517 = C24920.m55517(resources, resourceId, theme);
+                        c24920M55517.m55521();
+                        c24920M55517.setCallback(this.f7630);
+                        C24920 c24920 = c0879.f3272;
+                        if (c24920 != null) {
+                            c24920.setCallback(null);
+                        }
+                        c0879.f3272 = c24920M55517;
+                    }
+                    typedArrayM8387.recycle();
+                } else if ("target".equals(name)) {
+                    TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, C18032.f59044);
+                    String string = typedArrayObtainAttributes.getString(0);
+                    int resourceId2 = typedArrayObtainAttributes.getResourceId(1, 0);
+                    if (resourceId2 != 0) {
+                        Context context = this.f7632;
+                        if (context != null) {
+                            Animator animatorM19057 = C6845.m19057(context, resourceId2);
+                            animatorM19057.setTarget(c0879.f3272.m55520(string));
+                            if (c0879.f3271 == null) {
+                                c0879.f3271 = new ArrayList();
+                                c0879.f3270 = new C14307();
+                            }
+                            c0879.f3271.add(animatorM19057);
+                            c0879.f3270.put(animatorM19057, string);
+                        } else {
+                            typedArrayObtainAttributes.recycle();
+                            throw new IllegalStateException("Context can't be null when inflating animators");
+                        }
+                    }
+                    typedArrayObtainAttributes.recycle();
+                } else {
+                    continue;
+                }
+            }
+            eventType = xmlPullParser.next();
+        }
+        if (c0879.f3269 == null) {
+            c0879.f3269 = new AnimatorSet();
+        }
+        c0879.f3269.playTogether(c0879.f3271);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final void inflate(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet) throws Throwable {
+        inflate(resources, xmlPullParser, attributeSet, null);
+    }
+
+    @Override // l.AbstractC21936, android.graphics.drawable.Drawable
+    public final void applyTheme(Resources.Theme theme) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            C0597.m2691(drawable, theme);
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public final boolean canApplyTheme() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return C0597.m2694(drawable);
         }
         return false;
     }
 
-    @Override // l.AbstractC23019
-    public final int hashCode() {
-        int i = this.memoizedHashCode;
-        if (i != 0) {
-            return i;
+    @Override // android.graphics.drawable.Animatable
+    public final boolean isRunning() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            return ((AnimatedVectorDrawable) drawable).isRunning();
         }
-        int iHashCode = C14097.f46312.hashCode() + 779;
-        if (hasName()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 1, 53) + getName().hashCode();
+        return this.f7633.f3269.isRunning();
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public final void start() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            ((AnimatedVectorDrawable) drawable).start();
+            return;
         }
-        if (m7221()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 2, 53) + this.f8379;
+        C0879 c0879 = this.f7633;
+        if (c0879.f3269.isStarted()) {
+            return;
         }
-        if (m7223()) {
-            iHashCode = C17922.m41614(iHashCode, 37, 3, 53) + m7220().hashCode();
+        c0879.f3269.start();
+        invalidateSelf();
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public final void stop() {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            ((AnimatedVectorDrawable) drawable).stop();
+        } else {
+            this.f7633.f3269.end();
         }
-        int iHashCode2 = getUnknownFields().hashCode() + (iHashCode * 29);
-        this.memoizedHashCode = iHashCode2;
-        return iHashCode2;
     }
 
-    public static C11544 newBuilder() {
-        return f8375.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC6977 newBuilderForType() {
-        return f8375.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final InterfaceC22500 newBuilderForType() {
-        return f8375.toBuilder();
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC23206
-    public final C11544 toBuilder() {
-        int i = 0;
-        if (this == f8375) {
-            return new C11544(i);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m8055(AbstractC7591 abstractC7591) {
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            ((AnimatedVectorDrawable) drawable).registerAnimationCallback(abstractC7591.getPlatformCallback());
+            return;
         }
-        C11544 c11544 = new C11544(i);
-        c11544.m28725(this);
-        return c11544;
+        if (abstractC7591 == null) {
+            return;
+        }
+        if (this.f7631 == null) {
+            this.f7631 = new ArrayList();
+        }
+        if (this.f7631.contains(abstractC7591)) {
+            return;
+        }
+        this.f7631.add(abstractC7591);
+        if (this.f7629 == null) {
+            this.f7629 = new C9827(this);
+        }
+        this.f7633.f3269.addListener(this.f7629);
     }
 
-    @Override // l.AbstractC23019
-    public final InterfaceC22500 newBuilderForType(InterfaceC6790 interfaceC6790) {
-        return new C11544(interfaceC6790, 0);
-    }
-
-    public static C2370 getDefaultInstance() {
-        return f8375;
-    }
-
-    public static InterfaceC6271 parser() {
-        return f8374;
-    }
-
-    @Override // l.AbstractC18245, l.InterfaceC23206
-    public final InterfaceC6271 getParserForType() {
-        return f8374;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC1332 getDefaultInstanceForType() {
-        return f8375;
-    }
-
-    @Override // l.AbstractC23019, l.InterfaceC15445, l.InterfaceC18266
-    public final InterfaceC23206 getDefaultInstanceForType() {
-        return f8375;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m8056(AbstractC7591 abstractC7591) {
+        Animator.AnimatorListener animatorListener;
+        Drawable drawable = this.f70810;
+        if (drawable != null) {
+            ((AnimatedVectorDrawable) drawable).unregisterAnimationCallback(abstractC7591.getPlatformCallback());
+        }
+        ArrayList arrayList = this.f7631;
+        if (arrayList == null || abstractC7591 == null) {
+            return;
+        }
+        arrayList.remove(abstractC7591);
+        if (this.f7631.size() != 0 || (animatorListener = this.f7629) == null) {
+            return;
+        }
+        this.f7633.f3269.removeListener(animatorListener);
+        this.f7629 = null;
     }
 }

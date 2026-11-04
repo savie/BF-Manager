@@ -1,51 +1,40 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.ܺۛܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5ZF */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15753 extends AbstractC0477 {
+/* JADX INFO: renamed from: l.ܶ֨᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: T57T */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C15753 implements Function {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final PriorityQueue f51060;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f51224;
 
-    public C15753(Iterable iterable, final Comparator comparator) {
-        this.f51060 = new PriorityQueue(2, new Comparator() { // from class: l.۟ۛܶ
-            @Override // java.util.Comparator
-            public final int compare(Object obj, Object obj2) {
-                C20691 c20691 = (C20691) obj;
-                C20691 c20692 = (C20691) obj2;
-                return AbstractC13116.m32469().mo4145(((C19986) c20691.f67291).peek(), ((C19986) c20692.f67291).peek(), comparator).mo4143(c20691.f67290, c20692.f67290).mo4142();
-            }
-        });
-        Iterator it = iterable.iterator();
-        int i = 0;
-        while (it.hasNext()) {
-            Iterator it2 = (Iterator) it.next();
-            if (it2.hasNext()) {
-                this.f51060.add(new C20691(C16458.m38722(it2), i));
-                i++;
-            }
-        }
+    public /* synthetic */ C15753(int i) {
+        this.f51224 = i;
     }
 
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        return !this.f51060.isEmpty();
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        PriorityQueue priorityQueue = this.f51060;
-        C20691 c20691 = (C20691) priorityQueue.remove();
-        C19986 c19986 = (C19986) c20691.f67291;
-        Object next = c19986.next();
-        if (c19986.hasNext()) {
-            priorityQueue.add(c20691);
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f51224) {
+            case 0:
+                return new ArrayDeque();
+            case 1:
+                return ((C14764) obj).f48286;
+            default:
+                return ((C12510) obj).f40168.f38067;
         }
-        return next;
     }
 }

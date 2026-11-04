@@ -11,12 +11,12 @@ import bin.mt.plugin.api.ui.builder.PluginTextViewBuilder;
 import bin.mt.plugin.api.util.ThreadUtil;
 import bin.mt.plugin.api.util.UIUpdater;
 import bin.mt.plugin.api.util.UIUpdaterGroup;
-import l.C12686;
-import l.C1359;
-import l.C13638;
-import l.C18280;
-import l.C21778;
-import l.RunnableC20410;
+import l.C13809;
+import l.C17359;
+import l.C17365;
+import l.C18136;
+import l.C8742;
+import l.RunnableC23313;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ProgressDialog extends BaseCancelableDialog {
@@ -37,12 +37,12 @@ public class ProgressDialog extends BaseCancelableDialog {
         PluginProgressBar pluginProgressBar = (PluginProgressBar) pluginViewBuild.requireViewById("progressBar");
         this.progressBar = pluginProgressBar;
         UIUpdaterGroup uIUpdaterGroup = new UIUpdaterGroup();
-        C13638.requireNonNull(pluginDialogCreate);
-        this.titleUpdater = uIUpdaterGroup.registerUpdater(new C1359(5, pluginDialogCreate));
-        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C12686(5, this));
-        C13638.requireNonNull(pluginProgressBar);
-        this.progressUpdater = uIUpdaterGroup.registerUpdater(new C21778(6, pluginProgressBar));
-        this.secondaryProgressUpdater = uIUpdaterGroup.registerUpdater(new C18280(7, pluginProgressBar));
+        C17359.requireNonNull(pluginDialogCreate);
+        this.titleUpdater = uIUpdaterGroup.registerUpdater(new C17365(pluginDialogCreate));
+        this.messageUpdater = uIUpdaterGroup.registerUpdater(new C8742(this));
+        C17359.requireNonNull(pluginProgressBar);
+        this.progressUpdater = uIUpdaterGroup.registerUpdater(new C18136(pluginProgressBar));
+        this.secondaryProgressUpdater = uIUpdaterGroup.registerUpdater(new C13809(4, pluginProgressBar));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -141,7 +141,7 @@ public class ProgressDialog extends BaseCancelableDialog {
 
     @Override // bin.mt.plugin.api.ui.dialog.BaseCancelableDialog
     public void dismiss() {
-        ThreadUtil.runOnUiThread(new RunnableC20410(4, this));
+        ThreadUtil.runOnUiThread(new RunnableC23313(1, this));
     }
 
     /* JADX INFO: Access modifiers changed from: private */

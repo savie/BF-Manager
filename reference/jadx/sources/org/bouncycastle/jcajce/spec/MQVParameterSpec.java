@@ -6,7 +6,7 @@ import java.security.PublicKey;
 import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MQVParameterSpec implements AlgorithmParameterSpec {
     public final PrivateKey ephemeralPrivateKey;
     public final PublicKey ephemeralPublicKey;

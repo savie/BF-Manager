@@ -1,49 +1,46 @@
-.class public final enum Ll/ۡ۫᩸;
-.super Ll/۟۫᩸;
-.source "K608"
+.class public final Ll/ۡ۫᩸;
+.super Ljava/lang/Object;
+.source "K5R1"
+
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/᩸ۚ᩸;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ll/᩸ۚ᩸;)V
+    .locals 0
 
-    const-string v0, "R_parents"
+    .line 155
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ۡ۫᩸;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 163
-    invoke-direct {p0, p1, p2, v0}, Ll/۟۫᩸;-><init>(Ljava/lang/String;II)V
+    iput-object p1, p0, Ll/ۡ۫᩸;->ۙ:Ll/᩸ۚ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ll/ܺ۫᩸;)Ljava/util/Set;
+.method public final onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
 
-    .line 166
-    iget-object p1, p1, Ll/ܺ۫᩸;->᩹:Ljava/util/Set;
-
-    return-object p1
+    return-void
 .end method
 
-.method public ۙ(Ll/ܺ۫᩸;Ljava/util/Set;)V
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 0
 
-    .line 171
-    iput-object p2, p1, Ll/ܺ۫᩸;->᩹:Ljava/util/Set;
+    .line 158
+    iget-object p1, p0, Ll/ۡ۫᩸;->ۙ:Ll/᩸ۚ᩸;
+
+    iget-object p1, p1, Ll/᩸ۚ᩸;->᩸᩷:Ll/ۚۖܶ;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Ll/ܳۖܶ;->ۙ(Z)V
 
     return-void
 .end method

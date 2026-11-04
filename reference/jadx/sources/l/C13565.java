@@ -1,46 +1,48 @@
 package l;
 
-import java.util.Iterator;
-import java.util.Locale;
-
-/* JADX INFO: renamed from: l.ܰۘۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B4S2 */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.۬ۗۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 28SI */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C13565 {
 
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final C13565 f43062 = new C13565(-1, -1, -1);
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5097 f44751;
+    public final int f43063;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C20889 f44752;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f43064;
 
-    public C13565(C5097 c5097, C20889 c20889) {
-        this.f44751 = c5097;
-        this.f44752 = c20889;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f43065;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f43066;
+
+    public C13565(int i, int i2, int i3) {
+        this.f43066 = i;
+        this.f43065 = i2;
+        this.f43064 = i3;
+        this.f43063 = C7116.m19494(i3) ? C7116.m19495(i3) * i2 : -1;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m33158() {
-        return this.f44751.f17761;
+    public final String toString() {
+        return "AudioFormat[sampleRate=" + this.f43066 + ", channelCount=" + this.f43065 + ", encoding=" + this.f43064 + ']';
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C20889 m33159(String str) {
-        Locale locale = Locale.ROOT;
-        String lowerCase = str.toLowerCase(locale);
-        boolean zStartsWith = lowerCase.startsWith(".");
-        C5097 c5097 = this.f44751;
-        C20889 c20889 = this.f44752;
-        if (zStartsWith) {
-            Iterator it = c20889.m46965().iterator();
-            while (it.hasNext()) {
-                if (lowerCase.equals(((String) it.next()).toLowerCase(Locale.ROOT))) {
-                    return c20889;
-                }
-            }
-            return C5097.m14192(c5097, lowerCase);
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
         }
-        String strM46958 = c20889.m46958();
-        return (strM46958 == null || !lowerCase.equals(strM46958.toLowerCase(locale))) ? C5097.m14198(c5097, lowerCase) : c20889;
+        if (!(obj instanceof C13565)) {
+            return false;
+        }
+        C13565 c13565 = (C13565) obj;
+        return this.f43066 == c13565.f43066 && this.f43065 == c13565.f43065 && this.f43064 == c13565.f43064;
+    }
+
+    public final int hashCode() {
+        return C17359.hash(Integer.valueOf(this.f43066), Integer.valueOf(this.f43065), Integer.valueOf(this.f43064));
     }
 }

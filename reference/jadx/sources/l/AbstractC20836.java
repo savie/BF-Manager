@@ -1,9 +1,9 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ۧܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y2OD */
+/* JADX INFO: renamed from: l.᩵᩷ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E3KD */
 /* JADX INFO: loaded from: classes5.dex */
-public abstract class AbstractC20836 extends AbstractC0374 {
-    /* JADX INFO: renamed from: ۨ */
-    public abstract InterfaceC12225 mo37809();
+public abstract class AbstractC20836 {
+    /* JADX INFO: renamed from: ۙ */
+    public abstract Object mo24413(Object obj);
 }

@@ -1,83 +1,114 @@
-.class public final synthetic Ll/ᩴ֫ۤ;
+.class public interface abstract Ll/ᩴ֫ۤ;
 .super Ljava/lang/Object;
-.source "8459"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.source "K1QR"
 
 
-# instance fields
-.field public final synthetic ܺ:Ll/ܺ᩵ۤ;
+# static fields
+.field public static final ۙ:[Ll/ᩴ֫ۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܺ᩵ۤ;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xe
 
-    iput-object p1, p0, Ll/ᩴ֫ۤ;->ܺ:Ll/ܺ᩵ۤ;
+    new-array v0, v0, [Ll/ᩴ֫ۤ;
+
+    .line 4
+    sget-object v1, Ll/ܳ֫ۤ;->᩷:Ll/ܳ֫ۤ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۫֫ۤ;->᩷:Ll/۫֫ۤ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۚ֫ۤ;->᩷:Ll/ۚ֫ۤ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/֫֫ۤ;->᩷:Ll/֫֫ۤ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۧ֫ۤ;->᩷:Ll/ۧ֫ۤ;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/᩻֫ۤ;->᩷:Ll/᩻֫ۤ;
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۜۚۤ;->᩷:Ll/ۜۚۤ;
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۬ۚۤ;->᩷:Ll/۬ۚۤ;
+
+    const/4 v2, 0x7
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/۠ۚۤ;->᩷:Ll/۠ۚۤ;
+
+    const/16 v2, 0x8
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢۚۤ;->᩷:Ll/ۢۚۤ;
+
+    const/16 v2, 0x9
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۙ֫ۤ;->᩷:Ll/ۙ֫ۤ;
+
+    const/16 v2, 0xa
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/᩷֫ۤ;->᩷:Ll/᩷֫ۤ;
+
+    const/16 v2, 0xb
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۤ֫ۤ;->᩷:Ll/ۤ֫ۤ;
+
+    const/16 v2, 0xc
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/᩸֫ۤ;->᩷:Ll/᩸֫ۤ;
+
+    const/16 v2, 0xd
+
+    aput-object v1, v0, v2
+
+    sput-object v0, Ll/ᩴ֫ۤ;->ۙ:[Ll/ᩴ֫ۤ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic and(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$and(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract ۙ()I
 .end method
 
-.method public synthetic negate()Ljava/util/function/Predicate;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ll/۠᩻ᩴ;->$default$negate(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic or(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۠᩻ᩴ;->$default$or(Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 2
-    check-cast p1, Ll/ۜۡ۟;
-
-    .line 2258
-    iget-object p1, p1, Ll/ۜۡ۟;->ۧ:Ll/ۧ᩷۟;
-
-    iget-object v0, p0, Ll/ᩴ֫ۤ;->ܺ:Ll/ܺ᩵ۤ;
-
-    iget-object v0, v0, Ll/᩻᩵ۤ;->ܿ:Ll/ۧ᩷۟;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract ۙ(I[B)I
 .end method

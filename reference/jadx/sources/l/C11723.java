@@ -1,26 +1,22 @@
 package l;
 
-import java.util.AbstractList;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۨ۬ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R537 */
+/* JADX INFO: renamed from: l.ۧܺۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z2S3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C11723 extends AbstractList {
+public final class C11723 implements Iterable {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6783 f39410;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C16944 f37930;
 
-    public C11723(C6783 c6783) {
-        this.f39410 = c6783;
+    public C11723(C16944 c16944) {
+        this.f37930 = c16944;
     }
 
-    @Override // java.util.AbstractList, java.util.List
-    public final Object get(int i) {
-        return this.f39410.m10939(i);
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final int size() {
-        return this.f39410.size();
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        C16944 c16944 = this.f37930;
+        return C7676.m20910(((C2796) c16944.mo20398()).iterator(), ((C2796) c16944.mo20401()).iterator());
     }
 }

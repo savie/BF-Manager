@@ -1,30 +1,24 @@
 package l;
 
-import java.lang.reflect.Type;
-
-/* JADX INFO: renamed from: l.ۜܰܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: GAW5 */
+/* JADX INFO: renamed from: l.ۜ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: P55W */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6807 implements InterfaceC11747, InterfaceC7950 {
+public final class C6807 extends AbstractC24817 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6807 f22956 = new C6807();
+    public final /* synthetic */ C13056 f22670;
 
-    @Override // l.InterfaceC11747
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1396(C23473 c23473, Object obj, Object obj2, Type type) {
-        String str = (String) obj;
-        C13158 c13158 = c23473.f76006;
-        if (str == null) {
-            c13158.m32530();
-        } else {
-            c13158.m32531(str);
-        }
+    public C6807(C13056 c13056) {
+        this.f22670 = c13056;
     }
 
-    @Override // l.InterfaceC7950
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1395(C14265 c14265, Type type, Object obj) {
-        return c14265.m34394();
+    @Override // l.AbstractC24817
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC16501 mo18987() {
+        C8298 c8298 = this.f22670.f41783;
+        if (c8298 != null) {
+            return c8298.m36147();
+        }
+        return null;
     }
 }

@@ -1,92 +1,59 @@
 package l;
 
-import android.net.Uri;
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.۠᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 474M */
+/* JADX INFO: renamed from: l.۠ۚ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21XP */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8417 implements InterfaceC15785 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC15785 f29178;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f29179;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f29180;
+public final /* synthetic */ class C8417 implements Function {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC7317 f29181;
+    public final /* synthetic */ int f27573;
 
-    public C8417(InterfaceC15785 interfaceC15785, InterfaceC7317 interfaceC7317) {
-        this.f29178 = interfaceC15785;
-        interfaceC7317.getClass();
-        this.f29181 = interfaceC7317;
+    public /* synthetic */ C8417(int i) {
+        this.f27573 = i;
     }
 
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo9272(C12257 c12257) {
-        long jMo9272 = this.f29178.mo9272(c12257);
-        this.f29179 = jMo9272;
-        if (jMo9272 == 0) {
-            return 0L;
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f27573) {
+            case 0:
+                int i = C6926.f22930;
+                return C14584.m35193((String) obj, new String[0]);
+            case 1:
+                InterfaceC2386 interfaceC2386 = (InterfaceC2386) obj;
+                int i2 = C20876.f66820;
+                if (!interfaceC2386.isDirectory()) {
+                    return interfaceC2386.getPath();
+                }
+                return interfaceC2386.getPath() + "/";
+            case 2:
+                return MaterialDynamicColors.lambda$secondary$68((DynamicScheme) obj);
+            case 3:
+                return ((DynamicScheme) obj).primaryPalette;
+            case 4:
+                return MaterialDynamicColors.lambda$outlineVariant$45((DynamicScheme) obj);
+            case 5:
+                Map.Entry entry = (Map.Entry) obj;
+                return C1170.stream((Set) entry.getValue()).map(new C3144(1, ((EnumC17315) entry.getKey()).name()));
+            default:
+                return new ArrayList(1);
         }
-        if (c12257.f41017 == -1 && jMo9272 != -1) {
-            c12257 = c12257.m30476(0L, jMo9272);
-        }
-        this.f29180 = true;
-        this.f29181.mo19523(c12257);
-        return this.f29179;
-    }
-
-    @Override // l.InterfaceC6942
-    public final int read(byte[] bArr, int i, int i2) {
-        if (this.f29179 == 0) {
-            return -1;
-        }
-        int i3 = this.f29178.read(bArr, i, i2);
-        if (i3 > 0) {
-            this.f29181.write(bArr, i, i3);
-            long j = this.f29179;
-            if (j != -1) {
-                this.f29179 = j - ((long) i3);
-            }
-        }
-        return i3;
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۚ */
-    public final Uri mo9274() {
-        return this.f29178.mo9274();
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final Map mo9273() {
-        return this.f29178.mo9273();
-    }
-
-    @Override // l.InterfaceC15785
-    public final void close() {
-        InterfaceC7317 interfaceC7317 = this.f29181;
-        try {
-            this.f29178.close();
-        } finally {
-            if (this.f29180) {
-                this.f29180 = false;
-                interfaceC7317.close();
-            }
-        }
-    }
-
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo11161(InterfaceC19706 interfaceC19706) {
-        interfaceC19706.getClass();
-        this.f29178.mo11161(interfaceC19706);
     }
 }

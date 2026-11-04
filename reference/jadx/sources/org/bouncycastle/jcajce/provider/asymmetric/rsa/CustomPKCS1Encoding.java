@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Properties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CustomPKCS1Encoding implements AsymmetricBlockCipher {
     public static final int HEADER_LENGTH = 10;
     public byte[] blockBuffer;

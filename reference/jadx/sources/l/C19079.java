@@ -1,21 +1,41 @@
 package l;
 
-import android.content.Context;
-import android.util.AttributeSet;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ᩴ᩺᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: 84GU */
-/* JADX INFO: loaded from: classes5.dex */
-public class C19079 extends C13115 {
-    public C19079(Context context, AttributeSet attributeSet, int i, int i2) {
-        super(context, attributeSet, i, i2);
+/* JADX INFO: renamed from: l.ᩳ۫ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y9IP */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C19079 implements Iterator {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C10128 f61793;
+
+    public C19079(C10128 c10128) {
+        this.f61793 = c10128;
     }
 
-    @Override // l.C13115, l.AbstractC5498
-    public final void onLayoutChildren(C21726 c21726, C16082 c16082) {
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
         try {
-            super.onLayoutChildren(c21726, c16082);
-        } catch (IndexOutOfBoundsException unused) {
+            return this.f61793.available() > 0;
+        } catch (IOException unused) {
+            return false;
         }
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        try {
+            return this.f61793.readObject();
+        } catch (Exception e) {
+            throw new NoSuchElementException(e.getMessage());
+        }
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException("Remove not supported on ASN.1 InputStream iterator");
     }
 }

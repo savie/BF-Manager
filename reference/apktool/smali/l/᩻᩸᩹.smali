@@ -1,36 +1,38 @@
-.class public final synthetic Ll/᩻᩸᩹;
-.super Ljava/lang/Object;
-.source "J26J"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/ۜᩳ᩹;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ۜᩳ᩹;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩻᩸᩹;->ܺ:Ll/ۜᩳ᩹;
-
-    return-void
-.end method
+.class public final Ll/᩻᩸᩹;
+.super Ll/ۗ᩸᩹;
+.source "Q99V"
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final ۙ(Ll/ۡܳۨ;)Ljava/lang/Object;
+    .locals 2
 
-    .line 0
-    iget-object v0, p0, Ll/᩻᩸᩹;->ܺ:Ll/ۜᩳ᩹;
+    .line 14
+    invoke-virtual {p1}, Ll/ۡܳۨ;->ۚ()Z
 
-    invoke-static {v0}, Ll/ۜᩳ᩹;->ܰ(Ll/ۜᩳ᩹;)V
+    move-result v0
 
-    return-void
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Ll/ۡܳۨ;->ۤ()I
+
+    move-result v0
+
+    const/16 v1, 0x194
+
+    if-ne v0, v1, :cond_0
+
+    .line 15
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    .line 17
+    :cond_0
+    invoke-static {p1}, Ll/ۗ᩸᩹;->᩷(Ll/ۡܳۨ;)V
+
+    .line 18
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object p1
 .end method

@@ -1,58 +1,64 @@
 package l;
 
-import android.animation.TimeInterpolator;
-import android.graphics.drawable.AnimationDrawable;
+import android.content.pm.ShortcutManager;
+import android.widget.TextView;
+import java.io.Closeable;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۜ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y22J */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6421 implements TimeInterpolator {
-
+/* JADX INFO: renamed from: l.ۛ۬ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L73L */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C6421 implements InterfaceC19795, InterfaceC10523, InterfaceC10344 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int[] f21756;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f21757;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f21758;
-
-    public C6421(AnimationDrawable animationDrawable, boolean z) {
-        int numberOfFrames = animationDrawable.getNumberOfFrames();
-        this.f21758 = numberOfFrames;
-        int[] iArr = this.f21756;
-        if (iArr == null || iArr.length < numberOfFrames) {
-            this.f21756 = new int[numberOfFrames];
-        }
-        int[] iArr2 = this.f21756;
-        int i = 0;
-        for (int i2 = 0; i2 < numberOfFrames; i2++) {
-            int duration = animationDrawable.getDuration(z ? (numberOfFrames - i2) - 1 : i2);
-            iArr2[i2] = duration;
-            i += duration;
-        }
-        this.f21757 = i;
+    public static int m18182(int i, int i2, int i3, int i4) {
+        return ((i - i2) / i3) + i4;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m17601() {
-        return this.f21757;
+    public static /* bridge */ /* synthetic */ ShortcutManager m18183(Object obj) {
+        return (ShortcutManager) obj;
     }
 
-    @Override // android.animation.TimeInterpolator
-    public final float getInterpolation(float f) {
-        int i;
-        int i2;
-        int i3 = (int) ((f * this.f21757) + 0.5f);
-        int i4 = 0;
-        while (true) {
-            i = this.f21758;
-            if (i4 >= i || i3 < (i2 = this.f21756[i4])) {
-                break;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m18184(InterfaceC9801 interfaceC9801, String str, boolean z) {
+        interfaceC9801.edit().putBoolean(str, z).apply();
+    }
+
+    @Override // l.InterfaceC19795
+    public void invoke(Object obj) {
+        ((InterfaceC19992) obj).getClass();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m18185(int i, String str, String str2) {
+        int upperCase;
+        int upperCase2;
+        int iCharCount = 0;
+        while (iCharCount < str2.length()) {
+            if (i >= str.length()) {
+                return false;
             }
-            i3 -= i2;
-            i4++;
+            int iCodePointAt = str.codePointAt(i);
+            int iCodePointAt2 = str2.codePointAt(iCharCount);
+            if (iCodePointAt != iCodePointAt2 && (upperCase = Character.toUpperCase(iCodePointAt)) != (upperCase2 = Character.toUpperCase(iCodePointAt2)) && Character.toLowerCase(upperCase) != Character.toLowerCase(upperCase2)) {
+                return false;
+            }
+            i += Character.charCount(iCodePointAt);
+            iCharCount += Character.charCount(iCodePointAt2);
         }
-        return (i4 / i) + (i4 < i ? i3 / this.f21757 : 0.0f);
+        return true;
+    }
+
+    @Override // l.InterfaceC10523
+    public void accept(TextView textView) {
+        textView.setText("0");
+    }
+
+    @Override // l.InterfaceC10344
+    public void accept(Object obj) throws IOException {
+        Closeable closeable = (Closeable) obj;
+        if (closeable != null) {
+            closeable.close();
+        }
     }
 }

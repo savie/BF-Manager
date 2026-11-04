@@ -1,34 +1,34 @@
 .class public final Ll/֨;
-.super Ll/ۡ᩸ۙ;
-.source "Y21J"
+.super Ljava/lang/Object;
+.source "J622"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    .line 8
-    invoke-direct {p0}, Ll/ۡ᩸ۙ;-><init>()V
+    .line 439
+    sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    return-void
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ۜ;->ۙ(Ljava/lang/Object;)Ll/ۜ;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static ۙ(Ll/ۛ֫ܰ;)Ll/᩵᩸ۙ;
+.method public final newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 10
-    invoke-static {p0}, Ll/ۡ᩸ۙ;->ۙ(Ll/ۛ֫ܰ;)Ll/᩵᩸ۙ;
+    .line 445
+    new-array p1, p1, [Ll/ۜ;
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ۙ(Ll/᩵᩸ۙ;Ll/ۛ֫ܰ;)V
-    .locals 0
-
-    .line 14
-    invoke-static {p0, p1}, Ll/ۡ᩸ۙ;->ۙ(Ll/᩵᩸ۙ;Ll/ۛ֫ܰ;)V
-
-    return-void
+    return-object p1
 .end method

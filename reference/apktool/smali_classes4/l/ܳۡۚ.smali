@@ -1,35 +1,60 @@
 .class public final synthetic Ll/ܳۡۚ;
 .super Ljava/lang/Object;
-.source "LAQJ"
+.source "B75R"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ֡:Landroid/graphics/Bitmap;
+
+.field public final synthetic ۟:Ll/۫ᩴ֫;
+
+.field public final synthetic ܰ:Ll/᩹ۡۚ;
+
+.field public final synthetic ܿ:Ll/ܺۡۚ;
+
+.field public final synthetic ᩶:Ll/ܶۡۚ;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩹ۡۚ;Ll/ܶۡۚ;Ll/ܺۡۚ;Landroid/graphics/Bitmap;Ll/۫ᩴ֫;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ܳۡۚ;->ܰ:Ll/᩹ۡۚ;
+
+    iput-object p2, p0, Ll/ܳۡۚ;->᩶:Ll/ܶۡۚ;
+
+    iput-object p3, p0, Ll/ܳۡۚ;->ܿ:Ll/ܺۡۚ;
+
+    iput-object p4, p0, Ll/ܳۡۚ;->֡:Landroid/graphics/Bitmap;
+
+    iput-object p5, p0, Ll/ܳۡۚ;->۟:Ll/۫ᩴ֫;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public final run()V
+    .locals 5
 
-    .line 2
-    check-cast p1, Ll/۫֫᩺;
+    .line 0
+    iget-object v0, p0, Ll/ܳۡۚ;->֡:Landroid/graphics/Bitmap;
 
-    .line 4
-    check-cast p2, Ll/۫֫᩺;
+    iget-object v1, p0, Ll/ܳۡۚ;->۟:Ll/۫ᩴ֫;
 
-    .line 734
-    invoke-virtual {p1}, Ll/۫֫᩺;->getSize()J
+    iget-object v2, p0, Ll/ܳۡۚ;->ܰ:Ll/᩹ۡۚ;
 
-    move-result-wide v0
+    iget-object v3, p0, Ll/ܳۡۚ;->᩶:Ll/ܶۡۚ;
 
-    invoke-virtual {p2}, Ll/۫֫᩺;->getSize()J
+    iget-object v4, p0, Ll/ܳۡۚ;->ܿ:Ll/ܺۡۚ;
 
-    move-result-wide p1
+    invoke-static {v2, v3, v4, v0, v1}, Ll/᩹ۡۚ;->ۙ(Ll/᩹ۡۚ;Ll/ܶۡۚ;Ll/ܺۡۚ;Landroid/graphics/Bitmap;Ll/۫ᩴ֫;)V
 
-    invoke-static {v0, v1, p1, p2}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    neg-int p1, p1
-
-    return p1
+    return-void
 .end method

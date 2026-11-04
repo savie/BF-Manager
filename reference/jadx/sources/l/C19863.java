@@ -1,69 +1,36 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import android.graphics.Canvas;
+import bin.mt.plugin.api.ui.dialog.LoadingDialog;
+import bin.mt.plugin.api.util.Consumer;
+import com.google.android.material.canvas.CanvasCompat;
+import com.google.android.material.navigation.NavigationView;
 
-/* JADX INFO: renamed from: l.᩶֫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: QATC */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C19863 {
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m45116(InterfaceC0106 interfaceC0106, int i) {
-        interfaceC0106.mo1138(C21273.m47735(i));
+/* JADX INFO: renamed from: l.ᩴܰۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G1PO */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C19863 implements Consumer, InterfaceC18006, CanvasCompat.CanvasOperation {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f63894;
+
+    public /* synthetic */ C19863(Object obj) {
+        this.f63894 = obj;
     }
 
-    @Deprecated
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m45117(InterfaceC0106 interfaceC0106, Byte b) {
-        interfaceC0106.mo1138(b.byteValue());
+    @Override // bin.mt.plugin.api.util.Consumer
+    public void accept(Object obj) {
+        ((LoadingDialog) this.f63894).lambda$new$1((CharSequence) obj);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceC0106 m45115(InterfaceC0106 interfaceC0106, final IntConsumer intConsumer) {
-        InterfaceC0106 interfaceC0107;
-        if (intConsumer instanceof InterfaceC0106) {
-            interfaceC0107 = (InterfaceC0106) intConsumer;
-        } else {
-            C13638.requireNonNull(intConsumer);
-            interfaceC0107 = new InterfaceC0106() { // from class: l.᩷֫ᩳ
-                @Override // java.util.function.IntConsumer
-                public final /* synthetic */ void accept(int i) {
-                    C19863.m45116(this, i);
-                }
+    @Override // com.google.android.material.canvas.CanvasCompat.CanvasOperation
+    public void run(Canvas canvas) {
+        ((NavigationView) this.f63894).lambda$dispatchDraw$0(canvas);
+    }
 
-                @Override // java.util.function.Consumer
-                public final /* bridge */ /* synthetic */ void accept(Object obj) {
-                    mo1139((Byte) obj);
-                }
-
-                @Override // l.InterfaceC0106
-                /* JADX INFO: renamed from: ۙ */
-                public final void mo1138(byte b) {
-                    intConsumer.accept(b);
-                }
-
-                @Override // l.InterfaceC0106
-                /* JADX INFO: renamed from: ۙ */
-                public final /* synthetic */ void mo1139(Byte b) {
-                    C19863.m45117((InterfaceC0106) this, b);
-                }
-
-                public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer2) {
-                    return C19863.m45115((InterfaceC0106) this, intConsumer2);
-                }
-
-                @Override // l.InterfaceC0106
-                /* JADX INFO: renamed from: ۙ */
-                public final C15630 mo1137(InterfaceC0106 interfaceC0108) {
-                    return new C15630(this, interfaceC0108);
-                }
-
-                public final Consumer andThen(Consumer consumer) {
-                    return C1455.$default$andThen(this, consumer);
-                }
-            };
-        }
-        return interfaceC0106.mo1137(interfaceC0107);
+    @Override // l.InterfaceC18006
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1736(Object obj) {
+        ((ViewOnClickListenerC20698) this.f63894).m47364((String) obj);
     }
 }

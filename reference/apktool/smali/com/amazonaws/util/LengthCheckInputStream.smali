@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final ֡:Z
+.field public ֡:J
 
-.field public ܺ:J
+.field public ܰ:J
 
-.field public ܽ:J
+.field public final ܿ:Z
 
 .field public final ᩶:J
 
@@ -30,7 +30,7 @@
     iput-wide p2, p0, Lcom/amazonaws/util/LengthCheckInputStream;->᩶:J
 
     .line 71
-    iput-boolean p4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->֡:Z
+    iput-boolean p4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܿ:Z
 
     return-void
 
@@ -54,7 +54,7 @@
     if-eqz p1, :cond_1
 
     .line 129
-    iget-wide v3, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v3, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     cmp-long p1, v3, v1
 
@@ -72,7 +72,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -96,7 +96,7 @@
 
     .line 134
     :cond_1
-    iget-wide v3, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v3, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     cmp-long p1, v3, v1
 
@@ -115,7 +115,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v4, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -147,9 +147,9 @@
     invoke-super {p0, p1}, Lcom/amazonaws/internal/SdkFilterInputStream;->mark(I)V
 
     .line 108
-    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
-    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܽ:J
+    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->֡:J
 
     return-void
 .end method
@@ -165,13 +165,13 @@
     if-ltz v0, :cond_0
 
     .line 85
-    iget-wide v1, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v1, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     const-wide/16 v3, 0x1
 
     add-long/2addr v1, v3
 
-    iput-wide v1, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iput-wide v1, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     :cond_0
     const/4 v1, -0x1
@@ -201,7 +201,7 @@
     move-result p1
 
     .line 100
-    iget-wide p2, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide p2, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     if-ltz p1, :cond_0
 
@@ -215,7 +215,7 @@
     :goto_0
     add-long/2addr p2, v0
 
-    iput-wide p2, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iput-wide p2, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     const/4 p2, -0x1
 
@@ -249,9 +249,9 @@
     if-eqz v0, :cond_0
 
     .line 115
-    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܽ:J
+    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->֡:J
 
-    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     :cond_0
     return-void
@@ -266,7 +266,7 @@
     move-result-wide p1
 
     .line 149
-    iget-boolean v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->֡:Z
+    iget-boolean v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܿ:Z
 
     if-eqz v0, :cond_0
 
@@ -277,11 +277,11 @@
     if-lez v2, :cond_0
 
     .line 150
-    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iget-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     add-long/2addr v0, p1
 
-    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܺ:J
+    iput-wide v0, p0, Lcom/amazonaws/util/LengthCheckInputStream;->ܰ:J
 
     const/4 v0, 0x0
 

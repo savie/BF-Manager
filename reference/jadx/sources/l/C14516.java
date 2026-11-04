@@ -1,50 +1,72 @@
 package l;
 
-import android.content.DialogInterface;
-import java.util.ArrayList;
-
-/* JADX INFO: renamed from: l.ܳ۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: D7B1 */
+/* JADX INFO: renamed from: l.ܰۢܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 9BH0 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C14516 extends AbstractC3492 {
+public final class C14516 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public ArrayList f47551;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int[] f45665;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13955 f47552;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f45666 = 0;
 
-    public C14516(C13955 c13955) {
-        this.f47552 = c13955;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int[] f45667;
+
+    public C14516(int i) {
+        this.f45667 = new int[i];
+        this.f45665 = new int[i];
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10252(this.f47552.f45918, 300);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m35034(int i) {
+        int i2 = 0;
+        while (true) {
+            int i3 = this.f45666;
+            int[] iArr = this.f45665;
+            int[] iArr2 = this.f45667;
+            if (i2 < i3) {
+                if (iArr2[i2] == i) {
+                    iArr[i2] = iArr[i2] + 1;
+                    return;
+                }
+                i2++;
+            } else {
+                iArr2[i3] = i;
+                iArr[i3] = 1;
+                this.f45666 = i3 + 1;
+                return;
+            }
+        }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        this.f47551 = this.f47552.f45916.m18418();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m35033() {
+        int i = -1;
+        int i2 = -1;
+        int i3 = 0;
+        int i4 = 0;
+        while (true) {
+            int i5 = this.f45666;
+            int[] iArr = this.f45665;
+            if (i3 < i5) {
+                int i6 = iArr[i3];
+                if (i4 < i6) {
+                    i2 = this.f45667[i3];
+                    i = i3;
+                    i4 = i6;
+                }
+                i3++;
+            } else {
+                iArr[i] = 0;
+                return i2;
+            }
+        }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        this.f47552.m33799(this.f47551);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f47552.f45918.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m35035() {
+        return this.f45666;
     }
 }

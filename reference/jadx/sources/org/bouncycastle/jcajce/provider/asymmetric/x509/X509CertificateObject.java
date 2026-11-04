@@ -34,7 +34,6 @@ public class X509CertificateObject extends X509CertificateImpl implements PKCS12
     public X500Principal subjectValue;
     public long[] validityValues;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class X509CertificateEncodingException extends CertificateEncodingException {
         public final Throwable cause;
 

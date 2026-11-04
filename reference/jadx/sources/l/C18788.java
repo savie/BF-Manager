@@ -1,57 +1,34 @@
 package l;
 
-import android.media.session.PlaybackState;
-import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.text.TextUtils;
+/* JADX INFO: renamed from: l.ᩳۗۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X7AT */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C18788 implements InterfaceC13083, InterfaceC4232 {
 
-/* JADX INFO: renamed from: l.ᩴܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E5FU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C18788 implements Parcelable {
-    public static final Parcelable.Creator CREATOR = new C18082();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f61014;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final int f60905;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f60906;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f60907;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f61015;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final Bundle f60908;
+    public final /* synthetic */ Object f61016;
 
-    @Override // android.os.Parcelable
-    public final int describeContents() {
-        return 0;
+    public /* synthetic */ C18788(Object obj, Object obj2, Object obj3) {
+        this.f61014 = obj;
+        this.f61016 = obj2;
+        this.f61015 = obj3;
     }
 
-    public C18788(Parcel parcel) {
-        this.f60906 = parcel.readString();
-        this.f60907 = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
-        this.f60905 = parcel.readInt();
-        this.f60908 = parcel.readBundle(C1148.class.getClassLoader());
+    @Override // l.InterfaceC13083
+    /* JADX INFO: renamed from: ۙ */
+    public C1238 mo2836(int i) {
+        return C9837.m25616((C9837) this.f61014, (C19050) this.f61016, (C4156) this.f61015, i);
     }
 
-    @Override // android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.f60906);
-        TextUtils.writeToParcel(this.f60907, parcel, i);
-        parcel.writeInt(this.f60905);
-        parcel.writeBundle(this.f60908);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final PlaybackState.CustomAction m43354() {
-        PlaybackState.CustomAction.Builder builderM50926 = C23022.m50926(this.f60906, this.f60907, this.f60905);
-        C23022.m50934(builderM50926, this.f60908);
-        return C23022.m50927(builderM50926);
-    }
-
-    public final String toString() {
-        return "Action:mName='" + ((Object) this.f60907) + ", mIcon=" + this.f60905 + ", mExtras=" + this.f60908;
+    @Override // l.InterfaceC4232
+    /* JADX INFO: renamed from: ۙ */
+    public EnumC4695 mo11179(EnumC4695 enumC4695) {
+        return C10132.m26129((C10132) this.f61014, (C18959) this.f61016, (AbstractC1566) this.f61015, enumC4695);
     }
 }

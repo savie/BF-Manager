@@ -3,7 +3,7 @@ package org.bouncycastle.internal.asn1.misc;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface MiscObjectIdentifiers {
     public static final ASN1ObjectIdentifier as_sys_sec_alg_ideaCBC;
     public static final ASN1ObjectIdentifier blake2;

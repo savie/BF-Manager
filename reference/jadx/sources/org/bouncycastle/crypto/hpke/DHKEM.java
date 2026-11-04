@@ -35,7 +35,7 @@ import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Pack;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHKEM extends KEM {
     public int Nenc;
     public int Nsecret;

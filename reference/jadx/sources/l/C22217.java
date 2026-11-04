@@ -1,40 +1,26 @@
 package l;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.os.SystemClock;
-
-/* JADX INFO: renamed from: l.᩹ۤۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: C8NO */
+/* JADX INFO: renamed from: l.᩷ܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22217 implements InterfaceC11593 {
-    @Override // l.InterfaceC11593
+public final enum C22217 extends EnumC14757 {
+    public /* synthetic */ C22217() {
+        this("FORMAT_35C", 24);
+    }
+
+    public C22217(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC14757
     /* JADX INFO: renamed from: ۙ */
-    public final long mo28886() {
-        return System.currentTimeMillis();
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        return EnumC14757.m35447(this, i, null);
     }
 
-    @Override // l.InterfaceC11593
-    /* JADX INFO: renamed from: ۨ */
-    public final long mo28888() {
-        return SystemClock.elapsedRealtime();
-    }
-
-    @Override // l.InterfaceC11593
-    /* JADX INFO: renamed from: ܰ */
-    public final long mo28889() {
-        return SystemClock.uptimeMillis();
-    }
-
-    @Override // l.InterfaceC11593
-    /* JADX INFO: renamed from: ۖ */
-    public final long mo28885() {
-        return System.nanoTime();
-    }
-
-    @Override // l.InterfaceC11593
+    @Override // l.EnumC14757
     /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC8065 mo28887(Looper looper, Handler.Callback callback) {
-        return new C13045(new Handler(looper, callback));
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        EnumC14757.m35478(abstractC3659, (InterfaceC23797) null);
     }
 }

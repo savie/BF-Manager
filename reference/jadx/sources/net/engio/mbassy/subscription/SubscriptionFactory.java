@@ -16,7 +16,7 @@ import net.engio.mbassy.dispatch.MessageDispatcher;
 import net.engio.mbassy.dispatch.SynchronizedHandlerInvocation;
 import net.engio.mbassy.listener.MessageHandler;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SubscriptionFactory {
     public Subscription createSubscription(BusRuntime busRuntime, MessageHandler messageHandler) throws MessageBusException {
         try {

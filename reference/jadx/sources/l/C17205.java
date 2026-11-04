@@ -1,54 +1,49 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿ۟ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 532I */
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.ܽ֡ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6HJ */
 /* JADX INFO: loaded from: classes5.dex */
-public class C17205 extends AbstractC14384 {
+public final /* synthetic */ class C17205 implements Function {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AbstractC14384 f54844;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f56056;
 
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC14384 mo27209() {
-        throw null;
+    public /* synthetic */ C17205(int i) {
+        this.f56056 = i;
     }
 
-    @Override // l.InterfaceC19010
-    @Deprecated
-    public final boolean apply(Object obj) {
-        return mo1772(((Character) obj).charValue());
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    public C17205(AbstractC14384 abstractC14384) {
-        this.f54844 = abstractC14384;
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
     }
 
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1772(char c) {
-        return !this.f54844.mo1772(c);
-    }
-
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۨ */
-    public final boolean mo27210(CharSequence charSequence) {
-        return this.f54844.mo27206(charSequence);
-    }
-
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo27206(CharSequence charSequence) {
-        return this.f54844.mo27210(charSequence);
-    }
-
-    @Override // l.AbstractC14384
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo27208(CharSequence charSequence) {
-        return charSequence.length() - this.f54844.mo27208(charSequence);
-    }
-
-    public final String toString() {
-        return this.f54844 + ".negate()";
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f56056) {
+            case 0:
+                return ((C1345) obj).m4965();
+            case 1:
+                return C12276.m30656((C20348) obj);
+            case 2:
+                return new C6004((AbstractC22044) obj);
+            case 3:
+                return ((C8667) obj).m23346();
+            case 4:
+                return MaterialDynamicColors.lambda$surfaceContainerLow$24((DynamicScheme) obj);
+            case 5:
+                return MaterialDynamicColors.lambda$textPrimaryInverseDisableOnly$157((DynamicScheme) obj);
+            default:
+                return ((InterfaceC9769) obj).toString();
+        }
     }
 }

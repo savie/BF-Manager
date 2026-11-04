@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.modes.gcm;
 import java.lang.reflect.Array;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Tables8kGCMMultiplier implements GCMMultiplier {
     public byte[] H;
     public long[][][] T;

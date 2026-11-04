@@ -1,20 +1,21 @@
 package l;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import org.json.JSONArray;
 
-/* JADX INFO: renamed from: l.۠֨ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0CLW */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7843 extends LinkedHashMap {
-    public static final long serialVersionUID = 1;
-
-    public C7843() {
-        super(64, 0.75f, true);
-    }
-
-    @Override // java.util.LinkedHashMap
-    public final boolean removeEldestEntry(Map.Entry entry) {
-        return size() > 32;
+/* JADX INFO: renamed from: l.۟ۧۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X66Z */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7843 implements InterfaceC22760 {
+    @Override // l.InterfaceC22760
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1200(C19929 c19929) {
+        int iM34627 = ((C14270) c19929.m45858()).m34627();
+        JSONArray jSONArray = (JSONArray) ((C14270) c19929.m45858()).m34634();
+        C14270 c14270 = new C14270();
+        try {
+            c14270.m34620(jSONArray.get(iM34627));
+        } catch (Throwable unused) {
+        }
+        c19929.m45857(c14270);
     }
 }

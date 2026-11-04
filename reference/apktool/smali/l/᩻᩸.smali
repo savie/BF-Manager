@@ -1,3 +1,8 @@
-.class public final Ll/᩻᩸;
-.super Ll/ۤ۠;
-.source "K22K"
+.class public interface abstract Ll/᩻᩸;
+.super Ljava/lang/Object;
+.source "VB9A"
+
+
+# virtual methods
+.method public abstract ۙ(Ljava/lang/Object;)V
+.end method

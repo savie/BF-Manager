@@ -1,69 +1,150 @@
-.class public final synthetic Ll/ۢ֡ۨ;
+.class public final Ll/ۢ֡ۨ;
 .super Ljava/lang/Object;
-.source "28VT"
+.source "O3Z6"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic ֡:Landroid/widget/TextView;
+.field public final ܰ:I
 
-.field public final synthetic ۫:Landroid/widget/TextView;
-
-.field public final synthetic ܺ:Ll/ۤۛۨ;
-
-.field public final synthetic ܽ:Landroid/widget/TextView;
-
-.field public final synthetic ܿ:Landroid/widget/TextView;
-
-.field public final synthetic ᩶:Landroid/widget/TextView;
+.field public final ᩶:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۤۛۨ;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    .line 0
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ۢ֡ۨ;->ܺ:Ll/ۤۛۨ;
+    .line 15
+    iput p1, p0, Ll/ۢ֡ۨ;->᩶:I
 
-    iput-object p2, p0, Ll/ۢ֡ۨ;->᩶:Landroid/widget/TextView;
-
-    iput-object p3, p0, Ll/ۢ֡ۨ;->֡:Landroid/widget/TextView;
-
-    iput-object p4, p0, Ll/ۢ֡ۨ;->ܽ:Landroid/widget/TextView;
-
-    iput-object p5, p0, Ll/ۢ֡ۨ;->۫:Landroid/widget/TextView;
-
-    iput-object p6, p0, Ll/ۢ֡ۨ;->ܿ:Landroid/widget/TextView;
+    .line 16
+    iput p2, p0, Ll/ۢ֡ۨ;->ܰ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-    .line 2
-    sget v0, Ll/᩶ܽۨ;->۠ܰ:I
+    .line 9
+    check-cast p1, Ll/ۢ֡ۨ;
 
-    .line 709
-    iget-object v1, p0, Ll/ۢ֡ۨ;->ܺ:Ll/ۤۛۨ;
+    invoke-virtual {p0, p1}, Ll/ۢ֡ۨ;->ۙ(Ll/ۢ֡ۨ;)I
 
-    iget-object v2, p0, Ll/ۢ֡ۨ;->᩶:Landroid/widget/TextView;
+    move-result p1
 
-    iget-object v3, p0, Ll/ۢ֡ۨ;->֡:Landroid/widget/TextView;
+    return p1
+.end method
 
-    iget-object v4, p0, Ll/ۢ֡ۨ;->ܽ:Landroid/widget/TextView;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v5, p0, Ll/ۢ֡ۨ;->۫:Landroid/widget/TextView;
+    const/4 v0, 0x1
 
-    iget-object v6, p0, Ll/ۢ֡ۨ;->ܿ:Landroid/widget/TextView;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual/range {v1 .. v6}, Ll/ۤۛۨ;->ۙ(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;)V
+    return v0
 
-    return-void
+    .line 24
+    :cond_0
+    instance-of v1, p1, Ll/ۢ֡ۨ;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    .line 27
+    :cond_1
+    check-cast p1, Ll/ۢ֡ۨ;
+
+    .line 28
+    iget v1, p0, Ll/ۢ֡ۨ;->᩶:I
+
+    iget v3, p1, Ll/ۢ֡ۨ;->᩶:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Ll/ۢ֡ۨ;->ܰ:I
+
+    iget p1, p1, Ll/ۢ֡ۨ;->ܰ:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    .line 33
+    iget v0, p0, Ll/ۢ֡ۨ;->᩶:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Ll/ۢ֡ۨ;->ܰ:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    invoke-static {v2}, Ll/ܽۚۗ;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final ۙ(Ll/ۢ֡ۨ;)I
+    .locals 2
+
+    .line 38
+    iget v0, p0, Ll/ۢ֡ۨ;->᩶:I
+
+    iget v1, p1, Ll/ۢ֡ۨ;->᩶:I
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->compare(II)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v0
+
+    .line 42
+    :cond_0
+    iget v0, p0, Ll/ۢ֡ۨ;->ܰ:I
+
+    iget p1, p1, Ll/ۢ֡ۨ;->ܰ:I
+
+    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
 .end method

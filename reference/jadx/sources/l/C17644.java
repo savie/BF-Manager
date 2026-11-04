@@ -1,31 +1,41 @@
 package l;
 
-import java.io.IOException;
+import android.view.View;
+import android.view.ViewGroup;
 
-/* JADX INFO: renamed from: l.ܿ᩹᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: renamed from: l.ܽܳۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: RB93 */
 /* JADX INFO: loaded from: classes5.dex */
-public class C17644 extends AbstractC7186 {
-    @Override // l.AbstractC7186
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1572(C1145 c1145, Object obj) throws IOException {
-        Character ch = (Character) obj;
-        c1145.m4212(ch == null ? null : String.valueOf(ch));
+public final class C17644 implements InterfaceC11520 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12423 f58013;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20981 f58014;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ViewGroup f58015;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ View f58016;
+
+    public C17644(View view, ViewGroup viewGroup, C12423 c12423, C20981 c20981) {
+        this.f58016 = view;
+        this.f58015 = viewGroup;
+        this.f58013 = c12423;
+        this.f58014 = c20981;
     }
 
-    @Override // l.AbstractC7186
+    @Override // l.InterfaceC11520
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo1571(C5379 c5379) throws IOException {
-        if (c5379.m14916() == EnumC22313.NULL) {
-            c5379.m14918();
-            return null;
+    public final void mo22385() {
+        View view = this.f58016;
+        view.clearAnimation();
+        this.f58015.endViewTransition(view);
+        this.f58013.m18238();
+        if (AbstractC3191.m10427(2)) {
+            C17359.toString(this.f58014);
         }
-        String strM14922 = c5379.m14922();
-        if (strM14922.length() == 1) {
-            return Character.valueOf(strM14922.charAt(0));
-        }
-        StringBuilder sbM30914 = C12441.m30914("Expecting character, got: ", strM14922, "; at ");
-        sbM30914.append(c5379.m14928());
-        throw new C22003(sbM30914.toString());
     }
 }

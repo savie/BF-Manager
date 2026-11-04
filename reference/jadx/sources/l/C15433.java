@@ -1,30 +1,36 @@
 package l;
 
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.SocketAddress;
+import com.google.android.material.timepicker.RadialViewGroup;
 
-/* JADX INFO: renamed from: l.ܶ᩵ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7B2 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C15433 {
+/* JADX INFO: renamed from: l.ܳܶۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VARX */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15433 implements InterfaceC9510 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m36915(InetAddress inetAddress, InetAddress inetAddress2) {
-        DatagramSocket datagramSocket = new DatagramSocket((SocketAddress) null);
-        try {
-            datagramSocket.setBroadcast(true);
-            datagramSocket.bind(new InetSocketAddress(inetAddress, 0));
-            datagramSocket.send(new DatagramPacket(C8377.f29082, C8377.f29082.length, inetAddress2, 9));
-            datagramSocket.close();
-        } catch (Throwable th) {
-            try {
-                datagramSocket.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
+    public static final C15433 f50278 = new C15433();
+
+    public final boolean equals(Object obj) {
+        return obj == this;
+    }
+
+    public final String toString() {
+        return RadialViewGroup.SKIP_TAG;
+    }
+
+    @Override // l.InterfaceC9510
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo15211() {
+        return false;
+    }
+
+    public final int hashCode() {
+        return C7103.m19444(C7103.m19447(0, EnumC8765.SKIP.ordinal()), 1);
+    }
+
+    @Override // l.InterfaceC9510
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15210(AbstractC14709 abstractC14709) {
+        abstractC14709.f48064 = -3;
     }
 }

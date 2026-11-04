@@ -198,7 +198,7 @@ public class a {
                                 g.a(th);
                                 aVar = (com.alipay.sdk.m.w.a) a.this.c.get();
                                 if (aVar != null) {
-                                    com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, "AlipayChinaMobileBridge", "sendNetworkAsyncError");
+                                    com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, "AlipayChinaMobileBridge", "sendNetworkAsyncError");
                                 }
                                 if (r2 != 0) {
                                     try {
@@ -264,7 +264,7 @@ public class a {
                             g.a(th);
                             aVar = (com.alipay.sdk.m.w.a) a.this.c.get();
                             if (aVar != null) {
-                                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f77909l, "AlipayChinaMobileBridge", "sendNetworkAsyncError");
+                                com.alipay.sdk.m.m.a.b(aVar, com.alipay.sdk.m.m.b.f82025l, "AlipayChinaMobileBridge", "sendNetworkAsyncError");
                             }
                             if (r2 != 0) {
                                 r2.close();

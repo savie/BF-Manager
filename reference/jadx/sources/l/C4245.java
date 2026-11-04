@@ -1,226 +1,323 @@
 package l;
 
-import java.lang.ref.WeakReference;
+import bin.mt.plugin.api.regex.Matcher;
+import bin.mt.plugin.api.regex.MatcherSnapshot;
+import bin.mt.plugin.api.regex.Pattern;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
 
-/* JADX INFO: renamed from: l.ۘ᩺ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H4Y9 */
+/* JADX INFO: renamed from: l.ۘܶۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: UAYU */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4245 extends AbstractC3062 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public ArrayList f15341;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final WeakReference f15342;
+public final class C4245 implements Matcher, InterfaceC0516 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f15343;
+    public final C23879 f15464;
+
+    public C4245(C18415 c18415, CharSequence charSequence) {
+        this.f15464 = new C23879(c18415, c18415.m42927(), charSequence);
+    }
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final void m13550() {
+        this.f15464.m53364();
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m13566() {
+        return this.f15464.m53357();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long m13558() {
+        return this.f15464.m53359();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13552(long j) {
+        this.f15464.m53338(j);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Pattern pattern() {
+        return this.f15464.pattern();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final C18415 pattern() {
+        return this.f15464.pattern();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13554(C18415 c18415) {
+        this.f15464.m53342(c18415, c18415.m42927());
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher, l.InterfaceC0516
+    public final CharSequence getText() {
+        return this.f15464.getText();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher reset() {
+        this.f15464.m53370();
+        return this;
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher reset(CharSequence charSequence) {
+        this.f15464.m53339(charSequence);
+        return this;
+    }
+
+    /* JADX INFO: renamed from: reset, reason: collision with other method in class */
+    public final void m13568reset(CharSequence charSequence) {
+        this.f15464.m53339(charSequence);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final int start() {
+        return this.f15464.m53349();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher, l.InterfaceC0516
+    public final int start(int i) {
+        return this.f15464.start(i);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m13563(String str) {
+        return this.f15464.m53366(str);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final int end() {
+        return this.f15464.m53351();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher, l.InterfaceC0516
+    public final int end(int i) {
+        return this.f15464.end(i);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final String group() {
+        return this.f15464.group(0);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher, l.InterfaceC0516
+    public final String group(int i) {
+        return this.f15464.group(i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m13551(String str) {
+        return this.f15464.m53371(str);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher, l.InterfaceC0516
+    public final int groupCount() {
+        return this.f15464.groupCount();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final String expandReplacement(String str) {
+        C23879 c23879 = this.f15464;
+        c23879.getClass();
+        StringBuilder sb = new StringBuilder();
+        C7974.m21760(c23879, sb, str);
+        return sb.toString();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final void expandReplacementInto(StringBuilder sb, String str) {
+        C23879 c23879 = this.f15464;
+        c23879.getClass();
+        C7974.m21760(c23879, sb, str);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean matches() {
+        return this.f15464.m53369();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean find() {
+        return this.f15464.m53378();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean find(int i) {
+        return this.f15464.m53375(i);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean lookingAt() {
+        return this.f15464.m53334();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean lookingAt(int i) {
+        return this.f15464.m53354(i);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final MatcherSnapshot toSnapshot() {
+        return new C14685(this);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final C14685 toSnapshot() {
+        return new C14685(this);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher appendReplacement(StringBuilder sb, String str) {
+        this.f15464.m53341(sb, str);
+        return this;
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final StringBuilder appendTail(StringBuilder sb) {
+        this.f15464.m53337(sb);
+        return sb;
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final String replaceAll(String str) {
+        return this.f15464.m53352(str);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final String replaceFirst(String str) {
+        return this.f15464.m53376(str);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher region(int i, int i2) {
+        this.f15464.m53372(i, i2);
+        return this;
+    }
+
+    /* JADX INFO: renamed from: region, reason: collision with other method in class */
+    public final void m13567region(int i, int i2) {
+        this.f15464.m53372(i, i2);
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final int regionStart() {
+        return this.f15464.m53335();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final int regionEnd() {
+        return this.f15464.m53381();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean hasTransparentBounds() {
+        return this.f15464.m53361();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher useTransparentBounds(boolean z) {
+        this.f15464.m53377(z);
+        return this;
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean hasAnchoringBounds() {
+        return this.f15464.m53355();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher useAnchoringBounds(boolean z) {
+        this.f15464.m53353(z);
+        return this;
+    }
+
+    public final String toString() {
+        return this.f15464.toString();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean hitEnd() {
+        return this.f15464.m53380();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final boolean requireEnd() {
+        return this.f15464.m53358();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final Matcher setTimeoutMillis(int i) {
+        this.f15464.m53368(i);
+        return this;
+    }
+
+    /* JADX INFO: renamed from: setTimeoutMillis, reason: collision with other method in class */
+    public final void m13569setTimeoutMillis(int i) {
+        this.f15464.m53368(i);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m13565(boolean z) {
+        this.f15464.m53373(z);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m13553(Runnable runnable) {
+        this.f15464.m53340(runnable);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Runnable m13564() {
+        return this.f15464.m53367();
+    }
+
+    @Override // l.InterfaceC0516
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2478() {
+        this.f15464.mo2478();
+    }
+
+    @Override // bin.mt.plugin.api.regex.Matcher
+    public final int getTimeoutMillis() {
+        return this.f15464.m53333();
+    }
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public boolean f15344;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public boolean f15345;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public EnumC9414 f15346;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean f15347;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C11172 f15348;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m11902(EnumC1651 enumC1651) {
-        C13465.m32966(enumC1651, "event");
-        m11898("handleLifecycleEvent");
-        m11901(enumC1651.m5550());
+    public final boolean m13557() {
+        return this.f15464.m53363();
     }
 
-    @Override // l.AbstractC3062
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo9171(InterfaceC22591 interfaceC22591) {
-        InterfaceC1423 interfaceC1423;
-        C13465.m32966(interfaceC22591, "observer");
-        m11898("addObserver");
-        EnumC9414 enumC9414 = this.f15346;
-        EnumC9414 enumC9415 = EnumC9414.DESTROYED;
-        if (enumC9414 != enumC9415) {
-            enumC9415 = EnumC9414.INITIALIZED;
-        }
-        C13419 c13419 = new C13419(interfaceC22591, enumC9415);
-        if (((C13419) this.f15348.mo28103(interfaceC22591, c13419)) == null && (interfaceC1423 = (InterfaceC1423) this.f15342.get()) != null) {
-            boolean z = this.f15343 != 0 || this.f15345;
-            EnumC9414 enumC9414M11899 = m11899(interfaceC22591);
-            this.f15343++;
-            while (c13419.m32907().compareTo(enumC9414M11899) < 0 && this.f15348.m28104(interfaceC22591)) {
-                EnumC9414 enumC9414M32907 = c13419.m32907();
-                ArrayList arrayList = this.f15341;
-                arrayList.add(enumC9414M32907);
-                C23525 c23525 = EnumC1651.f6602;
-                EnumC9414 enumC9414M32908 = c13419.m32907();
-                c23525.getClass();
-                EnumC1651 enumC1651M51823 = C23525.m51823(enumC9414M32908);
-                if (enumC1651M51823 == null) {
-                    throw new IllegalStateException("no event up from " + c13419.m32907());
-                }
-                c13419.m32908(interfaceC1423, enumC1651M51823);
-                arrayList.remove(arrayList.size() - 1);
-                enumC9414M11899 = m11899(interfaceC22591);
-            }
-            if (!z) {
-                m11900();
-            }
-            this.f15343--;
-        }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final boolean m13560() {
+        return this.f15464.m53362();
     }
 
-    @Override // l.AbstractC3062
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo9172(InterfaceC22591 interfaceC22591) {
-        C13465.m32966(interfaceC22591, "observer");
-        m11898("removeObserver");
-        this.f15348.remove(interfaceC22591);
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean m13561() {
+        return this.f15464.m53382();
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final void m13559() {
+        this.f15464.m53332();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m11903(EnumC9414 enumC9414) {
-        C13465.m32966(enumC9414, "state");
-        m11898("setCurrentState");
-        m11901(enumC9414);
-    }
-
-    public C4245(InterfaceC1423 interfaceC1423) {
-        new AtomicReference();
-        this.f15347 = true;
-        this.f15348 = new C11172();
-        this.f15346 = EnumC9414.INITIALIZED;
-        this.f15341 = new ArrayList();
-        this.f15342 = new WeakReference(interfaceC1423);
-    }
-
-    @Override // l.AbstractC3062
-    /* JADX INFO: renamed from: ۙ */
-    public final EnumC9414 mo9170() {
-        return this.f15346;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private final void m11901(EnumC9414 enumC9414) {
-        EnumC9414 enumC9415 = this.f15346;
-        if (enumC9415 == enumC9414) {
-            return;
-        }
-        if (enumC9415 == EnumC9414.INITIALIZED && enumC9414 == EnumC9414.DESTROYED) {
-            throw new IllegalStateException(("no event down from " + this.f15346 + " in component " + this.f15342.get()).toString());
-        }
-        this.f15346 = enumC9414;
-        if (this.f15345 || this.f15343 != 0) {
-            this.f15344 = true;
-            return;
-        }
-        this.f15345 = true;
-        m11900();
-        this.f15345 = false;
-        if (this.f15346 == EnumC9414.DESTROYED) {
-            this.f15348 = new C11172();
-        }
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private final EnumC9414 m11899(InterfaceC22591 interfaceC22591) {
-        C13419 c13419;
-        Map.Entry entryM28102 = this.f15348.m28102(interfaceC22591);
-        EnumC9414 enumC9414M32907 = (entryM28102 == null || (c13419 = (C13419) entryM28102.getValue()) == null) ? null : c13419.m32907();
-        ArrayList arrayList = this.f15341;
-        EnumC9414 enumC9414 = arrayList.isEmpty() ? null : (EnumC9414) C19084.m43861(arrayList, 1);
-        EnumC9414 enumC9415 = this.f15346;
-        C13465.m32966(enumC9415, "state1");
-        if (enumC9414M32907 == null || enumC9414M32907.compareTo(enumC9415) >= 0) {
-            enumC9414M32907 = enumC9415;
-        }
-        return (enumC9414 == null || enumC9414.compareTo(enumC9414M32907) >= 0) ? enumC9414M32907 : enumC9414;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private final void m11900() {
-        InterfaceC1423 interfaceC1423 = (InterfaceC1423) this.f15342.get();
-        if (interfaceC1423 != null) {
-            while (this.f15348.size() != 0) {
-                Map.Entry entryM33393 = this.f15348.m33393();
-                C13465.m32962(entryM33393);
-                EnumC9414 enumC9414M32907 = ((C13419) entryM33393.getValue()).m32907();
-                Map.Entry entryM33390 = this.f15348.m33390();
-                C13465.m32962(entryM33390);
-                EnumC9414 enumC9414M32908 = ((C13419) entryM33390.getValue()).m32907();
-                if (enumC9414M32907 == enumC9414M32908 && this.f15346 == enumC9414M32908) {
-                    break;
-                }
-                this.f15344 = false;
-                EnumC9414 enumC9414 = this.f15346;
-                Map.Entry entryM33394 = this.f15348.m33393();
-                C13465.m32962(entryM33394);
-                int iCompareTo = enumC9414.compareTo(((C13419) entryM33394.getValue()).m32907());
-                ArrayList arrayList = this.f15341;
-                if (iCompareTo < 0) {
-                    Iterator itDescendingIterator = this.f15348.descendingIterator();
-                    while (itDescendingIterator.hasNext() && !this.f15344) {
-                        Map.Entry entry = (Map.Entry) itDescendingIterator.next();
-                        C13465.m32967(entry, "next()");
-                        InterfaceC22591 interfaceC22591 = (InterfaceC22591) entry.getKey();
-                        C13419 c13419 = (C13419) entry.getValue();
-                        while (c13419.m32907().compareTo(this.f15346) > 0 && !this.f15344 && this.f15348.m28104(interfaceC22591)) {
-                            C23525 c23525 = EnumC1651.f6602;
-                            EnumC9414 enumC9414M32909 = c13419.m32907();
-                            c23525.getClass();
-                            EnumC1651 enumC1651M51821 = C23525.m51821(enumC9414M32909);
-                            if (enumC1651M51821 != null) {
-                                arrayList.add(enumC1651M51821.m5550());
-                                c13419.m32908(interfaceC1423, enumC1651M51821);
-                                arrayList.remove(arrayList.size() - 1);
-                            } else {
-                                throw new IllegalStateException("no event down from " + c13419.m32907());
-                            }
-                        }
-                    }
-                }
-                Map.Entry entryM33391 = this.f15348.m33390();
-                if (!this.f15344 && entryM33391 != null && this.f15346.compareTo(((C13419) entryM33391.getValue()).m32907()) > 0) {
-                    C9761 c9761M33392 = this.f15348.m33392();
-                    while (c9761M33392.hasNext() && !this.f15344) {
-                        Map.Entry entry2 = (Map.Entry) c9761M33392.next();
-                        InterfaceC22591 interfaceC22592 = (InterfaceC22591) entry2.getKey();
-                        C13419 c134110 = (C13419) entry2.getValue();
-                        while (c134110.m32907().compareTo(this.f15346) < 0 && !this.f15344 && this.f15348.m28104(interfaceC22592)) {
-                            arrayList.add(c134110.m32907());
-                            C23525 c23526 = EnumC1651.f6602;
-                            EnumC9414 enumC9414M329010 = c134110.m32907();
-                            c23526.getClass();
-                            EnumC1651 enumC1651M51823 = C23525.m51823(enumC9414M329010);
-                            if (enumC1651M51823 == null) {
-                                throw new IllegalStateException("no event up from " + c134110.m32907());
-                            }
-                            c134110.m32908(interfaceC1423, enumC1651M51823);
-                            arrayList.remove(arrayList.size() - 1);
-                        }
-                    }
-                }
-            }
-            this.f15344 = false;
-            return;
-        }
-        throw new IllegalStateException("LifecycleOwner of this LifecycleRegistry is already garbage collected. It is too late to change lifecycle state.");
+    public final boolean m13556(int i) {
+        return this.f15464.m53344(i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private final void m11898(String str) {
-        if (this.f15347 && !C16816.m39456().m39458()) {
-            throw new IllegalStateException(C16523.m38890("Method ", str, " must be called on the main thread").toString());
-        }
+    public final void m13555(boolean z) {
+        this.f15464.m53343(z);
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final ArrayList m13562() {
+        return this.f15464.m53347();
     }
 }

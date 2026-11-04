@@ -12,7 +12,7 @@ import org.bouncycastle.math.ec.ECMultiplier;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECNewRandomnessTransform implements ECPairFactorTransform {
     public ECPublicKeyParameters key;
     public BigInteger lastK;

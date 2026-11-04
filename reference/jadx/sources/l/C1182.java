@@ -1,64 +1,78 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.function.Consumer;
+import java.io.InvalidObjectException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.֨ܳܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: TUG */
+/* JADX INFO: renamed from: l.֨۫ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W3U9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C1182 extends AbstractC15755 {
+public final class C1182 extends AbstractC25246 implements Serializable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4328 f5253;
+    public static final C1182 f4320;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public long f5254;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public static final C1182 f4321;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Iterator f5255;
+    public static final /* synthetic */ int f4322 = 0;
 
-    @Override // l.AbstractC15755, l.InterfaceC20693
-    public /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C21398.$default$forEachRemaining(this, consumer);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final transient AbstractC1928 f4323;
+
+    public C1182(AbstractC1928 abstractC1928) {
+        this.f4323 = abstractC1928;
     }
 
-    @Override // l.AbstractC15755, l.InterfaceC20693
-    public /* synthetic */ Comparator getComparator() {
-        return C21398.$default$getComparator(this);
+    static {
+        int i = AbstractC1928.f6477;
+        f4320 = new C1182(C4867.f16966);
+        f4321 = new C1182(AbstractC1928.of((Object) C2346.m7915()));
     }
 
-    @Override // l.AbstractC15755, l.InterfaceC20693
-    public /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C1182 m4355() {
+        return f4320;
     }
 
-    @Override // l.AbstractC15755, l.InterfaceC20693
-    public /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C1182 m4356() {
+        return f4321;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C1182(long j, int i, Iterator it, C4328 c4328) {
-        super(j, i);
-        this.f5255 = it;
-        this.f5253 = c4328;
-        this.f5254 = 0L;
-    }
-
-    @Override // l.InterfaceC20693
-    public final boolean tryAdvance(Consumer consumer) {
-        Iterator it = this.f5255;
-        if (!it.hasNext()) {
-            return false;
+    @Override // l.InterfaceC6821
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C2346 mo4358(Integer num) {
+        int iM19448 = C7104.m19448(this.f4323, new C24303(), new C3484(num), C0108.f1051, EnumC8595.f28097, EnumC7850.f26143);
+        if (iM19448 == -1) {
+            return null;
         }
-        Object next = it.next();
-        long j = this.f5254;
-        this.f5254 = 1 + j;
-        if (!((C12188) this.f5253.f15523).apply(next)) {
-            j = -1;
+        C2346 c2346 = (C2346) this.f4323.get(iM19448);
+        if (c2346.m7918(num)) {
+            return c2346;
         }
-        consumer.accept(Long.valueOf(j));
-        return true;
+        return null;
+    }
+
+    @Override // l.InterfaceC6821
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Set mo4357() {
+        AbstractC1928 abstractC1928 = this.f4323;
+        if (abstractC1928.isEmpty()) {
+            int i = AbstractC8639.f28224;
+            return C13070.f41806;
+        }
+        int i2 = C2346.f7567;
+        return new C5613(abstractC1928, C9057.f29455);
+    }
+
+    public Object writeReplace() {
+        return new C10130(this.f4323);
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
+        throw new InvalidObjectException("Use SerializedForm");
     }
 }

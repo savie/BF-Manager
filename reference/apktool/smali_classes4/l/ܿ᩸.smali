@@ -1,56 +1,19 @@
-.class public final Ll/ܿ᩸;
+.class public abstract Ll/ܿ᩸;
 .super Ljava/lang/Object;
-.source "WW6"
+.source "5B8H"
 
 
-# direct methods
-.method public static ۙ()V
-    .locals 3
+# virtual methods
+.method public abstract ۙ(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+.end method
 
-    .line 12
-    invoke-static {}, Ll/ۙᩳ;->ۙ()Ll/ۙᩳ;
+.method public abstract ۙ(Landroid/content/Intent;I)Ljava/lang/Object;
+.end method
 
-    move-result-object v0
+.method public ᩷(Landroid/content/Context;Ljava/lang/Object;)Ll/᩶᩸;
+    .locals 0
 
-    .line 14
-    :try_start_0
-    const-class v1, Ll/ۙᩳ;
+    const/4 p1, 0x0
 
-    const-string v2, "\u1a79"
-
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    .line 15
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map;
-
-    if-eqz v0, :cond_0
-
-    .line 19
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    .line 22
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object p1
 .end method

@@ -1,154 +1,291 @@
 package l;
 
-import android.content.ContextWrapper;
+/* JADX INFO: renamed from: l.֨۟ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T9Q9 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1029 extends AbstractC15001 implements InterfaceC9078 {
 
-/* JADX INFO: renamed from: l.֨ۢۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18S9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1029 {
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public C6995 f3738;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ContextWrapper f4806;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f3739;
 
-    public C1029(ContextWrapper contextWrapper) {
-        this.f4806 = contextWrapper;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C9998 f3740;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Object f3741;
+
+    public /* synthetic */ C1029(int i) {
+        this();
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Code restructure failed: missing block: B:41:0x0073, code lost:
-    
-        if (android.os.Build.VERSION.SDK_INT >= 26) goto L45;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:44:0x007a, code lost:
-    
-        if (android.os.Build.VERSION.SDK_INT >= 34) goto L45;
-     */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final int m3873(l.C7648 r6) {
-        /*
-            r5 = this;
-            java.lang.String r0 = r6.f25265
-            r1 = 0
-            if (r0 == 0) goto L86
-            boolean r0 = l.C6632.m17985(r0)
-            if (r0 != 0) goto Ld
-            goto L86
-        Ld:
-            java.lang.String r6 = r6.f25265
-            java.lang.String r0 = l.C17983.f57504
-            r6.getClass()
-            int r0 = r6.hashCode()
-            r2 = 4
-            r3 = 1
-            r4 = -1
-            switch(r0) {
-                case -1487656890: goto L61;
-                case -1487464693: goto L56;
-                case -1487464690: goto L4b;
-                case -1487394660: goto L40;
-                case -1487018032: goto L35;
-                case -879272239: goto L2a;
-                case -879258763: goto L1f;
-                default: goto L1e;
-            }
-        L1e:
-            goto L6b
-        L1f:
-            java.lang.String r0 = "image/png"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L28
-            goto L6b
-        L28:
-            r4 = 6
-            goto L6b
-        L2a:
-            java.lang.String r0 = "image/bmp"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L33
-            goto L6b
-        L33:
-            r4 = 5
-            goto L6b
-        L35:
-            java.lang.String r0 = "image/webp"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L3e
-            goto L6b
-        L3e:
-            r4 = 4
-            goto L6b
-        L40:
-            java.lang.String r0 = "image/jpeg"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L49
-            goto L6b
-        L49:
-            r4 = 3
-            goto L6b
-        L4b:
-            java.lang.String r0 = "image/heif"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L54
-            goto L6b
-        L54:
-            r4 = 2
-            goto L6b
-        L56:
-            java.lang.String r0 = "image/heic"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L5f
-            goto L6b
-        L5f:
-            r4 = 1
-            goto L6b
-        L61:
-            java.lang.String r0 = "image/avif"
-            boolean r6 = r6.equals(r0)
-            if (r6 != 0) goto L6a
-            goto L6b
-        L6a:
-            r4 = 0
-        L6b:
-            switch(r4) {
-                case 0: goto L76;
-                case 1: goto L6f;
-                case 2: goto L6f;
-                case 3: goto L7c;
-                case 4: goto L7c;
-                case 5: goto L7c;
-                case 6: goto L7c;
-                default: goto L6e;
-            }
-        L6e:
-            goto L81
-        L6f:
-            int r6 = android.os.Build.VERSION.SDK_INT
-            r0 = 26
-            if (r6 < r0) goto L81
-            goto L7c
-        L76:
-            int r6 = android.os.Build.VERSION.SDK_INT
-            r0 = 34
-            if (r6 < r0) goto L81
-        L7c:
-            int r6 = l.C13958.m33811(r2, r1, r1, r1)
-            return r6
-        L81:
-            int r6 = l.C13958.m33811(r3, r1, r1, r1)
-            return r6
-        L86:
-            int r6 = l.C13958.m33811(r1, r1, r1, r1)
-            return r6
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C1029.m3873(l.۟ᩴۙ):int");
+    @Override // l.AbstractC15001, l.AbstractC0479
+    /* JADX INFO: renamed from: clear */
+    public final /* bridge */ /* synthetic */ AbstractC0479 mo2313clear() {
+        m3936();
+        return this;
+    }
+
+    @Override // l.AbstractC15001, l.AbstractC0479
+    /* JADX INFO: renamed from: clear */
+    public final /* bridge */ /* synthetic */ InterfaceC7588 mo2313clear() {
+        m3936();
+        return this;
+    }
+
+    @Override // l.AbstractC15001, l.AbstractC0479
+    /* JADX INFO: renamed from: clear */
+    public final /* bridge */ /* synthetic */ InterfaceC14299 mo2313clear() {
+        m3936();
+        return this;
+    }
+
+    @Override // l.AbstractC15001, l.AbstractC0479
+    /* JADX INFO: renamed from: clear */
+    public final /* bridge */ /* synthetic */ AbstractC15001 mo2313clear() {
+        m3936();
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.AbstractC1225, l.InterfaceC7588
+    public final /* bridge */ /* synthetic */ AbstractC0479 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        m3937(abstractC3660, c24215);
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.AbstractC1225, l.InterfaceC7588
+    public final /* bridge */ /* synthetic */ AbstractC1225 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        m3937(abstractC3660, c24215);
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.AbstractC1225, l.InterfaceC7588
+    public final /* bridge */ /* synthetic */ InterfaceC7588 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        m3937(abstractC3660, c24215);
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.AbstractC1225, l.InterfaceC7588
+    public final /* bridge */ /* synthetic */ InterfaceC14299 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        m3937(abstractC3660, c24215);
+        return this;
+    }
+
+    @Override // l.AbstractC15001
+    public final C7544 internalGetFieldAccessorTable() {
+        C7544 c7544 = C12543.f40284;
+        c7544.m20621(C9231.class, C1029.class);
+        return c7544;
+    }
+
+    public C1029() {
+        this.f3741 = "";
+        if (AbstractC9035.alwaysUseFieldBuilders) {
+            m3935();
+        }
+    }
+
+    public C1029(InterfaceC7937 interfaceC7937, int i) {
+        super(interfaceC7937);
+        this.f3741 = "";
+        if (AbstractC9035.alwaysUseFieldBuilders) {
+            m3935();
+        }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C13025 m3874() {
-        return new C13025(this.f4806);
+    public final void m3936() {
+        super.mo2313clear();
+        this.f3739 = 0;
+        this.f3741 = "";
+        this.f3738 = null;
+        C9998 c9998 = this.f3740;
+        if (c9998 != null) {
+            c9998.m25851();
+            this.f3740 = null;
+        }
+    }
+
+    @Override // l.AbstractC15001, l.InterfaceC14299, l.InterfaceC9078
+    public final C24478 getDescriptorForType() {
+        return C12543.f40288;
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC9824
+    public final InterfaceC18775 getDefaultInstanceForType() {
+        return C9231.getDefaultInstance();
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC9824
+    public final InterfaceC21013 getDefaultInstanceForType() {
+        return C9231.getDefaultInstance();
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC7588
+    public final InterfaceC18775 build() {
+        C9231 c9231BuildPartial = buildPartial();
+        if (c9231BuildPartial.isInitialized()) {
+            return c9231BuildPartial;
+        }
+        throw AbstractC0479.m2311((InterfaceC21013) c9231BuildPartial);
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC7588
+    public final InterfaceC21013 build() {
+        C9231 c9231BuildPartial = buildPartial();
+        if (c9231BuildPartial.isInitialized()) {
+            return c9231BuildPartial;
+        }
+        throw AbstractC0479.m2311((InterfaceC21013) c9231BuildPartial);
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC7588
+    public final C9231 buildPartial() {
+        C6995 c6995;
+        int i = 0;
+        C9231 c9231 = new C9231(this, 0);
+        int i2 = this.f3739;
+        if (i2 != 0) {
+            if ((i2 & 1) != 0) {
+                c9231.f30069 = this.f3741;
+                i = 1;
+            }
+            if ((i2 & 2) != 0) {
+                C9998 c9998 = this.f3740;
+                if (c9998 == null) {
+                    c6995 = this.f3738;
+                } else {
+                    c6995 = (C6995) c9998.m25854();
+                }
+                c9231.f30067 = c6995;
+                i |= 2;
+            }
+            c9231.f30068 = i | c9231.f30068;
+        }
+        onBuilt();
+        return c9231;
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC14299
+    public final AbstractC0479 mergeFrom(InterfaceC21013 interfaceC21013) {
+        if (interfaceC21013 instanceof C9231) {
+            m3938((C9231) interfaceC21013);
+            return this;
+        }
+        super.mergeFrom(interfaceC21013);
+        return this;
+    }
+
+    @Override // l.AbstractC0479, l.InterfaceC14299
+    public final InterfaceC14299 mergeFrom(InterfaceC21013 interfaceC21013) {
+        if (interfaceC21013 instanceof C9231) {
+            m3938((C9231) interfaceC21013);
+            return this;
+        }
+        super.mergeFrom(interfaceC21013);
+        return this;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m3938(C9231 c9231) {
+        C6995 c6995;
+        if (c9231 == C9231.getDefaultInstance()) {
+            return;
+        }
+        if (c9231.hasName()) {
+            this.f3741 = c9231.f30069;
+            this.f3739 |= 1;
+            onChanged();
+        }
+        if (c9231.m24420()) {
+            C6995 c6995M24421 = c9231.m24421();
+            C9998 c9998 = this.f3740;
+            if (c9998 == null) {
+                if ((this.f3739 & 2) == 0 || (c6995 = this.f3738) == null || c6995 == C6995.getDefaultInstance()) {
+                    this.f3738 = c6995M24421;
+                } else {
+                    this.f3739 |= 2;
+                    onChanged();
+                    ((C8486) m3935().m25856()).m22808(c6995M24421);
+                }
+            } else {
+                c9998.m25850(c6995M24421);
+            }
+            if (this.f3738 != null) {
+                this.f3739 |= 2;
+                onChanged();
+            }
+        }
+        mo2317mergeUnknownFields(c9231.getUnknownFields());
+        onChanged();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m3937(AbstractC3660 abstractC3660, C24215 c24215) {
+        c24215.getClass();
+        boolean z = false;
+        while (!z) {
+            try {
+                try {
+                    int iMo11876 = abstractC3660.mo11876();
+                    if (iMo11876 != 0) {
+                        if (iMo11876 == 10) {
+                            this.f3741 = abstractC3660.mo11890();
+                            this.f3739 |= 1;
+                        } else if (iMo11876 == 18) {
+                            abstractC3660.mo11881(m3935().m25856(), c24215);
+                            this.f3739 |= 2;
+                        } else if (!super.parseUnknownField(abstractC3660, c24215, iMo11876)) {
+                        }
+                    }
+                    z = true;
+                } catch (C20463 e) {
+                    throw e.m46971();
+                }
+            } catch (Throwable th) {
+                onChanged();
+                throw th;
+            }
+        }
+        onChanged();
+    }
+
+    @Override // l.AbstractC15001, l.InterfaceC9824
+    public final boolean isInitialized() {
+        C6995 defaultInstance;
+        if ((this.f3739 & 2) == 0) {
+            return true;
+        }
+        C9998 c9998 = this.f3740;
+        if (c9998 == null) {
+            defaultInstance = this.f3738;
+            if (defaultInstance == null) {
+                defaultInstance = C6995.getDefaultInstance();
+            }
+        } else {
+            defaultInstance = (C6995) c9998.m25853();
+        }
+        return defaultInstance.isInitialized();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    private C9998 m3935() {
+        C6995 defaultInstance;
+        C9998 c9998 = this.f3740;
+        if (c9998 == null) {
+            if (c9998 == null) {
+                defaultInstance = this.f3738;
+                if (defaultInstance == null) {
+                    defaultInstance = C6995.getDefaultInstance();
+                }
+            } else {
+                defaultInstance = (C6995) c9998.m25853();
+            }
+            this.f3740 = new C9998(defaultInstance, getParentForChildren(), isClean());
+            this.f3738 = null;
+        }
+        return this.f3740;
     }
 }

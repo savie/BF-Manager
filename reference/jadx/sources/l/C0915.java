@@ -1,64 +1,42 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.io.IOException;
+import java.io.StringWriter;
 
-/* JADX INFO: renamed from: l.֨ۚᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M1ME */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0915 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f3664;
-
+/* JADX INFO: renamed from: l.֨ۘۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R2DU */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0915 extends AbstractC3152 {
+    @Override // l.AbstractC3152
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f3665 = new ArrayList();
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final CharSequence f3666;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4941 f3667;
-
-    public C0915(InterfaceC4941 interfaceC4941, CharSequence charSequence, CharSequence charSequence2) {
-        this.f3667 = interfaceC4941;
-        this.f3666 = charSequence;
-        this.f3664 = charSequence2;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC4941 m3636() {
-        Iterator itMo11890 = this.f3667.mo11886().f31762.mo11890();
+    public final int mo3683(CharSequence charSequence, int i, StringWriter stringWriter) throws IOException {
+        int i2;
+        int i3;
+        if (charSequence.charAt(i) != '\\' || (i2 = i + 1) >= charSequence.length() || charSequence.charAt(i2) != 'u') {
+            return 0;
+        }
+        int i4 = 2;
         while (true) {
-            boolean zHasNext = itMo11890.hasNext();
-            ArrayList arrayList = this.f3665;
-            CharSequence charSequence = this.f3664;
-            CharSequence charSequence2 = this.f3666;
-            if (zHasNext) {
-                C20464 c20464 = (C20464) itMo11890.next();
-                int iM30312 = c20464.f66401;
-                int iM30313 = c20464.f66399;
-                int iM30308 = c20464.f66400;
-                int iM30309 = c20464.f66402;
-                if (C3737.m10947(iM30312, charSequence2)) {
-                    iM30312 = C12206.m30312(iM30312, iM30308, charSequence2);
-                }
-                if (C3737.m10947(iM30308 - 1, charSequence2)) {
-                    iM30308 = C12206.m30308(iM30312, iM30308, charSequence2);
-                }
-                if (C3737.m10947(iM30313, charSequence)) {
-                    iM30313 = C12206.m30312(iM30313, iM30309, charSequence);
-                }
-                if (C3737.m10947(iM30309 - 1, charSequence)) {
-                    iM30309 = C12206.m30308(iM30313, iM30309, charSequence);
-                }
-                C20464 c20465 = new C20464(iM30312, iM30308, iM30313, iM30309);
-                if (!c20465.m46276() && !C7266.m19396(charSequence2.subSequence(iM30312, iM30308), charSequence.subSequence(iM30313, iM30309), EnumC8678.DEFAULT)) {
-                    arrayList.add(c20465);
-                }
-            } else {
-                return C1413.m4941(arrayList, charSequence2.length(), charSequence.length());
+            i3 = i + i4;
+            if (i3 >= charSequence.length() || charSequence.charAt(i3) != 'u') {
+                break;
+            }
+            i4++;
+        }
+        if (i3 < charSequence.length() && charSequence.charAt(i3) == '+') {
+            i4++;
+        }
+        int i5 = i + i4;
+        int i6 = i5 + 4;
+        if (i6 <= charSequence.length()) {
+            CharSequence charSequenceSubSequence = charSequence.subSequence(i5, i6);
+            try {
+                stringWriter.write((char) Integer.parseInt(charSequenceSubSequence.toString(), 16));
+                return i4 + 4;
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Unable to parse unicode value: " + ((Object) charSequenceSubSequence), e);
             }
         }
+        throw new IllegalArgumentException("Less than 4 hex digits in unicode value: '" + ((Object) charSequence.subSequence(i, charSequence.length())) + "' due to end of CharSequence");
     }
 }

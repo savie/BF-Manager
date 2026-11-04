@@ -1,90 +1,54 @@
 .class public final Ll/ܳܺ᩺;
-.super Ljava/util/ArrayList;
-.source "BB0B"
+.super Ljava/lang/Object;
+.source "S7EN"
 
 
 # instance fields
-.field public final ܺ:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final ۙ:Ll/᩺۬᩹;
 
-.field public final ᩶:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public ᩷:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ll/᩺۬᩹;)V
+    .locals 0
 
-    .line 18
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    .line 40
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    if-nez p2, :cond_0
 
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    const/4 p2, 0x0
 
-    iput-object v0, p0, Ll/ܳܺ᩺;->ܺ:Ljava/util/concurrent/locks/ReentrantLock;
+    new-array p2, p2, [Ljava/lang/String;
 
-    .line 12
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 41
+    invoke-static {p1, p2}, Ll/ܰ۬᩹;->get(Ljava/lang/String;[Ljava/lang/String;)Ll/᩺۬᩹;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    move-result-object p1
 
-    iput-object v0, p0, Ll/ܳܺ᩺;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۖ()V
-    .locals 1
-
-    .line 26
-    iget-object v0, p0, Ll/ܳܺ᩺;->ܺ:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    .line 27
-    iget-object v0, p0, Ll/ܳܺ᩺;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    return-void
-.end method
-
-.method public final ۚ()V
-    .locals 1
-
-    .line 31
-    iget-object v0, p0, Ll/ܳܺ᩺;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    .line 32
-    iget-object v0, p0, Ll/ܳܺ᩺;->ܺ:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-.end method
-
-.method public final ۨ()Z
-    .locals 1
-
-    .line 36
-    iget-object v0, p0, Ll/ܳܺ᩺;->᩶:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-interface {p2, p1}, Ll/᩺۬᩹;->resolve(Ljava/lang/String;)Ll/᩺۬᩹;
 
-    return v0
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Ll/ܳܺ᩺;->ۙ:Ll/᩺۬᩹;
+
+    .line 43
+    :try_start_0
+    sget-object p2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-static {p1, p2}, Ll/ۗ۬᩹;->readAllLines(Ll/᩺۬᩹;Ljava/nio/charset/Charset;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll/ܳܺ᩺;->᩷:Ljava/util/List;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
 .end method

@@ -1,73 +1,53 @@
 .class public final Ll/ܺ᩸ۨ;
-.super Ljava/util/LinkedHashMap;
-.source "17JK"
+.super Ljava/lang/Object;
+.source "S8D3"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/֡᩸ۨ;
+.field public ۙ:I
 
+.field public ۤ:I
 
-# direct methods
-.method public constructor <init>(Ll/֡᩸ۨ;)V
-    .locals 2
-
-    .line 95
-    iput-object p1, p0, Ll/ܺ᩸ۨ;->ܺ:Ll/֡᩸ۨ;
-
-    const/4 p1, 0x6
-
-    const/high16 v0, 0x3f400000    # 0.75f
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, p1, v0, v1}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
-
-    return-void
-.end method
+.field public ᩷:I
 
 
 # virtual methods
-.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+.method public final ۙ()I
     .locals 2
 
-    .line 98
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+    .line 71
+    iget v0, p0, Ll/ܺ᩸ۨ;->ۤ:I
 
-    move-result v0
+    iget v1, p0, Ll/ܺ᩸ۨ;->ۙ:I
 
-    const/4 v1, 0x5
+    add-int/2addr v0, v1
 
-    if-le v0, v1, :cond_0
+    return v0
+.end method
 
-    .line 100
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+.method public final ۙ(I)V
+    .locals 1
 
-    move-result-object p1
+    .line 65
+    iget v0, p0, Ll/ܺ᩸ۨ;->ۤ:I
 
-    check-cast p1, Ll/᩸᩸ۨ;
+    add-int/2addr v0, p1
 
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iput v0, p0, Ll/ܺ᩸ۨ;->ۤ:I
 
-    goto :goto_0
+    .line 66
+    iget v0, p0, Ll/ܺ᩸ۨ;->᩷:I
 
-    :catch_0
-    move-exception p1
+    add-int/2addr v0, p1
 
-    .line 102
-    iget-object v0, p0, Ll/ܺ᩸ۨ;->ܺ:Ll/֡᩸ۨ;
+    iput v0, p0, Ll/ܺ᩸ۨ;->᩷:I
 
-    invoke-static {v0, p1}, Ll/֡᩸ۨ;->ۙ(Ll/֡᩸ۨ;Ljava/io/IOException;)V
+    .line 67
+    iget v0, p0, Ll/ܺ᩸ۨ;->ۙ:I
 
-    :goto_0
-    const/4 p1, 0x1
+    sub-int/2addr v0, p1
 
-    return p1
+    iput v0, p0, Ll/ܺ᩸ۨ;->ۙ:I
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

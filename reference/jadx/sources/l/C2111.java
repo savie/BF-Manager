@@ -1,80 +1,53 @@
 package l;
 
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
+import android.R;
+import android.content.Context;
+import android.database.Cursor;
+import android.view.ContextThemeWrapper;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CheckedTextView;
+import android.widget.CursorAdapter;
 
-/* JADX INFO: renamed from: l.֫᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C2111 implements InterfaceC12932, LongConsumer, InterfaceC6206 {
-    public boolean a = false;
-    public long b;
-    public final /* synthetic */ InterfaceC19282 c;
+/* JADX INFO: renamed from: l.֫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I67T */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C2111 extends CursorAdapter {
 
-    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
-        return C21917.$default$andThen(this, longConsumer);
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3602 f6984;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23740 f6985;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f6986;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17026 f6987;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int f6988;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2111(C17026 c17026, ContextThemeWrapper contextThemeWrapper, Cursor cursor, C23740 c23740, C3602 c3602) {
+        super((Context) contextThemeWrapper, cursor, false);
+        this.f6987 = c17026;
+        this.f6985 = c23740;
+        this.f6984 = c3602;
+        Cursor cursor2 = getCursor();
+        this.f6988 = cursor2.getColumnIndexOrThrow(c17026.f55648);
+        this.f6986 = cursor2.getColumnIndexOrThrow(c17026.f55650);
     }
 
-    @Override // l.InterfaceC3758
-    public final /* bridge */ /* synthetic */ void forEachRemaining(Object obj) {
-        forEachRemaining((LongConsumer) obj);
+    @Override // android.widget.CursorAdapter
+    public final void bindView(View view, Context context, Cursor cursor) {
+        ((CheckedTextView) view.findViewById(R.id.text1)).setText(cursor.getString(this.f6988));
+        this.f6985.setItemChecked(cursor.getPosition(), cursor.getInt(this.f6986) == 1);
     }
 
-    @Override // l.InterfaceC12932
-    public final /* synthetic */ void forEachRemaining(LongConsumer longConsumer) {
-        C0936.$default$forEachRemaining((InterfaceC12932) this, longConsumer);
-    }
-
-    @Override // l.InterfaceC12932, java.util.Iterator
-    public final /* synthetic */ Long next() {
-        return C0936.$default$next((InterfaceC12932) this);
-    }
-
-    @Override // java.util.Iterator
-    public final /* bridge */ /* synthetic */ Object next() {
-        return next();
-    }
-
-    @Override // l.InterfaceC12932, java.util.Iterator, l.InterfaceC6206
-    public final void forEachRemaining(Consumer consumer) {
-        if (consumer instanceof LongConsumer) {
-            forEachRemaining((LongConsumer) consumer);
-            return;
-        }
-        C13638.requireNonNull(consumer);
-        if (AbstractC15297.a) {
-            AbstractC15297.a(C2111.class, "{0} calling PrimitiveIterator.OfLong.forEachRemainingLong(action::accept)");
-            throw null;
-        }
-        C13638.requireNonNull(consumer);
-        forEachRemaining((LongConsumer) new C5418(consumer, 0));
-    }
-
-    public C2111(InterfaceC19282 interfaceC19282) {
-        this.c = interfaceC19282;
-    }
-
-    @Override // java.util.function.LongConsumer
-    public final void accept(long j) {
-        this.a = true;
-        this.b = j;
-    }
-
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        if (!this.a) {
-            this.c.tryAdvance((LongConsumer) this);
-        }
-        return this.a;
-    }
-
-    @Override // l.InterfaceC12932
-    public final long nextLong() {
-        if (!this.a && !hasNext()) {
-            throw new NoSuchElementException();
-        }
-        this.a = false;
-        return this.b;
+    @Override // android.widget.CursorAdapter
+    public final View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
+        return this.f6987.f55629.inflate(this.f6984.f12324, viewGroup, false);
     }
 }

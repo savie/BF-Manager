@@ -3,8 +3,8 @@ package org.bouncycastle.jcajce.provider.symmetric;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import javax.crypto.SecretKey;
-import l.C13958;
-import l.C5800;
+import l.C3188;
+import l.C8947;
 import org.bouncycastle.crypto.PasswordConverter;
 import org.bouncycastle.crypto.generators.SCrypt;
 import org.bouncycastle.crypto.params.KeyParameter;
@@ -15,10 +15,9 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseSecretKeyFactory;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.jcajce.spec.ScryptKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SCRYPT {
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class BasePBKDF2 extends BaseSecretKeyFactory {
         public int scheme;
 
@@ -56,12 +55,11 @@ public class SCRYPT {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ScryptWithUTF8", "SecretKeyFactory.SCRYPT", sb, configurableProvider);
-            C13958.m33814(configurableProvider, str, "$ScryptWithUTF8", "SecretKeyFactory", MiscObjectIdentifiers.id_scrypt);
+            C8947.m23913(str, "$ScryptWithUTF8", "SecretKeyFactory.SCRYPT", sb, configurableProvider);
+            C3188.m10408(configurableProvider, str, "$ScryptWithUTF8", "SecretKeyFactory", MiscObjectIdentifiers.id_scrypt);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ScryptWithUTF8 extends BasePBKDF2 {
         public ScryptWithUTF8() {
             super("SCRYPT", 5);

@@ -1,23 +1,19 @@
 package l;
 
-import android.view.VelocityTracker;
+import java.util.function.ToLongFunction;
 
-/* JADX INFO: renamed from: l.ܽۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L1CU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16528 implements InterfaceC0299 {
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C16528 f53099 = new C16528();
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public VelocityTracker f53100;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C16528 m38900() {
-        VelocityTracker velocityTrackerObtain = VelocityTracker.obtain();
-        C16528 c16528 = f53099;
-        c16528.f53100 = velocityTrackerObtain;
-        return c16528;
+/* JADX INFO: renamed from: l.ܺۖۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K74T */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C16528 implements ToLongFunction {
+    @Override // java.util.function.ToLongFunction
+    public final long applyAsLong(Object obj) {
+        C15648 c15648 = ((C17447) obj).f56742;
+        int i = c15648.f50828;
+        if (i > 0) {
+            return i;
+        }
+        int i2 = c15648.f50815;
+        return i2 > 0 ? i2 : C25227.FOREVER_NS;
     }
 }

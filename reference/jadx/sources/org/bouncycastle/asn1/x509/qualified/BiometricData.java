@@ -11,7 +11,7 @@ import org.bouncycastle.asn1.DERIA5String;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BiometricData extends ASN1Object {
     public ASN1OctetString biometricDataHash;
     public AlgorithmIdentifier hashAlgorithm;

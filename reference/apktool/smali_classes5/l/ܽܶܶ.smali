@@ -1,163 +1,239 @@
 .class public final Ll/ܽܶܶ;
-.super Ll/᩻ܶܶ;
-.source "2BAP"
+.super Ll/ܶܶܶ;
+.source "V9HU"
 
 
-# instance fields
-.field public final ܺ:Ll/֫ܶܶ;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
+    const-string v0, "little endian"
 
-# direct methods
-.method public constructor <init>(Ll/֫ܶܶ;)V
-    .locals 0
+    return-object v0
+.end method
 
-    .line 31
-    invoke-direct {p0}, Ll/᩻ܶܶ;-><init>()V
+.method public final ۙ(Ll/᩻ܶܶ;)J
+    .locals 6
 
-    .line 32
-    iput-object p1, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
+    const/16 v0, 0x8
+
+    new-array v1, v0, [B
+
+    .line 293
+    invoke-virtual {p1, v0, v1}, Ll/᩻ܶܶ;->᩷(I[B)V
+
+    const-wide/16 v2, 0x0
+
+    const/4 p1, 0x7
+
+    :goto_0
+    if-ltz p1, :cond_0
+
+    shl-long/2addr v2, v0
+
+    .line 269
+    aget-byte v4, v1, p1
+
+    and-int/lit16 v4, v4, 0xff
+
+    int-to-long v4, v4
+
+    or-long/2addr v2, v4
+
+    add-int/lit8 p1, p1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v2
+.end method
+
+.method public final ۙ(Ll/᩻ܶܶ;J)V
+    .locals 9
+
+    long-to-int v0, p2
+
+    int-to-byte v0, v0
+
+    const/16 v1, 0x8
+
+    shr-long v2, p2, v1
+
+    long-to-int v3, v2
+
+    int-to-byte v2, v3
+
+    const/16 v3, 0x10
+
+    shr-long v3, p2, v3
+
+    long-to-int v4, v3
+
+    int-to-byte v3, v4
+
+    const/16 v4, 0x18
+
+    shr-long v4, p2, v4
+
+    long-to-int v5, v4
+
+    int-to-byte v4, v5
+
+    const/16 v5, 0x20
+
+    shr-long v5, p2, v5
+
+    long-to-int v6, v5
+
+    int-to-byte v5, v6
+
+    const/16 v6, 0x28
+
+    shr-long v6, p2, v6
+
+    long-to-int v7, v6
+
+    int-to-byte v6, v7
+
+    const/16 v7, 0x30
+
+    shr-long v7, p2, v7
+
+    long-to-int v8, v7
+
+    int-to-byte v7, v8
+
+    const/16 v8, 0x38
+
+    shr-long/2addr p2, v8
+
+    long-to-int p3, p2
+
+    int-to-byte p2, p3
+
+    new-array p3, v1, [B
+
+    const/4 v8, 0x0
+
+    aput-byte v0, p3, v8
+
+    const/4 v0, 0x1
+
+    aput-byte v2, p3, v0
+
+    const/4 v0, 0x2
+
+    aput-byte v3, p3, v0
+
+    const/4 v0, 0x3
+
+    aput-byte v4, p3, v0
+
+    const/4 v0, 0x4
+
+    aput-byte v5, p3, v0
+
+    const/4 v0, 0x5
+
+    aput-byte v6, p3, v0
+
+    const/4 v0, 0x6
+
+    aput-byte v7, p3, v0
+
+    const/4 v0, 0x7
+
+    aput-byte p2, p3, v0
+
+    .line 318
+    invoke-virtual {p1, v1, p3}, Ll/᩻ܶܶ;->ۙ(I[B)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final ۙ(Ll/᩻ܶܶ;Ljava/lang/String;)V
     .locals 1
 
-    .line 52
-    instance-of v0, p1, Ll/ܽܶܶ;
+    .line 287
+    sget-object v0, Ll/᩷ܶܶ;->᩸:Ljava/nio/charset/Charset;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    .line 288
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 318
+    array-length v0, p2
+
+    invoke-virtual {p1, v0, p2}, Ll/᩻ܶܶ;->ۙ(I[B)V
+
+    return-void
+.end method
+
+.method public final ᩷(Ll/᩻ܶܶ;)J
+    .locals 8
+
+    const/4 v0, 0x4
+
+    new-array v1, v0, [B
+
+    .line 293
+    invoke-virtual {p1, v0, v1}, Ll/᩻ܶܶ;->᩷(I[B)V
 
     const/4 p1, 0x0
 
-    return p1
+    .line 227
+    aget-byte p1, v1, p1
 
-    .line 55
-    :cond_0
-    check-cast p1, Ll/ܽܶܶ;
+    int-to-long v2, p1
 
-    .line 106
-    iget-object v0, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
+    const-wide/16 v4, 0xff
 
-    iget-object p1, p1, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
+    and-long/2addr v2, v4
 
-    .line 56
-    invoke-virtual {v0, p1}, Ll/֫ܶܶ;->equals(Ljava/lang/Object;)Z
+    const/4 p1, 0x1
 
-    move-result p1
+    aget-byte p1, v1, p1
 
-    return p1
-.end method
+    shl-int/lit8 p1, p1, 0x8
 
-.method public final getType()Ll/ۗܶܶ;
-    .locals 1
+    int-to-long v4, p1
 
-    .line 111
-    sget-object v0, Ll/ۗܶܶ;->۟ۙ:Ll/ۗܶܶ;
+    const-wide/32 v6, 0xff00
 
-    return-object v0
-.end method
+    and-long/2addr v4, v6
 
-.method public final hashCode()I
-    .locals 1
+    or-long/2addr v2, v4
 
-    .line 61
-    iget-object v0, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
+    const/4 p1, 0x2
 
-    invoke-virtual {v0}, Ll/֫ܶܶ;->hashCode()I
+    aget-byte p1, v1, p1
 
-    move-result v0
+    shl-int/lit8 p1, p1, 0x10
 
-    return v0
-.end method
+    int-to-long v4, p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const-wide/32 v6, 0xff0000
 
-    .line 102
-    new-instance v0, Ljava/lang/StringBuilder;
+    and-long/2addr v4, v6
 
-    const-string v1, "proto{"
+    or-long/2addr v2, v4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x3
 
-    .line 94
-    iget-object v1, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
+    aget-byte p1, v1, p1
 
-    invoke-virtual {v1}, Ll/֫ܶܶ;->ۙ()Ljava/lang/String;
+    shl-int/lit8 p1, p1, 0x18
 
-    move-result-object v1
+    int-to-long v0, p1
 
-    .line 102
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v4, 0xff000000L
 
-    const/16 v1, 0x7d
+    and-long/2addr v0, v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    or-long/2addr v0, v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ֨()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "proto"
-
-    return-object v0
-.end method
-
-.method public final ۙ()Ljava/lang/String;
-    .locals 1
-
-    .line 94
-    iget-object v0, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
-
-    invoke-virtual {v0}, Ll/֫ܶܶ;->ۙ()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ܰ(Ll/ۢ᩺ܶ;)I
-    .locals 1
-
-    .line 85
-    check-cast p1, Ll/ܽܶܶ;
-
-    .line 86
-    iget-object v0, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
-
-    .line 106
-    iget-object p1, p1, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
-
-    .line 86
-    invoke-virtual {v0, p1}, Ll/֫ܶܶ;->ۙ(Ll/֫ܶܶ;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ܰ()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ܶ()Ll/֫ܶܶ;
-    .locals 1
-
-    .line 106
-    iget-object v0, p0, Ll/ܽܶܶ;->ܺ:Ll/֫ܶܶ;
-
-    return-object v0
+    return-wide v0
 .end method

@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.modes.kgcm;
 import org.bouncycastle.crypto.modes.KXTSBlockCipher;
 import org.bouncycastle.math.raw.Interleave;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KGCMUtil_256 {
     public static final int SIZE = 4;
 

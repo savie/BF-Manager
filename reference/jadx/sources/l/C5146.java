@@ -1,30 +1,62 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚۚ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: L78E */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C5146 {
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ۙ᩶ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O1K3 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5146 implements InterfaceC12943 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C19258 f17879;
+    public final /* synthetic */ C16332 f17922;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21956 f17880;
-
-    public /* synthetic */ C5146(C8675 c8675, C19258 c19258, C21956 c21956) {
-        this.f17879 = c19258;
-        this.f17880 = c21956;
+    public C5146(C16332 c16332) {
+        this.f17922 = c16332;
     }
 
+    @Override // l.InterfaceC12943
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C17684 m14299(String str) {
-        C19258 c19258 = this.f17879;
-        if (c19258.f62207 == null || !str.equals(c19258.f62203)) {
-            C17684 c17684M48786 = this.f17880.m48786(str);
-            c19258.f62207 = c17684M48786;
-            c19258.f62203 = str;
-            return c17684M48786;
+    public final void mo15545(boolean z) {
+        String strMo1445;
+        C16332 c16332 = this.f17922;
+        if (c16332.f29441.getBoolean("changed", false) != z) {
+            c16332.f29441.putBoolean("changed", z);
+            try {
+                c16332.m24172(((ActivityC0848) c16332.requireActivity()).m3442());
+            } catch (IOException unused) {
+            }
+            c16332.m24163(new C2754());
         }
-        return c19258.f62207;
+        if (c16332.f53026) {
+            c16332.f53027.mo14428(c16332.f53033, c16332.f53032.m54021());
+            if (c16332.f53048 != null) {
+                c16332.f53048.setEnabled(z);
+            }
+            if (z) {
+                strMo1445 = "*" + c16332.mo1445();
+            } else {
+                strMo1445 = c16332.mo1445();
+            }
+            int i = z ? C3296.f10764 : C3296.f10762;
+            if (c16332.f53045.getText().toString().equals(strMo1445)) {
+                return;
+            }
+            c16332.f53045.setText(strMo1445);
+            c16332.f53045.setTextColor(i);
+        }
+    }
+
+    @Override // l.InterfaceC12943
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo15546(boolean z, boolean z2) {
+        C16332 c16332 = this.f17922;
+        if (c16332.f53026) {
+            if (c16332.f53047 != null) {
+                c16332.f53047.setEnabled(z);
+            }
+            if (c16332.f53024 != null) {
+                c16332.f53024.setEnabled(z2);
+            }
+        }
     }
 }

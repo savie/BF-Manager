@@ -2,18 +2,22 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:state_enabled="false"
-        android:color="?attr/MT_Protector_res_0x7f040111"
-        android:alpha="@dimen/MT_Protector_res_0x7f07013a"/>
-    <item
-        android:color="?attr/MT_Protector_res_0x7f0400ff"
-        app:state_error="true"/>
-    <item
-        android:color="?attr/MT_Protector_res_0x7f04011a"
-        app:state_indeterminate="true"/>
+        android:color="?attr/MT_Protector_res_0x7f040118"
+        android:alpha="@dimen/MT_Protector_res_0x7f070188"/>
     <item
         android:state_checked="true"
-        android:color="?attr/MT_Protector_res_0x7f04011a"/>
+        android:color="?attr/MT_Protector_res_0x7f040123"/>
     <item
-        android:state_checked="false"
-        android:color="?attr/MT_Protector_res_0x7f040113"/>
+        android:color="?attr/MT_Protector_res_0x7f040119"
+        android:state_hovered="true"/>
+    <item
+        android:state_focused="true"
+        android:color="?attr/MT_Protector_res_0x7f040111"/>
+    <item
+        android:state_pressed="true"
+        android:color="?attr/MT_Protector_res_0x7f040119"/>
+    <item
+        android:color="?attr/MT_Protector_res_0x7f040119"
+        app:state_dragged="true"/>
+    <item android:color="?attr/MT_Protector_res_0x7f040119"/>
 </selector>

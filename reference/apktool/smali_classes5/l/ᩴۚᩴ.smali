@@ -1,106 +1,328 @@
-.class public abstract Ll/ᩴۚᩴ;
+.class public final Ll/ᩴۚᩴ;
 .super Ljava/lang/Object;
-.source "V1L7"
-
-# interfaces
-.implements Ll/᩺֨ᩴ;
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = -0x44907a65b4c385f2L
+.source "4AWI"
 
 
 # instance fields
-.field public ܺ:I
+.field public final ۙ:Ll/֨ܶ;
+
+.field public final ۤ:Landroid/widget/TextView;
+
+.field public final ܳ:Landroid/view/View;
+
+.field public final synthetic ᩴ:Ll/ۚۚᩴ;
+
+.field public final ᩷:Landroid/widget/TextView;
+
+.field public final ᩸:Ll/֨ܶ;
 
 
-# virtual methods
-.method public final andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+# direct methods
+.method public constructor <init>(Ll/ۚۚᩴ;)V
+    .locals 4
 
-    .line 245
-    new-instance p1, Ljava/lang/NoSuchMethodError;
+    .line 805
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
+    iput-object p1, p0, Ll/ᩴۚᩴ;->ᩴ:Ll/ۚۚᩴ;
 
-    throw p1
-.end method
+    const v0, 0x7f0d01f1
 
-.method public synthetic andThen(Ljava/util/function/IntUnaryOperator;)Ljava/util/function/IntUnaryOperator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܶ᩻ᩴ;->$default$andThen(Ljava/util/function/IntUnaryOperator;Ljava/util/function/IntUnaryOperator;)Ljava/util/function/IntUnaryOperator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 93
-    invoke-interface {p0, p1}, Ll/ۜ֫ᩳ;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 806
+    invoke-virtual {p1, v0}, Ll/ܽ֡֫;->ۙ(I)Landroid/view/View;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    iput-object p1, p0, Ll/ᩴۚᩴ;->ܳ:Landroid/view/View;
 
-.method public final applyAsInt(I)I
-    .locals 0
+    const v0, 0x7f0a0445
 
-    .line 60
-    invoke-interface {p0, p1}, Ll/᩺֨ᩴ;->get(I)I
+    .line 807
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
-.end method
+    check-cast v0, Landroid/widget/TextView;
 
-.method public final compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+    iput-object v0, p0, Ll/ᩴۚᩴ;->᩷:Landroid/widget/TextView;
 
-    .line 234
-    new-instance p1, Ljava/lang/NoSuchMethodError;
+    .line 808
+    invoke-direct {p0}, Ll/ᩴۚᩴ;->ۙ()V
 
-    invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
+    const v0, 0x7f0a0444
 
-    throw p1
-.end method
+    .line 809
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-.method public synthetic compose(Ljava/util/function/IntUnaryOperator;)Ljava/util/function/IntUnaryOperator;
-    .locals 0
+    move-result-object v0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ܶ᩻ᩴ;->$default$compose(Ljava/util/function/IntUnaryOperator;Ljava/util/function/IntUnaryOperator;)Ljava/util/function/IntUnaryOperator;
+    new-instance v1, Ll/ۜ۫ᩴ;
+
+    invoke-direct {v1, p0}, Ll/ۜ۫ᩴ;-><init>(Ll/ᩴۚᩴ;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0a0448
+
+    .line 848
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Ll/ᩴۚᩴ;->ۤ:Landroid/widget/TextView;
+
+    .line 849
+    invoke-direct {p0}, Ll/ᩴۚᩴ;->᩷()V
+
+    const v0, 0x7f0a0447
+
+    .line 850
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Ll/۬۫ᩴ;
+
+    invoke-direct {v1, p0}, Ll/۬۫ᩴ;-><init>(Ll/ᩴۚᩴ;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0a05e8
+
+    .line 858
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Ll/֨ܶ;
+
+    iput-object v0, p0, Ll/ᩴۚᩴ;->᩸:Ll/֨ܶ;
+
+    .line 859
+    sget v1, Ll/᩻ۚᩴ;->ۙ:I
+
+    .line 276
+    sget-object v1, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
+
+    const-string v2, "tfugh"
+
+    const/4 v3, 0x1
+
+    invoke-interface {v1, v2, v3}, Ll/ۢ֫ܺ;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    .line 859
+    invoke-virtual {v0, v1}, Ll/֨ܶ;->setChecked(Z)V
+
+    const v0, 0x7f0a044a
+
+    .line 860
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Ll/ۙۚᩴ;
+
+    invoke-direct {v1, p0}, Ll/ۙۚᩴ;-><init>(Ll/ᩴۚᩴ;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0a05e9
+
+    .line 864
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Ll/֨ܶ;
+
+    iput-object v0, p0, Ll/ᩴۚᩴ;->ۙ:Ll/֨ܶ;
+
+    .line 865
+    invoke-static {}, Ll/ۚۨ᩸;->ᩴ()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ll/֨ܶ;->setChecked(Z)V
+
+    const v0, 0x7f0a0442
+
+    .line 866
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    new-instance v0, Ll/᩷ۚᩴ;
 
-.method public abstract ۙ(II)I
-.end method
+    invoke-direct {v0, p0}, Ll/᩷ۚᩴ;-><init>(Ll/ᩴۚᩴ;)V
 
-.method public final ۙ()V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    .line 44
-    iput v0, p0, Ll/ᩴۚᩴ;->ܺ:I
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-.method public ۨ()I
-    .locals 1
+.method private ۙ()V
+    .locals 4
 
-    .line 49
-    iget v0, p0, Ll/ᩴۚᩴ;->ܺ:I
+    .line 874
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v1, Ll/᩻ۚᩴ;->ۙ:I
+
+    .line 245
+    sget-object v1, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
+
+    const-string v2, "text_function_min_line"
+
+    const/4 v3, 0x1
+
+    invoke-interface {v1, v2, v3}, Ll/ۢ֫ܺ;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 874
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " - "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 249
+    sget-object v1, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
+
+    const-string v2, "text_function_max_line"
+
+    const/4 v3, 0x4
+
+    invoke-interface {v1, v2, v3}, Ll/ۢ֫ܺ;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 874
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ll/ᩴۚᩴ;->᩷:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ(Ll/ᩴۚᩴ;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ll/ᩴۚᩴ;->ۙ()V
+
+    return-void
+.end method
+
+.method public static ۙ(Ll/ᩴۚᩴ;Landroid/content/DialogInterface;I)V
+    .locals 2
+
+    .line 853
+    sget v0, Ll/᩻ۚᩴ;->ۙ:I
+
+    .line 271
+    sget-object v0, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
+
+    invoke-interface {v0}, Ll/ۢ֫ܺ;->edit()Ll/ᩳ֫ܺ;
+
+    move-result-object v0
+
+    const-string v1, "tfgi"
+
+    invoke-interface {v0, p2, v1}, Ll/ᩳ֫ܺ;->ۙ(ILjava/lang/String;)Ll/ᩳ֫ܺ;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ll/ᩳ֫ܺ;->apply()V
+
+    .line 272
+    invoke-static {}, Ll/᩻ۚᩴ;->᩸()V
+
+    .line 854
+    invoke-direct {p0}, Ll/ᩴۚᩴ;->᩷()V
+
+    .line 855
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+.end method
+
+.method private ᩷()V
+    .locals 3
+
+    .line 878
+    sget v0, Ll/᩻ۚᩴ;->ۙ:I
+
+    .line 267
+    sget-object v0, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
+
+    const-string v1, "tfgi"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Ll/ۢ֫ܺ;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const v0, 0x7f12044b
+
+    .line 881
+    invoke-static {v0}, Ll/᩶᩷ۧ;->᩷(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x7f12044c
+
+    .line 880
+    invoke-static {v0}, Ll/᩶᩷ۧ;->᩷(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    const v0, 0x7f12044d
+
+    .line 879
+    invoke-static {v0}, Ll/᩶᩷ۧ;->᩷(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 878
+    :goto_0
+    iget-object v1, p0, Ll/ᩴۚᩴ;->ۤ:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

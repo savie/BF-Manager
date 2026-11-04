@@ -1,53 +1,19 @@
-.class public final Ll/᩻ᩴᩴ;
+.class public final synthetic Ll/᩻ᩴᩴ;
 .super Ljava/lang/Object;
-.source "1CD2"
+.source "K7TM"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
 
 
-# static fields
-.field public static final ۙ:Ll/ۧᩴᩴ;
-
-
-# direct methods
-.method public static constructor <clinit>()V
+# virtual methods
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    .line 190
-    new-instance v0, Ll/ۧᩴᩴ;
+    .line 0
+    new-instance v0, Ll/ܺᩴᩴ;
 
-    .line 34
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ll/ܺᩴᩴ;-><init>()V
 
-    .line 190
-    sput-object v0, Ll/᩻ᩴᩴ;->ۙ:Ll/ۧᩴᩴ;
-
-    return-void
-.end method
-
-.method public static ۙ(Ll/ۛᩴᩴ;)Ll/ۛ᩵ᩴ;
-    .locals 1
-
-    .line 44
-    invoke-interface {p0}, Ll/ۛᩴᩴ;->ۙۙ()Ll/ᩴۡᩴ;
-
-    move-result-object p0
-
-    .line 45
-    instance-of v0, p0, Ll/ܿᩴᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ܿᩴᩴ;
-
-    invoke-interface {p0}, Ll/ܿᩴᩴ;->ۙ()Ll/ۛ᩵ᩴ;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0}, Ll/ᩴۡᩴ;->iterator()Ll/ۛ᩵ᩴ;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

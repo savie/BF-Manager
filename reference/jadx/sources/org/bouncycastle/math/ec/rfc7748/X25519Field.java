@@ -1,7 +1,7 @@
 package org.bouncycastle.math.ec.rfc7748;
 
 import com.alipay.sdk.m.y.q;
-import l.C7309;
+import l.C11958;
 import org.bouncycastle.math.raw.Mod;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -361,12 +361,12 @@ public abstract class X25519Field {
         long j9 = (j8 * j2) + (j5 * j4) + (j * j7);
         long j10 = i8;
         long j11 = i7;
-        long jM19505 = C7309.m19505(j11, j2, j * j10, ((j8 * j4) + (j5 * j7)) << 1);
+        long jM29929 = C11958.m29929(j11, j2, j * j10, ((j8 * j4) + (j5 * j7)) << 1);
         long j12 = (j8 * j7) << 1;
         long j13 = i10;
         long j14 = (j11 * j4) + (j5 * j10) + (j * j13);
         long j15 = i9;
-        long jM19506 = C7309.m19505(j15, j2, j14, j12);
+        long jM299210 = C11958.m29929(j15, j2, j14, j12);
         long j16 = ((j15 * j4) + ((j11 * j7) + ((j8 * j10) + (j5 * j13)))) << 1;
         long j17 = (j11 * j10) + (((j15 * j7) + (j8 * j13)) << 1);
         long j18 = j10 * j15;
@@ -383,20 +383,20 @@ public abstract class X25519Field {
         long j29 = ((j27 * j23) + (j24 * j26)) << 1;
         long j30 = i18;
         long j31 = i17;
-        long jM19507 = C7309.m19505(j31, j21, j20 * j30, j29);
+        long jM299211 = C11958.m29929(j31, j21, j20 * j30, j29);
         long j32 = (j27 * j26) << 1;
         long j33 = i20;
         long j34 = (j31 * j23) + (j24 * j30) + (j20 * j33);
         long j35 = i19;
-        long jM19508 = C7309.m19505(j35, j21, j34, j32);
+        long jM299212 = C11958.m29929(j35, j21, j34, j32);
         long j36 = j3 - (((j23 * j35) + ((j31 * j26) + ((j27 * j30) + (j24 * j33)))) * 76);
         long j37 = j6 - (((j31 * j30) + (((j26 * j35) + (j27 * j33)) << 1)) * 38);
         long j38 = j9 - (((j30 * j35) + (j31 * j33)) * 38);
-        long j39 = jM19505 - ((j33 * j35) * 76);
+        long j39 = jM29929 - ((j33 * j35) * 76);
         long j40 = j16 - j22;
         long j41 = j17 - j25;
         long j42 = (j18 + (j11 * j13)) - j28;
-        long j43 = j19 - jM19507;
+        long j43 = j19 - jM299211;
         int i21 = i2 + i12;
         int i22 = i3 + i13;
         int i23 = i4 + i14;
@@ -416,19 +416,19 @@ public abstract class X25519Field {
         long j53 = j51 * j47;
         long j54 = i26;
         long j55 = i7 + i17;
-        long jM19509 = C7309.m19505(j55, j45, j44 * j54, (j53 + (j48 * j50)) << 1);
+        long jM299213 = C11958.m29929(j55, j45, j44 * j54, (j53 + (j48 * j50)) << 1);
         long j56 = (j51 * j50) << 1;
         long j57 = i27;
         long j58 = (j55 * j47) + (j48 * j54) + (j44 * j57);
         long j59 = i9 + i19;
-        long jM195010 = C7309.m19505(j59, j45, j58, j56);
+        long jM299214 = C11958.m29929(j59, j45, j58, j56);
         long j60 = ((j47 * j59) + ((j55 * j50) + ((j51 * j54) + (j48 * j57)))) << 1;
         long j61 = (j55 * j54) + (((j50 * j59) + (j51 * j57)) << 1);
         long j62 = (j54 * j59) + (j55 * j57);
         long j63 = (j57 * j59) << 1;
-        long j64 = (jM19509 - j39) + j43;
+        long j64 = (jM299213 - j39) + j43;
         int i28 = ((int) j64) & M26;
-        long j65 = ((jM195010 - jM19506) - jM19508) + (j64 >> 26);
+        long j65 = ((jM299214 - jM299210) - jM299212) + (j64 >> 26);
         int i29 = ((int) j65) & M25;
         long j66 = ((((j65 >> 25) + j60) - j40) * 38) + j36;
         iArr3[0] = ((int) j66) & M26;
@@ -438,9 +438,9 @@ public abstract class X25519Field {
         iArr3[2] = ((int) j68) & M25;
         long j69 = ((j63 - j43) * 38) + j39 + (j68 >> 25);
         iArr3[3] = ((int) j69) & M26;
-        long jM195011 = C7309.m19505(jM19508, 38L, jM19506, j69 >> 26);
-        iArr3[4] = ((int) jM195011) & M25;
-        long j70 = (j46 - j36) + j40 + (jM195011 >> 25);
+        long jM299215 = C11958.m29929(jM299212, 38L, jM299210, j69 >> 26);
+        iArr3[4] = ((int) jM299215) & M25;
+        long j70 = (j46 - j36) + j40 + (jM299215 >> 25);
         iArr3[5] = ((int) j70) & M26;
         long j71 = (j49 - j37) + j41 + (j70 >> 26);
         iArr3[6] = ((int) j71) & M26;
@@ -602,9 +602,9 @@ public abstract class X25519Field {
         iArr2[2] = ((int) j46) & M25;
         long j47 = (((((long) i15) * j40) - j33) * 38) + j29 + (j46 >> 25);
         iArr2[3] = ((int) j47) & M26;
-        long jM19505 = C7309.m19505(j24, 38L, j10, j47 >> 26);
-        iArr2[4] = ((int) jM19505) & M25;
-        long j48 = ((j34 * j34) - j26) + j30 + (jM19505 >> 25);
+        long jM29929 = C11958.m29929(j24, 38L, j10, j47 >> 26);
+        iArr2[4] = ((int) jM29929) & M25;
+        long j48 = ((j34 * j34) - j26) + j30 + (jM29929 >> 25);
         iArr2[5] = ((int) j48) & M26;
         long j49 = ((j34 * j35) - j27) + j31 + (j48 >> 26);
         iArr2[6] = ((int) j49) & M26;

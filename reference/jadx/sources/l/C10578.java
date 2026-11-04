@@ -1,36 +1,54 @@
 package l;
 
-import java.util.function.Consumer;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۤ᩹ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I1KV */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C10578 implements Consumer {
+/* JADX INFO: renamed from: l.ۤۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5Q6 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10578 extends AbstractC19529 implements Iterator {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f36190;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f33597 = true;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C15053 f33598;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Object f36191;
+    public C21767 f33599;
 
-    public /* synthetic */ C10578(int i, Object obj) {
-        this.f36190 = i;
-        this.f36191 = obj;
+    public C10578(C15053 c15053) {
+        this.f33598 = c15053;
     }
 
-    @Override // java.util.function.Consumer
-    public final void accept(Object obj) {
-        switch (this.f36190) {
-            case 0:
-                ((ViewOnClickListenerC3520) this.f36191).f12882.m42648().mo23642((String) obj);
-                break;
-            default:
-                ((StringBuilder) this.f36191).append((String) obj);
-                break;
+    @Override // l.AbstractC19529
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo27034(C21767 c21767) {
+        C21767 c21768 = this.f33599;
+        if (c21767 == c21768) {
+            C21767 c21769 = c21768.f69414;
+            this.f33599 = c21769;
+            this.f33597 = c21769 == null;
         }
     }
 
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        if (this.f33597) {
+            return this.f33598.f49122 != null;
+        }
+        C21767 c21767 = this.f33599;
+        return (c21767 == null || c21767.f69415 == null) ? false : true;
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        if (this.f33597) {
+            this.f33597 = false;
+            this.f33599 = this.f33598.f49122;
+        } else {
+            C21767 c21767 = this.f33599;
+            this.f33599 = c21767 != null ? c21767.f69415 : null;
+        }
+        return this.f33599;
     }
 }

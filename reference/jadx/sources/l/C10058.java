@@ -1,174 +1,194 @@
 package l;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.os.SystemClock;
-import java.util.concurrent.Executor;
-import java.util.function.BooleanSupplier;
+import android.app.AppOpsManager;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.text.TextUtils;
+import bin.mt.plus.R;
+import bin.mt.plus.ShortcutActivity;
+import com.alipay.sdk.m.u0.b;
 
-/* JADX INFO: renamed from: l.ۤۙۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L6NC */
+/* JADX INFO: renamed from: l.ۢۤۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 592B */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10058 implements AutoCloseable {
+public final class C10058 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final C14997 f34368;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractActivityC17204 f32243;
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public final C11092 f34369;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f32244;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final Handler f34370;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f32245;
 
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final RunnableC8686 f34371;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public long f34372;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final Executor f34373;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public boolean f34374;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final C21346 f34375;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public volatile boolean f34376;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public long f34377;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public long f34378;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public long f34379;
-
-    /* JADX WARN: Multi-variable type inference failed */
-    public C10058(InterfaceC2916 interfaceC2916) {
-        C14997 c14997 = new C14997();
-        Executor executorM32821 = C13312.m32821();
-        C1254 c1254Mo8735 = interfaceC2916.mo8735();
-        C13638.requireNonNull(c1254Mo8735);
-        C21346 c21346 = new C21346(0, c1254Mo8735);
-        Handler handler = new Handler(Looper.getMainLooper());
-        this.f34370 = handler;
-        RunnableC8686 runnableC8686 = new RunnableC8686(1, this);
-        this.f34371 = runnableC8686;
-        this.f34378 = 600000L;
-        this.f34379 = -1L;
-        this.f34369 = (C11092) interfaceC2916;
-        this.f34368 = c14997;
-        this.f34373 = executorM32821;
-        this.f34375 = c21346;
-        handler.postDelayed(runnableC8686, 2000L);
+    public C10058(AbstractActivityC17204 abstractActivityC17204, boolean z) {
+        this.f32243 = abstractActivityC17204;
+        this.f32244 = z;
     }
 
-    /* JADX WARN: Type inference failed for: r2v0, types: [l.ۗ֫ۖ, l.ۧܺۖ] */
+    /* JADX WARN: Code duplicated, block: B:75:0x0187  */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m25468(final C10058 c10058) {
-        if (c10058.f34376) {
-            return;
-        }
-        c10058.f34368.getClass();
-        long jUptimeMillis = SystemClock.uptimeMillis();
-        long jM4523 = c10058.f34369.mo8735().m4523();
-        if (jM4523 != c10058.f34379) {
-            c10058.f34379 = jM4523;
-            c10058.f34377 = jUptimeMillis;
-        }
-        if (!c10058.f34374 && jUptimeMillis - c10058.f34377 >= 10000 && jUptimeMillis >= c10058.f34372) {
-            c10058.f34374 = true;
+    public final boolean m25990() {
+        boolean z = this.f32244;
+        AbstractActivityC17204 abstractActivityC17204 = this.f32243;
+        if (z) {
+            if (C1761.m6202(abstractActivityC17204).size() >= Math.min(C1761.m6212(abstractActivityC17204), 4)) {
+                C22673.m51159(R.string.MT_Protector);
+                C16376.m38866(abstractActivityC17204);
+                return false;
+            }
+        } else {
+            if (!ShortcutActivity.m131()) {
+                C22673.m51159(R.string.MT_Protector);
+                return false;
+            }
+            int iM25497 = 2;
             try {
-                FutureC12075.m30004(new C17818(c10058, jM4523), c10058.f34373).m30028((InterfaceC15954) new C3012()).m30016(new InterfaceC7486() { // from class: l.ᩴۙۚ
-                    @Override // l.InterfaceC7486
-                    /* JADX INFO: renamed from: ܰ */
-                    public final void mo2142(Object obj, Throwable th) {
-                        C10058 c10059 = this.f58986;
-                        c10059.f34370.post(new RunnableC19230(c10059, th, (EnumC9578) obj, 0));
+                if (C9034.m24094()) {
+                    Intent intent = new Intent("com.android.launcher.action.INSTALL_SHORTCUT");
+                    Class<?> cls = Class.forName("com.huawei.hsm.permission.PermissionManager");
+                    Object objInvoke = cls.getDeclaredMethod("canSendBroadcast", Context.class, Intent.class).invoke(cls, abstractActivityC17204, intent);
+                    if (objInvoke != null) {
+                        if (((Boolean) objInvoke).booleanValue()) {
+                            iM25497 = 0;
+                        } else {
+                            iM25497 = -1;
+                        }
+                    }
+                } else if (!C9034.m24095()) {
+                    if (!C9034.m24093()) {
+                        if (C9034.m24091()) {
+                            iM25497 = C9779.m25497(abstractActivityC17204);
+                        } else {
+                            iM25497 = 0;
+                        }
+                    } else {
+                        ContentResolver contentResolver = abstractActivityC17204.getContentResolver();
+                        if (contentResolver != null) {
+                            Cursor cursorQuery = contentResolver.query(Uri.parse("content://settings/secure/launcher_shortcut_permission_settings"), null, null, null, null);
+                            if (cursorQuery != null) {
+                                try {
+                                    String packageName = abstractActivityC17204.getApplicationContext().getPackageName();
+                                    while (true) {
+                                        if (cursorQuery.moveToNext()) {
+                                            String string = cursorQuery.getString(cursorQuery.getColumnIndex(b.d));
+                                            if (!TextUtils.isEmpty(string)) {
+                                                if (!string.contains(packageName + ", 1")) {
+                                                    if (string.contains(packageName + ", 0")) {
+                                                        cursorQuery.close();
+                                                        iM25497 = -1;
+                                                    }
+                                                } else {
+                                                    cursorQuery.close();
+                                                    iM25497 = 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                } catch (Throwable th) {
+                                    try {
+                                        cursorQuery.close();
+                                    } catch (Throwable th2) {
+                                        th.addSuppressed(th2);
+                                    }
+                                    throw th;
+                                }
+                            } else if (cursorQuery != null) {
+                            }
+                            cursorQuery.close();
+                        }
+                    }
+                } else {
+                    AppOpsManager appOpsManager = (AppOpsManager) abstractActivityC17204.getSystemService("appops");
+                    String packageName2 = abstractActivityC17204.getApplicationContext().getPackageName();
+                    int i = abstractActivityC17204.getApplicationInfo().uid;
+                    Class<?> cls2 = Class.forName(AppOpsManager.class.getName());
+                    Class<?> cls3 = Integer.TYPE;
+                    Object objInvoke2 = cls2.getDeclaredMethod("checkOpNoThrow", cls3, cls3, String.class).invoke(appOpsManager, 10017, Integer.valueOf(i), packageName2);
+                    if (objInvoke2 != null) {
+                        String string2 = objInvoke2.toString();
+                        int iHashCode = string2.hashCode();
+                        if (iHashCode != 48) {
+                            if (iHashCode != 49) {
+                                if (iHashCode == 53 && string2.equals("5")) {
+                                    iM25497 = 1;
+                                }
+                            } else if (string2.equals("1")) {
+                                iM25497 = -1;
+                            }
+                        } else if (string2.equals("0")) {
+                            iM25497 = 0;
+                        }
+                    }
+                }
+            } catch (Exception unused) {
+            }
+            this.f32245 = iM25497;
+            if (iM25497 == -1) {
+                C2361 c2361BuildDialog = abstractActivityC17204.buildDialog();
+                c2361BuildDialog.m8021(R.string.MT_Protector);
+                c2361BuildDialog.m8000(R.string.MT_Protector);
+                c2361BuildDialog.m8026(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ᩳۤۧ
+                    @Override // android.content.DialogInterface.OnClickListener
+                    public final void onClick(DialogInterface dialogInterface, int i2) {
+                        C10058.m25989(this.f61574);
                     }
                 });
-                return;
-            } catch (RuntimeException unused) {
-                c10058.f34374 = false;
-                c10058.f34372 = jUptimeMillis + 600000;
-                if (c10058.f34376) {
-                    return;
-                }
+                c2361BuildDialog.m8022(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
+                c2361BuildDialog.m8016();
+                return false;
             }
-        } else if (c10058.f34376) {
-            return;
         }
-        c10058.f34370.postDelayed(c10058.f34371, 2000L);
+        return true;
     }
 
-    /* JADX WARN: Type inference failed for: r0v1, types: [l.ۗ֫ۖ, l.ۧܺۖ] */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static FutureC12075 m25466(final C10058 c10058, final long j) {
-        if (c10058.f34376 || c10058.f34369.mo8735().m4523() != j) {
-            return FutureC12075.m30001(EnumC9578.SKIPPED);
-        }
-        C21346 c21346 = c10058.f34375;
-        return ((C1254) c21346.f69464).m4531(new BooleanSupplier() { // from class: l.۠ۙۚ
-            @Override // java.util.function.BooleanSupplier
-            public final boolean getAsBoolean() {
-                return C10058.m25470(this.f26102, j);
-            }
-        });
+    public static /* synthetic */ void m25989(C10058 c10058) {
+        AbstractActivityC17204 abstractActivityC17204 = c10058.f32243;
+        C18730.m43546(abstractActivityC17204, abstractActivityC17204.getPackageName());
     }
 
-    /* JADX WARN: Type inference failed for: r2v2, types: [l.ۗ֫ۖ, l.ۧܺۖ] */
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ boolean m25470(C10058 c10058, long j) {
-        return c10058.f34376 || c10058.f34369.mo8735().m4523() != j;
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v0, types: [l.ۗ֫ۖ, l.ۧܺۖ] */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m25467(EnumC9578 enumC9578, C10058 c10058, Throwable th) {
-        c10058.f34374 = false;
-        if (c10058.f34376) {
-            return;
+    public final boolean m25991(Intent intent, String str, Bitmap bitmap, String str2) throws Throwable {
+        boolean z = this.f32244;
+        if (z) {
+            str2 = C14483.m34972(str2, ":dynamic");
         }
-        long j = 600000;
-        if (th == null) {
-            int i = C8647.f29823[enumC9578.ordinal()];
-            if (i == 1) {
-                c10058.f34378 = 600000L;
-            } else if (i == 2) {
-                long j2 = c10058.f34378;
-                c10058.f34378 = Math.min(3600000L, 2 * j2);
-                j = j2;
-            } else if (i == 3) {
-                j = 3600000;
-            } else {
-                if (i != 4) {
-                    throw new IncompatibleClassChangeError();
-                }
-                j = 30000;
+        String strM36181 = C15022.m36181(str2);
+        AbstractActivityC17204 abstractActivityC17204 = this.f32243;
+        C19660 c19660 = new C19660(abstractActivityC17204, strM36181);
+        c19660.m45324(str);
+        c19660.m45325(C9545.m24962(bitmap));
+        c19660.m45323(intent);
+        C15184 c15184M45322 = c19660.m45322();
+        if (z) {
+            if (!C1761.m6213(abstractActivityC17204, c15184M45322)) {
+                C22673.m51152(R.string.MT_Protector);
+                return false;
             }
+            ShortcutActivity.m132(c15184M45322.m36530(), bitmap);
+            C22673.m51152(R.string.MT_Protector);
+            return true;
         }
-        c10058.f34368.getClass();
-        c10058.f34372 = SystemClock.uptimeMillis() + j;
-        if (enumC9578 == EnumC9578.COMPACTED) {
-            C11092 c11092 = c10058.f34369;
-            for (C12919 c12919 : (C12919[]) c11092.getSpans(0, c11092.length(), C12919.class)) {
-                c12919.m32007(c10058.f34369);
-            }
+        if (!C1761.m6209(abstractActivityC17204, c15184M45322)) {
+            C22673.m51152(R.string.MT_Protector);
+            return false;
         }
-        if (c10058.f34376) {
-            return;
+        if (this.f32245 == 0) {
+            C22673.m51152(R.string.MT_Protector);
+            return true;
         }
-        c10058.f34370.postDelayed(c10058.f34371, 2000L);
-    }
-
-    @Override // java.lang.AutoCloseable
-    public final void close() {
-        this.f34376 = true;
-        this.f34370.removeCallbacks(this.f34371);
+        C2361 c2361BuildDialog = abstractActivityC17204.buildDialog();
+        c2361BuildDialog.m8021(R.string.MT_Protector);
+        c2361BuildDialog.m8000(R.string.MT_Protector);
+        c2361BuildDialog.m8026(R.string.MT_Protector, null);
+        c2361BuildDialog.m8016();
+        return true;
     }
 }

@@ -9,12 +9,13 @@ import java.security.spec.InvalidParameterSpecException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.crypto.spec.IvParameterSpec;
-import l.C0252;
-import l.C12278;
-import l.C12441;
-import l.C19028;
-import l.C5800;
-import l.C8479;
+import l.C0703;
+import l.C10732;
+import l.C16076;
+import l.C2458;
+import l.C25272;
+import l.C4794;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -42,7 +43,7 @@ import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.jcajce.spec.GOST28147ParameterSpec;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GOST28147 {
     public static Map oidMappings = new HashMap();
     public static Map nameMappings = new HashMap();
@@ -75,7 +76,6 @@ public final class GOST28147 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class AlgParams extends BaseAlgParams {
         public byte[] iv;
         public ASN1ObjectIdentifier sBox = CryptoProObjectIdentifiers.id_Gost28147_89_CryptoPro_A_ParamSet;
@@ -143,7 +143,7 @@ public final class GOST28147 {
             if (aSN1ObjectIdentifier != null) {
                 return aSN1ObjectIdentifier;
             }
-            throw new IllegalArgumentException(C0252.m1693("Unknown SBOX name: ", str));
+            throw new IllegalArgumentException(C25272.m56409("Unknown SBOX name: ", str));
         }
 
         public static ASN1ObjectIdentifier getSBoxOID(byte[] bArr) {
@@ -160,7 +160,7 @@ public final class GOST28147 {
             if (isASN1FormatString(str)) {
                 return localGetEncoded();
             }
-            throw new IOException(C0252.m1693("Unknown parameter format: ", str));
+            throw new IOException(C25272.m56409("Unknown parameter format: ", str));
         }
 
         @Override // java.security.AlgorithmParametersSpi
@@ -191,14 +191,14 @@ public final class GOST28147 {
                 throw new NullPointerException("Encoded parameters cannot be null");
             }
             if (!isASN1FormatString(str)) {
-                throw new IOException(C0252.m1693("Unknown parameter format: ", str));
+                throw new IOException(C25272.m56409("Unknown parameter format: ", str));
             }
             try {
                 localInit(bArr);
             } catch (IOException e) {
                 throw e;
             } catch (Exception e2) {
-                throw new IOException(C8479.m22142(e2, new StringBuilder("Parameter parsing failed: ")));
+                throw new IOException(C16076.m38224(e2, new StringBuilder("Parameter parsing failed: ")));
             }
         }
 
@@ -220,35 +220,30 @@ public final class GOST28147 {
         public abstract void localInit(byte[] bArr);
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CBC extends BaseBlockCipher {
         public CBC() {
             super(new CBCBlockCipher(new GOST28147Engine()), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class CryptoProWrap extends BaseWrapCipher {
         public CryptoProWrap() {
             super(new CryptoProWrapEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ECB extends BaseBlockCipher {
         public ECB() {
             super(new GOST28147Engine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GCFB extends BaseBlockCipher {
         public GCFB() {
             super(new BufferedBlockCipher(new GCFBBlockCipher(new GOST28147Engine())), 64);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class GostWrap extends BaseWrapCipher {
         public GostWrap() {
             super(new GOST28147WrapEngine());
@@ -265,7 +260,6 @@ public final class GOST28147 {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class Mac extends BaseMac {
         public Mac() {
             super(new GOST28147Mac());
@@ -279,7 +273,7 @@ public final class GOST28147 {
         public void configure(ConfigurableProvider configurableProvider) {
             StringBuilder sb = new StringBuilder();
             String str = PREFIX;
-            C5800.m15969(str, "$ECB", "Cipher.GOST28147", sb, configurableProvider);
+            C8947.m23913(str, "$ECB", "Cipher.GOST28147", sb, configurableProvider);
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.GOST", "GOST28147");
             configurableProvider.addAlgorithm("Alg.Alias.Cipher.GOST-28147", "GOST28147");
             StringBuilder sb2 = new StringBuilder("Cipher.");
@@ -288,23 +282,23 @@ public final class GOST28147 {
             configurableProvider.addAlgorithm(sb2.toString(), str + "$GCFB");
             StringBuilder sb3 = new StringBuilder();
             sb3.append(str);
-            C12441.m30916(sb3, "$KeyGen", configurableProvider, "KeyGenerator.GOST28147");
+            C10732.m27335(sb3, "$KeyGen", configurableProvider, "KeyGenerator.GOST28147");
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.GOST", "GOST28147");
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator.GOST-28147", "GOST28147");
             configurableProvider.addAlgorithm("Alg.Alias.KeyGenerator." + aSN1ObjectIdentifier, "GOST28147");
             StringBuilder sb4 = new StringBuilder();
             sb4.append(str);
-            StringBuilder sbM30516 = C12278.m30516("$AlgParams", "AlgorithmParameters.GOST28147", str, sb4, configurableProvider);
-            sbM30516.append("$AlgParamGen");
-            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.GOST28147", sbM30516.toString());
-            StringBuilder sbM43760 = C19028.m43760("GOST28147", "Cipher.", C19028.m43760("GOST28147", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameters."), aSN1ObjectIdentifier, configurableProvider), aSN1ObjectIdentifier, configurableProvider);
-            sbM43760.append(CryptoProObjectIdentifiers.id_Gost28147_89_CryptoPro_KeyWrap);
-            StringBuilder sbM1694 = C0252.m1694(str, "$CryptoProWrap", sbM43760.toString(), "Cipher.", configurableProvider);
-            sbM1694.append(CryptoProObjectIdentifiers.id_Gost28147_89_None_KeyWrap);
-            configurableProvider.addAlgorithm(sbM1694.toString(), str + "$GostWrap");
+            StringBuilder sbM3019 = C0703.m3019("$AlgParams", "AlgorithmParameters.GOST28147", str, sb4, configurableProvider);
+            sbM3019.append("$AlgParamGen");
+            configurableProvider.addAlgorithm("AlgorithmParameterGenerator.GOST28147", sbM3019.toString());
+            StringBuilder sbM8290 = C2458.m8290("GOST28147", "Cipher.", C2458.m8290("GOST28147", "Alg.Alias.AlgorithmParameterGenerator.", new StringBuilder("Alg.Alias.AlgorithmParameters."), aSN1ObjectIdentifier, configurableProvider), aSN1ObjectIdentifier, configurableProvider);
+            sbM8290.append(CryptoProObjectIdentifiers.id_Gost28147_89_CryptoPro_KeyWrap);
+            StringBuilder sbM14772 = C4794.m14772(str, "$CryptoProWrap", sbM8290.toString(), "Cipher.", configurableProvider);
+            sbM14772.append(CryptoProObjectIdentifiers.id_Gost28147_89_None_KeyWrap);
+            configurableProvider.addAlgorithm(sbM14772.toString(), str + "$GostWrap");
             StringBuilder sb5 = new StringBuilder();
             sb5.append(str);
-            C12441.m30916(sb5, "$Mac", configurableProvider, "Mac.GOST28147MAC");
+            C10732.m27335(sb5, "$Mac", configurableProvider, "Mac.GOST28147MAC");
             configurableProvider.addAlgorithm("Alg.Alias.Mac.GOST28147", "GOST28147MAC");
         }
     }

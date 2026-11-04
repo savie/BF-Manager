@@ -9,7 +9,7 @@ import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.x509.GeneralName;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SemanticsInformation extends ASN1Object {
     public GeneralName[] nameRegistrationAuthorities;
     public ASN1ObjectIdentifier semanticsIdentifier;

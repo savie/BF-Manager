@@ -20,7 +20,7 @@ import com.alipay.sdk.m.y.o;
 import com.alipay.sdk.m.y.q;
 import java.lang.ref.WeakReference;
 import java.util.Map;
-import l.C0242;
+import l.C3188;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -59,7 +59,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
     public com.alipay.sdk.m.c0.e k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public com.alipay.sdk.m.c0.f f77906l;
+    public com.alipay.sdk.m.c0.f f82022l;
 
     /* JADX INFO: compiled from: N673 */
     public class a implements Runnable {
@@ -188,7 +188,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
         this.f = "GET";
         this.g = false;
         this.k = null;
-        this.f77906l = new com.alipay.sdk.m.c0.f();
+        this.f82022l = new com.alipay.sdk.m.c0.f();
         this.h = aVar;
         f();
     }
@@ -196,16 +196,16 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
     @Override // com.alipay.sdk.m.c0.c
     public synchronized void c() {
         this.k.b();
-        this.f77906l.a();
+        this.f82022l.a();
     }
 
     public final synchronized boolean d() {
-        if (this.f77906l.b()) {
+        if (this.f82022l.b()) {
             this.a.finish();
         } else {
             this.g = true;
             com.alipay.sdk.m.c0.e eVar = this.k;
-            this.k = this.f77906l.c();
+            this.k = this.f82022l.c();
             TranslateAnimation translateAnimation = new TranslateAnimation(1, 0.0f, 1, 1.0f, 1, 0.0f, 1, 0.0f);
             translateAnimation.setDuration(400L);
             translateAnimation.setFillAfter(false);
@@ -253,7 +253,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
             }
             String strA = com.alipay.sdk.m.y.f.a(this.j);
             if (TextUtils.isEmpty(strA)) {
-                com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f77909l, "injectJsApi", "escapeCashierBizDataError");
+                com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f82025l, "injectJsApi", "escapeCashierBizDataError");
             } else {
                 webView.evaluateJavascript("(function() {window.alipayjsbridgeCashierMainData=" + ("'" + strA.substring(1, strA.length() - 1) + "'") + ";})();", null);
             }
@@ -270,7 +270,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
         if (webView.canGoBack()) {
             webView.goBack();
         } else {
-            com.alipay.sdk.m.c0.f fVar = this.f77906l;
+            com.alipay.sdk.m.c0.f fVar = this.f82022l;
             if (fVar == null || fVar.b()) {
                 a(false);
             } else {
@@ -280,16 +280,16 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
     }
 
     public final void j() {
-        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "webViewLoadStart");
+        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "webViewLoadStart");
         if (!com.alipay.sdk.m.o.b.i().h(null)) {
-            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "webLoad|onlineUrl");
+            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "webLoad|onlineUrl");
             return;
         }
         if (!com.alipay.sdk.m.r.b.e().c()) {
-            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "webLoad|localUrl");
+            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "webLoad|localUrl");
             return;
         }
-        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "webLoad|local|" + com.alipay.sdk.m.r.b.e().f());
+        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "webLoad|local|" + com.alipay.sdk.m.r.b.e().f());
     }
 
     @Override // android.view.ViewGroup
@@ -340,7 +340,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
 
     @Override // com.alipay.sdk.m.c0.e.g
     public synchronized boolean c(com.alipay.sdk.m.c0.e eVar, String str) {
-        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "h5ld", SystemClock.elapsedRealtime() + "|" + q.i(str));
+        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "h5ld", SystemClock.elapsedRealtime() + "|" + q.i(str));
         if (!TextUtils.isEmpty(str) && !str.endsWith(".apk")) {
             g();
         }
@@ -394,7 +394,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                 return;
             }
             this.e = true;
-            eVar.a(C0242.m1617("javascript:window.AlipayJSBridge.callBackFromNativeFunc('", a(this.c), "','", a(jSONObject.toString()), "');"));
+            eVar.a(C3188.m10404("javascript:window.AlipayJSBridge.callBackFromNativeFunc('", a(this.c), "','", a(jSONObject.toString()), "');"));
         }
 
         public static String a(String str) {
@@ -425,7 +425,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                 intent.setData(Uri.parse(str));
                 activity.startActivity(intent);
             } catch (Throwable th) {
-                com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, th);
+                com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, th);
             }
         } else {
             this.k.a(str);
@@ -487,12 +487,12 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                     if (str4.equals(F)) {
                         String url = eVar.getUrl();
                         if (!q.a(this.h, url)) {
-                            com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f77909l, "jsUrlErr", url);
+                            com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f82025l, "jsUrlErr", url);
                         } else {
                             JSONObject jSONObject = new JSONObject();
                             boolean zA = com.alipay.sdk.m.l.d.a(this.h, context);
                             jSONObject.put("enabled", zA);
-                            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.t0, String.valueOf(zA));
+                            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.t0, String.valueOf(zA));
                             fVar.a(jSONObject);
                         }
                     }
@@ -501,7 +501,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                     if (str4.equals(G)) {
                         String url2 = eVar.getUrl();
                         if (!q.a(this.h, url2)) {
-                            com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f77909l, "jsUrlErr", url2);
+                            com.alipay.sdk.m.m.a.b(this.h, com.alipay.sdk.m.m.b.f82025l, "jsUrlErr", url2);
                         } else {
                             String strOptString = jSONObjectH.optString("random");
                             JSONObject jSONObjectOptJSONObject = jSONObjectH.optJSONObject("options");
@@ -556,7 +556,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                 case 1942429949:
                     if (str4.equals(H)) {
                         String strOptString4 = jSONObjectH.optString("type");
-                        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "h5LifeCycle|" + strOptString4);
+                        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "h5LifeCycle|" + strOptString4);
                     }
                     break;
                 case 1947723784:
@@ -575,7 +575,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                     break;
             }
         } catch (Throwable th) {
-            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "jInfoErr", th, str);
+            com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "jInfoErr", th, str);
         }
     }
 
@@ -591,7 +591,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
                 this.k.getTitle().setText(str2);
             }
             this.g = true;
-            this.f77906l.a(eVar);
+            this.f82022l.a(eVar);
             TranslateAnimation translateAnimation = new TranslateAnimation(1, 1.0f, 1, 0.0f, 1, 0.0f, 1, 0.0f);
             translateAnimation.setDuration(400L);
             translateAnimation.setFillAfter(false);
@@ -606,7 +606,7 @@ public class d extends com.alipay.sdk.m.c0.c implements com.alipay.sdk.m.c0.e.f,
 
     @Override // com.alipay.sdk.m.c0.e.g
     public synchronized boolean b(com.alipay.sdk.m.c0.e eVar, String str) {
-        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f77909l, "h5ldd", SystemClock.elapsedRealtime() + "|" + q.i(str));
+        com.alipay.sdk.m.m.a.a(this.h, com.alipay.sdk.m.m.b.f82025l, "h5ldd", SystemClock.elapsedRealtime() + "|" + q.i(str));
         g();
         eVar.getRefreshButton().setVisibility(0);
         return true;

@@ -1,124 +1,177 @@
 package l;
 
-import android.os.SystemClock;
-import java.io.IOException;
+import android.util.SparseArray;
+import android.util.SparseBooleanArray;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۘۙۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z1GQ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3707 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ۗ᩸᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: 18UV */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3707 extends C23263 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7236 f13505;
+    /* JADX INFO: renamed from: ֫ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12719;
+
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12720;
+
+    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12721;
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public boolean f12722;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public boolean f12723;
+
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12724;
+
+    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12725;
+
+    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12726;
 
     /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f13506;
+    public boolean f12727;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f13507;
+    /* JADX INFO: renamed from: ܳۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12728;
 
-    public C3707(C7236 c7236, String str) {
-        this.f13505 = c7236;
-        this.f13506 = str;
+    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12729;
+
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public final SparseBooleanArray f12730;
+
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public final SparseArray f12731;
+
+    /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12732;
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12733;
+
+    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12734;
+
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f12735;
+
+    public C3707() {
+        this.f12731 = new SparseArray();
+        this.f12730 = new SparseBooleanArray();
+        this.f12735 = true;
+        this.f12728 = false;
+        this.f12726 = true;
+        this.f12732 = false;
+        this.f12719 = true;
+        this.f12727 = false;
+        this.f12720 = false;
+        this.f12723 = false;
+        this.f12722 = false;
+        this.f12733 = true;
+        this.f12721 = true;
+        this.f12725 = true;
+        this.f12729 = false;
+        this.f12734 = true;
+        this.f12724 = false;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        C7236 c7236 = this.f13505;
-        c7236.f24106.m16854(c7236.f24097, true, false);
-        c7236.f24107 = true;
-        c7236.f24111 = false;
-        c7236.f24121.m46369(".xml");
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws C8142 {
-        C7236 c7236 = this.f13505;
-        c7236.f24120.m17521();
-        if (c7236.f24116) {
-            C13626 c13626M50132 = c7236.m50132(c7236.f24113.m47183());
-            if (c13626M50132.m33326()) {
-                try {
-                    if (C7236.m19304(c7236, C17367.m40441(c13626M50132.m33327()))) {
-                        this.f13507 = true;
-                        return;
-                    }
-                } catch (Exception unused) {
-                }
-            }
-            if (c7236.f24116) {
-                String strM21568 = c7236.f24113.m21568(this.f13506);
-                if (c7236.f24116) {
-                    C6111 c6111 = c7236.f24106;
-                    c6111.m16883(c7236.m50130(c7236.f24113.m47183()).m33318(), strM21568);
-                    while (c7236.f24116 && c6111.m16973()) {
-                        SystemClock.sleep(10L);
-                    }
-                }
-            }
+    public C3707(C20861 c20861) {
+        super(c20861);
+        this.f12735 = c20861.f66782;
+        this.f12728 = c20861.f66775;
+        this.f12726 = c20861.f66773;
+        this.f12732 = c20861.f66779;
+        this.f12719 = c20861.f66766;
+        this.f12727 = c20861.f66774;
+        this.f12720 = c20861.f66767;
+        this.f12723 = c20861.f66770;
+        this.f12722 = c20861.f66769;
+        this.f12733 = c20861.f66780;
+        this.f12721 = c20861.f66768;
+        this.f12725 = c20861.f66772;
+        this.f12729 = c20861.f66776;
+        this.f12734 = c20861.f66781;
+        this.f12724 = c20861.f66771;
+        SparseArray sparseArray = c20861.f66778;
+        SparseArray sparseArray2 = new SparseArray();
+        for (int i = 0; i < sparseArray.size(); i++) {
+            sparseArray2.put(sparseArray.keyAt(i), new HashMap((Map) sparseArray.valueAt(i)));
         }
+        this.f12731 = sparseArray2;
+        this.f12730 = c20861.f66777.clone();
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C7236 c7236 = this.f13505;
-        if (c7236.f24116) {
-            if (this.f13507) {
-                c7236.f24106.m16919();
-                if (c7236.f24102 != null) {
-                    c7236.f24102.setEnabled(!c7236.f24106.m17004());
-                    c7236.f24119.setChecked(c7236.f24106.m17004());
-                }
-                C7236.m19283(c7236);
-                c7236.f24106.invalidate();
-            } else {
-                c7236.f24106.m16902();
-                c7236.f24106.m17057(false);
-                c7236.f24106.m16949();
-            }
-            c7236.f73689.putBoolean("changed", c7236.f24106.m17040());
-            try {
-                c7236.m50128(c7236.f24113.m47183());
-            } catch (IOException unused) {
-            }
-            C16737.m39274(new Runnable() { // from class: l.۬ۙۜ
-                @Override // java.lang.Runnable
-                public final void run() {
-                    C7236 c7237 = this.f42842.f13505;
-                    c7237.f24114 = true;
-                    if (c7237.f24116) {
-                        C7236.m19326(c7237);
-                    }
-                }
-            }, 200L);
-            c7236.m19332();
-            c7236.f24106.requestFocus();
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m12050(C3125 c3125) {
+        m52379(c3125);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        C7236 c7236 = this.f13505;
-        c7236.f24104.m42627((Throwable) exc);
-        c7236.f24111 = true;
-        if (c7236.f24116) {
-            c7236.f24106.mo16989((CharSequence) exc.toString());
-            c7236.f24106.m17065(true);
-        }
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12048() {
+        super.mo12048();
+        return this;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        C7236 c7236 = this.f13505;
-        if (c7236.f24116) {
-            c7236.f24106.m16854(c7236.f24097, false, !c7236.f24111);
-        }
-        c7236.f24107 = false;
-        c7236.f24110 = true;
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12047(String[] strArr) {
+        super.mo12047(strArr);
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12051() {
+        super.mo12051();
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12049() {
+        super.mo12049();
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12046(C17295 c17295) {
+        super.mo12046(c17295);
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12043(int i) {
+        super.mo12043(i);
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12045(Set set) {
+        super.mo12045(set);
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23263 mo12044(int i, boolean z) {
+        super.mo12044(i, z);
+        return this;
+    }
+
+    @Override // l.C23263
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C3125 mo12042() {
+        return new C20861(this, 0);
     }
 }

@@ -1,26 +1,101 @@
-.class public final Ll/ۧ᩷ۙ;
+.class public abstract Ll/ۧ᩷ۙ;
 .super Ljava/lang/Object;
-.source "W72A"
-
-
-# instance fields
-.field public final ۙ:J
-
-.field public final ܰ:J
+.source "651C"
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
-    iput-wide p1, p0, Ll/ۧ᩷ۙ;->ܰ:J
+    return-void
+.end method
 
-    .line 26
-    iput-wide p3, p0, Ll/ۧ᩷ۙ;->ۙ:J
+
+# virtual methods
+.method public clampViewPositionHorizontal(Landroid/view/View;II)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public clampViewPositionVertical(Landroid/view/View;II)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public getOrderedChildIndex(I)I
+    .locals 0
+
+    return p1
+.end method
+
+.method public getViewHorizontalDragRange(Landroid/view/View;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public getViewVerticalDragRange(Landroid/view/View;)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public onEdgeDragStarted(II)V
+    .locals 0
 
     return-void
+.end method
+
+.method public onEdgeLock(I)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public onEdgeTouched(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onViewCaptured(Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onViewDragStateChanged(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onViewPositionChanged(Landroid/view/View;IIII)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onViewReleased(Landroid/view/View;FF)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract tryCaptureView(Landroid/view/View;I)Z
 .end method

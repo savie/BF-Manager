@@ -6,15 +6,15 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/http/HttpMethodName;
 
-.field public static final enum ۛ:Lcom/amazonaws/http/HttpMethodName;
+.field public static final enum ۟:Lcom/amazonaws/http/HttpMethodName;
 
-.field public static final enum ۫:Lcom/amazonaws/http/HttpMethodName;
+.field public static final enum ۢ:Lcom/amazonaws/http/HttpMethodName;
 
-.field public static final synthetic ܺ:[Lcom/amazonaws/http/HttpMethodName;
-
-.field public static final enum ܽ:Lcom/amazonaws/http/HttpMethodName;
+.field public static final synthetic ܰ:[Lcom/amazonaws/http/HttpMethodName;
 
 .field public static final enum ܿ:Lcom/amazonaws/http/HttpMethodName;
+
+.field public static final enum ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
 .field public static final enum ᩶:Lcom/amazonaws/http/HttpMethodName;
 
@@ -32,7 +32,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/amazonaws/http/HttpMethodName;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
+    sput-object v0, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
 
     .line 25
     new-instance v1, Lcom/amazonaws/http/HttpMethodName;
@@ -43,7 +43,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/amazonaws/http/HttpMethodName;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/amazonaws/http/HttpMethodName;->ܿ:Lcom/amazonaws/http/HttpMethodName;
+    sput-object v1, Lcom/amazonaws/http/HttpMethodName;->ᩳ:Lcom/amazonaws/http/HttpMethodName;
 
     .line 28
     new-instance v3, Lcom/amazonaws/http/HttpMethodName;
@@ -54,7 +54,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/amazonaws/http/HttpMethodName;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/amazonaws/http/HttpMethodName;->ۛ:Lcom/amazonaws/http/HttpMethodName;
+    sput-object v3, Lcom/amazonaws/http/HttpMethodName;->ۢ:Lcom/amazonaws/http/HttpMethodName;
 
     .line 31
     new-instance v5, Lcom/amazonaws/http/HttpMethodName;
@@ -76,7 +76,7 @@
 
     invoke-direct {v7, v9, v10}, Lcom/amazonaws/http/HttpMethodName;-><init>(Ljava/lang/String;I)V
 
-    sput-object v7, Lcom/amazonaws/http/HttpMethodName;->ܽ:Lcom/amazonaws/http/HttpMethodName;
+    sput-object v7, Lcom/amazonaws/http/HttpMethodName;->֡:Lcom/amazonaws/http/HttpMethodName;
 
     .line 37
     new-instance v9, Lcom/amazonaws/http/HttpMethodName;
@@ -87,7 +87,7 @@
 
     invoke-direct {v9, v11, v12}, Lcom/amazonaws/http/HttpMethodName;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/amazonaws/http/HttpMethodName;->۫:Lcom/amazonaws/http/HttpMethodName;
+    sput-object v9, Lcom/amazonaws/http/HttpMethodName;->۟:Lcom/amazonaws/http/HttpMethodName;
 
     const/4 v11, 0x6
 
@@ -106,7 +106,7 @@
     aput-object v9, v11, v12
 
     .line 19
-    sput-object v11, Lcom/amazonaws/http/HttpMethodName;->ܺ:[Lcom/amazonaws/http/HttpMethodName;
+    sput-object v11, Lcom/amazonaws/http/HttpMethodName;->ܰ:[Lcom/amazonaws/http/HttpMethodName;
 
     return-void
 .end method
@@ -139,7 +139,7 @@
     .locals 1
 
     .line 19
-    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ܺ:[Lcom/amazonaws/http/HttpMethodName;
+    sget-object v0, Lcom/amazonaws/http/HttpMethodName;->ܰ:[Lcom/amazonaws/http/HttpMethodName;
 
     invoke-virtual {v0}, [Lcom/amazonaws/http/HttpMethodName;->clone()Ljava/lang/Object;
 

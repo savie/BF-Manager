@@ -1,25 +1,17 @@
-.class public abstract Ll/ۤ᩷᩹;
-.super Ll/ܳ۟᩹;
-.source "24NC"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public interface abstract Ll/ۤ᩷᩹;
+.super Ljava/lang/Object;
+.source "51RR"
 
 
-# static fields
-.field public static final ᩶:Ll/᩺ۧ᩺;
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
+.method public abstract b()I
+.end method
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public abstract c()I
+.end method
 
-    .line 9
-    invoke-static {}, Ll/᩺ۧ᩺;->ۚ()Ll/᩺ۧ᩺;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ۤ᩷᩹;->᩶:Ll/᩺ۧ᩺;
-
-    return-void
+.method public abstract d()I
 .end method

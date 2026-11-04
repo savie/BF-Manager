@@ -16,7 +16,7 @@ public final class cb {
     public static final byte k = 13;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final byte f77931l = 14;
+    public static final byte f82047l = 14;
     public static final byte m = 15;
     public static final byte n = 16;
 }

@@ -6,23 +6,23 @@
 # static fields
 .field public static final enum ֡:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final enum ۛ:Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final enum ֨:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final enum ۧ:Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final enum ۟:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final enum ۫:Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final enum ۡ:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final enum ܽ:Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final enum ۢ:Lcom/amazonaws/logging/LogFactory$Level;
 
 .field public static final enum ܿ:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final synthetic ᩶:[Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final enum ᩳ:Lcom/amazonaws/logging/LogFactory$Level;
 
-.field public static final enum ᩻:Lcom/amazonaws/logging/LogFactory$Level;
+.field public static final synthetic ᩶:[Lcom/amazonaws/logging/LogFactory$Level;
 
 
 # instance fields
-.field public final ܺ:I
+.field public final ܰ:I
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/amazonaws/logging/LogFactory$Level;->֡:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v0, Lcom/amazonaws/logging/LogFactory$Level;->ܿ:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 95
     new-instance v1, Lcom/amazonaws/logging/LogFactory$Level;
@@ -51,7 +51,7 @@
 
     invoke-direct {v1, v2, v4, v3}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v1, Lcom/amazonaws/logging/LogFactory$Level;->ۧ:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v1, Lcom/amazonaws/logging/LogFactory$Level;->֨:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 96
     new-instance v2, Lcom/amazonaws/logging/LogFactory$Level;
@@ -62,7 +62,7 @@
 
     invoke-direct {v2, v5, v6, v4}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v2, Lcom/amazonaws/logging/LogFactory$Level;->ܽ:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v2, Lcom/amazonaws/logging/LogFactory$Level;->֡:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 97
     new-instance v5, Lcom/amazonaws/logging/LogFactory$Level;
@@ -73,7 +73,7 @@
 
     invoke-direct {v5, v7, v8, v6}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v5, Lcom/amazonaws/logging/LogFactory$Level;->ܿ:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v5, Lcom/amazonaws/logging/LogFactory$Level;->ᩳ:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 98
     new-instance v7, Lcom/amazonaws/logging/LogFactory$Level;
@@ -84,7 +84,7 @@
 
     invoke-direct {v7, v9, v10, v8}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v7, Lcom/amazonaws/logging/LogFactory$Level;->᩻:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v7, Lcom/amazonaws/logging/LogFactory$Level;->ۡ:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 99
     new-instance v9, Lcom/amazonaws/logging/LogFactory$Level;
@@ -95,7 +95,7 @@
 
     invoke-direct {v9, v11, v12, v10}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v9, Lcom/amazonaws/logging/LogFactory$Level;->۫:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v9, Lcom/amazonaws/logging/LogFactory$Level;->۟:Lcom/amazonaws/logging/LogFactory$Level;
 
     .line 100
     new-instance v11, Lcom/amazonaws/logging/LogFactory$Level;
@@ -108,7 +108,7 @@
 
     invoke-direct {v11, v14, v15, v13}, Lcom/amazonaws/logging/LogFactory$Level;-><init>(Ljava/lang/String;II)V
 
-    sput-object v11, Lcom/amazonaws/logging/LogFactory$Level;->ۛ:Lcom/amazonaws/logging/LogFactory$Level;
+    sput-object v11, Lcom/amazonaws/logging/LogFactory$Level;->ۢ:Lcom/amazonaws/logging/LogFactory$Level;
 
     const/4 v13, 0x7
 
@@ -141,7 +141,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 111
-    iput p3, p0, Lcom/amazonaws/logging/LogFactory$Level;->ܺ:I
+    iput p3, p0, Lcom/amazonaws/logging/LogFactory$Level;->ܰ:I
 
     return-void
 .end method
@@ -182,7 +182,7 @@
     .locals 1
 
     .line 106
-    iget v0, p0, Lcom/amazonaws/logging/LogFactory$Level;->ܺ:I
+    iget v0, p0, Lcom/amazonaws/logging/LogFactory$Level;->ܰ:I
 
     return v0
 .end method

@@ -1,223 +1,71 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.io.DataInputStream;
-import java.io.IOException;
+import java.net.ProtocolException;
 
-/* JADX INFO: renamed from: l.ۢۚۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 57DZ */
+/* JADX INFO: renamed from: l.ۡ۫ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L4FG */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C9379 extends C5487 {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public AbstractC9315 f31748 = null;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public IOException f31749 = null;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3027 f31750;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public DataInputStream f31751;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m24056(DataInputStream dataInputStream) {
-        this.f31751 = dataInputStream;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m24057() {
-        try {
-            return this.f31751.readUnsignedByte();
-        } catch (IOException e) {
-            this.f31749 = e;
-            return 0;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m24055() {
-        try {
-            return this.f31751.readUnsignedShort();
-        } catch (IOException e) {
-            this.f31749 = e;
-            return 0;
-        }
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final void m24059(EnumC2300 enumC2300) throws IOException {
-        this.f31749 = null;
-        this.f31748 = null;
-        this.f31750.f47519.m2146("Target Type: " + enumC2300.m7039(), new Object[0]);
-        m15162(enumC2300);
-        IOException iOException = this.f31749;
-        if (iOException != null) {
-            throw iOException;
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC9315 m24058() {
-        return this.f31748;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    private boolean m24054() {
-        return this.f31749 != null;
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۘ */
-    public final void mo15161(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("Type Param Target: ", new Object[0]);
-        int iM24057 = m24057();
-        c3027.f47519.m2146(C2271.m6966(iM24057, "{ param_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
-        }
-        this.f31748 = new C1552(enumC2300, iM24057);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ֨ */
-    public final void mo15159(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("SuperType Target: ", new Object[0]);
-        int iM24055 = m24055();
-        c3027.f47519.m2146(C2271.m6966(iM24055, "{ type_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
-        }
-        this.f31748 = new C5786(enumC2300, iM24055);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ᩺ */
-    public final void mo15169(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("TypeParam Bound Target: ", new Object[0]);
-        int iM24057 = m24057();
-        if (m24054()) {
-            return;
-        }
-        int iM24058 = m24057();
-        if (m24054()) {
-            return;
-        }
-        c3027.f47519.m2146(C8015.m21119("{ param_index: ", iM24057, " bound_index: ", l.d, iM24058), new Object[0]);
-        this.f31748 = new C14254(enumC2300, iM24057, iM24058);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo15165(EnumC2300 enumC2300) {
-        this.f31750.f47519.m2146("Empty Target: ", new Object[0]);
-        if (m24054()) {
-            return;
-        }
-        this.f31748 = new C15665(enumC2300);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo15163(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("MethodFormalParam Target: ", new Object[0]);
-        int iM24057 = m24057();
-        c3027.f47519.m2146(C2271.m6966(iM24057, "{ param_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
-        }
-        this.f31748 = new C19898(enumC2300, iM24057);
-    }
-
-    public C9379(C3027 c3027) {
-        this.f31750 = c3027;
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۬ */
-    public final void mo15166(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("Throws Target: ", new Object[0]);
-        int iM24055 = m24055();
-        c3027.f47519.m2146(C2271.m6966(iM24055, "{ exception_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
-        }
-        this.f31748 = new C10726(enumC2300, iM24055);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo15160(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2146("LocalVar Target: ", new Object[0]);
-        int iM24055 = m24055();
-        if (m24054()) {
-            return;
-        }
-        C12137 c12137 = new C12137(enumC2300, iM24055);
-        this.f31748 = c12137;
-        for (int i = 0; i < iM24055; i++) {
-            int iM24056 = m24055();
-            if (m24054()) {
-                return;
+public final class C9379 implements InterfaceC17649 {
+    @Override // l.InterfaceC17649
+    /* JADX INFO: renamed from: ۙ */
+    public final C9444 mo19233(C4688 c4688) throws ProtocolException {
+        InterfaceC2668 interfaceC2668M14560 = c4688.m14560();
+        C19076 c19076M14556 = c4688.m14556();
+        C14600 c14600M14557 = c4688.m14557();
+        C7954 c7954M14558 = c4688.m14558();
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        c4688.m14562().getClass();
+        interfaceC2668M14560.mo8831(c7954M14558);
+        c4688.m14562().getClass();
+        C1242 c1242Mo8827 = null;
+        if (C15407.m36887(c7954M14558.m21651()) && c7954M14558.m21647() != null) {
+            if ("100-continue".equalsIgnoreCase(c7954M14558.m21646("Expect"))) {
+                interfaceC2668M14560.mo8832();
+                c4688.m14562().getClass();
+                c1242Mo8827 = interfaceC2668M14560.mo8827(true);
             }
-            int iM24057 = m24055();
-            if (m24054()) {
-                return;
+            if (c1242Mo8827 == null) {
+                c4688.m14562().getClass();
+                InterfaceC11573 interfaceC11573M35106 = C14556.m35106(new C1177(interfaceC2668M14560.mo8828(c7954M14558, c7954M14558.m21647().mo26310())));
+                c7954M14558.m21647().mo26311(interfaceC11573M35106);
+                interfaceC11573M35106.close();
+                c4688.m14562().getClass();
+            } else if (!c14600M14557.m35247()) {
+                c19076M14556.m44185();
             }
-            int iM24058 = m24055();
-            c3027.f47519.m2160(C2271.m6966(i, "LocalVar[", "]: "), new Object[0]);
-            c3027.f47519.m2146(C12441.m30911(iM24058, l.d, C0589.m2791("{ startPC: ", iM24056, ", length: ", ", CPX: ", iM24057)), new Object[0]);
-            c12137.m30211(iM24056, iM24057, iM24058);
         }
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo15167(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("Catch Target: ", new Object[0]);
-        int iM24055 = m24055();
-        c3027.f47519.m2146(C2271.m6966(iM24055, "{ catch_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
+        interfaceC2668M14560.mo8830();
+        if (c1242Mo8827 == null) {
+            c4688.m14562().getClass();
+            c1242Mo8827 = interfaceC2668M14560.mo8827(false);
         }
-        this.f31748 = new C20603(enumC2300, iM24055);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ᩹ */
-    public final void mo15168(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("Offset Target: ", new Object[0]);
-        int iM24055 = m24055();
-        c3027.f47519.m2146(C2271.m6966(iM24055, "{ offset_index: ", l.d), new Object[0]);
-        if (m24054()) {
-            return;
+        c1242Mo8827.m4485(c7954M14558);
+        c1242Mo8827.m4484(c19076M14556.m44182().m35249());
+        c1242Mo8827.m4491(jCurrentTimeMillis);
+        c1242Mo8827.m4481(System.currentTimeMillis());
+        C9444 c9444M4479 = c1242Mo8827.m4479();
+        int iM24820 = c9444M4479.m24820();
+        if (iM24820 == 100) {
+            C1242 c1242Mo8828 = interfaceC2668M14560.mo8827(false);
+            c1242Mo8828.m4485(c7954M14558);
+            c1242Mo8828.m4484(c19076M14556.m44182().m35249());
+            c1242Mo8828.m4491(jCurrentTimeMillis);
+            c1242Mo8828.m4481(System.currentTimeMillis());
+            c9444M4479 = c1242Mo8828.m4479();
+            iM24820 = c9444M4479.m24820();
         }
-        this.f31748 = new C17075(enumC2300, iM24055);
-    }
-
-    @Override // l.C5487
-    /* JADX INFO: renamed from: ۜ */
-    public final void mo15164(EnumC2300 enumC2300) {
-        C3027 c3027 = this.f31750;
-        c3027.f47519.m2160("TypeArg Target: ", new Object[0]);
-        int iM24055 = m24055();
-        if (m24054()) {
-            return;
+        c4688.m14562().getClass();
+        C1242 c1242M24824 = c9444M4479.m24824();
+        c1242M24824.m4486(interfaceC2668M14560.mo8829(c9444M4479));
+        C9444 c9444M44710 = c1242M24824.m4479();
+        if ("close".equalsIgnoreCase(c9444M44710.m24826().m21646("Connection")) || "close".equalsIgnoreCase(c9444M44710.m24817("Connection"))) {
+            c19076M14556.m44185();
         }
-        int iM24057 = m24057();
-        if (m24054()) {
-            return;
+        if ((iM24820 != 204 && iM24820 != 205) || c9444M44710.m24818().mo9079() <= 0) {
+            return c9444M44710;
         }
-        c3027.f47519.m2146(C8015.m21119("{ offset: ", iM24055, " type_index: ", l.d, iM24057), new Object[0]);
-        this.f31748 = new C23426(enumC2300, iM24055, iM24057);
+        StringBuilder sbM12235 = C3769.m12235(iM24820, "HTTP ", " had non-zero Content-Length: ");
+        sbM12235.append(c9444M44710.m24818().mo9079());
+        throw new ProtocolException(sbM12235.toString());
     }
 }

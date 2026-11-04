@@ -1,56 +1,75 @@
-.class public final synthetic Ll/ܿ۠᩵;
+.class public final Ll/ܿ۠᩵;
 .super Ljava/lang/Object;
-.source "18YS"
-
-
-# static fields
-.field public static final synthetic ۙ:[I
+.source "ZB07"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public static final ۙ(Ll/ۙۢ᩵;Ll/ۧۢ᩵;)Ll/᩵۬᩵;
+    .locals 2
 
-    .line 397
-    invoke-static {}, Ll/᩶᩵᩵;->values()[Ll/᩶᩵᩵;
+    .line 121
+    instance-of v0, p0, Ll/᩺ۢ᩵;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    array-length v0, v0
+    if-nez v0, :cond_0
 
-    new-array v0, v0, [I
+    goto :goto_2
 
-    sput-object v0, Ll/ܿ۠᩵;->ۙ:[I
+    .line 134
+    :cond_0
+    sget-object v0, Ll/ۨ۬᩵;->ܰ:Ll/ۨ۬᩵;
 
-    :try_start_0
-    sget-object v1, Ll/᩶᩵᩵;->֡:Ll/᩶᩵᩵;
+    invoke-interface {p1, v0}, Ll/ۧۢ᩵;->ۙ(Ll/֫ۢ᩵;)Ll/ۚۢ᩵;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result-object p1
 
-    move-result v1
+    if-eqz p1, :cond_5
 
-    const/4 v2, 0x1
+    .line 136
+    check-cast p0, Ll/᩺ۢ᩵;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 144
+    :cond_1
+    instance-of p1, p0, Ll/ܳۜ᩵;
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Ll/ܿ۠᩵;->ۙ:[I
+    if-eqz p1, :cond_2
 
-    sget-object v1, Ll/᩶᩵᩵;->᩶:Ll/᩶᩵᩵;
+    goto :goto_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    .line 145
+    :cond_2
+    invoke-interface {p0}, Ll/᩺ۢ᩵;->᩷()Ll/᩺ۢ᩵;
 
-    move-result v1
+    move-result-object p0
 
-    const/4 v2, 0x2
+    if-nez p0, :cond_3
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :goto_0
+    move-object p0, v1
 
-    :catch_1
-    return-void
+    goto :goto_1
+
+    .line 147
+    :cond_3
+    instance-of p1, p0, Ll/᩵۬᩵;
+
+    if-eqz p1, :cond_1
+
+    check-cast p0, Ll/᩵۬᩵;
+
+    :goto_1
+    if-nez p0, :cond_4
+
+    return-object p0
+
+    .line 137
+    :cond_4
+    invoke-virtual {p0}, Ll/᩵۬᩵;->᩹()V
+
+    throw v1
+
+    :cond_5
+    :goto_2
+    return-object v1
 .end method

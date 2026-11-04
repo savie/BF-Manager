@@ -1,60 +1,65 @@
 .class public final synthetic Ll/ܽ۟᩹;
 .super Ljava/lang/Object;
-.source "O60D"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
-
-
-# instance fields
-.field public final synthetic ܺ:Ll/۫۟᩹;
+.source "TAPG"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/۫۟᩹;)V
-    .locals 0
+.method public static ۙ(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 86
+    instance-of v0, p1, Ljava/util/function/IntConsumer;
 
-    iput-object p1, p0, Ll/ܽ۟᩹;->ܺ:Ll/۫۟᩹;
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/function/IntConsumer;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ll/᩹֡᩹;
+
+    invoke-direct {v0, p1}, Ll/᩹֡᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/۟ۚۗ;->forEachRemaining(Ljava/util/function/IntConsumer;)V
 
     return-void
 .end method
 
+.method public static ᩷(Ll/ܶ۟᩹;Ljava/util/function/Consumer;)Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-# virtual methods
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 0
+    .line 41
+    instance-of v0, p1, Ljava/util/function/IntConsumer;
 
-    .line 2
-    iget-object p1, p0, Ll/ܽ۟᩹;->ܺ:Ll/۫۟᩹;
+    if-eqz v0, :cond_0
 
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ljava/util/function/IntConsumer;
 
-    .line 105
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result p3
-
-    if-nez p3, :cond_0
-
-    const/4 p3, 0x4
-
-    if-ne p2, p3, :cond_0
-
-    .line 106
-    iget-object p1, p1, Ll/۫۟᩹;->ܺ:Ll/᩵ۡۜ;
-
-    invoke-virtual {p1}, Ll/᩵ۡۜ;->dismiss()V
-
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
+    new-instance v0, Ll/᩹֡᩹;
+
+    invoke-direct {v0, p1}, Ll/᩹֡᩹;-><init>(Ljava/util/function/Consumer;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/۟ۚۗ;->tryAdvance(Ljava/util/function/IntConsumer;)Z
+
+    move-result p0
+
+    return p0
 .end method

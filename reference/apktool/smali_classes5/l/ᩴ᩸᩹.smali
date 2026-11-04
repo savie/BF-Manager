@@ -1,14 +1,26 @@
 .class public final Ll/ᩴ᩸᩹;
-.super Ll/ܺ᩸᩹;
-.source "R12P"
+.super Ljava/lang/Object;
+.source "QABT"
 
 
-# virtual methods
-.method public final ۖ()I
-    .locals 1
+# instance fields
+.field public final ۙ:Ll/۟ܳۨ;
 
-    .line 59
-    sget v0, Ll/᩶᩵ۘ;->ܺ:I
+.field public final ᩷:Z
 
-    return v0
+
+# direct methods
+.method public constructor <init>(Ll/۟ܳۨ;Z)V
+    .locals 0
+
+    .line 94
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 95
+    iput-object p1, p0, Ll/ᩴ᩸᩹;->ۙ:Ll/۟ܳۨ;
+
+    .line 96
+    iput-boolean p2, p0, Ll/ᩴ᩸᩹;->᩷:Z
+
+    return-void
 .end method

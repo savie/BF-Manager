@@ -2,7 +2,7 @@ package net.sf.sevenzipjbinding;
 
 import net.sf.sevenzipjbinding.impl.OutItemFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface IOutCreateCallback extends IProgress {
     IOutItemBase getItemInformation(int i, OutItemFactory outItemFactory);
 

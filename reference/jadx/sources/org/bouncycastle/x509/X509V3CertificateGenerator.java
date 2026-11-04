@@ -15,9 +15,9 @@ import java.security.cert.X509Certificate;
 import java.util.Date;
 import java.util.Iterator;
 import javax.security.auth.x500.X500Principal;
-import l.C0252;
-import l.C15489;
-import l.C16523;
+import l.C13645;
+import l.C14442;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
@@ -95,7 +95,7 @@ public class X509V3CertificateGenerator {
     public void copyAndAddExtension(String str, boolean z, X509Certificate x509Certificate) throws CertificateParsingException {
         byte[] extensionValue = x509Certificate.getExtensionValue(str);
         if (extensionValue == null) {
-            throw new CertificateParsingException(C16523.m38890("extension ", str, " not present"));
+            throw new CertificateParsingException(C14442.m34865("extension ", str, " not present"));
         }
         try {
             addExtension(str, z, X509ExtensionUtil.fromExtensionValue(extensionValue));
@@ -189,7 +189,7 @@ public class X509V3CertificateGenerator {
         try {
             this.tbsGen.setIssuer(new X509Principal(x500Principal.getEncoded()));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("can't process principal: ", e));
+            throw new IllegalArgumentException(C13645.m33383("can't process principal: ", e));
         }
     }
 
@@ -220,7 +220,7 @@ public class X509V3CertificateGenerator {
         try {
             this.tbsGen.setSubject(new X509Principal(x500Principal.getEncoded()));
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("can't process principal: ", e));
+            throw new IllegalArgumentException(C13645.m33383("can't process principal: ", e));
         }
     }
 
@@ -249,7 +249,7 @@ public class X509V3CertificateGenerator {
             this.sigAlgId = sigAlgID;
             this.tbsGen.setSignature(sigAlgID);
         } catch (Exception unused) {
-            throw new IllegalArgumentException(C0252.m1693("Unknown signature type requested: ", str));
+            throw new IllegalArgumentException(C25272.m56409("Unknown signature type requested: ", str));
         }
     }
 }

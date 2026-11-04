@@ -1,13 +1,13 @@
 package org.bouncycastle.asn1.x509;
 
-import l.C8479;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Validity extends ASN1Object {
     public final Time notAfter;
     public final Time notBefore;
@@ -15,7 +15,7 @@ public class Validity extends ASN1Object {
     public Validity(ASN1Sequence aSN1Sequence) {
         int size = aSN1Sequence.size();
         if (size != 2) {
-            throw new IllegalArgumentException(C8479.m22141(size, "Bad sequence size: "));
+            throw new IllegalArgumentException(C13645.m33382(size, "Bad sequence size: "));
         }
         this.notBefore = Time.getInstance(aSN1Sequence.getObjectAt(0));
         this.notAfter = Time.getInstance(aSN1Sequence.getObjectAt(1));

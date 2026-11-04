@@ -1,58 +1,39 @@
-.class public final Ll/᩺᩷ᩴ;
+.class public final synthetic Ll/᩺᩷ᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "S4H6"
 
 # interfaces
-.implements Ljava/nio/file/attribute/FileAttribute;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ll/᩶۟ᩴ;
+.field public final synthetic ܰ:Ll/᩺ۜ᩸;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩶۟ᩴ;)V
+.method public synthetic constructor <init>(Ll/᩺ۜ᩸;)V
     .locals 0
 
-    .line 54
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/᩺᩷ᩴ;->a:Ll/᩶۟ᩴ;
+    iput-object p1, p0, Ll/᩺᩷ᩴ;->ܰ:Ll/᩺ۜ᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final name()Ljava/lang/String;
+.method public final run()V
     .locals 1
 
-    const-string v0, "posix:permissions"
+    .line 568
+    iget-object v0, p0, Ll/᩺᩷ᩴ;->ܰ:Ll/᩺ۜ᩸;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ll/᩺ۜ᩸;->᩷()V
 
-.method public final value()Ljava/lang/Object;
-    .locals 1
+    .line 569
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 60
-    iget-object v0, p0, Ll/᩺᩷ᩴ;->a:Ll/᩶۟ᩴ;
-
-    .line 61
-    invoke-interface {v0}, Ll/᩶۟ᩴ;->value()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-static {v0}, Ll/֫ۡᩴ;->v(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    .line 60
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

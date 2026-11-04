@@ -35,14 +35,14 @@
     .line 112
     iget-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate$2;->this$0:Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;
 
-    iget-object v0, p1, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Ll/ۖ֫ܰ;
+    iget-object v0, p1, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Ll/۟ۖ᩷;
 
     if-eqz v0, :cond_0
 
     .line 113
     iget-object p1, p1, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->drawable:Lcom/google/android/material/progressindicator/IndeterminateDrawable;
 
-    invoke-virtual {v0, p1}, Ll/ۖ֫ܰ;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Ll/۟ۖ᩷;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void

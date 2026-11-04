@@ -1,74 +1,72 @@
 .class public final Ll/֡۫ۙ;
 .super Ljava/lang/Object;
-.source "98TD"
+.source "P1H0"
 
 # interfaces
-.implements Ll/ۘ۫ۙ;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final ۖ:Ll/֨ܰܰ;
+.field public final synthetic ܰ:Ll/۟۫ۙ;
 
-.field public final ۙ:Ljava/util/ArrayList;
-
-.field public final ۚ:Ljava/lang/Object;
-
-.field public ۨ:Z
-
-.field public ܰ:I
+.field public final synthetic ᩶:Ll/ۢۚۙ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ᩳܰܰ;Z)V
-    .locals 1
+.method public constructor <init>(Ll/۟۫ۙ;Ll/ۢۚۙ;)V
+    .locals 0
 
-    .line 512
+    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 513
-    new-instance v0, Ll/֨ܰܰ;
+    iput-object p1, p0, Ll/֡۫ۙ;->ܰ:Ll/۟۫ۙ;
 
-    invoke-direct {v0, p1, p2}, Ll/֨ܰܰ;-><init>(Ll/ᩳܰܰ;Z)V
-
-    iput-object v0, p0, Ll/֡۫ۙ;->ۖ:Ll/֨ܰܰ;
-
-    .line 514
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Ll/֡۫ۙ;->ۙ:Ljava/util/ArrayList;
-
-    .line 515
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/֡۫ۙ;->ۚ:Ljava/lang/Object;
+    iput-object p2, p0, Ll/֡۫ۙ;->᩶:Ll/ۢۚۙ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getUid()Ljava/lang/Object;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
-    .line 526
-    iget-object v0, p0, Ll/֡۫ۙ;->ۚ:Ljava/lang/Object;
+    .line 163
+    iget-object p1, p0, Ll/֡۫ۙ;->᩶:Ll/ۢۚۙ;
 
-    return-object v0
-.end method
-
-.method public final ۙ()Ll/ܽ۠ۙ;
-    .locals 1
-
-    .line 531
-    iget-object v0, p0, Ll/֡۫ۙ;->ۖ:Ll/֨ܰܰ;
-
-    invoke-virtual {v0}, Ll/֨ܰܰ;->ܶ()Ll/ܽ۠ۙ;
+    invoke-virtual {p1}, Ll/ۢۚۙ;->֫()Ll/ۧ۫ۙ;
 
     move-result-object v0
 
-    return-object v0
+    .line 164
+    invoke-virtual {p1}, Ll/ۢۚۙ;->ۧ()V
+
+    .line 165
+    iget-object p1, v0, Ll/ۧ۫ۙ;->mView:Landroid/view/View;
+
+    .line 166
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iget-object v0, p0, Ll/֡۫ۙ;->ܰ:Ll/۟۫ۙ;
+
+    iget-object v0, v0, Ll/۟۫ۙ;->ܰ:Ll/ۗۚۙ;
+
+    invoke-static {p1, v0}, Ll/ܿ֫ۙ;->ۙ(Landroid/view/ViewGroup;Ll/ۗۚۙ;)Ll/ܿ֫ۙ;
+
+    move-result-object p1
+
+    .line 168
+    invoke-virtual {p1}, Ll/ܿ֫ۙ;->᩷()V
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,167 +1,96 @@
 package l;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.Set;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.֨ۚ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: O6YT */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0919 {
+/* JADX INFO: renamed from: l.֨ۘܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: DBCG */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0919 extends AbstractC13354 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Set f3684;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public ArrayList f3428;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Set f3685;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final TreeMap f3429;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Set f3686;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC6025 f3687;
-
-    static {
-        String[] strArr = {"console.asyncRender", "console.jsExecution", "console.catchGlobalErr", "console.overrideConsole", "console.displayIfErr", "console.displayExtraInfo", "console.displayUnenumerable", "console.displayGetterVal", "console.lazyEvaluation", "elements.overrideEventTarget", "resources.observeElement", "sources.showLineNum"};
-        HashSet hashSet = new HashSet(12);
-        for (int i = 0; i < 12; i++) {
-            String str = strArr[i];
-            C13638.requireNonNull(str);
-            if (!hashSet.add(str)) {
-                throw new IllegalArgumentException("duplicate element: " + ((Object) str));
-            }
-        }
-        f3686 = C0561.unmodifiableSet(hashSet);
-        String[] strArr2 = {"System preference", "Light", "Dark", "Material Oceanic", "Material Darker", "Material Lighter", "Material Palenight", "Material Deep Ocean", "Monokai Pro", "Dracula", "Arc Dark", "Atom One Dark", "Atom One Light", "Solarized Dark", "Solarized Light", "Github", "Night Owl", "Light Owl", "AMOLED"};
-        HashSet hashSet2 = new HashSet(19);
-        for (int i2 = 0; i2 < 19; i2++) {
-            String str2 = strArr2[i2];
-            C13638.requireNonNull(str2);
-            if (!hashSet2.add(str2)) {
-                throw new IllegalArgumentException("duplicate element: " + ((Object) str2));
-            }
-        }
-        f3684 = C0561.unmodifiableSet(hashSet2);
-        Object[] objArr = {"infinite", "250", "125", "100", "50", "10"};
-        HashSet hashSet3 = new HashSet(6);
-        for (int i3 = 0; i3 < 6; i3++) {
-            Object obj = objArr[i3];
-            C13638.requireNonNull(obj);
-            if (!hashSet3.add(obj)) {
-                throw new IllegalArgumentException(C9023.m23354(obj, "duplicate element: "));
-            }
-        }
-        f3685 = C0561.unmodifiableSet(hashSet3);
+    public C0919(C10918 c10918) {
+        super("class_defs", c10918, 4);
+        this.f3429 = new TreeMap();
+        this.f3428 = null;
     }
 
-    public C0919(InterfaceC6025 interfaceC6025) {
-        this.f3687 = interfaceC6025;
+    @Override // l.AbstractC8681
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final Collection mo3721() {
+        ArrayList arrayList = this.f3428;
+        return arrayList != null ? arrayList : this.f3429.values();
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m3719(C15000 c15000) {
+        m23365();
+        int size = this.f3429.size();
+        int iM23364 = size == 0 ? 0 : m23364();
+        if (c15000.m36116()) {
+            c15000.m36111(4, "class_defs_size: ".concat(C5306.m15938(size)));
+            c15000.m36111(4, "class_defs_off:  ".concat(C5306.m15938(iM23364)));
+        }
+        c15000.m36124(size);
+        c15000.m36124(iM23364);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final JSONObject m3649() {
-        JSONObject jSONObjectM3647;
-        synchronized (this.f3687) {
-            jSONObjectM3647 = m3647();
-        }
-        return jSONObjectM3647;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private JSONObject m3647() {
-        JSONObject jSONObject = new JSONObject();
-        String string = this.f3687.getString("hpic", "{}");
-        if (string.length() <= 4096) {
-            try {
-                JSONObject jSONObject2 = new JSONObject(string);
-                Iterator<String> itKeys = jSONObject2.keys();
-                while (itKeys.hasNext()) {
-                    String next = itKeys.next();
-                    Object obj = jSONObject2.get(next);
-                    if (m3645(obj, next)) {
-                        jSONObject.put(next, obj);
-                    }
-                }
-            } catch (JSONException unused) {
-            }
-        }
-        return jSONObject;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m3650(String str) {
-        boolean zM3648;
-        if (str == null || str.length() > 512) {
-            return false;
-        }
-        synchronized (this.f3687) {
-            zM3648 = m3648(str);
-        }
-        return zM3648;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    private boolean m3648(String str) {
+    public final void m3718(C9867 c9867) {
         try {
-            JSONArray jSONArray = new JSONArray(str);
-            if (jSONArray.length() == 1 && "reset".equals(jSONArray.get(0))) {
-                return m3646(null);
+            C5085 c5085M3933 = c9867.m25683().m3933();
+            m23363();
+            TreeMap treeMap = this.f3429;
+            if (treeMap.get(c5085M3933) != null) {
+                throw new IllegalArgumentException("already added: " + c5085M3933);
             }
-            if (jSONArray.length() == 4 && "set".equals(jSONArray.get(0)) && (jSONArray.get(1) instanceof String) && (jSONArray.get(2) instanceof String)) {
-                String str2 = jSONArray.getString(1) + "." + jSONArray.getString(2);
-                Object obj = jSONArray.get(3);
-                if (!m3645(obj, str2)) {
-                    return false;
-                }
-                JSONObject jSONObjectM3647 = m3647();
-                if (obj.equals(jSONObjectM3647.opt(str2))) {
-                    return true;
-                }
-                jSONObjectM3647.put(str2, obj);
-                return m3646(jSONObjectM3647.toString());
-            }
-            return false;
-        } catch (JSONException unused) {
+            treeMap.put(c5085M3933, c9867);
+        } catch (NullPointerException unused) {
+            throw new NullPointerException("clazz == null");
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    private boolean m3646(String str) {
-        InterfaceC6025 interfaceC6025 = this.f3687;
-        String string = interfaceC6025.getString("hpic", null);
-        if (interfaceC6025.edit().putString("hpic", str).commit()) {
-            return true;
+    @Override // l.AbstractC13354
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final void mo3720() {
+        TreeMap treeMap = this.f3429;
+        int size = treeMap.size();
+        this.f3428 = new ArrayList(size);
+        Iterator it = treeMap.keySet().iterator();
+        int iM3717 = 0;
+        while (it.hasNext()) {
+            iM3717 = m3717(iM3717, size - iM3717, (C5085) it.next());
         }
-        interfaceC6025.edit().putString("hpic", string).commit();
-        return false;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m3645(Object obj, String str) {
-        if (f3686.contains(str)) {
-            return obj instanceof Boolean;
+    private int m3717(int i, int i2, C5085 c5085) {
+        C9867 c9867 = (C9867) this.f3429.get(c5085);
+        if (c9867 == null || c9867.m38320()) {
+            return i;
         }
-        if (str.equals("dev-tools.theme")) {
-            return (obj instanceof String) && f3684.contains(obj);
+        if (i2 < 0) {
+            throw new RuntimeException("class circularity with " + c5085);
         }
-        if (str.equals("console.maxLogNum")) {
-            return (obj instanceof String) && f3685.contains(obj);
+        int i3 = i2 - 1;
+        C1028 c1028M25675 = c9867.m25675();
+        if (c1028M25675 != null) {
+            i = m3717(i, i3, c1028M25675.m3933());
         }
-        if (!(obj instanceof Number)) {
-            return false;
+        InterfaceC11050 interfaceC11050M25684 = c9867.m25684();
+        int size = interfaceC11050M25684.size();
+        for (int i4 = 0; i4 < size; i4++) {
+            i = m3717(i, i3, interfaceC11050M25684.getType(i4));
         }
-        double dDoubleValue = ((Number) obj).doubleValue();
-        if (!Double.isInfinite(dDoubleValue) && !Double.isNaN(dDoubleValue)) {
-            if (str.equals("dev-tools.transparency")) {
-                return dDoubleValue >= 0.2d && dDoubleValue <= 1.0d;
-            }
-            if (str.equals("dev-tools.displaySize") && dDoubleValue >= 40.0d && dDoubleValue <= 100.0d) {
-                return true;
-            }
-        }
-        return false;
+        c9867.m38319(i);
+        this.f3428.add(c9867);
+        return i + 1;
     }
 }

@@ -156,7 +156,7 @@
     iget-object v7, p0, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$ChangeSizeStrategy;->this$0:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;
 
     .line 1381
-    sget v8, Ll/ۚ֫;->ۙ:I
+    sget v8, Ll/᩸۠;->ۙ:I
 
     .line 2220
     invoke-virtual {v7}, Landroid/view/View;->getPaddingStart()I
@@ -207,7 +207,7 @@
     iget-object v7, p0, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$ChangeSizeStrategy;->this$0:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;
 
     .line 1388
-    sget v8, Ll/ۚ֫;->ۙ:I
+    sget v8, Ll/᩸۠;->ۙ:I
 
     .line 2235
     invoke-virtual {v7}, Landroid/view/View;->getPaddingEnd()I
@@ -307,13 +307,13 @@
     if-eqz v0, :cond_0
 
     .line 1358
-    sget v0, Ll/ۨ۟ܶ;->ܿ:I
+    sget v0, Ll/֫۬ܺ;->ᩳ:I
 
     return v0
 
     .line 1359
     :cond_0
-    sget v0, Ll/ۨ۟ܶ;->۫:I
+    sget v0, Ll/֫۬ܺ;->۟:I
 
     return v0
 .end method
@@ -526,7 +526,7 @@
     move-result v4
 
     .line 1333
-    sget v5, Ll/ۚ֫;->ۙ:I
+    sget v5, Ll/᩸۠;->ۙ:I
 
     .line 2255
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->setPaddingRelative(IIII)V

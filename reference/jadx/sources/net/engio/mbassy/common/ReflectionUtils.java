@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ReflectionUtils {
     public static Method[] getMethods(IPredicate iPredicate, Class cls) {
         ArrayList arrayList = new ArrayList();

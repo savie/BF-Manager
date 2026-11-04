@@ -1,90 +1,80 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܽۧ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9AJ5 */
-/* JADX INFO: loaded from: classes5.dex */
-public class C16608 implements InterfaceC16088 {
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.text.TextUtils;
+import java.io.File;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public boolean f53295;
+/* JADX INFO: renamed from: l.ܺۙ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51RR */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16608 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f53296;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C8658 f53713;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f53297;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C13878 f53714;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public boolean f53298;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C16608 m39289(Context context) {
+        C5596.m16571(context.getApplicationContext());
+        C21587.m49113("openSDK_LOG.QQAuth", "QQAuth -- createInstance() --start");
+        C16608 c16608 = new C16608();
+        C21587.m49113("openSDK_LOG.QQAuth", "new QQAuth() --start");
+        C13878 c13878 = new C13878();
+        c16608.f53714 = c13878;
+        c16608.f53713 = new C8658(c13878);
+        C21338.m48571(context, c13878);
+        SharedPreferences.Editor editorEdit = context.getSharedPreferences("BuglySdkInfos", 0).edit();
+        editorEdit.putString("bcb3903995", "3.5.18.lite");
+        editorEdit.apply();
+        C21587.m49113("openSDK_LOG.QQAuth", "new QQAuth() --end");
+        C21587.m49113("openSDK_LOG.QQAuth", "QQAuth -- createInstance()  --end");
+        return c16608;
+    }
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f53299 = false;
-
-    /* JADX WARN: Code duplicated, block: B:7:0x0018  */
-    public C16608(boolean z) {
-        boolean z2;
-        if (C20370.m46024()) {
-            z2 = C16737.f53615.getBoolean("def_mov_recycle_bin", true);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m39290(Activity activity, InterfaceC19020 interfaceC19020) {
+        C8658 c8658 = this.f53713;
+        C21587.m49113("openSDK_LOG.QQAuth", "login()");
+        C21587.m49113("openSDK_LOG.QQAuth", "-->login activity: " + activity);
+        try {
+            String strM41147 = C17528.m41147(activity);
+            if (strM41147 != null) {
+                String strM51288 = C22750.m51288(new File(strM41147));
+                if (!TextUtils.isEmpty(strM51288)) {
+                    C21587.m49118("openSDK_LOG.QQAuth", "-->login channelId: " + strM51288);
+                    C21587.m49113("openSDK_LOG.QQAuth", "loginWithOEM");
+                    AbstractC6168.f21018 = true;
+                    String str = strM51288.equals("") ? "null" : strM51288;
+                    if (strM51288.equals("")) {
+                        strM51288 = "null";
+                    }
+                    AbstractC6168.f21015 = strM51288;
+                    AbstractC6168.f21016 = str;
+                    AbstractC6168.f21017 = "null";
+                    return c8658.m23308(activity, interfaceC19020);
+                }
+            }
+        } catch (Throwable th) {
+            C21587.m49112("openSDK_LOG.QQAuth", "-->login get channel id exception.", th);
         }
-        this.f53296 = z2;
-        this.f53297 = 0;
-        this.f53298 = z;
+        C21587.m49111("openSDK_LOG.QQAuth", "-->login channelId is null ");
+        AbstractC6168.f21018 = false;
+        return c8658.m23308(activity, interfaceC19020);
     }
 
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ۚۙ */
-    public void mo11427() {
-        this.f53298 = true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13878 m39291() {
+        return this.f53714;
     }
 
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ۠ */
-    public boolean mo11428() {
-        return !this.f53299;
-    }
-
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public boolean mo11425(boolean z) {
-        return z || mo11428();
-    }
-
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ᩷ */
-    public boolean mo11432() {
-        return this.f53296;
-    }
-
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public void mo11424(String str, C20321 c20321, C20321 c20322, boolean z) {
-        this.f53295 = !new C15903(this, str, c20321, c20322, z).m20356(new C15475());
-    }
-
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ۙ */
-    public int mo11423(String str, C20321 c20321, C20321 c20322, boolean z, boolean z2) {
-        if (!z2) {
-            return C17745.m41306(this, str, c20321, c20322, z, false);
-        }
-        int[] iArr = {1};
-        boolean zM20356 = new C0379(this, str, c20321, c20322, this.f53297, iArr).m20356(new C15475());
-        this.f53295 = !zM20356;
-        if (zM20356) {
-            return iArr[0];
-        }
-        return 1;
-    }
-
-    @Override // l.InterfaceC5614
-    /* JADX INFO: renamed from: ֨ */
-    public boolean mo2357() {
-        return this.f53295;
-    }
-
-    @Override // l.InterfaceC16088
-    /* JADX INFO: renamed from: ܿ */
-    public int mo11431() {
-        return this.f53297;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m39292() {
+        C13878 c13878 = this.f53714;
+        C21587.m49113("openSDK_LOG.QQAuth", "isSessionValid(), result = ".concat(c13878.m33822() ? "true" : "false"));
+        return c13878.m33822();
     }
 }

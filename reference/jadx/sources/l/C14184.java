@@ -1,109 +1,152 @@
 package l;
 
-import android.content.Context;
-import android.view.ActionMode;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
+import android.content.DialogInterface;
+import bin.mt.plus.R;
+import java.io.IOException;
+import java.nio.charset.Charset;
 
-/* JADX INFO: renamed from: l.ܳ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 355C */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14184 extends ActionMode {
+/* JADX INFO: renamed from: l.۬᩺۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 3AGE */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14184 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Context f46534;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C21799 f44847;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC12067 f46535;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f44848;
 
-    public C14184(Context context, AbstractC12067 abstractC12067) {
-        this.f46534 = context;
-        this.f46535 = abstractC12067;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C9118 f44849;
+
+    public C14184(AbstractActivityC17204 abstractActivityC17204, C21799 c21799) {
+        this.f44848 = abstractActivityC17204;
+        this.f44847 = c21799;
     }
 
-    @Override // android.view.ActionMode
-    public final Object getTag() {
-        return this.f46535.m29985();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8191(this.f44848, R.string.MT_Protector);
+        C13511 c13511 = this.f7780;
+        C17359.requireNonNull(c13511);
+        c13511.m33188(new RunnableC22836(5, c13511));
     }
 
-    @Override // android.view.ActionMode
-    public final void setTag(Object obj) {
-        this.f46535.m29983(obj);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws C3090 {
+        try {
+            try {
+                m34479();
+                if (this.f7780.m33196()) {
+                    C9118 c9118 = this.f44849;
+                    if (c9118 == null || !c9118.m27208()) {
+                        return;
+                    }
+                } else {
+                    try {
+                        this.f7780.m33186(R.string.MT_Protector);
+                        m34478();
+                        if (this.f7780.m33196()) {
+                            C9118 c9119 = this.f44849;
+                            if (c9119 == null || !c9119.m27208()) {
+                                return;
+                            }
+                        } else {
+                            this.f7780.m33195(R.string.MT_Protector);
+                            this.f44849.mo3701();
+                            this.f44849.m6110();
+                            if (this.f44849.m36451() != 226) {
+                                throw new Exception(this.f44849.m36450());
+                            }
+                            C9118 c91110 = this.f44849;
+                            if (c91110 == null || !c91110.m27208()) {
+                                return;
+                            }
+                        }
+                    } catch (C3090 e) {
+                        throw e;
+                    } catch (C4866 e2) {
+                        throw e2;
+                    } catch (Exception e3) {
+                        throw new Exception(C21576.m49088(R.string.MT_Protector) + ": " + e3.getMessage(), e3);
+                    }
+                }
+                try {
+                    this.f44849.mo6118();
+                } catch (IOException unused) {
+                }
+            } catch (Throwable th) {
+                C9118 c91111 = this.f44849;
+                if (c91111 != null && c91111.m27208()) {
+                    try {
+                        this.f44849.mo6118();
+                    } catch (IOException unused2) {
+                    }
+                }
+                throw th;
+            }
+        } catch (Exception e4) {
+            throw new Exception(C21576.m49088(R.string.MT_Protector) + ": " + e4.getMessage(), e4);
+        }
     }
 
-    @Override // android.view.ActionMode
-    public final void setTitle(CharSequence charSequence) {
-        this.f46535.mo6794(charSequence);
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    private void m34479() throws IOException {
+        C9118 c9118 = new C9118(null);
+        this.f44849 = c9118;
+        C21799 c21799 = this.f44847;
+        c9118.m36448(c21799.f69521);
+        C9118 c9119 = this.f44849;
+        Charset.forName(c21799.f69521);
+        c9119.getClass();
+        this.f44849.m27200(c21799.f69524, c21799.f69525);
+        if (c21799.f69522) {
+            this.f44849.m6093();
+        }
     }
 
-    @Override // android.view.ActionMode
-    public final void setSubtitle(CharSequence charSequence) {
-        this.f46535.mo6787(charSequence);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    private void m34478() throws C4866 {
+        C21799 c21799 = this.f44847;
+        String str = c21799.f69523;
+        String str2 = c21799.f69526;
+        if (str.equals("anonymous") && str2.isEmpty()) {
+            str2 = "anonymous@";
+        }
+        if (this.f44849.m6113(str, str2)) {
+            return;
+        }
+        StringBuilder sbM10405 = C3188.m10405(C21576.m49088(R.string.MT_Protector), ": ");
+        sbM10405.append(this.f44849.m36450());
+        throw new C4866(sbM10405.toString());
     }
 
-    @Override // android.view.ActionMode
-    public final void invalidate() {
-        this.f46535.mo6783();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f7780.m33196()) {
+            return;
+        }
+        C22673.m51152(R.string.MT_Protector);
     }
 
-    @Override // android.view.ActionMode
-    public final void finish() {
-        this.f46535.mo6784();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f7780.m33196()) {
+            return;
+        }
+        this.f44848.m40401(exc, (DialogInterface.OnDismissListener) null);
     }
 
-    @Override // android.view.ActionMode
-    public final Menu getMenu() {
-        return new MenuC3680(this.f46534, this.f46535.mo6791());
-    }
-
-    @Override // android.view.ActionMode
-    public final CharSequence getTitle() {
-        return this.f46535.mo6781();
-    }
-
-    @Override // android.view.ActionMode
-    public final void setTitle(int i) {
-        this.f46535.mo6793(i);
-    }
-
-    @Override // android.view.ActionMode
-    public final CharSequence getSubtitle() {
-        return this.f46535.mo6789();
-    }
-
-    @Override // android.view.ActionMode
-    public final void setSubtitle(int i) {
-        this.f46535.mo6785(i);
-    }
-
-    @Override // android.view.ActionMode
-    public final View getCustomView() {
-        return this.f46535.mo6792();
-    }
-
-    @Override // android.view.ActionMode
-    public final void setCustomView(View view) {
-        this.f46535.mo6786(view);
-    }
-
-    @Override // android.view.ActionMode
-    public final MenuInflater getMenuInflater() {
-        return this.f46535.mo6782();
-    }
-
-    @Override // android.view.ActionMode
-    public final boolean getTitleOptionalHint() {
-        return this.f46535.m29984();
-    }
-
-    @Override // android.view.ActionMode
-    public final void setTitleOptionalHint(boolean z) {
-        this.f46535.mo6788(z);
-    }
-
-    @Override // android.view.ActionMode
-    public final boolean isTitleOptional() {
-        return this.f46535.mo6790();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        if (this.f7780.m33196()) {
+            return;
+        }
+        m8196();
     }
 }

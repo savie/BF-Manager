@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     return-object p0
 
@@ -138,7 +138,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 66
     :goto_2

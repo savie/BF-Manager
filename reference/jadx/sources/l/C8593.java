@@ -1,21 +1,17 @@
 package l;
 
-import java.util.Comparator;
+/* JADX INFO: renamed from: l.۠ۧܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B9E8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8593 implements InterfaceC7979 {
+    @Override // l.InterfaceC7979
+    public final InterfaceC13988 read(byte[] bArr) throws C9338 {
+        throw new C9338();
+    }
 
-/* JADX INFO: renamed from: l.ۡۖܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 18UV */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8593 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        Integer num = (Integer) obj;
-        Integer num2 = (Integer) obj2;
-        if (num.intValue() == -1) {
-            return num2.intValue() == -1 ? 0 : -1;
-        }
-        if (num2.intValue() == -1) {
-            return 1;
-        }
-        return num.intValue() - num2.intValue();
+    @Override // l.InterfaceC7979
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo20545(byte[] bArr) {
+        return bArr.length >= 4 && bArr[0] == -1 && bArr[1] == 83 && bArr[2] == 77 && bArr[3] == 66;
     }
 }

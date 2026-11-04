@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.DERNull;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
@@ -17,7 +17,7 @@ import org.bouncycastle.internal.asn1.misc.MiscObjectIdentifiers;
 import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class MessageDigestUtils {
     public static Map digestOidMap = new HashMap();
     public static Map digestAlgIdMap = new HashMap();
@@ -94,6 +94,6 @@ public class MessageDigestUtils {
         if (digestAlgIdMap.containsKey(str)) {
             return (AlgorithmIdentifier) digestAlgIdMap.get(str);
         }
-        throw new IllegalArgumentException(C0252.m1693("unknown digest: ", str));
+        throw new IllegalArgumentException(C25272.m56409("unknown digest: ", str));
     }
 }

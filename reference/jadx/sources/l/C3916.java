@@ -1,25 +1,25 @@
 package l;
 
-import java.util.function.Consumer;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-/* JADX INFO: renamed from: l.ۘۨ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۘۙۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R77X */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C3916 extends AbstractC7445 implements Consumer {
-    public final Object[] b;
+public final class C3916 {
 
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final HashMap f13375;
 
-    public C3916(int i) {
-        this.b = new Object[i];
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13376;
 
-    @Override // java.util.function.Consumer
-    public final void accept(Object obj) {
-        int i = this.a;
-        this.a = i + 1;
-        this.b[i] = obj;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayList f13377;
+
+    public C3916(HashMap map, ArrayList arrayList, ArrayList arrayList2) {
+        this.f13375 = map;
+        this.f13377 = arrayList;
+        this.f13376 = arrayList2;
     }
 }

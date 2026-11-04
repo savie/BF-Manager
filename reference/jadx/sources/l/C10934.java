@@ -1,25 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧۤۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: renamed from: l.ۤܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G1EO */
 /* JADX INFO: loaded from: classes4.dex */
-public final enum C10934 extends EnumC8422 {
-    public /* synthetic */ C10934() {
-        this("ScriptDataEscapeStartDash", 20);
-    }
-
-    public C10934(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC8422
+public final class C10934 extends C15409 {
+    @Override // l.C15409
     /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        if (c2424.m7390('-')) {
-            c8111.m21356('-');
-            c8111.m21360(EnumC8422.f29246);
-        } else {
-            c8111.m21353(EnumC8422.f29204);
-        }
+    public final String mo15176(InterfaceC5650 interfaceC5650) {
+        int iMo16635 = interfaceC5650.mo16635();
+        return (iMo16635 == 1 || iMo16635 == 2) ? "integer" : C14049.m34212(interfaceC5650);
     }
 }

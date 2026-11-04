@@ -18,64 +18,64 @@ import org.w3c.dom.Document;
 public class S3ErrorResponseHandler implements HttpResponseHandler {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Log f498 = LogFactory.m302(S3ErrorResponseHandler.class);
+    public static final Log f488 = LogFactory.m296(S3ErrorResponseHandler.class);
 
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final boolean mo277() {
+    public final boolean mo271() {
         return false;
     }
 
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo276(HttpResponse httpResponse) {
-        Log log = f498;
-        InputStream inputStreamM267 = httpResponse.m267();
-        if (inputStreamM267 == null) {
-            return m474(httpResponse.m268(), httpResponse);
+    public final Object mo270(HttpResponse httpResponse) {
+        Log log = f488;
+        InputStream inputStreamM260 = httpResponse.m260();
+        if (inputStreamM260 == null) {
+            return m468(httpResponse.m262(), httpResponse);
         }
         try {
-            String strM781 = IOUtils.m781(inputStreamM267);
+            String strM775 = IOUtils.m775(inputStreamM260);
             try {
-                Document documentM801 = XpathUtils.m801(strM781);
-                String strM800 = XpathUtils.m800("Error/Message", documentM801);
-                String strM801 = XpathUtils.m800("Error/Code", documentM801);
-                String strM802 = XpathUtils.m800("Error/RequestId", documentM801);
-                String strM803 = XpathUtils.m800("Error/HostId", documentM801);
-                AmazonS3Exception amazonS3Exception = new AmazonS3Exception(strM800);
-                amazonS3Exception.m145(httpResponse.m266());
+                Document documentM795 = XpathUtils.m795(strM775);
+                String strM794 = XpathUtils.m794("Error/Message", documentM795);
+                String strM795 = XpathUtils.m794("Error/Code", documentM795);
+                String strM796 = XpathUtils.m794("Error/RequestId", documentM795);
+                String strM797 = XpathUtils.m794("Error/HostId", documentM795);
+                AmazonS3Exception amazonS3Exception = new AmazonS3Exception(strM794);
+                amazonS3Exception.m137(httpResponse.m264());
                 AmazonServiceException.ErrorType errorType = AmazonServiceException.ErrorType.Client;
-                amazonS3Exception.m146(strM801);
-                amazonS3Exception.m148(strM802);
-                amazonS3Exception.m525(strM803);
+                amazonS3Exception.m138(strM795);
+                amazonS3Exception.m140(strM796);
+                amazonS3Exception.m519(strM797);
                 return amazonS3Exception;
             } catch (Exception e) {
-                if (log.mo294()) {
-                    log.mo293("Failed in parsing the response as XML: " + strM781, e);
+                if (log.mo287()) {
+                    log.mo286("Failed in parsing the response as XML: " + strM775, e);
                 }
-                return m474(strM781, httpResponse);
+                return m468(strM775, httpResponse);
             }
         } catch (IOException e2) {
-            if (log.mo294()) {
-                log.mo293("Failed in reading the error response", e2);
+            if (log.mo287()) {
+                log.mo286("Failed in reading the error response", e2);
             }
-            return m474(httpResponse.m268(), httpResponse);
+            return m468(httpResponse.m262(), httpResponse);
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AmazonS3Exception m474(String str, HttpResponse httpResponse) {
+    public static AmazonS3Exception m468(String str, HttpResponse httpResponse) {
         AmazonS3Exception amazonS3Exception = new AmazonS3Exception(str);
-        int iM266 = httpResponse.m266();
-        amazonS3Exception.m146(iM266 + " " + httpResponse.m268());
-        amazonS3Exception.m145(iM266);
+        int iM264 = httpResponse.m264();
+        amazonS3Exception.m138(iM264 + " " + httpResponse.m262());
+        amazonS3Exception.m137(iM264);
         AmazonServiceException.ErrorType errorType = AmazonServiceException.ErrorType.Client;
-        Map mapM270 = httpResponse.m270();
-        amazonS3Exception.m148((String) mapM270.get("x-amz-request-id"));
-        amazonS3Exception.m525((String) mapM270.get("x-amz-id-2"));
+        Map mapM263 = httpResponse.m263();
+        amazonS3Exception.m140((String) mapM263.get("x-amz-request-id"));
+        amazonS3Exception.m519((String) mapM263.get("x-amz-id-2"));
         HashMap map = new HashMap();
-        map.put("x-amz-bucket-region", mapM270.get("x-amz-bucket-region"));
-        amazonS3Exception.m523(map);
+        map.put("x-amz-bucket-region", mapM263.get("x-amz-bucket-region"));
+        amazonS3Exception.m517(map);
         return amazonS3Exception;
     }
 }

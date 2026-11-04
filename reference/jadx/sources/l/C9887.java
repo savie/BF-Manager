@@ -1,28 +1,26 @@
 package l;
 
-import android.widget.TextView;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۢ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: S566 */
+/* JADX INFO: renamed from: l.ۢۙܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: FIQP */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C9887 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m25029(TextView textView, String str) {
-        return textView.setFontVariationSettings(str);
+public final class C9887 implements Iterable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final int f31798;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13616 f31799;
+
+    public C9887(C13616 c13616) {
+        this.f31799 = c13616;
+        C4933 c4933 = c13616.f43256;
+        this.f31798 = c4933 == null ? 0 : c4933.f17207;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m25026(TextView textView) {
-        return textView.getAutoSizeStepGranularity();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m25027(TextView textView, int i, int i2, int i3, int i4) {
-        textView.setAutoSizeTextTypeUniformWithConfiguration(i, i2, i3, i4);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m25028(TextView textView, int[] iArr, int i) {
-        textView.setAutoSizeTextTypeUniformWithPresetSizes(iArr, i);
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C18838(this);
     }
 }

@@ -1,22 +1,28 @@
 package l;
 
-import java.util.function.IntFunction;
+/* JADX INFO: renamed from: l.۠ܶ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5SO */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8731 extends C9476 implements InterfaceC15970 {
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void add(Object obj) {
+        C18063.m42090();
+        throw null;
+    }
 
-/* JADX INFO: renamed from: l.ۡ۟ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: CAJ3 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8731 implements IntFunction {
+    @Override // l.InterfaceC15970, java.util.ListIterator
+    public final /* synthetic */ void set(Object obj) {
+        C18063.m42091();
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f29999;
+    @Override // l.C13951, java.util.ListIterator, java.util.Iterator
+    public final Object next() {
+        return m34022().f66378;
+    }
 
-    @Override // java.util.function.IntFunction
-    public final Object apply(int i) {
-        switch (this.f29999) {
-            case 0:
-                return new String[i];
-            default:
-                return new String[i];
-        }
+    @Override // l.C13951, java.util.ListIterator, l.InterfaceC6847
+    public final Object previous() {
+        return m34023().f66378;
     }
 }

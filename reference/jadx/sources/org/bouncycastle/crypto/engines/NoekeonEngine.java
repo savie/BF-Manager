@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -13,7 +13,7 @@ import org.bouncycastle.crypto.signers.PSSSigner;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class NoekeonEngine implements BlockCipher {
     public static final int SIZE = 16;
     public static final byte[] roundConstants = {GCMSIVBlockCipher.MASK, 27, 54, 108, -40, -85, 77, -102, 47, 94, PSSSigner.TRAILER_IMPLICIT, 99, -58, -105, 53, 106, -44};
@@ -147,7 +147,7 @@ public class NoekeonEngine implements BlockCipher {
     @Override // org.bouncycastle.crypto.BlockCipher
     public void init(boolean z, CipherParameters cipherParameters) {
         if (!(cipherParameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("invalid parameter passed to Noekeon init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("invalid parameter passed to Noekeon init - ", cipherParameters));
         }
         byte[] key = ((KeyParameter) cipherParameters).getKey();
         if (key.length != 16) {

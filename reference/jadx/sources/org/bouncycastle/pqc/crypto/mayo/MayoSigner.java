@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.crypto.mayo;
 
 import java.security.SecureRandom;
-import l.C8015;
+import l.C24579;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
@@ -302,10 +302,10 @@ public class MayoSigner implements MessageSigner {
                     int i23 = 0;
                     while (i23 < mVecLimbs) {
                         long j2 = jArr[i14 + i23 + i19];
-                        int iM21118 = C8015.m21118(i9, i20, i12, i22);
-                        jArr2[iM21118] = jArr2[iM21118] ^ (j2 << i11);
+                        int iM54897 = C24579.m54897(i9, i20, i12, i22);
+                        jArr2[iM54897] = jArr2[iM54897] ^ (j2 << i11);
                         if (i11 > 0) {
-                            int i24 = iM21118 + i4;
+                            int i24 = iM54897 + i4;
                             jArr2[i24] = jArr2[i24] ^ (j2 >>> (64 - i11));
                         }
                         i23++;
@@ -327,10 +327,10 @@ public class MayoSigner implements MessageSigner {
                         int i30 = 0;
                         while (i30 < mVecLimbs) {
                             long j3 = jArr[i10 + i30 + i27];
-                            int iM21119 = C8015.m21118(i18, i26, i12, i28);
-                            jArr2[iM21119] = jArr2[iM21119] ^ (j3 << i11);
+                            int iM54898 = C24579.m54897(i18, i26, i12, i28);
+                            jArr2[iM54898] = jArr2[iM54898] ^ (j3 << i11);
                             if (i11 > 0) {
-                                int i31 = iM21119 + i4;
+                                int i31 = iM54898 + i4;
                                 jArr2[i31] = jArr2[i31] ^ (j3 >>> (64 - i11));
                             }
                             i30++;

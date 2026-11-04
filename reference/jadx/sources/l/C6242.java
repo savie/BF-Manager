@@ -1,44 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛᩴۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 67L9 */
-/* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C6242 {
+/* JADX INFO: renamed from: l.ۛ۟ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes3.dex */
+public final enum C6242 extends EnumC8806 {
+    public /* synthetic */ C6242() {
+        this("ScriptDataDoubleEscaped", 28);
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f21178;
+    public C6242(String str, int i) {
+        super(str, i, 0);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f21179;
-
-    static {
-        int[] iArr = new int[EnumC3584.values().length];
-        f21179 = iArr;
-        try {
-            iArr[EnumC3584.MODULE_PATH.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f21179[EnumC3584.MODULE_SOURCE_PATH.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f21179[EnumC3584.SYSTEM_MODULES.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f21179[EnumC3584.UPGRADE_MODULE_PATH.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        int[] iArr2 = new int[EnumC11347.values().length];
-        f21178 = iArr2;
-        try {
-            iArr2[EnumC11347.SOURCE.ordinal()] = 1;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f21178[EnumC11347.CLASS.ordinal()] = 2;
-        } catch (NoSuchFieldError unused6) {
+    @Override // l.EnumC8806
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1813(C8260 c8260, C24448 c24448) {
+        char cM54678 = c24448.m54678();
+        if (cM54678 == 0) {
+            c8260.m22262(this);
+            c24448.m54665();
+            c8260.m22253((char) 65533);
+        } else if (cM54678 == '-') {
+            c8260.m22253(cM54678);
+            c8260.m22258(EnumC8806.f28748);
+        } else if (cM54678 == '<') {
+            c8260.m22253(cM54678);
+            c8260.m22258(EnumC8806.f28727);
+        } else if (cM54678 == 65535) {
+            c8260.m22267(this);
+            c8260.m22269(EnumC8806.f28749);
+        } else {
+            c8260.m22254(c24448.m54664('-', '<', 0));
         }
     }
 }

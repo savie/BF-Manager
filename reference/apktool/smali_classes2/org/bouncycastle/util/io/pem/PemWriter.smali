@@ -185,7 +185,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v2, v3, v1}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v0, v2, v3, v1}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v0
 
@@ -272,7 +272,7 @@
 
     iget v2, p0, Lorg/bouncycastle/util/io/pem/PemWriter;->nlLength:I
 
-    invoke-static {v1, v2, p1, v0}, Ll/֫۠ۚ;->ۙ(IIII)I
+    invoke-static {v1, v2, p1, v0}, Ll/ۨ᩹ۧ;->ۙ(IIII)I
 
     move-result p1
 

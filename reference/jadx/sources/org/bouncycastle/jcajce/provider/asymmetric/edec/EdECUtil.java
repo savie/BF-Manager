@@ -3,12 +3,12 @@ package org.bouncycastle.jcajce.provider.asymmetric.edec;
 import java.security.InvalidKeyException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import l.C8479;
+import l.C16076;
 import org.bouncycastle.crypto.params.AsymmetricKeyParameter;
 import org.bouncycastle.crypto.util.PrivateKeyFactory;
 import org.bouncycastle.crypto.util.PublicKeyFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class EdECUtil {
     public static AsymmetricKeyParameter generatePrivateKeyParameter(PrivateKey privateKey) throws InvalidKeyException {
         if (privateKey instanceof BCXDHPrivateKey) {
@@ -24,7 +24,7 @@ public class EdECUtil {
             }
             throw new InvalidKeyException("no encoding for EdEC/XDH private key");
         } catch (Exception e) {
-            throw new InvalidKeyException(C8479.m22142(e, new StringBuilder("cannot identify EdEC/XDH private key: ")));
+            throw new InvalidKeyException(C16076.m38224(e, new StringBuilder("cannot identify EdEC/XDH private key: ")));
         }
     }
 
@@ -42,7 +42,7 @@ public class EdECUtil {
             }
             throw new InvalidKeyException("no encoding for EdEC/XDH public key");
         } catch (Exception e) {
-            throw new InvalidKeyException(C8479.m22142(e, new StringBuilder("cannot identify EdEC/XDH public key: ")));
+            throw new InvalidKeyException(C16076.m38224(e, new StringBuilder("cannot identify EdEC/XDH public key: ")));
         }
     }
 }

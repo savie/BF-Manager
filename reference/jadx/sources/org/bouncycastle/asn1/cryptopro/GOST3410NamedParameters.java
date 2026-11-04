@@ -5,7 +5,7 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410NamedParameters {
     public static GOST3410ParamSetParameters cryptoProA;
     public static GOST3410ParamSetParameters cryptoProB;

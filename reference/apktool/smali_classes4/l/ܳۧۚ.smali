@@ -1,29 +1,36 @@
 .class public final Ll/ܳۧۚ;
-.super Landroid/os/Handler;
-.source "I4HH"
+.super Ljava/lang/Object;
+.source "P77N"
 
 
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+# instance fields
+.field public final ۙ:I
+
+.field public final ۤ:Ljava/lang/String;
+
+.field public final ᩷:Ljava/lang/String;
+
+.field public final ᩸:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 277
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    .line 6118
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Ljava/lang/ref/WeakReference;
+    .line 6119
+    iput-object p1, p0, Ll/ܳۧۚ;->᩷:Ljava/lang/String;
 
-    .line 278
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 6120
+    iput-object p3, p0, Ll/ܳۧۚ;->᩸:Ljava/lang/String;
 
-    move-result-object p1
+    .line 6121
+    iput p2, p0, Ll/ܳۧۚ;->ۙ:I
 
-    check-cast p1, Ll/֫ۧۚ;
+    .line 6122
+    iput-object p4, p0, Ll/ܳۧۚ;->ۤ:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
-
-    .line 280
-    invoke-static {p1}, Ll/֫ۧۚ;->ܰ(Ll/֫ۧۚ;)V
-
-    :cond_0
     return-void
 .end method

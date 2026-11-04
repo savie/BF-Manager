@@ -1,84 +1,77 @@
-.class public final synthetic Ll/᩻֡ۚ;
-.super Ljava/lang/Object;
-.source "A9CL"
+.class public final Ll/᩻֡ۚ;
+.super Ljava/io/InputStream;
+.source "S6V7"
 
 # interfaces
-.implements Ll/۟ۡۙ;
-.implements Ll/ᩴܶ᩹;
-.implements Ll/᩸᩻᩺;
+.implements Ll/۠ۜ᩹;
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/lang/Object;
+.field public final synthetic ܰ:Ll/ۗ֡ۚ;
+
+.field public final synthetic ᩶:Ll/۬ܺۤ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Ll/۬ܺۤ;Ll/ۗ֡ۚ;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, Ll/᩻֡ۚ;->ܺ:Ljava/lang/Object;
+    .line 61
+    iput-object p1, p0, Ll/᩻֡ۚ;->᩶:Ll/۬ܺۤ;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ll/᩻֡ۚ;->ܰ:Ll/ۗ֡ۚ;
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    iput-object p2, p0, Ll/᩻֡ۚ;->ܺ:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public invoke(Ljava/lang/Object;)V
+.method public final close()V
     .locals 1
 
-    .line 2
-    iget-object v0, p0, Ll/᩻֡ۚ;->ܺ:Ljava/lang/Object;
+    .line 66
+    iget-object v0, p0, Ll/᩻֡ۚ;->ܰ:Ll/ۗ֡ۚ;
 
-    .line 4
-    check-cast v0, Ll/۫᩶ۙ;
-
-    .line 6
-    check-cast p1, Ll/ۤܿۙ;
-
-    .line 358
-    invoke-interface {p1, v0}, Ll/ۤܿۙ;->ۙ(Ll/۫᩶ۙ;)V
+    invoke-virtual {v0}, Ll/ۗ֡ۚ;->close()V
 
     return-void
 .end method
 
-.method public ۙ(I)V
+.method public final read()I
     .locals 1
+
+    .line 62
+    iget-object v0, p0, Ll/᩻֡ۚ;->᩶:Ll/۬ܺۤ;
+
+    invoke-virtual {v0}, Ll/۬ܺۤ;->read()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final read([BII)I
+    .locals 1
+
+    .line 64
+    iget-object v0, p0, Ll/᩻֡ۚ;->᩶:Ll/۬ܺۤ;
+
+    invoke-virtual {v0, p1, p2, p3}, Ll/۬ܺۤ;->read([BII)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public synthetic transferTo(Ljava/io/OutputStream;)J
+    .locals 2
 
     .line 0
-    iget-object v0, p0, Ll/᩻֡ۚ;->ܺ:Ljava/lang/Object;
+    invoke-static {p0, p1}, Ll/ۡۜ᩹;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    check-cast v0, Ll/ᩳ֡֨;
+    move-result-wide v0
 
-    invoke-interface {v0, p1}, Ll/ᩳ֡֨;->setProgress(I)V
-
-    return-void
-.end method
-
-.method public ܰ(Ll/᩷۠ۚ;)V
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Ll/᩻֡ۚ;->ܺ:Ljava/lang/Object;
-
-    .line 4
-    check-cast v0, Ll/ۨۜ᩹;
-
-    .line 1776
-    invoke-static {v0, p1}, Ll/᩷۫ۨ;->ۙ(Ll/ۨۜ᩹;Ll/᩷۠ۚ;)V
-
-    return-void
+    return-wide v0
 .end method

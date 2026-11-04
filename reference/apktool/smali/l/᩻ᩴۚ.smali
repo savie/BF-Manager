@@ -1,95 +1,93 @@
-.class public final synthetic Ll/᩻ᩴۚ;
+.class public final Ll/᩻ᩴۚ;
 .super Ljava/lang/Object;
-.source "898C"
-
-# interfaces
-.implements Ljava/util/function/Function;
+.source "C7AH"
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final ۙ:J
 
-.field public final synthetic ᩶:Ljava/io/Serializable;
+.field public final ۤ:Ll/ܿ᩻ܳ;
+
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/io/Serializable;)V
+.method public static constructor <clinit>()V
     .locals 0
-
-    .line 0
-    iput p1, p0, Ll/᩻ᩴۚ;->ܺ:I
-
-    iput-object p2, p0, Ll/᩻ᩴۚ;->᩶:Ljava/io/Serializable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public constructor <init>(Ll/ܿ᩻ܳ;Ljava/lang/String;J)V
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 460
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    .line 461
+    iput-object p1, p0, Ll/᩻ᩴۚ;->ۤ:Ll/ܿ᩻ܳ;
 
-    return-object p1
+    .line 462
+    iput-object p2, p0, Ll/᩻ᩴۚ;->᩷:Ljava/lang/String;
+
+    .line 463
+    iput-wide p3, p0, Ll/᩻ᩴۚ;->ۙ:J
+
+    return-void
 .end method
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget v0, p0, Ll/᩻ᩴۚ;->ܺ:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 7
-    iget-object v0, p0, Ll/᩻ᩴۚ;->᩶:Ljava/io/Serializable;
-
-    .line 9
-    check-cast v0, Ljava/util/ArrayList;
-
-    .line 11
-    check-cast p1, Ll/ۧ᩹۟;
-
-    .line 1046
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object p1
-
-    .line 0
-    :pswitch_0
-    iget-object v0, p0, Ll/᩻ᩴۚ;->᩶:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    check-cast p1, Ljava/io/File;
-
-    invoke-static {p1, v0}, Ll/ܳᩴۚ;->ۙ(Ljava/io/File;Ljava/lang/String;)Ll/᩷۠ۚ;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
+.method public static ۙ(Ll/᩻ᩴۚ;)Ll/ܿ᩻ܳ;
     .locals 0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 494
+    iget-object p0, p0, Ll/᩻ᩴۚ;->ۤ:Ll/ܿ᩻ܳ;
 
-    move-result-object p1
+    return-object p0
+.end method
 
-    return-object p1
+.method public static ۙ(JLjava/lang/String;)Ll/᩻ᩴۚ;
+    .locals 2
+
+    .line 468
+    new-instance v0, Ll/᩻ᩴۚ;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p2, p0, p1}, Ll/᩻ᩴۚ;-><init>(Ll/ܿ᩻ܳ;Ljava/lang/String;J)V
+
+    return-object v0
+.end method
+
+.method public static ۙ(Ll/ܿ᩻ܳ;)Ll/᩻ᩴۚ;
+    .locals 4
+
+    .line 480
+    new-instance v0, Ll/᩻ᩴۚ;
+
+    const-string v1, ""
+
+    const-wide/16 v2, 0x0
+
+    .line 457
+    invoke-direct {v0, p0, v1, v2, v3}, Ll/᩻ᩴۚ;-><init>(Ll/ܿ᩻ܳ;Ljava/lang/String;J)V
+
+    return-object v0
+.end method
+
+.method public static ᩷(Ll/᩻ᩴۚ;)Z
+    .locals 0
+
+    .line 487
+    iget-object p0, p0, Ll/᩻ᩴۚ;->ۤ:Ll/ܿ᩻ܳ;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

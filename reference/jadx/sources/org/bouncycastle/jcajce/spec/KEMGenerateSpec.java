@@ -7,7 +7,7 @@ import org.bouncycastle.asn1.x509.AlgorithmIdentifier;
 import org.bouncycastle.asn1.x9.X9ObjectIdentifiers;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KEMGenerateSpec extends KEMKDFSpec implements AlgorithmParameterSpec {
     public final PublicKey publicKey;
     public static final byte[] EMPTY_OTHER_INFO = new byte[0];

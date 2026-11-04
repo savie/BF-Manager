@@ -1,76 +1,150 @@
 .class public final Ll/ۚ۠᩵;
 .super Ljava/lang/Object;
-.source "0907"
-
-
-# instance fields
-.field public ۙ:I
-
-.field public final ܰ:Ljava/lang/StringBuilder;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static ۙ(Ll/ۚ᩷ۨ;Ll/᩺֨᩵;)Ll/ۡۜ᩵;
+    .locals 5
 
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 45
+    sget-object v0, Ll/۬۠᩵;->֡:Ll/۬۠᩵;
 
-    const/4 v0, 0x0
+    .line 15
+    invoke-virtual {p0}, Ll/ۚ᩷ۨ;->ۙ()Ll/ۧۢ᩵;
 
-    .line 7
-    iput v0, p0, Ll/ۚ۠᩵;->ۙ:I
+    move-result-object p0
 
-    .line 10
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 36
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v2, Ll/᩶۠᩵;->᩶:Ll/᩶۠᩵;
 
-    iput-object v0, p0, Ll/ۚ۠᩵;->ܰ:Ljava/lang/StringBuilder;
+    invoke-interface {p0, v1, v2}, Ll/ۧۢ᩵;->ۙ(Ljava/lang/Object;Ll/᩺֨᩵;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v2
 
+    check-cast v2, Ljava/lang/Boolean;
 
-# virtual methods
-.method public final ۙ()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 26
-    iget-object v0, p0, Ll/ۚ۠᩵;->ܰ:Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
-.end method
+    .line 54
+    sget-object v3, Ll/᩻ۢ᩵;->ܰ:Ll/᩻ۢ᩵;
 
-.method public final ۙ(Ljava/lang/CharSequence;)V
-    .locals 2
+    if-nez v2, :cond_0
+
+    if-nez v1, :cond_0
+
+    .line 55
+    invoke-interface {p0, v3}, Ll/ۧۢ᩵;->ۙ(Ll/ۧۢ᩵;)Ll/ۧۢ᩵;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    .line 58
+    :cond_0
+    new-instance v2, Ll/᩻ۡ᩵;
+
+    .line 13
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    .line 58
+    iput-object v3, v2, Ll/᩻ۡ᩵;->ܰ:Ljava/lang/Object;
+
+    .line 59
+    new-instance v4, Ll/ܰ۠᩵;
+
+    invoke-direct {v4, v2}, Ll/ܰ۠᩵;-><init>(Ll/᩻ۡ᩵;)V
+
+    invoke-interface {p0, v3, v4}, Ll/ۧۢ᩵;->ۙ(Ljava/lang/Object;Ll/᩺֨᩵;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ۧۢ᩵;
+
+    if-eqz v1, :cond_1
+
+    .line 76
+    iget-object v1, v2, Ll/᩻ۡ᩵;->ܰ:Ljava/lang/Object;
+
+    check-cast v1, Ll/ۧۢ᩵;
+
+    sget-object v4, Ll/ۘ۠᩵;->᩶:Ll/ۘ۠᩵;
+
+    invoke-interface {v1, v3, v4}, Ll/ۧۢ᩵;->ۙ(Ljava/lang/Object;Ll/᩺֨᩵;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    iput-object v1, v2, Ll/᩻ۡ᩵;->ܰ:Ljava/lang/Object;
+
+    .line 84
+    :cond_1
+    iget-object v1, v2, Ll/᩻ۡ᩵;->ܰ:Ljava/lang/Object;
+
+    check-cast v1, Ll/ۧۢ᩵;
+
+    invoke-interface {p0, v1}, Ll/ۧۢ᩵;->ۙ(Ll/ۧۢ᩵;)Ll/ۧۢ᩵;
+
+    move-result-object p0
+
+    .line 17
+    :goto_0
+    invoke-static {}, Ll/֫ۜ᩵;->ۙ()Ll/ܶۤۨ;
+
+    move-result-object v1
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Ll/᩸ۢ᩵;->᩵:Ll/ۤۢ᩵;
+
+    invoke-interface {p0, v1}, Ll/ۧۢ᩵;->ۙ(Ll/֫ۢ᩵;)Ll/ۚۢ᩵;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
 
     .line 18
-    iget v0, p0, Ll/ۚ۠᩵;->ۙ:I
+    invoke-static {}, Ll/֫ۜ᩵;->ۙ()Ll/ܶۤۨ;
 
-    iget-object v1, p0, Ll/ۚ۠᩵;->ܰ:Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-interface {p0, v1}, Ll/ۧۢ᩵;->ۙ(Ll/ۧۢ᩵;)Ll/ۧۢ᩵;
 
-    const/16 v0, 0xa
+    move-result-object p0
 
-    .line 19
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    .line 49
+    :cond_2
+    invoke-virtual {v0}, Ll/۬۠᩵;->ۙ()Z
 
-    .line 21
-    :cond_0
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    .line 22
-    iget p1, p0, Ll/ۚ۠᩵;->ۙ:I
+    if-eqz v1, :cond_3
 
-    add-int/lit8 p1, p1, 0x1
+    .line 50
+    new-instance v1, Ll/ۚ۬᩵;
 
-    iput p1, p0, Ll/ۚ۠᩵;->ۙ:I
+    invoke-direct {v1, p0, p1}, Ll/ۚ۬᩵;-><init>(Ll/ۧۢ᩵;Ll/᩺֨᩵;)V
 
-    return-void
+    goto :goto_1
+
+    .line 51
+    :cond_3
+    new-instance v1, Ll/ܽ۬᩵;
+
+    const/4 v2, 0x1
+
+    .line 188
+    invoke-direct {v1, p0, v2}, Ll/ᩴ۠᩵;-><init>(Ll/ۧۢ᩵;Z)V
+
+    .line 123
+    :goto_1
+    invoke-virtual {v0, p1, v1, v1}, Ll/۬۠᩵;->ۙ(Ll/᩺֨᩵;Ljava/lang/Object;Ll/ۙۢ᩵;)V
+
+    return-object v1
 .end method

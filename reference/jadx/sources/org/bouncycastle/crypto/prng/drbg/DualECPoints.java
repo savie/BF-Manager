@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.prng.drbg;
 
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DualECPoints {
     public final int cofactor;
     public final ECPoint p;

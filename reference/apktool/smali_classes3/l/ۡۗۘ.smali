@@ -1,50 +1,35 @@
 .class public final synthetic Ll/ۡۗۘ;
 .super Ljava/lang/Object;
-.source "O1JS"
-
-# interfaces
-.implements Ll/᩷᩸;
-
-
-# instance fields
-.field public final synthetic ֡:Z
-
-.field public final synthetic ܺ:Ll/᩻ۗۘ;
-
-.field public final synthetic ᩶:Ll/ۨ֨᩺;
+.source "27L2"
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/᩻ۗۘ;Ll/ۨ֨᩺;Z)V
-    .locals 0
+.method public static ۙ(I)Ll/ۖۗۘ;
+    .locals 2
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 66
+    new-instance v0, Ll/ۖۗۘ;
 
-    iput-object p1, p0, Ll/ۡۗۘ;->ܺ:Ll/᩻ۗۘ;
+    const/4 v1, 0x3
 
-    iput-object p2, p0, Ll/ۡۗۘ;->᩶:Ll/ۨ֨᩺;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-boolean p3, p0, Ll/ۡۗۘ;->֡:Z
+    move-result-object p0
 
-    return-void
+    invoke-direct {v0, v1, p0}, Ll/ۖۗۘ;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
 .end method
 
+.method public static ۙ(Ljava/lang/String;)Ll/ۖۗۘ;
+    .locals 2
 
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+    .line 94
+    new-instance v0, Ll/ۖۗۘ;
 
-    .line 0
-    iget-object v0, p0, Ll/ۡۗۘ;->᩶:Ll/ۨ֨᩺;
+    const/16 v1, 0x8
 
-    iget-boolean v1, p0, Ll/ۡۗۘ;->֡:Z
+    invoke-direct {v0, v1, p0}, Ll/ۖۗۘ;-><init>(ILjava/lang/Object;)V
 
-    iget-object v2, p0, Ll/ۡۗۘ;->ܺ:Ll/᩻ۗۘ;
-
-    invoke-static {v2, v0, v1, p1}, Ll/᩻ۗۘ;->ۙ(Ll/᩻ۗۘ;Ll/ۨ֨᩺;ZLandroid/view/MenuItem;)V
-
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method

@@ -75,7 +75,7 @@
     const-string v1, "MicroMsg.SDK.WXImageObject"
 
     .line 0
-    invoke-static {p1, v0, v1}, Ll/᩺᩷ۙ;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Ll/ܿ֫᩸;->ۙ(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     return-void
 .end method

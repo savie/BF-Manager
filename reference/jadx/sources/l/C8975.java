@@ -1,43 +1,71 @@
 package l;
 
-import java.io.FilterOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import android.content.DialogInterface;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import org.json.JSONObject;
 
-/* JADX INFO: renamed from: l.ۡܺۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 9B2H */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8975 extends FilterOutputStream {
+/* JADX INFO: renamed from: l.۠᩺᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 08W8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8975 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C19551 f30732;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f29267;
 
-    public C8975(OutputStream outputStream) {
-        super(outputStream);
-        this.f30732 = new C19551(32768);
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ IWXAPI f29268;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f29269;
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
     }
 
-    @Override // java.io.FilterOutputStream, java.io.OutputStream
-    public final void write(int i) throws IOException {
-        ((FilterOutputStream) this).out.write(i);
-        C19551 c19551 = this.f30732;
-        if (c19551.f62830 < 32768) {
-            c19551.write(i);
+    public C8975(AbstractActivityC17204 abstractActivityC17204, int i, IWXAPI iwxapi) {
+        this.f29269 = abstractActivityC17204;
+        this.f29267 = i;
+        this.f29268 = iwxapi;
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        m8190(this.f29269);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws C4866 {
+        C17930 c17930 = C7484.f24760;
+        String[] strArrM20533 = C7484.m20533(this.f29267, 1);
+        C3076.f9994 = new RunnableC3009(0, strArrM20533);
+        JSONObject jSONObject = new JSONObject(strArrM20533[0]);
+        if ("OK".equals(jSONObject.getString("1"))) {
+            PayReq payReq = new PayReq();
+            C17930 c17931 = C3076.f9993;
+            payReq.appId = C3076.m10032();
+            payReq.partnerId = "1493963962";
+            payReq.prepayId = jSONObject.getString("2");
+            payReq.nonceStr = jSONObject.getString("3");
+            payReq.timeStamp = jSONObject.getString("4");
+            payReq.packageValue = jSONObject.getString("5");
+            payReq.sign = jSONObject.getString("6");
+            this.f29268.sendReq(payReq);
         }
     }
 
-    @Override // java.io.FilterOutputStream, java.io.OutputStream
-    public final void write(byte[] bArr, int i, int i2) throws IOException {
-        ((FilterOutputStream) this).out.write(bArr, i, i2);
-        C19551 c19551 = this.f30732;
-        int iMin = Math.min(32768 - c19551.f62830, i2);
-        if (iMin > 0) {
-            c19551.write(bArr, i, iMin);
-        }
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f29269.m40401(exc, (DialogInterface.OnDismissListener) null);
     }
 
-    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        ((FilterOutputStream) this).out.close();
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        m8196();
     }
 }

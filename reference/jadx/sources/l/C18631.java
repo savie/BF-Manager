@@ -1,15 +1,17 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ۠۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q9Z3 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18631 implements InterfaceC7778 {
-    @Override // l.InterfaceC7778
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo1805(int i, int i2, byte[] bArr) {
-        C4850.m13549(i, bArr);
-        C4850.m13549(i + 4, bArr);
-        C4850.m13549(i + 8, bArr);
-        return (i + 12) - i;
+/* JADX INFO: renamed from: l.ܿ᩹ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 24FJ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18631 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public char f60554;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public char f60555;
+
+    public final String toString() {
+        return C6934.m19217("startpc = ", this.f60555, this.f60554, " length ");
     }
 }

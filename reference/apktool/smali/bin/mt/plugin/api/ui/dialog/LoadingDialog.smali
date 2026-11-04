@@ -100,11 +100,9 @@
 
     check-cast v0, Lbin/mt/plugin/api/ui/builder/PluginLinearLayoutBuilder;
 
-    new-instance v1, Ll/᩷᩵ۡ;
+    new-instance v1, Ll/ۤܰۤ;
 
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p1}, Ll/᩷᩵ۡ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, p1}, Ll/ۤܰۤ;-><init>(Ljava/lang/Object;)V
 
     invoke-interface {v0, v1}, Lbin/mt/plugin/api/ui/builder/PluginBaseViewGroupBuilder;->children(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/ui/builder/PluginUIBuilder;
 
@@ -166,11 +164,11 @@
     invoke-direct {v0}, Lbin/mt/plugin/api/util/UIUpdaterGroup;-><init>()V
 
     .line 59
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ll/ܽۚۗ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Ll/֡֡֨;
+    new-instance v1, Ll/᩸ܰۤ;
 
-    invoke-direct {v1, p1}, Ll/֡֡֨;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, p1}, Ll/᩸ܰۤ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -179,9 +177,9 @@
     iput-object p1, p0, Lbin/mt/plugin/api/ui/dialog/LoadingDialog;->messageUpdater:Lbin/mt/plugin/api/util/UIUpdater;
 
     .line 62
-    new-instance p1, Ll/ܺܺ۬;
+    new-instance p1, Ll/ᩴܰۤ;
 
-    invoke-direct {p1, p0}, Ll/ܺܺ۬;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p0}, Ll/ᩴܰۤ;-><init>(Ljava/lang/Object;)V
 
     invoke-virtual {v0, p1}, Lbin/mt/plugin/api/util/UIUpdaterGroup;->registerUpdater(Lbin/mt/plugin/api/util/Consumer;)Lbin/mt/plugin/api/util/UIUpdater;
 
@@ -371,11 +369,11 @@
     iput-boolean v0, p0, Lbin/mt/plugin/api/ui/dialog/LoadingDialog;->delayShow:Z
 
     .line 165
-    new-instance v0, Ll/᩺ۛۖ;
+    new-instance v0, Ll/ܳۖ᩻;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x5
 
-    invoke-direct {v0, v1, p0}, Ll/᩺ۛۖ;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/ܳۖ᩻;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0}, Lbin/mt/plugin/api/util/ThreadUtil;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -488,11 +486,11 @@
     iput-boolean v0, p0, Lbin/mt/plugin/api/ui/dialog/LoadingDialog;->delayShow:Z
 
     .line 127
-    new-instance v0, Ll/ۗ᩹ۘ;
+    new-instance v0, Ll/ܰۛ֫;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Ll/ۗ᩹ۘ;-><init>(Lbin/mt/plugin/api/ui/dialog/LoadingDialog;Ll/ۢ᩹ۘ;)V
+    invoke-direct {v0, p0, v1}, Ll/ܰۛ֫;-><init>(Lbin/mt/plugin/api/ui/dialog/LoadingDialog;Ll/ۘۛ֫;)V
 
     invoke-static {v0, p1, p2}, Lbin/mt/plugin/api/util/ThreadUtil;->postDelayed(Ljava/lang/Runnable;J)V
 

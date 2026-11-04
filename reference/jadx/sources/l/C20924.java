@@ -1,49 +1,42 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import java.util.AbstractMap;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.᩷ܰ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D70T */
+/* JADX INFO: renamed from: l.᩵᩻ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: O5F3 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20924 extends AbstractC17535 {
+public final class C20924 extends AbstractC4450 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f67980;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Iterator f66941;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f67981;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC20638 f66942;
 
-    public C20924(int i, int i2) {
-        this.f67980 = i;
-        this.f67981 = i2;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6754 f66943;
+
+    public C20924(C6754 c6754, Iterator it, AbstractC20638 abstractC20638) {
+        this.f66941 = it;
+        this.f66942 = abstractC20638;
+        this.f66943 = c6754;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C20924)) {
-            return false;
+    @Override // l.AbstractC4450
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo14147() {
+        Iterator it = this.f66941;
+        if (!it.hasNext()) {
+            m14148();
+            return null;
         }
-        C20924 c20924 = (C20924) obj;
-        return this.f67980 == c20924.f67980 && this.f67981 == c20924.f67981;
-    }
-
-    public final int hashCode() {
-        return (this.f67980 * 31) + this.f67981;
-    }
-
-    public final String toString() {
-        Object[] objArr = {Integer.valueOf(this.f67980), Integer.valueOf(this.f67981)};
-        String[] strArrSplit = "blockCount;lastLength".length() == 0 ? new String[0] : "blockCount;lastLength".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C20924.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
+        C2346 c2346 = (C2346) it.next();
+        if (!this.f66942.mo11449((Comparable) c2346.f7568)) {
+            C2346 c2346M7923 = c2346.m7923(this.f66943.f22479);
+            return new AbstractMap.SimpleImmutableEntry(c2346M7923.f7568, c2346M7923);
         }
-        sb.append("]");
-        return sb.toString();
+        m14148();
+        return null;
     }
 }

@@ -1,13 +1,18 @@
 package l;
 
-import android.widget.CompoundButton;
+import android.app.Activity;
 
-/* JADX INFO: renamed from: l.᩷ۢ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D1K5 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C20800 implements CompoundButton.OnCheckedChangeListener {
-    @Override // android.widget.CompoundButton.OnCheckedChangeListener
-    public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
-        C1679.m5597(ApplicationC0716.f2992, "dfb", z);
+/* JADX INFO: renamed from: l.᩵᩶, reason: contains not printable characters */
+/* JADX INFO: compiled from: U5Z7 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20800 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m47580(Activity activity, String[] strArr, int i) {
+        activity.requestPermissions(strArr, i);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m47581(Activity activity, String str) {
+        return activity.shouldShowRequestPermissionRationale(str);
     }
 }

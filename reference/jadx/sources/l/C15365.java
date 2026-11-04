@@ -1,32 +1,313 @@
 package l;
 
-import android.graphics.Typeface;
-import java.lang.reflect.Array;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+/* JADX INFO: renamed from: l.ܳ۬ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J7HQ */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C15365 {
 
-/* JADX INFO: renamed from: l.ܶܿ, reason: contains not printable characters */
-/* JADX INFO: compiled from: H21F */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15365 extends C23126 {
-    @Override // l.C23126
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Typeface mo36803(Object obj) {
-        try {
-            Object objNewInstance = Array.newInstance((Class<?>) this.f75105, 1);
-            Array.set(objNewInstance, 0, obj);
-            return (Typeface) this.f75104.invoke(null, objNewInstance, "sans-serif", -1, -1);
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+    public static final /* synthetic */ int[] f50123;
+
+    static {
+        int length = 0;
+        int[] iArr = null;
+        int i = 62065803;
+        int i2 = C1826.f6190;
+        int i3 = C1542.f5343;
+        int iM3169 = C0773.m3169("᩻ᩳ") ^ i2;
+        int i4 = ((iM3169 ^ i3) * (-31219)) ^ 1936702809;
+        int i5 = 1027108209;
+        while (true) {
+            i = ((((i ^ i3) * (-22409)) >> 31) & i4) ^ (iM3169 ^ i5);
+            switch (i) {
+                case -2097407380:
+                case 1842788599:
+                    if (C2878.f9462) {
+                        iM3169 = (C0773.m3169("ۗۨ") + i3) * (-117);
+                        i4 = ((iM3169 ^ i2) * 11649) ^ 523204325;
+                        i5 = -1901846221;
+                    } else {
+                        iM3169 = C0773.m3169("ᩳ᩺") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-27345)) ^ 1015727715;
+                        i5 = -2057579944;
+                    }
+                    break;
+                case -2096271900:
+                case 1902354260:
+                    if (C3448.f11240 >= 0) {
+                        iM3169 = C0619.m2761("ܿܺ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 29247) ^ (-341568997);
+                        i5 = 638800975;
+                    } else {
+                        iM3169 = (i2 - C0773.m3169("᩶ۨ")) * (-41);
+                        i4 = ((iM3169 ^ i3) * (-31099)) ^ (-118404006);
+                        i5 = -201743467;
+                    }
+                    break;
+                case -2020485417:
+                case -799188810:
+                    iArr = new int[length];
+                    f50123 = iArr;
+                    iM3169 = (C0619.m2761("ۡ᩸") ^ i3) * (-37);
+                    i4 = ((iM3169 ^ i2) * (-22819)) ^ (-428360742);
+                    i5 = -1106279712;
+                    break;
+                case -1967707680:
+                case 1507725774:
+                    length = EnumC13128.values().length;
+                    if (C4238.f15451 >= 0) {
+                        iM3169 = C0619.m2761("۠ۖ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 22493) ^ 952703233;
+                        i5 = 1161734796;
+                    } else {
+                        iM3169 = (C0619.m2761("ܶۚ") ^ i2) * 5;
+                        i4 = ((iM3169 ^ i3) * (-29337)) ^ 1048358493;
+                        i5 = 1399187386;
+                    }
+                    break;
+                case -1710261853:
+                case 858698945:
+                    try {
+                        f50123[C2702.m8885(EnumC13128.f41986)] = 3;
+                        break;
+                    } catch (NoSuchFieldError unused) {
+                    }
+                    iM3169 = C0619.m2761("ۘۗ") ^ i3;
+                    i4 = ((iM3169 ^ i2) * (-5443)) ^ 1165977637;
+                    i5 = 1462731929;
+                    break;
+                case -1702505279:
+                case 1412989202:
+                    C3998.m12920();
+                    throw new RuntimeException();
+                case -1669044415:
+                case -834040564:
+                    C1343.m4943();
+                    if (C1321.f4751 < 0) {
+                        iM3169 = C0619.m2761("ܿܺ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 29247) ^ (-341568997);
+                        i5 = 638800975;
+                    } else {
+                        iM3169 = C0619.m2761("ۡ۠") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 25637) ^ 537662320;
+                        i5 = 496844344;
+                    }
+                    break;
+                case -1424438219:
+                case -777193475:
+                    if (C2375.f7641 <= 0) {
+                        iM3169 = C0619.m2761("ۡ۠") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 25637) ^ 537662320;
+                        i5 = 496844344;
+                    } else {
+                        iM3169 = (i3 - C0773.m3169("۫᩷")) * 45;
+                        i4 = ((iM3169 ^ i2) * 2031) ^ (-1415901863);
+                        i5 = -1754795756;
+                    }
+                    break;
+                case -1390240360:
+                case 1123450995:
+                    if (C23916.f77426 > 0) {
+                        iM3169 = C0619.m2761("۠ۖ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 22493) ^ 952703233;
+                        i5 = 1161734796;
+                    } else {
+                        iM3169 = (C0773.m3169("ۗۨ") + i3) * (-117);
+                        i4 = ((iM3169 ^ i2) * 11649) ^ 523204325;
+                        i5 = -1901846221;
+                    }
+                    break;
+                case -1152286671:
+                case -78955892:
+                    C1146.m4231();
+                    if (!C3077.m10041()) {
+                        iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-25291)) ^ 608084032;
+                        i5 = 819890585;
+                    } else {
+                        iM3169 = (C0619.m2761("ᩳ۟") + i2) * 47;
+                        i4 = ((iM3169 ^ i3) * (-9653)) ^ 1404851780;
+                        i5 = -1428053629;
+                    }
+                    break;
+                case -1096861743:
+                case 1256568997:
+                    if (AbstractC0116.f1064 <= 0) {
+                        iM3169 = C0773.m3169("ۗ᩻") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 28657) ^ (-620759048);
+                        i5 = 2024449555;
+                    } else {
+                        iM3169 = (C0619.m2761("۬ܽ") + i3) * 45;
+                        i4 = ((iM3169 ^ i2) * 30409) ^ 2066489725;
+                        i5 = -1913579205;
+                    }
+                    break;
+                case -938734169:
+                case 607553686:
+                    if (C17202.f56030) {
+                        iM3169 = C0619.m2761("᩷ܽ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-12319)) ^ (-12144006);
+                        i5 = -1575483169;
+                    } else {
+                        iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-25291)) ^ 608084032;
+                        i5 = 819890585;
+                    }
+                    break;
+                case -920606948:
+                case 835422395:
+                    C3734.m12152();
+                    if (C3998.f13671 == 0) {
+                        iM3169 = C0773.m3169("ۖۙ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-2515)) ^ 79730365;
+                        i5 = -1588150461;
+                    } else {
+                        iM3169 = C0619.m2761("ܿܺ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 29247) ^ (-341568997);
+                        i5 = 638800975;
+                    }
+                    break;
+                case -868656109:
+                case 1863808228:
+                    if (C2287.m7745() <= 0) {
+                        iM3169 = C0773.m3169("ۗ᩻") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 28657) ^ (-620759048);
+                        i5 = 2024449555;
+                    } else {
+                        iM3169 = C0773.m3169("۫֨") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 30873) ^ 2107664519;
+                        i5 = -478922451;
+                    }
+                    break;
+                case -861429662:
+                case 1273176608:
+                    if (RunnableC1848.m6360()) {
+                        iM3169 = C0773.m3169("ۖۙ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-2515)) ^ 79730365;
+                        i5 = -1588150461;
+                    } else {
+                        iM3169 = (C0773.m3169("ᩴ᩻") + i2) * (-5);
+                        i4 = ((iM3169 ^ i3) * (-30841)) ^ (-1930362335);
+                        i5 = -2054592074;
+                    }
+                    break;
+                case -826009898:
+                case 858641264:
+                    return;
+                case -621044615:
+                case 945413733:
+                    try {
+                        iArr[C2288.m7769(EnumC13128.f41987)] = 1;
+                        break;
+                    } catch (NoSuchFieldError unused2) {
+                    }
+                    iM3169 = C0619.m2761("۬֨") ^ i2;
+                    i4 = ((iM3169 ^ i3) * 24503) ^ (-828570080);
+                    i5 = 605697412;
+                    break;
+                case -399006292:
+                case 978834809:
+                    C2375.m8065();
+                    if (AbstractC0641.f2496 >= 0) {
+                        iM3169 = C0619.m2761("ۡ۠") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 25637) ^ 537662320;
+                        i5 = 496844344;
+                    } else {
+                        iM3169 = C0773.m3169("ܽ᩷") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 29739) ^ 730125206;
+                        i5 = -127816068;
+                    }
+                    break;
+                case -344263851:
+                case 314969058:
+                    if (C13473.m33144()) {
+                        iM3169 = (C0619.m2761("ۢ۟") ^ i2) * (-127);
+                        i4 = ((iM3169 ^ i3) * (-32173)) ^ (-522342730);
+                        i5 = -1156859265;
+                    } else {
+                        iM3169 = C0619.m2761("ۡ۠") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 25637) ^ 537662320;
+                        i5 = 496844344;
+                    }
+                    break;
+                case 153477393:
+                case 1000306624:
+                    if (!C3077.f9998) {
+                        iM3169 = (C0773.m3169("ۗۨ") + i3) * (-117);
+                        i4 = ((iM3169 ^ i2) * 11649) ^ 523204325;
+                        i5 = -1901846221;
+                    } else {
+                        iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-25291)) ^ 608084032;
+                        i5 = 819890585;
+                    }
+                    break;
+                case 422063854:
+                case 1090509407:
+                    try {
+                        f50123[C2288.m7769(EnumC13128.f41982)] = 2;
+                        break;
+                    } catch (NoSuchFieldError unused3) {
+                    }
+                    iM3169 = C0773.m3169("ܽۨ") ^ i2;
+                    i4 = ((iM3169 ^ i3) * (-563)) ^ 1336354786;
+                    i5 = -18174705;
+                    break;
+                case 508468810:
+                case 1681261835:
+                    try {
+                        f50123[C2702.m8885(EnumC13128.f41983)] = 4;
+                        break;
+                    } catch (NoSuchFieldError unused4) {
+                    }
+                    iM3169 = C0619.m2761("֨ᩳ") ^ i3;
+                    i4 = ((iM3169 ^ i2) * (-19243)) ^ 1613072294;
+                    i5 = -2019221711;
+                    break;
+                case 580641665:
+                case 743306078:
+                    C1321.m4852();
+                    iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                    i4 = ((iM3169 ^ i3) * (-25291)) ^ 608084032;
+                    i5 = 819890585;
+                    break;
+                case 1041664817:
+                case 1805966402:
+                    if (C2288.f7433 <= 0) {
+                        iM3169 = C0619.m2761("۠ۖ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 22493) ^ 952703233;
+                        i5 = 1161734796;
+                    } else {
+                        iM3169 = C0619.m2761("۟ۛ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 18757) ^ 1934221169;
+                        i5 = -2050573422;
+                    }
+                    break;
+                case 1111066847:
+                case 1425809931:
+                    if (RunnableC3055.f9898 >= 0) {
+                        iM3169 = C0619.m2761("᩸ۤ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-25291)) ^ 608084032;
+                        i5 = 819890585;
+                    } else {
+                        iM3169 = C0619.m2761("֫᩺") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 30119) ^ 755786093;
+                        i5 = 1841305817;
+                    }
+                    break;
+                default:
+                    RunnableC3646.m11813();
+                    if (!C2878.f9462) {
+                        iM3169 = C0619.m2761("ۡ۠") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 25637) ^ 537662320;
+                        i5 = 496844344;
+                    } else {
+                        iM3169 = (C0619.m2761("ᩳ۟") + i2) * 47;
+                        i4 = ((iM3169 ^ i3) * (-9653)) ^ 1404851780;
+                        i5 = -1428053629;
+                    }
+                    break;
+            }
         }
-    }
-
-    @Override // l.C23126
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Method mo36804(Class cls) throws NoSuchMethodException {
-        Class cls2 = Integer.TYPE;
-        Method declaredMethod = Typeface.class.getDeclaredMethod("createFromFamiliesWithDefault", Array.newInstance((Class<?>) cls, 1).getClass(), String.class, cls2, cls2);
-        declaredMethod.setAccessible(true);
-        return declaredMethod;
     }
 }

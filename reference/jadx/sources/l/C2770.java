@@ -1,29 +1,58 @@
 package l;
 
-import bin.mt.plus.R;
+import java.util.function.IntConsumer;
 
-/* JADX INFO: renamed from: l.ۖ᩷ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 09LR */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C2770 extends AbstractDialogInterfaceOnClickListenerC17341 {
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC15472 f10599;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2770(ActivityC15472 activityC15472, ActivityC15472 activityC15473) {
-        super(activityC15473, -1);
-        this.f10599 = activityC15472;
+/* JADX INFO: renamed from: l.ۖܺۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C2770 extends AbstractC9503 {
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final InterfaceC17686 sequential() {
+        this.h.r = false;
+        return this;
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        try {
-            this.f10599.f50419.m23925(m40352());
-            m40364();
-        } catch (IllegalArgumentException unused) {
-            m40365(R.string.MT_Protector);
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final InterfaceC17686 parallel() {
+        this.h.r = true;
+        return this;
+    }
+
+    @Override // l.AbstractC9503, l.InterfaceC17686
+    public final void forEach(IntConsumer intConsumer) {
+        if (this.h.r) {
+            super.forEach(intConsumer);
+        } else {
+            AbstractC9503.u0(s0()).forEachRemaining(intConsumer);
         }
+    }
+
+    @Override // l.AbstractC9503, l.InterfaceC17686
+    public final void forEachOrdered(IntConsumer intConsumer) {
+        if (this.h.r) {
+            super.forEachOrdered(intConsumer);
+        } else {
+            AbstractC9503.u0(s0()).forEachRemaining(intConsumer);
+        }
+    }
+
+    @Override // l.InterfaceC19924
+    public final InterfaceC19924 unordered() {
+        return !EnumC21614.ORDERED.p(this.m) ? this : new C6940(this, EnumC21614.r, 1);
+    }
+
+    @Override // l.AbstractC15470, l.InterfaceC19924
+    public final /* bridge */ /* synthetic */ InterfaceC8409 spliterator() {
+        return spliterator();
+    }
+
+    @Override // l.AbstractC15470
+    public final boolean p0() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.AbstractC15470
+    public final InterfaceC15143 q0(int i, InterfaceC15143 interfaceC15143) {
+        throw new UnsupportedOperationException();
     }
 }

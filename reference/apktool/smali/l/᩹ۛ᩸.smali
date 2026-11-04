@@ -1,141 +1,60 @@
 .class public final Ll/᩹ۛ᩸;
-.super Ll/ᩴܿ᩸;
-.source "M9GT"
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
+
+
+# instance fields
+.field public final synthetic ۙ:Ll/ܿۛ᩸;
 
 
 # direct methods
-.method private ۙ(Ll/֨ۛ᩸;)V
-    .locals 5
+.method public constructor <init>(Ll/ܿۛ᩸;)V
+    .locals 0
 
-    .line 103
-    invoke-static {p1}, Ll/֨ۛ᩸;->ܰ(Ll/֨ۛ᩸;)Ll/ۡܿ᩸;
+    .line 1040
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    .line 104
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    .line 105
-    new-instance v2, Ll/ܶܿ᩸;
-
-    iget-object v3, p0, Ll/ᩴܿ᩸;->ۙ:Ll/۟۠ۡ;
-
-    invoke-direct {v2, v3, v1}, Ll/ܶܿ᩸;-><init>(Ll/۟۠ۡ;Ljava/io/ByteArrayOutputStream;)V
-
-    .line 106
-    :try_start_0
-    invoke-static {p1}, Ll/֨ۛ᩸;->ۨ(Ll/֨ۛ᩸;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 107
-    invoke-virtual {v2, v0}, Ll/ܶܿ᩸;->ۙ(Ll/ۡܿ᩸;)V
-
-    goto :goto_0
-
-    .line 109
-    :cond_0
-    invoke-virtual {v0}, Ll/ۡܿ᩸;->ܰ()Ll/ܳܿ᩸;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Ll/ܳܿ᩸;->ۙ(Ll/۟۠ۡ;)Ll/ᩴܿ᩸;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0, v2}, Ll/ᩴܿ᩸;->ۙ(Ll/ۡܿ᩸;Ll/ܶܿ᩸;)V
-
-    .line 111
-    :goto_0
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ll/֨ۛ᩸;->ۙ(Ll/֨ۛ᩸;[B)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 112
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    iput-object p1, p0, Ll/᩹ۛ᩸;->ۙ:Ll/ܿۛ᩸;
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    .line 105
-    :try_start_1
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۡܿ᩸;)I
-    .locals 1
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 88
-    check-cast p1, Ll/֨ۛ᩸;
-
-    .line 96
-    invoke-static {p1}, Ll/֨ۛ᩸;->ۙ(Ll/֨ۛ᩸;)[B
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 97
-    invoke-direct {p0, p1}, Ll/᩹ۛ᩸;->ۙ(Ll/֨ۛ᩸;)V
-
-    .line 99
-    :cond_0
-    invoke-static {p1}, Ll/֨ۛ᩸;->ۙ(Ll/֨ۛ᩸;)[B
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    return p1
+    return-void
 .end method
 
-.method public final ۙ(Ll/ۡܿ᩸;Ll/ܶܿ᩸;)V
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 88
-    check-cast p1, Ll/֨ۛ᩸;
+    .line 1048
+    iget-object p1, p0, Ll/᩹ۛ᩸;->ۙ:Ll/ܿۛ᩸;
 
-    .line 117
-    invoke-static {p1}, Ll/֨ۛ᩸;->ۙ(Ll/֨ۛ᩸;)[B
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 118
-    invoke-direct {p0, p1}, Ll/᩹ۛ᩸;->ۙ(Ll/֨ۛ᩸;)V
-
-    .line 120
-    :cond_0
-    invoke-static {p1}, Ll/֨ۛ᩸;->ۙ(Ll/֨ۛ᩸;)[B
+    invoke-static {p1}, Ll/ܿۛ᩸;->ۚ(Ll/ܿۛ᩸;)Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

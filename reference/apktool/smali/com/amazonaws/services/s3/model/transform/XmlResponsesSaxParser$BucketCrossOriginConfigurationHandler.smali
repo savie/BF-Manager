@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field public ֡:Ljava/util/LinkedList;
+.field public ֡:Ljava/util/ArrayList;
 
-.field public ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+.field public ֨:Ljava/util/ArrayList;
 
-.field public ۧ:Ljava/util/ArrayList;
+.field public ۟:Ljava/util/ArrayList;
 
-.field public ۫:Ljava/util/ArrayList;
+.field public ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
-.field public ܽ:Ljava/util/ArrayList;
+.field public ܿ:Ljava/util/LinkedList;
 
-.field public final ܿ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
+.field public final ᩳ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
 
 
 # direct methods
@@ -33,21 +33,21 @@
 
     invoke-direct {v0, v1}, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;-><init>(Ljava/util/ArrayList;)V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
 
     const/4 v0, 0x0
 
     .line 2782
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܽ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/ArrayList;
 
     .line 2783
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۫:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۟:Ljava/util/ArrayList;
 
     .line 2784
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۧ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֨:Ljava/util/ArrayList;
 
     .line 2785
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Ljava/util/LinkedList;
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/CORSRule;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     return-void
 
@@ -110,7 +110,7 @@
     if-eqz p2, :cond_1
 
     .line 2804
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۫:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۟:Ljava/util/ArrayList;
 
     if-nez p1, :cond_4
 
@@ -119,7 +119,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۫:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۟:Ljava/util/ArrayList;
 
     return-void
 
@@ -134,7 +134,7 @@
     if-eqz p2, :cond_2
 
     .line 2808
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܽ:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/ArrayList;
 
     if-nez p1, :cond_4
 
@@ -143,7 +143,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܽ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/ArrayList;
 
     return-void
 
@@ -158,7 +158,7 @@
     if-eqz p2, :cond_3
 
     .line 2812
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۧ:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֨:Ljava/util/ArrayList;
 
     if-nez p1, :cond_4
 
@@ -167,7 +167,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۧ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֨:Ljava/util/ArrayList;
 
     return-void
 
@@ -182,7 +182,7 @@
     if-eqz p1, :cond_4
 
     .line 2816
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/LinkedList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Ljava/util/LinkedList;
 
     if-nez p1, :cond_4
 
@@ -191,13 +191,13 @@
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/LinkedList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Ljava/util/LinkedList;
 
     :cond_4
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 3
 
     const-string v0, "CORSConfiguration"
@@ -223,54 +223,54 @@
     if-eqz p1, :cond_6
 
     .line 2827
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 2828
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 2829
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 2830
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 p1, 0x0
 
     .line 2831
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/LinkedList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Ljava/util/LinkedList;
 
     .line 2832
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܽ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/ArrayList;
 
     .line 2833
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۫:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۟:Ljava/util/ArrayList;
 
     .line 2834
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۧ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֨:Ljava/util/ArrayList;
 
     .line 2836
-    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
+    iget-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;
 
     invoke-virtual {v0}, Lcom/amazonaws/services/s3/model/BucketCrossOriginConfiguration;->ۙ()Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 2837
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
     return-void
 
@@ -296,9 +296,9 @@
     if-eqz v0, :cond_1
 
     .line 2841
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -315,9 +315,9 @@
     if-eqz v0, :cond_2
 
     .line 2844
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۫:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->۟:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -336,9 +336,9 @@
     if-eqz v0, :cond_3
 
     .line 2847
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܽ:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -361,9 +361,9 @@
     if-eqz v0, :cond_4
 
     .line 2850
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۛ:Lcom/amazonaws/services/s3/model/CORSRule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۢ:Lcom/amazonaws/services/s3/model/CORSRule;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -384,9 +384,9 @@
     if-eqz v0, :cond_5
 
     .line 2853
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ۧ:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֨:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -405,9 +405,9 @@
     if-eqz p1, :cond_6
 
     .line 2856
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->֡:Ljava/util/LinkedList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$BucketCrossOriginConfigurationHandler;->ܿ:Ljava/util/LinkedList;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 

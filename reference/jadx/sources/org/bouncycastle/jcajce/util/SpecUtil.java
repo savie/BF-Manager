@@ -4,7 +4,7 @@ import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.security.spec.AlgorithmParameterSpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SpecUtil {
     public static Class[] NO_PARAMS = new Class[0];
     public static Object[] NO_ARGS = new Object[0];

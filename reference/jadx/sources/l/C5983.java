@@ -1,21 +1,195 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛۢ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 217H */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5983 extends AbstractC4674 {
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        return c21422.m47974("local") && c21422.m47977() && c21422.m47975() == 1;
-    }
+import com.google.android.material.slider.BaseSlider;
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        InterfaceC2557 interfaceC2557M47981 = c21422.m47981();
-        C11545 c11545M47970 = c21422.m47970();
-        c11545M47970.m28763(interfaceC2557M47981.getName());
-        c11545M47970.m28812(interfaceC2557M47981.getParent(), true);
+/* JADX INFO: renamed from: l.ۚ᩺ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 05ZQ */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5983 implements InterfaceC5392 {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C8614 f20498;
+
+    @Override // l.InterfaceC5392
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1772(AbstractC22044 abstractC22044) {
+        int i = -1589863009;
+        int i2 = RunnableC3055.f9898;
+        int i3 = C0950.f3488;
+        int iM3169 = (i3 - C0773.m3169("᩸ۢ")) * 33;
+        int i4 = ((iM3169 ^ i2) * 32641) ^ (-1787456784);
+        int i5 = -1906360373;
+        while (true) {
+            i = ((((i ^ i2) * 5385) >> 31) & i4) ^ (iM3169 ^ i5);
+            switch (i) {
+                case -2036728505:
+                case -1296935871:
+                    if (C2023.f6737) {
+                        iM3169 = (i2 - C0773.m3169("ۗ᩶")) * 93;
+                        i4 = ((iM3169 ^ i3) * 24615) ^ 18073481;
+                        i5 = -2020327470;
+                    } else {
+                        iM3169 = (i3 - C0619.m2761("ۚۘ")) * 41;
+                        i4 = ((iM3169 ^ i2) * 4437) ^ (-938200403);
+                        i5 = 229949963;
+                    }
+                    break;
+                case -2009691191:
+                case 994229074:
+                    C2878.m9491();
+                    C1146.m4231();
+                    iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                    i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                    i5 = 2040800166;
+                    break;
+                case -1950648061:
+                case -424540159:
+                    if (C1564.f5401 <= 0) {
+                        iM3169 = (i3 - C0773.m3169("ܰۢ")) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
+                        i4 = ((iM3169 ^ i2) * (-11579)) ^ 419717120;
+                        i5 = -223950576;
+                    } else {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    }
+                    break;
+                case -1458821434:
+                case -1360541829:
+                    if (C13473.f42873 != 0) {
+                        iM3169 = (i3 - C0773.m3169("ܰۢ")) * BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION;
+                        i4 = ((iM3169 ^ i2) * (-11579)) ^ 419717120;
+                        i5 = -223950576;
+                    } else {
+                        iM3169 = C0619.m2761("۫ۛ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 8115) ^ (-1166392146);
+                        i5 = -956282876;
+                    }
+                    break;
+                case -1232821872:
+                case -82932460:
+                    if (C2023.f6737) {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    } else {
+                        iM3169 = (C0619.m2761("ۤ᩶") + i2) * 73;
+                        i4 = ((iM3169 ^ i3) * (-7733)) ^ 68542799;
+                        i5 = 178630145;
+                    }
+                    break;
+                case -1034508218:
+                case 859622710:
+                    if (C0487.f2131 <= 0) {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    } else {
+                        iM3169 = C0619.m2761("֡᩺") ^ i2;
+                        i4 = ((iM3169 ^ i3) * 26723) ^ (-1835532789);
+                        i5 = 269350913;
+                    }
+                    break;
+                case -625144042:
+                case 756835024:
+                    if (C1564.m5509() > 0) {
+                        this.f20498.m23184((InterfaceC14075) new C23883(abstractC22044));
+                    }
+                    iM3169 = (i2 - C0773.m3169("ۗ᩶")) * 93;
+                    i4 = ((iM3169 ^ i3) * 24615) ^ 18073481;
+                    i5 = -2020327470;
+                    break;
+                case -467374382:
+                case 239550220:
+                    C0950.m3785();
+                    if (C1080.f3865 < 0) {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    } else {
+                        iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                        i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                        i5 = 2040800166;
+                    }
+                    break;
+                case -442031332:
+                case 2139314870:
+                    if (C1519.f5300 >= 0) {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    } else {
+                        iM3169 = C0619.m2761("ܺ֫") ^ i3;
+                        i4 = ((iM3169 ^ i2) * 31779) ^ (-201765349);
+                        i5 = 1434311643;
+                    }
+                    break;
+                case -227767095:
+                case 1204363199:
+                    if (AbstractC3624.f12429 <= 0) {
+                        iM3169 = (C0773.m3169("᩻ܺ") ^ i3) * (-37);
+                        i4 = ((iM3169 ^ i2) * (-7587)) ^ 886588796;
+                        i5 = 2030521321;
+                    } else {
+                        iM3169 = (i2 - C0773.m3169("ۜۜ")) * 79;
+                        i4 = ((iM3169 ^ i3) * (-23963)) ^ (-1481425670);
+                        i5 = -620001760;
+                    }
+                    break;
+                case -99498116:
+                case 1640586020:
+                    if (C2023.m6964() <= 0) {
+                        iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                        i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                        i5 = 2040800166;
+                    } else {
+                        iM3169 = (C0619.m2761("ۛ᩶") + i3) * (-5);
+                        i4 = ((iM3169 ^ i2) * (-16235)) ^ (-1454622293);
+                        i5 = -1097649540;
+                    }
+                    break;
+                case 946024981:
+                case 966639770:
+                    if (C1826.f6190 <= 0) {
+                        iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                        i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                        i5 = 2040800166;
+                    } else {
+                        iM3169 = (C0619.m2761("۬ܳ") + i2) * (-91);
+                        i4 = ((iM3169 ^ i3) * (-12547)) ^ (-1337039093);
+                        i5 = 1013687107;
+                    }
+                    break;
+                case 1039467572:
+                case 1233562730:
+                    C1343.m4943();
+                    break;
+                case 1578642760:
+                case 1703480389:
+                    C1343.m4943();
+                    if (C0487.f2131 > 0) {
+                        iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                        i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                        i5 = 2040800166;
+                    } else {
+                        iM3169 = C0619.m2761("ܽܽ") ^ i2;
+                        i4 = ((iM3169 ^ i3) * (-39)) ^ 1610523731;
+                        i5 = -782324874;
+                    }
+                    break;
+                default:
+                    if (C2834.f9334 <= 0) {
+                        iM3169 = (i3 - C0773.m3169("ۗ۟")) * (-125);
+                        i4 = ((iM3169 ^ i2) * (-1377)) ^ 1636347110;
+                        i5 = 2040800166;
+                    } else {
+                        iM3169 = C0773.m3169("۠ܶ") ^ i3;
+                        i4 = ((iM3169 ^ i2) * (-16419)) ^ (-167090181);
+                        i5 = 969706753;
+                    }
+                    break;
+            }
+            return;
+        }
     }
 }

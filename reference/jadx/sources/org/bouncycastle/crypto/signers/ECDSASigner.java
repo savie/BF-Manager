@@ -19,7 +19,7 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECDSASigner implements ECConstants, DSAExt {
     public final DSAKCalculator kCalculator;
     public ECKeyParameters key;

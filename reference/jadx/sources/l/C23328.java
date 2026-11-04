@@ -1,48 +1,27 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺᩻ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes.dex */
-public final enum C23328 extends EnumC21210 {
-    public /* synthetic */ C23328() {
-        this("BeforeDoctypeSystemIdentifier", 61);
+/* JADX INFO: renamed from: l.᩹ۚۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C23328 extends AbstractC2335 {
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final AbstractC19728 f75559;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22010 f75560;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C23328(C22010 c22010, AbstractC19728 abstractC19728) {
+        super(c22010, EnumC13603.f43203, "bad var use");
+        this.f75560 = c22010;
+        this.f75559 = abstractC19728;
     }
 
-    public C23328(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC21210
+    @Override // l.AbstractC2335
     /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        char cM32033 = c12931.m32033();
-        if (cM32033 == '\t' || cM32033 == '\n' || cM32033 == '\f' || cM32033 == '\r' || cM32033 == ' ') {
-            return;
-        }
-        if (cM32033 == '\"') {
-            c20692.m46532(EnumC21210.f69065);
-            return;
-        }
-        if (cM32033 == '\'') {
-            c20692.m46532(EnumC21210.f69080);
-            return;
-        }
-        if (cM32033 == '>') {
-            c20692.m46542(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        if (cM32033 == 65535) {
-            c20692.m46544(this);
-            c20692.f67294.getClass();
-            c20692.m46531();
-            c20692.m46532(EnumC21210.f69077);
-            return;
-        }
-        c20692.m46542(this);
-        c20692.f67294.getClass();
-        c20692.m46532(EnumC21210.f69019);
+    public final C17007 mo3799(EnumC22229 enumC22229, InterfaceC5075 interfaceC5075, AbstractC11781 abstractC11781, AbstractC22664 abstractC22664, AbstractC19728 abstractC19728, C14769 c14769, C14769 c147610) {
+        C22010 c22010 = this.f75560;
+        return c22010.f71000.m45978(enumC22229, c22010.f71001.m34514(), interfaceC5075, "illegal.ref.to.restricted.type", this.f75559);
     }
 }

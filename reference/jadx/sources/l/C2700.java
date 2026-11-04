@@ -1,51 +1,40 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖᩳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 3AID */
+import java.util.WeakHashMap;
+
+/* JADX INFO: renamed from: l.ۖ۬᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7SR */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C2700 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C21813 f10397 = C21813.ofMillis(C17492.FOREVER_NS);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public WeakHashMap f8577 = new WeakHashMap();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21813 f10398;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f10399;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C21813 f10400;
-
-    public C2700(C21813 c21813, C21813 c21814, int i) {
-        boolean zM40778 = C17517.m40778(c21813);
-        C21813 c21815 = f10397;
-        this.f10398 = zM40778 ? c21813 : c21815;
-        this.f10400 = C17517.m40778(c21814) ? c21814 : c21815;
-        this.f10399 = i;
+    public final C9411 m8865(AbstractC11781 abstractC11781, EnumC20234 enumC20234) {
+        C14769<C9411> c14769 = (C14769) this.f8577.get(abstractC11781);
+        if (c14769 == null) {
+            return null;
+        }
+        for (C9411 c9411 : c14769) {
+            if (c9411.f30544.f45571.mo2277().f15333 == enumC20234) {
+                return c9411;
+            }
+        }
+        return null;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21813 m8233() {
-        return this.f10398;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C21813 m8235() {
-        return this.f10400;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m8234() {
-        return this.f10399;
-    }
-
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("EvictionConfig [idleEvictDuration=");
-        sb.append(this.f10398);
-        sb.append(", idleSoftEvictDuration=");
-        sb.append(this.f10400);
-        sb.append(", minIdle=");
-        return C12441.m30911(this.f10399, "]", sb);
+    public final void m8866(AbstractC8036 abstractC8036, C14479 c14479) {
+        AbstractC11781 abstractC11781 = c14479.f45571.mo2277().f15336;
+        WeakHashMap weakHashMap = this.f8577;
+        C14769 c14769M35543 = (C14769) weakHashMap.get(abstractC11781);
+        if (c14769M35543 == null) {
+            c14769M35543 = C14769.m35543();
+        }
+        C9411 c9411 = new C9411();
+        c9411.f30545 = abstractC8036;
+        c9411.f30544 = c14479;
+        weakHashMap.put(abstractC11781, c14769M35543.m35552(c9411));
     }
 }

@@ -1,1126 +1,1249 @@
-.class public final synthetic Ll/۟᩹ۘ;
+.class public final Ll/۟᩹ۘ;
 .super Ljava/lang/Object;
-.source "B3Z3"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "24FJ"
 
 
 # static fields
-.field private static final ۗ֡֡:[S
-
-
-# instance fields
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public static final ۙ:[Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x4
+    const/16 v0, 0xcb
 
-    new-array v0, v0, [S
+    new-array v0, v0, [Ljava/lang/String;
 
-    fill-array-data v0, :array_0
+    .line 2246
+    sput-object v0, Ll/۟᩹ۘ;->ۙ:[Ljava/lang/String;
 
-    sput-object v0, Ll/۟᩹ۘ;->ۗ֡֡:[S
+    const/4 v1, 0x0
 
-    return-void
+    const-string v2, "nop"
 
-    nop
-
-    :array_0
-    .array-data 2
-        0x1aa2s
-        0x5cbfs
-        0x574ds
-        -0x578as
-    .end array-data
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 4
-
-    const v0, -0x206a3255
-
-    sget v1, Ll/֫ܽ;->֡ᩴܶ:I
-
-    sget v2, Ll/֡۠;->ۛ᩻ۧ:I
-
-    .line 0
-    iput p1, p0, Ll/۟᩹ۘ;->ܺ:I
-
-    iput-object p2, p0, Ll/۟᩹ۘ;->᩶:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "\u06d7\u06ec"
-
-    invoke-static {p1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result p1
-
-    add-int/2addr p1, v2
-
-    mul-int/lit8 p1, p1, -0x6f
-
-    xor-int p2, p1, v1
-
-    mul-int/lit16 p2, p2, 0x4ec5
-
-    const v3, 0x3969b632
-
-    xor-int/2addr p2, v3
-
-    const v3, 0x585a1370
-
-    :goto_0
-    xor-int/2addr p1, v3
-
-    xor-int/2addr v0, v1
-
-    mul-int/lit16 v0, v0, 0x2af9
-
-    shr-int/lit8 v0, v0, 0x1f
-
-    and-int/2addr p2, v0
-
-    xor-int v0, p1, p2
-
-    sparse-switch v0, :sswitch_data_0
-
-    .line 2
-    sget-boolean p1, Ll/֫ܶ;->ۧ᩵۫:Z
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    .line 4
-    :sswitch_0
-    sget-boolean p1, Ll/֫ܶ;->ۧ᩵۫:Z
-
-    if-nez p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const-string p1, "\u06df\u073a"
-
-    invoke-static {p1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result p1
-
-    xor-int/2addr p1, v1
-
-    mul-int/lit8 p1, p1, -0x6d
-
-    xor-int p2, p1, v2
-
-    mul-int/lit16 p2, p2, -0x6d75
-
-    const v3, -0x68f835cb
-
-    xor-int/2addr p2, v3
-
-    const v3, 0x6dcab7da
-
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "\u1a73\u1a73"
-
-    invoke-static {p1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result p1
-
-    xor-int/2addr p1, v2
-
-    xor-int p2, p1, v1
-
-    mul-int/lit16 p2, p2, 0x697d
-
-    const v3, 0x77c2f859
-
-    xor-int/2addr p2, v3
-
-    const v3, -0x42ac6907
-
-    goto :goto_0
-
-    .line 0
-    :sswitch_1
-    invoke-static {}, Ll/ۗ;->ۢۢܺ()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const-string p1, "\u1a74\u1a7b"
-
-    invoke-static {p1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result p1
-
-    sub-int p1, v1, p1
-
-    mul-int/lit8 p1, p1, 0x15
-
-    xor-int p2, p1, v2
-
-    mul-int/lit16 p2, p2, 0x2acf
-
-    const v3, -0x49a65681
-
-    xor-int/2addr p2, v3
-
-    const v3, 0x23546b5f
-
-    goto :goto_0
-
-    :sswitch_2
-    invoke-static {}, Ll/ۖᩴ;->ᩳۢ᩶()I
-
-    :goto_2
-    const-string p1, "\u05a8\u1a7a"
-
-    invoke-static {p1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result p1
-
-    xor-int/2addr p1, v2
-
-    xor-int p2, p1, v1
-
-    mul-int/lit16 p2, p2, -0x6fbf
-
-    const v3, 0x191ac299    # 8.000912E-24f
-
-    xor-int/2addr p2, v3
-
-    const v3, -0x620fbe75
-
-    goto :goto_0
-
-    .line 4
-    :sswitch_3
-    invoke-static {}, Ll/ۗᩳ;->ᩳۘۘ()Z
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw p1
-
-    :sswitch_4
-    return-void
-
-    :sswitch_5
-    invoke-static {}, Ll/ۗ۬;->֡ᩳܳ()I
-
-    move-result p1
-
-    if-ltz p1, :cond_3
-
-    const-string p1, "\u06d8\u1a78"
-
-    invoke-static {p1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result p1
-
-    xor-int/2addr p1, v2
-
-    xor-int p2, p1, v1
-
-    mul-int/lit16 p2, p2, -0x5af9
-
-    const v3, -0x4f9c9984
-
-    xor-int/2addr p2, v3
-
-    const v3, 0x2f40602e
-
-    goto/16 :goto_0
-
-    :cond_3
-    const-string p1, "\u1a7a\u06d7"
-
-    invoke-static {p1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result p1
-
-    xor-int/2addr p1, v1
-
-    xor-int p2, p1, v2
-
-    mul-int/lit16 p2, p2, 0x1101
-
-    const v3, -0x69e411c6
-
-    xor-int/2addr p2, v3
-
-    const v3, -0x2bb42482
-
-    goto/16 :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7f7874c2 -> :sswitch_3
-        -0x5fd82402 -> :sswitch_1
-        -0x1de7aacd -> :sswitch_0
-        -0x15ffd0dd -> :sswitch_4
-        0x1c507c7f -> :sswitch_3
-        0x32378de9 -> :sswitch_0
-        0x3ff4958e -> :sswitch_4
-        0x432840ab -> :sswitch_5
-        0x49022665 -> :sswitch_1
-        0x4e32de69 -> :sswitch_2
-        0x615c856c -> :sswitch_5
-        0x75645b81 -> :sswitch_2
-    .end sparse-switch
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const v14, -0x65e5001e
-
-    sget v15, Ll/ۘ֡;->ܰ֡ܽ:I
-
-    sget v16, Ll/֡۠;->ۛ᩻ۧ:I
-
-    const-string v17, "\u1a76\u06d7"
-
-    invoke-static/range {v17 .. v17}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v17
-
-    xor-int v17, v17, v16
-
-    xor-int v1, v17, v15
-
-    mul-int/lit16 v1, v1, 0x2b3f
-
-    const v19, -0x2d51127d
-
-    xor-int v1, v1, v19
-
-    const v19, 0x7da39505
-
-    xor-int v17, v17, v19
-
-    const/16 v18, 0x0
-
-    :goto_0
-    xor-int/2addr v14, v15
-
-    mul-int/lit16 v14, v14, -0x2ff1
-
-    shr-int/lit8 v14, v14, 0x1f
-
-    and-int/2addr v1, v14
-
-    xor-int v14, v17, v1
-
-    sparse-switch v14, :sswitch_data_0
-
-    .line 0
-    iget-object v1, v0, Ll/۟᩹ۘ;->᩶:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    .line 90
-    invoke-static {v1}, Ll/ܺۡۜ;->ܰ(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    .line 40
-    :sswitch_0
-    invoke-static {}, Ll/֨ܶ;->۬ܽۛ()I
-
-    move-result v1
-
-    if-gtz v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move/from16 v17, v14
-
-    goto/16 :goto_2
-
-    :sswitch_1
-    sget v1, Ll/֫᩺;->᩺۟ۘ:I
-
-    if-gtz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move/from16 v17, v14
-
-    goto/16 :goto_6
-
-    :sswitch_2
-    sget v1, Ll/ۧ;->֫۠ᩴ:I
-
-    if-gez v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move/from16 v17, v14
-
-    goto/16 :goto_5
-
-    :sswitch_3
-    invoke-static {}, Ll/۟;->۬ۙܿ()Z
-
-    invoke-static {}, Ll/֫֡;->ܽۖܿ()Z
-
-    :goto_1
-    const-string v1, "\u1a79\u1a74"
-
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v1
-
-    xor-int/2addr v1, v15
-
-    move/from16 v17, v14
-
-    xor-int v14, v1, v16
-
-    mul-int/lit16 v14, v14, -0x5753
-
-    const v19, -0x3ddb789c
-
-    xor-int v14, v14, v19
-
-    const v19, 0x710494d
-
-    goto/16 :goto_7
-
-    .line 53
-    :sswitch_4
-    invoke-static {}, Ll/֫ܺ;->۠ܰᩴ()I
-
-    invoke-static {}, Ll/ۗ۬;->֡ᩳܳ()I
-
-    return-void
-
-    .line 114
-    :sswitch_5
-    invoke-static/range {v18 .. v18}, Ll/ܿۨۘ;->᩹(Ll/ܿۨۘ;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setClickable(Z)V
-
-    return-void
-
-    :sswitch_6
-    move/from16 v17, v14
-
-    .line 113
-    invoke-static {v2, v3}, Ll/᩶;->ۤۡۢ(Ljava/lang/Object;I)V
-
-    .line 0
-    sget-boolean v1, Ll/֫ۘ;->᩷᩻ۜ:Z
-
-    if-eqz v1, :cond_3
-
-    goto/16 :goto_6
-
-    :cond_3
-    const-string v1, "\u0730\u06d8"
-
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
-
-    move-result v1
-
-    xor-int v1, v1, v16
-
-    xor-int v14, v1, v15
-
-    mul-int/lit16 v14, v14, -0x6fd1
-
-    const v19, 0x60c7cc6c
-
-    xor-int v14, v14, v19
-
-    const v19, -0x58ff6a77
-
-    goto/16 :goto_7
-
-    :sswitch_7
-    move/from16 v17, v14
-
-    .line 113
-    invoke-static {v4}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v1
-
-    const v3, 0x7e64bc9b
-
-    xor-int/2addr v3, v1
-
-    .line 70
-    sget v1, Ll/ۗ۬;->ۤᩴ᩻:I
-
-    if-ltz v1, :cond_4
-
-    goto/16 :goto_5
-
-    :cond_4
-    const-string v1, "\u073f\u06ec"
-
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
-
-    move-result v1
-
-    xor-int v1, v1, v16
-
-    xor-int v14, v1, v15
-
-    mul-int/lit16 v14, v14, -0x667f
-
-    const v19, -0x69169992
-
-    xor-int v14, v14, v19
-
-    const v19, -0x67b20ca7
-
-    goto/16 :goto_7
-
-    :sswitch_8
-    move/from16 v17, v14
+    aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const/4 v4, 0x3
+    const-string v2, "aconst_null"
 
-    .line 113
-    invoke-static {v13, v1, v4, v12}, Ll/֨ۢ;->ۨۡ۠([SIII)Ljava/lang/String;
+    aput-object v2, v0, v1
 
-    move-result-object v4
+    const/4 v1, 0x2
 
-    .line 59
-    invoke-static {}, Ll/֨ܶ;->۬ܽۛ()I
+    const-string v2, "iconst_m1"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    if-gtz v1, :cond_5
+    const/4 v1, 0x3
 
-    goto/16 :goto_4
+    const-string v2, "iconst_0"
 
-    :cond_5
-    const-string v1, "\u1a7a\u06e8"
+    aput-object v2, v0, v1
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    const/4 v1, 0x4
 
-    move-result v1
+    const-string v2, "iconst_1"
 
-    add-int/2addr v1, v15
+    aput-object v2, v0, v1
 
-    mul-int/lit8 v1, v1, -0x77
+    const/4 v1, 0x5
 
-    xor-int v14, v1, v16
+    const-string v2, "iconst_2"
 
-    mul-int/lit16 v14, v14, -0x10d
+    aput-object v2, v0, v1
 
-    const v19, -0x796df1b1
+    const/4 v1, 0x6
 
-    xor-int v14, v14, v19
+    const-string v2, "iconst_3"
 
-    const v19, -0x6432d4e8
+    aput-object v2, v0, v1
 
-    goto/16 :goto_7
+    const/4 v1, 0x7
 
-    :sswitch_9
-    move/from16 v17, v14
+    const-string v2, "iconst_4"
 
-    .line 113
-    invoke-static/range {v18 .. v18}, Ll/ܿۨۘ;->᩹(Ll/ܿۨۘ;)Landroid/widget/TextView;
+    aput-object v2, v0, v1
 
-    move-result-object v2
+    const/16 v1, 0x8
 
-    sget-object v13, Ll/۟᩹ۘ;->ۗ֡֡:[S
+    const-string v2, "iconst_5"
 
-    .line 52
-    sget-boolean v1, Ll/֨ۖ;->۫ۗۜ:Z
+    aput-object v2, v0, v1
 
-    if-nez v1, :cond_6
+    const/16 v1, 0x9
 
-    :goto_2
-    const-string v1, "\u1a79\u06d7"
+    const-string v2, "lconst_0"
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    aput-object v2, v0, v1
 
-    move-result v1
+    const/16 v1, 0xa
 
-    xor-int/2addr v1, v15
+    const-string v2, "lconst_1"
 
-    mul-int/lit8 v1, v1, 0x13
+    aput-object v2, v0, v1
 
-    xor-int v14, v1, v16
+    const/16 v1, 0xb
 
-    mul-int/lit16 v14, v14, 0x2d87
+    const-string v2, "fconst_0"
 
-    const v19, 0x67a7ac89
+    aput-object v2, v0, v1
 
-    xor-int v14, v14, v19
+    const/16 v1, 0xc
 
-    const v19, -0x70381734
+    const-string v2, "fconst_1"
 
-    goto/16 :goto_7
+    aput-object v2, v0, v1
 
-    :cond_6
-    const-string v1, "\u06dc\u06d9"
+    const/16 v1, 0xd
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    const-string v2, "fconst_2"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    xor-int/2addr v1, v15
+    const/16 v1, 0xe
 
-    xor-int v14, v1, v16
+    const-string v2, "dconst_0"
 
-    mul-int/lit16 v14, v14, 0x60c1
+    aput-object v2, v0, v1
 
-    const v19, -0x999119f
+    const/16 v1, 0xf
 
-    xor-int v14, v14, v19
+    const-string v2, "dconst_1"
 
-    const v19, -0x4b9251a1
+    aput-object v2, v0, v1
 
-    goto/16 :goto_7
+    const/16 v1, 0x10
 
-    :sswitch_a
-    move/from16 v17, v14
+    const-string v2, "bipush"
 
-    .line 7
-    iget-object v1, v0, Ll/۟᩹ۘ;->᩶:Ljava/lang/Object;
+    aput-object v2, v0, v1
 
-    .line 9
-    check-cast v1, Ll/᩶ۨۘ;
+    const/16 v1, 0x11
 
-    .line 113
-    iget-object v1, v1, Ll/᩶ۨۘ;->֨:Ll/ܿۨۘ;
+    const-string v2, "sipush"
 
-    .line 108
-    sget v14, Ll/֡۠;->ۛ᩻ۧ:I
+    aput-object v2, v0, v1
 
-    if-gtz v14, :cond_7
+    const/16 v1, 0x12
 
-    move-object/from16 v18, v1
+    const-string v2, "ldc1"
 
-    goto/16 :goto_5
+    aput-object v2, v0, v1
 
-    :cond_7
-    const-string v14, "\u1a76\u06e4"
+    const/16 v1, 0x13
 
-    invoke-static {v14}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const-string v2, "ldc2"
 
-    move-result v14
+    aput-object v2, v0, v1
 
-    add-int v14, v14, v16
+    const/16 v1, 0x14
 
-    mul-int/lit8 v14, v14, -0x5
+    const-string v2, "ldc2w"
 
-    move-object/from16 v18, v1
+    aput-object v2, v0, v1
 
-    xor-int v1, v14, v15
+    const/16 v1, 0x15
 
-    mul-int/lit16 v1, v1, -0x4e8f
+    const-string v2, "iload"
 
-    const v19, -0x32433e85
+    aput-object v2, v0, v1
 
-    xor-int v1, v1, v19
+    const/16 v1, 0x16
 
-    const v19, 0x76dec085
+    const-string v2, "lload"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    move/from16 v20, v17
+    const/16 v1, 0x17
 
-    move/from16 v17, v14
+    const-string v2, "fload"
 
-    goto/16 :goto_8
+    aput-object v2, v0, v1
 
-    :sswitch_b
-    move/from16 v17, v14
+    const/16 v1, 0x18
 
-    .line 2
-    iget v1, v0, Ll/۟᩹ۘ;->ܺ:I
+    const-string v2, "dload"
 
-    packed-switch v1, :pswitch_data_0
+    aput-object v2, v0, v1
 
-    const-string v1, "\u1a74\u06e1"
+    const/16 v1, 0x19
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const-string v2, "aload"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    sub-int v1, v15, v1
+    const/16 v1, 0x1a
 
-    mul-int/lit8 v1, v1, -0x19
+    const-string v2, "iload_0"
 
-    xor-int v14, v1, v16
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, 0x6801
+    const/16 v1, 0x1e
 
-    const v19, -0x1de75f5a
+    const-string v2, "lload_0"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, 0x6841da64
+    const/16 v1, 0x22
 
-    goto/16 :goto_7
+    const-string v2, "fload_0"
 
-    :pswitch_0
-    const-string v1, "\u06da\u1a75"
+    aput-object v2, v0, v1
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const/16 v1, 0x26
 
-    move-result v1
+    const-string v2, "dload_0"
 
-    xor-int v1, v1, v16
+    aput-object v2, v0, v1
 
-    xor-int v14, v1, v15
+    const/16 v1, 0x2a
 
-    mul-int/lit16 v14, v14, -0xbc5
+    const-string v2, "aload_0"
 
-    const v19, -0x18237a1f
+    aput-object v2, v0, v1
 
-    xor-int v14, v14, v19
+    const/16 v1, 0x1b
 
-    const v19, 0x41b3c65e
+    const-string v2, "iload_1"
 
-    goto/16 :goto_7
+    aput-object v2, v0, v1
 
-    :sswitch_c
-    move/from16 v17, v14
+    const/16 v1, 0x1f
 
-    const/16 v1, 0x1c5
+    const-string v2, "lload_1"
 
-    const/16 v12, 0x1c5
+    aput-object v2, v0, v1
 
-    goto :goto_3
+    const/16 v1, 0x23
 
-    :sswitch_d
-    move/from16 v17, v14
+    const-string v2, "fload_1"
 
-    const/16 v1, 0x3c8e
+    aput-object v2, v0, v1
 
-    const/16 v12, 0x3c8e
+    const/16 v1, 0x27
 
-    :goto_3
-    const-string v1, "\u05a1\u1a77"
+    const-string v2, "dload_1"
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    aput-object v2, v0, v1
 
-    move-result v1
+    const/16 v1, 0x2b
 
-    xor-int v1, v1, v16
+    const-string v2, "aload_1"
 
-    xor-int v14, v1, v15
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, -0x6b6d
+    const/16 v1, 0x1c
 
-    const v19, -0x50ecf5a6
+    const-string v2, "iload_2"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, 0x4292dd54
+    const/16 v1, 0x20
 
-    goto/16 :goto_7
+    const-string v2, "lload_2"
 
-    :sswitch_e
-    move/from16 v17, v14
+    aput-object v2, v0, v1
 
-    add-int v1, v10, v11
+    const/16 v1, 0x24
 
-    add-int/2addr v1, v1
+    const-string v2, "fload_2"
 
-    sub-int/2addr v1, v9
+    aput-object v2, v0, v1
 
-    if-ltz v1, :cond_8
+    const/16 v1, 0x28
 
-    const-string v1, "\u1a73\u1a78"
+    const-string v2, "dload_2"
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    aput-object v2, v0, v1
 
-    move-result v1
+    const/16 v1, 0x2c
 
-    xor-int/2addr v1, v15
+    const-string v2, "aload_2"
 
-    mul-int/lit8 v1, v1, -0x33
+    aput-object v2, v0, v1
 
-    xor-int v14, v1, v16
+    const/16 v1, 0x1d
 
-    mul-int/lit16 v14, v14, 0x6b69
+    const-string v2, "iload_3"
 
-    const v19, 0x53bfb5f9
+    aput-object v2, v0, v1
 
-    xor-int v14, v14, v19
+    const/16 v1, 0x21
 
-    const v19, 0x56e5045
+    const-string v2, "lload_3"
 
-    goto/16 :goto_7
+    aput-object v2, v0, v1
 
-    :cond_8
-    const-string v1, "\u06d6\u1a77"
+    const/16 v1, 0x25
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const-string v2, "fload_3"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    xor-int/2addr v1, v15
+    const/16 v1, 0x29
 
-    mul-int/lit8 v1, v1, 0x7b
+    const-string v2, "dload_3"
 
-    xor-int v14, v1, v16
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, 0x7c45
+    const/16 v1, 0x2d
 
-    const v19, -0x5ebfe794
+    const-string v2, "aload_3"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, 0x1d201995
+    const/16 v1, 0x2e
 
-    goto/16 :goto_7
+    const-string v2, "iaload"
 
-    :sswitch_f
-    move/from16 v17, v14
+    aput-object v2, v0, v1
 
-    mul-int v9, v8, v8
+    const/16 v1, 0x2f
 
-    mul-int v10, v7, v7
+    const-string v2, "laload"
 
-    const v11, 0xdf6bb64
+    aput-object v2, v0, v1
 
-    sget-boolean v1, Ll/ۖᩴ;->᩹ܶܶ:Z
+    const/16 v1, 0x30
 
-    if-nez v1, :cond_9
+    const-string v2, "faload"
 
-    goto/16 :goto_6
+    aput-object v2, v0, v1
 
-    :cond_9
-    const-string v1, "\u1a7b\u073a"
+    const/16 v1, 0x31
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const-string v2, "daload"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    xor-int v1, v1, v16
+    const/16 v1, 0x32
 
-    xor-int v14, v1, v15
+    const-string v2, "aaload"
 
-    mul-int/lit16 v14, v14, 0x345f
+    aput-object v2, v0, v1
 
-    const v19, 0x6dd08cb9
+    const/16 v1, 0x33
 
-    xor-int v14, v14, v19
+    const-string v2, "baload"
 
-    const v19, -0x69af78b0
+    aput-object v2, v0, v1
 
-    goto/16 :goto_7
+    const/16 v1, 0x34
 
-    :sswitch_10
-    move/from16 v17, v14
+    const-string v2, "caload"
 
-    add-int/lit16 v8, v7, 0x3bca
+    aput-object v2, v0, v1
 
-    sget v1, Ll/ۖۧ;->ܺۚۖ:I
+    const/16 v1, 0x35
 
-    if-gtz v1, :cond_a
+    const-string v2, "saload"
 
-    goto/16 :goto_6
+    aput-object v2, v0, v1
 
-    :cond_a
-    const-string v1, "\u06da\u073d"
+    const/16 v1, 0x36
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    const-string v2, "istore"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    sub-int v1, v16, v1
+    const/16 v1, 0x37
 
-    mul-int/lit8 v1, v1, -0x29
+    const-string v2, "lstore"
 
-    xor-int v14, v1, v15
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, -0x5959
+    const/16 v1, 0x38
 
-    const v19, -0x4cbcb6d8
+    const-string v2, "fstore"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, -0x2118902c
+    const/16 v1, 0x39
 
-    goto/16 :goto_7
+    const-string v2, "dstore"
 
-    :sswitch_11
-    move/from16 v17, v14
+    aput-object v2, v0, v1
 
-    aget-short v7, v5, v6
+    const/16 v1, 0x3a
 
-    sget-boolean v1, Ll/֫ۛ;->ۜ᩷ۢ:Z
+    const-string v2, "astore"
 
-    if-nez v1, :cond_b
+    aput-object v2, v0, v1
 
-    :goto_4
-    const-string v1, "\u06d7\u06e2"
+    const/16 v1, 0x3b
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    const-string v2, "istore_0"
 
-    move-result v1
+    aput-object v2, v0, v1
 
-    sub-int v1, v16, v1
+    const/16 v1, 0x3f
 
-    mul-int/lit8 v1, v1, 0x35
+    const-string v2, "lstore_0"
 
-    xor-int v14, v1, v15
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, 0x75f5
+    const/16 v1, 0x43
 
-    const v19, -0x476a3591
+    const-string v2, "fstore_0"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, -0x47b4663c
+    const/16 v1, 0x47
 
-    goto/16 :goto_7
+    const-string v2, "dstore_0"
 
-    :cond_b
-    const-string v1, "\u06df\u1a74"
+    aput-object v2, v0, v1
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const/16 v1, 0x4b
 
-    move-result v1
+    const-string v2, "astore_0"
 
-    xor-int/2addr v1, v15
+    aput-object v2, v0, v1
 
-    mul-int/lit8 v1, v1, -0x6f
+    const/16 v1, 0x3c
 
-    xor-int v14, v1, v16
+    const-string v2, "istore_1"
 
-    mul-int/lit16 v14, v14, -0x1649
+    aput-object v2, v0, v1
 
-    const v19, 0x8ea9db8
+    const/16 v1, 0x40
 
-    xor-int v14, v14, v19
+    const-string v2, "lstore_1"
 
-    const v19, 0x1aed95
+    aput-object v2, v0, v1
 
-    goto :goto_7
+    const/16 v1, 0x44
 
-    :sswitch_12
-    move/from16 v17, v14
+    const-string v2, "fstore_1"
 
-    const/4 v6, 0x0
+    aput-object v2, v0, v1
 
-    sget v1, Ll/ۘۧ;->ܳ᩷᩸:I
+    const/16 v1, 0x48
 
-    if-gtz v1, :cond_c
+    const-string v2, "dstore_1"
 
-    :goto_5
-    const-string v1, "\u1a74\u0736"
+    aput-object v2, v0, v1
 
-    invoke-static {v1}, Ll/᩶;->᩻֫ۘ(Ljava/lang/Object;)I
+    const/16 v1, 0x4c
 
-    move-result v1
+    const-string v2, "astore_1"
 
-    xor-int v1, v1, v16
+    aput-object v2, v0, v1
 
-    mul-int/lit8 v1, v1, 0x65
+    const/16 v1, 0x3d
 
-    xor-int v14, v1, v15
+    const-string v2, "istore_2"
 
-    mul-int/lit16 v14, v14, 0x58ff
+    aput-object v2, v0, v1
 
-    const v19, -0x14170d5d
+    const/16 v1, 0x41
 
-    xor-int v14, v14, v19
+    const-string v2, "lstore_2"
 
-    const v19, -0x724f806b
+    aput-object v2, v0, v1
 
-    goto :goto_7
+    const/16 v1, 0x45
 
-    :cond_c
-    const-string v1, "\u06da\u06e7"
+    const-string v2, "fstore_2"
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    aput-object v2, v0, v1
 
-    move-result v1
+    const/16 v1, 0x49
 
-    xor-int v1, v1, v16
+    const-string v2, "dstore_2"
 
-    mul-int/lit8 v1, v1, 0x73
+    aput-object v2, v0, v1
 
-    xor-int v14, v1, v15
+    const/16 v1, 0x4d
 
-    mul-int/lit16 v14, v14, 0x4681
+    const-string v2, "astore_2"
 
-    const v19, 0x1e04a606
+    aput-object v2, v0, v1
 
-    xor-int v14, v14, v19
+    const/16 v1, 0x3e
 
-    const v19, -0x5894f54f
+    const-string v2, "istore_3"
 
-    goto :goto_7
+    aput-object v2, v0, v1
 
-    :sswitch_13
-    move/from16 v17, v14
+    const/16 v1, 0x42
 
-    sget-object v5, Ll/۟᩹ۘ;->ۗ֡֡:[S
+    const-string v2, "lstore_3"
 
-    .line 105
-    sget v1, Ll/֡ۛ;->۬᩸ܶ:I
+    aput-object v2, v0, v1
 
-    if-eqz v1, :cond_d
+    const/16 v1, 0x46
 
-    :goto_6
-    const-string v1, "\u073d\u073d"
+    const-string v2, "fstore_3"
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    aput-object v2, v0, v1
 
-    move-result v1
+    const/16 v1, 0x4a
 
-    xor-int/2addr v1, v15
+    const-string v2, "dstore_3"
 
-    xor-int v14, v1, v16
+    aput-object v2, v0, v1
 
-    mul-int/lit16 v14, v14, 0x3d7f
+    const/16 v1, 0x4e
 
-    const v19, 0x3f7b745c
+    const-string v2, "astore_3"
 
-    xor-int v14, v14, v19
+    aput-object v2, v0, v1
 
-    const v19, 0x72302f90
+    const/16 v1, 0x4f
 
-    goto :goto_7
+    const-string v2, "iastore"
 
-    :cond_d
-    const-string v1, "\u06df\u073a"
+    aput-object v2, v0, v1
 
-    invoke-static {v1}, Ll/ۘۧ;->ܳۖ᩷(Ljava/lang/Object;)I
+    const/16 v1, 0x50
 
-    move-result v1
+    const-string v2, "lastore"
 
-    xor-int/2addr v1, v15
+    aput-object v2, v0, v1
 
-    xor-int v14, v1, v16
+    const/16 v1, 0x51
 
-    mul-int/lit16 v14, v14, -0x3aad
+    const-string v2, "fastore"
 
-    const v19, -0x3b8c60d8
+    aput-object v2, v0, v1
 
-    xor-int v14, v14, v19
+    const/16 v1, 0x52
 
-    const v19, 0x188241ac
+    const-string v2, "dastore"
 
-    :goto_7
-    xor-int v1, v1, v19
+    aput-object v2, v0, v1
 
-    move/from16 v20, v17
+    const/16 v1, 0x53
 
-    move/from16 v17, v1
+    const-string v2, "aastore"
 
-    move v1, v14
+    aput-object v2, v0, v1
 
-    :goto_8
-    move/from16 v14, v20
+    const/16 v1, 0x54
 
-    goto/16 :goto_0
+    const-string v2, "bastore"
 
-    :sswitch_data_0
-    .sparse-switch
-        -0x7fdb33f4 -> :sswitch_0
-        -0x7f24d8cc -> :sswitch_7
-        -0x7db0203c -> :sswitch_12
-        -0x7ac5e84d -> :sswitch_6
-        -0x75fb6292 -> :sswitch_a
-        -0x74db47d8 -> :sswitch_e
-        -0x6d27b96f -> :sswitch_7
-        -0x6ab097e7 -> :sswitch_8
-        -0x690b31b8 -> :sswitch_f
-        -0x6670b872 -> :sswitch_5
-        -0x6442ef91 -> :sswitch_11
-        -0x6221bbfb -> :sswitch_4
-        -0x5ec20798 -> :sswitch_0
-        -0x57b8649c -> :sswitch_11
-        -0x468dc9cf -> :sswitch_12
-        -0x45888cba -> :sswitch_5
-        -0x45162184 -> :sswitch_10
-        -0x32f6a107 -> :sswitch_b
-        -0x1f34feed -> :sswitch_10
-        -0x1a8f8167 -> :sswitch_3
-        -0x1702759d -> :sswitch_2
-        -0x1249e59c -> :sswitch_e
-        -0xd6ae965 -> :sswitch_1
-        -0xb44b1be -> :sswitch_1
-        0x2e2b1a5 -> :sswitch_a
-        0x136a590c -> :sswitch_3
-        0x16f85169 -> :sswitch_f
-        0x18cf1953 -> :sswitch_2
-        0x1a420792 -> :sswitch_9
-        0x22a94d03 -> :sswitch_d
-        0x2d9dc17b -> :sswitch_d
-        0x2ea03771 -> :sswitch_8
-        0x3c5fd2eb -> :sswitch_13
-        0x44d4aea2 -> :sswitch_4
-        0x462511ed -> :sswitch_9
-        0x582ae5e4 -> :sswitch_6
-        0x5fe516c5 -> :sswitch_b
-        0x60d7ad43 -> :sswitch_13
-        0x7df1a593 -> :sswitch_c
-        0x7e152cda -> :sswitch_c
-    .end sparse-switch
+    aput-object v2, v0, v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/16 v1, 0x55
+
+    const-string v2, "castore"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x56
+
+    const-string v2, "sastore"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x57
+
+    const-string v2, "pop"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x58
+
+    const-string v2, "pop2"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x59
+
+    const-string v2, "dup"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5a
+
+    const-string v2, "dup_x1"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5b
+
+    const-string v2, "dup_x2"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5c
+
+    const-string v2, "dup2"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5d
+
+    const-string v2, "dup2_x1"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5e
+
+    const-string v2, "dup2_x2"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5f
+
+    const-string v2, "swap"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x60
+
+    const-string v2, "iadd"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x61
+
+    const-string v2, "ladd"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x62
+
+    const-string v2, "fadd"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x63
+
+    const-string v2, "dadd"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x64
+
+    const-string v2, "isub"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x65
+
+    const-string v2, "lsub"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x66
+
+    const-string v2, "fsub"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x67
+
+    const-string v2, "dsub"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x68
+
+    const-string v2, "imul"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x69
+
+    const-string v2, "lmul"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6a
+
+    const-string v2, "fmul"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6b
+
+    const-string v2, "dmul"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6c
+
+    const-string v2, "idiv"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6d
+
+    const-string v2, "ldiv"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6e
+
+    const-string v2, "fdiv"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6f
+
+    const-string v2, "ddiv"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x70
+
+    const-string v2, "imod"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x71
+
+    const-string v2, "lmod"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x72
+
+    const-string v2, "fmod"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x73
+
+    const-string v2, "dmod"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x74
+
+    const-string v2, "ineg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x75
+
+    const-string v2, "lneg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x76
+
+    const-string v2, "fneg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x77
+
+    const-string v2, "dneg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x78
+
+    const-string v2, "ishl"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x79
+
+    const-string v2, "lshl"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7a
+
+    const-string v2, "ishr"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7b
+
+    const-string v2, "lshr"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7c
+
+    const-string v2, "iushr"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7d
+
+    const-string v2, "lushr"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7e
+
+    const-string v2, "iand"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7f
+
+    const-string v2, "land"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x80
+
+    const-string v2, "ior"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x81
+
+    const-string v2, "lor"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x82
+
+    const-string v2, "ixor"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x83
+
+    const-string v2, "lxor"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x84
+
+    const-string v2, "iinc"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x85
+
+    const-string v2, "i2l"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x86
+
+    const-string v2, "i2f"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x87
+
+    const-string v2, "i2d"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x88
+
+    const-string v2, "l2i"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x89
+
+    const-string v2, "l2f"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8a
+
+    const-string v2, "l2d"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8b
+
+    const-string v2, "f2i"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8c
+
+    const-string v2, "f2l"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8d
+
+    const-string v2, "f2d"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8e
+
+    const-string v2, "d2i"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8f
+
+    const-string v2, "d2l"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x90
+
+    const-string v2, "d2f"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x91
+
+    const-string v2, "int2byte"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x92
+
+    const-string v2, "int2char"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x93
+
+    const-string v2, "int2short"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x94
+
+    const-string v2, "lcmp"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x95
+
+    const-string v2, "fcmpl"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x96
+
+    const-string v2, "fcmpg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x97
+
+    const-string v2, "dcmpl"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x98
+
+    const-string v2, "dcmpg"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x99
+
+    const-string v2, "ifeq"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9a
+
+    const-string v2, "ifne"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9b
+
+    const-string v2, "iflt"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9c
+
+    const-string v2, "ifge"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9d
+
+    const-string v2, "ifgt"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9e
+
+    const-string v2, "ifle"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9f
+
+    const-string v2, "if_icmpeq"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa0
+
+    const-string v2, "if_icmpne"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa1
+
+    const-string v2, "if_icmplt"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa2
+
+    const-string v2, "if_icmpge"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa3
+
+    const-string v2, "if_icmpgt"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa4
+
+    const-string v2, "if_icmple"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa5
+
+    const-string v2, "if_acmpeq"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa6
+
+    const-string v2, "if_acmpne"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa7
+
+    const-string v2, "goto_"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa8
+
+    const-string v2, "jsr"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa9
+
+    const-string v2, "ret"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xaa
+
+    const-string v2, "tableswitch"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xab
+
+    const-string v2, "lookupswitch"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xac
+
+    const-string v2, "ireturn"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xad
+
+    const-string v2, "lreturn"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xae
+
+    const-string v2, "freturn"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xaf
+
+    const-string v2, "dreturn"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb0
+
+    const-string v2, "areturn"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb1
+
+    const-string v2, "return_"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb2
+
+    const-string v2, "getstatic"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb3
+
+    const-string v2, "putstatic"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb4
+
+    const-string v2, "getfield"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb5
+
+    const-string v2, "putfield"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb6
+
+    const-string v2, "invokevirtual"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb7
+
+    const-string v2, "invokespecial"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb8
+
+    const-string v2, "invokestatic"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb9
+
+    const-string v2, "invokeinterface"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xba
+
+    const-string v2, "invokedynamic"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xbb
+
+    const-string v2, "new_"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xbc
+
+    const-string v2, "newarray"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xbd
+
+    const-string v2, "anewarray"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xbe
+
+    const-string v2, "arraylength"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xbf
+
+    const-string v2, "athrow"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc0
+
+    const-string v2, "checkcast"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc1
+
+    const-string v2, "instanceof_"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc2
+
+    const-string v2, "monitorenter"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc3
+
+    const-string v2, "monitorexit"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc4
+
+    const-string v2, "wide"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc5
+
+    const-string v2, "multianewarray"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc6
+
+    const-string v2, "if_acmp_null"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc7
+
+    const-string v2, "if_acmp_nonnull"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc8
+
+    const-string v2, "goto_w"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc9
+
+    const-string v2, "jsr_w"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xca
+
+    const-string v2, "breakpoint"
+
+    aput-object v2, v0, v1
+
+    return-void
+.end method
+
+.method public static bridge synthetic ۙ()[Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    sget-object v0, Ll/۟᩹ۘ;->ۙ:[Ljava/lang/String;
+
+    return-object v0
 .end method

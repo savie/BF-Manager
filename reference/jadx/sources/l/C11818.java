@@ -1,87 +1,59 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨܽۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 06RI */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11818 {
+import java.util.HashMap;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f39697;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final boolean f39699;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C6899 f39701;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public C4761 f39702;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C13935 f39703;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final C21695 f39704;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f39705;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public long f39706;
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final C23128 f39707;
+/* JADX INFO: renamed from: l.ۧᩴܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21V7 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11818 extends AbstractC21976 implements InterfaceC5656, InterfaceC11621 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C15346 f39700 = new C15346();
+    public final HashMap f38146 = new HashMap();
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C22401 f39698 = new C22401();
+    @Override // l.AbstractC21976
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo27982(C21383 c21383) {
+        c21383.m13511(true, true, true, false, new C22810(new C1927(0, 10, this)));
+        this.f38146.clear();
+    }
 
-    public C11818(C21695 c21695, boolean z, boolean z2) {
-        C23128 c23128M18519;
-        this.f39704 = c21695;
-        this.f39699 = z2;
-        if (z) {
-            C15346 c15346 = c21695.f70379.f23227;
-            c23128M18519 = !c15346.isEmpty() ? (C23128) c15346.last() : null;
-        } else {
-            c23128M18519 = c21695.f70379.m18519();
+    @Override // l.AbstractC21976
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo17037(AbstractC0500 abstractC0500) {
+        String strM35295 = abstractC0500.m35295();
+        AbstractC5107 abstractC5107M35293 = abstractC0500.m35293();
+        if (C13923.m33909(strM35295)) {
+            return;
         }
-        this.f39707 = c23128M18519;
-        this.f39706 = c21695.f70376;
-        this.f39697 = c21695.f70375;
-        this.f39701 = c21695.f70379;
+        C3615 c3615 = new C3615(strM35295, abstractC5107M35293, true);
+        HashMap map = this.f38146;
+        AbstractC14669 abstractC14669 = (AbstractC14669) map.get(c3615);
+        if (abstractC14669 == null) {
+            map.put(c3615, m29666((AbstractC14669) abstractC0500));
+            return;
+        }
+        Object objM29666 = m29666((AbstractC14669) abstractC0500);
+        AbstractC14669 abstractC14669M29666 = m29666(abstractC14669);
+        if (objM29666.equals(abstractC14669M29666)) {
+            return;
+        }
+        abstractC14669M29666.mo13503(objM29666);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29490(C1233 c1233, C21695 c21695) {
-        C15346 c15346M36739 = this.f39700.m36739(c1233.m4431());
-        boolean zIsEmpty = c15346M36739.isEmpty();
-        C21695 c21696 = this.f39704;
-        this.f39702 = new C4761(c15346M36739, (zIsEmpty ? c21696.f70379 : c21696.f70379.m18516(c15346M36739, System.currentTimeMillis())).m18517(this.f39698, c21695.f70378, this.f39699), c1233.m4434(), c1233.m4433());
+    public static AbstractC14669 m29666(AbstractC14669 abstractC14669) {
+        while (abstractC14669.mo13501() != null && (abstractC14669.mo13501() instanceof AbstractC14669)) {
+            abstractC14669 = (AbstractC14669) abstractC14669.mo13501();
+        }
+        return abstractC14669;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m29491() {
-        this.f39700 = this.f39702.f16773;
-        this.f39701 = this.f39702.f16775;
-        this.f39706 = this.f39702.f16774;
-        this.f39697 = this.f39702.f16772;
-        this.f39702 = null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29489() {
-        this.f39702 = null;
-        this.f39698.m49683();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C21695 m29488(C21695 c21695) {
-        long j = this.f39700.isEmpty() ? this.f39704.f70376 : this.f39706;
-        long jMax = Math.max(c21695.f70375, this.f39697);
-        C6899 c6899 = this.f39701;
-        return new C21695(new C6899(c6899.f23225, c6899.f23227, Math.max(c6899.f23228, c21695.f70379.f23228), this.f39701.f23226), c21695.f70377, j, jMax, c21695.f70378);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static InterfaceC16842 m29667(AbstractC0500 abstractC0500) {
+        InterfaceC16842 interfaceC16842 = abstractC0500;
+        while (interfaceC16842.mo13501() != null && (interfaceC16842.mo13501() instanceof InterfaceC16842)) {
+            interfaceC16842 = (InterfaceC16842) interfaceC16842.mo13501();
+        }
+        return interfaceC16842;
     }
 }

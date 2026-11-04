@@ -1,68 +1,157 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨᩷ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 998H */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1362 {
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5714;
+/* JADX INFO: renamed from: l.֨ᩳ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: WCA8 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1362 extends C18515 implements InterfaceC10310, InterfaceC16613 {
+    public static final long serialVersionUID = -7046029254386353129L;
 
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5719;
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object compute(Object obj, BiFunction biFunction) {
+        return C1698.$default$compute(this, obj, biFunction);
+    }
 
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5725;
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object computeIfAbsent(Object obj, Function function) {
+        return C1698.$default$computeIfAbsent(this, obj, function);
+    }
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5717 = C14600.m35071(new C16492());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object computeIfPresent(Object obj, BiFunction biFunction) {
+        return C1698.$default$computeIfPresent(this, obj, biFunction);
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5713 = C14600.m35071(new C2773());
+    @Override // java.util.Map
+    public final boolean containsValue(Object obj) {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5716 = C14600.m35071(new C5596());
+    @Override // java.util.Map, l.InterfaceC16613
+    @Deprecated
+    public final Object getOrDefault(Object obj, Object obj2) {
+        return obj2;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5715 = C14600.m35071(new C22530());
+    @Override // l.C18515, java.util.Map
+    public final int hashCode() {
+        return 0;
+    }
 
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5724 = C14600.m35071(new C12259());
+    @Override // java.util.Map
+    public final boolean isEmpty() {
+        return true;
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5712 = C14600.m35071(new C17197());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object merge(Object obj, Object obj2, BiFunction biFunction) {
+        return C1698.$default$merge(this, obj, obj2, biFunction);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5720 = C14600.m35071(new C5908());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object putIfAbsent(Object obj, Object obj2) {
+        return C1698.$default$putIfAbsent(this, obj, obj2);
+    }
 
-    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5718 = C14600.m35071(new C10848());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ boolean remove(Object obj, Object obj2) {
+        return C1698.$default$remove(this, obj, obj2);
+    }
 
-    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5726 = C14600.m35071(new C14376());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ Object replace(Object obj, Object obj2) {
+        return C1698.$default$replace(this, obj, obj2);
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5721 = C14600.m35071(new C1674());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ boolean replace(Object obj, Object obj2, Object obj3) {
+        return C1698.$default$replace(this, obj, obj2, obj3);
+    }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5723 = C14600.m35071(new C9437());
+    @Override // java.util.Map, l.InterfaceC16613
+    public /* synthetic */ void replaceAll(BiFunction biFunction) {
+        C1698.$default$replaceAll(this, biFunction);
+    }
 
-    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5727 = C14600.m35071(new C3085());
+    @Override // l.C18515
+    public final String toString() {
+        return "{}";
+    }
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5728 = C14600.m35071(new C11947());
+    @Override // java.util.Map
+    public final Object put(Object obj, Object obj2) {
+        mo13846(((Long) obj).longValue(), obj2);
+        throw null;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5722 = C0690.f2908.f2944;
+    @Override // java.util.Map
+    public final Collection values() {
+        return C1055.f3784;
+    }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static final C14600 f5729 = C0690.f2896.f2944;
+    @Override // l.InterfaceC10310
+    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC7767 mo5009() {
+        return C1055.f3784;
+    }
 
-    static {
-        int i = 0;
-        f5719 = C14600.m35071(new C23548(i));
-        f5725 = C14600.m35071(new C4890(i));
-        f5714 = C14600.m35071(new C14064(i));
+    @Override // java.util.Map
+    public final Set keySet() {
+        return C10047.f32224;
+    }
+
+    @Override // java.util.Map
+    public final void putAll(Map map) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // l.C18515
+    public final Object clone() {
+        return C9564.f30959;
+    }
+
+    @Override // java.util.Map
+    public final Set entrySet() {
+        return mo5009();
+    }
+
+    @Override // java.util.Map
+    public final Object remove(Object obj) {
+        if (obj == null) {
+            return null;
+        }
+        return null;
+    }
+
+    @Override // l.C18515, java.util.Map
+    public final boolean equals(Object obj) {
+        if (obj instanceof Map) {
+            return ((Map) obj).isEmpty();
+        }
+        return false;
+    }
+
+    @Override // l.AbstractC8491, l.InterfaceC21433, java.util.Map
+    public final Object get(Object obj) {
+        return C14785.m35629(this, obj);
+    }
+
+    @Override // l.InterfaceC21433, java.util.Map
+    public final boolean containsKey(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        return false;
+    }
+
+    @Override // java.util.Map, l.InterfaceC16613
+    public final void forEach(BiConsumer biConsumer) {
+        C1698.$default$forEach(this, biConsumer);
     }
 }

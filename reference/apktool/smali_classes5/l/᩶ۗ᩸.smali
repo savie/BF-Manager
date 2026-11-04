@@ -1,30 +1,41 @@
-.class public final Ll/᩶ۗ᩸;
-.super Ll/ܽۗ᩸;
-.source "G9IQ"
+.class public final synthetic Ll/᩶ۗ᩸;
+.super Ljava/lang/Object;
+.source "16SF"
+
+# interfaces
+.implements Ll/֫ܶ᩵;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/֨ۗ᩸;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/֨ۗ᩸;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/᩶ۗ᩸;->ܰ:Ll/֨ۗ᩸;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ([BLjavax/crypto/spec/GCMParameterSpec;)Lorg/bouncycastle/crypto/params/AEADParameters;
-    .locals 2
+.method public final ᩷(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    .locals 0
 
-    .line 63
-    new-instance v0, Lorg/bouncycastle/crypto/params/AEADParameters;
+    .line 2
+    check-cast p1, Ll/ܶ᩵᩸;
 
-    new-instance v1, Lorg/bouncycastle/crypto/params/KeyParameter;
+    .line 75
+    iget-object p1, p0, Ll/᩶ۗ᩸;->ܰ:Ll/֨ۗ᩸;
 
-    invoke-direct {v1, p1}, Lorg/bouncycastle/crypto/params/KeyParameter;-><init>([B)V
+    iget-object p1, p1, Ll/֨ۗ᩸;->᩶:Ll/ۜۗ᩸;
 
-    .line 65
-    invoke-virtual {p2}, Ljavax/crypto/spec/GCMParameterSpec;->getTLen()I
+    invoke-virtual {p1, p2}, Ll/ۜۗ᩸;->ۙ(Ljava/lang/Throwable;)V
 
-    move-result p1
-
-    .line 66
-    invoke-virtual {p2}, Ljavax/crypto/spec/GCMParameterSpec;->getIV()[B
-
-    move-result-object p2
-
-    invoke-direct {v0, v1, p1, p2}, Lorg/bouncycastle/crypto/params/AEADParameters;-><init>(Lorg/bouncycastle/crypto/params/KeyParameter;I[B)V
-
-    return-object v0
+    return-void
 .end method

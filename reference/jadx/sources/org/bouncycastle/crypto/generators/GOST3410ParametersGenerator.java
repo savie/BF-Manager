@@ -7,7 +7,7 @@ import org.bouncycastle.crypto.params.GOST3410Parameters;
 import org.bouncycastle.crypto.params.GOST3410ValidationParameters;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410ParametersGenerator {
     public static final BigInteger ONE = BigInteger.valueOf(1);
     public static final BigInteger TWO = BigInteger.valueOf(2);

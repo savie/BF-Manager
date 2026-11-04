@@ -1,12 +1,28 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟᩸᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: R12P */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7747 extends AbstractC16214 {
-    @Override // l.AbstractC16214
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo4888() {
-        return C20368.f65999;
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.۟۟᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C7747 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((AbstractC22664) obj).m51067(EnumC21172.WILDCARD);
     }
 }

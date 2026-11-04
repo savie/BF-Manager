@@ -1,122 +1,78 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
+import android.net.Uri;
+import android.text.TextUtils;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.UUID;
 
-/* JADX INFO: renamed from: l.֡ۡ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: F7SA */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0316 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f1683;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f1684;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f1685;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f1686;
+/* JADX INFO: renamed from: l.֡ۡۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8HZ */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0316 implements InterfaceC18961 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C0316 m1947(int i, int i2, int i3, int i4) {
-        return new C0316(i, i2, i3, i4);
-    }
+    public final C16416 f1718;
 
-    public C0316(int i, int i2, int i3, int i4) {
-        if (i < 0) {
-            throw new IllegalArgumentException(C2271.m6966(i, "lineIndex ", " must be >= 0"));
-        }
-        if (i2 < 0) {
-            throw new IllegalArgumentException(C2271.m6966(i2, "columnIndex ", " must be >= 0"));
-        }
-        if (i3 < 0) {
-            throw new IllegalArgumentException(C2271.m6966(i3, "inputIndex ", " must be >= 0"));
-        }
-        if (i4 < 0) {
-            throw new IllegalArgumentException(C2271.m6966(i4, "length ", " must be >= 0"));
-        }
-        this.f1683 = i;
-        this.f1684 = i2;
-        this.f1686 = i3;
-        this.f1685 = i4;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f1719;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int m1948() {
-        return this.f1683;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f1720;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final HashMap f1721;
+
+    public C0316(String str, boolean z, C16416 c16416) {
+        C20782.m47565((z && TextUtils.isEmpty(str)) ? false : true);
+        this.f1718 = c16416;
+        this.f1720 = str;
+        this.f1719 = z;
+        this.f1721 = new HashMap();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m1949() {
-        return this.f1684;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m1953() {
-        return this.f1686;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m1952() {
-        return this.f1685;
+    public final byte[] m1991(C6283 c6283) {
+        return C17469.m40975(this.f1718.mo3996(), c6283.m17959() + "&signedRequest=" + C7116.m19481(c6283.m17958()), null, Collections.EMPTY_MAP);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0316 m1950(int i) {
-        return m1951(i, this.f1685);
+    public final byte[] m1990(UUID uuid, C3299 c3299) throws C10010 {
+        String str;
+        String strM10892 = c3299.m10892();
+        if (this.f1719 || TextUtils.isEmpty(strM10892)) {
+            strM10892 = this.f1720;
+        }
+        String str2 = strM10892;
+        if (TextUtils.isEmpty(str2)) {
+            C11941 c11941 = new C11941();
+            Uri uri = Uri.EMPTY;
+            c11941.m29911(uri);
+            throw new C10010(c11941.m29908(), uri, AbstractC17589.of(), 0L, new IllegalStateException("No license URL"));
+        }
+        HashMap map = new HashMap();
+        UUID uuid2 = C19158.f61987;
+        if (uuid2.equals(uuid)) {
+            str = "text/xml";
+        } else {
+            str = C19158.f61986.equals(uuid) ? "application/json" : "application/octet-stream";
+        }
+        map.put("Content-Type", str);
+        if (uuid2.equals(uuid)) {
+            map.put("SOAPAction", "http://schemas.microsoft.com/DRM/2007/03/protocols/AcquireLicense");
+        }
+        synchronized (this.f1721) {
+            map.putAll(this.f1721);
+        }
+        return C17469.m40975(this.f1718.mo3996(), str2, c3299.m10891(), map);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C0316 m1951(int i, int i2) {
-        if (i < 0) {
-            throw new IndexOutOfBoundsException(C2271.m6966(i, "beginIndex ", " + must be >= 0"));
+    public final void m1989(String str, String str2) {
+        str.getClass();
+        str2.getClass();
+        synchronized (this.f1721) {
+            this.f1721.put(str, str2);
         }
-        int i3 = this.f1685;
-        if (i > i3) {
-            throw new IndexOutOfBoundsException(C2271.m6967("beginIndex ", i, i3, " must be <= length "));
-        }
-        if (i2 < 0) {
-            throw new IndexOutOfBoundsException(C2271.m6966(i2, "endIndex ", " + must be >= 0"));
-        }
-        if (i2 > i3) {
-            throw new IndexOutOfBoundsException(C2271.m6967("endIndex ", i2, i3, " must be <= length "));
-        }
-        if (i > i2) {
-            throw new IndexOutOfBoundsException(C2271.m6967("beginIndex ", i, i2, " must be <= endIndex "));
-        }
-        if (i == 0 && i2 == i3) {
-            return this;
-        }
-        return new C0316(this.f1683, this.f1684 + i, this.f1686 + i, i2 - i);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj != null && C0316.class == obj.getClass()) {
-            C0316 c0316 = (C0316) obj;
-            if (this.f1683 == c0316.f1683 && this.f1684 == c0316.f1684 && this.f1686 == c0316.f1686 && this.f1685 == c0316.f1685) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        return C13638.hash(Integer.valueOf(this.f1683), Integer.valueOf(this.f1684), Integer.valueOf(this.f1686), Integer.valueOf(this.f1685));
-    }
-
-    public final String toString() {
-        StringBuilder sb = new StringBuilder("SourceSpan{line=");
-        sb.append(this.f1683);
-        sb.append(", column=");
-        sb.append(this.f1684);
-        sb.append(", input=");
-        sb.append(this.f1686);
-        sb.append(", length=");
-        return C12441.m30911(this.f1685, l.d, sb);
     }
 }

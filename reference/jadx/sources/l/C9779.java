@@ -1,48 +1,76 @@
 package l;
 
-import com.alipay.sdk.m.w.a;
-import java.nio.ByteBuffer;
-import java.nio.charset.Charset;
-import org.bouncycastle.i18n.LocalizedMessage;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.text.TextUtils;
 
-/* JADX INFO: renamed from: l.ۢᩴ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: P4D5 */
+/* JADX INFO: renamed from: l.ۢ֨ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 194E */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C9779 {
-
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final byte[] f33478;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final Charset f33479;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Charset f33480;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m24887(long j) {
-        return (int) (j ^ (j >>> 32));
+    public static int m25497(Context context) {
+        ContentResolver contentResolver = context.getContentResolver();
+        if (contentResolver != null) {
+            Cursor cursor = null;
+            try {
+                Cursor cursorQuery = contentResolver.query(Uri.parse("content://com.bbk.launcher2.settings/favorites"), null, null, null, null);
+                if (cursorQuery != null) {
+                    String strM25498 = m25498(context);
+                    while (cursorQuery.moveToNext()) {
+                        String string = cursorQuery.getString(cursorQuery.getColumnIndexOrThrow("title"));
+                        if (!TextUtils.isEmpty(string) && string.equals(strM25498)) {
+                            int i = cursorQuery.getInt(cursorQuery.getColumnIndexOrThrow("shortcutPermission"));
+                            if (i == 1 || i == 17) {
+                                cursorQuery.close();
+                                return -1;
+                            }
+                            if (i == 16) {
+                                cursorQuery.close();
+                                return 0;
+                            }
+                            if (i == 18) {
+                                cursorQuery.close();
+                                return 1;
+                            }
+                        }
+                    }
+                    cursorQuery.close();
+                    return 2;
+                }
+                if (cursorQuery != null) {
+                    cursorQuery.close();
+                    return 2;
+                }
+            } catch (Exception unused) {
+                if (0 != 0) {
+                    cursor.close();
+                }
+            } catch (Throwable th) {
+                if (0 != 0) {
+                    cursor.close();
+                }
+                throw th;
+            }
+        }
+        return 2;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m24888(boolean z) {
-        return z ? 1231 : 1237;
-    }
-
-    static {
-        Charset.forName("US-ASCII");
-        f33479 = Charset.forName(a.D);
-        f33480 = Charset.forName(LocalizedMessage.DEFAULT_ENCODING);
-        byte[] bArr = new byte[0];
-        f33478 = bArr;
-        ByteBuffer.wrap(bArr);
-        AbstractC3262.m9743(false, 0, 0, bArr);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m24889(Object obj, String str) {
-        if (obj == null) {
-            throw new NullPointerException(str);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m25498(Context context) {
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            PackageInfo packageInfo = packageManager.getPackageInfo(context.getApplicationContext().getPackageName(), 0);
+            if (packageInfo == null) {
+                return null;
+            }
+            return packageInfo.applicationInfo.loadLabel(packageManager).toString();
+        } catch (PackageManager.NameNotFoundException unused) {
+            return "";
         }
     }
 }

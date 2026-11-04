@@ -1,56 +1,44 @@
 package l;
 
-import bin.mt.plus.R;
-import com.alipay.sdk.m.m.b;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import com.google.android.material.motion.MotionUtils;
+import com.google.android.material.search.SearchBar;
 
-/* JADX INFO: renamed from: l.ۛ᩹֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: MAIE */
+/* JADX INFO: renamed from: l.ۛۤᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 96RH */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6338 extends AbstractC4674 {
+public final /* synthetic */ class C6338 implements InterfaceC2017, InterfaceC18006, InterfaceC5055, InterfaceC0994 {
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final String f21392;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f21461;
 
-    public C6338(String str) {
-        super(R.string.MT_Protector, R.drawable.MT_Protector);
-        this.f21392 = str;
-        m12944();
+    public /* synthetic */ C6338(Object obj) {
+        this.f21461 = obj;
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۖ */
-    public final boolean mo1960(C21422 c21422) {
-        return c21422.m47974(this.f21392) && c21422.m47970().m28814(b.k);
+    @Override // l.InterfaceC0994
+    public void onTouchExplorationStateChanged(boolean z) {
+        ((SearchBar) this.f21461).lambda$new$0(z);
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo1962(C21422 c21422) {
-        C11545 c11545M47970 = c21422.m47970();
-        c21422.m47963(this.f21392);
-        c11545M47970.m28775(b.k);
-        m12943(c21422, R.string.MT_Protector, AbstractC4674.m12940(c21422, R.string.MT_Protector));
+    @Override // l.InterfaceC18006
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1736(Object obj) {
+        ((C13903) this.f21461).m33867((String) obj);
     }
 
-    @Override // l.AbstractC4674
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo6949(C21422 c21422) {
-        C11545 c11545M47970 = c21422.m47970();
-        c21422.m47963(this.f21392);
-        c11545M47970.m28775(b.k);
-        AbstractC9677 abstractC9677Mo13029 = c21422.m47960().mo13029();
-        AbstractC12233 abstractC12233 = (AbstractC12233) c21422.m47970().m28817().mo13029();
-        String strTrim = abstractC12233.f40874.mo4704().trim();
-        int i = C20725.f67443;
-        C10142 c10142 = new C10142(C17627.class);
-        c10142.m25779(c21422.m47979());
-        c10142.m25780(c21422);
-        c10142.m25770("ARG_STATELESS_VISITOR", abstractC9677Mo13029.m24619());
-        c10142.m25770("ARG_STATELESS_VISITOR2", abstractC12233.m24619());
-        c10142.m25768("ARG_MSG_FROM", c21422.m47972());
-        c10142.m25768("ARG_MSG_TO", c11545M47970.m28826());
-        c10142.m25768("targetPath", c11545M47970.m28798());
-        c10142.m25768("descPath", strTrim);
-        c10142.m25763();
+    @Override // l.InterfaceC5055
+    /* JADX INFO: renamed from: ۙ */
+    public C10186 mo15291(String str, String str2, String str3) {
+        JSONObject jSONObjectAdd = JSON.object().add(MotionUtils.EASING_TYPE_PATH, ((AbstractC22044) this.f21461).mo4294());
+        return (("FILE_PARENT_NOT_FOUND".equals(str) && "parent_missing".equals(str3)) || ("FILE_NOT_DIRECTORY".equals(str) && "regular".equals(str3))) ? C10186.m26302(str, str2, "warning", (JSONArray) null, jSONObjectAdd) : C10186.m26306(str, str2, "fatal", null, jSONObjectAdd);
+    }
+
+    @Override // l.InterfaceC2017
+    /* JADX INFO: renamed from: ᩷ */
+    public void mo1355(Object obj, Throwable th) {
+        ((C8950) this.f21461).m23931(th);
     }
 }

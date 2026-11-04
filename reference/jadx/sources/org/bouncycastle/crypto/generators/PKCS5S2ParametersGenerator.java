@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.crypto.util.DigestFactory;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS5S2ParametersGenerator extends PBEParametersGenerator {
     public Mac hMac;
     public byte[] state;

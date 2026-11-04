@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.macs;
 import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CMacWithIV extends CMac {
     public CMacWithIV(BlockCipher blockCipher) {
         super(blockCipher);

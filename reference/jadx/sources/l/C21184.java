@@ -1,95 +1,42 @@
 package l;
 
-import java.io.InputStream;
-import java.io.OutputStream;
+import android.view.View;
+import bin.mt.plus.Main;
 
-/* JADX INFO: renamed from: l.᩷᩺ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 95GT */
+/* JADX INFO: renamed from: l.᩶۠ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 164Z */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C21184 extends InputStream implements InterfaceC20818 {
+public final class C21184 extends AbstractViewOnClickListenerC21206 {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16246 f68967;
+    public final InterfaceC12936 f67652;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public int f68968;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C1750 f67653;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public int f68969;
-
-    @Override // java.io.InputStream
-    public final boolean markSupported() {
-        return true;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static /* bridge */ /* synthetic */ InterfaceC12936 m48333(C21184 c21184) {
+        return c21184.f67652;
     }
 
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    @Override // l.AbstractC6796
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo3322() {
+        return 4;
     }
 
-    public C21184(C16246 c16246, int i) {
-        this.f68967 = c16246;
-        this.f68969 = i;
-        this.f68968 = i;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C21184(C1750 c1750, Main main, InterfaceC12936 interfaceC12936) {
+        super(main);
+        this.f67653 = c1750;
+        this.f67652 = interfaceC12936;
     }
 
-    @Override // java.io.InputStream
-    public final int read() {
-        int i = this.f68969;
-        C16246 c16246 = this.f68967;
-        if (i >= c16246.f52401) {
-            return -1;
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        if (this.f67653.f27860.m24482() || AbstractViewOnClickListenerC21206.f67690.m55200()) {
+            return;
         }
-        byte[] bArr = c16246.f52400;
-        int i2 = this.f68969;
-        this.f68969 = i2 + 1;
-        return bArr[i2];
-    }
-
-    @Override // java.io.InputStream
-    public final int read(byte[] bArr) {
-        int length = bArr.length;
-        C16246 c16246 = this.f68967;
-        int iMin = Math.min(length, c16246.f52401 - this.f68969);
-        if (iMin <= 0) {
-            return this.f68969 >= c16246.f52401 ? -1 : 0;
-        }
-        System.arraycopy(c16246.f52400, this.f68969, bArr, 0, iMin);
-        this.f68969 += iMin;
-        return iMin;
-    }
-
-    @Override // java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) {
-        C16246 c16246 = this.f68967;
-        int iMin = Math.min(i2, c16246.f52401 - this.f68969);
-        if (iMin <= 0) {
-            return this.f68969 >= c16246.f52401 ? -1 : 0;
-        }
-        System.arraycopy(c16246.f52400, this.f68969, bArr, i, iMin);
-        this.f68969 += iMin;
-        return iMin;
-    }
-
-    @Override // java.io.InputStream
-    public final long skip(long j) {
-        int iMax = (int) Math.max(0L, Math.min(j, this.f68967.f52401 - this.f68969));
-        this.f68969 += iMax;
-        return iMax;
-    }
-
-    @Override // java.io.InputStream
-    public final int available() {
-        return Math.max(0, this.f68967.f52401 - this.f68969);
-    }
-
-    @Override // java.io.InputStream
-    public final void mark(int i) {
-        this.f68968 = this.f68969;
-    }
-
-    @Override // java.io.InputStream
-    public final void reset() {
-        this.f68969 = this.f68968;
+        this.f67652.mo16305(this.f22654);
     }
 }

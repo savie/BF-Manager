@@ -1,7 +1,6 @@
 package org.bouncycastle.asn1.x9;
 
 import java.math.BigInteger;
-import l.C18828;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -10,11 +9,12 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 import org.bouncycastle.math.ec.ECAlgorithms;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X9Curve extends ASN1Object implements X9ObjectIdentifiers {
     public ECCurve curve;
     public ASN1ObjectIdentifier fieldIdentifier;
@@ -29,7 +29,7 @@ public class X9Curve extends ASN1Object implements X9ObjectIdentifiers {
         ASN1ObjectIdentifier identifier = x9FieldID.getIdentifier();
         this.fieldIdentifier = identifier;
         if (identifier.equals((ASN1Primitive) X9ObjectIdentifiers.prime_field)) {
-            f2m = new ECCurve.Fp(((ASN1Integer) x9FieldID.getParameters()).getValue(), new BigInteger(1, C18828.m43458(aSN1Sequence, 0)), new BigInteger(1, C18828.m43458(aSN1Sequence, 1)), bigInteger, bigInteger2);
+            f2m = new ECCurve.Fp(((ASN1Integer) x9FieldID.getParameters()).getValue(), new BigInteger(1, ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 0)), new BigInteger(1, ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 1)), bigInteger, bigInteger2);
         } else {
             if (!this.fieldIdentifier.equals((ASN1Primitive) X9ObjectIdentifiers.characteristic_two_field)) {
                 throw new IllegalArgumentException("This type of ECCurve is not implemented");
@@ -52,7 +52,7 @@ public class X9Curve extends ASN1Object implements X9ObjectIdentifiers {
                 iIntValueExact2 = iIntValueExact4;
                 i = iIntValueExact5;
             }
-            f2m = new ECCurve.F2m(iIntValueExact3, iIntValueExact2, i, iIntValueExact, new BigInteger(1, C18828.m43458(aSN1Sequence, 0)), new BigInteger(1, C18828.m43458(aSN1Sequence, 1)), bigInteger, bigInteger2);
+            f2m = new ECCurve.F2m(iIntValueExact3, iIntValueExact2, i, iIntValueExact, new BigInteger(1, ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 0)), new BigInteger(1, ExternalValue$$ExternalSyntheticOutline0.m(aSN1Sequence, 1)), bigInteger, bigInteger2);
         }
         this.curve = f2m;
         if (aSN1Sequence.size() == 3) {

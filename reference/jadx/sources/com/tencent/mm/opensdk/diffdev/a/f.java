@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 import com.tencent.mm.opensdk.diffdev.OAuthErrCode;
 import com.tencent.mm.opensdk.diffdev.OAuthListener;
 import com.tencent.mm.opensdk.utils.Log;
-import l.C0252;
+import l.C25272;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -149,6 +149,6 @@ public final class f extends AsyncTask {
     public f(String str, OAuthListener oAuthListener) {
         this.n = str;
         this.k = oAuthListener;
-        this.url = C0252.m1693("https://long.open.weixin.qq.com/connect/l/qrconnect?f=json&uuid=", str);
+        this.url = C25272.m56409("https://long.open.weixin.qq.com/connect/l/qrconnect?f=json&uuid=", str);
     }
 }

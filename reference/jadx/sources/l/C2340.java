@@ -1,43 +1,62 @@
 package l;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import android.text.TextWatcher;
+import com.alipay.sdk.m.t.e;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۖۛۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 37CY */
+/* JADX INFO: renamed from: l.ۖ֫ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 61KH */
 /* JADX INFO: loaded from: classes3.dex */
-public class C2340 extends C12925 {
+public final /* synthetic */ class C2340 implements Predicate {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public ArrayList f8275;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f7556;
 
-    public C2340(C12738 c12738, EnumC16783 enumC16783, List list) {
-        super(c12738, enumC16783);
-        this.f8275 = new ArrayList();
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            this.f8275.add(mo32011((C15187) it.next(), c12738));
+    public /* synthetic */ C2340(int i) {
+        this.f7556 = i;
+    }
+
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f7556) {
+            case 0:
+                break;
+            case 1:
+                break;
         }
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.C12925
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo7125() {
-        return (this.f8275.size() * 2) + 2;
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
     }
 
-    @Override // l.C12925, l.InterfaceC4705
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2341(InterfaceC19275 interfaceC19275) throws IOException {
-        super.mo2341(interfaceC19275);
-        ArrayList arrayList = this.f8275;
-        C23509 c23509 = (C23509) interfaceC19275;
-        c23509.m51770(arrayList.size());
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            c23509.m51770(((C15187) it.next()).f43854);
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f7556) {
+            case 0:
+                AbstractC22044 abstractC22044 = (AbstractC22044) obj;
+                if (abstractC22044.mo4281()) {
+                    AbstractC22044 abstractC22044M49876 = abstractC22044.m49876("dex");
+                    if (!abstractC22044M49876.mo4281() || !abstractC22044M49876.m49876(e.m).mo4281()) {
+                        AbstractC22044 abstractC22044M49877 = abstractC22044.m49876("arsc");
+                        if (!abstractC22044M49877.mo4281() || !abstractC22044M49877.m49876(e.m).mo4281()) {
+                        }
+                    }
+                    return true;
+                }
+                return false;
+            case 1:
+                return ((TextWatcher) obj) instanceof C21454;
+            default:
+                int i = ActivityC0848.f3169;
+                return ((AbstractC9051) obj) instanceof C2776;
         }
     }
 }

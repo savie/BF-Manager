@@ -199,7 +199,7 @@
 
     aget-short v5, v5, v8
 
-    invoke-static {v7, v5, v11, v4}, Ll/֡ۜᩴ;->ۙ(IIII)I
+    invoke-static {v7, v5, v11, v4}, Ll/ۨ᩹ۧ;->᩷(IIII)I
 
     move-result v4
 

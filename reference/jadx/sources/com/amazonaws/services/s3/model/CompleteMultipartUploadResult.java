@@ -10,16 +10,16 @@ import java.util.Date;
 public class CompleteMultipartUploadResult extends SSEResultBase implements ObjectExpirationResult, S3RequesterChargedResult, Serializable {
     @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo468(Date date) {
+    public final void mo462(Date date) {
     }
 
     @Override // com.amazonaws.services.s3.internal.S3RequesterChargedResult
     /* JADX INFO: renamed from: ۙ */
-    public final void mo465(boolean z) {
+    public final void mo459(boolean z) {
     }
 
     @Override // com.amazonaws.services.s3.internal.ObjectExpirationResult
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo469(String str) {
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo463(String str) {
     }
 }

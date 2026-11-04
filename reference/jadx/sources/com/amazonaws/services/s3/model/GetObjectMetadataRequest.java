@@ -7,23 +7,23 @@ import java.io.Serializable;
 public class GetObjectMetadataRequest extends AmazonWebServiceRequest implements Serializable {
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f591;
+    public String f581;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public String f592;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public String f582;
 
     public GetObjectMetadataRequest(String str, String str2) {
-        this.f591 = str;
-        this.f592 = str2;
+        this.f582 = str;
+        this.f581 = str2;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String m566() {
-        return this.f591;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final String m560() {
+        return this.f582;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m567() {
-        return this.f592;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String m561() {
+        return this.f581;
     }
 }

@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public enum PasswordConverter implements CharToByteConverter {
     ASCII { // from class: org.bouncycastle.crypto.PasswordConverter.1
         @Override // org.bouncycastle.crypto.CharToByteConverter

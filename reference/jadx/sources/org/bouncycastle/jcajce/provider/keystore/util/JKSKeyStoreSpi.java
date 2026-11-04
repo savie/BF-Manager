@@ -17,10 +17,10 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Map;
-import l.C0561;
-import l.C10235;
-import l.InterfaceC19407;
-import l.InterfaceC20818;
+import l.C4681;
+import l.C9214;
+import l.InterfaceC8469;
+import l.InterfaceC9960;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.jcajce.BCLoadStoreParameter;
 import org.bouncycastle.jcajce.provider.util.DigestFactory;
@@ -29,7 +29,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.io.Streams;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class JKSKeyStoreSpi extends KeyStoreSpi {
     public static final String NOT_IMPLEMENTED_MESSAGE = "BC JKS store is read-only and only supports certificate entries";
     public final Hashtable certificateEntries = new Hashtable();
@@ -45,7 +45,7 @@ public class JKSKeyStoreSpi extends KeyStoreSpi {
         }
     }
 
-    public final class ErasableByteStream extends ByteArrayInputStream implements InterfaceC19407, InterfaceC20818 {
+    public final class ErasableByteStream extends ByteArrayInputStream implements InterfaceC9960, InterfaceC8469 {
         public ErasableByteStream(byte[] bArr, int i, int i2) {
             super(bArr, i, i2);
         }
@@ -54,9 +54,9 @@ public class JKSKeyStoreSpi extends KeyStoreSpi {
             Arrays.fill(((ByteArrayInputStream) this).buf, (byte) 0);
         }
 
-        @Override // java.io.ByteArrayInputStream, java.io.InputStream, l.InterfaceC19407, l.InterfaceC20818
+        @Override // java.io.ByteArrayInputStream, java.io.InputStream, l.InterfaceC9960, l.InterfaceC8469
         public /* synthetic */ long transferTo(OutputStream outputStream) {
-            return C10235.transferTo(this, outputStream);
+            return C9214.transferTo(this, outputStream);
         }
     }
 
@@ -145,7 +145,7 @@ public class JKSKeyStoreSpi extends KeyStoreSpi {
     public String engineGetCertificateAlias(Certificate certificate) {
         synchronized (this.certificateEntries) {
             Hashtable hashtable = this.certificateEntries;
-            for (Map.Entry entry : C0561.bridge_synchronizedSet(hashtable.entrySet(), hashtable)) {
+            for (Map.Entry entry : C4681.bridge_synchronizedSet(hashtable.entrySet(), hashtable)) {
                 if (((BCJKSTrustedCertEntry) entry.getValue()).cert.equals(certificate)) {
                     return (String) entry.getKey();
                 }

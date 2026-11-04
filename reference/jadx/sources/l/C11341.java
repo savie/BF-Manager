@@ -1,158 +1,77 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.regex.Pattern;
 
-/* JADX INFO: renamed from: l.ۨ֡֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: J1YX */
+/* JADX INFO: renamed from: l.ۧۗ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8Q6 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11341 extends AbstractViewOnClickListenerC8744 {
+public final class C11341 implements InterfaceC2763 {
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ArrayList f38265;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f38266;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C21422 f38267;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Main f38268;
-
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13810 f38269;
-
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC20745 f38270;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f38271;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C11341(C0756 c0756, Main main, ArrayList arrayList, C21422 c21422, ArrayList arrayList2, Main main2, C13810 c13810, boolean z, String str, AbstractC20745 abstractC20745) {
-        super(main, arrayList, false, false);
-        this.f38267 = c21422;
-        this.f38265 = arrayList2;
-        this.f38268 = main2;
-        this.f38269 = c13810;
-        this.f38271 = z;
-        this.f38266 = str;
-        this.f38270 = abstractC20745;
-    }
-
-    @Override // l.AbstractViewOnClickListenerC8744
-    /* JADX INFO: renamed from: ۬ */
-    public final void mo22696() {
-        String strM22698 = m22698();
-        String strM22693 = m22693();
-        String strM22690 = m22690();
-        final C21422 c21422 = this.f38267;
-        List<InterfaceC2557> listM47973 = c21422.m47973();
-        C19430 c19430 = new C19430(listM47973.size(), true);
-        for (InterfaceC2557 interfaceC2557 : listM47973) {
-            if (!interfaceC2557.mo7980()) {
-                c19430.m44466(interfaceC2557.getName());
-            }
-        }
-        boolean zM22689 = m22689();
-        Map map = Collections.EMPTY_MAP;
-        final ArrayList arrayList = this.f38265;
-        ArrayList<C13080> arrayListM11359 = C3906.m11359(arrayList, strM22698, strM22693, strM22690, zM22689, map);
-        final ArrayList arrayListM11358 = C3906.m11358(arrayListM11359);
-        C3906.m11361(c19430, arrayListM11358);
-        ArrayList arrayList2 = new ArrayList(arrayListM11359.size());
-        boolean z = false;
-        for (C13080 c13080 : arrayListM11359) {
-            if (!c13080.m32292()) {
-                z = true;
-            }
-            arrayList2.add(c13080.m32293());
-        }
-        Main main = this.f38268;
-        View viewM30995 = main.m30995(R.layout.MT_Protector);
-        ((TextView) viewM30995.findViewById(R.id.MT_Protector)).setText(R.string.MT_Protector);
-        ListView listView = (ListView) viewM30995.findViewById(R.id.MT_Protector);
-        C16754.m39314(listView);
-        listView.setAdapter((ListAdapter) new C4406(R.layout.MT_Protector, main, arrayList2));
-        C8067 c8067BuildDialog = main.buildDialog();
-        c8067BuildDialog.m21258(viewM30995);
-        if (strM22698.equals("{P}{S}") && m22693().isEmpty()) {
-            c8067BuildDialog.m21251(R.string.MT_Protector, null);
-        } else if (z) {
-            m22694();
-            ((TextView) viewM30995.findViewById(R.id.MT_Protector)).setText(R.string.MT_Protector);
-            c8067BuildDialog.m21251(R.string.MT_Protector, null);
-        } else {
-            m22694();
-            final C13810 c13810 = this.f38269;
-            final boolean z2 = this.f38271;
-            final String str = this.f38266;
-            final AbstractC20745 abstractC20745 = this.f38270;
-            c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterface.OnClickListener() { // from class: l.ۙ֡֨
-                @Override // android.content.DialogInterface.OnClickListener
-                public final void onClick(DialogInterface dialogInterface, int i) {
-                    this.f15439.m28422(arrayList, arrayListM11358, c13810, z2, c21422, str, abstractC20745);
-                }
-            });
-            c8067BuildDialog.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        }
-        c8067BuildDialog.m21271(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        c8067BuildDialog.m21269().m44361().setOnClickListener(new ViewOnClickListenerC13773(2, arrayList2));
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public /* synthetic */ void m28422(ArrayList arrayList, ArrayList arrayList2, C13810 c13810, boolean z, final C21422 c21422, String str, final AbstractC20745 abstractC20745) {
-        HashMap map = new HashMap();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            InterfaceC2557 interfaceC2557 = (InterfaceC2557) it.next();
-            map.put(interfaceC2557.getName(), Boolean.valueOf(interfaceC2557.isDirectory()));
-        }
-        final ArrayList arrayList3 = new ArrayList(arrayList2.size());
-        Iterator it2 = arrayList2.iterator();
-        while (it2.hasNext()) {
-            C13080 c13080 = (C13080) it2.next();
-            arrayList3.add(new C2167(c13080.m32296(), c13080.m32297(), map.get(c13080.m32296()) == Boolean.TRUE, true));
-        }
-        m22691();
-        final String strSubstring = c13810.m28629().substring(1);
-        if (z) {
-            C11005.m27761(new InterfaceC17354() { // from class: l.ܰ֡֨
-                @Override // l.InterfaceC17354
-                public final /* synthetic */ void onCanceled() {
-                }
+    public final C21287 f35733 = new C21287();
 
-                @Override // l.InterfaceC17354
-                /* JADX INFO: renamed from: ۙ */
-                public final /* synthetic */ boolean mo6537(Exception exc) {
-                    return false;
-                }
+    @Override // l.InterfaceC2763
+    public final /* synthetic */ void reset() {
+    }
 
-                @Override // l.InterfaceC17354
-                /* JADX INFO: renamed from: ۙ */
-                public final void mo6536(C14558 c14558, boolean z2) {
-                    this.f44517.m22692();
-                    List list = Collections.EMPTY_LIST;
-                    C0756.m3255(c21422, abstractC20745, strSubstring, arrayList3, Collections.EMPTY_LIST, c14558, z2);
+    @Override // l.InterfaceC2763
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC24393 mo5929(int i, int i2, byte[] bArr) {
+        return C19171.m44438(this, bArr, i2);
+    }
+
+    @Override // l.InterfaceC2763
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5930(byte[] bArr, int i, int i2, C9474 c9474, InterfaceC8103 interfaceC8103) {
+        C2137 c2137M17073;
+        C21287 c21287 = this.f35733;
+        c21287.m48491(i2 + i, bArr);
+        c21287.m48510(i);
+        ArrayList arrayList = new ArrayList();
+        while (c21287.m48486() > 0) {
+            C20782.m47564("Incomplete Mp4Webvtt Top Level box header found.", c21287.m48486() >= 8);
+            int iM48500 = c21287.m48500();
+            if (c21287.m48500() == 1987343459) {
+                int i3 = iM48500 - 8;
+                CharSequence charSequenceM17678 = null;
+                C5866 c5866M17680 = null;
+                while (i3 > 0) {
+                    C20782.m47564("Incomplete vtt cue box header found.", i3 >= 8);
+                    int iM48501 = c21287.m48500();
+                    int iM48502 = c21287.m48500();
+                    int i4 = iM48501 - 8;
+                    byte[] bArrM48497 = c21287.m48497();
+                    int iM48516 = c21287.m48516();
+                    String str = C7116.f23455;
+                    String str2 = new String(bArrM48497, iM48516, i4, StandardCharsets.UTF_8);
+                    c21287.m48503(i4);
+                    i3 = (i3 - 8) - i4;
+                    if (iM48502 == 1937011815) {
+                        c5866M17680 = C6122.m17680(str2);
+                    } else if (iM48502 == 1885436268) {
+                        charSequenceM17678 = C6122.m17678((String) null, str2.trim(), Collections.EMPTY_LIST);
+                    }
                 }
-            }, c21422.m47980(), str);
-            return;
+                if (charSequenceM17678 == null) {
+                    charSequenceM17678 = "";
+                }
+                if (c5866M17680 != null) {
+                    c5866M17680.m17079(charSequenceM17678);
+                    c2137M17073 = c5866M17680.m17073();
+                } else {
+                    Pattern pattern = C6122.f20889;
+                    C12087 c12087 = new C12087();
+                    c12087.f38920 = charSequenceM17678;
+                    c2137M17073 = c12087.m30269().m17073();
+                }
+                arrayList.add(c2137M17073);
+            } else {
+                c21287.m48503(iM48500 - 8);
+            }
         }
-        m22692();
-        List list = Collections.EMPTY_LIST;
-        C0756.m3255(c21422, abstractC20745, strSubstring, arrayList3, Collections.EMPTY_LIST, null, false);
+        interfaceC8103.accept(new C16187(-9223372036854775807L, -9223372036854775807L, arrayList));
     }
 }

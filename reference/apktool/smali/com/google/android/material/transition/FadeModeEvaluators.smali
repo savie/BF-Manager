@@ -86,7 +86,7 @@
     const-string v0, "Invalid fade mode: "
 
     .line 0
-    invoke-static {p0, v0}, Ll/۠᩺ۘ;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

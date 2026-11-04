@@ -1,154 +1,126 @@
 .class public final Ll/ۙܽ᩵;
-.super Ll/ۨܽ᩵;
-.source "J5X9"
-
-
-# instance fields
-.field public final ܺ:D
-
-
-# direct methods
-.method public constructor <init>(D)V
-    .locals 0
-
-    .line 56
-    invoke-direct {p0}, Ll/ۨܽ᩵;-><init>()V
-
-    .line 57
-    iput-wide p1, p0, Ll/ۙܽ᩵;->ܺ:D
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ܰ۫᩵;B)V
-    .locals 0
-
-    .line 46
-    invoke-direct {p0}, Ll/ۨܽ᩵;-><init>()V
-
-    add-int/lit8 p2, p2, 0x1
-
-    .line 47
-    invoke-virtual {p1, p2}, Ll/ܰ۫᩵;->ܰ(I)[B
-
-    move-result-object p1
-
-    invoke-static {p1}, Ll/۫֨ۡ;->ۙ([B)J
-
-    move-result-wide p1
-
-    .line 48
-    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ll/ۙܽ᩵;->ܺ:D
-
-    return-void
-.end method
+.super Ll/۬ܺ᩵;
+.source "I6PU"
 
 
 # virtual methods
-.method public final hashCode()I
-    .locals 2
+.method public final ۙ(I)Ll/᩹ܽ᩵;
+    .locals 7
 
-    .line 101
-    iget-wide v0, p0, Ll/ۙܽ᩵;->ܺ:D
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    move-result-wide v0
-
-    long-to-int v1, v0
-
-    return v1
-.end method
-
-.method public final ۙ(I)I
-    .locals 2
-
-    add-int/lit8 p1, p1, 0x1
-
-    .line 79
-    iget-wide v0, p0, Ll/ۙܽ᩵;->ܺ:D
-
-    .line 80
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    move-result-wide v0
-
-    .line 79
-    invoke-static {v0, v1}, Ll/۫֨ۡ;->ۖ(J)I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    return v0
-.end method
-
-.method public final ۙ(Ll/ۙ۫᩵;)V
-    .locals 3
-
-    .line 64
-    iget-wide v0, p0, Ll/ۙܽ᩵;->ܺ:D
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ll/۫֨ۡ;->ۙ(J)[B
-
-    move-result-object v0
-
-    .line 71
-    sget-object v1, Ll/ᩳܽ᩵;->ۧ:Ll/ᩳܽ᩵;
-
-    iget-byte v1, v1, Ll/ᩳܽ᩵;->ܺ:B
-
-    array-length v2, v0
-
-    add-int/lit8 v2, v2, -0x1
-
-    shl-int/lit8 v2, v2, 0x5
-
-    or-int/2addr v1, v2
-
-    invoke-virtual {p1, v1}, Ll/ۙ۫᩵;->ܰ(I)V
+    .line 1486
+    iget-object v0, p0, Ll/ۚܽ᩵;->۠:Ll/᩹ܽ᩵;
 
     const/4 v1, 0x0
 
-    .line 347
-    array-length v2, v0
+    if-eqz v0, :cond_8
 
-    invoke-virtual {p1, v0, v1, v2}, Ll/ۙ۫᩵;->ۙ([BII)V
+    iget-object v2, v0, Ll/᩹ܽ᩵;->ܰ:Ljava/lang/Object;
 
-    return-void
-.end method
+    if-eqz v2, :cond_8
 
-.method public final ܰ(Ll/ۨܽ᩵;)I
-    .locals 4
+    iget-object v3, p0, Ll/۬ܺ᩵;->ۜ:Ll/᩹ܽ᩵;
 
-    .line 87
-    check-cast p1, Ll/ۙܽ᩵;
+    if-eqz v3, :cond_8
 
-    .line 89
-    iget-wide v0, p0, Ll/ۙܽ᩵;->ܺ:D
+    iget-object v4, v3, Ll/᩹ܽ᩵;->ܰ:Ljava/lang/Object;
 
-    iget-wide v2, p1, Ll/ۙܽ᩵;->ܺ:D
+    if-eqz v4, :cond_8
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
+    iget-object v5, p0, Ll/ۚܽ᩵;->ۡ:Ll/᩹ܽ᩵;
 
-    move-result p1
+    if-nez v5, :cond_0
 
-    return p1
-.end method
+    goto :goto_1
 
-.method public final ᩸()Ll/ᩳܽ᩵;
-    .locals 1
+    .line 1490
+    :cond_0
+    iget-object v6, v5, Ll/᩹ܽ᩵;->ܰ:Ljava/lang/Object;
 
-    .line 96
-    sget-object v0, Ll/ᩳܽ᩵;->ۧ:Ll/ᩳܽ᩵;
+    if-nez v6, :cond_4
 
-    return-object v0
+    .line 1491
+    instance-of v6, v2, Ll/ۡܺ᩵;
+
+    if-eqz v6, :cond_1
+
+    move-object v6, v2
+
+    check-cast v6, Ll/ۡܺ᩵;
+
+    iget-object v6, v6, Ll/ۡܺ᩵;->ۙ:Ljava/lang/Throwable;
+
+    if-nez v6, :cond_2
+
+    :cond_1
+    instance-of v2, v4, Ll/ۡܺ᩵;
+
+    if-eqz v2, :cond_3
+
+    move-object v2, v4
+
+    check-cast v2, Ll/ۡܺ᩵;
+
+    iget-object v6, v2, Ll/ۡܺ᩵;->ۙ:Ljava/lang/Throwable;
+
+    if-eqz v6, :cond_3
+
+    move-object v2, v4
+
+    .line 1495
+    :cond_2
+    invoke-virtual {v5, v2, v6}, Ll/᩹ܽ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 1497
+    :cond_3
+    invoke-virtual {v5}, Ll/᩹ܽ᩵;->ۤ()V
+
+    .line 1499
+    :cond_4
+    :goto_0
+    iput-object v1, p0, Ll/ۚܽ᩵;->۠:Ll/᩹ܽ᩵;
+
+    iput-object v1, p0, Ll/۬ܺ᩵;->ۜ:Ll/᩹ܽ᩵;
+
+    iput-object v1, p0, Ll/ۚܽ᩵;->ۡ:Ll/᩹ܽ᩵;
+
+    .line 1248
+    iget-object v1, v3, Ll/᩹ܽ᩵;->᩶:Ll/ۤܽ᩵;
+
+    if-eqz v1, :cond_7
+
+    .line 1250
+    iget-object v1, v3, Ll/᩹ܽ᩵;->ܰ:Ljava/lang/Object;
+
+    if-nez v1, :cond_5
+
+    .line 1251
+    invoke-virtual {v3}, Ll/᩹ܽ᩵;->᩷()V
+
+    :cond_5
+    if-ltz p1, :cond_7
+
+    if-nez v1, :cond_6
+
+    .line 1252
+    iget-object v1, v3, Ll/᩹ܽ᩵;->ܰ:Ljava/lang/Object;
+
+    if-eqz v1, :cond_7
+
+    .line 1253
+    :cond_6
+    invoke-virtual {v3}, Ll/᩹ܽ᩵;->ܳ()V
+
+    .line 1255
+    :cond_7
+    invoke-virtual {v5, v0, p1}, Ll/᩹ܽ᩵;->ۙ(Ll/᩹ܽ᩵;I)Ll/᩹ܽ᩵;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_8
+    :goto_1
+    return-object v1
 .end method

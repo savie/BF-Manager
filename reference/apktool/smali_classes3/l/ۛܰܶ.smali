@@ -1,88 +1,126 @@
 .class public final Ll/ۛܰܶ;
-.super Ll/֨ۨܶ;
-.source "8BG9"
-
-
-# instance fields
-.field public final ܰ:Ll/᩺ۨܶ;
-
-
-# direct methods
-.method public constructor <init>(Ll/᩺ۨܶ;)V
-    .locals 2
-
-    const-string v0, "InnerClasses"
-
-    .line 41
-    invoke-direct {p0, v0}, Ll/֨ۨܶ;-><init>(Ljava/lang/String;)V
-
-    .line 44
-    :try_start_0
-    invoke-virtual {p1}, Ll/ᩴᩴܶ;->ܰ()Z
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez v0, :cond_0
-
-    .line 52
-    iput-object p1, p0, Ll/ۛܰܶ;->ܰ:Ll/᩺ۨܶ;
-
-    return-void
-
-    .line 45
-    :cond_0
-    :try_start_1
-    new-instance p1, Ll/۠ᩴܶ;
-
-    const-string v0, "innerClasses.isMutable()"
-
-    const/4 v1, 0x0
-
-    .line 60
-    invoke-direct {p1, v0, v1}, Ll/۟ܰܶ;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    .line 45
-    throw p1
-    :try_end_1
-    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 49
-    :catch_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "innerClasses == null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.super Ll/֫ܰܶ;
+.source "S7ZI"
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
+.method public final ۚ()V
+    .locals 2
 
-    .line 60
-    iget-object v0, p0, Ll/ۛܰܶ;->ܰ:Ll/᩺ۨܶ;
+    .line 62
+    iget-object v0, p0, Ll/۠ۘܶ;->ܳ:Ll/۠᩶ܶ;
 
-    invoke-virtual {v0}, Ll/ۚᩴܶ;->size()I
+    invoke-virtual {p0}, Ll/۠ۘܶ;->۫()Ll/ܶ֡ܶ;
 
-    move-result v0
+    const/4 v1, 0x0
 
-    mul-int/lit8 v0, v0, 0x8
+    iput-object v1, v0, Ll/۠᩶ܶ;->ۙ:Ljava/io/InputStream;
 
-    add-int/lit8 v0, v0, 0x8
+    .line 63
+    iget-object v0, p0, Ll/۠ۘܶ;->ܳ:Ll/۠᩶ܶ;
 
-    return v0
+    invoke-virtual {p0}, Ll/۠ۘܶ;->۫()Ll/ܶ֡ܶ;
+
+    .line 44
+    iput-object v1, v0, Ll/۠᩶ܶ;->᩷:Ljava/io/OutputStream;
+
+    return-void
 .end method
 
-.method public final ܰ()Ll/᩺ۨܶ;
-    .locals 1
+.method public final ᩹()V
+    .locals 4
 
-    .line 69
-    iget-object v0, p0, Ll/ۛܰܶ;->ܰ:Ll/᩺ۨܶ;
+    .line 38
+    invoke-virtual {p0}, Ll/۠ۘܶ;->۫()Ll/ܶ֡ܶ;
 
-    return-object v0
+    move-result-object v0
+
+    .line 40
+    :try_start_0
+    invoke-virtual {p0}, Ll/֫ܰܶ;->ۗ()V
+
+    .line 42
+    new-instance v1, Ll/ۚ֡ܶ;
+
+    .line 29
+    invoke-direct {v1}, Ll/᩸֡ܶ;-><init>()V
+
+    .line 43
+    invoke-virtual {v1, v0, p0}, Ll/ۚ֡ܶ;->ۙ(Ll/ܶ֡ܶ;Ll/۠ۘܶ;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 50
+    iget-object v1, p0, Ll/۠ۘܶ;->ܳ:Ll/۠᩶ܶ;
+
+    iget-object v1, v1, Ll/۠᩶ܶ;->ۙ:Ljava/io/InputStream;
+
+    if-eqz v1, :cond_0
+
+    .line 51
+    invoke-virtual {v0}, Ll/ܶ֡ܶ;->۫()Ll/ۧ֡ܶ;
+
+    move-result-object v1
+
+    new-instance v2, Ll/ۨܰܶ;
+
+    invoke-direct {v2, p0}, Ll/ۨܰܶ;-><init>(Ll/ۛܰܶ;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/Thread;
+
+    invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    iput-object v1, p0, Ll/۠ۘܶ;->᩵:Ljava/lang/Thread;
+
+    .line 52
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Shell for "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, v0, Ll/ܶ֡ܶ;->ۖ:Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    .line 56
+    iget-object v0, p0, Ll/۠ۘܶ;->᩵:Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    :cond_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    .line 45
+    instance-of v1, v0, Ll/֫ܿܶ;
+
+    if-eqz v1, :cond_1
+
+    .line 46
+    check-cast v0, Ll/֫ܿܶ;
+
+    throw v0
+
+    .line 47
+    :cond_1
+    new-instance v1, Ll/֫ܿܶ;
+
+    const-string v2, "ChannelShell"
+
+    .line 43
+    invoke-direct {v1, v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 47
+    throw v1
 .end method

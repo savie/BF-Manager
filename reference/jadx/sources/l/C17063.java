@@ -1,223 +1,128 @@
 package l;
 
+import android.os.Build;
+import com.umeng.commonsdk.statistics.AnalyticsConstants;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.function.Predicate;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ܿۖ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 44P2 */
+/* JADX INFO: renamed from: l.ܺ᩵ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 898C */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C17063 implements InterfaceC3739 {
+public final class C17063 extends C1161 {
+    @Override // l.C1161, l.AbstractC22044
+    /* JADX INFO: renamed from: ۨ᩷ */
+    public final boolean mo4292() {
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C21660 f54473;
+    @Override // l.C1161, l.AbstractC22044
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo4300(InterfaceC7509 interfaceC7509) {
+        return false;
+    }
 
+    /* JADX INFO: renamed from: ܿ᩷, reason: not valid java name and contains not printable characters */
+    public final String m40200() {
+        return this.f4288.getPath();
+    }
+
+    /* JADX WARN: Code duplicated, block: B:17:0x0043  */
+    @Override // l.C1161, l.AbstractC22044
+    /* JADX INFO: renamed from: ᩷ */
+    public final List mo4299(final boolean z) {
+        String strM35186;
+        File[] fileArrListFiles = this.f4288.listFiles();
+        if (fileArrListFiles == null) {
+            return new ArrayList();
+        }
+        if (C14584.m35213()) {
+            String strMo4294 = mo4294();
+            String lowerCase = strMo4294.toLowerCase(Locale.ENGLISH);
+            if (lowerCase.endsWith("/android/data") || lowerCase.endsWith("/android/obb")) {
+                strM35186 = C14584.m35186(strMo4294);
+                if (!"Android/data".equalsIgnoreCase(strM35186) && !"Android/obb".equalsIgnoreCase(strM35186)) {
+                    strM35186 = null;
+                }
+            } else {
+                strM35186 = null;
+            }
+        } else {
+            strM35186 = null;
+        }
+        return (List) C13847.stream(fileArrListFiles).filter(new Predicate() { // from class: l.ۧ᩵ᩴ
+            @Override // java.util.function.Predicate
+            public /* synthetic */ Predicate and(Predicate predicate) {
+                return C19025.$default$and(this, predicate);
+            }
+
+            @Override // java.util.function.Predicate
+            /* JADX INFO: renamed from: negate */
+            public /* synthetic */ Predicate mo7134negate() {
+                return C19025.$default$negate(this);
+            }
+
+            public /* synthetic */ Predicate or(Predicate predicate) {
+                return C19025.$default$or(this, predicate);
+            }
+
+            @Override // java.util.function.Predicate
+            public final boolean test(Object obj) {
+                return z || !((File) obj).getName().startsWith(".");
+            }
+        }).map(new C25269(0, strM35186)).collect(C2025.toList());
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f54474;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public ArrayList f54475 = new ArrayList(100);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f54477 = -1;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f54476 = -1;
-
-    @Override // l.InterfaceC14242
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo34375() {
-        if (this.f54477 == -1) {
-            m39850();
+    public static /* synthetic */ AbstractC22044 m40198(File file, String str) {
+        AbstractC22044 abstractC22044M35193;
+        if (str == null || Build.VERSION.SDK_INT < 30) {
+            abstractC22044M35193 = C14584.m35193(m40199(file.getPath()), new String[0]);
+        } else {
+            String strM40199 = m40199(file.getPath());
+            boolean zIsDirectory = file.isDirectory();
+            C14649 c14649 = new C14649(zIsDirectory ? -1L : file.length(), file.lastModified(), zIsDirectory);
+            File file2 = new File(strM40199);
+            StringBuilder sbM10405 = C3188.m10405(str, "/");
+            sbM10405.append(file.getName());
+            abstractC22044M35193 = C14584.m35192(file2, sbM10405.toString(), c14649);
         }
-        int i = this.f54477 + 1;
-        this.f54477 = i;
-        m39849(i);
-        while (((InterfaceC12913) this.f54475.get(this.f54477)).mo30182() != 0) {
-            int i2 = this.f54477 + 1;
-            this.f54477 = i2;
-            m39849(i2);
-        }
+        return abstractC22044M35193 instanceof InterfaceC6557 ? ((InterfaceC6557) abstractC22044M35193).mo15565() : abstractC22044M35193;
     }
 
-    public C17063(C21660 c21660) {
-        this.f54473 = c21660;
+    @Override // l.C1161, l.AbstractC22044
+    public final String getName() {
+        String name = this.f4288.getName();
+        return name.equals("\u200bAndroid") ? AnalyticsConstants.SDK_TYPE : name;
     }
 
-    @Override // l.InterfaceC14242
-    public final int index() {
-        return this.f54477;
+    @Override // l.C1161, l.AbstractC22044
+    /* JADX INFO: renamed from: ܺۙ */
+    public final String mo4294() {
+        return m40199(this.f4288.getPath());
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int m39845() {
-        if (this.f54477 == -1) {
-            m39850();
-        }
-        int i = this.f54477;
-        this.f54474 = i;
-        return i;
+    @Override // l.C1161, l.AbstractC22044
+    public final String getParent() {
+        return m40199(this.f4288.getParent());
     }
 
-    @Override // l.InterfaceC3739
-    /* JADX INFO: renamed from: ۨ */
-    public final InterfaceC12913 mo10949(int i) {
-        if (this.f54477 == -1) {
-            m39850();
-        }
-        if (i == 0) {
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public static String m40199(String str) {
+        if (str == null) {
             return null;
         }
-        ArrayList arrayList = this.f54475;
-        int i2 = 1;
-        if (i >= 0) {
-            int i3 = this.f54477;
-            while (i2 < i) {
-                i3++;
-                m39849(i3);
-                while (((InterfaceC12913) arrayList.get(i3)).mo30182() != 0) {
-                    i3++;
-                    m39849(i3);
-                }
-                i2++;
-            }
-            if (i3 > this.f54476) {
-                this.f54476 = i3;
-            }
-            return (InterfaceC12913) arrayList.get(i3);
-        }
-        int i4 = -i;
-        if (i4 == 0) {
-            return null;
-        }
-        int i5 = this.f54477;
-        if (i5 - i4 < 0) {
-            return null;
-        }
-        while (i2 <= i4) {
-            do {
-                i5--;
-                if (i5 < 0) {
-                    break;
-                }
-            } while (((InterfaceC12913) arrayList.get(i5)).mo30182() != 0);
-            i2++;
-        }
-        if (i5 < 0) {
-            return null;
-        }
-        return (InterfaceC12913) arrayList.get(i5);
-    }
-
-    @Override // l.InterfaceC14242
-    /* JADX INFO: renamed from: ᩹ */
-    public final void mo34376() {
-        this.f54477 = this.f54474;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m39846(int i) {
-        this.f54477 = i;
-    }
-
-    @Override // l.InterfaceC14242
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo34374(int i) {
-        this.f54477 = i;
-    }
-
-    @Override // l.InterfaceC14242
-    public final int size() {
-        return this.f54475.size();
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m39849(int i) {
-        ArrayList arrayList = this.f54475;
-        int size = (i - arrayList.size()) + 1;
-        if (size > 0) {
-            for (int i2 = 1; i2 <= size; i2++) {
-                C12125 c12125M48380 = this.f54473.m48380();
-                c12125M48380.f40590 = arrayList.size();
-                arrayList.add(c12125M48380);
-                if (c12125M48380.f40598 == -1) {
-                    return;
-                }
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final void m39850() {
-        int i = 0;
-        this.f54477 = 0;
-        m39849(0);
-        while (((InterfaceC12913) this.f54475.get(i)).mo30182() != 0) {
-            i++;
-            m39849(i);
-        }
-        this.f54477 = i;
-    }
-
-    @Override // l.InterfaceC14242
-    /* JADX INFO: renamed from: ܰ */
-    public final int mo21038(int i) {
-        return mo10949(i).getType();
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m39848() {
-        return this.f54473.m48386();
-    }
-
-    public final String toString() {
-        if (this.f54477 == -1) {
-            m39850();
-        }
-        if (this.f54477 == -1) {
-            m39850();
-        }
-        int i = this.f54477;
-        ArrayList arrayList = this.f54475;
-        if (((InterfaceC12913) arrayList.get(i)).getType() != -1) {
-            int i2 = this.f54477 + 1;
-            m39849(i2);
-            while (((InterfaceC12913) arrayList.get(i2)).getType() != -1) {
-                i2++;
-                m39849(i2);
-            }
-        }
-        return mo10948(0, arrayList.size() - 1);
-    }
-
-    @Override // l.InterfaceC3739
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo10948(int i, int i2) {
-        if (i < 0 || i2 < 0) {
-            return null;
-        }
-        if (this.f54477 == -1) {
-            m39850();
-        }
-        ArrayList arrayList = this.f54475;
-        if (i2 >= arrayList.size()) {
-            i2 = arrayList.size() - 1;
+        int iIndexOf = str.indexOf("\u200bAndroid");
+        if (iIndexOf < 0) {
+            return str;
         }
         StringBuilder sb = new StringBuilder();
-        while (i <= i2) {
-            InterfaceC12913 interfaceC12913 = (InterfaceC12913) arrayList.get(i);
-            if (interfaceC12913.getType() == -1) {
-                break;
-            }
-            sb.append(interfaceC12913.getText());
-            i++;
-        }
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String m39847(InterfaceC12913 interfaceC12913, InterfaceC12913 interfaceC12914) {
-        if (interfaceC12913 == null || interfaceC12914 == null) {
-            return null;
-        }
-        return mo10948(interfaceC12913.mo30180(), interfaceC12914.mo30180());
+        sb.append(str.substring(0, iIndexOf));
+        sb.append(AnalyticsConstants.SDK_TYPE);
+        return ExternalValue$$ExternalSyntheticOutline0.m(iIndexOf + 8, str, sb);
     }
 }

@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.params;
 import org.bouncycastle.crypto.DerivationParameters;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class KDFDoublePipelineIterationParameters implements DerivationParameters {
     public static final int UNUSED_R = 32;
     public final byte[] fixedInputData;

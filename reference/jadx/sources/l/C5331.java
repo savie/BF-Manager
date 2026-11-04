@@ -1,41 +1,50 @@
 package l;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.BitSet;
+import java.util.function.Consumer;
 
-/* JADX INFO: renamed from: l.ۚۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XAL0 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5331 {
+/* JADX INFO: renamed from: l.ۚ֫᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: T6GT */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5331 implements Consumer {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object f18400;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f18728;
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, java.util.List] */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m14809() {
-        return this.f18400;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f18729;
+
+    public /* synthetic */ C5331(int i, Object obj) {
+        this.f18728 = i;
+        this.f18729 = obj;
     }
 
-    public C5331(List list) {
-        this.f18400 = list;
+    public /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
     }
 
-    public final String toString() {
-        return C4892.m13616((Collection) this.f18400, ", ", "WindowLayoutInfo{ DisplayFeatures[", "] }", null, 56);
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final void n(Object obj) {
+        switch (this.f18728) {
+            case 0:
+                ((BitSet) this.f18729).set(((C11785) obj).m29616().getId());
+                break;
+            case 1:
+                ((AbstractC18881) this.f18729).mo35576((String) obj);
+                break;
+            default:
+                C18959 c18959 = (C18959) obj;
+                ((C7708) this.f18729).getClass();
+                if (c18959.getType() == EnumC24203.STR_CONCAT && c18959.m44039() >= 2) {
+                    AbstractC1566 type = c18959.mo44035(0).getType();
+                    AbstractC1566 abstractC1566 = AbstractC1566.f5417;
+                    if (!type.equals(abstractC1566) && !c18959.mo44035(1).getType().equals(abstractC1566)) {
+                        c18959.m44023().add(0, AbstractC16481.m39110(new C5557("")));
+                        break;
+                    }
+                }
+                break;
         }
-        if (obj == null || !C5331.class.equals(obj.getClass())) {
-            return false;
-        }
-        return this.f18400.equals(((C5331) obj).f18400);
-    }
-
-    public final int hashCode() {
-        return this.f18400.hashCode();
     }
 }

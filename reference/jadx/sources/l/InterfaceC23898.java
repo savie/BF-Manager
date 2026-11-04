@@ -1,17 +1,16 @@
 package l;
 
-import android.content.ComponentName;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-/* JADX INFO: renamed from: l.᩻᩵ۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y1TD */
+/* JADX INFO: renamed from: l.᩹᩻ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 35HY */
 /* JADX INFO: loaded from: classes.dex */
-public interface InterfaceC23898 {
-    /* JADX INFO: renamed from: ۙ */
-    boolean mo16276();
-
-    /* JADX INFO: renamed from: ۨ */
-    ComponentName mo16277();
-
-    /* JADX INFO: renamed from: ܰ */
-    boolean mo16278();
+@Target({ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Deprecated
+public @interface InterfaceC23898 {
+    EnumC9330 value();
 }

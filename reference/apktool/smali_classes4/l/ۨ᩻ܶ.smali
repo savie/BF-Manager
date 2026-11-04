@@ -1,138 +1,240 @@
-.class public final Ll/ۨ᩻ܶ;
-.super Ll/᩹ܿܶ;
-.source "G552"
+.class public final enum Ll/ۨ᩻ܶ;
+.super Ljava/lang/Enum;
+.source "S9JS"
+
+# interfaces
+.implements Ll/᩸ܶܶ;
 
 
 # static fields
-.field public static final ܿ:Ll/᩹ܿܶ;
+.field public static final enum ֡:Ll/ۨ᩻ܶ;
+
+.field public static final enum ֨:Ll/ۨ᩻ܶ;
+
+.field public static final enum ۟:Ll/ۨ᩻ܶ;
+
+.field public static final enum ۡ:Ll/ۨ᩻ܶ;
+
+.field public static final enum ۢ:Ll/ۨ᩻ܶ;
+
+.field public static final enum ܿ:Ll/ۨ᩻ܶ;
+
+.field public static final enum ᩳ:Ll/ۨ᩻ܶ;
+
+.field public static final synthetic ᩶:[Ll/ۨ᩻ܶ;
 
 
 # instance fields
-.field public final transient ۫:I
-
-.field public final transient ܽ:[Ljava/lang/Object;
+.field public ܰ:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
-    .line 37
+    .line 21
     new-instance v0, Ll/ۨ᩻ܶ;
 
     const/4 v1, 0x0
 
-    new-array v2, v1, [Ljava/lang/Object;
+    const-wide/16 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Ll/ۨ᩻ܶ;-><init>(I[Ljava/lang/Object;)V
+    const-string v4, "SMB2_FLAGS_SERVER_TO_REDIR"
 
-    sput-object v0, Ll/ۨ᩻ܶ;->ܿ:Ll/᩹ܿܶ;
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->֨:Ll/ۨ᩻ܶ;
+
+    .line 22
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x1
+
+    const-wide/16 v2, 0x2
+
+    const-string v4, "SMB2_FLAGS_ASYNC_COMMAND"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->ܿ:Ll/ۨ᩻ܶ;
+
+    .line 23
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x2
+
+    const-wide/16 v2, 0x4
+
+    const-string v4, "SMB2_FLAGS_RELATED_OPERATIONS"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->ᩳ:Ll/ۨ᩻ܶ;
+
+    .line 24
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x3
+
+    const-wide/16 v2, 0x8
+
+    const-string v4, "SMB2_FLAGS_SIGNED"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->ۡ:Ll/ۨ᩻ܶ;
+
+    .line 25
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x4
+
+    const-wide/16 v2, 0x70
+
+    const-string v4, "SMB2_FLAGS_PRIORITY_MASK"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->۟:Ll/ۨ᩻ܶ;
+
+    .line 26
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x5
+
+    const-wide/32 v2, 0x10000000
+
+    const-string v4, "SMB2_FLAGS_DFS_OPERATIONS"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->֡:Ll/ۨ᩻ܶ;
+
+    .line 27
+    new-instance v0, Ll/ۨ᩻ܶ;
+
+    const/4 v1, 0x6
+
+    const-wide/32 v2, 0x20000000
+
+    const-string v4, "SMB2_FLAGS_REPLAY_OPERATION"
+
+    invoke-direct {v0, v4, v1, v2, v3}, Ll/ۨ᩻ܶ;-><init>(Ljava/lang/String;IJ)V
+
+    sput-object v0, Ll/ۨ᩻ܶ;->ۢ:Ll/ۨ᩻ܶ;
+
+    .line 20
+    invoke-static {}, Ll/ۨ᩻ܶ;->ۙ()[Ll/ۨ᩻ܶ;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۨ᩻ܶ;->᩶:[Ll/ۨ᩻ܶ;
 
     return-void
 .end method
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;IJ)V
     .locals 0
 
-    .line 43
-    invoke-direct {p0}, Ll/᩹ܿܶ;-><init>()V
+    .line 31
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 44
-    iput-object p2, p0, Ll/ۨ᩻ܶ;->ܽ:[Ljava/lang/Object;
-
-    .line 45
-    iput p1, p0, Ll/ۨ᩻ܶ;->۫:I
+    .line 32
+    iput-wide p3, p0, Ll/ۨ᩻ܶ;->ܰ:J
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll/ۨ᩻ܶ;
+    .locals 1
+
+    .line 20
+    const-class v0, Ll/ۨ᩻ܶ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ll/ۨ᩻ܶ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ۨ᩻ܶ;
+    .locals 1
+
+    .line 20
+    sget-object v0, Ll/ۨ᩻ܶ;->᩶:[Ll/ۨ᩻ܶ;
+
+    invoke-virtual {v0}, [Ll/ۨ᩻ܶ;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۨ᩻ܶ;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/ۨ᩻ܶ;
+    .locals 3
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [Ll/ۨ᩻ܶ;
+
+    .line 20
+    sget-object v1, Ll/ۨ᩻ܶ;->֨:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->ܿ:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->ᩳ:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->ۡ:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->۟:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->֡:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۨ᩻ܶ;->ۢ:Ll/ۨ᩻ܶ;
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public getValue()J
+    .locals 2
 
-    .line 83
-    iget v0, p0, Ll/ۨ᩻ܶ;->۫:I
+    .line 36
+    iget-wide v0, p0, Ll/ۨ᩻ܶ;->ܰ:J
 
-    invoke-static {p1, v0}, Ll/ᩳ᩷ܶ;->ۙ(II)V
-
-    .line 85
-    iget-object v0, p0, Ll/ۨ᩻ܶ;->ܽ:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .line 50
-    iget v0, p0, Ll/ۨ᩻ܶ;->۫:I
-
-    return v0
-.end method
-
-.method public writeReplace()Ljava/lang/Object;
-    .locals 1
-
-    .line 96
-    invoke-super {p0}, Ll/᩹ܿܶ;->writeReplace()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۖ()I
-    .locals 1
-
-    .line 70
-    iget v0, p0, Ll/ۨ᩻ܶ;->۫:I
-
-    return v0
-.end method
-
-.method public final ۙ(I[Ljava/lang/Object;)I
-    .locals 3
-
-    .line 75
-    iget-object v0, p0, Ll/ۨ᩻ܶ;->ܽ:[Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iget v2, p0, Ll/ۨ᩻ܶ;->۫:I
-
-    invoke-static {v0, v1, p2, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/2addr p1, v2
-
-    return p1
-.end method
-
-.method public final ۚ()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ۨ()[Ljava/lang/Object;
-    .locals 1
-
-    .line 60
-    iget-object v0, p0, Ll/ۨ᩻ܶ;->ܽ:[Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final ᩹()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    return-wide v0
 .end method

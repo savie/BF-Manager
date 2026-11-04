@@ -1,72 +1,62 @@
-.class public final Ll/۬۬᩺;
-.super Ll/ܶ۬᩺;
-.source "98W2"
+.class public abstract Ll/۬۬᩺;
+.super Ll/᩹֡ۘ;
+.source "W7SR"
 
 
 # instance fields
-.field public final ۨ:Ljava/lang/String;
-
-.field public final ܰ:[B
+.field public final ۙ:Ll/ܰܳ᩺;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܿ۬ۨ;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/EnumSet;)V
+    .locals 2
 
-    const/4 v0, 0x4
+    .line 3437
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 151
-    invoke-direct {p0, v0}, Ll/ܶ۬᩺;-><init>(I)V
+    .line 1108
+    new-instance v0, Ll/ܰܳ᩺;
 
-    .line 152
-    invoke-virtual {p1}, Ll/ܿ۬ۨ;->᩶()Ljava/lang/String;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    invoke-direct {v0, v1, p1}, Ll/ܰܳ᩺;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Ll/۬۬᩺;->ۨ:Ljava/lang/String;
-
-    .line 153
-    invoke-virtual {p1}, Ll/ܿ۬ۨ;->᩶()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ll/ᩳۧ᩺;->ۙ(Ljava/lang/String;)[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/۬۬᩺;->ܰ:[B
+    iput-object v0, p0, Ll/۬۬᩺;->ۙ:Ll/ܰܳ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/۫ܶۘ;)V
-    .locals 3
+.method public final ᩷(Ll/۟ܿۘ;)V
+    .locals 1
 
-    .line 158
-    new-instance v0, Landroid/content/Intent;
+    if-eqz p1, :cond_1
 
-    const-class v1, Ll/ܺ۬᩺;
+    .line 1114
+    iget-object v0, p0, Ll/۬۬᩺;->ۙ:Ll/ܰܳ᩺;
 
-    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-virtual {v0, p1}, Ll/ܰܳ᩺;->test(Ljava/lang/Object;)Z
 
-    const-string v1, "title"
+    move-result v0
 
-    .line 159
-    iget-object v2, p0, Ll/۬۬᩺;->ۨ:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 49
+    invoke-virtual {p1, p0}, Ll/۟ܿۘ;->ۙ(Ll/֡ܿۘ;)V
 
-    const-string v1, "markdown"
+    return-void
 
-    .line 160
-    iget-object v2, p0, Ll/۬۬᩺;->ܰ:[B
+    .line 1117
+    :cond_0
+    invoke-virtual {p0}, Ll/۬۬᩺;->᩸()V
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+    :cond_1
+    return-void
+.end method
 
-    .line 161
-    invoke-virtual {p1, v0}, Ll/۫ܶۘ;->startActivity(Landroid/content/Intent;)V
+.method public ᩸()V
+    .locals 0
 
     return-void
 .end method

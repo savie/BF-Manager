@@ -1,24 +1,38 @@
 package l;
 
-import java.util.Iterator;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import android.text.Editable;
+import android.text.TextWatcher;
 
-/* JADX INFO: renamed from: l.᩶۟۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: I5ZF */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C20021 {
+/* JADX INFO: renamed from: l.ᩴᩴܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 1599 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C20021 implements TextWatcher {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Iterator f64126 = new C7320();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23255 f64318;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Iterator m45348(Iterable iterable, Function function) {
-        return new C15788(iterable, function);
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C12628 f64319;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C23255 f64320;
+
+    @Override // android.text.TextWatcher
+    public final void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Iterator m45349(Iterator it, Predicate predicate) {
-        return new C20726(it, predicate);
+    @Override // android.text.TextWatcher
+    public final void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+    }
+
+    public C20021(C23255 c23255, C23255 c23256, C12628 c12628) {
+        this.f64318 = c23255;
+        this.f64320 = c23256;
+        this.f64319 = c12628;
+    }
+
+    @Override // android.text.TextWatcher
+    public final void afterTextChanged(Editable editable) {
+        C15545.m37235(this.f64318, this.f64320, this.f64319.f40509.m17218());
     }
 }

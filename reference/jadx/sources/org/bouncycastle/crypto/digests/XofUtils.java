@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.digests;
 
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class XofUtils {
     public static byte[] encode(byte b) {
         return Arrays.concatenate(leftEncode(8L), new byte[]{b});

@@ -1,132 +1,73 @@
-.class public final synthetic Ll/ۙ᩻᩹;
-.super Ljava/lang/Object;
-.source "HAIH"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final Ll/ۙ᩻᩹;
+.super Landroid/text/style/MetricAffectingSpan;
+.source "58Z9"
 
 
-# instance fields
-.field public final synthetic ֡:Ll/ᩳ᩹ۖ;
+# virtual methods
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 3
 
-.field public final synthetic ۫:Ll/ۧۨ᩵;
+    .line 23
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getTextSize()F
 
-.field public final synthetic ܺ:Ll/᩸᩻᩹;
+    move-result v0
 
-.field public final synthetic ܽ:Ll/ۖ᩻᩹;
+    const/high16 v1, 0x3f400000    # 0.75f
 
-.field public final synthetic ᩶:Ll/۫ܶۘ;
+    mul-float v0, v0, v1
 
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
-# direct methods
-.method public synthetic constructor <init>(Ll/᩸᩻᩹;Ll/۫ܶۘ;Ll/ᩳ᩹ۖ;Ll/ۖ᩻᩹;Ll/ۧۨ᩵;)V
-    .locals 0
+    .line 24
+    iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Landroid/graphics/Paint;->ascent()F
 
-    iput-object p1, p0, Ll/ۙ᩻᩹;->ܺ:Ll/᩸᩻᩹;
+    move-result v1
 
-    iput-object p2, p0, Ll/ۙ᩻᩹;->᩶:Ll/۫ܶۘ;
+    const/high16 v2, 0x40000000    # 2.0f
 
-    iput-object p3, p0, Ll/ۙ᩻᩹;->֡:Ll/ᩳ᩹ۖ;
+    div-float/2addr v1, v2
 
-    iput-object p4, p0, Ll/ۙ᩻᩹;->ܽ:Ll/ۖ᩻᩹;
+    float-to-int v1, v1
 
-    iput-object p5, p0, Ll/ۙ᩻᩹;->۫:Ll/ۧۨ᩵;
+    sub-int/2addr v0, v1
+
+    iput v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
     return-void
 .end method
 
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 3
 
-# virtual methods
-.method public final run()V
-    .locals 7
+    .line 23
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getTextSize()F
 
-    .line 2
-    iget-object v0, p0, Ll/ۙ᩻᩹;->ܺ:Ll/᩸᩻᩹;
+    move-result v0
 
-    .line 4
-    iget-object v1, p0, Ll/ۙ᩻᩹;->᩶:Ll/۫ܶۘ;
+    const/high16 v1, 0x3f400000    # 0.75f
 
-    .line 6
-    iget-object v2, p0, Ll/ۙ᩻᩹;->֡:Ll/ᩳ᩹ۖ;
+    mul-float v0, v0, v1
 
-    .line 8
-    iget-object v3, p0, Ll/ۙ᩻᩹;->ܽ:Ll/ۖ᩻᩹;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 10
-    iget-object v4, p0, Ll/ۙ᩻᩹;->۫:Ll/ۧۨ᩵;
+    .line 24
+    iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    const/4 v5, 0x1
+    invoke-virtual {p1}, Landroid/graphics/Paint;->ascent()F
 
-    .line 255
-    :try_start_0
-    invoke-virtual {v2}, Ll/ᩳ᩹ۖ;->ۨ()I
+    move-result v1
 
-    move-result v2
+    const/high16 v2, 0x40000000    # 2.0f
 
-    new-instance v6, Ll/᩹᩻᩹;
+    div-float/2addr v1, v2
 
-    invoke-direct {v6, v0, v3, v4}, Ll/᩹᩻᩹;-><init>(Ll/᩸᩻᩹;Ll/ۖ᩻᩹;Ll/ۧۨ᩵;)V
+    float-to-int v1, v1
 
-    .line 40
-    filled-new-array {v2}, [I
+    sub-int/2addr v0, v1
 
-    move-result-object v0
-
-    invoke-static {v1, v0, v6}, Ll/ۖ֨ۖ;->ۙ(Ll/۫ܶۘ;[ILl/ۢ᩹ۖ;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 297
-    invoke-static {v4}, Ll/᩵ۧ᩺;->ۙ(Ljava/lang/AutoCloseable;)V
-
-    .line 298
-    iput-boolean v5, v3, Ll/ۖ᩻᩹;->ۨ:Z
+    iput v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    .line 295
-    :try_start_1
-    new-instance v1, Ljava/io/IOException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    iput-object v1, v3, Ll/ۖ᩻᩹;->ܰ:Ljava/io/IOException;
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 293
-    iput-object v0, v3, Ll/ۖ᩻᩹;->ܰ:Ljava/io/IOException;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 297
-    :goto_0
-    invoke-static {v4}, Ll/᩵ۧ᩺;->ۙ(Ljava/lang/AutoCloseable;)V
-
-    .line 298
-    iput-boolean v5, v3, Ll/ۖ᩻᩹;->ۨ:Z
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    .line 297
-    invoke-static {v4}, Ll/᩵ۧ᩺;->ۙ(Ljava/lang/AutoCloseable;)V
-
-    .line 298
-    iput-boolean v5, v3, Ll/ۖ᩻᩹;->ۨ:Z
-
-    .line 299
-    throw v0
 .end method

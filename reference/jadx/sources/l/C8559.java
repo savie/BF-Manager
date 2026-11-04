@@ -1,15 +1,13 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۡ֨᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: A924 */
+/* JADX INFO: renamed from: l.۠ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K234 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C8559 extends C0478 {
-    @Override // l.C0478
+public final /* synthetic */ class C8559 extends C19719 implements InterfaceC19479 {
+    @Override // l.InterfaceC19479
     /* JADX INFO: renamed from: ۙ */
-    public final int mo2348(C16002 c16002, int i, float f) {
-        if ("dp".equalsIgnoreCase(c16002.f51812)) {
-            return C13932.m33769(i);
-        }
-        return super.mo2348(c16002, i, f);
+    public final Object mo4064() {
+        ((C7068) this.f7503).m19397();
+        return C11471.f36082;
     }
 }

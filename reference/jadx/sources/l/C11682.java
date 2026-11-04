@@ -1,185 +1,179 @@
 package l;
 
-import android.app.Activity;
-import org.bouncycastle.crypto.engines.ThreefishEngine;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۨۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: MAMP */
-/* JADX INFO: loaded from: classes4.dex */
-@InterfaceC19564(c = "androidx.window.layout.WindowInfoTrackerImpl$windowLayoutInfo$1", f = "WindowInfoTrackerImpl.kt", l = {ThreefishEngine.Threefish512Cipher.ROTATION_3_2, ThreefishEngine.Threefish1024Cipher.ROTATION_1_3}, m = "invokeSuspend")
-public final class C11682 extends AbstractC16037 implements InterfaceC8400 {
+/* JADX INFO: renamed from: l.ۧܳۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 44FR */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11682 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public InterfaceC17295 f39287;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String[] f37837;
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public InterfaceC3045 f39288;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Activity f39289;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2508 f39290;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public /* synthetic */ Object f39291;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public int f39292;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C11682(C2508 c2508, Activity activity, InterfaceC14771 interfaceC14771) {
-        super(interfaceC14771);
-        this.f39290 = c2508;
-        this.f39289 = activity;
+    public C11682(C1988 c1988) {
+        ArrayList arrayList = c1988.f6650;
+        this.f37837 = (String[]) arrayList.toArray(new String[arrayList.size()]);
     }
 
-    @Override // l.AbstractC21680
-    /* JADX INFO: renamed from: ۙ */
-    public final InterfaceC14771 mo20747(Object obj, InterfaceC14771 interfaceC14771) {
-        C11682 c11682 = new C11682(this.f39290, this.f39289, interfaceC14771);
-        c11682.f39291 = obj;
-        return c11682;
+    public C11682(String[] strArr) {
+        this.f37837 = strArr;
     }
 
-    @Override // l.InterfaceC8400
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo3208(Object obj, Object obj2) {
-        return ((C11682) mo20747(obj, (InterfaceC14771) obj2)).mo11546(C7321.f24318);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m29363() {
+        return this.f37837.length / 2;
     }
 
-    /* JADX WARN: Code duplicated, block: B:22:0x006f  */
-    /* JADX WARN: Code duplicated, block: B:25:0x007d A[Catch: all -> 0x0035, TRY_LEAVE, TryCatch #0 {all -> 0x0035, blocks: (B:7:0x0016, B:23:0x0075, B:25:0x007d, B:13:0x002f), top: B:35:0x0008 }] */
-    /* JADX WARN: Code duplicated, block: B:28:0x0092  */
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v1, types: [l.ܳܰۨ] */
-    /* JADX WARN: Type inference failed for: r12v9, types: [l.ܳܰۨ] */
-    /* JADX WARN: Type inference failed for: r1v11 */
-    /* JADX WARN: Type inference failed for: r1v2, types: [l.ܰۨۨ] */
-    /* JADX WARN: Type inference failed for: r1v3 */
-    /* JADX WARN: Type inference failed for: r1v5, types: [l.ܿۧ] */
-    /* JADX WARN: Type inference failed for: r1v8 */
-    /* JADX WARN: Type inference failed for: r5v1, types: [l.ܿۧ] */
-    /* JADX WARN: Type inference failed for: r5v12 */
-    /* JADX WARN: Type inference failed for: r5v13 */
-    /* JADX WARN: Type inference failed for: r5v14 */
-    /* JADX WARN: Type inference failed for: r5v4 */
-    /* JADX WARN: Type inference failed for: r5v5, types: [l.ܿۧ] */
-    /* JADX WARN: Type inference failed for: r5v7 */
-    /* JADX WARN: Type inference failed for: r5v8 */
-    /* JADX WARN: Type inference failed for: r6v1, types: [l.ܳܰۨ] */
-    /* JADX WARN: Type inference failed for: r9v1 */
-    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:28:0x0092 -> B:9:0x001b). Please report as a decompilation issue!!! */
-    /*  JADX ERROR: JadxOverflowException in pass: RegionMakerVisitor
-        jadx.core.utils.exceptions.JadxOverflowException: Regions stack size limit reached
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        */
-    @Override // l.AbstractC21680
-    /* JADX INFO: renamed from: ܰ */
-    public final java.lang.Object mo11546(java.lang.Object r12) {
-        /*
-            r11 = this;
-            l.۬ܺ۠ r0 = l.EnumC13214.COROUTINE_SUSPENDED
-            int r1 = r11.f39292
-            r2 = 2
-            r3 = 1
-            l.ۖۨۨ r4 = r11.f39290
-            if (r1 == 0) goto L38
-            if (r1 == r3) goto L27
-            if (r1 != r2) goto L1f
-            l.ۗۛ۠ r1 = r11.f39288
-            l.ܿۧ r5 = r11.f39287
-            java.lang.Object r6 = r11.f39291
-            l.۠ۧ۠ r6 = (l.InterfaceC8130) r6
-            l.C18610.m43015(r12)     // Catch: java.lang.Throwable -> L35
-            r12 = r6
-            r6 = r11
-        L1b:
-            r9 = r5
-            r5 = r1
-            r1 = r9
-            goto L60
-        L1f:
-            java.lang.IllegalStateException r12 = new java.lang.IllegalStateException
-            java.lang.String r0 = "call to 'resume' before 'invoke' with coroutine"
-            r12.<init>(r0)
-            throw r12
-        L27:
-            l.ۗۛ۠ r1 = r11.f39288
-            l.ܿۧ r5 = r11.f39287
-            java.lang.Object r6 = r11.f39291
-            l.۠ۧ۠ r6 = (l.InterfaceC8130) r6
-            l.C18610.m43015(r12)     // Catch: java.lang.Throwable -> L35
-            r7 = r6
-            r6 = r11
-            goto L75
-        L35:
-            r12 = move-exception
-            goto La0
-        L38:
-            l.C18610.m43015(r12)
-            java.lang.Object r12 = r11.f39291
-            l.۠ۧ۠ r12 = (l.InterfaceC8130) r12
-            l.ۢۛ۠ r1 = l.EnumC9397.DROP_OLDEST
-            l.֫ۛ۠ r5 = new l.֫ۛ۠
-            r6 = 10
-            r5.<init>(r6, r1)
-            l.ܰۨۨ r1 = new l.ܰۨۨ
-            r1.<init>(r5)
-            l.ܳܰۨ r6 = l.C2508.m7641(r4)
-            l.֫᩶ܰ r7 = new l.֫᩶ܰ
-            r7.<init>()
-            android.app.Activity r8 = r11.f39289
-            r6.mo33697(r8, r7, r1)
-            l.ۗۛ۠ r5 = r5.m16082()     // Catch: java.lang.Throwable -> L9e
-            r6 = r11
-        L60:
-            r6.f39291 = r12     // Catch: java.lang.Throwable -> L9e
-            r6.f39287 = r1     // Catch: java.lang.Throwable -> L9e
-            r6.f39288 = r5     // Catch: java.lang.Throwable -> L9e
-            r6.f39292 = r3     // Catch: java.lang.Throwable -> L9e
-            java.lang.Object r7 = r5.mo1596(r6)     // Catch: java.lang.Throwable -> L9e
-            if (r7 != r0) goto L6f
-            goto L91
-        L6f:
-            r9 = r7
-            r7 = r12
-            r12 = r9
-            r10 = r5
-            r5 = r1
-            r1 = r10
-        L75:
-            java.lang.Boolean r12 = (java.lang.Boolean) r12     // Catch: java.lang.Throwable -> L35
-            boolean r12 = r12.booleanValue()     // Catch: java.lang.Throwable -> L35
-            if (r12 == 0) goto L94
-            java.lang.Object r12 = r1.next()     // Catch: java.lang.Throwable -> L35
-            l.ۚۨۨ r12 = (l.C5331) r12     // Catch: java.lang.Throwable -> L35
-            r6.f39291 = r7     // Catch: java.lang.Throwable -> L35
-            r6.f39287 = r5     // Catch: java.lang.Throwable -> L35
-            r6.f39288 = r1     // Catch: java.lang.Throwable -> L35
-            r6.f39292 = r2     // Catch: java.lang.Throwable -> L35
-            java.lang.Object r12 = r7.mo21429(r12, r6)     // Catch: java.lang.Throwable -> L35
-            if (r12 != r0) goto L92
-        L91:
-            return r0
-        L92:
-            r12 = r7
-            goto L1b
-        L94:
-            l.ܳܰۨ r12 = l.C2508.m7641(r4)
-            r12.mo33698(r5)
-            l.۟۟۠ r12 = l.C7321.f24318
-            return r12
-        L9e:
-            r12 = move-exception
-            r5 = r1
-        La0:
-            l.ܳܰۨ r0 = l.C2508.m7641(r4)
-            r0.mo33698(r5)
-            throw r12
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C11682.mo11546(java.lang.Object):java.lang.Object");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m29360(int i) {
+        return this.f37837[i * 2];
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String m29364(int i) {
+        return this.f37837[(i * 2) + 1];
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m29365(String str) {
+        int iM29363 = m29363();
+        ArrayList arrayList = null;
+        for (int i = 0; i < iM29363; i++) {
+            if (str.equalsIgnoreCase(m29360(i))) {
+                if (arrayList == null) {
+                    arrayList = new ArrayList(2);
+                }
+                arrayList.add(m29364(i));
+            }
+        }
+        if (arrayList != null) {
+            return C4681.unmodifiableList(arrayList);
+        }
+        return Collections.EMPTY_LIST;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C1988 m29362() {
+        C1988 c1988 = new C1988();
+        Collections.addAll(c1988.f6650, this.f37837);
+        return c1988;
+    }
+
+    public final boolean equals(Object obj) {
+        return (obj instanceof C11682) && Arrays.equals(((C11682) obj).f37837, this.f37837);
+    }
+
+    public final int hashCode() {
+        return Arrays.hashCode(this.f37837);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        int iM29363 = m29363();
+        for (int i = 0; i < iM29363; i++) {
+            sb.append(m29360(i));
+            sb.append(": ");
+            sb.append(m29364(i));
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m29361(String str) {
+        String[] strArr = this.f37837;
+        int length = strArr.length;
+        do {
+            length -= 2;
+            if (length < 0) {
+                return null;
+            }
+        } while (!str.equalsIgnoreCase(strArr[length]));
+        return strArr[length + 1];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C11682 m29356(String... strArr) {
+        if (strArr.length % 2 != 0) {
+            throw new IllegalArgumentException("Expected alternating header names and values");
+        }
+        String[] strArr2 = (String[]) strArr.clone();
+        for (int i = 0; i < strArr2.length; i++) {
+            String str = strArr2[i];
+            if (str == null) {
+                throw new IllegalArgumentException("Headers cannot be null");
+            }
+            strArr2[i] = str.trim();
+        }
+        for (int i2 = 0; i2 < strArr2.length; i2 += 2) {
+            String str2 = strArr2[i2];
+            String str3 = strArr2[i2 + 1];
+            m29359(str2);
+            m29357(str3, str2);
+        }
+        return new C11682(strArr2);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C11682 m29358() {
+        Map map = Collections.EMPTY_MAP;
+        if (map == null) {
+            throw new NullPointerException("headers == null");
+        }
+        String[] strArr = new String[map.size() * 2];
+        int i = 0;
+        for (Map.Entry entry : map.entrySet()) {
+            if (entry.getKey() == null || entry.getValue() == null) {
+                throw new IllegalArgumentException("Headers cannot be null");
+            }
+            String strTrim = ((String) entry.getKey()).trim();
+            String strTrim2 = ((String) entry.getValue()).trim();
+            m29359(strTrim);
+            m29357(strTrim2, strTrim);
+            strArr[i] = strTrim;
+            strArr[i + 1] = strTrim2;
+            i += 2;
+        }
+        return new C11682(strArr);
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m29359(String str) {
+        if (str == null) {
+            throw new NullPointerException("name == null");
+        }
+        if (str.isEmpty()) {
+            throw new IllegalArgumentException("name is empty");
+        }
+        int length = str.length();
+        for (int i = 0; i < length; i++) {
+            char cCharAt = str.charAt(i);
+            if (cCharAt <= ' ' || cCharAt >= 127) {
+                Object[] objArr = {Integer.valueOf(cCharAt), Integer.valueOf(i), str};
+                byte[] bArr = C19822.f63715;
+                throw new IllegalArgumentException(String.format(Locale.US, "Unexpected char %#04x at %d in header name: %s", objArr));
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m29357(String str, String str2) {
+        if (str == null) {
+            throw new NullPointerException(C14442.m34865("value for name ", str2, " == null"));
+        }
+        int length = str.length();
+        for (int i = 0; i < length; i++) {
+            char cCharAt = str.charAt(i);
+            if ((cCharAt <= 31 && cCharAt != '\t') || cCharAt >= 127) {
+                Object[] objArr = {Integer.valueOf(cCharAt), Integer.valueOf(i), str2, str};
+                byte[] bArr = C19822.f63715;
+                throw new IllegalArgumentException(String.format(Locale.US, "Unexpected char %#04x at %d in %s value: %s", objArr));
+            }
+        }
     }
 }

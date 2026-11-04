@@ -1,717 +1,167 @@
 package l;
 
-import android.net.Uri;
-import java.io.EOFException;
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.util.concurrent.ThreadPoolExecutor;
-import org.bouncycastle.crypto.prng.X931RNG;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ܽ֡۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q759 */
+/* JADX INFO: renamed from: l.ܶᩴܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A70P */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C16291 implements InterfaceC3153 {
+public final class C16291 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final Object f52473;
-
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public volatile boolean f52474;
-
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final long f52475;
-
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final Uri f52476;
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final Object f52477;
-
-    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public final long f52478;
-
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public final int f52479;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public boolean f52896;
 
     /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final String f52480;
+    public int f52897;
 
     /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public final ThreadPoolExecutor f52481;
+    public long f52898;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public volatile RunnableC0062 f52482;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public C17037 f52899;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public volatile RunnableC0062 f52483;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC20723 f52484;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public volatile Thread f52485;
-
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public final String f52486;
-
-    public C16291(C5352 c5352, Uri uri, String str, long j) {
-        this(0L, j, uri, c5352, str);
-    }
-
-    public C16291(long j, long j2, Uri uri, InterfaceC20723 interfaceC20723, String str) {
-        ThreadPoolExecutor threadPoolExecutorM33792 = C13945.m33792();
-        this.f52477 = new Object();
-        this.f52473 = new Object();
-        if (j < 0) {
-            throw new IllegalArgumentException("Resource offset must be non-negative");
-        }
-        if (j2 < 0) {
-            throw new IllegalArgumentException("Resource length must be known");
-        }
-        if (j > C17492.FOREVER_NS - j2) {
-            throw new IllegalArgumentException("Resource range overflows");
-        }
-        this.f52484 = interfaceC20723;
-        this.f52476 = uri;
-        this.f52480 = str;
-        this.f52486 = str + "@" + j + ":" + j2;
-        this.f52475 = j;
-        this.f52478 = j2;
-        this.f52479 = 262144;
-        this.f52481 = threadPoolExecutorM33792;
-    }
-
-    @Override // l.InterfaceC3153
-    public final long length() {
-        return this.f52478;
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f52900;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private boolean m38443(int i, long j) {
-        int iMin = (int) Math.min(X931RNG.BLOCK64_RESEED_MAX, this.f52478 - (j * X931RNG.BLOCK64_RESEED_MAX));
-        return iMin > 0 && i == iMin;
-    }
+    public final long[] f52895 = new long[C20767.m47496(65536)];
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public long f52901 = C25227.FOREVER_NS;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m38441(int i, long j, C2884 c2884, byte[] bArr) {
-        synchronized (this.f52473) {
-            m38440();
-            int i2 = 0;
-            while (i2 < i) {
-                int iMin = Math.min(32768, i - i2);
-                byte[] bArr2 = new byte[iMin];
-                System.arraycopy(bArr, i2, bArr2, 0, iMin);
-                C4771.m13236().m13242(new C1473(j, this.f52486), bArr2, c2884).close();
-                i2 += iMin;
-                j++;
-            }
-        }
-    }
-
-    /* JADX WARN: Code duplicated, block: B:150:0x00c1 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:170:0x01d7 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:171:0x01d7 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:172:0x01cf A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:173:0x01c7 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:174:0x01bf A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:175:0x0198 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:176:0x012e A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:177:0x0122 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:178:0x0188 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:179:0x0180 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:182:0x0114 A[SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:35:0x008c A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:36:0x008e A[Catch: all -> 0x01df, TryCatch #10 {, blocks: (B:20:0x0056, B:24:0x0075, B:25:0x0078, B:36:0x008e, B:37:0x0091, B:39:0x0097, B:41:0x009d, B:43:0x00a8, B:45:0x00b6, B:80:0x015a, B:81:0x015d, B:119:0x01bf, B:120:0x01c6, B:118:0x01be, B:117:0x01bb, B:121:0x01c7, B:122:0x01ce, B:123:0x01cf, B:124:0x01d6, B:125:0x01d7, B:126:0x01de, B:34:0x008b, B:33:0x0088, B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6, B:22:0x006a, B:29:0x0082, B:113:0x01b5), top: B:167:0x0056, inners: #1, #2, #5, #7 }] */
-    /* JADX WARN: Code duplicated, block: B:39:0x0097 A[Catch: all -> 0x01df, TryCatch #10 {, blocks: (B:20:0x0056, B:24:0x0075, B:25:0x0078, B:36:0x008e, B:37:0x0091, B:39:0x0097, B:41:0x009d, B:43:0x00a8, B:45:0x00b6, B:80:0x015a, B:81:0x015d, B:119:0x01bf, B:120:0x01c6, B:118:0x01be, B:117:0x01bb, B:121:0x01c7, B:122:0x01ce, B:123:0x01cf, B:124:0x01d6, B:125:0x01d7, B:126:0x01de, B:34:0x008b, B:33:0x0088, B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6, B:22:0x006a, B:29:0x0082, B:113:0x01b5), top: B:167:0x0056, inners: #1, #2, #5, #7 }] */
-    /* JADX WARN: Code duplicated, block: B:41:0x009d A[Catch: all -> 0x01df, TryCatch #10 {, blocks: (B:20:0x0056, B:24:0x0075, B:25:0x0078, B:36:0x008e, B:37:0x0091, B:39:0x0097, B:41:0x009d, B:43:0x00a8, B:45:0x00b6, B:80:0x015a, B:81:0x015d, B:119:0x01bf, B:120:0x01c6, B:118:0x01be, B:117:0x01bb, B:121:0x01c7, B:122:0x01ce, B:123:0x01cf, B:124:0x01d6, B:125:0x01d7, B:126:0x01de, B:34:0x008b, B:33:0x0088, B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6, B:22:0x006a, B:29:0x0082, B:113:0x01b5), top: B:167:0x0056, inners: #1, #2, #5, #7 }] */
-    /* JADX WARN: Code duplicated, block: B:43:0x00a8 A[Catch: all -> 0x01df, TryCatch #10 {, blocks: (B:20:0x0056, B:24:0x0075, B:25:0x0078, B:36:0x008e, B:37:0x0091, B:39:0x0097, B:41:0x009d, B:43:0x00a8, B:45:0x00b6, B:80:0x015a, B:81:0x015d, B:119:0x01bf, B:120:0x01c6, B:118:0x01be, B:117:0x01bb, B:121:0x01c7, B:122:0x01ce, B:123:0x01cf, B:124:0x01d6, B:125:0x01d7, B:126:0x01de, B:34:0x008b, B:33:0x0088, B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6, B:22:0x006a, B:29:0x0082, B:113:0x01b5), top: B:167:0x0056, inners: #1, #2, #5, #7 }] */
-    /* JADX WARN: Code duplicated, block: B:45:0x00b6 A[Catch: all -> 0x01df, TRY_LEAVE, TryCatch #10 {, blocks: (B:20:0x0056, B:24:0x0075, B:25:0x0078, B:36:0x008e, B:37:0x0091, B:39:0x0097, B:41:0x009d, B:43:0x00a8, B:45:0x00b6, B:80:0x015a, B:81:0x015d, B:119:0x01bf, B:120:0x01c6, B:118:0x01be, B:117:0x01bb, B:121:0x01c7, B:122:0x01ce, B:123:0x01cf, B:124:0x01d6, B:125:0x01d7, B:126:0x01de, B:34:0x008b, B:33:0x0088, B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6, B:22:0x006a, B:29:0x0082, B:113:0x01b5), top: B:167:0x0056, inners: #1, #2, #5, #7 }] */
-    /* JADX WARN: Code duplicated, block: B:52:0x00f8 A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:53:0x00fa  */
-    /* JADX WARN: Code duplicated, block: B:54:0x00fd A[Catch: all -> 0x01a0, TryCatch #0 {all -> 0x01a0, blocks: (B:50:0x00ee, B:58:0x0106, B:63:0x0119, B:66:0x0122, B:67:0x0129, B:68:0x012a, B:69:0x012e, B:70:0x0135, B:54:0x00fd, B:99:0x0198, B:100:0x019f), top: B:149:0x00ee }] */
-    /* JADX WARN: Code duplicated, block: B:58:0x0106 A[Catch: all -> 0x01a0, TryCatch #0 {all -> 0x01a0, blocks: (B:50:0x00ee, B:58:0x0106, B:63:0x0119, B:66:0x0122, B:67:0x0129, B:68:0x012a, B:69:0x012e, B:70:0x0135, B:54:0x00fd, B:99:0x0198, B:100:0x019f), top: B:149:0x00ee }] */
-    /* JADX WARN: Code duplicated, block: B:61:0x0115 A[DONT_INVERT] */
-    /* JADX WARN: Code duplicated, block: B:62:0x0117 A[DONT_INVERT, EDGE_INSN: B:62:0x0117->B:183:0x012a BREAK  A[LOOP:2: B:57:0x0104->B:65:0x011f]] */
-    /* JADX WARN: Code duplicated, block: B:63:0x0119 A[Catch: all -> 0x01a0, TryCatch #0 {all -> 0x01a0, blocks: (B:50:0x00ee, B:58:0x0106, B:63:0x0119, B:66:0x0122, B:67:0x0129, B:68:0x012a, B:69:0x012e, B:70:0x0135, B:54:0x00fd, B:99:0x0198, B:100:0x019f), top: B:149:0x00ee }] */
-    /* JADX WARN: Code duplicated, block: B:65:0x011f A[LOOP:2: B:57:0x0104->B:65:0x011f, LOOP_END] */
-    /* JADX WARN: Code duplicated, block: B:74:0x013e A[Catch: all -> 0x0190, TryCatch #1 {all -> 0x0190, blocks: (B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6), top: B:150:0x00c1, outer: #10, inners: #3, #9 }] */
-    /* JADX WARN: Code duplicated, block: B:76:0x014d  */
-    /* JADX WARN: Code duplicated, block: B:77:0x014f  */
-    /* JADX WARN: Code duplicated, block: B:79:0x0152 A[Catch: all -> 0x0190, TRY_LEAVE, TryCatch #1 {all -> 0x0190, blocks: (B:47:0x00c1, B:72:0x0139, B:74:0x013e, B:79:0x0152, B:90:0x0180, B:91:0x0187, B:92:0x0188, B:93:0x018f, B:97:0x0193, B:98:0x0197, B:107:0x01a9, B:111:0x01b3, B:109:0x01ae, B:110:0x01b2, B:71:0x0136, B:106:0x01a6), top: B:150:0x00c1, outer: #10, inners: #3, #9 }] */
-    /* JADX WARN: Code duplicated, block: B:87:0x0175  */
-    @Override // l.InterfaceC3153
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo9547(long j, byte[] bArr, int i, int i2) throws IOException {
-        long j2;
-        long j3;
-        int iMin;
-        long j4;
-        long j5;
-        C2884 c2884M13240;
-        byte[] bArr2;
-        InterfaceC15785 interfaceC15785Mo4000;
-        RunnableC0062 runnableC0062M38439;
-        long jM978;
-        int iMin2;
-        int i3;
-        int i4;
-        int i5;
-        int i6;
-        int i7;
-        InterfaceC15785 interfaceC15785;
-        long j6 = 0;
-        if (j < 0 || i < 0 || i2 < 0 || i > bArr.length - i2) {
-            throw new IndexOutOfBoundsException();
-        }
-        if (j > this.f52478 - ((long) i2)) {
-            throw new EOFException("Preview read exceeds resource length");
-        }
-        long j7 = j;
-        int i8 = i;
-        int i9 = i2;
-        while (i9 > 0) {
-            m38440();
-            long j8 = j7 / X931RNG.BLOCK64_RESEED_MAX;
-            int i10 = (int) (j7 % X931RNG.BLOCK64_RESEED_MAX);
-            C1473 c1473 = new C1473(j8, this.f52486);
-            C9236 c9236M13241 = C4771.m13236().m13241(c1473);
-            if (c9236M13241 != null && !m38443(c9236M13241.m23753().length, j8)) {
-                c9236M13241.close();
-                c9236M13241 = null;
-            }
-            if (c9236M13241 == null) {
-                synchronized (this.f52477) {
-                    m38440();
-                    C9236 c9236M13242 = C4771.m13236().m13241(new C1473(j8, this.f52486));
-                    if (c9236M13242 != null) {
-                        try {
-                            if (m38443(c9236M13242.m23753().length, j8)) {
-                                c9236M13242.close();
-                            } else {
-                                if (c9236M13242 != null) {
-                                    c9236M13242.close();
-                                }
-                                j2 = X931RNG.BLOCK64_RESEED_MAX * j8;
-                                if (j2 >= j6) {
-                                    j3 = this.f52478;
-                                    if (j2 < j3) {
-                                        iMin = (int) Math.min(this.f52479, j3 - j2);
-                                        if (iMin > 0) {
-                                            throw new EOFException("Preview read is past end of resource");
-                                        }
-                                        j4 = iMin;
-                                        j5 = j4 * 2;
-                                        if (j5 <= 2147483647L) {
-                                            throw new IOException("Preview fill is too large");
-                                        }
-                                        c2884M13240 = C4771.m13236().m13240((int) j5);
-                                        if (c2884M13240 != null) {
-                                            throw new IOException("Preview page memory budget is exhausted");
-                                        }
-                                        try {
-                                            bArr2 = new byte[iMin];
-                                            interfaceC15785Mo4000 = this.f52484.mo4000();
-                                            try {
-                                                C16490 c16490 = new C16490();
-                                                c16490.m38756(this.f52476);
-                                                c16490.m38762(this.f52475 + j2);
-                                                c16490.m38755(j4);
-                                                c16490.m38757(this.f52480);
-                                                runnableC0062M38439 = m38439(interfaceC15785Mo4000, c16490.m38753());
-                                                try {
-                                                    jM978 = runnableC0062M38439.m978();
-                                                    if (jM978 >= -1) {
-                                                        throw new IOException("Preview data source returned an invalid length");
-                                                    }
-                                                    if (jM978 == -1) {
-                                                        iMin2 = iMin;
-                                                    } else {
-                                                        iMin2 = (int) Math.min(j4, jM978);
-                                                    }
-                                                    i3 = 0;
-                                                    while (true) {
-                                                        i4 = 0;
-                                                        while (true) {
-                                                            if (i3 < iMin2) {
-                                                                break;
-                                                            }
-                                                            m38440();
-                                                            i7 = interfaceC15785Mo4000.read(bArr2, i3, iMin2 - i3);
-                                                            interfaceC15785 = interfaceC15785Mo4000;
-                                                            if (i7 == -1) {
-                                                                break;
-                                                            }
-                                                            if (i7 >= 0) {
-                                                                throw new IOException("Preview data source returned an invalid read result");
-                                                            }
-                                                            if (i7 == 0) {
-                                                                i4++;
-                                                                if (i4 < 16) {
-                                                                    throw new IOException("Preview data source returned too many zero-byte reads");
-                                                                }
-                                                                interfaceC15785Mo4000 = interfaceC15785;
-                                                            }
-                                                        }
-                                                        i3 += i7;
-                                                        interfaceC15785Mo4000 = interfaceC15785;
-                                                    }
-                                                    try {
-                                                        runnableC0062M38439.m979();
-                                                        m38442(runnableC0062M38439);
-                                                        if (i3 != 0) {
-                                                            throw new EOFException("Preview resource ended before requested page");
-                                                        }
-                                                        i5 = (i3 / 32768) * 32768;
-                                                        if (j2 + ((long) i3) == this.f52478) {
-                                                            i6 = i3;
-                                                        } else {
-                                                            i6 = i5;
-                                                        }
-                                                        if (i6 != 0) {
-                                                            throw new EOFException("Preview resource ended before a complete page");
-                                                        }
-                                                        m38441(i6, j8, c2884M13240, bArr2);
-                                                        c2884M13240.close();
-                                                    } catch (Throwable th) {
-                                                        m38442(runnableC0062M38439);
-                                                        throw th;
-                                                    }
-                                                } catch (Throwable th2) {
-                                                    th = th2;
-                                                    if (runnableC0062M38439 != null) {
-                                                        try {
-                                                            runnableC0062M38439.m979();
-                                                        } finally {
-                                                            m38442(runnableC0062M38439);
-                                                        }
-                                                    }
-                                                    throw th;
-                                                }
-                                            } catch (Throwable th3) {
-                                                th = th3;
-                                                runnableC0062M38439 = null;
-                                            }
-                                        } catch (Throwable th4) {
-                                            try {
-                                                c2884M13240.close();
-                                                throw th4;
-                                            } catch (Throwable th5) {
-                                                th4.addSuppressed(th5);
-                                                throw th4;
-                                            }
-                                        }
-                                        throw th;
-                                    }
-                                }
-                                throw new EOFException("Preview read is past end of resource");
-                            }
-                            c9236M13241 = C4771.m13236().m13241(c1473);
-                            if (c9236M13241 != null || !m38443(c9236M13241.m23753().length, j8)) {
-                                if (c9236M13241 != null) {
-                                    c9236M13241.close();
-                                }
-                                throw new IOException("Preview page memory budget is exhausted");
-                            }
-                        } catch (Throwable th6) {
-                            try {
-                                c9236M13242.close();
-                                throw th6;
-                            } catch (Throwable th7) {
-                                th6.addSuppressed(th7);
-                                throw th6;
-                            }
-                        }
-                    } else {
-                        if (c9236M13242 != null) {
-                            c9236M13242.close();
-                        }
-                        j2 = X931RNG.BLOCK64_RESEED_MAX * j8;
-                        if (j2 >= j6) {
-                            j3 = this.f52478;
-                            if (j2 < j3) {
-                                iMin = (int) Math.min(this.f52479, j3 - j2);
-                                if (iMin > 0) {
-                                    throw new EOFException("Preview read is past end of resource");
-                                }
-                                j4 = iMin;
-                                j5 = j4 * 2;
-                                if (j5 <= 2147483647L) {
-                                    throw new IOException("Preview fill is too large");
-                                }
-                                c2884M13240 = C4771.m13236().m13240((int) j5);
-                                if (c2884M13240 != null) {
-                                    throw new IOException("Preview page memory budget is exhausted");
-                                }
-                                bArr2 = new byte[iMin];
-                                interfaceC15785Mo4000 = this.f52484.mo4000();
-                                C16490 c16491 = new C16490();
-                                c16491.m38756(this.f52476);
-                                c16491.m38762(this.f52475 + j2);
-                                c16491.m38755(j4);
-                                c16491.m38757(this.f52480);
-                                runnableC0062M38439 = m38439(interfaceC15785Mo4000, c16491.m38753());
-                                jM978 = runnableC0062M38439.m978();
-                                if (jM978 >= -1) {
-                                    throw new IOException("Preview data source returned an invalid length");
-                                }
-                                if (jM978 == -1) {
-                                    iMin2 = iMin;
-                                } else {
-                                    iMin2 = (int) Math.min(j4, jM978);
-                                }
-                                i3 = 0;
-                                while (true) {
-                                    i4 = 0;
-                                    while (true) {
-                                        if (i3 < iMin2) {
-                                            break;
-                                        }
-                                        m38440();
-                                        i7 = interfaceC15785Mo4000.read(bArr2, i3, iMin2 - i3);
-                                        interfaceC15785 = interfaceC15785Mo4000;
-                                        if (i7 == -1) {
-                                            break;
-                                            break;
-                                        } else {
-                                            if (i7 >= 0) {
-                                                throw new IOException("Preview data source returned an invalid read result");
-                                            }
-                                            if (i7 == 0) {
-                                                i4++;
-                                                if (i4 < 16) {
-                                                    throw new IOException("Preview data source returned too many zero-byte reads");
-                                                }
-                                                interfaceC15785Mo4000 = interfaceC15785;
-                                            }
-                                        }
-                                    }
-                                    i3 += i7;
-                                    interfaceC15785Mo4000 = interfaceC15785;
-                                }
-                                runnableC0062M38439.m979();
-                                m38442(runnableC0062M38439);
-                                if (i3 != 0) {
-                                    throw new EOFException("Preview resource ended before requested page");
-                                }
-                                i5 = (i3 / 32768) * 32768;
-                                if (j2 + ((long) i3) == this.f52478) {
-                                    i6 = i3;
-                                } else {
-                                    i6 = i5;
-                                }
-                                if (i6 != 0) {
-                                    throw new EOFException("Preview resource ended before a complete page");
-                                }
-                                m38441(i6, j8, c2884M13240, bArr2);
-                                c2884M13240.close();
-                                c9236M13241 = C4771.m13236().m13241(c1473);
-                                if (c9236M13241 != null) {
-                                }
-                                if (c9236M13241 != null) {
-                                    c9236M13241.close();
-                                }
-                                throw new IOException("Preview page memory budget is exhausted");
-                                throw th;
-                            }
-                        }
-                        throw new EOFException("Preview read is past end of resource");
-                    }
-                }
+    public final void m38650(int i, boolean z) {
+        m38646(i);
+        while (i > 0) {
+            int i2 = this.f52900;
+            if (i2 == 0 && i >= 65536) {
+                int i3 = (-65536) & i;
+                this.f52899 = C20767.m47498(this.f52899, C20767.m47504(i3, z));
+                i -= i3;
             } else {
-                j7 = j7;
-                i8 = i8;
-                i9 = i9;
-            }
-            try {
-                byte[] bArrM23753 = c9236M13241.m23753();
-                if (i10 >= bArrM23753.length) {
-                    throw new EOFException("Preview page ended before requested position");
+                int iMin = Math.min(i, 65536 - i2);
+                if (z) {
+                    int i4 = this.f52900;
+                    C20767.m47507(i4, i4 + iMin, this.f52895);
                 }
-                int i11 = i9;
-                int iMin3 = Math.min(i11, bArrM23753.length - i10);
-                System.arraycopy(bArrM23753, i10, bArr, i8, iMin3);
-                i9 = i11 - iMin3;
-                i8 += iMin3;
-                j7 += (long) iMin3;
-                c9236M13241.close();
-                j6 = 0;
-            } catch (Throwable th8) {
-                try {
-                    c9236M13241.close();
-                    throw th8;
-                } catch (Throwable th9) {
-                    th8.addSuppressed(th9);
-                    throw th8;
+                int i5 = this.f52900 + iMin;
+                this.f52900 = i5;
+                i -= iMin;
+                if (i5 == 65536) {
+                    m38647();
                 }
             }
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m38440() throws InterruptedIOException {
-        if (this.f52474 || Thread.currentThread().isInterrupted()) {
-            throw new InterruptedIOException("Preview read was canceled");
+    public final void m38649(int i, int i2, long[] jArr) {
+        m38646(i2);
+        int i3 = i2;
+        int i4 = i;
+        while (i3 > 0) {
+            int iMin = Math.min(i3, 65536 - this.f52900);
+            int i5 = this.f52900;
+            int i6 = i4;
+            int i7 = iMin;
+            while (i7 > 0) {
+                int i8 = i6 >>> 6;
+                int i9 = i6 & 63;
+                int i10 = i5 >>> 6;
+                int i11 = i5 & 63;
+                int iMin2 = Math.min(i7, 64 - i11);
+                long j = jArr[i8] >>> i9;
+                if (i9 != 0 && i9 + iMin2 > 64) {
+                    j |= jArr[i8 + 1] << (64 - i9);
+                }
+                long j2 = iMin2 == 64 ? -1L : (1 << iMin2) - 1;
+                long[] jArr2 = this.f52895;
+                jArr2[i10] = ((j2 & j) << i11) | jArr2[i10];
+                i6 += iMin2;
+                i5 += iMin2;
+                i7 -= iMin2;
+            }
+            i4 += iMin;
+            int i12 = this.f52900 + iMin;
+            this.f52900 = i12;
+            i3 -= iMin;
+            if (i12 == 65536) {
+                m38647();
+            }
         }
-    }
-
-    /* JADX WARN: Bottom block not found for handler: all -> 0x007a */
-    /* JADX WARN: Code duplicated, block: B:60:0x0086 A[Catch: all -> 0x008d, TRY_ENTER, TryCatch #8 {all -> 0x008d, blocks: (B:60:0x0086, B:61:0x008a), top: B:96:0x0084 }] */
-    /* JADX WARN: Code duplicated, block: B:61:0x008a A[Catch: all -> 0x008d, TRY_LEAVE, TryCatch #8 {all -> 0x008d, blocks: (B:60:0x0086, B:61:0x008a), top: B:96:0x0084 }] */
-    /* JADX WARN: Code duplicated, block: B:66:0x0095 A[Catch: all -> 0x00a7, TryCatch #3 {, blocks: (B:64:0x0091, B:66:0x0095, B:67:0x0097, B:69:0x009b, B:71:0x00a3, B:72:0x00a5), top: B:85:0x0091 }] */
-    /* JADX WARN: Code duplicated, block: B:77:0x00aa  */
-    /* JADX WARN: Code duplicated, block: B:85:0x0091 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Code duplicated, block: B:96:0x0084 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Code restructure failed: missing block: B:10:0x0021, code lost:
-    
-        monitor-enter(r0);
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:12:0x0024, code lost:
-    
-        if (r6.f52474 != false) goto L18;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:14:0x0028, code lost:
-    
-        if (r6.f52483 != r1) goto L18;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:16:0x002e, code lost:
-    
-        if (r1.m976() == false) goto L18;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:17:0x0030, code lost:
-    
-        r6.f52483 = null;
-        r6.f52482 = r1;
-        r8 = true;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:18:0x0035, code lost:
-    
-        monitor-exit(r0);
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:19:0x0036, code lost:
-    
-        if (r8 == false) goto L38;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:20:0x0038, code lost:
-    
-        if (r8 != false) goto L37;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:21:0x003a, code lost:
-    
-        r1.m980();
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:39:0x0062, code lost:
-    
-        throw new java.io.InterruptedIOException("Preview read was canceled");
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:43:0x0066, code lost:
-    
-        r0 = th;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:44:0x0067, code lost:
-    
-        r4 = r6;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:9:0x001c, code lost:
-    
-        r1.m977();
-        r0 = r6.f52473;
-     */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    private l.RunnableC0062 m38439(l.InterfaceC15785 r7, l.C12257 r8) throws java.lang.Throwable {
-        /*
-            r6 = this;
-            l.֡֡۬ r1 = new l.֡֡۬
-            java.util.concurrent.ThreadPoolExecutor r0 = r6.f52481
-            r1.<init>(r7, r8, r0)
-            r7 = 0
-            r8 = 0
-            java.lang.Object r0 = r6.f52473     // Catch: java.lang.Throwable -> L7c
-            monitor-enter(r0)     // Catch: java.lang.Throwable -> L7c
-            r6.m38440()     // Catch: java.lang.Throwable -> L6e
-            r6.f52483 = r1     // Catch: java.lang.Throwable -> L6e
-            java.lang.Thread r2 = java.lang.Thread.currentThread()     // Catch: java.lang.Throwable -> L6e
-            r6.f52485 = r2     // Catch: java.lang.Throwable -> L6e
-            r2 = 1
-            r1.m981()     // Catch: java.lang.Throwable -> L69
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L69
-            r1.m977()     // Catch: java.lang.Throwable -> L66
-            java.lang.Object r0 = r6.f52473     // Catch: java.lang.Throwable -> L66
-            monitor-enter(r0)     // Catch: java.lang.Throwable -> L66
-            boolean r3 = r6.f52474     // Catch: java.lang.Throwable -> L63
-            if (r3 != 0) goto L35
-            l.֡֡۬ r3 = r6.f52483     // Catch: java.lang.Throwable -> L63
-            if (r3 != r1) goto L35
-            boolean r3 = r1.m976()     // Catch: java.lang.Throwable -> L63
-            if (r3 == 0) goto L35
-            r6.f52483 = r7     // Catch: java.lang.Throwable -> L63
-            r6.f52482 = r1     // Catch: java.lang.Throwable -> L63
-            r8 = 1
-        L35:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L63
-            if (r8 == 0) goto L5b
-            if (r8 != 0) goto L5a
-            r1.m980()     // Catch: java.lang.Throwable -> L3d
-        L3d:
-            java.lang.Object r8 = r6.f52473
-            r0 = r8
-            monitor-enter(r0)
-            l.֡֡۬ r8 = r6.f52483     // Catch: java.lang.Throwable -> L57
-            if (r8 != r1) goto L47
-            r6.f52483 = r7     // Catch: java.lang.Throwable -> L57
-        L47:
-            l.֡֡۬ r8 = r6.f52482     // Catch: java.lang.Throwable -> L57
-            if (r8 != 0) goto L55
-            java.lang.Thread r8 = r6.f52485     // Catch: java.lang.Throwable -> L57
-            java.lang.Thread r2 = java.lang.Thread.currentThread()     // Catch: java.lang.Throwable -> L57
-            if (r8 != r2) goto L55
-            r6.f52485 = r7     // Catch: java.lang.Throwable -> L57
-        L55:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L57
-            goto L5a
-        L57:
-            r7 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L57
-            throw r7
-        L5a:
-            return r1
-        L5b:
-            java.io.InterruptedIOException r0 = new java.io.InterruptedIOException     // Catch: java.lang.Throwable -> L66
-            java.lang.String r3 = "Preview read was canceled"
-            r0.<init>(r3)     // Catch: java.lang.Throwable -> L66
-            throw r0     // Catch: java.lang.Throwable -> L66
-        L63:
-            r3 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L63
-            throw r3     // Catch: java.lang.Throwable -> L66
-        L66:
-            r0 = move-exception
-            r4 = r6
-            goto L75
-        L69:
-            r3 = move-exception
-            r4 = r6
-            r2 = r3
-            r3 = 1
-            goto L71
-        L6e:
-            r2 = move-exception
-            r3 = 0
-            r4 = r6
-        L71:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L7a
-            throw r2     // Catch: java.lang.Throwable -> L73
-        L73:
-            r0 = move-exception
-            r2 = r3
-        L75:
-            r5 = r1
-            r1 = r0
-            r0 = r2
-            r2 = r5
-            goto L82
-        L7a:
-            r2 = move-exception
-            goto L71
-        L7c:
-            r0 = move-exception
-            r2 = 0
-            r4 = r6
-            r2 = r1
-            r1 = r0
-            r0 = 0
-        L82:
-            if (r8 != 0) goto Laa
-            if (r0 == 0) goto L8a
-            r2.m980()     // Catch: java.lang.Throwable -> L8d
-            goto L8d
-        L8a:
-            r2.m979()     // Catch: java.lang.Throwable -> L8d
-        L8d:
-            java.lang.Object r8 = r4.f52473
-            r0 = r8
-            monitor-enter(r0)
-            l.֡֡۬ r8 = r4.f52483     // Catch: java.lang.Throwable -> La7
-            if (r8 != r2) goto L97
-            r4.f52483 = r7     // Catch: java.lang.Throwable -> La7
-        L97:
-            l.֡֡۬ r8 = r4.f52482     // Catch: java.lang.Throwable -> La7
-            if (r8 != 0) goto La5
-            java.lang.Thread r8 = r4.f52485     // Catch: java.lang.Throwable -> La7
-            java.lang.Thread r2 = java.lang.Thread.currentThread()     // Catch: java.lang.Throwable -> La7
-            if (r8 != r2) goto La5
-            r4.f52485 = r7     // Catch: java.lang.Throwable -> La7
-        La5:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> La7
-            goto Laa
-        La7:
-            r7 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> La7
-            throw r7
-        Laa:
-            throw r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C16291.m38439(l.ܺ۟ۙ, l.۫۟ۙ):l.֡֡۬");
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m38442(RunnableC0062 runnableC0062) {
-        synchronized (this.f52473) {
-            if (this.f52482 == runnableC0062) {
-                this.f52482 = null;
-            }
-            if (this.f52483 == null && this.f52482 == null && this.f52485 == Thread.currentThread()) {
-                this.f52485 = null;
-            }
+    public final C17037 m38648() {
+        if (this.f52896) {
+            throw new IllegalStateException("Dirty sequence builder already built");
+        }
+        m38647();
+        this.f52896 = true;
+        return this.f52899;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m38652() {
+        return (((long) this.f52895.length) * 8) + this.f52898;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m38651(long j) {
+        this.f52901 = Math.max(0L, j);
+        if (m38652() > this.f52901) {
+            throw new IllegalStateException("Dirty bitmap exceeds memory limit");
         }
     }
 
-    /* JADX WARN: Code duplicated, block: B:44:0x0034 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        RunnableC0062 runnableC0062;
-        RunnableC0062 runnableC0063;
-        Thread thread;
-        synchronized (this.f52473) {
-            this.f52474 = true;
-            runnableC0062 = this.f52483;
-            runnableC0063 = this.f52482;
-            thread = this.f52485;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m38646(int i) {
+        if (this.f52896) {
+            throw new IllegalStateException("Dirty sequence builder already built");
         }
-        if (runnableC0062 != null) {
-            try {
-                runnableC0062.m980();
-            } catch (Throwable th) {
-                th = th;
+        if (i < 0) {
+            throw new IllegalArgumentException("Dirty length must not be negative");
+        }
+        int i2 = this.f52897;
+        if (((long) i2) + ((long) i) > 2147483647L) {
+            throw new ArithmeticException("Dirty length overflow");
+        }
+        this.f52897 = i2 + i;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    private void m38647() {
+        long[] jArr;
+        int i = this.f52900;
+        if (i == 0) {
+            return;
+        }
+        int iM47496 = C20767.m47496(i);
+        int i2 = this.f52900;
+        int iM47497 = C20767.m47496(i2);
+        int i3 = i2 & 63;
+        int i4 = 0;
+        boolean z = false;
+        boolean z2 = true;
+        while (true) {
+            jArr = this.f52895;
+            if (i4 >= iM47497) {
+                break;
             }
+            long j = (i4 != iM47497 + (-1) || i3 == 0) ? -1L : (1 << i3) - 1;
+            long j2 = jArr[i4] & j;
+            z |= j2 != 0;
+            z2 &= j2 == j;
+            i4++;
         }
-        th = null;
-        if (thread != null && thread != Thread.currentThread()) {
-            thread.interrupt();
+        if (z && !z2 && C20767.m47503(m38652(), ((long) iM47496) * 8) > this.f52901) {
+            throw new IllegalStateException("Dirty bitmap exceeds memory limit");
         }
-        if (runnableC0063 != null) {
-            try {
-                runnableC0063.m979();
-            } catch (Throwable th2) {
-                th = th2;
-                if (th != null) {
-                    if (th != th) {
-                        th.addSuppressed(th);
-                    }
-                }
-                synchronized (this.f52477) {
-                    this.f52477.notifyAll();
-                    RunnableC0062.m974(th);
-                }
-            }
+        C17037 c17037M47497 = C20767.m47497(this.f52900, Arrays.copyOf(jArr, iM47496));
+        if (c17037M47497.m40147()) {
+            this.f52898 = (((long) c17037M47497.f55677.length) * 8) + this.f52898;
         }
-        th = th;
-        synchronized (this.f52477) {
-            this.f52477.notifyAll();
-        }
-        RunnableC0062.m974(th);
+        this.f52899 = C20767.m47498(this.f52899, c17037M47497);
+        Arrays.fill(jArr, 0L);
+        this.f52900 = 0;
     }
 }

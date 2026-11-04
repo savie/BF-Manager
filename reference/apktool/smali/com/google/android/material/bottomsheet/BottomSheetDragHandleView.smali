@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;
-.super Ll/ۖ᩺;
+.super Ll/ܳ᩻;
 .source "BottomSheetDragHandleView.java"
 
 # interfaces
@@ -31,11 +31,11 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$kcYefU7mDsxaDDUrYFwGm-Fzkow(Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;Landroid/view/View;Ll/ۜۗ;)Z
+.method public static synthetic $r8$lambda$kcYefU7mDsxaDDUrYFwGm-Fzkow(Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;Landroid/view/View;Ll/֫۬;)Z
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;->lambda$onBottomSheetStateChanged$0(Landroid/view/View;Ll/ۜۗ;)Z
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;->lambda$onBottomSheetStateChanged$0(Landroid/view/View;Ll/֫۬;)Z
 
     move-result p0
 
@@ -46,7 +46,7 @@
     .locals 1
 
     .line 52
-    sget v0, Ll/ᩴ۟ܶ;->ۧ֡:I
+    sget v0, Ll/ۘ۬ܺ;->֨ܿ:I
 
     sput v0, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;->DEF_STYLE_RES:I
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .line 86
-    sget v0, Ll/ۖ۟ܶ;->۠ۨ:I
+    sget v0, Ll/ۧ۬ܺ;->ۗۤ:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -85,14 +85,14 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Ll/ۖ᩺;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ll/ܳ᩻;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 63
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    sget p2, Ll/ᩳ۟ܶ;->ܳ:I
+    sget p2, Ll/᩺۬ܺ;->ۖ:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    sget p2, Ll/ᩳ۟ܶ;->᩻:I
+    sget p2, Ll/᩺۬ܺ;->ۡ:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -118,7 +118,7 @@
 
     move-result-object p1
 
-    sget p2, Ll/ᩳ۟ܶ;->ۢ:I
+    sget p2, Ll/᩺۬ܺ;->ۜ:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -157,7 +157,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView$2;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;)V
 
-    invoke-static {p0, p1}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۨ᩻;)V
+    invoke-static {p0, p1}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/᩸ۡ;)V
 
     return-void
 .end method
@@ -336,15 +336,15 @@
     move-result-object v1
 
     .line 233
-    instance-of v2, v1, Ll/ۢܺ;
+    instance-of v2, v1, Ll/ܳ᩶;
 
     if-eqz v2, :cond_0
 
     .line 234
-    check-cast v1, Ll/ۢܺ;
+    check-cast v1, Ll/ܳ᩶;
 
     .line 235
-    invoke-virtual {v1}, Ll/ۢܺ;->ۨ()Ll/᩻ܺ;
+    invoke-virtual {v1}, Ll/ܳ᩶;->ۤ()Ll/ۤ᩶;
 
     move-result-object v1
 
@@ -387,7 +387,7 @@
     return-object p0
 .end method
 
-.method private synthetic lambda$onBottomSheetStateChanged$0(Landroid/view/View;Ll/ۜۗ;)Z
+.method private synthetic lambda$onBottomSheetStateChanged$0(Landroid/view/View;Ll/֫۬;)Z
     .locals 0
 
     .line 163
@@ -425,7 +425,7 @@
     .line 159
     :cond_1
     :goto_0
-    sget-object p1, Ll/ۢۢ;->᩹:Ll/ۢۢ;
+    sget-object p1, Ll/۠ۜ;->ܳ:Ll/۠ۜ;
 
     .line 162
     iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;->clickToExpand:Z
@@ -440,12 +440,12 @@
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;->clickToCollapseActionLabel:Ljava/lang/String;
 
     :goto_1
-    new-instance v1, Ll/ܽۨۨ;
+    new-instance v1, Ll/ܽۙۚ;
 
-    invoke-direct {v1, p0}, Ll/ܽۨۨ;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, p0}, Ll/ܽۙۚ;-><init>(Ljava/lang/Object;)V
 
     .line 159
-    invoke-static {p0, p1, v0, v1}, Ll/ۚ֫;->ۙ(Landroid/view/View;Ll/ۢۢ;Ljava/lang/String;Ll/ۡۗ;)V
+    invoke-static {p0, p1, v0, v1}, Ll/᩸۠;->ۙ(Landroid/view/View;Ll/۠ۜ;Ljava/lang/String;Ll/᩵۬;)V
 
     return-void
 .end method
@@ -538,7 +538,7 @@
 
     .line 168
     :goto_1
-    sget v0, Ll/ۚ֫;->ۙ:I
+    sget v0, Ll/᩸۠;->ۙ:I
 
     .line 1427
     invoke-virtual {p0, v1}, Landroid/view/View;->setImportantForAccessibility(I)V

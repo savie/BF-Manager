@@ -1,45 +1,62 @@
 .class public final Ll/᩻֨ܶ;
 .super Ljava/lang/Object;
-.source "RBI4"
+.source "O8D0"
 
-# interfaces
-.implements Ljava/util/Comparator;
+
+# instance fields
+.field public final ۙ:[D
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 192
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [D
+
+    .line 193
+    iput-object v0, p0, Ll/᩻֨ܶ;->ۙ:[D
+
+    return-void
+.end method
+
+.method public static synthetic ۙ(Ll/᩻֨ܶ;)[D
+    .locals 0
+
+    .line 189
+    iget-object p0, p0, Ll/᩻֨ܶ;->ۙ:[D
+
+    return-object p0
+.end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+.method public final ۙ()V
+    .locals 4
 
-    .line 520
-    check-cast p1, Ll/۬᩹ܶ;
+    const/4 v0, 0x0
 
-    check-cast p2, Ll/۬᩹ܶ;
+    .line 197
+    :goto_0
+    iget-object v1, p0, Ll/᩻֨ܶ;->ۙ:[D
 
-    .line 523
-    invoke-virtual {p1}, Ll/۬᩹ܶ;->ۙ()I
+    array-length v2, v1
 
-    move-result p1
+    if-ge v0, v2, :cond_0
 
-    invoke-virtual {p2}, Ll/۬᩹ܶ;->ۙ()I
+    const-wide/16 v2, 0x0
 
-    move-result p2
+    .line 198
+    aput-wide v2, v1, v0
 
-    sub-int/2addr p1, p2
+    add-int/lit8 v0, v0, 0x1
 
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

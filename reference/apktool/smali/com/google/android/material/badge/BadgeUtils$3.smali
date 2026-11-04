@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/badge/BadgeUtils$3;
-.super Ll/ۨ᩻;
+.super Ll/᩸ۡ;
 .source "BadgeUtils.java"
 
 
@@ -14,18 +14,18 @@
     .line 164
     iput-object p1, p0, Lcom/google/android/material/badge/BadgeUtils$3;->val$badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
-    invoke-direct {p0}, Ll/ۨ᩻;-><init>()V
+    invoke-direct {p0}, Ll/᩸ۡ;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/᩹ۗ;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/ᩴ۬;)V
     .locals 0
 
     .line 168
-    invoke-super {p0, p1, p2}, Ll/ۨ᩻;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/᩹ۗ;)V
+    invoke-super {p0, p1, p2}, Ll/᩸ۡ;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/ᩴ۬;)V
 
     .line 169
     iget-object p1, p0, Lcom/google/android/material/badge/BadgeUtils$3;->val$badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
@@ -34,7 +34,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Ll/᩹ۗ;->ܰ(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Ll/ᩴ۬;->᩷(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

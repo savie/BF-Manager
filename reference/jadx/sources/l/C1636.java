@@ -1,34 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.֫ۛۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S424 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1636 extends C22220 {
+import java.util.Set;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C19670 f6557;
+/* JADX INFO: renamed from: l.֫ۗۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 15ZI */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1636 extends AbstractC10892 implements InterfaceC23265 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C9399 f6558;
+    public final Set f5662;
 
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
-        C9399 c9399 = this.f6558;
-        C21017 c21017 = c9399.f31868;
-        C22492 c22492 = c8753.f30086;
-        if (c22492 == null) {
-            return;
-        }
-        c9399.f31863.m28682(c22492);
-        c21017.m47328(c22492);
-        c21017.m47306(c22492);
-        c9399.f31873.m11141(this.f6557, c22492.f73414);
-        super.mo1065(c8753);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C21530 f5663;
+
+    public C1636(C21530 c21530, AbstractC8639 abstractC8639) {
+        this.f5663 = c21530;
+        this.f5662 = abstractC8639;
     }
 
-    public C1636(C9399 c9399, C19670 c19670) {
-        this.f6558 = c9399;
-        this.f6557 = c19670;
+    @Override // l.InterfaceC15299
+    public final String getType() {
+        return this.f5663.f68791.f12443;
+    }
+
+    @Override // l.InterfaceC15299
+    public final Set getElements() {
+        return this.f5662;
     }
 }

@@ -1,68 +1,36 @@
 package l;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Set;
+import java.lang.reflect.Array;
+import java.lang.reflect.GenericArrayType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
+import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ۧᩴۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 67L9 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11182 implements Iterator {
+/* JADX INFO: renamed from: l.ۤ᩹ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: WATP */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11182 implements InterfaceC3725 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public EnumC3584 f37874;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C11182 f35253 = new C11182();
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23882 f37875;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Set f37878 = null;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public Iterator f37877 = Arrays.asList(EnumC3584.MODULE_SOURCE_PATH, EnumC3584.UPGRADE_MODULE_PATH, EnumC3584.SYSTEM_MODULES, EnumC3584.MODULE_PATH).iterator();
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public Iterator f37876 = null;
-
-    public C11182(C23882 c23882) {
-        this.f37875 = c23882;
-    }
-
-    @Override // java.util.Iterator
-    public final boolean hasNext() {
-        while (this.f37878 == null) {
-            while (true) {
-                Iterator it = this.f37876;
-                if (it == null || !it.hasNext()) {
-                    Iterator it2 = this.f37877;
-                    if (!it2.hasNext()) {
-                        return false;
-                    }
-                    this.f37874 = (EnumC3584) it2.next();
-                    try {
-                        this.f37876 = this.f37875.f77362.mo32956(this.f37874).iterator();
-                    } catch (IOException e) {
-                        System.err.println("error listing module locations for " + this.f37874 + ": " + e);
-                    }
-                }
+    @Override // l.InterfaceC3725
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo12124(C2759 c2759, Type type, Object obj) {
+        if (type instanceof GenericArrayType) {
+            Type genericComponentType = ((GenericArrayType) type).getGenericComponentType();
+            if (genericComponentType instanceof TypeVariable) {
+                genericComponentType = ((TypeVariable) genericComponentType).getBounds()[0];
             }
-            if (this.f37876.hasNext()) {
-                this.f37878 = (Set) this.f37876.next();
+            ArrayList arrayList = new ArrayList();
+            c2759.m9111(genericComponentType, arrayList, (Object) null);
+            if (genericComponentType instanceof Class) {
+                Object[] objArr = (Object[]) Array.newInstance((Class<?>) genericComponentType, arrayList.size());
+                arrayList.toArray(objArr);
+                return objArr;
             }
+            return arrayList.toArray();
         }
-        return true;
-    }
-
-    @Override // java.util.Iterator
-    public final Object next() {
-        hasNext();
-        Set set = this.f37878;
-        if (set != null) {
-            this.f37878 = null;
-            return set;
-        }
-        throw new NoSuchElementException();
+        return c2759.m9106(obj);
     }
 }

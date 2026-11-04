@@ -202,7 +202,7 @@
     move-result-object v5
 
     .line 180
-    invoke-virtual {v4}, Lcom/amazonaws/regions/Region;->ۚ()Ljava/util/HashMap;
+    invoke-virtual {v4}, Lcom/amazonaws/regions/Region;->ᩴ()Ljava/util/HashMap;
 
     move-result-object v9
 
@@ -226,7 +226,7 @@
     invoke-virtual {v7, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 182
-    invoke-virtual {v4}, Lcom/amazonaws/regions/Region;->ܰ()Ljava/util/HashMap;
+    invoke-virtual {v4}, Lcom/amazonaws/regions/Region;->᩷()Ljava/util/HashMap;
 
     move-result-object v7
 

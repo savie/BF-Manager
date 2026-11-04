@@ -1,39 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۧܿۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: K7EI */
+import java.io.Serializable;
+
+/* JADX INFO: renamed from: l.ۤ᩷ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H38Z */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C11139 {
+public final class C11139 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InterfaceC6908 m28097(InterfaceC6908 interfaceC6908) {
+        if ((interfaceC6908 instanceof C5174) || (interfaceC6908 instanceof C13619)) {
+            return interfaceC6908;
+        }
+        if (interfaceC6908 instanceof Serializable) {
+            return new C13619(interfaceC6908);
+        }
+        return new C5174(interfaceC6908);
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f37789;
-
-    static {
-        int[] iArr = new int[EnumC0554.values().length];
-        f37789 = iArr;
-        try {
-            iArr[EnumC0554.CLASS.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f37789[EnumC0554.INNER_CLASS.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f37789[EnumC0554.REQUIRES.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f37789[EnumC0554.METHOD.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f37789[EnumC0554.MODULE.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f37789[EnumC0554.FIELD.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
+    public static InterfaceC6908 m28096(Object obj) {
+        return new C22328(obj);
     }
 }

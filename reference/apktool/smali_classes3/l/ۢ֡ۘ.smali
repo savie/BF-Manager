@@ -1,115 +1,159 @@
-.class public final synthetic Ll/ۢ֡ۘ;
-.super Ljava/lang/Object;
-.source "S54T"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final enum Ll/ۢ֡ۘ;
+.super Ljava/lang/Enum;
+.source "W3YK"
 
 
-# instance fields
-.field public final synthetic ܺ:I
+# static fields
+.field public static final enum ֡:Ll/ۢ֡ۘ;
 
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public static final synthetic ܰ:[Ll/ۢ֡ۘ;
+
+.field public static final enum ܿ:Ll/ۢ֡ۘ;
+
+.field public static final enum ᩶:Ll/ۢ֡ۘ;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    iput p1, p0, Ll/ۢ֡ۘ;->ܺ:I
+    .line 60
+    new-instance v0, Ll/ۢ֡ۘ;
 
-    iput-object p2, p0, Ll/ۢ֡ۘ;->᩶:Ljava/lang/Object;
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ֡ۘ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ֡ۘ;->֡:Ll/ۢ֡ۘ;
+
+    .line 65
+    new-instance v0, Ll/ۢ֡ۘ;
+
+    const-string v1, "UNINIT"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ֡ۘ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ֡ۘ;->ܿ:Ll/ۢ֡ۘ;
+
+    .line 71
+    new-instance v0, Ll/ۢ֡ۘ;
+
+    const-string v1, "NORMAL"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ۢ֡ۘ;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢ֡ۘ;->᩶:Ll/ۢ֡ۘ;
+
+    .line 51
+    invoke-static {}, Ll/ۢ֡ۘ;->ۙ()[Ll/ۢ֡ۘ;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۢ֡ۘ;->ܰ:[Ll/ۢ֡ۘ;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .line 2
-    iget v0, p0, Ll/ۢ֡ۘ;->ܺ:I
-
-    .line 4
-    iget-object v1, p0, Ll/ۢ֡ۘ;->᩶:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 9
-    check-cast v1, Lcom/google/android/material/search/SearchView;
-
-    .line 12
-    invoke-static {v1, p1}, Lcom/google/android/material/search/SearchView;->$r8$lambda$jEPC5P2snL5cxZFNR2VSY2U-D-U(Lcom/google/android/material/search/SearchView;Landroid/view/View;)V
+    .line 51
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
+.end method
 
-    .line 15
-    :pswitch_0
-    check-cast v1, Ll/᩹ܳۚ;
+.method public static valueOf(Ljava/lang/String;)Ll/ۢ֡ۘ;
+    .locals 1
 
-    .line 18
-    invoke-static {v1}, Ll/᩹ܳۚ;->ۙ(Ll/᩹ܳۚ;)V
+    .line 51
+    const-class v0, Ll/ۢ֡ۘ;
 
-    return-void
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 21
-    :pswitch_1
-    check-cast v1, Ll/ۨۜ᩹;
+    move-result-object p0
 
-    .line 105
-    invoke-virtual {v1}, Ll/ۨۜ᩹;->ᩴ()Lbin/mt/plus/Main;
+    check-cast p0, Ll/ۢ֡ۘ;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ۢ֡ۘ;
+    .locals 1
+
+    .line 51
+    sget-object v0, Ll/ۢ֡ۘ;->ܰ:[Ll/ۢ֡ۘ;
+
+    invoke-virtual {v0}, [Ll/ۢ֡ۘ;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۢ֡ۘ;
+
+    return-object v0
+.end method
+
+.method public static ۙ([IZ)Ll/ۢ֡ۘ;
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 75
+    sget-object p0, Ll/ۢ֡ۘ;->֡:Ll/ۢ֡ۘ;
+
+    return-object p0
+
+    .line 77
+    :cond_0
+    invoke-static {}, Ll/֨֡ۘ;->᩸()[I
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll/۫ܶۘ;->buildDialog()Ll/۠ۡۜ;
+    if-eq p0, p1, :cond_1
 
-    move-result-object p1
+    .line 78
+    sget-object p0, Ll/ۢ֡ۘ;->᩶:Ll/ۢ֡ۘ;
 
-    const v0, 0x7f12025e
+    return-object p0
 
-    .line 106
-    invoke-virtual {p1, v0}, Ll/۠ۡۜ;->ܰ(I)V
+    .line 80
+    :cond_1
+    sget-object p0, Ll/ۢ֡ۘ;->ܿ:Ll/ۢ֡ۘ;
 
-    const v0, 0x7f12025f
+    return-object p0
+.end method
 
-    .line 107
-    invoke-virtual {p1, v0}, Ll/۠ۡۜ;->ۙ(I)V
+.method public static synthetic ۙ()[Ll/ۢ֡ۘ;
+    .locals 3
 
-    const v0, 0x7f120189
+    const/4 v0, 0x3
 
-    const/4 v1, 0x0
+    new-array v0, v0, [Ll/ۢ֡ۘ;
 
-    .line 108
-    invoke-virtual {p1, v0, v1}, Ll/۠ۡۜ;->ۖ(ILandroid/content/DialogInterface$OnClickListener;)V
+    .line 51
+    sget-object v1, Ll/ۢ֡ۘ;->֡:Ll/ۢ֡ۘ;
 
-    .line 109
-    invoke-virtual {p1}, Ll/۠ۡۜ;->ۨ()Ll/᩵ۡۜ;
+    const/4 v2, 0x0
 
-    return-void
+    aput-object v1, v0, v2
 
-    .line 0
-    :pswitch_2
-    check-cast v1, Ll/ۙܽۘ;
+    sget-object v1, Ll/ۢ֡ۘ;->ܿ:Ll/ۢ֡ۘ;
 
-    sget p1, Ll/ۙܽۘ;->ۚܰ:I
+    const/4 v2, 0x1
 
-    .line 46
-    invoke-virtual {v1}, Ll/֨ۨ;->getOnBackPressedDispatcher()Ll/ܳۨ;
+    aput-object v1, v0, v2
 
-    move-result-object p1
+    sget-object v1, Ll/ۢ֡ۘ;->᩶:Ll/ۢ֡ۘ;
 
-    invoke-virtual {p1}, Ll/ܳۨ;->ۙ()V
+    const/4 v2, 0x2
 
-    return-void
+    aput-object v1, v0, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

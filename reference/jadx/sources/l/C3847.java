@@ -1,13 +1,30 @@
 package l;
 
-import android.view.WindowInsets;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۘۢ, reason: contains not printable characters */
-/* JADX INFO: compiled from: M4Z7 */
+/* JADX INFO: renamed from: l.ۘۖۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6H1 */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C3847 {
+public final class C3847 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static /* synthetic */ WindowInsets.Builder m11172() {
-        return new WindowInsets.Builder();
+    public final InterfaceC6281 f13151;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f13152;
+
+    public C3847(List list, InterfaceC6281 interfaceC6281) {
+        this.f13152 = list;
+        this.f13151 = interfaceC6281;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m12479() {
+        return this.f13152;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC6281 m12478() {
+        return this.f13151;
     }
 }

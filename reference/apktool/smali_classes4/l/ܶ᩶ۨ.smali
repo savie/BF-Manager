@@ -1,39 +1,26 @@
-.class public final synthetic Ll/ܶ᩶ۨ;
+.class public final Ll/ܶ᩶ۨ;
 .super Ljava/lang/Object;
-.source "P676"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.source "18YS"
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۘ֡ۨ;
+.field public final ۙ:Ljava/lang/String;
+
+.field public final ᩷:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۘ֡ۨ;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
+    .line 1105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/ܶ᩶ۨ;->ܺ:Ll/ۘ֡ۨ;
+    .line 1106
+    iput-object p1, p0, Ll/ܶ᩶ۨ;->ۙ:Ljava/lang/String;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
-
-    .line 2
-    sget-boolean p1, Ll/ۘ֡ۨ;->ܶܰ:Z
-
-    .line 266
-    iget-object p1, p0, Ll/ܶ᩶ۨ;->ܺ:Ll/ۘ֡ۨ;
-
-    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
+    .line 1107
+    iput-object p2, p0, Ll/ܶ᩶ۨ;->᩷:Ljava/lang/String;
 
     return-void
 .end method

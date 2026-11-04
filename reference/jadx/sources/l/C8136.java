@@ -1,48 +1,42 @@
 package l;
 
-import com.alipay.sdk.m.p.a;
-import java.util.Map;
+import android.net.Uri;
+import android.os.Parcel;
+import java.io.Serializable;
 
-/* JADX INFO: renamed from: l.۠ۧܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 067E */
+/* JADX INFO: renamed from: l.۟᩶ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U170 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C8136 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m21448(Map map, Object obj) {
-        if (map == obj) {
-            return true;
-        }
-        if (obj instanceof Map) {
-            return map.entrySet().equals(((Map) obj).entrySet());
-        }
-        return false;
+public final class C8136 implements Serializable {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public transient Uri f26844;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public byte[] f26845;
+
+    public C8136(Uri uri) {
+        this.f26844 = uri;
+        Parcel parcelObtain = Parcel.obtain();
+        uri.writeToParcel(parcelObtain, 0);
+        this.f26845 = parcelObtain.marshall();
+        parcelObtain.recycle();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static String m21447(Map map) {
-        int size = map.size();
-        C20296.m45806(size, "size");
-        StringBuilder sb = new StringBuilder((int) Math.min(((long) size) * 8, 1073741824L));
-        sb.append('{');
-        boolean z = true;
-        for (Map.Entry entry : map.entrySet()) {
-            if (!z) {
-                sb.append(", ");
-            }
-            sb.append(entry.getKey());
-            sb.append(a.h);
-            sb.append(entry.getValue());
-            z = false;
+    public final Uri m22013() {
+        if (this.f26844 == null) {
+            Parcel parcelObtain = Parcel.obtain();
+            byte[] bArr = this.f26845;
+            parcelObtain.unmarshall(bArr, 0, bArr.length);
+            parcelObtain.setDataPosition(0);
+            this.f26844 = (Uri) Uri.CREATOR.createFromParcel(parcelObtain);
+            parcelObtain.recycle();
         }
-        sb.append('}');
-        return sb.toString();
+        return this.f26844;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Object m21446(Map.Entry entry) {
-        if (entry == null) {
-            return null;
-        }
-        return entry.getKey();
+    public final String toString() {
+        return this.f26844.toString();
     }
 }

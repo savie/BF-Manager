@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.WeakHashMap;
-import l.C9013;
-import l.C9023;
+import l.C11958;
+import l.C14483;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.pqc.crypto.ExhaustedPrivateKeyException;
 import org.bouncycastle.util.Arrays;
@@ -155,7 +155,7 @@ public class LMSPrivateKeyParameters extends LMSKeyParameters implements LMSCont
             if (obj instanceof InputStream) {
                 return getInstance(Streams.readAll((InputStream) obj));
             }
-            throw new IllegalArgumentException(C9023.m23354(obj, "cannot parse "));
+            throw new IllegalArgumentException(C14483.m34971("cannot parse ", obj));
         }
         DataInputStream dataInputStream2 = null;
         try {
@@ -335,7 +335,7 @@ public class LMSPrivateKeyParameters extends LMSKeyParameters implements LMSCont
         try {
             return LMS.generateSign(lMSContext).getEncoded();
         } catch (IOException e) {
-            throw new IllegalStateException(C9013.m23329(e, new StringBuilder("unable to encode signature: ")), e);
+            throw new IllegalStateException(C11958.m29932(e, new StringBuilder("unable to encode signature: ")), e);
         }
     }
 }

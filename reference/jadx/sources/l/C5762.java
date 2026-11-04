@@ -1,156 +1,147 @@
 package l;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.TextView;
-import bin.mt.json.JSONObject;
-import bin.mt.plugin.api.PluginContext;
-import bin.mt.plugin.api.editor.TextEditorFunction;
-import bin.mt.plugin.api.ui.PluginView;
-import bin.mt.plus.R;
-import com.umeng.analytics.pro.am;
+import bin.mt.plus.Main;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۛۖۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J7R3 */
+/* JADX INFO: renamed from: l.ۚܺ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: I7BK */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5762 extends AbstractC3492 {
+public class C5762 extends C5653 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC19749 f19572;
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public boolean f19810;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ Button f19573;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final ArrayList f19574 = new ArrayList();
-
-    public C5762(Button button, ActivityC19749 activityC19749) {
-        this.f19573 = button;
-        this.f19572 = activityC19749;
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        this.f19573.setEnabled(false);
-        m10252(this.f19572, 100);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        String stringNullable;
-        ArrayList<Class> arrayList = new ArrayList();
-        for (C11986 c11986 : C17132.m40019()) {
-            c11986.m29833(arrayList);
-            String strM29843 = c11986.m29843();
-            String strM29845 = c11986.m29845();
-            for (Class cls : arrayList) {
-                try {
-                    TextEditorFunction textEditorFunction = (TextEditorFunction) cls.newInstance();
-                    textEditorFunction.init(c11986.m29831());
-                    if (textEditorFunction.isEnabled()) {
-                        String name = cls.getName();
-                        PluginContext pluginContextM29831 = c11986.m29831();
-                        String strName = textEditorFunction.name();
-                        this.f19574.add(new C23402(strM29843, strM29845, name, (strName.length() < 3 || strName.charAt(0) != '{' || strName.charAt(strName.length() + (-1)) != '}' || (stringNullable = ((C10659) pluginContextM29831).getStringNullable(strName)) == null) ? strName : stringNullable, new C10946(c11986, textEditorFunction)));
-                    }
-                } catch (Throwable th) {
-                    c11986.m29814(th);
-                }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    private synchronized void m16836(C12187 c12187) {
+        try {
+            if (this.f19810) {
+                return;
             }
-            arrayList.clear();
+            this.f19810 = true;
+            String strM43865 = m43865("remoteTaskId");
+            C21949 c21949M49661 = C21949.m49661();
+            LinkedHashSet linkedHashSet = new LinkedHashSet();
+            linkedHashSet.add(C8284.m22375(m43865("sourcePath")));
+            linkedHashSet.add(C8284.m22375(m43865("targetPath")));
+            ArrayList arrayList = new ArrayList(linkedHashSet);
+            LinkedHashSet linkedHashSet2 = new LinkedHashSet();
+            Iterator it = m16835().iterator();
+            while (it.hasNext()) {
+                linkedHashSet2.add(C8284.m22375((String) it.next()));
+            }
+            ArrayList arrayList2 = new ArrayList(linkedHashSet2);
+            List list = Collections.EMPTY_LIST;
+            c21949M49661.m49668(strM43865, this, c12187, arrayList, arrayList2, list, c12187.m30474() ? m16835() : list);
+        } catch (Throwable th) {
+            throw th;
         }
     }
 
-    @Override // l.AbstractC3492
+    @Override // l.C5653, l.AbstractC18900
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        ArrayList arrayList = this.f19574;
-        boolean zIsEmpty = arrayList.isEmpty();
-        final ActivityC19749 activityC19749 = this.f19572;
-        if (zIsEmpty) {
-            C15829.m37611(R.string.MT_Protector);
-            activityC19749.startActivity(new Intent(activityC19749, (Class<?>) ActivityC1609.class));
-            return;
-        }
-        C14230 c14230 = (C14230) this.f19573.getTag(R.id.MT_Protector);
-        JSONObject jSONObject = c14230 == null ? new JSONObject() : c14230.mo33245();
-        String string = jSONObject.getString(am.av);
-        String string2 = jSONObject.getString("b");
-        JSONObject jSONObject2 = jSONObject.getJSONObject(am.aF);
-        View viewM30995 = activityC19749.m30995(R.layout.MT_Protector);
-        final Spinner spinner = (Spinner) viewM30995.findViewById(R.id.spinner);
-        final FrameLayout frameLayout = (FrameLayout) viewM30995.findViewById(R.id.MT_Protector);
-        spinner.setOnItemSelectedListener(new C17051(this, frameLayout, string, string2, jSONObject2));
-        spinner.setAdapter((SpinnerAdapter) new C0733(activityC19749, arrayList));
-        if (string != null && string2 != null) {
-            String strM5594 = C1679.m5594(string, "/", string2);
-            for (int i = 0; i < arrayList.size(); i++) {
-                if (strM5594.equals(((C23402) arrayList.get(i)).m51542())) {
-                    spinner.setSelection(i);
-                    break;
-                }
-            }
-        }
-        C8067 c8067BuildDialog = activityC19749.buildDialog();
-        c8067BuildDialog.m21258(viewM30995);
-        c8067BuildDialog.m21251(R.string.MT_Protector, null);
-        c8067BuildDialog.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-        final DialogInterfaceC19356 dialogInterfaceC19356M21269 = c8067BuildDialog.m21269();
-        Button buttonM44373 = dialogInterfaceC19356M21269.m44373();
-        final Button button = this.f19573;
-        buttonM44373.setOnClickListener(new View.OnClickListener() { // from class: l.۫ۖۚ
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                C23402 c23402 = (C23402) this.f40564.f19574.get(spinner.getSelectedItemPosition());
-                JSONObject jSONObject3 = new JSONObject();
-                jSONObject3.put(am.av, c23402.f75792);
-                jSONObject3.put("b", c23402.f75793);
-                Object tag = frameLayout.getTag(R.id.MT_Protector);
-                if (tag instanceof PluginView) {
-                    PluginView pluginView = (PluginView) tag;
-                    try {
-                        JSONObject optionsData = ((TextEditorFunction) c23402.m51544().f37218).getOptionsData(pluginView.getPluginUI(), pluginView);
-                        if (optionsData == TextEditorFunction.VALIDATION_FAILED) {
-                            return;
-                        }
-                        if (optionsData != null) {
-                            jSONObject3.put(am.aF, optionsData);
-                        }
-                    } catch (Throwable th) {
-                        ((C11986) c23402.m51544().f37217).m29814(th);
-                        activityC19749.m31002(th, (DialogInterface.OnDismissListener) null);
-                        return;
-                    }
-                }
-                C14230 c14231 = new C14230(jSONObject3, c23402.f75795);
-                Button button2 = button;
-                button2.setTag(R.id.MT_Protector, c14231);
-                TextView textView = (TextView) button2.getTag(R.id.MT_Protector);
-                textView.setVisibility(0);
-                textView.setText(c14231.m34336());
-                dialogInterfaceC19356M21269.dismiss();
-            }
-        });
+    public final void mo2529(Main main, C8614 c8614, C8614 c8615, C12187 c12187) {
     }
 
-    @Override // l.AbstractC3492
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final AbstractActivityC17204 mo16840() {
+        return null;
+    }
+
+    @Override // l.C5653, l.AbstractC18900
+    /* JADX INFO: renamed from: ֫ */
+    public final void mo2528() {
+        String strM43865 = m43865("remoteTaskId");
+        C21949 c21949M49661 = C21949.m49661();
+        C25154 c25154 = new C25154(strM43865, c21949M49661, m43867("replacedName") != null);
+        this.f19522 = c25154;
+        c21949M49661.m49669(strM43865, this, c25154);
+        super.mo2528();
+        c21949M49661.m49667(strM43865, this);
+    }
+
+    @Override // l.C5653, l.AbstractC18900
+    /* JADX INFO: renamed from: ۧ */
+    public final C12187 mo2531() throws Exception {
+        C12187 c12187Mo2531 = super.mo2531();
+        m16836(c12187Mo2531);
+        return c12187Mo2531;
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public final void mo16837(String str) {
+        super.mo16837(str);
+        C21949.m49661().m49667(m43865("remoteTaskId"), this);
+    }
+
+    @Override // l.AbstractC15118
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo16841(CharSequence charSequence) {
+        super.mo16841(charSequence);
+        C21949.m49661().m49667(m43865("remoteTaskId"), this);
+    }
+
+    @Override // l.AbstractC18900
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final void mo16839(int i) {
+        super.mo16839(i);
+        C21949.m49661().m49667(m43865("remoteTaskId"), this);
+    }
+
+    @Override // l.AbstractC15118
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void mo16842(C1858 c1858) {
+        super.mo16842(c1858);
+        C21949.m49661().m49667(m43865("remoteTaskId"), this);
+    }
+
+    @Override // l.AbstractC15118
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo16838(long j) {
+        super.mo16838(j);
+        C21949.m49661().m49667(m43865("remoteTaskId"), this);
+    }
+
+    @Override // l.C5653, l.AbstractC18900
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo2533(C12187 c12187) {
+        super.mo2533(c12187);
+        m16836(c12187);
+    }
+
+    /* JADX INFO: renamed from: ۡۙ, reason: not valid java name and contains not printable characters */
+    private List m16835() {
+        if (this.f19529 == null) {
+            return Collections.EMPTY_LIST;
+        }
+        String strM22375 = C8284.m22375(m43865("targetPath"));
+        LinkedHashSet linkedHashSet = new LinkedHashSet();
+        for (String str : m43831("ARG_PATHS")) {
+            linkedHashSet.add(str);
+        }
+        LinkedHashSet linkedHashSet2 = new LinkedHashSet();
+        for (AbstractC6662 abstractC6662 : this.f19529.m14079()) {
+            if (linkedHashSet.contains(abstractC6662.m18604()) && abstractC6662.m18620() != null) {
+                String strM28549 = C11293.m28549(strM22375, String.valueOf(abstractC6662.m18620()));
+                if (abstractC6662.m18625()) {
+                    strM28549 = C14483.m34972(strM28549, "/");
+                }
+                linkedHashSet2.add(strM28549);
+            }
+        }
+        return new ArrayList(linkedHashSet2);
+    }
+
+    @Override // l.AbstractC18900
     /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f19572.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
-        this.f19573.setEnabled(true);
+    public final C12187 mo4494(Exception exc) {
+        C12187 c12187M30465 = C12187.m30465(exc);
+        m16836(c12187M30465);
+        return c12187M30465;
     }
 }

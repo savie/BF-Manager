@@ -18,9 +18,9 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.ShortBufferException;
 import javax.crypto.spec.OAEPParameterSpec;
 import javax.crypto.spec.PSource;
-import l.C0252;
-import l.C15489;
-import l.C2271;
+import l.C14442;
+import l.C14483;
+import l.C25272;
 import org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers;
 import org.bouncycastle.crypto.AsymmetricBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -42,7 +42,7 @@ import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherSpi extends BaseCipherSpi {
     public BaseCipherSpi.ErasableOutputStream bOut;
     public AsymmetricBlockCipher cipher;
@@ -54,42 +54,36 @@ public class CipherSpi extends BaseCipherSpi {
     public boolean publicKeyOnly;
     public TLSRSAPremasterSecretParameterSpec tlsRsaSpec;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class ISO9796d1Padding extends CipherSpi {
         public ISO9796d1Padding() {
             super(new ISO9796d1Encoding(new RSABlindedEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class NoPadding extends CipherSpi {
         public NoPadding() {
             super(new RSABlindedEngine());
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class OAEPPadding extends CipherSpi {
         public OAEPPadding() {
             super(OAEPParameterSpec.DEFAULT);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PKCS1v1_5Padding extends CipherSpi {
         public PKCS1v1_5Padding() {
             super(new CustomPKCS1Encoding(new RSABlindedEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PKCS1v1_5Padding_PrivateOnly extends CipherSpi {
         public PKCS1v1_5Padding_PrivateOnly() {
             super(false, true, new CustomPKCS1Encoding(new RSABlindedEngine()));
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PKCS1v1_5Padding_PublicOnly extends CipherSpi {
         public PKCS1v1_5Padding_PublicOnly() {
             super(true, false, new CustomPKCS1Encoding(new RSABlindedEngine()));
@@ -330,7 +324,7 @@ public class CipherSpi extends BaseCipherSpi {
             if (i != 2) {
                 if (i != 3) {
                     if (i != 4) {
-                        throw new InvalidParameterException(C2271.m6966(i, "unknown opmode ", " passed to RSA"));
+                        throw new InvalidParameterException(C14442.m34864(i, "unknown opmode ", " passed to RSA"));
                     }
                 }
             }
@@ -366,7 +360,7 @@ public class CipherSpi extends BaseCipherSpi {
             this.publicKeyOnly = false;
         } else {
             if (!upperCase.equals("2")) {
-                throw new NoSuchAlgorithmException(C0252.m1693("can't support mode ", str));
+                throw new NoSuchAlgorithmException(C25272.m56409("can't support mode ", str));
             }
             this.privateKeyOnly = false;
             this.publicKeyOnly = true;
@@ -426,7 +420,7 @@ public class CipherSpi extends BaseCipherSpi {
             initFromSpec(new OAEPParameterSpec("SHA3-384", "MGF1", new MGF1ParameterSpec("SHA3-384"), PSource.PSpecified.DEFAULT));
         } else {
             if (!upperCase.equals("OAEPWITHSHA3-512ANDMGF1PADDING")) {
-                throw new NoSuchPaddingException(C15489.m37076(str, " unavailable with RSA."));
+                throw new NoSuchPaddingException(C14483.m34972(str, " unavailable with RSA."));
             }
             initFromSpec(new OAEPParameterSpec("SHA3-512", "MGF1", new MGF1ParameterSpec("SHA3-512"), PSource.PSpecified.DEFAULT));
         }

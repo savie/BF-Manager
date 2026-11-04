@@ -1,143 +1,195 @@
 .class public Ll/ۤ֡ۘ;
-.super Ll/᩵֡ۘ;
-.source "O945"
-
-# interfaces
-.implements Ll/۟ᩴܶ;
-
-
-# static fields
-.field public static final synthetic ᩹ܰ:I
+.super Ll/᩹֡ۘ;
+.source "M3ZI"
 
 
 # instance fields
-.field public ۖܰ:Z
+.field public ۙ:Ll/۟ܿۘ;
 
-.field public ۚܰ:Ll/ۡ᩶ۘ;
+.field public final ᩷:Ll/ۧܿ᩺;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ll/ۧܿ᩺;)V
     .locals 1
 
-    .line 15
-    invoke-direct {p0}, Ll/᩵֡ۘ;-><init>()V
+    .line 3437
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    .line 16
-    iput-boolean v0, p0, Ll/ۤ֡ۘ;->ۖܰ:Z
+    .line 748
+    iput-object v0, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    .line 745
+    iput-object p1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ֫()Z
-    .locals 1
-
-    .line 59
-    iget-boolean v0, p0, Ll/ۤ֡ۘ;->ۖܰ:Z
-
-    return v0
-.end method
-
-.method public final ۡ()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ColorPickerActivity"
-
-    return-object v0
-.end method
-
-.method public final ۢ()V
+.method public final ۙ(Ll/ۛ᩶ۘ;)V
     .locals 2
 
-    .line 44
-    invoke-static {p0}, Ll/ۜۤۜ;->ۙ(Landroid/content/Context;)Z
+    .line 770
+    iget-object v0, p1, Ll/ۛ᩶ۘ;->۬:Ll/ۢ᩶᩺;
 
-    move-result v0
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
 
-    if-nez v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    const/4 v0, 0x0
-
-    .line 76
-    :try_start_0
-    invoke-static {p0, v0}, Ll/ܺᩴܶ;->ۨ(Landroid/content/Context;Ll/᩷ᩴܶ;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
 
     return-void
 
-    :catchall_0
-    move-exception v0
-
-    const/4 v1, 0x1
-
-    .line 48
-    invoke-virtual {p0, v0, v1}, Ll/۫ܶۘ;->ۙ(Ljava/lang/Throwable;Z)V
-
-    return-void
-
+    .line 771
     :cond_0
-    const-string v0, "media_projection"
-
-    .line 52
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/projection/MediaProjectionManager;
-
-    .line 53
-    iget-object v1, p0, Ll/ۤ֡ۘ;->ۚܰ:Ll/ۡ᩶ۘ;
-
-    invoke-virtual {v0}, Landroid/media/projection/MediaProjectionManager;->createScreenCaptureIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ll/ۡ᩶ۘ;->ۙ(Landroid/content/Intent;)V
-
-    const/4 v0, 0x0
-
-    .line 54
-    iput-boolean v0, p0, Ll/ۤ֡ۘ;->ۖܰ:Z
+    invoke-super {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/ۛ᩶ۘ;)V
 
     return-void
 .end method
 
-.method public final ܳ()V
-    .locals 1
+.method public final ۙ(Ll/۟ܰۘ;)V
+    .locals 2
 
-    .line 26
-    new-instance v0, Ll/ۡ֡ۘ;
+    .line 766
+    iget-object v0, p1, Ll/۟ܰۘ;->۠:Ll/᩺᩶᩺;
 
-    invoke-direct {v0, p0}, Ll/ۡ֡ۘ;-><init>(Ljava/lang/Object;)V
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
 
-    .line 824
-    invoke-static {p0, v0}, Ll/۟᩶ۘ;->ۙ(Ll/֨ۨ;Ll/۠᩶ۘ;)Ll/ۡ᩶ۘ;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
 
-    .line 26
-    iput-object v0, p0, Ll/ۤ֡ۘ;->ۚܰ:Ll/ۡ᩶ۘ;
+    return-void
 
-    .line 36
-    invoke-static {}, Ll/۫ܳۚ;->ۖ()Z
+    .line 767
+    :cond_0
+    invoke-super {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/۟ܰۘ;)V
 
-    move-result v0
+    return-void
+.end method
+
+.method public final ۙ(Ll/ۢ᩶ۘ;)V
+    .locals 2
+
+    .line 762
+    iget-object v0, p1, Ll/ۢ᩶ۘ;->ᩳ:Ll/۬᩶᩺;
+
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    return-void
+
+    .line 763
+    :cond_0
+    invoke-super {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/ۢ᩶ۘ;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/ۨܿۘ;)V
+    .locals 2
+
+    .line 774
+    iget-object v0, p1, Ll/ۨܿۘ;->۠:Ll/ۚܿ᩺;
+
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    return-void
+
+    .line 775
+    :cond_0
+    invoke-super {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/ۨܿۘ;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/ܰ᩶ۘ;)V
+    .locals 2
+
+    .line 758
+    iget-object v0, p1, Ll/ܰ᩶ۘ;->ۡ:Ll/ۖ᩶᩺;
+
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final ۙ(Ll/ܶܿۘ;)V
+    .locals 2
+
+    .line 778
+    iget-object v0, p1, Ll/۟ܿۘ;->᩶:Ll/᩸۟᩺;
 
     if-eqz v0, :cond_0
 
-    .line 37
-    invoke-static {p0}, Ll/۫ܳۚ;->ܰ(Ll/۫ܶۘ;)V
+    iget-object v0, v0, Ll/᩸۟᩺;->᩶:Ll/᩸ܿ᩺;
+
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
 
     return-void
 
-    .line 39
+    .line 779
     :cond_0
-    invoke-virtual {p0}, Ll/ۤ֡ۘ;->ۢ()V
+    invoke-super {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/ܶܿۘ;)V
 
+    return-void
+.end method
+
+.method public final ۙ(Ll/ᩳܰۘ;)V
+    .locals 2
+
+    .line 754
+    iget-object v0, p1, Ll/ᩳܰۘ;->۠:Ll/۬᩶᩺;
+
+    iget-object v1, p0, Ll/ۤ֡ۘ;->᩷:Ll/ۧܿ᩺;
+
+    if-ne v0, v1, :cond_0
+
+    iput-object p1, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    return-void
+
+    .line 66
+    :cond_0
+    iget-object p1, p1, Ll/ᩳܰۘ;->۟:Ll/ܰᩳۘ;
+
+    invoke-virtual {p0, p1}, Ll/᩹֡ۘ;->ۙ(Ll/ܰᩳۘ;)V
+
+    return-void
+.end method
+
+.method public final ᩷(Ll/۟ܿۘ;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    .line 750
+    iget-object v0, p0, Ll/ۤ֡ۘ;->ۙ:Ll/۟ܿۘ;
+
+    if-nez v0, :cond_0
+
+    .line 751
+    invoke-virtual {p1, p0}, Ll/۟ܿۘ;->ۙ(Ll/֡ܿۘ;)V
+
+    :cond_0
     return-void
 .end method

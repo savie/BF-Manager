@@ -1,92 +1,89 @@
 .class public final Ll/ۤ֡ۚ;
-.super Ljava/io/InputStream;
-.source "N17O"
-
-# interfaces
-.implements Ll/᩷ۤᩴ;
+.super Ljava/lang/Object;
+.source "46YI"
 
 
 # instance fields
-.field public final ܺ:Ll/ۡ֡ۚ;
+.field public final ۙ:[B
+
+.field public final ۤ:Ljava/nio/charset/Charset;
+
+.field public final ᩷:I
+
+.field public final ᩸:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۡ֡ۚ;)V
+.method public constructor <init>(Ljava/nio/charset/Charset;Ljava/lang/String;I[B)V
     .locals 0
 
-    .line 144
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    .line 185
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
-    iput-object p1, p0, Ll/ۤ֡ۚ;->ܺ:Ll/ۡ֡ۚ;
+    .line 186
+    iput-object p1, p0, Ll/ۤ֡ۚ;->ۤ:Ljava/nio/charset/Charset;
+
+    .line 187
+    iput-object p2, p0, Ll/ۤ֡ۚ;->᩸:Ljava/lang/String;
+
+    .line 188
+    iput p3, p0, Ll/ۤ֡ۚ;->᩷:I
+
+    .line 189
+    iput-object p4, p0, Ll/ۤ֡ۚ;->ۙ:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final ۙ([B)Z
     .locals 1
 
-    .line 162
-    iget-object v0, p0, Ll/ۤ֡ۚ;->ܺ:Ll/ۡ֡ۚ;
+    .line 199
+    invoke-static {p1}, Ll/᩸֡ۚ;->ۙ([B)Ll/᩷֡ۚ;
 
-    invoke-virtual {v0}, Ll/ۡ֡ۚ;->ۙ()V
+    move-result-object p1
 
-    return-void
-.end method
+    .line 200
+    iget-object v0, p0, Ll/ۤ֡ۚ;->᩸:Ljava/lang/String;
 
-.method public final read()I
-    .locals 4
+    invoke-static {v0}, Ll/᩸֡ۚ;->ۙ(Ljava/lang/String;)Ll/᩷֡ۚ;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    new-array v1, v0, [B
+    if-ne p1, v0, :cond_0
 
-    .line 157
-    iget-object v2, p0, Ll/ۤ֡ۚ;->ܺ:Ll/ۡ֡ۚ;
+    const/4 p1, 0x1
 
-    const/4 v3, 0x0
+    return p1
 
-    invoke-virtual {v2, v1, v3, v0}, Ll/ۡ֡ۚ;->ۙ([BII)I
-
-    move-result v0
-
-    const/4 v2, -0x1
-
-    if-ne v0, v2, :cond_0
-
-    return v2
-
-    .line 152
     :cond_0
-    aget-byte v0, v1, v3
-
-    and-int/lit16 v0, v0, 0xff
-
-    return v0
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    .line 157
-    iget-object v0, p0, Ll/ۤ֡ۚ;->ܺ:Ll/ۡ֡ۚ;
-
-    invoke-virtual {v0, p1, p2, p3}, Ll/ۡ֡ۚ;->ۙ([BII)I
-
-    move-result p1
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public synthetic transferTo(Ljava/io/OutputStream;)J
-    .locals 2
+.method public final ۙ()[B
+    .locals 1
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۤۤᩴ;->transferTo(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .line 194
+    iget-object v0, p0, Ll/ۤ֡ۚ;->ۙ:[B
 
-    move-result-wide v0
+    if-nez v0, :cond_0
 
-    return-wide v0
+    const/4 v0, 0x0
+
+    new-array v0, v0, [B
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    return-object v0
 .end method

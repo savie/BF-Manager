@@ -1,392 +1,60 @@
 package l;
 
-import android.content.DialogInterface;
-import com.umeng.commonsdk.statistics.UMErrorCode;
-import java.util.ArrayDeque;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.᩻ܽۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q152 */
+/* JADX INFO: renamed from: l.᩹᩷ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46OI */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C23821 implements InterfaceC3740 {
+public final class C23821 extends AbstractC2323 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static DialogInterfaceC19356 m52499(C8067 c8067, int i, DialogInterface.OnClickListener onClickListener, int i2, DialogInterface.OnClickListener onClickListener2) {
-        int i3 = -2139078277;
-        int i4 = C10634.f36300;
-        int i5 = C3577.f13150;
-        int iM11306 = (ThreadFactoryC3888.m11306("ۜܰ") + i5) * 115;
-        int i6 = ((iM11306 ^ i4) * (-27037)) ^ (-471075403);
-        int i7 = -1745670794;
-        while (true) {
-            i3 = ((((i3 ^ i4) * 6031) >> 31) & i6) ^ (iM11306 ^ i7);
-            switch (i3) {
-                case -2056099879:
-                case 1484400481:
-                    if (C0671.f2816 != 0) {
-                        iM11306 = (i4 - C19806.m45029("ᩴ۟")) * (-23);
-                        i6 = ((iM11306 ^ i5) * 17013) ^ (-1473869820);
-                        i7 = -1523019550;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("ۚ᩸") + i5) * (-67);
-                        i6 = ((iM11306 ^ i4) * 18623) ^ 1122431962;
-                        i7 = 1011057112;
-                    }
-                    break;
-                case -1709391624:
-                case 1733781913:
-                    if (C1398.f5802 <= 0) {
-                        iM11306 = (i4 - C19806.m45029("ᩴ۟")) * (-23);
-                        i6 = ((iM11306 ^ i5) * 17013) ^ (-1473869820);
-                        i7 = -1523019550;
-                    } else {
-                        iM11306 = (C19806.m45029("ܰ۟") + i5) * (-53);
-                        i6 = ((iM11306 ^ i4) * (-8785)) ^ 88318945;
-                        i7 = 2050079610;
-                    }
-                    break;
-                case -1591983271:
-                case -1307013376:
-                    if (RunnableC1606.f6488 >= 0) {
-                        iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                        i7 = -160255274;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۙۛ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 31005) ^ (-1517159094);
-                        i7 = -411172824;
-                    }
-                    break;
-                case -1366436818:
-                case -1087572002:
-                    if (C1460.f5948 < 0) {
-                        iM11306 = C19806.m45029("᩷᩹") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 3037) ^ 1471960090;
-                        i7 = -2095794809;
-                    } else {
-                        iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                        i7 = -160255274;
-                    }
-                    break;
-                case -1294497352:
-                case 1343694994:
-                    if (C3660.f13403 >= 0) {
-                        iM11306 = C19806.m45029("᩺ܳ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 11069) ^ (-349541249);
-                        i7 = 1916181650;
-                    } else {
-                        iM11306 = (i4 - C19806.m45029("ܳ۠")) * 79;
-                        i6 = ((iM11306 ^ i5) * (-28077)) ^ 1049429786;
-                        i7 = 1079666690;
-                    }
-                    break;
-                case -1252665808:
-                case -378667466:
-                    if (C1419.f5860 >= 0) {
-                        iM11306 = C19806.m45029("᩺ܳ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 11069) ^ (-349541249);
-                        i7 = 1916181650;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("᩻ۚ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-32153)) ^ 631689635;
-                        i7 = 1999829990;
-                    }
-                    break;
-                case -852403456:
-                case 597851778:
-                    if (MenuItemOnMenuItemClickListenerC3244.m9701() >= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩸᩶") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 24107) ^ (-857864526);
-                        i7 = 294282939;
-                    } else {
-                        iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                        i7 = -160255274;
-                    }
-                    break;
-                case -302218742:
-                case 1318655224:
-                    C1066.m4025(c8067, i, onClickListener);
-                    C10634.m26823(c8067, i2, onClickListener2);
-                    return C2704.m8239(c8067);
-                case -148775971:
-                case 737641295:
-                    if (C1461.f5957 <= 0) {
-                        iM11306 = C19806.m45029("᩷᩹") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 3037) ^ 1471960090;
-                        i7 = -2095794809;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۙۚ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 13835) ^ 370613239;
-                        i7 = -1957792295;
-                    }
-                    break;
-                case 293858475:
-                case 493775183:
-                    if (C1066.f4915 <= 0) {
-                        iM11306 = (i4 - C19806.m45029("ᩴ۟")) * (-23);
-                        i6 = ((iM11306 ^ i5) * 17013) ^ (-1473869820);
-                        i7 = -1523019550;
-                    } else {
-                        iM11306 = (i5 - C19806.m45029("ܰۛ")) * 69;
-                        i6 = ((iM11306 ^ i4) * (-6087)) ^ 1003847137;
-                        i7 = 197357808;
-                    }
-                    break;
-                case 341253553:
-                case 1824308837:
-                    C3722.m10894();
-                    return null;
-                case 384673566:
-                case 433764662:
-                    C0817.m3399();
-                    if (C0671.m3008() >= 0) {
-                        iM11306 = (i4 - C19806.m45029("ᩴ۟")) * (-23);
-                        i6 = ((iM11306 ^ i5) * 17013) ^ (-1473869820);
-                        i7 = -1523019550;
-                    } else {
-                        iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                        i7 = -160255274;
-                    }
-                    break;
-                case 493135603:
-                case 1456571980:
-                    if (C0526.f2219) {
-                        iM11306 = (i4 - C19806.m45029("ᩴ۟")) * (-23);
-                        i6 = ((iM11306 ^ i5) * 17013) ^ (-1473869820);
-                        i7 = -1523019550;
-                    } else {
-                        iM11306 = (C19806.m45029("ۙ۫") + i4) * 23;
-                        i6 = ((iM11306 ^ i5) * (-24617)) ^ (-1054140438);
-                        i7 = 41016404;
-                    }
-                    break;
-                case 1078632949:
-                case 1877432853:
-                    if (C0050.m946() <= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("᩸᩶") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 24107) ^ (-857864526);
-                        i7 = 294282939;
-                    } else {
-                        iM11306 = (C19806.m45029("ۘ᩵") + i4) * 59;
-                        i6 = ((iM11306 ^ i5) * 10995) ^ (-1284398960);
-                        i7 = -1673401824;
-                    }
-                    break;
-                case 1848980489:
-                case 1945046370:
-                    C2332.m7079();
-                    iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                    i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                    i7 = -160255274;
-                    break;
-                default:
-                    if (C0278.m1789() <= 0) {
-                        iM11306 = C19806.m45029("᩷᩷") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-16133)) ^ 690978844;
-                        i7 = -160255274;
-                    } else {
-                        iM11306 = (C19806.m45029("ۘۤ") ^ i4) * (-25);
-                        i6 = ((iM11306 ^ i5) * 25197) ^ 853144828;
-                        i7 = -305270591;
-                    }
-                    break;
+    public final int f77160;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f77161;
+
+    public C23821(int i, int i2) {
+        this.f77161 = i;
+        this.f77160 = i2;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C23821)) {
+            return false;
+        }
+        C23821 c23821 = (C23821) obj;
+        return this.f77161 == c23821.f77161 && this.f77160 == c23821.f77160;
+    }
+
+    public final int hashCode() {
+        return (this.f77161 * 31) + this.f77160;
+    }
+
+    public final String toString() {
+        Object[] objArr = {Integer.valueOf(this.f77161), Integer.valueOf(this.f77160)};
+        String[] strArrSplit = "start;end".length() == 0 ? new String[0] : "start;end".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C23821.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
             }
         }
+        sb.append("]");
+        return sb.toString();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m52500(StringBuilder sb, int i, String str, int i2, String str2) {
-        int i3 = -1855172548;
-        int i4 = C3535.f13026;
-        int i5 = C3722.f13525;
-        int iM11306 = (i4 - ThreadFactoryC3888.m11306("᩵᩺")) * 55;
-        int i6 = ((iM11306 ^ i5) * 32027) ^ 1194136829;
-        int i7 = 336928575;
-        while (true) {
-            i3 = ((((i3 ^ i5) * (-24871)) >> 31) & i6) ^ (iM11306 ^ i7);
-            switch (i3) {
-                case -2119428145:
-                case 1672543077:
-                    if (C1668.m5583()) {
-                        iM11306 = (C19806.m45029("ܰ֨") + i5) * UMErrorCode.E_UM_BE_RAW_OVERSIZE;
-                        i6 = ((iM11306 ^ i4) * (-15935)) ^ (-1844691572);
-                        i7 = -1381943913;
-                    } else {
-                        iM11306 = (C19806.m45029("ۙۚ") + i4) * 11;
-                        i6 = ((iM11306 ^ i5) * (-27583)) ^ (-1361671640);
-                        i7 = 215039083;
-                    }
-                    break;
-                case -1939727863:
-                case -1499818992:
-                    if (C2332.f8260) {
-                        iM11306 = (ThreadFactoryC3888.m11306("ᩳ᩻") + i4) * (-23);
-                        i6 = ((iM11306 ^ i5) * (-30585)) ^ 1291509521;
-                        i7 = 650566335;
-                    } else {
-                        iM11306 = (i5 - C19806.m45029("ۚᩴ")) * 39;
-                        i6 = ((iM11306 ^ i4) * 30879) ^ 2063009013;
-                        i7 = -1453327131;
-                    }
-                    break;
-                case -1799092204:
-                case 2102044388:
-                    if (!C1419.m4973()) {
-                        iM11306 = (i5 - C19806.m45029("ۚᩴ")) * 39;
-                        i6 = ((iM11306 ^ i4) * 30879) ^ 2063009013;
-                        i7 = -1453327131;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("۟֫") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-8515)) ^ 358983658;
-                        i7 = 1760877698;
-                    }
-                    break;
-                case -1407561336:
-                case -1332188040:
-                    if (C3577.f13150 >= 0) {
-                        iM11306 = (C19806.m45029("᩺ۛ") + i4) * 79;
-                        i6 = ((iM11306 ^ i5) * (-28693)) ^ (-1871758674);
-                        i7 = 66452564;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ۢۙ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * (-18351)) ^ (-1496883290);
-                        i7 = -1815743598;
-                    }
-                    break;
-                case -1362148668:
-                case 549107109:
-                    if (C2477.f9839 <= 0) {
-                        iM11306 = (C19806.m45029("ۙۚ") + i4) * 11;
-                        i6 = ((iM11306 ^ i5) * (-27583)) ^ (-1361671640);
-                        i7 = 215039083;
-                    } else {
-                        iM11306 = C19806.m45029("ܳ᩺") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-13587)) ^ (-523967980);
-                        i7 = -1819600763;
-                    }
-                    break;
-                case -1229252481:
-                case 268043339:
-                    C0817.m3408(sb, i);
-                    C2788.m8480(sb, str);
-                    C0817.m3408(sb, i2);
-                    C2788.m8480(sb, str2);
-                    break;
-                case -1198484633:
-                case -429572339:
-                    C1419.m4973();
-                    iM11306 = (C19806.m45029("ۙۚ") + i4) * 11;
-                    i6 = ((iM11306 ^ i5) * (-27583)) ^ (-1361671640);
-                    i7 = 215039083;
-                    break;
-                case -1133469927:
-                case 310035371:
-                    C0526.m2437();
-                    break;
-                case -865346243:
-                case -760576109:
-                    if (C2477.f9839 <= 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("۟֫") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-8515)) ^ 358983658;
-                        i7 = 1760877698;
-                    } else {
-                        iM11306 = (C19806.m45029("ܳ֫") ^ i5) * 123;
-                        i6 = ((iM11306 ^ i4) * 23339) ^ 1982394599;
-                        i7 = -201889187;
-                    }
-                    break;
-                case -266859605:
-                case 1791386223:
-                    if (C3660.f13403 >= 0) {
-                        iM11306 = (C19806.m45029("᩺ۛ") + i4) * 79;
-                        i6 = ((iM11306 ^ i5) * (-28693)) ^ (-1871758674);
-                        i7 = 66452564;
-                    } else {
-                        iM11306 = C19806.m45029("ܽ᩸") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-21891)) ^ 1910525546;
-                        i7 = 2640607;
-                    }
-                    break;
-                case 61877819:
-                case 1051279522:
-                    if (C1066.f4915 <= 0) {
-                        iM11306 = C19806.m45029("᩺ۚ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 27823) ^ 2133532001;
-                        i7 = -1645371619;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("ܺۙ") ^ i4;
-                        i6 = ((iM11306 ^ i5) * 14119) ^ (-1719977683);
-                        i7 = 1644567165;
-                    }
-                    break;
-                case 269306066:
-                case 1145591648:
-                    if (C1377.f5749) {
-                        iM11306 = (i5 - C19806.m45029("ᩴۜ")) * (-21);
-                        i6 = ((iM11306 ^ i4) * (-611)) ^ 1379954527;
-                        i7 = 1833261033;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("۟֫") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-8515)) ^ 358983658;
-                        i7 = 1760877698;
-                    }
-                    break;
-                case 924072497:
-                case 1291924830:
-                    if (!ViewTreeObserverOnPreDrawListenerC3327.m9874()) {
-                        iM11306 = (C19806.m45029("ۙۚ") + i4) * 11;
-                        i6 = ((iM11306 ^ i5) * (-27583)) ^ (-1361671640);
-                        i7 = 215039083;
-                    } else {
-                        iM11306 = C19806.m45029("᩺ۚ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 27823) ^ 2133532001;
-                        i7 = -1645371619;
-                    }
-                    break;
-                case 1038532797:
-                case 2008763750:
-                    if (ThreadFactoryC3888.f14547 <= 0) {
-                        iM11306 = (C19806.m45029("᩺ۛ") + i4) * 79;
-                        i6 = ((iM11306 ^ i5) * (-28693)) ^ (-1871758674);
-                        i7 = 66452564;
-                    } else {
-                        iM11306 = ThreadFactoryC3888.m11306("᩺֡") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-28599)) ^ 765360834;
-                        i7 = -201762832;
-                    }
-                    break;
-                case 1421043159:
-                case 1606978587:
-                    if (C0526.f2219) {
-                        iM11306 = (C19806.m45029("᩺ۛ") + i4) * 79;
-                        i6 = ((iM11306 ^ i5) * (-28693)) ^ (-1871758674);
-                        i7 = 66452564;
-                    } else {
-                        iM11306 = (ThreadFactoryC3888.m11306("۫ۨ") + i5) * (-55);
-                        i6 = ((iM11306 ^ i4) * 763) ^ (-1303027575);
-                        i7 = -234725612;
-                    }
-                    break;
-                default:
-                    if (CallableC1627.m5507() == 0) {
-                        iM11306 = ThreadFactoryC3888.m11306("۟֫") ^ i4;
-                        i6 = ((iM11306 ^ i5) * (-8515)) ^ 358983658;
-                        i7 = 1760877698;
-                    } else {
-                        iM11306 = C19806.m45029("᩺ۚ") ^ i5;
-                        i6 = ((iM11306 ^ i4) * 27823) ^ 2133532001;
-                        i7 = -1645371619;
-                    }
-                    break;
-            }
-            return;
-        }
+    public final int m53153() {
+        return this.f77160;
     }
 
-    @Override // l.InterfaceC3740
-    /* JADX INFO: renamed from: ܰ */
-    public Object mo1620() {
-        return new ArrayDeque();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m53154() {
+        return this.f77161;
     }
 }

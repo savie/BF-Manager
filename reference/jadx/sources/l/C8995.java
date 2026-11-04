@@ -1,39 +1,30 @@
 package l;
 
-import android.content.DialogInterface;
+import java.io.InputStream;
 
-/* JADX INFO: renamed from: l.ۡܽ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R5YB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8995 implements InterfaceC17354 {
+/* JADX INFO: renamed from: l.۠᩻᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: N916 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8995 extends AbstractC7504 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC16051 f30768;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f29303;
 
-    public C8995(AbstractC16051 abstractC16051) {
-        this.f30768 = abstractC16051;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InputStream f29304;
+
+    public C8995(InputStream inputStream, String str) {
+        this.f29303 = str;
+        this.f29304 = inputStream;
     }
 
-    @Override // l.InterfaceC17354
-    public final void onCanceled() {
-        this.f30768.mo17179();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String m23991() {
+        return this.f29303;
     }
 
-    @Override // l.InterfaceC17354
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo6537(Exception exc) {
-        this.f30768.f51937.m28824().m31002(exc, new DialogInterface.OnDismissListener() { // from class: l.᩵ܽ֨
-            @Override // android.content.DialogInterface.OnDismissListener
-            public final void onDismiss(DialogInterface dialogInterface) {
-                this.f62896.f30768.mo17179();
-            }
-        });
-        return true;
-    }
-
-    @Override // l.InterfaceC17354
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo6536(C14558 c14558, boolean z) {
-        new C20989(this.f30768, c14558, z).m10243();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InputStream m23992() {
+        return this.f29304;
     }
 }

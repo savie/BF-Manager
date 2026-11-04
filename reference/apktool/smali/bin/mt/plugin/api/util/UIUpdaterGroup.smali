@@ -29,13 +29,13 @@
     sput-object v0, Lbin/mt/plugin/api/util/UIUpdaterGroup;->ID_COUNTER:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 35
-    new-instance v0, Ll/ۙ֨ۘ;
+    new-instance v0, Ll/᩶ۛ֫;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ll/ۙ֨ۘ;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Ll/᩶ۛ֫;-><init>(Landroid/os/Looper;)V
 
     sput-object v0, Lbin/mt/plugin/api/util/UIUpdaterGroup;->HANDLER:Landroid/os/Handler;
 

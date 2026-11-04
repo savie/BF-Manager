@@ -1,13 +1,15 @@
 package l;
 
-import java.util.concurrent.ExecutorService;
+import android.view.View;
 
-/* JADX INFO: renamed from: l.ۡ᩹ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8QN */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C9174 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static InterfaceExecutorC7762 m23586(ExecutorService executorService, C11996 c11996) {
-        return new C10585(executorService, c11996);
+/* JADX INFO: renamed from: l.ۡۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: V1D4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9174 extends AbstractC11191 {
+    @Override // l.AbstractC11191
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo1701(float f, long j, View view, C10335 c10335) {
+        view.setRotationX(m28197(f, j, view, c10335));
+        return this.f35301;
     }
 }

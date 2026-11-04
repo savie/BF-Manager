@@ -1,38 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ۚᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 21QH */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C0211 extends AbstractC4027 {
+import java.io.Closeable;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC10609 f1380;
+/* JADX INFO: renamed from: l.֡ۚۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 7B6P */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C0211 implements Closeable {
 
-    public C0211(AbstractC10796 abstractC10796) {
-        super(0);
-        this.f1380 = abstractC10796;
-    }
-
-    public C0211(InterfaceC10609 interfaceC10609, int i, int i2) {
-        super(i, i2);
-        this.f1380 = interfaceC10609;
-    }
-
-    @Override // l.AbstractC4027
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo1570() {
-        return this.f1380.size();
+    public final InputStream f1413;
+
+    public final synchronized int readInt() {
+        return m1656(0) | m1656(8) | m1656(16) | m1656(24);
     }
 
-    @Override // l.AbstractC2616
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int mo1568(int i) {
-        return this.f1380.getInt(i);
+    public final synchronized short readShort() {
+        return (short) (m1656(0) | m1656(8));
     }
 
-    @Override // l.AbstractC2616
+    public final synchronized void skipBytes(int i) {
+        try {
+            if (i < 0) {
+                throw new IllegalArgumentException();
+            }
+            int i2 = 0;
+            while (i2 < i) {
+                int iSkip = (int) this.f1413.skip(i - i2);
+                if (iSkip <= 0) {
+                    break;
+                } else {
+                    i2 += iSkip;
+                }
+            }
+            if (i2 != i) {
+                throw new EOFException();
+            }
+        } catch (Throwable th) {
+            throw th;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۡ᩷, reason: not valid java name and contains not printable characters */
+    public final synchronized int m1657() {
+        return m1656(0) | m1656(8);
+    }
+
+    public C0211(InputStream inputStream) {
+        this.f1413 = inputStream;
+    }
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC11790 mo1569(int i, int i2) {
-        return new C0211(this.f1380, i, i2);
+    private int m1656(int i) throws IOException {
+        int i2 = this.f1413.read();
+        if (i2 != -1) {
+            return (i2 & 255) << i;
+        }
+        throw new EOFException();
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        this.f1413.close();
     }
 }

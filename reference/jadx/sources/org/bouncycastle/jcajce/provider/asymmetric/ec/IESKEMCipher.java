@@ -12,7 +12,7 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.BadPaddingException;
 import javax.crypto.NoSuchPaddingException;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.x9.X9IntegerConverter;
 import org.bouncycastle.crypto.BufferedBlockCipher;
@@ -45,7 +45,7 @@ import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IESKEMCipher extends BaseCipherSpi {
     public static final X9IntegerConverter converter = new X9IntegerConverter();
     public final ECDHCBasicAgreement agreement;
@@ -71,7 +71,6 @@ public class IESKEMCipher extends BaseCipherSpi {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KEMwithSHA256 extends KEM {
         public KEMwithSHA256() {
             super(DigestFactory.createSHA256(), DigestFactory.createSHA256(), 32, 16);
@@ -310,6 +309,6 @@ public class IESKEMCipher extends BaseCipherSpi {
 
     @Override // org.bouncycastle.jcajce.provider.asymmetric.util.BaseCipherSpi, javax.crypto.CipherSpi
     public void engineSetMode(String str) throws NoSuchAlgorithmException {
-        throw new NoSuchAlgorithmException(C0252.m1693("can't support mode ", str));
+        throw new NoSuchAlgorithmException(C25272.m56409("can't support mode ", str));
     }
 }

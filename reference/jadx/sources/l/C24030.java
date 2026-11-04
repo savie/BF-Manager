@@ -1,38 +1,29 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻᩻۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B6MB */
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.᩺ۘۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 640U */
 /* JADX INFO: loaded from: classes.dex */
-public final class C24030 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final int f77850;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f77851;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f77852;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f77853;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f77854;
+public final class C24030 implements Iterable {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f77855;
+    public ArrayList f77746 = new ArrayList();
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final long f77856;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C18808 f77747;
 
-    public C24030(int i, int i2, int i3, long j, long j2, long j3, boolean z) {
-        this.f77850 = i;
-        this.f77854 = i2;
-        this.f77855 = i3;
-        this.f77852 = j;
-        this.f77856 = j2;
-        this.f77853 = j3;
-        this.f77851 = z;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Iterator f77748;
+
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C6130(this, this);
+    }
+
+    public C24030(C18808 c18808, Iterator it) {
+        this.f77747 = c18808;
+        this.f77748 = it;
     }
 }

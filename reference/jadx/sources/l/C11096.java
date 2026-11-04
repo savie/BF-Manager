@@ -1,75 +1,52 @@
 package l;
 
-import android.view.inputmethod.InputMethodManager;
+import android.view.View;
+import android.widget.AdapterView;
 
-/* JADX INFO: renamed from: l.ۧܺۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N1TT */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C11096 extends C8524 {
+/* JADX INFO: renamed from: l.ۤ᩵ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 014Z */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C11096 implements AdapterView.OnItemSelectedListener {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InputMethodManager f37680;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3054 f34998;
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnLayoutChangeListenerC3333 f37681;
+    public final /* synthetic */ C13334 f34999;
 
-    public C11096(ViewOnLayoutChangeListenerC3333 viewOnLayoutChangeListenerC3333) {
-        this.f37681 = viewOnLayoutChangeListenerC3333;
-        this.f37680 = (InputMethodManager) viewOnLayoutChangeListenerC3333.getSystemService("input_method");
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C3054 f35000;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2390 f35001;
+
+    public C11096(C13334 c13334, C2390 c2390, C3054 c3054, C3054 c3055) {
+        this.f34999 = c13334;
+        this.f35001 = c2390;
+        this.f35000 = c3054;
+        this.f34998 = c3055;
     }
 
-    @Override // l.InterfaceC9935
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2926() {
-        InputMethodManager inputMethodManager = this.f37680;
-        if (inputMethodManager != null) {
-            inputMethodManager.showSoftInput(this.f37681.f12359, 0);
+    @Override // android.widget.AdapterView.OnItemSelectedListener
+    public final void onItemSelected(AdapterView adapterView, View view, int i, long j) {
+        InterfaceC22285 interfaceC22285 = (InterfaceC22285) this.f35001.getItem(i);
+        C13334 c13334 = this.f34999;
+        c13334.f42531 = interfaceC22285;
+        if (interfaceC22285 == null) {
+            onNothingSelected(adapterView);
+            return;
         }
+        c13334.m32914();
+        c13334.mo22489(i);
+        ApplicationC17729.f58258.edit().putString("text_translator_engine", interfaceC22285.getId()).apply();
     }
 
-    @Override // l.InterfaceC9935
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2927(int i, C4995 c4995) {
-        if (i != 66) {
-            return false;
-        }
-        ViewOnLayoutChangeListenerC3333 viewOnLayoutChangeListenerC3333 = this.f37681;
-        if (viewOnLayoutChangeListenerC3333.f12352.m35361()) {
-            return false;
-        }
-        if (!viewOnLayoutChangeListenerC3333.f12352.m35358(viewOnLayoutChangeListenerC3333.f12359)) {
-            return true;
-        }
-        viewOnLayoutChangeListenerC3333.finish();
-        return true;
-    }
-
-    @Override // l.InterfaceC9935
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo2930(int i, C4995 c4995) {
-        if (i != 109) {
-            return false;
-        }
-        ViewOnLayoutChangeListenerC3333 viewOnLayoutChangeListenerC3333 = this.f37681;
-        if (viewOnLayoutChangeListenerC3333.f12352.m35361()) {
-            return false;
-        }
-        if (!viewOnLayoutChangeListenerC3333.f12352.m35358(viewOnLayoutChangeListenerC3333.f12359)) {
-            return true;
-        }
-        viewOnLayoutChangeListenerC3333.finish();
-        return true;
-    }
-
-    @Override // l.InterfaceC9935
-    /* JADX INFO: renamed from: ۨ */
-    public final boolean mo2928() {
-        return this.f37681.f12357.m36982();
-    }
-
-    @Override // l.InterfaceC9935
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo2929() {
-        return this.f37681.f12357.m36981();
+    @Override // android.widget.AdapterView.OnItemSelectedListener
+    public final void onNothingSelected(AdapterView adapterView) {
+        C13334 c13334 = this.f34999;
+        c13334.f42531 = null;
+        C13334.m32907(this.f35000, "");
+        C13334.m32907(this.f34998, "");
+        c13334.mo22489(-1);
     }
 }

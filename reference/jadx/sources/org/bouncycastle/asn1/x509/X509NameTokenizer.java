@@ -1,6 +1,6 @@
 package org.bouncycastle.asn1.x509;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509NameTokenizer {
     public StringBuffer buf;
     public int index;

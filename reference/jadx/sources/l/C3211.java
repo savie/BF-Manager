@@ -1,67 +1,88 @@
 package l;
 
-import java.util.function.DoubleConsumer;
-import java.util.function.DoubleFunction;
-import java.util.function.DoublePredicate;
-import java.util.function.DoubleToIntFunction;
-import java.util.function.DoubleToLongFunction;
-import java.util.function.DoubleUnaryOperator;
+import java.util.function.Consumer;
+import java.util.function.LongBinaryOperator;
+import java.util.function.LongConsumer;
 
-/* JADX INFO: renamed from: l.ۗۨ۠, reason: contains not printable characters */
+/* JADX INFO: renamed from: l.ۗۛۗ, reason: contains not printable characters */
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3211 extends AbstractC13152 {
-    public final /* synthetic */ int b;
-    public final /* synthetic */ AbstractC5752 c;
+public final class C3211 implements InterfaceC18873, InterfaceC1148 {
+    public boolean a;
+    public long b;
+    public final /* synthetic */ LongBinaryOperator c;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ C3211(AbstractC5752 abstractC5752, InterfaceC19171 interfaceC19171, int i) {
-        super(interfaceC19171);
-        this.b = i;
-        this.c = abstractC5752;
+    @Override // l.InterfaceC15143, l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final /* synthetic */ void accept(double d) {
+        AbstractC13956.m();
+        throw null;
     }
 
-    @Override // l.AbstractC13152, l.InterfaceC19171
-    public void c(long j) {
-        switch (this.b) {
-            case 4:
-                this.a.c(-1L);
-                break;
-            default:
-                super.c(j);
-                break;
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void accept(int i) {
+        AbstractC13956.t();
+        throw null;
+    }
+
+    @Override // java.util.function.Consumer
+    /* JADX INFO: renamed from: accept */
+    public final /* bridge */ /* synthetic */ void n(Object obj) {
+        l((Long) obj);
+    }
+
+    public final /* synthetic */ Consumer andThen(Consumer consumer) {
+        return C12312.$default$andThen(this, consumer);
+    }
+
+    public final /* synthetic */ LongConsumer andThen(LongConsumer longConsumer) {
+        return C18279.$default$andThen(this, longConsumer);
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ void end() {
+    }
+
+    @Override // l.InterfaceC15143
+    public final /* synthetic */ boolean f() {
+        return false;
+    }
+
+    @Override // l.InterfaceC1148
+    public final /* synthetic */ void l(Long l2) {
+        AbstractC13956.r(this, l2);
+    }
+
+    public C3211(LongBinaryOperator longBinaryOperator) {
+        this.c = longBinaryOperator;
+    }
+
+    @Override // l.InterfaceC18873
+    public final void i(InterfaceC18873 interfaceC18873) {
+        C3211 c3211 = (C3211) interfaceC18873;
+        if (c3211.a) {
+            return;
+        }
+        accept(c3211.b);
+    }
+
+    @Override // l.InterfaceC15143
+    public final void c(long j) {
+        this.a = true;
+        this.b = 0L;
+    }
+
+    @Override // l.InterfaceC15143
+    public final void accept(long j) {
+        if (this.a) {
+            this.a = false;
+            this.b = j;
+        } else {
+            this.b = this.c.applyAsLong(this.b, j);
         }
     }
 
-    @Override // l.InterfaceC8857, l.InterfaceC19171
-    public final void accept(double d) {
-        switch (this.b) {
-            case 0:
-                this.a.accept(((DoubleFunction) ((C22699) this.c).t).apply(d));
-                return;
-            case 1:
-                this.a.accept(((DoubleUnaryOperator) ((C15644) this.c).t).applyAsDouble(d));
-                return;
-            case 2:
-                ((C9294) this.c).getClass();
-                DoubleToIntFunction doubleToIntFunction = null;
-                doubleToIntFunction.applyAsInt(d);
-                throw null;
-            case 3:
-                ((C6553) this.c).getClass();
-                DoubleToLongFunction doubleToLongFunction = null;
-                doubleToLongFunction.applyAsLong(d);
-                throw null;
-            case 4:
-                if (((DoublePredicate) ((C15644) this.c).t).test(d)) {
-                    this.a.accept(d);
-                    return;
-                }
-                return;
-            default:
-                ((DoubleConsumer) ((C15644) this.c).t).accept(d);
-                this.a.accept(d);
-                return;
-        }
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return this.a ? C19487.c : new C19487(this.b);
     }
 }

@@ -2,7 +2,7 @@ package net.engio.mbassy.listener;
 
 import net.engio.mbassy.subscription.SubscriptionContext;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Filters {
 
     public final class RejectSubtypes implements IMessageFilter {

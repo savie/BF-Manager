@@ -1,31 +1,27 @@
 package l;
 
-import java.util.Set;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.View;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۜܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۜۖ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 95QI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6829 extends C2160 implements Set, InterfaceC22810 {
-    public static final long serialVersionUID = 487447009682186044L;
-
-    @Override // java.util.Collection, java.util.Set
-    public final boolean equals(Object obj) {
-        boolean zEquals;
-        if (this == obj) {
-            return true;
-        }
-        synchronized (this.b) {
-            zEquals = this.a.equals(obj);
-        }
-        return zEquals;
+public final class C6829 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m19012(View view, Context context, int[] iArr, AttributeSet attributeSet, TypedArray typedArray, int i, int i2) {
+        view.saveAttributeDataForStyleable(context, iArr, attributeSet, typedArray, i, i2);
     }
 
-    @Override // java.util.Collection, java.util.Set
-    public final int hashCode() {
-        int iHashCode;
-        synchronized (this.b) {
-            iHashCode = this.a.hashCode();
-        }
-        return iHashCode;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static View.AccessibilityDelegate m19011(View view) {
+        return view.getAccessibilityDelegate();
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m19013(View view, List list) {
+        view.setSystemGestureExclusionRects(list);
     }
 }

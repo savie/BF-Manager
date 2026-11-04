@@ -7,8 +7,8 @@ import android.window.OnBackAnimationCallback;
 import android.window.OnBackInvokedCallback;
 import android.window.OnBackInvokedDispatcher;
 import com.google.android.material.slider.BasicLabelFormatter;
-import l.C0443;
-import l.C13638;
+import l.C17359;
+import l.C18584;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class MaterialBackOrchestrator {
@@ -81,14 +81,14 @@ public final class MaterialBackOrchestrator {
                 @Override // android.window.OnBackAnimationCallback
                 public void onBackStarted(BackEvent backEvent) {
                     if (Api34BackCallbackDelegate.this.isListeningForBackCallbacks()) {
-                        materialBackHandler.startBackProgress(new C0443(backEvent));
+                        materialBackHandler.startBackProgress(new C18584(backEvent));
                     }
                 }
 
                 @Override // android.window.OnBackAnimationCallback
                 public void onBackProgressed(BackEvent backEvent) {
                     if (Api34BackCallbackDelegate.this.isListeningForBackCallbacks()) {
-                        materialBackHandler.updateBackProgress(new C0443(backEvent));
+                        materialBackHandler.updateBackProgress(new C18584(backEvent));
                     }
                 }
 
@@ -138,7 +138,7 @@ public final class MaterialBackOrchestrator {
         }
 
         public OnBackInvokedCallback createOnBackInvokedCallback(final MaterialBackHandler materialBackHandler) {
-            C13638.requireNonNull(materialBackHandler);
+            C17359.requireNonNull(materialBackHandler);
             return new OnBackInvokedCallback() { // from class: com.google.android.material.motion.MaterialBackOrchestrator$Api33BackCallbackDelegate$$ExternalSyntheticLambda0
                 @Override // android.window.OnBackInvokedCallback
                 public final void onBackInvoked() {

@@ -1,133 +1,123 @@
 package l;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+/* JADX INFO: renamed from: l.ܳܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 64IT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C15424 {
 
-/* JADX INFO: renamed from: l.ܶᩴ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: X93U */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C15424 extends AbstractC23974 {
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public int f50266 = 0;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final EnumC11274 f50269;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC11169 f50270;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f50265 = 0;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC1332 f50271;
+    public int f50263 = Integer.MIN_VALUE;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final Method f50272;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f50262 = Integer.MIN_VALUE;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Method f50273;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f50268 = 0;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final Class f50274;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f50264 = 0;
 
-    public C15424(C21046 c21046, Class cls, InterfaceC1332 interfaceC1332, EnumC11274 enumC11274) {
-        if (InterfaceC1332.class.isAssignableFrom(cls) && !cls.isInstance(interfaceC1332)) {
-            throw new IllegalArgumentException("Bad messageDefaultInstance for ".concat(cls.getName()));
-        }
-        this.f50270 = c21046;
-        this.f50274 = cls;
-        this.f50271 = interfaceC1332;
-        if (InterfaceC9800.class.isAssignableFrom(cls)) {
-            this.f50272 = AbstractC18245.m42416(cls, "valueOf", C21857.class);
-            this.f50273 = AbstractC18245.m42416(cls, "getValueDescriptor", new Class[0]);
-        } else {
-            this.f50272 = null;
-            this.f50273 = null;
-        }
-        this.f50269 = enumC11274;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public boolean f50267 = false;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f50269 = false;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m36941() {
+        return this.f50266;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m36940() {
+        return this.f50265;
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int m36943() {
+        return this.f50267 ? this.f50265 : this.f50266;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m36898(C19741 c19741) {
-        if (this.f50270 != null) {
-            throw new IllegalStateException("Already initialized.");
+    public final int m36937() {
+        return this.f50267 ? this.f50266 : this.f50265;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m36942(int i, int i2) {
+        this.f50263 = i;
+        this.f50262 = i2;
+        this.f50269 = true;
+        if (this.f50267) {
+            if (i2 != Integer.MIN_VALUE) {
+                this.f50266 = i2;
+            }
+            if (i != Integer.MIN_VALUE) {
+                this.f50265 = i;
+                return;
+            }
+            return;
         }
-        this.f50270 = new C23185(c19741);
-    }
-
-    @Override // l.AbstractC23974
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C19741 mo36901() {
-        InterfaceC11169 interfaceC11169 = this.f50270;
-        if (interfaceC11169 == null) {
-            throw new IllegalStateException("getDescriptor() called before internalInit()");
+        if (i != Integer.MIN_VALUE) {
+            this.f50266 = i;
         }
-        return interfaceC11169.mo28101();
+        if (i2 != Integer.MIN_VALUE) {
+            this.f50265 = i2;
+        }
     }
 
-    @Override // l.AbstractC23974
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC1332 mo36899() {
-        return this.f50271;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final EnumC11274 m36895() {
-        return this.f50269;
-    }
-
-    @Override // l.AbstractC23974
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo36896(Object obj) {
-        C19741 c19741Mo36901 = mo36901();
-        if (c19741Mo36901.mo23408()) {
-            if (c19741Mo36901.m44913() != EnumC19035.MESSAGE && c19741Mo36901.m44913() != EnumC19035.ENUM) {
-                return obj;
-            }
-            ArrayList arrayList = new ArrayList();
-            Iterator it = ((List) obj).iterator();
-            while (it.hasNext()) {
-                arrayList.add(m36900(it.next()));
-            }
-            return arrayList;
+    public final void m36938(int i, int i2) {
+        this.f50269 = false;
+        if (i != Integer.MIN_VALUE) {
+            this.f50268 = i;
+            this.f50266 = i;
         }
-        return m36900(obj);
+        if (i2 != Integer.MIN_VALUE) {
+            this.f50264 = i2;
+            this.f50265 = i2;
+        }
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Object m36900(Object obj) {
-        int i = C16108.f52089[mo36901().m44913().ordinal()];
-        if (i != 1) {
-            if (i == 2) {
-                return AbstractC18245.m42415(this.f50272, (Object) null, obj);
-            }
-        } else if (!this.f50274.isInstance(obj)) {
-            return this.f50271.newBuilderForType().mergeFrom((InterfaceC1332) obj).build();
-        }
-        return obj;
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // l.AbstractC23974
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Object mo36897(C22169 c22169) {
-        C19741 c19741Mo36901 = mo36901();
-        boolean zMo23408 = c19741Mo36901.mo23408();
-        Method method = this.f50273;
-        if (zMo23408) {
-            if (c19741Mo36901.m44913() == EnumC19035.ENUM) {
-                ArrayList arrayList = new ArrayList();
-                for (Object objM42415 : (List) c22169) {
-                    if (C16108.f52089[mo36901().m44913().ordinal()] == 2) {
-                        objM42415 = AbstractC18245.m42415(method, objM42415, new Object[0]);
-                    }
-                    arrayList.add(objM42415);
-                }
-                return arrayList;
-            }
-        } else {
-            if (C16108.f52089[mo36901().m44913().ordinal()] == 2) {
-                return AbstractC18245.m42415(method, c22169, new Object[0]);
-            }
+    public final void m36939(boolean z) {
+        if (z == this.f50267) {
+            return;
         }
-        return c22169;
+        this.f50267 = z;
+        if (!this.f50269) {
+            this.f50266 = this.f50268;
+            this.f50265 = this.f50264;
+            return;
+        }
+        if (z) {
+            int i = this.f50262;
+            if (i == Integer.MIN_VALUE) {
+                i = this.f50268;
+            }
+            this.f50266 = i;
+            int i2 = this.f50263;
+            if (i2 == Integer.MIN_VALUE) {
+                i2 = this.f50264;
+            }
+            this.f50265 = i2;
+            return;
+        }
+        int i3 = this.f50263;
+        if (i3 == Integer.MIN_VALUE) {
+            i3 = this.f50268;
+        }
+        this.f50266 = i3;
+        int i4 = this.f50262;
+        if (i4 == Integer.MIN_VALUE) {
+            i4 = this.f50264;
+        }
+        this.f50265 = i4;
     }
 }

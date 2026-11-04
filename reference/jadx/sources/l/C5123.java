@@ -1,49 +1,31 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ۚۙۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Q7EB */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5123 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final EnumC13591 f17832;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f17833;
-
-    public C5123(int i, int i2) {
-        this.f17832 = EnumC13591.values()[i];
-        this.f17833 = i2;
+/* JADX INFO: renamed from: l.ۙ᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C5123 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    public C5123(EnumC13591 enumC13591, int i) {
-        this.f17832 = enumC13591;
-        this.f17833 = i;
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        C0407 c0407 = C5233.f18438;
+        return true;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m14275() {
-        return this.f17832.m33214();
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m14274() {
-        return this.f17833;
-    }
-
-    public final String toString() {
-        String strM30911;
-        StringBuilder sb = new StringBuilder();
-        EnumC13591 enumC13591 = this.f17832;
-        sb.append(enumC13591.m33213());
-        if (enumC13591.f44819 == 3) {
-            strM30911 = C12441.m30911(this.f17833, l.d, new StringBuilder("{"));
-        } else {
-            strM30911 = "";
-        }
-        sb.append(strM30911);
-        return sb.toString();
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

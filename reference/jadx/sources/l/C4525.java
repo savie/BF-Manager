@@ -1,100 +1,124 @@
 package l;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import org.bouncycastle.asn1.util.ASN1Dump;
+import android.app.AppOpsManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.Settings;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashSet;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ۙ۠ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2B8B */
+/* JADX INFO: renamed from: l.ۙ֡, reason: contains not printable characters */
+/* JADX INFO: compiled from: G3SY */
 /* JADX INFO: loaded from: classes2.dex */
 public final class C4525 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f16107;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static ServiceConnectionC7287 f16111;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static String f16114;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC6910 f16108;
+    public final Context f16115;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String f16109;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final NotificationManager f16116;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final AbstractC6910 f16110;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final Object f16113 = new Object();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Map f16111;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static HashSet f16110 = new HashSet();
 
-    public C4525() {
-        throw null;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final Object f16112 = new Object();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C4525 m14247(Context context) {
+        return new C4525(context);
     }
 
-    public C4525(String str, String str2, HashMap map, HashMap map2, Map map3) {
-        this.f16109 = str;
-        this.f16107 = str2;
-        this.f16110 = AbstractC6910.copyOf((Map) map);
-        this.f16108 = AbstractC6910.copyOf((Map) map2);
-        this.f16111 = map3;
+    public C4525(Context context) {
+        this.f16115 = context;
+        this.f16116 = (NotificationManager) context.getSystemService("notification");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m14251() {
+        this.f16116.cancel(null, 1006);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m12640(StringWriter stringWriter) throws IOException {
-        stringWriter.append((CharSequence) this.f16107);
-        stringWriter.append(" -> ");
-        stringWriter.append((CharSequence) this.f16109);
-        stringWriter.append(":\n");
-        AbstractC0477 it = this.f16108.values().iterator();
-        while (it.hasNext()) {
-            C22165 c22165 = (C22165) it.next();
-            if (!c22165.m49176()) {
-                stringWriter.append(ASN1Dump.TAB).append((CharSequence) c22165.toString()).append('\n');
+    public final void m14249(Notification notification) {
+        NotificationManager notificationManager = this.f16116;
+        Bundle bundle = notification.extras;
+        if (bundle != null && bundle.getBoolean("android.support.useSideChannel")) {
+            C9523 c9523 = new C9523(this.f16115.getPackageName(), notification);
+            synchronized (f16112) {
+                if (f16111 == null) {
+                    f16111 = new ServiceConnectionC7287(this.f16115.getApplicationContext());
+                }
+                f16111.m19951(c9523);
             }
+            notificationManager.cancel(null, 1006);
+            return;
         }
-        AbstractC0477 it2 = this.f16110.values().iterator();
-        while (it2.hasNext()) {
-            C22165 c22166 = (C22165) it2.next();
-            if (!c22166.m49176()) {
-                stringWriter.append(ASN1Dump.TAB).append((CharSequence) c22166.toString()).append('\n');
-            }
-        }
-        ArrayList arrayList = new ArrayList();
-        Iterator it3 = this.f16111.values().iterator();
-        while (it3.hasNext()) {
-            arrayList.addAll(((C3423) it3.next()).f12633);
-        }
-        Collections.sort(arrayList, C7618.comparingInt(new C14714()));
-        Iterator it4 = arrayList.iterator();
-        while (it4.hasNext()) {
-            stringWriter.append(ASN1Dump.TAB).append((CharSequence) ((C9775) it4.next()).toString()).append('\n');
-        }
+        notificationManager.notify(null, 1006, notification);
     }
 
-    public final String toString() {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m14250() {
+        if (Build.VERSION.SDK_INT >= 24) {
+            return C1321.m4847(this.f16116);
+        }
+        Context context = this.f16115;
+        AppOpsManager appOpsManager = (AppOpsManager) context.getSystemService("appops");
+        ApplicationInfo applicationInfo = context.getApplicationInfo();
+        String packageName = context.getApplicationContext().getPackageName();
+        int i = applicationInfo.uid;
         try {
-            StringWriter stringWriter = new StringWriter();
-            m12640(stringWriter);
-            return stringWriter.toString();
-        } catch (IOException e) {
-            return e.toString();
-        }
-    }
-
-    public final boolean equals(Object obj) {
-        if (this == obj) {
+            Class<?> cls = Class.forName(AppOpsManager.class.getName());
+            Class<?> cls2 = Integer.TYPE;
+            Method method = cls.getMethod("checkOpNoThrow", cls2, cls2, String.class);
+            Integer num = (Integer) cls.getDeclaredField("OP_POST_NOTIFICATION").get(Integer.class);
+            num.intValue();
+            return ((Integer) method.invoke(appOpsManager, num, Integer.valueOf(i), packageName)).intValue() == 0;
+        } catch (ClassNotFoundException | IllegalAccessException | NoSuchFieldException | NoSuchMethodException | RuntimeException | InvocationTargetException unused) {
             return true;
         }
-        if (!(obj instanceof C4525)) {
-            return false;
-        }
-        C4525 c4525 = (C4525) obj;
-        return this.f16107.equals(c4525.f16107) && this.f16109.equals(c4525.f16109) && this.f16110.equals(c4525.f16110) && this.f16108.equals(c4525.f16108) && this.f16111.equals(c4525.f16111);
     }
 
-    public final int hashCode() {
-        return this.f16111.hashCode() + ((this.f16108.hashCode() + ((this.f16110.hashCode() + C13958.m33812(this.f16107.hashCode() * 31, 31, this.f16109)) * 31)) * 31);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static Set m14248(Context context) {
+        HashSet hashSet;
+        String string = Settings.Secure.getString(context.getContentResolver(), "enabled_notification_listeners");
+        synchronized (f16113) {
+            if (string != null) {
+                if (!string.equals(f16114)) {
+                    String[] strArrSplit = string.split(":", -1);
+                    HashSet hashSet2 = new HashSet(strArrSplit.length);
+                    for (String str : strArrSplit) {
+                        ComponentName componentNameUnflattenFromString = ComponentName.unflattenFromString(str);
+                        if (componentNameUnflattenFromString != null) {
+                            hashSet2.add(componentNameUnflattenFromString.getPackageName());
+                        }
+                    }
+                    f16110 = hashSet2;
+                    f16114 = string;
+                }
+                hashSet = f16110;
+            } else {
+                hashSet = f16110;
+            }
+            throw th;
+        }
+        return hashSet;
     }
 }

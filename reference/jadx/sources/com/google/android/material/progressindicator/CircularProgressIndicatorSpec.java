@@ -5,9 +5,9 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
-import l.C0976;
-import l.C2387;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C17609;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class CircularProgressIndicatorSpec extends BaseProgressIndicatorSpec {
@@ -16,7 +16,7 @@ public final class CircularProgressIndicatorSpec extends BaseProgressIndicatorSp
     public int indicatorSize;
 
     public CircularProgressIndicatorSpec(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f9216);
+        this(context, attributeSet, C11642.f36533);
     }
 
     public CircularProgressIndicatorSpec(Context context, AttributeSet attributeSet, int i) {
@@ -25,12 +25,12 @@ public final class CircularProgressIndicatorSpec extends BaseProgressIndicatorSp
 
     public CircularProgressIndicatorSpec(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        int dimensionPixelSize = context.getResources().getDimensionPixelSize(C0976.f4115);
-        int dimensionPixelSize2 = context.getResources().getDimensionPixelSize(C0976.f4539);
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C8033.f26948, i, i2, new int[0]);
-        this.indicatorSize = Math.max(MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C8033.f27107, dimensionPixelSize), this.trackThickness * 2);
-        this.indicatorInset = MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C8033.f27001, dimensionPixelSize2);
-        this.indicatorDirection = typedArrayObtainStyledAttributes.getInt(C8033.f27798, 0);
+        int dimensionPixelSize = context.getResources().getDimensionPixelSize(C17609.f57527);
+        int dimensionPixelSize2 = context.getResources().getDimensionPixelSize(C17609.f57693);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C14625.f46310, i, i2, new int[0]);
+        this.indicatorSize = Math.max(MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C14625.f46523, dimensionPixelSize), this.trackThickness * 2);
+        this.indicatorInset = MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C14625.f46948, dimensionPixelSize2);
+        this.indicatorDirection = typedArrayObtainStyledAttributes.getInt(C14625.f47533, 0);
         typedArrayObtainStyledAttributes.recycle();
         validateSpec();
     }

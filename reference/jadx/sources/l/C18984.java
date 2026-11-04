@@ -1,31 +1,36 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ᩶ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 0BJO */
+import java.io.IOException;
+
+/* JADX INFO: renamed from: l.ᩳۢۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 26KB */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18984 extends AbstractC16162 {
+public final class C18984 extends C0596 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C23944 f61446;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public volatile boolean f61530;
 
-    public C18984(AbstractC4166 abstractC4166) {
-        this.f52228 = abstractC4166;
-        this.f61446 = new C23944(abstractC4166);
-    }
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f61531;
 
-    @Override // l.AbstractC4166
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2407(C0617 c0617, C0617 c0618) {
-        for (int i = 0; i < c0618.mo2831(); i++) {
-            AbstractC14730 abstractC14730M35261 = c0618.m35261(i);
-            if ((abstractC14730M35261 instanceof C0617) && this.f61446.m52779(c0618, (C0617) abstractC14730M35261) != null) {
-                return true;
-            }
+    @Override // l.C0596, java.io.Closeable, java.lang.AutoCloseable
+    public final synchronized void close() {
+        if (!this.f61531) {
+            this.f61531 = true;
+            super.close();
         }
-        return false;
     }
 
-    public final String toString() {
-        return String.format(":has(%s)", this.f52228);
+    @Override // l.C0596, android.media.MediaDataSource
+    public final synchronized int readAt(long j, byte[] bArr, int i, int i2) {
+        try {
+            if (this.f61531) {
+                throw new IOException("Audio source is closed");
+            }
+        } catch (IOException e) {
+            this.f61530 = true;
+            throw e;
+        }
+        return super.readAt(j, bArr, i, i2);
     }
 }

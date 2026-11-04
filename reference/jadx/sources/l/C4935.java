@@ -1,28 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙ᩹ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y2SQ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4935 implements InterfaceC2196 {
+import com.google.android.material.badge.BadgeDrawable;
+import java.nio.charset.Charset;
+import java.util.regex.Pattern;
+
+/* JADX INFO: renamed from: l.ۙ۬᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6JU */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4935 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11992 f17266;
+    public static final Pattern f17209 = Pattern.compile("\\s*(\\S+?) # Group 1: parameter name\n\\s*=\\s* # Match equals sign\n(?: # non-capturing group of options\n   '( (?: [^'\\\\] | \\\\. )* )' # Group 2: single-quoted\n | \"( (?: [^\"\\\\] | \\\\. )*  )\" # Group 3: double-quoted\n | ( [^'\"][^;\\s]* ) # Group 4: un-quoted parameter\n)\\s*;? # Optional end semicolon", 4);
 
-    @Override // l.InterfaceC2196
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1014(Object obj) {
-        InterfaceC7239 interfaceC7239 = (InterfaceC7239) obj;
-        int iMo1599 = interfaceC7239.mo1599();
-        if (iMo1599 == 3) {
-            return new C3026(this, (InterfaceC12179) interfaceC7239);
-        }
-        if (iMo1599 != 5) {
-            return iMo1599 != 6 ? interfaceC7239 : new C9378(this, (InterfaceC0183) interfaceC7239);
-        }
-        return new C1615(this, (InterfaceC20645) interfaceC7239);
+    /* JADX WARN: Code duplicated, block: B:18:0x004f A[PHI: r9
+      0x004f: PHI (r9v7 java.lang.String) = (r9v4 java.lang.String), (r9v9 java.lang.String) binds: [B:22:0x005e, B:16:0x004c] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:23:0x0060  */
+    /* JADX WARN: Code restructure failed: missing block: B:59:0x00d8, code lost:
+    
+        if (r14.equalsIgnoreCase(r15) == false) goto L62;
+     */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public static java.lang.String m15144(java.lang.String r13, java.lang.String r14, java.lang.String r15) {
+        /*
+            Method dump skipped, instruction units count: 265
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: l.C4935.m15144(java.lang.String, java.lang.String, java.lang.String):java.lang.String");
     }
 
-    public C4935(C11992 c11992) {
-        this.f17266 = c11992;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m15143(String str, String str2) {
+        Charset charsetForName = Charset.forName(str2);
+        StringBuilder sb = new StringBuilder();
+        for (byte b : charsetForName.encode(BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX).array()) {
+            sb.append(String.format("%02x", Byte.valueOf(b)));
+        }
+        return str.replaceAll("\\+", sb.toString());
     }
 }

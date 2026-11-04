@@ -20,7 +20,7 @@ import org.bouncycastle.jcajce.spec.DHDomainParameterSpec;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.Integers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyPairGeneratorSpi extends KeyPairGenerator {
     public DHBasicKeyPairGenerator engine;
     public boolean initialised;

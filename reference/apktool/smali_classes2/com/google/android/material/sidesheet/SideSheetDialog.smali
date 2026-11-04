@@ -14,12 +14,12 @@
     .locals 1
 
     .line 41
-    sget v0, Ll/ۖ۟ܶ;->֡۫:I
+    sget v0, Ll/ۧ۬ܺ;->ܿ۟:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetDialog;->SIDE_SHEET_DIALOG_THEME_ATTR:I
 
     .line 42
-    sget v0, Ll/ᩴ۟ܶ;->ᩴ۟:I
+    sget v0, Ll/ۘ۬ܺ;->᩹᩺:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetDialog;->SIDE_SHEET_DIALOG_DEFAULT_THEME_RES:I
 
@@ -129,7 +129,7 @@
     .locals 1
 
     .line 79
-    sget v0, Ll/ۘ۟ܶ;->ۜۚ:I
+    sget v0, Ll/᩹۬ܺ;->ۧᩴ:I
 
     return v0
 .end method
@@ -138,7 +138,7 @@
     .locals 1
 
     .line 73
-    sget v0, Ll/ܶ۟ܶ;->᩵ۙ:I
+    sget v0, Ll/ۨ۬ܺ;->᩵ۙ:I
 
     return v0
 .end method

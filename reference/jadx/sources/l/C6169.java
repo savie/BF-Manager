@@ -1,15 +1,28 @@
 package l;
 
-import bin.mt.plus.Main;
+import java.util.function.Predicate;
 
-/* JADX INFO: renamed from: l.ۛܺ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 164Z */
+/* JADX INFO: renamed from: l.ۛۙ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: 77E4 */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C6169 implements InterfaceC17295 {
-    @Override // l.InterfaceC17295
-    public final void accept(Object obj) {
-        Main main = (Main) obj;
-        main.m134();
-        ServiceC12465.m30963(main);
+public final /* synthetic */ class C6169 implements Predicate {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        return C19025.$default$negate(this);
+    }
+
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        return ((C23497) obj).m35262().m32607(EnumC13127.f41967, EnumC13127.f41972);
     }
 }

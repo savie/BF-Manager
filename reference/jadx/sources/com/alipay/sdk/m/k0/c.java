@@ -5,7 +5,7 @@ package com.alipay.sdk.m.k0;
 public class c extends a {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f77908l = 1;
+    public static final int f82024l = 1;
     public static final int m = 2;
     public static final int n = 3;
     public static final String o = "APPKEY_ERROR";

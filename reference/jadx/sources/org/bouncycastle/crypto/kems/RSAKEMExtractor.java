@@ -9,7 +9,7 @@ import org.bouncycastle.crypto.constraints.ConstraintUtils;
 import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.RSAKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKEMExtractor implements EncapsulatedSecretExtractor {
     public DerivationFunction kdf;
     public final int keyLen;

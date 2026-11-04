@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.bouncycastle.crypto.AlphabetMapper;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BasicAlphabetMapper implements AlphabetMapper {
     public Map charMap;
     public Map indexMap;

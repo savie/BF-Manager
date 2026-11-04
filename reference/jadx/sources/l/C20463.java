@@ -1,62 +1,63 @@
 package l;
 
-import java.util.BitSet;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.᩶᩹ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 5BAJ */
+/* JADX INFO: renamed from: l.᩵ۡܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W9OU */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20463 extends AbstractC14322 {
+public class C20463 extends IOException {
+    public static final long serialVersionUID = -1616151763072450476L;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public InterfaceC18775 f65564;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C20463 f66398 = new C20463();
-
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3096() {
-        return 1;
+    public final void m46972(InterfaceC18775 interfaceC18775) {
+        this.f65564 = interfaceC18775;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo3097(AbstractC10794 abstractC10794) {
-        return abstractC10794.m38695().m15275get(0).m38392() + ", " + AbstractC14322.m34561((AbstractC10377) ((C15733) abstractC10794).m37458());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final IOException m46971() {
+        return getCause() instanceof IOException ? (IOException) getCause() : this;
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final String mo3100(AbstractC10794 abstractC10794) {
-        return AbstractC14322.m34562((AbstractC10377) ((C15733) abstractC10794).m37458(), 4);
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static C20463 m46963() {
+        return new C20463("While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either that the input has been truncated or that an embedded message misreported its own length.");
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ܰ */
-    public final boolean mo3101(AbstractC16438 abstractC16438) {
-        int iMo21658;
-        C0727 c0727M38695 = abstractC16438.m38695();
-        if ((abstractC16438 instanceof C15733) && c0727M38695.size() == 1 && AbstractC14322.m34575(c0727M38695.m15275get(0).m38400())) {
-            AbstractC9901 abstractC9901M37458 = ((C15733) abstractC16438).m37458();
-            if (abstractC9901M37458 instanceof AbstractC10377) {
-                AbstractC10377 abstractC10377 = (AbstractC10377) abstractC9901M37458;
-                if (abstractC10377.mo21657() && (iMo21658 = abstractC10377.mo21658()) >= -8 && iMo21658 <= 7) {
-                    return true;
-                }
-            }
-        }
-        return false;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static C20463 m46966() {
+        return new C20463("CodedInputStream encountered an embedded string or message which claimed to have negative size.");
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final BitSet mo3098(AbstractC16438 abstractC16438) {
-        C0727 c0727M38695 = abstractC16438.m38695();
-        BitSet bitSet = new BitSet(1);
-        bitSet.set(0, AbstractC14322.m34575(c0727M38695.m15275get(0).m38400()));
-        return bitSet;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static C20463 m46967() {
+        return new C20463("CodedInputStream encountered a malformed varint.");
     }
 
-    @Override // l.AbstractC14322
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3099(C2718 c2718, AbstractC10794 abstractC10794) {
-        c2718.m8297(AbstractC14322.m34565(abstractC10794, AbstractC14322.m34573(abstractC10794.m38695().m15275get(0).m38400(), ((AbstractC10377) ((C15733) abstractC10794).m37458()).mo21658() & 15)));
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static C20463 m46965() {
+        return new C20463("Protocol message contained an invalid tag (zero).");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static C20463 m46969() {
+        return new C20463("Protocol message end-group tag did not match expected tag.");
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static C3309 m46968() {
+        return new C3309("Protocol message tag had invalid wire type.");
+    }
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static C20463 m46964() {
+        return new C20463("Failed to parse the message.");
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static C20463 m46970() {
+        return new C20463("Protocol message had invalid UTF-8.");
     }
 }

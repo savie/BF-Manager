@@ -1,103 +1,96 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorSet;
-import android.os.SystemClock;
-import android.util.SparseArray;
-import android.view.View;
-import android.widget.GridView;
+/* JADX INFO: renamed from: l.ܽ֨ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VIV4 */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C17227 extends AbstractC16481 {
 
-/* JADX INFO: renamed from: l.ܿ۠ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 64W8 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17227 {
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final C18959 f56130;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C10878 f54894;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final SparseArray f54895 = new SparseArray();
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f54901 = 50;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f54896 = 10;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f54900 = 200;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public boolean f54899 = true;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public long f54898 = -1;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f54897 = -1;
-
-    public C17227(C10878 c10878) {
-        this.f54894 = c10878;
+    public C17227(C18959 c18959) {
+        C6041 c6041M44027 = c18959.m44027();
+        this.f976 = c6041M44027 != null ? c6041M44027.getType() : AbstractC1566.f5420;
+        this.f56130 = c18959;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40165() {
-        int i = 0;
-        while (true) {
-            SparseArray sparseArray = this.f54895;
-            if (i < sparseArray.size()) {
-                ((Animator) sparseArray.get(sparseArray.keyAt(i))).end();
-                i++;
-            } else {
-                sparseArray.clear();
-                this.f54897 = -1;
-                this.f54898 = -1L;
-                this.f54899 = true;
-                return;
-            }
-        }
+    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
+    public final C18959 m40461() {
+        return this.f56130;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40167(View view) {
-        int iHashCode = view.hashCode();
-        SparseArray sparseArray = this.f54895;
-        Animator animator = (Animator) sparseArray.get(iHashCode);
-        if (animator != null) {
-            animator.end();
-            sparseArray.remove(iHashCode);
-        }
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public final C18959 m40462() {
+        C18959 c18959Mo4072 = this.f56130.mo4072();
+        c18959Mo4072.m39418(EnumC1763.WRAPPED);
+        return c18959Mo4072;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m40166(int i, View view, Animator[] animatorArr) {
-        if (this.f54899) {
-            if (this.f54897 == -1) {
-                this.f54897 = i;
-            }
-            if (this.f54898 == -1) {
-                this.f54898 = SystemClock.uptimeMillis();
-            }
-            view.setAlpha(0.0f);
-            AnimatorSet animatorSet = new AnimatorSet();
-            animatorSet.playTogether(animatorArr);
-            C10878 c10878 = this.f54894;
-            int iM27249 = c10878.m27249() - c10878.m27247();
-            int i2 = this.f54897;
-            int i3 = (i - 1) - i2;
-            int i4 = iM27249 + 1;
-            int iMax = this.f54896;
-            if (i4 < i3) {
-                if (c10878.m27248() instanceof GridView) {
-                    iMax += (i % ((GridView) c10878.m27248()).getNumColumns()) * iMax;
-                }
-            } else {
-                iMax = Math.max(0, (int) ((-SystemClock.uptimeMillis()) + this.f54898 + ((long) this.f54901) + ((long) ((i - i2) * iMax))));
-            }
-            animatorSet.setStartDelay(iMax);
-            animatorSet.setDuration(this.f54900);
-            animatorSet.start();
-            this.f54895.put(view.hashCode(), animatorSet);
+    @Override // l.AbstractC16481
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo39114(C18959 c18959) {
+        if (c18959 == this.f56130) {
+            throw new C8597("Can't wrap instruction info itself: " + c18959);
         }
+        this.f53443 = c18959;
+    }
+
+    public final int hashCode() {
+        return this.f56130.hashCode();
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof C17227)) {
+            return false;
+        }
+        C18959 c18959 = ((C17227) obj).f56130;
+        C18959 c189510 = this.f56130;
+        if (!c189510.mo4075(c18959)) {
+            return false;
+        }
+        int iM44039 = c189510.m44039();
+        for (int i = 0; i < iM44039; i++) {
+            if (!c189510.mo44035(i).equals(c18959.mo44035(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override // l.AbstractC16678
+    /* JADX INFO: renamed from: ֨ */
+    public final String mo17521() {
+        C18959 c18959 = this.f56130;
+        if (c18959.getType() == EnumC24203.CONST_STR) {
+            return "(\"" + ((C5557) c18959).getString() + "\")";
+        }
+        return "(wrap " + this.f976 + ":" + c18959.getType() + ')';
+    }
+
+    public final String toString() {
+        C18959 c18959 = this.f56130;
+        if (c18959.getType() == EnumC24203.CONST_STR) {
+            return "(\"" + ((C5557) c18959).getString() + "\")";
+        }
+        return "(wrap " + this.f976 + ":" + c18959 + ')';
+    }
+
+    @Override // l.AbstractC16481
+    /* JADX INFO: renamed from: ۠ */
+    public final AbstractC16481 mo17528() {
+        C18959 c18959 = this.f56130;
+        C18959 c18959Mo4072 = c18959.mo4072();
+        if (c18959.m44027() != null && c18959.mo17865(EnumC1763.FORCE_ASSIGN_INLINE)) {
+            c18959Mo4072.m44031(c18959.m44027().mo17528());
+            c18959.mo17866(EnumC1763.DONT_GENERATE);
+        }
+        C17227 c17227 = new C17227(c18959Mo4072);
+        c17227.f976 = this.f976;
+        c17227.m39414(this);
+        c17227.mo39114(this.f53443);
+        return c17227;
     }
 }

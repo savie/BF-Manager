@@ -1,180 +1,160 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۢ᩻᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: N7JL */
-/* JADX INFO: loaded from: classes3.dex */
-public class C9927 {
+/* JADX INFO: renamed from: l.ۢۛۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9927 implements InterfaceC2885 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean f33907;
+    public final int[] f31858;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m25125(int i) {
-        int i2 = i * (-1640531527);
-        return i2 ^ (i2 >>> 16);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int[] f31859;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int[] f31860;
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
+    }
+
+    public C9927(int[] iArr, int[] iArr2, int[] iArr3) {
+        this.f31859 = iArr;
+        this.f31858 = iArr2;
+        this.f31860 = iArr3;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m25129(byte[] bArr) {
-        if (bArr.length < 18) {
-            return false;
-        }
-        int i = bArr[1] & 255;
-        int i2 = bArr[2] & 255;
-        int i3 = ((bArr[6] & 255) << 8) | (bArr[5] & 255);
-        int i4 = bArr[7] & 255;
-        int i5 = ((bArr[13] & 255) << 8) | (bArr[12] & 255);
-        int i6 = ((bArr[15] & 255) << 8) | (bArr[14] & 255);
-        int i7 = bArr[16] & 255;
-        if (i != 0 && i != 1) {
-            return false;
-        }
-        if ((i2 != 1 && i2 != 2 && i2 != 3 && i2 != 9 && i2 != 10 && i2 != 11) || i5 == 0 || i6 == 0) {
-            return false;
-        }
-        if (i2 == 1 || i2 == 9) {
-            if (i != 1) {
-                return false;
-            }
-        } else if (i != 0) {
-            return false;
-        }
-        if (i == 1) {
-            if (i3 <= 0) {
-                return false;
-            }
-            if (i4 != 15 && i4 != 16 && i4 != 24 && i4 != 32) {
-                return false;
-            }
-        }
-        if (i2 == 1 || i2 == 9) {
-            if (i7 != 8 && i7 != 16) {
-                return false;
-            }
-        } else if (i2 == 2 || i2 == 10) {
-            if (i7 != 15 && i7 != 16 && i7 != 24 && i7 != 32) {
-                return false;
-            }
+    public static InterfaceC2885 m25760(ArrayList arrayList, boolean z) {
+        int[] iArr;
+        int iMax = 0;
+        if (arrayList.size() == 1) {
+            int[] iArr2 = (int[]) arrayList.get(0);
+            iArr = new int[]{iArr2[0], iArr2[1]};
         } else {
-            if (i2 != 3 && i2 != 11) {
-                return false;
-            }
-            if (i7 != 8 && i7 != 16) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m25128() {
-        try {
-            Field declaredField = C16631.class.getDeclaredField("ۙ");
-            Field declaredField2 = C16631.class.getDeclaredField("ܰ");
-            declaredField.setAccessible(true);
-            declaredField2.setAccessible(true);
-            Object obj = declaredField.get(null);
-            C13638.requireNonNull(obj);
-            Object obj2 = declaredField2.get(null);
-            C13638.requireNonNull(obj2);
-            Map map = (Map) obj2;
-            synchronized (obj) {
-                map.clear();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static AbstractC14676 m25132(C23143 c23143) {
-        try {
-            int i = c23143.read();
-            byte b = (byte) i;
-            EnumC1974 enumC1974M6348 = EnumC1974.m6348(b);
-            EnumC19615 enumC19615M44701 = EnumC19615.m44701(b);
-            int i2 = i & 31;
-            if (i2 <= 30) {
-                return AbstractC14676.m35208(enumC1974M6348, i2).m35210(enumC19615M44701);
-            }
-            int i3 = c23143.read();
-            if ((i3 & 127) == 0) {
-                throw new C21731("corrupted stream - invalid high tag number found");
-            }
-            int i4 = 0;
-            while (i3 >= 0 && (i3 & 128) != 0) {
-                i4 = ((i3 & 127) | i4) << 7;
-                i3 = c23143.read();
-            }
-            if (i3 < 0) {
-                throw new C21731("EOF found inside tag value.");
-            }
-            return AbstractC14676.m35208(enumC1974M6348, (i3 & 127) | i4).m35210(enumC19615M44701);
-        } catch (IOException e) {
-            throw new C21731("Unable to parse ASN.1 tag", e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m25126(C23143 c23143) {
-        try {
-            int i = c23143.read();
-            if (i <= 127) {
-                return i;
-            }
-            int i2 = i & 127;
-            int i3 = 0;
-            for (int i4 = 0; i4 < i2; i4++) {
-                i3 = (i3 << 8) + c23143.read();
-            }
-            if (i3 != 0) {
-                return i3;
-            }
-            throw new C21731("The indefinite length form is not (yet) supported!");
-        } catch (IOException e) {
-            throw new C21731("Unable to read the length of the ASN.1 object.", e);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static byte[] m25130(int i, C23143 c23143) {
-        try {
-            byte[] bArr = new byte[i];
-            int i2 = 0;
-            while (i2 < i) {
-                int i3 = c23143.read(bArr, i2, i - i2);
-                if (i3 == -1) {
-                    break;
+            ArrayList arrayList2 = new ArrayList(arrayList);
+            C12884.sort(arrayList2, new C18878());
+            ArrayList arrayList3 = new ArrayList();
+            int[] iArr3 = (int[]) ((int[]) arrayList2.get(0)).clone();
+            for (int i = 1; i < arrayList2.size(); i++) {
+                int[] iArr4 = (int[]) arrayList2.get(i);
+                int i2 = iArr4[0];
+                int i3 = iArr3[1];
+                if (i2 <= i3 + 1) {
+                    iArr3[1] = Math.max(i3, iArr4[1]);
+                } else {
+                    arrayList3.add(iArr3);
+                    iArr3 = (int[]) iArr4.clone();
                 }
-                i2 += i3;
             }
-            return bArr;
-        } catch (IOException e) {
-            throw new C21731("Unable to read the value of the ASN.1 object", e);
+            arrayList3.add(iArr3);
+            int[] iArr5 = new int[arrayList3.size() * 2];
+            for (int i4 = 0; i4 < arrayList3.size(); i4++) {
+                int i5 = i4 * 2;
+                iArr5[i5] = ((int[]) arrayList3.get(i4))[0];
+                iArr5[i5 + 1] = ((int[]) arrayList3.get(i4))[1];
+            }
+            iArr = iArr5;
         }
+        for (int i6 = 1; i6 < iArr.length; i6 += 2) {
+            iMax = Math.max(iMax, iArr[i6]);
+        }
+        int[] iArrM25763 = m25763(C5233.f18436, iArr);
+        int[] iArrM25764 = iMax >= 65536 ? m25763(C3962.f13544, iArr) : null;
+        if (iMax < 65536 && !z && !C24100.f77914) {
+            return new C0233(iArr, iArrM25763);
+        }
+        return new C9927(iArr, iArrM25763, iArrM25764);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m25127(long j) {
-        return 1 << (64 - Long.numberOfLeadingZeros(j - 1));
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m25131(float f, int i) {
-        return Math.min((int) Math.ceil(((double) i) * ((double) f)), i - 1);
+    public static int[] m25763(int[] iArr, int[] iArr2) {
+        int[] iArrCopyOf = new int[64];
+        int i = 0;
+        for (int i2 : iArr) {
+            if (!m25761(i2, iArr2)) {
+                int upperCase = Character.toUpperCase(i2);
+                if (m25761(upperCase, iArr2) || m25761(Character.toLowerCase(upperCase), iArr2)) {
+                    if (i == iArrCopyOf.length) {
+                        iArrCopyOf = Arrays.copyOf(iArrCopyOf, i * 2);
+                    }
+                    iArrCopyOf[i] = i2;
+                    i++;
+                }
+            }
+        }
+        return Arrays.copyOf(iArrCopyOf, i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m25124(float f, int i) {
-        long jMax = Math.max(2L, m25127((long) Math.ceil(((double) i) / ((double) f))));
-        if (jMax <= 1073741824) {
-            return (int) jMax;
+    public static boolean m25761(int i, int[] iArr) {
+        int length = (iArr.length / 2) - 1;
+        int i2 = 0;
+        while (i2 <= length) {
+            int i3 = (i2 + length) >>> 1;
+            int i4 = i3 * 2;
+            int i5 = iArr[i4];
+            int i6 = iArr[i4 + 1];
+            if (i < i5) {
+                length = i3 - 1;
+            } else {
+                if (i <= i6) {
+                    return true;
+                }
+                i2 = i3 + 1;
+            }
         }
-        throw new IllegalArgumentException("Too large (" + i + " expected elements with load factor " + f + MotionUtils.EASING_TYPE_FORMAT_END);
+        return false;
+    }
+
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        int[] iArr = this.f31859;
+        if (m25761(i, iArr)) {
+            return true;
+        }
+        if (i < 65536) {
+            return m25762(this.f31858, i);
+        }
+        int[] iArr2 = this.f31860;
+        if (iArr2 != null) {
+            return m25762(iArr2, i);
+        }
+        int upperCase = Character.toUpperCase(i);
+        return m25761(upperCase, iArr) || m25761(Character.toLowerCase(upperCase), iArr);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m25762(int[] iArr, int i) {
+        if (iArr.length > 16) {
+            return Arrays.binarySearch(iArr, i) >= 0;
+        }
+        for (int i2 : iArr) {
+            if (i2 == i) {
+                return true;
+            }
+            if (i2 > i) {
+                return false;
+            }
+        }
+        return false;
     }
 }

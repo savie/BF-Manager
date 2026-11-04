@@ -1,45 +1,129 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/* JADX INFO: renamed from: l.᩶۫ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 690O */
+/* JADX INFO: renamed from: l.ᩴ᩻ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A4QP */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20173 implements InterfaceC16294 {
+public final class C20173 implements Cloneable {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6061 f65487;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public long[] f64789;
 
-    public C20173(C6061 c6061) {
-        this.f65487 = c6061;
+    public C20173(long[] jArr) {
+        this.f64789 = jArr;
     }
 
-    /* JADX WARN: Code duplicated, block: B:12:0x0036  */
-    @Override // l.InterfaceC16294
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2175(InterfaceC12061 interfaceC12061, AbstractC19367 abstractC19367) {
-        C16128 c16128 = (C16128) abstractC19367;
-        int length = interfaceC12061.length();
-        interfaceC12061.mo29972(c16128);
-        C6061 c6061 = this.f65487;
-        int i = 2;
-        if (c6061.f20564 == null) {
-            c6061.f20564 = new ArrayList(2);
+    public C20173() {
+        this.f64789 = new long[1];
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46402(C20173 c20173) {
+        if (c20173 == null) {
+            return;
         }
-        List list = c6061.f20564;
-        EnumC21066 enumC21066M38178 = c16128.m38178();
-        if (enumC21066M38178 == null) {
-            i = 0;
-        } else {
-            int i2 = C15940.f51632[enumC21066M38178.ordinal()];
-            if (i2 == 1) {
-                i = 1;
-            } else if (i2 != 2) {
-                i = 0;
+        long[] jArr = c20173.f64789;
+        int length = jArr.length;
+        long[] jArr2 = this.f64789;
+        if (length > jArr2.length) {
+            int length2 = jArr.length;
+            long[] jArr3 = new long[length2];
+            System.arraycopy(this.f64789, 0, jArr3, 0, Math.min(length2, jArr2.length));
+            this.f64789 = jArr3;
+        }
+        int iMin = Math.min(this.f64789.length, c20173.f64789.length);
+        while (true) {
+            iMin--;
+            if (iMin < 0) {
+                return;
+            }
+            long[] jArr4 = this.f64789;
+            jArr4[iMin] = jArr4[iMin] | c20173.f64789[iMin];
+        }
+    }
+
+    public final Object clone() {
+        try {
+            C20173 c20173 = (C20173) super.clone();
+            long[] jArr = new long[this.f64789.length];
+            c20173.f64789 = jArr;
+            long[] jArr2 = this.f64789;
+            System.arraycopy(jArr2, 0, jArr, 0, jArr2.length);
+            return c20173;
+        } catch (CloneNotSupportedException unused) {
+            throw new InternalError();
+        }
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof C20173)) {
+            return false;
+        }
+        C20173 c20173 = (C20173) obj;
+        int iMin = Math.min(this.f64789.length, c20173.f64789.length);
+        for (int i = 0; i < iMin; i++) {
+            if (this.f64789[i] != c20173.f64789[i]) {
+                return false;
             }
         }
-        ((ArrayList) list).add(new C9590(i, interfaceC12061.builder().m8185(length)));
-        c6061.f20566 = c16128.m38180();
+        if (this.f64789.length > iMin) {
+            int i2 = iMin + 1;
+            while (true) {
+                long[] jArr = this.f64789;
+                if (i2 >= jArr.length) {
+                    break;
+                }
+                if (jArr[i2] != 0) {
+                    return false;
+                }
+                i2++;
+            }
+        } else if (c20173.f64789.length > iMin) {
+            int i3 = iMin + 1;
+            while (true) {
+                long[] jArr2 = c20173.f64789;
+                if (i3 >= jArr2.length) {
+                    break;
+                }
+                if (jArr2[i3] != 0) {
+                    return false;
+                }
+                i3++;
+            }
+        }
+        return true;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m46403(int i) {
+        if (i < 0) {
+            return false;
+        }
+        int i2 = i >> 6;
+        long[] jArr = this.f64789;
+        return i2 < jArr.length && (jArr[i2] & (1 << (i & 63))) != 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m46401() {
+        long[] jArr = this.f64789;
+        if (jArr.length > 0) {
+            jArr[0] = jArr[0] & (-3);
+        }
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("{");
+        boolean z = false;
+        for (int i = 0; i < (this.f64789.length << 6); i++) {
+            if (m46403(i)) {
+                if (i > 0 && z) {
+                    sb.append(",");
+                }
+                sb.append(i);
+                z = true;
+            }
+        }
+        sb.append('}');
+        return sb.toString();
     }
 }

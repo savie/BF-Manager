@@ -1,6 +1,6 @@
 package com.google.android.material.color.utilities;
 
-import l.C17745;
+import l.C22972;
 
 /* JADX INFO: loaded from: classes.dex */
 public class HctSolver {
@@ -181,7 +181,7 @@ public class HctSolver {
             double d8 = d7 * dCos2;
             double d9 = d7 * dSin;
             double d10 = dPow3 * 460.0d;
-            double[] dArrMatrixMultiply = MathUtils.matrixMultiply(new double[]{inverseChromaticAdaptation(C17745.m41305(d9, 288.0d, (451.0d * d8) + d10, 1403.0d)), inverseChromaticAdaptation(((d10 - (891.0d * d8)) - (261.0d * d9)) / 1403.0d), inverseChromaticAdaptation(((d10 - (d8 * 220.0d)) - (d9 * 6300.0d)) / 1403.0d)}, LINRGB_FROM_SCALED_DISCOUNT);
+            double[] dArrMatrixMultiply = MathUtils.matrixMultiply(new double[]{inverseChromaticAdaptation(C22972.m51847(d9, 288.0d, (451.0d * d8) + d10, 1403.0d)), inverseChromaticAdaptation(((d10 - (891.0d * d8)) - (261.0d * d9)) / 1403.0d), inverseChromaticAdaptation(((d10 - (d8 * 220.0d)) - (d9 * 6300.0d)) / 1403.0d)}, LINRGB_FROM_SCALED_DISCOUNT);
             double d11 = dArrMatrixMultiply[0];
             if (d11 < 0.0d) {
                 break;

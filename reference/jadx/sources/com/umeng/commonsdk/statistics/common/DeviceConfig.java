@@ -45,7 +45,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 import javax.microedition.khronos.opengles.GL10;
-import l.C0252;
+import l.C25272;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DeviceConfig {
@@ -1277,7 +1277,7 @@ public class DeviceConfig {
             hasReadSerialNo = true;
         }
         if (AnalyticsConstants.UM_DEBUG) {
-            MLog.i(LOG_TAG, C0252.m1693("getDeviceId, serial no: ", str));
+            MLog.i(LOG_TAG, C25272.m56409("getDeviceId, serial no: ", str));
         }
         return sSerialNo;
     }

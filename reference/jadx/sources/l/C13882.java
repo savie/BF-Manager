@@ -1,34 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰܳ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: B6MB */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C13882 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f45744;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f45745;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public int f45746;
+/* JADX INFO: renamed from: l.۬۬᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2BMB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13882 extends C4666 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f45747;
+    public final Throwable f44036;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f45748;
+    public C13882(Throwable th) {
+        this.f44036 = th;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f45749;
+    public final boolean equals(Object obj) {
+        if (obj instanceof C13882) {
+            return C15243.m36589(this.f44036, ((C13882) obj).f44036);
+        }
+        return false;
+    }
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public int f45750;
+    public final int hashCode() {
+        Throwable th = this.f44036;
+        if (th != null) {
+            return th.hashCode();
+        }
+        return 0;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f45751;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f45752;
+    @Override // l.C4666
+    public final String toString() {
+        return "Closed(" + this.f44036 + ')';
+    }
 }

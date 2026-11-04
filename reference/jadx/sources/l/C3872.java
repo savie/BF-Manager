@@ -1,226 +1,89 @@
 package l;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Build;
-import android.text.TextUtils;
-import android.view.View;
-import bin.mt.plus.R;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.atomic.AtomicInteger;
+import bin.mt.json.JSON;
+import bin.mt.json.JSONObject;
 
-/* JADX INFO: renamed from: l.ۘۤۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: LAQJ */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3872 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Object f14472 = new Object();
+/* JADX INFO: renamed from: l.ۘۗۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E77V */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3872 extends AbstractC19137 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final C9186 f14473;
+    public JSONObject f13214;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final C11635 f14474;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C1897 f13215;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final AtomicInteger f14475;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public JSONObject f13216;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C9186 f14476;
-
-    static {
-        C9186 c9186 = new C9186();
-        f14476 = c9186;
-        f14473 = c9186;
-        f14475 = new AtomicInteger(21321);
-        f14474 = new C11635();
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo1809() {
+        return "Edit APK Text";
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11211(final AbstractActivityC12483 abstractActivityC12483, final AbstractC20745 abstractC20745, List list) {
-        if (list != null) {
-            new C13752(abstractActivityC12483, abstractC20745, true, null, list, ApplicationC0716.f2992.getString("ais", "")).m33510(EnumC23589.SHIZUKU);
-            return;
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo1811() {
+        return "Edit text inside an APK edit session. For ordinary zip_entry text, the existing entry and encoded result must each fit within 10485760 uncompressed bytes (10 MiB). For existing targets, first call mt_apk_read_text on the exact locator string and copy locator and data.targetVersion. Send edits as edits[] items with mode, matchText, and writeText; top-level mode/matchText/writeText are invalid. edit_text rejects stale targetVersion values for that exact target; dex_method targetVersion is scoped to the method text, not the owner class. Local edits match the same LF-normalized original target text and apply atomically; any failed edit leaves the session unchanged. Use one write_target for a whole-target write, including targetVersion=\"missing\" to create a missing dex_class, axml, or zip_entry. Use mt_apk_delete_target to remove a whole class, method, AXML, text, or binary ZIP entry without first reading it. Local modes replace_match/insert_before_match/insert_after_match require exactly one occurrence of matchText; replace_match with writeText=\"\" still deletes only the matched text. On TEXT_MATCH_AMBIGUOUS, retry with longer surrounding context. Smali and AXML are prepared before saving; failures leave the session unchanged. resources.arsc cannot be edited as zip_entry; use mt_apk_resource_edit.";
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩸ */
+    public final String mo1812() {
+        return "mt_apk_edit_text";
+    }
+
+    public C3872(C1897 c1897) {
+        this.f13215 = c1897;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1805() {
+        return JSON.object().add("readOnlyHint", false);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۤ */
+    public final JSONObject mo1808() {
+        JSONObject jSONObject = this.f13214;
+        if (jSONObject != null) {
+            return jSONObject;
         }
-        if (!C13890.m33728()) {
-            C16737.m39273(new RunnableC7979(3, abstractActivityC12483, abstractC20745));
-            return;
+        JSONObject jSONObjectM19209 = C6929.m19209("{\n  \"workspaceId\": {\n    \"type\": \"string\",\n    \"description\": \"Workspace id returned by mt_apk_workspace_open.\"\n  },\n  \"editSessionId\": {\n    \"type\": \"string\",\n    \"description\": \"Non-empty edit session id returned by mt_apk_session_create.\"\n  },\n  \"locator\": {\n    \"type\": \"string\",\n    \"description\": \"For existing targets, use the exact locator string from mt_apk_read_text. Locators from the APK listing tools, mt_apk_dex_read_class_outline, or mt_apk_search must be read first to obtain data.targetVersion. edit_text accepts only dex_class:, dex_method:, axml:, and zip_entry:. dex_class requires a dex descriptor such as dex_class:Lcom/example/Foo;. dex_method requires a full Smali method reference such as dex_method:Lcom/example/Foo;->bar()V. zip_entry uses ZIP entry paths after the first colon.\"\n  },\n  \"targetVersion\": {\n    \"type\": \"string\",\n    \"description\": \"Required current target version: 16 lowercase hex digits. Copy data.targetVersion from the mt_apk_read_text result for the same workspaceId, editSessionId, and locator. For a missing dex_class, axml, or zip_entry creation with write_target, pass the literal string \\\"missing\\\". dex_method targetVersion is scoped to that method text only, not to the owner class.\"\n  },\n  \"edits\": {\n    \"type\": \"array\",\n    \"description\": \"Atomic edits for this one locator. Must contain at least one item. All local matchText values are matched against the original LF-normalized target text before anything is saved. write_target must be the only item. Item indexes are 0-based in failedEditIndex diagnostics.\",\n    \"items\": {\n      \"type\": \"object\",\n      \"additionalProperties\": false,\n      \"properties\": {\n        \"mode\": {\n          \"type\": \"string\",\n          \"enum\": [\n            \"write_target\",\n            \"replace_match\",\n            \"insert_before_match\",\n            \"insert_after_match\"\n          ],\n          \"description\": \"write_target writes the whole locator target and creates missing dex_class, axml, or zip_entry targets when targetVersion is \\\"missing\\\"; dex_method write_target replaces one existing method block. replace_match replaces non-empty matchText and may delete it with writeText=\\\"\\\"; insert_before_match and insert_after_match insert non-empty writeText before or after non-empty matchText. Insert modes concatenate writeText literally and never add a newline automatically. Use mt_apk_delete_target for whole-target deletion. Do not pass unified-diff text, @@ headers, or unavailable mode names.\"\n        },\n        \"matchText\": {\n          \"type\": \"string\",\n          \"description\": \"For local match modes, exact current LF-normalized text that must appear exactly once anywhere in the current target. If it appears multiple times, the edit is rejected and you must retry with longer surrounding context. It must include every matched character, including LF line breaks; for whole-line or multi-line replacement, include every matched line break, and whole-line replacement usually includes the line's trailing LF. For write_target pass an empty string.\"\n        },\n        \"writeText\": {\n          \"type\": \"string\",\n          \"description\": \"For write_target, full locator text: dex_class Smali must contain exactly one .class matching locator target after the first colon; dex_method Smali must contain exactly one complete .method ... .end method block matching locator target after the first colon; AXML should be complete XML source; zip_entry may be empty and is encoded directly. Smali and AXML are prepared before saving; failures leave the session unchanged. For existing zip_entry locators, write LF text and the saved bytes keep the entry's original line ending style; new zip_entry locators use LF. For replace_match, text to write in place of matchText; writeText=\\\"\\\" deletes the matched text. For insert_before_match and insert_after_match, non-empty text to concatenate literally before or after matchText; no newline is added automatically, so include LF in writeText when inserting a separate line.\"\n        }\n      },\n      \"required\": [\n        \"mode\",\n        \"matchText\",\n        \"writeText\"\n      ]\n    }\n  }\n}\n");
+        this.f13214 = jSONObjectM19209;
+        return jSONObjectM19209;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ᩴ */
+    public final JSONObject mo1810() {
+        JSONObject jSONObject = this.f13216;
+        if (jSONObject != null) {
+            return jSONObject;
         }
+        JSONObject jSONObjectM17633 = C6110.m17633();
+        this.f13216 = jSONObjectM17633;
+        return jSONObjectM17633;
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final JSONObject mo1806(C10186 c10186) {
+        return C6110.m17635(c10186);
+    }
+
+    @Override // l.AbstractC19137
+    /* JADX INFO: renamed from: ۙ */
+    public final C1238 mo1807(JSONObject jSONObject) {
+        int i;
         try {
-            C2455 c2455 = new C2455(abstractC20745);
-            try {
-                final ArrayList arrayListM47558 = C21132.m47558(c2455);
-                c2455.close();
-                CharSequence[] charSequenceArr = new CharSequence[arrayListM47558.size()];
-                final boolean[] zArr = new boolean[arrayListM47558.size()];
-                for (int i = 0; i < arrayListM47558.size(); i++) {
-                    C7727 c7727 = (C7727) arrayListM47558.get(i);
-                    charSequenceArr[i] = c7727.m20373();
-                    zArr[i] = c7727.m20374();
-                }
-                C8067 c8067BuildDialog = abstractActivityC12483.buildDialog();
-                c8067BuildDialog.m21274(R.string.MT_Protector);
-                c8067BuildDialog.m21268(charSequenceArr, zArr, new DialogInterface.OnMultiChoiceClickListener() { // from class: l.֫᩵ۚ
-                    @Override // android.content.DialogInterface.OnMultiChoiceClickListener
-                    public final void onClick(DialogInterface dialogInterface, int i2, boolean z) {
-                        C7727 c7728 = (C7727) arrayListM47558.get(i2);
-                        boolean[] zArr2 = zArr;
-                        if (!z && c7728.m20375()) {
-                            zArr2[i2] = true;
-                            C21362 c21362M21015 = ((DialogInterfaceC7957) dialogInterface).m21015();
-                            if (c21362M21015 != null) {
-                                c21362M21015.post(new RunnableC4537(i2, 0, c21362M21015));
-                                return;
-                            }
-                            return;
-                        }
-                        zArr2[i2] = z;
-                    }
-                });
-                c8067BuildDialog.m21251(R.string.MT_Protector, null);
-                final DialogInterfaceC19356 dialogInterfaceC19356M52499 = C23821.m52499(c8067BuildDialog, R.string.MT_Protector, (DialogInterface.OnClickListener) null, R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-                dialogInterfaceC19356M52499.m44373().setOnClickListener(new View.OnClickListener() { // from class: l.ۢ᩵ۚ
-                    @Override // android.view.View.OnClickListener
-                    public final void onClick(View view) {
-                        ArrayList arrayListM47553 = C21132.m47553(arrayListM47558, zArr);
-                        if (arrayListM47553.isEmpty()) {
-                            C15829.m37611(R.string.MT_Protector);
-                            return;
-                        }
-                        dialogInterfaceC19356M52499.dismiss();
-                        new C13752(abstractActivityC12483, abstractC20745, true, null, arrayListM47553, ApplicationC0716.f2992.getString("ais", "")).m33510(EnumC23589.SHIZUKU);
-                    }
-                });
-                dialogInterfaceC19356M52499.m44361().setOnClickListener(new View.OnClickListener() { // from class: l.ۗ᩵ۚ
-                    @Override // android.view.View.OnClickListener
-                    public final void onClick(View view) {
-                        int i2 = 0;
-                        while (true) {
-                            boolean[] zArr2 = zArr;
-                            if (i2 >= zArr2.length) {
-                                return;
-                            }
-                            boolean z = ((C7727) arrayListM47558.get(i2)).m20375() || !zArr2[i2];
-                            zArr2[i2] = z;
-                            dialogInterfaceC19356M52499.m44376().setItemChecked(i2, z);
-                            i2++;
-                        }
-                    }
-                });
-            } catch (Throwable th) {
-                try {
-                    c2455.close();
-                } catch (Throwable th2) {
-                    th.addSuppressed(th2);
-                }
-                throw th;
-            }
-        } catch (IOException e) {
-            abstractActivityC12483.m31002(e, (DialogInterface.OnDismissListener) null);
+            C16834.m39750();
+            return new C1238(C6110.m17630(this.f13215.m6541(C4375.m13985(jSONObject), new C4156())));
+        } finally {
+            i = C24294.f78630;
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11210(AbstractActivityC12483 abstractActivityC12483, AbstractC20745 abstractC20745, String str) {
-        new C13752(abstractActivityC12483, abstractC20745, false, str, null, ApplicationC0716.f2992.getString("ais", "")).m33510(EnumC23589.SHIZUKU);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11212(AbstractC20745 abstractC20745, List list) {
-        C2455 c2455 = new C2455(abstractC20745);
-        try {
-            new C1715().m5709(c2455, list);
-            c2455.close();
-        } catch (Throwable th) {
-            try {
-                c2455.close();
-            } catch (Throwable th2) {
-                th.addSuppressed(th2);
-            }
-            throw th;
-        }
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static boolean m11213() {
-        return C6696.m18084() && ApplicationC0716.f2988.getBoolean("apk_installation_root", true);
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public static boolean m11216() {
-        return Build.VERSION.SDK_INT >= 23 && ApplicationC0716.f2988.getBoolean("apk_installation_shizuku", true);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static int m11206() {
-        f14474.getClass();
-        if (C1468.m5114()) {
-            return 0;
-        }
-        try {
-            return C1468.m5109() == 0 ? 2 : 1;
-        } catch (Throwable unused) {
-            return 0;
-        }
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static int m11205() {
-        return f14475.getAndIncrement();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11209(AbstractActivityC12483 abstractActivityC12483, String str, String str2) {
-        if (!TextUtils.isEmpty(str2)) {
-            EnumC9414 enumC9414Mo9170 = abstractActivityC12483.getLifecycle().mo9170();
-            if (enumC9414Mo9170 != EnumC9414.DESTROYED) {
-                Intent launchIntentForPackage = C16737.m39292().getLaunchIntentForPackage(str2);
-                C8067 c8067BuildDialog = abstractActivityC12483.buildDialog();
-                c8067BuildDialog.m21274(R.string.MT_Protector);
-                c8067BuildDialog.m21261(str);
-                if (launchIntentForPackage != null) {
-                    c8067BuildDialog.m21251(R.string.MT_Protector, new DialogInterfaceOnClickListenerC2420(0, abstractActivityC12483, launchIntentForPackage));
-                    c8067BuildDialog.m21275(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-                } else {
-                    c8067BuildDialog.m21251(R.string.MT_Protector, null);
-                }
-                c8067BuildDialog.m21271(R.string.MT_Protector, (DialogInterface.OnClickListener) null);
-                c8067BuildDialog.m21269().m44361().setOnClickListener(new ViewOnClickListenerC20385(1, abstractActivityC12483, str2));
-            }
-            if (enumC9414Mo9170 != EnumC9414.RESUMED) {
-                C15829.m37611(R.string.MT_Protector);
-                return;
-            }
-            return;
-        }
-        C15829.m37611(R.string.MT_Protector);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m11208(String str) throws C19396 {
-        if (str.contains("Success") || str.contains("Completed with warning(s)")) {
-            return;
-        }
-        if (str.contains("INSTALL_FAILED_VERSION_DOWNGRADE")) {
-            C19396 c19396 = new C19396(R.string.MT_Protector, str);
-            c19396.m44441();
-            throw c19396;
-        }
-        if (str.contains("INSTALL_FAILED_UPDATE_INCOMPATIBLE")) {
-            throw new C19396(R.string.MT_Protector, str);
-        }
-        if (str.contains("INSTALL_FAILED_OLDER_SDK")) {
-            throw new C19396(R.string.MT_Protector, str);
-        }
-        if (str.contains("INSTALL_FAILED_USER_RESTRICTED")) {
-            throw new CancellationException();
-        }
-        C19396 c19397 = new C19396(R.string.MT_Protector, str);
-        c19397.m44443();
-        throw c19397;
     }
 }

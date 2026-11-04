@@ -1,27 +1,18 @@
 package l;
 
-import java.security.cert.CertificateExpiredException;
-import java.security.cert.CertificateNotYetValidException;
-import java.security.cert.X509Certificate;
-import javax.net.ssl.X509TrustManager;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
-/* JADX INFO: renamed from: l.֡᩸᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 63TE */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0688 implements X509TrustManager {
-    @Override // javax.net.ssl.X509TrustManager
-    public final void checkClientTrusted(X509Certificate[] x509CertificateArr, String str) {
+/* JADX INFO: renamed from: l.֡᩷ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M43N */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C0688 implements BiFunction {
+    public /* synthetic */ BiFunction andThen(Function function) {
+        return C3363.$default$andThen(this, function);
     }
 
-    @Override // javax.net.ssl.X509TrustManager
-    public final void checkServerTrusted(X509Certificate[] x509CertificateArr, String str) throws CertificateNotYetValidException, CertificateExpiredException {
-        for (X509Certificate x509Certificate : x509CertificateArr) {
-            x509Certificate.checkValidity();
-        }
-    }
-
-    @Override // javax.net.ssl.X509TrustManager
-    public final X509Certificate[] getAcceptedIssuers() {
-        return C20445.f66278;
+    @Override // java.util.function.BiFunction
+    public final Object apply(Object obj, Object obj2) {
+        return ((C2596) obj).m8696((AbstractC22664) obj2);
     }
 }

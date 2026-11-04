@@ -1,62 +1,60 @@
 package l;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
+import java.security.cert.CertificateEncodingException;
+import java.security.cert.X509Certificate;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.۬ܳ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: F8CE */
+/* JADX INFO: renamed from: l.۫ܳ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: UB8Q */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13183 implements InterfaceC6832 {
+public final class C13183 extends C15420 {
+    public static final long serialVersionUID = 1;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final int[] f43885 = {1, 5, 9, 13, 17};
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public int f42112;
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo4353(byte[] bArr, int i) {
-        int i2;
-        if (i >= 4) {
-            ByteBuffer byteBufferWrap = ByteBuffer.wrap(bArr, 0, i);
-            byteBufferWrap.order(ByteOrder.LITTLE_ENDIAN);
-            while (byteBufferWrap.remaining() >= 4) {
-                int i3 = byteBufferWrap.getInt();
-                if (i3 == 407708164) {
-                    return true;
-                }
-                if ((i3 >>> 4) != 25481893 || byteBufferWrap.remaining() < 4 || byteBufferWrap.remaining() < (i2 = byteBufferWrap.getInt())) {
-                    break;
-                }
-                byteBufferWrap.position(byteBufferWrap.position() + i2);
-            }
-        }
-        return false;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final byte[] f42113;
+
+    public C13183(X509Certificate x509Certificate, byte[] bArr) {
+        super(x509Certificate);
+        this.f42112 = -1;
+        this.f42113 = (byte[]) bArr.clone();
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final long mo4350(InterfaceC7739 interfaceC7739) {
+    @Override // java.security.cert.Certificate
+    public final byte[] getEncoded() {
+        byte[] bArr = this.f42113;
+        if (bArr != null) {
+            return (byte[]) bArr.clone();
+        }
+        return null;
+    }
+
+    @Override // java.security.cert.Certificate
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof X509Certificate)) {
+            return false;
+        }
         try {
-            interfaceC7739.seek(4L);
-            if (C7527.m20050(interfaceC7739.readByte()).m20053(EnumC10350.CONTENT_SIZE)) {
-                interfaceC7739.skipBytes(1);
-                return interfaceC7739.readLong();
-            }
-        } catch (RuntimeException unused) {
+            return Arrays.equals(getEncoded(), ((X509Certificate) obj).getEncoded());
+        } catch (CertificateEncodingException unused) {
+            return false;
         }
-        return -1L;
     }
 
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final InputStream mo4351(InputStream inputStream) {
-        return new C8233(inputStream);
-    }
-
-    @Override // l.InterfaceC6832
-    /* JADX INFO: renamed from: ۙ */
-    public final OutputStream mo4352(OutputStream outputStream, int i, long j) {
-        return new C15995(outputStream, f43885[i], j);
+    @Override // java.security.cert.Certificate
+    public final int hashCode() {
+        if (this.f42112 == -1) {
+            try {
+                this.f42112 = Arrays.hashCode(getEncoded());
+            } catch (CertificateEncodingException unused) {
+                this.f42112 = 0;
+            }
+        }
+        return this.f42112;
     }
 }

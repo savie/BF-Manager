@@ -12,7 +12,7 @@ import net.engio.mbassy.common.StrongConcurrentSet;
 import net.engio.mbassy.listener.MessageHandler;
 import net.engio.mbassy.listener.MetadataReader;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SubscriptionManager {
     public final MetadataReader metadataReader;
     public final BusRuntime runtime;

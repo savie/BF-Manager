@@ -11,59 +11,59 @@ import java.util.List;
 @Deprecated
 public class AWSRequestMetricsFullSupport extends AWSRequestMetrics {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Log f816 = LogFactory.m303("com.amazonaws.latency");
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Log f806 = LogFactory.m297("com.amazonaws.latency");
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final HashMap f817;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final HashMap f807;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final HashMap f818;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final HashMap f808;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AWSRequestMetricsFullSupport() {
         super(new TimingInfoFullSupport(System.nanoTime()));
         System.currentTimeMillis();
-        this.f817 = new HashMap();
-        this.f818 = new HashMap();
+        this.f807 = new HashMap();
+        this.f808 = new HashMap();
     }
 
     @Override // com.amazonaws.util.AWSRequestMetrics
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo735(AWSRequestMetrics.Field field) {
-        this.f818.put(field.name(), new TimingInfoFullSupport(System.nanoTime()));
+    /* JADX INFO: renamed from: ۤ */
+    public final void mo729(AWSRequestMetrics.Field field) {
+        this.f808.put(field.name(), new TimingInfoFullSupport(System.nanoTime()));
     }
 
     @Override // com.amazonaws.util.AWSRequestMetrics
     /* JADX INFO: renamed from: ۙ */
-    public final void mo732(AWSRequestMetrics.Field field) {
+    public final void mo726(AWSRequestMetrics.Field field) {
         String strName = field.name();
-        TimingInfo timingInfo = (TimingInfo) this.f818.get(strName);
+        TimingInfo timingInfo = (TimingInfo) this.f808.get(strName);
         if (timingInfo == null) {
-            LogFactory.m302(getClass()).mo291("Trying to end an event which was never started: " + strName);
+            LogFactory.m296(getClass()).mo294("Trying to end an event which was never started: " + strName);
             return;
         }
-        timingInfo.mo791();
-        this.f794.mo794(strName, new TimingInfoUnmodifiable(timingInfo.m795(), Long.valueOf(timingInfo.m796())));
+        timingInfo.mo784();
+        this.f784.mo787(strName, new TimingInfoUnmodifiable(timingInfo.m788(), Long.valueOf(timingInfo.m789())));
     }
 
     @Override // com.amazonaws.util.AWSRequestMetrics
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo736(AWSRequestMetrics.Field field) {
-        this.f794.mo793(field.name());
-    }
-
-    @Override // com.amazonaws.util.AWSRequestMetrics
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo733(AWSRequestMetrics.Field field, long j) {
-        this.f794.mo792(j, field.name());
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo730(AWSRequestMetrics.Field field) {
+        this.f784.mo786(field.name());
     }
 
     @Override // com.amazonaws.util.AWSRequestMetrics
     /* JADX INFO: renamed from: ۙ */
-    public final void mo734(AWSRequestMetrics.Field field, Serializable serializable) {
+    public final void mo727(AWSRequestMetrics.Field field, long j) {
+        this.f784.mo785(j, field.name());
+    }
+
+    @Override // com.amazonaws.util.AWSRequestMetrics
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo728(AWSRequestMetrics.Field field, Serializable serializable) {
         String strName = field.name();
-        HashMap map = this.f817;
+        HashMap map = this.f807;
         List arrayList = (List) map.get(strName);
         if (arrayList == null) {
             arrayList = new ArrayList();

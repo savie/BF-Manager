@@ -1,20 +1,25 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ᩴۛ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: W9G0 */
+/* JADX INFO: renamed from: l.ܿ᩶᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: M9V0 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18578 extends AbstractC18909 {
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo10037(AbstractC9032 abstractC9032) {
-        return ((C7995) abstractC9032).f63981.length;
+public final class C18578 extends C20728 {
+    public static final long serialVersionUID = 1486630733410281686L;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final C13839 f60358;
+
+    public C18578(C13839 c13839) {
+        this.f60358 = c13839;
     }
 
-    @Override // l.AbstractC18909
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo10038(AbstractC9032 abstractC9032, C15382 c15382) throws IOException {
-        c15382.write(((C7995) abstractC9032).f63981);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final InterfaceC4717 m43158() {
+        return this.f60358;
+    }
+
+    @Override // java.lang.Throwable
+    public final String toString() {
+        return this.f60358.toString();
     }
 }

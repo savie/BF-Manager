@@ -1,158 +1,179 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-/* JADX INFO: renamed from: l.᩺۫᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5SH */
+/* JADX INFO: renamed from: l.᩸ᩴۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 8459 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22997 {
+public final /* synthetic */ class C22997 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C6768 f74737;
+    public static final /* synthetic */ int[] f74653;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C6768 f74738;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f74654;
 
-    public C22997() {
-        C6768 c6768 = new C6768(this, 0, 0);
-        this.f74737 = c6768;
-        C6768 c6769 = new C6768(this, 0, 0);
-        this.f74738 = c6769;
-        c6768.f22855 = c6769;
-        c6769.f22857 = c6768;
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f74655;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5357 m50859() {
-        C6768 c6768 = this.f74737;
-        C6768 c6769 = c6768.f22855;
-        C6768 c67610 = this.f74738;
-        if (c6769 == c67610) {
-            return new C5357(null, null);
-        }
-        ArrayList arrayList = new ArrayList();
-        ArrayList arrayList2 = new ArrayList();
-        HashMap map = new HashMap();
-        for (C6768 c67611 = c6768.f22855; c67611 != c67610; c67611 = c67611.f22855) {
-            C14885[] c14885Arr = new C14885[c67611.f22858.size()];
-            int i = 0;
-            for (C3945 c3945 : c67611.f22858) {
-                c14885Arr[i] = new C14885(c3945.f14670, c3945.f14669);
-                i++;
-            }
-            C22646 c22646 = new C22646(c14885Arr, c67611.f22856);
-            C22646 c22647 = (C22646) map.get(c22646);
-            if (c22647 == null) {
-                map.put(c22646, c22646);
-                arrayList2.add(c22646);
-            } else {
-                c22646 = c22647;
-            }
-            int i2 = c67611.f22860;
-            arrayList.add(new C21234(i2, c67611.f22859 - i2, c22646));
-        }
-        return new C5357(arrayList, arrayList2);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f74656;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50861(int i, int i2, int i3) {
-        C5357 c5357M50860 = m50860(i, i2);
-        C6768 c6768 = (C6768) c5357M50860.f18504;
-        C6768 c6769 = (C6768) c5357M50860.f18505;
-        do {
-            int i4 = c6768.f22860;
-            if (i4 > i) {
-                C6768 c67610 = new C6768(this, i, i4);
-                c6768.m18349(c67610);
-                c6768 = c67610;
-            }
-            if (c6768.f22856 == -1) {
-                c6768.f22856 = i3;
-            }
-            i = c6768.f22859;
-            c6768 = c6768.f22855;
-        } while (c6768.f22857 != c6769);
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f74657;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C5357 m50860(int i, int i2) {
-        C6768 c6768;
-        C6768 c6769;
-        C6768 c6768M18348 = this.f74737.f22855;
-        while (true) {
-            c6768 = this.f74738;
-            c6769 = null;
-            if (c6768M18348 == c6768) {
-                c6768M18348 = null;
-                break;
-            }
-            int i3 = c6768M18348.f22860;
-            if (i == i3) {
-                break;
-            }
-            if (i > i3 && i < c6768M18348.f22859) {
-                c6768M18348 = c6768M18348.m18348(i);
-                break;
-            }
-            if (i < i3) {
-                if (i2 <= i3) {
-                    C6768 c67610 = new C6768(this, i, i2);
-                    c6768M18348.m18349(c67610);
-                    return new C5357(c67610, c67610);
-                }
-                C6768 c67611 = new C6768(this, i, i3);
-                c6768M18348.m18349(c67611);
-                c6768M18348 = c67611;
-                break;
-            }
-            c6768M18348 = c6768M18348.f22855;
+    static {
+        int[] iArr = new int[EnumC0229.values().length];
+        f74657 = iArr;
+        try {
+            iArr[EnumC0229.ALWAYS.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        if (c6768M18348 == null) {
-            C6768 c67612 = new C6768(this, i, i2);
-            c6768.m18349(c67612);
-            return new C5357(c67612, c67612);
+        try {
+            f74657[EnumC0229.LEGACY.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        for (C6768 c67613 = c6768M18348; c67613 != c6768; c67613 = c67613.f22855) {
-            int i4 = c67613.f22859;
-            if (i4 != i2) {
-                int i5 = c67613.f22860;
-                if (i5 < i2 && i4 > i2) {
-                    c67613.m18348(i2);
-                } else {
-                    if (i5 >= i2) {
-                        c6769 = new C6768(this, c67613.f22857.f22859, i2);
-                        c67613.m18349(c6769);
-                        break;
-                    }
-                }
-            }
-            c6769 = c67613;
-            break;
+        try {
+            f74657[EnumC0229.NONEMPTY.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        if (c6769 == null) {
-            c6769 = new C6768(this, c6768.f22857.f22859, i2);
-            c6768.m18349(c6769);
+        int[] iArr2 = new int[EnumC21461.values().length];
+        f74655 = iArr2;
+        try {
+            iArr2[EnumC21461.f68484.ordinal()] = 1;
+        } catch (NoSuchFieldError unused4) {
         }
-        return new C5357(c6768M18348, c6769);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m50862(C1953 c1953, int i, int i2, int i3) {
-        C5357 c5357M50860 = m50860(i, i2);
-        C6768 c6768 = (C6768) c5357M50860.f18504;
-        C6768 c6769 = (C6768) c5357M50860.f18505;
-        C3945 c3945 = new C3945(c1953, i3);
-        do {
-            int i4 = c6768.f22860;
-            if (i4 > i) {
-                C6768 c67610 = new C6768(this, i, i4);
-                c6768.m18349(c67610);
-                c6768 = c67610;
-            }
-            c6768.f22858.addLast(c3945);
-            i = c6768.f22859;
-            c6768 = c6768.f22855;
-        } while (c6768.f22857 != c6769);
+        try {
+            f74655[EnumC21461.f68523.ordinal()] = 2;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f74655[EnumC21461.f68485.ordinal()] = 3;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f74655[EnumC21461.f68527.ordinal()] = 4;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f74655[EnumC21461.f68520.ordinal()] = 5;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f74655[EnumC21461.f68546.ordinal()] = 6;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f74655[EnumC21461.f68457.ordinal()] = 7;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f74655[EnumC21461.f68529.ordinal()] = 8;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f74655[EnumC21461.f68482.ordinal()] = 9;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f74655[EnumC21461.f68451.ordinal()] = 10;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f74655[EnumC21461.f68525.ordinal()] = 11;
+        } catch (NoSuchFieldError unused14) {
+        }
+        try {
+            f74655[EnumC21461.f68535.ordinal()] = 12;
+        } catch (NoSuchFieldError unused15) {
+        }
+        try {
+            f74655[EnumC21461.f68522.ordinal()] = 13;
+        } catch (NoSuchFieldError unused16) {
+        }
+        int[] iArr3 = new int[EnumC21172.values().length];
+        f74654 = iArr3;
+        try {
+            iArr3[EnumC21172.BYTE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused17) {
+        }
+        try {
+            f74654[EnumC21172.SHORT.ordinal()] = 2;
+        } catch (NoSuchFieldError unused18) {
+        }
+        try {
+            f74654[EnumC21172.CHAR.ordinal()] = 3;
+        } catch (NoSuchFieldError unused19) {
+        }
+        try {
+            f74654[EnumC21172.INT.ordinal()] = 4;
+        } catch (NoSuchFieldError unused20) {
+        }
+        try {
+            f74654[EnumC21172.LONG.ordinal()] = 5;
+        } catch (NoSuchFieldError unused21) {
+        }
+        try {
+            f74654[EnumC21172.FLOAT.ordinal()] = 6;
+        } catch (NoSuchFieldError unused22) {
+        }
+        try {
+            f74654[EnumC21172.DOUBLE.ordinal()] = 7;
+        } catch (NoSuchFieldError unused23) {
+        }
+        try {
+            f74654[EnumC21172.BOOLEAN.ordinal()] = 8;
+        } catch (NoSuchFieldError unused24) {
+        }
+        try {
+            f74654[EnumC21172.VOID.ordinal()] = 9;
+        } catch (NoSuchFieldError unused25) {
+        }
+        try {
+            f74654[EnumC21172.CLASS.ordinal()] = 10;
+        } catch (NoSuchFieldError unused26) {
+        }
+        try {
+            f74654[EnumC21172.ARRAY.ordinal()] = 11;
+        } catch (NoSuchFieldError unused27) {
+        }
+        int[] iArr4 = new int[EnumC8886.values().length];
+        f74656 = iArr4;
+        try {
+            iArr4[EnumC8886.f29023.ordinal()] = 1;
+        } catch (NoSuchFieldError unused28) {
+        }
+        try {
+            f74656[EnumC8886.f29019.ordinal()] = 2;
+        } catch (NoSuchFieldError unused29) {
+        }
+        try {
+            f74656[EnumC8886.f29021.ordinal()] = 3;
+        } catch (NoSuchFieldError unused30) {
+        }
+        try {
+            f74656[EnumC8886.f29020.ordinal()] = 4;
+        } catch (NoSuchFieldError unused31) {
+        }
+        try {
+            f74656[EnumC8886.f29025.ordinal()] = 5;
+        } catch (NoSuchFieldError unused32) {
+        }
+        try {
+            f74656[EnumC8886.f29026.ordinal()] = 6;
+        } catch (NoSuchFieldError unused33) {
+        }
+        int[] iArr5 = new int[EnumC13603.values().length];
+        f74653 = iArr5;
+        try {
+            iArr5[EnumC13603.f43205.ordinal()] = 1;
+        } catch (NoSuchFieldError unused34) {
+        }
+        try {
+            f74653[EnumC13603.f43218.ordinal()] = 2;
+        } catch (NoSuchFieldError unused35) {
+        }
+        try {
+            f74653[EnumC13603.f43213.ordinal()] = 3;
+        } catch (NoSuchFieldError unused36) {
+        }
     }
 }

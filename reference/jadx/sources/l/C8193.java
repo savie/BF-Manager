@@ -1,14 +1,21 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Map;
+/* JADX INFO: renamed from: l.۟᩹ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 45BU */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8193 extends AbstractC13567 {
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3618(int i, Object obj) {
+        C18634 c18634 = (C18634) obj;
+        int i2 = c18634.f60594;
+        c18634.f60594 = i;
+        return i2;
+    }
 
-/* JADX INFO: renamed from: l.۠۬ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L5VZ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8193 implements Comparator {
-    @Override // java.util.Comparator
-    public final int compare(Object obj, Object obj2) {
-        return ((Comparable) ((Map.Entry) obj).getValue()).compareTo(((Map.Entry) obj2).getValue());
+    @Override // l.AbstractC13567
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3619(Object obj) {
+        return ((C18634) obj).f60594;
     }
 }

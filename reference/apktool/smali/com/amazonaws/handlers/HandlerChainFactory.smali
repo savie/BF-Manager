@@ -110,7 +110,7 @@
     aput-object v1, v3, v4
 
     .line 80
-    invoke-static {p2, v3}, Lcom/amazonaws/util/ClassLoaderHelper;->ۖ(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
+    invoke-static {p2, v3}, Lcom/amazonaws/util/ClassLoaderHelper;->᩸(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v1
 
@@ -290,7 +290,7 @@
     return-object v0
 .end method
 
-.method public final ܰ()Ljava/util/ArrayList;
+.method public final ᩷()Ljava/util/ArrayList;
     .locals 2
 
     const-string v0, "/com/amazonaws/services/s3/request.handlers"

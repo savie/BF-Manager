@@ -1,16 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6428 */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C17304 extends C22243 {
-    @Override // l.C22243, l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
-    }
+import java.lang.reflect.Type;
 
-    @Override // l.C22243, l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3959(C22489 c22489) {
+/* JADX INFO: renamed from: l.ܽۗܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SAVZ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C17304 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Type f56342;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Object f56343;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C17304 f56344;
+
+    public C17304(Type type, Object obj, C17304 c17304) {
+        this.f56342 = type;
+        this.f56343 = obj;
+        this.f56344 = c17304;
     }
 }

@@ -1,53 +1,75 @@
 package l;
 
-import java.io.EOFException;
-import java.io.InputStream;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۧ֨ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: D5LJ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10665 {
+/* JADX INFO: renamed from: l.ۤۚ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6RB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10665 implements InterfaceC7252 {
+
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m26865(InputStream inputStream) {
-        if (!inputStream.markSupported()) {
-            throw new IllegalArgumentException("InputStream must support mark");
+    public final C7155 f33827;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int[] f33828;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C5115 f33829;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f33830;
+
+    public C10665(C5115 c5115, C7155 c7155) {
+        this.f33829 = c5115;
+        this.f33827 = c7155;
+    }
+
+    @Override // l.InterfaceC7252
+    /* JADX INFO: renamed from: ۙ */
+    public final InterfaceC8743 mo19894(C18637 c18637, int i, String str, int i2, int i3, int i4, int i5, int i6) {
+        Object obj = c18637.f60598;
+        C5115 c5115 = this.f33829;
+        C23661 c23661 = C23661.f76740;
+        if (obj != c5115 || c18637.f60599 != this.f33827 || i3 < 0) {
+            return c23661.mo19894(c18637, i, str, i2, i3, i4, i5, i6);
         }
-        inputStream.mark(44);
-        byte[] bArr = new byte[44];
-        try {
-            try {
-                C2221.m6840(inputStream, bArr, 0, 44);
-                inputStream.reset();
-                return m26866(new C1788(bArr, 0));
-            } catch (EOFException unused) {
-                throw new C12746("File is too short");
-            }
-        } catch (Throwable th) {
-            inputStream.reset();
-            throw th;
+        int i7 = this.f33830;
+        this.f33830 = i7 + 1;
+        if (str != null || i2 < 0 || i2 > 1 || i < -1 || i > 1073741823) {
+            InterfaceC8743 interfaceC8743Mo19894 = c23661.mo19894(c18637, i, str, i2, i3, i4, i5, i6);
+            ((C16201) interfaceC8743Mo19894).m38430(i7);
+            return interfaceC8743Mo19894;
         }
+        return new C21854(this, i3, i4, i7, (i << 1) | i2);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m26866(AbstractC18119 abstractC18119) {
-        int iM22921 = C8804.m22921(abstractC18119);
-        if (iM22921 == -1) {
-            StringBuilder sb = new StringBuilder("Not a valid dex magic value:");
-            for (int i = 0; i < 8; i++) {
-                sb.append(String.format(" %02x", Byte.valueOf(abstractC18119.mo5855(i))));
+    public static int m27172(C10665 c10665, int i) {
+        C7155 c7155 = c10665.f33827;
+        if (c10665.f33828 == null) {
+            int i2 = 1;
+            int i3 = 1;
+            for (int i4 = 0; i4 < c7155.size(); i4++) {
+                if ((i4 & 1023) == 0) {
+                    C7155.m19727();
+                }
+                if (c7155.m19729(i4) == '\n') {
+                    i3++;
+                }
             }
-            throw new C12746(sb.toString());
+            int[] iArr = new int[i3];
+            for (int i5 = 0; i5 < c7155.size(); i5++) {
+                if ((i5 & 1023) == 0) {
+                    C7155.m19727();
+                }
+                if (c7155.m19729(i5) == '\n') {
+                    iArr[i2] = i5 + 1;
+                    i2++;
+                }
+            }
+            c10665.f33828 = iArr;
         }
-        if (C0418.m2176(iM22921) == -1) {
-            throw new C5725(String.format("Dex version %03d is not supported", Integer.valueOf(iM22921)));
-        }
-        int iMo5859 = abstractC18119.mo5859(40);
-        if (iMo5859 == 2018915346) {
-            throw new C5725("Big endian dex files are not supported");
-        }
-        if (iMo5859 == 305419896) {
-            return iM22921;
-        }
-        throw new C17014(String.format("Invalid endian tag: 0x%x", Integer.valueOf(iMo5859)));
+        int iBinarySearch = Arrays.binarySearch(c10665.f33828, i);
+        return iBinarySearch >= 0 ? iBinarySearch : (-iBinarySearch) - 2;
     }
 }

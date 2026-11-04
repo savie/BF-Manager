@@ -3,10 +3,10 @@ package org.bouncycastle.asn1;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import l.C8479;
-import l.C9576;
+import l.C13645;
+import l.C4791;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ASN1StreamParser {
     public final InputStream _in;
     public final int _limit;
@@ -131,7 +131,7 @@ public class ASN1StreamParser {
 
     public ASN1Encodable parseObject(int i) throws IOException {
         if (i < 0 || i > 30) {
-            throw new IllegalArgumentException(C8479.m22141(i, "invalid universal tag number: "));
+            throw new IllegalArgumentException(C13645.m33382(i, "invalid universal tag number: "));
         }
         int i2 = this._in.read();
         if (i2 < 0) {
@@ -140,7 +140,7 @@ public class ASN1StreamParser {
         if ((i2 & (-33)) == i) {
             return implParseObject(i2);
         }
-        throw new IOException(C8479.m22141(i2, "unexpected identifier encountered: "));
+        throw new IOException(C13645.m33382(i2, "unexpected identifier encountered: "));
     }
 
     public ASN1Encodable parseImplicitConstructedDL(int i) throws ASN1Exception {
@@ -159,7 +159,7 @@ public class ASN1StreamParser {
         if (i == 17) {
             return new DLSetParser(this);
         }
-        throw new ASN1Exception(C9576.m24440(new StringBuilder("unknown DL object encountered: 0x"), i));
+        throw new ASN1Exception(C4791.m14766(new StringBuilder("unknown DL object encountered: 0x"), i));
     }
 
     public ASN1Encodable parseImplicitConstructedIL(int i) throws ASN1Exception {
@@ -178,6 +178,6 @@ public class ASN1StreamParser {
         if (i == 17) {
             return new BERSetParser(this);
         }
-        throw new ASN1Exception(C9576.m24440(new StringBuilder("unknown BER object encountered: 0x"), i));
+        throw new ASN1Exception(C4791.m14766(new StringBuilder("unknown BER object encountered: 0x"), i));
     }
 }

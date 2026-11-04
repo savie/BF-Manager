@@ -1,36 +1,16 @@
 package l;
 
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-/* JADX INFO: renamed from: l.ۗۖۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: NAVX */
+/* JADX INFO: renamed from: l.ۖ᩷᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: D8JS */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2939 implements InterfaceC7879 {
-    @Override // l.InterfaceC7879
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1164(EditText editText, TextView textView, Button button, C13607 c13607) {
-        mo1163(editText, textView, button);
-    }
+public final class C2939 {
 
-    @Override // l.InterfaceC7879
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1163(EditText editText, TextView textView, Button button) {
-        editText.setVisibility(8);
-        button.setVisibility(8);
-        textView.setVisibility(8);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C4870 f9619;
 
-    @Override // l.InterfaceC7879
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1162(Button button, ActivityC19749 activityC19749) {
-        throw new UnsupportedOperationException();
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f9620;
 
-    @Override // l.InterfaceC7879
-    /* JADX INFO: renamed from: ۙ */
-    public final C13607 mo1161(int i, EditText editText, Button button) {
-        return new C13607(i);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long f9621;
 }

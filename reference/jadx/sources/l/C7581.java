@@ -1,30 +1,20 @@
 package l;
 
-import android.view.View;
-
-/* JADX INFO: renamed from: l.۟ܺ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: X53D */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C7581 extends AbstractC6909 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f25107;
+/* JADX INFO: renamed from: l.۟ۖۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 71K9 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C7581 implements InterfaceC17544 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f25108;
+    public final /* synthetic */ C4772 f25048;
 
-    public C7581(View view, View view2) {
-        this.f25108 = view;
-        this.f25107 = view2;
+    public /* synthetic */ C7581(C4772 c4772) {
+        this.f25048 = c4772;
     }
 
-    @Override // l.AbstractC6909
-    public final void onScrolled(C17492 c17492, int i, int i2) {
-        C16754.m39312((View) c17492, this.f25108, this.f25107);
-    }
-
-    @Override // l.AbstractC6909
-    public final void onScrollStateChanged(C17492 c17492, int i) {
-        C16754.m39312((View) c17492, this.f25108, this.f25107);
+    @Override // l.InterfaceC17544
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1209(int i) {
+        this.f25048.mo16839(i);
     }
 }

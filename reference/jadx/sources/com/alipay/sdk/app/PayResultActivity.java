@@ -9,7 +9,7 @@ import android.text.TextUtils;
 import com.alipay.sdk.m.y.g;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import l.C17290;
+import l.C22837;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -51,7 +51,7 @@ public final class PayResultActivity extends Activity {
         Intent intent = new Intent();
         try {
             intent.setPackage("hk.alipay.wallet");
-            intent.setData(Uri.parse("alipayhk://platformapi/startApp?appId=20000125&schemePaySession=" + C17290.encode(str, com.alipay.sdk.m.w.a.D) + "&orderSuffix=" + C17290.encode(str2, com.alipay.sdk.m.w.a.D) + "&packageName=" + C17290.encode(str3, com.alipay.sdk.m.w.a.D) + "&externalPkgName=" + C17290.encode(str3, com.alipay.sdk.m.w.a.D)));
+            intent.setData(Uri.parse("alipayhk://platformapi/startApp?appId=20000125&schemePaySession=" + C22837.encode(str, com.alipay.sdk.m.w.a.D) + "&orderSuffix=" + C22837.encode(str2, com.alipay.sdk.m.w.a.D) + "&packageName=" + C22837.encode(str3, com.alipay.sdk.m.w.a.D) + "&externalPkgName=" + C22837.encode(str3, com.alipay.sdk.m.w.a.D)));
         } catch (UnsupportedEncodingException e2) {
             g.a(e2);
         }
@@ -97,7 +97,7 @@ public final class PayResultActivity extends Activity {
                 a(this, 300);
                 return;
             }
-            com.alipay.sdk.m.m.a.b(this.a, com.alipay.sdk.m.m.b.f77909l, com.alipay.sdk.m.m.b.l0, "Expected " + b.a + ", got " + intExtra);
+            com.alipay.sdk.m.m.a.b(this.a, com.alipay.sdk.m.m.b.f82025l, com.alipay.sdk.m.m.b.l0, "Expected " + b.a + ", got " + intExtra);
             a(b.a);
             a(this, 300);
         } catch (Throwable unused) {

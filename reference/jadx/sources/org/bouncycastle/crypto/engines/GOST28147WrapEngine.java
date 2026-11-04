@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.params.ParametersWithRandom;
 import org.bouncycastle.crypto.params.ParametersWithUKM;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST28147WrapEngine implements Wrapper {
     public GOST28147Engine cipher = new GOST28147Engine();
     public GOST28147Mac mac = new GOST28147Mac();

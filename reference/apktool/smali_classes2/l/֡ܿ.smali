@@ -1,14 +1,36 @@
 .class public final Ll/֡ܿ;
 .super Ljava/lang/Object;
-.source "X2Z7"
+.source "J5UB"
 
 
 # direct methods
-.method public static ۙ(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+.method public static ۙ(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    .line 1098
-    invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithAdaptiveBitmapContentUri(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+    .line 787
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۙ(Landroid/app/Notification$Builder;Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    .line 799
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۙ(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
+
+    .line 805
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
 
     move-result-object p0
 

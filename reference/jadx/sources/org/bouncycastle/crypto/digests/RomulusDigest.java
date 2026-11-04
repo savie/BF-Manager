@@ -8,7 +8,6 @@ public class RomulusDigest extends BufferBaseDigest {
     public final byte[] g;
     public final byte[] h;
 
-    /* JADX INFO: loaded from: classes.dex */
     public class Friend {
         public static final Friend INSTANCE = new Friend();
     }

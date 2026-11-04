@@ -1,54 +1,154 @@
-.class public final synthetic Ll/֨ۢۘ;
+.class public Ll/֨ۢۘ;
 .super Ljava/lang/Object;
-.source "I1KV"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "143X"
 
 
 # instance fields
-.field public final synthetic ֡:[B
+.field public ۙ:Ljava/util/EnumSet;
 
-.field public final synthetic ܺ:Ll/ܺۢۘ;
+.field public ۤ:Ljava/util/EnumSet;
 
-.field public final synthetic ܽ:Ll/۠ܳۘ;
-
-.field public final synthetic ᩶:Ll/ۚ᩻᩺;
+.field public ᩷:Ll/ۙᩳۘ;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ܺۢۘ;Ll/ۚ᩻᩺;[BLl/۠ܳۘ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
+    const/4 v0, 0x0
+
+    .line 84
+    invoke-direct {p0, v0}, Ll/֨ۢۘ;-><init>(Ll/ۙᩳۘ;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۙᩳۘ;)V
+    .locals 2
+
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll/֨ۢۘ;->ܺ:Ll/ܺۢۘ;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ll/֨ۢۘ;->᩶:Ll/ۚ᩻᩺;
+    .line 43
+    iput-object v0, p0, Ll/֨ۢۘ;->᩷:Ll/ۙᩳۘ;
 
-    iput-object p3, p0, Ll/֨ۢۘ;->֡:[B
+    .line 45
+    const-class v0, Ll/ᩴܰ᩺;
 
-    iput-object p4, p0, Ll/֨ۢۘ;->ܽ:Ll/۠ܳۘ;
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ll/֨ۢۘ;->ۙ:Ljava/util/EnumSet;
+
+    .line 46
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/֨ۢۘ;->ۤ:Ljava/util/EnumSet;
+
+    .line 61
+    iput-object p1, p0, Ll/֨ۢۘ;->᩷:Ll/ۙᩳۘ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final ۙ()V
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, Ll/֨ۢۘ;->֡:[B
+    .line 78
+    iget-object v0, p0, Ll/֨ۢۘ;->ۙ:Ljava/util/EnumSet;
 
-    iget-object v1, p0, Ll/֨ۢۘ;->ܽ:Ll/۠ܳۘ;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
 
-    iget-object v2, p0, Ll/֨ۢۘ;->ܺ:Ll/ܺۢۘ;
+    .line 79
+    iget-object v0, p0, Ll/֨ۢۘ;->ۤ:Ljava/util/EnumSet;
 
-    iget-object v3, p0, Ll/֨ۢۘ;->᩶:Ll/ۚ᩻᩺;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
 
-    invoke-static {v2, v3, v0, v1}, Ll/ܺۢۘ;->ۙ(Ll/ܺۢۘ;Ll/ۚ᩻᩺;[BLl/۠ܳۘ;)V
+    return-void
+.end method
+
+.method public final ۙ(Ll/ᩴܰ᩺;)Z
+    .locals 1
+
+    .line 65
+    iget-object v0, p0, Ll/֨ۢۘ;->ۤ:Ljava/util/EnumSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 69
+    iget-object v0, p0, Ll/֨ۢۘ;->ۙ:Ljava/util/EnumSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final ۤ(Ll/ᩴܰ᩺;)V
+    .locals 1
+
+    .line 57
+    iget-object v0, p0, Ll/֨ۢۘ;->ۤ:Ljava/util/EnumSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final ᩷()Ll/ۙᩳۘ;
+    .locals 1
+
+    .line 49
+    iget-object v0, p0, Ll/֨ۢۘ;->᩷:Ll/ۙᩳۘ;
+
+    return-object v0
+.end method
+
+.method public final ᩷(Ll/ᩴܰ᩺;)Z
+    .locals 1
+
+    .line 69
+    iget-object v0, p0, Ll/֨ۢۘ;->ۙ:Ljava/util/EnumSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public ᩸(Ll/ᩴܰ᩺;)V
+    .locals 1
+
+    .line 53
+    iget-object v0, p0, Ll/֨ۢۘ;->ۙ:Ljava/util/EnumSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

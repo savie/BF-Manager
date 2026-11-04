@@ -1,19 +1,34 @@
-.class public final Ll/ᩳ֫ۘ;
-.super Ll/ۤ۠;
-.source "C19Y"
+.class public final synthetic Ll/ᩳ֫ۘ;
+.super Ljava/lang/Object;
+.source "A451"
+
+# interfaces
+.implements Ljava/util/function/BinaryOperator;
 
 
 # virtual methods
-.method public final ܰ(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/BiFunction;
     .locals 0
 
-    .line 36
-    check-cast p1, Ljava/lang/String;
+    .line 0
+    invoke-static {p0, p1}, Ll/ۗۧۗ;->$default$andThen(Ljava/util/function/BiFunction;Ljava/util/function/Function;)Ljava/util/function/BiFunction;
 
-    check-cast p2, [B
+    move-result-object p1
 
-    .line 40
-    array-length p1, p2
+    return-object p1
+.end method
 
-    return p1
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 0
+    check-cast p1, Ll/ۢ֫ۘ;
+
+    check-cast p2, Ll/ۢ֫ۘ;
+
+    invoke-static {p1, p2}, Ll/ۢ֫ۘ;->ۙ(Ll/ۢ֫ۘ;Ll/ۢ֫ۘ;)Ll/ۢ֫ۘ;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -5,7 +5,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ECParameterSpec implements AlgorithmParameterSpec {
     public ECPoint G;
     public ECCurve curve;

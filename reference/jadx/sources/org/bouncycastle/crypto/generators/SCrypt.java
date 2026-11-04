@@ -1,7 +1,7 @@
 package org.bouncycastle.crypto.generators;
 
 import com.google.android.material.motion.MotionUtils;
-import l.C8015;
+import l.C0703;
 import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.crypto.engines.Salsa20Engine;
 import org.bouncycastle.crypto.params.KeyParameter;
@@ -9,7 +9,7 @@ import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Integers;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SCrypt {
     public static void BlockMix(int[] iArr, int[] iArr2, int[] iArr3, int[] iArr4, int i) {
         System.arraycopy(iArr, iArr.length - 16, iArr2, 0, 16);
@@ -157,7 +157,7 @@ public class SCrypt {
         }
         int i5 = Integer.MAX_VALUE / (i2 * 1024);
         if (i3 < 1 || i3 > i5) {
-            throw new IllegalArgumentException(C8015.m21119("Parallelisation parameter p must be >= 1 and <= ", i5, " (based on block size r of ", MotionUtils.EASING_TYPE_FORMAT_END, i2));
+            throw new IllegalArgumentException(C0703.m3016("Parallelisation parameter p must be >= 1 and <= ", i5, " (based on block size r of ", MotionUtils.EASING_TYPE_FORMAT_END, i2));
         }
         if (i4 >= 1) {
             return MFcrypt(bArr, bArr2, i, i2, i3, i4);

@@ -1,25 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢۛᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
-/* JADX INFO: loaded from: classes3.dex */
-public final enum C9404 extends EnumC21210 {
-    public /* synthetic */ C9404() {
-        this("ScriptDataEscapeStart", 19);
-    }
+/* JADX INFO: renamed from: l.ۡ۬ܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 532I */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9404 extends AbstractC19101 {
 
-    public C9404(String str, int i) {
-        super(str, i, 0);
-    }
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final char f30524;
 
-    @Override // l.EnumC21210
+    @Override // l.AbstractC19101, l.AbstractC21825
     /* JADX INFO: renamed from: ۙ */
-    public void mo1598(C20692 c20692, C12931 c12931) {
-        if (c12931.m32035('-')) {
-            c20692.m46535('-');
-            c20692.m46538(EnumC21210.f69089);
-        } else {
-            c20692.m46532(EnumC21210.f69030);
-        }
+    public final AbstractC21825 mo23311() {
+        throw null;
+    }
+
+    public C9404(char c) {
+        this.f30524 = c;
+    }
+
+    @Override // l.AbstractC21825
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo4420(char c) {
+        return c != this.f30524;
+    }
+
+    public final String toString() {
+        return C8947.m23910(new StringBuilder("CharMatcher.isNot('"), AbstractC21825.m49480(this.f30524), "')");
     }
 }

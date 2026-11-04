@@ -172,7 +172,7 @@
     if-eqz v2, :cond_0
 
     .line 155
-    invoke-virtual {v1}, Lcom/amazonaws/internal/config/HostRegexToRegionMapping;->ܰ()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amazonaws/internal/config/HostRegexToRegionMapping;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
     const/16 p1, 0xe
 
     .line 0
-    invoke-static {p1, v1, p0}, Ll/᩷ۘᩳ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, p0}, Ll/֨᩵ᩴ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -225,7 +225,7 @@
     const/16 p1, 0x11
 
     .line 0
-    invoke-static {p1, v1, p0}, Ll/᩷ۘᩳ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, p0}, Ll/֨᩵ᩴ;->ۙ(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -398,7 +398,7 @@
     const-string v2, ")."
 
     .line 0
-    invoke-static {v1, p0, v2}, Ll/ܽ۠ᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Ll/ܰ۟ۙ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

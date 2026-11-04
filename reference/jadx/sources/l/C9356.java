@@ -1,33 +1,31 @@
 package l;
 
-import java.util.function.DoubleConsumer;
-
-/* JADX INFO: renamed from: l.ۢۙ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۡۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81J9 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C9356 extends AbstractC1862 implements DoubleConsumer {
-    public final double[] c;
+public final class C9356 implements InterfaceC4739 {
 
-    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
-        return AbstractC14884.a(this, doubleConsumer);
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13831 f30419;
+
+    @Override // l.InterfaceC4739
+    public final void onPageScrollStateChanged(int i) {
     }
 
-    public C9356(int i) {
-        this.c = new double[i];
+    @Override // l.InterfaceC4739
+    public final void onPageScrolled(int i, float f, int i2) {
     }
 
-    @Override // l.AbstractC1862
-    public final void a(Object obj, long j) {
-        DoubleConsumer doubleConsumer = (DoubleConsumer) obj;
-        for (int i = 0; i < j; i++) {
-            doubleConsumer.accept(this.c[i]);
+    public C9356(C13831 c13831) {
+        this.f30419 = c13831;
+    }
+
+    @Override // l.InterfaceC4739
+    public final void onPageSelected(int i) {
+        C13831 c13831 = this.f30419;
+        if (i == 3) {
+            c13831.f43903.m51325();
         }
-    }
-
-    @Override // java.util.function.DoubleConsumer
-    public final void accept(double d) {
-        int i = this.b;
-        this.b = i + 1;
-        this.c[i] = d;
+        c13831.m33766();
     }
 }

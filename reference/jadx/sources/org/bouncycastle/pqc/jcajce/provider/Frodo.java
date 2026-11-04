@@ -1,7 +1,7 @@
 package org.bouncycastle.pqc.jcajce.provider;
 
-import l.C18917;
-import l.C7997;
+import l.C18011;
+import l.C22121;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.bc.BCObjectIdentifiers;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
@@ -19,9 +19,9 @@ public class Frodo {
             configurableProvider.addAlgorithm("KeyPairGenerator.FRODO", "org.bouncycastle.pqc.jcajce.provider.frodo.FrodoKeyPairGeneratorSpi");
             configurableProvider.addAlgorithm("KeyGenerator.FRODO", "org.bouncycastle.pqc.jcajce.provider.frodo.FrodoKeyGeneratorSpi");
             FrodoKeyFactorySpi frodoKeyFactorySpi = new FrodoKeyFactorySpi();
-            StringBuilder sbM43575 = C18917.m43575(configurableProvider, "Cipher.FRODO", "org.bouncycastle.pqc.jcajce.provider.frodo.FrodoCipherSpi$Base", "Alg.Alias.Cipher.");
+            StringBuilder sbM50077 = C22121.m50077(configurableProvider, "Cipher.FRODO", "org.bouncycastle.pqc.jcajce.provider.frodo.FrodoCipherSpi$Base", "Alg.Alias.Cipher.");
             ASN1ObjectIdentifier aSN1ObjectIdentifier = BCObjectIdentifiers.pqc_kem_frodo;
-            C7997.m21058(sbM43575, aSN1ObjectIdentifier, configurableProvider, "FRODO");
+            C18011.m41992(sbM50077, aSN1ObjectIdentifier, configurableProvider, "FRODO");
             registerOid(configurableProvider, aSN1ObjectIdentifier, "Frodo", frodoKeyFactorySpi);
         }
     }

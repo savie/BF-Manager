@@ -1,85 +1,76 @@
 package l;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۗۗ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: A4DP */
+/* JADX INFO: renamed from: l.ۖ᩸᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: IO5 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2962 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f11091;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final String f11092;
+public final /* synthetic */ class C2962 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final File[] f11093;
+    public static final /* synthetic */ int[] f9649;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long[] f11094;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f9650;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final File[] f11095;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13598 f11096;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C9314 f11097;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f11098;
-
-    public C2962(C13598 c13598, String str) {
-        this.f11096 = c13598;
-        this.f11092 = str;
-        int i = c13598.f44840;
-        File file = c13598.f44854;
-        this.f11094 = new long[i];
-        this.f11093 = new File[i];
-        this.f11095 = new File[i];
-        StringBuilder sb = new StringBuilder(str);
-        sb.append('.');
-        int length = sb.length();
-        for (int i2 = 0; i2 < i; i2++) {
-            sb.append(i2);
-            this.f11093[i2] = new File(file, sb.toString());
-            sb.append(".tmp");
-            this.f11095[i2] = new File(file, sb.toString());
-            sb.setLength(length);
+    static {
+        int[] iArr = new int[EnumC10419.values().length];
+        f9649 = iArr;
+        try {
+            iArr[EnumC10419.APPLICATION.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4424 m8784() {
-        C13598 c13598 = this.f11096;
-        int i = c13598.f44840;
-        if (!Thread.holdsLock(c13598)) {
-            throw new AssertionError();
+        try {
+            f9649[EnumC10419.CONTEXT_SPECIFIC.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-        InterfaceC10008[] interfaceC10008Arr = new InterfaceC10008[i];
-        for (int i2 = 0; i2 < c13598.f44840; i2++) {
-            try {
-                interfaceC10008Arr[i2] = c13598.f44855.mo7707(this.f11093[i2]);
-            } catch (FileNotFoundException unused) {
-                for (int i3 = 0; i3 < i; i3++) {
-                    InterfaceC10008 interfaceC10008 = interfaceC10008Arr[i3];
-                    if (interfaceC10008 == null) {
-                        break;
-                    }
-                    C0140.m1231(interfaceC10008);
-                }
-                try {
-                    c13598.m33231(this);
-                    return null;
-                } catch (IOException unused2) {
-                    return null;
-                }
-            }
+        try {
+            f9649[EnumC10419.PRIVATE.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
         }
-        return new C4424(c13598, this.f11092, this.f11091, interfaceC10008Arr);
+        try {
+            f9649[EnumC10419.UNIVERSAL.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        int[] iArr2 = new int[EnumC9673.values().length];
+        f9650 = iArr2;
+        try {
+            iArr2[EnumC9673.INTEGER.ordinal()] = 1;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f9650[EnumC9673.OBJECT_IDENTIFIER.ordinal()] = 2;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f9650[EnumC9673.OCTET_STRING.ordinal()] = 3;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f9650[EnumC9673.BIT_STRING.ordinal()] = 4;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            f9650[EnumC9673.SET_OF.ordinal()] = 5;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            f9650[EnumC9673.SEQUENCE.ordinal()] = 6;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            f9650[EnumC9673.SEQUENCE_OF.ordinal()] = 7;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            f9650[EnumC9673.UTC_TIME.ordinal()] = 8;
+        } catch (NoSuchFieldError unused12) {
+        }
+        try {
+            f9650[EnumC9673.GENERALIZED_TIME.ordinal()] = 9;
+        } catch (NoSuchFieldError unused13) {
+        }
+        try {
+            f9650[EnumC9673.BOOLEAN.ordinal()] = 10;
+        } catch (NoSuchFieldError unused14) {
+        }
     }
 }

@@ -131,7 +131,7 @@
     const/4 v3, 0x2
 
     .line 100
-    invoke-static {p4, v1, v3, p3}, Ll/ۗۧ֨;->ۙ(IIII)I
+    invoke-static {p4, v1, v3, p3}, Ll/ۛ۬ܳ;->ۙ(IIII)I
 
     move-result v3
 

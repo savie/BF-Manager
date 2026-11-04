@@ -1,83 +1,52 @@
 package l;
 
-import android.content.Context;
-import android.view.View;
-import bin.mt.plus.R;
+import java.util.Collection;
 
-/* JADX INFO: renamed from: l.ܺ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 95GJ */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16195 {
+/* JADX INFO: renamed from: l.ܶܺۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K7QT */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16195 extends C7246 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public InterfaceC7728 f52291;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22185 f52575;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final View f52292;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C2269 f52293;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public InterfaceC21133 f52294;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C12418 f52295;
-
-    public C16195(Context context, View view, int i) {
-        this(context, view, i, R.attr.MT_Protector);
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C16195(C22185 c22185) {
+        super(c22185, EnumC6282.CLASS_PATH, EnumC7687.f25344);
+        this.f52575 = c22185;
     }
 
-    public C16195(Context context, View view, int i, int i2) {
-        this.f52292 = view;
-        C12418 c12418 = new C12418(context);
-        this.f52295 = c12418;
-        c12418.setCallback(new C9140(this));
-        C2269 c2269 = new C2269(context, c12418, view, false, i2, 0);
-        this.f52293 = c2269;
-        c2269.m6955(i);
-        c2269.m6957(new C10551(this));
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38294(int i) {
-        this.f52293.m6955(i);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int m38299() {
-        return this.f52293.m6963();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C12418 m38298() {
-        return this.f52295;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void m38297() {
-        if (!this.f52293.m6952()) {
-            throw new IllegalStateException("MenuPopupHelper cannot be used without an anchor");
+    @Override // l.C7246
+    /* JADX INFO: renamed from: ۫ */
+    public final C8737 mo19876() {
+        String property = System.getProperty("env.class.path");
+        if (property == null && System.getProperty("application.home") == null) {
+            property = System.getProperty("java.class.path");
         }
+        if (property == null) {
+            property = ".";
+        }
+        C8737 c8737Mo19875 = mo19875();
+        c8737Mo19875.m23422(property);
+        return c8737Mo19875;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38293() {
-        this.f52293.m6954();
+    @Override // l.C7246
+    /* JADX INFO: renamed from: ۚ */
+    public final C8737 mo19875() {
+        C22185 c22185 = this.f52575;
+        C8737 c8737 = new C8737(c22185);
+        c8737.m23426();
+        c8737.m23424(c22185.m50194(".", new String[0]));
+        return c8737;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38296(InterfaceC21133 interfaceC21133) {
-        this.f52294 = interfaceC21133;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38295(InterfaceC7728 interfaceC7728) {
-        this.f52291 = interfaceC7728;
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final void m38292() {
-        this.f52293.m6959(true);
+    @Override // l.C7246, l.AbstractC23655
+    /* JADX INFO: renamed from: ᩷ */
+    public final Collection mo4675() {
+        if (this.f23892 == null) {
+            mo4669((Iterable) null);
+        }
+        return this.f23892;
     }
 }

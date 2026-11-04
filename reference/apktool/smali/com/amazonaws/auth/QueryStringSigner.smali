@@ -95,12 +95,12 @@
     .line 120
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
     .line 121
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object v1
 
@@ -152,7 +152,7 @@
     .line 134
     check-cast p1, Lcom/amazonaws/DefaultRequest;
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v0
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
@@ -185,7 +185,7 @@
 
     .line 138
     :cond_0
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object v0
 
@@ -208,7 +208,7 @@
     if-nez v0, :cond_1
 
     .line 141
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object v0
 
@@ -225,12 +225,12 @@
 
     .line 0
     :cond_1
-    invoke-static {v1}, Ll/ۡܿۡ;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ll/ۤ۠֫;->ۙ(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     .line 145
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object p1
 
@@ -305,7 +305,7 @@
     const-string v1, "UTC"
 
     .line 167
-    invoke-static {v1}, Ll/۫ܿᩴ;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+    invoke-static {v1}, Ll/ۤۚۗ;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v1
 
@@ -342,7 +342,7 @@
     .locals 1
 
     .line 183
-    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->ܰ()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/amazonaws/auth/AWSSessionCredentials;->᩷()Ljava/lang/String;
 
     move-result-object p2
 
@@ -350,7 +350,7 @@
 
     const-string v0, "SecurityToken"
 
-    invoke-virtual {p1, v0, p2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -368,9 +368,9 @@
     .locals 2
 
     .line 47
-    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->ܽ:Lcom/amazonaws/auth/SignatureVersion;
+    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->֡:Lcom/amazonaws/auth/SignatureVersion;
 
-    sget-object v1, Lcom/amazonaws/auth/SigningAlgorithm;->֡:Lcom/amazonaws/auth/SigningAlgorithm;
+    sget-object v1, Lcom/amazonaws/auth/SigningAlgorithm;->ܿ:Lcom/amazonaws/auth/SigningAlgorithm;
 
     invoke-virtual {p0, p1, v0, v1, p2}, Lcom/amazonaws/auth/QueryStringSigner;->sign(Lcom/amazonaws/Request;Lcom/amazonaws/auth/SignatureVersion;Lcom/amazonaws/auth/SigningAlgorithm;Lcom/amazonaws/auth/AWSCredentials;)V
 
@@ -394,7 +394,7 @@
 
     const-string v1, "AWSAccessKeyId"
 
-    invoke-virtual {p1, v1, v0}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "SignatureVersion"
 
@@ -403,7 +403,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
     invoke-virtual {p0, p1}, Lcom/amazonaws/auth/AbstractAWSSigner;->getTimeOffset(Lcom/amazonaws/Request;)J
@@ -417,7 +417,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v2, v0}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 73
     instance-of v0, p4, Lcom/amazonaws/auth/AWSSessionCredentials;
@@ -433,7 +433,7 @@
 
     .line 78
     :cond_0
-    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->֡:Lcom/amazonaws/auth/SignatureVersion;
+    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->ܿ:Lcom/amazonaws/auth/SignatureVersion;
 
     invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -442,7 +442,7 @@
     if-eqz v0, :cond_1
 
     .line 79
-    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual {p1}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object p2
 
@@ -454,7 +454,7 @@
 
     .line 80
     :cond_1
-    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->ܽ:Lcom/amazonaws/auth/SignatureVersion;
+    sget-object v0, Lcom/amazonaws/auth/SignatureVersion;->֡:Lcom/amazonaws/auth/SignatureVersion;
 
     invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -469,7 +469,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v0}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 82
     invoke-direct {p0, p1}, Lcom/amazonaws/auth/QueryStringSigner;->calculateStringToSignV2(Lcom/amazonaws/Request;)Ljava/lang/String;
@@ -478,7 +478,7 @@
 
     .line 88
     :goto_0
-    invoke-interface {p4}, Lcom/amazonaws/auth/AWSCredentials;->ۨ()Ljava/lang/String;
+    invoke-interface {p4}, Lcom/amazonaws/auth/AWSCredentials;->ۤ()Ljava/lang/String;
 
     move-result-object p4
 
@@ -490,7 +490,7 @@
     const-string p3, "Signature"
 
     .line 89
-    invoke-virtual {p1, p3, p2}, Lcom/amazonaws/DefaultRequest;->ܰ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p3, p2}, Lcom/amazonaws/DefaultRequest;->᩷(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 

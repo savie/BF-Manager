@@ -1,289 +1,359 @@
 package l;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.Resources;
-import android.net.Uri;
-import android.text.TextUtils;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
+import java.util.Arrays;
 import java.util.List;
 
-/* JADX INFO: renamed from: l.ᩳ᩷ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W8T8 */
+/* JADX INFO: renamed from: l.ܿۧ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: X8U2 */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C18294 extends AbstractC21428 {
+public final class C18294 implements InterfaceC22486 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public long f58367;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public FileInputStream f58368;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public C21278 f59643;
 
     /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final Context f58369;
+    public C19378 f59644;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public boolean f58370;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f59645;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public C12257 f58371;
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public int f59646;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public AssetFileDescriptor f58372;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public int f59647;
 
-    @Deprecated
-    public static Uri buildRawResourceUri(int i) {
-        return Uri.parse("rawresource:///" + i);
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C23232 f59648;
 
-    public C18294(Context context) {
-        super(false);
-        this.f58369 = context.getApplicationContext();
-    }
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public InterfaceC22024 f59649;
 
-    @Override // l.InterfaceC15785
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public InterfaceC12789 f59652;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public long f59654;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public final byte[] f59651 = new byte[42];
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C21287 f59653 = new C21287(new byte[32768], 0);
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final boolean f59642 = false;
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public final C11297 f59655 = new C11297();
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public int f59650 = 0;
+
+    @Override // l.InterfaceC22486
     /* JADX INFO: renamed from: ۙ */
-    public final long mo9272(C12257 c12257) throws C21822 {
-        Resources resourcesForApplication;
-        int identifier;
-        int i;
-        Resources resources;
-        this.f58371 = c12257;
-        m48019(c12257);
-        Uri uri = c12257.f41015;
-        long j = c12257.f41017;
-        long j2 = c12257.f41009;
-        Uri uriNormalizeScheme = uri.normalizeScheme();
-        boolean zEquals = TextUtils.equals("rawresource", uriNormalizeScheme.getScheme());
-        Context context = this.f58369;
-        if (zEquals) {
-            resources = context.getResources();
-            List<String> pathSegments = uriNormalizeScheme.getPathSegments();
-            if (pathSegments.size() != 1) {
-                throw new C21822("rawresource:// URI must have exactly one path element, found " + pathSegments.size(), null, 2000);
-            }
-            try {
-                i = Integer.parseInt(pathSegments.get(0));
-            } catch (NumberFormatException unused) {
-                throw new C21822("Resource identifier must be an integer.", null, 1004);
-            }
-        } else {
-            if (!TextUtils.equals("android.resource", uriNormalizeScheme.getScheme())) {
-                throw new C21822("Unsupported URI scheme (" + uriNormalizeScheme.getScheme() + "). Only android.resource is supported.", null, 1004);
-            }
-            String path = uriNormalizeScheme.getPath();
-            path.getClass();
-            if (path.startsWith("/")) {
-                path = path.substring(1);
-            }
-            String packageName = TextUtils.isEmpty(uriNormalizeScheme.getHost()) ? context.getPackageName() : uriNormalizeScheme.getHost();
-            if (packageName.equals(context.getPackageName())) {
-                resourcesForApplication = context.getResources();
-            } else {
-                try {
-                    resourcesForApplication = context.getPackageManager().getResourcesForApplication(packageName);
-                } catch (PackageManager.NameNotFoundException e) {
-                    throw new C21822("Package in android.resource:// URI not found. Check http://g.co/dev/packagevisibility.", e, 2005);
-                }
-            }
-            if (path.matches("\\d+")) {
-                try {
-                    identifier = Integer.parseInt(path);
-                } catch (NumberFormatException unused2) {
-                    throw new C21822("Resource identifier must be an integer.", null, 1004);
-                }
-            } else {
-                identifier = resourcesForApplication.getIdentifier(C1679.m5594(packageName, ":", path), "raw", null);
-                if (identifier == 0) {
-                    throw new C21822("Resource not found.", null, 2005);
-                }
-            }
-            i = identifier;
-            resources = resourcesForApplication;
-        }
-        try {
-            AssetFileDescriptor assetFileDescriptorOpenRawResourceFd = resources.openRawResourceFd(i);
-            if (assetFileDescriptorOpenRawResourceFd == null) {
-                throw new C21822("Resource is compressed: " + uriNormalizeScheme, null, 2000);
-            }
-            this.f58372 = assetFileDescriptorOpenRawResourceFd;
-            long length = assetFileDescriptorOpenRawResourceFd.getLength();
-            FileInputStream fileInputStream = new FileInputStream(this.f58372.getFileDescriptor());
-            this.f58368 = fileInputStream;
-            try {
-                if (length != -1 && j2 > length) {
-                    throw new C21822(null, null, 2008);
-                }
-                long startOffset = this.f58372.getStartOffset();
-                long jSkip = fileInputStream.skip(startOffset + j2) - startOffset;
-                if (jSkip != j2) {
-                    throw new C21822(null, null, 2008);
-                }
-                if (length == -1) {
-                    FileChannel fileChannelConvertMaybeLegacyFileChannelFromLibrary = C6001.convertMaybeLegacyFileChannelFromLibrary(fileInputStream.getChannel());
-                    if (fileChannelConvertMaybeLegacyFileChannelFromLibrary.size() == 0) {
-                        this.f58367 = -1L;
-                    } else {
-                        long size = fileChannelConvertMaybeLegacyFileChannelFromLibrary.size() - fileChannelConvertMaybeLegacyFileChannelFromLibrary.position();
-                        this.f58367 = size;
-                        if (size < 0) {
-                            throw new C21822(null, null, 2008);
-                        }
-                    }
-                } else {
-                    long j3 = length - jSkip;
-                    this.f58367 = j3;
-                    if (j3 < 0) {
-                        throw new C20018(2008);
-                    }
-                }
-                if (j != -1) {
-                    long j4 = this.f58367;
-                    this.f58367 = j4 == -1 ? j : Math.min(j4, j);
-                }
-                this.f58370 = true;
-                m48018(c12257);
-                return j != -1 ? j : this.f58367;
-            } catch (C21822 e2) {
-                throw e2;
-            } catch (IOException e3) {
-                throw new C21822(null, e3, 2000);
-            }
-        } catch (Resources.NotFoundException e4) {
-            throw new C21822(null, e4, 2005);
-        }
+    public final void mo2291() {
     }
 
-    @Override // l.InterfaceC6942
-    public final int read(byte[] bArr, int i, int i2) throws C21822 {
-        if (i2 == 0) {
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ۤ */
+    public final InterfaceC22486 mo2296() {
+        return this;
+    }
+
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2294(InterfaceC19502 interfaceC19502) {
+        C19378 c19378M34693 = new C14280().m34693(interfaceC19502, C8248.f27128);
+        if (c19378M34693 != null) {
+            c19378M34693.m44819();
+        }
+        C21287 c21287 = new C21287(4);
+        ((C9169) interfaceC19502).mo10078(false, 0, 4, c21287.m48497());
+        return c21287.m48485() == 1716281667;
+    }
+
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ܳ */
+    public final List mo2297() {
+        return AbstractC1928.of();
+    }
+
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2293(InterfaceC12789 interfaceC12789) {
+        this.f59652 = interfaceC12789;
+        this.f59649 = interfaceC12789.mo16658(0, 1);
+        interfaceC12789.mo16661();
+    }
+
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo2289(InterfaceC19502 interfaceC19502, C18756 c18756) throws C2970 {
+        InterfaceC9060 c0857;
+        long j;
+        boolean zM55203;
+        int i = this.f59650;
+        C19378 c19378 = null;
+        boolean z = true;
+        if (i == 0) {
+            interfaceC19502.mo10076();
+            long jMo10072 = interfaceC19502.mo10072();
+            C19378 c19378M34693 = new C14280().m34693(interfaceC19502, !this.f59642 ? null : C8248.f27128);
+            if (c19378M34693 != null && c19378M34693.m44819() != 0) {
+                c19378 = c19378M34693;
+            }
+            interfaceC19502.mo10073((int) (interfaceC19502.mo10072() - jMo10072));
+            this.f59644 = c19378;
+            this.f59650 = 1;
             return 0;
         }
-        long j = this.f58367;
-        if (j != 0) {
+        byte[] bArr = this.f59651;
+        if (i == 1) {
+            interfaceC19502.mo10069(0, bArr.length, bArr);
+            interfaceC19502.mo10076();
+            this.f59650 = 2;
+            return 0;
+        }
+        if (i == 2) {
+            C21287 c21287 = new C21287(4);
+            interfaceC19502.readFully(c21287.m48497(), 0, 4);
+            if (c21287.m48485() != 1716281667) {
+                throw C2970.m9688("Failed to read FLAC stream marker.", (Throwable) null);
+            }
+            this.f59650 = 3;
+            return 0;
+        }
+        if (i == 3) {
+            C23232 c23232M52213 = this.f59648;
+            boolean z2 = false;
+            while (!z2) {
+                interfaceC19502.mo10076();
+                byte[] bArr2 = new byte[4];
+                C14573 c14573 = new C14573(bArr2, 4);
+                interfaceC19502.mo10069(0, 4, bArr2);
+                boolean zM35162 = c14573.m35162();
+                int iM35163 = c14573.m35163(7);
+                int iM35164 = c14573.m35163(24) + 4;
+                if (iM35163 == 0) {
+                    byte[] bArr3 = new byte[38];
+                    interfaceC19502.readFully(bArr3, 0, 38);
+                    c23232M52213 = new C23232(bArr3, 4);
+                } else {
+                    if (c23232M52213 == null) {
+                        throw new IllegalArgumentException();
+                    }
+                    if (iM35163 == 3) {
+                        C21287 c21288 = new C21287(iM35164);
+                        interfaceC19502.readFully(c21288.m48497(), 0, iM35164);
+                        c23232M52213 = c23232M52213.m52214(C16518.m39146(c21288));
+                    } else if (iM35163 == 4) {
+                        C21287 c21289 = new C21287(iM35164);
+                        interfaceC19502.readFully(c21289.m48497(), 0, iM35164);
+                        c21289.m48503(4);
+                        c23232M52213 = c23232M52213.m52215(Arrays.asList(C5616.m16597(c21289, false, false).f63651));
+                    } else if (iM35163 == 6) {
+                        C21287 c212810 = new C21287(iM35164);
+                        interfaceC19502.readFully(c212810.m48497(), 0, iM35164);
+                        c212810.m48503(4);
+                        c23232M52213 = c23232M52213.m52213(AbstractC1928.of((Object) C17943.m41885(c212810)));
+                    } else {
+                        interfaceC19502.mo10073(iM35164);
+                    }
+                }
+                String str = C7116.f23455;
+                this.f59648 = c23232M52213;
+                z2 = zM35162;
+            }
+            this.f59648.getClass();
+            this.f59646 = Math.max(this.f59648.f75251, 6);
+            C15648 c15648M52212 = this.f59648.m52212(bArr, this.f59644);
+            InterfaceC22024 interfaceC22024 = this.f59649;
+            C20124 c20124M37397 = c15648M52212.m37397();
+            c20124M37397.m46327("audio/flac");
+            interfaceC22024.mo14384(c20124M37397.m46295());
+            this.f59649.mo14382(this.f59648.m52211());
+            this.f59650 = 4;
+            return 0;
+        }
+        long j2 = 0;
+        if (i == 4) {
+            interfaceC19502.mo10076();
+            C21287 c212811 = new C21287(2);
+            interfaceC19502.mo10069(0, 2, c212811.m48497());
+            int iM48494 = c212811.m48494();
+            if ((iM48494 >> 2) != 16382) {
+                interfaceC19502.mo10076();
+                throw C2970.m9688("First frame does not start with sync code.", (Throwable) null);
+            }
+            interfaceC19502.mo10076();
+            this.f59647 = iM48494;
+            InterfaceC12789 interfaceC12789 = this.f59652;
+            String str2 = C7116.f23455;
+            long position = interfaceC19502.getPosition();
+            long length = interfaceC19502.getLength();
+            this.f59648.getClass();
+            C23232 c23232 = this.f59648;
+            C15772 c15772 = c23232.f75260;
+            if (c15772 != null && c15772.f51350.length > 0) {
+                c0857 = new C17264(c23232, position);
+            } else if (length == -1 || c23232.f75256 <= 0) {
+                c0857 = new C0857(c23232.m52211());
+            } else {
+                C21278 c21278 = new C21278(c23232, this.f59647, position, length);
+                this.f59643 = c21278;
+                c0857 = c21278.m1675();
+            }
+            interfaceC12789.mo16659(c0857);
+            this.f59650 = 5;
+            return 0;
+        }
+        if (i != 5) {
+            throw new IllegalStateException();
+        }
+        this.f59649.getClass();
+        this.f59648.getClass();
+        C21278 c21279 = this.f59643;
+        if (c21279 != null && c21279.m1677()) {
+            return this.f59643.m1674(interfaceC19502, c18756);
+        }
+        if (this.f59654 == -1) {
+            C23232 c23233 = this.f59648;
+            interfaceC19502.mo10076();
+            interfaceC19502.mo10068(1);
+            byte[] bArr4 = new byte[1];
+            interfaceC19502.mo10069(0, 1, bArr4);
+            boolean z3 = (bArr4[0] & 1) == 1;
+            interfaceC19502.mo10068(2);
+            int i2 = z3 ? 7 : 6;
+            C21287 c212812 = new C21287(i2);
+            byte[] bArrM48497 = c212812.m48497();
+            int i3 = 0;
+            while (i3 < i2) {
+                int iMo10075 = interfaceC19502.mo10075(i3, i2 - i3, bArrM48497);
+                if (iMo10075 == -1) {
+                    break;
+                }
+                i3 += iMo10075;
+            }
+            c212812.m48517(i3);
+            interfaceC19502.mo10076();
+            try {
+                long jM48508 = c212812.m48508();
+                if (!z3) {
+                    jM48508 *= (long) c23233.f75259;
+                }
+                j2 = jM48508;
+            } catch (NumberFormatException unused) {
+                z = false;
+            }
+            if (!z) {
+                throw C2970.m9688((String) null, (Throwable) null);
+            }
+            this.f59654 = j2;
+        } else {
+            C21287 c212813 = this.f59653;
+            int iM48509 = c212813.m48509();
+            if (iM48509 < 32768) {
+                int i4 = interfaceC19502.read(c212813.m48497(), iM48509, 32768 - iM48509);
+                z = i4 == -1;
+                if (!z) {
+                    c212813.m48517(iM48509 + i4);
+                } else if (c212813.m48486() == 0) {
+                    long j3 = this.f59654 * 1000000;
+                    C23232 c23234 = this.f59648;
+                    String str3 = C7116.f23455;
+                    this.f59649.mo14383(j3 / ((long) c23234.f75249), 1, this.f59645, 0, null);
+                    return -1;
+                }
+            } else {
+                z = false;
+            }
+            int iM48516 = c212813.m48516();
+            int i5 = this.f59645;
+            int i6 = this.f59646;
+            if (i5 < i6) {
+                c212813.m48503(Math.min(i6 - i5, c212813.m48486()));
+            }
+            this.f59648.getClass();
+            int iM48517 = c212813.m48516();
+            while (true) {
+                int iM485010 = c212813.m48509() - 16;
+                C11297 c11297 = this.f59655;
+                if (iM48517 > iM485010) {
+                    if (z) {
+                        while (true) {
+                            if (iM48517 <= c212813.m48509() - this.f59646) {
+                                c212813.m48510(iM48517);
+                                try {
+                                    zM55203 = C24724.m55203(c212813, this.f59648, this.f59647, c11297);
+                                } catch (IndexOutOfBoundsException unused2) {
+                                    zM55203 = false;
+                                }
+                                if (c212813.m48516() > c212813.m48509()) {
+                                    zM55203 = false;
+                                }
+                                if (zM55203) {
+                                    c212813.m48510(iM48517);
+                                    j = c11297.f35612;
+                                    break;
+                                }
+                                iM48517++;
+                            } else {
+                                c212813.m48510(c212813.m48509());
+                            }
+                        }
+                    } else {
+                        c212813.m48510(iM48517);
+                    }
+                    j = -1;
+                    break;
+                }
+                c212813.m48510(iM48517);
+                if (C24724.m55203(c212813, this.f59648, this.f59647, c11297)) {
+                    c212813.m48510(iM48517);
+                    j = c11297.f35612;
+                    break;
+                }
+                iM48517++;
+            }
+            int iM48518 = c212813.m48516() - iM48516;
+            c212813.m48510(iM48516);
+            this.f59649.mo14381(iM48518, c212813);
+            int i7 = this.f59645 + iM48518;
+            this.f59645 = i7;
             if (j != -1) {
-                try {
-                    i2 = (int) Math.min(j, i2);
-                } catch (IOException e) {
-                    throw new C21822(null, e, 2000);
-                }
+                long j4 = this.f59654 * 1000000;
+                C23232 c23235 = this.f59648;
+                String str4 = C7116.f23455;
+                this.f59649.mo14383(j4 / ((long) c23235.f75249), 1, i7, 0, null);
+                this.f59645 = 0;
+                this.f59654 = j;
             }
-            FileInputStream fileInputStream = this.f58368;
-            String str = C17983.f57504;
-            int i3 = fileInputStream.read(bArr, i, i2);
-            if (i3 != -1) {
-                long j2 = this.f58367;
-                if (j2 != -1) {
-                    this.f58367 = j2 - ((long) i3);
-                }
-                m48017(i3);
-                return i3;
-            }
-            if (this.f58367 != -1) {
-                throw new C21822("End of stream reached having not read sufficient data.", new EOFException(), 2000);
+            int length2 = c212813.m48497().length - c212813.m48509();
+            if (c212813.m48486() < 16 && length2 < 16) {
+                int iM48486 = c212813.m48486();
+                System.arraycopy(c212813.m48497(), c212813.m48516(), c212813.m48497(), 0, iM48486);
+                c212813.m48510(0);
+                c212813.m48517(iM48486);
             }
         }
-        return -1;
+        return 0;
     }
 
-    @Override // l.InterfaceC15785
-    /* JADX INFO: renamed from: ۚ */
-    public final Uri mo9274() {
-        C12257 c12257 = this.f58371;
-        if (c12257 != null) {
-            return c12257.f41015;
+    @Override // l.InterfaceC22486
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2292(long j, long j2) {
+        if (j == 0) {
+            this.f59650 = 0;
+        } else {
+            C21278 c21278 = this.f59643;
+            if (c21278 != null) {
+                c21278.m1676(j2);
+            }
         }
-        return null;
-    }
-
-    /* JADX WARN: Bottom block not found for handler: all -> 0x0037 */
-    /* JADX WARN: Bottom block not found for handler: all -> 0x0055 */
-    @Override // l.InterfaceC15785
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final void close() {
-        /*
-            r5 = this;
-            r0 = 0
-            r5.f58371 = r0
-            r1 = 2000(0x7d0, float:2.803E-42)
-            r2 = 0
-            java.io.FileInputStream r3 = r5.f58368     // Catch: java.lang.Throwable -> L37 java.io.IOException -> L39
-            if (r3 == 0) goto Ld
-            r3.close()     // Catch: java.lang.Throwable -> L37 java.io.IOException -> L39
-        Ld:
-            r5.f58368 = r0
-            android.content.res.AssetFileDescriptor r3 = r5.f58372     // Catch: java.lang.Throwable -> L22 java.io.IOException -> L24
-            if (r3 == 0) goto L16
-            r3.close()     // Catch: java.lang.Throwable -> L22 java.io.IOException -> L24
-        L16:
-            r5.f58372 = r0
-            boolean r0 = r5.f58370
-            if (r0 == 0) goto L21
-            r5.f58370 = r2
-            r5.m48020()
-        L21:
-            return
-        L22:
-            r1 = move-exception
-            goto L2b
-        L24:
-            r3 = move-exception
-            l.᩸᩷ۙ r4 = new l.᩸᩷ۙ     // Catch: java.lang.Throwable -> L22
-            r4.<init>(r0, r3, r1)     // Catch: java.lang.Throwable -> L22
-            throw r4     // Catch: java.lang.Throwable -> L22
-        L2b:
-            r5.f58372 = r0
-            boolean r0 = r5.f58370
-            if (r0 == 0) goto L36
-            r5.f58370 = r2
-            r5.m48020()
-        L36:
-            throw r1
-        L37:
-            r3 = move-exception
-            goto L40
-        L39:
-            r3 = move-exception
-            l.᩸᩷ۙ r4 = new l.᩸᩷ۙ     // Catch: java.lang.Throwable -> L37
-            r4.<init>(r0, r3, r1)     // Catch: java.lang.Throwable -> L37
-            throw r4     // Catch: java.lang.Throwable -> L37
-        L40:
-            r5.f58368 = r0
-            android.content.res.AssetFileDescriptor r4 = r5.f58372     // Catch: java.lang.Throwable -> L55 java.io.IOException -> L57
-            if (r4 == 0) goto L49
-            r4.close()     // Catch: java.lang.Throwable -> L55 java.io.IOException -> L57
-        L49:
-            r5.f58372 = r0
-            boolean r0 = r5.f58370
-            if (r0 == 0) goto L54
-            r5.f58370 = r2
-            r5.m48020()
-        L54:
-            throw r3
-        L55:
-            r1 = move-exception
-            goto L5e
-        L57:
-            r3 = move-exception
-            l.᩸᩷ۙ r4 = new l.᩸᩷ۙ     // Catch: java.lang.Throwable -> L55
-            r4.<init>(r0, r3, r1)     // Catch: java.lang.Throwable -> L55
-            throw r4     // Catch: java.lang.Throwable -> L55
-        L5e:
-            r5.f58372 = r0
-            boolean r0 = r5.f58370
-            if (r0 == 0) goto L69
-            r5.f58370 = r2
-            r5.m48020()
-        L69:
-            throw r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: l.C18294.close():void");
+        this.f59654 = j2 != 0 ? -1L : 0L;
+        this.f59645 = 0;
+        this.f59653.m48496(0);
     }
 }

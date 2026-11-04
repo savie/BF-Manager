@@ -62,14 +62,14 @@
     iput-boolean v0, p0, Lcom/google/android/material/resources/TextAppearance;->fontResolved:Z
 
     .line 82
-    sget-object v1, Ll/۠۟ܶ;->۫᩸ۙ:[I
+    sget-object v1, Ll/ܰ۬ܺ;->۟ܽۙ:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
     .line 84
-    sget v2, Ll/۠۟ܶ;->ܰᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩷ܶۙ:I
 
     const/4 v3, 0x0
 
@@ -80,7 +80,7 @@
     invoke-virtual {p0, v2}, Lcom/google/android/material/resources/TextAppearance;->setTextSize(F)V
 
     .line 85
-    sget v2, Ll/۠۟ܶ;->֫᩸ۙ:I
+    sget v2, Ll/ܰ۬ܺ;->۠ܽۙ:I
 
     .line 86
     invoke-static {p1, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -91,7 +91,7 @@
     invoke-virtual {p0, v2}, Lcom/google/android/material/resources/TextAppearance;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 88
-    sget v2, Ll/۠۟ܶ;->ۢ᩸ۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ۜܽۙ:I
 
     .line 89
     invoke-static {p1, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -101,7 +101,7 @@
     iput-object v2, p0, Lcom/google/android/material/resources/TextAppearance;->textColorHint:Landroid/content/res/ColorStateList;
 
     .line 91
-    sget v2, Ll/۠۟ܶ;->ۗ᩸ۙ:I
+    sget v2, Ll/ܰ۬ܺ;->۬ܽۙ:I
 
     .line 92
     invoke-static {p1, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -111,7 +111,7 @@
     iput-object v2, p0, Lcom/google/android/material/resources/TextAppearance;->textColorLink:Landroid/content/res/ColorStateList;
 
     .line 94
-    sget v2, Ll/۠۟ܶ;->ۨᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ۤܶۙ:I
 
     invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -120,7 +120,7 @@
     iput v2, p0, Lcom/google/android/material/resources/TextAppearance;->textStyle:I
 
     .line 95
-    sget v2, Ll/۠۟ܶ;->ۖᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->᩸ܶۙ:I
 
     const/4 v4, 0x1
 
@@ -131,9 +131,9 @@
     iput v2, p0, Lcom/google/android/material/resources/TextAppearance;->typeface:I
 
     .line 96
-    sget v2, Ll/۠۟ܶ;->ۚᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->ᩴܶۙ:I
 
-    sget v4, Ll/۠۟ܶ;->ܿ᩸ۙ:I
+    sget v4, Ll/ܰ۬ܺ;->ᩳܽۙ:I
 
     .line 97
     invoke-static {v1, v2, v4}, Lcom/google/android/material/resources/MaterialResources;->getIndexWithValue(Landroid/content/res/TypedArray;II)I
@@ -155,7 +155,7 @@
     iput-object v2, p0, Lcom/google/android/material/resources/TextAppearance;->fontFamily:Ljava/lang/String;
 
     .line 103
-    sget v2, Ll/۠۟ܶ;->֨ᩳۙ:I
+    sget v2, Ll/ܰ۬ܺ;->۫ܶۙ:I
 
     invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -164,7 +164,7 @@
     iput-boolean v0, p0, Lcom/google/android/material/resources/TextAppearance;->textAllCaps:Z
 
     .line 104
-    sget v0, Ll/۠۟ܶ;->ۛ᩸ۙ:I
+    sget v0, Ll/ܰ۬ܺ;->ۢܽۙ:I
 
     .line 105
     invoke-static {p1, v1, v0}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
@@ -174,7 +174,7 @@
     iput-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->shadowColor:Landroid/content/res/ColorStateList;
 
     .line 107
-    sget v0, Ll/۠۟ܶ;->ۧ᩸ۙ:I
+    sget v0, Ll/ܰ۬ܺ;->֨ܽۙ:I
 
     invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -183,7 +183,7 @@
     iput v0, p0, Lcom/google/android/material/resources/TextAppearance;->shadowDx:F
 
     .line 108
-    sget v0, Ll/۠۟ܶ;->᩻᩸ۙ:I
+    sget v0, Ll/ܰ۬ܺ;->ۡܽۙ:I
 
     invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -192,7 +192,7 @@
     iput v0, p0, Lcom/google/android/material/resources/TextAppearance;->shadowDy:F
 
     .line 109
-    sget v0, Ll/۠۟ܶ;->ܳ᩸ۙ:I
+    sget v0, Ll/ܰ۬ܺ;->ۖܽۙ:I
 
     invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -204,14 +204,14 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 114
-    sget-object v0, Ll/۠۟ܶ;->ܳۙۙ:[I
+    sget-object v0, Ll/ܰ۬ܺ;->ۖۙۙ:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 115
-    sget p2, Ll/۠۟ܶ;->֫ۙۙ:I
+    sget p2, Ll/ܰ۬ܺ;->۠ۙۙ:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -220,7 +220,7 @@
     iput-boolean p2, p0, Lcom/google/android/material/resources/TextAppearance;->hasLetterSpacing:Z
 
     .line 116
-    sget p2, Ll/۠۟ܶ;->֫ۙۙ:I
+    sget p2, Ll/ܰ۬ܺ;->۠ۙۙ:I
 
     invoke-virtual {p1, p2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -367,7 +367,7 @@
     if-eqz v0, :cond_1
 
     .line 384
-    invoke-static {p1, v0}, Ll/ܽ۫;->ۙ(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    invoke-static {p1, v0}, Ll/ۡ۟;->ۙ(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -429,7 +429,7 @@
     :try_start_0
     iget v0, p0, Lcom/google/android/material/resources/TextAppearance;->fontFamilyResourceId:I
 
-    invoke-static {p1, v0}, Ll/ܽ۫;->ܰ(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    invoke-static {p1, v0}, Ll/ۡ۟;->᩷(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -536,7 +536,7 @@
 
     invoke-direct {v2, p0, p2}, Lcom/google/android/material/resources/TextAppearance$1;-><init>(Lcom/google/android/material/resources/TextAppearance;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
 
-    invoke-static {p1, v0, v2}, Ll/ܽ۫;->ۙ(Landroid/content/Context;ILl/᩷۫;)V
+    invoke-static {p1, v0, v2}, Ll/ۡ۟;->ۙ(Landroid/content/Context;ILl/۟۟;)V
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

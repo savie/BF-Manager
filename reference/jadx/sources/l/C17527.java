@@ -1,20 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿᩴۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V7AU */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17527 {
+import java.util.function.Supplier;
+import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f55722;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f55723;
-
-    public /* synthetic */ C17527(int i) {
-        this();
-    }
-
-    public C17527() {
+/* JADX INFO: renamed from: l.ܽۤ᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: B1VV */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17527 implements Supplier {
+    @Override // java.util.function.Supplier
+    public final Object get() {
+        return new C12306(769, XMSSKeyParameters.SHA_256, "DSA", "SHA256withDSA", null);
     }
 }

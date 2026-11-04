@@ -1,84 +1,57 @@
 package l;
 
-import android.content.DialogInterface;
-import android.view.View;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.᩹᩺ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R7YU */
+/* JADX INFO: renamed from: l.᩸ۚܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P71B */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22590 extends AbstractC3492 {
+public final class C22590 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceC19356 f73618;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final C22590 f73037 = new C22590(null, null);
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f73619;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C13856 f73038;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f73620;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final C13856 f73039;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ActivityC13418 f73621;
-
-    public C22590(View view, ActivityC13418 activityC13418, DialogInterfaceC19356 dialogInterfaceC19356, String str) {
-        this.f73621 = activityC13418;
-        this.f73619 = str;
-        this.f73618 = dialogInterfaceC19356;
-        this.f73620 = view;
+    public /* synthetic */ C22590(C13856 c13856, C13856 c13857, int i) {
+        this(c13856, c13857);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10246(this.f73621, R.string.MT_Protector);
+    public C22590(C13856 c13856, C13856 c13857) {
+        this.f73038 = c13856;
+        this.f73039 = c13857;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() throws C22356 {
-        ActivityC13418 activityC13418 = this.f73621;
-        C1313 c1313M48029 = C21444.m48029(this.f73619, activityC13418.f44381.f5872);
-        if (c1313M48029.m4686()) {
-            return;
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C22590)) {
+            return false;
         }
-        if (activityC13418.f44381.f5872) {
-            throw new C22356(C4820.m13401(c1313M48029, R.string.MT_Protector));
-        }
-        throw new C22356(C4820.m13401(c1313M48029, R.string.MT_Protector));
+        C22590 c22590 = (C22590) obj;
+        return C17359.equals(this.f73038, c22590.f73038) && C17359.equals(this.f73039, c22590.f73039);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C16737.m39274(new Runnable() { // from class: l.ۚ᩺ۘ
-            @Override // java.lang.Runnable
-            public final void run() {
-                ActivityC13418 activityC13418 = this.f19324.f73621;
-                Main mainM47527 = C21094.m47527();
-                if (mainM47527 != null) {
-                    mainM47527.m30997(R.string.MT_Protector, activityC13418.f44381.f5869, false);
-                } else {
-                    C15829.m37619(activityC13418.f44381.f5869);
-                }
+    public final int hashCode() {
+        return C17359.hashCode(this.f73039) + (C17359.hashCode(this.f73038) * 31);
+    }
+
+    public final String toString() {
+        Object[] objArr = {this.f73038, this.f73039};
+        String[] strArrSplit = "left;right".length() == 0 ? new String[0] : "left;right".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C22590.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
             }
-        }, 1000L);
-        this.f73618.dismiss();
-        C21444.m48062();
-        this.f73621.finish();
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f73620.setEnabled(true);
-        this.f73621.m31002(exc, (DialogInterface.OnDismissListener) null);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

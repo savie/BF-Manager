@@ -1,102 +1,101 @@
 package l;
 
-import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
+import bin.mt.json.JSONArray;
+import bin.mt.json.JSONObject;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۘܳᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C4006 implements InterfaceC19282 {
-    public final long[] a;
-    public int b;
-    public final int c;
-    public final int d;
+/* JADX INFO: renamed from: l.ۘ۟ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q75G */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C4006 {
 
-    @Override // l.InterfaceC19282, l.InterfaceC20693
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        C7993.a(this, consumer);
-    }
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final List f13684;
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return C21398.$default$getExactSizeIfKnown(this);
-    }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C23398 f13685;
 
-    @Override // l.InterfaceC20693
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return C21398.$default$hasCharacteristics(this, i);
-    }
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final C9007 f13686;
 
-    @Override // l.InterfaceC19282, l.InterfaceC20693
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return C7993.b(this, consumer);
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f13687;
 
-    public C4006(long[] jArr, int i, int i2, int i3) {
-        this.a = jArr;
-        this.b = i;
-        this.c = i2;
-        this.d = i3 | 16448;
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final C6244 f13688;
 
-    @Override // l.InterfaceC20693
-    public final InterfaceC19282 trySplit() {
-        int i = this.b;
-        int i2 = (this.c + i) >>> 1;
-        if (i >= i2) {
-            return null;
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final List f13689;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final List f13690;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String f13691;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final List f13692;
+
+    public C4006(JSONObject jSONObject) {
+        List listUnmodifiableList;
+        List listUnmodifiableList2;
+        List listUnmodifiableList3;
+        List listUnmodifiableList4;
+        this.f13691 = jSONObject.getString("arch", "");
+        this.f13687 = jSONObject.getInt("bits", 0);
+        this.f13686 = C9007.m24042(jSONObject.getJSONObject("mapping"));
+        this.f13688 = C6244.m17873(jSONObject.getJSONObject("function"));
+        JSONArray jSONArray = jSONObject.getJSONArray("blocks");
+        if (jSONArray == null || jSONArray.isEmpty()) {
+            listUnmodifiableList = Collections.EMPTY_LIST;
+        } else {
+            ArrayList arrayList = new ArrayList(jSONArray.size());
+            for (int i = 0; i < jSONArray.size(); i++) {
+                arrayList.add(C3260.m10646(jSONArray.getJSONObject(i)));
+            }
+            listUnmodifiableList = C4681.unmodifiableList(arrayList);
         }
-        this.b = i2;
-        return new C4006(this.a, i, i2, this.d);
-    }
-
-    @Override // l.InterfaceC10110
-    public final void forEachRemaining(LongConsumer longConsumer) {
-        int i;
-        longConsumer.getClass();
-        long[] jArr = this.a;
-        int length = jArr.length;
-        int i2 = this.c;
-        if (length < i2 || (i = this.b) < 0) {
-            return;
+        this.f13692 = listUnmodifiableList;
+        JSONArray jSONArray2 = jSONObject.getJSONArray("edges");
+        if (jSONArray2 == null || jSONArray2.isEmpty()) {
+            listUnmodifiableList2 = Collections.EMPTY_LIST;
+        } else {
+            ArrayList arrayList2 = new ArrayList(jSONArray2.size());
+            for (int i2 = 0; i2 < jSONArray2.size(); i2++) {
+                arrayList2.add(C20414.m46825(jSONArray2.getJSONObject(i2)));
+            }
+            listUnmodifiableList2 = C4681.unmodifiableList(arrayList2);
         }
-        this.b = i2;
-        if (i < i2) {
-            do {
-                longConsumer.accept(jArr[i]);
-                i++;
-            } while (i < i2);
+        this.f13690 = listUnmodifiableList2;
+        JSONArray jSONArray3 = jSONObject.getJSONArray("externalFlows");
+        if (jSONArray3 == null || jSONArray3.isEmpty()) {
+            listUnmodifiableList3 = Collections.EMPTY_LIST;
+        } else {
+            ArrayList arrayList3 = new ArrayList(jSONArray3.size());
+            for (int i3 = 0; i3 < jSONArray3.size(); i3++) {
+                arrayList3.add(C12209.m30482(jSONArray3.getJSONObject(i3)));
+            }
+            listUnmodifiableList3 = C4681.unmodifiableList(arrayList3);
         }
-    }
-
-    @Override // l.InterfaceC10110
-    public final boolean tryAdvance(LongConsumer longConsumer) {
-        longConsumer.getClass();
-        int i = this.b;
-        if (i < 0 || i >= this.c) {
-            return false;
+        this.f13689 = listUnmodifiableList3;
+        JSONArray jSONArray4 = jSONObject.getJSONArray("unresolvedFlows");
+        if (jSONArray4 == null || jSONArray4.isEmpty()) {
+            listUnmodifiableList4 = Collections.EMPTY_LIST;
+        } else {
+            ArrayList arrayList4 = new ArrayList(jSONArray4.size());
+            for (int i4 = 0; i4 < jSONArray4.size(); i4++) {
+                arrayList4.add(C24144.m54113(jSONArray4.getJSONObject(i4)));
+            }
+            listUnmodifiableList4 = C4681.unmodifiableList(arrayList4);
         }
-        this.b = i + 1;
-        longConsumer.accept(this.a[i]);
-        return true;
+        this.f13684 = listUnmodifiableList4;
+        this.f13685 = C23398.m52578(jSONObject.getJSONObject("analysisSummary"));
     }
 
-    @Override // l.InterfaceC20693
-    public final long estimateSize() {
-        return this.c - this.b;
-    }
-
-    @Override // l.InterfaceC20693
-    public final int characteristics() {
-        return this.d;
-    }
-
-    @Override // l.InterfaceC20693
-    public final Comparator getComparator() {
-        if (C21398.$default$hasCharacteristics(this, 4)) {
-            return null;
-        }
-        throw new IllegalStateException();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C4006 m12967(JSONObject jSONObject) {
+        return new C4006(jSONObject);
     }
 }

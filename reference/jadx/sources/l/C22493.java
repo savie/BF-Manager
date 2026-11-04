@@ -1,47 +1,53 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹᩵ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z6QT */
-/* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class C22493 implements InterfaceC13717 {
+import com.google.android.material.color.utilities.DynamicScheme;
+import com.google.android.material.color.utilities.MaterialDynamicColors;
+import java.util.ArrayList;
+import java.util.function.Function;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f73424;
+/* JADX INFO: renamed from: l.᩸ۖۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 36DM */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class C22493 implements Function {
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f72783;
 
     public /* synthetic */ C22493(int i) {
-        this.f73424 = i;
+        this.f72783 = i;
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
-        return C4543.m12682(this, interfaceC13717);
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
     }
 
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1813(int i) {
-        switch (this.f73424) {
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        switch (this.f72783) {
             case 0:
-                C23595 c23595 = C22141.f71668;
-                return true;
+                return C1170.stream(((C24927) obj).getMethods());
+            case 1:
+                return new C18099(((AbstractC22044) obj).m49874());
+            case 2:
+                String str = (String) obj;
+                return str.startsWith("/") ? str.substring(1) : str;
+            case 3:
+                return ((DynamicScheme) obj).neutralVariantPalette;
+            case 4:
+                return MaterialDynamicColors.lambda$tertiaryPaletteKeyColor$5((DynamicScheme) obj);
+            case 5:
+                return ((DynamicScheme) obj).neutralVariantPalette;
+            case 6:
+                return new ArrayList();
             default:
-                if ((i & 65534) != 65534) {
-                    return i >= 64976 && i <= 65007;
-                }
-                return true;
+                return (C12510) ((AbstractC8036) obj);
         }
-    }
-
-    @Override // l.InterfaceC13717
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
-        return C4543.m12683(this, interfaceC13717);
-    }
-
-    @Override // l.InterfaceC13717
-    public final C3111 negate() {
-        C23595 c23595 = C22141.f71668;
-        return C3111.m9336(this);
     }
 }

@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ISO7816d4Padding implements BlockCipherPadding {
     @Override // org.bouncycastle.crypto.paddings.BlockCipherPadding
     public int addPadding(byte[] bArr, int i) {

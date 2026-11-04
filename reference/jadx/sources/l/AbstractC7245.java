@@ -1,37 +1,39 @@
 package l;
 
-/* JADX INFO: renamed from: l.۟ۙᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 99EG */
-/* JADX INFO: loaded from: classes3.dex */
-public abstract class AbstractC7245 implements InterfaceC8805 {
+import java.util.function.IntFunction;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C19240 f24139;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public InterfaceC8657 f24140;
-
-    public AbstractC7245(InterfaceC8657 interfaceC8657, byte[] bArr) {
-        this(interfaceC8657, new C19240(bArr));
+/* JADX INFO: renamed from: l.ۜܺۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class AbstractC7245 implements InterfaceC13409 {
+    @Override // l.InterfaceC13409
+    public final long count() {
+        return 0L;
     }
 
-    public AbstractC7245(InterfaceC8657 interfaceC8657, C19240 c19240) {
-        this.f24140 = interfaceC8657;
-        this.f24139 = c19240;
-        interfaceC8657.mo4333(c19240);
+    public final void e(int i, Object obj) {
     }
 
-    public AbstractC7245(InterfaceC8657 interfaceC8657) {
-        this.f24140 = interfaceC8657;
+    public final void g(Object obj) {
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC8657 m19360() {
-        return this.f24140;
+    @Override // l.InterfaceC13409
+    public /* synthetic */ InterfaceC13409 j(long j, long j2, IntFunction intFunction) {
+        return AbstractC13956.F(this, j, j2, intFunction);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C19240 m19359() {
-        return this.f24139;
+    @Override // l.InterfaceC13409
+    public final /* synthetic */ int o() {
+        return 0;
+    }
+
+    @Override // l.InterfaceC13409
+    public InterfaceC13409 a(int i) {
+        throw new IndexOutOfBoundsException();
+    }
+
+    @Override // l.InterfaceC13409
+    public final Object[] m(IntFunction intFunction) {
+        return (Object[]) intFunction.apply(0);
     }
 }

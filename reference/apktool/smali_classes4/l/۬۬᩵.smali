@@ -1,91 +1,46 @@
 .class public final Ll/۬۬᩵;
-.super Ll/ܿ۬᩵;
-.source "0ASK"
+.super Ll/ۙۙۨ;
+.source "2BMB"
 
 
 # instance fields
-.field public final ۖ:I
-
-.field public final ۨ:I
+.field public final ۙ:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Ll/֫᩹᩵;II)V
+.method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 16
-    invoke-direct {p0, p1}, Ll/ܿ۬᩵;-><init>(Ll/֫᩹᩵;)V
+    .line 468
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
-    iput p2, p0, Ll/۬۬᩵;->ۨ:I
-
-    .line 18
-    iput p3, p0, Ll/۬۬᩵;->ۖ:I
+    .line 472
+    iput-object p1, p0, Ll/۬۬᩵;->ۙ:Ljava/lang/Throwable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 37
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Ll/۬۬᩵;->ۨ:I
-
-    .line 38
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->appendCodePoint(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "\'..\'"
-
-    .line 39
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Ll/۬۬᩵;->ۖ:I
-
-    .line 40
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->appendCodePoint(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 41
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 42
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ۙ()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x2
+    .line 473
+    instance-of v0, p1, Ll/۬۬᩵;
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final ۙ(II)Z
-    .locals 0
+    check-cast p1, Ll/۬۬᩵;
 
-    .line 32
-    iget p2, p0, Ll/۬۬᩵;->ۨ:I
+    iget-object p1, p1, Ll/۬۬᩵;->ۙ:Ljava/lang/Throwable;
 
-    if-lt p1, p2, :cond_0
+    iget-object v0, p0, Ll/۬۬᩵;->ۙ:Ljava/lang/Throwable;
 
-    iget p2, p0, Ll/۬۬᩵;->ۖ:I
+    invoke-static {v0, p1}, Ll/ܳۡ᩵;->ۙ(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-gt p1, p2, :cond_0
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
@@ -97,24 +52,47 @@
     return p1
 .end method
 
-.method public final ۨ()Ll/֨ۘ᩵;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    .line 77
-    new-instance v0, Ll/֨ۘ᩵;
+    .line 474
+    iget-object v0, p0, Ll/۬۬᩵;->ۙ:Ljava/lang/Throwable;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    new-array v1, v1, [I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v0, v1}, Ll/֨ۘ᩵;-><init>([I)V
+    move-result v0
 
-    .line 78
-    iget v1, p0, Ll/۬۬᩵;->ۨ:I
+    return v0
 
-    iget v2, p0, Ll/۬۬᩵;->ۖ:I
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ll/֨ۘ᩵;->ۙ(II)V
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 475
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Closed("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll/۬۬᩵;->ۙ:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

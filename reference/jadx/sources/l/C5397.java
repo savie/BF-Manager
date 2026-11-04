@@ -1,35 +1,44 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۚܰᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 84DG */
+/* JADX INFO: renamed from: l.ۚۘ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: J9WI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5397 implements InterfaceC4383 {
+public final class C5397 extends AbstractC1513 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C18803 f18628;
+    /* JADX INFO: renamed from: ᩸᩷, reason: not valid java name and contains not printable characters */
+    public final C10682 f18889;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C1163 f18629;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public long f18630;
-
-    public C5397(C1163 c1163, C18803 c18803, long j) {
-        this.f18629 = c1163;
-        this.f18628 = c18803;
-        this.f18630 = j;
+    @Override // l.AbstractC3971
+    /* JADX INFO: renamed from: ۫ۙ */
+    public final boolean mo12783() {
+        return true;
     }
 
-    @Override // l.InterfaceC4383
-    public final void cancel() {
-        C1163 c1163 = this.f18629;
-        EnumC20508 enumC20508M11484 = c1163.f5211.m32548().m11484();
-        C18803 c18803 = this.f18628;
-        C7537 c7537 = new C7537(enumC20508M11484, this.f18630, c18803.m43369(), c18803.m43365());
-        try {
-            c1163.f5206.m45673(Long.valueOf(this.f18630)).m46889(c7537, c18803.m43363());
-        } catch (C21317 unused) {
-            C1163.f5202.mo12118(c7537, "Failed to send {}");
-        }
+    @Override // l.AbstractC1513
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo5379(byte[] bArr) {
+        return 0;
+    }
+
+    public C5397(InterfaceC5878 interfaceC5878) {
+        super(interfaceC5878);
+        this.f18889 = new C10682();
+        m5380((byte) 16);
+    }
+
+    /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
+    public final C10682 m16080() {
+        return this.f18889;
+    }
+
+    @Override // l.AbstractC1513
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo5378(int i, int i2, byte[] bArr) {
+        return (this.f18889.mo6138(i, i2, bArr) + i) - i;
+    }
+
+    @Override // l.AbstractC1513, l.AbstractC3971
+    public final String toString() {
+        return new String("Trans2GetDfsReferralResponse[" + super.toString() + ",buffer=" + this.f18889 + "]");
     }
 }

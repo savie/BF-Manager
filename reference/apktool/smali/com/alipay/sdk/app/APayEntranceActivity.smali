@@ -12,7 +12,7 @@
 
 .field public static final g:Ljava/lang/String; = "ap_local_info"
 
-.field public static final h:Ll/ܰۧᩴ;
+.field public static final h:Ll/ܽ֫ۗ;
 
 
 # instance fields
@@ -28,11 +28,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
-    sput-object v0, Lcom/alipay/sdk/app/APayEntranceActivity;->h:Ll/ܰۧᩴ;
+    sput-object v0, Lcom/alipay/sdk/app/APayEntranceActivity;->h:Ll/ܽ֫ۗ;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     const-string v2, "|"
 
     .line 0
-    invoke-static {v0, v2}, Ll/ۗۙᩴ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -115,9 +115,9 @@
     if-eqz v0, :cond_2
 
     .line 11
-    sget-object v2, Lcom/alipay/sdk/app/APayEntranceActivity;->h:Ll/ܰۧᩴ;
+    sget-object v2, Lcom/alipay/sdk/app/APayEntranceActivity;->h:Ll/ܽ֫ۗ;
 
-    invoke-virtual {v2, v0}, Ll/ܰۧᩴ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ll/ܽ֫ۗ;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 

@@ -1,54 +1,97 @@
-.class public final synthetic Ll/ۨ᩶᩹;
-.super Ljava/lang/Object;
-.source "164Z"
+.class public final Ll/ۨ᩶᩹;
+.super Ll/᩶᩶᩹;
+.source "WKX"
 
 # interfaces
-.implements Ll/᩷᩸;
+.implements Ll/ۛ֡᩹;
+.implements Ll/ᩴۚۗ;
 
 
 # instance fields
-.field public final synthetic ܺ:Ll/ۨ֡᩹;
+.field public final synthetic ۢ:Ll/ᩳ᩶᩹;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll/ۨ֡᩹;)V
+.method public constructor <init>(Ll/ᩳ᩶᩹;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1067
+    iput-object p1, p0, Ll/ۨ᩶᩹;->ۢ:Ll/ᩳ᩶᩹;
 
-    iput-object p1, p0, Ll/ۨ᩶᩹;->ܺ:Ll/ۨ֡᩹;
+    .line 1068
+    invoke-direct {p0, p1}, Ll/᩶᩶᩹;-><init>(Ll/ᩳ᩶᩹;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ll/ۨ֡᩹;->ۙ(Ll/ۛ֡᩹;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public final next()Ljava/lang/Integer;
     .locals 1
 
-    .line 341
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    .line 46
+    invoke-virtual {p0}, Ll/ۨ᩶᩹;->nextInt()I
 
-    move-result p1
+    move-result v0
 
-    const v0, 0x7f1202d4
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-ne p1, v0, :cond_0
+    move-result-object v0
 
-    .line 342
-    iget-object p1, p0, Ll/ۨ᩶᩹;->ܺ:Ll/ۨ֡᩹;
+    return-object v0
+.end method
 
-    iget-object p1, p1, Ll/ܳ۟᩹;->ܺ:Lbin/mt/plus/Main;
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Ll/ۨ֡᩹;->ۙ(Ll/۫ܶۘ;)V
+    .line 28
+    invoke-virtual {p0}, Ll/ۨ᩶᩹;->next()Ljava/lang/Integer;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    return p1
+    return-object v0
+.end method
 
-    :cond_0
-    const/4 p1, 0x0
+.method public final nextInt()I
+    .locals 2
 
-    return p1
+    .line 1081
+    iget-object v0, p0, Ll/ۨ᩶᩹;->ۢ:Ll/ᩳ᩶᩹;
+
+    iget-object v0, v0, Ll/ᩳ᩶᩹;->֡:[I
+
+    invoke-virtual {p0}, Ll/᩶᩶᩹;->ۙ()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    return v0
+.end method
+
+.method public final ۙ(ILjava/lang/Object;)V
+    .locals 1
+
+    .line 1066
+    check-cast p2, Ljava/util/function/IntConsumer;
+
+    .line 1076
+    iget-object v0, p0, Ll/ۨ᩶᩹;->ۢ:Ll/ᩳ᩶᩹;
+
+    iget-object v0, v0, Ll/ᩳ᩶᩹;->֡:[I
+
+    aget p1, v0, p1
+
+    invoke-interface {p2, p1}, Ljava/util/function/IntConsumer;->accept(I)V
+
+    return-void
 .end method

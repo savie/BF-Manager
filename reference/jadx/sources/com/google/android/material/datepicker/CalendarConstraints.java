@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.util.Arrays;
-import l.C13638;
+import l.C17359;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class CalendarConstraints implements Parcelable {
@@ -37,9 +37,9 @@ public final class CalendarConstraints implements Parcelable {
     }
 
     public CalendarConstraints(Month month, Month month2, DateValidator dateValidator, Month month3, int i) {
-        C13638.requireNonNull(month, "start cannot be null");
-        C13638.requireNonNull(month2, "end cannot be null");
-        C13638.requireNonNull(dateValidator, "validator cannot be null");
+        C17359.requireNonNull(month, "start cannot be null");
+        C17359.requireNonNull(month2, "end cannot be null");
+        C17359.requireNonNull(dateValidator, "validator cannot be null");
         this.start = month;
         this.end = month2;
         this.openAt = month3;
@@ -122,7 +122,7 @@ public final class CalendarConstraints implements Parcelable {
             return false;
         }
         CalendarConstraints calendarConstraints = (CalendarConstraints) obj;
-        return this.start.equals(calendarConstraints.start) && this.end.equals(calendarConstraints.end) && C13638.equals(this.openAt, calendarConstraints.openAt) && this.firstDayOfWeek == calendarConstraints.firstDayOfWeek && this.validator.equals(calendarConstraints.validator);
+        return this.start.equals(calendarConstraints.start) && this.end.equals(calendarConstraints.end) && C17359.equals(this.openAt, calendarConstraints.openAt) && this.firstDayOfWeek == calendarConstraints.firstDayOfWeek && this.validator.equals(calendarConstraints.validator);
     }
 
     public int hashCode() {
@@ -193,7 +193,7 @@ public final class CalendarConstraints implements Parcelable {
         }
 
         public Builder setValidator(DateValidator dateValidator) {
-            C13638.requireNonNull(dateValidator, "validator cannot be null");
+            C17359.requireNonNull(dateValidator, "validator cannot be null");
             this.validator = dateValidator;
             return this;
         }

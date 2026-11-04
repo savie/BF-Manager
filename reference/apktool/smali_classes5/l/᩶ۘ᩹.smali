@@ -1,190 +1,44 @@
 .class public final synthetic Ll/᩶ۘ᩹;
 .super Ljava/lang/Object;
-.source "123V"
-
-# interfaces
-.implements Ljava/util/function/Function;
-
-
-# instance fields
-.field public final synthetic ܺ:I
+.source "Z1O1"
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public static ۙ(Ll/۟ۘ᩹;Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 0
-    iput p1, p0, Ll/᩶ۘ᩹;->ܺ:I
+    .line 122
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result p1
 
-    return-void
-.end method
+    .line 123
+    invoke-interface {p0, p1}, Ll/ܰۘ᩹;->ۙ(I)Z
 
-.method public synthetic constructor <init>(Ll/۫ᩴ۟;)V
-    .locals 0
+    move-result v0
 
-    const/16 p1, 0x8
+    .line 124
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    .line 0
-    iput p1, p0, Ll/᩶ۘ᩹;->ܺ:I
+    move-result p2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0, p1, p2}, Ll/ܰۘ᩹;->ۙ(II)I
 
-    return-void
-.end method
+    move-result p0
 
+    if-eqz v0, :cond_0
 
-# virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+    .line 125
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    move-result-object p0
 
-    move-result-object p1
+    return-object p0
 
-    return-object p1
-.end method
+    :cond_0
+    const/4 p0, 0x0
 
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    .line 2
-    iget v0, p0, Ll/᩶ۘ᩹;->ܺ:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 9
-    check-cast p1, Ll/ܶ᩶۟;
-
-    .line 12
-    invoke-static {p1}, Ll/۫ᩴ۟;->ۙ(Ll/ܶ᩶۟;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 16
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    new-array v0, v2, [Ljava/lang/Object;
-
-    aput-object p1, v0, v1
-
-    const-string p1, "#%d"
-
-    .line 19
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 0
-    :pswitch_1
-    check-cast p1, Ljava/lang/Integer;
-
-    new-array v0, v2, [Ljava/lang/Object;
-
-    aput-object p1, v0, v1
-
-    const-string p1, "#%d?"
-
-    .line 19
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 0
-    :pswitch_2
-    check-cast p1, Ljava/lang/Integer;
-
-    sget p1, Ll/۟ۙۤ;->ۘܰ:I
-
-    const-string p1, "????"
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
-
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$zqyuLwUAMpA4ob-jlLAhcLHX_M8(Lcom/google/android/material/color/utilities/DynamicScheme;)Ljava/lang/Double;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Ll/ۖܰۜ;
-
-    .line 9
-    iget-object p1, p1, Ll/ۖܰۜ;->᩹:Ljava/lang/String;
-
-    return-object p1
-
-    .line 0
-    :pswitch_5
-    check-cast p1, Ll/ܰ᩷᩺;
-
-    invoke-virtual {p1}, Ll/ܰ᩷᩺;->ۚ()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_6
-    check-cast p1, Ll/ۖ۬᩹;
-
-    .line 64
-    invoke-interface {p1}, Ll/ۖ۬᩹;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 0
-    :pswitch_7
-    check-cast p1, Ll/ۖ۬᩹;
-
-    invoke-interface {p1}, Ll/ۖ۬᩹;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

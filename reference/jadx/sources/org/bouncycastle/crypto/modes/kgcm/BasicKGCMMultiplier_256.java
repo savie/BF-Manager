@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes.kgcm;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BasicKGCMMultiplier_256 implements KGCMMultiplier {
     public final long[] H = new long[4];
 

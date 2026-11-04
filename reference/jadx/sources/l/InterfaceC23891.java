@@ -1,9 +1,11 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ᩴ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 715M */
-/* JADX INFO: loaded from: classes.dex */
-public interface InterfaceC23891 {
-    /* JADX INFO: renamed from: ۙ */
-    void mo11094(String str, C5546 c5546);
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.᩹᩺᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 52V */
+/* JADX INFO: loaded from: classes2.dex */
+public interface InterfaceC23891 extends InterfaceC25383, Map {
+    /* JADX INFO: renamed from: ܽۙ */
+    InterfaceC7767 mo5394();
 }

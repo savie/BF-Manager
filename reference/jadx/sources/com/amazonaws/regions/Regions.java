@@ -1,6 +1,6 @@
 package com.amazonaws.regions;
 
-import l.C16523;
+import l.C14442;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum Regions {
@@ -42,27 +42,27 @@ public enum Regions {
     CA_WEST_1("ca-west-1");
 
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f449;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final String f439;
 
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public static final Regions f413 = US_WEST_2;
+    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
+    public static final Regions f420 = US_WEST_2;
 
     Regions(String str) {
-        this.f449 = str;
+        this.f439 = str;
     }
 
     public String getName() {
-        return this.f449;
+        return this.f439;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static Regions m426(String str) {
+    public static Regions m420(String str) {
         for (Regions regions : values()) {
             if (str.equals(regions.getName())) {
                 return regions;
             }
         }
-        throw new IllegalArgumentException(C16523.m38890("Cannot create enum from ", str, " value!"));
+        throw new IllegalArgumentException(C14442.m34865("Cannot create enum from ", str, " value!"));
     }
 }

@@ -1,33 +1,28 @@
 package l;
 
-import java.util.function.Consumer;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.᩹ۙᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97L */
+/* JADX INFO: renamed from: l.᩷۫ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K608 */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22063 extends AbstractC15008 implements InterfaceC6269, InterfaceC6206 {
-
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final C6540 f71488;
-
-    public C22063(C7952 c7952) {
-        super(c7952);
-        this.f71488 = new C6540(c7952);
+public final enum C22063 extends EnumC10874 {
+    public /* synthetic */ C22063() {
+        this("R_children", 5);
     }
 
-    @Override // l.AbstractC15008
+    public C22063(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC10874
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3571(int i, Object obj) {
-        C6540 c6540 = this.f71488;
-        c6540.f22015 = i;
-        ((Consumer) obj).accept(c6540);
+    public Set mo9085(C19825 c19825) {
+        return c19825.f63741;
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        int iM35989 = m35989();
-        C6540 c6540 = this.f71488;
-        c6540.f22015 = iM35989;
-        return c6540;
+    @Override // l.EnumC10874
+    /* JADX INFO: renamed from: ۙ */
+    public void mo9086(C19825 c19825, Set set) {
+        c19825.f63741 = set;
     }
 }

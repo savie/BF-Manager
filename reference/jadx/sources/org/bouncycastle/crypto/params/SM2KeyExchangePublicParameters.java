@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.params;
 
 import org.bouncycastle.crypto.CipherParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SM2KeyExchangePublicParameters implements CipherParameters {
     public final ECPublicKeyParameters ephemeralPublicKey;
     public final ECPublicKeyParameters staticPublicKey;

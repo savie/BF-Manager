@@ -1,88 +1,97 @@
 .class public final Ll/ܿܰܶ;
-.super Ll/֨ۨܶ;
-.source "0BCI"
+.super Ljava/lang/Object;
+.source "F7YU"
 
-
-# instance fields
-.field public final ܰ:Ll/ܰ᩸ܶ;
+# interfaces
+.implements Ll/᩶ܰܶ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܰ᩸ܶ;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    const-string v0, "Exceptions"
-
-    .line 43
-    invoke-direct {p0, v0}, Ll/֨ۨܶ;-><init>(Ljava/lang/String;)V
-
-    .line 46
-    :try_start_0
-    invoke-interface {p1}, Ll/ܰ᩸ܶ;->ܰ()Z
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez v0, :cond_0
-
-    .line 54
-    iput-object p1, p0, Ll/ܿܰܶ;->ܰ:Ll/ܰ᩸ܶ;
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    .line 47
-    :cond_0
-    :try_start_1
-    new-instance p1, Ll/۠ᩴܶ;
-
-    const-string v0, "exceptions.isMutable()"
-
-    const/4 v1, 0x0
-
-    .line 60
-    invoke-direct {p1, v0, v1}, Ll/۟ܰܶ;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    .line 47
-    throw p1
-    :try_end_1
-    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 51
-    :catch_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "exceptions == null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final ۙ()I
+.method public final getBlockSize()I
     .locals 1
 
-    .line 62
-    iget-object v0, p0, Ll/ܿܰܶ;->ܰ:Ll/ܰ᩸ܶ;
-
-    invoke-interface {v0}, Ll/ܰ᩸ܶ;->size()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, 0x8
+    const/16 v0, 0x10
 
     return v0
 .end method
 
-.method public final ܰ()Ll/ܰ᩸ܶ;
+.method public final synthetic ۙ(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ۙ(I[BI[BI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ۙ(I[B[B)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final synthetic ۙ([B)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ۙ()Z
     .locals 1
 
-    .line 73
-    iget-object v0, p0, Ll/ܿܰܶ;->ܰ:Ll/ܰ᩸ܶ;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
+.end method
+
+.method public final synthetic ۤ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩴ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩷()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final synthetic ᩷(I[BI[BI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ᩸()I
+    .locals 1
+
+    const/16 v0, 0x8
+
+    return v0
 .end method

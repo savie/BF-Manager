@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import l.C0561;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum AwsSdkMetrics {
@@ -20,131 +20,131 @@ public enum AwsSdkMetrics {
 
 
     /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static final String f237 = "cloudwatchRegion";
+    public static final boolean f227;
 
-    /* JADX INFO: renamed from: ֨ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean f238 = false;
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public static final String f228 = "hostMetricName";
 
-    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
-    public static final String f239 = "com.amazonaws.management:type=AwsSdkMetrics";
+    /* JADX INFO: renamed from: ֫ۙ, reason: not valid java name and contains not printable characters */
+    public static volatile String f229 = null;
 
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public static final String f240 = "useSingleMetricNamespace";
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public static final String f230 = "jvmMetricName";
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public static final String f241 = "metricQueueSize";
-
-    /* JADX INFO: renamed from: ۘۙ, reason: not valid java name and contains not printable characters */
-    public static volatile String f242 = null;
+    /* JADX INFO: renamed from: ۗۙ, reason: not valid java name and contains not printable characters */
+    public static volatile Regions f231 = null;
 
     /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public static final String f243 = "getQueuePollTimeoutMilli";
+    public static final String f232 = "getQueuePollTimeoutMilli";
 
     /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public static volatile String f244 = null;
+    public static volatile String f233 = null;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static final String f245 = "excludeMachineMetrics";
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public static final String f234 = "metricNameSpace";
 
-    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
-    public static volatile boolean f246 = false;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final String f235 = "com.amazonaws.metrics.internal.cloudwatch.DefaultMetricCollectorFactory";
 
-    /* JADX INFO: renamed from: ۠ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile Regions f247 = null;
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public static final String f236 = "com.amazonaws.management:type=AwsSdkMetrics";
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public static final String f237 = "includePerHostMetrics";
 
     /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
-    public static final String f248 = "metricNameSpace";
+    public static final String f238 = "excludeMachineMetrics";
 
-    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
-    public static final String f249 = "hostMetricName";
+    /* JADX INFO: renamed from: ۤۙ, reason: not valid java name and contains not printable characters */
+    public static final MetricRegistry f239;
 
-    /* JADX INFO: renamed from: ۨۙ, reason: not valid java name and contains not printable characters */
-    public static final MetricRegistry f250;
+    /* JADX INFO: renamed from: ۧۙ, reason: not valid java name and contains not printable characters */
+    public static volatile boolean f240 = false;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static final String f251 = "com.amazonaws.metrics.internal.cloudwatch.DefaultMetricCollectorFactory";
+    /* JADX INFO: renamed from: ۫ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean f241 = false;
 
-    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile String f252 = null;
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public static final String f242 = "metricQueueSize";
 
-    /* JADX INFO: renamed from: ܰۙ, reason: not valid java name and contains not printable characters */
-    public static final int f253 = 1000;
-
-    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
-    public static final String f254 = "jvmMetricName";
+    /* JADX INFO: renamed from: ܳۙ, reason: not valid java name and contains not printable characters */
+    public static volatile AWSCredentialsProvider f244 = null;
 
     /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public static volatile String f255 = "AWSSDK/Java";
+    public static volatile boolean f245 = false;
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final boolean f257;
+    /* JADX INFO: renamed from: ܺۙ, reason: not valid java name and contains not printable characters */
+    public static volatile String f246 = "AWSSDK/Java";
+
+    /* JADX INFO: renamed from: ܽۙ, reason: not valid java name and contains not printable characters */
+    public static volatile Integer f247 = null;
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static final String f258 = "AWSSDK/Java";
+    public static final String f248 = "cloudwatchRegion";
 
-    /* JADX INFO: renamed from: ᩳۙ, reason: not valid java name and contains not printable characters */
-    public static volatile boolean f259 = false;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final String f249 = "AWSSDK/Java";
 
     /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
-    public static volatile Long f260 = null;
+    public static volatile String f250 = null;
 
     /* JADX INFO: renamed from: ᩵ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile boolean f261 = false;
+    public static volatile boolean f251 = false;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static final String f262 = "credentialFile";
+    public static final String f252 = "credentialFile";
+
+    /* JADX INFO: renamed from: ᩷ۙ, reason: not valid java name and contains not printable characters */
+    public static final int f253 = 1000;
 
     /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile Integer f263 = null;
+    public static final String f254 = "useSingleMetricNamespace";
 
     /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile AWSCredentialsProvider f264 = null;
+    public static volatile Long f255;
 
-    /* JADX INFO: renamed from: ᩺ۙ, reason: not valid java name and contains not printable characters */
-    public static volatile MetricCollector f265 = null;
+    /* JADX INFO: renamed from: ᩻ۙ, reason: not valid java name and contains not printable characters */
+    public static volatile MetricCollector f256;
 
-    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
-    public static final String f266 = "includePerHostMetrics";
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static boolean m335() {
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public static boolean m298() {
         return false;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized void m309(AWSCredentialsProvider aWSCredentialsProvider) {
-        f264 = aWSCredentialsProvider;
+    public static synchronized void m302(AWSCredentialsProvider aWSCredentialsProvider) {
+        f244 = aWSCredentialsProvider;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized void m310(MetricCollector metricCollector) {
-        f265 = metricCollector;
+    public static synchronized void m303(MetricCollector metricCollector) {
+        f256 = metricCollector;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static synchronized boolean m331() {
-        if (f265 != null) {
-            f265.getClass();
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static synchronized boolean m332() {
+        if (f256 != null) {
+            f256.getClass();
         }
-        if (f238) {
+        if (f241) {
             throw new IllegalStateException("Reentrancy is not allowed");
         }
-        f238 = true;
+        f241 = true;
         try {
             try {
-                MetricCollector factory = ((MetricCollector.Factory) Class.forName(f251).newInstance()).getInstance();
+                MetricCollector factory = ((MetricCollector.Factory) Class.forName(f235).newInstance()).getInstance();
                 if (factory != null) {
-                    m310(factory);
-                    f238 = false;
+                    m303(factory);
+                    f241 = false;
                     return true;
                 }
             } catch (Exception e) {
-                LogFactory.m302(AwsSdkMetrics.class).mo297("Failed to enable the default metrics", e);
+                LogFactory.m296(AwsSdkMetrics.class).mo289("Failed to enable the default metrics", e);
             }
-            f238 = false;
+            f241 = false;
             return false;
         } catch (Throwable th) {
-            f238 = false;
+            f241 = false;
             throw th;
         }
     }
@@ -152,50 +152,50 @@ public enum AwsSdkMetrics {
     static {
         String property = System.getProperty("com.amazonaws.sdk.enableDefaultMetrics");
         boolean z = property != null;
-        f257 = z;
+        f227 = z;
         if (z) {
             boolean z2 = false;
             boolean z3 = false;
             boolean z4 = false;
             for (String str : property.split(",")) {
                 String strTrim = str.trim();
-                if (!z2 && f245.equals(strTrim)) {
+                if (!z2 && f238.equals(strTrim)) {
                     z2 = true;
-                } else if (!z3 && f266.equals(strTrim)) {
+                } else if (!z3 && f237.equals(strTrim)) {
                     z3 = true;
-                } else if (z4 || !f240.equals(strTrim)) {
+                } else if (z4 || !f254.equals(strTrim)) {
                     String[] strArrSplit = strTrim.split("=");
                     if (strArrSplit.length == 2) {
                         String strTrim2 = strArrSplit[0].trim();
                         String strTrim3 = strArrSplit[1].trim();
                         try {
-                            if (f262.equals(strTrim2)) {
-                                m328(strTrim3);
-                            } else if (f237.equals(strTrim2)) {
-                                f247 = Regions.m426(strTrim3);
-                            } else if (f241.equals(strTrim2)) {
+                            if (f252.equals(strTrim2)) {
+                                m327(strTrim3);
+                            } else if (f248.equals(strTrim2)) {
+                                f231 = Regions.m420(strTrim3);
+                            } else if (f242.equals(strTrim2)) {
                                 Integer num = new Integer(strTrim3);
                                 if (num.intValue() < 1) {
                                     throw new IllegalArgumentException("metricQueueSize must be at least 1");
                                 }
-                                f263 = num;
-                            } else if (f243.equals(strTrim2)) {
+                                f247 = num;
+                            } else if (f232.equals(strTrim2)) {
                                 Long l2 = new Long(strTrim3);
                                 if (l2.intValue() < 1000) {
                                     throw new IllegalArgumentException("getQueuePollTimeoutMilli must be at least 1000");
                                 }
-                                f260 = l2;
-                            } else if (f248.equals(strTrim2)) {
-                                f255 = strTrim3;
-                            } else if (f254.equals(strTrim2)) {
-                                f242 = strTrim3;
-                            } else if (f249.equals(strTrim2)) {
-                                f252 = strTrim3;
+                                f255 = l2;
+                            } else if (f234.equals(strTrim2)) {
+                                f246 = strTrim3;
+                            } else if (f230.equals(strTrim2)) {
+                                f229 = strTrim3;
+                            } else if (f228.equals(strTrim2)) {
+                                f233 = strTrim3;
                             } else {
-                                LogFactory.m302(AwsSdkMetrics.class).mo298("Ignoring unrecognized parameter: " + strTrim);
+                                LogFactory.m296(AwsSdkMetrics.class).mo291("Ignoring unrecognized parameter: " + strTrim);
                             }
                         } catch (Exception e) {
-                            LogFactory.m302(AwsSdkMetrics.class).mo293("Ignoring failure", e);
+                            LogFactory.m296(AwsSdkMetrics.class).mo286("Ignoring failure", e);
                         }
                     } else {
                         continue;
@@ -204,244 +204,244 @@ public enum AwsSdkMetrics {
                     z4 = true;
                 }
             }
-            f246 = z2;
-            f259 = z3;
-            f261 = z4;
+            f240 = z2;
+            f245 = z3;
+            f251 = z4;
         }
-        f250 = new MetricRegistry();
+        f239 = new MetricRegistry();
     }
 
-    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
-    public static RequestMetricCollector m340() {
-        if (f265 == null && m339()) {
-            m331();
+    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
+    public static RequestMetricCollector m300() {
+        if (f256 == null && m326()) {
+            m332();
         }
-        if (f265 == null) {
-            return RequestMetricCollector.f275;
+        if (f256 == null) {
+            return RequestMetricCollector.f265;
         }
-        ((MetricCollector.AnonymousClass1) f265).getClass();
-        return RequestMetricCollector.f275;
-    }
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static ServiceMetricCollector m334() {
-        if (f265 == null && m339()) {
-            m331();
-        }
-        if (f265 == null) {
-            return ServiceMetricCollector.f276;
-        }
-        ((MetricCollector.AnonymousClass1) f265).getClass();
-        return ServiceMetricCollector.f276;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public static MetricCollector m321() {
-        return f265;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static MetricCollector m333() {
-        if (f265 == null && m339()) {
-            m331();
-        }
-        return f265 == null ? MetricCollector.f273 : f265;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m315(boolean z) {
-        f246 = z;
+        ((MetricCollector.AnonymousClass1) f256).getClass();
+        return RequestMetricCollector.f265;
     }
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m330(boolean z) {
-        f259 = z;
+    public static ServiceMetricCollector m319() {
+        if (f256 == null && m326()) {
+            m332();
+        }
+        if (f256 == null) {
+            return ServiceMetricCollector.f266;
+        }
+        ((MetricCollector.AnonymousClass1) f256).getClass();
+        return ServiceMetricCollector.f266;
+    }
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public static MetricCollector m316() {
+        return f256;
+    }
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public static MetricCollector m320() {
+        if (f256 == null && m326()) {
+            m332();
+        }
+        return f256 == null ? MetricCollector.f263 : f256;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m308(boolean z) {
+        f240 = z;
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m329(boolean z) {
+        f245 = z;
     }
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public static boolean m339() {
-        return f257;
+    public static boolean m326() {
+        return f227;
     }
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public static boolean m320() {
-        return f261;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public static boolean m313() {
+        return f251;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m326(boolean z) {
-        f261 = z;
-    }
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public static boolean m304() {
-        return f246;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m315(boolean z) {
+        f251 = z;
     }
 
     /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public static boolean m336() {
-        return f259;
+    public static boolean m321() {
+        return f240;
     }
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public static boolean m327() {
-        if (f259) {
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static boolean m322() {
+        return f245;
+    }
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static boolean m312() {
+        if (f245) {
             return true;
         }
-        String str = f252;
+        String str = f233;
         return (str == null ? "" : str.trim()).length() > 0;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m308() {
-        m310(MetricCollector.f273);
+    public static void m301() {
+        m303(MetricCollector.f263);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m316(MetricType metricType) {
+    public static boolean m309(MetricType metricType) {
         if (metricType == null) {
             return false;
         }
-        return f250.m344(metricType);
+        return f239.m338(metricType);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m317(Collection collection) {
+    public static boolean m310(Collection collection) {
         if (collection == null || collection.size() == 0) {
             return false;
         }
-        return f250.m345(collection);
+        return f239.m339(collection);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m329(Collection collection) {
-        f250.m346(collection);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m328(Collection collection) {
+        f239.m340(collection);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m332(MetricType metricType) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m330(MetricType metricType) {
         if (metricType == null) {
             return false;
         }
-        return f250.m347(metricType);
+        return f239.m341(metricType);
     }
 
-    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
-    public static Set m323() {
-        return f250.m343();
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public static Set m317() {
+        return f239.m337();
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static AWSCredentialsProvider m305() {
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static AWSCredentialsProvider m318() {
         for (StackTraceElement stackTraceElement : Thread.currentThread().getStackTrace()) {
-            if (stackTraceElement.getClassName().equals(f251)) {
-                return f264;
+            if (stackTraceElement.getClassName().equals(f235)) {
+                return f244;
             }
         }
         SecurityException securityException = new SecurityException();
-        LogFactory.m302(AwsSdkMetrics.class).mo297("Illegal attempt to access the credential provider", securityException);
+        LogFactory.m296(AwsSdkMetrics.class).mo289("Illegal attempt to access the credential provider", securityException);
         throw securityException;
     }
 
-    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
-    public static Regions m322() {
-        return f247;
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public static Regions m334() {
+        return f231;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m311(Regions regions) {
-        f247 = regions;
+    public static void m304(Regions regions) {
+        f231 = regions;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static String m318() {
-        return f244;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static String m323() {
+        return f250;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m314(String str) {
-        m328(str);
+    public static void m307(String str) {
+        m327(str);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m328(String str) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m327(String str) {
         final PropertiesCredentials propertiesCredentials = new PropertiesCredentials(new File(str));
         synchronized (AwsSdkMetrics.class) {
-            f264 = new AWSCredentialsProvider() { // from class: com.amazonaws.metrics.AwsSdkMetrics.1
+            f244 = new AWSCredentialsProvider() { // from class: com.amazonaws.metrics.AwsSdkMetrics.1
                 @Override // com.amazonaws.auth.AWSCredentialsProvider
                 /* JADX INFO: renamed from: ۙ */
-                public final AWSCredentials mo208() {
+                public final AWSCredentials mo202() {
                     return propertiesCredentials;
                 }
             };
-            f244 = str;
+            f250 = str;
         }
     }
 
     /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
-    public static Integer m338() {
-        return f263;
+    public static Integer m325() {
+        return f247;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m312(Integer num) {
-        f263 = num;
+    public static void m305(Integer num) {
+        f247 = num;
     }
 
-    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
-    public static Long m324() {
-        return f260;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m313(Long l2) {
-        f260 = l2;
-    }
-
-    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
-    public static String m337() {
+    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
+    public static Long m311() {
         return f255;
     }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static void m319(String str) {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m306(Long l2) {
+        f255 = l2;
+    }
+
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public static String m333() {
+        return f246;
+    }
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static void m324(String str) {
         if (str == null || str.trim().length() == 0) {
             throw new IllegalArgumentException();
         }
-        f255 = str;
+        f246 = str;
     }
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public static String m341() {
-        return f242;
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public static String m335() {
+        return f229;
     }
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static void m306(String str) {
-        f242 = str;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static void m331(String str) {
+        f229 = str;
     }
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public static String m307() {
-        return f252;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static String m299() {
+        return f233;
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m325(String str) {
-        f252 = str;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static void m314(String str) {
+        f233 = str;
     }
 
     public class MetricRegistry {
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final HashSet f268;
+        public final HashSet f258;
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public volatile Set f269;
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public volatile Set f259;
 
         public MetricRegistry() {
             HashSet hashSet = new HashSet();
-            this.f268 = hashSet;
+            this.f258 = hashSet;
             hashSet.add(AWSRequestMetrics.Field.ClientExecuteTime);
             hashSet.add(AWSRequestMetrics.Field.Exception);
             hashSet.add(AWSRequestMetrics.Field.HttpClientRetryCount);
@@ -451,33 +451,33 @@ public enum AwsSdkMetrics {
             hashSet.add(AWSRequestMetrics.Field.HttpClientSendRequestTime);
             hashSet.add(AWSRequestMetrics.Field.HttpClientReceiveResponseTime);
             hashSet.add(AWSServiceMetrics.HttpClientGetConnectionTime);
-            m342();
+            m336();
         }
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        private void m342() {
-            this.f269 = C0561.unmodifiableSet(new HashSet(this.f268));
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        private void m336() {
+            this.f259 = C4681.unmodifiableSet(new HashSet(this.f258));
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final boolean m344(MetricType metricType) {
+        public final boolean m338(MetricType metricType) {
             boolean zAdd;
-            synchronized (this.f268) {
-                zAdd = this.f268.add(metricType);
+            synchronized (this.f258) {
+                zAdd = this.f258.add(metricType);
                 if (zAdd) {
-                    m342();
+                    m336();
                 }
             }
             return zAdd;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final boolean m345(Collection collection) {
+        public final boolean m339(Collection collection) {
             boolean zAddAll;
-            synchronized (this.f268) {
-                zAddAll = this.f268.addAll(collection);
+            synchronized (this.f258) {
+                zAddAll = this.f258.addAll(collection);
                 if (zAddAll) {
-                    m342();
+                    m336();
                 }
             }
             return zAddAll;
@@ -487,12 +487,12 @@ public enum AwsSdkMetrics {
         /* JADX WARN: Code duplicated, block: B:12:0x0017 A[Catch: all -> 0x0029, TryCatch #0 {, blocks: (B:5:0x0005, B:13:0x0019, B:15:0x0024, B:16:0x0027, B:7:0x000b, B:9:0x0013, B:12:0x0017), top: B:21:0x0005 }] */
         /* JADX WARN: Code duplicated, block: B:7:0x000b A[Catch: all -> 0x0029, TryCatch #0 {, blocks: (B:5:0x0005, B:13:0x0019, B:15:0x0024, B:16:0x0027, B:7:0x000b, B:9:0x0013, B:12:0x0017), top: B:21:0x0005 }] */
         /* JADX WARN: Code duplicated, block: B:9:0x0013 A[Catch: all -> 0x0029, DONT_GENERATE, TryCatch #0 {, blocks: (B:5:0x0005, B:13:0x0019, B:15:0x0024, B:16:0x0027, B:7:0x000b, B:9:0x0013, B:12:0x0017), top: B:21:0x0005 }] */
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final void m346(Collection collection) {
-            synchronized (this.f268) {
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final void m340(Collection collection) {
+            synchronized (this.f258) {
                 if (collection != null) {
                     if (collection.size() == 0) {
-                        if (this.f268.size() == 0) {
+                        if (this.f258.size() == 0) {
                             return;
                         }
                         if (collection == null) {
@@ -500,35 +500,35 @@ public enum AwsSdkMetrics {
                         }
                     }
                 } else {
-                    if (this.f268.size() == 0) {
+                    if (this.f258.size() == 0) {
                         return;
                     }
                     if (collection == null) {
                         collection = Collections.EMPTY_LIST;
                     }
                 }
-                this.f268.clear();
-                if (!m345(collection)) {
-                    m342();
+                this.f258.clear();
+                if (!m339(collection)) {
+                    m336();
                 }
             }
         }
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final boolean m347(MetricType metricType) {
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final boolean m341(MetricType metricType) {
             boolean zRemove;
-            synchronized (this.f268) {
-                zRemove = this.f268.remove(metricType);
+            synchronized (this.f258) {
+                zRemove = this.f258.remove(metricType);
                 if (zRemove) {
-                    m342();
+                    m336();
                 }
             }
             return zRemove;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final Set m343() {
-            return this.f269;
+        public final Set m337() {
+            return this.f259;
         }
     }
 }

@@ -2,7 +2,7 @@ package org.bouncycastle.jcajce.spec;
 
 import javax.crypto.SecretKey;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RepeatedSecretKeySpec implements SecretKey {
     public String algorithm;
 

@@ -1,43 +1,66 @@
 package l;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۘۖۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 2623 */
+/* JADX INFO: renamed from: l.ۗ᩶ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2ITI */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3648 extends AbstractC22436 {
+public final class C3648 extends AbstractC17072 {
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public static final AbstractC0287 f13377 = new C12822();
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final HashMap f12476;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final InterfaceC5143 f13378;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final String f13379;
-
-    public C3648(String str, InterfaceC5143 interfaceC5143) {
-        this.f13379 = str;
-        this.f13378 = interfaceC5143;
+    public C3648(HashMap map) {
+        this.f12476 = map;
     }
 
-    public C3648(String str, InterfaceC10975 interfaceC10975) {
-        this.f13379 = str;
-        this.f13378 = C0909.m3626(interfaceC10975);
+    @Override // l.InterfaceC11851
+    /* JADX INFO: renamed from: ֫ */
+    public final /* bridge */ /* synthetic */ InterfaceC2157 mo1791() {
+        return C25278.f81639;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static AbstractC23844 m10754(Collection collection) {
-        return f13377.m1811((Iterable) collection);
+    public static C3648 m11819(List list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+        HashMap map = new HashMap(list.size());
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            InterfaceC13343 interfaceC13343 = (InterfaceC13343) it.next();
+            if (interfaceC13343.getVisibility() != EnumC11105.SYSTEM) {
+                map.put(interfaceC13343.mo17110(), interfaceC13343);
+            }
+        }
+        if (map.isEmpty()) {
+            return null;
+        }
+        return new C3648(map);
     }
 
-    @Override // l.InterfaceC6533
-    public final String getName() {
-        return this.f13379;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Collection m11820() {
+        return this.f12476.values();
     }
 
-    @Override // l.InterfaceC6533
-    public final InterfaceC10975 getValue() {
-        return this.f13378;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List m11822() {
+        HashMap map = this.f12476;
+        return map.isEmpty() ? Collections.EMPTY_LIST : new ArrayList(map.values());
+    }
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final boolean m11821() {
+        return this.f12476.isEmpty();
+    }
+
+    public final String toString() {
+        return this.f12476.toString();
     }
 }

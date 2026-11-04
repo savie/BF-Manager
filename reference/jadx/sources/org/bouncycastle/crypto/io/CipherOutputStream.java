@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.InvalidCipherTextException;
 import org.bouncycastle.crypto.StreamCipher;
 import org.bouncycastle.crypto.modes.AEADBlockCipher;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class CipherOutputStream extends FilterOutputStream {
     public AEADBlockCipher aeadBlockCipher;
     public byte[] buf;

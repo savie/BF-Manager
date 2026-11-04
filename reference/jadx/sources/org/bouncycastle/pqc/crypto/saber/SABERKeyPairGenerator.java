@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.params.AsymmetricKeyParameter;
 public class SABERKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f77980l;
+    public int f82096l;
     public SecureRandom random;
     public SABERKeyGenerationParameters saberParams;
 
@@ -25,7 +25,7 @@ public class SABERKeyPairGenerator implements AsymmetricCipherKeyPairGenerator {
     private void initialize(KeyGenerationParameters keyGenerationParameters) {
         this.saberParams = (SABERKeyGenerationParameters) keyGenerationParameters;
         this.random = keyGenerationParameters.getRandom();
-        this.f77980l = this.saberParams.getParameters().getL();
+        this.f82096l = this.saberParams.getParameters().getL();
     }
 
     @Override // org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator

@@ -1,360 +1,294 @@
 .class public final Ll/ܳ᩵ۚ;
 .super Ljava/lang/Object;
-.source "46JS"
+.source "0IS3"
 
 
 # direct methods
-.method public static ۙ(Ll/ۧۡۜ;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
+.method public static ۙ(Ll/ܶۛۚ;)Lbin/mt/json/JSONObject;
+    .locals 3
 
-    .line 86
-    invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const-string v0, "pm list packages --user "
-
-    const-string v1, " "
-
-    .line 0
-    invoke-static {v0, p1, v1}, Ll/۫ܰۖ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    .line 90
-    invoke-static {p2}, Ll/ۜۤۜ;->ۙ(Ljava/lang/String;)Ljava/lang/String;
+    .line 49
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "workspaceId"
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v2, p0, Ll/ܶۛۚ;->ᩴ:Ljava/lang/String;
 
-    move-result-object p1
+    .line 50
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    .line 89
-    invoke-interface {p0, p1, v0}, Ll/ۧۡۜ;->ۙ(Ljava/lang/String;Z)Ll/ۛۡۜ;
+    const-string v1, "editSessionId"
+
+    iget-object v2, p0, Ll/ܶۛۚ;->᩸:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "deletedResourceCount"
+
+    iget v2, p0, Ll/ܶۛۚ;->ۙ:I
+
+    .line 51
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "deletedValueCount"
+
+    iget v2, p0, Ll/ܶۛۚ;->ۤ:I
+
+    .line 52
+    invoke-virtual {v0, v1, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "deletedTypeVariantCount"
+
+    iget p0, p0, Ll/ܶۛۚ;->᩷:I
+
+    .line 53
+    invoke-virtual {v0, v1, p0}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
 
     move-result-object p0
 
+    invoke-static {}, Lbin/mt/json/JSON;->array()Lbin/mt/json/JSONArray;
+
+    move-result-object v0
+
+    .line 49
+    invoke-static {p0, v0}, Ll/ܳۧۤ;->ۙ(Lbin/mt/json/JSONObject;Lbin/mt/json/JSONArray;)Lbin/mt/json/JSONObject;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ۙ(Ll/ۢܳۚ;Ll/᩺ۨۚ;I)V
+    .locals 8
+
+    .line 89
+    iget-object p0, p0, Ll/ۢܳۚ;->ܿ:Lbin/mt/json/JSONObject;
+
+    iget-object v0, p1, Ll/᩺ۨۚ;->ۤ:Ljava/lang/String;
+
+    iget-object v1, p1, Ll/᩺ۨۚ;->ۙ:Ljava/util/ArrayList;
+
+    const-string v2, "workspaceId"
+
+    invoke-virtual {p0, v2, v0}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v2, "editSessionId"
+
+    iget-object p1, p1, Ll/᩺ۨۚ;->᩷:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, p1}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
+
+    const-string p1, "deleteTarget"
+
+    const-string v0, "failedDeleteIndex"
+
+    if-ltz p2, :cond_4
+
+    .line 90
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge p2, v2, :cond_4
+
     .line 91
-    invoke-virtual {p0}, Ll/ۛۡۜ;->ܰ()Z
+    invoke-virtual {p0, v0, p2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;I)Lbin/mt/json/JSONObject;
 
-    move-result p1
+    move-result-object p0
 
-    if-nez p1, :cond_3
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 94
-    iget-object p0, p0, Ll/ۛۡۜ;->ܰ:[Ljava/lang/String;
+    move-result-object p2
 
-    array-length p1, p0
+    check-cast p2, Ll/ۛۨۚ;
 
-    const/4 v1, 0x0
+    const-string v0, "type_variant"
 
-    const/4 v2, 0x0
+    .line 99
+    iget-object v1, p2, Ll/ۛۨۚ;->ۙ:Ljava/lang/String;
 
-    :goto_0
-    if-ge v2, p1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget-object v3, p0, v2
+    move-result v0
 
-    .line 95
-    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
+    .line 100
+    invoke-static {}, Lbin/mt/json/JSON;->object()Lbin/mt/json/JSONObject;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "package:"
+    const-string v2, "kind"
 
-    invoke-virtual {v4, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p2, Ll/ۛۨۚ;->ۙ:Ljava/lang/String;
 
-    move-result-object v4
+    invoke-virtual {v1, v2, v3}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Ljava/lang/String;)Lbin/mt/json/JSONObject;
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v3
+    .line 101
+    iget-object v2, p2, Ll/ۛۨۚ;->ۤ:Ljava/lang/String;
 
-    if-eqz v3, :cond_1
+    if-nez v2, :cond_0
 
-    :goto_1
-    return-void
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+    sget-object v2, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
 
     goto :goto_0
 
-    .line 103
-    :cond_2
-    new-instance p0, Ll/ۙ᩻᩺;
-
-    new-array p1, v0, [Ljava/lang/Object;
-
-    aput-object p2, p1, v1
-
-    const p2, 0x7f120057
-
-    invoke-static {p2, p1}, Ll/ܽܺۘ;->ۙ(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 16
-    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    .line 99
-    throw p0
-
-    .line 92
-    :cond_3
-    new-instance p1, Ll/ۙ᩻᩺;
-
-    .line 83
-    iget-object p0, p0, Ll/ۛۡۜ;->ۙ:Ljava/lang/String;
-
-    .line 16
-    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    .line 92
-    throw p1
-.end method
-
-.method public static ۙ(Ljava/lang/String;)Z
-    .locals 7
-
-    .line 34
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_9
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const/16 v2, 0xff
-
-    if-lt v0, v2, :cond_0
-
-    goto :goto_4
-
     :cond_0
-    const/4 v0, 0x1
+    const-string v3, "resource:"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lbin/mt/json/JSON;->value(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v2
+
+    :goto_0
+    const-string v3, "locator"
+
+    invoke-virtual {v1, v3, v2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    const-string v4, "0x%02x"
 
-    .line 39
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    if-eqz v0, :cond_1
 
-    move-result v5
+    .line 102
+    sget-object v5, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    if-ge v2, v5, :cond_7
+    iget v6, p2, Ll/ۛۨۚ;->᩷:I
 
-    .line 40
-    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v5
+    move-result-object v6
 
-    const/16 v6, 0x2e
+    new-array v7, v3, [Ljava/lang/Object;
 
-    if-ne v5, v6, :cond_2
+    aput-object v6, v7, v2
 
-    if-eqz v3, :cond_1
+    invoke-static {v5, v4, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    return v1
+    move-result-object v5
+
+    invoke-static {v5}, Lbin/mt/json/JSON;->value(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v5
+
+    goto :goto_1
 
     :cond_1
-    const/4 v3, 0x1
+    sget-object v5, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
 
-    const/4 v4, 0x1
+    :goto_1
+    const-string v6, "packageId"
+
+    invoke-virtual {v1, v6, v5}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_2
+
+    .line 103
+    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    iget v5, p2, Ll/ۛۨۚ;->᩸:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    aput-object v5, v3, v2
+
+    invoke-static {v0, v4, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbin/mt/json/JSON;->value(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object v0
 
     goto :goto_2
 
     :cond_2
-    const/16 v6, 0x61
-
-    if-lt v5, v6, :cond_3
-
-    const/16 v6, 0x7a
-
-    if-le v5, v6, :cond_5
-
-    :cond_3
-    const/16 v6, 0x41
-
-    if-lt v5, v6, :cond_4
-
-    const/16 v6, 0x5a
-
-    if-gt v5, v6, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    if-nez v3, :cond_6
-
-    const/16 v3, 0x5f
-
-    if-eq v5, v3, :cond_5
-
-    const/16 v3, 0x30
-
-    if-lt v5, v3, :cond_6
-
-    const/16 v3, 0x39
-
-    if-le v5, v3, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    :goto_1
-    const/4 v3, 0x0
+    sget-object v0, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
 
     :goto_2
-    add-int/lit8 v2, v2, 0x1
+    const-string v2, "typeId"
 
-    goto :goto_0
-
-    :cond_6
-    :goto_3
-    return v1
-
-    :cond_7
-    if-nez v3, :cond_9
-
-    if-nez v4, :cond_8
-
-    const-string v2, "android"
-
-    .line 55
-    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_9
-
-    :cond_8
-    return v0
-
-    :cond_9
-    :goto_4
-    return v1
-.end method
-
-.method public static ۨ(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .line 59
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string p0, ""
-
-    return-object p0
-
-    .line 62
-    :cond_0
-    invoke-static {p0}, Ll/ܳ᩵ۚ;->ۙ(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 65
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "-i "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Ll/ۜۤۜ;->ۙ(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 63
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Invalid installer package name"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static ܰ(Ljava/lang/String;)V
-    .locals 2
-
-    .line 26
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p0}, Ll/ܳ᩵ۚ;->ۙ(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 27
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Invalid installer package name"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 29
-    :cond_1
-    :goto_0
-    sget-object v0, Ll/֡᩺ۘ;->ܽ:Ll/ۛۧ᩺;
-
-    invoke-interface {v0}, Ll/ۛۧ᩺;->edit()Ll/ܿۧ᩺;
+    invoke-virtual {v1, v2, v0}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
 
     move-result-object v0
 
-    const-string v1, "ais"
+    .line 104
+    iget-object p2, p2, Ll/ۛۨۚ;->ᩴ:Ljava/lang/String;
 
-    invoke-interface {v0, v1, p0}, Ll/ܿۧ᩺;->putString(Ljava/lang/String;Ljava/lang/String;)Ll/ܿۧ᩺;
+    if-nez p2, :cond_3
 
-    move-result-object p0
+    sget-object p2, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
 
-    invoke-interface {p0}, Ll/ܿۧ᩺;->apply()V
+    goto :goto_3
 
+    :cond_3
+    invoke-static {p2}, Lbin/mt/json/JSON;->value(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object p2
+
+    :goto_3
+    const-string v1, "variant"
+
+    invoke-virtual {v0, v1, p2}, Lbin/mt/json/JSONObject;->add(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    move-result-object p2
+
+    .line 91
+    invoke-virtual {p0, p1, p2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    return-void
+
+    .line 93
+    :cond_4
+    invoke-virtual {p0, v0}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object p2
+
+    if-nez p2, :cond_5
+
+    sget-object p2, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
+
+    invoke-virtual {p0, v0, p2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    .line 94
+    :cond_5
+    invoke-virtual {p0, p1}, Lbin/mt/json/JSONObject;->get(Ljava/lang/String;)Lbin/mt/json/JSONValue;
+
+    move-result-object p2
+
+    if-nez p2, :cond_6
+
+    sget-object p2, Lbin/mt/json/JSON;->NULL:Lbin/mt/json/JSONValue;
+
+    invoke-virtual {p0, p1, p2}, Lbin/mt/json/JSONObject;->put(Ljava/lang/String;Lbin/mt/json/JSONValue;)Lbin/mt/json/JSONObject;
+
+    :cond_6
     return-void
 .end method

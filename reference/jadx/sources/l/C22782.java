@@ -1,26 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ۚ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C22782 extends AbstractC10330 {
-    public final /* synthetic */ int b;
+/* JADX INFO: renamed from: l.᩸ۨۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
+/* JADX INFO: loaded from: classes.dex */
+public final class C22782 extends C0407 {
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ C22782(int i, InterfaceC19171 interfaceC19171) {
-        super(interfaceC19171);
-        this.b = i;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f73899;
 
-    @Override // l.InterfaceC10974, l.InterfaceC19171
-    public final void accept(int i) {
-        switch (this.b) {
-            case 0:
-                this.a.accept(i);
-                break;
-            default:
-                this.a.accept(i);
-                break;
-        }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public EnumC9355 f73900;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public C0407 f73901;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f73902;
+
+    public C22782(C0407 c0407, int i, int i2, EnumC9355 enumC9355) {
+        this.f73901 = c0407;
+        this.f73900 = enumC9355;
+        this.f73902 = i;
+        this.f73899 = i2;
     }
 }

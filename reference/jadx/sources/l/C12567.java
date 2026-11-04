@@ -1,59 +1,75 @@
 package l;
 
-import java.util.Arrays;
+import java.util.ArrayDeque;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.۫ᩳۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 76ZW */
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: renamed from: l.ۨᩴ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 96FJ */
+/* JADX INFO: loaded from: classes4.dex */
 public final class C12567 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final int f42027;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f42029;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int[] f42030 = new int[16];
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ArrayDeque f40358 = new ArrayDeque();
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C0571[] f42028 = new C0571[16];
+    public C20772 f40357 = new C20772();
 
-    public C12567(int i) {
-        if (i < 0) {
-            throw new IllegalArgumentException("Negative text length");
-        }
-        this.f42027 = i;
+    static {
+        C16980.m40037(C12567.class);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m31286(int i, C0571 c0571) {
-        C13638.requireNonNull(c0571);
-        int i2 = this.f42027;
-        C13638.checkFromToIndex(i, i, i2);
-        if (c0571.m2681() != i2) {
-            throw new IllegalArgumentException("Index and dependency lengths differ");
+    public final void m31276(AbstractC20255 abstractC20255) {
+        C20772 c20772 = this.f40357;
+        ArrayDeque arrayDeque = this.f40358;
+        arrayDeque.push(c20772);
+        if (arrayDeque.size() > 1000) {
+            throw new C2631("Regions stack size limit reached");
         }
-        int i3 = this.f42029;
-        if (i3 == this.f42030.length) {
-            long jMax = ((long) i3) + ((long) Math.max(16, i3 >>> 1));
-            int i4 = (int) jMax;
-            if (jMax != i4) {
-                throw new ArithmeticException();
-            }
-            this.f42030 = Arrays.copyOf(this.f42030, i4);
-            this.f42028 = (C0571[]) Arrays.copyOf(this.f42028, i4);
-        }
-        int[] iArr = this.f42030;
-        int i5 = this.f42029;
-        iArr[i5] = i;
-        this.f42028[i5] = c0571;
-        this.f42029 = i5 + 1;
+        this.f40357 = this.f40357.m47522(abstractC20255);
+    }
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final void m31282() {
+        this.f40357 = (C20772) this.f40358.pop();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C6216 m31285(EnumC16095 enumC16095) {
-        C13638.requireNonNull(enumC16095);
-        return new C6216(this, enumC16095);
+    public final void m31277(C21943 c21943) {
+        if (c21943 != null) {
+            this.f40357.f66552.add(c21943);
+        }
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final void m31279(C21943 c21943) {
+        if (c21943 != null) {
+            this.f40357.f66552.remove(c21943);
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean m31281(C21943 c21943) {
+        return this.f40357.f66552.contains(c21943);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Set m31280() {
+        return this.f40357.f66552;
+    }
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC18213 m31278() {
+        return this.f40357.f66553;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m31275() {
+        this.f40358.clear();
+        this.f40357 = new C20772();
+    }
+
+    public final String toString() {
+        return "Region stack size: " + this.f40358.size() + ", last: " + this.f40357;
     }
 }

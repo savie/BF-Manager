@@ -1,15 +1,13 @@
 package l;
 
-import java.io.IOException;
-import java.util.zip.DeflaterOutputStream;
+/* JADX INFO: renamed from: l.ۘ᩵ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: KBJN */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4385 extends C14307 {
 
-/* JADX INFO: renamed from: l.ۙۗ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4GT */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4385 extends DeflaterOutputStream {
-    @Override // java.util.zip.DeflaterOutputStream, java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() throws IOException {
-        super.close();
-        ((DeflaterOutputStream) this).def.end();
-    }
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public String f15813;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public long f15814;
 }

@@ -3,8 +3,8 @@ package com.google.android.material.resources;
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.View;
-import l.C0976;
-import l.C2387;
+import l.C11642;
+import l.C17609;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialAttributes {
@@ -54,7 +54,7 @@ public class MaterialAttributes {
     }
 
     public static int resolveMinimumAccessibleTouchTarget(Context context) {
-        return resolveDimension(context, C2387.f8896, C0976.f4384);
+        return resolveDimension(context, C11642.f36820, C17609.f57758);
     }
 
     public static int resolveDimension(Context context, int i, int i2) {

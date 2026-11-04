@@ -1,30 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: Z96X */
-/* JADX INFO: loaded from: classes.dex */
-public class C1108 extends C2519 {
-    static {
-        ApplicationC6132.m17119(17);
+import java.util.List;
+
+/* JADX INFO: renamed from: l.֨ۤۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M6BE */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1108 extends AbstractC9950 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C24975 f3927;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f3928;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f3929;
+
+    public C1108(C24975 c24975, int i, int i2) {
+        this.f3927 = c24975;
+        this.f3928 = i;
+        this.f3929 = i2;
     }
 
-    public native C1108(byte[] bArr, int i, int i2);
-
-    public C1108(byte[] bArr) {
-        this(bArr, 0, bArr.length);
+    @Override // l.InterfaceC4685
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int mo4114() {
+        return this.f3927.m55818().mo8719(this.f3928);
     }
 
-    @Override // l.C5342
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int mo4125(int i) {
-        if (i < 0) {
-            return 0;
+    @Override // l.InterfaceC4685
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int mo4115() {
+        return this.f3927.m55818().m8721(this.f3928 + 4);
+    }
+
+    @Override // l.InterfaceC4685
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List mo4116() {
+        C24975 c24975 = this.f3927;
+        C8565 c8565M8724 = c24975.m55818().m8724(c24975.m55818().m8721(this.f3928 + 6) + this.f3929);
+        int iM23006 = c8565M8724.m23006();
+        int iM23001 = c8565M8724.m23001();
+        c8565M8724.m22995();
+        if (iM23006 > 0) {
+            return new C19007(this, c24975, iM23001, iM23006);
         }
-        int[] iArr = this.f18448;
-        if (i >= iArr.length) {
-            return -this.f18450;
-        }
-        int i2 = iArr[(iArr.length - i) - 1];
-        return this.f18450 >= 0 ? i2 * 31 : i2 ^ 31;
+        int i = (iM23006 * (-1)) + 1;
+        return new C10056(this, this.f3927, iM23001, i, i);
     }
 }

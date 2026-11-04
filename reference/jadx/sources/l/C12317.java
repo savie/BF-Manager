@@ -1,14 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.۫ۢ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: P77N */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12317 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC20745 f41149;
-
-    public C12317(AbstractC20745 abstractC20745) {
-        this.f41149 = abstractC20745;
+/* JADX INFO: renamed from: l.ۨۧۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: T5RH */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12317 implements InterfaceC22760 {
+    @Override // l.InterfaceC22760
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1200(C19929 c19929) {
+        C14270 c14270 = new C14270();
+        c14270.m34621(C22837.encode(((C14270) c19929.m45858()).m34647(), ((C14270) c19929.m45858()).m34647()));
+        c19929.m45857(c14270);
     }
 }

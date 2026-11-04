@@ -1,61 +1,113 @@
 package l;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-/* JADX INFO: renamed from: l.ᩳ᩷᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: U6AJ */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18307 extends C14075 {
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public boolean f58396;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f58397;
-
-    @Override // l.C14075, l.AbstractC7724
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo9290() {
+/* JADX INFO: renamed from: l.ܿۨۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U8G3 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18307 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m42692(C14160 c14160, C1483 c1483) {
+        StringBuilder sb = new StringBuilder("XposedHelpers.get");
+        if (c1483.f5152) {
+            sb.append("Static");
+        }
+        String str = c1483.f5154;
+        str.getClass();
+        switch (str) {
+            case "B":
+                sb.append("Byte");
+                break;
+            case "C":
+                sb.append("Char");
+                break;
+            case "D":
+                sb.append("Double");
+                break;
+            case "F":
+                sb.append("Float");
+                break;
+            case "I":
+                sb.append("Int");
+                break;
+            case "J":
+                sb.append("Long");
+                break;
+            case "S":
+                sb.append("Short");
+                break;
+            case "Z":
+                sb.append("Boolean");
+                break;
+        }
+        sb.append("Field(/*runtimeObject*/, \"");
+        return C8947.m23910(sb, c14160.f44771, "\");");
     }
 
-    public C18307(C10547 c10547, int i, InterfaceC15208 interfaceC15208) {
-        super(c10547, i, interfaceC15208);
-        int iM26685 = c10547.m26685(i);
-        this.f58397 = new ArrayList();
-        if (iM26685 >= 0) {
-            for (InterfaceC2568 interfaceC2568 : interfaceC15208.mo14955()) {
-                this.f58397.add(new C23247(interfaceC2568.getKey(), c10547.m26683().m23459(new C8430(c10547.f36110, interfaceC2568.mo8019() + iM26685, "sswitch_"))));
-            }
-            return;
-        }
-        this.f58396 = true;
-        for (InterfaceC2568 interfaceC2569 : interfaceC15208.mo14955()) {
-            this.f58397.add(new C15486(interfaceC2569.getKey(), interfaceC2569.mo8019()));
-        }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static String m42694(String str) {
+        return str.substring(1, str.length() - 1).replace('/', '.');
     }
 
-    @Override // l.C14075, l.AbstractC7724
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo1773(C12283 c12283) throws IOException {
-        if (this.f58396) {
-            c12283 = new C7330(c12283);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m42691(C14160 c14160) {
+        String str = c14160.f44771;
+        return C3188.m10404("Class<?> ", str.matches("[a-zA-Z]\\w*") ? str.concat("Class") : String.format("cls%X", Integer.valueOf(str.hashCode() & 65535)), " = classLoader.loadClass(\"", m42694(c14160.f44772), "\");");
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m42693(C14160 c14160, C9685 c9685) {
+        String strM34865;
+        String str = c9685.f31271;
+        if (str.equals("<clinit>")) {
+            return "";
         }
-        boolean z = this.f46226.f36110.f66203;
-        c12283.getClass();
-        c12283.write(".sparse-switch\n", 0, 15);
-        c12283.m30527();
-        for (AbstractC21835 abstractC21835 : this.f58397) {
-            C0667.m2995(c12283, abstractC21835.m48605());
-            c12283.write(" -> ", 0, 4);
-            abstractC21835.mo37073(c12283);
-            if (z) {
-                m34043(c12283, abstractC21835.m48605());
+        ArrayList<C21291> arrayList = new ArrayList();
+        C24275 c24275 = new C24275(c9685.f31265);
+        while (true) {
+            String strM54278 = c24275.m54278();
+            if (strM54278 == null) {
+                break;
             }
-            c12283.write(10);
+            arrayList.add(new C21291(strM54278));
         }
-        c12283.m30526();
-        c12283.write(".end sparse-switch", 0, 18);
-        return true;
+        StringBuilder sb = new StringBuilder("XposedHelpers.");
+        if (str.equals("<init>")) {
+            sb.append("findAndHookConstructor");
+        } else {
+            sb.append("findAndHookMethod");
+        }
+        sb.append("(\"");
+        sb.append(m42694(c14160.f44772));
+        sb.append("\", classLoader");
+        if (!str.equals("<init>")) {
+            C22121.m50078(sb, ", \"", str, "\"");
+        }
+        for (C21291 c21291 : arrayList) {
+            sb.append(", ");
+            int i = c21291.f67890;
+            String str2 = c21291.f67892;
+            if (c21291.f67891) {
+                StringBuilder sb2 = new StringBuilder();
+                if (str2.startsWith("java.lang.")) {
+                    sb2.append(str2.substring(10));
+                } else {
+                    sb2.append(str2);
+                }
+                for (int i2 = 0; i2 < i; i2++) {
+                    sb2.append("[]");
+                }
+                sb2.append(".class");
+                strM34865 = sb2.toString();
+            } else {
+                if (i > 0) {
+                    str2 = c21291.f67893;
+                }
+                strM34865 = C14442.m34865("classLoader.loadClass(\"", str2, "\")");
+            }
+            sb.append(strM34865);
+        }
+        sb.append(", new XC_MethodHook() {\n    @Override\n    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {\n        super.beforeHookedMethod(param);\n    }\n    @Override\n    protected void afterHookedMethod(MethodHookParam param) throws Throwable {\n        super.afterHookedMethod(param);\n    }\n});");
+        return sb.toString();
     }
 }

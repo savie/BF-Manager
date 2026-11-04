@@ -1,36 +1,22 @@
-.class public final Ll/֨۬ۚ;
+.class public final synthetic Ll/֨۬ۚ;
 .super Ljava/lang/Object;
-.source "IBIJ"
+.source "O8UQ"
 
 # interfaces
-.implements Ll/۬۬ۚ;
-
-
-# instance fields
-.field public final synthetic ۚ:Ll/֡֡ۜ;
-
-
-# direct methods
-.method public constructor <init>(Ll/֡֡ۜ;)V
-    .locals 0
-
-    .line 23
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/֨۬ۚ;->ۚ:Ll/֡֡ۜ;
-
-    return-void
-.end method
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # virtual methods
-.method public final ۙ(Ljava/lang/CharSequence;Ll/ᩴۘۚ;)V
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 1
 
-    .line 29
-    iget-object v0, p0, Ll/֨۬ۚ;->ۚ:Ll/֡֡ۜ;
+    .line 112
+    sget-object p1, Ll/ܽܿ֫;->֡:Ll/ۢ֫ܺ;
 
-    invoke-interface {v0, p1, p2}, Ll/֡֡ۜ;->ۙ(Ljava/lang/CharSequence;Ll/ᩴۘۚ;)V
+    const-string v0, "mbp"
+
+    .line 0
+    invoke-static {p1, v0, p2}, Ll/ۛ۬ܳ;->ۙ(Ll/ۢ֫ܺ;Ljava/lang/String;Z)V
 
     return-void
 .end method

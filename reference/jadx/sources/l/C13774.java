@@ -1,32 +1,68 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۧۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F6QC */
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
+import android.view.animation.Animation;
+import android.widget.ImageView;
+
+/* JADX INFO: renamed from: l.۬ۢ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: E5ZZ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13774 extends C4943 {
+public final class C13774 extends ImageView {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final long f45396;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public int f43717;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public long f45397;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public Animation.AnimationListener f43718;
 
-    public C13774(C17156 c17156, int i) {
-        super(c17156);
-        this.f45396 = Math.max(2000000L, ((long) i) * 1000);
+    public C13774(Context context) {
+        super(context);
+        float f = getContext().getResources().getDisplayMetrics().density;
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(C7063.f23274);
+        this.f43717 = typedArrayObtainStyledAttributes.getColor(0, -328966);
+        typedArrayObtainStyledAttributes.recycle();
+        ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShape());
+        C22666.m51087(this, f * 4.0f);
+        shapeDrawable.getPaint().setColor(this.f43717);
+        setBackground(shapeDrawable);
     }
 
-    @Override // l.C4943
-    /* JADX INFO: renamed from: ۖ */
-    public final InterfaceC19761 mo13724(int i) {
-        long j = this.f45397 + 1;
-        this.f45397 = j;
-        if ((j & 1023) == 0) {
-            C3894.m11326();
-            if (this.f45397 > this.f45396) {
-                throw new IllegalArgumentException("Parser work exceeds formatter limit");
-            }
+    @Override // android.widget.ImageView, android.view.View
+    public final void onMeasure(int i, int i2) {
+        super.onMeasure(i, i2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m33662(Animation.AnimationListener animationListener) {
+        this.f43718 = animationListener;
+    }
+
+    @Override // android.view.View
+    public final void onAnimationStart() {
+        super.onAnimationStart();
+        Animation.AnimationListener animationListener = this.f43718;
+        if (animationListener != null) {
+            animationListener.onAnimationStart(getAnimation());
         }
-        return super.mo13724(i);
+    }
+
+    @Override // android.view.View
+    public final void onAnimationEnd() {
+        super.onAnimationEnd();
+        Animation.AnimationListener animationListener = this.f43718;
+        if (animationListener != null) {
+            animationListener.onAnimationEnd(getAnimation());
+        }
+    }
+
+    @Override // android.view.View
+    public final void setBackgroundColor(int i) {
+        if (getBackground() instanceof ShapeDrawable) {
+            ((ShapeDrawable) getBackground()).getPaint().setColor(i);
+            this.f43717 = i;
+        }
     }
 }

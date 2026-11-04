@@ -15,41 +15,41 @@ import java.util.ArrayList;
 /* JADX INFO: loaded from: classes.dex */
 public class TransferNetworkLossHandler extends BroadcastReceiver {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final Log f299 = LogFactory.m302(TransferNetworkLossHandler.class);
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static TransferNetworkLossHandler f289;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static TransferNetworkLossHandler f300;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Log f290 = LogFactory.m296(TransferNetworkLossHandler.class);
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final ConnectivityManager f301;
+    public final ConnectivityManager f291;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public TransferStatusUpdater f302;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public TransferStatusUpdater f292;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public TransferDBUtil f303;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public TransferDBUtil f293;
 
     public TransferNetworkLossHandler(Context context) {
-        this.f301 = (ConnectivityManager) context.getSystemService("connectivity");
-        this.f303 = new TransferDBUtil(context);
-        this.f302 = TransferStatusUpdater.m390(context);
+        this.f291 = (ConnectivityManager) context.getSystemService("connectivity");
+        this.f293 = new TransferDBUtil(context);
+        this.f292 = TransferStatusUpdater.m384(context);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static synchronized TransferNetworkLossHandler m379(Context context) {
-        if (f300 == null) {
-            f300 = new TransferNetworkLossHandler(context);
+    public static synchronized TransferNetworkLossHandler m373(Context context) {
+        if (f289 == null) {
+            f289 = new TransferNetworkLossHandler(context);
         }
-        return f300;
+        return f289;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static synchronized TransferNetworkLossHandler m381() {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static synchronized TransferNetworkLossHandler m375() {
         TransferNetworkLossHandler transferNetworkLossHandler;
-        transferNetworkLossHandler = f300;
+        transferNetworkLossHandler = f289;
         if (transferNetworkLossHandler == null) {
-            f299.mo292("TransferNetworkLossHandler is not created. Please call `TransferNetworkLossHandler.getInstance(Context)` to instantiate it before retrieving");
+            f290.mo285("TransferNetworkLossHandler is not created. Please call `TransferNetworkLossHandler.getInstance(Context)` to instantiate it before retrieving");
             throw new TransferUtilityException("TransferNetworkLossHandler is not created. Please call `TransferNetworkLossHandler.getInstance(Context)` to instantiate it before retrieving");
         }
         return transferNetworkLossHandler;
@@ -58,21 +58,21 @@ public class TransferNetworkLossHandler extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
         if ("android.net.conn.CONNECTIVITY_CHANGE".equals(intent.getAction())) {
-            Log log = f299;
-            log.mo296("Network connectivity changed detected.");
-            log.mo296("Network connected: " + m382());
+            Log log = f290;
+            log.mo288("Network connectivity changed detected.");
+            log.mo288("Network connected: " + m376());
             new Thread(new Runnable() { // from class: com.amazonaws.mobileconnectors.s3.transferutility.TransferNetworkLossHandler.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    if (TransferNetworkLossHandler.this.m382()) {
-                        TransferNetworkLossHandler.m380(TransferNetworkLossHandler.this);
+                    if (TransferNetworkLossHandler.this.m376()) {
+                        TransferNetworkLossHandler.m374(TransferNetworkLossHandler.this);
                         return;
                     }
                     TransferNetworkLossHandler transferNetworkLossHandler = TransferNetworkLossHandler.this;
                     synchronized (transferNetworkLossHandler) {
-                        for (TransferRecord transferRecord : transferNetworkLossHandler.f302.m393().values()) {
-                            if (S3ClientReference.m353(Integer.valueOf(transferRecord.f328)) != null && transferRecord.m387(transferNetworkLossHandler.f302, transferNetworkLossHandler.f301)) {
-                                transferNetworkLossHandler.f302.m395(transferRecord.f328, TransferState.WAITING_FOR_NETWORK);
+                        for (TransferRecord transferRecord : transferNetworkLossHandler.f292.m387().values()) {
+                            if (S3ClientReference.m347(Integer.valueOf(transferRecord.f322)) != null && transferRecord.m381(transferNetworkLossHandler.f292, transferNetworkLossHandler.f291)) {
+                                transferNetworkLossHandler.f292.m389(transferRecord.f322, TransferState.WAITING_FOR_NETWORK);
                             }
                         }
                     }
@@ -82,53 +82,53 @@ public class TransferNetworkLossHandler extends BroadcastReceiver {
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m382() {
-        NetworkInfo activeNetworkInfo = this.f301.getActiveNetworkInfo();
+    public final boolean m376() {
+        NetworkInfo activeNetworkInfo = this.f291.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m380(TransferNetworkLossHandler transferNetworkLossHandler) {
-        TransferRecord transferRecordM392;
+    public static void m374(TransferNetworkLossHandler transferNetworkLossHandler) {
+        TransferRecord transferRecordM386;
         synchronized (transferNetworkLossHandler) {
             try {
                 int i = 0;
                 TransferState[] transferStateArr = {TransferState.WAITING_FOR_NETWORK};
-                f299.mo298("Loading transfers from database...");
+                f290.mo291("Loading transfers from database...");
                 ArrayList<Integer> arrayList = new ArrayList();
-                Cursor cursorM363 = null;
+                Cursor cursorM356 = null;
                 try {
-                    TransferDBUtil transferDBUtil = transferNetworkLossHandler.f303;
+                    TransferDBUtil transferDBUtil = transferNetworkLossHandler.f293;
                     TransferType transferType = TransferType.ANY;
                     transferDBUtil.getClass();
-                    cursorM363 = TransferDBUtil.m363(transferType, transferStateArr);
-                    while (cursorM363.moveToNext()) {
-                        int i2 = cursorM363.getInt(cursorM363.getColumnIndexOrThrow(aq.d));
-                        if (transferNetworkLossHandler.f302.m392(i2) == null) {
+                    cursorM356 = TransferDBUtil.m356(transferType, transferStateArr);
+                    while (cursorM356.moveToNext()) {
+                        int i2 = cursorM356.getInt(cursorM356.getColumnIndexOrThrow(aq.d));
+                        if (transferNetworkLossHandler.f292.m386(i2) == null) {
                             TransferRecord transferRecord = new TransferRecord(i2);
-                            transferRecord.m383(cursorM363);
-                            transferNetworkLossHandler.f302.m397(transferRecord);
+                            transferRecord.m377(cursorM356);
+                            transferNetworkLossHandler.f292.m391(transferRecord);
                             i++;
                         }
                         arrayList.add(Integer.valueOf(i2));
                     }
-                    f299.mo298("Closing the cursor for resumeAllTransfers");
-                    cursorM363.close();
+                    f290.mo291("Closing the cursor for resumeAllTransfers");
+                    cursorM356.close();
                     try {
                         for (Integer num : arrayList) {
-                            AmazonS3 amazonS3M353 = S3ClientReference.m353(num);
-                            if (amazonS3M353 != null && (transferRecordM392 = transferNetworkLossHandler.f302.m392(num.intValue())) != null && !transferRecordM392.m385()) {
-                                transferRecordM392.m384(amazonS3M353, transferNetworkLossHandler.f303, transferNetworkLossHandler.f302, transferNetworkLossHandler.f301);
+                            AmazonS3 amazonS3M347 = S3ClientReference.m347(num);
+                            if (amazonS3M347 != null && (transferRecordM386 = transferNetworkLossHandler.f292.m386(num.intValue())) != null && !transferRecordM386.m379()) {
+                                transferRecordM386.m378(amazonS3M347, transferNetworkLossHandler.f293, transferNetworkLossHandler.f292, transferNetworkLossHandler.f291);
                             }
                         }
                     } catch (Exception e) {
-                        f299.mo292("Error in resuming the transfers." + e.getMessage());
+                        f290.mo285("Error in resuming the transfers." + e.getMessage());
                     }
-                    f299.mo298(i + " transfers are loaded from database.");
+                    f290.mo291(i + " transfers are loaded from database.");
                 } catch (Throwable th) {
-                    if (cursorM363 != null) {
-                        f299.mo298("Closing the cursor for resumeAllTransfers");
-                        cursorM363.close();
+                    if (cursorM356 != null) {
+                        f290.mo291("Closing the cursor for resumeAllTransfers");
+                        cursorM356.close();
                     }
                     throw th;
                 }

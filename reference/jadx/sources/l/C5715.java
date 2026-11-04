@@ -1,118 +1,59 @@
 package l;
 
-import java.util.HashMap;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 
-/* JADX INFO: renamed from: l.ۛ֡᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: V1UX */
+/* JADX INFO: renamed from: l.ۚܳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: R1ER */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5715 extends AbstractC10425 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public static final char[] f19466;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final StringBuilder f19467;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f19468;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C17004 f19469;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f19470;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C5715 f19471;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public boolean f19472;
-
-    static {
-        StringBuilder sb = new StringBuilder();
-        for (char c = 'a'; c <= 'z'; c = (char) (c + 1)) {
-            sb.append(c);
+public final class C5715 extends C10320 {
+    /* JADX WARN: Code duplicated, block: B:24:0x00bd  */
+    @Override // l.C10320, l.InterfaceC8829
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2774(InterfaceC18525 interfaceC18525, InterfaceC8697 interfaceC8697, C2863 c2863, C1372 c1372) {
+        CharSequence charSequenceM34210;
+        if (!interfaceC8697.mo18155()) {
+            throw new RuntimeException();
         }
-        f19466 = sb.toString().toCharArray();
-    }
-
-    public C5715() {
-        this.f19467 = new StringBuilder();
-        this.f19469 = new C17004(null);
-        this.f19468 = new HashMap();
-        this.f19471 = null;
-        this.f19472 = false;
-    }
-
-    public C5715(C5715 c5715) {
-        this.f19467 = new StringBuilder();
-        this.f19469 = new C17004(null);
-        this.f19468 = new HashMap();
-        this.f19472 = false;
-        this.f19471 = c5715;
-    }
-
-    @Override // l.AbstractC10425
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo15750() {
-        this.f19472 = true;
-    }
-
-    @Override // l.AbstractC10425
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo15751() {
-        this.f19471 = null;
-        this.f19470 = 0;
-    }
-
-    @Override // l.AbstractC10425
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String mo15749() {
-        StringBuilder sbM15747 = m15747();
-        if (this.f19472) {
-            sbM15747.insert(0, '_');
+        interfaceC18525.mo14234("style");
+        interfaceC18525.mo14233("name", interfaceC8697.mo18156());
+        if (interfaceC8697.getParent() != 0) {
+            interfaceC18525.mo14233("parent", "@".concat(c2863.mo9456(interfaceC8697.mo18153().mo27607(), interfaceC8697.getParent())));
         }
-        m15748();
-        C17004 c17004 = this.f19469;
-        c17004.m39783(sbM15747);
-        HashMap map = this.f19468;
-        String str = (String) map.get(c17004);
-        if (str != null) {
-            return str;
-        }
-        String string = sbM15747.toString();
-        map.put(new C17004(string), string);
-        return string;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    private StringBuilder m15747() {
-        StringBuilder sbM15747;
-        int i = this.f19470;
-        C5715 c5715 = this.f19471;
-        if (c5715 == null) {
-            sbM15747 = this.f19467;
-            C13638.requireNonNull(sbM15747);
-            sbM15747.setLength(0);
-        } else {
-            sbM15747 = c5715.m15747();
-        }
-        sbM15747.append(f19466[i]);
-        return sbM15747;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    private void m15748() {
-        int i = this.f19470 + 1;
-        this.f19470 = i;
-        if (i == f19466.length) {
-            this.f19470 = 0;
-            C5715 c5715 = this.f19471;
-            if (c5715 == null) {
-                this.f19471 = new C5715(null);
+        C14049.m34216(interfaceC18525, interfaceC8697, c1372);
+        C7075 c7075M9457 = c2863.m9457();
+        for (InterfaceC5650 interfaceC5650 : interfaceC8697.values()) {
+            C2600 c2600M19410 = c7075M9457.m19410(interfaceC5650.mo16637());
+            if (c2600M19410 == null) {
+                C10320.m26592(interfaceC18525, interfaceC5650, c2863);
             } else {
-                c5715.m15748();
+                if (((C0594) c2600M19410.m8730()).contains(interfaceC5650.mo16635())) {
+                    String strM9452 = c2863.m9452(interfaceC8697.mo18153().mo27607(), (c2600M19410.f8353 >>> 24) & 255);
+                    interfaceC18525.mo14234("item");
+                    StringBuilder sbM27333 = C10732.m27333(strM9452);
+                    sbM27333.append(c2600M19410.f8356);
+                    interfaceC18525.mo14233("name", sbM27333.toString());
+                    if (interfaceC5650.mo16632()) {
+                        int i = c2600M19410.f8357;
+                        if ((65536 & i) != 0) {
+                            charSequenceM34210 = c2600M19410.m8729(interfaceC5650.getValue());
+                        } else if ((i & WXMediaMessage.MINI_PROGRAM__THUMB_LENGHT) != 0) {
+                            charSequenceM34210 = c2600M19410.m8732(interfaceC5650.getValue());
+                        } else {
+                            charSequenceM34210 = null;
+                        }
+                    } else {
+                        charSequenceM34210 = null;
+                    }
+                    if (charSequenceM34210 == null) {
+                        charSequenceM34210 = C14049.m34210(c2863, interfaceC5650);
+                    }
+                    C14049.m34213(interfaceC18525, charSequenceM34210);
+                    interfaceC18525.mo14232("item");
+                } else {
+                    C10320.m26592(interfaceC18525, interfaceC5650, c2863);
+                }
             }
         }
+        interfaceC18525.mo14232("style");
     }
 }

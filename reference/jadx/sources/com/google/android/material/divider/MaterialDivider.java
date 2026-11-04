@@ -10,16 +10,16 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import l.C0976;
-import l.C10405;
-import l.C18616;
-import l.C2387;
-import l.C5031;
-import l.C8033;
+import l.C11642;
+import l.C14625;
+import l.C17609;
+import l.C22666;
+import l.C4185;
+import l.C7508;
 
 /* JADX INFO: loaded from: classes.dex */
 public class MaterialDivider extends View {
-    public static final int DEF_STYLE_RES = C18616.f59268;
+    public static final int DEF_STYLE_RES = C4185.f14981;
     public int color;
     public final MaterialShapeDrawable dividerDrawable;
     public int insetEnd;
@@ -31,7 +31,7 @@ public class MaterialDivider extends View {
     }
 
     public MaterialDivider(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C2387.f8657);
+        this(context, attributeSet, C11642.f36717);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -40,11 +40,11 @@ public class MaterialDivider extends View {
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         Context context2 = getContext();
         this.dividerDrawable = new MaterialShapeDrawable();
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C8033.f28042, i, i2, new int[0]);
-        this.thickness = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8033.f27723, getResources().getDimensionPixelSize(C0976.f4150));
-        this.insetStart = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27670, 0);
-        this.insetEnd = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C8033.f27935, 0);
-        setDividerColor(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C8033.f27458).getDefaultColor());
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C14625.f47830, i, i2, new int[0]);
+        this.thickness = typedArrayObtainStyledAttributes.getDimensionPixelSize(C14625.f47724, getResources().getDimensionPixelSize(C17609.f57339));
+        this.insetStart = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47191, 0);
+        this.insetEnd = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C14625.f47297, 0);
+        setDividerColor(MaterialResources.getColorStateList(context2, typedArrayObtainStyledAttributes, C14625.f47244).getDefaultColor());
         typedArrayObtainStyledAttributes.recycle();
     }
 
@@ -67,7 +67,7 @@ public class MaterialDivider extends View {
         int width;
         int i;
         super.onDraw(canvas);
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         boolean z = getLayoutDirection() == 1;
         int i3 = z ? this.insetEnd : this.insetStart;
         if (z) {
@@ -129,7 +129,7 @@ public class MaterialDivider extends View {
     }
 
     public void setDividerColorResource(int i) {
-        setDividerColor(C10405.m26299(getContext(), i));
+        setDividerColor(C7508.m20558(getContext(), i));
     }
 
     public int getDividerColor() {

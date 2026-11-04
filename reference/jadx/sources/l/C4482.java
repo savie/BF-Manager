@@ -1,26 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۜܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W8IL */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C4482 {
+import java.util.function.DoubleConsumer;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final boolean f15952;
+/* JADX INFO: renamed from: l.ۘ᩺ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C4482 extends AbstractC2377 {
+    public boolean b;
+    public final C5317 c;
+    public final /* synthetic */ C14397 d;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int f15953;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C4482(C14397 c14397, InterfaceC15143 interfaceC15143) {
+        super(interfaceC15143);
+        this.d = c14397;
+        InterfaceC15143 interfaceC15144 = this.a;
+        C17359.requireNonNull(interfaceC15144);
+        this.c = new C5317(interfaceC15144, 1);
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int f15954;
+    @Override // l.AbstractC2377, l.InterfaceC15143
+    public final void c(long j) {
+        this.a.c(-1L);
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f15955;
+    @Override // l.InterfaceC13080, java.util.function.DoubleConsumer
+    public final void accept(double d) {
+        InterfaceC20648 interfaceC20648 = (InterfaceC20648) ((C3249) this.d.t).apply(d);
+        if (interfaceC20648 != null) {
+            try {
+                boolean z = this.b;
+                C5317 c5317 = this.c;
+                if (!z) {
+                    interfaceC20648.sequential().forEach(c5317);
+                } else {
+                    InterfaceC3012 interfaceC3012Spliterator = interfaceC20648.sequential().spliterator();
+                    while (!this.a.f() && interfaceC3012Spliterator.tryAdvance((DoubleConsumer) c5317)) {
+                    }
+                }
+            } catch (Throwable th) {
+                try {
+                    interfaceC20648.close();
+                } catch (Throwable th2) {
+                    th.addSuppressed(th2);
+                }
+                throw th;
+            }
+        }
+        if (interfaceC20648 != null) {
+            interfaceC20648.close();
+        }
+    }
 
-    public C4482(int i, int i2, int i3, boolean z) {
-        this.f15954 = i;
-        this.f15953 = i2;
-        this.f15955 = i3;
-        this.f15952 = z;
+    @Override // l.AbstractC2377, l.InterfaceC15143
+    public final boolean f() {
+        this.b = true;
+        return this.a.f();
     }
 }

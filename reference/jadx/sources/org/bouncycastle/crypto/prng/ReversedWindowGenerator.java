@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.prng;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ReversedWindowGenerator implements RandomGenerator {
     public final RandomGenerator generator;
     public byte[] window;

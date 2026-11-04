@@ -1,24 +1,19 @@
 package l;
 
-import java.util.function.Function;
+/* JADX INFO: renamed from: l.ܳ۠ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U7MS */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C15209 extends C1786 {
 
-/* JADX INFO: renamed from: l.ܶۨۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V7EY */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C15209 implements Function {
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public final boolean f49638;
 
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        return ((C1616) obj).m5492();
-    }
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final boolean f49639;
 
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
+    public C15209(String str, C5515 c5515, long j, int i, long j2, C22362 c22362, String str2, String str3, long j3, long j4, boolean z, boolean z2, boolean z3) {
+        super(str, c5515, j, i, j2, c22362, str2, str3, j3, j4, z);
+        this.f49638 = z2;
+        this.f49639 = z3;
     }
 }

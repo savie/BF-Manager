@@ -1,32 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩵᩻᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: M605 */
+import android.graphics.Bitmap;
+
+/* JADX INFO: renamed from: l.ᩴۨܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 123V */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19802 extends AbstractC15673 {
+public final /* synthetic */ class C19802 implements InterfaceC21100 {
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10630 f63573;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f63670;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C19802(C10630 c10630, C17684 c17684, int i, int i2) {
-        super(c17684, i, i2);
-        this.f63573 = c10630;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f63671;
+
+    public /* synthetic */ C19802(Object obj, Object obj2) {
+        this.f63670 = obj;
+        this.f63671 = obj2;
     }
 
-    @Override // l.AbstractC15673
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1249(C18825 c18825, int i) {
-        return Integer.valueOf(c18825.m43449());
-    }
-
-    @Override // l.AbstractC15673, java.util.ListIterator, java.util.Iterator
-    public final Object next() {
-        int iNextIndex = nextIndex();
-        C10630 c10630 = this.f63573;
-        if (iNextIndex == c10630.f36289.f25691) {
-            c10630.f36291 = m37344();
-        }
-        return (Integer) super.next();
+    @Override // l.InterfaceC21100
+    /* JADX INFO: renamed from: ᩷ */
+    public Bitmap mo6272() {
+        return C23026.m51917((C23026) this.f63670, (InterfaceC2386) this.f63671);
     }
 }

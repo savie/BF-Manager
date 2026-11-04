@@ -6,7 +6,7 @@ import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.jcajce.provider.asymmetric.util.EC5Util;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSTU4145ParameterSpec extends ECParameterSpec {
     public final byte[] dke;
     public final ECDomainParameters parameters;

@@ -2,17 +2,17 @@
 <animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_checked="true"
-        android:id="@+id/MT_Protector_res_0x7f0a00fa"
-        android:drawable="@drawable/MT_Protector_res_0x7f080091"/>
+        android:id="@+id/MT_Protector_res_0x7f0a0102"
+        android:drawable="@drawable/MT_Protector_res_0x7f080098"/>
     <item
-        android:id="@+id/MT_Protector_res_0x7f0a0659"
-        android:drawable="@drawable/MT_Protector_res_0x7f080093"/>
+        android:id="@+id/MT_Protector_res_0x7f0a06aa"
+        android:drawable="@drawable/MT_Protector_res_0x7f08009a"/>
     <transition
-        android:drawable="@drawable/MT_Protector_res_0x7f080094"
-        android:toId="@+id/MT_Protector_res_0x7f0a00fa"
-        android:fromId="@+id/MT_Protector_res_0x7f0a0659"/>
+        android:drawable="@drawable/MT_Protector_res_0x7f08009b"
+        android:toId="@+id/MT_Protector_res_0x7f0a0102"
+        android:fromId="@+id/MT_Protector_res_0x7f0a06aa"/>
     <transition
-        android:drawable="@drawable/MT_Protector_res_0x7f080092"
-        android:toId="@+id/MT_Protector_res_0x7f0a0659"
-        android:fromId="@+id/MT_Protector_res_0x7f0a00fa"/>
+        android:drawable="@drawable/MT_Protector_res_0x7f080099"
+        android:toId="@+id/MT_Protector_res_0x7f0a06aa"
+        android:fromId="@+id/MT_Protector_res_0x7f0a0102"/>
 </animated-selector>

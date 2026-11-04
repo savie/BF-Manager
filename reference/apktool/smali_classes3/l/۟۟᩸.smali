@@ -1,93 +1,81 @@
 .class public final Ll/۟۟᩸;
 .super Ljava/lang/Object;
-.source "M45G"
+.source "26UX"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final ۙ:[Ll/ۤ۟᩸;
+.field public final ֡:Ll/ۨᩳ᩸;
 
-.field public final ܰ:I
+.field public final ۟:Ll/ۜܿ᩸;
+
+.field public ܰ:Ll/ۨ۟᩸;
+
+.field public final ܿ:J
+
+.field public ᩶:Ll/᩶۟᩸;
 
 
 # direct methods
-.method public varargs constructor <init>(I[Ll/ۤ۟᩸;)V
+.method public constructor <init>(Ll/ۜܿ᩸;Ll/ۨᩳ᩸;Ll/ۨ۟᩸;Ll/᩶۟᩸;J)V
     .locals 0
 
-    .line 187
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 188
-    iput p1, p0, Ll/۟۟᩸;->ܰ:I
+    .line 22
+    iput-object p1, p0, Ll/۟۟᩸;->۟:Ll/ۜܿ᩸;
 
-    .line 189
-    iput-object p2, p0, Ll/۟۟᩸;->ۙ:[Ll/ۤ۟᩸;
+    .line 23
+    invoke-virtual {p2}, Ll/ۨᩳ᩸;->۠᩷()V
+
+    iput-object p2, p0, Ll/۟۟᩸;->֡:Ll/ۨᩳ᩸;
+
+    .line 24
+    iput-wide p5, p0, Ll/۟۟᩸;->ܿ:J
+
+    .line 25
+    iput-object p3, p0, Ll/۟۟᩸;->ܰ:Ll/ۨ۟᩸;
+
+    .line 26
+    iput-object p4, p0, Ll/۟۟᩸;->᩶:Ll/᩶۟᩸;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()I
+.method public final close()V
     .locals 2
 
-    .line 205
-    iget v0, p0, Ll/۟۟᩸;->ܰ:I
+    .line 31
+    iget-object v0, p0, Ll/۟۟᩸;->֡:Ll/ۨᩳ᩸;
 
-    invoke-virtual {p0}, Ll/۟۟᩸;->ۨ()I
+    const/4 v1, 0x0
 
-    move-result v1
+    iput-object v1, p0, Ll/۟۟᩸;->ܰ:Ll/ۨ۟᩸;
 
-    mul-int v1, v1, v0
+    .line 32
+    iput-object v1, p0, Ll/۟۟᩸;->᩶:Ll/᩶۟᩸;
 
-    return v1
-.end method
+    .line 33
+    :try_start_0
+    iget-object v1, p0, Ll/۟۟᩸;->۟:Ll/ۜܿ᩸;
 
-.method public final ۙ()[Ll/ۤ۟᩸;
-    .locals 1
+    invoke-virtual {v1}, Ll/۠ܿ᩸;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 209
-    iget-object v0, p0, Ll/۟۟᩸;->ۙ:[Ll/ۤ۟᩸;
+    invoke-virtual {v0}, Ll/ۨᩳ᩸;->close()V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final ۨ()I
-    .locals 5
+    :catchall_0
+    move-exception v1
 
-    .line 198
-    iget-object v0, p0, Ll/۟۟᩸;->ۙ:[Ll/ۤ۟᩸;
+    invoke-virtual {v0}, Ll/ۨᩳ᩸;->close()V
 
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v4, v0, v2
-
-    .line 199
-    invoke-virtual {v4}, Ll/ۤ۟᩸;->ۙ()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v3
-.end method
-
-.method public final ܰ()I
-    .locals 1
-
-    .line 193
-    iget v0, p0, Ll/۟۟᩸;->ܰ:I
-
-    return v0
+    throw v1
 .end method

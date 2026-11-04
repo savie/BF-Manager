@@ -1,48 +1,62 @@
 package l;
 
-import java.util.Collections;
-import java.util.function.Predicate;
+import java.lang.reflect.Type;
 
-/* JADX INFO: renamed from: l.ܺ۠ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R450 */
+/* JADX INFO: renamed from: l.ܶۗܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SAVZ */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C15812 extends AbstractC3110 {
+public final class C15812 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final AbstractC3110 f51171;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f51449 = 1023;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final AbstractC0618 f51172;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C17304[] f51448 = new C17304[1024];
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C21825 f51173;
-
-    public C15812(AbstractC23903 abstractC23903, AbstractC0618 abstractC0618, AbstractC3110 abstractC3110) {
-        super(abstractC23903);
-        this.f51172 = abstractC0618;
-        this.f51173 = C21825.of((Object) abstractC0618);
-        this.f51171 = abstractC3110;
-    }
-
-    @Override // l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ */
-    public final Iterable mo3802(Predicate predicate, EnumC10167 enumC10167) {
-        return (predicate == null || predicate.test(this.f51172)) ? this.f51173 : Collections.EMPTY_LIST;
-    }
-
-    @Override // l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ */
-    public final Iterable mo3803(AbstractC11242 abstractC11242, Predicate predicate, EnumC10167 enumC10167) {
-        AbstractC0618 abstractC0618 = this.f51172;
-        return (abstractC0618.f77453 == abstractC11242 && (predicate == null || predicate.test(abstractC0618))) ? this.f51173 : Collections.EMPTY_LIST;
-    }
-
-    @Override // l.AbstractC3110
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC3110 mo9328(AbstractC23903 abstractC23903) {
-        if (this.f51172 == abstractC23903) {
-            return this.f51171;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Object m37737(Type type) {
+        for (C17304 c17304 = this.f51448[System.identityHashCode(type) & this.f51449]; c17304 != null; c17304 = c17304.f56344) {
+            if (type == c17304.f56342) {
+                return c17304.f56343;
+            }
         }
         return null;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m37738(Object obj, Type type) {
+        int iIdentityHashCode = System.identityHashCode(type) & this.f51449;
+        C17304[] c17304Arr = this.f51448;
+        for (C17304 c17304 = c17304Arr[iIdentityHashCode]; c17304 != null; c17304 = c17304.f56344) {
+            if (type == c17304.f56342) {
+                c17304.f56343 = obj;
+                return;
+            }
+        }
+        c17304Arr[iIdentityHashCode] = new C17304(type, obj, c17304Arr[iIdentityHashCode]);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Class m37736(String str) {
+        int i = 0;
+        while (true) {
+            C17304[] c17304Arr = this.f51448;
+            if (i >= c17304Arr.length) {
+                return null;
+            }
+            C17304 c17304 = c17304Arr[i];
+            if (c17304 != null) {
+                for (C17304 c17305 = c17304; c17305 != null; c17305 = c17305.f56344) {
+                    Type type = c17304.f56342;
+                    if (type instanceof Class) {
+                        Class cls = (Class) type;
+                        if (cls.getName().equals(str)) {
+                            return cls;
+                        }
+                    }
+                }
+            }
+            i++;
+        }
     }
 }

@@ -1,67 +1,52 @@
 package l;
 
-import org.bouncycastle.crypto.hpke.HPKE;
-
-/* JADX INFO: renamed from: l.ܽ᩶᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y5ZS */
+/* JADX INFO: renamed from: l.ܺܰۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H44W */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16875 extends AbstractC11357 {
+public final class C16875 extends AbstractC22295 implements InterfaceC2153 {
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC3468 f53971 = new C0646();
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C14769 f55197;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public short f53972;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public AbstractC22295 f55198;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public byte f53973;
-
-    public C16875(EnumC0772 enumC0772, short s, int i, AbstractC9011 abstractC9011) {
-        super(enumC0772, abstractC9011);
-        if (s >= 256) {
-            throw new RuntimeException("regCount must be less than 256");
-        }
-        if (s < 0) {
-            throw new RuntimeException("regCount cannot be negative");
-        }
-        if (i >= 65536) {
-            throw new RuntimeException("The beginning register of the range must be less than 65536");
-        }
-        if (i < 0) {
-            throw new RuntimeException("The beginning register of the range cannot be negative");
-        }
-        this.f53973 = (byte) s;
-        this.f53972 = (short) i;
+    public C16875() {
+        throw null;
     }
 
-    public C16875(C12063 c12063, EnumC0772 enumC0772, byte[] bArr, int i) {
-        super(c12063, enumC0772, bArr, i);
-        this.f53973 = (byte) (bArr[i + 1] & 255);
-        this.f53972 = (short) C14611.m35087(i + 4, bArr);
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2284(AbstractC0578 abstractC0578) {
+        abstractC0578.mo1519(this);
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4759(C4651 c4651, int i) {
-        c4651.m12841(this.f15468.f3346);
-        c4651.m12841(this.f53973);
-        c4651.m12833(m28439().m23325());
-        c4651.m12833(this.f53972);
+    @Override // l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final EnumC22621 mo2283() {
+        return EnumC22621.ANNOTATED_TYPE;
     }
 
-    @Override // l.AbstractC4300
-    /* JADX INFO: renamed from: ۜ */
-    public final EnumC1227 mo4758() {
-        return EnumC1227.Format3rc;
+    @Override // l.InterfaceC2153
+    public final C14769 getAnnotations() {
+        return this.f55197;
     }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final short m39536() {
-        return (short) (this.f53973 & 255);
+    @Override // l.InterfaceC2153
+    /* JADX INFO: renamed from: ᩶ */
+    public final AbstractC22295 mo7418() {
+        return this.f55198;
     }
 
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final int m39537() {
-        return this.f53972 & HPKE.aead_EXPORT_ONLY;
+    @Override // l.AbstractC8036, l.InterfaceC19637
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo2282(InterfaceC15161 interfaceC15161, Object obj) {
+        return interfaceC15161.mo5876(this, obj);
+    }
+
+    @Override // l.AbstractC8036
+    /* JADX INFO: renamed from: ۤۙ */
+    public final EnumC21461 mo2285() {
+        return EnumC21461.f68448;
     }
 }

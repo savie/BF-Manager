@@ -1,50 +1,26 @@
-.class public final synthetic Ll/᩻ܺۨ;
+.class public Ll/᩻ܺۨ;
 .super Ljava/lang/Object;
-.source "F77E"
+.source "BAT7"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ll/֫ܺۨ;
 
 
-# instance fields
-.field public final synthetic ۙ:Ll/ۙ᩶ۨ;
-
-.field public final synthetic ۨ:Ll/ۗܺۨ;
-
-.field public final synthetic ܰ:Ll/ܳ᩷ۨ;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ll/ۙ᩶ۨ;Ll/ܳ᩷ۨ;Ll/ۗܺۨ;)V
+# virtual methods
+.method public final ۙ(Ll/֡ܺۨ;Ll/᩻᩹ۨ;IIILl/ۚܽۨ;)V
     .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll/᩻ܺۨ;->ۙ:Ll/ۙ᩶ۨ;
-
-    iput-object p2, p0, Ll/᩻ܺۨ;->ܰ:Ll/ܳ᩷ۨ;
-
-    iput-object p3, p0, Ll/᩻ܺۨ;->ۨ:Ll/ۗܺۨ;
 
     return-void
 .end method
 
+.method public final ۙ(Ll/֡ܺۨ;Ll/᩻᩹ۨ;IILjava/util/BitSet;Ll/ۚܽۨ;)V
+    .locals 0
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
+    return-void
+.end method
 
-    .line 0
-    iget-object v0, p0, Ll/᩻ܺۨ;->ܰ:Ll/ܳ᩷ۨ;
+.method public final ۙ(Ll/֡ܺۨ;Ll/᩻᩹ۨ;IIZLjava/util/BitSet;Ll/ۚܽۨ;)V
+    .locals 0
 
-    iget-object v1, p0, Ll/᩻ܺۨ;->ۨ:Ll/ۗܺۨ;
-
-    iget-object v2, p0, Ll/᩻ܺۨ;->ۙ:Ll/ۙ᩶ۨ;
-
-    invoke-static {v2, v0, v1}, Ll/ۙ᩶ۨ;->ۙ(Ll/ۙ᩶ۨ;Ll/ܳ᩷ۨ;Ll/ۗܺۨ;)V
-
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method

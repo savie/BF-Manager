@@ -1,104 +1,36 @@
 package l;
 
-import android.text.SpannableStringBuilder;
-import android.text.method.LinkMovementMethod;
-import android.widget.TextView;
-import java.util.ArrayList;
+import java.util.ServiceLoader;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.ܺܽᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T91K */
+/* JADX INFO: renamed from: l.ܶۨۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H7RN */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C16064 extends AbstractC0770 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f51966;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f51967 = new ArrayList(0);
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static C16064 m38067() {
-        return new C16064();
+public final enum C16064 extends EnumC7687 {
+    public /* synthetic */ C16064(EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        this("RELEASE", 38, "--release", "opt.arg.release", "opt.release", enumC18128, enumC21112);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m38068() {
-        this.f51966 = true;
+    public C16064(String str, int i, String str2, String str3, String str4, EnumC18128 enumC18128, EnumC21112 enumC21112) {
+        super(str, i, str2, str3, str4, enumC18128, enumC21112, 0);
     }
 
-    @Override // l.AbstractC0770, l.InterfaceC8533
+    @Override // l.EnumC7687
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3310(InterfaceC9944 interfaceC9944) {
-        C23825 c23825 = new C23825();
-        interfaceC9944.mo25171(C12312.class, new C13823());
-        interfaceC9944.mo25171(C5255.class, new C1951());
-        interfaceC9944.mo25171(C2036.class, new C11125());
-        interfaceC9944.mo25171(C3447.class, new C14653());
-        interfaceC9944.mo25171(C22189.class, c23825);
-        interfaceC9944.mo25171(C15134.class, c23825);
-        interfaceC9944.mo25171(C8078.class, new C4649());
-        interfaceC9944.mo25171(C13017.class, new C9714());
-        interfaceC9944.mo25171(C21483.class, new C3362());
-        interfaceC9944.mo25171(C5961.class, new C11706());
-    }
-
-    @Override // l.AbstractC0770, l.InterfaceC8533
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1042(TextView textView, SpannableStringBuilder spannableStringBuilder) {
-        C21583.m48296(textView, spannableStringBuilder);
-        C8178[] c8178Arr = (C8178[]) spannableStringBuilder.getSpans(0, spannableStringBuilder.length(), C8178.class);
-        if (c8178Arr != null) {
-            for (C8178 c8178 : c8178Arr) {
-                spannableStringBuilder.removeSpan(c8178);
-            }
+    public void mo20952(C7312 c7312) {
+        Set<String> set = (Set) C12465.stream(C4937.spliterator(ServiceLoader.load(InterfaceC12841.class, C21527.class.getClassLoader())), false).flatMap(new C16810()).collect(C2025.toCollection(new C17556()));
+        StringBuilder sb = new StringBuilder();
+        String str = "";
+        for (String str2 : set) {
+            sb.append(str);
+            sb.append(str2);
+            str = ", ";
         }
-        spannableStringBuilder.setSpan(new C8178(textView), 0, spannableStringBuilder.length(), 18);
+        super.m20953(c7312, c7312.m20032(EnumC2837.JAVAC, this.f25367, sb.toString()));
     }
 
-    @Override // l.AbstractC0770, l.InterfaceC8533
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3308(TextView textView) {
-        if (this.f51966 || textView.getMovementMethod() != null) {
-            return;
-        }
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
-    }
-
-    @Override // l.AbstractC0770, l.InterfaceC8533
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1043(InterfaceC0065 interfaceC0065) {
-        interfaceC0065.mo983(C17250.class, new C23120(this));
-        interfaceC0065.mo983(C12312.class, new C15359());
-        interfaceC0065.mo983(C5255.class, new C21708());
-        interfaceC0065.mo983(C2036.class, new C18180());
-        interfaceC0065.mo983(C3447.class, new C18886());
-        interfaceC0065.mo983(C22189.class, new C8303());
-        interfaceC0065.mo983(C15134.class, new C19592());
-        interfaceC0065.mo983(C22895.class, new C9009());
-        interfaceC0065.mo983(C9799.class, new C6185());
-        interfaceC0065.mo983(C20778.class, new C6185());
-        interfaceC0065.mo983(C8078.class, new C7597());
-        interfaceC0065.mo983(C5961.class, new C5480());
-        interfaceC0065.mo983(C13017.class, new C22414());
-        interfaceC0065.mo983(C20073.class, new C1246());
-        interfaceC0065.mo983(C1021.class, new C13242());
-        interfaceC0065.mo983(C15840.class, new C4068());
-        interfaceC0065.mo983(C21483.class, new C6891());
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m38066(InterfaceC12061 interfaceC12061, String str, String str2, AbstractC14738 abstractC14738) {
-        interfaceC12061.mo29964(abstractC14738);
-        int length = interfaceC12061.length();
-        C2657 c2657Builder = interfaceC12061.builder();
-        c2657Builder.append((char) 160);
-        c2657Builder.append('\n');
-        interfaceC12061.mo29970().m42698().getClass();
-        c2657Builder.append((CharSequence) str2);
-        interfaceC12061.mo29968();
-        interfaceC12061.builder().append((char) 160);
-        AbstractC16769.f53676.m34276(interfaceC12061.mo29965(), str);
-        interfaceC12061.mo29967(abstractC14738, length);
-        interfaceC12061.mo29969(abstractC14738);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static /* synthetic */ InterfaceC20670 m38221(InterfaceC12841 interfaceC12841) {
+        return C12465.stream(C4937.spliterator(interfaceC12841.m31887()), false);
     }
 }

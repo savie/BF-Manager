@@ -71,7 +71,7 @@ public class b implements n, t {
     public volatile JSONObject k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public volatile JSONObject f77922l;
+    public volatile JSONObject f82038l;
     public volatile JSONObject m;
     public boolean n;
     public com.umeng.analytics.filter.a u;
@@ -145,7 +145,7 @@ public class b implements n, t {
         this.g = null;
         this.j = false;
         this.k = null;
-        this.f77922l = null;
+        this.f82038l = null;
         this.m = null;
         this.n = false;
         this.u = null;
@@ -223,8 +223,8 @@ public class b implements n, t {
             if (this.k == null) {
                 this.k = new JSONObject();
             }
-            if (this.f77922l == null) {
-                this.f77922l = new JSONObject();
+            if (this.f82038l == null) {
+                this.f82038l = new JSONObject();
             }
             String string = sharedPreferences.getString(i, null);
             if (!TextUtils.isEmpty(string)) {
@@ -249,11 +249,11 @@ public class b implements n, t {
     }
 
     public JSONObject d() {
-        return this.f77922l;
+        return this.f82038l;
     }
 
     public void e() {
-        this.f77922l = null;
+        this.f82038l = null;
     }
 
     public void a(String str) {

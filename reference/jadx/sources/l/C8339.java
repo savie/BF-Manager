@@ -1,26 +1,27 @@
 package l;
 
-import java.util.function.Consumer;
+/* JADX INFO: renamed from: l.۠ۖ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: F416 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8339 extends C3936 {
 
-/* JADX INFO: renamed from: l.۠ᩳۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: P7M1 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C8339 implements Consumer {
-    public /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC11781 f27329;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C17007 f27330;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C8339(C22010 c22010, AbstractC11781 abstractC11781, C17007 c17007) {
+        super(c22010, null);
+        this.f27329 = abstractC11781;
+        this.f27330 = c17007;
+        C17359.requireNonNull(c22010);
     }
 
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final void n(Object obj) {
-        AbstractC23903 abstractC23903 = (AbstractC23903) obj;
-        C22492 c22492 = (C22492) abstractC23903;
-        C7675 c7675M52724 = abstractC23903.m52724();
-        c22492.f77448 = c7675M52724;
-        c7675M52724.mo49994();
-        c7675M52724.f25395.mo24224(abstractC23903);
-        c22492.f73419 = abstractC23903.mo50003();
-        c22492.f77453 = C17281.m40243(abstractC23903.mo50003());
-        c22492.m49996();
+    @Override // l.C3936
+    /* JADX INFO: renamed from: ᩶ۙ */
+    public final C5558 mo12637() {
+        return new C5558(this.f27329, this.f27330);
     }
 }

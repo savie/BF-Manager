@@ -1,50 +1,130 @@
-.class public final enum Ll/᩵ۨ᩸;
-.super Ll/۟ۨ᩸;
-.source "Q87L"
+.class public Ll/᩵ۨ᩸;
+.super Ll/ۚܺ;
+.source "RAP3"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 24
+    invoke-direct {p0, p1}, Ll/ۚܺ;-><init>(Landroid/content/Context;)V
 
-    .line 114
-    invoke-direct {p0, p1, p2, v0}, Ll/۟ۨ᩸;-><init>(Ljava/lang/String;ILl/᩸ۨ᩸;)V
+    .line 25
+    invoke-direct {p0, p1}, Ll/᩵ۨ᩸;->ۙ(Landroid/content/Context;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public ۙ(Ljava/lang/reflect/Field;)Ljava/util/List;
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 53
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    .line 29
+    invoke-direct {p0, p1, p2}, Ll/ۚܺ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    return-object p1
+    .line 30
+    invoke-direct {p0, p1}, Ll/᩵ۨ᩸;->ۙ(Landroid/content/Context;)V
+
+    return-void
 .end method
 
-.method public ܰ(Ljava/lang/reflect/Field;)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 0
 
-    .line 117
-    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
+    .line 34
+    invoke-direct {p0, p1, p2, p3}, Ll/ۚܺ;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 35
+    invoke-direct {p0, p1}, Ll/᩵ۨ᩸;->ۙ(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method private ۙ(Landroid/content/Context;)V
+    .locals 6
+
+    .line 39
+    invoke-static {p0}, Ll/ܽ۟֫;->ۙ(Landroid/view/View;)V
+
+    const/16 v0, 0x11
+
+    .line 40
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 41
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const/16 v0, 0x5f
-
-    invoke-static {p1, v0}, Ll/۟ۨ᩸;->ۙ(Ljava/lang/String;C)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p1
 
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    .line 42
+    iget v0, p1, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    const/high16 v1, 0x41000000    # 8.0f
 
-    move-result-object p1
+    mul-float v1, v1, v0
 
-    return-object p1
+    const/high16 v2, 0x3f000000    # 0.5f
+
+    add-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    const/high16 v3, 0x40c00000    # 6.0f
+
+    mul-float v3, v3, v0
+
+    add-float/2addr v3, v2
+
+    float-to-int v3, v3
+
+    const/high16 v4, 0x42400000    # 48.0f
+
+    mul-float v0, v0, v4
+
+    add-float/2addr v0, v2
+
+    float-to-int v0, v0
+
+    mul-int/lit8 v4, v3, 0x2
+
+    .line 46
+    iget p1, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
+
+    const/high16 v5, 0x43340000    # 180.0f
+
+    mul-float p1, p1, v5
+
+    add-float/2addr p1, v2
+
+    float-to-int p1, p1
+
+    add-int/2addr v4, p1
+
+    .line 47
+    invoke-virtual {p0, v3, v1, v3, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    .line 48
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setMinWidth(I)V
+
+    .line 49
+    invoke-virtual {p0, v4}, Landroid/widget/TextView;->setMaxWidth(I)V
+
+    .line 50
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    .line 51
+    invoke-virtual {p0}, Landroid/widget/TextView;->setSingleLine()V
+
+    const/high16 p1, 0x41800000    # 16.0f
+
+    .line 52
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    return-void
 .end method

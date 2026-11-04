@@ -1,153 +1,87 @@
 .class public final Ll/ܰᩳᩴ;
-.super Ljava/lang/Object;
-.source "ECIN"
-
-# interfaces
-.implements Ll/ۙᩳᩴ;
-.implements Ll/ܺܿᩴ;
+.super Landroid/view/animation/Animation;
+.source "L9CC"
 
 
 # instance fields
-.field public final synthetic ܺ:Ljava/util/Comparator;
+.field public final synthetic ֡:I
+
+.field public final synthetic ܰ:Ll/ۖᩳᩴ;
+
+.field public final synthetic ܿ:F
+
+.field public final synthetic ᩶:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Comparator;)V
+.method public constructor <init>(Ll/ۖᩳᩴ;FFI)V
     .locals 0
 
-    .line 107
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 756
+    iput-object p1, p0, Ll/ܰᩳᩴ;->ܰ:Ll/ۖᩳᩴ;
 
-    iput-object p1, p0, Ll/ܰᩳᩴ;->ܺ:Ljava/util/Comparator;
+    iput p2, p0, Ll/ܰᩳᩴ;->᩶:F
+
+    iput p3, p0, Ll/ܰᩳᩴ;->ܿ:F
+
+    iput p4, p0, Ll/ܰᩳᩴ;->֡:I
+
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 2
 
-    .line 107
-    check-cast p1, Ljava/lang/Long;
+    .line 759
+    iget p2, p0, Ll/ܰᩳᩴ;->᩶:F
 
-    check-cast p2, Ljava/lang/Long;
+    iget v0, p0, Ll/ܰᩳᩴ;->ܿ:F
 
-    .line 116
-    iget-object v0, p0, Ll/ܰᩳᩴ;->ܺ:Ljava/util/Comparator;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-static {v0, p2, p1, p2}, Ll/ᩴܿ֫;->ۙ(FFFF)F
 
     move-result p1
 
-    return p1
-.end method
+    .line 762
+    iget-object p2, p0, Ll/ܰᩳᩴ;->ܰ:Ll/ۖᩳᩴ;
 
-.method public final reversed()Ljava/util/Comparator;
-    .locals 1
+    invoke-static {p2}, Ll/ۖᩳᩴ;->ܶ(Ll/ۖᩳᩴ;)Z
 
-    .line 96
-    new-instance v0, Ll/ۨᩳᩴ;
+    move-result v0
 
-    invoke-direct {v0, p0}, Ll/ۨᩳᩴ;-><init>(Ll/ۙᩳᩴ;)V
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public final synthetic thenComparing(Ljava/util/Comparator;)Ljava/util/Comparator;
-    .locals 0
+    goto :goto_0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۗ᩸ᩴ;->ۙ(Ll/ۙᩳᩴ;Ljava/util/Comparator;)Ljava/util/Comparator;
+    :cond_0
+    invoke-static {p2}, Ll/ۖᩳᩴ;->ۙ(Ll/ۖᩳᩴ;)Landroid/view/ViewGroup;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-.method public synthetic thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
-    .locals 0
+    move-result v0
 
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܿᩴ;->$default$thenComparing(Ljava/util/Comparator;Ljava/util/function/Function;)Ljava/util/Comparator;
+    iget v1, p0, Ll/ܰᩳᩴ;->֡:I
 
-    move-result-object p1
+    sub-int/2addr v0, v1
 
-    return-object p1
-.end method
+    int-to-float v0, v0
 
-.method public synthetic thenComparing(Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
-    .locals 0
+    :goto_0
+    add-float/2addr p1, v0
 
-    .line 0
-    invoke-static {p0, p1, p2}, Ll/۟ܿᩴ;->$default$thenComparing(Ljava/util/Comparator;Ljava/util/function/Function;Ljava/util/Comparator;)Ljava/util/Comparator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic thenComparingDouble(Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܿᩴ;->$default$thenComparingDouble(Ljava/util/Comparator;Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic thenComparingInt(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܿᩴ;->$default$thenComparingInt(Ljava/util/Comparator;Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic thenComparingLong(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/۟ܿᩴ;->$default$thenComparingLong(Ljava/util/Comparator;Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final ۙ(JJ)I
-    .locals 0
-
-    .line 110
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 764
+    invoke-static {p2}, Ll/ۖᩳᩴ;->ۚ(Ll/ۖᩳᩴ;)Landroid/widget/ImageButton;
 
     move-result-object p2
 
-    iget-object p3, p0, Ll/ܰᩳᩴ;->ܺ:Ljava/util/Comparator;
+    invoke-virtual {p2, p1}, Landroid/view/View;->setX(F)V
 
-    invoke-interface {p3, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final ۨ(Ll/ۙᩳᩴ;)Ll/ۢ᩸ᩴ;
-    .locals 1
-
-    .line 68
-    new-instance v0, Ll/ۢ᩸ᩴ;
-
-    invoke-direct {v0, p0, p1}, Ll/ۢ᩸ᩴ;-><init>(Ll/ۙᩳᩴ;Ll/ۙᩳᩴ;)V
-
-    return-object v0
+    return-void
 .end method

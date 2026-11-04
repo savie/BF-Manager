@@ -1,67 +1,49 @@
 package l;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+/* JADX INFO: renamed from: l.ۜۖܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 21WY */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6840 {
 
-/* JADX INFO: renamed from: l.ۜܶۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F1PL */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6840 implements Parcelable {
-    public static final Parcelable.Creator CREATOR = new C4017();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22731 = new C18027("alpha");
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final String f23039;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22741 = new C0128("pivotX");
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final String f23040;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22733 = new C7586("pivotY");
+
+    /* JADX INFO: renamed from: ᩻, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22743 = new C18773("translationX");
 
     /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final String f23041;
+    public static AbstractC17455 f22738 = new C9822("translationY");
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22742 = new C0874("rotation");
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22740 = new C9076("rotationX");
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22736 = new C2365("rotationY");
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22735 = new C8331("scaleX");
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22732 = new C6095("scaleY");
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22730 = new C23995("scrollX");
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22734 = new C3857("scrollY");
 
     /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final String f23042;
+    public static AbstractC17455 f22739 = new C14297("x");
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final C13897 f23043;
-
-    @Override // android.os.Parcelable
-    public final int describeContents() {
-        return 0;
-    }
-
-    public C6840(C11780 c11780) {
-        this.f23042 = c11780.f39567;
-        this.f23041 = c11780.f39570;
-        this.f23039 = c11780.f39572;
-        this.f23040 = c11780.f39565;
-        this.f23043 = c11780.f39573;
-    }
-
-    public C6840(Parcel parcel) {
-        String string = parcel.readString();
-        C13638.requireNonNull(string);
-        this.f23042 = string;
-        String string2 = parcel.readString();
-        C13638.requireNonNull(string2);
-        this.f23041 = string2;
-        String string3 = parcel.readString();
-        C13638.requireNonNull(string3);
-        this.f23039 = string3;
-        String string4 = parcel.readString();
-        C13638.requireNonNull(string4);
-        this.f23040 = string4;
-        String string5 = parcel.readString();
-        C13897 c13897 = new C13897();
-        c13897.m33734(string5);
-        this.f23043 = c13897;
-    }
-
-    @Override // android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.f23042);
-        parcel.writeString(this.f23041);
-        parcel.writeString(this.f23039);
-        parcel.writeString(this.f23040);
-        parcel.writeString(this.f23043.m33733());
-    }
+    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
+    public static AbstractC17455 f22737 = new C21011("y");
 }

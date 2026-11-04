@@ -1,26 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۨ֨ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4LB */
+import java.util.function.Consumer;
+
+/* JADX INFO: renamed from: l.ۧۘ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: K9H */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C11365 implements InterfaceC11568 {
+public final class C11365 extends AbstractC3162 implements InterfaceC15224, InterfaceC19597 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ComponentCallbacksC22654 f38327;
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final C15840 f35778;
 
-    public C11365(ComponentCallbacksC22654 componentCallbacksC22654) {
-        this.f38327 = componentCallbacksC22654;
+    public C11365(C24046 c24046) {
+        super(c24046);
+        this.f35778 = new C15840(c24046);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // l.InterfaceC11568
+    @Override // l.AbstractC3162
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo6807(AbstractC20745 abstractC20745) {
-        ComponentCallbacksC22654 componentCallbacksC22654 = this.f38327;
-        Object obj = componentCallbacksC22654.mHost;
-        if (obj instanceof InterfaceC19163) {
-            return ((InterfaceC19163) obj).mo4078();
-        }
-        return componentCallbacksC22654.requireActivity().mo4078();
+    public final void mo10343(int i, Object obj) {
+        C15840 c15840 = this.f35778;
+        c15840.f51511 = i;
+        ((Consumer) obj).accept(c15840);
+    }
+
+    @Override // java.util.Iterator
+    public final Object next() {
+        int iM10342 = m10342();
+        C15840 c15840 = this.f35778;
+        c15840.f51511 = iM10342;
+        return c15840;
     }
 }

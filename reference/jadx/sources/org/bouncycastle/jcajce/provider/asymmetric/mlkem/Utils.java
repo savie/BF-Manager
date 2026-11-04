@@ -5,7 +5,7 @@ import java.util.Map;
 import org.bouncycastle.jcajce.spec.MLKEMParameterSpec;
 import org.bouncycastle.pqc.crypto.mlkem.MLKEMParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Utils {
     public static Map parameters;
 

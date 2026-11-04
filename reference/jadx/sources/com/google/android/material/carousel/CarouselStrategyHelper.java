@@ -1,7 +1,7 @@
 package com.google.android.material.carousel;
 
 import android.content.Context;
-import l.C0976;
+import l.C17609;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class CarouselStrategyHelper {
@@ -14,15 +14,15 @@ public final class CarouselStrategyHelper {
     }
 
     public static float getExtraSmallSize(Context context) {
-        return context.getResources().getDimension(C0976.f4261);
+        return context.getResources().getDimension(C17609.f57841);
     }
 
     public static float getSmallSizeMin(Context context) {
-        return context.getResources().getDimension(C0976.f3977);
+        return context.getResources().getDimension(C17609.f57770);
     }
 
     public static float getSmallSizeMax(Context context) {
-        return context.getResources().getDimension(C0976.f3882);
+        return context.getResources().getDimension(C17609.f57865);
     }
 
     public static KeylineState createKeylineState(Context context, float f, float f2, Arrangement arrangement, int i) {

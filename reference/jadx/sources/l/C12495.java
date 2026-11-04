@@ -1,94 +1,126 @@
 package l;
 
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.ShortBufferException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
+import android.text.TextUtils;
+import android.util.Base64;
+import java.io.Serializable;
 
-/* JADX INFO: renamed from: l.۫ܶᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 97X8 */
+/* JADX INFO: renamed from: l.ۨܽ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 195F */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12495 implements InterfaceC1142 {
+public final class C12495 implements Serializable {
 
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public int f40122 = 0;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f40125 = true;
+
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public boolean f40116 = false;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f40127 = false;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public int f40119 = 10;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public int f40126 = 2;
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public int f40115 = 10;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public int f40121 = 1000;
+
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public boolean f40117 = true;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public String f40120 = "\\n";
+
+    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
+    public int f40118 = 0;
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public boolean f40123 = true;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public String f40124 = "";
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v26 */
+    /* JADX WARN: Type inference failed for: r2v3 */
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m31036() {
+        InterfaceC18752 interfaceC18752Edit = ApplicationC17729.f58258.edit();
+        C6178 c6178 = new C6178();
+        boolean z = this.f40122 == 0;
+        this.f40125 = z;
+        ?? r2 = z;
+        if (this.f40116) {
+            r2 = (z ? 1 : 0) | 2;
+        }
+        int i = r2;
+        if (this.f40127) {
+            i = (r2 == true ? 1 : 0) | 4;
+        }
+        c6178.writeByte(i);
+        c6178.writeInt(this.f40119);
+        c6178.writeInt(this.f40126);
+        c6178.writeInt(this.f40115);
+        c6178.writeInt(this.f40122);
+        c6178.writeInt(this.f40121);
+        c6178.m17789(this.f40117);
+        c6178.m17786(this.f40120);
+        int iM15219 = C4994.m15219(this.f40118);
+        this.f40118 = iM15219;
+        c6178.writeInt(iM15219);
+        c6178.m17789(this.f40123);
+        CharSequence charSequence = this.f40124;
+        if (charSequence == null) {
+            charSequence = "";
+        }
+        c6178.m17786(charSequence);
+        interfaceC18752Edit.putString("smfa", Base64.encodeToString(c6178.m17796(), 2)).apply();
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public Cipher f41787;
-
-    @Override // l.InterfaceC1142
-    public final int getBlockSize() {
-        return 16;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۖ */
-    public final int mo2383() {
-        return 8;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2384(int i) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final /* synthetic */ void mo2387(byte[] bArr) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo2388() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۚ */
-    public final /* synthetic */ boolean mo2389() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۨ */
-    public final /* synthetic */ boolean mo2390() {
-        return false;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ int mo2391() {
-        return 0;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* synthetic */ void mo2392(int i, byte[] bArr, int i2, byte[] bArr2, int i3) {
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2386(int i, byte[] bArr, byte[] bArr2) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException {
-        if (bArr2.length > 8) {
-            byte[] bArr3 = new byte[8];
-            System.arraycopy(bArr2, 0, bArr3, 0, 8);
-            bArr2 = bArr3;
+    public final void m31035() {
+        String string = ApplicationC17729.f58258.getString("smfa", null);
+        if (TextUtils.isEmpty(string)) {
+            return;
         }
-        if (bArr.length > 16) {
-            byte[] bArr4 = new byte[16];
-            System.arraycopy(bArr, 0, bArr4, 0, 16);
-            bArr = bArr4;
+        try {
+            C20348 c20348 = new C20348(Base64.decode(string, 2));
+            byte b = c20348.readByte();
+            this.f40125 = (b & 1) != 0;
+            this.f40116 = (b & 2) != 0;
+            this.f40127 = (b & 4) != 0;
+            this.f40119 = c20348.readInt();
+            this.f40126 = c20348.readInt();
+            this.f40115 = c20348.readInt();
+            this.f40122 = !this.f40125 ? 1 : 0;
+            int i = c20348.readInt();
+            int i2 = c20348.readInt();
+            boolean zM46753 = c20348.m46753();
+            String strM46756 = c20348.m46756();
+            int iM15219 = C4994.m15219(c20348.readInt());
+            boolean zM46754 = c20348.m46753();
+            String strM46757 = c20348.m46756();
+            if (i >= 0 && i <= 3) {
+                this.f40122 = i;
+                this.f40125 = i == 0;
+            }
+            this.f40121 = i2;
+            this.f40117 = zM46753;
+            this.f40120 = strM46756;
+            this.f40118 = iM15219;
+            this.f40123 = zM46754;
+            this.f40124 = strM46757;
+        } catch (Exception unused) {
         }
-        SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "Blowfish");
-        Cipher cipher = Cipher.getInstance("Blowfish/CBC/NoPadding");
-        this.f41787 = cipher;
-        cipher.init(i == 0 ? 1 : 2, secretKeySpec, new IvParameterSpec(bArr2));
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo2385(int i, byte[] bArr, int i2, byte[] bArr2, int i3) throws ShortBufferException {
-        this.f41787.update(bArr, i, i2, bArr2, i3);
     }
 }

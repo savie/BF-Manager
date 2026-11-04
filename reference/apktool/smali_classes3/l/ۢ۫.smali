@@ -1,115 +1,86 @@
-.class public final synthetic Ll/ۢ۫;
+.class public abstract Ll/ۢ۫;
 .super Ljava/lang/Object;
-.source "G55Z"
-
-# interfaces
-.implements Ll/۟ۡۙ;
-.implements Ll/ۨ᩷ܶ;
-.implements Ll/ۙ۟᩹;
-.implements Lbin/mt/plugin/api/util/Consumer;
-.implements Ll/ۘۚ᩸;
+.source "O5Y7"
 
 
-# direct methods
-.method public static ۙ(Landroid/view/ViewGroup;ILandroid/view/ViewGroup;Z)Landroid/view/View;
-    .locals 0
+# instance fields
+.field public ܰ:Ljava/lang/Object;
 
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    .line 1
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p0
-
-    .line 2
-    invoke-virtual {p0, p1, p2, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static ۙ(Ljava/lang/StringBuilder;I)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 1
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 2
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public ᩶:Z
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
+.method public abstract ֫()V
+.end method
+
+.method public abstract ۙ()V
+.end method
+
+.method public abstract ۙ(I)V
+.end method
+
+.method public abstract ۙ(Landroid/view/View;)V
+.end method
+
+.method public abstract ۙ(Ljava/lang/CharSequence;)V
+.end method
+
+.method public final ۙ(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
-    check-cast p1, Lbin/mt/plugin/api/ui/dialog/BaseCancelableDialog;
-
-    invoke-virtual {p1}, Lbin/mt/plugin/api/ui/dialog/BaseCancelableDialog;->dismiss()V
+    .line 57
+    iput-object p1, p0, Ll/ۢ۫;->ܰ:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    .line 2
-    check-cast p1, Ll/ܿᩳܰ;
-
-    .line 51
-    iget-wide v0, p1, Ll/ܿᩳܰ;->ۖ:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
+.method public ۙ(Z)V
     .locals 0
 
-    .line 2
-    check-cast p1, Ll/ۤܿۙ;
-
-    .line 750
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 134
+    iput-boolean p1, p0, Ll/ۢ۫;->᩶:Z
 
     return-void
 .end method
 
-.method public ۙ(Landroid/widget/TextView;)V
+.method public final ۚ()Z
     .locals 1
 
-    const-string v0, "0"
+    .line 145
+    iget-boolean v0, p0, Ll/ۢ۫;->᩶:Z
 
-    .line 153
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
+    return v0
 .end method
 
-.method public ܰ()Ljava/lang/Object;
+.method public abstract ۤ()Ll/ۢۚ;
+.end method
+
+.method public abstract ۧ()Z
+.end method
+
+.method public abstract ۫()Ljava/lang/CharSequence;
+.end method
+
+.method public final ܳ()Ljava/lang/Object;
     .locals 1
 
-    .line 341
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 71
+    iget-object v0, p0, Ll/ۢ۫;->ܰ:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public abstract ᩴ()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract ᩷()Landroid/view/View;
+.end method
+
+.method public abstract ᩷(I)V
+.end method
+
+.method public abstract ᩷(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract ᩸()Landroid/view/MenuInflater;
 .end method

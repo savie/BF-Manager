@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/MT_Protector_res_0x7f080281">
-    <target
-        android:name="bar1"
-        android:animation="@animator/MT_Protector_res_0x7f020000"/>
-    <target
-        android:name="bar2"
-        android:animation="@animator/MT_Protector_res_0x7f020001"/>
-    <target
-        android:name="bar3"
-        android:animation="@animator/MT_Protector_res_0x7f020002"/>
-</animated-vector>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <group
+        android:name="@string/MT_Protector_res_0x7f12080e"
+        android:pivotX="16"
+        android:pivotY="16">
+        <path
+            android:name="@string/MT_Protector_res_0x7f120810"
+            android:fillColor="@android:color/white"
+            android:pathData="@string/MT_Protector_res_0x7f12080d"/>
+    </group>
+</vector>

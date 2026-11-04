@@ -1,24 +1,36 @@
-.class public final Ll/᩻۬ᩴ;
+.class public final synthetic Ll/᩻۬ᩴ;
 .super Ljava/lang/Object;
-.source "PHN"
+.source "HIRF"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final ۙ:Ll/ۛ۬ᩴ;
+# instance fields
+.field public final synthetic ܰ:Ll/᩸ۙܳ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ll/᩸ۙܳ;)V
+    .locals 0
 
-    .line 104
-    new-instance v0, Ll/ۛ۬ᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll/᩻۬ᩴ;->ܰ:Ll/᩸ۙܳ;
 
-    .line 104
-    sput-object v0, Ll/᩻۬ᩴ;->ۙ:Ll/ۛ۬ᩴ;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
+
+    .line 0
+    iget-object p1, p0, Ll/᩻۬ᩴ;->ܰ:Ll/᩸ۙܳ;
+
+    invoke-static {p1}, Ll/᩸ۙܳ;->᩸(Ll/᩸ۙܳ;)V
 
     return-void
 .end method

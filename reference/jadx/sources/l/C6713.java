@@ -1,60 +1,52 @@
 package l;
 
-import bin.mt.plus.R;
-import com.google.android.material.snackbar.SnackbarManager;
-import java.util.regex.PatternSyntaxException;
+import android.util.SparseArray;
 
-/* JADX INFO: renamed from: l.ۜۧۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V8VP */
+/* JADX INFO: renamed from: l.ۛ᩹᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: F8V3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6713 implements InterfaceC18087 {
+public final class C6713 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final SparseArray f22330;
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18002 f22623;
+    public final int f22331;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C20205 f22624;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final int f22332;
 
-    public C6713(C18002 c18002, C20205 c20205) {
-        this.f22623 = c18002;
-        this.f22624 = c20205;
-    }
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final boolean f22333;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo18151(boolean z) {
-        this.f22624.m45662(R.string.MT_Protector, SnackbarManager.SHORT_DURATION_MS);
-    }
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final int f22334;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo18149(int i) {
-        this.f22624.m45663(C16737.m39264(R.string.MT_Protector, Integer.valueOf(i)));
-    }
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final int f22335;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo18152() {
-        this.f22623.f57568.m23519();
-    }
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final int f22336;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo18148() {
-        this.f22623.f57577.m23519();
-    }
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int f22337;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo18150(PatternSyntaxException patternSyntaxException) {
-        C18002.m41920(this.f22623, patternSyntaxException);
-    }
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f22338;
 
-    @Override // l.InterfaceC18087
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void mo18153(boolean z) {
-        C18002 c18002 = this.f22623;
-        c18002.f57568.m23518(z);
-        c18002.f57577.m23514(z);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final int f22339;
+
+    public C6713(int i, boolean z, int i2, int i3, int i4, int i5, int i6, int i7, int i8, SparseArray sparseArray) {
+        this.f22337 = i;
+        this.f22333 = z;
+        this.f22334 = i2;
+        this.f22339 = i3;
+        this.f22338 = i4;
+        this.f22331 = i5;
+        this.f22332 = i6;
+        this.f22335 = i7;
+        this.f22336 = i8;
+        this.f22330 = sparseArray;
     }
 }

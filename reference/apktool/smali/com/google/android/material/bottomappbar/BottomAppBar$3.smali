@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Ll/ܺۢ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ܺۢ;
+.method public onApplyWindowInsets(Landroid/view/View;Ll/ۘۜ;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Ll/ۘۜ;
     .locals 3
 
     .line 396
@@ -39,7 +39,7 @@
     .line 397
     iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$3;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    invoke-virtual {p2}, Ll/ܺۢ;->֨()I
+    invoke-virtual {p2}, Ll/ۘۜ;->۫()I
 
     move-result p3
 
@@ -66,7 +66,7 @@
 
     move-result p1
 
-    invoke-virtual {p2}, Ll/ܺۢ;->۬()I
+    invoke-virtual {p2}, Ll/ۘۜ;->ۚ()I
 
     move-result v1
 
@@ -83,7 +83,7 @@
     :goto_0
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$3;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    invoke-virtual {p2}, Ll/ܺۢ;->۬()I
+    invoke-virtual {p2}, Ll/ۘۜ;->ۚ()I
 
     move-result v2
 
@@ -111,7 +111,7 @@
 
     move-result v0
 
-    invoke-virtual {p2}, Ll/ܺۢ;->ۘ()I
+    invoke-virtual {p2}, Ll/ۘۜ;->֫()I
 
     move-result v1
 
@@ -126,7 +126,7 @@
     :goto_2
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$3;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
-    invoke-virtual {p2}, Ll/ܺۢ;->ۘ()I
+    invoke-virtual {p2}, Ll/ۘۜ;->֫()I
 
     move-result v1
 

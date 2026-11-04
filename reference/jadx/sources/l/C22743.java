@@ -1,28 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩺ۘۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: B1QD */
+/* JADX INFO: renamed from: l.᩸ۤܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: S4JW */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22743 implements InterfaceC17803 {
+public final class C22743 extends AbstractC15283 {
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final C22743 f74077 = new C22743();
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f73803;
 
-    @Override // l.InterfaceC17803
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final Object f73804;
+
+    @Override // l.AbstractC15283
     /* JADX INFO: renamed from: ۙ */
-    public final int mo3481(int i, byte[] bArr) {
-        for (int i2 = 0; i2 < i; i2++) {
-            int i3 = i2 + 2;
-            if (i3 < i && bArr[i2] == 27 && ((char) bArr[i2 + 1]) == '$' && ((char) bArr[i3]) == 'B') {
-                return 100;
-            }
-        }
-        return 0;
+    public final void mo6388(C17370 c17370) {
     }
 
-    @Override // l.InterfaceC17803
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo3480() {
-        return C22037.f71426;
+    public C22743(EnumC1114 enumC1114, int i, Object obj) {
+        super(enumC1114);
+        this.f73803 = i;
+        this.f73804 = obj;
     }
 }

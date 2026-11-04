@@ -6,9 +6,9 @@
 # instance fields
 .field public ֡:I
 
-.field public ܺ:Z
+.field public ܰ:Z
 
-.field public ܽ:I
+.field public ܿ:I
 
 .field public final ᩶:Lcom/amazonaws/event/ProgressListenerCallbackExecutor;
 
@@ -23,7 +23,7 @@
     const/16 p1, 0x2000
 
     .line 42
-    iput p1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
+    iput p1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܿ:I
 
     .line 72
     iput-object p2, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->᩶:Lcom/amazonaws/event/ProgressListenerCallbackExecutor;
@@ -37,7 +37,7 @@
     .locals 4
 
     .line 142
-    iget v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     if-lez v0, :cond_0
 
@@ -55,7 +55,7 @@
     const/4 v0, 0x0
 
     .line 144
-    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     .line 146
     :cond_0
@@ -82,7 +82,7 @@
     if-ne v0, v1, :cond_1
 
     .line 150
-    iget-boolean v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܺ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܰ:Z
 
     if-nez v1, :cond_0
 
@@ -92,7 +92,7 @@
     :cond_0
     new-instance v1, Lcom/amazonaws/event/ProgressEvent;
 
-    iget v4, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v4, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     int-to-long v4, v4
 
@@ -101,10 +101,10 @@
     const/4 v4, 0x4
 
     .line 123
-    iput v4, v1, Lcom/amazonaws/event/ProgressEvent;->ܰ:I
+    iput v4, v1, Lcom/amazonaws/event/ProgressEvent;->᩷:I
 
     .line 155
-    iput v3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     .line 156
     invoke-virtual {v2, v1}, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ۙ(Lcom/amazonaws/event/ProgressEvent;)V
@@ -113,14 +113,14 @@
 
     .line 160
     :cond_1
-    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     .line 162
-    iget v4, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
+    iget v4, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܿ:I
 
     if-lt v1, v4, :cond_2
 
@@ -134,7 +134,7 @@
     invoke-virtual {v2, v4}, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ۙ(Lcom/amazonaws/event/ProgressEvent;)V
 
     .line 164
-    iput v3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     :cond_2
     :goto_0
@@ -159,7 +159,7 @@
     if-ne p1, v0, :cond_1
 
     .line 150
-    iget-boolean v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܺ:Z
+    iget-boolean v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܰ:Z
 
     if-nez v1, :cond_0
 
@@ -169,7 +169,7 @@
     :cond_0
     new-instance v1, Lcom/amazonaws/event/ProgressEvent;
 
-    iget v2, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v2, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     int-to-long v2, v2
 
@@ -178,10 +178,10 @@
     const/4 v2, 0x4
 
     .line 123
-    iput v2, v1, Lcom/amazonaws/event/ProgressEvent;->ܰ:I
+    iput v2, v1, Lcom/amazonaws/event/ProgressEvent;->᩷:I
 
     .line 155
-    iput p3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput p3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     .line 156
     invoke-virtual {p2, v1}, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ۙ(Lcom/amazonaws/event/ProgressEvent;)V
@@ -191,14 +191,14 @@
     if-eq p1, v0, :cond_2
 
     .line 160
-    iget v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     .line 162
-    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
+    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܿ:I
 
     if-lt v0, v1, :cond_2
 
@@ -212,7 +212,7 @@
     invoke-virtual {p2, v1}, Lcom/amazonaws/event/ProgressListenerCallbackExecutor;->ۙ(Lcom/amazonaws/event/ProgressEvent;)V
 
     .line 164
-    iput p3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput p3, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     :cond_2
     return p1
@@ -227,7 +227,7 @@
     .line 124
     new-instance v0, Lcom/amazonaws/event/ProgressEvent;
 
-    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iget v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     int-to-long v1, v1
 
@@ -236,7 +236,7 @@
     const/16 v1, 0x20
 
     .line 123
-    iput v1, v0, Lcom/amazonaws/event/ProgressEvent;->ܰ:I
+    iput v1, v0, Lcom/amazonaws/event/ProgressEvent;->᩷:I
 
     .line 126
     iget-object v1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->᩶:Lcom/amazonaws/event/ProgressListenerCallbackExecutor;
@@ -246,7 +246,7 @@
     const/4 v0, 0x0
 
     .line 127
-    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܽ:I
+    iput v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
 
     return-void
 .end method
@@ -257,18 +257,18 @@
     mul-int/lit16 p1, p1, 0x400
 
     .line 83
-    iput p1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->֡:I
+    iput p1, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܿ:I
 
     return-void
 .end method
 
-.method public final ᩹()V
+.method public final ܳ()V
     .locals 1
 
     const/4 v0, 0x1
 
     .line 95
-    iput-boolean v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܺ:Z
+    iput-boolean v0, p0, Lcom/amazonaws/event/ProgressReportingInputStream;->ܰ:Z
 
     return-void
 .end method

@@ -325,7 +325,7 @@
     const-string v0, "/localWebPay"
 
     .line 0
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -335,7 +335,7 @@
     const-string v0, "/localWebPay/localWebFiles"
 
     .line 0
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -345,7 +345,7 @@
     const-string v0, "/localWebPay/localWebFiles/sdkConfig.json"
 
     .line 0
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
     const-string v0, "/localWebPay/localWebPayDownloadingFiles"
 
     .line 0
-    invoke-static {p1, v0}, Ll/ܶ᩷᩺;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ll/ܰۡۗ;->ۙ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

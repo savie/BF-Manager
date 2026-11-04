@@ -1,14 +1,14 @@
 package org.bouncycastle.asn1.x509;
 
 import java.io.IOException;
-import l.C15489;
+import l.C13645;
 import org.bouncycastle.asn1.ASN1Boolean;
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1OctetString;
 import org.bouncycastle.asn1.ASN1Primitive;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509Extension {
     public boolean critical;
     public ASN1OctetString value;
@@ -82,7 +82,7 @@ public class X509Extension {
         try {
             return ASN1Primitive.fromByteArray(x509Extension.getValue().getOctets());
         } catch (IOException e) {
-            throw new IllegalArgumentException(C15489.m37075("can't convert extension: ", e));
+            throw new IllegalArgumentException(C13645.m33383("can't convert extension: ", e));
         }
     }
 }

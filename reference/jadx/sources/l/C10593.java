@@ -1,27 +1,54 @@
 package l;
 
-import android.view.View;
-import android.widget.AdapterView;
+import com.alipay.sdk.m.y.l;
+import org.bouncycastle.asn1.bc.ExternalValue$$ExternalSyntheticOutline0;
 
-/* JADX INFO: renamed from: l.ۤ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5WL */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C10593 implements AdapterView.OnItemClickListener {
+/* JADX INFO: renamed from: l.ۤۗᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: J703 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C10593 extends AbstractC2323 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16237 f36242;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int f33624;
 
-    public C10593(C16237 c16237) {
-        this.f36242 = c16237;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f33625;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int f33626;
+
+    public C10593(int i, int i2, int i3) {
+        this.f33625 = i;
+        this.f33626 = i2;
+        this.f33624 = i3;
     }
 
-    @Override // android.widget.AdapterView.OnItemClickListener
-    public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
-        C16237 c16237 = this.f36242;
-        c16237.f52382.setSelection(i);
-        if (c16237.f52382.getOnItemClickListener() != null) {
-            c16237.f52382.performItemClick(view, i, c16237.f52381.getItemId(i));
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof C10593)) {
+            return false;
         }
-        c16237.dismiss();
+        C10593 c10593 = (C10593) obj;
+        return this.f33625 == c10593.f33625 && this.f33626 == c10593.f33626 && this.f33624 == c10593.f33624;
+    }
+
+    public final int hashCode() {
+        return (((this.f33625 * 31) + this.f33626) * 31) + this.f33624;
+    }
+
+    public final String toString() {
+        Object[] objArr = {Integer.valueOf(this.f33625), Integer.valueOf(this.f33626), Integer.valueOf(this.f33624)};
+        String[] strArrSplit = "oldStart;oldEnd;newLength".length() == 0 ? new String[0] : "oldStart;oldEnd;newLength".split(l.b);
+        StringBuilder sb = new StringBuilder();
+        ExternalValue$$ExternalSyntheticOutline0.m(C10593.class, sb, "[");
+        for (int i = 0; i < strArrSplit.length; i++) {
+            sb.append(strArrSplit[i]);
+            sb.append("=");
+            sb.append(objArr[i]);
+            if (i != strArrSplit.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

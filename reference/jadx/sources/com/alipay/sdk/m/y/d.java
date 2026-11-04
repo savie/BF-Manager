@@ -3,7 +3,7 @@ package com.alipay.sdk.m.y;
 import android.content.Context;
 import android.net.NetworkInfo;
 import android.text.TextUtils;
-import l.C15489;
+import l.C14483;
 
 /* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes.dex */
@@ -22,9 +22,9 @@ public class d {
     }
 
     public String a() {
-        String strM37076 = C15489.m37076(b(), "|");
+        String strM34972 = C14483.m34972(b(), "|");
         String strC = c();
-        return TextUtils.isEmpty(strC) ? C15489.m37076(strM37076, "000000000000000") : C15489.m37076(strM37076, strC);
+        return TextUtils.isEmpty(strC) ? C14483.m34972(strM34972, "000000000000000") : C14483.m34972(strM34972, strC);
     }
 
     public String b() {

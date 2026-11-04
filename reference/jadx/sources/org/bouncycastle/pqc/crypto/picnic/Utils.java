@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.crypto.picnic;
 
-import l.C3184;
+import l.C6421;
 import org.bouncycastle.util.Integers;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -70,7 +70,7 @@ public class Utils {
         if (i == 0) {
             return 0;
         }
-        return C3184.m9602(i, 1, 8, 1);
+        return C6421.m18182(i, 1, 8, 1);
     }
 
     public static int parity(byte[] bArr, int i) {

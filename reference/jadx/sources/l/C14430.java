@@ -1,278 +1,187 @@
 package l;
 
-import com.google.android.material.slider.BaseSlider;
-import com.umeng.analytics.pro.cb;
-import java.math.BigInteger;
-import java.util.logging.Logger;
-import org.bouncycastle.crypto.digests.Blake2xsDigest;
-import org.bouncycastle.util.encoders.UTF8;
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.ܳۡ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: P9QN */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C14430 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int f47308 = 0;
+/* JADX INFO: renamed from: l.ܰۜܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P9QE */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14430 implements InterfaceC7588 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final Logger f47309 = Logger.getLogger(C14430.class.getName());
+    public TreeMap f45436 = new TreeMap();
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m34697(byte b) {
-        if (48 > b || b > 57) {
-            return (97 > b || b > 122) ? b - 55 : b - 87;
-        }
-        return b - UTF8.S_P3A;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static boolean m34704(byte b) {
-        if (48 <= b && b <= 57) {
-            return true;
-        }
-        if (97 > b || b > 102) {
-            return 65 <= b && b <= 70;
-        }
+    @Override // l.InterfaceC9824
+    public final boolean isInitialized() {
         return true;
     }
 
-    static {
-        EnumC17251 enumC17251 = EnumC17251.ALLOW_SINGULAR_OVERWRITES;
-        int i = C11648.f39164;
-        int i2 = C13765.f45372;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public static AbstractC23725 m34701(String str) {
-        int i;
-        int i2;
-        int length;
-        byte b;
-        byte b2;
-        AbstractC23725 abstractC23725M52256 = AbstractC23725.m52256(str.toString());
-        byte[] bArr = ((C6085) abstractC23725M52256).f20598;
-        int length2 = bArr.length;
-        byte[] bArr2 = new byte[length2];
-        int i3 = 0;
-        int i4 = 0;
-        while (i3 < bArr.length) {
-            byte b3 = bArr[i3];
-            if (b3 == 92) {
-                int i5 = i3 + 1;
-                if (i5 >= bArr.length) {
-                    throw new C12313("Invalid escape sequence: '\\' at end of string.");
-                }
-                byte b4 = bArr[i5];
-                if (48 <= b4 && b4 <= 55) {
-                    int iM34697 = m34697(b4);
-                    int i6 = i3 + 2;
-                    if (i6 < bArr.length && 48 <= (b2 = bArr[i6]) && b2 <= 55) {
-                        iM34697 = (iM34697 * 8) + m34697(b2);
-                        i5 = i6;
-                    }
-                    int i7 = i5 + 1;
-                    if (i7 < bArr.length && 48 <= (b = bArr[i7]) && b <= 55) {
-                        iM34697 = (iM34697 * 8) + m34697(b);
-                        i5 = i7;
-                    }
-                    i = i4 + 1;
-                    bArr2[i4] = (byte) iM34697;
-                } else if (b4 == 34) {
-                    i = i4 + 1;
-                    bArr2[i4] = 34;
-                } else if (b4 == 39) {
-                    i = i4 + 1;
-                    bArr2[i4] = 39;
-                } else if (b4 != 63) {
-                    if (b4 == 85) {
-                        int i8 = i3 + 2;
-                        i2 = i3 + 9;
-                        if (i2 >= bArr.length) {
-                            throw new C12313("Invalid escape sequence: '\\U' with too few hex chars");
-                        }
-                        int iM34698 = 0;
-                        int i9 = i8;
-                        while (true) {
-                            int i10 = i3 + 10;
-                            if (i9 < i10) {
-                                byte b5 = bArr[i9];
-                                if (!m34704(b5)) {
-                                    throw new C12313("Invalid escape sequence: '\\U' with too few hex chars");
-                                }
-                                iM34698 = (iM34698 << 4) | m34697(b5);
-                                i9++;
-                            } else {
-                                if (!Character.isValidCodePoint(iM34698)) {
-                                    throw new C12313("Invalid escape sequence: '\\U" + abstractC23725M52256.mo16493(i8, i10).m52260() + "' is not a valid code point value");
-                                }
-                                Character.UnicodeBlock unicodeBlockOf = Character.UnicodeBlock.of(iM34698);
-                                if (unicodeBlockOf != null && (unicodeBlockOf.equals(Character.UnicodeBlock.LOW_SURROGATES) || unicodeBlockOf.equals(Character.UnicodeBlock.HIGH_SURROGATES) || unicodeBlockOf.equals(Character.UnicodeBlock.HIGH_PRIVATE_USE_SURROGATES))) {
-                                    throw new C12313("Invalid escape sequence: '\\U" + abstractC23725M52256.mo16493(i8, i10).m52260() + "' refers to a surrogate code unit");
-                                }
-                                byte[] bytes = new String(new int[]{iM34698}, 0, 1).getBytes(C9779.f33479);
-                                System.arraycopy(bytes, 0, bArr2, i4, bytes.length);
-                                length = bytes.length;
-                            }
-                        }
-                    } else if (b4 == 92) {
-                        i = i4 + 1;
-                        bArr2[i4] = 92;
-                    } else if (b4 == 102) {
-                        i = i4 + 1;
-                        bArr2[i4] = 12;
-                    } else if (b4 == 110) {
-                        i = i4 + 1;
-                        bArr2[i4] = 10;
-                    } else if (b4 == 114) {
-                        i = i4 + 1;
-                        bArr2[i4] = cb.k;
-                    } else if (b4 == 120) {
-                        i5 = i3 + 2;
-                        if (i5 >= bArr.length || !m34704(bArr[i5])) {
-                            throw new C12313("Invalid escape sequence: '\\x' with no digits");
-                        }
-                        int iM34699 = m34697(bArr[i5]);
-                        int i11 = i3 + 3;
-                        if (i11 < bArr.length && m34704(bArr[i11])) {
-                            iM34699 = (iM34699 * 16) + m34697(bArr[i11]);
-                            i5 = i11;
-                        }
-                        i = i4 + 1;
-                        bArr2[i4] = (byte) iM34699;
-                    } else if (b4 == 97) {
-                        i = i4 + 1;
-                        bArr2[i4] = 7;
-                    } else if (b4 != 98) {
-                        switch (b4) {
-                            case 116:
-                                i = i4 + 1;
-                                bArr2[i4] = 9;
-                                break;
-                            case BaseSlider.DEFAULT_LABEL_ANIMATION_EXIT_DURATION /* 117 */:
-                                int i12 = i3 + 2;
-                                i2 = i3 + 5;
-                                if (i2 < bArr.length && m34704(bArr[i12])) {
-                                    int i13 = i3 + 3;
-                                    if (m34704(bArr[i13])) {
-                                        int i14 = i3 + 4;
-                                        if (m34704(bArr[i14]) && m34704(bArr[i2])) {
-                                            char cM34697 = (char) ((m34697(bArr[i14]) << 4) | (m34697(bArr[i12]) << 12) | (m34697(bArr[i13]) << 8) | m34697(bArr[i2]));
-                                            if (cM34697 >= 55296 && cM34697 <= 57343) {
-                                                throw new C12313("Invalid escape sequence: '\\u' refers to a surrogate");
-                                            }
-                                            byte[] bytes2 = Character.toString(cM34697).getBytes(C9779.f33479);
-                                            System.arraycopy(bytes2, 0, bArr2, i4, bytes2.length);
-                                            length = bytes2.length;
-                                            break;
-                                        }
-                                    }
-                                }
-                                throw new C12313("Invalid escape sequence: '\\u' with too few hex chars");
-                            case 118:
-                                i = i4 + 1;
-                                bArr2[i4] = 11;
-                                break;
-                            default:
-                                throw new C12313("Invalid escape sequence: '\\" + ((char) b4) + '\'');
-                        }
-                    } else {
-                        i = i4 + 1;
-                        bArr2[i4] = 8;
-                    }
-                    i4 += length;
-                    i3 = i2;
-                } else {
-                    i = i4 + 1;
-                    bArr2[i4] = 63;
-                }
-                i4 = i;
-                i3 = i5;
-            } else {
-                bArr2[i4] = b3;
-                i4++;
-            }
-            i3++;
+    @Override // l.InterfaceC7588
+    public final InterfaceC7588 mergeFrom(byte[] bArr) throws C20463 {
+        try {
+            AbstractC3660 abstractC3660M11872 = AbstractC3660.m11872(false, 0, bArr.length, bArr);
+            m34858(abstractC3660M11872);
+            abstractC3660M11872.mo11879(0);
+            return this;
+        } catch (C20463 e) {
+            throw e;
+        } catch (IOException e2) {
+            throw new RuntimeException("Reading from a byte array threw an IOException (should never happen).", e2);
         }
-        return length2 == i4 ? new C6085(bArr2) : AbstractC23725.m52255(0, i4, bArr2);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m34698(String str) {
-        return (int) m34699(str, true, false);
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static int m34702(String str) {
-        return (int) m34699(str, false, false);
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static long m34703(String str) {
-        return m34699(str, true, true);
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static long m34696(String str) {
-        return m34699(str, false, true);
+    public static C14430 m34853() {
+        return new C14430();
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m34699(String str, boolean z, boolean z2) {
-        boolean z3;
-        int i;
-        int i2 = 0;
-        if (!str.startsWith("-", 0)) {
-            z3 = false;
-        } else {
-            if (!z) {
-                throw new NumberFormatException("Number must be positive: ".concat(str));
-            }
-            i2 = 1;
-            z3 = true;
+    private C21144 m34854(int i) {
+        if (i == 0) {
+            return null;
         }
-        if (str.startsWith("0x", i2)) {
-            i2 += 2;
-            i = 16;
-        } else {
-            i = str.startsWith("0", i2) ? 8 : 10;
+        Integer numValueOf = Integer.valueOf(i);
+        TreeMap treeMap = this.f45436;
+        C21144 c21144 = (C21144) treeMap.get(numValueOf);
+        if (c21144 != null) {
+            return c21144;
         }
-        String strSubstring = str.substring(i2);
-        if (strSubstring.length() < 16) {
-            long j = Long.parseLong(strSubstring, i);
-            if (z3) {
-                j = -j;
-            }
-            if (!z2) {
-                if (z) {
-                    if (j > 2147483647L || j < -2147483648L) {
-                        throw new NumberFormatException("Number out of range for 32-bit signed integer: ".concat(str));
-                    }
-                } else if (j >= Blake2xsDigest.MAX_NUMBER_BLOCKS || j < 0) {
-                    throw new NumberFormatException("Number out of range for 32-bit unsigned integer: ".concat(str));
-                }
-            }
-            return j;
+        int i2 = C18160.f59362;
+        C21144 c21144M48247 = C21144.m48247();
+        treeMap.put(Integer.valueOf(i), c21144M48247);
+        return c21144M48247;
+    }
+
+    @Override // l.InterfaceC7588
+    public final C7719 build() {
+        TreeMap treeMap = this.f45436;
+        if (treeMap.isEmpty()) {
+            return C7719.m21003();
         }
-        BigInteger bigInteger = new BigInteger(strSubstring, i);
-        if (z3) {
-            bigInteger = bigInteger.negate();
+        TreeMap treeMap2 = new TreeMap();
+        for (Map.Entry entry : treeMap.entrySet()) {
+            treeMap2.put((Integer) entry.getKey(), ((C21144) entry.getValue()).m48248());
         }
-        if (z2) {
-            if (z) {
-                if (bigInteger.bitLength() > 63) {
-                    throw new NumberFormatException("Number out of range for 64-bit signed integer: ".concat(str));
-                }
-            } else if (bigInteger.bitLength() > 64) {
-                throw new NumberFormatException("Number out of range for 64-bit unsigned integer: ".concat(str));
-            }
-        } else if (z) {
-            if (bigInteger.bitLength() > 31) {
-                throw new NumberFormatException("Number out of range for 32-bit signed integer: ".concat(str));
-            }
-        } else if (bigInteger.bitLength() > 32) {
-            throw new NumberFormatException("Number out of range for 32-bit unsigned integer: ".concat(str));
+        return new C7719(treeMap2, 0);
+    }
+
+    @Override // l.InterfaceC7588
+    public final InterfaceC18775 buildPartial() {
+        return build();
+    }
+
+    public final Object clone() {
+        int i = C7719.f25443;
+        C14430 c14430M34853 = m34853();
+        for (Map.Entry entry : this.f45436.entrySet()) {
+            c14430M34853.f45436.put((Integer) entry.getKey(), ((C21144) entry.getValue()).clone());
         }
-        return bigInteger.longValue();
+        return c14430M34853;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34859(C7719 c7719) {
+        if (c7719 != C7719.m21003()) {
+            for (Map.Entry entry : c7719.f25444.entrySet()) {
+                m34857(((Integer) entry.getKey()).intValue(), (C18160) entry.getValue());
+            }
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34855(int i, int i2) {
+        if (i <= 0) {
+            throw new IllegalArgumentException(i + " is not a valid field number.");
+        }
+        m34854(i).m48254(i2);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34856(int i, AbstractC17084 abstractC17084) {
+        if (i <= 0) {
+            throw new IllegalArgumentException(i + " is not a valid field number.");
+        }
+        m34854(i).m48252(abstractC17084);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34857(int i, C18160 c18160) {
+        if (i <= 0) {
+            throw new IllegalArgumentException(i + " is not a valid field number.");
+        }
+        Integer numValueOf = Integer.valueOf(i);
+        TreeMap treeMap = this.f45436;
+        if (treeMap.containsKey(numValueOf)) {
+            m34854(i).m48253(c18160);
+            return;
+        }
+        if (i <= 0) {
+            throw new IllegalArgumentException(i + " is not a valid field number.");
+        }
+        Integer numValueOf2 = Integer.valueOf(i);
+        int i2 = C18160.f59362;
+        C21144 c21144M48247 = C21144.m48247();
+        c21144M48247.m48253(c18160);
+        treeMap.put(numValueOf2, c21144M48247);
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m34858(AbstractC3660 abstractC3660) {
+        int iMo11876;
+        do {
+            iMo11876 = abstractC3660.mo11876();
+            if (iMo11876 == 0) {
+                return;
+            }
+        } while (m34860(iMo11876, abstractC3660));
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean m34860(int i, AbstractC3660 abstractC3660) throws C3309 {
+        int i2 = i >>> 3;
+        int i3 = i & 7;
+        if (i3 == 0) {
+            m34854(i2).m48254(abstractC3660.mo11893());
+            return true;
+        }
+        if (i3 == 1) {
+            m34854(i2).m48250(abstractC3660.mo11886());
+            return true;
+        }
+        if (i3 == 2) {
+            m34854(i2).m48252(abstractC3660.mo11890());
+            return true;
+        }
+        if (i3 == 3) {
+            int i4 = C7719.f25443;
+            C14430 c14430 = new C14430();
+            abstractC3660.mo11880(i2, c14430, C20485.f65620);
+            m34854(i2).m48251(c14430.build());
+            return true;
+        }
+        if (i3 == 4) {
+            return false;
+        }
+        if (i3 == 5) {
+            m34854(i2).m48249(abstractC3660.mo11874());
+            return true;
+        }
+        throw C20463.m46968();
+    }
+
+    @Override // l.InterfaceC7588
+    public final InterfaceC7588 mergeFrom(AbstractC3660 abstractC3660, C24215 c24215) {
+        m34858(abstractC3660);
+        return this;
+    }
+
+    @Override // l.InterfaceC7588
+    public final InterfaceC7588 mergeFrom(InterfaceC18775 interfaceC18775) {
+        if (interfaceC18775 instanceof C7719) {
+            m34859((C7719) interfaceC18775);
+            return this;
+        }
+        throw new IllegalArgumentException("mergeFrom(MessageLite) can only merge messages of the same type.");
     }
 }

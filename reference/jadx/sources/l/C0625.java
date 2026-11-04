@@ -1,51 +1,79 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡᩵᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: B6LV */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C0625 {
+/* JADX INFO: renamed from: l.֡ᩴۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D4MB */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C0625 extends AbstractC19270 implements InterfaceC7558, InterfaceC21839 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final EnumC20382 f2711;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public AbstractC13679 f2443;
 
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public AbstractC13679 f2444;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final /* synthetic */ String mo1543() {
+        throw null;
+    }
+
+    public C0625(C24975 c24975, EnumC22631 enumC22631, int i) {
+        super(c24975, enumC22631, i);
+        this.f2443 = null;
+        this.f2444 = null;
+    }
+
+    @Override // l.InterfaceC0210
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo1655() {
+        return this.f62313.m55818().m8716(this.f62315 + 1);
+    }
+
+    @Override // l.InterfaceC24077
+    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
+    public final int mo2772() {
+        return this.f62313.m55818().m8721(this.f62315 + 4);
+    }
+
+    @Override // l.InterfaceC6177
+    public final InterfaceC10824 getReference() {
+        AbstractC13679 abstractC13679 = this.f2443;
+        if (abstractC13679 != null) {
+            return abstractC13679;
+        }
+        int i = this.f62314.f73513;
+        C24975 c24975 = this.f62313;
+        return AbstractC11902.m29783(c24975, i, c24975.m55818().m8721(this.f62315 + 2));
+    }
+
+    @Override // l.InterfaceC6177
+    /* JADX INFO: renamed from: ᩵, reason: not valid java name and contains not printable characters */
+    public final int mo2771() {
+        return this.f62314.f73513;
+    }
+
+    @Override // l.InterfaceC11396
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final InterfaceC10824 mo2769() {
+        AbstractC13679 abstractC13679 = this.f2444;
+        if (abstractC13679 != null) {
+            return abstractC13679;
+        }
+        int i = this.f62314.f73510;
+        C24975 c24975 = this.f62313;
+        return AbstractC11902.m29783(c24975, i, c24975.m55818().m8721(this.f62315 + 6));
+    }
+
+    @Override // l.InterfaceC11396
+    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
+    public final int mo2773() {
+        return this.f62314.f73510;
+    }
+
+    @Override // l.InterfaceC21839
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public boolean f2712 = false;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C3884 f2713;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC19367 f2714;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C0625 m2892() {
-        this.f2712 = true;
-        return this;
-    }
-
-    public C0625(EnumC20382 enumC20382, AbstractC19367 abstractC19367, C3884 c3884) {
-        this.f2711 = enumC20382;
-        this.f2714 = abstractC19367;
-        this.f2713 = c3884;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final EnumC20382 m2895() {
-        return this.f2711;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC19367 m2893() {
-        return this.f2714;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C3884 m2896() {
-        return this.f2713;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean m2894() {
-        return this.f2712;
+    public final void mo2770(C8850 c8850) {
+        this.f2443 = (AbstractC13679) c8850.m23714(getReference());
+        this.f2444 = (AbstractC13679) c8850.m23714(mo2769());
     }
 }

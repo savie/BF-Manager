@@ -25,7 +25,7 @@ public class d {
         public String k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public String f77949l;
+        public String f82065l;
     }
 
     /* JADX WARN: Code duplicated, block: B:129:0x012f A[EXC_TOP_SPLITTER, SYNTHETIC] */
@@ -90,7 +90,7 @@ public class d {
                                             aVar.k = strArrSplit[1];
                                         }
                                         if (strArrSplit != null && strArrSplit.length > 1 && strArrSplit[0].contains("Serial")) {
-                                            aVar.f77949l = strArrSplit[1];
+                                            aVar.f82065l = strArrSplit[1];
                                         }
                                         if (strArrSplit != null && strArrSplit.length > 1 && strArrSplit[0].contains("implementer")) {
                                             aVar.e = strArrSplit[1];

@@ -1,40 +1,116 @@
 package l;
 
-import java.nio.file.LinkOption;
-import java.nio.file.OpenOption;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
 
-/* JADX INFO: renamed from: l.ܳܺᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C14634 implements OpenOption {
-    public final /* synthetic */ InterfaceC0978 a;
+/* JADX INFO: renamed from: l.ܰܰ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 83VR */
+/* JADX INFO: loaded from: classes5.dex */
+public class C14634 extends C11651 {
 
-    public /* synthetic */ C14634(InterfaceC0978 interfaceC0978) {
-        this.a = interfaceC0978;
+    /* JADX INFO: renamed from: ֫᩷, reason: not valid java name and contains not printable characters */
+    public float f47882;
+
+    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
+    public float f47883;
+
+    /* JADX INFO: renamed from: ۙ᩷, reason: not valid java name and contains not printable characters */
+    public float f47884;
+
+    /* JADX INFO: renamed from: ۚ᩷, reason: not valid java name and contains not printable characters */
+    public float f47885;
+
+    /* JADX INFO: renamed from: ۜۙ, reason: not valid java name and contains not printable characters */
+    public float f47886;
+
+    /* JADX INFO: renamed from: ۠ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f47887;
+
+    /* JADX INFO: renamed from: ۤ᩷, reason: not valid java name and contains not printable characters */
+    public float f47888;
+
+    /* JADX INFO: renamed from: ۫᩷, reason: not valid java name and contains not printable characters */
+    public float f47889;
+
+    /* JADX INFO: renamed from: ۬ۙ, reason: not valid java name and contains not printable characters */
+    public float f47890;
+
+    /* JADX INFO: renamed from: ܳ᩷, reason: not valid java name and contains not printable characters */
+    public float f47891;
+
+    /* JADX INFO: renamed from: ᩴ᩷, reason: not valid java name and contains not printable characters */
+    public float f47892;
+
+    /* JADX INFO: renamed from: ᩷᩷, reason: not valid java name and contains not printable characters */
+    public float f47893;
+
+    /* JADX INFO: renamed from: ᩸᩷, reason: not valid java name and contains not printable characters */
+    public float f47894;
+
+    public C14634() {
+        super(-2);
+        this.f47883 = 1.0f;
+        this.f47887 = false;
+        this.f47886 = 0.0f;
+        this.f47890 = 0.0f;
+        this.f47884 = 0.0f;
+        this.f47893 = 0.0f;
+        this.f47888 = 1.0f;
+        this.f47894 = 1.0f;
+        this.f47892 = 0.0f;
+        this.f47891 = 0.0f;
+        this.f47889 = 0.0f;
+        this.f47885 = 0.0f;
+        this.f47882 = 0.0f;
     }
 
-    public static /* synthetic */ OpenOption a(InterfaceC0978 interfaceC0978) {
-        if (interfaceC0978 == null) {
-            return null;
+    public C14634(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f47883 = 1.0f;
+        this.f47887 = false;
+        this.f47886 = 0.0f;
+        this.f47890 = 0.0f;
+        this.f47884 = 0.0f;
+        this.f47893 = 0.0f;
+        this.f47888 = 1.0f;
+        this.f47894 = 1.0f;
+        this.f47892 = 0.0f;
+        this.f47891 = 0.0f;
+        this.f47889 = 0.0f;
+        this.f47885 = 0.0f;
+        this.f47882 = 0.0f;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C1211.f4440);
+        int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
+        for (int i = 0; i < indexCount; i++) {
+            int index = typedArrayObtainStyledAttributes.getIndex(i);
+            if (index == 15) {
+                this.f47883 = typedArrayObtainStyledAttributes.getFloat(index, this.f47883);
+            } else if (index == 28) {
+                this.f47886 = typedArrayObtainStyledAttributes.getFloat(index, this.f47886);
+                this.f47887 = true;
+            } else if (index == 23) {
+                this.f47884 = typedArrayObtainStyledAttributes.getFloat(index, this.f47884);
+            } else if (index == 24) {
+                this.f47893 = typedArrayObtainStyledAttributes.getFloat(index, this.f47893);
+            } else if (index == 22) {
+                this.f47890 = typedArrayObtainStyledAttributes.getFloat(index, this.f47890);
+            } else if (index == 20) {
+                this.f47888 = typedArrayObtainStyledAttributes.getFloat(index, this.f47888);
+            } else if (index == 21) {
+                this.f47894 = typedArrayObtainStyledAttributes.getFloat(index, this.f47894);
+            } else if (index == 16) {
+                this.f47892 = typedArrayObtainStyledAttributes.getFloat(index, this.f47892);
+            } else if (index == 17) {
+                this.f47891 = typedArrayObtainStyledAttributes.getFloat(index, this.f47891);
+            } else if (index == 18) {
+                this.f47889 = typedArrayObtainStyledAttributes.getFloat(index, this.f47889);
+            } else if (index == 19) {
+                this.f47885 = typedArrayObtainStyledAttributes.getFloat(index, this.f47885);
+            } else if (index == 27) {
+                this.f47882 = typedArrayObtainStyledAttributes.getFloat(index, this.f47882);
+            }
         }
-        if (interfaceC0978 instanceof C12517) {
-            return ((C12517) interfaceC0978).a;
-        }
-        if (!(interfaceC0978 instanceof EnumC22146)) {
-            return interfaceC0978 instanceof EnumC17912 ? AbstractC1726.n((EnumC17912) interfaceC0978) : new C14634(interfaceC0978);
-        }
-        return LinkOption.NOFOLLOW_LINKS;
-    }
-
-    public final /* synthetic */ boolean equals(Object obj) {
-        InterfaceC0978 interfaceC0978 = this.a;
-        if (obj instanceof C14634) {
-            obj = ((C14634) obj).a;
-        }
-        return interfaceC0978.equals(obj);
-    }
-
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
+        typedArrayObtainStyledAttributes.recycle();
     }
 }

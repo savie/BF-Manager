@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.hpke;
 
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HPKEContextWithEncapsulation extends HPKEContext {
     public final byte[] encapsulation;
 

@@ -1,47 +1,25 @@
 package l;
 
-import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ۨ۫᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 1B34 */
+/* JADX INFO: renamed from: l.ۧܶᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 86ZM */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C11710 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f39356 = new HashMap();
+    public final C15439 f37890;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C5359 f39357;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final List f37891;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized C13827 m29249(String str) {
-        C13827 c13827;
-        c13827 = (C13827) this.f39356.get(str);
-        if (c13827 != null) {
-            if (!(c13827.f45637 != null)) {
-                while (!c13827.f45636.f18518) {
-                    try {
-                        if (c13827.f45635.await(1L, TimeUnit.SECONDS)) {
-                            break;
-                        }
-                    } catch (InterruptedException unused) {
-                    }
-                }
-            }
-        } else {
-            c13827 = new C13827(this.f39357);
-            this.f39356.put(str, c13827);
-        }
-        return c13827;
+    public C11710(List list, C15439 c15439) {
+        this.f37891 = list;
+        this.f37890 = c15439;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m29250() {
-        this.f39356.clear();
-    }
-
-    public C11710(C5359 c5359) {
-        this.f39357 = c5359;
+    public static C11710 m29387(List list) {
+        return new C11710(list, null);
     }
 }

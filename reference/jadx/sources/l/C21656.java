@@ -1,50 +1,29 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.IdentityHashMap;
-import java.util.List;
+import android.view.ViewTreeObserver;
+import android.widget.PopupWindow;
 
-/* JADX INFO: renamed from: l.᩸ܶۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: U6VC */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C21656 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final IdentityHashMap f70205 = new IdentityHashMap();
+/* JADX INFO: renamed from: l.᩶᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: N5WL */
+/* JADX INFO: loaded from: classes.dex */
+public final class C21656 implements PopupWindow.OnDismissListener {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f70206;
+    public final /* synthetic */ C18672 f69131;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C15307 m48363(Object obj) {
-        return (C15307) this.f70205.get(obj);
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ViewTreeObserver.OnGlobalLayoutListener f69132;
+
+    public C21656(C18672 c18672, ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener) {
+        this.f69131 = c18672;
+        this.f69132 = onGlobalLayoutListener;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C15307 m48364(Object obj, int[] iArr, long j) {
-        this.f70206 += iArr.length;
-        IdentityHashMap identityHashMap = this.f70205;
-        if (identityHashMap.size() >= 4096 || this.f70206 > 65536) {
-            throw new IllegalStateException("Speculative syntax history budget exceeded");
+    @Override // android.widget.PopupWindow.OnDismissListener
+    public final void onDismiss() {
+        ViewTreeObserver viewTreeObserver = this.f69131.f60715.getViewTreeObserver();
+        if (viewTreeObserver != null) {
+            viewTreeObserver.removeGlobalOnLayoutListener(this.f69132);
         }
-        C15307 c15307 = new C15307(iArr, j);
-        identityHashMap.put(obj, c15307);
-        return c15307;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final List m48362() {
-        IdentityHashMap identityHashMap = this.f70205;
-        Collection collectionValues = identityHashMap.values();
-        ArrayList arrayList = new ArrayList(collectionValues.size());
-        for (Object obj : collectionValues) {
-            C13638.requireNonNull(obj);
-            arrayList.add(obj);
-        }
-        List listUnmodifiableList = C0561.unmodifiableList(arrayList);
-        identityHashMap.clear();
-        this.f70206 = 0;
-        return listUnmodifiableList;
     }
 }

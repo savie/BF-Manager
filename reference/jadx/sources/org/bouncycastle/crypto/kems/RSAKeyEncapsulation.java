@@ -13,7 +13,7 @@ import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.RSAKeyParameters;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RSAKeyEncapsulation implements KeyEncapsulation {
     public DerivationFunction kdf;
     public RSAKeyParameters key;

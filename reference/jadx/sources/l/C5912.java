@@ -1,37 +1,58 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۛ۟ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: X43L */
+/* JADX INFO: renamed from: l.ۚ᩷ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y4QY */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5912 extends AbstractC6160 {
+public final class C5912 extends AbstractC12384 implements InterfaceC17999 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23800 f20160;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f20227 = EnumC7011.Format3rms;
 
-    @Override // l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ Object mo1767(Object obj, AbstractC16579 abstractC16579) {
-        return Boolean.TRUE;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f20228;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final int f20229;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f20230;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " " + C24018.m53572(this) + ", " + mo17155();
     }
 
-    @Override // l.AbstractC7717, l.InterfaceC15874
-    /* JADX INFO: renamed from: ۙ */
-    public final Object mo1768(C0309 c0309, Object obj) {
-        C21825 c21825Mo1943 = c0309.f53222.f77449.mo1943();
-        C21825 c21825Mo1944 = c0309.mo1943();
-        while (c21825Mo1943.m48595()) {
-            C23800 c23800 = this.f20160;
-            C3836 c3836 = c23800.f76937;
-            if (!c23800.m52427((AbstractC16579) c21825Mo1944.f70876, new C0350(c3836.f14275, EnumC15395.UNBOUND, c3836.f14239, (C22929) c21825Mo1943.f70876))) {
-                return Boolean.FALSE;
-            }
-            c21825Mo1943 = c21825Mo1943.f70877;
-            c21825Mo1944 = c21825Mo1944.f70877;
-        }
-        return Boolean.TRUE;
+    public C5912(int i, int i2, int i3, EnumC22631 enumC22631) {
+        super(enumC22631);
+        C6544.m18433(i);
+        this.f20228 = i;
+        C6544.m18436(i2);
+        this.f20230 = i2;
+        this.f20229 = i3;
     }
 
-    public C5912(C23800 c23800) {
-        this.f20160 = c23800;
+    @Override // l.InterfaceC24077
+    /* JADX INFO: renamed from: ᩹ */
+    public final int mo2772() {
+        return this.f20228;
+    }
+
+    @Override // l.InterfaceC0210
+    /* JADX INFO: renamed from: ۚ */
+    public final int mo1655() {
+        return this.f20230;
+    }
+
+    @Override // l.InterfaceC7668
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final int mo17155() {
+        return this.f20229;
+    }
+
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f20227;
     }
 }

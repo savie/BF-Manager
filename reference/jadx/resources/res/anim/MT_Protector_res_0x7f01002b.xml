@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@interpolator/MT_Protector_res_0x7f0c0007"
-    android:duration="@integer/MT_Protector_res_0x7f0b001d">
-    <translate
-        android:fromYDelta="20%p"
-        android:toYDelta="0"/>
-    <alpha
-        android:fromAlpha="0"
-        android:toAlpha="1"/>
-</set>
+<pathInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:controlX1="0"
+    android:controlY1="0"
+    android:controlX2="0.65"
+    android:controlY2="1"/>

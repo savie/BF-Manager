@@ -1,264 +1,214 @@
 package l;
 
-import java.util.Iterator;
+import java.io.IOException;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۘ۫ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: F416 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C3938 extends C22220 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean f14655;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6761 f14656;
-
-    public C3938(C6761 c6761, boolean z) {
-        this.f14656 = c6761;
-        this.f14655 = z;
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3925(C5224 c5224) {
-        this.f14656.f22834.m47343(c5224, false);
-        super.mo3925(c5224);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3919(C2401 c2401) {
-        if (c2401.f9659.f30190.mo1926()) {
-            return;
-        }
-        super.mo3919(c2401);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3958(C22179 c22179) {
-        C21017 c21017 = this.f14656.f22834;
-        C21825 c21825 = c22179.f72546;
-        c21017.getClass();
-        Iterator it = c21825.iterator();
-        while (it.hasNext()) {
-            c21017.m47343((C5224) it.next(), true);
-        }
-        m49334(c22179.f72547);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3961(C23195 c23195) {
-        AbstractC16579 abstractC16579;
-        C6656 c6656 = c23195.f75262;
-        if (c6656 != null && !c6656.f22477.f30190.mo1926()) {
-            C6656 c6657 = c23195.f75262;
-            m11414(c6657.f22475, c6657.f22476.f70566);
-        }
-        AbstractC5930 abstractC5930 = c23195.f75266;
-        if (abstractC5930 != null && (abstractC16579 = abstractC5930.f30190) != null) {
-            m11413(abstractC16579, abstractC5930);
-        }
-        if (this.f14655) {
-            mo7248(c23195.f75267);
-            mo7248(c23195.f75266);
-            m49334(c23195.f75269);
-            mo7248(c23195.f75262);
-            m49334(c23195.f75270);
-            m49334(c23195.f75264);
-            return;
-        }
-        mo7248(c23195.f75265);
-        mo7248(c23195.f75268);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3928(C6656 c6656) {
-        C6263 c6263 = c6656.f22475;
-        if (c6263 != null && c6263.f77449 != null && !c6656.m18039()) {
-            m11413(c6656.f22475.f77449, c6656.f22477);
-        }
-        mo7248(c6656.f22476);
-        mo7248(c6656.f22477);
-        if (this.f14655) {
-            return;
-        }
-        mo7248(c6656.f22481);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1261(C2422 c2422) {
-        AbstractC16579 abstractC16579;
-        AbstractC8774 abstractC8774 = c2422.f9707;
-        if (abstractC8774 != null && (abstractC16579 = abstractC8774.f30190) != null) {
-            m11413(abstractC16579, abstractC8774);
-        }
-        super.mo1261(c2422);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3938(C11906 c11906) {
-        AbstractC16579 abstractC16579;
-        AbstractC8774 abstractC8774 = c11906.f39946;
-        if (abstractC8774 != null && !(abstractC8774 instanceof AbstractC20372) && (abstractC16579 = abstractC8774.f30190) != null) {
-            m11413(abstractC16579, abstractC8774);
-        }
-        super.mo3938(c11906);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3932(C8378 c8378) {
-        AbstractC5930 abstractC5930 = c8378.f29095;
-        if (abstractC5930 != null && abstractC5930.f30190 != null) {
-            if (abstractC5930.m22847(EnumC18651.f60535)) {
-                AbstractC5930 abstractC5931 = c8378.f29095;
-                m11414(abstractC5931.f30190.f53222, ((C2401) abstractC5931).f9658);
-            }
-            C8753 c8753 = c8378.f29098;
-            if (c8753 != null) {
-                m11414(c8378.f29095.f30190.f53222, c8753.f30089.f70566);
-            }
-            AbstractC5930 abstractC5932 = c8378.f29095;
-            m11413(abstractC5932.f30190, abstractC5932);
-        }
-        super.mo3932(c8378);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3953(C18961 c18961) {
-        AbstractC5930 abstractC5930 = c18961.f61402;
-        if (abstractC5930 != null && abstractC5930.f30190 != null) {
-            if (abstractC5930.m22847(EnumC18651.f60535)) {
-                AbstractC5930 abstractC5931 = c18961.f61402;
-                m11414(abstractC5931.f30190.f53222, ((C2401) abstractC5931).f9658);
-            }
-            AbstractC5930 abstractC5932 = c18961.f61402;
-            m11413(abstractC5932.f30190, abstractC5932);
-        }
-        super.mo3953(c18961);
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1065(C8753 c8753) {
-        if (this.f14655) {
-            mo7248(c8753.f30089);
-            m49334(c8753.f30088);
-            mo7248(c8753.f30092);
-            m49334(c8753.f30087);
-        }
-        for (AbstractC8774 abstractC8774 : c8753.f30090) {
-            if (!abstractC8774.m22847(EnumC18651.f60468)) {
-                abstractC8774.mo1802(this);
-            }
-        }
-    }
-
-    @Override // l.C22220, l.AbstractC19357
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo3955(C21452 c21452) {
-        if (this.f14655) {
-            return;
-        }
-        m49334(c21452.f69737);
-    }
+/* JADX INFO: renamed from: l.ۘۚۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7A7 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C3938 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m11413(AbstractC16579 abstractC16579, AbstractC8774 abstractC8774) {
-        C20414 c20414 = this.f14656.f22832;
-        if (abstractC16579.mo9482()) {
-            return;
-        }
-        boolean z = true;
-        AbstractC8774 abstractC8775 = abstractC8774;
-        while (z) {
-            if (abstractC8775.m22847(EnumC18651.f60493)) {
-                C21825 c21825Mo1938 = abstractC16579.mo1938();
-                C11596 c11596 = (C11596) abstractC8775;
-                C21825 c21825 = c11596.f38962;
-                if (c21825.m48596() > 0 && c21825Mo1938.m48596() == c21825.m48596()) {
-                    for (int i = 0; i < c21825Mo1938.m48596(); i++) {
-                        m11413((AbstractC16579) c21825Mo1938.get(i), (AbstractC8774) c21825.get(i));
-                    }
-                }
-                abstractC8775 = c11596.f38963;
+    public final int[] f13439;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f13442;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f13443;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final byte[][] f13441 = new byte[16][];
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int[] f13440 = new int[4];
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m12655(int i, byte[] bArr) {
+        int i2 = 0;
+        while (true) {
+            int[] iArr = this.f13439;
+            if (i2 >= iArr.length) {
+                int i3 = this.f13443;
+                iArr[i3] = i;
+                this.f13441[i3] = bArr;
+                this.f13443 = (i3 + 1) % iArr.length;
+                return;
             }
-            if (abstractC8775.m22847(EnumC18651.f60473)) {
-                abstractC8775 = ((C23570) abstractC8775).f76357;
-                if (abstractC16579 != null && !abstractC16579.m39001(EnumC6617.NONE)) {
-                    abstractC16579 = abstractC16579.mo1934();
-                }
-            } else if (abstractC8775.m22847(EnumC18651.f60535)) {
-                C2401 c2401 = (C2401) abstractC8775;
-                if (abstractC16579 == null || abstractC16579.m39001(EnumC6617.NONE)) {
-                    if (c2401.f9658.m48596() == 1) {
-                        AbstractC5930 abstractC5930 = c2401.f9659;
-                        abstractC5930.getClass();
-                        C11867 c11867 = ((C5224) c2401.f9658.f70876).f18119;
-                        C5909 c5909 = C23879.f77204;
-                        c20414.m48199(abstractC5930, new C5909("compiler", "cant.type.annotate.scoping.1", c11867));
-                    } else {
-                        C19003 c19003 = new C19003();
-                        Iterator it = c2401.f9658.iterator();
-                        while (it.hasNext()) {
-                            c19003.m43723(((C5224) it.next()).f18119);
-                        }
-                        AbstractC5930 abstractC5931 = c2401.f9659;
-                        abstractC5931.getClass();
-                        C21825 c21825M43726 = c19003.m43726();
-                        C5909 c59010 = C23879.f77204;
-                        c20414.m48199(abstractC5931, new C5909("compiler", "cant.type.annotate.scoping", c21825M43726));
-                    }
-                    z = false;
-                }
-                abstractC8775 = c2401.f9659;
-            } else {
-                if (!abstractC8775.m22847(EnumC18651.f60465)) {
-                    if (abstractC8775.m22847(EnumC18651.f60537)) {
-                        C15124 c15124 = (C15124) abstractC8775;
-                        if (c15124.mo1801() == EnumC12490.EXTENDS_WILDCARD || c15124.mo1801() == EnumC12490.SUPER_WILDCARD) {
-                            AbstractC8774 abstractC8776 = c15124.f49398;
-                            m11413(abstractC8776.f30190, abstractC8776);
-                        }
-                    } else if (abstractC8775.m22847(EnumC18651.f60566)) {
-                        AbstractC5930 abstractC5932 = ((C0990) abstractC8775).f4638;
-                        m11413(abstractC5932.f30190, abstractC5932);
-                    } else if (abstractC8775.m22847(EnumC18651.f60502)) {
-                        for (AbstractC8774 abstractC8777 : ((C1011) abstractC8775).f4699) {
-                            m11413(abstractC8777.f30190, abstractC8777);
-                        }
-                    } else if (abstractC8775.m22847(EnumC18651.f60547)) {
-                        for (AbstractC8774 abstractC8778 : ((C5245) abstractC8775).f18177) {
-                            m11413(abstractC8778.f30190, abstractC8778);
-                        }
-                    } else if (abstractC8775.mo1801() != EnumC12490.PRIMITIVE_TYPE && abstractC8775.mo1801() != EnumC12490.ERRONEOUS) {
-                        C6171.m17174("Unexpected tree: " + abstractC8775 + " with kind: " + abstractC8775.mo1801() + " within: " + abstractC8774 + " with kind: " + abstractC8774.mo1801());
-                        throw null;
-                    }
-                }
-                z = false;
+            if (iArr[i2] == i) {
+                this.f13441[i2] = bArr;
+                return;
             }
+            i2++;
         }
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m11414(AbstractC23903 abstractC23903, C21825 c21825) {
-        Iterator it = c21825.iterator();
-        while (it.hasNext()) {
-            C5224 c5224 = (C5224) it.next();
-            if (!c5224.f30190.mo1926()) {
-                C6761 c6761 = this.f14656;
-                if (c6761.f22796.m14387(c5224.f18119, abstractC23903) == EnumC4500.DECLARATION) {
-                    C20414 c20414 = c6761.f22832;
-                    AbstractC16579 abstractC16579 = c5224.f30190;
-                    C5909 c5909 = C23879.f77204;
-                    c20414.m48199(c5224, new C5909("compiler", "annotation.type.not.applicable.to.type", abstractC16579));
+    public final synchronized byte[] m12656(int i) {
+        byte[] bArr;
+        int i2 = 0;
+        while (true) {
+            int[] iArr = this.f13439;
+            if (i2 >= iArr.length) {
+                bArr = null;
+                break;
+            }
+            if (iArr[i2] == i && (bArr = this.f13441[i2]) != null) {
+                break;
+            }
+            i2++;
+        }
+        return bArr;
+    }
+
+    public C3938() {
+        int[] iArr = new int[16];
+        this.f13439 = iArr;
+        Arrays.fill(iArr, -1);
+        Arrays.fill(this.f13440, -1);
+    }
+
+    /* JADX WARN: Code duplicated, block: B:22:0x0024 A[Catch: all -> 0x0055, TRY_LEAVE, TryCatch #0 {, blocks: (B:7:0x0006, B:9:0x000b, B:11:0x000f, B:20:0x001f, B:22:0x0024, B:30:0x0034, B:32:0x0039, B:33:0x0049), top: B:39:0x0006 }] */
+    /* JADX WARN: Code duplicated, block: B:25:0x002c A[LOOP:1: B:20:0x001f->B:25:0x002c, LOOP_END] */
+    /* JADX WARN: Code duplicated, block: B:28:0x0032 A[DONT_GENERATE] */
+    /* JADX WARN: Code duplicated, block: B:30:0x0034 A[Catch: all -> 0x0055, TRY_ENTER, TryCatch #0 {, blocks: (B:7:0x0006, B:9:0x000b, B:11:0x000f, B:20:0x001f, B:22:0x0024, B:30:0x0034, B:32:0x0039, B:33:0x0049), top: B:39:0x0006 }] */
+    /* JADX WARN: Code duplicated, block: B:32:0x0039 A[Catch: all -> 0x0055, TryCatch #0 {, blocks: (B:7:0x0006, B:9:0x000b, B:11:0x000f, B:20:0x001f, B:22:0x0024, B:30:0x0034, B:32:0x0039, B:33:0x0049), top: B:39:0x0006 }] */
+    /* JADX WARN: Code duplicated, block: B:45:0x002f A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:46:0x002a A[SYNTHETIC] */
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static boolean m12653(C3938 c3938, int i, boolean z) {
+        int i2;
+        int i3;
+        boolean z2;
+        int[] iArr;
+        byte[] bArr;
+        synchronized (c3938) {
+            if (z) {
+                i2 = 0;
+                while (true) {
+                    i3 = c3938.f13442;
+                    if (i2 < i3) {
+                        z2 = false;
+                        break;
+                    }
+                    if (c3938.f13440[i2] == i) {
+                        z2 = true;
+                        break;
+                    }
+                    i2++;
+                }
+                if (z2) {
+                    return false;
+                }
+                iArr = c3938.f13440;
+                if (i3 == iArr.length) {
+                    int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length * 2);
+                    c3938.f13440 = iArrCopyOf;
+                    Arrays.fill(iArrCopyOf, c3938.f13442, iArrCopyOf.length, -1);
+                }
+                int[] iArr2 = c3938.f13440;
+                int i4 = c3938.f13442;
+                c3938.f13442 = i4 + 1;
+                iArr2[i4] = i;
+                return true;
+            }
+            int i5 = 0;
+            while (true) {
+                int[] iArr3 = c3938.f13439;
+                if (i5 >= iArr3.length) {
+                    bArr = null;
+                    break;
+                }
+                if (iArr3[i5] == i && (bArr = c3938.f13441[i5]) != null) {
+                    break;
+                }
+                i5++;
+            }
+            if (bArr != null) {
+                return false;
+            }
+            i2 = 0;
+            while (true) {
+                i3 = c3938.f13442;
+                if (i2 < i3) {
+                    z2 = false;
+                    break;
+                }
+                if (c3938.f13440[i2] == i) {
+                    z2 = true;
+                    break;
+                }
+                i2++;
+            }
+            if (z2) {
+                return false;
+            }
+            iArr = c3938.f13440;
+            if (i3 == iArr.length) {
+                int[] iArrCopyOf2 = Arrays.copyOf(iArr, iArr.length * 2);
+                c3938.f13440 = iArrCopyOf2;
+                Arrays.fill(iArrCopyOf2, c3938.f13442, iArrCopyOf2.length, -1);
+            }
+            int[] iArr4 = c3938.f13440;
+            int i6 = c3938.f13442;
+            c3938.f13442 = i6 + 1;
+            iArr4[i6] = i;
+            return true;
+            throw th;
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m12652(C3938 c3938) {
+        synchronized (c3938) {
+        }
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m12651(int i, C3938 c3938) {
+        synchronized (c3938) {
+            int i2 = 0;
+            while (true) {
+                int i3 = c3938.f13442;
+                if (i2 >= i3) {
+                    break;
+                }
+                int[] iArr = c3938.f13440;
+                if (iArr[i2] == i) {
+                    int i4 = i3 - 1;
+                    c3938.f13442 = i4;
+                    iArr[i2] = iArr[i4];
+                    iArr[i4] = -1;
+                    break;
+                }
+                i2++;
+            }
+            c3938.notifyAll();
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static void m12654(int i, C3938 c3938) {
+        synchronized (c3938) {
+            while (true) {
+                boolean z = false;
+                for (int i2 = 0; i2 < c3938.f13442; i2++) {
+                    try {
+                        if (c3938.f13440[i2] == i) {
+                            z = true;
+                            break;
+                        }
+                    } catch (Throwable th) {
+                        throw th;
+                    }
+                }
+                if (z) {
+                    try {
+                        c3938.wait();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        throw new IOException("Interrupted while reading smali cache data", e);
+                    }
                 }
             }
         }

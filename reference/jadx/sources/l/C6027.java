@@ -1,109 +1,179 @@
 package l;
 
-import android.os.SystemClock;
-import bin.mt.plus.Main;
-import bin.mt.plus.R;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Set;
+import java.util.function.LongSupplier;
 
-/* JADX INFO: renamed from: l.ۛۨ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 795C */
+/* JADX INFO: renamed from: l.ۛ֡۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: R8AK */
 /* JADX INFO: loaded from: classes3.dex */
-public class C6027 extends AbstractC23941 {
+public final class C6027 extends InputStream implements InterfaceC0739, InterfaceC8469 {
 
-    /* JADX INFO: renamed from: ᩸ۙ, reason: not valid java name and contains not printable characters */
-    public ArrayList f20494 = new ArrayList();
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final LongSupplier f20617;
 
-    /* JADX INFO: renamed from: ܶۙ, reason: not valid java name and contains not printable characters */
-    public ArrayList f20493 = new ArrayList();
+    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
+    public long f20618;
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ᩺ */
-    public final boolean mo12168() {
-        return false;
+    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC17213 f20619;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public C3789 f20620;
+
+    /* JADX INFO: renamed from: ۠, reason: not valid java name and contains not printable characters */
+    public final InterfaceC23927 f20621;
+
+    /* JADX INFO: renamed from: ۡ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC24673 f20622;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC11246 f20623;
+
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public EnumC18638 f20624 = EnumC18638.FAILURE;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public boolean f20625;
+
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public final InterfaceC24673 f20626;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final boolean f20627;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
     }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۜ */
-    public final C5202 mo3077() {
-        String[] strArrM41566 = m41566("ARG_PATHS");
-        String strM41585 = m41585("targetPath");
-        C2462.m7541(strM41585, EnumC11636.MODIFY_DIRECTORY);
-        SystemClock.sleep(200L);
-        C8516 c8516 = new C8516(strArrM41566.length);
-        c8516.m22241(new C1506(this));
-        int length = 1000 / strArrM41566.length;
-        if (length > 200) {
-            length = 200;
+    public C6027(C3789 c3789, long j, LongSupplier longSupplier, InterfaceC23927 interfaceC23927, InterfaceC11246 interfaceC11246, InterfaceC17213 interfaceC17213, InterfaceC24673 interfaceC24673, InterfaceC24673 interfaceC24674, boolean z) {
+        this.f20620 = c3789;
+        this.f20618 = j;
+        this.f20617 = longSupplier;
+        this.f20621 = interfaceC23927;
+        this.f20623 = interfaceC11246;
+        this.f20619 = interfaceC17213;
+        this.f20622 = interfaceC24673;
+        this.f20626 = interfaceC24674;
+        this.f20627 = z;
+    }
+
+    @Override // java.io.InputStream
+    public final int read() {
+        byte[] bArr = new byte[1];
+        if (read(bArr, 0, 1) == -1) {
+            return -1;
         }
-        for (String str : strArrM41566) {
-            AbstractC20745 abstractC20745M15313 = C5553.m15313(str, new String[0]);
-            String name = abstractC20745M15313.getName();
-            c8516.m22242(1);
-            mo41554(name);
-            if (length > 0) {
-                SystemClock.sleep(length);
-            }
+        return bArr[0] & 255;
+    }
+
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) throws IOException {
+        int iIntValue;
+        C17359.checkFromIndexSize(i, i2, bArr.length);
+        if (i2 == 0) {
+            return 0;
+        }
+        if (!this.f20625) {
+            C11992 c11992 = new C11992(this, bArr, i, i2);
             try {
-                C5553.m15313(C6730.m18162(strM41585, name), new String[0]).mo33977(abstractC20745M15313.mo40911());
-                this.f20494.add(name);
-            } catch (IOException unused) {
-                this.f20493.add(name);
+                iIntValue = this.f20620.m12325().read(bArr, i, i2);
+            } catch (IOException e) {
+                iIntValue = ((Integer) this.f20623.mo28472(e, c11992)).intValue();
+            } catch (C22172 e2) {
+                throw new IOException(e2.getMessage(), e2);
+            } catch (C12082 e3) {
+                iIntValue = ((Integer) this.f20621.mo14268(e3, c11992)).intValue();
+            } catch (RuntimeException e4) {
+                throw e4;
             }
-            if (mo2357()) {
-                return C5202.m14378();
+            if (iIntValue > 0) {
+                this.f20618 += (long) iIntValue;
             }
+            return iIntValue;
         }
-        return C5202.m14379();
+        throw new IOException("Stream is closed");
     }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۟ */
-    public final C14600 mo3078() {
-        return C1362.f5723;
-    }
-
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ۘ */
-    public final void mo3075() {
-        m41591(R.string.MT_Protector);
-        m41562(R.string.MT_Protector);
-    }
-
-    @Override // l.AbstractC17902
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo16350(AbstractActivityC12483 abstractActivityC12483, C5202 c5202, boolean z) {
-        ArrayList arrayList = this.f20493;
-        if (arrayList.isEmpty()) {
-            return;
+    public static Integer m17500(C6027 c6027, byte[] bArr, int i, int i2) {
+        InputStream inputStreamM12325 = c6027.f20620.m12325();
+        if (inputStreamM12325 != null) {
+            try {
+                inputStreamM12325.close();
+            } catch (IOException unused) {
+            }
         }
-        abstractActivityC12483.m30997(R.string.MT_Protector, C6851.m18456(arrayList, "\n"), false);
+        long jMax = Math.max(0L, c6027.f20617.getAsLong() - c6027.f20618);
+        if (jMax <= 0) {
+            c6027.f20624 = EnumC18638.NORMAL_COMPLETE;
+            return -1;
+        }
+        C3789 c3789 = (C3789) c6027.f20619.mo26956(c6027.f20618, jMax);
+        c6027.f20620 = c3789;
+        return Integer.valueOf(c3789.m12325().read(bArr, i, i2));
     }
 
-    @Override // l.AbstractC17902
+    @Override // l.InterfaceC0739
     /* JADX INFO: renamed from: ۙ */
-    public final void mo3076(Main main, C11545 c11545, C11545 c11546, C5202 c5202) {
-        if (c5202.m14380() && m41579(c11545)) {
-            c11545.m28831();
-        }
-        ArrayList arrayList = this.f20494;
-        if (arrayList.isEmpty() || !m41559(c11546)) {
+    public final void mo3062(EnumC18638 enumC18638) {
+        this.f20624 = enumC18638;
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        if (this.f20625) {
             return;
         }
-        c11546.m28777((Collection) arrayList);
-        c11546.m28830();
+        try {
+            this.f20620.m12324();
+            e = null;
+        } catch (IOException e) {
+            e = e;
+        }
+        boolean z = this.f20627;
+        try {
+            ((!z || this.f20624 == EnumC18638.NORMAL_COMPLETE) ? this.f20622 : this.f20626).run();
+        } catch (IOException e2) {
+            e = C0060.m980(e, e2);
+        }
+        this.f20625 = true;
+        if (e == null && z) {
+            EnumC18638 enumC18638 = EnumC18638.NORMAL_COMPLETE;
+        }
+        EnumC23906 enumC23906 = EnumC23906.SMB2_NEGOTIATE;
+        if (z) {
+            this.f20624.name();
+        }
+        Set set = C0060.f940;
+        if (e != null) {
+            throw e;
+        }
     }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo3079(C5202 c5202) {
-        C21094.m47530();
+    public final void finalize() throws Throwable {
+        try {
+            close();
+        } finally {
+            super.finalize();
+        }
     }
 
-    @Override // l.AbstractC17902
-    /* JADX INFO: renamed from: ᩳۙ */
-    public final CharSequence mo3080() {
-        return C16737.m39288(R.string.MT_Protector);
+    @Override // java.io.InputStream
+    public final long skip(long j) throws IOException {
+        if (this.f20625) {
+            throw new IOException("Stream is closed");
+        }
+        if (j <= 0) {
+            return 0L;
+        }
+        long jSkip = this.f20620.m12325().skip(j);
+        if (jSkip > 0) {
+            this.f20618 += jSkip;
+        }
+        return jSkip;
     }
 }

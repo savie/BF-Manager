@@ -1,20 +1,35 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܿۜۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T5RH */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C17181 {
+/* JADX INFO: renamed from: l.ܺ᩻֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: K6MS */
+/* JADX INFO: loaded from: classes5.dex */
+public final /* synthetic */ class C17181 implements InterfaceC7509 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean f54767;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC7509 f55995;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m40103(C10749 c10749) {
-        c10749.m27043("PVPNoFHmFyuseyZLeeNFqEaCTwDqusem", new C10126());
-        c10749.m27043("TkmRCLuEfXPNcCCDiRDukRcaEHNRATqs", new C20004());
-        c10749.m27043("JVCPgaFeXwyTcebHsAfHcmkdJVRwqgXw", new C20709());
-        c10749.m27043("BqZbeeeuwsVcEbgubXZPFaEfoFXEcCfT", new C12243());
-        c10749.m27043("sEFiyXfTyLciiNkRNBkdskBabHbXDucu", new C19298());
-        c10749.m27043("FuyTXAgmyfcqFmgqgCXcPBuwNBdHNRFq", new C16476());
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractActivityC17204 f55996;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f55997;
+
+    public /* synthetic */ C17181(InterfaceC7509 interfaceC7509, boolean z, AbstractActivityC17204 abstractActivityC17204) {
+        this.f55995 = interfaceC7509;
+        this.f55997 = z;
+        this.f55996 = abstractActivityC17204;
+    }
+
+    @Override // l.InterfaceC7509
+    /* JADX INFO: renamed from: ۫ */
+    public final boolean mo924() {
+        if (this.f55995.mo924()) {
+            return true;
+        }
+        if (!this.f55997) {
+            return false;
+        }
+        AbstractActivityC17204 abstractActivityC17204 = this.f55996;
+        return abstractActivityC17204.isFinishing() || abstractActivityC17204.isDestroyed();
     }
 }

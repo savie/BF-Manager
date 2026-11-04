@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static final ۖ:Lcom/amazonaws/retry/RetryPolicy;
-
 .field public static final ۙ:Lcom/amazonaws/retry/RetryPolicy;
 
-.field public static final ۨ:Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;
+.field public static final ۤ:Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;
 
-.field public static final ܰ:Lcom/amazonaws/retry/RetryPolicy$BackoffStrategy;
+.field public static final ᩷:Lcom/amazonaws/retry/RetryPolicy$BackoffStrategy;
+
+.field public static final ᩸:Lcom/amazonaws/retry/RetryPolicy;
 
 
 # direct methods
@@ -28,21 +28,21 @@
 
     invoke-direct {v0, v1, v2, v3, v3}, Lcom/amazonaws/retry/RetryPolicy;-><init>(Lcom/amazonaws/retry/RetryPolicy$RetryCondition;Lcom/amazonaws/retry/RetryPolicy$BackoffStrategy;IZ)V
 
-    sput-object v0, Lcom/amazonaws/retry/PredefinedRetryPolicies;->ۖ:Lcom/amazonaws/retry/RetryPolicy;
+    sput-object v0, Lcom/amazonaws/retry/PredefinedRetryPolicies;->᩸:Lcom/amazonaws/retry/RetryPolicy;
 
     .line 76
     new-instance v0, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;
 
     invoke-direct {v0}, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/retry/PredefinedRetryPolicies;->ۨ:Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;
+    sput-object v0, Lcom/amazonaws/retry/PredefinedRetryPolicies;->ۤ:Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultRetryCondition;
 
     .line 83
     new-instance v1, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;
 
     invoke-direct {v1}, Lcom/amazonaws/retry/PredefinedRetryPolicies$SDKDefaultBackoffStrategy;-><init>()V
 
-    sput-object v1, Lcom/amazonaws/retry/PredefinedRetryPolicies;->ܰ:Lcom/amazonaws/retry/RetryPolicy$BackoffStrategy;
+    sput-object v1, Lcom/amazonaws/retry/PredefinedRetryPolicies;->᩷:Lcom/amazonaws/retry/RetryPolicy$BackoffStrategy;
 
     .line 98
     new-instance v2, Lcom/amazonaws/retry/RetryPolicy;

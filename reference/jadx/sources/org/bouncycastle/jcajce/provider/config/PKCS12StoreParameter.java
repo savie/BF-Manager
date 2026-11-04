@@ -3,7 +3,7 @@ package org.bouncycastle.jcajce.provider.config;
 import java.io.OutputStream;
 import java.security.KeyStore;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12StoreParameter extends org.bouncycastle.jcajce.PKCS12StoreParameter {
     public PKCS12StoreParameter(OutputStream outputStream, KeyStore.ProtectionParameter protectionParameter) {
         super(outputStream, protectionParameter, false);

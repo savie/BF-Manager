@@ -1,35 +1,24 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷ܶᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: L7VN */
+/* JADX INFO: renamed from: l.᩶֨ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BJX */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C20961 extends AbstractC16023 {
-    @Override // l.InterfaceC1142
-    public final int getBlockSize() {
-        return 32;
+public final class C20961 extends AbstractC0078 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final String f67040;
+
+    public C20961(String str) {
+        this.f67040 = str;
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۖ */
-    public final /* bridge */ /* synthetic */ int mo2383() {
-        return 16;
-    }
-
-    @Override // l.InterfaceC1142
+    @Override // l.AbstractC0078
     /* JADX INFO: renamed from: ۙ */
-    public final /* bridge */ /* synthetic */ boolean mo2388() {
-        return false;
+    public final boolean mo1133(C15496 c15496, C15496 c15497) {
+        return c15497.m37100().equals(this.f67040);
     }
 
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ۚ */
-    public final /* bridge */ /* synthetic */ boolean mo2389() {
-        return true;
-    }
-
-    @Override // l.InterfaceC1142
-    /* JADX INFO: renamed from: ܰ */
-    public final /* bridge */ /* synthetic */ int mo2391() {
-        return 16;
+    public final String toString() {
+        return this.f67040;
     }
 }

@@ -1,84 +1,52 @@
 package l;
 
-import com.alipay.sdk.m.y.l;
-import java.util.IdentityHashMap;
-
-/* JADX INFO: renamed from: l.۟ܰ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: D70T */
+/* JADX INFO: renamed from: l.۟֡۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 99YG */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C7518 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final IdentityHashMap f25005;
+public final class C7518 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f25006;
+    public final boolean f24835;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C1873 f25007;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final long f24836;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final int f25008;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final String f24837;
 
-    public C7518() {
-        throw null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final boolean f24838;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final long f24839;
+
+    public C7518(InterfaceC12589 interfaceC12589) {
+        String name = interfaceC12589.getName();
+        this.f24837 = name.endsWith("/") ? C1402.m5124(1, 0, name) : name;
+        this.f24836 = interfaceC12589.mo31100();
+        boolean zIsDirectory = interfaceC12589.isDirectory();
+        this.f24838 = zIsDirectory;
+        this.f24835 = interfaceC12589.mo31098();
+        this.f24839 = zIsDirectory ? -1L : interfaceC12589.length();
     }
 
-    public C7518(IdentityHashMap identityHashMap, int i, C1873 c1873, long j) {
-        this.f25005 = identityHashMap;
-        this.f25008 = i;
-        this.f25007 = c1873;
-        this.f25006 = j;
+    public C7518(C15174 c15174) {
+        String strM36484 = c15174.m36484();
+        this.f24837 = strM36484;
+        this.f24836 = -1L;
+        this.f24839 = -1L;
+        this.f24838 = true;
+        this.f24835 = strM36484.startsWith("$");
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C7518)) {
-            return false;
-        }
-        C7518 c7518 = (C7518) obj;
-        return this.f25008 == c7518.f25008 && this.f25006 == c7518.f25006 && C13638.equals(this.f25005, c7518.f25005) && C13638.equals(this.f25007, c7518.f25007);
-    }
-
-    public final int hashCode() {
-        int i = this.f25008 * 31;
-        long j = this.f25006;
-        return C13638.hashCode(this.f25007) + ((C13638.hashCode(this.f25005) + ((i + ((int) (j ^ (j >>> 32)))) * 31)) * 31);
-    }
-
-    public final String toString() {
-        Object[] objArr = {this.f25005, Integer.valueOf(this.f25008), this.f25007, Long.valueOf(this.f25006)};
-        String[] strArrSplit = "sources;occurrenceBytes;requiredArena;allocationBeforeOffset".length() == 0 ? new String[0] : "sources;occurrenceBytes;requiredArena;allocationBeforeOffset".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C7518.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final C1873 m20030() {
-        return this.f25007;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long m20031() {
-        return this.f25006;
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int m20032() {
-        return this.f25008;
-    }
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final IdentityHashMap m20033() {
-        return this.f25005;
+    public C7518(C9055 c9055) {
+        this.f24837 = c9055.m20655();
+        this.f24839 = c9055.m24193();
+        C23227 c23227M24191 = c9055.m24191();
+        c23227M24191 = c23227M24191 == null ? c9055.m24190() : c23227M24191;
+        this.f24836 = c23227M24191 != null ? c23227M24191.m52144() : -1L;
+        long jM24192 = c9055.m24192();
+        this.f24838 = C10961.m27794(jM24192, EnumC12038.FILE_ATTRIBUTE_DIRECTORY);
+        this.f24835 = C10961.m27794(jM24192, EnumC12038.FILE_ATTRIBUTE_HIDDEN);
     }
 }

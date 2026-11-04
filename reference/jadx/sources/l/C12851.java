@@ -1,48 +1,59 @@
 package l;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.BitSet;
 
-/* JADX INFO: renamed from: l.۬ۗ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: 17B9 */
+/* JADX INFO: renamed from: l.۫ۘܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 5BH1 */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C12851 extends AbstractFutureC3159 {
+public final class C12851 extends AbstractC6951 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public InterfaceC9511 f42753;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final C12851 f41154 = new C12851();
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public Future f42754;
-
-    public C12851(AbstractFutureC3159 abstractFutureC3159, InterfaceC9511 interfaceC9511) {
-        this.f42754 = abstractFutureC3159;
-        this.f42753 = interfaceC9511;
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo3133() {
+        return 3;
     }
 
-    @Override // java.util.concurrent.Future
-    public final boolean cancel(boolean z) {
-        return this.f42754.cancel(z);
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final String mo3134(AbstractC2476 abstractC2476) {
+        return abstractC2476.m43795().m31619get(0).m47904() + ", " + AbstractC6951.m19235((AbstractC24149) ((C18138) abstractC2476).m42255());
     }
 
-    @Override // java.util.concurrent.Future
-    public final boolean isCancelled() {
-        return this.f42754.isCancelled();
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final String mo3137(AbstractC2476 abstractC2476) {
+        return AbstractC6951.m19236((AbstractC24149) ((C18138) abstractC2476).m42255(), 32);
     }
 
-    @Override // java.util.concurrent.Future
-    public final boolean isDone() {
-        return this.f42754.isDone();
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo3138(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        if ((abstractC18884 instanceof C18138) && c0063M43795.size() == 1 && AbstractC6951.m19242(c0063M43795.m31619get(0).m47903())) {
+            AbstractC13487 abstractC13487M42255 = ((C18138) abstractC18884).m42255();
+            if (abstractC13487M42255 instanceof AbstractC24149) {
+                return ((AbstractC24149) abstractC13487M42255).mo17875();
+            }
+        }
+        return false;
     }
 
-    @Override // java.util.concurrent.Future
-    public final Object get() throws ExecutionException, InterruptedException {
-        return this.f42753.apply(this.f42754.get());
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final BitSet mo3135(AbstractC18884 abstractC18884) {
+        C0063 c0063M43795 = abstractC18884.m43795();
+        BitSet bitSet = new BitSet(1);
+        bitSet.set(0, AbstractC6951.m19242(c0063M43795.m31619get(0).m47903()));
+        return bitSet;
     }
 
-    @Override // java.util.concurrent.Future
-    public final Object get(long j, TimeUnit timeUnit) throws ExecutionException, InterruptedException, TimeoutException {
-        return this.f42753.apply(this.f42754.get(j, timeUnit));
+    @Override // l.AbstractC6951
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3136(C15000 c15000, AbstractC2476 abstractC2476) {
+        C0063 c0063M43795 = abstractC2476.m43795();
+        AbstractC6951.m19241(c15000, AbstractC6951.m19239(abstractC2476, c0063M43795.m31619get(0).m47903()), ((AbstractC24149) ((C18138) abstractC2476).m42255()).mo17877());
     }
 }

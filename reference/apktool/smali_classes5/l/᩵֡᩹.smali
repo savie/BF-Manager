@@ -1,17 +1,14 @@
-.class public final synthetic Ll/᩵֡᩹;
+.class public interface abstract Ll/᩵֡᩹;
 .super Ljava/lang/Object;
-.source "X5LN"
+.source "V1PV"
 
 # interfaces
-.implements Ljava/util/function/IntFunction;
+.implements Ljava/lang/Iterable;
 
 
 # virtual methods
-.method public final apply(I)Ljava/lang/Object;
-    .locals 0
+.method public abstract forEach(Ljava/util/function/IntConsumer;)V
+.end method
 
-    .line 402
-    new-array p1, p1, [Ljava/lang/CharSequence;
-
-    return-object p1
+.method public abstract iterator()Ll/ۛ֡᩹;
 .end method

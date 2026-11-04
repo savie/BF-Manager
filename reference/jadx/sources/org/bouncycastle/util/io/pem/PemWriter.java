@@ -3,8 +3,7 @@ package org.bouncycastle.util.io.pem;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
-import l.C0252;
-import l.C1694;
+import l.C12669;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Base64;
 
@@ -53,15 +52,15 @@ public class PemWriter extends BufferedWriter {
     }
 
     public int getOutputSize(PemObject pemObject) {
-        int iM1692 = C0252.m1692(pemObject.getType().length() + 10, this.nlLength, 2, 10);
+        int iM31441 = C12669.m31441(pemObject.getType().length() + 10, this.nlLength, 2, 10);
         if (!pemObject.getHeaders().isEmpty()) {
             for (PemHeader pemHeader : pemObject.getHeaders()) {
-                iM1692 += pemHeader.getValue().length() + pemHeader.getName().length() + 2 + this.nlLength;
+                iM31441 += pemHeader.getValue().length() + pemHeader.getName().length() + 2 + this.nlLength;
             }
-            iM1692 += this.nlLength;
+            iM31441 += this.nlLength;
         }
         int length = ((pemObject.getContent().length + 2) / 3) * 4;
-        return C1694.m5620((length + 63) / 64, this.nlLength, length, iM1692);
+        return C12669.m31436((length + 63) / 64, this.nlLength, length, iM31441);
     }
 
     public void writeObject(PemObjectGenerator pemObjectGenerator) throws IOException {

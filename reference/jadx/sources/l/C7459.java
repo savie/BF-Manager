@@ -1,50 +1,63 @@
 package l;
 
-import android.content.pm.PackageInfo;
-import com.google.android.material.color.utilities.DynamicScheme;
-import com.google.android.material.color.utilities.MaterialDynamicColors;
-import java.util.function.Function;
+import android.os.Build;
+import android.system.ErrnoException;
+import android.system.Os;
+import android.system.OsConstants;
+import android.system.StructStat;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.۟۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: B784 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7459 implements Function {
+/* JADX INFO: renamed from: l.ۜ᩹᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: Q6SD */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C7459 implements InterfaceC23473 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f24853;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final AbstractC2720 f24580;
 
-    public /* synthetic */ C7459(int i) {
-        this.f24853 = i;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final String f24581;
+
+    public C7459(AbstractC2720 abstractC2720) {
+        this.f24580 = abstractC2720;
+        this.f24581 = "file:".concat(C15022.m36182(C15022.m36179().digest(((C9431) abstractC2720).f30601.mo4294().getBytes(StandardCharsets.UTF_8))));
     }
 
-    @Override // java.util.function.Function
-    /* JADX INFO: renamed from: andThen */
-    public /* synthetic */ Function mo33696andThen(Function function) {
-        return C4277.$default$andThen(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public /* synthetic */ Function compose(Function function) {
-        return C4277.$default$compose(this, function);
-    }
-
-    @Override // java.util.function.Function
-    public final Object apply(Object obj) {
-        switch (this.f24853) {
-            case 0:
-                return ((C21601) obj).f70066;
-            case 1:
-                return new C14865(((C17367) obj).m40458());
-            case 2:
-                return ((PackageInfo) obj).packageName;
-            case 3:
-                return ((C4525) obj).f16107;
-            case 4:
-                return MaterialDynamicColors.lambda$neutralPaletteKeyColor$7((DynamicScheme) obj);
-            case 5:
-                return MaterialDynamicColors.lambda$inversePrimary$65((DynamicScheme) obj);
-            default:
-                return (String) ((C1321) obj).m4718();
+    @Override // l.InterfaceC23473
+    public final C16013 identity() throws IOException {
+        AbstractC2720 abstractC2720 = this.f24580;
+        AbstractC22044 abstractC22044 = ((C9431) abstractC2720).f30601;
+        if ((abstractC22044 instanceof C1161) || ((abstractC22044 instanceof C7302) && C14584.m35205(((C9431) abstractC2720).f30601.mo4294()))) {
+            String strM40200 = abstractC22044 instanceof C17063 ? ((C17063) abstractC22044).m40200() : ((C9431) abstractC2720).f30601.mo4294();
+            try {
+                Map attributes = C3445.readAttributes(C6429.of(strM40200, new String[0]), "unix:dev,ino,size,mode,lastModifiedTime,ctime", new EnumC20599[0]);
+                if ((((Number) attributes.get("mode")).intValue() & 61440) != 32768) {
+                    return new C16013(this.f24581, "", -1L, false);
+                }
+                return new C16013(this.f24581, attributes.get("dev") + ":" + attributes.get("ino") + ":" + attributes.get("lastModifiedTime") + ":" + attributes.get("ctime"), ((Number) attributes.get("size")).longValue(), true);
+            } catch (UnsupportedOperationException unused) {
+                if (Build.VERSION.SDK_INT >= 27) {
+                    try {
+                        StructStat structStatStat = Os.stat(strM40200);
+                        if (!OsConstants.S_ISREG(structStatStat.st_mode)) {
+                            return new C16013(this.f24581, "", -1L, false);
+                        }
+                        return new C16013(this.f24581, structStatStat.st_dev + ":" + structStatStat.st_ino + ":" + structStatStat.st_mtim.tv_sec + ":" + structStatStat.st_mtim.tv_nsec + ":" + structStatStat.st_ctim.tv_sec + ":" + structStatStat.st_ctim.tv_nsec, structStatStat.st_size, true);
+                    } catch (ErrnoException e) {
+                        throw new IOException("Cannot stat text source", e);
+                    }
+                }
+            }
         }
+        return new C16013(this.f24581, "", -1L, false);
+    }
+
+    @Override // l.InterfaceC23473
+    /* JADX INFO: renamed from: ۙ */
+    public final InputStream mo5931() {
+        return ((C9431) this.f24580).f30601.m49875();
     }
 }

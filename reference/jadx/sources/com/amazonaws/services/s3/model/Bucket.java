@@ -8,30 +8,30 @@ public class Bucket implements Serializable {
     public static final long serialVersionUID = -8646831898339939580L;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public String f540 = null;
+    public String f530 = null;
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public Owner f538 = null;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public Owner f529 = null;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public Date f539 = null;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public Date f528 = null;
 
     public final String toString() {
-        return "S3Bucket [name=" + this.f540 + ", creationDate=" + this.f539 + ", owner=" + this.f538 + "]";
+        return "S3Bucket [name=" + this.f530 + ", creationDate=" + this.f528 + ", owner=" + this.f529 + "]";
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m526(Owner owner) {
-        this.f538 = owner;
+    public final void m520(Owner owner) {
+        this.f529 = owner;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m528(Date date) {
-        this.f539 = date;
+    public final void m522(Date date) {
+        this.f528 = date;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m527(String str) {
-        this.f540 = str;
+    public final void m521(String str) {
+        this.f530 = str;
     }
 }

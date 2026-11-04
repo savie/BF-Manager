@@ -1,73 +1,26 @@
 package l;
 
-import java.util.Arrays;
+/* JADX INFO: renamed from: l.۠֫ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C8301 extends AbstractC9901 {
 
-/* JADX INFO: renamed from: l.۠ܽܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: R5DS */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8301 implements InterfaceC11849 {
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C22010 f27266;
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f28821;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f28822;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f28823;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int[] f28824;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21734(C17492 c17492, boolean z) {
-        this.f28822 = 0;
-        int[] iArr = this.f28824;
-        if (iArr != null) {
-            Arrays.fill(iArr, -1);
-        }
-        AbstractC5498 abstractC5498 = c17492.mLayout;
-        if (c17492.mAdapter == null || abstractC5498 == null || !abstractC5498.isItemPrefetchEnabled()) {
-            return;
-        }
-        if (z) {
-            if (!c17492.mAdapterHelper.m25166()) {
-                abstractC5498.collectInitialPrefetchPositions(c17492.mAdapter.getItemCount(), this);
-            }
-        } else if (!c17492.hasPendingAdapterUpdates()) {
-            abstractC5498.collectAdjacentPrefetchPositions(this.f28823, this.f28821, c17492.mState, this);
-        }
-        int i = this.f28822;
-        if (i > abstractC5498.mPrefetchMaxCountObserved) {
-            abstractC5498.mPrefetchMaxCountObserved = i;
-            abstractC5498.mPrefetchMaxObservedInInitialPrefetch = z;
-            c17492.mRecycler.m48489();
-        }
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C8301(AbstractC11781 abstractC11781, C22010 c22010) {
+        super(c22010, EnumC13603.f43215, abstractC11781, "static error");
+        this.f27266 = c22010;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m21733(int i, int i2) {
-        if (i < 0) {
-            throw new IllegalArgumentException("Layout positions must be non-negative");
-        }
-        if (i2 < 0) {
-            throw new IllegalArgumentException("Pixel distance must be non-negative");
-        }
-        int i3 = this.f28822;
-        int i4 = i3 * 2;
-        int[] iArr = this.f28824;
-        if (iArr == null) {
-            int[] iArr2 = new int[4];
-            this.f28824 = iArr2;
-            Arrays.fill(iArr2, -1);
-        } else if (i4 >= iArr.length) {
-            int[] iArr3 = new int[i3 * 4];
-            this.f28824 = iArr3;
-            System.arraycopy(iArr, 0, iArr3, 0, iArr.length);
-        }
-        int[] iArr4 = this.f28824;
-        iArr4[i4] = i;
-        iArr4[i4 + 1] = i2;
-        this.f28822++;
+    @Override // l.AbstractC2335
+    /* JADX INFO: renamed from: ۙ */
+    public C17007 mo3799(EnumC22229 enumC22229, InterfaceC5075 interfaceC5075, AbstractC11781 abstractC11781, AbstractC22664 abstractC22664, AbstractC19728 abstractC19728, C14769 c14769, C14769 c147610) {
+        AbstractC11781 abstractC11782 = this.f31828;
+        EnumC13603 enumC13603 = abstractC11782.f38066;
+        EnumC13603 enumC13604 = EnumC13603.f43213;
+        C22010 c22010 = this.f27266;
+        return c22010.f71000.m45978(enumC22229, c22010.f71001.m34514(), interfaceC5075, "non-static.cant.be.ref", C10925.m27726(abstractC11782), (enumC13603 == enumC13604 && abstractC11782.f38067.m51067(EnumC21172.CLASS)) ? c22010.f71021.m55132(abstractC11782.f38067).f73596 : abstractC11782);
     }
 }

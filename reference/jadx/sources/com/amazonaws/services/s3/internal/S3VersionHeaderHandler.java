@@ -6,7 +6,7 @@ import com.amazonaws.http.HttpResponse;
 public class S3VersionHeaderHandler implements HeaderHandler {
     @Override // com.amazonaws.services.s3.internal.HeaderHandler
     /* JADX INFO: renamed from: ۙ */
-    public final void mo463(Object obj, HttpResponse httpResponse) {
-        ((S3VersionResult) obj).mo478((String) httpResponse.m270().get("x-amz-version-id"));
+    public final void mo457(Object obj, HttpResponse httpResponse) {
+        ((S3VersionResult) obj).mo472((String) httpResponse.m263().get("x-amz-version-id"));
     }
 }

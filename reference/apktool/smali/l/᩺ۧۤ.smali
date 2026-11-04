@@ -1,42 +1,47 @@
-.class public final enum Ll/᩺ۧۤ;
-.super Ll/᩸ۧۤ;
-.source "6428"
+.class public final Ll/᩺ۧۤ;
+.super Ljava/lang/Object;
+.source "E67S"
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ILl/ᩴۡ۟;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 351
-    invoke-direct {p0, p1, p2, v0, p3}, Ll/᩸ۧۤ;-><init>(Ljava/lang/String;IILl/ᩴۡ۟;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ll/ᩴۡ۟;)V
-    .locals 2
-
-    const-string v0, "CONTINUE"
-
-    const/4 v1, 0x1
-
-    .line 0
-    invoke-direct {p0, v0, v1, p1}, Ll/᩺ۧۤ;-><init>(Ljava/lang/String;ILl/ᩴۡ۟;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll/᩸ۧۤ;
 
 
 # virtual methods
-.method public ۙ(Ll/ۡۡ۟;)Ll/ۡۡ۟;
-    .locals 0
+.method public final ۙ(Ll/ᩴܺۤ;)V
+    .locals 3
 
-    .line 354
-    check-cast p1, Ll/᩷۠۟;
+    .line 64
+    invoke-virtual {p1}, Ll/ᩴܺۤ;->᩷()Ljava/lang/Object;
 
-    iget-object p1, p1, Ll/᩷۠۟;->ܿ:Ll/ۡۡ۟;
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, Ll/ܰ֫ۤ;
+
+    invoke-virtual {v0}, Ll/ܰ֫ۤ;->ۧ()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    .line 65
+    new-instance v1, Ll/ܰ֫ۤ;
+
+    invoke-direct {v1}, Ll/ܰ֫ۤ;-><init>()V
+
+    .line 67
+    :try_start_0
+    new-instance v2, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v2, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    .line 68
+    invoke-virtual {v1, v2}, Ll/ܰ֫ۤ;->ۙ(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 71
+    :catch_0
+    invoke-virtual {p1, v1}, Ll/ᩴܺۤ;->ۙ(Ll/ܰ֫ۤ;)V
+
+    return-void
 .end method

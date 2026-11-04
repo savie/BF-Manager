@@ -7,7 +7,7 @@ import org.bouncycastle.asn1.BERTags;
 import org.bouncycastle.crypto.params.DHParameters;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DHStandardGroups {
     public static final BigInteger TWO = BigInteger.valueOf(2);
     public static final DHParameters rfc2409_1024;

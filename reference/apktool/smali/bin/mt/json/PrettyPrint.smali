@@ -87,17 +87,17 @@
 
 
 # virtual methods
-.method public createWriter(Ljava/io/Writer;)Ll/ۙ֨᩹;
+.method public createWriter(Ljava/io/Writer;)Ll/֨᩹ܳ;
     .locals 3
 
     .line 79
-    new-instance v0, Ll/ۨ֨᩹;
+    new-instance v0, Ll/ۖ᩹ܳ;
 
     iget-object v1, p0, Lbin/mt/json/PrettyPrint;->indentChars:[C
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Ll/ۨ֨᩹;-><init>(Ljava/io/Writer;[CLl/ܰ֨᩹;)V
+    invoke-direct {v0, p1, v1, v2}, Ll/ۖ᩹ܳ;-><init>(Ljava/io/Writer;[CLl/ۡ᩹ܳ;)V
 
     return-object v0
 .end method

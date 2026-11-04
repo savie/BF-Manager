@@ -1,84 +1,123 @@
 .class public final Ll/ۛܿۤ;
-.super Ll/ۜ᩵۟;
-.source "W7SR"
+.super Landroid/widget/BaseAdapter;
+.source "14V2"
 
 
 # instance fields
-.field public final synthetic ۚۙ:Ll/ۜ᩵۟;
+.field public final synthetic ܰ:Ll/᩺ܿۤ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ܰܶۤ;Ll/ۧ᩷۟;Ll/ۛ۠۟;Ll/᩸᩷۟;Ll/ۜ᩵۟;)V
+.method public constructor <init>(Ll/᩺ܿۤ;)V
     .locals 0
 
-    .line 174
-    iput-object p5, p0, Ll/ۛܿۤ;->ۚۙ:Ll/ۜ᩵۟;
+    .line 179
+    iput-object p1, p0, Ll/ۛܿۤ;->ܰ:Ll/᩺ܿۤ;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/ۜ᩵۟;-><init>(Ll/ܰܶۤ;Ll/ۧ᩷۟;Ll/ۛ۠۟;Ll/᩸᩷۟;)V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۘۙ()Ll/۬᩵۟;
+.method public final getCount()I
     .locals 1
 
-    .line 187
-    iget-object v0, p0, Ll/ۛܿۤ;->ۚۙ:Ll/ۜ᩵۟;
+    .line 183
+    iget-object v0, p0, Ll/ۛܿۤ;->ܰ:Ll/᩺ܿۤ;
 
-    invoke-virtual {v0}, Ll/ۜ᩵۟;->ۘۙ()Ll/۬᩵۟;
+    invoke-static {v0}, Ll/᩺ܿۤ;->ۙ(Ll/᩺ܿۤ;)Ljava/util/List;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final ۙ(Ll/۬᩵۟;)V
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final getItemId(I)J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
-    .line 177
-    iget-object v0, p0, Ll/ۛܿۤ;->ۚۙ:Ll/ۜ᩵۟;
+    .line 199
+    iget-object v0, p0, Ll/ۛܿۤ;->ܰ:Ll/᩺ܿۤ;
 
-    invoke-virtual {v0}, Ll/ۜ᩵۟;->ۘۙ()Ll/۬᩵۟;
+    if-nez p2, :cond_0
 
-    move-result-object v1
+    .line 200
+    invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    if-eqz v1, :cond_3
+    move-result-object p2
 
-    .line 178
-    sget-object v2, Ll/۬᩵۟;->᩶:Ll/۬᩵۟;
+    const v1, 0x7f0d0157
 
-    if-ne v1, v2, :cond_0
+    const/4 v2, 0x0
 
-    goto :goto_2
+    invoke-virtual {p2, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    :cond_0
-    if-eq v1, p1, :cond_2
+    move-result-object p2
 
-    if-ne p1, v2, :cond_1
+    .line 201
+    invoke-static {p2}, Ll/᩸ۤܺ;->ۙ(Landroid/view/View;)V
+
+    const p3, 0x7f0a0634
+
+    .line 202
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/TextView;
+
+    .line 203
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_1
-    const/4 p1, 0x0
+    .line 205
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object p3
 
-    :cond_2
+    check-cast p3, Landroid/widget/TextView;
+
+    .line 206
     :goto_0
-    const/4 p1, 0x1
+    invoke-static {v0}, Ll/᩺ܿۤ;->ۙ(Ll/᩺ܿۤ;)Ljava/util/List;
 
-    .line 181
-    :goto_1
-    invoke-static {p1}, Ll/ۛܽ;->ۙ(Z)V
+    move-result-object v0
 
-    return-void
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 179
-    :cond_3
-    :goto_2
-    invoke-virtual {v0, p1}, Ll/ۜ᩵۟;->ۙ(Ll/۬᩵۟;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Ll/ܿۙ᩸;
+
+    invoke-virtual {p1}, Ll/ܿۙ᩸;->᩸()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 207
+    invoke-virtual {p3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-object p2
 .end method

@@ -1,46 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.֨᩻ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6574 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C1453 extends AbstractC22433 {
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.ViewGroup;
 
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final transient int f5935;
+/* JADX INFO: renamed from: l.֨᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: W51Z */
+/* JADX INFO: loaded from: classes2.dex */
+public class C1453 extends ViewGroup.MarginLayoutParams {
 
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final transient Object[] f5936;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f5085;
 
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final transient int f5937;
-
-    @Override // l.AbstractC1826
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final boolean mo5042() {
-        return true;
+    public C1453(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f5085 = 0;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C10401.f33081);
+        this.f5085 = typedArrayObtainStyledAttributes.getInt(0, 0);
+        typedArrayObtainStyledAttributes.recycle();
     }
 
-    public C1453(int i, int i2, Object[] objArr) {
-        this.f5936 = objArr;
-        this.f5935 = i;
-        this.f5937 = i2;
+    public C1453(C1453 c1453) {
+        super((ViewGroup.MarginLayoutParams) c1453);
+        this.f5085 = 0;
+        this.f5085 = c1453.f5085;
     }
 
-    @Override // java.util.List
-    public final Object get(int i) {
-        C18304.m42510(i, this.f5937);
-        Object obj = this.f5936[(i * 2) + this.f5935];
-        C13638.requireNonNull(obj);
-        return obj;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
-    public final int size() {
-        return this.f5937;
-    }
-
-    @Override // l.AbstractC22433, l.AbstractC1826
-    public Object writeReplace() {
-        return super.writeReplace();
+    public C1453(ViewGroup.LayoutParams layoutParams) {
+        super(layoutParams);
+        this.f5085 = 0;
     }
 }

@@ -1,127 +1,110 @@
-.class public final synthetic Ll/ۛ۬ۚ;
+.class public final Ll/ۛ۬ۚ;
 .super Ljava/lang/Object;
-.source "B4S2"
+.source "H74N"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ll/֨ܺ֫;
 
 
 # instance fields
-.field public final synthetic ܺ:I
+.field public final ܰ:Ll/֨ܺ֫;
+
+.field public final ᩶:Ll/᩵۬ۚ;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ll/֨ܺ֫;Ll/᩵۬ۚ;)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/ۛ۬ۚ;->ܺ:I
-
+    .line 391
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 392
+    iput-object p1, p0, Ll/ۛ۬ۚ;->ܰ:Ll/֨ܺ֫;
+
+    .line 393
+    iput-object p2, p0, Ll/ۛ۬ۚ;->᩶:Ll/᩵۬ۚ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic andThen(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$andThen(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final close()V
     .locals 1
 
-    .line 2
-    iget v0, p0, Ll/ۛ۬ۚ;->ܺ:I
+    .line 419
+    iget-object v0, p0, Ll/ۛ۬ۚ;->ܰ:Ll/֨ܺ֫;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
 
-    .line 7
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
-
-    .line 10
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$i7yFulMZ_crcj_rLlYbSXafN8xU(Lcom/google/android/material/color/utilities/DynamicScheme;)Ljava/lang/Double;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 14
-    :pswitch_0
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
-
-    .line 17
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$ykEzX81RMA0xj2V1ffLKAi414P0(Lcom/google/android/material/color/utilities/DynamicScheme;)Ljava/lang/Double;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 21
-    :pswitch_1
-    check-cast p1, Lcom/google/android/material/color/utilities/DynamicScheme;
-
-    .line 24
-    invoke-static {p1}, Lcom/google/android/material/color/utilities/MaterialDynamicColors;->$r8$lambda$dz9IPP7ntcu3auPNCf7pu9j4bZ4(Lcom/google/android/material/color/utilities/DynamicScheme;)Lcom/google/android/material/color/utilities/TonalPalette;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 28
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    .line 1691
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p1
-
-    .line 0
-    :pswitch_3
-    check-cast p1, Ll/۬ۧ᩹;
-
-    invoke-virtual {p1}, Ll/۬ۧ᩹;->ܰ()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Ll/᩷۬ۚ;
-
-    invoke-virtual {p1}, Ll/᩷۬ۚ;->ۜ()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public synthetic compose(Ljava/util/function/Function;)Ljava/util/function/Function;
-    .locals 0
+.method public final length()J
+    .locals 2
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ۘ᩻ᩴ;->$default$compose(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/function/Function;
+    .line 399
+    :try_start_0
+    iget-object v0, p0, Ll/ۛ۬ۚ;->ܰ:Ll/֨ܺ֫;
 
-    move-result-object p1
+    invoke-interface {v0}, Ll/֨ܺ֫;->length()J
 
-    return-object p1
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-wide v0
+
+    :catch_0
+    move-exception v0
+
+    .line 401
+    iget-object v1, p0, Ll/ۛ۬ۚ;->᩶:Ll/᩵۬ۚ;
+
+    invoke-static {v1}, Ll/᩵۬ۚ;->᩷(Ll/᩵۬ۚ;)V
+
+    .line 402
+    new-instance v1, Ll/ۨ۬ۚ;
+
+    invoke-direct {v1, v0}, Ll/ۨ۬ۚ;-><init>(Ljava/io/IOException;)V
+
+    throw v1
+.end method
+
+.method public final ᩷(J[BII)V
+    .locals 6
+
+    .line 410
+    :try_start_0
+    iget-object v0, p0, Ll/ۛ۬ۚ;->ܰ:Ll/֨ܺ֫;
+
+    move-wide v1, p1
+
+    move-object v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    invoke-interface/range {v0 .. v5}, Ll/֨ܺ֫;->᩷(J[BII)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 412
+    iget-object p2, p0, Ll/ۛ۬ۚ;->᩶:Ll/᩵۬ۚ;
+
+    invoke-static {p2}, Ll/᩵۬ۚ;->᩷(Ll/᩵۬ۚ;)V
+
+    .line 413
+    new-instance p2, Ll/ۨ۬ۚ;
+
+    invoke-direct {p2, p1}, Ll/ۨ۬ۚ;-><init>(Ljava/io/IOException;)V
+
+    throw p2
 .end method

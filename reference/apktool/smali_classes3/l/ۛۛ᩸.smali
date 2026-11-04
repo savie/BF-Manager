@@ -1,33 +1,36 @@
-.class public final Ll/ۛۛ᩸;
-.super Ll/ᩴܿ᩸;
-.source "Y9EU"
+.class public final synthetic Ll/ۛۛ᩸;
+.super Ljava/lang/Object;
+.source "75NJ"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ܰ:Ll/᩺ۛ᩸;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/᩺ۛ᩸;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۛۛ᩸;->ܰ:Ll/᩺ۛ᩸;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final ۙ(Ll/ۡܿ᩸;)I
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    .line 65
-    check-cast p1, Ll/ۧۛ᩸;
+    .line 0
+    iget-object v0, p0, Ll/ۛۛ᩸;->ܰ:Ll/᩺ۛ᩸;
 
-    .line 73
-    iget-object p1, p1, Ll/᩻ۛ᩸;->᩶:[B
-
-    array-length p1, p1
-
-    return p1
-.end method
-
-.method public final ۙ(Ll/ۡܿ᩸;Ll/ܶܿ᩸;)V
-    .locals 0
-
-    .line 65
-    check-cast p1, Ll/ۧۛ᩸;
-
-    .line 78
-    iget-object p1, p1, Ll/᩻ۛ᩸;->᩶:[B
-
-    invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
+    invoke-static {v0}, Ll/᩺ۛ᩸;->ۙ(Ll/᩺ۛ᩸;)V
 
     return-void
 .end method

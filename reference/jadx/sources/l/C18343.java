@@ -1,15 +1,19 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import android.os.Build;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputConnection;
 
-/* JADX INFO: renamed from: l.ᩳ᩹ۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: W1FC */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C18343 extends C8466 {
-    @Override // l.C8466
-    /* JADX INFO: renamed from: ۙ */
-    public final String mo13720(InterfaceC9961 interfaceC9961) {
-        int iMo25192 = interfaceC9961.mo25192();
-        return (iMo25192 == 1 || iMo25192 == 2 || iMo25192 == 3) ? MotionUtils.EASING_TYPE_PATH : C7054.m18902(interfaceC9961);
+/* JADX INFO: renamed from: l.ܿ۬, reason: contains not printable characters */
+/* JADX INFO: compiled from: 33S4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18343 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static InputConnection m42791(C13801 c13801, InputConnection inputConnection, EditorInfo editorInfo) {
+        C5087 c5087 = new C5087(1, c13801);
+        if (Build.VERSION.SDK_INT >= 25) {
+            return new C14613(inputConnection, c5087);
+        }
+        return C4173.m13343(editorInfo).length == 0 ? inputConnection : new C21327(inputConnection, c5087);
     }
 }

@@ -1,40 +1,41 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩷᩸۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: F42B */
-/* JADX INFO: loaded from: classes4.dex */
-public final /* synthetic */ class C21140 {
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f68857;
+/* JADX INFO: renamed from: l.᩶ۜ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: 81ZE */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C21140 extends FilterInputStream implements InterfaceC8469 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f68858;
+    public final /* synthetic */ C22941 f67521;
 
-    static {
-        int[] iArr = new int[EnumC10477.values().length];
-        f68857 = iArr;
-        try {
-            iArr[EnumC10477.f35867.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20528 f67522;
+
+    @Override // java.io.InputStream, l.InterfaceC8469
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C9214.transferTo(this, outputStream);
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C21140(InputStream inputStream, C20528 c20528, C22941 c22941) {
+        super(inputStream);
+        this.f67522 = c20528;
+        this.f67521 = c22941;
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        super.close();
+        C20528 c20528 = this.f67522;
+        C22941 c22941 = this.f67521;
+        if (c20528.m47060(c22941)) {
+            return;
         }
-        try {
-            f68857[EnumC10477.f35868.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        int[] iArr2 = new int[EnumC11927.values().length];
-        f68858 = iArr2;
-        try {
-            iArr2[EnumC11927.REQUIRES.ordinal()] = 1;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f68858[EnumC11927.EXPORTS.ordinal()] = 2;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f68858[EnumC11927.OPENS.ordinal()] = 3;
-        } catch (NoSuchFieldError unused5) {
-        }
+        C20244.m46520(c22941);
     }
 }

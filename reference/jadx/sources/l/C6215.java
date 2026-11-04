@@ -1,35 +1,38 @@
 package l;
 
-import android.os.Build;
-
-/* JADX INFO: renamed from: l.ۛᩳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N5WY */
+/* JADX INFO: renamed from: l.ۛۜ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M4Z7 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6215 extends AbstractC22629 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C22316 f21110;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int[] f21111 = null;
-
+public final class C6215 {
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m17218(int... iArr) {
-        this.f21111 = iArr;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m17217(C22316 c22316) {
-        this.f21110 = c22316;
-    }
-
-    @Override // l.AbstractC22629
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void mo17216(InterfaceC4989 interfaceC4989) {
-        if (Build.VERSION.SDK_INT >= 34) {
-            C12566.m31278(interfaceC4989.mo13816(), C12566.m31277(C17504.m40766(C12566.m31276(), null, 0, null, Boolean.FALSE), this.f21111, this.f21110));
-        } else {
-            C12566.m31278(interfaceC4989.mo13816(), C12566.m31277(C12566.m31276(), this.f21111, this.f21110));
+    public static int m17849(int i) {
+        if (i == 1) {
+            return 0;
         }
+        if (i == 2) {
+            return 1;
+        }
+        if (i == 4) {
+            return 2;
+        }
+        if (i == 8) {
+            return 3;
+        }
+        if (i == 16) {
+            return 4;
+        }
+        if (i == 32) {
+            return 5;
+        }
+        if (i == 64) {
+            return 6;
+        }
+        if (i == 128) {
+            return 7;
+        }
+        if (i == 256) {
+            return 8;
+        }
+        throw new IllegalArgumentException(C13645.m33382(i, "type needs to be >= FIRST and <= LAST, type="));
     }
 }

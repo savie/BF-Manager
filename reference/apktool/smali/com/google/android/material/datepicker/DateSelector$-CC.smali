@@ -91,11 +91,11 @@
     aget-object p0, p0, v2
 
     .line 151
-    new-instance v0, Ll/ᩴۘ᩹;
+    new-instance v0, Ll/ܳۤۧ;
 
-    const/4 v1, 0x6
+    const/4 v1, 0x4
 
-    invoke-direct {v0, v1, p0}, Ll/ᩴۘ᩹;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll/ܳۤۧ;-><init>(ILjava/lang/Object;)V
 
     const-wide/16 v1, 0x64
 

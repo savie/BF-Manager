@@ -1,12 +1,26 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩶ۛۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J6NM */
+/* JADX INFO: renamed from: l.ᩴܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19979 implements InterfaceC7112 {
-    @Override // l.InterfaceC7112
+public final enum C19979 extends EnumC14757 {
+    public /* synthetic */ C19979() {
+        this("FORMAT_3RC", 27);
+    }
+
+    public C19979(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC14757
     /* JADX INFO: renamed from: ۙ */
-    public final void mo11516(CharSequence charSequence, C12052 c12052, C18503 c18503) {
-        C5306.m14726(charSequence, c12052, C15746.f51050, false, c18503);
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        return EnumC14757.m35474(this, i, null);
+    }
+
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        EnumC14757.m35458(abstractC3659, (InterfaceC23797) null);
     }
 }

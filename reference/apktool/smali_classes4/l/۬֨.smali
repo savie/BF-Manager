@@ -1,45 +1,85 @@
 .class public final Ll/۬֨;
-.super Ll/᩺֨;
-.source "Y22J"
+.super Ll/ۜ֨;
+.source "R5O3"
 
 
 # instance fields
-.field public final ۙ:Ll/ۘ֫ܰ;
+.field public final ۤ:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۘ֫ܰ;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    .line 351
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 123
+    invoke-direct {p0, p1}, Ll/ۜ֨;-><init>(I)V
 
-    .line 430
-    iput-object p1, p0, Ll/۬֨;->ۙ:Ll/ۘ֫ܰ;
+    .line 124
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/۬֨;->ۤ:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۖ()V
-    .locals 1
+.method public final ۙ()Ljava/lang/Object;
+    .locals 2
 
-    .line 440
-    iget-object v0, p0, Ll/۬֨;->ۙ:Ll/ۘ֫ܰ;
+    .line 126
+    iget-object v0, p0, Ll/۬֨;->ۤ:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ll/ۘ֫ܰ;->stop()V
+    monitor-enter v0
 
-    return-void
+    :try_start_0
+    invoke-super {p0}, Ll/ۜ֨;->ۙ()Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
 .end method
 
-.method public final ۨ()V
+.method public final ۙ(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 435
-    iget-object v0, p0, Ll/۬֨;->ۙ:Ll/ۘ֫ܰ;
+    const-string v0, "instance"
 
-    invoke-virtual {v0}, Ll/ۘ֫ܰ;->start()V
+    .line 130
+    invoke-static {p1, v0}, Ll/ܳۡ᩵;->ۤ(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-void
+    iget-object v0, p0, Ll/۬֨;->ۤ:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-super {p0, p1}, Ll/ۜ֨;->ۙ(Ljava/lang/Object;)Z
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+
+    throw p1
 .end method

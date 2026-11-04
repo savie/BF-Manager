@@ -13,8 +13,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.interfaces.DHKey;
 import javax.crypto.interfaces.DHPrivateKey;
 import javax.crypto.interfaces.DHPublicKey;
-import l.C0252;
-import l.C12441;
+import l.C12669;
+import l.C25272;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.crypto.BufferedBlockCipher;
 import org.bouncycastle.crypto.CipherParameters;
@@ -49,7 +49,7 @@ import org.bouncycastle.jce.spec.IESParameterSpec;
 import org.bouncycastle.util.BigIntegers;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class IESCipher extends BaseCipherSpi {
     public ByteArrayOutputStream buffer;
     public boolean dhaesMode;
@@ -291,7 +291,7 @@ public class IESCipher extends BaseCipherSpi {
         byte[] nonce = this.engineSpec.getNonce();
         int i2 = this.ivLength;
         if (i2 != 0 && (nonce == null || nonce.length != i2)) {
-            throw new InvalidAlgorithmParameterException(C12441.m30911(this.ivLength, " bytes long", new StringBuilder("NONCE in IES Parameters needs to be ")));
+            throw new InvalidAlgorithmParameterException(C12669.m31437(this.ivLength, " bytes long", new StringBuilder("NONCE in IES Parameters needs to be ")));
         }
         if (i == 1 || i == 3) {
             if (key instanceof DHPublicKey) {
@@ -356,7 +356,7 @@ public class IESCipher extends BaseCipherSpi {
             z = false;
         } else {
             if (!upperCase.equals("DHAES")) {
-                throw new IllegalArgumentException(C0252.m1693("can't support mode ", str));
+                throw new IllegalArgumentException(C25272.m56409("can't support mode ", str));
             }
             z = true;
         }

@@ -1,22 +1,20 @@
-.class public final Ll/ۡ֨ۤ;
+.class public interface abstract Ll/ۡ֨ۤ;
 .super Ljava/lang/Object;
-.source "0CLW"
+.source "44W5"
 
 
-# static fields
-.field public static final ۙ:Ll/ۤ֨ۤ;
+# virtual methods
+.method public abstract ۙ()Ll/᩷ۨᩴ;
+.end method
 
+.method public abstract ۙ(Ll/᩷ۨᩴ;)V
+.end method
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public abstract ۤ()Ljava/lang/String;
+.end method
 
-    .line 143
-    new-instance v0, Ll/ۤ֨ۤ;
+.method public abstract ᩷()Ll/ܽ֡֫;
+.end method
 
-    invoke-direct {v0}, Ll/ۤ֨ۤ;-><init>()V
-
-    sput-object v0, Ll/ۡ֨ۤ;->ۙ:Ll/ۤ֨ۤ;
-
-    return-void
+.method public abstract ᩸()Ll/᩷ۨᩴ;
 .end method

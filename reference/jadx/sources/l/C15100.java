@@ -1,24 +1,12 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܶ۠ۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: I8HD */
-/* JADX INFO: loaded from: classes4.dex */
-public class C15100 extends Exception {
+import java.util.EnumSet;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final int f49319;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final long f49320;
-
-    public C15100(String str, Throwable th, int i, long j) {
-        super(str, th);
-        this.f49319 = i;
-        this.f49320 = j;
-    }
-
-    static {
-        C9023.m23358(0, 1, 2, 3, 4);
-        C17983.m41806(5);
+/* JADX INFO: renamed from: l.ܳۙۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W7SR */
+/* JADX INFO: loaded from: classes5.dex */
+public class C15100 extends AbstractC13886 {
+    public C15100() {
+        super(EnumSet.of(EnumC21461.f68492, EnumC21461.f68530, EnumC21461.f68510, EnumC21461.f68513, EnumC21461.f68473, EnumC21461.f68549, EnumC21461.f68449, EnumC21461.f68511, EnumC21461.f68544, EnumC21461.f68456, EnumC21461.f68524, EnumC21461.f68481));
     }
 }

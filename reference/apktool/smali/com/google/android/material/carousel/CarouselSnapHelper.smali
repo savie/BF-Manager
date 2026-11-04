@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/carousel/CarouselSnapHelper;
-.super Ll/ۗܿܰ;
+.super Ll/ۨᩳ᩷;
 .source "CarouselSnapHelper.java"
 
 
@@ -12,7 +12,7 @@
 # instance fields
 .field public final disableFling:Z
 
-.field public recyclerView:Ll/ܿܿܰ;
+.field public recyclerView:Ll/᩻ᩳ᩷;
 
 
 # direct methods
@@ -31,7 +31,7 @@
     .locals 0
 
     .line 48
-    invoke-direct {p0}, Ll/ۗܿܰ;-><init>()V
+    invoke-direct {p0}, Ll/ۨᩳ᩷;-><init>()V
 
     .line 49
     iput-boolean p1, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->disableFling:Z
@@ -39,27 +39,27 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/google/android/material/carousel/CarouselSnapHelper;)Ll/ܿܿܰ;
+.method public static synthetic access$000(Lcom/google/android/material/carousel/CarouselSnapHelper;)Ll/᩻ᩳ᩷;
     .locals 0
 
     .line 35
-    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/ܿܿܰ;
+    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/᩻ᩳ᩷;
 
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/carousel/CarouselSnapHelper;Ll/ۚܿܰ;Landroid/view/View;Z)[I
+.method public static synthetic access$100(Lcom/google/android/material/carousel/CarouselSnapHelper;Ll/᩶۟᩷;Landroid/view/View;Z)[I
     .locals 0
 
     .line 35
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselSnapHelper;->calculateDistanceToSnap(Ll/ۚܿܰ;Landroid/view/View;Z)[I
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselSnapHelper;->calculateDistanceToSnap(Ll/᩶۟᩷;Landroid/view/View;Z)[I
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private calculateDistanceToSnap(Ll/ۚܿܰ;Landroid/view/View;Z)[I
+.method private calculateDistanceToSnap(Ll/᩶۟᩷;Landroid/view/View;Z)[I
     .locals 2
 
     .line 69
@@ -88,7 +88,7 @@
     move-result p2
 
     .line 75
-    invoke-virtual {p1}, Ll/ۚܿܰ;->canScrollHorizontally()Z
+    invoke-virtual {p1}, Ll/᩶۟᩷;->canScrollHorizontally()Z
 
     move-result p3
 
@@ -103,7 +103,7 @@
 
     .line 79
     :cond_1
-    invoke-virtual {p1}, Ll/ۚܿܰ;->canScrollVertically()Z
+    invoke-virtual {p1}, Ll/᩶۟᩷;->canScrollVertically()Z
 
     move-result p1
 
@@ -129,7 +129,7 @@
     .locals 0
 
     .line 88
-    invoke-virtual {p2, p1}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p2, p1}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
@@ -141,11 +141,11 @@
     return p1
 .end method
 
-.method private findViewNearestFirstKeyline(Ll/ۚܿܰ;)Landroid/view/View;
+.method private findViewNearestFirstKeyline(Ll/᩶۟᩷;)Landroid/view/View;
     .locals 8
 
     .line 106
-    invoke-virtual {p1}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p1}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v0
 
@@ -176,12 +176,12 @@
     if-ge v5, v0, :cond_2
 
     .line 115
-    invoke-virtual {p1, v5}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v5}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
     .line 116
-    invoke-virtual {p1, v6}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p1, v6}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result v7
 
@@ -210,11 +210,11 @@
     return-object v1
 .end method
 
-.method private isForwardFling(Ll/ۚܿܰ;II)Z
+.method private isForwardFling(Ll/᩶۟᩷;II)Z
     .locals 2
 
     .line 197
-    invoke-virtual {p1}, Ll/ۚܿܰ;->canScrollHorizontally()Z
+    invoke-virtual {p1}, Ll/᩶۟᩷;->canScrollHorizontally()Z
 
     move-result p1
 
@@ -240,30 +240,30 @@
     return v0
 .end method
 
-.method private isReverseLayout(Ll/ۚܿܰ;)Z
+.method private isReverseLayout(Ll/᩶۟᩷;)Z
     .locals 4
 
     .line 208
-    invoke-virtual {p1}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p1}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
     .line 209
-    instance-of v1, p1, Ll/۟ܿܰ;
+    instance-of v1, p1, Ll/᩸ᩳ᩷;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_2
 
     .line 210
-    check-cast p1, Ll/۟ܿܰ;
+    check-cast p1, Ll/᩸ᩳ᩷;
 
     const/4 v1, 0x1
 
     sub-int/2addr v0, v1
 
     .line 212
-    invoke-interface {p1, v0}, Ll/۟ܿܰ;->computeScrollVectorForPosition(I)Landroid/graphics/PointF;
+    invoke-interface {p1, v0}, Ll/᩸ᩳ᩷;->computeScrollVectorForPosition(I)Landroid/graphics/PointF;
 
     move-result-object p1
 
@@ -299,49 +299,49 @@
 
 
 # virtual methods
-.method public attachToRecyclerView(Ll/ܿܿܰ;)V
+.method public attachToRecyclerView(Ll/᩻ᩳ᩷;)V
     .locals 0
 
     .line 54
-    invoke-super {p0, p1}, Ll/ۗܿܰ;->attachToRecyclerView(Ll/ܿܿܰ;)V
+    invoke-super {p0, p1}, Ll/ۨᩳ᩷;->attachToRecyclerView(Ll/᩻ᩳ᩷;)V
 
     .line 55
-    iput-object p1, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/ܿܿܰ;
+    iput-object p1, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/᩻ᩳ᩷;
 
     return-void
 .end method
 
-.method public calculateDistanceToFinalSnap(Ll/ۚܿܰ;Landroid/view/View;)[I
+.method public calculateDistanceToFinalSnap(Ll/᩶۟᩷;Landroid/view/View;)[I
     .locals 1
 
     const/4 v0, 0x0
 
     .line 62
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/carousel/CarouselSnapHelper;->calculateDistanceToSnap(Ll/ۚܿܰ;Landroid/view/View;Z)[I
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/carousel/CarouselSnapHelper;->calculateDistanceToSnap(Ll/᩶۟᩷;Landroid/view/View;Z)[I
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public createScroller(Ll/ۚܿܰ;)Ll/᩷ܿܰ;
+.method public createScroller(Ll/᩶۟᩷;)Ll/ᩴᩳ᩷;
     .locals 2
 
     .line 231
-    instance-of v0, p1, Ll/۟ܿܰ;
+    instance-of v0, p1, Ll/᩸ᩳ᩷;
 
     if-eqz v0, :cond_0
 
     .line 232
     new-instance v0, Lcom/google/android/material/carousel/CarouselSnapHelper$1;
 
-    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/ܿܿܰ;
+    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselSnapHelper;->recyclerView:Ll/᩻ᩳ᩷;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper$1;-><init>(Lcom/google/android/material/carousel/CarouselSnapHelper;Landroid/content/Context;Ll/ۚܿܰ;)V
+    invoke-direct {v0, p0, v1, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper$1;-><init>(Lcom/google/android/material/carousel/CarouselSnapHelper;Landroid/content/Context;Ll/᩶۟᩷;)V
 
     return-object v0
 
@@ -351,18 +351,18 @@
     return-object p1
 .end method
 
-.method public findSnapView(Ll/ۚܿܰ;)Landroid/view/View;
+.method public findSnapView(Ll/᩶۟᩷;)Landroid/view/View;
     .locals 0
 
     .line 94
-    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper;->findViewNearestFirstKeyline(Ll/ۚܿܰ;)Landroid/view/View;
+    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper;->findViewNearestFirstKeyline(Ll/᩶۟᩷;)Landroid/view/View;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public findTargetSnapPosition(Ll/ۚܿܰ;II)I
+.method public findTargetSnapPosition(Ll/᩶۟᩷;II)I
     .locals 11
 
     .line 131
@@ -376,7 +376,7 @@
 
     .line 135
     :cond_0
-    invoke-virtual {p1}, Ll/ۚܿܰ;->getItemCount()I
+    invoke-virtual {p1}, Ll/᩶۟᩷;->getItemCount()I
 
     move-result v0
 
@@ -386,7 +386,7 @@
 
     .line 148
     :cond_1
-    invoke-virtual {p1}, Ll/ۚܿܰ;->getChildCount()I
+    invoke-virtual {p1}, Ll/᩶۟᩷;->getChildCount()I
 
     move-result v2
 
@@ -412,7 +412,7 @@
     if-ge v8, v2, :cond_5
 
     .line 150
-    invoke-virtual {p1, v8}, Ll/ۚܿܰ;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v8}, Ll/᩶۟᩷;->getChildAt(I)Landroid/view/View;
 
     move-result-object v9
 
@@ -456,7 +456,7 @@
 
     .line 171
     :cond_5
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselSnapHelper;->isForwardFling(Ll/ۚܿܰ;II)Z
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/carousel/CarouselSnapHelper;->isForwardFling(Ll/᩶۟᩷;II)Z
 
     move-result p2
 
@@ -465,7 +465,7 @@
     if-eqz v4, :cond_6
 
     .line 173
-    invoke-virtual {p1, v4}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p1, v4}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
@@ -477,7 +477,7 @@
     if-eqz v5, :cond_7
 
     .line 175
-    invoke-virtual {p1, v5}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p1, v5}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p1
 
@@ -495,12 +495,12 @@
 
     .line 185
     :cond_9
-    invoke-virtual {p1, v4}, Ll/ۚܿܰ;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p1, v4}, Ll/᩶۟᩷;->getPosition(Landroid/view/View;)I
 
     move-result p3
 
     .line 187
-    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper;->isReverseLayout(Ll/ۚܿܰ;)Z
+    invoke-direct {p0, p1}, Lcom/google/android/material/carousel/CarouselSnapHelper;->isReverseLayout(Ll/᩶۟᩷;)Z
 
     move-result p1
 

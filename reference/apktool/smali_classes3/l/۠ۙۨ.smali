@@ -1,50 +1,24 @@
 .class public final Ll/۠ۙۨ;
 .super Ljava/lang/Object;
-.source "B6YZ"
+.source "SAM1"
 
 
-# instance fields
-.field public final ۙ:Lorg/chromium/support_lib_boundary/WebkitToCompatConverterBoundaryInterface;
+# static fields
+.field public static final ۙ:Ll/ۜ᩷ۨ;
 
 
 # direct methods
-.method public constructor <init>(Lorg/chromium/support_lib_boundary/WebkitToCompatConverterBoundaryInterface;)V
-    .locals 0
-
-    .line 50
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 51
-    iput-object p1, p0, Ll/۠ۙۨ;->ۙ:Lorg/chromium/support_lib_boundary/WebkitToCompatConverterBoundaryInterface;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(Landroid/webkit/WebSettings;)Ll/ۚۙۨ;
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 60
-    new-instance v0, Ll/ۚۙۨ;
+    .line 12
+    new-instance v0, Ll/ۜ᩷ۨ;
 
-    iget-object v1, p0, Ll/۠ۙۨ;->ۙ:Lorg/chromium/support_lib_boundary/WebkitToCompatConverterBoundaryInterface;
+    const-string v1, "NULL"
 
-    .line 61
-    invoke-interface {v1, p1}, Lorg/chromium/support_lib_boundary/WebkitToCompatConverterBoundaryInterface;->convertSettings(Landroid/webkit/WebSettings;)Ljava/lang/reflect/InvocationHandler;
+    invoke-direct {v0, v1}, Ll/ۜ᩷ۨ;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    sput-object v0, Ll/۠ۙۨ;->ۙ:Ll/ۜ᩷ۨ;
 
-    .line 60
-    const-class v1, Lorg/chromium/support_lib_boundary/WebSettingsBoundaryInterface;
-
-    invoke-static {v1, p1}, Ll/ܶᩴ᩵;->ۙ(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lorg/chromium/support_lib_boundary/WebSettingsBoundaryInterface;
-
-    invoke-direct {v0, p1}, Ll/ۚۙۨ;-><init>(Ljava/lang/Object;)V
-
-    return-object v0
+    return-void
 .end method

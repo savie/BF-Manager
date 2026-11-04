@@ -12,9 +12,9 @@
     .locals 1
 
     .line 0
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
     sput-object v0, Lcom/alipay/sdk/m/f0/d;->a:Ljava/util/Map;
 

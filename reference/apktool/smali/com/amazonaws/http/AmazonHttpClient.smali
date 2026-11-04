@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static final ۖ:Lcom/amazonaws/logging/Log;
+.field public static final ᩴ:Lcom/amazonaws/logging/Log;
 
-.field public static final ۚ:Lcom/amazonaws/logging/Log;
+.field public static final ᩸:Lcom/amazonaws/logging/Log;
 
 
 # instance fields
 .field public final ۙ:Lcom/amazonaws/ClientConfiguration;
 
-.field public final ۨ:Lcom/amazonaws/http/HttpRequestFactory;
+.field public final ۤ:Lcom/amazonaws/http/HttpRequestFactory;
 
-.field public final ܰ:Lcom/amazonaws/http/UrlHttpClient;
+.field public final ᩷:Lcom/amazonaws/http/UrlHttpClient;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ۖ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/http/AmazonHttpClient;->᩸:Lcom/amazonaws/logging/Log;
 
     .line 88
     const-class v0, Lcom/amazonaws/http/AmazonHttpClient;
@@ -37,7 +37,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ۚ:Lcom/amazonaws/logging/Log;
+    sput-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ᩴ:Lcom/amazonaws/logging/Log;
 
     return-void
 .end method
@@ -53,13 +53,13 @@
 
     invoke-direct {v0}, Lcom/amazonaws/http/HttpRequestFactory;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/http/AmazonHttpClient;->ۨ:Lcom/amazonaws/http/HttpRequestFactory;
+    iput-object v0, p0, Lcom/amazonaws/http/AmazonHttpClient;->ۤ:Lcom/amazonaws/http/HttpRequestFactory;
 
     .line 145
     iput-object p1, p0, Lcom/amazonaws/http/AmazonHttpClient;->ۙ:Lcom/amazonaws/ClientConfiguration;
 
     .line 146
-    iput-object p2, p0, Lcom/amazonaws/http/AmazonHttpClient;->ܰ:Lcom/amazonaws/http/UrlHttpClient;
+    iput-object p2, p0, Lcom/amazonaws/http/AmazonHttpClient;->᩷:Lcom/amazonaws/http/UrlHttpClient;
 
     return-void
 .end method
@@ -79,7 +79,7 @@
     move-result-wide p0
 
     .line 769
-    sget-object p3, Lcom/amazonaws/http/AmazonHttpClient;->ۚ:Lcom/amazonaws/logging/Log;
+    sget-object p3, Lcom/amazonaws/http/AmazonHttpClient;->ᩴ:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p3}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -106,7 +106,7 @@
 
     move-result-object p2
 
-    invoke-interface {p3, p2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p3, p2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 775
     :cond_0
@@ -150,7 +150,7 @@
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
     .line 810
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p0
 
@@ -298,9 +298,9 @@
 
     move-result-object p0
 
-    sget-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ۚ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ᩴ:Lcom/amazonaws/logging/Log;
 
-    invoke-interface {v0, p0, p1}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v0, p0, p1}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     const-wide/16 p0, 0x0
 
@@ -313,7 +313,7 @@
     const-string v0, "Received error response: "
 
     .line 707
-    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v1
 
@@ -326,7 +326,7 @@
     check-cast p1, Lcom/amazonaws/AmazonServiceException;
 
     .line 712
-    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->᩸:Lcom/amazonaws/logging/Log;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -342,7 +342,7 @@
 
     move-result-object v0
 
-    invoke-interface {v2, v0}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v0}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -363,11 +363,11 @@
     invoke-direct {p1, p2}, Lcom/amazonaws/AmazonServiceException;-><init>(Ljava/lang/String;)V
 
     .line 718
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->۬()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۚ()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Lcom/amazonaws/AmazonServiceException;->ۖ(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/amazonaws/AmazonServiceException;->᩸(Ljava/lang/String;)V
 
     .line 719
     invoke-virtual {p1, v0}, Lcom/amazonaws/AmazonServiceException;->ۙ(I)V
@@ -388,7 +388,7 @@
     const-string v2, "Service Unavailable"
 
     .line 723
-    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ۚ()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ᩴ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -406,11 +406,11 @@
     invoke-direct {p1, p2}, Lcom/amazonaws/AmazonServiceException;-><init>(Ljava/lang/String;)V
 
     .line 725
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->۬()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۚ()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Lcom/amazonaws/AmazonServiceException;->ۖ(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/amazonaws/AmazonServiceException;->᩸(Ljava/lang/String;)V
 
     .line 726
     invoke-virtual {p1, v0}, Lcom/amazonaws/AmazonServiceException;->ۙ(I)V
@@ -426,11 +426,11 @@
     invoke-virtual {p1, v1}, Lcom/amazonaws/AmazonServiceException;->ۙ(I)V
 
     .line 741
-    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->۬()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/DefaultRequest;->ۚ()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lcom/amazonaws/AmazonServiceException;->ۖ(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Lcom/amazonaws/AmazonServiceException;->᩸(Ljava/lang/String;)V
 
     .line 742
     invoke-virtual {p1}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
@@ -473,7 +473,7 @@
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 734
-    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ۚ()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ᩴ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -484,7 +484,7 @@
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 735
-    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p2}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p2
 
@@ -520,9 +520,9 @@
     move-result-object p2
 
     .line 659
-    sget-object v3, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۨۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v3, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۤۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {p2, v3}, Lcom/amazonaws/util/AWSRequestMetrics;->ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {p2, v3}, Lcom/amazonaws/util/AWSRequestMetrics;->ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -544,7 +544,7 @@
     if-eqz p0, :cond_1
 
     .line 673
-    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->᩸:Lcom/amazonaws/logging/Log;
 
     invoke-interface {v2}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -557,7 +557,7 @@
 
     invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v1
 
@@ -579,11 +579,11 @@
     move-result-object v1
 
     .line 674
-    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 677
     :cond_0
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceResponse;->ۙ()Ljava/lang/String;
 
@@ -592,7 +592,7 @@
     invoke-virtual {p2, v1, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 679
-    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceResponse;->ܰ()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/amazonaws/AmazonWebServiceResponse;->᩷()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -607,7 +607,7 @@
     invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 669
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v1
 
@@ -616,7 +616,7 @@
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 670
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ᩴ()Ljava/lang/String;
 
     move-result-object v1
 
@@ -634,7 +634,7 @@
     move-exception p0
 
     .line 663
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۨۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۤۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {p2, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
@@ -665,7 +665,7 @@
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 687
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v1
 
@@ -673,7 +673,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ۚ()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amazonaws/http/HttpResponse;->ᩴ()Ljava/lang/String;
 
     move-result-object p1
 
@@ -812,7 +812,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 601
-    invoke-virtual {p5}, Lcom/amazonaws/retry/RetryPolicy;->ܰ()I
+    invoke-virtual {p5}, Lcom/amazonaws/retry/RetryPolicy;->᩷()I
 
     move-result p1
 
@@ -833,7 +833,7 @@
     if-nez p1, :cond_2
 
     .line 611
-    sget-object p1, Lcom/amazonaws/http/AmazonHttpClient;->ۚ:Lcom/amazonaws/logging/Log;
+    sget-object p1, Lcom/amazonaws/http/AmazonHttpClient;->ᩴ:Lcom/amazonaws/logging/Log;
 
     invoke-interface {p1}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -844,7 +844,7 @@
     const-string p2, "Content not repeatable"
 
     .line 612
-    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -852,7 +852,7 @@
 
     .line 619
     :cond_2
-    invoke-virtual {p5}, Lcom/amazonaws/retry/RetryPolicy;->ۨ()Lcom/amazonaws/retry/RetryPolicy$RetryCondition;
+    invoke-virtual {p5}, Lcom/amazonaws/retry/RetryPolicy;->ۤ()Lcom/amazonaws/retry/RetryPolicy$RetryCondition;
 
     move-result-object p1
 
@@ -867,12 +867,12 @@
     .locals 2
 
     .line 625
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v0
 
     .line 626
-    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object p0
 
@@ -913,7 +913,7 @@
     .locals 1
 
     .line 574
-    iget-object v0, p0, Lcom/amazonaws/http/AmazonHttpClient;->ܰ:Lcom/amazonaws/http/UrlHttpClient;
+    iget-object v0, p0, Lcom/amazonaws/http/AmazonHttpClient;->᩷:Lcom/amazonaws/http/UrlHttpClient;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -927,7 +927,7 @@
     .locals 5
 
     .line 259
-    invoke-virtual {p4}, Lcom/amazonaws/http/ExecutionContext;->ۨ()Ljava/util/List;
+    invoke-virtual {p4}, Lcom/amazonaws/http/ExecutionContext;->ۤ()Ljava/util/List;
 
     move-result-object v0
 
@@ -968,7 +968,7 @@
     check-cast v3, Lcom/amazonaws/handlers/CredentialsRequestHandler;
 
     .line 270
-    invoke-virtual {p4}, Lcom/amazonaws/http/ExecutionContext;->ܰ()Lcom/amazonaws/auth/AWSCredentials;
+    invoke-virtual {p4}, Lcom/amazonaws/http/ExecutionContext;->᩷()Lcom/amazonaws/auth/AWSCredentials;
 
     move-result-object v4
 
@@ -989,7 +989,7 @@
 
     .line 229
     :try_start_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/amazonaws/http/AmazonHttpClient;->ܰ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/services/s3/internal/S3ExecutionContext;)Lcom/amazonaws/Response;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/amazonaws/http/AmazonHttpClient;->᩷(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/services/s3/internal/S3ExecutionContext;)Lcom/amazonaws/Response;
 
     move-result-object p2
 
@@ -1059,7 +1059,7 @@
     throw p2
 .end method
 
-.method public final ܰ(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/services/s3/internal/S3ExecutionContext;)Lcom/amazonaws/Response;
+.method public final ᩷(Lcom/amazonaws/DefaultRequest;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/http/HttpResponseHandler;Lcom/amazonaws/services/s3/internal/S3ExecutionContext;)Lcom/amazonaws/Response;
     .locals 28
 
     move-object/from16 v7, p0
@@ -1072,35 +1072,35 @@
     move-result-object v9
 
     .line 301
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֨ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۫ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->۬()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v9, v0, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 302
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩹ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܳۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v1
 
     invoke-virtual {v9, v0, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 536
-    sget-object v0, Lcom/amazonaws/ClientConfiguration;->ۘ:Ljava/lang/String;
+    sget-object v0, Lcom/amazonaws/ClientConfiguration;->֫:Ljava/lang/String;
 
     .line 538
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 540
-    invoke-virtual {v1}, Lcom/amazonaws/AmazonWebServiceRequest;->ۨ()Lcom/amazonaws/RequestClientOptions;
+    invoke-virtual {v1}, Lcom/amazonaws/AmazonWebServiceRequest;->᩷()Lcom/amazonaws/RequestClientOptions;
 
     move-result-object v1
 
@@ -1129,7 +1129,7 @@
     :goto_0
     iget-object v10, v7, Lcom/amazonaws/http/AmazonHttpClient;->ۙ:Lcom/amazonaws/ClientConfiguration;
 
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->᩹()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ܳ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1140,7 +1140,7 @@
     if-nez v0, :cond_1
 
     .line 550
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->᩹()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ܳ()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1150,13 +1150,13 @@
 
     .line 553
     :cond_1
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->֨()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->۫()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->֨()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->۫()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1183,7 +1183,7 @@
     new-instance v11, Ljava/util/LinkedHashMap;
 
     .line 316
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->᩹()Ljava/util/LinkedHashMap;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ܳ()Ljava/util/LinkedHashMap;
 
     move-result-object v0
 
@@ -1192,7 +1192,7 @@
     .line 317
     new-instance v12, Ljava/util/HashMap;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۨ()Ljava/util/HashMap;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۤ()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -1219,7 +1219,7 @@
 
     .line 324
     :cond_3
-    invoke-virtual/range {p4 .. p4}, Lcom/amazonaws/http/ExecutionContext;->ܰ()Lcom/amazonaws/auth/AWSCredentials;
+    invoke-virtual/range {p4 .. p4}, Lcom/amazonaws/http/ExecutionContext;->᩷()Lcom/amazonaws/auth/AWSCredentials;
 
     move-result-object v14
 
@@ -1253,7 +1253,7 @@
     move-wide/from16 v18, v1
 
     .line 331
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۗ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     move/from16 v20, v3
 
@@ -1278,14 +1278,14 @@
     if-eqz v15, :cond_5
 
     .line 337
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ܰ()Ljava/net/URI;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->᩷()Ljava/net/URI;
 
     move-result-object v2
 
     if-nez v2, :cond_5
 
     .line 338
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->֨()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->۫()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1335,15 +1335,15 @@
     const-string v3, "Cannot close the response content."
 
     .line 345
-    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->ۚ:Lcom/amazonaws/logging/Log;
+    sget-object v2, Lcom/amazonaws/http/AmazonHttpClient;->ᩴ:Lcom/amazonaws/logging/Log;
 
     if-le v6, v1, :cond_6
 
     .line 346
     :try_start_0
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ᩴۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_3
@@ -1354,7 +1354,7 @@
 
     .line 348
     :try_start_1
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object v11
     :try_end_1
@@ -1364,7 +1364,7 @@
 
     .line 351
     :try_start_2
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۨ()Lcom/amazonaws/retry/RetryPolicy;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۤ()Lcom/amazonaws/retry/RetryPolicy;
 
     move-result-object v12
 
@@ -1431,7 +1431,7 @@
     .line 353
     :goto_2
     :try_start_4
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ᩴۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
@@ -1529,7 +1529,7 @@
 
     .line 365
     :try_start_6
-    invoke-virtual/range {p4 .. p4}, Lcom/amazonaws/services/s3/internal/S3ExecutionContext;->ۖ()Lcom/amazonaws/auth/Signer;
+    invoke-virtual/range {p4 .. p4}, Lcom/amazonaws/services/s3/internal/S3ExecutionContext;->᩸()Lcom/amazonaws/auth/Signer;
 
     move-result-object v5
     :try_end_6
@@ -1545,9 +1545,9 @@
 
     .line 368
     :try_start_7
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܰۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩷ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_22
     .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_3
@@ -1571,7 +1571,7 @@
 
     move-object v1, v0
 
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܰۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->᩷ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
@@ -1587,7 +1587,7 @@
     :cond_9
     :goto_5
     :try_start_a
-    sget-object v0, Lcom/amazonaws/http/AmazonHttpClient;->ۖ:Lcom/amazonaws/logging/Log;
+    sget-object v0, Lcom/amazonaws/http/AmazonHttpClient;->᩸:Lcom/amazonaws/logging/Log;
 
     invoke-interface {v0}, Lcom/amazonaws/logging/Log;->ۙ()Z
 
@@ -1620,7 +1620,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_22
     .catch Ljava/lang/RuntimeException; {:try_start_b .. :try_end_b} :catch_3
@@ -1646,7 +1646,7 @@
     :cond_a
     :goto_9
     :try_start_c
-    iget-object v0, v7, Lcom/amazonaws/http/AmazonHttpClient;->ۨ:Lcom/amazonaws/http/HttpRequestFactory;
+    iget-object v0, v7, Lcom/amazonaws/http/AmazonHttpClient;->ۤ:Lcom/amazonaws/http/HttpRequestFactory;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1661,9 +1661,9 @@
 
     .line 384
     :try_start_d
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۠:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۨ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۤ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_21
     .catch Ljava/lang/RuntimeException; {:try_start_d .. :try_end_d} :catch_3
@@ -1672,7 +1672,7 @@
 
     .line 386
     :try_start_e
-    iget-object v1, v7, Lcom/amazonaws/http/AmazonHttpClient;->ܰ:Lcom/amazonaws/http/UrlHttpClient;
+    iget-object v1, v7, Lcom/amazonaws/http/AmazonHttpClient;->᩷:Lcom/amazonaws/http/UrlHttpClient;
 
     invoke-virtual {v1, v4}, Lcom/amazonaws/http/UrlHttpClient;->ۙ(Lcom/amazonaws/http/HttpRequest;)Lcom/amazonaws/http/HttpResponse;
 
@@ -1685,7 +1685,7 @@
     invoke-virtual {v9, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
     .line 632
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v0
     :try_end_f
@@ -1706,9 +1706,9 @@
 
     .line 392
     :try_start_10
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v5
 
@@ -1754,14 +1754,14 @@
 
     .line 482
     :try_start_12
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
     .line 483
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -1775,7 +1775,7 @@
     move-exception v0
 
     .line 486
-    invoke-interface {v2, v3, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v2, v3, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     :cond_b
     :goto_a
@@ -1879,7 +1879,7 @@
 
     .line 409
     :try_start_14
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ܰ()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->᩷()Ljava/util/Map;
 
     move-result-object v0
 
@@ -1906,7 +1906,7 @@
 
     move-result-object v5
 
-    invoke-interface {v2, v5}, Lcom/amazonaws/logging/Log;->ܰ(Ljava/lang/String;)V
+    invoke-interface {v2, v5}, Lcom/amazonaws/logging/Log;->᩷(Ljava/lang/String;)V
 
     .line 412
     invoke-static {v0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
@@ -1922,9 +1922,9 @@
     invoke-virtual {v8, v5}, Lcom/amazonaws/DefaultRequest;->ۙ(Ljava/lang/String;)V
 
     .line 415
-    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->ۖ()I
+    invoke-virtual {v1}, Lcom/amazonaws/http/HttpResponse;->᩸()I
 
     move-result v12
 
@@ -1935,12 +1935,12 @@
     invoke-virtual {v9, v5, v12}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 416
-    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v5, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۜ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {v9, v5, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 417
-    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v0, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     const/4 v5, 0x0
 
@@ -2046,7 +2046,7 @@
 
     .line 422
     :try_start_17
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
     :try_end_17
     .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_16
     .catch Ljava/lang/RuntimeException; {:try_start_17 .. :try_end_17} :catch_15
@@ -2056,7 +2056,7 @@
     move-object/from16 v19, v2
 
     :try_start_18
-    invoke-virtual {v0}, Lcom/amazonaws/AmazonServiceException;->ۨ()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/amazonaws/AmazonServiceException;->ۤ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2072,9 +2072,9 @@
     invoke-virtual {v9, v1, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 424
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۬ۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۚۙ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v0}, Lcom/amazonaws/AmazonServiceException;->ۖ()I
+    invoke-virtual {v0}, Lcom/amazonaws/AmazonServiceException;->᩸()I
 
     move-result v2
 
@@ -2085,7 +2085,7 @@
     invoke-virtual {v9, v1, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 426
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object v2
 
@@ -2095,7 +2095,7 @@
     move-result-object v17
 
     .line 430
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۨ()Lcom/amazonaws/retry/RetryPolicy;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۤ()Lcom/amazonaws/retry/RetryPolicy;
 
     move-result-object v20
     :try_end_18
@@ -2167,14 +2167,14 @@
 
     .line 482
     :try_start_1a
-    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
     if-eqz v0, :cond_f
 
     .line 483
-    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -2188,7 +2188,7 @@
     move-exception v0
 
     .line 486
-    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     :cond_f
     :goto_11
@@ -2488,7 +2488,7 @@
 
     .line 388
     :try_start_1c
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֫:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->۠:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
@@ -2583,9 +2583,9 @@
     .line 497
     :goto_1f
     :try_start_1d
-    sget-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۛ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->ܰ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->᩷(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
     .line 498
     invoke-virtual {v9, v2, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
@@ -2603,9 +2603,9 @@
 
     .line 497
     :goto_22
-    sget-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۛ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v2, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->ܰ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v2}, Lcom/amazonaws/util/AWSRequestMetrics;->᩷(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
     .line 498
     invoke-virtual {v9, v2, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
@@ -2691,15 +2691,15 @@
 
     .line 451
     :cond_11
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۛ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ۢ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
-    invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->ܰ(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
+    invoke-virtual {v9, v1}, Lcom/amazonaws/util/AWSRequestMetrics;->᩷(Lcom/amazonaws/util/AWSRequestMetrics$Field;)V
 
     .line 452
     invoke-virtual {v9, v1, v0}, Lcom/amazonaws/util/AWSRequestMetrics;->ۙ(Lcom/amazonaws/util/AWSRequestMetrics$Field;Ljava/io/Serializable;)V
 
     .line 453
-    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->֡:Lcom/amazonaws/util/AWSRequestMetrics$Field;
+    sget-object v1, Lcom/amazonaws/util/AWSRequestMetrics$Field;->ܿ:Lcom/amazonaws/util/AWSRequestMetrics$Field;
 
     const/4 v3, 0x0
 
@@ -2729,7 +2729,7 @@
     invoke-direct {v6, v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 457
-    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ۚ()Lcom/amazonaws/AmazonWebServiceRequest;
+    invoke-virtual/range {p1 .. p1}, Lcom/amazonaws/DefaultRequest;->ᩴ()Lcom/amazonaws/AmazonWebServiceRequest;
 
     move-result-object v2
 
@@ -2739,7 +2739,7 @@
     move-result-object v3
 
     .line 461
-    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۨ()Lcom/amazonaws/retry/RetryPolicy;
+    invoke-virtual {v10}, Lcom/amazonaws/ClientConfiguration;->ۤ()Lcom/amazonaws/retry/RetryPolicy;
 
     move-result-object v17
 
@@ -2771,14 +2771,14 @@
 
     .line 482
     :try_start_20
-    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
     if-eqz v0, :cond_12
 
     .line 483
-    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v7}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -2792,7 +2792,7 @@
     move-exception v0
 
     .line 486
-    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     :cond_12
     :goto_27
@@ -2845,14 +2845,14 @@
 
     .line 482
     :try_start_22
-    invoke-virtual {v6}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v6}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
     if-eqz v0, :cond_14
 
     .line 483
-    invoke-virtual {v6}, Lcom/amazonaws/http/HttpResponse;->ۨ()Ljava/io/InputStream;
+    invoke-virtual {v6}, Lcom/amazonaws/http/HttpResponse;->ۤ()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -2866,7 +2866,7 @@
     move-exception v0
 
     .line 486
-    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۨ(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-interface {v11, v12, v0}, Lcom/amazonaws/logging/Log;->ۤ(Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 489
     :cond_14

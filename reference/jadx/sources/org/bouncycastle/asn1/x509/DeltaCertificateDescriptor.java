@@ -14,7 +14,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DERTaggedObject;
 import org.bouncycastle.asn1.x500.X500Name;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DeltaCertificateDescriptor extends ASN1Object {
     public final Extensions extensions;
     public final X500Name issuer;

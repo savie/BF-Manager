@@ -1,37 +1,47 @@
 package l;
 
-import java.util.BitSet;
-import java.util.Iterator;
-
-/* JADX INFO: renamed from: l.ۚܳ᩵, reason: contains not printable characters */
-/* JADX INFO: compiled from: 36B9 */
+/* JADX INFO: renamed from: l.ۚۙ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6DC */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class C5419 implements Iterable {
+public final /* synthetic */ class C5419 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f18717;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f18910;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4007 f18718;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ BitSet f18719;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f18720;
-
-    public /* synthetic */ C5419(C4007 c4007, int i, int i2, BitSet bitSet) {
-        this.f18718 = c4007;
-        this.f18720 = i;
-        this.f18717 = i2;
-        this.f18719 = bitSet;
-    }
-
-    @Override // java.lang.Iterable
-    public final Iterator iterator() {
-        C4007 c4007 = this.f18718;
-        C17684 c17684 = c4007.f14856;
-        int i = this.f18720;
-        return new C22353(c4007, c17684, i, this.f18717, this.f18719, i);
+    static {
+        int[] iArr = new int[EnumC24203.values().length];
+        f18910 = iArr;
+        try {
+            iArr[EnumC24203.SWITCH.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f18910[EnumC24203.IF.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f18910[EnumC24203.GOTO.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f18910[EnumC24203.JAVA_JSR.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f18910[EnumC24203.INVOKE.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f18910[EnumC24203.STR_CONCAT.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f18910[EnumC24203.FILLED_NEW_ARRAY.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f18910[EnumC24203.FILL_ARRAY.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
     }
 }

@@ -1,122 +1,95 @@
-.class public final synthetic Ll/᩺ܺ᩺;
-.super Ljava/lang/Object;
-.source "84GP"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final Ll/᩺ܺ᩺;
+.super Ll/ۘܺ᩺;
+.source "34PY"
 
 
 # instance fields
-.field public final synthetic ֡:Ljava/lang/Object;
+.field public final ۙ:Ll/ۘܺ᩺;
 
-.field public final synthetic ܺ:I
-
-.field public final synthetic ᩶:Ljava/lang/Object;
+.field public final ᩷:Ll/ۛܺ᩺;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Ll/ۛܺ᩺;Ll/ۘܺ᩺;)V
     .locals 0
 
-    .line 0
-    iput p1, p0, Ll/᩺ܺ᩺;->ܺ:I
+    .line 356
+    invoke-direct {p0}, Ll/ۘܺ᩺;-><init>()V
 
-    iput-object p2, p0, Ll/᩺ܺ᩺;->᩶:Ljava/lang/Object;
+    .line 357
+    iput-object p1, p0, Ll/᩺ܺ᩺;->᩷:Ll/ۛܺ᩺;
 
-    iput-object p3, p0, Ll/᩺ܺ᩺;->֡:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 358
+    iput-object p2, p0, Ll/᩺ܺ᩺;->ۙ:Ll/ۘܺ᩺;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 2
-    iget v0, p0, Ll/᩺ܺ᩺;->ܺ:I
+    .line 367
+    iget-object v0, p0, Ll/᩺ܺ᩺;->᩷:Ll/ۛܺ᩺;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 7
-    iget-object v0, p0, Ll/᩺ܺ᩺;->᩶:Ljava/lang/Object;
+    move-result v0
 
-    .line 9
-    check-cast v0, Ll/ۗ᩹ۜ;
+    if-eqz v0, :cond_2
 
-    .line 11
-    iget-object v1, p0, Ll/᩺ܺ᩺;->֡:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    .line 13
-    check-cast v1, Ljava/lang/Runnable;
+    iget-object v2, p0, Ll/᩺ܺ᩺;->ۙ:Ll/ۘܺ᩺;
 
-    .line 16
-    invoke-static {v0, v1}, Ll/ۗ᩹ۜ;->ۙ(Ll/ۗ᩹ۜ;Ljava/lang/Runnable;)V
+    if-eq v0, v1, :cond_1
 
-    return-void
+    const/4 v1, 0x2
 
-    .line 19
-    :pswitch_0
-    iget-object v0, p0, Ll/᩺ܺ᩺;->᩶:Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    .line 21
-    check-cast v0, Ll/᩻ۗۘ;
+    .line 373
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 23
-    iget-object v1, p0, Ll/᩺ܺ᩺;->֡:Ljava/lang/Object;
+    const-string v1, "? super "
 
-    .line 25
-    check-cast v1, Ll/ۨ֨᩺;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 28
-    invoke-static {v0, v1}, Ll/᩻ۗۘ;->ۙ(Ll/᩻ۗۘ;Ll/ۨ֨᩺;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 31
-    :pswitch_1
-    iget-object v0, p0, Ll/᩺ܺ᩺;->᩶:Ljava/lang/Object;
+    move-result-object v0
 
-    .line 33
-    check-cast v0, Ll/ۧ֨ۘ;
+    return-object v0
 
-    .line 35
-    iget-object v1, p0, Ll/᩺ܺ᩺;->֡:Ljava/lang/Object;
+    .line 375
+    :cond_0
+    new-instance v0, Ljava/lang/AssertionError;
 
-    .line 37
-    check-cast v1, Ljava/lang/Class;
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
-    .line 40
-    invoke-static {v0, v1}, Ll/ۧ֨ۘ;->ۙ(Ll/ۧ֨ۘ;Ljava/lang/Class;)V
+    throw v0
 
-    return-void
+    .line 371
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 43
-    :pswitch_2
-    iget-object v0, p0, Ll/᩺ܺ᩺;->᩶:Ljava/lang/Object;
+    const-string v1, "? extends "
 
-    .line 45
-    check-cast v0, Ll/᩸ܺ᩺;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 47
-    iget-object v1, p0, Ll/᩺ܺ᩺;->֡:Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 49
-    check-cast v1, Ljava/io/IOException;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 42
-    invoke-interface {v0, v1}, Ll/᩸ܺ᩺;->ۙ(Ljava/io/IOException;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 
-    nop
+    :cond_2
+    const-string v0, "?"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

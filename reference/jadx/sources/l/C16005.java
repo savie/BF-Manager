@@ -1,39 +1,34 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܺܳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: B9JX */
-/* JADX INFO: loaded from: classes5.dex */
-public final class C16005 extends C11771 {
+import java.io.OutputStream;
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public C6396 f51816;
+/* JADX INFO: renamed from: l.ܶۢ۫, reason: contains not printable characters */
+/* JADX INFO: compiled from: M9Q4 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C16005 extends OutputStream {
 
-    public C16005(EnumC20508 enumC20508, long j, long j2, C6396 c6396) {
-        super(24, enumC20508, EnumC2162.SMB2_CLOSE, j, j2);
-        this.f51816 = c6396;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public long f51944;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final C13961 f51945;
+
+    public C16005(long j, C13961 c13961) {
+        this.f51945 = c13961;
+        this.f51944 = j;
     }
 
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo3384(C19240 c19240) {
-        c19240.m27396(this.f39515);
-        c19240.m27396(1);
-        c19240.m44195();
-        this.f51816.m17542(c19240);
+    @Override // java.io.OutputStream
+    public final void write(int i) {
+        throw new UnsupportedOperationException();
     }
 
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2356(C19240 c19240) throws C17271 {
-        c19240.m27375();
-        c19240.m27375();
-        c19240.m27389(4);
-        C9407.m24150(c19240);
-        C9407.m24150(c19240);
-        C9407.m24150(c19240);
-        C9407.m24150(c19240);
-        c19240.m27390();
-        c19240.m27390();
-        c19240.m27393(4);
+    @Override // java.io.OutputStream
+    public final void write(byte[] bArr, int i, int i2) {
+        synchronized (this.f51945) {
+            this.f51945.seek(this.f51944);
+            this.f51945.write(bArr, i, i2);
+            this.f51944 += (long) i2;
+        }
     }
 }

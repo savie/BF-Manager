@@ -1,52 +1,41 @@
-.class public final Ll/ܽ᩺ۨ;
+.class public interface abstract Ll/ܽ᩺ۨ;
 .super Ljava/lang/Object;
-.source "T5YJ"
+.source "4AID"
 
 # interfaces
-.implements Ll/᩸ۜۨ;
+.implements Ljava/lang/Comparable;
 
 
 # virtual methods
-.method public final ۙ(Ll/ܶܶۨ;)V
-    .locals 2
+.method public abstract getState()Ll/ܶ᩺ۨ;
+.end method
 
-    .line 162
-    new-instance v0, Ll/ܳۘۨ;
+.method public abstract invalidate()V
+.end method
 
-    invoke-direct {v0}, Ll/ܳۘۨ;-><init>()V
+.method public abstract ֡᩷()Ljava/lang/Object;
+.end method
 
-    .line 163
-    invoke-virtual {p1}, Ll/ܶܶۨ;->ܰ()Ljava/lang/Object;
+.method public abstract ֫ۙ()V
+.end method
 
-    move-result-object v1
+.method public abstract ۘۙ()Ll/֡ۤۗ;
+.end method
 
-    check-cast v1, Ll/ܳۘۨ;
+.method public abstract ۙ(Ljava/util/Deque;)Z
+.end method
 
-    invoke-virtual {v1}, Ll/ܳۘۨ;->ܶ()Ljava/lang/String;
+.method public abstract ܽ᩷()Z
+.end method
 
-    move-result-object v1
+.method public abstract ᩳۙ()Z
+.end method
 
-    .line 165
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+.method public abstract ᩶᩷()Ll/ܿۤۗ;
+.end method
 
-    move-result v1
+.method public abstract ᩸ۙ()Z
+.end method
 
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(I)V
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 v1, 0x0
-
-    .line 167
-    invoke-virtual {v0, v1}, Ll/ܳۘۨ;->ۙ(I)V
-
-    .line 169
-    :goto_0
-    invoke-virtual {p1, v0}, Ll/ܶܶۨ;->ۙ(Ll/ܳۘۨ;)V
-
-    return-void
+.method public abstract ᩹᩷()Ll/ܿۤۗ;
 .end method

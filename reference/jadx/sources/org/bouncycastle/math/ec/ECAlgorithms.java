@@ -2,7 +2,7 @@ package org.bouncycastle.math.ec;
 
 import com.google.android.material.color.ColorResourcesTableCreator;
 import java.math.BigInteger;
-import l.C1694;
+import l.C12669;
 import org.bouncycastle.math.ec.endo.ECEndomorphism;
 import org.bouncycastle.math.ec.endo.EndoUtil;
 import org.bouncycastle.math.ec.endo.GLVEndomorphism;
@@ -83,7 +83,7 @@ public class ECAlgorithms {
                 return infinity;
             }
             byte b = bArrGenerateJSF[length];
-            infinity = infinity.twicePlus(eCPointArr2[C1694.m5620((b << 24) >> 28, 3, 4, (b << ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB) >> 28)]);
+            infinity = infinity.twicePlus(eCPointArr2[C12669.m31436((b << 24) >> 28, 3, 4, (b << ColorResourcesTableCreator.ResEntry.DATA_TYPE_AARRGGBB) >> 28)]);
         }
     }
 

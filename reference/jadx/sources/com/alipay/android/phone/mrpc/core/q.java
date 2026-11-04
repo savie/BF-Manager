@@ -57,7 +57,7 @@ public class q implements Callable {
     public HttpHost k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public URL f77905l;
+    public URL f82021l;
     public String q;
     public HttpContext g = new BasicHttpContext();
     public CookieStore h = new BasicCookieStore();
@@ -157,12 +157,12 @@ public class q implements Callable {
     }
 
     private URL p() {
-        URL url = this.f77905l;
+        URL url = this.f82021l;
         if (url != null) {
             return url;
         }
         URL url2 = new URL(this.c.a());
-        this.f77905l = url2;
+        this.f82021l = url2;
         return url2;
     }
 

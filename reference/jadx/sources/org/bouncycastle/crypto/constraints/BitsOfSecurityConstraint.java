@@ -5,7 +5,7 @@ import java.util.Set;
 import org.bouncycastle.crypto.CryptoServiceConstraintsException;
 import org.bouncycastle.crypto.CryptoServiceProperties;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BitsOfSecurityConstraint extends ServicesConstraint {
     public final int requiredBitsOfSecurity;
 

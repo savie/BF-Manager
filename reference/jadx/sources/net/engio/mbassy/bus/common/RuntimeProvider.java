@@ -2,7 +2,7 @@ package net.engio.mbassy.bus.common;
 
 import net.engio.mbassy.bus.BusRuntime;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface RuntimeProvider {
     BusRuntime getRuntime();
 }

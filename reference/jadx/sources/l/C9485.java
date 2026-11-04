@@ -1,55 +1,34 @@
 package l;
 
-import android.net.Uri;
-import com.alipay.sdk.m.y.l;
-
-/* JADX INFO: renamed from: l.ۢۡ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: I749 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9485 extends AbstractC17535 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final long f32082;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f32083;
+/* JADX INFO: renamed from: l.ۡܺۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 82RN */
+/* JADX INFO: loaded from: classes4.dex */
+public class C9485 extends AbstractC9204 {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final Uri f32084;
+    public InterfaceC8304 f30723;
 
-    public C9485(long j, Uri uri, String str) {
-        this.f32082 = j;
-        this.f32083 = str;
-        this.f32084 = uri;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C2774 f30724;
+
+    public C9485(C2774 c2774, InterfaceC8304 interfaceC8304) {
+        this.f30724 = c2774;
+        this.f30723 = interfaceC8304;
     }
 
-    public final boolean equals(Object obj) {
-        if (!(obj instanceof C9485)) {
-            return false;
-        }
-        C9485 c9485 = (C9485) obj;
-        return this.f32082 == c9485.f32082 && C13638.equals(this.f32083, c9485.f32083) && C13638.equals(this.f32084, c9485.f32084);
+    @Override // l.InterfaceC8304
+    /* JADX INFO: renamed from: ܳ */
+    public final String mo4500() {
+        return (String) this.f30724.f9152.m54589().mo2798(this.f30723.mo4500());
     }
 
-    public final int hashCode() {
-        long j = this.f32082;
-        return C13638.hashCode(this.f32084) + C0589.m2789(((int) (j ^ (j >>> 32))) * 31, 31, this.f32083);
+    @Override // l.InterfaceC8304
+    public String getName() {
+        return this.f30723.getName();
     }
 
-    public final String toString() {
-        Object[] objArr = {Long.valueOf(this.f32082), this.f32083, this.f32084};
-        String[] strArrSplit = "bodyLength;sha256;finalUri".length() == 0 ? new String[0] : "bodyLength;sha256;finalUri".split(l.b);
-        StringBuilder sb = new StringBuilder();
-        C17745.m41311(C9485.class, sb, "[");
-        for (int i = 0; i < strArrSplit.length; i++) {
-            sb.append(strArrSplit[i]);
-            sb.append("=");
-            sb.append(objArr[i]);
-            if (i != strArrSplit.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+    @Override // l.InterfaceC8304
+    public final String getType() {
+        return (String) this.f30724.f9152.m54589().mo2798(this.f30723.getType());
     }
 }

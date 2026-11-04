@@ -4,7 +4,7 @@ import bin.mt.json.JSONObject;
 import bin.mt.plugin.api.PluginContext;
 import bin.mt.plugin.api.ui.PluginUI;
 import bin.mt.plugin.api.ui.PluginView;
-import l.C13638;
+import l.C17359;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class BaseTextEditorFunction implements TextEditorFunction {
@@ -37,7 +37,7 @@ public abstract class BaseTextEditorFunction implements TextEditorFunction {
     @Override // bin.mt.plugin.api.editor.TextEditorFunction
     public PluginContext getContext() {
         PluginContext pluginContext = this.context;
-        C13638.requireNonNull(pluginContext);
+        C17359.requireNonNull(pluginContext);
         return pluginContext;
     }
 }

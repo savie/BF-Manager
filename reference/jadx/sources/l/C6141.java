@@ -1,104 +1,37 @@
 package l;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Locale;
+import java.util.StringTokenizer;
 
-/* JADX INFO: renamed from: l.ۛܶ۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: Y6XM */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C6141 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final InputStreamReader f20953;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final char[] f20954 = new char[8192];
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f20955;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f20956;
-
-    public C6141(InputStreamReader inputStreamReader) {
-        this.f20953 = inputStreamReader;
+/* JADX INFO: renamed from: l.ۛۘܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 0B0D */
+/* JADX INFO: loaded from: classes3.dex */
+public class C6141 extends AbstractC17567 {
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3723(C21362 c21362, Object obj) throws IOException {
+        Locale locale = (Locale) obj;
+        c21362.m48602(locale == null ? null : locale.toString());
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static int m17123(C6141 c6141) throws IOException {
-        int iM17121 = c6141.m17121();
-        if (iM17121 < 0) {
-            return -1;
+    @Override // l.AbstractC17567
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3722(C4208 c4208) throws IOException {
+        if (c4208.m13438() == EnumC14648.NULL) {
+            c4208.m13444();
+            return null;
         }
-        char c = (char) iM17121;
-        if (Character.isLowSurrogate(c)) {
-            throw new C23781();
+        StringTokenizer stringTokenizer = new StringTokenizer(c4208.m13453(), "_");
+        String strNextToken = stringTokenizer.hasMoreElements() ? stringTokenizer.nextToken() : null;
+        String strNextToken2 = stringTokenizer.hasMoreElements() ? stringTokenizer.nextToken() : null;
+        String strNextToken3 = stringTokenizer.hasMoreElements() ? stringTokenizer.nextToken() : null;
+        if (strNextToken2 == null && strNextToken3 == null) {
+            return new Locale(strNextToken);
         }
-        if (!Character.isHighSurrogate(c)) {
-            return iM17121;
+        if (strNextToken3 == null) {
+            return new Locale(strNextToken, strNextToken2);
         }
-        int iM17122 = c6141.m17121();
-        if (iM17122 >= 0) {
-            char c2 = (char) iM17122;
-            if (Character.isLowSurrogate(c2)) {
-                return Character.toCodePoint(c, c2);
-            }
-        }
-        throw new C23781();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private int m17121() throws IOException {
-        int i;
-        do {
-            int i2 = this.f20955;
-            int i3 = this.f20956;
-            char[] cArr = this.f20954;
-            if (i2 >= i3) {
-                i = this.f20953.read(cArr);
-                this.f20956 = i;
-                this.f20955 = 0;
-            } else {
-                this.f20955 = i2 + 1;
-                return cArr[i2];
-            }
-        } while (i >= 0);
-        return -1;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static void m17122(C6141 c6141) throws IOException {
-        char c;
-        char[] cArr = c6141.f20954;
-        do {
-            boolean z = false;
-            while (true) {
-                int i = c6141.f20955;
-                if (i < c6141.f20956) {
-                    c6141.f20955 = i + 1;
-                    c = cArr[i];
-                    if (z) {
-                        break;
-                    }
-                    if (Character.isLowSurrogate(c)) {
-                        throw new C23781();
-                    }
-                    if (Character.isHighSurrogate(c)) {
-                        z = true;
-                    }
-                } else {
-                    int i2 = c6141.f20953.read(cArr);
-                    c6141.f20956 = i2;
-                    c6141.f20955 = 0;
-                    if (i2 < 0) {
-                        if (z) {
-                            throw new C23781();
-                        }
-                        return;
-                    }
-                }
-            }
-        } while (Character.isLowSurrogate(c));
-        throw new C23781();
+        return new Locale(strNextToken, strNextToken2, strNextToken3);
     }
 }

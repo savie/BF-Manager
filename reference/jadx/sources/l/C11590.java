@@ -1,118 +1,62 @@
 package l;
 
-import android.app.Service;
-import android.net.Uri;
-import com.alipay.sdk.m.n.a;
-import java.io.IOException;
-import java.lang.ref.WeakReference;
-import java.net.ServerSocket;
+import java.util.Arrays;
 
-/* JADX INFO: renamed from: l.ۨۡ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: L9TE */
+/* JADX INFO: renamed from: l.ۧۨۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 88ID */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C11590 extends Thread {
+public final class C11590 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final WeakReference f38954;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f36386;
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C3431 f38955;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public long[] f36387;
 
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public ServerSocket f38956;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final synchronized void m28884() {
-        ServerSocket serverSocket = this.f38956;
-        if (serverSocket != null) {
-            this.f38956 = null;
-            C4716.f16635.execute(new RunnableC19285(2, serverSocket));
-        }
+    public C11590() {
+        this(32);
     }
 
-    public C11590(ServiceC6650 serviceC6650) {
-        this.f38954 = new WeakReference(serviceC6650);
-        setDaemon(true);
-        start();
+    public C11590(int i) {
+        this.f36387 = new long[i];
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final Uri m28882(C3431 c3431) {
-        String str = c3431.f12649;
-        C3431 c3432 = this.f38955;
-        if (c3432 == null || !c3432.f12649.equals(str)) {
-            final C3431 c3433 = this.f38955;
-            if (c3433 != null) {
-                C4716.f16635.execute(new Runnable() { // from class: l.ܰۡ֨
-                    @Override // java.lang.Runnable
-                    public final void run() {
-                        C19431.m44468(c3433);
-                    }
-                });
-            }
-            this.f38955 = c3431;
+    public final void m29118(long j) {
+        int i = this.f36386;
+        long[] jArr = this.f36387;
+        if (i == jArr.length) {
+            this.f36387 = Arrays.copyOf(jArr, i * 2);
         }
-        return new Uri.Builder().scheme(a.s).encodedAuthority("127.0.0.1:" + this.f38956.getLocalPort()).path(str + "/" + c3431.f12645).build();
-    }
-
-    @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() {
-        Service service;
-        WeakReference weakReference = this.f38954;
-        try {
-            this.f38956 = new ServerSocket(0);
-            while (!isInterrupted()) {
-                new RunnableC13001(this.f38956.accept(), this.f38955);
-            }
-            C19431.m44468(this.f38955);
-            try {
-                ServerSocket serverSocket = this.f38956;
-                if (serverSocket != null) {
-                    serverSocket.close();
-                    this.f38956 = null;
-                }
-            } catch (IOException unused) {
-            }
-            service = (Service) weakReference.get();
-            if (service == null) {
-                return;
-            }
-        } catch (Exception unused2) {
-            C19431.m44468(this.f38955);
-            try {
-                ServerSocket serverSocket2 = this.f38956;
-                if (serverSocket2 != null) {
-                    serverSocket2.close();
-                    this.f38956 = null;
-                }
-            } catch (IOException unused3) {
-            }
-            service = (Service) weakReference.get();
-            if (service == null) {
-                return;
-            }
-        } catch (Throwable th) {
-            C19431.m44468(this.f38955);
-            try {
-                ServerSocket serverSocket3 = this.f38956;
-                if (serverSocket3 != null) {
-                    serverSocket3.close();
-                    this.f38956 = null;
-                }
-            } catch (IOException unused4) {
-            }
-            Service service2 = (Service) weakReference.get();
-            if (service2 != null) {
-                service2.stopSelf();
-                throw th;
-            }
-            throw th;
-        }
-        service.stopSelf();
+        long[] jArr2 = this.f36387;
+        int i2 = this.f36386;
+        this.f36386 = i2 + 1;
+        jArr2[i2] = j;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m28883() {
-        return this.f38956 != null;
+    public final void m29119(long[] jArr) {
+        int length = this.f36386 + jArr.length;
+        long[] jArr2 = this.f36387;
+        if (length > jArr2.length) {
+            this.f36387 = Arrays.copyOf(jArr2, Math.max(jArr2.length * 2, length));
+        }
+        System.arraycopy(jArr, 0, this.f36387, this.f36386, jArr.length);
+        this.f36386 = length;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final long m29117(int i) {
+        if (i >= 0 && i < this.f36386) {
+            return this.f36387[i];
+        }
+        StringBuilder sbM12235 = C3769.m12235(i, "Invalid index ", ", size is ");
+        sbM12235.append(this.f36386);
+        throw new IndexOutOfBoundsException(sbM12235.toString());
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m29116() {
+        return this.f36386;
     }
 }

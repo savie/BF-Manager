@@ -1,164 +1,140 @@
 package l;
 
-import bin.mt.plus.R;
+import com.alipay.sdk.m.w.a;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
 
-/* JADX INFO: renamed from: l.ۚۙ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: J57U */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C5132 extends AbstractC3492 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public C15218 f17845;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C18538 f17846;
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ byte[] f17847;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewOnClickListenerC7955 f17848;
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C13026 f17849;
-
-    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
-    public C11690 f17850;
+/* JADX INFO: renamed from: l.ۙ᩵᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: E9U4 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C5132 {
 
     /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f17851;
+    public static InterfaceC25186 f17873 = C16980.m40038(C5132.class.getName());
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f17852;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f17871 = new byte[0];
 
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2516 f17853;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static final byte[] f17872 = {0};
 
-    public C5132(ViewOnClickListenerC7955 viewOnClickListenerC7955, C18538 c18538, C2516 c2516, byte[] bArr, int i, C13026 c13026) {
-        this.f17848 = viewOnClickListenerC7955;
-        this.f17846 = c18538;
-        this.f17853 = c2516;
-        this.f17847 = bArr;
-        this.f17851 = i;
-        this.f17849 = c13026;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final Charset f17870 = Charset.forName(a.D);
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m15521(int i, int i2, byte[] bArr) {
+        return new String(bArr, i, i2, f17870);
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        C18538 c18538 = this.f17846;
-        ViewOnClickListenerC7955 viewOnClickListenerC7955 = this.f17848;
-        ViewOnClickListenerC7955.m21000(viewOnClickListenerC7955, c18538);
-        this.f17850 = this.f17853.m7806();
-        m10248(viewOnClickListenerC7955.f26140, R.string.MT_Protector, 200, new Runnable() { // from class: l.ۨۙ᩹
-            @Override // java.lang.Runnable
-            public final void run() {
-                C5132.m14290(this.f38651);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m15522(Hashtable hashtable, byte[] bArr) {
+        int i;
+        if (bArr != null) {
+            int i2 = 0;
+            while (i2 < bArr.length) {
+                int i3 = i2 + 1;
+                int i4 = bArr[i2] & 255;
+                if (i4 == 0 || (i = i3 + i4) > bArr.length) {
+                    hashtable.clear();
+                    return;
+                }
+                int i5 = 0;
+                while (i5 < i4 && bArr[i3 + i5] != 61) {
+                    i5++;
+                }
+                String strM15521 = m15521(i3, i5, bArr);
+                if (i5 == i4) {
+                    hashtable.put(strM15521, f17871);
+                } else {
+                    int i6 = i5 + 1;
+                    int i7 = i4 - i6;
+                    byte[] bArr2 = new byte[i7];
+                    System.arraycopy(bArr, i3 + i6, bArr2, 0, i7);
+                    hashtable.put(strM15521, bArr2);
+                }
+                i2 = i;
             }
-        });
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m14290(C5132 c5132) {
-        c5132.f12806.m40697((Runnable) null);
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public boolean m14289() {
-        C17485 c17485 = this.f12806;
-        if (this.f17846.mo2357()) {
-            return true;
         }
-        return c17485 != null && c17485.m40693();
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static byte[] m15524(HashMap map) {
+        String str;
         try {
-            this.f17845 = this.f17850.m29189(new InterfaceC5614() { // from class: l.ۖۙ᩹
-                @Override // l.InterfaceC5614
-                /* JADX INFO: renamed from: ֨ */
-                public final boolean mo2357() {
-                    return this.f8224.m14289();
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(256);
+            Iterator it = map.entrySet().iterator();
+            while (true) {
+                boolean zHasNext = it.hasNext();
+                byte[] bArr = f17872;
+                if (!zHasNext) {
+                    byte[] byteArray = byteArrayOutputStream.toByteArray();
+                    return (byteArray == null || byteArray.length <= 0) ? bArr : byteArray;
                 }
-            });
-            ViewOnClickListenerC7955.m21001(this.f17850);
-            C15218 c15218 = this.f17845;
-            InterfaceC5614 interfaceC5614 = new InterfaceC5614() { // from class: l.ۖۙ᩹
-                @Override // l.InterfaceC5614
-                /* JADX INFO: renamed from: ֨ */
-                public final boolean mo2357() {
-                    return this.f8224.m14289();
+                Map.Entry entry = (Map.Entry) it.next();
+                String str2 = (String) entry.getKey();
+                Object value = entry.getValue();
+                ByteArrayOutputStream byteArrayOutputStream2 = new ByteArrayOutputStream(100);
+                Charset charset = f17870;
+                byteArrayOutputStream2.write(str2.getBytes(charset));
+                if (value != null) {
+                    if (value instanceof String) {
+                        byteArrayOutputStream2.write(61);
+                        byteArrayOutputStream2.write(((String) value).getBytes(charset));
+                    } else {
+                        if (!(value instanceof byte[])) {
+                            throw new IllegalArgumentException("Invalid property value: " + value);
+                        }
+                        byte[] bArr2 = (byte[]) value;
+                        if (bArr2.length > 0) {
+                            byteArrayOutputStream2.write(61);
+                            byteArrayOutputStream2.write(bArr2, 0, bArr2.length);
+                        } else {
+                            value = null;
+                        }
+                    }
                 }
-            };
-            byte[] bArr = this.f17847;
-            int iM36425 = c15218.m36425(bArr, this.f17851, interfaceC5614);
-            this.f17852 = iM36425;
-            if (iM36425 != -1 || m14289()) {
-                return;
+                byte[] byteArray2 = byteArrayOutputStream2.toByteArray();
+                if (byteArray2.length > 255) {
+                    InterfaceC25186 interfaceC25186 = f17873;
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(str2);
+                    if (value == null) {
+                        str = "";
+                    } else {
+                        str = "=" + value;
+                    }
+                    sb.append(str);
+                    interfaceC25186.mo13728(sb.toString(), "Cannot have individual values larger that 255 chars. Offending value: {}");
+                    return bArr;
+                }
+                byteArrayOutputStream.write((byte) byteArray2.length);
+                byteArrayOutputStream.write(byteArray2, 0, byteArray2.length);
             }
-            this.f17852 = this.f17845.m36425(bArr, 0, new InterfaceC5614() { // from class: l.ۖۙ᩹
-                @Override // l.InterfaceC5614
-                /* JADX INFO: renamed from: ֨ */
-                public final boolean mo2357() {
-                    return this.f8224.m14289();
-                }
-            });
-        } catch (Throwable th) {
-            ViewOnClickListenerC7955.m21001(this.f17850);
-            throw th;
+        } catch (IOException e) {
+            throw new RuntimeException(C13645.m33383("unexpected exception: ", e));
         }
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() throws IOException {
-        C2516 c2516 = this.f17853;
-        C15218 c15218 = this.f17845;
-        ViewOnClickListenerC7955 viewOnClickListenerC7955 = this.f17848;
-        if (ViewOnClickListenerC7955.m21004(viewOnClickListenerC7955, c2516, c15218) && !m14289()) {
-            int i = this.f17852;
-            if (i == -1) {
-                C15829.m37611(R.string.MT_Protector);
-                return;
-            }
-            int length = this.f17847.length;
-            int length2 = this.f17845.length();
-            long j = ((long) i) + ((long) length);
-            if (i >= 0 && length > 0 && j <= length2) {
-                int i2 = ((int) j) - 1;
-                viewOnClickListenerC7955.f26141 = new C3720(this.f17853, this.f17845.m36426(), this.f17852, i2);
-                this.f17849.m32225(this.f17852, i2);
-                return;
-            }
-            throw new IOException("Search result exceeds snapshot length");
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static byte[] m15523(String str) throws IOException {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(256);
+        ByteArrayOutputStream byteArrayOutputStream2 = new ByteArrayOutputStream(100);
+        byteArrayOutputStream2.write(str.getBytes(f17870));
+        byte[] byteArray = byteArrayOutputStream2.toByteArray();
+        int length = byteArray.length;
+        byte[] bArr = f17872;
+        if (length > 255) {
+            f17873.mo13728(str, "Cannot have individual values larger that 255 chars. Offending value: {}");
+            return bArr;
         }
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        if (exc instanceof C1105) {
-            return;
-        }
-        ViewOnClickListenerC7955.m20999(this.f17848, this.f17849, this.f17853, exc);
-    }
-
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        ViewOnClickListenerC7955.m21001(this.f17850);
-        C15218 c15218 = this.f17845;
-        if (c15218 != null) {
-            try {
-                c15218.close();
-            } catch (IOException unused) {
-            }
-        }
-        m10251();
-        ViewOnClickListenerC7955.m21005(this.f17848, this.f17846);
+        byteArrayOutputStream.write((byte) byteArray.length);
+        byteArrayOutputStream.write(byteArray, 0, byteArray.length);
+        byte[] byteArray2 = byteArrayOutputStream.toByteArray();
+        return byteArray2.length > 0 ? byteArray2 : bArr;
     }
 }

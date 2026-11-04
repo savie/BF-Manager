@@ -1,52 +1,25 @@
 package l;
 
-import android.os.SystemClock;
-import java.util.List;
+/* JADX INFO: renamed from: l.ۢ᩵ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: D9HR */
+/* JADX INFO: loaded from: classes3.dex */
+public class C10347 extends Exception {
 
-/* JADX INFO: renamed from: l.ۤܳۙ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A7N6 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C10347 extends AbstractC19176 {
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final long f32962;
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public int f35482;
-
-    @Override // l.InterfaceC6558
-    /* JADX INFO: renamed from: ۘ */
-    public final int mo17785() {
-        return 0;
+    public C10347(long j, String str) {
+        super(str);
+        this.f32962 = j;
     }
 
-    @Override // l.InterfaceC6558
-    /* JADX INFO: renamed from: ܰ */
-    public final Object mo17796() {
-        return null;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final long m26611() {
+        return this.f32962;
     }
 
-    public C10347(C17216 c17216, int[] iArr) {
-        super(c17216, iArr);
-        this.f35482 = m44003(c17216.m40159(iArr[0]));
-    }
-
-    @Override // l.InterfaceC6558
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo17789(long j, long j2, long j3, List list, InterfaceC2241[] interfaceC2241Arr) {
-        long jElapsedRealtime = SystemClock.elapsedRealtime();
-        if (mo17791(this.f35482, jElapsedRealtime)) {
-            int i = this.f61925;
-            do {
-                i--;
-                if (i < 0) {
-                    throw new IllegalStateException();
-                }
-            } while (mo17791(i, jElapsedRealtime));
-            this.f35482 = i;
-        }
-    }
-
-    @Override // l.InterfaceC6558
-    /* JADX INFO: renamed from: ۙ */
-    public final int mo17786() {
-        return this.f35482;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final EnumC20243 m26610() {
+        return EnumC20243.m46515(this.f32962);
     }
 }

@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field public final ֡:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
+.field public ֡:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
 
-.field public ۛ:Ljava/util/ArrayList;
+.field public ֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
-.field public ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+.field public ۟:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
 
-.field public ۫:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
+.field public ۢ:Ljava/util/ArrayList;
 
-.field public ܽ:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
+.field public final ܿ:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
 
-.field public ܿ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
+.field public ᩳ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;-><init>()V
 
-    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
+    iput-object v0, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۫:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۟:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
 
     return-void
 
@@ -90,7 +90,7 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
 
     return-void
 
@@ -109,7 +109,7 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
 
     return-void
 
@@ -128,7 +128,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۛ:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۢ:Ljava/util/ArrayList;
 
     return-void
 
@@ -158,13 +158,13 @@
 
     invoke-direct {p1}, Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iput-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
     :cond_4
     return-void
 .end method
 
-.method public final ᩹(Ljava/lang/String;)V
+.method public final ܳ(Ljava/lang/String;)V
     .locals 8
 
     const-string v0, "InventoryConfiguration"
@@ -197,12 +197,12 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
+    iget-object v1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/inventory/InventoryConfiguration;
 
     if-eqz v0, :cond_0
 
     .line 3477
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -220,7 +220,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3480
-    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۫:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
+    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۟:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
 
     return-void
 
@@ -237,7 +237,7 @@
     const-string p1, "true"
 
     .line 3482
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 
@@ -259,7 +259,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3485
-    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
+    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
 
     return-void
 
@@ -274,7 +274,7 @@
     if-eqz v0, :cond_4
 
     .line 3487
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -292,7 +292,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3490
-    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
+    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
 
     return-void
 
@@ -308,7 +308,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3493
-    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۛ:Ljava/util/ArrayList;
+    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۢ:Ljava/util/ArrayList;
 
     return-void
 
@@ -334,12 +334,12 @@
     if-eqz p1, :cond_e
 
     .line 3497
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۫:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->۟:Lcom/amazonaws/services/s3/model/inventory/InventoryDestination;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3498
-    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iput-object v6, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
     return-void
 
@@ -367,9 +367,9 @@
     if-eqz v0, :cond_8
 
     .line 3502
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -386,9 +386,9 @@
     if-eqz v0, :cond_9
 
     .line 3504
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -405,9 +405,9 @@
     if-eqz v0, :cond_a
 
     .line 3506
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -422,9 +422,9 @@
     if-eqz p1, :cond_e
 
     .line 3508
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۧ:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֨:Lcom/amazonaws/services/s3/model/inventory/InventoryS3BucketDestination;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -450,11 +450,11 @@
     if-eqz p1, :cond_e
 
     .line 3512
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܽ:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->֡:Lcom/amazonaws/services/s3/model/inventory/InventoryFilter;
 
     new-instance v0, Lcom/amazonaws/services/s3/model/inventory/InventoryPrefixPredicate;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     .line 29
     invoke-direct {v0}, Lcom/amazonaws/services/s3/model/inventory/InventoryFilterPredicate;-><init>()V
@@ -486,9 +486,9 @@
     if-eqz p1, :cond_e
 
     .line 3516
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ܿ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ᩳ:Lcom/amazonaws/services/s3/model/inventory/InventorySchedule;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -516,9 +516,9 @@
     if-eqz p1, :cond_e
 
     .line 3520
-    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۛ:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/amazonaws/services/s3/model/transform/XmlResponsesSaxParser$GetBucketInventoryConfigurationHandler;->ۢ:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->ܰ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amazonaws/services/s3/model/transform/AbstractHandler;->᩷()Ljava/lang/String;
 
     move-result-object v0
 

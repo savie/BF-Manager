@@ -1,150 +1,79 @@
-.class public final Ll/ܺ֨ᩴ;
-.super Ll/۫֨ᩴ;
-.source "M1N0"
+.class public final synthetic Ll/ܺ֨ᩴ;
+.super Ljava/lang/Object;
+.source "6AK0"
 
 # interfaces
-.implements Ll/ۨܶᩴ;
+.implements Ll/֡֨ᩴ;
 
 
 # instance fields
-.field public final synthetic ۛ:Ll/ۧ֨ᩴ;
+.field public final synthetic ۙ:Ljava/util/HashMap;
+
+.field public final synthetic ᩷:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۧ֨ᩴ;)V
+.method public synthetic constructor <init>(Ljava/util/HashMap;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1171
-    iput-object p1, p0, Ll/ܺ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ll/۫֨ᩴ;-><init>(Ll/ۧ֨ᩴ;)V
+    iput-object p1, p0, Ll/ܺ֨ᩴ;->ۙ:Ljava/util/HashMap;
 
-    return-void
-.end method
-
-.method public constructor <init>(Ll/ۧ֨ᩴ;IIZ)V
-    .locals 0
-
-    .line 1174
-    iput-object p1, p0, Ll/ܺ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    .line 1175
-    invoke-direct {p0, p1, p2, p3, p4}, Ll/۫֨ᩴ;-><init>(Ll/ۧ֨ᩴ;IIZ)V
+    iput-object p2, p0, Ll/ܺ֨ᩴ;->᩷:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final characteristics()I
-    .locals 1
+.method public final test(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
 
-    .line 1180
-    iget-boolean v0, p0, Ll/۫֨ᩴ;->᩶:Z
+    .line 2
+    check-cast p1, Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    .line 4
+    check-cast p2, Ll/᩶֨ᩴ;
 
-    const/16 v0, 0x101
+    .line 363
+    iget-object v0, p2, Ll/᩶֨ᩴ;->֡:Ljava/lang/String;
 
-    return v0
+    const-string v1, "/"
 
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 40
+    iget-object v0, p0, Ll/ܺ֨ᩴ;->ۙ:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 42
     :cond_0
-    const/16 v0, 0x141
+    iget-object p1, p2, Ll/᩶֨ᩴ;->֡:Ljava/lang/String;
 
-    return v0
-.end method
+    iget-object p2, p0, Ll/ܺ֨ᩴ;->᩷:Ljava/util/ArrayList;
 
-.method public final synthetic forEachRemaining(Ljava/util/function/Consumer;)V
-    .locals 0
+    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ۙ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic getComparator()Ljava/util/Comparator;
-    .locals 1
-
-    .line 29
-    invoke-virtual {p0}, Ll/ܺ֨ᩴ;->getComparator()Ll/ܽۜᩴ;
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final getComparator()Ll/ܽۜᩴ;
-    .locals 1
-
-    .line 158
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public synthetic getExactSizeIfKnown()J
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, Ll/᩸ۛᩴ;->$default$getExactSizeIfKnown(Ll/᩷ۛᩴ;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public synthetic hasCharacteristics(I)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸ۛᩴ;->$default$hasCharacteristics(Ll/᩷ۛᩴ;I)Z
-
-    move-result p1
+    :goto_0
+    const/4 p1, 0x1
 
     return p1
-.end method
 
-.method public final synthetic tryAdvance(Ljava/util/function/Consumer;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ll/ܰܶᩴ;->ܰ(Ll/ۨܶᩴ;Ljava/util/function/Consumer;)Z
-
-    move-result p1
+    :cond_1
+    const/4 p1, 0x0
 
     return p1
-.end method
-
-.method public final ۙ(IIZ)Ll/۫֨ᩴ;
-    .locals 2
-
-    .line 1190
-    new-instance v0, Ll/ܺ֨ᩴ;
-
-    iget-object v1, p0, Ll/ܺ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    invoke-direct {v0, v1, p1, p2, p3}, Ll/ܺ֨ᩴ;-><init>(Ll/ۧ֨ᩴ;IIZ)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 1
-
-    .line 1168
-    check-cast p2, Ljava/util/function/IntConsumer;
-
-    .line 1185
-    iget-object v0, p0, Ll/ܺ֨ᩴ;->ۛ:Ll/ۧ֨ᩴ;
-
-    iget-object v0, v0, Ll/ۧ֨ᩴ;->۫:[I
-
-    aget p1, v0, p1
-
-    invoke-interface {p2, p1}, Ljava/util/function/IntConsumer;->accept(I)V
-
-    return-void
 .end method

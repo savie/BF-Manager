@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector android:exitFadeDuration="@android:integer/config_mediumAnimTime"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028c" />
-    <item android:state_pressed="false" android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028b" />
-</selector>
+<animated-selector android:height="@dimen/APKTOOL_RENAMED_0x7f070331" android:width="@dimen/APKTOOL_RENAMED_0x7f070331"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true" android:id="@id/APKTOOL_RENAMED_0x7f0a0493" android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028e" />
+    <item android:state_checked="true" android:id="@id/APKTOOL_RENAMED_0x7f0a0102" android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028b" />
+    <item android:id="@id/APKTOOL_RENAMED_0x7f0a06e6" android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028b" app:APKTOOL_RENAMED_0x7f04046a="true" />
+    <item android:id="@id/APKTOOL_RENAMED_0x7f0a06aa" android:drawable="@drawable/APKTOOL_RENAMED_0x7f080291" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028f" android:toId="@id/APKTOOL_RENAMED_0x7f0a0102" android:fromId="@id/APKTOOL_RENAMED_0x7f0a0493" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028f" android:toId="@id/APKTOOL_RENAMED_0x7f0a06e6" android:fromId="@id/APKTOOL_RENAMED_0x7f0a0493" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f080290" android:toId="@id/APKTOOL_RENAMED_0x7f0a06aa" android:fromId="@id/APKTOOL_RENAMED_0x7f0a0493" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028c" android:toId="@id/APKTOOL_RENAMED_0x7f0a0493" android:fromId="@id/APKTOOL_RENAMED_0x7f0a0102" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028d" android:toId="@id/APKTOOL_RENAMED_0x7f0a06aa" android:fromId="@id/APKTOOL_RENAMED_0x7f0a0102" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f08028c" android:toId="@id/APKTOOL_RENAMED_0x7f0a0493" android:fromId="@id/APKTOOL_RENAMED_0x7f0a06e6" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f080293" android:toId="@id/APKTOOL_RENAMED_0x7f0a0493" android:fromId="@id/APKTOOL_RENAMED_0x7f0a06aa" />
+    <transition android:drawable="@drawable/APKTOOL_RENAMED_0x7f080292" android:toId="@id/APKTOOL_RENAMED_0x7f0a0102" android:fromId="@id/APKTOOL_RENAMED_0x7f0a06aa" />
+</animated-selector>

@@ -1,45 +1,61 @@
 package l;
 
-import java.util.function.Predicate;
+import java.util.Collection;
+import java.util.Set;
 
-/* JADX INFO: renamed from: l.᩵ۢۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T7LF */
+/* JADX INFO: renamed from: l.ᩳ᩹ۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 45BU */
 /* JADX INFO: loaded from: classes5.dex */
-public final /* synthetic */ class C19380 implements Predicate {
+public final class C19380 extends C6702 implements InterfaceC18414 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f62453;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ConcurrentMapC17249 f62617;
 
-    public /* synthetic */ C19380(int i) {
-        this.f62453 = i;
+    @Override // l.InterfaceC18414
+    /* JADX INFO: renamed from: ᩴ */
+    public final Set mo42922(Object obj) {
+        return ((C18634) obj).f60593;
     }
 
-    @Override // java.util.function.Predicate
-    public /* synthetic */ Predicate and(Predicate predicate) {
-        return C8512.$default$and(this, predicate);
+    @Override // l.InterfaceC16396
+    /* JADX INFO: renamed from: ᩷ */
+    public final int mo16027(Object obj) {
+        return ((C18634) obj).f60594;
     }
 
-    @Override // java.util.function.Predicate
-    /* JADX INFO: renamed from: negate */
-    public /* synthetic */ Predicate mo9645negate() {
-        switch (this.f62453) {
-            case 0:
-                break;
+    @Override // l.InterfaceC17888
+    /* JADX INFO: renamed from: ᩸ */
+    public final int mo41743(Object obj) {
+        C18634 c18634 = (C18634) obj;
+        if (c18634 == null) {
+            return 0;
         }
-        return C8512.$default$negate(this);
+        return c18634.f60594;
     }
 
-    public /* synthetic */ Predicate or(Predicate predicate) {
-        return C8512.$default$or(this, predicate);
+    public C19380(C8850 c8850) {
+        super(c8850);
+        this.f62617 = new ConcurrentMapC17249();
     }
 
-    @Override // java.util.function.Predicate
-    public final boolean test(Object obj) {
-        switch (this.f62453) {
-            case 0:
-                return (((C19670) obj).f77447 & 9007199254740992L) != 0;
-            default:
-                return ((C10229) obj).m26017() != null;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C18634 m44825(Set set) {
+        if (set == null) {
+            return C18634.f60592;
         }
+        ConcurrentMapC17249 concurrentMapC17249 = this.f62617;
+        C18634 c18634 = (C18634) concurrentMapC17249.get(set);
+        if (c18634 != null) {
+            return c18634;
+        }
+        C18634 c18635 = new C18634(AbstractC8639.m23278(C7676.m20911(set.iterator(), new C0735(this))));
+        C18634 c18636 = (C18634) concurrentMapC17249.putIfAbsent(c18635, c18635);
+        return c18636 == null ? c18635 : c18636;
+    }
+
+    @Override // l.InterfaceC16396
+    /* JADX INFO: renamed from: ۙ */
+    public final Collection mo16024() {
+        return new C8193(this.f62617.values());
     }
 }

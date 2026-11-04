@@ -1,41 +1,58 @@
 package l;
 
-import java.io.IOException;
-
-/* JADX INFO: renamed from: l.ۚ۠֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R8AK */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C5218 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ int f18069;
+/* JADX INFO: renamed from: l.ۙ᩹ܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M7NB */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C5218 extends AbstractC16404 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C16508 f18070;
+    public Boolean f18409;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ String f18071;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public EnumC23864 f18410;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3806 f18072;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public Boolean f18411;
 
-    public C5218(C16508 c16508, C3806 c3806, String str, int i) {
-        this.f18070 = c16508;
-        this.f18072 = c3806;
-        this.f18071 = str;
-        this.f18069 = i;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final AbstractC16404 m15701() {
+        this.f18409 = Boolean.TRUE;
+        return this;
     }
 
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final AbstractC16404 m15700() {
+        this.f18411 = Boolean.TRUE;
+        return this;
+    }
+
+    @Override // l.AbstractC16404
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m14399(long j) throws IOException {
-        C16508 c16508 = this.f18070;
-        c16508.m38799();
-        c16508.m38817();
-        try {
-            this.f18072.f14138 = c16508.m38811(this.f18071, j == 0);
-            return C16508.m38786(this.f18069, c16508.f53030.f36944.m4282());
-        } catch (C10360 e) {
-            throw new IOException(e.getMessage(), e);
+    public final AbstractC16404 mo15699(EnumC23864 enumC23864) {
+        if (enumC23864 == null) {
+            throw new NullPointerException("Null style");
         }
+        this.f18410 = enumC23864;
+        return this;
+    }
+
+    @Override // l.AbstractC16404
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final AbstractC3726 mo15698() {
+        Boolean bool = this.f18409;
+        if (bool == null || this.f18411 == null || this.f18410 == null) {
+            StringBuilder sb = new StringBuilder();
+            if (this.f18409 == null) {
+                sb.append(" formatJavadoc");
+            }
+            if (this.f18411 == null) {
+                sb.append(" reorderModifiers");
+            }
+            if (this.f18410 == null) {
+                sb.append(" style");
+            }
+            throw new IllegalStateException("Missing required properties:" + ((Object) sb));
+        }
+        return new C22372(bool.booleanValue(), this.f18411.booleanValue(), this.f18410);
     }
 }

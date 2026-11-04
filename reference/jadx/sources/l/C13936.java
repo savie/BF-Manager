@@ -1,27 +1,19 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰܽۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: T12U */
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: renamed from: l.۬ܶۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U8TP */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13936 extends AbstractC9712 {
-    @Override // l.AbstractC11123
-    /* JADX INFO: renamed from: ۨ */
-    public final void mo8536(AbstractC12554 abstractC12554) {
+public final class C13936 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel parcel) {
+        return new C5208(parcel);
     }
 
-    @Override // l.AbstractC11123
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo8535(C17492 c17492, AbstractC12554 abstractC12554, AbstractC12554 abstractC12555) {
-        int adapterPosition = abstractC12554.getAdapterPosition();
-        int adapterPosition2 = abstractC12555.getAdapterPosition();
-        int i = DialogInterfaceOnDismissListenerC5468.f18839[adapterPosition];
-        if (adapterPosition > adapterPosition2) {
-            System.arraycopy(DialogInterfaceOnDismissListenerC5468.f18839, adapterPosition2, DialogInterfaceOnDismissListenerC5468.f18839, adapterPosition2 + 1, adapterPosition - adapterPosition2);
-        } else {
-            System.arraycopy(DialogInterfaceOnDismissListenerC5468.f18839, adapterPosition + 1, DialogInterfaceOnDismissListenerC5468.f18839, adapterPosition, adapterPosition2 - adapterPosition);
-        }
-        DialogInterfaceOnDismissListenerC5468.f18839[adapterPosition2] = i;
-        c17492.getAdapter().notifyItemMoved(adapterPosition, adapterPosition2);
-        return true;
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int i) {
+        return new C5208[i];
     }
 }

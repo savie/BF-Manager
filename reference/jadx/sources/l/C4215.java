@@ -1,63 +1,56 @@
 package l;
 
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
+import android.content.DialogInterface;
 
-/* JADX INFO: renamed from: l.ۘ᩸ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: GQL */
+/* JADX INFO: renamed from: l.ۘܰ᩻, reason: contains not printable characters */
+/* JADX INFO: compiled from: 08W3 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4215 extends AbstractC14695 {
+public final class C4215 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C7038 f15297;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f15403;
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, java.util.Set
-    public /* synthetic */ Spliterator spliterator() {
-        return C7287.convert(spliterator());
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC21369 f15404;
+
+    public C4215(ActivityC21369 activityC21369, boolean z) {
+        this.f15404 = activityC21369;
+        this.f15403 = z;
     }
 
-    public C4215(C7038 c7038) {
-        this.f15297 = c7038;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        ActivityC21369 activityC21369 = this.f15404;
+        activityC21369.f68061.setVisibility(8);
+        activityC21369.f68057.m10021(true);
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final boolean contains(Object obj) {
-        return this.f15297.containsValue(obj);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
+        this.f15404.f68059 = C0486.m2347(this.f15403);
     }
 
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final Iterator iterator() {
-        return new C1393(this);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        this.f15404.f68058.getAdapter().notifyDataSetChanged();
     }
 
-    @Override // l.AbstractC14695, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, l.InterfaceC0624, l.InterfaceC18660, java.util.Set
-    public final InterfaceC6269 iterator() {
-        return new C1393(this);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        this.f15404.m40401(exc, (DialogInterface.OnDismissListener) null);
     }
 
-    @Override // l.AbstractC14695, java.util.Collection, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC0624, l.InterfaceC16585, java.util.Set, l.InterfaceC22810
-    public final InterfaceC7371 spliterator() {
-        return new C13389(this, 0, this.f15297.f23647);
-    }
-
-    @Override // l.AbstractC14695, java.lang.Iterable, l.InterfaceC10441, l.InterfaceC16585
-    public final void forEach(Consumer consumer) {
-        C7038 c7038 = this.f15297;
-        Object[] objArr = c7038.f23645;
-        int i = c7038.f23647;
-        for (int i2 = 0; i2 < i; i2++) {
-            consumer.accept(objArr[i2]);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        ActivityC21369 activityC21369 = this.f15404;
+        activityC21369.f68057.m10021(false);
+        if (activityC21369.f68059.isEmpty()) {
+            activityC21369.f68061.setVisibility(0);
         }
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final int size() {
-        return this.f15297.f23647;
-    }
-
-    @Override // java.util.AbstractCollection, java.util.Collection
-    public final void clear() {
-        this.f15297.clear();
     }
 }

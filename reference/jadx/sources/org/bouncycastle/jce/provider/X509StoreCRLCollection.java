@@ -7,7 +7,7 @@ import org.bouncycastle.x509.X509CollectionStoreParameters;
 import org.bouncycastle.x509.X509StoreParameters;
 import org.bouncycastle.x509.X509StoreSpi;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509StoreCRLCollection extends X509StoreSpi {
     public CollectionStore _store;
 

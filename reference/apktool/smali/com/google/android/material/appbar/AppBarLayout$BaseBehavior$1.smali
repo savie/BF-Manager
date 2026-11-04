@@ -11,17 +11,17 @@
 
 .field public final synthetic val$child:Lcom/google/android/material/appbar/AppBarLayout;
 
-.field public final synthetic val$coordinatorLayout:Ll/ۖ᩶;
+.field public final synthetic val$coordinatorLayout:Ll/᩻᩶;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Ll/ۖ᩶;Lcom/google/android/material/appbar/AppBarLayout;)V
+.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Ll/᩻᩶;Lcom/google/android/material/appbar/AppBarLayout;)V
     .locals 0
 
     .line 1678
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$coordinatorLayout:Ll/ۖ᩶;
+    iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$coordinatorLayout:Ll/᩻᩶;
 
     iput-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$child:Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -38,7 +38,7 @@
     .line 1681
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$coordinatorLayout:Ll/ۖ᩶;
+    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$coordinatorLayout:Ll/᩻᩶;
 
     iget-object v2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;->val$child:Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -54,7 +54,7 @@
     move-result p1
 
     .line 1681
-    invoke-virtual {v0, v1, v2, p1}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/ۖ᩶;Landroid/view/View;I)I
+    invoke-virtual {v0, v1, v2, p1}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Ll/᩻᩶;Landroid/view/View;I)I
 
     return-void
 .end method

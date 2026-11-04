@@ -8,7 +8,7 @@ import java.security.PublicKey;
 import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.security.spec.KeySpec;
-import l.C17114;
+import l.C13921;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.asn1.cryptopro.CryptoProObjectIdentifiers;
@@ -21,7 +21,7 @@ import org.bouncycastle.jce.spec.ECParameterSpec;
 import org.bouncycastle.jce.spec.ECPrivateKeySpec;
 import org.bouncycastle.jce.spec.ECPublicKeySpec;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class KeyFactorySpi extends BaseKeyFactorySpi {
     @Override // org.bouncycastle.jcajce.provider.asymmetric.util.BaseKeyFactorySpi, java.security.KeyFactorySpi
     public PrivateKey engineGeneratePrivate(KeySpec keySpec) {
@@ -91,7 +91,7 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (algorithm.equals((ASN1Primitive) CryptoProObjectIdentifiers.gostR3410_2001_CryptoPro_ESDH)) {
             return new BCECGOST3410PrivateKey(privateKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 
     @Override // org.bouncycastle.jcajce.provider.util.AsymmetricKeyInfoConverter
@@ -106,6 +106,6 @@ public class KeyFactorySpi extends BaseKeyFactorySpi {
         if (algorithm.equals((ASN1Primitive) CryptoProObjectIdentifiers.gostR3410_2001_CryptoPro_ESDH)) {
             return new BCECGOST3410PublicKey(subjectPublicKeyInfo);
         }
-        throw new IOException(C17114.m39969("algorithm identifier ", algorithm, " in key not recognised"));
+        throw new IOException(C13921.m33901("algorithm identifier ", algorithm, " in key not recognised"));
     }
 }

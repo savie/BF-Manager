@@ -10,40 +10,40 @@ import java.io.InputStream;
 /* JADX INFO: loaded from: classes.dex */
 public class NamespaceRemovingInputStream extends SdkFilterInputStream {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public boolean f841;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public boolean f831;
 
     /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public final byte[] f842;
+    public final byte[] f832;
 
     public NamespaceRemovingInputStream(ByteArrayInputStream byteArrayInputStream) {
         super(new BufferedInputStream(byteArrayInputStream));
-        this.f842 = new byte[200];
-        this.f841 = false;
+        this.f832 = new byte[200];
+        this.f831 = false;
     }
 
     @Override // com.amazonaws.internal.SdkFilterInputStream, java.io.FilterInputStream, java.io.InputStream
     public final int read() throws IOException {
-        m280();
+        m274();
         int i = ((FilterInputStream) this).in.read();
-        if (i != 120 || this.f841) {
+        if (i != 120 || this.f831) {
             return i;
         }
-        this.f842[0] = (byte) i;
-        ((FilterInputStream) this).in.mark(this.f842.length);
+        this.f832[0] = (byte) i;
+        ((FilterInputStream) this).in.mark(this.f832.length);
         InputStream inputStream = ((FilterInputStream) this).in;
-        byte[] bArr = this.f842;
+        byte[] bArr = this.f832;
         int i2 = inputStream.read(bArr, 1, bArr.length - 1);
         ((FilterInputStream) this).in.reset();
-        String str = new String(this.f842, 0, i2 + 1, StringUtils.f844);
+        String str = new String(this.f832, 0, i2 + 1, StringUtils.f834);
         StringPrefixSlicer stringPrefixSlicer = new StringPrefixSlicer(str);
         int length = -1;
-        if (stringPrefixSlicer.m786("xmlns")) {
-            stringPrefixSlicer.m787();
-            if (stringPrefixSlicer.m786("=")) {
-                stringPrefixSlicer.m787();
-                if (stringPrefixSlicer.m786("\"") && stringPrefixSlicer.m788()) {
-                    length = str.length() - stringPrefixSlicer.m785().length();
+        if (stringPrefixSlicer.m780("xmlns")) {
+            stringPrefixSlicer.m781();
+            if (stringPrefixSlicer.m780("=")) {
+                stringPrefixSlicer.m781();
+                if (stringPrefixSlicer.m780("\"") && stringPrefixSlicer.m782()) {
+                    length = str.length() - stringPrefixSlicer.m779().length();
                 }
             }
         }
@@ -54,7 +54,7 @@ public class NamespaceRemovingInputStream extends SdkFilterInputStream {
             ((FilterInputStream) this).in.read();
         }
         int i4 = ((FilterInputStream) this).in.read();
-        this.f841 = true;
+        this.f831 = true;
         return i4;
     }
 
@@ -81,42 +81,42 @@ public class NamespaceRemovingInputStream extends SdkFilterInputStream {
     public final class StringPrefixSlicer {
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public String f843;
+        public String f833;
 
         public StringPrefixSlicer(String str) {
-            this.f843 = str;
+            this.f833 = str;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final String m785() {
-            return this.f843;
+        public final String m779() {
+            return this.f833;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final boolean m786(String str) {
-            if (!this.f843.startsWith(str)) {
+        public final boolean m780(String str) {
+            if (!this.f833.startsWith(str)) {
                 return false;
             }
-            this.f843 = this.f843.substring(str.length());
+            this.f833 = this.f833.substring(str.length());
             return true;
         }
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final void m787() {
-            if (this.f843.startsWith(" ")) {
-                while (this.f843.startsWith(" ")) {
-                    this.f843 = this.f843.substring(1);
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final void m781() {
+            if (this.f833.startsWith(" ")) {
+                while (this.f833.startsWith(" ")) {
+                    this.f833 = this.f833.substring(1);
                 }
             }
         }
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final boolean m788() {
-            int iIndexOf = this.f843.indexOf("\"");
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final boolean m782() {
+            int iIndexOf = this.f833.indexOf("\"");
             if (iIndexOf < 0) {
                 return false;
             }
-            this.f843 = this.f843.substring(iIndexOf + 1);
+            this.f833 = this.f833.substring(iIndexOf + 1);
             return true;
         }
     }

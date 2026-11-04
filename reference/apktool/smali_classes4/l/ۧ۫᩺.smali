@@ -1,56 +1,84 @@
 .class public final Ll/ۧ۫᩺;
-.super Ll/ۛ۫᩺;
-.source "L1UJ"
+.super Ll/ۗ۫᩺;
+.source "A7FF"
 
 
 # instance fields
-.field public ᩹:Ljava/util/ArrayList;
+.field public ᩶:I
 
 
 # direct methods
-.method public constructor <init>(Ll/᩶۫᩺;)V
+.method public constructor <init>(Ll/᩺۫᩺;I)V
     .locals 0
 
-    .line 8
-    invoke-direct {p0, p1}, Ll/ܽ۫᩺;-><init>(Ll/᩶۫᩺;)V
+    .line 447
+    invoke-direct {p0, p1}, Ll/ۗ۫᩺;-><init>(Ll/᩺۫᩺;)V
 
-    .line 10
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Ll/ۧ۫᩺;->᩹:Ljava/util/ArrayList;
+    .line 448
+    iput p2, p0, Ll/ۧ۫᩺;->᩶:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ(Ll/֡۫᩺;Ll/᩸ܿ᩺;)V
-    .locals 0
+.method public final getLength()I
+    .locals 1
 
-    .line 9
-    check-cast p1, Ll/۫۫᩺;
+    const/4 v0, 0x2
 
-    .line 18
-    invoke-interface {p2, p1, p0}, Ll/᩸ܿ᩺;->ۙ(Ll/۫۫᩺;Ll/ۧ۫᩺;)V
+    return v0
+.end method
+
+.method public final ۙ()Ljava/lang/String;
+    .locals 1
+
+    .line 458
+    iget v0, p0, Ll/ۧ۫᩺;->᩶:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final ۙ(Ll/ۡ۬ۛ;)V
+    .locals 1
+
+    .line 453
+    iget v0, p0, Ll/ۧ۫᩺;->᩶:I
+
+    check-cast p1, Ll/ۧۙ᩺;
+
+    invoke-virtual {p1, v0}, Ll/ۧۙ᩺;->ۤ(I)V
 
     return-void
 .end method
 
-.method public final ܰ(Ljava/lang/String;)V
-    .locals 1
+.method public final ᩷()Ljava/lang/String;
+    .locals 3
 
-    .line 29
-    new-instance p1, Ll/ܺ۫᩺;
+    .line 468
+    iget v0, p0, Ll/ۧ۫᩺;->᩶:I
 
-    .line 3
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 32
-    iget-object v0, p0, Ll/ۧ۫᩺;->᩹:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    return-void
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    const-string v0, "{ offset: %d; }"
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,14 +1,14 @@
 package l;
 
-import java.math.BigInteger;
+import java.util.function.IntFunction;
 
-/* JADX INFO: renamed from: l.᩺ۛ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: D9KC */
+/* JADX INFO: renamed from: l.᩸۫ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4AWI */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22812 extends AbstractC18203 {
-    @Override // l.AbstractC18203
-    /* JADX INFO: renamed from: ۙ */
-    public final AbstractC9032 mo1600(AbstractC14676 abstractC14676, byte[] bArr) {
-        return new C21400(new BigInteger(bArr), bArr);
+public final /* synthetic */ class C22812 implements IntFunction {
+    @Override // java.util.function.IntFunction
+    public final Object apply(int i) {
+        int i2 = ActivityC5440.f18993;
+        return new CharSequence[i];
     }
 }

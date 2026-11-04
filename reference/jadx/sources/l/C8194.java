@@ -1,33 +1,30 @@
 package l;
 
-import java.util.zip.CRC32;
-
-/* JADX INFO: renamed from: l.۠۬ۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N1T0 */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8194 extends AbstractC8900 {
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final CRC32 f28551 = new CRC32();
-
-    public C8194() {
-        this.f30540 = 4;
-        this.f30539 = "CRC32";
+/* JADX INFO: renamed from: l.۟᩹ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C8194 implements InterfaceC2885 {
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    @Override // l.AbstractC8900
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public final void mo19985(byte[] bArr, int i, int i2) {
-        this.f28551.update(bArr, i, i2);
+    public final boolean mo1303(int i) {
+        return Character.isISOControl(i);
     }
 
-    @Override // l.AbstractC8900
-    /* JADX INFO: renamed from: ۙ */
-    public final byte[] mo19986() {
-        byte[] bArr = new byte[4];
-        CRC32 crc32 = this.f28551;
-        C2641.m8156(0, (int) crc32.getValue(), bArr);
-        crc32.reset();
-        return bArr;
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

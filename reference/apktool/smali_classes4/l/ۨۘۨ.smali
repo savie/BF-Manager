@@ -1,177 +1,128 @@
 .class public final Ll/ۨۘۨ;
-.super Ljava/lang/Object;
-.source "C1PJ"
-
-# interfaces
-.implements Ll/ᩳۘۨ;
-
-
-# static fields
-.field public static final ܰ:Ll/ۨۘۨ;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 4
-    new-instance v0, Ll/ۨۘۨ;
-
-    .line 6
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    sput-object v0, Ll/ۨۘۨ;->ܰ:Ll/ۨۘۨ;
-
-    return-void
-.end method
+.super Ll/ۢۘۨ;
+.source "62DG"
 
 
 # virtual methods
-.method public final ۙ()I
-    .locals 1
+.method public final ۙ(Ljava/lang/CharSequence;Ljava/io/StringWriter;)V
+    .locals 10
 
-    .line 46
-    sget v0, Ll/᩹ۘۨ;->ۙ:I
+    .line 51
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final ۙ(I[B)I
-    .locals 15
+    .line 52
+    invoke-static {}, Ll/᩺ۘۨ;->ۙ()[C
 
-    .line 11
-    sget-object v0, Ll/ۖۘۨ;->ۙ:[[I
+    move-result-object v0
 
-    const/4 v1, 0x0
+    sget v1, Ll/᩺ۨۨ;->ۙ:I
 
-    const-wide/16 v2, 0x0
+    if-eqz p1, :cond_4
 
-    const-wide/16 v4, 0x1
+    if-nez v0, :cond_0
 
-    const/4 v6, 0x1
+    goto :goto_2
 
-    const/4 v7, 0x1
+    .line 1220
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    add-int/lit8 v2, v1, -0x1
+
+    .line 1222
+    array-length v3, v0
+
+    add-int/lit8 v4, v3, -0x1
+
+    const/4 v5, 0x0
 
     :goto_0
-    add-int/lit8 v8, p1, -0x1
+    if-ge v5, v1, :cond_4
 
-    if-ge v1, v8, :cond_6
+    .line 1225
+    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
-    .line 17
-    aget-byte v8, p2, v1
+    move-result v6
 
-    if-ltz v8, :cond_0
+    const/4 v7, 0x0
 
-    goto :goto_3
+    :goto_1
+    if-ge v7, v3, :cond_3
 
-    :cond_0
-    add-int/lit8 v7, v7, 0x1
+    .line 1227
+    aget-char v8, v0, v7
 
-    const/16 v9, -0x5f
+    if-ne v8, v6, :cond_2
 
-    if-gt v9, v8, :cond_5
+    .line 1228
+    invoke-static {v6}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
-    const/4 v10, -0x7
+    move-result v8
 
-    if-gt v8, v10, :cond_5
+    if-eqz v8, :cond_1
 
-    add-int/lit8 v10, v1, 0x1
+    if-eq v7, v4, :cond_1
 
-    .line 21
-    aget-byte v10, p2, v10
+    if-ge v5, v2, :cond_2
 
-    const/16 v11, 0x7e
+    add-int/lit8 v8, v7, 0x1
 
-    const/16 v12, 0x40
+    aget-char v8, v0, v8
 
-    if-gt v12, v10, :cond_1
+    add-int/lit8 v9, v5, 0x1
 
-    if-le v10, v11, :cond_2
+    invoke-virtual {p1, v9}, Ljava/lang/String;->charAt(I)C
+
+    move-result v9
+
+    if-ne v8, v9, :cond_2
 
     :cond_1
-    if-gt v9, v10, :cond_5
+    const/16 v0, 0x22
 
-    const/4 v9, -0x2
+    .line 56
+    invoke-virtual {p2, v0}, Ljava/io/Writer;->write(I)V
 
-    if-gt v10, v9, :cond_5
+    .line 57
+    invoke-static {}, Ll/᩺ۘۨ;->᩷()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Ll/᩺ۘۨ;->ۤ()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Ll/᩶ۨۨ;->ۤ:Ll/᩶ۨۨ;
+
+    invoke-virtual {v3, p1, v1, v2}, Ll/᩶ۨۨ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    .line 58
+    invoke-virtual {p2, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
 
     :cond_2
-    add-int/lit8 v6, v6, 0x1
-
-    const-wide/16 v13, 0x1f4
-
-    add-long/2addr v4, v13
-
-    add-int/lit8 v8, v8, 0x5f
-
-    if-gt v12, v10, :cond_3
-
-    if-gt v10, v11, :cond_3
-
-    add-int/lit8 v10, v10, -0x40
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
     :cond_3
-    add-int/lit16 v10, v10, 0x9f
-
-    .line 30
-    :goto_1
-    aget-object v9, v0, v8
-
-    aget v9, v9, v10
-
-    if-eqz v9, :cond_4
-
-    int-to-long v8, v9
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v9, 0x3
-
-    if-gt v9, v8, :cond_5
-
-    const/16 v9, 0x25
-
-    if-gt v8, v9, :cond_5
-
-    const-wide/16 v8, 0xc8
-
-    :goto_2
-    add-long/2addr v2, v8
-
-    :cond_5
-    add-int/lit8 v1, v1, 0x1
-
-    :goto_3
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_6
-    int-to-float v0, v6
+    .line 53
+    :cond_4
+    :goto_2
+    invoke-virtual {p2, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    int-to-float v1, v7
-
-    div-float/2addr v0, v1
-
-    const/high16 v1, 0x42480000    # 50.0f
-
-    mul-float v0, v0, v1
-
-    long-to-float v2, v2
-
-    long-to-float v3, v4
-
-    div-float/2addr v2, v3
-
-    mul-float v2, v2, v1
-
-    add-float/2addr v2, v0
-
-    float-to-int v0, v2
-
-    return v0
+    return-void
 .end method

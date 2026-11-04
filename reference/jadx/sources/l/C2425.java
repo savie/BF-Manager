@@ -1,28 +1,59 @@
 package l;
 
-import java.util.EnumSet;
-
-/* JADX INFO: renamed from: l.ۖۡۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 843X */
+/* JADX INFO: renamed from: l.ۖۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 2589 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C2425 extends C19670 {
+public final class C2425 extends AbstractC12384 implements InterfaceC17253 {
 
-    /* JADX INFO: renamed from: ᩴۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C3836 f9728;
+    /* JADX INFO: renamed from: ᩳ, reason: not valid java name and contains not printable characters */
+    public static final EnumC7011 f7760 = EnumC7011.Format23x;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C2425(C3836 c3836, AbstractC11242 abstractC11242) {
-        super(abstractC11242);
-        this.f9728 = c3836;
-        this.f63146 = C21825.m48588();
-        this.f63142 = C21825.m48588();
-        this.f63140 = C21825.m48588();
-        this.f63151 = C21825.m48588();
-        this.f63134 = C21825.of((Object) new C6948(c3836.m11146(c3836.f14246.f77580), EnumSet.of(EnumC23177.MANDATED)));
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f7761;
+
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public final int f7762;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final int f7763;
+
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509 + " v" + mo1542() + ", v" + mo1541() + ", v" + mo8187();
     }
 
-    @Override // l.C19670, l.AbstractC23903
-    public final String toString() {
-        return this.f9728.f14229.m50050("compiler.misc.unnamed.module", new Object[0]);
+    public C2425(int i, int i2, int i3, EnumC22631 enumC22631) {
+        super(enumC22631);
+        C6544.m18435(i);
+        this.f7763 = i;
+        C6544.m18435(i2);
+        this.f7761 = i2;
+        C6544.m18435(i3);
+        this.f7762 = i3;
+    }
+
+    @Override // l.InterfaceC12142
+    /* JADX INFO: renamed from: ۙ */
+    public final int mo1542() {
+        return this.f7763;
+    }
+
+    @Override // l.InterfaceC18109
+    /* JADX INFO: renamed from: ۘ */
+    public final int mo1541() {
+        return this.f7761;
+    }
+
+    @Override // l.InterfaceC21093
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final int mo8187() {
+        return this.f7762;
+    }
+
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f7760;
     }
 }

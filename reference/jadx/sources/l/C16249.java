@@ -1,46 +1,88 @@
 package l;
 
-import bin.mt.json.JSON;
-import bin.mt.json.JSONArray;
-import bin.mt.json.JSONObject;
-import bin.mt.json.JSONValue;
-import com.alipay.sdk.m.u0.b;
-import java.math.BigDecimal;
+/* JADX INFO: renamed from: l.ܶܿܺ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C16249 extends EnumC14757 {
+    public /* synthetic */ C16249() {
+        this("FORMAT_FILL_ARRAY_DATA_PAYLOAD", 35);
+    }
 
-/* JADX INFO: renamed from: l.ܺ᩺۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: M6Y4 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16249 {
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m38376(JSONObject jSONObject, String str, long j, long j2) throws C12731 {
-        if (j < 0 || j2 > 9007199254740991L || j > j2) {
-            throw new IllegalArgumentException("Invalid safe integer range");
-        }
-        JSONValue jSONValue = jSONObject.get(str);
-        if (jSONValue == null || !jSONValue.isNumber()) {
-            throw m38378(str, jSONValue, j, j2);
-        }
-        try {
-            long jLongValueExact = new BigDecimal(jSONValue.toString()).longValueExact();
-            if (jLongValueExact < j || jLongValueExact > j2) {
-                throw m38378(str, jSONValue, j, j2);
+    public C16249(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC3659 mo2922(int i, InterfaceC16337 interfaceC16337) {
+        int i2 = interfaceC16337.read();
+        int i3 = interfaceC16337.readInt();
+        int i4 = 0;
+        if (i2 == 1) {
+            byte[] bArr = new byte[i3];
+            int i5 = 0;
+            boolean z = true;
+            while (i4 < i3) {
+                if (z) {
+                    i5 = interfaceC16337.read();
+                }
+                bArr[i4] = (byte) (i5 & 255);
+                i5 >>= 8;
+                i4++;
+                z = !z;
             }
-            return jLongValueExact;
-        } catch (ArithmeticException | NumberFormatException unused) {
-            throw m38378(str, jSONValue, j, j2);
+            return new C20813((EnumC14757) this, i, bArr);
         }
+        if (i2 == 2) {
+            short[] sArr = new short[i3];
+            while (i4 < i3) {
+                sArr[i4] = (short) interfaceC16337.read();
+                i4++;
+            }
+            return new C20813((EnumC14757) this, i, sArr);
+        }
+        if (i2 == 4) {
+            int[] iArr = new int[i3];
+            while (i4 < i3) {
+                iArr[i4] = interfaceC16337.readInt();
+                i4++;
+            }
+            return new C20813((EnumC14757) this, i, iArr);
+        }
+        if (i2 == 8) {
+            long[] jArr = new long[i3];
+            while (i4 < i3) {
+                jArr[i4] = interfaceC16337.readLong();
+                i4++;
+            }
+            return new C20813(this, i, jArr);
+        }
+        throw new C20288("bogus element_width: ".concat(C5306.m15934(i2)), null);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static long m38377(String str, long j, long j2) throws C12731 {
-        if (j < 0 || j2 < 0 || j > 9007199254740991L - j2) {
-            throw C12731.m31627("FILE_OFFSET_OUT_OF_RANGE", "Byte offset exceeds the supported JSON integer range.", "warning", (JSONArray) null, JSON.object().add("argument", str).add(b.d, j).add("increment", j2).add("maximum", 9007199254740991L));
+    @Override // l.EnumC14757
+    /* JADX INFO: renamed from: ۙ */
+    public void mo2923(AbstractC3659 abstractC3659, InterfaceC23797 interfaceC23797) {
+        C20813 c20813 = (C20813) abstractC3659;
+        short sM47606 = c20813.m47606();
+        Object objM47605 = c20813.m47605();
+        interfaceC23797.m53077();
+        interfaceC23797.m53077();
+        interfaceC23797.m53086();
+        if (sM47606 == 1) {
+            interfaceC23797.m53083();
+            return;
         }
-        return j + j2;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C12731 m38378(String str, JSONValue jSONValue, long j, long j2) {
-        return C12731.m31626("Invalid integer argument", str, jSONValue, JSON.array().add(j + ".." + j2), JSON.object().add(str, j));
+        if (sM47606 == 2) {
+            interfaceC23797.m53081();
+        } else if (sM47606 == 4) {
+            interfaceC23797.m53080();
+        } else {
+            if (sM47606 == 8) {
+                interfaceC23797.m53078();
+                return;
+            }
+            throw new C20288("bogus element_width: ".concat(C5306.m15934(sM47606)), null);
+        }
     }
 }

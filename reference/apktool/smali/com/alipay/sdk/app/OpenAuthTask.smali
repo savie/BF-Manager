@@ -34,9 +34,9 @@
     .locals 2
 
     .line 1
-    new-instance v0, Ll/ܰۧᩴ;
+    new-instance v0, Ll/ܽ֫ۗ;
 
-    invoke-direct {v0}, Ll/ܰۧᩴ;-><init>()V
+    invoke-direct {v0}, Ll/ܽ֫ۗ;-><init>()V
 
     sput-object v0, Lcom/alipay/sdk/app/OpenAuthTask;->e:Ljava/util/Map;
 

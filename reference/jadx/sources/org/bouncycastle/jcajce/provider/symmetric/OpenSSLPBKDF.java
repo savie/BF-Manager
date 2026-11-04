@@ -5,7 +5,7 @@ import java.security.spec.KeySpec;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import l.C5800;
+import l.C8947;
 import org.bouncycastle.crypto.generators.OpenSSLPBEParametersGenerator;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
@@ -13,7 +13,7 @@ import org.bouncycastle.jcajce.provider.symmetric.util.BaseSecretKeyFactory;
 import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OpenSSLPBKDF {
 
     public class Mappings extends AlgorithmProvider {
@@ -21,11 +21,10 @@ public final class OpenSSLPBKDF {
 
         @Override // org.bouncycastle.jcajce.provider.util.AlgorithmProvider
         public void configure(ConfigurableProvider configurableProvider) {
-            C5800.m15969(PREFIX, "$PBKDF", "SecretKeyFactory.PBKDF-OPENSSL", new StringBuilder(), configurableProvider);
+            C8947.m23913(PREFIX, "$PBKDF", "SecretKeyFactory.PBKDF-OPENSSL", new StringBuilder(), configurableProvider);
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class PBKDF extends BaseSecretKeyFactory {
         public PBKDF() {
             super("PBKDF-OpenSSL", null);

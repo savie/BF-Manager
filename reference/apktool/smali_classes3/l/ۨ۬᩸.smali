@@ -1,464 +1,909 @@
-.class public Ll/ۨ۬᩸;
+.class public final Ll/ۨ۬᩸;
 .super Ljava/lang/Object;
-.source "O2OG"
+.source "S5XV"
+
+# interfaces
+.implements Landroid/text/Editable;
 
 
 # instance fields
-.field public final ۙ:I
+.field public final ֡:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final ۨ:Ljava/lang/reflect/Type;
+.field public final ܰ:Ll/ᩳ۬᩸;
 
-.field public final ܰ:Ljava/lang/Class;
+.field public final ܿ:Ljava/lang/ref/WeakReference;
+
+.field public final ᩶:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
-
-    .line 73
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 96
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    .line 97
-    instance-of v1, v0, Ljava/lang/reflect/ParameterizedType;
-
-    const-class v2, Ll/ۨ۬᩸;
-
-    if-eqz v1, :cond_1
-
-    .line 98
-    check-cast v0, Ljava/lang/reflect/ParameterizedType;
-
-    .line 99
-    invoke-interface {v0}, Ljava/lang/reflect/ParameterizedType;->getRawType()Ljava/lang/reflect/Type;
-
-    move-result-object v1
-
-    if-ne v1, v2, :cond_2
-
-    .line 100
-    invoke-interface {v0}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-static {v0}, Ll/᩻ۖ᩸;->ۙ(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    const-string v1, "gson.allowCapturingTypeVariables"
-
-    .line 88
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "true"
-
-    invoke-static {v1, v2}, Ll/ܰۛᩴ;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 103
-    invoke-static {v0}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-
-    .line 74
-    :cond_0
-    iput-object v0, p0, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
-
-    .line 75
-    invoke-static {v0}, Ll/᩻ۖ᩸;->ۨ(Ljava/lang/reflect/Type;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ljava/lang/Class;
-
-    .line 76
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iput v0, p0, Ll/ۨ۬᩸;->ۙ:I
-
-    return-void
-
-    :cond_1
-    if-ne v0, v2, :cond_2
-
-    .line 110
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "TypeToken must be created with a type argument: new TypeToken<...>() {}; When using code shrinkers (ProGuard, R8, ...) make sure that generic signatures are preserved.\nSee "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "type-token-raw"
-
-    const-string v3, "https://github.com/google/gson/blob/main/Troubleshooting.md#"
-
-    .line 8
-    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 114
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 118
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Must only create direct subclasses of TypeToken"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public constructor <init>(Ljava/lang/reflect/Type;)V
+.method public constructor <init>(Ll/᩺ۜ᩸;I)V
     .locals 1
 
-    .line 81
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
-    invoke-static {p1}, Ll/ܰۛᩴ;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 23
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    check-cast p1, Ljava/lang/reflect/Type;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Ll/᩻ۖ᩸;->ۙ(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
+    iput-object v0, p0, Ll/ۨ۬᩸;->ܿ:Ljava/lang/ref/WeakReference;
+
+    .line 24
+    invoke-virtual {p1}, Ll/᩺ۜ᩸;->ܳ᩷()Ll/ᩳ۬᩸;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    .line 25
+    invoke-virtual {p1}, Ll/᩺ۜ᩸;->ܶ᩷()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object p1
 
-    iput-object p1, p0, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
+    iput-object p1, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 83
-    invoke-static {p1}, Ll/᩻ۖ᩸;->ۨ(Ljava/lang/reflect/Type;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ljava/lang/Class;
-
-    .line 84
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    iput p1, p0, Ll/ۨ۬᩸;->ۙ:I
+    .line 26
+    iput p2, p0, Ll/ۨ۬᩸;->᩶:I
 
     return-void
 .end method
 
-.method public static ۙ(Ljava/lang/Class;)Ll/ۨ۬᩸;
-    .locals 1
+.method private ۙ()Z
+    .locals 2
 
-    .line 361
-    new-instance v0, Ll/ۨ۬᩸;
+    .line 276
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܿ:Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v0, p0}, Ll/ۨ۬᩸;-><init>(Ljava/lang/reflect/Type;)V
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public static ۙ(Ljava/lang/reflect/Type;)Ll/ۨ۬᩸;
-    .locals 1
-
-    .line 356
-    new-instance v0, Ll/ۨ۬᩸;
-
-    invoke-direct {v0, p0}, Ll/ۨ۬᩸;-><init>(Ljava/lang/reflect/Type;)V
-
-    return-object v0
-.end method
-
-.method public static ܰ(Ljava/lang/reflect/Type;)V
-    .locals 5
-
-    .line 122
-    instance-of v0, p0, Ljava/lang/reflect/TypeVariable;
-
-    if-nez v0, :cond_7
-
-    .line 131
-    instance-of v0, p0, Ljava/lang/reflect/GenericArrayType;
+    check-cast v0, Ll/᩺ۜ᩸;
 
     if-eqz v0, :cond_0
 
-    .line 132
-    check-cast p0, Ljava/lang/reflect/GenericArrayType;
+    .line 277
+    iget v1, p0, Ll/ۨ۬᩸;->᩶:I
 
-    invoke-interface {p0}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
+    invoke-virtual {v0, v1}, Ll/᩺ۜ᩸;->ᩴ(I)Z
 
-    move-result-object p0
-
-    invoke-static {p0}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-
-    return-void
-
-    .line 133
-    :cond_0
-    instance-of v0, p0, Ljava/lang/reflect/ParameterizedType;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    .line 134
-    check-cast p0, Ljava/lang/reflect/ParameterizedType;
-
-    .line 135
-    invoke-interface {p0}, Ljava/lang/reflect/ParameterizedType;->getOwnerType()Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 137
-    invoke-static {v0}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-
-    .line 140
-    :cond_1
-    invoke-interface {p0}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    :goto_0
-    if-ge v1, v0, :cond_4
-
-    aget-object v2, p0, v1
-
-    .line 141
-    invoke-static {v2}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 143
-    :cond_2
-    instance-of v0, p0, Ljava/lang/reflect/WildcardType;
-
-    if-eqz v0, :cond_5
-
-    .line 144
-    check-cast p0, Ljava/lang/reflect/WildcardType;
-
-    .line 145
-    invoke-interface {p0}, Ljava/lang/reflect/WildcardType;->getLowerBounds()[Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_1
-    if-ge v3, v2, :cond_3
-
-    aget-object v4, v0, v3
-
-    .line 146
-    invoke-static {v4}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    .line 148
-    :cond_3
-    invoke-interface {p0}, Ljava/lang/reflect/WildcardType;->getUpperBounds()[Ljava/lang/reflect/Type;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    :goto_2
-    if-ge v1, v0, :cond_4
-
-    aget-object v2, p0, v1
-
-    .line 149
-    :try_start_0
-    invoke-static {v2}, Ll/ۨ۬᩸;->ܰ(Ljava/lang/reflect/Type;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p0
-
-    throw p0
-
-    :cond_4
-    return-void
-
-    :cond_5
-    if-eqz p0, :cond_6
-
-    return-void
-
-    .line 155
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "TypeToken captured `null` as type argument; probably a compiler / runtime bug"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 123
-    :cond_7
-    check-cast p0, Ljava/lang/reflect/TypeVariable;
-
-    .line 124
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "TypeToken type argument must not contain a type variable; captured type variable "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 126
-    invoke-interface {p0}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " declared by "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 128
-    invoke-interface {p0}, Ljava/lang/reflect/TypeVariable;->getGenericDeclaration()Ljava/lang/reflect/GenericDeclaration;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\nSee "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "typetoken-type-variable"
-
-    const-string v2, "https://github.com/google/gson/blob/main/Troubleshooting.md#"
-
-    .line 8
-    invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 130
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 346
-    instance-of v0, p1, Ll/ۨ۬᩸;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Ll/ۨ۬᩸;
+    const/4 v0, 0x1
 
-    iget-object p1, p1, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
-
-    iget-object v0, p0, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
-
-    invoke-static {v0, p1}, Ll/᩻ۖ᩸;->ۙ(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 341
-    iget v0, p0, Ll/ۨ۬᩸;->ۙ:I
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+
+# virtual methods
+.method public final append(C)Landroid/text/Editable;
+    .locals 2
+
+    .line 158
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 161
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    .line 163
+    :try_start_0
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1, p1}, Landroid/text/Editable;->append(C)Landroid/text/Editable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 166
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 167
+    throw p1
+.end method
+
+.method public final append(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 2
+
+    .line 123
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 126
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    .line 128
+    :try_start_0
+    invoke-static {p1}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    .line 129
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1, p1}, Landroid/text/Editable;->append(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 132
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 133
+    throw p1
+.end method
+
+.method public final append(Ljava/lang/CharSequence;II)Landroid/text/Editable;
+    .locals 3
+
+    .line 139
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 142
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    const/16 v1, 0xd
+
+    .line 268
+    :try_start_0
+    invoke-static {p1, v1, p2}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;CI)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_1
+
+    if-ge v1, p3, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 144
+    :goto_0
+    iget-object v2, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    if-eqz v1, :cond_2
+
+    .line 145
+    :try_start_1
+    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-interface {v2, p1}, Landroid/text/Editable;->append(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 151
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    .line 148
+    :cond_2
+    :try_start_2
+    invoke-interface {v2, p1, p2, p3}, Landroid/text/Editable;->append(Ljava/lang/CharSequence;II)Landroid/text/Editable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 151
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 152
+    throw p1
+.end method
+
+.method public final bridge synthetic append(C)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 16
+    invoke-virtual {p0, p1}, Ll/ۨ۬᩸;->append(C)Landroid/text/Editable;
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 16
+    invoke-virtual {p0, p1}, Ll/ۨ۬᩸;->append(Ljava/lang/CharSequence;)Landroid/text/Editable;
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 16
+    invoke-virtual {p0, p1, p2, p3}, Ll/ۨ۬᩸;->append(Ljava/lang/CharSequence;II)Landroid/text/Editable;
+
+    return-object p0
+.end method
+
+.method public final charAt(I)C
     .locals 1
 
-    .line 351
-    iget-object v0, p0, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
+    .line 258
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
 
-    invoke-static {v0}, Ll/᩻ۖ᩸;->ۖ(Ljava/lang/reflect/Type;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    .line 172
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 175
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    .line 177
+    :try_start_0
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1}, Landroid/text/Editable;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 179
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 180
+    throw v1
+.end method
+
+.method public final clearSpans()V
+    .locals 1
+
+    .line 185
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 188
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0}, Landroid/text/Editable;->clearSpans()V
+
+    return-void
+.end method
+
+.method public final delete(II)Landroid/text/Editable;
+    .locals 2
+
+    .line 108
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 111
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    .line 113
+    :try_start_0
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1, p1, p2}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 116
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 117
+    throw p1
+.end method
+
+.method public final getChars(II[CI)V
+    .locals 1
+
+    .line 206
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/GetChars;->getChars(II[CI)V
+
+    return-void
+.end method
+
+.method public final getFilters()[Landroid/text/InputFilter;
+    .locals 1
+
+    .line 201
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0}, Landroid/text/Editable;->getFilters()[Landroid/text/InputFilter;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ()Ljava/lang/Class;
+.method public final getSpanEnd(Ljava/lang/Object;)I
     .locals 1
 
-    .line 162
-    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ljava/lang/Class;
+    .line 238
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
 
-    return-object v0
+    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final ܰ()Ljava/lang/reflect/Type;
+.method public final getSpanFlags(Ljava/lang/Object;)I
     .locals 1
 
-    .line 167
-    iget-object v0, p0, Ll/ۨ۬᩸;->ۨ:Ljava/lang/reflect/Type;
+    .line 243
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
 
-    return-object v0
+    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getSpanStart(Ljava/lang/Object;)I
+    .locals 1
+
+    .line 233
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    .locals 1
+
+    .line 228
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 2
+
+    .line 93
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 96
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    .line 98
+    :try_start_0
+    invoke-static {p2}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    .line 99
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1, p1, p2}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 102
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 103
+    throw p1
+.end method
+
+.method public final insert(ILjava/lang/CharSequence;II)Landroid/text/Editable;
+    .locals 3
+
+    .line 75
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 78
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    const/16 v1, 0xd
+
+    .line 268
+    :try_start_0
+    invoke-static {p2, v1, p3}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;CI)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_1
+
+    if-ge v1, p4, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 80
+    :goto_0
+    iget-object v2, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    if-eqz v1, :cond_2
+
+    .line 81
+    :try_start_1
+    invoke-interface {p2, p3, p4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-interface {v2, p1, p2}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 87
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    .line 84
+    :cond_2
+    :try_start_2
+    invoke-interface {v2, p1, p2, p3, p4}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;II)Landroid/text/Editable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 87
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 88
+    throw p1
+.end method
+
+.method public final length()I
+    .locals 1
+
+    .line 253
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final nextSpanTransition(IILjava/lang/Class;)I
+    .locals 1
+
+    .line 248
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->nextSpanTransition(IILjava/lang/Class;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final removeSpan(Ljava/lang/Object;)V
+    .locals 2
+
+    .line 281
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܿ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/᩺ۜ᩸;
+
+    if-eqz v0, :cond_0
+
+    .line 282
+    iget v1, p0, Ll/ۨ۬᩸;->᩶:I
+
+    invoke-virtual {v0, v1}, Ll/᩺ۜ᩸;->᩸(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 223
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 3
+
+    .line 49
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 52
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    if-nez p3, :cond_1
+
+    :try_start_0
+    const-string p3, ""
+
+    .line 58
+    :cond_1
+    invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-interface {p3, v1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    if-ne v1, v2, :cond_2
+
+    .line 59
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܿ:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll/᩺ۜ᩸;
+
+    if-eqz v1, :cond_2
+
+    .line 61
+    invoke-virtual {v1, p1, p2}, Ll/᩺ۜ᩸;->᩸(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 69
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    .line 65
+    :cond_2
+    :try_start_1
+    invoke-static {p3}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p3
+
+    .line 66
+    iget-object v1, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v1, p1, p2, p3}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 69
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 70
+    throw p1
+.end method
+
+.method public final replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
+    .locals 8
+
+    .line 31
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 34
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->֡:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    const/16 v1, 0xd
+
+    .line 268
+    :try_start_0
+    invoke-static {p3, v1, p4}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;CI)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_1
+
+    if-ge v1, p5, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 36
+    :goto_0
+    iget-object v2, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    if-eqz v1, :cond_2
+
+    .line 37
+    :try_start_1
+    invoke-interface {p3, p4, p5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p3
+
+    invoke-static {p3}, Ll/ܰۤᩴ;->ۙ(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p3
+
+    invoke-interface {v2, p1, p2, p3}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 43
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :cond_2
+    move v3, p1
+
+    move v4, p2
+
+    move-object v5, p3
+
+    move v6, p4
+
+    move v7, p5
+
+    .line 40
+    :try_start_2
+    invoke-interface/range {v2 .. v7}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 43
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    return-object p0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    .line 44
+    throw p1
+.end method
+
+.method public final setFilters([Landroid/text/InputFilter;)V
+    .locals 1
+
+    .line 193
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 196
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1}, Landroid/text/Editable;->setFilters([Landroid/text/InputFilter;)V
+
+    return-void
+.end method
+
+.method public final setSpan(Ljava/lang/Object;III)V
+    .locals 1
+
+    .line 211
+    invoke-direct {p0}, Ll/ۨ۬᩸;->ۙ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 214
+    :cond_0
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    return-void
+.end method
+
+.method public final subSequence(II)Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 264
+    iget-object v0, p0, Ll/ۨ۬᩸;->ܰ:Ll/ᩳ۬᩸;
+
+    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
 .end method

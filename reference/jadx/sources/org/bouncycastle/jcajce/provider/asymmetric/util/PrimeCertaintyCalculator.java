@@ -1,6 +1,6 @@
 package org.bouncycastle.jcajce.provider.asymmetric.util;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PrimeCertaintyCalculator {
     public static int getDefaultCertainty(int i) {
         if (i <= 1024) {

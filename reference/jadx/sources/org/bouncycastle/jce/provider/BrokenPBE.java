@@ -15,7 +15,7 @@ import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.bouncycastle.jcajce.provider.symmetric.util.BCPBEKey;
 import org.bouncycastle.util.encoders.UTF8;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public interface BrokenPBE {
     public static final int MD5 = 0;
     public static final int OLD_PKCS12 = 3;

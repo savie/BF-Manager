@@ -1,412 +1,158 @@
 package l;
 
-import com.alipay.sdk.m.o.b;
-import org.bouncycastle.crypto.digests.Blake2xsDigest;
-import org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi;
+import android.content.Intent;
+import android.os.Build;
+import android.view.View;
+import bin.mt.plus.R;
+import java.util.concurrent.CancellationException;
 
-/* JADX INFO: renamed from: l.ۧ᩵ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S8PU */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C11206 {
-    /* JADX WARN: Code duplicated, block: B:21:0x0062  */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static boolean m28148(C11634 c11634, C17555 c17555) throws C22861 {
-        long jM29037;
-        c11634.m29036();
-        int iM28146 = m28146(c11634, 3, 8, 8);
-        c17555.f55788 = iM28146;
-        if (iM28146 == -1) {
-            return false;
-        }
-        C2023.m6507(Math.max(Math.max(2, 8), 32) <= 63);
-        C7161.m19080(C7161.m19080(3L, 255L), Blake2xsDigest.MAX_NUMBER_BLOCKS);
-        if (c11634.m29030() < 2) {
-            jM29037 = -1;
-        } else {
-            jM29037 = c11634.m29037(2);
-            if (jM29037 == 3) {
-                if (c11634.m29030() < 8) {
-                    jM29037 = -1;
-                } else {
-                    long jM29038 = c11634.m29037(8);
-                    jM29037 += jM29038;
-                    if (jM29038 == 255) {
-                        if (c11634.m29030() < 32) {
-                            jM29037 = -1;
-                        } else {
-                            jM29037 += c11634.m29037(32);
-                        }
-                    }
-                }
-            }
-        }
-        c17555.f55787 = jM29037;
-        if (jM29037 == -1) {
-            return false;
-        }
-        if (jM29037 > 16) {
-            throw C22861.m50611("Contains sub-stream with an invalid packet label " + c17555.f55787);
-        }
-        if (jM29037 == 0) {
-            int i = c17555.f55788;
-            if (i == 1) {
-                throw C22861.m50610("Mpegh3daConfig packet with invalid packet label 0", (Throwable) null);
-            }
-            if (i == 2) {
-                throw C22861.m50610("Mpegh3daFrame packet with invalid packet label 0", (Throwable) null);
-            }
-            if (i == 17) {
-                throw C22861.m50610("AudioTruncation packet with invalid packet label 0", (Throwable) null);
-            }
-        }
-        int iM28147 = m28146(c11634, 11, 24, 24);
-        c17555.f55789 = iM28147;
-        return iM28147 != -1;
+/* JADX INFO: renamed from: l.ۤ᩺ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: LAQJ */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C11206 extends AbstractC2432 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f35347;
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public AbstractC22044 f35348;
+
+    /* JADX INFO: renamed from: ۧ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C6733 f35349;
+
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public C10745 f35350;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C1790 f35351;
+
+    public C11206(C6733 c6733, int i) {
+        this.f35349 = c6733;
+        this.f35347 = i;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C6266 m28147(C11634 c11634) throws C22861 {
-        int iM29039;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        C6733 c6733 = this.f35349;
+        C10745 c10745 = new C10745(c6733.f22436);
+        c10745.m27397(R.string.MT_Protector);
+        c10745.m27393(c6733.getFileName());
+        c10745.mo25915(new View.OnClickListener() { // from class: l.ۙ᩺ᩴ
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f18446.f35350.m27405();
+            }
+        });
+        c10745.mo25931();
+        this.f35350 = c10745;
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() {
         int i;
-        char c;
-        int iM290310;
-        int i2 = 8;
-        int iM290311 = c11634.m29039(8);
-        int iM290312 = c11634.m29039(5);
-        if (iM290312 != 31) {
-            switch (iM290312) {
-                case 0:
-                    iM29039 = 96000;
-                    break;
-                case 1:
-                    iM29039 = 88200;
-                    break;
-                case 2:
-                    iM29039 = 64000;
-                    break;
-                case 3:
-                    iM29039 = 48000;
-                    break;
-                case 4:
-                    iM29039 = 44100;
-                    break;
-                case 5:
-                    iM29039 = 32000;
-                    break;
-                case 6:
-                    iM29039 = 24000;
-                    break;
-                case 7:
-                    iM29039 = 22050;
-                    break;
-                case 8:
-                    iM29039 = 16000;
-                    break;
-                case 9:
-                    iM29039 = 12000;
-                    break;
-                case 10:
-                    iM29039 = 11025;
-                    break;
-                case 11:
-                    iM29039 = 8000;
-                    break;
-                case 12:
-                    iM29039 = 7350;
-                    break;
-                case 13:
-                case 14:
-                default:
-                    throw C22861.m50611("Unsupported sampling rate index " + iM290312);
-                case 15:
-                    iM29039 = 57600;
-                    break;
-                case 16:
-                    iM29039 = PKCS12KeyStoreSpi.MIN_ITERATIONS;
-                    break;
-                case 17:
-                    iM29039 = 40000;
-                    break;
-                case 18:
-                    iM29039 = 38400;
-                    break;
-                case 19:
-                    iM29039 = 34150;
-                    break;
-                case 20:
-                    iM29039 = 28800;
-                    break;
-                case 21:
-                    iM29039 = 25600;
-                    break;
-                case 22:
-                    iM29039 = b.j0;
-                    break;
-                case 23:
-                    iM29039 = 19200;
-                    break;
-                case 24:
-                    iM29039 = 17075;
-                    break;
-                case 25:
-                    iM29039 = 14400;
-                    break;
-                case 26:
-                    iM29039 = 12800;
-                    break;
-                case 27:
-                    iM29039 = 9600;
-                    break;
-            }
-        } else {
-            iM29039 = c11634.m29039(24);
-        }
-        int iM290313 = c11634.m29039(3);
-        int i3 = 1;
-        if (iM290313 == 0) {
-            i = 768;
-        } else if (iM290313 == 1) {
-            i = 1024;
-        } else if (iM290313 == 2 || iM290313 == 3) {
-            i = 2048;
-        } else {
-            if (iM290313 != 4) {
-                throw C22861.m50611("Unsupported coreSbrFrameLengthIndex " + iM290313);
-            }
-            i = 4096;
-        }
-        if (iM290313 == 0 || iM290313 == 1) {
-            c = 0;
-        } else if (iM290313 == 2) {
-            c = 2;
-        } else if (iM290313 == 3) {
-            c = 3;
-        } else {
-            if (iM290313 != 4) {
-                throw C22861.m50611("Unsupported coreSbrFrameLengthIndex " + iM290313);
-            }
-            c = 1;
-        }
-        c11634.m29034(2);
-        m28149(c11634);
-        int iM290314 = c11634.m29039(5);
-        int i4 = 0;
-        int iM28146 = 0;
-        while (true) {
-            int i5 = 16;
-            if (i4 < iM290314 + 1) {
-                int iM290315 = c11634.m29039(3);
-                iM28146 += m28146(c11634, 5, 8, 16) + 1;
-                if ((iM290315 == 0 || iM290315 == 2) && c11634.m29035()) {
-                    m28149(c11634);
+        String strValueOf;
+        String str;
+        synchronized (C8224.f27072) {
+            String str2 = "-r -t -d " + C17394.m40859(this.f35349.f22437);
+            if (Build.VERSION.SDK_INT <= 23) {
+                try {
+                    i = Integer.parseInt(C6382.f21566.getName());
+                } catch (NumberFormatException unused) {
+                    i = 0;
                 }
-                i4++;
+                strValueOf = String.valueOf(i);
             } else {
-                int iM28147 = m28146(c11634, 4, 8, 16) + 1;
-                c11634.m29042();
-                int i6 = 0;
-                while (true) {
-                    double d = 2.0d;
-                    if (i6 >= iM28147) {
-                        byte[] bArr = null;
-                        if (c11634.m29035()) {
-                            int iM28148 = m28146(c11634, 2, 4, 8) + 1;
-                            for (int i7 = 0; i7 < iM28148; i7++) {
-                                int iM28149 = m28146(c11634, 4, 8, 16);
-                                int iM281410 = m28146(c11634, 4, 8, 16);
-                                if (iM28149 == 7) {
-                                    int iM290316 = c11634.m29039(4) + 1;
-                                    c11634.m29034(4);
-                                    byte[] bArr2 = new byte[iM290316];
-                                    for (int i8 = 0; i8 < iM290316; i8++) {
-                                        bArr2[i8] = (byte) c11634.m29039(8);
-                                    }
-                                    bArr = bArr2;
-                                } else {
-                                    c11634.m29034(iM281410 * 8);
-                                }
-                            }
-                        }
-                        switch (iM29039) {
-                            case 14700:
-                            case 16000:
-                                d = 3.0d;
-                                break;
-                            case 22050:
-                            case 24000:
-                                break;
-                            case 29400:
-                            case 32000:
-                            case 58800:
-                            case 64000:
-                                d = 1.5d;
-                                break;
-                            case 44100:
-                            case 48000:
-                            case 88200:
-                            case 96000:
-                                d = 1.0d;
-                                break;
-                            default:
-                                throw C22861.m50611("Unsupported sampling rate " + iM29039);
-                        }
-                        return new C6266(iM290311, bArr, (int) (((double) iM29039) * d), (int) (((double) i) * d));
-                    }
-                    int iM290317 = c11634.m29039(2);
-                    if (iM290317 == 0) {
-                        c11634.m29034(3);
-                        if (c11634.m29035()) {
-                            c11634.m29034(13);
-                        }
-                        if (c > 0) {
-                            m28150(c11634);
-                        }
-                    } else if (iM290317 == i3) {
-                        c11634.m29034(3);
-                        boolean zM29035 = c11634.m29035();
-                        if (zM29035) {
-                            c11634.m29034(13);
-                        }
-                        if (zM29035) {
-                            c11634.m29042();
-                        }
-                        if (c > 0) {
-                            m28150(c11634);
-                            iM290310 = c11634.m29039(2);
-                        } else {
-                            iM290310 = 0;
-                        }
-                        if (iM290310 > 0) {
-                            c11634.m29034(6);
-                            int iM290318 = c11634.m29039(2);
-                            c11634.m29034(4);
-                            if (c11634.m29035()) {
-                                c11634.m29034(5);
-                            }
-                            if (iM290310 == 2 || iM290310 == 3) {
-                                c11634.m29034(6);
-                            }
-                            if (iM290318 == 2) {
-                                c11634.m29042();
-                            }
-                        }
-                        int iFloor = ((int) Math.floor(Math.log(iM28146 - 1) / Math.log(2.0d))) + 1;
-                        int iM290319 = c11634.m29039(2);
-                        if (iM290319 > 0 && c11634.m29035()) {
-                            c11634.m29034(iFloor);
-                        }
-                        if (c11634.m29035()) {
-                            c11634.m29034(iFloor);
-                        }
-                        if (c == 0 && iM290319 == 0) {
-                            c11634.m29042();
-                        }
-                    } else if (iM290317 == 3) {
-                        m28146(c11634, 4, i2, i5);
-                        int iM281411 = m28146(c11634, 4, i2, i5);
-                        if (c11634.m29035()) {
-                            m28146(c11634, i2, i5, 0);
-                        }
-                        c11634.m29042();
-                        if (iM281411 > 0) {
-                            c11634.m29034(iM281411 * 8);
-                        }
-                    }
-                    i6++;
-                    i3 = 1;
-                    i5 = 16;
-                    i2 = 8;
-                }
+                strValueOf = "current";
             }
+            String strM44123 = C19036.m44123(false);
+            if (strM44123 == null) {
+                strM44123 = "su";
+            }
+            this.f35351 = new C1790(strM44123, false);
+            if (strValueOf.equals("current") && !this.f35349.f22437.isEmpty()) {
+                strValueOf = String.valueOf(C17394.m40855(this.f35351));
+            }
+            String str3 = str2 + "--user " + strValueOf + " ";
+            if (Build.VERSION.SDK_INT >= 34) {
+                str3 = str3 + "--bypass-low-target-sdk-block ";
+            }
+            C17394.m40857(this.f35351, strValueOf, this.f35349.f22437);
+            int i2 = this.f35347;
+            if (i2 == 0) {
+                str = "pm install " + str3 + C7756.m21098(this.f35349.f22440.mo4294());
+            } else if (i2 == 1) {
+                str = "cat " + C7756.m21098(this.f35349.f22440.mo4294()) + " | pm install " + str3 + "-S " + this.f35349.f22440.mo4285();
+            } else if (i2 == 2) {
+                this.f35348 = C14584.m35193("/data/local/tmp/mt_install.apk", new String[0]);
+                this.f35350.mo25916((Runnable) null);
+                this.f35349.f22440.m49847(this.f35348, (C24523) null, new C22395(this));
+                if (this.f35350.m27399()) {
+                    return;
+                }
+                this.f35350.m27396();
+                str = "pm install " + str3 + "/data/local/tmp/mt_install.apk";
+            } else {
+                throw new RuntimeException();
+            }
+            this.f35350.m27394(true);
+            C1790 c1790 = this.f35351;
+            c1790.getClass();
+            C8224.m22121(c1790.mo6261(0L, str).m28854());
         }
     }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static void m28149(C11634 c11634) {
-        int iM29039;
-        int iM290310 = c11634.m29039(2);
-        if (iM290310 == 0) {
-            c11634.m29034(6);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        if (this.f35350.m27399()) {
             return;
         }
-        int iM28146 = m28146(c11634, 5, 8, 16) + 1;
-        if (iM290310 == 1) {
-            c11634.m29034(iM28146 * 7);
+        C6733 c6733 = this.f35349;
+        C8224.m22122(c6733.f22436, c6733.getFileName(), c6733.f22439);
+        C8224.f27071.mo40353((Object) null);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if ((exc instanceof CancellationException) || this.f35350.m27399()) {
+            C22673.m51152(R.string.MT_Protector);
             return;
         }
-        if (iM290310 == 2) {
-            boolean zM29035 = c11634.m29035();
-            int i = zM29035 ? 1 : 5;
-            int i2 = zM29035 ? 7 : 5;
-            int i3 = zM29035 ? 8 : 6;
-            int i4 = 0;
-            while (i4 < iM28146) {
-                if (c11634.m29035()) {
-                    c11634.m29034(7);
-                    iM29039 = 0;
-                } else {
-                    if (c11634.m29039(2) == 3 && c11634.m29039(i2) * i != 0) {
-                        c11634.m29042();
-                    }
-                    iM29039 = c11634.m29039(i3) * i;
-                    if (iM29039 != 0 && iM29039 != 180) {
-                        c11634.m29042();
-                    }
-                    c11634.m29042();
-                }
-                if (iM29039 != 0 && iM29039 != 180 && c11634.m29035()) {
-                    i4++;
-                }
-                i4++;
+        boolean z = exc instanceof C21804;
+        C6733 c6733 = this.f35349;
+        if (z) {
+            C21804 c21804 = (C21804) exc;
+            if (c21804.m49453()) {
+                Intent intent = new Intent("bin.mt.plus.ACTION_INSTALL_FAILED_DOWNGRADE");
+                intent.putExtra("pkgName", c6733.f22439);
+                C7247.m19877(C21576.m49084()).m19881(intent);
+                return;
+            } else if (c21804.m49451()) {
+                AbstractActivityC17204 abstractActivityC17204 = c6733.f22436;
+                String message = c21804.getMessage();
+                String strM49450 = c21804.m49450();
+                abstractActivityC17204.getClass();
+                abstractActivityC17204.runOnUiThread(new RunnableC8779(abstractActivityC17204, message, strM49450, false));
+                return;
             }
         }
+        c6733.m18824(exc);
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static void m28150(C11634 c11634) {
-        c11634.m29034(3);
-        c11634.m29034(8);
-        boolean zM29035 = c11634.m29035();
-        boolean zM29036 = c11634.m29035();
-        if (zM29035) {
-            c11634.m29034(5);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        this.f35350.m27405();
+        C1790 c1790 = this.f35351;
+        if (c1790 != null) {
+            c1790.close();
         }
-        if (zM29036) {
-            c11634.m29034(6);
+        AbstractC22044 abstractC22044 = this.f35348;
+        if (abstractC22044 != null) {
+            abstractC22044.mo4296();
         }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static int m28146(C11634 c11634, int i, int i2, int i3) {
-        C2023.m6507(Math.max(Math.max(i, i2), i3) <= 31);
-        int i4 = (1 << i) - 1;
-        int i5 = (1 << i2) - 1;
-        long j = ((long) i4) + ((long) i5);
-        long j2 = (int) j;
-        if (j != j2) {
-            throw new ArithmeticException();
-        }
-        long j3 = j2 + ((long) (1 << i3));
-        if (j3 != ((int) j3)) {
-            throw new ArithmeticException();
-        }
-        if (c11634.m29030() < i) {
-            return -1;
-        }
-        int iM29039 = c11634.m29039(i);
-        if (iM29039 == i4) {
-            if (c11634.m29030() < i2) {
-                return -1;
-            }
-            int iM290310 = c11634.m29039(i2);
-            iM29039 += iM290310;
-            if (iM290310 == i5) {
-                if (c11634.m29030() < i3) {
-                    return -1;
-                }
-                return c11634.m29039(i3) + iM29039;
-            }
-        }
-        return iM29039;
     }
 }

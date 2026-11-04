@@ -1,67 +1,54 @@
 package l;
 
-import android.content.DialogInterface;
+import java.util.List;
 
-/* JADX INFO: renamed from: l.ܽۧۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: G668 */
-/* JADX INFO: loaded from: classes4.dex */
-public final class C16595 extends AbstractC3492 {
+/* JADX INFO: renamed from: l.ܺۙۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: E4PF */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C16595 extends AbstractC12384 implements InterfaceC9904 {
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractActivityC12483 f53264;
+    /* JADX INFO: renamed from: ۟, reason: not valid java name and contains not printable characters */
+    public static final EnumC22631 f53676 = EnumC22631.f73340;
 
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC17131 f53265;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final int f53677;
 
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C10416 f53266;
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public final List f53678;
 
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ DialogInterfaceC19356 f53267;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public AbstractC20745 f53268;
-
-    public C16595(AbstractActivityC12483 abstractActivityC12483, AbstractC17131 abstractC17131, DialogInterfaceC19356 dialogInterfaceC19356, C10416 c10416) {
-        this.f53264 = abstractActivityC12483;
-        this.f53265 = abstractC17131;
-        this.f53267 = dialogInterfaceC19356;
-        this.f53266 = c10416;
+    @Override // l.InterfaceC23331
+    /* JADX INFO: renamed from: ۛ */
+    public final String mo1543() {
+        return mo30864().f73509;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo1160() {
-        m10252(this.f53264, 100);
+    public C16595(int i, List list) {
+        super(f53676);
+        this.f53677 = i;
+        this.f53678 = list == null ? AbstractC1928.of() : list;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۚ */
-    public final void mo1159() {
-        AbstractC20745 abstractC20745M51001 = C23053.m51001();
-        AbstractC17131 abstractC17131 = this.f53265;
-        this.f53268 = C19954.m45248(abstractC20745M51001, abstractC17131.mo1460(), abstractC17131.m40009().getEncoded(), abstractC17131.m40013().getEncoded());
-        abstractC17131.mo1458();
-        abstractC17131.mo1455();
+    @Override // l.InterfaceC9904
+    /* JADX INFO: renamed from: ۧ */
+    public final int mo3032() {
+        return this.f53677;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1157() {
-        C21094.m47530();
-        this.f53267.dismiss();
-        this.f53266.accept(this.f53268);
+    @Override // l.InterfaceC9904
+    /* JADX INFO: renamed from: ᩳ */
+    public final List mo3034() {
+        return this.f53678;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo1158(Exception exc) {
-        this.f53264.m31002(exc, (DialogInterface.OnDismissListener) null);
+    @Override // l.AbstractC12384, l.InterfaceC23331
+    /* JADX INFO: renamed from: ۨ */
+    public final int mo3033() {
+        return (((this.f53678.size() * this.f53677) + 1) / 2) + 4;
     }
 
-    @Override // l.AbstractC3492
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo1156() {
-        m10251();
+    @Override // l.AbstractC12384
+    /* JADX INFO: renamed from: ۢ */
+    public final EnumC7011 mo1544() {
+        return f53676.f73508;
     }
 }

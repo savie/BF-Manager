@@ -60,7 +60,7 @@
 
     sub-int/2addr v1, v2
 
-    invoke-static {v1, v0}, Ll/ۚ֫;->ۨ(ILandroid/view/View;)V
+    invoke-static {v1, v0}, Ll/᩸۠;->ۤ(ILandroid/view/View;)V
 
     .line 52
     iget-object v0, p0, Lcom/google/android/material/appbar/ViewOffsetHelper;->view:Landroid/view/View;
@@ -77,7 +77,7 @@
 
     sub-int/2addr v1, v2
 
-    invoke-static {v1, v0}, Ll/ۚ֫;->ܰ(ILandroid/view/View;)V
+    invoke-static {v1, v0}, Ll/᩸۠;->᩷(ILandroid/view/View;)V
 
     return-void
 .end method

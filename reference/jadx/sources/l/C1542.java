@@ -1,180 +1,124 @@
 package l;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
+import android.app.PendingIntent;
+import android.view.MenuItem;
+import bin.mt.json.JSONObject;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
-/* JADX INFO: renamed from: l.֫ۖ᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: N6KV */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1542 extends InputStream implements InterfaceC20818 {
+/* JADX INFO: renamed from: l.֫֡, reason: contains not printable characters */
+/* JADX INFO: compiled from: O220 */
+/* JADX INFO: loaded from: classes.dex */
+public class C1542 {
 
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public final AtomicReference f6258;
+    /* JADX INFO: renamed from: ֫ۙۖ, reason: not valid java name and contains not printable characters */
+    public static int f5343;
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final InterfaceC14244 f6259;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public final Consumer f6260;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public final AtomicBoolean f6261;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public final boolean f6262;
-
-    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
-    public final Object f6263;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public boolean f6264;
-
-    @Override // java.io.InputStream, l.InterfaceC20818
-    public /* synthetic */ long transferTo(OutputStream outputStream) {
-        return C10235.transferTo(this, outputStream);
+    /* JADX INFO: renamed from: ֡۠۫, reason: not valid java name and contains not printable characters */
+    public static MenuItem m5456(Object obj, boolean z) {
+        return ((MenuItem) obj).setEnabled(z);
     }
 
-    public C1542(InterfaceC14244 interfaceC14244, Consumer consumer) {
-        this.f6263 = new Object();
-        this.f6258 = new AtomicReference();
-        this.f6261 = new AtomicBoolean();
-        this.f6259 = interfaceC14244;
-        this.f6262 = true;
-        this.f6260 = consumer;
+    /* JADX INFO: renamed from: ֡ۡۚ, reason: not valid java name and contains not printable characters */
+    public static Object m5457(Object obj, int i) {
+        return ((ArrayList) obj).get(i);
     }
 
-    public C1542(InputStream inputStream, Consumer consumer) {
-        this.f6263 = new Object();
-        AtomicReference atomicReference = new AtomicReference();
-        this.f6258 = atomicReference;
-        this.f6261 = new AtomicBoolean();
-        this.f6259 = null;
-        this.f6262 = false;
-        this.f6260 = consumer;
-        atomicReference.set(inputStream);
+    /* JADX INFO: renamed from: ֨᩸۟, reason: not valid java name and contains not printable characters */
+    public static boolean m5458(Object obj) {
+        return ((C12187) obj).m30474();
+    }
+
+    /* JADX INFO: renamed from: ۗۙۧ, reason: not valid java name and contains not printable characters */
+    public static int m5459() {
+        return -676920249;
+    }
+
+    /* JADX INFO: renamed from: ۗ᩶ۢ, reason: not valid java name and contains not printable characters */
+    public static Long m5460(long j) {
+        return Long.valueOf(j);
+    }
+
+    /* JADX INFO: renamed from: ۚܰۡ, reason: not valid java name and contains not printable characters */
+    public static String m5463(Object obj) {
+        return ((String) obj).toLowerCase();
+    }
+
+    /* JADX INFO: renamed from: ۚ᩺ܰ, reason: not valid java name and contains not printable characters */
+    public static void m5464(Object obj) {
+        ((C2935) obj).m9584();
+    }
+
+    /* JADX INFO: renamed from: ۛۢܽ, reason: not valid java name and contains not printable characters */
+    public static boolean m5465(Object obj) {
+        return ((DialogInterfaceC8327) obj).m22434();
+    }
+
+    /* JADX INFO: renamed from: ۠ۚ᩶, reason: not valid java name and contains not printable characters */
+    public static void m5466(Object obj, int i, int i2) {
+        ((ViewOnClickListenerC23411) obj).m52603(i, i2);
+    }
+
+    /* JADX INFO: renamed from: ۤᩳܿ, reason: not valid java name and contains not printable characters */
+    public static void m5467(Object obj) {
+        ((ReentrantLock) obj).lock();
+    }
+
+    /* JADX INFO: renamed from: ۫۟᩻, reason: not valid java name and contains not printable characters */
+    public static void m5468(Object obj, Object obj2) {
+        ((AbstractActivityC17204) obj).m40420((String) obj2);
+    }
+
+    /* JADX INFO: renamed from: ܰۨ۟, reason: not valid java name and contains not printable characters */
+    public static JSONObject m5469(Object obj, Object obj2, Object obj3) {
+        return ((JSONObject) obj).add((String) obj2, (String) obj3);
+    }
+
+    /* JADX INFO: renamed from: ܶ᩸ܶ, reason: not valid java name and contains not printable characters */
+    public static int m5470(Object obj) {
+        return ((InterfaceC15872) obj).readInt();
+    }
+
+    /* JADX INFO: renamed from: ܺۜᩴ, reason: not valid java name and contains not printable characters */
+    public static String m5471(short[] sArr, int i, int i2, int i3) {
+        char[] cArr = new char[i2];
+        for (int i4 = 0; i4 < i2; i4++) {
+            cArr[i4] = (char) (sArr[i + i4] ^ i3);
+        }
+        return new String(cArr);
+    }
+
+    /* JADX INFO: renamed from: ᩵ۖۚ, reason: not valid java name and contains not printable characters */
+    public static C11192 m5472(Object obj) {
+        return ((ActivityC20779) obj).f66576;
+    }
+
+    /* JADX INFO: renamed from: ᩻ۚ᩻, reason: not valid java name and contains not printable characters */
+    public static Object m5473(Object obj, int i) {
+        return ((List) obj).get(i);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private InputStream m5318() {
-        InputStream inputStreamMo34378;
-        synchronized (this.f6263) {
-            if (this.f6261.get()) {
-                throw new IOException("HTML preview stream is closed");
-            }
-            inputStreamMo34378 = (InputStream) this.f6258.get();
-            if (inputStreamMo34378 == null) {
-                inputStreamMo34378 = this.f6259.mo34378();
-                if (inputStreamMo34378 == null) {
-                    throw new IOException("HTML preview source was not opened");
-                }
-                this.f6258.set(inputStreamMo34378);
-                if (this.f6261.get()) {
-                    InputStream inputStream = (InputStream) this.f6258.getAndSet(null);
-                    if (inputStream != null) {
-                        RunnableC3787 runnableC3787 = new RunnableC3787(4, inputStream);
-                        if (this.f6262) {
-                            C4716.f16635.execute(runnableC3787);
-                        } else {
-                            runnableC3787.run();
-                        }
-                    }
-                    throw new IOException("HTML preview stream is closed");
-                }
-            }
-        }
-        return inputStreamMo34378;
+    public static C5271 m5461(AbstractC3290 abstractC3290) {
+        C5271 c5271 = new C5271();
+        c5271.f18572 = (C9545) abstractC3290.m10842(c5271.f18572);
+        c5271.f18569 = abstractC3290.m10840(2, c5271.f18569);
+        c5271.f18571 = abstractC3290.m10840(3, c5271.f18571);
+        c5271.f18567 = (PendingIntent) abstractC3290.m10839(c5271.f18567, 4);
+        c5271.f18568 = abstractC3290.m10849(5, c5271.f18568);
+        c5271.f18570 = abstractC3290.m10849(6, c5271.f18570);
+        return c5271;
     }
 
-    @Override // java.io.InputStream
-    public final int read() {
-        if (this.f6264) {
-            return -1;
-        }
-        try {
-            int i = m5318().read();
-            if (i == -1) {
-                this.f6264 = true;
-                close();
-            }
-            return i;
-        } catch (IOException | RuntimeException e) {
-            close();
-            throw e;
-        }
-    }
-
-    @Override // java.io.InputStream
-    public final int read(byte[] bArr, int i, int i2) {
-        if (i < 0 || i2 < 0 || i > bArr.length - i2) {
-            throw new IndexOutOfBoundsException();
-        }
-        if (i2 == 0) {
-            return 0;
-        }
-        if (this.f6264) {
-            return -1;
-        }
-        try {
-            int i3 = m5318().read(bArr, i, i2);
-            if (i3 == -1) {
-                this.f6264 = true;
-                close();
-            }
-            return i3;
-        } catch (IOException | RuntimeException e) {
-            close();
-            throw e;
-        }
-    }
-
-    @Override // java.io.InputStream
-    public final int available() {
-        if (this.f6264 || this.f6261.get()) {
-            return 0;
-        }
-        try {
-            InputStream inputStream = (InputStream) this.f6258.get();
-            if (inputStream == null) {
-                return 0;
-            }
-            return inputStream.available();
-        } catch (IOException | RuntimeException e) {
-            close();
-            throw e;
-        }
-    }
-
-    @Override // java.io.InputStream
-    public final long skip(long j) {
-        if (j <= 0 || this.f6264) {
-            return 0L;
-        }
-        try {
-            return m5318().skip(j);
-        } catch (IOException | RuntimeException e) {
-            close();
-            throw e;
-        }
-    }
-
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-        if (this.f6261.compareAndSet(false, true)) {
-            this.f6260.accept(this);
-            InputStream inputStream = (InputStream) this.f6258.getAndSet(null);
-            if (inputStream == null) {
-                return;
-            }
-            RunnableC3787 runnableC3787 = new RunnableC3787(4, inputStream);
-            if (this.f6262) {
-                C4716.f16635.execute(runnableC3787);
-            } else {
-                runnableC3787.run();
-            }
-        }
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m5462(C5271 c5271, AbstractC3290 abstractC3290) {
+        abstractC3290.getClass();
+        abstractC3290.m10866(c5271.f18572);
+        abstractC3290.m10862(2, c5271.f18569);
+        abstractC3290.m10862(3, c5271.f18571);
+        abstractC3290.m10865(c5271.f18567, 4);
+        abstractC3290.m10864(5, c5271.f18568);
+        abstractC3290.m10864(6, c5271.f18570);
     }
 }

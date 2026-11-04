@@ -1,38 +1,24 @@
 package l;
 
-import java.math.BigInteger;
+import java.util.ListIterator;
 
-/* JADX INFO: renamed from: l.ۜᩳܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E8PN */
+/* JADX INFO: renamed from: l.ۜۚܽ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P5NR */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6930 implements InterfaceC6599 {
+public final class C6930 extends AbstractC6008 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C23159 f23301;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C13641 f22936;
 
-    @Override // l.InterfaceC6599
-    /* JADX INFO: renamed from: ۚ */
-    public final boolean mo5382() {
-        return true;
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C6930(C13641 c13641, ListIterator listIterator) {
+        super(listIterator);
+        this.f22936 = c13641;
     }
 
-    public C6930(C23159 c23159) {
-        this.f23301 = c23159;
-    }
-
-    @Override // l.InterfaceC6599
+    @Override // l.AbstractC13465
     /* JADX INFO: renamed from: ۙ */
-    public final C12950 mo5381(long j) {
-        C23159 c23159 = this.f23301;
-        long jM47446 = c23159.f75179.m47446(j);
-        C22828 c22828 = new C22828(j, C17983.m41829((BigInteger.valueOf(jM47446).multiply(BigInteger.valueOf(c23159.f75175 - c23159.f75178)).divide(BigInteger.valueOf(c23159.f75183)).longValue() + c23159.f75178) - 30000, c23159.f75178, c23159.f75175 - 1));
-        return new C12950(c22828, c22828);
-    }
-
-    @Override // l.InterfaceC6599
-    /* JADX INFO: renamed from: ۬ */
-    public final long mo5383() {
-        C23159 c23159 = this.f23301;
-        return c23159.f75179.m47443(c23159.f75183);
+    public final Object mo8279(Object obj) {
+        return this.f22936.f43305.apply(obj);
     }
 }

@@ -333,7 +333,7 @@
     throw v0
 .end method
 
-.method public abstract write(Ll/ۙ֨᩹;)V
+.method public abstract write(Ll/֨᩹ܳ;)V
 .end method
 
 .method public writeTo(Ljava/io/Writer;)V
@@ -355,21 +355,21 @@
     if-eqz p2, :cond_0
 
     .line 275
-    new-instance v0, Ll/ۚ֨᩹;
+    new-instance v0, Ll/ۜ᩹ܳ;
 
     const/16 v1, 0x80
 
-    invoke-direct {v0, p1, v1}, Ll/ۚ֨᩹;-><init>(Ljava/io/Writer;I)V
+    invoke-direct {v0, p1, v1}, Ll/ۜ᩹ܳ;-><init>(Ljava/io/Writer;I)V
 
     .line 276
-    invoke-virtual {p2, v0}, Lbin/mt/json/WriterConfig;->createWriter(Ljava/io/Writer;)Ll/ۙ֨᩹;
+    invoke-virtual {p2, v0}, Lbin/mt/json/WriterConfig;->createWriter(Ljava/io/Writer;)Ll/֨᩹ܳ;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lbin/mt/json/JSONValue;->write(Ll/ۙ֨᩹;)V
+    invoke-virtual {p0, p1}, Lbin/mt/json/JSONValue;->write(Ll/֨᩹ܳ;)V
 
     .line 277
-    invoke-virtual {v0}, Ll/ۚ֨᩹;->flush()V
+    invoke-virtual {v0}, Ll/ۜ᩹ܳ;->flush()V
 
     return-void
 

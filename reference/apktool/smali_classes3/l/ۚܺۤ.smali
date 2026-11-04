@@ -1,100 +1,203 @@
-.class public final enum Ll/ۚܺۤ;
-.super Ll/֨ܺۤ;
-.source "X43L"
+.class public final Ll/ۚܺۤ;
+.super Ljava/lang/Object;
+.source "19TR"
+
+
+# instance fields
+.field public ۙ:[B
+
+.field public ۤ:I
+
+.field public ᩷:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const-string v0, "BASIC"
-
-    const/4 v1, 0x0
-
-    .line 0
-    invoke-direct {p0, v0, v1}, Ll/ۚܺۤ;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>()V
     .locals 1
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/high16 v0, 0x10000
+
+    new-array v0, v0, [B
+
+    .line 8
+    iput-object v0, p0, Ll/ۚܺۤ;->ۙ:[B
+
+    .line 9
+    array-length v0, v0
+
+    iput v0, p0, Ll/ۚܺۤ;->᩷:I
 
     const/4 v0, 0x0
 
-    .line 2842
-    invoke-direct {p0, p1, p2, v0}, Ll/֨ܺۤ;-><init>(Ljava/lang/String;II)V
+    .line 10
+    iput v0, p0, Ll/ۚܺۤ;->ۤ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ۙ(Ll/ܽۤۤ;Ll/ܽۤۤ;Ll/᩻ܺۤ;)Z
-    .locals 2
+.method public final ۙ(Ljava/io/InputStream;)Z
+    .locals 5
 
-    .line 2845
-    invoke-virtual {p1}, Ll/ܽۤۤ;->ۨۙ()Ll/᩸᩷۟;
+    .line 34
+    iget v0, p0, Ll/ۚܺۤ;->᩷:I
 
-    move-result-object v0
+    const/high16 v1, 0x80000
 
-    .line 2846
-    invoke-virtual {p2}, Ll/ܽۤۤ;->ۨۙ()Ll/᩸᩷۟;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    if-lt v0, v1, :cond_0
 
-    .line 2847
-    invoke-virtual {p1}, Ll/ܽۤۤ;->ۗ()Ll/ܽۤۤ;
+    return v2
 
-    move-result-object p1
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
 
-    .line 2848
-    invoke-virtual {p2}, Ll/ܽۤۤ;->ۗ()Ll/ܽۤۤ;
+    .line 38
+    iget-object v1, p0, Ll/ۚܺۤ;->ۙ:[B
 
-    move-result-object p2
+    array-length v3, v1
 
-    invoke-virtual {p3, p2, v1, v0}, Ll/᩻ܺۤ;->ۙ(Ll/ܽۤۤ;Ll/᩸᩷۟;Ll/᩸᩷۟;)Ll/ܽۤۤ;
+    if-le v0, v3, :cond_1
 
-    move-result-object p2
+    .line 39
+    new-array v3, v0, [B
 
-    .line 2849
-    invoke-virtual {p3, p1, p2}, Ll/᩻ܺۤ;->ۚ(Ll/ܽۤۤ;Ll/ܽۤۤ;)Z
+    .line 40
+    iget v4, p0, Ll/ۚܺۤ;->ۤ:I
 
-    move-result v0
+    invoke-static {v1, v2, v3, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/4 v1, 0x1
+    .line 41
+    iput-object v3, p0, Ll/ۚܺۤ;->ۙ:[B
 
-    if-nez v0, :cond_1
+    .line 43
+    :cond_1
+    iput v0, p0, Ll/ۚܺۤ;->᩷:I
 
-    .line 2850
-    invoke-virtual {p1}, Ll/ܽۤۤ;->۠ۙ()Z
+    .line 49
+    iget-object v1, p0, Ll/ۚܺۤ;->ۙ:[B
 
-    move-result v0
+    .line 50
+    iget v2, p0, Ll/ۚܺۤ;->ۤ:I
 
-    if-nez v0, :cond_0
+    :goto_0
+    if-ge v2, v0, :cond_3
 
-    .line 2851
-    invoke-virtual {p2}, Ll/ܽۤۤ;->۠ۙ()Z
+    sub-int v3, v0, v2
 
-    move-result v0
+    .line 53
+    invoke-virtual {p1, v1, v2, v3}, Ljava/io/InputStream;->read([BII)I
 
-    if-nez v0, :cond_0
+    move-result v3
 
-    .line 1071
-    invoke-virtual {p3, p1, p2, v1}, Ll/᩻ܺۤ;->ۨ(Ll/ܽۤۤ;Ll/ܽۤۤ;Z)Z
+    if-gez v3, :cond_2
 
-    move-result p1
+    goto :goto_1
 
-    if-eqz p1, :cond_0
+    :cond_2
+    add-int/2addr v2, v3
 
     goto :goto_0
 
+    .line 59
+    :cond_3
+    :goto_1
+    iput v2, p0, Ll/ۚܺۤ;->ۤ:I
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final ۙ()[B
+    .locals 1
+
+    .line 13
+    iget-object v0, p0, Ll/ۚܺۤ;->ۙ:[B
+
+    return-object v0
+.end method
+
+.method public final ۤ()Z
+    .locals 2
+
+    .line 21
+    iget v0, p0, Ll/ۚܺۤ;->᩷:I
+
+    iget v1, p0, Ll/ۚܺۤ;->ۤ:I
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ᩷()I
+    .locals 1
+
+    .line 17
+    iget v0, p0, Ll/ۚܺۤ;->ۤ:I
+
+    return v0
+.end method
+
+.method public final ᩷(Ljava/io/InputStream;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    .line 29
+    iput v0, p0, Ll/ۚܺۤ;->ۤ:I
+
+    .line 49
+    iget-object v1, p0, Ll/ۚܺۤ;->ۙ:[B
+
+    .line 51
+    iget v2, p0, Ll/ۚܺۤ;->᩷:I
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    sub-int v4, v2, v3
+
+    .line 53
+    invoke-virtual {p1, v1, v3, v4}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v4
+
+    if-gez v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/2addr v3, v4
+
+    goto :goto_0
+
+    .line 59
+    :cond_1
+    :goto_1
+    iput v3, p0, Ll/ۚܺۤ;->ۤ:I
+
+    if-eqz v3, :cond_2
+
+    const/4 p1, 0x1
 
     return p1
 
-    :cond_1
-    :goto_0
-    return v1
+    :cond_2
+    return v0
 .end method

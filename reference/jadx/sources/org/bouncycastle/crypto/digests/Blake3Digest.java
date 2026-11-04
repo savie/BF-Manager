@@ -61,7 +61,7 @@ public class Blake3Digest implements ExtendedDigest, Memoable, Xof {
     public int thePos;
     public final Stack theStack;
     public final int[] theV;
-    public static final byte[] SIGMA = {2, 6, 3, 10, 7, 0, 4, cb.k, 1, 11, 12, 5, 9, cb.f77931l, 15, 8};
+    public static final byte[] SIGMA = {2, 6, 3, 10, 7, 0, 4, cb.k, 1, 11, 12, 5, 9, cb.f82047l, 15, 8};
     public static final int[] IV = {1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225};
 
     public Blake3Digest() {

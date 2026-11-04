@@ -1,766 +1,541 @@
 .class public final Ll/֨᩵;
-.super Ll/ۘ᩵;
-.source "A1CD"
+.super Ljava/lang/Object;
+.source "H1BK"
 
 
-# instance fields
-.field public ۙ:[Ll/᩹᩵;
-
-.field public final ܰ:[D
+# static fields
+.field public static ۙ:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public constructor <init>([I[D[[D)V
-    .locals 24
+.method public static constructor <clinit>()V
+    .locals 16
 
-    move-object/from16 v0, p0
+    .line 235
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    move-object/from16 v1, p2
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    .line 24
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ll/֨᩵;->ۙ:Landroid/util/SparseIntArray;
 
-    .line 169
-    iput-object v1, v0, Ll/֨᩵;->ܰ:[D
+    const/16 v1, 0xd
 
-    .line 170
-    array-length v2, v1
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    .line 238
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    sub-int/2addr v2, v3
+    const/16 v3, 0xb
 
-    new-array v2, v2, [Ll/᩹᩵;
+    const/4 v4, 0x2
 
-    iput-object v2, v0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
+    .line 239
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->append(II)V
 
-    const/4 v2, 0x0
+    const/16 v4, 0xe
 
-    const/4 v4, 0x0
+    const/4 v5, 0x3
 
-    const/4 v5, 0x1
+    .line 240
+    invoke-virtual {v0, v4, v5}, Landroid/util/SparseIntArray;->append(II)V
 
-    const/4 v6, 0x1
+    const/16 v6, 0xa
 
-    .line 173
+    const/4 v7, 0x4
+
+    .line 241
+    invoke-virtual {v0, v6, v7}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v8, 0x12
+
+    const/4 v9, 0x5
+
+    .line 242
+    invoke-virtual {v0, v8, v9}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v10, 0x11
+
+    const/4 v11, 0x6
+
+    .line 243
+    invoke-virtual {v0, v10, v11}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v12, 0x10
+
+    const/4 v13, 0x7
+
+    .line 244
+    invoke-virtual {v0, v12, v13}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v14, 0x13
+
+    const/16 v15, 0x8
+
+    .line 245
+    invoke-virtual {v0, v14, v15}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v14, 0x0
+
+    const/16 v15, 0x9
+
+    .line 246
+    invoke-virtual {v0, v14, v15}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 247
+    invoke-virtual {v0, v15, v6}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 248
+    invoke-virtual {v0, v9, v3}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v3, 0xc
+
+    .line 249
+    invoke-virtual {v0, v11, v3}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 250
+    invoke-virtual {v0, v13, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v1, 0xf
+
+    .line 251
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 252
+    invoke-virtual {v0, v5, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 253
+    invoke-virtual {v0, v7, v12}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 254
+    invoke-virtual {v0, v2, v10}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/4 v1, 0x2
+
+    .line 255
+    invoke-virtual {v0, v1, v8}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v1, 0x13
+
+    const/16 v2, 0x8
+
+    .line 256
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    const/16 v1, 0x14
+
+    .line 257
+    invoke-virtual {v0, v3, v1}, Landroid/util/SparseIntArray;->append(II)V
+
+    return-void
+.end method
+
+.method public static ۙ(Ll/ۡ᩵;Landroid/content/res/TypedArray;)V
+    .locals 5
+
+    .line 261
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
     :goto_0
-    iget-object v7, v0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
+    if-ge v1, v0, :cond_4
 
-    array-length v8, v7
+    .line 263
+    invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
 
-    if-ge v4, v8, :cond_5
+    move-result v2
 
-    .line 174
-    aget v8, p1, v4
+    .line 264
+    sget-object v3, Ll/֨᩵;->ۙ:Landroid/util/SparseIntArray;
 
-    const/4 v9, 0x3
+    invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
 
-    if-eqz v8, :cond_4
+    move-result v4
 
-    if-eq v8, v3, :cond_3
+    packed-switch v4, :pswitch_data_0
 
-    const/4 v10, 0x2
+    .line 344
+    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    if-eq v8, v10, :cond_2
+    invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
 
-    if-eq v8, v9, :cond_0
+    goto/16 :goto_1
 
-    goto :goto_2
+    .line 341
+    :pswitch_0
+    invoke-static {p0}, Ll/ۡ᩵;->֫(Ll/ۡ᩵;)F
 
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->֫(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 337
+    :pswitch_1
+    invoke-static {p0}, Ll/ۡ᩵;->ۚ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۚ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 333
+    :pswitch_2
+    invoke-static {p0}, Ll/ۡ᩵;->۫(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->۫(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 330
+    :pswitch_3
+    invoke-static {p0}, Ll/ۡ᩵;->ܳ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ܳ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 327
+    :pswitch_4
+    invoke-static {p0}, Ll/ۡ᩵;->ᩴ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ᩴ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 324
+    :pswitch_5
+    invoke-static {p0}, Ll/ۡ᩵;->᩸(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->᩸(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 321
+    :pswitch_6
+    invoke-static {p0}, Ll/ۡ᩵;->ۤ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۤ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 318
+    :pswitch_7
+    invoke-static {p0}, Ll/ۡ᩵;->᩷(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->᩷(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 315
+    :pswitch_8
+    invoke-static {p0}, Ll/ۡ᩵;->ۙ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۙ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 312
+    :pswitch_9
+    invoke-static {p0}, Ll/ۡ᩵;->᩵(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ܶ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 309
+    :pswitch_a
+    invoke-static {p0}, Ll/ۡ᩵;->ۗ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ܽ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 306
+    :pswitch_b
+    invoke-static {p0}, Ll/ۡ᩵;->᩹(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ܺ(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 303
+    :pswitch_c
+    invoke-static {p0}, Ll/ۡ᩵;->ܶ(Ll/ۡ᩵;)I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۤ(Ll/ۡ᩵;I)V
+
+    goto/16 :goto_1
+
+    .line 295
+    :pswitch_d
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+
+    move-result-object v3
+
+    .line 296
+    iget v3, v3, Landroid/util/TypedValue;->type:I
+
+    const/4 v4, 0x5
+
+    if-ne v3, v4, :cond_0
+
+    .line 297
+    invoke-static {p0}, Ll/ۡ᩵;->ܽ(Ll/ۡ᩵;)F
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->᩻(Ll/ۡ᩵;F)V
+
+    goto/16 :goto_1
+
+    .line 299
     :cond_0
-    if-ne v5, v3, :cond_1
+    invoke-static {p0}, Ll/ۡ᩵;->ܽ(Ll/ۡ᩵;)F
 
-    const/4 v5, 0x2
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    invoke-static {p0, v2}, Ll/ۡ᩵;->᩻(Ll/ۡ᩵;F)V
 
     goto :goto_1
 
-    :cond_1
-    const/4 v5, 0x1
+    .line 292
+    :pswitch_e
+    invoke-static {p0}, Ll/ۡ᩵;->ܺ(Ll/ۡ᩵;)F
 
-    :goto_1
-    move v6, v5
+    move-result v3
 
-    goto :goto_2
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    :cond_2
-    const/4 v5, 0x2
+    move-result v2
 
-    const/4 v6, 0x2
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v5, 0x1
-
-    const/4 v6, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v6, 0x3
-
-    .line 188
-    :goto_2
-    new-instance v22, Ll/᩹᩵;
-
-    aget-wide v10, v1, v4
-
-    add-int/lit8 v23, v4, 0x1
-
-    aget-wide v12, v1, v23
-
-    aget-object v8, p3, v4
-
-    aget-wide v14, v8, v2
-
-    aget-wide v16, v8, v3
-
-    aget-object v8, p3, v23
-
-    aget-wide v18, v8, v2
-
-    aget-wide v20, v8, v3
-
-    move-object/from16 v8, v22
-
-    move v9, v6
-
-    invoke-direct/range {v8 .. v21}, Ll/᩹᩵;-><init>(IDDDDDD)V
-
-    aput-object v22, v7, v4
-
-    move/from16 v4, v23
-
-    goto :goto_0
-
-    :cond_5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ۙ(D)D
-    .locals 6
-
-    .line 110
-    iget-object v0, p0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
-
-    const/4 v1, 0x0
-
-    aget-object v2, v0, v1
-
-    iget-wide v2, v2, Ll/᩹᩵;->ۜ:D
-
-    cmpg-double v4, p1, v2
-
-    if-gez v4, :cond_0
-
-    move-wide p1, v2
-
-    goto :goto_0
-
-    .line 112
-    :cond_0
-    array-length v2, v0
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget-object v2, v0, v2
-
-    iget-wide v2, v2, Ll/᩹᩵;->᩺:D
-
-    cmpl-double v4, p1, v2
-
-    if-lez v4, :cond_1
-
-    .line 113
-    array-length p1, v0
-
-    add-int/lit8 p1, p1, -0x1
-
-    aget-object p1, v0, p1
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩺:D
-
-    .line 116
-    :cond_1
-    :goto_0
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_4
-
-    .line 117
-    aget-object v2, v0, v1
-
-    iget-wide v3, v2, Ll/᩹᩵;->᩺:D
-
-    cmpg-double v5, p1, v3
-
-    if-gtz v5, :cond_3
-
-    .line 119
-    iget-boolean v3, v2, Ll/᩹᩵;->ۙ:Z
-
-    if-eqz v3, :cond_2
-
-    .line 121
-    invoke-virtual {v2, p1, p2}, Ll/᩹᩵;->ۙ(D)D
-
-    move-result-wide p1
-
-    return-wide p1
-
-    .line 125
-    :cond_2
-    invoke-virtual {v2, p1, p2}, Ll/᩹᩵;->ۨ(D)V
-
-    .line 128
-    aget-object p1, v0, v1
-
-    .line 252
-    iget-wide v0, p1, Ll/᩹᩵;->᩹:D
-
-    iget-wide v2, p1, Ll/᩹᩵;->ۖ:D
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩸:D
-
-    mul-double v2, v2, p1
-
-    add-double/2addr v2, v0
-
-    return-wide v2
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    const-wide/high16 p1, 0x7ff8000000000000L    # Double.NaN
-
-    return-wide p1
-.end method
-
-.method public final ۙ(D[D)V
-    .locals 10
-
-    .line 40
-    iget-object v0, p0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
-
-    const/4 v1, 0x0
-
-    aget-object v2, v0, v1
-
-    iget-wide v2, v2, Ll/᩹᩵;->ۜ:D
-
-    cmpg-double v4, p1, v2
-
-    if-gez v4, :cond_0
-
-    move-wide p1, v2
-
-    .line 43
-    :cond_0
-    array-length v2, v0
-
-    const/4 v3, 0x1
-
-    sub-int/2addr v2, v3
-
-    aget-object v2, v0, v2
-
-    iget-wide v4, v2, Ll/᩹᩵;->᩺:D
-
-    cmpl-double v2, p1, v4
-
-    if-lez v2, :cond_1
-
-    .line 44
-    array-length p1, v0
-
-    sub-int/2addr p1, v3
-
-    aget-object p1, v0, p1
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩺:D
-
-    :cond_1
-    const/4 v2, 0x0
-
-    .line 47
-    :goto_0
-    array-length v4, v0
-
-    if-ge v2, v4, :cond_4
-
-    .line 48
-    aget-object v4, v0, v2
-
-    iget-wide v5, v4, Ll/᩹᩵;->᩺:D
-
-    cmpg-double v7, p1, v5
-
-    if-gtz v7, :cond_3
-
-    .line 49
-    iget-boolean v5, v4, Ll/᩹᩵;->ۙ:Z
-
-    if-eqz v5, :cond_2
-
-    .line 50
-    invoke-virtual {v4, p1, p2}, Ll/᩹᩵;->ۙ(D)D
-
-    move-result-wide v4
-
-    aput-wide v4, p3, v1
-
-    .line 51
-    aget-object v0, v0, v2
-
-    invoke-virtual {v0, p1, p2}, Ll/᩹᩵;->ܰ(D)D
-
-    move-result-wide p1
-
-    aput-wide p1, p3, v3
-
-    return-void
-
-    .line 54
-    :cond_2
-    invoke-virtual {v4, p1, p2}, Ll/᩹᩵;->ۨ(D)V
-
-    .line 55
-    aget-object p1, v0, v2
-
-    .line 252
-    iget-wide v4, p1, Ll/᩹᩵;->᩹:D
-
-    iget-wide v6, p1, Ll/᩹᩵;->ۖ:D
-
-    iget-wide v8, p1, Ll/᩹᩵;->᩸:D
-
-    mul-double v6, v6, v8
-
-    add-double/2addr v6, v4
-
-    .line 55
-    aput-wide v6, p3, v1
-
-    .line 256
-    iget-wide v0, p1, Ll/᩹᩵;->֨:D
-
-    iget-wide v4, p1, Ll/᩹᩵;->ۚ:D
-
-    iget-wide p1, p1, Ll/᩹᩵;->ܶ:D
-
-    mul-double v4, v4, p1
-
-    add-double/2addr v4, v0
-
-    .line 56
-    aput-wide v4, p3, v3
-
-    return-void
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return-void
-.end method
-
-.method public final ۙ(D[F)V
-    .locals 9
-
-    .line 64
-    iget-object v0, p0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
-
-    const/4 v1, 0x0
-
-    aget-object v2, v0, v1
-
-    iget-wide v2, v2, Ll/᩹᩵;->ۜ:D
-
-    const/4 v4, 0x1
-
-    cmpg-double v5, p1, v2
-
-    if-gez v5, :cond_0
-
-    move-wide p1, v2
-
-    goto :goto_0
-
-    .line 66
-    :cond_0
-    array-length v2, v0
-
-    sub-int/2addr v2, v4
-
-    aget-object v2, v0, v2
-
-    iget-wide v2, v2, Ll/᩹᩵;->᩺:D
-
-    cmpl-double v5, p1, v2
-
-    if-lez v5, :cond_1
-
-    .line 67
-    array-length p1, v0
-
-    sub-int/2addr p1, v4
-
-    aget-object p1, v0, p1
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩺:D
-
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
-
-    .line 70
-    :goto_1
-    array-length v3, v0
-
-    if-ge v2, v3, :cond_4
-
-    .line 71
-    aget-object v3, v0, v2
-
-    iget-wide v5, v3, Ll/᩹᩵;->᩺:D
-
-    cmpg-double v7, p1, v5
-
-    if-gtz v7, :cond_3
-
-    .line 72
-    iget-boolean v5, v3, Ll/᩹᩵;->ۙ:Z
-
-    if-eqz v5, :cond_2
-
-    .line 73
-    invoke-virtual {v3, p1, p2}, Ll/᩹᩵;->ۙ(D)D
-
-    move-result-wide v5
-
-    double-to-float v3, v5
-
-    aput v3, p3, v1
-
-    .line 74
-    aget-object v0, v0, v2
-
-    invoke-virtual {v0, p1, p2}, Ll/᩹᩵;->ܰ(D)D
-
-    move-result-wide p1
-
-    double-to-float p1, p1
-
-    aput p1, p3, v4
-
-    return-void
-
-    .line 77
-    :cond_2
-    invoke-virtual {v3, p1, p2}, Ll/᩹᩵;->ۨ(D)V
-
-    .line 78
-    aget-object p1, v0, v2
-
-    .line 252
-    iget-wide v2, p1, Ll/᩹᩵;->᩹:D
-
-    iget-wide v5, p1, Ll/᩹᩵;->ۖ:D
-
-    iget-wide v7, p1, Ll/᩹᩵;->᩸:D
-
-    mul-double v5, v5, v7
-
-    add-double/2addr v5, v2
-
-    double-to-float p2, v5
-
-    .line 78
-    aput p2, p3, v1
-
-    .line 256
-    iget-wide v0, p1, Ll/᩹᩵;->֨:D
-
-    iget-wide v2, p1, Ll/᩹᩵;->ۚ:D
-
-    iget-wide p1, p1, Ll/᩹᩵;->ܶ:D
-
-    mul-double v2, v2, p1
-
-    add-double/2addr v2, v0
-
-    double-to-float p1, v2
-
-    .line 79
-    aput p1, p3, v4
-
-    return-void
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۧ(Ll/ۡ᩵;F)V
 
     goto :goto_1
 
-    :cond_4
-    return-void
-.end method
+    .line 289
+    :pswitch_f
+    invoke-static {p0}, Ll/ۡ᩵;->᩻(Ll/ۡ᩵;)I
 
-.method public final ۙ()[D
-    .locals 1
+    move-result v3
 
-    .line 165
-    iget-object v0, p0, Ll/֨᩵;->ܰ:[D
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    return-object v0
-.end method
+    move-result v2
 
-.method public final ܰ(D)D
-    .locals 6
+    invoke-static {p0, v2}, Ll/ۡ᩵;->᩷(Ll/ۡ᩵;I)V
 
-    .line 138
-    iget-object v0, p0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
+    goto :goto_1
 
-    const/4 v1, 0x0
+    .line 286
+    :pswitch_10
+    invoke-static {p0}, Ll/ۡ᩵;->ۧ(Ll/ۡ᩵;)I
 
-    aget-object v2, v0, v1
+    move-result v3
 
-    iget-wide v2, v2, Ll/᩹᩵;->ۜ:D
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
 
-    cmpg-double v4, p1, v2
+    move-result v2
 
-    if-gez v4, :cond_0
+    invoke-static {p0, v2}, Ll/ۡ᩵;->ۙ(Ll/ۡ᩵;I)V
 
-    move-wide p1, v2
+    goto :goto_1
 
-    .line 141
-    :cond_0
-    array-length v2, v0
+    .line 283
+    :pswitch_11
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    add-int/lit8 v2, v2, -0x1
+    goto :goto_1
 
-    aget-object v2, v0, v2
+    .line 280
+    :pswitch_12
+    iget v3, p0, Ll/֡᩵;->᩷:I
 
-    iget-wide v2, v2, Ll/᩹᩵;->᩺:D
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    cmpl-double v4, p1, v2
+    move-result v2
 
-    if-lez v4, :cond_1
+    iput v2, p0, Ll/֡᩵;->᩷:I
 
-    .line 142
-    array-length p1, v0
+    goto :goto_1
 
-    add-int/lit8 p1, p1, -0x1
+    .line 266
+    :pswitch_13
+    sget-boolean v3, Ll/᩷ۛ;->ۧ᩷:Z
 
-    aget-object p1, v0, p1
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩺:D
-
-    .line 145
-    :cond_1
-    :goto_0
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_4
-
-    .line 146
-    aget-object v2, v0, v1
-
-    iget-wide v3, v2, Ll/᩹᩵;->᩺:D
-
-    cmpg-double v5, p1, v3
-
-    if-gtz v5, :cond_3
-
-    .line 147
-    iget-boolean v3, v2, Ll/᩹᩵;->ۙ:Z
-
-    if-eqz v3, :cond_2
-
-    .line 284
-    iget-wide p1, v2, Ll/᩹᩵;->᩹:D
-
-    return-wide p1
-
-    .line 153
-    :cond_2
-    invoke-virtual {v2, p1, p2}, Ll/᩹᩵;->ۨ(D)V
-
-    .line 155
-    aget-object p1, v0, v1
-
-    invoke-virtual {p1}, Ll/᩹᩵;->ۙ()D
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    const-wide/high16 p1, 0x7ff8000000000000L    # Double.NaN
-
-    return-wide p1
-.end method
-
-.method public final ܰ(D[D)V
-    .locals 8
-
-    .line 87
-    iget-object v0, p0, Ll/֨᩵;->ۙ:[Ll/᩹᩵;
-
-    const/4 v1, 0x0
-
-    aget-object v2, v0, v1
-
-    iget-wide v2, v2, Ll/᩹᩵;->ۜ:D
-
-    const/4 v4, 0x1
-
-    cmpg-double v5, p1, v2
-
-    if-gez v5, :cond_0
-
-    move-wide p1, v2
-
-    goto :goto_0
-
-    .line 89
-    :cond_0
-    array-length v2, v0
-
-    sub-int/2addr v2, v4
-
-    aget-object v2, v0, v2
-
-    iget-wide v2, v2, Ll/᩹᩵;->᩺:D
-
-    cmpl-double v5, p1, v2
-
-    if-lez v5, :cond_1
-
-    .line 90
-    array-length p1, v0
-
-    sub-int/2addr p1, v4
-
-    aget-object p1, v0, p1
-
-    iget-wide p1, p1, Ll/᩹᩵;->᩺:D
-
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
-
-    .line 93
-    :goto_1
-    array-length v3, v0
-
-    if-ge v2, v3, :cond_5
-
-    .line 94
-    aget-object v3, v0, v2
-
-    iget-wide v5, v3, Ll/᩹᩵;->᩺:D
-
-    cmpg-double v7, p1, v5
-
-    if-gtz v7, :cond_4
-
-    .line 95
-    iget-boolean v5, v3, Ll/᩹᩵;->ۙ:Z
-
-    if-eqz v5, :cond_2
-
-    .line 284
-    iget-wide p1, v3, Ll/᩹᩵;->᩹:D
-
-    .line 96
-    aput-wide p1, p3, v1
-
-    .line 288
-    iget-wide p1, v3, Ll/᩹᩵;->֨:D
-
-    .line 97
-    aput-wide p1, p3, v4
-
-    return-void
-
-    .line 100
-    :cond_2
-    invoke-virtual {v3, p1, p2}, Ll/᩹᩵;->ۨ(D)V
-
-    .line 101
-    aget-object p1, v0, v2
-
-    invoke-virtual {p1}, Ll/᩹᩵;->ۙ()D
-
-    move-result-wide p1
-
-    aput-wide p1, p3, v1
-
-    .line 102
-    aget-object p1, v0, v2
+    if-eqz v3, :cond_1
 
     .line 267
-    iget-wide v0, p1, Ll/᩹᩵;->ۖ:D
+    iget v3, p0, Ll/֡᩵;->ۤ:I
 
-    iget-wide v2, p1, Ll/᩹᩵;->ܶ:D
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    mul-double v0, v0, v2
+    move-result v3
 
-    .line 268
-    iget-wide v2, p1, Ll/᩹᩵;->ۚ:D
+    iput v3, p0, Ll/֡᩵;->ۤ:I
 
-    neg-double v2, v2
+    const/4 v4, -0x1
 
-    iget-wide v5, p1, Ll/᩹᩵;->᩸:D
-
-    mul-double v2, v2, v5
+    if-ne v3, v4, :cond_3
 
     .line 269
-    iget-wide v5, p1, Ll/᩹᩵;->ۨ:D
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->hypot(DD)D
+    move-result-object v2
 
-    move-result-wide v0
-
-    div-double/2addr v5, v0
-
-    .line 270
-    iget-boolean p1, p1, Ll/᩹᩵;->ᩳ:Z
-
-    if-eqz p1, :cond_3
-
-    neg-double p1, v2
-
-    mul-double p1, p1, v5
-
-    goto :goto_2
-
-    :cond_3
-    mul-double p1, v2, v5
-
-    .line 102
-    :goto_2
-    aput-wide p1, p3, v4
-
-    return-void
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
+    iput-object v2, p0, Ll/֡᩵;->᩸:Ljava/lang/String;
 
     goto :goto_1
 
-    :cond_5
+    .line 272
+    :cond_1
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/TypedValue;->type:I
+
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_2
+
+    .line 273
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p0, Ll/֡᩵;->᩸:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 275
+    :cond_2
+    iget v3, p0, Ll/֡᩵;->ۤ:I
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v2
+
+    iput v2, p0, Ll/֡᩵;->ۤ:I
+
+    :cond_3
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto/16 :goto_0
+
+    :cond_4
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

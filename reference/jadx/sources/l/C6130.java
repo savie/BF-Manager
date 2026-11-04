@@ -1,131 +1,65 @@
 package l;
 
-import java.io.IOException;
-import java.net.SocketException;
-import java.net.SocketTimeoutException;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-/* JADX INFO: renamed from: l.ۛܶ֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6AII */
+/* JADX INFO: renamed from: l.ۛۘۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 640U */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C6130 extends C16730 implements InterfaceC17419 {
+public final class C6130 implements Iterator {
 
-    /* JADX INFO: renamed from: ۖۙ, reason: not valid java name and contains not printable characters */
-    public String f20931;
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24030 f20934;
 
-    /* JADX INFO: renamed from: ۚۙ, reason: not valid java name and contains not printable characters */
-    public final C12481 f20932;
-
-    /* JADX INFO: renamed from: ᩹ۙ, reason: not valid java name and contains not printable characters */
-    public String f20933;
-
-    public C6130(C12481 c12481) {
-        this.f20932 = c12481;
-        m23284();
-        m23271();
-        m39218();
-    }
-
-    @Override // l.InterfaceC17419
-    public final C12481 getKey() {
-        return this.f20932;
-    }
-
-    @Override // l.C20963, l.InterfaceC17419
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final int mo17115(String str, String str2) throws SocketException, SocketTimeoutException {
-        try {
-            return super.mo17115(str, str2);
-        } catch (SocketException e) {
-            String message = e.getMessage();
-            if ("Broken pipe".equalsIgnoreCase(message) || "Software caused connection abort".equalsIgnoreCase(message)) {
-                try {
-                    mo23286();
-                } catch (IOException unused) {
-                }
-            }
-            throw e;
-        } catch (SocketTimeoutException e2) {
-            try {
-                mo23286();
-            } catch (IOException unused2) {
-            }
-            throw e2;
-        }
-    }
-
-    @Override // l.InterfaceC17419
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final IOException mo17113() throws SocketException {
-        String strM47142 = m47142();
-        String strValueOf = String.valueOf(m47139());
-        throw new SocketException(strM47142.contains(strValueOf) ? "FTP reply: ".concat(strM47142) : C7997.m21055("FTP reply ", strValueOf, ": ", strM47142));
-    }
-
-    @Override // l.InterfaceC17419
-    public final String getPath() {
-        return this.f20933;
-    }
-
-    @Override // l.InterfaceC17419
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final String mo17114() {
-        return this.f20931;
-    }
-
-    /* JADX INFO: renamed from: ܶ, reason: not valid java name and contains not printable characters */
-    public static String m17112(String str) {
-        String strSubstring = str.substring(4);
-        if (strSubstring.startsWith("当前目录是")) {
-            strSubstring = strSubstring.substring(5);
-        }
-        if (!strSubstring.startsWith("\"")) {
-            return strSubstring;
-        }
-        StringBuilder sb = new StringBuilder(strSubstring.length());
-        boolean z = false;
-        for (int i = 1; i < strSubstring.length(); i++) {
-            char cCharAt = strSubstring.charAt(i);
-            if (cCharAt != '\"') {
-                if (z) {
-                    return sb.toString();
-                }
-                sb.append(cCharAt);
-            } else if (z) {
-                sb.append(cCharAt);
-                z = false;
-            } else {
-                z = true;
-            }
-        }
-        return z ? sb.toString() : strSubstring;
-    }
-
-    @Override // l.InterfaceC17419
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final boolean mo17116(String str) throws SocketException {
-        if (AbstractC11462.m28608(str).equals(this.f20933)) {
-            return true;
-        }
-        if (!C13571.m33171(m47136(EnumC17435.CWD, str))) {
-            return false;
-        }
-        mo17117();
-        return true;
+    public Iterator f20935;
+
+    /* JADX INFO: renamed from: ܿ, reason: not valid java name and contains not printable characters */
+    public C24030 f20936;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public boolean f20937 = false;
+
+    public C6130(C24030 c24030, C24030 c24031) {
+        this.f20934 = c24030;
+        this.f20936 = c24031;
+        this.f20935 = c24031.f77746.iterator();
     }
 
-    @Override // l.InterfaceC17419
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public final String mo17117() throws SocketException {
-        String strM17112 = m47136(EnumC17435.PWD, (String) null) != 257 ? null : m17112((String) C19084.m43861(this.f68303, 1));
-        if (strM17112 == null) {
-            mo17113();
-            throw null;
+    @Override // java.util.Iterator
+    public final C18062 next() {
+        if (!this.f20937) {
+            Iterator it = this.f20935;
+            if (it.hasNext()) {
+                return (C18062) it.next();
+            }
+            this.f20937 = true;
         }
-        String strM28608 = AbstractC11462.m28608(strM17112);
-        this.f20933 = strM28608;
-        if (this.f20931 == null) {
-            this.f20931 = strM28608;
+        C24030 c24030 = this.f20936;
+        if (c24030.f77748.hasNext()) {
+            InterfaceC8540 interfaceC8540 = (InterfaceC8540) c24030.f77748.next();
+            C24030 c24031 = this.f20934;
+            C18808 c18808 = c24031.f77747;
+            C18808 c18809 = c24031.f77747;
+            C18062 c18062 = new C18062(interfaceC8540, c18808.f61095, c18808.f61112, c18808.f61099, EnumC3666.f12544.m11915(c18809.f61112), c18809, c18809.f61107);
+            c24030.f77746.add(c18062);
+            return c18062;
         }
-        return strM17112;
+        throw new NoSuchElementException();
+    }
+
+    @Override // java.util.Iterator
+    public final boolean hasNext() {
+        boolean z = this.f20937;
+        C24030 c24030 = this.f20936;
+        if (z) {
+            return c24030.f77748.hasNext();
+        }
+        return this.f20935.hasNext() || c24030.f77748.hasNext();
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
     }
 }

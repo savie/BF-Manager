@@ -1,37 +1,79 @@
 package l;
 
-import java.util.List;
+import bin.mt.plus.R;
+import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۢܶۖ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A1XZ */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9660 {
+/* JADX INFO: renamed from: l.ۡ᩸ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M6WW */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9660 extends AbstractC2432 {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public AbstractC3384 f32480;
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ String f31201;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f32481;
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ boolean f31202;
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final boolean m24562(int i, List list) {
-        AbstractC3384 abstractC3384 = (AbstractC3384) list.get(i);
-        if (!C16467.m38730(abstractC3384)) {
-            return false;
+    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C11064 f31203;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public C0911 f31204;
+
+    public C9660(C11064 c11064, String str, boolean z) {
+        this.f31203 = c11064;
+        this.f31201 = str;
+        this.f31202 = z;
+    }
+
+    /* JADX WARN: Type inference failed for: r0v0, types: [l.֨᩸ۚ] */
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩷ */
+    public final void mo1137() {
+        ?? r0 = new Runnable() { // from class: l.֨᩸ۚ
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f5096.m8196();
+            }
+        };
+        C11064 c11064 = this.f31203;
+        c11064.f34904 = r0;
+        m8199(c11064.f34898, 200);
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩴ */
+    public final void mo1136() throws C10186 {
+        C0911 c0911M2382 = C0492.m2382(this.f31201);
+        this.f31204 = c0911M2382;
+        if ((c0911M2382.f3415 == EnumC20059.DIRECTORY) != this.f31202) {
+            throw new IllegalArgumentException("Selected rule target type has changed");
         }
-        this.f32480 = abstractC3384;
-        this.f32481 = ((InterfaceC4685) abstractC3384).mo1140();
-        return true;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final int m24560() {
-        return this.f32481;
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1134() {
+        C11064 c11064 = this.f31203;
+        if (c11064.m27972()) {
+            C11064.m27959(c11064, this.f31204, true);
+        }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m24561(C20700 c20700) {
-        c20700.f67315.m25739(this.f32480);
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1135(Exception exc) {
+        if (this.f31203.m27972()) {
+            C22673.m51152(exc instanceof IOException ? R.string.MT_Protector : R.string.MT_Protector);
+        }
+    }
+
+    @Override // l.AbstractC2432
+    /* JADX INFO: renamed from: ᩸ */
+    public final void mo1138() {
+        C11064 c11064 = this.f31203;
+        c11064.f34903 = false;
+        m8196();
+        c11064.f34904 = null;
     }
 }

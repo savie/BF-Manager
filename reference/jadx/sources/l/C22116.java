@@ -1,63 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹ۜ۟, reason: contains not printable characters */
-/* JADX INFO: compiled from: O44L */
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import bin.mt.plus.R;
+
+/* JADX INFO: renamed from: l.᩷ܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 422Y */
 /* JADX INFO: loaded from: classes.dex */
-public final class C22116 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public C3836 f71607;
+public final class C22116 implements InterfaceC7419 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C10039 f71608;
+    public final /* synthetic */ LayoutInflaterFactory2C24354 f71286;
 
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public C23800 f71612;
+    public C22116(LayoutInflaterFactory2C24354 layoutInflaterFactory2C24354) {
+        this.f71286 = layoutInflaterFactory2C24354;
+    }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final AbstractC2982[] f71611 = new AbstractC2982[9];
+    @Override // l.InterfaceC7419
+    /* JADX INFO: renamed from: ۙ */
+    public final Context mo15398() {
+        return this.f71286.m54409();
+    }
 
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final C5805 f71606 = new C5805(this, 8);
+    @Override // l.InterfaceC7419
+    /* JADX INFO: renamed from: ۤ */
+    public final Drawable mo15401() {
+        C5204 c5204M15648 = C5204.m15648(this.f71286.m54409(), (AttributeSet) null, new int[]{R.attr.MT_Protector});
+        Drawable drawableM15669 = c5204M15648.m15669(0);
+        c5204M15648.m15664();
+        return drawableM15669;
+    }
 
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final C11533 f71609 = new C11533(this, false);
+    @Override // l.InterfaceC7419
+    /* JADX INFO: renamed from: ᩷ */
+    public final boolean mo15402() {
+        AbstractC2944 abstractC2944Mo5039 = this.f71286.mo5039();
+        return (abstractC2944Mo5039 == null || (abstractC2944Mo5039.mo9632() & 4) == 0) ? false : true;
+    }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final C11533 f71610 = new C11533(this, true);
-
-    public C22116(C10039 c10039, C3836 c3836, C23800 c23800) {
-        this.f71608 = c10039;
-        this.f71612 = c23800;
-        for (int i = 0; i < 8; i++) {
-            this.f71611[i] = new C2359(this, i);
+    @Override // l.InterfaceC7419
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15400(Drawable drawable, int i) {
+        AbstractC2944 abstractC2944Mo5039 = this.f71286.mo5039();
+        if (abstractC2944Mo5039 != null) {
+            abstractC2944Mo5039.mo9625(drawable);
+            abstractC2944Mo5039.mo9624(i);
         }
-        this.f71611[8] = this.f71606;
-        this.f71607 = c3836;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final C11533 m49074() {
-        return this.f71609;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C11533 m49072() {
-        return this.f71610;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final AbstractC2982 m49070(AbstractC16579 abstractC16579) {
-        return this.f71611[C10039.m25336(abstractC16579)];
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4476 m49071(C6263 c6263) {
-        return new C4476(this, c6263.mo50006(this.f71612), c6263.f21228);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C23445 m49073(int i) {
-        return new C23445(this, i, null, null);
+    @Override // l.InterfaceC7419
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo15399(int i) {
+        AbstractC2944 abstractC2944Mo5039 = this.f71286.mo5039();
+        if (abstractC2944Mo5039 != null) {
+            abstractC2944Mo5039.mo9624(0);
+        }
     }
 }

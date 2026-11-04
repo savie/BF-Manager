@@ -1,100 +1,138 @@
 package l;
 
-import android.os.Looper;
-import com.google.android.material.motion.MotionUtils;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.TreeMap;
 
-/* JADX INFO: renamed from: l.ۤۨۨ, reason: contains not printable characters */
-/* JADX INFO: compiled from: HAQ9 */
+/* JADX INFO: renamed from: l.ۢܿۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 46CT */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C10271 extends Error {
+public final class C10271 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final ArrayList f35015 = new ArrayList();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int f32803 = 0;
 
-    /* JADX WARN: Illegal instructions before constructor call */
-    public C10271(long j, Map map) {
-        StringBuilder sbM39970 = C17114.m39970("Application unresponsive for at least ", " ms.", j);
-        for (Map.Entry entry : map.entrySet()) {
-            Thread thread = (Thread) entry.getKey();
-            sbM39970.append('\n');
-            sbM39970.append(thread.getName());
-            sbM39970.append(" (state = ");
-            sbM39970.append(thread.getState());
-            sbM39970.append(MotionUtils.EASING_TYPE_FORMAT_END);
-            for (StackTraceElement stackTraceElement : (StackTraceElement[]) entry.getValue()) {
-                sbM39970.append("\n    at ");
-                sbM39970.append(stackTraceElement);
-            }
-        }
-        super(sbM39970.toString());
-        Iterator it = f35015.iterator();
-        while (it.hasNext()) {
-            ((Runnable) it.next()).run();
-        }
-    }
-
-    @Override // java.lang.Throwable
-    public final Throwable fillInStackTrace() {
-        setStackTrace(new StackTraceElement[0]);
-        return this;
-    }
-
-    @Override // java.lang.Throwable
-    public final String toString() {
-        String localizedMessage = getLocalizedMessage();
-        return localizedMessage != null ? "ANRError: ".concat(localizedMessage) : "ANRError";
+    static {
+        C16980.m40037(C10271.class);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C10271 m26056() {
-        return m26058(0L, "", null);
+    public static ArrayList m26477(C6129 c6129) {
+        int i = C19222.f62172[c6129.m17700().ordinal()];
+        if (i != 1 && i != 2) {
+            if (i != 3) {
+                if (i == 4) {
+                    return m26476();
+                }
+                throw new C8597("Unknown decompilation mode: " + c6129.m17700());
+            }
+            ArrayList arrayList = new ArrayList();
+            if (c6129.m17702()) {
+                arrayList.add(new C21584());
+            }
+            arrayList.add(new C14462());
+            if (c6129.m17705() != EnumC17315.NONE) {
+                arrayList.add(new C24160());
+            }
+            arrayList.add(new C4022());
+            arrayList.add(new C1690());
+            arrayList.add(new C25314());
+            arrayList.add(new C12378("DisableBlockLock", new C0577()));
+            arrayList.add(new C15616());
+            arrayList.add(new C10943());
+            arrayList.add(new C0446());
+            arrayList.add(new C9241());
+            arrayList.add(new C22821());
+            arrayList.add(new C1039());
+            arrayList.add(new C10878());
+            if (c6129.m17702()) {
+                arrayList.add(new C4430());
+            }
+            arrayList.add(new C3486());
+            arrayList.add(new C13181());
+            arrayList.add(new C2530());
+            arrayList.add(new C18345());
+            arrayList.add(new C7347());
+            arrayList.add(new C24811());
+            arrayList.add(new C14367());
+            arrayList.add(new C12378("ForceGenerateAll", new C8035(0)));
+            return arrayList;
+        }
+        ArrayList arrayList2 = new ArrayList();
+        arrayList2.add(new C21176());
+        if (c6129.m17702()) {
+            arrayList2.add(new C21584());
+        }
+        arrayList2.add(new C14462());
+        if (c6129.m17705() != EnumC17315.NONE) {
+            arrayList2.add(new C24160());
+        }
+        arrayList2.add(new C4022());
+        arrayList2.add(new C1690());
+        arrayList2.add(new C25314());
+        arrayList2.add(new C15616());
+        arrayList2.add(new C6910());
+        arrayList2.add(new C10943());
+        arrayList2.add(new C0446());
+        arrayList2.add(new C9241());
+        arrayList2.add(new C22821());
+        if (c6129.m17716()) {
+            arrayList2.add(new C19346());
+        }
+        arrayList2.add(new C1039());
+        arrayList2.add(new C10878());
+        if (c6129.m17702()) {
+            arrayList2.add(new C4430());
+        }
+        arrayList2.add(new C3486());
+        arrayList2.add(new C13181());
+        if (c6129.m17715() != EnumC12094.DISABLE) {
+            arrayList2.add(new C25336());
+        }
+        if (c6129.m17703()) {
+            arrayList2.add(new C5667());
+        }
+        arrayList2.add(new C6962());
+        arrayList2.add(new C3181());
+        arrayList2.add(new C2530());
+        arrayList2.add(new C23414());
+        arrayList2.add(new C18345());
+        arrayList2.add(new C7347());
+        arrayList2.add(new C24811());
+        arrayList2.add(new C1469());
+        arrayList2.add(new C0723());
+        if (c6129.m17722()) {
+            arrayList2.add(new C5856());
+        }
+        arrayList2.add(new C2960());
+        arrayList2.add(new C6690());
+        arrayList2.add(new C20583());
+        arrayList2.add(new C7347());
+        arrayList2.add(new C16107());
+        arrayList2.add(new C14367());
+        arrayList2.add(new C3706());
+        arrayList2.add(new C7708());
+        arrayList2.add(new C11436());
+        arrayList2.add(new C8453());
+        arrayList2.add(new C21133());
+        arrayList2.add(new C15638());
+        arrayList2.add(new C18938());
+        arrayList2.add(new C8181());
+        arrayList2.add(new C23010());
+        if (c6129.m17703()) {
+            arrayList2.add(new C25059());
+        }
+        arrayList2.add(new C10329());
+        arrayList2.add(new C20430());
+        arrayList2.add(new C21827());
+        return arrayList2;
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C10271 m26058(long j, String str, C20854 c20854) {
-        final Thread thread = Looper.getMainLooper().getThread();
-        TreeMap treeMap = new TreeMap(new Comparator() { // from class: l.ۡۨۨ
-            @Override // java.util.Comparator
-            public final int compare(Object obj, Object obj2) {
-                Thread thread2 = (Thread) obj;
-                Thread thread3 = (Thread) obj2;
-                if (thread2 == thread3) {
-                    return 0;
-                }
-                Thread thread4 = thread;
-                if (thread2 == thread4) {
-                    return -1;
-                }
-                if (thread3 == thread4) {
-                    return 1;
-                }
-                return thread3.getName().compareTo(thread2.getName());
-            }
-        });
-        for (Map.Entry<Thread, StackTraceElement[]> entry : Thread.getAllStackTraces().entrySet()) {
-            Thread key = entry.getKey();
-            if (key != c20854) {
-                StackTraceElement[] value = entry.getValue();
-                if (key == thread || (key.getName().startsWith(str) && value.length > 0)) {
-                    treeMap.put(key, value);
-                }
-            }
-        }
-        if (!treeMap.containsKey(thread)) {
-            treeMap.put(thread, thread.getStackTrace());
-        }
-        return new C10271(j, treeMap);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static C10271 m26057(long j) {
-        Thread thread = Looper.getMainLooper().getThread();
-        return new C10271(j, Collections.singletonMap(thread, thread.getStackTrace()));
+    public static ArrayList m26476() {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(new C14462());
+        arrayList.add(new C24160());
+        arrayList.add(new C1690());
+        arrayList.add(new C0250());
+        return arrayList;
     }
 }

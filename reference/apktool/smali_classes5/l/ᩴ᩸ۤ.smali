@@ -1,92 +1,159 @@
-.class public Ll/ᩴ᩸ۤ;
-.super Ll/۠᩸ۤ;
-.source "I3KA"
+.class public abstract Ll/ᩴ᩸ۤ;
+.super Ljava/lang/Object;
+.source "64N8"
+
+# interfaces
+.implements Ll/ۜܳۤ;
 
 
 # instance fields
-.field public ۙ:Ll/ᩳ᩸ۤ;
+.field public ܰ:Ll/ܿۤۤ;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    sget-object v0, Ll/ܿۤۤ;->֡:Ll/ܿۤۤ;
+
+    iput-object v0, p0, Ll/ᩴ᩸ۤ;->ܰ:Ll/ܿۤۤ;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public ۙ(Ll/ܿܶۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final ֡()Z
+    .locals 3
 
-    if-nez p1, :cond_0
+    .line 31
+    invoke-interface {p0}, Ll/ۜܳۤ;->۠()Ljava/lang/Iterable;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return-object p1
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 83
+    move-result-object v0
+
     :cond_0
-    iget-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 84
-    new-instance v1, Ll/ᩳ᩸ۤ;
+    move-result v1
 
-    invoke-direct {v1, v0, p1}, Ll/ᩳ᩸ۤ;-><init>(Ll/ᩳ᩸ۤ;Ll/ܿܶۤ;)V
+    if-eqz v1, :cond_1
 
-    iput-object v1, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 86
-    :try_start_0
-    invoke-interface {p1, p0, p2}, Ll/ܿܶۤ;->ۙ(Ll/ۛܶۤ;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v1, Ll/ۤ۫ۤ;
 
-    .line 88
-    iput-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    .line 32
+    invoke-interface {v1}, Ll/ۤ۫ۤ;->۫()I
 
-    return-object p1
+    move-result v1
 
-    :catchall_0
-    move-exception p1
+    const/4 v2, 0x1
 
-    iput-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    if-ne v1, v2, :cond_0
 
-    .line 89
+    return v2
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ۙ(Ll/֫۫ۤ;)V
+    .locals 4
+
+    .line 40
+    check-cast p1, Ll/ۜܳۤ;
+
+    .line 41
+    move-object v0, p0
+
+    check-cast v0, Ll/᩸ᩴۤ;
+
+    invoke-virtual {v0}, Ll/᩸ᩴۤ;->ۨ()I
+
+    move-result v1
+
+    invoke-interface {p1}, Ll/ۜܳۤ;->ۨ()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_1
+
+    const/4 v1, 0x0
+
+    .line 43
+    :goto_0
+    invoke-virtual {v0}, Ll/᩸ᩴۤ;->ۨ()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    .line 38
+    invoke-virtual {v0, v1}, Ll/᩸ᩴۤ;->ۧ(I)Ll/᩻ᩴۤ;
+
+    move-result-object v2
+
+    .line 44
+    invoke-interface {p1, v1}, Ll/ۜܳۤ;->ۧ(I)Ll/ۤ۫ۤ;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ll/ܶ᩸ۤ;->ۙ(Ll/֫۫ۤ;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    .line 42
+    :cond_1
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
     throw p1
 .end method
 
-.method public final ۙ()Ll/ᩳ᩸ۤ;
+.method public ۠()Ljava/lang/Iterable;
     .locals 1
 
-    .line 98
-    iget-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    .line 298
+    invoke-virtual {p0}, Ll/ᩴ᩸ۤ;->᩷()Ljava/lang/Iterable;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ۙ(Ll/ᩳ᩸ۤ;Ll/ۡ۠۟;)V
-    .locals 1
+.method public final ᩷()Ljava/lang/Iterable;
+    .locals 3
 
-    .line 58
-    iput-object p1, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    .line 18
+    new-instance v0, Ll/ܿ᩸ۤ;
 
-    const/4 v0, 0x0
+    invoke-interface {p0}, Ll/ۜܳۤ;->ۨ()I
 
-    .line 60
-    :try_start_0
-    invoke-virtual {p1}, Ll/ᩳ᩸ۤ;->ۨ()Ll/ܿܶۤ;
+    move-result v1
 
-    move-result-object p1
+    new-instance v2, Ll/᩸᩸ۤ;
 
-    invoke-interface {p1, p0, p2}, Ll/ܿܶۤ;->ۙ(Ll/ۛܶۤ;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v2, p0}, Ll/᩸᩸ۤ;-><init>(Ll/ᩴ᩸ۤ;)V
 
-    .line 62
-    iput-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
+    invoke-direct {v0, v1, v2}, Ll/ܿ᩸ۤ;-><init>(ILl/᩸᩶᩹;)V
 
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iput-object v0, p0, Ll/ᩴ᩸ۤ;->ۙ:Ll/ᩳ᩸ۤ;
-
-    .line 63
-    throw p1
+    return-object v0
 .end method

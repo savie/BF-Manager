@@ -1,54 +1,51 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖۤᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: V89H */
-/* JADX INFO: loaded from: classes2.dex */
-public class C2471 implements InterfaceC18659 {
+import java.util.function.Predicate;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C1060 f9830;
+/* JADX INFO: renamed from: l.ۖۛۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: H5HP */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class C2471 implements Predicate {
 
-    @Override // l.InterfaceC18659
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final void mo7579(C15132 c15132) {
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C1060 m7577() {
-        return this.f9830;
-    }
-
-    @Override // l.InterfaceC18659
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public void mo7580(C15132 c15132) {
-        c15132.m36284(EnumC17953.FOUR);
-        if (c15132.m36288() != 0) {
-            this.f9830 = new C1060();
-        } else {
-            this.f9830 = null;
-        }
+    public final /* synthetic */ int f7926;
+
+    public /* synthetic */ C2471(int i) {
+        this.f7926 = i;
     }
 
-    @Override // l.InterfaceC18659
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public void mo7578(C15132 c15132) {
-        C1060 c1060 = this.f9830;
-        if (c1060 != null) {
-            c15132.m36285(c1060);
-        }
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    public int hashCode() {
-        return C13638.hash(this.f9830);
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f7926) {
+            case 0:
+                break;
+            case 1:
+                break;
+        }
+        return C19025.$default$negate(this);
     }
 
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        EnumC24203 type;
+        switch (this.f7926) {
+            case 0:
+                return !((String) obj).isEmpty();
+            case 1:
+                C18959 c18959 = (C18959) obj;
+                return c18959.m39417() && ((type = c18959.getType()) == EnumC24203.GOTO || type == EnumC24203.NOP);
+            default:
+                return ((AbstractC18367) obj).m21911(EnumC21461.f68523);
         }
-        if (obj instanceof C2471) {
-            return C13638.equals(this.f9830, ((C2471) obj).f9830);
-        }
-        return false;
     }
 }

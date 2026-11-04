@@ -1,159 +1,92 @@
 package l;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.RandomAccess;
+import android.webkit.JavascriptInterface;
+import java.util.UUID;
 
-/* JADX INFO: renamed from: l.᩺᩷۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: MAYX */
+/* JADX INFO: renamed from: l.᩹ۖ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: E72G */
 /* JADX INFO: loaded from: classes.dex */
-public final class C23238 implements List, Serializable, RandomAccess {
-    public static final long serialVersionUID = -7390468764508069838L;
+public final class C23238 {
 
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public static final C23238 f75405 = new C23238();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f75266;
 
-    @Override // java.util.List
-    public final /* bridge */ /* synthetic */ void add(int i, Object obj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public C9261 f75267;
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public String f75268;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C23984 f75269;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public String f75270;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public boolean f75271;
+
+    public C23238() {
+        throw null;
     }
 
-    @Override // java.util.List, java.util.Collection
-    public final /* bridge */ /* synthetic */ boolean add(Object obj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List
-    public final boolean addAll(int i, Collection collection) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean addAll(Collection collection) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final void clear() {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean contains(Object obj) {
-        return false;
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final int hashCode() {
-        return 1;
-    }
-
-    @Override // java.util.List
-    public final int indexOf(Object obj) {
-        return -1;
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean isEmpty() {
-        return true;
-    }
-
-    @Override // java.util.List
-    public final int lastIndexOf(Object obj) {
-        return -1;
-    }
-
-    @Override // java.util.List
-    public final /* bridge */ /* synthetic */ Object remove(int i) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean remove(Object obj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean removeAll(Collection collection) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean retainAll(Collection collection) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List
-    public final /* bridge */ /* synthetic */ Object set(int i, Object obj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final /* bridge */ int size() {
-        return 0;
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final Object[] toArray() {
-        return C14750.m35367(this);
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final Object[] toArray(Object[] objArr) {
-        C13465.m32966(objArr, "array");
-        return C14750.m35368(this, objArr);
-    }
-
-    public final String toString() {
-        return "[]";
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean containsAll(Collection collection) {
-        C13465.m32966(collection, "elements");
-        return collection.isEmpty();
-    }
-
-    @Override // java.util.List, java.util.Collection
-    public final boolean equals(Object obj) {
-        return (obj instanceof List) && ((List) obj).isEmpty();
-    }
-
-    @Override // java.util.List
-    public final Object get(int i) {
-        throw new IndexOutOfBoundsException("Empty list doesn't contain element at index " + i + '.');
-    }
-
-    @Override // java.util.List, java.util.Collection, java.lang.Iterable
-    public final Iterator iterator() {
-        return C7009.f23576;
-    }
-
-    @Override // java.util.List
-    public final ListIterator listIterator() {
-        return C7009.f23576;
-    }
-
-    @Override // java.util.List
-    public final ListIterator listIterator(int i) {
-        if (i == 0) {
-            return C7009.f23576;
+    @InterfaceC19352
+    @JavascriptInterface
+    public synchronized void documentReady(String str) {
+        C9261 c9261;
+        if (!this.f75266 && str != null && (c9261 = this.f75267) != null) {
+            c9261.accept(str);
         }
-        throw new IndexOutOfBoundsException(C8479.m22141(i, "Index: "));
     }
 
-    @Override // java.util.List
-    public final List subList(int i, int i2) {
-        if (i == 0 && i2 == 0) {
-            return this;
+    @InterfaceC19352
+    @JavascriptInterface
+    public synchronized void save(String str, String str2) {
+        if (!this.f75266 && this.f75270 != null && this.f75268.equals(str) && str2 != null && str2.length() <= 100000) {
+            for (int i = 0; i < str2.length(); i++) {
+                if (str2.charAt(i) != '0' && str2.charAt(i) != '1') {
+                    return;
+                }
+            }
+            this.f75269.f77605.put(this.f75270, str2);
+            this.f75271 = true;
         }
-        throw new IndexOutOfBoundsException(C2271.m6967("fromIndex: ", i, i2, ", toIndex: "));
     }
 
-    private final Object readResolve() {
-        return f75405;
+    public C23238(C23984 c23984, C9261 c9261) {
+        this.f75268 = UUID.randomUUID().toString();
+        this.f75269 = c23984;
+        this.f75267 = c9261;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static String m52216(C23238 c23238, String str) {
+        String str2;
+        synchronized (c23238) {
+            if (!C17359.equals(c23238.f75270, str)) {
+                c23238.f75270 = str;
+                c23238.f75268 = UUID.randomUUID().toString();
+                c23238.f75271 = false;
+            }
+            str2 = c23238.f75268;
+        }
+        return str2;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m52217(C23238 c23238) {
+        synchronized (c23238) {
+            c23238.f75266 = true;
+            c23238.f75267 = null;
+        }
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public static boolean m52218(C23238 c23238, String str) {
+        boolean z;
+        synchronized (c23238) {
+            z = !c23238.f75266 && c23238.f75271 && str.equals(c23238.f75270);
+        }
+        return z;
     }
 }

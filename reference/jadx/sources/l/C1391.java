@@ -1,40 +1,34 @@
 package l;
 
-import java.util.BitSet;
+import android.opengl.GLES20;
 
-/* JADX INFO: renamed from: l.֨᩸ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: VBFX */
+/* JADX INFO: renamed from: l.֨᩵ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B8O3 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C1391 implements InterfaceC5520 {
+public final class C1391 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public BitSet f5791;
+    public final String f4943;
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4612(C6330 c6330) {
-        if (c6330.mo17422()) {
-            return;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C1391 m5088(int i, int i2) {
+        int[] iArr = new int[1];
+        GLES20.glGetProgramiv(i, 35722, iArr, 0);
+        int i3 = iArr[0];
+        byte[] bArr = new byte[i3];
+        GLES20.glGetActiveAttrib(i, i2, i3, new int[1], 0, new int[1], 0, new int[1], 0, bArr, 0);
+        for (int i4 = 0; i4 < i3; i4++) {
+            if (bArr[i4] == 0) {
+                i3 = i4;
+                break;
+            }
         }
-        this.f5791.set(c6330.m49955().m38400());
+        String str = new String(bArr, 0, i3);
+        GLES20.glGetAttribLocation(i, str);
+        return new C1391(str);
     }
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4613(C9859 c9859) {
-        if (c9859.mo17422()) {
-            return;
-        }
-        this.f5791.set(c9859.m49955().m38400());
-    }
-
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4614(C6330 c6330) {
-        C16251 c16251M49955 = c6330.m49955();
-        if (c6330.mo17422() || c16251M49955 == null) {
-            return;
-        }
-        this.f5791.set(c16251M49955.m38400());
+    public C1391(String str) {
+        this.f4943 = str;
     }
 }

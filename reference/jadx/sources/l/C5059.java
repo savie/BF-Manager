@@ -1,76 +1,33 @@
 package l;
 
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-import java.util.function.ObjIntConsumer;
-import java.util.function.Supplier;
-
-/* JADX INFO: renamed from: l.ۚۖ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۙܿۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 16MO */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5059 extends AbstractC18548 implements InterfaceC2319, InterfaceC10974 {
-    public final /* synthetic */ Supplier b;
-    public final /* synthetic */ ObjIntConsumer c;
-    public final /* synthetic */ C20146 d;
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(double d) {
-        AbstractC22686.m();
-        throw null;
+public final class C5059 implements InterfaceC18704 {
+    @Override // l.InterfaceC18704
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C5805 mo15305(InterfaceC7517 interfaceC7517, C0805 c0805, C11858 c11858) {
+        if (interfaceC7517.mo20574() != null) {
+            return m15304(interfaceC7517, c0805, interfaceC7517.mo20574(), interfaceC7517.mo20575());
+        }
+        String strMo20573 = interfaceC7517.mo20573();
+        if (strMo20573 == null || strMo20573.isEmpty()) {
+            strMo20573 = interfaceC7517.mo20576();
+        }
+        C8787 c8787 = (C8787) c11858.m29711(strMo20573);
+        if (c8787 != null) {
+            return m15304(interfaceC7517, c0805, c8787.m23583(), c8787.m23585());
+        }
+        return null;
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
-    }
-
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        d((Integer) obj);
-    }
-
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
-    }
-
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
-    }
-
-    @Override // l.InterfaceC10974
-    public final /* synthetic */ void d(Integer num) {
-        AbstractC22686.p(this, num);
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void end() {
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC2319
-    public final void i(InterfaceC2319 interfaceC2319) {
-        this.a = this.d.apply(this.a, ((C5059) interfaceC2319).a);
-    }
-
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        this.a = this.b.get();
-    }
-
-    @Override // l.InterfaceC19171
-    public final void accept(int i) {
-        this.c.accept(this.a, i);
-    }
-
-    public C5059(Supplier supplier, ObjIntConsumer objIntConsumer, C20146 c20146) {
-        this.b = supplier;
-        this.c = objIntConsumer;
-        this.d = c20146;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C5805 m15304(InterfaceC7517 interfaceC7517, C0805 c0805, String str, String str2) {
+        if (interfaceC7517.mo20572() != null && interfaceC7517.mo20572().m55016().equals("!")) {
+            C5805 c5805 = new C5805(EnumC13262.WRAP, new C1330(str, str2), c0805.m3237());
+            c5805.m16935();
+            return c5805;
+        }
+        return new C5805(EnumC13262.WRAP, new C2821(str, str2), c0805.m3237());
     }
 }

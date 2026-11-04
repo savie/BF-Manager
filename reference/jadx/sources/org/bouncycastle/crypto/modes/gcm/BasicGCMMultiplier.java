@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.modes.gcm;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class BasicGCMMultiplier implements GCMMultiplier {
     public long[] H;
 

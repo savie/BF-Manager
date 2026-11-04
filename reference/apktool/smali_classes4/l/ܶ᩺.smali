@@ -1,111 +1,130 @@
-.class public Ll/ܶ᩺;
-.super Landroid/widget/SeekBar;
-.source "I5W3"
+.class public final Ll/ܶ᩺;
+.super Ljava/lang/Object;
+.source "R5O3"
 
 
 # instance fields
-.field public final ܺ:Ll/᩸᩺;
+.field public final ۙ:[Ljava/lang/Object;
+
+.field public ᩷:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public constructor <init>()V
     .locals 1
 
-    const v0, 0x7f04040f
+    .line 96
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
-    invoke-direct {p0, p1, p2, v0}, Ll/ܶ᩺;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/16 v0, 0x100
 
-    return-void
-.end method
+    new-array v0, v0, [Ljava/lang/Object;
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
-
-    .line 50
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 52
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1, p0}, Ll/ܿᩳ;->ۙ(Landroid/content/Context;Landroid/view/View;)V
-
-    .line 54
-    new-instance p1, Ll/᩸᩺;
-
-    invoke-direct {p1, p0}, Ll/᩸᩺;-><init>(Ll/ܶ᩺;)V
-
-    iput-object p1, p0, Ll/ܶ᩺;->ܺ:Ll/᩸᩺;
-
-    .line 55
-    invoke-virtual {p1, p2, p3}, Ll/᩸᩺;->ۙ(Landroid/util/AttributeSet;I)V
+    .line 100
+    iput-object v0, p0, Ll/ܶ᩺;->ۙ:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final drawableStateChanged()V
-    .locals 1
+.method public final ۙ()Ljava/lang/Object;
+    .locals 5
 
-    .line 66
-    invoke-super {p0}, Landroid/widget/SeekBar;->drawableStateChanged()V
+    .line 106
+    iget v0, p0, Ll/ܶ᩺;->᩷:I
 
-    .line 67
-    iget-object v0, p0, Ll/ܶ᩺;->ܺ:Ll/᩸᩺;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ll/᩸᩺;->ܰ()V
+    if-lez v0, :cond_0
 
+    add-int/lit8 v2, v0, -0x1
+
+    .line 108
+    iget-object v3, p0, Ll/ܶ᩺;->ۙ:[Ljava/lang/Object;
+
+    aget-object v4, v3, v2
+
+    .line 109
+    aput-object v1, v3, v2
+
+    add-int/lit8 v0, v0, -0x1
+
+    .line 110
+    iput v0, p0, Ll/ܶ᩺;->᩷:I
+
+    return-object v4
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public final ۙ(I[Ljava/lang/Object;)V
+    .locals 5
+
+    .line 133
+    array-length v0, p2
+
+    if-le p1, v0, :cond_0
+
+    .line 134
+    array-length p1, p2
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p1, :cond_2
+
+    .line 137
+    aget-object v1, p2, v0
+
+    .line 143
+    iget v2, p0, Ll/ܶ᩺;->᩷:I
+
+    iget-object v3, p0, Ll/ܶ᩺;->ۙ:[Ljava/lang/Object;
+
+    array-length v4, v3
+
+    if-ge v2, v4, :cond_1
+
+    .line 144
+    aput-object v1, v3, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 145
+    iput v2, p0, Ll/ܶ᩺;->᩷:I
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
-.method public final jumpDrawablesToCurrentState()V
-    .locals 1
+.method public final ۙ(Ll/֫᩺;)V
+    .locals 3
 
-    .line 72
-    invoke-super {p0}, Landroid/widget/SeekBar;->jumpDrawablesToCurrentState()V
+    .line 123
+    iget v0, p0, Ll/ܶ᩺;->᩷:I
 
-    .line 73
-    iget-object v0, p0, Ll/ܶ᩺;->ܺ:Ll/᩸᩺;
+    iget-object v1, p0, Ll/ܶ᩺;->ۙ:[Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ll/᩸᩺;->ۨ()V
+    array-length v2, v1
 
+    if-ge v0, v2, :cond_0
+
+    .line 124
+    aput-object p1, v1, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 125
+    iput v0, p0, Ll/ܶ᩺;->᩷:I
+
+    :cond_0
     return-void
-.end method
-
-.method public final declared-synchronized onDraw(Landroid/graphics/Canvas;)V
-    .locals 2
-
-    move-object v0, p0
-
-    .line 1
-    monitor-enter v0
-
-    .line 60
-    :try_start_0
-    invoke-super {p0, p1}, Landroid/widget/SeekBar;->onDraw(Landroid/graphics/Canvas;)V
-
-    .line 61
-    iget-object v1, p0, Ll/ܶ᩺;->ܺ:Ll/᩸᩺;
-
-    invoke-virtual {v1, p1}, Ll/᩸᩺;->ۙ(Landroid/graphics/Canvas;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 62
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
 .end method

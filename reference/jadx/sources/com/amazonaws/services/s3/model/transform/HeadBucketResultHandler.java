@@ -9,11 +9,11 @@ import com.amazonaws.services.s3.model.HeadBucketResult;
 public class HeadBucketResultHandler extends AbstractS3ResponseHandler {
     @Override // com.amazonaws.http.HttpResponseHandler
     /* JADX INFO: renamed from: ۙ */
-    public final Object mo276(HttpResponse httpResponse) {
+    public final Object mo270(HttpResponse httpResponse) {
         AmazonWebServiceResponse amazonWebServiceResponse = new AmazonWebServiceResponse();
         HeadBucketResult headBucketResult = new HeadBucketResult();
-        headBucketResult.m579((String) httpResponse.m270().get("x-amz-bucket-region"));
-        amazonWebServiceResponse.m165(headBucketResult);
+        headBucketResult.m573((String) httpResponse.m263().get("x-amz-bucket-region"));
+        amazonWebServiceResponse.m159(headBucketResult);
         return amazonWebServiceResponse;
     }
 }

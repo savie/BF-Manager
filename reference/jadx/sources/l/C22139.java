@@ -1,43 +1,33 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩹۟ۡ, reason: contains not printable characters */
-/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: renamed from: l.᩷ܶ֫, reason: contains not printable characters */
+/* JADX INFO: compiled from: U9LB */
 /* JADX INFO: loaded from: classes.dex */
-public final enum C22139 extends EnumC8422 {
-    public /* synthetic */ C22139() {
-        this("ScriptDataDoubleEscapedDashDash", 30);
+public final class C22139 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f71314;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public int f71315;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f71316;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public int f71317;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte[] m50100() {
+        C6178 c6178 = new C6178(16);
+        c6178.writeInt(this.f71316);
+        c6178.writeInt(this.f71317);
+        c6178.writeInt(this.f71315);
+        c6178.writeInt(this.f71314);
+        return c6178.m17808();
     }
 
-    public C22139(String str, int i) {
-        super(str, i, 0);
-    }
-
-    @Override // l.EnumC8422
-    /* JADX INFO: renamed from: ۙ */
-    public void mo1766(C8111 c8111, C2424 c2424) {
-        char cM7382 = c2424.m7382();
-        if (cM7382 == 0) {
-            c8111.m21365(this);
-            c8111.m21356((char) 65533);
-            c8111.m21353(EnumC8422.f29198);
-            return;
-        }
-        if (cM7382 == '-') {
-            c8111.m21356(cM7382);
-            return;
-        }
-        if (cM7382 == '<') {
-            c8111.m21356(cM7382);
-            c8111.m21353(EnumC8422.f29194);
-        } else if (cM7382 == '>') {
-            c8111.m21356(cM7382);
-            c8111.m21353(EnumC8422.f29204);
-        } else if (cM7382 == 65535) {
-            c8111.m21368(this);
-            c8111.m21353(EnumC8422.f29249);
-        } else {
-            c8111.m21356(cM7382);
-            c8111.m21353(EnumC8422.f29198);
-        }
+    public final String toString() {
+        return "OpticalInsetChunk{layoutBoundsLeft=" + this.f71316 + ", layoutBoundsTop=" + this.f71317 + ", layoutBoundsRight=" + this.f71315 + ", layoutBoundsBottom=" + this.f71314 + '}';
     }
 }

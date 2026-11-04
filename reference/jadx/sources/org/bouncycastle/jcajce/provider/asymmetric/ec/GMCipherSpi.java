@@ -12,7 +12,7 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.CipherSpi;
 import javax.crypto.NoSuchPaddingException;
-import l.C0252;
+import l.C25272;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.digests.Blake2bDigest;
 import org.bouncycastle.crypto.digests.Blake2sDigest;
@@ -35,7 +35,7 @@ import org.bouncycastle.jce.interfaces.ECKey;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Strings;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GMCipherSpi extends CipherSpi {
     public SM2Engine engine;
     public AsymmetricKeyParameter key;
@@ -264,7 +264,7 @@ public class GMCipherSpi extends CipherSpi {
     @Override // javax.crypto.CipherSpi
     public void engineSetMode(String str) {
         if (!Strings.toUpperCase(str).equals("NONE")) {
-            throw new IllegalArgumentException(C0252.m1693("can't support mode ", str));
+            throw new IllegalArgumentException(C25272.m56409("can't support mode ", str));
         }
     }
 }

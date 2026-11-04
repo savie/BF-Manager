@@ -282,7 +282,7 @@
     .line 0
     iget-object v0, p0, Lorg/bouncycastle/x509/X509AttributeCertStoreSelector;->targetGroups:Ljava/util/Collection;
 
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
     .line 0
     iget-object v0, p0, Lorg/bouncycastle/x509/X509AttributeCertStoreSelector;->targetNames:Ljava/util/Collection;
 
-    invoke-static {v0}, Ll/֡ܿᩴ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {v0}, Ll/ۙۚۗ;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object v0
 

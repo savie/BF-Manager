@@ -1,100 +1,30 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܳ֨ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27ZX */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C14199 implements Comparable {
-
-    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
-    public String f46569;
-
-    /* JADX INFO: renamed from: ۫, reason: not valid java name and contains not printable characters */
-    public String f46570;
-
-    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
-    public C4962 f46571;
-
-    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
-    public C4962 f46572;
-
-    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
-    public String f46573;
-
-    @Override // java.lang.Comparable
-    public final int compareTo(Object obj) {
-        return this.f46573.compareTo(((C14199) obj).f46573);
-    }
-
-    public C14199(String str, String str2, C4962 c4962) {
-        this.f46573 = str;
-        this.f46570 = str2;
-        this.f46571 = c4962;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String m34298() {
-        return this.f46573;
-    }
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public final String m34291() {
-        return this.f46570;
-    }
+/* JADX INFO: renamed from: l.۬᩻ۘ, reason: contains not printable characters */
+/* JADX INFO: compiled from: X44P */
+/* JADX INFO: loaded from: classes5.dex */
+public final class C14199 extends C21345 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C4962 m34293() {
-        return this.f46571;
+    public final /* synthetic */ C22163 f44880;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC24329 f44881;
+
+    public C14199(C22163 c22163, InterfaceC24329 interfaceC24329) {
+        this.f44880 = c22163;
+        this.f44881 = interfaceC24329;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m34294(String str) {
-        this.f46569 = str;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m34295(C4962 c4962) {
-        this.f46572 = c4962;
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final String m34296() {
-        return this.f46569;
-    }
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public final long m34292() {
-        C4962 c4962 = this.f46572;
-        if (c4962 == null) {
-            c4962 = this.f46571;
+    @Override // l.C21345, l.InterfaceC23583
+    public final EnumC16123 preVisitDirectory(Object obj, InterfaceC8665 interfaceC8665) {
+        InterfaceC24329 interfaceC24329 = (InterfaceC24329) obj;
+        InterfaceC24329 fileName = interfaceC24329.getFileName();
+        C22163 c22163 = this.f44880;
+        if (C22163.m50125(c22163, fileName)) {
+            c22163.f71380.put(new C5777(this.f44881.relativize(interfaceC24329).toString()), interfaceC24329);
+            return EnumC16123.CONTINUE;
         }
-        if ((c4962.f17317 & 1) != 0) {
-            return c4962.f17313;
-        }
-        return -1L;
-    }
-
-    /* JADX INFO: renamed from: ۜ, reason: not valid java name and contains not printable characters */
-    public final long m34297() {
-        C4962 c4962 = this.f46572;
-        if (c4962 == null) {
-            c4962 = this.f46571;
-        }
-        if ((c4962.f17317 & 8) != 0) {
-            return ((long) c4962.f17316) * 1000;
-        }
-        return 0L;
-    }
-
-    /* JADX INFO: renamed from: ᩺, reason: not valid java name and contains not printable characters */
-    public final boolean m34299() {
-        C4962 c4962 = this.f46572;
-        if (c4962 == null) {
-            c4962 = this.f46571;
-        }
-        return c4962.m13760();
-    }
-
-    public final String toString() {
-        return this.f46570;
+        return EnumC16123.SKIP_SUBTREE;
     }
 }

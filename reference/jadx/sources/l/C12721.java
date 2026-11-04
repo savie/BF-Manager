@@ -1,28 +1,16 @@
 package l;
 
-import bin.mt.json.JSONArray;
-
-/* JADX INFO: renamed from: l.۫᩺۬, reason: contains not printable characters */
-/* JADX INFO: compiled from: M6XL */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C12721 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final JSONArray f42420;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final String f42421;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final String f42422;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final String f42423;
-
-    public C12721(JSONArray jSONArray, String str, String str2, String str3) {
-        this.f42423 = str;
-        this.f42421 = str2;
-        this.f42422 = str3;
-        this.f42420 = jSONArray;
+/* JADX INFO: renamed from: l.ۨ᩻᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: Y6HM */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C12721 extends AbstractC15462 {
+    @Override // l.AbstractC15462
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo3186(C11975 c11975, int i, C12479 c12479) {
+        int[] iArrM30061 = c11975.m30061();
+        iArrM30061[0] = AbstractC15462.m37021(i);
+        iArrM30061[1] = AbstractC15462.m37019(i);
+        c11975.m30055(c12479.m31000());
+        c11975.m30049(0L);
     }
 }

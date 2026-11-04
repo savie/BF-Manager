@@ -1,30 +1,52 @@
 package l;
 
-/* JADX INFO: renamed from: l.ᩴ᩸ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: HBGE */
+import java.util.Map;
+import java.util.function.Predicate;
+
+/* JADX INFO: renamed from: l.ᩳۧۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 51FV */
 /* JADX INFO: loaded from: classes5.dex */
-public final class C19031 implements InterfaceC5520 {
+public final /* synthetic */ class C19031 implements Predicate {
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C8448 f61560;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f61652;
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4612(C6330 c6330) {
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ Object f61653;
+
+    public /* synthetic */ C19031(int i, Object obj) {
+        this.f61652 = i;
+        this.f61653 = obj;
     }
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ۙ */
-    public final void mo4613(C9859 c9859) {
+    @Override // java.util.function.Predicate
+    public /* synthetic */ Predicate and(Predicate predicate) {
+        return C19025.$default$and(this, predicate);
     }
 
-    public C19031(C8448 c8448) {
-        this.f61560 = c8448;
+    @Override // java.util.function.Predicate
+    /* JADX INFO: renamed from: negate */
+    public /* synthetic */ Predicate mo7134negate() {
+        switch (this.f61652) {
+            case 0:
+                break;
+        }
+        return C19025.$default$negate(this);
     }
 
-    @Override // l.InterfaceC5520
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo4614(C6330 c6330) {
-        C10565.m26718(this.f61560.f29304, c6330);
+    public /* synthetic */ Predicate or(Predicate predicate) {
+        return C19025.$default$or(this, predicate);
+    }
+
+    @Override // java.util.function.Predicate
+    public final boolean test(Object obj) {
+        switch (this.f61652) {
+            case 0:
+                String str = (String) this.f61653;
+                String str2 = (String) ((Map.Entry) obj).getKey();
+                return str2.startsWith(str) && str2.endsWith("/type-info");
+            default:
+                return C12971.m32364((C12971) this.f61653, (C21943) obj);
+        }
     }
 }

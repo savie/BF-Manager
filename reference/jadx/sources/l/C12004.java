@@ -1,176 +1,187 @@
 package l;
 
-import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.RippleDrawable;
-import android.os.Build;
-import android.util.AttributeSet;
-import android.widget.ImageView;
+import org.bouncycastle.pqc.crypto.newhope.Params;
 
-/* JADX INFO: renamed from: l.ۨ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: J4YO */
+/* JADX INFO: renamed from: l.ۨ֨, reason: contains not printable characters */
+/* JADX INFO: compiled from: S2ZO */
 /* JADX INFO: loaded from: classes3.dex */
 public final class C12004 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final ImageView f40229;
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final byte[] f38707 = new byte[Params.POLY_BYTES];
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public C23851 f40230;
+    public int f38708;
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C23851 f40231;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f38709;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f40232 = 0;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public char f38710;
 
-    public C12004(ImageView imageView) {
-        this.f40229 = imageView;
-    }
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final CharSequence f38711;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29900(AttributeSet attributeSet, int i) {
-        int iM6387;
-        ImageView imageView = this.f40229;
-        Context context = imageView.getContext();
-        int[] iArr = C12108.f40512;
-        C1977 c1977M6353 = C1977.m6353(context, attributeSet, iArr, i, 0);
-        C5031.m13983(imageView, imageView.getContext(), iArr, attributeSet, c1977M6353.m6382(), i);
-        try {
-            Drawable drawable = imageView.getDrawable();
-            if (drawable == null && (iM6387 = c1977M6353.m6387(1, -1)) != -1 && (drawable = C15945.m37904(imageView.getContext(), iM6387)) != null) {
-                imageView.setImageDrawable(drawable);
-            }
-            if (drawable != null) {
-                C20946.m47120(drawable);
-            }
-            if (c1977M6353.m6383(2)) {
-                C3705.m10875(imageView, c1977M6353.m6385(2));
-            }
-            if (c1977M6353.m6383(3)) {
-                C3705.m10876(imageView, C20946.m47119(c1977M6353.m6381(3, -1), null));
-            }
-        } finally {
-            c1977M6353.m6379();
+    static {
+        for (int i = 0; i < 1792; i++) {
+            f38707[i] = Character.getDirectionality(i);
         }
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29896(int i) {
-        ImageView imageView = this.f40229;
+    public C12004(CharSequence charSequence) {
+        this.f38711 = charSequence;
+        this.f38709 = charSequence.length();
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final int m30189() {
+        byte directionality;
+        this.f38708 = 0;
+        int i = 0;
+        int i2 = 0;
+        int i3 = 0;
+        while (true) {
+            int i4 = this.f38708;
+            if (i4 < this.f38709 && i == 0) {
+                CharSequence charSequence = this.f38711;
+                char cCharAt = charSequence.charAt(i4);
+                this.f38710 = cCharAt;
+                if (Character.isHighSurrogate(cCharAt)) {
+                    int iCodePointAt = Character.codePointAt(charSequence, this.f38708);
+                    this.f38708 = Character.charCount(iCodePointAt) + this.f38708;
+                    directionality = Character.getDirectionality(iCodePointAt);
+                } else {
+                    this.f38708++;
+                    char c = this.f38710;
+                    directionality = c < 1792 ? f38707[c] : Character.getDirectionality(c);
+                }
+                if (directionality != 0) {
+                    if (directionality == 1 || directionality == 2) {
+                        if (i3 == 0) {
+                            return 1;
+                        }
+                    } else if (directionality != 9) {
+                        switch (directionality) {
+                            case 14:
+                            case 15:
+                                i3++;
+                                i2 = -1;
+                                continue;
+                            case 16:
+                            case 17:
+                                i3++;
+                                i2 = 1;
+                                continue;
+                            case 18:
+                                i3--;
+                                i2 = 0;
+                                continue;
+                        }
+                    }
+                } else if (i3 == 0) {
+                    return -1;
+                }
+                i = i3;
+            }
+        }
         if (i != 0) {
-            Drawable drawableM37904 = C15945.m37904(imageView.getContext(), i);
-            if (drawableM37904 != null) {
-                C20946.m47120(drawableM37904);
-            }
-            imageView.setImageDrawable(drawableM37904);
-        } else {
-            imageView.setImageDrawable(null);
-        }
-        m29903();
-    }
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final boolean m29901() {
-        return !(this.f40229.getBackground() instanceof RippleDrawable);
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29897(ColorStateList colorStateList) {
-        if (this.f40230 == null) {
-            this.f40230 = new C23851();
-        }
-        C23851 c23851 = this.f40230;
-        c23851.f77107 = colorStateList;
-        c23851.f77106 = true;
-        m29903();
-    }
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ColorStateList m29902() {
-        C23851 c23851 = this.f40230;
-        if (c23851 != null) {
-            return c23851.f77107;
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29898(PorterDuff.Mode mode) {
-        if (this.f40230 == null) {
-            this.f40230 = new C23851();
-        }
-        C23851 c23851 = this.f40230;
-        c23851.f77105 = mode;
-        c23851.f77108 = true;
-        m29903();
-    }
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final PorterDuff.Mode m29894() {
-        C23851 c23851 = this.f40230;
-        if (c23851 != null) {
-            return c23851.f77105;
-        }
-        return null;
-    }
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m29903() {
-        ImageView imageView = this.f40229;
-        Drawable drawable = imageView.getDrawable();
-        if (drawable != null) {
-            C20946.m47120(drawable);
-        }
-        if (drawable != null) {
-            int i = Build.VERSION.SDK_INT;
-            if (i <= 21 && i == 21) {
-                if (this.f40231 == null) {
-                    this.f40231 = new C23851();
+            if (i2 == 0) {
+                while (this.f38708 > 0) {
+                    switch (m30187()) {
+                        case 14:
+                        case 15:
+                            if (i == i3) {
+                                return -1;
+                            }
+                            i3--;
+                            break;
+                        case 16:
+                        case 17:
+                            if (i == i3) {
+                                return 1;
+                            }
+                            i3--;
+                            break;
+                        case 18:
+                            i3++;
+                            break;
+                        default:
+                            break;
+                    }
                 }
-                C23851 c23851 = this.f40231;
-                c23851.f77107 = null;
-                c23851.f77106 = false;
-                c23851.f77105 = null;
-                c23851.f77108 = false;
-                ColorStateList colorStateListM10874 = C3705.m10874(imageView);
-                if (colorStateListM10874 != null) {
-                    c23851.f77106 = true;
-                    c23851.f77107 = colorStateListM10874;
-                }
-                PorterDuff.Mode modeM10877 = C3705.m10877(imageView);
-                if (modeM10877 != null) {
-                    c23851.f77108 = true;
-                    c23851.f77105 = modeM10877;
-                }
-                if (c23851.f77106 || c23851.f77108) {
-                    int[] drawableState = imageView.getDrawableState();
-                    int i2 = C23521.f76123;
-                    C4800.m13325(drawable, c23851, drawableState);
-                    return;
-                }
-            }
-            C23851 c23852 = this.f40230;
-            if (c23852 != null) {
-                int[] drawableState2 = imageView.getDrawableState();
-                int i3 = C23521.f76123;
-                C4800.m13325(drawable, c23852, drawableState2);
+            } else {
+                return i2;
             }
         }
+        return 0;
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29899(Drawable drawable) {
-        this.f40232 = drawable.getLevel();
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m29895() {
-        ImageView imageView = this.f40229;
-        if (imageView.getDrawable() != null) {
-            imageView.getDrawable().setLevel(this.f40232);
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int m30188() {
+        this.f38708 = this.f38709;
+        int i = 0;
+        int i2 = 0;
+        while (this.f38708 > 0) {
+            byte bM30187 = m30187();
+            if (bM30187 == 0) {
+                if (i == 0) {
+                    return -1;
+                }
+                if (i2 == 0) {
+                    i2 = i;
+                }
+            } else if (bM30187 == 1 || bM30187 == 2) {
+                if (i == 0) {
+                    return 1;
+                }
+                if (i2 == 0) {
+                    i2 = i;
+                }
+            } else if (bM30187 != 9) {
+                switch (bM30187) {
+                    case 14:
+                    case 15:
+                        if (i2 == i) {
+                            return -1;
+                        }
+                        i--;
+                        break;
+                    case 16:
+                    case 17:
+                        if (i2 == i) {
+                            return 1;
+                        }
+                        i--;
+                        break;
+                    case 18:
+                        i++;
+                        break;
+                    default:
+                        if (i2 == 0) {
+                            i2 = i;
+                        }
+                        break;
+                }
+            } else {
+                continue;
+            }
         }
+        return 0;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final byte m30187() {
+        int i = this.f38708 - 1;
+        CharSequence charSequence = this.f38711;
+        char cCharAt = charSequence.charAt(i);
+        this.f38710 = cCharAt;
+        if (Character.isLowSurrogate(cCharAt)) {
+            int iCodePointBefore = Character.codePointBefore(charSequence, this.f38708);
+            this.f38708 -= Character.charCount(iCodePointBefore);
+            return Character.getDirectionality(iCodePointBefore);
+        }
+        this.f38708--;
+        char c = this.f38710;
+        return c < 1792 ? f38707[c] : Character.getDirectionality(c);
     }
 }

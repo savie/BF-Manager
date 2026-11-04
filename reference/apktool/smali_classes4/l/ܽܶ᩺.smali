@@ -1,296 +1,381 @@
-.class public abstract Ll/ܽܶ᩺;
-.super Landroid/graphics/drawable/Drawable;
-.source "96B4"
+.class public final Ll/ܽܶ᩺;
+.super Ljava/lang/Object;
+.source "E1RG"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
+
+
+# static fields
+.field public static final ֨:[I
+
+.field public static final ۡ:[I
 
 
 # instance fields
-.field public ֡:Ll/֡ܶ᩺;
+.field public ֡:I
 
-.field public ۫:Landroid/content/res/ColorStateList;
+.field public ۟:I
 
-.field public ܺ:I
+.field public ۢ:I
 
-.field public ܽ:Landroid/graphics/PorterDuffColorFilter;
+.field public ܰ:I
 
-.field public ܿ:Landroid/graphics/PorterDuff$Mode;
+.field public ܿ:I
 
-.field public ᩶:Landroid/graphics/ColorFilter;
+.field public ᩳ:I
+
+.field public ᩶:I
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 4
+
+    const/16 v0, 0xa
+
+    new-array v0, v0, [I
+
+    .line 121
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ll/ܽܶ᩺;->ۡ:[I
+
+    const/16 v0, 0x18
+
+    const/16 v1, 0x30
+
+    const/4 v2, 0x4
+
+    const/16 v3, 0x8
+
+    .line 125
+    filled-new-array {v2, v3, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Ll/ܽܶ᩺;->֨:[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x40000
+        0x100000
+        0x200000
+        0x400000
+        0x400000
+        0x800000
+        0x800000
+        0x1000000
+        0x2000000
+        0x4000000
+    .end array-data
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
-    .line 24
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    .line 98
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0xff
+    const/4 v0, 0x6
 
-    .line 26
-    iput v0, p0, Ll/ܽܶ᩺;->ܺ:I
-
-    .line 29
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v0, p0, Ll/ܽܶ᩺;->ܿ:Landroid/graphics/PorterDuff$Mode;
-
-    .line 32
-    new-instance v0, Ll/֡ܶ᩺;
-
-    invoke-direct {v0, p0}, Ll/֡ܶ᩺;-><init>(Ll/ܽܶ᩺;)V
-
-    iput-object v0, p0, Ll/ܽܶ᩺;->֡:Ll/֡ܶ᩺;
+    .line 143
+    :try_start_0
+    invoke-virtual {p0, v0}, Ll/ܽܶ᩺;->ۤ(I)V
+    :try_end_0
+    .catch Ll/ۘܶ᩺; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method private ۙ()Z
-    .locals 4
+    .line 146
+    :catch_0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 109
-    iget-object v0, p0, Ll/ܽܶ᩺;->۫:Landroid/content/res/ColorStateList;
+    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-object v3, p0, Ll/ܽܶ᩺;->ܿ:Landroid/graphics/PorterDuff$Mode;
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    .line 115
-    :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v0
-
-    .line 117
-    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
-
-    iget-object v3, p0, Ll/ܽܶ᩺;->ܿ:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v2, v0, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    iput-object v2, p0, Ll/ܽܶ᩺;->ܽ:Landroid/graphics/PorterDuffColorFilter;
-
-    return v1
-
-    .line 110
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Ll/ܽܶ᩺;->ܽ:Landroid/graphics/PorterDuffColorFilter;
-
-    if-eqz v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_1
-    const/4 v0, 0x0
-
-    .line 111
-    iput-object v0, p0, Ll/ܽܶ᩺;->ܽ:Landroid/graphics/PorterDuffColorFilter;
-
-    return v1
+    throw v0
 .end method
 
 
 # virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    .line 136
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    .line 137
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    .line 141
-    :cond_0
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v1
-
-    .line 142
-    iget v2, v0, Landroid/graphics/Rect;->left:I
-
-    int-to-float v2, v2
-
-    iget v3, v0, Landroid/graphics/Rect;->top:I
-
-    int-to-float v3, v3
-
-    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
-
-    .line 143
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v2, v0}, Ll/ܽܶ᩺;->ۙ(Landroid/graphics/Canvas;II)V
-
-    .line 144
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+.method public final clone()Ljava/lang/Object;
     .locals 1
 
-    .line 160
-    iget-object v0, p0, Ll/ܽܶ᩺;->֡:Ll/֡ܶ᩺;
+    .line 578
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    .line 581
+    :catch_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final ֫()I
+    .locals 1
+
+    .line 396
+    iget v0, p0, Ll/ܽܶ᩺;->ۢ:I
+
+    return v0
+.end method
+
+.method public final ۙ()I
+    .locals 1
+
+    .line 518
+    iget v0, p0, Ll/ܽܶ᩺;->ܰ:I
+
+    return v0
+.end method
+
+.method public final ۙ(Ll/۫ܶ᩺;Ll/֡ܽ᩺;)Ll/۫ܶ᩺;
+    .locals 1
+
+    .line 531
+    iget v0, p0, Ll/ܽܶ᩺;->۟:I
+
+    if-nez v0, :cond_0
+
+    .line 532
+    new-instance v0, Ll/᩺ܶ᩺;
+
+    invoke-direct {v0, p1, p2}, Ll/᩺ܶ᩺;-><init>(Ll/۫ܶ᩺;Ll/֡ܽ᩺;)V
+
+    return-object v0
+
+    .line 534
+    :cond_0
+    new-instance v0, Ll/ܶܶ᩺;
+
+    invoke-direct {v0, p1, p0, p2}, Ll/ܶܶ᩺;-><init>(Ll/۫ܶ᩺;Ll/ܽܶ᩺;Ll/֡ܽ᩺;)V
 
     return-object v0
 .end method
 
-.method public isStateful()Z
-    .locals 1
+.method public final ۙ(I)V
+    .locals 3
 
-    .line 99
-    iget-object v0, p0, Ll/ܽܶ᩺;->۫:Landroid/content/res/ColorStateList;
+    const/16 v0, 0x1000
 
-    if-eqz v0, :cond_0
+    const-string v1, " B"
 
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
+    if-lt p1, v0, :cond_1
 
-    move-result v0
+    const/high16 v0, 0x30000000
 
-    if-eqz v0, :cond_0
+    if-gt p1, v0, :cond_0
 
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final onStateChange([I)Z
-    .locals 0
-
-    .line 104
-    invoke-direct {p0}, Ll/ܽܶ᩺;->ۙ()Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public setAlpha(I)V
-    .locals 1
-
-    .line 44
-    iget v0, p0, Ll/ܽܶ᩺;->ܺ:I
-
-    if-eq v0, p1, :cond_0
-
-    .line 45
-    iput p1, p0, Ll/ܽܶ᩺;->ܺ:I
-
-    .line 46
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    .line 63
-    iput-object p1, p0, Ll/ܽܶ᩺;->᩶:Landroid/graphics/ColorFilter;
-
-    .line 64
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    .line 243
+    iput p1, p0, Ll/ܽܶ᩺;->᩶:I
 
     return-void
-.end method
 
-.method public setTint(I)V
-    .locals 0
+    .line 239
+    :cond_0
+    new-instance v0, Ll/ۘܶ᩺;
 
-    .line 72
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    const-string v2, "LZMA2 dictionary size must not exceed 768 MiB: "
+
+    .line 0
+    invoke-static {p1, v2, v1}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ll/ܽܶ᩺;->setTintList(Landroid/content/res/ColorStateList;)V
+    .line 20
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    .line 239
+    throw v0
+
+    .line 234
+    :cond_1
+    new-instance v0, Ll/ۘܶ᩺;
+
+    const-string v2, "LZMA2 dictionary size must be at least 4 KiB: "
+
+    .line 0
+    invoke-static {p1, v2, v1}, Ll/ܰ۟ۙ;->ۙ(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 20
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 234
+    throw v0
 .end method
 
-.method public setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 0
+.method public final ۚ()I
+    .locals 1
 
-    .line 80
-    iput-object p1, p0, Ll/ܽܶ᩺;->۫:Landroid/content/res/ColorStateList;
+    .line 460
+    iget v0, p0, Ll/ܽܶ᩺;->ᩳ:I
 
-    .line 81
-    invoke-direct {p0}, Ll/ܽܶ᩺;->ۙ()Z
+    return v0
+.end method
 
-    move-result p1
+.method public final ۤ()I
+    .locals 1
 
-    if-eqz p1, :cond_0
+    .line 350
+    iget v0, p0, Ll/ܽܶ᩺;->ܿ:I
 
-    .line 82
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    return v0
+.end method
+
+.method public final ۤ(I)V
+    .locals 3
+
+    if-ltz p1, :cond_4
+
+    const/16 v0, 0x9
+
+    if-gt p1, v0, :cond_4
+
+    const/4 v0, 0x3
+
+    .line 199
+    iput v0, p0, Ll/ܽܶ᩺;->ܿ:I
+
+    const/4 v1, 0x2
+
+    .line 201
+    iput v1, p0, Ll/ܽܶ᩺;->ۢ:I
+
+    .line 202
+    sget-object v2, Ll/ܽܶ᩺;->ۡ:[I
+
+    aget v2, v2, p1
+
+    iput v2, p0, Ll/ܽܶ᩺;->᩶:I
+
+    const/4 v2, 0x4
+
+    if-gt p1, v0, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 205
+    iput v0, p0, Ll/ܽܶ᩺;->۟:I
+
+    .line 206
+    iput v2, p0, Ll/ܽܶ᩺;->֡:I
+
+    if-gt p1, v0, :cond_0
+
+    const/16 v0, 0x80
+
+    goto :goto_0
 
     :cond_0
+    const/16 v0, 0x111
+
+    .line 207
+    :goto_0
+    iput v0, p0, Ll/ܽܶ᩺;->ᩳ:I
+
+    .line 208
+    sget-object v0, Ll/ܽܶ᩺;->֨:[I
+
+    aget p1, v0, p1
+
+    iput p1, p0, Ll/ܽܶ᩺;->ܰ:I
+
     return-void
+
+    .line 210
+    :cond_1
+    iput v1, p0, Ll/ܽܶ᩺;->۟:I
+
+    const/16 v0, 0x14
+
+    .line 211
+    iput v0, p0, Ll/ܽܶ᩺;->֡:I
+
+    if-ne p1, v2, :cond_2
+
+    const/16 p1, 0x10
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x5
+
+    if-ne p1, v0, :cond_3
+
+    const/16 p1, 0x20
+
+    goto :goto_1
+
+    :cond_3
+    const/16 p1, 0x40
+
+    .line 212
+    :goto_1
+    iput p1, p0, Ll/ܽܶ᩺;->ᩳ:I
+
+    const/4 p1, 0x0
+
+    .line 213
+    iput p1, p0, Ll/ܽܶ᩺;->ܰ:I
+
+    return-void
+
+    .line 196
+    :cond_4
+    new-instance v0, Ll/ۘܶ᩺;
+
+    const-string v1, "Unsupported preset: "
+
+    .line 0
+    invoke-static {p1, v1}, Ll/۬ۚ᩸;->ۙ(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 20
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 196
+    throw v0
 .end method
 
-.method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+.method public final ܳ()I
+    .locals 1
 
-    .line 91
-    iput-object p1, p0, Ll/ܽܶ᩺;->ܿ:Landroid/graphics/PorterDuff$Mode;
+    .line 429
+    iget v0, p0, Ll/ܽܶ᩺;->۟:I
 
-    .line 92
-    invoke-direct {p0}, Ll/ܽܶ᩺;->ۙ()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 93
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public abstract ۙ(Landroid/graphics/Canvas;II)V
+.method public final ᩴ()I
+    .locals 1
+
+    .line 486
+    iget v0, p0, Ll/ܽܶ᩺;->֡:I
+
+    return v0
+.end method
+
+.method public final ᩷()I
+    .locals 1
+
+    .line 250
+    iget v0, p0, Ll/ܽܶ᩺;->᩶:I
+
+    return v0
 .end method

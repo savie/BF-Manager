@@ -1,22 +1,79 @@
 package l;
 
-import android.graphics.Path;
-import android.view.animation.Interpolator;
+import android.graphics.Bitmap;
+import com.google.android.material.navigation.DrawerLayoutUtils;
+import java.util.Random;
 
-/* JADX INFO: renamed from: l.ܳܶ᩺, reason: contains not printable characters */
-/* JADX INFO: compiled from: K582 */
+/* JADX INFO: renamed from: l.ܰ۬ۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z7NG */
 /* JADX INFO: loaded from: classes4.dex */
 public final class C14617 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final Interpolator f47826;
+    public final Bitmap f46034;
 
-    static {
-        Path path = new Path();
-        path.moveTo(0.0f, 0.0f);
-        path.lineTo(0.2f, 0.0f);
-        path.cubicTo(0.39583334f, 0.0f, 0.47484508f, 0.20679761f, 0.59166664f, 0.41708294f);
-        path.cubicTo(0.715161f, 0.6393796f, 0.81625f, 0.9745569f, 1.0f, 1.0f);
-        f47826 = C7189.m19122(path);
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Bitmap f46035;
+
+    public C14617(Random random) {
+        float fNextInt;
+        Bitmap.Config config = Bitmap.Config.ARGB_8888;
+        this.f46035 = Bitmap.createBitmap(2, 2, config);
+        this.f46034 = Bitmap.createBitmap(2, 2, config);
+        if (random.nextBoolean()) {
+            float fNextInt2 = random.nextInt(360);
+            float[] fArr = {fNextInt2, 0.8f, 0.82f};
+            m35258(0, 0, fArr);
+            fArr[0] = ((95.0f + fNextInt2) + random.nextInt(20)) % 360.0f;
+            fArr[1] = 0.98f;
+            fArr[2] = 0.78f;
+            m35258(1, 0, fArr);
+            fArr[0] = ((325.0f + fNextInt2) + random.nextInt(20)) % 360.0f;
+            fArr[1] = 1.0f;
+            fArr[2] = 0.8f;
+            m35258(0, 1, fArr);
+            fArr[0] = ((fNextInt2 + 255.0f) + random.nextInt(20)) % 360.0f;
+            fArr[1] = 1.0f;
+            fArr[2] = 0.82f;
+            m35258(1, 1, fArr);
+            return;
+        }
+        do {
+            fNextInt = random.nextInt(360);
+            if (fNextInt < 290.0f) {
+                break;
+            }
+        } while (fNextInt <= 330.0f);
+        float[] fArr2 = {fNextInt, 0.86f, 0.74f};
+        m35258(0, 0, fArr2);
+        fArr2[0] = ((fNextInt + 1.0f) + random.nextInt(10)) % 360.0f;
+        fArr2[1] = 0.72f;
+        fArr2[2] = 0.8f;
+        m35258(1, 0, fArr2);
+        fArr2[0] = ((80.0f + fNextInt) + random.nextInt(20)) % 360.0f;
+        fArr2[1] = 1.0f;
+        fArr2[2] = 0.87f;
+        m35258(0, 1, fArr2);
+        fArr2[0] = ((fNextInt + 140.0f) + random.nextInt(20)) % 360.0f;
+        fArr2[1] = 0.76f;
+        fArr2[2] = 0.79f;
+        m35258(1, 1, fArr2);
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Bitmap m35260() {
+        return this.f46035;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Bitmap m35259() {
+        return this.f46034;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m35258(int i, int i2, float[] fArr) {
+        int iM45960 = C19988.m45960(fArr);
+        this.f46035.setPixel(i, i2, iM45960);
+        this.f46034.setPixel(i, i2, C19988.m45966((iM45960 & 16777215) | DrawerLayoutUtils.DEFAULT_SCRIM_COLOR, -12434878));
     }
 }

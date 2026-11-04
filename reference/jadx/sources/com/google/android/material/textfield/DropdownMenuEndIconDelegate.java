@@ -16,13 +16,13 @@ import android.widget.Spinner;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.internal.CheckableImageButton;
 import com.google.android.material.motion.MotionUtils;
-import l.C12972;
-import l.C17492;
-import l.C17910;
-import l.C22006;
-import l.C2387;
-import l.C5031;
-import l.InterfaceC23605;
+import l.C11642;
+import l.C16117;
+import l.C19835;
+import l.C22666;
+import l.C24323;
+import l.C25227;
+import l.InterfaceC0994;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DropdownMenuEndIconDelegate extends EndIconDelegate {
@@ -42,7 +42,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
     public boolean isEndIconChecked;
     public final View.OnFocusChangeListener onEditTextFocusChangeListener;
     public final View.OnClickListener onIconClickListener;
-    public final InterfaceC23605 touchExplorationStateChangeListener;
+    public final InterfaceC0994 touchExplorationStateChangeListener;
 
     @Override // com.google.android.material.textfield.EndIconDelegate
     public boolean isBoxBackgroundModeSupported(int i) {
@@ -88,7 +88,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
         CheckableImageButton checkableImageButton = this.endIconView;
         int i = z ? 2 : 1;
-        int i2 = C5031.f17539;
+        int i2 = C22666.f73603;
         checkableImageButton.setImportantForAccessibility(i);
     }
 
@@ -106,16 +106,16 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
                 this.f$0.lambda$new$1(view, z);
             }
         };
-        this.touchExplorationStateChangeListener = new InterfaceC23605() { // from class: com.google.android.material.textfield.DropdownMenuEndIconDelegate$$ExternalSyntheticLambda5
-            @Override // l.InterfaceC23605
+        this.touchExplorationStateChangeListener = new InterfaceC0994() { // from class: com.google.android.material.textfield.DropdownMenuEndIconDelegate$$ExternalSyntheticLambda5
+            @Override // l.InterfaceC0994
             public final void onTouchExplorationStateChanged(boolean z) {
                 this.f$0.lambda$new$2(z);
             }
         };
-        this.dropdownPopupActivatedAt = C17492.FOREVER_NS;
-        this.animationFadeInDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C2387.f9197, 67);
-        this.animationFadeOutDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C2387.f9197, 50);
-        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C2387.f9129, AnimationUtils.LINEAR_INTERPOLATOR);
+        this.dropdownPopupActivatedAt = C25227.FOREVER_NS;
+        this.animationFadeInDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C11642.f37174, 67);
+        this.animationFadeOutDuration = MotionUtils.resolveThemeDuration(endCompoundLayout.getContext(), C11642.f37174, 50);
+        this.animationFadeInterpolator = MotionUtils.resolveThemeInterpolator(endCompoundLayout.getContext(), C11642.f36628, AnimationUtils.LINEAR_INTERPOLATOR);
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
@@ -136,18 +136,18 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
-    public InterfaceC23605 getTouchExplorationStateChangeListener() {
+    public InterfaceC0994 getTouchExplorationStateChangeListener() {
         return this.touchExplorationStateChangeListener;
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
     public int getIconDrawableResId() {
-        return IS_LOLLIPOP ? C12972.f43266 : C12972.f43205;
+        return IS_LOLLIPOP ? C16117.f52391 : C16117.f52329;
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
     public int getIconContentDescriptionResId() {
-        return C17910.f56851;
+        return C24323.f78837;
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
@@ -172,7 +172,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         this.textInputLayout.setErrorIconDrawable((Drawable) null);
         if (!EditTextUtils.isEditable(editText) && this.accessibilityManager.isTouchExplorationEnabled()) {
             CheckableImageButton checkableImageButton = this.endIconView;
-            int i = C5031.f17539;
+            int i = C22666.f73603;
             checkableImageButton.setImportantForAccessibility(2);
         }
         this.textInputLayout.setEndIconVisible(true);
@@ -204,12 +204,12 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // com.google.android.material.textfield.EndIconDelegate
-    public void onInitializeAccessibilityNodeInfo(View view, C22006 c22006) {
+    public void onInitializeAccessibilityNodeInfo(View view, C19835 c19835) {
         if (!EditTextUtils.isEditable(this.autoCompleteTextView)) {
-            c22006.m48844((CharSequence) Spinner.class.getName());
+            c19835.m45639((CharSequence) Spinner.class.getName());
         }
-        if (c22006.m48859()) {
-            c22006.m48845((String) null);
+        if (c19835.m45658()) {
+            c19835.m45688((CharSequence) null);
         }
     }
 

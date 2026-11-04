@@ -1,53 +1,14 @@
 .class public final Ll/ܺ᩷;
-.super Landroid/view/ViewOutlineProvider;
-.source "V1C0"
-
-
-# instance fields
-.field public final synthetic ۙ:Ll/᩶᩷;
+.super Ljava/lang/Object;
+.source "E5FU"
 
 
 # direct methods
-.method public constructor <init>(Ll/᩶᩷;)V
+.method public static ۙ(Landroid/media/session/PlaybackState$Builder;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 336
-    iput-object p1, p0, Ll/ܺ᩷;->ۙ:Ll/᩶᩷;
-
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 6
-
-    .line 339
-    iget-object p1, p0, Ll/ܺ᩷;->ۙ:Ll/᩶᩷;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    .line 340
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v4
-
-    const/4 v2, 0x0
-
-    .line 341
-    invoke-static {p1}, Ll/᩶᩷;->ܰ(Ll/᩶᩷;)F
-
-    move-result v5
-
-    const/4 v1, 0x0
-
-    move-object v0, p2
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    .line 1512
+    invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/session/PlaybackState$Builder;
 
     return-void
 .end method

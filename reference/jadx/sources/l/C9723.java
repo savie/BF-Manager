@@ -1,43 +1,96 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۢܿۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 81ID */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C9723 extends AbstractDialogInterfaceOnClickListenerC17341 {
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.RandomAccess;
+import java.util.function.UnaryOperator;
 
-    /* JADX INFO: renamed from: ۗ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C4452 f32729;
+/* JADX INFO: renamed from: l.ۡ᩻ۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes4.dex */
+public class C9723 extends C8233 implements List, InterfaceC5427 {
+    public static final long serialVersionUID = -283967356065247728L;
+    public final List b;
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ boolean f32730;
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C9723(C4452 c4452, AbstractActivityC12483 abstractActivityC12483, boolean z) {
-        super(abstractActivityC12483, -1);
-        this.f32729 = c4452;
-        this.f32730 = z;
+    public C9723(List list) {
+        super(list);
+        this.b = list;
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩴ */
-    public final void mo1069() {
-        if (m40352().isEmpty()) {
-            m40364();
-        } else {
-            new C1960(this).m10243();
-        }
+    @Override // java.util.Collection, java.util.List
+    public final boolean equals(Object obj) {
+        return obj == this || this.b.equals(obj);
     }
 
-    @Override // l.AbstractDialogInterfaceOnClickListenerC17341
-    /* JADX INFO: renamed from: ᩸ */
-    public final void mo24190() {
-        if (this.f32730) {
-            this.f32729.f15849.m44362();
-        }
-        String strM40352 = m40352();
-        if (strM40352.isEmpty()) {
-            return;
-        }
-        ApplicationC0716.f2992.edit().putString("dex_backup_name", strM40352).apply();
+    @Override // java.util.Collection, java.util.List
+    public final int hashCode() {
+        return this.b.hashCode();
+    }
+
+    @Override // java.util.List
+    public final Object get(int i) {
+        return this.b.get(i);
+    }
+
+    @Override // java.util.List
+    public final Object set(int i, Object obj) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List
+    public final void add(int i, Object obj) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List
+    public final Object remove(int i) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List
+    public final int indexOf(Object obj) {
+        return this.b.indexOf(obj);
+    }
+
+    @Override // java.util.List
+    public final int lastIndexOf(Object obj) {
+        return this.b.lastIndexOf(obj);
+    }
+
+    @Override // java.util.List
+    public final boolean addAll(int i, Collection collection) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List, l.InterfaceC5427
+    public final void replaceAll(UnaryOperator unaryOperator) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List, l.InterfaceC5427
+    public final void sort(Comparator comparator) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.List
+    public final ListIterator listIterator() {
+        return new C10469(this, 0);
+    }
+
+    @Override // java.util.List
+    public final ListIterator listIterator(int i) {
+        return new C10469(this, i);
+    }
+
+    @Override // java.util.List
+    public List subList(int i, int i2) {
+        return new C9723(this.b.subList(i, i2));
+    }
+
+    private Object readResolve() {
+        List list = this.b;
+        return list instanceof RandomAccess ? new C14176(list) : this;
     }
 }

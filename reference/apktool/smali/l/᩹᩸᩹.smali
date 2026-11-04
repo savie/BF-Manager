@@ -1,14 +1,8 @@
-.class public final Ll/᩹᩸᩹;
-.super Ll/ܺ᩸᩹;
-.source "R12P"
+.class public interface abstract Ll/᩹᩸᩹;
+.super Ljava/lang/Object;
+.source "U9T0"
 
 
 # virtual methods
-.method public final ۖ()I
-    .locals 1
-
-    .line 119
-    sget v0, Ll/᩶᩵ۘ;->۫:I
-
-    return v0
+.method public abstract ۙ(Ll/ۡܳۨ;)Ljava/lang/Object;
 .end method

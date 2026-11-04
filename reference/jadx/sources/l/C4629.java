@@ -1,87 +1,101 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۙۨᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: J9JT */
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.ۙۗ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: EA25 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C4629 extends AbstractC16687 {
+public final class C4629 extends C10594 {
 
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public static final InterfaceC4314 f16358 = C13488.m32997(C4629.class);
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static InterfaceC25186 f16391 = C16980.m40038(C4629.class.getName());
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public C20215 f16359;
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final ConcurrentMapC17249 f16392;
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public C15276 f16360;
-
-    public C4629(C20215 c20215, C15276 c15276) {
-        this.f16359 = c20215;
-        this.f16360 = c15276;
-    }
-
-    @Override // l.AbstractC16687
-    /* JADX INFO: renamed from: ۙ */
-    public final boolean mo6063(AbstractC7245 abstractC7245) {
-        return abstractC7245 instanceof C18826;
-    }
-
-    @Override // l.AbstractC16687
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo6064(AbstractC7245 abstractC7245) {
-        C15276 c15276 = this.f16360;
-        C18826 c18826 = (C18826) abstractC7245;
-        f16358.mo12126(c18826, "Decrypting packet {}");
-        try {
-            m12779(c18826);
-        } finally {
-            c15276.getClass();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final synchronized void m14444(C11340 c11340) {
+        AbstractC12457 abstractC12457Mo11502 = c11340.mo11502();
+        if (abstractC12457Mo11502 == null || !abstractC12457Mo11502.mo30935()) {
+            f16391.mo13728(c11340, "Service Resolved called for an unresolved event: {}");
+        } else {
+            String str = c11340.getName() + "." + c11340.mo11501();
+            AbstractC12457 abstractC12457 = (AbstractC12457) this.f16392.get(str);
+            if (abstractC12457 != null && abstractC12457Mo11502.equals(abstractC12457)) {
+                byte[] bArrMo30942 = abstractC12457Mo11502.mo30942();
+                byte[] bArrMo30943 = abstractC12457.mo30942();
+                if (bArrMo30942.length == bArrMo30943.length) {
+                    int i = 0;
+                    while (true) {
+                        if (i < bArrMo30942.length) {
+                            if (bArrMo30942[i] != bArrMo30943[i]) {
+                                break;
+                            } else {
+                                i++;
+                            }
+                        } else if (!abstractC12457Mo11502.mo30937(abstractC12457)) {
+                            break;
+                        } else {
+                            f16391.mo13716(c11340, "Service Resolved called for a service already resolved: {}");
+                        }
+                    }
+                }
+            }
+            if (abstractC12457 == null) {
+                if (this.f16392.putIfAbsent(str, abstractC12457Mo11502.clone()) == null) {
+                    ((InterfaceC6492) m27043()).mo9704(c11340);
+                }
+            } else if (this.f16392.replace(str, abstractC12457, abstractC12457Mo11502.clone())) {
+                ((InterfaceC6492) m27043()).mo9704(c11340);
+            }
         }
+    }
+
+    public C4629(InterfaceC6492 interfaceC6492, boolean z) {
+        super(interfaceC6492, z);
+        this.f16392 = new ConcurrentMapC17249(32);
     }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m12779(C18826 c18826) throws C21317 {
-        C15276 c15276 = this.f16360;
-        if (!c15276.m36588(c18826)) {
-            this.f53462.m39153(new C19803(c18826.m19360()));
-            return;
-        }
-        C20858 c20858M45673 = this.f16359.m45673(Long.valueOf(((C23060) c18826.m19360()).m51005()));
-        if (c20858M45673 == null) {
-            this.f53462.m39153(new C19803(c18826.m19360()));
-            return;
-        }
-        byte[] bArrM36590 = c15276.m36590(c18826, c20858M45673.m46892().m37874());
-        boolean zM51004 = C23060.m51004(bArrM36590);
-        InterfaceC4314 interfaceC4314 = f16358;
-        if (zM51004) {
-            interfaceC4314.mo12118(c18826, "Encountered a nested encrypted packet in packet {}, disconnecting the transport");
-            throw new C21317("Cannot nest an encrypted packet in encrypted packet " + c18826);
-        }
-        if (!C9220.m23735(bArrM36590)) {
-            if (C1186.m4323(bArrM36590)) {
-                try {
-                    C16275 c16275 = new C16275(bArrM36590);
-                    interfaceC4314.mo12121("Decrypted packet {} is packet {}.", c18826, c16275);
-                    if (((C1186) c16275.m19360()).m4337() != ((C23060) c18826.m19360()).m51005()) {
-                        interfaceC4314.mo12128("Mismatched sessionId between encrypted packet {} and decrypted contents {}", c18826, c16275);
-                        this.f53462.m39153(new C19803(c16275.m19360()));
-                        return;
-                    } else {
-                        this.f53462.m39153(c16275);
-                        return;
-                    }
-                } catch (C17271 e) {
-                    throw new C13865("Could not load SMB2 Packet", e);
-                }
+    public final void m14443(AbstractC3508 abstractC3508) {
+        if (this.f16392.putIfAbsent(abstractC3508.getName() + "." + abstractC3508.mo11501(), abstractC3508.mo11502().clone()) == null) {
+            ((InterfaceC6492) m27043()).mo9705(abstractC3508);
+            AbstractC12457 abstractC12457Mo11502 = abstractC3508.mo11502();
+            if (abstractC12457Mo11502 == null || !abstractC12457Mo11502.mo30935()) {
+                return;
             }
-            interfaceC4314.mo12118(c18826, "Could not determine the encrypted packet contents of packet {}");
-            throw new C21317("Could not determine the encrypted packet data, disconnecting");
+            ((InterfaceC6492) m27043()).mo9704(abstractC3508);
+            return;
         }
-        interfaceC4314.mo12126(c18826, "Packet {} is compressed.");
-        try {
-            this.f53462.m39153(new C15299(bArrM36590));
-        } catch (C17271 e2) {
-            throw new C13865("Could not load compression header", e2);
+        f16391.mo13716(abstractC3508, "Service Added called for a service already added: {}");
+    }
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m14445(AbstractC3508 abstractC3508) {
+        String str = abstractC3508.getName() + "." + abstractC3508.mo11501();
+        ConcurrentMapC17249 concurrentMapC17249 = this.f16392;
+        if (concurrentMapC17249.remove(str, concurrentMapC17249.get(str))) {
+            ((InterfaceC6492) m27043()).mo9703(abstractC3508);
+        } else {
+            f16391.mo13716(abstractC3508, "Service Removed called for a service already removed: {}");
         }
+    }
+
+    public final String toString() {
+        StringBuilder sbM3018 = C0703.m3018(2048, "[Status for ");
+        sbM3018.append(((InterfaceC6492) m27043()).toString());
+        ConcurrentMapC17249 concurrentMapC17249 = this.f16392;
+        if (concurrentMapC17249.isEmpty()) {
+            sbM3018.append(" no type event ");
+        } else {
+            sbM3018.append(" (");
+            Iterator it = concurrentMapC17249.keySet().iterator();
+            while (it.hasNext()) {
+                sbM3018.append(((String) it.next()) + ", ");
+            }
+            sbM3018.append(") ");
+        }
+        sbM3018.append("]");
+        return sbM3018.toString();
     }
 }

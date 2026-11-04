@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.params;
 import java.math.BigInteger;
 import org.bouncycastle.crypto.CipherParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DSAParameters implements CipherParameters {
     public BigInteger g;
     public BigInteger p;

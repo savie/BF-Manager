@@ -2,76 +2,89 @@ package l;
 
 import java.io.IOException;
 
-/* JADX INFO: renamed from: l.ۗۡ۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: 4A2K */
+/* JADX INFO: renamed from: l.ۗۗۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: P67V */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3129 extends C10892 {
+public final class C3129 implements InterfaceC14906 {
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public C1718 f11788;
-
-    @Override // l.C10892, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public final void close() {
-    }
-
-    @Override // l.C10892
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final synchronized C5952 mo9476() {
-        return this.f11788.m5719();
+    public final C19382 f10137;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20283 f10138;
+
+    public C3129(C20283 c20283, C19382 c19382) {
+        this.f10138 = c20283;
+        this.f10137 = c19382;
     }
 
-    public C3129(C1718 c1718, C17987 c17987) {
-        super(c1718.m5716(), c17987);
-        this.f11788 = c1718;
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final String mo10208() {
+        return this.f10137.f62622;
     }
 
-    @Override // l.C10892, java.io.InputStream
-    public final int available() throws IOException {
-        int iM11709;
-        C1718 c1718 = this.f11788;
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final C7118 mo10206() {
+        return this.f10138.m46609(this.f10137.f62621);
+    }
+
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final String mo10209() {
         try {
-            C5952 c5952M5719 = c1718.m5719();
-            try {
-                C17987 c17987M16222 = c5952M5719.m16222();
-                try {
-                    if (c17987M16222.m41875()) {
-                        C21453 c21453 = new C21453(1130508, c17987M16222.m41882(), c5952M5719.m16229());
-                        c21453.m48076(16);
-                        c21453.m48077();
-                        iM11709 = ((C8048) ((C17925) c17987M16222.m41868(c21453, null, EnumC19358.NO_RETRY)).m41620()).m21180();
-                    } else {
-                        C13297 c13297 = new C13297(c17987M16222.m41882(), c1718.m5723(), c5952M5719.m16223());
-                        C4123 c4123 = new C4123(c17987M16222.m41882());
-                        c17987M16222.m41868(c13297, c4123, EnumC19358.NO_RETRY);
-                        if (c4123.m15238() != 1 && c4123.m15238() != 4) {
-                            iM11709 = c4123.m11709();
-                        }
-                        c5952M5719.m16228();
-                        c17987M16222.close();
-                        c5952M5719.m16227();
-                        return 0;
-                    }
-                    c17987M16222.close();
-                    c5952M5719.m16227();
-                    return iM11709;
-                } catch (Throwable th) {
-                    try {
-                        c17987M16222.close();
-                    } catch (Throwable th2) {
-                        th.addSuppressed(th2);
-                    }
-                    throw th;
-                }
-            } catch (Throwable th3) {
-                try {
-                    c5952M5719.m16227();
-                } catch (Throwable th4) {
-                    th3.addSuppressed(th4);
-                }
-                throw th3;
-            }
-        } catch (C12303 e) {
-            throw C10892.m27292(e);
+            return this.f10138.m46574(this.f10137);
+        } catch (IOException unused) {
+            return null;
+        }
+    }
+
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo10205(C0560 c0560) {
+        try {
+            this.f10138.m46588(this.f10137, c0560);
+            return true;
+        } catch (IOException unused) {
+            return false;
+        }
+    }
+
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final C22737 mo10207() {
+        try {
+            return mo10203();
+        } catch (IOException | C4511 unused) {
+            return null;
+        }
+    }
+
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final C22737 mo10203() throws IOException {
+        C19382 c19382 = this.f10137;
+        C9378 c9378 = c19382.f62623;
+        C20283 c20283 = this.f10138;
+        if (c9378 != null) {
+            C9378 c9378M46568 = c20283.m46568(c9378);
+            c20283.m46552(c19382.f62621, c9378, c9378M46568);
+            C22737 c22737M46551 = C20283.m46551(c9378M46568);
+            C20283.m46558(c20283, c19382.f62622, c22737M46551);
+            return c22737M46551;
+        }
+        return new C22737(c20283.m46612(c19382.f62624.getName()), c19382.f62620, c19382.f62625);
+    }
+
+    @Override // l.InterfaceC14906
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void mo10204(String str) {
+        C20283 c20283 = this.f10138;
+        try {
+            c20283.m46587(this.f10137, str);
+        } catch (Exception e) {
+            c20283.f65121.mo40348(e);
         }
     }
 }

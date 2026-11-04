@@ -1,33 +1,28 @@
 package l;
 
-import android.view.animation.Interpolator;
-import java.util.ArrayList;
+import java.util.Comparator;
 
-/* JADX INFO: renamed from: l.ۖ᩵ᩳ, reason: contains not printable characters */
-/* JADX INFO: compiled from: A1X9 */
+/* JADX INFO: renamed from: l.ۖܳ᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: R6IG */
 /* JADX INFO: loaded from: classes2.dex */
-public class C2740 {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f10532;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public InterfaceC20380 f10533;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public ArrayList f10534;
+public final class C2740 implements Comparator {
 
     /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public Interpolator f10535;
+    public final /* synthetic */ C8706 f9102;
 
-    public final String toString() {
-        String string = " ";
-        for (int i = 0; i < this.f10532; i++) {
-            StringBuilder sbM23356 = C9023.m23356(string);
-            sbM23356.append(((AbstractC11914) this.f10534.get(i)).mo29723());
-            sbM23356.append(EnumC19730.f63352);
-            string = sbM23356.toString();
+    public C2740(C8706 c8706) {
+        this.f9102 = c8706;
+    }
+
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        int i = C9451.f30647[this.f9102.m23403((AbstractC1566) obj, (AbstractC1566) obj2).ordinal()];
+        if (i == 1) {
+            return -2;
         }
-        return string;
+        if (i == 2 || i == 3) {
+            return -1;
+        }
+        return (i == 4 || i == 5) ? 1 : 0;
     }
 }

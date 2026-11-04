@@ -1,85 +1,52 @@
-.class public final synthetic Ll/ᩳ᩵᩹;
-.super Ljava/lang/Object;
-.source "D1Q7"
+.class public Ll/ᩳ᩵᩹;
+.super Ll/ۡ᩵᩹;
+.source "H32"
 
 # interfaces
-.implements Ll/ۗ۬᩹;
-.implements Ll/֨۫۬;
+.implements Ljava/util/RandomAccess;
 
 
-# instance fields
-.field public final synthetic ܺ:Ljava/lang/Object;
-
-.field public final synthetic ᩶:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Ll/ᩳ᩵᩹;->ܺ:Ljava/lang/Object;
-
-    iput-object p2, p0, Ll/ᩳ᩵᩹;->᩶:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# static fields
+.field public static final serialVersionUID:J = -0x17c644f4f4567f9L
 
 
 # virtual methods
-.method public ۙ(Ll/۫۟ۙ;)Ljava/lang/String;
-    .locals 2
+.method public final subList(II)Ljava/util/List;
+    .locals 4
+
+    .line 830
+    invoke-virtual {p0, p1}, Ll/۠᩵᩹;->ۙ(I)V
+
+    .line 831
+    invoke-virtual {p0, p2}, Ll/۠᩵᩹;->ۙ(I)V
+
+    if-gt p1, p2, :cond_0
+
+    .line 835
+    new-instance v0, Ll/ᩳ᩵᩹;
+
+    .line 825
+    invoke-direct {v0, p0, p1, p2}, Ll/ۡ᩵᩹;-><init>(Ll/۠᩵᩹;II)V
+
+    return-object v0
+
+    .line 832
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, ") is greater than end index ("
+
+    const-string v2, ")"
+
+    const-string v3, "Start index ("
 
     .line 0
-    iget-object v0, p0, Ll/ᩳ᩵᩹;->ܺ:Ljava/lang/Object;
-
-    check-cast v0, Ll/ۧۧ۬;
-
-    iget-object v1, p0, Ll/ᩳ᩵᩹;->᩶:Ljava/lang/Object;
-
-    check-cast v1, Ll/֨ܿ۬;
-
-    invoke-static {v0, v1, p1}, Ll/ۧۧ۬;->ۙ(Ll/ۧۧ۬;Ll/֨ܿ۬;Ll/۫۟ۙ;)Ljava/lang/String;
+    invoke-static {v3, p1, v1, v2, p2}, Ll/֡᩷᩸;->ۙ(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    .line 832
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-.method public ۙ(Ll/ۧۜ᩹;)V
-    .locals 5
-
-    .line 2
-    iget-object v0, p0, Ll/ᩳ᩵᩹;->ܺ:Ljava/lang/Object;
-
-    .line 4
-    check-cast v0, Ll/ۨۜ᩹;
-
-    .line 6
-    iget-object v1, p0, Ll/ᩳ᩵᩹;->᩶:Ljava/lang/Object;
-
-    .line 8
-    check-cast v1, Ll/᩸ۜ᩹;
-
-    .line 47
-    invoke-virtual {p1}, Ll/ۧۜ᩹;->ۙ()V
-
-    .line 48
-    invoke-virtual {v0}, Ll/ۨۜ᩹;->ܶ()Ll/ۨۘ᩹;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ll/ۨۜ᩹;->۟()Ll/ۖ۬᩹;
-
-    move-result-object v3
-
-    new-instance v4, Ll/ᩴ᩵᩹;
-
-    invoke-direct {v4, p1, v1, v0}, Ll/ᩴ᩵᩹;-><init>(Ll/ۧۜ᩹;Ll/᩸ۜ᩹;Ll/ۨۜ᩹;)V
-
-    invoke-virtual {v2, v0, v3, v4}, Ll/ۨۘ᩹;->ۙ(Ll/ۨۜ᩹;Ll/ۖ۬᩹;Ll/ۗ۬᩹;)V
-
-    return-void
+    throw v0
 .end method

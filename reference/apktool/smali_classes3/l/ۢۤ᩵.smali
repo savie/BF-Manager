@@ -1,77 +1,129 @@
-.class public final Ll/ۢۤ᩵;
-.super Ljava/lang/Object;
-.source "07TI"
-
-# interfaces
-.implements Ll/ۗۤ᩵;
+.class public final enum Ll/ۢۤ᩵;
+.super Ljava/lang/Enum;
+.source "Q6IJ"
 
 
-# instance fields
-.field public final ۙ:Ljava/util/BitSet;
+# static fields
+.field public static final enum ֡:Ll/ۢۤ᩵;
+
+.field public static final synthetic ܰ:[Ll/ۢۤ᩵;
+
+.field public static final enum ܿ:Ll/ۢۤ᩵;
+
+.field public static final enum ᩶:Ll/ۢۤ᩵;
 
 
 # direct methods
-.method public constructor <init>(Ll/֫ۤ᩵;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 14
+    new-instance v0, Ll/ۢۤ᩵;
 
-    .line 11
-    invoke-static {p1}, Ll/֫ۤ᩵;->ۙ(Ll/֫ۤ᩵;)Ljava/util/BitSet;
+    const-string v1, "NOT_READY"
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Ll/ۢۤ᩵;->ۙ:Ljava/util/BitSet;
+    invoke-direct {v0, v1, v2}, Ll/ۢۤ᩵;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢۤ᩵;->ܿ:Ll/ۢۤ᩵;
+
+    .line 15
+    new-instance v0, Ll/ۢۤ᩵;
+
+    const-string v1, "AWAITING_OPTIONAL_PREDECESSOR_MERGE"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ll/ۢۤ᩵;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢۤ᩵;->᩶:Ll/ۢۤ᩵;
+
+    .line 16
+    new-instance v0, Ll/ۢۤ᩵;
+
+    const-string v1, "READY_TO_COMPARE"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ll/ۢۤ᩵;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll/ۢۤ᩵;->֡:Ll/ۢۤ᩵;
+
+    .line 13
+    invoke-static {}, Ll/ۢۤ᩵;->ۙ()[Ll/ۢۤ᩵;
+
+    move-result-object v0
+
+    sput-object v0, Ll/ۢۤ᩵;->ܰ:[Ll/ۢۤ᩵;
 
     return-void
 .end method
 
-.method public static ܰ()Ll/֫ۤ᩵;
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    .line 24
-    new-instance v0, Ll/֫ۤ᩵;
+    .line 13
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Ljava/util/BitSet;
-
-    invoke-direct {v1}, Ljava/util/BitSet;-><init>()V
-
-    invoke-direct {v0, v1}, Ll/֫ۤ᩵;-><init>(Ljava/util/BitSet;)V
-
-    return-object v0
+    return-void
 .end method
 
-
-# virtual methods
-.method public final ۙ()Ll/֫ۤ᩵;
-    .locals 2
-
-    .line 20
-    new-instance v0, Ll/֫ۤ᩵;
-
-    iget-object v1, p0, Ll/ۢۤ᩵;->ۙ:Ljava/util/BitSet;
-
-    invoke-virtual {v1}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/BitSet;
-
-    invoke-direct {v0, v1}, Ll/֫ۤ᩵;-><init>(Ljava/util/BitSet;)V
-
-    return-object v0
-.end method
-
-.method public final ۙ(C)Z
+.method public static valueOf(Ljava/lang/String;)Ll/ۢۤ᩵;
     .locals 1
 
-    .line 16
-    iget-object v0, p0, Ll/ۢۤ᩵;->ۙ:Ljava/util/BitSet;
+    .line 13
+    const-class v0, Ll/ۢۤ᩵;
 
-    invoke-virtual {v0, p1}, Ljava/util/BitSet;->get(I)Z
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result p1
+    move-result-object p0
 
-    return p1
+    check-cast p0, Ll/ۢۤ᩵;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll/ۢۤ᩵;
+    .locals 1
+
+    .line 13
+    sget-object v0, Ll/ۢۤ᩵;->ܰ:[Ll/ۢۤ᩵;
+
+    invoke-virtual {v0}, [Ll/ۢۤ᩵;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll/ۢۤ᩵;
+
+    return-object v0
+.end method
+
+.method public static synthetic ۙ()[Ll/ۢۤ᩵;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Ll/ۢۤ᩵;
+
+    .line 13
+    sget-object v1, Ll/ۢۤ᩵;->ܿ:Ll/ۢۤ᩵;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢۤ᩵;->᩶:Ll/ۢۤ᩵;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ll/ۢۤ᩵;->֡:Ll/ۢۤ᩵;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    return-object v0
 .end method

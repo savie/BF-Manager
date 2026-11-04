@@ -1,9 +1,9 @@
 package org.bouncycastle.pqc.crypto.frodo;
 
 import java.security.SecureRandom;
-import l.C0833;
-import l.C1694;
-import l.C17922;
+import l.C12669;
+import l.C18176;
+import l.C7376;
 import org.bouncycastle.crypto.Xof;
 import org.bouncycastle.crypto.hpke.HPKE;
 import org.bouncycastle.util.Arrays;
@@ -63,10 +63,10 @@ public class FrodoEngine {
         this.len_pkh_bytes = i6;
         this.len_ss_bytes = i4 / 8;
         int i7 = ((i2 * i) * 8) / 8;
-        this.len_ct_bytes = C0833.m3428(i2, 64, 8, i7);
+        this.len_ct_bytes = C7376.m20246(i2, 64, 8, i7);
         int i8 = i7 + 16;
         this.len_pk_bytes = i8;
-        this.len_sk_bytes = C1694.m5620(i, 16, i6, i5 + i8);
+        this.len_sk_bytes = C12669.m31436(i, 16, i6, i5 + i8);
         this.T_chi = sArr;
         this.digest = xof;
         this.gen = frodoMatrixGenerator;
@@ -309,15 +309,15 @@ public class FrodoEngine {
     public void kem_dec(byte[] bArr, byte[] bArr2, byte[] bArr3) {
         int i = ((this.n * 8) * this.D) / 8;
         byte[] bArrCopyOfRange = Arrays.copyOfRange(bArr2, 0, i);
-        byte[] bArrCopyOfRange2 = Arrays.copyOfRange(bArr2, i, C0833.m3428(this.D, 64, 8, i));
+        byte[] bArrCopyOfRange2 = Arrays.copyOfRange(bArr2, i, C7376.m20246(this.D, 64, 8, i));
         int i2 = this.len_s_bytes;
         byte[] bArrCopyOfRange3 = Arrays.copyOfRange(bArr3, 0, i2);
         int i3 = i2 + 16;
         byte[] bArrCopyOfRange4 = Arrays.copyOfRange(bArr3, i2, i3);
         int i4 = (((this.D * this.n) * 8) / 8) + i3;
         byte[] bArrCopyOfRange5 = Arrays.copyOfRange(bArr3, i3, i4);
-        int iM3428 = C0833.m3428(this.n, 128, 8, i4);
-        byte[] bArrCopyOfRange6 = Arrays.copyOfRange(bArr3, i4, iM3428);
+        int iM20246 = C7376.m20246(this.n, 128, 8, i4);
+        byte[] bArrCopyOfRange6 = Arrays.copyOfRange(bArr3, i4, iM20246);
         short[] sArr = new short[this.n * 8];
         for (int i5 = 0; i5 < 8; i5++) {
             int i6 = 0;
@@ -330,7 +330,7 @@ public class FrodoEngine {
             }
         }
         short[] sArrMatrix_transpose = matrix_transpose(sArr, 8, this.n);
-        byte[] bArrCopyOfRange7 = Arrays.copyOfRange(bArr3, iM3428, this.len_pkh_bytes + iM3428);
+        byte[] bArrCopyOfRange7 = Arrays.copyOfRange(bArr3, iM20246, this.len_pkh_bytes + iM20246);
         short[] sArrUnpack = unpack(bArrCopyOfRange, 8, this.n);
         short[] sArrUnpack2 = unpack(bArrCopyOfRange2, 8, 8);
         int i8 = this.n;
@@ -341,11 +341,11 @@ public class FrodoEngine {
         this.digest.doFinal(bArr4, 0, this.len_seedSE_bytes + this.len_k_bytes);
         int i9 = this.len_seedSE_bytes;
         byte[] bArrCopyOfRange8 = Arrays.copyOfRange(bArr4, i9, this.len_k_bytes + i9);
-        int iM41614 = C17922.m41614(this.n, 16, 64, 2);
-        byte[] bArr5 = new byte[iM41614];
+        int iM42345 = C18176.m42345(this.n, 16, 64, 2);
+        byte[] bArr5 = new byte[iM42345];
         this.digest.update((byte) -106);
         this.digest.update(bArr4, 0, this.len_seedSE_bytes);
-        this.digest.doFinal(bArr5, 0, iM41614);
+        this.digest.doFinal(bArr5, 0, iM42345);
         int i10 = (this.n * 16) + 64;
         short[] sArr2 = new short[i10];
         for (int i11 = 0; i11 < i10; i11++) {
@@ -382,12 +382,12 @@ public class FrodoEngine {
         byte[] bArrCopyOfRange3 = Arrays.copyOfRange(bArr6, 0, this.len_seedSE_bytes);
         int i = this.len_seedSE_bytes;
         byte[] bArrCopyOfRange4 = Arrays.copyOfRange(bArr6, i, this.len_k_bytes + i);
-        int iM41614 = C17922.m41614(this.n, 16, 64, 2);
-        byte[] bArr7 = new byte[iM41614];
+        int iM42345 = C18176.m42345(this.n, 16, 64, 2);
+        byte[] bArr7 = new byte[iM42345];
         this.digest.update((byte) -106);
         this.digest.update(bArrCopyOfRange3, 0, bArrCopyOfRange3.length);
-        this.digest.doFinal(bArr7, 0, iM41614);
-        int i2 = iM41614 / 2;
+        this.digest.doFinal(bArr7, 0, iM42345);
+        int i2 = iM42345 / 2;
         short[] sArr = new short[i2];
         for (int i3 = 0; i3 < i2; i3++) {
             sArr[i3] = Pack.littleEndianToShort(bArr7, i3 * 2);

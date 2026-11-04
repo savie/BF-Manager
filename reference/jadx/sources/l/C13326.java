@@ -1,29 +1,43 @@
 package l;
 
-import java.util.function.Consumer;
-
-/* JADX INFO: renamed from: l.۬᩵ᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: DD2 */
+/* JADX INFO: renamed from: l.۫᩵ۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z6QT */
 /* JADX INFO: loaded from: classes4.dex */
-public final class C13326 extends AbstractC22498 implements InterfaceC6269, InterfaceC6206 {
+public final /* synthetic */ class C13326 implements InterfaceC2885 {
 
-    /* JADX INFO: renamed from: ۛ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C6975 f44235;
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f42508;
 
-    @Override // l.AbstractC22498
+    public /* synthetic */ C13326(int i) {
+        this.f42508 = i;
+    }
+
+    @Override // l.InterfaceC2885
     /* JADX INFO: renamed from: ۙ */
-    public final void mo5667(int i, Object obj) {
-        ((Consumer) obj).accept(this.f44235.f23471[i]);
+    public final /* synthetic */ InterfaceC2885 mo1302(InterfaceC2885 interfaceC2885) {
+        return C9596.m25073(this, interfaceC2885);
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public C13326(C6975 c6975) {
-        super(c6975);
-        this.f44235 = c6975;
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo1303(int i) {
+        switch (this.f42508) {
+            case 0:
+                return (i == 10 || i == 13 || (i | 1) == 8233 || i == 133) ? false : true;
+            default:
+                return Character.isAlphabetic(i);
+        }
     }
 
-    @Override // java.util.Iterator
-    public final Object next() {
-        return this.f44235.f23471[m50014()];
+    @Override // l.InterfaceC2885
+    /* JADX INFO: renamed from: ᩷ */
+    public final /* synthetic */ InterfaceC2885 mo1304(InterfaceC2885 interfaceC2885) {
+        return C9596.m25074(this, interfaceC2885);
+    }
+
+    @Override // l.InterfaceC2885
+    public final C0891 negate() {
+        C0407 c0407 = C5233.f18438;
+        return C0891.m3623(this);
     }
 }

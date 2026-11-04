@@ -1,62 +1,40 @@
-.class public final Ll/᩺ܽۙ;
-.super Ljava/lang/Object;
-.source "M8TF"
-
-# interfaces
-.implements Ll/ۘ۫ۙ;
-
-
-# instance fields
-.field public ۙ:Ll/ܽ۠ۙ;
-
-.field public final ܰ:Ljava/lang/Object;
+.class public Ll/᩺ܽۙ;
+.super Ll/᩵ܽۙ;
+.source "X6AW"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ll/֨ܰܰ;)V
+.method public constructor <init>(Ll/ۘܽۙ;Landroid/content/Context;)V
     .locals 0
 
-    .line 3039
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3040
-    iput-object p1, p0, Ll/᩺ܽۙ;->ܰ:Ljava/lang/Object;
-
-    .line 3042
-    invoke-virtual {p2}, Ll/֨ܰܰ;->ܶ()Ll/ܽ۠ۙ;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/᩺ܽۙ;->ۙ:Ll/ܽ۠ۙ;
+    .line 565
+    invoke-direct {p0, p1, p2}, Ll/᩵ܽۙ;-><init>(Ll/ۨܽۙ;Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getUid()Ljava/lang/Object;
+.method public final onLoadItem(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
     .locals 1
 
-    .line 3047
-    iget-object v0, p0, Ll/᩺ܽۙ;->ܰ:Ljava/lang/Object;
+    .line 570
+    new-instance v0, Ll/ᩳܽۙ;
 
-    return-object v0
-.end method
+    invoke-direct {v0, p2}, Ll/ᩳܽۙ;-><init>(Landroid/service/media/MediaBrowserService$Result;)V
 
-.method public final ۙ()Ll/ܽ۠ۙ;
-    .locals 1
+    .line 540
+    new-instance p2, Ll/ۛܽۙ;
 
-    .line 3052
-    iget-object v0, p0, Ll/᩺ܽۙ;->ۙ:Ll/ܽ۠ۙ;
+    invoke-direct {p2, p1, v0}, Ll/ۛܽۙ;-><init>(Ljava/lang/String;Ll/ᩳܽۙ;)V
 
-    return-object v0
-.end method
+    const/4 p1, 0x2
 
-.method public final ۙ(Ll/ܽ۠ۙ;)V
-    .locals 0
+    .line 1404
+    invoke-virtual {p2, p1}, Ll/۟ܽۙ;->ۙ(I)V
 
-    .line 3056
-    iput-object p1, p0, Ll/᩺ܽۙ;->ۙ:Ll/ܽ۠ۙ;
+    .line 1405
+    invoke-virtual {p2}, Ll/۟ܽۙ;->ܳ()V
 
     return-void
 .end method

@@ -1,87 +1,66 @@
 .class public final Ll/ۢۘ;
-.super Ll/ۢܶ;
-.source "P55W"
+.super Landroid/view/ViewOutlineProvider;
+.source "V1C0"
 
 
 # instance fields
-.field public final synthetic ܳ:Ll/ۗۘ;
+.field public final synthetic ۙ:Ll/ۡۘ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۗۘ;Landroid/view/View;)V
+.method public constructor <init>(Ll/ۡۘ;)V
     .locals 0
 
-    .line 638
-    iput-object p1, p0, Ll/ۢۘ;->ܳ:Ll/ۗۘ;
+    .line 278
+    iput-object p1, p0, Ll/ۢۘ;->ۙ:Ll/ۡۘ;
 
-    invoke-direct {p0, p2}, Ll/ۢܶ;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ۙ()Ll/ۜۘ;
-    .locals 1
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 6
 
-    .line 641
-    iget-object v0, p0, Ll/ۢۘ;->ܳ:Ll/ۗۘ;
+    .line 281
+    iget-object p1, p0, Ll/ۢۘ;->ۙ:Ll/ۡۘ;
 
-    iget-object v0, v0, Ll/ۗۘ;->ܺ:Ll/ۚۜ;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    iget-object v0, v0, Ll/ۚۜ;->ۖۙ:Ll/ۙۜ;
+    move-result v3
 
-    if-nez v0, :cond_0
+    .line 282
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    const/4 v0, 0x0
+    move-result v4
 
-    return-object v0
+    .line 283
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
-    .line 645
-    :cond_0
-    invoke-virtual {v0}, Ll/ۖۘ;->ۨ()Ll/ܰۘ;
+    move-result v0
 
-    move-result-object v0
+    int-to-float v0, v0
 
-    return-object v0
-.end method
+    invoke-static {p1}, Ll/ۡۘ;->ۙ(Ll/ۡۘ;)F
 
-.method public final ۨ()Z
-    .locals 2
+    move-result p1
 
-    .line 659
-    iget-object v0, p0, Ll/ۢۘ;->ܳ:Ll/ۗۘ;
+    mul-float v0, v0, p1
 
-    iget-object v0, v0, Ll/ۗۘ;->ܺ:Ll/ۚۜ;
+    const/high16 p1, 0x40000000    # 2.0f
 
-    iget-object v1, v0, Ll/ۚۜ;->ۘۙ:Ll/֫ۘ;
+    div-float v5, v0, p1
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    return v0
+    move-object v0, p2
 
-    .line 663
-    :cond_0
-    invoke-virtual {v0}, Ll/ۚۜ;->ۨ()Z
+    .line 284
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final ܰ()Z
-    .locals 1
-
-    .line 650
-    iget-object v0, p0, Ll/ۢۘ;->ܳ:Ll/ۗۘ;
-
-    iget-object v0, v0, Ll/ۗۘ;->ܺ:Ll/ۚۜ;
-
-    invoke-virtual {v0}, Ll/ۚۜ;->۬()Z
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

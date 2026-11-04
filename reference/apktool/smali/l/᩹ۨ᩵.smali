@@ -1,125 +1,197 @@
 .class public final Ll/᩹ۨ᩵;
-.super Ll/ۤۨ᩵;
-.source "I4F2"
+.super Ll/ۛۨ᩵;
+.source "9A0K"
 
 
 # instance fields
-.field public final ۙ:Ljava/lang/reflect/Method;
+.field public ۙ:[Ll/ܽۨ᩵;
 
-.field public final ܰ:Ljava/lang/Object;
+.field public ᩷:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 303
-    iput-object p1, p0, Ll/᩹ۨ᩵;->ܰ:Ljava/lang/Object;
-
-    .line 304
-    iput-object p2, p0, Ll/᩹ۨ᩵;->ۙ:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 324
-    instance-of p1, p1, Ll/᩹ۨ᩵;
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ۙ(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+.method public final ۙ(Ll/ۗۨ᩵;)V
     .locals 4
 
-    .line 311
-    :try_start_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    const/4 v0, 0x4
+
+    .line 179
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩷(I)V
+
+    .line 180
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
     move-result v0
 
-    new-array v0, v0, [Ljava/security/cert/X509Certificate;
+    iput v0, p0, Ll/᩹ۨ᩵;->᩷:I
 
-    invoke-interface {p2, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 181
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
-    move-result-object p2
+    move-result v0
 
-    check-cast p2, [Ljava/security/cert/X509Certificate;
+    if-eqz v0, :cond_3
 
-    .line 312
-    iget-object v0, p0, Ll/᩹ۨ᩵;->ۙ:Ljava/lang/reflect/Method;
+    .line 184
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
 
-    iget-object v1, p0, Ll/᩹ۨ᩵;->ܰ:Ljava/lang/Object;
+    .line 185
+    invoke-virtual {p1}, Ll/ۗۨ᩵;->ۙ()I
 
-    const/4 v2, 0x3
+    move-result v0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    .line 186
+    iget v1, p1, Ll/ۗۨ᩵;->ۤ:I
 
-    const/4 v3, 0x0
+    mul-int/lit8 v2, v0, 0xc
 
-    aput-object p2, v2, v3
+    .line 187
+    invoke-virtual {p1, v2}, Ll/ۗۨ᩵;->ۙ(I)V
 
-    const-string p2, "RSA"
+    .line 189
+    iget-object v2, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
 
-    const/4 v3, 0x1
+    if-nez v2, :cond_1
 
-    aput-object p2, v2, v3
+    if-ltz v0, :cond_0
 
-    const/4 p2, 0x2
+    const v2, 0xffff
 
-    aput-object p1, v2, p2
+    if-gt v0, v2, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 192
+    new-array v2, v0, [Ll/ܽۨ᩵;
+
+    iput-object v2, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
+
+    goto :goto_0
+
+    .line 191
+    :cond_0
+    new-instance p1, Ll/᩵ۨ᩵;
+
+    const-string v0, "invalid array conformance"
+
+    .line 58
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 191
+    throw p1
+
+    .line 194
+    :cond_1
+    :goto_0
+    invoke-virtual {p1, v1}, Ll/ۗۨ᩵;->ۤ(I)Ll/ۗۨ᩵;
 
     move-result-object p1
 
-    check-cast p1, Ljava/util/List;
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x0
 
-    return-object p1
+    :goto_1
+    if-ge v1, v0, :cond_3
 
-    :catch_0
-    move-exception p1
+    .line 196
+    iget-object v2, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
 
-    .line 319
-    new-instance p2, Ljava/lang/AssertionError;
+    aget-object v3, v2, v1
 
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    if-nez v3, :cond_2
 
-    throw p2
+    .line 197
+    new-instance v3, Ll/ܽۨ᩵;
 
-    :catch_1
-    move-exception p1
+    .line 24
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    .line 315
-    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
+    .line 197
+    aput-object v3, v2, v1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 199
+    :cond_2
+    aget-object v2, v2, v1
 
-    move-result-object v0
+    invoke-virtual {v2, p1}, Ll/ܽۨ᩵;->ۙ(Ll/ۗۨ᩵;)V
 
-    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+    add-int/lit8 v1, v1, 0x1
 
-    .line 316
-    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    goto :goto_1
 
-    .line 317
-    throw p2
+    :cond_3
+    return-void
+.end method
+
+.method public final ᩷(Ll/ۗۨ᩵;)V
+    .locals 3
+
+    const/4 v0, 0x4
+
+    .line 158
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩷(I)V
+
+    .line 159
+    iget v0, p0, Ll/᩹ۨ᩵;->᩷:I
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    .line 160
+    iget-object v0, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
+
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->ۙ(Ljava/lang/Object;)V
+
+    .line 162
+    iget-object v0, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
+
+    if-eqz v0, :cond_0
+
+    .line 163
+    iget-object p1, p1, Ll/ۗۨ᩵;->᩷:Ll/ۗۨ᩵;
+
+    .line 164
+    iget v0, p0, Ll/᩹ۨ᩵;->᩷:I
+
+    .line 165
+    invoke-virtual {p1, v0}, Ll/ۗۨ᩵;->᩸(I)V
+
+    .line 166
+    iget v1, p1, Ll/ۗۨ᩵;->ۤ:I
+
+    mul-int/lit8 v2, v0, 0xc
+
+    .line 167
+    invoke-virtual {p1, v2}, Ll/ۗۨ᩵;->ۙ(I)V
+
+    .line 169
+    invoke-virtual {p1, v1}, Ll/ۗۨ᩵;->ۤ(I)Ll/ۗۨ᩵;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    .line 171
+    iget-object v2, p0, Ll/᩹ۨ᩵;->ۙ:[Ll/ܽۨ᩵;
+
+    aget-object v2, v2, v1
+
+    invoke-virtual {v2, p1}, Ll/ܽۨ᩵;->᩷(Ll/ۗۨ᩵;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

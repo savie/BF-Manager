@@ -1,98 +1,115 @@
 package l;
 
-import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.view.View;
+import android.view.ViewGroup;
+import bin.mt.plus.R;
 
-/* JADX INFO: renamed from: l.ۘۢᩴ, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.ۘۖ᩷, reason: contains not printable characters */
+/* JADX INFO: compiled from: G64W */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C3862 extends C1518 implements InterfaceC19960 {
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(double d) {
-        AbstractC22686.m();
+public final class C3862 extends AnimatorListenerAdapter implements InterfaceC12261 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public boolean f13175 = true;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final View f13176;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ AbstractC21016 f13177;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final ViewGroup f13178;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public final View f13179;
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionPause(AbstractC0329 abstractC0329) {
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionResume(AbstractC0329 abstractC0329) {
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionStart(AbstractC0329 abstractC0329) {
         throw null;
     }
 
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ void accept(long j) {
-        AbstractC22686.u();
-        throw null;
+    @Override // l.InterfaceC12261
+    public final void onTransitionStart(AbstractC0329 abstractC0329, boolean z) {
     }
 
-    @Override // java.util.function.Consumer
-    /* JADX INFO: renamed from: accept */
-    public final /* bridge */ /* synthetic */ void n(Object obj) {
-        d((Integer) obj);
+    public C3862(AbstractC21016 abstractC21016, ViewGroup viewGroup, View view, View view2) {
+        this.f13177 = abstractC21016;
+        this.f13178 = viewGroup;
+        this.f13176 = view;
+        this.f13179 = view2;
     }
 
-    public final /* synthetic */ Consumer andThen(Consumer consumer) {
-        return C1455.$default$andThen(this, consumer);
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
+    public final void onAnimationPause(Animator animator) {
+        this.f13178.getOverlay().remove(this.f13176);
     }
 
-    public final /* synthetic */ IntConsumer andThen(IntConsumer intConsumer) {
-        return C7100.$default$andThen(this, intConsumer);
-    }
-
-    @Override // l.InterfaceC10974
-    public final /* synthetic */ void d(Integer num) {
-        AbstractC22686.p(this, num);
-    }
-
-    @Override // l.InterfaceC19171
-    public final /* synthetic */ boolean f() {
-        return false;
-    }
-
-    @Override // l.InterfaceC23280
-    public final /* bridge */ /* synthetic */ InterfaceC8616 build() {
-        build();
-        return this;
-    }
-
-    @Override // l.InterfaceC19960, l.InterfaceC23280
-    public final InterfaceC13036 build() {
-        int i = this.b;
-        int[] iArr = this.a;
-        if (i >= iArr.length) {
-            return this;
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
+    public final void onAnimationResume(Animator animator) {
+        View view = this.f13176;
+        if (view.getParent() == null) {
+            this.f13178.getOverlay().add(view);
+        } else {
+            this.f13177.cancel();
         }
-        throw new IllegalStateException(String.format("Current size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(iArr.length)));
     }
 
-    @Override // l.InterfaceC19171
-    public final void c(long j) {
-        int[] iArr = this.a;
-        if (j != iArr.length) {
-            throw new IllegalStateException(String.format("Begin size %d is not equal to fixed size %d", Long.valueOf(j), Integer.valueOf(iArr.length)));
+    @Override // android.animation.Animator.AnimatorListener
+    public final void onAnimationStart(Animator animator, boolean z) {
+        if (z) {
+            View view = this.f13179;
+            View view2 = this.f13176;
+            view.setTag(R.id.MT_Protector, view2);
+            this.f13178.getOverlay().add(view2);
+            this.f13175 = true;
         }
-        this.b = 0;
     }
 
-    @Override // l.InterfaceC19171
-    public final void accept(int i) {
-        int i2 = this.b;
-        int[] iArr = this.a;
-        if (i2 < iArr.length) {
-            this.b = i2 + 1;
-            iArr[i2] = i;
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator) {
+        m12494();
+    }
+
+    @Override // android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator animator, boolean z) {
+        if (z) {
             return;
         }
-        throw new IllegalStateException(String.format("Accept exceeded fixed size of %d", Integer.valueOf(iArr.length)));
+        m12494();
     }
 
-    @Override // l.InterfaceC19171
-    public final void end() {
-        int i = this.b;
-        int[] iArr = this.a;
-        if (i < iArr.length) {
-            throw new IllegalStateException(String.format("End size %d is less than fixed size %d", Integer.valueOf(this.b), Integer.valueOf(iArr.length)));
+    @Override // l.InterfaceC12261
+    public final void onTransitionEnd(AbstractC0329 abstractC0329) {
+        abstractC0329.removeListener(this);
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionCancel(AbstractC0329 abstractC0329) {
+        if (this.f13175) {
+            m12494();
         }
     }
 
-    @Override // l.C1518
-    public final String toString() {
-        int[] iArr = this.a;
-        return String.format("IntFixedNodeBuilder[%d][%s]", Integer.valueOf(iArr.length - this.b), Arrays.toString(iArr));
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    private void m12494() {
+        this.f13179.setTag(R.id.MT_Protector, null);
+        this.f13178.getOverlay().remove(this.f13176);
+        this.f13175 = false;
+    }
+
+    @Override // l.InterfaceC12261
+    public final void onTransitionEnd(AbstractC0329 abstractC0329, boolean z) {
+        onTransitionEnd(abstractC0329);
     }
 }

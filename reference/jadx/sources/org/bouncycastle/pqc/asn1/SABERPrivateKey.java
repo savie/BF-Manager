@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Integer;
 import org.bouncycastle.asn1.ASN1Object;
@@ -44,10 +44,10 @@ public class SABERPrivateKey extends ASN1Object {
         if (iIntValueExact != 0) {
             throw new IllegalArgumentException("unrecognized version");
         }
-        this.z = C15489.m37078(aSN1Sequence, 1);
-        this.s = C15489.m37078(aSN1Sequence, 2);
+        this.z = C20551.m47118(aSN1Sequence, 1);
+        this.s = C20551.m47118(aSN1Sequence, 2);
         this.PublicKey = SABERPublicKey.getInstance(aSN1Sequence.getObjectAt(3));
-        this.hpk = C15489.m37078(aSN1Sequence, 4);
+        this.hpk = C20551.m47118(aSN1Sequence, 4);
     }
 
     public static SABERPrivateKey getInstance(Object obj) {

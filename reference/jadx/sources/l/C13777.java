@@ -1,81 +1,46 @@
 package l;
 
-/* JADX INFO: renamed from: l.ܰۧۤ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 6428 */
-/* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C13777 {
+import java.util.function.Function;
+
+/* JADX INFO: renamed from: l.۬ۢ᩺, reason: contains not printable characters */
+/* JADX INFO: compiled from: X43L */
+/* JADX INFO: loaded from: classes4.dex */
+public class C13777 extends C23475 implements Function {
+    @Override // java.util.function.Function
+    /* JADX INFO: renamed from: andThen */
+    public /* synthetic */ Function mo10608andThen(Function function) {
+        return C24247.$default$andThen(this, function);
+    }
+
+    @Override // java.util.function.Function
+    public /* synthetic */ Function compose(Function function) {
+        return C24247.$default$compose(this, function);
+    }
+
+    @Override // l.AbstractC14040, l.InterfaceC4764
+    /* JADX INFO: renamed from: ۙ */
+    public /* bridge */ /* synthetic */ Object mo1770(C14018 c14018, Object obj) {
+        return mo1770(c14018, obj);
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f45442;
+    public final C14769 m33663(final Object obj, C14769 c14769) {
+        return c14769.m35547(new Function() { // from class: l.ۜۢ᩺
+            @Override // java.util.function.Function
+            /* JADX INFO: renamed from: andThen */
+            public /* synthetic */ Function mo10608andThen(Function function) {
+                return C24247.$default$andThen(this, function);
+            }
 
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f45443;
+            @Override // java.util.function.Function
+            public /* synthetic */ Function compose(Function function) {
+                return C24247.$default$compose(this, function);
+            }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public static final /* synthetic */ int[] f45444;
-
-    static {
-        int[] iArr = new int[EnumC18651.values().length];
-        f45443 = iArr;
-        try {
-            iArr[EnumC18651.f60561.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            f45443[EnumC18651.f60542.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            f45443[EnumC18651.f60538.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            f45443[EnumC18651.f60519.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            f45443[EnumC18651.f60467.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            f45443[EnumC18651.f60464.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            f45443[EnumC18651.f60551.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            f45443[EnumC18651.f60468.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            f45443[EnumC18651.f60553.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            f45443[EnumC18651.f60511.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
-        int[] iArr2 = new int[EnumC6617.values().length];
-        f45444 = iArr2;
-        try {
-            iArr2[EnumC6617.CLASS.ordinal()] = 1;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            f45444[EnumC6617.TYPEVAR.ordinal()] = 2;
-        } catch (NoSuchFieldError unused12) {
-        }
-        int[] iArr3 = new int[EnumC10477.values().length];
-        f45442 = iArr3;
-        try {
-            iArr3[EnumC10477.f35878.ordinal()] = 1;
-        } catch (NoSuchFieldError unused13) {
-        }
-        try {
-            f45442[EnumC10477.f35865.ordinal()] = 2;
-        } catch (NoSuchFieldError unused14) {
-        }
+            @Override // java.util.function.Function
+            public final Object apply(Object obj2) {
+                return (AbstractC22664) ((AbstractC22664) obj2).mo9324(this.f23279, obj);
+            }
+        });
     }
 }

@@ -1,25 +1,20 @@
-.class public abstract Ll/ܳܶ᩵;
+.class public final Ll/ܳܶ᩵;
 .super Ljava/lang/Object;
-.source "H63B"
-
-# interfaces
-.implements Ll/᩻ܶ᩵;
+.source "G6PO"
 
 
-# virtual methods
-.method public ۙ(Ljava/io/BufferedReader;)Ljava/lang/String;
+# instance fields
+.field public ۙ:I
+
+.field public ᩷:I
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 0
 
-    .line 60
-    invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    .line 111
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public ۙ(Ljava/util/LinkedList;)Ljava/util/List;
-    .locals 0
-
-    return-object p1
+    return-void
 .end method

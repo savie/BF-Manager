@@ -1,71 +1,25 @@
-.class public final synthetic Ll/ۤۢᩴ;
+.class public final Ll/ۤۢᩴ;
 .super Ljava/lang/Object;
-.source "N673"
-
-# interfaces
-.implements Ljava/util/function/LongConsumer;
+.source "H14L"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public ۙ:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Ll/ۤۢᩴ;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final accept$j$$util$stream$Node$OfLong$$ExternalSyntheticLambda0(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final accept$j$$util$stream$StreamSpliterators$SliceSpliterator$OfLong$$ExternalSyntheticLambda0(J)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final accept(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final synthetic andThen(Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
+.method public constructor <init>()V
     .locals 1
 
-    iget v0, p0, Ll/ۤۢᩴ;->a:I
+    .line 517
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    .line 518
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 0
-    invoke-static {p0, p1}, Ll/᩸᩻ᩴ;->$default$andThen(Ljava/util/function/LongConsumer;Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object p1
+    iput-object v0, p0, Ll/ۤۢᩴ;->ۙ:Ljava/util/ArrayList;
 
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ll/᩸᩻ᩴ;->$default$andThen(Ljava/util/function/LongConsumer;Ljava/util/function/LongConsumer;)Ljava/util/function/LongConsumer;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

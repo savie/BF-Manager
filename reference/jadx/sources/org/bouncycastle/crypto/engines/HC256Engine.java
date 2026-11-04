@@ -1,6 +1,6 @@
 package org.bouncycastle.crypto.engines;
 
-import l.C0219;
+import l.C14483;
 import org.bouncycastle.crypto.CipherParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.DataLengthException;
@@ -10,7 +10,7 @@ import org.bouncycastle.crypto.constraints.DefaultServiceProperties;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class HC256Engine implements StreamCipher {
     public boolean initialised;
     public byte[] iv;
@@ -140,7 +140,7 @@ public class HC256Engine implements StreamCipher {
             parameters = cipherParameters;
         }
         if (!(parameters instanceof KeyParameter)) {
-            throw new IllegalArgumentException(C0219.m1593("Invalid parameter passed to HC256 init - ", cipherParameters));
+            throw new IllegalArgumentException(C14483.m34973("Invalid parameter passed to HC256 init - ", cipherParameters));
         }
         this.key = ((KeyParameter) parameters).getKey();
         init();

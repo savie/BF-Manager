@@ -1,344 +1,246 @@
-.class public final synthetic Ll/ۢܿᩴ;
+.class public final Ll/ۢܿᩴ;
 .super Ljava/lang/Object;
-.source "N673"
+.source "F99O"
 
 
-# direct methods
-.method public static synthetic compute(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 1
+# instance fields
+.field public volatile ۙ:Ll/ܰܿᩴ;
 
-    instance-of v0, p0, Ll/ۙۛᩴ;
+.field public volatile ۤ:Ll/ܶ۟ᩴ;
 
-    if-eqz v0, :cond_0
+.field public volatile ܳ:Ljava/lang/Error;
 
-    check-cast p0, Ll/ۙۛᩴ;
+.field public volatile ᩴ:Ljava/lang/RuntimeException;
 
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+.field public volatile ᩷:Z
 
-    move-result-object p0
+.field public volatile ᩸:Ljava/io/IOException;
 
-    return-object p0
 
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
+# virtual methods
+.method public final declared-synchronized ۙ()V
+    .locals 2
 
-    if-eqz v0, :cond_1
+    move-object v0, p0
 
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
+    .line 1
+    monitor-enter v0
 
-    invoke-static {p0, p1, p2}, Ll/ۨۧᩴ;->$default$compute(Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    .line 243
+    :try_start_0
+    iput-boolean v1, p0, Ll/ۢܿᩴ;->᩷:Z
 
-    return-object p0
+    .line 244
+    iget-object v1, p0, Ll/ۢܿᩴ;->ۤ:Ll/ܶ۟ᩴ;
 
-    :cond_1
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$compute(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    move-result-object p0
+    .line 245
+    iget-object v1, p0, Ll/ۢܿᩴ;->ۤ:Ll/ܶ۟ᩴ;
 
-    return-object p0
-.end method
+    invoke-virtual {v1}, Ll/ܶ۟ᩴ;->ۙ()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public static synthetic computeIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
-
-    invoke-static {p0, p1, p2}, Ll/ۨۧᩴ;->$default$computeIfAbsent(Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$computeIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic computeIfPresent(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->computeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
-
-    invoke-static {p0, p1, p2}, Ll/ۨۧᩴ;->$default$computeIfPresent(Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$computeIfPresent(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic forEach(Ljava/util/Map;Ljava/util/function/BiConsumer;)V
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1}, Ll/ۙۛᩴ;->forEach(Ljava/util/function/BiConsumer;)V
+    .line 246
+    monitor-exit v0
 
     return-void
 
+    .line 248
     :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
+    :try_start_1
+    iget-object v1, p0, Ll/ۢܿᩴ;->ۙ:Ll/ܰܿᩴ;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
+    .line 249
+    iget-object v1, p0, Ll/ۢܿᩴ;->ۙ:Ll/ܰܿᩴ;
 
-    invoke-static {p0, p1}, Ll/ۨۧᩴ;->$default$forEach(Ljava/util/concurrent/ConcurrentMap;Ljava/util/function/BiConsumer;)V
+    invoke-static {v1}, Ll/᩵֫ܺ;->ۙ(Ljava/lang/AutoCloseable;)V
 
-    return-void
+    const/4 v1, 0x0
 
+    .line 250
+    iput-object v1, p0, Ll/ۢܿᩴ;->ۙ:Ll/ܰܿᩴ;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 252
     :cond_1
-    invoke-static {p0, p1}, Ll/֫ܿᩴ;->$default$forEach(Ljava/util/Map;Ljava/util/function/BiConsumer;)V
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
 .end method
 
-.method public static getOrDefault(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final declared-synchronized ۙ(Ljava/io/IOException;)V
+    .locals 2
 
-    instance-of v0, p0, Ll/ۙۛᩴ;
+    move-object v0, p0
 
-    if-eqz v0, :cond_0
+    .line 1
+    monitor-enter v0
 
-    check-cast p0, Ll/ۙۛᩴ;
+    .line 216
+    :try_start_0
+    iget-boolean v1, p0, Ll/ۢܿᩴ;->᩷:Z
 
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_0
 
-    move-result-object p0
+    .line 217
+    iput-object p1, p0, Ll/ۢܿᩴ;->᩸:Ljava/io/IOException;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
-
+    .line 219
     :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
-
-    .line 88
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    return-object p0
-
-    :cond_1
-    return-object p2
-
-    .line 0
-    :cond_2
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$getOrDefault(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic merge(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2, p3}, Ll/ۙۛᩴ;->merge(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
-
-    invoke-static {p0, p1, p2, p3}, Ll/ۨۧᩴ;->$default$merge(Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-static {p0, p1, p2, p3}, Ll/֫ܿᩴ;->$default$merge(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic remove(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$remove(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2}, Ll/ۙۛᩴ;->replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {p0, p1, p2}, Ll/֫ܿᩴ;->$default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1, p2, p3}, Ll/ۙۛᩴ;->replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    invoke-static {p0, p1, p2, p3}, Ll/֫ܿᩴ;->$default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic replaceAll(Ljava/util/Map;Ljava/util/function/BiFunction;)V
-    .locals 1
-
-    instance-of v0, p0, Ll/ۙۛᩴ;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ll/ۙۛᩴ;
-
-    invoke-interface {p0, p1}, Ll/ۙۛᩴ;->replaceAll(Ljava/util/function/BiFunction;)V
+    monitor-exit v0
 
     return-void
 
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۙ(Ljava/lang/Error;)V
+    .locals 2
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 234
+    :try_start_0
+    iget-boolean v1, p0, Ll/ۢܿᩴ;->᩷:Z
+
+    if-nez v1, :cond_0
+
+    .line 235
+    iput-object p1, p0, Ll/ۢܿᩴ;->ܳ:Ljava/lang/Error;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 237
     :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ConcurrentMap;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Ljava/util/concurrent/ConcurrentMap;
-
-    invoke-static {p0, p1}, Ll/ۨۧᩴ;->$default$replaceAll(Ljava/util/concurrent/ConcurrentMap;Ljava/util/function/BiFunction;)V
+    monitor-exit v0
 
     return-void
 
-    :cond_1
-    invoke-static {p0, p1}, Ll/֫ܿᩴ;->$default$replaceAll(Ljava/util/Map;Ljava/util/function/BiFunction;)V
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۙ(Ljava/lang/RuntimeException;)V
+    .locals 2
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 225
+    :try_start_0
+    iget-boolean v1, p0, Ll/ۢܿᩴ;->᩷:Z
+
+    if-nez v1, :cond_0
+
+    .line 226
+    iput-object p1, p0, Ll/ۢܿᩴ;->ᩴ:Ljava/lang/RuntimeException;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 228
+    :cond_0
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized ۙ(Ll/ܶ۟ᩴ;)V
+    .locals 2
+
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 204
+    :try_start_0
+    iput-object v1, p0, Ll/ۢܿᩴ;->ۙ:Ll/ܰܿᩴ;
+
+    .line 205
+    iget-boolean v1, p0, Ll/ۢܿᩴ;->᩷:Z
+
+    if-eqz v1, :cond_0
+
+    .line 206
+    invoke-virtual {p1}, Ll/ܶ۟ᩴ;->ۙ()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 207
+    monitor-exit v0
+
+    return-void
+
+    .line 209
+    :cond_0
+    :try_start_1
+    iput-object p1, p0, Ll/ۢܿᩴ;->ۤ:Ll/ܶ۟ᩴ;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 210
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method

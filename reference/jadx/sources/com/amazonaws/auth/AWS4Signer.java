@@ -19,11 +19,10 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import l.C0252;
-import l.C12278;
-import l.C1694;
-import l.C22697;
-import l.C3012;
+import l.C12669;
+import l.C25272;
+import l.C3188;
+import l.C8947;
 import org.simpleframework.xml.core.AnnotationHandler;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -34,7 +33,7 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
     public static final long MILLISEC = 1000;
     public static final String TERMINATOR = "aws4_request";
     public static final String TIME_PATTERN = "yyyyMMdd'T'HHmmss'Z'";
-    public static final Log log = LogFactory.m302(AWS4Signer.class);
+    public static final Log log = LogFactory.m296(AWS4Signer.class);
     public boolean doubleUrlEncode;
     public Date overriddenDate;
     public String regionName;
@@ -64,18 +63,18 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
         String strCalculateContentHash = calculateContentHash(request);
         String timeStamp = getTimeStamp(dateFromRequest);
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        defaultRequest.m185("X-Amz-Date", timeStamp);
-        if (defaultRequest.m191().get("x-amz-content-sha256") != null && AnnotationHandler.REQUIRED.equals(defaultRequest.m191().get("x-amz-content-sha256"))) {
-            defaultRequest.m185("x-amz-content-sha256", strCalculateContentHash);
+        defaultRequest.m177("X-Amz-Date", timeStamp);
+        if (defaultRequest.m182().get("x-amz-content-sha256") != null && AnnotationHandler.REQUIRED.equals(defaultRequest.m182().get("x-amz-content-sha256"))) {
+            defaultRequest.m177("x-amz-content-sha256", strCalculateContentHash);
         }
-        String str = aWSCredentialsSanitizeCredentials.mo206() + "/" + scope;
+        String str = aWSCredentialsSanitizeCredentials.mo200() + "/" + scope;
         HeaderSigningResult headerSigningResultComputeSignature = computeSignature(defaultRequest, dateStamp, timeStamp, ALGORITHM, strCalculateContentHash, aWSCredentialsSanitizeCredentials);
-        String strM1693 = C0252.m1693("Credential=", str);
+        String strM56409 = C25272.m56409("Credential=", str);
         String str2 = "SignedHeaders=" + getSignedHeadersString(defaultRequest);
-        String str3 = "Signature=" + BinaryUtils.m750(headerSigningResultComputeSignature.m202());
-        StringBuilder sbM30515 = C12278.m30515("AWS4-HMAC-SHA256 ", strM1693, ", ", str2, ", ");
-        sbM30515.append(str3);
-        defaultRequest.m185("Authorization", sbM30515.toString());
+        String str3 = "Signature=" + BinaryUtils.m744(headerSigningResultComputeSignature.m199());
+        StringBuilder sbM10406 = C3188.m10406("AWS4-HMAC-SHA256 ", strM56409, ", ", str2, ", ");
+        sbM10406.append(str3);
+        defaultRequest.m177("Authorization", sbM10406.toString());
         processRequestPayload(defaultRequest, headerSigningResultComputeSignature);
     }
 
@@ -91,17 +90,17 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
 
     @Override // com.amazonaws.auth.AbstractAWSSigner
     public void addSessionCredentials(Request request, AWSSessionCredentials aWSSessionCredentials) {
-        ((DefaultRequest) request).m185("x-amz-security-token", aWSSessionCredentials.mo209());
+        ((DefaultRequest) request).m177("x-amz-security-token", aWSSessionCredentials.mo203());
     }
 
     public String extractRegionName(URI uri) {
         String str = this.regionName;
-        return str != null ? str : AwsHostNameUtils.m739(uri.getHost(), this.serviceName);
+        return str != null ? str : AwsHostNameUtils.m733(uri.getHost(), this.serviceName);
     }
 
     public String extractServiceName(URI uri) {
         String str = this.serviceName;
-        return str != null ? str : AwsHostNameUtils.m740(uri);
+        return str != null ? str : AwsHostNameUtils.m734(uri);
     }
 
     public void overrideDate(Date date) {
@@ -111,13 +110,13 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
     public String getCanonicalizedHeaderString(Request request) {
         ArrayList<String> arrayList = new ArrayList();
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        arrayList.addAll(defaultRequest.m191().keySet());
+        arrayList.addAll(defaultRequest.m182().keySet());
         Collections.sort(arrayList, String.CASE_INSENSITIVE_ORDER);
         StringBuilder sb = new StringBuilder();
         for (String str : arrayList) {
             if (needsSign(str)) {
-                String strReplaceAll = StringUtils.m789(str).replaceAll("\\s+", " ");
-                String str2 = (String) defaultRequest.m191().get(str);
+                String strReplaceAll = StringUtils.m783(str).replaceAll("\\s+", " ");
+                String str2 = (String) defaultRequest.m182().get(str);
                 sb.append(strReplaceAll);
                 sb.append(":");
                 if (str2 != null) {
@@ -131,7 +130,7 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
 
     public String getSignedHeadersString(Request request) {
         ArrayList<String> arrayList = new ArrayList();
-        arrayList.addAll(((DefaultRequest) request).m191().keySet());
+        arrayList.addAll(((DefaultRequest) request).m182().keySet());
         Collections.sort(arrayList, String.CASE_INSENSITIVE_ORDER);
         StringBuilder sb = new StringBuilder();
         for (String str : arrayList) {
@@ -139,7 +138,7 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
                 if (sb.length() > 0) {
                     sb.append(l.b);
                 }
-                sb.append(StringUtils.m789(str));
+                sb.append(StringUtils.m783(str));
             }
         }
         return sb.toString();
@@ -148,35 +147,35 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
     public String getCanonicalRequest(Request request, String str) {
         request.getClass();
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        String strM774 = HttpUtils.m774(defaultRequest.m193().getPath(), defaultRequest.m177(), false);
+        String strM768 = HttpUtils.m768(defaultRequest.m187().getPath(), defaultRequest.m184(), false);
         StringBuilder sb = new StringBuilder();
-        sb.append(defaultRequest.m178().toString());
+        sb.append(defaultRequest.m189().toString());
         sb.append("\n");
-        sb.append(getCanonicalizedResourcePath(strM774, this.doubleUrlEncode));
+        sb.append(getCanonicalizedResourcePath(strM768, this.doubleUrlEncode));
         sb.append("\n");
         sb.append(getCanonicalizedQueryString(request));
         sb.append("\n");
         sb.append(getCanonicalizedHeaderString(request));
         sb.append("\n");
-        String strM5622 = C1694.m5622(sb, getSignedHeadersString(request), "\n", str);
-        log.mo298("AWS4 Canonical Request: '\"" + strM5622 + "\"");
-        return strM5622;
+        String strM31438 = C12669.m31438(sb, getSignedHeadersString(request), "\n", str);
+        log.mo291("AWS4 Canonical Request: '\"" + strM31438 + "\"");
+        return strM31438;
     }
 
     public String getStringToSign(String str, String str2, String str3, String str4) {
-        String str5 = str + "\n" + str2 + "\n" + str3 + "\n" + BinaryUtils.m750(hash(str4));
-        log.mo298("AWS4 String to Sign: '\"" + str5 + "\"");
+        String str5 = str + "\n" + str2 + "\n" + str3 + "\n" + BinaryUtils.m744(hash(str4));
+        log.mo291("AWS4 String to Sign: '\"" + str5 + "\"");
         return str5;
     }
 
     public final HeaderSigningResult computeSignature(Request request, String str, String str2, String str3, String str4, AWSCredentials aWSCredentials) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        String strExtractRegionName = extractRegionName(defaultRequest.m193());
-        String strExtractServiceName = extractServiceName(defaultRequest.m193());
+        String strExtractRegionName = extractRegionName(defaultRequest.m187());
+        String strExtractServiceName = extractServiceName(defaultRequest.m187());
         String str5 = str + "/" + strExtractRegionName + "/" + strExtractServiceName + "/aws4_request";
         String stringToSign = getStringToSign(str3, str2, str5, getCanonicalRequest(defaultRequest, str4));
-        String str6 = "AWS4" + aWSCredentials.mo207();
-        Charset charset = StringUtils.f844;
+        String str6 = "AWS4" + aWSCredentials.mo201();
+        Charset charset = StringUtils.f834;
         byte[] bytes = str6.getBytes(charset);
         SigningAlgorithm signingAlgorithm = SigningAlgorithm.HmacSHA256;
         byte[] bArrSign = sign(TERMINATOR, sign(strExtractServiceName, sign(strExtractRegionName, sign(str, bytes, signingAlgorithm), signingAlgorithm), signingAlgorithm), signingAlgorithm);
@@ -184,11 +183,11 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
     }
 
     public final String getTimeStamp(long j) {
-        return DateUtils.m767(TIME_PATTERN, new Date(j));
+        return DateUtils.m761(TIME_PATTERN, new Date(j));
     }
 
     public final String getDateStamp(long j) {
-        return DateUtils.m767(DATE_PATTERN, new Date(j));
+        return DateUtils.m761(DATE_PATTERN, new Date(j));
     }
 
     public final long getDateFromRequest(Request request) {
@@ -202,27 +201,27 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
 
     public void addHostHeader(Request request) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        String host = defaultRequest.m193().getHost();
-        if (HttpUtils.m776(defaultRequest.m193())) {
-            StringBuilder sbM8976 = C3012.m8976(host, ":");
-            sbM8976.append(defaultRequest.m193().getPort());
-            host = sbM8976.toString();
+        String host = defaultRequest.m187().getHost();
+        if (HttpUtils.m770(defaultRequest.m187())) {
+            StringBuilder sbM10405 = C3188.m10405(host, ":");
+            sbM10405.append(defaultRequest.m187().getPort());
+            host = sbM10405.toString();
         }
-        defaultRequest.m185("Host", host);
+        defaultRequest.m177("Host", host);
     }
 
     public String getScope(Request request, String str) {
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        return str + "/" + extractRegionName(defaultRequest.m193()) + "/" + extractServiceName(defaultRequest.m193()) + "/aws4_request";
+        return str + "/" + extractRegionName(defaultRequest.m187()) + "/" + extractServiceName(defaultRequest.m187()) + "/aws4_request";
     }
 
     public String calculateContentHash(Request request) {
         InputStream binaryRequestPayloadStream = getBinaryRequestPayloadStream(request);
         binaryRequestPayloadStream.mark(-1);
-        String strM750 = BinaryUtils.m750(hash(binaryRequestPayloadStream));
+        String strM744 = BinaryUtils.m744(hash(binaryRequestPayloadStream));
         try {
             binaryRequestPayloadStream.reset();
-            return strM750;
+            return strM744;
         } catch (IOException e) {
             throw new AmazonClientException("Unable to reset stream after calculating AWS4 signature", e);
         }
@@ -230,46 +229,46 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
 
     public class HeaderSigningResult {
 
-        /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-        public final byte[] f120;
-
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final String f121;
+        public final String f110;
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final String f122;
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final String f111;
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final byte[] f123;
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final byte[] f112;
+
+        /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+        public final byte[] f113;
 
         public HeaderSigningResult(String str, String str2, byte[] bArr, byte[] bArr2) {
-            this.f121 = str;
-            this.f122 = str2;
-            this.f123 = bArr;
-            this.f120 = bArr2;
+            this.f110 = str;
+            this.f111 = str2;
+            this.f112 = bArr;
+            this.f113 = bArr2;
         }
 
         /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-        public final String m203() {
-            return this.f121;
+        public final String m196() {
+            return this.f110;
         }
 
-        /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-        public final String m204() {
-            return this.f122;
+        /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+        public final String m197() {
+            return this.f111;
         }
 
-        /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-        public final byte[] m205() {
-            byte[] bArr = this.f123;
+        /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+        public final byte[] m198() {
+            byte[] bArr = this.f112;
             byte[] bArr2 = new byte[bArr.length];
             System.arraycopy(bArr, 0, bArr2, 0, bArr.length);
             return bArr2;
         }
 
-        /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-        public final byte[] m202() {
-            byte[] bArr = this.f120;
+        /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+        public final byte[] m199() {
+            byte[] bArr = this.f113;
             byte[] bArr2 = new byte[bArr.length];
             System.arraycopy(bArr, 0, bArr2, 0, bArr.length);
             return bArr2;
@@ -279,24 +278,24 @@ public class AWS4Signer extends AbstractAWSSigner implements ServiceAwareSigner,
     public void presignRequest(Request request, AWSCredentials aWSCredentials, Date date) {
         long time = date != null ? (date.getTime() - System.currentTimeMillis()) / 1000 : 604800L;
         if (time > MAX_EXPIRATION_TIME_IN_SECONDS) {
-            throw new AmazonClientException(C22697.m50267(new StringBuilder("Requests that are pre-signed by SigV4 algorithm are valid for at most 7 days. The expiration date set on the current request ["), getTimeStamp(date.getTime()), "] has exceeded this limit."));
+            throw new AmazonClientException(C8947.m23910(new StringBuilder("Requests that are pre-signed by SigV4 algorithm are valid for at most 7 days. The expiration date set on the current request ["), getTimeStamp(date.getTime()), "] has exceeded this limit."));
         }
         addHostHeader(request);
         AWSCredentials aWSCredentialsSanitizeCredentials = sanitizeCredentials(aWSCredentials);
         if (aWSCredentialsSanitizeCredentials instanceof AWSSessionCredentials) {
-            ((DefaultRequest) request).m194("X-Amz-Security-Token", ((AWSSessionCredentials) aWSCredentialsSanitizeCredentials).mo209());
+            ((DefaultRequest) request).m188("X-Amz-Security-Token", ((AWSSessionCredentials) aWSCredentialsSanitizeCredentials).mo203());
         }
         long dateFromRequest = getDateFromRequest(request);
         String dateStamp = getDateStamp(dateFromRequest);
-        String str = aWSCredentialsSanitizeCredentials.mo206() + "/" + getScope(request, dateStamp);
+        String str = aWSCredentialsSanitizeCredentials.mo200() + "/" + getScope(request, dateStamp);
         String timeStamp = getTimeStamp(dateFromRequest);
         DefaultRequest defaultRequest = (DefaultRequest) request;
-        defaultRequest.m194("X-Amz-Algorithm", ALGORITHM);
-        defaultRequest.m194("X-Amz-Date", timeStamp);
-        defaultRequest.m194("X-Amz-SignedHeaders", getSignedHeadersString(defaultRequest));
-        defaultRequest.m194("X-Amz-Expires", Long.toString(time));
-        defaultRequest.m194("X-Amz-Credential", str);
-        defaultRequest.m194("X-Amz-Signature", BinaryUtils.m750(computeSignature(defaultRequest, dateStamp, timeStamp, ALGORITHM, calculateContentHashPresign(defaultRequest), aWSCredentialsSanitizeCredentials).m202()));
+        defaultRequest.m188("X-Amz-Algorithm", ALGORITHM);
+        defaultRequest.m188("X-Amz-Date", timeStamp);
+        defaultRequest.m188("X-Amz-SignedHeaders", getSignedHeadersString(defaultRequest));
+        defaultRequest.m188("X-Amz-Expires", Long.toString(time));
+        defaultRequest.m188("X-Amz-Credential", str);
+        defaultRequest.m188("X-Amz-Signature", BinaryUtils.m744(computeSignature(defaultRequest, dateStamp, timeStamp, ALGORITHM, calculateContentHashPresign(defaultRequest), aWSCredentialsSanitizeCredentials).m199()));
     }
 
     public String calculateContentHashPresign(Request request) {

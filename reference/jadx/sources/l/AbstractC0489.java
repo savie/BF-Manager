@@ -1,14 +1,60 @@
 package l;
 
-/* JADX INFO: renamed from: l.֡ܶۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 86ZM */
+/* JADX INFO: renamed from: l.֡ܳۗ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class AbstractC0489 {
+public abstract /* synthetic */ class AbstractC0489 {
+    public static final /* synthetic */ int[] a;
+    public static final /* synthetic */ int[] b;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C3399 f2168;
-
-    public AbstractC0489(C3399 c3399) {
-        this.f2168 = c3399;
+    static {
+        int[] iArr = new int[EnumC10183.values().length];
+        b = iArr;
+        try {
+            iArr[EnumC10183.MONTHS.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            b[EnumC10183.YEARS.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            b[EnumC10183.DECADES.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            b[EnumC10183.CENTURIES.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            b[EnumC10183.MILLENNIA.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            b[EnumC10183.ERAS.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        int[] iArr2 = new int[EnumC8692.values().length];
+        a = iArr2;
+        try {
+            iArr2[EnumC8692.MONTH_OF_YEAR.ordinal()] = 1;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            a[EnumC8692.PROLEPTIC_MONTH.ordinal()] = 2;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            a[EnumC8692.YEAR_OF_ERA.ordinal()] = 3;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            a[EnumC8692.YEAR.ordinal()] = 4;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            a[EnumC8692.ERA.ordinal()] = 5;
+        } catch (NoSuchFieldError unused11) {
+        }
     }
 }

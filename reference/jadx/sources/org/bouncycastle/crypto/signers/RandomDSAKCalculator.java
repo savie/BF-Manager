@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import org.bouncycastle.util.BigIntegers;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class RandomDSAKCalculator implements DSAKCalculator {
     public static final BigInteger ZERO = BigInteger.valueOf(0);
     public BigInteger q;

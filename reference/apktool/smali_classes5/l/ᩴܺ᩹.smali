@@ -1,200 +1,137 @@
 .class public final Ll/ᩴܺ᩹;
-.super Ll/ۤ᩷᩹;
-.source "94PF"
+.super Ll/᩺᩸᩹;
+.source "5907"
 
 
 # instance fields
-.field public final ֡:Ll/ܳܶۘ;
-
-.field public final ۛ:Ljava/lang/String;
-
-.field public final ۫:Ljava/lang/String;
-
-.field public final ܽ:Ljava/lang/String;
-
-.field public final synthetic ܿ:Ll/᩵ܺ᩹;
+.field public final ۙ:Ll/᩺᩻᩹;
 
 
 # direct methods
-.method public constructor <init>(Ll/᩵ܺ᩹;Lbin/mt/plus/Main;Ll/᩷۠ۚ;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 107
-    iput-object p1, p0, Ll/ᩴܺ᩹;->ܿ:Ll/᩵ܺ᩹;
+    .line 79
+    new-instance v0, Ll/᩺᩻᩹;
 
-    .line 12
-    invoke-direct {p0, p2}, Ll/ܳ۟᩹;-><init>(Lbin/mt/plus/Main;)V
+    invoke-direct {v0}, Ll/᩺᩻᩹;-><init>()V
 
-    .line 105
-    sget-object p1, Ll/֡᩸᩹;->᩵:Ll/֡᩸᩹;
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 252
-    iget-object p1, p1, Ll/֡᩸᩹;->ܰ:Ll/ܳܶۘ;
-
-    .line 105
-    iput-object p1, p0, Ll/ᩴܺ᩹;->֡:Ll/ܳܶۘ;
-
-    .line 109
-    invoke-virtual {p3}, Ll/᩷۠ۚ;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ᩴܺ᩹;->ۛ:Ljava/lang/String;
-
-    .line 110
-    invoke-virtual {p3}, Ll/᩷۠ۚ;->ܶۙ()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ᩴܺ᩹;->ܽ:Ljava/lang/String;
-
-    const-string p2, "Android/data/"
-
-    .line 111
-    invoke-virtual {p1, p2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result p2
-
-    const/4 p3, -0x1
-
-    if-ne p2, p3, :cond_0
-
-    .line 113
-    iput-object p1, p0, Ll/ᩴܺ᩹;->۫:Ljava/lang/String;
-
-    return-void
-
-    .line 115
-    :cond_0
-    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ll/ᩴܺ᩹;->۫:Ljava/lang/String;
+    .line 85
+    iput-object v0, p0, Ll/ᩴܺ᩹;->ۙ:Ll/᩺᩻᩹;
 
     return-void
 .end method
 
-.method public static bridge synthetic ۖ(Ll/ᩴܺ᩹;)Ljava/lang/String;
-    .locals 0
+.method public static ۙ(Ll/᩸ۘ᩻;)Ll/ᩴܺ᩹;
+    .locals 1
 
-    .line 0
-    iget-object p0, p0, Ll/ᩴܺ᩹;->ۛ:Ljava/lang/String;
+    .line 70
+    new-instance v0, Ll/ᩴܺ᩹;
 
-    return-object p0
-.end method
+    invoke-direct {v0}, Ll/ᩴܺ᩹;-><init>()V
 
-.method public static bridge synthetic ۙ(Ll/ᩴܺ᩹;)Ll/ܳܶۘ;
-    .locals 0
+    .line 71
+    invoke-virtual {p0, v0}, Ll/᩸ۘ᩻;->ۙ(Ll/ᩴܺ᩹;)V
 
-    .line 0
-    iget-object p0, p0, Ll/ᩴܺ᩹;->֡:Ll/ܳܶۘ;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ۨ(Ll/ᩴܺ᩹;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ᩴܺ᩹;->۫:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic ܰ(Ll/ᩴܺ᩹;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Ll/ᩴܺ᩹;->ܽ:Ljava/lang/String;
-
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final ۙ(Landroid/widget/TextView;)V
+    .locals 0
 
-    .line 125
-    iget-object p1, p0, Ll/ᩴܺ᩹;->ܿ:Ll/᩵ܺ᩹;
+    .line 192
+    invoke-static {p1}, Ll/֨᩻᩹;->᩷(Landroid/widget/TextView;)V
 
-    iget-object v0, p1, Ll/ۛ᩷᩹;->᩶:Ll/۫᩷᩹;
-
-    invoke-virtual {v0}, Ll/۫᩷᩹;->ۨ()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Ll/ۤ᩷᩹;->᩶:Ll/᩺ۧ᩺;
-
-    invoke-virtual {v0}, Ll/᩺ۧ᩺;->ۨ()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    .line 127
-    iget-object v1, p0, Ll/ᩴܺ᩹;->ܽ:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Ll/ۚ᩵ۚ;->ۙ(Ljava/lang/String;[Ljava/lang/String;)Ll/᩷۠ۚ;
-
-    move-result-object v0
-
-    .line 128
-    invoke-virtual {v0}, Ll/᩷۠ۚ;->ۧ()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 129
-    invoke-virtual {v0}, Ll/᩷۠ۚ;->ܶۙ()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget v0, Ll/ۚ᩻ۘ;->᩻ܰ:I
-
-    .line 1693
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Ll/ۚ᩻ۘ;
-
-    iget-object v2, p0, Ll/ܳ۟᩹;->ܺ:Lbin/mt/plus/Main;
-
-    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "projectPath"
-
-    .line 1694
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1695
-    invoke-virtual {v2, v0}, Lbin/mt/plus/Main;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-
-    .line 131
-    :cond_1
-    invoke-virtual {p1}, Ll/᩵ܺ᩹;->ۚ()V
-
-    :cond_2
-    :goto_0
     return-void
 .end method
 
-.method public final ܰ()I
+.method public final ۙ(Landroid/widget/TextView;Landroid/text/SpannableStringBuilder;)V
+    .locals 0
+
+    .line 187
+    invoke-static {p1}, Ll/֨᩻᩹;->ۤ(Landroid/widget/TextView;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/۠᩸᩹;)V
+    .locals 2
+
+    .line 182
+    new-instance v0, Ll/᩸ܺ᩹;
+
+    .line 10
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 182
+    const-class v1, Ll/֨ܿۨ;
+
+    invoke-interface {p1, v1, v0}, Ll/۠᩸᩹;->ۙ(Ljava/lang/Class;Ll/ܶᩴ᩹;)Ll/۠᩸᩹;
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/۫ܺ᩹;)V
     .locals 1
 
-    const/4 v0, 0x5
+    .line 109
+    iget-object v0, p0, Ll/ᩴܺ᩹;->ۙ:Ll/᩺᩻᩹;
 
-    return v0
+    invoke-virtual {v0, p1}, Ll/᩺᩻᩹;->ۙ(Ll/۫ܺ᩹;)V
+
+    return-void
+.end method
+
+.method public final ۙ(Ll/ᩳ᩸᩹;)V
+    .locals 2
+
+    .line 114
+    iget-object v0, p0, Ll/ᩴܺ᩹;->ۙ:Ll/᩺᩻᩹;
+
+    iget-boolean v1, v0, Ll/᩺᩻᩹;->ۤ:Z
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x1
+
+    .line 104
+    iput-boolean v1, v0, Ll/᩺᩻᩹;->ۤ:Z
+
+    .line 106
+    iget-object v1, v0, Ll/᩺᩻᩹;->᩷:Ljava/util/concurrent/ExecutorService;
+
+    if-nez v1, :cond_0
+
+    .line 107
+    invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ll/᩺᩻᩹;->᩷:Ljava/util/concurrent/ExecutorService;
+
+    .line 110
+    :cond_0
+    new-instance v1, Ll/᩶᩻᩹;
+
+    invoke-direct {v1, v0}, Ll/᩶᩻᩹;-><init>(Ll/᩺᩻᩹;)V
+
+    .line 177
+    invoke-virtual {p1, v1}, Ll/ᩳ᩸᩹;->ۙ(Ll/ۛ᩻᩹;)V
+
+    return-void
+
+    .line 115
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "ImagesPlugin has already been configured and cannot be modified any further"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

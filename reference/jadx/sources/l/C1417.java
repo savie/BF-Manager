@@ -1,41 +1,42 @@
 package l;
 
-import com.google.android.material.motion.MotionUtils;
+import android.view.ViewGroup;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
-/* JADX INFO: renamed from: l.֨᩹᩹, reason: contains not printable characters */
-/* JADX INFO: compiled from: 27BS */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C1417 {
+/* JADX INFO: renamed from: l.֨᩶ۧ, reason: contains not printable characters */
+/* JADX INFO: compiled from: K1PX */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C1417 extends AbstractC12964 {
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public long f5856;
+    public ArrayList f5004 = new ArrayList();
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final List f5857 = C11445.m28558();
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ ActivityC19974 f5005;
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4956() {
-        Iterator it = new ArrayList(this.f5857).iterator();
-        while (it.hasNext()) {
-            ((RunnableC12002) it.next()).m29893();
-        }
+    @Override // l.AbstractC12964
+    public final void onBindViewHolder(AbstractC11800 abstractC11800, int i) {
+        ViewOnClickListenerC9619 viewOnClickListenerC9619 = (ViewOnClickListenerC9619) abstractC11800;
+        C21554 c21554 = (C21554) this.f5004.get(i);
+        viewOnClickListenerC9619.f31111 = c21554;
+        viewOnClickListenerC9619.f31112.setImageDrawable(c21554.f68837);
+        c21554.f68840 = true;
+        viewOnClickListenerC9619.f31114.setText(c21554.f68836);
+        viewOnClickListenerC9619.f31110.setText(c21554.f68838);
+        viewOnClickListenerC9619.f31109.setText(c21554.f68841);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m4957(RunnableC12002 runnableC12002) {
-        this.f5857.remove(runnableC12002);
+    public C1417(ActivityC19974 activityC19974) {
+        this.f5005 = activityC19974;
     }
 
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final void m4958(RunnableC12002 runnableC12002) {
-        this.f5856++;
-        Thread thread = new Thread(runnableC12002);
-        thread.setDaemon(true);
-        thread.setName("NanoHttpd Request Processor (#" + this.f5856 + MotionUtils.EASING_TYPE_FORMAT_END);
-        this.f5857.add(runnableC12002);
-        thread.start();
+    @Override // l.AbstractC12964
+    public final AbstractC11800 onCreateViewHolder(ViewGroup viewGroup, int i) {
+        return new ViewOnClickListenerC9619(this.f5005, viewGroup);
+    }
+
+    @Override // l.AbstractC12964
+    public final int getItemCount() {
+        return this.f5004.size();
     }
 }

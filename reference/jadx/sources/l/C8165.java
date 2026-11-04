@@ -1,25 +1,23 @@
 package l;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.content.Context;
+import android.content.Intent;
 
-/* JADX INFO: renamed from: l.۠۫֨, reason: contains not printable characters */
-/* JADX INFO: compiled from: R77X */
-/* JADX INFO: loaded from: classes3.dex */
-public final class C8165 {
+/* JADX INFO: renamed from: l.۟᩸, reason: contains not printable characters */
+/* JADX INFO: compiled from: OB8N */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C8165 extends AbstractC18606 {
+    @Override // l.AbstractC18606
+    /* JADX INFO: renamed from: ۙ */
+    public final Intent mo3028(Context context, Object obj) {
+        Intent intent = (Intent) obj;
+        C15243.m36590(intent, "input");
+        return intent;
+    }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final HashMap f28511;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f28512;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final ArrayList f28513;
-
-    public C8165(HashMap map, ArrayList arrayList, ArrayList arrayList2) {
-        this.f28511 = map;
-        this.f28513 = arrayList;
-        this.f28512 = arrayList2;
+    @Override // l.AbstractC18606
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo3029(Intent intent, int i) {
+        return new C11893(intent, i);
     }
 }

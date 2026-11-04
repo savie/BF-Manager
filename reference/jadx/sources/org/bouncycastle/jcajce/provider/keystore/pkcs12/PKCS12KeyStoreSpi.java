@@ -43,10 +43,10 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
-import l.C0561;
-import l.C16523;
-import l.C17214;
-import l.C22979;
+import l.C14442;
+import l.C20196;
+import l.C3769;
+import l.C4681;
 import org.bouncycastle.asn1.ASN1BMPString;
 import org.bouncycastle.asn1.ASN1BMPString$$ExternalSyntheticOutline0;
 import org.bouncycastle.asn1.ASN1Encodable;
@@ -130,7 +130,7 @@ import org.bouncycastle.util.Properties;
 import org.bouncycastle.util.Strings;
 import org.bouncycastle.util.encoders.Hex;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifiers, X509ObjectIdentifiers, BCKeyStore {
     public static final int CERTIFICATE = 1;
     public static final int KEY = 2;
@@ -254,7 +254,7 @@ public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifi
             map.put(NTTObjectIdentifiers.id_camellia192_cbc, Integers.valueOf(192));
             map.put(NTTObjectIdentifiers.id_camellia256_cbc, Integers.valueOf(256));
             map.put(CryptoProObjectIdentifiers.gostR28147_gcfb, Integers.valueOf(256));
-            this.KEY_SIZES = C0561.unmodifiableMap(map);
+            this.KEY_SIZES = C4681.unmodifiableMap(map);
         }
 
         public int getKeySize(AlgorithmIdentifier algorithmIdentifier) {
@@ -1125,13 +1125,13 @@ public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifi
         if (PKCSObjectIdentifiers.id_hmacWithSHA512.equals((ASN1Primitive) aSN1ObjectIdentifier)) {
             return new SHA512Digest();
         }
-        throw new IllegalArgumentException(C22979.m50820("unknown prf id ", aSN1ObjectIdentifier));
+        throw new IllegalArgumentException(C20196.m46452("unknown prf id ", aSN1ObjectIdentifier));
     }
 
     @Override // java.security.KeyStoreSpi
     public void engineSetCertificateEntry(String str, Certificate certificate) throws KeyStoreException {
         if (this.keys.get(str) != null) {
-            throw new KeyStoreException(C16523.m38890("There is a key entry with the name ", str, "."));
+            throw new KeyStoreException(C14442.m34865("There is a key entry with the name ", str, "."));
         }
         this.certs.put(str, certificate);
         this.chainCerts.put(new CertId(certificate.getPublicKey()), certificate);
@@ -1159,9 +1159,9 @@ public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifi
         if (bigIntegerAsBigInteger == null || BigIntegers.intValueExact(bigIntegerAsBigInteger) >= iIntValueExact) {
             return iIntValueExact;
         }
-        StringBuilder sbM40153 = C17214.m40153(iIntValueExact, "iteration count ", " greater than ");
-        sbM40153.append(BigIntegers.intValueExact(bigIntegerAsBigInteger));
-        throw new IllegalStateException(sbM40153.toString());
+        StringBuilder sbM12235 = C3769.m12235(iIntValueExact, "iteration count ", " greater than ");
+        sbM12235.append(BigIntegers.intValueExact(bigIntegerAsBigInteger));
+        throw new IllegalStateException(sbM12235.toString());
     }
 
     public byte[] cryptData(boolean z, AlgorithmIdentifier algorithmIdentifier, char[] cArr, boolean z2, byte[] bArr) throws IOException {
@@ -1169,7 +1169,7 @@ public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifi
         int i = z ? 1 : 2;
         if (!algorithm.on(PKCSObjectIdentifiers.pkcs_12PbeIds)) {
             if (!algorithm.equals((ASN1Primitive) PKCSObjectIdentifiers.id_PBES2)) {
-                throw new IOException(C22979.m50820("unknown PBE algorithm: ", algorithm));
+                throw new IOException(C20196.m46452("unknown PBE algorithm: ", algorithm));
             }
             try {
                 return createCipher(i, cArr, algorithmIdentifier).doFinal(bArr);
@@ -1207,7 +1207,7 @@ public class PKCS12KeyStoreSpi extends KeyStoreSpi implements PKCSObjectIdentifi
                 cipherCreateCipher.init(4, new PKCS12Key(cArr, z), pBEParameterSpec);
             } else {
                 if (!algorithm.equals((ASN1Primitive) PKCSObjectIdentifiers.id_PBES2)) {
-                    throw new IOException(C22979.m50820("exception unwrapping private key - cannot recognise: ", algorithm));
+                    throw new IOException(C20196.m46452("exception unwrapping private key - cannot recognise: ", algorithm));
                 }
                 cipherCreateCipher = createCipher(4, cArr, algorithmIdentifier);
             }

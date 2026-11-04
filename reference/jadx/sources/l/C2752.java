@@ -1,34 +1,14 @@
 package l;
 
-/* JADX INFO: renamed from: l.ۖ᩶ۜ, reason: contains not printable characters */
-/* JADX INFO: compiled from: 01T6 */
+import java.util.Comparator;
+import java.util.Map;
+
+/* JADX INFO: renamed from: l.ۖܶۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: L5VZ */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C2752 {
-
-    /* JADX INFO: renamed from: ֨, reason: not valid java name and contains not printable characters */
-    public boolean f10555;
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public int f10556;
-
-    /* JADX INFO: renamed from: ۘ, reason: not valid java name and contains not printable characters */
-    public boolean f10557 = true;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int f10558;
-
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public int f10559;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public int f10560;
-
-    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
-    public boolean f10561;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f10562;
-
-    /* JADX INFO: renamed from: ᩹, reason: not valid java name and contains not printable characters */
-    public int f10563;
+public final class C2752 implements Comparator {
+    @Override // java.util.Comparator
+    public final int compare(Object obj, Object obj2) {
+        return ((Comparable) ((Map.Entry) obj).getKey()).compareTo(((Map.Entry) obj2).getKey());
+    }
 }

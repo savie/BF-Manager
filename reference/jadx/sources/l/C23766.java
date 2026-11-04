@@ -1,27 +1,54 @@
 package l;
 
-/* JADX INFO: renamed from: l.᩻ܳ᩸, reason: contains not printable characters */
-/* JADX INFO: compiled from: F9GV */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C23766 extends C11771 {
-    public C23766() {
+import android.os.Bundle;
+
+/* JADX INFO: renamed from: l.᩹᩵ۙ, reason: contains not printable characters */
+/* JADX INFO: compiled from: M8N6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23766 implements InterfaceC17798 {
+
+    /* JADX INFO: renamed from: ܳ, reason: not valid java name and contains not printable characters */
+    public static final String f77002;
+
+    /* JADX INFO: renamed from: ᩴ, reason: not valid java name and contains not printable characters */
+    public static final String f77003;
+
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final String f77004;
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int f77005;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public final int f77006;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f77007;
+
+    static {
+        String str = C7116.f23455;
+        f77003 = Integer.toString(0, 36);
+        f77004 = Integer.toString(1, 36);
+        f77002 = Integer.toString(2, 36);
     }
 
-    public C23766(EnumC20508 enumC20508, long j) {
-        super(4, enumC20508, EnumC2162.SMB2_LOGOFF, j, 0L);
+    public C23766(int i, int i2, int i3) {
+        this.f77007 = i;
+        this.f77005 = i2;
+        this.f77006 = i3;
     }
 
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ۖ */
-    public final void mo3384(C19240 c19240) {
-        c19240.m27396(this.f39515);
-        c19240.m44194(2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final Bundle m53048() {
+        Bundle bundle = new Bundle();
+        bundle.putInt(f77003, this.f77007);
+        bundle.putInt(f77004, this.f77005);
+        bundle.putInt(f77002, this.f77006);
+        return bundle;
     }
 
-    @Override // l.C11771
-    /* JADX INFO: renamed from: ܰ */
-    public final void mo2356(C19240 c19240) throws C17271 {
-        c19240.m27375();
-        c19240.m27389(2);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static C23766 m53047(Bundle bundle) {
+        return new C23766(bundle.getInt(f77003), bundle.getInt(f77004), bundle.getInt(f77002));
     }
 }

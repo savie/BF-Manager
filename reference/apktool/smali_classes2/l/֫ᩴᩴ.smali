@@ -1,83 +1,38 @@
-.class public final Ll/֫ᩴᩴ;
-.super Ll/᩹۠ᩴ;
-.source "H1MW"
+.class public final synthetic Ll/֫ᩴᩴ;
+.super Ljava/lang/Object;
+.source "K7TM"
 
 # interfaces
-.implements Ll/ۛ᩵ᩴ;
-.implements Ll/ۛܿᩴ;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
-.field public ۛ:Ll/ۖ۠ᩴ;
-
-.field public final synthetic ۧ:Ll/ۜ۠ᩴ;
+.field public final synthetic ܰ:Ll/ܽᩴᩴ;
 
 
 # direct methods
-.method public constructor <init>(Ll/ۜ۠ᩴ;)V
+.method public synthetic constructor <init>(Ll/ܽᩴᩴ;)V
     .locals 0
 
-    .line 826
-    iput-object p1, p0, Ll/֫ᩴᩴ;->ۧ:Ll/ۜ۠ᩴ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ll/᩹۠ᩴ;-><init>(Ll/ۜ۠ᩴ;)V
+    iput-object p1, p0, Ll/֫ᩴᩴ;->ܰ:Ll/ܽᩴᩴ;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 0
 
-    .line 831
-    new-instance v0, Ll/ۖ۠ᩴ;
+    .line 0
+    iget-object p1, p0, Ll/֫ᩴᩴ;->ܰ:Ll/ܽᩴᩴ;
 
-    iget-object v1, p0, Ll/֫ᩴᩴ;->ۧ:Ll/ۜ۠ᩴ;
+    invoke-static {p1, p3}, Ll/ܽᩴᩴ;->᩷(Ll/ܽᩴᩴ;I)Z
 
-    invoke-virtual {p0}, Ll/᩹۠ᩴ;->ۙ()I
+    move-result p1
 
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Ll/ۖ۠ᩴ;-><init>(Ll/ۜ۠ᩴ;I)V
-
-    iput-object v0, p0, Ll/֫ᩴᩴ;->ۛ:Ll/ۖ۠ᩴ;
-
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    .line 842
-    invoke-super {p0}, Ll/᩹۠ᩴ;->remove()V
-
-    .line 843
-    iget-object v0, p0, Ll/֫ᩴᩴ;->ۛ:Ll/ۖ۠ᩴ;
-
-    const/4 v1, -0x1
-
-    iput v1, v0, Ll/ۖ۠ᩴ;->ܺ:I
-
-    return-void
-.end method
-
-.method public final ۙ(ILjava/lang/Object;)V
-    .locals 2
-
-    .line 826
-    check-cast p2, Ljava/util/function/Consumer;
-
-    .line 837
-    new-instance v0, Ll/ۖ۠ᩴ;
-
-    iget-object v1, p0, Ll/֫ᩴᩴ;->ۧ:Ll/ۜ۠ᩴ;
-
-    invoke-direct {v0, v1, p1}, Ll/ۖ۠ᩴ;-><init>(Ll/ۜ۠ᩴ;I)V
-
-    iput-object v0, p0, Ll/֫ᩴᩴ;->ۛ:Ll/ۖ۠ᩴ;
-
-    invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
+    return p1
 .end method

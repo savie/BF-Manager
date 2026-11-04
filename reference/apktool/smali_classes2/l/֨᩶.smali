@@ -1,114 +1,38 @@
 .class public final Ll/֨᩶;
 .super Ljava/lang/Object;
-
-
-# static fields
-.field public static ۖ:[I
-
-.field public static ۙ:[I
-
-.field public static ۚ:[I
-
-.field public static ۨ:[I
-
-.field public static ܰ:[I
+.source "X4NC"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public static ۙ(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+    .locals 0
 
-    const v0, 0x7f040034
+    .line 274
+    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v1, 0x7f0402a7
+    move-result p0
 
-    const v2, 0x10101a5
+    return p0
+.end method
 
-    const v3, 0x101031f
+.method public static ۙ(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
 
-    const v4, 0x1010647
+    .line 263
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 0
-    filled-new-array {v2, v3, v4, v0, v1}, [I
+    move-result-object p0
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    sput-object v0, Ll/֨᩶;->ۙ:[I
+.method public static ۙ(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
 
-    const/4 v0, 0x7
+    .line 258
+    invoke-static {p0}, Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
 
-    new-array v0, v0, [I
+    move-result-object p0
 
-    fill-array-data v0, :array_0
-
-    sput-object v0, Ll/֨᩶;->ܰ:[I
-
-    const/16 v0, 0xa
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Ll/֨᩶;->ۨ:[I
-
-    const/16 v0, 0xc
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Ll/֨᩶;->ۖ:[I
-
-    const v0, 0x1010514
-
-    filled-new-array {v2, v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ll/֨᩶;->ۚ:[I
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x7f040223
-        0x7f040224
-        0x7f040225
-        0x7f040226
-        0x7f040227
-        0x7f040228
-        0x7f040229
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x1010532
-        0x1010533
-        0x101053f
-        0x101056f
-        0x1010570
-        0x7f040220
-        0x7f04022a
-        0x7f04022b
-        0x7f04022c
-        0x7f040538
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x101019d
-        0x101019e
-        0x10101a1
-        0x10101a2
-        0x10101a3
-        0x10101a4
-        0x1010201
-        0x101020b
-        0x1010510
-        0x1010511
-        0x1010512
-        0x1010513
-    .end array-data
+    return-object p0
 .end method

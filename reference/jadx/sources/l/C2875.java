@@ -1,63 +1,32 @@
 package l;
 
-import android.os.Bundle;
-
-/* JADX INFO: renamed from: l.ۗ֡ۘ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S54T */
+/* JADX INFO: renamed from: l.ۖᩴ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: T91K */
 /* JADX INFO: loaded from: classes3.dex */
-public class C2875 extends AbstractC16042 {
-    @Override // l.AbstractC16042
-    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
-    public final void mo8658() {
-        Bundle bundleRequireArguments = requireArguments();
-        if (bundleRequireArguments.containsKey("preferencesName")) {
-            m38031().m15448(bundleRequireArguments.getString("preferencesName"));
+public final class C2875 implements InterfaceC23013 {
+    @Override // l.InterfaceC23013
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo2807(InterfaceC20029 interfaceC20029, AbstractC4534 abstractC4534) {
+        C1330 c1330 = (C1330) abstractC4534;
+        InterfaceC16299 interfaceC16299Mo15471 = interfaceC20029.mo7360().m26736().mo15471(C1330.class);
+        if (interfaceC16299Mo15471 == null) {
+            interfaceC20029.mo7364(c1330);
+            return;
         }
-        m38030(bundleRequireArguments.getInt("layoutID"));
-        m8656((AbstractC12514) m38029());
-        ActivityC19126 activity = getActivity();
-        if (activity instanceof AbstractActivityC4762) {
-            ((AbstractActivityC4762) activity).mo13231(this, m38029());
+        int length = interfaceC20029.length();
+        interfaceC20029.mo7364(c1330);
+        if (length == interfaceC20029.length()) {
+            interfaceC20029.builder().append((char) 65532);
         }
-        if (bundleRequireArguments.containsKey("scrollTo")) {
-            String string = bundleRequireArguments.getString("scrollTo");
-            C13638.requireNonNull(string);
-            m38033(string);
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    private void m8656(AbstractC12514 abstractC12514) {
-        int iM31075 = abstractC12514.m31075();
-        for (int i = 0; i < iM31075; i++) {
-            C4751 c4751M31078 = abstractC12514.m31078(i);
-            if (c4751M31078 instanceof C8426) {
-                C8426 c8426 = (C8426) c4751M31078;
-                if (!AbstractActivityC4762.f16777.contains(c4751M31078.m13157())) {
-                    c8426.mo13141(c8426.m22071());
-                }
-                c8426.m13144(this);
-            } else if (c4751M31078 instanceof C10522) {
-                c4751M31078.m13144(this);
-            } else if (c4751M31078 instanceof C13365) {
-                c4751M31078.m13144(this);
-            } else if (c4751M31078 instanceof C2666) {
-                c4751M31078.m13144(this);
-            } else if (c4751M31078 instanceof AbstractC12514) {
-                m8656((AbstractC12514) c4751M31078);
-            }
-        }
-    }
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m8657(C4751 c4751, Object obj) {
-        ActivityC19126 activity = getActivity();
-        if (!((activity instanceof AbstractActivityC4762) && ((AbstractActivityC4762) activity).mo13232(this, c4751, obj)) && (c4751 instanceof C8426)) {
-            C8426 c8426 = (C8426) c4751;
-            if (AbstractActivityC4762.f16777.contains(c4751.m13157())) {
-                return;
-            }
-            c4751.mo13141(c8426.m22074()[c8426.m22072((String) obj)]);
-        }
+        C10420 c10420Mo7360 = interfaceC20029.mo7360();
+        boolean z = c1330.mo14267() instanceof C2821;
+        AbstractC23671 abstractC23671M26737 = c10420Mo7360.m26737();
+        String strM4898 = c1330.m4898();
+        abstractC23671M26737.getClass();
+        InterfaceC17045 interfaceC17045Mo7334 = interfaceC20029.mo7334();
+        AbstractC14215.f44933.m29674(interfaceC17045Mo7334, strM4898);
+        AbstractC14215.f44934.m29674(interfaceC17045Mo7334, Boolean.valueOf(z));
+        AbstractC14215.f44935.m29674(interfaceC17045Mo7334, null);
+        interfaceC20029.mo7335(length, interfaceC16299Mo15471.mo6845(c10420Mo7360, interfaceC17045Mo7334));
     }
 }

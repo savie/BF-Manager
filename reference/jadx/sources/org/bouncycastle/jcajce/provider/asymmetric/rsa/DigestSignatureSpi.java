@@ -9,7 +9,7 @@ import java.security.SignatureSpi;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.AlgorithmParameterSpec;
-import l.C22697;
+import l.C8947;
 import org.bouncycastle.asn1.ASN1Encoding;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.DERNull;
@@ -34,7 +34,7 @@ import org.bouncycastle.internal.asn1.oiw.OIWObjectIdentifiers;
 import org.bouncycastle.jcajce.util.AnnotatedPrivateKey;
 import org.bouncycastle.util.Arrays;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class DigestSignatureSpi extends SignatureSpi {
     public AlgorithmIdentifier algId;
     public AsymmetricBlockCipher cipher;
@@ -253,7 +253,7 @@ public class DigestSignatureSpi extends SignatureSpi {
             privateKey = ((AnnotatedPrivateKey) privateKey).getKey();
         }
         if (!(privateKey instanceof RSAPrivateKey)) {
-            throw new InvalidKeyException(C22697.m50267(new StringBuilder("Supplied key ("), getType(privateKey), ") is not a RSAPrivateKey instance"));
+            throw new InvalidKeyException(C8947.m23910(new StringBuilder("Supplied key ("), getType(privateKey), ") is not a RSAPrivateKey instance"));
         }
         RSAKeyParameters rSAKeyParametersGeneratePrivateKeyParameter = RSAUtil.generatePrivateKeyParameter((RSAPrivateKey) privateKey);
         this.digest.reset();
@@ -263,7 +263,7 @@ public class DigestSignatureSpi extends SignatureSpi {
     @Override // java.security.SignatureSpi
     public void engineInitVerify(PublicKey publicKey) throws InvalidKeyException {
         if (!(publicKey instanceof RSAPublicKey)) {
-            throw new InvalidKeyException(C22697.m50267(new StringBuilder("Supplied key ("), getType(publicKey), ") is not a RSAPublicKey instance"));
+            throw new InvalidKeyException(C8947.m23910(new StringBuilder("Supplied key ("), getType(publicKey), ") is not a RSAPublicKey instance"));
         }
         RSAKeyParameters rSAKeyParametersGeneratePublicKeyParameter = RSAUtil.generatePublicKeyParameter((RSAPublicKey) publicKey);
         this.digest.reset();

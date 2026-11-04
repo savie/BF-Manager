@@ -1,6 +1,6 @@
 package org.bouncycastle.pqc.asn1;
 
-import l.C15489;
+import l.C20551;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Object;
 import org.bouncycastle.asn1.ASN1Primitive;
@@ -14,7 +14,7 @@ public class FalconPublicKey extends ASN1Object {
 
     @Deprecated
     public FalconPublicKey(ASN1Sequence aSN1Sequence) {
-        this.h = C15489.m37078(aSN1Sequence, 0);
+        this.h = C20551.m47118(aSN1Sequence, 0);
     }
 
     public FalconPublicKey(byte[] bArr) {

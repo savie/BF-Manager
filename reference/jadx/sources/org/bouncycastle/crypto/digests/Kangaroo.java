@@ -9,11 +9,10 @@ import org.bouncycastle.crypto.modes.GCMSIVBlockCipher;
 import org.bouncycastle.util.Arrays;
 import org.bouncycastle.util.Pack;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Kangaroo {
     public static final int DIGESTLEN = 32;
 
-    /* JADX INFO: loaded from: classes2.dex */
     public abstract class KangarooBase implements ExtendedDigest, Xof {
         public static final int BLKSIZE = 8192;
         public final byte[] singleByte = new byte[1];
@@ -507,7 +506,6 @@ public final class Kangaroo {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class KangarooTwelve extends KangarooBase {
         public KangarooTwelve() {
             this(32, CryptoServicePurpose.ANY);
@@ -572,7 +570,6 @@ public final class Kangaroo {
         }
     }
 
-    /* JADX INFO: loaded from: classes2.dex */
     public class MarsupilamiFourteen extends KangarooBase {
         public MarsupilamiFourteen() {
             this(32, CryptoServicePurpose.ANY);

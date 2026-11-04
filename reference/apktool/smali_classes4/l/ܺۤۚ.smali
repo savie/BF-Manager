@@ -1,58 +1,99 @@
-.class public final Ll/ܺۤۚ;
+.class public final synthetic Ll/ܺۤۚ;
 .super Ljava/lang/Object;
-.source "28BC"
+.source "Y6Y9"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
-# static fields
-.field public static final ۙ:Landroid/content/pm/IPackageManager;
+# instance fields
+.field public final synthetic ܰ:I
+
+.field public final synthetic ܿ:Landroid/view/View;
+
+.field public final synthetic ᩶:Landroid/view/View;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/View;I)V
+    .locals 0
 
-    const-string v0, "package"
+    .line 0
+    iput p3, p0, Ll/ܺۤۚ;->ܰ:I
 
-    .line 140
-    invoke-static {v0}, Ll/᩹ܽ۟;->ۙ(Ljava/lang/String;)Landroid/os/IBinder;
+    iput-object p1, p0, Ll/ܺۤۚ;->᩶:Landroid/view/View;
 
-    move-result-object v0
+    iput-object p2, p0, Ll/ܺۤۚ;->ܿ:Landroid/view/View;
 
-    invoke-static {v0}, Lcom/rosan/dhizuku/api/Dhizuku;->binderWrapper(Landroid/os/IBinder;)Landroid/os/IBinder;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
-
-    move-result-object v0
-
-    sput-object v0, Ll/ܺۤۚ;->ۙ:Landroid/content/pm/IPackageManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static ۙ()Landroid/content/pm/IPackageInstaller;
-    .locals 1
 
-    .line 143
-    sget-object v0, Ll/ܺۤۚ;->ۙ:Landroid/content/pm/IPackageManager;
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 4
 
-    invoke-interface {v0}, Landroid/content/pm/IPackageManager;->getPackageInstaller()Landroid/content/pm/IPackageInstaller;
+    .line 2
+    iget p1, p0, Ll/ܺۤۚ;->ܰ:I
 
-    move-result-object v0
+    packed-switch p1, :pswitch_data_0
 
-    .line 144
-    invoke-interface {v0}, Landroid/content/pm/IPackageInstaller;->asBinder()Landroid/os/IBinder;
+    .line 7
+    iget-object p1, p0, Ll/ܺۤۚ;->᩶:Landroid/view/View;
 
-    move-result-object v0
+    .line 9
+    check-cast p1, Ll/᩹ۖ᩸;
 
-    invoke-static {v0}, Lcom/rosan/dhizuku/api/Dhizuku;->binderWrapper(Landroid/os/IBinder;)Landroid/os/IBinder;
+    .line 11
+    iget-object v0, p0, Ll/ܺۤۚ;->ܿ:Landroid/view/View;
 
-    move-result-object v0
+    .line 13
+    check-cast v0, Ll/᩹ۖ᩸;
 
-    invoke-static {v0}, Landroid/content/pm/IPackageInstaller$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageInstaller;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    if-eqz p2, :cond_0
 
-    return-object v0
+    const-string v2, "INTERNAL:Regex"
+
+    goto :goto_0
+
+    .line 0
+    :pswitch_0
+    iget-object p1, p0, Ll/ܺۤۚ;->᩶:Landroid/view/View;
+
+    check-cast p1, Ll/֨ܶ;
+
+    iget-object p2, p0, Ll/ܺۤۚ;->ܿ:Landroid/view/View;
+
+    check-cast p2, Ll/֨ܶ;
+
+    invoke-static {p1, p2}, Ll/ۛ᩸ۚ;->ۙ(Ll/֨ܶ;Ll/֨ܶ;)V
+
+    return-void
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_0
+    const/4 v3, 0x1
+
+    .line 2119
+    invoke-virtual {p1, v2, v3}, Ll/᩺ۜ᩸;->ۙ(Ljava/lang/String;Z)V
+
+    if-eqz p2, :cond_1
+
+    const-string v1, "INTERNAL:RegexReplacement"
+
+    :cond_1
+    invoke-virtual {v0, v1, v3}, Ll/᩺ۜ᩸;->ۙ(Ljava/lang/String;Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

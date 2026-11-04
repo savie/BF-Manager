@@ -29,8 +29,8 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-import l.C0561;
-import l.C2271;
+import l.C14442;
+import l.C4681;
 
 /* JADX INFO: loaded from: classes.dex */
 public class Response implements av, Serializable, Cloneable {
@@ -57,7 +57,7 @@ public class Response implements av, Serializable, Cloneable {
         enumMap.put(e.RESP_CODE, new bh("resp_code", (byte) 1, new bi((byte) 8)));
         enumMap.put(e.MSG, new bh("msg", (byte) 2, new bi((byte) 11)));
         enumMap.put(e.IMPRINT, new bh(am.X, (byte) 2, new bm((byte) 12, com.umeng.commonsdk.statistics.proto.d.class)));
-        Map mapUnmodifiableMap = C0561.unmodifiableMap(enumMap);
+        Map mapUnmodifiableMap = C4681.unmodifiableMap(enumMap);
         metaDataMap = mapUnmodifiableMap;
         bh.a(Response.class, mapUnmodifiableMap);
     }
@@ -95,7 +95,7 @@ public class Response implements av, Serializable, Cloneable {
             if (eVarA != null) {
                 return eVarA;
             }
-            throw new IllegalArgumentException(C2271.m6966(i, "Field ", " doesn't exist!"));
+            throw new IllegalArgumentException(C14442.m34864(i, "Field ", " doesn't exist!"));
         }
 
         public static e a(String str) {

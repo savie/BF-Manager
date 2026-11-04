@@ -1,33 +1,30 @@
 package l;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-
-/* JADX INFO: renamed from: l.ۚ᩶ܶ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E3QI */
+/* JADX INFO: renamed from: l.ۚۤۛ, reason: contains not printable characters */
+/* JADX INFO: compiled from: B5S9 */
 /* JADX INFO: loaded from: classes3.dex */
-public final class C5583 extends C23223 implements InterfaceC19570 {
-    public static final long serialVersionUID = 1;
+public final class C5583 extends AbstractC9441 {
 
-    /* JADX INFO: renamed from: ۙۙ, reason: not valid java name and contains not printable characters */
-    public transient InterfaceC19570 f19175;
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C24975 f19388;
 
-    @Override // l.InterfaceC19570
-    public final Object get(Object obj) {
-        throw null;
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ int f19389;
+
+    public C5583(C24975 c24975, int i) {
+        this.f19388 = c24975;
+        this.f19389 = i;
     }
 
-    private void readObject(ObjectInputStream objectInputStream) throws ClassNotFoundException, IOException {
-        objectInputStream.defaultReadObject();
-        this.f19175 = m51231().m48431(this.f75344);
+    @Override // l.AbstractC9441
+    /* JADX INFO: renamed from: ۙ */
+    public final Object mo5053(int i) {
+        C24975 c24975 = this.f19388;
+        return new C22122(c24975, (i * 12) + c24975.f80880 + 4);
     }
 
-    @Override // l.InterfaceC11955
-    public final Object apply(Object obj) {
-        return ((C13345) this.f19175).apply(obj);
-    }
-
-    private Object readResolve() {
-        return this.f19175;
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.f19389;
     }
 }

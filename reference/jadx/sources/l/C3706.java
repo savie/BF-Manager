@@ -1,80 +1,44 @@
 package l;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
-/* JADX INFO: renamed from: l.ۘۙۚ, reason: contains not printable characters */
-/* JADX INFO: compiled from: S708 */
-/* JADX INFO: loaded from: classes2.dex */
-public final class C3706 {
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public int[] f13503 = C6529.f21988;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public int f13504;
-
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final C6529 m10878(int i) {
-        int[] iArr = this.f13503;
-        if (iArr == null) {
-            throw new IllegalStateException("Search match builder is already built");
-        }
-        if (i < 0) {
-            throw new IllegalArgumentException("Negative search text length");
-        }
-        int i2 = this.f13504;
-        if (i2 != 0 && iArr[((i2 - 1) << 1) + 1] > i) {
-            throw new IllegalArgumentException("Search match is outside the text");
-        }
-        C6529 c6529 = new C6529(i2, i, iArr);
-        this.f13503 = null;
-        return c6529;
+/* JADX INFO: renamed from: l.ۗ᩸᩵, reason: contains not printable characters */
+/* JADX INFO: compiled from: 76DY */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C3706 extends AbstractC16700 {
+    static {
+        C16980.m40037(C3706.class);
     }
 
-    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final void m10879(int i, int i2) {
-        int[] iArr = this.f13503;
-        if (iArr == null) {
-            throw new IllegalStateException("Search match builder is already built");
+    @Override // l.AbstractC16700, l.InterfaceC13673
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo1737(C2551 c2551) {
+        if (c2551.m8524() || c2551.m8515() == null || c2551.m8508().isEmpty() || c2551.mo17867(C11457.f36007)) {
+            return;
         }
-        if (i < 0 || i2 <= i) {
-            throw new IllegalArgumentException("Invalid search match range");
-        }
-        int i3 = this.f13504;
-        if (i3 != 0 && i < iArr[((i3 - 1) << 1) + 1]) {
-            throw new IllegalArgumentException("Search matches overlap or are out of order");
-        }
-        long j = ((long) i3) + ((long) 1);
-        long j2 = (int) j;
-        if (j != j2) {
-            throw new ArithmeticException();
-        }
-        long j3 = j2 * ((long) 2);
-        int i4 = (int) j3;
-        if (j3 != i4) {
-            throw new ArithmeticException();
-        }
-        if (iArr.length < i4) {
-            int length = iArr.length == 0 ? 16 : iArr.length;
-            while (true) {
-                if (length >= i4) {
-                    i4 = length;
-                    break;
-                }
-                int i5 = length << 1;
-                if (i5 <= length) {
-                    break;
-                } else {
-                    length = i5;
+        HashSet hashSet = new HashSet();
+        C24590.m54904(c2551, new C16384(hashSet));
+        if (c2551.m8508().size() != hashSet.size()) {
+            for (C21943 c21943 : c2551.m8508()) {
+                if (!hashSet.contains(c21943) && !((ArrayList) c21943.mo1986()).isEmpty() && !c21943.mo17865(EnumC1763.ADDED_TO_REGION) && !c21943.mo17865(EnumC1763.DONT_GENERATE) && !c21943.mo17865(EnumC1763.REMOVE)) {
+                    C15382 c15382 = new C15382();
+                    c15382.mo10278();
+                    c15382.mo10285();
+                    C0052 c0052 = new C0052(C8256.m22230(c2551), true);
+                    Iterator it = ((ArrayList) c21943.mo1986()).iterator();
+                    while (it.hasNext()) {
+                        try {
+                            c0052.m943(c15382, (C18959) it.next());
+                        } catch (C7852 unused) {
+                        }
+                    }
+                    c15382.mo10285();
+                    c2551.m31136("Code restructure failed: missing block: " + c21943 + ", code lost:" + c15382.m36846().replace("*/", "*\\/"));
                 }
             }
-            this.f13503 = Arrays.copyOf(this.f13503, i4);
         }
-        int[] iArr2 = this.f13503;
-        int i6 = this.f13504;
-        int i7 = i6 << 1;
-        iArr2[i7] = i;
-        iArr2[i7 + 1] = i2;
-        this.f13504 = i6 + 1;
+        C24590.m54904(c2551, new C23844(1));
     }
 }

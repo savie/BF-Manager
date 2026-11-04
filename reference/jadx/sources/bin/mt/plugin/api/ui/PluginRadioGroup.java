@@ -1,9 +1,8 @@
 package bin.mt.plugin.api.ui;
 
-/* JADX INFO: loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface PluginRadioGroup extends PluginLinearLayout {
 
-    /* JADX INFO: loaded from: classes.dex */
     public interface OnCheckedChangeListener {
         void onCheckedChanged(PluginRadioGroup pluginRadioGroup, PluginRadioButton pluginRadioButton, int i);
     }

@@ -128,7 +128,7 @@
     const-string v4, "javascript:window.AlipayJSBridge.callBackFromNativeFunc(\'"
 
     .line 0
-    invoke-static {v4, v1, v2, p1, v3}, Ll/֡ۜۜ;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v1, v2, p1, v3}, Ll/ۗۚ֫;->ۙ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

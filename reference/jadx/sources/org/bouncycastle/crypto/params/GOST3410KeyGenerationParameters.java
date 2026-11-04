@@ -3,7 +3,7 @@ package org.bouncycastle.crypto.params;
 import java.security.SecureRandom;
 import org.bouncycastle.crypto.KeyGenerationParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class GOST3410KeyGenerationParameters extends KeyGenerationParameters {
     public GOST3410Parameters params;
 

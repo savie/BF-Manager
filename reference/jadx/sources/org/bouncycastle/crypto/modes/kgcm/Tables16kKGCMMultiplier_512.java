@@ -2,7 +2,7 @@ package org.bouncycastle.crypto.modes.kgcm;
 
 import java.lang.reflect.Array;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Tables16kKGCMMultiplier_512 implements KGCMMultiplier {
     public long[][] T;
 

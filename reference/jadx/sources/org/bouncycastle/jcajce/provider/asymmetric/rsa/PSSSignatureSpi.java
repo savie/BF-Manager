@@ -28,7 +28,7 @@ import org.bouncycastle.jcajce.util.BCJcaJceHelper;
 import org.bouncycastle.jcajce.util.JcaJceHelper;
 import org.bouncycastle.pqc.crypto.xmss.XMSSKeyParameters;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class PSSSignatureSpi extends SignatureSpi {
     public Digest contentDigest;
     public AlgorithmParameters engineParams;

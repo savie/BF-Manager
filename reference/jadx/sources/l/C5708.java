@@ -1,51 +1,35 @@
 package l;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.view.View;
-import android.view.ViewPropertyAnimator;
+import android.content.res.Configuration;
+import android.os.LocaleList;
 
-/* JADX INFO: renamed from: l.ۛ֡ܰ, reason: contains not printable characters */
-/* JADX INFO: compiled from: E5OI */
+/* JADX INFO: renamed from: l.ۚܳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 422Y */
 /* JADX INFO: loaded from: classes2.dex */
-public final class C5708 extends AnimatorListenerAdapter {
-
-    /* JADX INFO: renamed from: ۖ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ View f19454;
+public final class C5708 {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m16745(Configuration configuration, Configuration configuration2, Configuration configuration3) {
+        LocaleList locales = configuration.getLocales();
+        LocaleList locales2 = configuration2.getLocales();
+        if (locales.equals(locales2)) {
+            return;
+        }
+        configuration3.setLocales(locales2);
+        configuration3.locale = configuration2.locale;
+    }
 
     /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ C2885 f19455;
-
-    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ AbstractC12554 f19456;
-
-    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
-    public final /* synthetic */ ViewPropertyAnimator f19457;
-
-    public C5708(View view, ViewPropertyAnimator viewPropertyAnimator, C2885 c2885, AbstractC12554 abstractC12554) {
-        this.f19455 = c2885;
-        this.f19456 = abstractC12554;
-        this.f19454 = view;
-        this.f19457 = viewPropertyAnimator;
+    public static C12266 m16744(Configuration configuration) {
+        return C12266.m30636(configuration.getLocales().toLanguageTags());
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationStart(Animator animator) {
-        this.f19455.getClass();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m16746(Configuration configuration, C12266 c12266) {
+        configuration.setLocales(LocaleList.forLanguageTags(c12266.m30641()));
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationCancel(Animator animator) {
-        this.f19454.setAlpha(1.0f);
-    }
-
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-    public final void onAnimationEnd(Animator animator) {
-        this.f19457.setListener(null);
-        C2885 c2885 = this.f19455;
-        AbstractC12554 abstractC12554 = this.f19456;
-        c2885.m5955(abstractC12554);
-        c2885.f10877.remove(abstractC12554);
-        c2885.m8685();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static void m16747(C12266 c12266) {
+        LocaleList.setDefault(LocaleList.forLanguageTags(c12266.m30641()));
     }
 }

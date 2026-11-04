@@ -17,7 +17,7 @@ import org.bouncycastle.x509.X509StreamParserSpi;
 import org.bouncycastle.x509.X509V2AttributeCertificate;
 import org.bouncycastle.x509.util.StreamParsingException;
 
-/* JADX INFO: loaded from: classes.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class X509AttrCertParser extends X509StreamParserSpi {
     public static final PEMUtil PEM_PARSER = new PEMUtil("ATTRIBUTE CERTIFICATE");
     public ASN1Set sData = null;

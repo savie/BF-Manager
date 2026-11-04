@@ -1,108 +1,132 @@
 package l;
 
-import java.util.Comparator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.LongConsumer;
-
-/* JADX INFO: renamed from: l.۟᩹۠, reason: contains not printable characters */
-/* JADX INFO: compiled from: N673 */
+/* JADX INFO: renamed from: l.۟۠ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 54VR */
 /* JADX INFO: loaded from: classes3.dex */
-public final /* synthetic */ class C7757 implements Spliterator.OfLong {
-    public final /* synthetic */ InterfaceC19282 a;
+public final class C7757 {
 
-    public /* synthetic */ C7757(InterfaceC19282 interfaceC19282) {
-        this.a = interfaceC19282;
+    /* JADX INFO: renamed from: ᩸, reason: not valid java name and contains not printable characters */
+    public static final Object f25535 = new Object();
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public int[] f25536;
+
+    /* JADX INFO: renamed from: ۤ, reason: not valid java name and contains not printable characters */
+    public Object[] f25537;
+
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public int f25538 = 0;
+
+    public C7757(int i) {
+        this.f25536 = new int[i];
+        this.f25537 = new Object[i];
     }
 
-    public static /* synthetic */ Spliterator.OfLong a(InterfaceC19282 interfaceC19282) {
-        if (interfaceC19282 == null) {
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final Object m21127(int i) {
+        Object obj;
+        int iM21124 = m21124(this.f25538, i, this.f25536);
+        if (iM21124 < 0 || (obj = this.f25537[iM21124]) == f25535) {
             return null;
         }
-        return interfaceC19282 instanceof C12475 ? ((C12475) interfaceC19282).a : new C7757(interfaceC19282);
+        return obj;
     }
 
-    @Override // java.util.Spliterator
-    public final /* synthetic */ int characteristics() {
-        return this.a.characteristics();
-    }
-
-    public final /* synthetic */ boolean equals(Object obj) {
-        InterfaceC19282 interfaceC19282 = this.a;
-        if (obj instanceof C7757) {
-            obj = ((C7757) obj).a;
+    /* JADX INFO: renamed from: ᩷, reason: not valid java name and contains not printable characters */
+    public final void m21128(int i, Object obj) {
+        int iM21124 = m21124(this.f25538, i, this.f25536);
+        if (iM21124 >= 0) {
+            this.f25537[iM21124] = obj;
+            return;
         }
-        return interfaceC19282.equals(obj);
+        int i2 = ~iM21124;
+        int i3 = this.f25538;
+        if (i2 < i3) {
+            Object[] objArr = this.f25537;
+            if (objArr[i2] == f25535) {
+                this.f25536[i2] = i;
+                objArr[i2] = obj;
+                return;
+            }
+        }
+        int[] iArr = this.f25536;
+        if (i3 >= iArr.length) {
+            int iMax = Math.max(i3 + 1, iArr.length * 2);
+            int[] iArr2 = new int[iMax];
+            Object[] objArr2 = new Object[iMax];
+            int[] iArr3 = this.f25536;
+            System.arraycopy(iArr3, 0, iArr2, 0, iArr3.length);
+            Object[] objArr3 = this.f25537;
+            System.arraycopy(objArr3, 0, objArr2, 0, objArr3.length);
+            this.f25536 = iArr2;
+            this.f25537 = objArr2;
+        }
+        int i4 = this.f25538 - i2;
+        if (i4 != 0) {
+            int[] iArr4 = this.f25536;
+            int i5 = i2 + 1;
+            System.arraycopy(iArr4, i2, iArr4, i5, i4);
+            Object[] objArr4 = this.f25537;
+            System.arraycopy(objArr4, i2, objArr4, i5, this.f25538 - i2);
+        }
+        this.f25536[i2] = i;
+        this.f25537[i2] = obj;
+        this.f25538++;
     }
 
-    @Override // java.util.Spliterator
-    public final /* synthetic */ long estimateSize() {
-        return this.a.estimateSize();
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m21126(int i, Object obj) {
+        int i2 = this.f25538;
+        if (i2 != 0 && i <= this.f25536[i2 - 1]) {
+            m21128(i, obj);
+            return;
+        }
+        int[] iArr = this.f25536;
+        if (i2 >= iArr.length) {
+            int iMax = Math.max(i2 + 1, iArr.length * 2);
+            int[] iArr2 = new int[iMax];
+            Object[] objArr = new Object[iMax];
+            int[] iArr3 = this.f25536;
+            System.arraycopy(iArr3, 0, iArr2, 0, iArr3.length);
+            Object[] objArr2 = this.f25537;
+            System.arraycopy(objArr2, 0, objArr, 0, objArr2.length);
+            this.f25536 = iArr2;
+            this.f25537 = objArr;
+        }
+        this.f25536[i2] = i;
+        this.f25537[i2] = obj;
+        this.f25538 = i2 + 1;
     }
 
-    @Override // java.util.Spliterator.OfPrimitive
-    public final /* synthetic */ void forEachRemaining(LongConsumer longConsumer) {
-        this.a.forEachRemaining((Object) longConsumer);
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final void m21125(int i) {
+        int[] iArr = this.f25536;
+        if (iArr.length < i) {
+            int[] iArr2 = new int[i];
+            Object[] objArr = new Object[i];
+            System.arraycopy(iArr, 0, iArr2, 0, iArr.length);
+            Object[] objArr2 = this.f25537;
+            System.arraycopy(objArr2, 0, objArr, 0, objArr2.length);
+            this.f25536 = iArr2;
+            this.f25537 = objArr;
+        }
     }
 
-    @Override // java.util.Spliterator.OfLong, java.util.Spliterator
-    public final /* synthetic */ void forEachRemaining(Consumer consumer) {
-        this.a.forEachRemaining(consumer);
-    }
-
-    @Override // java.util.Spliterator.OfLong
-    /* JADX INFO: renamed from: forEachRemaining, reason: avoid collision after fix types in other method */
-    public final /* synthetic */ void forEachRemaining2(LongConsumer longConsumer) {
-        this.a.forEachRemaining(longConsumer);
-    }
-
-    @Override // java.util.Spliterator
-    public final /* synthetic */ Comparator getComparator() {
-        return this.a.getComparator();
-    }
-
-    @Override // java.util.Spliterator
-    public final /* synthetic */ long getExactSizeIfKnown() {
-        return this.a.getExactSizeIfKnown();
-    }
-
-    @Override // java.util.Spliterator
-    public final /* synthetic */ boolean hasCharacteristics(int i) {
-        return this.a.hasCharacteristics(i);
-    }
-
-    public final /* synthetic */ int hashCode() {
-        return this.a.hashCode();
-    }
-
-    @Override // java.util.Spliterator.OfPrimitive
-    public final /* synthetic */ boolean tryAdvance(LongConsumer longConsumer) {
-        return this.a.tryAdvance((Object) longConsumer);
-    }
-
-    @Override // java.util.Spliterator.OfLong, java.util.Spliterator
-    public final /* synthetic */ boolean tryAdvance(Consumer consumer) {
-        return this.a.tryAdvance(consumer);
-    }
-
-    @Override // java.util.Spliterator.OfLong
-    /* JADX INFO: renamed from: tryAdvance, reason: avoid collision after fix types in other method */
-    public final /* synthetic */ boolean tryAdvance2(LongConsumer longConsumer) {
-        return this.a.tryAdvance(longConsumer);
-    }
-
-    @Override // java.util.Spliterator.OfLong, java.util.Spliterator.OfPrimitive, java.util.Spliterator
-    public final /* synthetic */ Spliterator.OfLong trySplit() {
-        return a(this.a.trySplit());
-    }
-
-    @Override // java.util.Spliterator.OfLong, java.util.Spliterator.OfPrimitive, java.util.Spliterator
-    public final /* synthetic */ Spliterator.OfPrimitive trySplit() {
-        return C0700.a(this.a.trySplit());
-    }
-
-    @Override // java.util.Spliterator.OfLong, java.util.Spliterator.OfPrimitive, java.util.Spliterator
-    public final /* synthetic */ Spliterator trySplit() {
-        return C7287.convert(this.a.trySplit());
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static int m21124(int i, int i2, int[] iArr) {
+        int i3 = -1;
+        int i4 = i;
+        while (i4 - i3 > 1) {
+            int i5 = (i4 + i3) / 2;
+            if (iArr[i5] < i2) {
+                i3 = i5;
+            } else {
+                i4 = i5;
+            }
+        }
+        if (i4 == i) {
+            return ~i;
+        }
+        return iArr[i4] == i2 ? i4 : ~i4;
     }
 }

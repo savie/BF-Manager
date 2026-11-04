@@ -1,411 +1,179 @@
 .class public final Ll/ۚ᩺᩵;
-.super Ll/ۨ᩺᩵;
-.source "Y7JO"
+.super Ll/ۘۛ᩵;
+.source "J9Y3"
 
 
 # instance fields
-.field public final ۛ:Z
+.field public ۛۙ:I
 
-.field public final ۧ:[Ljava/lang/String;
+.field public ۨۙ:Ljava/lang/String;
 
-.field public final ܿ:[Ll/᩹۟ᩴ;
+.field public ᩵ۙ:Ljava/lang/String;
 
 
 # direct methods
-.method public varargs constructor <init>(Ll/ۢۜ᩵;[Ll/᩹۟ᩴ;[Ll/ۖ᩺᩵;[Ljava/lang/String;)V
+.method public constructor <init>(Ll/ۚ᩵᩵;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 200
-    new-instance v0, Ll/ܰ᩺᩵;
+    const/4 v0, 0x7
 
-    .line 134
-    invoke-direct {v0}, Ll/ۙ᩺᩵;-><init>()V
+    .line 45
+    invoke-direct {p0, p1, v0}, Ll/ۘۛ᩵;-><init>(Ll/ۚ᩵᩵;B)V
 
-    .line 200
-    invoke-virtual {v0, p1}, Ll/ۙ᩺᩵;->ۙ(Ll/ۢۜ᩵;)V
+    .line 46
+    iput-object p2, p0, Ll/ۚ᩺᩵;->ۨۙ:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Ll/ۨ᩺᩵;-><init>(Ll/ܰ᩺᩵;)V
+    .line 47
+    iput-object p3, p0, Ll/ۚ᩺᩵;->᩵ۙ:Ljava/lang/String;
 
-    .line 84
-    invoke-virtual {p4}, [Ljava/lang/String;->clone()Ljava/lang/Object;
+    const/16 p1, 0x16
 
-    move-result-object p1
-
-    check-cast p1, [Ljava/lang/String;
-
-    .line 85
-    invoke-static {p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
-
-    .line 86
-    iput-object p1, p0, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
-
-    .line 87
-    invoke-static {p3}, Ll/ۜ᩺᩵;->ۙ([Ll/ۖ᩺᩵;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Ll/ۚ᩺᩵;->ۛ:Z
-
-    if-nez p2, :cond_0
-
-    .line 1392
-    sget-object p1, Ll/᩹᩺᩵;->ۖ:[Ll/᩹۟ᩴ;
-
-    invoke-virtual {p1}, [Ll/᩹۟ᩴ;->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ll/᩹۟ᩴ;
-
-    goto :goto_0
-
-    .line 89
-    :cond_0
-    invoke-virtual {p2}, [Ll/᩹۟ᩴ;->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ll/᩹۟ᩴ;
-
-    :goto_0
-    iput-object p1, p0, Ll/ۚ᩺᩵;->ܿ:[Ll/᩹۟ᩴ;
+    .line 48
+    iput p1, p0, Ll/ۚ᩺᩵;->ۛۙ:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v0, 0x1
+    .line 89
+    new-instance v0, Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return v0
+    const-string v2, "SmbComRename["
 
-    .line 117
-    :cond_0
-    invoke-super {p0, p1}, Ll/ۨ᩺᩵;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v1
+    .line 90
+    invoke-super {p0}, Ll/ۘۛ᩵;->toString()Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    const-string v2, ",searchAttributes=0x"
 
-    .line 120
-    :cond_1
-    const-class v1, Ll/ۚ᩺᩵;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x4
 
-    move-result-object v3
+    const-string v3, ",oldFileName="
 
-    if-eq v1, v3, :cond_2
+    .line 0
+    iget v4, p0, Ll/ۚ᩺᩵;->ۛۙ:I
 
-    return v2
+    invoke-static {v4, v2, v3, v1}, Ll/۟ܺ᩹;->ۙ(IILjava/lang/String;Ljava/lang/StringBuilder;)V
 
-    .line 123
-    :cond_2
-    check-cast p1, Ll/ۚ᩺᩵;
+    .line 90
+    iget-object v2, p0, Ll/ۚ᩺᩵;->ۨۙ:Ljava/lang/String;
 
-    .line 124
-    iget-boolean v1, p0, Ll/ۚ᩺᩵;->ۛ:Z
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p1, Ll/ۚ᩺᩵;->ۛ:Z
+    const-string v2, ",newFileName="
 
-    if-ne v1, v3, :cond_3
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
+    iget-object v2, p0, Ll/ۚ᩺᩵;->᩵ۙ:Ljava/lang/String;
 
-    iget-object p1, p1, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
+    const-string v3, "]"
 
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    .line 130
-    invoke-super {p0}, Ll/ۨ᩺᩵;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 131
-    iget-object v1, p0, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 132
-    iget-boolean v1, p0, Ll/ۚ᩺᩵;->ۛ:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 0
+    invoke-static {v1, v2, v3}, Ll/۠᩹ᩴ;->ۙ(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    .line 90
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object v1, v2, v3
-
-    invoke-static {v2}, Ll/ܰۛᩴ;->hash([Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final bridge synthetic postVisitDirectory(Ljava/lang/Object;Ljava/io/IOException;)Ll/ۨ۟ᩴ;
+.method public final ۤ(I[B)I
     .locals 0
 
-    .line 37
-    check-cast p1, Ll/ۘ۟ᩴ;
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Ll/ۚ᩺᩵;->ۙ(Ll/ۘ۟ᩴ;Ljava/io/IOException;)V
-
-    sget-object p1, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    return-object p1
+    return p1
 .end method
 
-.method public final bridge synthetic preVisitDirectory(Ljava/lang/Object;Ll/᩷۟ᩴ;)Ll/ۨ۟ᩴ;
-    .locals 0
-
-    .line 37
-    check-cast p1, Ll/ۘ۟ᩴ;
-
-    invoke-virtual {p0, p1, p2}, Ll/ۚ᩺᩵;->ۙ(Ll/ۘ۟ᩴ;Ll/᩷۟ᩴ;)Ll/ۨ۟ᩴ;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final visitFile(Ljava/lang/Object;Ll/᩷۟ᩴ;)Ll/ۨ۟ᩴ;
+.method public final ۫(I[B)I
     .locals 2
 
-    .line 37
-    check-cast p1, Ll/ۘ۟ᩴ;
+    .line 54
+    iget v0, p0, Ll/ۚ᩺᩵;->ۛۙ:I
 
-    .line 109
-    sget-object v0, Ll/᩹᩺᩵;->ۙ:[Ll/ۖ᩺᩵;
+    int-to-long v0, v0
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1, p1, p2}, Ll/֡ܰ᩵;->ۙ(JI[B)V
 
-    if-eqz p1, :cond_0
+    const/4 p1, 0x2
 
-    .line 1007
-    invoke-interface {p1}, Ll/ۘ۟ᩴ;->getFileName()Ll/ۘ۟ᩴ;
+    return p1
+.end method
 
-    move-result-object v1
+.method public final ᩴ(I[B)I
+    .locals 3
 
-    goto :goto_0
+    add-int/lit8 v0, p1, 0x1
 
-    :cond_0
-    move-object v1, v0
+    const/4 v1, 0x4
 
-    :goto_0
-    if-eqz v1, :cond_1
+    .line 63
+    aput-byte v1, p2, p1
 
-    .line 1008
-    invoke-interface {v1}, Ll/ۘ۟ᩴ;->toString()Ljava/lang/String;
+    .line 64
+    iget-object v2, p0, Ll/ۚ᩺᩵;->ۨۙ:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {p0, v2, v0, p2}, Ll/ۘۛ᩵;->ۙ(Ljava/lang/String;I[B)I
 
-    .line 109
-    :cond_1
-    iget-object v1, p0, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
+    move-result v2
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;)I
+    add-int/2addr v0, v2
 
-    move-result v0
+    add-int/lit8 v2, v0, 0x1
 
-    if-gez v0, :cond_4
+    .line 65
+    aput-byte v1, p2, v0
 
-    .line 154
-    iget-object v0, p0, Ll/ۚ᩺᩵;->ܿ:[Ll/᩹۟ᩴ;
-
-    invoke-static {p1, v0}, Ll/ۚ۟ᩴ;->exists(Ll/ۘ۟ᩴ;[Ll/᩹۟ᩴ;)Z
+    .line 66
+    invoke-virtual {p0}, Ll/ۘۛ᩵;->ۧۙ()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_0
 
-    .line 155
-    iget-boolean v1, p0, Ll/ۚ᩺᩵;->ۛ:Z
+    add-int/lit8 v0, v0, 0x2
 
-    if-eqz v1, :cond_2
+    const/4 v1, 0x0
 
-    .line 156
-    invoke-static {p1, v0}, Ll/᩹᩺᩵;->ܰ(Ll/ۘ۟ᩴ;[Ll/᩹۟ᩴ;)V
+    .line 67
+    aput-byte v1, p2, v2
 
-    .line 158
-    :cond_2
-    invoke-static {p1}, Ll/ۚ۟ᩴ;->deleteIfExists(Ll/ۘ۟ᩴ;)Z
+    move v2, v0
 
-    .line 161
-    :cond_3
-    invoke-static {p1}, Ll/ۚ۟ᩴ;->isSymbolicLink(Ll/ۘ۟ᩴ;)Z
+    .line 69
+    :cond_0
+    iget-object v0, p0, Ll/ۚ᩺᩵;->᩵ۙ:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {p0, v0, v2, p2}, Ll/ۘۛ᩵;->ۙ(Ljava/lang/String;I[B)I
 
-    if-eqz v0, :cond_4
+    move-result p2
 
-    .line 164
-    :try_start_0
-    invoke-static {p1}, Ll/ۚ۟ᩴ;->delete(Ll/ۘ۟ᩴ;)V
-    :try_end_0
-    .catch Ljava/nio/file/NoSuchFileException; {:try_start_0 .. :try_end_0} :catch_0
+    add-int/2addr v2, p2
 
-    .line 170
-    :catch_0
-    :cond_4
-    invoke-virtual {p0, p2}, Ll/ۨ᩺᩵;->ۙ(Ll/᩷۟ᩴ;)V
+    sub-int/2addr v2, p1
 
-    .line 171
-    sget-object p1, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    .line 37
-    sget-object p1, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    return-object p1
+    return v2
 .end method
 
-.method public final ۙ(Ll/ۘ۟ᩴ;Ll/᩷۟ᩴ;)Ll/ۨ۟ᩴ;
+.method public final ᩷(I[B)I
     .locals 0
 
-    .line 146
-    invoke-super {p0, p1, p2}, Ll/ۨ᩺᩵;->ۙ(Ll/ۘ۟ᩴ;Ll/᩷۟ᩴ;)Ll/ۨ۟ᩴ;
+    const/4 p1, 0x0
 
-    .line 109
-    sget-object p2, Ll/᩹᩺᩵;->ۙ:[Ll/ۖ᩺᩵;
-
-    const/4 p2, 0x0
-
-    if-eqz p1, :cond_0
-
-    .line 1007
-    invoke-interface {p1}, Ll/ۘ۟ᩴ;->getFileName()Ll/ۘ۟ᩴ;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, p2
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    .line 1008
-    invoke-interface {p1}, Ll/ۘ۟ᩴ;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 109
-    :cond_1
-    iget-object p1, p0, Ll/ۚ᩺᩵;->ۧ:[Ljava/lang/String;
-
-    invoke-static {p1, p2}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-gez p1, :cond_2
-
-    .line 147
-    sget-object p1, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    return-object p1
-
-    :cond_2
-    sget-object p1, Ll/ۨ۟ᩴ;->SKIP_SUBTREE:Ll/ۨ۟ᩴ;
-
-    return-object p1
-.end method
-
-.method public final ۙ(Ll/ۘ۟ᩴ;Ljava/io/IOException;)V
-    .locals 2
-
-    .line 138
-    sget-object v0, Ll/᩹᩺᩵;->ۙ:[Ll/ۖ᩺᩵;
-
-    .line 1159
-    invoke-static {p1}, Ll/ۚ۟ᩴ;->newDirectoryStream(Ll/ۘ۟ᩴ;)Ljava/nio/file/DirectoryStream;
-
-    move-result-object v0
-
-    .line 1160
-    :try_start_0
-    invoke-interface {v0}, Ljava/nio/file/DirectoryStream;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 1161
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    if-nez v1, :cond_0
-
-    .line 139
-    invoke-static {p1}, Ll/ۚ۟ᩴ;->deleteIfExists(Ll/ۘ۟ᩴ;)Z
-
-    .line 141
-    :cond_0
-    invoke-super {p0, p1, p2}, Ll/ۨ᩺᩵;->ۙ(Ll/ۘ۟ᩴ;Ljava/io/IOException;)V
-
-    sget-object p1, Ll/ۨ۟ᩴ;->CONTINUE:Ll/ۨ۟ᩴ;
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    if-eqz v0, :cond_1
-
-    .line 1159
-    :try_start_1
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    throw p1
+    return p1
 .end method
